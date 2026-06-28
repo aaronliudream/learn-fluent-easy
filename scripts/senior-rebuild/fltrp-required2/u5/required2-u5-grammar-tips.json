@@ -1,0 +1,36 @@
+{
+  "volume": "required2",
+  "unit": "U5",
+  "grade": 10,
+  "content": {
+    "title": "-ing 分词作定语速查",
+    "intro": "-ing 分词作定语表'主动 / 正在进行':被修饰的名词主动发出这个动作。单个分词放名词前(the rising sun),带宾语或状语的分词短语放名词后(the road leading to town = the road that leads to town)。",
+    "table": {
+      "headers": ["位置 / 形式", "用法 · 例句 · 等价"],
+      "rows": [
+        ["前置(单个 -ing)", "running water 流动的水;the changing seasons 变化的季节"],
+        ["后置(-ing 短语)", "the road leading to town = the road that leads to town"],
+        ["-ing(主动·使人……)", "an exciting journey 令人兴奋的旅程(旅程让人兴奋)"],
+        ["-ed(被动·人感到……)", "an excited tourist 兴奋的游客(游客感到兴奋)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "名词主动发出动作 / 正在进行 → 用 -ing", "mark": "the passing cars(车主动驶过)" },
+      { "rule": "分词带宾语或状语时,要放到名词之后", "rule_alt": "the man standing there = who is standing there", "mark": "= 定语从句" },
+      { "rule": "事物'令人……'用 -ing;人'感到……'用 -ed", "mark": "an amazing view / an amazed visitor" },
+      { "rule": "-ing 表主动,-ed 表被动/完成,别混", "mark": "running water √ / run water ×" }
+    ],
+    "why": [
+      "-ing 分词等于一个主动的定语从句:the boy reading a book = the boy who is reading a book;名词与动作是主动关系,所以用 -ing 而不是 -ed。"
+    ],
+    "gaokaoPoints": [
+      "语法填空 / 短文改错高频:看名词与动词是主动(-ing)还是被动(-ed)。",
+      "情绪类形容词:修饰'事/物'用 -ing,修饰'人/感受'用 -ed(exciting/excited, boring/bored)。",
+      "分词短语后置 = 省略'关系代词 + be'的定语从句:the train coming from Beijing = which is coming…"
+    ],
+    "examVsReal": [
+      { "exam": "the road leading to the town（考试/书面)", "real": "the road that goes to town", "note": "考试爱考分词后置;口语常直接用定语从句或介词短语" },
+      { "exam": "an exciting trip（考试)", "real": "a trip that was really fun / so much fun", "note": "考试卡 -ing/-ed;口语里常换成 fun、great 等更口语的说法" }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Our next destination is a small village by the lake.", "opts": ["我们的下一个目的地是湖边的小村庄。", "我们的旅行已经结束了。", "村庄里没有湖。", "我们要去一座大城市。"], "answer": 0 },
+    { "audio": "The train follows a route running along the coast.", "opts": ["火车从不靠近海边。", "这趟火车沿着海岸线行驶。", "火车在山里绕圈。", "火车开得非常快。"], "answer": 1 },
+    { "audio": "Remember to exchange some foreign currency before the flight.", "opts": ["记得在飞机上睡觉。", "记得多带行李。", "记得在航班前兑换一些外币。", "记得取消机票。"], "answer": 2 },
+    { "audio": "The road leading to the village is steep and narrow.", "opts": ["这条路又宽又平。", "这条路通往大海。", "村庄里没有路。", "通往村庄的路又陡又窄。"], "answer": 3 },
+    { "audio": "We watched the setting sun turn the sky gold.", "opts": ["我们看着西沉的太阳把天空染成金色。", "太阳正在升起。", "天空一直是灰色的。", "我们错过了日落。"], "answer": 0 },
+    { "audio": "Adventure tourists often explore remote and unusual places.", "opts": ["冒险游客只待在酒店里。", "冒险游客常去偏远而不寻常的地方。", "冒险游客讨厌大自然。", "冒险游客从不出门。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Our next ____ is a quiet village in the mountains.（目的地)", "opts": ["destination", "kitchen", "lesson", "price"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Remember to ____ some foreign money before you leave.（兑换)", "opts": ["throw", "exchange", "cook", "sing"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "The ____ along the coast was beautiful and dramatic.（风景)", "opts": ["traffic", "noise", "scenery", "homework"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Adventure travellers love exploring ____ places far from cities.（偏远的)", "opts": ["busy", "cheap", "noisy", "remote"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "Look at the ____ sun over the eastern hills.", "opts": ["rising", "risen", "to rise", "rise"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The road ____ to the village is very steep and narrow.", "opts": ["led", "leading", "to lead", "lead"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "It was the most ____ journey of my whole life.", "opts": ["excited", "to excite", "exciting", "excite"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "The passengers ____ on the platform looked tired and bored.", "opts": ["waited", "to wait", "wait", "waiting"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["沿海岸行驶的巴士能看到很美的风景。", "这辆巴士坏在了路上。", "巴士里太挤了。", "巴士不沿海岸走。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The bus running along the coast offers great views of the sea." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["别忘了带相机。", "别忘了登机前打印登机牌。", "别忘了买纪念品。", "别忘了兑换货币。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Don't forget to print your boarding pass before you board the plane." }
+  ],
+  "reading": {
+    "passage": "Lauren Bath once worked as a chef, but she loved travelling more than cooking. She began posting her travel photos online, and soon thousands of people were following her blog. In the end she quit her job and became a professional travel photographer.",
+    "passageCn": "劳伦·巴斯曾是一名厨师,但她爱旅行胜过爱烹饪。她开始把旅行照片发到网上,很快就有成千上万的人关注她的博客。最后她辞去工作,成了一名职业旅行摄影师。",
+    "questions": [
+      { "q": "What did Lauren love more than cooking?", "opts": ["Travelling.", "Cleaning.", "Reading.", "Driving."], "answer": 0 },
+      { "q": "What did Lauren become in the end?", "opts": ["A professional travel photographer.", "A famous chef.", "A bus driver.", "A hotel manager."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short postcard to a friend about a trip. Say where you are, what the scenery is like, and what you plan to do next. Try to use -ing participles such as the rising sun or a path leading to the beach.",
+    "promptCn": "给朋友写一张旅行明信片:你在哪里、风景如何、接下来打算做什么。试着用 -ing 分词作定语,如 the rising sun(升起的太阳)、a path leading to the beach(通往海滩的小路)。",
+    "sampleWords": ["destination", "scenery", "landscape", "journey", "route", "path", "setting", "leading", "hike", "amazing"]
+  },
+  "dialogues": [
+    {
+      "title": "Buying a Train Ticket",
+      "lines": [
+        { "role": "A", "text": "I'd like a ticket to the seaside town, please.", "cn": "我想买一张去海滨小镇的票。" },
+        { "role": "B", "text": "Of course. The next train leaving for the coast is at nine.", "cn": "好的。下一班开往海边的火车九点发车。" },
+        { "role": "A", "text": "How long is the journey?", "cn": "车程多长时间?" },
+        { "role": "B", "text": "About an hour, on a route running along the sea.", "cn": "大约一小时,沿着海边的一条线路行驶。" }
+      ]
+    },
+    {
+      "title": "Planning a Weekend Trip",
+      "lines": [
+        { "role": "A", "text": "Why don't we go hiking near the lake this weekend?", "cn": "这周末我们去湖边徒步怎么样?" },
+        { "role": "B", "text": "Good idea! The changing autumn colours there are amazing.", "cn": "好主意!那里变换的秋色美极了。" },
+        { "role": "A", "text": "Let's take the early bus. It's cheaper than driving.", "cn": "我们坐早班公交吧,比开车便宜。" },
+        { "role": "B", "text": "Great. I'll bring my camera for the setting sun.", "cn": "好的,我带相机去拍西沉的太阳。" }
+      ]
+    }
+  ]
+}

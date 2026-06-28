@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Every autumn, monarch butterflies fly thousands of kilometres south.", "opts": ["每年秋天,黑脉金斑蝶向南飞行数千公里。", "金斑蝶从不迁徙。", "金斑蝶在春天向北飞。", "金斑蝶住在海里。"], "answer": 0 },
+    { "audio": "The eagle uses its sharp eyes to find small animals far below.", "opts": ["鹰住在水下。", "鹰用敏锐的眼睛寻找远处下方的小动物。", "鹰看不清东西。", "鹰只在夜里飞。"], "answer": 1 },
+    { "audio": "A good zoo can help protect animals that are in danger.", "opts": ["动物园会伤害动物。", "动物园只为赚钱。", "好的动物园能帮助保护濒危动物。", "动物园里没有动物。"], "answer": 2 },
+    { "audio": "When winter comes, many animals migrate to warmer places.", "opts": ["动物冬天从不移动。", "动物只在夏天迁徙。", "动物讨厌温暖的地方。", "冬天来临时,许多动物迁往温暖的地方。"], "answer": 3 },
+    { "audio": "We are only visitors to the world of wild animals.", "opts": ["我们只是野生动物世界里的客人。", "野生动物属于城市。", "动物是我们的宠物。", "我们拥有这些森林。"], "answer": 0 },
+    { "audio": "The number of these butterflies has fallen very fast.", "opts": ["这些蝴蝶越来越多。", "这些蝴蝶的数量下降得很快。", "蝴蝶的数量没有变化。", "蝴蝶都搬进了动物园。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "These animals ____ south every autumn to find warmer weather.（迁徙)", "opts": ["migrate", "destroy", "freeze", "buy"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The bear suddenly ____ straight back at me and did not move.（凝视)", "opts": ["sold", "stared", "ate", "slept"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "With our help, these rare creatures have a better chance to ____.（存活)", "opts": ["waste", "lose", "survive", "shout"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "The park is famous for the ____ of its wildlife.（多样性)", "opts": ["price", "noise", "garden", "variety"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "I still remember the day ____ I first saw a wild eagle.", "opts": ["when", "which", "where", "why"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "This is the forest ____ many wild deer still feel safe.", "opts": ["which", "where", "when", "that"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "Pollution is the reason ____ fish can no longer live in this river.", "opts": ["that", "when", "why", "where"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "The photo ____ I took of the bear later won a prize.", "opts": ["when", "where", "why", "that"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["科学家发现这种昆虫靠太阳指引。", "这种昆虫害怕阳光。", "这种昆虫从不移动。", "这种昆虫只在夜里飞。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Scientists learned that the insect uses the sun to guide it." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["我们应该砍掉所有的树。", "我们应该尊重野生动物。", "动物喜欢城市。", "动物是我们的玩具。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "We should always respect wild animals." }
+  ],
+  "reading": {
+    "passage": "The monarch butterfly travels thousands of kilometres south each autumn. For a long time, no one knew how it found the way, until scientists discovered that it uses the sun. Sadly, its numbers are falling fast, so people now work together to protect it.",
+    "passageCn": "黑脉金斑蝶每年秋天向南迁徙数千公里。长期以来,无人知道它如何找到方向,直到科学家发现它依靠太阳。遗憾的是,它的数量正在迅速下降,因此如今人们合力保护它。",
+    "questions": [
+      { "q": "How does the monarch butterfly find its way south?", "opts": ["It uses the sun.", "It follows other birds.", "It asks people.", "It uses a map."], "answer": 0 },
+      { "q": "Why do people now work together to protect it?", "opts": ["Because it is too noisy.", "Because its numbers are falling fast.", "Because it eats too much.", "Because it lives in zoos."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short fact file about a wild animal you like. Say what it looks like, where it lives, and why we should protect it.",
+    "promptCn": "写一份你喜欢的野生动物的简短档案:它长什么样、生活在哪里、为什么我们要保护它(试着用 where/when 引导的定语从句)。",
+    "sampleWords": ["creature", "feature", "habitat", "migrate", "wetland", "survive", "protect", "wild", "variety", "symbol"]
+  },
+  "dialogues": [
+    {
+      "title": "A Trip to Watch Birds",
+      "lines": [
+        { "role": "A", "text": "Where would you like to go this weekend?", "cn": "这周末你想去哪里?" },
+        { "role": "B", "text": "To the park where we can watch wild eagles.", "cn": "去那个我们能观赏野鹰的公园。" },
+        { "role": "A", "text": "Great! When is the best time to see them?", "cn": "太好了!什么时候最适合看到它们?" },
+        { "role": "B", "text": "Early morning is the time when they are most active.", "cn": "清晨是它们最活跃的时候。" }
+      ]
+    },
+    {
+      "title": "Should We Keep Animals in Zoos?",
+      "lines": [
+        { "role": "A", "text": "Do you think zoos are good for animals?", "cn": "你觉得动物园对动物好吗?" },
+        { "role": "B", "text": "A good zoo can protect animals that are in danger.", "cn": "好的动物园能保护处于危险中的动物。" },
+        { "role": "A", "text": "But a zoo is not the wild home where they belong.", "cn": "但动物园不是它们所属的野外家园。" },
+        { "role": "B", "text": "That's true. We must respect them, after all.", "cn": "确实如此。毕竟,我们必须尊重它们。" }
+      ]
+    }
+  ]
+}

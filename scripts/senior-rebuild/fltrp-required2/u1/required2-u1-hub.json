@@ -1,0 +1,46 @@
+{
+  "listeningQuestions": [
+    { "audio": "You should wait until everyone has been served before you start eating.", "opts": ["你应该等大家都上了菜再开始吃。", "你吃完后应该马上离开。", "你应该自己先吃完。", "你不必和大家一起吃。"], "answer": 0 },
+    { "audio": "This soup is too salty, so let's add a little water.", "opts": ["这碗汤太甜了。", "这碗汤太咸了,我们加点水吧。", "这碗汤太凉了。", "这碗汤没有味道。"], "answer": 1 },
+    { "audio": "You needn't try the stinky tofu if you really don't want to.", "opts": ["你必须尝尝臭豆腐。", "臭豆腐很好吃。", "如果你实在不想吃,可以不尝臭豆腐。", "臭豆腐已经卖完了。"], "answer": 2 },
+    { "audio": "The chef recommended the fish, and it was truly delicious.", "opts": ["厨师把鱼烧糊了。", "我们没有点鱼。", "这道鱼太贵了。", "厨师推荐了这道鱼,确实很美味。"], "answer": 3 },
+    { "audio": "A balanced diet should include fresh fruit and vegetables.", "opts": ["均衡的饮食应该包含新鲜的水果和蔬菜。", "我们应该多吃油炸食物。", "水果对身体没有好处。", "蔬菜不属于健康饮食。"], "answer": 0 },
+    { "audio": "You mustn't put metal plates in the microwave; it is dangerous.", "opts": ["金属盘子很好看。", "千万不要把金属盘子放进微波炉,那很危险。", "微波炉坏了。", "你可以用金属盘子加热食物。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "The waiter ____ the fish, saying it was the chef's best dish.", "opts": ["recommended", "refused", "forgot", "dropped"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Good table ____ mean you wait until everyone is served.", "opts": ["weather", "manners", "machines", "tickets"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "The steak was so ____ that it almost melted in my mouth.", "opts": ["loud", "cold", "tender", "hard"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "My grandmother taught me a simple ____ for chicken soup.", "opts": ["ticket", "letter", "map", "recipe"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "I'm allergic to nuts, so I ____ check every label before I eat.", "opts": ["have to", "mustn't", "needn't", "can't"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "If you want to stay healthy, you ____ eat more fresh fruit.", "opts": ["shouldn't", "should", "mustn't", "needn't"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "These wild berries are poisonous, so you ____ eat them.", "opts": ["needn't", "must", "mustn't", "don't have to"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "There is plenty of food, so you ____ cook anything tonight.", "opts": ["must", "mustn't", "have to", "needn't"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["糖会侵蚀你的牙齿大约二十分钟。", "可乐里没有糖。", "牙齿不怕糖。", "你应该多喝可乐。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The sugar in cola attacks your teeth for about twenty minutes." },
+    { "q": "听句子选中文:", "opts": ["他从不在家做饭。", "速食很方便,但新鲜食物更健康。", "他讨厌所有蔬菜。", "他每天都自己做饭。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Ready meals are convenient, but fresh food is healthier." }
+  ],
+  "reading": {
+    "passage": "Growing up with a British father and a Chinese mother, I have always loved food from both cultures. My favourite treat is a cross-cultural afternoon tea: English biscuits with a cup of Chinese tea.",
+    "passageCn": "在英国父亲和中国母亲的家庭里长大,我一直热爱两种文化的食物。我最喜欢的享受是一顿跨文化的下午茶:英式饼干配一杯中国茶。",
+    "questions": [
+      { "q": "Why does the writer love food from two cultures?", "opts": ["The writer's parents come from different cultures.", "The writer studied cooking abroad.", "The writer disliked all home food.", "The writer ran a tea shop."], "answer": 0 },
+      { "q": "What is the writer's favourite treat?", "opts": ["A spicy hot pot dinner.", "A full English breakfast.", "A cross-cultural afternoon tea.", "A plate of roast beef."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences giving advice on healthy eating. Use one modal of advice (should / ought to) and one of obligation or prohibition (must / have to / mustn't / needn't).",
+    "promptCn": "用3-4句话给出健康饮食的建议。用一个表建议的情态动词(should / ought to),再用一个表义务或禁止的情态动词(must / have to / mustn't / needn't)。",
+    "sampleWords": ["diet", "should", "ought to", "mustn't", "needn't", "fresh", "snack", "sugar", "healthy", "balance"]
+  },
+  "dialogues": [
+    {
+      "title": "Ordering at a Restaurant",
+      "lines": [
+        { "role": "A", "text": "I can't decide what to have. Any suggestions?", "cn": "我拿不定主意点什么,有建议吗?" },
+        { "role": "B", "text": "If you like spicy food, you should try the Gong Bao chicken.", "cn": "如果你喜欢辣的,你应该尝尝宫保鸡丁。" },
+        { "role": "A", "text": "Sounds great. Should we order a soup too?", "cn": "听起来不错。我们还要点个汤吗?" },
+        { "role": "B", "text": "Yes, but let's avoid the salty one and have the tomato and egg soup.", "cn": "好,不过别要太咸的那种,点番茄蛋汤吧。" }
+      ]
+    }
+  ]
+}

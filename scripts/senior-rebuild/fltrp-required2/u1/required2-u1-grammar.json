@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "grammar_title": "情态动词1:义务与建议(must / have to / should / ought to / mustn't / needn't / don't have to)",
+  "source": "外研社(新标准)必修第二册 Unit 1 Using language:情态动词(1)义务与建议。句子地道、围绕饮食/餐桌主题,答案唯一(干扰项语义相反或不成立)。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "must / have to(表义务:内在必要 vs 外在要求)",
+      "overview": "must 多表说话人自己强烈的必要或坚持;have to 多表规则、医嘱、客观情况等外部要求。两者都表示\"必须做\",在肯定的义务语境里成立,而 mustn't(禁止)、needn't / don't have to(不必)与义务相反。"
+    },
+    {
+      "code": "u1.02",
+      "point": "should / ought to(表建议:应该做)",
+      "overview": "should 和 ought to 都表示\"应该\",给出建议或忠告;语气比 must 弱。其相反面是 shouldn't(不该这么做),而 mustn't(禁止)、needn't(不必)在给出\"应该做某事\"的语境里不成立。"
+    },
+    {
+      "code": "u1.03",
+      "point": "mustn't / needn't / don't have to(禁止 vs 不必)",
+      "overview": "mustn't = 一定不要、禁止(不允许、危险或失礼);needn't / don't have to = 不必、没必要(做不做都行)。三者意义不同:禁止≠不必≠必须(must),据语境选唯一成立项。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "This soup is wonderful — you ____ try it before it gets cold!",
+      "options": [
+        "must",
+        "mustn't",
+        "needn't",
+        "can't"
+      ],
+      "answer_index": 0,
+      "explanation": "说话人热情坚持对方一定要尝,用 must;禁止/不必/不能都与语境相反。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "We've run out of honey, so I ____ remember to buy some on the way home.",
+      "options": [
+        "needn't",
+        "must",
+        "mustn't",
+        "don't have to"
+      ],
+      "answer_index": 1,
+      "explanation": "说话人提醒自己务必记得,内在必要用 must;其余表示不必或禁止,不合逻辑。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The cake smells amazing. I really ____ ask the chef for the recipe.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "must",
+        "don't have to"
+      ],
+      "answer_index": 2,
+      "explanation": "出于自己的强烈意愿\"一定要问\",用 must。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Grandma cooked all afternoon, so we ____ thank her for the lovely meal.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "can't",
+        "must"
+      ],
+      "answer_index": 3,
+      "explanation": "说话人觉得理应如此、非做不可,用 must;不必/禁止都不成立。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "You ____ taste this blue cheese — I'm sure you'll love its strong flavour.",
+      "options": [
+        "must",
+        "mustn't",
+        "needn't",
+        "shouldn't"
+      ],
+      "answer_index": 0,
+      "explanation": "强烈推荐对方一定要尝,用 must;mustn't/shouldn't 是反对,needn't 是不必。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "I ____ say, this is the best noodle shop I have ever been to.",
+      "options": [
+        "mustn't",
+        "must",
+        "needn't",
+        "can't"
+      ],
+      "answer_index": 1,
+      "explanation": "固定说法 I must say(我得说),表达强烈看法,用 must。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "It's late and I'm starving — we ____ find somewhere to eat right now.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "must",
+        "don't have to"
+      ],
+      "answer_index": 2,
+      "explanation": "情况紧迫、非吃不可,内在强烈必要用 must。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "These dumplings are so good that I ____ have a second bowl.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "can't",
+        "must"
+      ],
+      "answer_index": 3,
+      "explanation": "说话人忍不住、一定要再来一碗,用 must。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Before I forget it, I ____ write down Mum's secret sauce recipe.",
+      "options": [
+        "must",
+        "mustn't",
+        "needn't",
+        "shouldn't"
+      ],
+      "answer_index": 0,
+      "explanation": "提醒自己务必记下来,内在必要用 must。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "You ____ visit that little bakery; their fresh bread is unbeatable.",
+      "options": [
+        "mustn't",
+        "must",
+        "needn't",
+        "can't"
+      ],
+      "answer_index": 1,
+      "explanation": "热情建议对方一定要去,用 must;其余与语境相反。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "To get a table at that restaurant, you ____ book a week in advance.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "have to",
+        "can't"
+      ],
+      "answer_index": 2,
+      "explanation": "这是餐厅的客观要求(外部规定),用 have to;禁止/不必/不能都不合理。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "I'm allergic to nuts, so I ____ check every label before I eat.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "don't have to",
+        "have to"
+      ],
+      "answer_index": 3,
+      "explanation": "因身体情况这一客观原因而不得不做,用 have to。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The school rule says students ____ finish their vegetables before dessert.",
+      "options": [
+        "have to",
+        "mustn't",
+        "needn't",
+        "can't"
+      ],
+      "answer_index": 0,
+      "explanation": "学校规定这一外部要求,用 have to。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "My doctor told me I ____ cut down on salt because of my blood pressure.",
+      "options": [
+        "mustn't",
+        "have to",
+        "needn't",
+        "shouldn't"
+      ],
+      "answer_index": 1,
+      "explanation": "医嘱是外部要求,转述时用 have to。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The recipe says you ____ heat the oil before adding the chillies.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "have to",
+        "can't"
+      ],
+      "answer_index": 2,
+      "explanation": "食谱的步骤要求(客观条件),用 have to。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Because the canteen closes at two, we ____ have lunch a bit earlier today.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "don't have to",
+        "have to"
+      ],
+      "answer_index": 3,
+      "explanation": "受客观情况限制不得不提前,用 have to。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "In some cultures, guests ____ take off their shoes before a family dinner.",
+      "options": [
+        "have to",
+        "mustn't",
+        "needn't",
+        "can't"
+      ],
+      "answer_index": 0,
+      "explanation": "当地风俗这一外部要求,用 have to。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The waiter said we ____ pay at the counter, not at the table.",
+      "options": [
+        "mustn't",
+        "have to",
+        "needn't",
+        "shouldn't"
+      ],
+      "answer_index": 1,
+      "explanation": "餐厅规定(外部要求),用 have to。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Since every shop was closed, we ____ cook with whatever was left in the fridge.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "have to",
+        "can't"
+      ],
+      "answer_index": 2,
+      "explanation": "客观情况使然(没别的选择),用 have to。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "All kitchen staff ____ wash their hands before they start work — it's the rule.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "don't have to",
+        "have to"
+      ],
+      "answer_index": 3,
+      "explanation": "工作规定这一外部要求,用 have to。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "If you want to stay healthy, you ____ eat more fresh fruit and vegetables.",
+      "options": [
+        "should",
+        "shouldn't",
+        "mustn't",
+        "needn't"
+      ],
+      "answer_index": 0,
+      "explanation": "给出健康建议\"应该多吃\",用 should;其余是反对或禁止。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "You look tired. You ____ have a proper breakfast every morning.",
+      "options": [
+        "shouldn't",
+        "should",
+        "mustn't",
+        "needn't"
+      ],
+      "answer_index": 1,
+      "explanation": "友善建议对方应该这么做,用 should。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "These soft drinks have too much sugar; you ____ choose water instead.",
+      "options": [
+        "shouldn't",
+        "mustn't",
+        "should",
+        "can't"
+      ],
+      "answer_index": 2,
+      "explanation": "建议改选更健康的水,用 should。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "If the soup tastes a little flat, you ____ add a pinch more salt.",
+      "options": [
+        "shouldn't",
+        "mustn't",
+        "needn't",
+        "should"
+      ],
+      "answer_index": 3,
+      "explanation": "提出做法建议,用 should。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "When in Rome, you ____ try the local food and follow local customs.",
+      "options": [
+        "should",
+        "shouldn't",
+        "mustn't",
+        "needn't"
+      ],
+      "answer_index": 0,
+      "explanation": "建议入乡随俗,用 should。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "To make the steak tender, you ____ cook it over a high heat first.",
+      "options": [
+        "shouldn't",
+        "should",
+        "mustn't",
+        "can't"
+      ],
+      "answer_index": 1,
+      "explanation": "给出烹饪建议,用 should。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "You ____ wash the vegetables carefully before you put them in the pot.",
+      "options": [
+        "shouldn't",
+        "mustn't",
+        "should",
+        "needn't"
+      ],
+      "answer_index": 2,
+      "explanation": "建议应当先洗净,用 should。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "If you don't like spicy food, you ____ ask the chef to make it milder.",
+      "options": [
+        "shouldn't",
+        "mustn't",
+        "needn't",
+        "should"
+      ],
+      "answer_index": 3,
+      "explanation": "提出解决建议,用 should。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "We ____ eat a little more slowly so that we can really enjoy the meal.",
+      "options": [
+        "should",
+        "shouldn't",
+        "mustn't",
+        "can't"
+      ],
+      "answer_index": 0,
+      "explanation": "温和建议大家应该这么做,用 should。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "If you feel hungry between meals, you ____ keep some healthy snacks nearby.",
+      "options": [
+        "shouldn't",
+        "should",
+        "mustn't",
+        "needn't"
+      ],
+      "answer_index": 1,
+      "explanation": "给出实用建议,用 should。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Your fridge is almost empty; you ____ do a big shop this weekend.",
+      "options": [
+        "shouldn't",
+        "mustn't",
+        "ought to",
+        "needn't"
+      ],
+      "answer_index": 2,
+      "explanation": "建议\"应该\"去采购,用 ought to,与 should 同义。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Such a kind and skilful chef — we ____ leave him a nice review online.",
+      "options": [
+        "shouldn't",
+        "mustn't",
+        "can't",
+        "ought to"
+      ],
+      "answer_index": 3,
+      "explanation": "理应这么做的建议,用 ought to。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "If you keep eating so much fried food, you ____ think about your health.",
+      "options": [
+        "ought to",
+        "shouldn't",
+        "mustn't",
+        "needn't"
+      ],
+      "answer_index": 0,
+      "explanation": "提出忠告\"应该考虑\",用 ought to。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "This cheese is clearly going off; you ____ throw it away now.",
+      "options": [
+        "shouldn't",
+        "ought to",
+        "mustn't",
+        "can't"
+      ],
+      "answer_index": 1,
+      "explanation": "建议应当扔掉,用 ought to。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Guests are coming for dinner, so we ____ tidy the kitchen first.",
+      "options": [
+        "shouldn't",
+        "mustn't",
+        "ought to",
+        "needn't"
+      ],
+      "answer_index": 2,
+      "explanation": "建议理应先收拾,用 ought to。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "If you want to learn to cook, you ____ start with a few simple recipes.",
+      "options": [
+        "shouldn't",
+        "mustn't",
+        "needn't",
+        "ought to"
+      ],
+      "answer_index": 3,
+      "explanation": "给出学习建议,用 ought to。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The bread is freshest now, so we ____ eat it today rather than tomorrow.",
+      "options": [
+        "ought to",
+        "shouldn't",
+        "mustn't",
+        "can't"
+      ],
+      "answer_index": 0,
+      "explanation": "建议应当今天吃,用 ought to。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "You ____ taste the sauce before you add any more salt to it.",
+      "options": [
+        "shouldn't",
+        "ought to",
+        "mustn't",
+        "needn't"
+      ],
+      "answer_index": 1,
+      "explanation": "给出做法建议,用 ought to。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Since you are a vegetarian, you ____ tell the waiter about it in advance.",
+      "options": [
+        "shouldn't",
+        "mustn't",
+        "ought to",
+        "can't"
+      ],
+      "answer_index": 2,
+      "explanation": "建议应当提前说明,用 ought to。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "When a host invites us to dinner, we ____ thank them with a small gift.",
+      "options": [
+        "shouldn't",
+        "mustn't",
+        "needn't",
+        "ought to"
+      ],
+      "answer_index": 3,
+      "explanation": "礼仪建议\"理应\"如此,用 ought to。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "These wild berries are poisonous, so you ____ eat them.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "don't have to",
+        "must"
+      ],
+      "answer_index": 0,
+      "explanation": "有毒、绝对不能吃,表禁止用 mustn't;不必/必须都不合逻辑。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "You ____ touch the hot pot with your bare hands; you'll burn yourself.",
+      "options": [
+        "needn't",
+        "mustn't",
+        "don't have to",
+        "can"
+      ],
+      "answer_index": 1,
+      "explanation": "危险、千万不要,表禁止用 mustn't。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We ____ be late for the wedding dinner; it would be very rude.",
+      "options": [
+        "needn't",
+        "don't have to",
+        "mustn't",
+        "must"
+      ],
+      "answer_index": 2,
+      "explanation": "失礼、一定不要迟到,表禁止用 mustn't。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "You ____ put metal plates in the microwave — it is really dangerous.",
+      "options": [
+        "needn't",
+        "don't have to",
+        "should",
+        "mustn't"
+      ],
+      "answer_index": 3,
+      "explanation": "危险、绝不可这么做,用 mustn't。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Diners ____ smoke inside the restaurant; it is simply not allowed.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "don't have to",
+        "can"
+      ],
+      "answer_index": 0,
+      "explanation": "明令不允许,表禁止用 mustn't。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "You ____ tell Grandma the soup was too salty; it would hurt her feelings.",
+      "options": [
+        "needn't",
+        "mustn't",
+        "don't have to",
+        "must"
+      ],
+      "answer_index": 1,
+      "explanation": "千万别说出口,表禁止/劝阻用 mustn't。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Young children ____ play with the sharp kitchen knives.",
+      "options": [
+        "needn't",
+        "don't have to",
+        "mustn't",
+        "can"
+      ],
+      "answer_index": 2,
+      "explanation": "为安全绝对禁止,用 mustn't。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "You ____ leave the gas on after you finish cooking; it's not safe.",
+      "options": [
+        "needn't",
+        "don't have to",
+        "should",
+        "mustn't"
+      ],
+      "answer_index": 3,
+      "explanation": "不安全、绝不可,用 mustn't。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "There's plenty of food in the fridge, so you ____ cook anything tonight.",
+      "options": [
+        "needn't",
+        "mustn't",
+        "must",
+        "can't"
+      ],
+      "answer_index": 0,
+      "explanation": "没必要做,表不必用 needn't;禁止/必须都不合语境。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The meal has already been paid for, so you ____ bring any money.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "must",
+        "can't"
+      ],
+      "answer_index": 1,
+      "explanation": "无需带钱,表不必用 needn't。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "It's only a casual lunch, so you ____ wear anything fancy.",
+      "options": [
+        "mustn't",
+        "must",
+        "needn't",
+        "should"
+      ],
+      "answer_index": 2,
+      "explanation": "无需穿正式,表不必用 needn't。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Mum said, \"You ____ try the stinky tofu if you really don't want to.\"",
+      "options": [
+        "mustn't",
+        "must",
+        "can't",
+        "needn't"
+      ],
+      "answer_index": 3,
+      "explanation": "不想吃就不必吃,表不必用 needn't。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We have enough chairs, so we ____ borrow any from the neighbours.",
+      "options": [
+        "needn't",
+        "mustn't",
+        "must",
+        "can't"
+      ],
+      "answer_index": 0,
+      "explanation": "无需去借,表不必用 needn't。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The dish is very forgiving, so you ____ follow the recipe exactly.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "must",
+        "should"
+      ],
+      "answer_index": 1,
+      "explanation": "不必严格照做,表不必用 needn't。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Lunch is free for students today, so you ____ pay for it.",
+      "options": [
+        "mustn't",
+        "must",
+        "don't have to",
+        "can't"
+      ],
+      "answer_index": 2,
+      "explanation": "免费、无需付钱,表不必用 don't have to。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "There is still some bread left, so we ____ buy more this morning.",
+      "options": [
+        "mustn't",
+        "must",
+        "can't",
+        "don't have to"
+      ],
+      "answer_index": 3,
+      "explanation": "还有剩、不必再买,用 don't have to。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "It's a buffet, so you ____ wait to be served at the table.",
+      "options": [
+        "don't have to",
+        "mustn't",
+        "must",
+        "should"
+      ],
+      "answer_index": 0,
+      "explanation": "自助餐无需等人上菜,用 don't have to。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She isn't coming for dinner tonight, so we ____ cook for her.",
+      "options": [
+        "mustn't",
+        "don't have to",
+        "must",
+        "can't"
+      ],
+      "answer_index": 1,
+      "explanation": "她不来、无需为她做,用 don't have to。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The soup is quite mild, so you ____ worry about it being too spicy.",
+      "options": [
+        "mustn't",
+        "must",
+        "don't have to",
+        "should"
+      ],
+      "answer_index": 2,
+      "explanation": "不必担心,用 don't have to。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We've already booked a table, so we ____ queue outside the restaurant.",
+      "options": [
+        "mustn't",
+        "must",
+        "can't",
+        "don't have to"
+      ],
+      "answer_index": 3,
+      "explanation": "已订位、无需排队,用 don't have to。"
+    }
+  ]
+}

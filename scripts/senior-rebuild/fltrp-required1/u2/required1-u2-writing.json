@@ -1,0 +1,52 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "topic": "Write a Story about a Misunderstanding in English(写一个英语误会的小故事)",
+  "title_en": "A Misunderstanding in English",
+  "genre": "记叙文 / 小故事(tell a story about a misunderstanding caused by English)",
+  "source": "外研社必修一 Unit 2 Developing ideas / Presenting ideas:write a story about a misunderstanding in English(根据情境写一段经历,讲清人物、地点、发生了什么、误会的原因)。",
+  "prompt_cn": "假设你叫李华,去年暑假你住在一个英国家庭。请用英语写一个约80词的小故事,内容包括:① 故事中的人物和地点;② 发生了什么(一个由英语词语引起的误会);③ 误会是怎么解开的、你的感受。可用 'I was really surprised when…', 'It turned out that…' 等表达。",
+  "prompt_en": "Suppose you are Li Hua. Last summer you stayed with a British family. Write a short story (about 80 words) including: 1) who was in the story and where it happened; 2) what happened — a misunderstanding caused by an English word; 3) how the misunderstanding was cleared up and how you felt. You may use 'I was really surprised when…' and 'It turned out that…'.",
+  "points": [
+    "交代人物与地点(Last summer, I stayed with a British family.)",
+    "描述误会(I was really surprised when … / I wasn't sure whether …)",
+    "解开误会(It turned out that …)",
+    "表达感受、句句围绕这个误会"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Last summer, I stayed with a British family. One evening, the mother said we would have 'toad-in-the-hole' for dinner. I was really surprised, because I thought a toad was an animal like a frog. I wasn't sure whether I should eat it, so I said nothing. It turned out that the dish was just sausages baked in a kind of cake, and it was delicious! Everyone laughed when I explained my mistake. That funny misadventure taught me never to judge an English dish by its strange name.",
+  "model_translation": "去年夏天,我住在一个英国家庭。一天傍晚,女主人说晚饭吃'洞中蟾蜍'。我大吃一惊,因为我以为蟾蜍是像青蛙一样的动物。我不确定该不该吃,就什么也没说。结果那道菜其实是裹在面糊里烤的香肠,非常美味!我解释我的误会时,大家都笑了。那次有趣的倒霉经历让我明白,不能凭奇怪的名字来判断一道英国菜。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:人物地点 / 误会经过 / 解开与感受" },
+      { "dimension": "结构", "max": 4, "criteria": "按时间顺序讲故事、句句围绕这个误会、代词指代清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "记叙时态正确、词汇句型准确多样、构词/搭配运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "开头 Last summer, I stayed with a British family.",
+      "误会 I was really surprised when … / I wasn't sure whether …",
+      "转折 It turned out that …",
+      "结尾 That funny misadventure taught me …"
+    ],
+    "key_expressions": [
+      "I was really surprised when she said we would have 'toad-in-the-hole'.",
+      "I wasn't sure whether I should eat it.",
+      "It turned out that the dish was just sausages baked in a kind of cake.",
+      "That funny misadventure taught me never to judge a dish by its name."
+    ],
+    "useful_words": ["misunderstanding", "surprised", "turned out", "actually", "explain", "delicious", "laugh", "context", "strange", "misadventure"]
+  },
+  "high_sentences": [
+    "I was really surprised when the mother said we would have 'toad-in-the-hole'.",
+    "I wasn't sure whether I should eat it, so I said nothing.",
+    "It turned out that the dish was just sausages baked in a kind of cake.",
+    "That funny misadventure taught me never to judge an English dish by its strange name."
+  ],
+  "error_pairs": [
+    { "wrong": "I was surprised when she say that.", "correct": "I was surprised when she said that.", "note": "记叙过去的事,从句动词用过去式 said。" },
+    { "wrong": "It turned out that the dish is sausages.", "correct": "It turned out that the dish was sausages.", "note": "主句过去时,宾语从句也用过去时保持一致。" },
+    { "wrong": "I wasn't sure whether eat it or not.", "correct": "I wasn't sure whether to eat it or not.", "note": "whether 后接动词不定式用 whether to do。" }
+  ],
+  "paragraph_template": "【英语误会小故事结构】\n第1句 人物地点:Last summer, I stayed with a British family.\n第2-3句 误会:One day … I was really surprised when … / I wasn't sure whether …\n第4句 解开:It turned out that …\n第5句 感受:That funny misadventure taught me …"
+}

@@ -1,0 +1,338 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "topic": "Stage and Screen",
+  "source": "外研社版必修第二册 Unit 4 同主题阅读(京剧版哈姆雷特/好书与烂片改编/公主日记影评/格拉斯顿伯里音乐节/芭蕾牡丹亭/电视节目类型)。词限 U4/初中/常见词,答案转述非照抄,4选项唯一,与听写关不撞文章。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "When Peking Opera Met Hamlet",
+      "topic_cn": "记叙·京剧版《哈姆雷特》",
+      "body": "As a high school student who studies English literature, I thought I knew Hamlet well. After all, I had read Shakespeare's play many times. Then a Peking Opera version of the story, called The Revenge of Prince Zidan, came to my city, and I had to see it. From the first moment, the music sounded completely new to my ears. At one point I was sure I heard a violin, but it turned out to be a small instrument with two strings. The costumes and masks were amazing, and although the actors sang in Chinese, their movements and faces carried the meaning across to me. The stage itself was almost empty: a single decorated whip stood for a horse. Using such simple techniques, the performers turned a small stage into a whole world. My favourite part was when the prince did a backflip. Feeling the love, anger and grief in the show, I had no trouble recognising the story of Hamlet.",
+      "vocab_notes": [
+        {
+          "word": "version",
+          "cn": "版本;改编"
+        },
+        {
+          "word": "string",
+          "cn": "(乐器的)弦"
+        },
+        {
+          "word": "grief",
+          "cn": "悲痛"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the writer feel about Hamlet before seeing the opera?",
+          "options": [
+            "He believed he already understood the play well.",
+            "He had never heard of the play.",
+            "He found the play boring to read.",
+            "He disliked Shakespeare's writing."
+          ],
+          "answer_index": 0,
+          "explanation": "开头说他读过多次、自认很熟悉 Hamlet,即认为自己已经很了解这部戏。"
+        },
+        {
+          "stem": "What does the writer say about the stage design?",
+          "options": [
+            "It was crowded with real horses and furniture.",
+            "It was very simple, using a few props to suggest much more.",
+            "It used huge modern screens everywhere.",
+            "It copied a Western theatre exactly."
+          ],
+          "answer_index": 1,
+          "explanation": "原文讲舞台几乎空荡,一根鞭子代表一匹马,简单道具营造大世界,即用极简布景暗示丰富内容。"
+        },
+        {
+          "stem": "Why could the writer still follow the story though it was sung in Chinese?",
+          "options": [
+            "The actors' movements and emotions made the meaning clear.",
+            "There were English voices behind the stage.",
+            "He had memorised the Chinese words.",
+            "A teacher explained each line aloud."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说动作、表情把意思传达给他,他感受到剧中情感便认出了故事,即靠表演动作与情感理解。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Good Book, Bad Movie?",
+      "topic_cn": "议论·好书为何拍成烂片",
+      "body": "People say that a picture is worth a thousand words, yet many great books become poor films. Why does this happen so often? One big reason is time. A book may take several days to read, but a film usually lasts under two hours. Because of this, films have to cut characters and details that readers love. Even the popular Harry Potter films left out scenes, which disappointed many fans of the books. A second reason is that films sometimes do not match the pictures in our minds. When the look of a character or place is different from what we imagined while reading, we feel let down. Some people argue, however, that a book and a film are two different forms with different rules. Perhaps, then, we should judge a film on its own and not always compare it with the book. In recent years, long television series have become a popular way to tell big stories without losing too much.",
+      "vocab_notes": [
+        {
+          "word": "disappointed",
+          "cn": "失望的"
+        },
+        {
+          "word": "escape",
+          "cn": "逃避;避免"
+        },
+        {
+          "word": "original",
+          "cn": "原版的;最初的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the text, why do films often cut parts of a book?",
+          "options": [
+            "Directors have never read the books.",
+            "A film is much shorter, so it has no room for everything.",
+            "Audiences ask for shorter characters.",
+            "Books contain no interesting scenes."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说电影通常不到两小时,因此不得不删减角色和细节,即时长太短装不下全部内容。"
+        },
+        {
+          "stem": "What does the Harry Potter example show?",
+          "options": [
+            "The films were complete failures.",
+            "The books were too short to film.",
+            "Even very successful films may leave fans unhappy by cutting scenes.",
+            "Fans never noticed the missing parts."
+          ],
+          "answer_index": 2,
+          "explanation": "原文用 Harry Potter 说明连卖座电影也删了情节、令书迷失望,即再成功的电影也会因删减让粉丝不满。"
+        },
+        {
+          "stem": "What does the writer suggest we do with film adaptations?",
+          "options": [
+            "Stop watching films based on books.",
+            "Only trust films that copy the book word for word.",
+            "Read the book after watching the film.",
+            "Judge each film by itself rather than always measuring it against the book."
+          ],
+          "answer_index": 3,
+          "explanation": "原文建议就电影本身评价,不总拿它与原著比较。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Review of The Princess Diaries",
+      "topic_cn": "影评·《公主日记》",
+      "body": "The Princess Diaries is a film about a teenager named Mia. Shortly before her sixteenth birthday, she is shocked to learn that she is the princess of a small made-up kingdom. Mia is a shy, awkward American girl, and at first she has no idea how to behave like royalty. She is taught how to act in public, but things become difficult when newspapers find out her secret and follow her everywhere. In the end she must choose between her ordinary life as a city teenager and her new duties as a princess. The film looks at the idea of responsibility in a warm and funny way. My favourite scene comes near the end, when Mia, full of self-doubt, reads a letter from her late father. His words about courage stay in my memory long after the film is over. If you enjoy a story that is both light and thoughtful, this is a film you really should not miss.",
+      "vocab_notes": [
+        {
+          "word": "fictional",
+          "cn": "虚构的"
+        },
+        {
+          "word": "behave",
+          "cn": "举止;表现"
+        },
+        {
+          "word": "responsibility",
+          "cn": "责任"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What surprising news does Mia receive?",
+          "options": [
+            "She is really a princess of a small invented country.",
+            "She has won a singing contest.",
+            "She must move to another school.",
+            "Her father is a famous actor."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说她震惊地得知自己是一个虚构小王国的公主,即她其实是个公主。"
+        },
+        {
+          "stem": "What makes Mia's life difficult after the news?",
+          "options": [
+            "She forgets how to speak English.",
+            "Reporters discover her secret and keep following her.",
+            "She loses all her money.",
+            "Her friends move abroad."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说报纸发现了她的秘密、到处跟着她,即记者曝光并追踪她。"
+        },
+        {
+          "stem": "What does the reviewer think of the film?",
+          "options": [
+            "It is dull and not worth watching.",
+            "It is too sad for young viewers.",
+            "It is enjoyable, mixing light fun with a thoughtful message.",
+            "It is good only for its music."
+          ],
+          "answer_index": 2,
+          "explanation": "末段说它既轻松又引人思考、非常值得一看,即评价正面、轻松又有深意。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Glastonbury Festival",
+      "topic_cn": "说明·格拉斯顿伯里音乐节",
+      "body": "The Glastonbury Festival is one of the most famous music and arts festivals in the world. It began in the 1970s and takes place on a large farm in the south-west of England. Each summer, thousands of people travel there to camp for several days and enjoy live music under the open sky. What makes the festival special is not only the music but also the friendly spirit behind it. Most of the people who organise it are volunteers, and a large part of the money from ticket sales is given to charity. Over the years, many well-known bands have played there, and the crowd has grown to around two hundred thousand. Getting there takes some planning. Many visitors meet in London, take a coach to a nearby town, and then use a free bus service to reach the festival site. Because the weather can change quickly, experienced fans always pack a tent, warm clothes and a rain jacket.",
+      "vocab_notes": [
+        {
+          "word": "arrangement",
+          "cn": "安排"
+        },
+        {
+          "word": "transport",
+          "cn": "交通"
+        },
+        {
+          "word": "extent",
+          "cn": "程度"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What makes the festival special besides the music?",
+          "options": [
+            "Its free food for every visitor.",
+            "Its location inside a big city.",
+            "Its rule that only famous people may attend.",
+            "Its kind spirit, with volunteers and money going to charity."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说组织者多为志愿者、票款大部分捐给慈善,这种友善精神让它与众不同。"
+        },
+        {
+          "stem": "How do many visitors usually reach the festival?",
+          "options": [
+            "After meeting up in the capital, they ride a coach and then a shuttle bus.",
+            "They fly directly to the farm.",
+            "They drive their own cars onto the stage.",
+            "They walk all the way from London."
+          ],
+          "answer_index": 0,
+          "explanation": "原文描述在伦敦集合、坐长途车到附近镇、再乘免费巴士到场地。"
+        },
+        {
+          "stem": "Why do experienced fans bring a tent and a rain jacket?",
+          "options": [
+            "There are no hotels in England.",
+            "The weather there can change suddenly.",
+            "The organisers sell them at high prices.",
+            "Tents are required to enter London."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说天气可能骤变,所以有经验的人会带帐篷和雨衣。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "A Night at the Ballet",
+      "topic_cn": "记叙·芭蕾《牡丹亭》",
+      "body": "Last night I went to watch the ballet The Peony Pavilion, and it changed the way I think about dance. Before going, I believed that ballet looked more or less the same everywhere, so I was not really prepared for what I saw. As soon as the curtain rose, I was completely absorbed. This performance was not like any ballet I had seen before. It borrowed a great deal from Chinese dance and music, so the influence of Eastern art was clear in every scene. The stage was full of soft colours and romantic symbols, and the dancers' movements challenged my eyes in new and surprising ways. The music seemed to carry the story forward without a single spoken word. By the end, I understood that ballet can speak many cultural languages at once. I enjoyed the evening so much that I can hardly wait to go again, and I now tell all my friends to give this kind of show a chance.",
+      "vocab_notes": [
+        {
+          "word": "ballet",
+          "cn": "芭蕾舞剧"
+        },
+        {
+          "word": "absorbed",
+          "cn": "入迷的"
+        },
+        {
+          "word": "romantic",
+          "cn": "浪漫的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the writer think about ballet before the show?",
+          "options": [
+            "That it was always boring to watch.",
+            "That only children could enjoy it.",
+            "That it was much the same wherever you saw it.",
+            "That it needed a lot of spoken words."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说他原以为芭蕾到哪儿都差不多,所以没做好心理准备。"
+        },
+        {
+          "stem": "What made this ballet different from others?",
+          "options": [
+            "It used no music at all.",
+            "It was performed without any dancers.",
+            "It was spoken rather than danced.",
+            "It blended Eastern dance and musical styles into the ballet."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说它大量借鉴中国舞蹈和音乐,东方艺术影响明显。"
+        },
+        {
+          "stem": "How did the writer feel by the end of the evening?",
+          "options": [
+            "Delighted, and eager to see such a show again.",
+            "Tired and ready to leave early.",
+            "Confused and unable to follow it.",
+            "Sorry that he had bought a ticket."
+          ],
+          "answer_index": 0,
+          "explanation": "末段说他非常享受、迫不及待想再看,还向朋友推荐。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Choosing a TV Programme",
+      "topic_cn": "说明·电视节目类型",
+      "body": "There are many kinds of television programme, and each one offers something different. A talent show, for example, lets ordinary people sing or dance in front of judges, and viewers love to see who will win. A nature documentary takes us close to wild animals that most of us would never meet in real life. A comedy makes us laugh after a long, tiring day, while a news programme keeps us up to date with what is happening in the world. Some people enjoy a talk show, where a host chats with guests about their lives; a good host listens carefully and lets the guests speak, but a rude one talks over them and spoils the fun. Cartoons, with their creative plots and bright settings, are loved by both children and adults. When friends share their favourite programmes, they often describe them with strong words such as exciting, appealing or unforgettable. In the end, the best programme is simply the one that you enjoy most.",
+      "vocab_notes": [
+        {
+          "word": "documentary",
+          "cn": "纪录片"
+        },
+        {
+          "word": "comedy",
+          "cn": "喜剧"
+        },
+        {
+          "word": "appealing",
+          "cn": "有吸引力的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does a talent show let people do?",
+          "options": [
+            "Watch wild animals in nature.",
+            "Sing or dance before a panel and try to win.",
+            "Read the daily news.",
+            "Buy and sell goods on screen."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说选秀节目让普通人在评委面前唱歌跳舞,观众期待谁会获胜。"
+        },
+        {
+          "stem": "What is the difference between a good and a rude talk-show host?",
+          "options": [
+            "A good one never invites any guests.",
+            "A rude one always sings to the guests.",
+            "A polite host allows guests to talk, but a rude one keeps interrupting.",
+            "A good one refuses to ask questions."
+          ],
+          "answer_index": 2,
+          "explanation": "原文对比:好主持人认真听、让嘉宾说;无礼的主持人抢话,破坏乐趣。"
+        },
+        {
+          "stem": "What does the writer say is the best programme?",
+          "options": [
+            "Only the news programme.",
+            "The one with the most famous host.",
+            "The longest programme on TV.",
+            "Whatever programme a person enjoys the most."
+          ],
+          "answer_index": 3,
+          "explanation": "末句说最好的节目就是你自己最喜欢的那个。"
+        }
+      ]
+    }
+  ]
+}

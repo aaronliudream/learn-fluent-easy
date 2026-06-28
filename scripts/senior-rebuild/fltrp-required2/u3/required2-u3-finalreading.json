@@ -1,0 +1,32 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(运动主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Mei used to be afraid of the water, so she never thought she would learn to surf. With a patient coach and a lot of practice, she slowly learned to balance on the board, and within a year she was riding small waves on her own. Now she says that surfing has taught her to face her fears one wave at a time.",
+    "questions": [
+      {
+        "q": "Why didn't Mei expect to learn surfing?",
+        "options": [
+          "She had always been frightened of water.",
+          "She had no coach to help her.",
+          "She disliked every kind of sport.",
+          "She lived far away from the sea."
+        ],
+        "answer": "A",
+        "explanation": "首句说她以前怕水,所以没想过学冲浪;这是对 'afraid of the water' 的转述,其余未提或相反。"
+      },
+      {
+        "q": "What has surfing taught Mei?",
+        "options": [
+          "To deal with her fears bit by bit.",
+          "To avoid the ocean completely.",
+          "To give up whenever it gets hard.",
+          "To win surfing competitions quickly."
+        ],
+        "answer": "A",
+        "explanation": "末句说冲浪教她一次一个浪地面对恐惧(短文后半段),是对 'face her fears one wave at a time' 的概括转述。"
+      }
+    ]
+  }
+}

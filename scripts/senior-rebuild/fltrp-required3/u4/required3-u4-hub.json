@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "The painting is being cleaned by two experts right now.", "opts": ["这幅画此刻正被两位专家清洗。", "这幅画是上周卖掉的。", "两位专家在画一幅新画。", "这幅画被挂错了房间。"], "answer": 0 },
+    { "audio": "Get a load of that magnificent sculpture over there!", "opts": ["快看那边那座宏伟的雕塑!", "请把雕塑搬走。", "那座雕塑太小了。", "雕塑家累坏了。"], "answer": 0 },
+    { "audio": "Chinese calligraphy is written with a soft brush and black ink.", "opts": ["中国书法是用软笔和黑墨书写的。", "书法只能用铅笔写。", "书法是一种舞蹈。", "书法很难学会。"], "answer": 0 },
+    { "audio": "Many young artists are painting colourful pictures on the old wall.", "opts": ["许多年轻艺术家正在旧墙上画彩色的画。", "工人正在拆掉这面旧墙。", "墙上的画被擦掉了。", "孩子们在墙边玩耍。"], "answer": 0 },
+    { "audio": "The blue-and-white vase is being moved to a safer room.", "opts": ["那只青花瓶正被搬到更安全的房间。", "那只花瓶被打碎了。", "花瓶里插满了向日葵。", "花瓶是用木头做的。"], "answer": 0 },
+    { "audio": "Han Gan learned to paint horses by watching real ones.", "opts": ["韩干通过观察真马学会了画马。", "韩干从不看真正的马。", "韩干只画花和鸟。", "韩干是一位皇帝。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "The skill of the ____ who made this statue is amazing.（雕塑家)", "opts": ["sculptor", "farmer", "driver", "doctor"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "We saw a breathtaking ____ of Chinese porcelain at the festival.（展览)", "opts": ["exhibition", "accident", "holiday", "mistake"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "His calligraphy looks so free and ____.（优雅的)", "opts": ["elegant", "ugly", "heavy", "noisy"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The Tang emperors were very ____ of horses.（喜爱:be ___ of)", "opts": ["fond", "afraid", "tired", "short"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Look — a new exhibition ____ in the main hall right now.", "opts": ["is being prepared", "is preparing", "is prepared", "was being prepared"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "At the moment, several old vases ____ to a safer room.", "opts": ["are being moved", "are moving", "are moved", "were being moved"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Right now, a famous self-portrait ____ next to the old masters.", "opts": ["is being hung", "is hanging", "is hung", "had been hung"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Listen — the story of the painting ____ to the children now.", "opts": ["is being told", "is telling", "is told", "was being told"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["开门前博物馆的地面正在被清扫。", "博物馆昨天关门了。", "地面已经铺上了地毯。", "清洁工把画卖掉了。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The museum floor is being swept before the doors open." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["这位年轻艺术家正把自己的名字刻进石头。", "他在纸上写一封信。", "他买了一块新石头。", "他在给马喂食。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The young artist is carving his name into the stone." }
+  ],
+  "reading": {
+    "passage": "In a small studio by the river, an old sculptor is making a stone horse. At the moment, its legs are being carved with great care, and bits of stone cover the floor. Many visitors come to watch, sure that the finished horse will look ready to gallop away.",
+    "passageCn": "在河边一间小工作室里,一位老雕塑家正在做一匹石马。此刻马腿正被精心雕琢,石屑铺满地面。许多人前来观看,坚信完成后的马看起来仿佛要飞奔而去。",
+    "questions": [
+      { "q": "What is the sculptor doing at the moment?", "opts": ["Carving the legs of a stone horse.", "Selling stone to the visitors.", "Cleaning the river outside.", "Painting a picture of a horse."], "answer": 0 },
+      { "q": "What do the visitors believe about the finished horse?", "opts": ["It will look ready to run away.", "It will be too small to see.", "It will soon be sold abroad.", "It will never be finished."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short article about an artwork you like. Say what it is, who made it, and how you feel about it. Try to use 'is/are being displayed'.",
+    "promptCn": "写一段你喜欢的艺术作品介绍:是什么、谁创作的、你的感受(试着用 is/are being displayed)。",
+    "sampleWords": ["painting", "sculptor", "exhibition", "shade", "vase", "display", "magnificent", "admire", "calligraphy", "create"]
+  },
+  "dialogues": [
+    {
+      "title": "Which Artwork Do You Like?",
+      "lines": [
+        { "role": "A", "text": "Which work in this exhibition do you like most?", "cn": "这个展览里你最喜欢哪件作品?" },
+        { "role": "B", "text": "The stone horse. Look — it is being protected by glass right now.", "cn": "那匹石马。看,它此刻正被玻璃罩保护着。" },
+        { "role": "A", "text": "Why do you like it so much?", "cn": "你为什么这么喜欢它?" },
+        { "role": "B", "text": "Because the sculptor caught the animal's wild spirit so well.", "cn": "因为雕塑家把这匹马狂野的神韵抓得太好了。" }
+      ]
+    },
+    {
+      "title": "Art Is All Around Us",
+      "lines": [
+        { "role": "A", "text": "Do you think art is only found in museums?", "cn": "你觉得艺术只能在博物馆里找到吗?" },
+        { "role": "B", "text": "No, art is everywhere. Look at the pictures being painted on that wall.", "cn": "不,艺术无处不在。看那面墙上正在画的画。" },
+        { "role": "A", "text": "You're right. Even the trees are being trimmed into lovely shapes.", "cn": "你说得对。连树也正被修剪成漂亮的形状。" },
+        { "role": "B", "text": "Exactly. Great art can be found in our own neighbourhood.", "cn": "正是。伟大的艺术就在我们自己的社区里。" }
+      ]
+    }
+  ]
+}

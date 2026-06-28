@@ -1,0 +1,314 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "topic": "Exploring English",
+  "source": "外研社必修一 Unit 2 同主题阅读(英语为何古怪/英美英语差异/构词法/网络新词/英语误会/古怪表达)。词限 U2/初中/常见词,答案转述非照抄,4选项唯一,与完形·听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Why English Can Seem Crazy",
+      "topic_cn": "说明·英语为何看似古怪",
+      "body": "Have you ever wondered why English can be so strange to learn? One father did not think about it until his young son asked whether there was ham inside a hamburger. There isn't. In the same way, there is no egg in an eggplant, and neither pine nor apple in a pineapple. These funny facts show how playful the language can be. We sculpt a sculpture and paint a painting, yet we simply take a photo. We travel in a car or a taxi, but on a bus or a train. People can feel seasick at sea and airsick in the air, but no one feels homesick after returning home. Even opposites are puzzling: if an action that causes no harm is harmless, why are shameless and shameful behaviour almost the same? English was created by people, not by machines, and that is exactly why it is full of such surprises.",
+      "vocab_notes": [
+        {
+          "word": "hamburger",
+          "cn": "汉堡包"
+        },
+        {
+          "word": "eggplant",
+          "cn": "茄子"
+        },
+        {
+          "word": "harmless",
+          "cn": "无害的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What first made the father think about how strange English is?",
+          "options": [
+            "His son's question about ham in a hamburger.",
+            "A lesson he taught at school.",
+            "A book he read about cooking.",
+            "A trip he took on a bus."
+          ],
+          "answer_index": 0,
+          "explanation": "原文开头说儿子问 hamburger 里有没有 ham 才让父亲开始想这个问题,为转述。"
+        },
+        {
+          "stem": "According to the passage, which pair behaves in a surprising way?",
+          "options": [
+            "'Sea' and 'air' mean the same thing.",
+            "Both 'shameless' and 'shameful' describe almost the same behaviour.",
+            "'Car' and 'taxi' are opposites.",
+            "'Photo' and 'painting' are made the same way."
+          ],
+          "answer_index": 1,
+          "explanation": "原文指出 shameless 和 shameful 形容的行为几乎一样,令人困惑,为转述。"
+        },
+        {
+          "stem": "Why does the writer say English is full of surprises?",
+          "options": [
+            "Because it was made by people rather than machines.",
+            "Because it has very few words.",
+            "Because no one really speaks it.",
+            "Because computers invented it."
+          ],
+          "answer_index": 0,
+          "explanation": "末句说英语是人而非机器创造的,故充满惊喜,为转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Two Kinds of English",
+      "topic_cn": "说明·英式与美式英语",
+      "body": "American English is now used all over the world, but it is not quite the same as British English. The two differ mostly in spelling and in everyday words. Long ago, Noah Webster made one of America's first dictionaries and changed many '-re' endings to '-er', which is why the British 'theatre' became the American 'theater'. The differences in vocabulary can be even more surprising. Americans put gas in their cars and drive along the highway, while British drivers use petrol and the motorway. Americans take the elevator to the top floor, but the British take the lift. In the United States people ride the subway, yet in Britain they travel on the underground. An American lives in an apartment; a British person lives in a flat. Luckily, this rarely causes real trouble, because people from the two countries can usually understand each other from the context. Still, they enjoy a friendly argument about which word is 'right'.",
+      "vocab_notes": [
+        {
+          "word": "elevator",
+          "cn": "(美)电梯"
+        },
+        {
+          "word": "motorway",
+          "cn": "(英)高速公路"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "In what two ways do British and American English differ most?",
+          "options": [
+            "In grammar and in pronunciation only.",
+            "Mainly in their spelling and their everyday vocabulary.",
+            "In the number of letters used.",
+            "In the way questions are asked."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说两者差别主要在拼写和日常词汇,为转述。"
+        },
+        {
+          "stem": "What did Noah Webster do to American spelling?",
+          "options": [
+            "He removed all silent letters.",
+            "He added an 'e' to every word.",
+            "He changed many '-re' endings into '-er'.",
+            "He kept it exactly like British spelling."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说 Webster 把许多 -re 结尾改成 -er,为转述。"
+        },
+        {
+          "stem": "Why do these word differences rarely cause real problems?",
+          "options": [
+            "Everyone learns both kinds at school.",
+            "The two countries never speak to each other.",
+            "Dictionaries are not allowed.",
+            "People can usually work out the meaning from the situation."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说人们通常能从语境互相理解,为转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "How New Words Are Built",
+      "topic_cn": "说明·构词法",
+      "body": "When you open a dictionary, you often come across words you have never seen. This can feel a little scary, but many of these words are simply built from simpler ones. There are several common ways to make new words. The first is to join two words together, so 'pen' and 'friend' become 'penfriend', and 'home' and 'work' become 'homework'. A second way is to add a prefix or a suffix. The prefixes 'un-' and 'in-' usually make a word mean its opposite, so 'correct' becomes 'incorrect'. The endings '-ment' and '-ness' often turn a word into a noun, as when 'improve' becomes 'improvement'. A third way is to use the same word as a different part of speech: we can 'calm' someone down, or 'water' the plants. Sometimes we even shorten a long name, so 'as soon as possible' becomes 'asap'. You cannot know every word, but understanding these patterns helps you guess their meanings.",
+      "vocab_notes": [
+        {
+          "word": "prefix",
+          "cn": "前缀"
+        },
+        {
+          "word": "suffix",
+          "cn": "后缀"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say about new words in a dictionary?",
+          "options": [
+            "Many of them are made out of simpler words.",
+            "They have no meaning at all.",
+            "They cannot be understood by anyone.",
+            "They are all borrowed from other languages."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说很多生词其实由更简单的词构成,为转述。"
+        },
+        {
+          "stem": "What usually happens when you add 'un-' or 'in-' to a word?",
+          "options": [
+            "The word becomes a verb.",
+            "The word comes to mean the opposite.",
+            "The word loses all meaning.",
+            "The word becomes a name."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说 un-/in- 通常使词义相反,为转述。"
+        },
+        {
+          "stem": "Why is it useful to understand these word-building patterns?",
+          "options": [
+            "They let you avoid reading completely.",
+            "They make every word exactly the same.",
+            "They help you guess the meanings of new words.",
+            "They replace the need for a dictionary forever."
+          ],
+          "answer_index": 2,
+          "explanation": "末句说懂得这些规律有助于猜测词义,为转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Words of the Internet Age",
+      "topic_cn": "说明·网络时代的新词",
+      "body": "Every year, dictionaries welcome many new words, and the Internet has become one of the biggest sources of them. A 'selfie', for example, is a photo that you take of yourself, usually with a mobile phone. A 'netizen' is a citizen who spends much of their life online. The language people type to one another online is often rather different from the language used elsewhere. To save time, friends shorten common phrases: 'BRB' means 'be right back', and 'COZ' is a quick way of writing 'because'. These short forms can be clear and friendly among people who know them. However, before you use them, it is wise to stop and think about who will read your message. An older reader, or a teacher, may have no idea what you intend to say. Make sure that any abbreviations and emojis you choose really suit the situation, or your clever message may only cause confusion.",
+      "vocab_notes": [
+        {
+          "word": "selfie",
+          "cn": "自拍"
+        },
+        {
+          "word": "netizen",
+          "cn": "网民"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is a 'netizen', according to the passage?",
+          "options": [
+            "A new kind of mobile phone.",
+            "A photo taken of yourself.",
+            "A printed dictionary.",
+            "A person who spends a lot of time living online."
+          ],
+          "answer_index": 3,
+          "explanation": "原文解释 netizen 是大量时间在网上的公民,为转述。"
+        },
+        {
+          "stem": "Why do online friends use short forms like 'BRB' and 'COZ'?",
+          "options": [
+            "To save time while typing.",
+            "To make their messages longer.",
+            "To hide what they mean from friends.",
+            "To follow a school rule."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说为了省时间而缩短常用短语,为转述。"
+        },
+        {
+          "stem": "What advice does the writer give before using abbreviations?",
+          "options": [
+            "Always use as many as possible.",
+            "Think about whether your reader will understand them.",
+            "Never write any messages at all.",
+            "Use them only with teachers."
+          ],
+          "answer_index": 1,
+          "explanation": "原文建议先想想谁会读、是否合适,为转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Lost on the First Floor",
+      "topic_cn": "记叙·一次英语误会",
+      "body": "When I first visited New York, I went to a downtown shopping centre to buy some winter boots. At the entrance, I asked a friendly lady where the shoe section was, and she told me it was on the first floor. So I climbed the stairs and searched everywhere, but I could not find a single pair of boots. Feeling rather puzzled, I decided to give up and look for the exit. On my way out, I was surprised to see that the shoes were actually sold downstairs, on the ground floor. At first I thought the lady had given me wrong information. Later, a friend explained the real reason. In American English, the 'first floor' is the floor at ground level, but in British English, the same words mean the floor above it. The lady had been perfectly correct; I had simply understood her in the British way. It was a small misadventure, but I never forgot it.",
+      "vocab_notes": [
+        {
+          "word": "ground floor",
+          "cn": "(英)一层,底层"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why could the writer not find the boots upstairs?",
+          "options": [
+            "The shop had already closed.",
+            "The lady had lied to the writer.",
+            "The shoes were sold on the ground floor instead.",
+            "There were no shoes in the whole shop."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说鞋其实在底层(ground floor)卖,为转述。"
+        },
+        {
+          "stem": "What was the real cause of the misunderstanding?",
+          "options": [
+            "The writer could not speak any English.",
+            "The lady pointed the wrong way on purpose.",
+            "The shopping centre had no signs.",
+            "'First floor' means different levels in American and British English."
+          ],
+          "answer_index": 3,
+          "explanation": "原文解释 first floor 在英美英语里指不同楼层,为转述。"
+        },
+        {
+          "stem": "How did the writer finally feel about the lady?",
+          "options": [
+            "That she had actually been right all along.",
+            "That she had wanted to trick him.",
+            "That she knew nothing about the shop.",
+            "That she was rude and unhelpful."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说那位女士其实完全正确,是自己理解错了,为转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Expressions That Trick You",
+      "topic_cn": "说明·容易误解的英语表达",
+      "body": "Some English expressions seem clear but really mean something quite different, and they can easily trick a learner. If a teacher says she has 'a frog in her throat', she has not eaten a frog; she simply cannot speak clearly because her throat feels dry. When someone has 'green fingers', it does not mean their hands are green; it means they are very good at growing plants. If a friend tells you to 'pull up your socks', they are not talking about your clothes at all, but asking you to try harder. And in Britain, the comment 'Not bad' can be high praise. It often means something is rather good, better than the speaker expected. A Chinese student once felt upset to read 'Not bad' on his perfect paper, until he learned what it really meant. The lesson is simple: behind many everyday expressions there is a hidden meaning, so it is always wise to ask if you are unsure.",
+      "vocab_notes": [
+        {
+          "word": "green fingers",
+          "cn": "园艺高手"
+        },
+        {
+          "word": "praise",
+          "cn": "表扬"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does it mean if someone has 'a frog in her throat'?",
+          "options": [
+            "She has just eaten a frog.",
+            "She finds it hard to speak clearly for a while.",
+            "She is very good at swimming.",
+            "She has a pet frog at home."
+          ],
+          "answer_index": 1,
+          "explanation": "原文解释这是因喉咙干而说话困难,为转述。"
+        },
+        {
+          "stem": "What does 'pull up your socks' actually ask someone to do?",
+          "options": [
+            "To fix their clothes.",
+            "To buy new socks.",
+            "To make a greater effort.",
+            "To sit down and rest."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说该表达是叫人更努力,为转述。"
+        },
+        {
+          "stem": "Why was the Chinese student upset about 'Not bad'?",
+          "options": [
+            "He had failed the whole paper.",
+            "His teacher had made many errors.",
+            "He could not read the comment.",
+            "He did not realise it could be real praise."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说他不知道 Not bad 其实是表扬,为转述。"
+        }
+      ]
+    }
+  ]
+}

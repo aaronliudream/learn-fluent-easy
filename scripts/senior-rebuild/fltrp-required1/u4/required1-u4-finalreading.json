@@ -1,0 +1,32 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(友谊主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Daniel changed schools, he was sure he would never find friends as close as the ones he had left behind. On his very first morning, a boy named Sam noticed him sitting alone and invited him to join a basketball game. Within a week, the two of them were laughing together as if they had known each other for years.",
+    "questions": [
+      {
+        "q": "What did Daniel believe when he first changed schools?",
+        "options": [
+          "That he would not make such close friends again.",
+          "That he would soon become the best player.",
+          "That his old school was much worse.",
+          "That he no longer wanted any friends."
+        ],
+        "answer": "A",
+        "explanation": "首句 'he would never find friends as close as the ones he had left behind' 的转述;其余与原文不符。"
+      },
+      {
+        "q": "How did Sam help Daniel feel welcome?",
+        "options": [
+          "He lent him a large sum of money.",
+          "He walked him home after class.",
+          "He noticed Daniel alone and asked him to play basketball.",
+          "He helped him with all his homework."
+        ],
+        "answer": "C",
+        "explanation": "第二句 'noticed him sitting alone and invited him to join a basketball game' 的转述(短文中段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

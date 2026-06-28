@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U6",
+  "topic": "At One with Nature",
+  "source": "外研社版必修第一册 Unit 6 同主题完形(沙漠骆驼/自制花草茶/校园屋顶花园/瀑布之行/海底世界/社区绿化)。用词限 U6/初中/常见词,答案唯一,4选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Camels and Grapes in Turpan",
+      "text": "Last summer my family travelled to Xinjiang, a place I had always wanted to (1)____. We spent three days in the Turpan (2)____, which is famous for its sweet grapes. The weather was hot and dry, and the land looked like a huge (3)____ of golden sand. One afternoon we rode (4)____, the animals that people call 'the ships of the desert'. Sitting up so high, I felt as if I were going to (5)____ across an ocean of sand. Our guide showed us the special houses (6)____ grapes are dried into raisins. The walls have many small holes that let the wind (7)____ through. In this clever way the grapes lose their water but keep their sweet (8)____. On our last evening, we watched the sun go down over the (9)____, and everything turned a soft gold. I will never (10)____ that wonderful trip.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "visit",
+            "sell",
+            "build",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "wanted to visit 想去游览。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "Forest",
+            "Basin",
+            "Island",
+            "Harbour"
+          ],
+          "answer_index": 1,
+          "explanation": "the Turpan Basin 吐鲁番盆地。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "garden",
+            "lake",
+            "desert",
+            "city"
+          ],
+          "answer_index": 2,
+          "explanation": "a huge desert of sand 一片沙漠。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "birds",
+            "fish",
+            "sheep",
+            "camels"
+          ],
+          "answer_index": 3,
+          "explanation": "rode camels、'ships of the desert' 指骆驼。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sail",
+            "sleep",
+            "sing",
+            "cook"
+          ],
+          "answer_index": 0,
+          "explanation": "sail across an ocean of sand 在沙海上航行。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "who",
+            "where",
+            "when",
+            "why"
+          ],
+          "answer_index": 1,
+          "explanation": "the houses where grapes are dried 地点先行词用 where。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "stop",
+            "fall",
+            "pass",
+            "sink"
+          ],
+          "answer_index": 2,
+          "explanation": "let the wind pass through 让风穿过。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "weight",
+            "flavour"
+          ],
+          "answer_index": 3,
+          "explanation": "keep their sweet flavour 保持甜味。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sand",
+            "snow",
+            "sea",
+            "grass"
+          ],
+          "answer_index": 0,
+          "explanation": "the sun went down over the sand 沙漠上。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "forget",
+            "lose",
+            "build"
+          ],
+          "answer_index": 1,
+          "explanation": "never forget the trip 永远不会忘记。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Tea from Our Own Garden",
+      "text": "My grandmother grows her own little tea garden, (1)____ she plants easy herbs such as mint and lemongrass. She says home-grown tea is a pleasant (2)____ from ordinary tea. Fruit and herbal teas come in many lovely (3)____ and tastes. Some are made from lemon and ginger, while others use the (4)____ and leaves from the garden. Grandma firmly believes that herbal tea has real health (5)____. When I feel tired, she gives me a warm cup to bring back my (6)____. If I cannot (7)____ well at night, she chooses a tea that helps me relax. A cup of mint tea is also good for the (8)____ after a big meal. Best of all, growing and drinking our own tea costs very (9)____ and brings the whole family (10)____. I have come to love these quiet afternoons spent with her.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "who",
+            "when",
+            "where",
+            "why"
+          ],
+          "answer_index": 2,
+          "explanation": "the garden where she plants herbs 地点先行词用 where。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "error",
+            "change"
+          ],
+          "answer_index": 3,
+          "explanation": "a pleasant change from ordinary tea 一种变化。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "colours",
+            "prices",
+            "mistakes",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "many lovely colours and tastes 颜色。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cars",
+            "flowers",
+            "coins",
+            "clocks"
+          ],
+          "answer_index": 1,
+          "explanation": "the flowers and leaves from the garden 花。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "problems",
+            "mistakes",
+            "benefits",
+            "prices"
+          ],
+          "answer_index": 2,
+          "explanation": "health benefits 健康益处。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "homework",
+            "luggage",
+            "furniture",
+            "energy"
+          ],
+          "answer_index": 3,
+          "explanation": "bring back my energy 恢复精力。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sleep",
+            "swim",
+            "sing",
+            "cook"
+          ],
+          "answer_index": 0,
+          "explanation": "cannot sleep well at night 入睡。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "garden",
+            "stomach",
+            "window",
+            "street"
+          ],
+          "answer_index": 1,
+          "explanation": "good for the stomach 有益肠胃。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "many",
+            "few",
+            "little",
+            "tall"
+          ],
+          "answer_index": 2,
+          "explanation": "costs very little 花费很少(不可数)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "alone",
+            "apart",
+            "away",
+            "together"
+          ],
+          "answer_index": 3,
+          "explanation": "brings the family together 把家人聚到一起。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Our School Rooftop Garden",
+      "text": "Our school had an empty (1)____ that almost no one ever used. Last year our teacher had a clever (2)____: why not turn it into a garden? Space on the ground was (3)____, so the roof was the perfect place. First we carried up bags of soil and (4)____ vegetables and flowers in large wooden boxes. We had to (5)____ them every morning before class began. Slowly, green leaves started to (6)____, and soon the grey roof was full of (7)____. The garden does far more than just look pretty. The plants help to clean the city (8)____ and keep the building cool in summer. Working up there also teaches us to (9)____ nature and to care for living things. Now the rooftop is the (10)____ place in the whole school, and teachers from other schools have come to see what we made.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "rooftop",
+            "ticket",
+            "river",
+            "forest"
+          ],
+          "answer_index": 0,
+          "explanation": "an empty rooftop 屋顶。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "idea",
+            "noise",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "a clever idea 一个好主意。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "free",
+            "wide",
+            "limited",
+            "open"
+          ],
+          "answer_index": 2,
+          "explanation": "space was limited 空间有限。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "threw",
+            "lost",
+            "planted"
+          ],
+          "answer_index": 3,
+          "explanation": "planted vegetables and flowers 种植。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "water",
+            "sell",
+            "hide",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "water them every morning 浇水。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "disappear",
+            "appear",
+            "fall",
+            "sink"
+          ],
+          "answer_index": 1,
+          "explanation": "leaves started to appear 开始长出。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "noise",
+            "dust",
+            "life",
+            "smoke"
+          ],
+          "answer_index": 2,
+          "explanation": "full of life 充满生机。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "money",
+            "paper",
+            "glass",
+            "air"
+          ],
+          "answer_index": 3,
+          "explanation": "clean the city air 净化空气。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "respect",
+            "forget",
+            "waste",
+            "harm"
+          ],
+          "answer_index": 0,
+          "explanation": "respect nature 尊重自然。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "worst",
+            "favourite",
+            "emptiest",
+            "coldest"
+          ],
+          "answer_index": 1,
+          "explanation": "the favourite place 最受欢迎的地方。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Walk to the Waterfall",
+      "text": "On our trip to Guizhou, we walked through a green (1)____ to reach the famous Huangguoshu (2)____. Long before we could see it, we could (3)____ a deep, thundering sound far ahead. Then the water came into (4)____, falling from a great height into a deep pool (5)____. Clouds of fine (6)____ rose into the air and gently touched our faces like rain. Our guide told us that it is the largest waterfall in the whole (7)____. We stood on a narrow (8)____ and looked straight down, holding tightly to the rail. The sight was both a little frightening and truly (9)____. I took many photos, but none of them could really (10)____ how powerful the falling water was. Standing there, I felt how small one person is beside such a wonder of nature.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "desert",
+            "island",
+            "valley",
+            "city"
+          ],
+          "answer_index": 2,
+          "explanation": "a green valley 山谷。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "market",
+            "station",
+            "waterfall"
+          ],
+          "answer_index": 3,
+          "explanation": "Huangguoshu Waterfall 瀑布。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "hear",
+            "eat",
+            "buy",
+            "read"
+          ],
+          "answer_index": 0,
+          "explanation": "could hear a sound 听到声音。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "view",
+            "box",
+            "word"
+          ],
+          "answer_index": 1,
+          "explanation": "come into view 进入视野。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "above",
+            "inside",
+            "below",
+            "behind"
+          ],
+          "answer_index": 2,
+          "explanation": "into a deep pool below 下方的水潭。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sand",
+            "snow",
+            "stone",
+            "vapour"
+          ],
+          "answer_index": 3,
+          "explanation": "clouds of fine vapour 水汽。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "world",
+            "room",
+            "garden",
+            "school"
+          ],
+          "answer_index": 0,
+          "explanation": "the largest waterfall in the world 世界上。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "kitchen",
+            "platform",
+            "library",
+            "bedroom"
+          ],
+          "answer_index": 1,
+          "explanation": "a narrow platform 平台。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "boring",
+            "silent",
+            "wonderful",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "frightening and wonderful 美妙。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "hide",
+            "lose",
+            "show"
+          ],
+          "answer_index": 3,
+          "explanation": "could not show how powerful 展现。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The World Beneath the Sea",
+      "text": "Beneath the warm, blue sea lies a hidden world that is full of (1)____. Coral may look like stone, but it is really made of millions of tiny living (2)____. Over a very long (3)____, they grow together and slowly build great walls under the water. These walls become a (4)____ for fish, turtles and many other sea creatures. Some people like to explore this quiet world by (5)____, while others watch it from an underwater room without ever getting (6)____. Sadly, warmer water and (7)____ seas now put many of these places in great (8)____. If we are not careful, this beautiful underwater world could one day (9)____ for ever. That is why more and more people are working hard to (10)____ the life that lives beneath the waves.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "colour",
+            "noise",
+            "dust",
+            "smoke"
+          ],
+          "answer_index": 0,
+          "explanation": "full of colour 充满色彩。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "machines",
+            "things",
+            "houses",
+            "cars"
+          ],
+          "answer_index": 1,
+          "explanation": "tiny living things 微小生物。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "money",
+            "space",
+            "time",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "over a very long time 很长时间。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "war",
+            "rule",
+            "home"
+          ],
+          "answer_index": 3,
+          "explanation": "become a home for fish 家园。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "boat",
+            "train",
+            "plane",
+            "bus"
+          ],
+          "answer_index": 0,
+          "explanation": "explore the sea by boat 乘船。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "rich",
+            "wet",
+            "late",
+            "tall"
+          ],
+          "answer_index": 1,
+          "explanation": "without getting wet 弄湿。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "clean",
+            "empty",
+            "dirty",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "explanation": "warmer water and dirty seas 受污染。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "order",
+            "fashion",
+            "colour",
+            "danger"
+          ],
+          "answer_index": 3,
+          "explanation": "put ... in great danger 危险。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "disappear",
+            "appear",
+            "arrive",
+            "return"
+          ],
+          "answer_index": 0,
+          "explanation": "could disappear for ever 消失。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "harm",
+            "protect",
+            "sell",
+            "forget"
+          ],
+          "answer_index": 1,
+          "explanation": "work hard to protect the life 保护。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Greening Our Neighbourhood",
+      "text": "In our neighbourhood there used to be an ugly piece of waste (1)____ that was full of rubbish. One spring, a group of us decided to (2)____ it. First we cleared away all the rubbish, and then we (3)____ young trees and bright flowers. It was hard (4)____, and our hands soon grew tired and dirty. But week by week, the little plants began to (5)____ taller and stronger. Birds and butterflies came to (6)____ the new green space. Old people now sit there under the (7)____ to rest, while children run and play on the soft grass. Our little garden also helps to make the (8)____ cleaner for everyone living nearby. I have learnt that even one small group can bring (9)____ back into a busy city. Best of all, the whole neighbourhood now feels much more like a (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sky",
+            "river",
+            "ground",
+            "wall"
+          ],
+          "answer_index": 2,
+          "explanation": "waste ground 荒地。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "buy",
+            "leave",
+            "change"
+          ],
+          "answer_index": 3,
+          "explanation": "decided to change it 改造它。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "planted",
+            "sold",
+            "ate",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "planted young trees 种下。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "news",
+            "work",
+            "music",
+            "water"
+          ],
+          "answer_index": 1,
+          "explanation": "hard work 辛苦的活儿。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "fall",
+            "sink",
+            "grow",
+            "stop"
+          ],
+          "answer_index": 2,
+          "explanation": "began to grow taller 长高。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "build",
+            "cook",
+            "visit"
+          ],
+          "answer_index": 3,
+          "explanation": "came to visit the green space 光临。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "branches",
+            "windows",
+            "doors",
+            "roofs"
+          ],
+          "answer_index": 0,
+          "explanation": "sit under the branches 树枝下。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "floor",
+            "air",
+            "glass",
+            "metal"
+          ],
+          "answer_index": 1,
+          "explanation": "make the air cleaner 空气。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "money",
+            "noise",
+            "nature",
+            "traffic"
+          ],
+          "answer_index": 2,
+          "explanation": "bring nature back 把自然带回。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "factory",
+            "market",
+            "prison",
+            "family"
+          ],
+          "answer_index": 3,
+          "explanation": "feels more like a family 像一家人。"
+        }
+      ]
+    }
+  ]
+}

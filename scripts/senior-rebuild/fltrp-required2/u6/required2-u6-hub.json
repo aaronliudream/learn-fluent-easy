@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Sharks attack people only by accident.", "opts": ["鲨鱼伤人只是出于意外。", "鲨鱼喜欢吃人。", "鲨鱼从不靠近大海。", "鲨鱼住在森林里。"], "answer": 0 },
+    { "audio": "We should reduce our carbon footprint.", "opts": ["我们应该多开车。", "我们应当减少碳足迹。", "我们应该浪费能源。", "我们应该多用塑料。"], "answer": 1 },
+    { "audio": "Devices in stand-by mode still use electricity.", "opts": ["设备关掉后完全不耗电。", "设备只在白天耗电。", "待机状态的设备仍在耗电。", "设备从不耗电。"], "answer": 2 },
+    { "audio": "The nature reserve was established in 2000.", "opts": ["保护区已经关闭了。", "保护区面积很小。", "保护区里没有动物。", "这个自然保护区建立于2000年。"], "answer": 3 },
+    { "audio": "Smog can cause serious breathing problems.", "opts": ["雾霾会引起严重的呼吸问题。", "雾霾能让空气更清新。", "雾霾对身体有好处。", "雾霾让城市变凉快。"], "answer": 0 },
+    { "audio": "Please turn off the lights when you leave the room.", "opts": ["离开时请把窗户全打开。", "离开房间时请关灯。", "离开时请打开电视。", "离开时请把暖气开大。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Many sea animals are now close to ____.(灭绝)", "opts": ["extinction", "holiday", "victory", "profit"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Making a paper bag uses a large ____ of water.(数量)", "opts": ["price", "amount", "noise", "season"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Smog can cause ____ breathing problems.(严重的)", "opts": ["cheap", "quiet", "severe", "funny"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Our class started a ____ to stop wasting food.(活动)", "opts": ["garden", "factory", "holiday", "campaign"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "From the boat we saw a great white shark ____ towards us.", "opts": ["swimming", "swum", "to swim", "swims"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "When the ranger arrived, he found the gate ____.", "opts": ["locking", "locked", "to lock", "locks"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "To save money, he had his old bike ____ instead of buying a new one.", "opts": ["repairing", "repair", "repaired", "repairs"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "Please don't leave the tap ____ while you brush your teeth.", "opts": ["run", "to run", "runs", "running"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["渔民割下鲨鱼的鳍,再把它们扔回海里。", "渔民放走了所有鲨鱼。", "渔民保护着鲨鱼。", "渔民给鲨鱼喂食。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Fishermen cut off the sharks' fins and threw them back into the sea." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["我们应该买更多新瓶子。", "我们可以把旧瓶子拿去回收。", "我们应该扔掉所有瓶子。", "我们应该把瓶子烧掉。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "We can get our old bottles recycled at the centre." }
+  ],
+  "reading": {
+    "passage": "Every year, people throw away huge amounts of food while others go hungry. Our class joined the Clear Your Plate campaign and promised to order only what we can finish. Small choices like this can help feed more people and waste less.",
+    "passageCn": "每年都有人浪费大量食物,而另一些人却在挨饿。我们班加入了'光盘行动',承诺只点自己能吃完的食物。这样的小选择能帮助养活更多人,也减少浪费。",
+    "questions": [
+      { "q": "What did the class promise to do?", "opts": ["To order only what they can finish.", "To eat as much as possible.", "To stop eating in the canteen.", "To buy more food than they need."], "answer": 0 },
+      { "q": "Why do such small choices matter?", "opts": ["They make food taste better.", "They help feed more people and waste less.", "They make meals more expensive.", "They have no real effect."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short note to your classmates about one thing you can do to protect the environment. Say what the problem is and what action you suggest.",
+    "promptCn": "给同学们写一段话,说说你能为保护环境做的一件事:问题是什么、你建议大家怎么做(试着用分词作补语,如 keep the lights off / get rubbish recycled)。",
+    "sampleWords": ["environment", "reduce", "waste", "carbon", "sustainable", "recycle", "campaign", "protect", "energy", "concerned"]
+  },
+  "dialogues": [
+    {
+      "title": "Going Greener",
+      "lines": [
+        { "role": "A", "text": "What do you do to help the environment?", "cn": "你做些什么来保护环境?" },
+        { "role": "B", "text": "I ride my bike to school to reduce my carbon footprint.", "cn": "我骑车上学,以减少碳足迹。" },
+        { "role": "A", "text": "That's great. I always keep the lights off when I leave a room.", "cn": "很好。我离开房间时总会关灯。" },
+        { "role": "B", "text": "Good idea. Small habits like that really add up.", "cn": "好主意。这样的小习惯真的会积少成多。" }
+      ]
+    },
+    {
+      "title": "Saving the Sharks",
+      "lines": [
+        { "role": "A", "text": "Why are so many sharks disappearing?", "cn": "为什么这么多鲨鱼正在消失?" },
+        { "role": "B", "text": "Mostly because of finning, which is very cruel.", "cn": "主要是因为割鳍,这非常残忍。" },
+        { "role": "A", "text": "That's terrible. Do sharks really attack people?", "cn": "太可怕了。鲨鱼真的会攻击人吗?" },
+        { "role": "B", "text": "Only by accident. We should protect them from extinction.", "cn": "只是出于意外。我们应该保护它们免于灭绝。" }
+      ]
+    }
+  ]
+}

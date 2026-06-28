@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "topic": "A New Start",
+  "source": "外研社(新标准)必修第一册 Unit 1 同主题完形(第一天的早晨/选社团/结识新朋友/管理时间/自我介绍/给新生的建议)。用词限 U1/初中/常见词,选项同词性,答案唯一,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "The Morning of My First Day",
+      "text": "When my alarm rang on the first morning of senior high, I was already (1)____. I had (2)____ about this day for weeks. I jumped out of bed, put on my new clothes, and (3)____ my breakfast quickly. In my (4)____ to reach the school early, I almost forgot my schoolbag. The streets were quiet, and my heart beat fast as I (5)____ towards the gate. More than anything, I wanted to make a good first (6)____ on my teachers and classmates. When I reached the (7)____, it was still empty and peaceful. I decided to (8)____ the buildings before class began. Everything looked new and (9)____ to me. By the time the bell rang, I felt both nervous and (10)____ about the year ahead.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "awake",
+            "asleep",
+            "late",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "already awake 早已醒着。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cleaned",
+            "dreamed",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "dreamed about this day 梦想着这一天。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "threw",
+            "ate",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "ate my breakfast 吃了早饭。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "silence",
+            "darkness",
+            "weather",
+            "eagerness"
+          ],
+          "answer_index": 3,
+          "explanation": "in my eagerness to 急切地想……。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "hurried",
+            "slept",
+            "sat",
+            "fell"
+          ],
+          "answer_index": 0,
+          "explanation": "hurried towards the gate 急忙走向大门。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "mistake",
+            "impression",
+            "noise",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "a good first impression 良好的第一印象。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "kitchen",
+            "station",
+            "campus",
+            "forest"
+          ],
+          "answer_index": 2,
+          "explanation": "reached the campus 到了校园。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "throw",
+            "forget",
+            "explore"
+          ],
+          "answer_index": 3,
+          "explanation": "explore the buildings 探索教学楼。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "exciting",
+            "boring",
+            "empty",
+            "asleep"
+          ],
+          "answer_index": 0,
+          "explanation": "new and exciting 新奇又令人兴奋。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "angry",
+            "excited",
+            "bored",
+            "asleep"
+          ],
+          "answer_index": 1,
+          "explanation": "nervous and excited 既紧张又兴奋。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Choosing a Club",
+      "text": "During the first week, our teacher told us to (1)____ a school club. There were so many (2)____ to choose from that I did not know where to start. I love sport, so at first I thought about the (3)____ club, where students play in the gym. Then I saw a (4)____ for the science club on the wall. It asked interesting questions and invited us to (5)____ the secrets of nature. My best friend wanted to join the (6)____ club, because she loves to argue about hot (7)____. In the end, I chose the drama club, hoping to find my (8)____ star on the stage. At our first meeting, the leader (9)____ us some simple acting skills. I felt shy at first, but soon I (10)____ a lot of confidence.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "lose",
+            "join",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "join a club 加入社团。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "noises",
+            "seasons",
+            "clubs"
+          ],
+          "answer_index": 3,
+          "explanation": "many clubs to choose from 许多社团可选。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "badminton",
+            "kitchen",
+            "station",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "the badminton club 羽毛球社。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "poster",
+            "noise",
+            "meal"
+          ],
+          "answer_index": 1,
+          "explanation": "a poster for the club 社团海报。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "forget",
+            "investigate",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "investigate the secrets 探究奥秘。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "kitchen",
+            "garden",
+            "station",
+            "debate"
+          ],
+          "answer_index": 3,
+          "explanation": "the debate club 辩论社。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "topics",
+            "prices",
+            "meals",
+            "clouds"
+          ],
+          "answer_index": 0,
+          "explanation": "argue about hot topics 辩论热门话题。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "empty",
+            "inner",
+            "broken",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "my inner star 内心的明星。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sold",
+            "lost",
+            "taught",
+            "threw"
+          ],
+          "answer_index": 2,
+          "explanation": "taught us some skills 教我们技能。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lost",
+            "sold",
+            "dropped",
+            "gained"
+          ],
+          "answer_index": 3,
+          "explanation": "gained confidence 获得自信。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "How I Made a New Friend",
+      "text": "On Wednesday after class, I (1)____ to the skateboarding club. I was running out of the classroom when I (2)____ into a girl. I quickly said sorry, and she gave me a (3)____ smile. At the club, I tried skateboarding for the first time and (4)____ off the board again and again. It was hard, but I did not give (5)____. Suddenly, the same girl bumped into me, and this time we both (6)____. Her name was Sarah. We started to (7)____ together, and slowly my skills got (8)____. By the end of the lesson, we had become good (9)____. Tomorrow we are going to watch a film, and I am really looking (10)____ to it.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "hurried",
+            "slept",
+            "sat",
+            "grew"
+          ],
+          "answer_index": 0,
+          "explanation": "hurried to the club 急忙赶去社团。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "bumped",
+            "lost",
+            "sang"
+          ],
+          "answer_index": 1,
+          "explanation": "bumped into a girl 撞到一个女孩。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "broken",
+            "empty",
+            "friendly",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "a friendly smile 友好的微笑。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "sang",
+            "grew",
+            "fell"
+          ],
+          "answer_index": 3,
+          "explanation": "fell off the board 从滑板上摔下来。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "up",
+            "at",
+            "of",
+            "from"
+          ],
+          "answer_index": 0,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "slept",
+            "laughed",
+            "sold",
+            "grew"
+          ],
+          "answer_index": 1,
+          "explanation": "we both laughed 我们都笑了。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "lose",
+            "practise",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "practise together 一起练习。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "worse",
+            "empty",
+            "late",
+            "better"
+          ],
+          "answer_index": 3,
+          "explanation": "got better 越来越好。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "friends",
+            "prices",
+            "clouds",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "good friends 好朋友。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "back",
+            "forward",
+            "down",
+            "away"
+          ],
+          "answer_index": 1,
+          "explanation": "look forward to 期待。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Managing My Time",
+      "text": "At senior high, there is always a lot to do, so I had to learn to (1)____ my time. In my first week, I joined two clubs and still had a lot of (2)____ to finish every night. Soon I began to feel under (3)____. My teacher gave me a useful (4)____: make a clear plan. First, I write a (5)____ of all the things I need to do. Then I decide how long each task will (6)____. I always do the most (7)____ tasks first, and leave the easy ones for later. This simple habit has helped me a lot. Now my week feels much less (8)____, and I rarely (9)____ behind. With a good plan, I can enjoy my clubs and still (10)____ good marks.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "lose",
+            "organise",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "organise my time 安排时间。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "weather",
+            "music",
+            "sleep",
+            "homework"
+          ],
+          "answer_index": 3,
+          "explanation": "a lot of homework 大量作业。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "pressure",
+            "water",
+            "music",
+            "light"
+          ],
+          "answer_index": 0,
+          "explanation": "under pressure 有压力。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "tip",
+            "noise",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "a useful tip 有用的建议。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "song",
+            "list",
+            "cloud"
+          ],
+          "answer_index": 2,
+          "explanation": "write a list 列一张清单。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "lose",
+            "sing",
+            "take"
+          ],
+          "answer_index": 3,
+          "explanation": "how long each task will take 每项任务要花多久。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "important",
+            "empty",
+            "late",
+            "quiet"
+          ],
+          "answer_index": 0,
+          "explanation": "the most important tasks 最重要的任务。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "empty",
+            "busy",
+            "late",
+            "quiet"
+          ],
+          "answer_index": 1,
+          "explanation": "much less busy 不那么忙。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "sing",
+            "fall",
+            "grow"
+          ],
+          "answer_index": 2,
+          "explanation": "fall behind 落后。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lose",
+            "sell",
+            "drop",
+            "get"
+          ],
+          "answer_index": 3,
+          "explanation": "get good marks 取得好成绩。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Introducing Myself in Class",
+      "text": "During my first English lesson, the teacher asked us to introduce ourselves one by (1)____. With butterflies in my (2)____, I waited for my turn. I tried to (3)____ my words in my head, but my mind went blank. When the girl next to me gave me a (4)____, I knew it was my turn. I stood up, (5)____ deeply, and said my name. To my surprise, everyone began to (6)____. It turned out that I (7)____ exactly the same name as the teacher! Although I felt (8)____ at that moment, the teacher's kind words made me feel more (9)____. From that lesson on, I was sure this class would be a (10)____ place.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "one",
+            "two",
+            "day",
+            "week"
+          ],
+          "answer_index": 0,
+          "explanation": "one by one 一个接一个。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "stomach",
+            "station",
+            "kitchen"
+          ],
+          "answer_index": 1,
+          "explanation": "butterflies in my stomach 心里发慌。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "lose",
+            "organise",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "organise my words 组织语言。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "song",
+            "cloud",
+            "nudge"
+          ],
+          "answer_index": 3,
+          "explanation": "gave me a nudge 轻推了我一下。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "breathed",
+            "sold",
+            "sang",
+            "grew"
+          ],
+          "answer_index": 0,
+          "explanation": "breathed deeply 深深呼吸。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleep",
+            "laugh",
+            "sell",
+            "grow"
+          ],
+          "answer_index": 1,
+          "explanation": "began to laugh 开始笑。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "lost",
+            "had",
+            "sang"
+          ],
+          "answer_index": 2,
+          "explanation": "I had the same name 我和老师同名。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "happy",
+            "asleep",
+            "hungry",
+            "embarrassed"
+          ],
+          "answer_index": 3,
+          "explanation": "felt embarrassed 感到尴尬。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "relaxed",
+            "angry",
+            "asleep",
+            "hungry"
+          ],
+          "answer_index": 0,
+          "explanation": "feel more relaxed 感到更放松。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "broken",
+            "friendly",
+            "empty",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "a friendly place 友好的地方。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Advice for New Students",
+      "text": "If you are just starting senior high, here is some (1)____ that may help. First, keep an open (2)____ and try as many new things as you can. Join a club, talk to new (3)____, and take part in school events. You may (4)____ at first, but every mistake is a chance to learn. Second, do not be afraid to (5)____ for help. Your teachers and classmates are happy to give you a (6)____. Third, learn to (7)____ your time well, so that you do not feel too much pressure. Finally, remember to help (8)____ when they need it. Being kind not only makes them feel (9)____, but also makes you feel good. With a calm mind and an open heart, you can make the (10)____ of your time at high school.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "weather",
+            "music",
+            "advice",
+            "water"
+          ],
+          "answer_index": 2,
+          "explanation": "some advice 一些建议。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "song",
+            "cloud",
+            "mind"
+          ],
+          "answer_index": 3,
+          "explanation": "keep an open mind 保持开放心态。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "classmates",
+            "prices",
+            "clouds",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "new classmates 新同学。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "fail",
+            "sing",
+            "grow"
+          ],
+          "answer_index": 1,
+          "explanation": "you may fail 你可能失败。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "sleep",
+            "ask",
+            "grow"
+          ],
+          "answer_index": 2,
+          "explanation": "ask for help 求助。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "song",
+            "cloud",
+            "hand"
+          ],
+          "answer_index": 3,
+          "explanation": "give you a hand 帮你一把。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "manage",
+            "sell",
+            "lose",
+            "forget"
+          ],
+          "answer_index": 0,
+          "explanation": "manage your time 管理时间。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "prices",
+            "others",
+            "clouds",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "help others 帮助他人。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "empty",
+            "late",
+            "welcome",
+            "asleep"
+          ],
+          "answer_index": 2,
+          "explanation": "feel welcome 感到受欢迎。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "least",
+            "price",
+            "cloud",
+            "most"
+          ],
+          "answer_index": 3,
+          "explanation": "make the most of 充分利用。"
+        }
+      ]
+    }
+  ]
+}

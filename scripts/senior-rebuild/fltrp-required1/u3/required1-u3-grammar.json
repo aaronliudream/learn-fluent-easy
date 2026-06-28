@@ -1,0 +1,745 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "grammar_title": "时态复习(一般/进行/完成:现在与过去)",
+  "source": "外研社(新标准)必修第一册 Unit 3 Using language: Review of tenses。三组时态对比,均以时间标志词锚定使答案唯一;句子地道、家庭主题、零术语、全应用型填空。loader 自动加 f1 前缀。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "一般现在时 vs 现在进行时",
+      "overview": "经常/反复发生(every day/usually/always/often/regularly)用一般现在时;此刻正在进行(right now/at the moment/Look!/Listen!/now/这一阵子临时性)用现在进行时。看时间标志词定形。"
+    },
+    {
+      "code": "u3.02",
+      "point": "现在完成时 vs 一般过去时",
+      "overview": "与现在相连、动作持续或影响到现在(since/for/already/yet/just/ever/never/recently/so far)用现在完成时;指过去某个确定时间、与现在脱节(yesterday/ago/last.../in+年份/when I was)用一般过去时。"
+    },
+    {
+      "code": "u3.03",
+      "point": "一般过去时 vs 过去完成时 / 过去进行时",
+      "overview": "过去先发生(过去的过去:by the time/before/...had taken then)用过去完成时;过去某刻正在进行、作背景(while/when 被打断/as)用过去进行时;按时间先后依次发生的动作用一般过去时。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "\"Listen! Grandpa ____ (tell) a story about his childhood right now.\"",
+      "options": [
+        "is telling",
+        "tells",
+        "told",
+        "has told"
+      ],
+      "answer_index": 0,
+      "explanation": "Listen! 和 right now 表此刻正在进行 → 现在进行时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Look! Mum ____ (jog) in the park at the moment.\"",
+      "options": [
+        "jogs",
+        "is jogging",
+        "jogged",
+        "has jogged"
+      ],
+      "answer_index": 1,
+      "explanation": "Look! 与 at the moment 表此刻进行 → 现在进行时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Be quiet — Dad ____ (record) his voice in the studio now.\"",
+      "options": [
+        "records",
+        "recorded",
+        "is recording",
+        "has recorded"
+      ],
+      "answer_index": 2,
+      "explanation": "now 加上'安静'的语境表此刻进行 → 现在进行时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"My sister ____ (study) for her exams at the moment.\"",
+      "options": [
+        "studies",
+        "studied",
+        "has studied",
+        "is studying"
+      ],
+      "answer_index": 3,
+      "explanation": "at the moment 表此刻进行 → 现在进行时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Look! The whole family ____ (play) chess together now.\"",
+      "options": [
+        "is playing",
+        "plays",
+        "played",
+        "has played"
+      ],
+      "answer_index": 0,
+      "explanation": "Look! 与 now 表此刻进行 → 现在进行时(family 作整体,谓语单数)。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Don't disturb him; my brother ____ (practise) the guitar right now.\"",
+      "options": [
+        "practises",
+        "is practising",
+        "practised",
+        "has practised"
+      ],
+      "answer_index": 1,
+      "explanation": "right now 表此刻进行 → 现在进行时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"At the moment, Grandma ____ (make) a scarf for me.\"",
+      "options": [
+        "makes",
+        "made",
+        "is making",
+        "has made"
+      ],
+      "answer_index": 2,
+      "explanation": "At the moment 表此刻进行 → 现在进行时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Look! Dad ____ (hang) up the family photos now.\"",
+      "options": [
+        "hangs",
+        "hung",
+        "has hung",
+        "is hanging"
+      ],
+      "answer_index": 3,
+      "explanation": "Look! 与 now 表此刻进行 → 现在进行时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Listen! The children ____ (argue) about the TV again right now.\"",
+      "options": [
+        "are arguing",
+        "argue",
+        "argued",
+        "have argued"
+      ],
+      "answer_index": 0,
+      "explanation": "Listen! 与 right now 表此刻进行 → 现在进行时(复数 children 用 are)。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"We ____ (plan) a surprise party for Grandma this week.\"",
+      "options": [
+        "plan",
+        "are planning",
+        "planned",
+        "have planned"
+      ],
+      "answer_index": 1,
+      "explanation": "this week 指当下这一阵子临时进行 → 现在进行时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Mum ____ (jog) every morning to keep fit.\"",
+      "options": [
+        "is jogging",
+        "jogged",
+        "jogs",
+        "has jogged"
+      ],
+      "answer_index": 2,
+      "explanation": "every morning 表经常性习惯 → 一般现在时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"We ____ (visit) Grandma every Sunday afternoon.\"",
+      "options": [
+        "are visiting",
+        "visited",
+        "have visited",
+        "visit"
+      ],
+      "answer_index": 3,
+      "explanation": "every Sunday 表反复习惯 → 一般现在时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Dad usually ____ (work) in the court during the week.\"",
+      "options": [
+        "works",
+        "is working",
+        "worked",
+        "has worked"
+      ],
+      "answer_index": 0,
+      "explanation": "usually 表习惯 → 一般现在时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"My brother always ____ (focus) on his music after school.\"",
+      "options": [
+        "is focusing",
+        "focuses",
+        "focused",
+        "has focused"
+      ],
+      "answer_index": 1,
+      "explanation": "always 表经常 → 一般现在时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Grandpa ____ (play) chess with my father every Friday night.\"",
+      "options": [
+        "is playing",
+        "played",
+        "plays",
+        "has played"
+      ],
+      "answer_index": 2,
+      "explanation": "every Friday night 表习惯 → 一般现在时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Our family ____ (have) dinner together every evening.\"",
+      "options": [
+        "is having",
+        "had",
+        "have had",
+        "has"
+      ],
+      "answer_index": 3,
+      "explanation": "every evening 表习惯,family 作整体用单数 → 一般现在时 has。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"I ____ (respect) my parents' opinions, even when I disagree.\"",
+      "options": [
+        "respect",
+        "am respecting",
+        "respected",
+        "have respected"
+      ],
+      "answer_index": 0,
+      "explanation": "表一贯态度(状态动词)→ 一般现在时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"She often ____ (chat) with her sister on the phone.\"",
+      "options": [
+        "is chatting",
+        "chats",
+        "chatted",
+        "has chatted"
+      ],
+      "answer_index": 1,
+      "explanation": "often 表经常 → 一般现在时。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"My grandparents ____ (observe) this festival regularly every May.\"",
+      "options": [
+        "are observing",
+        "observed",
+        "observe",
+        "have observed"
+      ],
+      "answer_index": 2,
+      "explanation": "regularly every May 表习惯 → 一般现在时(复数主语用原形)。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Dad ____ (drive) us to school every day before work.\"",
+      "options": [
+        "is driving",
+        "drove",
+        "has driven",
+        "drives"
+      ],
+      "answer_index": 3,
+      "explanation": "every day 表习惯 → 一般现在时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Dad ____ (change) quite a bit since we last saw him.\"",
+      "options": [
+        "has changed",
+        "changed",
+        "changes",
+        "is changing"
+      ],
+      "answer_index": 0,
+      "explanation": "since we last saw him 强调对现在的影响 → 现在完成时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"I ____ (finish) the guest list for the party already.\"",
+      "options": [
+        "finished",
+        "have finished",
+        "finish",
+        "had finished"
+      ],
+      "answer_index": 1,
+      "explanation": "already 与现在相连 → 现在完成时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Grandma ____ (live) in this house for over thirty years.\"",
+      "options": [
+        "lived",
+        "lives",
+        "has lived",
+        "is living"
+      ],
+      "answer_index": 2,
+      "explanation": "for over thirty years 表持续到现在 → 现在完成时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"We ____ (not see) our cousins since last summer.\"",
+      "options": [
+        "didn't see",
+        "don't see",
+        "aren't seeing",
+        "haven't seen"
+      ],
+      "answer_index": 3,
+      "explanation": "since last summer 表到现在为止 → 现在完成时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"My brother ____ (decide) to focus on his band already.\"",
+      "options": [
+        "has decided",
+        "decided",
+        "decides",
+        "had decided"
+      ],
+      "answer_index": 0,
+      "explanation": "already 与现在相连 → 现在完成时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Mum ____ (be) very busy with work recently.\"",
+      "options": [
+        "was",
+        "has been",
+        "is",
+        "will be"
+      ],
+      "answer_index": 1,
+      "explanation": "recently 表延续到现在 → 现在完成时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"So far this week, Dad ____ (cook) dinner for us three times.\"",
+      "options": [
+        "cooked",
+        "cooks",
+        "has cooked",
+        "had cooked"
+      ],
+      "answer_index": 2,
+      "explanation": "So far 表到目前为止 → 现在完成时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"That is the kindest thing my dad ____ (ever do) for me.\"",
+      "options": [
+        "ever did",
+        "ever does",
+        "had ever done",
+        "has ever done"
+      ],
+      "answer_index": 3,
+      "explanation": "最高级 + ever 表到现在为止 → 现在完成时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"My grandparents ____ (be) married for fifty years now.\"",
+      "options": [
+        "have been",
+        "were",
+        "are",
+        "had been"
+      ],
+      "answer_index": 0,
+      "explanation": "for fifty years now 表持续到现在 → 现在完成时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Penny ____ (grow) a lot since that photo was taken.\"",
+      "options": [
+        "grew",
+        "has grown",
+        "grows",
+        "is growing"
+      ],
+      "answer_index": 1,
+      "explanation": "since that photo was taken 表对现在的影响 → 现在完成时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Grandma ____ (call) us yesterday to say hello.\"",
+      "options": [
+        "has called",
+        "calls",
+        "called",
+        "had called"
+      ],
+      "answer_index": 2,
+      "explanation": "yesterday 是确定的过去时间 → 一般过去时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"We ____ (have) a fantastic holiday in Beidaihe last summer.\"",
+      "options": [
+        "have had",
+        "have",
+        "has had",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "last summer 是确定的过去时间 → 一般过去时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Dad ____ (show) me an old photo a moment ago.\"",
+      "options": [
+        "showed",
+        "has shown",
+        "shows",
+        "had shown"
+      ],
+      "answer_index": 0,
+      "explanation": "a moment ago 表过去某刻 → 一般过去时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"When I was young, I ____ (have) cute rosy cheeks.\"",
+      "options": [
+        "have had",
+        "had",
+        "have",
+        "has had"
+      ],
+      "answer_index": 1,
+      "explanation": "When I was young 指过去时段 → 一般过去时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"My parents ____ (get) married in 2005.\"",
+      "options": [
+        "have got",
+        "get",
+        "got",
+        "had got"
+      ],
+      "answer_index": 2,
+      "explanation": "in 2005 是确定过去时间 → 一般过去时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"I ____ (cook) scrambled eggs for Mum on her birthday last year.\"",
+      "options": [
+        "have cooked",
+        "cook",
+        "had cooked",
+        "cooked"
+      ],
+      "answer_index": 3,
+      "explanation": "last year 是确定过去时间 → 一般过去时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Grandpa ____ (teach) my father chess many years ago.\"",
+      "options": [
+        "taught",
+        "has taught",
+        "teaches",
+        "had taught"
+      ],
+      "answer_index": 0,
+      "explanation": "many years ago 表过去 → 一般过去时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"We ____ (stay) at the same campsite ten years ago.\"",
+      "options": [
+        "have stayed",
+        "stayed",
+        "stay",
+        "had stayed"
+      ],
+      "answer_index": 1,
+      "explanation": "ten years ago 表过去 → 一般过去时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Dad ____ (be) quite thin and pale in his thirties.\"",
+      "options": [
+        "has been",
+        "is",
+        "was",
+        "had been"
+      ],
+      "answer_index": 2,
+      "explanation": "in his thirties 指过去时段 → 一般过去时。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"My sister ____ (win) a medal at a school race last week.\"",
+      "options": [
+        "has won",
+        "wins",
+        "had won",
+        "won"
+      ],
+      "answer_index": 3,
+      "explanation": "last week 是确定过去时间 → 一般过去时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"By the time we arrived, Grandma ____ (prepare) dinner already.\"",
+      "options": [
+        "had prepared",
+        "prepared",
+        "prepares",
+        "has prepared"
+      ],
+      "answer_index": 0,
+      "explanation": "By the time we arrived 之前已完成 → 过去完成时(过去的过去)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Dad showed me a photo that we ____ (take) ten years before.\"",
+      "options": [
+        "took",
+        "had taken",
+        "take",
+        "have taken"
+      ],
+      "answer_index": 1,
+      "explanation": "ten years before(早于过去拍照那刻)→ 过去完成时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Before he joined the band, my brother ____ (not perform) in public.\"",
+      "options": [
+        "did not perform",
+        "does not perform",
+        "had not performed",
+        "has not performed"
+      ],
+      "answer_index": 2,
+      "explanation": "Before he joined 之前的状态 → 过去完成时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"When I got to the kitchen, I realised I ____ (burn) the eggs.\"",
+      "options": [
+        "burnt",
+        "burns",
+        "have burnt",
+        "had burnt"
+      ],
+      "answer_index": 3,
+      "explanation": "烧糊发生在'意识到'之前 → 过去完成时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"By the time Mum sat down, she ____ (finish) all the housework.\"",
+      "options": [
+        "had finished",
+        "finished",
+        "finishes",
+        "has finished"
+      ],
+      "answer_index": 0,
+      "explanation": "By the time Mum sat down 之前完成 → 过去完成时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"I wanted to thank Grandpa, but he ____ (leave) already.\"",
+      "options": [
+        "left",
+        "had left",
+        "leaves",
+        "has left"
+      ],
+      "answer_index": 1,
+      "explanation": "离开早于'想感谢'那刻 → 过去完成时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"By the time the guests arrived, we ____ (decorate) the whole room.\"",
+      "options": [
+        "decorated",
+        "decorate",
+        "had decorated",
+        "have decorated"
+      ],
+      "answer_index": 2,
+      "explanation": "By the time the guests arrived 之前完成 → 过去完成时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Mum told me that she ____ (meet) my father at university.\"",
+      "options": [
+        "met",
+        "meets",
+        "has met",
+        "had met"
+      ],
+      "answer_index": 3,
+      "explanation": "相遇早于'告诉'那刻(过去的过去)→ 过去完成时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"I ____ (tidy) my room when I found an old photo in a notebook.\"",
+      "options": [
+        "was tidying",
+        "tidied",
+        "had tidied",
+        "tidies"
+      ],
+      "answer_index": 0,
+      "explanation": "整理房间是被'发现'打断的背景动作 → 过去进行时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"While Mum ____ (cook), I quietly set the table for dinner.\"",
+      "options": [
+        "cooked",
+        "was cooking",
+        "had cooked",
+        "cooks"
+      ],
+      "answer_index": 1,
+      "explanation": "While 引导的背景动作正在进行 → 过去进行时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"When Dad came in, the children ____ (play) chess at the table.\"",
+      "options": [
+        "played",
+        "had played",
+        "were playing",
+        "play"
+      ],
+      "answer_index": 2,
+      "explanation": "Dad 进来时正在下棋(背景)→ 过去进行时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"As I ____ (look) at the photo, the lovely memory came back to me.\"",
+      "options": [
+        "looked",
+        "had looked",
+        "looks",
+        "was looking"
+      ],
+      "answer_index": 3,
+      "explanation": "As 引导的动作正在进行作背景 → 过去进行时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Grandfather and Father ____ (play) chess when the son came in.\"",
+      "options": [
+        "were playing",
+        "played",
+        "had played",
+        "play"
+      ],
+      "answer_index": 0,
+      "explanation": "儿子进来时两人正在下棋(背景)→ 过去进行时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"While we ____ (camp) in Beidaihe, it suddenly started to rain.\"",
+      "options": [
+        "camped",
+        "were camping",
+        "had camped",
+        "camp"
+      ],
+      "answer_index": 1,
+      "explanation": "While 引导的背景动作正在进行,被'下雨'打断 → 过去进行时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Mum ____ (talk) on the phone when I got home from school.\"",
+      "options": [
+        "talked",
+        "had talked",
+        "was talking",
+        "talks"
+      ],
+      "answer_index": 2,
+      "explanation": "我到家时她正在打电话(背景)→ 过去进行时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Yesterday my brother ____ (tell) Dad about his dream of a music career.\"",
+      "options": [
+        "had told",
+        "tells",
+        "was telling",
+        "told"
+      ],
+      "answer_index": 3,
+      "explanation": "yesterday 表过去某刻发生的单一动作 → 一般过去时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Grandpa ____ (step) between them and then raised his voice.\"",
+      "options": [
+        "stepped",
+        "had stepped",
+        "steps",
+        "was stepping"
+      ],
+      "answer_index": 0,
+      "explanation": "and then 表依次发生的动作 → 一般过去时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The son ____ (enter) the room and sat down at the table.\"",
+      "options": [
+        "had entered",
+        "entered",
+        "enters",
+        "was entering"
+      ],
+      "answer_index": 1,
+      "explanation": "and 连接的两个先后动作 → 一般过去时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"When the curtain fell, the whole family ____ (clap) loudly.\"",
+      "options": [
+        "had clapped",
+        "claps",
+        "clapped",
+        "were clapping"
+      ],
+      "answer_index": 2,
+      "explanation": "幕落'后'紧接的反应动作 → 一般过去时。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"After the argument, the family finally ____ (settle) their differences.\"",
+      "options": [
+        "had settled",
+        "settles",
+        "were settling",
+        "settled"
+      ],
+      "answer_index": 3,
+      "explanation": "After the argument 之后发生的动作 → 一般过去时。"
+    }
+  ]
+}

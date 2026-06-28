@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "topic": "Write an Article about an Artwork(写一篇介绍艺术作品的短文)",
+  "title_en": "Writing about an Artwork",
+  "genre": "说明 / 介绍(introduce an artwork: artist + description + your own comment)",
+  "source": "外研社(新标准)必修三 Unit 4 Developing ideas:write an article about a painting(介绍一件艺术作品:基本信息 + 描述 + 个人评价)。",
+  "prompt_cn": "假设你是李华,学校英语墙报要介绍一件你喜欢的艺术作品。请用英语写一篇约100词的短文,内容包括:① 作品与艺术家的基本信息(名称/作者/年代);② 描述作品(画的是什么、颜色或感受);③ 你自己的评价和感受。注意:可恰当使用现在进行被动语态(is/are being done)描述展览或修复情况。",
+  "prompt_en": "Suppose you are Li Hua. Your school English board wants a short piece about an artwork you like. Write an article (about 100 words) including: 1) basic facts about the work and the artist (name, painter, date); 2) a description of the work (what it shows, its colours or the feeling it gives); 3) your own comment and feelings. Try to use the present continuous passive (is/are being done) where it fits.",
+  "points": [
+    "基本信息(This painting, called …, was created by … in …)",
+    "描述作品(It shows … mostly in shades of … / The work is now being displayed in …)",
+    "个人评价与感受(To me, it … / What I love most is …)",
+    "结构清晰:介绍—描述—评价三段,语言地道连贯"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "One of my favourite paintings is Sunflowers, created by Vincent van Gogh in 1889. It shows bright sunflowers standing in a simple vase, painted mostly in three shades of yellow. Some flowers are fresh and open, while others are beginning to fade, so the work feels warm and alive at the same time. Right now a copy of it is being displayed in our school library, and many students stop to look at it every day. To me, the painting is amazing because its warm colours seem to glow with light. Whenever I feel tired, I look at it and feel hopeful again.",
+  "model_translation": "我最喜欢的画作之一是梵高于1889年创作的《向日葵》。画中明亮的向日葵插在一只朴素的花瓶里,主要由三种深浅不同的黄色绘成。有些花新鲜绽放,有些却开始凋谢,使作品既温暖又充满生机。眼下它的一幅复制品正在我们学校图书馆展出,每天许多同学都会驻足观看。对我来说,这幅画令人惊叹,因为它温暖的色彩仿佛闪着光。每当我感到疲惫,看看它就又重新充满希望。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:基本信息 / 描述作品 / 个人评价" },
+      { "dimension": "结构", "max": 4, "criteria": "介绍—描述—评价三段清晰、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、现在进行被动等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "基本信息 This painting, called …, was created by … in …",
+      "描述 It shows … mostly in shades of …",
+      "被动展览 Right now a copy of it is being displayed in …",
+      "评价 To me, the painting is amazing because …"
+    ],
+    "key_expressions": [
+      "One of my favourite paintings is Sunflowers, created by Vincent van Gogh in 1889.",
+      "It shows bright sunflowers in a vase, painted mostly in three shades of yellow.",
+      "Right now a copy of it is being displayed in our school library.",
+      "Its warm colours seem to glow with light."
+    ],
+    "useful_words": ["painting", "artist", "create", "shade", "vase", "display", "colour", "magnificent", "admire", "feeling"]
+  },
+  "high_sentences": [
+    "One of my favourite paintings is Sunflowers, created by Vincent van Gogh in 1889.",
+    "It shows bright sunflowers in a vase, painted mostly in three shades of yellow.",
+    "Right now a copy of it is being displayed in our school library.",
+    "Whenever I feel tired, I look at it and feel hopeful again."
+  ],
+  "error_pairs": [
+    { "wrong": "The painting is displaying in our library now.", "correct": "The painting is being displayed in our library now.", "note": "画是被展出的对象,此刻进行用现在进行被动 is being displayed。" },
+    { "wrong": "It shows sunflowers in three shade of yellow.", "correct": "It shows sunflowers in three shades of yellow.", "note": "three 后名词用复数 shades。" },
+    { "wrong": "The painting was created by Van Gogh in 1889 year.", "correct": "The painting was created by Van Gogh in 1889.", "note": "in + 年份,不加 year。" }
+  ],
+  "paragraph_template": "【艺术作品介绍结构】\n第1段 基本信息:This painting, called …, was created by … in …\n第2段 描述:It shows … mostly in shades of … Right now it is being displayed in …\n第3段 评价:To me, the painting is amazing because … Whenever I …, I feel …"
+}

@@ -1,0 +1,338 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "topic": "Let's Celebrate!",
+  "source": "外研社版必修第二册 Unit 2 同主题阅读(圣诞老人书信/元宵灯会/春节家宴之争/感恩节/春节走向世界/端午纪念诗人)。词限 U2/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Real Father Christmas",
+      "topic_cn": "说明·圣诞老人书信",
+      "body": "Many children still remember the magic of Father Christmas. The book Letters from Father Christmas could be the perfect gift for those who love this time of year. The letters were written by J.R.R. Tolkien, one of the most famous names in English literature. For more than twenty years, he wrote them to keep the magic alive for his four children. Every Christmas, an envelope with a North Pole stamp arrived. The children must have been very excited as they opened it. Inside, they found a handwritten letter, beautifully drawn. Each one must have taken Tolkien a long time to finish. The letters told wonderful stories about Father Christmas and his helper, Polar Bear, who once fell through the roof. By showing his love in such a special way, Tolkien may indeed have been a real Father Christmas to his family.",
+      "vocab_notes": [
+        {
+          "word": "envelope",
+          "cn": "信封"
+        },
+        {
+          "word": "literature",
+          "cn": "文学"
+        },
+        {
+          "word": "handwritten",
+          "cn": "手写的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Tolkien write the letters every year?",
+          "options": [
+            "To keep the joy of Father Christmas alive for his children.",
+            "To earn money from a famous publisher.",
+            "To teach his children how to draw.",
+            "To complain about the cold North Pole."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说他写信是为了为四个孩子保留圣诞老人的魔力,即让欢乐延续,是其转述。"
+        },
+        {
+          "stem": "What can we learn about each letter?",
+          "options": [
+            "It was printed by a machine in minutes.",
+            "It was carefully drawn and took a long time.",
+            "It was thrown away after Christmas.",
+            "It was written by the children themselves."
+          ],
+          "answer_index": 1,
+          "explanation": "原文称每封都画得很美、花了很长时间完成,是其概括。"
+        },
+        {
+          "stem": "What does the writer think of Tolkien at the end?",
+          "options": [
+            "His loving way made him like a real Father Christmas.",
+            "He was too busy to care for his family.",
+            "He disliked the Christmas season.",
+            "He copied the letters from another writer."
+          ],
+          "answer_index": 0,
+          "explanation": "末句说他用特别方式表达爱,堪称真正的圣诞老人,是转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Lights of the Lantern Festival",
+      "topic_cn": "说明·元宵灯会",
+      "body": "The Lantern Festival falls on the fifteenth day of the first lunar month, marking the end of the Spring Festival season. On this evening, streets and parks glow with thousands of red lanterns. Families come out to enjoy the warm light and the lively crowds. One of the most popular activities is guessing lantern riddles. Each riddle is written on a slip of paper and hung beneath a lantern; anyone who works out the answer can win a small prize. The festival also has its own special food. Sweet rice balls, served warm in a bowl, are a favourite dessert because their round shape stands for family and togetherness. In many cities, the lantern fair attracts huge crowds, so the traffic police are kept very busy keeping everyone safe. For children and adults alike, the glowing lanterns turn an ordinary night into a celebration full of joy.",
+      "vocab_notes": [
+        {
+          "word": "lantern",
+          "cn": "灯笼"
+        },
+        {
+          "word": "riddle",
+          "cn": "谜语"
+        },
+        {
+          "word": "dessert",
+          "cn": "甜点"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When does the Lantern Festival take place?",
+          "options": [
+            "On the first morning of the new year.",
+            "As the Spring Festival holidays come to an end.",
+            "In the middle of the summer harvest.",
+            "On the eve of the Mid-Autumn Festival."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说它在正月十五、标志春节季的结束,即春节季尾声,是转述。"
+        },
+        {
+          "stem": "Why are sweet rice balls eaten at the festival?",
+          "options": [
+            "They are the cheapest food in the market.",
+            "They can only be made in winter.",
+            "Their round form is a sign of family unity.",
+            "They are difficult to cook at home."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说圆形象征家庭团圆,是其概括。"
+        },
+        {
+          "stem": "Why are the traffic police very busy that night?",
+          "options": [
+            "Many cars break down in the cold.",
+            "The lanterns block all the main roads.",
+            "People forget the date of the festival.",
+            "Large crowds gather for the lantern fair."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说灯会吸引大批人群,警察忙着保障安全,是转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Dinner Out or Dinner at Home?",
+      "topic_cn": "议论·春节家宴之争",
+      "body": "Every year before the Spring Festival, families face the same question: should the family dinner be cooked at home or eaten at a restaurant? Mr Wang, a software engineer, prefers eating out. He argues that preparing the meal is hard work, and that cleaning up afterwards takes hours. For him, the festival should be a day for relaxing and spending time with family, not for tiring cooking. The dishes, he adds, often taste better in a restaurant. Mr Liu, a retired teacher, sees things differently. When he was a boy, the dinner on the eve of Spring Festival was what he looked forward to most. He remembers watching his mother make dumplings and listening to the adults chat about their year. To him, preparing the meal together is even more important than the meal itself. Both men, however, agree on one thing: the love shared around the table never changes.",
+      "vocab_notes": [
+        {
+          "word": "eve",
+          "cn": "前夕"
+        },
+        {
+          "word": "retired",
+          "cn": "退休的"
+        },
+        {
+          "word": "process",
+          "cn": "过程"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does Mr Wang prefer eating out?",
+          "options": [
+            "He thinks cooking and cleaning up take too much time and effort.",
+            "He cannot afford to buy food for cooking.",
+            "He dislikes spending the day with his family.",
+            "He believes restaurants are quieter than home."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说做饭辛苦、收拾费时,他想轻松过节,是转述。"
+        },
+        {
+          "stem": "What does Mr Liu value most about the dinner?",
+          "options": [
+            "Eating at the most expensive restaurant.",
+            "Preparing the meal together with the family.",
+            "Receiving gifts from his old students.",
+            "Watching television after the meal."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说一起准备这顿饭比饭本身更重要,是其概括。"
+        },
+        {
+          "stem": "What do the two men agree on?",
+          "options": [
+            "Home cooking always tastes the best.",
+            "Restaurants should be closed at festivals.",
+            "The love shared at the table stays the same.",
+            "Young people should cook for the old."
+          ],
+          "answer_index": 2,
+          "explanation": "末句说桌边分享的爱永不改变,是转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Thanksgiving Invitation",
+      "topic_cn": "说明·感恩节邀请",
+      "body": "In the United States, Thanksgiving is celebrated on the fourth Thursday in November. It is a warm family occasion, and people often invite close friends to share the meal. This year, Tony has decided to invite his classmate Hugo to his apartment for the holiday. On the phone, Hugo happily accepts and asks what he should bring. Tony tells him that guests usually bring some flowers or a small dessert, but the host prepares the main dishes. The centre of the meal is always a large roast turkey, served with many side dishes and a homemade pie. Before they eat, the family takes turns saying what they are thankful for. Hugo is a little nervous because he has never been to a Thanksgiving dinner, but Tony promises to help him feel at home. After the meal, they plan to watch a football game together, just as many American families do.",
+      "vocab_notes": [
+        {
+          "word": "occasion",
+          "cn": "场合"
+        },
+        {
+          "word": "host",
+          "cn": "主人"
+        },
+        {
+          "word": "guest",
+          "cn": "客人"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does Tony ask Hugo to bring to the dinner?",
+          "options": [
+            "A large roast turkey.",
+            "Tickets for a football game.",
+            "A formal written invitation.",
+            "A few flowers or a sweet treat."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说客人通常带花或甜点,主菜由主人准备,是转述。"
+        },
+        {
+          "stem": "What do the family do before they start eating?",
+          "options": [
+            "Everyone takes a turn to share their thanks.",
+            "They send out written invitations.",
+            "They watch a football game.",
+            "They guess lantern riddles."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说饭前轮流说出感恩之事,是其概括。"
+        },
+        {
+          "stem": "Why does Hugo feel a little nervous?",
+          "options": [
+            "He dislikes turkey and pie.",
+            "It is his first Thanksgiving dinner.",
+            "He has lost Tony's address.",
+            "He has to cook the whole meal."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说他从没参加过感恩节晚餐,是转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Spring Festival Goes Global",
+      "topic_cn": "说明·春节走向世界",
+      "body": "More and more countries around the world are now holding celebrations for the Chinese Spring Festival. These events are enjoyed not only by Chinese people living overseas, but also by people of many other nationalities. With colourful decorations of lanterns and lamps, shopping centres in many cities organise activities to mark the festival, while concerts prove a great success. Tickets for one grand New Year concert in St Petersburg sold out, and most of the audience were local Russians. People are also discovering the fun of joining in, rather than simply watching. To celebrate one recent festival, over a thousand school students in Ghana got up on stage to perform Chinese songs and dances. In New York City, students have even been able to enjoy an official day off for the festival. It seems clear that the Spring Festival is fast becoming a global celebration of joy and friendship that crosses borders.",
+      "vocab_notes": [
+        {
+          "word": "overseas",
+          "cn": "在海外"
+        },
+        {
+          "word": "nationality",
+          "cn": "国籍"
+        },
+        {
+          "word": "global",
+          "cn": "全球的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Who enjoys the overseas Spring Festival events?",
+          "options": [
+            "Only Chinese citizens living in China.",
+            "Only government officials and editors.",
+            "Both Chinese people abroad and people of other nationalities.",
+            "Only retired teachers and their students."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说不仅海外华人、也有许多其他国籍的人,是转述。"
+        },
+        {
+          "stem": "What was special about the concert in St Petersburg?",
+          "options": [
+            "It was performed only by Chinese singers.",
+            "Nobody bought any of the tickets.",
+            "It was held in a small village hall.",
+            "Most of its audience were local Russians."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说门票售罄、九成观众是当地俄罗斯人,是其概括。"
+        },
+        {
+          "stem": "What does the passage suggest about the festival?",
+          "options": [
+            "It is turning into a worldwide celebration of joy.",
+            "It is slowly being forgotten abroad.",
+            "It is celebrated only by watching, never joining.",
+            "It can be held only in shopping centres."
+          ],
+          "answer_index": 0,
+          "explanation": "末句说春节正迅速成为全球性的欢乐庆典,是转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "The Festival that Honours a Poet",
+      "topic_cn": "说明·端午纪念诗人",
+      "body": "The Dragon Boat Festival falls on the fifth day of the fifth lunar month. Unlike many holidays, it is held to honour a person: Qu Yuan, a great poet who lived more than two thousand years ago. He loved his country deeply, and when it was in danger, he was so sad that he drowned himself in a river. Local people rushed out in their boats to search for him, beating drums and throwing rice into the water so that the fish would not harm his body. Today, these old actions have grown into the festival's main customs. People race long, narrow dragon boats, with a drummer beating time at the front. They also eat zongzi, sticky rice wrapped in leaves. Through these activities, families remember the poet and pass his story on to their children. The festival shows how a celebration can keep the memory of one good person alive for centuries.",
+      "vocab_notes": [
+        {
+          "word": "honour",
+          "cn": "纪念;敬重"
+        },
+        {
+          "word": "poet",
+          "cn": "诗人"
+        },
+        {
+          "word": "dragon",
+          "cn": "龙"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is the Dragon Boat Festival different from many holidays?",
+          "options": [
+            "It has no special food at all.",
+            "It is held to remember one particular person.",
+            "It is celebrated only at night.",
+            "It lasts for a whole month."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说它不同于许多节日,是为纪念屈原一人而设,是转述。"
+        },
+        {
+          "stem": "Why did people throw rice into the river long ago?",
+          "options": [
+            "Because they had too much rice to eat.",
+            "To make the river water taste better.",
+            "To stop the fish from harming his body.",
+            "To start a boat race for fun."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说投米是为了让鱼不伤害他的身体,是其概括。"
+        },
+        {
+          "stem": "What does the festival show, according to the passage?",
+          "options": [
+            "Old customs are no longer worth keeping.",
+            "Boat races are dangerous and should stop.",
+            "Poems are too hard for children to learn.",
+            "A celebration can keep a good person's memory alive for ages."
+          ],
+          "answer_index": 3,
+          "explanation": "末句说庆典能让一个好人的记忆延续数百年,是转述。"
+        }
+      ]
+    }
+  ]
+}

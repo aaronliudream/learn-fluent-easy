@@ -1,0 +1,314 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "topic": "The World of Science",
+  "source": "外研社(新标准)必修第三册 Unit 3 同主题阅读(新发明时代/3D打印医疗/会走的房子/富兰克林实验/科学职业/帮助阿尔茨海默病患者)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The New Age of Invention",
+      "topic_cn": "说明·我们正进入科技驱动的新发明时代",
+      "body": "Many people believe that the great age of invention is over, but in fact we have entered an exciting new one. In the past, the world was changed by inventions such as gunpowder, printing and the compass in ancient China, and later by the steam engine and the telephone in the West. Today, however, most great inventions are based on technology. Advances in virtual reality, wearable tech and flexible batteries mean that new products appear almost every month. Important progress has also been made in medicine and environmental science, thanks to the growing power of computers. What has not changed is the human desire to think and to create. According to one writer, most inventions begin when a person notices a problem that needs a solution. As long as people keep asking questions, the age of invention will never truly come to an end.",
+      "vocab_notes": [
+        {
+          "word": "advance",
+          "cn": "进展;进步"
+        },
+        {
+          "word": "desire",
+          "cn": "渴望"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the writer's main point?",
+          "options": [
+            "The age of invention is far from over.",
+            "Ancient inventions were better than modern ones.",
+            "Computers have stopped people from inventing.",
+            "Only Western countries can invent things."
+          ],
+          "answer_index": 0,
+          "explanation": "全文主旨'we have entered an exciting new one'的转述。"
+        },
+        {
+          "stem": "What are most great inventions based on today?",
+          "options": [
+            "Gunpowder and printing.",
+            "Technology.",
+            "The steam engine.",
+            "Old farming tools."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'most great inventions are based on technology'。"
+        },
+        {
+          "stem": "According to the writer, how do most inventions begin?",
+          "options": [
+            "When a problem needs to be solved.",
+            "When the government orders them.",
+            "When old machines break down.",
+            "When money runs out."
+          ],
+          "answer_index": 0,
+          "explanation": "末段'begin when a person notices a problem that needs a solution'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "When Machines Print Body Parts",
+      "topic_cn": "说明·3D打印在医疗中的应用",
+      "body": "Within the next eighty years, our lives may be changed beyond recognition by 3D printing. This technology has already affected many areas, right down to the food on our plates; in London, some restaurants have served 3D-printed hamburgers to their customers. Yet the most significant success so far has been in medicine. Using special printers, scientists have made human body parts, including a beating heart and strong new bones. These parts can be designed to fit each patient exactly, which makes operations safer. It is not only humans who benefit. In Brazil, a turtle that had been hurt in a forest fire was given a new 3D-printed shell, and soon it could swim again. Doctors believe that, in the future, fewer patients will have to wait for a suitable donor, because the parts they need will simply be printed in a lab.",
+      "vocab_notes": [
+        {
+          "word": "donor",
+          "cn": "捐献者"
+        },
+        {
+          "word": "significant",
+          "cn": "重要的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where has 3D printing had its most important success?",
+          "options": [
+            "In cooking only.",
+            "In medicine.",
+            "In space travel.",
+            "In farming."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'the most significant success so far has been in medicine'。"
+        },
+        {
+          "stem": "Why is a printed body part safer for an operation?",
+          "options": [
+            "It is much cheaper than food.",
+            "It is printed in a restaurant.",
+            "It can be made to fit the patient exactly.",
+            "It is larger than a normal part."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'designed to fit each patient exactly, which makes operations safer'的转述。"
+        },
+        {
+          "stem": "What happened to the turtle in Brazil?",
+          "options": [
+            "It learned to fly.",
+            "It was sent to London.",
+            "It was never found.",
+            "It received a new printed shell."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'was given a new 3D-printed shell'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The House That Walks",
+      "topic_cn": "说明·能自行移动的智能房屋",
+      "body": "Imagine a house that can pick itself up and move to a new place. Thanks to advances in technology, such a house has now been built. The intelligent walking house uses GPS to find its way, while computers control its six metal legs. If the weather turns bad, or if the owners simply want a different view, the house can slowly walk to somewhere better. Because it is powered by the sun, it does not harm the environment, and it produces almost no waste. The idea may sound like science fiction, but every part of it depends on real science that already exists. Engineers say that homes like this could one day help people who live in places where floods or storms are common. When the danger comes, the house will not be left behind; instead, it will quietly carry its owners to safety.",
+      "vocab_notes": [
+        {
+          "word": "GPS",
+          "cn": "全球定位系统"
+        },
+        {
+          "word": "waste",
+          "cn": "废物"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does the walking house find its way?",
+          "options": [
+            "By using GPS.",
+            "By asking neighbours.",
+            "By following a paper map.",
+            "By guessing."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'uses GPS to find its way'。"
+        },
+        {
+          "stem": "Why is the house friendly to the environment?",
+          "options": [
+            "It is made of paper.",
+            "It runs on solar power.",
+            "It never moves at all.",
+            "It burns coal."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'powered by the sun, it does not harm the environment'的转述。"
+        },
+        {
+          "stem": "Who might such houses help in the future?",
+          "options": [
+            "Only rich tourists.",
+            "People who dislike science.",
+            "People in places with floods or storms.",
+            "Drivers on long trips."
+          ],
+          "answer_index": 2,
+          "explanation": "末段'help people who live in places where floods or storms are common'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Franklin's Experiment: How True?",
+      "topic_cn": "议论·富兰克林闪电实验的真相",
+      "body": "Benjamin Franklin's experiment with lightning has introduced generations of children to science. The famous story says that in 1752 he flew a kite during a storm, with a metal key tied to the wet string. When lightning struck, electricity was carried down the string, and Franklin touched the key to prove that lightning is a form of electricity. For many years this story has been taught in schools, and children have been amazed by his courage. New research, however, suggests that the tale may be more fiction than fact. Although it has been proved that the experiment really took place, scientists agree that if Franklin had truly touched the key, the shock would have killed him. The lesson is an important one. In science, facts should be tested by experiment and proof, and we should not believe everything we read, even when it makes a wonderful story.",
+      "vocab_notes": [
+        {
+          "word": "shock",
+          "cn": "电击"
+        },
+        {
+          "word": "courage",
+          "cn": "勇气"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Franklin's experiment try to prove?",
+          "options": [
+            "That kites are dangerous toys.",
+            "That metal keys are valuable.",
+            "That storms never happen.",
+            "That lightning is really a kind of electricity."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'to prove that lightning is a form of electricity'的转述。"
+        },
+        {
+          "stem": "Why do scientists doubt the famous story?",
+          "options": [
+            "He would probably have died from the shock.",
+            "Franklin never lived in America.",
+            "Kites cannot fly in storms.",
+            "Electricity did not exist then."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'if Franklin had truly touched the key, the shock would have killed him'的转述。"
+        },
+        {
+          "stem": "What lesson does the writer want readers to learn?",
+          "options": [
+            "Good stories are always true.",
+            "Facts should be tested, not simply believed.",
+            "Science is a waste of time.",
+            "Children should not study Franklin."
+          ],
+          "answer_index": 1,
+          "explanation": "末段'facts should be tested by experiment and proof'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Careers in Science",
+      "topic_cn": "说明·不同的科学职业",
+      "body": "The world of science offers many different careers, and the words we use for them often come from the subjects themselves. A person who studies living things is called a biologist, while someone who studies the stars and planets is an astronomer. A chemist works with the materials that everything is made of, and a physicist tries to understand energy and forces such as gravity. History is full of brilliant examples. Charles Darwin, a famous biologist, explained how species change over time through natural selection. Marie Curie, working as both a physicist and a chemist, was awarded the Nobel Prize twice for her extraordinary research. What these scientists shared was not only great ability but also patience and curiosity. They were not afraid to ask difficult questions, and they kept working even when the answers were slow to come. Their stories show that science needs both a clever mind and a brave heart.",
+      "vocab_notes": [
+        {
+          "word": "physicist",
+          "cn": "物理学家"
+        },
+        {
+          "word": "curiosity",
+          "cn": "好奇心"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does an astronomer study?",
+          "options": [
+            "Living animals.",
+            "Ancient languages.",
+            "The stars and planets.",
+            "City traffic."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'someone who studies the stars and planets is an astronomer'。"
+        },
+        {
+          "stem": "What was Marie Curie awarded twice?",
+          "options": [
+            "A new planet.",
+            "A teaching job.",
+            "A sports medal.",
+            "The Nobel Prize."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'awarded the Nobel Prize twice'。"
+        },
+        {
+          "stem": "According to the writer, what did these scientists share?",
+          "options": [
+            "Patience and curiosity.",
+            "A dislike of questions.",
+            "A fear of hard work.",
+            "The same birthday."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'patience and curiosity'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "An Invention to Remember",
+      "topic_cn": "记叙·帮助阿尔茨海默病患者的小发明",
+      "body": "Alzheimer's disease is a brain illness that causes problems with memory and thinking, and most of the people who suffer from it are over sixty-five. At present there is no cure, but clever inventions can still make daily life safer. One young inventor named Kenneth designed a small device after watching his own grandmother, who has Alzheimer's, lose her way near home. The device is worn like a watch. If the person wearing it walks too far from home, a signal is sent to a family member's mobile phone, rather like an alarm. In this way, help can arrive before the person becomes lost or frightened. Kenneth says the idea came from love, not from money. He hopes that, as computers grow more powerful, many more tools like this will be created to help people who are living with the disease and the families who care for them.",
+      "vocab_notes": [
+        {
+          "word": "device",
+          "cn": "装置"
+        },
+        {
+          "word": "signal",
+          "cn": "信号"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Who mainly suffers from Alzheimer's disease?",
+          "options": [
+            "Young children.",
+            "People over sixty-five.",
+            "Only scientists.",
+            "Newborn babies."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'most of the people who suffer from it are over sixty-five'的转述。"
+        },
+        {
+          "stem": "What does Kenneth's device do when the wearer walks too far?",
+          "options": [
+            "It stops the person from moving.",
+            "It plays loud music in the street.",
+            "It sends a signal to a family member's phone.",
+            "It calls the police station."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'a signal is sent to a family member's mobile phone'的转述。"
+        },
+        {
+          "stem": "Where did Kenneth get the idea for his invention?",
+          "options": [
+            "From a science magazine.",
+            "From a large company.",
+            "From a school exam.",
+            "From love for his grandmother."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'the idea came from love, not from money'的转述。"
+        }
+      ]
+    }
+  ]
+}

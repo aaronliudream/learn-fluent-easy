@@ -1,0 +1,32 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(探索英语主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Daniel first joined an online English forum, he kept meeting short forms like 'BRB' and 'COZ' that he could not understand. Instead of giving up, he asked his new friends what each one meant and wrote them down. A month later, he could chat easily and even guess new words from the way they were built.",
+    "questions": [
+      {
+        "q": "What problem did Daniel have at first on the forum?",
+        "options": [
+          "He found the online abbreviations hard to make sense of.",
+          "He could not find the website at all.",
+          "He had no friends to talk to.",
+          "He could not type in English."
+        ],
+        "answer": "A",
+        "explanation": "原文说他一开始看不懂 BRB、COZ 等缩写,为转述;其余与原文不符或未提。"
+      },
+      {
+        "q": "How did Daniel improve after a month?",
+        "options": [
+          "He chatted comfortably and worked out new words using word formation.",
+          "He stopped using the forum completely.",
+          "He only spoke Chinese online.",
+          "He forgot all the short forms he had learned."
+        ],
+        "answer": "A",
+        "explanation": "末句说一个月后他能轻松聊天并靠构词法猜词,为转述(覆盖短文后半段)。"
+      }
+    ]
+  }
+}

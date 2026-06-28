@@ -1,0 +1,745 @@
+{
+  "volume": "required1",
+  "unit": "U6",
+  "grammar_title": "定语从句3:介词+关系代词(in which/for whom)· 非限制性定语从句 · which 指代整个主句",
+  "source": "外研社版(新标准)必修第一册 Unit 6 Using language:Attributive clauses (3)。介词+whom/which、非限制性定从、which 指代整句。句子地道、答案唯一(靠搭配介词与 which/whom/who 的人物匹配排除其他项)。",
+  "points": [
+    {
+      "code": "u6.01",
+      "point": "介词 + which / whom(in which / for whom)",
+      "overview": "关系代词指物用 which、指人用 whom;介词由从句中的动词或名词搭配决定(grow rice in / learn from / depend on / home to)。指人时介词后只能 whom,指物时只能 which。"
+    },
+    {
+      "code": "u6.02",
+      "point": "非限制性定语从句(逗号 + which / who / whose)",
+      "overview": "逗号隔开、对先行词作补充说明:指物用 which、指人用 who、所属用 whose;非限制性定从中绝不可用 that。"
+    },
+    {
+      "code": "u6.03",
+      "point": "which 指代整个主句(…, which means …)",
+      "overview": "逗号后的 which 指代前面整句话的内容、在从句中作主语;此处只能用 which,that / what / it / this 都不能引导这类从句。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u6.01",
+      "stem": "The terraces created flat areas ____ the local people could grow rice.",
+      "options": [
+        "in which",
+        "in whom",
+        "for which",
+        "for whom"
+      ],
+      "answer_index": 0,
+      "explanation": "grow rice in areas、先行词指物 → 介词 in + which。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "He was an expert ____ the Zhuang people learnt a great deal about farming.",
+      "options": [
+        "from which",
+        "from whom",
+        "to whom",
+        "to which"
+      ],
+      "answer_index": 1,
+      "explanation": "learn a great deal from sb、先行词指人 → from + whom。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "These terraces still mean a lot to the local people ____ old traditions hold much value.",
+      "options": [
+        "for which",
+        "by whom",
+        "for whom",
+        "by which"
+      ],
+      "answer_index": 2,
+      "explanation": "traditions hold value for sb、先行词指人 → for + whom。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The sun warms the water and forms clouds ____ rain falls onto the terraces again.",
+      "options": [
+        "from whom",
+        "on which",
+        "on whom",
+        "from which"
+      ],
+      "answer_index": 3,
+      "explanation": "rain falls from clouds、先行词指物 → from + which。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The Zhuang and Yao are the people ____ this mountain region has long been home.",
+      "options": [
+        "to whom",
+        "to which",
+        "for whom",
+        "for which"
+      ],
+      "answer_index": 0,
+      "explanation": "the region is home to sb、先行词指人 → to + whom。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Farmers admire the clever way ____ people work in harmony with nature.",
+      "options": [
+        "on which",
+        "in which",
+        "in whom",
+        "on whom"
+      ],
+      "answer_index": 1,
+      "explanation": "the way in which 是固定结构、先行词指物 → in + which。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "She has kind neighbours ____ she shares the rice harvest every autumn.",
+      "options": [
+        "with which",
+        "to whom",
+        "with whom",
+        "to which"
+      ],
+      "answer_index": 2,
+      "explanation": "share sth with sb、先行词指人 → with + whom。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The reef is a giant structure ____ many sea creatures depend for food and shelter.",
+      "options": [
+        "on whom",
+        "for which",
+        "for whom",
+        "on which"
+      ],
+      "answer_index": 3,
+      "explanation": "depend on sth、先行词指物 → on + which。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Climate change is a serious problem ____ many scientists are deeply worried.",
+      "options": [
+        "about which",
+        "about whom",
+        "with which",
+        "with whom"
+      ],
+      "answer_index": 0,
+      "explanation": "be worried about sth、先行词指物 → about + which。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Guides look after the visitors ____ they prepare a safe path up the steep hill.",
+      "options": [
+        "for which",
+        "for whom",
+        "with whom",
+        "with which"
+      ],
+      "answer_index": 1,
+      "explanation": "prepare sth for sb、先行词指人 → for + whom。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The Turpan Basin is the region ____ the sweetest grapes in China are grown.",
+      "options": [
+        "in whom",
+        "by which",
+        "in which",
+        "by whom"
+      ],
+      "answer_index": 2,
+      "explanation": "grapes are grown in the region、先行词指物 → in + which。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The young farmers respect the elders ____ they have learnt the ancient methods.",
+      "options": [
+        "from which",
+        "to whom",
+        "to which",
+        "from whom"
+      ],
+      "answer_index": 3,
+      "explanation": "learn sth from sb、先行词指人 → from + whom。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Those without a garden can rent small pieces of land ____ they grow vegetables.",
+      "options": [
+        "on which",
+        "on whom",
+        "for which",
+        "for whom"
+      ],
+      "answer_index": 0,
+      "explanation": "grow things on the land、先行词指物 → on + which。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The walls of the drying houses have many holes ____ the desert wind can pass.",
+      "options": [
+        "through whom",
+        "through which",
+        "by which",
+        "by whom"
+      ],
+      "answer_index": 1,
+      "explanation": "wind passes through holes、先行词指物 → through + which。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The Inuit are the northern people ____ the frozen Arctic has always been home.",
+      "options": [
+        "to which",
+        "in whom",
+        "to whom",
+        "in which"
+      ],
+      "answer_index": 2,
+      "explanation": "the Arctic is home to sb、先行词指人 → to + whom。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The Arctic is one of the few cold zones ____ very few plants can survive.",
+      "options": [
+        "in whom",
+        "of which",
+        "of whom",
+        "in which"
+      ],
+      "answer_index": 3,
+      "explanation": "survive in the zones、先行词指物 → in + which。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "We warmly thanked the local guide ____ we explored the deep, narrow valley.",
+      "options": [
+        "with whom",
+        "with which",
+        "from whom",
+        "from which"
+      ],
+      "answer_index": 0,
+      "explanation": "explore with sb、先行词指人 → with + whom。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The huge waterfall is the very feature ____ Huangguoshu National Park is famous.",
+      "options": [
+        "for whom",
+        "for which",
+        "by which",
+        "by whom"
+      ],
+      "answer_index": 1,
+      "explanation": "be famous for sth、先行词指物 → for + which。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The Channel Tunnel is a long rail tunnel, most ____ runs deep under the sea.",
+      "options": [
+        "of whom",
+        "in which",
+        "of which",
+        "in whom"
+      ],
+      "answer_index": 2,
+      "explanation": "most of the tunnel、先行词指物 → of + which。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The children listened to the old farmer ____ they heard the story of the terraces.",
+      "options": [
+        "from which",
+        "to whom",
+        "to which",
+        "from whom"
+      ],
+      "answer_index": 3,
+      "explanation": "hear sth from sb、先行词指人 → from + whom。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The Longji Rice Terraces, ____ were built over many centuries, attract thousands of visitors.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性定从、先行词指物、逗号后不可用 that → which。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The Zhuang people, ____ have farmed these mountains for generations, live close to nature.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性定从、先行词指人作主语 → who。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The Great Barrier Reef, ____ lies off the coast of Australia, is the largest living structure.",
+      "options": [
+        "that",
+        "who",
+        "which",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性定从、先行词指物、不可用 that → which。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "We met an old farmer, ____ family has kept the terraces for hundreds of years.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "后面跟名词 family、表所属 → whose。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Natural dyes, ____ people make from plants and minerals, are becoming popular again.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性定从、先行词指物作宾语、不可用 that → which。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Emma, ____ is now travelling in Guizhou, sent a video of a huge waterfall.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性定从、先行词指人作主语 → who。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The Grand Canyon, ____ is almost two kilometres deep, is a truly grand sight.",
+      "options": [
+        "that",
+        "where",
+        "which",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性定从、先行词指物、不可用 that → which。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Victoria Falls, ____ local name means 'the smoke that thunders', lie between two countries.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "后面跟名词 name、表所属(物亦可用 whose)→ whose。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "My grandfather, ____ loves gardening, spends every Sunday among his flowers.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性定从、先行词指人作主语 → who。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The Channel Tunnel, ____ runs under the sea, joins England and France by rail.",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性定从、先行词指物、不可用 that → which。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Herbal tea, ____ many British people drink to relax, has several health benefits.",
+      "options": [
+        "that",
+        "who",
+        "which",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性定从、先行词指物作宾语、不可用 that → which。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The Inuit, ____ live in the frozen Arctic, eat a lot of fish and meat.",
+      "options": [
+        "which",
+        "that",
+        "whom",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性定从、先行词指人作主语 → who。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The author of The Secret Garden, ____ book was published in 1911, loved nature.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "后面跟名词 book、表所属 → whose。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The Turpan Basin, ____ is famous for its sweet grapes, lies in Xinjiang.",
+      "options": [
+        "that",
+        "which",
+        "where",
+        "who"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性定从、先行词指物、不可用 that → which。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Mrs Green, ____ has turned her rooftop into a beautiful garden, lives next door.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性定从、先行词指人作主语 → who。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Rooftop gardens, ____ help to clean the city air, are a clever modern idea.",
+      "options": [
+        "that",
+        "who",
+        "what",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性定从、先行词指物、不可用 that → which。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The local people, ____ traditions hold much value, still farm in the old way.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "后面跟名词 traditions、表所属 → whose。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The camel, ____ people call 'the ship of the desert', crosses dry sand with ease.",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性定从、先行词指物(动物)作宾语、不可用 that → which。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Expert gardeners, ____ know just the right corner for roses, win many prizes.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性定从、先行词指人作主语 → who。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The deep valley, ____ was slowly cut by a great river, draws many tourists.",
+      "options": [
+        "that",
+        "where",
+        "who",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性定从、先行词指物、不可用 that → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The knowledge is passed down through families, ____ means new generations keep the old methods.",
+      "options": [
+        "which",
+        "that",
+        "what",
+        "it"
+      ],
+      "answer_index": 0,
+      "explanation": "指代前面整句话、作从句主语 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The flat terraces catch the rainwater, ____ prevents the soil from being washed away.",
+      "options": [
+        "that",
+        "which",
+        "it",
+        "this"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代前面整句、作主语 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Birds and fish feed on harmful insects, ____ helps protect the rice crops.",
+      "options": [
+        "that",
+        "what",
+        "which",
+        "it"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代整句内容、作主语 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The people worked on the terraces for hundreds of years, ____ meant great patience.",
+      "options": [
+        "that",
+        "what",
+        "it",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代前面整句 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The whole mountain was turned into terraces, ____ took several hundred years.",
+      "options": [
+        "which",
+        "that",
+        "it",
+        "this"
+      ],
+      "answer_index": 0,
+      "explanation": "which 指代整句、作主语 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Natural dyes are returning to popularity, ____ pleases many artists and craftspeople.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "it"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代前面整句 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The rooftops were turned into gardens, ____ improved the city's air quality.",
+      "options": [
+        "that",
+        "it",
+        "which",
+        "this"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代整句、作主语 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "She planted herbs in her own little tea garden, ____ made her very proud.",
+      "options": [
+        "that",
+        "what",
+        "it",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代前面整句 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The reef provides homes for countless creatures, ____ makes it truly precious.",
+      "options": [
+        "which",
+        "that",
+        "it",
+        "this"
+      ],
+      "answer_index": 0,
+      "explanation": "which 指代整句、作主语 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Modern technology could produce more crops, ____ might change the old way of life.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "it"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代前面整句 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The Inuit eat plenty of fish and meat, ____ keeps their bodies warm and strong.",
+      "options": [
+        "that",
+        "it",
+        "which",
+        "this"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代整句、作主语 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Tourism brings more money to the region, ____ also harms the local environment.",
+      "options": [
+        "that",
+        "what",
+        "it",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代前面整句 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The sun heats the water and turns it into vapour, ____ later forms clouds above.",
+      "options": [
+        "which",
+        "that",
+        "it",
+        "this"
+      ],
+      "answer_index": 0,
+      "explanation": "which 指代整句、作主语 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Many people now grow plants on their walls, ____ surprises visitors to the city.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "it"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代前面整句 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The grapes are dried in special houses, ____ turns them into sweet raisins.",
+      "options": [
+        "that",
+        "it",
+        "which",
+        "this"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代整句、作主语 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "People have farmed here in harmony with nature, ____ explains the land's beauty.",
+      "options": [
+        "that",
+        "what",
+        "it",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代前面整句 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "An old dialect is still spoken in the valley, ____ delights many language experts.",
+      "options": [
+        "which",
+        "that",
+        "it",
+        "this"
+      ],
+      "answer_index": 0,
+      "explanation": "which 指代整句、作主语 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "She finally reached the top of the steep hill, ____ gave her a wonderful view.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "it"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代前面整句 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The village welcomes thousands of visitors each year, ____ brings it new life.",
+      "options": [
+        "that",
+        "it",
+        "which",
+        "this"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代整句、作主语 → which。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Wind passes through the holes in the walls, ____ keeps the grapes dry inside.",
+      "options": [
+        "that",
+        "what",
+        "it",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代前面整句 → which。"
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "topic": "Knowing Me, Knowing You",
+  "source": "外研社(新标准)必修第三册 Unit 1 同主题完形(学会道歉/坦诚的力量/给友谊留空间/礼貌拒绝/原谅朋友/读懂情绪)。用词限 U1/初中/常见词,每空答案唯一、四选项同词性,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Learning to Say Sorry",
+      "text": "Saying sorry is never (1)____, but it is one of the most important skills in any friendship. When we make a (2)____, our first feeling is often to defend ourselves. However, a sincere apology can (3)____ a damaged relationship more quickly than we expect. The key is to speak (4)____ and to take full responsibility, instead of blaming others. We should also (5)____ carefully to how the other person feels. Sometimes a few honest words are (6)____ to repair the trust between two friends. If we keep silent, a small problem may slowly (7)____ into a much bigger one. So next time you cause (8)____, take a deep breath, calm (9)____, and say the simple words, 'I am sorry.' You may be (10)____ at how much better both of you feel afterwards.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "easy",
+            "rich",
+            "tall",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "never easy 从来不容易;其余形容词与语境不符。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "song",
+            "mistake",
+            "price",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "make a mistake 犯错。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "throw",
+            "repair",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "repair a relationship 修复关系。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "secretly",
+            "angrily",
+            "carelessly",
+            "honestly"
+          ],
+          "answer_index": 3,
+          "explanation": "speak honestly 坦诚地说;其余与'承担责任'矛盾。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "listen",
+            "shout",
+            "run",
+            "eat"
+          ],
+          "answer_index": 0,
+          "explanation": "listen to how someone feels 倾听感受。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "empty",
+            "enough",
+            "wrong",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "be enough to 足以。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "fall",
+            "sell",
+            "grow",
+            "sleep"
+          ],
+          "answer_index": 2,
+          "explanation": "grow into 发展成。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "music",
+            "weather",
+            "paint",
+            "trouble"
+          ],
+          "answer_index": 3,
+          "explanation": "cause trouble 惹麻烦。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "down",
+            "up",
+            "off",
+            "in"
+          ],
+          "answer_index": 0,
+          "explanation": "calm down 冷静下来。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "bored",
+            "surprised",
+            "angry",
+            "asleep"
+          ],
+          "answer_index": 1,
+          "explanation": "be surprised at 对…感到惊讶。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Power of Honest Words",
+      "text": "My friend Tom once asked me what I thought of his singing. To be (1)____, I did not think it was very good, but I almost said it was wonderful. That would have been a white (2)____. In the end, I decided to tell the (3)____ in a kind way. I said that his voice was pleasant, but that he could (4)____ his timing with a little practice. At first he looked a bit (5)____, and I was afraid I had hurt him. However, a week later he (6)____ me to say thank you. My honest words had helped him (7)____ his singing, while empty praise would have taught him (8)____. From that day, I understood that real friends are not afraid to give (9)____ comments. Honesty, when it comes with kindness, is a true (10)____ of friendship.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "hungry",
+            "famous",
+            "honest",
+            "sleepy"
+          ],
+          "answer_index": 2,
+          "explanation": "to be honest 老实说。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "song",
+            "price",
+            "road",
+            "lie"
+          ],
+          "answer_index": 3,
+          "explanation": "a white lie 善意的谎言。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "truth",
+            "weather",
+            "money",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "tell the truth 说真话。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "break",
+            "improve",
+            "forget",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "improve his timing 改进节奏。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "proud",
+            "rich",
+            "hurt",
+            "tall"
+          ],
+          "answer_index": 2,
+          "explanation": "look hurt 显得受伤;其余与'怕伤到他'不符。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "left",
+            "lost",
+            "called"
+          ],
+          "answer_index": 3,
+          "explanation": "called me to say thank you 打电话道谢。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "improve",
+            "drop",
+            "hide",
+            "waste"
+          ],
+          "answer_index": 0,
+          "explanation": "help him improve 帮他进步。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "everything",
+            "nothing",
+            "something",
+            "anywhere"
+          ],
+          "answer_index": 1,
+          "explanation": "would have taught him nothing 什么也教不会。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "silly",
+            "false",
+            "frank",
+            "lazy"
+          ],
+          "answer_index": 2,
+          "explanation": "frank comments 坦率的评价。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "machine",
+            "garden",
+            "sign"
+          ],
+          "answer_index": 3,
+          "explanation": "a sign of friendship 友谊的标志。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Giving Friendship Some Space",
+      "text": "When Anna and I became best friends, we did almost everything (1)____. We sat together, walked home together, and shared every (2)____. At first it felt wonderful, but slowly we began to (3)____ over small things. I felt she was always (4)____ my time, and she felt I was too far (5)____. One day our teacher told us an old story about two animals that needed each other for (6)____ but also got hurt when they stood too close. The story made us (7)____ that even close friends need a little space. After that, we gave each other room to be (8)____. I joined the art club, and she joined the choir. To our (9)____, our friendship did not grow weaker; it actually grew (10)____. A good distance, we learned, can keep a friendship healthy.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "together",
+            "alone",
+            "again",
+            "early"
+          ],
+          "answer_index": 0,
+          "explanation": "do everything together 一起做每件事。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "secret",
+            "garden",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "share every secret 分享每个秘密。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "agree",
+            "sleep",
+            "argue",
+            "travel"
+          ],
+          "answer_index": 2,
+          "explanation": "argue over small things 因小事争吵。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "selling",
+            "washing",
+            "drawing",
+            "taking"
+          ],
+          "answer_index": 3,
+          "explanation": "taking my time 占用我的时间。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "away",
+            "near",
+            "above",
+            "inside"
+          ],
+          "answer_index": 0,
+          "explanation": "too far away 太疏远。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "money",
+            "warmth",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "need each other for warmth 互相取暖。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "forget",
+            "doubt",
+            "realise",
+            "refuse"
+          ],
+          "answer_index": 2,
+          "explanation": "made us realise 让我们意识到。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "asleep",
+            "absent",
+            "afraid",
+            "independent"
+          ],
+          "answer_index": 3,
+          "explanation": "room to be independent 各自独立的空间。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "surprise",
+            "sorrow",
+            "anger",
+            "fear"
+          ],
+          "answer_index": 0,
+          "explanation": "to our surprise 令我们惊讶的是。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "smaller",
+            "stronger",
+            "shorter",
+            "colder"
+          ],
+          "answer_index": 1,
+          "explanation": "grew stronger 变得更牢固。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "How to Refuse Politely",
+      "text": "Learning to say no is an important (1)____ in life. When a classmate asked me to watch a boxing match, I did not really want to go, but I was (2)____ to hurt his feelings. For a moment I almost said yes against my (3)____ wish. Then I remembered a useful tip about (4)____ refusals. First, I should begin with a few words of (5)____, such as 'I am really sorry.' Next, I should give a simple (6)____, like being busy that evening. Finally, if possible, I should (7)____ another choice. So I told him kindly that I could not come, but that we could meet for lunch (8)____. To my relief, he smiled and said it was no (9)____ at all. Saying no had felt frightening, yet doing it politely turned out to be quite (10)____. Now I no longer always say yes just to please others.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "garden",
+            "skill",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "an important skill 重要技能。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "happy",
+            "ready",
+            "free",
+            "afraid"
+          ],
+          "answer_index": 3,
+          "explanation": "afraid to hurt his feelings 怕伤到他。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "real",
+            "rich",
+            "loud",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "against my real wish 违背真实意愿。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "angry",
+            "polite",
+            "lazy",
+            "silly"
+          ],
+          "answer_index": 1,
+          "explanation": "polite refusals 礼貌拒绝。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "music",
+            "weather",
+            "regret",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "words of regret 表示歉意的话。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "song",
+            "machine",
+            "ticket",
+            "reason"
+          ],
+          "answer_index": 3,
+          "explanation": "give a reason 给个理由。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "offer",
+            "break",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "offer another choice 提供别的选择。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "already",
+            "instead",
+            "hardly",
+            "nowhere"
+          ],
+          "answer_index": 1,
+          "explanation": "meet for lunch instead 改为一起吃午饭。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "garden",
+            "machine",
+            "trouble",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "no trouble at all 一点也不麻烦。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "wrong",
+            "empty",
+            "late",
+            "easy"
+          ],
+          "answer_index": 3,
+          "explanation": "quite easy 相当容易。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Forgiving a Friend",
+      "text": "Last term, my best friend forgot my birthday, and I felt deeply (1)____. For days I would not speak to her, and our friendship seemed to grow (2)____. Then one evening she came to me with (3)____ in her eyes and said she was truly sorry. She explained that her grandmother had been ill, and she had simply (4)____ the date by accident. Hearing this, I felt my anger slowly (5)____ away. I realised that holding on to it was only hurting (6)____ of us. Saying sorry had not been easy for her, and (7)____ her was not easy for me. But I knew that forgiveness was the (8)____ choice. So I gave her a hug and told her it was all (9)____. From that day, our friendship felt warmer than before, because we both learned that nobody is (10)____, and real friends give each other a second chance.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "hurt",
+            "rich",
+            "tall",
+            "proud"
+          ],
+          "answer_index": 0,
+          "explanation": "feel deeply hurt 深感受伤。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "warmer",
+            "colder",
+            "louder",
+            "richer"
+          ],
+          "answer_index": 1,
+          "explanation": "grow colder 变得冷淡。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "prices",
+            "songs",
+            "tears",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "with tears in her eyes 眼含泪水。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "broken",
+            "washed",
+            "forgotten"
+          ],
+          "answer_index": 3,
+          "explanation": "forgotten the date 忘了日期。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "melt",
+            "fall",
+            "jump",
+            "climb"
+          ],
+          "answer_index": 0,
+          "explanation": "anger melt away 怒气消散。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "none",
+            "both",
+            "neither",
+            "either"
+          ],
+          "answer_index": 1,
+          "explanation": "hurting both of us 伤害我们俩。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "selling",
+            "leaving",
+            "forgiving",
+            "losing"
+          ],
+          "answer_index": 2,
+          "explanation": "forgiving her 原谅她。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "wrong",
+            "empty",
+            "late",
+            "right"
+          ],
+          "answer_index": 3,
+          "explanation": "the right choice 正确的选择。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "fine",
+            "wrong",
+            "gone",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "it was all fine 一切都好了。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "tall",
+            "perfect",
+            "rich",
+            "famous"
+          ],
+          "answer_index": 1,
+          "explanation": "nobody is perfect 人无完人。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Reading People's Feelings",
+      "text": "Some people seem to know exactly how others (1)____. They notice when a friend is sad, even if that friend (2)____ nothing. This ability to read feelings is part of what we call emotional (3)____. People with this skill are good at building (4)____ relationships, because they think about others as well as (5)____. When a classmate looks worried, they offer a kind (6)____ instead of ignoring the problem. When someone is angry, they stay calm and try to (7)____ the conflict gently. They also understand their own emotions, so they take a deep (8)____ before they speak in anger. Such skills are not something we are (9)____ with; they can be learned step by step. By watching, listening and caring, anyone can slowly (10)____ how to understand the people around them.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "drive",
+            "feel",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "how others feel 别人的感受。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sells",
+            "buys",
+            "drops",
+            "says"
+          ],
+          "answer_index": 3,
+          "explanation": "says nothing 什么也不说。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "intelligence",
+            "machine",
+            "garden",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "emotional intelligence 情商。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "empty",
+            "healthy",
+            "broken",
+            "silent"
+          ],
+          "answer_index": 1,
+          "explanation": "healthy relationships 健康的关系。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "nobody",
+            "nothing",
+            "themselves",
+            "nowhere"
+          ],
+          "answer_index": 2,
+          "explanation": "as well as themselves 也想到自己。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "ticket",
+            "stone",
+            "word"
+          ],
+          "answer_index": 3,
+          "explanation": "a kind word 一句体贴的话。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "resolve",
+            "start",
+            "break",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "resolve the conflict 化解冲突。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "breath",
+            "garden",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "take a deep breath 深吸一口气。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sold",
+            "left",
+            "born",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "born with 与生俱来。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "lose",
+            "waste",
+            "learn"
+          ],
+          "answer_index": 3,
+          "explanation": "learn how to understand 学会理解。"
+        }
+      ]
+    }
+  ]
+}

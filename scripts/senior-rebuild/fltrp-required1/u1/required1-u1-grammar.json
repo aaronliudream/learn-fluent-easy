@@ -1,0 +1,745 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "grammar_title": "基本句型 Basic sentence structures(主谓宾宾 SVOO / 主谓宾补 SVOC / 主系表 SVP)",
+  "source": "外研社(新标准)必修第一册 Unit 1 Using language: Review basic sentence structures。零术语、全应用填空,句子围绕'高中新开始'主题;答案唯一(每题只有一个词能让句子成立)。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "主谓宾宾(SVOO):能带双宾语的动词(give/tell/show… sb sth)",
+      "overview": "有些动词后面可以接两个宾语——先接'人'(间接宾语)、再接'物'(直接宾语),如 give me a book。不及物动词(arrive/happen/stay…)后面不能带宾语,更不能带两个宾语。"
+    },
+    {
+      "code": "u1.02",
+      "point": "主谓宾补(SVOC):make/keep/find… + 宾语 + 形容词作宾语补足语",
+      "overview": "make/keep/find/leave/get 等后面常接'宾语 + 形容词',形容词说明宾语的状态(make me happy)。这里只能用形容词,不能用副词、名词或不定式。"
+    },
+    {
+      "code": "u1.03",
+      "point": "主系表(SVP):系动词 be/feel/look/become… + 形容词作表语",
+      "overview": "系动词(be/feel/look/become/seem/sound/get/stay/grow 等)后面接形容词作表语,说明主语的状态(I feel nervous)。系动词后用形容词,不用副词、名词或不定式。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "My new teacher ____ me a useful book about good study habits.",
+      "options": [
+        "gave",
+        "arrived",
+        "happened",
+        "stayed"
+      ],
+      "answer_index": 0,
+      "explanation": "give 可接双宾语(give sb sth),这里'me'与'a useful book'是两个宾语;arrive/happen/stay 是不及物动词,不能带宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "On my first day, a kind senior ____ me some helpful advice.",
+      "options": [
+        "smiled",
+        "offered",
+        "waited",
+        "slept"
+      ],
+      "answer_index": 1,
+      "explanation": "offer sb sth 接双宾语;smile/wait/sleep 不及物,不能带'me … advice'两个宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The head teacher ____ the new students an interesting story about the school.",
+      "options": [
+        "came",
+        "appeared",
+        "told",
+        "laughed"
+      ],
+      "answer_index": 2,
+      "explanation": "tell sb sth 接双宾语;come/appear/laugh 不及物动词,不能带双宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "A friendly classmate ____ me the way to the science lab.",
+      "options": [
+        "sat",
+        "ran",
+        "fell",
+        "showed"
+      ],
+      "answer_index": 3,
+      "explanation": "show sb sth 接双宾语;sit/run/fall 不及物,不能接'me … the way'。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The school ____ every new student a welcome letter before term began.",
+      "options": [
+        "sent",
+        "arrived",
+        "happened",
+        "rose"
+      ],
+      "answer_index": 0,
+      "explanation": "send sb sth 接双宾语;arrive/happen/rise 不及物动词,不能带宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Lisa ____ us a box of photos from her own high school days.",
+      "options": [
+        "smiled",
+        "brought",
+        "waited",
+        "listened"
+      ],
+      "answer_index": 1,
+      "explanation": "bring sb sth 接双宾语;smile/wait/listen 不及物,不能带'us … a box'。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Mr Meng ____ us a simple way to stay calm under pressure.",
+      "options": [
+        "arrived",
+        "stayed",
+        "taught",
+        "slept"
+      ],
+      "answer_index": 2,
+      "explanation": "teach sb sth 接双宾语;arrive/stay/sleep 不及物,不能带双宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The teacher ____ each of us a copy of the new timetable.",
+      "options": [
+        "came",
+        "appeared",
+        "laughed",
+        "handed"
+      ],
+      "answer_index": 3,
+      "explanation": "hand sb sth 接双宾语;come/appear/laugh 不及物动词,后面不能跟宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The girl next to me ____ me a pen when I forgot mine.",
+      "options": [
+        "passed",
+        "sat",
+        "ran",
+        "fell"
+      ],
+      "answer_index": 0,
+      "explanation": "pass sb sth 接双宾语;sit/run/fall 不及物,不能带'me a pen'。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "A senior student kindly ____ me her notes before the first test.",
+      "options": [
+        "arrived",
+        "lent",
+        "happened",
+        "rose"
+      ],
+      "answer_index": 1,
+      "explanation": "lend sb sth 接双宾语;arrive/happen/rise 不及物,不能带宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "At the end of the year, the school ____ her a prize for hard work.",
+      "options": [
+        "smiled",
+        "waited",
+        "awarded",
+        "slept"
+      ],
+      "answer_index": 2,
+      "explanation": "award sb sth 接双宾语;smile/wait/sleep 不及物,不能带'her a prize'。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The interviewer ____ Lisa several questions about her first week.",
+      "options": [
+        "came",
+        "appeared",
+        "laughed",
+        "asked"
+      ],
+      "answer_index": 3,
+      "explanation": "ask sb sth 接双宾语;come/appear/laugh 不及物动词,不能带双宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "His encouraging words ____ me real confidence on a difficult day.",
+      "options": [
+        "gave",
+        "arrived",
+        "stayed",
+        "fell"
+      ],
+      "answer_index": 0,
+      "explanation": "give sb sth 接双宾语;arrive/stay/fall 不及物,不能带'me … confidence'。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The club leader ____ us a free lesson to help us decide.",
+      "options": [
+        "sat",
+        "offered",
+        "ran",
+        "waited"
+      ],
+      "answer_index": 1,
+      "explanation": "offer sb sth 接双宾语;sit/run/wait 不及物,不能带宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Sarah ____ me a few easy skateboarding tricks after class.",
+      "options": [
+        "smiled",
+        "happened",
+        "showed",
+        "rose"
+      ],
+      "answer_index": 2,
+      "explanation": "show sb sth 接双宾语;smile/happen/rise 不及物,不能带双宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Our teacher ____ us the reason why a good start really matters.",
+      "options": [
+        "arrived",
+        "slept",
+        "laughed",
+        "told"
+      ],
+      "answer_index": 3,
+      "explanation": "tell sb sth 接双宾语;arrive/sleep/laugh 不及物动词,不能带宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The committee ____ every member a message about the first meeting.",
+      "options": [
+        "sent",
+        "came",
+        "appeared",
+        "sat"
+      ],
+      "answer_index": 0,
+      "explanation": "send sb sth 接双宾语;come/appear/sit 不及物,不能带'every member a message'。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Mum ____ me a warm drink while I planned my weekly schedule.",
+      "options": [
+        "ran",
+        "brought",
+        "fell",
+        "waited"
+      ],
+      "answer_index": 1,
+      "explanation": "bring sb sth 接双宾语;run/fall/wait 不及物,不能带双宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The band teacher ____ us a new song for the welcome concert.",
+      "options": [
+        "smiled",
+        "happened",
+        "taught",
+        "rose"
+      ],
+      "answer_index": 2,
+      "explanation": "teach sb sth 接双宾语;smile/happen/rise 不及物动词,不能带宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Before the speech, Lisa ____ the host a short list of her main points.",
+      "options": [
+        "arrived",
+        "slept",
+        "laughed",
+        "handed"
+      ],
+      "answer_index": 3,
+      "explanation": "hand sb sth 接双宾语;arrive/sleep/laugh 不及物,不能带'the host a short list'。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The teacher's warm smile made the whole class ____.",
+      "options": [
+        "happy",
+        "happily",
+        "happiness",
+        "to happy"
+      ],
+      "answer_index": 0,
+      "explanation": "make + 宾语 + 形容词作宾补,形容词说明 class 的状态;副词 happily、名词 happiness、不定式都不能作宾补。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Taking a deep breath made me ____ before my speech.",
+      "options": [
+        "calmly",
+        "calm",
+        "calmness",
+        "to calm"
+      ],
+      "answer_index": 1,
+      "explanation": "make me + 形容词,calm 作宾补说明'我'的状态;副词/名词/不定式都不能放在这里。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "On the first morning, I found myself rather ____.",
+      "options": [
+        "nervously",
+        "nervousness",
+        "nervous",
+        "to nervous"
+      ],
+      "answer_index": 2,
+      "explanation": "find + 宾语 + 形容词,nervous 说明 myself 的状态;副词、名词、不定式都不能作宾补。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Mr Meng's advice made every new student more ____.",
+      "options": [
+        "confidently",
+        "confidence",
+        "to confident",
+        "confident"
+      ],
+      "answer_index": 3,
+      "explanation": "make … + 形容词作宾补,more confident 说明 student 的状态;副词/名词/不定式不能作宾补。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The mystery on the noticeboard kept us ____ all morning.",
+      "options": [
+        "curious",
+        "curiously",
+        "curiosity",
+        "to curious"
+      ],
+      "answer_index": 0,
+      "explanation": "keep + 宾语 + 形容词,curious 说明 us 的状态;副词、名词、不定式都不行。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The empty campus kept everything ____ in the early morning.",
+      "options": [
+        "quietly",
+        "quiet",
+        "quietness",
+        "to quiet"
+      ],
+      "answer_index": 1,
+      "explanation": "keep everything + 形容词作宾补;副词 quietly、名词 quietness、不定式都不能作宾补。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Standing on the stage made my parents very ____.",
+      "options": [
+        "proudly",
+        "pride",
+        "proud",
+        "to proud"
+      ],
+      "answer_index": 2,
+      "explanation": "make … + 形容词,proud 说明 parents 的状态;副词/名词 pride/不定式都不能作宾补。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "After a week, I found the new classroom quite ____.",
+      "options": [
+        "comfortably",
+        "comfort",
+        "to comfortable",
+        "comfortable"
+      ],
+      "answer_index": 3,
+      "explanation": "find + 宾语 + 形容词,comfortable 说明 classroom 的状态;副词、名词、不定式都不行。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Missing the club meeting left me a little ____.",
+      "options": [
+        "sad",
+        "sadly",
+        "sadness",
+        "to sad"
+      ],
+      "answer_index": 0,
+      "explanation": "leave + 宾语 + 形容词作宾补,sad 说明 me 的状态;副词/名词/不定式不能作宾补。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Good time management keeps a busy student ____ from too much stress.",
+      "options": [
+        "safely",
+        "safe",
+        "safety",
+        "to safe"
+      ],
+      "answer_index": 1,
+      "explanation": "keep + 宾语 + 形容词,safe 说明 student 的状态;副词 safely、名词 safety、不定式都不能作宾补。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The lively welcome concert made everyone ____.",
+      "options": [
+        "cheerfully",
+        "cheerfulness",
+        "cheerful",
+        "to cheerful"
+      ],
+      "answer_index": 2,
+      "explanation": "make … + 形容词作宾补;副词、名词、不定式都不能放在 everyone 之后。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "I found the debate club rather ____ about winning.",
+      "options": [
+        "seriously",
+        "seriousness",
+        "to serious",
+        "serious"
+      ],
+      "answer_index": 3,
+      "explanation": "find + 宾语 + 形容词,serious 说明 club 的态度;副词/名词/不定式不能作宾补。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Joining the sports club keeps my body ____ and healthy.",
+      "options": [
+        "active",
+        "actively",
+        "action",
+        "to active"
+      ],
+      "answer_index": 0,
+      "explanation": "keep + 宾语 + 形容词,active 说明 body 的状态;副词 actively、名词 action、不定式都不行。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Mr Meng's simple example made the whole lesson very ____.",
+      "options": [
+        "clearly",
+        "clear",
+        "clarity",
+        "to clear"
+      ],
+      "answer_index": 1,
+      "explanation": "make … + 形容词作宾补,clear 说明 lesson 的状态;副词、名词、不定式都不能作宾补。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "We got the classroom ____ for the welcome party.",
+      "options": [
+        "readily",
+        "readiness",
+        "ready",
+        "to ready"
+      ],
+      "answer_index": 2,
+      "explanation": "get + 宾语 + 形容词,ready 说明 classroom 的状态;副词 readily、名词 readiness、不定式都不能作宾补。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The teacher's question made the noisy room ____ at once.",
+      "options": [
+        "silently",
+        "silence",
+        "to silent",
+        "silent"
+      ],
+      "answer_index": 3,
+      "explanation": "make … + 形容词,silent 说明 room 的状态;副词、名词 silence、不定式都不能作宾补。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "I found my new desk ____ and well organised.",
+      "options": [
+        "neat",
+        "neatly",
+        "neatness",
+        "to neat"
+      ],
+      "answer_index": 0,
+      "explanation": "find + 宾语 + 形容词,neat 说明 desk 的状态;副词/名词/不定式都不行。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Thick coats kept the whole team ____ at the outdoor event.",
+      "options": [
+        "warmly",
+        "warm",
+        "warmth",
+        "to warm"
+      ],
+      "answer_index": 1,
+      "explanation": "keep + 宾语 + 形容词,warm 说明 team 的状态;副词 warmly、名词 warmth、不定式都不能作宾补。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Most new students found the orientation talk really ____.",
+      "options": [
+        "helpfully",
+        "helpfulness",
+        "helpful",
+        "to helpful"
+      ],
+      "answer_index": 2,
+      "explanation": "find + 宾语 + 形容词,helpful 说明 talk 的状态;副词、名词、不定式都不行。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "A full timetable kept us ____ all through the first week.",
+      "options": [
+        "busily",
+        "business",
+        "to busy",
+        "busy"
+      ],
+      "answer_index": 3,
+      "explanation": "keep + 宾语 + 形容词,busy 说明 us 的状态;副词 busily、名词 business、不定式都不能作宾补。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Before introducing myself, I felt very ____.",
+      "options": [
+        "nervous",
+        "nervously",
+        "nervousness",
+        "to nervous"
+      ],
+      "answer_index": 0,
+      "explanation": "feel 是系动词,后接形容词作表语说明主语状态;副词 nervously、名词 nervousness、不定式都不能作表语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "After the talk, Lisa looked calm and ____.",
+      "options": [
+        "confidently",
+        "confident",
+        "confidence",
+        "to confident"
+      ],
+      "answer_index": 1,
+      "explanation": "look 作系动词,后接形容词作表语;副词/名词 confidence/不定式都不能作表语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "When I saw the noticeboard, I became ____ about the clubs.",
+      "options": [
+        "curiously",
+        "curiosity",
+        "curious",
+        "to curious"
+      ],
+      "answer_index": 2,
+      "explanation": "become 是系动词,后接形容词作表语;副词、名词、不定式都不行。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Mr Meng told us to stay ____ under pressure.",
+      "options": [
+        "calmly",
+        "calmness",
+        "to calm",
+        "calm"
+      ],
+      "answer_index": 3,
+      "explanation": "stay 作系动词,后接形容词作表语说明状态;副词 calmly、名词 calmness、不定式都不能作表语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "As the teacher began to speak, the whole room grew ____.",
+      "options": [
+        "quiet",
+        "quietly",
+        "quietness",
+        "to quiet"
+      ],
+      "answer_index": 0,
+      "explanation": "grow 在此作系动词,后接形容词作表语;副词、名词、不定式都不行。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "By Friday, I felt really ____ at my new school.",
+      "options": [
+        "happily",
+        "happy",
+        "happiness",
+        "to happy"
+      ],
+      "answer_index": 1,
+      "explanation": "feel 是系动词,后接形容词 happy 作表语;副词/名词/不定式都不能作表语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "My parents looked ____ when I stood on the stage.",
+      "options": [
+        "proudly",
+        "pride",
+        "proud",
+        "to proud"
+      ],
+      "answer_index": 2,
+      "explanation": "look 作系动词,后接形容词作表语;副词、名词 pride、不定式都不能作表语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Mr Meng's voice sounded ____ but kind.",
+      "options": [
+        "seriously",
+        "seriousness",
+        "to serious",
+        "serious"
+      ],
+      "answer_index": 3,
+      "explanation": "sound 是系动词,后接形容词作表语;副词/名词/不定式都不行。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "After making a few friends, I became more ____.",
+      "options": [
+        "cheerful",
+        "cheerfully",
+        "cheerfulness",
+        "to cheerful"
+      ],
+      "answer_index": 0,
+      "explanation": "become 作系动词,后接形容词 cheerful 作表语;副词、名词、不定式都不能作表语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "At first, the new timetable sounded a little ____.",
+      "options": [
+        "strangely",
+        "strange",
+        "strangeness",
+        "to strange"
+      ],
+      "answer_index": 1,
+      "explanation": "sound 是系动词,后接形容词作表语;副词 strangely、名词、不定式都不行。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The science lab looked clean and ____.",
+      "options": [
+        "brightly",
+        "brightness",
+        "bright",
+        "to bright"
+      ],
+      "answer_index": 2,
+      "explanation": "look 作系动词,后接形容词作表语;副词 brightly、名词 brightness、不定式都不能作表语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "After Mr Meng's example, the rule seemed quite ____.",
+      "options": [
+        "clearly",
+        "clarity",
+        "to clear",
+        "clear"
+      ],
+      "answer_index": 3,
+      "explanation": "seem 是系动词,后接形容词作表语;副词/名词 clarity/不定式都不能作表语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "With my new friends around, I felt ____ and welcome.",
+      "options": [
+        "safe",
+        "safely",
+        "safety",
+        "to safe"
+      ],
+      "answer_index": 0,
+      "explanation": "feel 作系动词,后接形容词 safe 作表语;副词 safely、名词 safety、不定式都不行。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "When I missed the team, I felt a little ____.",
+      "options": [
+        "sadly",
+        "sad",
+        "sadness",
+        "to sad"
+      ],
+      "answer_index": 1,
+      "explanation": "feel 是系动词,后接形容词作表语;副词、名词 sadness、不定式都不能作表语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Everyone's welcome on the first day was friendly and ____.",
+      "options": [
+        "warmly",
+        "warmth",
+        "warm",
+        "to warm"
+      ],
+      "answer_index": 2,
+      "explanation": "be 是系动词,后接形容词作表语;副词 warmly、名词 warmth、不定式都不行。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "To most of us, the orientation talk seemed very ____.",
+      "options": [
+        "helpfully",
+        "helpfulness",
+        "to helpful",
+        "helpful"
+      ],
+      "answer_index": 3,
+      "explanation": "seem 作系动词,后接形容词 helpful 作表语;副词、名词、不定式都不能作表语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "When the teacher entered, we all became ____.",
+      "options": [
+        "silent",
+        "silently",
+        "silence",
+        "to silent"
+      ],
+      "answer_index": 0,
+      "explanation": "become 是系动词,后接形容词作表语;副词、名词 silence、不定式都不行。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "After a good night's sleep, I felt ____ for the first class.",
+      "options": [
+        "freshly",
+        "fresh",
+        "freshness",
+        "to fresh"
+      ],
+      "answer_index": 1,
+      "explanation": "feel 作系动词,后接形容词作表语;副词 freshly、名词 freshness、不定式都不能作表语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Even when nervous, Lisa stayed ____ and friendly.",
+      "options": [
+        "politely",
+        "politeness",
+        "polite",
+        "to polite"
+      ],
+      "answer_index": 2,
+      "explanation": "stay 是系动词,后接形容词作表语;副词 politely、名词 politeness、不定式都不行。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Day by day, I grew more ____ about senior high life.",
+      "options": [
+        "eagerly",
+        "eagerness",
+        "to eager",
+        "eager"
+      ],
+      "answer_index": 3,
+      "explanation": "grow 作系动词,后接形容词 eager 作表语;副词 eagerly、名词 eagerness、不定式都不能作表语。"
+    }
+  ]
+}

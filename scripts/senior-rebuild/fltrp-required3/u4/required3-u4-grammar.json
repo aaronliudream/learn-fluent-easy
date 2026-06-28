@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "grammar_title": "现在进行被动语态(is/are being done)",
+  "source": "外研社(新标准)必修三 Unit 4 Using language:现在进行被动语态(am/is/are being + 过去分词),表示此刻正在被进行的动作。句子地道、围绕 Amazing Art 主题、答案唯一(干扰项为错语态或错时态)。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "is/are being done(此刻正在被进行的动作)",
+      "overview": "主语是动作的承受者、且动作此刻正在进行(right now / at the moment / look / listen)时,用 am/is/are being + 过去分词。单数主语用 is being,复数用 are being。"
+    },
+    {
+      "code": "u4.02",
+      "point": "现在进行被动 vs 现在进行主动",
+      "overview": "同样表示此刻正在进行:主语若是动作的发出者用 is/are doing(主动);主语若是动作的承受者用 is/are being done(被动)。再按主语单复数定 is/are。"
+    },
+    {
+      "code": "u4.03",
+      "point": "现在进行被动 vs 一般现在被动(此刻 vs 习惯)",
+      "overview": "都是被动:此刻正在被做(right now / at the moment / look)用 is/are being done;表习惯/经常(every day / usually / once a year)用 is/are done。按时间状语判断时态,再按单复数定 be 动词。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "Look — the old portrait ____ by two experts in the gallery right now.",
+      "options": [
+        "is being cleaned",
+        "is cleaning",
+        "is cleaned",
+        "was being cleaned"
+      ],
+      "answer_index": 0,
+      "explanation": "此刻正在进行、画是被清洗的对象,用现在进行被动 is being cleaned;主动形式把画当成施动者,一般现在被动不表此刻进行,过去进行与 right now 矛盾。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "At the moment, several new sculptures ____ in the main hall for the exhibition.",
+      "options": [
+        "are arranging",
+        "are being arranged",
+        "are arranged",
+        "were being arranged"
+      ],
+      "answer_index": 1,
+      "explanation": "复数主语、此刻正被摆放,用 are being arranged;主动表示雕塑自己在摆,一般现在被动不表正在进行,过去进行与 at the moment 矛盾。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Be quiet, please — a live broadcast ____ from the museum at this very moment.",
+      "options": [
+        "is making",
+        "is made",
+        "is being made",
+        "was being made"
+      ],
+      "answer_index": 2,
+      "explanation": "此刻正在被制作的节目,用 is being made;broadcast 不会自己制作,一般现在被动不表此刻进行,过去进行与 at this very moment 不符。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Right now, the magnificent vase ____ to a safer room by the staff.",
+      "options": [
+        "is moving",
+        "is moved",
+        "has been moving",
+        "is being moved"
+      ],
+      "answer_index": 3,
+      "explanation": "花瓶是被搬动的对象、此刻正在进行,用 is being moved;主动表示花瓶自己移动,一般现在被动不表进行,现在完成进行语态也不通。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Listen! The story behind the painting ____ to the visitors by the guide now.",
+      "options": [
+        "is being told",
+        "is telling",
+        "is told",
+        "was being told"
+      ],
+      "answer_index": 0,
+      "explanation": "故事是被讲述的内容、此刻正在进行,用 is being told;主动把故事当讲述者,一般现在被动不表进行,过去进行与 now 矛盾。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "At this moment, colourful pictures ____ on the pub wall by some young artists.",
+      "options": [
+        "are painting",
+        "are being painted",
+        "are painted",
+        "were being painted"
+      ],
+      "answer_index": 1,
+      "explanation": "复数主语、画是被画的对象、此刻进行,用 are being painted;主动表示画自己在画,一般现在被动不表此刻,过去进行与 at this moment 不符。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Look over there — a huge stone horse ____ by the sculptor right now.",
+      "options": [
+        "is carving",
+        "is carved",
+        "is being carved",
+        "has been carved"
+      ],
+      "answer_index": 2,
+      "explanation": "石马是被雕刻的对象、此刻进行,用 is being carved;主动把马当施动者,一般现在被动不表进行,现在完成被动表已完成而非正在进行。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Currently, the elegant porcelain cups ____ in shades of blue in the workshop.",
+      "options": [
+        "are painting",
+        "are painted",
+        "were being painted",
+        "are being painted"
+      ],
+      "answer_index": 3,
+      "explanation": "复数主语、杯子是被绘的对象、此刻进行,用 are being painted;主动表示杯子自己作画,一般现在被动不表此刻,过去进行与 currently 不符。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Don't touch it — the wet canvas ____ to the frame by the workers at the moment.",
+      "options": [
+        "is being fixed",
+        "is fixing",
+        "is fixed",
+        "was being fixed"
+      ],
+      "answer_index": 0,
+      "explanation": "画布是被固定的对象、此刻进行,用 is being fixed;主动把画布当施动者,一般现在被动不表进行,过去进行与 at the moment 矛盾。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Right now, a famous self-portrait ____ in the contemporary art show downstairs.",
+      "options": [
+        "is displaying",
+        "is being displayed",
+        "is displayed",
+        "had been displayed"
+      ],
+      "answer_index": 1,
+      "explanation": "自画像是被展出的对象、此刻进行,用 is being displayed;主动表示画自己展出,一般现在被动不表此刻,过去完成被动与 right now 不符。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Look — the dragon design ____ onto the white bowl by the artist this very second.",
+      "options": [
+        "is carving",
+        "is carved",
+        "is being carved",
+        "was being carved"
+      ],
+      "answer_index": 2,
+      "explanation": "图案是被雕刻的对象、此刻进行,用 is being carved;主动把图案当施动者,一般现在被动不表进行,过去进行与 this very second 矛盾。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "At the moment, a small seal ____ into a square of stone by the old master.",
+      "options": [
+        "is cutting",
+        "is cut",
+        "has been cutting",
+        "is being cut"
+      ],
+      "answer_index": 3,
+      "explanation": "印章是被刻的对象、此刻进行,用 is being cut;主动表示印章自己刻,一般现在被动不表此刻,完成进行语态不通。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Quiet, everyone — Han Gan's life story ____ to the class by our teacher right now.",
+      "options": [
+        "is being introduced",
+        "is introducing",
+        "is introduced",
+        "was being introduced"
+      ],
+      "answer_index": 0,
+      "explanation": "故事是被介绍的内容、此刻进行,用 is being introduced;主动把故事当介绍者,一般现在被动不表进行,过去进行与 right now 矛盾。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Right now, original buildings ____ in our neighbourhood by local workers.",
+      "options": [
+        "are building",
+        "are being built",
+        "are built",
+        "were being built"
+      ],
+      "answer_index": 1,
+      "explanation": "复数主语、楼房是被建造的对象、此刻进行,用 are being built;主动表示楼自己建,一般现在被动不表此刻,过去进行与 right now 不符。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "At this moment, the trees in the park ____ into animal shapes by the gardeners.",
+      "options": [
+        "are trimming",
+        "are trimmed",
+        "are being trimmed",
+        "had been trimmed"
+      ],
+      "answer_index": 2,
+      "explanation": "复数主语、树是被修剪的对象、此刻进行,用 are being trimmed;主动表示树自己修剪,一般现在被动不表此刻,过去完成被动与 at this moment 不符。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Be careful — fresh paint ____ to the sculptor's new work right now.",
+      "options": [
+        "is adding",
+        "is added",
+        "was being added",
+        "is being added"
+      ],
+      "answer_index": 3,
+      "explanation": "颜料是被添加的对象、此刻进行,用 is being added;主动把颜料当施动者,一般现在被动不表进行,过去进行与 right now 矛盾。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Listen — a short film about calligraphy ____ to the audience at the moment.",
+      "options": [
+        "is being shown",
+        "is showing",
+        "is shown",
+        "was being shown"
+      ],
+      "answer_index": 0,
+      "explanation": "影片是被播放的对象、此刻进行,用 is being shown;主动表示影片自己放映对象错位,一般现在被动不表此刻,过去进行与 at the moment 不符。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Right now, the visitors ____ around the crowded hall by the moving crowd.",
+      "options": [
+        "are pushing",
+        "are being pushed",
+        "are pushed",
+        "were being pushed"
+      ],
+      "answer_index": 1,
+      "explanation": "复数主语、参观者是被推挤的对象、此刻进行,用 are being pushed;主动表示他们在推别人,一般现在被动不表此刻,过去进行与 right now 矛盾。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Look — a delicate flower ____ onto the white vase by the painter this minute.",
+      "options": [
+        "is drawing",
+        "is drawn",
+        "is being drawn",
+        "has been drawing"
+      ],
+      "answer_index": 2,
+      "explanation": "花样是被画的对象、此刻进行,用 is being drawn;主动把花当施动者,一般现在被动不表进行,完成进行语态不通。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "At the moment, the museum's treasures ____ for the new exhibition by the team.",
+      "options": [
+        "are preparing",
+        "are prepared",
+        "were being prepared",
+        "are being prepared"
+      ],
+      "answer_index": 3,
+      "explanation": "复数主语、珍宝是被准备的对象、此刻进行,用 are being prepared;主动表示珍宝自己准备,一般现在被动不表此刻,过去进行与 at the moment 不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Right now, the young artist ____ a beautiful picture on the pub wall.",
+      "options": [
+        "is painting",
+        "is being painted",
+        "are painting",
+        "are being painted"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 artist 是动作的发出者、单数、此刻进行,用主动 is painting;被动会把画家当成被画对象,复数形式与单数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "At the moment, a beautiful picture ____ on the pub wall by the young artist.",
+      "options": [
+        "is painting",
+        "is being painted",
+        "are being painted",
+        "are painting"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 picture 是动作的承受者、单数、此刻进行,用被动 is being painted;主动会把画当作画者,复数形式与单数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Look — the sculptor ____ a magnificent horse out of stone right now.",
+      "options": [
+        "is being carved",
+        "are carving",
+        "is carving",
+        "are being carved"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 sculptor 是雕刻者、单数、此刻进行,用主动 is carving;被动会把雕刻家当成被刻对象,复数与单数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Look — a magnificent horse ____ out of stone by the sculptor right now.",
+      "options": [
+        "is carving",
+        "are being carved",
+        "are carving",
+        "is being carved"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 horse 是被刻的对象、单数、此刻进行,用被动 is being carved;主动会把石马当雕刻者,复数与单数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "At this moment, several workers ____ the heavy statue into the main hall.",
+      "options": [
+        "are moving",
+        "are being moved",
+        "is moving",
+        "is being moved"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 workers 是搬运者、复数、此刻进行,用主动 are moving;被动会把工人当成被搬对象,单数形式与复数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "At this moment, the heavy statue ____ into the main hall by several workers.",
+      "options": [
+        "is moving",
+        "is being moved",
+        "are being moved",
+        "are moving"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 statue 是被搬的对象、单数、此刻进行,用被动 is being moved;主动会把雕像当搬运者,复数与单数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Right now, the guide ____ the story behind the painting to a big group.",
+      "options": [
+        "is being told",
+        "are telling",
+        "is telling",
+        "are being told"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 guide 是讲述者、单数、此刻进行,用主动 is telling;被动会把导览员当成被讲对象,复数与单数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Right now, the story behind the painting ____ to a big group by the guide.",
+      "options": [
+        "is telling",
+        "are being told",
+        "are telling",
+        "is being told"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 story 是被讲述的内容、单数、此刻进行,用被动 is being told;主动会把故事当讲述者,复数与单数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Currently, two careful experts ____ the precious vase in the quiet workshop.",
+      "options": [
+        "are repairing",
+        "are being repaired",
+        "is repairing",
+        "is being repaired"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 experts 是修复者、复数、此刻进行,用主动 are repairing;被动会把专家当成被修对象,单数与复数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Currently, the precious vase ____ by two experts in the quiet workshop.",
+      "options": [
+        "is repairing",
+        "is being repaired",
+        "are being repaired",
+        "are repairing"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 vase 是被修复的对象、单数、此刻进行,用被动 is being repaired;主动会把花瓶当修复者,复数与单数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Look — the old master ____ his own name onto a square of soft stone.",
+      "options": [
+        "is being carved",
+        "are carving",
+        "is carving",
+        "are being carved"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 master 是雕刻者、单数、此刻进行,用主动 is carving;被动会把老师傅当成被刻对象,复数与单数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Look — Chinese characters ____ onto a square of soft stone by the old master.",
+      "options": [
+        "is being carved",
+        "are carving",
+        "is carving",
+        "are being carved"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 characters 是被刻的对象、复数、此刻进行,用被动 are being carved;单数 be 动词与复数主语不符,主动会把文字当雕刻者。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "At the moment, the gardeners ____ the green trees into animal shapes.",
+      "options": [
+        "are trimming",
+        "are being trimmed",
+        "is trimming",
+        "is being trimmed"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 gardeners 是修剪者、复数、此刻进行,用主动 are trimming;被动会把园丁当成被修剪对象,单数与复数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "At the moment, the green trees ____ into animal shapes by the gardeners.",
+      "options": [
+        "are trimming",
+        "are being trimmed",
+        "is being trimmed",
+        "is trimming"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 trees 是被修剪的对象、复数、此刻进行,用被动 are being trimmed;主动会把树当修剪者,单数与复数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Right now, the famous painter ____ bright sunflowers in three shades of yellow.",
+      "options": [
+        "is being painted",
+        "are painting",
+        "is painting",
+        "are being painted"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 painter 是作画者、单数、此刻进行,用主动 is painting;被动会把画家当成被画对象,复数与单数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Right now, the bright sunflowers ____ in three shades of yellow by the painter.",
+      "options": [
+        "are painting",
+        "is being painted",
+        "is painting",
+        "are being painted"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 sunflowers 是被画的对象、复数、此刻进行,用被动 are being painted;主动会把向日葵当作画者,单数与复数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Listen — the teacher ____ Han Gan's life story to the whole class.",
+      "options": [
+        "is introducing",
+        "is being introduced",
+        "are introducing",
+        "are being introduced"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 teacher 是介绍者、单数、此刻进行,用主动 is introducing;被动会把老师当成被介绍对象,复数与单数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Listen — Han Gan's life story ____ to the whole class by the teacher.",
+      "options": [
+        "is introducing",
+        "is being introduced",
+        "are being introduced",
+        "are introducing"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 story 是被介绍的内容、单数、此刻进行,用被动 is being introduced;主动会把故事当介绍者,复数与单数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "At this moment, the busy gardeners ____ fresh flowers around the great statue.",
+      "options": [
+        "are being arranged",
+        "is arranging",
+        "are arranging",
+        "is being arranged"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 gardeners 是摆放者、复数、此刻进行,用主动 are arranging;被动会把园丁当成被摆放对象,单数与复数主语不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "At this moment, fresh flowers ____ around the great statue by the busy gardeners.",
+      "options": [
+        "are arranging",
+        "is being arranged",
+        "is arranging",
+        "are being arranged"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 flowers 是被摆放的对象、复数、此刻进行,用被动 are being arranged;主动会把花当摆放者,单数与复数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "At the moment, this famous painting ____ in the main hall of the museum.",
+      "options": [
+        "is being displayed",
+        "is displayed",
+        "are being displayed",
+        "are displayed"
+      ],
+      "answer_index": 0,
+      "explanation": "at the moment 表此刻正在进行、单数,用现在进行被动 is being displayed;一般现在被动 is displayed 表习惯,不合此刻进行,复数 be 动词与单数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Every day, this famous painting ____ behind strong glass to keep it safe.",
+      "options": [
+        "is being displayed",
+        "is displayed",
+        "are displayed",
+        "are being displayed"
+      ],
+      "answer_index": 1,
+      "explanation": "every day 表习惯、单数,用一般现在被动 is displayed;现在进行被动表此刻进行,与习惯矛盾,复数 be 动词与单数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Right now, several old vases ____ in the new exhibition downstairs.",
+      "options": [
+        "are shown",
+        "is being shown",
+        "are being shown",
+        "is shown"
+      ],
+      "answer_index": 2,
+      "explanation": "right now 表此刻进行、复数,用现在进行被动 are being shown;一般现在被动表习惯,单数 be 动词与复数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Usually, the most precious vases ____ only on special festival days.",
+      "options": [
+        "are being shown",
+        "is shown",
+        "is being shown",
+        "are shown"
+      ],
+      "answer_index": 3,
+      "explanation": "usually 表习惯、复数,用一般现在被动 are shown;现在进行被动表此刻进行与 usually 矛盾,单数 be 动词与复数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Look — the museum floor ____ by a cleaner before the visitors arrive.",
+      "options": [
+        "is being swept",
+        "is swept",
+        "are being swept",
+        "are swept"
+      ],
+      "answer_index": 0,
+      "explanation": "look 提示此刻正在进行、单数,用现在进行被动 is being swept;一般现在被动表习惯,复数 be 动词与单数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Every morning, the museum floor ____ before the doors open to the public.",
+      "options": [
+        "is being swept",
+        "is swept",
+        "are swept",
+        "are being swept"
+      ],
+      "answer_index": 1,
+      "explanation": "every morning 表习惯、单数,用一般现在被动 is swept;现在进行被动表此刻进行,与每天的习惯不符,复数 be 动词与单数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "At this moment, a new self-portrait ____ next to the old masters upstairs.",
+      "options": [
+        "is hung",
+        "are being hung",
+        "is being hung",
+        "are hung"
+      ],
+      "answer_index": 2,
+      "explanation": "at this moment 表此刻进行、单数,用现在进行被动 is being hung;一般现在被动表习惯,复数 be 动词与单数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Normally, the modern works ____ on the white walls of the top floor.",
+      "options": [
+        "are being hung",
+        "is hung",
+        "is being hung",
+        "are hung"
+      ],
+      "answer_index": 3,
+      "explanation": "normally 表习惯、复数,用一般现在被动 are hung;现在进行被动表此刻进行与 normally 矛盾,单数 be 动词与复数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Right now, the visitors' bags ____ at the gate by the friendly guards.",
+      "options": [
+        "are being checked",
+        "are checked",
+        "is being checked",
+        "is checked"
+      ],
+      "answer_index": 0,
+      "explanation": "right now 表此刻进行、复数,用现在进行被动 are being checked;一般现在被动表习惯,单数 be 动词与复数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Every day, thousands of tickets ____ at the museum's busy front desk.",
+      "options": [
+        "are being sold",
+        "are sold",
+        "is sold",
+        "is being sold"
+      ],
+      "answer_index": 1,
+      "explanation": "every day 表习惯、复数,用一般现在被动 are sold;现在进行被动表此刻进行与习惯矛盾,单数 be 动词与复数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Look — a beautiful dragon ____ onto the white bowl by the artist now.",
+      "options": [
+        "is painted",
+        "are being painted",
+        "is being painted",
+        "are painted"
+      ],
+      "answer_index": 2,
+      "explanation": "look 与 now 提示此刻进行、单数,用现在进行被动 is being painted;一般现在被动表习惯,复数 be 动词与单数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Traditionally, each porcelain bowl ____ by hand in this small old town.",
+      "options": [
+        "is being painted",
+        "are painted",
+        "are being painted",
+        "is painted"
+      ],
+      "answer_index": 3,
+      "explanation": "traditionally 表一贯习惯、each bowl 为单数,用一般现在被动 is painted;现在进行被动表此刻进行与习惯矛盾,复数 be 动词与单数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "At the moment, the calligraphy works ____ for tomorrow's big show.",
+      "options": [
+        "are being prepared",
+        "are prepared",
+        "is being prepared",
+        "is prepared"
+      ],
+      "answer_index": 0,
+      "explanation": "at the moment 表此刻进行、复数,用现在进行被动 are being prepared;一般现在被动表习惯,单数 be 动词与复数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Once a year, the best calligraphy works ____ to the public in this hall.",
+      "options": [
+        "are being presented",
+        "are presented",
+        "is presented",
+        "is being presented"
+      ],
+      "answer_index": 1,
+      "explanation": "once a year 表习惯、复数,用一般现在被动 are presented;现在进行被动表此刻进行与每年一次的习惯矛盾,单数 be 动词与复数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Right now, the emperor's old portrait ____ by a careful team of experts.",
+      "options": [
+        "is repaired",
+        "are being repaired",
+        "is being repaired",
+        "are repaired"
+      ],
+      "answer_index": 2,
+      "explanation": "right now 表此刻进行、单数,用现在进行被动 is being repaired;一般现在被动表习惯,复数 be 动词与单数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Every winter, the oldest paintings ____ to protect them from the cold air.",
+      "options": [
+        "are being moved",
+        "is moved",
+        "is being moved",
+        "are moved"
+      ],
+      "answer_index": 3,
+      "explanation": "every winter 表习惯、复数,用一般现在被动 are moved;现在进行被动表此刻进行与习惯矛盾,单数 be 动词与复数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Listen — the story of the painting ____ to the children in the hall now.",
+      "options": [
+        "is being told",
+        "is told",
+        "are being told",
+        "are told"
+      ],
+      "answer_index": 0,
+      "explanation": "listen 与 now 提示此刻进行、单数,用现在进行被动 is being told;一般现在被动表习惯,复数 be 动词与单数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Each weekend, simple art classes ____ to local families for free.",
+      "options": [
+        "are being given",
+        "are given",
+        "is given",
+        "is being given"
+      ],
+      "answer_index": 1,
+      "explanation": "each weekend 表习惯、复数,用一般现在被动 are given;现在进行被动表此刻进行与习惯矛盾,单数 be 动词与复数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "At this very moment, fresh flowers ____ around the magnificent statue.",
+      "options": [
+        "are arranged",
+        "is being arranged",
+        "are being arranged",
+        "is arranged"
+      ],
+      "answer_index": 2,
+      "explanation": "at this very moment 表此刻进行、复数,用现在进行被动 are being arranged;一般现在被动表习惯,单数 be 动词与复数主语不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Usually, the small seal ____ into a square of soft stone by the master.",
+      "options": [
+        "is being cut",
+        "are cut",
+        "are being cut",
+        "is cut"
+      ],
+      "answer_index": 3,
+      "explanation": "usually 表习惯、单数,用一般现在被动 is cut;现在进行被动表此刻进行与 usually 矛盾,复数 be 动词与单数主语不符。"
+    }
+  ]
+}

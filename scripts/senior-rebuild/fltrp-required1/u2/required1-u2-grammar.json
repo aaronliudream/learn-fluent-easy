@@ -1,0 +1,745 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "grammar_title": "构词法(Word formation:派生 prefix/suffix · 合成 compounding · 转化 conversion)",
+  "source": "外研社(新标准)必修第一册 Unit 2 Using language:Review word formation(派生/合成/转化)。每题给一个语境句,选出在该语境中构词正确、意思贴切的词;零术语,答案唯一;句子地道、围绕探索英语主题。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "派生:加前缀/后缀(un-/in-/im- 表否定;-less/-ful;-ment/-ity/-ness;-ly;-ive)",
+      "overview": "给单词加前缀或后缀可得到意义或词性不同的新词:un-/in-/im- 多表否定(correct→incorrect);-less 表'没有'、-ful 表'充满'(harmless/harmful);-ment/-ity/-ness 多构成名词;-ly 多构成副词。按语境选意义和形式都对的派生词。"
+    },
+    {
+      "code": "u2.02",
+      "point": "合成:把两个词合成一个新词(homesick / homework / blackboard / subway 等)",
+      "overview": "把两个(或更多)简单词合在一起构成合成词,意思常可从两部分推出:home+sick=homesick(想家),black+board=blackboard(黑板),sub+way=subway(地铁)。按语境选意思贴切的那个合成词。"
+    },
+    {
+      "code": "u2.03",
+      "point": "转化:同一个词不变形,用作不同词性(名词/形容词→动词)",
+      "overview": "有些名词或形容词不改变拼写就能用作动词:water(水→浇水)、name(名字→命名)、calm(平静的→使平静)。转化后仍按句子需要选正确的动词形式;to / 情态动词 / 祈使句后用动词原形。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "If a piece of information is not correct, we say it is ____.",
+      "options": [
+        "incorrect",
+        "correctly",
+        "correction",
+        "corrects"
+      ],
+      "answer_index": 0,
+      "explanation": "表示'不正确'要在 correct 前加否定前缀 in-,且此处需形容词 → incorrect。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "An action that does no harm at all is completely ____.",
+      "options": [
+        "harmful",
+        "harmless",
+        "harming",
+        "harmed"
+      ],
+      "answer_index": 1,
+      "explanation": "'没有伤害'用后缀 -less;harmful 是'有害的'意思相反 → harmless。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "She failed the exam, so she is feeling quite ____ about it today.",
+      "options": [
+        "happily",
+        "happiness",
+        "unhappy",
+        "happier"
+      ],
+      "answer_index": 2,
+      "explanation": "表示'不高兴'在 happy 前加 un-,此处需形容词 → unhappy。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "After a year of practice, he has made great ____ in spoken English.",
+      "options": [
+        "improve",
+        "improving",
+        "improved",
+        "improvement"
+      ],
+      "answer_index": 3,
+      "explanation": "great 后需名词,improve 加 -ment 构成名词 → improvement。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "These two words look so alike that they are really ____.",
+      "options": [
+        "confusing",
+        "confuse",
+        "confusion",
+        "confused"
+      ],
+      "answer_index": 0,
+      "explanation": "形容事物'令人困惑'用 -ing 形容词;confused 指人感到困惑 → confusing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "I have just arrived, so all these school rules are still ____ to me.",
+      "options": [
+        "familiarly",
+        "unfamiliar",
+        "familiarity",
+        "familiarize"
+      ],
+      "answer_index": 1,
+      "explanation": "表示'不熟悉的'需 un- 前缀的形容词 → unfamiliar。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "On a clear night, thousands of stars are easily ____ to the eye.",
+      "options": [
+        "visibly",
+        "vision",
+        "visible",
+        "visit"
+      ],
+      "answer_index": 2,
+      "explanation": "be 后需形容词'看得见的' → visible。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "In the thick fog, the tall mountains were almost ____.",
+      "options": [
+        "unvisible",
+        "disvisible",
+        "nonvisible",
+        "invisible"
+      ],
+      "answer_index": 3,
+      "explanation": "visible 的否定前缀是 in-,其余前缀搭配不成词 → invisible。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Choosing the right words well shows a person's ____.",
+      "options": [
+        "creativity",
+        "creative",
+        "create",
+        "creatively"
+      ],
+      "answer_index": 0,
+      "explanation": "person's 后需名词,create 加 -ity 构成名词 → creativity。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "He found a very ____ way to memorise long English words.",
+      "options": [
+        "creativity",
+        "creative",
+        "create",
+        "creatively"
+      ],
+      "answer_index": 1,
+      "explanation": "way 前需形容词 → creative。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The whole class showed great ____ when the results came out.",
+      "options": [
+        "excite",
+        "exciting",
+        "excitement",
+        "excited"
+      ],
+      "answer_index": 2,
+      "explanation": "great 后需名词,excite 加 -ment → excitement。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Such rude ____ in the library surprised everyone around.",
+      "options": [
+        "behave",
+        "behaving",
+        "behaved",
+        "behaviour"
+      ],
+      "answer_index": 3,
+      "explanation": "rude 后需名词,behave 的名词是 behaviour → behaviour。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The guide was patient and very ____ to every visitor.",
+      "options": [
+        "helpful",
+        "helpless",
+        "helping",
+        "helped"
+      ],
+      "answer_index": 0,
+      "explanation": "表示'乐于帮助、有用的'用 -ful;helpless 是'无助的'意思相反 → helpful。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Without a map or a phone, the lost tourists felt completely ____.",
+      "options": [
+        "helpful",
+        "helpless",
+        "helping",
+        "helped"
+      ],
+      "answer_index": 1,
+      "explanation": "表示'无助的、无能为力的'用 -less → helpless。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "It is almost ____ to learn every single word in a dictionary.",
+      "options": [
+        "unpossible",
+        "dispossible",
+        "impossible",
+        "impossibly"
+      ],
+      "answer_index": 2,
+      "explanation": "possible 的否定前缀是 im-,此处需形容词;impossibly 是副词 → impossible。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Knowing about word formation is very ____ when you read.",
+      "options": [
+        "useless",
+        "using",
+        "used",
+        "useful"
+      ],
+      "answer_index": 3,
+      "explanation": "表示'有用的'用 -ful → useful。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "A dictionary that you never open is almost ____.",
+      "options": [
+        "useless",
+        "useful",
+        "using",
+        "used"
+      ],
+      "answer_index": 0,
+      "explanation": "表示'没用的'用 -less → useless。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The teacher explained the rule clearly and ____.",
+      "options": [
+        "simple",
+        "simply",
+        "simplify",
+        "simplicity"
+      ],
+      "answer_index": 1,
+      "explanation": "与 clearly 并列需副词,simple 加 -ly → simply。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Add the ending '-ly' to 'quick' and you get the adverb ____.",
+      "options": [
+        "quickness",
+        "quicken",
+        "quickly",
+        "quicker"
+      ],
+      "answer_index": 2,
+      "explanation": "quick 加副词后缀 -ly → quickly。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Learning where a word comes from makes it far more ____.",
+      "options": [
+        "meaningless",
+        "meaning",
+        "meant",
+        "meaningful"
+      ],
+      "answer_index": 3,
+      "explanation": "表示'有意义的'用 -ful,more 后需形容词 → meaningful。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Travelling by ship for the first time, she soon began to feel ____.",
+      "options": [
+        "seasick",
+        "homesick",
+        "carsick",
+        "airsick"
+      ],
+      "answer_index": 0,
+      "explanation": "在海上(sea)晕的是 seasick(晕船)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "After a month studying abroad, the boy missed his family and felt ____.",
+      "options": [
+        "seasick",
+        "homesick",
+        "airsick",
+        "carsick"
+      ],
+      "answer_index": 1,
+      "explanation": "想家(home)是 homesick。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Long flights make some passengers feel ____ high in the sky.",
+      "options": [
+        "seasick",
+        "carsick",
+        "airsick",
+        "homesick"
+      ],
+      "answer_index": 2,
+      "explanation": "在空中(air)晕的是 airsick(晕机)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "On the bumpy mountain road, the children started to feel ____.",
+      "options": [
+        "seasick",
+        "airsick",
+        "homesick",
+        "carsick"
+      ],
+      "answer_index": 3,
+      "explanation": "在车里(car)晕的是 carsick(晕车)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "A ____ is someone you keep in touch with by writing letters.",
+      "options": [
+        "penfriend",
+        "classmate",
+        "teammate",
+        "neighbour"
+      ],
+      "answer_index": 0,
+      "explanation": "用笔(pen)联系的朋友是 penfriend(笔友)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "We must finish our ____ at home before the next English lesson.",
+      "options": [
+        "housework",
+        "homework",
+        "classroom",
+        "weekend"
+      ],
+      "answer_index": 1,
+      "explanation": "在家做的功课是 homework。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "My mother asked me to help with the ____, such as washing the dishes.",
+      "options": [
+        "homework",
+        "classwork",
+        "housework",
+        "network"
+      ],
+      "answer_index": 2,
+      "explanation": "做家务(house)是 housework。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Saturday and Sunday together make up the ____.",
+      "options": [
+        "weekday",
+        "holiday",
+        "midday",
+        "weekend"
+      ],
+      "answer_index": 3,
+      "explanation": "一周的末尾(week+end)是 weekend(周末)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Green plants need plenty of warm ____ to grow well.",
+      "options": [
+        "sunshine",
+        "moonlight",
+        "starlight",
+        "candlelight"
+      ],
+      "answer_index": 0,
+      "explanation": "植物需要阳光,sun+shine=sunshine。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The teacher wrote the new words on the ____ at the front of the room.",
+      "options": [
+        "cardboard",
+        "blackboard",
+        "keyboard",
+        "surfboard"
+      ],
+      "answer_index": 1,
+      "explanation": "教室前写字的黑板是 blackboard。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I copied every new English word neatly into my ____.",
+      "options": [
+        "cookbook",
+        "handbook",
+        "notebook",
+        "phonebook"
+      ],
+      "answer_index": 2,
+      "explanation": "记笔记的本子是 notebook(note+book)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It suddenly began to rain, so I quickly put on my ____.",
+      "options": [
+        "overcoat",
+        "rainbow",
+        "snowman",
+        "raincoat"
+      ],
+      "answer_index": 3,
+      "explanation": "挡雨的外套是 raincoat(rain+coat)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "After the storm passed, a colourful ____ appeared in the sky.",
+      "options": [
+        "rainbow",
+        "raincoat",
+        "sunshine",
+        "snowball"
+      ],
+      "answer_index": 0,
+      "explanation": "雨后天空出现的是 rainbow(彩虹)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Cars and buses speed along the wide ____ between the two cities.",
+      "options": [
+        "doorway",
+        "highway",
+        "hallway",
+        "stairway"
+      ],
+      "answer_index": 1,
+      "explanation": "城际间的宽阔大路是 highway(high+way)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "In a busy city, many people travel underground by ____.",
+      "options": [
+        "highway",
+        "runway",
+        "subway",
+        "driveway"
+      ],
+      "answer_index": 2,
+      "explanation": "地下(sub)的路是 subway(地铁)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I clean my teeth every morning with a ____.",
+      "options": [
+        "hairbrush",
+        "paintbrush",
+        "nailbrush",
+        "toothbrush"
+      ],
+      "answer_index": 3,
+      "explanation": "刷牙(tooth)用的刷子是 toothbrush。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "We read about the latest news in this morning's ____.",
+      "options": [
+        "newspaper",
+        "wallpaper",
+        "sandpaper",
+        "notepaper"
+      ],
+      "answer_index": 0,
+      "explanation": "登载新闻(news)的纸是 newspaper(报纸)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "My grandparents still live in my quiet little ____ in the south.",
+      "options": [
+        "downtown",
+        "hometown",
+        "homeland",
+        "homework"
+      ],
+      "answer_index": 1,
+      "explanation": "出生长大的小镇是 hometown(home+town,家乡)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "In summer she grows tall yellow ____ along the garden wall.",
+      "options": [
+        "sunglasses",
+        "sunrises",
+        "sunflowers",
+        "sunbeams"
+      ],
+      "answer_index": 2,
+      "explanation": "向着太阳(sun)的花是 sunflower(向日葵)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "After class, the boys kicked the ____ around the playground.",
+      "options": [
+        "basketball",
+        "baseball",
+        "volleyball",
+        "football"
+      ],
+      "answer_index": 3,
+      "explanation": "用脚(foot)踢的球是 football(足球)。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Remember to ____ the flowers in the garden every morning.",
+      "options": [
+        "water",
+        "waters",
+        "watered",
+        "watering"
+      ],
+      "answer_index": 0,
+      "explanation": "water 由名词转化作动词'浇水';to 后用动词原形 → water。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Could you please ____ me that English dictionary on the shelf?",
+      "options": [
+        "hands",
+        "hand",
+        "handed",
+        "handing"
+      ],
+      "answer_index": 1,
+      "explanation": "hand 由名词转化作动词'递';情态动词后用原形 → hand。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "They have decided to ____ their new baby after her grandmother.",
+      "options": [
+        "names",
+        "named",
+        "name",
+        "naming"
+      ],
+      "answer_index": 2,
+      "explanation": "name 由名词转化作动词'给……取名';to 后用原形 → name。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Don't forget to ____ the front door when you leave the house.",
+      "options": [
+        "locks",
+        "locked",
+        "locking",
+        "lock"
+      ],
+      "answer_index": 3,
+      "explanation": "lock 由名词转化作动词'锁';to 后用原形 → lock。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "I need to ____ a table for four at the restaurant tonight.",
+      "options": [
+        "book",
+        "books",
+        "booked",
+        "booking"
+      ],
+      "answer_index": 0,
+      "explanation": "book 由名词转化作动词'预订';to 后用原形 → book。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "I will ____ you the new English word as soon as I get home.",
+      "options": [
+        "texts",
+        "text",
+        "texted",
+        "texting"
+      ],
+      "answer_index": 1,
+      "explanation": "text 由名词转化作动词'发短信';will 后用原形 → text。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Please ____ me the file before noon so I can read it.",
+      "options": [
+        "emails",
+        "emailed",
+        "email",
+        "emailing"
+      ],
+      "answer_index": 2,
+      "explanation": "email 由名词转化作动词'发邮件';祈使句用原形 → email。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "I'll ____ you tonight to talk about our English project.",
+      "options": [
+        "phones",
+        "phoned",
+        "phoning",
+        "phone"
+      ],
+      "answer_index": 3,
+      "explanation": "phone 由名词转化作动词'打电话';will 后用原形 → phone。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "We plan to ____ our house a bright shade of blue this summer.",
+      "options": [
+        "paint",
+        "paints",
+        "painted",
+        "painting"
+      ],
+      "answer_index": 0,
+      "explanation": "paint 由名词转化作动词'刷漆、涂';to 后用原形 → paint。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Dark clouds gathered, and soon it began to ____ heavily.",
+      "options": [
+        "rains",
+        "rain",
+        "rained",
+        "raining"
+      ],
+      "answer_index": 1,
+      "explanation": "rain 由名词转化作动词'下雨';to 后用原形 → rain。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It is so cold that it is going to ____ in the mountains tonight.",
+      "options": [
+        "snows",
+        "snowed",
+        "snow",
+        "snowing"
+      ],
+      "answer_index": 2,
+      "explanation": "snow 由名词转化作动词'下雪';be going to 后用原形 → snow。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Bright lamps will ____ the whole stage during the evening show.",
+      "options": [
+        "lights",
+        "lighted",
+        "lighting",
+        "light"
+      ],
+      "answer_index": 3,
+      "explanation": "light 由名词转化作动词'照亮';will 后用原形 → light。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The head teacher will ____ the first prize to the winner tonight.",
+      "options": [
+        "present",
+        "presents",
+        "presented",
+        "presenting"
+      ],
+      "answer_index": 0,
+      "explanation": "present 由名词转化作动词'颁发、赠送';will 后用原形 → present。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The teacher asked us to ____ the new words in real sentences.",
+      "options": [
+        "uses",
+        "use",
+        "used",
+        "using"
+      ],
+      "answer_index": 1,
+      "explanation": "use 作动词'使用';to 后用原形 → use。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Please ____ me at once if I make any mistakes in my English.",
+      "options": [
+        "corrects",
+        "corrected",
+        "correct",
+        "correcting"
+      ],
+      "answer_index": 2,
+      "explanation": "correct 由形容词转化作动词'改正';祈使句用原形 → correct。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Take a deep breath and try to ____ down before the speech.",
+      "options": [
+        "calms",
+        "calmed",
+        "calming",
+        "calm"
+      ],
+      "answer_index": 3,
+      "explanation": "calm 由形容词转化作动词'使平静';to 后用原形 → calm。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Hang the wet clothes outside to ____ them in the warm sun.",
+      "options": [
+        "dry",
+        "dries",
+        "dried",
+        "drying"
+      ],
+      "answer_index": 0,
+      "explanation": "dry 由形容词转化作动词'弄干';to 后用原形 → dry。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "I really need to ____ my messy room this weekend.",
+      "options": [
+        "cleans",
+        "clean",
+        "cleaned",
+        "cleaning"
+      ],
+      "answer_index": 1,
+      "explanation": "clean 由形容词转化作动词'打扫';to 后用原形 → clean。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Come inside and ____ yourself by the warm fire.",
+      "options": [
+        "warms",
+        "warmed",
+        "warm",
+        "warming"
+      ],
+      "answer_index": 2,
+      "explanation": "warm 由形容词转化作动词'使暖和';祈使句用原形 → warm。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Please ____ the box completely before you pack the books.",
+      "options": [
+        "empties",
+        "emptied",
+        "emptying",
+        "empty"
+      ],
+      "answer_index": 3,
+      "explanation": "empty 由形容词转化作动词'倒空';祈使句用原形 → empty。"
+    }
+  ]
+}

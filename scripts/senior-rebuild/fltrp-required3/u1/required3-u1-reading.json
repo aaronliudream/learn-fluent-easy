@@ -1,0 +1,338 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "topic": "Knowing Me, Knowing You",
+  "source": "外研社(新标准)必修第三册 Unit 1 同主题阅读(知心姐姐解忧/善意谎言/豪猪困境/礼貌拒绝与情商/健康关系小贴士/一次关于信任的经历)。词限 U1/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Loose Lips Sink Ships",
+      "topic_cn": "记叙·知心姐姐为本解忧",
+      "body": "Ben, aged seventeen, was a key member of his school basketball team. After his team lost an important match, he felt sure that one player, the point guard, had let everyone down. Still angry, Ben told his best friend exactly what he thought of his teammate. He was only letting off steam, but his friend later repeated every word to the rest of the team. Now Ben feels embarrassed and ashamed, and he cannot concentrate on anything. So he wrote to an agony aunt for advice. She reminded him of an old saying: speaking too freely can cause all kinds of trouble. The real problem, she explained, was not only his friend's loose lips but also Ben's own habit of talking without thinking. Her advice was simple. First, he should apologise to his teammate. Then he should tell his friend honestly that he felt hurt, but that he wanted to move on. Most importantly, he should learn to take a breath and calm down before he speaks.",
+      "vocab_notes": [
+        {
+          "word": "agony aunt",
+          "cn": "知心姐姐"
+        },
+        {
+          "word": "let off steam",
+          "cn": "发泄情绪"
+        },
+        {
+          "word": "loose lips",
+          "cn": "口无遮拦"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the main idea of the passage?",
+          "options": [
+            "Ben spoke carelessly when he was angry and is advised how to put things right.",
+            "Ben's team won the match because of his point guard.",
+            "Ben decided to leave the basketball team for good.",
+            "Ben's friend asked the agony aunt for help with sport."
+          ],
+          "answer_index": 0,
+          "explanation": "全文围绕本气头上说错话、知心姐姐教他如何弥补,这是对主旨的概括。"
+        },
+        {
+          "stem": "Why does Ben feel embarrassed and ashamed now?",
+          "options": [
+            "He missed the most important shot of the game.",
+            "His private complaint was passed on to the whole team.",
+            "He forgot the name of his own teammate.",
+            "He refused to join the team practice."
+          ],
+          "answer_index": 1,
+          "explanation": "因为他私下的抱怨被朋友转告给全队,这是对原文情节的转述。"
+        },
+        {
+          "stem": "What does the agony aunt suggest Ben do first?",
+          "options": [
+            "Say sorry to the teammate he had talked about.",
+            "Stop speaking to his friend forever.",
+            "Blame the point guard in front of the coach.",
+            "Quit the team and find a new hobby."
+          ],
+          "answer_index": 0,
+          "explanation": "知心姐姐建议他先向那位队友道歉,是对'First, apologise'一句的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Little White Lies",
+      "topic_cn": "说明·善意谎言到底好不好",
+      "body": "Most of us say that honesty matters and that lying is wrong, yet who can claim they have never told a lie? Often we comfort ourselves by calling them white lies, the little untruths we tell to protect others. Imagine a friend cooks a meal you secretly dislike. Many people will smile and say it is delicious. If a classmate asks about a new haircut, we may say it looks great even when we think the opposite. But are these kind words really meant to help the other person? Sometimes we lie to protect ourselves from another person's disappointment or anger. We may also lie to give encouragement, telling a friend that his singing is wonderful, when honest comments would help him improve far more. Even small lies can have results we cannot predict. The meal you praised may be served again and again. If your friend later learns the truth, will he still trust your opinion? Honesty, in the end, may be the kinder choice.",
+      "vocab_notes": [
+        {
+          "word": "deceive",
+          "cn": "欺骗"
+        },
+        {
+          "word": "frank",
+          "cn": "坦率的"
+        },
+        {
+          "word": "honesty",
+          "cn": "诚实"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say a white lie is?",
+          "options": [
+            "A serious crime against the law.",
+            "A small untruth told to protect other people.",
+            "A way of making money from friends.",
+            "A kind of joke that everyone enjoys."
+          ],
+          "answer_index": 1,
+          "explanation": "原文把 white lie 解释为'为保护他人而说的小谎',这是对定义的转述。"
+        },
+        {
+          "stem": "According to the writer, why do we sometimes tell white lies?",
+          "options": [
+            "To win prizes at school.",
+            "To learn a foreign language faster.",
+            "To avoid facing another person's anger or disappointment.",
+            "To remember more new words."
+          ],
+          "answer_index": 2,
+          "explanation": "原文指出我们有时撒谎是为避免对方的失望或愤怒,这是对该原因的转述。"
+        },
+        {
+          "stem": "What does the writer suggest about white lies in the end?",
+          "options": [
+            "They always make friendships much stronger.",
+            "They should be told as often as possible.",
+            "They never cause any kind of problem.",
+            "They can lead to results we cannot foresee, so honesty may be kinder."
+          ],
+          "answer_index": 3,
+          "explanation": "结尾指出小谎可能带来无法预料的后果,诚实或许更善良,这是对结论的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Porcupine Dilemma",
+      "topic_cn": "寓言·人际关系中的界限",
+      "body": "One cold winter night, a group of porcupines gathered together to keep warm. As soon as they moved closer, the sharp spines on their bodies hurt one another, so they had to move apart. After a short while, they began to feel cold again, and once more they pushed together for warmth. But again the pain of the spines forced them away. They repeated this process several times. At last, they found the ideal distance, one that was close enough to share warmth yet far enough to avoid hurting each other. This old story tells us something true about human relationships. Like the porcupines, people need each other for comfort and support, but they also need a little space. When friends stand too close, small differences may begin to hurt. When they stay too far apart, they feel cold and lonely. The wisest friendships, the fable suggests, are those that find a comfortable distance, where two people can be warm together without causing each other pain.",
+      "vocab_notes": [
+        {
+          "word": "apart",
+          "cn": "分开"
+        },
+        {
+          "word": "independent",
+          "cn": "独立的"
+        },
+        {
+          "word": "fence",
+          "cn": "界限;篱笆"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the porcupines keep moving closer and then apart?",
+          "options": [
+            "They wanted warmth but their spines hurt one another.",
+            "They were looking for food in the snow.",
+            "They were playing a winter game together.",
+            "They were trying to find their way home."
+          ],
+          "answer_index": 0,
+          "explanation": "豪猪靠近是为取暖,但刺会扎到彼此,所以又分开,这是对情节的转述。"
+        },
+        {
+          "stem": "What did the porcupines finally discover?",
+          "options": [
+            "That they should never stay together.",
+            "A distance that was both warm and safe.",
+            "That winter was not really cold at all.",
+            "A warmer cave far from the others."
+          ],
+          "answer_index": 1,
+          "explanation": "它们最终找到了既温暖又不伤人的理想距离,这是对结局的转述。"
+        },
+        {
+          "stem": "What lesson does the fable teach about friendship?",
+          "options": [
+            "Friends should share everything they own.",
+            "People are happier living completely alone.",
+            "Good relationships need a comfortable distance.",
+            "Differences between friends never matter."
+          ],
+          "answer_index": 2,
+          "explanation": "寓言告诉我们好的关系需要舒适的距离,这是对寓意的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Saying No Politely",
+      "topic_cn": "说明·情商与礼貌拒绝",
+      "body": "Emotional quotient, often shortened to EQ, is a measure of how well we recognise our own feelings and those of other people. Many experts believe that EQ can matter even more than IQ in everyday life, especially when we deal with friends and classmates. One important skill of emotional intelligence is being able to say no in a kind way. Refusing a request is never easy, because we do not want to upset the person who is asking. Yet always saying yes can leave us tired and unhappy. The secret is in how we refuse. A polite no usually begins with a few words of regret, such as I am sorry or I would really like to. Next, we give a simple reason, perhaps that we are busy at that time. If we can, we offer another choice, like meeting next week instead. Refusing this way shows respect for the other person's feelings while still being honest about our own. With a little practice, saying no can become far less frightening.",
+      "vocab_notes": [
+        {
+          "word": "concern",
+          "cn": "关心;担忧"
+        },
+        {
+          "word": "strategy",
+          "cn": "策略"
+        },
+        {
+          "word": "complexity",
+          "cn": "复杂性"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does EQ measure, according to the passage?",
+          "options": [
+            "How fast a person can run.",
+            "How many words a person can spell.",
+            "How much money a person can earn.",
+            "How well we understand feelings, our own and others'."
+          ],
+          "answer_index": 3,
+          "explanation": "EQ 衡量我们对自己和他人情绪的理解程度,这是对定义的转述。"
+        },
+        {
+          "stem": "Why does the writer say always saying yes can be a problem?",
+          "options": [
+            "It can leave us feeling worn out and low.",
+            "It makes other people angry at once.",
+            "It is against the school rules.",
+            "It costs a lot of money."
+          ],
+          "answer_index": 0,
+          "explanation": "原文指出总是答应会让我们疲惫又不快乐,这是对该观点的转述。"
+        },
+        {
+          "stem": "What is the writer's advice for a polite refusal?",
+          "options": [
+            "Say nothing and walk away quickly.",
+            "Start with regret, give a reason, and offer another choice.",
+            "Always agree and then change your mind later.",
+            "Ask someone else to refuse for you."
+          ],
+          "answer_index": 1,
+          "explanation": "建议先表达歉意、给出理由、再提供其他选择,这是对礼貌拒绝步骤的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Tips for Healthy Relationships",
+      "topic_cn": "建议·维持友好关系的小贴士",
+      "body": "Strong and happy relationships do not just happen by accident; they are built day by day through small, kind actions. Here are a few simple tips. First, try to forgive others when they apologise, because saying sorry is hard for anyone, and a little understanding goes a long way. Second, always tell the truth, even when honesty is difficult, since trust is the core of every friendship. Third, do not judge people too quickly; it takes time to know what someone is really like. Fourth, try not to complain about others all the time, and instead look on the bright side of things. Finally, never criticise a friend in front of other people, as this can cause real embarrassment and hurt. None of these tips is hard to understand, yet they are easy to forget when we feel annoyed or tired. The good news is that the more we practise them, the more natural they become. In time, kindness turns into a habit, and our friendships grow deeper and stronger.",
+      "vocab_notes": [
+        {
+          "word": "forgive",
+          "cn": "原谅"
+        },
+        {
+          "word": "criticise",
+          "cn": "批评"
+        },
+        {
+          "word": "core",
+          "cn": "核心的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How are strong relationships built, according to the passage?",
+          "options": [
+            "By spending a lot of money on gifts.",
+            "By chance, without any effort.",
+            "Through small kind actions, day after day.",
+            "Only by living in the same house."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说牢固的关系靠日复一日的小善举建立,这是对首句的转述。"
+        },
+        {
+          "stem": "Why does the writer say we should tell the truth?",
+          "options": [
+            "Because lying is against the law.",
+            "Because the truth is always easy to say.",
+            "Because friends enjoy hearing bad news.",
+            "Because trust is at the heart of every friendship."
+          ],
+          "answer_index": 3,
+          "explanation": "原文指出信任是友谊的核心,所以要说真话,这是对该理由的转述。"
+        },
+        {
+          "stem": "What does the writer say about criticising a friend?",
+          "options": [
+            "Doing it in front of others can cause real hurt.",
+            "It should be done as loudly as possible.",
+            "It is the best way to make friends.",
+            "It never affects a friendship at all."
+          ],
+          "answer_index": 0,
+          "explanation": "原文提醒不要当众批评朋友,否则会造成真正的尴尬与伤害,这是对该建议的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Lesson in Trust",
+      "topic_cn": "记叙·一次关于信任的经历",
+      "body": "When Lin first joined her new class, she found it hard to fit in. One girl, Mei, was especially friendly, and soon the two shared everything. One afternoon, feeling annoyed, Lin told Mei a small secret about another classmate. She was only letting off steam and did not really mean it. To her shock, the story spread around the class by the next morning. Lin felt both embarrassed and angry. At first she wanted to blame Mei for her loose lips, but then she remembered that she herself had started the gossip. Taking a deep breath, she decided to face the problem honestly. She apologised to the classmate she had talked about, and she told Mei calmly that she felt let down. Mei was surprised by Lin's honesty, and she said sorry too. From that day on, both girls learned to think before they spoke. Their friendship did not break; instead, it grew stronger, built on a new and deeper kind of trust.",
+      "vocab_notes": [
+        {
+          "word": "annoyed",
+          "cn": "恼怒的"
+        },
+        {
+          "word": "let down",
+          "cn": "辜负;使失望"
+        },
+        {
+          "word": "moreover",
+          "cn": "此外"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Lin do when she felt annoyed one afternoon?",
+          "options": [
+            "She left the class and went home.",
+            "She shared a secret about another classmate with Mei.",
+            "She wrote a letter to her teacher.",
+            "She refused to speak to anyone for a week."
+          ],
+          "answer_index": 1,
+          "explanation": "林恼火时把另一位同学的秘密告诉了梅,这是对情节的转述。"
+        },
+        {
+          "stem": "How did Lin deal with the problem in the end?",
+          "options": [
+            "She blamed Mei and ended the friendship.",
+            "She pretended that nothing had happened.",
+            "She faced it honestly and apologised.",
+            "She told even more secrets to everyone."
+          ],
+          "answer_index": 2,
+          "explanation": "林最终诚实面对、主动道歉,这是对结局的转述。"
+        },
+        {
+          "stem": "What happened to the friendship between Lin and Mei?",
+          "options": [
+            "It ended completely after the quarrel.",
+            "It stayed exactly the same as before.",
+            "It turned into a serious fight.",
+            "It grew stronger and more trusting."
+          ],
+          "answer_index": 3,
+          "explanation": "她们的友谊没有破裂,反而建立在更深的信任上变得更牢固,这是对结尾的转述。"
+        }
+      ]
+    }
+  ]
+}

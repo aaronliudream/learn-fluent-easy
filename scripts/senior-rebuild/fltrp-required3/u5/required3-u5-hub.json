@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "The captain said the ship would leave port at dawn.", "opts": ["船长说船将在黎明驶离港口。", "船长卖掉了那艘船。", "船长留在了港口。", "船长忘记了起航时间。"], "answer": 0 },
+    { "audio": "I was going to climb higher, but a storm stopped me.", "opts": ["我已经登上了山顶。", "我本打算爬得更高,但风暴让我停下了。", "我从来不爬山。", "我害怕这座山。"], "answer": 1 },
+    { "audio": "Qomolangma lies on the border between Nepal and China.", "opts": ["珠峰在海里。", "珠峰离任何国家都很远。", "珠峰位于尼泊尔和中国的边界上。", "珠峰是一座城市。"], "answer": 2 },
+    { "audio": "Above eight thousand metres there is very little oxygen.", "opts": ["山顶氧气充足。", "那里没有人去过。", "山下空气很冷。", "八千米以上氧气很少。"], "answer": 3 },
+    { "audio": "We learned some first aid before the trip.", "opts": ["出发前我们学了一些急救。", "我们取消了旅行。", "我们忘了带地图。", "我们卖掉了帐篷。"], "answer": 0 },
+    { "audio": "The young seals were curious and followed the divers.", "opts": ["小海豹很危险。", "小海豹好奇地跟着潜水者。", "小海豹很快游走了。", "小海豹从不靠近人。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Above 8,000 metres lies the death ____, with very little oxygen.（地带）", "opts": ["zone", "song", "price", "game"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Most ____ to climb the peak end in success or failure.（尝试）", "opts": ["jokes", "attempts", "prices", "songs"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Words were not enough to ____ the wonders he had seen.（讲述）", "opts": ["sell", "hide", "relate", "buy"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "A whole new world lay ____ the surface of the sea.（在……之下）", "opts": ["above", "behind", "before", "beneath"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "Mallory promised that he ____ home safely.", "opts": ["would come", "will come", "came", "comes"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "I ____ to collect water, but the storm broke our barrels.", "opts": ["am going", "was going", "will go", "go"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "She said she ____ join the next expedition to the South Pole.", "opts": ["is going to", "will", "was going to", "goes to"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "We knew that the journey ahead ____ both body and mind.", "opts": ["will test", "tests", "tested", "would test"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["他知道那次旅程会很艰难。", "他卖掉了他的船。", "他从未旅行过。", "他讨厌冒险。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "He knew the journey would be very hard." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["他们待在家里。", "他们本打算横渡海峡，但风暴来了。", "他们造了一艘新船。", "他们忘了带食物。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "They were going to cross the strait, but a storm came." }
+  ],
+  "reading": {
+    "passage": "Each year, hundreds of climbers pay good money to climb Qomolangma, even though they know the trip will bring cold, crowds and danger. Many feel weak in the death zone, where there is very little oxygen. Yet most believe that reaching the top is worth every risk.",
+    "passageCn": "每年都有数百名登山者花重金攀登珠峰,尽管他们知道这趟旅程会有寒冷、人群和危险。许多人在缺氧的死亡地带感到虚弱。然而大多数人相信,登顶值得冒一切风险。",
+    "questions": [
+      { "q": "Why do climbers still pay to climb the mountain?", "opts": ["They believe reaching the top is worth the risk.", "They think the climb is cheap and safe.", "They want to live in the death zone.", "They dislike the views at the top."], "answer": 0 },
+      { "q": "What is the death zone like?", "opts": ["It is warm and crowded with shops.", "It has very little oxygen.", "It is the safest part of the climb.", "It lies at the foot of the mountain."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short story about an adventure you have had or imagined. Say when and where it happened, what happened, and how you felt. Try to use the past future (I knew it would…, We were going to…).",
+    "promptCn": "写一个你经历或想象的冒险小故事:何时何地发生、发生了什么、你的感受。试着用过去将来时(I knew it would…, We were going to…)。",
+    "sampleWords": ["adventure", "guide", "storm", "would", "be going to", "first aid", "courage", "summit", "set out", "proud"]
+  },
+  "dialogues": [
+    {
+      "title": "Planning an Adventure",
+      "lines": [
+        { "role": "A", "text": "Where shall we go for our next adventure?", "cn": "我们下次冒险去哪儿?" },
+        { "role": "B", "text": "I was going to suggest hiking in the mountains.", "cn": "我本想提议去山里徒步。" },
+        { "role": "A", "text": "Good idea. The guide said the weather would be fine this weekend.", "cn": "好主意。向导说这周末天气会不错。" },
+        { "role": "B", "text": "Then let's pack a first aid kit, just in case.", "cn": "那我们带个急救包,以防万一。" }
+      ]
+    },
+    {
+      "title": "After the Trip",
+      "lines": [
+        { "role": "A", "text": "How was your climb up the mountain?", "cn": "你登山怎么样?" },
+        { "role": "B", "text": "Scary! I knew it would be hard, but the storm surprised us.", "cn": "惊险!我知道会很难,但那场风暴让我们措手不及。" },
+        { "role": "A", "text": "Did you reach the top?", "cn": "你们登顶了吗?" },
+        { "role": "B", "text": "Not this time, but I felt proud that we got down safely.", "cn": "这次没有,但我们安全下山,我感到自豪。" }
+      ]
+    }
+  ]
+}

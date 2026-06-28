@@ -1,0 +1,36 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "grade": 10,
+  "content": {
+    "title": "情态动词(1)义务与建议速查",
+    "intro": "本单元的情态动词都和\"该不该做、必不必须做\"有关。记住三组:义务(must / have to)、建议(should / ought to)、否定(mustn't=禁止 ≠ needn't / don't have to=不必)。判断口诀:看语境是\"必须\"\"应该\"\"禁止\"还是\"不必\",再选对应的词。",
+    "table": {
+      "headers": ["情态动词", "意义 / 用法 / 例句"],
+      "rows": [
+        ["must", "必须(说话人自己的强烈必要、坚持):You must try this dish!"],
+        ["have to", "不得不(规则、医嘱、客观情况等外部要求):You have to book a table first."],
+        ["should / ought to", "应该(建议、忠告,语气较弱):You should eat more fresh fruit."],
+        ["mustn't", "一定不要、禁止(不允许/危险/失礼):You mustn't eat those berries."],
+        ["needn't / don't have to", "不必、没必要(做不做都行):You needn't cook tonight."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "must 强调说话人内心的必要;have to 强调外部强加的要求", "mark": "I must apologise. / I have to wear a uniform." },
+      { "rule": "mustn't ≠ needn't:前者\"禁止\",后者\"不必\",意义完全相反", "mark": "mustn't=别做 / needn't=可不做" },
+      { "rule": "must 的过去和将来常借 have to:had to / will have to", "mark": "Yesterday I had to cook." },
+      { "rule": "回答 Must I…? 时,否定常用 No, you needn't. 而非 No, you mustn't.", "mark": "needn't=不必 √" }
+    ],
+    "why": [
+      "情态动词本身不随人称变化(he must,不是 he musts);它后面永远跟动词原形,所以重点全在\"选哪个词\"——看语境要表达的是必须、应该、禁止还是不必。"
+    ],
+    "gaokaoPoints": [
+      "mustn't(禁止)与 needn't / don't have to(不必)的区别是高频考点,常在语法填空和完形中出现。",
+      "must(内在必要/推断)vs have to(外在要求)的语境辨析;过去式只能用 had to。"
+    ],
+    "examVsReal": [
+      { "exam": "You mustn't be late.(考试:表禁止/强劝阻)", "real": "Don't be late! / You can't be late.", "note": "口语里禁止更常用 can't 或直接祈使句" },
+      { "exam": "You needn't worry.(考试:表不必)", "real": "You don't have to worry. / Don't worry.", "note": "日常口语里 don't have to 比 needn't 更常见" }
+    ]
+  }
+}

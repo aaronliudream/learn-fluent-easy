@@ -1,0 +1,46 @@
+{
+  "listeningQuestions": [
+    { "audio": "Dad has grown a grey beard nowadays.", "opts": ["爸爸如今留起了灰白的胡子。", "爸爸把胡子刮得很干净。", "爸爸染了一头红发。", "爸爸把头发剪短了。"], "answer": 0 },
+    { "audio": "Mum goes jogging every morning to stay fit.", "opts": ["妈妈每天早上去慢跑以保持健康。", "妈妈每晚出去散步。", "妈妈早上在家做饭。", "妈妈周末去游泳。"], "answer": 0 },
+    { "audio": "Grandpa plays chess with my father every Friday night.", "opts": ["爷爷每周五晚上和我爸爸下棋。", "爷爷每天打篮球。", "爷爷周末在家看电视。", "爷爷教我画画。"], "answer": 0 },
+    { "audio": "We are throwing Grandma a big birthday party.", "opts": ["我们要给奶奶办一场盛大的生日派对。", "我们要去奶奶家过年。", "我们给奶奶买了一辆车。", "我们要送奶奶去旅行。"], "answer": 0 },
+    { "audio": "I had a long chat with my dad about my future.", "opts": ["我和爸爸就我的未来长谈了一次。", "我和爸爸大吵了一架。", "我帮爸爸做了一顿晚饭。", "我和爸爸去看了电影。"], "answer": 0 },
+    { "audio": "Mum apologised for missing my school show.", "opts": ["妈妈为错过我的校园演出道歉。", "妈妈表扬了我的演出。", "妈妈忘记了我的生日。", "妈妈陪我看完了演出。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "Father hopes I will choose a ____ in law like him.", "opts": ["career", "curtain", "court", "beard"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Grandfather kindly helped the family ____ their argument.", "opts": ["settle", "ignore", "jog", "observe"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "There is sometimes a ____ between parents and children.", "opts": ["gap", "theme", "medal", "studio"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "I really ____ my elder sister for her hard work.", "opts": ["admire", "judge", "contain", "suit"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Look! Mum ____ in the park at the moment.", "opts": ["is jogging", "jogs", "jogged", "has jogged"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Dad ____ quite a bit since we last saw him.", "opts": ["has changed", "changed", "changes", "is changing"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "By the time we arrived, Grandma ____ dinner already.", "opts": ["had prepared", "prepared", "prepares", "has prepared"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "We ____ the same campsite ten years ago.", "opts": ["visited", "have visited", "visit", "had visited"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "What did Grandma do yesterday?", "opts": ["She called to say hello.", "She visited the school.", "She cooked dinner.", "She bought a present."], "answer": 0, "point": "听力", "dim": "listening", "audio": "Grandma called us yesterday to say hello." },
+    { "q": "What does the brother want to do after school?", "opts": ["Focus on his music.", "Become a lawyer.", "Play chess all day.", "Go camping alone."], "answer": 0, "point": "听力", "dim": "listening", "audio": "My brother wants to focus on his music after school." }
+  ],
+  "reading": {
+    "passage": "On Sundays, our whole family cooks lunch together. Dad makes the soup, Mum cuts the vegetables, and I set the table. It is the happiest hour of our week.",
+    "passageCn": "每个周日,我们全家一起做午饭。爸爸煮汤,妈妈切菜,我摆桌子。这是我们一周里最快乐的时光。",
+    "questions": [
+      { "q": "Who makes the soup in the family?", "opts": ["Dad.", "Mum.", "The writer.", "Grandma."], "answer": 0 },
+      { "q": "How does the family feel about cooking together?", "opts": ["It is their happiest hour of the week.", "They find it rather boring.", "They dislike cooking at all.", "They are always too tired."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write about a happy family memory in about 60 words. Say when it happened, what you did together, and why you treasure it.",
+    "promptCn": "用约60词写一段快乐的家庭回忆:何时发生、你们一起做了什么、为什么你珍惜它。",
+    "sampleWords": ["memory", "family", "together", "weekend", "happy", "cook", "laugh", "photo", "indeed", "treasure"]
+  },
+  "dialogues": [
+    {
+      "title": "Choosing a Present for Grandma",
+      "lines": [
+        { "role": "A", "text": "Grandma's birthday is coming. What should we get her?", "cn": "奶奶的生日快到了,我们送她什么好呢?" },
+        { "role": "B", "text": "She loves tea, so let's buy her a nice tea set.", "cn": "她爱喝茶,我们买一套漂亮的茶具吧。" },
+        { "role": "A", "text": "Great idea! I'll also make her a birthday card by hand.", "cn": "好主意!我还要亲手给她做一张生日卡。" },
+        { "role": "B", "text": "She will be so happy to see the whole family together.", "cn": "看到全家团聚,她一定会非常开心。" }
+      ]
+    }
+  ]
+}

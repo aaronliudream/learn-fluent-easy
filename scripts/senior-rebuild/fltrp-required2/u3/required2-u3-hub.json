@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Football is a simple game to play, and that is why it is so popular.", "opts": ["足球是一项简单易玩的运动,所以才如此受欢迎。", "足球是一项非常昂贵的运动。", "足球只能在英国玩。", "足球的规则很难学。"], "answer": 0 },
+    { "audio": "She was too tired to finish the last lap of the race.", "opts": ["她太累了,跑不完比赛的最后一圈。", "她轻松跑完了整场比赛。", "她决定不去比赛。", "她是第一个冲线的人。"], "answer": 0 },
+    { "audio": "Tai chi involves slow movements to relax your mind and calm your body.", "opts": ["太极包含缓慢的动作,用来放松心情、让身体平静。", "太极是一种快速的格斗运动。", "太极只适合年轻人。", "太极需要昂贵的器材。"], "answer": 0 },
+    { "audio": "The sports watch is light enough to wear all day long.", "opts": ["这块运动手表足够轻,可以戴一整天。", "这块手表太重,戴起来不舒服。", "这块手表只能在网上看。", "这块手表不能测心率。"], "answer": 0 },
+    { "audio": "He goes running every evening to deal with the stress of work.", "opts": ["他每天晚上跑步来缓解工作压力。", "他从不锻炼身体。", "他只在周末跑步。", "他跑步是为了减肥。"], "answer": 0 },
+    { "audio": "With just a rope, you can skip almost anywhere and keep fit.", "opts": ["只要一根绳子,你几乎随处都能跳绳来保持健康。", "跳绳需要一台很大的机器。", "跳绳只能在体育馆里做。", "跳绳对心脏没有好处。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "You don't need expensive ____ to start running.(装备)", "opts": ["equipment", "weather", "advice", "music"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The watch can ____ your heart rate while you exercise.(监测)", "opts": ["monitor", "forget", "sell", "break"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "After a long run, my legs ____ but I still feel happy.(酸痛)", "opts": ["ache", "shine", "sing", "grow"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "My ____ goal is to become an ice hockey coach.(最终的)", "opts": ["ultimate", "broken", "empty", "false"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Football is a simple game ____, which is one reason for its popularity.", "opts": ["to play", "playing", "played", "plays"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "He was too tired ____ the last lap, so he stopped.", "opts": ["to run", "running", "ran", "runs"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The ball is small enough ____ into most sports bags.", "opts": ["to fit", "fitting", "fitted", "fits"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "She gets up early every day ____ for the marathon.", "opts": ["to train", "training", "trained", "trains"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["他足够努力,赢得了国家队的一个席位。", "他从未参加过任何比赛。", "他放弃了训练。", "他讨厌跑步。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "He trained hard enough to earn a place in the national team." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["每位跑者都穿着大猩猩服装来为野生动物筹款。", "跑者们都骑着自行车。", "比赛在新加坡举行。", "没有人完成比赛。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Every runner wears a gorilla suit to raise money for wild animals." }
+  ],
+  "reading": {
+    "passage": "Football began over two thousand years ago in ancient China as a game called cuju. The football we know today took shape in Britain, where it was given clear rules. It is cheap and simple to play, which is why it has become the world's favourite game.",
+    "passageCn": "足球两千多年前起源于中国古代,当时叫蹴鞠。我们今天所知的足球在英国成形,并被定下了明确的规则。它便宜又简单易玩,所以成了全世界最受欢迎的运动。",
+    "questions": [
+      { "q": "Where did modern football get its clear rules?", "opts": ["In Britain.", "In ancient China.", "On the Moon.", "In Brazil."], "answer": 0 },
+      { "q": "Why has football become the world's favourite game?", "opts": ["It is cheap and simple to play.", "It needs costly equipment.", "It can only be played at night.", "It has no rules at all."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short sports story about yourself. Say what sport you do, how you got started, and your goal for the future.",
+    "promptCn": "写一篇关于你自己的简短运动故事:你做什么运动、当初如何开始、未来的目标(试着用上不定式,如 a sport to enjoy / strong enough to win)。",
+    "sampleWords": ["sport", "start", "join", "train", "improve", "enough", "balance", "champion", "ultimate", "give up"]
+  },
+  "dialogues": [
+    {
+      "title": "Which Sport Will You Try?",
+      "lines": [
+        { "role": "A", "text": "Our school has new sports clubs. Which one will you join?", "cn": "我们学校有新的运动社团,你想加入哪个?" },
+        { "role": "B", "text": "Football, I think. It's cheap, and you only need a ball to play.", "cn": "我想加足球社。它便宜,只需一个球就能玩。" },
+        { "role": "A", "text": "I'd rather try tai chi. It's slow, but it builds balance.", "cn": "我更想试太极。它虽慢,却能练平衡。" },
+        { "role": "B", "text": "Good idea. The main thing is just to keep moving.", "cn": "好主意。最重要的就是动起来。" }
+      ]
+    },
+    {
+      "title": "Talking About Running",
+      "lines": [
+        { "role": "A", "text": "Why do you go running every evening?", "cn": "你为什么每天晚上去跑步?" },
+        { "role": "B", "text": "To deal with the stress of a busy day. Afterwards my worries disappear.", "cn": "为了缓解忙碌一天的压力。跑完后烦恼就消失了。" },
+        { "role": "A", "text": "Isn't it hard when your legs ache?", "cn": "腿酸痛的时候不难受吗?" },
+        { "role": "B", "text": "A little, but I'm strong enough to keep going now.", "cn": "有点儿,但我现在已经足够强壮,能坚持下去了。" }
+      ]
+    }
+  ]
+}

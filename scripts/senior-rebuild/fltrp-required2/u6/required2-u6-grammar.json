@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U6",
+  "grammar_title": "-ing 与 -ed 分词作补语(宾语补足语:主动进行用 -ing,被动完成用 -ed)",
+  "source": "外研社版必修第二册 Unit 6 Using language:-ing and -ed as complement。see/hear/watch/find/keep/have/get 等后接宾语+分词;宾语是动作发出者、动作进行中用 -ing,宾语是动作承受者、动作已完成用 -ed。句子地道、答案唯一(干扰项为错误语态或不定式)。",
+  "points": [
+    {
+      "code": "u6.01",
+      "point": "-ing 分词作宾补(宾语主动发出、动作进行中)",
+      "overview": "see/hear/watch/notice/find/catch/keep/leave + 宾语 + doing:宾语是动作的发出者、动作正在进行(I saw a shark swimming.)。"
+    },
+    {
+      "code": "u6.02",
+      "point": "-ed 分词作宾补(宾语承受动作、动作已完成)",
+      "overview": "find/have/get/keep/want/leave + 宾语 + done:宾语是动作的承受者、动作被完成(We found the door locked. / get the work done.)。"
+    },
+    {
+      "code": "u6.03",
+      "point": "-ing 还是 -ed(由宾语与分词的主动/被动关系判断)",
+      "overview": "宾语主动发出动作→-ing;宾语承受动作→-ed。干扰项是相反语态或不定式,逐句看宾语和分词谁主动谁被动。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u6.01",
+      "stem": "We see a woman ____ at night in a dark, cold sea.",
+      "options": [
+        "swimming",
+        "swum",
+        "to swim",
+        "swims"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语 woman 自己在游、动作进行中,主动关系 → -ing 形式 swimming。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Diving near the reef, Lin Feng noticed several fish ____ around the coral.",
+      "options": [
+        "swum",
+        "swimming",
+        "to swim",
+        "swam"
+      ],
+      "answer_index": 1,
+      "explanation": "fish 自己在游、动作进行,主动 → swimming;swam 是过去式,不能作补语。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "All through the night we could hear the waves ____ against the rocks.",
+      "options": [
+        "crashed",
+        "to crash",
+        "crashing",
+        "crashes"
+      ],
+      "answer_index": 2,
+      "explanation": "waves 自己拍打、动作进行 → crashing。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "On the beach the children found a baby turtle ____ slowly towards the sea.",
+      "options": [
+        "moved",
+        "to move",
+        "moves",
+        "moving"
+      ],
+      "answer_index": 3,
+      "explanation": "turtle 自己在爬动、进行中 → moving。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Suddenly we watched the great white shark ____ straight at the boat.",
+      "options": [
+        "coming",
+        "came",
+        "to come",
+        "comes"
+      ],
+      "answer_index": 0,
+      "explanation": "shark 自己游过来、动作进行 → coming;came/comes 是谓语形式,不作补语。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "From the deck the tourists could see dolphins ____ out of the water.",
+      "options": [
+        "jumped",
+        "jumping",
+        "to jump",
+        "jumps"
+      ],
+      "answer_index": 1,
+      "explanation": "dolphins 主动跳跃、进行中 → jumping。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Walking by the river, I could smell something ____ in the dirty water.",
+      "options": [
+        "rotted",
+        "to rot",
+        "rotting",
+        "rots"
+      ],
+      "answer_index": 2,
+      "explanation": "something 自己在腐烂、进行中 → rotting。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The guide kept the engine ____ so the boat would not drift away.",
+      "options": [
+        "run",
+        "to run",
+        "runs",
+        "running"
+      ],
+      "answer_index": 3,
+      "explanation": "keep + 宾语 + doing,engine 主动运转、持续中 → running。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Please don't leave the tap ____ while you are brushing your teeth.",
+      "options": [
+        "running",
+        "ran",
+        "to run",
+        "runs"
+      ],
+      "answer_index": 0,
+      "explanation": "leave + 宾语 + doing,water/tap 主动在流 → running。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The ranger caught a man secretly ____ waste into the clean river.",
+      "options": [
+        "dumped",
+        "dumping",
+        "to dump",
+        "dumps"
+      ],
+      "answer_index": 1,
+      "explanation": "catch sb doing,man 主动倾倒、进行中 → dumping。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Early in the morning the staff noticed smoke ____ from the dry forest.",
+      "options": [
+        "risen",
+        "to rise",
+        "rising",
+        "rises"
+      ],
+      "answer_index": 2,
+      "explanation": "smoke 自己升起、进行中 → rising。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Visitors often see volunteers ____ rubbish along the nature trail.",
+      "options": [
+        "collected",
+        "to collect",
+        "collects",
+        "collecting"
+      ],
+      "answer_index": 3,
+      "explanation": "volunteers 主动收集、进行中 → collecting。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "All morning we could hear birds ____ in the protected forest.",
+      "options": [
+        "singing",
+        "sung",
+        "to sing",
+        "sings"
+      ],
+      "answer_index": 0,
+      "explanation": "birds 主动鸣唱、进行中 → singing。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "She felt the cold sea water slowly ____ into her diving boots.",
+      "options": [
+        "leaked",
+        "leaking",
+        "to leak",
+        "leaks"
+      ],
+      "answer_index": 1,
+      "explanation": "water 自己渗入、进行中 → leaking。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The opening scene shows a great white shark ____ swimmers near the shore.",
+      "options": [
+        "attacked",
+        "to attack",
+        "attacking",
+        "attacks"
+      ],
+      "answer_index": 2,
+      "explanation": "shark 主动攻击、动作进行 → attacking。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Standing on the cliff, we watched the huge waves ____ the old boat away.",
+      "options": [
+        "carried",
+        "to carry",
+        "carries",
+        "carrying"
+      ],
+      "answer_index": 3,
+      "explanation": "waves 主动卷走、进行中 → carrying。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Even indoors I can hear the strong wind ____ through the trees.",
+      "options": [
+        "blowing",
+        "blown",
+        "to blow",
+        "blows"
+      ],
+      "answer_index": 0,
+      "explanation": "wind 主动吹、进行中 → blowing。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The scientists observed the polar ice ____ faster than ever before.",
+      "options": [
+        "melted",
+        "melting",
+        "to melt",
+        "melts"
+      ],
+      "answer_index": 1,
+      "explanation": "ice 自己融化、进行中 → melting。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "We found several children ____ plastic bottles out of the lake.",
+      "options": [
+        "pulled",
+        "to pull",
+        "pulling",
+        "pulls"
+      ],
+      "answer_index": 2,
+      "explanation": "children 主动捞取、进行中 → pulling。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Looking down from the glass boat, the diver saw thousands of fish ____ past the reef.",
+      "options": [
+        "passed",
+        "to pass",
+        "passes",
+        "passing"
+      ],
+      "answer_index": 3,
+      "explanation": "fish 主动游过、进行中 → passing。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "After the storm, we found large areas of forest ____ by the flood.",
+      "options": [
+        "destroyed",
+        "destroying",
+        "to destroy",
+        "destroys"
+      ],
+      "answer_index": 0,
+      "explanation": "forest 被洪水摧毁,被动完成 → -ed 形式 destroyed。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "While diving, Benchley saw thousands of sharks ____ just for their fins.",
+      "options": [
+        "killing",
+        "killed",
+        "to kill",
+        "kills"
+      ],
+      "answer_index": 1,
+      "explanation": "sharks 被杀,被动 → killed。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The reserve wants the damaged wetland ____ as soon as possible.",
+      "options": [
+        "restoring",
+        "to restore",
+        "restored",
+        "restores"
+      ],
+      "answer_index": 2,
+      "explanation": "wetland 被修复,被动 → restored。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The staff try to keep the original forest ____ from fire and pollution.",
+      "options": [
+        "protecting",
+        "to protect",
+        "protects",
+        "protected"
+      ],
+      "answer_index": 3,
+      "explanation": "keep + 宾语 + done,forest 被保护 → protected。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Every summer the heavy rain leaves many low villages ____ under water.",
+      "options": [
+        "flooded",
+        "flooding",
+        "to flood",
+        "floods"
+      ],
+      "answer_index": 0,
+      "explanation": "villages 被淹,被动 → flooded。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The factory had its dirty water ____ before it reached the river.",
+      "options": [
+        "cleaning",
+        "cleaned",
+        "to clean",
+        "cleans"
+      ],
+      "answer_index": 1,
+      "explanation": "have + 宾语 + done,water 被清理 → cleaned。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "You can get your empty bottles ____ at the recycling centre.",
+      "options": [
+        "recycling",
+        "to recycle",
+        "recycled",
+        "recycles"
+      ],
+      "answer_index": 2,
+      "explanation": "get + 宾语 + done,bottles 被回收 → recycled。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "We were sad to see so many old trees ____ down to make paper.",
+      "options": [
+        "cutting",
+        "to cut",
+        "cuts",
+        "cut"
+      ],
+      "answer_index": 3,
+      "explanation": "trees 被砍倒,被动完成 → 过去分词 cut。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "After the talk, she found her notebook ____ with new green ideas.",
+      "options": [
+        "filled",
+        "filling",
+        "to fill",
+        "fills"
+      ],
+      "answer_index": 0,
+      "explanation": "notebook 被写满,被动 → filled。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The government wants the amount of smog ____ in big cities.",
+      "options": [
+        "reducing",
+        "reduced",
+        "to reduce",
+        "reduces"
+      ],
+      "answer_index": 1,
+      "explanation": "smog 被减少,被动 → reduced。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "He had the broken solar panel ____ on the roof last week.",
+      "options": [
+        "repairing",
+        "to repair",
+        "repaired",
+        "repairs"
+      ],
+      "answer_index": 2,
+      "explanation": "have + 宾语 + done,panel 被修理 → repaired。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Sadly, we often see local rivers ____ by waste from factories.",
+      "options": [
+        "polluting",
+        "to pollute",
+        "pollutes",
+        "polluted"
+      ],
+      "answer_index": 3,
+      "explanation": "rivers 被污染,被动 → polluted。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Please keep the windows ____ to save the heating in winter.",
+      "options": [
+        "closed",
+        "closing",
+        "to close",
+        "closes"
+      ],
+      "answer_index": 0,
+      "explanation": "keep + 宾语 + done,windows 被关上 → closed。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The Clear Your Plate campaign wants far less food ____ at every meal.",
+      "options": [
+        "wasting",
+        "wasted",
+        "to waste",
+        "wastes"
+      ],
+      "answer_index": 1,
+      "explanation": "food 被浪费,被动 → wasted。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "After the long drought, farmers found their crops ____ by the dry weather.",
+      "options": [
+        "ruining",
+        "to ruin",
+        "ruined",
+        "ruins"
+      ],
+      "answer_index": 2,
+      "explanation": "crops 被毁,被动 → ruined。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "We should get all these old appliances ____ off at the power supply.",
+      "options": [
+        "switching",
+        "to switch",
+        "switches",
+        "switched"
+      ],
+      "answer_index": 3,
+      "explanation": "get + 宾语 + done,appliances 被关闭 → switched。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The diver was shocked to see the sea floor ____ with dead sharks.",
+      "options": [
+        "covered",
+        "covering",
+        "to cover",
+        "covers"
+      ],
+      "answer_index": 0,
+      "explanation": "sea floor 被覆盖,被动 → covered。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Last spring the school had hundreds of young trees ____ along the river.",
+      "options": [
+        "planting",
+        "planted",
+        "to plant",
+        "plants"
+      ],
+      "answer_index": 1,
+      "explanation": "have + 宾语 + done,trees 被种下 → planted。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Make sure the plug is ____ from the socket before you go to bed.",
+      "options": [
+        "removing",
+        "to remove",
+        "removed",
+        "removes"
+      ],
+      "answer_index": 2,
+      "explanation": "plug 被拔下,被动 → removed。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "By evening the volunteers had all the rubbish ____ into large bags.",
+      "options": [
+        "packing",
+        "to pack",
+        "packs",
+        "packed"
+      ],
+      "answer_index": 3,
+      "explanation": "have + 宾语 + done,rubbish 被装入 → packed。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "From the boat I saw the fishermen ____ the fins off the living sharks.",
+      "options": [
+        "cutting",
+        "cut",
+        "to cut",
+        "to be cut"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语 fishermen 主动切割、动作进行 → cutting。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Then I watched the helpless sharks ____ back into the cold sea.",
+      "options": [
+        "throwing",
+        "thrown",
+        "to throw",
+        "to be throwing"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语 sharks 被扔回,被动 → thrown。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Walking through the woods, we could hear dry leaves ____ under our feet.",
+      "options": [
+        "crackled",
+        "to crackle",
+        "crackling",
+        "to be crackled"
+      ],
+      "answer_index": 2,
+      "explanation": "leaves 自己发出脆响、进行中 → crackling。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "When the ranger arrived, he found the reserve gate ____ for the night.",
+      "options": [
+        "locking",
+        "to lock",
+        "to be locking",
+        "locked"
+      ],
+      "answer_index": 3,
+      "explanation": "gate 被锁上,被动完成 → locked。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "From the high hill we watched the river ____ over the dry fields.",
+      "options": [
+        "flooding",
+        "flooded",
+        "to flood",
+        "to be flooded"
+      ],
+      "answer_index": 0,
+      "explanation": "river 自己漫过、进行中 → flooding。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "After the visit, the staff found the wetland badly ____ by human activity.",
+      "options": [
+        "damaging",
+        "damaged",
+        "to damage",
+        "to be damaging"
+      ],
+      "answer_index": 1,
+      "explanation": "wetland 被破坏,被动 → damaged。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "We kept the small electric boat ____ so we could leave the bay quickly.",
+      "options": [
+        "run",
+        "to run",
+        "running",
+        "to be run"
+      ],
+      "answer_index": 2,
+      "explanation": "boat/engine 主动运转、持续中 → running。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The lecturer wants her report on smog ____ before the weekend.",
+      "options": [
+        "finishing",
+        "to finish",
+        "to be finishing",
+        "finished"
+      ],
+      "answer_index": 3,
+      "explanation": "report 被完成,被动 → finished。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Standing at the window, I noticed thick smog slowly ____ over the city.",
+      "options": [
+        "spreading",
+        "spread",
+        "to spread",
+        "to be spread"
+      ],
+      "answer_index": 0,
+      "explanation": "smog 自己蔓延、进行中 → spreading。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "During the drought, the villagers had their water supply ____ for days.",
+      "options": [
+        "cutting",
+        "cut",
+        "to cut",
+        "to be cutting"
+      ],
+      "answer_index": 1,
+      "explanation": "water supply 被切断,被动完成 → cut。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Standing on the shore, we watched the evening tide slowly ____ in.",
+      "options": [
+        "come",
+        "to come",
+        "coming",
+        "to be come"
+      ],
+      "answer_index": 2,
+      "explanation": "tide 自己涨上来、进行中 → coming。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "He was sad to see so much plastic ____ behind on the once-clean beach.",
+      "options": [
+        "leaving",
+        "to leave",
+        "to be leaving",
+        "left"
+      ],
+      "answer_index": 3,
+      "explanation": "plastic 被遗留,被动 → left。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Near the factory you can smell chemicals ____ in the warm afternoon air.",
+      "options": [
+        "floating",
+        "floated",
+        "to float",
+        "to be floated"
+      ],
+      "answer_index": 0,
+      "explanation": "chemicals 自己飘浮、进行中 → floating。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The teacher wants all the classroom lights ____ off after the lesson.",
+      "options": [
+        "turning",
+        "turned",
+        "to turn",
+        "to be turning"
+      ],
+      "answer_index": 1,
+      "explanation": "lights 被关掉,被动 → turned。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Through the bus window I saw heavy rain ____ down on the dry land.",
+      "options": [
+        "poured",
+        "to pour",
+        "pouring",
+        "to be poured"
+      ],
+      "answer_index": 2,
+      "explanation": "rain 自己倾泻、进行中 → pouring。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "After her talk, she found her message box ____ with questions about sharks.",
+      "options": [
+        "filling",
+        "to fill",
+        "to be filling",
+        "filled"
+      ],
+      "answer_index": 3,
+      "explanation": "box 被装满,被动 → filled。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "On planting day we watched the volunteers ____ young trees along the bank.",
+      "options": [
+        "planting",
+        "planted",
+        "to plant",
+        "to be planted"
+      ],
+      "answer_index": 0,
+      "explanation": "volunteers 主动栽种、进行中 → planting。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "To save money and waste, he got his old bike ____ instead of buying a new one.",
+      "options": [
+        "repairing",
+        "repaired",
+        "to repair",
+        "to be repairing"
+      ],
+      "answer_index": 1,
+      "explanation": "bike 被修理,被动 → repaired。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "At dawn we heard wild birds ____ again in the slowly recovering forest.",
+      "options": [
+        "sung",
+        "to sing",
+        "singing",
+        "to be sung"
+      ],
+      "answer_index": 2,
+      "explanation": "birds 主动鸣唱、进行中 → singing。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Scientists want these rare sea animals ____ from extinction before it is too late.",
+      "options": [
+        "saving",
+        "to save",
+        "to be saving",
+        "saved"
+      ],
+      "answer_index": 3,
+      "explanation": "animals 被拯救,被动 → saved。"
+    }
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "grammar_title": "-ed 分词作定语(被动/完成含义)",
+  "source": "外研社(新标准)必修三 Unit 2 Using language:-ed 分词作定语。-ed 分词表被动或已完成,中心词是动作的承受者。句子地道、答案唯一(干扰项为主动 -ing / 不定式 / 限定动词,均不成立)。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "-ed 分词前置作定语(a broken cup / a finished well)",
+      "overview": "单个 -ed 分词放在名词前作定语,中心词是动作的承受者,含被动或已完成之意;主动的 -ing 不成立,因为名词不是动作的发出者。"
+    },
+    {
+      "code": "u2.02",
+      "point": "-ed 分词短语后置作定语(= 被动定语从句:the well built in 1990)",
+      "overview": "-ed 分词带短语放在名词后作定语,等于一个被动的定语从句(which/that + be done);中心词被动作用,故用过去分词,而非 -ing 或限定动词。"
+    },
+    {
+      "code": "u2.03",
+      "point": "-ed 与 -ing 作定语的区分(被动 -ed vs 主动 -ing)",
+      "overview": "中心词是动作/情感的承受者用 -ed(被动/已完成);若发出动作或使人产生感受才用 -ing。本点中心词均为承受者,故 -ed 唯一成立。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "In Uganda, Ryan at last saw the ____ well with his own eyes.",
+      "options": [
+        "finished",
+        "finishing",
+        "to finish",
+        "finish"
+      ],
+      "answer_index": 0,
+      "explanation": "井是被完成的对象,用过去分词表已完成/被动 → finished;井不会主动完成,故 -ing 不成立。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "He gave the ____ money to a local charity that builds wells.",
+      "options": [
+        "donating",
+        "donated",
+        "to donate",
+        "donate"
+      ],
+      "answer_index": 1,
+      "explanation": "钱是被捐出的,过去分词表被动 → donated;钱不会主动捐,-ing 不成立。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The villagers could no longer use the ____ pump after the storm.",
+      "options": [
+        "breaking",
+        "to break",
+        "broken",
+        "break"
+      ],
+      "answer_index": 2,
+      "explanation": "泵是被弄坏的,过去分词表被动/已完成 → broken。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The children happily drank from a newly ____ well.",
+      "options": [
+        "building",
+        "to build",
+        "build",
+        "built"
+      ],
+      "answer_index": 3,
+      "explanation": "井是被建造的,过去分词表被动 → built。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The ____ funds were used to dig more wells in the area.",
+      "options": [
+        "raised",
+        "raising",
+        "to raise",
+        "raise"
+      ],
+      "answer_index": 0,
+      "explanation": "资金是被筹集的,过去分词表被动 → raised。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "After it was cleaned, the ____ rainwater was safe to drink.",
+      "options": [
+        "collecting",
+        "collected",
+        "to collect",
+        "collect"
+      ],
+      "answer_index": 1,
+      "explanation": "雨水是被收集的,过去分词表被动/已完成 → collected。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The village now uses ____ water to grow its vegetables.",
+      "options": [
+        "recycling",
+        "to recycle",
+        "recycled",
+        "recycle"
+      ],
+      "answer_index": 2,
+      "explanation": "水是被回收处理的,过去分词表被动 → recycled。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Everyone celebrated the ____ project at the village school.",
+      "options": [
+        "completing",
+        "to complete",
+        "complete",
+        "completed"
+      ],
+      "answer_index": 3,
+      "explanation": "工程是被完成的,过去分词表已完成 → completed。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Workers repaired the ____ road soon after the flood.",
+      "options": [
+        "damaged",
+        "damaging",
+        "to damage",
+        "damage"
+      ],
+      "answer_index": 0,
+      "explanation": "道路是被损坏的,过去分词表被动 → damaged。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The clerk handed me a ____ form to fill in.",
+      "options": [
+        "printing",
+        "printed",
+        "to print",
+        "print"
+      ],
+      "answer_index": 1,
+      "explanation": "表格是被印好的,过去分词表已完成 → printed。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "In 1988, Grete found a ____ journal at the back of a drawer.",
+      "options": [
+        "forgetting",
+        "to forget",
+        "forgotten",
+        "forget"
+      ],
+      "answer_index": 2,
+      "explanation": "日记是被遗忘的,过去分词表被动/已完成 → forgotten。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The ____ water was finally clean enough for the children.",
+      "options": [
+        "purifying",
+        "to purify",
+        "purify",
+        "purified"
+      ],
+      "answer_index": 3,
+      "explanation": "水是被净化的,过去分词表被动 → purified。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The ____ school received new books from the foundation.",
+      "options": [
+        "funded",
+        "funding",
+        "to fund",
+        "fund"
+      ],
+      "answer_index": 0,
+      "explanation": "学校是被资助的对象,过去分词表被动 → funded。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "It was a well-____ event that raised a lot of money.",
+      "options": [
+        "organising",
+        "organised",
+        "to organise",
+        "organise"
+      ],
+      "answer_index": 1,
+      "explanation": "活动是被组织的,过去分词表被动 → organised。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The ____ story soon reached people all over the country.",
+      "options": [
+        "publishing",
+        "to publish",
+        "published",
+        "publish"
+      ],
+      "answer_index": 2,
+      "explanation": "故事是被发表的,过去分词表被动/已完成 → published。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "He kept the ____ names of all the rescued children.",
+      "options": [
+        "recording",
+        "to record",
+        "record",
+        "recorded"
+      ],
+      "answer_index": 3,
+      "explanation": "名字是被记录下来的,过去分词表已完成 → recorded。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The ____ supplies arrived at the village right on time.",
+      "options": [
+        "delivered",
+        "delivering",
+        "to deliver",
+        "deliver"
+      ],
+      "answer_index": 0,
+      "explanation": "物资是被送达的,过去分词表被动 → delivered。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "A ____ crowd waited at the station to welcome the visitor.",
+      "options": [
+        "gathering",
+        "gathered",
+        "to gather",
+        "gather"
+      ],
+      "answer_index": 1,
+      "explanation": "人群是被聚集起来的,过去分词表已完成 → gathered。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "They carefully followed the ____ schedule for the charity run.",
+      "options": [
+        "planning",
+        "to plan",
+        "planned",
+        "plan"
+      ],
+      "answer_index": 2,
+      "explanation": "日程是被计划好的,过去分词表已完成 → planned。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Volunteers washed the windows, and the ____ glass shone again.",
+      "options": [
+        "cleaning",
+        "to clean",
+        "clean",
+        "cleaned"
+      ],
+      "answer_index": 3,
+      "explanation": "玻璃是被擦净的,过去分词表已完成/被动 → cleaned。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Ryan could hardly believe the words ____ by his teacher.",
+      "options": [
+        "spoken",
+        "speaking",
+        "to speak",
+        "spoke"
+      ],
+      "answer_index": 0,
+      "explanation": "words 被老师说出,后置过去分词短语 = 被动定语从句(which were spoken)→ spoken;无关系词时 spoke 这种限定动词不成立。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The well ____ near the school changed the children's lives.",
+      "options": [
+        "building",
+        "built",
+        "to build",
+        "build"
+      ],
+      "answer_index": 1,
+      "explanation": "well 被建在学校旁,过去分词短语表被动 → built。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The money ____ by his foundation supports many villages.",
+      "options": [
+        "raising",
+        "to raise",
+        "raised",
+        "raise"
+      ],
+      "answer_index": 2,
+      "explanation": "money 被基金会筹集,过去分词短语表被动 → raised。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The journal ____ at home contained the children's names.",
+      "options": [
+        "finding",
+        "to find",
+        "find",
+        "found"
+      ],
+      "answer_index": 3,
+      "explanation": "journal 被发现,过去分词短语表被动 → found。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The children ____ by Winton grew up safely in Britain.",
+      "options": [
+        "saved",
+        "saving",
+        "to save",
+        "save"
+      ],
+      "answer_index": 0,
+      "explanation": "children 被温顿拯救,过去分词短语表被动 → saved。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The form ____ by Sarah was sent to the volunteer centre.",
+      "options": [
+        "completing",
+        "completed",
+        "to complete",
+        "complete"
+      ],
+      "answer_index": 1,
+      "explanation": "form 被 Sarah 填好,过去分词短语表被动/已完成 → completed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The help ____ by the village included new water technology.",
+      "options": [
+        "needing",
+        "to need",
+        "needed",
+        "need"
+      ],
+      "answer_index": 2,
+      "explanation": "help 是村庄所需要的,过去分词短语表被动 → needed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The homes ____ for the children were warm and safe.",
+      "options": [
+        "preparing",
+        "to prepare",
+        "prepare",
+        "prepared"
+      ],
+      "answer_index": 3,
+      "explanation": "homes 被准备好,过去分词短语表被动/已完成 → prepared。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The records ____ in his office later helped many families.",
+      "options": [
+        "kept",
+        "keeping",
+        "to keep",
+        "keep"
+      ],
+      "answer_index": 0,
+      "explanation": "records 被保存在办公室,过去分词短语表被动 → kept。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The honour ____ by the government made him very proud.",
+      "options": [
+        "giving",
+        "given",
+        "to give",
+        "give"
+      ],
+      "answer_index": 1,
+      "explanation": "honour 被政府授予,过去分词短语表被动 → given。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The photographs ____ years ago were still surprisingly clear.",
+      "options": [
+        "taking",
+        "to take",
+        "taken",
+        "take"
+      ],
+      "answer_index": 2,
+      "explanation": "photographs 是多年前被拍下的,过去分词短语表被动 → taken。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The gift ____ to the village brought everyone clean water.",
+      "options": [
+        "sending",
+        "to send",
+        "send",
+        "sent"
+      ],
+      "answer_index": 3,
+      "explanation": "gift 被送往村庄,过去分词短语表被动 → sent。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The clean water ____ to the village changed everything for them.",
+      "options": [
+        "brought",
+        "bringing",
+        "to bring",
+        "bring"
+      ],
+      "answer_index": 0,
+      "explanation": "water 被带到村庄,过去分词短语表被动 → brought。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The families ____ by the charity were deeply thankful.",
+      "options": [
+        "helping",
+        "helped",
+        "to help",
+        "help"
+      ],
+      "answer_index": 1,
+      "explanation": "families 被慈善机构帮助,过去分词短语表被动 → helped。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The wells ____ across Africa gave water to thousands of people.",
+      "options": [
+        "digging",
+        "to dig",
+        "dug",
+        "dig"
+      ],
+      "answer_index": 2,
+      "explanation": "wells 被挖,过去分词短语表被动 → dug。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The message ____ on the radio reached many kind listeners.",
+      "options": [
+        "sharing",
+        "to share",
+        "share",
+        "shared"
+      ],
+      "answer_index": 3,
+      "explanation": "message 被在广播里分享,过去分词短语表被动 → shared。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The clothes ____ by neighbours were given to poor families.",
+      "options": [
+        "donated",
+        "donating",
+        "to donate",
+        "donate"
+      ],
+      "answer_index": 0,
+      "explanation": "clothes 被邻居捐出,过去分词短语表被动 → donated。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The children ____ by volunteers slowly learned to read.",
+      "options": [
+        "teaching",
+        "taught",
+        "to teach",
+        "teach"
+      ],
+      "answer_index": 1,
+      "explanation": "children 被志愿者教,过去分词短语表被动 → taught。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The story ____ on television moved the whole audience.",
+      "options": [
+        "telling",
+        "to tell",
+        "told",
+        "tell"
+      ],
+      "answer_index": 2,
+      "explanation": "story 被在电视上讲述,过去分词短语表被动 → told。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The names ____ in the old journal belonged to rescued children.",
+      "options": [
+        "writing",
+        "to write",
+        "wrote",
+        "written"
+      ],
+      "answer_index": 3,
+      "explanation": "names 被写在日记里,过去分词短语表被动 → written;无关系词时 wrote 不成立。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The ____ children were too afraid to look at the soldiers.",
+      "options": [
+        "frightened",
+        "frightening",
+        "to frighten",
+        "frighten"
+      ],
+      "answer_index": 0,
+      "explanation": "children 是受惊的一方(承受者),用 -ed → frightened;-ing 表'令人害怕的',与孩子的感受不符。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The ____ students sang and danced to welcome Ryan to the school.",
+      "options": [
+        "delighting",
+        "delighted",
+        "to delight",
+        "delight"
+      ],
+      "answer_index": 1,
+      "explanation": "students 是感到高兴的一方,用 -ed → delighted。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "His ____ parents feared they might never see their son again.",
+      "options": [
+        "worrying",
+        "to worry",
+        "worried",
+        "worry"
+      ],
+      "answer_index": 2,
+      "explanation": "parents 是担忧的一方,用 -ed → worried。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Many ____ people decided to give money to the new foundation.",
+      "options": [
+        "inspiring",
+        "to inspire",
+        "inspire",
+        "inspired"
+      ],
+      "answer_index": 3,
+      "explanation": "people 是被激励的一方,用 -ed → inspired。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The ____ crowd cheered loudly as the well began to work.",
+      "options": [
+        "excited",
+        "exciting",
+        "to excite",
+        "excite"
+      ],
+      "answer_index": 0,
+      "explanation": "crowd 是感到兴奋的一方,用 -ed → excited。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The ____ audience could hardly believe what they had heard.",
+      "options": [
+        "shocking",
+        "shocked",
+        "to shock",
+        "shock"
+      ],
+      "answer_index": 1,
+      "explanation": "audience 是受到震动的一方,用 -ed → shocked。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She gave me a ____ look when she heard the wonderful news.",
+      "options": [
+        "surprising",
+        "to surprise",
+        "surprised",
+        "surprise"
+      ],
+      "answer_index": 2,
+      "explanation": "look 体现她'感到惊讶',承受者用 -ed → surprised。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The ____ donors were happy to learn that their money had helped.",
+      "options": [
+        "satisfying",
+        "to satisfy",
+        "satisfy",
+        "satisfied"
+      ],
+      "answer_index": 3,
+      "explanation": "donors 是感到满意的一方,用 -ed → satisfied。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The ____ viewers cried as they watched his life story on TV.",
+      "options": [
+        "moved",
+        "moving",
+        "to move",
+        "move"
+      ],
+      "answer_index": 0,
+      "explanation": "viewers 是被打动的一方,用 -ed → moved。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The ____ boy worked hard for months until his dream came true.",
+      "options": [
+        "determining",
+        "determined",
+        "to determine",
+        "determine"
+      ],
+      "answer_index": 1,
+      "explanation": "boy 是下定决心的承受者,用 -ed → determined。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The charity sold the ____ bottles to raise money for schools.",
+      "options": [
+        "recycling",
+        "to recycle",
+        "recycled",
+        "recycle"
+      ],
+      "answer_index": 2,
+      "explanation": "bottles 被回收,承受者用 -ed → recycled。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "He carefully read the ____ letter from the grateful family.",
+      "options": [
+        "writing",
+        "to write",
+        "write",
+        "written"
+      ],
+      "answer_index": 3,
+      "explanation": "letter 被写,承受者用 -ed → written。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Everyone still remembered the ____ words of the brave man.",
+      "options": [
+        "spoken",
+        "speaking",
+        "to speak",
+        "speak"
+      ],
+      "answer_index": 0,
+      "explanation": "words 被说出,承受者用 -ed → spoken。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She was upset about the ____ promise that nobody kept.",
+      "options": [
+        "breaking",
+        "broken",
+        "to break",
+        "break"
+      ],
+      "answer_index": 1,
+      "explanation": "promise 被打破,承受者用 -ed → broken。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Volunteers collected the ____ leaflets after the event ended.",
+      "options": [
+        "printing",
+        "to print",
+        "printed",
+        "print"
+      ],
+      "answer_index": 2,
+      "explanation": "leaflets 被印制,承受者用 -ed → printed。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The ____ clothes were washed and then given to poor families.",
+      "options": [
+        "cleaning",
+        "to clean",
+        "clean",
+        "cleaned"
+      ],
+      "answer_index": 3,
+      "explanation": "clothes 被清洗,承受者用 -ed → cleaned。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The ____ well gave the whole village fresh water at last.",
+      "options": [
+        "dug",
+        "digging",
+        "to dig",
+        "dig"
+      ],
+      "answer_index": 0,
+      "explanation": "well 被挖,承受者用 -ed → dug。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The ____ lives gave Winton great happiness in his later years.",
+      "options": [
+        "saving",
+        "saved",
+        "to save",
+        "save"
+      ],
+      "answer_index": 1,
+      "explanation": "lives 被拯救,承受者用 -ed → saved。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "They reached the ____ goal and celebrated with a big party.",
+      "options": [
+        "achieving",
+        "to achieve",
+        "achieved",
+        "achieve"
+      ],
+      "answer_index": 2,
+      "explanation": "goal 被实现,承受者用 -ed → achieved。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The ____ children warmly thanked the kind volunteers.",
+      "options": [
+        "helping",
+        "to help",
+        "help",
+        "helped"
+      ],
+      "answer_index": 3,
+      "explanation": "children 被帮助,承受者用 -ed → helped。"
+    }
+  ]
+}

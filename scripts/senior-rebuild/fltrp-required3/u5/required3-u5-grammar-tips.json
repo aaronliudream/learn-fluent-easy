@@ -1,0 +1,36 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "grade": 10,
+  "content": {
+    "title": "过去将来时(would do / was going to do)速查",
+    "intro": "过去将来时表示'从过去某个时间点看将要发生的事'。两种主要形式:would + 动词原形、was/were going to + 动词原形。判断口诀:看主句是不是过去时(said/knew/told…),事情在当时还没发生,就用过去将来;will 是从现在看(视角错),一般过去是已发生(尚未发生时不能用)。",
+    "table": {
+      "headers": ["形式", "用法 / 例句"],
+      "rows": [
+        ["would + 原形", "从过去看的将来 / 转述将来:He said he would climb Qomolangma."],
+        ["was/were going to + 原形", "过去的打算、计划(常未实现):I was going to collect water, but the storm came."],
+        ["现在将来 will / be going to", "从现在看的将来(对照):He says he will climb Qomolangma.(主句现在)"],
+        ["转述对应", "直接引语 will → would;be going to → was/were going to"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主句过去 + 事情当时未发生 → 用 would / was going to,不用 will", "mark": "She knew the trip would be hard.(would √ / will ×)" },
+      { "rule": "was/were going to 常表'本打算但没做成',后面常跟 but…", "mark": "We were going to put up the tent, but the wind was too strong." },
+      { "rule": "be going to 后、would 后都接动词原形", "mark": "was going to reach √ / was going to reached ×" },
+      { "rule": "主句 knew/said 为过去,从句其他动词也相应后移", "mark": "I knew a storm was coming.(was, 非 is)" }
+    ],
+    "why": [
+      "would 是 will 的过去式、was/were going to 是 be going to 的过去式;当叙述或转述的立足点在过去时,'将来'自然要用它们的过去形式,这样时态前后才一致。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/改错高频:主句过去时,空格表将来 → would do 或 was/were going to do,别误填 will。",
+      "区分 would do(从过去看的将来)与 was going to do(过去的打算、计划,常未实现)。",
+      "转述句中 will→would、be going to→was/were going to 的时态后移。"
+    ],
+    "examVsReal": [
+      { "exam": "He said he would come the next day.(考试/书面转述)", "real": "He said he's coming tomorrow.", "note": "考试看主句过去用 would;口语转述新鲜消息时也可保留现在时态" },
+      { "exam": "I was going to call you, but I forgot.(考试)", "real": "I was gonna call you, but I forgot.", "note": "口语里 going to 常读作 gonna,书面仍写 going to" }
+    ]
+  }
+}

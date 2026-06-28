@@ -1,0 +1,52 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "topic": "Write a Journal Entry about Your First Week(写一篇高中第一周的日记)",
+  "title_en": "My First Week at Senior High",
+  "genre": "日记 / 记叙(journal entry:describe first-week experiences and feelings)",
+  "source": "外研社(新标准)必修第一册 Unit 1 Presenting ideas / Writing a journal entry:记录高中第一周的经历与感受。",
+  "prompt_cn": "假设你叫李华,刚升入高中一周。请用英语写一篇约80词的日记,内容包括:① 这一周给你印象最深的一件事(如一节课、一次社团活动、或结识新朋友);② 当时发生了什么、你怎么做的;③ 你的感受以及对未来的期待。注意:用第一人称、过去时为主,句子围绕中心、用恰当的基本句型。",
+  "prompt_en": "Suppose you are Li Hua and you have just finished your first week at senior high. Write a journal entry (about 80 words) including: 1) the most memorable thing this week (e.g. a lesson, a club activity, or making a new friend); 2) what happened and what you did; 3) how you felt and what you look forward to.",
+  "points": [
+    "记叙最难忘的一件事(The thing I remember most this week is …)",
+    "说明经过与你的做法(At first … , so I … . Then …)",
+    "表达感受与期待(I felt … , and I am really looking forward to …)",
+    "第一人称、过去时为主、句子围绕中心、基本句型正确"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Friday, 8 September\n\nI can hardly believe my first week at senior high is over! The thing I remember most is my first English lesson. The teacher asked us to introduce ourselves one by one. With butterflies in my stomach, I breathed deeply and said my name. To my surprise, it was the same as the teacher's, and everyone laughed. I felt embarrassed at first, but his kind words made me feel relaxed. Now I feel more confident, and I am really looking forward to the year ahead.",
+  "model_translation": "9月8日,星期五\n\n我简直不敢相信高中第一周就结束了!我印象最深的是第一节英语课。老师让我们一个接一个地自我介绍。我心里发慌,深吸一口气说出了自己的名字。没想到我和老师同名,大家都笑了。一开始我很尴尬,但他温和的话让我放松了下来。现在我更自信了,也非常期待接下来的一年。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:难忘的事 / 经过与做法 / 感受与期待" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一件事展开、过去时一致、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "基本句型运用得当(SVOO/SVOC/SVP)、词汇准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题 The thing I remember most this week is …",
+      "经过 The teacher asked us to … . With … , I … .",
+      "转折 I felt … at first, but … made me feel … .",
+      "收尾 Now I feel … , and I am really looking forward to … ."
+    ],
+    "key_expressions": [
+      "The thing I remember most is my first English lesson.",
+      "With butterflies in my stomach, I breathed deeply.",
+      "His kind words made me feel relaxed.",
+      "I am really looking forward to the year ahead."
+    ],
+    "useful_words": ["senior high", "impression", "introduce", "nervous", "confident", "challenge", "relaxed", "make a friend", "look forward to", "calm"]
+  },
+  "high_sentences": [
+    "The thing I remember most this week is my first English lesson.",
+    "With butterflies in my stomach, I breathed deeply and said my name.",
+    "His kind words made me feel a lot more relaxed.",
+    "I am really looking forward to the year ahead."
+  ],
+  "error_pairs": [
+    { "wrong": "His words made me to feel relaxed.", "correct": "His words made me feel relaxed.", "note": "make sb do sth,后接不带 to 的动词原形。" },
+    { "wrong": "I felt very nervously before the speech.", "correct": "I felt very nervous before the speech.", "note": "feel 是系动词,后接形容词作表语,不用副词。" },
+    { "wrong": "The teacher gave to me a useful book.", "correct": "The teacher gave me a useful book.", "note": "give sb sth 双宾语结构,间接宾语前不加 to。" }
+  ],
+  "paragraph_template": "【高中第一周日记结构】\n日期一行:Friday, 8 September\n第1句 点题:The thing I remember most this week is …\n第2-3句 经过:The teacher asked us to … . With … , I … .\n第4句 转折感受:I felt … at first, but … made me feel … .\n第5句 收尾期待:Now I feel … , and I am really looking forward to … ."
+}

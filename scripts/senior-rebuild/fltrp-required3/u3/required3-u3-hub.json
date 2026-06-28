@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Many useful inventions have been made in recent years.", "opts": ["近年来人们发明了许多有用的东西。", "近年来再也没有新发明了。", "古代的发明比现代的好。", "发明只属于科学家。"], "answer": 0 },
+    { "audio": "New 3D printers have been used to make replacement body parts.", "opts": ["新型3D打印机已被用来制造替换的身体部件。", "3D打印机只能用来打印纸张。", "医生从不使用打印机。", "身体部件无法被制造。"], "answer": 0 },
+    { "audio": "The intelligent walking house is powered by the sun, so it is eco-friendly.", "opts": ["这座智能行走房屋靠太阳能驱动,所以很环保。", "这座房子要烧煤才能移动。", "这座房子从来不会移动。", "这座房子对环境有害。"], "answer": 0 },
+    { "audio": "So far, no time machine has been invented anywhere in the world.", "opts": ["到目前为止,世界上任何地方都还没发明出时间机器。", "时间机器去年已经造好了。", "时间机器随处可见。", "时间机器是中国人发明的。"], "answer": 0 },
+    { "audio": "A turtle injured in a fire was given a new 3D-printed shell.", "opts": ["一只在火灾中受伤的乌龟得到了一个3D打印的新壳。", "那只乌龟一直没被找到。", "乌龟学会了飞翔。", "乌龟被送去了伦敦。"], "answer": 0 },
+    { "audio": "Most inventions begin when someone notices a problem that needs a solution.", "opts": ["大多数发明始于有人发现了需要解决的问题。", "发明从来不需要任何问题。", "只有政府才能发明东西。", "发明都是偶然出现的。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "Sailors used a ____ to find their way far out at sea.(指南针)", "opts": ["compass", "garden", "holiday", "battery"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "A ____ studies the stars and planets in space.(天文学家)", "opts": ["astronomer", "farmer", "singer", "driver"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "There is still no ____ for this serious disease.(疗法)", "opts": ["cure", "noise", "price", "weather"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The new battery is thin and ____, so it can bend easily.(柔韧的)", "opts": ["flexible", "hungry", "loud", "empty"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "So far, many great inventions ____ by ordinary people.", "opts": ["have been made", "have made", "are making", "make"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Up to now, no time machine ____ anywhere in the world.", "opts": ["has been invented", "is invented", "was invented", "will be invented"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Recently, this technology ____ many human body parts.", "opts": ["has made", "has been made", "is making", "makes"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Over the past ten years, many electric cars ____ in this city.", "opts": ["have been produced", "are produced", "were produced", "will be produced"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["近年来,太阳能技术取得了重大进步。", "太阳能技术毫无进展。", "太阳能只能在白天使用。", "太阳能技术已经被放弃。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "In recent years, significant advances have been made in solar technology." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["这个团队的研究成果已发表在一本著名杂志上。", "团队的成果被弄丢了。", "团队从未做过任何研究。", "杂志拒绝刊登他们的成果。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The team's results have been published in a famous magazine." }
+  ],
+  "reading": {
+    "passage": "Many people think the great age of invention is over, but it has only just begun. Today most new inventions are based on technology, and important progress has been made in medicine and the environment. As long as people keep asking questions, fresh ideas will always appear.",
+    "passageCn": "许多人以为伟大的发明时代已经结束,但其实它才刚刚开始。如今大多数新发明都以技术为基础,医学和环境领域也取得了重要进展。只要人们不停发问,新点子就会不断涌现。",
+    "questions": [
+      { "q": "What are most new inventions based on today?", "opts": ["Technology.", "Farming.", "Old stories.", "Luck."], "answer": 0 },
+      { "q": "What keeps fresh ideas appearing?", "opts": ["People keep asking questions.", "People stop thinking.", "Machines break down.", "Money runs out."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a few sentences about an invention you find amazing. Say what it is, what it has been used for, and why it matters. Try to use the present perfect passive (e.g. has been used / have been made).",
+    "promptCn": "写几句话介绍一个你觉得了不起的发明:它是什么、被用来做什么、为什么重要。试着用上现在完成被动语态(如 has been used / have been made)。",
+    "sampleWords": ["invention", "technology", "printer", "battery", "design", "produce", "improve", "significant", "made", "used"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking About a Favourite Invention",
+      "lines": [
+        { "role": "A", "text": "Which modern invention do you think is the most amazing?", "cn": "你觉得哪项现代发明最了不起?" },
+        { "role": "B", "text": "The 3D printer. New body parts have already been made with it.", "cn": "3D打印机。人们已经用它制造出新的身体部件了。" },
+        { "role": "A", "text": "Really? So it has been used in medicine too?", "cn": "真的吗?那它也被用在医学上了?" },
+        { "role": "B", "text": "Yes. Hearts and bones have been printed to help patients.", "cn": "是的。心脏和骨头已被打印出来帮助病人。" }
+      ]
+    },
+    {
+      "title": "Choosing a Science Career",
+      "lines": [
+        { "role": "A", "text": "What kind of scientist would you like to be?", "cn": "你想成为哪种科学家?" },
+        { "role": "B", "text": "An astronomer. I love studying the stars and planets.", "cn": "天文学家。我热爱研究恒星和行星。" },
+        { "role": "A", "text": "But isn't the maths very hard?", "cn": "可是数学不是很难吗?" },
+        { "role": "B", "text": "A little, but with patience every subject can be learned.", "cn": "有点儿,但只要有耐心,任何科目都能学会。" }
+      ]
+    }
+  ]
+}

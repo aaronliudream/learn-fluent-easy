@@ -1,0 +1,362 @@
+{
+  "volume": "required1",
+  "unit": "U6",
+  "topic": "At One with Nature",
+  "source": "外研社版必修第一册 Unit 6 同主题阅读(龙脊梯田/天然染料/大堡礁/地理奇观/北极因纽特人/英国人爱园艺)。词限 U6/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Longji Rice Terraces",
+      "topic_cn": "说明·梯田与自然和谐",
+      "body": "High in the mountains of Guangxi lie the Longji Rice Terraces, built long ago by the local Zhuang and Yao people. Work on them began in the Yuan Dynasty and went on for hundreds of years. Because there was little flat land in the region, the people cut the steep mountains into terraces so that they could grow more rice. The mountains here also have plenty of rain, but the soil is thin. The flat terraces hold the rainwater and stop the soil from washing away. Most clever of all is the way the farmers work in harmony with nature. Hundreds of waterways connect the terraces, carrying rain down the slopes. The sun then turns the water into vapour, which rises and forms clouds, and the rain falls once more. Birds and fish live here too, and some of them eat the insects that would harm the rice.",
+      "vocab_notes": [
+        {
+          "word": "terrace",
+          "cn": "梯田"
+        },
+        {
+          "word": "soil",
+          "cn": "土壤"
+        },
+        {
+          "word": "harmony",
+          "cn": "和谐"
+        },
+        {
+          "word": "vapour",
+          "cn": "水汽"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the local people build terraces on the mountains?",
+          "options": [
+            "To gain more land for growing rice.",
+            "To stop visitors from climbing up.",
+            "To store water for the city below.",
+            "To keep their animals safe at night."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'little flat land… so that they could grow more rice'的转述。"
+        },
+        {
+          "stem": "How do the flat terraces help with the thin soil?",
+          "options": [
+            "They add chemicals to the soil.",
+            "They hold the rain and keep the soil from being washed off.",
+            "They make the mountains less steep over time.",
+            "They bring soil down from the mountain top."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'hold the rainwater and stop the soil from washing away'的转述。"
+        },
+        {
+          "stem": "What part do the birds and fish play on the terraces?",
+          "options": [
+            "They eat insects that could damage the rice.",
+            "They carry water between the fields.",
+            "They turn the water into vapour.",
+            "They build new waterways each year."
+          ],
+          "answer_index": 0,
+          "explanation": "末句'eat the insects that would harm the rice'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Colours from Nature",
+      "topic_cn": "说明·天然染料",
+      "body": "Among the many gifts that nature gives us are natural dyes, the colours used to brighten cloth and other materials. The most common source of these dyes is plants, but they can also come from insects, sea creatures and minerals found in the ground. For thousands of years, people coloured their clothes in this way, until cheaper chemical dyes slowly replaced them. Today, however, natural dyes are returning to popularity, which pleases many artists and craftspeople. They say the colours are brighter and last far longer than chemical ones. Natural dyes are also growing more popular with shoppers for whom caring for the environment is a top priority. Such buyers know that these colours do little harm to rivers and soil. By choosing dyes made from plants and minerals, people feel they can remind themselves of the beauty of the natural world and help to protect it at the same time.",
+      "vocab_notes": [
+        {
+          "word": "dye",
+          "cn": "染料"
+        },
+        {
+          "word": "material",
+          "cn": "材料"
+        },
+        {
+          "word": "mineral",
+          "cn": "矿物"
+        },
+        {
+          "word": "consumer",
+          "cn": "消费者"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where do most natural dyes come from?",
+          "options": [
+            "Only from sea creatures.",
+            "Mainly from plants.",
+            "Mostly from factories.",
+            "Only from minerals."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'The most common source… is plants'的转述。"
+        },
+        {
+          "stem": "Why did natural dyes become less common in the past?",
+          "options": [
+            "People stopped wearing coloured cloth.",
+            "Plants became too rare to use.",
+            "Cheaper chemical dyes took their place.",
+            "The colours were thought to be ugly."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'cheaper chemical dyes slowly replaced them'的转述。"
+        },
+        {
+          "stem": "What do shoppers who care about the environment believe about natural dyes?",
+          "options": [
+            "They cost almost nothing to make.",
+            "They are the only colours left.",
+            "They fade more quickly than others.",
+            "They cause little damage to nature."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'do little harm to rivers and soil'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Great Barrier Reef",
+      "topic_cn": "说明·大堡礁",
+      "body": "Off the coast of Australia lies the Great Barrier Reef, the largest structure on Earth ever made by living things. It is not the work of people but of countless tiny sea organisms that have lived and grown together for millions of years. Slowly, their hard remains built up into a huge wall of colour that now stretches for over two thousand kilometres. The reef is home to a great variety of fish, turtles and other creatures, which makes it one of the richest places for life in all the oceans. Visitors can explore it by boat or even from an underwater observatory, where they watch the busy world below without getting wet. Sadly, warmer seas and dirty water now put the reef in danger. Many scientists are deeply worried about its future, and people everywhere are being asked to help keep this natural wonder alive for those who come after us.",
+      "vocab_notes": [
+        {
+          "word": "reef",
+          "cn": "礁"
+        },
+        {
+          "word": "structure",
+          "cn": "结构"
+        },
+        {
+          "word": "organism",
+          "cn": "生物"
+        },
+        {
+          "word": "living",
+          "cn": "活的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What makes the Great Barrier Reef special among structures on Earth?",
+          "options": [
+            "It is the biggest one built by living creatures.",
+            "It was built by ancient people.",
+            "It is made completely of stone.",
+            "It is the oldest building in Australia."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'the largest structure… ever made by living things'的转述。"
+        },
+        {
+          "stem": "Why is the reef one of the richest places for life?",
+          "options": [
+            "It is warmer than any other sea.",
+            "Many kinds of sea creatures live there.",
+            "No people are ever allowed to visit.",
+            "It has no fish at all."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'home to a great variety of fish, turtles and other creatures'的转述。"
+        },
+        {
+          "stem": "What threatens the reef today?",
+          "options": [
+            "Too many underwater observatories.",
+            "A lack of tiny organisms.",
+            "Warmer and dirtier seawater.",
+            "Boats that are too slow."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'warmer seas and dirty water now put the reef in danger'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Wonders Shaped by Nature",
+      "topic_cn": "说明·世界地理奇观",
+      "body": "All over the world there are amazing places that nature alone has shaped. In the United States, the Grand Canyon is a valley almost two kilometres deep, slowly cut out of the rock by a great river over millions of years. Brave visitors can stand on a narrow glass platform and look straight down. In Africa, Victoria Falls is the largest waterfall in the world. The water drops with such force that the local people call it 'the smoke that thunders', a name which fits it perfectly. Between England and France lies the English Channel, a stretch of sea that long kept the two countries apart. Today they are joined by the Channel Tunnel, a rail tunnel about fifty kilometres long, most of which runs deep under the sea. Each of these places reminds us how powerful and beautiful the natural world can be, and how small we sometimes are beside it.",
+      "vocab_notes": [
+        {
+          "word": "canyon",
+          "cn": "峡谷"
+        },
+        {
+          "word": "platform",
+          "cn": "平台"
+        },
+        {
+          "word": "waterfall",
+          "cn": "瀑布"
+        },
+        {
+          "word": "channel",
+          "cn": "海峡"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How was the Grand Canyon formed?",
+          "options": [
+            "People dug it out for farming.",
+            "It was built as a tourist platform.",
+            "A great storm created it in one night.",
+            "A river slowly cut it from the rock."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'slowly cut out of the rock by a great river'的转述。"
+        },
+        {
+          "stem": "Why do local people call Victoria Falls 'the smoke that thunders'?",
+          "options": [
+            "Because the falling water is so loud and powerful.",
+            "Because smoke really rises from a fire there.",
+            "Because it is hidden inside a tunnel.",
+            "Because it is the smallest waterfall on Earth."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'drops with such force… the smoke that thunders'的转述。"
+        },
+        {
+          "stem": "What is true about the Channel Tunnel?",
+          "options": [
+            "It floats on top of the sea.",
+            "Much of it lies far below the sea.",
+            "It separates England from France.",
+            "It is only a few metres long."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'about fifty kilometres long, most of which runs deep under the sea'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Life in the Frozen North",
+      "topic_cn": "说明·北极因纽特人生活",
+      "body": "Far in the north, in the cold lands of the Arctic, live the Inuit, a people for whom ice and snow have always been home. Around four million people live in the Arctic region, and about one hundred and seventy thousand of them are Inuit. Their world is one of the few climate zones where almost nothing will grow, so they once depended mostly on fish and meat. Eating such food keeps their bodies strong enough to face the freezing weather. In the past, many lived in houses of snow called igloos, which stay surprisingly warm inside. For part of the year the sun never rises, and this long polar night gives families more time to spend together, though it can also feel rather lonely. Today tourism brings money and new jobs to the region, which is welcome news. Yet it also brings crowds and rubbish, and the Inuit worry that their quiet, clean environment is slowly being harmed.",
+      "vocab_notes": [
+        {
+          "word": "climate",
+          "cn": "气候"
+        },
+        {
+          "word": "region",
+          "cn": "地区"
+        },
+        {
+          "word": "harm",
+          "cn": "损害"
+        },
+        {
+          "word": "benefit",
+          "cn": "好处"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the Inuit once depend mainly on fish and meat?",
+          "options": [
+            "They disliked the taste of vegetables.",
+            "Fish and meat were cheaper to buy.",
+            "Almost no crops can grow in their cold land.",
+            "Their doctors told them to."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'one of the few climate zones where almost nothing will grow'的转述。"
+        },
+        {
+          "stem": "What is one good thing about the long polar night?",
+          "options": [
+            "It makes plants grow faster.",
+            "It keeps tourists away all year.",
+            "It warms up the igloos.",
+            "It gives families more time together."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'gives families more time to spend together'的转述。"
+        },
+        {
+          "stem": "Why are the Inuit worried about tourism?",
+          "options": [
+            "It may be harming their clean environment.",
+            "It brings too little money.",
+            "It makes the winters colder.",
+            "It stops them from eating fish."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'their quiet, clean environment is slowly being harmed'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Nation of Gardeners",
+      "topic_cn": "说明·英国人爱园艺",
+      "body": "People in Britain love their gardens. About half of them spend their free time gardening, and many proudly say they have 'green fingers'. A hundred years ago, only the very rich owned gardens, but soon homes with small gardens began to be built for ordinary families too. Each spring, children plant sunflowers and wait to see whose grows the tallest, while expert gardeners look for the perfect corner for their roses. Some people enter their vegetables in competitions; others are happy just to sit under the branches of a tree and enjoy the world around them. In crowded cities, however, space is limited. People without a garden can rent a small piece of land on which to grow things, and thousands in London are waiting for such a piece. One newer idea is to turn rooftops and walls into private gardens, which has helped make the cities greener and the air cleaner for everyone.",
+      "vocab_notes": [
+        {
+          "word": "expert",
+          "cn": "内行的"
+        },
+        {
+          "word": "branch",
+          "cn": "树枝"
+        },
+        {
+          "word": "rent",
+          "cn": "租用"
+        },
+        {
+          "word": "rooftop",
+          "cn": "屋顶"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was true about gardens in Britain a hundred years ago?",
+          "options": [
+            "Every family owned a large one.",
+            "Only wealthy people had them.",
+            "They were found only on rooftops.",
+            "Nobody was interested in them."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'only the very rich owned gardens'的转述。"
+        },
+        {
+          "stem": "What can city people without a garden do to grow plants?",
+          "options": [
+            "Move out to the countryside.",
+            "Give up gardening completely.",
+            "Rent a little plot of ground nearby.",
+            "Plant only inside their homes."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'rent a small piece of land on which to grow things'的转述。"
+        },
+        {
+          "stem": "How have rooftop and wall gardens helped the cities?",
+          "options": [
+            "They have made land more expensive.",
+            "They have removed all the trees.",
+            "They have stopped people gardening.",
+            "They have made cities greener with cleaner air."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'helped make the cities greener and the air cleaner'的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "grammar_title": "过去将来时(would do / was going to do):从过去看的将来 + 过去的打算",
+  "source": "外研社(新标准)必修第三册 Unit 5 Using language:过去将来时。主句为过去视角(said/knew/promised…或 was/were going to + but…),故过去将来形式唯一成立;干扰项 will(视角错)/一般过去(尚未发生)排除。句子地道、答案唯一。",
+  "points": [
+    {
+      "code": "u5.01",
+      "point": "would do(从过去某点看的将来 / 转述的将来)",
+      "overview": "主句是过去时(said/knew/promised/believed…)、所说的事在当时还没发生(常带 the next day/one day/soon/never…again 等将来标志)时,从句用 would + 动词原形;此时 will 视角错、一般过去尚未发生都不对。"
+    },
+    {
+      "code": "u5.02",
+      "point": "was / were going to do(过去的打算、计划，常未实现)",
+      "overview": "表示过去某时打算/准备做某事(常用 but… 引出没做成),用 was/were going to + 动词原形;现在的 am/is/are going to 视角错、will 视角错、一般过去(表示已做了)与 but 矛盾,都不对。"
+    },
+    {
+      "code": "u5.03",
+      "point": "过去将来在转述句中 · 与一般过去/将来的区分",
+      "overview": "转述过去的话语/想法时,原来的 will→would、be going to→was/were going to;判断靠过去主句与将来标志:从过去看仍未发生用过去将来,已发生用一般过去,从现在看才用 will。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u5.01",
+      "stem": "Before the climb, Mallory promised his wife that he ____ home safely.",
+      "options": [
+        "would come",
+        "will come",
+        "came",
+        "comes"
+      ],
+      "answer_index": 0,
+      "explanation": "主句 promised 是过去时,'平安回家'当时还没发生 → 过去将来 would come;will 视角错,一般过去尚未发生。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The captain announced that the ship ____ port at dawn the next day.",
+      "options": [
+        "will leave",
+        "would leave",
+        "left",
+        "leaves"
+      ],
+      "answer_index": 1,
+      "explanation": "announced 过去 + the next day 将来标志 → would leave。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "None of the sailors knew that those days ____ their last together.",
+      "options": [
+        "will be",
+        "are",
+        "would be",
+        "have been"
+      ],
+      "answer_index": 2,
+      "explanation": "knew 过去、当时并不知道结局 → 从过去看的将来 would be。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The old sailor said that he ____ to the sea again one day.",
+      "options": [
+        "will return",
+        "returned",
+        "returns",
+        "would return"
+      ],
+      "answer_index": 3,
+      "explanation": "said 过去 + again one day 将来 → would return。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Arnette believed that the mountain ____ his life into focus.",
+      "options": [
+        "would bring",
+        "will bring",
+        "brought",
+        "brings"
+      ],
+      "answer_index": 0,
+      "explanation": "believed 过去,所信之事指向将来 → would bring。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The psychologist predicted that risk-takers ____ always look for new thrills.",
+      "options": [
+        "will",
+        "would",
+        "looked",
+        "look"
+      ],
+      "answer_index": 1,
+      "explanation": "predicted 过去 + always(指向将来) → would look。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "We were excited because we thought the voyage ____ our lives.",
+      "options": [
+        "will change",
+        "changed",
+        "would change",
+        "changes"
+      ],
+      "answer_index": 2,
+      "explanation": "thought 过去、改变尚未发生 → would change。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The doctor explained that the injury ____ within a few weeks.",
+      "options": [
+        "will heal",
+        "healed",
+        "heals",
+        "would heal"
+      ],
+      "answer_index": 3,
+      "explanation": "explained 过去 + within a few weeks 将来 → would heal。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "As a boy, Verne dreamed that he ____ one day sail around the world.",
+      "options": [
+        "would",
+        "will",
+        "did",
+        "does"
+      ],
+      "answer_index": 0,
+      "explanation": "dreamed 过去 + one day 将来 → would sail。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The forecast warned that the temperature ____ below minus sixty.",
+      "options": [
+        "will drop",
+        "would drop",
+        "dropped",
+        "drops"
+      ],
+      "answer_index": 1,
+      "explanation": "warned 过去、所预警之事尚未发生 → would drop。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Conseil was sure that Captain Nemo ____ never let them leave the submarine.",
+      "options": [
+        "will",
+        "let",
+        "would",
+        "lets"
+      ],
+      "answer_index": 2,
+      "explanation": "was sure 过去 + never(指向将来) → would let。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Aronnax realised that words ____ never be enough to describe such wonders.",
+      "options": [
+        "will",
+        "were",
+        "are",
+        "would"
+      ],
+      "answer_index": 3,
+      "explanation": "realised 过去,从过去看的判断 → would be。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The team hoped that the good weather ____ until they reached the top.",
+      "options": [
+        "would hold",
+        "will hold",
+        "held",
+        "holds"
+      ],
+      "answer_index": 0,
+      "explanation": "hoped 过去、天气能否维持指向将来 → would hold。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Hours earlier, no one imagined that the calm sea ____ soon turn deadly.",
+      "options": [
+        "will",
+        "would",
+        "turned",
+        "turns"
+      ],
+      "answer_index": 1,
+      "explanation": "imagined 过去 + soon 将来 → would turn。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The instructor told the divers that the seals ____ them among the seaweed.",
+      "options": [
+        "will follow",
+        "followed",
+        "would follow",
+        "follow"
+      ],
+      "answer_index": 2,
+      "explanation": "told 过去、跟随尚未发生 → would follow。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Mallory wrote that the adventure ____ him nothing but sheer joy.",
+      "options": [
+        "will give",
+        "gave",
+        "gives",
+        "would give"
+      ],
+      "answer_index": 3,
+      "explanation": "wrote 过去,所写的将来感受 → would give。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The captain felt certain that they ____ on the island for many months.",
+      "options": [
+        "would remain",
+        "will remain",
+        "remained",
+        "remain"
+      ],
+      "answer_index": 0,
+      "explanation": "felt certain 过去 + for many months(指向将来) → would remain。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Before the expedition, the doctor said low air pressure ____ some climbers sick.",
+      "options": [
+        "will make",
+        "would make",
+        "made",
+        "makes"
+      ],
+      "answer_index": 1,
+      "explanation": "said 过去、所说之事指向旅途中的将来 → would make。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The young climber was sure this experience ____ him far stronger.",
+      "options": [
+        "will make",
+        "made",
+        "would make",
+        "makes"
+      ],
+      "answer_index": 2,
+      "explanation": "was sure 过去,从过去看的将来 → would make。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "We all believed that help ____ before nightfall.",
+      "options": [
+        "will arrive",
+        "arrived",
+        "arrives",
+        "would arrive"
+      ],
+      "answer_index": 3,
+      "explanation": "believed 过去 + before nightfall(尚未发生) → would arrive。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "I ____ some water, but the storm broke all our barrels.",
+      "options": [
+        "was going to collect",
+        "am going to collect",
+        "will collect",
+        "collected"
+      ],
+      "answer_index": 0,
+      "explanation": "过去的打算且未实现(but…) → was going to collect;现在 am going to/will 视角错,collected 表示已收集到与 but 矛盾。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "We ____ the tent, but the wind was far too strong.",
+      "options": [
+        "are going to put up",
+        "were going to put up",
+        "will put up",
+        "put up"
+      ],
+      "answer_index": 1,
+      "explanation": "过去打算 + but 未做成 → were going to put up。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The sailors ____ a fire, but they could not find any dry logs.",
+      "options": [
+        "are going to build",
+        "will build",
+        "were going to build",
+        "built"
+      ],
+      "answer_index": 2,
+      "explanation": "过去打算未实现 → were going to build。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "I ____ for food, but I hurt my arm on the rocks.",
+      "options": [
+        "am going to hunt",
+        "will hunt",
+        "hunted",
+        "was going to hunt"
+      ],
+      "answer_index": 3,
+      "explanation": "过去打算 + but 受伤未做 → was going to hunt。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Arnette ____ several other peaks, but bad weather stopped him.",
+      "options": [
+        "was going to climb",
+        "is going to climb",
+        "will climb",
+        "climbed"
+      ],
+      "answer_index": 0,
+      "explanation": "过去的计划被天气打断 → was going to climb。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "We ____ home that week, but the captain changed the plan.",
+      "options": [
+        "are going to sail",
+        "were going to sail",
+        "will sail",
+        "sailed"
+      ],
+      "answer_index": 1,
+      "explanation": "过去打算 + but 计划改变 → were going to sail。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Mallory ____ at the camp, but the clear sky tempted him higher.",
+      "options": [
+        "is going to rest",
+        "will rest",
+        "was going to rest",
+        "rested"
+      ],
+      "answer_index": 2,
+      "explanation": "过去打算未实现 → was going to rest。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The divers ____ the shipwreck, but the water was too rough.",
+      "options": [
+        "are going to explore",
+        "will explore",
+        "explored",
+        "were going to explore"
+      ],
+      "answer_index": 3,
+      "explanation": "过去计划被海况打断 → were going to explore。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "I ____ a photo of the summit, but my hands were frozen.",
+      "options": [
+        "was going to take",
+        "am going to take",
+        "will take",
+        "took"
+      ],
+      "answer_index": 0,
+      "explanation": "过去打算 + but 未拍成 → was going to take。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "They ____ port at dawn, but a thick fog held them back.",
+      "options": [
+        "are going to leave",
+        "were going to leave",
+        "will leave",
+        "left"
+      ],
+      "answer_index": 1,
+      "explanation": "过去打算被大雾阻拦 → were going to leave。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "She ____ the expedition, but her injury kept her at home.",
+      "options": [
+        "is going to join",
+        "will join",
+        "was going to join",
+        "joined"
+      ],
+      "answer_index": 2,
+      "explanation": "过去打算未实现 → was going to join。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "We ____ the death zone before noon, but the snow slowed us down.",
+      "options": [
+        "are going to cross",
+        "will cross",
+        "crossed",
+        "were going to cross"
+      ],
+      "answer_index": 3,
+      "explanation": "过去计划被大雪打乱 → were going to cross。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The captain ____ to his family, but there was no time before the voyage.",
+      "options": [
+        "was going to write",
+        "is going to write",
+        "will write",
+        "wrote"
+      ],
+      "answer_index": 0,
+      "explanation": "过去打算 + but 没时间 → was going to write。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "I ____ halfway, but my friends encouraged me to keep going.",
+      "options": [
+        "am going to give up",
+        "was going to give up",
+        "will give up",
+        "gave up"
+      ],
+      "answer_index": 1,
+      "explanation": "过去念头未付诸行动 → was going to give up。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The team ____ from Chengdu, but three friends got injured first.",
+      "options": [
+        "are going to start",
+        "will start",
+        "were going to start",
+        "started"
+      ],
+      "answer_index": 2,
+      "explanation": "过去计划被打断 → were going to start。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "He ____ to the nearest island, but the waves were rising fast.",
+      "options": [
+        "is going to swim",
+        "will swim",
+        "swam",
+        "was going to swim"
+      ],
+      "answer_index": 3,
+      "explanation": "过去打算未实现 → was going to swim。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "We ____ on the shore, but the tide came in too quickly.",
+      "options": [
+        "were going to camp",
+        "are going to camp",
+        "will camp",
+        "camped"
+      ],
+      "answer_index": 0,
+      "explanation": "过去打算被潮水打断 → were going to camp。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "I ____ the bite with water, but the liquid medicine had run out.",
+      "options": [
+        "am going to cool",
+        "was going to cool",
+        "will cool",
+        "cooled"
+      ],
+      "answer_index": 1,
+      "explanation": "过去打算 + but 药用完没做成 → was going to cool。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The guide ____ us up the south ridge, but a landslide blocked the path.",
+      "options": [
+        "is going to lead",
+        "will lead",
+        "was going to lead",
+        "led"
+      ],
+      "answer_index": 2,
+      "explanation": "过去计划被滑坡打断 → was going to lead。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "They ____ the whole journey, but the camera broke on the first day.",
+      "options": [
+        "are going to film",
+        "will film",
+        "filmed",
+        "were going to film"
+      ],
+      "answer_index": 3,
+      "explanation": "过去计划未实现 → were going to film。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The biologist promised that he ____ every wonder he saw the next day.",
+      "options": [
+        "would describe",
+        "will describe",
+        "described",
+        "describes"
+      ],
+      "answer_index": 0,
+      "explanation": "转述过去的承诺、事在 the next day → will→would describe。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Verne wrote that one day machines ____ deep beneath the sea.",
+      "options": [
+        "will travel",
+        "would travel",
+        "travelled",
+        "travel"
+      ],
+      "answer_index": 1,
+      "explanation": "过去主句 + one day 将来,转述将来 → would travel。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Arnette explained that the climb ____ him to look deep inside himself.",
+      "options": [
+        "will force",
+        "forced",
+        "would force",
+        "forces"
+      ],
+      "answer_index": 2,
+      "explanation": "explained 过去、转述当时所说的将来作用 → would force。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Farley said that 'Type T' people ____ taking risks all their lives.",
+      "options": [
+        "will keep",
+        "kept",
+        "keep",
+        "would keep"
+      ],
+      "answer_index": 3,
+      "explanation": "said 过去 + all their lives(指向将来) → would keep。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Before the trip, we agreed that we ____ every difficulty along the way.",
+      "options": [
+        "would share",
+        "will share",
+        "shared",
+        "share"
+      ],
+      "answer_index": 0,
+      "explanation": "agreed 过去、所约定之事在旅途将来 → would share。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "She said she ____ the next expedition to the South Pole.",
+      "options": [
+        "is going to join",
+        "was going to join",
+        "will join",
+        "joined"
+      ],
+      "answer_index": 1,
+      "explanation": "转述过去的打算:be going to→was going to join。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "They told us they ____ the strait before the storm arrived.",
+      "options": [
+        "are going to cross",
+        "will cross",
+        "were going to cross",
+        "crossed"
+      ],
+      "answer_index": 2,
+      "explanation": "转述过去的计划 → were going to cross。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "He explained that he ____ a book about his undersea adventure.",
+      "options": [
+        "is going to write",
+        "will write",
+        "wrote",
+        "was going to write"
+      ],
+      "answer_index": 3,
+      "explanation": "explained 过去 + 计划:be going to→was going to write。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The guide reminded us that the thin air ____ us feel weak near the top.",
+      "options": [
+        "would make",
+        "will make",
+        "made",
+        "makes"
+      ],
+      "answer_index": 0,
+      "explanation": "reminded 过去、所提醒之事指向登顶时 → would make。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Mallory was sure that the mountain ____ him pure joy, not money.",
+      "options": [
+        "will give",
+        "would give",
+        "gave",
+        "gives"
+      ],
+      "answer_index": 1,
+      "explanation": "was sure 过去,转述从过去看的将来 → would give。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The doctor said the bleeding ____ once we pressed the wound firmly.",
+      "options": [
+        "will stop",
+        "stopped",
+        "would stop",
+        "stops"
+      ],
+      "answer_index": 2,
+      "explanation": "said 过去、所说结果尚未发生 → would stop。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "I knew that the journey ahead ____ both my body and my mind.",
+      "options": [
+        "will test",
+        "tested",
+        "tests",
+        "would test"
+      ],
+      "answer_index": 3,
+      "explanation": "knew 过去 + ahead(指向将来) → would test。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Tom told me he ____ wreck diving near the Farne Islands.",
+      "options": [
+        "was going to try",
+        "is going to try",
+        "will try",
+        "tried"
+      ],
+      "answer_index": 0,
+      "explanation": "转述过去的打算 → was going to try。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Standing on the deck, none of us guessed those waters ____ our ship apart.",
+      "options": [
+        "will tear",
+        "would tear",
+        "tore",
+        "tear"
+      ],
+      "answer_index": 1,
+      "explanation": "guessed 过去、当时灾难尚未发生 → would tear。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "As a young writer, Verne dreamed that humans ____ the centre of the Earth.",
+      "options": [
+        "will reach",
+        "reached",
+        "would reach",
+        "reach"
+      ],
+      "answer_index": 2,
+      "explanation": "dreamed 过去,转述对将来的设想 → would reach。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The forecast had warned that the temperature ____ sharply after dark.",
+      "options": [
+        "will fall",
+        "fell",
+        "falls",
+        "would fall"
+      ],
+      "answer_index": 3,
+      "explanation": "had warned 过去 + after dark(将来) → would fall。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "At base camp, we hoped the weather ____ clear until we returned.",
+      "options": [
+        "would stay",
+        "will stay",
+        "stayed",
+        "stays"
+      ],
+      "answer_index": 0,
+      "explanation": "hoped 过去、天气能否维持指向将来 → would stay。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The old sailor often said that he ____ to the sea before he grew too old.",
+      "options": [
+        "will return",
+        "would return",
+        "returned",
+        "returns"
+      ],
+      "answer_index": 1,
+      "explanation": "said 过去 + before he grew too old(将来) → would return。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The captain told the crew that they ____ port the following morning.",
+      "options": [
+        "will leave",
+        "left",
+        "would leave",
+        "leave"
+      ],
+      "answer_index": 2,
+      "explanation": "转述过去的话 + the following morning 将来 → would leave。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "We were told that a rescue team ____ for us as soon as the storm passed.",
+      "options": [
+        "is going to search",
+        "will search",
+        "searched",
+        "was going to search"
+      ],
+      "answer_index": 3,
+      "explanation": "转述过去的安排(be going to→was going to);as soon as 引出将来 → was going to search。"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "topic": "Write an Adventure Story(写一篇冒险故事)",
+  "title_en": "An Adventure I Will Never Forget",
+  "genre": "记叙 / 冒险故事(narrative:tell an adventure with a clear beginning, middle and end)",
+  "source": "外研社必修第三册 Unit 5 Developing & Presenting ideas:write a diary / tell an adventure story(讲述一次真实或想象的冒险经历)。自然运用过去将来时(would / was going to)。",
+  "prompt_cn": "假设你叫李华,英语社团要出一期'My Adventure'专栏。请用英语写一篇约100词的冒险故事,内容包括:① 冒险发生的时间、地点和同伴;② 发生了什么(遇到的困难或惊险一刻);③ 你的感受与收获。要求:用一般过去时叙事,并自然用上过去将来时(如 I knew it would …, We were going to …)。",
+  "prompt_en": "Suppose you are Li Hua. Your English club is making a column called 'My Adventure'. Write a story of about 100 words including: 1) when and where the adventure happened and who you were with; 2) what happened (a difficulty or an exciting moment); 3) how you felt and what you learned. Use the past tense to tell the story, and use the past future (e.g. I knew it would…, We were going to…) where it sounds natural.",
+  "points": [
+    "交代时间/地点/同伴(Last summer, my friends and I …)",
+    "讲清发生了什么、惊险或困难的一刻(Suddenly … / We were going to …, but …)",
+    "用过去将来表达当时对将来的预期(I knew the trip would …)",
+    "结尾写感受与收获(It was scary, but I learned that …)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Last summer, my friends and I went hiking in the mountains. Before we set out, the guide told us that the weather would change quickly, so we packed warm coats and a first aid kit. At first the path was easy, and we were going to reach the top by noon. Then dark clouds gathered, and I knew a storm was coming. We held on to the rope and climbed down slowly and carefully. When we finally reached the camp, everyone was cold but safe. It was the scariest moment of my life, yet I learned that good planning and courage can carry you through any adventure.",
+  "model_translation": "去年夏天,我和朋友们去山里徒步。出发前,向导告诉我们天气会很快变化,于是我们带了保暖外套和急救包。起初山路很好走,我们本打算中午前登顶。后来乌云聚拢,我知道一场风暴就要来了。我们抓住绳子,慢慢小心地往下爬。终于回到营地时,大家又冷又安全。那是我一生中最惊险的时刻,但我懂得了:周密的计划和勇气能带你度过任何冒险。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:时间地点同伴 / 发生的事(困难或惊险) / 感受与收获" },
+      { "dimension": "结构", "max": 4, "criteria": "按时间顺序叙事、起承转合清楚、过渡自然、代词指代清楚" },
+      { "dimension": "语言", "max": 5, "criteria": "一般过去时叙事准确、过去将来(would / was going to)运用得当、词汇多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "开头 Last summer, my friends and I …",
+      "铺垫(过去将来) The guide told us that the weather would …",
+      "转折 Then …, and I knew a storm was coming.",
+      "结尾感受 It was …, yet I learned that …"
+    ],
+    "key_expressions": [
+      "The guide told us that the weather would change quickly.",
+      "We were going to reach the top by noon.",
+      "I knew a storm was coming.",
+      "I learned that good planning and courage can carry you through any adventure."
+    ],
+    "useful_words": ["adventure", "guide", "first aid", "storm", "rope", "camp", "courage", "would", "be going to", "set out"]
+  },
+  "high_sentences": [
+    "Before we set out, the guide told us that the weather would change quickly.",
+    "At first the path was easy, and we were going to reach the top by noon.",
+    "Then dark clouds gathered, and I knew a storm was coming.",
+    "I learned that good planning and courage can carry you through any adventure."
+  ],
+  "error_pairs": [
+    { "wrong": "He said the weather will change.", "correct": "He said the weather would change.", "note": "主句过去时,转述将来用 would,而非 will。" },
+    { "wrong": "We were going to reached the top.", "correct": "We were going to reach the top.", "note": "be going to 后接动词原形。" },
+    { "wrong": "I knew a storm is coming.", "correct": "I knew a storm was coming.", "note": "主句 knew 为过去,从句时态相应后移。" }
+  ],
+  "paragraph_template": "【冒险故事结构】\n第1句 交代时间地点同伴:Last summer, my friends and I …\n第2句 铺垫(过去将来):The guide told us that … would … / We were going to …\n第3-4句 转折与高潮:Then …, and I knew … We …\n第5句 感受与收获:It was …, yet I learned that …"
+}

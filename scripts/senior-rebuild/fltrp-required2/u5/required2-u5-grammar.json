@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U5",
+  "grammar_title": "-ing 分词作定语(主动/进行含义)",
+  "source": "外研社版必修第二册 Unit 5 Using language:-ing 分词作定语。前置修饰(a rising sun)/后置修饰短语(= 定语从句,the road leading to town)/-ing 与 -ed 的主动被动对比。句子地道,旅行主题,干扰项为 -ed/不定式/原形,使主动·进行含义的 -ing 唯一成立。",
+  "points": [
+    {
+      "code": "u5.01",
+      "point": "前置 -ing(单个分词作定语:a running river)",
+      "overview": "单个 -ing 分词放在名词前作定语,表主动/正在进行(被修饰名词主动发出该动作):the rising sun = 正在升起的太阳。干扰的 -ed 表被动/完成,在此不成立。"
+    },
+    {
+      "code": "u5.02",
+      "point": "后置 -ing 短语(= 定语从句:the road leading to town)",
+      "overview": "-ing 分词带宾语/状语时放在名词后作定语,相当于一个主动的定语从句(the road leading to town = the road that leads to town)。"
+    },
+    {
+      "code": "u5.03",
+      "point": "-ing 与 -ed 作定语的主动/被动对比",
+      "overview": "事物使人产生感受时,用 -ing(主动:令人……的);人感到该感受时才用 -ed。an exciting journey = 令人兴奋的旅程(旅程主动让人兴奋)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u5.01",
+      "stem": "Look at the ____ sun over the eastern hills; it is going to be a fine day.",
+      "options": [
+        "rising",
+        "risen",
+        "to rise",
+        "rise"
+      ],
+      "answer_index": 0,
+      "explanation": "太阳主动'正在升起',名词前用 -ing;risen 表完成/被动,在此不成立。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Cars cannot cross the ____ river after two days of heavy rain.",
+      "options": [
+        "flowed",
+        "flowing",
+        "to flow",
+        "flow"
+      ],
+      "answer_index": 1,
+      "explanation": "河水主动奔流,前置定语用 flowing。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "We filled our bottles with cold ____ water from the mountain spring.",
+      "options": [
+        "ran",
+        "to run",
+        "running",
+        "run"
+      ],
+      "answer_index": 2,
+      "explanation": "running water 流动的水,水主动流动,用 -ing。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The ____ road up the hill made our drive into the village very slow.",
+      "options": [
+        "wound",
+        "to wind",
+        "wind",
+        "winding"
+      ],
+      "answer_index": 3,
+      "explanation": "蜿蜒的路,路主动'盘绕而上',用 winding;wound 表被动不成立。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "We stopped the car to watch the ____ sun turn the sky orange.",
+      "options": [
+        "setting",
+        "set",
+        "to set",
+        "sets"
+      ],
+      "answer_index": 0,
+      "explanation": "正在西沉的太阳,主动进行,用 setting。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "A ____ number of tourists visit this small island every summer.",
+      "options": [
+        "grown",
+        "growing",
+        "to grow",
+        "grow"
+      ],
+      "answer_index": 1,
+      "explanation": "a growing number 不断增长的数量,主动进行,用 -ing。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The ____ wind on the mountain pass made every traveller shiver.",
+      "options": [
+        "frozen",
+        "to freeze",
+        "freezing",
+        "freeze"
+      ],
+      "answer_index": 2,
+      "explanation": "刺骨的(正在使人冷的)风,主动用 freezing;frozen 表被冻结,在此不成立。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "We could hear ____ dogs as we walked through the quiet village at night.",
+      "options": [
+        "barked",
+        "to bark",
+        "bark",
+        "barking"
+      ],
+      "answer_index": 3,
+      "explanation": "正在吠叫的狗,主动进行,用 barking。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The ____ holiday gave us a perfect chance to plan a long trip.",
+      "options": [
+        "coming",
+        "come",
+        "to come",
+        "comes"
+      ],
+      "answer_index": 0,
+      "explanation": "即将到来的假期,主动用 coming(= the holiday that is coming)。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The ____ seasons make this region beautiful all year round.",
+      "options": [
+        "changed",
+        "changing",
+        "to change",
+        "change"
+      ],
+      "answer_index": 1,
+      "explanation": "不断变化的季节,主动进行,用 changing;changed 表被改变,不合此意。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "From the boat we watched the ____ stars above the calm dark sea.",
+      "options": [
+        "shone",
+        "to shine",
+        "shining",
+        "shine"
+      ],
+      "answer_index": 2,
+      "explanation": "闪耀的星星,星星主动发光,用 shining。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The ____ storm forced the travellers to stay one more night at the inn.",
+      "options": [
+        "approached",
+        "to approach",
+        "approach",
+        "approaching"
+      ],
+      "answer_index": 3,
+      "explanation": "正在逼近的风暴,主动进行,用 approaching。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "A ____ passenger missed his stop and only woke up at the last station.",
+      "options": [
+        "sleeping",
+        "slept",
+        "to sleep",
+        "sleep"
+      ],
+      "answer_index": 0,
+      "explanation": "正在睡觉的乘客,主动进行,用 sleeping。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The ____ passengers on the platform kept looking at their watches.",
+      "options": [
+        "waited",
+        "waiting",
+        "to wait",
+        "wait"
+      ],
+      "answer_index": 1,
+      "explanation": "正在等候的乘客,主动进行,用 waiting。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The ____ train left the station exactly on time this morning.",
+      "options": [
+        "departed",
+        "to depart",
+        "departing",
+        "depart"
+      ],
+      "answer_index": 2,
+      "explanation": "正要离站的列车,主动用 departing。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The ____ hills around the lake were covered with thick green trees.",
+      "options": [
+        "surrounded",
+        "to surround",
+        "surround",
+        "surrounding"
+      ],
+      "answer_index": 3,
+      "explanation": "周围的群山,山主动'环绕',用 surrounding;hills 本身不被环绕,故不用 surrounded。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "We waved at the ____ cars from the side of the country road.",
+      "options": [
+        "passing",
+        "passed",
+        "to pass",
+        "pass"
+      ],
+      "answer_index": 0,
+      "explanation": "经过的车,车主动驶过,用 passing。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "We could hear the ____ waves against the rocks all through the night.",
+      "options": [
+        "rolled",
+        "rolling",
+        "to roll",
+        "roll"
+      ],
+      "answer_index": 1,
+      "explanation": "翻滚的海浪,主动进行,用 rolling。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The ____ engine of the old tour bus made a very loud noise.",
+      "options": [
+        "roared",
+        "to roar",
+        "roaring",
+        "roar"
+      ],
+      "answer_index": 2,
+      "explanation": "轰鸣的引擎,主动发声,用 roaring。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Bright ____ lights welcomed us to the small seaside town at night.",
+      "options": [
+        "flashed",
+        "to flash",
+        "flash",
+        "flashing"
+      ],
+      "answer_index": 3,
+      "explanation": "闪烁的灯,主动闪烁,用 flashing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The road ____ to the village is very steep and narrow.",
+      "options": [
+        "leading",
+        "led",
+        "to lead",
+        "lead"
+      ],
+      "answer_index": 0,
+      "explanation": "= the road that leads to the village,主动后置定语用 leading。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The man ____ next to the driver is our local guide for the trip.",
+      "options": [
+        "sat",
+        "sitting",
+        "to sit",
+        "sit"
+      ],
+      "answer_index": 1,
+      "explanation": "= the man who is sitting next to the driver,主动后置用 sitting。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The train ____ from Beijing arrives at the coast around noon.",
+      "options": [
+        "come",
+        "to come",
+        "coming",
+        "comes"
+      ],
+      "answer_index": 2,
+      "explanation": "= the train that comes from Beijing,主动用 coming。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Tourists ____ photos of the blue lake were smiling happily.",
+      "options": [
+        "taken",
+        "to take",
+        "take",
+        "taking"
+      ],
+      "answer_index": 3,
+      "explanation": "= tourists who were taking photos,主动用 taking;taken 表被动不成立。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The bus ____ along the coast offers wonderful views of the sea.",
+      "options": [
+        "running",
+        "ran",
+        "to run",
+        "run"
+      ],
+      "answer_index": 0,
+      "explanation": "= the bus that runs along the coast,主动用 running。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The river ____ through the green valley is deep and very cold.",
+      "options": [
+        "flowed",
+        "flowing",
+        "to flow",
+        "flow"
+      ],
+      "answer_index": 1,
+      "explanation": "= the river that flows through the valley,主动用 flowing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The plane ____ to London was delayed for hours by the storm.",
+      "options": [
+        "flown",
+        "to fly",
+        "flying",
+        "fly"
+      ],
+      "answer_index": 2,
+      "explanation": "= the plane that was flying to London,主动用 flying;flown 表被动不成立。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The path ____ up the hill is hard to follow when it rains.",
+      "options": [
+        "wound",
+        "to wind",
+        "wind",
+        "winding"
+      ],
+      "answer_index": 3,
+      "explanation": "= the path that winds up the hill,主动用 winding。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "A sign ____ the way to the museum stood at the street corner.",
+      "options": [
+        "showing",
+        "shown",
+        "to show",
+        "show"
+      ],
+      "answer_index": 0,
+      "explanation": "= a sign that showed the way,主动用 showing;shown 表被动不成立。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The guide ____ in front of us spoke loudly and very clearly.",
+      "options": [
+        "walked",
+        "walking",
+        "to walk",
+        "walk"
+      ],
+      "answer_index": 1,
+      "explanation": "= the guide who was walking in front,主动用 walking。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The family ____ in the car behind us were singing travel songs.",
+      "options": [
+        "travelled",
+        "to travel",
+        "travelling",
+        "travel"
+      ],
+      "answer_index": 2,
+      "explanation": "= the family who were travelling in the car,主动用 travelling。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "A couple ____ their heavy luggage hurried past the boarding gate.",
+      "options": [
+        "carried",
+        "to carry",
+        "carry",
+        "carrying"
+      ],
+      "answer_index": 3,
+      "explanation": "= a couple who were carrying their luggage,主动用 carrying。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The children ____ on the beach built tall castles out of sand.",
+      "options": [
+        "playing",
+        "played",
+        "to play",
+        "play"
+      ],
+      "answer_index": 0,
+      "explanation": "= the children who were playing on the beach,主动用 playing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The ferry ____ the wide river was completely full of cars.",
+      "options": [
+        "crossed",
+        "crossing",
+        "to cross",
+        "cross"
+      ],
+      "answer_index": 1,
+      "explanation": "= the ferry that was crossing the river,主动用 crossing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The woman ____ the paper map gave us very clear directions.",
+      "options": [
+        "held",
+        "to hold",
+        "holding",
+        "hold"
+      ],
+      "answer_index": 2,
+      "explanation": "= the woman who was holding the map,主动用 holding。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The boat ____ near the shore was full of happy young tourists.",
+      "options": [
+        "sailed",
+        "to sail",
+        "sail",
+        "sailing"
+      ],
+      "answer_index": 3,
+      "explanation": "= the boat that was sailing near the shore,主动用 sailing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "People ____ aboard the ship waved goodbye to their families.",
+      "options": [
+        "going",
+        "gone",
+        "to go",
+        "goes"
+      ],
+      "answer_index": 0,
+      "explanation": "= people who were going aboard,主动用 going;gone 表被动/完成不成立。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The travellers ____ for the late bus grew more and more impatient.",
+      "options": [
+        "waited",
+        "waiting",
+        "to wait",
+        "wait"
+      ],
+      "answer_index": 1,
+      "explanation": "= the travellers who were waiting for the bus,主动用 waiting。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The lights ____ in the distance showed us the way back to town.",
+      "options": [
+        "shone",
+        "to shine",
+        "shining",
+        "shine"
+      ],
+      "answer_index": 2,
+      "explanation": "= the lights that were shining in the distance,主动用 shining。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "A young man ____ a large backpack asked us the way to the station.",
+      "options": [
+        "worn",
+        "to wear",
+        "wear",
+        "wearing"
+      ],
+      "answer_index": 3,
+      "explanation": "= a young man who was wearing a backpack,主动用 wearing;worn 表被动不成立。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "It was the most ____ journey of my whole life, full of surprises.",
+      "options": [
+        "exciting",
+        "excited",
+        "to excite",
+        "excite"
+      ],
+      "answer_index": 0,
+      "explanation": "旅程令人兴奋,事物用 -ing;若说人 excited 才用 -ed。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "We enjoyed an ____ view of the whole bay from the mountain top.",
+      "options": [
+        "amazed",
+        "amazing",
+        "to amaze",
+        "amaze"
+      ],
+      "answer_index": 1,
+      "explanation": "景色令人惊叹,事物主动'使人惊叹',用 amazing。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The night bus to the coast turned out to be a really ____ ride.",
+      "options": [
+        "tired",
+        "to tire",
+        "tiring",
+        "tire"
+      ],
+      "answer_index": 2,
+      "explanation": "车程令人疲惫,事物用 tiring;人累才说 tired。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Our guide told us an ____ story about the old fishing harbour.",
+      "options": [
+        "interested",
+        "to interest",
+        "interest",
+        "interesting"
+      ],
+      "answer_index": 3,
+      "explanation": "故事有趣,事物用 interesting;人感兴趣才说 interested。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "A long ____ delay at the airport ruined the whole morning for us.",
+      "options": [
+        "annoying",
+        "annoyed",
+        "to annoy",
+        "annoy"
+      ],
+      "answer_index": 0,
+      "explanation": "延误令人恼火,事物用 annoying。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The ____ news about the cancelled flight upset everyone at the gate.",
+      "options": [
+        "disappointed",
+        "disappointing",
+        "to disappoint",
+        "disappoint"
+      ],
+      "answer_index": 1,
+      "explanation": "消息令人失望,事物用 disappointing。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "We had a ____ experience while crossing the wild empty desert.",
+      "options": [
+        "frightened",
+        "to frighten",
+        "frightening",
+        "frighten"
+      ],
+      "answer_index": 2,
+      "explanation": "经历令人害怕,事物用 frightening。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "From the cliff we saw a truly ____ sight as the sun went down.",
+      "options": [
+        "surprised",
+        "to surprise",
+        "surprise",
+        "surprising"
+      ],
+      "answer_index": 3,
+      "explanation": "景象令人惊讶,事物用 surprising。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The ____ scenery along the coast made us stop the car several times.",
+      "options": [
+        "charming",
+        "charmed",
+        "to charm",
+        "charm"
+      ],
+      "answer_index": 0,
+      "explanation": "风景迷人,事物主动'使人着迷',用 charming。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Reaching the top after the long climb was a ____ moment for us all.",
+      "options": [
+        "satisfied",
+        "satisfying",
+        "to satisfy",
+        "satisfy"
+      ],
+      "answer_index": 1,
+      "explanation": "时刻令人满足,事物用 satisfying。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "We were given a ____ map that led us the wrong way twice.",
+      "options": [
+        "confused",
+        "to confuse",
+        "confusing",
+        "confuse"
+      ],
+      "answer_index": 2,
+      "explanation": "地图令人困惑,事物用 confusing;人糊涂才说 confused。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The slow local train ride soon became a ____ part of the day.",
+      "options": [
+        "bored",
+        "to bore",
+        "bore",
+        "boring"
+      ],
+      "answer_index": 3,
+      "explanation": "车程令人无聊,事物用 boring;人感到无聊才说 bored。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The sudden storm at sea was a ____ event for the small crew.",
+      "options": [
+        "shocking",
+        "shocked",
+        "to shock",
+        "shock"
+      ],
+      "answer_index": 0,
+      "explanation": "事件令人震惊,事物用 shocking。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The poor road signs were a ____ problem for every driver there.",
+      "options": [
+        "worried",
+        "worrying",
+        "to worry",
+        "worry"
+      ],
+      "answer_index": 1,
+      "explanation": "问题令人担忧,事物用 worrying;人担心才说 worried。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "In the end, a safe and happy journey home was a ____ result.",
+      "options": [
+        "pleased",
+        "to please",
+        "pleasing",
+        "please"
+      ],
+      "answer_index": 2,
+      "explanation": "结果令人高兴,事物用 pleasing。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The poster on the wall showed an ____ photo of a wild waterfall.",
+      "options": [
+        "inspired",
+        "to inspire",
+        "inspire",
+        "inspiring"
+      ],
+      "answer_index": 3,
+      "explanation": "照片鼓舞人心,事物用 inspiring。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Climbing the volcano turned out to be an ____ task for the group.",
+      "options": [
+        "exhausting",
+        "exhausted",
+        "to exhaust",
+        "exhaust"
+      ],
+      "answer_index": 0,
+      "explanation": "任务使人精疲力竭,事物用 exhausting;人累垮才说 exhausted。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The old town was a ____ maze of narrow little streets and steps.",
+      "options": [
+        "puzzled",
+        "puzzling",
+        "to puzzle",
+        "puzzle"
+      ],
+      "answer_index": 1,
+      "explanation": "迷宫令人费解,事物用 puzzling。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The cool sea breeze gave us a ____ feeling after the long hot drive.",
+      "options": [
+        "refreshed",
+        "to refresh",
+        "refreshing",
+        "refresh"
+      ],
+      "answer_index": 2,
+      "explanation": "感觉清爽提神,事物用 refreshing。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The colourful street festival was an ____ event for all the visitors.",
+      "options": [
+        "excited",
+        "to excite",
+        "excite",
+        "exciting"
+      ],
+      "answer_index": 3,
+      "explanation": "活动令人兴奋,事物用 exciting。"
+    }
+  ]
+}

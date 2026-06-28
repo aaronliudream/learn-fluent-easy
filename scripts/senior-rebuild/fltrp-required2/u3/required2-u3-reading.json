@@ -1,0 +1,354 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "topic": "On the Move",
+  "source": "外研社版(新标准)必修第二册 Unit 3 同主题阅读(足球为何风靡/运动手表/太极拳/带哮喘的跑者/大猩猩慈善跑/随处可做的健身)。词限 U3/初中/常见词,答案转述非照抄,4选项唯一,与听写关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Game for the World",
+      "topic_cn": "说明·足球为何风靡全球",
+      "body": "These days, football is one of the most popular sports on the planet. The game is very old: it goes back over two thousand years to ancient China, where it was known as cuju. Players kicked a ball made of animal skin towards goals hung in the air. The football we know today, however, took shape in Great Britain, where the game was given a clear set of rules. Why has it spread to almost every country? One reason is that it is a simple game to play and needs very little equipment. Even the ball does not have to be expensive; children everywhere play happily with a ball made of plastic bags. Another reason is the excitement on the field. You do not have to be a fan to enjoy watching skilful players pass, score and defend. Football also brings people together, breaking down walls between strangers and even, for one famous moment in 1914, between soldiers at war.",
+      "vocab_notes": [
+        {
+          "word": "equipment",
+          "cn": "装备"
+        },
+        {
+          "word": "plastic",
+          "cn": "塑料制的"
+        },
+        {
+          "word": "defend",
+          "cn": "防守"
+        },
+        {
+          "word": "soldier",
+          "cn": "士兵"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where did the modern form of football develop its rules?",
+          "options": [
+            "In Great Britain.",
+            "In ancient China.",
+            "On the Moon.",
+            "In Germany."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说现代足球在英国成形并被定下明确规则;其余为相反或未提。"
+        },
+        {
+          "stem": "According to the text, why can poor children still enjoy football?",
+          "options": [
+            "It must be played inside a big stadium.",
+            "It needs very little equipment, and a cheap ball will do.",
+            "It requires very expensive shoes.",
+            "It can only be played in Britain."
+          ],
+          "answer_index": 1,
+          "explanation": "原文指出足球器材需求很少、塑料袋做的球就能玩,是对此的转述。"
+        },
+        {
+          "stem": "What does the example from 1914 mainly show?",
+          "options": [
+            "Football can bring together even people who are enemies.",
+            "Football was first invented during a war.",
+            "Soldiers preferred fighting to playing games.",
+            "Football's rules were changed in 1914."
+          ],
+          "answer_index": 0,
+          "explanation": "1914 年敌对士兵一起踢球说明足球能让人团结,是对该例子作用的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Watch for Every Athlete",
+      "topic_cn": "应用文·运动手表广告",
+      "body": "Are you looking for a watch that can help you keep track of your fitness? Whether you are a professional athlete or simply a keen beginner, the new DX Sports Watch may be the ideal choice for you. The watch has a bright digital display that records your steps, speed and distance. At the same time, it can monitor your heart rate and the number of calories you burn during exercise. A clever voice-control setting lets you change the screen without using your hands, so you can stay focused on your training. Because the soft band is waterproof and fully adjustable, the watch stays comfortable even on a long, sweaty run. It also helps you chart your training progress week by week, so you can clearly see how far you have come. The DX Sports Watch is available online only, so visit our website and place your order today.",
+      "vocab_notes": [
+        {
+          "word": "display",
+          "cn": "显示屏"
+        },
+        {
+          "word": "monitor",
+          "cn": "监测"
+        },
+        {
+          "word": "adjustable",
+          "cn": "可调节的"
+        },
+        {
+          "word": "available",
+          "cn": "可买到的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Who is the DX Sports Watch made for?",
+          "options": [
+            "Only professional athletes.",
+            "Both professional athletes and keen beginners.",
+            "Only doctors and nurses.",
+            "Only swimmers."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说无论是专业运动员还是热心的初学者都适用,是对适用人群的转述。"
+        },
+        {
+          "stem": "What allows you to use the watch without your hands?",
+          "options": [
+            "A much larger screen.",
+            "A printed paper manual.",
+            "A voice-control setting.",
+            "A second spare band."
+          ],
+          "answer_index": 2,
+          "explanation": "原文指出语音控制功能让人无须用手操作,是对该功能的概括。"
+        },
+        {
+          "stem": "How can buyers get the watch?",
+          "options": [
+            "From any local shop.",
+            "Only as a free gift.",
+            "By calling a phone number.",
+            "By ordering it online."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说手表只在网上有售,是对购买方式的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Leah and Tai Chi",
+      "topic_cn": "记叙·外国人学太极",
+      "body": "Chinese martial arts are famous all over the world, and every year thousands of people travel to China to study them. One of the most popular choices is tai chi, an art with a very long history. Tai chi involves a series of slow, gentle movements that are meant to relax the mind and calm the body. Leah, a journalist from Britain, first became interested in tai chi after taking a few classes at home. Later she moved to the small town of Yangshuo, where a respected master lives among beautiful hills and rivers. Learning tai chi has not always been easy for her. She has had to get used to early mornings, practise the same basic movements again and again, and even learn some Chinese. Yet she says the art brings her a deep sense of balance and peace. For Leah, tai chi is a simple way to relax, to stay healthy, and to feel more at home in China.",
+      "vocab_notes": [
+        {
+          "word": "involve",
+          "cn": "包含"
+        },
+        {
+          "word": "master",
+          "cn": "大师"
+        },
+        {
+          "word": "balance",
+          "cn": "平衡"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Leah move to Yangshuo?",
+          "options": [
+            "To study under a respected tai chi master there.",
+            "To open her own tai chi school.",
+            "To work there as a tour guide.",
+            "To get away from early mornings."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说阳朔住着一位受人尊敬的大师,她搬去是为了跟他学,是对原因的转述。"
+        },
+        {
+          "stem": "What has been difficult for Leah?",
+          "options": [
+            "Finding a place to live in town.",
+            "Getting up early and repeating the same movements.",
+            "Paying for her tai chi classes.",
+            "Understanding the local weather."
+          ],
+          "answer_index": 1,
+          "explanation": "原文列出早起、反复练同样动作等困难,是对此的概括。"
+        },
+        {
+          "stem": "How does Leah feel about tai chi now?",
+          "options": [
+            "It is too slow to be of any use.",
+            "It has made her tired of living in China.",
+            "It leaves her feeling calm and well balanced inside.",
+            "It is only suitable for old people."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说太极带给她平衡与平静,是对她感受的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Running into a Better Life",
+      "topic_cn": "记叙·带哮喘的跑者",
+      "body": "Li Yue, who is sixteen and lives in Beijing, was born with asthma and never imagined she could become a runner. She only joined her local athletics club because a doctor told her that, in her case, gentle exercise might improve the way her lungs worked. To her surprise, she soon found herself taking part in small local races. As her health and her running both improved, she began to enter larger national competitions. This year she won a silver medal in the under-18 10,000 metres, and she now dreams of winning gold next season. Li Yue says that running has done far more than make her fit. It has given her confidence and led her to achieve things she once thought were impossible. Her advice to others is simple: start with small steps, keep going, and never let an illness decide what you can or cannot do.",
+      "vocab_notes": [
+        {
+          "word": "asthma",
+          "cn": "哮喘"
+        },
+        {
+          "word": "lung",
+          "cn": "肺"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Li Yue first join the athletics club?",
+          "options": [
+            "She wanted to win medals from the start.",
+            "Her friends forced her to take part.",
+            "She disliked staying at home alone.",
+            "Her doctor suggested that exercise might help her lungs."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说医生告诉她锻炼可能改善肺功能,所以她才加入,是对原因的转述。"
+        },
+        {
+          "stem": "What has running given Li Yue besides fitness?",
+          "options": [
+            "Confidence and a belief that she can achieve more.",
+            "A large amount of money.",
+            "A brand-new job in Beijing.",
+            "A complete cure for every illness."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说跑步给了她信心、让她做到曾以为不可能的事,是对此的概括。"
+        },
+        {
+          "stem": "What is Li Yue's advice to others?",
+          "options": [
+            "Only run if you are already perfectly healthy.",
+            "Begin small, keep going, and don't let illness limit you.",
+            "Give up as soon as it becomes hard.",
+            "Train alone and avoid all races."
+          ],
+          "answer_index": 1,
+          "explanation": "原文建议从小步开始、坚持下去、别让疾病决定一切,是对原句的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Great Gorilla Run",
+      "topic_cn": "记叙·大猩猩慈善跑",
+      "body": "David, a fifty-two-year-old computer engineer from New York, has a rather unusual way of dealing with stress. His job is full of new challenges, and at times it makes him feel anxious. To clear his mind, he goes running as often as he can. By the end of a run, he says, his worries seem to disappear and he feels ready for the next day. This year David did something especially strange: he entered the Great Gorilla Run in London. The event raises money to protect the world's last wild gorillas. Every runner has to wear a furry gorilla suit, which is hot and sweaty, and David's legs ached badly by the finish. Even so, he had a wonderful time. The funniest moment came when someone in the crowd offered him a banana, a perfect treat, he joked, for a running gorilla. David enjoyed a great day out and felt proud to help save real gorillas at the same time.",
+      "vocab_notes": [
+        {
+          "word": "disappear",
+          "cn": "消失"
+        },
+        {
+          "word": "gorilla",
+          "cn": "大猩猩"
+        },
+        {
+          "word": "sweaty",
+          "cn": "满是汗的"
+        },
+        {
+          "word": "ache",
+          "cn": "作痛"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does David usually deal with stress from work?",
+          "options": [
+            "He sleeps for much longer.",
+            "He changes his job often.",
+            "He goes running whenever he can.",
+            "He avoids all kinds of exercise."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说他尽量多跑步来理清思绪,是对解压方式的转述。"
+        },
+        {
+          "stem": "What is special about the Great Gorilla Run?",
+          "options": [
+            "It is only open to computer engineers.",
+            "Runners must each carry a banana.",
+            "It takes place in New York.",
+            "Runners wear gorilla suits to raise money for wild gorillas."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说每位跑者穿大猩猩服、为保护野生大猩猩筹款,是对其特别之处的概括。"
+        },
+        {
+          "stem": "How did David feel about the day overall?",
+          "options": [
+            "He had a great time and was proud to help.",
+            "He regretted ever taking part.",
+            "He found the whole event boring.",
+            "He was angry about the heavy suit."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说他度过愉快的一天并为帮助大猩猩而自豪,是对整体感受的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Exercises You Can Do Anywhere",
+      "topic_cn": "说明·随处可做的健身",
+      "body": "You do not need a gym or expensive equipment to keep fit. Some of the best exercises can be done almost anywhere, using only your own body or a simple rope. The plank, for example, asks you to keep your body very still. It looks easy, but it builds your core muscles and strengthens your lower back. Push-ups develop the muscles in your chest and shoulders, as long as you remember to keep your back straight. With just a rope, skipping improves your footwork and balance, is good for your heart, and burns plenty of calories without you going anywhere. If you can find a bar that supports your weight, pull-ups build real strength in your upper body, especially in the arms. Even simple jogging helps your heart and lungs and builds strong leg bones. The best plan is to mix several of these exercises through the week, so that every part of the body gets a turn.",
+      "vocab_notes": [
+        {
+          "word": "plank",
+          "cn": "平板支撑"
+        },
+        {
+          "word": "balance",
+          "cn": "平衡"
+        },
+        {
+          "word": "bar",
+          "cn": "横杆"
+        },
+        {
+          "word": "upper",
+          "cn": "上面的"
+        },
+        {
+          "word": "bone",
+          "cn": "骨头"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the plank mainly train?",
+          "options": [
+            "The leg bones only.",
+            "The core muscles and the lower back.",
+            "Mainly the footwork.",
+            "The chest and shoulders."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说平板支撑锻炼核心肌群、强化下背部,是对其作用的转述。"
+        },
+        {
+          "stem": "What is one benefit of skipping?",
+          "options": [
+            "It needs a heavy machine to work.",
+            "It only trains the arms.",
+            "It improves footwork and balance and burns calories.",
+            "It must always be done outdoors."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说跳绳改善脚法和平衡、燃烧热量,是对好处的概括。"
+        },
+        {
+          "stem": "What is the writer's main advice?",
+          "options": [
+            "Only ever do a single exercise.",
+            "Always train inside a gym.",
+            "Avoid jogging completely.",
+            "Combine several body-weight exercises across the week."
+          ],
+          "answer_index": 3,
+          "explanation": "原文建议一周内混合做几种练习,是对中心建议的转述。"
+        }
+      ]
+    }
+  ]
+}

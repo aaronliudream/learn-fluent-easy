@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "topic": "Making a Difference",
+  "source": "外研社必修三 Unit 2 同主题完形(乡村取水/班级义卖/做志愿者/旧衣捐赠/为孩子读书/环保助人)。用词限 U2/初中/常见词,4选项同词性、无双解,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Water for a Village",
+      "text": "In many parts of the world, getting clean water is still a daily (1)____. In one small village, the children once had to walk for hours to (2)____ water from a dirty river. The water often made them (3)____, and many of them missed school. Then a charity decided to (4)____ a project to help. Workers came to (5)____ a deep well right in the centre of the village. They also taught the families how to (6)____ rainwater so that nothing was wasted. Slowly, life began to (7)____. The children grew healthy enough to study, and their parents could grow more food. The whole village felt deeply (8)____ to everyone who had helped. Their story is a clear (9)____ that even a little clean water can completely (10)____ people's lives.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "struggle",
+            "holiday",
+            "game",
+            "prize"
+          ],
+          "answer_index": 0,
+          "explanation": "a daily struggle 每天的艰难;其余名词不合语境。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "collect",
+            "throw",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "collect water 取/打水;sell/throw/hide 不合理。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "rich",
+            "tall",
+            "sick",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "made them sick 使他们生病。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "stop",
+            "leave",
+            "lose",
+            "start"
+          ],
+          "answer_index": 3,
+          "explanation": "start a project 启动项目。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "dig",
+            "eat",
+            "read",
+            "sing"
+          ],
+          "answer_index": 0,
+          "explanation": "dig a well 挖井。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "waste",
+            "store",
+            "drop",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "store rainwater 储存雨水;与'nothing was wasted'呼应。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "fail",
+            "end",
+            "improve",
+            "fall"
+          ],
+          "answer_index": 2,
+          "explanation": "life began to improve 生活开始好转。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "afraid",
+            "bored",
+            "grateful"
+          ],
+          "answer_index": 3,
+          "explanation": "grateful to 感激;后接帮助者。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "example",
+            "price",
+            "noise",
+            "secret"
+          ],
+          "answer_index": 0,
+          "explanation": "a clear example 一个清楚的例子。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "break",
+            "change",
+            "sell",
+            "forget"
+          ],
+          "answer_index": 1,
+          "explanation": "change people's lives 改变生活。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Charity Sale at School",
+      "text": "Last month, our class organised a charity (1)____ to raise money for children in need. Everyone was asked to bring something they no longer (2)____, such as old books, toys or clothes. We set up several (3)____ in the playground and put a fair price on each item. Many parents came to (4)____ our things, and some even gave extra money. My job was to (5)____ the money carefully and write down every sale. By the end of the day, we were all tired but very (6)____. Together we had raised over two thousand yuan. Our teacher said the money would be (7)____ to a local charity that helps poor families. She reminded us that even a small (8)____ can make a real difference. I felt proud that our simple idea had (9)____ so many people. Now we plan to hold a similar (10)____ every year.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sleep",
+            "fight",
+            "sale",
+            "rain"
+          ],
+          "answer_index": 2,
+          "explanation": "a charity sale 慈善义卖。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "broke",
+            "lost",
+            "wanted"
+          ],
+          "answer_index": 3,
+          "explanation": "no longer wanted 不再想要的(东西)。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "tables",
+            "rivers",
+            "clouds",
+            "songs"
+          ],
+          "answer_index": 0,
+          "explanation": "set up tables 摆好桌子;后文'put a price on each item'。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "throw",
+            "buy",
+            "hide",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "came to buy 来买东西。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "eat",
+            "draw",
+            "count",
+            "sing"
+          ],
+          "answer_index": 2,
+          "explanation": "count the money 数钱。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "angry",
+            "afraid",
+            "bored",
+            "happy"
+          ],
+          "answer_index": 3,
+          "explanation": "tired but happy 累但开心。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "given",
+            "sold",
+            "thrown",
+            "hidden"
+          ],
+          "answer_index": 0,
+          "explanation": "money would be given to a charity 捐给慈善机构。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "mistake",
+            "contribution",
+            "noise",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "a small contribution 小小的贡献。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "hurt",
+            "ignored",
+            "helped",
+            "blamed"
+          ],
+          "answer_index": 2,
+          "explanation": "had helped so many people 帮助了那么多人。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "error",
+            "prize",
+            "storm",
+            "event"
+          ],
+          "answer_index": 3,
+          "explanation": "a similar event 类似的活动。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Becoming a Volunteer",
+      "text": "My sister always wanted to (1)____ others, so last summer she decided to become a (2)____. First, she searched online for a centre that (3)____ help with old people. Then she made a phone (4)____ to ask about the work. The lady who answered was very kind and explained everything (5)____. My sister had to fill in a (6)____ form and then wait for a (7)____ before she could start. On her first day she felt a little (8)____, but everyone made her feel welcome. Now she visits the centre three times a week. She reads to the old people, listens to their stories and helps them with small (9)____. She says that volunteering has made her more patient and (10)____. It is hard work, but she has never once thought about giving up.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "help",
+            "hurt",
+            "leave",
+            "ignore"
+          ],
+          "answer_index": 0,
+          "explanation": "wanted to help others 想帮助别人。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "customer",
+            "volunteer",
+            "stranger",
+            "winner"
+          ],
+          "answer_index": 1,
+          "explanation": "become a volunteer 成为志愿者。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "broke",
+            "offered",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "a centre that offered help 提供帮助的中心。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "song",
+            "game",
+            "meal",
+            "call"
+          ],
+          "answer_index": 3,
+          "explanation": "made a phone call 打了个电话。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "clearly",
+            "hardly",
+            "rudely",
+            "never"
+          ],
+          "answer_index": 0,
+          "explanation": "explained everything clearly 解释得很清楚。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "registration",
+            "price",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "a registration form 登记表。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "holiday",
+            "mistake",
+            "confirmation",
+            "storm"
+          ],
+          "answer_index": 2,
+          "explanation": "wait for a confirmation 等确认。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "rich",
+            "tall",
+            "late",
+            "nervous"
+          ],
+          "answer_index": 3,
+          "explanation": "felt a little nervous 有点紧张。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "tasks",
+            "prices",
+            "songs",
+            "storms"
+          ],
+          "answer_index": 0,
+          "explanation": "small tasks 小事/小活儿。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lazy",
+            "kind",
+            "rude",
+            "selfish"
+          ],
+          "answer_index": 1,
+          "explanation": "more patient and kind 更有耐心、更善良。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Old Clothes, New Hope",
+      "text": "Every winter, our neighbourhood holds a drive to collect warm (1)____ for families who cannot afford them. People bring coats, gloves and blankets that they no longer (2)____. Volunteers then (3)____ everything into boxes by size and colour. Clothes that are dirty are washed, and those that are torn are (4)____ by kind grandmothers. The clean, tidy clothes are then (5)____ to shelters around the city. Last year I joined the drive for the first time. At first I thought my small (6)____ would not matter much. But when I saw how (7)____ the families were, I understood that even one coat could keep a child warm. One little girl gave me a huge (8)____ when she put on her new gloves. That moment (9)____ me to keep helping. Now I look (10)____ to the clothes drive every single winter.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "prices",
+            "songs",
+            "clothes",
+            "storms"
+          ],
+          "answer_index": 2,
+          "explanation": "warm clothes 暖和的衣物。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "drive",
+            "cook",
+            "need"
+          ],
+          "answer_index": 3,
+          "explanation": "no longer need 不再需要的;sell/drive/cook 不合理。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sort",
+            "eat",
+            "sing",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "sort everything into boxes 把东西分类装箱。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "mended",
+            "lost",
+            "eaten"
+          ],
+          "answer_index": 1,
+          "explanation": "torn clothes are mended 破的被缝补。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "asked",
+            "called",
+            "sent",
+            "named"
+          ],
+          "answer_index": 2,
+          "explanation": "sent to shelters 送往收容所。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "price",
+            "storm",
+            "effort"
+          ],
+          "answer_index": 3,
+          "explanation": "my small effort 我小小的付出。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "grateful",
+            "angry",
+            "bored",
+            "afraid"
+          ],
+          "answer_index": 0,
+          "explanation": "how grateful the families were 家庭们多么感激。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "shout",
+            "smile",
+            "price",
+            "storm"
+          ],
+          "answer_index": 1,
+          "explanation": "gave me a huge smile 给我一个大大的微笑。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "stopped",
+            "refused",
+            "inspired",
+            "forced"
+          ],
+          "answer_index": 2,
+          "explanation": "inspired me to keep helping 激励我继续帮忙。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "back",
+            "away",
+            "down",
+            "forward"
+          ],
+          "answer_index": 3,
+          "explanation": "look forward to 期待。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Reading to Children",
+      "text": "Once a week, a group of students from our school (1)____ a nearby hospital to read to sick children. Many of these children must stay in bed for a long (2)____ and often feel lonely. A good story can help them (3)____ their pain for a while and smile again. Before we go, we carefully (4)____ books that are funny and full of hope. When we read, we use different voices to make each character come (5)____. The children listen with wide eyes and often ask us to read the same story (6)____. Their happiness is the best (7)____ we could ask for. One boy told me that our visits were the part of the week he (8)____ most. Hearing that, I felt that our time was truly well (9)____. Reading to others costs nothing, yet it can bring great (10)____ to a child in need.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "visit",
+            "build",
+            "sell",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "students visit a hospital 学生探访医院。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "time",
+            "song",
+            "storm"
+          ],
+          "answer_index": 1,
+          "explanation": "for a long time 很长时间。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "count",
+            "forget",
+            "drive"
+          ],
+          "answer_index": 2,
+          "explanation": "forget their pain 暂时忘记疼痛。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "throw",
+            "break",
+            "lose",
+            "choose"
+          ],
+          "answer_index": 3,
+          "explanation": "choose books 挑选书。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "alive",
+            "asleep",
+            "angry",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "come alive 变得活灵活现。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "never",
+            "again",
+            "hardly",
+            "nowhere"
+          ],
+          "answer_index": 1,
+          "explanation": "read the same story again 再读一遍。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "mistake",
+            "noise",
+            "reward",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "the best reward 最好的回报。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "hated",
+            "feared",
+            "broke",
+            "enjoyed"
+          ],
+          "answer_index": 3,
+          "explanation": "the part he enjoyed most 他最喜欢的部分。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "spent",
+            "sold",
+            "lost",
+            "broken"
+          ],
+          "answer_index": 0,
+          "explanation": "time well spent 时间花得值。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "joy",
+            "price",
+            "storm"
+          ],
+          "answer_index": 1,
+          "explanation": "bring great joy 带来巨大的快乐。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Green Way to Help",
+      "text": "Our town has found a clever way to (1)____ money for charity while also caring for the (2)____. People are asked to bring empty bottles and cans to a special (3)____ at the supermarket. Instead of throwing this rubbish away, workers (4)____ it so that the materials can be used again. For every bag of bottles, the shop gives a small (5)____ of money to a children's charity. In this way, families can help others without spending anything (6)____. The idea has been so (7)____ that several other towns have started to copy it. Last month alone, the scheme (8)____ enough money to buy books for a whole village school. It also keeps the streets (9)____ and teaches children to care for nature. Helping people and protecting the planet, it turns out, can easily go (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "waste",
+            "lose",
+            "raise",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "raise money 筹钱。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "holiday",
+            "price",
+            "song",
+            "environment"
+          ],
+          "answer_index": 3,
+          "explanation": "caring for the environment 关爱环境。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "point",
+            "river",
+            "cloud",
+            "storm"
+          ],
+          "answer_index": 0,
+          "explanation": "a special point 一个专门的(回收)点。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "recycle",
+            "eat",
+            "drive"
+          ],
+          "answer_index": 1,
+          "explanation": "workers recycle it 工人回收它。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "noise",
+            "mistake",
+            "amount",
+            "storm"
+          ],
+          "answer_index": 2,
+          "explanation": "a small amount of money 一小笔钱。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "never",
+            "hardly",
+            "nowhere",
+            "extra"
+          ],
+          "answer_index": 3,
+          "explanation": "without spending anything extra 不必额外花钱。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "effective",
+            "boring",
+            "useless",
+            "ugly"
+          ],
+          "answer_index": 0,
+          "explanation": "so effective that 如此有效以至于。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lost",
+            "raised",
+            "wasted",
+            "broke"
+          ],
+          "answer_index": 1,
+          "explanation": "the scheme raised enough money 计划筹到足够的钱。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "dirty",
+            "dark",
+            "clean",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "keeps the streets clean 让街道整洁。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "apart",
+            "away",
+            "back",
+            "together"
+          ],
+          "answer_index": 3,
+          "explanation": "go together 并行不悖。"
+        }
+      ]
+    }
+  ]
+}

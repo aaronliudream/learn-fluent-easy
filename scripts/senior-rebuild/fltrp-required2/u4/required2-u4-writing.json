@@ -1,0 +1,52 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "topic": "Write a Movie Review(写一篇电影影评)",
+  "title_en": "A Movie Review",
+  "genre": "影评 / 应用文(introduce a film + describe the plot + give your opinion)",
+  "source": "外研社版必修第二册 Unit 4 Writing:write a movie review(介绍一部你看过的电影:总体介绍 + 主要情节 + 最难忘的场景 + 评价)。",
+  "prompt_cn": "假设你叫李华,学校英语社团要办一期“我最喜欢的电影”墙报。请用英语写一篇约100词的影评,内容包括:① 总体介绍这部电影(片名、类型、主要演员或导演);② 简述主要情节和一个最难忘的场景;③ 给出你的评价并说明是否推荐。注意:适当使用 -ing 分词作状语(如 Watching the film, …)。",
+  "prompt_en": "Suppose you are Li Hua. Your school English club is making a wall display called \"My Favourite Film\". Write a movie review of about 100 words including: 1) a general introduction to the film (its title, type, and main actor or director); 2) a short summary of the plot and one unforgettable scene; 3) your opinion and whether you recommend it. Try to use -ing participles as adverbials (e.g. Watching the film, …).",
+  "points": [
+    "总体介绍(… is a … film about … / Starring …, it …)",
+    "情节与难忘场景(The story follows … / The most memorable scene is …)",
+    "评价与推荐(I think it is … / I would definitely recommend it because …)",
+    "用 -ing 分词作状语(Watching the film, I … / Feeling the emotions, …)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "The Princess Diaries is a warm and funny film about a shy teenager named Mia. Starring Anne Hathaway, it tells how an ordinary city girl suddenly learns that she is the princess of a small fictional kingdom. The story follows Mia as she struggles to behave like royalty while reporters follow her everywhere. The most memorable scene comes near the end, when Mia reads a letter from her late father about courage. Watching that moment, I could not hold back my tears. The film explores responsibility in a light and clever way. I would definitely recommend it to anyone who enjoys a story that is both fun and thoughtful.",
+  "model_translation": "《公主日记》是一部温馨又有趣的电影,讲述一个名叫 Mia 的害羞少女。由安妮·海瑟薇主演,影片讲述一个普通城市女孩突然得知自己是一个虚构小王国公主的故事。故事跟随 Mia,她一边努力学着举止像王室成员,一边被记者四处追拍。最难忘的场景出现在结尾,Mia 读到已故父亲谈论勇气的一封信。看到那一幕,我忍不住落泪。影片以轻松又巧妙的方式探讨了责任。我会向任何喜欢既有趣又引人深思的故事的人强烈推荐它。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:总体介绍 / 情节与难忘场景 / 评价与推荐" },
+      { "dimension": "结构", "max": 4, "criteria": "影评层次清楚、由介绍到情节到评价、衔接自然" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、-ing 分词作状语运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "总体介绍 … is a … film about … / Starring …, it …",
+      "情节 The story follows … as …",
+      "难忘场景 The most memorable scene is … / Watching that moment, I …",
+      "评价推荐 I would definitely recommend it because …"
+    ],
+    "key_expressions": [
+      "The Princess Diaries is a warm and funny film about a shy teenager.",
+      "Starring Anne Hathaway, it tells how an ordinary girl becomes a princess.",
+      "The most memorable scene comes near the end.",
+      "Watching that moment, I could not hold back my tears."
+    ],
+    "useful_words": ["film", "plot", "character", "scene", "starring", "director", "memorable", "recommend", "responsibility", "fictional"]
+  },
+  "high_sentences": [
+    "Starring Anne Hathaway, it tells how an ordinary city girl becomes a princess.",
+    "The story follows Mia as she struggles to behave like royalty.",
+    "Watching that moment, I could not hold back my tears.",
+    "I would definitely recommend it to anyone who enjoys a thoughtful story."
+  ],
+  "error_pairs": [
+    { "wrong": "The film is about how Mia becoming a princess.", "correct": "The film is about how Mia becomes a princess.", "note": "how 引导的从句要用完整谓语 becomes,不用分词 becoming。" },
+    { "wrong": "Watched the film, I was deeply moved.", "correct": "Watching the film, I was deeply moved.", "note": "逻辑主语 I 主动观看,作状语用现在分词 Watching,不用过去分词。" },
+    { "wrong": "I recommend it for everyone who likes stories.", "correct": "I recommend it to everyone who likes stories.", "note": "recommend sth to sb 固定搭配,用 to 不用 for。" }
+  ],
+  "paragraph_template": "【影评结构】\n第1-2句 总体介绍:… is a … film about … Starring …, it …\n第3-4句 情节+难忘场景:The story follows … The most memorable scene is … Watching that moment, I …\n第5句 评价推荐:I would definitely recommend it because …"
+}

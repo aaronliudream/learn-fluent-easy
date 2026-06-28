@@ -1,0 +1,35 @@
+{
+  "volume": "required1",
+  "unit": "U5",
+  "grade": 10,
+  "content": {
+    "title": "限制性定语从句·关系副词 when / where / why 速查",
+    "intro": "关系副词在从句中作状语(时间/地点/原因),等于「介词+which」。判断口诀:从句缺状语→用关系副词,缺主语/宾语→用关系代词 that/which。",
+    "table": {
+      "headers": ["关系副词", "用法 / 例句 / 等价"],
+      "rows": [
+        ["when", "时间先行词(day/time/year/season):the day when = on/in which"],
+        ["where", "地点先行词(place/forest/lake/park):the place where = in/at which"],
+        ["why", "原因(reason):the reason why = for which"],
+        ["介词+which", "从句缺主宾、或表达更正式:on which / in which / by which / with which"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "从句只缺状语(时间/地点/原因)→ 才用关系副词", "mark": "the forest where I took photos(缺地点状语)" },
+      { "rule": "从句缺主语/宾语 → 即使先行词是时间/地点也用 that", "mark": "the day that changed my view(缺主语→that)" },
+      { "rule": "the day when = on/in which;the place where = in/at which;the reason why = for which", "mark": "等价替换" },
+      { "rule": "介词后只能用 which,不可用 that", "mark": "trees on which √ / trees on that ×" }
+    ],
+    "why": [
+      "关系副词 = 介词 + which,在从句里充当状语,所以从句的主语、宾语都不缺;一旦主语或宾语缺了,就要换成关系代词 that/which。"
+    ],
+    "gaokaoPoints": [
+      "when/where/why 与 which/that 的判断(看从句缺什么成分);介词+which;语法填空高频。",
+      "the way 后的定语从句:用 that / in which / 或省略,但不用 which 单独引导。"
+    ],
+    "examVsReal": [
+      { "exam": "the forest where I work（考试/书面）", "real": "the forest I work in", "note": "考试用 where;口语常省略关系词、把介词放句末" },
+      { "exam": "the reason why the bird left（考试）", "real": "the reason the bird left / the reason that the bird left", "note": "考试用 why;口语里 why 常被省略或用 that" }
+    ]
+  }
+}

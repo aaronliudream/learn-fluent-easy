@@ -1,0 +1,47 @@
+{
+  "listeningQuestions": [
+    { "audio": "A strong typhoon is expected to hit the coast tonight.", "opts": ["一场强台风预计今晚袭击海岸。", "今晚天气会非常晴朗。", "台风已经过去了。", "海岸边一切都很平静。"], "answer": 0 },
+    { "audio": "The rescue team pulled three people out of the ruins.", "opts": ["三个人逃出了城市。", "救援队从废墟中救出了三个人。", "三座房子被重新建好。", "救援队找不到任何人。"], "answer": 1 },
+    { "audio": "Remember to store enough food and water before a flood.", "opts": ["洪水后要打扫房屋。", "洪水时要立刻外出。", "洪水来临前要备足食物和水。", "洪水时可以喝洪水。"], "answer": 2 },
+    { "audio": "Satellites help scientists forecast storms more precisely.", "opts": ["卫星会引起风暴。", "科学家不再需要卫星。", "风暴无法被预测。", "卫星帮助科学家更精确地预报风暴。"], "answer": 3 },
+    { "audio": "Many kind strangers donated money to help the survivors.", "opts": ["许多好心的陌生人捐钱帮助幸存者。", "幸存者把钱捐给了陌生人。", "没有人愿意提供帮助。", "陌生人借走了幸存者的钱。"], "answer": 0 },
+    { "audio": "Even after the disaster, the town slowly came back to life.", "opts": ["灾难让小镇永远消失了。", "灾难过后,小镇慢慢恢复了生机。", "小镇从未发生过灾难。", "人们都离开了小镇。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "(灾难、事故)'夺去(生命)'用哪个动词?", "opts": ["claim", "sell", "build", "paint"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "提前'预测、预报'天气用哪个词?", "opts": ["forget", "forecast", "follow", "forgive"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "困住村庄的'暴风雪'对应的英文是?", "opts": ["garden", "market", "blizzard", "lesson"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "为受灾者'捐钱捐物','捐赠'用哪个词?", "opts": ["borrow", "waste", "hide", "donate"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "When ____ about the coming storm, the villagers left at once.（他们被警告)", "opts": ["warned", "warning", "warn", "to warn"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "He survived the flood, and so ____ his dog.", "opts": ["does", "did", "was", "had"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "While ____ for the rescue boat, we kept calm.", "opts": ["waited", "wait", "waiting", "to wait"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "—Would you like to join the rescue team? —Yes, I'd love ____.", "opts": ["to do", "doing", "do", "to"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["警报响时,立刻转移到高处。", "警报响时,留在原地。", "警报响时,跑向大海。", "警报响时,回去睡觉。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Move to high ground immediately when the warning sounds." },
+    { "q": "听句子选中文:", "opts": ["准备毫无用处。", "一点小小的准备就能挽救许多生命。", "灾难无法避免。", "准备会浪费很多时间。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "A little preparation can save many lives." }
+  ],
+  "reading": {
+    "passage": "When the wildfire reached the edge of the town, hundreds of families had to leave their homes in a single night. Firefighters worked for days without rest, and people from nearby towns sent food, water and warm clothes. Though much was lost, no lives were taken, and the town soon began to rebuild, stronger and closer than before.",
+    "passageCn": "当山火逼近镇子边缘时,数百个家庭不得不在一夜之间离开家园。消防员连日不眠地奋战,附近城镇的人们送来食物、水和保暖衣物。尽管损失惨重,却无人丧生,小镇很快开始重建,比从前更坚强、更团结。",
+    "questions": [
+      { "q": "Why did the families have to leave their homes?", "opts": ["A wildfire reached the edge of the town.", "A flood covered the streets.", "A blizzard blocked the roads.", "An earthquake shook the houses."], "answer": 0 },
+      { "q": "How did people from nearby towns help?", "opts": ["They put out the fire by themselves.", "They sent food, water and warm clothes.", "They took away the town's land.", "They did nothing to help."], "answer": 1 },
+      { "q": "What happened to the town in the end?", "opts": ["It was left empty forever.", "Many people lost their lives.", "It began to rebuild, stronger and closer.", "It was hit by a second fire."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "In about 60 words, write two short tips telling people what to do when a typhoon is coming. Use 'Remember to…' and 'Never…'.",
+    "promptCn": "用约60词写两条小贴士,告诉人们台风来临时该做什么。用上 'Remember to…' 和 'Never…'。",
+    "sampleWords": ["typhoon", "warning", "shelter", "sufficient", "immediately", "indoors", "property", "otherwise", "safe", "prepared"]
+  },
+  "dialogues": [
+    {
+      "title": "Before the Storm",
+      "lines": [
+        { "role": "A", "text": "The forecast says a typhoon will arrive tonight. Are we ready?", "cn": "预报说台风今晚到。我们准备好了吗?" },
+        { "role": "B", "text": "Almost. Remember to fill some bottles with clean water.", "cn": "差不多了。记得灌几瓶干净的水。" },
+        { "role": "A", "text": "Good idea. Should we go outside to watch it?", "cn": "好主意。我们要出去看台风吗?" },
+        { "role": "B", "text": "Never! We must stay indoors until the warning is over.", "cn": "千万不要!我们必须待在室内,直到警报解除。" }
+      ]
+    }
+  ]
+}

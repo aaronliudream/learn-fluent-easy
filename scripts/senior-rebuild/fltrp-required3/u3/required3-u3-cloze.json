@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "topic": "The World of Science",
+  "source": "外研社(新标准)必修第三册 Unit 3 同主题完形(轮子与新能源车/四大发明/年轻发明家团队/电话的故事/居里夫人/质疑权威)。用词限本单元/初中/常见词,答案唯一,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "The Wheel and the Car",
+      "text": "Most inventions begin when someone notices a (1)____ that needs solving. Long ago, moving heavy loads was very hard, so people invented the (2)____. Much later, this simple idea (3)____ into the car. Today cars are everywhere, but they also (4)____ pollution and use a lot of energy. For this (5)____, engineers have worked hard to build cleaner cars. New energy vehicles are now (6)____ by many companies around the world. They are (7)____ by electricity instead of petrol, so they are kinder to the (8)____. Some people think the great age of invention is (9)____, but they are wrong. As long as we keep (10)____ questions, new ideas will always appear.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "problem",
+            "holiday",
+            "song",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "a problem that needs solving 待解决的问题。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "river",
+            "wheel",
+            "story",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "invented the wheel 发明了轮子。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "ate",
+            "sold",
+            "developed",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "developed into the car 发展成汽车。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "enjoy",
+            "forget",
+            "sing",
+            "cause"
+          ],
+          "answer_index": 3,
+          "explanation": "cause pollution 造成污染。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "reason",
+            "weather",
+            "noise",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "for this reason 因此。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "eaten",
+            "produced",
+            "sung",
+            "thrown"
+          ],
+          "answer_index": 1,
+          "explanation": "are produced by companies 被公司生产。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "eaten",
+            "sold",
+            "powered",
+            "hidden"
+          ],
+          "answer_index": 2,
+          "explanation": "powered by electricity 由电力驱动。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "music",
+            "holiday",
+            "price",
+            "environment"
+          ],
+          "answer_index": 3,
+          "explanation": "kinder to the environment 对环境更友好。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "over",
+            "hungry",
+            "green",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "the age is over 时代结束了。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "eating",
+            "asking",
+            "sleeping",
+            "selling"
+          ],
+          "answer_index": 1,
+          "explanation": "keep asking questions 不断提问。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Four Great Inventions",
+      "text": "Ancient China gave the world four great (1)____: gunpowder, papermaking, printing and the compass. Each of them (2)____ the world deeply. The compass, for (3)____, allowed sailors to find their way far from (4)____. Printing made books cheaper, so knowledge could be (5)____ more widely. These inventions were not made by a single (6)____, but by many people over time. Even today, the compass is still (7)____ in ships and planes. When we study the past, we (8)____ that invention has always been part of human (9)____. The desire to (10)____ is something all of us share.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "holidays",
+            "gardens",
+            "inventions",
+            "prices"
+          ],
+          "answer_index": 2,
+          "explanation": "four great inventions 四大发明。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "ate",
+            "sold",
+            "lost",
+            "changed"
+          ],
+          "answer_index": 3,
+          "explanation": "changed the world 改变了世界。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "instance",
+            "sale",
+            "sleep",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "for instance 例如。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "music",
+            "land",
+            "price",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "far from land 远离陆地。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "eaten",
+            "sung",
+            "shared",
+            "thrown"
+          ],
+          "answer_index": 2,
+          "explanation": "could be shared 能被分享。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "river",
+            "garden",
+            "price",
+            "person"
+          ],
+          "answer_index": 3,
+          "explanation": "a single person 一个人。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "used",
+            "eaten",
+            "sold",
+            "hidden"
+          ],
+          "answer_index": 0,
+          "explanation": "is still used 仍被使用。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "learn",
+            "sleep",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "we learn that 我们懂得。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "weather",
+            "noise",
+            "history",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "human history 人类历史。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sleep",
+            "sell",
+            "lose",
+            "create"
+          ],
+          "answer_index": 3,
+          "explanation": "the desire to create 创造的渴望。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Young Inventor",
+      "text": "My cousin Tom is only seventeen, but he is already a young (1)____. Last year he joined a small (2)____ of students who love science. Together they (3)____ a cheap robot that can help blind people cross the road. At first their robot did not (4)____ well, and many parts had to be (5)____ again and again. Tom almost wanted to give (6)____, but his teammates encouraged him to keep trying. Finally, after months of hard (7)____, the robot worked. Tom says that no great thing is ever done by one person (8)____. Most modern inventions are created by big (9)____ in which everyone shares ideas. He is proud to be (10)____ of such a group.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "inventor",
+            "farmer",
+            "singer",
+            "driver"
+          ],
+          "answer_index": 0,
+          "explanation": "a young inventor 年轻发明家。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "river",
+            "team",
+            "price",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "a small team 一个小团队。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "ate",
+            "sold",
+            "built",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "built a robot 制造了机器人。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sing",
+            "sleep",
+            "eat",
+            "work"
+          ],
+          "answer_index": 3,
+          "explanation": "did not work well 运转不好。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "changed",
+            "eaten",
+            "sung",
+            "thrown"
+          ],
+          "answer_index": 0,
+          "explanation": "had to be changed 不得不更换。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "in",
+            "up",
+            "off",
+            "out"
+          ],
+          "answer_index": 1,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "weather",
+            "music",
+            "effort",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "hard effort 努力。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "happy",
+            "green",
+            "loud",
+            "alone"
+          ],
+          "answer_index": 3,
+          "explanation": "by one person alone 仅靠一人。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "teams",
+            "gardens",
+            "prices",
+            "songs"
+          ],
+          "answer_index": 0,
+          "explanation": "big teams 大团队。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "part",
+            "noise",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "be part of 成为……的一员。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Story of the Telephone",
+      "text": "The telephone is one of the most important (1)____ in history. It was (2)____ by Alexander Graham Bell in 1876. Bell was interested in sound because his mother and his wife were (3)____ to hear well. He wanted to build a machine that could (4)____ the human voice along a wire. After many (5)____, the first words were finally sent from one room to (6)____. Since that day, the telephone has been (7)____ by billions of people all over the world. It has completely (8)____ the way we live and work. Of course, the phones we use today look nothing like Bell's first (9)____. Yet the basic idea behind them is still the (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "holidays",
+            "gardens",
+            "inventions",
+            "prices"
+          ],
+          "answer_index": 2,
+          "explanation": "important inventions 重要发明。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eaten",
+            "sung",
+            "thrown",
+            "invented"
+          ],
+          "answer_index": 3,
+          "explanation": "was invented by 由……发明。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "unable",
+            "happy",
+            "green",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "unable to hear well 听不清。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleep",
+            "carry",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "carry the voice 传送声音。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "songs",
+            "prices",
+            "tries",
+            "gardens"
+          ],
+          "answer_index": 2,
+          "explanation": "after many tries 多次尝试后。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "music",
+            "price",
+            "noise",
+            "another"
+          ],
+          "answer_index": 3,
+          "explanation": "from one room to another 从一间到另一间。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "used",
+            "eaten",
+            "sung",
+            "thrown"
+          ],
+          "answer_index": 0,
+          "explanation": "has been used by 被使用。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "eaten",
+            "changed",
+            "sold",
+            "hidden"
+          ],
+          "answer_index": 1,
+          "explanation": "has changed the way 改变了方式。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "river",
+            "song",
+            "model",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "Bell's first model 贝尔最早的型号。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hungry",
+            "loud",
+            "green",
+            "same"
+          ],
+          "answer_index": 3,
+          "explanation": "still the same 仍然相同。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Marie Curie",
+      "text": "Marie Curie was one of the most (1)____ scientists in history. She was born in Poland but did most of her (2)____ in France. For years she worked in a cold, poor (3)____, studying a strange new material. Her research was so (4)____ that she was awarded the Nobel Prize, not once but (5)____. Sadly, the very material she studied slowly (6)____ her health. Even so, she never (7)____ to stop her work. Today her discoveries are still (8)____ by doctors to treat serious illnesses. Marie Curie showed that a (9)____ mind and a brave heart can change the world. Her story has (10)____ many young women to become scientists.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "famous",
+            "hungry",
+            "loud",
+            "green"
+          ],
+          "answer_index": 0,
+          "explanation": "the most famous scientists 最著名的科学家。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "weather",
+            "research",
+            "music",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "did her research 做研究。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "river",
+            "song",
+            "lab",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "a poor lab 简陋的实验室。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "hungry",
+            "loud",
+            "green",
+            "significant"
+          ],
+          "answer_index": 3,
+          "explanation": "so significant that 如此重要。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "twice",
+            "slowly",
+            "sadly",
+            "loudly"
+          ],
+          "answer_index": 0,
+          "explanation": "not once but twice 不止一次,而是两次。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ate",
+            "harmed",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "harmed her health 损害了她的健康。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "ate",
+            "sold",
+            "chose",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "never chose to stop 从未选择停下。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "eaten",
+            "sung",
+            "thrown",
+            "used"
+          ],
+          "answer_index": 3,
+          "explanation": "are still used 仍被使用。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "brilliant",
+            "hungry",
+            "loud",
+            "green"
+          ],
+          "answer_index": 0,
+          "explanation": "a brilliant mind 才华横溢的头脑。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "eaten",
+            "inspired",
+            "sold",
+            "hidden"
+          ],
+          "answer_index": 1,
+          "explanation": "has inspired many 激励了许多人。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Question Everything",
+      "text": "Good scientists never stop (1)____ questions, even about ideas that everyone (2)____. Take the famous story of the apple that (3)____ on Newton's head and led him to his theory of (4)____. For a long time, people simply (5)____ this story. Recently, however, more than one writer has (6)____ whether it is really true. They agree that Newton was (7)____ inspired by a falling apple, but there is no (8)____ that it hit him on the head. This does not make Newton less great. It only shows that, in science, every claim should be (9)____ by evidence. We should enjoy a good story, but we must not (10)____ everything we hear.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "eating",
+            "sleeping",
+            "asking",
+            "selling"
+          ],
+          "answer_index": 2,
+          "explanation": "stop asking questions 停止提问。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eats",
+            "sells",
+            "loses",
+            "accepts"
+          ],
+          "answer_index": 3,
+          "explanation": "everyone accepts 人人接受。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "fell",
+            "ate",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "the apple that fell 落下的苹果。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "weather",
+            "gravity",
+            "music",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "theory of gravity 万有引力理论。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "eaten",
+            "sung",
+            "believed",
+            "thrown"
+          ],
+          "answer_index": 2,
+          "explanation": "simply believed 只是相信。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "eaten",
+            "sung",
+            "thrown",
+            "questioned"
+          ],
+          "answer_index": 3,
+          "explanation": "has questioned whether 质疑是否。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "certainly",
+            "loudly",
+            "sadly",
+            "quickly"
+          ],
+          "answer_index": 0,
+          "explanation": "certainly inspired 的确受到启发。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "weather",
+            "proof",
+            "music",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "no proof that 没有证据。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "eaten",
+            "sung",
+            "tested",
+            "thrown"
+          ],
+          "answer_index": 2,
+          "explanation": "should be tested by evidence 应由证据检验。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sleep",
+            "sell",
+            "lose",
+            "believe"
+          ],
+          "answer_index": 3,
+          "explanation": "must not believe everything 不可全信。"
+        }
+      ]
+    }
+  ]
+}

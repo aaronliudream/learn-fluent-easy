@@ -1,0 +1,52 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "topic": "Describe a Chinese Festival to a Foreign Friend(向外国朋友介绍一个中国节日)",
+  "title_en": "My Favourite Chinese Festival",
+  "genre": "说明文 / 介绍(describe a festival: when it is, what people do, why it matters)",
+  "source": "外研社版必修第二册 Unit 2 Presenting ideas / Developing ideas:介绍一个你喜欢的中国节日(时间、活动、意义),写给海外笔友。",
+  "prompt_cn": "假设你叫李华,你的英国笔友 Jack 想了解中国的节日。请用英语写一篇约80词的短文,介绍一个你最喜欢的中国节日,内容包括:① 这个节日在什么时候、为什么庆祝;② 人们会做哪些活动(如装饰、吃特色食物、参加庆祝);③ 这个节日对你和家人意味着什么。注意:行文连贯、句句围绕节日。",
+  "prompt_en": "Suppose you are Li Hua. Your British pen-friend Jack wants to learn about Chinese festivals. Write a short passage (about 80 words) introducing your favourite Chinese festival, including: 1) when and why it is celebrated; 2) what people do (e.g. decorating, eating special food, joining celebrations); 3) what the festival means to you and your family.",
+  "points": [
+    "点明节日名称与时间(My favourite festival is … / It falls on …)",
+    "介绍活动与特色食物(People decorate … / We eat … / Families gather to …)",
+    "说明意义/感受(To me, it means … / It brings my family joy)",
+    "句句围绕节日、连贯有条理"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Hi Jack! My favourite Chinese festival is the Lantern Festival. It falls on the fifteenth day of the first lunar month and marks the end of the Spring Festival season. On that evening, people decorate the streets with red lanterns, and families go out to enjoy the lights together. We love guessing the riddles written on the lanterns, and we always eat sweet rice balls, a special dessert. To me, the festival is not only about the bright lanterns, but also about the joy of being with my family. I hope you can join us one day!",
+  "model_translation": "你好,Jack!我最喜欢的中国节日是元宵节。它在农历正月十五,标志着春节季的结束。那天傍晚,人们用红灯笼装饰街道,家家户户外出一起赏灯。我们喜欢猜写在灯笼上的谜语,还总会吃汤圆这种特别的甜点。对我来说,这个节日不仅是明亮的灯笼,更是与家人在一起的欢乐。希望有一天你能来和我们一起过节!",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:时间/原因 + 活动与食物 + 意义感受" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一个节日展开、句句相关、过渡自然、首尾呼应" },
+      { "dimension": "语言", "max": 5, "criteria": "节日词汇准确多样、句型得当(含 fall on / decorate with 等)、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题 My favourite Chinese festival is …",
+      "时间 It falls on … and marks …",
+      "活动 People decorate … / We eat …",
+      "意义 To me, the festival is about the joy of being with my family."
+    ],
+    "key_expressions": [
+      "My favourite Chinese festival is the Lantern Festival.",
+      "It falls on the fifteenth day of the first lunar month.",
+      "People decorate the streets with red lanterns.",
+      "The festival is about the joy of being with my family."
+    ],
+    "useful_words": ["festival", "celebrate", "lunar", "decorate", "lantern", "dessert", "tradition", "gather", "joy", "occasion"]
+  },
+  "high_sentences": [
+    "My favourite Chinese festival is the Lantern Festival.",
+    "It falls on the fifteenth day of the first lunar month and marks the end of the Spring Festival season.",
+    "We love guessing the riddles written on the lanterns.",
+    "To me, the festival is about the joy of being with my family."
+  ],
+  "error_pairs": [
+    { "wrong": "The festival is on fifteenth day of first lunar month.", "correct": "The festival falls on the fifteenth day of the first lunar month.", "note": "序数词前加 the;表示节日在某天用 fall on。" },
+    { "wrong": "People decorate the streets with red lantern.", "correct": "People decorate the streets with red lanterns.", "note": "lantern 可数,复数加 s。" },
+    { "wrong": "We celebrate to be with family.", "correct": "We celebrate the festival to be with family.", "note": "celebrate 是及物动词,后面要接宾语。" }
+  ],
+  "paragraph_template": "【介绍节日结构】\n第1句 点题:My favourite Chinese festival is …\n第2句 时间/原因:It falls on … and marks …\n第3-4句 活动/食物:People decorate … We eat …\n第5句 意义:To me, the festival is about …"
+}

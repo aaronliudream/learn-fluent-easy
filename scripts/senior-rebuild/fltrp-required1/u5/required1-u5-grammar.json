@@ -1,0 +1,745 @@
+{
+  "volume": "required1",
+  "unit": "U5",
+  "grammar_title": "限制性定语从句2:关系副词 when / where / why(及与关系代词的判断)",
+  "source": "外研社(新标准)2019必修第一册 Unit 5 Using language:限制性定语从句(关系副词 when/where/why,= 介词+which)。句子地道、野生动物/自然主题,答案唯一(选项排除其他成立项)。",
+  "points": [
+    {
+      "code": "u5.01",
+      "point": "when(时间先行词 = on/in/at which)",
+      "overview": "先行词表时间(day/time/year/moment/season 等)、从句不缺主语或宾语(只缺时间状语)时,用关系副词 when(= 介词+which)。"
+    },
+    {
+      "code": "u5.02",
+      "point": "where(地点先行词 = in/at/on which)",
+      "overview": "先行词表地点(place/country/forest/lake 等)、从句只缺地点状语时,用关系副词 where(= 介词+which)。"
+    },
+    {
+      "code": "u5.03",
+      "point": "why(原因)+ 关系副词 vs 关系代词判断",
+      "overview": "先行词为 reason、从句缺原因状语时用 why;但若从句缺主语/宾语,即使先行词表时间/地点也要用关系代词 that;介词后只能用 which。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u5.01",
+      "stem": "\"I still remember the day ____ I first saw a wild eagle in the mountains.\"",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 day 表时间,从句不缺主宾(只缺时间状语)→ when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Autumn is the season ____ millions of monarch butterflies fly south.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 season 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"There was a time ____ these forests were full of wild animals.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 time、从句完整 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Dawn is the hour ____ most birds begin to sing in the wood.\"",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 hour 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"I will never forget the moment ____ the bear suddenly looked straight at me.\"",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 moment 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Spring is the time of year ____ many creatures wake from their long sleep.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 time of year → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"That was the year ____ the national park first opened to visitors.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 year 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Sunday is the day ____ we usually go bird-watching by the lake.\"",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 day、从句完整 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"He still recalls the night ____ he heard wolves calling across the valley.\"",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 night 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"There comes a point ____ a young bird is finally ready to fly.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "point 在此表'时刻'→ when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Winter is the season ____ food becomes hard for wild animals to find.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 season 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"I remember the morning ____ the whole wetland was covered with cranes.\"",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 morning 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"It was an age ____ huge animals like the mammoth still walked the earth.\"",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "age 在此表'时期'→ when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"That was the moment ____ the eagle spread its wings and rose into the sky.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 moment → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Every autumn there is a week ____ the salmon swim back up the river.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 week 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"I'll always remember the day ____ I helped to set a wild bird free.\"",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 day、从句完整 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Summer is the period ____ the young caterpillars feed on the green leaves.\"",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 period 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"There was a season ____ this lake was home to thousands of wild ducks.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 season → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Sunset is the time ____ the deer come out to drink at the waterhole.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 time 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"He often talks about the day ____ he photographed his first wild panda.\"",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 day、从句完整 → when。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Yellowstone is a park ____ visitors can watch bears in the wild.\"",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 park 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"I have finally found a forest ____ wild deer still feel safe.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 forest 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"This is the lake ____ thousands of cranes spend the winter.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 lake 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Mexico is the country ____ the monarch butterflies rest each year.\"",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 country 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"That is the valley ____ a family of wolves makes its home.\"",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 valley 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"We visited a wetland ____ many rare birds come to feed.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 wetland 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"China is a place ____ the giant panda can be seen in the wild.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 place → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"He showed me the cave ____ the bears sleep through the cold winter.\"",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 cave 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It was a quiet wood ____ I could watch the animals without a sound.\"",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 wood 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"There are still mountains ____ the snow leopard quietly lives.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 mountains 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"The zoo is the only place ____ many children ever see a real tiger.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 place → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"That is the river ____ the salmon lay their eggs every year.\"",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 river 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Africa is a land ____ huge herds of animals still move freely.\"",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 land 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"I found a quiet corner of the park ____ the rabbits like to play.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 corner 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"This is the field ____ wild flowers feed the hungry caterpillars.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 field 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Canada has forests ____ bears and eagles live close together.\"",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 forests 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Nature is a world ____ every creature has its own special place.\"",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 world 表抽象地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"That is the island ____ thousands of seabirds build their nests.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 island 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"We reached a hidden pool ____ the deer come to drink at dusk.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 pool 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It was a small reserve ____ injured wild animals are cared for.\"",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 reserve 表地点 → where。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The reason ____ many monarch butterflies are dying is the loss of plants.\"",
+      "options": [
+        "why",
+        "that",
+        "which",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 reason、从句缺原因状语 → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"There are many reasons ____ animals migrate to warmer places.\"",
+      "options": [
+        "that",
+        "why",
+        "which",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 reasons → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"I finally understood the reason ____ the bear had stared at me so long.\"",
+      "options": [
+        "that",
+        "which",
+        "why",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 reason → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"One reason ____ the red panda is in danger is the cutting of forests.\"",
+      "options": [
+        "that",
+        "which",
+        "where",
+        "why"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 reason → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"That is the main reason ____ we must protect these wild creatures.\"",
+      "options": [
+        "why",
+        "that",
+        "which",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 reason → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Pollution is the reason ____ fish can no longer survive in this river.\"",
+      "options": [
+        "that",
+        "why",
+        "which",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 reason → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Nobody knows the real reason ____ the birds changed their usual path.\"",
+      "options": [
+        "that",
+        "which",
+        "why",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 reason → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"There must be a reason ____ so many whales come to this bay each year.\"",
+      "options": [
+        "that",
+        "which",
+        "where",
+        "why"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 reason → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The day ____ changed my view of wild animals was truly unforgettable.\"",
+      "options": [
+        "that",
+        "when",
+        "where",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 day 虽表时间,但从句缺主语 → 用关系代词 that(不是 when)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The photo ____ I took of the bear later won a national prize.\"",
+      "options": [
+        "when",
+        "that",
+        "where",
+        "why"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 photo、从句缺宾语 → 关系代词 that。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The eagle ____ flew over the lake was the largest I had ever seen.\"",
+      "options": [
+        "when",
+        "where",
+        "that",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 eagle、从句缺主语 → that。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The forest ____ we visited last spring was full of singing birds.\"",
+      "options": [
+        "when",
+        "where",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 forest 虽表地点,但从句缺宾语(visited ___)→ 用 that(不是 where)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The animals ____ live in this park are protected by law.\"",
+      "options": [
+        "that",
+        "when",
+        "where",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 animals、从句缺主语 → that。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The first creature ____ I photographed in the wild was a red deer.\"",
+      "options": [
+        "when",
+        "that",
+        "where",
+        "why"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 creature、从句缺宾语 → that。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The river ____ runs through the valley is home to many fish.\"",
+      "options": [
+        "when",
+        "where",
+        "that",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 river、从句缺主语 → that。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The path ____ we followed led us deep into the dark forest.\"",
+      "options": [
+        "when",
+        "where",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 path 虽表地点,但从句缺宾语(followed ___)→ 用 that(不是 where)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"These are the tall trees on ____ the eagles build their huge nests.\"",
+      "options": [
+        "which",
+        "that",
+        "when",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 on 后只能用 which(不可 that)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"That is the way in ____ the butterflies find their direction south.\"",
+      "options": [
+        "that",
+        "which",
+        "when",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "the way in which;介词 in 后用 which。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"A camera is the tool with ____ this photographer captures wild animals.\"",
+      "options": [
+        "that",
+        "when",
+        "which",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 with 后指物用 which。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Sunlight is the means by ____ green plants make their own food.\"",
+      "options": [
+        "that",
+        "when",
+        "where",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "a means by which;介词 by 后用 which。"
+    }
+  ]
+}

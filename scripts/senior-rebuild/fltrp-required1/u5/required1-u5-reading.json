@@ -1,0 +1,332 @@
+{
+  "volume": "required1",
+  "unit": "U5",
+  "topic": "Into the Wild",
+  "source": "外研社(新标准)2019必修第一册 Unit 5 同主题阅读(黑脉金斑蝶的旅程/动物为何迁徙/与熊的相遇/荷兰的大熊猫/动物园之辩/丹顶鹤档案)。词限 U5/初中/常见词,答案转述非照抄,4选项唯一,与完形听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Monarch's Journey",
+      "body": "Every autumn, millions of monarch butterflies with fine black and orange wings begin a long and difficult journey. Somehow they travel around four thousand kilometres south and find their way to California or Mexico. For a long time, no one knew how such tiny insects could do this. Then a team led by a professor at an American university found the answer. The monarch is able to tell the time of day, and it also uses its eyes to check where the sun sits in the sky. These two clues together allow the butterfly to work out the right direction to fly. In the end, it reaches the warm forests where it will spend the cold winter. The discovery is amazing, yet it has come at a worrying time, because the number of monarchs has dropped sharply in recent years.",
+      "vocab_notes": [
+        {
+          "word": "monarch",
+          "cn": "黑脉金斑蝶"
+        },
+        {
+          "word": "professor",
+          "cn": "教授"
+        },
+        {
+          "word": "direction",
+          "cn": "方向"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What had long puzzled people about the monarch butterfly?",
+          "options": [
+            "How such a small insect found its way so far.",
+            "Why it had black and orange wings.",
+            "When it first appeared on the earth.",
+            "Where its name came from."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'no one knew how such tiny insects could do this' 的转述。"
+        },
+        {
+          "stem": "How does the monarch decide which way to fly?",
+          "options": [
+            "By following other larger birds.",
+            "By noting the hour and the sun's position above.",
+            "By smelling the flowers below.",
+            "By listening to the wind."
+          ],
+          "answer_index": 1,
+          "explanation": "中段 'tell the time of day… check where the sun sits… work out the right direction' 的转述。"
+        },
+        {
+          "stem": "Why does the writer call the discovery worrying as well as amazing?",
+          "options": [
+            "Because monarch numbers have fallen very fast lately.",
+            "Because the butterflies fly too slowly.",
+            "Because the forests are too warm.",
+            "Because no one believes the professor."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'the number of monarchs has dropped sharply' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Why Animals Migrate",
+      "body": "Many animals do not stay in one place all year round. At certain times, they move from one area to another, and this regular movement is called migration. There are several reasons why they do this. The most common one is food: when winter comes and food becomes hard to find, animals travel to places where there is still enough to eat. Some move in order to seek a partner and raise their young in a safer area. Others simply follow the warmer weather. Birds, fish, insects and even some large sea animals all make such journeys. The Atlantic salmon, for example, swims back up the very river where it was born, while certain whales travel thousands of kilometres across the ocean each year. These trips are long and full of danger, but the animals that complete them give their young a far better chance to survive.",
+      "vocab_notes": [
+        {
+          "word": "migration",
+          "cn": "迁徙"
+        },
+        {
+          "word": "seek",
+          "cn": "寻找"
+        },
+        {
+          "word": "survive",
+          "cn": "存活"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the word 'migration' mean in the passage?",
+          "options": [
+            "Staying in one place all year.",
+            "When animals move regularly between different areas.",
+            "Sleeping through the whole winter.",
+            "Building a nest in a tree."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'this regular movement is called migration' 的转述。"
+        },
+        {
+          "stem": "According to the text, what is the most common reason for migration?",
+          "options": [
+            "The wish to be famous.",
+            "A dislike of other animals.",
+            "The search for food.",
+            "The need for exercise."
+          ],
+          "answer_index": 2,
+          "explanation": "中段 'The most common one is food' 的转述。"
+        },
+        {
+          "stem": "What does completing the journey give the animals?",
+          "options": [
+            "A longer sleep.",
+            "A new colour.",
+            "A chance to forget the way home.",
+            "A better chance for their young to live."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'give their young a far better chance to survive' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "An Encounter with a Bear",
+      "body": "Last spring, while taking photos in a national park, I followed a path that led me through a dark forest. When I stepped out of the trees, the view took my breath away. An eagle flew over the snow-capped mountains, which were mirrored in the still lake below. As I was concentrating on this scene, I suddenly felt that I was being watched. Slowly, with my camera still held to my eye, I turned and froze. Only a few metres away stood a large bear, water dropping from its thick brown hair as it stared straight back at me. Time seemed to stop while we both waited to see who would move first. My legs began to shake, but somehow I forced my finger to press the button. A moment later, the bear turned and ran back into the trees. When I recovered, I realised that my most frightening yet magical experience was now saved forever in a single picture.",
+      "vocab_notes": [
+        {
+          "word": "concentrate",
+          "cn": "专注"
+        },
+        {
+          "word": "freeze",
+          "cn": "呆住"
+        },
+        {
+          "word": "stare",
+          "cn": "凝视"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the writer feel when first stepping out of the trees?",
+          "options": [
+            "Greatly impressed by the beautiful scene.",
+            "Bored by the empty view.",
+            "Afraid of getting lost.",
+            "Tired and ready to leave."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the view took my breath away' 的转述。"
+        },
+        {
+          "stem": "How did the writer react on seeing the bear so close?",
+          "options": [
+            "He ran away at once.",
+            "He froze and could not move at first.",
+            "He shouted loudly for help.",
+            "He climbed up a tall tree."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'I turned and froze… My legs began to shake' 的转述。"
+        },
+        {
+          "stem": "What does the writer keep from that day?",
+          "options": [
+            "A wound on his arm.",
+            "A friendship with the bear.",
+            "A single photo of the whole experience.",
+            "A fear of all forests."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'saved forever in a single picture' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Pandas Far from Home",
+      "body": "In the spring of 2017, two giant pandas from China arrived at a zoo in the Netherlands. Workers had spent months getting ready for them, and the animals were welcomed into a Chinese-style home built specially for their stay. A few weeks later, after everything was complete, the day finally came for the pandas to meet their fans. People were very excited, partly because this zoo was the only place in the whole country where the public could see pandas, and partly because the last time pandas had lived there was thirty years before. Of course, another reason for the great excitement was simply that pandas are so lovely to look at. The visit was about more than fun, though. It was also a sign of warm feelings between two countries, and it gave local children a chance to learn about a rare creature they might never see in the wild.",
+      "vocab_notes": [
+        {
+          "word": "complete",
+          "cn": "完成的"
+        },
+        {
+          "word": "creature",
+          "cn": "生物"
+        },
+        {
+          "word": "rare",
+          "cn": "稀有的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the day the pandas met their fans special?",
+          "options": [
+            "The pandas had been born at that very zoo.",
+            "The zoo was about to close down.",
+            "The pandas could already speak Dutch.",
+            "It was the country's only panda zoo, and none had been seen there for thirty years."
+          ],
+          "answer_index": 3,
+          "explanation": "中段 'the only place… the last time pandas had lived there was thirty years before' 的转述。"
+        },
+        {
+          "stem": "Besides being exciting, what did the visit stand for?",
+          "options": [
+            "Friendly feelings between two countries.",
+            "A new kind of food.",
+            "A bigger zoo ticket price.",
+            "The end of panda research."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'a sign of warm feelings between two countries' 的转述。"
+        },
+        {
+          "stem": "What chance did the visit give local children?",
+          "options": [
+            "A chance to feed wild bears.",
+            "An up-close look at an unusual creature.",
+            "A chance to travel to China.",
+            "A chance to keep a panda at home."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'a chance to learn about a rare creature' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Should Animals Live in Zoos?",
+      "body": "People often argue about whether wild animals should be kept in zoos. Those who are for zoos say that a good zoo can help protect animals that are in danger. They also believe zoos are a fine way to teach the public, because they let visitors see and learn about animals in surroundings that are made to feel like the wild. Those who are against zoos see things differently. They say that no zoo can truly offer an animal the home that nature gives it. They also worry that zoo animals may lose their natural skills and be unable to live on their own if they are ever set free again. Some even feel that zoos are really built for people rather than for the animals inside them. Both sides care about the same thing, the well-being of the animals, yet they reach very different answers, which is exactly why the debate has gone on for so long.",
+      "vocab_notes": [
+        {
+          "word": "argue",
+          "cn": "争论"
+        },
+        {
+          "word": "surroundings",
+          "cn": "环境"
+        },
+        {
+          "word": "debate",
+          "cn": "辩论"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is one point made by people who support zoos?",
+          "options": [
+            "Zoos should charge much higher prices.",
+            "Animals dislike being watched.",
+            "A well-run zoo can keep endangered animals safe.",
+            "Zoos should only keep insects."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'a good zoo can help protect animals that are in danger' 的转述。"
+        },
+        {
+          "stem": "Why do some people worry about keeping animals in zoos?",
+          "options": [
+            "The animals eat too much.",
+            "The zoos are always empty.",
+            "The animals learn to speak.",
+            "The animals may lose the skills needed to live in the wild."
+          ],
+          "answer_index": 3,
+          "explanation": "中段 'may lose their natural skills and be unable to live on their own' 的转述。"
+        },
+        {
+          "stem": "Why has the debate lasted so long, according to the writer?",
+          "options": [
+            "Because the two sides share one concern yet disagree on the answer.",
+            "Because nobody really cares.",
+            "Because zoos are too expensive.",
+            "Because there are no wild animals left."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'both sides care about the same thing… reach very different answers' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "The Red-crowned Crane",
+      "body": "The red-crowned crane is one of the largest cranes in the world, standing about one and a half metres tall. Its feathers are as white as snow, apart from some black ones on its face, neck and wings. Its most special feature, which gives the bird its name, is the bright red skin on the top of its head. This crane can be found in China, Russia, Mongolia, Japan and Korea. In China, it spends the warmer months in the rivers and wetlands of the north-east. When the cold weather arrives, it migrates to the central and eastern parts of the country, where the winter is gentler. Its meals include fish, snails and water plants. To many Chinese people, the red-crowned crane is far more than a beautiful bird, for it has long been a symbol of long life and good luck in their culture.",
+      "vocab_notes": [
+        {
+          "word": "feature",
+          "cn": "特征"
+        },
+        {
+          "word": "migrate",
+          "cn": "迁徙"
+        },
+        {
+          "word": "symbol",
+          "cn": "象征"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What gives the red-crowned crane its name?",
+          "options": [
+            "Its long white neck.",
+            "The bright red patch crowning its head.",
+            "The black feathers on its wings.",
+            "Its loud morning call."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the bright red skin on the top of its head' 的转述。"
+        },
+        {
+          "stem": "Where does the crane go when winter arrives in China?",
+          "options": [
+            "It flies far across the ocean.",
+            "It stays in the frozen north-east.",
+            "It moves to the milder central and eastern areas.",
+            "It hides inside caves."
+          ],
+          "answer_index": 2,
+          "explanation": "中段 'migrates to the central and eastern parts… winter is gentler' 的转述。"
+        },
+        {
+          "stem": "What does the bird mean in Chinese culture?",
+          "options": [
+            "Hard work and study.",
+            "Bad weather ahead.",
+            "A long journey home.",
+            "Good fortune and a long life."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'a symbol of long life and good luck' 的转述。"
+        }
+      ]
+    }
+  ]
+}

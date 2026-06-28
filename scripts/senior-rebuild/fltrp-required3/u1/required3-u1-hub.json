@@ -1,0 +1,48 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "listeningQuestions": [
+    { "audio": "Disappointed by his behaviour, I told my best friend everything.", "opts": ["对他的行为感到失望,我把一切都告诉了好友。", "我昨天忘了带午饭。", "球队赢得了那场比赛。", "我搬到了一座新城市。"], "answer": 0 },
+    { "audio": "I was only letting off steam when I complained about my teammate.", "opts": ["我把自行车卖掉了。", "我抱怨队友时只是在发泄情绪。", "今天体育馆关门了。", "我不喜欢任何运动。"], "answer": 1 },
+    { "audio": "A sincere apology can repair a damaged friendship.", "opts": ["道歉只会让事情更糟。", "他从不说对不起。", "真诚的道歉能修复受损的友谊。", "他忘了自己的名字。"], "answer": 2 },
+    { "audio": "Good friendships, like the porcupines, need a little space.", "opts": ["快点跑,不然会迟到。", "把书还回图书馆。", "明天会下大雨。", "好的友谊就像豪猪一样,需要一点空间。"], "answer": 3 },
+    { "audio": "Take a deep breath and calm down before you speak in anger.", "opts": ["生气说话前,先深吸一口气冷静下来。", "请把窗户关上。", "我们一起去看电影吧。", "他把秘密告诉了所有人。"], "answer": 0 },
+    { "audio": "Honesty is the core of every true friendship.", "opts": ["谎言能让朋友更亲近。", "诚实是每段真挚友谊的核心。", "他拒绝了那个请求。", "她忘了朋友的生日。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Speaking too freely can cause all kinds of ____ between friends.", "opts": ["trouble", "weather", "machine", "garden"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Trust is the ____ value of any close friendship.", "opts": ["empty", "core", "loud", "late"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "A true friend gives you ____ comments so that you can improve.", "opts": ["false", "lazy", "frank", "silly"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "First, you should ____ to your teammate for your careless words.", "opts": ["sell", "forget", "lose", "apologise"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "____ by his behaviour, I told my best friend everything.", "opts": ["Disappointed", "Disappointing", "To disappoint", "Disappoint"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ more time, most people will do a better job.", "opts": ["Giving", "Given", "To give", "Give"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "____ about her sick friend, Anna could not focus on her homework.", "opts": ["Worrying", "To worry", "Worried", "Worry"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "____ in this way, your friendship will soon be repaired.", "opts": ["Approaching", "To approach", "Approach", "Approached"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["他被当众批评,感到很尴尬。", "我们一个接一个地自我介绍。", "学校今天停电了。", "她卖掉了旧手机。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Criticised in front of others, he felt very embarrassed." },
+    { "q": "听句子选中文:", "opts": ["他迟到了一个小时。", "被好友的支持打动,她内心感到温暖。", "明天的天气会很好。", "他忘了带书包。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Touched by her friend's support, she felt warm inside." }
+  ],
+  "reading": {
+    "passage": "True friendship is like the porcupines on a cold night: we need each other for warmth, yet we also need a little space. Stand too close, and small differences begin to hurt; stay too far, and we feel cold and alone. The wisest friends find a comfortable distance built on honesty and trust.",
+    "passageCn": "真正的友谊就像寒夜里的豪猪:我们既需要彼此取暖,也需要一点空间。靠得太近,小小的分歧便会伤人;离得太远,又会感到寒冷孤单。最明智的朋友会找到一个建立在诚实与信任之上的舒适距离。",
+    "questions": [
+      { "q": "According to the passage, what happens if friends stand too close?", "opts": ["Small differences begin to hurt.", "They always feel warm.", "They never argue at all.", "They forget each other."], "answer": 0 },
+      { "q": "What do the wisest friends find?", "opts": ["A way to never meet.", "A comfortable distance built on trust.", "A bigger group of friends.", "A warmer cave."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about how you would deal with a small conflict with a friend. Say what happened, what you did, and how you felt. Try to use one -ed participle as an adverbial (e.g. Hurt by his words, I …).",
+    "promptCn": "用3-4句话写写你会怎样处理和朋友的一次小冲突:发生了什么、你怎么做、你的感受。试着用一个 -ed 分词作状语(如 Hurt by his words, I …)。",
+    "sampleWords": ["conflict", "apologise", "honest", "forgive", "trust", "annoyed", "calm down", "communication", "let down", "frank"]
+  },
+  "dialogues": [
+    {
+      "title": "Sorry for Repeating Your Words",
+      "lines": [
+        { "role": "A", "text": "I need to talk to you. You told everyone what I said about the match.", "cn": "我得跟你谈谈。你把我说的关于比赛的话告诉了所有人。" },
+        { "role": "B", "text": "I'm really sorry. I didn't think before I spoke, and I let you down.", "cn": "我真的很抱歉。我没多想就说出口了,辜负了你。" },
+        { "role": "A", "text": "I was only letting off steam. I never wanted the whole team to hear it.", "cn": "我只是在发泄情绪,根本不想让全队都听到。" },
+        { "role": "B", "text": "You're right. From now on, I'll keep your words to myself, I promise.", "cn": "你说得对。从现在起,我保证守口如瓶。" }
+      ]
+    }
+  ]
+}

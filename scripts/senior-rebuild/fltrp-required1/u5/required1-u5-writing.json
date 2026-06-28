@@ -1,0 +1,52 @@
+{
+  "volume": "required1",
+  "unit": "U5",
+  "topic": "Write an Animal Fact File(写一份动物档案)",
+  "title_en": "An Animal Fact File",
+  "genre": "说明文 / 动物档案(describe an animal: appearance, habitat, migration, diet, other information)",
+  "source": "外研社(新标准)2019必修第一册 Unit 5 Writing an animal fact file:介绍一种动物的外貌、栖息地、迁徙、食物及其他信息。",
+  "prompt_cn": "请用英语写一份约80词的动物档案,介绍一种你喜欢的野生动物。内容包括:① 它长什么样(外貌/独特特征);② 它生活在哪里;③ 它吃什么或它如何迁徙;④ 关于它的一条其他信息(如象征意义或为何需要保护)。注意:用定语从句让句子更连贯。",
+  "prompt_en": "Write an animal fact file (about 80 words) about a wild animal you like. Include: 1) what it looks like (appearance / a special feature); 2) where it lives; 3) what it eats or how it migrates; 4) one piece of other information (such as its symbolic meaning or why it needs protecting). Try to use attributive clauses to link your ideas.",
+  "points": [
+    "外貌/独特特征(It is … tall. / Its unique feature is …)",
+    "栖息地(It is found in … / It lives in places where …)",
+    "食物或迁徙(Its food includes … / When winter comes, it migrates to …)",
+    "其他信息 + 用定语从句连接句子"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "The red-crowned crane is one of the largest cranes in the world, standing about 150 cm tall. Its feathers are as white as snow, and its unique feature, which gives the bird its name, is the bright red skin on top of its head. It is found in China, Russia and Japan. In China, it lives in northern wetlands where there is plenty of food, such as fish and water plants. When winter comes, it migrates to milder areas in the east. To Chinese people, this crane is a symbol of long life and good luck.",
+  "model_translation": "丹顶鹤是世界上最大的鹤类之一,身高约150厘米。它的羽毛洁白如雪,而它独特的、为它得名的特征,是头顶那块鲜红的皮肤。它分布于中国、俄罗斯和日本。在中国,它生活在食物丰富的北方湿地,以鱼和水生植物为食。冬天来临时,它迁往东部较温和的地区。对中国人来说,这种鹤是长寿和好运的象征。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:外貌 / 栖息地 / 食物或迁徙 / 其他信息" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一种动物展开、信息分类清楚、用定语从句连接、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、关系副词 where/when 及关系代词运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "外貌 It is … tall. / Its unique feature is …",
+      "栖息地 It is found in … / It lives in places where …",
+      "迁徙/食物 When winter comes, it migrates to … / Its food includes …",
+      "其他信息 It is a symbol of … / We must protect it because …"
+    ],
+    "key_expressions": [
+      "The red-crowned crane is one of the largest cranes in the world.",
+      "Its unique feature, which gives the bird its name, is the bright red skin on its head.",
+      "It lives in northern wetlands where there is plenty of food.",
+      "When winter comes, it migrates to milder areas in the east."
+    ],
+    "useful_words": ["appearance", "feature", "habitat", "wetland", "migrate", "diet", "creature", "survive", "symbol", "protect"]
+  },
+  "high_sentences": [
+    "Its unique feature, which gives the bird its name, is the bright red skin on its head.",
+    "It lives in northern wetlands where there is plenty of food.",
+    "When winter comes, it migrates to milder areas in the east.",
+    "To Chinese people, this crane is a symbol of long life and good luck."
+  ],
+  "error_pairs": [
+    { "wrong": "It lives in wetlands where it is full of food.", "correct": "It lives in wetlands where there is plenty of food.", "note": "where 引导地点状语从句,后面用 there is,不再加多余主语 it。" },
+    { "wrong": "Winter comes, it migrates to the east.", "correct": "When winter comes, it migrates to the east.", "note": "两个句子要用连词 When 连接,不能直接逗号相连。" },
+    { "wrong": "Its food include fish and plants.", "correct": "Its food includes fish and plants.", "note": "主语 food 第三人称单数,动词加 s。" }
+  ],
+  "paragraph_template": "【动物档案结构】\n第1句 外貌:It is … tall, and its unique feature is …\n第2句 栖息地:It is found in … / It lives in places where …\n第3句 食物或迁徙:Its food includes … / When winter comes, it migrates to …\n第4句 其他信息:It is a symbol of … / We must protect it."
+}

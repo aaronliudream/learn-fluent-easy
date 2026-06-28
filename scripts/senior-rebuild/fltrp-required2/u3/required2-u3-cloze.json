@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "topic": "On the Move",
+  "source": "外研社版(新标准)必修第二册 Unit 3 同主题完形(塑料袋做的球/我的第一节太极课/校运动会/我的第一次马拉松/跟着App跑步/从滑冰到冰球)。用词限 U3/初中/常见词,答案唯一,与阅读关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Ball Made of Plastic Bags",
+      "text": "When Tiago was a boy, his family was poor and could not (1)____ a real football. That did not stop him. He made his own ball out of old (2)____ bags tied tightly together. Every evening after school he ran out to a dusty field to (3)____ with his friends. They had no nets, so they used two stones as a (4)____. None of them owned proper boots or any other (5)____, yet they played to their heart's (6)____ until the sky grew dark. Tiago was small, but he was quick, and he soon learned how to pass and (7)____ better than older boys. People in the town began to say that he was (8)____ enough to join a real club one day. Years later that dream came true, and Tiago became a local (9)____. He still tells children that you do not need money to (10)____ the game you love.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "afford",
+            "win",
+            "watch",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "could not afford「买不起」,符合家里贫穷的语境。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "wooden",
+            "plastic",
+            "metal",
+            "stone"
+          ],
+          "answer_index": 1,
+          "explanation": "用旧塑料袋做球,只有 plastic bags 说得通。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sleep",
+            "cook",
+            "play",
+            "study"
+          ],
+          "answer_index": 2,
+          "explanation": "跑到球场和朋友一起 play 踢球。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prize",
+            "master",
+            "label",
+            "goal"
+          ],
+          "answer_index": 3,
+          "explanation": "用两块石头当 goal 球门。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "equipment",
+            "weather",
+            "advice",
+            "music"
+          ],
+          "answer_index": 0,
+          "explanation": "没有球鞋或其他 equipment 器材。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "money",
+            "content",
+            "time",
+            "rest"
+          ],
+          "answer_index": 1,
+          "explanation": "to one's heart's content「尽情地」是固定搭配。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "cry",
+            "drive",
+            "defend",
+            "paint"
+          ],
+          "answer_index": 2,
+          "explanation": "学会传球与 defend 防守,符合足球语境。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sad",
+            "late",
+            "cold",
+            "good"
+          ],
+          "answer_index": 3,
+          "explanation": "good enough to join「好到足以加入」。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "champion",
+            "doctor",
+            "teacher",
+            "farmer"
+          ],
+          "answer_index": 0,
+          "explanation": "梦想成真后成为当地 champion 冠军。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hate",
+            "play",
+            "miss",
+            "leave"
+          ],
+          "answer_index": 1,
+          "explanation": "不需要钱也能 play 玩你热爱的运动。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "My First Tai Chi Class",
+      "text": "Last summer I joined a tai chi class in a quiet park near my home. At first I felt (1)____, because everyone else seemed to know the movements. The teacher, an old (2)____ with kind eyes, told me to relax and simply follow him. Tai chi (3)____ a lot of slow, gentle movements, and at the start my arms and legs would (4)____ after only a few minutes. I had to get up (5)____ every morning to practise before work, which was not easy. Little by little, though, I began to find a sense of (6)____ in my body that I had never felt before. My breathing grew (7)____ and my mind became quiet. The early mornings no longer felt like a (8)____. Now I (9)____ tai chi to anyone who feels stressed. It is a simple way to relax your mind and (10)____ your body.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "proud",
+            "lazy",
+            "nervous",
+            "rich"
+          ],
+          "answer_index": 2,
+          "explanation": "别人都会而自己不会,感到 nervous 紧张。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "soldier",
+            "driver",
+            "writer",
+            "master"
+          ],
+          "answer_index": 3,
+          "explanation": "教太极的老者是 master 大师。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "involves",
+            "forgets",
+            "sells",
+            "breaks"
+          ],
+          "answer_index": 0,
+          "explanation": "tai chi involves「包含」缓慢的动作。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sing",
+            "ache",
+            "jump",
+            "smile"
+          ],
+          "answer_index": 1,
+          "explanation": "几分钟后手脚就 ache 酸痛。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "late",
+            "slowly",
+            "early",
+            "loudly"
+          ],
+          "answer_index": 2,
+          "explanation": "上班前练习要 early 早起。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "danger",
+            "noise",
+            "anger",
+            "balance"
+          ],
+          "answer_index": 3,
+          "explanation": "身体里找到一种 balance 平衡感。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "deeper",
+            "louder",
+            "shorter",
+            "faster"
+          ],
+          "answer_index": 0,
+          "explanation": "呼吸变得 deeper 更深沉,心也静下来。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "prize",
+            "burden",
+            "gift",
+            "treat"
+          ],
+          "answer_index": 1,
+          "explanation": "早起不再像一种 burden 负担。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "refuse",
+            "forget",
+            "recommend",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "向有压力的人 recommend 推荐太极。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "break",
+            "lose",
+            "drop",
+            "calm"
+          ],
+          "answer_index": 3,
+          "explanation": "放松心情、calm 让身体平静。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "School Sports Day",
+      "text": "Our school holds a sports day every spring, and this year I decided to (1)____ in the 800 metres. I had never been a fast runner, so I knew I had to (2)____ hard. For a whole month I got up early to (3)____ around the playground before class. My legs often (4)____ at night, but I did not give up. My PE teacher gave me useful (5)____ on how to breathe and save energy. He also (6)____ me that I was improving, even when I could not feel it myself. On sports day I was so (7)____ that my hands were shaking at the start line. When the race began, I tried to keep a steady (8)____ instead of rushing. To my great joy, I came second and won a silver (9)____. That day taught me that hard training can turn a slow runner into a real (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "compete",
+            "sleep",
+            "watch",
+            "refuse"
+          ],
+          "answer_index": 0,
+          "explanation": "decided to compete「决定参赛」跑 800 米。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "rest",
+            "train",
+            "eat",
+            "relax"
+          ],
+          "answer_index": 1,
+          "explanation": "跑得不快,所以必须刻苦 train 训练。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "swim",
+            "drive",
+            "run",
+            "sleep"
+          ],
+          "answer_index": 2,
+          "explanation": "早起在操场上 run 跑步。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "smiled",
+            "sang",
+            "danced",
+            "ached"
+          ],
+          "answer_index": 3,
+          "explanation": "晚上腿常常 ached 酸痛。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "advice",
+            "money",
+            "food",
+            "music"
+          ],
+          "answer_index": 0,
+          "explanation": "老师给了有用的 advice 建议。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "warned",
+            "assured",
+            "forced",
+            "stopped"
+          ],
+          "answer_index": 1,
+          "explanation": "assured me that「向我保证」我在进步。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lazy",
+            "proud",
+            "nervous",
+            "bored"
+          ],
+          "answer_index": 2,
+          "explanation": "so nervous that「太紧张以致」手发抖。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "prize",
+            "place",
+            "pace"
+          ],
+          "answer_index": 3,
+          "explanation": "保持稳定的 pace 节奏而不冲刺。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "medal",
+            "ticket",
+            "letter",
+            "photo"
+          ],
+          "answer_index": 0,
+          "explanation": "得第二名,赢得一枚银 medal 奖牌。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "beginner",
+            "champion",
+            "stranger",
+            "farmer"
+          ],
+          "answer_index": 1,
+          "explanation": "刻苦训练能把慢跑者变成真正的 champion 冠军。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "My First Marathon",
+      "text": "I had jogged for fun for years, but I had never run a (1)____ until last autumn. When I signed up, friends warned me that 42 kilometres was a long (2)____ for a beginner. They were right. For months I trained almost every day to build up my (3)____. On the morning of the race I felt both excited and (4)____. The first half went well, and I kept a comfortable (5)____. After 30 kilometres, however, my legs began to (6)____ badly and my energy seemed to (7)____. I wanted to stop, but the cheering crowd gave me the (8)____ to keep going. Slowly, step by step, I reached the finish line. I did not win any (9)____, but crossing that line felt like the greatest (10)____ of my life. Now I tell everyone that the real winner is anyone who refuses to give up.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "lesson",
+            "meeting",
+            "marathon",
+            "meal"
+          ],
+          "answer_index": 2,
+          "explanation": "从未跑过一次 marathon 马拉松。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "story",
+            "season",
+            "message",
+            "distance"
+          ],
+          "answer_index": 3,
+          "explanation": "42 公里对新手是很长的 distance 距离。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "fitness",
+            "money",
+            "homework",
+            "traffic"
+          ],
+          "answer_index": 0,
+          "explanation": "天天训练来增强 fitness 体能。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "bored",
+            "nervous",
+            "sleepy",
+            "angry"
+          ],
+          "answer_index": 1,
+          "explanation": "既兴奋又 nervous 紧张。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "plate",
+            "pace",
+            "prize"
+          ],
+          "answer_index": 2,
+          "explanation": "保持舒适的 pace 配速。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "shine",
+            "laugh",
+            "grow",
+            "ache"
+          ],
+          "answer_index": 3,
+          "explanation": "30 公里后腿开始剧烈 ache 酸痛。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "disappear",
+            "increase",
+            "return",
+            "appear"
+          ],
+          "answer_index": 0,
+          "explanation": "体力似乎要 disappear 耗尽消失。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "money",
+            "power",
+            "ticket",
+            "bill"
+          ],
+          "answer_index": 1,
+          "explanation": "观众的欢呼给了我坚持下去的 power 力量。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "ticket",
+            "letter",
+            "medal",
+            "key"
+          ],
+          "answer_index": 2,
+          "explanation": "我没赢得任何 medal 奖牌。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "mistake",
+            "accident",
+            "problem",
+            "achievement"
+          ],
+          "answer_index": 3,
+          "explanation": "冲线像是人生最大的 achievement 成就。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Running with an App",
+      "text": "A few years ago I did almost no exercise. Then a friend told me about a running (1)____ called Running Power. The app shows your performance against other runners in your social (2)____. At first I only ran to see my own name climb to the (3)____ of the list. Slowly, something changed. I realised I was not (4)____: many other people in my area were running for the same (5)____. We began to share routes and (6)____ each other to do better. Running soon helped me deal with the (7)____ of a busy week, and after each run my worries seemed to (8)____. The app also let me (9)____ my progress, so I could see how much faster I had become. In the end I stopped using the app, but by then I had completely fallen in (10)____ with running.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "app",
+            "book",
+            "song",
+            "meal"
+          ],
+          "answer_index": 0,
+          "explanation": "一款跑步 app 应用,符合下文 the app。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "network",
+            "kitchen",
+            "forest"
+          ],
+          "answer_index": 1,
+          "explanation": "social network「社交网络」里的其他跑者。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "floor",
+            "corner",
+            "top",
+            "gate"
+          ],
+          "answer_index": 2,
+          "explanation": "想看到名字爬到榜单的 top 顶端。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "ready",
+            "late",
+            "asleep",
+            "alone"
+          ],
+          "answer_index": 3,
+          "explanation": "意识到自己并不 alone 孤单。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "reason",
+            "price",
+            "ticket",
+            "meal"
+          ],
+          "answer_index": 0,
+          "explanation": "别人为同样的 reason 理由而跑。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forbid",
+            "encourage",
+            "ignore",
+            "blame"
+          ],
+          "answer_index": 1,
+          "explanation": "分享路线、互相 encourage 鼓励。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "music",
+            "weather",
+            "tension",
+            "colour"
+          ],
+          "answer_index": 2,
+          "explanation": "帮我应对忙碌一周的 tension 压力。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "grow",
+            "return",
+            "increase",
+            "disappear"
+          ],
+          "answer_index": 3,
+          "explanation": "跑完后烦恼似乎 disappear 消失。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "chart",
+            "hide",
+            "lose",
+            "waste"
+          ],
+          "answer_index": 0,
+          "explanation": "App 让我 chart 记录跟踪进展。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "trouble",
+            "love",
+            "danger",
+            "sleep"
+          ],
+          "answer_index": 1,
+          "explanation": "fall in love with「爱上」跑步。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "From Skating to Ice Hockey",
+      "text": "Only three years ago, I was (1)____ of sports like skiing and skating. To deal with this fear, I decided to (2)____ a skating club. At first I really envied the other members, who looked so (3)____ on the ice. My teacher, however, was patient and kind, and before I knew it I was able to (4)____ without falling. He then gently (5)____ me to try ice hockey, and I agreed. I loved it at once. Soon I was (6)____ with my local team almost every evening, even though my body often (7)____ afterwards. Last winter I felt so (8)____ when our team won the regional competition. It made me believe I could (9)____ almost anything. We are now training for the national games, but my (10)____ goal is to become an ice hockey coach and help others learn this wonderful sport.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "proud",
+            "fond",
+            "afraid",
+            "sure"
+          ],
+          "answer_index": 2,
+          "explanation": "afraid of「害怕」滑雪滑冰,与下文 this fear 一致。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "leave",
+            "close",
+            "sell",
+            "join"
+          ],
+          "answer_index": 3,
+          "explanation": "决定 join 加入滑冰俱乐部。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "confident",
+            "tired",
+            "afraid",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "羡慕别人在冰上很 confident 自信。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "swim",
+            "skate",
+            "drive",
+            "fly"
+          ],
+          "answer_index": 1,
+          "explanation": "学会 skate 滑冰而不摔倒。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "refused",
+            "prevented",
+            "persuaded",
+            "forbade"
+          ],
+          "answer_index": 2,
+          "explanation": "persuaded me to try「说服我尝试」,与 I agreed 一致。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleeping",
+            "eating",
+            "shopping",
+            "training"
+          ],
+          "answer_index": 3,
+          "explanation": "几乎每晚和队伍一起 training 训练。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "ached",
+            "smiled",
+            "relaxed",
+            "rested"
+          ],
+          "answer_index": 0,
+          "explanation": "训练后身体常常 ached 酸痛。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sad",
+            "proud",
+            "angry",
+            "calm"
+          ],
+          "answer_index": 1,
+          "explanation": "夺得地区冠军时感到 proud 自豪。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lose",
+            "miss",
+            "achieve",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "让我相信几乎能 achieve 实现一切。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "broken",
+            "empty",
+            "false",
+            "ultimate"
+          ],
+          "answer_index": 3,
+          "explanation": "我的 ultimate 最终目标是成为冰球教练。"
+        }
+      ]
+    }
+  ]
+}

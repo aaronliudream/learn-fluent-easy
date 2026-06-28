@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "topic": "Family Matters",
+  "source": "外研社必修第一册 Unit 3 同主题完形(筹备奶奶生日/与爸爸谈未来/家庭露营/我的爷爷/向妈妈道歉/我钦佩姐姐)。用词限 U3/初中/常见词,选项同词性、无双解,与阅读关不复用文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Getting Ready for Grandma's Party",
+      "text": "My mum called Grandma yesterday and (1)____ her to our house this Sunday. We are going to (2)____ her a big birthday party, so everyone needs to choose a (3)____. My brother Adam has decided to give her a new tea (4)____, because she loves drinking tea. My sister Sally is thinking of (5)____ a warm scarf for her by hand. Dad is (6)____ on the invitations, and he has already finished the guest (7)____. Mum says we still need to prepare the (8)____ and drinks for the day. Everyone in the family is (9)____ to help, and we are all very (10)____ about the surprise.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "invited",
+            "cooked",
+            "ignored",
+            "judged"
+          ],
+          "answer_index": 0,
+          "explanation": "invited her to our house 邀请她。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "throw",
+            "lose",
+            "break"
+          ],
+          "answer_index": 1,
+          "explanation": "throw a party 办派对。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "curtain",
+            "court",
+            "present",
+            "gap"
+          ],
+          "answer_index": 2,
+          "explanation": "choose a present 选礼物。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "studio",
+            "beard",
+            "theme",
+            "set"
+          ],
+          "answer_index": 3,
+          "explanation": "a tea set 一套茶具。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "making",
+            "eating",
+            "selling",
+            "losing"
+          ],
+          "answer_index": 0,
+          "explanation": "thinking of making a scarf 考虑织围巾。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleeping",
+            "working",
+            "crying",
+            "leaving"
+          ],
+          "answer_index": 1,
+          "explanation": "working on the invitations 在做请柬。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "noise",
+            "price",
+            "list",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "the guest list 宾客名单。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "music",
+            "homework",
+            "rain",
+            "food"
+          ],
+          "answer_index": 3,
+          "explanation": "food and drinks 食物和饮料。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "happy",
+            "angry",
+            "afraid",
+            "sorry"
+          ],
+          "answer_index": 0,
+          "explanation": "happy to help 乐意帮忙。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "bored",
+            "excited",
+            "tired",
+            "sad"
+          ],
+          "answer_index": 1,
+          "explanation": "excited about the surprise 对惊喜很兴奋。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Talk with Dad",
+      "text": "Last night I had a long (1)____ with my father about my future. For a long time he had simply (2)____ that I would become a lawyer like him. But I am far more (3)____ in music than in law. I told him that I wanted to (4)____ on my band after school. At first he was surprised and (5)____ my idea completely. Luckily, Grandpa helped to (6)____ the argument between us. He reminded Dad that everyone has a different (7)____. In the end, Dad agreed to (8)____ my choice, even though he still has a few (9)____. I feel very lucky to have such an (10)____ family.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "court",
+            "beard",
+            "chat",
+            "medal"
+          ],
+          "answer_index": 2,
+          "explanation": "had a long chat 长谈。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cooked",
+            "jogged",
+            "clapped",
+            "assumed"
+          ],
+          "answer_index": 3,
+          "explanation": "had assumed that 一直以为。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "interested",
+            "afraid",
+            "tired",
+            "sorry"
+          ],
+          "answer_index": 0,
+          "explanation": "interested in music 对音乐感兴趣。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleep",
+            "focus",
+            "cry",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "focus on my band 专注于乐队。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "enjoyed",
+            "watched",
+            "ignored",
+            "washed"
+          ],
+          "answer_index": 2,
+          "explanation": "ignored my idea 不理会我的想法。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "break",
+            "lose",
+            "throw",
+            "settle"
+          ],
+          "answer_index": 3,
+          "explanation": "settle the argument 化解争吵。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "talent",
+            "curtain",
+            "court",
+            "gap"
+          ],
+          "answer_index": 0,
+          "explanation": "a different talent 不同的天赋。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "ignore",
+            "respect",
+            "break",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "respect my choice 尊重我的选择。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "songs",
+            "prices",
+            "worries",
+            "shoes"
+          ],
+          "answer_index": 2,
+          "explanation": "still has a few worries 仍有些担忧。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "angry",
+            "boring",
+            "sleepy",
+            "understanding"
+          ],
+          "answer_index": 3,
+          "explanation": "an understanding family 善解人意的家庭。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Family Camping Trip",
+      "text": "To make up for a busy month, our family (1)____ to go camping last weekend. We drove to a quiet (2)____ near a lake and put up our tent together. While Dad (3)____ a fire, Mum prepared a simple meal. The fresh air and the (4)____ of the pine trees made everyone feel relaxed. After dinner we sat around the fire and (5)____ stories about the past. Grandpa told us about the days when he was (6)____ and full of energy. We laughed so much that our (7)____ began to hurt. Most importantly, we had plenty of time to (8)____ properly and share our worries. Spending a whole day (9)____ brought us much closer. It was indeed a (10)____ family memory.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "decided",
+            "sold",
+            "ignored",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "decided to go camping 决定去露营。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "curtain",
+            "spot",
+            "beard",
+            "court"
+          ],
+          "answer_index": 1,
+          "explanation": "a quiet spot 安静的地方。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "ate",
+            "sold",
+            "built",
+            "threw"
+          ],
+          "answer_index": 2,
+          "explanation": "built a fire 生火。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "list",
+            "medal",
+            "smell"
+          ],
+          "answer_index": 3,
+          "explanation": "the smell of the pine trees 松树的气味。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "shared",
+            "sold",
+            "burnt",
+            "washed"
+          ],
+          "answer_index": 0,
+          "explanation": "shared stories 分享故事。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sorry",
+            "young",
+            "afraid",
+            "boring"
+          ],
+          "answer_index": 1,
+          "explanation": "when he was young 他年轻时。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "curtains",
+            "courts",
+            "cheeks",
+            "medals"
+          ],
+          "answer_index": 2,
+          "explanation": "our cheeks began to hurt 笑得脸颊发酸。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sleep",
+            "drive",
+            "sell",
+            "talk"
+          ],
+          "answer_index": 3,
+          "explanation": "time to talk 谈心的时间。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "together",
+            "quietly",
+            "quickly",
+            "loudly"
+          ],
+          "answer_index": 0,
+          "explanation": "a whole day together 一起度过一整天。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "lovely",
+            "terrible",
+            "sad"
+          ],
+          "answer_index": 1,
+          "explanation": "a lovely family memory 美好的家庭回忆。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "My Grandfather",
+      "text": "My grandfather is the kindest (1)____ in our whole family. He has a gentle (2)____ and almost never loses his temper. Every Friday evening he (3)____ chess with my father at the kitchen table. People say there is often a (4)____ between the old and the young, but I never feel it with him. Whenever I have a problem, I can always (5)____ to him for advice. He listens carefully and never (6)____ me, even when my ideas sound silly. He has (7)____ in this house for over forty years, so he knows every family story. Nowadays he walks more slowly, but his mind is still very (8)____. I (9)____ him more than anyone else, and I hope to be as wise as him when I grow (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "court",
+            "medal",
+            "person",
+            "beard"
+          ],
+          "answer_index": 2,
+          "explanation": "the kindest person 最善良的人。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "studio",
+            "gap",
+            "theme",
+            "character"
+          ],
+          "answer_index": 3,
+          "explanation": "a gentle character 温和的性格。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "plays",
+            "sells",
+            "burns",
+            "washes"
+          ],
+          "answer_index": 0,
+          "explanation": "plays chess 下棋。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "curtain",
+            "gap",
+            "court",
+            "list"
+          ],
+          "answer_index": 1,
+          "explanation": "a gap between the old and the young 代沟。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "burn",
+            "turn",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "turn to him for advice 向他求助。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sells",
+            "cooks",
+            "jogs",
+            "judges"
+          ],
+          "answer_index": 3,
+          "explanation": "never judges me 从不评判我。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lived",
+            "sold",
+            "burnt",
+            "washed"
+          ],
+          "answer_index": 0,
+          "explanation": "has lived in this house 住在这房子里。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sorry",
+            "sharp",
+            "afraid",
+            "slim"
+          ],
+          "answer_index": 1,
+          "explanation": "his mind is sharp 头脑敏锐。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "ignore",
+            "break",
+            "admire",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "admire him 钦佩他。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "down",
+            "in",
+            "off",
+            "up"
+          ],
+          "answer_index": 3,
+          "explanation": "grow up 长大。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Saying Sorry",
+      "text": "Last week my mum (1)____ an important school show of mine because of her work. I felt hurt and could not (2)____ my disappointment. Later she phoned me to (3)____ and explained that a colleague had been away. I could hear from her voice that she was (4)____ sorry. I know she has been under a lot of (5)____ recently, so I tried to understand. Instead of staying angry, I decided to (6)____ her how I really felt. To make (7)____ for it, we planned a special day out together. Mum told me that (8)____ stress on certain words can make an apology much stronger. Her gentle words had a big (9)____ on me. In the end, saying sorry honestly brought us closer than (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "missed",
+            "sold",
+            "built",
+            "jogged"
+          ],
+          "answer_index": 0,
+          "explanation": "missed an important show 错过演出。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "hide",
+            "drive",
+            "wash"
+          ],
+          "answer_index": 1,
+          "explanation": "hide my disappointment 掩饰失望。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "cook",
+            "apologise",
+            "drive"
+          ],
+          "answer_index": 2,
+          "explanation": "phoned to apologise 打电话道歉。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "hardly",
+            "never",
+            "rarely",
+            "truly"
+          ],
+          "answer_index": 3,
+          "explanation": "truly sorry 真心抱歉。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "pressure",
+            "curtain",
+            "medal",
+            "beard"
+          ],
+          "answer_index": 0,
+          "explanation": "under a lot of pressure 压力很大。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "tell",
+            "burn",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "tell her how I felt 告诉她感受。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "down",
+            "in",
+            "up",
+            "off"
+          ],
+          "answer_index": 2,
+          "explanation": "make up for it 弥补。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "eating",
+            "selling",
+            "washing",
+            "placing"
+          ],
+          "answer_index": 3,
+          "explanation": "placing stress on words 在词上重读。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "impact",
+            "noise",
+            "price",
+            "list"
+          ],
+          "answer_index": 0,
+          "explanation": "had a big impact on me 对我影响很大。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "never",
+            "before",
+            "often",
+            "always"
+          ],
+          "answer_index": 1,
+          "explanation": "closer than before 比从前更近。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Why I Admire My Sister",
+      "text": "My elder sister is the person I (1)____ most in our family. She is (2)____ studying at a university in another city, so we do not see her often. Even so, she calls home (3)____ every week to chat with us. She has always been very (4)____ and helps our parents whenever she can. When I was younger, she would (5)____ me with my homework every evening. She never (6)____ my silly questions, no matter how busy she was. People say she has a real (7)____ for music, and she now plays in a college band. Her hard work has had a positive (8)____ on me. (9)____ the long distance between us, we stay very close. I really hope to be as kind and clever as her one (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "ignore",
+            "sell",
+            "admire",
+            "burn"
+          ],
+          "answer_index": 2,
+          "explanation": "the person I admire most 我最钦佩的人。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "hardly",
+            "never",
+            "rarely",
+            "currently"
+          ],
+          "answer_index": 3,
+          "explanation": "is currently studying 目前在学习。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "regularly",
+            "loudly",
+            "quickly",
+            "sadly"
+          ],
+          "answer_index": 0,
+          "explanation": "calls home regularly 定期打电话。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "afraid",
+            "responsible",
+            "bored",
+            "slim"
+          ],
+          "answer_index": 1,
+          "explanation": "very responsible 很有责任心。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "burn",
+            "help",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "help me with my homework 帮我做作业。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "cooked",
+            "jogged",
+            "ignored"
+          ],
+          "answer_index": 3,
+          "explanation": "never ignored my questions 从不忽视我的问题。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "talent",
+            "curtain",
+            "court",
+            "gap"
+          ],
+          "answer_index": 0,
+          "explanation": "a real talent for music 音乐天赋。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "noise",
+            "impact",
+            "price",
+            "list"
+          ],
+          "answer_index": 1,
+          "explanation": "a positive impact on me 对我有积极影响。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "Because",
+            "Until",
+            "Despite",
+            "Unless"
+          ],
+          "answer_index": 2,
+          "explanation": "Despite the long distance 尽管距离远(后接名词短语)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "curtain",
+            "medal",
+            "court",
+            "day"
+          ],
+          "answer_index": 3,
+          "explanation": "one day 总有一天。"
+        }
+      ]
+    }
+  ]
+}

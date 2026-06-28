@@ -1,0 +1,421 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "topic": "Knowing Me, Knowing You",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社(新标准)必修第三册 Unit 1 同主题听力(请求与礼貌拒绝/情商小贴士/转述秘密后的道歉/善意谎言/邀约被拒/豪猪寓言)。用词限 U1/初中/常见词,答案唯一且可在 transcript 找到依据,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 Can I Stay at Your Place?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Tina: Hi Kerry, have you got a minute? I need a favour.",
+        "Kerry: Sure, Tina. What's up?",
+        "Tina: I have to leave my flat for two weeks while it's being painted. Could I stay at your place?",
+        "Kerry: I'm sorry, but two weeks is a bit too long for me.",
+        "Tina: Oh, I understand. I don't want to cause you any trouble.",
+        "Kerry: I'd really like to help, though. You're welcome to stay for a few days.",
+        "Tina: That's very kind of you. A few days would already help a lot.",
+        "Kerry: No problem at all. Just let me know which days you need."
+      ],
+      "translation_cn": "蒂娜请克丽帮忙:她的公寓要刷漆,得离开两周,想住到克丽家;克丽觉得两周太长,礼貌拒绝,但欢迎她住几天;蒂娜表示理解并感谢。",
+      "questions": [
+        {
+          "stem": "Why does Tina need a favour?",
+          "options": [
+            "She has to leave her flat while it is painted.",
+            "She has lost the key to her flat.",
+            "She wants to sell her flat.",
+            "She is moving to another city."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How long does Tina need to stay at first?",
+          "options": [
+            "One night.",
+            "Two weeks.",
+            "Two months.",
+            "Half a year."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Kerry refuse the long stay?",
+          "options": [
+            "She politely says two weeks is too long.",
+            "She says nothing and walks away.",
+            "She gets angry with Tina.",
+            "She tells Tina to find a hotel."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Kerry offer instead?",
+          "options": [
+            "To paint the flat herself.",
+            "To let Tina stay for a few days.",
+            "To lend Tina some money.",
+            "To drive Tina to a new city."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Tina react to Kerry's answer?",
+          "options": [
+            "She becomes very upset.",
+            "She refuses to speak to Kerry.",
+            "She understands and thanks Kerry.",
+            "She asks someone else at once."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·短文 Saying No Politely",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Being able to say no politely is an important part of emotional intelligence.",
+        "Always saying yes can leave you tired and unhappy.",
+        "A polite refusal usually begins with a few words of regret.",
+        "Then you give a simple reason and, if you can, offer another choice.",
+        "Refusing this way shows respect for the other person's feelings."
+      ],
+      "translation_cn": "能礼貌地说'不'是情商的重要部分;总是答应会让你疲惫又不快乐;礼貌的拒绝通常先表示歉意,再给出简单理由,可能的话提供别的选择;这样拒绝体现对对方感受的尊重。",
+      "questions": [
+        {
+          "stem": "Saying no politely is part of what?",
+          "options": [
+            "A foreign language.",
+            "A boxing match.",
+            "A school subject.",
+            "Emotional intelligence."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What can always saying yes do to you?",
+          "options": [
+            "Leave you tired and unhappy.",
+            "Make you rich.",
+            "Help you sleep better.",
+            "Make you taller."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does a polite refusal usually begin?",
+          "options": [
+            "With a loud complaint.",
+            "With a few words of regret.",
+            "With a long story.",
+            "With a question about money."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you offer if you can?",
+          "options": [
+            "A large gift.",
+            "A written report.",
+            "Another choice.",
+            "A free meal."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does refusing this way show?",
+          "options": [
+            "That you do not care at all.",
+            "That you are always busy.",
+            "That you dislike the person.",
+            "Respect for the other person's feelings."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 I Heard What You Said",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Sam: Leo, I need to talk to you. I'm a bit upset.",
+        "Leo: What's wrong, Sam?",
+        "Sam: You told everyone what I said about the match. That was private.",
+        "Leo: I'm really sorry. I didn't think before I spoke.",
+        "Sam: I was just letting off steam. I never wanted the whole team to hear it.",
+        "Leo: You're right. I let you down, and I feel terrible about it.",
+        "Sam: Thank you for saying that. I still want us to be friends.",
+        "Leo: Me too. From now on, I'll keep your words to myself."
+      ],
+      "translation_cn": "萨姆因里奥把他私下说的话告诉了大家而难过;里奥承认没多想就说出口、辜负了萨姆,并真诚道歉;萨姆说他只是发泄,不想全队都知道;两人决定继续做朋友,里奥保证以后守口如瓶。",
+      "questions": [
+        {
+          "stem": "Why is Sam upset with Leo?",
+          "options": [
+            "Leo told everyone what Sam had said.",
+            "Leo missed the match.",
+            "Leo forgot Sam's birthday.",
+            "Leo lost Sam's book."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Leo say about his mistake?",
+          "options": [
+            "It was Sam's own fault.",
+            "He did not think before he spoke.",
+            "He did nothing wrong.",
+            "He cannot remember it."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Sam say he was only doing?",
+          "options": [
+            "Telling a joke.",
+            "Asking for money.",
+            "Letting off steam.",
+            "Planning a party."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Sam still want?",
+          "options": [
+            "To leave the team.",
+            "To stop talking forever.",
+            "To blame the whole team.",
+            "To stay friends with Leo."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Leo promise from now on?",
+          "options": [
+            "To keep Sam's words to himself.",
+            "To tell more people the news.",
+            "To never speak to Sam again.",
+            "To join another team."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·短文 The Truth About White Lies",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many people tell small white lies to protect the feelings of others.",
+        "We might say a meal is delicious even when we do not like it.",
+        "Sometimes we lie to avoid another person's disappointment.",
+        "But honest, kind comments can help a friend improve.",
+        "In the end, the truth is often the kinder choice."
+      ],
+      "translation_cn": "许多人为保护他人感受而说善意的小谎;我们也许会说一顿饭很好吃,即使并不喜欢;有时撒谎是为了避免对方失望;但诚实而善意的评价能帮朋友进步;归根结底,真话往往是更善良的选择。",
+      "questions": [
+        {
+          "stem": "Why do many people tell white lies?",
+          "options": [
+            "To win a prize.",
+            "To protect the feelings of others.",
+            "To learn a language.",
+            "To make money."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What example of a white lie is given?",
+          "options": [
+            "Saying the wrong name.",
+            "Saying you are ill.",
+            "Saying a meal is delicious when it is not.",
+            "Saying you are busy."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Sometimes we lie to avoid what?",
+          "options": [
+            "A long walk.",
+            "A boxing match.",
+            "A noisy room.",
+            "Another person's disappointment."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What can honest, kind comments do?",
+          "options": [
+            "Help a friend improve.",
+            "Cost a lot of money.",
+            "End a friendship at once.",
+            "Waste a lot of time."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the speaker say about the truth in the end?",
+          "options": [
+            "It is always too hard to say.",
+            "It is often the kinder choice.",
+            "It never helps anyone.",
+            "It should be kept secret."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 Thanks, but No Thanks",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mike: Hi Ryan, would you like to come to a boxing match on Saturday?",
+        "Ryan: That's kind of you, Mike, but I'm afraid I can't.",
+        "Mike: Oh, why not? It'll be exciting.",
+        "Ryan: To be honest, I don't really enjoy boxing. I hope you understand.",
+        "Mike: Of course. Thanks for being honest with me.",
+        "Ryan: Maybe we could watch a film together next week instead?",
+        "Mike: That sounds great. I'd like that much more anyway.",
+        "Ryan: Perfect. Let's plan it for next Saturday then."
+      ],
+      "translation_cn": "迈克邀瑞安周六看拳击赛;瑞安礼貌地说自己其实不喜欢拳击,委婉拒绝并希望迈克理解;迈克感谢他的坦诚;瑞安提议下周一起看电影代替,迈克欣然接受。",
+      "questions": [
+        {
+          "stem": "What does Mike invite Ryan to do?",
+          "options": [
+            "Play basketball after school.",
+            "Visit a museum.",
+            "Watch a boxing match on Saturday.",
+            "Cook a meal together."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why does Ryan refuse?",
+          "options": [
+            "He has no money.",
+            "He has to study.",
+            "He is leaving the city.",
+            "He does not really enjoy boxing."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does Mike react to Ryan's honest answer?",
+          "options": [
+            "He thanks Ryan for being honest.",
+            "He gets angry.",
+            "He stops talking to Ryan.",
+            "He cancels their friendship."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Ryan suggest doing instead?",
+          "options": [
+            "Going to another match.",
+            "Watching a film next week.",
+            "Staying at home alone.",
+            "Joining a boxing club."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Mike feel about the new plan?",
+          "options": [
+            "He is disappointed.",
+            "He refuses it.",
+            "He likes it even more.",
+            "He forgets about it."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·短文 The Porcupines' Distance",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "On a cold night, a group of porcupines moved together to keep warm.",
+        "But their sharp spines hurt one another, so they had to move apart.",
+        "After trying again and again, they found the perfect distance.",
+        "It was close enough for warmth but far enough to stay safe.",
+        "This story reminds us that good friendships also need a little space."
+      ],
+      "translation_cn": "寒夜里,一群豪猪挤在一起取暖;可身上的尖刺会扎到彼此,只好分开;一次次尝试后,它们找到了完美的距离——既能取暖又不会受伤;这个故事提醒我们,好的友谊也需要一点空间。",
+      "questions": [
+        {
+          "stem": "Why did the porcupines move together?",
+          "options": [
+            "To look for food.",
+            "To play a game.",
+            "To find their home.",
+            "To keep warm on a cold night."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why did they have to move apart?",
+          "options": [
+            "Their sharp spines hurt one another.",
+            "They heard a loud noise.",
+            "They were no longer cold.",
+            "They saw a person nearby."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did they find after trying again and again?",
+          "options": [
+            "A warm cave.",
+            "The perfect distance.",
+            "A new group of friends.",
+            "A way back home."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What was special about that distance?",
+          "options": [
+            "It was too far to feel warm.",
+            "It was too close to be safe.",
+            "It was warm yet safe.",
+            "It kept them cold all night."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the story remind us about friendships?",
+          "options": [
+            "They should never include anyone.",
+            "They are always painful.",
+            "They need no effort at all.",
+            "They also need a little space."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

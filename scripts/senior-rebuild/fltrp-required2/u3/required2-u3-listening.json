@@ -1,0 +1,405 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "topic": "On the Move",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社版(新标准)必修第二册 Unit 3 同主题听力(选运动/跳绳好处/太极采访/跑者故事/为体育课荐运动/龙舟)。用词限 U3/初中/常见词,答案唯一,与读写关不撞。long/short 交替(3长3短)。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Choosing a Sport to Try",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Hi Tom, our school is starting some new sports clubs. Which one will you join?",
+        "Tom: I'm thinking about the football club. It's cheap, and you only need a ball.",
+        "Mia: That's true. I'd rather try tai chi. My grandfather says it helps you relax.",
+        "Tom: Tai chi? Isn't that just for old people?",
+        "Mia: Not at all. It's slow, but it builds balance and calms your mind.",
+        "Tom: Maybe I'll come and watch one day. When does your club meet?",
+        "Mia: Every morning before class, at seven o'clock.",
+        "Tom: Seven? That's a bit early for me! I'll stick with football in the afternoon.",
+        "Mia: That's fine. The important thing is just to keep moving and stay active."
+      ],
+      "translation_cn": "Mia 问 Tom 想加入哪个新社团;Tom 想加入足球社,因为便宜、只需一个球;Mia 更想试太极,爷爷说它能放松;Tom 觉得太极是老人的运动;Mia 说太极虽慢但能练平衡、让人心静;社团每天早上七点活动;Tom 嫌太早,选下午踢足球;Mia 说重要的是保持运动。",
+      "questions": [
+        {
+          "stem": "Which club is Tom thinking of joining?",
+          "options": [
+            "The football club.",
+            "The tai chi club.",
+            "The skating club.",
+            "The swimming club."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Tom like that sport?",
+          "options": [
+            "It is played indoors.",
+            "It is cheap and needs only a ball.",
+            "It needs special shoes.",
+            "It is only for adults."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Mia want to try?",
+          "options": [
+            "Tai chi.",
+            "Football.",
+            "Running.",
+            "Tennis."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When does Mia's club meet?",
+          "options": [
+            "Late at night.",
+            "Early in the morning.",
+            "At lunchtime.",
+            "Only on weekends."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Mia think is most important?",
+          "options": [
+            "Winning every game.",
+            "Buying good equipment.",
+            "Keeping moving and staying active.",
+            "Getting up late."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 Why Skipping Is Great",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Skipping is one of the cheapest and most useful exercises you can do. All you need is a simple rope, and you can do it almost anywhere, in a park, a yard, or even your bedroom. Skipping is very good for your heart, and it helps you burn a lot of calories in just a few minutes. It also improves your footwork and your balance, which is useful for almost every other sport. Best of all, a rope costs very little, so skipping is a sport that everyone can afford.",
+      "translation_cn": "跳绳是最便宜也最有用的运动之一。只需一根简单的绳子,你几乎在任何地方都能跳:公园、院子,甚至卧室。跳绳对心脏很好,几分钟就能燃烧大量热量。它还能改善脚法和平衡,这对几乎所有其他运动都有用。最棒的是绳子很便宜,所以人人都跳得起。",
+      "questions": [
+        {
+          "stem": "What do you need in order to skip?",
+          "options": [
+            "A large machine.",
+            "A swimming pool.",
+            "A pair of skates.",
+            "Just a simple rope."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Where can you skip?",
+          "options": [
+            "Almost anywhere.",
+            "Only in a gym.",
+            "Only outdoors.",
+            "Only at school."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does skipping improve besides the heart?",
+          "options": [
+            "Reading and writing.",
+            "Footwork and balance.",
+            "Eyesight.",
+            "Memory."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How long does it take to burn many calories?",
+          "options": [
+            "Several hours.",
+            "A whole day.",
+            "Just a few minutes.",
+            "About one week."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why can everyone do skipping?",
+          "options": [
+            "It needs no movement at all.",
+            "It is taught in every school.",
+            "It requires a personal coach.",
+            "A rope costs very little."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 Interview with a Tai Chi Learner",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Journalist: Leah, when did you first become interested in tai chi?",
+        "Leah: I took a few classes back home in Britain, and I fell in love with it.",
+        "Journalist: And why did you choose to come to Yangshuo?",
+        "Leah: A great master of tai chi lives here, and the mountain views are beautiful.",
+        "Journalist: Has it been difficult to study here?",
+        "Leah: Yes. I had to learn some Chinese, practise the same movements again and again, and get up very early.",
+        "Journalist: So why do you keep going?",
+        "Leah: Because tai chi relaxes me and brings me a deep sense of balance.",
+        "Journalist: That sounds wonderful. Thank you, Leah."
+      ],
+      "translation_cn": "记者问 Leah 何时开始对太极感兴趣;Leah 说在英国上过几节课就爱上了;她选阳朔是因为这里住着一位太极大师、山景也美;在这里学习并不容易:要学些中文、反复练同样的动作、还要很早起床;她坚持下去是因为太极让她放松、带给她深深的平衡感;记者道谢。",
+      "questions": [
+        {
+          "stem": "Where did Leah first try tai chi?",
+          "options": [
+            "In Britain.",
+            "In Yangshuo.",
+            "In America.",
+            "In Japan."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why did she choose Yangshuo?",
+          "options": [
+            "It is the biggest city in China.",
+            "A great master lives there and the views are beautiful.",
+            "Her whole family lives there.",
+            "It is the cheapest place to stay."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is one difficulty she mentions?",
+          "options": [
+            "Finding a good job.",
+            "Paying very high fees.",
+            "Having to learn some Chinese.",
+            "The very cold weather."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How often does she practise the same movements?",
+          "options": [
+            "Only once a month.",
+            "Only on weekends.",
+            "Almost never.",
+            "Again and again."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why does she keep doing tai chi?",
+          "options": [
+            "It relaxes her and gives her balance.",
+            "It makes her rich.",
+            "It is required by law.",
+            "Her boss told her to."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 Sara's Running Story",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "My name is Sara, and two years ago I almost never exercised. One day my doctor told me that running could make my lungs stronger, so I joined a small club. At first even one lap left me out of breath. But I kept going, and slowly my body grew stronger. Last month I ran my first five-kilometre race and finished with a big smile. Running has given me energy, confidence, and many new friends. If you think you are too weak to run, please believe me: you can do far more than you imagine.",
+      "translation_cn": "我叫 Sara,两年前我几乎从不锻炼。有一天医生告诉我跑步能让肺更强健,于是我加入了一个小俱乐部。起初连跑一圈都气喘吁吁,但我坚持下来,身体慢慢变强。上个月我跑完了人生第一个五公里赛,笑着冲过终点。跑步给了我能量、自信和许多新朋友。如果你觉得自己太弱跑不动,请相信我:你能做到的远比想象的多。",
+      "questions": [
+        {
+          "stem": "Why did Sara start running?",
+          "options": [
+            "She wanted to win prizes.",
+            "Her doctor said it could strengthen her lungs.",
+            "Her friends made her do it.",
+            "She was already an athlete."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did she feel during her first laps?",
+          "options": [
+            "Completely relaxed.",
+            "Very bored.",
+            "Out of breath.",
+            "Quite angry."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did she do last month?",
+          "options": [
+            "She won a gold medal.",
+            "She stopped running for good.",
+            "She joined a football team.",
+            "She ran her first five-kilometre race."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What has running given her?",
+          "options": [
+            "Energy, confidence and new friends.",
+            "A great deal of money.",
+            "A brand-new house.",
+            "A fast car."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Sara's message to weak people?",
+          "options": [
+            "They should never try to run.",
+            "They can do more than they think.",
+            "Running is always dangerous.",
+            "Only athletes should exercise."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 Recommending a Sport for PE Class",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Ken: For our PE class, I'd like to recommend basketball. What do you think, Lucy?",
+        "Lucy: Basketball is fun, but I think we should recommend skipping.",
+        "Ken: Skipping? Why?",
+        "Lucy: Because it's cheap, easy to learn, and great for the heart. Everyone can join in.",
+        "Ken: That's a good point. Basketball needs a court and a proper ball.",
+        "Lucy: Exactly. With skipping, all you need is a rope, and you can even do it in the classroom.",
+        "Ken: All right. Let's suggest both, and let the class choose.",
+        "Lucy: Perfect. The main thing is that everyone keeps active."
+      ],
+      "translation_cn": "Ken 想为体育课推荐篮球,问 Lucy 的看法;Lucy 觉得篮球有趣,但更想推荐跳绳;因为跳绳便宜、易学、对心脏好,人人都能参加;Ken 承认篮球需要球场和合适的球;Lucy 说跳绳只需一根绳子,在教室里都能跳;Ken 提议两个都推荐,让全班来选;Lucy 同意,关键是让大家都动起来。",
+      "questions": [
+        {
+          "stem": "Which sport does Ken recommend first?",
+          "options": [
+            "Skipping.",
+            "Football.",
+            "Basketball.",
+            "Swimming."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Which sport does Lucy prefer to suggest?",
+          "options": [
+            "Basketball.",
+            "Tennis.",
+            "Running.",
+            "Skipping."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why does Lucy like that sport?",
+          "options": [
+            "It is cheap, easy and good for the heart.",
+            "It needs a big court.",
+            "It is only for tall people.",
+            "It costs a lot of money."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does basketball need, according to Ken?",
+          "options": [
+            "Only a single rope.",
+            "A court and a proper ball.",
+            "A swimming pool.",
+            "Special shoes only."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they finally decide?",
+          "options": [
+            "To choose basketball only.",
+            "To cancel the PE class.",
+            "To suggest both and let the class choose.",
+            "To play neither sport."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 Dragon Boat Racing",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Dragon boat racing is one of China's oldest and most exciting team sports. A long, narrow boat is shaped like a dragon, and a team of paddlers sits inside it. To move fast, every paddler must pull at exactly the same time, while a drummer beats out the rhythm. The sport needs great strength, but even more it needs teamwork, because one person alone can do nothing. Each summer, thousands of people gather by the rivers to watch the colourful boats race. For many teams, the real prize is not winning, but the joy of working together as one.",
+      "translation_cn": "赛龙舟是中国最古老、最激动人心的团队运动之一。一条又长又窄的船被做成龙的样子,一队桨手坐在里面。要划得快,每位桨手必须在完全相同的时刻发力,而鼓手敲出节奏。这项运动需要很大的力量,但更需要团队合作,因为一个人单独什么也做不成。每年夏天,成千上万的人聚在河边观看五彩的龙舟竞渡。对许多队伍来说,真正的奖赏不是夺冠,而是齐心协力的快乐。",
+      "questions": [
+        {
+          "stem": "What is a dragon boat shaped like?",
+          "options": [
+            "A fish.",
+            "A car.",
+            "A bird.",
+            "A dragon."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What must every paddler do?",
+          "options": [
+            "Pull at exactly the same time.",
+            "Sing loudly together.",
+            "Stand up in the boat.",
+            "Row completely alone."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the drummer do?",
+          "options": [
+            "Steers the boat.",
+            "Beats out the rhythm.",
+            "Counts the crowd.",
+            "Sells the tickets."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the sport need most?",
+          "options": [
+            "Expensive boats.",
+            "Good weather only.",
+            "Teamwork.",
+            "A large stadium."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "For many teams, what is the real prize?",
+          "options": [
+            "A large cash reward.",
+            "A golden cup.",
+            "Fame on television.",
+            "The joy of working together."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "volume": "required2",
+  "unit": "U6",
+  "grade": 10,
+  "content": {
+    "title": "-ing 与 -ed 分词作补语速查",
+    "intro": "分词作补语用来说明宾语(或主语)的动作或状态。判断只看一件事:宾语和分词之间是主动还是被动。宾语主动发出动作、动作进行中 → 用 -ing;宾语承受动作、动作已完成 → 用 -ed。",
+    "table": {
+      "headers": ["分词形式", "用法 / 例句 / 标志动词"],
+      "rows": [
+        ["-ing 分词", "宾语主动发出、动作进行中:see/hear/watch/notice/find/keep/leave + sb/sth doing(I saw a shark swimming.)"],
+        ["-ed 分词", "宾语承受动作、动作已完成:find/have/get/keep/want/leave + sth done(We found the door locked.)"],
+        ["have/get sth done", "请人做/使某事被完成:He had his bike repaired. / get the work done."],
+        ["主语补语", "be/sit/stand 等后说明主语状态:The sea floor was covered with dead sharks."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "宾语是动作的发出者、动作进行中 → 用 -ing", "mark": "keep the water running(水自己在流)" },
+      { "rule": "宾语是动作的承受者、动作被完成 → 用 -ed", "mark": "get the work done(work 被完成)" },
+      { "rule": "see/hear/watch + sb doing 强调'正在进行';作补语只用 doing/done,不用 to do", "mark": "saw him crossing √ / saw him to cross ×" },
+      { "rule": "have sb do(请某人做) ≠ have sth done(让某事被做);找别人做事用 -ed", "mark": "have my hair cut(头发被剪)" }
+    ],
+    "why": [
+      "补语说明宾语的状态:宾语和分词若是'谁来做'(主动)就用 -ing,若是'被怎样'(被动/完成)就用 -ed。先找出宾语,再问它是动作的发出者还是承受者,形式自然就定了。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/完成句子高频:see/hear/find/keep/have/get + 宾语 + 分词,按主动(-ing)/被动(-ed)选形式。",
+      "感官动词后接 doing(进行)或 do(全过程,主动),但只有变被动 be seen/heard to do 时才补回 to。"
+    ],
+    "examVsReal": [
+      { "exam": "We found the door locked.(书面规范紧凑)", "real": "The door was locked, so we found it.", "note": "考试爱考分词作补语的紧凑表达" },
+      { "exam": "I heard someone calling my name.(强调进行中)", "real": "I heard someone call my name.", "note": "doing 强调正在进行,do 强调听到全过程,口语两者都常用" }
+    ]
+  }
+}

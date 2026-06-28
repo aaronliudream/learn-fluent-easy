@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U6",
+  "topic": "Disaster and Hope",
+  "source": "外研社版必修第三册 Unit 6 同主题完形(洪灾志愿者/家庭应急计划/救援犬/暴风雪困村/山火后重建/海啸演练)。用词限 U6/初中/常见词,答案唯一,4选项同词性,与阅读听力关不撞。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Day as a Flood Volunteer",
+      "text": "Last summer, heavy rain caused a terrible (1)____ in our town, and the river rose over its banks. I decided to (2)____ as a volunteer to help my neighbours. Early each morning, we filled bags with sand to (3)____ back the water. The work was hard, and by the (4)____ of each day we were tired and wet. Many families had lost their homes and had (5)____ to go, so we gave them food and a dry place to (6)____. One old man kept thanking us, even though he had lost almost everything he (7)____. Helping others made me feel that even a small action could bring people (8)____. By the end of the week, the water had begun to (9)____, and people slowly returned to clean their houses. I learned that a disaster can be terrible, but it can also (10)____ out the kindness in ordinary people.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "flood",
+            "drought",
+            "forest",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "heavy rain caused a flood 暴雨引发洪水。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleep",
+            "work",
+            "wait",
+            "shop"
+          ],
+          "answer_index": 1,
+          "explanation": "work as a volunteer 当志愿者。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "throw",
+            "sell",
+            "hold",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "hold back the water 挡住水。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "start",
+            "top",
+            "side",
+            "end"
+          ],
+          "answer_index": 3,
+          "explanation": "by the end of each day 到每天结束时。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "nowhere",
+            "everywhere",
+            "something",
+            "anyone"
+          ],
+          "answer_index": 0,
+          "explanation": "had nowhere to go 无处可去。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "cry",
+            "stay",
+            "buy",
+            "win"
+          ],
+          "answer_index": 1,
+          "explanation": "a dry place to stay 待的干燥地方。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "forgot",
+            "sold",
+            "owned",
+            "threw"
+          ],
+          "answer_index": 2,
+          "explanation": "everything he owned 他拥有的一切。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "noise",
+            "money",
+            "fear",
+            "hope"
+          ],
+          "answer_index": 3,
+          "explanation": "bring people hope 给人希望。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "fall",
+            "rise",
+            "burn",
+            "grow"
+          ],
+          "answer_index": 0,
+          "explanation": "the water began to fall 水开始退去。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "take",
+            "bring",
+            "put",
+            "give"
+          ],
+          "answer_index": 1,
+          "explanation": "bring out the kindness 带出善意。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Our Family Emergency Plan",
+      "text": "After watching the news about a big (1)____, my family decided to make an emergency plan. First, we packed a special bag with (2)____ food, clean water and a torch in case the power went out. My dad said we should also keep some (3)____ in it, because someone might get hurt. Next, we agreed on a safe (4)____ where we would all meet if we were separated during a disaster. My mum wrote down important phone numbers so that we could (5)____ for help quickly. We also learned to turn off the gas and water (6)____, to stop a fire or a flood from getting worse. My little sister was a bit (7)____ at first, but making the plan together actually helped her feel (8)____. Now, whenever a storm is (9)____ on the news, we know exactly what to do. Being prepared, my dad always says, is the best way to stay (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "holiday",
+            "concert",
+            "disaster",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "news about a big disaster 关于大灾难的新闻。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "empty",
+            "loud",
+            "old",
+            "extra"
+          ],
+          "answer_index": 3,
+          "explanation": "extra food 额外的食物。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "medicine",
+            "music",
+            "sugar",
+            "paint"
+          ],
+          "answer_index": 0,
+          "explanation": "keep some medicine 备些药品。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "place",
+            "song",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "a safe place to meet 安全的会合地点。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sleep",
+            "sing",
+            "call",
+            "pay"
+          ],
+          "answer_index": 2,
+          "explanation": "call for help 呼救。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "slowly",
+            "quietly",
+            "happily",
+            "immediately"
+          ],
+          "answer_index": 3,
+          "explanation": "turn off ... immediately 立刻关掉。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "afraid",
+            "proud",
+            "glad",
+            "calm"
+          ],
+          "answer_index": 0,
+          "explanation": "a bit afraid at first 起初有点害怕。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "worse",
+            "safer",
+            "colder",
+            "louder"
+          ],
+          "answer_index": 1,
+          "explanation": "helped her feel safer 让她感到更安全。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "leaving",
+            "sleeping",
+            "coming",
+            "swimming"
+          ],
+          "answer_index": 2,
+          "explanation": "a storm is coming 风暴将至。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "late",
+            "busy",
+            "rich",
+            "safe"
+          ],
+          "answer_index": 3,
+          "explanation": "the best way to stay safe 保持安全的最好办法。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Max the Rescue Dog",
+      "text": "Max is not an ordinary dog; he is a trained (1)____ dog who works with a mountain team. When an avalanche (2)____ down a slope, people can be buried deep under the snow, and every minute (3)____. Max can smell a person even through a thick (4)____ of snow, something no machine can do so well. Last winter, after a heavy (5)____, two climbers went missing on the mountain. The rescue team could find (6)____ at first, and they were slowly losing hope. Then Max suddenly began to (7)____ at one spot and dug quickly with his paws. Below the snow, the climbers were cold but still (8)____. Thanks to Max, both of them were (9)____ in time. The team says a good rescue dog like Max is far more (10)____ than the most expensive machine they own.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "rescue",
+            "garden",
+            "music",
+            "farm"
+          ],
+          "answer_index": 0,
+          "explanation": "a rescue dog 救援犬。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sings",
+            "rushes",
+            "sleeps",
+            "waits"
+          ],
+          "answer_index": 1,
+          "explanation": "an avalanche rushes down 雪崩冲下。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sleeps",
+            "sells",
+            "counts",
+            "buys"
+          ],
+          "answer_index": 2,
+          "explanation": "every minute counts 每分钟都很关键。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "glass",
+            "box",
+            "door",
+            "layer"
+          ],
+          "answer_index": 3,
+          "explanation": "a thick layer of snow 厚厚一层雪。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "blizzard",
+            "holiday",
+            "lesson",
+            "meal"
+          ],
+          "answer_index": 0,
+          "explanation": "after a heavy blizzard 一场大暴风雪后。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "everybody",
+            "nobody",
+            "someone",
+            "anyone"
+          ],
+          "answer_index": 1,
+          "explanation": "could find nobody 一个人也找不到。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "swim",
+            "read",
+            "bark",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "began to bark 开始吠叫。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "asleep",
+            "angry",
+            "empty",
+            "alive"
+          ],
+          "answer_index": 3,
+          "explanation": "cold but still alive 寒冷但仍活着。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "rescued",
+            "forgotten",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "were rescued in time 被及时救出。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "useful",
+            "heavy",
+            "quiet"
+          ],
+          "answer_index": 1,
+          "explanation": "more useful than the machine 比机器更有用。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Trapped by a Blizzard",
+      "text": "One December, an exceptionally heavy (1)____ hit our small mountain village without much warning. Within hours, the snow was so deep that the only road out was completely (2)____. We were trapped, and the electricity soon went (3)____ as well. My grandmother stayed calm and told us not to (4)____. We kept warm around the fire and made our food (5)____, eating only a little at each meal. Outside, the wind was so strong that we could see (6)____ through the windows. On the third day, we heard the sound of a (7)____ flying low above the village. The pilot had spotted our smoke and dropped boxes of food and (8)____ down to us. Everyone cheered and waved. Two days later, a team finally (9)____ the snow on the road, and help arrived. That winter taught me how quickly nature can change our lives, and how important it is to stay (10)____ together.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "drought",
+            "summer",
+            "blizzard",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "a heavy blizzard hit 一场大暴风雪袭来。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "open",
+            "clean",
+            "free",
+            "blocked"
+          ],
+          "answer_index": 3,
+          "explanation": "the road was blocked 道路被堵。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "off",
+            "up",
+            "on",
+            "in"
+          ],
+          "answer_index": 0,
+          "explanation": "the electricity went off 停电了。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sing",
+            "panic",
+            "eat",
+            "sleep"
+          ],
+          "answer_index": 1,
+          "explanation": "told us not to panic 叫我们别慌。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "grow",
+            "last",
+            "buy"
+          ],
+          "answer_index": 2,
+          "explanation": "made our food last 让食物撑得更久。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "everything",
+            "someone",
+            "anyone",
+            "nothing"
+          ],
+          "answer_index": 3,
+          "explanation": "could see nothing 什么都看不见。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "helicopter",
+            "bicycle",
+            "train",
+            "boat"
+          ],
+          "answer_index": 0,
+          "explanation": "a helicopter flying low 低飞的直升机。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sand",
+            "medicine",
+            "paper",
+            "toys"
+          ],
+          "answer_index": 1,
+          "explanation": "food and medicine 食物和药品。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sold",
+            "painted",
+            "cleared",
+            "grew"
+          ],
+          "answer_index": 2,
+          "explanation": "cleared the snow 清除积雪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "quiet",
+            "late",
+            "busy",
+            "close"
+          ],
+          "answer_index": 3,
+          "explanation": "stay close together 紧紧靠在一起。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Rebuilding After the Fire",
+      "text": "Two years ago, a terrible (1)____ swept through the forest near our town and burned hundreds of homes. When the fire was finally (2)____, many families had lost everything they owned. At first, people felt (3)____ and did not know where to begin. But slowly, neighbours started to help one another (4)____ their houses. Builders gave their time for free, and people from other towns (5)____ money, clothes and furniture. My own family received a warm blanket from a stranger, with a short note that said, \"Don't give up (6)____.\" Those few words gave us real (7)____. Little by little, new walls and roofs began to (8)____ where the burned houses had stood. A year later, our street looked almost (9)____ again. The fire had taken so much from us, yet it also showed us how (10)____ people can be when they work together.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "wildfire",
+            "flood",
+            "blizzard",
+            "drought"
+          ],
+          "answer_index": 0,
+          "explanation": "a wildfire swept through the forest 山火席卷森林。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "in",
+            "out",
+            "up",
+            "on"
+          ],
+          "answer_index": 1,
+          "explanation": "the fire was finally out 火终于熄灭。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "proud",
+            "happy",
+            "lost",
+            "calm"
+          ],
+          "answer_index": 2,
+          "explanation": "felt lost 感到不知所措。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "paint",
+            "leave",
+            "rebuild"
+          ],
+          "answer_index": 3,
+          "explanation": "help one another rebuild 互相帮忙重建。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "donated",
+            "wasted",
+            "burned",
+            "hid"
+          ],
+          "answer_index": 0,
+          "explanation": "donated money and clothes 捐钱捐衣。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "money",
+            "hope",
+            "time",
+            "space"
+          ],
+          "answer_index": 1,
+          "explanation": "don't give up hope 别放弃希望。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "trouble",
+            "noise",
+            "comfort",
+            "fear"
+          ],
+          "answer_index": 2,
+          "explanation": "gave us real comfort 给我们真正的安慰。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "fall",
+            "burn",
+            "melt",
+            "appear"
+          ],
+          "answer_index": 3,
+          "explanation": "began to appear 开始出现。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "normal",
+            "empty",
+            "dark",
+            "wet"
+          ],
+          "answer_index": 0,
+          "explanation": "looked almost normal 看起来几乎恢复正常。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lazy",
+            "kind",
+            "rude",
+            "quiet"
+          ],
+          "answer_index": 1,
+          "explanation": "how kind people can be 人们能多么善良。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Tsunami Drill That Worked",
+      "text": "Our seaside town lies close to the ocean, so we know that a (1)____ is always a possible danger. Every year, the school holds a special (2)____ to teach students what to do if huge waves come. When the alarm (3)____, we must leave the classroom calmly and walk quickly to the high hill behind the school. Last spring, this practice suddenly became (4)____. One afternoon, the ground shook with a strong (5)____, and minutes later the warning sirens began to sound. Because we had practised so many times, nobody (6)____. Teachers led us up the hill (7)____, just as we had learned. From the top, we watched as large waves rushed over the empty beach below. Not a single person was (8)____, because everyone had reached safety in time. That day, our whole town understood why such (9)____ matter so much. A little preparation, our head teacher said, had (10)____ many lives.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "drought",
+            "wildfire",
+            "tsunami",
+            "blizzard"
+          ],
+          "answer_index": 2,
+          "explanation": "close to the ocean, a tsunami is a danger 海啸是危险。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "party",
+            "exam",
+            "concert",
+            "drill"
+          ],
+          "answer_index": 3,
+          "explanation": "a special drill 一次特别的演练。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "rings",
+            "sleeps",
+            "sings",
+            "eats"
+          ],
+          "answer_index": 0,
+          "explanation": "when the alarm rings 警报响起时。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "easy",
+            "real",
+            "funny",
+            "boring"
+          ],
+          "answer_index": 1,
+          "explanation": "the practice became real 演练变成了真的。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "wind",
+            "smile",
+            "earthquake",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "shook with a strong earthquake 强烈地震使地面摇动。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "laughed",
+            "slept",
+            "sang",
+            "panicked"
+          ],
+          "answer_index": 3,
+          "explanation": "nobody panicked 没人惊慌。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "calmly",
+            "loudly",
+            "angrily",
+            "sleepily"
+          ],
+          "answer_index": 0,
+          "explanation": "led us up the hill calmly 镇定地带我们上山。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "late",
+            "hurt",
+            "busy",
+            "rich"
+          ],
+          "answer_index": 1,
+          "explanation": "not a single person was hurt 无一人受伤。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "games",
+            "prices",
+            "drills",
+            "songs"
+          ],
+          "answer_index": 2,
+          "explanation": "why such drills matter 这样的演练为何重要。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lost",
+            "sold",
+            "wasted",
+            "saved"
+          ],
+          "answer_index": 3,
+          "explanation": "had saved many lives 挽救了许多生命。"
+        }
+      ]
+    }
+  ]
+}

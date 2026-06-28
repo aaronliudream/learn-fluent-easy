@@ -1,0 +1,37 @@
+{
+  "volume": "required3",
+  "unit": "U6",
+  "grade": 10,
+  "content": {
+    "title": "省略(Ellipsis)速查",
+    "intro": "为了不啰嗦,英语常把上文已出现、能从语境补回的重复成分省掉。判断口诀:省掉的部分一定能「原样补回」而句意不变。本单元三类:状语从句省略「主语+be」、并列/比较句省略重复动词(留助动词)、不定式只留 to 与对话省略。",
+    "table": {
+      "headers": ["省略类型", "用法 / 例句 / 补回"],
+      "rows": [
+        ["状语从句省「主语+be」", "从句主语=主句主语时:When (you are) in trouble, call us. / Though (he was) tired, he kept on."],
+        ["主动留 -ing,被动留 -ed", "While waiting(=we were waiting)… / If sent in time(=if it is sent)…"],
+        ["并列/比较留助动词", "so/neither/nor/than/as 后省重复动词:He survived, and so did his cat.(did=survived)"],
+        ["不定式只留 to", "I'd love to.(=to join) / I wanted to but couldn't.(to 后省动词)"],
+        ["对话省略", "—Did many lose their homes? —Yes, thousands did.(did=lost their homes)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "状语从句省略的前提:从句与主句主语必须一致;不一致不能省", "mark": "When warned, the villagers left.(villagers=被警告者)√" },
+      { "rule": "主动关系留现在分词 -ing,被动关系留过去分词 -ed", "mark": "While reading(主动) / When asked(被动)" },
+      { "rule": "so/neither 后要倒装,助动词的时态/人称随被省的动词", "mark": "so did I / neither has he" },
+      { "rule": "不定式省略保留 to,但绝不保留后面的动词原形", "mark": "I'd love to.(×I'd love to do.)" }
+    ],
+    "why": [
+      "省略让句子更简洁、避免重复;只要被省的词能从上文唯一地补回来,句意就不受影响——这也是做题时判断「补什么、留什么」的依据。"
+    ],
+    "gaokaoPoints": [
+      "状语从句中分词的主动(-ing)/被动(-ed)选择,是语法填空与改错的高频点。",
+      "so/neither/nor + 助动词 的倒装与时态一致;than/as 后省略动词留助动词。",
+      "不定式省略(代动词 to)与情态/助动词代替动词短语,常在完成句子与对话补全中考查。"
+    ],
+    "examVsReal": [
+      { "exam": "When (you are) crossing the road, be careful.（考试强调可补回的完整从句）", "real": "Crossing the road, be careful.", "note": "真实口语里连连词也常省,但考试更看重「主语一致+分词形式正确」" },
+      { "exam": "—Will you help? —Yes, I will.(留助动词)", "real": "—Will you help? —Sure!", "note": "口语回答更随意;考试要求保留正确的助动词/to 来完成省略" }
+    ]
+  }
+}

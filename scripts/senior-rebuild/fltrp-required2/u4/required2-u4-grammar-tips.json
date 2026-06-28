@@ -1,0 +1,35 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "grade": 10,
+  "content": {
+    "title": "-ing 分词作状语速查(时间 / 原因 / 伴随 + 与 -ed 的区别)",
+    "intro": "现在分词(-ing)可放在句首或句中作状语,表示时间、原因或伴随。判断口诀:看状语的逻辑主语(=主句主语)——主语主动做这个动作用 -ing,主语承受这个动作(常带 by)用 -ed。",
+    "table": {
+      "headers": ["用法", "相当于 / 例句"],
+      "rows": [
+        ["时间(同时发生)", "= when/while/as:Watching the play, the audience held their breath."],
+        ["原因", "= because/as/since:Being a big fan, she watched it three times."],
+        ["伴随情况", "与谓语同时进行:She walked on, smiling at the crowd."],
+        ["主动 -ing vs 被动 -ed", "Facing the crowd, he bowed.(主动) / Encouraged by the applause, he bowed again.(被动)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "逻辑主语主动发出动作 → 用现在分词 -ing", "mark": "Hearing the song, the children clapped.(孩子主动听)" },
+      { "rule": "逻辑主语承受动作、常带 by → 用过去分词 -ed", "mark": "Moved by the music, they fell silent.(他们被打动)" },
+      { "rule": "句首表原因常用 Being / Having / Not + doing", "mark": "Not knowing the plot, the guests felt lost." },
+      { "rule": "分词的逻辑主语必须与主句主语一致,否则成‘垂悬分词’", "mark": "Watching the film, I cried.(主语都是 I)√" }
+    ],
+    "why": [
+      "现在分词没有时间和被动的标记,它的‘谁来做’要靠主句主语来补;主句主语既是谓语动作的执行者,也是分词动作的执行者,所以主动用 -ing、被动用 -ed,关键看主语和这个动作是主动还是被动关系。"
+    ],
+    "gaokaoPoints": [
+      "现在分词 vs 过去分词作状语的判断(主动 -ing / 被动 -ed),语法填空与短文改错高频。",
+      "句首 -ing 表原因或时间,逻辑主语必须与主句主语一致;to do 表目的、谓语动词形式都不能作此类状语。"
+    ],
+    "examVsReal": [
+      { "exam": "Watching the play, the audience held their breath.（考试/书面)", "real": "The audience held their breath as they watched the play.", "note": "考试爱考分词状语;口语里更常用 when/as 加完整从句,意思相同。" },
+      { "exam": "Not knowing the answer, she stayed silent.（考试)", "real": "She stayed silent because she didn't know the answer.", "note": "考试用句首分词表原因;日常表达常直接用 because 从句,更口语化。" }
+    ]
+  }
+}

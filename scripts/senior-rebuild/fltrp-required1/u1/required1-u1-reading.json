@@ -1,0 +1,338 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "topic": "A New Start",
+  "source": "外研社(新标准)必修第一册 Unit 1 同主题阅读(高中第一天/前辈的建议/校园社团/课后活动与时间管理/第一周日记/好的开始)。词限 U1/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "My First Day at Senior High",
+      "topic_cn": "记叙·高中第一天",
+      "body": "After picturing it many times in my mind, the big day finally arrived: my first day at senior high. In my eagerness to know my new school, I woke up early and rushed out of the door. The campus was still quiet when I got there, so I decided to explore a little. While I was looking at the photos on the noticeboard, a white-haired man behind me asked, \"New here?\" \"Yes,\" I said. \"I am wondering what life will be like.\" He smiled and told me I would soon find out. Later, when my English teacher walked into the classroom, I was surprised to see the same man. During the lesson he asked us to introduce ourselves one by one. With butterflies in my stomach, I breathed deeply and said my name. To my shock, it was the same as the teacher's, and everyone laughed. Although I felt embarrassed, his kind words made me a lot more relaxed.",
+      "vocab_notes": [
+        {
+          "word": "campus",
+          "cn": "校园"
+        },
+        {
+          "word": "eagerness",
+          "cn": "渴望"
+        },
+        {
+          "word": "breathe",
+          "cn": "呼吸"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the writer wake up early on the first day?",
+          "options": [
+            "He was eager to get to know his new school.",
+            "He had to take an early exam.",
+            "His teacher had asked him to come early.",
+            "He wanted to avoid meeting anyone."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'In my eagerness to know my new school, I woke up early' 的转述。"
+        },
+        {
+          "stem": "Who turned out to be the white-haired man?",
+          "options": [
+            "A new classmate.",
+            "The writer's English teacher.",
+            "A school cleaner.",
+            "The writer's father."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'when my English teacher walked into the classroom, I was surprised to see the same man'。"
+        },
+        {
+          "stem": "How did the writer feel after the teacher's kind words?",
+          "options": [
+            "Much more relaxed.",
+            "Even more frightened than before.",
+            "Angry at his classmates.",
+            "Bored with the lesson."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'his kind words made me a lot more relaxed' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Advice from a Former Student",
+      "topic_cn": "访谈·前辈的建议",
+      "body": "On the show School Talk, a former student named Lisa shared her suggestions for senior high. Lisa graduated last June and is about to start college in New York. She said Orientation Day had helped her most, because it was a great chance to get to know the school and meet other students. Her advice was simple: keep an open mind and take part in as much as possible. When the interviewer asked how she dealt with new challenges, Lisa remembered a chemistry test at the end of her first week. She was frightened at the sight of the paper, but she decided to go all out and see what happened. \"If you fail,\" she said with a smile, \"next time you can fail better.\" She also talked about a disappointment: she was not selected for an important competition. Even so, she kept working hard to support her teammates, because she loved the sport itself, not just winning.",
+      "vocab_notes": [
+        {
+          "word": "former",
+          "cn": "从前的"
+        },
+        {
+          "word": "graduate",
+          "cn": "毕业"
+        },
+        {
+          "word": "select",
+          "cn": "挑选"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Lisa find most helpful when she started senior high?",
+          "options": [
+            "The chemistry test.",
+            "Orientation Day.",
+            "Joining the volleyball team.",
+            "Moving to New York."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Orientation Day had helped her most'。"
+        },
+        {
+          "stem": "What did Lisa decide to do about the difficult chemistry test?",
+          "options": [
+            "She refused to take it.",
+            "She copied another student.",
+            "She gave it her best effort.",
+            "She asked to leave early."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'she decided to go all out' 的转述(全力以赴)。"
+        },
+        {
+          "stem": "Why did Lisa keep working hard after not being selected?",
+          "options": [
+            "She wanted to win a prize.",
+            "Her coach forced her to.",
+            "She hoped to leave the team.",
+            "She loved the sport, not just winning."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'because she loved the sport itself, not just winning' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "School Clubs for Everyone",
+      "topic_cn": "说明·校园社团",
+      "body": "One of the best ways to enjoy senior high is to join a school club. Our school offers many different clubs, so there is something for everyone. If you love sport, the badminton club meets in the gym every Tuesday to help you stay fit and make new friends. Music lovers can play the piano or sing in a band at the Music Room. Those who enjoy thinking about big questions may like the science club, where members investigate why dolphins are so clever or what killed the dinosaurs. The debate club brings together the sharpest minds in the school to argue about the week's hottest topics. If acting is your dream, the drama club can help you find your inner star on the stage. Joining a club does more than fill your free time. It helps you gain new skills, care about others and feel part of the school. So look at the posters, choose a club, and give it a try.",
+      "vocab_notes": [
+        {
+          "word": "investigate",
+          "cn": "调查"
+        },
+        {
+          "word": "debate",
+          "cn": "辩论"
+        },
+        {
+          "word": "gain",
+          "cn": "获得"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where does the badminton club meet?",
+          "options": [
+            "In the gym.",
+            "In the Music Room.",
+            "On the stage.",
+            "At the library."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the badminton club meets in the gym every Tuesday'。"
+        },
+        {
+          "stem": "What do members of the science club do?",
+          "options": [
+            "Sing songs together.",
+            "Look into questions about nature.",
+            "Practise acting on stage.",
+            "Play badminton matches."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'investigate why dolphins are so clever or what killed the dinosaurs' 的转述。"
+        },
+        {
+          "stem": "According to the text, what is one benefit of joining a club?",
+          "options": [
+            "It costs a lot of money.",
+            "It keeps students away from friends.",
+            "It helps students build new skills and a sense of belonging.",
+            "It replaces all schoolwork."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'It helps you gain new skills… and feel part of the school' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "After-School Activities and Time",
+      "topic_cn": "说明·课后活动与时间管理",
+      "body": "In the UK and the US, senior high students take part in many after-school activities, such as club activities and volunteer work. These activities are good for them in several ways. They not only help students gain useful skills, but also teach them to care about other people. After-school activities can play a part when students later apply to college, too. However, there is a problem. Such activities can take up a lot of time, so students have to learn to organise their busy schedules. If they are not careful, they may feel under pressure and fall behind in their studies. To help with this, some senior high schools now offer courses in time management. In these courses, students learn simple skills: list the things they plan to do, decide how long each one will take, and do the most important tasks first. With a clear plan, a busy week feels much easier to handle.",
+      "vocab_notes": [
+        {
+          "word": "volunteer",
+          "cn": "志愿者"
+        },
+        {
+          "word": "apply",
+          "cn": "申请"
+        },
+        {
+          "word": "schedule",
+          "cn": "日程表"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is one benefit of after-school activities mentioned in the text?",
+          "options": [
+            "They give students more money.",
+            "They make schoolwork unnecessary.",
+            "They shorten the school day.",
+            "They teach students to care about others."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'teach them to care about other people' 的转述。"
+        },
+        {
+          "stem": "Why do some schools offer courses in time management?",
+          "options": [
+            "Because such activities can use up much of students' time.",
+            "Because students have nothing to do.",
+            "Because students dislike clubs.",
+            "Because teachers have free lessons."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'activities can take up a lot of time, so students have to learn to organise their busy schedules' 的转述。"
+        },
+        {
+          "stem": "What is one skill taught in a time-management course?",
+          "options": [
+            "Doing the easiest tasks last only.",
+            "Handling the most urgent work before easier jobs.",
+            "Avoiding all clubs.",
+            "Spending all day on one activity."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'do the most important tasks first' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "My First Week: A Journal",
+      "topic_cn": "记叙·第一周日记",
+      "body": "Finally, it is Friday, and I can hardly believe my first week is coming to an end. Things are going well, but there is always something new just around the corner. At junior high, I took lots of notes in every class, so in physics on Monday I did the same. The teacher spoke so fast that I could not write everything down. He noticed I was struggling and told me to stop and just listen. \"Thinking is more important than copying down every word,\" he said. After class on Wednesday, I hurried to the skateboarding club. On my way out, I bumped into a girl and quickly said sorry. At the club, I tried skateboarding for the first time and fell off the board again and again. Suddenly the same girl bumped into me, and this time we both laughed. Her name is Sarah, and we soon became friends. Tomorrow we are going to watch a film together, and I am really looking forward to it.",
+      "vocab_notes": [
+        {
+          "word": "junior",
+          "cn": "低年级的"
+        },
+        {
+          "word": "struggle",
+          "cn": "奋斗;吃力"
+        },
+        {
+          "word": "memorise",
+          "cn": "记住"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What problem did the writer have in the physics class?",
+          "options": [
+            "The room was too dark to see.",
+            "There were no seats left.",
+            "The teacher spoke too fast to copy everything.",
+            "She forgot her textbook."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'The teacher spoke so fast that I could not write everything down' 的转述。"
+        },
+        {
+          "stem": "What did the physics teacher advise the writer to do?",
+          "options": [
+            "Copy every word carefully.",
+            "Leave the class early.",
+            "Change to another subject.",
+            "Stop writing and just listen."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'told me to stop and just listen' 的转述。"
+        },
+        {
+          "stem": "How did the writer make friends with Sarah?",
+          "options": [
+            "They bumped into each other and laughed at the club.",
+            "They sat together in physics.",
+            "They were in the same band.",
+            "Their parents knew each other."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the same girl bumped into me, and this time we both laughed… we soon became friends' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Well Begun, Half Done",
+      "topic_cn": "议论·好的开始",
+      "body": "People often say, \"Well begun is half done.\" For students starting senior high, a good beginning really does matter. The first few weeks can be hard. You meet new teachers, learn a new timetable and try to make a good first impression. Challenges like these may put you under pressure, but how things turn out depends a lot on what you do. The first piece of advice is to keep calm and be prepared. If you plan your time and ask for help when you need it, problems feel much smaller. The second is to keep an open mind. Join clubs, talk to new classmates and try things you have never done before. You may fail at first, but every mistake is a chance to learn. Finally, remember to give your friends a hand. Helping others not only makes them feel welcome, but also makes you feel good. With a calm mind and an open heart, you can make the most of your time at senior high.",
+      "vocab_notes": [
+        {
+          "word": "impression",
+          "cn": "印象"
+        },
+        {
+          "word": "pressure",
+          "cn": "压力"
+        },
+        {
+          "word": "calm",
+          "cn": "镇静的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the saying \"Well begun is half done\" suggest here?",
+          "options": [
+            "Beginnings do not matter at all.",
+            "A good start is very important.",
+            "Students should start work late.",
+            "Half the work is always wasted."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a good beginning really does matter' 的转述。"
+        },
+        {
+          "stem": "What is the writer's first piece of advice?",
+          "options": [
+            "Avoid all clubs.",
+            "Copy other students' work.",
+            "Stay calm and be prepared.",
+            "Never ask anyone for help."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'keep calm and be prepared' 的转述。"
+        },
+        {
+          "stem": "According to the writer, what does helping friends do for you?",
+          "options": [
+            "It wastes your study time.",
+            "It makes others dislike you.",
+            "It has no effect at all.",
+            "It makes you feel good, too."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Helping others… also makes you feel good' 的转述。"
+        }
+      ]
+    }
+  ]
+}

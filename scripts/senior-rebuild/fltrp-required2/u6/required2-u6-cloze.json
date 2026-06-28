@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U6",
+  "topic": "Earth First",
+  "source": "外研社版必修第二册 Unit 6 同主题完形(校园环保行动/家中节电/守护海洋/光盘行动/河边植树/骑车上学)。用词限 U6/初中/常见词,每空4选项同词性、答案唯一,与阅读听力关不复用文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Going Green at School",
+      "text": "Our school has started a new project to help the (1)____. Last week, our teacher gave a (2)____ about climate change and asked us to take action. The first thing I did was to bring a (3)____ water bottle instead of buying plastic ones. I also try to (4)____ waste by using both sides of my paper. On sunny days, our classroom uses (5)____ power from panels on the roof, so we save a lot of (6)____. Before we leave, we always (7)____ off the lights and computers. We have also planted young trees in the (8)____ behind the gym, because trees take in carbon dioxide. Our teacher says that even small actions can (9)____ a lot to a greener world. I feel (10)____ that I am doing something useful for the Earth.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "environment",
+            "machine",
+            "market",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "help the environment 帮助环境。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "holiday",
+            "lecture",
+            "price",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "give a lecture 做讲座。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "broken",
+            "empty",
+            "reusable",
+            "frozen"
+          ],
+          "answer_index": 2,
+          "explanation": "a reusable water bottle 可重复使用的水瓶。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "increase",
+            "enjoy",
+            "forget",
+            "reduce"
+          ],
+          "answer_index": 3,
+          "explanation": "reduce waste 减少浪费。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "solar",
+            "heavy",
+            "angry",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "solar power 太阳能。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "electricity",
+            "distance",
+            "silence"
+          ],
+          "answer_index": 1,
+          "explanation": "save electricity 节约电力。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "jump",
+            "cry",
+            "turn",
+            "sleep"
+          ],
+          "answer_index": 2,
+          "explanation": "turn off 关掉。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "ocean",
+            "factory",
+            "market",
+            "garden"
+          ],
+          "answer_index": 3,
+          "explanation": "in the garden 在花园里。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "contribute",
+            "return",
+            "belong",
+            "listen"
+          ],
+          "answer_index": 0,
+          "explanation": "contribute a lot to 为…贡献良多。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "afraid",
+            "proud",
+            "bored",
+            "angry"
+          ],
+          "answer_index": 1,
+          "explanation": "feel proud 感到自豪。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Saving Energy at Home",
+      "text": "Many people think that switching off a (1)____ such as a television means it stops using power. In fact, this is not always (2)____. When you press the button, the device often goes into stand-by (3)____. In this state, it still uses a small (4)____ of electricity. Older machines can use even more, because power keeps (5)____ from them quietly. To make sure an appliance is really off, you should (6)____ the plug from the wall. Doing this can (7)____ the amount of electricity your home wastes. It also helps to lower your family's (8)____ bills at the end of the month. My father was very (9)____ when he learned how much power our old TV was using. Now we unplug it every night, and we feel good about saving (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "garden",
+            "river",
+            "device",
+            "lecture"
+          ],
+          "answer_index": 2,
+          "explanation": "switch off a device 关掉一台设备。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "late",
+            "rich",
+            "busy",
+            "true"
+          ],
+          "answer_index": 3,
+          "explanation": "not always true 并不总是对的。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "mode",
+            "price",
+            "noise",
+            "road"
+          ],
+          "answer_index": 0,
+          "explanation": "stand-by mode 待机状态。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "picture",
+            "amount",
+            "holiday",
+            "season"
+          ],
+          "answer_index": 1,
+          "explanation": "a small amount of electricity 少量的电。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "growing",
+            "smiling",
+            "leaking",
+            "dancing"
+          ],
+          "answer_index": 2,
+          "explanation": "power keeps leaking 电不断漏出。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "paint",
+            "enjoy",
+            "borrow",
+            "remove"
+          ],
+          "answer_index": 3,
+          "explanation": "remove the plug 拔掉插头。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "reduce",
+            "raise",
+            "repeat",
+            "return"
+          ],
+          "answer_index": 0,
+          "explanation": "reduce the amount wasted 减少浪费量。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "music",
+            "electricity",
+            "traffic",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "electricity bills 电费账单。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "asleep",
+            "silent",
+            "surprised",
+            "absent"
+          ],
+          "answer_index": 2,
+          "explanation": "was surprised 很惊讶。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "litter",
+            "smoke",
+            "noise",
+            "energy"
+          ],
+          "answer_index": 3,
+          "explanation": "saving energy 节约能源。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Why the Ocean Matters",
+      "text": "The (1)____ covers most of our planet and is full of life. Sadly, human activity is putting it in great (2)____. Every year, millions of sharks are killed, and many sea animals are close to (3)____. Plastic waste is another serious problem, because animals often (4)____ it for food and eat it. Some brave people have decided to (5)____ their lives to protecting the sea. One artist, for example, swims with dolphins and sharks to (6)____ the cruelty of hunting. She gives talks and (7)____ all around the world to get more people (8)____. Thanks to people like her, more and more of us now (9)____ that the sea needs our help. If we all do something small, we can help to (10)____ the ocean for the future.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "ocean",
+            "forest",
+            "desert",
+            "mountain"
+          ],
+          "answer_index": 0,
+          "explanation": "the ocean covers most of the planet 海洋覆盖地球大部分。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "comfort",
+            "danger",
+            "silence",
+            "order"
+          ],
+          "answer_index": 1,
+          "explanation": "in great danger 处于极大危险。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "holiday",
+            "victory",
+            "extinction",
+            "profit"
+          ],
+          "answer_index": 2,
+          "explanation": "close to extinction 濒临灭绝。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "paint",
+            "repair",
+            "water",
+            "mistake"
+          ],
+          "answer_index": 3,
+          "explanation": "mistake it for food 错把它当作食物。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "devote",
+            "sell",
+            "lose",
+            "waste"
+          ],
+          "answer_index": 0,
+          "explanation": "devote their lives to 把生命献给。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forget",
+            "highlight",
+            "hide",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "highlight the cruelty 揭示残忍。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "holidays",
+            "mistakes",
+            "presentations",
+            "gardens"
+          ],
+          "answer_index": 2,
+          "explanation": "gives talks and presentations 做演讲和报告。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "asleep",
+            "absent",
+            "bored",
+            "involved"
+          ],
+          "answer_index": 3,
+          "explanation": "get more people involved 让更多人参与进来。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "realise",
+            "forget",
+            "doubt",
+            "refuse"
+          ],
+          "answer_index": 0,
+          "explanation": "realise that the sea needs help 意识到海洋需要帮助。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "pollute",
+            "protect",
+            "damage",
+            "waste"
+          ],
+          "answer_index": 1,
+          "explanation": "protect the ocean 保护海洋。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Clear Your Plate Campaign",
+      "text": "Last month, our class started a (1)____ called Clear Your Plate. Its goal is to (2)____ people to stop wasting food. Many students did not (3)____ that over thirty per cent of the world's food is thrown away every year, while millions of people do not have (4)____ to eat. We were quite (5)____ about this problem, so we decided to act. First, we agreed not to (6)____ more food than we need in the school canteen. Second, when we eat in a restaurant, we take any (7)____ food home. Third, we (8)____ our families and friends to join us. Our teacher told us that cutting daily food waste by just five per cent could (9)____ many people from hunger. Now most of us finish everything on our (10)____, and we feel proud to help.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "holiday",
+            "factory",
+            "campaign",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "start a campaign 发起一场活动。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "follow",
+            "ignore",
+            "copy",
+            "urge"
+          ],
+          "answer_index": 3,
+          "explanation": "urge people to stop 敦促人们停止。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "realise",
+            "sell",
+            "paint",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "did not realise 没有意识到。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "ready",
+            "enough",
+            "asleep",
+            "absent"
+          ],
+          "answer_index": 1,
+          "explanation": "do not have enough to eat 没有足够的食物。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "pleased",
+            "bored",
+            "concerned",
+            "hungry"
+          ],
+          "answer_index": 2,
+          "explanation": "concerned about this problem 对这个问题感到担忧。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "throw",
+            "cook",
+            "grow",
+            "order"
+          ],
+          "answer_index": 3,
+          "explanation": "order more food than we need 点超过所需的食物。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "leftover",
+            "frozen",
+            "fresh",
+            "raw"
+          ],
+          "answer_index": 0,
+          "explanation": "leftover food 剩饭。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "stopped",
+            "encouraged",
+            "forced",
+            "paid"
+          ],
+          "answer_index": 1,
+          "explanation": "encouraged friends to join 鼓励朋友加入。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "buy",
+            "sell",
+            "save",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "save many people from hunger 使许多人免于饥饿。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "books",
+            "phones",
+            "bikes",
+            "plates"
+          ],
+          "answer_index": 3,
+          "explanation": "everything on our plates 盘子里的一切。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Planting Trees by the River",
+      "text": "This spring, our school carried out a tree-planting (1)____ near the river. Trees are important because they take in carbon dioxide and help (2)____ global warming. They also give homes to birds, and their roots stop the soil from being (3)____ away by rain. On planting day, the (4)____ of us came early in the morning. Each group was given young trees and a (5)____ of water. Our teacher showed us how to dig a hole and (6)____ the roots carefully with soil. By noon, we had planted hundreds of young (7)____ along the riverbank. We were tired but very (8)____ of our work. The head teacher said that, in a few years, this area would become a green (9)____ full of life. I learned that protecting the Earth can be hard work, but it (10)____ a real difference.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "project",
+            "holiday",
+            "mistake",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "a tree-planting project 植树项目。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "increase",
+            "reduce",
+            "enjoy",
+            "repeat"
+          ],
+          "answer_index": 1,
+          "explanation": "help reduce global warming 帮助减缓全球变暖。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "painted",
+            "sold",
+            "washed",
+            "frozen"
+          ],
+          "answer_index": 2,
+          "explanation": "the soil from being washed away 土壤被冲走。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "silence",
+            "weather",
+            "distance",
+            "majority"
+          ],
+          "answer_index": 3,
+          "explanation": "the majority of us 我们中的大多数。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "supply",
+            "noise",
+            "price",
+            "season"
+          ],
+          "answer_index": 0,
+          "explanation": "a supply of water 一份供水。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "throw",
+            "cover",
+            "sell",
+            "burn"
+          ],
+          "answer_index": 1,
+          "explanation": "cover the roots with soil 用土覆盖根部。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "cars",
+            "books",
+            "trees",
+            "shops"
+          ],
+          "answer_index": 2,
+          "explanation": "planted hundreds of young trees 种下数百棵小树。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "afraid",
+            "angry",
+            "bored",
+            "proud"
+          ],
+          "answer_index": 3,
+          "explanation": "proud of our work 为自己的劳动自豪。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "place",
+            "price",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "a green place full of life 充满生机的绿地。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "loses",
+            "makes",
+            "sells",
+            "forgets"
+          ],
+          "answer_index": 1,
+          "explanation": "it makes a real difference 它真的能带来改变。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Cycling to School",
+      "text": "Every morning, I used to ask my father to (1)____ me to school by car. One day, our teacher gave a (2)____ about carbon footprints, and I learned that cars (3)____ a lot of carbon dioxide into the air. From that day on, I decided to (4)____ my carbon footprint. Now I ride my bike to school, which is good for the (5)____ and good for my health too. The fresh air in the morning makes me feel (6)____ and ready to study. My father was a little (7)____ at first, but soon he understood my (8)____. He even started cycling to work himself. Our whole family now tries to live in a more (9)____ way. We have learned that one small change can (10)____ to a cleaner and greener Earth.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "paint",
+            "drive",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "drive me to school 开车送我上学。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "price",
+            "river",
+            "talk"
+          ],
+          "answer_index": 3,
+          "explanation": "gave a talk about 做了关于…的讲解。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "release",
+            "save",
+            "clean",
+            "drink"
+          ],
+          "answer_index": 0,
+          "explanation": "cars release carbon dioxide 汽车排放二氧化碳。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "raise",
+            "cut",
+            "paint",
+            "borrow"
+          ],
+          "answer_index": 1,
+          "explanation": "cut my carbon footprint 减少碳足迹。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "traffic",
+            "noise",
+            "environment",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "good for the environment 对环境有益。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "asleep",
+            "afraid",
+            "angry",
+            "awake"
+          ],
+          "answer_index": 3,
+          "explanation": "makes me feel awake 让我感到清醒。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "surprised",
+            "asleep",
+            "absent",
+            "silent"
+          ],
+          "answer_index": 0,
+          "explanation": "a little surprised 起初有点惊讶。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "choice",
+            "garden",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "understood my choice 理解了我的选择。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "dangerous",
+            "careless",
+            "sustainable",
+            "noisy"
+          ],
+          "answer_index": 2,
+          "explanation": "a more sustainable way 更可持续的方式。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "return",
+            "belong",
+            "refuse",
+            "contribute"
+          ],
+          "answer_index": 3,
+          "explanation": "contribute to a greener Earth 为更绿色的地球出力。"
+        }
+      ]
+    }
+  ]
+}

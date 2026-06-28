@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "note": "单元通关专属迷你阅读(冒险主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Before the team set off across the frozen land, the leader warned them that the journey would be the hardest of their lives. They had planned to cross the ice in twenty days, but a fierce storm slowed them down. In the end, tired but proud, they reached the far shore three weeks later than expected.",
+    "questions": [
+      {
+        "q": "What did the leader say about the journey?",
+        "options": [
+          "It would be the toughest one they had ever made.",
+          "It would be short and easy.",
+          "It would be cancelled at once.",
+          "It would need no planning at all."
+        ],
+        "answer": "A",
+        "explanation": "原文 'the journey would be the hardest of their lives' 的转述;其余与原文相反。"
+      },
+      {
+        "q": "Why did the team arrive later than planned?",
+        "options": [
+          "Because they started far too late.",
+          "Because a strong storm held them back.",
+          "Because they lost all their maps.",
+          "Because they stopped to rest for fun."
+        ],
+        "answer": "B",
+        "explanation": "原文 'a fierce storm slowed them down' 的转述(短文中段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

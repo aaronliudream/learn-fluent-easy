@@ -1,0 +1,421 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "topic": "Friends Forever",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社版必修第一册 Unit 4 同主题听力(怎样交朋友/朋友如何保持联系的变化/筹划惊喜派对/如何维系友谊/安慰担心的朋友/患难见真情)。long/short 交替,用词限 U4/初中/常见词,答案可在 transcript 找到依据,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 How Do You Make Friends?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Tom: Hi Sophie, how do you usually make new friends?",
+        "Sophie: I like joining clubs where people share my interests. Last term I joined the drama club.",
+        "Tom: That sounds fun. I usually make friends online first, and then meet them later.",
+        "Sophie: Really? Isn't that a little risky?",
+        "Tom: It can be, so I am always careful and never share private information at first.",
+        "Sophie: That's wise. For me, talking face to face feels more real.",
+        "Tom: I understand. Maybe the best way is to use both.",
+        "Sophie: I agree. What matters most is being honest and kind."
+      ],
+      "translation_cn": "Tom 问 Sophie 怎样交新朋友;Sophie 喜欢参加兴趣相投的社团,上学期加入了戏剧社;Tom 则常先在网上交友再见面;Sophie 觉得有点冒险;Tom 说会小心、起初不透露私人信息;Sophie 更喜欢面对面;两人都认为最重要的是真诚和善良。",
+      "questions": [
+        {
+          "stem": "How does Sophie like to make friends?",
+          "options": [
+            "By joining clubs that match her interests.",
+            "By writing letters to strangers.",
+            "By never leaving her home.",
+            "By posting photos of money."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which club did Sophie join last term?",
+          "options": [
+            "The football club.",
+            "The drama club.",
+            "The cooking club.",
+            "The chess club."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Tom usually make friends?",
+          "options": [
+            "He meets them online first, then in person.",
+            "He never makes new friends.",
+            "He only meets them at family parties.",
+            "He asks his teacher to choose."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom do to stay safe online?",
+          "options": [
+            "He shares his home address at once.",
+            "He never shares private information at first.",
+            "He gives money to strangers.",
+            "He tells everyone his secrets."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do both speakers agree matters most?",
+          "options": [
+            "Being rich and famous.",
+            "Winning every argument.",
+            "Being honest and kind.",
+            "Having the newest phone."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 How Friends Once Kept in Touch",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Long ago, friends who lived far apart had very few ways to keep in touch.",
+        "The most common way was to write letters, which could take weeks to arrive.",
+        "Later, the telephone made it faster to hear a friend's voice.",
+        "Today, social media and video calls let us talk to faraway friends in seconds.",
+        "Yet no matter how the tools change, the wish to stay close to our friends stays the same."
+      ],
+      "translation_cn": "很久以前,异地的朋友几乎没有保持联系的办法;最常见的是写信,要好几周才到;后来电话让人能更快听到朋友的声音;如今社交媒体和视频通话让我们几秒就能和远方朋友交谈;但无论工具怎么变,想与朋友亲近的愿望始终不变。",
+      "questions": [
+        {
+          "stem": "Long ago, what was the most common way to keep in touch?",
+          "options": [
+            "Sending video calls.",
+            "Using social media.",
+            "Meeting every day.",
+            "Writing letters."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What was a problem with that old way?",
+          "options": [
+            "Letters could take weeks to arrive.",
+            "It was too loud.",
+            "It needed wi-fi.",
+            "It cost nothing at all."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did the telephone make possible?",
+          "options": [
+            "Reading old letters.",
+            "Hearing a friend's voice more quickly.",
+            "Drawing pictures.",
+            "Sending photos by post."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What lets us talk to faraway friends in seconds today?",
+          "options": [
+            "Paper letters.",
+            "Walking to their house.",
+            "Social media and video calls.",
+            "Waiting for weeks."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What stays the same no matter how the tools change?",
+          "options": [
+            "The price of stamps.",
+            "The speed of letters.",
+            "The shape of phones.",
+            "The wish to stay close to our friends."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Planning a Surprise Party",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Ben: Emma's birthday is next Friday. Shall we plan a surprise for her?",
+        "Mia: Great idea! She loves music, so how about a small party with her favourite songs?",
+        "Ben: Perfect. I can bring a cake. Could you invite her close friends?",
+        "Mia: Sure. Let's keep it a secret so she is really surprised.",
+        "Ben: Good thinking. Where should we have it?",
+        "Mia: How about the school garden after class? It's quiet there.",
+        "Ben: That works. Let's tell everyone to arrive before she does.",
+        "Mia: Agreed. This is going to be the best birthday surprise ever!"
+      ],
+      "translation_cn": "Ben 提议为下周五过生日的 Emma 准备惊喜;Mia 赞成,提议办个放她喜欢歌曲的小派对;Ben 负责带蛋糕,请 Mia 邀请她的好友;两人决定保密好让她惊喜;地点定在放学后安静的学校花园;让大家在她到之前先到;期待这是最棒的生日惊喜。",
+      "questions": [
+        {
+          "stem": "Whose birthday are they planning for?",
+          "options": [
+            "Emma's.",
+            "Ben's.",
+            "Mia's.",
+            "The teacher's."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Emma love, according to Mia?",
+          "options": [
+            "Football.",
+            "Music.",
+            "Painting.",
+            "Fishing."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will Ben bring to the party?",
+          "options": [
+            "A guitar.",
+            "A football.",
+            "A cake.",
+            "A camera."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Where will they hold the surprise?",
+          "options": [
+            "At the train station.",
+            "In a shop.",
+            "On a boat.",
+            "In the school garden."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why should everyone arrive before Emma?",
+          "options": [
+            "To keep the party a surprise.",
+            "To buy tickets.",
+            "To clean the room.",
+            "To finish homework."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 How to Keep a Friendship Alive",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Making a friend is easy, but keeping a friendship alive takes effort from both sides.",
+        "First, stay in touch often, even with just a short message.",
+        "Second, listen carefully when your friend has a problem, instead of only talking about yourself.",
+        "Third, be honest, but always be kind.",
+        "And when you make a mistake, say sorry quickly, because a friendship that is cared for can last a lifetime."
+      ],
+      "translation_cn": "交朋友容易,但维系友谊需要双方努力;第一,常联系,哪怕只是一条短消息;第二,朋友有烦恼时认真倾听,而不是只谈自己;第三,要诚实,但永远要善良;犯错时尽快道歉,因为用心呵护的友谊能维持一生。",
+      "questions": [
+        {
+          "stem": "According to the talk, what takes effort from both sides?",
+          "options": [
+            "Spending money.",
+            "Keeping a friendship alive.",
+            "Winning games.",
+            "Making enemies."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is the first piece of advice?",
+          "options": [
+            "Never speak to your friend.",
+            "Move far away.",
+            "Stay in touch often.",
+            "Forget their birthday."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should you do when your friend has a problem?",
+          "options": [
+            "Only talk about yourself.",
+            "Walk away at once.",
+            "Laugh at them.",
+            "Listen carefully."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should you do after making a mistake?",
+          "options": [
+            "Say sorry quickly.",
+            "Blame your friend.",
+            "Pretend nothing happened.",
+            "Stop being friends."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can a well-cared-for friendship do?",
+          "options": [
+            "End very soon.",
+            "Last a lifetime.",
+            "Cause many problems.",
+            "Cost a lot of money."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 Helping a Worried Friend",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lucy: You look worried, Jack. What's wrong?",
+        "Jack: My best friend is moving to another city next month. I'm afraid we'll lose touch.",
+        "Lucy: I understand. But these days it's easy to stay in touch online.",
+        "Jack: That's true. We could video-call every weekend.",
+        "Lucy: Exactly. And you can still share photos and messages every day.",
+        "Jack: You're right. Maybe distance doesn't have to end a friendship.",
+        "Lucy: It doesn't. Real friends stay close, however far apart they live.",
+        "Jack: Thanks, Lucy. I feel much better now."
+      ],
+      "translation_cn": "Lucy 见 Jack 发愁;Jack 说最好的朋友下个月要搬到别的城市,担心会失去联系;Lucy 说如今上网很容易保持联系;Jack 想到可以每周末视频通话;Lucy 说还能每天分享照片和消息;Jack 明白距离不必终结友谊;Lucy 说真朋友无论隔多远都会亲密如初;Jack 道谢,心情好多了。",
+      "questions": [
+        {
+          "stem": "Why is Jack worried?",
+          "options": [
+            "He lost his homework.",
+            "He failed an exam.",
+            "His best friend is moving away.",
+            "He broke his phone."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is Jack afraid will happen?",
+          "options": [
+            "He will move house.",
+            "He will fail school.",
+            "He will lose his money.",
+            "They will lose touch."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Lucy suggest they do?",
+          "options": [
+            "Stay in touch online.",
+            "Stop being friends.",
+            "Forget each other.",
+            "Never speak again."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How often does Jack think they could video-call?",
+          "options": [
+            "Once a year.",
+            "Every weekend.",
+            "Never.",
+            "Only on his birthday."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Lucy say about real friends?",
+          "options": [
+            "They forget each other quickly.",
+            "They only meet at school.",
+            "They stay close however far apart they live.",
+            "They argue all the time."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 A Friend in Need",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "There is an old saying: a friend in need is a friend indeed.",
+        "It means that a true friend is the one who helps you when you are in trouble, not only when life is easy.",
+        "Anyone can be there for the good times.",
+        "But the friends who stay by your side during hard days are the ones worth keeping.",
+        "So when a friend needs you, do not turn away; be the friend you would want to have."
+      ],
+      "translation_cn": "有句老话:患难见真情;意思是真正的朋友是在你有难时帮你的人,而不只是顺境时;顺境时谁都能陪你;但在艰难日子里仍守在你身边的朋友才值得珍惜;所以当朋友需要你时,别转身离开,要做你自己也希望拥有的那种朋友。",
+      "questions": [
+        {
+          "stem": "What does the saying 'a friend in need is a friend indeed' mean?",
+          "options": [
+            "Friends should never meet.",
+            "Friends only matter when you are rich.",
+            "Real friends always argue.",
+            "A true friend helps you when you are in trouble."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Who can be there during the good times, according to the talk?",
+          "options": [
+            "Almost anyone.",
+            "Only your teacher.",
+            "Nobody at all.",
+            "Only your family."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which friends are worth keeping?",
+          "options": [
+            "Those who only come to parties.",
+            "Those who stay by you during hard days.",
+            "Those who never call you.",
+            "Those who live nearby only."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you do when a friend needs you?",
+          "options": [
+            "Turn away at once.",
+            "Ask for money.",
+            "Not turn away; help them.",
+            "Tell their secrets."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker tell you to be?",
+          "options": [
+            "The richest person.",
+            "The loudest in class.",
+            "The first to leave.",
+            "The kind of friend you would want to have."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

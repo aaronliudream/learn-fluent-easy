@@ -1,0 +1,314 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "topic": "Friends Forever",
+  "source": "外研社版必修第一册 Unit 4 同主题阅读(网络交友的利弊/手语帮助听障朋友/《二十年后》忠诚的友谊/友谊汤的品质/为生病的朋友想办法/兴趣相投的散步社团)。词限 U4/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Click for a Friend?",
+      "topic_cn": "议论·网络交友是真是假",
+      "body": "Not very long ago, moving to a new town often meant losing touch with your old friends. The only way to hear from faraway friends was to write letters that took ages to arrive. Thanks to advances in technology, all of this has changed. Today we can travel around the world and still stay in touch with the people we care about. Social media tools let us see what our friends are up to, and all we need is a connection. The digital age also helps us find others who share our interests, even when they live far away. But when you 'friend' someone online, are they really your friends? It depends. If people always share honest, true information, these friendships can be real. Yet we should remember that what we see online is often not the whole truth, and a smiling photo can hide real problems.",
+      "vocab_notes": [
+        {
+          "word": "digital",
+          "cn": "数字的"
+        },
+        {
+          "word": "social media",
+          "cn": "社交媒体"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was hard about keeping friendships in the past?",
+          "options": [
+            "You often lost touch after moving and letters were slow.",
+            "There were no friends to write to.",
+            "People refused to send any letters.",
+            "Technology made friendships impossible."
+          ],
+          "answer_index": 0,
+          "explanation": "首段说搬家后常失联、写信很慢的转述。"
+        },
+        {
+          "stem": "According to the passage, what does the digital age make easier?",
+          "options": [
+            "Forgetting your old friends.",
+            "Finding others who like the same things.",
+            "Stopping all communication.",
+            "Hiding from everyone online."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'find others who share our interests' 的转述。"
+        },
+        {
+          "stem": "What does the writer warn readers to keep in mind?",
+          "options": [
+            "What people show online may not be the whole story.",
+            "Online photos always tell the full truth.",
+            "Letters are faster than the Internet.",
+            "Real friends never use social media."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'not the whole truth… can hide real problems' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Speaking with My Hands",
+      "topic_cn": "记叙·为听障朋友学手语",
+      "body": "Lucy is one of my closest friends, but she has a hearing problem. When she first joined our school, she seemed lonely and shy, and at first it was really difficult to communicate with her. I did not want her to feel left out, so I decided to learn a new language — sign language. It allows me to 'speak' with my hands. Little by little, we began to understand each other, and soon we became good friends. Lucy is a smart girl whose ideas are always inspiring. Whenever I have a problem that I cannot solve on my own, I ask her for help, because she is such a good listener. Learning sign language took time and patience, but it was worth every minute. Now I enjoy sharing the small moments of my life with her, and our friendship has taught me that kindness can cross any barrier.",
+      "vocab_notes": [
+        {
+          "word": "inspiring",
+          "cn": "鼓舞人心的"
+        },
+        {
+          "word": "patience",
+          "cn": "耐心"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the writer decide to learn sign language?",
+          "options": [
+            "To win a school prize.",
+            "So that she could talk with Lucy and include her.",
+            "Because the teacher ordered her to.",
+            "To show off in front of classmates."
+          ],
+          "answer_index": 1,
+          "explanation": "原文不想让 Lucy 被冷落、想与她沟通的转述。"
+        },
+        {
+          "stem": "How does the writer describe Lucy?",
+          "options": [
+            "Unfriendly and rude.",
+            "Someone who never listens.",
+            "Clever, with ideas that inspire others.",
+            "A person who hates making friends."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'smart girl whose ideas are always inspiring' + 'good listener' 的转述。"
+        },
+        {
+          "stem": "What lesson did the friendship teach the writer?",
+          "options": [
+            "Friends should never need help.",
+            "Sign language is useless.",
+            "It is better to stay alone.",
+            "Kindness can break through any barrier."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'kindness can cross any barrier' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "After Twenty Years",
+      "topic_cn": "故事·忠诚的约定",
+      "body": "Twenty years ago, two young men named Bob and Jimmy were the closest of friends in New York. They had grown up together like brothers. One night, before Bob left for the West to make his fortune, the two friends made a promise. They agreed to meet again at the very same spot exactly twenty years later, no matter where life had taken them or how far they had to travel. Years passed. For a while they wrote to each other, but in time they lost track of one another. Still, Bob never forgot. He came a thousand miles and stood waiting in the cold, dark street, sure that his old partner would turn up if he was still alive. To Bob, Jimmy had always been the truest and most loyal friend in the world. The story shows how a real friendship can survive long years and great distance.",
+      "vocab_notes": [
+        {
+          "word": "fortune",
+          "cn": "财富"
+        },
+        {
+          "word": "loyal",
+          "cn": "忠诚的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What promise did Bob and Jimmy make?",
+          "options": [
+            "To return to the very spot two decades later.",
+            "To write a letter every single day.",
+            "To live in the West forever.",
+            "Never to speak to each other again."
+          ],
+          "answer_index": 0,
+          "explanation": "原文约定二十年后回到同一地点相见的转述。"
+        },
+        {
+          "stem": "What happened to their contact over the years?",
+          "options": [
+            "They met every weekend.",
+            "They slowly lost touch with each other.",
+            "They became enemies at once.",
+            "They moved into the same house."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'in time they lost track of one another' 的转述。"
+        },
+        {
+          "stem": "What does the story mainly show about friendship?",
+          "options": [
+            "It is easily broken by small problems.",
+            "It only works between brothers.",
+            "It can last through time and distance.",
+            "It needs daily letters to survive."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'survive long years and great distance' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Recipe for Friendship",
+      "topic_cn": "说明·友谊汤的品质",
+      "body": "Imagine you could cook a 'friendship soup'. Like any good soup, it would never fail to make you smile when you were feeling down. To get started, all you need is a box of love. Pour it into a pot and mix it with a few grams of smiles. Then you add the rest: two cups of trust, a spoon of encouragement, three spoons of helpfulness, and plenty of good conversation. Do not forget one pack of similar interests, a glass of comfort, and two drops of patience. Add a bag of passion, a piece of generosity, and finally a slice of humour. Of course, this is only a game, but each 'ingredient' stands for a real quality that good friends share. Trust, kindness and patience are the things that turn two people into true friends. When you have all of these, your friendship will taste sweet and last a very long time.",
+      "vocab_notes": [
+        {
+          "word": "generosity",
+          "cn": "慷慨"
+        },
+        {
+          "word": "ingredient",
+          "cn": "原料"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the 'friendship soup' meant to stand for?",
+          "options": [
+            "A real cooking lesson.",
+            "A way to lose weight.",
+            "A list of foods to buy.",
+            "The good values that true friends have in common."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'each ingredient stands for a real quality' 的转述。"
+        },
+        {
+          "stem": "Which of these is one of the 'ingredients' in the soup?",
+          "options": [
+            "A spoon of encouragement.",
+            "A cup of anger.",
+            "A box of lies.",
+            "A bag of jealousy."
+          ],
+          "answer_index": 0,
+          "explanation": "原文列出 'a spoon of encouragement' 等正面要素。"
+        },
+        {
+          "stem": "According to the writer, what will a friendship full of these qualities be like?",
+          "options": [
+            "Short and bitter.",
+            "Sweet and long-lasting.",
+            "Cold and empty.",
+            "Boring and useless."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'taste sweet and last a very long time' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Bringing Matt Along",
+      "topic_cn": "记叙·为生病的朋友想办法",
+      "body": "Andy, Clara and Matt had planned an exciting trip to London together. Then, just a few days before they were due to leave, Matt called with bad news: he had broken his leg and could not come. Andy and Clara first thought about postponing the whole trip, but Matt told them not to change their plans because of him. The two friends still wanted Matt to feel part of the adventure, so they tried to think of a clever idea. They thought about sending him postcards from every place they visited, but those might take days to arrive. In the end, they decided to print a life-size photo of Matt on a cardboard cutout and carry it everywhere they went. They took funny pictures with it at every spot. It felt as if Matt were really there with them, and later he laughed happily at all the photos.",
+      "vocab_notes": [
+        {
+          "word": "postpone",
+          "cn": "推迟"
+        },
+        {
+          "word": "cardboard cutout",
+          "cn": "纸板人像"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why couldn't Matt go on the trip?",
+          "options": [
+            "He had lost his ticket.",
+            "He did not like London.",
+            "A broken leg kept him at home.",
+            "He was too busy at school."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'he had broken his leg and could not come' 的转述(改写,非照抄)。"
+        },
+        {
+          "stem": "What was the problem with sending Matt postcards?",
+          "options": [
+            "They were too expensive.",
+            "Matt could not read.",
+            "There were no postcards for sale.",
+            "They might take days to reach him."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'those might take days to arrive' 的转述。"
+        },
+        {
+          "stem": "What did Andy and Clara finally do to include Matt?",
+          "options": [
+            "They carried a cardboard photo of him and took pictures.",
+            "They cancelled the trip completely.",
+            "They forgot about him.",
+            "They phoned him every hour."
+          ],
+          "answer_index": 0,
+          "explanation": "原文做纸板人像、随身带着拍照的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Walk and Talk",
+      "topic_cn": "应用·兴趣相投的散步社团",
+      "body": "Are you new in town and hoping to make some friends? Then Walk and Talk may be just right for you. It is a free walking group that meets every Sunday morning in the park. We are a group of friendly teenagers who love being outdoors and meeting new people. You do not need any special skills — just a pair of comfortable shoes and a smile. Every week we choose a different path, walk together for an hour or two, and chat about anything from school to films. Walking side by side makes it easy to talk, and many lasting friendships have begun on our Sunday walks. The next walk that is open to new members will be on the second Sunday of the month. You may also bring along a friend, though anyone you bring should be over twelve years old. Come and join the fun — your next good friend may be waiting on the path!",
+      "vocab_notes": [
+        {
+          "word": "path",
+          "cn": "小径"
+        },
+        {
+          "word": "outdoors",
+          "cn": "在户外"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Who is the Walk and Talk group mainly for?",
+          "options": [
+            "Professional athletes only.",
+            "Newcomers who want to make friends.",
+            "People who dislike the outdoors.",
+            "Children under five years old."
+          ],
+          "answer_index": 1,
+          "explanation": "原文面向新来、想交朋友的人的转述。"
+        },
+        {
+          "stem": "What does a person need in order to join?",
+          "options": [
+            "Special walking skills.",
+            "A lot of money.",
+            "Comfortable shoes and a friendly attitude.",
+            "Their own car."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'just a pair of comfortable shoes and a smile' 的转述。"
+        },
+        {
+          "stem": "What is one rule for bringing a friend along?",
+          "options": [
+            "The friend must be a teacher.",
+            "You can bring as many babies as you like.",
+            "Friends are not allowed at all.",
+            "Anyone you bring has to be older than twelve."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'anyone you bring should be over twelve years old' 的转述。"
+        }
+      ]
+    }
+  ]
+}

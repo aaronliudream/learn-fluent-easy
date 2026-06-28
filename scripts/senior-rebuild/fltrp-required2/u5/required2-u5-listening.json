@@ -1,0 +1,406 @@
+{
+  "volume": "required2",
+  "unit": "U5",
+  "topic": "On the Road",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85)。speaker 仅角色标注。long=对话,short=独白。",
+  "source": "外研社版必修第二册 Unit 5 同主题听力(车站买票/轻装出行贴士/周末出游计划/导游欢迎词/酒店入住/海岛旅行电台)。用词限本单元/初中/常见词,答案可在 transcript 找到依据,与读写、完形不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U5 听力·对话 At the Train Station",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Clerk: Good morning. Where would you like to go today?",
+        "Traveller: Morning. I'd like a ticket to the seaside town of Brighton, please.",
+        "Clerk: Of course. The next train leaves at half past nine from platform two.",
+        "Traveller: How long does the journey take?",
+        "Clerk: About one hour. It follows a route along the coast, so the views are lovely.",
+        "Traveller: That sounds nice. How much is a single ticket?",
+        "Clerk: A single is fifteen pounds, but a day return is only eighteen.",
+        "Traveller: I'll take the day return, then. Here's twenty pounds.",
+        "Clerk: Thank you. Here's your ticket and your change. Have a good trip!"
+      ],
+      "translation_cn": "旅客想买一张去海滨小镇布莱顿的票;下趟车九点半从二号站台发车;车程约一小时,沿海岸线行驶,风景很美;单程票15英镑,当日往返票18英镑;旅客买了往返票,付了20英镑。",
+      "questions": [
+        {
+          "stem": "Where does the traveller want to go?",
+          "options": [
+            "To a seaside town called Brighton.",
+            "To a quiet mountain village.",
+            "To the capital city.",
+            "To a small island."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When does the next train leave?",
+          "options": [
+            "At eight o'clock.",
+            "At half past nine.",
+            "At a quarter past ten.",
+            "At noon."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How long does the journey take?",
+          "options": [
+            "About one hour.",
+            "About three hours.",
+            "Half a day.",
+            "Only ten minutes."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why are the views so lovely?",
+          "options": [
+            "The train goes through a city.",
+            "The train runs along the coast.",
+            "The train climbs a high mountain.",
+            "The train crosses a desert."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which ticket does the traveller buy?",
+          "options": [
+            "A single ticket.",
+            "A weekly pass.",
+            "A day return.",
+            "A first-class ticket."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U5 听力·独白 A Tip on Packing Light",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_male",
+      "transcript": "Here is a useful tip for anyone going on a trip. Try to travel light and pack only what you really need. A heavy bag is tiring to carry, and many airlines charge extra for large luggage. Before you leave, make a short list and lay everything on the bed. Then remove at least a third of it. Remember that you can buy most things at your destination if you forget them. Most importantly, leave some space in your bag for the souvenirs you will surely bring home.",
+      "translation_cn": "给出门旅行者的小贴士:尽量轻装,只带真正需要的东西;沉重的包背着累,很多航空公司对大件行李还要加收费用;出发前列个清单、把东西摊在床上,再拿掉至少三分之一;忘带的东西大多可在目的地买到;最重要的是,在包里留点空间装带回家的纪念品。",
+      "questions": [
+        {
+          "stem": "What is the tip mainly about?",
+          "options": [
+            "Choosing the cheapest flight.",
+            "Finding a good hotel.",
+            "Learning a foreign language.",
+            "Packing light and taking less."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why can a heavy bag be a problem?",
+          "options": [
+            "It is tiring and may cost extra.",
+            "It is easy to lose at sea.",
+            "It cannot hold any clothes.",
+            "It is not allowed on trains."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should you do after making a list?",
+          "options": [
+            "Add a third more things.",
+            "Remove about a third of the things.",
+            "Throw the list away.",
+            "Buy a bigger bag at once."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can you do if you forget something?",
+          "options": [
+            "Cancel the whole trip.",
+            "Borrow it from the airline.",
+            "Buy it at your destination.",
+            "Go straight back home."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why leave some space in the bag?",
+          "options": [
+            "For a heavy winter coat.",
+            "For another person's things.",
+            "For a paper map and tickets.",
+            "For souvenirs to bring home."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U5 听力·对话 Planning a Weekend Trip",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: Do you have any plans for the long weekend?",
+        "Ben: Not yet. I'd love to get out of the city, though.",
+        "Anna: Why don't we go hiking near the lake? The scenery there is amazing.",
+        "Ben: Great idea! How do we get there?",
+        "Anna: We can take the early bus on Saturday. It's cheaper than driving.",
+        "Ben: Perfect. Should we book a room for the night?",
+        "Anna: Yes, there's a small hotel by the lake. I'll book it online tonight.",
+        "Ben: And I'll bring my camera. I want some photos of the sunset.",
+        "Anna: Don't forget warm clothes. It gets cold near the water in the evening."
+      ],
+      "translation_cn": "Anna 问 Ben 长周末有没有计划;Ben 想离开城市;Anna 建议去湖边徒步,那里风景很美;周六坐早班公交去,比开车便宜;湖边有家小旅馆,Anna 今晚在线预订;Ben 带相机想拍日落;Anna 提醒带暖和的衣服,因为傍晚水边很冷。",
+      "questions": [
+        {
+          "stem": "What does Ben want to do this weekend?",
+          "options": [
+            "Get out of the city.",
+            "Stay at home and rest.",
+            "Visit a busy shopping mall.",
+            "Work on a school project."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Anna suggest?",
+          "options": [
+            "Flying to another country.",
+            "Going hiking near the lake.",
+            "Driving across the mountains.",
+            "Taking a boat to an island."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How will they travel there?",
+          "options": [
+            "By their own car.",
+            "By a slow train.",
+            "By the early bus.",
+            "On foot all the way."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who will book the hotel room?",
+          "options": [
+            "Ben.",
+            "Ben's brother.",
+            "The bus driver.",
+            "Anna."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why should they take warm clothes?",
+          "options": [
+            "It gets cold by the water at night.",
+            "It often snows in summer there.",
+            "The hotel has no heating.",
+            "The bus is always very cold."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U5 听力·独白 A Tour Guide's Welcome",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_male",
+      "transcript": "Good morning, everyone, and welcome to our city tour. My name is Tom, and I'll be your guide today. Our first stop is the old town, where you can see buildings that are hundreds of years old. After that, we'll visit the art gallery by the river and stop for lunch at a local restaurant. In the afternoon, those who feel energetic can climb the hill for a wonderful view of the whole bay. Please stay close to the group and keep your maps with you. If you have any questions at any time, just ask me.",
+      "translation_cn": "导游 Tom 欢迎大家参加城市游;第一站是老城,可看到几百年历史的建筑;之后参观河边的美术馆,并在当地餐馆吃午饭;下午有体力的人可爬山,饱览整个海湾的美景;请大家紧跟队伍、带好地图;有问题随时问他。",
+      "questions": [
+        {
+          "stem": "What is Tom's job?",
+          "options": [
+            "He is a bus driver.",
+            "He is a tour guide.",
+            "He is a hotel manager.",
+            "He is a photographer."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is the first stop of the tour?",
+          "options": [
+            "The art gallery.",
+            "A local restaurant.",
+            "The old town.",
+            "The top of the hill."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What stands by the river?",
+          "options": [
+            "A train station.",
+            "A snow mountain.",
+            "A football field.",
+            "An art gallery."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What can energetic visitors do in the afternoon?",
+          "options": [
+            "Climb the hill for a view of the bay.",
+            "Swim across the river.",
+            "Drive to another city.",
+            "Take a long ferry trip."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom ask the visitors to do?",
+          "options": [
+            "Leave their bags on the bus.",
+            "Stay close and keep their maps.",
+            "Walk on their own all day.",
+            "Buy tickets at the gallery."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U5 听力·对话 Checking in at the Hotel",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Receptionist: Good evening, and welcome to the Lakeside Hotel. Do you have a booking?",
+        "Guest: Yes, under the name of Lee. I booked a room for two nights.",
+        "Receptionist: Let me check. Here it is, a room with a view of the lake. May I see your passport?",
+        "Guest: Of course, here you are.",
+        "Receptionist: Thank you. Your room is on the third floor, number 305.",
+        "Guest: Great. Is breakfast included?",
+        "Receptionist: Yes, breakfast is served from seven to nine in the morning.",
+        "Guest: And could you tell me the way to the old town?",
+        "Receptionist: Certainly. Turn left outside the hotel and walk straight for ten minutes."
+      ],
+      "translation_cn": "客人 Lee 在湖畔酒店登记入住,预订了两晚、湖景房;前台请客人出示护照;房间在三楼305房;含早餐,早餐供应时间为早上七点到九点;客人问去老城的路,前台说出门左转直走十分钟即到。",
+      "questions": [
+        {
+          "stem": "How many nights did the guest book?",
+          "options": [
+            "One night.",
+            "Three nights.",
+            "Two nights.",
+            "A whole week."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What kind of room did the guest get?",
+          "options": [
+            "A room facing the road.",
+            "A small room with no window.",
+            "A room near the kitchen.",
+            "A room with a lake view."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the receptionist ask to see?",
+          "options": [
+            "The guest's passport.",
+            "The guest's plane ticket.",
+            "The guest's credit card.",
+            "The guest's map."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When is breakfast served?",
+          "options": [
+            "From six to eight in the morning.",
+            "From seven to nine in the morning.",
+            "All day long.",
+            "Only at noon."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How do you get to the old town?",
+          "options": [
+            "Take a taxi from the station.",
+            "Cross the lake by boat.",
+            "Turn left and walk straight for ten minutes.",
+            "Turn right and climb the hill."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U5 听力·独白 A Quiet Island to Visit",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_male",
+      "transcript": "On today's travel programme, we visit a small island that few tourists know about. To get there, you take a slow ferry that crosses the calm blue sea in about an hour. The island has no cars at all, so people walk or ride bikes everywhere. Its greatest treasure is its quiet beaches and the clear water around them. In the evening, with no city lights, the sky fills with thousands of stars. If you are looking for a remote place to relax and get back to nature, this peaceful island may be exactly what you need.",
+      "translation_cn": "今天的旅行节目带我们去一座鲜为人知的小岛;乘慢船约一小时穿过平静的蓝色海面即可到达;岛上完全没有汽车,人们靠步行或骑车出行;最大的财富是安静的海滩和周围清澈的海水;傍晚没有城市灯光,天空布满繁星;如果你想找个偏远之地放松、回归自然,这座宁静的小岛或许正合适。",
+      "questions": [
+        {
+          "stem": "How do visitors reach the island?",
+          "options": [
+            "By a fast plane.",
+            "By a long train.",
+            "By a private car.",
+            "By a slow ferry."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How long does the crossing take?",
+          "options": [
+            "About an hour.",
+            "About five minutes.",
+            "Half a day.",
+            "Two whole days."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How do people get around the island?",
+          "options": [
+            "By taxi and bus.",
+            "On foot or by bike.",
+            "By boat only.",
+            "By motorbike."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why is the night sky so full of stars?",
+          "options": [
+            "The island is very high up.",
+            "It never rains there.",
+            "There are no city lights.",
+            "The moon is always bright."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What kind of traveller would enjoy the island?",
+          "options": [
+            "Someone who loves big busy cities.",
+            "Someone looking for fancy shops.",
+            "Someone who hates the sea.",
+            "Someone wanting a quiet, remote place."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(家庭主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Every Sunday afternoon, Lin Tao and his grandfather play chess in the garden after lunch. Grandpa always lets him think carefully before each move, and he never laughs when Lin Tao makes a mistake. Over the years, these quiet afternoons have become Lin Tao's favourite family memory.",
+    "questions": [
+      {
+        "q": "What do Lin Tao and his grandfather usually do on Sunday afternoons?",
+        "options": [
+          "They enjoy a game of chess in the garden.",
+          "They go jogging around the park.",
+          "They cook a big family meal.",
+          "They watch a football match on TV."
+        ],
+        "answer": "A",
+        "explanation": "原文 'play chess in the garden after lunch' 的转述;其余活动文中未提。"
+      },
+      {
+        "q": "How does Grandpa treat Lin Tao when he makes a mistake?",
+        "options": [
+          "He gets angry and stops the game.",
+          "He stays patient and does not laugh at him.",
+          "He refuses to play with him again.",
+          "He asks Lin Tao to leave the garden."
+        ],
+        "answer": "B",
+        "explanation": "原文 'never laughs when Lin Tao makes a mistake' 与'lets him think carefully'的转述(覆盖短文中段)。"
+      }
+    ]
+  }
+}

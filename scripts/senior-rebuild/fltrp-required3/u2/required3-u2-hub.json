@@ -1,0 +1,48 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "listeningQuestions": [
+    { "audio": "Ryan raised enough money to build a well in Africa.", "opts": ["瑞安筹够了钱在非洲建一口井。", "瑞安买了一张去非洲的机票。", "瑞安在非洲找到了一份工作。", "瑞安在非洲丢了他的钱。"], "answer": 0 },
+    { "audio": "Many kind people donate money to charity every year.", "opts": ["许多好心人每年向慈善机构捐钱。", "许多人每年都去旅行。", "许多商店每年都关门。", "许多孩子每年都换学校。"], "answer": 0 },
+    { "audio": "The grateful children invited him to visit their school.", "opts": ["心怀感激的孩子们邀请他来参观学校。", "生气的孩子们让他离开。", "孩子们忘记了他的名字。", "孩子们卖掉了他们的书。"], "answer": 0 },
+    { "audio": "Volunteers give their free time to help other people.", "opts": ["志愿者付出空闲时间帮助他人。", "志愿者只在有报酬时工作。", "志愿者整天待在家里。", "志愿者向别人借钱。"], "answer": 0 },
+    { "audio": "Tu Youyou found a new treatment for malaria.", "opts": ["屠呦呦找到了治疗疟疾的新方法。", "屠呦呦建了一所新医院。", "屠呦呦写了一本小说。", "屠呦呦赢了一场比赛。"], "answer": 0 },
+    { "audio": "Even a small action can make a real difference.", "opts": ["即使微小的行动也能带来真正的改变。", "只有大人物才能帮助世界。", "金钱是帮助别人的唯一方式。", "帮助别人是在浪费时间。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "选出与'捐赠;捐献'意思相符的词", "opts": ["donate", "borrow", "waste", "refuse"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "选出与'短缺;不足'意思相符的词", "opts": ["shortage", "fountain", "treatment", "mission"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "选出与'慷慨的;大方的'意思相符的词", "opts": ["generous", "sensitive", "royal", "temporary"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "选出与'成就;成绩'意思相符的词", "opts": ["achievement", "disability", "ministry", "relief"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Ryan could hardly believe the words ____ by his teacher.", "opts": ["spoken", "speaking", "to speak", "speak"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The children drank from a newly ____ well.", "opts": ["built", "building", "to build", "build"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The money ____ by his foundation supports many villages.", "opts": ["raised", "raising", "to raise", "raise"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The ____ children were too afraid to look at the soldiers.", "opts": ["frightened", "frightening", "to frighten", "frighten"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文意思", "opts": ["她填好登记表去做志愿者。", "她付钱买了一张票。", "她写了一封感谢信。", "她打电话请了病假。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "She filled in a registration form to become a volunteer." },
+    { "q": "听句子选中文意思", "opts": ["这家慈善商店由志愿者经营。", "这家商店明天就关门。", "这家商店只卖食物。", "这家商店在火车站旁边。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The charity shop is run by volunteers." }
+  ],
+  "reading": {
+    "passage": "Sam visited his lonely neighbours every weekend and listened to their stories. Soon the whole street felt warmer, and he saw that one caring person can change a community.",
+    "passageCn": "萨姆每个周末都去看望孤独的邻居,听他们讲故事。不久整条街都变得更温暖,他明白了一个有爱心的人可以改变一个社区。",
+    "questions": [
+      { "q": "What did Sam do every weekend?", "opts": ["He visited his lonely neighbours.", "He sold old books.", "He stayed in bed all day.", "He travelled abroad."], "answer": 0 },
+      { "q": "What did Sam come to understand?", "opts": ["One caring person can change a community.", "Only money can help people.", "Old people cannot be helped.", "Weekends are for resting only."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write about a person who has made a difference. Mention one key action and one personal quality.",
+    "promptCn": "写一写一位'有所作为'的人,提到他/她的一件关键事迹和一种个人品质。",
+    "sampleWords": ["contribution", "achievement", "donate", "volunteer", "determined", "generous", "treatment", "foundation", "grateful", "inspire"]
+  },
+  "dialogues": [
+    {
+      "title": "Joining a Charity Run",
+      "lines": [
+        { "role": "A", "text": "I'm joining a charity run for the children's hospital. Would you like to come?", "cn": "我要参加一个为儿童医院举办的慈善跑,你想来吗?" },
+        { "role": "B", "text": "I'd love to! How does the run raise money?", "cn": "我很乐意!这个跑步怎么筹钱呢?" },
+        { "role": "A", "text": "Friends donate some money for every runner who finishes.", "cn": "亲友为每位完赛的人捐一些钱。" },
+        { "role": "B", "text": "Great idea. Let's train together this week.", "cn": "好主意,我们这周一起训练吧。" }
+      ]
+    }
+  ]
+}

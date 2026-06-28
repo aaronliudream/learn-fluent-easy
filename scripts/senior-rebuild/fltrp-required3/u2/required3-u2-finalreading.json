@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读('有所作为'主题,独立短文,不在阅读关出现)。短文 2-3 句 + 2 题,答案转述非照抄,两题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Last year, a quiet boy named Sam noticed that the old people on his street were often lonely. Every weekend he began to visit them, bringing small gifts and listening patiently to their stories. Soon the whole street felt warmer, and Sam learned that one caring person can truly change a community.",
+    "questions": [
+      {
+        "q": "What problem did Sam notice on his street?",
+        "options": [
+          "Many elderly neighbours were feeling lonely.",
+          "There was far too much traffic outside.",
+          "The old people had nothing to eat.",
+          "The children were doing badly at school."
+        ],
+        "answer": 0,
+        "explanation": "原文说街上的老人常感到孤独,此为转述;其余三项原文未提或与原文相反。"
+      },
+      {
+        "q": "What did Sam learn from helping his neighbours?",
+        "options": [
+          "Helping others always wastes a lot of time.",
+          "Even one kind person can improve a community.",
+          "Only money can make old people happy.",
+          "Lonely people can never be helped at all."
+        ],
+        "answer": 1,
+        "explanation": "末句'one caring person can truly change a community'的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

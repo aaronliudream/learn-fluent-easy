@@ -1,0 +1,36 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "grade": 10,
+  "content": {
+    "title": "构词法·派生 / 合成 / 转化 速查",
+    "intro": "英语靠三种方式不断造新词:派生(加前后缀)、合成(两词合一)、转化(同词作不同词性)。懂得规律,就能拆词猜义、读得更快。判断口诀:看词的两端有没有前后缀(派生)→ 看是不是两个词拼起来(合成)→ 看它是不是不变形换了词性(转化)。",
+    "table": {
+      "headers": ["构词方式", "做法 / 例子"],
+      "rows": [
+        ["派生·前缀", "un-/in-/im-/dis- 多表否定:correct→incorrect,happy→unhappy,possible→impossible"],
+        ["派生·后缀", "-less(没有)/-ful(充满):harmless / harmful;-ment/-ity/-ness 构成名词:improve→improvement;-ly 构成副词:quick→quickly"],
+        ["合成", "两个词合一,意思常可推出:home+work=homework,black+board=blackboard,sub+way=subway,sea+sick=seasick"],
+        ["转化", "同一拼写换词性,多为名/形→动:water(水→浇水)、name(名字→命名)、calm(平静的→使平静)、empty(空的→倒空)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "前缀一般改变词义(常表否定),不改变词性", "mark": "happy(形)→ unhappy(仍是形)" },
+      { "rule": "后缀常改变词性:-ment/-ness/-ity→名词,-ly→副词,-ful/-less/-ive→形容词", "mark": "improve(动)→ improvement(名)" },
+      { "rule": "-less 表'没有',-ful 表'充满',构成一对:harmless / harmful、useless / useful", "mark": "意义相反,别选反" },
+      { "rule": "转化后仍按句子需要选动词形式:to / 情态动词 / 祈使句后用原形", "mark": "Remember to water the flowers." }
+    ],
+    "why": [
+      "新词大多由简单词搭建而来:认出前后缀、拆出合成的两半、辨出换了词性的同一个词,就能不查词典也大致猜出意思。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:给词 improve / care,按空位填 improvement / careful 等正确派生形式。",
+      "完形与阅读:用前后缀判断生词的褒贬与词义(harmless 好 vs harmful 坏)。",
+      "读后续写/写作:用转化词让表达更地道(water the plants, text a friend, name the baby)。"
+    ],
+    "examVsReal": [
+      { "exam": "improve → improvement（考试填名词形式）", "real": "口语里也常直接说 I've got better.", "note": "考试看空位词性填派生词;真实表达更灵活" },
+      { "exam": "It is going to rain.（rain 用作动词）", "real": "也可说 There's going to be rain.（rain 用作名词）", "note": "同一个词既能作动词又能作名词,转化在生活中随处可见" }
+    ]
+  }
+}

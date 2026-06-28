@@ -1,0 +1,32 @@
+{
+  "volume": "required2",
+  "unit": "U5",
+  "note": "单元通关专属迷你阅读(旅行/在路上主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "On the last day of their road trip, the family reached a quiet beach where no cars were allowed. They left their vehicle by the gate and walked down a narrow path leading to the sea, watching the setting sun paint the sky red. It was a tiring day, but everyone agreed it had been the most beautiful stop of the whole journey.",
+    "questions": [
+      {
+        "q": "How did the family get down to the sea?",
+        "options": [
+          "They walked along a narrow path on foot.",
+          "They drove their vehicle onto the beach.",
+          "They took a small boat across the water.",
+          "They rode bikes down the steep hill."
+        ],
+        "answer": "A",
+        "explanation": "原文说他们把车停在门口、沿小路步行下海('walked down a narrow path leading to the sea')的转述;车不允许进入。"
+      },
+      {
+        "q": "How did the family feel about this stop?",
+        "options": [
+          "They thought it was the finest part of the trip.",
+          "They were sorry they had ever come.",
+          "They found it dull and wanted to leave.",
+          "They were too tired to enjoy anything."
+        ],
+        "answer": "A",
+        "explanation": "末句说大家一致认为这是整段旅程最美的一站(短文后半,覆盖不同位置)。"
+      }
+    ]
+  }
+}

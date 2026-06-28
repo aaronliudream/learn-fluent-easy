@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "grammar_title": "-ed 分词作状语(原因 / 时间 / 条件;-ed 与 -ing 的逻辑主语区分)",
+  "source": "外研社(新标准)必修第三册 Unit 1 Using language:-ed 分词作状语。逻辑主语为动作的承受者(被动)时用过去分词 -ed;干扰项为主动的 -ing、to do、谓语原形,使被动的 -ed 唯一成立。句子地道、人际关系/情感主题、零术语、应用型填空。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "-ed 分词表原因(主语被…而产生情感)",
+      "overview": "当状语说明主句动作的原因、且主句主语是该动作的承受者(被动)时,用过去分词 -ed,相当于 Because the subject was done…。如 Disappointed by his behaviour, I told my friend everything."
+    },
+    {
+      "code": "u1.02",
+      "point": "-ed 分词表时间 / 条件",
+      "overview": "当状语表示时间(when…)或条件(if…)、且主句主语是该动作的承受者时,用过去分词 -ed。如 Seen from afar, the statue looks alive. / Given more time, we could solve it."
+    },
+    {
+      "code": "u1.03",
+      "point": "-ed 与 -ing 作状语的区分(看逻辑主语主动还是被动)",
+      "overview": "状语的逻辑主语=主句主语;主语是动作的承受者(被动)用 -ed,是动作的发出者(主动)用 -ing。本组主语均为承受者,故被动的 -ed 唯一成立,而主动的 -ing 是干扰项。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "____ by his behaviour, I told my best friend everything.",
+      "options": [
+        "Disappointed",
+        "Disappointing",
+        "To disappoint",
+        "Disappoint"
+      ],
+      "answer_index": 0,
+      "explanation": "主句主语 I 是'被…令失望'的承受者,用过去分词 -ed 表原因(= Because I was disappointed)。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ about her sick friend, Anna could not focus on her homework.",
+      "options": [
+        "Worrying",
+        "Worried",
+        "To worry",
+        "Worry"
+      ],
+      "answer_index": 1,
+      "explanation": "Anna 是被担忧之事所困的承受者,被动逻辑用 -ed 表原因。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by the silly mistake, he did not know where to look.",
+      "options": [
+        "Embarrassing",
+        "To embarrass",
+        "Embarrassed",
+        "Embarrass"
+      ],
+      "answer_index": 2,
+      "explanation": "he 被那个错误弄得难堪,主语是承受者,用 -ed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by the loud noise next door, she found it hard to stay calm.",
+      "options": [
+        "Annoying",
+        "To annoy",
+        "Annoy",
+        "Annoyed"
+      ],
+      "answer_index": 3,
+      "explanation": "she 是被噪音惹恼的一方,被动用 -ed 表原因。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by the angry shout, the little boy started to cry.",
+      "options": [
+        "Frightened",
+        "Frightening",
+        "To frighten",
+        "Frighten"
+      ],
+      "answer_index": 0,
+      "explanation": "the little boy 被喊声吓到,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by the unkind comment, Mary stayed silent for a while.",
+      "options": [
+        "Shocking",
+        "Shocked",
+        "To shock",
+        "Shock"
+      ],
+      "answer_index": 1,
+      "explanation": "Mary 被那句刻薄话震到,被动逻辑用 -ed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by her warm welcome, the new student felt at home at once.",
+      "options": [
+        "Surprising",
+        "To surprise",
+        "Surprised",
+        "Surprise"
+      ],
+      "answer_index": 2,
+      "explanation": "the new student 是被热情欢迎打动的承受者,用 -ed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ with his apology, she decided to forgive him.",
+      "options": [
+        "Pleasing",
+        "To please",
+        "Please",
+        "Pleased"
+      ],
+      "answer_index": 3,
+      "explanation": "she 被道歉所取悦,主语为承受者,用 -ed 表原因。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ with the result, the coach praised the whole team.",
+      "options": [
+        "Satisfied",
+        "Satisfying",
+        "To satisfy",
+        "Satisfy"
+      ],
+      "answer_index": 0,
+      "explanation": "the coach 被结果满足,被动逻辑用 -ed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by the long argument, both friends just wanted to stop.",
+      "options": [
+        "Tiring",
+        "Tired",
+        "To tire",
+        "Tire"
+      ],
+      "answer_index": 1,
+      "explanation": "both friends 被争吵弄得疲惫,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by the mixed signals, he did not know what she really meant.",
+      "options": [
+        "Confusing",
+        "To confuse",
+        "Confused",
+        "Confuse"
+      ],
+      "answer_index": 2,
+      "explanation": "he 被含糊的信号弄糊涂,被动用 -ed 表原因。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by the bad news, he could not sleep that night.",
+      "options": [
+        "Troubling",
+        "To trouble",
+        "Trouble",
+        "Troubled"
+      ],
+      "answer_index": 3,
+      "explanation": "he 被坏消息所扰,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by the sudden change, the children moved closer together.",
+      "options": [
+        "Scared",
+        "Scaring",
+        "To scare",
+        "Scare"
+      ],
+      "answer_index": 0,
+      "explanation": "the children 被突变吓到,被动逻辑用 -ed 表原因。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by her kindness, the whole class fell silent.",
+      "options": [
+        "Amazing",
+        "Amazed",
+        "To amaze",
+        "Amaze"
+      ],
+      "answer_index": 1,
+      "explanation": "the whole class 被她的善意惊到,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by the old man's story, many readers were close to tears.",
+      "options": [
+        "Touching",
+        "To touch",
+        "Touched",
+        "Touch"
+      ],
+      "answer_index": 2,
+      "explanation": "many readers 被故事打动,被动逻辑用 -ed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by his first failure, he almost gave up making friends.",
+      "options": [
+        "Discouraging",
+        "To discourage",
+        "Discourage",
+        "Discouraged"
+      ],
+      "answer_index": 3,
+      "explanation": "he 被失败挫伤信心,主语为承受者,用 -ed 表原因。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by his teacher's words, Tom decided to say sorry first.",
+      "options": [
+        "Inspired",
+        "Inspiring",
+        "To inspire",
+        "Inspire"
+      ],
+      "answer_index": 0,
+      "explanation": "Tom 被老师的话激励,被动逻辑用 -ed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by the endless quarrel, she chose to walk away.",
+      "options": [
+        "Exhausting",
+        "Exhausted",
+        "To exhaust",
+        "Exhaust"
+      ],
+      "answer_index": 1,
+      "explanation": "she 被无休止的争吵弄得筋疲力尽,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by her warm words, the crying child slowly calmed down.",
+      "options": [
+        "Comforting",
+        "To comfort",
+        "Comforted",
+        "Comfort"
+      ],
+      "answer_index": 2,
+      "explanation": "the crying child 被温暖的话安慰,被动逻辑用 -ed 表原因。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "____ by the misunderstanding, he wrote a long letter to explain.",
+      "options": [
+        "Frustrating",
+        "To frustrate",
+        "Frustrate",
+        "Frustrated"
+      ],
+      "answer_index": 3,
+      "explanation": "he 被误会弄得沮丧,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ this way by a close friend, you are sure to feel hurt.",
+      "options": [
+        "Treated",
+        "Treating",
+        "To treat",
+        "Treat"
+      ],
+      "answer_index": 0,
+      "explanation": "条件状语:主语 you 是'被这样对待'的承受者,用过去分词 -ed(= If you are treated this way)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ in this way, the problem will soon be solved.",
+      "options": [
+        "Approaching",
+        "Approached",
+        "To approach",
+        "Approach"
+      ],
+      "answer_index": 1,
+      "explanation": "条件状语:the problem 被这样处理,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ from a distance, the two friends look very much alike.",
+      "options": [
+        "Seeing",
+        "To see",
+        "Seen",
+        "See"
+      ],
+      "answer_index": 2,
+      "explanation": "时间状语:the two friends 是被看的对象,被动逻辑用 -ed(= When they are seen)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ a second chance, most people will try to do better.",
+      "options": [
+        "Giving",
+        "To give",
+        "Give",
+        "Given"
+      ],
+      "answer_index": 3,
+      "explanation": "条件状语:most people 被给予机会,主语为承受者,用 -ed(= If they are given)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ about the quarrel, he simply smiled and said nothing.",
+      "options": [
+        "Asked",
+        "Asking",
+        "To ask",
+        "Ask"
+      ],
+      "answer_index": 0,
+      "explanation": "时间状语:he 被问到,被动逻辑用 -ed(= When he was asked)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ the whole truth, she felt a great sense of relief.",
+      "options": [
+        "Telling",
+        "Told",
+        "To tell",
+        "Tell"
+      ],
+      "answer_index": 1,
+      "explanation": "时间状语:she 被告知真相,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ alone for too long, anyone may begin to feel lonely.",
+      "options": [
+        "Leaving",
+        "To leave",
+        "Left",
+        "Leave"
+      ],
+      "answer_index": 2,
+      "explanation": "条件状语:anyone 被独自留下,被动逻辑用 -ed(= If one is left)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ too quickly, a kind person may seem cold and distant.",
+      "options": [
+        "Judging",
+        "To judge",
+        "Judge",
+        "Judged"
+      ],
+      "answer_index": 3,
+      "explanation": "条件状语:a kind person 被仓促评判,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ with his old friends, his new classmates seem much quieter.",
+      "options": [
+        "Compared",
+        "Comparing",
+        "To compare",
+        "Compare"
+      ],
+      "answer_index": 0,
+      "explanation": "时间/方式状语:his new classmates 是被比较的对象,被动逻辑用 -ed(compared with 固定用法)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ a sincere apology, she chose to forgive him at once.",
+      "options": [
+        "Offering",
+        "Offered",
+        "To offer",
+        "Offer"
+      ],
+      "answer_index": 1,
+      "explanation": "时间状语:she 被给予一个真诚的道歉,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ in front of others, even a calm person can feel angry.",
+      "options": [
+        "Criticising",
+        "To criticise",
+        "Criticised",
+        "Criticise"
+      ],
+      "answer_index": 2,
+      "explanation": "条件状语:a calm person 被当众批评,被动逻辑用 -ed(= If criticised)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ by his friend at last, he felt a heavy weight lift.",
+      "options": [
+        "Forgiving",
+        "To forgive",
+        "Forgive",
+        "Forgiven"
+      ],
+      "answer_index": 3,
+      "explanation": "时间状语:he 被原谅,主语为承受者,用 -ed(= When he was forgiven)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ by her parents, the shy girl slowly opened up to others.",
+      "options": [
+        "Encouraged",
+        "Encouraging",
+        "To encourage",
+        "Encourage"
+      ],
+      "answer_index": 0,
+      "explanation": "时间状语:the shy girl 被父母鼓励,被动逻辑用 -ed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ in time, we could have avoided the silly argument.",
+      "options": [
+        "Warning",
+        "Warned",
+        "To warn",
+        "Warn"
+      ],
+      "answer_index": 1,
+      "explanation": "条件状语:we 被及时提醒,主语为承受者,用 -ed(= If we had been warned)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ by those around him, a person feels safe to be honest.",
+      "options": [
+        "Respecting",
+        "To respect",
+        "Respected",
+        "Respect"
+      ],
+      "answer_index": 2,
+      "explanation": "条件状语:a person 被周围的人尊重,被动逻辑用 -ed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ by his teammates again, he promised never to gossip.",
+      "options": [
+        "Trusting",
+        "To trust",
+        "Trust",
+        "Trusted"
+      ],
+      "answer_index": 3,
+      "explanation": "时间状语:he 被队友重新信任,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ for something he did not do, he stayed surprisingly calm.",
+      "options": [
+        "Blamed",
+        "Blaming",
+        "To blame",
+        "Blame"
+      ],
+      "answer_index": 0,
+      "explanation": "时间状语:he 被指责,被动逻辑用 -ed(= When he was blamed)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ to the party by a kind classmate, the new boy felt welcome.",
+      "options": [
+        "Inviting",
+        "Invited",
+        "To invite",
+        "Invite"
+      ],
+      "answer_index": 1,
+      "explanation": "时间状语:the new boy 被邀请,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ by good friends, we can get through almost any trouble.",
+      "options": [
+        "Supporting",
+        "To support",
+        "Supported",
+        "Support"
+      ],
+      "answer_index": 2,
+      "explanation": "条件状语:we 被好友支持,被动逻辑用 -ed(= If we are supported)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ by the people closest to us, we feel much less alone.",
+      "options": [
+        "Understanding",
+        "To understand",
+        "Understand",
+        "Understood"
+      ],
+      "answer_index": 3,
+      "explanation": "时间状语:we 被最亲近的人理解,主语为承受者,用 -ed。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ by her own words, Lily wished she could disappear.",
+      "options": [
+        "Embarrassed",
+        "Embarrassing",
+        "To embarrass",
+        "Embarrass"
+      ],
+      "answer_index": 0,
+      "explanation": "逻辑主语 Lily 是被难堪的一方(被动),用 -ed;主动的 -ing 表'令人难堪',与此处主语不符。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ about the school trip, the children could hardly sit still.",
+      "options": [
+        "Exciting",
+        "Excited",
+        "To excite",
+        "Excite"
+      ],
+      "answer_index": 1,
+      "explanation": "the children 是被激动的一方(被动)用 -ed;-ing 表'令人兴奋'指事物,不指人。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ in psychology, she read every book on emotions she could find.",
+      "options": [
+        "Interesting",
+        "To interest",
+        "Interested",
+        "Interest"
+      ],
+      "answer_index": 2,
+      "explanation": "she 对…感兴趣(被动感受)用 -ed;-ing 表'有趣的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ of the endless gossip, he decided to change the subject.",
+      "options": [
+        "Tiring",
+        "To tire",
+        "Tire",
+        "Tired"
+      ],
+      "answer_index": 3,
+      "explanation": "be tired of 厌倦,he 是承受者,用 -ed;-ing 表'令人疲惫的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ to her friends, she always keeps their secrets safe.",
+      "options": [
+        "Devoted",
+        "Devoting",
+        "To devote",
+        "Devote"
+      ],
+      "answer_index": 0,
+      "explanation": "be devoted to 忠诚于,she 处于被动状态用 -ed;主动 -ing 在此不成立。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ about being late, Tom ran all the way to meet his friend.",
+      "options": [
+        "Worrying",
+        "Worried",
+        "To worry",
+        "Worry"
+      ],
+      "answer_index": 1,
+      "explanation": "Tom 是被担心情绪占据的一方(被动)用 -ed;-ing 表'令人担忧的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ with the kind reply, she smiled and said thank you.",
+      "options": [
+        "Pleasing",
+        "To please",
+        "Pleased",
+        "Please"
+      ],
+      "answer_index": 2,
+      "explanation": "she 被取悦(被动)用 -ed;主动的 -ing 表'讨人喜欢的',与主语不符。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ at the rude message, Ben read it again to be sure.",
+      "options": [
+        "Shocking",
+        "To shock",
+        "Shock",
+        "Shocked"
+      ],
+      "answer_index": 3,
+      "explanation": "Ben 是被震惊的一方(被动)用 -ed;-ing 表'令人震惊的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ of saying the wrong thing, the new student stayed quiet.",
+      "options": [
+        "Frightened",
+        "Frightening",
+        "To frighten",
+        "Frighten"
+      ],
+      "answer_index": 0,
+      "explanation": "be frightened of 害怕,the new student 是承受者用 -ed;主动 -ing 不成立。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ by the long speech, several students began to look away.",
+      "options": [
+        "Boring",
+        "Bored",
+        "To bore",
+        "Bore"
+      ],
+      "answer_index": 1,
+      "explanation": "several students 是被弄得无聊的一方(被动)用 -ed;-ing 表'无聊的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ by the constant complaints, she finally spoke up.",
+      "options": [
+        "Annoying",
+        "To annoy",
+        "Annoyed",
+        "Annoy"
+      ],
+      "answer_index": 2,
+      "explanation": "she 是被惹恼的一方(被动)用 -ed;主动的 -ing 表'烦人的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ at how kind strangers can be, he wrote about it in his diary.",
+      "options": [
+        "Amazing",
+        "To amaze",
+        "Amaze",
+        "Amazed"
+      ],
+      "answer_index": 3,
+      "explanation": "he 是被惊叹打动的一方(被动)用 -ed;-ing 表'令人惊叹的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ by his mixed signals, Mary asked him to explain clearly.",
+      "options": [
+        "Confused",
+        "Confusing",
+        "To confuse",
+        "Confuse"
+      ],
+      "answer_index": 0,
+      "explanation": "Mary 是被弄糊涂的一方(被动)用 -ed;-ing 表'令人困惑的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ with his honest answer, the teacher nodded and smiled.",
+      "options": [
+        "Satisfying",
+        "Satisfied",
+        "To satisfy",
+        "Satisfy"
+      ],
+      "answer_index": 1,
+      "explanation": "the teacher 被满足(被动)用 -ed;主动的 -ing 表'令人满意的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ in himself, he promised to think before speaking next time.",
+      "options": [
+        "Disappointing",
+        "To disappoint",
+        "Disappointed",
+        "Disappoint"
+      ],
+      "answer_index": 2,
+      "explanation": "he 对自己失望(被动感受)用 -ed;-ing 表'令人失望的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ by the angry voices, the small dog hid under the table.",
+      "options": [
+        "Scaring",
+        "To scare",
+        "Scare",
+        "Scared"
+      ],
+      "answer_index": 3,
+      "explanation": "the small dog 是被吓到的一方(被动)用 -ed;-ing 表'吓人的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ by the sudden apology, she did not know what to say.",
+      "options": [
+        "Surprised",
+        "Surprising",
+        "To surprise",
+        "Surprise"
+      ],
+      "answer_index": 0,
+      "explanation": "she 是被惊到的一方(被动)用 -ed;主动的 -ing 表'令人惊讶的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ by her friend's support, she felt warm inside.",
+      "options": [
+        "Touching",
+        "Touched",
+        "To touch",
+        "Touch"
+      ],
+      "answer_index": 1,
+      "explanation": "she 被打动(被动)用 -ed;-ing 表'动人的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ after the long argument, both of them wanted some quiet.",
+      "options": [
+        "Exhausting",
+        "To exhaust",
+        "Exhausted",
+        "Exhaust"
+      ],
+      "answer_index": 2,
+      "explanation": "both of them 是被累垮的一方(被动)用 -ed;-ing 表'令人疲惫的'指事物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ by the old fable, the class talked about keeping a good distance.",
+      "options": [
+        "Inspiring",
+        "To inspire",
+        "Inspire",
+        "Inspired"
+      ],
+      "answer_index": 3,
+      "explanation": "the class 被寓言启发(被动)用 -ed;主动的 -ing 表'鼓舞人心的'指事物。"
+    }
+  ]
+}

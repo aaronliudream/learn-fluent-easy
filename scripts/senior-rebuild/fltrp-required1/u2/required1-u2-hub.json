@@ -1,0 +1,49 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "note": "外研社必修一 U2 Exploring English hub 内联(听力6 + 测验10[4词汇+4语法+2听力] + 阅读 + 写作 + 对话)。",
+  "listeningQuestions": [
+    { "audio": "There is no ham in a hamburger.", "opts": ["汉堡包里并没有火腿。", "汉堡包里有很多火腿。", "他买了一个汉堡包。", "火腿是一种水果。"], "answer": 0 },
+    { "audio": "Americans put gas in their cars, but the British say petrol.", "opts": ["美国人说 gas,英国人说 petrol,都指汽油。", "美国人和英国人都说 petrol。", "美国人不开车。", "petrol 是一种食物。"], "answer": 0 },
+    { "audio": "If you add 'un-' to 'happy', it means the opposite.", "opts": ["给 happy 加 un- 就表示相反的意思。", "给 happy 加 un- 没有变化。", "happy 不能加前缀。", "un- 让词变成名词。"], "answer": 0 },
+    { "audio": "'BRB' is a short form of 'be right back'.", "opts": ["BRB 是 be right back 的缩写。", "BRB 是一个网站的名字。", "BRB 表示'再见'。", "BRB 是一种食物。"], "answer": 0 },
+    { "audio": "She had a frog in her throat and could hardly speak.", "opts": ["她嗓子不舒服,几乎说不出话。", "她真的吞下了一只青蛙。", "她养了一只宠物青蛙。", "她唱歌很好听。"], "answer": 0 },
+    { "audio": "Remember to water the flowers every morning.", "opts": ["记得每天早上给花浇水。", "记得每天早上摘花。", "记得每天早上买花。", "花儿不需要浇水。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "If a piece of information is not correct, we say it is ____.", "opts": ["incorrect", "correctly", "correction", "corrects"], "answer": 0, "point": "派生:否定前缀 in-", "dim": "grammar" },
+    { "q": "Travelling by ship for the first time, she felt ____.", "opts": ["seasick", "homesick", "carsick", "airsick"], "answer": 0, "point": "合成:sea+sick", "dim": "grammar" },
+    { "q": "Remember to ____ the flowers in the garden.", "opts": ["paint", "water", "lock", "name"], "answer": 1, "point": "转化:名词作动词", "dim": "grammar" },
+    { "q": "An action that does no harm is completely ____.", "opts": ["harmful", "harmless", "harming", "harmed"], "answer": 1, "point": "派生:后缀 -less", "dim": "grammar" },
+    { "q": "You can often guess a word's meaning from the ____.", "opts": ["price", "weather", "context", "garden"], "answer": 2, "point": "词汇:context 语境", "dim": "vocab" },
+    { "q": "WTO is short for the World Trade ____.", "opts": ["Section", "Entrance", "Resource", "Organisation"], "answer": 3, "point": "词汇:organisation 组织", "dim": "vocab" },
+    { "q": "In American English, 'first floor' ____ means the ground level.", "opts": ["actually", "hardly", "rather", "nearly"], "answer": 0, "point": "词汇:actually 实际上", "dim": "vocab" },
+    { "q": "Online forums can be a very useful learning ____.", "opts": ["error", "comment", "resource", "boot"], "answer": 2, "point": "词汇:resource 资源", "dim": "vocab" },
+    { "q": "选出与录音意思相符的一项:", "opts": ["美国人坐地铁叫 subway,英国人叫 underground。", "美国人和英国人都叫 subway。", "subway 是一种公路。", "英国没有地铁。"], "answer": 0, "point": "听力:英美用词", "dim": "listening", "audio": "Americans ride the subway, but the British travel on the underground." },
+    { "q": "选出与录音意思相符的一项:", "opts": ["selfie 是用手机给自己拍的照片。", "selfie 是一种新手机。", "selfie 是一个网站。", "selfie 指自拍杆。"], "answer": 0, "point": "听力:网络新词", "dim": "listening", "audio": "A selfie is a photo that you take of yourself with a phone." }
+  ],
+  "reading": {
+    "passage": "English makes new words in clever ways. We join 'home' and 'work' to get 'homework', and we add 'un-' to 'happy' to mean the opposite. Knowing these patterns helps us guess what new words mean.",
+    "passageCn": "英语用巧妙的方式造新词。我们把 home 和 work 合成 homework,给 happy 加 un- 表示相反。懂得这些规律有助于我们猜出新词的意思。",
+    "questions": [
+      { "q": "How is the word 'homework' made?", "opts": ["By joining 'home' and 'work'.", "By adding a prefix.", "By shortening a word.", "By changing its spelling."], "answer": 0 },
+      { "q": "Why is it useful to know these patterns?", "opts": ["They help us guess new words' meanings.", "They make reading impossible.", "They change every word's sound.", "They replace the alphabet."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write about one funny misunderstanding you have had (or could have) with an English word or expression.",
+    "promptCn": "写一写你(可能)因为某个英语词或表达而闹过的一个有趣误会。",
+    "sampleWords": ["misunderstanding", "surprised", "actually", "turned out", "explain", "context", "strange", "laugh", "delicious", "recognise"]
+  },
+  "dialogues": [
+    {
+      "title": "Lift or Elevator?",
+      "lines": [
+        { "role": "A", "text": "Excuse me, where is the lift?", "cn": "打扰一下,电梯在哪里?" },
+        { "role": "B", "text": "The lift? Oh, you mean the elevator. It's behind the shoe section.", "cn": "电梯?哦,你是说 elevator。它在鞋区后面。" },
+        { "role": "A", "text": "Yes! In Britain we usually call it the lift.", "cn": "对!在英国我们通常叫它 lift。" },
+        { "role": "B", "text": "Same thing, different word. English is fun, isn't it?", "cn": "同一样东西,不同的词。英语很有趣,对吧?" }
+      ]
+    }
+  ]
+}

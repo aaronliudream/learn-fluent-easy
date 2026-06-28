@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "topic": "Friends Forever",
+  "source": "外研社版必修第一册 Unit 4 同主题完形(新学校遇到好同学/异地保持联系/好朋友的品质/网络交友要小心/吵架后和好/给朋友的惊喜)。用词限 U4/初中/常见词,答案唯一,4选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A New Friend on My First Day",
+      "text": "When I walked into my new (1)____ on the first day, I felt nervous and completely alone. I knew no one, and everyone else already seemed to have a (2)____. Then a girl who (3)____ beside me turned and gave me a warm smile. She was the first person (4)____ really spoke to me that day. She kindly (5)____ me where everything was and introduced me to her own group. Bit by bit, my fear began to (6)____ away. By lunchtime I no longer felt like a (7)____. One small act of (8)____ had changed my whole day. Now she is one of my (9)____ friends, and I always try to be warm to anyone who looks (10)____, just as she once was to me.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "classroom",
+            "kitchen",
+            "hospital",
+            "station"
+          ],
+          "answer_index": 0,
+          "explanation": "走进新班级 classroom。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "problem",
+            "friend",
+            "holiday",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "别人似乎都有 friend。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "ate",
+            "slept",
+            "sat",
+            "sang"
+          ],
+          "answer_index": 2,
+          "explanation": "坐在我旁边 sat。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "which",
+            "whose",
+            "whom",
+            "who"
+          ],
+          "answer_index": 3,
+          "explanation": "先行词 person 指人作主语 → who。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "showed",
+            "threw",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "告诉我哪里是什么 showed。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "return",
+            "fade",
+            "increase",
+            "appear"
+          ],
+          "answer_index": 1,
+          "explanation": "恐惧慢慢消退 fade away。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "teacher",
+            "winner",
+            "stranger",
+            "doctor"
+          ],
+          "answer_index": 2,
+          "explanation": "不再像个陌生人 stranger。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "anger",
+            "traffic",
+            "weather",
+            "kindness"
+          ],
+          "answer_index": 3,
+          "explanation": "一个善举 act of kindness。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "closest",
+            "tallest",
+            "fastest",
+            "richest"
+          ],
+          "answer_index": 0,
+          "explanation": "最亲密的朋友之一 closest。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "rich",
+            "lost",
+            "busy",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "看起来无助/迷茫 lost。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Staying in Touch",
+      "text": "My best friend Mia (1)____ to another city last summer, and I was afraid we would slowly (2)____ touch. At first I felt sad every time I passed the (3)____ where we used to play together. But the Internet has made (4)____ much less of a problem. Every evening we send each other (5)____ about our day, and on weekends we have a long video (6)____. Last month she even (7)____ me a small gift by post for my birthday. The friendship (8)____ we built years ago is still going strong. I have learnt that true friends can stay (9)____ even when they live far apart, as long as both of them keep making the (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "walked",
+            "drove",
+            "moved",
+            "ran"
+          ],
+          "answer_index": 2,
+          "explanation": "搬到另一座城市 moved。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "find",
+            "gain",
+            "win",
+            "lose"
+          ],
+          "answer_index": 3,
+          "explanation": "失去联系 lose touch。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "park",
+            "fridge",
+            "phone",
+            "exam"
+          ],
+          "answer_index": 0,
+          "explanation": "我们以前一起玩的公园 park。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "money",
+            "distance",
+            "homework",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "让距离不再是问题 distance。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "tickets",
+            "prices",
+            "messages",
+            "rocks"
+          ],
+          "answer_index": 2,
+          "explanation": "互发消息 messages。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "meal",
+            "race",
+            "song",
+            "call"
+          ],
+          "answer_index": 3,
+          "explanation": "视频通话 video call。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sent",
+            "ate",
+            "drove",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "寄给我礼物 sent。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "who",
+            "that",
+            "whose",
+            "whom"
+          ],
+          "answer_index": 1,
+          "explanation": "先行词 friendship 指物、从句缺宾语 → that。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "angry",
+            "silent",
+            "close",
+            "busy"
+          ],
+          "answer_index": 2,
+          "explanation": "保持亲密 close。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "mistake",
+            "noise",
+            "mess",
+            "effort"
+          ],
+          "answer_index": 3,
+          "explanation": "付出努力 making the effort。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "What Makes a Good Friend",
+      "text": "Everyone has a different (1)____ of what makes a good friend. For me, the most important (2)____ is honesty. A real friend always tells you the (3)____, even when it is hard to hear. Good friends also share your (4)____ when you are happy and offer comfort when you are sad. They are patient, and they never make you feel (5)____ of who you are. Of course, no friendship is perfect, and even close friends sometimes (6)____. What really matters is that they say sorry and (7)____ things up again afterwards. A friend (8)____ stands by you in hard times is worth far more than many friends (9)____ only appear when life is easy. That, I believe, is the kind of friend everyone (10)____ have.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "idea",
+            "price",
+            "road",
+            "box"
+          ],
+          "answer_index": 0,
+          "explanation": "对……的看法 idea。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "machine",
+            "quality",
+            "ticket",
+            "building"
+          ],
+          "answer_index": 1,
+          "explanation": "最重要的品质 quality。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "money",
+            "weather",
+            "truth",
+            "distance"
+          ],
+          "answer_index": 2,
+          "explanation": "说出真相 the truth。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "anger",
+            "fear",
+            "debt",
+            "joy"
+          ],
+          "answer_index": 3,
+          "explanation": "分享你的快乐 joy。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "ashamed",
+            "proud",
+            "sure",
+            "glad"
+          ],
+          "answer_index": 0,
+          "explanation": "绝不让你为自己难为情 ashamed。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "win",
+            "quarrel",
+            "smile",
+            "agree"
+          ],
+          "answer_index": 1,
+          "explanation": "好友偶尔也会吵架 quarrel。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "break",
+            "throw",
+            "make",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "和好 make things up。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "which",
+            "whose",
+            "whom",
+            "who"
+          ],
+          "answer_index": 3,
+          "explanation": "先行词 friend 指人作主语 → who。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "who",
+            "which",
+            "whose",
+            "when"
+          ],
+          "answer_index": 0,
+          "explanation": "先行词 friends 指人作主语 → who。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "was",
+            "should",
+            "does",
+            "is"
+          ],
+          "answer_index": 1,
+          "explanation": "每个人都应该拥有 should have。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Be Careful Online",
+      "text": "The Internet is a wonderful (1)____ for making new friends, but we must also be careful. When you chat with a (2)____ online, you cannot always be sure who they really are. People often (3)____ only their best photos and happiest news, so the picture you see may not be the whole (4)____. As one saying goes, on the Internet nobody knows the real (5)____ behind the screen. A person who seems young could actually be (6)____; someone who sounds kind could even be a (7)____. This does not mean we should blindly (8)____ every online friend, but we should always protect ourselves. Never share your home (9)____ or other private information with people you have just met. If you stay (10)____, the Internet can still be a great place to meet friends who share your interests.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "animal",
+            "season",
+            "tool",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "交友的好工具 tool。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "teacher",
+            "brother",
+            "doctor",
+            "stranger"
+          ],
+          "answer_index": 3,
+          "explanation": "和陌生人聊天 stranger。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "post",
+            "eat",
+            "drive",
+            "sleep"
+          ],
+          "answer_index": 0,
+          "explanation": "发布最好的照片 post。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "music",
+            "truth",
+            "distance",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "未必是全部真相 the whole truth。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "road",
+            "person",
+            "gram"
+          ],
+          "answer_index": 2,
+          "explanation": "屏幕后真实的人 person。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "tall",
+            "rich",
+            "busy",
+            "old"
+          ],
+          "answer_index": 3,
+          "explanation": "看似年轻其实可能很老 old。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "criminal",
+            "teacher",
+            "friend",
+            "partner"
+          ],
+          "answer_index": 0,
+          "explanation": "甚至可能是罪犯 criminal。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "help",
+            "trust",
+            "meet",
+            "thank"
+          ],
+          "answer_index": 1,
+          "explanation": "不应盲目信任 trust。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "song",
+            "smile",
+            "address",
+            "joke"
+          ],
+          "answer_index": 2,
+          "explanation": "家庭住址 home address。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "angry",
+            "late",
+            "hungry",
+            "careful"
+          ],
+          "answer_index": 3,
+          "explanation": "保持小心 careful。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Making Up After a Quarrel",
+      "text": "Last week my best friend Tom and I had a silly (1)____ over a football game. We both said things (2)____ we did not really mean, and afterwards neither of us wanted to speak (3)____. For two whole days the silence between us made me feel terrible. I kept remembering all the good (4)____ we had shared and realised that our friendship was far more important than being (5)____. So I decided to take the first step. I wrote him a short (6)____ and said I was sorry. To my relief, Tom replied at once and admitted that he was (7)____ to blame too. We met in the park, talked everything (8)____, and shook hands. Now we are closer than ever. I have learnt that real friends do not (9)____ on always being right; they value the friendship more. Saying sorry first is not weak — it is one of the (10)____ things a friend can do.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "quarrel",
+            "party",
+            "lesson",
+            "meal"
+          ],
+          "answer_index": 0,
+          "explanation": "一场愚蠢的争吵 quarrel。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "who",
+            "that",
+            "whose",
+            "whom"
+          ],
+          "answer_index": 1,
+          "explanation": "先行词 things 指物、从句缺宾语 → that。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "loudly",
+            "never",
+            "first",
+            "twice"
+          ],
+          "answer_index": 2,
+          "explanation": "谁都不愿先开口 speak first。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "rooms",
+            "rocks",
+            "times"
+          ],
+          "answer_index": 3,
+          "explanation": "共度的美好时光 good times。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "right",
+            "late",
+            "rich",
+            "tall"
+          ],
+          "answer_index": 0,
+          "explanation": "比争个对错更重要 being right。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ticket",
+            "message",
+            "song",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "写了一条短信息 message。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "never",
+            "hardly",
+            "partly",
+            "rarely"
+          ],
+          "answer_index": 2,
+          "explanation": "他也有部分责任 partly to blame。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "away",
+            "off",
+            "down",
+            "over"
+          ],
+          "answer_index": 3,
+          "explanation": "把事情谈开 talk over。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "insist",
+            "depend",
+            "rely",
+            "focus"
+          ],
+          "answer_index": 0,
+          "explanation": "不坚持非要占理 insist on。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "slowest",
+            "bravest",
+            "heaviest",
+            "coldest"
+          ],
+          "answer_index": 1,
+          "explanation": "最勇敢的事之一 bravest。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Surprise for a Friend",
+      "text": "My friend Lily had been feeling (1)____ because she missed her old hometown. I wanted to do something to cheer her (2)____, so I decided to plan a small surprise. I quietly asked a few classmates (3)____ also knew her to help me. Together we made a colourful (4)____ full of kind messages and old photos. We chose a quiet (5)____ in the school garden and asked Lily to come after class. When she arrived and saw what we had (6)____, her eyes filled with happy tears. She said it was the nicest (7)____ anyone had ever given her. That afternoon we shared cakes, told (8)____, and laughed until the sun went down. The surprise (9)____ Lily that she was not alone in her new school. Sometimes a little (10)____ from friends is all a person needs to feel at home again.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "tall",
+            "rich",
+            "down",
+            "busy"
+          ],
+          "answer_index": 2,
+          "explanation": "情绪低落 feeling down。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "off",
+            "in",
+            "out",
+            "up"
+          ],
+          "answer_index": 3,
+          "explanation": "让她开心起来 cheer up。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "who",
+            "which",
+            "whose",
+            "whom"
+          ],
+          "answer_index": 0,
+          "explanation": "先行词 classmates 指人作主语 → who。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "machine",
+            "card",
+            "price",
+            "road"
+          ],
+          "answer_index": 1,
+          "explanation": "一张彩色卡片 card。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "song",
+            "spot",
+            "gram"
+          ],
+          "answer_index": 2,
+          "explanation": "安静的地点 quiet spot。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "eaten",
+            "sold",
+            "driven",
+            "done"
+          ],
+          "answer_index": 3,
+          "explanation": "看到我们所做的 what we had done。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "surprise",
+            "mistake",
+            "noise",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "最美好的惊喜 nicest surprise。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "prices",
+            "stories",
+            "rocks",
+            "bills"
+          ],
+          "answer_index": 1,
+          "explanation": "讲故事 told stories。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "forgot",
+            "sold",
+            "reminded",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "提醒莉莉她并不孤单 reminded。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "anger",
+            "traffic",
+            "homework",
+            "kindness"
+          ],
+          "answer_index": 3,
+          "explanation": "朋友的一点善意 kindness。"
+        }
+      ]
+    }
+  ]
+}

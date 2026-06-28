@@ -1,0 +1,421 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "topic": "The World of Science",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社(新标准)必修第三册 Unit 3 同主题听力(参观科技馆/四大发明/电话发明排练/打印身体部件/选择科学职业/发明从何而来)。用词限本单元/初中/常见词,答案唯一,与读/完形关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Visiting the Science Museum",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Have you ever been to the new science museum, Leo?",
+        "Leo: Not yet. I've heard a robot has been built there that can talk.",
+        "Mia: Yes, it's amazing. It answers your questions about space and stars.",
+        "Leo: That sounds great. What else can we see?",
+        "Mia: There's a model of an electric car that has been designed by students.",
+        "Leo: Wow. I'd love to know how it works.",
+        "Mia: Then let's go this Saturday. Tickets have already been booked for us.",
+        "Leo: Perfect. I can't wait to learn something new!"
+      ],
+      "translation_cn": "米娅问利奥去没去新科技馆;利奥没去,听说那里造了会说话的机器人;它能回答关于太空和星星的问题;还有学生设计的电动车模型;两人决定周六去,门票已经订好了。",
+      "questions": [
+        {
+          "stem": "Where are Mia and Leo talking about going?",
+          "options": [
+            "The new science museum.",
+            "A football match.",
+            "A music concert.",
+            "A book shop."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can the talking robot do?",
+          "options": [
+            "Cook dinner for visitors.",
+            "Answer questions about space and stars.",
+            "Drive an electric car.",
+            "Sell tickets."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who designed the electric car model?",
+          "options": [
+            "Students.",
+            "Famous actors.",
+            "The museum cleaners.",
+            "Leo's parents."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When will they go to the museum?",
+          "options": [
+            "Next year.",
+            "This Saturday.",
+            "Tonight.",
+            "Never."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What has already been done for them?",
+          "options": [
+            "Dinner has been cooked.",
+            "A car has been bought.",
+            "Tickets have been booked.",
+            "A robot has been sold."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 The Four Great Inventions",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Ancient China is famous for four great inventions.",
+        "They are gunpowder, papermaking, printing and the compass.",
+        "Each of these inventions has changed the world in a deep way.",
+        "Thanks to the compass, sailors could travel far across the sea.",
+        "Even today, these old ideas are still used in modern life."
+      ],
+      "translation_cn": "古代中国以四大发明闻名:火药、造纸、印刷和指南针;每一项都深刻改变了世界;有了指南针,水手能远渡重洋;直到今天,这些古老的智慧仍用于现代生活。",
+      "questions": [
+        {
+          "stem": "How many great inventions is ancient China famous for?",
+          "options": [
+            "Two.",
+            "Ten.",
+            "None.",
+            "Four."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which of these is one of the four inventions?",
+          "options": [
+            "The compass.",
+            "The television.",
+            "The aeroplane.",
+            "The computer."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did each invention do to the world?",
+          "options": [
+            "Made it smaller.",
+            "Changed it deeply.",
+            "Left it the same.",
+            "Destroyed it."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did the compass help sailors?",
+          "options": [
+            "They could fly to the Moon.",
+            "They could stop the wind.",
+            "They could travel far across the sea.",
+            "They could speak new languages."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Are these old ideas still useful today?",
+          "options": [
+            "No, they are forgotten.",
+            "Only in museums.",
+            "Only in books.",
+            "Yes, they are still used."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 Acting Out the Telephone Story",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: Let's practise the conversation about how the telephone was invented.",
+        "Ben: Good idea. You ask the questions, and I'll be the expert.",
+        "Anna: So, who was the telephone invented by?",
+        "Ben: It was invented by Alexander Graham Bell in 1876.",
+        "Anna: What gave him the idea?",
+        "Ben: His mother could not hear well, so he became interested in sound.",
+        "Anna: And what was the first phone call about?",
+        "Ben: He simply called his helper in the next room to test the machine."
+      ],
+      "translation_cn": "安娜和本排练关于电话发明的对话;安娜提问,本扮专家;电话由亚历山大·格雷厄姆·贝尔于1876年发明;因母亲听力不好,他对声音产生兴趣;第一通电话只是叫隔壁房间的助手来测试机器。",
+      "questions": [
+        {
+          "stem": "What are Anna and Ben practising?",
+          "options": [
+            "A conversation about the telephone's invention.",
+            "A song about the sea.",
+            "A play about a king.",
+            "A maths lesson."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Who was the telephone invented by?",
+          "options": [
+            "Benjamin Franklin.",
+            "Alexander Graham Bell.",
+            "Charles Darwin.",
+            "Isaac Newton."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "In which year was it invented?",
+          "options": [
+            "1752.",
+            "1920.",
+            "1876.",
+            "2005."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why did Bell become interested in sound?",
+          "options": [
+            "He loved loud music.",
+            "He worked on ships.",
+            "He sold radios.",
+            "His mother could not hear well."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What was the first phone call about?",
+          "options": [
+            "Testing the machine with his helper.",
+            "Ordering a new kite.",
+            "Calling a doctor.",
+            "Buying a car."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 Printing Body Parts",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Scientists have found an amazing new use for 3D printers.",
+        "These machines can now make parts of the human body.",
+        "A patient once received a new ear that had been printed in a lab.",
+        "Because each part is made to fit one person, operations become safer.",
+        "In the future, fewer sick people may have to wait for help."
+      ],
+      "translation_cn": "科学家为3D打印机找到惊人新用途:这些机器如今能制造人体部件;曾有病人获得一只在实验室打印出的新耳朵;由于每个部件都为一个人量身打印,手术更安全;未来,需要等待救治的病人也许会更少。",
+      "questions": [
+        {
+          "stem": "What new use have scientists found for 3D printers?",
+          "options": [
+            "Printing newspapers.",
+            "Making parts of the human body.",
+            "Building cars.",
+            "Cooking food."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did one patient receive?",
+          "options": [
+            "A new car.",
+            "A gold medal.",
+            "A printed ear.",
+            "A pet turtle."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why are these operations safer?",
+          "options": [
+            "The parts are very cheap.",
+            "The parts are very large.",
+            "The parts are made of paper.",
+            "Each part fits one person exactly."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What may happen in the future?",
+          "options": [
+            "Fewer patients may have to wait.",
+            "Printers will disappear.",
+            "Doctors will stop working.",
+            "Bodies will stop growing."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where was the new part printed?",
+          "options": [
+            "In a kitchen.",
+            "In a lab.",
+            "On a ship.",
+            "In a garden."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 Choosing a Science Career",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Teacher: Have you decided what kind of scientist you want to be, Grace?",
+        "Grace: I think I'd like to be an astronomer and study the stars.",
+        "Teacher: That's wonderful. And what about you, Sam?",
+        "Sam: I'm more interested in living things, so maybe a biologist.",
+        "Teacher: Both are excellent choices. Science needs curious minds.",
+        "Grace: But the maths looks really hard.",
+        "Teacher: Don't worry. With patience, every difficult subject can be learned.",
+        "Sam: Then we'll both keep trying!"
+      ],
+      "translation_cn": "老师问格蕾丝想当哪种科学家;格蕾丝想当天文学家研究星星;山姆对生物更感兴趣,想当生物学家;老师说两者都很好,科学需要好奇心;格蕾丝担心数学太难;老师鼓励说只要有耐心,再难的科目也能学会;两人决定继续努力。",
+      "questions": [
+        {
+          "stem": "What does Grace want to be?",
+          "options": [
+            "A biologist.",
+            "A driver.",
+            "An astronomer.",
+            "A singer."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is Sam more interested in?",
+          "options": [
+            "The stars.",
+            "Old cars.",
+            "Cooking.",
+            "Living things."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the teacher say science needs?",
+          "options": [
+            "Curious minds.",
+            "A lot of money.",
+            "Big machines only.",
+            "Quiet students."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Grace worried about?",
+          "options": [
+            "The stars are far.",
+            "The maths is hard.",
+            "The class is boring.",
+            "The room is cold."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the teacher say about difficult subjects?",
+          "options": [
+            "They should be avoided.",
+            "They are useless.",
+            "They can be learned with patience.",
+            "They never change."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 Where Inventions Begin",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple truth about invention.",
+        "Most new ideas begin with a problem that needs a solution.",
+        "When something annoys us, we start to ask how it could be better.",
+        "That small question is often the first step of a great invention.",
+        "So never stop being curious, because every question may change the world."
+      ],
+      "translation_cn": "关于发明有个简单的道理:大多数新点子始于一个需要解决的问题;当某件事让我们烦恼时,我们便开始思考如何让它变得更好;那个小小的问题,往往是伟大发明的第一步;所以永远别停止好奇,因为每个问题都可能改变世界。",
+      "questions": [
+        {
+          "stem": "Where do most new ideas begin?",
+          "options": [
+            "With a lot of money.",
+            "With a famous name.",
+            "With a big factory.",
+            "With a problem that needs solving."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do we do when something annoys us?",
+          "options": [
+            "We ask how it could be better.",
+            "We forget about it.",
+            "We go to sleep.",
+            "We sell it."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is often the first step of a great invention?",
+          "options": [
+            "A long holiday.",
+            "A small question.",
+            "A new car.",
+            "A loud noise."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should we never stop being?",
+          "options": [
+            "Angry.",
+            "Tired.",
+            "Curious.",
+            "Silent."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why is curiosity important?",
+          "options": [
+            "It makes us rich.",
+            "It saves time.",
+            "It ends all problems.",
+            "Every question may change the world."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

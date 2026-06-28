@@ -1,0 +1,58 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "title": "Friends Forever",
+  "listeningQuestions": [
+    { "audio": "A true friend stays with you in hard times.", "opts": ["真正的朋友会在困境中陪着你。", "真正的朋友只在你富有时出现。", "朋友总是让你难堪。", "陌生人比朋友更可靠。"], "answer": 0 },
+    { "audio": "Thanks to social media, we can keep in touch with faraway friends.", "opts": ["朋友们都搬走了。", "多亏社交媒体,我们能和远方的朋友保持联系。", "写信比上网更快。", "我们再也见不到朋友了。"], "answer": 1 },
+    { "audio": "She is the girl whose ideas are always inspiring.", "opts": ["她是那个总迟到的女孩。", "她是我新认识的同桌。", "她就是那个想法总能给人启发的女孩。", "她对朋友很冷淡。"], "answer": 2 },
+    { "audio": "I prefer making friends face to face rather than online.", "opts": ["我喜欢一个人待着。", "我从不交朋友。", "我只在网上交朋友。", "比起网上,我更喜欢面对面交朋友。"], "answer": 3 },
+    { "audio": "Never share private information with strangers online.", "opts": ["不要在网上把私人信息透露给陌生人。", "要把住址告诉每个人。", "网上的人都很可靠。", "应该相信所有陌生人。"], "answer": 0 },
+    { "audio": "Saying sorry first is one of the bravest things a friend can do.", "opts": ["道歉是软弱的表现。", "先道歉是朋友能做的最勇敢的事之一。", "朋友之间从不吵架。", "争个对错最重要。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Which word means '推迟,使延期'?", "opts": ["deliver", "postpone", "acquire", "prove"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "In 'maintain a friendship', what does 'maintain' mean?", "opts": ["保持,维持", "打破", "忘记", "出售"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Which word means '焦虑的,不安的'?", "opts": ["ordinary", "digital", "anxious", "familiar"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "What does the phrase 'lose track of' mean?", "opts": ["取得成功", "表示感谢", "加快速度", "失去……的联系"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "The friend ____ helped me most is very kind.", "opts": ["who", "which", "whose", "whom"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "It is the only thing ____ really matters between true friends.", "opts": ["which", "that", "who", "whose"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "She is the girl ____ smile can brighten any bad day.", "opts": ["who", "which", "whose", "whom"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "Friendship is a gift ____ money simply cannot buy.", "opts": ["who", "whom", "whose", "which"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "What does this saying mean?", "opts": ["真正的朋友在你有难时帮你。", "朋友之间需要金钱。", "朋友只在节日出现。", "真朋友从不联系你。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "A friend in need is a friend indeed." },
+    { "q": "How do the two friends plan to keep in touch?", "opts": ["每天写信。", "每个周末视频通话。", "再也不联系。", "只在生日见面。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "We could video-call every weekend to stay close." }
+  ],
+  "reading": {
+    "passage": "Anna was new in town and felt too shy to speak to anyone. A classmate who sat next to her noticed this and invited her to have lunch together. Within a few days, the two of them had become close friends.",
+    "passageCn": "安娜刚搬来,害羞得不敢和任何人说话。坐在她旁边的一位同学注意到了,便邀请她一起吃午饭。没过几天,两人就成了好朋友。",
+    "questions": [
+      { "q": "Why was Anna too shy to speak at first?", "opts": ["She was new in town.", "She had no lunch.", "She was angry with everyone.", "She could not speak English."], "answer": 0 },
+      { "q": "What did the classmate do to help?", "opts": ["She ignored Anna.", "She laughed at Anna.", "She invited Anna to have lunch together.", "She moved to another seat."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write about 60 words to introduce your best friend: what he or she is like, and one thing that shows your friendship. Try to use 'who', 'whose' or 'that'.",
+    "promptCn": "写约60词介绍你最好的朋友:他/她是怎样的人,以及一件体现你们友谊的小事。试着用上 who、whose 或 that。",
+    "sampleWords": ["friend", "who", "whose", "smiling", "helpful", "trust", "kindness", "remember", "anxious", "forever"]
+  },
+  "dialogues": [
+    {
+      "title": "How do you make friends?",
+      "lines": [
+        { "role": "A", "text": "How do you usually make new friends?", "cn": "你通常怎样交新朋友?" },
+        { "role": "B", "text": "I like joining clubs where people share my interests.", "cn": "我喜欢参加兴趣相投的社团。" },
+        { "role": "A", "text": "That's nice. I often make friends online first, then meet them later.", "cn": "不错。我常先在网上交友,再见面。" },
+        { "role": "B", "text": "Just be careful and stay honest. That's what matters most.", "cn": "只要小心、保持真诚就好,这最重要。" }
+      ]
+    },
+    {
+      "title": "Helping a worried friend",
+      "lines": [
+        { "role": "A", "text": "You look worried. What's wrong?", "cn": "你看起来很担心,怎么了?" },
+        { "role": "B", "text": "My best friend is moving away, and I'm afraid we'll lose touch.", "cn": "我最好的朋友要搬走了,我怕我们会失去联系。" },
+        { "role": "A", "text": "Don't worry. Real friends stay close, however far apart they live.", "cn": "别担心,真朋友无论隔多远都会亲密如初。" },
+        { "role": "B", "text": "You're right. We can video-call every weekend. Thanks!", "cn": "你说得对,我们可以每周末视频通话。谢谢!" }
+      ]
+    }
+  ]
+}

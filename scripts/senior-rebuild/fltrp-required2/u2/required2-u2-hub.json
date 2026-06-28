@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Families gather to celebrate the festival every year.", "opts": ["家家户户每年团聚庆祝这个节日。", "这个节日已经被人们忘记了。", "只有商店在庆祝这个节日。", "人们不喜欢这个节日。"], "answer": 0 },
+    { "audio": "The children must have been very excited as they opened it.", "opts": ["孩子们一定不想打开它。", "孩子们打开它时一定非常激动。", "孩子们害怕打开它。", "孩子们没有打开它。"], "answer": 1 },
+    { "audio": "People love to guess the riddles written on the lanterns.", "opts": ["人们害怕灯笼上的字。", "人们把灯笼摘了下来。", "人们喜欢猜写在灯笼上的谜语。", "人们看不懂灯笼。"], "answer": 2 },
+    { "audio": "Chinese people living overseas also celebrate the festival.", "opts": ["海外的华人不过这个节日。", "节日只在中国举行。", "海外没有华人。", "居住海外的华人也庆祝这个节日。"], "answer": 3 },
+    { "audio": "She can't have been at the lantern fair then.", "opts": ["她那时不可能在灯会上。", "她那时一定在灯会上。", "她经常去灯会。", "她想去灯会。"], "answer": 0 },
+    { "audio": "The host prepared a big meal for all the guests.", "opts": ["客人们自己做饭。", "主人为所有客人准备了一顿大餐。", "没有人来吃饭。", "主人忘了准备饭菜。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "The lantern fair ____ thousands of visitors every year.（吸引)", "opts": ["attracts", "complains", "warns", "loses"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "I have to ____ that cooking the dinner is hard work.（承认)", "opts": ["forget", "admit", "sell", "drive"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "The Dragon Boat Festival is held to ____ a famous poet.（纪念)", "opts": ["sell", "break", "honour", "count"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "A wedding usually needs a ____ written invitation.（正式的)", "opts": ["fancy", "lunar", "polar", "formal"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "Look at the empty plates — the guests ____ the whole feast.（确定吃过了)", "opts": ["must have eaten", "might have eaten", "can't have eaten", "must eat"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "I'm not sure, but he ____ the invitation in his inbox.（也许没看到)", "opts": ["must have missed", "might have missed", "can't have missed", "might miss"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "She was on a plane at noon, so she ____ at the fair then.（不可能在)", "opts": ["must have been", "might have been", "can't have been", "can't be"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "The hall is full of balloons, so someone ____ hard last night.（确定忙过)", "opts": ["may have worked", "can't have worked", "must work", "must have worked"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["午夜时分,烟花照亮了整个天空。", "烟花没有放成。", "天空一直很黑。", "人们都回家了。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "At midnight, fireworks lit up the whole sky." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["他讨厌这个节日。", "全家人在除夕之夜一起吃饭。", "没有人来吃饭。", "他们在外面吃饭。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "On Spring Festival Eve the whole family eats together." }
+  ],
+  "reading": {
+    "passage": "The Lantern Festival falls on the fifteenth day of the first lunar month. On that evening, streets glow with red lanterns, families guess riddles, and everyone enjoys sweet rice balls together.",
+    "passageCn": "元宵节在农历正月十五。那天傍晚,街道被红灯笼映得通红,家家户户猜灯谜,大家一起品尝汤圆。",
+    "questions": [
+      { "q": "When does the Lantern Festival fall?", "opts": ["On the fifteenth day of the first lunar month.", "On the last day of the year.", "In the middle of summer.", "On the fourth Thursday in November."], "answer": 0 },
+      { "q": "What do families do that evening?", "opts": ["Guess riddles and eat sweet rice balls.", "Race dragon boats on the river.", "Stay at home and sleep early.", "Watch a football game on TV."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Introduce your favourite Chinese festival to a foreign friend: when it is, what people do, and what it means to you.",
+    "promptCn": "向外国朋友介绍你最喜欢的中国节日:时间、人们的活动、对你的意义(试着用 fall on / decorate with 等表达)。",
+    "sampleWords": ["festival", "celebrate", "lunar", "decorate", "lantern", "dessert", "tradition", "gather", "joy", "occasion"]
+  },
+  "dialogues": [
+    {
+      "title": "Inviting a Friend to the Lantern Festival",
+      "lines": [
+        { "role": "A", "text": "Are you free this evening? It's the Lantern Festival.", "cn": "你今晚有空吗?今天是元宵节。" },
+        { "role": "B", "text": "Yes! Let's go to the lantern fair in the park.", "cn": "有空!我们去公园的灯会吧。" },
+        { "role": "A", "text": "Great. We can guess the riddles and win small prizes.", "cn": "好啊。我们可以猜灯谜,赢点小奖品。" },
+        { "role": "B", "text": "And try the sweet rice balls. Let's meet at seven.", "cn": "再尝尝汤圆。我们七点见吧。" }
+      ]
+    },
+    {
+      "title": "Guessing Who's Who at the Party",
+      "lines": [
+        { "role": "A", "text": "Look, that tall guy is dressed as Batman. Is that Mike?", "cn": "看,那个高个子男生扮成蝙蝠侠。那是 Mike 吗?" },
+        { "role": "B", "text": "I'm not sure. It could be him, but I can't see his face.", "cn": "我不确定。可能是他,但我看不清他的脸。" },
+        { "role": "A", "text": "And that girl in the bride's dress — that can't be Lucy.", "cn": "还有那个穿婚纱的女生——那不可能是 Lucy。" },
+        { "role": "B", "text": "Right, Lucy isn't that tall. Let's go and find out!", "cn": "对,Lucy 没那么高。我们过去看看吧!" }
+      ]
+    }
+  ]
+}

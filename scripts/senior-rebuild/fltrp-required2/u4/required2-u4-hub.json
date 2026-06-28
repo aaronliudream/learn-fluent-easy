@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Peking Opera combines music, singing and acting on one stage.", "opts": ["京剧把音乐、演唱和表演结合在一个舞台上。", "京剧只有音乐没有表演。", "京剧是一种现代电影。", "京剧只在电视上播放。"], "answer": 0 },
+    { "audio": "Watching the sad ending, many viewers could not hold back their tears.", "opts": ["看到悲伤的结局,许多观众忍不住流泪。", "观众觉得结局很好笑。", "没有人看这部电影。", "结局是快乐的。"], "answer": 0 },
+    { "audio": "The film is based on a famous novel.", "opts": ["这部电影改编自一部著名小说。", "这部电影没有故事。", "这部电影是一部纪录片。", "这本小说改编自电影。"], "answer": 0 },
+    { "audio": "The whole audience stood up to applaud the actors.", "opts": ["全场观众起立为演员鼓掌。", "观众安静地离开了剧院。", "观众对演出很失望。", "演员向观众鞠躬道歉。"], "answer": 0 },
+    { "audio": "I'd like to book two tickets for the show on Saturday.", "opts": ["我想订两张周六演出的票。", "我想退掉周六的票。", "周六的演出取消了。", "我周六要去看医生。"], "answer": 0 },
+    { "audio": "The nature documentary showed leopards in the wild.", "opts": ["这部自然纪录片展现了野外的豹子。", "这是一部关于城市的喜剧。", "纪录片里没有动物。", "豹子被关在动物园里。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "The talk show host was so ____ that he hardly let his guests speak.（无礼的)", "opts": ["rude", "kind", "shy", "quiet"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "As soon as the curtain rose, I was completely ____.（入迷的)", "opts": ["bored", "absorbed", "afraid", "tired"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "The film explores the theme of ____ in a humorous way.（责任)", "opts": ["weather", "machine", "responsibility", "furniture"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "I enjoy this film for its creative ____ and clever settings.（情节)", "opts": ["price", "noise", "smell", "plot"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "____ the curtain rise, the whole theatre fell silent at once.", "opts": ["Seeing", "Seen", "To see", "Saw"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Not ____ what the plot was about, the foreign guests felt a little lost.", "opts": ["known", "knowing", "to know", "knew"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "____ by the loud applause, the actor came back on stage to bow again.", "opts": ["Encouraging", "To encourage", "Encouraged", "Encourages"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "____ a bright red costume, the clown ran around the stage.", "opts": ["Worn", "To wear", "Wears", "Wearing"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["这部电影改编自一部著名小说。", "这部电影没人看。", "这本书很无聊。", "电影院关门了。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "This film is a modern version of a classic play." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["演出开始后大门就关闭。", "演出永远不会开始。", "大门一直开着。", "门票是免费的。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The doors close once the show begins." }
+  ],
+  "reading": {
+    "passage": "I went to see a Peking Opera version of Hamlet, and I loved every minute of it. The stage was almost empty, yet a single whip stood for a horse and a screen for a whole room. Feeling the love, anger and grief in the music, I had no trouble following the story, even though it was sung in Chinese.",
+    "passageCn": "我去看了一场京剧版的《哈姆雷特》,每一分钟都很享受。舞台几乎空荡,可一根鞭子就代表一匹马,一块幕布就代表整间屋子。感受到音乐中的爱、愤怒与悲痛,即使是用中文演唱,我也毫不费力地跟上了故事。",
+    "questions": [
+      { "q": "What was the stage like?", "opts": ["Almost empty, using simple props to suggest more.", "Full of real horses.", "Covered with modern screens.", "Exactly like a Western theatre."], "answer": 0 },
+      { "q": "How could the writer follow the story?", "opts": ["The emotions in the music made it clear.", "It was sung in English.", "A friend translated every line.", "He had memorised the whole play."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short review of a film or show you have seen. Say what it is about, describe one memorable scene, and tell us whether you would recommend it.",
+    "promptCn": "写一篇你看过的电影或演出的短评:讲讲它的内容、描述一个难忘的场景、说说你是否推荐(试着用 -ing 分词作状语,如 Watching the film, …)。",
+    "sampleWords": ["film", "plot", "scene", "memorable", "audience", "applaud", "emotion", "recommend", "documentary", "comedy"]
+  },
+  "dialogues": [
+    {
+      "title": "Booking Tickets",
+      "lines": [
+        { "role": "A", "text": "I'd like to book two tickets for the show on Saturday.", "cn": "我想订两张周六演出的票。" },
+        { "role": "B", "text": "Of course. The front seats are forty pounds each.", "cn": "好的。前排每张40英镑。" },
+        { "role": "A", "text": "That's a bit too expensive. Do you have anything cheaper?", "cn": "有点贵。有便宜些的吗?" },
+        { "role": "B", "text": "Yes, the back seats are twenty pounds, and you can still see clearly.", "cn": "有,后排20英镑,而且仍能看清楚。" }
+      ]
+    },
+    {
+      "title": "What Shall We Watch?",
+      "lines": [
+        { "role": "A", "text": "What would you like to watch tonight?", "cn": "今晚你想看什么?" },
+        { "role": "B", "text": "How about that new talent show everyone is talking about?", "cn": "看那档大家都在聊的新选秀节目怎么样?" },
+        { "role": "A", "text": "I'd rather watch the documentary about leopards.", "cn": "我更想看那部关于豹子的纪录片。" },
+        { "role": "B", "text": "Good idea. We can watch the talent show online later.", "cn": "好主意。选秀我们可以晚点在网上看。" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "listeningQuestions": [
+    { "audio": "The local people cut the steep mountains into terraces so that they could grow more rice.", "opts": ["当地人把陡峭的山开成梯田,以便种更多水稻。", "当地人砍倒大山去卖木材。", "当地人搬离了大山。", "当地人在山上建了工厂。"], "answer": 0 },
+    { "audio": "The flat terraces hold the rainwater and stop the soil from being washed away.", "opts": ["平整的梯田蓄住雨水,防止土壤被冲走。", "梯田让雨水更快流走。", "梯田毁掉了土壤。", "梯田从不蓄水。"], "answer": 0 },
+    { "audio": "The Great Barrier Reef is the largest structure on Earth made by living things.", "opts": ["大堡礁是地球上由生物造出的最大结构。", "大堡礁是人类建造的最大桥梁。", "大堡礁是地球上最小的礁石。", "大堡礁完全由石头堆成。"], "answer": 0 },
+    { "audio": "People without a garden can rent a small piece of land on which to grow things.", "opts": ["没有花园的人可以租一小块地来种东西。", "没有花园的人只能放弃园艺。", "没有花园的人必须搬去乡下。", "没有花园的人只在室内种花。"], "answer": 0 },
+    { "audio": "The knowledge is passed down through families, which means new generations keep the old methods.", "opts": ["这种知识在家族中代代相传,这意味着新一代沿用古老的方法。", "这种知识已经失传了。", "新一代完全放弃了古法。", "这种知识只写在书里。"], "answer": 0 },
+    { "audio": "Eating a lot of fish and meat keeps the Inuit strong in the freezing weather.", "opts": ["多吃鱼和肉让因纽特人在严寒中保持强壮。", "因纽特人主要靠种蔬菜为生。", "因纽特人生活在炎热的沙漠里。", "因纽特人从不吃鱼。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "Because there was little flat land, the people cut the mountains into ____.", "opts": ["terraces", "tunnels", "channels", "platforms"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The clever farmers work in ____ with nature to grow their rice.", "opts": ["harmony", "danger", "silence", "fashion"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The mountains are steep and the ____ is too shallow for most crops.", "opts": ["soil", "price", "noise", "glass"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "People without a garden can ____ a small piece of land in the city.", "opts": ["rent", "sell", "forget", "throw"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "These are the flat areas ____ the local people could grow their rice.", "opts": ["in which", "in whom", "for which", "for whom"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "He is an expert ____ the Zhuang people learnt a great deal.", "opts": ["from whom", "from which", "to whom", "to which"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The reef, ____ lies off the coast of Australia, is full of life.", "opts": ["which", "that", "who", "where"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The terraces catch the rainwater, ____ prevents the soil from washing away.", "opts": ["which", "that", "it", "what"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音,选出正确的中文意思。", "opts": ["太阳把水变成水汽,水汽上升又形成云。", "太阳把云变成石头。", "雨水从不落到梯田上。", "梯田里没有水道。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The sun turns the water into vapour, which rises and forms clouds again." },
+    { "q": "听录音,选出正确的中文意思。", "opts": ["把屋顶变成花园让城市更绿、空气更清新。", "屋顶花园让城市更脏。", "屋顶上不能种任何植物。", "城市里没有空间种花。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Turning rooftops into gardens makes cities greener and the air cleaner." }
+  ],
+  "reading": {
+    "passage": "The Longji Rice Terraces were built long ago by the local Zhuang and Yao people. Because there was little flat land, they cut the steep mountains into terraces in which they could grow rice. For hundreds of years, they have worked in harmony with nature.",
+    "passageCn": "龙脊梯田很久以前由当地的壮族和瑶族人修建。因为平地很少,他们把陡峭的大山开成梯田来种水稻。几百年来,他们一直与自然和谐相处。",
+    "questions": [
+      { "q": "Why did the people build terraces on the mountains?", "opts": ["There was little flat land for growing rice.", "They wanted to sell the mountains.", "They needed a place for visitors.", "They were told to by a king."], "answer": 0 },
+      { "q": "How have the people worked for hundreds of years?", "opts": ["In harmony with nature.", "Against the local weather.", "Far away from the land.", "Only with modern machines."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about a natural wonder you like and how people live in harmony with it.",
+    "promptCn": "用3-4句话写一写你喜欢的一处自然奇观,以及人们如何与它和谐相处。",
+    "sampleWords": ["terrace", "harmony", "region", "steep", "in which", "for whom", "nature", "design", "protect", "wonder"]
+  },
+  "dialogues": [
+    {
+      "title": "Planning a Trip to the Terraces",
+      "lines": [
+        { "role": "A", "text": "Where would you like to go this holiday?", "cn": "这个假期你想去哪里?" },
+        { "role": "B", "text": "I'd love to see the Longji Rice Terraces in Guangxi.", "cn": "我想去看广西的龙脊梯田。" },
+        { "role": "A", "text": "Why there? What is special about them?", "cn": "为什么去那儿?它们有什么特别?" },
+        { "role": "B", "text": "They show how people work in harmony with nature.", "cn": "它们展现了人与自然如何和谐相处。" }
+      ]
+    }
+  ]
+}

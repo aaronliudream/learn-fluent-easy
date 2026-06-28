@@ -1,0 +1,318 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "topic": "What an Adventure",
+  "source": "外研社必修第三册 Unit 5 同主题阅读(登珠峰值不值/马洛里的故事/Type T 冒险人格/318国道之旅/海底行走/法恩群岛潜水)。词限 U5/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Climbing Qomolangma: Worth the Risks?",
+      "topic_cn": "议论·登珠峰的危险与回报",
+      "body": "Each year, hundreds of people pay good money for an experience that they know will bring crowds, discomfort and danger. Many become sick because of the extreme cold and the low air pressure, and a few even lose their lives. Yet, despite all this, by the end of the trip many are already planning to return. For these people, climbing Qomolangma is an experience like no other. The mountain can make some feel weak and others feel powerful. Above eight thousand metres lies the death zone, where there is only about thirty per cent of the oxygen found at sea level, and the human body can last there for just a few days. Most attempts end in clear success or in failure. Still, climbers keep coming. They believe that what waits at the top is worth every risk, every cold night and every painful step along the way.",
+      "vocab_notes": [
+        {
+          "word": "death zone",
+          "cn": "死亡地带"
+        },
+        {
+          "word": "air pressure",
+          "cn": "气压"
+        },
+        {
+          "word": "attempt",
+          "cn": "尝试"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do climbers know before they pay for the trip?",
+          "options": [
+            "It will involve hardship and real danger.",
+            "It will be cheap and comfortable.",
+            "It will take only a few hours.",
+            "It will be completely safe."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'an experience that they know will bring crowds, discomfort and danger' 的转述。"
+        },
+        {
+          "stem": "Why can the body stay in the death zone for only a short time?",
+          "options": [
+            "Because it is too crowded there.",
+            "Because there is far too little oxygen.",
+            "Because the climb is too cheap.",
+            "Because there is too much snow to walk on."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 '只有约30%的氧气…只能待几天' 的转述。"
+        },
+        {
+          "stem": "What is the climbers' general attitude towards the risks?",
+          "options": [
+            "They feel the goal is worth the danger.",
+            "They think the danger is not real.",
+            "They want the trip to be banned.",
+            "They regret ever starting the climb."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'worth every risk' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Words of George Mallory",
+      "topic_cn": "记叙·马洛里的名言与命运",
+      "body": "George Mallory was a British climber who loved Qomolangma. Writing about the mountain, he once said that what we get from such an adventure is just sheer joy. He believed that people do not live only to eat and make money; instead, they eat and make money so that they can enjoy life. For Mallory, that was what life truly meant. Sadly, he died on the mountain in 1924, and his body would not be found for many years. To this day, no one knows for sure whether he reached the top before the mountain took his life. Years later, the American climber Alan Arnette spoke words much like Mallory's. He said the climb brought into focus what was most important to him. There are, he added, a thousand reasons to turn around and only one to keep going, and a climber must hold on to that single reason when the body begs to stop.",
+      "vocab_notes": [
+        {
+          "word": "sheer",
+          "cn": "纯粹的"
+        },
+        {
+          "word": "bring into focus",
+          "cn": "使成为焦点"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to Mallory, why do people earn money?",
+          "options": [
+            "Because money is the goal of life.",
+            "Because earning lets them enjoy living.",
+            "To stop climbing mountains.",
+            "To avoid all kinds of joy."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 '挣钱是为了享受生活' 的转述。"
+        },
+        {
+          "stem": "What is still unknown about Mallory?",
+          "options": [
+            "Where he was born.",
+            "What language he spoke.",
+            "Whether he made it to the summit before he died.",
+            "How much money he earned."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 '没人确知他丧命前是否登顶' 的转述。"
+        },
+        {
+          "stem": "What did Arnette say a climber must do when it gets hard?",
+          "options": [
+            "Always turn back at once.",
+            "Forget why the climb matters.",
+            "Climb only for money and fame.",
+            "Hold on to the one reason to keep going."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 '抓住那唯一坚持下去的理由' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The 'Type T' Personality",
+      "topic_cn": "说明·爱冒险的人格",
+      "body": "Why are some people willing to take such great risks? Recent studies suggest that the wish to take risks may be part of human nature, and that some of us are far more likely to take risks than others. The psychologist Frank Farley has spent years studying people who jump out of planes, drive fast cars and climb high mountains. He calls these people 'Type T', with the 'T' standing for 'thrill'. Interestingly, such people often do not see themselves as risk-takers at all. They tend to say that they are experts, not gamblers; they do not want to die and they do not expect to. Farley's research also suggests that the wish to seek risks is connected to how much a person expects to gain from the result. In other words, the bigger the possible reward, the more some people are ready to face danger to reach it.",
+      "vocab_notes": [
+        {
+          "word": "Type T",
+          "cn": "T型(追求刺激)人格"
+        },
+        {
+          "word": "thrill",
+          "cn": "刺激;惊险"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the 'T' in 'Type T' stand for?",
+          "options": [
+            "The wish for thrill and excitement.",
+            "A fear of all danger.",
+            "A love of quiet, safe days.",
+            "A dislike of sport."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the T standing for thrill' 的转述。"
+        },
+        {
+          "stem": "How do 'Type T' people usually see themselves?",
+          "options": [
+            "As foolish gamblers.",
+            "As experts rather than risk-takers.",
+            "As people who hope to die young.",
+            "As people who hate adventure."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 '他们自认是专家而非冒险者' 的转述。"
+        },
+        {
+          "stem": "What does Farley link the wish to take risks with?",
+          "options": [
+            "The colour of a person's clothes.",
+            "The weather on a given day.",
+            "How much a person hopes to gain.",
+            "How tall a person is."
+          ],
+          "answer_index": 2,
+          "explanation": "末段 '冒险欲与预期收益相关' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Trip Along Highway 318",
+      "topic_cn": "记叙·318国道骑行之旅",
+      "body": "Highway 318 stretches over five thousand kilometres and runs from Shanghai all the way to Tibet. It is the longest highway in the country and is sometimes called the most dangerous road as well. Yet, because of its amazing views and wild beauty, many also know it as the 'heavenly road'. Last year, a small group of friends cycled part of it to raise money for children in need. They said they had practised hard for months before they set out. Day after day they climbed steep hills and faced falling rocks, and three of them were hurt before the trip was over. Even so, they never thought of giving up. The views, they said, were the finest they had ever seen, and helping the children made every difficult mile feel worthwhile. When they came home, friends asked them many questions, and they were happy to share the story of their adventure.",
+      "vocab_notes": [
+        {
+          "word": "stretch",
+          "cn": "绵延;延伸"
+        },
+        {
+          "word": "heavenly road",
+          "cn": "天路"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the friends cycle along Highway 318?",
+          "options": [
+            "To win a famous cycling race.",
+            "To sell their bikes at the end.",
+            "To open a new shop in Tibet.",
+            "To raise funds for needy children."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 '为有需要的孩子筹款' 的转述。"
+        },
+        {
+          "stem": "What happened to the group during the trip?",
+          "options": [
+            "Three of them got injured.",
+            "They all gave up halfway.",
+            "They never met any danger.",
+            "They lost their way completely."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'three of them were hurt' 的转述。"
+        },
+        {
+          "stem": "How did the friends feel about the hard journey?",
+          "options": [
+            "They wished they had stayed at home.",
+            "They felt it was worth every difficult mile.",
+            "They thought it was a waste of time.",
+            "They were sorry they had ever started."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 '助人让每一段艰难都值得' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Walking on the Sea Bed",
+      "topic_cn": "记叙·凡尔纳笔下的海底行走",
+      "body": "Jules Verne was a French writer often called the 'Father of Science Fiction', because he described inventions years before they were real. In one of his most famous books, a biologist named Aronnax walks on the sea bed inside a thick diving suit. He says that words are simply not enough to relate such wonders. As he walks, he no longer feels the weight of his clothes or his heavy helmet. The light that lights the soil far below the surface astonishes him by its power. The sun's rays shine through the water so easily that he can clearly distinguish objects far away. Beyond that point, the colours gradually darken into deep blue and then disappear. The water around him, he feels, is almost as clear as air. Walking on the fine, even sand, he is amazed that at such a depth he can still see as if in broad daylight.",
+      "vocab_notes": [
+        {
+          "word": "relate",
+          "cn": "讲述"
+        },
+        {
+          "word": "distinguish",
+          "cn": "看清;辨别"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is Verne called the 'Father of Science Fiction'?",
+          "options": [
+            "He built the first submarine himself.",
+            "He was the first French teacher.",
+            "He wrote about inventions before they existed.",
+            "He only wrote about real history."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 '在发明成真前数年就描写它们' 的转述。"
+        },
+        {
+          "stem": "How does Aronnax feel about the sights under the sea?",
+          "options": [
+            "They are dull and ordinary.",
+            "They are too dark to see at all.",
+            "They are exactly like life on land.",
+            "They are wonders that words can hardly describe."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 '言语不足以讲述这些奇景' 的转述。"
+        },
+        {
+          "stem": "What surprises Aronnax most at that depth?",
+          "options": [
+            "That the deep sea still looks as bright as day to him.",
+            "That the water is completely black.",
+            "That he cannot move his arms.",
+            "That there is no water around him."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 '在那样的深处仍能看得如同白昼' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Undersea Adventure at the Farne Islands",
+      "topic_cn": "应用·法恩群岛潜水广告",
+      "body": "Come and explore the magical waters around the Farne Islands, one of England's finest dive sites. With both shallow and deep-water diving, there is something here for divers of every skill level. On a wreck dive, our instructors take you down to the steamer Somali, a six-thousand-ton ship that sank in 1941 during the war. She rests upright on the sea bed about thirty metres below the waves, and she almost looks ready to set sail once more. If you prefer, you can join a scenic dive and swim with the islands' loveliest residents: the thousands of grey seals that live here all year. The large adult males may look a little scary, but they are quite harmless. The young seals will delight you with their curiosity as they follow you among the seaweed forests. Each one-day tour includes two dives and a buffet lunch, and runs every day from the first of June to the end of July.",
+      "vocab_notes": [
+        {
+          "word": "wreck dive",
+          "cn": "沉船潜水"
+        },
+        {
+          "word": "resident",
+          "cn": "居民;住户"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What can divers see on the wreck dive?",
+          "options": [
+            "A modern racing boat.",
+            "A ship that sank during the war.",
+            "A row of small fishing huts.",
+            "A bridge above the water."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 '1941年沉没的蒸汽船 Somali' 的转述。"
+        },
+        {
+          "stem": "What does the advert say about the adult grey seals?",
+          "options": [
+            "They often attack divers.",
+            "They are too shy to be seen.",
+            "They look scary but do no harm.",
+            "They live there only in winter."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 '体型大看着吓人,其实无害' 的转述。"
+        },
+        {
+          "stem": "What is included in each one-day tour?",
+          "options": [
+            "Only a short boat ride.",
+            "A free diving suit to keep.",
+            "A night on the island.",
+            "A pair of dives plus a midday meal."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 '含两次潜水和自助午餐' 的转述。"
+        }
+      ]
+    }
+  ]
+}

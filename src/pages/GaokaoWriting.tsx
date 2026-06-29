@@ -31,7 +31,7 @@ export default function GaokaoWriting() {
         <T>✍️ 高中写作训练</T>
       </h1>
       <p className="mt-1 text-sm text-muted-foreground">
-        <T>人教版课文主题 · AI 评分 · 范文对比 · 提交奖星币</T>
+        <T>课文主题 · AI 评分 · 范文对比 · 提交奖星币</T>
       </p>
       {yearBand && (
         <ModuleStageTests segment="gaokao" grade={yearBand} module="writing" className="mt-4" />

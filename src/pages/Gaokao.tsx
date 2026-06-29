@@ -21,8 +21,8 @@ const MODULES = [
   { id: "vocabulary", key: "vocab" as const, icon: "vocabulary" as const, title: "词汇", subtitle: "高考核心词汇 · 3500+", description: "词根词缀 / 语境记忆 / 高频考词", path: "/gaokao/vocab" },
   { id: "grammar", key: "grammar" as const, icon: "grammar" as const, title: "语法", subtitle: "高考语法专项", description: "语法填空 · 短文改错 · 从句/非谓语", path: "/gaokao/grammar" },
   { id: "reading", key: "reading" as const, icon: "reading" as const, title: "阅读", subtitle: "阅读理解训练", description: "四篇阅读 · 七选五 · 长难句", path: "/gaokao/reading" },
-  { id: "listening", key: "listening" as const, icon: "listening" as const, title: "听力", subtitle: "人教版课文听力", description: "课文脚本 · TTS 朗读 · 理解题", path: "/gaokao/listening" },
-  { id: "writing", key: "writing" as const, icon: "writing" as const, title: "写作", subtitle: "人教版主题写作", description: "课文主题作文 · AI 批改 · 范文", path: "/gaokao/writing" },
+  { id: "listening", key: "listening" as const, icon: "listening" as const, title: "听力", subtitle: "课文听力", description: "课文脚本 · TTS 朗读 · 理解题", path: "/gaokao/listening" },
+  { id: "writing", key: "writing" as const, icon: "writing" as const, title: "写作", subtitle: "主题写作", description: "课文主题作文 · AI 批改 · 范文", path: "/gaokao/writing" },
   { id: "exam", key: "exam" as const, icon: "exam" as const, title: "高考真题", subtitle: "历年高考真题", description: "全国卷 · 新高考卷 · 地方卷", path: "/gaokao/exam" },
 ];
 
@@ -56,9 +56,6 @@ function PublisherChooser() {
                 <span className="mt-3 text-lg font-extrabold" style={{ color: NAVY }}>{meta.name}</span>
                 <span className="mt-1 text-xs text-muted-foreground">{meta.sub}</span>
                 <span className="mt-3 text-[11px] leading-snug text-muted-foreground">{meta.tagline}</span>
-                {code === "pep" && (
-                  <span className="mt-3 rounded-full bg-amber-400 px-3 py-1 text-[10px] font-bold text-[#0E2746]">推荐 · 内容最全</span>
-                )}
               </Link>
             );
           })}

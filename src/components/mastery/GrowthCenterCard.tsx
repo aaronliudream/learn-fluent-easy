@@ -109,7 +109,7 @@ export function GrowthCenterCard({
     >
       <div className="flex-1 min-w-0">
         <span className="inline-block text-[11px] bg-white/15 text-[#dfe6e8] rounded-md px-2 py-0.5 mb-2">
-          教材同步 · 人教版
+          教材同步
         </span>
         <h3 className="font-serif text-xl sm:text-[22px] font-medium leading-tight">{title}</h3>
 

@@ -21,7 +21,7 @@ export function GaokaoClassroomSyncBanner({ yearBand }: { yearBand: GaokaoHubGra
       <div className="relative min-w-0 flex-1">
         <div className="text-[10px] font-bold uppercase tracking-[0.16em] opacity-90">CLASSROOM · SYNC</div>
         <div className="text-base font-extrabold leading-tight">
-          <T>课堂同步 · 人教版</T>
+          <T>课堂同步</T>
         </div>
         <div className="mt-0.5 text-xs opacity-90">
           {LABELS[yearBand]} · {p.unitCount} 单元 · 每单元 8 关 · {p.percent}%（{p.mastered}/{p.total}）

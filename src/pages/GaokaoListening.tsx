@@ -31,7 +31,7 @@ export default function GaokaoListening() {
         <T>🎧 高中听力训练</T>
       </h1>
       <p className="mt-1 text-sm text-muted-foreground">
-        <T>人教版课文脚本 · 浏览器 TTS 朗读（无原版录音）</T>
+        <T>课文脚本 · 浏览器 TTS 朗读（无原版录音）</T>
       </p>
       {yearBand && (
         <ModuleStageTests segment="gaokao" grade={yearBand} module="listening" className="mt-4" />

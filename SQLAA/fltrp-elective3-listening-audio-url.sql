@@ -1,4 +1,4 @@
--- 外研社(fltrp)必修一 听力 audio_url 回填(34/36)。先跑各单元 load,再跑本文件。幂等。
+-- 外研社(fltrp)必修一 听力 audio_url 回填(36/36)。先跑各单元 load,再跑本文件。幂等。
 BEGIN;
 UPDATE public.junior_listening_exercises SET audio_url='https://audio.bigmooneducation.com/ed/ed8909d2c347e7b2030225b0403294eec9a37fd8811bef6496bd48536ff8f6af.mp3' WHERE publisher='fltrp' AND volume='elective3' AND unit='U1' AND title='U1 听力·对话 Too Many Selfies';
 UPDATE public.junior_listening_exercises SET audio_url='https://audio.bigmooneducation.com/08/088de922d7e600dbb2f75dcd4dbe48aa2721bbff492a5fd6be83c79a4cb445ac.mp3' WHERE publisher='fltrp' AND volume='elective3' AND unit='U1' AND title='U1 听力·短文 Be Kind to Yourself';
@@ -34,5 +34,7 @@ UPDATE public.junior_listening_exercises SET audio_url='https://audio.bigmoonedu
 UPDATE public.junior_listening_exercises SET audio_url='https://audio.bigmooneducation.com/13/1323df98a7c1d317bc9e4776716613d3963482e6aad3356f47878d5400d2382c.mp3' WHERE publisher='fltrp' AND volume='elective3' AND unit='U6' AND title='U6 听力·短文 How the First Snow Feels';
 UPDATE public.junior_listening_exercises SET audio_url='https://audio.bigmooneducation.com/e9/e9b7247e6ac7198010195dc4b972ec435027f8d87d66ccd1842bb2d978d1b5fa.mp3' WHERE publisher='fltrp' AND volume='elective3' AND unit='U6' AND title='U6 听力·对话 Walking to School in the Snow';
 UPDATE public.junior_listening_exercises SET audio_url='https://audio.bigmooneducation.com/33/33051325fb3ec3c6df161223a311c6410ef9116f05a32f1204d4dde929b9a153.mp3' WHERE publisher='fltrp' AND volume='elective3' AND unit='U6' AND title='U6 听力·短文 Snowflakes';
+UPDATE public.junior_listening_exercises SET audio_url='https://audio.bigmooneducation.com/83/8381e8b8cfe2521c29119699b21dbce3bc948bd96977b75af032239349b0e8cc.mp3' WHERE publisher='fltrp' AND volume='elective3' AND unit='U6' AND title='U6 听力·对话 Caring for Birds in Winter';
+UPDATE public.junior_listening_exercises SET audio_url='https://audio.bigmooneducation.com/29/29947e2d77689e37752851527bbcade913d073ef1a67e1a4f676d4aa2df2fa49.mp3' WHERE publisher='fltrp' AND volume='elective3' AND unit='U6' AND title='U6 听力·短文 A Book That Changed Minds';
 COMMIT;
 SELECT unit, count(*) FILTER (WHERE audio_url IS NOT NULL) AS have_audio, count(*) AS total FROM public.junior_listening_exercises WHERE publisher='fltrp' AND volume='elective3' GROUP BY unit ORDER BY unit;

@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "topic": "Onwards and Upwards",
+  "source": "外研社(新标准)选择性必修第一册 Unit 2 同主题完形(年轻作家的第一封拒稿信/永不放弃的长跑者/夏令营的吉米/黑暗中用餐/翻开新的一页/比赛失利后依然乐观)。用词限本单元/初中/常见词,答案唯一,选项同词性,与阅读/听力关不撞。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Anna's First Rejection",
+      "text": "When Anna finished her first short story, she proudly sent it to a magazine. A week later, a letter arrived that began, \"We regret to (1)____ you...\" Like every young writer, she had (2)____ those very words. For a moment she felt like (3)____ up writing altogether. But then she remembered that many famous authors had (4)____ the same kind of rejection before they became successful. So, instead of throwing the letter away, she decided to (5)____ it on her wall as a reminder. Success, she told herself, (6)____ happens overnight. She kept (7)____ a little every day, and slowly her stories grew better. Two years later, a (8)____ finally agreed to print one of them. Anna learned that one letter could not decide her future, and that (9)____ is the real key to success. Today she still (10)____ writing stories for young readers.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "inform",
+            "enjoy",
+            "forget",
+            "carve"
+          ],
+          "answer_index": 0,
+          "explanation": "regret to inform 遗憾地通知。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "dreaded",
+            "printed",
+            "watered"
+          ],
+          "answer_index": 1,
+          "explanation": "dread 畏惧;她早就害怕这些字眼。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "winning",
+            "buying",
+            "giving",
+            "growing"
+          ],
+          "answer_index": 2,
+          "explanation": "feel like giving up 想放弃;feel like 后接动名词。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lost",
+            "sold",
+            "eaten",
+            "faced"
+          ],
+          "answer_index": 3,
+          "explanation": "face rejection 面对拒绝。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "stick",
+            "throw",
+            "burn",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "stick it on her wall 把它贴在墙上。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "always",
+            "rarely",
+            "loudly",
+            "quickly"
+          ],
+          "answer_index": 1,
+          "explanation": "success rarely happens overnight 成功很少一蹴而就。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "stopping",
+            "losing",
+            "writing",
+            "selling"
+          ],
+          "answer_index": 2,
+          "explanation": "keep writing 坚持写;keep 后接动名词。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "garden",
+            "weather",
+            "machine",
+            "publisher"
+          ],
+          "answer_index": 3,
+          "explanation": "a publisher agreed to print 出版商同意付印。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "perseverance",
+            "money",
+            "luck",
+            "beauty"
+          ],
+          "answer_index": 0,
+          "explanation": "perseverance is the key 坚持是关键。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forgets",
+            "enjoys",
+            "hides",
+            "stops"
+          ],
+          "answer_index": 1,
+          "explanation": "enjoys writing 喜欢写;enjoy 后接动名词。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Runner Who Wouldn't Stop",
+      "text": "On the morning of the race, Daniel felt both nervous and (1)____. He had trained hard for months and did not want to give (2)____ now. The route was long, and after the first few kilometres his legs began to (3)____. Many runners around him slowed down, but Daniel kept (4)____ at a steady pace. Halfway through, he wanted to stop and (5)____, yet he reminded himself why he had started. \"A medal is never (6)____ overnight,\" he thought. As the finish line came into (7)____, his heart filled with hope. He did not win first place, but he managed (8)____ the whole race, and that was a real success for him. His friends were (9)____ to inform him that he had beaten his own record. Daniel realised that the true (10)____ of the day was not a prize, but the courage never to give in.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "asleep",
+            "absent",
+            "excited",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "nervous and excited 紧张又兴奋。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "off",
+            "out",
+            "in",
+            "up"
+          ],
+          "answer_index": 3,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "hurt",
+            "sing",
+            "grow",
+            "smile"
+          ],
+          "answer_index": 0,
+          "explanation": "his legs began to hurt 双腿开始疼。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "crying",
+            "running",
+            "sleeping",
+            "leaving"
+          ],
+          "answer_index": 1,
+          "explanation": "kept running 一直跑;keep 后接动名词。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "win",
+            "sell",
+            "rest",
+            "print"
+          ],
+          "answer_index": 2,
+          "explanation": "stop and rest 停下来休息。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "broken",
+            "lost",
+            "carried",
+            "won"
+          ],
+          "answer_index": 3,
+          "explanation": "a medal is never won overnight 奖牌绝非一夜得来。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "view",
+            "debt",
+            "noise",
+            "order"
+          ],
+          "answer_index": 0,
+          "explanation": "come into view 进入视野。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "finishing",
+            "to finish",
+            "to win",
+            "winning"
+          ],
+          "answer_index": 1,
+          "explanation": "manage to finish 设法跑完;manage 后接不定式。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "afraid",
+            "sorry",
+            "delighted",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "delighted to inform 高兴地告知。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "machine",
+            "garden",
+            "outcome"
+          ],
+          "answer_index": 3,
+          "explanation": "the true outcome 真正的收获/结果。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Jamie at the Sports Camp",
+      "text": "Last summer, Jamie joined a sports camp, hoping (1)____ his character and make new friends. The camp was fun, but it was not (2)____ its challenges. Each day began with a five-kilometre run at six in the morning. At first Jamie could not (3)____ the whole route, and on the fourth day he was so tired that he did not even want (4)____ out of bed. He felt homesick and almost (5)____ his dad to take him home. But he did not give (6)____. Slowly, things got better. He learned to (7)____ each early morning instead of dreading it. By the end of the camp, Jamie felt much (8)____ and more confident than before. He had also made several good friends. Even though being a camper had its (9)____, Jamie felt the whole experience was truly (10)____. He came home tired but proud of what he had done.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "to build",
+            "building",
+            "to lose",
+            "losing"
+          ],
+          "answer_index": 0,
+          "explanation": "hope to build 希望塑造;hope 后接不定式。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "into",
+            "without",
+            "before",
+            "across"
+          ],
+          "answer_index": 1,
+          "explanation": "not without its challenges 不无挑战。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "hide",
+            "finish",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "could not finish the route 跑不完全程。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "getting",
+            "to sell",
+            "selling",
+            "to get"
+          ],
+          "answer_index": 3,
+          "explanation": "want to get out of bed 想起床;want 后接不定式。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "phoned",
+            "sold",
+            "carved",
+            "watered"
+          ],
+          "answer_index": 0,
+          "explanation": "almost phoned his dad 差点打电话给爸爸。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "off",
+            "up",
+            "in",
+            "out"
+          ],
+          "answer_index": 1,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "fear",
+            "miss",
+            "enjoy",
+            "spoil"
+          ],
+          "answer_index": 2,
+          "explanation": "learned to enjoy each morning 学会享受每个清晨。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "weaker",
+            "smaller",
+            "slower",
+            "stronger"
+          ],
+          "answer_index": 3,
+          "explanation": "felt much stronger 觉得强壮多了。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "challenges",
+            "prices",
+            "gardens",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "had its challenges 有它的挑战。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "useless",
+            "worthwhile",
+            "boring",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "truly worthwhile 真正值得。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Dinner in the Dark",
+      "text": "Last week I went to a \"dark restaurant\", where guests eat in complete darkness and are (1)____ by blind waiters. My friend and I wanted to understand what it is like (2)____ blind, and we thought eating would be the hardest part. It was a difficult (3)____. Because we could not see anything, we kept (4)____ over our glasses and dropping our food. My sense of smell suddenly became more (5)____, and I ate much more slowly, trying to (6)____ what was on my plate. After failing (7)____ up any food with a fork, I decided to use my hands instead. Even then, I (8)____ most of the soup on my shirt. I felt rather (9)____, although of course no one could see me. When I finally left, I was still hungry, but I was much more (10)____ of the daily challenges that blind people bravely face.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sold",
+            "printed",
+            "served",
+            "carved"
+          ],
+          "answer_index": 2,
+          "explanation": "served by blind waiters 由盲人服务员招待。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "being",
+            "to do",
+            "doing",
+            "to be"
+          ],
+          "answer_index": 3,
+          "explanation": "what it is like to be blind 失明是什么感觉;固定句式用不定式。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "meal",
+            "song",
+            "price",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "a difficult meal 一顿艰难的饭。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "singing",
+            "knocking",
+            "winning",
+            "printing"
+          ],
+          "answer_index": 1,
+          "explanation": "kept knocking over our glasses 不断碰倒杯子;keep 后接动名词。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "empty",
+            "silent",
+            "sensitive",
+            "absent"
+          ],
+          "answer_index": 2,
+          "explanation": "became more sensitive 变得更灵敏。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forget",
+            "throw",
+            "lose",
+            "guess"
+          ],
+          "answer_index": 3,
+          "explanation": "trying to guess 试着猜。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "to pick",
+            "picking",
+            "to sell",
+            "selling"
+          ],
+          "answer_index": 0,
+          "explanation": "fail to pick up 没能夹起;fail 后接不定式。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "spilled",
+            "saved",
+            "hid"
+          ],
+          "answer_index": 1,
+          "explanation": "spilled most of the soup 把汤洒了大半。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "proud",
+            "delighted",
+            "embarrassed",
+            "calm"
+          ],
+          "answer_index": 2,
+          "explanation": "felt rather embarrassed 感到相当尴尬。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "afraid",
+            "tired",
+            "bored",
+            "aware"
+          ],
+          "answer_index": 3,
+          "explanation": "more aware of the challenges 更了解那些挑战。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Turning Over a New Leaf",
+      "text": "At the start of the new term, Sam decided to turn over a new (1)____ and become a better student. In the past, he had often (2)____ his feet and put off doing his homework until the last minute. He also used to be a wet (3)____, spoiling the fun whenever his friends were excited about a project. This year, he promised (4)____ harder and to support the people around him. He started (5)____ a short plan every evening, so that he would no longer fall behind. Soon his classmates noticed the change and called him an eager (6)____, because he was always ready to help. Of course, change is never (7)____; there were days when Sam felt like giving (8)____. But he reminded himself that real success (9)____ trying again after each failure. Step by step, he became more (10)____ and confident, and his whole class felt happier for it.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "leaf",
+            "price",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "turn over a new leaf 翻开新的一页(改过自新)。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "dragged",
+            "printed",
+            "watered"
+          ],
+          "answer_index": 1,
+          "explanation": "drag one's feet 拖拖拉拉。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "orchestra",
+            "manuscript",
+            "blanket",
+            "contest"
+          ],
+          "answer_index": 2,
+          "explanation": "a wet blanket 扫兴的人。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "working",
+            "to lose",
+            "losing",
+            "to work"
+          ],
+          "answer_index": 3,
+          "explanation": "promise to work 答应努力;promise 后接不定式。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "making",
+            "forgetting",
+            "hiding",
+            "selling"
+          ],
+          "answer_index": 0,
+          "explanation": "start making a plan 开始制定计划;此处用动名词亦可,语境为养成习惯。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "beaver",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "an eager beaver 拼命三郎。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "loud",
+            "empty",
+            "easy",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "change is never easy 改变从不容易。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "off",
+            "in",
+            "out",
+            "up"
+          ],
+          "answer_index": 3,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "means",
+            "forgets",
+            "sells",
+            "hides"
+          ],
+          "answer_index": 0,
+          "explanation": "success means trying again 成功意味着再试;mean doing 意味着。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "absent",
+            "enthusiastic",
+            "asleep",
+            "silent"
+          ],
+          "answer_index": 1,
+          "explanation": "more enthusiastic 更有热情。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "After the Contest",
+      "text": "When Dawei came out of the speech (1)____, his face looked sad and (2)____. He had hoped (3)____ first place, but the judges had chosen someone else. His friend Jack noticed at once that something was (4)____, so he asked Dawei what had happened. \"I did my best, but I still didn't (5)____,\" Dawei said quietly. Jack reminded him that one result could not (6)____ his whole future. \"Try (7)____ on the bright side,\" Jack said gently. \"You spoke far better than last year.\" Slowly, Dawei began to (8)____ that he had actually enjoyed the experience and learned a lot. He had met new friends and felt more (9)____ on stage than ever before. By the time they walked home, Dawei was smiling again. He had learned that failure is only painful if you stop (10)____ in yourself.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "garden",
+            "machine",
+            "contest",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "the speech contest 演讲比赛。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "happy",
+            "proud",
+            "calm",
+            "upset"
+          ],
+          "answer_index": 3,
+          "explanation": "sad and upset 难过又心烦。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "to win",
+            "winning",
+            "to lose",
+            "losing"
+          ],
+          "answer_index": 0,
+          "explanation": "hope to win 希望获胜;hope 后接不定式。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "right",
+            "wrong",
+            "easy",
+            "ready"
+          ],
+          "answer_index": 1,
+          "explanation": "something was wrong 有些不对劲。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sleep",
+            "leave",
+            "win",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "I still didn't win 我还是没赢。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forget",
+            "carve",
+            "water",
+            "decide"
+          ],
+          "answer_index": 3,
+          "explanation": "could not decide his future 决定不了他的未来。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "looking",
+            "to look",
+            "to sell",
+            "selling"
+          ],
+          "answer_index": 0,
+          "explanation": "try looking on the bright side 试着往好处看;try doing 试着。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "forget",
+            "realise",
+            "lose",
+            "deny"
+          ],
+          "answer_index": 1,
+          "explanation": "began to realise 开始意识到。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "afraid",
+            "absent",
+            "confident",
+            "asleep"
+          ],
+          "answer_index": 2,
+          "explanation": "more confident on stage 在台上更自信。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "winning",
+            "selling",
+            "hiding",
+            "believing"
+          ],
+          "answer_index": 3,
+          "explanation": "stop believing in yourself 停止相信自己;stop doing 停止做。"
+        }
+      ]
+    }
+  ]
+}

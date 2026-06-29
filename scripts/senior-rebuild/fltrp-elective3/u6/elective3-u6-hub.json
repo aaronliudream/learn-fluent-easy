@@ -1,0 +1,48 @@
+{
+  "volume": "elective3",
+  "unit": "U6",
+  "listeningQuestions": [
+    { "audio": "The first snow fell quietly during the night.", "opts": ["初雪在夜里静静地落下。", "雨整夜都在下。", "太阳一早就出来了。", "孩子们整夜都在唱歌。"], "answer": 0 },
+    { "audio": "Looking out of the window, I saw the falling snow.", "opts": ["望向窗外,我看见纷飞的雪。", "我关上窗户去睡觉了。", "我在窗边读了一本书。", "我看见花园里的花开了。"], "answer": 0 },
+    { "audio": "The little plum tree was covered with soft white snow.", "opts": ["那棵小李树盖满了柔软的白雪。", "那棵小李树被风吹倒了。", "那棵小李树上结满了果子。", "那棵小李树被砍掉了。"], "answer": 0 },
+    { "audio": "I could see the children flattening their noses against the glass.", "opts": ["我能看见孩子们把鼻子贴在玻璃上。", "我能听见孩子们在大声唱歌。", "孩子们正在打扫房间。", "孩子们都已经睡着了。"], "answer": 0 },
+    { "audio": "Heavy snow made all the trees bend low.", "opts": ["厚厚的雪把所有的树都压弯了。", "大风把所有的树都吹倒了。", "阳光让所有的树长得更高。", "雨水让所有的花都开了。"], "answer": 0 },
+    { "audio": "The first snow turned an ordinary morning into something magical.", "opts": ["初雪把平凡的早晨变得神奇。", "初雪让早晨变得很无聊。", "初雪很快就融化不见了。", "初雪让人们都待在家里工作。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "The very ____ and quietness of the snow made it feel magical.", "opts": ["secrecy", "wagon", "orchard", "diamond"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "By noon the bright ____ of the white snow had completely gone.", "opts": ["glare", "rhyme", "fable", "chorus"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The morning sun began to ____ the white snow with delicate pink.", "opts": ["flush", "ban", "reap", "insist"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Carson's long list of sources showed how ____ a scientist she was.", "opts": ["thorough", "gentle", "bleak", "weekly"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "From my study I can see the children ____ their noses against the window.", "opts": ["flattening", "flattened", "to flatten", "flatten"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ with deep snow, the open fields looked like a white sea.", "opts": ["Covered", "Covering", "To cover", "Cover"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "I watched the soft snow ____ quietly past the bright street lamp.", "opts": ["falling", "fallen", "to fall", "fall"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "She was the only child ____ outside into the cold winter storm.", "opts": ["to go", "going", "gone", "went"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Listen: 'The first snow fell quietly during the night.' When did the first snow fall?", "opts": ["During the night.", "At noon.", "In the summer.", "During a storm."], "answer": 0, "point": "听力", "dim": "listening", "audio": "The first snow fell quietly during the night." },
+    { "q": "Listen: 'Heavy snow made all the trees bend low.' What did the heavy snow do to the trees?", "opts": ["It made them bend low.", "It made them grow taller.", "It set them on fire.", "It painted them green."], "answer": 0, "point": "听力", "dim": "listening", "audio": "Heavy snow made all the trees bend low." }
+  ],
+  "reading": {
+    "passage": "On the first snowy morning, the children pressed their faces to the cold window and watched the white flakes drift down. They could hardly wait to put on their coats and run outside to play.",
+    "passageCn": "在初雪的早晨,孩子们把脸贴在冰冷的窗户上,看着白色的雪花飘落。他们迫不及待地想穿上外套跑出去玩。",
+    "questions": [
+      { "q": "What did the children watch from the window?", "opts": ["The white flakes drifting down.", "A football match.", "Cars on the road.", "Birds flying south."], "answer": 0 },
+      { "q": "What did the children want to do?", "opts": ["Run outside and play.", "Go back to sleep.", "Do their homework.", "Watch television."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Describe the first snow you remember. Say what the snowy world looked like and how you felt. Try to use non-finite verbs, such as 'the falling snow' or 'Looking out of the window, I saw …'.",
+    "promptCn": "描写你记得的一场初雪:说说雪后的世界是什么样子,你有什么感受。试着用上非谓语动词,如 the falling snow 或 Looking out of the window, I saw …。",
+    "sampleWords": ["snow", "falling", "covered", "blanket", "window", "snowman", "bend", "sparkle", "magical", "childhood"]
+  },
+  "dialogues": [
+    {
+      "title": "Playing in the First Snow",
+      "lines": [
+        { "role": "A", "text": "Look, it snowed last night! The whole garden is white.", "cn": "看,昨晚下雪了!整个花园都白了。" },
+        { "role": "B", "text": "Let's go outside. I want to build a snowman with you.", "cn": "我们出去吧,我想和你一起堆雪人。" },
+        { "role": "A", "text": "Good idea! But put on your gloves — it's freezing.", "cn": "好主意!不过戴上手套,天很冷。" },
+        { "role": "B", "text": "Standing in the falling snow, I feel like a happy child again.", "cn": "站在纷飞的雪中,我感觉又像个快乐的孩子。" }
+      ]
+    }
+  ]
+}

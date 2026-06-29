@@ -1,0 +1,53 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "topic": "Write a Recipe for Your Favourite Dish(为你最爱的一道菜写食谱)",
+  "title_en": "My Favourite Dish: Tomato and Egg",
+  "genre": "应用文 / 食谱(recipe:ingredients + step-by-step instructions)",
+  "source": "外研社必修第二册 Unit 1 Developing ideas:Writing a recipe(写一份食谱:配料 + 分步做法,语言简洁、用祈使句和顺序词)。",
+  "prompt_cn": "请用英语为你最喜欢的一道家常菜写一份约80词的食谱,内容包括:① 这道菜的名字和一句简单介绍;② 所需配料(列出3-5种);③ 分步骤的做法(用 First / Next / Then / Finally 等顺序词和祈使句)。注意:步骤清楚、动词用对、首字母大写。",
+  "prompt_en": "Write a recipe (about 80 words) for your favourite home dish. Include: 1) the name of the dish and one sentence about it; 2) the ingredients you need (list 3-5); 3) the steps for making it, using imperative verbs and order words such as First, Next, Then and Finally.",
+  "points": [
+    "写出菜名 + 一句简介(My favourite dish is … / It is easy to make.)",
+    "列出配料(You will need …)",
+    "分步做法,用祈使句 + 顺序词(First, heat the oil. Next, add …)",
+    "动词正确、步骤清楚、便于跟做"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "My favourite dish is tomato and egg. It is quick, healthy and loved by my whole family. You will need three eggs, two tomatoes, a little oil, some salt and a spoonful of sugar. First, beat the eggs and cut the tomatoes into small pieces. Next, heat the oil in a pan and cook the eggs until they are soft. Then add the tomatoes, the salt and the sugar, and stir everything well. Finally, cook for two more minutes and serve it hot with rice.",
+  "model_translation": "我最喜欢的一道菜是番茄炒蛋。它做起来快、又健康,全家人都爱吃。你需要三个鸡蛋、两个番茄、少许油、一些盐和一勺糖。首先,把鸡蛋打散,把番茄切成小块。接着,在锅里热油,把鸡蛋炒到松软。然后加入番茄、盐和糖,把所有东西拌匀。最后再炒两分钟,趁热配米饭上桌。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:菜名与简介 / 配料 / 分步做法" },
+      { "dimension": "结构", "max": 4, "criteria": "顺序清晰、用 First/Next/Then/Finally 连接、步骤便于跟做" },
+      { "dimension": "语言", "max": 5, "criteria": "祈使句和动词使用准确、配料与计量表达地道、语法基本无误" }
+    ],
+    "required_structure": [
+      "菜名与简介 My favourite dish is …",
+      "配料 You will need …",
+      "步骤1 First, …",
+      "步骤2-3 Next, … Then, …",
+      "结尾 Finally, … and serve it hot."
+    ],
+    "key_expressions": [
+      "My favourite dish is tomato and egg.",
+      "You will need three eggs, two tomatoes and a little oil.",
+      "First, beat the eggs and cut the tomatoes into small pieces.",
+      "Finally, cook for two more minutes and serve it hot."
+    ],
+    "useful_words": ["recipe", "ingredients", "heat", "add", "stir", "cook", "serve", "spoonful", "flavour", "fresh"]
+  },
+  "high_sentences": [
+    "My favourite dish is tomato and egg, and it is loved by my whole family.",
+    "You will need three eggs, two tomatoes, a little oil and some salt.",
+    "First, beat the eggs and cut the tomatoes into small pieces.",
+    "Finally, cook for two more minutes and serve it hot with rice."
+  ],
+  "error_pairs": [
+    { "wrong": "First, you heat the oil and add the egg.", "correct": "First, heat the oil and add the egg.", "note": "食谱步骤用祈使句,直接用动词原形,不加 you。" },
+    { "wrong": "Add the tomatoes and cooking for two minutes.", "correct": "Add the tomatoes and cook for two minutes.", "note": "两个并列的祈使动词都用原形,不用 -ing。" },
+    { "wrong": "You will need three egg and two tomato.", "correct": "You will need three eggs and two tomatoes.", "note": "可数名词复数要加 -s。" }
+  ],
+  "paragraph_template": "【食谱结构】\n第1句 菜名+简介:My favourite dish is … It is …\n第2句 配料:You will need …\n第3-5句 做法:First, … Next, … Then, …\n第6句 结尾:Finally, … and serve it hot."
+}

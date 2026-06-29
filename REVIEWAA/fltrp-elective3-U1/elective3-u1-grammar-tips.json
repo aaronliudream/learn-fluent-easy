@@ -1,0 +1,37 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "grade": 12,
+  "content": {
+    "title": "主语从句(what / that / whether · 形式主语 it)速查",
+    "intro": "主语从句就是'一个句子充当主语'。判断口诀:从句缺主语/宾语→用 what;从句完整说事实→用 that;表'是否'→用 whether;为避免头重脚轻,常把从句后置、句首用形式主语 it。",
+    "table": {
+      "headers": ["连接词", "用法 / 例句"],
+      "rows": [
+        ["what", "从句内缺成分(= the thing that):What I say is true.(say 缺宾语)"],
+        ["that", "从句完整、陈述事实(只连接、不作成分):That she tried hard is clear."],
+        ["whether", "表'是否'(开放/未定;句首不用 if):Whether it matters is debated."],
+        ["it(形式主语)", "把从句后置:It is true that … / It takes courage to do …"],
+        ["whoever / whatever", "指人/物作主语:Whoever tries will succeed. / Whatever you post stays."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "从句缺主语或宾语 → 用 what(不能用 that)", "mark": "What matters is health.(matters 缺主语→what)" },
+      { "rule": "从句结构完整、是事实 → 用 that;that 不充当成分但不能省", "mark": "That he changed surprised us." },
+      { "rule": "句首主语从句表'是否'只能用 whether,绝不用 if", "mark": "Whether it works is unknown.(×If)" },
+      { "rule": "to do / that / whether 作主语常后置,句首用形式主语 it", "mark": "It is hard to say. / It is clear that …" }
+    ],
+    "why": [
+      "what = the thing that,本身在从句里当主语或宾语,所以能补足缺成分;that 只起连接、不补成分,故从句必须完整;英语不喜欢主语太长,于是用 it 占位、把真正的主语从句挪到句尾。"
+    ],
+    "gaokaoPoints": [
+      "what 与 that 的区分:看从句是否缺主语/宾语(缺→what,完整→that);语法填空高频。",
+      "句首'是否'用 whether 不用 if;whoever/whatever 引导主语从句作主语。",
+      "It is + adj./n. + that/to do 的形式主语结构,书面表达高分句型。"
+    ],
+    "examVsReal": [
+      { "exam": "What he said is true.(考试/书面)", "real": "The thing he said is true.", "note": "考试爱考 what 主语从句;口语里常换成 the thing (that)…" },
+      { "exam": "It is important that we accept ourselves.(考试)", "real": "Accepting ourselves is important.", "note": "考试用形式主语 it;口语常直接用动名词作主语,更简洁" }
+    ]
+  }
+}

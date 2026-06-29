@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Much of the value of AI lies in its capacity to analyse data.", "opts": ["AI 的价值大多在于它分析数据的能力。", "AI 毫无价值可言。", "AI 只会浪费数据。", "AI 无法分析任何东西。"], "answer": 0 },
+    { "audio": "Almost 50 per cent of US jobs are at risk from automation.", "opts": ["所有工作都很安全。", "近一半的美国工作面临自动化的风险。", "没有任何工作会改变。", "机器无法取代任何人。"], "answer": 1 },
+    { "audio": "We have no choice but to embrace AI and regulate it.", "opts": ["我们应当彻底禁止 AI。", "我们应当完全忽视 AI。", "我们别无选择,只能接纳并管理 AI。", "AI 会自己悄悄消失。"], "answer": 2 },
+    { "audio": "None of us is fully prepared for the challenges of AI.", "opts": ["我们都已为 AI 做好准备。", "AI 不存在任何挑战。", "只有专家才需要担心。", "我们没有谁为 AI 的挑战做好充分准备。"], "answer": 3 },
+    { "audio": "A self-driving car can make judgements based on information.", "opts": ["自动驾驶汽车能根据信息作出判断。", "自动驾驶汽车从不收集信息。", "自动驾驶汽车只会停在原地。", "自动驾驶汽车需要司机帮忙。"], "answer": 0 },
+    { "audio": "AI is not magic, and it is not something to fear.", "opts": ["AI 是一种魔法。", "AI 不是魔法,也不必害怕。", "AI 应当被立刻禁止。", "AI 毫无用处。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Much of the value of AI lies in its ____ to analyse data.（能力）", "opts": ["capacity", "weather", "furniture", "silence"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Taxi drivers may be among the first ____ of automation.（受害者）", "opts": ["gardens", "victims", "engines", "holidays"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "We have no choice but to embrace AI and ____ it.（管理）", "opts": ["melt", "sing", "regulate", "paint"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "AI doctors are on the ____, even if they are not here yet.（即将到来）", "opts": ["mountain", "kitchen", "ticket", "horizon"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "Almost 50 per cent of US jobs ____ at risk from automation.", "opts": ["are", "is", "be", "being"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "None of us ____ fully prepared for the challenges of AI.", "opts": ["are", "is", "be", "been"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "Neither the cars nor the robot ____ truly alive.", "opts": ["are", "be", "is", "being"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "There ____ a few machine-learning problems when the first cars arrive.", "opts": ["is", "be", "being", "are"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["不止一位专家警告过我们人工智能的风险。", "没有专家担心人工智能。", "专家们都很放松。", "人工智能没有任何风险。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "More than one expert has warned us about the risks of AI." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["面临风险的工作数量保持不变。", "面临风险的工作数量逐年上升。", "没有工作面临风险。", "所有工作都很安全。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "The number of jobs at risk is rising every year." }
+  ],
+  "reading": {
+    "passage": "AI is no longer science fiction; it is already part of daily life. Used wisely, it can help us a great deal, but a person, not a machine, is always responsible for how it is used.",
+    "passageCn": "人工智能不再是科幻;它已是日常生活的一部分。善加利用,它能给我们很大帮助,但对它如何被使用负责的,永远是人,而非机器。",
+    "questions": [
+      { "q": "Who is always responsible for how AI is used?", "opts": ["A person, not a machine.", "The machine alone.", "Nobody at all.", "The weather."], "answer": 0 },
+      { "q": "When can AI help us a great deal?", "opts": ["When it is used wisely.", "Only when it is feared.", "Never, in any case.", "Only inside films."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short paragraph giving your opinion on the question \"Is AI a real threat?\" State your view, give one reason with an example, and end with a balanced conclusion. Pay attention to subject-verb agreement.",
+    "promptCn": "就\"AI 是真正的威胁吗?\"写一小段,亮明观点、给一条理由并举例,最后给出平衡的结论。注意主谓一致(分数/百分比、none、there be)。",
+    "sampleWords": ["artificial intelligence", "automation", "capacity", "potentially", "at risk", "embrace", "regulate", "challenge", "benefit", "responsible"]
+  },
+  "dialogues": [
+    {
+      "title": "Will Machines Take Our Jobs?",
+      "lines": [
+        { "role": "A", "text": "Do you think machines will really take our jobs?", "cn": "你觉得机器真的会抢走我们的工作吗?" },
+        { "role": "B", "text": "Some jobs, maybe. Almost half of them are at risk one day.", "cn": "也许会有一些。某些工作有朝一日近一半都面临风险。" },
+        { "role": "A", "text": "That sounds frightening. What can we do about it?", "cn": "听起来挺吓人的。我们能做些什么呢?" },
+        { "role": "B", "text": "Keep learning new skills, so we stay useful beside the machines.", "cn": "不断学习新技能,这样我们就能在机器旁边继续发挥作用。" }
+      ]
+    },
+    {
+      "title": "Friend or Tool?",
+      "lines": [
+        { "role": "A", "text": "Could a robot ever be a real friend, do you think?", "cn": "你觉得机器人能成为真正的朋友吗?" },
+        { "role": "B", "text": "Maybe friendship is more about feelings than about metal.", "cn": "也许友谊更多关乎感情,而不是金属。" },
+        { "role": "A", "text": "But a machine only acts as though it cares.", "cn": "可机器只是装作在乎罢了。" },
+        { "role": "B", "text": "True. In the end, a person decides what really matters.", "cn": "没错。归根结底,是人来决定什么才真正重要。" }
+      ]
+    }
+  ]
+}

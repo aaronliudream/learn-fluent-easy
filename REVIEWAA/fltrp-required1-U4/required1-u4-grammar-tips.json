@@ -1,0 +1,36 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "grade": 10,
+  "content": {
+    "title": "限制性定语从句1·关系代词 who / whom / which / that / whose 速查",
+    "intro": "关系代词在定语从句里代替先行词,并在从句中作主语、宾语或定语(所属)。判断口诀:先看先行词指人还是指物,再看从句缺什么成分。本单元只学关系代词,不碰 when/where/why(那是下一单元)。",
+    "table": {
+      "headers": ["关系代词", "用法 / 例句"],
+      "rows": [
+        ["who", "指人,作主语:the friend who helped me(缺主语)"],
+        ["whom", "指人,作宾语(尤其介词后):the friend with whom I share secrets"],
+        ["which", "指物,作主语/宾语:the gift which she gave me"],
+        ["that", "指人或物,作主语/宾语:the story that touched me"],
+        ["whose", "表所属'……的'(人或物):the girl whose ideas are inspiring"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "从句缺主语/宾语才用关系代词;指人 who/whom/that,指物 which/that", "mark": "the boy who called(缺主语→who)" },
+      { "rule": "介词后只能用 whom(指人)或 which(指物),不能用 that/who", "mark": "with whom √ / with that ×" },
+      { "rule": "表所属用 whose,人和物都行", "mark": "the friend whose help I needed" },
+      { "rule": "先行词被 all / every(thing) / the only / 最高级 修饰时,只用 that,不用 which", "mark": "the only thing that matters √ / which ×" }
+    ],
+    "why": [
+      "关系代词既'指代先行词'又在从句里'占一个成分'(主语/宾语/定语);所以判断时先定指人指物,再看从句缺的是主语、宾语还是'……的'。"
+    ],
+    "gaokaoPoints": [
+      "who/whom/which/that/whose 的选用(看先行词指人指物 + 从句缺什么成分);语法填空、单句改错高频。",
+      "介词 + whom / which 不可用 that;the only / all / 最高级后只用 that。"
+    ],
+    "examVsReal": [
+      { "exam": "the friend with whom I travelled(考试/书面)", "real": "the friend I travelled with", "note": "口语常把介词放句末并省略关系代词" },
+      { "exam": "the gift that she gave me(考试)", "real": "the gift she gave me", "note": "作宾语的关系代词口语里常省略" }
+    ]
+  }
+}

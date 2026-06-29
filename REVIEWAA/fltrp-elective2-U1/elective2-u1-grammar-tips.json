@@ -1,0 +1,35 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "grade": 11,
+  "content": {
+    "title": "将来进行时 will be doing 速查",
+    "intro": "将来进行时 = will be + doing。核心含义:① 将来某一时刻\"正在进行\"的动作;② 委婉客观地询问对方安排;③ 顺理成章、按计划会发生的将来。判断口诀:看到 this time tomorrow / at 8 tonight / while you are… 等\"将来某点或同时\"标志,就用 will be doing。",
+    "table": {
+      "headers": ["用法", "标志 / 例句"],
+      "rows": [
+        ["将来某刻正在进行", "this time tomorrow / at 8 tonight:I will be taking my exam this time tomorrow."],
+        ["与另一动作同时进行", "while you are…:While you are sleeping, I will be travelling to work."],
+        ["委婉询问安排", "Will you be doing…?:Will you be using the car tonight?"],
+        ["顺理成章的将来", "…anyway / as usual:I will be seeing him tomorrow anyway."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "结构固定:will be + 现在分词(doing),be 不能省", "mark": "will be working √ / will working ×" },
+      { "rule": "强调那一刻\"正进行/持续\"用 will be doing;表\"一次性完成/承诺/决定\"用 will do", "mark": "At 8 I will be having dinner(进行)/ I will pay you back(承诺)" },
+      { "rule": "Will you be doing…? 比 Will you do…? 更客观礼貌,不带请求或施压", "mark": "Will you be using it?(询问)/ Will you use it?(像请求)" },
+      { "rule": "状态动词(know/like/be 等)一般不用进行时", "mark": "I will know √ / I will be knowing ×" }
+    ],
+    "why": [
+      "将来进行时把镜头对准\"将来的某一刻\",描述那一刻正在持续的画面;所以它常和精确的将来时间点或另一个同时发生的动作搭配,而一般将来时只是笼统地说\"将会做\"。"
+    ],
+    "gaokaoPoints": [
+      "will be doing 与 will do 的辨析(进行/背景 vs 整体/完成):看有没有 this time tomorrow、at + 钟点、while 等标志。",
+      "Will you be doing…? 作委婉询问;I'll be doing… 表顺理成章的将来,是语法填空与语境选择高频考点。"
+    ],
+    "examVsReal": [
+      { "exam": "This time tomorrow I will be flying to London.(考试)", "real": "This time tomorrow I'll be flying to London.", "note": "口语里 will 常缩写成 'll,意思不变" },
+      { "exam": "Will you be using the computer this evening?(考试·委婉)", "real": "Are you going to use the computer tonight? / You using the computer later?", "note": "日常口语也常用 be going to 或更随意的说法表达同样的询问" }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "topic": "Write a Part-time Job Application Letter(写一封兼职求职信)",
+  "title_en": "Application for a Part-time Tour Guide",
+  "genre": "应用文 / 求职信(application letter:state the position + relevant experience + qualifications + restate interest)",
+  "source": "外研社(新标准)选择性必修第四册 Unit 1 Writing an application letter:为兼职岗位写一封正式求职信(说明应聘职位与来源、相关经历、个人优势、礼貌结尾)。",
+  "prompt_cn": "假设你叫 Li Hua,你在校园网上看到一则兼职招聘:City Tours Agency 招聘周末兼职导游(part-time local tour guide)。请用英语写一封约100词的求职信,内容包括:① 说明应聘的职位及从何处得知;② 你为何适合这份工作(对家乡历史的了解、英语能力);③ 相关经历(曾为外国朋友做过城市导览);④ 礼貌结尾并留下联系方式。注意:用正式书信格式,时态使用正确(past/present/future 各得其所)。",
+  "prompt_en": "Suppose you are Li Hua. You saw an advertisement on the school website: City Tours Agency wants a part-time local tour guide for weekends. Write an application letter (about 100 words) including: 1) the position and where you learnt about it; 2) why you are suitable (knowledge of your home city's history, your English); 3) relevant experience (you once guided foreign friends around your city); 4) a polite ending with your contact information. Use a formal letter format and the correct tenses.",
+  "points": [
+    "说明应聘职位与信息来源(I am writing to apply for ... as advertised on ...)",
+    "陈述个人优势:对家乡历史的了解 + 英语能力(present)",
+    "陈述相关经历(past:I once organised ...)",
+    "礼貌结尾、表达期待并留联系方式(future:I would welcome the chance to ...)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Dear Sir or Madam,\n\nI am writing to apply for the position of a part-time tour guide, as advertised on our school website. As I plan to work in the tourism industry one day, I would welcome this opportunity.\n\nI know almost every corner of my home city and have a real passion for its history. I can also speak English fluently, which will help me serve foreign visitors well. Last summer, I organised a tour of the old town for some exchange students, and they gave me very warm feedback.\n\nI would be delighted to discuss my application further. You can reach me at lihua@email.com.\n\nYours faithfully,\nLi Hua",
+  "model_translation": "尊敬的先生/女士:\n\n我写信申请贵社兼职导游一职,该招聘信息见于我校校园网。由于我打算将来从事旅游业,我非常珍惜这次机会。\n\n我熟悉家乡的几乎每个角落,并对它的历史充满热情。我英语流利,这有助于我更好地服务外国游客。去年夏天,我曾为一些交换生组织了一次老城游览,他们给了我非常热情的反馈。\n\n我很乐意进一步面谈我的申请。您可通过 lihua@email.com 与我联系。\n\n谨上\n李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:职位与来源 / 个人优势 / 相关经历 / 礼貌结尾+联系方式" },
+      { "dimension": "结构", "max": 4, "criteria": "正式书信格式、分段清楚、首尾呼应、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "时态正确(过去经历用一般过去时、能力用现在时、意愿用 will/would)、句式词汇多样、基本无语法错误" }
+    ],
+    "required_structure": [
+      "称呼 Dear Sir or Madam,",
+      "目的 I am writing to apply for the position of ... as advertised on ...",
+      "优势 I know my home city well and can speak English fluently.",
+      "经历 Last summer, I organised a tour for some exchange students.",
+      "结尾 I would be delighted to discuss my application further. Yours faithfully, Li Hua"
+    ],
+    "key_expressions": [
+      "I am writing to apply for the position of a part-time tour guide.",
+      "I have a real passion for the history of my home city.",
+      "Last summer, I organised a tour of the old town for exchange students.",
+      "I would welcome the opportunity to gain experience in this field."
+    ],
+    "useful_words": ["apply", "position", "advertise", "tour guide", "experience", "fluently", "passion", "organise", "feedback", "opportunity"]
+  },
+  "high_sentences": [
+    "I am writing to apply for the position of a part-time tour guide, as advertised on our school website.",
+    "I know almost every corner of my home city and have a real passion for its history.",
+    "Last summer, I organised a tour of the old town for some exchange students.",
+    "I would be delighted to discuss my application further."
+  ],
+  "error_pairs": [
+    { "wrong": "I am writing to apply the position.", "correct": "I am writing to apply for the position.", "note": "apply for sth 固定搭配,不可漏 for。" },
+    { "wrong": "Last summer I organise a tour for students.", "correct": "Last summer I organised a tour for students.", "note": "Last summer 表过去,谓语用一般过去时。" },
+    { "wrong": "I will welcome the opportunity to discussing it.", "correct": "I would welcome the opportunity to discuss it.", "note": "婉转表愿望用 would;opportunity to do sth 后接动词原形。" }
+  ],
+  "paragraph_template": "【兼职求职信结构】\n称呼:Dear Sir or Madam,\n第1段 目的:I am writing to apply for the position of … as advertised on …\n第2段 优势+经历:I know … well and can … . Last summer, I organised … .\n第3段 结尾:I would be delighted to discuss my application further. You can reach me at … .\n落款:Yours faithfully, Li Hua"
+}

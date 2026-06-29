@@ -1,0 +1,32 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(庆祝/家庭主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Last year, Mei wanted to surprise her grandmother on her birthday, which happened to fall during the festival week. She quietly hung bright paper lanterns around the yard and cooked a warm bowl of sweet rice balls, her grandmother's favourite treat. When the old lady stepped outside and saw the soft glow in the evening air, she was so moved that tears came to her eyes.",
+    "questions": [
+      {
+        "q": "Why did Mei hang lanterns and cook rice balls?",
+        "options": [
+          "She wanted to give her grandmother a birthday surprise.",
+          "She was asked to clean up the yard.",
+          "She wanted to sell them at the festival.",
+          "She was practising for a cooking competition."
+        ],
+        "answer": "A",
+        "explanation": "短文说她想在祖母生日时给她惊喜,是对原文的转述;其余与原文不符。"
+      },
+      {
+        "q": "How did the grandmother feel when she saw the lanterns?",
+        "options": [
+          "Bored and tired of the noise.",
+          "Deeply touched, almost to tears.",
+          "Angry about the mess in the yard.",
+          "Worried about the cost of the food."
+        ],
+        "answer": "B",
+        "explanation": "末句说她感动得热泪盈眶,即深受触动;此处覆盖短文后半段,与首句不同位置。"
+      }
+    ]
+  }
+}

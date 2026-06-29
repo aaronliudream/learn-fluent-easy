@@ -1,0 +1,338 @@
+{
+  "volume": "elective4",
+  "unit": "U5",
+  "topic": "The Mysteries of the Maya",
+  "source": "外研社版选择性必修第四册 Unit 5 同主题阅读(玛雅文明概述/少年的星图/城市为何被弃/深海的秘密/面对未知/中国深海探索)。词限 U5/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Mysteries of the Maya",
+      "topic_cn": "说明·玛雅文明概述",
+      "body": "China is not the only land with an ancient past full of wonder. Far across the ocean, in the hot forests of Central America, the Maya created one of the greatest civilisations the world has ever seen. They raised tall stone pyramids, traced the movements of the stars, and produced a calendar so exact that it lost only a few seconds each year. Most amazing of all, they did this without the wheel, without metal tools, and without any large animals to help them carry heavy loads. The Maya also invented a true writing system of more than eight hundred signs, some standing for objects and some for sounds. Even today, no one has been able to read every part of it. By around 700 AD their cities were at their peak, yet within a few generations these cities were left empty and slowly swallowed by the jungle. Why such a clever people gave up their homes is a puzzle that still draws curious minds from around the world.",
+      "vocab_notes": [
+        {
+          "word": "civilisation",
+          "cn": "文明"
+        },
+        {
+          "word": "pyramid",
+          "cn": "金字塔"
+        },
+        {
+          "word": "astronomy(stars)",
+          "cn": "天文(星象)"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What made the Maya's achievements especially remarkable?",
+          "options": [
+            "They managed all this without wheels, metal tools or large animals.",
+            "They had modern machines to help them work.",
+            "They simply copied a nearby civilisation.",
+            "They were guided by European explorers."
+          ],
+          "answer_index": 0,
+          "explanation": "原文指出他们没有轮子、金属工具和大型牲畜却完成这些,选项为其转述。"
+        },
+        {
+          "stem": "What does the text say about the Maya writing system?",
+          "options": [
+            "It has been completely understood.",
+            "Part of it still cannot be read today.",
+            "It used only ten simple signs.",
+            "It was borrowed from the Chinese."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'no one has been able to read every part of it' 的转述。"
+        },
+        {
+          "stem": "What happened to the Maya cities after about 700 AD?",
+          "options": [
+            "They were left empty and taken over by the forest.",
+            "They kept growing larger every year.",
+            "They were all rebuilt in stronger stone.",
+            "They were moved closer to the coast."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'left empty and slowly swallowed by the jungle' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Teenager's Star Map",
+      "topic_cn": "记叙·少年甘德瑞的星图",
+      "body": "In 2016, a fifteen-year-old Canadian boy named William Gadoury made headlines around the world. He had been fascinated by the Maya since he was very young, and he spent hours studying ancient star charts. Comparing them with maps, he noticed something strange: the positions of the known Maya cities seemed to match the patterns of the stars. If the old cities lined up with the stars, he reasoned, then there might be another city, still unknown, hidden deep in the jungle where one bright star pointed. He even gave his imagined city a name. Newspapers loved the story of the clever teenager who might have found a city from his own bedroom. Scholars, however, were not convinced. They dismissed his theory, saying the shapes he saw were probably just chance. Yet whatever the truth may be, William's idea showed how strongly the mysteries of the Maya still pull at the human imagination, inviting both children and experts alike to dream.",
+      "vocab_notes": [
+        {
+          "word": "intrigue(fascinated)",
+          "cn": "激起兴趣"
+        },
+        {
+          "word": "dismiss",
+          "cn": "否定"
+        },
+        {
+          "word": "the unknown",
+          "cn": "未知"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did William Gadoury become famous?",
+          "options": [
+            "He personally dug up a buried Maya city.",
+            "He suggested a hidden Maya city might exist by studying the stars.",
+            "He was the first person to read Maya writing.",
+            "He built a large model of a Maya pyramid."
+          ],
+          "answer_index": 1,
+          "explanation": "原文讲他通过对比星图推测丛林中可能有未知城市,选项为转述。"
+        },
+        {
+          "stem": "How did scholars react to his theory?",
+          "options": [
+            "They fully agreed with every part of it.",
+            "They paid him to keep working on it.",
+            "They rejected it as most likely only coincidence.",
+            "They asked him to lead an expedition."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'dismissed his theory, saying the shapes... were probably just chance' 的转述。"
+        },
+        {
+          "stem": "What does the writer think William's story shows?",
+          "options": [
+            "The Maya civilisation never really existed.",
+            "Ancient star charts are useless today.",
+            "Only trained experts care about the Maya.",
+            "The Maya mysteries still capture people's imagination."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'still pull at the human imagination' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Why the Cities Were Abandoned",
+      "topic_cn": "说明·城市衰亡的原因",
+      "body": "Why did the Maya leave their great cities? After many years of study, scientists still cannot give one simple answer. Several causes probably worked together. As the population grew, the people needed more and more land. They turned wetlands into fields and cut down forests for wood, changing the landscape around them. In doing so, they may have weakened the land's natural ability to deal with hard times. Then the weather turned against them. Studies suggest that, between 700 and 1000 AD, far fewer storms than usual reached the region, leading to a long series of droughts. With less rain, crops failed, food ran short, and quarrels between cities grew worse. Many researchers now believe these droughts were the main reason the cities began to fall, though they collapsed at different speeds in different places. Whatever the exact mix of causes, the once-busy cities were finally abandoned, falling into ruin and leaving behind only silent stone for later people to wonder at.",
+      "vocab_notes": [
+        {
+          "word": "expansion(grew)",
+          "cn": "扩张"
+        },
+        {
+          "word": "abandon",
+          "cn": "离弃"
+        },
+        {
+          "word": "fall into ruin",
+          "cn": "衰落败落"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is the Maya collapse hard to explain?",
+          "options": [
+            "Several causes most likely acted together.",
+            "There was clearly just one single cause.",
+            "No records of the period survive at all.",
+            "The cities never actually fell at all."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Several causes probably worked together' 的转述。"
+        },
+        {
+          "stem": "How might the people themselves have harmed their land?",
+          "options": [
+            "By moving all their cities to the coast.",
+            "By clearing forests and draining wetlands for farming.",
+            "By refusing to grow any crops at all.",
+            "By building far too few houses."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'turned wetlands into fields and cut down forests' 的转述。"
+        },
+        {
+          "stem": "What do many researchers see as the main cause of the collapse?",
+          "options": [
+            "A single sudden flood.",
+            "An invasion from across the sea.",
+            "A long period of repeated droughts.",
+            "A loss of their writing system."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'these droughts were the main reason' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Secrets of the Deep Ocean",
+      "topic_cn": "说明·深海中的古城与生命",
+      "body": "The sea hides as many secrets as the jungle. Beneath the waves lie an estimated three million shipwrecks, each one a story of people reaching for the edges of their world. Sometimes whole towns rest under the water. Off the coast of Tunisia, divers found the ancient Roman city of Neapolis, thought to have been swallowed by a giant wave around the fourth century. Its quiet streets and buildings are almost two thousand years old, offering a window onto a distant age. The deep ocean is also home to creatures stranger than any story. Far below the reach of sunlight grow corals that add only a millimetre or two each year, so that some of them may be four thousand years old. Strange fish drift through the blackness, and in the deepest trenches the pressure is crushing. Yet life still clings on, even there. Each new dive reminds us how little of our own planet we have so far truly explored.",
+      "vocab_notes": [
+        {
+          "word": "shipwreck",
+          "cn": "沉船"
+        },
+        {
+          "word": "coral",
+          "cn": "珊瑚"
+        },
+        {
+          "word": "trench",
+          "cn": "海沟"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer compare the sea to at the start?",
+          "options": [
+            "A desert, because both are empty.",
+            "A city, because both are crowded.",
+            "The sky, because both are bright.",
+            "The jungle, because both hide many secrets."
+          ],
+          "answer_index": 3,
+          "explanation": "原文首句把海洋与丛林并列,都藏着秘密,为其转述。"
+        },
+        {
+          "stem": "What is special about the city of Neapolis?",
+          "options": [
+            "A whole ancient town lies preserved under the sea.",
+            "It is a busy modern port today.",
+            "It was built only a few years ago.",
+            "It stands high up in the mountains."
+          ],
+          "answer_index": 0,
+          "explanation": "原文讲整座古罗马城沉在海下、街道建筑近两千年,为其转述。"
+        },
+        {
+          "stem": "What does the writer say about deep-sea corals?",
+          "options": [
+            "They die within a single year.",
+            "They grow extremely slowly and can be very old.",
+            "They grow faster than any land plant.",
+            "They cannot live unless sunlight reaches them."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'add only a millimetre or two each year... four thousand years old' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Facing the Unknown",
+      "topic_cn": "议论·面对未知的两种反应",
+      "body": "When something strange suddenly appears, many of us feel a sharp urge to run. This 'flight instinct' is very old. Long ago, making a quick getaway often kept our ancestors alive, helping them escape wild animals, fire and other dangers. So when you meet a strange object or a new situation, part of you may want to steer clear of it, and that caution can sometimes be wise. Yet not everyone follows this instinct. Instead of retreating to safety, some of our ancestors chose to subdue their fear and step towards the unknown. That same curiosity led people to discover the use of fire and, much later, to set out across uncharted seas and ice. The explorer Roald Amundsen, for example, crossed one of the harshest places on Earth to reach the South Pole. Such bravery has pushed humankind forward. Of course, wise explorers still think twice and look into things first; courage does not mean throwing yourself blindly into danger.",
+      "vocab_notes": [
+        {
+          "word": "getaway",
+          "cn": "逃走"
+        },
+        {
+          "word": "subdue",
+          "cn": "克制"
+        },
+        {
+          "word": "uncharted",
+          "cn": "未标明的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does the writer say the flight instinct developed?",
+          "options": [
+            "People in the past simply disliked any exercise.",
+            "It made hunting large animals much easier.",
+            "Running away once helped early people survive real dangers.",
+            "It helped ancient people sleep better at night."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'keeping our ancestors alive, helping them escape... dangers' 的转述。"
+        },
+        {
+          "stem": "What did some ancestors do instead of running away?",
+          "options": [
+            "They hid inside caves for the rest of their lives.",
+            "They quickly forgot how to use fire.",
+            "They gave up all sense of curiosity.",
+            "They controlled their fear and explored the unknown."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'subdue their fear and step towards the unknown' 的转述。"
+        },
+        {
+          "stem": "What does the writer say about wise exploration?",
+          "options": [
+            "It still involves careful thought, not blind risk.",
+            "It means rushing into every possible danger.",
+            "It should always be completely avoided.",
+            "It is only ever suitable for famous people."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'think twice and look into things first... not throwing yourself blindly' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "China Explores the Deep Sea",
+      "topic_cn": "说明·中国的深海探索",
+      "body": "Today many countries are racing to explore the deep ocean, and China has become one of the leaders. Its underwater vessels, such as the Jiaolong and the Shenhai Yongshi, can dive thousands of metres below the surface. The Jiaolong once reached a depth of over seven thousand metres, setting a record for a crewed dive and placing China among the world's top ocean explorers. These vessels do far more than break records. The research they carry out helps scientists understand how the sea bed was formed and where useful resources might lie. One of the most notable finds is a strange ice-like substance, often called 'fire ice', discovered under the South China Sea. It may one day become an important source of energy. Furthermore, the data gathered helps identify good areas for deep-sea drilling. Step by step, such work is opening a new age of discovery, in which the world beneath the waves may grow as familiar to us as the land above.",
+      "vocab_notes": [
+        {
+          "word": "vessel",
+          "cn": "船;潜水器"
+        },
+        {
+          "word": "substance",
+          "cn": "物质"
+        },
+        {
+          "word": "drilling",
+          "cn": "钻探"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What record did the Jiaolong set?",
+          "options": [
+            "The fastest ship on the ocean surface.",
+            "The deepest dive ever made by a crewed submarine.",
+            "The longest bridge ever built over water.",
+            "The largest fishing boat in all of Asia."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a record for a crewed dive... over seven thousand metres' 的转述。"
+        },
+        {
+          "stem": "Why is 'fire ice' described as important?",
+          "options": [
+            "It is mainly used to keep drinks cold.",
+            "It is a rare kind of deep-sea fish.",
+            "It could one day serve as a valuable source of energy.",
+            "It helps make the ocean water warmer."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'may one day become an important source of energy' 的转述。"
+        },
+        {
+          "stem": "Besides setting records, what do the vessels help scientists do?",
+          "options": [
+            "Catch many more fish for food.",
+            "Travel faster than modern aeroplanes.",
+            "Take the place of satellites in space.",
+            "Learn how the sea bed formed and where resources lie."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'understand how the sea bed was formed and where useful resources might lie' 的转述。"
+        }
+      ]
+    }
+  ]
+}

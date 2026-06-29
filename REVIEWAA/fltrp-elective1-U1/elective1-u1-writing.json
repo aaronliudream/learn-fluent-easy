@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "topic": "Write an Introduction to a Comedian(写一篇喜剧演员介绍)",
+  "title_en": "A Comedian Who Makes Me Laugh",
+  "genre": "博客 / 人物介绍(introduce a comedian: who, why you like them, their funniest work, your comment)",
+  "source": "外研社(新标准)选择性必修一 Unit 1 Presenting/Writing:choose a comedian who makes you laugh and write a short introduction(参照课本 Charlie Chaplin 博客结构)。",
+  "prompt_cn": "请用英语写一篇约 80 词的短文,向同学介绍一位让你发笑的喜剧演员,内容包括:① 简要介绍他/她是谁;② 你为什么喜欢他/她;③ 他/她最好笑的一部作品或一个片段;④ 你的评价。注意尽量用上非限制性定语从句(如 …, who … / …, which …)。",
+  "prompt_en": "Write a short text (about 80 words) introducing a comedian who makes you laugh. Include: 1) a brief introduction to who they are; 2) why you like them; 3) their funniest work or scene; 4) your own comment. Try to use non-defining relative clauses (e.g. …, who … / …, which …).",
+  "points": [
+    "介绍是谁(… is a comedian / actor who …)",
+    "为什么喜欢(I like him/her because …)",
+    "最好笑的作品或片段(His funniest scene is …, which …)",
+    "你的评价 + 尽量用非限制性定语从句"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "My favourite comedian is Charlie Chaplin, who became famous when films were still silent. I love him because he could make people laugh without saying a single word. His most famous character is the Tramp, who is a poor but kind-hearted little man. In my favourite film, Modern Times, the Tramp falls behind on a factory line, which always makes me roar with laughter. Chaplin showed that humour, which needs no language, can bring joy to people all over the world.",
+  "model_translation": "我最喜欢的喜剧演员是查理·卓别林,他在电影还是无声片的年代就出了名。我喜欢他,因为他不用说一个字就能逗人发笑。他最著名的角色是流浪汉,一个贫穷却善良的小人物。在我最爱的电影《摩登时代》里,流浪汉在工厂流水线上跟不上节奏,这总能让我哄堂大笑。卓别林证明了:无需语言的幽默能给全世界的人带来欢乐。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:是谁 / 为什么喜欢 / 最好笑的作品或片段 / 你的评价" },
+      { "dimension": "结构", "max": 4, "criteria": "条理清楚、句句相关、代词指代清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、非限制性定语从句运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "介绍是谁 … is a comedian who …",
+      "为什么喜欢 I like him/her because …",
+      "最好笑片段 His funniest scene is …, which …",
+      "评价 … showed that humour, which …, can …"
+    ],
+    "key_expressions": [
+      "My favourite comedian is Charlie Chaplin, who became famous in the silent-film age.",
+      "He could make people laugh without saying a single word.",
+      "His most famous character is the Tramp, who is a poor but kind-hearted man.",
+      "The Tramp falls behind on a factory line, which always makes me roar with laughter."
+    ],
+    "useful_words": ["comedian", "famous", "silent", "character", "humour", "roar with laughter", "scene", "kind-hearted", "entertain", "audience"]
+  },
+  "high_sentences": [
+    "My favourite comedian is Charlie Chaplin, who became famous when films were still silent.",
+    "His most famous character is the Tramp, who is a poor but kind-hearted little man.",
+    "The Tramp falls behind on a factory line, which always makes me roar with laughter.",
+    "Chaplin showed that humour, which needs no language, can bring joy to people everywhere."
+  ],
+  "error_pairs": [
+    { "wrong": "Charlie Chaplin, that became famous, made silent films.", "correct": "Charlie Chaplin, who became famous, made silent films.", "note": "非限制性定语从句指人用 who,绝不用 that。" },
+    { "wrong": "He fell into a cake, that made everyone laugh.", "correct": "He fell into a cake, which made everyone laugh.", "note": "逗号后指代整句话用 which,不用 that。" },
+    { "wrong": "The Tramp, who his heart is kind, helps others.", "correct": "The Tramp, whose heart is kind, helps others.", "note": "表所属(他的心)用 whose,不用 who。" }
+  ],
+  "paragraph_template": "【喜剧演员介绍结构】\n第1句 是谁:My favourite comedian is …, who …\n第2句 为什么喜欢:I like him/her because …\n第3句 最好笑作品/片段:His funniest scene is …, which …\n第4句 评价:… showed that humour, which …, can …"
+}

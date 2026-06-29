@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "topic": "Introduce a Nature-Inspired Building(介绍一座向自然学习的建筑)",
+  "title_en": "A Building That Learns from Nature",
+  "genre": "说明 / 介绍(introduce a green building: what inspired it + how it works + why it helps the environment)",
+  "source": "外研社选必三 Unit 5 Using language / writing:介绍一座受自然启发的建筑,运用本单元非谓语结构(doing/to do 作主语、宾语、表语)。",
+  "prompt_cn": "你校英文报正在征集\"建筑中的自然\"主题短文。请用英语写一篇约100词的介绍,内容包括:① 这座建筑从哪种自然事物获得灵感;② 它如何运作(如收集雨水、节省能源等);③ 为什么它对环境有益。要求恰当使用本单元的非谓语结构(如 Designing such buildings takes…/Her goal is to copy…/The aim is using less energy)。",
+  "prompt_en": "Your school's English newspaper is collecting short articles on the theme 'Nature in Architecture'. Write a passage of about 100 words to introduce a nature-inspired building, including: 1) what natural thing gave the designer the idea; 2) how the building works (for example, collecting rainwater or saving energy); 3) why it is good for the environment. Try to use the non-finite structures from this unit (doing / to do as subject, object and predicative).",
+  "points": [
+    "灵感来源(The idea came from… / Watching … inspired the architect)",
+    "运作方式(Collecting rainwater saves… / Its job is to turn sunlight into energy)",
+    "环境益处(Using less energy helps protect…)",
+    "恰当运用非谓语作主语/宾语/表语,句子地道连贯"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Copying nature is one of the cleverest things an architect can do, and the Eastgate Centre in Harare proves it. The idea came from watching how termites keep their tall mounds cool. Mick Pearce's goal was to build something that needed no ordinary air conditioning. Designing such a building took years, but the result is superb. During the day the walls draw in warm air; at night they slowly release the stored heat. Using far less energy than normal buildings, the Centre also costs less to run. To learn from nature, it seems, is to design for the future.",
+  "model_translation": "模仿自然是建筑师能做的最聪明的事之一,哈拉雷的东门中心就是证明。灵感来自观察白蚁如何让高高的土丘保持凉爽。米克·皮尔斯的目标是建一座无需普通空调的建筑。设计这样一座建筑花了好几年,但成果极为出色。白天墙体吸入暖空气,夜里又缓缓释放储存的热量。东门中心耗能远低于普通建筑,运行成本也更低。看来,向自然学习,就是为未来而设计。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:灵感来源 / 运作方式 / 环境益处" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一座建筑展开、信息有序、衔接自然、首尾呼应" },
+      { "dimension": "语言", "max": 5, "criteria": "恰当运用非谓语作主语/宾语/表语,句型词汇准确多样,语法基本无误" }
+    ],
+    "required_structure": [
+      "主语:Copying nature is… / Designing such a building took…",
+      "宾语:The idea came from watching… / Mick Pearce wanted to build…",
+      "表语:His goal was to build… / To learn from nature is to design…",
+      "益处句:Using far less energy, the Centre also costs less to run."
+    ],
+    "key_expressions": [
+      "The idea came from watching how termites keep cool.",
+      "His goal was to build something that needed no air conditioning.",
+      "Designing such a building took years, but the result is superb.",
+      "Using far less energy than normal buildings, it costs less to run."
+    ],
+    "useful_words": ["architect", "inspire", "mimic", "termite", "mound", "energy", "rainwater", "convert", "superb", "environment"]
+  },
+  "high_sentences": [
+    "Copying nature is one of the cleverest things an architect can do.",
+    "Mick Pearce's goal was to build something that needed no ordinary air conditioning.",
+    "Designing such a building took years, but the result is superb.",
+    "To learn from nature, it seems, is to design for the future."
+  ],
+  "error_pairs": [
+    { "wrong": "Design such a building took years.", "correct": "Designing such a building took years.", "note": "作主语要用动名词或不定式,不能用动词原形。" },
+    { "wrong": "His goal was build a cool house.", "correct": "His goal was to build a cool house.", "note": "be 后作表语用不定式 to do。" },
+    { "wrong": "The idea came from watch the termites.", "correct": "The idea came from watching the termites.", "note": "介词 from 后接动名词。" }
+  ],
+  "paragraph_template": "【介绍一座向自然学习的建筑】\n开头:Copying nature is …(动名词作主语点题)\n灵感:The idea came from watching …(介词+动名词)\n运作:His goal was to build …(不定式作表语) + Collecting / Using …(动名词作主语说明原理)\n益处+收尾:Using less energy, it … ；To learn from nature is to design for the future."
+}

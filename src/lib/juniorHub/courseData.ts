@@ -11,13 +11,15 @@ import year3 from "@/data/gaokaoHub/year3.json";
 // 出版社分叉(上外):共用关卡播放器按 unitId 解析单元时,需能认出 sufe_* 单元(id 全局唯一,
 // 人教/初中 id 先在 COURSES 命中,这里只作兜底,绝不影响既有单元)。
 import sufeCourses from "@/data/gaokaoHub/sufe-courses.json";
+import fltrpCourses from "@/data/gaokaoHub/fltrp-courses.json";
 
 const ALL_GRADES: JuniorHubGrade[] = [7, 8, 9, 10, 11, 12];
 
-// 非人教出版社的课本结构(目前仅上外)。按 unitId 兜底查,grade 键无关。
-const FORK_COURSES: GradeCourseDef[] = Object.values(
-  sufeCourses as unknown as Record<string, GradeCourseDef>,
-);
+// 非人教出版社的课本结构(上外 + 外研社)。按 unitId 兜底查,grade 键无关。
+const FORK_COURSES: GradeCourseDef[] = [
+  ...Object.values(sufeCourses as unknown as Record<string, GradeCourseDef>),
+  ...Object.values(fltrpCourses as unknown as Record<string, GradeCourseDef>),
+];
 
 function findUnitInForks(unitId: string): UnitDef | null {
   for (const course of FORK_COURSES) {

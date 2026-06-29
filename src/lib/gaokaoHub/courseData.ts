@@ -5,6 +5,7 @@ import year1 from "@/data/gaokaoHub/year1.json";
 import year2 from "@/data/gaokaoHub/year2.json";
 import year3 from "@/data/gaokaoHub/year3.json";
 import sufeCourses from "@/data/gaokaoHub/sufe-courses.json";
+import fltrpCourses from "@/data/gaokaoHub/fltrp-courses.json";
 
 const COURSES: Record<GaokaoHubGrade, GradeCourseDef> = {
   1: (year1 as { year1: GradeCourseDef }).year1,
@@ -14,17 +15,13 @@ const COURSES: Record<GaokaoHubGrade, GradeCourseDef> = {
 
 // 上外(sufe)课本同步结构(只含已灌库的 required1/required2;9关全 DB 驱动)。
 const SUFE_COURSES = sufeCourses as unknown as Record<GaokaoHubGrade, GradeCourseDef>;
-// 外研社(fltrp)暂无内容 → 空结构(不泄漏人教单元;books 页已按 DB count 门控为整理中)。
-const EMPTY_COURSES: Record<GaokaoHubGrade, GradeCourseDef> = {
-  1: { name: "高一", semesters: {} },
-  2: { name: "高二", semesters: {} },
-  3: { name: "高三", semesters: {} },
-};
+// 外研社(fltrp)全 7 册课本同步结构(9关全 DB 驱动)。
+const FLTRP_COURSES = fltrpCourses as unknown as Record<GaokaoHubGrade, GradeCourseDef>;
 
-/** 按 publisher 选课本结构源。pep(默认)→ 人教 year*.json(零回归);sufe → 上外;fltrp → 空。 */
+/** 按 publisher 选课本结构源。pep(默认)→ 人教 year*.json(零回归);sufe → 上外;fltrp → 外研社。 */
 function coursesFor(publisher: Publisher = DEFAULT_PUBLISHER): Record<GaokaoHubGrade, GradeCourseDef> {
   if (publisher === "sufe") return SUFE_COURSES;
-  if (publisher === "fltrp") return EMPTY_COURSES;
+  if (publisher === "fltrp") return FLTRP_COURSES;
   return COURSES;
 }
 

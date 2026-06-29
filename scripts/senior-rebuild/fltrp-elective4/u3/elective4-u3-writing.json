@@ -1,0 +1,52 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "topic": "Recommend a Chinese Cultural Place to a Foreign Friend(向外国朋友推荐一处中国文化胜地)",
+  "title_en": "An Email of Recommendation",
+  "genre": "电子邮件 / 应用文(recommend a place of cultural highlights + give reasons)",
+  "source": "外研社选择性必修四 Unit 3 Writing:read the email and write a reply, suggesting a place in China she can visit。要求用状语从句把推荐与理由串起来。",
+  "prompt_cn": "假设你叫李华,你的美国朋友 Selena 计划寒假来中国旅行,想找一处兼具乐趣与传统文化的地方。请用英语给她写一封约100词的回信,内容包括:① 推荐一处文化胜地(如敦煌);② 说明它的特别之处;③ 给出两条推荐理由。注意:恰当使用状语从句(when/if/because/so that/although 等)使行文连贯。",
+  "prompt_en": "Suppose you are Li Hua. Your American friend Selena plans to travel in China during the winter vacation and wants a place full of both fun and traditional culture. Write a reply email (about 100 words) including: 1) recommend one place of cultural highlights (e.g. Dunhuang); 2) say what is special about it; 3) give two reasons for your recommendation. Use adverbial clauses (when / if / because / so that / although) to link your ideas.",
+  "points": [
+    "明确推荐一处地点(I'd strongly recommend …)",
+    "说明其特别之处(What makes it special is …)",
+    "给出至少两条理由,用状语从句串联(because … / so that …)",
+    "得体的邮件开头与结尾 + 状语从句衔接连贯"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Dear Selena,\n\nGreat to hear that you're coming to China! If you want both fun and culture, I'd strongly recommend Dunhuang in the northwest. Although it sits on the edge of the desert, it is one of the richest cultural cities in the country. What makes it special is the Mogao Grottoes, where hundreds of ancient caves are covered with beautiful wall paintings. You should go because the murals show how East once met West along the Silk Road. Visit in the early morning so that you can also watch the sunrise over the sand mountain. You'll love it!\n\nYours,\nLi Hua",
+  "model_translation": "亲爱的 Selena:\n\n很高兴听说你要来中国!如果你既想玩得开心又想感受文化,我强烈推荐西北的敦煌。虽然它地处沙漠边缘,却是全国文化最丰富的城市之一。它的特别之处在于莫高窟——数百个古老洞窟里布满精美的壁画。你该去那儿,因为这些壁画展现了昔日丝绸之路上东西方的相遇。建议清晨前往,以便还能看到沙山上的日出。你一定会爱上它的!\n\n此致\n李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:推荐地点 / 特别之处 / 至少两条理由" },
+      { "dimension": "结构", "max": 4, "criteria": "邮件格式完整、围绕一处展开、状语从句衔接自然、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、状语从句(when/if/because/so that/although)运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "开头问候 Great to hear that you're coming to China!",
+      "推荐 If you want both fun and culture, I'd strongly recommend …",
+      "特别之处 What makes it special is …",
+      "理由 You should go because … / Visit early so that …"
+    ],
+    "key_expressions": [
+      "If you want both fun and culture, I'd strongly recommend Dunhuang.",
+      "Although it sits on the edge of the desert, it is rich in culture.",
+      "You should go because the murals show how East met West.",
+      "Visit in the early morning so that you can watch the sunrise."
+    ],
+    "useful_words": ["recommend", "heritage", "grotto", "mural", "ancient", "desert", "exchange", "because", "so that", "although"]
+  },
+  "high_sentences": [
+    "If you want both fun and culture, I'd strongly recommend Dunhuang in the northwest.",
+    "Although it sits on the edge of the desert, it is one of the richest cultural cities in the country.",
+    "You should go because the murals show how East once met West along the Silk Road.",
+    "Visit in the early morning so that you can also watch the sunrise over the sand mountain."
+  ],
+  "error_pairs": [
+    { "wrong": "Although it sits in the desert, but it is rich in culture.", "correct": "Although it sits in the desert, it is rich in culture.", "note": "although 与 but 不能同时出现在一句中。" },
+    { "wrong": "Go early so that you can watching the sunrise.", "correct": "Go early so that you can watch the sunrise.", "note": "情态动词 can 后接动词原形。" },
+    { "wrong": "I recommend Dunhuang because of it has many caves.", "correct": "I recommend Dunhuang because it has many caves.", "note": "because 接句子,because of 接名词/短语,不可混用。" }
+  ],
+  "paragraph_template": "【推荐信结构】\n第1句 问候:Great to hear that you're coming to China!\n第2句 推荐:If you want …, I'd strongly recommend …\n第3-4句 特别之处 + 理由:What makes it special is … You should go because …\n第5句 建议/结尾:Visit early so that … You'll love it!"
+}

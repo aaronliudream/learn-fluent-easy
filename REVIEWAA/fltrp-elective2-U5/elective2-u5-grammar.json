@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U5",
+  "grammar_title": "形式宾语 it(find / think / make / consider it + adj./n. + to do / that 从句)",
+  "source": "外研社选择性必修第二册 Unit 5 Using language:it as an empty object。句子地道、生态环境主题;真正的宾语(不定式 / that 从句)后置,it 预指,that/this/them 无所指,答案唯一。",
+  "points": [
+    {
+      "code": "u5.01",
+      "point": "动词 + it + 形容词 + to do(find/think/feel/consider it hard to…)",
+      "overview": "当不定式作宾语、后面又跟形容词作宾补时,把不定式后移、用 it 作形式宾语顶在前面:find/think/feel/consider/make it + 形容词 + to do…。it 预指后面的不定式,that/this/them 没有所指。"
+    },
+    {
+      "code": "u5.02",
+      "point": "动词 + it + 形容词/名词 + that 从句(make it clear that…)",
+      "overview": "当 that 从句作宾语、后面又跟形容词或名词作宾补时,用 it 作形式宾语:make/find/think/consider it + clear/obvious/a pity + that…。it 预指后面的 that 从句。"
+    },
+    {
+      "code": "u5.03",
+      "point": "make / consider it + 名词 + to do(consider it an honour to…)",
+      "overview": "当不定式作宾语、后面跟名词作宾补时,同样用 it 作形式宾语:make/consider/think it + a rule/an honour/a duty + to do…。若宾语只是普通名词、不是不定式或从句,则不用 it,因此能否用 it 取决于后面是否有后移的不定式 / 从句。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u5.01",
+      "stem": "The rangers found ____ hard to remove every rabbit from the island.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "find it + 形容词 + to do;it 是形式宾语,真正的宾语是后面的不定式 to remove…;that/this/them 无所指。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Visitors think ____ surprising to see so many penguins in one place.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "think it surprising to do;it 预指不定式 to see…。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Experts felt ____ necessary to release a virus to control the rabbits.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "feel it necessary to do;it 是形式宾语,预指 to release…。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "We consider ____ important to protect the birds' natural habitat.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "consider it important to do;it 预指后置不定式。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Scientists found ____ difficult to study the animals at such a high altitude.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "find it difficult to do;真正的宾语是 to study…,用 it 顶位。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The team thought ____ wiser to use traps rather than poison at first.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "think it + 形容词 + to do;it 预指不定式。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Tourists find ____ amazing to watch the elephant seals rest on the shore.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "find it amazing to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The villagers consider ____ rewarding to share their home with wild bees.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "consider it rewarding to do;it 预指 to share…。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Researchers found ____ impossible to save the parakeets in time.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "find it impossible to do;it 顶位,真正的宾语后移。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Many people think ____ unfair to blame only the cats for the disaster.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "think it unfair to do;it 预指不定式。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The guide made ____ easy for us to understand the food chain.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "make it easy (for sb) to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Conservationists find ____ challenging to keep such a fragile world in balance.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "find it challenging to do;it 预指后置不定式。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "We think ____ wonderful to visit a place so wild and natural.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "think it wonderful to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The crew found ____ tiring to search every corner of the rocky island.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "find it tiring to do;真正的宾语是 to search…。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Officials thought ____ urgent to act before more soil was washed away.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "think it urgent to do;it 预指不定式。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "We find ____ encouraging to see the ecology slowly recover.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "find it encouraging to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The scientists felt ____ vital to record every change in the habitat.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "feel it vital to do;it 预指后置不定式。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Most people think ____ worthwhile to spend money on conservation.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "think it worthwhile to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The rangers found ____ useful to bring trained dogs onto the island.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "find it useful to do;真正的宾语后移,用 it 顶位。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Everyone found ____ shocking to learn that the parakeets had died out.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "find it shocking to do;it 预指不定式 to learn…。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The incident made ____ clear that the rabbit problem had to be solved.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "make it clear that…;it 是形式宾语,真正的宾语是后面的 that 从句。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Recent studies have made ____ obvious that human activity harmed the island.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "make it obvious that…;it 预指 that 从句。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The report made ____ plain that the cats were killing the native birds.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "make it plain that…;it 顶位,that 从句后移。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Scientists consider ____ likely that the rats arrived on the early ships.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "consider it likely that…;it 是形式宾语。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "History makes ____ clear that one small change can upset a whole system.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "make it clear that…;it 预指 that 从句。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The new data made ____ evident that the bee population was falling fast.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "make it evident that…;it 是形式宾语。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "We think ____ a pity that so many species have disappeared forever.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "think it a pity that…;it 预指后面的 that 从句,a pity 作宾补。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The guide made ____ clear that visitors must not feed the wild animals.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "make it clear that…;it 是形式宾语。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Experts find ____ worrying that the virus no longer stops the rabbits.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "find it worrying that…;it 预指 that 从句。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The film made ____ obvious that nature can recover if people help.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "make it obvious that…;it 是形式宾语。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Officials made ____ known that the island was at last free of pests.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "make it known that…;it 顶位,that 从句后移。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The story makes ____ clear that humans owe the island a happy ending.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "make it clear that…;it 预指后面的 that 从句。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Researchers consider ____ certain that warming will change many habitats.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "consider it certain that…;it 是形式宾语。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The lecture made ____ plain that biodiversity keeps an ecosystem healthy.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "make it plain that…;it 预指 that 从句。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "We feel ____ a shame that the parakeets were lost so quickly.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "feel it a shame that…;it 是形式宾语,a shame 作宾补。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The teacher made ____ clear that every species has its own role to play.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "make it clear that…;it 预指 that 从句。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "New evidence makes ____ obvious that the rabbits caused the soil erosion.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "make it obvious that…;it 是形式宾语。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The committee thought ____ important that local people join the project.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "think it important that…(虚拟语气);it 预指 that 从句。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The signs make ____ clear that this is a protected nature reserve.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "make it clear that…;it 是形式宾语。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The success made ____ clear that careful planning can save a species.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "make it clear that…;it 预指后面的 that 从句。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The villagers consider ____ an honour to protect the wild forest bees.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "consider it an honour to do;it 是形式宾语,an honour 作宾补,真正的宾语是 to protect…。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The team made ____ a rule to check every trap each morning.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "make it a rule to do;it 预指后置不定式。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Scientists consider ____ their duty to study the endangered species.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "consider it one's duty to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "We think ____ a mistake to bring new animals onto a small island.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "think it a mistake to do;it 预指不定式。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The rangers made ____ a priority to remove the very last cats.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "make it a priority to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Many people consider ____ a privilege to visit such a rare place.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "consider it a privilege to do;it 预指后置不定式。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The guide made ____ a point to explain the food chain clearly.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "make it a point to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Conservationists consider ____ a challenge to keep the habitat safe.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "consider it a challenge to do;it 预指 to keep…。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The crew made ____ their goal to find every remaining rabbit.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "make it one's goal to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Local people think ____ a joy to live so close to nature.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "think it a joy to do;it 预指后置不定式。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The government made ____ a law to ban hunting in the reserve.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "make it a law to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Researchers consider ____ a success to bring the rare species back.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "consider it a success to do;it 预指 to bring…。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "We consider ____ a responsibility to repair the damage we have caused.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "consider it a responsibility to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The school made ____ a tradition to plant young trees every spring.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "make it a tradition to do;it 预指后置不定式。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Visitors think ____ a treat to watch the penguins return each year.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "think it a treat to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The experts made ____ a habit to record the animals every week.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "make it a habit to do;it 预指 to record…。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The villagers consider ____ a blessing to share the forest with the bees.",
+      "options": [
+        "it",
+        "that",
+        "this",
+        "them"
+      ],
+      "answer_index": 0,
+      "explanation": "consider it a blessing to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The team made ____ their mission to give the island a happy ending.",
+      "options": [
+        "that",
+        "it",
+        "this",
+        "them"
+      ],
+      "answer_index": 1,
+      "explanation": "make it one's mission to do;it 预指后置不定式。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "We think ____ a shame to waste such a delicate, beautiful world.",
+      "options": [
+        "that",
+        "this",
+        "it",
+        "them"
+      ],
+      "answer_index": 2,
+      "explanation": "think it a shame to do;it 是形式宾语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The country made ____ a goal to protect its precious natural heritage.",
+      "options": [
+        "that",
+        "this",
+        "them",
+        "it"
+      ],
+      "answer_index": 3,
+      "explanation": "make it a goal to do;it 预指后面的不定式 to protect…。"
+    }
+  ]
+}

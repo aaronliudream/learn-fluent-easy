@@ -1,0 +1,409 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "topic": "Let's Celebrate!",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社版必修第二册 Unit 2 同主题听力(婚礼邀请/压岁钱习俗/新年巡游舞龙/世界读书日/老师退休派对/毕业告别会)。用词限 U2/初中/常见词,答案唯一,与阅读/完形关不撞文章。long=对话,short=独白,长短交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 A Wedding Invitation",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Hi, David. I have some exciting news. My sister is getting married next month.",
+        "David: Congratulations! That's wonderful.",
+        "Mia: Thank you. We'd like to invite you to the wedding. A formal invitation will come by post.",
+        "David: I'd be honoured to come. When and where is it?",
+        "Mia: It's on the second Saturday in June, at the Garden Hotel.",
+        "David: Lovely. Is there anything special I should wear?",
+        "Mia: It's quite a formal occasion, so please wear a suit.",
+        "David: Of course. Should I bring a gift?",
+        "Mia: A small present is always welcome, but your good wishes matter most.",
+        "David: I'll be there for sure. Please pass on my best wishes to your sister."
+      ],
+      "translation_cn": "Mia 告诉 David 她姐姐下个月结婚,想邀请他参加婚礼,正式请柬会邮寄过去;婚礼在六月第二个星期六、花园酒店;这是正式场合,请穿西装;送小礼物当然好,但最重要的是祝福;David 一定会到,并请代向她姐姐致意。",
+      "questions": [
+        {
+          "stem": "What is Mia's exciting news?",
+          "options": [
+            "Her sister is getting married.",
+            "She has won a competition.",
+            "She is moving overseas.",
+            "She has bought a new house."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How will the invitation be sent?",
+          "options": [
+            "By phone call.",
+            "By post.",
+            "Through a friend.",
+            "On the day itself."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When is the wedding?",
+          "options": [
+            "The second Saturday in June.",
+            "The first Sunday in July.",
+            "The last Friday in May.",
+            "New Year's Eve."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Mia ask David to wear?",
+          "options": [
+            "A fancy costume.",
+            "A suit.",
+            "Something warm.",
+            "A school uniform."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Mia say matters most?",
+          "options": [
+            "An expensive gift.",
+            "Arriving very early.",
+            "David's good wishes.",
+            "Bringing flowers."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·独白 Red Envelopes",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "During the Spring Festival, one of the customs children love most is receiving red envelopes. These small red packets hold some money inside and are given by adults to younger family members. The red colour is a sign of good luck, and the money is meant to bring a safe and happy year. Children usually say a few kind words of thanks before taking the envelope with both hands. In the past, the money was wrapped in red paper, but today many people send the gift on their phones instead. Whatever the form, the warm wish behind it stays the same.",
+      "translation_cn": "春节期间,孩子们最喜欢的习俗之一就是收红包。这些红色小包里装着钱,由大人给晚辈。红色象征好运,钱意在带来平安幸福的一年。孩子通常会先说几句感谢的话,再用双手接过红包。过去钱用红纸包好,如今许多人改用手机发送,但背后温暖的祝愿始终不变。",
+      "questions": [
+        {
+          "stem": "Who gives red envelopes to whom?",
+          "options": [
+            "Children give them to teachers.",
+            "Shops give them to customers.",
+            "Guests give them to the host.",
+            "Adults give them to younger family members."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is inside a red envelope?",
+          "options": [
+            "Some money.",
+            "A handwritten letter.",
+            "A small toy.",
+            "A lantern riddle."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the red colour stand for?",
+          "options": [
+            "Hard work.",
+            "Good luck.",
+            "A warning.",
+            "A loss."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do children do before taking the envelope?",
+          "options": [
+            "Open it at once to count the money.",
+            "Throw it back politely.",
+            "Say a few words of thanks and use both hands.",
+            "Hide it from the adults."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How do many people send the gift today?",
+          "options": [
+            "By train.",
+            "Through the school.",
+            "By drawing it on paper.",
+            "On their phones."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 Watching the New Year Parade",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Leo: Are you going to watch the New Year parade tomorrow, Emma?",
+        "Emma: I'd like to, but I don't know where the best place to stand is.",
+        "Leo: The main street near the square is perfect. The dragon dance passes right there.",
+        "Emma: A dragon dance? That sounds exciting. How early should we get there?",
+        "Leo: Quite early. The parade attracts huge crowds, so good spots fill up fast.",
+        "Emma: All right. Shall we meet at nine outside the bookshop?",
+        "Leo: Nine is fine. Wear something warm — we'll be standing for a while.",
+        "Emma: Good point. Will there be music too?",
+        "Leo: Yes, drums and gongs all the way. The audience always joins in.",
+        "Emma: I can't wait. See you at nine."
+      ],
+      "translation_cn": "Leo 问 Emma 明天去不去看新年巡游;Emma 想去但不知最佳观看点;Leo 说广场旁的大街最好,舞龙正好经过那里;要早点去,因为巡游吸引大批人群,好位置很快被占;两人约九点在书店外见面;Leo 提醒穿暖和点,要站很久;一路上有锣鼓,观众也会一起参与;Emma 很期待。",
+      "questions": [
+        {
+          "stem": "What are Leo and Emma going to watch?",
+          "options": [
+            "The New Year parade.",
+            "A football game.",
+            "A fireworks show by the river.",
+            "A book fair."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where is the best place to stand?",
+          "options": [
+            "Outside Emma's home.",
+            "The main street near the square.",
+            "On the school playground.",
+            "Beside the river bank."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why should they get there early?",
+          "options": [
+            "The parade ends very early.",
+            "The bookshop closes at nine.",
+            "Huge crowds fill the good spots fast.",
+            "It is going to rain."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Where will they meet?",
+          "options": [
+            "At the square gate.",
+            "By the river.",
+            "At the Garden Hotel.",
+            "Outside the bookshop."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Leo tell Emma to wear?",
+          "options": [
+            "Something warm.",
+            "A bride's dress.",
+            "A Batman costume.",
+            "A school uniform."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·独白 World Book Day",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "World Book Day is celebrated in many countries every April. It is a fairly new day, created to help people of all ages enjoy reading. On this day, schools hold all kinds of activities. Children sometimes dress up as their favourite characters from books, and teachers read stories aloud to the class. Some shops give away free books or sell them at a lower price. The aim is simple: to show how much joy a good book can bring. Through these activities, more young people slowly learn to love reading.",
+      "translation_cn": "世界读书日每年四月在许多国家庆祝。这是一个相当新的节日,创立的目的是帮助各年龄段的人享受阅读。这一天,学校会举办各种活动:孩子们有时打扮成书中喜爱的人物,老师给全班朗读故事;有些商店免费赠书或低价出售。其目的很简单——展示一本好书能带来多少欢乐。通过这些活动,越来越多的年轻人渐渐爱上阅读。",
+      "questions": [
+        {
+          "stem": "When is World Book Day celebrated?",
+          "options": [
+            "Every December.",
+            "Every April.",
+            "On New Year's Eve.",
+            "In the eighth lunar month."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why was the day created?",
+          "options": [
+            "To sell more lanterns.",
+            "To honour an old poet.",
+            "To help people enjoy reading.",
+            "To welcome the autumn harvest."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do children sometimes do at school that day?",
+          "options": [
+            "Race dragon boats.",
+            "Set off fireworks.",
+            "Make mooncakes.",
+            "Dress up as characters from books."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do some shops do?",
+          "options": [
+            "Give away free books or lower the price.",
+            "Close for the whole day.",
+            "Hand out red envelopes.",
+            "Sell tickets to a concert."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the simple aim of the day?",
+          "options": [
+            "To raise money for schools.",
+            "To show the joy a good book can bring.",
+            "To test students' reading speed.",
+            "To choose the best writer."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 A Retirement Party for Mr Lee",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Sara: Our teacher Mr Lee is retiring at the end of term. We should do something for him.",
+        "Tom: Good idea. Why don't we hold a small party in the classroom?",
+        "Sara: Perfect. We can decorate the room and prepare a card for everyone to sign.",
+        "Tom: What about a gift? He has taught us for three years.",
+        "Sara: I was thinking of a book of poetry. He loves reading.",
+        "Tom: He'll like that. Should we also order a cake?",
+        "Sara: Yes, a small one. And we can ask a few parents to help.",
+        "Tom: Great. When shall we have it?",
+        "Sara: On the last Friday afternoon, after the final lesson.",
+        "Tom: I'll tell the others. It'll be a lovely surprise for him."
+      ],
+      "translation_cn": "Sara 说 Lee 老师学期末就要退休,大家该为他做点什么;Tom 提议在教室办个小派对;Sara 同意,可以布置教室、准备一张卡片让大家签名;说到礼物,Lee 老师教了他们三年;Sara 想送一本诗集,因为他爱读书;Tom 觉得好,还可订个小蛋糕,并请几位家长帮忙;派对定在最后一个周五下午、最后一节课后;Tom 去通知其他人,这会是给老师的惊喜。",
+      "questions": [
+        {
+          "stem": "Why are Sara and Tom planning a party?",
+          "options": [
+            "It is Tom's birthday.",
+            "The term has just started.",
+            "Their teacher Mr Lee is retiring.",
+            "They won a competition."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Where will they hold the party?",
+          "options": [
+            "At a restaurant.",
+            "In the school hall.",
+            "By the river.",
+            "In the classroom."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What gift does Sara suggest?",
+          "options": [
+            "A book of poetry.",
+            "A red lantern.",
+            "A football.",
+            "A box of mooncakes."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When will they have the party?",
+          "options": [
+            "On the first Monday morning.",
+            "On the last Friday afternoon.",
+            "On New Year's Eve.",
+            "During the lunch break."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Tom say the party will be for Mr Lee?",
+          "options": [
+            "A hard test.",
+            "A boring meeting.",
+            "A lovely surprise.",
+            "A long lecture."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·独白 A Leavers' Celebration",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "At the end of their last school year, students in many countries hold a leavers' celebration to mark the moment. It is both a happy and a slightly sad occasion, because friends who have studied together for years are about to go their own ways. Teachers often give short speeches, and students share photos and write kind messages in each other's books. Some schools hold a small concert, where an audience of parents and teachers watches the leavers sing and dance. The celebration is a way of saying thank you for the past and good luck for the future.",
+      "translation_cn": "在最后一个学年结束时,许多国家的学生会举办毕业告别会来纪念这一刻。这是一个既快乐又略带伤感的场合,因为一起学习多年的朋友即将各奔东西。老师常发表简短讲话,学生们互相分享照片、在彼此的本子上写下友善的留言。有些学校会办一场小型音乐会,由家长和老师组成的观众观看毕业生唱歌跳舞。这场庆祝是为了感谢过去、祝福未来。",
+      "questions": [
+        {
+          "stem": "When do students hold a leavers' celebration?",
+          "options": [
+            "On the first day of school.",
+            "In the middle of summer holidays.",
+            "On the eve of the Spring Festival.",
+            "At the end of their last school year."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why is the occasion slightly sad?",
+          "options": [
+            "Friends are about to go their own ways.",
+            "The food is never enough.",
+            "The speeches are too long.",
+            "It always rains that day."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do teachers often do?",
+          "options": [
+            "Race dragon boats.",
+            "Give short speeches.",
+            "Hand out red envelopes.",
+            "Sell books at a lower price."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who watches the small concert?",
+          "options": [
+            "Only the school cooks.",
+            "Visitors from overseas.",
+            "An audience of parents and teachers.",
+            "The traffic police."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the celebration a way of doing?",
+          "options": [
+            "Choosing the best student in the school.",
+            "Raising money for new books.",
+            "Testing the students one last time.",
+            "Saying thank you for the past and good luck for the future."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

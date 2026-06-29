@@ -1,0 +1,38 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "grade": 10,
+  "content": {
+    "title": "不定式作定语和结果状语(to do)速查",
+    "intro": "to do 既能放在名词后作定语(表示'要做/可做的…'),也能作状语表结果(too…to / enough to / so…as to)或目的(= in order to)。判断口诀:跟在名词后→定语;跟在 too/enough/so…as 后→结果;表示'为了'→目的。这三种情况空里都填 to do。",
+    "table": {
+      "headers": ["结构", "用法 / 例句"],
+      "rows": [
+        ["名词/不定代词 + to do", "作定语:a game to play(可玩的游戏)、something to eat(吃的东西)"],
+        ["the first/last/only + 名词 + to do", "作定语:the first player to score(第一个进球的人)"],
+        ["too + 形/副 + to do", "作结果状语:too tired to continue(太累以致不能继续)"],
+        ["形/副 + enough + to do", "作结果状语:strong enough to win(足够强以致能赢)"],
+        ["so + 形/副 + as to do", "作结果状语:so fast as to leave others behind(快到把别人甩开)"],
+        ["to do(= in order to)", "作目的状语:get up early to train(早起去训练)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "定语的 to do 与前面名词常是动宾关系:a book to read = read a book", "mark": "water to drink / a sport to recommend" },
+      { "rule": "too…to 中若有动作者用 for sb;to 后动词不能省", "mark": "too hard for me to finish √" },
+      { "rule": "enough 放在形容词/副词之后、名词之前;enough to do 的 to 不能省", "mark": "strong enough to… √ / enough strong ×" },
+      { "rule": "so + adj/adv + as to do ≈ so…that 从句,但更正式简洁", "mark": "so kind as to help = so kind that he helped" }
+    ],
+    "why": [
+      "to do 本身没有时态、没有人称,所以无论作定语、目的还是结果,空里都用'to + 动词原形';-ing/-ed/限定式承担别的成分,不能顶替这个不定式。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/词形变化:名词后或 too…/enough/so…as 后,把动词写成 to do。",
+      "辨析 to do(目的/结果)与 -ing(主动/进行)、-ed(被动/完成)在状语和定语中的分工。",
+      "too…to(否定结果)与 …enough to(肯定结果)、so…as to 的相互改写。"
+    ],
+    "examVsReal": [
+      { "exam": "a simple game to play(考试/书面定语)", "real": "a game that's easy to play / a game you can play", "note": "考试爱用 to do 后置定语;口语常拆成从句或加 you can" },
+      { "exam": "He was too tired to go on.(考试结果状语)", "real": "He was so tired he just stopped.", "note": "考试用 too…to;口语更常用 so…(that)从句直接说" }
+    ]
+  }
+}

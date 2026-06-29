@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Dunhuang was the gateway to and from ancient China.", "opts": ["敦煌是进出古代中国的门户。", "敦煌是一座现代工厂城市。", "敦煌从来没有商人来过。", "敦煌坐落在海边。"], "answer": 0 },
+    { "audio": "The Mogao Grottoes were carved out of the rock over a thousand years.", "opts": ["莫高窟是去年才建成的。", "莫高窟历经一千多年从岩石中开凿而成。", "莫高窟只有一个洞窟。", "莫高窟是用木头搭成的。"], "answer": 1 },
+    { "audio": "The Flying Apsaras seem to float across the painted sky.", "opts": ["飞天被画在地板上。", "飞天是真实的人物。", "飞天仿佛飘浮在彩绘的天空中。", "飞天已经被涂掉了。"], "answer": 2 },
+    { "audio": "In 1900 a Taoist priest discovered the sealed Library Cave.", "opts": ["藏经洞至今无人发现。", "藏经洞是一位外国国王建造的。", "藏经洞里空无一物。", "1900年一位道士发现了被封的藏经洞。"], "answer": 3 },
+    { "audio": "Today Dunhuang is a world-class tourist destination.", "opts": ["如今敦煌是世界级的旅游目的地。", "如今敦煌已被人遗忘。", "如今敦煌禁止游客进入。", "如今敦煌只剩沙子。"], "answer": 0 },
+    { "audio": "The Expo aimed to promote cultural exchange between countries.", "opts": ["博览会是为了赚钱。", "博览会旨在促进各国之间的文化交流。", "博览会把游客拒之门外。", "博览会只展出陶瓷。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "The city ____ many sites with protected heritage status.（自豪地拥有)", "opts": ["boasts", "sells", "loses", "hides"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Thousands of ancient ____ were hidden inside the Library Cave.（手稿)", "opts": ["machines", "manuscripts", "markets", "mistakes"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "The painting of Apsaras reached a ____ during the Tang Dynasty.（顶峰)", "opts": ["price", "noise", "peak", "gate"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Dunhuang was a centre of cultural ____ for many centuries.（交流)", "opts": ["damage", "silence", "traffic", "exchange"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "____ you look up, you can see the murals on the ceiling of the cave.", "opts": ["If", "Unless", "Although", "Because"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ the city was once so great, it slowly faded from memory.", "opts": ["Because", "Although", "Unless", "Until"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "The cave was ____ dark that we could hardly see the paintings.", "opts": ["very", "too", "so", "such"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "Come a little closer ____ you can see the fine details of the painting.", "opts": ["because", "although", "even if", "so that"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["壁画覆盖了洞窟墙壁巨大的面积。", "壁画只有一小块。", "洞窟里没有壁画。", "壁画画在纸上。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The murals cover an enormous area of the cave walls." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["所有人可以随时进洞。", "每天只有少数游客可以进入每个洞窟。", "洞窟永远关闭。", "进洞不需要门票。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Only a few visitors may enter each cave every day." }
+  ],
+  "reading": {
+    "passage": "Dunhuang sits on the old Silk Road, where tired travellers once rested in a green oasis. Because so many traders passed through, the small desert city became a busy meeting place for East and West.",
+    "passageCn": "敦煌坐落在古老的丝绸之路上,疲惫的旅人曾在这片绿洲歇脚。因为众多商人途经此地,这座沙漠小城成了东西方繁忙的交汇之地。",
+    "questions": [
+      { "q": "Where does Dunhuang sit?", "opts": ["On the old Silk Road.", "By the sea.", "On a high mountain.", "In a thick forest."], "answer": 0 },
+      { "q": "Why did the city become a busy meeting place?", "opts": ["Because it was very cold.", "Because many traders passed through it.", "Because it had no visitors.", "Because it sold cheap gold."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short note recommending Dunhuang to a foreign friend. Say where it is, what is special about it, and why he or she should visit. Try to use adverbial clauses (if / because / so that / although).",
+    "promptCn": "写一段短文,向外国朋友推荐敦煌:它在哪里、有什么特别、为什么值得一去。试着用状语从句(if / because / so that / although)把理由串起来。",
+    "sampleWords": ["recommend", "heritage", "grotto", "mural", "ancient", "desert", "exchange", "because", "so that", "although"]
+  },
+  "dialogues": [
+    {
+      "title": "Planning a Trip",
+      "lines": [
+        { "role": "A", "text": "Where should we go to see real Chinese culture?", "cn": "我们去哪里能看到真正的中国文化?" },
+        { "role": "B", "text": "Let's go to Dunhuang, because it is full of ancient caves and murals.", "cn": "去敦煌吧,因为那里满是古老的洞窟和壁画。" },
+        { "role": "A", "text": "Is it hard to get there?", "cn": "去那儿难吗?" },
+        { "role": "B", "text": "Not really. If we take the fast train, we can arrive in one day.", "cn": "不太难。如果坐高铁,一天就能到。" }
+      ]
+    },
+    {
+      "title": "Inside the Cave",
+      "lines": [
+        { "role": "A", "text": "Look up! The whole ceiling is covered with paintings.", "cn": "抬头看!整个洞顶都画满了壁画。" },
+        { "role": "B", "text": "They are so beautiful that I can hardly believe their age.", "cn": "它们如此美丽,我简直不敢相信有这么久的历史。" },
+        { "role": "A", "text": "Why is the light so low in here?", "cn": "这里的灯光为什么这么暗?" },
+        { "role": "B", "text": "The staff keep it low so that the old colours do not fade.", "cn": "工作人员把光调暗,以便古老的色彩不会褪去。" }
+      ]
+    }
+  ]
+}

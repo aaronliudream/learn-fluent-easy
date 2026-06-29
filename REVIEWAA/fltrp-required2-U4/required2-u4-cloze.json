@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "topic": "Stage and Screen",
+  "source": "外研社版必修第二册 Unit 4 同主题完形(校园戏剧首演/计划看喜剧/做戏服/爱上歌剧/校园电影社/拍野生纪录片)。用词限 U4/初中/常见词,答案唯一,4选项同词性,与阅读关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My First Time on Stage",
+      "text": "Today I performed in the school play, and I think I did a good (1)____ job. When I first saw all my family and friends in the (2)____, I felt both nervous and proud. At the start of rehearsals, I had not (3)____ how much hard work the play would be. Our teacher was very strict, which sometimes made me so (4)____ that I was afraid I would forget my lines. I often stayed up late at night to (5)____ my part again and again. There were moments when I felt so discouraged that I almost (6)____ up. But thanks to the support of the people around me, I slowly (7)____ my fears. When the curtain finally rose, I tried to (8)____ calm and remember every word. By the end, the whole audience began to (9)____, and I felt extremely (10)____ to everyone who had helped me. It was truly an unforgettable experience.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "job",
+            "test",
+            "trip",
+            "meal"
+          ],
+          "answer_index": 0,
+          "explanation": "do a good job 做得不错,固定搭配。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "kitchen",
+            "audience",
+            "library",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "看戏的家人朋友坐在观众席,用 audience。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "refused",
+            "repaired",
+            "realised",
+            "returned"
+          ],
+          "answer_index": 2,
+          "explanation": "had not realised 此前没意识到,符合语境。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "proud",
+            "polite",
+            "lazy",
+            "nervous"
+          ],
+          "answer_index": 3,
+          "explanation": "老师严格使我紧张到怕忘词,用 nervous。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "practise",
+            "sell",
+            "draw",
+            "clean"
+          ],
+          "answer_index": 0,
+          "explanation": "熬夜反复练习角色台词,用 practise。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "looked",
+            "gave",
+            "stood",
+            "woke"
+          ],
+          "answer_index": 1,
+          "explanation": "give up 放弃,固定搭配。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "counted",
+            "missed",
+            "overcame",
+            "borrowed"
+          ],
+          "answer_index": 2,
+          "explanation": "在支持下慢慢克服恐惧,用 overcame。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "leave",
+            "fall",
+            "grow",
+            "stay"
+          ],
+          "answer_index": 3,
+          "explanation": "stay calm 保持冷静,固定搭配。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "clap",
+            "cook",
+            "drive",
+            "sleep"
+          ],
+          "answer_index": 0,
+          "explanation": "演出结束观众开始鼓掌,用 clap。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "angry",
+            "grateful",
+            "bored",
+            "afraid"
+          ],
+          "answer_index": 1,
+          "explanation": "对帮助过自己的人感到感激,用 grateful。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Planning a Trip to a Comedy Show",
+      "text": "Last weekend my friends and I decided to go to a (1)____ show in another part of the city. None of us had been there before, so we needed to make careful (2)____. First we checked online and found that the tickets were not (3)____, which was good news for students like us. Then we had to work out how to get there. Since the theatre was far away, we chose to use public (4)____ instead of taxis. Josh, who is always well organised, offered to (5)____ everything for the group. He told us where to (6)____ and what time the first bus would leave. On the night of the show, we arrived early so that we could find good (7)____. The moment the host walked onto the stage, everyone began to (8)____ loudly. The jokes were so funny that we (9)____ all evening. By the time we left, we all agreed it had been an (10)____ night out.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "garden",
+            "village",
+            "comedy",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "去看喜剧表演,用 comedy。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "mistakes",
+            "promises",
+            "drawings",
+            "arrangements"
+          ],
+          "answer_index": 3,
+          "explanation": "make arrangements 做安排,符合语境。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "expensive",
+            "quiet",
+            "heavy",
+            "early"
+          ],
+          "answer_index": 0,
+          "explanation": "票不贵,对学生是好消息,用 expensive。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "weather",
+            "transport",
+            "homework",
+            "music"
+          ],
+          "answer_index": 1,
+          "explanation": "public transport 公共交通,固定搭配。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "cook",
+            "paint",
+            "arrange",
+            "wash"
+          ],
+          "answer_index": 2,
+          "explanation": "Josh 提出为大家安排好一切,用 arrange。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sing",
+            "swim",
+            "shop",
+            "meet"
+          ],
+          "answer_index": 3,
+          "explanation": "告诉我们在哪儿集合,用 meet。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "seats",
+            "clothes",
+            "books",
+            "meals"
+          ],
+          "answer_index": 0,
+          "explanation": "早到是为了找到好座位,用 seats。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cry",
+            "applaud",
+            "complain",
+            "leave"
+          ],
+          "answer_index": 1,
+          "explanation": "主持人上台时大家大声鼓掌,用 applaud。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "slept",
+            "argued",
+            "laughed",
+            "studied"
+          ],
+          "answer_index": 2,
+          "explanation": "笑话太好笑,我们笑了一整晚,用 laughed。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "ordinary",
+            "difficult",
+            "unforgettable"
+          ],
+          "answer_index": 3,
+          "explanation": "大家一致认为是难忘的一晚,用 unforgettable。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Making the Costumes",
+      "text": "Behind every good play there is a team of people you never (1)____ on stage. This term I joined the group that makes the (2)____ for our school drama. At first I thought sewing clothes would be (3)____, but I soon learned how hard it really is. Each costume has to match the (4)____ of the story, so we read the script many times before we (5)____ anything. We chose soft colours for the gentle scenes and bright ones for the (6)____ moments. Our teacher showed us a few clever (7)____ for turning cheap cloth into something that looked rich and old. Sometimes a small mistake meant we had to (8)____ the whole thing and begin again. It was tiring work, but when the actors finally (9)____ our costumes on stage, I felt incredibly (10)____ of what our team had done.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "see",
+            "eat",
+            "buy",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "幕后有些人你在台上永远看不到,用 see。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "tickets",
+            "costumes",
+            "lessons",
+            "dinners"
+          ],
+          "answer_index": 1,
+          "explanation": "为校园戏剧做戏服,用 costumes。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "loud",
+            "wet",
+            "easy",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "起初以为缝衣服很容易,用 easy。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "weather",
+            "noise",
+            "mood"
+          ],
+          "answer_index": 3,
+          "explanation": "戏服要与故事的情绪/气氛相配,用 mood。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "cut",
+            "sing",
+            "sleep",
+            "shout"
+          ],
+          "answer_index": 0,
+          "explanation": "动手剪裁前先反复读剧本,用 cut。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "quiet",
+            "exciting",
+            "empty",
+            "cheap"
+          ],
+          "answer_index": 1,
+          "explanation": "与 gentle 的柔和场景相对,激动场面用亮色,用 exciting。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "stories",
+            "songs",
+            "techniques",
+            "prices"
+          ],
+          "answer_index": 2,
+          "explanation": "老师教了几招把廉价布料变华贵的技巧,用 techniques。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "enjoy",
+            "praise",
+            "keep",
+            "undo"
+          ],
+          "answer_index": 3,
+          "explanation": "小错误意味着要拆掉重来,用 undo。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "wore",
+            "ate",
+            "bought",
+            "washed"
+          ],
+          "answer_index": 0,
+          "explanation": "演员最终穿着我们的戏服上台,用 wore。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "afraid",
+            "proud",
+            "sorry",
+            "tired"
+          ],
+          "answer_index": 1,
+          "explanation": "为团队的成果感到自豪,用 proud。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Learning to Love Opera",
+      "text": "I used to believe that opera was only for old people, and I never (1)____ to give it a try. Then my grandmother took me to see a famous (2)____ in our city, and my opinion changed completely. As soon as the lights went down, I felt (3)____ by the sound of the orchestra. The voices were so powerful that they seemed to fill the whole (4)____. Even though I could not understand every word, the music helped me (5)____ what the singers were feeling. There were moments of love, (6)____ and sadness, all carried by the music alone. I sat on the (7)____ of my seat, afraid to miss a single note. During the most exciting scene, the audience could not help but (8)____. By the end of the evening, I was (9)____ amazed by what I had seen and heard. Now I tell my friends that opera is far more (10)____ than they think.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "promised",
+            "managed",
+            "wanted",
+            "remembered"
+          ],
+          "answer_index": 2,
+          "explanation": "以前从不想尝试,用 wanted。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "market",
+            "station",
+            "opera"
+          ],
+          "answer_index": 3,
+          "explanation": "祖母带我去看著名歌剧,用 opera。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "absorbed",
+            "bored",
+            "frightened",
+            "tired"
+          ],
+          "answer_index": 0,
+          "explanation": "被乐队的声音深深吸引,用 absorbed。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "kitchen",
+            "theatre",
+            "garden",
+            "office"
+          ],
+          "answer_index": 1,
+          "explanation": "歌声充满整个剧院,用 theatre。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "forget",
+            "sell",
+            "understand",
+            "build"
+          ],
+          "answer_index": 2,
+          "explanation": "音乐帮我理解歌者的感受,用 understand。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lunch",
+            "money",
+            "weather",
+            "anger"
+          ],
+          "answer_index": 3,
+          "explanation": "与 love、sadness 并列的情感,用 anger。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "edge",
+            "top",
+            "back",
+            "side"
+          ],
+          "answer_index": 0,
+          "explanation": "on the edge of one's seat 坐在座位边缘(极为投入),固定搭配。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cook",
+            "clap",
+            "run",
+            "shop"
+          ],
+          "answer_index": 1,
+          "explanation": "最激动的场面观众忍不住鼓掌,用 clap。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "hardly",
+            "rarely",
+            "completely",
+            "never"
+          ],
+          "answer_index": 2,
+          "explanation": "结束时完全被震撼,用 completely。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "useless",
+            "ordinary",
+            "appealing"
+          ],
+          "answer_index": 3,
+          "explanation": "告诉朋友歌剧比想象的有趣得多,用 appealing。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The School Film Club",
+      "text": "Our school film club meets every Friday after class, and it has become my favourite part of the (1)____. Each week a different member chooses a film for everyone to (2)____ together. After the film ends, we sit in a circle and (3)____ what we have just seen. Some people love a story with a clever (4)____, while others care most about the acting. Last month we watched a film that was (5)____ on a famous novel, and we argued for an hour about whether the book or the film was (6)____. I learned that two people can watch the same story and still have very (7)____ opinions. Our teacher says this is exactly why talking about films is so (8)____. She encourages us to give reasons instead of simply saying we (9)____ or hated something. Thanks to the club, I now watch every film much more (10)____ than I used to.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "week",
+            "meal",
+            "road",
+            "shop"
+          ],
+          "answer_index": 0,
+          "explanation": "电影社是我一周中最喜欢的部分,用 week。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cook",
+            "watch",
+            "drive",
+            "build"
+          ],
+          "answer_index": 1,
+          "explanation": "选一部电影让大家一起看,用 watch。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "forget",
+            "sell",
+            "discuss",
+            "draw"
+          ],
+          "answer_index": 2,
+          "explanation": "看完后围坐讨论刚看的内容,用 discuss。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "smell",
+            "plot"
+          ],
+          "answer_index": 3,
+          "explanation": "有人喜欢情节巧妙的故事,用 plot。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "based",
+            "sat",
+            "put",
+            "kept"
+          ],
+          "answer_index": 0,
+          "explanation": "be based on 改编自,固定搭配,用 based。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "louder",
+            "better",
+            "shorter",
+            "colder"
+          ],
+          "answer_index": 1,
+          "explanation": "争论书和电影哪个更好,用 better。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "quiet",
+            "heavy",
+            "different",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "两人看同一故事却有很不同的看法,用 different。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "boring",
+            "useless",
+            "tiring",
+            "interesting"
+          ],
+          "answer_index": 3,
+          "explanation": "老师说这正是谈电影有趣的原因,用 interesting。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "loved",
+            "feared",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "与 hated 相对,用 loved。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "quickly",
+            "carefully",
+            "rarely",
+            "loudly"
+          ],
+          "answer_index": 1,
+          "explanation": "现在看每部电影都比以前更仔细,用 carefully。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Filming a Wildlife Documentary",
+      "text": "Making a wildlife (1)____ is far harder than most viewers imagine. To film leopards in the wild, a small team may have to (2)____ for weeks in a hot, distant place. The camera operators must stay very (3)____ so that the animals are not frightened away. Sometimes they wait all day and (4)____ nothing at all. When a leopard and her cubs finally appear, the team has only a few (5)____ to capture the perfect picture. Every member of the crew has an important (6)____ to play, from carrying the heavy equipment to checking the sound. The pictures they bring back can (7)____ the way ordinary people see nature. Many viewers, (8)____ by what they watch, begin to care more about protecting wild animals. That is why the team believes their tiring work is (9)____ worth it. A good documentary, they say, can teach more than any (10)____ book.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "comedy",
+            "garden",
+            "documentary",
+            "lesson"
+          ],
+          "answer_index": 2,
+          "explanation": "制作野生动物纪录片,用 documentary。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sing",
+            "shop",
+            "sleep",
+            "wait"
+          ],
+          "answer_index": 3,
+          "explanation": "团队可能在炎热偏远处等上数周,用 wait。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "quiet",
+            "angry",
+            "proud",
+            "rude"
+          ],
+          "answer_index": 0,
+          "explanation": "必须保持安静以免吓跑动物,用 quiet。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eat",
+            "see",
+            "buy",
+            "build"
+          ],
+          "answer_index": 1,
+          "explanation": "有时等一整天却什么也看不到,用 see。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "weeks",
+            "months",
+            "minutes",
+            "years"
+          ],
+          "answer_index": 2,
+          "explanation": "豹子出现时只有几分钟抓拍,用 minutes。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ticket",
+            "meal",
+            "price",
+            "part"
+          ],
+          "answer_index": 3,
+          "explanation": "have a part to play 各司其职,固定搭配,用 part。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "change",
+            "sell",
+            "wash",
+            "close"
+          ],
+          "answer_index": 0,
+          "explanation": "这些画面能改变普通人看待自然的方式,用 change。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "bored",
+            "moved",
+            "paid",
+            "sold"
+          ],
+          "answer_index": 1,
+          "explanation": "许多观众被所看内容打动(被动),用 moved。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "hardly",
+            "rarely",
+            "certainly",
+            "never"
+          ],
+          "answer_index": 2,
+          "explanation": "团队相信辛苦的工作当然值得,用 certainly。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "ticket",
+            "garden",
+            "engine",
+            "textbook"
+          ],
+          "answer_index": 3,
+          "explanation": "好纪录片比任何课本教得更多,用 textbook。"
+        }
+      ]
+    }
+  ]
+}

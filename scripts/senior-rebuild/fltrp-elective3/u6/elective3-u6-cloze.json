@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U6",
+  "topic": "First Snow",
+  "source": "外研社新标准选择性必修第三册 Unit 6 同主题完形(初雪清晨/堆雪人/雪中漫步/爷爷的童谣/我为何爱冬天/冬日护鸟)。用词限本单元/初中/常见词;每空 4 选项同词性、无双解;与阅读、听力关文章互不重复。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "The First Snow of the Year",
+      "text": "Last night the first snow of the year fell while everyone was fast asleep. When I (1)____ up this morning, the whole world outside had turned white. The garden, the path and the roofs were all (2)____ under a soft blanket of snow. I pressed my nose against the cold (3)____ and watched the flakes drift slowly down. Everything was so (4)____ that I could hardly hear a single sound. My little sister was so (5)____ that she shouted and ran from room to room. We quickly put on our warm coats and (6)____ outside to play. The snow felt cold and (7)____ on my face. We rolled it into a big ball to build a (8)____. By lunchtime our cheeks were red and our hands were (9)____, but we did not want to go inside. The first snow had turned an ordinary day into something truly (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "woke",
+            "sold",
+            "lost",
+            "threw"
+          ],
+          "answer_index": 0,
+          "explanation": "wake up 醒来 → woke。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "hidden",
+            "bought",
+            "broken"
+          ],
+          "answer_index": 1,
+          "explanation": "be hidden under snow 被雪盖住。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "river",
+            "market",
+            "window",
+            "forest"
+          ],
+          "answer_index": 2,
+          "explanation": "press one's nose against the window 贴着窗户。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "loud",
+            "warm",
+            "busy",
+            "quiet"
+          ],
+          "answer_index": 3,
+          "explanation": "so quiet 太安静,几乎听不到声音。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "excited",
+            "bored",
+            "tired",
+            "angry"
+          ],
+          "answer_index": 0,
+          "explanation": "so excited 太兴奋,又叫又跑。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "refused",
+            "rushed",
+            "failed",
+            "forgot"
+          ],
+          "answer_index": 1,
+          "explanation": "rushed outside to play 冲出去玩。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "hot",
+            "heavy",
+            "soft",
+            "sharp"
+          ],
+          "answer_index": 2,
+          "explanation": "cold and soft on my face 又冷又软。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sandcastle",
+            "fire",
+            "boat",
+            "snowman"
+          ],
+          "answer_index": 3,
+          "explanation": "build a snowman 堆雪人。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "freezing",
+            "boring",
+            "exciting",
+            "amazing"
+          ],
+          "answer_index": 0,
+          "explanation": "hands were freezing 手冻僵了。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "ordinary",
+            "magical",
+            "boring",
+            "normal"
+          ],
+          "answer_index": 1,
+          "explanation": "something truly magical 真正神奇。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Building a Snowman",
+      "text": "On Saturday morning my friends and I decided to build a (1)____ in the park. First, we rolled a small ball of snow along the ground until it grew big and (2)____. This became the body. Then we made a smaller ball for the (3)____ and lifted it carefully on top. We used two black stones for the eyes and a long orange carrot for the (4)____. My friend Lily found some thin branches and pushed them in for the (5)____, so the snowman could seem to wave. It was hard (6)____, and soon our gloves were wet and cold. But none of us wanted to (7)____ until it was finished. When at last our snowman was (8)____, we stepped back and looked at it with (9)____. It seemed to smile at us under the grey winter sky. We took a photo so that we could (10)____ that happy morning for years.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sandcastle",
+            "garden",
+            "snowman",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "build a snowman 堆雪人。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "square",
+            "flat",
+            "thin",
+            "round"
+          ],
+          "answer_index": 3,
+          "explanation": "big and round 又大又圆。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "head",
+            "foot",
+            "river",
+            "roof"
+          ],
+          "answer_index": 0,
+          "explanation": "a smaller ball for the head 做头。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "ear",
+            "nose",
+            "hand",
+            "door"
+          ],
+          "answer_index": 1,
+          "explanation": "a carrot for the nose 当鼻子。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "wheels",
+            "wings",
+            "arms",
+            "books"
+          ],
+          "answer_index": 2,
+          "explanation": "branches for the arms 当手臂。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "money",
+            "music",
+            "work"
+          ],
+          "answer_index": 3,
+          "explanation": "hard work 累活儿。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "stop",
+            "sleep",
+            "sing",
+            "swim"
+          ],
+          "answer_index": 0,
+          "explanation": "did not want to stop 不想停下。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "absent",
+            "ready",
+            "empty",
+            "asleep"
+          ],
+          "answer_index": 1,
+          "explanation": "the snowman was ready 雪人做好了。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "fear",
+            "anger",
+            "pride",
+            "sadness"
+          ],
+          "answer_index": 2,
+          "explanation": "look at it with pride 自豪地看。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "lose",
+            "sell",
+            "remember"
+          ],
+          "answer_index": 3,
+          "explanation": "remember that morning 记住那个早晨。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Walk in the Snow",
+      "text": "One cold afternoon I went for a quiet (1)____ along the river near my home. Snow was (2)____ softly from the grey sky, and the whole path lay white and silent. My boots made a soft sound as they (3)____ through the fresh snow. The trees on both sides were (4)____ low under the heavy white weight. Here and there a brave little bird sat on a branch, its (5)____ puffed up against the cold. I felt the sharp wind (6)____ across the open field and pulled my scarf tighter. Although my fingers were (7)____, my heart felt warm and calm. The river was half (8)____ with ice, but I could still hear it singing quietly underneath. I stood for a long time, simply (9)____ at the beautiful winter scene. That peaceful walk in the snow is something I will always (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "walk",
+            "sleep",
+            "race",
+            "meal"
+          ],
+          "answer_index": 0,
+          "explanation": "go for a walk 散步。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "rising",
+            "falling",
+            "growing",
+            "shining"
+          ],
+          "answer_index": 1,
+          "explanation": "snow was falling 雪在落。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "swam",
+            "climbed",
+            "sank",
+            "flew"
+          ],
+          "answer_index": 2,
+          "explanation": "boots sank through the snow 靴子陷进雪里。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "growing",
+            "jumping",
+            "dancing",
+            "bending"
+          ],
+          "answer_index": 3,
+          "explanation": "trees bending low 树被压弯。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "feathers",
+            "wheels",
+            "leaves",
+            "stones"
+          ],
+          "answer_index": 0,
+          "explanation": "its feathers puffed up 羽毛蓬起御寒。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleep",
+            "sweep",
+            "cook",
+            "read"
+          ],
+          "answer_index": 1,
+          "explanation": "feel the wind sweep across 风掠过。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "boring",
+            "smiling",
+            "freezing",
+            "sleeping"
+          ],
+          "answer_index": 2,
+          "explanation": "fingers were freezing 手指冻僵。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "filled",
+            "sold",
+            "opened",
+            "covered"
+          ],
+          "answer_index": 3,
+          "explanation": "half covered with ice 半被冰覆盖。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "gazing",
+            "shouting",
+            "running",
+            "eating"
+          ],
+          "answer_index": 0,
+          "explanation": "simply gazing at the scene 凝望雪景。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "remember",
+            "lose",
+            "doubt"
+          ],
+          "answer_index": 1,
+          "explanation": "always remember 永远记得。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Grandfather's Winter Rhyme",
+      "text": "When I was small, my (1)____ taught me a funny little rhyme about the snow. Every winter, when the first flakes began to (2)____, he would sit me by the warm (3)____ and say the words slowly. In the rhyme, the snow was like white (4)____ falling from the sky. I thought the snow fell (5)____ each time we repeated it together. Those quiet evenings felt full of (6)____ joy, with no worries at all. Now my grandfather is very old, and his voice has grown (7)____. But whenever I see the first snow, the same old rhyme still runs through my (8)____. It always (9)____ back the warm kitchen and his kind smile. A short, simple rhyme, I have learned, can keep a happy (10)____ alive for a whole lifetime.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "stranger",
+            "customer",
+            "grandfather",
+            "waiter"
+          ],
+          "answer_index": 2,
+          "explanation": "下文'my grandfather is very old',故 grandfather。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "melt",
+            "grow",
+            "sail",
+            "fall"
+          ],
+          "answer_index": 3,
+          "explanation": "the first flakes began to fall 开始落下。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "fire",
+            "river",
+            "window",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "by the warm fire 在温暖的炉火旁。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "stones",
+            "feathers",
+            "wheels",
+            "coins"
+          ],
+          "answer_index": 1,
+          "explanation": "snow was like white feathers 雪像白羽毛。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "slower",
+            "higher",
+            "faster",
+            "later"
+          ],
+          "answer_index": 2,
+          "explanation": "snow fell faster 雪下得更快。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "angry",
+            "boring",
+            "painful",
+            "innocent"
+          ],
+          "answer_index": 3,
+          "explanation": "innocent joy 天真的快乐。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "weak",
+            "loud",
+            "fast",
+            "sharp"
+          ],
+          "answer_index": 0,
+          "explanation": "his voice has grown weak 声音变弱。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "hand",
+            "head",
+            "foot",
+            "door"
+          ],
+          "answer_index": 1,
+          "explanation": "run through my head 在脑海回响。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sells",
+            "breaks",
+            "brings",
+            "loses"
+          ],
+          "answer_index": 2,
+          "explanation": "brings back the warm kitchen 唤回回忆。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "machine",
+            "market",
+            "mistake",
+            "memory"
+          ],
+          "answer_index": 3,
+          "explanation": "keep a happy memory alive 留住美好回忆。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Why I Love Winter",
+      "text": "Many people complain about the cold, but winter is my favourite (1)____ of the year. I love the morning when I wake up and (2)____ that the world has turned white overnight. The snow makes even an ordinary street look clean and (3)____. On winter days my family likes to stay (4)____ together, sitting by the fire and drinking something hot. Outside, children (5)____ snowballs and laugh until their cheeks turn red. When the sun comes out, the snow (6)____ like thousands of tiny diamonds. In the evening, the air is so (7)____ that you can see your own breath. Of course, winter does not (8)____ forever, and soon the snow will melt and flowers will (9)____ again. But that is exactly why each first snow feels so special. I will always (10)____ the quiet magic of the winter months.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "season",
+            "machine",
+            "market",
+            "subject"
+          ],
+          "answer_index": 0,
+          "explanation": "my favourite season 最爱的季节。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "find",
+            "lose",
+            "forget"
+          ],
+          "answer_index": 1,
+          "explanation": "wake up and find 醒来发现。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "ugly",
+            "dirty",
+            "beautiful",
+            "noisy"
+          ],
+          "answer_index": 2,
+          "explanation": "clean and beautiful 干净美丽。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "outside",
+            "asleep",
+            "awake",
+            "inside"
+          ],
+          "answer_index": 3,
+          "explanation": "stay inside by the fire 待在屋里。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "throw",
+            "eat",
+            "read",
+            "sing"
+          ],
+          "answer_index": 0,
+          "explanation": "throw snowballs 扔雪球。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "melts",
+            "sparkles",
+            "falls",
+            "breaks"
+          ],
+          "answer_index": 1,
+          "explanation": "snow sparkles like diamonds 雪像钻石般闪耀。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "warm",
+            "wet",
+            "cold",
+            "sweet"
+          ],
+          "answer_index": 2,
+          "explanation": "so cold you can see your breath 太冷能看到呵气。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "win",
+            "lose",
+            "open",
+            "last"
+          ],
+          "answer_index": 3,
+          "explanation": "winter does not last forever 冬天不会永远持续。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "bloom",
+            "freeze",
+            "fall",
+            "fade"
+          ],
+          "answer_index": 0,
+          "explanation": "flowers will bloom 花会开。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "remember",
+            "doubt",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "always remember 永远记得。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Caring for Birds in Winter",
+      "text": "Winter can be a very hard time for the small (1)____ that stay near our homes. When deep snow (2)____ the ground, they cannot easily find seeds or insects to eat. Many of them grow weak, and some even (3)____ from cold and hunger. Luckily, there is a simple way we can (4)____ them. We can hang a small feeder in the (5)____ and fill it with seeds and nuts. On the coldest days, a dish of clean (6)____ is just as important, because frozen ponds give the birds nothing to drink. If we are (7)____ and kind, the garden will soon be full of busy wings and cheerful (8)____. Watching them through the window is a real (9)____ on a grey winter morning. By caring for these little creatures, we help to (10)____ the natural world we all share.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "cars",
+            "shops",
+            "birds",
+            "books"
+          ],
+          "answer_index": 2,
+          "explanation": "small birds 小鸟。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sells",
+            "opens",
+            "breaks",
+            "covers"
+          ],
+          "answer_index": 3,
+          "explanation": "snow covers the ground 雪盖住地面。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "die",
+            "win",
+            "read",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "some even die from cold and hunger 因冷饿而死。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "help",
+            "forget",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "a way we can help them 帮助它们。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "ocean",
+            "classroom",
+            "backyard",
+            "station"
+          ],
+          "answer_index": 2,
+          "explanation": "hang a feeder in the backyard 挂在后院。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "smoke",
+            "sand",
+            "paper",
+            "water"
+          ],
+          "answer_index": 3,
+          "explanation": "a dish of clean water 一碟干净水。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "patient",
+            "lazy",
+            "rude",
+            "careless"
+          ],
+          "answer_index": 0,
+          "explanation": "patient and kind 有耐心又善良。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "prices",
+            "songs",
+            "machines",
+            "mistakes"
+          ],
+          "answer_index": 1,
+          "explanation": "cheerful songs 欢快的鸟鸣。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "problem",
+            "mistake",
+            "pleasure",
+            "danger"
+          ],
+          "answer_index": 2,
+          "explanation": "a real pleasure 真正的乐趣。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "harm",
+            "forget",
+            "protect"
+          ],
+          "answer_index": 3,
+          "explanation": "help to protect the natural world 保护自然。"
+        }
+      ]
+    }
+  ]
+}

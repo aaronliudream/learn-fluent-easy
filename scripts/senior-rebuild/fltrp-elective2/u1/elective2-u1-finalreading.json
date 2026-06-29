@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(成长主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "On her eighteenth birthday, Zoe expected to feel completely different, but the morning felt just like any other. Over the following months, however, she slowly began to think more about others and to take charge of her own choices. By the end of the year, she realised that becoming an adult had been a quiet, gradual journey rather than a single magic moment.",
+    "questions": [
+      {
+        "q": "How did Zoe feel on the morning of her birthday?",
+        "options": [
+          "Much the same as on any ordinary day.",
+          "Suddenly like a totally new person.",
+          "Frightened of all her new duties.",
+          "Sad that her childhood was gone."
+        ],
+        "answer": "A",
+        "explanation": "原文说那天早上和平常没什么两样,为其转述;其余与原文不符或未提。"
+      },
+      {
+        "q": "What did Zoe realise by the end of the year?",
+        "options": [
+          "That adulthood arrives in one magic moment.",
+          "That growing up had been a slow, gradual process.",
+          "That nothing about her had changed at all.",
+          "That she would never feel like an adult."
+        ],
+        "answer": "B",
+        "explanation": "末句说成年是安静、逐渐的过程而非某个神奇瞬间,为其转述(覆盖短文后半段)。"
+      }
+    ]
+  }
+}

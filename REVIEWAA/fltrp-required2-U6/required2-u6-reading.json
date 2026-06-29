@@ -1,0 +1,362 @@
+{
+  "volume": "required2",
+  "unit": "U6",
+  "topic": "Earth First",
+  "source": "外研社版必修第二册 Unit 6 同主题阅读(电影《大白鲨》与人们对鲨鱼的恐惧/割鳍与本奇利的转变/应对全球变暖的日常小事/伦敦雾霾的过去与现在/纸袋与塑料袋的'环保真相'/三江源自然保护区)。用词限 U6/初中/常见词,答案转述非照抄,4选项唯一,与完形听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "How a Film Changed People's Minds",
+      "topic_cn": "记叙·电影《大白鲨》与对鲨鱼的恐惧",
+      "body": "In 1975, a film called Jaws appeared in cinemas around the world. It tells the story of a great white shark that attacks and kills swimmers at a holiday beach. The film was a huge success. It attracted enormous audiences and won many awards. However, it also changed the way people thought about sharks. People had always been a little afraid of sharks, but Jaws made things much worse. Many people who saw the film began to believe that all sharks were dangerous animals that wanted to eat humans. Some were so scared that they stopped swimming in the sea. Others started hunting sharks, killing as many as they could. At that time, almost nobody cared how many sharks were killed. In this way, a single film turned a misunderstood animal into a monster in people's minds, and few stopped to ask whether the frightening picture was really true.",
+      "vocab_notes": [
+        {
+          "word": "shark",
+          "cn": "鲨鱼"
+        },
+        {
+          "word": "scare",
+          "cn": "使惊恐"
+        },
+        {
+          "word": "hunting",
+          "cn": "捕杀"
+        },
+        {
+          "word": "attitude",
+          "cn": "看法"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the film Jaws change people's view of sharks?",
+          "options": [
+            "It made them far more afraid of sharks.",
+            "It made them love and protect sharks.",
+            "It had no effect on their feelings.",
+            "It taught them that sharks were harmless."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'People had always been a little afraid of sharks, but Jaws made things much worse' 的转述。"
+        },
+        {
+          "stem": "What did some frightened people start to do?",
+          "options": [
+            "They started keeping sharks as pets.",
+            "They went hunting and killing sharks.",
+            "They swam in the sea far more often.",
+            "They made new films to praise sharks."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Others started hunting sharks, killing as many as they could' 的转述。"
+        },
+        {
+          "stem": "What does the writer suggest at the end of the passage?",
+          "options": [
+            "Few people checked whether the scary image was true.",
+            "Everyone knew at once that the film was false.",
+            "The film was based on careful science.",
+            "Sharks really do hunt humans for food."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'few stopped to ask whether the frightening picture was really true' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Man Who Changed His Mind",
+      "topic_cn": "记叙·割鳍与本奇利对鲨鱼态度的转变",
+      "body": "After 1975, the number of large sharks around America fell quickly, and soon numbers dropped around the world. This was partly due to fear, but a bigger cause was finning. Finning is a kind of fishing in which sharks are caught and their fins are cut off. The fishermen then throw the living sharks back into the sea, where they die slowly. The fins are used to make soup. Peter Benchley, who wrote the book that the film was based on, was deeply changed by what he saw. While he was diving in 1980, he came across an area where the sea floor was covered with dead sharks. From that day on, he fought to protect them. He admitted that his book had given a false picture of sharks. Experts have since proved that sharks do not see people as food, and that they harm humans only by accident. In fact, only about six people are killed by sharks each year.",
+      "vocab_notes": [
+        {
+          "word": "dive",
+          "cn": "潜水"
+        },
+        {
+          "word": "cruelty",
+          "cn": "残忍"
+        },
+        {
+          "word": "false",
+          "cn": "错误的"
+        },
+        {
+          "word": "target",
+          "cn": "把…作为目标"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was the bigger cause of the fall in shark numbers?",
+          "options": [
+            "Only people's fear of the sea.",
+            "A kind of fishing called finning.",
+            "A lack of food in the ocean.",
+            "Sudden changes in the weather."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a bigger cause was finning' 的转述。"
+        },
+        {
+          "stem": "How did Peter Benchley change after his dive in 1980?",
+          "options": [
+            "He started finning sharks himself.",
+            "He wrote another frightening book.",
+            "He began working to protect sharks.",
+            "He stopped caring about the sea."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'From that day on, he fought to protect them' 的转述。"
+        },
+        {
+          "stem": "What have experts proved about sharks?",
+          "options": [
+            "They hunt humans as their main food.",
+            "They kill thousands of people every year.",
+            "They never come close to people at all.",
+            "They harm people only by accident, not on purpose."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'they harm humans only by accident' 的转述;其余与原文相反。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Small Steps Against Global Warming",
+      "topic_cn": "说明·应对全球变暖的日常小事",
+      "body": "Most of us know that the Earth is getting warmer, and many of us want to do something about it. The good news is that small daily choices can make a real difference. One simple step is to lower your carbon footprint by walking or cycling to school instead of going by car. Another is to use renewable energy, such as solar power or wind power, whenever you can. Saving electricity matters too: the less energy we use, the less carbon dioxide is released into the air. Replacing an ordinary light bulb with an LED bulb is a great start, because LED bulbs use far less power. Saving clean water is also important, since we use a lot of energy to make water safe to drink. Finally, planting trees helps a great deal, because young trees take in carbon dioxide from the air. None of these actions is difficult, yet together they can help slow down global warming.",
+      "vocab_notes": [
+        {
+          "word": "carbon",
+          "cn": "碳"
+        },
+        {
+          "word": "solar",
+          "cn": "太阳能的"
+        },
+        {
+          "word": "release",
+          "cn": "排放"
+        },
+        {
+          "word": "reduce",
+          "cn": "减少"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the text, what can small daily choices do?",
+          "options": [
+            "They can really help fight global warming.",
+            "They make no difference at all.",
+            "They only waste people's time.",
+            "They make the Earth grow hotter."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'small daily choices can make a real difference' 的转述。"
+        },
+        {
+          "stem": "Why is changing to an LED bulb a good idea?",
+          "options": [
+            "LED bulbs are far cheaper to buy.",
+            "LED bulbs need much less electricity.",
+            "LED bulbs give a much brighter light.",
+            "LED bulbs last only a short time."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'LED bulbs use far less power' 的转述。"
+        },
+        {
+          "stem": "How does planting trees help, according to the passage?",
+          "options": [
+            "Trees give people fruit to eat.",
+            "Trees make the air much colder.",
+            "They take in carbon dioxide as they grow.",
+            "Trees quickly use up all the water."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'young trees take in carbon dioxide from the air' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Smog: Then and Now",
+      "topic_cn": "说明·伦敦雾霾的过去与现在",
+      "body": "The word 'smog' comes from 'smoke' and 'fog'. It is used to describe the dirty air that hangs over many cities. Smog can be dangerous, because it causes serious breathing problems and other illnesses. In the past, smog was mainly caused by people burning coal to heat their homes and to run factories. In December 1952, London suffered one of the worst cases of smog in history. For several days a thick, dark cloud lay over the city, and thousands of people became ill. Today, the causes of smog are different. In most modern cities, the main causes are traffic and factories rather than home fires. To fight the problem, many governments have made new rules. They control the kinds of fuel that factories may burn, and they limit the number of cars allowed into city centres. Thanks to these measures, the air in some cities is slowly becoming cleaner and safer to breathe.",
+      "vocab_notes": [
+        {
+          "word": "smog",
+          "cn": "雾霾"
+        },
+        {
+          "word": "fog",
+          "cn": "雾"
+        },
+        {
+          "word": "severe",
+          "cn": "严重的"
+        },
+        {
+          "word": "infection",
+          "cn": "感染"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where does the word 'smog' come from?",
+          "options": [
+            "The words 'sun' and 'fog'.",
+            "The words 'smoke' and 'frog'.",
+            "The words 'smell' and 'dog'.",
+            "The words 'smoke' and 'fog'."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'The word smog comes from smoke and fog' 的转述。"
+        },
+        {
+          "stem": "What caused most smog in the past?",
+          "options": [
+            "Burning coal in homes and factories.",
+            "Heavy traffic on busy roads.",
+            "Too many trees inside cities.",
+            "Strong winds blowing from the sea."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'smog was mainly caused by people burning coal to heat their homes and to run factories' 的转述。"
+        },
+        {
+          "stem": "How do many governments fight smog today?",
+          "options": [
+            "By burning much more coal at home.",
+            "By controlling fuel and limiting cars in city centres.",
+            "By building many more factories.",
+            "By removing all the rules about fuel."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'control the kinds of fuel... limit the number of cars' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Is Paper Really Greener?",
+      "topic_cn": "议论·纸袋与塑料袋的'环保真相'",
+      "body": "Many people believe that paper shopping bags are better for the Earth than plastic ones. It is easy to see why. Plastic bags cause litter and can harm wild animals, which sometimes mistake them for food. Plastic also takes hundreds of years to break down, while paper breaks down much faster. For these reasons, paper bags seem like the greener choice. However, the truth is not so simple. Making a paper bag uses about four times as much energy as making a plastic bag, and up to three times as much water. The process also produces more greenhouse gases. So, although paper breaks down more quickly, it is not really the better choice. In fact, both kinds of bag are bad for the environment in different ways. The best answer is to avoid both: carry a strong, reusable bag whenever you go shopping, and use it again and again.",
+      "vocab_notes": [
+        {
+          "word": "amount",
+          "cn": "数量"
+        },
+        {
+          "word": "greenhouse",
+          "cn": "温室"
+        },
+        {
+          "word": "false",
+          "cn": "不正确的"
+        },
+        {
+          "word": "reduce",
+          "cn": "减少"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do many people think paper bags are greener?",
+          "options": [
+            "Paper bags are always far cheaper.",
+            "Paper bags can hold much more shopping.",
+            "Paper breaks down faster and causes less litter.",
+            "Paper bags never tear or break."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'Plastic also takes hundreds of years to break down, while paper breaks down much faster' 等的转述。"
+        },
+        {
+          "stem": "What problem does making paper bags cause?",
+          "options": [
+            "It uses no water at all.",
+            "It produces no greenhouse gases.",
+            "It is much faster than making plastic.",
+            "It uses more energy and water than making plastic ones."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Making a paper bag uses about four times as much energy... three times as much water' 的转述。"
+        },
+        {
+          "stem": "What does the writer suggest doing?",
+          "options": [
+            "Carry a reusable bag and use it many times.",
+            "Always choose paper bags over plastic ones.",
+            "Stop going shopping completely.",
+            "Take a brand-new bag every single time."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'carry a strong, reusable bag... use it again and again' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Reserve at the Source of the Rivers",
+      "topic_cn": "说明·三江源自然保护区的挑战",
+      "body": "Sanjiangyuan National Nature Reserve, in western China, was set up in the year 2000. It is the highest and the second largest nature reserve in the country. The reserve protects dramatic landscapes that change from high mountains to grasslands, and from forests to rivers. Most importantly, it holds the sources of three great rivers: the Yellow River, the Changjiang River and the Lancang River. In recent years, however, the reserve has faced serious problems. Large areas of wetland have been damaged by human activity, which has harmed the special plants and animals that live there. Workers have also seen more droughts and floods, and these changes affect the water supply for people living downstream. The job of the staff is to look after and repair the local environment. They keep parts of the land free from human touch, and they help local people find new and sustainable ways to raise their farm animals.",
+      "vocab_notes": [
+        {
+          "word": "reserve",
+          "cn": "保护区"
+        },
+        {
+          "word": "establish",
+          "cn": "建立"
+        },
+        {
+          "word": "drought",
+          "cn": "干旱"
+        },
+        {
+          "word": "sustainable",
+          "cn": "可持续的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When was the reserve set up?",
+          "options": [
+            "In 1952.",
+            "In the year 2000.",
+            "In 1975.",
+            "In 1980."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'was set up in the year 2000'。"
+        },
+        {
+          "stem": "Why is the reserve so important?",
+          "options": [
+            "It lies right next to the sea.",
+            "It has the most people in all of China.",
+            "It is where three great rivers begin.",
+            "It grows food for the whole country."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'it holds the sources of three great rivers' 的转述。"
+        },
+        {
+          "stem": "What is the main job of the staff?",
+          "options": [
+            "To build new factories inside the reserve.",
+            "To remove all the wild animals.",
+            "To stop people visiting it forever.",
+            "To care for the land and repair the damage."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'look after and repair the local environment' 的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "grammar_title": "将来进行时(will be doing)",
+  "source": "外研社(新标准)选择性必修第二册 Unit 1 Using language:Future continuous(will be doing)。句子地道、成长主题、答案唯一(选项排除其他成立项)。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "将来进行时表将来某一时刻正在进行的动作",
+      "overview": "句中有 this time tomorrow / at 8 tonight / while you are… 等\"将来某一点\"或\"同时进行\"标志时,表示那一刻\"正在进行\"的持续性动作,用 will be doing(而非一次性完成的 will do)。"
+    },
+    {
+      "code": "u1.02",
+      "point": "将来进行时 vs 一般将来时(进行中 vs 整体完成)",
+      "overview": "强调将来某时\"正进行/作背景\"的持续动作用 will be doing;表示\"承诺/决定/条件结果/一次性完成\"的整体动作用 will do。由语境判断填哪一种。"
+    },
+    {
+      "code": "u1.03",
+      "point": "将来进行时表委婉询问 / 预期中自然发生的将来",
+      "overview": "用 Will you be doing…? 礼貌、客观地询问对方既定安排(不含请求/施压);用 I'll be doing… 表示\"按常规、顺理成章\"会发生的将来,而非临时的意愿或决定。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "\"This time tomorrow, I ____ my driving test, so please wish me luck!\"",
+      "options": [
+        "will be taking",
+        "will take",
+        "take",
+        "took"
+      ],
+      "answer_index": 0,
+      "explanation": "this time tomorrow 指将来某一时刻、考试正在进行 → will be taking。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"Don't call me at eight tonight — I ____ dinner with my family then.\"",
+      "options": [
+        "will have",
+        "will be having",
+        "have",
+        "had"
+      ],
+      "answer_index": 1,
+      "explanation": "at eight tonight 那一刻正在吃饭,持续动作 → will be having。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"While you are lying on the beach next week, I ____ hard for my final exams.\"",
+      "options": [
+        "will study",
+        "study",
+        "will be studying",
+        "studied"
+      ],
+      "answer_index": 2,
+      "explanation": "while you are lying… 表两动作同时进行 → will be studying。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"At noon tomorrow, the new graduates ____ across the stage to collect their certificates.\"",
+      "options": [
+        "will walk",
+        "walk",
+        "walked",
+        "will be walking"
+      ],
+      "answer_index": 3,
+      "explanation": "at noon tomorrow 那一刻正走过舞台 → will be walking。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"This time next year, I ____ at a university far away from home.\"",
+      "options": [
+        "will be studying",
+        "will study",
+        "am studying",
+        "studied"
+      ],
+      "answer_index": 0,
+      "explanation": "this time next year 指将来某点正在进行 → will be studying。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"At ten o'clock tonight, the night train ____ us towards the capital.\"",
+      "options": [
+        "will carry",
+        "will be carrying",
+        "carries",
+        "carried"
+      ],
+      "answer_index": 1,
+      "explanation": "at ten tonight 那一刻列车正载着我们 → will be carrying。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"When you arrive at the airport tomorrow, I ____ for you near the gate.\"",
+      "options": [
+        "will wait",
+        "wait",
+        "will be waiting",
+        "waited"
+      ],
+      "answer_index": 2,
+      "explanation": "when you arrive 那一刻我正在等 → will be waiting。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"This time tomorrow morning, the whole class ____ their final exam papers.\"",
+      "options": [
+        "will write",
+        "write",
+        "wrote",
+        "will be writing"
+      ],
+      "answer_index": 3,
+      "explanation": "this time tomorrow morning 那一刻正在写 → will be writing。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"At this moment next week, we ____ over the Pacific on our way to Australia.\"",
+      "options": [
+        "will be flying",
+        "will fly",
+        "fly",
+        "flew"
+      ],
+      "answer_index": 0,
+      "explanation": "at this moment next week 那一刻正在飞行 → will be flying。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"Don't visit me at three this afternoon — I ____ a nap after the long journey.\"",
+      "options": [
+        "will have",
+        "will be having",
+        "have",
+        "had"
+      ],
+      "answer_index": 1,
+      "explanation": "at three 那一刻正在午睡 → will be having。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"While my parents are at work tomorrow, I ____ online for my own apartment.\"",
+      "options": [
+        "will search",
+        "search",
+        "will be searching",
+        "searched"
+      ],
+      "answer_index": 2,
+      "explanation": "while my parents are at work 表同时进行 → will be searching。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"At eight tomorrow evening, she ____ her organ donation form at the hospital.\"",
+      "options": [
+        "will sign",
+        "signs",
+        "signed",
+        "will be signing"
+      ],
+      "answer_index": 3,
+      "explanation": "at eight tomorrow evening 那一刻正在签 → will be signing。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"This time on Saturday, the volunteers ____ trees in the city park.\"",
+      "options": [
+        "will be planting",
+        "will plant",
+        "plant",
+        "planted"
+      ],
+      "answer_index": 0,
+      "explanation": "this time on Saturday 那一刻正在植树 → will be planting。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"When the clock strikes midnight, we ____ in the New Year together.\"",
+      "options": [
+        "will welcome",
+        "will be welcoming",
+        "welcome",
+        "welcomed"
+      ],
+      "answer_index": 1,
+      "explanation": "when the clock strikes midnight 那一刻正在迎接 → will be welcoming。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"At lunchtime tomorrow, the new librarian ____ books onto the shelves.\"",
+      "options": [
+        "will arrange",
+        "arranges",
+        "will be arranging",
+        "arranged"
+      ],
+      "answer_index": 2,
+      "explanation": "at lunchtime tomorrow 那一刻正在整理 → will be arranging。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"While you are still sleeping, the early bus ____ me to my first day at work.\"",
+      "options": [
+        "will take",
+        "takes",
+        "took",
+        "will be taking"
+      ],
+      "answer_index": 3,
+      "explanation": "while you are sleeping 表同时进行 → will be taking。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"This time tomorrow, the graduates ____ goodbye to the campus they love.\"",
+      "options": [
+        "will be saying",
+        "will say",
+        "say",
+        "said"
+      ],
+      "answer_index": 0,
+      "explanation": "this time tomorrow 那一刻正在道别 → will be saying。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"At seven tonight, I ____ to my grandfather about my plans for the future.\"",
+      "options": [
+        "will talk",
+        "will be talking",
+        "talk",
+        "talked"
+      ],
+      "answer_index": 1,
+      "explanation": "at seven tonight 那一刻正在交谈 → will be talking。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"When you wake up tomorrow, I ____ on a train towards my new job.\"",
+      "options": [
+        "will travel",
+        "travel",
+        "will be travelling",
+        "travelled"
+      ],
+      "answer_index": 2,
+      "explanation": "when you wake up 那一刻我正在路上 → will be travelling。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"At this time next month, he ____ in his very own rented flat.\"",
+      "options": [
+        "will live",
+        "lives",
+        "lived",
+        "will be living"
+      ],
+      "answer_index": 3,
+      "explanation": "at this time next month 指将来某点持续居住 → will be living。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"Don't phone me at nine tonight — I ____ my favourite show then.\"",
+      "options": [
+        "will be watching",
+        "will watch",
+        "watch",
+        "watched"
+      ],
+      "answer_index": 0,
+      "explanation": "at nine then 那一刻正在看,强调进行 → will be watching。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"This time tomorrow we ____ for our final exams, so we really can't meet up.\"",
+      "options": [
+        "will revise",
+        "will be revising",
+        "revise",
+        "revised"
+      ],
+      "answer_index": 1,
+      "explanation": "this time tomorrow 那一刻正在复习 → will be revising。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"At six this evening the volunteers ____ the hall for the leavers' party.\"",
+      "options": [
+        "will decorate",
+        "decorate",
+        "will be decorating",
+        "decorated"
+      ],
+      "answer_index": 2,
+      "explanation": "at six this evening 那一刻正在布置,进行中 → will be decorating。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"While the others are sleeping, I ____ quietly in the library.\"",
+      "options": [
+        "will study",
+        "study",
+        "studied",
+        "will be studying"
+      ],
+      "answer_index": 3,
+      "explanation": "while the others are sleeping 表同时进行 → will be studying。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"Don't worry about me at noon — I ____ lunch with my new classmates then.\"",
+      "options": [
+        "will be having",
+        "will have",
+        "have",
+        "had"
+      ],
+      "answer_index": 0,
+      "explanation": "at noon then 那一刻正在吃饭 → will be having。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"When you call at eight, the children ____ their homework upstairs.\"",
+      "options": [
+        "will do",
+        "will be doing",
+        "do",
+        "did"
+      ],
+      "answer_index": 1,
+      "explanation": "when you call at eight 那一刻正在做作业 → will be doing。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"This time on Sunday, Grandpa ____ his calligraphy as he always does.\"",
+      "options": [
+        "will practise",
+        "practises",
+        "will be practising",
+        "practised"
+      ],
+      "answer_index": 2,
+      "explanation": "this time on Sunday 那一刻正在练字 → will be practising。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"Don't expect a quick reply at three — I ____ my driving test then.\"",
+      "options": [
+        "will take",
+        "take",
+        "took",
+        "will be taking"
+      ],
+      "answer_index": 3,
+      "explanation": "at three then 那一刻正在考试 → will be taking。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"While you are at work, the movers ____ my things into the new flat.\"",
+      "options": [
+        "will be carrying",
+        "will carry",
+        "carry",
+        "carried"
+      ],
+      "answer_index": 0,
+      "explanation": "while you are at work 表同时进行 → will be carrying。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"At this time tomorrow, the band ____ on the main stage of the festival.\"",
+      "options": [
+        "will play",
+        "will be playing",
+        "plays",
+        "played"
+      ],
+      "answer_index": 1,
+      "explanation": "at this time tomorrow 那一刻正在演奏 → will be playing。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"I promise I ____ the household bills as soon as I get my first wage.\"",
+      "options": [
+        "will be paying",
+        "pay",
+        "will pay",
+        "paid"
+      ],
+      "answer_index": 2,
+      "explanation": "I promise… 是承诺、一次性完成动作 → 一般将来 will pay。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"If you lend me the money now, I ____ it back to you next month.\"",
+      "options": [
+        "will be giving",
+        "give",
+        "gave",
+        "will give"
+      ],
+      "answer_index": 3,
+      "explanation": "条件句结果、整体完成的归还动作 → will give。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"The moment I turn eighteen, I ____ for a driving licence straight away.\"",
+      "options": [
+        "will apply",
+        "will be applying",
+        "apply",
+        "applied"
+      ],
+      "answer_index": 0,
+      "explanation": "the moment… straight away 一次性完成的决定动作 → will apply。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"Don't worry — I ____ you the moment I reach the dormitory tonight.\"",
+      "options": [
+        "will be texting",
+        "will text",
+        "text",
+        "texted"
+      ],
+      "answer_index": 1,
+      "explanation": "the moment I reach… 一次性完成的动作 → will text。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"I've finally decided that next year I ____ an organ donation form.\"",
+      "options": [
+        "will be signing",
+        "sign",
+        "will sign",
+        "signed"
+      ],
+      "answer_index": 2,
+      "explanation": "I've decided 表决定、整体完成的一次动作 → will sign。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"If it rains tomorrow, we ____ the graduation party indoors instead.\"",
+      "options": [
+        "will be holding",
+        "hold",
+        "held",
+        "will hold"
+      ],
+      "answer_index": 3,
+      "explanation": "条件句结果、整体安排 → will hold。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"She is certain that hard work ____ her dream come true one day.\"",
+      "options": [
+        "will make",
+        "will be making",
+        "makes",
+        "made"
+      ],
+      "answer_index": 0,
+      "explanation": "对结果的预测、整体完成 → will make。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"Give me one week, and I ____ back every cent that I borrowed.\"",
+      "options": [
+        "will be paying",
+        "will pay",
+        "pay",
+        "paid"
+      ],
+      "answer_index": 1,
+      "explanation": "承诺、一次性完成的归还 → will pay。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"Once the exams are over, I ____ a part-time job for the summer.\"",
+      "options": [
+        "will be finding",
+        "find",
+        "will find",
+        "found"
+      ],
+      "answer_index": 2,
+      "explanation": "once… 表整体完成的将来动作 → will find。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"I'm sure you ____ the right decision when the time finally comes.\"",
+      "options": [
+        "will be making",
+        "make",
+        "made",
+        "will make"
+      ],
+      "answer_index": 3,
+      "explanation": "对未来整体动作的预测 → will make。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ the computer this evening? If not, may I borrow it for my homework?\"",
+      "options": [
+        "Will you be using",
+        "Will you use",
+        "Do you use",
+        "Did you use"
+      ],
+      "answer_index": 0,
+      "explanation": "委婉询问对方既定安排、不含请求 → Will you be using。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ past the post office on your way home? I just need one stamp.\"",
+      "options": [
+        "Will you go",
+        "Will you be going",
+        "Do you go",
+        "Went you"
+      ],
+      "answer_index": 1,
+      "explanation": "客观询问对方行程安排 → Will you be going。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ the car tomorrow, Dad? I'd like to drive to the library if it's free.\"",
+      "options": [
+        "Will you need",
+        "Do you need",
+        "Will you be needing",
+        "Needed you"
+      ],
+      "answer_index": 2,
+      "explanation": "礼貌打听对方是否需要、不施压 → Will you be needing。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ in this seat much longer? I'm waiting for somewhere to sit.\"",
+      "options": [
+        "Will you stay",
+        "Do you stay",
+        "Stayed you",
+        "Will you be staying"
+      ],
+      "answer_index": 3,
+      "explanation": "委婉询问对方安排 → Will you be staying。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ to the graduation party on Friday? I can easily give you a lift.\"",
+      "options": [
+        "Will you be coming",
+        "Will you come",
+        "Do you come",
+        "Came you"
+      ],
+      "answer_index": 0,
+      "explanation": "客观询问对方计划 → Will you be coming。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ the photocopier for long? I have just a single page to print.\"",
+      "options": [
+        "Will you use",
+        "Will you be using",
+        "Do you use",
+        "Used you"
+      ],
+      "answer_index": 1,
+      "explanation": "礼貌询问对方占用安排 → Will you be using。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ your headphones tonight? I'd love to borrow them for the train.\"",
+      "options": [
+        "Will you wear",
+        "Do you wear",
+        "Will you be wearing",
+        "Wore you"
+      ],
+      "answer_index": 2,
+      "explanation": "委婉打听对方安排 → Will you be wearing。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ the kitchen soon? I'd like to start cooking dinner if you've finished.\"",
+      "options": [
+        "Will you use",
+        "Do you use",
+        "Did you use",
+        "Will you be using"
+      ],
+      "answer_index": 3,
+      "explanation": "客观询问对方占用计划 → Will you be using。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ at home this evening? I might drop by with the documents.\"",
+      "options": [
+        "Will you be working",
+        "Will you work",
+        "Do you work",
+        "Worked you"
+      ],
+      "answer_index": 0,
+      "explanation": "委婉询问对方既定安排 → Will you be working。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ the meeting room after lunch? Our study group needs a quiet space.\"",
+      "options": [
+        "Will you use",
+        "Will you be using",
+        "Do you use",
+        "Use you"
+      ],
+      "answer_index": 1,
+      "explanation": "礼貌打听对方安排 → Will you be using。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"I ____ Lin Ning at the library tomorrow anyway, so I'll pass on your message.\"",
+      "options": [
+        "will see",
+        "see",
+        "will be seeing",
+        "saw"
+      ],
+      "answer_index": 2,
+      "explanation": "anyway 表顺理成章会发生的将来,非临时意愿 → will be seeing。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"Don't make a special trip — I ____ past your house this afternoon in any case.\"",
+      "options": [
+        "will drive",
+        "drive",
+        "drove",
+        "will be driving"
+      ],
+      "answer_index": 3,
+      "explanation": "in any case 表本就会发生的将来 → will be driving。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"Ask Tom yourself; I ____ him at training later today as usual.\"",
+      "options": [
+        "will be meeting",
+        "will meet",
+        "meet",
+        "met"
+      ],
+      "answer_index": 0,
+      "explanation": "as usual 表按常规自然会发生 → will be meeting。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"Leave the books with me — I ____ to the library tomorrow anyway.\"",
+      "options": [
+        "will go",
+        "will be going",
+        "go",
+        "went"
+      ],
+      "answer_index": 1,
+      "explanation": "anyway 表本就要去 → will be going。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"There's no need to wait up; we ____ home quite late after the ceremony.\"",
+      "options": [
+        "will get",
+        "get",
+        "will be getting",
+        "got"
+      ],
+      "answer_index": 2,
+      "explanation": "顺理成章会发生的将来情形 → will be getting。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"Don't bother posting it; I ____ the office tomorrow and can hand it in myself.\"",
+      "options": [
+        "will visit",
+        "visit",
+        "visited",
+        "will be visiting"
+      ],
+      "answer_index": 3,
+      "explanation": "表本就安排好的将来行程 → will be visiting。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"I ____ my grandparents this weekend in any case, so I'll deliver the gift.\"",
+      "options": [
+        "will be visiting",
+        "will visit",
+        "visit",
+        "visited"
+      ],
+      "answer_index": 0,
+      "explanation": "in any case 表顺理成章的将来 → will be visiting。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"She ____ through the city centre on her way to work, so she can pick it up.\"",
+      "options": [
+        "will pass",
+        "will be passing",
+        "passes",
+        "passed"
+      ],
+      "answer_index": 1,
+      "explanation": "表本就会发生的将来情形 → will be passing。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"I ____ near the station later this evening, so I can easily collect your parcel.\"",
+      "options": [
+        "will walk",
+        "walk",
+        "will be walking",
+        "walked"
+      ],
+      "answer_index": 2,
+      "explanation": "later 表顺路、自然会发生的将来 → will be walking。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"We ____ dinner at six as usual, so do join us if you happen to be free.\"",
+      "options": [
+        "will have",
+        "have",
+        "had",
+        "will be having"
+      ],
+      "answer_index": 3,
+      "explanation": "as usual 表按常规进行的将来情形 → will be having。"
+    }
+  ]
+}

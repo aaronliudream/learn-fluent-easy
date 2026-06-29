@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "grammar_title": "主语从句(what / that / whether + 从句作主语;形式主语 it)",
+  "source": "外研社选择性必修三 Unit 1 Using language:主语从句。句子地道、围绕自我认同/外貌/社交媒体主题;答案唯一(干扰项为错连接词,排除其他成立项);零术语应用型填空。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "what 引导的主语从句(从句内缺成分)",
+      "overview": "当主语从句内部缺主语或宾语时,用 what(= the thing that/which)同时充当连接词并补足缺失成分;that/whether 不能补足缺成分,which 无先行词,都不行。"
+    },
+    {
+      "code": "u1.02",
+      "point": "that / whether 引导的主语从句(从句完整)",
+      "overview": "从句结构完整、陈述一个事实时用 that(只起连接、不充当成分);表示'是否'的开放/未定语义时用 whether;if 不能引导句首主语从句。"
+    },
+    {
+      "code": "u1.03",
+      "point": "形式主语 it · whoever / whatever 作主语",
+      "overview": "把主语从句(that/to do/whether)后置、句首用形式主语 it;指'任何人'用 whoever、指'任何事物'用 whatever 引导主语从句。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "\"____ makes a person beautiful is not only a pretty face.\"",
+      "options": [
+        "what",
+        "that",
+        "whether",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "从句 'makes a person beautiful' 缺主语,需要既作连接词又补主语的词 → what(= the thing that)。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ he said about my selfies really upset me.\"",
+      "options": [
+        "that",
+        "what",
+        "which",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "said 后缺宾语,用 what 补足并连接;that 引导的主语从句必须完整。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ truly matters is who you are on the inside.\"",
+      "options": [
+        "that",
+        "it",
+        "what",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "matters 前缺主语 → what(= the thing that)。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ I post online shows only my happiest moments.\"",
+      "options": [
+        "that",
+        "whether",
+        "which",
+        "what"
+      ],
+      "answer_index": 3,
+      "explanation": "post 后缺宾语,用 what 补足。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ surprised his roommates was his calm, honest reply.\"",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "it"
+      ],
+      "answer_index": 0,
+      "explanation": "surprised 前缺主语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ the editing app changed was just my appearance.\"",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "changed 后缺宾语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ counts most is a kind and honest heart.\"",
+      "options": [
+        "that",
+        "it",
+        "what",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "counts 前缺主语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ she admires in Emma is her quiet self-confidence.\"",
+      "options": [
+        "that",
+        "which",
+        "whether",
+        "what"
+      ],
+      "answer_index": 3,
+      "explanation": "admires 后缺宾语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ worried her parents was her endless photo editing.\"",
+      "options": [
+        "what",
+        "that",
+        "it",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "worried 前缺主语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ we show the world online is not always the truth.\"",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "show 后缺宾语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ lies behind every perfect photo is real pressure.\"",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "it"
+      ],
+      "answer_index": 2,
+      "explanation": "lies 前缺主语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ I really need is the courage to be myself.\"",
+      "options": [
+        "that",
+        "whether",
+        "which",
+        "what"
+      ],
+      "answer_index": 3,
+      "explanation": "need 后缺宾语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ defines us most is our character, not our looks.\"",
+      "options": [
+        "what",
+        "that",
+        "it",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "defines 前缺主语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ young people share online can shape their self-image.\"",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "share 后缺宾语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ impressed the doctor most was her healthy attitude.\"",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "it"
+      ],
+      "answer_index": 2,
+      "explanation": "impressed 前缺主语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ he values most is being true to himself.\"",
+      "options": [
+        "that",
+        "whether",
+        "which",
+        "what"
+      ],
+      "answer_index": 3,
+      "explanation": "values 后缺宾语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ happened after the makeover changed his whole view.\"",
+      "options": [
+        "what",
+        "that",
+        "it",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "happened 前缺主语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ the speaker described was a simple but clever experiment.\"",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "described 后缺宾语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ keeps her confident is her inner strength, not her makeup.\"",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "it"
+      ],
+      "answer_index": 2,
+      "explanation": "keeps 前缺主语 → what。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ I want others to see is the real me.\"",
+      "options": [
+        "that",
+        "whether",
+        "which",
+        "what"
+      ],
+      "answer_index": 3,
+      "explanation": "see 后缺宾语 → what。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ inner beauty matters is something we all should remember.\"",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "if"
+      ],
+      "answer_index": 0,
+      "explanation": "从句完整、陈述事实 → that;无缺成分故非 what,语义肯定故非 whether/if。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ she edits every single photo clearly worries her father.\"",
+      "options": [
+        "what",
+        "that",
+        "if",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整、是既成事实 → that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ good health makes us happier is now widely accepted.\"",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "if"
+      ],
+      "answer_index": 2,
+      "explanation": "陈述被普遍接受的事实 → that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ Anthony completely changed his style amazed his roommates.\"",
+      "options": [
+        "what",
+        "if",
+        "whether",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整、是已发生的事 → that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ true beauty comes from within is the writer's main point.\"",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "if"
+      ],
+      "answer_index": 0,
+      "explanation": "陈述一个观点(事实)→ that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ Emma feels proud of her body inspires many readers.\"",
+      "options": [
+        "what",
+        "that",
+        "if",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整、陈述事实 → that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ a positive image can boost confidence is certainly true.\"",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "if"
+      ],
+      "answer_index": 2,
+      "explanation": "谓语 is certainly true 指向事实 → that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ the model stayed confident encouraged thousands of girls.\"",
+      "options": [
+        "what",
+        "if",
+        "whether",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整、是事实 → that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ kindness shapes real beauty is a lesson worth learning.\"",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "if"
+      ],
+      "answer_index": 0,
+      "explanation": "陈述事实 → that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ he finally accepted himself made his whole family glad.\"",
+      "options": [
+        "what",
+        "that",
+        "if",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整、已发生 → that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ external beauty really matters is still debated by many.\"",
+      "options": [
+        "if",
+        "that",
+        "whether",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "谓语 is still debated 表'是否'的争论 → whether;if 不能引导句首主语从句。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ she should delete the selfie app is a hard choice for Jade.\"",
+      "options": [
+        "if",
+        "what",
+        "that",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "表'是否要删'的两难 → whether。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ looks truly affect first impressions is worth discussing.\"",
+      "options": [
+        "whether",
+        "if",
+        "that",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "谓语 is worth discussing 暗含未定 → whether。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ we should change our appearance depends on our reasons.\"",
+      "options": [
+        "if",
+        "whether",
+        "what",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "depends on 表条件性、未定 → whether。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ his makeover was really a good idea is not yet clear.\"",
+      "options": [
+        "if",
+        "that",
+        "whether",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "is not yet clear 表未定 → whether。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ beauty lies inside or outside has long been argued about.\"",
+      "options": [
+        "if",
+        "what",
+        "that",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "'…inside or outside' 的两可 → whether。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ to edit her photos or leave them alone troubled Jade daily.\"",
+      "options": [
+        "whether",
+        "if",
+        "that",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "只有 whether 能接动词不定式作主语;if 不可。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ people can ever fully accept their looks remains uncertain.\"",
+      "options": [
+        "if",
+        "whether",
+        "what",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "remains uncertain 表未定 → whether。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ social media helps or harms teenagers is widely discussed.\"",
+      "options": [
+        "if",
+        "that",
+        "whether",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "'helps or harms' 两可 → whether。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ she would dare to join the show was still in doubt.\"",
+      "options": [
+        "if",
+        "what",
+        "that",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "was still in doubt 表未定 → whether。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ is important that we accept who we really are.\"",
+      "options": [
+        "It",
+        "What",
+        "That",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "真正主语是后置的 that 从句,句首用形式主语 → It。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ is true that outer beauty often fades with time.\"",
+      "options": [
+        "What",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "形式主语 It 指代后面的 that 从句。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ is no surprise that confidence makes people shine.\"",
+      "options": [
+        "What",
+        "There",
+        "It",
+        "That"
+      ],
+      "answer_index": 2,
+      "explanation": "It is no surprise that…,形式主语 It。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ takes real courage to post a photo without any editing.\"",
+      "options": [
+        "What",
+        "That",
+        "This",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "真正主语是后面的不定式,形式主语用 It。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ is up to you whether you change your look or not.\"",
+      "options": [
+        "It",
+        "What",
+        "That",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "形式主语 It 指代后置的 whether 从句。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ feels wonderful to be at ease with your own body.\"",
+      "options": [
+        "What",
+        "It",
+        "That",
+        "This"
+      ],
+      "answer_index": 1,
+      "explanation": "后置不定式作真正主语,形式主语 It。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ is clear that good health is a kind of beauty.\"",
+      "options": [
+        "What",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It is clear that…,形式主语 It。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ is hard to ignore the pressure from social media.\"",
+      "options": [
+        "What",
+        "That",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "后置不定式作真正主语,形式主语 It。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ is worth remembering that kindness shapes true beauty.\"",
+      "options": [
+        "It",
+        "What",
+        "This",
+        "That"
+      ],
+      "answer_index": 0,
+      "explanation": "It is worth remembering that…,形式主语 It。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ was foolish of him to judge people only by their looks.\"",
+      "options": [
+        "What",
+        "It",
+        "That",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "It was foolish of sb to do,形式主语 It。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ stands behind the camera controls the final image.\"",
+      "options": [
+        "Whatever",
+        "Whomever",
+        "Whoever",
+        "Anyone"
+      ],
+      "answer_index": 2,
+      "explanation": "指'任何站在相机后的人'、从句缺主语 → Whoever。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ accepts herself first will gain real confidence.\"",
+      "options": [
+        "Whatever",
+        "Whomever",
+        "Whichever",
+        "Whoever"
+      ],
+      "answer_index": 3,
+      "explanation": "herself 指人、从句缺主语 → Whoever。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ truly loves you cares about your heart, not your face.\"",
+      "options": [
+        "Whoever",
+        "Whatever",
+        "Whomever",
+        "Anyone"
+      ],
+      "answer_index": 0,
+      "explanation": "指'任何爱你的人'、缺主语 → Whoever。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ praises only your looks may not be a true friend.\"",
+      "options": [
+        "Whatever",
+        "Whoever",
+        "Whichever",
+        "Whomever"
+      ],
+      "answer_index": 1,
+      "explanation": "指人、缺主语 → Whoever。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ stands before the mirror sees only one side of beauty.\"",
+      "options": [
+        "Whatever",
+        "Whomever",
+        "Whoever",
+        "Anyone"
+      ],
+      "answer_index": 2,
+      "explanation": "指'任何照镜子的人'、缺主语 → Whoever。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ you post online may stay there forever.\"",
+      "options": [
+        "Whoever",
+        "However",
+        "Whichever",
+        "Whatever"
+      ],
+      "answer_index": 3,
+      "explanation": "指'任何你发的东西'、post 后缺宾语 → Whatever。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ the camera shows is only a small part of the truth.\"",
+      "options": [
+        "Whatever",
+        "Whoever",
+        "However",
+        "Whichever"
+      ],
+      "answer_index": 0,
+      "explanation": "指'相机所显示的任何事物'、shows 后缺宾语 → Whatever。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ he says about my pictures cannot change how I feel.\"",
+      "options": [
+        "Whoever",
+        "Whatever",
+        "However",
+        "Whomever"
+      ],
+      "answer_index": 1,
+      "explanation": "指'他说的任何话'、says 后缺宾语 → Whatever。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ makes you feel confident is surely worth keeping.\"",
+      "options": [
+        "However",
+        "Whichever",
+        "Whatever",
+        "Wherever"
+      ],
+      "answer_index": 2,
+      "explanation": "指'任何让你自信的事物'、缺主语 → Whatever。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"____ they print in those magazines is not always real.\"",
+      "options": [
+        "Whoever",
+        "However",
+        "Whomever",
+        "Whatever"
+      ],
+      "answer_index": 3,
+      "explanation": "指'他们印出的任何东西'、print 后缺宾语 → Whatever。"
+    }
+  ]
+}

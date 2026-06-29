@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "topic": "Business Blossoms",
+  "source": "外研社选择性必修第四册 Unit 4 同主题完形(开咖啡店/管理零花钱/果农电商/初入职场/生态旅游/手工艺复兴)。用词限 U4/初中/常见词,答案唯一,选项同词性,与阅读/听力关不撞。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Mark's Coffee Shop",
+      "text": "Last year my cousin Mark decided to (1)____ his own coffee shop in our small town. He had little money, so he asked the bank for a (2)____ to help him start. At first, business was (3)____, and only a few customers came each day. Mark did not give up. He worked hard to make the shop a (4)____ place where people wanted to stay. He chose beans of (5)____ quality and learned to make every cup with care. Slowly, word spread, and more people began to (6)____ his coffee. By the end of the year, he could (7)____ two part-time workers and even pay them a small (8)____ at Christmas. Mark says the most important (9)____ in his success was patience, and he warns that you must never (10)____ your customers down.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "open",
+            "close",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "open a coffee shop 开一家咖啡店。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "gift",
+            "loan",
+            "bill",
+            "tax"
+          ],
+          "answer_index": 1,
+          "explanation": "ask the bank for a loan 向银行贷款。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "busy",
+            "free",
+            "slow",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "business was slow 生意冷清。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "terrible",
+            "empty",
+            "dark",
+            "pleasant"
+          ],
+          "answer_index": 3,
+          "explanation": "a pleasant place 一个让人愿意停留的舒适地方。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "high",
+            "low",
+            "cheap",
+            "poor"
+          ],
+          "answer_index": 0,
+          "explanation": "beans of high quality 高品质的咖啡豆。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "refuse",
+            "enjoy",
+            "throw",
+            "spill"
+          ],
+          "answer_index": 1,
+          "explanation": "began to enjoy his coffee 开始喜欢上他的咖啡。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "scold",
+            "become",
+            "hire",
+            "remain"
+          ],
+          "answer_index": 2,
+          "explanation": "hire two part-time workers 雇用两名兼职工。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "fine",
+            "debt",
+            "rule",
+            "bonus"
+          ],
+          "answer_index": 3,
+          "explanation": "pay them a bonus 给他们发奖金。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "factor",
+            "mistake",
+            "problem",
+            "danger"
+          ],
+          "answer_index": 0,
+          "explanation": "the most important factor 最重要的因素。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "put",
+            "let",
+            "take",
+            "get"
+          ],
+          "answer_index": 1,
+          "explanation": "let your customers down 让顾客失望(固定搭配 let sb down)。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Lily and Her Pocket Money",
+      "text": "My sister Lily is very good at managing her (1)____. Every month our parents give her some pocket money, and she always makes a simple (2)____ before she spends anything. First she puts aside a small amount to (3)____ for the future, because she knows that savings (4)____ slowly over time. Then she decides how much she can spend without going into (5)____. Lily never buys (6)____ that she does not really need, such as expensive toys or sweets. If she wants something costly, she (7)____ for a few weeks until she has enough. She also keeps every (8)____ so that she can check what she has bought. Thanks to these habits, she can always (9)____ ends meet and still has a little left at the end of the month. I really should (10)____ her good example.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "time",
+            "food",
+            "money",
+            "sleep"
+          ],
+          "answer_index": 2,
+          "explanation": "managing her money 管理她的钱。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "joke",
+            "mess",
+            "noise",
+            "plan"
+          ],
+          "answer_index": 3,
+          "explanation": "makes a simple plan 做一个简单的计划。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "save",
+            "waste",
+            "borrow",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "save for the future 为将来存钱。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "fall",
+            "grow",
+            "stop",
+            "break"
+          ],
+          "answer_index": 1,
+          "explanation": "savings grow over time 存款随时间增长。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "water",
+            "sight",
+            "debt",
+            "fashion"
+          ],
+          "answer_index": 2,
+          "explanation": "going into debt 负债。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "friends",
+            "hours",
+            "words",
+            "things"
+          ],
+          "answer_index": 3,
+          "explanation": "buys things she does not need 买不需要的东西。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "waits",
+            "runs",
+            "sleeps",
+            "hides"
+          ],
+          "answer_index": 0,
+          "explanation": "she waits for a few weeks 她会等几周。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "song",
+            "bill",
+            "photo",
+            "key"
+          ],
+          "answer_index": 1,
+          "explanation": "keeps every bill 保留每一张单据。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "take",
+            "do",
+            "make",
+            "get"
+          ],
+          "answer_index": 2,
+          "explanation": "make ends meet 收支相抵(固定搭配)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "break",
+            "lose",
+            "sell",
+            "follow"
+          ],
+          "answer_index": 3,
+          "explanation": "follow her good example 学习她的好榜样。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Old Chen Sells Online",
+      "text": "Old Chen grows apples in a village far from any big city. For many years he found it hard to (1)____ his fruit, because few buyers ever came so far. Everything changed when his daughter taught him to sell (2)____, using a phone and the Internet. Now customers from all over the country can (3)____ his apples with a single click. The fruit is fresh, the (4)____ is fair, and orders arrive every day. Chen no longer has to (5)____ his apples to traders for very little money. Instead, he sends them straight to families, which brings him a much better (6)____. The whole village has noticed his success, and other farmers have started to (7)____ his method. E-commerce has (8)____ new hope to this quiet place. \"I never (9)____ that a small phone could change my life,\" Chen says with a smile, \"but now my apples (10)____ to homes a thousand miles away.\"",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "eat",
+            "plant",
+            "water"
+          ],
+          "answer_index": 0,
+          "explanation": "hard to sell his fruit 很难卖出水果。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "alone",
+            "online",
+            "aloud",
+            "asleep"
+          ],
+          "answer_index": 1,
+          "explanation": "sell online 在网上销售。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "throw",
+            "burn",
+            "order",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "order his apples 订购他的苹果。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "noise",
+            "weather",
+            "road",
+            "price"
+          ],
+          "answer_index": 3,
+          "explanation": "the price is fair 价格公道。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "hand",
+            "sing",
+            "drive",
+            "sleep"
+          ],
+          "answer_index": 0,
+          "explanation": "hand his apples to traders 把苹果交给中间商。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "problem",
+            "income",
+            "illness",
+            "mistake"
+          ],
+          "answer_index": 1,
+          "explanation": "a better income 更好的收入。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "ignore",
+            "fear",
+            "copy",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "copy his method 模仿他的做法。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lost",
+            "closed",
+            "broken",
+            "brought"
+          ],
+          "answer_index": 3,
+          "explanation": "brought new hope 带来了新希望。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "imagined",
+            "refused",
+            "escaped",
+            "returned"
+          ],
+          "answer_index": 0,
+          "explanation": "never imagined 从未想到。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "belong",
+            "travel",
+            "listen",
+            "point"
+          ],
+          "answer_index": 1,
+          "explanation": "my apples travel to homes 我的苹果运往各家各户。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Mei's First Job",
+      "text": "When Mei finished school, she took her first (1)____ at a flower company. On the first day she felt (2)____ and her hands were shaking, but she was determined to do well. Her job was to pack roses quickly before they lost their (3)____ smell. The work was hard, and the early (4)____ began before sunrise. Mei never (5)____, even when she was tired. Her manager soon noticed how (6)____ she worked and gave her more responsibility. At the end of the year, the company did very well, so every worker received a (7)____ as a reward. Mei was proud of the money she had (8)____ with her own effort. She used part of it to help her parents and (9)____ the rest in the bank. \"Hard work always (10)____ off,\" she likes to say. \"My first job taught me that.\"",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sleep",
+            "meal",
+            "job",
+            "game"
+          ],
+          "answer_index": 2,
+          "explanation": "her first job 她的第一份工作。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "lazy",
+            "sleepy",
+            "angry",
+            "nervous"
+          ],
+          "answer_index": 3,
+          "explanation": "felt nervous 感到紧张。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sweet",
+            "sour",
+            "loud",
+            "dark"
+          ],
+          "answer_index": 0,
+          "explanation": "their sweet smell 它们香甜的气味。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "party",
+            "shift",
+            "lesson",
+            "match"
+          ],
+          "answer_index": 1,
+          "explanation": "the early shift 早班。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "smiled",
+            "slept",
+            "complained",
+            "sang"
+          ],
+          "answer_index": 2,
+          "explanation": "never complained 从不抱怨。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "badly",
+            "slowly",
+            "rarely",
+            "hard"
+          ],
+          "answer_index": 3,
+          "explanation": "how hard she worked 她工作多么努力。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "bonus",
+            "bill",
+            "fine",
+            "debt"
+          ],
+          "answer_index": 0,
+          "explanation": "received a bonus 得到一笔奖金。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lost",
+            "earned",
+            "spent",
+            "borrowed"
+          ],
+          "answer_index": 1,
+          "explanation": "the money she had earned 她挣来的钱。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "threw",
+            "broke",
+            "put",
+            "drove"
+          ],
+          "answer_index": 2,
+          "explanation": "put the rest in the bank 把余下的钱存进银行。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "takes",
+            "falls",
+            "runs",
+            "pays"
+          ],
+          "answer_index": 3,
+          "explanation": "hard work pays off 努力终有回报(固定搭配)。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "New Life for Green Hill",
+      "text": "Ten years ago, the small town of Green Hill was losing its young people, who left to find work in the cities. Then the local people found a new way to (1)____ their home. They turned the clean rivers and green hills into a place for (2)____. Visitors now come to enjoy fresh air, walk in the forests and learn about country (3)____. The money these tourists spend has (4)____ new life to the town. Old houses have become guest rooms, and farmers now (5)____ their spare rooms to travellers. Many young people have (6)____ home to start small businesses, such as cafés and craft shops. The town is careful, however, not to (7)____ its natural beauty. Rules protect the rivers, and the number of visitors is (8)____ each day. \"We want growth,\" the mayor says, \"but we must also (9)____ the land for our children.\" Thanks to tourism, Green Hill has a brighter (10)____ once again.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "save",
+            "sell",
+            "leave",
+            "forget"
+          ],
+          "answer_index": 0,
+          "explanation": "save their home 拯救家乡。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "fighting",
+            "tourism",
+            "sleeping",
+            "crying"
+          ],
+          "answer_index": 1,
+          "explanation": "a place for tourism 旅游胜地。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "war",
+            "debt",
+            "life",
+            "fear"
+          ],
+          "answer_index": 2,
+          "explanation": "country life 乡村生活。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lost",
+            "closed",
+            "sold",
+            "brought"
+          ],
+          "answer_index": 3,
+          "explanation": "brought new life 带来了新生机。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "rent",
+            "throw",
+            "burn",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "rent their spare rooms 出租空闲房间。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "fallen",
+            "returned",
+            "sung",
+            "slept"
+          ],
+          "answer_index": 1,
+          "explanation": "returned home 返回家乡。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "paint",
+            "count",
+            "harm",
+            "read"
+          ],
+          "answer_index": 2,
+          "explanation": "not to harm its natural beauty 不破坏自然之美。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "painted",
+            "eaten",
+            "sung",
+            "limited"
+          ],
+          "answer_index": 3,
+          "explanation": "the number of visitors is limited 游客数量受到限制。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "protect",
+            "sell",
+            "waste",
+            "leave"
+          ],
+          "answer_index": 0,
+          "explanation": "protect the land 保护这片土地。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "debt",
+            "future",
+            "danger",
+            "mistake"
+          ],
+          "answer_index": 1,
+          "explanation": "a brighter future 更光明的未来。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Cloth That Came Back",
+      "text": "In a mountain village known for its beautiful cloth, an old craft was almost (1)____. Few young people wanted to learn the slow art of weaving, and the (2)____ for hand-made cloth had fallen. Then a young woman named Hua came back from the city with a new (3)____. She believed the village's skill had great (4)____. Hua helped the weavers sell their work online and design products that modern buyers would (5)____. Soon orders began to (6)____ from cities far away. The weavers earned a better (7)____, and several poor families could finally (8)____ ends meet. Proud of their tradition, more young people chose to (9)____ the old skill instead of leaving home. Today the village is famous again, and its beautiful cloth has helped the local economy to (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "born",
+            "paid",
+            "lost",
+            "sold"
+          ],
+          "answer_index": 2,
+          "explanation": "almost lost 几乎失传。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "fear",
+            "noise",
+            "rain",
+            "demand"
+          ],
+          "answer_index": 3,
+          "explanation": "the demand for cloth 对布料的需求。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "idea",
+            "fear",
+            "song",
+            "meal"
+          ],
+          "answer_index": 0,
+          "explanation": "a new idea 一个新点子。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "danger",
+            "potential",
+            "debt",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "great potential 巨大的潜力。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "fear",
+            "burn",
+            "buy",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "products that buyers would buy 买家愿意购买的产品。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleep",
+            "cry",
+            "fall",
+            "arrive"
+          ],
+          "answer_index": 3,
+          "explanation": "orders began to arrive 订单开始涌来。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "income",
+            "illness",
+            "mistake",
+            "danger"
+          ],
+          "answer_index": 0,
+          "explanation": "a better income 更高的收入。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "take",
+            "make",
+            "do",
+            "get"
+          ],
+          "answer_index": 1,
+          "explanation": "make ends meet 收支相抵。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lose",
+            "sell",
+            "learn",
+            "leave"
+          ],
+          "answer_index": 2,
+          "explanation": "learn the old skill 学习古老的手艺。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "fall",
+            "stop",
+            "close",
+            "grow"
+          ],
+          "answer_index": 3,
+          "explanation": "helped the economy to grow 帮助经济发展(blossom)。"
+        }
+      ]
+    }
+  ]
+}

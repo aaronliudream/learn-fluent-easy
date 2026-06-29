@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(完善自己主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Leo had always put his homework off until midnight, and his marks had slowly dropped. One week he tried a new plan: he did his hardest subject first, right after school, before he even touched his phone. A month later his teachers noticed that his work had been handed in early for the first time, and Leo felt proud of how much had changed.",
+    "questions": [
+      {
+        "q": "What change did Leo make to his routine?",
+        "options": [
+          "He tackled his most difficult subject before using his phone.",
+          "He stopped doing any homework at all.",
+          "He started staying up even later than before.",
+          "He gave his phone to his teacher."
+        ],
+        "answer": "A",
+        "explanation": "原文 he did his hardest subject first … before he even touched his phone 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What did his teachers notice a month later?",
+        "options": [
+          "His marks had dropped even further.",
+          "His assignments arrived ahead of time for once.",
+          "He had stopped coming to class.",
+          "He had lost interest in every subject."
+        ],
+        "answer": "B",
+        "explanation": "末句 his work had been handed in early for the first time 的转述(覆盖短文后半段),非照抄。"
+      }
+    ]
+  }
+}

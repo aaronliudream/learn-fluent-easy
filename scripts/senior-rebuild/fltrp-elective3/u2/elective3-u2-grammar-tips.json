@@ -1,0 +1,40 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "grade": 12,
+  "content": {
+    "title": "表语从句·连接词 what / that / why / where / how / when / because / whether 速查",
+    "intro": "系动词(be/seem/look 等)后面、用来说明主语「是什么」的从句叫表语从句。判断口诀:从句缺主语/宾语 → 用 what;从句完整、只起连接 → 用 that;从句缺状语 → 按意义选 why/where/how/when;表是非选择 → whether。",
+    "table": {
+      "headers": ["连接词", "什么时候用 / 例句"],
+      "rows": [
+        ["what", "从句缺主语或宾语:This is what makes them special.(缺主语)"],
+        ["that", "从句完整、不缺成分:The truth is that he never gave up."],
+        ["why", "从句缺原因状语:That is why he is admired."],
+        ["where", "从句缺地点状语:A small shop was where he ate every day."],
+        ["how", "从句缺方式状语:Practice is how he mastered the craft."],
+        ["when", "从句缺时间状语:Dawn was when the light was best."],
+        ["because", "「This is ____」后接原因从句:This is because he refused all gifts."],
+        ["whether", "表是非选择:The question is whether the clock can be fixed."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "「The reason … is ____」后只能用 that,绝不能用 because", "mark": "The reason is that …(√) / The reason is because …(×)" },
+      { "rule": "what 在从句里要充当成分(主语或宾语);that 在从句里不作任何成分", "mark": "what makes …(what=主语) / that he won(that 不作成分)" },
+      { "rule": "「This is because …」表原因;「This is why …」表结果,方向相反别混", "mark": "病了→This is why he didn't come;没来→This is because he was ill" },
+      { "rule": "表语从句表「是否」用 whether,不用 if", "mark": "The point is whether …(√) / is if …(×)" }
+    ],
+    "why": [
+      "表语从句就是把一个句子整体放在 be 之后当「表语」。连接词的选择只看一件事:这个从句里缺什么——缺主/宾用 what,缺状语按意义用 why/where/how/when,什么都不缺就用 that。"
+    ],
+    "gaokaoPoints": [
+      "what 与 that 的辨析(从句是否缺主语/宾语)是语法填空与改错的高频考点。",
+      "「the reason … is that(not because)」是经典送分陷阱,务必记牢。",
+      "why/where/how/when 引导表语从句时,前面不加 the(That is why,不是 That is the why)。"
+    ],
+    "examVsReal": [
+      { "exam": "The reason he is respected is that he is modest.(考试)", "real": "He's respected because he's modest.", "note": "考试用表语从句 that;日常口语直接用 because 引出原因状语从句更自然。" },
+      { "exam": "This is what makes them so special.(考试)", "real": "That's the special thing about them.", "note": "考试爱考 what 引导的表语从句;口语常换成名词短语,显得更轻松。" }
+    ]
+  }
+}

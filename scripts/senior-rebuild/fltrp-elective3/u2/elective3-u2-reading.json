@@ -1,0 +1,314 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "topic": "Life Behind the Lens",
+  "source": "外研社选择性必修第三册 Unit 2 同主题阅读(Bill Cunningham 街拍/王津修钟/雷氏家族建筑/梅兰芳/匠心精神/年轻摄影学徒)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Man on the Bicycle",
+      "topic_cn": "人物·街头摄影师 Bill Cunningham",
+      "body": "For more than fifty years, a white-haired man rode an old bicycle around New York, always in the same plain blue jacket. Few people guessed that this simple figure was Bill Cunningham, one of the most important photographers of his time. He never used expensive cameras or worked in a comfortable studio. Instead, he went out onto the streets every single day, whatever the weather, and photographed ordinary people as gladly as famous ones. What interested him was not who people were, but what they were wearing. He hardly ever took a day off and never stayed home sick. He lived in a tiny flat and refused the free clothes and flights that others offered him, for he wanted above all to keep his freedom. To him, money was the cheapest thing of all. Through years of quiet, patient work, he recorded the life of a whole city.",
+      "vocab_notes": [
+        {
+          "word": "studio",
+          "cn": "摄影棚;工作室"
+        },
+        {
+          "word": "ordinary",
+          "cn": "普通的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did few people recognise Bill Cunningham on the street?",
+          "options": [
+            "He looked plain and dressed very simply.",
+            "He hid his face behind a large camera.",
+            "He only went out late at night.",
+            "He rarely left his small apartment."
+          ],
+          "answer_index": 0,
+          "explanation": "由 'a white-haired man … in the same plain blue jacket' 和 'this simple figure' 转述;他外表朴素,故无人认出。"
+        },
+        {
+          "stem": "What did Cunningham care about most when taking photos?",
+          "options": [
+            "The most expensive cameras he could buy.",
+            "The clothes people were wearing rather than their fame.",
+            "Only the richest and most famous people.",
+            "Photos taken inside a warm studio."
+          ],
+          "answer_index": 1,
+          "explanation": "由 'not who people were, but what they were wearing' 转述。"
+        },
+        {
+          "stem": "Why did he turn down free clothes and flights?",
+          "options": [
+            "He wanted to protect his own independence.",
+            "He already owned too many clothes.",
+            "He disliked travelling abroad.",
+            "He thought the gifts were of poor quality."
+          ],
+          "answer_index": 0,
+          "explanation": "由 'he wanted above all to keep his freedom' 转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Master of the Clocks",
+      "topic_cn": "人物·故宫钟表修复师 王津",
+      "body": "Behind the high red walls of the Forbidden City, in a quiet courtyard, a master named Wang Jin spends his days repairing antique clocks. Many of these timepieces are hundreds of years old and were once given to Qing emperors by foreign envoys. Each clock is different, so each one needs its own method of restoration. Because the work is so delicate and the right materials are hard to find, a single expert can finish only two large pieces in a whole year. For a long time, Wang Jin and one student were the only people doing this work. Yet he never hurries. When a repaired clock finally sounds again, water seems to flow and tiny birds appear to move. To Wang Jin, that sound is the most beautiful music in the world. Now he is training younger workers, hoping the ancient skill will live on.",
+      "vocab_notes": [
+        {
+          "word": "delicate",
+          "cn": "精细的;易损的"
+        },
+        {
+          "word": "emperor",
+          "cn": "皇帝"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why can each expert repair only a few clocks each year?",
+          "options": [
+            "The experts are lazy and often rest.",
+            "The work is delicate and proper materials are scarce.",
+            "The clocks are too cheap to bother with.",
+            "The museum only opens for a short season."
+          ],
+          "answer_index": 1,
+          "explanation": "由 'the work is so delicate and the right materials are hard to find' 转述。"
+        },
+        {
+          "stem": "What makes Wang Jin feel most rewarded in his job?",
+          "options": [
+            "Being stopped by admirers for photographs.",
+            "Finishing as many clocks as possible quickly.",
+            "Hearing a clock he has mended sound once more.",
+            "Receiving gifts from foreign envoys."
+          ],
+          "answer_index": 2,
+          "explanation": "由 'When a repaired clock finally sounds again … the most beautiful music in the world' 转述。"
+        },
+        {
+          "stem": "Why is Wang Jin training younger workers?",
+          "options": [
+            "Because he plans to stop working at once.",
+            "Because the museum forced him to do so.",
+            "To make the repairs go much faster.",
+            "To keep the old craft alive for later generations."
+          ],
+          "answer_index": 3,
+          "explanation": "由 'hoping the ancient skill will live on' 转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Seven Generations of Builders",
+      "topic_cn": "人物·皇家建筑世家 雷氏家族",
+      "body": "What do the Summer Palace and many other royal wonders have in common? They were all built by one remarkable family, the Lei family. For seven generations, this family quietly led imperial building in China. Their designs ranged from grand halls to roads and dams, and their skill was so great that many of their buildings survived earthquakes and stood for hundreds of years. The Lei family were careful engineers too. They drew detailed plans and made small models of their projects, and a number of these models still exist today. Yet they never sought fame. Even now, their great works are linked more with the royal court than with the family name. Together with their talent, they showed hard work and humility. Their story reminds us that true craft is a treasure which can last far beyond a single lifetime.",
+      "vocab_notes": [
+        {
+          "word": "humility",
+          "cn": "谦逊"
+        },
+        {
+          "word": "model",
+          "cn": "模型"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was special about the buildings the Lei family designed?",
+          "options": [
+            "Many lasted for centuries and survived earthquakes.",
+            "They were all rebuilt every few years.",
+            "They were made only of paper and wood.",
+            "None of them has survived to today."
+          ],
+          "answer_index": 0,
+          "explanation": "由 'survived earthquakes and stood for hundreds of years' 转述。"
+        },
+        {
+          "stem": "Why are the Lei family not widely known today?",
+          "options": [
+            "They built only small, plain houses.",
+            "They never looked for fame for themselves.",
+            "They kept all their plans a secret.",
+            "They lived a very short time ago."
+          ],
+          "answer_index": 1,
+          "explanation": "由 'they never sought fame' 转述。"
+        },
+        {
+          "stem": "What lesson does the passage draw from their story?",
+          "options": [
+            "Only the rich can build lasting works.",
+            "Fame is the true reward for hard work.",
+            "Fine craftsmanship can outlast the people who create it.",
+            "Old buildings should always be replaced."
+          ],
+          "answer_index": 2,
+          "explanation": "由 'true craft is a treasure which can last far beyond a single lifetime' 转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Lifetime on the Stage",
+      "topic_cn": "人物·京剧艺术家 梅兰芳",
+      "body": "Mei Lanfang was born in 1894 into a family of opera performers. At the age of eight he began training in Peking Opera every day. When he was seventeen, he kept a flock of pigeons and trained them to fly high. Each day he watched them as they moved across the sky, and this slowly helped him develop the expressive eye movements that became so important to his art. His hard work and dedication made him a leading performer. Mei was also a bold innovator. Besides new stage designs and singing styles, his fresh ideas in make-up and costume allowed female characters to be shown more vividly. This added greatly to the growth of Peking Opera. Until he passed away in 1961, Mei had spent almost sixty years performing and helping the art form spread. His lifelong devotion made him one of the most celebrated opera artists ever.",
+      "vocab_notes": [
+        {
+          "word": "innovator",
+          "cn": "革新者"
+        },
+        {
+          "word": "costume",
+          "cn": "戏服;服装"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did watching his pigeons help Mei Lanfang?",
+          "options": [
+            "It taught him how to sing more loudly.",
+            "It gave him ideas for new stage lights.",
+            "It helped him relax after long shows.",
+            "It trained the expressive eye movements his art needed."
+          ],
+          "answer_index": 3,
+          "explanation": "由 'helped him develop the expressive eye movements that became so important to his art' 转述。"
+        },
+        {
+          "stem": "What did Mei Lanfang change about Peking Opera?",
+          "options": [
+            "He brought fresh ideas to make-up and costume.",
+            "He removed all female characters from it.",
+            "He made every show much shorter.",
+            "He stopped using any music at all."
+          ],
+          "answer_index": 0,
+          "explanation": "由 'his fresh ideas in make-up and costume allowed female characters to be shown more vividly' 转述。"
+        },
+        {
+          "stem": "What does the passage say made him so celebrated?",
+          "options": [
+            "His large family of performers.",
+            "His devotion to the art over many decades.",
+            "The single role he played as a child.",
+            "His habit of keeping many pigeons."
+          ],
+          "answer_index": 1,
+          "explanation": "由 'His lifelong devotion made him one of the most celebrated opera artists ever' 转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Why Handmade Still Matters",
+      "topic_cn": "议论·匠心精神与手工艺复兴",
+      "body": "For many years, traditional crafts have been disappearing from countries all over the world. As more and more skills are lost forever, people are beginning to understand how important it is to protect the ones that remain. In fact, after a long decline, many old crafts are now enjoying a fresh start. There is greater public interest in old stories and customs, as well as a wish for high-quality, handmade goods. Such objects are made through a mix of skill, respect for materials, devotion to tradition, and full attention to the task. Craftsmanship answers a deep human need for work that is skilled and socially useful, the kind of work that others can admire and value. When we buy something made by hand, we are not only paying for an object. We are also helping to keep alive the knowledge and care that machines can never fully copy.",
+      "vocab_notes": [
+        {
+          "word": "decline",
+          "cn": "衰落"
+        },
+        {
+          "word": "handmade",
+          "cn": "手工制作的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why are people now paying more attention to old crafts?",
+          "options": [
+            "Handmade goods have become much cheaper.",
+            "Machines can now copy any craft perfectly.",
+            "Many skills have been lost, so they want to save the rest.",
+            "The crafts are no longer hard to learn."
+          ],
+          "answer_index": 2,
+          "explanation": "由 'more and more skills are lost forever … protect the ones that remain' 转述。"
+        },
+        {
+          "stem": "According to the passage, how are fine handmade objects produced?",
+          "options": [
+            "By working as fast as a machine can.",
+            "By using the cheapest possible materials.",
+            "By copying older finished products exactly.",
+            "By combining skill, respect for materials and full focus."
+          ],
+          "answer_index": 3,
+          "explanation": "由 'a mix of skill, respect for materials, devotion to tradition, and full attention' 转述。"
+        },
+        {
+          "stem": "What extra value do we support when buying handmade goods?",
+          "options": [
+            "We help preserve knowledge and care machines cannot copy.",
+            "We make the objects last for only a season.",
+            "We lower the price of all factory goods.",
+            "We help machines learn the same skills."
+          ],
+          "answer_index": 0,
+          "explanation": "由 'helping to keep alive the knowledge and care that machines can never fully copy' 转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Learning to See",
+      "topic_cn": "记叙·年轻摄影学徒的第一课",
+      "body": "Lin had always loved taking pictures, but she knew she still had much to learn. So she asked a retired news photographer named Mr Zhou to teach her. On her first day, he did not let her touch a camera at all. Instead, he told her to sit on a busy corner and simply watch people for two hours. \"A good photographer is first of all a careful observer,\" he said. At first Lin felt bored, yet slowly she began to notice small, lovely moments: an old man feeding birds, two children sharing an umbrella. Over the next months, Mr Zhou taught her how light, patience and timing matter far more than expensive equipment. He often reminded her that the best photos come from real life, not from a studio. By the end of the year, Lin understood that learning to see was the true heart of her craft.",
+      "vocab_notes": [
+        {
+          "word": "observer",
+          "cn": "观察者"
+        },
+        {
+          "word": "timing",
+          "cn": "时机的把握"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Mr Zhou tell Lin to watch people on her first day?",
+          "options": [
+            "He had no camera for her to use that day.",
+            "He wanted her to learn to observe carefully first.",
+            "He thought she already knew enough.",
+            "He wanted her to find new customers."
+          ],
+          "answer_index": 1,
+          "explanation": "由 'A good photographer is first of all a careful observer' 转述。"
+        },
+        {
+          "stem": "What did Mr Zhou say mattered more than costly equipment?",
+          "options": [
+            "A large and comfortable studio.",
+            "Famous and willing models.",
+            "Light, patience and a good sense of timing.",
+            "The newest kind of camera."
+          ],
+          "answer_index": 2,
+          "explanation": "由 'light, patience and timing matter far more than expensive equipment' 转述。"
+        },
+        {
+          "stem": "What did Lin finally understand about her craft?",
+          "options": [
+            "That only luck makes a great photo.",
+            "That a studio is the most important thing.",
+            "That equipment decides everything.",
+            "That truly seeing the world lies at its heart."
+          ],
+          "answer_index": 3,
+          "explanation": "由 'learning to see was the true heart of her craft' 转述。"
+        }
+      ]
+    }
+  ]
+}

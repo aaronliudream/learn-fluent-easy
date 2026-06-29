@@ -1,0 +1,46 @@
+{
+  "listeningQuestions": [
+    { "audio": "Tibetan antelopes have been using these passages under the railway for years.", "opts": ["藏羚羊多年来一直使用铁路下的这些通道。", "藏羚羊从不靠近铁路。", "工人拆掉了所有通道。", "火车撞坏了这些通道。"], "answer": 0 },
+    { "audio": "The train has been racing steadily across the high plateau since dawn.", "opts": ["火车从黎明起一直平稳地驶过高原。", "火车在车站停了一整天。", "火车昨晚才离开。", "火车开得很慢很吵。"], "answer": 0 },
+    { "audio": "Thirty-three passages were built so that the animals could move safely.", "opts": ["修建了三十三条通道,好让动物安全通行。", "动物被关进了笼子里。", "通道只供火车使用。", "没有为动物做任何事。"], "answer": 0 },
+    { "audio": "Ecotourism encourages people to be responsible travellers who care for nature.", "opts": ["生态旅游鼓励人们做关爱自然、负责任的旅行者。", "生态旅游让人随意破坏自然。", "生态旅游禁止任何人外出旅行。", "生态旅游只为赚钱。"], "answer": 0 },
+    { "audio": "The salary is negotiable, and food and accommodation are provided.", "opts": ["薪水可以协商,并提供食宿。", "这份工作没有任何报酬。", "申请人必须自带食物。", "公司不提供住处。"], "answer": 0 },
+    { "audio": "We must do all we can to protect the reef from pollution.", "opts": ["我们必须竭尽全力保护珊瑚礁免受污染。", "我们应该在珊瑚礁上建酒店。", "珊瑚礁不需要任何保护。", "污染对珊瑚礁没有影响。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "The railway was carefully planned to protect the ____ ecosystem of the plateau.", "opts": ["delicate", "massive", "cheap", "noisy"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Ecotourism has become an important part of the local ____.", "opts": ["economy", "salary", "ticket", "machine"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The passages let the antelopes move safely in their natural ____.", "opts": ["habitat", "market", "engine", "garden"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Building the hotel might ____ the turtles that lay eggs on the sand.", "opts": ["disturb", "protect", "thank", "follow"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Tibetan antelopes ____ these passages for years and still rely on them.", "opts": ["have been using", "are using", "use", "used"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "It ____ over the wetland since dawn, and the ground is soaked now.", "opts": ["has been raining", "is raining", "rains", "rained"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Your boots are muddy because you ____ in the wetland all morning.", "opts": ["have been working", "have worked", "are working", "worked"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "We ____ for the train at this lonely station since noon.", "opts": ["have been waiting", "are waiting", "wait", "waited"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音,选出正确的中文意思。", "opts": ["多年来人们一直在努力保护这片珊瑚礁。", "人们已经放弃了这片珊瑚礁。", "珊瑚礁是上个月才发现的。", "没有人关心这片珊瑚礁。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "People have been trying to protect this reef for many years now." },
+    { "q": "听录音,选出正确的中文意思。", "opts": ["这座城市多年来一直把屋顶变成绿色花园。", "这座城市拆掉了所有的花园。", "屋顶上不能种任何植物。", "花园让城市变得更脏。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The city has been turning its rooftops into green gardens for years." }
+  ],
+  "reading": {
+    "passage": "When the Sky Railway was planned, the builders left thirty-three passages under the line so that the Tibetan antelopes could keep moving freely. At first the shy animals stayed away, but the workers waited patiently. Now the antelopes have been using these crossings safely for years.",
+    "passageCn": "天路修建时,建设者在铁路下留了三十三条通道,好让藏羚羊继续自由活动。起初害羞的动物不敢靠近,但工人耐心等待。如今藏羚羊已安全使用这些通道多年。",
+    "questions": [
+      { "q": "Why did the builders leave passages under the railway?", "opts": ["So that the antelopes could keep moving freely.", "So that more trains could pass.", "So that tourists could rest there.", "So that water could flow away."], "answer": 0 },
+      { "q": "How do the antelopes use the crossings now?", "opts": ["They have been using them safely for years.", "They have never used them.", "They broke them down.", "They use them only at night once a year."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about one way people can protect nature, using the present perfect continuous where you can.",
+    "promptCn": "用3-4句话写一写人们保护自然的一种做法,尽量用上现在完成进行时。",
+    "sampleWords": ["protect", "wildlife", "habitat", "conserve", "have been doing", "for years", "responsible", "ecosystem", "nature", "harmony"]
+  },
+  "dialogues": [
+    {
+      "title": "On the Sky Railway",
+      "lines": [
+        { "role": "A", "text": "Look down there! Some antelopes are crossing under the bridge.", "cn": "看下面!一些羚羊正从桥下穿过。" },
+        { "role": "B", "text": "Yes, they have been using these passages for years.", "cn": "是啊,它们已经用这些通道很多年了。" },
+        { "role": "A", "text": "So the railway hasn't driven them away?", "cn": "这么说铁路没有把它们赶走?" },
+        { "role": "B", "text": "No. The builders worked hard to protect their habitat.", "cn": "没有。建设者努力保护了它们的栖息地。" }
+      ]
+    }
+  ]
+}

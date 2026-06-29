@@ -1,0 +1,421 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "topic": "Tuesdays with Morrie",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社(新标准)选择性必修四 Unit 2 同主题听力(聊这本书/莫里其人/人生谚语/活到老学到老/老友重逢/把握今天)。long/short 交替;答案可在 transcript 找到依据;与阅读/完形关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 Talking About the Book",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lucy: Have you finished reading Tuesdays with Morrie yet?",
+        "Tom: Yes, I read the last page last night. I really loved it.",
+        "Lucy: Me too. I thought it would be sad, but it is full of hope.",
+        "Tom: Exactly. Morrie was very ill, but he was never pessimistic.",
+        "Lucy: My favourite idea is that we should choose our own values.",
+        "Tom: Mine is that we must keep in touch with good friends.",
+        "Lucy: I am going to lend the book to my sister next week.",
+        "Tom: Good idea. Everyone should read it at least once."
+      ],
+      "translation_cn": "露西问汤姆读完《相约星期二》没;汤姆昨晚读完,很喜欢;露西本以为会很悲伤,结果满是希望;莫里病重却从不悲观;露西最喜欢“自己选择价值观”;汤姆最爱“要和好友保持联系”;露西下周要把书借给妹妹;汤姆说人人都该至少读一遍。",
+      "questions": [
+        {
+          "stem": "When did Tom finish the book?",
+          "options": [
+            "Last night.",
+            "Last year.",
+            "This morning.",
+            "A month ago."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How did Lucy expect the book to be?",
+          "options": [
+            "She thought it would be funny.",
+            "She thought it would be sad.",
+            "She thought it would be boring.",
+            "She thought it would be scary."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is Tom's favourite idea from the book?",
+          "options": [
+            "Keeping in touch with good friends.",
+            "Earning lots of money.",
+            "Travelling the whole world.",
+            "Winning every game."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What will Lucy do next week?",
+          "options": [
+            "Sell the book online.",
+            "Lend the book to her sister.",
+            "Throw the book away.",
+            "Write her own book."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Tom think everyone should do?",
+          "options": [
+            "Avoid the book completely.",
+            "Forget the book quickly.",
+            "Read the book at least once.",
+            "Hide the book away."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 About Morrie",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Morrie Schwartz was once a much-loved college professor.",
+        "Late in his life, he was weakened by a severe illness.",
+        "Even so, he was never filled with despair.",
+        "Every Tuesday, his old student Mitch came to visit him.",
+        "Their honest talks were later turned into a famous book."
+      ],
+      "translation_cn": "莫里·施瓦茨曾是一位深受爱戴的大学教授;晚年被一场重病拖垮了身体;即便如此,他也从未绝望;每个星期二,他的老学生米奇都来探望;他们坦诚的谈话后来被写成了一本著名的书。",
+      "questions": [
+        {
+          "stem": "What was Morrie's job?",
+          "options": [
+            "A hospital doctor.",
+            "A news journalist.",
+            "A bus driver.",
+            "A college professor."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What happened to Morrie late in his life?",
+          "options": [
+            "He became seriously ill.",
+            "He grew very rich.",
+            "He moved abroad.",
+            "He won a big prize."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Who visited Morrie every Tuesday?",
+          "options": [
+            "His family doctor.",
+            "His old student Mitch.",
+            "A young reporter.",
+            "A complete stranger."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did Morrie feel about his illness?",
+          "options": [
+            "He was always very angry.",
+            "He felt nothing at all.",
+            "He never gave in to despair.",
+            "He blamed his students."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What were their talks later turned into?",
+          "options": [
+            "A pop song.",
+            "A large painting.",
+            "A short film only.",
+            "A famous book."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 A Proverb About Life",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: Maths is really hard. I am thinking of giving it up.",
+        "Ben: Don't! Where there is a will, there is a way.",
+        "Anna: But I have tried so many times already.",
+        "Ben: Remember, it is easier to succeed if you cooperate with someone.",
+        "Anna: So you mean I should ask a friend for help?",
+        "Ben: Yes. Two heads are better than one.",
+        "Anna: Thanks, Ben. I will ask Lily to study with me tonight.",
+        "Ben: Great. You will reach your dream if you stick to it."
+      ],
+      "translation_cn": "安娜觉得数学太难,想放弃;本说别放弃,有志者事竟成;安娜说已试了好多次;本说与人合作更容易成功;安娜问是不是该找朋友帮忙;本说是的,人多力量大;安娜决定今晚请莉莉一起学;本说只要坚持就能实现梦想。",
+      "questions": [
+        {
+          "stem": "What does Anna want to give up?",
+          "options": [
+            "Maths.",
+            "Music.",
+            "Sport.",
+            "Art."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What proverb does Ben tell her first?",
+          "options": [
+            "Better late than never.",
+            "Where there is a will, there is a way.",
+            "Look before you leap.",
+            "Money is everything."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Ben suggest Anna do?",
+          "options": [
+            "Study completely alone.",
+            "Stop going to school.",
+            "Work together with a friend.",
+            "Copy someone's homework."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who will Anna study with tonight?",
+          "options": [
+            "Ben.",
+            "Her teacher.",
+            "No one.",
+            "Lily."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Ben say will happen if Anna sticks to it?",
+          "options": [
+            "She may reach her dream.",
+            "She will lose her friends.",
+            "She will surely fail.",
+            "Nothing will change."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 Never Too Old to Learn",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In most countries, students usually start university at about eighteen.",
+        "However, there is no upper age limit for getting a degree.",
+        "Recently, more older people have returned to study after years of work.",
+        "In one country, a man graduated from university at the age of eighty-eight.",
+        "Their stories show that it is never too late to learn."
+      ],
+      "translation_cn": "在多数国家,学生大约十八岁上大学;然而,攻读学位并没有年龄上限;最近,越来越多上了年纪的人在工作多年后重返校园;在某个国家,一位男士八十八岁才大学毕业;他们的故事说明,学习永远不嫌晚。",
+      "questions": [
+        {
+          "stem": "At what age do students usually start university?",
+          "options": [
+            "About thirty.",
+            "About eighteen.",
+            "About fifty.",
+            "About eighty."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Is there an upper age limit for getting a degree?",
+          "options": [
+            "Yes, it is forty.",
+            "Yes, it is sixty.",
+            "No, there is none.",
+            "Yes, it is twenty."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who has returned to study recently?",
+          "options": [
+            "Only young children.",
+            "Only school teachers.",
+            "No one at all.",
+            "More older people."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How old was the man who graduated in one country?",
+          "options": [
+            "Eighty-eight.",
+            "Eighteen.",
+            "Twenty-eight.",
+            "Forty-eight."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do these stories show?",
+          "options": [
+            "Only the young can learn.",
+            "It is never too late to learn.",
+            "University is useless.",
+            "Age stops all learning."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 Old Friends Meet Again",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Sam? Is that really you? I have not seen you for ten years!",
+        "Sam: Mia! What a surprise. We were such good friends at school.",
+        "Mia: I know. I am sorry we lost touch for so long.",
+        "Sam: It is my fault too. Life just got busy after university.",
+        "Mia: Let us not lose touch again. Shall we have coffee on Saturday?",
+        "Sam: I would love that. It is important to keep in touch with old friends.",
+        "Mia: A book about friendship reminded me to find you.",
+        "Sam: Then I am grateful for that book. See you on Saturday!"
+      ],
+      "translation_cn": "米娅惊讶地认出了十年未见的萨姆;两人曾是中学好友;米娅为长久失联而抱歉;萨姆说自己也有责任,大学后生活太忙;米娅提议周六一起喝咖啡,别再失联;萨姆欣然答应,说与老友保持联系很重要;米娅说是一本关于友谊的书让她想起去找他;萨姆说那就感谢那本书,周六见。",
+      "questions": [
+        {
+          "stem": "How long had Mia and Sam not seen each other?",
+          "options": [
+            "For two days.",
+            "For one month.",
+            "For ten years.",
+            "For fifty years."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "When were Mia and Sam good friends?",
+          "options": [
+            "At work.",
+            "On holiday.",
+            "Online.",
+            "At school."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "When will they meet for coffee?",
+          "options": [
+            "On Saturday.",
+            "On Monday.",
+            "Tonight.",
+            "Never."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What reminded Mia to find Sam?",
+          "options": [
+            "A film about war.",
+            "A book about friendship.",
+            "A song about money.",
+            "A news report."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Sam say is important?",
+          "options": [
+            "Making lots of money.",
+            "Living completely alone.",
+            "Keeping in touch with old friends.",
+            "Forgetting the past."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 Make the Most of Today",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is one simple lesson from Morrie's story.",
+        "We often get distracted by small and unimportant things.",
+        "Yet each ordinary day should be treated as a gift.",
+        "Notice the people you love and tell them how you feel.",
+        "A life that is fully lived is never wasted."
+      ],
+      "translation_cn": "这是莫里的故事给我们的一个简单道理:我们常被琐碎而不重要的事分心;然而,每个平凡的日子都该被当作礼物;留意你所爱的人,并告诉他们你的感受;一段被充分活过的人生,绝不算虚度。",
+      "questions": [
+        {
+          "stem": "Whose story is this lesson from?",
+          "options": [
+            "A king's story.",
+            "A sailor's story.",
+            "A doctor's story.",
+            "Morrie's story."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What often distracts us?",
+          "options": [
+            "Small, unimportant things.",
+            "Our closest friends.",
+            "Beautiful music.",
+            "Good books."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How should each ordinary day be treated?",
+          "options": [
+            "As a problem.",
+            "As a gift.",
+            "As a waste.",
+            "As a test."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should we tell the people we love?",
+          "options": [
+            "To leave us alone.",
+            "To work much harder.",
+            "How we feel about them.",
+            "To stay completely quiet."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What kind of life is never wasted?",
+          "options": [
+            "A life spent worrying.",
+            "A life of pure laziness.",
+            "A life without any friends.",
+            "A life that is fully lived."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "topic": "Meeting the Muse",
+  "source": "外研社(新标准)选择性必修一 Unit 4 同主题阅读(霍夫曼/谭盾/杨丽萍/数字互动艺术/战争与和平主题展/看《戴珍珠耳环的少女》)。词限本单元/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Hofman and His Floating Fish",
+      "topic_cn": "记叙·艺术家与灵感",
+      "body": "Florentijn Hofman is a Dutch artist whose large sculptures are shown all over the world. One way for him to find new ideas is turning to his own children's toys. These simple objects have given him ideas for his animal sculptures, such as the famous Rubber Duck. A more recent work is the huge Floating Fish, which was set among the beautiful landscape of a Chinese water town. Hofman's inspiration for this fish came from old Chinese folk tales that had been passed down through the generations. He was especially interested in the story about a fish jumping through the Dragon Gate. The story came to life for him when he visited the town and saw how people really lived there. During his stay, he watched the fish being fed by local people and noticed others carved on the walls. These everyday sights set his idea in motion and led to a brand-new artwork.",
+      "vocab_notes": [
+        {
+          "word": "sculpture",
+          "cn": "雕塑"
+        },
+        {
+          "word": "folk tale",
+          "cn": "民间故事"
+        },
+        {
+          "word": "set in motion",
+          "cn": "使……开始"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where does Hofman often get ideas for his animal sculptures?",
+          "options": [
+            "From the toys his children play with.",
+            "From paintings in foreign museums.",
+            "From his old school lessons.",
+            "From photographs of busy cities."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说他常从孩子的玩具中找灵感,故选'孩子玩的玩具'。"
+        },
+        {
+          "stem": "What gave Hofman the idea for the Floating Fish?",
+          "options": [
+            "A short trip to the seaside.",
+            "Traditional folk stories handed down over many years.",
+            "A new book about modern science.",
+            "A song he heard on the radio."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'old Chinese folk tales that had been passed down through the generations' 的转述。"
+        },
+        {
+          "stem": "What happened when Hofman visited the water town?",
+          "options": [
+            "Seeing local life made the old story feel real to him.",
+            "He decided to give up making art.",
+            "He sold all of his earlier sculptures.",
+            "He moved away and never returned."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'The story came to life for him when he visited the town' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Tan Dun and a World of Sound",
+      "topic_cn": "说明·作曲家与灵感",
+      "body": "Tan Dun is one of China's best-known composers. He once said that there is no territory in the world of music, meaning that music belongs to everyone. He is most widely known for composing the music for the film Crouching Tiger, Hidden Dragon and for the 2008 Beijing Olympics. To listen to Tan's music is to experience a mix of Chinese musical traditions and Western influences. Since his very first opera, he has used a combination of Chinese sounds and sounds from all over the world to tell stories. Tan believes that Chinese music should carry a universal expression of the human spirit, so that it can be recognised and enjoyed by the whole world. His works show that old traditions and new ideas can live happily side by side. For Tan, the real power of music is its ability to cross every border and speak to people everywhere.",
+      "vocab_notes": [
+        {
+          "word": "composer",
+          "cn": "作曲家"
+        },
+        {
+          "word": "universal",
+          "cn": "普遍的"
+        },
+        {
+          "word": "combination",
+          "cn": "结合"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does Tan Dun mean by saying there is no territory in music?",
+          "options": [
+            "Music must follow only Chinese rules.",
+            "Music has no borders and belongs to everyone.",
+            "Only a few experts can understand music.",
+            "Western music is better than Chinese music."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'music belongs to everyone' 的转述。"
+        },
+        {
+          "stem": "How would you describe Tan Dun's musical style?",
+          "options": [
+            "Only traditional Chinese opera.",
+            "Pure Western pop music.",
+            "A mixture of Chinese and Western musical ideas.",
+            "Music with no Chinese parts at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'a mix of Chinese musical traditions and Western influences' 的转述。"
+        },
+        {
+          "stem": "What does Tan Dun hope his music can do?",
+          "options": [
+            "Be enjoyed only inside China.",
+            "Take the place of all Western music.",
+            "Be quickly forgotten by listeners.",
+            "Reach and move people everywhere, beyond borders."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'cross every border and speak to people everywhere' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Peacock Princess",
+      "topic_cn": "记叙·舞者与灵感",
+      "body": "Yang Liping's passion is dancing. After winning a national competition in 1986 with her Spirit of the Peacock dance, she became known as the Peacock Princess. The inspiration for her famous dances has come from the years she spent in Xishuangbanna, in Yunnan Province. Yang feels very grateful for that time, because it gave her a chance to go deeper into the lives of various groups of people there. Among them, the Dai people especially admire the peacock, which they believe represents the beauty of nature. Yang loves the dance style of the Dai people, and it gives her a great deal of inspiration. Her dancing grows out of their traditional beliefs and aims to bring out the natural beauty of Dai women. In this way, Yang shows that the richest inspiration often comes not from somewhere far away, but from one's own roots and home.",
+      "vocab_notes": [
+        {
+          "word": "passion",
+          "cn": "热爱"
+        },
+        {
+          "word": "grateful",
+          "cn": "感激的"
+        },
+        {
+          "word": "represent",
+          "cn": "象征"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is Yang Liping called the Peacock Princess?",
+          "options": [
+            "Because her prize-winning dance was about the peacock.",
+            "Because she keeps peacocks at her home.",
+            "Because she was born into a royal family.",
+            "Because she paints pictures of peacocks."
+          ],
+          "answer_index": 0,
+          "explanation": "原文她以《雀之灵》获奖后得名,故选与获奖孔雀舞相关的一项。"
+        },
+        {
+          "stem": "Where does Yang Liping's inspiration mainly come from?",
+          "options": [
+            "Books she read about Western dance.",
+            "Her years living among the people of Yunnan.",
+            "A famous teacher in the capital city.",
+            "Films she watched when she was a child."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the years she spent in Xishuangbanna, in Yunnan Province' 的转述。"
+        },
+        {
+          "stem": "What does the passage suggest about inspiration?",
+          "options": [
+            "It can only be found in foreign countries.",
+            "It has nothing to do with local traditions.",
+            "It often comes from one's own home and roots.",
+            "It is impossible for ordinary people to find."
+          ],
+          "answer_index": 2,
+          "explanation": "末句强调灵感常来自自己的根与家乡。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "When Art Meets Technology",
+      "topic_cn": "说明·艺术与科技",
+      "body": "Think about the word 'art'. What comes to your mind? Perhaps it is a painting in a famous museum, or maybe it is a dancing pattern of lights. The artworks by American artist Janet Echelman look like colourful floating clouds when they are lit up at night. Visitors to one of her works in Vancouver could not only enjoy looking at it; they could also take part in it. Using their phones, they were able to control its colours and patterns themselves. Exhibits like these are certainly new and exciting, but some people still ask whether they are really art. For thousands of years, humans have expressed their ideas through art, using many different tools. Today, technological advances have led to a close combination of art and technology. As a result, art is now more accessible to ordinary people than ever before, and almost anyone can explore their own creative side.",
+      "vocab_notes": [
+        {
+          "word": "accessible",
+          "cn": "易接触的"
+        },
+        {
+          "word": "advance",
+          "cn": "进步"
+        },
+        {
+          "word": "creative",
+          "cn": "有创造力的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What are Janet Echelman's artworks compared to at night?",
+          "options": [
+            "Silent grey stones on the ground.",
+            "Old oil paintings on a wall.",
+            "Empty and dark city streets.",
+            "Bright clouds floating in the air."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'colourful floating clouds when they are lit up at night' 的转述。"
+        },
+        {
+          "stem": "What could visitors in Vancouver do with their phones?",
+          "options": [
+            "Change how the artwork's colours and patterns looked.",
+            "Buy the whole artwork at once.",
+            "Take the lights home with them.",
+            "Turn off the museum's main power."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'control its colours and patterns' 的转述。"
+        },
+        {
+          "stem": "According to the passage, how has technology changed art?",
+          "options": [
+            "It has made art disappear completely.",
+            "It has made art easier for ordinary people to reach.",
+            "It has stopped people from being creative.",
+            "It has made art only for rich collectors."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'art is now more accessible to ordinary people than ever before' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Art for War and Peace",
+      "topic_cn": "说明·主题艺术展",
+      "body": "Since the earliest cave paintings, humans have shown their art on walls. Bringing artworks together into an exhibition allows all of us to enjoy them and to connect with the artists behind them. Exhibitions can follow many themes, such as a historical period, a place or a trend. One theme that never grows old is war and peace. Throughout history, countless artists have protested against wars and called for peace through their works. Two famous examples are the Spanish artist Pablo Picasso and the Chinese artist Feng Zikai. Picasso painted Guernica after the bombing of a small town, using only a few colours to show the pain of war. Feng Zikai painted scenes of his own country during a hard time, choosing simple images to create a strong contrast. Though the two artists lived far apart and worked in very different styles, their message was the same: people everywhere long for peace.",
+      "vocab_notes": [
+        {
+          "word": "exhibition",
+          "cn": "展览"
+        },
+        {
+          "word": "trend",
+          "cn": "潮流"
+        },
+        {
+          "word": "contrast",
+          "cn": "对比"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does putting artworks into an exhibition allow people to do?",
+          "options": [
+            "Forget about the artists completely.",
+            "Buy the whole museum building.",
+            "Enjoy the works and feel a link to their makers.",
+            "Paint over the older artworks."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'enjoy them and to connect with the artists behind them' 的转述。"
+        },
+        {
+          "stem": "What is special about the theme of war and peace?",
+          "options": [
+            "It is used only by Spanish artists.",
+            "It has been banned from all museums.",
+            "It is a brand-new idea in art.",
+            "It is a subject that artists return to in every age."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'One theme that never grows old is war and peace' 的转述。"
+        },
+        {
+          "stem": "What did Picasso and Feng Zikai have in common?",
+          "options": [
+            "They both used art to call for peace.",
+            "They painted in exactly the same style.",
+            "They lived together in the same town.",
+            "They believed war could solve problems."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'their message was the same: people everywhere long for peace' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Meeting the Girl with a Pearl Earring",
+      "topic_cn": "记叙·看画的经历",
+      "body": "One of my biggest dreams had always been to see the painting Girl with a Pearl Earring by the Dutch artist Vermeer. That dream finally came true when my family went on a trip last year. When we reached the museum, there were lots of people waiting to enter, and my legs were tired from walking around the city all morning. Still, I was determined to see the painting, which is often called the Mona Lisa of the North. Nobody is really sure who the girl in it was. At last I stood in front of her, and it was amazing to be so close to such a famous work. In the picture, the girl is looking back over her shoulder. Her eyes are wide, and her mouth is slightly parted, as if she is about to speak. Standing there, I would love to have known what she was going to say.",
+      "vocab_notes": [
+        {
+          "word": "determined",
+          "cn": "下定决心的"
+        },
+        {
+          "word": "amazing",
+          "cn": "令人惊叹的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the writer determined to see the painting despite being tired?",
+          "options": [
+            "A teacher had ordered the writer to go.",
+            "Seeing it had long been one of the writer's dreams.",
+            "The writer planned to buy the painting.",
+            "The writer wanted to copy it for homework."
+          ],
+          "answer_index": 1,
+          "explanation": "原文开头 'One of my biggest dreams had always been to see the painting' 的转述。"
+        },
+        {
+          "stem": "What is the painting also known as?",
+          "options": [
+            "An unknown modern drawing.",
+            "A painting with no real name.",
+            "A northern version of the Mona Lisa.",
+            "A picture of the writer's family."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'often called the Mona Lisa of the North' 的转述。"
+        },
+        {
+          "stem": "How does the girl in the painting appear?",
+          "options": [
+            "She is crying very loudly.",
+            "She has closed both her eyes.",
+            "She is laughing at the viewer.",
+            "She seems ready to say something."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'her mouth is slightly parted, as if she is about to speak' 的转述。"
+        }
+      ]
+    }
+  ]
+}

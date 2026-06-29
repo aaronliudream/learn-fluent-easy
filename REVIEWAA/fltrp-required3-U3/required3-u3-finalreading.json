@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(科学/发明主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Last year, a teenage girl built a simple alarm to help her deaf grandfather. When the doorbell rings, a bright light has been set to flash across every room. The quiet invention has already made the old man feel much safer at home.",
+    "questions": [
+      {
+        "q": "Why did the girl build the alarm?",
+        "options": [
+          "To help her grandfather who cannot hear.",
+          "To win a prize at her school.",
+          "To sell it to the neighbours.",
+          "To wake people up in the morning."
+        ],
+        "answer": "A",
+        "explanation": "原文'to help her deaf grandfather'的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What happens when the doorbell rings?",
+        "options": [
+          "The door locks itself.",
+          "A bright light flashes in the rooms.",
+          "A bell rings outside the house.",
+          "All the lights go off."
+        ],
+        "answer": "B",
+        "explanation": "原文'a bright light has been set to flash across every room'的转述(短文中段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

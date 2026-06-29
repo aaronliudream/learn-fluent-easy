@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U6",
+  "topic": "Nurturing Nature",
+  "source": "外研社选必一 Unit 6 同主题完形(高原列车之旅/护林员与羚羊/申请珊瑚礁工作/帮助自然的假期/熊猫保姆的一天/守护白沙滩)。用词限 U6/初中/常见词,答案唯一,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Journey on the Sky Railway",
+      "text": "Sitting back in my seat, I could hardly believe that I was finally riding the famous Sky Railway. For years people had told me this line was (1)____ to build, yet here it was, carrying me across the roof of the world. The train raced (2)____ across the high plateau, and the (3)____ outside my window was more beautiful than any photo. Soon we crossed a (4)____ bridge, the longest one ever built over frozen ground. Below it, a group of antelopes were eating grass at their (5)____, taking no notice of us. I learned that special passages had been left so that the animals could keep their (6)____ safe. Higher up, the air grew (7)____, and I felt a little dizzy. Luckily, oxygen was provided to help passengers stay (8)____. At Tanggula we reached the highest station on the whole (9)____. As I looked out at the snow and sky, I felt proud that workers had managed to (10)____ such difficult conditions to build this amazing railway.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "impossible",
+            "cheap",
+            "famous",
+            "ready"
+          ],
+          "answer_index": 0,
+          "explanation": "people had said the line was impossible to build 不可能修建。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "loudly",
+            "steadily",
+            "angrily",
+            "rarely"
+          ],
+          "answer_index": 1,
+          "explanation": "raced steadily 平稳地行驶。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "scenery",
+            "salary"
+          ],
+          "answer_index": 2,
+          "explanation": "the scenery outside my window 窗外的风景。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "tiny",
+            "cheap",
+            "empty",
+            "massive"
+          ],
+          "answer_index": 3,
+          "explanation": "a massive bridge 巨大的桥。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "leisure",
+            "danger",
+            "speed",
+            "duty"
+          ],
+          "answer_index": 0,
+          "explanation": "at their leisure 悠闲地。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ticket",
+            "habitat",
+            "engine",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "keep their habitat safe 保护栖息地。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "warm",
+            "sweet",
+            "thin",
+            "heavy"
+          ],
+          "answer_index": 2,
+          "explanation": "the air grew thin 空气变得稀薄。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "famous",
+            "rich",
+            "healthy"
+          ],
+          "answer_index": 3,
+          "explanation": "stay healthy 保持健康。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "planet",
+            "garden",
+            "market",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "the highest station on the whole planet 全球最高的车站。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "overcome",
+            "waste",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "overcome difficult conditions 克服艰难条件。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Ranger and the Antelopes",
+      "text": "My name is Dawa, and for years I have worked as a ranger on the high (1)____, watching over the Tibetan antelopes. When the railway was first planned, many of us were (2)____ about the animals. We feared that the line would cut their long journey in (3)____ and leave them trapped. To our relief, the builders left thirty-three (4)____ under the railway so the antelopes could still move freely. At first the shy animals would not go (5)____ them, and I worried they never would. But the workers were (6)____ and changed nothing. Slowly, the antelopes began to trust the new crossings. Now they (7)____ across to the grassland to give birth, just as their mothers did. They hardly seem to (8)____ the trains that rush past above. Protecting their (9)____ has become my life's work, and it makes me proud. I truly believe that a great railway and healthy (10)____ can share the same land.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "ocean",
+            "street",
+            "plateau",
+            "ceiling"
+          ],
+          "answer_index": 2,
+          "explanation": "the high plateau 高原。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "glad",
+            "bored",
+            "proud",
+            "worried"
+          ],
+          "answer_index": 3,
+          "explanation": "we were worried about the animals 担心。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "two",
+            "tune",
+            "time",
+            "turn"
+          ],
+          "answer_index": 0,
+          "explanation": "cut their journey in two 一分为二。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "tickets",
+            "passages",
+            "engines",
+            "markets"
+          ],
+          "answer_index": 1,
+          "explanation": "thirty-three passages 三十三条通道。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "away",
+            "above",
+            "near",
+            "behind"
+          ],
+          "answer_index": 2,
+          "explanation": "would not go near them 不肯靠近。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "angry",
+            "lazy",
+            "noisy",
+            "patient"
+          ],
+          "answer_index": 3,
+          "explanation": "the workers were patient 耐心。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "wander",
+            "drive",
+            "sail",
+            "fly"
+          ],
+          "answer_index": 0,
+          "explanation": "wander across to the grassland 漫步到草原。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "notice",
+            "drive",
+            "paint"
+          ],
+          "answer_index": 1,
+          "explanation": "hardly seem to notice the trains 注意到。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "salary",
+            "habitat",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "protecting their habitat 保护栖息地。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "traffic",
+            "weather",
+            "machinery",
+            "wildlife"
+          ],
+          "answer_index": 3,
+          "explanation": "healthy wildlife 健康的野生动物。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Applying for the Reef Job",
+      "text": "When I saw the advertisement, I knew at once that I had to (1)____. A company was looking for someone to spend six months looking after the Great Barrier (2)____. The working hours were flexible, and a place to stay was (3)____ for free. The main (4)____ were to explore the islands and tell the world about them through blogs and videos. Some people thought it was not a (5)____ job, just a clever way to draw attention to the reef. I did not care; the chance was too good to (6)____. Each (7)____ had to make a short video showing how much they knew about the area. Out of thousands of people, only eleven were (8)____ for interviews. In the end the (9)____ went to a young man from Britain, but I never regretted trying. Working to (10)____ such a beautiful place would have been a dream come true.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "apply",
+            "sleep",
+            "refuse",
+            "leave"
+          ],
+          "answer_index": 0,
+          "explanation": "I had to apply 申请。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "Road",
+            "Reef",
+            "Roof",
+            "River"
+          ],
+          "answer_index": 1,
+          "explanation": "the Great Barrier Reef 大堡礁。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "refused",
+            "broken",
+            "provided",
+            "sold"
+          ],
+          "answer_index": 2,
+          "explanation": "a place to stay was provided 提供住处。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "noises",
+            "tickets",
+            "duties"
+          ],
+          "answer_index": 3,
+          "explanation": "the main duties 主要职责。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "genuine",
+            "noisy",
+            "cheap",
+            "sleepy"
+          ],
+          "answer_index": 0,
+          "explanation": "not a genuine job 不是真实的工作。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "buy",
+            "miss",
+            "wash",
+            "carry"
+          ],
+          "answer_index": 1,
+          "explanation": "too good to miss 好得不容错过。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "engine",
+            "ticket",
+            "applicant",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "each applicant 每位申请人。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "thrown",
+            "eaten",
+            "washed",
+            "chosen"
+          ],
+          "answer_index": 3,
+          "explanation": "only eleven were chosen 入选。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "job",
+            "rain",
+            "snow",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "the job went to a young man 工作给了……。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "destroy",
+            "protect",
+            "sell",
+            "forget"
+          ],
+          "answer_index": 1,
+          "explanation": "working to protect such a place 保护。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Holiday that Helps Nature",
+      "text": "Last summer my family chose a very different kind of (1)____. Instead of lying on a busy beach, we joined an ecotourism trip that promised to (2)____ for nature rather than harm it. Our guide taught us to be (3)____ travellers who leave a place just as they find it. In a green (4)____, we walked quietly so as not to (5)____ the wildlife. One morning we did some (6)____ work, planting young trees on a bare hillside. Another day we helped scientists (7)____ rare birds. Our guide explained that this kind of tourism brings jobs and supports the local (8)____. Of course, the planes that carried us there still produced some (9)____, so the trip was not perfect. Even so, I came home believing that travel done this way gives people a real reason to (10)____ wild places instead of spoiling them.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "machine",
+            "market",
+            "holiday",
+            "lesson"
+          ],
+          "answer_index": 2,
+          "explanation": "a different kind of holiday 假期。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "shout",
+            "pay",
+            "fall",
+            "care"
+          ],
+          "answer_index": 3,
+          "explanation": "care for nature 关爱自然。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "responsible",
+            "lazy",
+            "angry",
+            "hungry"
+          ],
+          "answer_index": 0,
+          "explanation": "responsible travellers 负责任的旅行者。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "office",
+            "jungle",
+            "kitchen",
+            "stadium"
+          ],
+          "answer_index": 1,
+          "explanation": "in a green jungle 丛林。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "thank",
+            "follow",
+            "disturb",
+            "paint"
+          ],
+          "answer_index": 2,
+          "explanation": "not to disturb the wildlife 打扰。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "careless",
+            "foreign",
+            "musical",
+            "voluntary"
+          ],
+          "answer_index": 3,
+          "explanation": "voluntary work 志愿工作。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "count",
+            "sell",
+            "cook",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "help scientists count rare birds 数。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "garden",
+            "economy",
+            "machine",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "supports the local economy 经济。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "flowers",
+            "tickets",
+            "emissions",
+            "songs"
+          ],
+          "answer_index": 2,
+          "explanation": "produced some emissions 排放物。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "destroy",
+            "sell",
+            "forget",
+            "protect"
+          ],
+          "answer_index": 3,
+          "explanation": "a reason to protect wild places 保护。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A Day as the Panda Nanny",
+      "text": "People call me the Panda Nanny, and I (1)____ after the pandas in a nature reserve in Sichuan. My day begins early, long before the visitors (2)____. First I prepare food and feed the youngest pandas, which are still too (3)____ to look after themselves. These gentle animals are a rare (4)____, and every one of them matters. Later I clean their homes and check that each panda is (5)____. When visitors come, I (6)____ to them about how we protect these animals and why their (7)____ in the mountains must be kept safe. In the evening I post (8)____ online with photos, so that people far away can follow our work. The job can be tiring, but it is hugely (9)____. My greatest hope is that one day more people will (10)____ me in caring for the pandas, so that these animals will always have a home.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "look",
+            "throw",
+            "sell",
+            "fall"
+          ],
+          "answer_index": 0,
+          "explanation": "look after the pandas 照顾。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "refuse",
+            "arrive",
+            "sleep",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "before the visitors arrive 到达。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "rich",
+            "tall",
+            "young",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "too young to look after themselves 太小。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "machine",
+            "ticket",
+            "market",
+            "species"
+          ],
+          "answer_index": 3,
+          "explanation": "a rare species 稀有物种。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "healthy",
+            "angry",
+            "empty",
+            "foreign"
+          ],
+          "answer_index": 0,
+          "explanation": "check that each panda is healthy 健康。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "throw",
+            "talk",
+            "drive",
+            "wash"
+          ],
+          "answer_index": 1,
+          "explanation": "I talk to them about… 交谈。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "home",
+            "salary"
+          ],
+          "answer_index": 2,
+          "explanation": "their home in the mountains 家园。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "engines",
+            "tickets",
+            "prices",
+            "updates"
+          ],
+          "answer_index": 3,
+          "explanation": "post updates online 发更新。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "rewarding",
+            "boring",
+            "useless",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "hugely rewarding 很有意义。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "leave",
+            "join",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "more people will join me 加入。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Should We Save White Beach?",
+      "text": "There is a heated argument in our city about White Beach. A company wants to build a large hotel there, and the owner is strongly in (1)____ of the plan. He says the hotel would (2)____ more tourists, create new (3)____ for local businesses and provide many jobs. He also promises that the design will be in (4)____ with the beautiful surroundings. Many local people, however, are (5)____. They worry that the work is not eco-friendly and may (6)____ the wildlife, especially the turtles that lay their eggs on the sand. Some admit that the hotel would help the local economy, yet they fear it could (7)____ the very beauty that draws visitors here. More tourists would also mean more cars and planes, and therefore higher carbon (8)____. As a young (9)____, I believe we should think carefully before we change this coast forever. Once the wildlife is gone, no amount of money can ever (10)____ it back.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "danger",
+            "front",
+            "favour",
+            "charge"
+          ],
+          "answer_index": 2,
+          "explanation": "in favour of the plan 支持。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "refuse",
+            "sell",
+            "cook",
+            "attract"
+          ],
+          "answer_index": 3,
+          "explanation": "attract more tourists 吸引。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "opportunities",
+            "mistakes",
+            "noises",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "create new opportunities 机会。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "danger",
+            "harmony",
+            "silence",
+            "fashion"
+          ],
+          "answer_index": 1,
+          "explanation": "in harmony with the surroundings 和谐。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "delighted",
+            "sleepy",
+            "doubtful",
+            "hungry"
+          ],
+          "answer_index": 2,
+          "explanation": "local people are doubtful 怀疑。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "thank",
+            "follow",
+            "paint",
+            "disturb"
+          ],
+          "answer_index": 3,
+          "explanation": "disturb the wildlife 干扰。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "spoil",
+            "build",
+            "save",
+            "clean"
+          ],
+          "answer_index": 0,
+          "explanation": "spoil the very beauty 破坏。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "flowers",
+            "emissions",
+            "songs",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "higher carbon emissions 碳排放。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "engine",
+            "ticket",
+            "conservationist",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "as a young conservationist 环保主义者。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "throw",
+            "sell",
+            "lose",
+            "bring"
+          ],
+          "answer_index": 3,
+          "explanation": "no money can bring it back 带回来。"
+        }
+      ]
+    }
+  ]
+}

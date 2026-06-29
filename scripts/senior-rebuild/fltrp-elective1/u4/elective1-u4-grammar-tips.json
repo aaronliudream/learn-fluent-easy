@@ -1,0 +1,35 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "grade": 11,
+  "content": {
+    "title": "不定式 / -ing / -ed 作表语速查",
+    "intro": "be 动词后面除了名词、形容词,还可以用三种非谓语形式作表语:to do(说明意图、要做的事)、doing(主语是引起感受的事物)、done(主语是承受感受或处于某种状态的人/物)。判断口诀:看主语——表'打算/目的'的名词后用 to do;事物'令人……'用 -ing;人'感到……'用 -ed。",
+    "table": {
+      "headers": ["表语形式", "用法 / 例句"],
+      "rows": [
+        ["to do", "主语为 wish/aim/plan/job/dream/goal 等意图名词:Every artist's wish is to create something."],
+        ["doing(-ing)", "主语是引起感受的事物/事件:The film is amazing. / The exhibition is exciting."],
+        ["done(-ed)", "主语是体会感受的人或某种状态:I am amazed. / The window is broken."],
+        ["-ing vs -ed", "事物用 -ing(令人……),人用 -ed(感到……):The news is surprising. / We are surprised."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主语是 wish/aim/plan/goal/job/duty/hope 等表意图的名词 → be + to do", "mark": "Her plan is to paint a series of pictures." },
+      { "rule": "主语是引起情绪的事物 → be + -ing", "mark": "The performance was moving.(演出令人感动)" },
+      { "rule": "主语是体会情绪的人 → be/feel + -ed", "mark": "The visitors were moved.(参观者被感动)" },
+      { "rule": "interesting/interested、exciting/excited、amazing/amazed 等成对出现,别混", "mark": "The story is interesting. / I am interested." }
+    ],
+    "why": [
+      "-ing 形式本身含'主动、令人……'的意味,所以用来描述'引起感受'的事物;-ed 形式含'被动、受到影响'的意味,所以用来描述'感受到……'的人。一句话里到底用哪个,关键看 be 前面的主语是'施事(事物)'还是'受事(人)'。"
+    ],
+    "gaokaoPoints": [
+      "interesting/interested 类成对形容词的辨析(看主语是物还是人)——语法填空、单选高频。",
+      "wish/aim/plan/job + be + to do 作表语;以及 The + 名词 + is doing/done 的判断。"
+    ],
+    "examVsReal": [
+      { "exam": "His job is to teach art.(考试规范:意图名词 + to do)", "real": "His job is teaching art.", "note": "考试首选不定式;口语里 job/hobby 后也常用 -ing 表'就是做某事'" },
+      { "exam": "I am very interested in it.(考试:人用 -ed)", "real": "I'm really into it.", "note": "考试用 interested;口语里常用 be into sth 表示'对……很感兴趣'" }
+    ]
+  }
+}

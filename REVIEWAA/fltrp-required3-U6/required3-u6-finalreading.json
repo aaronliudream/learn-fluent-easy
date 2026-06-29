@@ -1,0 +1,43 @@
+{
+  "volume": "required3",
+  "unit": "U6",
+  "note": "单元通关专属迷你阅读(灾难与希望主题,独立短文,不在阅读关出现)。短文3句+3题,答案转述非照抄,覆盖不同位置。",
+  "finalReading": {
+    "passage": "After the flood washed away their farm, the Wang family had almost nothing left. Instead of losing heart, they planted new rice the moment the water went down, and neighbours arrived each morning to lend a hand. By autumn, green fields covered the land again, and the family understood that hope grows fastest when people stand together.",
+    "questions": [
+      {
+        "q": "What did the Wang family do instead of losing heart?",
+        "options": [
+          "They began planting rice again as soon as the water fell.",
+          "They sold their land and left the village.",
+          "They waited a whole year before doing anything.",
+          "They blamed their neighbours for the flood."
+        ],
+        "answer": "A",
+        "explanation": "原文 'planted new rice the moment the water went down' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did the neighbours help the family?",
+        "options": [
+          "They turned up every morning to give a hand.",
+          "They sent money from a faraway city.",
+          "They took the family to a shelter.",
+          "They did nothing at all."
+        ],
+        "answer": "A",
+        "explanation": "原文 'neighbours arrived each morning to lend a hand' 的转述措辞,非连续照抄。"
+      },
+      {
+        "q": "What did the family finally understand?",
+        "options": [
+          "That farming is a waste of effort.",
+          "That floods can never be survived.",
+          "That working together brings hope back quickly.",
+          "That they should move far away."
+        ],
+        "answer": "C",
+        "explanation": "末句 'hope grows fastest when people stand together' 的转述,覆盖短文结尾。"
+      }
+    ]
+  }
+}

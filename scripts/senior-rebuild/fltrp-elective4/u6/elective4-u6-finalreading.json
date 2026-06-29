@@ -1,0 +1,43 @@
+{
+  "volume": "elective4",
+  "unit": "U6",
+  "note": "单元通关专属迷你阅读(航天追梦主题,独立短文,不在阅读关出现)。短文3句+3题,答案转述非照抄,覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Lin was ten, she stayed up late one night to watch a rocket carry astronauts into space. The bright flame and the great roar filled her with wonder, and there and then she decided that she too would one day work in space science. Years later, as a young engineer helping to build a telescope, she felt proud that a single evening had set the course of her whole life.",
+    "questions": [
+      {
+        "q": "Why did Lin stay up late as a child?",
+        "options": [
+          "To watch a rocket launch carrying astronauts.",
+          "To finish her homework on time.",
+          "To say goodbye to her friends.",
+          "To wait for the morning Sun."
+        ],
+        "answer": "A",
+        "explanation": "原文'watch a rocket carry astronauts into space'的转述;其余与原文无关。"
+      },
+      {
+        "q": "What did the launch make Lin decide?",
+        "options": [
+          "To stop watching television.",
+          "That she would work in space science one day.",
+          "To move to another country.",
+          "To give up studying at school."
+        ],
+        "answer": "B",
+        "explanation": "原文'she too would one day work in space science'的转述(短文中段)。"
+      },
+      {
+        "q": "How did Lin feel about that evening years later?",
+        "options": [
+          "Proud that it had shaped her whole life.",
+          "Sorry that she had ever seen it.",
+          "Bored by the memory of it.",
+          "Afraid of rockets ever since."
+        ],
+        "answer": "A",
+        "explanation": "末句'proud that a single evening had set the course of her whole life'的转述(短文末尾,覆盖不同位置)。"
+      }
+    ]
+  }
+}

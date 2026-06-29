@@ -1,0 +1,421 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "topic": "Times Change",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社新标准选择性必修二 Unit 3 同主题听力(新闻业变迁/小镇变都市/书店新生/表情符号简史/电话亭消失/拥抱变化)。用词限本单元/初中/常见词,答案唯一,与读/完形关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 How the News Has Changed",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lily: My grandpa says the news used to come only once a day. Is that true?",
+        "Tom: Yes. In the past, papers were delivered to the door every morning.",
+        "Lily: So people waited a whole day for the next story?",
+        "Tom: Exactly. And most interviews were done face to face back then.",
+        "Lily: How is it different now?",
+        "Tom: Now a story can be put online the moment it happens.",
+        "Lily: That's so fast! Do reporters still use paper?",
+        "Tom: Hardly ever. They write and edit almost everything on computers."
+      ],
+      "translation_cn": "莉莉问爷爷说过去新闻一天才来一次是否属实;汤姆说没错,过去报纸每天早上送到门口;人们要等一整天才有下一条;过去采访多是面对面;如今一条新闻一发生就能发到网上;记者几乎不用纸,都在电脑上写稿编辑。",
+      "questions": [
+        {
+          "stem": "How often did the news arrive in the past?",
+          "options": [
+            "Only once a day.",
+            "Every hour.",
+            "Several times a minute.",
+            "Once a week."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How were papers given to readers in the past?",
+          "options": [
+            "Sent by email.",
+            "Delivered to the door each morning.",
+            "Read aloud on the radio.",
+            "Picked up at a station."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How were most interviews done back then?",
+          "options": [
+            "Face to face.",
+            "Only by letter.",
+            "Through a screen.",
+            "By text message."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can happen to a story now?",
+          "options": [
+            "It must wait a whole day.",
+            "It can be put online the moment it happens.",
+            "It is printed by hand.",
+            "It is never shared."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do reporters mainly use to work now?",
+          "options": [
+            "Pens and paper.",
+            "Typewriters.",
+            "Computers.",
+            "Phone boxes."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 From Fishing Town to City",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Over forty years ago, a small fishing town stood by the southern sea.",
+        "People there made a living from fishing, and life was slow and quiet.",
+        "Then the town became a special economic zone, and everything began to change.",
+        "Roads were laid and tall buildings were put up year after year.",
+        "In just a few decades, the town grew into a busy modern city full of energy."
+      ],
+      "translation_cn": "四十多年前,南方海边有一座小渔镇;那里的人靠打鱼为生,生活缓慢而安静;后来小镇成了经济特区,一切开始改变;道路被铺设,高楼一年年盖起来;短短几十年,小镇就变成了一座充满活力的现代化城市。",
+      "questions": [
+        {
+          "stem": "What was the place like over forty years ago?",
+          "options": [
+            "A huge capital city.",
+            "An empty desert.",
+            "A mountain village.",
+            "A small fishing town."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How did the people there make a living?",
+          "options": [
+            "By fishing.",
+            "By farming rice.",
+            "By selling cars.",
+            "By making films."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What change made things move quickly?",
+          "options": [
+            "A new river appeared.",
+            "It became a special economic zone.",
+            "The sea dried up.",
+            "Everyone moved away."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What was happening year after year?",
+          "options": [
+            "Houses were being pulled down.",
+            "Boats were being sold.",
+            "Roads and tall buildings were going up.",
+            "Fields were growing larger."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did the town become in a few decades?",
+          "options": [
+            "A quiet seaside resort.",
+            "A small market town.",
+            "A national park.",
+            "A busy modern city."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 The Bookstore Lives On",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: I can't believe the old bookstore is still here!",
+        "Ben: I know. The whole community worked together to save it.",
+        "Anna: And look — there's a café selling organic food now.",
+        "Ben: Yes, and the corner board has been replaced by a big screen.",
+        "Anna: People are writing their comments on it.",
+        "Ben: They even hold jazz concerts and poetry readings here.",
+        "Anna: It feels alive again. Who is in charge now?",
+        "Ben: A woman called Jennifer. She grew up in this very neighbourhood."
+      ],
+      "translation_cn": "安娜不敢相信老书店还在;本说是整个社区一起努力把它救了下来;现在还有卖有机食品的咖啡馆;角落里的木板被大屏幕取代,人们在上面写评论;店里甚至举办爵士音乐会和诗歌朗诵;书店重新焕发生机;现在的负责人是在这个社区长大的珍妮弗。",
+      "questions": [
+        {
+          "stem": "Why is the old bookstore still open?",
+          "options": [
+            "The community worked together to save it.",
+            "A big company bought it.",
+            "The government rebuilt it.",
+            "It was never going to close."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the new café sell?",
+          "options": [
+            "Second-hand books.",
+            "Organic food.",
+            "Mobile phones.",
+            "Newspapers."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What has replaced the corner board?",
+          "options": [
+            "A tall bookshelf.",
+            "A coffee machine.",
+            "A big screen.",
+            "A glass window."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What kind of events are held in the store now?",
+          "options": [
+            "Football matches.",
+            "Cooking classes.",
+            "Car shows.",
+            "Jazz concerts and poetry readings."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Who is in charge of the bookstore now?",
+          "options": [
+            "Jennifer, who grew up nearby.",
+            "Old Casey's brother.",
+            "A famous singer.",
+            "A visitor from abroad."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 A Short History of Emojis",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The word emoji comes from Japanese and means picture character.",
+        "The first emojis appeared in Japan in 1999, with only about a hundred and seventy designs.",
+        "Today there are thousands of them, sorted into groups such as faces, animals and food.",
+        "People like emojis because they are quick to use and add feeling to a message.",
+        "Whatever we think, these little pictures are clearly here to stay."
+      ],
+      "translation_cn": "emoji 一词来自日语,意为“图画文字”;最早的表情符号1999年出现在日本,只有约170种设计;如今已有成千上万种,分成表情、动物、食物等类别;人们喜欢表情符号,因为用起来快、还能给信息添情感;不管我们怎么看,这些小图画显然会一直存在下去。",
+      "questions": [
+        {
+          "stem": "Where does the word 'emoji' come from?",
+          "options": [
+            "English.",
+            "Japanese.",
+            "French.",
+            "Korean."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the word 'emoji' mean?",
+          "options": [
+            "Happy face.",
+            "Quick note.",
+            "Picture character.",
+            "Spoken word."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "When did the first emojis appear?",
+          "options": [
+            "In 2015.",
+            "In 1970.",
+            "In 2020.",
+            "In 1999."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why do people like emojis, according to the passage?",
+          "options": [
+            "They are quick and add feeling.",
+            "They cost nothing to design.",
+            "They are hard to use.",
+            "They replace whole books."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the speaker say about the future of emojis?",
+          "options": [
+            "They will soon disappear.",
+            "They are here to stay.",
+            "They will be banned.",
+            "They will become words."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 The Vanished Phone Box",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Grandpa: When I was young, we used phone boxes on every street corner.",
+        "Mia: Phone boxes? What were they for?",
+        "Grandpa: To make calls when you were out. You put in coins and dialled.",
+        "Mia: But now everyone just uses a mobile phone.",
+        "Grandpa: That's right. Mobiles are far easier to carry and use.",
+        "Mia: So the phone boxes all disappeared?",
+        "Grandpa: Almost. People simply stopped needing them.",
+        "Mia: Times really do change, Grandpa!"
+      ],
+      "translation_cn": "爷爷说他年轻时街角到处是电话亭;米娅问那是干什么的;爷爷说是在外面打电话用的,投币后拨号;可现在大家都用手机;手机更便于携带和使用;所以电话亭几乎都消失了;因为人们不再需要它们了;米娅感叹时代真的在变。",
+      "questions": [
+        {
+          "stem": "Where were phone boxes found when Grandpa was young?",
+          "options": [
+            "Only inside homes.",
+            "Only at airports.",
+            "On every street corner.",
+            "Deep in the countryside."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What were phone boxes used for?",
+          "options": [
+            "Storing letters.",
+            "Selling tickets.",
+            "Keeping warm.",
+            "Making calls when you were out."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How did you pay to use a phone box?",
+          "options": [
+            "By putting in coins.",
+            "By showing a card.",
+            "By scanning a code.",
+            "It was free."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why did phone boxes almost disappear?",
+          "options": [
+            "They were too expensive to build.",
+            "People simply stopped needing them.",
+            "They were against the law.",
+            "Nobody could find them."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What has taken the place of phone boxes?",
+          "options": [
+            "Public radios.",
+            "Street computers.",
+            "Mobile phones.",
+            "Postboxes."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 Moving With the Times",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple thought about change.",
+        "The world around us never stays still; tools, jobs and habits are always being made new.",
+        "Some people fear change and hold on to the past.",
+        "But change can also bring fresh chances and better ways of living.",
+        "The best idea is not to fight every change, but to learn from it and move forward with the times."
+      ],
+      "translation_cn": "关于“变化”有个简单的想法:我们周围的世界从不静止,工具、工作和习惯一直在更新;有些人害怕变化、紧抓过去;但变化也能带来新机会和更好的生活方式;最好的办法不是抗拒每一次变化,而是从中学习、随时代向前。",
+      "questions": [
+        {
+          "stem": "What does the passage say about the world around us?",
+          "options": [
+            "It is always the same.",
+            "It is slowly stopping.",
+            "It only changes at night.",
+            "It never stays still."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is always being made new?",
+          "options": [
+            "Tools, jobs and habits.",
+            "Mountains and rivers.",
+            "The sun and the moon.",
+            "Only old books."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How do some people react to change?",
+          "options": [
+            "They welcome every bit of it.",
+            "They fear it and hold on to the past.",
+            "They never notice it.",
+            "They write about it."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can change also bring, according to the speaker?",
+          "options": [
+            "Only trouble and loss.",
+            "More fishing towns.",
+            "Fresh chances and better ways of living.",
+            "Cheaper phone boxes."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the best idea about change?",
+          "options": [
+            "To fight every single change.",
+            "To ignore it completely.",
+            "To go back to the past.",
+            "To learn from it and move forward."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

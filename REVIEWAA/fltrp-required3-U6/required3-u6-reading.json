@@ -1,0 +1,338 @@
+{
+  "volume": "required3",
+  "unit": "U6",
+  "topic": "Disaster and Hope",
+  "source": "外研社版必修第三册 Unit 6 同主题阅读(伦敦地铁热浪/卡特里娜飓风幸存/中国赴尼泊尔救援/动物预报天气/历史著名灾难/灾前安全指南)。词限 U6/初中/常见词,答案转述非照抄,4选项唯一,与完形听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Hot Day on the Tube",
+      "topic_cn": "记叙·伦敦地铁里的热浪",
+      "body": "Picking up a free newspaper at the station, I read the title \"Hot! Hot! Hot!\". Today the temperature in London is expected to reach thirty degrees plus, though the usual high for July is only twenty-two. It is going to be awful on the Tube, because the oldest line has no air conditioning at all. Going down the stairs feels like jumping into a hot oven. Inside the train it is even worse, and the passenger next to me and I seem to be melting into one. Reading on, I am shocked by photos of a hurricane in Asia and forest fires across Southern Europe. Experts say such bad weather happens more often because of climate change, and the news makes me feel nervous. But stepping out at last, I feel a fresh wind on my face and decide that, after all, thirty degrees is not the end of the world.",
+      "vocab_notes": [
+        {
+          "word": "plus",
+          "cn": "(数字后)多"
+        },
+        {
+          "word": "climate change",
+          "cn": "气候变化"
+        },
+        {
+          "word": "air conditioning",
+          "cn": "空调"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is the journey on the Tube so uncomfortable that day?",
+          "options": [
+            "The train runs on a very old line with no cooling on a baking hot day.",
+            "The train is completely empty and quiet.",
+            "There is a flood inside the station.",
+            "The newspaper costs too much money."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说最老的线路没有空调、车厢里更热,故是高温加无空调,为转述。"
+        },
+        {
+          "stem": "How does the newspaper make the writer feel?",
+          "options": [
+            "Calm and sleepy.",
+            "Worried about extreme weather around the world.",
+            "Proud of the weather in London.",
+            "Excited about a holiday by the sea."
+          ],
+          "answer_index": 1,
+          "explanation": "报上飓风、森林大火的照片让作者感到紧张不安,为概括转述。"
+        },
+        {
+          "stem": "What does the writer realise at the end of the trip?",
+          "options": [
+            "The hot day is not as terrible as he feared.",
+            "The Tube will close forever.",
+            "He should move to another country.",
+            "Climate change is not real."
+          ],
+          "answer_index": 0,
+          "explanation": "走出车站感到凉风,觉得三十度并非世界末日,为末段转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Stars After the Storm",
+      "topic_cn": "记叙·飓风之后的希望",
+      "body": "It all happened so quickly. I was sitting with my cat on my lap when the roof simply flew off, and suddenly there was sky above me. Our street turned into a river in seconds, and we were going nowhere. Without a roof, staying inside was dangerous, and the only clean water we had was sent to us by helicopter. It was never quite enough. Living in the open air, we soon became dinner for the mosquitos. But Mom kept telling us to stay positive and to look for the good side of things. We had lost almost everything, yet we were all together and safe. I still remember us lying under the midnight sky, looking up at the stars. Because there were no city lights, we could see the Milky Way clearly. Even though we had lost so much, moments like those gave us hope, and a year later we were back home, working hard to rebuild our lives.",
+      "vocab_notes": [
+        {
+          "word": "lap",
+          "cn": "(坐着时的)大腿部"
+        },
+        {
+          "word": "positive",
+          "cn": "积极乐观的"
+        },
+        {
+          "word": "rebuild",
+          "cn": "重建"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What happened to the family's home during the storm?",
+          "options": [
+            "It was sold to a neighbour.",
+            "Its roof was blown away and the street flooded.",
+            "It was moved to a faraway county.",
+            "It stayed completely dry and safe."
+          ],
+          "answer_index": 1,
+          "explanation": "屋顶被掀飞、街道变成河流,为对原文细节的转述。"
+        },
+        {
+          "stem": "What did Mom keep encouraging the family to do?",
+          "options": [
+            "Leave the cat behind.",
+            "Stop talking to each other.",
+            "Keep a positive attitude and look on the bright side.",
+            "Drink the dirty flood water."
+          ],
+          "answer_index": 2,
+          "explanation": "妈妈让大家保持乐观、看到好的一面,为转述。"
+        },
+        {
+          "stem": "Why were the stars so clear at night?",
+          "options": [
+            "Because the moon was very bright.",
+            "Because they used a telescope.",
+            "Because the sky was full of clouds.",
+            "Because the city's lights had all gone out."
+          ],
+          "answer_index": 3,
+          "explanation": "因没有城市灯光,银河才看得清楚,为对原文的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "China's Rescue in Nepal",
+      "topic_cn": "说明·中国赴尼泊尔地震救援",
+      "body": "The powerful earthquake that hit Nepal in April 2015 was one of the worst in history. As soon as the news came out, China was quick to start organising emergency aid for the country. International rescue teams soon began to arrive, and among all the heavy rescue teams, the China International Search and Rescue Team was the very first to reach the disaster area. The team was made up of sixty-two people. It included not only rescuers and medical staff but also earthquake experts who understood how buildings fall. They searched the ruins day and night, hoping to find anyone still alive. By early May, China had donated emergency aid worth millions of dollars, with even more help on the way. Stories like this remind us that, when one country faces a terrible disaster, help often comes quickly from friends far across the world, and that kindness can shine brightly even in the darkest hour.",
+      "vocab_notes": [
+        {
+          "word": "emergency aid",
+          "cn": "紧急援助"
+        },
+        {
+          "word": "rescue team",
+          "cn": "救援队"
+        },
+        {
+          "word": "ruins",
+          "cn": "废墟"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did China do as soon as the earthquake news arrived?",
+          "options": [
+            "It began to organise emergency help straight away.",
+            "It waited for several months to react.",
+            "It asked Nepal to send help instead.",
+            "It closed its own borders."
+          ],
+          "answer_index": 0,
+          "explanation": "消息一出中国立刻着手组织紧急援助,为转述。"
+        },
+        {
+          "stem": "Who were part of the Chinese rescue team?",
+          "options": [
+            "Only one famous doctor.",
+            "Rescuers, medical staff and earthquake experts.",
+            "A group of tourists.",
+            "Only news reporters."
+          ],
+          "answer_index": 1,
+          "explanation": "队伍由救援人员、医护人员和地震专家组成,为转述。"
+        },
+        {
+          "stem": "What is the main message of the passage?",
+          "options": [
+            "Earthquakes never cause much harm.",
+            "Rescue work is always easy and quick.",
+            "Help and kindness can come from far away in a disaster.",
+            "Only Nepal can solve its own problems."
+          ],
+          "answer_index": 2,
+          "explanation": "末段强调灾难中远方的帮助与善意,为主旨转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "When Animals Warn Us",
+      "topic_cn": "说明·动物如何预示天气",
+      "body": "Technology is not the only way to guess what the weather will do. Nature has its own ways, too. Unusual animal behaviour, for example, can tell us whether cold, wet weather or a hot, dry period is coming. If fish are jumping higher than usual, or frogs are calling more loudly, it may soon rain. Next time you look up at the sky, do not only watch for rain clouds; watch the birds as well. If they are flying low, it is wise to grab your umbrella. People also say that mice and snakes move to safer, higher ground several days before an earthquake, while dogs that avoid the beach may be warning of a coming tsunami. Of course, although these signs may suggest that something bad is on the way, they cannot tell us exactly when or where it will happen. So, for an accurate and reliable warning, it is still best to check an official, scientific report.",
+      "vocab_notes": [
+        {
+          "word": "behaviour",
+          "cn": "行为"
+        },
+        {
+          "word": "grab",
+          "cn": "抓住"
+        },
+        {
+          "word": "reliable",
+          "cn": "可靠的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the passage, what might mean rain is coming soon?",
+          "options": [
+            "Birds singing in the morning.",
+            "Dogs sleeping all day.",
+            "Snakes staying underground.",
+            "Fish jumping high or frogs calling loudly."
+          ],
+          "answer_index": 3,
+          "explanation": "鱼跳高、青蛙叫得响可能预示要下雨,为转述。"
+        },
+        {
+          "stem": "What may dogs avoiding the beach be a sign of?",
+          "options": [
+            "An approaching tsunami.",
+            "A coming holiday.",
+            "A drop in food prices.",
+            "A new building project."
+          ],
+          "answer_index": 0,
+          "explanation": "狗避开海滩可能预示海啸将至,为对原文的转述。"
+        },
+        {
+          "stem": "Why does the writer still suggest checking an official report?",
+          "options": [
+            "Because animals are usually wrong.",
+            "Because animal signs cannot give the exact time or place.",
+            "Because reports are cheaper than animals.",
+            "Because nobody believes scientists."
+          ],
+          "answer_index": 1,
+          "explanation": "动物迹象说不清确切时间地点,故需可靠的官方报告,为转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Disasters in History",
+      "topic_cn": "说明·历史上著名的自然灾难",
+      "body": "History is full of natural disasters that people still remember today. In 1960, Chile suffered the strongest earthquake ever recorded. It set off a tsunami with waves as high as twenty-five metres, and these waves reached places as far away as Hawaii and Japan. In February 1972, an exceptionally cold blizzard struck Iran. Winter storms brought almost eight metres of snow to the south of the country, and about four thousand people lost their lives. In the Alps, the winter of 1950 became known as the Winter of Terror, when more than six hundred avalanches struck mountain towns within a short time, destroying buildings and claiming many lives. East Africa, by contrast, faced the opposite problem in 2011: a terrible drought, said to be the worst in sixty years, during which almost no rain fell for a whole year. It led to a severe food crisis that threatened the lives of millions of people across the region.",
+      "vocab_notes": [
+        {
+          "word": "exceptionally",
+          "cn": "极其"
+        },
+        {
+          "word": "claim (lives)",
+          "cn": "夺去(生命)"
+        },
+        {
+          "word": "crisis",
+          "cn": "危机"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the 1960 Chile earthquake lead to?",
+          "options": [
+            "A long period of drought.",
+            "A series of avalanches in the Alps.",
+            "A huge tsunami that reached far-off countries.",
+            "A drop in the sea level."
+          ],
+          "answer_index": 2,
+          "explanation": "智利地震引发了远及夏威夷、日本的海啸,为转述。"
+        },
+        {
+          "stem": "Why is the winter of 1950 in the Alps remembered?",
+          "options": [
+            "Because it was unusually warm.",
+            "Because there was no snow at all.",
+            "Because a volcano erupted there.",
+            "Because hundreds of avalanches hit mountain towns."
+          ],
+          "answer_index": 3,
+          "explanation": "那年冬天数百次雪崩袭击山城,被称为恐怖之冬,为转述。"
+        },
+        {
+          "stem": "What problem did East Africa face in 2011?",
+          "options": [
+            "A long drought that caused a food crisis.",
+            "Too much snow.",
+            "A powerful earthquake.",
+            "A sudden flood."
+          ],
+          "answer_index": 0,
+          "explanation": "东非遭遇严重干旱,引发粮食危机,为转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Be Ready for a Flood",
+      "topic_cn": "应用·洪水来临前后的安全指南",
+      "body": "Many people have no idea what to do when a disaster suddenly strikes. Being well prepared, however, is the best way to increase your chances of staying safe. Here are some simple guidelines for floods, a common threat to towns near rivers and the coast. Before a flood, protect your property by closing the windows and moving anything valuable to a higher floor. Make sure that you have sufficient food, clean water, medicine and batteries, and agree on a meeting place with your family in case you are separated. During a flood, listen carefully to weather warnings and the latest announcements. Move to higher ground immediately, and never try to walk or drive through fast-moving water, because even shallow water can knock you off your feet. Do not drink the flood water; otherwise you may become very sick. Finally, do not assume the danger has passed just because the rain has stopped, as more water may still be on the way.",
+      "vocab_notes": [
+        {
+          "word": "guideline",
+          "cn": "指导原则"
+        },
+        {
+          "word": "sufficient",
+          "cn": "足够的"
+        },
+        {
+          "word": "property",
+          "cn": "财产"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What should you do with valuable things before a flood?",
+          "options": [
+            "Leave them outside the house.",
+            "Move them up to a higher floor.",
+            "Throw them into the river.",
+            "Give them all away."
+          ],
+          "answer_index": 1,
+          "explanation": "灾前把贵重物品搬到更高楼层以保护财产,为转述。"
+        },
+        {
+          "stem": "Why should you not walk or drive through fast-moving water?",
+          "options": [
+            "Because it is too clean.",
+            "Because it is always frozen.",
+            "Because moving water can sweep a person off their feet, even when it is not deep.",
+            "Because it makes the car faster."
+          ],
+          "answer_index": 2,
+          "explanation": "即使浅水也能把人冲倒,故不要涉水,为转述。"
+        },
+        {
+          "stem": "What mistake does the passage warn people not to make?",
+          "options": [
+            "Talking to their family.",
+            "Listening to weather warnings.",
+            "Storing food and water.",
+            "Thinking the danger is over just because the rain stops."
+          ],
+          "answer_index": 3,
+          "explanation": "不要因雨停就认为危险已过,为末段转述。"
+        }
+      ]
+    }
+  ]
+}

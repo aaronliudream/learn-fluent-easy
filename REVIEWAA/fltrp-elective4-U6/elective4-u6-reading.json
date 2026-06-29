@@ -1,0 +1,362 @@
+{
+  "volume": "elective4",
+  "unit": "U6",
+  "topic": "The Call of the Challenger",
+  "source": "外研社新标准选择性必修第四册 Unit 6 同主题阅读(挑战者号/首次登月/哈勃望远镜/中国天眼/太空日常生活/旅行者一号)。词限本单元/常见词,答案转述非照抄,4选项唯一,与完形·听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Teacher Among the Stars",
+      "topic_cn": "记叙·挑战者号与平民教师",
+      "body": "When the Challenger space shuttle took off on 28 January 1986, the world had almost stopped wondering at what astronauts could do. Yet this flight was special. On board was Christa McAuliffe, an ordinary teacher and mother who was about to become the first civilian in space. She planned to give two short lessons from orbit, one to show the controls of the spacecraft and another to explain how gravity worked. Christa hoped her lessons would rekindle young people's interest in space. With students across the nation watching, she might have inspired a whole new generation of scientists. Tragically, her dream ended just over a minute after take-off, when the shuttle exploded and all seven crew members were lost. Most people had assumed that such a flight would be no more dangerous than an ordinary plane journey. How wrong they had been. In an instant, excitement turned into shock, and the accident cast a long shadow on millions of hearts.",
+      "vocab_notes": [
+        {
+          "word": "shuttle",
+          "cn": "航天飞机"
+        },
+        {
+          "word": "civilian",
+          "cn": "平民"
+        },
+        {
+          "word": "rekindle",
+          "cn": "重新唤起"
+        },
+        {
+          "word": "crew",
+          "cn": "机组人员"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the Challenger flight described as special?",
+          "options": [
+            "It carried an everyday schoolteacher who would be the first non-astronaut to fly into orbit.",
+            "It was the very first rocket ever launched.",
+            "It travelled all the way to another planet.",
+            "It had no crew on board at all."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 Christa 是首位进入太空的平民教师的转述。"
+        },
+        {
+          "stem": "What did Christa hope her lessons would achieve?",
+          "options": [
+            "Make space travel illegal.",
+            "Reawaken students' enthusiasm for exploring space.",
+            "Replace all school teachers with robots.",
+            "Prove that space was completely safe."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'rekindle young people's interest in space' 的转述。"
+        },
+        {
+          "stem": "How did most people view the flight before the accident?",
+          "options": [
+            "As no more risky than a normal plane trip.",
+            "As certain to fail.",
+            "As a waste of money.",
+            "As the most dangerous mission ever planned."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'no more dangerous than an ordinary plane journey' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "One Small Step",
+      "topic_cn": "记叙·首次登月",
+      "body": "Ever since Neil Armstrong first set foot on the Moon on 20 July 1969, people have grown used to the notion of space travel. But on that summer night, the world held its breath. Millions of families gathered around black and white television sets to watch the first lunar landing. They were well aware of how hazardous the journey was and of the many things that could go wrong. When Armstrong stepped down and spoke his famous words about a small step and a giant leap, something once thought impossible had finally been achieved. What few people realised was that the computer guiding the spacecraft was far weaker than the ones today's students carry in their pockets. Even so, all three astronauts of the mission returned safely to Earth. After that night, space travel quickly came to seem unexceptional, as one new success followed another. Yet the courage shown by those early explorers still reminds us how much daring that first journey demanded.",
+      "vocab_notes": [
+        {
+          "word": "notion",
+          "cn": "概念"
+        },
+        {
+          "word": "lunar",
+          "cn": "月球的"
+        },
+        {
+          "word": "hazardous",
+          "cn": "危险的"
+        },
+        {
+          "word": "unexceptional",
+          "cn": "平常的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did families around the world follow the first Moon landing?",
+          "options": [
+            "They read about it weeks later in newspapers.",
+            "They watched it live on black and white televisions.",
+            "They heard nothing about it until 1980.",
+            "They saw it only in colour photographs."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 millions 围坐黑白电视机前观看的转述。"
+        },
+        {
+          "stem": "What surprising fact does the text give about the spacecraft's computer?",
+          "options": [
+            "It was the most powerful machine on Earth.",
+            "It broke down during the landing.",
+            "It was much weaker than a modern student's phone.",
+            "It was operated entirely by hand."
+          ],
+          "answer_index": 2,
+          "explanation": "原文计算机比今天学生口袋里的还弱的转述。"
+        },
+        {
+          "stem": "What happened to people's view of space travel after that night?",
+          "options": [
+            "They decided it should be stopped.",
+            "They thought it was impossible.",
+            "They lost all interest in science.",
+            "It soon came to feel quite ordinary."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'space travel quickly came to seem unexceptional' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Eyes Beyond the Earth",
+      "topic_cn": "说明·哈勃太空望远镜",
+      "body": "For thousands of years, people could see only a little of the night sky with the naked eye, and they understood even less of it. Everything changed when the first telescope was angled at the stars, for it increased the power of the human eye and showed that the universe was far larger than anyone had imagined. People learned that the Sun was only one star among billions in our galaxy, and that our galaxy was only one among billions more. Almost four hundred years later, the Hubble Space Telescope was launched into orbit. From beyond the Earth, it sent back the first truly clear pictures of distant clouds where stars are born, of huge black holes, and of new worlds where we might conceivably find life. Hubble also helped scientists work out the age of the universe and discover the astonishing fact that it is growing ever faster. Each new image reminds us how little of the cosmic ocean we have so far explored.",
+      "vocab_notes": [
+        {
+          "word": "telescope",
+          "cn": "望远镜"
+        },
+        {
+          "word": "galaxy",
+          "cn": "星系"
+        },
+        {
+          "word": "orbit",
+          "cn": "轨道"
+        },
+        {
+          "word": "conceivably",
+          "cn": "有可能地"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the first telescope reveal about the universe?",
+          "options": [
+            "That it was far bigger than people had thought.",
+            "That it was much smaller than expected.",
+            "That it contained only one galaxy.",
+            "That nothing existed beyond the Sun."
+          ],
+          "answer_index": 0,
+          "explanation": "原文望远镜显示宇宙远比想象大的转述。"
+        },
+        {
+          "stem": "What did the Hubble Space Telescope send back from orbit?",
+          "options": [
+            "Recordings of music from Earth.",
+            "Clear images of distant stars, black holes and possible new worlds.",
+            "Maps of the ocean floor.",
+            "Photos of ancient ruins on Earth."
+          ],
+          "answer_index": 1,
+          "explanation": "原文哈勃传回遥远星云、黑洞、新世界图像的转述。"
+        },
+        {
+          "stem": "What surprising discovery did Hubble help scientists make?",
+          "options": [
+            "That the universe never changes.",
+            "That the Sun is the only star.",
+            "That the universe is expanding faster and faster.",
+            "That galaxies are shrinking."
+          ],
+          "answer_index": 2,
+          "explanation": "原文宇宙以越来越快速度膨胀的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Eye of Heaven",
+      "topic_cn": "说明·中国天眼 FAST",
+      "body": "To see ever further into space, many countries are now building larger and more advanced telescopes. China operates the world's largest and most powerful radio telescope, known as FAST and completed in 2016. People also call it the Eye of Heaven. Its great dish measures five hundred metres across, and it is being used in the search for dark matter. Dark matter is thought to be made of tiny subatomic particles that ordinary telescopes simply cannot see, because they are invisible to normal instruments. The huge dish can also study regions of space billions of light years away, right at the edge of the visible universe. A telescope like this gives astronomers a chance to answer questions that once seemed impossible. It shows, too, how a country can join humanity's shared journey of exploration. As the engineers like to say, the more we learn about the universe, the more clearly we see how much still remains unknown.",
+      "vocab_notes": [
+        {
+          "word": "subatomic",
+          "cn": "亚原子的"
+        },
+        {
+          "word": "particle",
+          "cn": "粒子"
+        },
+        {
+          "word": "invisible",
+          "cn": "看不见的"
+        },
+        {
+          "word": "universe",
+          "cn": "宇宙"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is FAST mainly being used to search for?",
+          "options": [
+            "New planets to live on.",
+            "Lost satellites.",
+            "Ancient bones.",
+            "Dark matter."
+          ],
+          "answer_index": 3,
+          "explanation": "原文用于寻找暗物质的转述。"
+        },
+        {
+          "stem": "Why can ordinary telescopes not see dark matter?",
+          "options": [
+            "Its tiny particles cannot be seen by normal instruments.",
+            "It is too far underground.",
+            "It moves too slowly.",
+            "It only appears at night."
+          ],
+          "answer_index": 0,
+          "explanation": "原文暗物质粒子对普通仪器不可见的转述。"
+        },
+        {
+          "stem": "What does the engineers' saying suggest about exploration?",
+          "options": [
+            "Science has already answered every question.",
+            "The more we learn, the more we realise is still unknown.",
+            "Space is too dangerous to study.",
+            "Telescopes will soon be unnecessary."
+          ],
+          "answer_index": 1,
+          "explanation": "原文学得越多越觉未知更多的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "A Day in Zero Gravity",
+      "topic_cn": "说明·航天器上的日常生活",
+      "body": "In space, even the most straightforward daily tasks can be difficult for astronauts who spend months on board a spacecraft. In a world without gravity, there is no up or down. Sleeping on the ceiling might sound like fun, but the crew must strap themselves into sleeping bags so they are not hurt while they float. Keeping clean is not simple either. Astronauts use special soap and shampoo that need no water, and after brushing their teeth they spit into a towel. Because there is nothing to push against, their bones and muscles slowly grow weak, so they have to exercise every single day to stay fit. Even eating changes: water must be added to much of the food, and since salt and pepper would float away, these come in liquid form. A vacuum cleaner is handy too, used both to keep dust out of the filters and to fetch items that drift out of reach. Carrying out these tasks well helps the crew stay healthy and focused.",
+      "vocab_notes": [
+        {
+          "word": "straightforward",
+          "cn": "简单的"
+        },
+        {
+          "word": "gravity",
+          "cn": "重力"
+        },
+        {
+          "word": "muscle",
+          "cn": "肌肉"
+        },
+        {
+          "word": "fetch",
+          "cn": "拿来"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do astronauts strap themselves down to sleep?",
+          "options": [
+            "To stay warm at night.",
+            "To hear the alarm clock better.",
+            "To avoid floating and getting hurt.",
+            "To save space in the craft."
+          ],
+          "answer_index": 2,
+          "explanation": "原文绑住自己以免漂浮受伤的转述。"
+        },
+        {
+          "stem": "Why must astronauts exercise every day?",
+          "options": [
+            "Because there is nothing else to do.",
+            "Because exercise replaces eating.",
+            "Because the rules forbid resting.",
+            "Because their bones and muscles weaken without gravity."
+          ],
+          "answer_index": 3,
+          "explanation": "原文无重力使骨骼肌肉变弱的转述。"
+        },
+        {
+          "stem": "How is salt and pepper provided in space?",
+          "options": [
+            "In liquid form so they will not float away.",
+            "In large dry bags.",
+            "Not provided at all.",
+            "Mixed into the drinking water."
+          ],
+          "answer_index": 0,
+          "explanation": "原文盐和胡椒以液体形式提供的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Message to the Stars",
+      "topic_cn": "说明·旅行者一号与探索精神",
+      "body": "Voyager 1 is the spacecraft that has travelled further from Earth than any other. On board it carries a special disc called the Sounds of Earth. The disc holds recordings of greetings in many languages, music, and natural sounds, together with photographs of our world. Scientists hope that one day a faraway civilisation might find it and learn a little about who we are. The idea behind the disc is simple but moving: even across the vast distance of space, human beings still wish to reach out and connect. It has now been more than thirty years since the loss of the Challenger crew, yet their courage takes its place beside that of other heroes of exploration. The memory of those who gave their lives reminds us that we must keep reaching for the stars, no matter how distant they seem. The sacrifice of the past calls quietly to the future, urging each new generation to continue humanity's greatest journey of discovery.",
+      "vocab_notes": [
+        {
+          "word": "disc",
+          "cn": "光盘"
+        },
+        {
+          "word": "distant",
+          "cn": "遥远的"
+        },
+        {
+          "word": "sacrifice",
+          "cn": "牺牲"
+        },
+        {
+          "word": "explore",
+          "cn": "探索"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the disc on board Voyager 1 contain?",
+          "options": [
+            "Maps of the Moon only.",
+            "Greetings, music, sounds and photographs of Earth.",
+            "A list of every astronaut's name.",
+            "Plans for a new rocket."
+          ],
+          "answer_index": 1,
+          "explanation": "原文光盘录有问候、音乐、声音和照片的转述。"
+        },
+        {
+          "stem": "Why did scientists send the disc into deep space?",
+          "options": [
+            "To test a new kind of music player.",
+            "To replace radio on Earth.",
+            "In the hope a distant civilisation might learn about us.",
+            "To measure the weight of the spacecraft."
+          ],
+          "answer_index": 2,
+          "explanation": "原文希望遥远文明发现并了解我们的转述。"
+        },
+        {
+          "stem": "What does the memory of the Challenger crew remind us to do?",
+          "options": [
+            "To stop all space flights.",
+            "To forget the past quickly.",
+            "To explore only with robots.",
+            "To keep exploring however distant the stars are."
+          ],
+          "answer_index": 3,
+          "explanation": "原文提醒我们继续追寻星辰的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "topic": "Improving Yourself",
+  "source": "外研社版选择性必修第二册 Unit 2 同主题阅读(社交媒体脱瘾/战胜拖延/四个储蓄罐/钉子与脾气/无人监考与诚信/小小善举)。词围绕本单元,答案转述非照抄,4选项唯一,与完形/听力不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Seven Days Without a Phone",
+      "topic_cn": "记叙·社交媒体脱瘾",
+      "body": "At Brenton High, a special challenge was set up as a way of raising money for new sports equipment. Before the challenge started, more than a hundred students had been persuaded to stop using social media for a whole week. That meant no messaging, no photos and no updating of profiles. Many found the first days hard. One girl said she felt as if she had lost an arm, because so much of her time had been taken up by checking her phone. Others discovered something better. Instead of sending a message, one student walked to her friend's house and they talked for two hours without being distracted. By the fifth day she wondered whether she had really been missing anything at all. In the end the detox raised over sixteen hundred pounds. But the moderator noticed that something else had also grown: an awareness of how much everyone relied on their phones, and a wish to talk to one another more.",
+      "vocab_notes": [
+        {
+          "word": "detox",
+          "cn": "脱瘾"
+        },
+        {
+          "word": "moderator",
+          "cn": "主持人"
+        },
+        {
+          "word": "distracted",
+          "cn": "分心的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the challenge organised in the first place?",
+          "options": [
+            "To raise funds for the school's new sporting gear.",
+            "To punish students who used phones.",
+            "To test the school's Internet speed.",
+            "To stop students playing any sport."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说 a way of raising money for new sports equipment，选项是其转述。"
+        },
+        {
+          "stem": "What did the girl who walked to her friend's house realise?",
+          "options": [
+            "She would never use a phone again.",
+            "She had probably not been missing much by leaving her phone.",
+            "Her friend no longer liked her.",
+            "Talking face to face was boring."
+          ],
+          "answer_index": 1,
+          "explanation": "她第五天怀疑自己其实没错过什么，是对 wondered whether she had really been missing anything 的概括。"
+        },
+        {
+          "stem": "Besides money, what did the moderator say had grown?",
+          "options": [
+            "People's understanding of how much they depended on phones.",
+            "The number of phones sold at school.",
+            "The amount of time spent online.",
+            "The students' dislike of sport."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 an awareness of how much everyone relied on their phones 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Clever Way to Beat Procrastination",
+      "topic_cn": "说明·战胜拖延",
+      "body": "Jack used to be a lazy student. He was careless about homework, and none of his deadlines had ever been met. He would even hide his homework in his messy room so that he could put off doing it. Then he read a book called The Art of Procrastination, written by John Perry. The author explained that putting things off is really about avoiding the hardest and most important tasks. So Perry gave a clever piece of advice. Instead of placing your homework at the top of your list, put it second or third. Then put one or two really hard jobs that you hate at the very top. Because you want to avoid those terrible tasks, you will happily do your homework instead, just to escape them. In this way, your wish to delay actually pushes you to finish useful work. Jack tried it, and slowly the habit of leaving everything until the last minute began to disappear.",
+      "vocab_notes": [
+        {
+          "word": "procrastination",
+          "cn": "拖延"
+        },
+        {
+          "word": "deadline",
+          "cn": "截止时间"
+        },
+        {
+          "word": "put off",
+          "cn": "推迟"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was Jack like before he read the book?",
+          "options": [
+            "He always finished tasks early.",
+            "He delayed his work and missed his deadlines.",
+            "He had the tidiest room in school.",
+            "He never had any homework."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说他懒散、deadlines had ever been met 的否定形式，选项是概括。"
+        },
+        {
+          "stem": "According to John Perry, what is procrastination really about?",
+          "options": [
+            "Doing easy work very slowly.",
+            "Forgetting all your tasks.",
+            "Staying away from the toughest and most important jobs.",
+            "Working hard all night long."
+          ],
+          "answer_index": 2,
+          "explanation": "avoiding the hardest and most important tasks 的转述。"
+        },
+        {
+          "stem": "How does Perry's trick make you finish your homework?",
+          "options": [
+            "It removes homework from the list completely.",
+            "It gives you a money reward each time.",
+            "It makes the homework much shorter.",
+            "You do it to escape even harder tasks placed above it."
+          ],
+          "answer_index": 3,
+          "explanation": "把更难的任务放在最上面，为逃避它们而去做作业，是对该方法的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Four Jars and a Lifelong Lesson",
+      "topic_cn": "说明·四个储蓄罐",
+      "body": "When Jerry Witkovsky's grandchildren turned thirteen, he did not simply give them money. Instead, each child received several glass jars, one labelled Spending, one Saving and one Giving. Later he added a fourth jar for Investing. From then on, the children had to decide for themselves what to do with the money they received. The Spending jar teaches that you are responsible for your own happiness, and that it is fine to treat yourself once in a while. The Saving jar gives you a vision for the future, perhaps for university or for something special you have seen. The Investing jar is about building for the future and putting money into yourself. The Giving jar is all about kindness, letting you support any cause you believe in. Jerry's real present was not the cash inside the jars. It was the chance to learn lifelong values and to think more objectively about money, so that as adults the children would make wiser choices.",
+      "vocab_notes": [
+        {
+          "word": "jar",
+          "cn": "罐子"
+        },
+        {
+          "word": "invest",
+          "cn": "投资"
+        },
+        {
+          "word": "vision",
+          "cn": "构想"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Jerry give his grandchildren instead of just money?",
+          "options": [
+            "Several jars that taught them how to manage what they had.",
+            "A list of expensive toys to buy.",
+            "A bank card with no limit.",
+            "A holiday abroad every year."
+          ],
+          "answer_index": 0,
+          "explanation": "each child received several glass jars 的转述，强调用来管理金钱。"
+        },
+        {
+          "stem": "What lesson does the Saving jar mainly teach?",
+          "options": [
+            "To spend everything at once.",
+            "To look ahead and plan for things you may want later.",
+            "To give all your money away.",
+            "To hide money from your family."
+          ],
+          "answer_index": 1,
+          "explanation": "gives you a vision for the future 的概括。"
+        },
+        {
+          "stem": "What was Jerry's real present to the children?",
+          "options": [
+            "A large sum of cash inside the jars.",
+            "Four empty glass bottles.",
+            "The chance to learn values that would last all their lives.",
+            "A book about getting rich quickly."
+          ],
+          "answer_index": 2,
+          "explanation": "the chance to learn lifelong values 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Nails in the Fence",
+      "topic_cn": "记叙·钉子与脾气",
+      "body": "There was once a boy who could not control his temper. His father gave him a bag of nails and told him that every time he lost his temper he must hammer a nail into the back of the fence. On the first day the boy drove in so many nails that the bag was soon empty. But over the next few weeks he learnt to hold his anger, and the number of nails grew smaller each day. He found that it was far easier to control himself than to hammer nail after nail. At last came a day when he did not lose his temper even once. His father then told him to pull out one nail for every calm day. When all the nails were finally gone, the father led him to the fence and pointed at the holes left behind. He said that angry words leave marks just like those holes, and that saying sorry cannot always take them away.",
+      "vocab_notes": [
+        {
+          "word": "temper",
+          "cn": "脾气"
+        },
+        {
+          "word": "nail",
+          "cn": "钉子"
+        },
+        {
+          "word": "anger",
+          "cn": "愤怒"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the father ask the boy to do whenever he got angry?",
+          "options": [
+            "Pull a nail out at once.",
+            "Write down his feelings.",
+            "Pay a small fine.",
+            "Drive a nail into the fence."
+          ],
+          "answer_index": 3,
+          "explanation": "hammer a nail into the back of the fence 的转述。"
+        },
+        {
+          "stem": "What did the boy discover over the following weeks?",
+          "options": [
+            "Keeping calm was easier than hammering more nails.",
+            "Hammering nails was great fun.",
+            "His father was always unfair.",
+            "The fence needed more nails."
+          ],
+          "answer_index": 0,
+          "explanation": "easier to control himself than to hammer nail after nail 的概括。"
+        },
+        {
+          "stem": "What lesson did the holes in the fence teach?",
+          "options": [
+            "Fences should never have nails.",
+            "Hurtful words can leave marks that an apology may not remove.",
+            "It is good to say sorry many times.",
+            "Anger has no effect on others."
+          ],
+          "answer_index": 1,
+          "explanation": "angry words leave marks like those holes, saying sorry cannot always take them away 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Trusting Students to Be Honest",
+      "topic_cn": "新闻·无人监考与诚信",
+      "body": "A school in our city came up with an unusual programme to promote the value of honesty. To begin with, it introduced what was called the unsupervised examination. During this kind of test, there was no teacher watching the room at all. Before they were allowed to take it, students first had to make a promise to behave honestly. Most of them said it felt good to be trusted, and they really enjoyed the freedom such a test offered. In turn, they developed a stronger sense of responsibility towards their own work. The school also gave out umbrellas that anyone could borrow. Printed on each umbrella was a short line about honesty. At the end of the term, every single umbrella had been returned, and not one of them had been lost or damaged. The head teacher, Ms Wu, now hopes to share the idea with other schools, because building a culture of trust needs everybody to take part.",
+      "vocab_notes": [
+        {
+          "word": "promote",
+          "cn": "促进"
+        },
+        {
+          "word": "unsupervised",
+          "cn": "无人监督的"
+        },
+        {
+          "word": "responsibility",
+          "cn": "责任感"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was special about the unsupervised examination?",
+          "options": [
+            "Students could copy from books.",
+            "It lasted only five minutes.",
+            "No teacher stayed in the room to watch the students.",
+            "Only the best students could sit it."
+          ],
+          "answer_index": 2,
+          "explanation": "there was no teacher watching the room 的转述。"
+        },
+        {
+          "stem": "How did most students feel about being trusted?",
+          "options": [
+            "They were angry and refused to take part.",
+            "They felt bored throughout.",
+            "They wished a teacher would watch them.",
+            "They were pleased and enjoyed the freedom it gave."
+          ],
+          "answer_index": 3,
+          "explanation": "it felt good to be trusted, enjoyed the freedom 的概括。"
+        },
+        {
+          "stem": "What happened to the borrowed umbrellas by the end of term?",
+          "options": [
+            "They all came back undamaged.",
+            "Most of them were lost.",
+            "Half of them were broken.",
+            "Nobody borrowed any of them."
+          ],
+          "answer_index": 0,
+          "explanation": "every single umbrella had been returned, none lost or damaged 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Small Hands, Big Hearts",
+      "topic_cn": "记叙·小小善举",
+      "body": "While some teenagers max out their parents' cards on games, others prove that age is no barrier to using money well. With help from her grandmother, an eight-year-old girl named Khloe Thompson began making simple bags for homeless people in her district. Inside each bag she placed everyday necessities such as toothpaste, soap and socks. At first these things were bought with her own pocket money. Later, when more people heard about her idea, she raised money online so that she could make many more bags. The items were small, but they helped to make hard lives a little easier. One woman who received a bag told Khloe that the gift made her feel like a human being again. Khloe's story shows that you do not need to be rich or grown up to improve the world around you. A kind idea, a little effort and a willing heart can already make a real difference to others.",
+      "vocab_notes": [
+        {
+          "word": "necessity",
+          "cn": "必需品"
+        },
+        {
+          "word": "district",
+          "cn": "地区"
+        },
+        {
+          "word": "max out",
+          "cn": "刷爆"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Khloe Thompson make for homeless people?",
+          "options": [
+            "Toys for their children.",
+            "Bags filled with daily necessities.",
+            "Tickets to a football match.",
+            "New mobile phones."
+          ],
+          "answer_index": 1,
+          "explanation": "making simple bags... necessities such as toothpaste, soap and socks 的转述。"
+        },
+        {
+          "stem": "How did Khloe pay for the bags after her idea became known?",
+          "options": [
+            "Her school gave her a salary.",
+            "She sold her own toys.",
+            "She collected money from people online.",
+            "She borrowed from a bank."
+          ],
+          "answer_index": 2,
+          "explanation": "she raised money online 的转述。"
+        },
+        {
+          "stem": "What is the main message of Khloe's story?",
+          "options": [
+            "Only rich adults can do good.",
+            "Giving money is a waste.",
+            "Homeless people cannot be helped.",
+            "Even the young and ordinary can help others."
+          ],
+          "answer_index": 3,
+          "explanation": "you do not need to be rich or grown up to improve the world 的概括。"
+        }
+      ]
+    }
+  ]
+}

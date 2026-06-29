@@ -1,0 +1,37 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "grade": 10,
+  "content": {
+    "title": "时态复习·一般/进行/完成(现在与过去)速查",
+    "intro": "时态看两件事:时间(现在/过去)和状态(经常做/正在做/已完成)。判断口诀:先找句中的时间标志词,再据它定时态——标志词决定唯一答案。",
+    "table": {
+      "headers": ["时态", "用法 / 时间标志词 / 例句"],
+      "rows": [
+        ["一般现在时", "经常/反复:every day, usually, always, often, regularly — Mum jogs every morning."],
+        ["现在进行时", "此刻正在:right now, at the moment, Look!, Listen!, now — Look! Dad is growing a beard now."],
+        ["现在完成时", "持续/影响到现在:since, for, already, yet, just, ever, never, recently, so far — Dad has changed since we last met."],
+        ["一般过去时", "过去确定时间:yesterday, ago, last…, in 2005, when I was young — Grandma called us yesterday."],
+        ["过去完成时", "过去的过去:by the time, before, …had taken then — By the time we arrived, she had cooked dinner."],
+        ["过去进行时", "过去某刻正在(作背景):while, when(被打断), as — While Mum was cooking, I set the table."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "since/for/already/yet/just → 现在完成时", "mark": "I have just finished the guest list." },
+      { "rule": "yesterday/ago/last…/in+年份 → 一般过去时(不用完成时)", "mark": "We had a holiday last summer.(× have had)" },
+      { "rule": "by the time + 过去句 → 主句用过去完成时", "mark": "By the time he came, we had left." },
+      { "rule": "while / when 被打断 → 背景动作用过去进行时", "mark": "I was tidying my room when I found the photo." }
+    ],
+    "why": [
+      "时态本质是'什么时候+什么状态';时间标志词把范围锁死,所以一旦看到 since 就排除一般过去时、看到 yesterday 就排除现在完成时,答案自然唯一。"
+    ],
+    "gaokaoPoints": [
+      "现在完成时 vs 一般过去时(since/for/already vs yesterday/ago)是语法填空与改错高频点。",
+      "过去完成时强调'过去的过去';while/when 引导的背景常用过去进行时;family/记叙文里大量出现。"
+    ],
+    "examVsReal": [
+      { "exam": "I have just finished my homework.(考试/书面)", "real": "I just finished my homework.(美式口语)", "note": "考试里 just + 现在完成;美式口语常用一般过去 + just。" },
+      { "exam": "By the time he arrived, we had eaten.(考试)", "real": "By the time he arrived, we'd already eaten.", "note": "口语多用缩写 'd 并加 already,意思相同。" }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "volume": "required2",
+  "unit": "U6",
+  "note": "单元通关专属迷你阅读(地球/环保主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "A small island once had clear blue water and plenty of fish. After a busy factory opened nearby, waste leaked into the sea, and most of the fish soon disappeared. The villagers worked together to clean the water, and a few years later the fish slowly came back.",
+    "questions": [
+      {
+        "q": "What happened soon after the factory opened?",
+        "options": [
+          "The island suddenly got many more fish.",
+          "The sea water became much cleaner.",
+          "Waste polluted the sea and the fish vanished.",
+          "The factory closed down at once."
+        ],
+        "answer": "C",
+        "explanation": "原文 'waste leaked into the sea, and most of the fish soon disappeared' 的转述;其余与原文相反。"
+      },
+      {
+        "q": "How did the fish finally come back?",
+        "options": [
+          "The villagers cleaned the water together.",
+          "The factory gave the island new fish.",
+          "People bought fish from a faraway city.",
+          "Nothing at all was done about it."
+        ],
+        "answer": "A",
+        "explanation": "末句 'The villagers worked together to clean the water' 的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

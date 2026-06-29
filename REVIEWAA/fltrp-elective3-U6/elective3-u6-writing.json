@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U6",
+  "topic": "Describe the First Snow(描写初雪)",
+  "title_en": "The First Snow",
+  "genre": "记叙 / 描写文(describe a winter scene and your feelings)",
+  "source": "外研社新标准选择性必修第三册 Unit 6 First Snow:写一篇约100词的短文,描写初雪的景象与感受,自然用上非谓语动词作定语/状语/补语。",
+  "prompt_cn": "假设你叫李华。上周你的城市迎来了今年的第一场雪。请用英语写一篇约100词的短文,描写初雪的景象和你的感受,内容包括:① 你早上醒来看到的雪景;② 你和家人或朋友做的一件事;③ 初雪带给你的感受。注意:适当使用非谓语动词作定语、状语或补语(如 the falling snow / Looking out of the window, I … / I saw the children playing)。",
+  "prompt_en": "Suppose you are Li Hua. Last week your city had its first snow of the year. Write a short passage of about 100 words describing the first snow and your feelings, including: 1) the snowy scene you saw when you woke up; 2) one thing you did with your family or friends; 3) how the first snow made you feel. Try to use non-finite verbs as attributive, adverbial or complement (e.g. the falling snow / Looking out of the window, I … / I saw the children playing).",
+  "points": [
+    "描写雪景(定语非谓语:the falling snow / the snow-covered roofs)",
+    "用分词状语开头(Looking out of the window, I saw …)",
+    "用补语结构(I saw the children playing / found the garden covered)",
+    "表达真实感受 + 句子地道连贯、代词指代清楚"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Last Wednesday I woke up to find the whole world turned white. Looking out of the window, I saw soft snow falling quietly past the glass. The garden, the roofs and the old plum tree were all covered in a thick white blanket. Excited by the magical scene, my sister and I quickly got dressed and rushed outside. We rolled the fresh snow into a big ball and built a cheerful snowman, laughing until our cheeks turned red. Standing in the falling snow, I felt as happy and free as a little child. The first snow had truly turned an ordinary morning into something magical.",
+  "model_translation": "上周三我醒来,发现整个世界都变白了。望向窗外,我看见柔软的雪静静地落过玻璃。花园、屋顶和那棵老李树都盖上了厚厚的白毯。被这神奇的景象激动着,我和妹妹很快穿好衣服冲了出去。我们把新雪滚成一个大球,堆了一个快乐的雪人,笑得脸都红了。站在纷飞的雪中,我感到像个孩子一样快乐而自由。初雪真的把一个平凡的早晨变成了奇妙的时光。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:醒来所见雪景 / 与家人朋友做的一件事 / 初雪带来的感受" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕初雪展开、按时间顺序、句句相关、代词指代清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、非谓语作定语/状语/补语运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "开头状语 Looking out of the window, I saw …",
+      "定语 the falling snow / the snow-covered roofs",
+      "补语 I saw the children playing / found the garden covered",
+      "感受句 Standing in the falling snow, I felt …"
+    ],
+    "key_expressions": [
+      "Looking out of the window, I saw soft snow falling quietly past the glass.",
+      "The garden and roofs were all covered in a thick white blanket.",
+      "Excited by the magical scene, my sister and I rushed outside.",
+      "Standing in the falling snow, I felt as happy as a little child."
+    ],
+    "useful_words": ["snow", "falling", "covered", "blanket", "excited", "snowman", "laughing", "magical", "childhood", "wonder"]
+  },
+  "high_sentences": [
+    "Looking out of the window, I saw soft snow falling quietly past the glass.",
+    "The roofs and trees were all covered in a thick white blanket.",
+    "Excited by the magical scene, my sister and I rushed straight outside.",
+    "Standing in the falling snow, I felt as happy as a little child."
+  ],
+  "error_pairs": [
+    { "wrong": "Look out of the window, I saw the snow.", "correct": "Looking out of the window, I saw the snow.", "note": "主句主语 I 与 look 是主动关系,状语用现在分词 Looking。" },
+    { "wrong": "The garden was cover with snow.", "correct": "The garden was covered with snow.", "note": "garden 被雪覆盖,被动用过去分词 covered。" },
+    { "wrong": "I saw the children played in the snow.", "correct": "I saw the children playing in the snow.", "note": "see sb doing:动作正在进行用现在分词 playing,不用过去式。" }
+  ],
+  "paragraph_template": "【初雪描写结构】\n第1句 醒来所见:I woke up to find … / Looking out of the window, I saw …\n第2-3句 雪景(定语非谓语):the falling snow / the snow-covered roofs / trees bending under the snow\n第4-5句 做的事(补语结构):I saw … playing / we built a snowman\n第6句 感受:Standing in the falling snow, I felt …"
+}

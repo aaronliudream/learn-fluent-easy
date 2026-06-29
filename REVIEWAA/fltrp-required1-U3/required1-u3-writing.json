@@ -1,0 +1,52 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "topic": "Write about a Family Memory(写一段家庭回忆)",
+  "title_en": "A Family Memory I Treasure",
+  "genre": "记叙文 / 个人回忆(narrate a special family memory)",
+  "source": "外研社必修第一册 Unit 3 Developing ideas: Writing about a family memory(记叙一段难忘的家庭回忆,注意时态:回忆用过去时、点题用现在/将来)。",
+  "prompt_cn": "假设你叫李华。请用英语写一篇约80词的短文,记叙一段难忘的家庭回忆,内容包括:① 是什么勾起了这段回忆(时间/人物/地点);② 当时发生了什么事;③ 为什么这段回忆对你特别或难忘。注意:回忆部分用过去时态(一般过去/过去进行/过去完成),恰当使用时间标志词。",
+  "prompt_en": "Suppose you are Li Hua. Write a short passage (about 80 words) about a family memory you treasure, including: 1) what brought the memory back (when / who / where); 2) what happened at that time; 3) why the memory is special or unforgettable to you. Note: use past tenses for the memory itself and link it to the present at the end.",
+  "points": [
+    "什么勾起回忆(While I was …, I found … and a memory came back)",
+    "当时发生了什么(过去时叙事:I had decided … / Mum was …)",
+    "为什么难忘(I learnt that … / It is special because …)",
+    "时态准确:回忆用过去时,点题句用现在/将来"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "While I was tidying my room last weekend, I found an old photo and a lovely memory came back to me. It was my mother's birthday ten years ago, and I had decided to surprise her with home-made eggs. I woke up early and tiptoed to the kitchen, but somehow the eggs got burnt. Just as I was about to throw them away, Mum walked in, tasted them and smiled. We laughed and ate them all. That day taught me that love is indeed a magical ingredient, and I still treasure it today.",
+  "model_translation": "上周末我整理房间时,发现一张旧照片,一段美好的回忆涌上心头。那是十年前妈妈的生日,我决定亲手做鸡蛋给她惊喜。我起得很早,蹑手蹑脚溜进厨房,可鸡蛋不知怎么烧糊了。正当我要把它们扔掉时,妈妈走了进来,尝了尝,笑了。我们大笑着把蛋全吃光了。那一天让我明白爱确实是一种神奇的成分,至今我仍珍藏着这段回忆。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:勾起回忆 / 当时发生的事 / 为什么难忘" },
+      { "dimension": "结构", "max": 4, "criteria": "按时间顺序叙事、首尾呼应、过渡自然、点题清楚" },
+      { "dimension": "语言", "max": 5, "criteria": "时态准确(过去时叙事+现在/将来点题)、词汇句型多样、基本无语法错误" }
+    ],
+    "required_structure": [
+      "勾起回忆 While I was …, I found … and a memory came back to me.",
+      "背景 It was … ten years ago, and I had decided to …",
+      "经过 Just as I was about to …, Mum walked in …",
+      "点题 That day taught me that … , and I still treasure it today."
+    ],
+    "key_expressions": [
+      "a lovely memory came back to me",
+      "I had decided to surprise her with …",
+      "Just as I was about to …, Mum walked in.",
+      "Love is indeed a magical ingredient."
+    ],
+    "useful_words": ["memory", "tidy", "surprise", "burnt", "kitchen", "taste", "indeed", "treasure", "while", "had decided"]
+  },
+  "high_sentences": [
+    "While I was tidying my room, a lovely memory came back to me.",
+    "It was my mother's birthday ten years ago, and I had decided to surprise her.",
+    "Just as I was about to throw the eggs away, Mum walked in and smiled.",
+    "That day taught me that love is indeed a magical ingredient."
+  ],
+  "error_pairs": [
+    { "wrong": "Yesterday I have found an old photo.", "correct": "Yesterday I found an old photo.", "note": "yesterday 是确定过去时间,用一般过去时,不用现在完成时。" },
+    { "wrong": "While I tidied my room, I found a photo.", "correct": "While I was tidying my room, I found a photo.", "note": "while 引导的背景动作正在进行,用过去进行时。" },
+    { "wrong": "I decided to surprise her before she woke up, so I cooked already.", "correct": "I had decided to surprise her before she woke up.", "note": "早于过去某动作发生,用过去完成时。" }
+  ],
+  "paragraph_template": "【家庭回忆记叙结构】\n第1句 勾起回忆:While I was …, a memory came back to me.\n第2句 背景:It was … ago, and I had decided to …\n第3-4句 经过:Just as I was about to …, … walked in …\n第5句 点题:That day taught me that … , and I still treasure it today."
+}

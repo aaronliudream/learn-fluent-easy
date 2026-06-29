@@ -1,0 +1,745 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "grammar_title": "状语从句综合复习(时间/条件 · 让步/原因 · 结果/目的/方式)",
+  "source": "外研社(新标准)选择性必修四 Unit 3 Using language: Review adverbial clauses。三点:时间与条件连词 / 让步与原因连词 / 结果·目的·方式连词。连词由从句逻辑意义决定,干扰项为逻辑错误的连词,使答案唯一;零术语、全填空应用题、句子地道,围绕敦煌与丝绸之路主题。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "时间与条件状语从句(when/while/as/until/before/after/as soon as · if/unless/as long as/in case)",
+      "overview": "看从句与主句的逻辑:先后或同时发生用时间连词(when 当…时、while/as 在…期间、until 直到、as soon as 一…就);提出前提或条件用条件连词(if 如果、unless 除非、as long as 只要、in case 以防)。"
+    },
+    {
+      "code": "u3.02",
+      "point": "让步与原因状语从句(though/although/even though/while · because/since/as/now that)",
+      "overview": "前后有“转折让步”关系用让步连词(although/though/even though 虽然、while 尽管/而);前后是“因为—所以”的原因关系用原因连词(because/since/as 因为、now that 既然)。"
+    },
+    {
+      "code": "u3.03",
+      "point": "结果·目的·方式状语从句(so…that/such…that · so that/in order that · as if/as though)",
+      "overview": "“如此…以致于”的结果用 so+形容词/副词+that 或 such+(a/an)+名词+that;表“为了”的目的用 so that / in order that;表“仿佛、好像”的方式用 as if / as though。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "____ travellers finally reached Dunhuang, they saw the green oasis ahead of them.",
+      "options": [
+        "When",
+        "Unless",
+        "In case",
+        "As if"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:旅人到达敦煌时看见绿洲,前后是同时发生的时间关系 → When。其余连词使句意不通。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the guide entered the dark cave, she turned on her torch to show us the murals.",
+      "options": [
+        "Unless",
+        "As soon as",
+        "In case",
+        "As though"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:导游一进洞就打开手电,“一…就”用 As soon as。其余使句意不通。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ we were walking through the grottoes, our guide explained the history of the Silk Road.",
+      "options": [
+        "Unless",
+        "In case",
+        "While",
+        "As if"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:走过洞窟“期间”导游讲解,表同时进行 → While。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The murals stayed hidden ____ a Taoist priest discovered the sealed Library Cave in 1900.",
+      "options": [
+        "unless",
+        "because",
+        "as long as",
+        "until"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:壁画一直藏到道士发现藏经洞为止,表“直到”→ until。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The caves had been carved for centuries ____ the Tang Dynasty reached its golden age.",
+      "options": [
+        "before",
+        "unless",
+        "although",
+        "in case"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:洞窟开凿在唐代鼎盛“之前”已持续数百年,表先后 → before。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the trade routes changed, Dunhuang slowly faded from people's memory.",
+      "options": [
+        "Unless",
+        "After",
+        "In case",
+        "As if"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:贸易路线改变“之后”敦煌渐被遗忘,表先后时间 → After。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the years passed, Dunhuang grew into a world-class tourist destination.",
+      "options": [
+        "Unless",
+        "In case",
+        "As",
+        "As if"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:随着岁月流逝敦煌逐渐发展,表“随着”→ As。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ night fell over the desert, the temperature around Dunhuang dropped very quickly.",
+      "options": [
+        "Unless",
+        "In case",
+        "As if",
+        "When"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:夜幕降临“时”气温骤降,表时间 → When。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the museum opens each morning, visitors hurry to see the famous Flying Apsaras.",
+      "options": [
+        "As soon as",
+        "Unless",
+        "Although",
+        "In case"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:博物馆一开门游客就赶去看飞天,“一…就”→ As soon as。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Keep walking forward ____ you reach the wall covered with thousands of tiny Buddhas.",
+      "options": [
+        "unless",
+        "until",
+        "although",
+        "in case"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:一直往前走直到到达那面墙,表“直到”→ until。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ you look up, you can see the colourful paintings on the ceiling of the cave.",
+      "options": [
+        "Unless",
+        "Although",
+        "If",
+        "So that"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:你若抬头就能看到壁画,前后是条件关系 → If。其余连词使句意矛盾或不通。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ you book a ticket in advance, you will not be allowed into the Mogao Grottoes.",
+      "options": [
+        "Although",
+        "Because",
+        "As if",
+        "Unless"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:除非提前订票,否则不准进入,“除非”→ Unless。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "You may take photos in the cave ____ you do not use a flash.",
+      "options": [
+        "as long as",
+        "unless",
+        "although",
+        "because"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:只要不用闪光灯就可以拍照,表“只要”→ as long as。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Take a bottle of water with you ____ you feel thirsty in the dry desert air.",
+      "options": [
+        "unless",
+        "in case",
+        "although",
+        "so that"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:带瓶水以防口渴,表“以防”→ in case。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the weather is good tomorrow, we will climb the Mingsha Mountain near Dunhuang.",
+      "options": [
+        "Unless",
+        "Although",
+        "If",
+        "As if"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:如果明天天气好就去爬鸣沙山,表条件 → If。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Visitors cannot understand the murals well ____ a guide explains the old stories to them.",
+      "options": [
+        "although",
+        "because",
+        "as if",
+        "unless"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:除非导游讲解,否则游客看不懂壁画,“除非”→ unless。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ you keep your voice low, you are welcome to stay and enjoy the wall paintings.",
+      "options": [
+        "As long as",
+        "Unless",
+        "Although",
+        "Because"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:只要小声说话就欢迎你留下,表“只要”→ As long as。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The team made careful copies of the scrolls ____ the fragile originals were ever damaged.",
+      "options": [
+        "unless",
+        "in case",
+        "although",
+        "so that"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:复制卷轴以防原件受损,表“以防”→ in case。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ you visit Dunhuang in summer, remember to bring a hat against the strong sun.",
+      "options": [
+        "Unless",
+        "Although",
+        "If",
+        "As if"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:如果夏天去敦煌记得带帽子,表条件 → If。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The ancient city would not have grown rich ____ the Silk Road had passed through it.",
+      "options": [
+        "although",
+        "because",
+        "as long as",
+        "unless"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:要不是丝绸之路经过,这座城不会富裕,“除非/要不是”→ unless。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ Dunhuang was once such a great city, it gradually faded from memory.",
+      "options": [
+        "Although",
+        "Because",
+        "If",
+        "Until"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:敦煌虽曾辉煌,却逐渐被遗忘,前后转折 → Although。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the desert journey was dangerous, many traders still crossed it to reach Dunhuang.",
+      "options": [
+        "Because",
+        "Even though",
+        "As soon as",
+        "Unless"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:尽管旅程危险,商人仍穿越,前后让步 → Even though。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The Library Cave is small, ____ it once held thousands of priceless manuscripts.",
+      "options": [
+        "because",
+        "so that",
+        "though",
+        "as soon as"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:藏经洞虽小,却藏过无数珍贵手稿,转折 → though。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ some murals show religious stories, others picture the daily life of ordinary people.",
+      "options": [
+        "Because",
+        "If",
+        "Until",
+        "While"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:有些壁画画宗教故事,而另一些画日常生活,表对比让步 → While。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the paintings are over a thousand years old, their colours are still surprisingly bright.",
+      "options": [
+        "Although",
+        "Because",
+        "As long as",
+        "So that"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:画作虽逾千年,色彩依旧鲜亮,前后转折 → Although。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Visitors keep coming to the grottoes, ____ the tickets are not at all cheap.",
+      "options": [
+        "because",
+        "even though",
+        "in case",
+        "as soon as"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:尽管门票不便宜,游客仍络绎不绝,让步 → even though。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ he was only a poor Taoist priest, his discovery changed the study of the Silk Road.",
+      "options": [
+        "Because",
+        "Unless",
+        "Though",
+        "As if"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:他虽只是个穷道士,其发现却改变了丝路研究,转折 → Though。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the north of the city was busy with trade, the southern caves stayed quiet and holy.",
+      "options": [
+        "Because",
+        "If",
+        "Until",
+        "While"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:城北忙于贸易,而城南洞窟静谧神圣,表对比让步 → While。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the trade routes had moved far away, Dunhuang never lost its cultural treasures.",
+      "options": [
+        "Although",
+        "As soon as",
+        "Because",
+        "Unless"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:贸易路线虽已远去,敦煌仍未失去文化珍宝,转折 → Although。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The artists kept painting the Flying Apsaras, ____ the work took many years to finish.",
+      "options": [
+        "because",
+        "even though",
+        "so that",
+        "as long as"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:尽管要画很多年,画师们仍坚持创作飞天,让步 → even though。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The Expo chose Dunhuang ____ it had long been a meeting point of East and West.",
+      "options": [
+        "although",
+        "unless",
+        "because",
+        "so that"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:博览会选敦煌是因为它长期是东西方交汇点,表原因 → because。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ Dunhuang sits on the old Silk Road, it became a great centre of cultural exchange.",
+      "options": [
+        "Although",
+        "Unless",
+        "While",
+        "Since"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:因为敦煌位于古丝路上,它成了文化交流中心,表原因 → Since。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the Belt and Road brings life back to the Silk Road, Dunhuang is busy once again.",
+      "options": [
+        "Now that",
+        "Although",
+        "Unless",
+        "As if"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:既然“一带一路”让丝路重焕生机,敦煌再度繁忙,表原因 → Now that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Many scholars study the old scrolls ____ they reveal how different communities once lived.",
+      "options": [
+        "although",
+        "because",
+        "if",
+        "until"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:学者研究卷轴是因为它们揭示了过去的生活,表原因 → because。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the murals are very fragile, the staff keep the light inside the caves quite low.",
+      "options": [
+        "Although",
+        "Unless",
+        "Since",
+        "So that"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:因为壁画十分脆弱,工作人员把洞内光线调暗,表原因 → Since。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ you have seen the statues, let us move on to the famous Library Cave.",
+      "options": [
+        "Although",
+        "Unless",
+        "As if",
+        "Now that"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:既然你已看过雕像,我们就去藏经洞,表原因 → Now that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Dunhuang grew rich ____ goods from as far away as Europe arrived through its gates.",
+      "options": [
+        "because",
+        "although",
+        "unless",
+        "while"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:敦煌富裕是因为远至欧洲的货物经此进入,表原因 → because。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ very few records survive, the reason the cave was sealed remains a mystery.",
+      "options": [
+        "Unless",
+        "Since",
+        "In case",
+        "So that"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:因为留存的记录极少,封洞之因仍是谜,表原因 → Since。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the city has become a global crossroads, people from many countries come to visit it.",
+      "options": [
+        "Although",
+        "Unless",
+        "Now that",
+        "Until"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:既然这座城已成全球汇集地,各国游客纷至,表原因 → Now that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The guide spoke slowly ____ the long history of the caves was hard to take in all at once.",
+      "options": [
+        "although",
+        "if",
+        "as soon as",
+        "because"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:导游讲得慢是因为洞窟的悠久历史一时难以消化,表原因 → because。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The desert sun was ____ strong that we needed both hats and plenty of water.",
+      "options": [
+        "so",
+        "such",
+        "very",
+        "too"
+      ],
+      "answer_index": 0,
+      "explanation": "“so + 形容词 + that”引导结果状语从句:so strong that → so。such 接名词、very/too 不能引出 that 结果从句。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Dunhuang was ____ a busy crossroads that goods came to it from all over Asia.",
+      "options": [
+        "so",
+        "such",
+        "very",
+        "too"
+      ],
+      "answer_index": 1,
+      "explanation": "“such + a + 名词 + that”引导结果从句:such a busy crossroads that → such。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The cave was ____ dark that we could hardly see the murals at first.",
+      "options": [
+        "such",
+        "very",
+        "so",
+        "quite"
+      ],
+      "answer_index": 2,
+      "explanation": "“so + 形容词 + that”:so dark that → so。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The Library Cave held ____ amazing treasures that scholars still study them today.",
+      "options": [
+        "so",
+        "very",
+        "too",
+        "such"
+      ],
+      "answer_index": 3,
+      "explanation": "“such + 名词(复数)+ that”:such amazing treasures that → such。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The colours have lasted ____ long that it is hard to believe their true age.",
+      "options": [
+        "so",
+        "such",
+        "very",
+        "too"
+      ],
+      "answer_index": 0,
+      "explanation": "“so + 副词 + that”:so long that → so。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is ____ a famous site that thousands of tourists arrive every single day.",
+      "options": [
+        "so",
+        "such",
+        "very",
+        "too"
+      ],
+      "answer_index": 1,
+      "explanation": "“such + a + 名词 + that”:such a famous site that → such。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The statues are ____ lifelike that they almost seem ready to speak.",
+      "options": [
+        "such",
+        "very",
+        "so",
+        "too"
+      ],
+      "answer_index": 2,
+      "explanation": "“so + 形容词 + that”:so lifelike that → so。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Come a little closer ____ you can see the fine details of the painting.",
+      "options": [
+        "because",
+        "even though",
+        "as if",
+        "so that"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:走近些“以便”看清细节,表目的 → so that。其余连词使句意不通。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The team copied the scrolls ____ future students could still read them one day.",
+      "options": [
+        "in order that",
+        "because",
+        "although",
+        "as though"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:复制卷轴“为了”后人仍能阅读,表目的 → in order that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The city built rest houses ____ tired traders could sleep safely at night.",
+      "options": [
+        "because",
+        "so that",
+        "unless",
+        "as if"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:建驿站“以便”疲惫的商人安睡,表目的 → so that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The lights are kept low ____ the ancient colours of the murals do not fade away.",
+      "options": [
+        "because",
+        "although",
+        "in order that",
+        "as if"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:灯光调暗“为了”古老色彩不褪去,表目的 → in order that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The Expo was held in Dunhuang ____ countries along the Silk Road could work together.",
+      "options": [
+        "because",
+        "even though",
+        "as though",
+        "so that"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:博览会在敦煌举办“以便”沿线国家合作,表目的 → so that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Our guide spoke loudly ____ everyone standing inside the cave could hear the story.",
+      "options": [
+        "so that",
+        "because",
+        "although",
+        "as if"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:导游大声讲“以便”洞内所有人都能听见,表目的 → so that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Clear signs are placed everywhere ____ no visitor gets lost among the many caves.",
+      "options": [
+        "because",
+        "in order that",
+        "unless",
+        "as though"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:到处设清晰指示牌“为了”游客不迷路,表目的 → in order that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The dancers in the mural move ____ they can really hear the music in the air.",
+      "options": [
+        "even if",
+        "so that",
+        "as if",
+        "now that"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:壁画中的舞者动作“仿佛”真能听见音乐,表方式 → as if。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The painted figures look ____ they are floating freely in the bright blue sky.",
+      "options": [
+        "even though",
+        "so that",
+        "in case",
+        "as though"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:画中人物看起来“好像”在蓝天里飘浮,表方式 → as though。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "She described the ancient city ____ she had walked through its streets herself.",
+      "options": [
+        "as if",
+        "even if",
+        "because",
+        "so that"
+      ],
+      "answer_index": 0,
+      "explanation": "句意:她描述古城“仿佛”亲自走过,表方式 → as if。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The empty Library Cave felt ____ it were still keeping an ancient secret.",
+      "options": [
+        "even though",
+        "as though",
+        "so that",
+        "now that"
+      ],
+      "answer_index": 1,
+      "explanation": "句意:空荡的藏经洞感觉“好像”仍守着古老的秘密,表方式 → as though。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The guide waved her torch ____ she were painting the dark air with light.",
+      "options": [
+        "even if",
+        "because",
+        "as if",
+        "in order that"
+      ],
+      "answer_index": 2,
+      "explanation": "句意:导游挥动手电“仿佛”在用光作画,表方式 → as if。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The tired travellers stared at the oasis ____ it were a beautiful dream.",
+      "options": [
+        "even though",
+        "so that",
+        "now that",
+        "as though"
+      ],
+      "answer_index": 3,
+      "explanation": "句意:疲惫的旅人凝望绿洲“好像”那是个美梦,表方式 → as though。"
+    }
+  ]
+}

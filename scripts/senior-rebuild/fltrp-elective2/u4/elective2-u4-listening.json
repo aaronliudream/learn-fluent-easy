@@ -1,0 +1,421 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "topic": "Breaking Boundaries",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社(新标准)选择性必修第二册 Unit 4 同主题听力(海外志愿/无国界医生/文化冲击/林肯演说/跨文化校园活动/无国界体育)。用词限本单元/初中/常见词,答案唯一可在 transcript 找到依据,与读/完形关不撞,long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Volunteering Abroad",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: I've signed up to volunteer at a children's clinic in another country this summer.",
+        "Tom: That's brave of you, Mia. Aren't you worried about the language?",
+        "Mia: A little. But I think it's important to step outside my comfort zone.",
+        "Tom: True. What will you actually do there?",
+        "Mia: Mostly I'll assist the nurses and help teach families how to stay healthy.",
+        "Tom: That sounds really rewarding. How long will you stay?",
+        "Mia: About six weeks. It takes time to be truly useful to a team.",
+        "Tom: Well, I think it's a wonderful thing to do. Good luck!"
+      ],
+      "translation_cn": "米娅报名暑假去另一个国家的儿童诊所做志愿者;汤姆担心语言问题;米娅觉得走出舒适区很重要;她主要协助护士、教家庭如何保持健康;要待大约六周,因为真正帮上团队需要时间;汤姆祝她好运。",
+      "questions": [
+        {
+          "stem": "What is Mia going to do this summer?",
+          "options": [
+            "Volunteer at a children's clinic abroad.",
+            "Open her own hospital.",
+            "Travel for a beach holiday.",
+            "Study at a local school."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Tom worried about for Mia?",
+          "options": [
+            "The cost of the flight.",
+            "The language she will face.",
+            "The weather there.",
+            "The food she will eat."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will Mia mainly do at the clinic?",
+          "options": [
+            "Assist the nurses and teach families.",
+            "Build new houses.",
+            "Sell medicine.",
+            "Drive an ambulance."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How long will Mia stay?",
+          "options": [
+            "About two days.",
+            "About six weeks.",
+            "About one year.",
+            "Only a weekend."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Mia say she needs that much time?",
+          "options": [
+            "Because flights are cheaper.",
+            "Because she likes long holidays.",
+            "Because being truly useful takes time.",
+            "Because the clinic is closed at first."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 Help Across Borders",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "An organisation called Doctors Without Borders was founded in Paris many years ago.",
+        "Its workers believe that medical care should cross every border.",
+        "They help people in danger, whatever country those people come from.",
+        "Those in the most serious danger are always treated first.",
+        "Today its members come from more than one hundred and fifty countries."
+      ],
+      "translation_cn": "一个名为'无国界医生'的组织多年前在巴黎成立;成员相信医疗援助应跨越一切边界;他们帮助处于危险中的人,无论来自哪个国家;最危急的人总是优先得到救治;如今其成员来自一百五十多个国家。",
+      "questions": [
+        {
+          "stem": "Where was the organisation founded?",
+          "options": [
+            "In London.",
+            "In Beijing.",
+            "In New York.",
+            "In Paris."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do its workers believe?",
+          "options": [
+            "Medical care should cross every border.",
+            "Only rich people deserve care.",
+            "Care should stay in one country.",
+            "Doctors should never travel."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Whom do they help?",
+          "options": [
+            "Only people from one country.",
+            "People in danger from any country.",
+            "Only their own families.",
+            "Only famous people."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who is treated first?",
+          "options": [
+            "The youngest people.",
+            "The richest people.",
+            "Those in the most serious danger.",
+            "The newest patients."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Where do its members come from today?",
+          "options": [
+            "Only three cities.",
+            "Just one country.",
+            "Nowhere at all.",
+            "More than 150 countries."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Feeling at Home Abroad",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Ken: How was your first week living in London, Yuki?",
+        "Yuki: Honestly, the culture shock was bigger than I expected.",
+        "Ken: That's normal. Everything feels new at first.",
+        "Yuki: Yes. But my classmates were so welcoming that I soon felt better.",
+        "Ken: It helps to stay open and curious, doesn't it?",
+        "Yuki: Definitely. We share food from our home countries every Friday.",
+        "Ken: What a great idea! You learn from each other.",
+        "Yuki: Exactly. Now the world feels like one big village to me."
+      ],
+      "translation_cn": "肯问由纪在伦敦第一周怎么样;由纪坦言文化冲击比预想的大;肯说这很正常,起初一切都新鲜;由纪说同学很友好,她很快好起来;保持开放与好奇有帮助;他们每周五分享各自家乡的食物;互相学习;由纪觉得世界像一个大村庄。",
+      "questions": [
+        {
+          "stem": "How did Yuki feel during her first week?",
+          "options": [
+            "The culture shock was bigger than expected.",
+            "She was completely bored.",
+            "She wanted to go straight home.",
+            "She felt nothing new at all."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Ken say about feeling that way?",
+          "options": [
+            "It means she should leave.",
+            "It is normal at first.",
+            "It will never get better.",
+            "It is her own fault."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why did Yuki soon feel better?",
+          "options": [
+            "Because the weather changed.",
+            "Because she stopped going to class.",
+            "Because her classmates were welcoming.",
+            "Because she found a new job."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do they do every Friday?",
+          "options": [
+            "Take a long flight.",
+            "Watch a football match.",
+            "Stay completely silent.",
+            "Share food from their home countries."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does the world feel to Yuki now?",
+          "options": [
+            "Like one big village.",
+            "Like a lonely place.",
+            "Like a closed door.",
+            "Like a boring town."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 A Speech That Mattered",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In 1863, a leader stood up in a field where many soldiers had died.",
+        "His speech lasted only about two minutes.",
+        "Yet his short words gave his divided people new hope.",
+        "He asked everyone to work towards the equality of all people.",
+        "Today that speech is still remembered as words that changed a nation."
+      ],
+      "translation_cn": "1863年,一位领袖站在许多士兵牺牲的战场上;他的演说只持续约两分钟;但简短的话语给分裂的人民带来新希望;他呼吁人人为所有人的平等而努力;如今这篇演说仍被铭记为改变了一个国家的话语。",
+      "questions": [
+        {
+          "stem": "Where did the leader give his speech?",
+          "options": [
+            "In a busy shopping street.",
+            "In a field where soldiers had died.",
+            "On a sandy beach.",
+            "Inside a small school."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How long did the speech last?",
+          "options": [
+            "A whole day.",
+            "Several hours.",
+            "Only about two minutes.",
+            "A full week."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did his short words give the people?",
+          "options": [
+            "More fear.",
+            "Less courage.",
+            "A reason to fight on.",
+            "New hope."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did he ask everyone to work towards?",
+          "options": [
+            "The equality of all people.",
+            "More division.",
+            "Personal wealth.",
+            "Greater fame."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How is the speech remembered today?",
+          "options": [
+            "As a forgotten failure.",
+            "As words that changed a nation.",
+            "As a funny joke.",
+            "As a list of names."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 Planning a Culture Day",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: Let's plan our school's International Culture Day together.",
+        "Ben: Great. I think every class should present a different country.",
+        "Anna: Good idea. It is important to make every student feel included.",
+        "Ben: Right. We could invite families to share their own traditions too.",
+        "Anna: That would be wonderful. Food, music and dance from everywhere.",
+        "Ben: It takes real teamwork to organise such a big event.",
+        "Anna: True, but I'm sure it will be rewarding for the whole school.",
+        "Ben: Let's start sending out the invitations tomorrow."
+      ],
+      "translation_cn": "安娜提议一起筹划学校的国际文化日;本认为每个班级展示一个不同的国家;安娜说让每个学生都有参与感很重要;本建议邀请家庭来分享各自传统;来自各地的美食、音乐和舞蹈;本说办这么大的活动需要真正的团队协作;安娜相信对全校都很有意义;他们打算明天开始发邀请。",
+      "questions": [
+        {
+          "stem": "What are Anna and Ben planning?",
+          "options": [
+            "A maths exam.",
+            "A sports race.",
+            "An International Culture Day.",
+            "A class trip to the seaside."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Ben suggest each class should do?",
+          "options": [
+            "Sell tickets.",
+            "Stay at home.",
+            "Write a long test.",
+            "Present a different country."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why does Anna want every student to take part?",
+          "options": [
+            "To make everyone feel included.",
+            "To win a prize.",
+            "To save money.",
+            "To finish early."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Ben say is needed to organise the event?",
+          "options": [
+            "A lot of money.",
+            "Real teamwork.",
+            "Good weather.",
+            "Quiet classrooms."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will they start doing tomorrow?",
+          "options": [
+            "Cancelling the event.",
+            "Closing the school.",
+            "Sending out the invitations.",
+            "Taking a long holiday."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 The Power of Sport",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Sport has a special power to bring people together.",
+        "During a big match, fans from many countries cheer at the same moment.",
+        "Players shake hands and show respect, whoever wins the game.",
+        "People who share no common language can still enjoy the same goal.",
+        "In this way, sport helps to break down boundaries between strangers."
+      ],
+      "translation_cn": "体育有一种把人们聚到一起的特殊力量;一场大赛中,许多国家的球迷在同一刻欢呼;无论谁获胜,球员都握手致敬;没有共同语言的人也能一起为同一个进球喝彩;就这样,体育帮助打破陌生人之间的界限。",
+      "questions": [
+        {
+          "stem": "What special power does sport have?",
+          "options": [
+            "It keeps people apart.",
+            "It makes people angry.",
+            "It costs a lot of money.",
+            "It brings people together."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do fans from many countries do during a big match?",
+          "options": [
+            "They cheer at the same moment.",
+            "They stay silent.",
+            "They leave at once.",
+            "They watch different games."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do players do after the game?",
+          "options": [
+            "They argue loudly.",
+            "They shake hands and show respect.",
+            "They refuse to meet.",
+            "They blame the loser."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can people without a common language still do?",
+          "options": [
+            "Read the same book.",
+            "Speak the same words.",
+            "Enjoy the same goal.",
+            "Write the same essay."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does sport help to break down?",
+          "options": [
+            "The rules of the game.",
+            "The players' health.",
+            "The fans' tickets.",
+            "Boundaries between strangers."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

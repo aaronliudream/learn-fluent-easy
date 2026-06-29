@@ -1,0 +1,493 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "topic": "Onwards and Upwards",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);speaker 仅角色标注。",
+  "source": "外研社(新标准)选择性必修第一册 Unit 2 同主题听力(为音乐考试坚持/成功非一夜之间/安慰落选的同学/坚持训练的游泳者/拼命三郎与拖后腿/珍惜当下)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 Practising for the Exam",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Mia",
+          "text": "You look tired, Tom. Have you been practising the piano again?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "Yes. My music exam is next week, and I still can't play one part well."
+        },
+        {
+          "speaker": "Mia",
+          "text": "Don't give up. Remember how badly you played a month ago?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "That's true. I have improved a lot, but it's so slow."
+        },
+        {
+          "speaker": "Mia",
+          "text": "Success rarely happens overnight. Just keep practising a little every day."
+        },
+        {
+          "speaker": "Tom",
+          "text": "You're right. I decided to practise one hour each evening until the exam."
+        },
+        {
+          "speaker": "Mia",
+          "text": "That's the spirit. I'm sure all your hard work will pay off."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Thanks, Mia. I won't stop trying until I get it right."
+        }
+      ],
+      "translation_cn": "米娅看出汤姆又在练钢琴而疲惫;汤姆下周有音乐考试,有一段还弹不好;米娅劝他别放弃,想想一个月前弹得多差;汤姆承认进步很大但很慢;米娅说成功很少一蹴而就,每天坚持练一点;汤姆决定每晚练一小时直到考试;米娅鼓励他,努力终会有回报。",
+      "questions": [
+        {
+          "stem": "Why does Tom look tired?",
+          "options": [
+            "He has been practising the piano.",
+            "He stayed up watching films.",
+            "He ran a long race.",
+            "He has been ill all week."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When is Tom's music exam?",
+          "options": [
+            "Next month.",
+            "Next week.",
+            "Tomorrow.",
+            "Yesterday."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Mia say about success?",
+          "options": [
+            "It rarely happens overnight.",
+            "It is impossible for Tom.",
+            "It comes only with luck.",
+            "It needs no practice."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom decide to do?",
+          "options": [
+            "Give up the exam.",
+            "Practise one hour each evening.",
+            "Practise only at weekends.",
+            "Ask Mia to play for him."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Mia feel about Tom's effort?",
+          "options": [
+            "She thinks it is a waste of time.",
+            "She wants him to stop.",
+            "She is sure it will pay off.",
+            "She is angry with him."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 Success Takes Time",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many people believe that famous writers became successful at once.",
+        "In fact, success rarely happens overnight.",
+        "A lot of well-known authors faced rejection again and again.",
+        "What made them different was that they refused to give up.",
+        "So keep trying, and one day your hard work may finally pay off."
+      ],
+      "translation_cn": "许多人以为著名作家是一举成名;事实上成功很少一蹴而就;不少知名作家曾一次次遭拒;他们与众不同之处在于不肯放弃;所以请坚持下去,有一天你的努力终会有回报。",
+      "questions": [
+        {
+          "stem": "What do many people wrongly believe about writers?",
+          "options": [
+            "That they never wrote at all.",
+            "That they hated reading.",
+            "That they were always poor.",
+            "That they became successful at once."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker say about success?",
+          "options": [
+            "It rarely happens overnight.",
+            "It is easy for everyone.",
+            "It never comes to writers.",
+            "It depends only on luck."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did many well-known authors face?",
+          "options": [
+            "No problems at all.",
+            "Rejection again and again.",
+            "Easy and quick fame.",
+            "A lack of ideas."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What made these authors different?",
+          "options": [
+            "They had rich families.",
+            "They wrote very fast.",
+            "They refused to give up.",
+            "They knew famous people."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What advice does the speaker give at the end?",
+          "options": [
+            "Stop writing immediately.",
+            "Wait for good luck.",
+            "Copy other authors.",
+            "Keep trying until it pays off."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 Comforting a Friend",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Jack",
+          "text": "You look upset, Dawei. Why don't you tell me what's up?"
+        },
+        {
+          "speaker": "Dawei",
+          "text": "I ran for Head of the Student Committee, but I wasn't elected."
+        },
+        {
+          "speaker": "Jack",
+          "text": "I'm sorry to hear that. I'm sure you did your best."
+        },
+        {
+          "speaker": "Dawei",
+          "text": "I did, but it still hurts. Maybe I'm just not good enough."
+        },
+        {
+          "speaker": "Jack",
+          "text": "Don't say that. You should be proud of how hard you worked."
+        },
+        {
+          "speaker": "Dawei",
+          "text": "Thanks. I suppose one election can't decide everything."
+        },
+        {
+          "speaker": "Jack",
+          "text": "Exactly. Try to look on the bright side and cheer up."
+        },
+        {
+          "speaker": "Dawei",
+          "text": "You're a good friend, Jack. I already feel a little better."
+        }
+      ],
+      "translation_cn": "杰克看出大伟心烦,问他怎么了;大伟竞选学生会主席却落选;杰克表示遗憾,相信他尽力了;大伟很受伤,觉得自己不够好;杰克让他别这么说,应为努力而自豪;大伟想通一次落选决定不了一切;杰克劝他往好处看、振作起来;大伟感谢这位好友,已经好受了些。",
+      "questions": [
+        {
+          "stem": "Why is Dawei upset?",
+          "options": [
+            "He was not elected to the committee.",
+            "He lost his homework.",
+            "He failed a music exam.",
+            "He missed the school bus."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Jack say about Dawei's effort?",
+          "options": [
+            "That it was useless.",
+            "That he is sure Dawei did his best.",
+            "That he should have tried harder.",
+            "That nobody noticed it."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Dawei slowly realise?",
+          "options": [
+            "That he will never try again.",
+            "That Jack is wrong.",
+            "That one election can't decide everything.",
+            "That the result was unfair."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Jack advise Dawei to do?",
+          "options": [
+            "Forget all his friends.",
+            "Stop going to school.",
+            "Blame the other students.",
+            "Look on the bright side and cheer up."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does Dawei feel by the end of the talk?",
+          "options": [
+            "A little better.",
+            "Much angrier.",
+            "Completely hopeless.",
+            "Bored and sleepy."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 The Swimmer Who Kept Going",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "When Ben first joined the swimming team, he was the slowest of all.",
+        "Some of the other boys laughed and told him to quit.",
+        "But Ben enjoyed swimming, so he decided to keep practising every day.",
+        "Little by little, he grew stronger and faster than before.",
+        "Two years later, he won a gold medal at the city games."
+      ],
+      "translation_cn": "本刚加入游泳队时是最慢的;有些男孩取笑他,叫他退出;但本喜欢游泳,于是决定每天坚持训练;一点点地,他比以前更强更快;两年后,他在市运动会上夺得金牌。",
+      "questions": [
+        {
+          "stem": "What was Ben like when he first joined the team?",
+          "options": [
+            "He was already the fastest.",
+            "He was the slowest of all.",
+            "He was the team captain.",
+            "He was a famous swimmer."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did some of the other boys tell him to do?",
+          "options": [
+            "To train even harder.",
+            "To become the coach.",
+            "To quit the team.",
+            "To join another sport."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did Ben decide to do?",
+          "options": [
+            "Stop swimming for good.",
+            "Change to a new school.",
+            "Laugh at the others.",
+            "Keep practising every day."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How did Ben change over time?",
+          "options": [
+            "He grew stronger and faster.",
+            "He grew weaker.",
+            "He stayed exactly the same.",
+            "He lost interest."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did Ben win two years later?",
+          "options": [
+            "A writing prize.",
+            "A gold medal at the city games.",
+            "A new bike.",
+            "A free holiday."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 Two Kinds of Workers",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Lily",
+          "text": "Our group project is due on Friday. How is everyone doing?"
+        },
+        {
+          "speaker": "Sam",
+          "text": "I've already finished my part. I couldn't wait to start."
+        },
+        {
+          "speaker": "Lily",
+          "text": "You really are an eager beaver, Sam. That's a great help."
+        },
+        {
+          "speaker": "Sam",
+          "text": "Thanks. But I'm worried about Leo. He keeps putting off his part."
+        },
+        {
+          "speaker": "Lily",
+          "text": "Yes, he's been dragging his feet all week."
+        },
+        {
+          "speaker": "Sam",
+          "text": "Maybe we should ask him kindly instead of getting angry."
+        },
+        {
+          "speaker": "Lily",
+          "text": "Good idea. A wet blanket helps no one; let's cheer him on."
+        },
+        {
+          "speaker": "Sam",
+          "text": "Agreed. If we stay positive, he might catch our energy."
+        }
+      ],
+      "translation_cn": "莉莉问小组项目周五截止大家进度如何;萨姆已完成自己的部分,迫不及待就开始了;莉莉夸他是“拼命三郎”,帮了大忙;萨姆担心利奥老是拖着自己那部分;莉莉说他整周都在拖拖拉拉;萨姆建议好言相劝而非发火;莉莉同意,扫兴帮不了人,不如给他打气;萨姆赞同,保持积极也许会感染他。",
+      "questions": [
+        {
+          "stem": "When is the group project due?",
+          "options": [
+            "On Monday.",
+            "Next month.",
+            "On Friday.",
+            "Today."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why does Lily call Sam an eager beaver?",
+          "options": [
+            "Because he is often late.",
+            "Because he never helps.",
+            "Because he is very quiet.",
+            "Because he finished his part early."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is the problem with Leo?",
+          "options": [
+            "He keeps putting off his part.",
+            "He has left the school.",
+            "He has done too much.",
+            "He is angry with Sam."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do Sam and Lily decide to do about Leo?",
+          "options": [
+            "Report him to the teacher.",
+            "Ask him kindly and cheer him on.",
+            "Do his part for him.",
+            "Stop talking to him."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Sam hope will happen if they stay positive?",
+          "options": [
+            "The project will be cancelled.",
+            "Leo will leave the group.",
+            "Leo might catch their energy.",
+            "Lily will do everything."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 Use Your Eyes Today",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "A famous blind writer once gave us a simple piece of advice.",
+        "Use your eyes today as if tomorrow you would lose them.",
+        "Look closely at the faces of the people you love.",
+        "Listen to the mighty music of an orchestra while you still can.",
+        "If we treasure each small thing now, every day becomes a blessing."
+      ],
+      "translation_cn": "一位著名的盲人作家曾给我们一个简单的忠告;今天就用好你的眼睛,仿佛明天就会失去它们;仔细看看你所爱之人的脸;趁还能听,去听管弦乐队雄壮的乐声;若我们珍惜眼前的每件小事,每一天都会成为一种福气。",
+      "questions": [
+        {
+          "stem": "Who gave this piece of advice?",
+          "options": [
+            "A young athlete.",
+            "A school teacher.",
+            "A music student.",
+            "A famous blind writer."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How should we use our eyes today?",
+          "options": [
+            "As if tomorrow we would lose them.",
+            "As if we will never need them.",
+            "Only for reading books.",
+            "As little as possible."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should we listen to while we still can?",
+          "options": [
+            "The noise of traffic.",
+            "The mighty music of an orchestra.",
+            "Our own voices.",
+            "A silent room."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should we look closely at?",
+          "options": [
+            "The walls of a museum.",
+            "The pages of a book.",
+            "The faces of people we love.",
+            "Distant mountains."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What happens if we treasure small things now?",
+          "options": [
+            "We waste a lot of time.",
+            "We grow tired of life.",
+            "Nothing changes at all.",
+            "Every day becomes a blessing."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

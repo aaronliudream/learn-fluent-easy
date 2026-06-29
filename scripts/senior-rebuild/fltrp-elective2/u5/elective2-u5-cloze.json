@@ -1,0 +1,710 @@
+{
+  "volume": "elective2",
+  "unit": "U5",
+  "topic": "A Delicate World",
+  "source": "外研社选择性必修第二册 Unit 5 同主题完形(蜜蜂为何重要/护林员清除害兽/金丝猴越冬保护/咸海消失/珊瑚礁危机/学生护湿地反思)。用词限 U5/初中/常见词,答案唯一,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Why Bees Matter",
+      "text": "Bees may be small, but they play a (1)____ part in keeping our world alive. As they move from flower to flower, they carry pollen and help plants to produce fruit and (2)____. In fact, a large share of the food we eat depends on this quiet work. Sadly, in recent years the bee (3)____ has been falling fast in many countries. Scientists believe that a (4)____ of causes, including the loss of wild flowers and the use of chemicals, is to (5)____. If bees were to (6)____ out completely, other insects could not easily take their place, because so many kinds of crops (7)____ on them. The good news is that ordinary people can (8)____. By planting flowers, avoiding harmful sprays and protecting wild (9)____, we can give bees a safer home. Every small action helps to keep this delicate (10)____ in balance.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "important",
+            "silent",
+            "heavy",
+            "cheap"
+          ],
+          "answer_index": 0,
+          "explanation": "play an important part 起重要作用。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "stones",
+            "seeds",
+            "clouds",
+            "coins"
+          ],
+          "answer_index": 1,
+          "explanation": "produce fruit and seeds 结果实和种子。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "holiday",
+            "machine",
+            "population",
+            "building"
+          ],
+          "answer_index": 2,
+          "explanation": "the bee population 蜜蜂数量。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "holiday",
+            "picture",
+            "window",
+            "combination"
+          ],
+          "answer_index": 3,
+          "explanation": "a combination of causes 多种原因的结合。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "blame",
+            "sell",
+            "paint",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "be to blame 应负责任。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sing",
+            "die",
+            "build",
+            "paint"
+          ],
+          "answer_index": 1,
+          "explanation": "die out 灭绝。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sit",
+            "jump",
+            "depend",
+            "sleep"
+          ],
+          "answer_index": 2,
+          "explanation": "depend on 依赖。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sleep",
+            "shout",
+            "hide",
+            "help"
+          ],
+          "answer_index": 3,
+          "explanation": "people can help 人们能帮上忙。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "habitats",
+            "tickets",
+            "songs",
+            "prices"
+          ],
+          "answer_index": 0,
+          "explanation": "protecting wild habitats 保护野生栖息地。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "market",
+            "world",
+            "machine",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "this delicate world 这个脆弱的世界。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Ranger's Quiet Work",
+      "text": "My name is Sam, and I work as a wildlife ranger on a small, windy (1)____ far out at sea. Long ago, sailors accidentally brought rats and rabbits here, and these animals soon (2)____ in number until they were everywhere. They ate the eggs of the seabirds and dug holes that damaged the (3)____. My job is to help (4)____ the last of these unwanted visitors so that the native birds can be (5)____ once more. It is slow and tiring work. Each morning I check every (6)____ to see what we have caught, and I walk for hours across the rocky ground with my trained (7)____, who can find hidden animals without harming the birds. We have already made huge (8)____, and the seabirds are slowly coming back. People once caused this (9)____ without meaning to, so I feel that we (10)____ it to the island to put things right.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "kitchen",
+            "library",
+            "island",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "a windy island 一座多风的岛。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sang",
+            "painted",
+            "slept",
+            "increased"
+          ],
+          "answer_index": 3,
+          "explanation": "increased in number 数量增多。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "soil",
+            "music",
+            "paper",
+            "glass"
+          ],
+          "answer_index": 0,
+          "explanation": "damaged the soil 破坏了土壤。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "paint",
+            "remove",
+            "borrow",
+            "sing"
+          ],
+          "answer_index": 1,
+          "explanation": "help remove 帮助清除。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "angry",
+            "cheap",
+            "safe",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "be safe once more 重新安全。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "song",
+            "price",
+            "window",
+            "trap"
+          ],
+          "answer_index": 3,
+          "explanation": "check every trap 检查每个陷阱。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "dogs",
+            "books",
+            "cars",
+            "clouds"
+          ],
+          "answer_index": 0,
+          "explanation": "trained dogs 受过训练的狗。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "noise",
+            "progress",
+            "rubbish",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "made huge progress 取得巨大进展。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "holiday",
+            "picture",
+            "chaos",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "caused this chaos 造成了这场混乱。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "lose",
+            "paint",
+            "owe"
+          ],
+          "answer_index": 3,
+          "explanation": "owe it to the island 对这座岛负有义务。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Saving the Golden Monkey",
+      "text": "High in the mountains of central China lives the rare golden snub-nosed (1)____, an animal found in very few places on Earth. Life there is hard, especially in winter, when heavy (2)____ covers the ground and food becomes difficult to find. To help the animals (3)____ through the coldest months, scientists climb the freezing slopes carrying food on their backs. Without this (4)____, many of the weaker animals might not last until spring. Year after year, the team records how many monkeys (5)____ in each group and watches how the young ones grow. Thanks to their patient (6)____, the number of monkeys has slowly (7)____, and today there are far more than there were in the 1980s. The story is a (8)____ reminder that protecting a single species often takes many years of quiet effort. By keeping their mountain home (9)____, we make sure that these gentle animals can (10)____ for years to come.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "monkey",
+            "market",
+            "machine",
+            "mirror"
+          ],
+          "answer_index": 0,
+          "explanation": "golden snub-nosed monkey 金丝猴。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sand",
+            "snow",
+            "smoke",
+            "paper"
+          ],
+          "answer_index": 1,
+          "explanation": "heavy snow 大雪。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "shout",
+            "borrow",
+            "survive",
+            "paint"
+          ],
+          "answer_index": 2,
+          "explanation": "survive through winter 熬过冬天。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "noise",
+            "price",
+            "holiday",
+            "help"
+          ],
+          "answer_index": 3,
+          "explanation": "without this help 没有这份帮助。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "live",
+            "sell",
+            "paint",
+            "shout"
+          ],
+          "answer_index": 0,
+          "explanation": "how many monkeys live 有多少猴子生活。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "work",
+            "price",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "their patient work 他们耐心的工作。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "fallen",
+            "disappeared",
+            "risen",
+            "stopped"
+          ],
+          "answer_index": 2,
+          "explanation": "has slowly risen;下文'far more than 1980s'说明在增多。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cheap",
+            "late",
+            "empty",
+            "clear"
+          ],
+          "answer_index": 3,
+          "explanation": "a clear reminder 一个清楚的提醒。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "safe",
+            "angry",
+            "busy",
+            "rich"
+          ],
+          "answer_index": 0,
+          "explanation": "keep their home safe 保持家园安全。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "fail",
+            "thrive",
+            "vanish",
+            "quit"
+          ],
+          "answer_index": 1,
+          "explanation": "can thrive 能茁壮成长。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Lost Sea",
+      "text": "The Aral Sea was once one of the largest lakes in the world, full of fish and surrounded by busy fishing (1)____. Then, many years ago, people began taking huge amounts of (2)____ from the rivers that fed it, in order to grow crops in the desert. Little by little, the great lake began to (3)____. As the water disappeared, the fish died and the boats were left lying on dry (4)____. The fishing towns lost their main source of (5)____, and many families had to move (6)____. Dust and salt from the empty lake bed blew across the land, making people (7)____. The story of the Aral Sea is a sad (8)____ of how quickly nature can change when it is not treated with care. In recent years, however, careful (9)____ has brought part of the northern lake back to life, giving local people new (10)____ that the damage can slowly be repaired.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "clouds",
+            "songs",
+            "towns",
+            "clocks"
+          ],
+          "answer_index": 2,
+          "explanation": "fishing towns 渔镇。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "music",
+            "sand",
+            "paper",
+            "water"
+          ],
+          "answer_index": 3,
+          "explanation": "taking water from the rivers 从河里取水。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "shrink",
+            "sing",
+            "shine",
+            "float"
+          ],
+          "answer_index": 0,
+          "explanation": "began to shrink 开始缩小。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "music",
+            "land",
+            "glass",
+            "paper"
+          ],
+          "answer_index": 1,
+          "explanation": "on dry land 在干涸的陆地上。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "weather",
+            "noise",
+            "income",
+            "colour"
+          ],
+          "answer_index": 2,
+          "explanation": "source of income 收入来源。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "asleep",
+            "awake",
+            "aside",
+            "away"
+          ],
+          "answer_index": 3,
+          "explanation": "move away 搬走。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "ill",
+            "rich",
+            "proud",
+            "glad"
+          ],
+          "answer_index": 0,
+          "explanation": "making people ill 使人生病。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "holiday",
+            "lesson",
+            "machine",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a sad lesson 一个惨痛的教训。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "weather",
+            "traffic",
+            "conservation",
+            "fashion"
+          ],
+          "answer_index": 2,
+          "explanation": "careful conservation 细心的保护。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "fear",
+            "noise",
+            "dust",
+            "hope"
+          ],
+          "answer_index": 3,
+          "explanation": "new hope 新的希望;下文'can be repaired'。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Rainforests of the Sea",
+      "text": "Coral reefs are sometimes called the rainforests of the (1)____, because so many kinds of living things make their home among them. Although reefs cover only a tiny part of the ocean floor, they support an enormous (2)____ of fish and other sea creatures. Sadly, reefs around the world are now in serious (3)____. As the sea grows warmer, the coral loses its bright colours and slowly (4)____. Pollution and careless fishing make the problem even (5)____. When a reef dies, the many animals that (6)____ on it for food and shelter are forced to leave or die. Scientists are working hard to (7)____ these underwater worlds before it is too late. In some places, people grow new coral and plant it on damaged reefs, giving them a chance to (8)____ again. Protecting the reefs matters to everyone, for a healthy ocean helps to keep the whole (9)____ in balance. Each of us can (10)____ by keeping the sea clean.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sea",
+            "sky",
+            "city",
+            "desert"
+          ],
+          "answer_index": 0,
+          "explanation": "the rainforests of the sea 海洋中的雨林。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "silence",
+            "variety",
+            "holiday",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "an enormous variety of fish 大量种类的鱼。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "colour",
+            "fashion",
+            "danger",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "in serious danger 处于严重危险中。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sings",
+            "shines",
+            "floats",
+            "dies"
+          ],
+          "answer_index": 3,
+          "explanation": "slowly dies 慢慢死去。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "worse",
+            "richer",
+            "louder",
+            "colder"
+          ],
+          "answer_index": 0,
+          "explanation": "make the problem even worse 让问题更糟。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sit",
+            "depend",
+            "jump",
+            "sleep"
+          ],
+          "answer_index": 1,
+          "explanation": "depend on it 依赖珊瑚礁。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "paint",
+            "save",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "save these worlds 拯救这些世界。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "fail",
+            "vanish",
+            "sink",
+            "grow"
+          ],
+          "answer_index": 3,
+          "explanation": "a chance to grow again 再次生长的机会。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "world",
+            "market",
+            "machine",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "keep the whole world in balance 保持整个世界的平衡。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "shout",
+            "help",
+            "hide",
+            "sleep"
+          ],
+          "answer_index": 1,
+          "explanation": "each of us can help 我们每个人都能帮忙。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "The Wetland Near My Home",
+      "text": "Near my home there is a small (1)____ where many wild birds come to rest and feed. When I was young, the water was dirty and full of rubbish, and few birds could be (2)____ there. A few years ago, our town decided to (3)____ the area and turn it into a nature park. Workers cleared away the rubbish, planted reeds along the banks, and asked people not to (4)____ the wildlife. Slowly the water became (5)____ again, and the birds began to return. Last spring I (6)____ more than twenty different kinds in a single morning. Helping with the clean-up has changed the (7)____ I see nature. I used to think that one person could not (8)____ much, but now I know that small actions, added together, can make a real (9)____. I feel proud that our town chose to protect this quiet corner of the (10)____ world.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "kitchen",
+            "market",
+            "wetland",
+            "library"
+          ],
+          "answer_index": 2,
+          "explanation": "a small wetland 一小片湿地。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "sung",
+            "thrown",
+            "seen"
+          ],
+          "answer_index": 3,
+          "explanation": "could be seen 能被看到。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "clean",
+            "sell",
+            "paint",
+            "borrow"
+          ],
+          "answer_index": 0,
+          "explanation": "clean the area 清理这片区域。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "paint",
+            "disturb",
+            "borrow",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "not to disturb the wildlife 不要打扰野生动物。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "angry",
+            "late",
+            "clear",
+            "rich"
+          ],
+          "answer_index": 2,
+          "explanation": "the water became clear 水变清了。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "lost",
+            "threw",
+            "counted"
+          ],
+          "answer_index": 3,
+          "explanation": "I counted more than twenty kinds 我数到二十多种。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "way",
+            "price",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "changed the way I see nature 改变了我看自然的方式。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "change",
+            "paint",
+            "borrow"
+          ],
+          "answer_index": 1,
+          "explanation": "could not change much 改变不了多少。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "holiday",
+            "machine",
+            "difference",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "make a real difference 带来真正的改变。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "angry",
+            "cheap",
+            "busy",
+            "natural"
+          ],
+          "answer_index": 3,
+          "explanation": "the natural world 自然世界。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "topic": "Times Change",
+  "source": "外研社新标准选择性必修二 Unit 3 同主题完形(童年记忆里的书店/从书信到即时消息/奶奶眼中的老镇/学用表情符号/旧时送报/书店的新生)。用词限本单元/初中/常见词,答案唯一,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Child's Bookstore Memory",
+      "text": "When I was young, a (1)____ of us would drop by the Rainbow Bookstore after school every day. The shop was old and (2)____, with books piled on every shelf, but we loved it. Old Casey knew every book in the store and would always (3)____ the perfect one for us from a dusty corner. We spent hours (4)____, sitting on the comfortable old furniture. Casey often (5)____ us to share our ideas by writing them on a large (6)____ in one corner. To us, the bookstore was not just a shop; it was a second (7)____. Years later, when I heard that it might (8)____, I felt heartbroken. I could still (9)____ the smell of the old pages and the sound of Casey's voice. That little store had quietly (10)____ the way I saw the world.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "bunch",
+            "slice",
+            "sheet",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "a bunch of us 我们一群人;其余不与'人'搭配。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "shiny",
+            "dusty",
+            "modern",
+            "new"
+          ],
+          "answer_index": 1,
+          "explanation": "old and dusty 又旧又布满灰尘;其余与'old'矛盾。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "throw",
+            "sell",
+            "pick",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "pick the perfect one 挑出最合适的一本。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleeping",
+            "cooking",
+            "shopping",
+            "reading"
+          ],
+          "answer_index": 3,
+          "explanation": "spent hours reading 读了几个小时。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "encouraged",
+            "refused",
+            "disappeared",
+            "competed"
+          ],
+          "answer_index": 0,
+          "explanation": "encouraged us to share 鼓励我们分享;其余搭配或语义不通。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "fridge",
+            "board",
+            "river",
+            "cloud"
+          ],
+          "answer_index": 1,
+          "explanation": "a large board 一块大板子,用来写评论。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "airport",
+            "factory",
+            "home",
+            "prison"
+          ],
+          "answer_index": 2,
+          "explanation": "a second home 第二个家,表温馨。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "open",
+            "grow",
+            "win",
+            "close"
+          ],
+          "answer_index": 3,
+          "explanation": "might close 可能关张,呼应 heartbroken。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "remember",
+            "forget",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "still remember the smell 仍记得那气味。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "broken",
+            "changed",
+            "sold",
+            "cleaned"
+          ],
+          "answer_index": 1,
+          "explanation": "changed the way I saw the world 改变了我看世界的方式。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "From Letters to Instant Messages",
+      "text": "Fifty years ago, if you wanted to send a (1)____ to a friend far away, you wrote a letter by hand. You then had to (2)____ it to the post office and wait many days for a reply. Today, everything is (3)____. A message can reach the other side of the world in a (4)____. We can add photos, voice notes and even tiny pictures called emojis to (5)____ our feelings. Young people often (6)____ with emojis instead of words, because they are quick and fun. Some older people find this strange and (7)____ that we are forgetting how to write properly. Others believe it is simply a new (8)____ of communicating. Whatever you think, one thing is (9)____: the way we keep in touch has changed for ever, and there is probably no going (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "weather",
+            "dinner",
+            "message",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "send a message 发一条消息。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eat",
+            "lose",
+            "sing",
+            "carry"
+          ],
+          "answer_index": 3,
+          "explanation": "carry it to the post office 把信带到邮局。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "instant",
+            "slow",
+            "heavy",
+            "silent"
+          ],
+          "answer_index": 0,
+          "explanation": "everything is instant 一切都是即时的;slow 与下文矛盾。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "year",
+            "second",
+            "week",
+            "month"
+          ],
+          "answer_index": 1,
+          "explanation": "in a second 一秒钟内,表极快。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "hide",
+            "forget",
+            "express",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "express our feelings 表达感受。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleep",
+            "travel",
+            "cook",
+            "communicate"
+          ],
+          "answer_index": 3,
+          "explanation": "communicate with emojis 用表情符号交流。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "worry",
+            "hope",
+            "promise",
+            "agree"
+          ],
+          "answer_index": 0,
+          "explanation": "find strange and worry 觉得奇怪并担心,语义为负面。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "way",
+            "box",
+            "road"
+          ],
+          "answer_index": 1,
+          "explanation": "a new way of communicating 一种新的交流方式。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "wrong",
+            "empty",
+            "certain",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "one thing is certain 有一点是确定的。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "up",
+            "out",
+            "down",
+            "back"
+          ],
+          "answer_index": 3,
+          "explanation": "no going back 无法回头。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Grandmother's Old Town",
+      "text": "My grandmother loves to tell me how much our town has (1)____ over the years. When she was young, she says, it was just a (2)____ village by the river. There were only a few low houses made of (3)____, and most people made a (4)____ from farming. There were no tall buildings, no traffic and no bright lights at (5)____. Then, decade by decade, everything began to (6)____. New roads were laid, factories opened, and skyscrapers slowly (7)____ where the green fields had once been. Today our town is a busy (8)____ full of shops and offices. Grandmother is proud of the change, though she sometimes (9)____ the quiet lanes of her childhood. 'Times always change,' she tells me with a smile, 'and we must learn to change (10)____ them.'",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "changed",
+            "waited",
+            "failed",
+            "closed"
+          ],
+          "answer_index": 0,
+          "explanation": "how much our town has changed 镇子变了多少。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "huge",
+            "small",
+            "modern",
+            "busy"
+          ],
+          "answer_index": 1,
+          "explanation": "a small village 一个小村庄,与后文 busy city 形成对比。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "glass",
+            "gold",
+            "brick",
+            "paper"
+          ],
+          "answer_index": 2,
+          "explanation": "houses made of brick 砖房。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "noise",
+            "mistake",
+            "promise",
+            "living"
+          ],
+          "answer_index": 3,
+          "explanation": "made a living from farming 靠种田谋生。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "night",
+            "school",
+            "work",
+            "noon"
+          ],
+          "answer_index": 0,
+          "explanation": "bright lights at night 夜晚的灯光。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "stop",
+            "change",
+            "sleep",
+            "rest"
+          ],
+          "answer_index": 1,
+          "explanation": "everything began to change 一切开始改变。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sank",
+            "fell",
+            "rose",
+            "slept"
+          ],
+          "answer_index": 2,
+          "explanation": "skyscrapers slowly rose 高楼缓缓拔地而起;其余表向下或不通。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "village",
+            "farm",
+            "forest",
+            "city"
+          ],
+          "answer_index": 3,
+          "explanation": "a busy city 繁忙的城市,与 village 对比。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "misses",
+            "hates",
+            "sells",
+            "breaks"
+          ],
+          "answer_index": 0,
+          "explanation": "misses the quiet lanes 怀念安静的小巷。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "against",
+            "with",
+            "without",
+            "behind"
+          ],
+          "answer_index": 1,
+          "explanation": "change with them 随时代一起改变。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Learning to Use Emojis",
+      "text": "When my friend first sent me a message full of tiny pictures, it took me a (1)____ to understand it. I had no idea what the little symbols meant! Feeling out of (2)____, I decided to learn how to use emojis myself. I soon found that they come in different (3)____, such as faces, animals and food. Adding a smiling face to a message can show your (4)____ far better than words alone. In a way, emojis are like the (5)____ we make with our hands when we speak. Now I use them every day, and they make chatting more (6)____. Of course, I am careful not to (7)____ on them too much. In a school essay, for example, careful written words are still far more (8)____ than pictures. My teacher says emojis are fun, but they should never (9)____ proper writing. I think she is (10)____: there is a time for pictures and a time for words.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "box",
+            "song",
+            "while",
+            "road"
+          ],
+          "answer_index": 2,
+          "explanation": "took me a while 花了我一会儿。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "money",
+            "breath",
+            "luck",
+            "touch"
+          ],
+          "answer_index": 3,
+          "explanation": "out of touch 跟不上、脱节。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "categories",
+            "prices",
+            "mistakes",
+            "seasons"
+          ],
+          "answer_index": 0,
+          "explanation": "different categories 不同类别。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "feelings",
+            "weight",
+            "address"
+          ],
+          "answer_index": 1,
+          "explanation": "show your feelings 表达你的感受。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "mistakes",
+            "prices",
+            "gestures",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "the gestures we make with our hands 我们做的手势。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "boring",
+            "slow",
+            "sad",
+            "fun"
+          ],
+          "answer_index": 3,
+          "explanation": "more fun 更有趣;其余与积极语境矛盾。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "rely",
+            "win",
+            "sleep",
+            "travel"
+          ],
+          "answer_index": 0,
+          "explanation": "rely on them 依赖它们。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cheap",
+            "useful",
+            "loud",
+            "round"
+          ],
+          "answer_index": 1,
+          "explanation": "far more useful 更有用。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "help",
+            "open",
+            "replace",
+            "clean"
+          ],
+          "answer_index": 2,
+          "explanation": "never replace proper writing 永远取代不了正式书写。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "wrong",
+            "late",
+            "busy",
+            "right"
+          ],
+          "answer_index": 3,
+          "explanation": "she is right 她说得对。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Old Newspaper Round",
+      "text": "My uncle still remembers his first job as a boy: (1)____ newspapers before school. Every morning he got up while it was still (2)____ outside. At the printing house, the fresh papers were being (3)____ off the machines, smelling of ink. He would load them onto his old (4)____ and ride from street to street. At each house he pushed a paper through the (5)____ in the door. People waited eagerly for the news, because back then it was the only (6)____ they had. There was no Internet, and a story might be a whole day (7)____ by the time they read it. Today, my uncle says, the news arrives on our phones the (8)____ it happens. He is amazed by how fast everything has (9)____. Still, he is proud of those early mornings, and he believes that hard work never goes out of (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "delivering",
+            "eating",
+            "drawing",
+            "cooking"
+          ],
+          "answer_index": 0,
+          "explanation": "delivering newspapers 送报纸。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "bright",
+            "dark",
+            "warm",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "still dark outside 外面天还黑,呼应早起。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "eaten",
+            "sold",
+            "printed",
+            "washed"
+          ],
+          "answer_index": 2,
+          "explanation": "being printed off the machines 正从机器上印出来。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "plane",
+            "boat",
+            "desk",
+            "bike"
+          ],
+          "answer_index": 3,
+          "explanation": "load them onto his old bike 装到旧自行车上去骑。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "gap",
+            "roof",
+            "wall",
+            "floor"
+          ],
+          "answer_index": 0,
+          "explanation": "through the gap in the door 从门缝塞进去。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "source",
+            "noise",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "the only source they had 他们唯一的(新闻)来源。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "late",
+            "dark",
+            "old",
+            "busy"
+          ],
+          "answer_index": 2,
+          "explanation": "a whole day old 已经过了整整一天(消息变旧)。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "year",
+            "week",
+            "hope",
+            "moment"
+          ],
+          "answer_index": 3,
+          "explanation": "the moment it happens 一发生就(到达)。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "changed",
+            "stopped",
+            "failed",
+            "slept"
+          ],
+          "answer_index": 0,
+          "explanation": "how fast everything has changed 一切变化有多快。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "money",
+            "fashion",
+            "sight",
+            "time"
+          ],
+          "answer_index": 1,
+          "explanation": "goes out of fashion 过时;此处指勤奋永不过时。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "New Life in the Old Bookstore",
+      "text": "The new Rainbow Bookstore is nothing like the quiet shop I remember. Under Jennifer's (1)____, it has become a lively centre for the whole community. The old wooden board in the corner has been (2)____ by a bright screen, where readers' comments pop up all day. In one room there is now a small café selling healthy (3)____ food. People come not only to buy books but also to (4)____ events such as poetry recitals and jazz (5)____. On the evening I visited, a book reading was being (6)____ in one corner while soft music played. The shop can no longer (7)____ with huge chain stores on price, so Jennifer has made it special in another (8)____. 'We sell an experience that cannot be (9)____,' she told me proudly. Looking around at the happy faces, I felt sure that the old store had found a bright new (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "weather",
+            "price",
+            "leadership",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "under Jennifer's leadership 在珍妮弗的领导下。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eaten",
+            "sold",
+            "washed",
+            "replaced"
+          ],
+          "answer_index": 3,
+          "explanation": "has been replaced by a screen 被屏幕取代。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "organic",
+            "broken",
+            "loud",
+            "round"
+          ],
+          "answer_index": 0,
+          "explanation": "healthy organic food 健康的有机食品。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "attend",
+            "break",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "attend events 参加活动。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "prices",
+            "mistakes",
+            "concerts",
+            "roads"
+          ],
+          "answer_index": 2,
+          "explanation": "jazz concerts 爵士音乐会。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "eaten",
+            "sold",
+            "cleaned",
+            "delivered"
+          ],
+          "answer_index": 3,
+          "explanation": "a book reading was being delivered 朗读会正在进行。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "compete",
+            "sleep",
+            "travel",
+            "cook"
+          ],
+          "answer_index": 0,
+          "explanation": "compete with chain stores on price 在价格上与连锁店竞争。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "way",
+            "box",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "special in another way 以另一种方式与众不同。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "opened",
+            "cleaned",
+            "downloaded",
+            "sold"
+          ],
+          "answer_index": 2,
+          "explanation": "an experience that cannot be downloaded 无法被下载的体验。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "mistake",
+            "price",
+            "noise",
+            "future"
+          ],
+          "answer_index": 3,
+          "explanation": "a bright new future 崭新光明的未来。"
+        }
+      ]
+    }
+  ]
+}

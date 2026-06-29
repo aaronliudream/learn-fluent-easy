@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U5",
+  "grammar_title": "过去完成时(had done;与一般过去时的先后关系)",
+  "source": "外研社(新标准)选择性必修第一册 Unit 5 Using language:过去完成时(had done)。句子地道、自然/科学/发现主题;干扰项为一般过去时/现在完成时/一般现在时,使过去完成时为唯一正确形式。",
+  "points": [
+    {
+      "code": "u5.01",
+      "point": "had done:在某个过去时间点之前 / 在另一个过去动作之前已完成",
+      "overview": "句中有 by/before/when/by the time 等过去参照点,某动作在该参照点之前已经发生、完成,用过去完成时 had done;主句或参照为一般过去时。"
+    },
+    {
+      "code": "u5.02",
+      "point": "过去完成时 vs 一般过去时:先发生的动作用 had done",
+      "overview": "一句话里有两个过去动作,先发生的(更早的)用过去完成时 had done,后发生的用一般过去时;通过先后顺序判断哪一个用过去完成时。"
+    },
+    {
+      "code": "u5.03",
+      "point": "间接引语中的过去完成时 & no sooner…than / hardly…when 倒装",
+      "overview": "间接引语里,比'说'更早发生的过去动作要回退为过去完成时;no sooner…than、hardly…when 句首倒装时,助动词用 had(had + 主语 + 过去分词)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u5.01",
+      "stem": "By the time the Beagle reached the islands, Darwin ____ many samples of plants and animals.",
+      "options": [
+        "had collected",
+        "collected",
+        "has collected",
+        "collects"
+      ],
+      "answer_index": 0,
+      "explanation": "by the time + 过去,采集动作在到达之前就已完成 → 过去完成时 had collected。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Before he left England, Darwin ____ medical school without finishing his degree.",
+      "options": [
+        "left",
+        "had left",
+        "has left",
+        "leaves"
+      ],
+      "answer_index": 1,
+      "explanation": "before 引出的过去参照点之前已发生的动作用过去完成时 had left。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "When the storm finally stopped, the ship ____ already sailed far from the coast.",
+      "options": [
+        "has",
+        "was",
+        "had",
+        "did"
+      ],
+      "answer_index": 2,
+      "explanation": "already sailed 表示在 stopped 之前就完成,助动词用 had。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "By 1835, the birds ____ into several clearly different species.",
+      "options": [
+        "evolved",
+        "have evolved",
+        "evolve",
+        "had evolved"
+      ],
+      "answer_index": 3,
+      "explanation": "by + 过去年份,之前已完成的进化用过去完成时 had evolved。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Darwin realised that the finches ____ from a common ancestor long before.",
+      "options": [
+        "had come",
+        "came",
+        "have come",
+        "come"
+      ],
+      "answer_index": 0,
+      "explanation": "long before 表示比 realised 更早,用过去完成时 had come。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Before the goats arrived, the tortoises ____ the plants that grew naturally there.",
+      "options": [
+        "ate",
+        "had eaten",
+        "have eaten",
+        "eat"
+      ],
+      "answer_index": 1,
+      "explanation": "before 过去参照点之前的动作用过去完成时 had eaten。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "By the end of the voyage, his small cabin ____ full of samples.",
+      "options": [
+        "became",
+        "has become",
+        "had become",
+        "becomes"
+      ],
+      "answer_index": 2,
+      "explanation": "by the end of + 过去,之前已完成的变化用过去完成时 had become。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "When she checked the pot, a tiny green stem ____ already appeared.",
+      "options": [
+        "has",
+        "was",
+        "did",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "already appeared 表示在 checked 之前已出现,助动词用 had。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Darwin noticed that some species ____ very little since ancient times.",
+      "options": [
+        "had changed",
+        "changed",
+        "have changed",
+        "change"
+      ],
+      "answer_index": 0,
+      "explanation": "noticed 为过去,从句中更早的情况用过去完成时 had changed。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "By the time scientists studied the water bear, it ____ already survived extreme cold.",
+      "options": [
+        "has",
+        "had",
+        "was",
+        "did"
+      ],
+      "answer_index": 1,
+      "explanation": "by the time + 过去,already survived 之前已完成,助动词用 had。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Before Mendel died in 1884, he ____ important discoveries about genetics.",
+      "options": [
+        "made",
+        "has made",
+        "had made",
+        "makes"
+      ],
+      "answer_index": 2,
+      "explanation": "before + 过去时间,之前完成的动作用过去完成时 had made。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "When the wasps arrived, the bean plant ____ already released its warning chemicals.",
+      "options": [
+        "has",
+        "did",
+        "was",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "already released 表示在 arrived 之前完成,助动词用 had。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Darwin saw species on the islands that ____ never been recorded before.",
+      "options": [
+        "had",
+        "has",
+        "were",
+        "did"
+      ],
+      "answer_index": 0,
+      "explanation": "never been recorded before 表示在 saw 之前的情况,用过去完成时,助动词 had。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Before the journal entry was written, each bulb ____ produced a single flower.",
+      "options": [
+        "has",
+        "had",
+        "was",
+        "did"
+      ],
+      "answer_index": 1,
+      "explanation": "before + 过去,之前已完成的动作用过去完成时,助动词 had。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "By the time the keeper arrived, George ____ already become famous worldwide.",
+      "options": [
+        "has",
+        "was",
+        "had",
+        "did"
+      ],
+      "answer_index": 2,
+      "explanation": "by the time + 过去,already become 之前完成,助动词用 had。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "After the seeds ____ been planted, water was added to the soil.",
+      "options": [
+        "has",
+        "were",
+        "did",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "after 引出更早的动作,被动的过去完成时用 had been planted,助动词 had。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Darwin explained that the beaks ____ to match the food on each island.",
+      "options": [
+        "had adapted",
+        "adapted",
+        "have adapted",
+        "adapt"
+      ],
+      "answer_index": 0,
+      "explanation": "explained 为过去,从句中更早的进化用过去完成时 had adapted。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "By 1859, Darwin ____ his whole theory in a famous book.",
+      "options": [
+        "explained",
+        "had explained",
+        "has explained",
+        "explains"
+      ],
+      "answer_index": 1,
+      "explanation": "by + 过去年份,之前已完成的动作用过去完成时 had explained。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "When the researchers reached the forest, the fungi ____ already linked the trees underground.",
+      "options": [
+        "has",
+        "were",
+        "had",
+        "did"
+      ],
+      "answer_index": 2,
+      "explanation": "already linked 表示在 reached 之前完成,助动词用 had。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Before the book was published, many people ____ never questioned the old ideas about species.",
+      "options": [
+        "has",
+        "were",
+        "did",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "never questioned before 表示在 published 之前的情况,用过去完成时,助动词 had。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "After Darwin ____ some time in South America, he sailed on to the Galápagos.",
+      "options": [
+        "had spent",
+        "spent",
+        "has spent",
+        "spends"
+      ],
+      "answer_index": 0,
+      "explanation": "两个过去动作中,逗留先发生,用过去完成时 had spent;后面 sailed 用一般过去时。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The finches had evolved from an ancestor that ____ on the islands long before.",
+      "options": [
+        "arrived",
+        "had arrived",
+        "has arrived",
+        "arrives"
+      ],
+      "answer_index": 1,
+      "explanation": "到达比进化更早,先发生的动作用过去完成时 had arrived。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Once the insects ____ the leaves, the plant began to release chemicals.",
+      "options": [
+        "attacked",
+        "have attacked",
+        "had attacked",
+        "attack"
+      ],
+      "answer_index": 2,
+      "explanation": "攻击先发生、随后才释放化学物质,先发生的用过去完成时 had attacked。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Darwin carefully studied the samples that he ____ during the long voyage.",
+      "options": [
+        "collected",
+        "has collected",
+        "collects",
+        "had collected"
+      ],
+      "answer_index": 3,
+      "explanation": "采集在研究之前,先发生的动作用过去完成时 had collected。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The tortoise population fell sharply because goats ____ almost all its food.",
+      "options": [
+        "had eaten",
+        "ate",
+        "have eaten",
+        "eat"
+      ],
+      "answer_index": 0,
+      "explanation": "山羊吃光食物在数量下降之前,先发生的用过去完成时 had eaten。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "People were shocked because they ____ always believed that species never changed.",
+      "options": [
+        "have",
+        "had",
+        "were",
+        "did"
+      ],
+      "answer_index": 1,
+      "explanation": "震惊之前一直持有的旧观念用过去完成时 had always believed,助动词 had。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "When the wasps came, the harmful insects ____ already damaged much of the crop.",
+      "options": [
+        "have",
+        "were",
+        "had",
+        "did"
+      ],
+      "answer_index": 2,
+      "explanation": "破坏庄稼在黄蜂到来之前完成,先发生的用过去完成时,助动词 had。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Mendel chose pea plants because earlier work ____ him their traits were easy to control.",
+      "options": [
+        "taught",
+        "have taught",
+        "teach",
+        "had taught"
+      ],
+      "answer_index": 3,
+      "explanation": "先前的研究在他选择之前已让他明白,用过去完成时 had taught。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "By the time George was found, all the other Pinta tortoises ____ already died.",
+      "options": [
+        "had",
+        "have",
+        "were",
+        "did"
+      ],
+      "answer_index": 0,
+      "explanation": "其他陆龟死亡在乔治被发现之前,先发生的用过去完成时,助动词 had。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The young plant grew tall and strong because someone ____ it carefully every day.",
+      "options": [
+        "watered",
+        "had watered",
+        "has watered",
+        "waters"
+      ],
+      "answer_index": 1,
+      "explanation": "之前每天浇水促成了后来的生长,先发生的用过去完成时 had watered。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Darwin often asked himself how the different species ____ come to exist at all.",
+      "options": [
+        "have",
+        "were",
+        "had",
+        "did"
+      ],
+      "answer_index": 2,
+      "explanation": "物种出现远早于他发问,先发生的用过去完成时,助动词 had。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "She drew the flower exactly as it ____ looked the week before.",
+      "options": [
+        "has",
+        "was",
+        "did",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "the week before 表示画之前的样子,用过去完成时,助动词 had。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The forest recovered quickly because the fungi ____ the trees together underground.",
+      "options": [
+        "had linked",
+        "linked",
+        "have linked",
+        "link"
+      ],
+      "answer_index": 0,
+      "explanation": "真菌连接在森林恢复之前已完成,先发生的用过去完成时 had linked。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "After the bulbs ____ been planted, the container was put in a dark place.",
+      "options": [
+        "have",
+        "had",
+        "were",
+        "did"
+      ],
+      "answer_index": 1,
+      "explanation": "种球先被种下、后放进暗处,先发生的被动动作用过去完成时,助动词 had。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The chilli plant reacted at once because it ____ a warning from its neighbour.",
+      "options": [
+        "detected",
+        "has detected",
+        "had detected",
+        "detects"
+      ],
+      "answer_index": 2,
+      "explanation": "察觉警告在反应之前,先发生的用过去完成时 had detected。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Many readers refused to accept the idea, although Darwin ____ explained it very clearly.",
+      "options": [
+        "has",
+        "was",
+        "did",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "达尔文解释在读者拒绝之前已完成,先发生的用过去完成时,助动词 had。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "By the time the ship returned home, Darwin ____ enough evidence for his theory.",
+      "options": [
+        "had gathered",
+        "gathered",
+        "has gathered",
+        "gathers"
+      ],
+      "answer_index": 0,
+      "explanation": "搜集证据在返航之前完成,先发生的用过去完成时 had gathered。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The keeper said the tortoise looked much weaker than it ____ the year before.",
+      "options": [
+        "has",
+        "had",
+        "was",
+        "did"
+      ],
+      "answer_index": 1,
+      "explanation": "the year before 指更早的状态,用过去完成时,助动词 had。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The new species appeared only after older forms slowly ____ over millions of years.",
+      "options": [
+        "changed",
+        "have changed",
+        "had changed",
+        "change"
+      ],
+      "answer_index": 2,
+      "explanation": "旧形态的变化在新物种出现之前,先发生的用过去完成时 had changed。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Scientists named the strange creature only after they ____ it in the wild.",
+      "options": [
+        "found",
+        "have found",
+        "finds",
+        "had found"
+      ],
+      "answer_index": 3,
+      "explanation": "发现在命名之前,先发生的用过去完成时 had found。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Darwin said that he ____ the finches carefully before he understood their meaning.",
+      "options": [
+        "had studied",
+        "studied",
+        "has studied",
+        "studies"
+      ],
+      "answer_index": 0,
+      "explanation": "间接引语里比'说'更早的动作回退为过去完成时 had studied。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The keeper explained that George ____ the last of his kind for many years.",
+      "options": [
+        "was",
+        "had been",
+        "has been",
+        "is"
+      ],
+      "answer_index": 1,
+      "explanation": "explained 为过去,更早且延续的情况回退为过去完成时 had been。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Scientists reported that the species ____ from a single common ancestor.",
+      "options": [
+        "evolved",
+        "has evolved",
+        "had evolved",
+        "evolve"
+      ],
+      "answer_index": 2,
+      "explanation": "间接引语里更早完成的进化回退为过去完成时 had evolved。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Darwin wrote that the birds' beaks ____ to suit the food on each island.",
+      "options": [
+        "adapted",
+        "have adapted",
+        "adapt",
+        "had adapted"
+      ],
+      "answer_index": 3,
+      "explanation": "wrote 为过去,更早的动作回退为过去完成时 had adapted。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "She told us that the seeds ____ already sprouted by the third week.",
+      "options": [
+        "had",
+        "have",
+        "were",
+        "did"
+      ],
+      "answer_index": 0,
+      "explanation": "told 为过去,already sprouted 更早完成,回退为过去完成时,助动词 had。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "He realised that the goats ____ destroyed the tortoise's main food supply.",
+      "options": [
+        "have",
+        "had",
+        "were",
+        "did"
+      ],
+      "answer_index": 1,
+      "explanation": "realised 之前山羊已破坏食物,回退为过去完成时,助动词 had。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The guide said that plants ____ each other through chemicals long before scientists noticed.",
+      "options": [
+        "warned",
+        "have warned",
+        "had warned",
+        "warn"
+      ],
+      "answer_index": 2,
+      "explanation": "long before 表更早,间接引语回退为过去完成时 had warned。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Darwin admitted that he ____ medical school without ever finishing his degree.",
+      "options": [
+        "left",
+        "has left",
+        "leaves",
+        "had left"
+      ],
+      "answer_index": 3,
+      "explanation": "admitted 之前发生的离校,回退为过去完成时 had left。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The report stated that the fungi ____ the whole forest together underground.",
+      "options": [
+        "had linked",
+        "linked",
+        "have linked",
+        "link"
+      ],
+      "answer_index": 0,
+      "explanation": "stated 为过去,更早完成的连接回退为过去完成时 had linked。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Mendel noted that the pea plants ____ him a great deal about genetics.",
+      "options": [
+        "taught",
+        "had taught",
+        "have taught",
+        "teach"
+      ],
+      "answer_index": 1,
+      "explanation": "noted 之前豌豆实验已给出启示,回退为过去完成时 had taught。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "No sooner ____ the ship reached the islands than Darwin noticed the strange birds.",
+      "options": [
+        "has",
+        "did",
+        "had",
+        "was"
+      ],
+      "answer_index": 2,
+      "explanation": "No sooner 句首倒装,助动词用 had:No sooner had + 主语 + 过去分词。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Hardly ____ the insects attacked the plant when it began to release chemicals.",
+      "options": [
+        "has",
+        "did",
+        "was",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "Hardly…when 句首倒装,助动词用 had:Hardly had + 主语 + 过去分词。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "No sooner ____ the goats arrived than the tortoise population started to fall.",
+      "options": [
+        "had",
+        "has",
+        "did",
+        "was"
+      ],
+      "answer_index": 0,
+      "explanation": "No sooner…than 句首倒装,助动词用 had。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Hardly ____ Darwin opened the box when even more samples fell out.",
+      "options": [
+        "has",
+        "had",
+        "did",
+        "was"
+      ],
+      "answer_index": 1,
+      "explanation": "Hardly…when 句首倒装,助动词用 had。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "No sooner ____ the seed been planted than the gardener added water to the soil.",
+      "options": [
+        "has",
+        "did",
+        "had",
+        "were"
+      ],
+      "answer_index": 2,
+      "explanation": "No sooner 句首倒装,被动用 had been planted,助动词 had。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Hardly ____ the team landed on the island when they began collecting plants.",
+      "options": [
+        "has",
+        "did",
+        "was",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "Hardly…when 句首倒装,助动词用 had。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "No sooner ____ the book been published than it caused a storm of argument.",
+      "options": [
+        "had",
+        "has",
+        "did",
+        "were"
+      ],
+      "answer_index": 0,
+      "explanation": "No sooner 句首倒装,被动用 had been published,助动词 had。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Hardly ____ the sun risen when the birds started singing across the forest.",
+      "options": [
+        "has",
+        "had",
+        "did",
+        "was"
+      ],
+      "answer_index": 1,
+      "explanation": "Hardly…when 句首倒装,助动词用 had。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "No sooner ____ scientists found one new species than they discovered another.",
+      "options": [
+        "has",
+        "did",
+        "had",
+        "was"
+      ],
+      "answer_index": 2,
+      "explanation": "No sooner…than 句首倒装,助动词用 had。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Hardly ____ the chilli plant sensed danger when it changed its behaviour.",
+      "options": [
+        "has",
+        "did",
+        "was",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "Hardly…when 句首倒装,助动词用 had。"
+    }
+  ]
+}

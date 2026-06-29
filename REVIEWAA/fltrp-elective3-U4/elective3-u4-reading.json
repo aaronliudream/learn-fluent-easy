@@ -1,0 +1,314 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "topic": "Artificial Intelligence",
+  "source": "外研社选择性必修第三册 Unit 4 同主题阅读(AI 个人助手/自动驾驶/AI 与就业/独立 AI 的风险/机器学习的价值/AI 发展简史)。词限本单元/高中常见词,答案转述非照抄,4 选项唯一,与完形·听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Smart Assistant in Your Pocket",
+      "topic_cn": "说明·AI 个人助手",
+      "body": "Thanks to artificial intelligence, many people now carry a super-smart assistant inside their phones. Ask it a question, and it gives an immediate answer, day or night. What makes such an assistant so useful is that it slowly learns about you. Each time you reply, it remembers your likes and dislikes, so its advice fits you better and better. Take eating out as an example. It used to take a long time to search for a good new restaurant. Now the assistant needs only a few seconds, and almost every recommendation it makes turns out to be one you enjoy. It can even guess whether you will like a place before you go. Of course, an assistant can only help with the information it is given. Still, for everyday tasks, this kind of technology already makes life a great deal easier and saves us a lot of time.",
+      "vocab_notes": [
+        {
+          "word": "assistant",
+          "cn": "助手"
+        },
+        {
+          "word": "recommendation",
+          "cn": "推荐"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does the assistant's advice keep getting better?",
+          "options": [
+            "Because it learns the user's likes from their replies.",
+            "Because it is repaired every night.",
+            "Because it asks other phones for help.",
+            "Because the user pays it more money."
+          ],
+          "answer_index": 0,
+          "explanation": "对应原文'it remembers your likes and dislikes, so its advice fits you better',转述而非照抄。"
+        },
+        {
+          "stem": "How long does the assistant now need to find a good restaurant?",
+          "options": [
+            "Several hours.",
+            "Only a few seconds.",
+            "A whole day.",
+            "About a week."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说 'the assistant needs only a few seconds'。"
+        },
+        {
+          "stem": "What does the passage say an assistant cannot do?",
+          "options": [
+            "Do anything useful when it has no facts to use.",
+            "Answer questions at night.",
+            "Learn about its user.",
+            "Suggest restaurants to try."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'can only help with the information it is given' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Cars That Drive Themselves",
+      "topic_cn": "议论·自动驾驶",
+      "body": "Many people are looking forward to the day when self-driving cars become common on our roads. Supporters say these cars could be far safer than the ones we drive today. A self-driving car learns to drive in much the same way that a human learner does, and it can make sensible judgements based on the information it collects from the road. Because a machine never grows tired, angry or careless, it should avoid the kind of human mistakes that cause many accidents. There are worries, however. When the first models reach the market, a few machine-learning problems are likely to appear, and these must be solved before the cars can be fully trusted. Some drivers also fear losing the simple pleasure of driving. Even so, supporters believe that, in the long run, smarter cars will make our daily journeys both safer and more relaxing.",
+      "vocab_notes": [
+        {
+          "word": "judgement",
+          "cn": "判断"
+        },
+        {
+          "word": "susceptible",
+          "cn": "易受影响的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does a self-driving car learn to drive?",
+          "options": [
+            "By following printed maps only.",
+            "By copying the way a human learner drives.",
+            "By asking the driver every minute.",
+            "By never moving at all."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'learns to drive in much the same way that a human learner does' 的转述。"
+        },
+        {
+          "stem": "Why might self-driving cars be safer than today's cars?",
+          "options": [
+            "They always drive much faster than people.",
+            "They never need any information.",
+            "Machines do not get tired or careless like people.",
+            "They are bigger and heavier."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'a machine never grows tired, angry or careless… avoid… human mistakes' 的转述。"
+        },
+        {
+          "stem": "What problem may appear when the first models go on sale?",
+          "options": [
+            "The cars will quickly run out of fuel.",
+            "Drivers will forget how to walk.",
+            "The roads will suddenly disappear.",
+            "Some machine-learning faults that must be fixed."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'a few machine-learning problems are likely to appear… must be solved' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "AI and the Future of Work",
+      "topic_cn": "议论·AI 与就业",
+      "body": "As artificial intelligence improves, more and more people are asking what will happen to their jobs. The honest answer is that nearly every job is potentially at risk in the long run. Self-driving cars, for instance, could one day replace many taxi and lorry drivers. Such workers might be among the very first to lose their jobs to machines. Even tasks that once seemed safe are changing. Today some basic news reports are already written by software rather than by human journalists. According to one study, almost half of all jobs in the United States could be done by machines within the next twenty years. This does not mean that people will have nothing to do. New kinds of work will surely appear, just as they did after earlier changes in technology. Yet experts agree that workers must keep learning new skills if they want to stay useful.",
+      "vocab_notes": [
+        {
+          "word": "automation",
+          "cn": "自动化"
+        },
+        {
+          "word": "potentially",
+          "cn": "潜在地"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say about nearly every job?",
+          "options": [
+            "It could be at risk over the long term.",
+            "It will always stay exactly the same.",
+            "It is completely safe from machines.",
+            "It will disappear by tomorrow."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'nearly every job is potentially at risk in the long run' 的转述。"
+        },
+        {
+          "stem": "Which workers are mentioned as possibly among the first to be replaced?",
+          "options": [
+            "Doctors and nurses.",
+            "Taxi and lorry drivers.",
+            "Teachers and farmers.",
+            "Pilots and sailors."
+          ],
+          "answer_index": 1,
+          "explanation": "原文提到 'many taxi and lorry drivers… among the very first to lose their jobs'。"
+        },
+        {
+          "stem": "What does the writer suggest workers should do?",
+          "options": [
+            "Stop working at once.",
+            "Avoid all new technology.",
+            "Keep learning fresh skills to stay useful.",
+            "Wait quietly for machines to fail."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'workers must keep learning new skills if they want to stay useful' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "When Machines Think for Themselves",
+      "topic_cn": "议论·独立 AI 的风险",
+      "body": "The technology most of us use today is only a basic form of artificial intelligence. It cannot really think for itself and does only what its programming allows. A far more advanced kind of AI, however, may one day be possible: a truly independent intelligence able to make its own decisions. Such a system might help us solve some of the world's hardest problems. But there is a darker side to think about. Why would a fully independent machine care about the wishes of human beings at all? To a powerful AI trying to reach some goal, people might seem like a small and annoying obstacle. If we are lucky, it may decide that we are worth keeping around. The truth, some writers warn, is that none of us is really prepared for challenges like these. That is why many believe we should set clear rules before such machines are ever built.",
+      "vocab_notes": [
+        {
+          "word": "independent",
+          "cn": "独立的"
+        },
+        {
+          "word": "regulate",
+          "cn": "管理"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What can today's basic AI NOT do?",
+          "options": [
+            "Follow simple instructions.",
+            "Follow the rules that people give it.",
+            "Store useful information.",
+            "Think for itself without programming."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'cannot really think for itself and does only what its programming allows' 的转述。"
+        },
+        {
+          "stem": "Why might an independent AI ignore human wishes?",
+          "options": [
+            "It may see people as an obstacle to its goal.",
+            "It loves human beings far too much.",
+            "It has no power at all.",
+            "It always obeys human orders."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'people might seem like a small and annoying obstacle' 的转述。"
+        },
+        {
+          "stem": "What do many people therefore suggest?",
+          "options": [
+            "Building the machines as fast as possible.",
+            "Agreeing on fair limits ahead of building them.",
+            "Ignoring the whole question.",
+            "Letting AI make every law."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'set clear rules before such machines are ever built' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Real Value of Machine Learning",
+      "topic_cn": "说明·机器学习的价值",
+      "body": "Why do so many people believe that artificial intelligence is worth the trouble? For most experts, the real value of AI lies in its capacity to handle information. A modern system can analyse and make sense of huge amounts of data far more quickly than any human team. Because of this, it can sometimes solve problems that are simply too difficult for human experts working alone. Doctors, for example, hope that one day AI will help them find better cures for serious diseases. Scientists use it to study the weather, traffic and even the spread of illness. None of this means that machines are replacing human thinking. Instead, they act as powerful tools that let people see patterns they would otherwise miss. Used wisely, such tools could become one of the greatest steps forward in human history, helping us understand a world that grows more complex every single year.",
+      "vocab_notes": [
+        {
+          "word": "capacity",
+          "cn": "能力"
+        },
+        {
+          "word": "analyse",
+          "cn": "分析"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to experts, where does the real value of AI lie?",
+          "options": [
+            "In its lovely appearance.",
+            "In its very low price.",
+            "In its power to deal with information.",
+            "In its ability to feel emotion."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the real value of AI lies in its capacity to handle information' 的转述。"
+        },
+        {
+          "stem": "What can AI sometimes do that human experts alone cannot?",
+          "options": [
+            "Fall asleep during work.",
+            "Forget important data on purpose.",
+            "Refuse to help any doctor.",
+            "Solve certain extremely difficult problems."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'solve problems that are simply too difficult for human experts working alone' 的转述。"
+        },
+        {
+          "stem": "How does the writer describe AI systems?",
+          "options": [
+            "As powerful tools that support human thinking.",
+            "As a complete replacement for people.",
+            "As useless toys for children.",
+            "As a danger to all science."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'they act as powerful tools that let people see patterns' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Milestones on the Road to AI",
+      "topic_cn": "记叙·AI 发展简史",
+      "body": "The idea of thinking machines is far older than the smartphones in our pockets. In 1950, the British mathematician Alan Turing designed a famous test to judge whether a machine could show human-like intelligence. A few years later, the scientist John McCarthy first used the very term artificial intelligence. Progress was slow at first. In 1969, a robot named Shakey became the first machine able to decide how to move by reasoning about its surroundings. Later, AI began to enter ordinary homes, and the first robotic vacuum cleaner went on sale. The biggest surprises, though, came from games. In 2016, a program called AlphaGo became the first computer to beat a top human player at the ancient game of Go, something many had thought impossible. A year later, an even stronger version defeated the earlier one in game after game. Step by step, machines have learned to do things once thought to belong to humans alone.",
+      "vocab_notes": [
+        {
+          "word": "intelligence",
+          "cn": "智能"
+        },
+        {
+          "word": "reason",
+          "cn": "推理"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Alan Turing design?",
+          "options": [
+            "The first mobile phone.",
+            "A test for machine intelligence.",
+            "A robotic vacuum cleaner.",
+            "The ancient game of Go."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Alan Turing designed a famous test to judge whether a machine could show human-like intelligence' 的转述。"
+        },
+        {
+          "stem": "Why was AlphaGo's victory in 2016 surprising?",
+          "options": [
+            "The human player did not show up.",
+            "Go is a very simple game.",
+            "Many had believed such a win was impossible.",
+            "Nobody was watching at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'something many had thought impossible' 的转述。"
+        },
+        {
+          "stem": "What is the main idea of the passage?",
+          "options": [
+            "Turing personally built every modern robot.",
+            "Games are harmful to computers.",
+            "AI has made no progress at all.",
+            "Machines have slowly learned tasks once thought human-only."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'machines have learned to do things once thought to belong to humans alone' 的概括。"
+        }
+      ]
+    }
+  ]
+}

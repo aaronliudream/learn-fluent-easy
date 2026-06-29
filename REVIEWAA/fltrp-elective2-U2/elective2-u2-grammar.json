@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "grammar_title": "过去完成被动语态(had been done)及其与过去完成主动、一般过去被动的区分",
+  "source": "外研社版选择性必修第二册 Unit 2 Using language:Past perfect passive(had been done)。句子地道、答案唯一(用错语态/错时态排除其余选项)、零术语、应用型。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "had been done:过去某动作之前主语「被」做了某事",
+      "overview": "主语是动作的承受者、且这件事发生在过去某个时间点之前时，用 had been + 过去分词。错项要么是主动（had done）、要么是错时态（was done / has been done）。"
+    },
+    {
+      "code": "u2.02",
+      "point": "had been done vs had done:主语「被」做还是「主动」做",
+      "overview": "在「过去之前已完成」的语境里，先判断主语是承受动作还是发出动作:承受用 had been done，发出用 had done。看错语态即排除。"
+    },
+    {
+      "code": "u2.03",
+      "point": "had been done vs was done:before / by the time 逼出过去完成",
+      "overview": "都是被动，但有 before / by the time + 过去 标志、表示「过去之前就已被…」时必须用 had been done，不能用一般过去被动 was done 或其它时态。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "At the start of the campaign, over 100 students ____ to give up social media for a week.",
+      "options": [
+        "had been persuaded",
+        "had persuaded",
+        "was persuaded",
+        "has been persuaded"
+      ],
+      "answer_index": 0,
+      "explanation": "学生是被劝说的、且发生在活动开始这一过去点之前 → had been + 过去分词。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When Jack got home, he found that his messy homework ____ in the centre of the desk.",
+      "options": [
+        "had put",
+        "had been put",
+        "was put",
+        "has been put"
+      ],
+      "answer_index": 1,
+      "explanation": "作业是被放好的、发生在到家之前 → had been put。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Before the new term began, all my bad study habits ____.",
+      "options": [
+        "had broken",
+        "were broken",
+        "had been broken",
+        "have been broken"
+      ],
+      "answer_index": 2,
+      "explanation": "习惯是被改掉的、在新学期开始之前 → had been broken。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "By the time Jack woke up, his untidy room ____ by his parents.",
+      "options": [
+        "had cleaned",
+        "was cleaned",
+        "has been cleaned",
+        "had been cleaned"
+      ],
+      "answer_index": 3,
+      "explanation": "房间是被打扫的、在他醒来之前 → had been cleaned。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "A small present ____ on the desk before Jack even noticed it.",
+      "options": [
+        "had been left",
+        "had left",
+        "was left",
+        "has been left"
+      ],
+      "answer_index": 0,
+      "explanation": "礼物是被留下的、在他注意到之前 → had been left。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "By last Monday, a clear to-do list ____ for the whole week.",
+      "options": [
+        "had made",
+        "had been made",
+        "was made",
+        "has been made"
+      ],
+      "answer_index": 1,
+      "explanation": "清单是被制定的、到上周一这个过去点之前 → had been made。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Before the exam started, the rules ____ to every student.",
+      "options": [
+        "had explained",
+        "were explained",
+        "had been explained",
+        "have been explained"
+      ],
+      "answer_index": 2,
+      "explanation": "规则是被解释的、在考试开始之前 → had been explained。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "By the end of the detox, a lot of money ____ for new sports equipment.",
+      "options": [
+        "had raised",
+        "was raised",
+        "has been raised",
+        "had been raised"
+      ],
+      "answer_index": 3,
+      "explanation": "钱是被筹集的、到脱瘾结束之前 → had been raised。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When she woke up, her phone ____ in a drawer by her mum.",
+      "options": [
+        "had been put",
+        "had put",
+        "was put",
+        "has been put"
+      ],
+      "answer_index": 0,
+      "explanation": "手机是被放进抽屉的、在她醒来之前 → had been put。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Before I joined the club, I ____ to set a daily goal.",
+      "options": [
+        "had motivated",
+        "had been motivated",
+        "was motivated",
+        "have been motivated"
+      ],
+      "answer_index": 1,
+      "explanation": "「我」是被激励的、在加入俱乐部之前 → had been motivated。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "By noon, all the umbrellas ____ to the school in good condition.",
+      "options": [
+        "had returned",
+        "were returned",
+        "had been returned",
+        "have been returned"
+      ],
+      "answer_index": 2,
+      "explanation": "伞是被归还的、到中午这个过去点之前 → had been returned。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Before the talk ended, several good examples ____ by the speaker.",
+      "options": [
+        "had given",
+        "were given",
+        "has been given",
+        "had been given"
+      ],
+      "answer_index": 3,
+      "explanation": "例子是被给出的、在演讲结束之前 → had been given。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "By the time the bell rang, the test papers ____ already.",
+      "options": [
+        "had been collected",
+        "had collected",
+        "were collected",
+        "have been collected"
+      ],
+      "answer_index": 0,
+      "explanation": "试卷是被收走的、在铃响之前 → had been collected。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When the teacher arrived, the seats ____ in neat rows.",
+      "options": [
+        "had arranged",
+        "had been arranged",
+        "were arranged",
+        "has been arranged"
+      ],
+      "answer_index": 1,
+      "explanation": "座位是被摆好的、在老师到达之前 → had been arranged。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Before he turned over a new leaf, his deadlines ____ again and again.",
+      "options": [
+        "had missed",
+        "were missed",
+        "had been missed",
+        "have been missed"
+      ],
+      "answer_index": 2,
+      "explanation": "截止期限是被错过的、在他改过自新之前 → had been missed。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "By Friday, the whole project ____ two days early.",
+      "options": [
+        "had finished",
+        "was finished",
+        "has been finished",
+        "had been finished"
+      ],
+      "answer_index": 3,
+      "explanation": "项目是被完成的、到周五之前 → had been finished。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When the guests arrived, the meeting room ____ for them.",
+      "options": [
+        "had been prepared",
+        "had prepared",
+        "was prepared",
+        "has been prepared"
+      ],
+      "answer_index": 0,
+      "explanation": "房间是被布置的、在客人到达之前 → had been prepared。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Before the campaign ended, a clear message ____ to everyone.",
+      "options": [
+        "had sent",
+        "had been sent",
+        "was sent",
+        "has been sent"
+      ],
+      "answer_index": 1,
+      "explanation": "信息是被发送的、在活动结束之前 → had been sent。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "By the time we met, the new plan ____ into action.",
+      "options": [
+        "had put",
+        "was put",
+        "had been put",
+        "have been put"
+      ],
+      "answer_index": 2,
+      "explanation": "计划是被付诸行动的、在我们见面之前 → had been put。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Before the new term, all the old notes ____ away.",
+      "options": [
+        "had thrown",
+        "were thrown",
+        "has been thrown",
+        "had been thrown"
+      ],
+      "answer_index": 3,
+      "explanation": "笔记是被扔掉的、在新学期之前 → had been thrown。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By the time the bell rang, Jack ____ all his homework.",
+      "options": [
+        "had done",
+        "had been done",
+        "was doing",
+        "has done"
+      ],
+      "answer_index": 0,
+      "explanation": "Jack 是动作的发出者（他做作业）→ 主动 had done，不用被动。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Before the meeting started, the manager ____ a clear plan.",
+      "options": [
+        "had been prepared",
+        "had prepared",
+        "was preparing",
+        "has prepared"
+      ],
+      "answer_index": 1,
+      "explanation": "经理主动制定计划 → had prepared。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By last week, Anna ____ a brand-new study habit on her own.",
+      "options": [
+        "had been started",
+        "was starting",
+        "had started",
+        "has started"
+      ],
+      "answer_index": 2,
+      "explanation": "Anna 主动养成习惯 → had started。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Before the deadline, the students ____ in their reports.",
+      "options": [
+        "had been handed",
+        "were handing",
+        "have handed",
+        "had handed"
+      ],
+      "answer_index": 3,
+      "explanation": "学生主动上交报告 → had handed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By the time we arrived, Grandpa ____ the whole story to the children.",
+      "options": [
+        "had told",
+        "had been told",
+        "was telling",
+        "has told"
+      ],
+      "answer_index": 0,
+      "explanation": "爷爷主动讲故事 → had told。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Before he gave up his phone, Max ____ social media every single hour.",
+      "options": [
+        "had been checked",
+        "had checked",
+        "was checking",
+        "has checked"
+      ],
+      "answer_index": 1,
+      "explanation": "Max 主动刷社交媒体 → had checked。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By Sunday, Cindy ____ a different friend every day of the detox.",
+      "options": [
+        "had been visited",
+        "was visiting",
+        "had visited",
+        "has visited"
+      ],
+      "answer_index": 2,
+      "explanation": "Cindy 主动去拜访朋友 → had visited。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Before the term ended, the teacher ____ us a lot of useful advice.",
+      "options": [
+        "had been given",
+        "was giving",
+        "has given",
+        "had given"
+      ],
+      "answer_index": 3,
+      "explanation": "老师主动给建议 → had given。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By the time his mum came home, the boy ____ many nails into the fence.",
+      "options": [
+        "had hammered",
+        "had been hammered",
+        "was hammering",
+        "has hammered"
+      ],
+      "answer_index": 0,
+      "explanation": "男孩主动钉钉子 → had hammered。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Before the talk, Ms Wu ____ several examples ready in her mind.",
+      "options": [
+        "had been got",
+        "had got",
+        "was getting",
+        "has got"
+      ],
+      "answer_index": 1,
+      "explanation": "吴老师主动准备好例子 → had got。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "At the start of the detox, over 100 students ____ to take part.",
+      "options": [
+        "had persuaded",
+        "was persuading",
+        "had been persuaded",
+        "has persuaded"
+      ],
+      "answer_index": 2,
+      "explanation": "学生是被劝说参加的 → had been persuaded。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Before the exam began, the rules ____ to everyone in the hall.",
+      "options": [
+        "had explained",
+        "was explaining",
+        "has explained",
+        "had been explained"
+      ],
+      "answer_index": 3,
+      "explanation": "规则是被解释的 → had been explained。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By noon, all the umbrellas ____ to the school office.",
+      "options": [
+        "had been returned",
+        "had returned",
+        "were returning",
+        "have returned"
+      ],
+      "answer_index": 0,
+      "explanation": "伞是被归还的 → had been returned。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Before Jack noticed it, a present ____ on his clean desk.",
+      "options": [
+        "had left",
+        "had been left",
+        "was leaving",
+        "has left"
+      ],
+      "answer_index": 1,
+      "explanation": "礼物是被留下的 → had been left。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By the end of term, a culture of honesty ____ across the whole school.",
+      "options": [
+        "had built",
+        "was building",
+        "had been built",
+        "has built"
+      ],
+      "answer_index": 2,
+      "explanation": "诚信文化是被建立起来的 → had been built。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Before the new rule, the messy room ____ many times by his parents.",
+      "options": [
+        "had cleaned",
+        "was cleaning",
+        "has cleaned",
+        "had been cleaned"
+      ],
+      "answer_index": 3,
+      "explanation": "房间是被父母打扫的 → had been cleaned。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By the time he woke up, his phone ____ in a drawer for safety.",
+      "options": [
+        "had been put",
+        "had put",
+        "was putting",
+        "has put"
+      ],
+      "answer_index": 0,
+      "explanation": "手机是被放进抽屉的 → had been put。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Before the campaign ended, a large sum of money ____ for sports equipment.",
+      "options": [
+        "had raised",
+        "had been raised",
+        "was raising",
+        "has raised"
+      ],
+      "answer_index": 1,
+      "explanation": "钱是被筹集的 → had been raised。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By Monday, the good news ____ to every class in the school.",
+      "options": [
+        "had spread",
+        "was spreading",
+        "had been spread",
+        "has spread"
+      ],
+      "answer_index": 2,
+      "explanation": "消息是被传开的 → had been spread。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Before the lesson, the desks ____ in neat, tidy rows.",
+      "options": [
+        "had arranged",
+        "was arranging",
+        "has arranged",
+        "had been arranged"
+      ],
+      "answer_index": 3,
+      "explanation": "课桌是被摆放整齐的 → had been arranged。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By the time the teacher arrived, the test papers ____ already.",
+      "options": [
+        "had been collected",
+        "were collected",
+        "are collected",
+        "has been collected"
+      ],
+      "answer_index": 0,
+      "explanation": "by the time + 过去，强调过去之前就被收走 → had been collected，不用一般过去被动。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Before the detox started, over 100 students ____ to join in.",
+      "options": [
+        "were persuaded",
+        "had been persuaded",
+        "are persuaded",
+        "has been persuaded"
+      ],
+      "answer_index": 1,
+      "explanation": "before + 过去，发生在脱瘾开始之前 → had been persuaded。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By the time we got there, all the prizes ____ out.",
+      "options": [
+        "were given",
+        "are given",
+        "had been given",
+        "have been given"
+      ],
+      "answer_index": 2,
+      "explanation": "by the time 标志，奖品在我们到达之前已被发完 → had been given。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Before Jack came home, his messy room ____ from top to bottom.",
+      "options": [
+        "was tidied",
+        "is tidied",
+        "has been tidied",
+        "had been tidied"
+      ],
+      "answer_index": 3,
+      "explanation": "before + 过去，房间在他回家前已被收拾 → had been tidied。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By the time the bell rang, the homework ____ in.",
+      "options": [
+        "had been handed",
+        "was handed",
+        "is handed",
+        "has been handed"
+      ],
+      "answer_index": 0,
+      "explanation": "by the time 标志 → had been handed。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Before the new term began, the timetable ____ for every class.",
+      "options": [
+        "was set",
+        "had been set",
+        "is set",
+        "has been set"
+      ],
+      "answer_index": 1,
+      "explanation": "before + 过去 → had been set。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By the time his mum checked, the phone ____ away safely.",
+      "options": [
+        "was put",
+        "is put",
+        "had been put",
+        "has been put"
+      ],
+      "answer_index": 2,
+      "explanation": "by the time 标志 → had been put。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Before the speech ended, the main idea ____ clearly to the audience.",
+      "options": [
+        "was expressed",
+        "is expressed",
+        "has been expressed",
+        "had been expressed"
+      ],
+      "answer_index": 3,
+      "explanation": "before + 过去 → had been expressed。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By the time the guests arrived, a big meal ____ for them.",
+      "options": [
+        "had been cooked",
+        "was cooked",
+        "is cooked",
+        "has been cooked"
+      ],
+      "answer_index": 0,
+      "explanation": "by the time 标志 → had been cooked。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Before the umbrellas were returned, a short message ____ on each one.",
+      "options": [
+        "was printed",
+        "had been printed",
+        "is printed",
+        "has been printed"
+      ],
+      "answer_index": 1,
+      "explanation": "before + 过去 → had been printed。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By the time I joined the club, the rules ____ already.",
+      "options": [
+        "were explained",
+        "are explained",
+        "had been explained",
+        "have been explained"
+      ],
+      "answer_index": 2,
+      "explanation": "by the time 标志 → had been explained。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Before the holiday started, every library book ____ on time.",
+      "options": [
+        "was returned",
+        "is returned",
+        "has been returned",
+        "had been returned"
+      ],
+      "answer_index": 3,
+      "explanation": "before + 过去 → had been returned。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By the time the campaign closed, a lot of awareness ____.",
+      "options": [
+        "had been raised",
+        "was raised",
+        "is raised",
+        "has been raised"
+      ],
+      "answer_index": 0,
+      "explanation": "by the time 标志 → had been raised。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Before the exam, the desks ____ far apart from one another.",
+      "options": [
+        "were moved",
+        "had been moved",
+        "are moved",
+        "have been moved"
+      ],
+      "answer_index": 1,
+      "explanation": "before + 过去 → had been moved。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By the time he said sorry, the harm ____ already.",
+      "options": [
+        "was done",
+        "is done",
+        "had been done",
+        "has been done"
+      ],
+      "answer_index": 2,
+      "explanation": "by the time 标志，伤害在道歉之前已经造成 → had been done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Before the meeting, the report ____ to all the members.",
+      "options": [
+        "was sent",
+        "is sent",
+        "has been sent",
+        "had been sent"
+      ],
+      "answer_index": 3,
+      "explanation": "before + 过去 → had been sent。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By the time we woke up, breakfast ____ in the kitchen.",
+      "options": [
+        "had been prepared",
+        "was prepared",
+        "is prepared",
+        "has been prepared"
+      ],
+      "answer_index": 0,
+      "explanation": "by the time 标志 → had been prepared。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Before he made the new plan, his time ____ on the phone.",
+      "options": [
+        "was wasted",
+        "had been wasted",
+        "is wasted",
+        "has been wasted"
+      ],
+      "answer_index": 1,
+      "explanation": "before + 过去 → had been wasted。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By the time the teacher returned, the question ____ on the board.",
+      "options": [
+        "was answered",
+        "is answered",
+        "had been answered",
+        "have been answered"
+      ],
+      "answer_index": 2,
+      "explanation": "by the time 标志 → had been answered。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Before the lesson ended, the new words ____ twice for us.",
+      "options": [
+        "were repeated",
+        "are repeated",
+        "has been repeated",
+        "had been repeated"
+      ],
+      "answer_index": 3,
+      "explanation": "before + 过去 → had been repeated。"
+    }
+  ]
+}

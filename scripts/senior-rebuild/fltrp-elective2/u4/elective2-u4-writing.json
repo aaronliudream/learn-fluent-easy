@@ -1,0 +1,53 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "topic": "Write a Speech about Someone Who Broke Boundaries(写一篇介绍打破界限者的演讲稿)",
+  "title_en": "A Person Who Broke Boundaries",
+  "genre": "演讲稿 / 说明(introduce a person who has increased understanding between cultures or peoples)",
+  "source": "外研社(新标准)选择性必修第二册 Unit 4 Developing ideas / Writing a speech:介绍一位帮助增进国家或人群之间理解、打破界限的人。",
+  "prompt_cn": "假设你要在学校'打破界限'主题班会上做一个约100词的英语演讲,介绍一位帮助打破界限、增进不同人群或国家之间理解的人(如埃德加·斯诺、无国界医生中的某位志愿者,或你敬佩的人)。内容包括:① 这个人是谁;② 他/她打破了什么界限、怎么做到的;③ 你的评价与感受。注意恰当使用形式主语 it(It is … to do / It is … that …)。",
+  "prompt_en": "Suppose you will give a short speech (about 100 words) at a class meeting on the theme \"Breaking Boundaries\". Introduce a person who has helped to break boundaries and increase understanding between different peoples or countries (e.g. Edgar Snow, an MSF volunteer, or someone you admire). Include: 1) who the person is; 2) what boundary he or she broke and how; 3) your comment and feelings. Try to use formal-subject \"it\" (It is … to do / It is … that …).",
+  "points": [
+    "介绍人物身份(Today I'd like to talk about … / The person I admire is …)",
+    "说明打破的界限与做法(He/She broke … by …)",
+    "用形式主语 it 评价(It is clear that … / It is hard to … without …)",
+    "结尾表达感受与号召(It is up to us to …)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Hello, everyone. Today I'd like to talk about Edgar Snow, an American journalist who broke down boundaries of misunderstanding. In the 1930s, very little was known about China in the West. It was hard to learn the truth from far away, so Snow actually spent time with the people and told their stories from the inside. It is clear that his honest writing built a bridge between two very different worlds. For this, he is still remembered as \"our American friend\". It is inspiring to see how one brave person can change how nations see each other. It is up to us to keep breaking boundaries too. Thank you.",
+  "model_translation": "大家好。今天我想谈谈埃德加·斯诺,一位打破了误解之界限的美国记者。20世纪30年代,西方对中国知之甚少。从远处很难了解真相,于是斯诺真正与人们相处,从内部讲述他们的故事。显然,他诚实的写作在两个迥异的世界之间架起了桥梁。因此,他至今被铭记为'我们的美国朋友'。看到一个勇敢的人能改变国家间彼此的看法,令人鼓舞。打破界限也要靠我们。谢谢。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:人物身份 / 打破的界限与做法 / 评价与感受" },
+      { "dimension": "结构", "max": 4, "criteria": "演讲稿格式(称呼+结束语)、围绕主题、行文连贯、代词指代清楚" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、恰当使用形式主语 it、语法基本无误" }
+    ],
+    "required_structure": [
+      "称呼 Hello, everyone. Today I'd like to talk about …",
+      "身份 …, who broke down boundaries of …",
+      "做法 + 形式主语 It was hard to … , so he …",
+      "评价 It is clear that …",
+      "结尾 It is up to us to … Thank you."
+    ],
+    "key_expressions": [
+      "break down boundaries of misunderstanding",
+      "It is clear that his writing built a bridge between two worlds.",
+      "It is inspiring to see how one brave person can change things.",
+      "It is up to us to keep breaking boundaries."
+    ],
+    "useful_words": ["boundary", "break down", "understanding", "journalist", "bridge", "inclusive", "mutual", "inspiring", "collaborate", "mankind"]
+  },
+  "high_sentences": [
+    "Edgar Snow was an American journalist who broke down boundaries of misunderstanding.",
+    "It is clear that his honest writing built a bridge between two very different worlds.",
+    "It is inspiring to see how one brave person can change how nations see each other.",
+    "It is up to us to keep breaking boundaries too."
+  ],
+  "error_pairs": [
+    { "wrong": "Is important to break down boundaries.", "correct": "It is important to break down boundaries.", "note": "形式主语不能省,主语位置必须有 it。" },
+    { "wrong": "It is clear that his writing built bridge.", "correct": "It is clear that his writing built a bridge.", "note": "单数可数名词 bridge 前要加冠词 a。" },
+    { "wrong": "That is hard to learn the truth from far away.", "correct": "It is hard to learn the truth from far away.", "note": "统领后面的不定式真正主语,只能用形式主语 it,不用 that。" }
+  ],
+  "paragraph_template": "【打破界限演讲稿结构】\n称呼:Hello, everyone.\n第1句 身份:Today I'd like to talk about … , who broke down …\n第2-3句 做法(用 it):It was hard to … , so he/she …\n第4句 评价:It is clear that …\n结尾:It is up to us to … Thank you."
+}

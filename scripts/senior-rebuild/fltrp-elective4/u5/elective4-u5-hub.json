@@ -1,0 +1,47 @@
+{
+  "listeningQuestions": [
+    { "audio": "The Maya built tall stone pyramids deep in the jungle.", "opts": ["玛雅人在丛林深处建起高大的石头金字塔。", "玛雅人住在山洞里。", "玛雅人从不建造房屋。", "玛雅人只在海边生活。"], "answer": 0 },
+    { "audio": "No one has fully read the ancient Maya writing.", "opts": ["玛雅人没有文字。", "至今没人能完全读懂古老的玛雅文字。", "玛雅文字非常容易读懂。", "玛雅文字是欧洲人写的。"], "answer": 1 },
+    { "audio": "Years of drought may have caused the cities to collapse.", "opts": ["城市是被洪水淹没的。", "城市从未衰落。", "连年干旱也许导致了城市的衰亡。", "城市搬到了海边。"], "answer": 2 },
+    { "audio": "Brave explorers learn to subdue their fear of the unknown.", "opts": ["探险者从不感到害怕。", "探险者总是逃跑。", "探险者忽视一切危险。", "勇敢的探险者学会克制对未知的恐惧。"], "answer": 3 },
+    { "audio": "We have better maps of the Moon than of the deep sea bed.", "opts": ["我们对月球的地图比对深海海床的更详尽。", "我们已绘制了全部海床地图。", "深海没有任何地图。", "海床比月球更容易绘制。"], "answer": 0 },
+    { "audio": "China's deep-sea vessel once dived over seven thousand metres.", "opts": ["中国的潜水器从未下潜。", "中国的潜水器曾下潜超过七千米。", "中国没有潜水器。", "潜水器只在水面航行。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "'金字塔'对应的英文是?", "opts": ["pyramid", "market", "garden", "river"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "'离弃、逃离(城市)'用哪个动词?", "opts": ["abandon", "build", "water", "sell"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "'否定、不予考虑(某理论)'用哪个词?", "opts": ["dismiss", "accept", "prove", "enjoy"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "'(因无人照料而)衰落败落'对应哪个短语?", "opts": ["fall into ruin", "set out", "look into", "check out"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "____ caused the Maya to vanish is still a mystery.（句首作主语)", "opts": ["What", "That", "Which", "Whether"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The fact ____ they had no metal tools amazes us.（同位语)", "opts": ["that", "what", "which", "whether"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "We are not sure ____ a drought destroyed them or not.", "opts": ["whether", "if", "that", "what"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The Maya recorded ____ they saw in the night sky.", "opts": ["whatever", "whoever", "however", "whichever"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["茂密的丛林慢慢掩埋了空荡的城市。", "丛林里满是游客。", "城市被搬到了山上。", "丛林里没有任何城市。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The thick jungle slowly buried the empty cities." },
+    { "q": "听句子选中文:", "opts": ["好奇心一直推动人类去探索。", "人类从不探索。", "好奇心毫无用处。", "探索只为了赚钱。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Curiosity has always pushed humankind to explore." }
+  ],
+  "reading": {
+    "passage": "The Maya were one of the most advanced peoples of the ancient Americas. They built great cities and carefully studied the stars, yet within a few generations these cities were abandoned. Why this happened is still one of history's greatest mysteries.",
+    "passageCn": "玛雅人是古代美洲最先进的民族之一。他们建造了伟大的城市,并认真研究星象,然而在短短几代人之内,这些城市便被弃置。这一切为何发生,至今仍是历史上最大的谜团之一。",
+    "questions": [
+      { "q": "What did the Maya build and study?", "opts": ["Great cities, and they studied the stars.", "Only small wooden boats.", "Modern flying machines.", "Nothing of any value."], "answer": 0 },
+      { "q": "What happened to their cities?", "opts": ["They were rebuilt entirely in gold.", "They were abandoned within a few generations.", "They were never actually built.", "They were moved to the coast."], "answer": 1 },
+      { "q": "How does the passage describe the collapse?", "opts": ["As one of history's greatest mysteries.", "As a well-known and simple fact.", "As a very small, minor event.", "As a problem of recent years."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "In about 60 words, write a short article about one mystery from history that interests you. Say why it is mysterious and what you think might explain it. Try to use noun clauses such as 'The fact that…' and 'What caused…'.",
+    "promptCn": "用约60词写一篇短文,介绍一个让你感兴趣的历史谜团。说明它为何神秘,以及你认为可能的解释。尽量使用 'The fact that…'、'What caused…' 等名词性从句。",
+    "sampleWords": ["mystery", "civilisation", "abandon", "drought", "theory", "ruin", "explore", "evidence", "disappear", "whether"]
+  },
+  "dialogues": [
+    {
+      "title": "At the Maya Exhibition",
+      "lines": [
+        { "role": "A", "text": "Look at this model of a Maya pyramid. How did they build it without metal tools?", "cn": "看这个玛雅金字塔的模型。他们没有金属工具是怎么建起来的?" },
+        { "role": "B", "text": "That's exactly what still puzzles experts today.", "cn": "这正是至今仍让专家们困惑的地方。" },
+        { "role": "A", "text": "And why did they leave such amazing cities?", "cn": "他们又为什么离弃了如此了不起的城市呢?" },
+        { "role": "B", "text": "Many believe that years of drought finally drove them away.", "cn": "许多人认为是连年干旱最终迫使他们离开。" }
+      ]
+    }
+  ]
+}

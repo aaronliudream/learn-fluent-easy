@@ -1,0 +1,43 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "note": "单元通关专属迷你阅读(建筑中的自然主题,独立短文,不在阅读关出现)。短文3句+3题,答案转述非照抄,覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Maria was asked to design a new bus station, she covered its roof with grass and wild flowers. The green roof keeps the building cool in summer, soaks up rainwater, and gives bees a place to feed. Today travellers say that waiting for a bus there feels almost like sitting in a small park.",
+    "questions": [
+      {
+        "q": "What did Maria do to the roof of the bus station?",
+        "options": [
+          "She planted grass and flowers on it.",
+          "She painted it bright red.",
+          "She covered it with glass panels.",
+          "She left it completely bare."
+        ],
+        "answer": "A",
+        "explanation": "原文说她在屋顶覆盖青草与野花,选项是其转述,而非原文连续词串。"
+      },
+      {
+        "q": "What is one benefit of the green roof?",
+        "options": [
+          "It makes the station hotter in summer.",
+          "It keeps the building cool and stores rainwater.",
+          "It blocks all the daylight inside.",
+          "It frightens away every insect."
+        ],
+        "answer": "B",
+        "explanation": "原文说屋顶夏天降温、吸收雨水,选项是其概括;其余与原文相反。"
+      },
+      {
+        "q": "How do travellers feel about waiting there now?",
+        "options": [
+          "It is noisy and unpleasant.",
+          "It is the same as any other station.",
+          "It is like relaxing in a tiny park.",
+          "It is too crowded to enjoy."
+        ],
+        "answer": "C",
+        "explanation": "末句说在那里等车几乎像在小公园里,选项是其转述。"
+      }
+    ]
+  }
+}

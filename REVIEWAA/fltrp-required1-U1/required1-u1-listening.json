@@ -1,0 +1,421 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "topic": "A New Start",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社(新标准)必修第一册 Unit 1 同主题听力(聊第一天/迎新日短文/周末学习计划/记笔记技巧/向学姐请教/好的开始)。用词限 U1/初中/常见词,答案唯一,与读写关不撞;long(对话)与 short(独白)交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 Talking About the First Day",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Tom: Hi, Anna! How was your first day at senior high?",
+        "Anna: It was great, but I felt a bit nervous in the morning.",
+        "Tom: Me too. I got lost trying to find the science lab.",
+        "Anna: Did you join any clubs yet?",
+        "Tom: Yes, I joined the badminton club. We meet in the gym on Tuesdays.",
+        "Anna: That sounds fun. I chose the drama club because I love acting.",
+        "Tom: Nice! Standing on the stage must be exciting.",
+        "Anna: It is. I hope this year will be a wonderful new start."
+      ],
+      "translation_cn": "汤姆问安娜高中第一天怎么样;安娜说很棒,但早上有点紧张;汤姆也是,还找科学实验室时迷了路;安娜问汤姆加了社团没;汤姆加了羽毛球社,周二在体育馆活动;安娜选了戏剧社,因为爱表演;汤姆说登台一定很激动;安娜希望这一年是美好的新开始。",
+      "questions": [
+        {
+          "stem": "How did Anna feel in the morning of her first day?",
+          "options": [
+            "A bit nervous.",
+            "Very bored.",
+            "Quite angry.",
+            "Completely calm."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What problem did Tom have on the first day?",
+          "options": [
+            "He forgot his bag.",
+            "He got lost finding the science lab.",
+            "He missed the bus.",
+            "He lost his timetable."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which club did Tom join?",
+          "options": [
+            "The badminton club.",
+            "The drama club.",
+            "The debate club.",
+            "The music club."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why did Anna choose the drama club?",
+          "options": [
+            "Because it is easy.",
+            "Because she loves acting.",
+            "Because her friend chose it.",
+            "Because it meets in the gym."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Anna hope for this year?",
+          "options": [
+            "A long holiday.",
+            "Fewer lessons.",
+            "A wonderful new start.",
+            "A new school."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·短文 Orientation Day",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many schools hold an Orientation Day for new students.",
+        "It is a great chance to get to know the school and meet others.",
+        "On that day, you can walk around the campus and find your classrooms.",
+        "Teachers introduce the clubs and after-school activities you can join.",
+        "If you keep an open mind, you may even make some new friends."
+      ],
+      "translation_cn": "许多学校为新生举办迎新日;这是了解学校、结识他人的好机会;那天你可以在校园里走走,找到自己的教室;老师们会介绍可以参加的社团和课后活动;只要保持开放的心态,你甚至能交到新朋友。",
+      "questions": [
+        {
+          "stem": "Who is the Orientation Day for?",
+          "options": [
+            "Only teachers.",
+            "Old students only.",
+            "Parents.",
+            "New students."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What can students do on that day?",
+          "options": [
+            "Walk around the campus and find their classrooms.",
+            "Take a big exam.",
+            "Stay at home.",
+            "Leave school early."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do teachers introduce?",
+          "options": [
+            "The summer holiday plan.",
+            "The clubs and after-school activities.",
+            "The exam results.",
+            "The school history only."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is one chance the day offers?",
+          "options": [
+            "A chance to win money.",
+            "A chance to skip class.",
+            "A chance to get to know the school.",
+            "A chance to go home."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How might you make new friends, according to the talk?",
+          "options": [
+            "By staying silent.",
+            "By avoiding everyone.",
+            "By leaving early.",
+            "By keeping an open mind."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 Making a Weekend Study Plan",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lily: Ben, shall we make a study plan for the weekend?",
+        "Ben: Good idea. There is so much to do that I feel under pressure.",
+        "Lily: First, let's list the things we are going to do.",
+        "Ben: Okay. We need to read English, finish maths and practise for the debate.",
+        "Lily: Right. Now let's decide how long each task will take.",
+        "Ben: We should do the most important one first, I think.",
+        "Lily: Agreed. And let's do only one task at a time.",
+        "Ben: Great. With a clear plan, the weekend feels much easier."
+      ],
+      "translation_cn": "莉莉提议为周末做学习计划;本说事情太多,感到压力;莉莉建议先列出要做的事;本说要读英语、做数学、准备辩论;莉莉建议再决定每项花多久;本认为应先做最重要的;莉莉同意,并建议一次只做一件事;本说有了清晰的计划,周末轻松多了。",
+      "questions": [
+        {
+          "stem": "What do Lily and Ben want to make?",
+          "options": [
+            "A weekend study plan.",
+            "A shopping list.",
+            "A travel plan.",
+            "A party invitation."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Ben feel under pressure?",
+          "options": [
+            "He is ill.",
+            "There is so much to do.",
+            "He has no friends.",
+            "He lost his books."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they decide to do after listing the tasks?",
+          "options": [
+            "Sleep first.",
+            "Go out to play.",
+            "Decide how long each task will take.",
+            "Forget the plan."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Which task does Ben think they should do first?",
+          "options": [
+            "The easiest one.",
+            "The shortest one.",
+            "Any one at all.",
+            "The most important one."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does Ben feel about the weekend with a clear plan?",
+          "options": [
+            "It feels much easier.",
+            "It feels boring.",
+            "It feels longer.",
+            "It feels useless."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·短文 A Tip for Taking Notes",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In senior high, teachers often speak quickly during lessons.",
+        "At first, you may struggle to write down every word.",
+        "But thinking is more important than copying everything.",
+        "Try to note only the key information, such as names and numbers.",
+        "This simple habit will help you understand and remember more."
+      ],
+      "translation_cn": "在高中,老师讲课往往很快;起初,你可能很难记下每个词;但思考比把每句话都抄下来更重要;试着只记关键信息,比如名字和数字;这个简单的习惯会帮你理解并记住更多内容。",
+      "questions": [
+        {
+          "stem": "What do teachers often do during lessons?",
+          "options": [
+            "Stay silent.",
+            "Speak quickly.",
+            "Read very slowly.",
+            "Leave the room."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What may be difficult at first?",
+          "options": [
+            "Finding the classroom.",
+            "Saying hello.",
+            "Writing down every word.",
+            "Reading a poster."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is more important than copying everything?",
+          "options": [
+            "Sleeping in class.",
+            "Talking to friends.",
+            "Drawing pictures.",
+            "Thinking."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What kind of information should you note?",
+          "options": [
+            "Key information like names and numbers.",
+            "Every single word.",
+            "Nothing at all.",
+            "Only the date."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What will this habit help you do?",
+          "options": [
+            "Forget the lesson.",
+            "Understand and remember more.",
+            "Leave school early.",
+            "Write more slowly."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 Asking a Senior for Advice",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Kate: Excuse me, you are a senior student, right? Can I ask for some advice?",
+        "Mark: Of course. What would you like to know?",
+        "Kate: How can I deal with all these new challenges?",
+        "Mark: Keep calm and be prepared. Plan your time every week.",
+        "Kate: What if I fail a test at the start?",
+        "Mark: Don't worry. If you fail, next time you can do better.",
+        "Kate: That's really helpful. Thank you so much.",
+        "Mark: My pleasure. Just keep an open mind and enjoy your new start."
+      ],
+      "translation_cn": "凯特向一位学长马克请教建议;马克乐意帮忙;凯特问如何应对新挑战;马克建议保持镇定、做好准备、每周规划时间;凯特担心一开始考试失败;马克说别担心,失败了下次能做得更好;凯特很感激;马克叫她保持开放心态,享受新开始。",
+      "questions": [
+        {
+          "stem": "Who does Kate ask for advice?",
+          "options": [
+            "A new teacher.",
+            "Her mother.",
+            "A senior student.",
+            "A shopkeeper."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Kate want to know?",
+          "options": [
+            "Where the gym is.",
+            "When the holiday starts.",
+            "Which club is best.",
+            "How to deal with new challenges."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is Mark's first piece of advice?",
+          "options": [
+            "Keep calm and be prepared.",
+            "Give up early.",
+            "Copy others' work.",
+            "Avoid all tests."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Mark say about failing a test?",
+          "options": [
+            "You should leave school.",
+            "Next time you can do better.",
+            "You should feel ashamed.",
+            "It can never happen."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Mark tell Kate to do at the end?",
+          "options": [
+            "Stop asking questions.",
+            "Study less.",
+            "Keep an open mind and enjoy the new start.",
+            "Forget the advice."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·短文 A Good Beginning",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "People often say that a good beginning is half the success.",
+        "Starting senior high may feel hard at the very first.",
+        "You meet new teachers and face many new challenges.",
+        "But if you stay calm and try your best, things get easier.",
+        "Remember to help your friends, and you will feel good too."
+      ],
+      "translation_cn": "人们常说,良好的开端是成功的一半;刚上高中可能会觉得艰难;你要遇见新老师,面对许多新挑战;但只要保持镇定、尽力而为,事情就会变得容易;别忘了帮助朋友,你自己也会感觉很好。",
+      "questions": [
+        {
+          "stem": "What do people often say about a good beginning?",
+          "options": [
+            "It is a waste of time.",
+            "It never matters.",
+            "It is always easy.",
+            "It is half the success."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How may starting senior high feel at first?",
+          "options": [
+            "Hard.",
+            "Very boring.",
+            "Completely easy.",
+            "Quite sad."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do new students have to face?",
+          "options": [
+            "No lessons at all.",
+            "Many new challenges.",
+            "Only old friends.",
+            "A long holiday."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What helps things get easier?",
+          "options": [
+            "Giving up quickly.",
+            "Staying angry.",
+            "Staying calm and trying your best.",
+            "Doing nothing."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What happens when you help your friends?",
+          "options": [
+            "You lose your time.",
+            "You feel worse.",
+            "You make them sad.",
+            "You feel good too."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

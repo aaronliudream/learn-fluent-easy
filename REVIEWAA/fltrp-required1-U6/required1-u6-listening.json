@@ -1,0 +1,424 @@
+{
+  "volume": "required1",
+  "unit": "U6",
+  "topic": "At One with Nature",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社版必修第一册 Unit 6 同主题听力(计划游梯田/大堡礁/园艺爱好/北极生活/买花草茶/大峡谷)。用词限 U6/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U6 听力·对话 Planning a Trip to the Terraces",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lucy: Have you decided where to go this holiday, Tom?",
+        "Tom: I'd love to see the Longji Rice Terraces in Guangxi.",
+        "Lucy: The terraces on the mountains? Why do you want to go there?",
+        "Tom: They were built hundreds of years ago, and they show how people work with nature.",
+        "Lucy: That sounds amazing. When is the best time to visit?",
+        "Tom: In autumn, when the rice turns gold all over the mountains.",
+        "Lucy: Lovely! Should we walk to the top?",
+        "Tom: Yes. From the very top you can see the terraces reaching as far as the eye can see.",
+        "Lucy: Then let's book the trip for October!"
+      ],
+      "translation_cn": "Lucy 问 Tom 假期想去哪;Tom 想去广西龙脊梯田,因为梯田有几百年历史、展现人与自然的合作;最佳季节是秋天,水稻金黄铺满群山;两人决定爬到山顶看一望无际的梯田,定在十月出行。",
+      "questions": [
+        {
+          "stem": "Where does Tom want to go this holiday?",
+          "options": [
+            "The Longji Rice Terraces.",
+            "The Great Barrier Reef.",
+            "A garden in London.",
+            "The Turpan Basin."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is Tom interested in the terraces?",
+          "options": [
+            "They are the cheapest place to visit.",
+            "They show how people work with nature.",
+            "They are very close to his home.",
+            "They have the best shops."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When is the best time to see them?",
+          "options": [
+            "In autumn, when the rice turns gold.",
+            "In the middle of winter.",
+            "Early in the morning only.",
+            "During the rainy summer."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can they see from the top of the mountains?",
+          "options": [
+            "A busy modern city.",
+            "Terraces reaching far into the distance.",
+            "A long sandy beach.",
+            "An underwater observatory."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When do they decide to take the trip?",
+          "options": [
+            "Next week.",
+            "In the summer.",
+            "In October.",
+            "They cannot decide."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U6 听力·短文 The Great Barrier Reef",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The Great Barrier Reef lies off the coast of Australia.",
+        "It is the largest structure on Earth made by living things.",
+        "Tiny sea organisms built it slowly over millions of years.",
+        "Many kinds of fish and turtles make their home there.",
+        "Warmer and dirtier seas now put this natural wonder in danger."
+      ],
+      "translation_cn": "大堡礁位于澳大利亚海岸外;它是地球上由生物造出的最大结构;微小的海洋生物历经数百万年慢慢建成;许多种鱼和海龟在此安家;如今变暖、变脏的海水使这一自然奇观陷入危险。",
+      "questions": [
+        {
+          "stem": "Where is the Great Barrier Reef?",
+          "options": [
+            "In the middle of a desert.",
+            "Deep inside a mountain.",
+            "Under a city street.",
+            "Off the coast of Australia."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What makes the reef special?",
+          "options": [
+            "It is the largest structure made by living things.",
+            "It was built by famous engineers.",
+            "It is made only of stone.",
+            "It is the smallest reef on Earth."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Who built the reef?",
+          "options": [
+            "Ancient kings.",
+            "Tiny sea organisms.",
+            "Modern workers.",
+            "Large whales."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What lives on the reef?",
+          "options": [
+            "Only one kind of plant.",
+            "Nothing at all.",
+            "Many fish and turtles.",
+            "Desert animals."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What now puts the reef in danger?",
+          "options": [
+            "Too many cold winters.",
+            "A lack of visitors.",
+            "Heavy snowfall.",
+            "Warmer and dirtier seawater."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U6 听力·对话 A New Gardening Hobby",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: You look happy today, Ben. What have you been doing?",
+        "Ben: I started a small garden on our rooftop last month.",
+        "Anna: On the rooftop? But your flat has no garden at all.",
+        "Ben: That's the point. There was no space on the ground, so I used the roof.",
+        "Anna: What do you grow up there?",
+        "Ben: Some vegetables and a lot of flowers. I water them every morning.",
+        "Anna: Does it really help in any way?",
+        "Ben: Yes. It makes the air cleaner and keeps the top floor cooler in summer.",
+        "Anna: That's wonderful. Maybe I'll try it on my roof too!"
+      ],
+      "translation_cn": "Anna 见 Ben 很开心;Ben 上月在自家屋顶上开辟了小花园;因为地面没空间,就利用了屋顶;他种了些蔬菜和很多花,每天早上浇水;屋顶花园让空气更清新、夏天顶楼更凉快;Anna 也想在自家屋顶试试。",
+      "questions": [
+        {
+          "stem": "What did Ben start last month?",
+          "options": [
+            "A small garden on his rooftop.",
+            "A new sports club.",
+            "A cooking class.",
+            "A music band."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why did Ben use the roof?",
+          "options": [
+            "The roof was warmer.",
+            "There was no space on the ground.",
+            "His teacher told him to.",
+            "He wanted to hide the plants."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Ben grow there?",
+          "options": [
+            "Only tall trees.",
+            "Nothing yet.",
+            "Vegetables and flowers.",
+            "Rice and corn."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How does the garden help?",
+          "options": [
+            "It makes the flat darker.",
+            "It brings more noise.",
+            "It uses up all the water.",
+            "It cleans the air and cools the top floor."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Anna decide to do?",
+          "options": [
+            "Try a garden on her own roof.",
+            "Stop visiting Ben.",
+            "Move to the countryside.",
+            "Buy vegetables instead."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U6 听力·短文 Life in the Arctic",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The Inuit live in the cold, frozen lands of the Arctic.",
+        "Almost no crops grow there, so they eat a lot of fish and meat.",
+        "Such food keeps their bodies strong in the freezing weather.",
+        "For part of the year the sun never rises at all.",
+        "This long polar night gives families more time together."
+      ],
+      "translation_cn": "因纽特人生活在寒冷冰封的北极;那里几乎不长庄稼,所以他们多吃鱼和肉;这种食物让身体在严寒中保持强壮;一年中有一段时间太阳根本不升起;漫长的极夜让家人有更多相处的时光。",
+      "questions": [
+        {
+          "stem": "Where do the Inuit live?",
+          "options": [
+            "In a hot desert.",
+            "In the frozen Arctic.",
+            "On a tropical island.",
+            "Beside a warm sea."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do they eat a lot of fish and meat?",
+          "options": [
+            "They dislike all vegetables.",
+            "Fish and meat are free.",
+            "Almost no crops grow there.",
+            "A doctor ordered it."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does such food do for them?",
+          "options": [
+            "It makes them feel sleepy.",
+            "It keeps them cool.",
+            "It helps plants grow.",
+            "It keeps their bodies strong in the cold."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What happens for part of the year?",
+          "options": [
+            "The sun never rises.",
+            "It rains every day.",
+            "The snow all melts.",
+            "The sea boils."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the long polar night give families?",
+          "options": [
+            "More crops to grow.",
+            "More time together.",
+            "Warmer weather.",
+            "More visitors."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U6 听力·对话 Buying Herbal Tea",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Shopkeeper: Good morning! Can I help you find something?",
+        "Mia: Yes, please. I'm looking for some herbal tea.",
+        "Shopkeeper: We have many kinds. Are you looking for a special benefit?",
+        "Mia: I haven't been sleeping well lately.",
+        "Shopkeeper: Then try this one. It helps you relax at night.",
+        "Mia: That sounds perfect. Is it made from natural plants?",
+        "Shopkeeper: Yes, from herbs and flowers, with no chemicals at all.",
+        "Mia: Wonderful. I'll take two boxes, please.",
+        "Shopkeeper: Good choice. Drink a warm cup before bed."
+      ],
+      "translation_cn": "店员问需要什么;Mia 想买花草茶;店员问是否要某种功效;Mia 说近来睡眠不好;店员推荐一款助眠茶;Mia 问是否纯天然;店员说由香草和花制成、无任何化学品;Mia 买了两盒,店员建议睡前喝一杯温茶。",
+      "questions": [
+        {
+          "stem": "What does Mia want to buy?",
+          "options": [
+            "A box of coffee.",
+            "Fresh fruit.",
+            "Some herbal tea.",
+            "A new teapot."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What problem does Mia have?",
+          "options": [
+            "She has a bad cold.",
+            "She feels too hot.",
+            "She has lost her keys.",
+            "She has not been sleeping well."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the shopkeeper say the tea does?",
+          "options": [
+            "It helps her relax at night.",
+            "It wakes her up quickly.",
+            "It makes her hungry.",
+            "It cleans her teeth."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the tea made from?",
+          "options": [
+            "Strong chemicals.",
+            "Natural herbs and flowers.",
+            "Sugar and salt.",
+            "Dried fish."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How many boxes does Mia buy?",
+          "options": [
+            "One.",
+            "Five.",
+            "Two.",
+            "None."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U6 听力·短文 The Grand Canyon",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The Grand Canyon is a huge valley in the United States.",
+        "It is almost two kilometres deep in some places.",
+        "A great river slowly cut it from the rock over millions of years.",
+        "Brave visitors can stand on a narrow glass platform.",
+        "From there they look straight down into the deep canyon below."
+      ],
+      "translation_cn": "大峡谷是美国的一道巨大山谷;某些地方近两千米深;一条大河历经数百万年慢慢在岩石中切出了它;勇敢的游客可以站在狭窄的玻璃平台上;从那里直直地俯视下方的深谷。",
+      "questions": [
+        {
+          "stem": "What is the Grand Canyon?",
+          "options": [
+            "A tall building in a city.",
+            "A small lake in Africa.",
+            "A famous ship.",
+            "A huge valley in the United States."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How deep is it in some places?",
+          "options": [
+            "Almost two kilometres.",
+            "About ten metres.",
+            "Only a few centimetres.",
+            "Exactly one mile high."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How was the canyon formed?",
+          "options": [
+            "People dug it out by hand.",
+            "A river slowly cut it from the rock.",
+            "It fell from the sky.",
+            "A storm made it overnight."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where can brave visitors stand?",
+          "options": [
+            "On the top of a tree.",
+            "Inside a deep tunnel.",
+            "On a narrow glass platform.",
+            "On a moving boat."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do visitors do from there?",
+          "options": [
+            "Swim in the river.",
+            "Climb to the moon.",
+            "Drive across the sand.",
+            "Look straight down into the canyon."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

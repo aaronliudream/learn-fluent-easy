@@ -1,0 +1,338 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "topic": "Growing Up",
+  "source": "外研社选择性必修第二册 Unit 1 同主题阅读(成年/驾照/搬出去住/告别校园/金钱与独立/正直与责任)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Age of Majority",
+      "topic_cn": "说明·成年的真正含义",
+      "body": "In most countries, turning eighteen marks the start of adulthood. People often call this the age of majority. But what does reaching this milestone really mean? Many teenagers imagine that everything will change instantly, as if they have closed the door on childhood and stepped into a whole new adult world. The reality is usually different. The change is more subtle and gradual than people expect. When you wake up the morning after your birthday, there are still rules to obey and lessons to attend. What does change is the way society treats you. Suddenly you can vote in an election, sign important papers, and take responsibility for choices that were once made by your parents. With these new freedoms come new duties. Being eighteen does not mean you are fully grown overnight; it simply means you are trusted to begin making your own decisions, and to live with whatever follows from them.",
+      "vocab_notes": [
+        {
+          "word": "adulthood",
+          "cn": "成年"
+        },
+        {
+          "word": "milestone",
+          "cn": "里程碑"
+        },
+        {
+          "word": "majority",
+          "cn": "(此处)成年"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do many teenagers wrongly expect about turning eighteen?",
+          "options": [
+            "That their life will be transformed in an instant.",
+            "That they will lose the right to vote.",
+            "That nothing at all will ever change.",
+            "That their parents will make all decisions."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说青少年以为一切会 instantly 改变,而现实并非如此,选项为其转述。"
+        },
+        {
+          "stem": "According to the passage, how does growing up actually happen?",
+          "options": [
+            "Suddenly, overnight on the birthday.",
+            "Slowly and in ways hard to notice.",
+            "Only after one leaves the country.",
+            "Never, no matter how old you are."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'more subtle and gradual than people expect' 的转述。"
+        },
+        {
+          "stem": "What does the writer say really comes with turning eighteen?",
+          "options": [
+            "Both new freedoms and new responsibilities.",
+            "Total freedom with no duties.",
+            "The end of all rules in life.",
+            "A guaranteed well-paid job."
+          ],
+          "answer_index": 0,
+          "explanation": "末段说新自由伴随新责任,被信任开始自己做决定,为其概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "My First Driving Test",
+      "topic_cn": "记叙·盼望考驾照",
+      "body": "Bethany cannot wait to turn eighteen. Ever since leaving school she has been earning a wage, yet she still cannot vote in the next election because she is not quite old enough. She finds this unfair: if you are old enough to work and pay tax, she argues, you should have a say in how the government spends it. Bethany has also been taking driving lessons, and she plans to sit her driving test on the very day she turns eighteen. Her mother is worried. As an ambulance driver, her mum has seen many accidents involving young people, and she believes the legal age for a licence should be twenty-one. Bethany understands her mother's fear, but she does not fully agree. To her, being behind the wheel is not only a freedom but also a serious duty. She feels mature enough to know that driving means caring for her own life and the lives of everyone else on the road.",
+      "vocab_notes": [
+        {
+          "word": "wage",
+          "cn": "工资"
+        },
+        {
+          "word": "ambulance",
+          "cn": "救护车"
+        },
+        {
+          "word": "legal",
+          "cn": "合法的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does Bethany feel the voting rule is unfair?",
+          "options": [
+            "Because she dislikes all elections.",
+            "Because she works and pays tax yet still cannot vote.",
+            "Because she has never had a job.",
+            "Because she is already over twenty-one."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'old enough to work and pay tax… should have a say' 的转述。"
+        },
+        {
+          "stem": "Why is Bethany's mother worried about her driving?",
+          "options": [
+            "She thinks Bethany cannot afford a car.",
+            "She wants Bethany to become an ambulance driver.",
+            "She has witnessed many crashes involving young drivers.",
+            "She believes driving is no longer useful."
+          ],
+          "answer_index": 2,
+          "explanation": "原文母亲作为救护车司机见过许多涉及年轻人的事故,为其转述。"
+        },
+        {
+          "stem": "How does Bethany view being allowed to drive?",
+          "options": [
+            "As something completely without risk.",
+            "As a way to avoid paying tax.",
+            "As a hobby with no link to safety.",
+            "As a freedom that also brings real responsibility."
+          ],
+          "answer_index": 3,
+          "explanation": "末段说开车既是自由也是认真负责的责任,为其概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Still Living at Home",
+      "topic_cn": "记叙·成年后仍住在家",
+      "body": "People say that eighteen begins a new chapter and that we should quickly become independent. Morgan used to believe this too. He assumed that as soon as he turned eighteen he would already have a well-paid job and be moving into a rented apartment of his own. Reality turned out to be quite different. His salary as a junior librarian is small, so for now he still lives at home with his parents. Because he helps with the household bills and his commute to work is expensive, he finds it hard to save any money at all. Morgan knows he could take out a bank loan to pay the deposit on a flat, but he does not feel ready to make that kind of commitment yet. Besides, he rather enjoys his mother's cooking. Looking back, he has come to a quiet conclusion: some kinds of responsibility have far more to do with attitude than with a person's age.",
+      "vocab_notes": [
+        {
+          "word": "commute",
+          "cn": "通勤路程"
+        },
+        {
+          "word": "deposit",
+          "cn": "押金"
+        },
+        {
+          "word": "commitment",
+          "cn": "承诺"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What had Morgan expected life at eighteen to be like?",
+          "options": [
+            "Having a good job and his own rented flat.",
+            "Living with his parents for many more years.",
+            "Earning nothing and studying full-time.",
+            "Travelling around the world alone."
+          ],
+          "answer_index": 0,
+          "explanation": "原文他原以为会有高薪工作并搬进出租公寓,为其转述。"
+        },
+        {
+          "stem": "Why does Morgan find it hard to save money?",
+          "options": [
+            "He spends it all on holidays abroad.",
+            "He helps with bills and pays a costly commute.",
+            "He refuses to do any paid work.",
+            "He gives all his wage to charity."
+          ],
+          "answer_index": 1,
+          "explanation": "原文他分担家庭账单、通勤又贵,为其转述。"
+        },
+        {
+          "stem": "What conclusion does Morgan finally reach?",
+          "options": [
+            "That money matters more than family.",
+            "That everyone should move out at eighteen.",
+            "That responsibility depends on attitude more than age.",
+            "That bank loans are always a mistake."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'more about attitude than age' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Bittersweet Moments",
+      "topic_cn": "议论·珍惜成长中的时刻",
+      "body": "Like a piece of music, life has its high notes and its low ones, and somewhere in between lie the moments we call bittersweet. For students, these moments often come from school life: sitting an important exam, giving a speech in front of the class, or becoming a boarder and living away from home for the very first time. Such experiences can feel both exciting and a little frightening. As we grow older, life offers us even more varied experiences. We start university, take our first job, and one day raise a family of our own. Each of these steps brings its own mix of joy and worry. Whatever choices we make along the way, we should learn to cherish and embrace these moments rather than rush past them. After all, every single step we take, however small, is one more step forward on the journey of becoming a stronger and better person.",
+      "vocab_notes": [
+        {
+          "word": "bittersweet",
+          "cn": "苦乐参半的"
+        },
+        {
+          "word": "varied",
+          "cn": "各种各样的"
+        },
+        {
+          "word": "cherish",
+          "cn": "珍视"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer compare life to at the beginning?",
+          "options": [
+            "A long and difficult exam.",
+            "A race that must be won quickly.",
+            "A book that nobody reads.",
+            "A piece of music with high and low notes."
+          ],
+          "answer_index": 3,
+          "explanation": "原文把生活比作有高低音的乐曲,为其转述。"
+        },
+        {
+          "stem": "Which of these is given as a bittersweet moment of school life?",
+          "options": [
+            "Living away from home as a boarder for the first time.",
+            "Buying a brand-new mobile phone.",
+            "Winning a large sum of money.",
+            "Watching television at the weekend."
+          ],
+          "answer_index": 0,
+          "explanation": "原文列举 becoming a boarder 等校园时刻,为其转述。"
+        },
+        {
+          "stem": "What does the writer advise us to do with these moments?",
+          "options": [
+            "Forget them as fast as possible.",
+            "Value them instead of hurrying past.",
+            "Avoid them whenever we can.",
+            "Keep them secret from everyone."
+          ],
+          "answer_index": 1,
+          "explanation": "原文劝我们 cherish and embrace 这些时刻,为其转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Money and Independence",
+      "topic_cn": "说明·成年与金钱管理",
+      "body": "One surprising part of turning eighteen is how differently society starts to treat you with money. Lin Ning was amazed when a bank contacted him with a credit card offer soon after his birthday. Of course, like most young people, he would enjoy having more freedom with money. Yet he knows he does not have a steady income, so a credit card might tempt him to spend far more than he actually has. Being trusted with money, he realised, is not the same as being ready for it. Real independence is not about how much you can borrow, but about how wisely you can plan. A loan can help you pay a deposit on a flat, but it also becomes a promise you must keep for years. Lin Ning has decided to wait. He would rather build good habits first, save a little each month, and only take on debt when he truly understands what it will cost him.",
+      "vocab_notes": [
+        {
+          "word": "steady",
+          "cn": "稳定的"
+        },
+        {
+          "word": "tempt",
+          "cn": "诱惑"
+        },
+        {
+          "word": "loan",
+          "cn": "贷款"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why might a credit card be risky for Lin Ning?",
+          "options": [
+            "It would force him to leave his job.",
+            "It is not accepted in any shop.",
+            "It could lead him to spend more than he can afford.",
+            "It must be paid back within one day."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说没有稳定收入,信用卡可能诱使他超支,为其转述。"
+        },
+        {
+          "stem": "What does Lin Ning believe real independence is about?",
+          "options": [
+            "Borrowing as much money as possible.",
+            "Owning the newest things first.",
+            "Never using a bank at all.",
+            "Planning your money wisely."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'about how wisely you can plan' 的转述。"
+        },
+        {
+          "stem": "What has Lin Ning decided to do for now?",
+          "options": [
+            "Build good habits and save before borrowing.",
+            "Take the largest loan he can get.",
+            "Buy a flat immediately with a credit card.",
+            "Stop earning a wage completely."
+          ],
+          "answer_index": 0,
+          "explanation": "末段说他决定先养成好习惯、每月存钱再借贷,为其概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Lesson in Integrity",
+      "topic_cn": "记叙·成长与正直",
+      "body": "When Daniel got his first part-time job at a small shop, he thought growing up just meant earning his own wage. One quiet afternoon, a customer paid for her shopping and left without taking her change. It was only a few coins, and no one had noticed. For a moment Daniel was tempted to slip the money into his own pocket. Then he remembered something his grandmother always said: integrity means doing the right thing even when nobody is watching. He ran out of the shop and returned the change to the surprised customer. She thanked him warmly and later told his manager how honest he had been. That evening Daniel felt prouder than he had ever felt about any wage. He understood that becoming an adult was not only about new freedoms or money. It was also about the quiet, everyday choices that slowly shape the kind of person you decide to be.",
+      "vocab_notes": [
+        {
+          "word": "integrity",
+          "cn": "正直"
+        },
+        {
+          "word": "tempt",
+          "cn": "诱惑"
+        },
+        {
+          "word": "wage",
+          "cn": "工资"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Daniel first think growing up was mainly about?",
+          "options": [
+            "Travelling far from home.",
+            "Earning money of his own.",
+            "Passing his driving test.",
+            "Living completely alone."
+          ],
+          "answer_index": 1,
+          "explanation": "原文他起初以为长大就是赚自己的工资,为其转述。"
+        },
+        {
+          "stem": "What did Daniel finally do about the customer's change?",
+          "options": [
+            "He quietly kept the coins for himself.",
+            "He handed it to another customer.",
+            "He gave the money back to her.",
+            "He left it lying on the counter."
+          ],
+          "answer_index": 2,
+          "explanation": "原文他追出去把零钱还给顾客,为其转述。"
+        },
+        {
+          "stem": "What did this experience teach Daniel about adulthood?",
+          "options": [
+            "That money is the only thing that matters.",
+            "That honesty is too much trouble.",
+            "That no one ever notices good behaviour.",
+            "That small honest choices shape who you become."
+          ],
+          "answer_index": 3,
+          "explanation": "末段说成年也在于日常诚实的小选择塑造人格,为其概括。"
+        }
+      ]
+    }
+  ]
+}

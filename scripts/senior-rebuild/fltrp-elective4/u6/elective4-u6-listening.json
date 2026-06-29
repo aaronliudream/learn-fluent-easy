@@ -1,0 +1,421 @@
+{
+  "volume": "elective4",
+  "unit": "U6",
+  "topic": "The Call of the Challenger",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社新标准选择性必修第四册 Unit 6 同主题听力(报名太空营/首位航天员/采访宇航员日常/航天员训练/外星生命/勇气贴士)。用词限本单元/常见词,答案唯一可在 transcript 找到依据,与读·完形关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U6 听力·对话 Joining the Space Camp",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Leo, have you seen the advertisement for the summer space camp?",
+        "Leo: Yes! They say you can try a real flight simulator there.",
+        "Mia: That sounds awesome. Do you think we are brave enough to join?",
+        "Leo: Of course. We only need to submit a short video about ourselves.",
+        "Mia: I'm a little nervous, but I really want to learn about astronomy.",
+        "Leo: Me too. My dream is to become an astronaut one day.",
+        "Mia: Then let's apply together this weekend.",
+        "Leo: Great idea. We can help each other write the video."
+      ],
+      "translation_cn": "米娅问里奥有没有看到暑期太空营的广告;里奥说能体验真正的飞行模拟器;米娅觉得很棒,但担心他们是否够勇敢;里奥说只需提交一段自我介绍的短视频;米娅有点紧张但很想学天文学;里奥的梦想是当宇航员;两人决定周末一起申请、互相帮忙拍视频。",
+      "questions": [
+        {
+          "stem": "What can people try at the space camp?",
+          "options": [
+            "A real flight simulator.",
+            "A fishing boat.",
+            "A racing car.",
+            "A cooking class."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do they need to submit to join?",
+          "options": [
+            "A long written exam.",
+            "A short video about themselves.",
+            "A doctor's letter.",
+            "A photo of their school."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Mia feel about joining?",
+          "options": [
+            "A little nervous but eager.",
+            "Completely bored.",
+            "Angry with Leo.",
+            "Too tired to care."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Leo's dream?",
+          "options": [
+            "To open a restaurant.",
+            "To become an astronaut one day.",
+            "To stop studying science.",
+            "To travel by ship only."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When do they decide to apply?",
+          "options": [
+            "Next year.",
+            "Never.",
+            "This weekend.",
+            "In ten years."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U6 听力·短文 The First Person in Space",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In 1961, Yuri Gagarin became the first person to travel into space.",
+        "His flight lasted less than two hours, but it changed history.",
+        "Millions of people were amazed that a human could orbit the Earth.",
+        "His courage opened the door for many astronauts who came after him.",
+        "Today we still remember him as a hero of space exploration."
+      ],
+      "translation_cn": "1961年,尤里·加加林成为首位进入太空的人;他的飞行不到两个小时,却改变了历史;数百万人惊叹于人类竟能绕地球飞行;他的勇气为后来的许多宇航员打开了大门;今天我们仍把他当作太空探索的英雄铭记。",
+      "questions": [
+        {
+          "stem": "What did Yuri Gagarin become in 1961?",
+          "options": [
+            "The first teacher in space.",
+            "The first man on the Moon.",
+            "The first to build a rocket.",
+            "The first person to travel into space."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How long did his flight last?",
+          "options": [
+            "Less than two hours.",
+            "A whole week.",
+            "Exactly one day.",
+            "Several months."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why were millions of people amazed?",
+          "options": [
+            "He flew an aeroplane.",
+            "A human could orbit the Earth.",
+            "He climbed a mountain.",
+            "He swam across a sea."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did his courage do for others?",
+          "options": [
+            "It ended all space travel.",
+            "It made people afraid.",
+            "It opened the door for later astronauts.",
+            "It closed the space programme."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How is Gagarin remembered today?",
+          "options": [
+            "As an unknown traveller.",
+            "As a famous cook.",
+            "As a sports star.",
+            "As a hero of space exploration."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U6 听力·对话 Asking an Astronaut about Daily Life",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Student: Excuse me, what is the hardest part of living in space?",
+        "Astronaut: Even simple tasks become difficult without gravity.",
+        "Student: Really? Can you give me an example?",
+        "Astronaut: Yes. We have to strap ourselves down just to sleep safely.",
+        "Student: That sounds strange. How do you stay healthy up there?",
+        "Astronaut: We must exercise every day, or our muscles grow weak.",
+        "Student: What about eating? Is that difficult too?",
+        "Astronaut: A little. Salt and pepper come in liquid form, or they would float away."
+      ],
+      "translation_cn": "学生问宇航员在太空生活最难的是什么;宇航员说没有重力,连简单的事都变难;比如睡觉时得把自己绑住才安全;为保持健康必须每天锻炼,否则肌肉会变弱;吃东西也有点难,盐和胡椒做成液体,否则会漂走。",
+      "questions": [
+        {
+          "stem": "What becomes difficult without gravity?",
+          "options": [
+            "Even simple daily tasks.",
+            "Only very hard tasks.",
+            "Nothing at all.",
+            "Just reading books."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What must astronauts do just to sleep safely?",
+          "options": [
+            "Turn off the lights.",
+            "Strap themselves down.",
+            "Hold hands together.",
+            "Float near the door."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do astronauts exercise every day?",
+          "options": [
+            "To win a sports prize.",
+            "Because they are bored.",
+            "So their muscles do not grow weak.",
+            "To stay warm at night."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How do salt and pepper come in space?",
+          "options": [
+            "In huge dry bags.",
+            "Frozen into ice.",
+            "Mixed into bread.",
+            "In liquid form."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why are they in liquid form?",
+          "options": [
+            "Otherwise they would float away.",
+            "To make them taste better.",
+            "To save money.",
+            "Because they are heavier."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U6 听力·短文 How Astronauts Train",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Becoming an astronaut takes years of hard training.",
+        "Trainees learn to stay calm in a flight simulator that feels completely real.",
+        "They also practise moving in special pools that copy zero gravity.",
+        "Self-discipline is just as important as physical strength.",
+        "Only those who never give up are ready for a real mission."
+      ],
+      "translation_cn": "成为宇航员需要多年的艰苦训练;学员在逼真的飞行模拟器里学会保持冷静;他们还在模拟零重力的特殊水池中练习活动;自律和体力同样重要;只有从不放弃的人才准备好执行真正的任务。",
+      "questions": [
+        {
+          "stem": "How long does astronaut training take?",
+          "options": [
+            "Only one afternoon.",
+            "Years of hard training.",
+            "A single week.",
+            "No training at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the flight simulator feel like?",
+          "options": [
+            "Rather boring.",
+            "Cold and wet.",
+            "Completely real.",
+            "Loud and bright."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do the special pools copy?",
+          "options": [
+            "A busy market.",
+            "A hot desert.",
+            "A deep forest.",
+            "Zero gravity."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is just as important as physical strength?",
+          "options": [
+            "Self-discipline.",
+            "Good luck.",
+            "Loud music.",
+            "A fast car."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Who is ready for a real mission?",
+          "options": [
+            "Those who arrive late.",
+            "Those who never give up.",
+            "Those who dislike science.",
+            "Those who refuse to train."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U6 听力·对话 Is There Life Out There?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Sophie: Do you think there is life on other planets, Eric?",
+        "Eric: There must be millions of planets like ours, so it seems likely.",
+        "Sophie: But we have found no clear evidence of it at all.",
+        "Eric: That's true. Some scientists call this puzzle the Fermi Paradox.",
+        "Sophie: If life exists, do you think it would look like us?",
+        "Eric: Maybe, maybe not. Evolution might take a very different path.",
+        "Sophie: I really hope we make contact one day.",
+        "Eric: So do I, but the distances in space are simply enormous."
+      ],
+      "translation_cn": "苏菲问埃里克是否相信外星有生命;埃里克说一定有数百万颗像地球的行星,所以似乎很可能;可苏菲说至今没有确凿证据;埃里克说这个谜被称作费米悖论;苏菲问外星生命会不会像人类;埃里克说也许像也许不像,进化可能走完全不同的路;两人都希望有朝一日能联系上,但太空距离实在太遥远。",
+      "questions": [
+        {
+          "stem": "Why does Eric think life is likely?",
+          "options": [
+            "He has seen aliens himself.",
+            "A book told him so.",
+            "There must be millions of planets like ours.",
+            "There is only one planet."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What have they found no clear evidence of?",
+          "options": [
+            "Water on the Moon.",
+            "New stars in the sky.",
+            "Rockets near Saturn.",
+            "Life on other planets."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do some scientists call this puzzle?",
+          "options": [
+            "The Fermi Paradox.",
+            "The Milky Way.",
+            "The naked eye.",
+            "The lunar landing."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why might alien life look different from us?",
+          "options": [
+            "The weather is hotter.",
+            "Evolution might take a different path.",
+            "They eat different food.",
+            "They are much older."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Eric say makes contact hard?",
+          "options": [
+            "The lack of telescopes.",
+            "The cost of food.",
+            "The enormous distances in space.",
+            "The noise of rockets."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U6 听力·短文 A Word about Courage",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is something to remember about exploring the unknown.",
+        "Real courage does not mean feeling no fear at all.",
+        "It means doing the right thing even when you are afraid.",
+        "The early astronauts knew the danger, yet they still climbed aboard.",
+        "Whenever you face a challenge, take a deep breath and keep going."
+      ],
+      "translation_cn": "关于探索未知,有一点值得记住:真正的勇气并不是毫无恐惧;而是即使害怕也去做对的事;早期的宇航员明知危险,却仍然登上飞船;每当你面对挑战,深吸一口气,继续前行。",
+      "questions": [
+        {
+          "stem": "What does real courage not mean?",
+          "options": [
+            "Working very hard.",
+            "Helping your friends.",
+            "Reading many books.",
+            "Feeling no fear at all."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does courage really mean?",
+          "options": [
+            "Doing the right thing even when afraid.",
+            "Running away from danger.",
+            "Never trying anything new.",
+            "Waiting for others to act."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did the early astronauts know?",
+          "options": [
+            "The price of their suits.",
+            "The danger of their journey.",
+            "The names of all stars.",
+            "The way back home only."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did they do despite the danger?",
+          "options": [
+            "They stayed at home.",
+            "They cancelled the flight.",
+            "They still climbed aboard.",
+            "They sold their rocket."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should you do when you face a challenge?",
+          "options": [
+            "Give up at once.",
+            "Forget about it.",
+            "Blame other people.",
+            "Take a deep breath and keep going."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "elective2",
+  "unit": "U5",
+  "topic": "Describe How a Place Has Changed(用形式宾语 it 描述一个地方的变化)",
+  "title_en": "How Our Wetland Came Back to Life",
+  "genre": "说明 / 记叙(describe the changes of a place + show care for nature)",
+  "source": "外研社选择性必修第二册 Unit 5 Using language:describe how a place has changed using 'it as an empty object'(形式宾语 it)。",
+  "prompt_cn": "假设你是李华,你家附近曾经荒废的湿地经过保护重新焕发生机。请用英语写一篇约80词的短文,内容包括:① 这个地方过去是什么样子;② 人们做了什么来改变它;③ 现在的样子以及你的感受。要求:至少使用一处形式宾语 it 结构(如 find/make/think it + 形容词/名词 + to do / that 从句),句子地道、紧扣主题。",
+  "prompt_en": "Suppose you are Li Hua. A once-ruined wetland near your home has come back to life after people worked to protect it. Write a short passage (about 80 words) including: 1) what the place used to be like; 2) what people did to change it; 3) what it is like now and how you feel. Use the formal object 'it' at least once (e.g. find/make/think it + adj./n. + to do / that…).",
+  "points": [
+    "过去的样子(The wetland used to be… / Years ago it was…)",
+    "人们的行动(People made it a goal to clean… / We found it necessary to…)",
+    "现在的变化与感受(Now it is clear that… / I think it wonderful to…)",
+    "至少一处形式宾语 it,句句围绕主题"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Years ago, the wetland near my home was a sad sight. The water was dirty, and people found it hard to spot a single bird there. Then our town made it a goal to bring the place back to life. Workers cleared the rubbish, planted reeds and asked everyone not to disturb the wildlife. Slowly the water became clear again. Now it is clear that nature can recover when we care. I think it wonderful to watch the birds return each spring.",
+  "model_translation": "几年前,我家附近的湿地是一片令人难过的景象。水很脏,人们很难在那儿看到一只鸟。后来我们镇把让这个地方重焕生机当作目标。工人们清走垃圾、种上芦苇,还请大家不要打扰野生动物。慢慢地,水又变清了。如今很明显,只要我们用心,自然就能恢复。我觉得每年春天看着鸟儿归来真是太美好了。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:过去样子 / 人们的行动 / 现在变化与感受" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一个地方按时间展开、句句相关、过渡自然" },
+      { "dimension": "语言", "max": 5, "criteria": "至少一处形式宾语 it 用得自然准确,词汇句型多样,语法基本无误" }
+    ],
+    "required_structure": [
+      "过去 The wetland used to be …",
+      "行动 Our town made it a goal to …",
+      "形式宾语 People found it hard to … / Now it is clear that …",
+      "感受 I think it wonderful to …"
+    ],
+    "key_expressions": [
+      "People found it hard to spot a single bird there.",
+      "Our town made it a goal to bring the place back to life.",
+      "Now it is clear that nature can recover when we care.",
+      "I think it wonderful to watch the birds return each spring."
+    ],
+    "useful_words": ["wetland", "rubbish", "reeds", "disturb", "recover", "habitat", "protect", "clear", "wildlife", "return"]
+  },
+  "high_sentences": [
+    "People found it hard to spot a single bird there.",
+    "Our town made it a goal to bring the place back to life.",
+    "Now it is clear that nature can recover when we care.",
+    "I think it wonderful to watch the birds return each spring."
+  ],
+  "error_pairs": [
+    { "wrong": "We found hard to clean the lake.", "correct": "We found it hard to clean the lake.", "note": "不定式作宾语后移、又有形容词宾补时,必须用形式宾语 it 顶位。" },
+    { "wrong": "The town made clear that it cared about nature.", "correct": "The town made it clear that it cared about nature.", "note": "that 从句作宾语、后跟形容词宾补时,用 it 作形式宾语。" },
+    { "wrong": "I think wonderful to watch the birds.", "correct": "I think it wonderful to watch the birds.", "note": "think it + 形容词 + to do,不能漏掉 it。" }
+  ],
+  "paragraph_template": "【描述地方变化结构】\n第1句 过去:Years ago, … used to be …\n第2句 困难/对比:People found it hard to …\n第3-4句 行动:Our town made it a goal to … Workers cleared … and planted …\n第5句 现在与感受:Now it is clear that … I think it wonderful to …"
+}

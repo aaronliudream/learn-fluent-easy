@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U5",
+  "topic": "The Mysteries of the Maya",
+  "source": "外研社版选择性必修第四册 Unit 5 同主题完形(参观金字塔/丛林寻城/读懂玛雅历法/首次深潜/南极探险/黑暗深海)。用词限 U5/常见词,答案唯一,选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Visit to a Maya Pyramid",
+      "text": "Last summer my family travelled to Central America to (1)____ the ruins of an old Maya city. As we walked into the jungle, a huge stone (2)____ suddenly rose up in front of us, taller than any building I had ever seen. Our guide told us that the Maya had (3)____ it hundreds of years ago without any metal tools. I found that very hard to (4)____. From the top, we could see green forest stretching in every (5)____. The guide explained that the Maya were great watchers of the (6)____, and that their calendar was extremely (7)____. Walking among the silent stones, I began to (8)____ why so many people are drawn to this place. It felt as if the city still kept many (9)____ that no one had solved. That trip made me want to (10)____ more about ancient civilisations.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "visit",
+            "sell",
+            "throw",
+            "cook"
+          ],
+          "answer_index": 0,
+          "explanation": "visit the ruins 参观遗址。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "river",
+            "pyramid",
+            "song",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "a stone pyramid 石头金字塔。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "lost",
+            "built",
+            "bought"
+          ],
+          "answer_index": 2,
+          "explanation": "had built it 建造了它。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forget",
+            "sell",
+            "lose",
+            "believe"
+          ],
+          "answer_index": 3,
+          "explanation": "hard to believe 难以置信。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "direction",
+            "colour",
+            "price",
+            "sound"
+          ],
+          "answer_index": 0,
+          "explanation": "in every direction 朝各个方向。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "shops",
+            "stars",
+            "prices",
+            "games"
+          ],
+          "answer_index": 1,
+          "explanation": "watchers of the stars 观星者。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "cheap",
+            "loud",
+            "accurate",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "extremely accurate 极其精确。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "forget",
+            "sell",
+            "lose",
+            "understand"
+          ],
+          "answer_index": 3,
+          "explanation": "began to understand 开始明白。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "mysteries",
+            "prices",
+            "songs",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "many mysteries 许多谜团。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "learn",
+            "sell",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "learn more about 了解更多。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Lost City in the Jungle",
+      "text": "For many years, the explorer Maria had dreamed of finding a lost Maya city. With a small team, she finally (1)____ out into the thick jungle. The heat was terrible, and the (2)____ forest made it hard to see more than a few metres ahead. Many people had told her the city was only a (3)____, but she refused to give up. On the fifth day, her guide pointed at a strange (4)____ hill covered in trees. When they cleared away the plants, they found the (5)____ of an ancient wall. Maria could hardly (6)____ her eyes. Slowly, the shape of an old (7)____ appeared beneath the green. She felt sure that this discovery would (8)____ the interest of scientists everywhere. That night she wrote in her (9)____ that the jungle still hid more secrets than anyone could (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sold",
+            "lost",
+            "set",
+            "ate"
+          ],
+          "answer_index": 2,
+          "explanation": "set out 动身出发。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "empty",
+            "cheap",
+            "loud",
+            "tropical"
+          ],
+          "answer_index": 3,
+          "explanation": "tropical forest 热带森林。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "story",
+            "price",
+            "song",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "only a story 只是个传说。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cheap",
+            "low",
+            "loud",
+            "sweet"
+          ],
+          "answer_index": 1,
+          "explanation": "a low hill 低矮的小丘。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "prices",
+            "songs",
+            "ruins",
+            "games"
+          ],
+          "answer_index": 2,
+          "explanation": "the ruins of a wall 一段墙的废墟。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "forget",
+            "lose",
+            "believe"
+          ],
+          "answer_index": 3,
+          "explanation": "hardly believe her eyes 不敢相信自己的眼睛。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "pyramid",
+            "market",
+            "garden",
+            "shop"
+          ],
+          "answer_index": 0,
+          "explanation": "an old pyramid 一座古老的金字塔。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lose",
+            "draw",
+            "break",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "draw the interest 吸引兴趣。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "song",
+            "diary",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "wrote in her diary 写在日记里。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "lose",
+            "forget",
+            "imagine"
+          ],
+          "answer_index": 3,
+          "explanation": "more than anyone could imagine 超乎想象。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Reading the Maya Calendar",
+      "text": "The Maya are famous for their amazing (1)____, which could measure the year with great accuracy. To build it, they spent many nights (2)____ the movements of the stars and planets. They also created a (3)____ system of more than eight hundred signs. Some signs stood for whole words, while (4)____ stood for sounds. For a long time, no one could (5)____ what these signs meant, and the writing remained a complete (6)____. Slowly, modern scholars have (7)____ many of the signs, though some parts are still not clear. Each new discovery helps us (8)____ how clever this ancient people really were. It is (9)____ that they reached such knowledge without any modern machines. Studying the Maya makes me (10)____ how much skill lies hidden in the past.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "calendar",
+            "market",
+            "garden",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "amazing calendar 惊人的历法。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "selling",
+            "watching",
+            "eating",
+            "buying"
+          ],
+          "answer_index": 1,
+          "explanation": "watching the movements of the stars 观察星象。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "cooking",
+            "shopping",
+            "writing",
+            "farming"
+          ],
+          "answer_index": 2,
+          "explanation": "a writing system 书写系统。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "songs",
+            "games",
+            "others"
+          ],
+          "answer_index": 3,
+          "explanation": "while others 而另一些。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "understand",
+            "sell",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "understand what they meant 看懂含义。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "mystery",
+            "song",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "a complete mystery 完全的谜。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "lost",
+            "read",
+            "thrown"
+          ],
+          "answer_index": 2,
+          "explanation": "have read many signs 已读懂许多符号。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "lose",
+            "forget",
+            "see"
+          ],
+          "answer_index": 3,
+          "explanation": "helps us see 帮助我们看清。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "amazing",
+            "cheap",
+            "loud",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "It is amazing that 令人惊叹。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "realise",
+            "lose",
+            "forget"
+          ],
+          "answer_index": 1,
+          "explanation": "makes me realise 让我意识到。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Diver's First Deep Dive",
+      "text": "Tom had trained for months for his first (1)____ into the deep sea. Sitting inside the small underwater (2)____, he watched the sunlight slowly disappear as he sank. Soon everything around him was completely (3)____. His heart was beating fast, but he tried to (4)____ his fear and stay calm. Through the window he saw strange (5)____ that glowed in the darkness, creatures he had only seen in books. The (6)____ outside was so great that it could crush an ordinary boat. Tom carefully recorded (7)____ he saw, knowing the data would be useful to scientists. He realised how (8)____ of the ocean people had really explored. When at last he rose back towards the (9)____, he felt proud and amazed. That dive made him want to (10)____ into the secrets of the deep for the rest of his life.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "song",
+            "price",
+            "dive",
+            "game"
+          ],
+          "answer_index": 2,
+          "explanation": "his first dive 第一次下潜。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "market",
+            "shop",
+            "vessel"
+          ],
+          "answer_index": 3,
+          "explanation": "underwater vessel 潜水器。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "dark",
+            "cheap",
+            "loud",
+            "sweet"
+          ],
+          "answer_index": 0,
+          "explanation": "completely dark 一片漆黑。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "subdue",
+            "lose",
+            "buy"
+          ],
+          "answer_index": 1,
+          "explanation": "subdue his fear 克制恐惧。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "prices",
+            "songs",
+            "fish",
+            "games"
+          ],
+          "answer_index": 2,
+          "explanation": "strange fish 奇怪的鱼。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "song",
+            "noise",
+            "pressure"
+          ],
+          "answer_index": 3,
+          "explanation": "the pressure outside 外面的压力。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "whatever",
+            "whoever",
+            "however",
+            "whichever"
+          ],
+          "answer_index": 0,
+          "explanation": "recorded whatever he saw 记录所见的一切(指物作宾语)。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cheap",
+            "little",
+            "loud",
+            "sweet"
+          ],
+          "answer_index": 1,
+          "explanation": "how little of the ocean 海洋被探索得多么少。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "garden",
+            "market",
+            "surface",
+            "shop"
+          ],
+          "answer_index": 2,
+          "explanation": "towards the surface 朝水面。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "lose",
+            "buy",
+            "delve"
+          ],
+          "answer_index": 3,
+          "explanation": "delve into the secrets 探究奥秘。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "An Explorer at the South Pole",
+      "text": "More than a hundred years ago, the explorer Roald Amundsen set out to reach the South (1)____. The land ahead was completely (2)____, with no maps to guide him. Day after day, his team faced freezing winds and endless (3)____. Many people back home thought the journey was too (4)____ and warned him to turn back. But Amundsen refused to (5)____ from the challenge. He had planned every detail with great (6)____, and he trusted his team completely. At last, after weeks of hardship, they (7)____ the Pole and made history. Amundsen later wrote that real courage does not mean rushing blindly into (8)____. A wise explorer, he said, must always (9)____ twice and study the dangers first. His story still (10)____ young people to follow their dreams.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "Pole",
+            "price",
+            "song",
+            "game"
+          ],
+          "answer_index": 0,
+          "explanation": "the South Pole 南极。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cheap",
+            "uncharted",
+            "loud",
+            "sweet"
+          ],
+          "answer_index": 1,
+          "explanation": "completely uncharted 完全未标明的。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "songs",
+            "prices",
+            "snow",
+            "games"
+          ],
+          "answer_index": 2,
+          "explanation": "endless snow 无尽的冰雪。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cheap",
+            "loud",
+            "sweet",
+            "dangerous"
+          ],
+          "answer_index": 3,
+          "explanation": "too dangerous 太危险。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "shrink",
+            "sell",
+            "buy",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "shrink from the challenge 在挑战前退缩。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "care",
+            "song",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "with great care 非常用心。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "lost",
+            "reached",
+            "ate"
+          ],
+          "answer_index": 2,
+          "explanation": "reached the Pole 到达极点。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "song",
+            "game",
+            "danger"
+          ],
+          "answer_index": 3,
+          "explanation": "rushing into danger 冲入危险。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "think",
+            "sell",
+            "lose",
+            "buy"
+          ],
+          "answer_index": 0,
+          "explanation": "think twice 三思而行。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sells",
+            "inspires",
+            "loses",
+            "breaks"
+          ],
+          "answer_index": 1,
+          "explanation": "inspires young people 激励年轻人。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Life in the Dark Ocean",
+      "text": "The deepest parts of the ocean are among the strangest places on (1)____. No sunlight ever reaches them, so they are always (2)____. Yet, surprisingly, they are full of (3)____. Some fish there make their own light to find food in the blackness. Beautiful (4)____ grow slowly on the sea bed, adding only a millimetre or two each (5)____, so a single one may be thousands of years old. In the deepest (6)____, the water presses down with enormous force. For a long time, these places were beyond the (7)____ of human beings. Today, modern vessels allow scientists to (8)____ into this hidden world. Each dive helps us (9)____ how life can survive in such hard conditions. (10)____, the deep ocean may still hold many resources that we have not yet found.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "song",
+            "Earth",
+            "game"
+          ],
+          "answer_index": 2,
+          "explanation": "places on Earth 地球上的地方。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cheap",
+            "loud",
+            "sweet",
+            "dark"
+          ],
+          "answer_index": 3,
+          "explanation": "always dark 永远黑暗。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "life",
+            "prices",
+            "songs",
+            "games"
+          ],
+          "answer_index": 0,
+          "explanation": "full of life 充满生命。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "corals",
+            "songs",
+            "games"
+          ],
+          "answer_index": 1,
+          "explanation": "beautiful corals 美丽的珊瑚。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "song",
+            "year",
+            "game"
+          ],
+          "answer_index": 2,
+          "explanation": "each year 每年。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "markets",
+            "gardens",
+            "shops",
+            "trenches"
+          ],
+          "answer_index": 3,
+          "explanation": "the deepest trenches 最深的海沟。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "reach",
+            "price",
+            "song",
+            "game"
+          ],
+          "answer_index": 0,
+          "explanation": "beyond the reach of 超出……的能力范围。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "look",
+            "lose",
+            "buy"
+          ],
+          "answer_index": 1,
+          "explanation": "look into this world 探究这个世界。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "lose",
+            "understand",
+            "buy"
+          ],
+          "answer_index": 2,
+          "explanation": "helps us understand 帮助我们理解。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "Sadly",
+            "Never",
+            "Quietly",
+            "Furthermore"
+          ],
+          "answer_index": 3,
+          "explanation": "Furthermore 此外(补充新信息)。"
+        }
+      ]
+    }
+  ]
+}

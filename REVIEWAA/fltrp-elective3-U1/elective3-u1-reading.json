@@ -1,0 +1,338 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "topic": "It's All About Me!",
+  "source": "外研社选择性必修三 Unit 1 同主题阅读(自拍修图/形象改造/身材自信/疤痕实验/内在与外在美/文学中的丑与美)。词限本单元/初高中常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Living Behind a Screen",
+      "topic_cn": "说明·社交媒体上的形象",
+      "body": "Jade has always thought of herself as plain-looking, so she felt excited when she found a selfie app. With a single tap, it could remove her freckles, enlarge her eyes and slim her jawline. Soon she was spending hours every day editing her photos, posting them and checking her phone again and again for comments. Every new like seemed to boost her confidence, even if only for a moment. Her father called her a narcissist, but Jade replied that her pictures were hurting no one. A psychologist, however, sees a different story. To him, such obsessive editing is a sign that a person lacks self-confidence and badly wants attention. The polished face Jade shows the world is simply not real. The danger, he warns, is that people who keep pretending to be someone they are not slowly begin to misjudge who they truly are.",
+      "vocab_notes": [
+        {
+          "word": "selfie",
+          "cn": "自拍"
+        },
+        {
+          "word": "obsessive",
+          "cn": "痴迷的"
+        },
+        {
+          "word": "misjudge",
+          "cn": "错判;看错"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does Jade enjoy using the selfie app so much?",
+          "options": [
+            "The likes and comments make her feel more confident.",
+            "It helps her make new friends at school.",
+            "It earns her money from advertisers.",
+            "It teaches her how to take real photos."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Every new like seemed to boost her confidence' 的转述。"
+        },
+        {
+          "stem": "How does the psychologist explain Jade's behaviour?",
+          "options": [
+            "He thinks it is a harmless and healthy hobby.",
+            "He sees it as a sign of low confidence and a wish for attention.",
+            "He believes it will make her a professional model.",
+            "He says it proves she is naturally beautiful."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a sign that a person lacks self-confidence and badly wants attention' 的转述。"
+        },
+        {
+          "stem": "What does the psychologist warn may happen to such people?",
+          "options": [
+            "They may start to see their true selves wrongly.",
+            "They will become famous very quickly.",
+            "They will lose interest in their phones.",
+            "They will delete all their photos one day."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 '…slowly begin to misjudge who they truly are' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Surprising New You",
+      "topic_cn": "记叙·形象改造的发现",
+      "body": "Anthony had never cared about how he looked. While his sister owned seventeen lipsticks and spent ages choosing one each morning, he simply wore five identical shirts and five identical pairs of trousers. In his dormitory, his roommates were confused to see him in the same clothes day after day. As a joke, they signed him up for a television show called A New You. At first the whole idea felt bizarre, and he hated being reviewed from head to toe. Yet he was amazed by how good he looked after the makeover. For the first time, he saw himself as a handsome, well-presented young man. That experience changed his thinking. He realised that outer beauty is not worthless after all. It can be a way of expressing our personality and of leaving a warm, positive first impression on the people we meet. Even so, he knew it was only one part of who he was.",
+      "vocab_notes": [
+        {
+          "word": "identical",
+          "cn": "一模一样的"
+        },
+        {
+          "word": "makeover",
+          "cn": "形象改造"
+        },
+        {
+          "word": "bizarre",
+          "cn": "古怪的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What surprised Anthony's roommates about him?",
+          "options": [
+            "He owned many bottles of lipstick.",
+            "He always wore the very same kind of clothes.",
+            "He refused to live in the dormitory.",
+            "He spent hours choosing his outfit."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'his roommates were confused to see him in the same clothes day after day' 的转述。"
+        },
+        {
+          "stem": "How did Anthony feel about the show at the beginning?",
+          "options": [
+            "He was proud and excited to take part.",
+            "He thought it was a waste of money.",
+            "He found it strange and disliked being judged.",
+            "He believed it would make him famous."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'felt bizarre, and he hated being reviewed from head to toe' 的转述。"
+        },
+        {
+          "stem": "What did Anthony finally come to understand about outer beauty?",
+          "options": [
+            "It is completely useless to everyone.",
+            "It is the only thing that matters in life.",
+            "It should always be ignored by serious people.",
+            "It can help express character and leave a good impression."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 '…a way of expressing our personality and of leaving a warm, positive first impression' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Large and Happy",
+      "topic_cn": "记叙·身材自信",
+      "body": "Ever since she was little, Emma had been bigger than the other girls, and for years this troubled her deeply. Strangers would stare at her, and she hated the way she looked. Her worry pushed her to try every method she could think of to lose weight, including strict diets and weight-loss pills. Sadly, all of this brought her nothing but pain and poor health. Everything changed the day she read about a plus-size model who refused to follow the usual beauty stereotypes. Although larger than most models, the woman was attractive and full of confidence. Her story made Emma rethink what being beautiful really means. She decided that her health, both of body and of mind, mattered more than her size. Today Emma exercises a couple of times a week, not to become thin, but simply to feel well. As she puts it, being large and happy is far better than being skinny and unhappy.",
+      "vocab_notes": [
+        {
+          "word": "stereotype",
+          "cn": "刻板印象"
+        },
+        {
+          "word": "plus-size",
+          "cn": "大码的"
+        },
+        {
+          "word": "skinny",
+          "cn": "极瘦的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Emma do because she hated the way she looked?",
+          "options": [
+            "She tried many ways to lose weight, harming her health.",
+            "She stopped going outside completely.",
+            "She became a fashion model herself.",
+            "She asked doctors to change her face."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 '…try every method she could think of to lose weight… nothing but pain and poor health' 的转述。"
+        },
+        {
+          "stem": "What effect did the plus-size model's story have on Emma?",
+          "options": [
+            "It made her start a strict new diet.",
+            "It led her to rethink the meaning of beauty.",
+            "It made her give up exercise for good.",
+            "It made her feel jealous and sad."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'made Emma rethink what being beautiful really means' 的转述。"
+        },
+        {
+          "stem": "Why does Emma exercise now?",
+          "options": [
+            "To become as thin as possible.",
+            "To win a beauty competition.",
+            "To keep healthy and feel good, not to be thin.",
+            "To please the strangers who stare at her."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'not to become thin, but simply to feel well' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Scar That Was Not There",
+      "topic_cn": "说明·疤痕实验",
+      "body": "Some years ago, a researcher named Dr Robert Kleck carried out a clever experiment about how we see ourselves. Using Hollywood-style make-up, his team painted an ugly scar onto each volunteer's face and showed it to them in a mirror. Then, telling the volunteers that the make-up needed fixing, the team secretly wiped the scar away. The volunteers, however, still believed it was there. They went outside and watched how strangers treated them. Afterwards, most of them reported that people had been ruder and less kind, and that others had kept staring at the scar that no longer existed. The finding was striking. The volunteers had not really measured how others behaved; instead, they had measured their own fears. In other words, who we are lives mainly inside our heads. If people choose to feel ugly or unwelcome, the experiment suggests, they will often start to feel exactly that way.",
+      "vocab_notes": [
+        {
+          "word": "scar",
+          "cn": "疤痕"
+        },
+        {
+          "word": "volunteer",
+          "cn": "志愿者"
+        },
+        {
+          "word": "finding",
+          "cn": "研究结果"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Dr Kleck's team secretly do before the volunteers went outside?",
+          "options": [
+            "They made the scar look even worse.",
+            "They gave each volunteer a small mirror.",
+            "They painted a second scar on the face.",
+            "They removed the scar without telling them."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'secretly wiped the scar away' 的转述。"
+        },
+        {
+          "stem": "What did most volunteers report after going outside?",
+          "options": [
+            "That people treated them worse and stared at the scar.",
+            "That strangers were friendlier than usual.",
+            "That nobody noticed them at all.",
+            "That the make-up had completely disappeared."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'people had been ruder and less kind, and… kept staring' 的转述。"
+        },
+        {
+          "stem": "What is the main lesson of the experiment?",
+          "options": [
+            "Make-up can change how strangers behave.",
+            "How we feel about ourselves shapes what we notice.",
+            "Scars always make people unkind.",
+            "Volunteers should never trust mirrors."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'who we are lives mainly inside our heads' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "More Than Skin Deep",
+      "topic_cn": "议论·内在与外在美",
+      "body": "We often hear that it is a pretty person's world, and there is some truth in that. Studies show that a pleasant appearance can open doors and leave a good first impression. Yet the doctor in this unit reminds us not to overlook what lies beneath the surface. Inner beauty, he argues, is by far the more important kind, but external beauty still plays its part. Making a reasonable effort with how we look can boost our confidence and help others warm to us. The danger comes when appearance becomes everything. People who spend all their energy chasing a perfect face often grow more self-critical, not less. They make assumptions about how others judge them and forget that true attractiveness grows from kindness, honesty and good health. The wisest view, perhaps, is a balanced one: care for your appearance, but never let it decide your worth. After all, what people remember is how you made them feel.",
+      "vocab_notes": [
+        {
+          "word": "overlook",
+          "cn": "忽视"
+        },
+        {
+          "word": "self-critical",
+          "cn": "自我批判的"
+        },
+        {
+          "word": "assumption",
+          "cn": "假设;臆断"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the writer, what can a pleasant appearance do?",
+          "options": [
+            "It can solve every problem in life.",
+            "It can replace honesty and kindness.",
+            "It can create chances and a good first impression.",
+            "It can make inner beauty unnecessary."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'a pleasant appearance can open doors and leave a good first impression' 的转述。"
+        },
+        {
+          "stem": "What problem does the writer see in chasing a perfect face?",
+          "options": [
+            "It always costs too much money.",
+            "It makes people forget how to take photos.",
+            "It improves health too quickly.",
+            "People often become more self-critical, not happier."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'often grow more self-critical, not less' 的转述。"
+        },
+        {
+          "stem": "What is the writer's advice in the end?",
+          "options": [
+            "Look after your appearance without letting it define your worth.",
+            "Ignore your appearance completely.",
+            "Spend all your time on your looks.",
+            "Trust only what others say about you."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'care for your appearance, but never let it decide your worth' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "The Heart Behind the Face",
+      "topic_cn": "文学·丑陋外表下的美",
+      "body": "In a famous French novel, a man named Quasimodo is born with a frightful, almost monstrous appearance. People judge him by his looks alone and treat him cruelly, never guessing at the gentle heart he hides. When a kind young woman named Esmeralda offers him a simple drink of water, that small act of mercy captures his heart forever. Later, when she is in great danger, he risks everything to save her. As the two sit together, she keeps noticing fresh defects in his face, from his bent back to his single eye. Yet she also senses such deep sadness and gentleness in him that, little by little, her fear turns into compassion. Quasimodo, deaf and lonely, speaks of his ugliness with painful honesty. The story has been loved for almost two hundred years because it asks a question that still matters today: should a person be measured by an outward shape, or by the quality of the heart within?",
+      "vocab_notes": [
+        {
+          "word": "monstrous",
+          "cn": "骇人的"
+        },
+        {
+          "word": "compassion",
+          "cn": "怜悯"
+        },
+        {
+          "word": "defect",
+          "cn": "缺陷"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How do most people treat Quasimodo?",
+          "options": [
+            "They admire his great strength.",
+            "They judge him cruelly because of his looks.",
+            "They are frightened of his clever mind.",
+            "They quickly become his close friends."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'judge him by his looks alone and treat him cruelly' 的转述。"
+        },
+        {
+          "stem": "What changes Esmeralda's feelings towards Quasimodo?",
+          "options": [
+            "She discovers that he is rich.",
+            "She learns that he is famous.",
+            "She senses his sadness and gentleness, and feels pity.",
+            "She finds that his face is beautiful."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 '…her fear turns into compassion' 的转述。"
+        },
+        {
+          "stem": "Why is the story still loved today, according to the passage?",
+          "options": [
+            "It describes the city of Paris in detail.",
+            "It teaches readers how to swim.",
+            "It explains how to write a novel.",
+            "It raises a question about looks versus the heart."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 '…should a person be measured by an outward shape, or by the quality of the heart within' 的转述。"
+        }
+      ]
+    }
+  ]
+}

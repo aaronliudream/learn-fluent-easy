@@ -1,0 +1,43 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(敦煌主题,独立短文,不在阅读关出现)。短文3句+3题,答案转述非照抄,题目覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Li Wei first visited Dunhuang, she knew almost nothing about its long history. After a guide showed her the painted caves and explained the Silk Road, she began to understand why the small desert city had once been so important. By the end of the day, she felt proud that such treasures belonged to her own country.",
+    "questions": [
+      {
+        "q": "What was Li Wei's knowledge of Dunhuang's history at first?",
+        "options": [
+          "She had almost no knowledge of it.",
+          "She was already an expert on it.",
+          "She had studied it for many years.",
+          "She had visited the city before."
+        ],
+        "answer": "A",
+        "explanation": "首句说她起初对敦煌历史几乎一无所知 → 几乎不了解;其余与原文相反。"
+      },
+      {
+        "q": "What helped her understand why the city mattered?",
+        "options": [
+          "A guide's tour of the caves and talk about the Silk Road.",
+          "A book she read on the train home.",
+          "A film she watched the night before.",
+          "A lesson from her school teacher."
+        ],
+        "answer": "A",
+        "explanation": "第二句说导游带她看洞窟并讲解丝绸之路 → 导游的讲解;其余文中未提。"
+      },
+      {
+        "q": "How did she feel by the end of the day?",
+        "options": [
+          "Proud that such treasures were part of her country.",
+          "Bored and ready to leave.",
+          "Sorry that she had come at all.",
+          "Worried about the long journey back."
+        ],
+        "answer": "A",
+        "explanation": "末句说她为这些珍宝属于自己的国家而自豪 → 自豪;其余与原文相反。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U5",
+  "topic": "Revealing Nature",
+  "source": "外研社选必一 Unit 5 同主题完形(种植日记/命名新物种/蚂蚁交流/自然保护区/珊瑚礁/自然博物馆)。选项同词性,答案唯一,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My Plant Diary",
+      "text": "Last spring our science teacher gave each of us a single sunflower (1)____ to grow at home. I planted it in a small pot of soft (2)____ and put it on my sunny windowsill. For the first week, nothing seemed to (3)____, and I almost lost hope. Then one morning a tiny green (4)____ pushed its way up through the earth. I was so excited that I (5)____ to water it carefully every day. Slowly the plant grew (6)____ and strong, until it stood taller than my ruler. I used a centimetre ruler to (7)____ its height each week and wrote the numbers in my notebook. By midsummer, a single bright yellow (8)____ had opened at the top. Watching it change taught me how (9)____ nature can be. Now I understand why scientists love to (10)____ living things so closely.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "seed",
+            "stone",
+            "box",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "a sunflower seed 一颗向日葵种子。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "glass",
+            "soil",
+            "paper",
+            "metal"
+          ],
+          "answer_index": 1,
+          "explanation": "a pot of soil 一盆土。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sing",
+            "cook",
+            "happen",
+            "drive"
+          ],
+          "answer_index": 2,
+          "explanation": "nothing seemed to happen 似乎什么也没发生。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "clock",
+            "coin",
+            "letter",
+            "stem"
+          ],
+          "answer_index": 3,
+          "explanation": "a tiny green stem 一根嫩绿的茎。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "decided",
+            "refused",
+            "forgot",
+            "failed"
+          ],
+          "answer_index": 0,
+          "explanation": "decided to water it 决定给它浇水。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "late",
+            "tall",
+            "cheap",
+            "dark"
+          ],
+          "answer_index": 1,
+          "explanation": "grew tall and strong 长得又高又壮。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "throw",
+            "sell",
+            "measure",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "measure its height 测量它的高度。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "window",
+            "wheel",
+            "ticket",
+            "flower"
+          ],
+          "answer_index": 3,
+          "explanation": "a yellow flower 一朵黄花。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "amazing",
+            "boring",
+            "ugly",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "how amazing nature can be 自然多么神奇。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "study",
+            "leave",
+            "break"
+          ],
+          "answer_index": 1,
+          "explanation": "study living things 研究生物。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Naming a New Species",
+      "text": "Every year, scientists around the world (1)____ thousands of animals and plants that no one has ever described before. Finding a new (2)____ is exciting, but the real work has only just begun. First, the researchers must study the creature's (3)____, such as its size, colour and shape, very carefully. Then they compare it with its closest (4)____ to make sure it really is new. Giving the creature a proper name can (5)____ a long time, because the name must follow strict scientific rules. Sometimes a species is (6)____ after the place where it was first found; sometimes it honours the person who (7)____ it. Once the name is accepted, it is added to a worldwide (8)____ that all scientists can use. In this way, our knowledge of (9)____ slowly grows. Who knows how many strange creatures are still (10)____ to be discovered?",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "lose",
+            "discover",
+            "eat"
+          ],
+          "answer_index": 2,
+          "explanation": "discover thousands of animals 发现成千上万的动物。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "machine",
+            "season",
+            "price",
+            "species"
+          ],
+          "answer_index": 3,
+          "explanation": "a new species 一个新物种。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "features",
+            "prices",
+            "songs",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "the creature's features 生物的特征。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "enemies",
+            "relatives",
+            "buildings",
+            "markets"
+          ],
+          "answer_index": 1,
+          "explanation": "its closest relatives 与最近的近亲比较。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "buy",
+            "throw",
+            "take",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "can take a long time 可能花很长时间。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "lost",
+            "eaten",
+            "named"
+          ],
+          "answer_index": 3,
+          "explanation": "named after the place 以地点命名。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "found",
+            "forgot",
+            "hid",
+            "sold"
+          ],
+          "answer_index": 0,
+          "explanation": "the person who found it 发现它的人。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "garden",
+            "list",
+            "river",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "a worldwide list 一份全球名录。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "money",
+            "music",
+            "nature",
+            "sport"
+          ],
+          "answer_index": 2,
+          "explanation": "knowledge of nature 对自然的认识。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sleeping",
+            "leaving",
+            "paying",
+            "waiting"
+          ],
+          "answer_index": 3,
+          "explanation": "still waiting to be discovered 仍等待被发现。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "How Ants Talk",
+      "text": "Ants may be small, but they are among the best (1)____ in the animal world. A single ant living alone could not survive, yet a whole colony works together almost like one (2)____. To share information, ants use chemicals that they (3)____ from their bodies. When one ant finds food, it leaves a chemical trail so that others can easily (4)____ the way back. Ants also talk by gently (5)____ each other with their feelers. Some kinds even make tiny sounds by rubbing parts of their (6)____ together. Scientists who (7)____ ants closely have learned that every signal carries a clear (8)____. A danger signal, for example, makes the whole nest react at (9)____. By studying these busy insects, researchers hope to understand more about how living things (10)____ with one another.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "communicators",
+            "singers",
+            "drivers",
+            "cooks"
+          ],
+          "answer_index": 0,
+          "explanation": "the best communicators 最善于交流者。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "body",
+            "season",
+            "coin"
+          ],
+          "answer_index": 1,
+          "explanation": "like one body 像一个整体。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "buy",
+            "forget",
+            "release",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "release chemicals 释放化学物质。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lose",
+            "forget",
+            "break",
+            "follow"
+          ],
+          "answer_index": 3,
+          "explanation": "follow the way back 沿原路返回。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "touching",
+            "hitting",
+            "cooking",
+            "selling"
+          ],
+          "answer_index": 0,
+          "explanation": "touching each other gently 轻轻触碰彼此。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "clocks",
+            "bodies",
+            "books",
+            "coins"
+          ],
+          "answer_index": 1,
+          "explanation": "parts of their bodies 身体的部位。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "throw",
+            "hide",
+            "study",
+            "leave"
+          ],
+          "answer_index": 2,
+          "explanation": "scientists who study ants 研究蚂蚁的科学家。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "error",
+            "meaning"
+          ],
+          "answer_index": 3,
+          "explanation": "a clear meaning 明确的含义。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "once",
+            "least",
+            "all",
+            "last"
+          ],
+          "answer_index": 0,
+          "explanation": "react at once 立刻作出反应。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "disappear",
+            "communicate",
+            "sleep",
+            "fall"
+          ],
+          "answer_index": 1,
+          "explanation": "communicate with one another 彼此交流。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Visit to a Nature Reserve",
+      "text": "Last summer my family travelled to a huge nature (1)____ high on the Tibetan plateau. The air was thin and cold, but the (2)____ around us was breathtaking. Our guide explained that this protected area is (3)____ to many rare animals, including the Tibetan antelope. For years, these gentle creatures had been in (4)____, because hunters wanted their valuable wool. Thanks to the hard work of local (5)____, their numbers are slowly rising again. We were lucky enough to (6)____ a small group of them grazing in the distance. The guide warned us not to (7)____ the animals or make loud noises. He said that even a single careless visitor could (8)____ the peace of this fragile place. As I watched the antelope run freely across the (9)____, I understood why we must (10)____ such wild places for the future.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "market",
+            "factory",
+            "reserve",
+            "station"
+          ],
+          "answer_index": 2,
+          "explanation": "a nature reserve 自然保护区。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "traffic",
+            "noise",
+            "price",
+            "scenery"
+          ],
+          "answer_index": 3,
+          "explanation": "the scenery was breathtaking 景色令人惊叹。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "home",
+            "close",
+            "late",
+            "free"
+          ],
+          "answer_index": 0,
+          "explanation": "is home to many rare animals 是许多珍稀动物的家园。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "silence",
+            "danger",
+            "colour",
+            "order"
+          ],
+          "answer_index": 1,
+          "explanation": "had been in danger 曾处于危险中。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sellers",
+            "drivers",
+            "workers",
+            "cooks"
+          ],
+          "answer_index": 2,
+          "explanation": "local workers 当地工作人员。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "cook",
+            "throw",
+            "see"
+          ],
+          "answer_index": 3,
+          "explanation": "see a small group 看到一小群。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "disturb",
+            "draw",
+            "wash",
+            "count"
+          ],
+          "answer_index": 0,
+          "explanation": "not to disturb the animals 不要打扰动物。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "destroy",
+            "build",
+            "win"
+          ],
+          "answer_index": 1,
+          "explanation": "destroy the peace 破坏宁静。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "ceiling",
+            "market",
+            "grassland",
+            "page"
+          ],
+          "answer_index": 2,
+          "explanation": "run across the grassland 在草原上奔跑。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "forget",
+            "leave",
+            "protect"
+          ],
+          "answer_index": 3,
+          "explanation": "protect such wild places 保护这样的野外之地。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Life in a Coral Reef",
+      "text": "Beneath the warm waters of the ocean lies one of the richest (1)____ on our planet: the coral reef. Although a reef may look like colourful rock, it is actually (2)____ by millions of tiny living animals. These reefs are (3)____ to a huge variety of fish, turtles and other sea creatures. Each animal has developed special (4)____ that help it survive in this crowded underwater world. Some fish, for example, can change colour in order to (5)____ from their enemies. Sadly, many reefs around the world are now in (6)____, because the sea is growing warmer. When the water becomes too hot, the coral slowly loses its colour and may even (7)____. Scientists are working hard to (8)____ why this is happening and how it can be stopped. They warn that if we do not (9)____ these beautiful places, future children may never get the (10)____ to see them.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "habitats",
+            "markets",
+            "machines",
+            "prices"
+          ],
+          "answer_index": 0,
+          "explanation": "the richest habitats 最丰富的栖息地。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "built",
+            "eaten",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "built by millions of tiny animals 由无数小动物建成。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "late",
+            "free",
+            "home",
+            "cheap"
+          ],
+          "answer_index": 2,
+          "explanation": "are home to a huge variety 是众多生物的家园。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "songs",
+            "coins",
+            "features"
+          ],
+          "answer_index": 3,
+          "explanation": "special features 特殊的特征。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "hide",
+            "buy",
+            "cook",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "hide from their enemies 躲避天敌。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "colour",
+            "danger",
+            "order",
+            "silence"
+          ],
+          "answer_index": 1,
+          "explanation": "are now in danger 如今处于危险中。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sing",
+            "dance",
+            "die",
+            "laugh"
+          ],
+          "answer_index": 2,
+          "explanation": "may even die 甚至可能死亡。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "forget",
+            "ignore",
+            "sell",
+            "understand"
+          ],
+          "answer_index": 3,
+          "explanation": "understand why 弄清原因。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "protect",
+            "throw",
+            "leave",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "protect these beautiful places 保护这些美丽之地。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "chance",
+            "noise",
+            "error"
+          ],
+          "answer_index": 1,
+          "explanation": "get the chance to see them 有机会看到它们。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Day at the Natural History Museum",
+      "text": "On a rainy Saturday, our class visited the city's natural (1)____ museum. As soon as we walked in, we saw the huge skeleton of a (2)____ that had lived millions of years ago. Our teacher told us that scientists had carefully (3)____ its bones from the ground, piece by piece. In the next room, glass cases were (4)____ of insects, shells and dried plants from all over the world. One display explained how a famous (5)____ called Charles Darwin had changed the way people think about life. I was most interested in a wall that showed how a single (6)____ can slowly change into many new ones over a very long (7)____. Before we left, each of us had to (8)____ down three facts that we had learned. The visit (9)____ me that there is still so much about nature we do not (10)____. I cannot wait to go back again.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "garden",
+            "market",
+            "history",
+            "station"
+          ],
+          "answer_index": 2,
+          "explanation": "natural history museum 自然历史博物馆。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "computer",
+            "building",
+            "letter",
+            "dinosaur"
+          ],
+          "answer_index": 3,
+          "explanation": "the skeleton of a dinosaur 恐龙的骨架。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "removed",
+            "sold",
+            "eaten",
+            "sung"
+          ],
+          "answer_index": 0,
+          "explanation": "removed its bones from the ground 把骨头从地里取出。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "late",
+            "full",
+            "free",
+            "dark"
+          ],
+          "answer_index": 1,
+          "explanation": "were full of insects 装满了昆虫。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "singer",
+            "driver",
+            "scientist",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "a famous scientist 一位著名科学家。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "machine",
+            "price",
+            "song",
+            "species"
+          ],
+          "answer_index": 3,
+          "explanation": "a single species 一个单一物种。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "time",
+            "coin",
+            "road",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "over a very long time 在很长时间里。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "throw",
+            "write",
+            "wash",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "write down three facts 写下三个事实。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sold",
+            "lost",
+            "reminded",
+            "cooked"
+          ],
+          "answer_index": 2,
+          "explanation": "reminded me that 提醒我。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "hide",
+            "leave",
+            "know"
+          ],
+          "answer_index": 3,
+          "explanation": "we do not know 我们尚不知道。"
+        }
+      ]
+    }
+  ]
+}

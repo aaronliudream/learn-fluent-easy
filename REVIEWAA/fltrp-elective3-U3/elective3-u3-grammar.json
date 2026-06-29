@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "grammar_title": "主谓一致(1):集合名词 · and 连接的主语 · each/every/either/neither 与 a number of / the number of",
+  "source": "外研社版选择性必修第三册 Unit 3 Using language:Subject-verb agreement (1)。句子围绕 D-Day/二战/和平主题,靠语境(its/it/as one body 表整体;their/themselves/among themselves 表成员;就近原则)确保答案唯一。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "集合名词作主语(看作整体用单数 / 强调成员用复数)",
+      "overview": "army/enemy/team/crew/government/crowd/committee/jury/staff/nation 等集合名词:看作一个整体(常带 it / as one body / whole)时谓语用单数;强调内部成员各自动作(常带 their / themselves / among themselves / 复数代词)时用复数。police/people 等通常作复数。"
+    },
+    {
+      "code": "u3.02",
+      "point": "and 连接的主语(两者用复数 / 同一整体用单数)",
+      "overview": "and 连接两个不同的人或物 → 复数(常各带冠词或 both…and…);指同一个人/同一事物或固定搭配(bread and butter、war and peace、the general and commander 同指一人、aim and purpose 同一概念) → 单数。"
+    },
+    {
+      "code": "u3.03",
+      "point": "each/every/either/neither 与 a number of / the number of(含就近原则)",
+      "overview": "each/every/either/neither + 单数;every…and every… 与 many a + 单数。a number of + 复数,the number of + 单数。neither…nor…/either…or… 遵循就近原则(谓语与最近的主语一致)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "The whole army ____ ready to move the moment the order came.",
+      "options": [
+        "was",
+        "were",
+        "have",
+        "do"
+      ],
+      "answer_index": 0,
+      "explanation": "army 由 whole 强调为一个整体,看作单数,过去时用 was。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The enemy ____ hiding in their hundreds along the top of the cliffs.",
+      "options": [
+        "was",
+        "were",
+        "has",
+        "is"
+      ],
+      "answer_index": 1,
+      "explanation": "their hundreds 说明把 enemy 看作分散行动的成员,用复数 were。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Acting as one body, the government ____ decided to keep the date a secret.",
+      "options": [
+        "have",
+        "are",
+        "has",
+        "were"
+      ],
+      "answer_index": 2,
+      "explanation": "as one body 把 government 视为整体,用单数 has decided。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The small rescue team ____ led by a single captain who had survived Omaha Beach.",
+      "options": [
+        "were",
+        "have",
+        "are",
+        "was"
+      ],
+      "answer_index": 3,
+      "explanation": "由一名队长统领,team 作整体看,过去被动用 was led。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Working as one, the crew ____ able to reach the beach safely.",
+      "options": [
+        "was",
+        "were",
+        "have",
+        "do"
+      ],
+      "answer_index": 0,
+      "explanation": "as one 强调 crew 为一个整体,用单数 was。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The crew ____ divided among themselves about which route to take.",
+      "options": [
+        "was",
+        "were",
+        "has",
+        "is"
+      ],
+      "answer_index": 1,
+      "explanation": "among themselves 表明成员各持己见,用复数 were。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The planning committee ____ made up of officers from three countries.",
+      "options": [
+        "were",
+        "have",
+        "was",
+        "do"
+      ],
+      "answer_index": 2,
+      "explanation": "be made up of 把 committee 当作一个整体,用单数 was made up of。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The committee ____ still arguing among themselves at midnight.",
+      "options": [
+        "was",
+        "has",
+        "is",
+        "were"
+      ],
+      "answer_index": 3,
+      "explanation": "among themselves 强调成员之间各自争论,用复数 were。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The frightened crowd on the sand ____ unable to move, like one terrified mass.",
+      "options": [
+        "was",
+        "were",
+        "have",
+        "are"
+      ],
+      "answer_index": 0,
+      "explanation": "one terrified mass 把 crowd 看作整体,用单数 was。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The crowd ____ waving their flags and cheering the soldiers home.",
+      "options": [
+        "was",
+        "were",
+        "has",
+        "is"
+      ],
+      "answer_index": 1,
+      "explanation": "their flags 表明强调人群中的成员,用复数 were。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The ship's company ____ proud of what it had achieved that day.",
+      "options": [
+        "were",
+        "have",
+        "was",
+        "do"
+      ],
+      "answer_index": 2,
+      "explanation": "后文用 it 指代,说明把 company 看作整体,用单数 was。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The team of nurses ____ doing their best to save every wounded man.",
+      "options": [
+        "was",
+        "has",
+        "is",
+        "were"
+      ],
+      "answer_index": 3,
+      "explanation": "their best 表明强调护士们各自的努力,用复数 were。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Your enemy ____ a single, well-trained force that fights as one.",
+      "options": [
+        "is",
+        "are",
+        "have",
+        "do"
+      ],
+      "answer_index": 0,
+      "explanation": "a single force / fights as one 把 enemy 看作一个整体,现在时用单数 is。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The jury at the war trial ____ unable to agree among themselves.",
+      "options": [
+        "was",
+        "were",
+        "has",
+        "is"
+      ],
+      "answer_index": 1,
+      "explanation": "among themselves 强调陪审团成员意见不一,用复数 were。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The jury ____ going to give its verdict tomorrow morning.",
+      "options": [
+        "are",
+        "have",
+        "is",
+        "do"
+      ],
+      "answer_index": 2,
+      "explanation": "its verdict 用 it 指代,把 jury 看作整体,用单数 is。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The staff at the field hospital ____ doing their jobs without any rest.",
+      "options": [
+        "was",
+        "has",
+        "is",
+        "were"
+      ],
+      "answer_index": 3,
+      "explanation": "their jobs 强调工作人员各自忙碌,用复数 were。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The whole nation ____ grateful to the soldiers who had set it free.",
+      "options": [
+        "was",
+        "were",
+        "have",
+        "are"
+      ],
+      "answer_index": 0,
+      "explanation": "whole nation 及后文 it 把国家看作整体,用单数 was。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The police ____ still searching the ruined streets for hidden weapons.",
+      "options": [
+        "was",
+        "were",
+        "has",
+        "does"
+      ],
+      "answer_index": 1,
+      "explanation": "police 通常作复数对待,用复数 were。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The group of survivors ____ growing smaller as one by one its members pass away.",
+      "options": [
+        "are",
+        "have",
+        "is",
+        "do"
+      ],
+      "answer_index": 2,
+      "explanation": "its members 用 it 指代,把 group 看作整体,用单数 is。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Moving as one, the band ____ marching slowly past the war memorial.",
+      "options": [
+        "are",
+        "have",
+        "do",
+        "is"
+      ],
+      "answer_index": 3,
+      "explanation": "as one 强调乐队整体行进,用单数 is。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Britain and Canada ____ among the Allied nations that joined the landings.",
+      "options": [
+        "were",
+        "was",
+        "has",
+        "is"
+      ],
+      "answer_index": 0,
+      "explanation": "Britain and Canada 是两个国家,主语为复数,用 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Bread and butter ____ often all the soldiers had to eat at dawn.",
+      "options": [
+        "were",
+        "was",
+        "have",
+        "do"
+      ],
+      "answer_index": 1,
+      "explanation": "bread and butter 是一道食品的固定搭配,指同一事物,用单数 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The general and commander of the whole operation ____ the same man, Eisenhower.",
+      "options": [
+        "were",
+        "have",
+        "was",
+        "are"
+      ],
+      "answer_index": 2,
+      "explanation": "the general and commander 只用一个冠词、同指一人,用单数 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The general and the sergeant ____ arguing about when to attack.",
+      "options": [
+        "was",
+        "has",
+        "is",
+        "were"
+      ],
+      "answer_index": 3,
+      "explanation": "两个冠词说明是两个人,主语为复数,用 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "War and peace ____ the great theme running through this unit.",
+      "options": [
+        "is",
+        "are",
+        "have",
+        "do"
+      ],
+      "answer_index": 0,
+      "explanation": "war and peace 在此指同一个主题概念,用单数 is。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The captain and the sergeant ____ both wounded on the beach.",
+      "options": [
+        "was",
+        "were",
+        "has",
+        "is"
+      ],
+      "answer_index": 1,
+      "explanation": "both 和两个冠词都说明是两个人,用复数 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Their courage and their devotion ____ still remembered today.",
+      "options": [
+        "is",
+        "has",
+        "are",
+        "does"
+      ],
+      "answer_index": 2,
+      "explanation": "重复的 their 表明是两种品质,主语为复数,用 are。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Fish and chips ____ the simple meal the soldiers missed most.",
+      "options": [
+        "were",
+        "have",
+        "do",
+        "was"
+      ],
+      "answer_index": 3,
+      "explanation": "fish and chips 是一道菜的固定搭配,指同一事物,用单数 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The poet and soldier Laurence Binyon ____ written these famous lines.",
+      "options": [
+        "has",
+        "have",
+        "are",
+        "were"
+      ],
+      "answer_index": 0,
+      "explanation": "the poet and soldier 同指 Binyon 一人,用单数 has written。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The sea and the sky ____ both grey on the morning of the attack.",
+      "options": [
+        "was",
+        "were",
+        "has",
+        "is"
+      ],
+      "answer_index": 1,
+      "explanation": "the sea and the sky 是两样事物,加 both,用复数 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Law and order ____ slowly returning to the liberated towns.",
+      "options": [
+        "were",
+        "have",
+        "was",
+        "do"
+      ],
+      "answer_index": 2,
+      "explanation": "law and order 是表示同一概念的固定搭配,用单数 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Paris and the towns around it ____ freed by the end of August.",
+      "options": [
+        "was",
+        "has",
+        "is",
+        "were"
+      ],
+      "answer_index": 3,
+      "explanation": "Paris 与周边城镇是多处地点,主语为复数,用 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The needle and thread ____ all the nurse had to close the wound.",
+      "options": [
+        "was",
+        "were",
+        "have",
+        "do"
+      ],
+      "answer_index": 0,
+      "explanation": "needle and thread 作针线这一整体工具,用单数 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Eisenhower and his officers ____ confident of a full victory.",
+      "options": [
+        "was",
+        "were",
+        "has",
+        "is"
+      ],
+      "answer_index": 1,
+      "explanation": "Eisenhower 与众军官是多个人,主语为复数,用 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The aim and purpose of Operation Overlord ____ to free Europe.",
+      "options": [
+        "were",
+        "have",
+        "was",
+        "do"
+      ],
+      "answer_index": 2,
+      "explanation": "aim and purpose 指同一个目的,用单数 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Both the army and the navy ____ needed for the landings to succeed.",
+      "options": [
+        "was",
+        "has",
+        "is",
+        "were"
+      ],
+      "answer_index": 3,
+      "explanation": "both…and… 连接两支部队,主语为复数,用 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The moon and the tide ____ studied for weeks before the date was chosen.",
+      "options": [
+        "were",
+        "was",
+        "has",
+        "is"
+      ],
+      "answer_index": 0,
+      "explanation": "the moon and the tide 是两样事物,主语为复数,用 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The horror and the violence of that day ____ never forgotten by the survivors.",
+      "options": [
+        "was",
+        "were",
+        "has",
+        "is"
+      ],
+      "answer_index": 1,
+      "explanation": "重复冠词的 horror and violence 是两件事,主语为复数,用 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "His wife and his children ____ waiting at home for news of him.",
+      "options": [
+        "was",
+        "has",
+        "were",
+        "is"
+      ],
+      "answer_index": 2,
+      "explanation": "wife 与 children 是不同的人,主语为复数,用 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The cruelty and the waste of war ____ shown clearly in the film.",
+      "options": [
+        "is",
+        "has",
+        "does",
+        "are"
+      ],
+      "answer_index": 3,
+      "explanation": "重复冠词说明 cruelty 与 waste 是两件事,主语为复数,用 are。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Each of the soldiers ____ given a parachute before the night jump.",
+      "options": [
+        "was",
+        "were",
+        "have",
+        "are"
+      ],
+      "answer_index": 0,
+      "explanation": "each of + 复数名词,谓语仍用单数,过去被动用 was given。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Every man and woman in the unit ____ a part to play in the plan.",
+      "options": [
+        "have",
+        "had",
+        "were",
+        "are"
+      ],
+      "answer_index": 1,
+      "explanation": "every…and every/every…and… 结构作单数,过去用 had。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "A number of boats ____ hit by enemy fire that morning.",
+      "options": [
+        "was",
+        "has",
+        "were",
+        "is"
+      ],
+      "answer_index": 2,
+      "explanation": "a number of + 复数名词,谓语用复数 were。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The number of casualties ____ rising hour by hour.",
+      "options": [
+        "were",
+        "have",
+        "are",
+        "was"
+      ],
+      "answer_index": 3,
+      "explanation": "the number of 作主语指“数目”,用单数 was。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Neither of the two plans ____ perfect, but one had to be chosen.",
+      "options": [
+        "was",
+        "were",
+        "have",
+        "are"
+      ],
+      "answer_index": 0,
+      "explanation": "neither of + 复数名词,谓语用单数 was。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Either of these narrow routes ____ likely to be defended by the enemy.",
+      "options": [
+        "are",
+        "is",
+        "have",
+        "do"
+      ],
+      "answer_index": 1,
+      "explanation": "either of + 复数名词,谓语用单数 is。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Each soldier on the boat ____ his own heavy pack to carry.",
+      "options": [
+        "have",
+        "were",
+        "had",
+        "are"
+      ],
+      "answer_index": 2,
+      "explanation": "each + 单数名词作主语,谓语用单数,过去用 had。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "A number of survivors ____ still meeting every year to remember that day.",
+      "options": [
+        "is",
+        "has",
+        "does",
+        "are"
+      ],
+      "answer_index": 3,
+      "explanation": "a number of + 复数名词,谓语用复数 are。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The number of veterans who attend ____ smaller each year.",
+      "options": [
+        "is",
+        "are",
+        "have",
+        "do"
+      ],
+      "answer_index": 0,
+      "explanation": "the number of 指“数目”,作单数,用 is。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Every order from the commander ____ to be obeyed at once.",
+      "options": [
+        "have",
+        "had",
+        "were",
+        "are"
+      ],
+      "answer_index": 1,
+      "explanation": "every + 单数名词作主语,谓语用单数,过去用 had to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Neither the captain nor his men ____ willing to give up the beach.",
+      "options": [
+        "was",
+        "has",
+        "were",
+        "is"
+      ],
+      "answer_index": 2,
+      "explanation": "neither…nor… 遵循就近原则,靠近 men(复数),用 were。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Neither the men nor their captain ____ willing to retreat.",
+      "options": [
+        "were",
+        "have",
+        "are",
+        "was"
+      ],
+      "answer_index": 3,
+      "explanation": "neither…nor… 就近原则,靠近 captain(单数),用 was。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Either the general or his officers ____ going to make the final call.",
+      "options": [
+        "are",
+        "is",
+        "has",
+        "does"
+      ],
+      "answer_index": 0,
+      "explanation": "either…or… 就近原则,靠近 officers(复数),用 are。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Either the officers or the general ____ going to make the final call.",
+      "options": [
+        "are",
+        "is",
+        "have",
+        "does"
+      ],
+      "answer_index": 1,
+      "explanation": "either…or… 就近原则,靠近 general(单数),用 is。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Each of the landing boats ____ carrying about thirty men.",
+      "options": [
+        "were",
+        "have",
+        "was",
+        "are"
+      ],
+      "answer_index": 2,
+      "explanation": "each of + 复数名词,谓语用单数,过去进行用 was carrying。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "A large number of weapons ____ collected and locked away after the war.",
+      "options": [
+        "was",
+        "has",
+        "is",
+        "were"
+      ],
+      "answer_index": 3,
+      "explanation": "a large number of + 复数名词,谓语用复数 were。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The number of weapons handed in ____ greater than anyone had expected.",
+      "options": [
+        "was",
+        "were",
+        "have",
+        "are"
+      ],
+      "answer_index": 0,
+      "explanation": "the number of 指“数目”,作单数,用 was。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Every soldier and every nurse ____ remembered at the yearly ceremony.",
+      "options": [
+        "are",
+        "is",
+        "have",
+        "do"
+      ],
+      "answer_index": 1,
+      "explanation": "every…and every… 结构作单数,被动用 is remembered。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Neither of the brothers ____ able to forget the bombing of their city.",
+      "options": [
+        "were",
+        "have",
+        "was",
+        "are"
+      ],
+      "answer_index": 2,
+      "explanation": "neither of + 复数名词,谓语用单数 was。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Many a young man ____ marched to the front and never returned.",
+      "options": [
+        "have",
+        "are",
+        "were",
+        "has"
+      ],
+      "answer_index": 3,
+      "explanation": "many a + 单数名词作主语,谓语用单数 has marched。"
+    }
+  ]
+}

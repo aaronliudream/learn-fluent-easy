@@ -1,0 +1,48 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "listeningQuestions": [
+    { "audio": "In most countries, turning eighteen marks the start of adulthood.", "opts": ["在大多数国家,年满18岁标志着成年的开始。", "在大多数国家,孩子十岁就要工作。", "成年从来没有固定的年龄。", "没有人愿意长大成人。"], "answer": 0 },
+    { "audio": "This time tomorrow, I will be taking my driving test.", "opts": ["明天的这个时候,我正在考驾照。", "我昨天已经考过驾照了。", "我决定永远不学开车。", "我妈妈替我去考试。"], "answer": 0 },
+    { "audio": "He took out a bank loan to pay the deposit on his first apartment.", "opts": ["他为了买衣服而存钱。", "他申请银行贷款来支付第一套公寓的押金。", "他从不向银行借钱。", "他把公寓卖掉了。"], "answer": 1 },
+    { "audio": "Real maturity is also about the small, everyday choices you make.", "opts": ["真正的成熟只关乎年龄。", "成熟意味着不再做任何决定。", "真正的成熟也在于你每天做出的小选择。", "成熟和选择毫无关系。"], "answer": 2 },
+    { "audio": "Will you be using the computer this evening? If not, may I borrow it?", "opts": ["你昨晚用电脑了吗?", "电脑已经坏了。", "我把电脑借给了别人。", "今晚你会用电脑吗?如果不用,我能借吗?"], "answer": 3 },
+    { "audio": "Whatever our choices are, we should cherish these moments in life.", "opts": ["无论我们做什么选择,都应珍惜生命中的这些时刻。", "我们应该尽快忘掉这些时刻。", "选择对生活毫无意义。", "只有快乐的时刻才值得记住。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "At eighteen, you finally reach the ____, the age of majority.", "opts": ["milestone", "ambulance", "necktie", "deposit"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "I don't have a ____ income yet, so a credit card could be risky.", "opts": ["steady", "selfish", "bittersweet", "legal"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Growing up taught me that ____ means doing right even when no one watches.", "opts": ["integrity", "politics", "digestion", "routine"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The change has been more ____ and gradual than I had imagined.", "opts": ["subtle", "minimum", "varied", "household"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Don't call me at eight tonight — I ____ dinner with my family then.", "opts": ["will be having", "will have", "have", "had"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "While you are lying on the beach next week, I ____ for my final exams.", "opts": ["will be studying", "will study", "study", "studied"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "I promise I ____ the household bills as soon as I get my first wage.", "opts": ["will pay", "will be paying", "pay", "paid"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "\"____ the car tomorrow, Dad? I'd like to drive to the library.\"", "opts": ["Will you be needing", "Will you need", "Do you need", "Needed you"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["从前我自私,如今我学着替别人着想。", "我从来不关心任何人。", "我决定再也不长大。", "他把工资全花光了。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Instead of being the selfish teenager I used to be, I now think of others." },
+    { "q": "听句子选中文:", "opts": ["我明天反正要去图书馆,顺便帮你还书。", "我永远不去图书馆。", "图书馆今天关门了。", "我把你的书弄丢了。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "I will be going to the library tomorrow anyway, so I can return your books." }
+  ],
+  "reading": {
+    "passage": "Many teenagers think that turning eighteen will change everything overnight. In truth, growing up is a slow and gradual journey. Real maturity grows from the quiet, everyday choices we make, long after the birthday party is over.",
+    "passageCn": "许多青少年以为年满18岁会让一切一夜之间改变。事实上,成长是一段缓慢而循序渐进的旅程。真正的成熟来自我们每天做出的不起眼的选择——远在生日聚会结束之后很久。",
+    "questions": [
+      { "q": "What do many teenagers wrongly believe about turning eighteen?", "opts": ["That it changes everything overnight.", "That nothing will ever change.", "That they must leave home at once.", "That they will lose all freedom."], "answer": 0 },
+      { "q": "Where does real maturity come from, according to the passage?", "opts": ["From quiet, everyday choices.", "From a single birthday party.", "From earning lots of money.", "From never making decisions."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about your plans for the future. Say what you will be doing in a year, what you plan to study, and what job you hope to do. Try to use the future continuous, e.g. 'This time next year, I will be …'.",
+    "promptCn": "用3-4句话谈谈你对未来的计划:一年后你将在做什么、打算学什么、希望从事什么职业。试着用将来进行时,如 'This time next year, I will be …'。",
+    "sampleWords": ["future", "plan", "adult", "exam", "university", "study", "career", "judge", "will be", "hope"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking About Turning Eighteen",
+      "lines": [
+        { "role": "A", "text": "Your eighteenth birthday is coming. What are you most looking forward to?", "cn": "你快18岁了,最期待什么?" },
+        { "role": "B", "text": "Being able to vote, I think. And this time next month, I'll be taking my driving test!", "cn": "我想是能投票吧。而且下个月的这个时候,我就在考驾照了!" },
+        { "role": "A", "text": "That's exciting. Aren't you nervous about becoming an adult?", "cn": "真令人兴奋。你不紧张成为大人吗?" },
+        { "role": "B", "text": "Not really. Growing up is gradual, so I'll just take it one step at a time.", "cn": "不太紧张。成长是逐渐的,我会一步一步来。" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(自我认同主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Daniel used to compare himself with everyone he saw online, and he always felt that he came up short. One afternoon his little sister asked him why the boy in his photos never smiled the way he did at home. Her honest question made him realise that the perfect images were hiding the cheerful, kind person he truly was.",
+    "questions": [
+      {
+        "q": "How did Daniel feel when he compared himself with people online?",
+        "options": [
+          "He felt he was not good enough.",
+          "He felt proud and satisfied.",
+          "He felt bored and sleepy.",
+          "He felt richer than them."
+        ],
+        "answer": "A",
+        "explanation": "原文 'always felt that he came up short' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What did his sister's question help Daniel understand?",
+        "options": [
+          "That he should take more photos.",
+          "That his edited images hid his real, cheerful self.",
+          "That he needed a better phone.",
+          "That his sister disliked his pictures."
+        ],
+        "answer": "B",
+        "explanation": "末句 '…hiding the cheerful, kind person he truly was' 的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

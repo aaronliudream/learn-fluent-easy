@@ -1,0 +1,52 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "topic": "Writing about a Change(写一篇关于某种变化的短文)",
+  "title_en": "Something That Will Disappear",
+  "genre": "说明 / 议论(predict something that will disappear + reasons + supporting arguments)",
+  "source": "外研社新标准选择性必修二 Unit 3 Developing ideas:写一篇关于变化的短文——选一样你认为未来会消失的事物,说明原因并给出支持理由。",
+  "prompt_cn": "时代在变,有些事物正悄悄退出我们的生活。请用英语写一篇约100词的短文,内容包括:① 指出一样你认为未来会消失的事物;② 说明它消失的主要原因;③ 给出一两条支持你观点的理由。注意:行文连贯、围绕中心,适当用上过去进行被动语态(如 was being replaced)。",
+  "prompt_en": "Times are changing, and some things are quietly disappearing from our lives. Write a passage of about 100 words including: 1) one thing you think will disappear in the future; 2) the main reason why it will disappear; 3) one or two arguments to support your view. Try to use the past continuous passive (e.g. was being replaced) where it fits naturally.",
+  "points": [
+    "点明会消失的事物(I believe … will soon disappear.)",
+    "说明主要原因(The main reason is that …)",
+    "给出支持理由(What's more, … / Besides, …)",
+    "围绕中心、衔接自然,适当用过去进行被动"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "I believe the printed paper map will soon disappear from our daily lives. The main reason is simple: we no longer need it. Almost everyone now carries a mobile phone that can show the way at the touch of a button. Last year, when I visited a bookshop, I noticed that the shelves of paper maps were already being replaced by other goods. What's more, a phone map is always up to date, while a paper one quickly becomes old. It is also far lighter to carry. So, like the phone box before it, the paper map is becoming a thing of the past.",
+  "model_translation": "我认为纸质地图很快会从我们的日常生活中消失。原因很简单:我们不再需要它了。如今几乎人人都带着手机,一按键就能指路。去年我逛书店时,注意到摆放纸质地图的货架已经在被其他商品取代。而且,手机地图总是最新的,纸质地图却很快过时,携带起来也轻便得多。于是,就像之前的电话亭一样,纸质地图正在成为过去。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:点出消失之物 / 主要原因 / 支持理由" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一个事物展开、句句相关、衔接自然、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、过去进行被动等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题 I believe … will soon disappear.",
+      "原因 The main reason is that …",
+      "理由 What's more, … / Besides, …",
+      "收束 …, it is becoming a thing of the past."
+    ],
+    "key_expressions": [
+      "I believe the printed paper map will soon disappear.",
+      "The main reason is simple: we no longer need it.",
+      "The shelves of paper maps were already being replaced by other goods.",
+      "Like the phone box before it, the paper map is becoming a thing of the past."
+    ],
+    "useful_words": ["disappear", "reason", "replace", "no longer", "convenient", "up to date", "carry", "tablet", "mobile phone", "a thing of the past"]
+  },
+  "high_sentences": [
+    "I believe the printed paper map will soon disappear from our daily lives.",
+    "The shelves of paper maps were already being replaced by other goods.",
+    "A phone map is always up to date, while a paper one quickly becomes old.",
+    "Like the phone box before it, the paper map is becoming a thing of the past."
+  ],
+  "error_pairs": [
+    { "wrong": "The maps were replacing by other goods.", "correct": "The maps were being replaced by other goods.", "note": "过去某刻'正被替换',主语是承受者,用 was/were being done,而非主动 -ing。" },
+    { "wrong": "We don't need it no more.", "correct": "We no longer need it.", "note": "避免双重否定;no longer = 不再。" },
+    { "wrong": "The paper map is becoming a thing of past.", "correct": "The paper map is becoming a thing of the past.", "note": "固定短语 a thing of the past,需带 the。" }
+  ],
+  "paragraph_template": "【关于变化的短文结构】\n第1句 点题:I believe … will soon disappear.\n第2-3句 原因:The main reason is … (可用过去进行被动举例 … was being replaced …)\n第4-5句 理由:What's more, … Besides, …\n第6句 收束:…, it is becoming a thing of the past."
+}

@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U6",
+  "grammar_title": "含 -ever 与 no matter 引导的让步状语从句(whatever/whoever/whichever/wherever/whenever/however)",
+  "source": "外研社版选择性必修第二册 Unit 6 Using language:adverbial clauses with -ever and no matter。句子地道、Survival 主题、答案唯一(干扰项为不合意的 -ever 词或不能引导该结构的 though/although)。",
+  "points": [
+    {
+      "code": "u6.01",
+      "point": "whatever / whoever / whichever(= no matter what/who/which,作让步状语)",
+      "overview": "whatever(= no matter what)、whoever(= no matter who)、whichever(= no matter which)在让步状语从句里充当从句的主语、宾语或限定词;though/although 不能充当这些成分,故不可用。"
+    },
+    {
+      "code": "u6.02",
+      "point": "wherever / whenever / however(+ adj./adv.,= no matter where/when/how)",
+      "overview": "wherever(= no matter where)指地点、whenever(= no matter when)指时间;however 后接形容词或副词,意为 no matter how(不论多么……),不同于表示“但是”的 however。"
+    },
+    {
+      "code": "u6.03",
+      "point": "-ever 让步状语 vs 名词性从句用法 · 与 no matter 互换",
+      "overview": "whatever/whoever 既能引导让步状语从句(= no matter what/who),也能引导名词性从句作主语/宾语;两种情况 though/although 都不可用。no matter + what/who/where/when/how = 相应的 -ever 词。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u6.01",
+      "stem": "\"____ happens in the wild, a calm mind is your best tool for survival.\"",
+      "options": [
+        "Whatever",
+        "Whoever",
+        "Wherever",
+        "Although"
+      ],
+      "answer_index": 0,
+      "explanation": "空作 happens 的主语、表“不论什么事”→ whatever(= no matter what);although 不能作主语。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ you find in the cave, do not eat it unless you are sure it is safe.\"",
+      "options": [
+        "Whoever",
+        "Whatever",
+        "However",
+        "Although"
+      ],
+      "answer_index": 1,
+      "explanation": "空作 find 的宾语、指物 → whatever;although 不能作宾语。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ leads the team into the jungle must carry a map and a kit.\"",
+      "options": [
+        "Whatever",
+        "Wherever",
+        "Whoever",
+        "Although"
+      ],
+      "answer_index": 2,
+      "explanation": "空作 leads 的主语、指人 → whoever(= no matter who)。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ reaches the survivor first should keep him warm until help comes.\"",
+      "options": [
+        "Whichever",
+        "Whatever",
+        "Although",
+        "Whoever"
+      ],
+      "answer_index": 3,
+      "explanation": "空作主语、指人 → whoever;although 不能作主语。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ path you choose down the mountain, watch out for loose rocks.\"",
+      "options": [
+        "Whichever",
+        "Whoever",
+        "Whenever",
+        "Although"
+      ],
+      "answer_index": 0,
+      "explanation": "空限定 path、表“从若干条路里不论哪条”→ whichever(= no matter which)。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ tools you take to Mars, water and oxygen still matter most.\"",
+      "options": [
+        "Whoever",
+        "Whatever",
+        "Wherever",
+        "Though"
+      ],
+      "answer_index": 1,
+      "explanation": "空限定 tools、指物 → whatever;though 不能作限定词。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ finds the underground ice first will solve the water problem.\"",
+      "options": [
+        "Whatever",
+        "Whichever",
+        "Whoever",
+        "Although"
+      ],
+      "answer_index": 2,
+      "explanation": "空作主语、指人 → whoever。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ the storm destroys, the astronauts must rebuild it quickly.\"",
+      "options": [
+        "Whoever",
+        "Wherever",
+        "Although",
+        "Whatever"
+      ],
+      "answer_index": 3,
+      "explanation": "空作 destroys 的宾语、指物 → whatever。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ shelter you build, make sure it blocks the deadly radiation.\"",
+      "options": [
+        "Whatever",
+        "Whoever",
+        "Wherever",
+        "Although"
+      ],
+      "answer_index": 0,
+      "explanation": "空限定 shelter、指物 → whatever;although 不能加名词。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ of the two routes you take, tell someone where you are going.\"",
+      "options": [
+        "Whoever",
+        "Whichever",
+        "Whenever",
+        "Although"
+      ],
+      "answer_index": 1,
+      "explanation": "“of the two”表二者择一 → whichever(= no matter which)。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ you trust in a crisis, choose someone who stays calm.\"",
+      "options": [
+        "Whatever",
+        "Wherever",
+        "Whoever",
+        "Though"
+      ],
+      "answer_index": 2,
+      "explanation": "空作 trust 的宾语、指人 → whoever。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ the doctors test, they hope to find a cure for the new disease.\"",
+      "options": [
+        "Whoever",
+        "Whenever",
+        "Although",
+        "Whatever"
+      ],
+      "answer_index": 3,
+      "explanation": "空作 test 的宾语、指物 → whatever。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ wants to survive on the island must learn to be patient.\"",
+      "options": [
+        "Whoever",
+        "Whatever",
+        "Whichever",
+        "Although"
+      ],
+      "answer_index": 0,
+      "explanation": "空作 wants 的主语、指人 → whoever。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ the firefighters do next, they must not let the blaze spread.\"",
+      "options": [
+        "Whoever",
+        "Whatever",
+        "Wherever",
+        "Although"
+      ],
+      "answer_index": 1,
+      "explanation": "空作 do 的宾语、指物/事 → whatever。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ medicine the scientists try, the struggle against the virus goes on.\"",
+      "options": [
+        "Whoever",
+        "Whenever",
+        "Whatever",
+        "Although"
+      ],
+      "answer_index": 2,
+      "explanation": "空限定 medicine、指物 → whatever。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ of you has the first-aid kit should treat the wound right away.\"",
+      "options": [
+        "Whatever",
+        "Wherever",
+        "Although",
+        "Whichever"
+      ],
+      "answer_index": 3,
+      "explanation": "“of you”表从你们之中择一 → whichever。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ the rising sea takes from the island, the people will not give up.\"",
+      "options": [
+        "Whatever",
+        "Whoever",
+        "Whenever",
+        "Though"
+      ],
+      "answer_index": 0,
+      "explanation": "空作 takes 的宾语、指物 → whatever。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ joins the rescue mission needs courage and a clear head.\"",
+      "options": [
+        "Whatever",
+        "Whoever",
+        "Whichever",
+        "Although"
+      ],
+      "answer_index": 1,
+      "explanation": "空作 joins 的主语、指人 → whoever。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ animal moves into the city, it is only trying to survive.\"",
+      "options": [
+        "Whoever",
+        "Wherever",
+        "Whatever",
+        "Although"
+      ],
+      "answer_index": 2,
+      "explanation": "空限定 animal、指物 → whatever。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"____ you decide to do, never panic when a wildfire breaks out.\"",
+      "options": [
+        "Whoever",
+        "Wherever",
+        "Although",
+        "Whatever"
+      ],
+      "answer_index": 3,
+      "explanation": "空作 do 的宾语、指物/事 → whatever。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ they go, urban animals find towns and cities in their way.\"",
+      "options": [
+        "Wherever",
+        "Whenever",
+        "However",
+        "Although"
+      ],
+      "answer_index": 0,
+      "explanation": "表“不论去到哪里”、地点 → wherever(= no matter where)。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ hard the two-year treatment was, Jane never gave up hope.\"",
+      "options": [
+        "Whenever",
+        "However",
+        "Wherever",
+        "Although"
+      ],
+      "answer_index": 1,
+      "explanation": "空后接形容词 hard、意为 no matter how → however;although 不直接加形容词。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ a wildfire breaks out, leave the area quickly but calmly.\"",
+      "options": [
+        "Wherever",
+        "However",
+        "Whenever",
+        "Although"
+      ],
+      "answer_index": 2,
+      "explanation": "表“每当、不论何时”、时间 → whenever(= no matter when)。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ you go in the wild, take a first-aid kit with you.\"",
+      "options": [
+        "Whenever",
+        "However",
+        "Though",
+        "Wherever"
+      ],
+      "answer_index": 3,
+      "explanation": "表“去野外的任何地方”、地点 → wherever。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ fast the birds fly, some still crash into the glass towers.\"",
+      "options": [
+        "However",
+        "Whenever",
+        "Wherever",
+        "Although"
+      ],
+      "answer_index": 0,
+      "explanation": "空后接副词 fast、意为 no matter how → however。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ the temperature rises above forty degrees, people are warned to stay indoors.\"",
+      "options": [
+        "Wherever",
+        "Whenever",
+        "However",
+        "Although"
+      ],
+      "answer_index": 1,
+      "explanation": "表“每当气温升到……时”、时间 → whenever。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ foxes settle in the city, they soon learn to find food.\"",
+      "options": [
+        "Whenever",
+        "However",
+        "Wherever",
+        "Although"
+      ],
+      "answer_index": 2,
+      "explanation": "表“在城里安家的任何地方”、地点 → wherever。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ dangerous the journey to Mars may be, scientists still dream of it.\"",
+      "options": [
+        "Whenever",
+        "Wherever",
+        "Though",
+        "However"
+      ],
+      "answer_index": 3,
+      "explanation": "空后接形容词 dangerous、意为 no matter how → however。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ the rescue team arrives, the survivor must keep himself warm until then.\"",
+      "options": [
+        "Whenever",
+        "Wherever",
+        "However",
+        "Although"
+      ],
+      "answer_index": 0,
+      "explanation": "表“不论何时到达”、时间 → whenever。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ humans build their cities, wild animals try to live alongside them.\"",
+      "options": [
+        "Whenever",
+        "Wherever",
+        "However",
+        "Although"
+      ],
+      "answer_index": 1,
+      "explanation": "表“在人类建城的任何地方”、地点 → wherever。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ carefully you plan, survival in the wild can still be hard.\"",
+      "options": [
+        "Whenever",
+        "Wherever",
+        "However",
+        "Although"
+      ],
+      "answer_index": 2,
+      "explanation": "空后接副词 carefully、意为 no matter how → however。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ the heat wave returns, swimming pools fill with people cooling down.\"",
+      "options": [
+        "Wherever",
+        "However",
+        "Though",
+        "Whenever"
+      ],
+      "answer_index": 3,
+      "explanation": "表“每当热浪重来时”、时间 → whenever。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ the astronaut looks on Mars, he sees only red, empty land.\"",
+      "options": [
+        "Wherever",
+        "Whenever",
+        "However",
+        "Although"
+      ],
+      "answer_index": 0,
+      "explanation": "表“朝任何地方看”、地点 → wherever。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ tired she felt, Jane kept inviting people to donate tissue samples.\"",
+      "options": [
+        "Whenever",
+        "However",
+        "Wherever",
+        "Although"
+      ],
+      "answer_index": 1,
+      "explanation": "空后接形容词 tired、意为 no matter how → however。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ a crisis appears, calm people look for a solution instead of panicking.\"",
+      "options": [
+        "Wherever",
+        "However",
+        "Whenever",
+        "Although"
+      ],
+      "answer_index": 2,
+      "explanation": "表“每当危机出现时”、时间 → whenever。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ you camp for the night, choose a spot far from wild animals.\"",
+      "options": [
+        "Whenever",
+        "However",
+        "Although",
+        "Wherever"
+      ],
+      "answer_index": 3,
+      "explanation": "表“在你过夜的任何地方”、地点 → wherever。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ deep the snow became, the climbers pushed on towards the shelter.\"",
+      "options": [
+        "However",
+        "Whenever",
+        "Wherever",
+        "Though"
+      ],
+      "answer_index": 0,
+      "explanation": "空后接形容词 deep、意为 no matter how → however。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ the river floods, the village quickly moves to higher ground.\"",
+      "options": [
+        "Wherever",
+        "Whenever",
+        "However",
+        "Although"
+      ],
+      "answer_index": 1,
+      "explanation": "表“每当河水泛滥时”、时间 → whenever。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ the survivor travels on the island, he marks the path behind him.\"",
+      "options": [
+        "Whenever",
+        "However",
+        "Wherever",
+        "Although"
+      ],
+      "answer_index": 2,
+      "explanation": "表“在岛上去到的任何地方”、地点 → wherever。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"____ slowly the rescue comes, hope keeps the lost hiker going.\"",
+      "options": [
+        "Whenever",
+        "Wherever",
+        "Although",
+        "However"
+      ],
+      "answer_index": 3,
+      "explanation": "空后接副词 slowly、意为 no matter how → however。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"You may take ____ you need from the emergency box before you leave.\"",
+      "options": [
+        "whatever",
+        "whoever",
+        "wherever",
+        "although"
+      ],
+      "answer_index": 0,
+      "explanation": "引导名词性从句作 take 的宾语、指物 → whatever;although 不能引导名词性从句。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"____ reaches the lifeboat first should help the weaker passengers aboard.\"",
+      "options": [
+        "Whatever",
+        "Whoever",
+        "However",
+        "Although"
+      ],
+      "answer_index": 1,
+      "explanation": "引导名词性从句作主语、指人 → whoever。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"____ the reasons behind the animals entering our cities, survival comes first.\"",
+      "options": [
+        "Whoever",
+        "Wherever",
+        "Whatever",
+        "Although"
+      ],
+      "answer_index": 2,
+      "explanation": "让步状语(= no matter what)、后接名词 the reasons → whatever;although 不能直接加名词。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"Robinson Crusoe made good use of ____ he could save from the wrecked ship.\"",
+      "options": [
+        "whoever",
+        "whenever",
+        "although",
+        "whatever"
+      ],
+      "answer_index": 3,
+      "explanation": "引导名词性从句作介词 of 的宾语、指物 → whatever。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"No matter ____ happens, a calm survivor keeps looking for a way out.\"",
+      "options": [
+        "what",
+        "who",
+        "where",
+        "although"
+      ],
+      "answer_index": 0,
+      "explanation": "no matter what = whatever、空作 happens 的主语、指物 → what。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"The rescue team will help ____ is still trapped under the fallen rocks.\"",
+      "options": [
+        "whatever",
+        "whoever",
+        "wherever",
+        "although"
+      ],
+      "answer_index": 1,
+      "explanation": "引导名词性从句作 help 的宾语、指人 → whoever。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"No matter ____ hard the climb is, the team refuses to turn back.\"",
+      "options": [
+        "what",
+        "where",
+        "how",
+        "although"
+      ],
+      "answer_index": 2,
+      "explanation": "no matter how + 形容词 hard = however hard → how。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"Share the clean water with ____ needs it most in the group.\"",
+      "options": [
+        "whatever",
+        "whenever",
+        "although",
+        "whoever"
+      ],
+      "answer_index": 3,
+      "explanation": "引导名词性从句作介词 with 的宾语、指人作 needs 的主语 → whoever。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"____ the storm leaves behind, the islanders will rebuild their homes.\"",
+      "options": [
+        "Whatever",
+        "Whoever",
+        "However",
+        "Although"
+      ],
+      "answer_index": 0,
+      "explanation": "让步状语、空作 leaves 的宾语、指物 → whatever。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"No matter ____ you go on the island, hunger will find you in the end.\"",
+      "options": [
+        "what",
+        "where",
+        "who",
+        "although"
+      ],
+      "answer_index": 1,
+      "explanation": "no matter where = wherever、表地点 → where。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"The doctors will test ____ medicine might cure the new disease.\"",
+      "options": [
+        "whoever",
+        "wherever",
+        "whatever",
+        "although"
+      ],
+      "answer_index": 2,
+      "explanation": "引导名词性从句、限定 medicine 作 test 的宾语 → whatever。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"____ you meet in the wild, treat them with respect and caution.\"",
+      "options": [
+        "Whatever",
+        "Wherever",
+        "Although",
+        "Whoever"
+      ],
+      "answer_index": 3,
+      "explanation": "让步状语、空作 meet 的宾语、指人 → whoever。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"No matter ____ leads the team, the group must stay together.\"",
+      "options": [
+        "who",
+        "what",
+        "where",
+        "although"
+      ],
+      "answer_index": 0,
+      "explanation": "no matter who = whoever、指人作 leads 的主语 → who。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"Eat ____ the land can safely give you, and waste nothing.\"",
+      "options": [
+        "whoever",
+        "whatever",
+        "whenever",
+        "although"
+      ],
+      "answer_index": 1,
+      "explanation": "引导名词性从句作 eat 的宾语、指物 → whatever。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"____ the future may hold, Jane is determined to live a full life.\"",
+      "options": [
+        "Whoever",
+        "However",
+        "Whatever",
+        "Although"
+      ],
+      "answer_index": 2,
+      "explanation": "让步状语(= no matter what)、空作 hold 的宾语 → whatever。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"Give the warm blanket to ____ feels the cold the most.\"",
+      "options": [
+        "whatever",
+        "wherever",
+        "although",
+        "whoever"
+      ],
+      "answer_index": 3,
+      "explanation": "引导名词性从句作介词 to 的宾语、指人作 feels 的主语 → whoever。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"No matter ____ the rescue arrives, we must keep the fire burning as a signal.\"",
+      "options": [
+        "when",
+        "what",
+        "who",
+        "although"
+      ],
+      "answer_index": 0,
+      "explanation": "no matter when = whenever、表时间 → when。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"Tell ____ you can reach that the path down the mountain is blocked.\"",
+      "options": [
+        "whatever",
+        "whoever",
+        "whenever",
+        "although"
+      ],
+      "answer_index": 1,
+      "explanation": "引导名词性从句作 tell 的间接宾语、指人 → whoever。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"____ difficulties she might face, Jane keeps helping other patients recover.\"",
+      "options": [
+        "Whoever",
+        "However",
+        "Whatever",
+        "Although"
+      ],
+      "answer_index": 2,
+      "explanation": "让步状语、限定 difficulties → whatever;although 不能直接加名词。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"Use ____ tools you have to dig the cave deeper before night falls.\"",
+      "options": [
+        "whoever",
+        "however",
+        "although",
+        "whatever"
+      ],
+      "answer_index": 3,
+      "explanation": "引导名词性从句、限定 tools 作 use 的宾语 → whatever。"
+    }
+  ]
+}

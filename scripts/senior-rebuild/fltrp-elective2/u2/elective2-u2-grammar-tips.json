@@ -1,0 +1,35 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "grade": 11,
+  "content": {
+    "title": "过去完成被动语态 had been done 速查",
+    "intro": "had been + 过去分词,表示「在过去某个时间点之前,主语已经『被』做了某事」。两个关键:① 主语是动作的承受者(被动);② 这件事发生在另一过去动作之前(过去的过去)。",
+    "table": {
+      "headers": ["结构 / 用法", "例句"],
+      "rows": [
+        ["肯定:had been + 过去分词", "Over 100 students had been persuaded to join. 100多名学生已被劝说参加。"],
+        ["否定:had not been + 过去分词", "None of the umbrellas had been lost. 没有一把伞丢失。"],
+        ["疑问:Had + 主语 + been + 过去分词?", "Had the homework been finished by then? 那时作业完成了吗?"],
+        ["常见时间标志", "by the time …, before …, by + 过去时间点"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主语『被』做 → 被动 had been done;主语『主动』做 → had done", "mark": "The room had been cleaned(房间被打扫) vs He had cleaned the room(他打扫了房间)" },
+      { "rule": "有 before / by the time + 过去 → 用 had been done,不用一般过去被动 was done", "mark": "By the time we arrived, the prizes had been given out." },
+      { "rule": "过去分词形式不可写成动词原形或现在分词", "mark": "had been left √ / had been leave × / had been leaving ×" },
+      { "rule": "by + 动作发出者(可省略)", "mark": "The phone had been put away (by his mum)." }
+    ],
+    "why": [
+      "「过去完成」管时间——比另一个过去动作更早;「被动」管关系——主语是承受者。两者叠加,就是 had + been + 过去分词:在过去某点之前,某事已被完成。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/短文改错高频:给出动词原形,要求填 had been done;判断主语是受动者(用被动)还是施动者(用主动)。",
+      "易错点:有 by the time/before 标志却误填 was done(一般过去被动);或把过去分词写错形式。"
+    ],
+    "examVsReal": [
+      { "exam": "By the time he arrived, the work had been finished.(考试/书面)", "real": "By the time he got there, the work was already done.", "note": "考试严格区分『过去的过去』用 had been done;口语里有时用 was done + already 也能表达先后" },
+      { "exam": "The umbrellas had all been returned.(强调过去之前已完成)", "real": "All the umbrellas were back.", "note": "真实口语常用更简单的说法,但书面/考试要体现完成被动" }
+    ]
+  }
+}

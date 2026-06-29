@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "topic": "Welcome to Dunhuang",
+  "source": "外研社选择性必修四 Unit 3 同主题完形(初游敦煌/壁画的制作与保护/丝路驼商/鸣沙山月牙泉/义务讲解员/传播中国文化)。用词限本单元及常见词,每空唯一,选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My First Visit to Dunhuang",
+      "text": "Last summer my family travelled to Dunhuang, a city on the edge of the (1)____. I had read about its caves, but seeing them was even better than I had (2)____. Our guide led us through the dark grottoes and asked us to look (3)____ at the painted ceilings. The colours were so bright that I could hardly (4)____ they were a thousand years old. In one cave we saw the famous Flying Apsaras, who seemed to (5)____ across the sky. The guide explained that Dunhuang had once been an important (6)____ on the Silk Road. Because so many traders passed through, the city grew (7)____ and full of art from many lands. Before we left, I bought a small (8)____ of a dancing Apsara to take home. That day I learned that history can be (9)____ as well as beautiful. I will never (10)____ my first visit to the desert city.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "desert",
+            "ocean",
+            "forest",
+            "river"
+          ],
+          "answer_index": 0,
+          "explanation": "敦煌位于沙漠边缘,后文又称 desert city → desert。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "forgotten",
+            "imagined",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "better than I had imagined 比想象的还好 → imagined。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "away",
+            "back",
+            "up",
+            "out"
+          ],
+          "answer_index": 2,
+          "explanation": "look up at the ceilings 抬头看天花板 → up。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "buy",
+            "hear",
+            "count",
+            "believe"
+          ],
+          "answer_index": 3,
+          "explanation": "could hardly believe 难以相信 → believe。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "float",
+            "fall",
+            "sleep",
+            "swim"
+          ],
+          "answer_index": 0,
+          "explanation": "seemed to float across the sky 仿佛在天空飘浮 → float。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "shop",
+            "stop",
+            "farm",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "an important stop on the Silk Road 丝路上重要的一站 → stop。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "poor",
+            "empty",
+            "rich",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "explanation": "the city grew rich 城市变得富裕 → rich。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "problem",
+            "mistake",
+            "noise",
+            "picture"
+          ],
+          "answer_index": 3,
+          "explanation": "a small picture of a dancing Apsara 一张飞天小画 → picture。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "exciting",
+            "boring",
+            "silent",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "history can be exciting 历史可以很精彩 → exciting。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "forget",
+            "lose",
+            "break"
+          ],
+          "answer_index": 1,
+          "explanation": "never forget my first visit 永远不会忘记 → forget。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "How the Murals Were Made",
+      "text": "The murals of Dunhuang were not painted in a single day. First, workers had to (1)____ the rough rock walls until they were smooth. Then artists drew the main lines (2)____ a thin brush. They made their own colours from stones and plants, (3)____ some of these colours have lasted for over a thousand years. The work was slow and difficult, (4)____ the artists were very patient. Today these ancient paintings are extremely (5)____, so the people who look after them must be careful. Bright light can make the colours (6)____, and damp air can harm the walls. For this (7)____, only a small number of visitors may enter each cave every day. Experts also use cameras to make digital (8)____ of every wall. In this way, students can (9)____ the art on a screen without harming the real caves. Thanks to their hard work, the murals will be kept (10)____ for many years to come.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "open",
+            "clean",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "clean the rough rock walls 清理粗糙的岩壁 → clean。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "for",
+            "from",
+            "about",
+            "with"
+          ],
+          "answer_index": 3,
+          "explanation": "draw lines with a brush 用刷子画线 → with。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "so",
+            "but",
+            "or",
+            "although"
+          ],
+          "answer_index": 0,
+          "explanation": "前因后果:so some colours have lasted → so。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "so",
+            "but",
+            "or",
+            "because"
+          ],
+          "answer_index": 1,
+          "explanation": "工作艰难“但”画师有耐心,转折 → but。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "cheap",
+            "heavy",
+            "fragile",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "extremely fragile 极其脆弱 → fragile。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "grow",
+            "rise",
+            "sing",
+            "fade"
+          ],
+          "answer_index": 3,
+          "explanation": "light can make the colours fade 使颜色褪去 → fade。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "reason",
+            "price",
+            "song",
+            "game"
+          ],
+          "answer_index": 0,
+          "explanation": "For this reason 因此 → reason。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "mistakes",
+            "copies",
+            "noises",
+            "prices"
+          ],
+          "answer_index": 1,
+          "explanation": "digital copies of every wall 每面墙的数字副本 → copies。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "break",
+            "sell",
+            "study",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "students can study the art 学生可以研究艺术 → study。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "dirty",
+            "dark",
+            "cold",
+            "safe"
+          ],
+          "answer_index": 3,
+          "explanation": "kept safe for many years 妥善保存许多年 → safe。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Trader on the Silk Road",
+      "text": "My name is Anir, and for many years I have been a trader on the Silk (1)____. Each spring I load my camels with silk and tea and begin the long (2)____ west. The desert is hard and dry, so I always carry plenty of (3)____ with me. (4)____ I reach the oasis of Dunhuang, I feel safe at last. There I can rest, feed my animals, and (5)____ my goods for spices and glass from the West. The market is always (6)____ with people from many different lands. In the evenings, traders share stories around the fire, and I have learned a few (7)____ of several languages. Dunhuang is more than a place to do (8)____; it is where East and West truly meet. (9)____ the journey is dangerous, I would not give it up. Every time I see the green trees of the oasis (10)____ of me, I know that all the hard miles were worth it.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "Road",
+            "Sea",
+            "Sky",
+            "Hill"
+          ],
+          "answer_index": 0,
+          "explanation": "the Silk Road 丝绸之路 → Road。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "dinner",
+            "journey",
+            "lesson",
+            "sleep"
+          ],
+          "answer_index": 1,
+          "explanation": "the long journey west 漫长的西行 → journey。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sand",
+            "gold",
+            "water",
+            "paper"
+          ],
+          "answer_index": 2,
+          "explanation": "干旱沙漠中携带充足的水 → water。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "Unless",
+            "Although",
+            "Because",
+            "When"
+          ],
+          "answer_index": 3,
+          "explanation": "到达绿洲“时”感到安全,时间关系 → When。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "exchange",
+            "lose",
+            "break",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "exchange my goods for spices 拿货物换香料 → exchange。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "empty",
+            "busy",
+            "quiet",
+            "closed"
+          ],
+          "answer_index": 1,
+          "explanation": "the market is always busy 集市总是热闹 → busy。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "songs",
+            "coins",
+            "words",
+            "maps"
+          ],
+          "answer_index": 2,
+          "explanation": "a few words of several languages 几种语言的几个词 → words。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "harm",
+            "damage",
+            "sport",
+            "business"
+          ],
+          "answer_index": 3,
+          "explanation": "a place to do business 做生意的地方 → business。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "Although",
+            "Because",
+            "Unless",
+            "Until"
+          ],
+          "answer_index": 0,
+          "explanation": "旅程危险“尽管”如此也不放弃,让步 → Although。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "instead",
+            "ahead",
+            "afraid",
+            "proud"
+          ],
+          "answer_index": 1,
+          "explanation": "the oasis ahead of me 前方的绿洲 → ahead。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Mingsha Mountain and Crescent Lake",
+      "text": "Just outside Dunhuang there is a famous (1)____ called Mingsha Mountain, made entirely of soft yellow sand. Many visitors climb to the top to watch the (2)____ go down over the desert. The view from up there is so beautiful that people fall (3)____ love with it at once. At the foot of the mountain lies Crescent Lake, a small pool of clear water (4)____ has never dried up, even in the hot desert. Local people say the lake is shaped (5)____ a new moon. In the early morning, before the day grows too (6)____, you can ride a camel across the sand. The animals walk slowly and steadily, (7)____ you feel quite safe on their backs. Some travellers stay until night (8)____, just to see the bright stars above the quiet dunes. (9)____ you ever go to Dunhuang, do not miss this magical place. It is a part of the desert (10)____ you will remember for the rest of your life.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "river",
+            "market",
+            "hill",
+            "bridge"
+          ],
+          "answer_index": 2,
+          "explanation": "沙堆成的山,a famous hill → hill。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "rain",
+            "snow",
+            "wind",
+            "sun"
+          ],
+          "answer_index": 3,
+          "explanation": "watch the sun go down 看落日 → sun。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "in",
+            "out",
+            "off",
+            "down"
+          ],
+          "answer_index": 0,
+          "explanation": "fall in love with 爱上 → in。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "who",
+            "that",
+            "where",
+            "why"
+          ],
+          "answer_index": 1,
+          "explanation": "先行词 water、从句缺主语 → that。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "for",
+            "with",
+            "like",
+            "by"
+          ],
+          "answer_index": 2,
+          "explanation": "shaped like a new moon 形如新月 → like。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "cold",
+            "dark",
+            "wet",
+            "hot"
+          ],
+          "answer_index": 3,
+          "explanation": "沙漠白天太热,before the day grows too hot → hot。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "so",
+            "but",
+            "or",
+            "although"
+          ],
+          "answer_index": 0,
+          "explanation": "走得平稳,“所以”你很安全,结果 → so。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "opens",
+            "falls",
+            "sells",
+            "wins"
+          ],
+          "answer_index": 1,
+          "explanation": "stay until night falls 待到夜幕降临 → falls。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "Unless",
+            "Although",
+            "If",
+            "Because"
+          ],
+          "answer_index": 2,
+          "explanation": "如果你去敦煌,别错过此地,条件 → If。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "when",
+            "why",
+            "how",
+            "that"
+          ],
+          "answer_index": 3,
+          "explanation": "先行词 part、从句缺宾语 → that。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "My Grandmother the Guide",
+      "text": "My grandmother has been a volunteer (1)____ at the Mogao Grottoes for over twenty years. Every weekend she leads small groups of visitors through the dark caves and tells them the old (2)____ behind each painting. She always speaks softly, (3)____ loud voices and bright lights can harm the fragile murals. People come from all over the world, (4)____ many of them do not speak Chinese. To help them, my grandmother has learned to explain things in simple (5)____. She loves her work because it lets her (6)____ the beauty of Dunhuang with others. (7)____ a tour ends, the visitors often thank her warmly. Last month a foreign student told her that the caves were the most (8)____ thing he had ever seen. My grandmother smiled and said that was the best (9)____ she could ever receive. She hopes that more young people will come to (10)____ the great art of their own country.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "guide",
+            "driver",
+            "cook",
+            "farmer"
+          ],
+          "answer_index": 0,
+          "explanation": "a volunteer guide 义务讲解员 → guide。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "stories",
+            "games",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "the old stories behind each painting 每幅画背后的故事 → stories。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "although",
+            "unless",
+            "because",
+            "so that"
+          ],
+          "answer_index": 2,
+          "explanation": "轻声说话“因为”大声会损害壁画,原因 → because。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "so",
+            "or",
+            "for",
+            "but"
+          ],
+          "answer_index": 3,
+          "explanation": "世界各地的人,“但”很多不说中文,转折 → but。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "words",
+            "money",
+            "metres",
+            "hours"
+          ],
+          "answer_index": 0,
+          "explanation": "explain things in simple words 用简单的话解释 → words。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "share",
+            "hide",
+            "break"
+          ],
+          "answer_index": 1,
+          "explanation": "share the beauty with others 与人分享美 → share。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "Unless",
+            "Although",
+            "When",
+            "Because"
+          ],
+          "answer_index": 2,
+          "explanation": "参观结束“时”游客道谢,时间 → When。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "boring",
+            "ugly",
+            "empty",
+            "wonderful"
+          ],
+          "answer_index": 3,
+          "explanation": "the most wonderful thing 最美妙的东西 → wonderful。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "gift",
+            "mistake",
+            "problem",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "the best gift she could receive 最好的礼物 → gift。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "appreciate",
+            "waste",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "appreciate the great art 欣赏伟大的艺术 → appreciate。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Sharing Chinese Culture",
+      "text": "More and more people around the world want to learn about Chinese (1)____. To help them, China has opened many Confucius Institutes abroad. These institutes teach the Chinese (2)____ and also hold art shows, talks and film festivals. (3)____ a student joins, he or she can learn not only the words but also the ideas behind them. Many learners say that studying the language helps them (4)____ Chinese culture far more deeply. (5)____ the lessons are sometimes difficult, the students rarely give up. One teacher told me that his happiest (6)____ was watching shy learners grow confident. (7)____ he teaches Chinese, he feels that he is building a small bridge between two (8)____. Cultural exchange, he says, should travel in both (9)____, so that each side can learn from the other. (10)____ such work continues, friendship between nations will surely grow stronger year by year.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "weather",
+            "money",
+            "culture",
+            "sport"
+          ],
+          "answer_index": 2,
+          "explanation": "learn about Chinese culture 了解中国文化 → culture。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "food",
+            "clothes",
+            "coins",
+            "language"
+          ],
+          "answer_index": 3,
+          "explanation": "teach the Chinese language 教汉语 → language。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "When",
+            "Unless",
+            "Although",
+            "Because"
+          ],
+          "answer_index": 0,
+          "explanation": "学生加入“时”能学到思想,时间 → When。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forget",
+            "understand",
+            "waste",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "helps them understand Chinese culture 帮助理解中国文化 → understand。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "Because",
+            "Unless",
+            "Although",
+            "As soon as"
+          ],
+          "answer_index": 2,
+          "explanation": "课程虽难,学生很少放弃,让步 → Although。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "mistake",
+            "noise",
+            "moment"
+          ],
+          "answer_index": 3,
+          "explanation": "his happiest moment 他最快乐的时刻 → moment。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "Because",
+            "Although",
+            "Unless",
+            "Until"
+          ],
+          "answer_index": 0,
+          "explanation": "“因为”教汉语,他觉得在架桥,原因 → Because。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "prices",
+            "cultures",
+            "machines",
+            "gardens"
+          ],
+          "answer_index": 1,
+          "explanation": "a bridge between two cultures 两种文化间的桥 → cultures。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "colours",
+            "prices",
+            "directions",
+            "sizes"
+          ],
+          "answer_index": 2,
+          "explanation": "travel in both directions 双向流动 → directions。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "Although",
+            "Unless",
+            "Even though",
+            "As long as"
+          ],
+          "answer_index": 3,
+          "explanation": "“只要”工作继续,友谊就会更牢,条件 → As long as。"
+        }
+      ]
+    }
+  ]
+}

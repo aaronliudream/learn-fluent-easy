@@ -1,0 +1,338 @@
+{
+  "volume": "required2",
+  "unit": "U5",
+  "topic": "On the Road",
+  "source": "外研社版必修第二册 Unit 5 同主题阅读(旅行博主/观光火车/横穿加拿大公路游/出行准备/旅游种类与地图/旅行明信片)。用词限本单元/初中/常见词;答案为转述非照抄;六篇子题材各异,与完形、听力不复用。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "From Chef to Travel Blogger",
+      "topic_cn": "记叙·旅行摄影博主 Lauren 的转行故事",
+      "body": "Lauren Bath once worked as a chef, and she was happy enough in the kitchen. Yet she wanted more from life: above all, she wanted to travel. Around that time she discovered blogging and noticed that her photographs were rather good, so she began posting them online. Within eighteen months, more than two hundred thousand people were reading her blog. At first it was only a hobby, but soon companies started paying her to take pictures for them. In 2013 she made a brave choice. She quit her job and set out to become her country's first professional travel photo blogger. It was a hard road, but she managed it. Now she spends about three weeks of every month on the move, and hundreds of thousands of fans follow her journeys online. Through her camera, she has come to understand her own country and its people far better than ever before.",
+      "vocab_notes": [
+        {
+          "word": "blogger",
+          "cn": "博主"
+        },
+        {
+          "word": "profession",
+          "cn": "职业"
+        },
+        {
+          "word": "quit",
+          "cn": "辞去"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How a hobby slowly grew into Lauren's full-time career.",
+            "How to take better photographs while cooking.",
+            "Why being a chef is harder than travelling.",
+            "How blogs make every traveller rich and famous."
+          ],
+          "answer_index": 0,
+          "explanation": "全文讲她由业余爱好走向职业博主的过程,选概括项;其余与文意不符。"
+        },
+        {
+          "stem": "Why did companies begin to pay Lauren?",
+          "options": [
+            "She had trained for years as a photographer.",
+            "Her pictures were good enough for them to use.",
+            "She offered to work for them without pay.",
+            "She owned a famous travel company."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说她照片很好,公司开始付费请她拍照,选转述项。"
+        },
+        {
+          "stem": "How does Lauren spend most of her time now?",
+          "options": [
+            "She travels for much of each month and shares it online.",
+            "She works quietly in a kitchen every day.",
+            "She stays at home writing about cooking.",
+            "She teaches photography in a single city."
+          ],
+          "answer_index": 0,
+          "explanation": "末段说她每月大部分时间在路上并在线分享,选转述项。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Train Through the Mountains",
+      "topic_cn": "说明·Bernina Express 观光列车",
+      "body": "The Bernina Express is one of the most famous train journeys in Europe. It follows a route running from the eastern part of Switzerland down into the north of Italy. People travelling aboard the train have the chance to see scenery that few roads can reach. The landscape lining the route is both beautiful and dramatic, with snowy mountains rising on one side and green valleys opening on the other. Tunnels and high bridges carry the train across deep rivers and around steep hills. For many passengers, the journey itself matters far more than the destination. There is no hurry at all; the train moves slowly on purpose, so that travellers can enjoy every single view. As one writer once put it, the window becomes a kind of television screen, and the natural world outside is the show. If you long to get back to nature without ever leaving your seat, this slow and gentle ride is very hard to beat.",
+      "vocab_notes": [
+        {
+          "word": "route",
+          "cn": "路线"
+        },
+        {
+          "word": "aboard",
+          "cn": "在(车上)"
+        },
+        {
+          "word": "landscape",
+          "cn": "风景"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where does the Bernina Express route run?",
+          "options": [
+            "From the south of Italy back to France.",
+            "From the east of Switzerland to the north of Italy.",
+            "Around a single Swiss city only.",
+            "Across the whole continent of Europe."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说路线从瑞士东部通往意大利北部,选转述项。"
+        },
+        {
+          "stem": "Why do many passengers enjoy this train?",
+          "options": [
+            "It is the cheapest way to reach Italy.",
+            "It reaches the destination faster than any road.",
+            "They care more about the views than about arriving fast.",
+            "It allows them to drive their own cars."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说对许多乘客而言旅程本身比目的地更重要、慢行赏景,选转述项。"
+        },
+        {
+          "stem": "What does the writer compare the train window to?",
+          "options": [
+            "A map of the whole route.",
+            "A photograph on the wall.",
+            "A door leading to the city.",
+            "A television screen showing the natural world."
+          ],
+          "answer_index": 3,
+          "explanation": "原文把车窗比作电视屏幕、窗外自然界是节目,选对应项。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Coast to Coast by Motor Home",
+      "topic_cn": "记叙·一家人房车横穿加拿大",
+      "body": "Eva and her family crossed North America from western to eastern Canada in just two weeks. They began in Vancouver, where they picked up a motor home, a house on wheels that took them wherever and whenever they wished. Her father did all the driving, though he had a poor sense of direction, and the family got lost more than once even with the help of GPS. Still, in the end they crossed the Rocky Mountains safely. Eva had hoped to spot a bear or an eagle, but all she saw was a small group of deer. The views, however, were unforgettable: thick forests, snowy peaks and great masses of ice. By the eighth day they reached Quebec, where most people speak a kind of Canadian French. Their long journey finally ended in Newfoundland, the far eastern edge of the country. There, on a boat trip, they were lucky enough to watch a killer whale leap from the cold grey water.",
+      "vocab_notes": [
+        {
+          "word": "vehicle",
+          "cn": "交通工具"
+        },
+        {
+          "word": "continent",
+          "cn": "大陆"
+        },
+        {
+          "word": "deer",
+          "cn": "鹿"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the family travel across Canada?",
+          "options": [
+            "In a motor home that they drove themselves.",
+            "By a fast train from coast to coast.",
+            "On a series of long flights.",
+            "On bikes along the coast road."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说他们取了一辆房车自驾,选转述项。"
+        },
+        {
+          "stem": "What did Eva actually see in the Rocky Mountains?",
+          "options": [
+            "Several bears and a large eagle.",
+            "Only a few deer, not the bears she had wished for.",
+            "Nothing but ice and empty roads.",
+            "A whale swimming in a river."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说她想看熊或鹰,结果只看到一小群鹿,选转述项。"
+        },
+        {
+          "stem": "Where did their journey come to an end?",
+          "options": [
+            "Back in Vancouver, where they had started.",
+            "In the middle of the Rocky Mountains.",
+            "In Newfoundland, at the eastern edge of Canada.",
+            "In a French town in Europe."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说旅程在加拿大最东端的纽芬兰结束,选转述项。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Getting Ready for a Trip",
+      "topic_cn": "说明·两位朋友的出行准备",
+      "body": "Planning a trip carefully can save a traveller a great deal of trouble. Before Andrew and Matt set off for Jakarta, they shared the work between them. First they chose their destination and did some research online. Andrew checked the embassy website and found that they did not need to apply for a visa in advance; they could simply get one at the airport instead. He also booked accommodation that fit the budget they had agreed on, choosing a hotel chain that was clean, central and cheap. Matt, meanwhile, bought the plane tickets and arranged the transfer from the airport to their hotel. There were still a few small tasks left to do. They had to check in online, print their boarding passes and pack their luggage. Matt also reminded Andrew to exchange some foreign currency, since he planned to pay for souvenirs in cash rather than by card. With everything ready at last, the two friends could hardly wait to leave.",
+      "vocab_notes": [
+        {
+          "word": "embassy",
+          "cn": "大使馆"
+        },
+        {
+          "word": "budget",
+          "cn": "预算"
+        },
+        {
+          "word": "currency",
+          "cn": "货币"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the two friends not need a visa in advance?",
+          "options": [
+            "They were not leaving their own country.",
+            "Their hotel arranged the visa for them.",
+            "Visas were no longer required anywhere.",
+            "They could get one after they landed."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说他们可在机场办签证,选转述项。"
+        },
+        {
+          "stem": "What did Matt mainly take care of?",
+          "options": [
+            "Buying the tickets and arranging the airport pickup.",
+            "Booking the hotel and checking the visa rules.",
+            "Packing all of the luggage for both of them.",
+            "Exchanging the money at the embassy."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说 Matt 买机票并安排接送,选转述项。"
+        },
+        {
+          "stem": "Why did Matt want some foreign cash?",
+          "options": [
+            "He did not trust the hotel chain.",
+            "He meant to buy souvenirs without using a card.",
+            "He had lost his credit card already.",
+            "Cash was the only way to book flights."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说他想用现金而非刷卡买纪念品,选转述项。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Different Ways to Travel",
+      "topic_cn": "说明·旅游的种类与地图的用处",
+      "body": "Not everyone travels for the same reason, and today there are many different kinds of tourism. Food tourists choose a place mainly for its meals; some will cross a continent just to taste one famous local dish. Cultural tourists are drawn to theatres, galleries, museums and festivals, where they can learn about the art, history and lifestyle of a region. Adventure tourists are different again. They head for unusual or remote places and often engage in risky activities, such as climbing near a volcano or hiking deep into a forest. Whatever kind of traveller you happen to be, a simple map can make a new place much easier to enjoy. An online map on your phone is convenient, but it is almost useless without a signal. For that reason, a paper map from your hotel or the local tourist office is still well worth carrying. Mark your destination on it and draw a clear arrow to show your route.",
+      "vocab_notes": [
+        {
+          "word": "tourism",
+          "cn": "旅游业"
+        },
+        {
+          "word": "engage",
+          "cn": "参与"
+        },
+        {
+          "word": "remote",
+          "cn": "偏远的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do food tourists care about most?",
+          "options": [
+            "The museums and old festivals there.",
+            "Climbing near a dangerous volcano.",
+            "The meals that a place is known for.",
+            "Saving money on flights and hotels."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说美食游客主要为当地餐食而选目的地,选转述项。"
+        },
+        {
+          "stem": "What is one weakness of a phone map?",
+          "options": [
+            "It is far too heavy to carry around.",
+            "It cannot show any destination at all.",
+            "It is more expensive than a paper map.",
+            "It hardly works when there is no signal."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说手机地图没信号时几乎没用,选转述项。"
+        },
+        {
+          "stem": "What does the writer suggest doing with a paper map?",
+          "options": [
+            "Mark where you are going and show the way.",
+            "Throw it away once you reach the hotel.",
+            "Use it only inside the tourist office.",
+            "Give it to an adventure tour guide."
+          ],
+          "answer_index": 0,
+          "explanation": "原文建议标出目的地并画箭头指明路线,选转述项。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Postcard from Yunnan",
+      "topic_cn": "记叙·旅途中的一张明信片",
+      "body": "Alice was having a wonderful time in Yunnan, in the south-west of China, and she wanted to share it, so she sent a postcard to her friend Emma far away in Australia. At the moment she wrote, she was standing at the foot of the Yulong Snow Mountain. She and her group had spent the whole day hiking, and she had even seen some huge yaks along the path. The landscape, she wrote, was so lovely that no photograph could really capture it. The next day they planned to explore the old town of Lijiang, and Alice was praying for fine weather, sure that it would be great fun. A postcard may seem old-fashioned in the age of phones, yet there is something special about holding a card that has travelled thousands of kilometres. It carries not only a few lines of news but also a small piece of the very place where the writer has been.",
+      "vocab_notes": [
+        {
+          "word": "landscape",
+          "cn": "风景"
+        },
+        {
+          "word": "hike",
+          "cn": "徒步"
+        },
+        {
+          "word": "explore",
+          "cn": "探索"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where was Alice when she wrote the postcard?",
+          "options": [
+            "Inside an old town in Australia.",
+            "At the foot of a snow mountain.",
+            "On a train crossing Europe.",
+            "At an airport waiting for a flight."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说她当时站在玉龙雪山脚下,选转述项。"
+        },
+        {
+          "stem": "What did Alice plan to do the next day?",
+          "options": [
+            "Climb to the top of the snow mountain.",
+            "Fly straight back home to Australia.",
+            "Explore Lijiang's famous old town.",
+            "Spend another whole day with the yaks."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说她次日打算游览丽江古城,选转述项。"
+        },
+        {
+          "stem": "Why does the writer think a postcard is special?",
+          "options": [
+            "It is faster than sending a phone message.",
+            "It can never get lost in the post.",
+            "It costs nothing at all to send.",
+            "It brings a little of a faraway place to you."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说明信片带来远方一小片地方的感觉,选转述项。"
+        }
+      ]
+    }
+  ]
+}

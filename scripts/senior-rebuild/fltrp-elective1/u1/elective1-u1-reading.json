@@ -1,0 +1,326 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "topic": "Laugh Out Loud",
+  "source": "外研社(新标准)选择性必修一 Unit 1 同主题阅读(小丑医生/马克·吐温的机智/林语堂与'幽默'/愚人节恶作剧/卓别林/笑是最好的良药)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Day as a Clown Doctor",
+      "topic_cn": "记叙·小丑医生的一天",
+      "body": "As I walk into the hospital in my white coat, I look like any ordinary doctor. Then I put on my curly rainbow wig, my big red nose and a name badge that reads 'Doctor Laugh-Out-Loud'. I am a clown doctor. I work as part of a programme called hospital clowning. On a typical day, my job is to cheer up young patients, their families and even the tired hospital staff. We do this by doing magic tricks, singing songs, telling stories and, of course, telling silly jokes. We must be very sensitive, because some children are in too much pain to laugh. So we work closely with the doctors and nurses, who keep us updated on each patient. I chose this career because of my own childhood visits to hospital, where I often felt frightened and bored. Being a clown doctor means I can help people simply by making them smile.",
+      "vocab_notes": [
+        {
+          "word": "wig",
+          "cn": "假发"
+        },
+        {
+          "word": "badge",
+          "cn": "徽章;名牌"
+        },
+        {
+          "word": "sensitive",
+          "cn": "敏感的;善解人意的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer add in order to become a clown doctor?",
+          "options": [
+            "Some colourful clothes and a funny false nose.",
+            "Only a plain white doctor's coat.",
+            "A camera and a thick notebook.",
+            "A nurse's blue uniform."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'curly rainbow wig, my big red nose and a name badge' 的转述。"
+        },
+        {
+          "stem": "Who does the clown doctor try to cheer up on a typical day?",
+          "options": [
+            "Only the senior doctors.",
+            "Sick children, their families and the staff.",
+            "Just the visitors at the front door.",
+            "Only very old patients."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'cheer up young patients, their families and even the tired hospital staff' 的转述。"
+        },
+        {
+          "stem": "Why did the writer choose this job?",
+          "options": [
+            "Because hospitals had felt scary to them as a child.",
+            "Because clowns earn a great deal of money.",
+            "Because they once failed to become a nurse.",
+            "Because they did not like working with children."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 '因为童年住院时常感到害怕和无聊' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Mark Twain's Quick Wit",
+      "topic_cn": "记叙·马克·吐温的机智",
+      "body": "Mark Twain was an American writer who is still remembered for mixing humour with serious ideas. His style of writing was funny and often a little naughty. He once joked that writing was easy: all you had to do was cross out the wrong words. But Twain was just as well known for his quick replies in everyday life. One day, while travelling around the country giving talks, he went into a barber's shop for a haircut and a shave. The barber did not recognise him and asked whether he had a ticket for the evening lecture. When Twain said he did not, the barber warned him that he would have to stand, because every single seat had already been sold. 'That's just my luck,' Twain replied at once. 'I always have to stand when that fellow lectures!' People loved him for this kind of wit, and his fame soon spread far beyond America.",
+      "vocab_notes": [
+        {
+          "word": "barber",
+          "cn": "男理发师"
+        },
+        {
+          "word": "wit",
+          "cn": "机智;风趣"
+        },
+        {
+          "word": "fame",
+          "cn": "名声"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was special about Mark Twain's writing?",
+          "options": [
+            "It was always sad and very serious.",
+            "It mixed jokes with serious messages.",
+            "It contained no humour at all.",
+            "It was written only for small children."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'mixing humour with serious ideas' 的转述。"
+        },
+        {
+          "stem": "Why did Twain go into the barber's shop?",
+          "options": [
+            "To buy a ticket for the lecture.",
+            "To give a free evening talk.",
+            "To get his hair cut and have a shave.",
+            "To look for an empty seat."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'for a haircut and a shave' 的转述。"
+        },
+        {
+          "stem": "What did Twain mean by his reply about having to stand?",
+          "options": [
+            "He really wanted the barber to work faster.",
+            "He was angry that the seats had all gone.",
+            "He honestly had no ticket left to sell.",
+            "He jokingly pretended that even he found his own talks dull."
+          ],
+          "answer_index": 3,
+          "explanation": "他正是那位演讲者,却假装连自己都不爱听,以此自嘲取乐。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Lin Yutang and the Word 'Youmo'",
+      "topic_cn": "记叙·林语堂与'幽默'",
+      "body": "On the other side of the world, the Chinese writer Lin Yutang became famous for his own special brand of humour. A well-known writer in both Chinese and English, Lin first brought the modern idea of humour to Chinese literature. In 1924 he cleverly borrowed the old word 'youmo' to stand for the English word 'humour', and people still use it in this way today. Lin's quick wit once saved him at a dinner. The university president suddenly asked him to give a speech, putting him on the spot. Thinking fast, Lin told a story about a cruel emperor who tried to feed a man to wild animals. The man whispered something into each animal's ear, and one by one the beasts hurried away in fear. 'What on earth did you say to them?' asked the emperor. 'I told them they must each give a speech after their meal,' Lin answered. The guests roared with laughter, and the president quietly understood the gentle joke.",
+      "vocab_notes": [
+        {
+          "word": "brand",
+          "cn": "风格;类型"
+        },
+        {
+          "word": "whisper",
+          "cn": "悄声说"
+        },
+        {
+          "word": "roar",
+          "cn": "哄笑"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Lin Yutang do in 1924?",
+          "options": [
+            "He used an old Chinese word to stand for 'humour'.",
+            "He invented a brand-new spoken language.",
+            "He stopped writing in English for good.",
+            "He left China and never came back."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'borrowed the old word youmo to stand for humour' 的转述。"
+        },
+        {
+          "stem": "Why did Lin tell the story about the emperor?",
+          "options": [
+            "He wanted to frighten all the dinner guests.",
+            "He had been suddenly asked to make a speech.",
+            "He was giving a serious history lesson.",
+            "He really disliked wild animals."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 '校长突然请他讲话,让他当场为难' 的转述。"
+        },
+        {
+          "stem": "How did the guests react to Lin's little joke?",
+          "options": [
+            "They felt bored and quietly left.",
+            "They became angry with Lin.",
+            "They burst out laughing.",
+            "They did not understand a single word."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'roared with laughter' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Tricks on April Fool's Day",
+      "topic_cn": "说明·愚人节的恶作剧",
+      "body": "April Fool's Day falls on the first of April. It is the one day of the year when people in many countries play tricks on one another just for fun. Even newspapers, radio stations and television channels join in by fooling their readers and audiences. In Britain, the jokes traditionally have to stop at noon, but in some places, such as the United States, they can carry on all day long. Some of the most famous tricks are remembered for years. In 1957, a British television programme told viewers that spaghetti grew on trees, and even showed a family happily picking it. Surprisingly, many people actually believed it. On another April Fool's Day, a radio show announced a clever new machine that could send smells through the air into people's homes. These tricks are not meant to be cruel. They simply remind us that laughter and a sense of fun can be shared by a whole country at the very same time.",
+      "vocab_notes": [
+        {
+          "word": "fool",
+          "cn": "愚弄"
+        },
+        {
+          "word": "audience",
+          "cn": "观众;听众"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When must the April Fool jokes traditionally stop in Britain?",
+          "options": [
+            "At midnight.",
+            "Early in the morning.",
+            "They are never allowed to stop.",
+            "By the middle of the day."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'stop at noon' 的转述。"
+        },
+        {
+          "stem": "What did the famous 1957 television trick claim?",
+          "options": [
+            "That spaghetti could grow on trees.",
+            "That smells could be sent through the post.",
+            "That noon had been cancelled that year.",
+            "That all the newspapers were closed."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'spaghetti grew on trees' 的转述。"
+        },
+        {
+          "stem": "What does the writer say about these tricks?",
+          "options": [
+            "They are designed to hurt and upset people.",
+            "They are light-hearted rather than unkind.",
+            "They are meant only for very small children.",
+            "They have now been banned everywhere."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'not meant to be cruel' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Charlie Chaplin and the Tramp",
+      "topic_cn": "说明·卓别林与流浪汉形象",
+      "body": "Charlie Chaplin was a British actor, film-maker and composer. He became famous in the 1910s, at a time when films were silent and in black and white. Many people think he was one of the greatest comedy actors ever, because he knew exactly how to use his body and his face to make audiences laugh. His most famous character was the Tramp, a poor little man with a kind heart who keeps having unexpected adventures. These adventures, which often involve the police, give us some of the funniest scenes in film history. In one favourite film, Modern Times, the Tramp works on a fast production line in a factory. When a bee starts flying around his face, he falls behind with his work, and it is wonderful to watch him trying to keep up. Even today, long after the films were made, the little Tramp still makes brand-new audiences laugh. That, perhaps, is the real power of Chaplin's work.",
+      "vocab_notes": [
+        {
+          "word": "composer",
+          "cn": "作曲家"
+        },
+        {
+          "word": "silent",
+          "cn": "无声的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do many people admire Charlie Chaplin?",
+          "options": [
+            "He spoke beautifully in all of his films.",
+            "He wrote long and serious novels.",
+            "He used his body and face cleverly to make people laugh.",
+            "He never once made a single mistake."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'how to use his body and his face to make audiences laugh' 的转述。"
+        },
+        {
+          "stem": "Who was the Tramp?",
+          "options": [
+            "A rich and famous police officer.",
+            "A clever factory owner.",
+            "A serious news reader.",
+            "A poor but kind-hearted little man."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'a poor little man with a kind heart' 的转述。"
+        },
+        {
+          "stem": "What happens in the factory scene of Modern Times?",
+          "options": [
+            "A bee distracts him so that he cannot keep up.",
+            "He becomes the new manager of the factory.",
+            "He quietly repairs a broken machine.",
+            "He leaves the difficult job at once."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a bee... he falls behind with his work' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Is Laughter the Best Medicine?",
+      "topic_cn": "议论·笑是最好的良药",
+      "body": "People have said for a long time that 'laughter is the best medicine', and scientists now believe there is some truth in it. Studies show that laughing causes the body to produce helpful chemicals, which can make us feel happier and less worried. This is one reason why clown doctors are welcomed in so many hospitals. When a child laughs, the pain often seems smaller, and the worried parents slowly begin to relax as well. Laughter is good for the mind too. Sharing a joke can bring complete strangers together and turn a tense room into a friendly one. Some people even say that our need for humour is almost as great as our need for water and air. Of course, a single joke cannot cure a broken bone or heal an illness on its own. But a warm smile and a good laugh can make any difficult day feel a little easier, and that is something everyone is able to share.",
+      "vocab_notes": [
+        {
+          "word": "chemical",
+          "cn": "化学物质"
+        },
+        {
+          "word": "tense",
+          "cn": "紧张的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do scientific studies show about laughing?",
+          "options": [
+            "It has no effect at all on the body.",
+            "It makes the body release helpful chemicals.",
+            "It makes people feel far more worried.",
+            "It can cure every illness completely."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'laughing causes the body to produce helpful chemicals' 的转述。"
+        },
+        {
+          "stem": "How do the parents react when a child laughs?",
+          "options": [
+            "They become much more frightened.",
+            "They leave the hospital straight away.",
+            "They begin to feel calmer.",
+            "They suddenly start to cry."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'worried parents slowly begin to relax' 的转述。"
+        },
+        {
+          "stem": "What does the writer admit about jokes?",
+          "options": [
+            "They are always better than any real doctor.",
+            "They are useless and a complete waste of time.",
+            "They can fully replace water and air.",
+            "They cannot heal serious injuries by themselves."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'a single joke cannot cure a broken bone or heal an illness on its own' 的转述。"
+        }
+      ]
+    }
+  ]
+}

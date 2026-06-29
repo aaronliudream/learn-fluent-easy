@@ -1,0 +1,52 @@
+{
+  "volume": "required1",
+  "unit": "U6",
+  "topic": "Write a Description of a Natural Wonder(写一处自然奇观的介绍)",
+  "title_en": "A Place Where People and Nature Live as One",
+  "genre": "说明 / 描写(describe a natural wonder + how people live in harmony with it)",
+  "source": "外研社版必修第一册 Unit 6 At One with Nature:介绍一处自然景观,说明它的特点以及当地人如何与自然和谐相处。",
+  "prompt_cn": "假设你叫李华,你的英国朋友 Jane 想了解中国的自然景观。请用英语写一篇约80词的短文,介绍一处你喜欢的自然奇观(如龙脊梯田、黄果树瀑布等),内容包括:① 它在哪里、有什么特点;② 当地人如何与自然和谐相处或如何保护它;③ 你的感受。注意:恰当使用本单元的定语从句(介词+which/whom、非限制性定从、which 指代整句)。",
+  "prompt_en": "Suppose you are Li Hua. Your British friend Jane wants to learn about China's natural wonders. Write a short passage (about 80 words) introducing a natural wonder you like (e.g. the Longji Rice Terraces or Huangguoshu Waterfall), including: 1) where it is and what is special about it; 2) how local people live in harmony with it or protect it; 3) your own feelings. Try to use this unit's attributive clauses naturally.",
+  "points": [
+    "介绍地点与特点(… is a wonder that lies in …)",
+    "人与自然和谐 / 保护(The local people, who … , work in harmony with nature.)",
+    "用本单元定从(the way in which … / …, which means …)",
+    "表达感受(Standing there, I felt …)"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Hi Jane! Let me tell you about the Longji Rice Terraces, a wonder that lies high in the mountains of Guangxi. They were built long ago by the local Zhuang and Yao people, for whom these mountains have always been home. There is little flat land in the region, so the people cut the steep slopes into terraces in which they could grow rice. The way in which they work in harmony with nature is truly clever. Standing there, I felt how wisely people and nature can live as one.",
+  "model_translation": "嗨,Jane!我想给你讲讲龙脊梯田,这是一处坐落在广西群山之巅的奇观。它很久以前由当地的壮族和瑶族人修建,这些大山一直是他们的家园。这一地区平地很少,所以人们把陡峭的山坡开成梯田来种水稻。他们与自然和谐相处的方式真是巧妙。站在那里,我感受到人与自然原来可以如此智慧地融为一体。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:地点与特点 / 人与自然和谐或保护 / 个人感受" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一处景观展开、层次清楚、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、本单元定语从句运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题 … is a wonder that lies in …",
+      "特点+原因 There is little flat land, so the people cut the slopes into terraces in which …",
+      "和谐 The way in which they work in harmony with nature is …",
+      "感受 Standing there, I felt …"
+    ],
+    "key_expressions": [
+      "a wonder that lies high in the mountains",
+      "the local people, for whom these mountains have always been home",
+      "terraces in which they could grow rice",
+      "the way in which they work in harmony with nature"
+    ],
+    "useful_words": ["terrace", "region", "steep", "harmony", "in which", "for whom", "design", "prevent", "nature", "wonder"]
+  },
+  "high_sentences": [
+    "The Longji Rice Terraces are a wonder that lies high in the mountains of Guangxi.",
+    "They were built by the local people, for whom these mountains have always been home.",
+    "The people cut the steep slopes into terraces in which they could grow rice.",
+    "The way in which they work in harmony with nature is truly clever."
+  ],
+  "error_pairs": [
+    { "wrong": "the people who these mountains are home", "correct": "the people for whom these mountains are home", "note": "be home to sb,介词 for/to + whom,关系代词前要带介词。" },
+    { "wrong": "terraces which they could grow rice in them", "correct": "terraces in which they could grow rice", "note": "介词提前到关系代词前,从句里不再重复 in them。" },
+    { "wrong": "They work in harmony with nature, that means a lot.", "correct": "They work in harmony with nature, which means a lot.", "note": "指代前面整句、引导非限制性定从只能用 which,不用 that。" }
+  ],
+  "paragraph_template": "【自然奇观介绍结构】\n第1句 点题:… is a wonder that lies in …\n第2句 由谁所建/特点:It was built by the local people, for whom …\n第3句 人与自然:The way in which they work in harmony with nature is …\n第4句 感受:Standing there, I felt …"
+}

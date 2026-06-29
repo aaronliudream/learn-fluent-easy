@@ -1,0 +1,40 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "grade": 12,
+  "content": {
+    "title": "状语从句综合复习·连词速查",
+    "intro": "状语从句用一个连词把“时间、条件、让步、原因、结果、目的、方式”等信息接到主句上。判断口诀:先看主句和从句之间是哪种逻辑关系,再选对应的连词;同一类里的连词意思相近,但不同类绝不能混用。",
+    "table": {
+      "headers": ["关系", "常用连词", "例句"],
+      "rows": [
+        ["时间", "when / while / as / until / before / after / as soon as", "When you look up, you can see the murals."],
+        ["条件", "if / unless / as long as / in case", "If the weather is good, we will climb the sand mountain."],
+        ["让步", "although / though / even though / while", "Although it sits in the desert, it is rich in culture."],
+        ["原因", "because / since / as / now that", "Since the Silk Road passed through it, Dunhuang grew rich."],
+        ["结果", "so + 形/副 + that;such + (a/an) + 名 + that", "The cave was so dark that we could hardly see."],
+        ["目的", "so that / in order that", "Come closer so that you can see the details."],
+        ["方式", "as if / as though", "The figures look as if they are floating."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "so 接形容词/副词,such 接名词:so beautiful that… / such a city that…", "mark": "so + adj + that / such + a + n + that" },
+      { "rule": "unless = if…not,本身已含否定,从句不再加 not", "mark": "Unless you book a ticket, you can't enter." },
+      { "rule": "in case = 以防(万一),后接“可能发生的情况”,不表“如果就一定”", "mark": "Take water in case you feel thirsty." },
+      { "rule": "although / though 不能与 but 连用;but 与 although 二选一", "mark": "Although…, …(无 but)" },
+      { "rule": "as if / as though 后既可用陈述语气,也可用虚拟(were)表与事实相反", "mark": "looked as if it were a dream" }
+    ],
+    "why": [
+      "状语从句考的不是语法术语,而是“逻辑选词”:同样的两个分句,换一个连词意思就全变了。先想清楚是“因为、虽然、只要、以便、仿佛”中的哪一种,再下笔,答案自然唯一。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/完形高频:由句子逻辑判断 when/if/unless/although/because/so that 等连词。",
+      "so…that 与 such…that 辨析(看后面接形容词还是名词)。",
+      "易混:while 既可表“当…时”(时间),也可表“尽管/而”(让步对比);as 既表“随着/当…时”,也表“因为”,需看上下文。"
+    ],
+    "examVsReal": [
+      { "exam": "Although it is far, it is worth visiting.(考试要求完整连词)", "real": "It's far, but so worth visiting!", "note": "口语里常用 but/though 放句末,书面考试更爱句首 although。" },
+      { "exam": "I'll go early so that I can see the sunrise.(目的状语从句)", "real": "I'll go early to catch the sunrise.", "note": "口语常用不定式 to do 表目的,更简洁;考试爱考 so that 从句。" }
+    ]
+  }
+}

@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "grammar_title": "情态动词2:对过去的推测(must / may / might / could / can't + have done)",
+  "source": "外研社版(新标准)必修第二册 Unit 2 Using language:Modals (2)。对已发生事情的推测——证据强弱决定情态动词,句子地道、答案唯一(选项排除其他成立项)。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "must have done(对过去的肯定推测:几乎确定发生过)",
+      "overview": "句中有确凿证据(看得见的结果、明显的痕迹)、说话人非常肯定某事过去发生过时,用 must have done。"
+    },
+    {
+      "code": "u2.02",
+      "point": "might / may / could have done(对过去的可能推测:也许发生过)",
+      "overview": "句中表示不确定(maybe/perhaps/I'm not sure/也许)、只是一种可能时,用 might/may/could have done。"
+    },
+    {
+      "code": "u2.03",
+      "point": "can't / couldn't have done(对过去的否定推测:几乎不可能发生过)",
+      "overview": "句中证据说明某事过去绝不可能发生(时间、地点、能力上对不上)时,用 can't/couldn't have done。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "The floor is covered with wrapping paper, so the children ____ their presents already.",
+      "options": [
+        "must have opened",
+        "might have opened",
+        "can't have opened",
+        "must open"
+      ],
+      "answer_index": 0,
+      "explanation": "满地包装纸是确凿结果,对过去的肯定推测用 must have done;只是可能(might have)太弱、can't have 与证据相反、must open 不是对过去的推测。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Look at all these empty plates — the guests ____ the whole feast.",
+      "options": [
+        "might have eaten",
+        "must have eaten",
+        "can't have eaten",
+        "must eat"
+      ],
+      "answer_index": 1,
+      "explanation": "盘子全空是明显证据,肯定推测过去已发生用 must have eaten;其余或太不确定、或与事实相反、或不是过去推测。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Tolkien drew every letter so beautifully, so each one ____ him hours to finish.",
+      "options": [
+        "might have taken",
+        "can't have taken",
+        "must have taken",
+        "must take"
+      ],
+      "answer_index": 2,
+      "explanation": "画得如此精美是确凿依据,肯定推测过去花了很久用 must have taken。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The hall is full of balloons and flowers, so someone ____ very hard last night.",
+      "options": [
+        "may have worked",
+        "can't have worked",
+        "must work",
+        "must have worked"
+      ],
+      "answer_index": 3,
+      "explanation": "满屋气球鲜花是结果,肯定推测昨晚有人忙过用 must have worked。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "She knew every answer to the lantern riddles, so she ____ them somewhere before.",
+      "options": [
+        "must have seen",
+        "could have seen",
+        "can't have seen",
+        "must see"
+      ],
+      "answer_index": 0,
+      "explanation": "每题都会是确凿证据,肯定推测她以前见过用 must have seen。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Their faces were red and sweaty, so the dragon dancers ____ for hours.",
+      "options": [
+        "might have practised",
+        "must have practised",
+        "can't have practised",
+        "must practise"
+      ],
+      "answer_index": 1,
+      "explanation": "满脸通红冒汗是明显结果,肯定推测练了好几个小时用 must have practised。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The fireworks went off perfectly, so the team ____ everything very carefully.",
+      "options": [
+        "may have planned",
+        "can't have planned",
+        "must have planned",
+        "must plan"
+      ],
+      "answer_index": 2,
+      "explanation": "烟花完美是结果,肯定推测事先精心安排过用 must have planned。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "There is a North Pole stamp on it, so the letter ____ a very long way.",
+      "options": [
+        "might have travelled",
+        "can't have travelled",
+        "must travel",
+        "must have travelled"
+      ],
+      "answer_index": 3,
+      "explanation": "贴着北极邮票是确凿依据,肯定推测信走了很远用 must have travelled。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Grandpa keeps smiling at the old photo, so that family dinner ____ him very happy.",
+      "options": [
+        "must have made",
+        "could have made",
+        "can't have made",
+        "must make"
+      ],
+      "answer_index": 0,
+      "explanation": "一直对着老照片微笑是依据,肯定推测那顿饭让他很开心用 must have made。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The whole street smells of food, so the neighbours ____ all morning for the festival.",
+      "options": [
+        "might have cooked",
+        "must have cooked",
+        "can't have cooked",
+        "must cook"
+      ],
+      "answer_index": 1,
+      "explanation": "满街饭菜香是结果,肯定推测邻居们做了一上午饭用 must have cooked。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Her eyes were shining with joy, so the surprise party ____ her a lot.",
+      "options": [
+        "may have pleased",
+        "can't have pleased",
+        "must have pleased",
+        "must please"
+      ],
+      "answer_index": 2,
+      "explanation": "双眼放光是明显结果,肯定推测惊喜派对让她很高兴用 must have pleased。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "All the lanterns were already hung up, so the volunteers ____ very early this morning.",
+      "options": [
+        "might have arrived",
+        "can't have arrived",
+        "must arrive",
+        "must have arrived"
+      ],
+      "answer_index": 3,
+      "explanation": "灯笼全挂好了是结果,肯定推测志愿者一早就到了用 must have arrived。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "He could describe every float in the parade, so he ____ it himself.",
+      "options": [
+        "must have watched",
+        "could have watched",
+        "can't have watched",
+        "must watch"
+      ],
+      "answer_index": 0,
+      "explanation": "每辆花车都说得出是依据,肯定推测他亲眼看过用 must have watched。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The mooncakes are still warm, so someone ____ them just a moment ago.",
+      "options": [
+        "might have baked",
+        "must have baked",
+        "can't have baked",
+        "must bake"
+      ],
+      "answer_index": 1,
+      "explanation": "月饼还热着是确凿证据,肯定推测刚有人烤过用 must have baked。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The children were jumping up and down, so they ____ the good news.",
+      "options": [
+        "may have heard",
+        "can't have heard",
+        "must have heard",
+        "must hear"
+      ],
+      "answer_index": 2,
+      "explanation": "高兴得直跳是结果,肯定推测他们已听到好消息用 must have heard。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "There was a red envelope on every chair, so the host ____ them for the guests.",
+      "options": [
+        "might have prepared",
+        "can't have prepared",
+        "must prepare",
+        "must have prepared"
+      ],
+      "answer_index": 3,
+      "explanation": "每把椅子上都有红包是结果,肯定推测主人事先备好用 must have prepared。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The square was packed at midnight, so thousands of people ____ to see the show.",
+      "options": [
+        "must have come",
+        "could have come",
+        "can't have come",
+        "must come"
+      ],
+      "answer_index": 0,
+      "explanation": "午夜广场挤满人是依据,肯定推测成千上万人来过用 must have come。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Her costume was covered in dust, so she ____ in the attic for it.",
+      "options": [
+        "may have searched",
+        "must have searched",
+        "can't have searched",
+        "must search"
+      ],
+      "answer_index": 1,
+      "explanation": "戏服落满灰是结果,肯定推测她在阁楼里翻找过用 must have searched。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Everyone is still talking about his speech, so it ____ a deep impression.",
+      "options": [
+        "might have left",
+        "can't have left",
+        "must have left",
+        "must leave"
+      ],
+      "answer_index": 2,
+      "explanation": "大家还在议论是依据,肯定推测他的演讲留下了深刻印象用 must have left。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The poet's name is on every banner, so the town ____ to honour him.",
+      "options": [
+        "could have decided",
+        "can't have decided",
+        "must decide",
+        "must have decided"
+      ],
+      "answer_index": 3,
+      "explanation": "处处横幅都是诗人名字是依据,肯定推测全镇已决定纪念他用 must have decided。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I'm not sure who sent the card, but it ____ from my cousin overseas.",
+      "options": [
+        "might have come",
+        "must have come",
+        "can't have come",
+        "might come"
+      ],
+      "answer_index": 0,
+      "explanation": "I'm not sure 表不确定,对过去只是一种可能用 might have come;must have 太肯定、can't have 是否定、might come 不是过去推测。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Nobody answered the door — they ____ out to watch the parade.",
+      "options": [
+        "must have gone",
+        "may have gone",
+        "can't have gone",
+        "may go"
+      ],
+      "answer_index": 1,
+      "explanation": "没人应门只是推测原因之一,可能推测用 may have gone。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Perhaps the lights went out because someone ____ the wrong switch.",
+      "options": [
+        "must have pressed",
+        "can't have pressed",
+        "could have pressed",
+        "could press"
+      ],
+      "answer_index": 2,
+      "explanation": "Perhaps 表不确定,对过去的可能推测用 could have pressed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "He didn't reply to the invitation; maybe he ____ it in his inbox.",
+      "options": [
+        "must have missed",
+        "can't have missed",
+        "might miss",
+        "might have missed"
+      ],
+      "answer_index": 3,
+      "explanation": "maybe 表也许,可能推测他没看到用 might have missed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The cake tastes a little sweet — they ____ some extra sugar.",
+      "options": [
+        "may have added",
+        "must have added",
+        "can't have added",
+        "may add"
+      ],
+      "answer_index": 0,
+      "explanation": "尝起来甜只是一种猜测,可能推测加了糖用 may have added。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I can't find my lantern; a younger child ____ it by mistake.",
+      "options": [
+        "must have taken",
+        "could have taken",
+        "can't have taken",
+        "could take"
+      ],
+      "answer_index": 1,
+      "explanation": "只是猜可能被谁拿走,可能推测用 could have taken。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "She looks tired today; she ____ up late at the festival last night.",
+      "options": [
+        "must have stayed",
+        "can't have stayed",
+        "might have stayed",
+        "might stay"
+      ],
+      "answer_index": 2,
+      "explanation": "看起来累只是猜测原因,可能推测昨晚熬夜用 might have stayed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The hall is half empty — some guests ____ the time of the party.",
+      "options": [
+        "must have forgotten",
+        "can't have forgotten",
+        "may forget",
+        "may have forgotten"
+      ],
+      "answer_index": 3,
+      "explanation": "半空只是推测,可能推测有人忘了时间用 may have forgotten。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "We're not certain, but Polar Bear ____ through the roof once again.",
+      "options": [
+        "could have fallen",
+        "must have fallen",
+        "can't have fallen",
+        "could fall"
+      ],
+      "answer_index": 0,
+      "explanation": "not certain 表不确定,可能推测用 could have fallen。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "His phone is off; perhaps he ____ it at the dinner table.",
+      "options": [
+        "must have left",
+        "might have left",
+        "can't have left",
+        "might leave"
+      ],
+      "answer_index": 1,
+      "explanation": "perhaps 表也许,可能推测他把手机落下了用 might have left。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The riddle was tricky, so a few people ____ the wrong answer.",
+      "options": [
+        "must have given",
+        "can't have given",
+        "may have given",
+        "may give"
+      ],
+      "answer_index": 2,
+      "explanation": "只是猜测有人答错,可能推测用 may have given。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I heard a loud bang outside — someone ____ off a firework.",
+      "options": [
+        "must have set",
+        "can't have set",
+        "could set",
+        "could have set"
+      ],
+      "answer_index": 3,
+      "explanation": "听到响声只是一种猜测来源,可能推测用 could have set。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Maybe the parcel is late because it ____ stuck in the snow.",
+      "options": [
+        "might have got",
+        "must have got",
+        "can't have got",
+        "might get"
+      ],
+      "answer_index": 0,
+      "explanation": "Maybe 表也许,可能推测包裹被雪困住用 might have got。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "There's mud on his shoes; he ____ across the park to the square.",
+      "options": [
+        "must have walked",
+        "may have walked",
+        "can't have walked",
+        "may walk"
+      ],
+      "answer_index": 1,
+      "explanation": "鞋上有泥只是一种猜测,可能推测他穿过公园走来用 may have walked。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "We don't know why she's crying; the film ____ her deeply.",
+      "options": [
+        "must have moved",
+        "can't have moved",
+        "could have moved",
+        "could move"
+      ],
+      "answer_index": 2,
+      "explanation": "don't know 表不确定,可能推测影片打动了她用 could have moved。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The food is all gone; the guests ____ hungry after the long show.",
+      "options": [
+        "must have felt",
+        "can't have felt",
+        "might feel",
+        "might have felt"
+      ],
+      "answer_index": 3,
+      "explanation": "只是推测原因之一,可能推测客人饿了用 might have felt。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I'm not sure, but Tony ____ Hugo to his apartment for Thanksgiving.",
+      "options": [
+        "may have invited",
+        "must have invited",
+        "can't have invited",
+        "may invite"
+      ],
+      "answer_index": 0,
+      "explanation": "not sure 表不确定,可能推测用 may have invited。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Her hands are covered in flour; she ____ dumplings earlier.",
+      "options": [
+        "must have made",
+        "could have made",
+        "can't have made",
+        "could make"
+      ],
+      "answer_index": 1,
+      "explanation": "手上有面粉只是一种猜测,可能推测她包过饺子用 could have made。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Perhaps they're so quiet because the long day ____ them out.",
+      "options": [
+        "must have worn",
+        "can't have worn",
+        "might have worn",
+        "might wear"
+      ],
+      "answer_index": 2,
+      "explanation": "Perhaps 表也许,可能推测累坏了他们用 might have worn。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "We can't be sure, but the loud music ____ the neighbours late at night.",
+      "options": [
+        "must have woken",
+        "can't have woken",
+        "may wake",
+        "may have woken"
+      ],
+      "answer_index": 3,
+      "explanation": "can't be sure 表不确定,可能推测吵醒了邻居用 may have woken。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Lucy is quite short, so that tall girl in the bride costume ____ her.",
+      "options": [
+        "can't have been",
+        "must have been",
+        "might have been",
+        "can't be"
+      ],
+      "answer_index": 0,
+      "explanation": "Lucy 个子矮是确凿矛盾,对过去的否定推测用 can't have been;must have 与事实相反、might have 太弱、can't be 不是过去推测。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The shops were shut all day, so he ____ the decorations there.",
+      "options": [
+        "must have bought",
+        "couldn't have bought",
+        "may have bought",
+        "couldn't buy"
+      ],
+      "answer_index": 1,
+      "explanation": "整天关门是确凿矛盾,否定推测过去不可能买到用 couldn't have bought。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She was on a plane at noon, so she ____ at the lantern fair then.",
+      "options": [
+        "must have been",
+        "might have been",
+        "can't have been",
+        "can't be"
+      ],
+      "answer_index": 2,
+      "explanation": "中午在飞机上,时间对不上,否定推测用 can't have been。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "There was no snow that winter, so Polar Bear ____ a snowman at all.",
+      "options": [
+        "must have built",
+        "could have built",
+        "couldn't build",
+        "couldn't have built"
+      ],
+      "answer_index": 3,
+      "explanation": "那年没下雪是确凿矛盾,否定推测堆不成雪人用 couldn't have built。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The letter is in perfect English, so a small child ____ it alone.",
+      "options": [
+        "can't have written",
+        "must have written",
+        "might have written",
+        "can't write"
+      ],
+      "answer_index": 0,
+      "explanation": "英文写得完美,小孩子做不到,否定推测用 can't have written。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "He hates anything sweet, so he ____ all the mooncakes.",
+      "options": [
+        "must have eaten",
+        "couldn't have eaten",
+        "may have eaten",
+        "couldn't eat"
+      ],
+      "answer_index": 1,
+      "explanation": "他讨厌甜食是确凿矛盾,否定推测不可能吃光月饼用 couldn't have eaten。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The fireworks only start at eight, so people ____ them at six.",
+      "options": [
+        "must have seen",
+        "might have seen",
+        "can't have seen",
+        "can't see"
+      ],
+      "answer_index": 2,
+      "explanation": "八点才放,时间对不上,否定推测六点看不到用 can't have seen。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Grandma can't drive, so she ____ the family to the square herself.",
+      "options": [
+        "must have driven",
+        "could have driven",
+        "couldn't drive",
+        "couldn't have driven"
+      ],
+      "answer_index": 3,
+      "explanation": "奶奶不会开车是确凿矛盾,否定推测用 couldn't have driven。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The museum was closed all week, so they ____ the old lanterns inside.",
+      "options": [
+        "can't have seen",
+        "must have seen",
+        "may have seen",
+        "can't see"
+      ],
+      "answer_index": 0,
+      "explanation": "整周闭馆是确凿矛盾,否定推测看不到馆内灯笼用 can't have seen。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "He was abroad last week, so he ____ at the Spring Festival dinner.",
+      "options": [
+        "must have been",
+        "couldn't have been",
+        "might have been",
+        "couldn't be"
+      ],
+      "answer_index": 1,
+      "explanation": "上周在国外,地点对不上,否定推测用 couldn't have been。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The envelope was completely empty, so it ____ any money.",
+      "options": [
+        "must have held",
+        "could have held",
+        "can't have held",
+        "can't hold"
+      ],
+      "answer_index": 2,
+      "explanation": "信封空空如也是确凿矛盾,否定推测里面没装钱用 can't have held。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She doesn't know him at all, so she ____ him to her party.",
+      "options": [
+        "must have invited",
+        "may have invited",
+        "couldn't invite",
+        "couldn't have invited"
+      ],
+      "answer_index": 3,
+      "explanation": "根本不认识是确凿矛盾,否定推测不可能请他用 couldn't have invited。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The river was frozen solid, so they ____ a dragon boat race that day.",
+      "options": [
+        "can't have held",
+        "must have held",
+        "might have held",
+        "can't hold"
+      ],
+      "answer_index": 0,
+      "explanation": "河面结冰是确凿矛盾,否定推测办不成龙舟赛用 can't have held。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The power was off all evening, so the lights ____ the riddles.",
+      "options": [
+        "must have shown",
+        "couldn't have shown",
+        "could have shown",
+        "couldn't show"
+      ],
+      "answer_index": 1,
+      "explanation": "整晚停电是确凿矛盾,否定推测灯照不出谜语用 couldn't have shown。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "He only arrived today, so he ____ the parade yesterday.",
+      "options": [
+        "must have joined",
+        "might have joined",
+        "can't have joined",
+        "can't join"
+      ],
+      "answer_index": 2,
+      "explanation": "今天才到,时间对不上,否定推测昨天没法参加游行用 can't have joined。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The bakery had sold out, so she ____ a cake there for the guests.",
+      "options": [
+        "must have got",
+        "may have got",
+        "couldn't get",
+        "couldn't have got"
+      ],
+      "answer_index": 3,
+      "explanation": "面包店售罄是确凿矛盾,否定推测买不到蛋糕用 couldn't have got。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Their team lost every single game, so they ____ the competition.",
+      "options": [
+        "can't have won",
+        "must have won",
+        "might have won",
+        "can't win"
+      ],
+      "answer_index": 0,
+      "explanation": "每场都输是确凿矛盾,否定推测不可能赢得比赛用 can't have won。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It poured with rain all night, so the firework show ____ on time.",
+      "options": [
+        "must have started",
+        "couldn't have started",
+        "could have started",
+        "couldn't start"
+      ],
+      "answer_index": 1,
+      "explanation": "整夜大雨是确凿矛盾,否定推测准点办不成烟花秀用 couldn't have started。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "He can't cook at all, so he ____ this lovely dinner by himself.",
+      "options": [
+        "must have prepared",
+        "may have prepared",
+        "can't have prepared",
+        "can't prepare"
+      ],
+      "answer_index": 2,
+      "explanation": "他完全不会做饭是确凿矛盾,否定推测独自做不出这顿饭用 can't have prepared。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The small hall holds only fifty people, so a thousand guests ____ inside.",
+      "options": [
+        "must have fitted",
+        "might have fitted",
+        "couldn't fit",
+        "couldn't have fitted"
+      ],
+      "answer_index": 3,
+      "explanation": "小厅只能容五十人是确凿矛盾,否定推测千名客人挤不进去用 couldn't have fitted。"
+    }
+  ]
+}

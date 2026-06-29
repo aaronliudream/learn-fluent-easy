@@ -1,0 +1,408 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "topic": "Facing the Future",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);speaker 仅角色标注。kind=long 用对话(transcript 为 'A: ...' 字符串数组),kind=short 用独白(transcript 为字符串)。",
+  "source": "外研社(新标准)选择性必修第四册 Unit 1 同主题听力(未来职业对话/科技改变生活独白/求职面试对话/面对抉择建议/间隔年计划对话/成功与未来演讲)。用词限本单元/初中/常见词,答案唯一可在 transcript 找到依据,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 Future Careers",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Amy: Ben, have you decided what you want to do in the future?",
+        "Ben: I think I'm going to study computer science. I really want to build robots.",
+        "Amy: That sounds exciting. Robots will probably do many jobs one day.",
+        "Ben: Exactly. What about you, Amy? Have you made up your mind?",
+        "Amy: Not completely. I'm really interested in clean energy, like solar power.",
+        "Ben: That's a great field. The world will need much more clean energy.",
+        "Amy: Yes. My dream is to design batteries that store sunlight.",
+        "Ben: Then we should both work hard at science this year.",
+        "Amy: Agreed. Let's prepare for the future together."
+      ],
+      "translation_cn": "Amy 问 Ben 将来想做什么;Ben 打算学计算机科学,想造机器人;Amy 还没完全决定,对太阳能等清洁能源很感兴趣,梦想设计储存阳光的电池;两人决定今年都努力学好科学,一起为未来做准备。",
+      "questions": [
+        {
+          "stem": "What does Ben plan to study?",
+          "options": [
+            "Computer science.",
+            "Clean energy.",
+            "History.",
+            "Music."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Ben really want to build?",
+          "options": [
+            "Cars.",
+            "Robots.",
+            "Houses.",
+            "Ships."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which field is Amy interested in?",
+          "options": [
+            "Clean energy.",
+            "Medicine.",
+            "Law.",
+            "Cooking."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Amy's dream?",
+          "options": [
+            "To become a famous doctor.",
+            "To design batteries that store sunlight.",
+            "To open a small restaurant.",
+            "To travel around the world."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do the two friends decide to do?",
+          "options": [
+            "Stop studying for a while.",
+            "Change to another school.",
+            "Work hard at science together.",
+            "Take a long holiday."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·独白 Technology and Tomorrow",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_male",
+      "transcript": "Good morning, everyone. Today I want to talk about how technology will change our daily lives in the coming years. In the future, many cars will drive themselves, so the roads may become much safer. Doctors will use smart machines to find illnesses earlier than ever before. At home, robots will help us cook, clean and even look after older people. Of course, machines cannot do everything. We will still need kind hearts, new ideas and the courage to face an uncertain future. So keep learning, stay curious, and get ready for the exciting world ahead.",
+      "translation_cn": "早上好。今天我想谈谈科技将如何改变我们未来几年的日常生活:许多汽车将自动驾驶,道路可能更安全;医生将用智能机器更早发现疾病;在家里机器人会帮我们做饭、打扫,甚至照顾老人。当然机器并非万能,我们仍需善良的心、新点子,以及面对不确定未来的勇气。所以要不断学习、保持好奇,为前方精彩的世界做好准备。",
+      "questions": [
+        {
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "How to repair an old car.",
+            "Why people enjoy cooking.",
+            "Where to take a holiday.",
+            "How technology will change daily life."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why may the roads become much safer?",
+          "options": [
+            "Because many cars will drive themselves.",
+            "Because nobody will drive at all.",
+            "Because all roads will be closed.",
+            "Because cars will move very slowly."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How will doctors use smart machines?",
+          "options": [
+            "To build new hospitals.",
+            "To find illnesses earlier than before.",
+            "To teach children at school.",
+            "To drive patients home."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will robots help us do at home?",
+          "options": [
+            "Write all our homework.",
+            "Choose our friends for us.",
+            "Cook, clean and look after older people.",
+            "Decide where we work."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker say we will still need?",
+          "options": [
+            "Bigger and faster machines.",
+            "Longer working hours.",
+            "Fewer new skills.",
+            "Kind hearts, new ideas and courage."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 A Job Interview",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Manager: Good afternoon, Richard. Why did you apply for this job at our youth hostel?",
+        "Richard: Good afternoon. I've always been interested in travel and meeting new people.",
+        "Manager: I see. What did you do during your previous holidays?",
+        "Richard: Last year I worked in a youth hostel in Vietnam and helped guests plan their trips.",
+        "Manager: That's useful experience. Why do you think you are suitable for this job?",
+        "Richard: I'm a friendly and outgoing person, and I feel happy when I help others.",
+        "Manager: Good. Can you work at weekends?",
+        "Richard: Yes, weekends are no problem for me at all.",
+        "Manager: Wonderful. We'll let you know our decision by Friday.",
+        "Richard: Thank you very much. I look forward to hearing from you."
+      ],
+      "translation_cn": "经理问 Richard 为何应聘青年旅舍的工作;Richard 说自己一直喜欢旅行和结识新朋友;去年他在越南的青年旅舍工作过,帮客人规划行程;他认为自己友好外向、乐于助人,所以胜任;周末也能上班;经理说周五前给答复。",
+      "questions": [
+        {
+          "stem": "Where is Richard applying for a job?",
+          "options": [
+            "At a youth hostel.",
+            "At a hospital.",
+            "At a bank.",
+            "At a school."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why did Richard apply for the job?",
+          "options": [
+            "He wants to earn a great deal of money.",
+            "He is interested in travel and meeting people.",
+            "He lives next to the youth hostel.",
+            "His parents told him to."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did Richard do in Vietnam last year?",
+          "options": [
+            "He studied at a local university.",
+            "He travelled as a tourist only.",
+            "He worked in a youth hostel and helped guests.",
+            "He taught English to children."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why does Richard think he is suitable?",
+          "options": [
+            "He never makes any mistakes.",
+            "He can speak five languages.",
+            "He has worked there for years.",
+            "He is friendly and enjoys helping others."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "When will Richard hear the decision?",
+          "options": [
+            "By Friday.",
+            "By next month.",
+            "The same evening.",
+            "In a year's time."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·独白 Facing a Decision",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Making an important decision can feel difficult, especially when both choices look good. Here is some simple advice. First, do not act too quickly; take time to weigh up the advantages and disadvantages of each option. Second, talk to someone you trust, such as a teacher or a parent, and listen to their ideas. Third, think about your real dream, not just what looks easy today. It is fine to have second thoughts, but try not to put off the choice forever. Once you have decided, believe in yourself and move forward with confidence. Remember, every choice helps to shape the future you want.",
+      "translation_cn": "做重要决定可能很难,尤其当两个选择都不错时。这里有几条简单建议:第一,别太快行动,花时间权衡每个选择的利弊;第二,找你信任的人(如老师或父母)谈谈,听听他们的看法;第三,想想你真正的梦想,而不只是今天看起来轻松的事。犹豫是正常的,但别把决定一直拖下去。一旦决定,就要相信自己、自信前行。记住,每一个选择都在塑造你想要的未来。",
+      "questions": [
+        {
+          "stem": "What is the speaker mainly giving?",
+          "options": [
+            "A story about a journey.",
+            "Advice on making decisions.",
+            "A weather report.",
+            "A list of jobs."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you do first, according to the speaker?",
+          "options": [
+            "Decide as fast as possible.",
+            "Forget about the problem.",
+            "Take time to weigh up each option.",
+            "Ask a stranger for money."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who does the speaker suggest talking to?",
+          "options": [
+            "A person you have just met.",
+            "Nobody at all.",
+            "A famous film star.",
+            "Someone you trust, like a teacher or parent."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should you think about when deciding?",
+          "options": [
+            "Your real dream, not just the easy choice.",
+            "Only what your friends like.",
+            "How to avoid all hard work.",
+            "Which choice is the cheapest."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should you do once you have decided?",
+          "options": [
+            "Keep changing your mind every day.",
+            "Believe in yourself and move forward.",
+            "Tell no one about it.",
+            "Give up at the first problem."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 Planning a Gap Year",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_male",
+      "transcript": [
+        "Lily: Tom, what are you going to do after you finish senior high?",
+        "Tom: I'm planning to take a gap year before university.",
+        "Lily: A gap year? What will you do during that time?",
+        "Tom: I'm going to do voluntary work in a village school abroad.",
+        "Lily: That sounds meaningful. Won't you miss a whole year of study?",
+        "Tom: Maybe, but the experience will make me more independent and mature.",
+        "Lily: That's true. Where exactly are you going?",
+        "Tom: I've decided to go to Cambodia and help teach English to children.",
+        "Lily: I hope it goes well. You'll have wonderful stories to share.",
+        "Tom: Thanks, Lily. I'm sure it will be a year I never forget."
+      ],
+      "translation_cn": "Lily 问 Tom 高中毕业后打算做什么;Tom 计划在上大学前过一个间隔年,去国外乡村学校做志愿工作;虽然会少学一年,但这段经历会让他更独立、更成熟;他决定去柬埔寨教孩子们英语;Lily 祝他顺利,Tom 相信这将是难忘的一年。",
+      "questions": [
+        {
+          "stem": "What is Tom planning to do after senior high?",
+          "options": [
+            "Start work at a bank.",
+            "Stay at home and rest.",
+            "Take a gap year.",
+            "Go straight to a job abroad."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What kind of work will Tom do?",
+          "options": [
+            "Building roads in a city.",
+            "Selling cars in a shop.",
+            "Cooking in a hotel.",
+            "Voluntary work in a village school."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why is Tom willing to take a gap year?",
+          "options": [
+            "It will make him more independent and mature.",
+            "It will help him earn lots of money.",
+            "He wants to avoid going to university.",
+            "His friends are all doing the same."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where has Tom decided to go?",
+          "options": [
+            "Vietnam.",
+            "Cambodia.",
+            "France.",
+            "Australia."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will Tom do there?",
+          "options": [
+            "Study physics at a college.",
+            "Drive a school bus.",
+            "Help teach English to children.",
+            "Build a new hospital."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·独白 Success and the Future",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_male",
+      "transcript": "What does a successful future really mean? For some people, success is a good job and plenty of money. For others, it is health, family, or the chance to help society. I believe success is not a fixed prize that we win only once. Instead, it is the way we keep growing and learning all our lives. We cannot fully understand our path while looking forward; we can only make sense of it by looking back. So we must trust that our efforts today will somehow shape a brighter tomorrow. Set clear goals, take action, and never be afraid to face the unknown. The future belongs to those who prepare for it with energy and optimism.",
+      "translation_cn": "成功的未来究竟意味着什么?对一些人来说,成功是好工作和富足的金钱;对另一些人,则是健康、家庭或帮助社会的机会。我认为成功不是只赢一次的固定奖品,而是我们一生不断成长与学习的方式。向前看时我们无法完全看懂自己的路,只有回望才能理解它。所以要相信,今天的努力终将塑造更光明的明天。设定清晰目标,采取行动,永远不要害怕面对未知。未来属于那些以活力和乐观去准备的人。",
+      "questions": [
+        {
+          "stem": "What question does the speaker begin with?",
+          "options": [
+            "How to become rich quickly.",
+            "Where to find a new job.",
+            "When the holiday starts.",
+            "What a successful future really means."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does success mean to some people, according to the speaker?",
+          "options": [
+            "A good job and plenty of money.",
+            "A long sleep every day.",
+            "Never working again.",
+            "Living completely alone."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the speaker think success really is?",
+          "options": [
+            "A prize we win only once.",
+            "The way we keep growing and learning.",
+            "Something only the rich can have.",
+            "A matter of pure luck."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How can we make sense of our path?",
+          "options": [
+            "By forgetting the past.",
+            "By copying other people.",
+            "By looking back on it.",
+            "By never making plans."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who does the future belong to, according to the speaker?",
+          "options": [
+            "Those who simply wait and hope.",
+            "Those who fear every change.",
+            "Those who never set any goals.",
+            "Those who prepare with energy and optimism."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

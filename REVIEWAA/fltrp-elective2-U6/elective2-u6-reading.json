@@ -1,0 +1,318 @@
+{
+  "volume": "elective2",
+  "unit": "U6",
+  "topic": "Survival",
+  "source": "外研社版选择性必修第二册 Unit 6 同主题阅读(城市里的野生动物/城市为何吸引动物/鸟撞玻璃/野外求生提示/鲁滨逊求生/火星作为B计划)。词限 U6/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Animals Move Into Town",
+      "topic_cn": "说明·城市里的野生动物",
+      "body": "In a seaside suburb of Cape Town, a greedy thief once reached into a car and ran off with a bag of shopping. Yet this was no ordinary criminal — it was a wild baboon. No matter how many times it stole, the police were powerless to stop it. Scenes like this, once almost unheard of, are now common in cities around the world. Foxes trot through London, mountain lions appear in San Francisco, and wild pigs wander the streets of Hong Kong. It is almost as if our towns are being taken over by wild creatures. Many people believe that the growth of cities and the change of climate have pushed these animals out of their natural homes. The truth, however, is more surprising. Some of these so-called urban animals have never moved at all. Instead, it is we humans who have spread into their land. Wherever they turn, the animals find streets and buildings in their way, and they have little choice but to live beside us.",
+      "vocab_notes": [
+        {
+          "word": "baboon",
+          "cn": "狒狒"
+        },
+        {
+          "word": "suburb",
+          "cn": "郊区"
+        },
+        {
+          "word": "urban",
+          "cn": "城市的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Who turned out to be the 'thief' in the seaside suburb?",
+          "options": [
+            "A wild baboon searching for food.",
+            "A clever local criminal.",
+            "A hungry fox from London.",
+            "A careless police officer."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说那个“窃贼”其实是 a wild baboon 的转述。"
+        },
+        {
+          "stem": "What surprising point does the writer make about urban animals?",
+          "options": [
+            "They were all brought into cities by people.",
+            "Many never moved, while humans spread into their land.",
+            "They prefer cities to any natural home.",
+            "They are far less common than before."
+          ],
+          "answer_index": 1,
+          "explanation": "对 'it is we humans who have spread into their land' 的概括转述。"
+        },
+        {
+          "stem": "According to the passage, why do the animals live beside us?",
+          "options": [
+            "Human towns now block the places they once roamed.",
+            "They enjoy the noise of city life.",
+            "Cities are always safer than the wild.",
+            "People feed them every day on purpose."
+          ],
+          "answer_index": 0,
+          "explanation": "对 'the animals find streets and buildings in their way' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Why Cities Suit Wild Animals",
+      "topic_cn": "说明·城市为何吸引动物",
+      "body": "As our cities grow greener, they offer more and more welcoming spaces to animals in search of a new home. Far from the natural hunters that once chased them, these newcomers often flourish in their city lives. Foxes, for example, can now be seen all over London. One was even found living high up inside a tall building while it was still being built. There is more good news for hungry animals, too. They find plenty to eat in our gardens and in the food we throw away each day. Some have learned to enjoy the many kinds of meals our cities offer, from leftover bread to pieces of meat. The city is far from a perfect home, yet for its wildest new arrivals it brings real benefits: safety, shelter and an easy supply of food. This is one reason why the number of these animals keeps rising. As long as a city can meet their simple needs, the wild creatures will keep moving in and staying on.",
+      "vocab_notes": [
+        {
+          "word": "flourish",
+          "cn": "兴盛"
+        },
+        {
+          "word": "newcomer",
+          "cn": "新来者"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do many animals do well in cities, according to the text?",
+          "options": [
+            "They are kept safely in zoos.",
+            "They no longer live near the predators that used to hunt them.",
+            "They are trained by city people.",
+            "They sleep through the whole winter."
+          ],
+          "answer_index": 1,
+          "explanation": "对 'Far from the natural hunters that once chased them… flourish' 的转述。"
+        },
+        {
+          "stem": "What does the example of the fox in the tall building show?",
+          "options": [
+            "Foxes can settle in surprising city places.",
+            "Foxes only live in gardens.",
+            "Foxes dislike living in London.",
+            "Foxes refuse human food."
+          ],
+          "answer_index": 2,
+          "explanation": "用伦敦高楼里的狐狸说明城市动物能在意想不到的地方安家;其余与文意相反。"
+        },
+        {
+          "stem": "What benefits does the city bring its wildest new arrivals?",
+          "options": [
+            "Higher prices and more rules.",
+            "Colder weather and less light.",
+            "Fewer places to hide.",
+            "Safety, shelter and easy food."
+          ],
+          "answer_index": 3,
+          "explanation": "对 'safety, shelter and an easy supply of food' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "When Birds Meet Glass",
+      "topic_cn": "说明·鸟撞玻璃的危险",
+      "body": "Not every animal does well in the city. For some, the modern world hides a deadly trap. Many birds simply cannot tell the difference between the open blue sky and a sheet of clear glass. Because of this, they fly straight into windows at speeds of about fifty kilometres an hour. Scientists estimate that somewhere between four hundred million and one billion birds die from these crashes every year in the United States alone. Shockingly, that may be around one in every ten birds in the country. Some kinds of birds suffer far more than others. One idea is that these birds have not yet changed the old travelling routes that lead them, year after year, through cities full of high towers. For these unlucky travellers, the bright modern city is not a home at all, but a hidden danger in their path. Until our buildings change, the safest skies for them may still lie far away from town.",
+      "vocab_notes": [
+        {
+          "word": "estimate",
+          "cn": "估计"
+        },
+        {
+          "word": "migratory route",
+          "cn": "迁徙路线"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do many birds fly into city windows?",
+          "options": [
+            "They cannot tell clear glass from the open sky.",
+            "They are chasing insects on the glass.",
+            "They are trying to enter the buildings.",
+            "They like the warmth of the towers."
+          ],
+          "answer_index": 0,
+          "explanation": "对 'cannot tell the difference between the open blue sky and a sheet of clear glass' 的转述。"
+        },
+        {
+          "stem": "What do the numbers in the passage suggest?",
+          "options": [
+            "Very few birds are ever harmed.",
+            "An enormous number of birds die this way each year.",
+            "Birds avoid the United States completely.",
+            "The danger has now disappeared."
+          ],
+          "answer_index": 1,
+          "explanation": "对四亿到十亿、约十分之一的转述,说明死亡数量巨大。"
+        },
+        {
+          "stem": "Why are some kinds of birds hurt more than others?",
+          "options": [
+            "They fly only at night for fun.",
+            "They have stopped travelling altogether.",
+            "Their old travel routes still lead them through tall cities.",
+            "They are too heavy to turn quickly."
+          ],
+          "answer_index": 2,
+          "explanation": "对 'have not yet changed the old travelling routes… through cities full of high towers' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Staying Alive in the Wild",
+      "topic_cn": "应用文·野外求生提示",
+      "body": "Spending time in nature is one of life's great joys, but it can also be dangerous. Whether you are a first-time hiker or an old hand at camping, a few simple rules can save your life. First, if a wildfire breaks out, leave the area quickly but stay calm; panic will only slow you down. Second, when people get lost together, they often split up and each try to find the way home. This is a serious mistake. However tempting it feels, stay together as a group and wait for help to arrive. Third, wherever you go, take a first-aid kit with you, for it may one day save someone's life — perhaps even your own. Carry enough water, too, since the body cannot last long without it. Above all, tell a friend where you are going before you set off, so that rescuers know where to look. No matter what goes wrong, a calm and hopeful mind remains the most powerful survival tool of all.",
+      "vocab_notes": [
+        {
+          "word": "hiker",
+          "cn": "徒步者"
+        },
+        {
+          "word": "first-aid kit",
+          "cn": "急救包"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What should you do if a wildfire suddenly starts?",
+          "options": [
+            "Run in any direction as fast as you can.",
+            "Stay and watch the flames closely.",
+            "Hide near the burning trees.",
+            "Leave fast but keep yourself calm."
+          ],
+          "answer_index": 3,
+          "explanation": "对 'leave the area quickly but stay calm' 的转述。"
+        },
+        {
+          "stem": "Why does the writer warn against splitting up when lost?",
+          "options": [
+            "Staying together makes rescue safer and easier.",
+            "It wastes the group's food supply.",
+            "It frightens the wild animals away.",
+            "It makes the journey home faster."
+          ],
+          "answer_index": 0,
+          "explanation": "对 'stay together as a group and wait for help' 的转述,劝阻各自走散。"
+        },
+        {
+          "stem": "What does the writer call the most powerful survival tool?",
+          "options": [
+            "A sharp knife and a map.",
+            "A calm and hopeful state of mind.",
+            "A loud voice for calling help.",
+            "A heavy bag of supplies."
+          ],
+          "answer_index": 1,
+          "explanation": "对 'a calm and hopeful mind remains the most powerful survival tool' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Lesson of Robinson Crusoe",
+      "topic_cn": "记叙·鲁滨逊的求生",
+      "body": "Daniel Defoe published Robinson Crusoe in 1719, and today it remains one of the most famous survival stories ever told. In the book, a man is shipwrecked and left completely alone on a desert island for many years. At first he has almost nothing, yet little by little he builds a new life. He makes simple tools, shapes cups out of clay, and even sews his own clothes. He digs a cave for shelter and learns to grow his own food. What truly saves him, however, is not his hands but his mind. Whatever troubles come, he stays calm and refuses to give in to fear. He is patient, clever and, above all, hopeful. Rather than thinking only about what he has lost, he counts what he still has. Countless readers have drawn courage from his story. His finest qualities — calmness, patience and a hopeful heart — are exactly the ones that can help any of us cope, no matter what kind of crisis we face.",
+      "vocab_notes": [
+        {
+          "word": "shipwreck",
+          "cn": "船只失事"
+        },
+        {
+          "word": "clay",
+          "cn": "黏土"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does Crusoe build a new life on the island?",
+          "options": [
+            "He slowly makes tools, shelter and food for himself.",
+            "He depends on other people living nearby.",
+            "He waits quietly for a passing ship.",
+            "He gives up and stops trying."
+          ],
+          "answer_index": 2,
+          "explanation": "对 'makes simple tools… digs a cave… learns to grow his own food' 的概括转述。"
+        },
+        {
+          "stem": "According to the passage, what really saves Crusoe?",
+          "options": [
+            "The riches he carries from the ship.",
+            "The mild weather of the island.",
+            "A rescue team that soon arrives.",
+            "His calm, patient and hopeful mind."
+          ],
+          "answer_index": 3,
+          "explanation": "对 'What truly saves him… is not his hands but his mind' 的转述。"
+        },
+        {
+          "stem": "Why do readers admire Crusoe's story?",
+          "options": [
+            "His best qualities can help anyone face a crisis.",
+            "It is short and easy to read.",
+            "It describes a beautiful holiday island.",
+            "It teaches readers how to build a ship."
+          ],
+          "answer_index": 0,
+          "explanation": "对末句 'help any of us cope, no matter what kind of crisis' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Mars: A Plan B for Humans?",
+      "topic_cn": "说明·火星作为B计划",
+      "body": "Long ago, the greatest fear was that war could wipe out the human race in a single moment. Today, the biggest danger to life on Earth comes from our changing environment. Scientists are working hard to lower this risk, but they are also preparing for the worst. What, they ask, is our Plan B if the Earth one day becomes too damaged to live on? For many, the answer lies in space. Of all the planets, Mars looks the most promising, for it is fairly close to us and less hostile than the others. Space agencies are already planning to send people there within the next few decades. Yet the journey would be long and full of danger, and the first settlers might never return home. Staying alive on Mars would be a daily struggle. For now, human life on the Red Planet is still many years away. Until we can truly live elsewhere, the wisest plan of all is to take far better care of the only home we have.",
+      "vocab_notes": [
+        {
+          "word": "hostile",
+          "cn": "恶劣的"
+        },
+        {
+          "word": "settler",
+          "cn": "定居者"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the greatest danger to life on Earth today, according to the text?",
+          "options": [
+            "A sudden world war.",
+            "Our changing environment.",
+            "A shortage of spacecraft.",
+            "Too many wild animals."
+          ],
+          "answer_index": 1,
+          "explanation": "对 'the biggest danger to life on Earth comes from our changing environment' 的转述。"
+        },
+        {
+          "stem": "Why is Mars seen as the most promising 'Plan B'?",
+          "options": [
+            "It already has cities for humans.",
+            "People can return from it in a single day.",
+            "It is fairly near and less harsh than other planets.",
+            "It is warmer than the Earth."
+          ],
+          "answer_index": 2,
+          "explanation": "对 'fairly close to us and less hostile than the others' 的转述。"
+        },
+        {
+          "stem": "What does the writer suggest is the wisest plan for now?",
+          "options": [
+            "Sending settlers to Mars at once.",
+            "Forgetting about Earth completely.",
+            "Stopping all space research.",
+            "Taking far better care of our own planet."
+          ],
+          "answer_index": 3,
+          "explanation": "对末句 'take far better care of the only home we have' 的转述。"
+        }
+      ]
+    }
+  ]
+}

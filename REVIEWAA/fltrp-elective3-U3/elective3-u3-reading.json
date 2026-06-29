@@ -1,0 +1,338 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "topic": "The D-Day Landings · War and Peace",
+  "source": "外研社版选择性必修第三册 Unit 3 主题阅读(D-Day/二战/和平/Lianda);6 篇不同子题材;答案为转述,不照抄正文。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Largest Operation in History",
+      "topic_cn": "说明·诺曼底登陆概览",
+      "body": "By the spring of 1944, the Second World War had raged across the world for nearly five years. Along the south coast of England, however, something unusual was taking shape. Allied troops, made up mainly of British, Canadian and American soldiers, were quietly gathering in huge numbers. This was the final stage of a top-secret plan code-named Operation Overlord, the largest combined sea, air and land operation the world had ever seen. Its aim was to free north-west Europe from enemy occupation. After commanders had waited for the perfect mix of weather, moon and tide, the start was set for the sixth of June. At dawn that day, thousands of men dropped by parachute behind enemy lines, while thousands more crossed the English Channel towards the beaches of Normandy. Few of them could have imagined the violence that waited on the sand. Yet within weeks their courage had begun to change the course of the war in Europe.",
+      "vocab_notes": [
+        {
+          "word": "Allied",
+          "cn": "同盟国的"
+        },
+        {
+          "word": "parachute",
+          "cn": "降落伞"
+        },
+        {
+          "word": "occupation",
+          "cn": "占领"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why were Allied troops gathering along the south coast of England?",
+          "options": [
+            "To get ready for a secret landing in Europe.",
+            "To defend England from an enemy invasion.",
+            "To begin a training march across the country.",
+            "To wait for the war to end on its own."
+          ],
+          "answer_index": 0,
+          "explanation": "正文说他们是为代号 Overlord 的登陆计划集结,选项转述了“准备秘密登陆”这一目的。"
+        },
+        {
+          "stem": "What decided the exact date when the operation would begin?",
+          "options": [
+            "The arrival of new American soldiers.",
+            "Commanders waited for ideal natural conditions.",
+            "A direct order from the British king.",
+            "The end of the fighting in the east."
+          ],
+          "answer_index": 1,
+          "explanation": "正文说指挥官等待天气、月相和潮水的最佳组合,即理想的自然条件。"
+        },
+        {
+          "stem": "What does the passage suggest about the soldiers who landed?",
+          "options": [
+            "They faced far more danger than they had expected.",
+            "They found the beaches empty and quiet.",
+            "They quickly gave up and returned home.",
+            "They were all experienced in beach landings."
+          ],
+          "answer_index": 0,
+          "explanation": "“few could have imagined the violence”暗示登陆远比他们预想的危险。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Fight at Omaha Beach",
+      "topic_cn": "记叙·奥马哈海滩的激战",
+      "body": "The hardest fighting of D-Day took place at Omaha Beach. Long before the boats reached the shore, the enemy were hiding above the sand, waiting in their gun positions. As the first soldiers tried to land, heavy machine-gun fire swept across the water. Some boats were hit and sank, and many men drowned under the weight of their packs before they ever touched the beach. Those who did reach the shore had to cross open ground with bombs falling all around them. By the middle of the morning, hundreds lay dead in the shallow water and among the tanks on the sand. One survivor later remembered being the first man out of his boat. The next soldier to cross the beach safely was the seventh; everyone in between was hit. Two of them were killed and three were wounded. That, he said, was how lucky a man had to be simply to stay alive on that terrible morning.",
+      "vocab_notes": [
+        {
+          "word": "drown",
+          "cn": "淹死"
+        },
+        {
+          "word": "gunfire",
+          "cn": "炮火"
+        },
+        {
+          "word": "tank",
+          "cn": "坦克"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did many soldiers drown before reaching the beach?",
+          "options": [
+            "They had never learned how to swim.",
+            "Their heavy packs pulled them down when the boats sank.",
+            "The sea water was far too cold to bear.",
+            "They jumped into the water on purpose to hide."
+          ],
+          "answer_index": 1,
+          "explanation": "正文说很多人因背包过重在船沉时淹死,选项转述了这一原因。"
+        },
+        {
+          "stem": "What did the survivor's story about the seventh man show?",
+          "options": [
+            "Most soldiers crossed the beach without any harm.",
+            "The seventh soldier was the bravest of them all.",
+            "Staying alive on the beach was largely a matter of luck.",
+            "Leaving the boats was perfectly safe."
+          ],
+          "answer_index": 2,
+          "explanation": "“that's how lucky you had to be”说明活下来主要靠运气。"
+        },
+        {
+          "stem": "Which best describes the scene by the middle of the morning?",
+          "options": [
+            "The fighting had already stopped.",
+            "The enemy had completely disappeared.",
+            "The soldiers were resting safely on the sand.",
+            "The beach was covered with the dead and the wounded."
+          ],
+          "answer_index": 3,
+          "explanation": "正文写到上午中段海滩上躺满死伤者,选项概括了这一场景。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Planning Operation Overlord",
+      "topic_cn": "说明·登陆的策划与抉择",
+      "body": "The success of D-Day depended on months, perhaps years, of careful planning, and nothing about the operation could be left to chance. The whole plan was kept top secret, for if the enemy had learned where the Allies meant to land, the attack would have failed before it began. Commanders studied maps of the French coast and chose Normandy rather than the ports that the enemy expected. They also had to wait for nature itself. The landing needed calm seas, enough moonlight for the parachute drops, and a low tide that would expose the enemy's beach defences. Such conditions came together for only a few days each month. In early June the weather suddenly turned stormy, and the commanders faced a hard choice: wait, or risk everything. Trusting a forecast of a brief clear spell, General Eisenhower gave the order to go. It was one of the boldest decisions of the entire war, and in the end it paid off.",
+      "vocab_notes": [
+        {
+          "word": "tide",
+          "cn": "潮水"
+        },
+        {
+          "word": "forecast",
+          "cn": "天气预报"
+        },
+        {
+          "word": "commander",
+          "cn": "指挥官"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the plan kept top secret?",
+          "options": [
+            "So that the enemy would not know where the landing would happen.",
+            "Because the soldiers did not trust one another.",
+            "So that the news would surprise the British public.",
+            "Because the exact date had not yet been chosen."
+          ],
+          "answer_index": 0,
+          "explanation": "正文说若敌人得知登陆地点,进攻会失败,故保密是为不让敌人知道地点。"
+        },
+        {
+          "stem": "Why did the Allies choose Normandy for the landing?",
+          "options": [
+            "It had the largest ports in all of France.",
+            "It was not where the enemy was expecting them.",
+            "It was the closest point to England.",
+            "It had already been freed from the enemy."
+          ],
+          "answer_index": 1,
+          "explanation": "正文说他们选诺曼底而非敌人预期的港口,即出敌不意。"
+        },
+        {
+          "stem": "What made Eisenhower's final order so difficult?",
+          "options": [
+            "He had been told the enemy had already surrendered.",
+            "His soldiers refused to cross the Channel.",
+            "Bad weather forced him to gamble on an uncertain forecast.",
+            "He had to attack with no planning at all."
+          ],
+          "answer_index": 2,
+          "explanation": "正文说天气突变,他只能信一个短暂晴天的预报冒险下令,故抉择艰难。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "We Will Remember Them",
+      "topic_cn": "记叙·纪念与《为阵亡者》",
+      "body": "Seventy years after D-Day, the men who had fought there gathered once more on both sides of the English Channel. They were old now, and fewer in number with every passing year, but they came to remember the friends they had lost on the beaches of northern France. Crowds joined them for solemn memorial ceremonies. At one of these, a former soldier read aloud some lines from a poem called For the Fallen, written by Laurence Binyon during an earlier war. The poem promises that the young men who died will never grow old as the living do, and that time will not wear them away. At the setting of the sun and in the morning, it says, we will remember them. For the survivors, such words carry a heavy meaning. Each year a few more of them are gone, yet their outstanding courage means that they, and those who never came home, will always be remembered.",
+      "vocab_notes": [
+        {
+          "word": "memorial",
+          "cn": "纪念的"
+        },
+        {
+          "word": "solemn",
+          "cn": "庄重的"
+        },
+        {
+          "word": "outstanding",
+          "cn": "杰出的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the old soldiers return to the Channel after seventy years?",
+          "options": [
+            "To take part in the fighting once again.",
+            "To find the homes they once lived in.",
+            "To train a new group of young soldiers.",
+            "To honour the comrades who had died there."
+          ],
+          "answer_index": 3,
+          "explanation": "正文说他们回来纪念失去的战友,选项转述了这一目的。"
+        },
+        {
+          "stem": "What does the poem For the Fallen promise about the dead?",
+          "options": [
+            "They will stay forever young in people's memory.",
+            "They will one day return to their families.",
+            "They will slowly be forgotten over time.",
+            "They will grow old just like the living."
+          ],
+          "answer_index": 0,
+          "explanation": "诗句说阵亡者不会像生者那样变老,即在记忆中永远年轻。"
+        },
+        {
+          "stem": "What is the main message of the last part of the passage?",
+          "options": [
+            "War heroes are quickly forgotten by all.",
+            "The soldiers' bravery keeps their memory alive.",
+            "Only the survivors deserve to be remembered.",
+            "The ceremonies have now come to an end."
+          ],
+          "answer_index": 1,
+          "explanation": "末段说他们杰出的勇敢使他们永被铭记,故主旨是勇气让记忆长存。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Keeping the Peace",
+      "topic_cn": "说明·联合国维和与中国",
+      "body": "The cruelty of war is reason enough to do everything possible to prevent it, and this belief lies behind the United Nations' many peacekeeping missions. Peacekeepers are sent to regions that have suffered conflict and civil war, where their job is to watch over the peace and make sure that sides which once fought now keep to their agreements. They help to disarm fighters and to collect weapons and ammunition so that these can no longer be used. Such steps are meant to bring stability to troubled areas and to allow governments to rebuild their authority. China now plays a growing part in this work. It has trained eight thousand troops who stay ready for United Nations missions at any time. In conflict zones around the world, Chinese peacekeepers are highly valued, and they have won praise for their professionalism. Through such efforts, the world tries to make sure that the horrors of the past are not repeated.",
+      "vocab_notes": [
+        {
+          "word": "peacekeeper",
+          "cn": "维和人员"
+        },
+        {
+          "word": "disarm",
+          "cn": "解除武装"
+        },
+        {
+          "word": "stability",
+          "cn": "稳定"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the main job of UN peacekeepers?",
+          "options": [
+            "To win wars on behalf of the United Nations.",
+            "To sell weapons to local governments.",
+            "To help former enemies keep the peace they have agreed to.",
+            "To train new soldiers for future battles."
+          ],
+          "answer_index": 2,
+          "explanation": "正文说维和人员确保曾交战的各方遵守协议,即帮助维持已达成的和平。"
+        },
+        {
+          "stem": "How does China take part in peacekeeping?",
+          "options": [
+            "It sends money but never any people.",
+            "It only watches the missions from a distance.",
+            "It has refused to join such missions.",
+            "It keeps thousands of trained troops ready for UN missions."
+          ],
+          "answer_index": 3,
+          "explanation": "正文说中国训练了八千名随时待命的维和部队。"
+        },
+        {
+          "stem": "Why are Chinese peacekeepers respected abroad?",
+          "options": [
+            "They carry out their duties in a highly professional way.",
+            "They fight harder than anyone else does.",
+            "They bring their own weapons to sell.",
+            "They stay only in completely safe areas."
+          ],
+          "answer_index": 0,
+          "explanation": "正文说他们因专业素质受到赞扬,选项转述了这一点。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Lianda: A University at War",
+      "topic_cn": "记叙·战火中的西南联大",
+      "body": "In 1937 the aggression of an invading army brought disaster to three of China's greatest universities. Two of them were occupied and one was destroyed by bombing. To save their academic and intellectual heritage, the three schools joined together far away in Kunming, forming a single new university known as Lianda. Getting there meant an epic journey of more than two thousand kilometres, much of it on foot. Life at Lianda was desperately hard. Students slept packed together in rough buildings and went short of food, books and equipment. Classes were often broken up by air attacks and had to be held in the early morning or late afternoon. Yet over eight long years the spirit and belief of its teachers and students kept the nation's learning alive. Many of China's finest scholars later emerged from Lianda, including two future Nobel Prize winners. The school is now physically gone, but its story of passion and dedication has become part of the nation's collective memory.",
+      "vocab_notes": [
+        {
+          "word": "aggression",
+          "cn": "侵略"
+        },
+        {
+          "word": "intellectual",
+          "cn": "智识的"
+        },
+        {
+          "word": "dedication",
+          "cn": "奉献"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the three universities join together as Lianda?",
+          "options": [
+            "To make a single larger sports team.",
+            "To protect their learning after the invasion.",
+            "To move closer to the capital city.",
+            "To avoid paying for any new buildings."
+          ],
+          "answer_index": 1,
+          "explanation": "正文说三校为保住学术与智识遗产而联合,选项转述了这一原因。"
+        },
+        {
+          "stem": "What were conditions like for students at Lianda?",
+          "options": [
+            "They enjoyed comfortable rooms and plenty of food.",
+            "They rarely had any lessons at all.",
+            "They lived and studied under very harsh conditions.",
+            "They were kept safe far from any danger."
+          ],
+          "answer_index": 2,
+          "explanation": "正文描写住简陋房屋、缺粮缺书、常遭空袭,可概括为条件艰苦。"
+        },
+        {
+          "stem": "Why is Lianda still remembered today?",
+          "options": [
+            "It still has the finest buildings in China.",
+            "It produced the country's richest businessmen.",
+            "It was never actually touched by the war.",
+            "Its spirit of dedication left a lasting mark on the nation."
+          ],
+          "answer_index": 3,
+          "explanation": "正文说它的热情与奉献已成为民族集体记忆,故仍被铭记。"
+        }
+      ]
+    }
+  ]
+}

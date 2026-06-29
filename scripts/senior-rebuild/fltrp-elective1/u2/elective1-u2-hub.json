@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Everyone knows that success rarely happens overnight.", "opts": ["人人都知道,成功很少是一夜之间到来的。", "人人都知道,成功每晚都会发生。", "没人相信成功需要努力。", "成功总是来得又快又容易。"], "answer": 0 },
+    { "audio": "When she got her first rejection letter, she stuck it on the wall.", "opts": ["收到拒稿信后,她把它烧掉了。", "收到第一封拒稿信时,她把它贴在了墙上。", "她从来没有收到过拒稿信。", "她把信寄回给了出版商。"], "answer": 1 },
+    { "audio": "Even during the war, the soldier kept working on his novel.", "opts": ["战争期间,士兵停止了一切写作。", "士兵把小说卖给了出版商。", "即使在战争期间,这名士兵仍坚持写他的小说。", "士兵把手稿留在了家里。"], "answer": 2 },
+    { "audio": "Liu Wei decided to learn to play the piano with his toes.", "opts": ["刘伟决定放弃音乐。", "刘伟请别人替他弹琴。", "刘伟只想用手弹琴。", "刘伟决定学着用脚趾弹钢琴。"], "answer": 3 },
+    { "audio": "Don't forget to phone your dad tonight; he is waiting for you.", "opts": ["别忘了今晚给爸爸打电话,他在等你。", "你昨晚已经给爸爸打过电话了。", "爸爸今晚会打电话给你。", "你不用再给爸爸打电话了。"], "answer": 0 },
+    { "audio": "When you feel low, try looking on the bright side of things.", "opts": ["心情低落时,就去睡一觉。", "心情低落时,试着往事情好的一面看。", "心情低落时,最好谁也别理。", "心情低落时,把事情都放下。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "These are the words that every writer ____ receiving: \"We regret to inform you...\"", "opts": ["dreads", "enjoys", "guarantees", "elects"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "After twelve refusals, she still refused to give up; her ____ finally paid off.", "opts": ["perseverance", "rejection", "debt", "blanket"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Talent alone cannot ____ success; hard work matters just as much.", "opts": ["guarantee", "dread", "spoil", "descend"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "A person who always spoils the fun is called a wet ____.", "opts": ["blanket", "contest", "orchestra", "manuscript"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Even now, Liu Wei still enjoys ____ music to his fans.", "opts": ["playing", "to play", "play", "plays"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "After many rejections, she decided ____ writing in her own way.", "opts": ["to keep", "keeping", "keep", "keeps"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "I still remember ____ my first rejection letter years ago.", "opts": ["receiving", "to receive", "receive", "receives"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "On the fourth day he was so tired that he stopped ____ for a short rest.", "opts": ["to rest", "resting", "rest", "rests"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["即使只卖出两本,姐妹们也从未停止尝试。", "姐妹们一开始就大获成功。", "姐妹们决定不再写作。", "姐妹们的书卖了几百万本。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Even when the book sold only two copies, the sisters never stopped trying." },
+    { "q": "听句子选中文:", "opts": ["他打算让父母失望。", "他打算让父母骄傲,所以每天坚持练习。", "他父母让他停止练习。", "他从不在意父母的想法。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "He meant to make his parents proud, so he kept practising every day." }
+  ],
+  "reading": {
+    "passage": "Many famous writers did not become successful at once. Before her books sold millions of copies, J.K. Rowling faced twelve rejections, yet she refused to give up. Her story reminds us that perseverance, not luck, is the real key to success.",
+    "passageCn": "许多著名作家并非一举成名。在书卖出数百万册之前,J.K. 罗琳遭遇了十二次拒绝,却不肯放弃。她的故事提醒我们:坚持,而非运气,才是成功真正的钥匙。",
+    "questions": [
+      { "q": "How many rejections did Rowling face before her success?", "opts": ["Twelve.", "Only one.", "None at all.", "A hundred."], "answer": 0 },
+      { "q": "What does her story say is the real key to success?", "opts": ["Good luck.", "Perseverance.", "A rich family.", "Famous friends."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short passage (about 60 words) about a time you kept going and overcame a challenge. Use at least one 'doing' object and one 'to do' object (e.g. enjoy doing, decide to do).",
+    "promptCn": "写一篇约60词的短文,讲一次你坚持下来、克服困难的经历。至少用一个 doing 宾语和一个 to do 宾语(如 enjoy doing、decide to do)。",
+    "sampleWords": ["challenge", "give up", "keep trying", "decide", "practise", "overcome", "perseverance", "confident", "overnight", "worthwhile"]
+  },
+  "dialogues": [
+    {
+      "title": "Don't Give Up",
+      "lines": [
+        { "role": "A", "text": "I keep failing this part of the piano piece. Maybe I should quit.", "cn": "钢琴这一段我老是弹不好,也许我该放弃。" },
+        { "role": "B", "text": "Don't give up. Success rarely happens overnight.", "cn": "别放弃。成功很少一蹴而就。" },
+        { "role": "A", "text": "You're right. I'll decide to practise a little every evening.", "cn": "你说得对。我决定每晚练一会儿。" },
+        { "role": "B", "text": "That's the spirit. Keep trying, and your work will pay off.", "cn": "这就对了。坚持下去,你的努力会有回报。" }
+      ]
+    },
+    {
+      "title": "Looking on the Bright Side",
+      "lines": [
+        { "role": "A", "text": "I ran for class leader, but I wasn't elected. I feel terrible.", "cn": "我竞选班长却落选了,心里很难受。" },
+        { "role": "B", "text": "I'm sorry, but try looking on the bright side. You did your best.", "cn": "我很遗憾,但试着往好处看吧。你已尽力了。" },
+        { "role": "A", "text": "I suppose one result can't decide everything.", "cn": "我想,一次结果决定不了一切。" },
+        { "role": "B", "text": "Exactly. Stop worrying and be proud of how hard you worked.", "cn": "正是。别再担心了,为自己的努力感到自豪吧。" }
+      ]
+    }
+  ]
+}

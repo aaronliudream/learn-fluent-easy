@@ -1,0 +1,282 @@
+{
+  "listeningQuestions": [
+    {
+      "audio": "Zhang Yue is the chairwoman of a company that grows roses in a quiet valley.",
+      "opts": [
+        "张悦是一家在静谧山谷里种玫瑰的公司的女会长。",
+        "张悦从未经营过任何公司。",
+        "她的公司只生产化妆品。",
+        "山谷里根本不种玫瑰。"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "The workers pick the delicate flowers before sunrise every morning.",
+      "opts": [
+        "工人们每天清晨在日出前采摘娇嫩的花朵。",
+        "工人们只在晚上采花。",
+        "花朵是机器自动采摘的。",
+        "他们从不在早晨工作。"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "A large company offered to purchase her product and help with its distribution.",
+      "opts": [
+        "一家大公司提出购买她的产品并帮忙分销。",
+        "没有公司愿意买她的产品。",
+        "她拒绝把产品卖给任何人。",
+        "产品只在本村出售。"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "This year she can pay every worker a fair bonus.",
+      "opts": [
+        "今年她能给每位工人发一笔公道的奖金。",
+        "今年公司付不出任何工资。",
+        "只有经理才有奖金。",
+        "工人们要自己交钱。"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "The sharing economy lets people borrow things instead of buying them.",
+      "opts": [
+        "共享经济让人们借用物品而非购买。",
+        "共享经济迫使人们买更多东西。",
+        "共享经济已经消失了。",
+        "只有富人才能共享。"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Always pay your bill on time, or your credit score will fall.",
+      "opts": [
+        "务必按时还款,否则你的信用分会下降。",
+        "可以随便拖欠账单。",
+        "信用分和还款毫无关系。",
+        "账单永远不用还。"
+      ],
+      "answer": 0
+    }
+  ],
+  "quizQuestions": [
+    {
+      "q": "She is now the ____ of her own rose company.(女会长)",
+      "opts": [
+        "chairwoman",
+        "toddler",
+        "freshman",
+        "consultant"
+      ],
+      "answer": 0,
+      "point": "词汇",
+      "dim": "vocab"
+    },
+    {
+      "q": "This year every worker received a ____ as a reward.(奖金)",
+      "opts": [
+        "bonus",
+        "debt",
+        "fine",
+        "theft"
+      ],
+      "answer": 0,
+      "point": "词汇",
+      "dim": "vocab"
+    },
+    {
+      "q": "Only after returning home did she see the ____ of roses.(潜力)",
+      "opts": [
+        "potential",
+        "sorrow",
+        "obstacle",
+        "purse"
+      ],
+      "answer": 0,
+      "point": "词汇",
+      "dim": "vocab"
+    },
+    {
+      "q": "A part-time job should never ____ with your studies.(妨碍)",
+      "opts": [
+        "interfere",
+        "purchase",
+        "exceed",
+        "accumulate"
+      ],
+      "answer": 0,
+      "point": "词汇",
+      "dim": "vocab"
+    },
+    {
+      "q": "This is the valley ____ roses grow wild all year round.",
+      "opts": [
+        "where",
+        "which",
+        "when",
+        "why"
+      ],
+      "answer": 0,
+      "point": "语法",
+      "dim": "grammar"
+    },
+    {
+      "q": "The entrepreneur ____ started the rose farm is now famous.",
+      "opts": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer": 0,
+      "point": "语法",
+      "dim": "grammar"
+    },
+    {
+      "q": "She decided to grow roses, ____ surprised many people.",
+      "opts": [
+        "which",
+        "that",
+        "what",
+        "who"
+      ],
+      "answer": 0,
+      "point": "语法",
+      "dim": "grammar"
+    },
+    {
+      "q": "I will never forget the day ____ I started my own business.",
+      "opts": [
+        "when",
+        "where",
+        "why",
+        "which"
+      ],
+      "answer": 0,
+      "point": "语法",
+      "dim": "grammar"
+    },
+    {
+      "q": "听录音选出正确的中文意思。",
+      "opts": [
+        "起步阶段最大的挑战是说服当地人为她工作。",
+        "她一开始就有很多顾客。",
+        "她从不需要雇人。",
+        "村民们立刻就相信了她。"
+      ],
+      "answer": 0,
+      "point": "听力",
+      "dim": "listening",
+      "audio": "The biggest challenge at the early phase was to persuade local people to work for her."
+    },
+    {
+      "q": "听录音选出正确的中文意思。",
+      "opts": [
+        "用手机你可以租一辆自行车或租一个房间。",
+        "手机不能用来支付任何费用。",
+        "共享只适合公司,不适合个人。",
+        "租东西比买东西更贵。"
+      ],
+      "answer": 0,
+      "point": "听力",
+      "dim": "listening",
+      "audio": "With a phone, you can hire a bike for an hour or rent a room for a night."
+    }
+  ],
+  "reading": {
+    "passage": "Zhang Yue once paid little attention to the roses around her home. After studying overseas, she saw their business potential, returned home, and built a flower company whose roses are now sold across Asia.",
+    "passageCn": "张悦曾对家乡四周的玫瑰不以为意。出国留学后,她看到了它们的商业潜力,于是回乡创办了一家花卉公司,如今其玫瑰已销往亚洲各地。",
+    "questions": [
+      {
+        "q": "When did Zhang Yue notice the value of the roses?",
+        "opts": [
+          "After she studied overseas.",
+          "When she was a small child.",
+          "Before she left her home town.",
+          "She never noticed it."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How well does her company do now?",
+        "opts": [
+          "Its roses are sold across Asia.",
+          "It has already closed down.",
+          "It sells only in one village.",
+          "It grows no roses at all."
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a few sentences to introduce a local product you like. Say what it is and where it comes from, describe one special feature, and explain why you recommend it. Try to use attributive clauses (which / who / where / whose).",
+    "promptCn": "写几句话介绍一款你喜欢的本地产品:说明它是什么、产自哪里,描述一个特别之处,并解释为什么推荐它。尝试使用定语从句(which / who / where / whose)。",
+    "sampleWords": [
+      "product",
+      "local",
+      "quality",
+      "taste",
+      "farmer",
+      "support",
+      "business",
+      "recommend",
+      "fair",
+      "natural"
+    ]
+  },
+  "dialogues": [
+    {
+      "title": "Talking About a Rose Business",
+      "lines": [
+        {
+          "role": "A",
+          "text": "Have you heard of the woman who grows roses in that quiet valley?",
+          "cn": "你听说过那个在静谧山谷里种玫瑰的女人吗?"
+        },
+        {
+          "role": "B",
+          "text": "Yes, the chairwoman whose roses are now sold across Asia. She's amazing.",
+          "cn": "听过,就是那位玫瑰已卖到亚洲各地的女会长。她太厉害了。"
+        },
+        {
+          "role": "A",
+          "text": "The hardest part was the early phase, when few people believed in her.",
+          "cn": "最难的是起步阶段,那时很少有人相信她。"
+        },
+        {
+          "role": "B",
+          "text": "But she never gave up, which is why she succeeded in the end.",
+          "cn": "但她从不放弃,这正是她最终成功的原因。"
+        }
+      ]
+    },
+    {
+      "title": "Managing Money at University",
+      "lines": [
+        {
+          "role": "A",
+          "text": "University is the first place where I have to handle money on my own.",
+          "cn": "大学是我第一次要自己管钱的地方。"
+        },
+        {
+          "role": "B",
+          "text": "Then open an account that has no fees, and save a little each week.",
+          "cn": "那就开一个免手续费的账户,每周存一点。"
+        },
+        {
+          "role": "A",
+          "text": "What about a credit card, which my friend says is risky?",
+          "cn": "信用卡呢?我朋友说那东西有风险。"
+        },
+        {
+          "role": "B",
+          "text": "Use it carefully and pay on time, so you never go into debt.",
+          "cn": "小心使用、按时还款,这样你就不会负债。"
+        }
+      ]
+    }
+  ]
+}

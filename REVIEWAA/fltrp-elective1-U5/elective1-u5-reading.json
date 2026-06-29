@@ -1,0 +1,350 @@
+{
+  "volume": "elective1",
+  "unit": "U5",
+  "topic": "Revealing Nature",
+  "source": "外研社选必一 Unit 5 同主题阅读(达尔文与贝格尔号/雀鸟与喙/植物的秘密语言/生物多样性/孟德尔与豌豆/孤独的乔治)。词限 U5/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Darwin and the Beagle",
+      "topic_cn": "说明·达尔文与贝格尔号航行",
+      "body": "In 1831, a young man named Charles Darwin boarded a ship called the Beagle and set off to explore distant lands. He was not the captain's first choice, and his own father had once warned that he might bring shame on the family. Yet Darwin was deeply curious about rocks, plants and animals, and the long voyage gave him a rare chance to study living things in their own surroundings. As the ship moved from place to place, he gathered countless samples until his small cabin was crowded with them. While he examined what he had found, one question kept returning to his mind: why do so many different kinds of creatures exist? That simple question would slowly grow into one of the greatest scientific ideas ever known, and it all started with a single journey across the sea.",
+      "vocab_notes": [
+        {
+          "word": "distant",
+          "cn": "遥远的"
+        },
+        {
+          "word": "sample",
+          "cn": "样本"
+        },
+        {
+          "word": "scientific",
+          "cn": "科学的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the voyage so valuable for Darwin?",
+          "options": [
+            "It let him watch creatures where they actually lived.",
+            "It made him the captain of the ship.",
+            "It helped him finish his medical degree.",
+            "It allowed him to stay safely at home."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说航行让他在生物'自己的环境中'研究它们,即在野外观察生物。"
+        },
+        {
+          "stem": "What had Darwin's father once feared?",
+          "options": [
+            "That his son would never travel.",
+            "That his son might embarrass the family.",
+            "That his son would become a sailor.",
+            "That his son would study too hard."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'might bring shame on the family' 的转述。"
+        },
+        {
+          "stem": "What question kept troubling Darwin during the trip?",
+          "options": [
+            "Why so many types of living things exist.",
+            "How to become a famous captain.",
+            "Where to sell his samples.",
+            "When the ship would return home."
+          ],
+          "answer_index": 0,
+          "explanation": "原文末段他反复自问为何存在这么多不同生物。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Birds That Changed Everything",
+      "topic_cn": "说明·加拉帕戈斯雀鸟与喙",
+      "body": "When the Beagle finally reached the Galápagos Islands in 1835, Darwin was amazed by the variety of life he saw there. Of all the creatures, it was the small birds called finches that interested him most. He noticed something strange: the finches on one island did not look quite the same as those on another. In particular, their beaks were different. On islands where the birds fed on hard seeds, the beaks were thick and strong; where softer food was common, the beaks were thin and delicate. Darwin slowly came to a bold conclusion. He believed that all these birds had descended from a single kind of ancestor that had reached the islands long ago. Over many generations, as each group adapted to the food around it, the birds had gradually changed until they became separate species. This idea about change over time lay at the very heart of his later theory.",
+      "vocab_notes": [
+        {
+          "word": "finch",
+          "cn": "雀鸟"
+        },
+        {
+          "word": "beak",
+          "cn": "喙"
+        },
+        {
+          "word": "ancestor",
+          "cn": "原种;祖先"
+        },
+        {
+          "word": "adapt",
+          "cn": "适应"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Which creatures interested Darwin the most on the islands?",
+          "options": [
+            "The giant tortoises.",
+            "The small finches.",
+            "The blue whales.",
+            "The wild goats."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'it was the small birds called finches that interested him most'。"
+        },
+        {
+          "stem": "According to the text, what did a finch's beak shape depend on?",
+          "options": [
+            "The colour of its feathers.",
+            "The size of the island.",
+            "The type of food found on its island.",
+            "The number of other birds."
+          ],
+          "answer_index": 2,
+          "explanation": "原文硬种子→厚喙、软食物→细喙,取决于食物。"
+        },
+        {
+          "stem": "What did Darwin finally conclude about the different finches?",
+          "options": [
+            "They were brought there by sailors.",
+            "They never changed at all.",
+            "They could not survive together.",
+            "They all came from one shared ancestor."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'descended from a single kind of ancestor' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Secret Language of Plants",
+      "topic_cn": "说明·植物如何交流",
+      "body": "For a long time, people thought that talking plants belonged only to myths and old legends. Modern science, however, has shown that plants really do share information with one another. When insects begin eating a bean plant, the injured leaves give off tiny amounts of chemicals, almost like a cry for help. A nearby plant can detect these chemicals and respond by releasing its own, some of which drive the insects away. Plants also use sound. Certain roots make faint noises that human ears cannot hear, and a chilli plant seems able to sense whether a neighbour is friendly or not. Most surprising of all is a hidden network that connects almost every plant in a forest. Scientists call it the wood wide web, because underground threads of fungi join the roots together. Through this network, plants can pass food and messages, and sometimes one plant even steals from another.",
+      "vocab_notes": [
+        {
+          "word": "detect",
+          "cn": "察觉"
+        },
+        {
+          "word": "root",
+          "cn": "根"
+        },
+        {
+          "word": "fungus",
+          "cn": "真菌"
+        },
+        {
+          "word": "link",
+          "cn": "连接"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does an attacked bean plant warn the others?",
+          "options": [
+            "By giving off chemicals from its leaves.",
+            "By making a loud cry that people hear.",
+            "By moving closer to its neighbours.",
+            "By changing its colour overnight."
+          ],
+          "answer_index": 0,
+          "explanation": "原文受伤叶片释放化学物质作为求救信号。"
+        },
+        {
+          "stem": "What is the 'wood wide web' mainly made of?",
+          "options": [
+            "Thin metal cables under the soil.",
+            "Underground fungi joining the roots.",
+            "The leaves of large trees.",
+            "Tiny insects living in the ground."
+          ],
+          "answer_index": 1,
+          "explanation": "原文地下真菌把根连接起来。"
+        },
+        {
+          "stem": "Besides chemicals, what else do some plants use to communicate?",
+          "options": [
+            "Light.",
+            "Heat.",
+            "Sound.",
+            "Colour."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'Plants also use sound'。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A World Full of Life",
+      "topic_cn": "说明·地球的生物多样性",
+      "body": "Our planet is home to millions of different living things, and they come in every imaginable size. Some are so tiny, like bacteria and viruses, that no human eye can see them without help. At the other extreme is the blue whale, the largest animal ever found, which can stretch to nearly thirty metres and weigh more than a hundred thousand kilos. Perhaps the toughest of all is a tiny creature known as the water bear. This remarkable animal can survive burning heat and freezing cold that would quickly kill almost anything else. To live well in its own surroundings, every species has slowly developed features that suit it perfectly. Each year researchers give names to about fifteen thousand species that were unknown before. Even so, scientists believe that millions more are still hidden away, waiting somewhere on Earth to be found and studied for the very first time.",
+      "vocab_notes": [
+        {
+          "word": "species",
+          "cn": "物种"
+        },
+        {
+          "word": "characteristic",
+          "cn": "特征"
+        },
+        {
+          "word": "centimetre",
+          "cn": "厘米"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why can't people see bacteria and viruses with their eyes alone?",
+          "options": [
+            "They move much too fast.",
+            "They hide deep underground.",
+            "They only come out at night.",
+            "They are far too small."
+          ],
+          "answer_index": 3,
+          "explanation": "原文它们太小,肉眼无法看见。"
+        },
+        {
+          "stem": "What makes the water bear so remarkable?",
+          "options": [
+            "It can live through great heat and cold.",
+            "It is the largest animal on Earth.",
+            "It can fly across the oceans.",
+            "It never needs any food."
+          ],
+          "answer_index": 0,
+          "explanation": "原文水熊能在极端冷热中存活。"
+        },
+        {
+          "stem": "How many new species do researchers name in a typical year?",
+          "options": [
+            "Only a few hundred.",
+            "About fifteen thousand.",
+            "Exactly one million.",
+            "None at all."
+          ],
+          "answer_index": 1,
+          "explanation": "原文每年约命名一万五千个新物种。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Quiet Gardener",
+      "topic_cn": "说明·孟德尔与豌豆实验",
+      "body": "Long before scientists fully understood how living things pass on their features, a quiet gardener was already finding the answers. Gregor Mendel spent years growing pea plants in a small garden. He chose peas on purpose, because their simple traits, such as flower colour and seed shape, were easy to follow from one generation to the next. Year after year, Mendel carefully crossed his plants and wrote down exactly what happened to the young plants that grew. Patterns slowly appeared in his careful notes. By the time he died in 1884, he had worked out important rules about how features are handed down from parents to offspring. Sadly, very few people paid attention to his work while he was alive. Only many years later did other scientists realise that this patient gardener had quietly laid the foundations of modern genetics, the study of how living things inherit what makes them unique.",
+      "vocab_notes": [
+        {
+          "word": "seed",
+          "cn": "种子"
+        },
+        {
+          "word": "generate",
+          "cn": "产生"
+        },
+        {
+          "word": "characteristic",
+          "cn": "特征"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Mendel choose pea plants for his work?",
+          "options": [
+            "They were the only plants he could buy.",
+            "They grew faster than any other plant.",
+            "Their simple features were easy to track.",
+            "They needed almost no water at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文豌豆的简单特征易于追踪。"
+        },
+        {
+          "stem": "What did Mendel finally work out?",
+          "options": [
+            "How to grow the biggest peas.",
+            "How to sell plants for money.",
+            "How to keep his garden warm.",
+            "How living things pass features to their young."
+          ],
+          "answer_index": 3,
+          "explanation": "原文他弄清了特征如何由亲代传给后代。"
+        },
+        {
+          "stem": "How was Mendel's work treated while he was alive?",
+          "options": [
+            "Almost nobody took any notice of it.",
+            "Everyone praised it at once.",
+            "It was banned by the government.",
+            "It made him rich and famous."
+          ],
+          "answer_index": 0,
+          "explanation": "原文在世时很少有人关注他的研究。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Lonesome George",
+      "topic_cn": "说明·孤独的乔治与陆龟灭绝",
+      "body": "On Pinta Island in the Galápagos, one giant tortoise became famous around the world. His name was Lonesome George, and for many years he was the very last of his particular kind. Long before humans came, the Pinta tortoises had lived quietly and safely, feeding on the wild plants that grew across the island. Everything changed when people arrived and brought goats with them. The hungry goats ate the same plants the tortoises depended on, and slowly the tortoise numbers fell. One by one they disappeared, until only George remained. Scientists and keepers did everything they could to care for him and hoped to find him a mate, but none was ever found. When George finally died in 2012, his whole subspecies was declared extinct. His sad story is now a powerful reminder of how easily human actions can wipe out a species that took nature thousands of years to create.",
+      "vocab_notes": [
+        {
+          "word": "tortoise",
+          "cn": "陆龟"
+        },
+        {
+          "word": "goat",
+          "cn": "山羊"
+        },
+        {
+          "word": "decline",
+          "cn": "减少"
+        },
+        {
+          "word": "blame",
+          "cn": "归咎于"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Who was Lonesome George?",
+          "options": [
+            "A famous ship captain.",
+            "The final tortoise of his kind.",
+            "A young naturalist on the island.",
+            "The keeper of a zoo."
+          ],
+          "answer_index": 1,
+          "explanation": "原文他是其同类中'最后一只'。"
+        },
+        {
+          "stem": "What caused the Pinta tortoises to disappear?",
+          "options": [
+            "A sudden change in the weather.",
+            "They were taken to other islands.",
+            "Goats ate the plants they needed.",
+            "They stopped having young."
+          ],
+          "answer_index": 2,
+          "explanation": "原文山羊吃光了陆龟赖以为生的植物。"
+        },
+        {
+          "stem": "What does George's story now remind people of?",
+          "options": [
+            "Tortoises live longer than any animal.",
+            "Islands are safe places for wildlife.",
+            "Goats are useful for protecting nature.",
+            "Human actions can easily destroy a species."
+          ],
+          "answer_index": 3,
+          "explanation": "原文末段提醒人类行为能轻易灭绝一个物种。"
+        }
+      ]
+    }
+  ]
+}

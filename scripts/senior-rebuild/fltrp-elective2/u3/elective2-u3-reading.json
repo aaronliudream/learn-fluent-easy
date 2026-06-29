@@ -1,0 +1,338 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "topic": "Times Change",
+  "source": "外研社新标准选择性必修二 Unit 3 同主题阅读(老书店关张/社区救书店/新闻业变迁/深圳改革/表情符号/消失的电话亭)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Day the Bookstore Closed",
+      "topic_cn": "记叙·老书店即将关张",
+      "body": "The day I heard that the Rainbow Bookstore was closing after fifty years, I felt heartbroken. For decades it had been a legendary fixture in our neighbourhood, a place where anyone could drop in and connect through a love of books. When I hurried over, I saw that the books were already being packed into boxes. I had a long chat with Casey, the elderly owner. Sighing deeply, he told me how hard it had become to run an independent shop. Most young people now preferred reading e-books on a tablet, and more and more customers were being attracted by chain stores and online discounts. I tried to think of some words of sympathy, but I had to admit that the little store could not stay in business much longer. As I left, the shop was hidden in a thick mist, and I feared that everything Casey had given the community might soon disappear for good.",
+      "vocab_notes": [
+        {
+          "word": "legendary",
+          "cn": "大名鼎鼎的"
+        },
+        {
+          "word": "elderly",
+          "cn": "年老的"
+        },
+        {
+          "word": "sympathy",
+          "cn": "同情"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the writer feel on hearing the news about the bookstore?",
+          "options": [
+            "Deeply upset and sad.",
+            "Pleased and relieved.",
+            "Bored and uninterested.",
+            "Angry at the customers."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'I felt heartbroken' 的转述。"
+        },
+        {
+          "stem": "According to Casey, why was the shop hard to keep running?",
+          "options": [
+            "Because the staff were lazy.",
+            "Because young readers chose e-books and chains instead.",
+            "Because the rent had suddenly doubled.",
+            "Because the books were too expensive to print."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'preferred reading e-books… attracted by chain stores and online discounts' 的转述。"
+        },
+        {
+          "stem": "What did the writer fear as he left the store?",
+          "options": [
+            "That the town might lose all the old shop had meant.",
+            "That the prices would rise.",
+            "That Casey would move abroad.",
+            "That a chain store would buy the building."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'everything Casey had given the community might soon disappear' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Bookstore Brought Back to Life",
+      "topic_cn": "记叙·社区救活书店",
+      "body": "A few months later, I returned to the neighbourhood during my spring break and was amazed to see the Rainbow Bookstore still open. Its old brick exterior had not changed, but inside it was like a different world. In one area, a book reading was being delivered, while nearby customers looked at shelves selling stationery, posters and other gifts. The large board in the corner had been replaced by a big screen on which readers' comments were being displayed. I soon learned that the community had decided to work together on a campaign to save the shop. The campaign was led by Jennifer Oakley, a saleswoman who had grown up locally and had now taken over from Casey. Under her leadership, the store was being turned into a place for book lovers to gather. It had a café selling organic food, and there were now poetry recitals and even jazz concerts, where people could share an experience that could not simply be downloaded.",
+      "vocab_notes": [
+        {
+          "word": "exterior",
+          "cn": "外观"
+        },
+        {
+          "word": "leadership",
+          "cn": "领导"
+        },
+        {
+          "word": "recital",
+          "cn": "朗诵会"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What surprised the writer when he came back?",
+          "options": [
+            "The store was still open and full of life.",
+            "The shop had moved to a new street.",
+            "Casey had reopened it alone.",
+            "The brick walls had been painted bright red."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'was amazed to see the Rainbow Bookstore still open' 的转述;干扰项与原文相反或未提。"
+        },
+        {
+          "stem": "Who was behind the campaign to save the bookstore?",
+          "options": [
+            "A famous national company.",
+            "The local community led by Jennifer Oakley.",
+            "Casey's own children.",
+            "A group of visiting tourists."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the community had decided to work together… led by Jennifer Oakley' 的转述。"
+        },
+        {
+          "stem": "What did the new store offer that could not be downloaded?",
+          "options": [
+            "Cheaper e-books online.",
+            "Free tablets for readers.",
+            "Shared live events like recitals and concerts.",
+            "A faster delivery service."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'poetry recitals and even jazz concerts… could not simply be downloaded' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "How the News Industry Changed",
+      "topic_cn": "说明·新闻业的变迁",
+      "body": "Not long ago, the way we received the news looked completely different. Reporters would travel to meet people, and most interviews were done face to face. Stories were written by hand or typed, then edited with a pen before being printed on paper. Each morning, fresh newspapers were delivered to homes, and readers waited a whole day for the next edition. Today the picture has changed beyond recognition. Many interviews are now done online, and a story can be released on the Internet the moment it is finished. Editors work on computers instead of paper, and readers can follow events minute by minute on their phones. Some older people miss the feel of a paper in their hands, yet few would give up the speed of digital news. The tools have changed, but the job of a good journalist stays the same: to find the truth and share it clearly with the public, whatever form the news may take.",
+      "vocab_notes": [
+        {
+          "word": "journalist",
+          "cn": "记者"
+        },
+        {
+          "word": "edit",
+          "cn": "编辑"
+        },
+        {
+          "word": "release",
+          "cn": "发布"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How were most interviews carried out in the past?",
+          "options": [
+            "In person, with reporters meeting people directly.",
+            "Only through long phone calls.",
+            "Entirely by sending letters.",
+            "By reading comments online."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'most interviews were done face to face' 的转述。"
+        },
+        {
+          "stem": "What is one main change in today's news industry?",
+          "options": [
+            "Newspapers are no longer written at all.",
+            "A story can appear online as soon as it is ready.",
+            "Reporters never use computers now.",
+            "Readers must wait several days for news."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a story can be released on the Internet the moment it is finished' 的转述。"
+        },
+        {
+          "stem": "According to the writer, what has stayed the same?",
+          "options": [
+            "The price of every newspaper.",
+            "The time readers wait for news.",
+            "The reporter's duty to seek and share the truth.",
+            "The habit of editing with a pen."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'the job of a good journalist stays the same: to find the truth and share it' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Small Town Becomes a City",
+      "topic_cn": "说明·深圳的改革变迁",
+      "body": "More than forty years ago, China began the reform and opening-up policy, starting a journey that would pave the way for the country to modernise. Few places show this change more clearly than Shenzhen. Within living memory it was only a small fishing town, where people made a living from the sea and one quiet day was much like the next. After it became the first special economic zone, everything began to move quickly. Roads were being laid, factories were being built, and tall skyscrapers were being put up almost faster than the eye could follow. In just a few decades, the small town developed into a modern city of millions, full of energy and new ideas. Older residents still remember the muddy lanes of their childhood, while their grandchildren grow up surrounded by glass towers and busy trade. To many, Shenzhen stands as living proof that a place, like the times, can be completely remade.",
+      "vocab_notes": [
+        {
+          "word": "reform",
+          "cn": "改革"
+        },
+        {
+          "word": "economic",
+          "cn": "经济的"
+        },
+        {
+          "word": "decade",
+          "cn": "十年"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was Shenzhen like before the reform policy?",
+          "options": [
+            "Already a city of millions.",
+            "A famous centre of trade.",
+            "An empty stretch of desert.",
+            "A small town living mainly off the sea."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'only a small fishing town, where people made a living from the sea' 的转述。"
+        },
+        {
+          "stem": "What happened after Shenzhen became a special economic zone?",
+          "options": [
+            "Rapid building and growth began.",
+            "Most people moved away.",
+            "The sea trade was banned.",
+            "Nothing changed for years."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'everything began to move quickly. Roads were being laid…' 的转述。"
+        },
+        {
+          "stem": "What does Shenzhen prove, according to the writer?",
+          "options": [
+            "That fishing towns never change.",
+            "That a place can be completely transformed over time.",
+            "That cities should stay small.",
+            "That old lanes are better than towers."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'a place, like the times, can be completely remade' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Emojis: A New Language?",
+      "topic_cn": "议论·表情符号的兴起",
+      "body": "Not so long ago, a written message was made only of words. Now a single smiling face or a string of tiny pictures can carry a whole feeling. The word emoji comes from Japanese and means picture character. When these little symbols first appeared in 1999, there were only a couple of hundred designs; today there are thousands, sorted into categories such as faces, animals and food. People enjoy them because they are quick to use and add emotional meaning, working rather like the gestures we make when we speak. With a smiling or sad face beside your words, a reader can almost see your expression. The trend has even reached classical literature, where some plays have been adapted with emojis to make them more accessible to young readers. Yet a few educators worry that, if we rely too much on pictures, we may slowly lose the ability to express ourselves in careful written words. For now, perhaps we should simply enjoy using them wisely.",
+      "vocab_notes": [
+        {
+          "word": "emoji",
+          "cn": "表情符号"
+        },
+        {
+          "word": "category",
+          "cn": "类别"
+        },
+        {
+          "word": "accessible",
+          "cn": "易懂的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the word 'emoji' originally mean?",
+          "options": [
+            "Quick message.",
+            "Happy face.",
+            "Picture character.",
+            "Spoken word."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'comes from Japanese and means picture character' 的转述。"
+        },
+        {
+          "stem": "Why do many people enjoy using emojis?",
+          "options": [
+            "They cost extra money to send.",
+            "They make spelling harder.",
+            "They replace all written words.",
+            "They are fast to use and add feeling."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'quick to use and add emotional meaning' 的转述。"
+        },
+        {
+          "stem": "What concern do some educators have about emojis?",
+          "options": [
+            "That heavy use may weaken careful writing.",
+            "That they are too expensive.",
+            "That they cannot show feelings.",
+            "That children cannot understand them."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'we may slowly lose the ability to express ourselves in careful written words' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Where Did the Phone Box Go?",
+      "topic_cn": "议论·消失的电话亭",
+      "body": "Watching an old superhero film the other day, I had a sudden thought: where would Superman get changed these days? In the comics and earlier films, Clark Kent would pop into a phone box and come out in his costume. But phone boxes are now hard to find, and the reason is simple — we no longer need them. Almost everyone carries a mobile phone, and it is far easier to make a call at the touch of a button than to press a long row of numbers in a cold box. Even someone who leaves their phone at home gains little, since few of us still remember the numbers we want; our phones do that for us. And if we truly needed to call someone urgently, it would be quicker to borrow a phone than to hunt for a box. So the phone box is quietly becoming a thing of the past, and poor Clark Kent will have to find somewhere else to change.",
+      "vocab_notes": [
+        {
+          "word": "comic",
+          "cn": "连环漫画"
+        },
+        {
+          "word": "costume",
+          "cn": "服装"
+        },
+        {
+          "word": "urgently",
+          "cn": "紧急地"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What made the writer think about Superman?",
+          "options": [
+            "Reading a new comic book.",
+            "He saw an old film about a superhero.",
+            "Losing his own phone.",
+            "Visiting a phone box."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Watching an old superhero film the other day, I had a sudden thought' 的转述。"
+        },
+        {
+          "stem": "Why does the writer say phone boxes are disappearing?",
+          "options": [
+            "Because they have become too expensive.",
+            "Because they take up too much space.",
+            "Because people simply no longer need them.",
+            "Because they are ugly to look at."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the reason is simple — we no longer need them' 的转述。"
+        },
+        {
+          "stem": "Why does forgetting a phone at home no longer matter much?",
+          "options": [
+            "Because phone boxes are everywhere.",
+            "Because numbers are printed on every street.",
+            "Because nobody makes calls any more.",
+            "Because our mobiles remember the numbers for us."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'few of us still remember the numbers… our phones do that for us' 的转述。"
+        }
+      ]
+    }
+  ]
+}

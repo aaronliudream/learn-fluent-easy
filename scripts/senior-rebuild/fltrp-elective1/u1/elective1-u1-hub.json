@@ -1,0 +1,48 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "listeningQuestions": [
+    { "audio": "A clown doctor wears a bright wig and a big red nose to make sick children smile.", "opts": ["小丑医生戴鲜艳假发和大红鼻子,逗患病的孩子笑。", "医生今天忘了带听诊器。", "医院今天不接待病人。", "他把假发卖给了朋友。"], "answer": 0 },
+    { "audio": "Mark Twain was famous for his witty replies in everyday life.", "opts": ["马克·吐温从不开玩笑。", "马克·吐温因日常生活中机智的回答而出名。", "马克·吐温是一位画家。", "马克·吐温讨厌理发店。"], "answer": 1 },
+    { "audio": "On April Fool's Day, people in many countries play tricks on one another.", "opts": ["愚人节那天大家都要上学。", "愚人节是一个安静的节日。", "愚人节那天许多国家的人互相搞恶作剧。", "愚人节只在中国庆祝。"], "answer": 2 },
+    { "audio": "Studies show that laughter helps the body make chemicals that lower stress.", "opts": ["研究说笑会让人生病。", "研究说笑没有任何作用。", "笑只对小孩子有用。", "研究表明笑能帮身体产生降低压力的化学物质。"], "answer": 3 },
+    { "audio": "Charlie Chaplin could make people laugh without saying a single word.", "opts": ["查理·卓别林不用说一个字就能逗人发笑。", "卓别林只演有声电影。", "卓别林从不上台表演。", "卓别林写了很多严肃的小说。"], "answer": 0 },
+    { "audio": "Lin Yutang told a short joke, which made the whole audience roar with laughter.", "opts": ["林语堂讲课从不用笑话。", "林语堂讲了个短笑话,逗得全场哄堂大笑。", "听众一点也没笑。", "林语堂忘了自己要讲什么。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "A funny joke usually ____ when a child feels sad and will not smile.", "opts": ["does the trick", "tells a lie", "loses the way", "breaks the glass"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The clown put on a curly rainbow ____ before walking into the ward.", "opts": ["wig", "price", "debt", "root"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Lin's audience ____ with laughter at his clever little joke.", "opts": ["roared", "slept", "paid", "drove"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "On April Fool's Day, people love to play a ____ on each other.", "opts": ["practical joke", "long face", "white coat", "name badge"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Mark Twain, ____ was an American writer, was famous for his quick wit.", "opts": ["who", "which", "that", "whose"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The little girl, ____ ankle was badly hurt, soon began to smile again.", "opts": ["whose", "who", "which", "that"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "He produced her sock from his pocket, ____ made the little girl laugh.", "opts": ["which", "that", "what", "it"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The clown doctors, many of ____ trained as actors, also learn medical skills.", "opts": ["whom", "which", "who", "that"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["小丑医生和真正的医生护士一起工作。", "他独自打扫整个医院。", "他把红鼻子弄丢了。", "孩子们都不喜欢小丑。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Clown doctors always work together with the real doctors and nurses." },
+    { "q": "听句子选中文:", "opts": ["看喜剧时别喝东西,否则会笑得洒出来。", "这部电影非常无聊。", "他周末没看任何电影。", "那位笑星已经退休了。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Don't drink anything while you watch the comedy, or you'll spill it laughing." }
+  ],
+  "reading": {
+    "passage": "People say that laughter is the best medicine, and science agrees. A good laugh helps the body make chemicals that ease worry, which is why clown doctors are so welcome in hospitals. A joke cannot heal a broken bone, but it can make a hard day feel a little easier.",
+    "passageCn": "人们说笑是最好的良药,科学也同意。开怀大笑能帮身体产生缓解烦恼的化学物质,这正是小丑医生在医院如此受欢迎的原因。笑话治不好骨折,但它能让艰难的一天好过一点。",
+    "questions": [
+      { "q": "Why are clown doctors welcome in hospitals?", "opts": ["Laughter helps the body ease worry.", "They repair the hospital beds.", "They bring free medicine.", "They are cheaper than nurses."], "answer": 0 },
+      { "q": "What does the passage admit a joke cannot do?", "opts": ["Heal a broken bone by itself.", "Make people smile.", "Lower a person's worry.", "Cheer up a sad child."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences introducing a comedian or a funny person who makes you laugh. Say who they are, why they are funny, and how you feel. Try to use one non-defining clause, e.g. '…, who …' or '…, which …'.",
+    "promptCn": "用3-4句话介绍一位让你发笑的喜剧演员或有趣的人:他/她是谁、为什么好笑、你的感受。试着用一个非限制性定语从句,如 '…, who …' 或 '…, which …'。",
+    "sampleWords": ["comedian", "funny", "humour", "laugh", "joke", "character", "scene", "which", "who", "audience"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking About a Funny Film",
+      "lines": [
+        { "role": "A", "text": "Have you seen any good comedies lately?", "cn": "你最近看过什么好喜剧吗?" },
+        { "role": "B", "text": "Yes, I watched 'My Crazy Family', which made me laugh out loud.", "cn": "看了,我看了《我的疯狂家庭》,让我笑出了声。" },
+        { "role": "A", "text": "Who is in it?", "cn": "谁主演的?" },
+        { "role": "B", "text": "A comedian called Tom Lee, whose timing is just perfect. You should watch it tonight!", "cn": "一位叫 Tom Lee 的笑星,他的节奏感堪称完美。你今晚该看看!" }
+      ]
+    }
+  ]
+}

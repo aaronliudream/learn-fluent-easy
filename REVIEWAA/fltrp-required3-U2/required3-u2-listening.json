@@ -1,0 +1,499 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "topic": "Making a Difference",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社必修三 Unit 2 同主题听力(慈善跑/慈善商店/志愿者电话咨询/人人能助/捐书/人们为何做志愿者)。用词限 U2/初中/常见词,答案唯一,与阅读/完形关不撞文章。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 Joining a Charity Run",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Mia",
+          "text": "Hi Tom, are you free next Sunday? I'm joining a charity run for the children's hospital."
+        },
+        {
+          "speaker": "Tom",
+          "text": "A charity run? That sounds great. How far do you have to run?"
+        },
+        {
+          "speaker": "Mia",
+          "text": "Just five kilometres. You don't have to be fast; you only have to finish."
+        },
+        {
+          "speaker": "Tom",
+          "text": "And how does the run raise money?"
+        },
+        {
+          "speaker": "Mia",
+          "text": "Friends and family promise to donate some money for every runner who finishes."
+        },
+        {
+          "speaker": "Tom",
+          "text": "That's a clever idea. Can I still sign up?"
+        },
+        {
+          "speaker": "Mia",
+          "text": "Of course. You just fill in a form online and pay a small fee."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Brilliant. Let's train together this week so we're both ready."
+        }
+      ],
+      "translation_cn": "Mia 邀请 Tom 下周日参加为儿童医院举办的慈善跑;只需跑五公里、跑完即可,不必跑得快;亲友为每位完赛者捐款;Tom 想报名,只需网上填表并交一点费用;两人决定本周一起训练。",
+      "questions": [
+        {
+          "stem": "What is Mia going to do next Sunday?",
+          "options": [
+            "Join a charity run.",
+            "Visit a hospital as a patient.",
+            "Move to a new house.",
+            "Watch a film at home."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How long is the run?",
+          "options": [
+            "Fifteen kilometres.",
+            "Five kilometres.",
+            "Fifty kilometres.",
+            "Half a kilometre."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does the run raise money?",
+          "options": [
+            "People donate money for each runner who finishes.",
+            "Runners pay to win a big prize.",
+            "The hospital sells the tickets.",
+            "Shops give away free clothes."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How can Tom sign up?",
+          "options": [
+            "Phone the hospital director.",
+            "Fill in a form online and pay a small fee.",
+            "Send a letter by post.",
+            "Visit Mia's house tonight."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they decide to do this week?",
+          "options": [
+            "Buy new running shoes.",
+            "Cancel the whole plan.",
+            "Train together to get ready.",
+            "Rest at home every day."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 Charity Shops",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "On many British high streets, you will find charity shops.",
+        "These shops sell second-hand clothes, books and toys that people no longer want.",
+        "Kind volunteers, not paid workers, run most of them.",
+        "The money from each sale goes to a good cause, such as fighting cancer or helping the homeless.",
+        "Shopping there is good for everyone, so next time you pass a charity shop, why not step inside?"
+      ],
+      "translation_cn": "在英国许多商业街上你会看到慈善商店;这些店出售人们不再需要的二手衣物、书籍和玩具;大多由志愿者而非雇员经营;每笔收入都用于慈善事业,如抗癌或帮助无家可归者;在那里购物对大家都有好处,下次路过不妨进去看看。",
+      "questions": [
+        {
+          "stem": "What do charity shops mainly sell?",
+          "options": [
+            "Brand-new cars.",
+            "Fresh food and drinks.",
+            "Tickets to concerts.",
+            "Second-hand clothes, books and toys."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Who runs most charity shops?",
+          "options": [
+            "Volunteers, not paid workers.",
+            "Government officers.",
+            "Famous singers.",
+            "Hospital doctors."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where does the money from sales go?",
+          "options": [
+            "To the shop owners' pockets.",
+            "To a good cause.",
+            "Back to the buyers.",
+            "To build more shops."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is one good cause mentioned?",
+          "options": [
+            "Building a sports stadium.",
+            "Buying expensive cars.",
+            "Fighting cancer or helping the homeless.",
+            "Holding music shows."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker suggest doing?",
+          "options": [
+            "Never visiting such shops.",
+            "Opening your own shop.",
+            "Asking for free clothes.",
+            "Stepping inside a charity shop next time."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 A Phone Enquiry",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Clerk",
+          "text": "Good morning, Greenfield Volunteer Centre. How can I help you?"
+        },
+        {
+          "speaker": "Sarah",
+          "text": "Hello. I'd like to become a volunteer. Could you tell me what work you have?"
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Certainly. We need people to help teach children with disabilities at a riding centre."
+        },
+        {
+          "speaker": "Sarah",
+          "text": "That sounds perfect. I love horses and I enjoy being with children."
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Wonderful. We'd like you to help out three times a week, if possible."
+        },
+        {
+          "speaker": "Sarah",
+          "text": "That's fine. What do I need to do to start?"
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Just fill in a registration form. We'll then send you a letter of confirmation."
+        },
+        {
+          "speaker": "Sarah",
+          "text": "Thank you. Is there anything else I should know?"
+        },
+        {
+          "speaker": "Clerk",
+          "text": "We'll also ask about any experience you have, but don't worry, training is provided."
+        }
+      ],
+      "translation_cn": "Sarah 打电话到志愿者中心,想做志愿者并询问有什么工作;中心需要人在马术中心帮忙教残障儿童;Sarah 喜欢马也喜欢和孩子相处;中心希望她每周帮三次;开始前需填登记表,中心会寄确认信;还会询问经验,但提供培训。",
+      "questions": [
+        {
+          "stem": "Why is Sarah calling the centre?",
+          "options": [
+            "To become a volunteer.",
+            "To book a horse-riding holiday.",
+            "To complain about a service.",
+            "To sell some old toys."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What work does the centre need help with?",
+          "options": [
+            "Cleaning the streets at night.",
+            "Teaching children with disabilities at a riding centre.",
+            "Driving a school bus.",
+            "Cooking in a restaurant."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How often does the centre want Sarah to help?",
+          "options": [
+            "Once a month.",
+            "Every single day.",
+            "Three times a week.",
+            "Only at weekends."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What must Sarah do to start?",
+          "options": [
+            "Pass a difficult exam.",
+            "Pay a large sum of money.",
+            "Buy her own horse.",
+            "Fill in a registration form."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the clerk say about experience?",
+          "options": [
+            "They will ask about it, but training is provided.",
+            "No experience is ever allowed.",
+            "Only experts may apply.",
+            "Experience is not needed because the job is easy."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 Everyone Can Make a Difference",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "You might think that only rich or famous people can help the world, but that is not true.",
+        "Making a difference does not always need money.",
+        "You can give your time, your skills, or simply your kindness.",
+        "Visit a lonely neighbour, plant a tree, or help a classmate who is behind.",
+        "Small actions, repeated by many people, can change a whole community.",
+        "So the right question is not 'Why should I help?' but 'How can I help today?'"
+      ],
+      "translation_cn": "你也许以为只有富人或名人才能帮助世界,其实不然;有所作为并不总需要金钱;你可以付出时间、技能,或仅仅一份善意;探望孤独的邻居、种一棵树,或帮助落后的同学;许多人的微小行动能改变整个社区;关键问题不是'我为什么要帮',而是'我今天能怎么帮'。",
+      "questions": [
+        {
+          "stem": "According to the speaker, who can make a difference?",
+          "options": [
+            "Only very rich people.",
+            "Anyone, not only rich or famous people.",
+            "Only famous stars.",
+            "Only adults with money."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does making a difference NOT always need?",
+          "options": [
+            "Kindness.",
+            "Time.",
+            "Money.",
+            "Skills."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What examples of small actions are given?",
+          "options": [
+            "Buying an expensive car.",
+            "Travelling around the world.",
+            "Building a tall tower.",
+            "Visiting a neighbour or planting a tree."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What can small actions by many people do?",
+          "options": [
+            "Change a whole community.",
+            "Make everyone rich.",
+            "Stop all the rain.",
+            "End every school."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the speaker say is the right question?",
+          "options": [
+            "'Why should I bother?'",
+            "'How can I help today?'",
+            "'When will I be famous?'",
+            "'How much will I earn?'"
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 A Book Donation",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Leo",
+          "text": "Anna, our class is collecting books for a village school. Would you like to help?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "I'd love to. What kind of books do they need?"
+        },
+        {
+          "speaker": "Leo",
+          "text": "Mostly storybooks and simple science books for younger children."
+        },
+        {
+          "speaker": "Anna",
+          "text": "I have a whole box of old picture books at home, and they're in good condition."
+        },
+        {
+          "speaker": "Leo",
+          "text": "That's wonderful. Could you bring them to school on Friday?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Sure. Should we clean them first?"
+        },
+        {
+          "speaker": "Leo",
+          "text": "Yes, please. We want every book to look nice for the children."
+        },
+        {
+          "speaker": "Anna",
+          "text": "No problem. It feels great to give my old books a new home."
+        }
+      ],
+      "translation_cn": "Leo 说班里在为一所乡村学校收集图书,问 Anna 是否帮忙;学校主要需要故事书和给低龄孩子的简单科普书;Anna 家有一整箱品相不错的旧绘本;Leo 请她周五带到学校;还要先把书擦干净;Anna 很乐意,觉得让旧书有个新归宿很好。",
+      "questions": [
+        {
+          "stem": "What is Leo's class collecting?",
+          "options": [
+            "Money for a new gym.",
+            "Clothes for a shop.",
+            "Books for a village school.",
+            "Food for a party."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What kind of books are needed?",
+          "options": [
+            "Heavy university textbooks.",
+            "Old newspapers only.",
+            "Foreign novels for adults.",
+            "Storybooks and simple science books."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Anna have at home?",
+          "options": [
+            "A box of old picture books.",
+            "A pile of new toys.",
+            "Several school bags.",
+            "A set of paintbrushes."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Leo ask Anna to do before Friday?",
+          "options": [
+            "Sell the books.",
+            "Clean the books.",
+            "Paint the books.",
+            "Throw away the books."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Anna feel about giving her books away?",
+          "options": [
+            "Sad to lose them.",
+            "Worried about the cost.",
+            "Glad to give them a new home.",
+            "Angry with her class."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 Why People Volunteer",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Have you ever wondered why so many people give their free time to help others for no pay?",
+        "When you ask volunteers, their answers are often surprising.",
+        "Some say that helping others makes them feel useful and happy.",
+        "Others enjoy learning new skills or making new friends.",
+        "A few simply want to thank the world for the good luck they have had.",
+        "Whatever the reason, one thing is clear: when you help someone else, you often help yourself as well."
+      ],
+      "translation_cn": "你是否想过,为什么这么多人愿意无偿付出空闲时间去帮助别人?问问志愿者,他们的回答常常出人意料:有人说助人让自己感到有用又快乐;有人喜欢学习新技能、结交新朋友;也有人只是想回报自己拥有的好运;无论原因如何,有一点很清楚:当你帮助别人时,你往往也帮助了自己。",
+      "questions": [
+        {
+          "stem": "What question does the speaker begin with?",
+          "options": [
+            "How much volunteers earn.",
+            "Where charity shops are.",
+            "When the run will start.",
+            "Why people volunteer for no pay."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do some volunteers say helping others makes them feel?",
+          "options": [
+            "Useful and happy.",
+            "Tired and bored.",
+            "Rich and famous.",
+            "Angry and sad."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do other volunteers enjoy about it?",
+          "options": [
+            "Getting a free holiday.",
+            "Learning new skills or making friends.",
+            "Winning big prizes.",
+            "Avoiding hard work."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do a few people volunteer?",
+          "options": [
+            "To become world leaders.",
+            "To sell their old things.",
+            "To thank the world for their good luck.",
+            "To escape from school."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the speaker's main point?",
+          "options": [
+            "Volunteering is a waste of time.",
+            "Only money can help people.",
+            "Nobody should ever volunteer.",
+            "Helping others often helps yourself too."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

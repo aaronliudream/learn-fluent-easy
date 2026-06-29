@@ -1,0 +1,53 @@
+{
+  "volume": "required2",
+  "unit": "U5",
+  "topic": "Write a Postcard from a Trip(写一张旅行明信片)",
+  "title_en": "A Postcard to a Friend",
+  "genre": "明信片 / 记叙(describe where you are + what you have done + plans)",
+  "source": "外研社版必修第二册 Unit 5 Writing:write a postcard to a friend(描述你所在的地方、做了什么、接下来的计划),自然运用 -ing 分词作定语。",
+  "prompt_cn": "假设你叫李华,正在外地旅行。请用英语给你的朋友 Sam 写一张约80词的明信片,内容包括:① 你现在在哪里、那里的风景或天气怎样;② 你到目前为止做了什么、印象最深的一件事;③ 接下来打算做什么。注意:适当使用 -ing 分词作定语(如 the rising sun, a path leading to the beach),语言地道连贯。",
+  "prompt_en": "Suppose you are Li Hua, travelling away from home. Write a postcard (about 80 words) to your friend Sam, including: 1) where you are now and what the scenery or weather is like; 2) what you have done so far and the moment that impressed you most; 3) what you plan to do next. Try to use -ing participles as attributives (e.g. the rising sun, a path leading to the beach).",
+  "points": [
+    "说明地点与风景/天气(I'm now in… / The scenery here is…)",
+    "已做的事 + 印象最深的瞬间(So far I've… / The best moment was…)",
+    "下一步计划(Tomorrow we're going to…)",
+    "用 -ing 分词作定语,语言连贯"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Dear Sam, Greetings from the seaside town of Brighton! I'm sitting on a beach now, watching the setting sun turn the sky pink. So far I've walked along a quiet path leading to the harbour and taken hundreds of photos of the passing boats. The best moment was seeing a group of dolphins swimming close to the shore — amazing! Tomorrow we're going to hike up the hill for a view of the whole bay. The scenery here is breathtaking. Wish you were here! Love, Li Hua",
+  "model_translation": "亲爱的 Sam:来自海滨小镇布莱顿的问候!我正坐在沙滩上,看着西沉的太阳把天空染成粉色。到目前为止,我沿着一条通往港口的安静小路散步,拍了好几百张驶过的船的照片。最难忘的瞬间是看到一群海豚游到岸边——太棒了!明天我们打算爬上山,饱览整个海湾的景色。这里的风景美极了。真希望你也在这儿!爱你的,李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:地点/风景 · 已做的事与难忘瞬间 · 下一步计划" },
+      { "dimension": "结构", "max": 4, "criteria": "明信片格式(问候+正文+落款)、句句连贯、时态得当(现在/现在完成/将来)" },
+      { "dimension": "语言", "max": 5, "criteria": "词汇句型准确多样、-ing 分词作定语运用自然、语法基本无误" }
+    ],
+    "required_structure": [
+      "问候/地点 Greetings from… / I'm now in…",
+      "已做的事 So far I've…",
+      "难忘瞬间 The best moment was…",
+      "计划 Tomorrow we're going to…",
+      "落款 Wish you were here! Love, Li Hua"
+    ],
+    "key_expressions": [
+      "Greetings from the seaside town of Brighton!",
+      "I'm watching the setting sun turn the sky pink.",
+      "I've walked along a path leading to the harbour.",
+      "Tomorrow we're going to hike up the hill for a view of the bay."
+    ],
+    "useful_words": ["destination", "scenery", "landscape", "journey", "harbour", "path", "setting sun", "passing boats", "hike", "amazing"]
+  },
+  "high_sentences": [
+    "I'm sitting on a beach, watching the setting sun turn the sky pink.",
+    "I've walked along a quiet path leading to the harbour.",
+    "I took hundreds of photos of the passing boats.",
+    "The best moment was seeing a group of dolphins swimming close to the shore."
+  ],
+  "error_pairs": [
+    { "wrong": "a path led to the harbour", "correct": "a path leading to the harbour", "note": "后置定语表主动用 -ing 分词,不用过去式 led。" },
+    { "wrong": "the setted sun", "correct": "the setting sun", "note": "太阳主动'西沉',前置定语用 -ing,不用 -ed。" },
+    { "wrong": "It was a very amazed view.", "correct": "It was a very amazing view.", "note": "事物令人惊叹用 -ing;人感到惊叹才用 -ed。" }
+  ],
+  "paragraph_template": "【旅行明信片结构】\n问候:Greetings from… / I'm now in…\n正文1 地点风景:The scenery here is… , with the rising sun / a path leading to…\n正文2 已做+难忘:So far I've… The best moment was…\n正文3 计划:Tomorrow we're going to…\n落款:Wish you were here! Love, 李华"
+}

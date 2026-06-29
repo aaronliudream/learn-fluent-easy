@@ -1,0 +1,43 @@
+{
+  "volume": "elective3",
+  "unit": "U6",
+  "note": "单元通关专属迷你阅读(初雪/冬天主题,独立短文,不在阅读关出现)。短文3句+3题,答案转述非照抄,覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Lily woke up last Sunday, she found her small village completely hidden under fresh snow. Instead of staying in bed, she put on her warmest coat and ran outside to join her friends. Together they built a tall snowman and threw soft snowballs until their hands were freezing.",
+    "questions": [
+      {
+        "q": "What did Lily find when she woke up?",
+        "options": [
+          "Her village was covered with fresh snow.",
+          "The snow had all melted away.",
+          "Her friends had already gone home.",
+          "It was a hot summer day."
+        ],
+        "answer": "A",
+        "explanation": "原文'her small village completely hidden under fresh snow'的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What did Lily do instead of staying in bed?",
+        "options": [
+          "She put on a coat and went out to her friends.",
+          "She went straight back to sleep.",
+          "She read a book by the window.",
+          "She watched television all morning."
+        ],
+        "answer": "A",
+        "explanation": "原文'put on her warmest coat and ran outside to join her friends'的转述(短文中段)。"
+      },
+      {
+        "q": "How were their hands at the end?",
+        "options": [
+          "Warm and completely dry.",
+          "Very cold from the snow.",
+          "Hurt and bleeding.",
+          "Covered in bright paint."
+        ],
+        "answer": "B",
+        "explanation": "末句'until their hands were freezing'的转述(短文末尾,覆盖不同位置)。"
+      }
+    ]
+  }
+}

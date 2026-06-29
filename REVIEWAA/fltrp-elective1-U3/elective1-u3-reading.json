@@ -1,0 +1,322 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "topic": "Faster, Higher, Stronger",
+  "source": "外研社选择性必修第一册 Unit 3 同主题阅读(库里的泥泞球场/迪罗的单鞋赛跑/中国女排里约夺金/劳伦斯体育奖/体育榜样的价值/校运会接力时刻)。词限 U3/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Muddy Court",
+      "topic_cn": "记叙·库里的成长",
+      "body": "Near a small town in Virginia, a narrow dirt road led from Stephen Curry's grandfather's house to the woods. Far from the bright lights and shiny courts of the NBA, his grandfather had built a simple basket by fixing a piece of plastic to a pole. Like his father, Stephen spent many childhood hours playing on this muddy court. He probably did not realise it then, but it was where he learned to be creative. With every shot, the weak plastic backboard gave way a little. The bumps and rocks under the basket made the ball bounce in all directions, so knowing where it would go was never easy. He had to keep adjusting his own style. Shooting with great accuracy was another thing he had to learn, because only a perfect shot went into the heavy basket. In this way, practising day in and day out slowly helped Stephen sharpen his skills.",
+      "vocab_notes": [
+        {
+          "word": "backboard",
+          "cn": "篮板"
+        },
+        {
+          "word": "bounce",
+          "cn": "弹跳"
+        },
+        {
+          "word": "sharpen",
+          "cn": "使提高"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the muddy court important to Stephen?",
+          "options": [
+            "It taught him to play in a creative, flexible way.",
+            "It was a bright and modern NBA court.",
+            "It was where he first met his coach.",
+            "It was close to a famous stadium."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说他在那里学会了 creative 的转述;其余与文意不符。"
+        },
+        {
+          "stem": "What made the ball hard to control on that court?",
+          "options": [
+            "The rain that fell during games.",
+            "The rough, rocky ground beneath the hoop.",
+            "The size of the heavy basket.",
+            "The bright lights above the court."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'bumps and rocks… made the ball bounce in all directions' 的转述。"
+        },
+        {
+          "stem": "How did Stephen finally improve his skills?",
+          "options": [
+            "By practising again and again over time.",
+            "By buying better equipment.",
+            "By moving to a city court.",
+            "By copying his grandfather exactly."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'practising day in and day out… sharpen his skills' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Runner with One Shoe",
+      "topic_cn": "记叙·迪罗的体育精神",
+      "body": "Etenesh Diro had almost completed two thirds of the 3000-metre steeplechase when disaster struck. She got tangled up with some other runners, and the crash made her fall. Her right shoe started to come off. She tried to pull it back on, but doing so cost her precious time, and one after another the runners passed her. In the end she made a brave choice: she threw the shoe away. This meant she could get up quickly and fight for her place in the race. With just one shoe on and her right foot bare, she ran the rest of the way. Watching her refuse to quit raised a huge cheer from the crowd. Luckily, the judges later gave her a chance to compete in the final. She had lost a shoe, but that did not keep her from taking part. To many people, her race showed the true spirit of sport.",
+      "vocab_notes": [
+        {
+          "word": "bare",
+          "cn": "赤裸的"
+        },
+        {
+          "word": "cheer",
+          "cn": "欢呼"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What went wrong during Diro's race?",
+          "options": [
+            "She started far too early.",
+            "She fell after getting tangled with other runners.",
+            "She forgot which way to run.",
+            "She felt ill before the start."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'got tangled up… made her fall' 的转述。"
+        },
+        {
+          "stem": "Why did she throw her shoe away?",
+          "options": [
+            "Because the shoe was too old.",
+            "To give it to another runner.",
+            "So she could get up and keep racing quickly.",
+            "Because the judges told her to."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'she could get up quickly and fight for her place' 的转述。"
+        },
+        {
+          "stem": "What does the writer think her race showed?",
+          "options": [
+            "That shoes do not matter in sport.",
+            "That the judges were unfair to her.",
+            "That she should have given up.",
+            "The real meaning of sporting spirit."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'the true spirit of sport' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Gold in Rio",
+      "topic_cn": "记叙·中国女排夺金",
+      "body": "The Chinese women's volleyball team holds a special place in the nation's heart. In Rio, however, their road to gold was far from easy. The team was assigned to a very tough group, where it faced several strong opponents. Even after reaching the quarter-final as only the fourth team in the group, with just two wins in the preliminary matches, they refused to give up. Every member gave her all, including a spiker who had returned only months after heart surgery. Their perseverance paid off with an epic comeback against the defending champion in the quarter-final. Next they defeated the Netherlands in the semi-final, a team that had beaten them earlier. At last, showing steely nerves, they played a close match to seize the gold. Yet fighting spirit alone was not enough. As the Most Valuable Player said afterwards, teamwork was the real key, because strong cooperation matters more than the skill of any single player.",
+      "vocab_notes": [
+        {
+          "word": "assign",
+          "cn": "分配"
+        },
+        {
+          "word": "comeback",
+          "cn": "反扑"
+        },
+        {
+          "word": "seize",
+          "cn": "夺取"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was the team's situation after the group stage?",
+          "options": [
+            "They reached the quarter-final only as the fourth team.",
+            "They had won every single match easily.",
+            "They were sent home early.",
+            "They had no injured players at all."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'reaching the quarter-final as only the fourth team' 的转述。"
+        },
+        {
+          "stem": "What is special about the spiker mentioned in the text?",
+          "options": [
+            "She had never played before.",
+            "She had recently come back from heart surgery.",
+            "She was the team's coach.",
+            "She refused to join the final."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'returned only months after heart surgery' 的转述。"
+        },
+        {
+          "stem": "According to the MVP, what mattered most to their success?",
+          "options": [
+            "The skill of one star player.",
+            "Good luck in every match.",
+            "The strength of their teamwork.",
+            "The weather in Rio."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'teamwork was the real key… cooperation matters more' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Honouring Sports Heroes",
+      "topic_cn": "说明·劳伦斯体育奖",
+      "body": "A sports role model is a sportsperson who inspires other people in some special way. In this spirit, a well-known award holds a ceremony every year to honour remarkable sportspeople from around the world. The very first ceremony took place in 2000 in a small European country, where a famous footballer received a lifetime award for everything he had achieved. Three years later, a Chinese basketball player became the first sportsperson from China to win the award. Then, in his home country in 2015, that same player and a famous tennis star both received awards on the same evening. Each year, the award gives a prize not only to single athletes but also to whole teams and to people who have come back from injury. These role models remind everyone what sporting spirit really means. Through their hard work and self-belief, they show that the words faster, higher and stronger are about far more than just winning medals.",
+      "vocab_notes": [
+        {
+          "word": "ceremony",
+          "cn": "典礼"
+        },
+        {
+          "word": "remarkable",
+          "cn": "非凡的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the purpose of the yearly ceremony?",
+          "options": [
+            "To sell tickets for football games.",
+            "To train young coaches.",
+            "To choose a new national sport.",
+            "To honour outstanding sportspeople each year."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'honour remarkable sportspeople… every year' 的转述。"
+        },
+        {
+          "stem": "What did the Chinese basketball player do in 2003?",
+          "options": [
+            "He became the first Chinese person to win the award.",
+            "He retired from the sport.",
+            "He started the ceremony himself.",
+            "He moved to Europe."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'first sportsperson from China to win the award' 的转述。"
+        },
+        {
+          "stem": "What do these role models help people understand?",
+          "options": [
+            "That medals are the only goal.",
+            "The true meaning of sporting spirit.",
+            "That sport is only for the young.",
+            "That teams never matter."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'remind everyone what sporting spirit really means' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Why Sport Matters",
+      "topic_cn": "议论·体育的价值",
+      "body": "Many young people dream of winning a gold medal, but the real value of sport goes far beyond the result. Taking part in sport teaches lessons that last a lifetime. Training hard every day builds not only strong muscles but also a strong will. Losing a close game teaches you to stay calm and try again, and winning one teaches you to be humble. In team sports, working closely with others shows you that cooperation often matters more than personal skill. Doing sport is also good for the mind. After a long day of study, running, swimming or playing ball can clear your head and lift your mood. Best of all, the habits you form through sport stay with you. The athlete who learns to get up early, to keep going and to believe in herself carries these qualities into the rest of her life. That, many people believe, is the true prize that sport offers.",
+      "vocab_notes": [
+        {
+          "word": "humble",
+          "cn": "谦逊的"
+        },
+        {
+          "word": "cooperation",
+          "cn": "合作"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the main point of the passage?",
+          "options": [
+            "Only gold medals make sport worthwhile.",
+            "Team sports are always better than individual ones.",
+            "The benefits of sport go well beyond winning medals.",
+            "Sport is mainly about getting strong muscles."
+          ],
+          "answer_index": 2,
+          "explanation": "全文中心 'the real value of sport goes far beyond the result' 的转述。"
+        },
+        {
+          "stem": "According to the text, what does losing a close game teach you?",
+          "options": [
+            "To stop playing for good.",
+            "To blame your teammates.",
+            "To win at any cost.",
+            "To keep your head and have another go."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'teaches you to stay calm and try again' 的转述。"
+        },
+        {
+          "stem": "Why does the writer say sport is good for the mind?",
+          "options": [
+            "Because it refreshes the mind and improves how you feel.",
+            "Because it makes you richer.",
+            "Because it ends all study.",
+            "Because it removes the need for sleep."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'clear your head and lift your mood' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Sporting Moment",
+      "topic_cn": "记叙·校运会接力",
+      "body": "Last Saturday I went to our school playground to watch the final of the relay race at our annual tournament. It was an experience I will never forget. Before the race, everyone was quiet and still, and I had never imagined that the atmosphere at a sports event could feel so intense. Then the runners set off, and at once everyone went wild. We all stood up and started cheering and shouting, and it was like being hit by a huge wave of excitement. I could see the runners straining to go as fast as they could, while trying hard not to drop their batons at each change. The whole race was over in about a minute. It was Li Chong, the fastest student in our school, who first crossed the finish line. Everyone was on their feet. I was caught up in the excitement too and cheered so hard that I thought my lungs would burst. Being part of that moment felt truly wonderful.",
+      "vocab_notes": [
+        {
+          "word": "intense",
+          "cn": "紧张的"
+        },
+        {
+          "word": "baton",
+          "cn": "接力棒"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the atmosphere feel before the race?",
+          "options": [
+            "Noisy and relaxed the whole time.",
+            "Quiet at first, then suddenly very intense.",
+            "Boring from start to finish.",
+            "Cold and unfriendly."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'everyone was quiet and still… so intense' 的转述。"
+        },
+        {
+          "stem": "What were the runners trying hard not to do?",
+          "options": [
+            "Cross the finish line.",
+            "Look at the crowd.",
+            "Drop their batons when changing.",
+            "Cheer for each other."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'trying hard not to drop their batons at each change' 的转述。"
+        },
+        {
+          "stem": "How did the writer feel about being there?",
+          "options": [
+            "It was a waste of a Saturday.",
+            "It was frightening and unpleasant.",
+            "It was too long and tiring.",
+            "It was a wonderful moment to be part of."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'Being part of that moment felt truly wonderful' 的转述。"
+        }
+      ]
+    }
+  ]
+}

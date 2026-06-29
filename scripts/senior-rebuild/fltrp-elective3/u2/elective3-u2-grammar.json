@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "grammar_title": "表语从句(This is what / why / where / because…,放在系动词之后)",
+  "source": "外研社选择性必修第三册 Unit 2 Using language:表语从句(连接词放在 be/系动词之后引导从句作表语)。句子地道、答案唯一(干扰项为错误连接词,只有一个连接词能让句子成立)。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "what / that 引导表语从句",
+      "overview": "系动词 be 后接表语从句:从句缺主语或宾语时用 what(在从句中充当成分);从句结构完整、不缺成分时用 that(只起连接作用)。"
+    },
+    {
+      "code": "u2.02",
+      "point": "why / where / how / when 引导表语从句",
+      "overview": "be 后的表语从句缺状语时,按意义选关系副词:缺原因用 why,缺地点用 where,缺方式/手段用 how,缺时间用 when。"
+    },
+    {
+      "code": "u2.03",
+      "point": "because / whether 引导表语从句 与「the reason is THAT」陷阱",
+      "overview": "「This is ____」后接原因从句用 because;「The reason … is ____」后只能用 that(不能用 because);表是非选择用 whether。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "\"Hard work and devotion are ____ made Bill Cunningham so special.\"",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "be 后的从句缺主语,连接词要在从句里作主语 → what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"A good photo is often ____ an ordinary person is wearing on the street.\"",
+      "options": [
+        "that",
+        "what",
+        "how",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "从句中 wearing 缺宾语,连接词作宾语 → what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"His simple cameras were ____ he used to capture the whole city.\"",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "从句中 used 缺宾语,连接词作宾语 → what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"Honesty was ____ this photographer valued most in his life.\"",
+      "options": [
+        "that",
+        "why",
+        "which",
+        "what"
+      ],
+      "answer_index": 3,
+      "explanation": "从句中 valued 缺宾语,连接词作宾语 → what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"Real street scenes were ____ gave his pictures their power.\"",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "从句缺主语,连接词作主语 → what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"Freedom, he said, is ____ matters far more than money.\"",
+      "options": [
+        "that",
+        "what",
+        "why",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺主语,连接词作主语 → what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"The faces of strangers were ____ he loved to photograph most.\"",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "从句中 photograph 缺宾语,连接词作宾语 → what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"Curiosity about people is ____ keeps a great photographer going.\"",
+      "options": [
+        "that",
+        "how",
+        "which",
+        "what"
+      ],
+      "answer_index": 3,
+      "explanation": "从句缺主语,连接词作主语 → what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"Old clocks are ____ these masters spend their lives bringing back to life.\"",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "从句中 bringing 缺宾语,连接词作宾语 → what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"Patience is ____ every young artisan must learn first of all.\"",
+      "options": [
+        "that",
+        "what",
+        "how",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "从句中 learn 缺宾语,连接词作宾语 → what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"The simple truth is ____ he never took a single day off.\"",
+      "options": [
+        "what",
+        "why",
+        "that",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "从句结构完整、不缺成分,连接词只起连接作用 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"The fact is ____ he photographed the poor as gladly as the rich.\"",
+      "options": [
+        "what",
+        "which",
+        "how",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整不缺成分 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"His firm belief was ____ beauty could be found in everyday scenes.\"",
+      "options": [
+        "that",
+        "what",
+        "why",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "从句完整不缺成分 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"The problem today is ____ very few people still repair antique clocks.\"",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整不缺成分 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"One good thing about his work is ____ it recorded a whole city's life.\"",
+      "options": [
+        "what",
+        "why",
+        "that",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整不缺成分 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"The point of the documentary is ____ these masters deserve our respect.\"",
+      "options": [
+        "what",
+        "which",
+        "how",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整不缺成分 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"What surprised me most was ____ he lived in such a small apartment.\"",
+      "options": [
+        "that",
+        "what",
+        "why",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "be 后从句完整不缺成分,连接词只起连接作用 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"The truth about the old clocks is ____ each one needs its own method.\"",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整不缺成分 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"My first impression was ____ the workshop was almost completely silent.\"",
+      "options": [
+        "what",
+        "why",
+        "that",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整不缺成分 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"The wonderful thing is ____ the repaired clocks seem to come alive again.\"",
+      "options": [
+        "what",
+        "which",
+        "how",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整不缺成分 → that。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"His complete devotion is ____ Bill Cunningham is still admired by so many.\"",
+      "options": [
+        "why",
+        "where",
+        "how",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "从句表「受人敬佩」的原因,缺原因状语 → why。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"His honesty is ____ no gift could ever change his mind.\"",
+      "options": [
+        "where",
+        "why",
+        "how",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "从句说明结果背后的原因,缺原因状语 → why。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Years of silence and focus are ____ his photos feel so calm.\"",
+      "options": [
+        "where",
+        "how",
+        "why",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "从句表照片如此沉静的原因 → why。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Their deep love of tradition is ____ these crafts have not died out.\"",
+      "options": [
+        "where",
+        "how",
+        "when",
+        "why"
+      ],
+      "answer_index": 3,
+      "explanation": "从句表手艺得以存续的原因 → why。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"A single act of kindness is ____ the old man is still remembered in the town.\"",
+      "options": [
+        "why",
+        "where",
+        "how",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "从句表他被铭记的原因 → why。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"A small restaurant was ____ he ate the same breakfast every single day.\"",
+      "options": [
+        "why",
+        "where",
+        "how",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺地点状语(在某处吃饭) → where。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"The quiet courtyard is ____ the clock masters do their patient work.\"",
+      "options": [
+        "why",
+        "how",
+        "where",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "从句缺地点状语 → where。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"The busy streets of New York were ____ he took most of his pictures.\"",
+      "options": [
+        "why",
+        "how",
+        "when",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "从句缺地点状语 → where。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"A tiny workshop is ____ these precious timepieces are brought back to life.\"",
+      "options": [
+        "where",
+        "why",
+        "how",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "从句缺地点状语 → where。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"The Palace Museum is ____ thousands of antique clocks are carefully kept.\"",
+      "options": [
+        "why",
+        "where",
+        "how",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺地点状语 → where。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Hours of daily practice are ____ a young artisan slowly masters the craft.\"",
+      "options": [
+        "why",
+        "where",
+        "how",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "从句说明掌握手艺的方式/途径,缺方式状语 → how。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Gentle hands and great care are ____ the broken clocks are repaired.\"",
+      "options": [
+        "why",
+        "where",
+        "when",
+        "how"
+      ],
+      "answer_index": 3,
+      "explanation": "从句说明修钟的方式,缺方式状语 → how。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Watching strangers on the street is ____ he discovered his best subjects.\"",
+      "options": [
+        "how",
+        "why",
+        "where",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "从句说明他发现题材的方式 → how。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Going out in every kind of weather is ____ he captured the real city.\"",
+      "options": [
+        "why",
+        "how",
+        "where",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "从句说明他拍到真实城市的方式 → how。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Following his old teacher step by step is ____ Wang Jin learned to fix clocks.\"",
+      "options": [
+        "why",
+        "where",
+        "how",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "从句说明他学修钟的方式 → how。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Early dawn was ____ the soft light was best for taking photos.\"",
+      "options": [
+        "why",
+        "where",
+        "how",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "从句缺时间状语(在某时光线最好) → when。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"The moment the clock chimes is ____ Wang Jin feels most rewarded.\"",
+      "options": [
+        "when",
+        "why",
+        "where",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "从句缺时间状语 → when。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Early spring is ____ the museum receives the most visitors each year.\"",
+      "options": [
+        "why",
+        "when",
+        "where",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺时间状语 → when。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"The day of the exhibition was ____ his work was finally seen by everyone.\"",
+      "options": [
+        "why",
+        "where",
+        "when",
+        "how"
+      ],
+      "answer_index": 2,
+      "explanation": "从句缺时间状语 → when。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Late evening was ____ he returned home after a long day on the streets.\"",
+      "options": [
+        "why",
+        "where",
+        "how",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "从句缺时间状语 → when。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The reason his photos look so alive is ____ he always shot real people.\"",
+      "options": [
+        "that",
+        "because",
+        "why",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "「The reason … is ____」后只能用 that,不能用 because。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The reason the old man is still remembered is ____ he never chased fame.\"",
+      "options": [
+        "because",
+        "that",
+        "what",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "「The reason … is ____」后用 that,不用 because。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"One reason these clocks survive is ____ the masters check them again and again.\"",
+      "options": [
+        "because",
+        "why",
+        "that",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "「reason … is ____」后用 that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The main reason he refused gifts is ____ he wanted to keep his freedom.\"",
+      "options": [
+        "because",
+        "what",
+        "which",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "「reason … is ____」后用 that,不用 because。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The reason the workshop is so quiet is ____ everyone there is fully focused.\"",
+      "options": [
+        "that",
+        "because",
+        "why",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "「reason … is ____」后用 that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"A big reason the craft nearly died out is ____ few young people would learn it.\"",
+      "options": [
+        "because",
+        "that",
+        "what",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "「reason … is ____」后用 that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The reason his pictures still matter is ____ they recorded a whole city's life.\"",
+      "options": [
+        "because",
+        "why",
+        "that",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "「reason … is ____」后用 that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The real question is ____ the broken clock can be repaired at all.\"",
+      "options": [
+        "because",
+        "that",
+        "if",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "表「能否」的是非选择作表语用 whether;表语从句不用 if。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"What worried the team was ____ the old camera was still worth fixing.\"",
+      "options": [
+        "whether",
+        "because",
+        "if",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "表「是否值得」的是非意义 → whether。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The first thing to decide is ____ the antique is genuine or just a copy.\"",
+      "options": [
+        "because",
+        "whether",
+        "that",
+        "if"
+      ],
+      "answer_index": 1,
+      "explanation": "有 or 表示是非选择,表语从句用 whether。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The hardest choice was ____ he should keep the photo or delete it.\"",
+      "options": [
+        "because",
+        "if",
+        "whether",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "表是非选择(留还是删) → whether。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The question for every artisan is ____ speed or quality matters more.\"",
+      "options": [
+        "because",
+        "that",
+        "if",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "表是非选择 → whether。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"What the judges discussed was ____ the young photographer deserved the prize.\"",
+      "options": [
+        "whether",
+        "because",
+        "if",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "表「是否应得」的是非意义 → whether。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"He never won a prize. This is ____ he turned down every award offered to him.\"",
+      "options": [
+        "that",
+        "because",
+        "why",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "「This is ____」后接原因从句(他拒奖是没得奖的原因) → because。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"His photos feel so honest. This is ____ he never told people how to pose.\"",
+      "options": [
+        "that",
+        "why",
+        "because",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "「This is ____」后接原因从句 → because。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The clocks sound perfect again. This is ____ Wang Jin polished every tiny part.\"",
+      "options": [
+        "that",
+        "why",
+        "which",
+        "because"
+      ],
+      "answer_index": 3,
+      "explanation": "「This is ____」后接原因从句 → because。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"Few artisans are left today. This is ____ the work takes years to master.\"",
+      "options": [
+        "because",
+        "that",
+        "why",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "「This is ____」后接原因从句 → because。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"People trusted him completely. This is ____ he refused every free gift.\"",
+      "options": [
+        "that",
+        "because",
+        "why",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "「This is ____」后接原因从句 → because。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The museum feels timeless. This is ____ its masters work slowly and with care.\"",
+      "options": [
+        "that",
+        "why",
+        "because",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "「This is ____」后接原因从句 → because。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The only reason he went to the celebrity party is ____ he wanted to work, not relax.\"",
+      "options": [
+        "because",
+        "what",
+        "which",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "「The reason … is ____」后只能用 that,不能用 because。"
+    }
+  ]
+}

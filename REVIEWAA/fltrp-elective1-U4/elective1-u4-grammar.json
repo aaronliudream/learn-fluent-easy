@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "grammar_title": "不定式 / 动名词 / 过去分词作表语(to do / doing / done as predicative)",
+  "source": "外研社(新标准)选择性必修一 Unit 4 Using language:to-infinitive, -ing and -ed as predicative。句子地道、围绕艺术与灵感主题;干扰项均为错误的非谓语形式,正确答案唯一。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "to do 作表语(主语为 wish/aim/plan/job 等,表示打算或目的)",
+      "overview": "主语是 wish/dream/aim/goal/plan/job/duty/task/hope/purpose 等表'意图、目标'的名词时,be 后用动词不定式作表语,说明'要做的事',如 Every artist's wish is to create something。"
+    },
+    {
+      "code": "u4.02",
+      "point": "doing(-ing 形式)作表语(主语是引起感受的事物)",
+      "overview": "当主语是引起某种感受的事物、事件或作品时,be 后用 -ing 形式作表语,如 The film is amazing / The exhibition is exciting,意思是'令人……的'。"
+    },
+    {
+      "code": "u4.03",
+      "point": "done(-ed 形式)作表语(主语是感受的承受者)+ -ing 与 -ed 对比",
+      "overview": "当主语是体会到某种感受的人(或处于某种状态)时,be/feel 后用 -ed 形式作表语,如 I am amazed / The window is broken;与 -ing 形成对比:事物用 -ing,人用 -ed。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "Every artist's wish is ____ something that expresses an idea.",
+      "options": [
+        "to create",
+        "creating",
+        "created",
+        "create"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 wish 表意图,be 后用不定式说明'要做的事'→ to create。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "My biggest dream has always been ____ a painting that moves people.",
+      "options": [
+        "painting",
+        "to paint",
+        "painted",
+        "paints"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 dream 表目标,表语用不定式 → to paint。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Tan Dun's goal as a composer is ____ Chinese and Western sounds.",
+      "options": [
+        "combining",
+        "combined",
+        "to combine",
+        "combines"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 goal 表目的,表语用不定式 → to combine。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The whole point of the show is ____ young artists to the public.",
+      "options": [
+        "introducing",
+        "introduced",
+        "introduces",
+        "to introduce"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 point 表目的,表语用不定式 → to introduce。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Her plan for next year is ____ a series of folk paintings.",
+      "options": [
+        "to produce",
+        "producing",
+        "produced",
+        "produces"
+      ],
+      "answer_index": 0,
+      "explanation": "plan + for next year 表将来打算,表语用不定式 → to produce。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The first step in painting is ____ the main idea clearly in your mind.",
+      "options": [
+        "planning",
+        "to plan",
+        "planned",
+        "plans"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 step 表要做的步骤,表语用不定式 → to plan。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "His aim is ____ the beauty of nature through his dance.",
+      "options": [
+        "showing",
+        "shown",
+        "to show",
+        "shows"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 aim 表目的,表语用不定式 → to show。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The artist's hope is ____ feelings that words cannot describe.",
+      "options": [
+        "expressing",
+        "expressed",
+        "expresses",
+        "to express"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 hope 表愿望,表语用不定式 → to express。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Our task today is ____ an artwork that we really admire.",
+      "options": [
+        "to describe",
+        "describing",
+        "described",
+        "describes"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 task 表要完成的事,表语用不定式 → to describe。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The purpose of the audio guide is ____ the message of each painting.",
+      "options": [
+        "explaining",
+        "to explain",
+        "explained",
+        "explains"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 purpose 表目的,表语用不定式 → to explain。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Yang Liping's wish was ____ the special beauty of the Dai women.",
+      "options": [
+        "celebrating",
+        "celebrated",
+        "to celebrate",
+        "celebrates"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 wish 表意图,表语用不定式 → to celebrate。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The next step for the museum is ____ the old scroll in a digital form.",
+      "options": [
+        "presenting",
+        "presented",
+        "presents",
+        "to present"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 step 表要做的步骤,表语用不定式 → to present。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "An artist's first job is ____ the world around them with fresh eyes.",
+      "options": [
+        "to notice",
+        "noticing",
+        "noticed",
+        "notices"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 job 表职责,表语用不定式 → to notice。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The main goal of the festival is ____ new art forms with the public.",
+      "options": [
+        "sharing",
+        "to share",
+        "shared",
+        "shares"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 goal 表目的,表语用不定式 → to share。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "His real challenge was ____ light and shadow in a single image.",
+      "options": [
+        "capturing",
+        "captured",
+        "to capture",
+        "captures"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 challenge 表要克服的任务,表语用不定式 → to capture。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The duty of a good art teacher is ____ each student's creative side.",
+      "options": [
+        "inspiring",
+        "inspired",
+        "inspires",
+        "to inspire"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 duty 表职责,表语用不定式 → to inspire。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "My only wish before the show closes is ____ the famous painting in person.",
+      "options": [
+        "to see",
+        "seeing",
+        "seen",
+        "sees"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 wish 表愿望,表语用不定式 → to see。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Hofman's idea was ____ a giant duck that everyone would love.",
+      "options": [
+        "designing",
+        "to design",
+        "designed",
+        "designs"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 idea 表打算做的事,表语用不定式 → to design。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The aim of the project was ____ data in the way an artist uses paint.",
+      "options": [
+        "using",
+        "used",
+        "to use",
+        "uses"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 aim 表目的,表语用不定式 → to use。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "A sculptor's task is often ____ a living shape out of cold stone.",
+      "options": [
+        "building",
+        "built",
+        "builds",
+        "to build"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 task 表要完成的事,表语用不定式 → to build。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The new exhibition on abstract art is really ____.",
+      "options": [
+        "amazing",
+        "amazed",
+        "amaze",
+        "to amaze"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 exhibition 是引起感受的事物,表语用 -ing → amazing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Her performance on stage was so ____ that nobody moved.",
+      "options": [
+        "moved",
+        "moving",
+        "move",
+        "to move"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 performance 引起感动,表语用 -ing → moving。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The story behind the painting is quite ____.",
+      "options": [
+        "fascinated",
+        "fascinate",
+        "fascinating",
+        "to fascinate"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 story 是引起兴趣的事物,表语用 -ing → fascinating。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Tan Dun's music for the film is truly ____.",
+      "options": [
+        "inspired",
+        "inspire",
+        "to inspire",
+        "inspiring"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 music 给人启发,表语用 -ing → inspiring。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The light show at night is absolutely ____.",
+      "options": [
+        "astonishing",
+        "astonished",
+        "astonish",
+        "to astonish"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 light show 是令人惊叹的事物,表语用 -ing → astonishing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "For me, the long lecture on folk art was rather ____.",
+      "options": [
+        "bored",
+        "boring",
+        "bore",
+        "to bore"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 lecture 是令人乏味的事物,表语用 -ing → boring。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The colours in this artwork are very ____ to the eye.",
+      "options": [
+        "pleased",
+        "please",
+        "pleasing",
+        "to please"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 colours 是令人愉悦的事物,表语用 -ing → pleasing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The sudden change of scene in the play was ____.",
+      "options": [
+        "surprised",
+        "surprise",
+        "to surprise",
+        "surprising"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 change 是令人意外的事,表语用 -ing → surprising。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Walking around the huge museum all day can be ____.",
+      "options": [
+        "tiring",
+        "tired",
+        "tire",
+        "to tire"
+      ],
+      "answer_index": 0,
+      "explanation": "主语(walking 这件事)使人疲惫,表语用 -ing → tiring。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The way the artist mixes ideas is a little ____ at first.",
+      "options": [
+        "confused",
+        "confusing",
+        "confuse",
+        "to confuse"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 way 是令人困惑的事物,表语用 -ing → confusing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The final result of the project was deeply ____.",
+      "options": [
+        "satisfied",
+        "satisfy",
+        "satisfying",
+        "to satisfy"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 result 令人满意,表语用 -ing → satisfying。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The price of some of the tickets is honestly ____.",
+      "options": [
+        "shocked",
+        "shock",
+        "to shock",
+        "shocking"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 price 令人震惊,表语用 -ing → shocking。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Soft music playing in the gallery is quite ____.",
+      "options": [
+        "relaxing",
+        "relaxed",
+        "relax",
+        "to relax"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 music 使人放松,表语用 -ing → relaxing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The film about the young painter is very ____.",
+      "options": [
+        "touched",
+        "touching",
+        "touch",
+        "to touch"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 film 令人感动,表语用 -ing → touching。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Sadly, the ending of the show was a bit ____.",
+      "options": [
+        "disappointed",
+        "disappoint",
+        "disappointing",
+        "to disappoint"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 ending 令人失望,表语用 -ing → disappointing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Some of the dark sculptures in the hall look ____.",
+      "options": [
+        "frightened",
+        "frighten",
+        "to frighten",
+        "frightening"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 sculptures 是令人害怕的事物,表语用 -ing → frightening。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Her kind words about my drawing were really ____.",
+      "options": [
+        "encouraging",
+        "encouraged",
+        "encourage",
+        "to encourage"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 words 给人鼓舞,表语用 -ing → encouraging。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The idea of painting with data is rather ____.",
+      "options": [
+        "excited",
+        "exciting",
+        "excite",
+        "to excite"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 idea 令人兴奋,表语用 -ing → exciting。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The view from the top of the giant sculpture is ____.",
+      "options": [
+        "stunned",
+        "stun",
+        "stunning",
+        "to stun"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 view 令人惊艳,表语用 -ing → stunning。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "This abstract painting is far more ____ than I expected.",
+      "options": [
+        "interested",
+        "interest",
+        "to interest",
+        "interesting"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 painting 是引起兴趣的事物,表语用 -ing → interesting。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "I am totally ____ by the painting called Storm.",
+      "options": [
+        "amazed",
+        "amazing",
+        "amaze",
+        "to amaze"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 I 是感受的承受者,表语用 -ed → amazed。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The visitors were deeply ____ by the young artist's story.",
+      "options": [
+        "moving",
+        "moved",
+        "move",
+        "to move"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 visitors 是被感动的人,表语用 -ed → moved。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "After the visit, she was really ____ in abstract art.",
+      "options": [
+        "interesting",
+        "interest",
+        "interested",
+        "to interest"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 she 体会到兴趣,表语用 -ed → interested。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "After the long tour, the children were quite ____.",
+      "options": [
+        "tiring",
+        "tire",
+        "to tire",
+        "tired"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 children 感到疲惫,表语用 -ed → tired。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Richard was honestly ____ by the over-priced tickets.",
+      "options": [
+        "shocked",
+        "shocking",
+        "shock",
+        "to shock"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 Richard 受到震惊,表语用 -ed → shocked。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Everyone in the hall was ____ by the breathtaking installation.",
+      "options": [
+        "fascinating",
+        "fascinated",
+        "fascinate",
+        "to fascinate"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 everyone 被吸引,表语用 -ed → fascinated。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The teacher was very ____ with the students' creative work.",
+      "options": [
+        "pleasing",
+        "please",
+        "pleased",
+        "to please"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 teacher 感到满意,表语用 -ed → pleased。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "At first I felt a bit ____ by the strange shapes.",
+      "options": [
+        "confusing",
+        "confuse",
+        "to confuse",
+        "confused"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 I 感到困惑,feel 后用 -ed → confused。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "We were all ____ by the beauty of the digital scroll.",
+      "options": [
+        "impressed",
+        "impressing",
+        "impress",
+        "to impress"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 we 留下深刻印象,表语用 -ed → impressed。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The audience seemed ____ during the slow parts of the film.",
+      "options": [
+        "boring",
+        "bored",
+        "bore",
+        "to bore"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 audience 感到无聊,表语用 -ed → bored。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Amy was so ____ about the new exhibition that she told all her friends.",
+      "options": [
+        "exciting",
+        "excite",
+        "excited",
+        "to excite"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 Amy 感到兴奋,表语用 -ed → excited。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "He was honestly ____ when his work was chosen for the show.",
+      "options": [
+        "astonishing",
+        "astonish",
+        "to astonish",
+        "astonished"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 he 感到惊讶,表语用 -ed → astonished。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The crowd was ____ to learn that a computer had made the painting.",
+      "options": [
+        "surprised",
+        "surprising",
+        "surprise",
+        "to surprise"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 crowd 感到意外,表语用 -ed → surprised。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The girl looked ____ by the kind comments on her drawing.",
+      "options": [
+        "touching",
+        "touched",
+        "touch",
+        "to touch"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 girl 被打动,表语用 -ed → touched。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Some teachers are ____ that computers may one day create art.",
+      "options": [
+        "worrying",
+        "worry",
+        "worried",
+        "to worry"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 teachers 感到担忧,表语用 -ed → worried。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The students were warmly ____ by their teacher to keep trying.",
+      "options": [
+        "encouraging",
+        "encourage",
+        "to encourage",
+        "encouraged"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 students 受到鼓励,表语用 -ed → encouraged。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Sadly, the fans were ____ when the show was cancelled.",
+      "options": [
+        "disappointed",
+        "disappointing",
+        "disappoint",
+        "to disappoint"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 fans 感到失望,表语用 -ed → disappointed。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Standing alone in the dark gallery, the boy felt ____.",
+      "options": [
+        "frightening",
+        "frightened",
+        "frighten",
+        "to frighten"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 boy 感到害怕,feel 后用 -ed → frightened。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "After finishing the huge mural, the painter felt deeply ____.",
+      "options": [
+        "satisfying",
+        "satisfy",
+        "satisfied",
+        "to satisfy"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 painter 感到满足,feel 后用 -ed → satisfied。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "We were truly ____ by the artist's passion for his motherland.",
+      "options": [
+        "inspiring",
+        "inspire",
+        "to inspire",
+        "inspired"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 we 受到鼓舞,表语用 -ed → inspired。"
+    }
+  ]
+}

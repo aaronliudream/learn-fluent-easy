@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "topic": "Write an Essay on the Importance of Honesty(写一篇关于诚实重要性的议论文)",
+  "title_en": "Why Honesty Matters in Friendship",
+  "genre": "议论文 / 短文(essay:introduction + main body + conclusion)",
+  "source": "外研社(新标准)必修第三册 Unit 1 Developing ideas / Writing an essay:就'诚实的重要性'给出观点、理由与例子,按引言—正文—结论三段式组织。",
+  "prompt_cn": "假设你叫李华,班级正在举办以'诚实'为主题的英语演讲。请用英语写一篇约100词的短文,内容包括:① 用一句话说明你的观点——在友谊中诚实为什么重要;② 给出一两条理由,并用一个生活中的例子加以支持;③ 用一句结论收尾,呼应标题。注意:按引言—正文—结论组织,结论中不引入新内容;尽量用本单元 -ed 分词作状语的句子(如 Disappointed by a lie, …)。",
+  "prompt_en": "Suppose you are Li Hua. Your class is holding an English talk on the theme of honesty. Write an essay (about 100 words) including: 1) one sentence stating your opinion — why honesty matters in friendship; 2) one or two reasons supported by a real-life example; 3) a conclusion that links back to the title. Organise it as introduction, main body and conclusion, and do not add new ideas in the conclusion. Try to use an -ed participle as an adverbial (e.g. Disappointed by a lie, …).",
+  "points": [
+    "引言:点明观点(I believe that honesty is the core of every true friendship.)",
+    "正文理由+例子(One reason is that … . For example, …)",
+    "用 -ed 分词作状语支持论证(Hurt by a small lie, … / Trusted by others, …)",
+    "结论呼应标题、不引入新内容(In conclusion, …)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "I firmly believe that honesty is the core of every true friendship. Without it, trust cannot grow, and even the closest friends may slowly drift apart.\n\nOne important reason is that honesty builds trust. Hurt by a small lie, a friend may find it hard to believe us again. For example, if we praise a meal we secretly dislike, the same dish may be served every time we visit. Frank words, though harder to say, show real care and help a friendship last.\n\nIn conclusion, honesty is not always easy, but it is the kindest and wisest choice. A friendship built on truth is one that will stand the test of time.",
+  "model_translation": "我坚信诚实是每段真挚友谊的核心。没有诚实,信任无法生长,即使最亲密的朋友也可能慢慢疏远。\n\n一个重要原因是诚实能建立信任。被一个小谎言伤害后,朋友可能很难再相信我们。例如,如果我们违心地夸一道并不喜欢的菜,每次到访都可能再被端上同一道菜。坦率的话虽然更难说出口,却体现真正的关心,能让友谊长久。\n\n总之,诚实未必总是容易,但它是最善良也最明智的选择。建立在真话之上的友谊,经得起时间的考验。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:观点 / 理由与例子 / 呼应标题的结论" },
+      { "dimension": "结构", "max": 4, "criteria": "引言—正文—结论三段清晰、结论不引入新内容、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "-ed 分词作状语等句型运用得当、词汇准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "引言 I believe that honesty is the core of every true friendship.",
+      "理由 One important reason is that honesty builds trust.",
+      "例子+分词状语 Hurt by a small lie, a friend may … . For example, …",
+      "结论 In conclusion, honesty is … , and a friendship built on truth …"
+    ],
+    "key_expressions": [
+      "Honesty is the core of every true friendship.",
+      "Hurt by a small lie, a friend may find it hard to trust us again.",
+      "Frank words, though harder to say, show real care.",
+      "A friendship built on truth will stand the test of time."
+    ],
+    "useful_words": ["honesty", "trust", "frank", "deceive", "friendship", "core", "forgive", "conflict", "communication", "apart"]
+  },
+  "high_sentences": [
+    "I firmly believe that honesty is the core of every true friendship.",
+    "Hurt by a small lie, a friend may find it hard to believe us again.",
+    "Frank words, though harder to say, show real care and help a friendship last.",
+    "A friendship built on truth is one that will stand the test of time."
+  ],
+  "error_pairs": [
+    { "wrong": "Hurting by a small lie, the friend felt sad.", "correct": "Hurt by a small lie, the friend felt sad.", "note": "逻辑主语 the friend 是'被伤害'的承受者,用过去分词 -ed,不用主动的 -ing。" },
+    { "wrong": "Honesty is the core for every friendship.", "correct": "Honesty is the core of every friendship.", "note": "the core of sth 固定搭配,用介词 of。" },
+    { "wrong": "I believe honesty is important, in conclusion it builds trust.", "correct": "I believe honesty is important. In conclusion, it builds trust.", "note": "In conclusion 引导独立的结论句,前面用句号断开,不用逗号连写。" }
+  ],
+  "paragraph_template": "【诚实主题议论文结构】\n引言段 点明观点:I believe that honesty is the core of every true friendship.\n正文段 理由+例子:One important reason is that … . Hurt by a small lie, … . For example, …\n结论段 呼应标题:In conclusion, honesty is … , and a friendship built on truth …"
+}

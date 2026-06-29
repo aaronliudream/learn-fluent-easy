@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "When humans arrived, their ships secretly carried rats onto the island.", "opts": ["人类到来时,船只悄悄把老鼠带上了岛。", "人类到来时把老鼠从岛上带走了。", "人类到来时在岛上养起了老鼠。", "人类从未登上过这座岛。"], "answer": 0 },
+    { "audio": "The rabbits multiplied rapidly and caused serious soil erosion.", "opts": ["兔子迅速繁殖,造成了严重的水土流失。", "兔子很快就全部死光了。", "兔子帮助保护了岛上的土壤。", "兔子被人们带离了小岛。"], "answer": 0 },
+    { "audio": "Shennongjia was added to the World Heritage List in 2016.", "opts": ["神农架于2016年被列入世界遗产名录。", "神农架在2016年被关闭了。", "神农架从未进入世界遗产名录。", "神农架在2016年被发现。"], "answer": 0 },
+    { "audio": "In winter, scientists carry food up the mountain for the golden monkeys.", "opts": ["冬天,科学家们把食物背上山喂金丝猴。", "冬天,科学家们把金丝猴带下山。", "冬天,科学家们停止研究金丝猴。", "金丝猴冬天会自己下山找人。"], "answer": 0 },
+    { "audio": "By giving the bees a secure home, the villagers collect honey in return.", "opts": ["村民给蜜蜂安全的家,作为回报采集蜂蜜。", "村民把蜜蜂赶出了村子。", "村民从不靠近这些蜜蜂。", "蜜蜂偷走了村民的蜂蜜。"], "answer": 0 },
+    { "audio": "In 2014 the island was finally declared free of pests.", "opts": ["2014年,这座岛终于被宣布无害兽。", "2014年,岛上的害兽突然增多。", "2014年,这座岛被人们放弃了。", "这座岛从未有过害兽。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "“habitat” 的意思是?", "opts": ["栖息地", "假期", "习惯", "海港"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "“endangered” 的意思是?", "opts": ["濒临灭绝的", "受欢迎的", "危险的人", "勇敢的"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "“multiply” 在“the rabbits multiplied rapidly”中意为?", "opts": ["大量繁殖,倍增", "悄悄离开", "停止进食", "改变颜色"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "“thrive” 的意思是?", "opts": ["茁壮成长,兴旺", "彻底失败", "慢慢消失", "勉强支撑"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "We found ____ hard to remove every rabbit from the island.", "opts": ["it", "that", "this", "them"], "answer": 0, "point": "形式宾语 it", "dim": "grammar" },
+    { "q": "The incident made ____ clear that the problem had to be solved.", "opts": ["it", "that", "this", "them"], "answer": 0, "point": "形式宾语 it + that 从句", "dim": "grammar" },
+    { "q": "The villagers consider ____ an honour to protect the wild bees.", "opts": ["it", "that", "this", "them"], "answer": 0, "point": "形式宾语 it + 名词", "dim": "grammar" },
+    { "q": "Scientists think ____ important to keep the habitat in balance.", "opts": ["it", "that", "this", "them"], "answer": 0, "point": "形式宾语 it + 不定式", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["每个物种,无论多小,都有自己的作用。", "只有大型动物才重要。", "物种之间从不互相影响。", "科学家无法研究这些物种。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Every species, however small, has its own part to play." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["如果链条上少了一环,整个系统就会失衡。", "链条上的每一环都可有可无。", "系统永远不会失去平衡。", "只有植物对系统重要。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "If even one link is removed, the whole system can fall out of balance." }
+  ],
+  "reading": {
+    "passage": "After the cats were finally gone, the mice on the island began to increase again. Then the surviving rabbits, now immune to the virus, exploded in number once more, and their digging caused some land to collapse.",
+    "passageCn": "猫终于消失后,岛上的老鼠又开始增多。接着,已对病毒产生免疫力的幸存兔子数量再次激增,它们挖洞使一些土地塌陷。",
+    "questions": [
+      { "q": "What happened after the cats were gone?", "opts": ["The mice began to increase again.", "All the birds left the island.", "The rabbits all died out.", "The land stopped changing."], "answer": 0 },
+      { "q": "Why did the rabbit numbers explode again?", "opts": ["They had become immune to the virus.", "People brought more rabbits.", "The cats protected them.", "The weather grew warmer."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short note (about 60 words) describing how a wild place near you has changed, using the formal object 'it' at least once.",
+    "promptCn": "写一段约60词的短文,描述你身边一处野生之地的变化,至少使用一处形式宾语 it 结构。",
+    "sampleWords": ["wetland", "habitat", "rubbish", "protect", "recover", "clear", "found it hard", "made it a goal", "wildlife", "return"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking about Macquarie Island",
+      "lines": [
+        { "role": "A", "text": "Why did the seabirds on the island almost disappear?", "cn": "为什么岛上的海鸟几乎消失了?" },
+        { "role": "B", "text": "People brought rats and cats, and they hunted the birds.", "cn": "人们带来了老鼠和猫,它们捕食了鸟。" },
+        { "role": "A", "text": "So how did people put things right?", "cn": "那人们是怎么补救的?" },
+        { "role": "B", "text": "They spent years removing the pests with traps and dogs.", "cn": "他们花了数年用陷阱和狗清除害兽。" }
+      ]
+    },
+    {
+      "title": "Protecting a delicate world",
+      "lines": [
+        { "role": "A", "text": "It's sad how one small change can upset a whole ecosystem.", "cn": "一个小变化就能扰乱整个生态系统,真令人难过。" },
+        { "role": "B", "text": "True. That's why every species matters, however small.", "cn": "是啊,所以每个物种都重要,无论多小。" },
+        { "role": "A", "text": "We should make it a habit to protect wild places.", "cn": "我们应该养成保护野生之地的习惯。" },
+        { "role": "B", "text": "Agreed. Small daily actions can really make a difference.", "cn": "同意。日常的小行动真的能带来改变。" }
+      ]
+    }
+  ]
+}

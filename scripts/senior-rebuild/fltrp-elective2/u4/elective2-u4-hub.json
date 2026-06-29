@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Doctors Without Borders helps people, whatever country they come from.", "opts": ["无国界医生帮助人们,无论他们来自哪个国家。", "无国界医生只帮助本国人。", "无国界医生是一家旅行公司。", "无国界医生从不出国。"], "answer": 0 },
+    { "audio": "It is vital not to take any chances during an outbreak.", "opts": ["疫情期间可以随便冒险。", "疫情爆发时绝不冒险是至关重要的。", "疫情已经完全结束。", "没人愿意去疫区工作。"], "answer": 1 },
+    { "audio": "Technology has made it possible to connect with people across the world.", "opts": ["技术让人们彼此疏远。", "技术只在本地有用。", "技术使我们能与世界各地的人相连。", "技术毫无用处。"], "answer": 2 },
+    { "audio": "Lincoln's short speech gave his divided people new hope.", "opts": ["林肯的演说持续了一整天。", "林肯从未发表过演说。", "林肯让人民更加分裂。", "林肯简短的演说给分裂的人民带来新希望。"], "answer": 3 },
+    { "audio": "Edgar Snow broke down boundaries of misunderstanding about China.", "opts": ["埃德加·斯诺打破了对中国的误解之界限。", "埃德加·斯诺加深了人们的偏见。", "埃德加·斯诺从未去过中国。", "埃德加·斯诺只写欧洲的故事。"], "answer": 0 },
+    { "audio": "Sport helps to break down the boundaries between strangers.", "opts": ["体育让陌生人更加疏远。", "体育帮助打破陌生人之间的界限。", "体育只属于少数人。", "体育让人失去朋友。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "It is ____ not to take any chances during an outbreak.（极其重要的）", "opts": ["vital", "lazy", "empty", "boring"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Different countries make a ____ effort to create a better world.（共同的）", "opts": ["false", "joint", "single", "private"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Cultural exchange helps us become more ____.（包容的）", "opts": ["selfish", "lazy", "inclusive", "rude"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "When cultures meet, both sides enjoy the ____ benefits.（共同的）", "opts": ["empty", "single", "private", "mutual"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "____ is important to remember that diseases respect no borders.", "opts": ["It", "That", "This", "There"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ is true that no single country can fight an outbreak alone.", "opts": ["That", "It", "This", "There"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "____ takes great courage to work in a disease clinic.", "opts": ["That", "This", "It", "There"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "____ is no use worrying about culture shock at first.", "opts": ["That", "This", "There", "It"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["他们从不放弃任何一位病人。", "他们卖掉了诊所。", "他们忘记了病人。", "他们拒绝工作。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "They never gave up on a single patient." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["世界感觉越来越疏远。", "如今世界感觉像一个大村庄。", "人们不再交流。", "技术让人孤独。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Now the world feels like one big village." }
+  ],
+  "reading": {
+    "passage": "Doctors Without Borders brings medical care to people in danger, whatever country they come from. Its workers believe there are no borders for doctors or for patients. Those in the most serious danger are always treated first.",
+    "passageCn": "无国界医生为身处危险中的人们带去医疗援助,无论他们来自哪个国家。其成员相信,对医生和病人而言都没有边界。最危急的人总是优先得到救治。",
+    "questions": [
+      { "q": "Whom does the group help?", "opts": ["People in danger from any country.", "Only rich patients.", "Only its own members.", "Only famous people."], "answer": 0 },
+      { "q": "Who is treated first?", "opts": ["The newest patients.", "The youngest patients.", "Those in the most serious danger.", "The richest patients."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short speech about a person who has helped to break boundaries between cultures or peoples. Say who the person is, what boundary he or she broke, and how you feel. Try to use formal-subject \"it\".",
+    "promptCn": "写一篇短演讲,介绍一位帮助打破文化或人群之间界限的人:此人是谁、打破了什么界限、你的感受(试着用形式主语 it:It is … to do / It is … that …)。",
+    "sampleWords": ["boundary", "break down", "understanding", "bridge", "inclusive", "mutual", "inspiring", "collaborate", "journalist", "mankind"]
+  },
+  "dialogues": [
+    {
+      "title": "Why Volunteer Abroad?",
+      "lines": [
+        { "role": "A", "text": "Why do you want to volunteer in another country?", "cn": "你为什么想去另一个国家做志愿者?" },
+        { "role": "B", "text": "I think it is important to help people across borders.", "cn": "我觉得跨越国界帮助别人很重要。" },
+        { "role": "A", "text": "Aren't you worried about the language?", "cn": "你不担心语言问题吗?" },
+        { "role": "B", "text": "A little, but real care can cross any boundary.", "cn": "有点,但真正的关怀能跨越任何界限。" }
+      ]
+    },
+    {
+      "title": "One Global Village",
+      "lines": [
+        { "role": "A", "text": "Do you really think the world is getting smaller?", "cn": "你真觉得世界在变小吗?" },
+        { "role": "B", "text": "Yes. It seems that technology brings distant cultures together.", "cn": "是的。技术似乎把遥远的文化拉到了一起。" },
+        { "role": "A", "text": "So the boundaries between us are disappearing?", "cn": "所以我们之间的界限在消失?" },
+        { "role": "B", "text": "More like turning into bridges we can cross.", "cn": "更像是变成了我们可以跨越的桥。" }
+      ]
+    }
+  ]
+}

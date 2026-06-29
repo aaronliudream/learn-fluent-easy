@@ -1,0 +1,36 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "grade": 10,
+  "content": {
+    "title": "现在完成被动语态 have/has been done 速查",
+    "intro": "结构 = have/has + been + 过去分词。表示\"到现在为止\"某动作已经被完成,且对现在有影响。主语是动作的承受者。判断口诀:主语挨打(承受动作)+ 现在完成时间标志(already / so far / recently / since…)→ have/has been done。",
+    "table": {
+      "headers": ["对比项", "形式 / 例句"],
+      "rows": [
+        ["现在完成被动", "have/has been + done:New parts have been printed.(部件已被打印)"],
+        ["现在完成主动", "have/has + done:Scientists have printed new parts.(科学家已打印部件)"],
+        ["一般现在被动", "am/is/are + done:The part is printed in a lab.(经常性事实)"],
+        ["一般过去被动", "was/were + done:The part was printed last week.(过去某时)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主语单数用 has been done,复数/I/you/we/they 用 have been done", "mark": "A house has been built. / Many cars have been made." },
+      { "rule": "施动者用 by 引出,可省略", "mark": "The robot has been fixed (by the students)." },
+      { "rule": "时间标志定时态:already/so far/up to now/since/recently → 现在完成,不用 is done / was done", "mark": "So far, no time machine has been invented." },
+      { "rule": "主语后若还跟宾语,说明主语是发出者 → 改用主动,不用被动", "mark": "Scientists have made parts.(✓主动)/ Scientists have been made parts.(✗)" }
+    ],
+    "why": [
+      "选被动还是主动,先看主语:主语是\"做动作的人/物\"用主动 have done;主语是\"被动作影响的东西\"(后面常带 by …、且空后没有宾语)用被动 have been done。",
+      "选什么时态,看时间标志:有 already / so far / recently 等强调\"到现在\"的词,就用现在完成,而不是一般现在或一般过去。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/改错高频:给出动词原形,需根据主语单复数和语态填 has/have been + 过去分词。",
+      "易错点:把现在完成被动错写成现在完成主动(漏掉 been),或与一般过去被动(was/were done)混淆——靠时间标志区分。"
+    ],
+    "examVsReal": [
+      { "exam": "Much progress has been made in this field.(考试/书面)", "real": "We've made a lot of progress here.(口语)", "note": "考试爱考被动强调结果;日常口语常用主动、更直接。" },
+      { "exam": "The work has been finished.(强调完成、不提是谁)", "real": "I've finished the work.(口语点明施动者)", "note": "被动多用于科技、报告等正式语体,隐去或弱化施动者。" }
+    ]
+  }
+}

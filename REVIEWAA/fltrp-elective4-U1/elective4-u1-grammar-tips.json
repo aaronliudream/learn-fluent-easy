@@ -1,0 +1,35 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "grade": 12,
+  "content": {
+    "title": "时态综合复习·过去/现在/将来 速查",
+    "intro": "时态判断的核心是「看标志词 + 看动作与说话时间的关系」。过去/现在/将来三个时间区，各有 一般 / 进行 / 完成 / (完成进行) 四种体。先确定时间区，再确定动作是「点」「线」还是「已完成」。",
+    "table": {
+      "headers": ["时间区", "一般(事实/习惯)", "进行(正在/某刻)", "完成(已…/对现在的影响)"],
+      "rows": [
+        ["现在", "do/does：every day, usually", "am/is/are doing：now, Look!", "have/has done：already, so far, just"],
+        ["过去", "did：ago, in 1899, yesterday", "was/were doing：while, at 8 last night", "had done：by the time, before, by 2010"],
+        ["将来", "will do / be going to：I think…, decided", "will be doing：at this time next year", "will have done：by + 将来时间"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "现在完成进行：all morning / for ... and still ——强调动作持续到现在且未停", "mark": "He has been working all morning." },
+      { "rule": "be going to vs will：事先打算/有迹象→be going to；当场决定/纯预测→will", "mark": "I've decided — I'm going to … / OK, I'll do it." },
+      { "rule": "现在进行表将来：已定好的安排 + 将来时间状语", "mark": "I'm attending a workshop tomorrow." },
+      { "rule": "过去将来 would / was going to：从过去某点看的将来(常在 said/thought/imagined 后)", "mark": "She said she would come. / He never imagined his ideas would change the world." }
+    ],
+    "why": [
+      "同一个动词，换一个时间状语就要换时态：标志词决定时间区，动作性质(点/持续/已完成)决定体。抓住这两条，时态题基本不会错。"
+    ],
+    "gaokaoPoints": [
+      "语篇填空 / 短文改错高频:by the time → 过去完成；at this time next year → 将来进行；by + 将来时间 → 将来完成。",
+      "be going to 与 will 的区分(已决定 vs 当场决定/预测)；现在进行表将来(已安排好的活动)。",
+      "完成时与完成进行时的取舍:重结果用完成，重'一直在做、还没停'用完成进行。"
+    ],
+    "examVsReal": [
+      { "exam": "By 2050 humans will have built a base on Mars.(考试用将来完成)", "real": "By 2050 we'll have a base on Mars.", "note": "口语里常用更简单的 will + 短语，但考试要求 by + 将来时间 → 将来完成。" },
+      { "exam": "I'm meeting him tomorrow at three.(现在进行表将来)", "real": "I'll meet him tomorrow. / I'm gonna meet him.", "note": "口语 will / be going to / 现在进行常可互换，但有明确安排时考试偏好现在进行表将来。" }
+    ]
+  }
+}

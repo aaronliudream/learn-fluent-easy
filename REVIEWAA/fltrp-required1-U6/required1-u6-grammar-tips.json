@@ -1,0 +1,37 @@
+{
+  "volume": "required1",
+  "unit": "U6",
+  "grade": 10,
+  "content": {
+    "title": "定语从句3·介词+关系代词 / 非限制性定从 / which 指代整句 速查",
+    "intro": "本单元三招:① 介词 + which(物)/ whom(人),介词由从句里的搭配决定;② 逗号引导的非限制性定从,补充说明、绝不用 that;③ 逗号后的 which 可以指代前面整个主句。",
+    "table": {
+      "headers": ["结构", "用法 / 例句"],
+      "rows": [
+        ["介词 + which", "指物:the areas in which they grow rice;the clouds from which rain falls"],
+        ["介词 + whom", "指人:the people for whom traditions hold value;the expert from whom we learnt"],
+        ["逗号 + which / who / whose", "非限制性:The reef, which lies off Australia, …;The Zhuang, who farm here, …"],
+        ["逗号 + which(指整句)", "This is passed down, which means new generations keep the old ways."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "介词放关系代词前时,指人只能 whom、指物只能 which(不能用 who/that)", "mark": "for whom √ / for who × / in which √ / in that ×" },
+      { "rule": "非限制性定语从句(有逗号)里绝不能用 that", "mark": "The terraces, which …, √ / The terraces, that …, ×" },
+      { "rule": "介词由从句里的动词/名词搭配决定", "mark": "grow rice in → in which;depend on → on which;learn from → from whom" },
+      { "rule": "逗号后的 which 可指代前面一整句话,在从句作主语", "mark": "…, which means / which helps / which makes …" }
+    ],
+    "why": [
+      "介词提到关系代词前是更正式的书面写法:the way in which = the way that = the way(省略);从句里就不再重复介词。",
+      "非限制性定从只是'顺便补充一句',去掉后主句意思仍完整,所以用逗号,而 that 不能引导这种从句。"
+    ],
+    "gaokaoPoints": [
+      "介词 + which / whom 的选择(看从句搭配 + 先行词指人还是指物),语法填空与改错高频。",
+      "非限制性定从中 which / who / whose 的判断,以及'逗号后不可用 that'。",
+      "which 指代整个主句(…, which means …),常出现在读后续写与高级句中。"
+    ],
+    "examVsReal": [
+      { "exam": "the people for whom the land is home（考试/正式）", "real": "the people the land is home to", "note": "正式书面把介词提前;日常口语常把介词留在句末、省略关系词" },
+      { "exam": "the holes through which the wind passes（考试)", "real": "the holes the wind passes through", "note": "口语更爱说 the holes (that) the wind passes through" }
+    ]
+  }
+}

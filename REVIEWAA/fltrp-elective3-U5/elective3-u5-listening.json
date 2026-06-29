@@ -1,0 +1,408 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "topic": "Nature in Architecture",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社选必三 Unit 5 同主题听力(参观绿色建筑展/蜘蛛丝/采访年轻建筑师/子弹头列车与翠鸟/校园屋顶花园/二十四节气)。用词限 U5/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U5 听力·对话 At the Green Building Show",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lucy: Hi Tom, how was the exhibition of green buildings yesterday?",
+        "Tom: It was amazing, Lucy. My favourite was a building shaped like a giant lotus flower.",
+        "Lucy: A lotus? What was special about it?",
+        "Tom: Its roof collects rainwater and sends it down to a small waterfall inside.",
+        "Lucy: That's clever. So the water isn't just thrown away?",
+        "Tom: No. It's cleaned and then used again through the building's pipes.",
+        "Lucy: I wish I had gone with you. Is the exhibition still open?",
+        "Tom: Yes, it runs until next Sunday. We could go together this weekend.",
+        "Lucy: Great. Let's meet at the gate at nine on Saturday morning.",
+        "Tom: Perfect. Bring a notebook — there's a lot worth drawing."
+      ],
+      "translation_cn": "Lucy 问 Tom 昨天的绿色建筑展怎么样;Tom 说很棒,他最喜欢一座莲花形状的建筑,屋顶收集雨水并送到室内小瀑布;水经净化后通过管道再次使用;展览开到下周日,两人约定周六上午九点在门口见面。",
+      "questions": [
+        {
+          "stem": "Which building did Tom like best at the exhibition?",
+          "options": [
+            "One shaped like a giant lotus flower.",
+            "One shaped like a tall tree.",
+            "One built completely of ice.",
+            "One floating on a river."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does that building's roof do?",
+          "options": [
+            "It plays loud music.",
+            "It collects rainwater.",
+            "It blocks all the sunlight.",
+            "It stores food for winter."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What happens to the water inside the building?",
+          "options": [
+            "It is cleaned and used again.",
+            "It is sold to nearby shops.",
+            "It is poured into the sea.",
+            "It is left to dry up."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When will the exhibition close?",
+          "options": [
+            "This Friday.",
+            "Next Sunday.",
+            "Tomorrow afternoon.",
+            "Next month."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When do Lucy and Tom plan to meet?",
+          "options": [
+            "At noon on Sunday.",
+            "After school on Friday.",
+            "At nine on Saturday morning.",
+            "Early on Monday."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U5 听力·独白 The Wonder of Spider Silk",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Welcome to today's science minute. Spider silk is one of nature's most surprising materials. Although it is very thin and light, it is far stronger than steel of the same weight. Scientists would love to use it to make safer clothing and lighter ropes. The problem is that spiders are hard to keep in large numbers, so there is still not enough silk. Researchers are now trying to copy spider silk in the laboratory. If they succeed, this gift from a tiny animal could change the way we build and travel.",
+      "translation_cn": "今天的科学一分钟介绍蜘蛛丝:它是自然界最神奇的材料之一,虽然又细又轻,却比同等重量的钢还结实;科学家想用它做更安全的衣物和更轻的绳索,但蜘蛛难以大量饲养,丝还不够;研究人员正尝试在实验室里仿制蜘蛛丝,若成功,这份来自小动物的礼物或将改变我们建造与出行的方式。",
+      "questions": [
+        {
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "How to keep spiders as pets.",
+            "The history of cloth making.",
+            "Different kinds of steel.",
+            "Spider silk and how it might be used."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How strong is spider silk?",
+          "options": [
+            "Stronger than steel of the same weight.",
+            "Weaker than thin paper.",
+            "About the same as cotton.",
+            "Heavier than iron."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is there still not enough spider silk?",
+          "options": [
+            "The silk dries out too quickly.",
+            "Spiders are hard to keep in large numbers.",
+            "It is forbidden to collect it.",
+            "Nobody wants to use it."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What are researchers trying to do now?",
+          "options": [
+            "Train spiders to spin faster.",
+            "Sell silk to other countries.",
+            "Copy spider silk in the laboratory.",
+            "Stop using silk completely."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What could spider silk be used to make?",
+          "options": [
+            "Heavier cars and trucks.",
+            "Loud musical instruments.",
+            "Stronger glass windows.",
+            "Safer clothing and lighter ropes."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U5 听力·对话 Interview with a Young Architect",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Host: Today we welcome Mei, a young architect who designs nature-friendly buildings. Welcome, Mei.",
+        "Mei: Thank you. I'm very happy to be here.",
+        "Host: What first made you interested in green design?",
+        "Mei: As a child I loved watching how plants and animals solved problems. I wanted buildings to do the same.",
+        "Host: Can you give us an example of your work?",
+        "Mei: Sure. Last year I designed a library with a roof garden that keeps the rooms cool in summer.",
+        "Host: That sounds wonderful. Was it difficult to build?",
+        "Mei: Yes. The hardest part was keeping the plants alive through the cold winter.",
+        "Host: What advice would you give to young students?",
+        "Mei: Go outside and watch nature closely. Your best ideas are already out there."
+      ],
+      "translation_cn": "节目采访年轻建筑师 Mei:她从小喜欢观察动植物如何解决问题,希望建筑也能如此;去年她设计了一座带屋顶花园的图书馆,夏天能让房间凉爽;最难的部分是让植物熬过寒冬;她建议学生多到户外仔细观察自然,最好的点子就在那里。",
+      "questions": [
+        {
+          "stem": "What is Mei's job?",
+          "options": [
+            "She is a young architect.",
+            "She is a school teacher.",
+            "She is a train driver.",
+            "She is a farmer."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What first made Mei interested in green design?",
+          "options": [
+            "Reading books about famous cities.",
+            "Watching how plants and animals solved problems.",
+            "Travelling around the world.",
+            "Playing in a school band."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did Mei design last year?",
+          "options": [
+            "A bridge across a river.",
+            "A swimming pool.",
+            "A library with a roof garden.",
+            "A train station."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What was the hardest part of the project?",
+          "options": [
+            "Finding enough money.",
+            "Choosing a name for it.",
+            "Painting the walls.",
+            "Keeping the plants alive through winter."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What advice does Mei give to students?",
+          "options": [
+            "Go outside and watch nature closely.",
+            "Stay indoors and study books.",
+            "Copy other architects' plans.",
+            "Wait for ideas to come by themselves."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U5 听力·独白 The Train and the Bird",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Have you ever wondered why some fast trains have such a long, pointed nose? The answer comes from a small bird called the kingfisher. When a kingfisher dives into water to catch a fish, its sharp beak hardly makes a splash. Engineers in Japan noticed this and gave their trains a similar shape. The new design let the trains run faster and, just as importantly, much more quietly. So the next time you see a high-speed train rush by, remember that its clever shape was a gift from a little bird.",
+      "translation_cn": "你是否好奇为何有些高速列车有又长又尖的车头?答案来自一种叫翠鸟的小鸟:翠鸟扎入水中捕鱼时,尖喙几乎不溅起水花;日本工程师注意到这点,给列车设计了类似的形状;新设计让列车跑得更快、也安静得多;所以下次看到高速列车飞驰而过,记住它聪明的外形是一只小鸟的馈赠。",
+      "questions": [
+        {
+          "stem": "What is the talk about?",
+          "options": [
+            "How birds build their nests.",
+            "Why some fast trains have a pointed nose.",
+            "Where to catch fish in rivers.",
+            "How to drive a train safely."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can a kingfisher do well?",
+          "options": [
+            "Fly higher than any other bird.",
+            "Sing in the early morning.",
+            "Dive into water without much splash.",
+            "Swim under the ice."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Where did engineers use the kingfisher's shape?",
+          "options": [
+            "On large ships.",
+            "On tall buildings.",
+            "On small cars.",
+            "On high-speed trains."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What were the two results of the new design?",
+          "options": [
+            "The trains became faster and quieter.",
+            "The trains became slower and heavier.",
+            "The trains became larger and louder.",
+            "The trains became cheaper and shorter."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where does the speaker say the idea came from?",
+          "options": [
+            "From an old book.",
+            "From a little bird.",
+            "From a busy city.",
+            "From a science class."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U5 听力·对话 A Roof Garden for Our School",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: Mr Lee, our class wants to build a small garden on the school roof. Can we?",
+        "Mr Lee: That's a lovely idea, Anna. But have you thought about which plants to grow?",
+        "Anna: We were thinking of flowers and a few small vegetables.",
+        "Mr Lee: Good. Plants up there will give shade and help keep the top classrooms cool.",
+        "Anna: Exactly. And we could collect rainwater to water them.",
+        "Mr Lee: Very sensible. Who will look after the garden during the holidays?",
+        "Anna: Each group will take turns, even in summer.",
+        "Mr Lee: Then I'm happy to help. Let's start planning next Monday.",
+        "Anna: Thank you so much! I'll tell the whole class today."
+      ],
+      "translation_cn": "Anna 提议班级在校园屋顶建一个小花园;Mr Lee 觉得主意不错,但问她想种什么植物;Anna 说花和一些小蔬菜;老师说屋顶植物能遮阴、让顶层教室凉爽;Anna 还想收集雨水浇灌;老师问假期谁照看,Anna 说各组轮流,夏天也不例外;老师答应帮忙,约定下周一开始规划。",
+      "questions": [
+        {
+          "stem": "What does Anna's class want to build?",
+          "options": [
+            "A new sports hall.",
+            "A pond in the playground.",
+            "A small garden on the school roof.",
+            "A library by the gate."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Mr Lee ask Anna to think about first?",
+          "options": [
+            "How much it will cost.",
+            "What colour to paint it.",
+            "When the school closes.",
+            "Which plants to grow."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How will the roof garden help the classrooms?",
+          "options": [
+            "It will give shade and keep them cool.",
+            "It will make them warmer in summer.",
+            "It will block the noise outside.",
+            "It will bring in more light."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How do they plan to water the plants?",
+          "options": [
+            "By buying bottled water.",
+            "By collecting rainwater.",
+            "By using a deep well.",
+            "By carrying water from home."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who will look after the garden during the holidays?",
+          "options": [
+            "Only Mr Lee will.",
+            "Nobody will look after it.",
+            "Each group will take turns.",
+            "A gardener from the town."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U5 听力·独白 Wisdom of the Solar Terms",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Long ago in ancient China, farmers watched the sky and the land very carefully. By noticing small changes in the sun, the weather and the plants, they created the 24 Solar Terms. Each term told them the best time to sow seeds or to bring in the harvest. This simple calendar, drawn from nature's own signs, guided farmers for hundreds of years. Today the 24 Solar Terms are still remembered, and in 2016 they were added to a famous list of the world's cultural heritage. They remind us how much wisdom people can gain by listening to nature.",
+      "translation_cn": "很久以前的古代中国,农民仔细观察天空与土地;通过留意太阳、天气和植物的细微变化,他们创立了二十四节气;每个节气告诉他们何时播种、何时收割;这份取自自然征兆的简单历法指引农民数百年;如今二十四节气仍被铭记,并于2016年被列入世界文化遗产名录;它提醒我们,倾听自然能让人获得多少智慧。",
+      "questions": [
+        {
+          "stem": "What did ancient Chinese farmers watch carefully?",
+          "options": [
+            "The busy markets.",
+            "The city walls.",
+            "The royal court.",
+            "The sky and the land."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did the 24 Solar Terms tell farmers?",
+          "options": [
+            "The best time to sow or harvest.",
+            "The price of grain.",
+            "The way to a new city.",
+            "The names of the stars."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where did this calendar come from?",
+          "options": [
+            "From a foreign country.",
+            "From nature's own signs.",
+            "From an old machine.",
+            "From a king's order."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What happened to the 24 Solar Terms in 2016?",
+          "options": [
+            "They were first written down.",
+            "They were used by farmers for the first time.",
+            "They were added to a cultural heritage list.",
+            "They were forgotten by everyone."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the main lesson of the talk?",
+          "options": [
+            "Old calendars are no longer useful.",
+            "Farming is easy work.",
+            "Cities are better than the countryside.",
+            "People gain wisdom by listening to nature."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

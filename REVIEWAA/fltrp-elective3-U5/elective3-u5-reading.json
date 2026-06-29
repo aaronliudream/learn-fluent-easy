@@ -1,0 +1,314 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "topic": "Nature in Architecture",
+  "source": "外研社选必三 Unit 5 同主题阅读(新加坡艺术科学博物馆/哈拉雷东门中心/汉堡藻类公寓/仿生学综述/陶渊明与梭罗归隐/苏州园林)。词限 U5/初中/常见词,答案转述非照抄,4选项唯一,与完形听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Building Like a Lotus",
+      "topic_cn": "说明·新加坡艺术科学博物馆",
+      "body": "Singapore's ArtScience Museum was built to show how nature and a busy modern city can sit happily together. From above, the white building looks like a giant lotus flower resting on the water beside the crowded promenade. Ten finger-like parts reach up into the sky, and each one lets daylight pour down into the rooms below. The most surprising feature, however, is hidden in the roof. When it rains, the curved roof gathers the water and sends it thirty-five metres straight down to a small waterfall in the heart of the building. The water is then cleaned and used once more through the building's pipes, so almost nothing is lost. People who step inside are often amazed to find such a calm, watery world right in the middle of a noisy city. The architect hoped that visitors would feel how a modern building can still capture the quiet beauty of natural forms.",
+      "vocab_notes": [
+        {
+          "word": "promenade",
+          "cn": "滨海步行道"
+        },
+        {
+          "word": "waterfront",
+          "cn": "滨水地区"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the ArtScience Museum built in this special shape?",
+          "options": [
+            "To show that nature and a modern city can fit together.",
+            "To make the building the tallest one in the city.",
+            "To copy an old palace from ancient times.",
+            "To hide the museum from busy crowds."
+          ],
+          "answer_index": 0,
+          "explanation": "首句说博物馆是为了表现自然与现代城市能和谐共处,选项是其转述。"
+        },
+        {
+          "stem": "What happens to the rainwater that falls on the roof?",
+          "options": [
+            "It is thrown straight into the sea.",
+            "It is cleaned and used again inside the building.",
+            "It is sold to nearby shops.",
+            "It is left to dry on the roof."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说雨水被净化后通过管道再次使用,选项是其概括。"
+        },
+        {
+          "stem": "How do visitors usually feel inside the museum?",
+          "options": [
+            "Surprised to find a quiet, watery space in a busy city.",
+            "Bored because the rooms are all empty.",
+            "Frightened by the loud city noise inside.",
+            "Tired of climbing the ten tall towers."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说人们惊讶于在喧闹城市中竟有如此平静的水世界,选项是转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Cool Like a Termite Mound",
+      "topic_cn": "说明·哈拉雷东门中心(仿生学)",
+      "body": "The Eastgate Centre in Harare is one of the world's best-known green buildings, and its secret comes from insects. While watching a nature programme, the architect Mick Pearce saw termites building tall mounds full of tiny holes. These holes let air move in and out, keeping the inside cool even when the African sun is burning. Pearce gave his building the same kind of skin. During the hot day, warm air is pulled in through small openings and cools down as it travels towards the centre of the building. At night, heat stored in the thick walls gently warms the cool night air, so the rooms stay comfortable around the clock. Because of this clever design, the Centre needs almost no ordinary air conditioning or heating. It uses far less power than buildings of a similar size, and it costs much less money to run each year. Nature, it seems, had already solved the problem long before.",
+      "vocab_notes": [
+        {
+          "word": "termite",
+          "cn": "白蚁"
+        },
+        {
+          "word": "mound",
+          "cn": "土堆;土丘"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where did Mick Pearce get the idea for his building?",
+          "options": [
+            "From an old book about modern cities.",
+            "From watching how termites build their mounds.",
+            "From a dream he had one night.",
+            "From a museum of ancient art."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说他看自然节目时受到白蚁筑巢的启发,选项是其概括。"
+        },
+        {
+          "stem": "How do the rooms stay comfortable during the night?",
+          "options": [
+            "Powerful heaters run all night long.",
+            "The windows are kept tightly shut.",
+            "Heat held by the thick walls during the day warms the night.",
+            "Warm water is pumped through the floor."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说夜里墙体储存的热量温暖了凉空气,选项是转述。"
+        },
+        {
+          "stem": "What is the main benefit of this design?",
+          "options": [
+            "It makes the building look much taller.",
+            "It keeps insects out of the rooms.",
+            "It allows the building to move with the wind.",
+            "It saves a great deal of energy and money."
+          ],
+          "answer_index": 3,
+          "explanation": "原文强调建筑用电少、运行成本低,选项是其概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Home Powered by Plants",
+      "topic_cn": "说明·汉堡藻类公寓",
+      "body": "In Hamburg, Germany, stands the world's first building powered by tiny water plants. The flat sides of this apartment block are covered with glass panels, and inside each panel lives a green liquid full of algae. The algae are fed with carbon dioxide and simple nutrients so that they keep growing. On bright sunny days they grow quickly and spread across the panels, giving the rooms cool shade. At the same time, the panels trap heat from the sun and turn it into electricity for the building. The story does not end there. When the algae have grown enough, they can be collected and made into fuel. In this way the building does three jobs at once: it shades its rooms, it makes its own clean power, and it even helps the environment by using up waste gas. Many architects now travel to Hamburg to study how living plants can become a real part of a modern home.",
+      "vocab_notes": [
+        {
+          "word": "algae",
+          "cn": "藻类(植物)"
+        },
+        {
+          "word": "convert",
+          "cn": "转化"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What makes this Hamburg building unusual?",
+          "options": [
+            "It gets its power from living algae in glass panels.",
+            "It is built completely under the ground.",
+            "It has no windows of any kind.",
+            "It floats on a large lake."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说这是世界上首座靠水生植物供能的建筑,选项是其概括。"
+        },
+        {
+          "stem": "What do the algae do on bright sunny days?",
+          "options": [
+            "They die quickly and must be replaced.",
+            "They grow fast and provide shade while energy is made.",
+            "They turn brown and stop working.",
+            "They are removed from the panels."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说晴天藻类快速生长、提供遮阴,同时面板发电,选项是转述。"
+        },
+        {
+          "stem": "Why do many architects travel to Hamburg?",
+          "options": [
+            "To buy cheap apartments by the river.",
+            "To watch a famous sports match.",
+            "To learn how living plants can be built into homes.",
+            "To paint pictures of the old town."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说建筑师前往研究活体植物如何融入现代住宅,选项是其概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Answers from the Wild",
+      "topic_cn": "说明·仿生学综述",
+      "body": "Looking to nature for answers is an old idea with a modern name: biomimicry. It means studying the shapes and habits of living things and then borrowing their best ideas. Long ago, the Wright brothers watched birds gliding through the air before they built their first flying machine. Today the same way of thinking shapes our trains. Engineers noticed that a kingfisher's long beak lets the bird dive into water without a splash, so they gave high-speed trains a similar pointed nose. The change made the trains both faster and much quieter. Animals have also taught us to send messages under the sea. After studying how dolphins call to one another in deep water, scientists built warning systems that tell coastal towns when a huge wave is coming. Each of these inventions began not in a laboratory but out in the wild. When we meet a hard problem today, nature has often tested the answer for millions of years already.",
+      "vocab_notes": [
+        {
+          "word": "biomimicry",
+          "cn": "仿生学"
+        },
+        {
+          "word": "employ",
+          "cn": "运用"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the word biomimicry mean in this text?",
+          "options": [
+            "Building machines only inside laboratories.",
+            "Keeping wild animals away from cities.",
+            "Painting pictures of plants and animals.",
+            "Borrowing the clever designs found in living things."
+          ],
+          "answer_index": 3,
+          "explanation": "原文解释 biomimicry 是研究并借用生物的优良设计,选项是其概括。"
+        },
+        {
+          "stem": "Why were high-speed trains given a pointed nose?",
+          "options": [
+            "To run faster and more quietly, like a diving bird.",
+            "To carry far more passengers than before.",
+            "To look like an old steam engine.",
+            "To stop more easily at stations."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说模仿翠鸟的喙让列车更快更安静,选项是转述。"
+        },
+        {
+          "stem": "How did studying dolphins help people?",
+          "options": [
+            "It taught people how to swim faster.",
+            "It led to systems that warn towns about big waves.",
+            "It helped farmers grow more crops.",
+            "It made ships much larger."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说研究海豚的交流方式催生了海啸预警系统,选项是其概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Two Poets, One Love",
+      "topic_cn": "记叙·陶渊明与梭罗归隐",
+      "body": "Tao Yuanming and Henry David Thoreau lived almost fifteen hundred years and half a world apart, yet they shared one deep love: nature. Tao was an official in ancient China, but he felt trapped by life at court. In the end he gave up his post and spent his remaining years farming in a poor country village. His daily life was hard, but his poems show that he found real peace among the fields, chickens and trees. Thoreau, an American writer, was not forced to leave society; instead he chose to. For two years he lived alone in a small cottage beside Walden Pond, watching the seasons change and writing about all he saw. He believed that animals and plants have the same right to live well as people do. Both men gave up comfort and fame for a quieter, simpler way of living, and both were sure that staying close to nature could make a person feel whole.",
+      "vocab_notes": [
+        {
+          "word": "rural",
+          "cn": "乡村的"
+        },
+        {
+          "word": "withdraw",
+          "cn": "退出"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Tao Yuanming give up his official post?",
+          "options": [
+            "He was sent away by the emperor.",
+            "He wanted to become a rich merchant.",
+            "He was unhappy and no longer wished to serve at court.",
+            "He was too ill to keep working."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说陶渊明对官场生活感到困顿不快,选项是转述。"
+        },
+        {
+          "stem": "How was Thoreau's move to nature different from Tao's?",
+          "options": [
+            "Thoreau was forced to leave his home.",
+            "Thoreau moved into a busy city.",
+            "Thoreau travelled with a large group.",
+            "Thoreau left ordinary society by his own free choice."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说梭罗不是被迫,而是自己选择离开,选项是其概括。"
+        },
+        {
+          "stem": "What did both poets believe about nature?",
+          "options": [
+            "A simple life close to nature can make a person whole.",
+            "Nature is dangerous and should be avoided.",
+            "City life is always better than country life.",
+            "Only rich people can enjoy nature."
+          ],
+          "answer_index": 0,
+          "explanation": "原文末句说二人都相信亲近自然能让人完整,选项是转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Mountains in a Garden",
+      "topic_cn": "说明·苏州园林",
+      "body": "Chinese classical gardens were designed to bring the wild world inside the city wall. The Lingering Garden in Suzhou is a famous example of this gentle art. Its builders did not simply plant a few trees; they tried to recreate whole mountains, rivers and forests in miniature. A pile of strange rocks stands for a tall mountain, a small pool becomes a wide lake, and a single twisted pine suggests an ancient forest. Visitors are meant to explore the garden slowly, scene by scene, just as they might wander through real countryside. Around every corner a new view appears: a moon-shaped gate, a tree in blossom, or fish splashing in a quiet pond. Nothing is shown all at once, because surprise is an important part of the design. Walking here, a busy city dweller can forget the noise outside and feel, for a short while, that the whole of nature has been folded gently into one small and peaceful space.",
+      "vocab_notes": [
+        {
+          "word": "pond",
+          "cn": "池塘"
+        },
+        {
+          "word": "wisdom",
+          "cn": "智慧"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the builders of the Lingering Garden try to do?",
+          "options": [
+            "Build the largest palace in the country.",
+            "Recreate wild nature in miniature inside the city.",
+            "Grow food for the whole town.",
+            "Copy a famous garden in another land."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说造园者试图把山川森林缩小再现,选项是其概括。"
+        },
+        {
+          "stem": "In the garden, what does a pile of strange rocks stand for?",
+          "options": [
+            "A busy market.",
+            "A deep well.",
+            "A tall mountain.",
+            "A city gate."
+          ],
+          "answer_index": 2,
+          "explanation": "原文明确说乱石堆象征高山,选项是其转述。"
+        },
+        {
+          "stem": "Why are the views revealed only a little at a time?",
+          "options": [
+            "Because the garden is too dark to see far.",
+            "Because visitors are not allowed to walk far.",
+            "Because the plants block every path.",
+            "Because surprise is meant to be part of the design."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说不一次展现全部,因为惊喜是设计的一部分,选项是转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "topic": "Food for Thought",
+  "source": "外研社必修第二册 Unit 1 同主题完形(餐厅就餐/跟奶奶学做饭/食堂变健康/初尝榴莲/英式下午茶/探店博主)。用词限 U1/初中/常见词,每空答案唯一、四选项同词性,与阅读听力不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Meal Out",
+      "text": "Last Saturday my family decided to (1)____ at a new restaurant in town. We had to (2)____ a table in advance because the place was always full. When we arrived, a friendly waiter (3)____ us to a quiet corner. He (4)____ the fish, saying it was the chef's best dish, so we ordered it. While we waited, we read the (5)____ and chatted happily. The food was worth the wait. My steak was so (6)____ that it almost melted in my mouth, and the sauce had a lovely sweet and (7)____ taste. My little brother, who is a real sugar (8)____, was delighted by the chocolate pudding. When we finished, Dad placed his knife and fork together on his (9)____, just as good manners require. We all agreed it had been a truly (10)____ evening.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "eat",
+            "sleep",
+            "drive",
+            "sing"
+          ],
+          "answer_index": 0,
+          "explanation": "decide to eat at a restaurant 去餐厅吃饭。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "lose",
+            "book",
+            "break",
+            "wash"
+          ],
+          "answer_index": 1,
+          "explanation": "book a table 预订餐桌。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "threw",
+            "showed",
+            "cleaned"
+          ],
+          "answer_index": 2,
+          "explanation": "show sb to a corner 把某人领到角落。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "refused",
+            "forgot",
+            "dropped",
+            "recommended"
+          ],
+          "answer_index": 3,
+          "explanation": "服务员推荐这道鱼,用 recommend。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "menu",
+            "weather",
+            "homework",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "等餐时读菜单 menu。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "hard",
+            "tender",
+            "cold",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "肉嫩到入口即化,用 tender。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "heavy",
+            "dark",
+            "sour",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "explanation": "sweet and sour 甜酸味。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "teacher",
+            "driver",
+            "farmer",
+            "addict"
+          ],
+          "answer_index": 3,
+          "explanation": "a sugar addict 嗜糖的人。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "plate",
+            "chair",
+            "phone",
+            "window"
+          ],
+          "answer_index": 0,
+          "explanation": "把刀叉放在盘子上,用 plate。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "satisfying",
+            "terrible",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "美好满足的一晚,用 satisfying。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Cooking with Grandma",
+      "text": "Every summer I visit my grandmother, who is a wonderful (1)____. She believes that the best way to learn is to (2)____ her in the kitchen. On my first morning, she handed me an old (3)____ for noodle soup that her own mother had used. \"Just (4)____ the steps one by one,\" she said with a smile. First we washed and cut the (5)____, then heated some oil in a large pot. Grandma told me I needn't (6)____ about making mistakes, because every cook learns by doing. The kitchen soon filled with a (7)____ smell that made me hungry. When the soup was ready, it tasted a little too (8)____, so we added some water. Grandma said good food should never be too (9)____. That morning with her was the most (10)____ lesson of my whole holiday.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "driver",
+            "singer",
+            "cook",
+            "doctor"
+          ],
+          "answer_index": 2,
+          "explanation": "奶奶很会做饭,是位 cook。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "leave",
+            "ignore",
+            "sell",
+            "join"
+          ],
+          "answer_index": 3,
+          "explanation": "join her in the kitchen 在厨房里和她一起。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "recipe",
+            "ticket",
+            "map",
+            "letter"
+          ],
+          "answer_index": 0,
+          "explanation": "面汤的食谱 recipe。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "break",
+            "follow",
+            "forget",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "follow the steps 按步骤来。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "clothes",
+            "books",
+            "vegetables",
+            "windows"
+          ],
+          "answer_index": 2,
+          "explanation": "洗切蔬菜 vegetables。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "hear",
+            "shout",
+            "cook",
+            "worry"
+          ],
+          "answer_index": 3,
+          "explanation": "needn't worry about 不必担心。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "wonderful",
+            "terrible",
+            "silent",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "诱人的香味让我饿了,用 wonderful。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "loud",
+            "salty",
+            "bright",
+            "fast"
+          ],
+          "answer_index": 1,
+          "explanation": "太咸了才加水,用 salty。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "quiet",
+            "wide",
+            "heavy",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "好的饭菜不应太油腻/厚重,用 heavy。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "terrible",
+            "empty",
+            "useful"
+          ],
+          "answer_index": 3,
+          "explanation": "最有用的一课,用 useful。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Healthier Canteen",
+      "text": "Our school canteen used to sell a lot of fried food and sweet (1)____. Many students loved them, but the doctor warned that too much sugar can (2)____ our teeth. Last term, the head teacher decided to (3)____ some changes. Now the canteen offers more fresh (4)____ and salad every day. Sugary cola has been replaced with water and fruit (5)____. At first some students were unhappy, and a few even (6)____ about the new menu. But slowly they began to (7)____ the lighter meals. One boy said he used to feel sleepy in the afternoon, but now he has much more (8)____. The cooks also put up friendly (9)____ to help us choose well, such as \"Try something green today!\" In my (10)____, a healthy canteen is one of the best gifts a school can give.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "snacks",
+            "clothes",
+            "toys",
+            "books"
+          ],
+          "answer_index": 0,
+          "explanation": "油炸食物和甜点心 snacks。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "help",
+            "attack",
+            "clean",
+            "open"
+          ],
+          "answer_index": 1,
+          "explanation": "糖会侵蚀牙齿,用 attack。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "lose",
+            "forget",
+            "make",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "make some changes 做出改变。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "paper",
+            "music",
+            "noise",
+            "fruit"
+          ],
+          "answer_index": 3,
+          "explanation": "新鲜水果和沙拉,用 fruit。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "juice",
+            "smoke",
+            "dust",
+            "sand"
+          ],
+          "answer_index": 0,
+          "explanation": "fruit juice 果汁。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "cheered",
+            "complained",
+            "slept",
+            "sang"
+          ],
+          "answer_index": 1,
+          "explanation": "对新菜单抱怨,用 complain。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "refuse",
+            "drop",
+            "enjoy",
+            "break"
+          ],
+          "answer_index": 2,
+          "explanation": "渐渐喜欢上清淡的饭菜,用 enjoy。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "homework",
+            "money",
+            "rain",
+            "energy"
+          ],
+          "answer_index": 3,
+          "explanation": "下午更有精力,用 energy。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "signs",
+            "shoes",
+            "plates",
+            "chairs"
+          ],
+          "answer_index": 0,
+          "explanation": "贴出友好的提示牌,用 signs。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "garden",
+            "opinion",
+            "kitchen",
+            "pocket"
+          ],
+          "answer_index": 1,
+          "explanation": "In my opinion 在我看来。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "My First Durian",
+      "text": "During a trip to South-east Asia, my friend dared me to (1)____ a durian, a fruit famous for its strong smell. The moment the seller cut it open, a (2)____ smell filled the air, and I almost changed my mind. \"You needn't eat it if you don't (3)____ to,\" my friend laughed. But I gathered all my (4)____ and took a small bite. To my surprise, the soft yellow flesh was sweet and (5)____, a little like custard. The terrible smell and the lovely (6)____ did not seem to match at all. Local people clearly (7)____ this fruit, and now I understood why. My friend told me that durian is so (8)____ that some hotels do not allow it inside. As we walked on, I could not (9)____ buying one more piece. That day taught me never to judge a food only by its (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "cook",
+            "try",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "敢不敢尝一尝,用 try。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "lovely",
+            "quiet",
+            "bright",
+            "horrible"
+          ],
+          "answer_index": 3,
+          "explanation": "难闻的气味,用 horrible。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "want",
+            "hear",
+            "run",
+            "sleep"
+          ],
+          "answer_index": 0,
+          "explanation": "if you don't want to 如果你不想。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "money",
+            "courage",
+            "clothes",
+            "paper"
+          ],
+          "answer_index": 1,
+          "explanation": "鼓起全部勇气,用 courage。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sour",
+            "salty",
+            "creamy",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "像奶冻一样软滑,用 creamy。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "weather",
+            "price",
+            "taste"
+          ],
+          "answer_index": 3,
+          "explanation": "难闻气味与美味口感不匹配,用 taste。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "loved",
+            "hated",
+            "feared",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "当地人显然很喜欢这水果,用 love。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sweet",
+            "smelly",
+            "quiet",
+            "cheap"
+          ],
+          "answer_index": 1,
+          "explanation": "因气味太大才被旅馆禁止,用 smelly。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "start",
+            "begin",
+            "resist",
+            "enjoy"
+          ],
+          "answer_index": 2,
+          "explanation": "could not resist 忍不住又买,用 resist。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "size",
+            "colour",
+            "smell"
+          ],
+          "answer_index": 3,
+          "explanation": "不要只凭气味来评判食物,用 smell。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Afternoon Tea",
+      "text": "Afternoon tea is a much-loved British (1)____ that began almost two hundred years ago. The story goes that a duchess often felt hungry in the late afternoon and asked for tea with a small (2)____ to keep her going until dinner. Soon her friends (3)____ the idea, and the habit spread across the country. A traditional afternoon tea is served on a special (4)____ with three levels. The bottom holds small sandwiches, the middle holds warm cakes with butter and (5)____, and the top holds sweet treats. Of course, a good cup of tea is the most important (6)____ of all. Today many hotels still (7)____ afternoon tea to their guests, and it has become a special (8)____ for birthdays and family visits. You needn't be rich to enjoy it; you can easily make a simple (9)____ at home. In my view, it is one of the most charming food (10)____ in the world.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "custom",
+            "weather",
+            "animal",
+            "building"
+          ],
+          "answer_index": 0,
+          "explanation": "一种深受喜爱的英国风俗,用 custom。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "snack",
+            "ticket",
+            "river"
+          ],
+          "answer_index": 1,
+          "explanation": "配茶的小点心,用 snack。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "refused",
+            "lost",
+            "copied",
+            "sold"
+          ],
+          "answer_index": 2,
+          "explanation": "朋友们效仿这个主意,用 copy。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "road",
+            "cloud",
+            "river",
+            "tray"
+          ],
+          "answer_index": 3,
+          "explanation": "三层的托盘,用 tray。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "honey",
+            "sand",
+            "paper",
+            "stone"
+          ],
+          "answer_index": 0,
+          "explanation": "涂黄油和蜂蜜的蛋糕,用 honey。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "part",
+            "price",
+            "size"
+          ],
+          "answer_index": 1,
+          "explanation": "最重要的部分,用 part。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "refuse",
+            "forget",
+            "offer",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "酒店向客人提供下午茶,用 offer。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "problem",
+            "mistake",
+            "danger",
+            "treat"
+          ],
+          "answer_index": 3,
+          "explanation": "成为一种特别的款待/享受,用 treat。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "meal",
+            "engine",
+            "machine",
+            "signal"
+          ],
+          "answer_index": 0,
+          "explanation": "在家做一顿简单的下午茶餐,用 meal。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "engines",
+            "customs",
+            "animals",
+            "machines"
+          ],
+          "answer_index": 1,
+          "explanation": "最迷人的饮食传统之一,用 customs。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A New Café",
+      "text": "As a food blogger, I am always looking for somewhere new to (1)____. Last week I tried a small café that had just opened near my home. The moment I walked in, I loved the warm and friendly (2)____. The young owner, who used to work as a (3)____ in a big hotel, now bakes everything himself. I (4)____ his fresh bread, which was still warm from the oven. I also ordered a slice of cake that was wonderfully smooth and (5)____, with fresh fruit on top. Best of all, the prices were very (6)____, so anyone could afford a treat. I asked the owner for the (7)____ of his famous lemon cake, but he just smiled and kept it a secret. Before I left, he gave me a free (8)____ of chocolate to try. I will certainly (9)____ this lovely café to my readers, and I cannot (10)____ to go back again.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sleep",
+            "drive",
+            "eat",
+            "paint"
+          ],
+          "answer_index": 2,
+          "explanation": "美食博主到处找地方吃,用 eat。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "winter",
+            "danger",
+            "noise",
+            "welcome"
+          ],
+          "answer_index": 3,
+          "explanation": "温暖友好的欢迎气氛,用 welcome。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "chef",
+            "farmer",
+            "driver",
+            "pilot"
+          ],
+          "answer_index": 0,
+          "explanation": "曾在大酒店当厨师,用 chef。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "tried",
+            "dropped",
+            "threw"
+          ],
+          "answer_index": 1,
+          "explanation": "尝了他的新鲜面包,用 try。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "salty",
+            "bitter",
+            "creamy",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "细腻软滑的蛋糕,用 creamy。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "tall",
+            "loud",
+            "dark",
+            "low"
+          ],
+          "answer_index": 3,
+          "explanation": "价格很低,人人买得起,用 low。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "recipe",
+            "weather",
+            "ticket",
+            "engine"
+          ],
+          "answer_index": 0,
+          "explanation": "向店主要柠檬蛋糕的食谱,用 recipe。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "river",
+            "piece",
+            "road",
+            "cloud"
+          ],
+          "answer_index": 1,
+          "explanation": "一块免费的巧克力,用 piece。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "refuse",
+            "forget",
+            "recommend",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "向读者推荐这家咖啡馆,用 recommend。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "stop",
+            "drive",
+            "sleep",
+            "wait"
+          ],
+          "answer_index": 3,
+          "explanation": "cannot wait to 迫不及待,用 wait。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(人际关系主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Daniel noticed that his friend Omar looked unusually quiet at lunch, he did not just walk away. Instead, he sat down, asked gently what was wrong, and listened without judging. Comforted by Daniel's patience, Omar finally shared his worry, and the heavy feeling inside him began to lift.",
+    "questions": [
+      {
+        "q": "What did Daniel do when he saw Omar looking quiet?",
+        "options": [
+          "He sat down and gently asked what was wrong.",
+          "He walked away and said nothing.",
+          "He laughed at Omar in front of others.",
+          "He told everyone about Omar's mood."
+        ],
+        "answer": "A",
+        "explanation": "原文 'he sat down, asked gently what was wrong, and listened' 的转述;其余与原文相反。"
+      },
+      {
+        "q": "How did Omar feel by the end of the lunch?",
+        "options": [
+          "Angry that Daniel had asked him.",
+          "Relieved after sharing his worry.",
+          "Sorry that he had come to school.",
+          "Bored by the whole conversation."
+        ],
+        "answer": "B",
+        "explanation": "末句 'the heavy feeling inside him began to lift' 说明他卸下负担、感到轻松,这是对短文后半段的转述。"
+      }
+    ]
+  }
+}

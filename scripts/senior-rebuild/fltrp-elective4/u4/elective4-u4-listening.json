@@ -1,0 +1,403 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "topic": "Business Blossoms",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85)。speaker 仅角色标注。",
+  "source": "外研社选择性必修第四册 Unit 4 同主题听力(创业打算/公司奖金/开银行账户/共享经济/花市买花/创业建议)。long/short 交替,答案可在 transcript 找到依据,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Starting a Business",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lucy: Have you decided what to do after we graduate, Tom?",
+        "Tom: Yes. I really want to start my own business. I dream of running a small coffee shop.",
+        "Lucy: That's brave. Where will you find the money to begin?",
+        "Tom: I've saved some, and I'll ask the bank for a small loan.",
+        "Lucy: What do you think will be the biggest challenge?",
+        "Tom: Getting the first customers, I suppose. At the start it is always slow.",
+        "Lucy: Well, I believe in you. You have always worked hard.",
+        "Tom: Thanks, Lucy. If it goes well, maybe one day you can work with me!"
+      ],
+      "translation_cn": "Lucy 问 Tom 毕业后的打算;Tom 想自己创业、开一家小咖啡馆;启动资金来自积蓄和银行小额贷款;他认为最大的挑战是吸引最初的顾客;Lucy 表示支持;Tom 说如果顺利,也许 Lucy 将来能加入他。",
+      "questions": [
+        {
+          "stem": "What does Tom want to do after graduating?",
+          "options": [
+            "Start his own coffee shop.",
+            "Work at a big bank.",
+            "Travel around the world.",
+            "Become a teacher."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How will Tom get the money to begin?",
+          "options": [
+            "From selling his house.",
+            "From his savings and a bank loan.",
+            "From his parents only.",
+            "From the government."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Tom think will be the biggest challenge?",
+          "options": [
+            "Getting the first customers.",
+            "Finding a good coffee bean.",
+            "Hiring a manager.",
+            "Paying the rent."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Lucy's attitude to Tom's plan?",
+          "options": [
+            "She thinks it is a silly idea.",
+            "She supports him and believes in him.",
+            "She wants him to give up.",
+            "She is not interested at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Tom suggest at the end?",
+          "options": [
+            "Lucy should open her own shop.",
+            "Lucy should lend him money.",
+            "Lucy might work with him one day.",
+            "Lucy should study harder."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·独白 A Year-End Reward",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Good afternoon, everyone. This has been a wonderful year for our flower company. Because we all worked so hard, our roses are now sold across Asia. To thank you, the company will give every worker a bonus this month. Those who arrived early to pick the flowers before sunrise will receive a little extra. We hope this reward shows how much we value your effort. Next year, with your help, we want to grow even more.",
+      "translation_cn": "下午好,各位。对我们花卉公司来说,这是了不起的一年。因为大家都很努力,我们的玫瑰如今已销往亚洲各地。为感谢大家,公司本月将给每位工人发奖金;那些日出前就来采花的人还会额外多得一点。希望这份奖励能体现我们对你们付出的重视。明年,有了大家的帮助,我们想发展得更好。",
+      "questions": [
+        {
+          "stem": "Why was it a good year for the company?",
+          "options": [
+            "The weather was unusually cold.",
+            "The company closed several shops.",
+            "Few flowers were grown.",
+            "Everyone worked hard and the roses sold widely."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What will every worker receive?",
+          "options": [
+            "A bonus.",
+            "A new house.",
+            "A free holiday abroad.",
+            "A company car."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Who will get a little extra money?",
+          "options": [
+            "Those who arrived late each day.",
+            "Those who came early to pick flowers.",
+            "Only the managers.",
+            "The newest workers."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When are the roses picked?",
+          "options": [
+            "Late at night.",
+            "Around noon.",
+            "Before sunrise.",
+            "After dinner."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the company hope for next year?",
+          "options": [
+            "To sell fewer roses.",
+            "To move to another country.",
+            "To stop hiring workers.",
+            "To grow even more."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Opening a Bank Account",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Clerk: Good morning. How can I help you today?",
+        "Girl: Hi, I'd like to open my first bank account. I'm starting university next month.",
+        "Clerk: Of course. I'd suggest an account with free online banking and no monthly fees.",
+        "Girl: That sounds perfect. I want to save a little money each week.",
+        "Clerk: Good idea. Even small savings grow over time and earn interest.",
+        "Girl: Should I get a credit card too?",
+        "Clerk: You can, but use it carefully and always pay your bill on time, or your credit score will fall.",
+        "Girl: Thank you. I'll be careful not to go into debt."
+      ],
+      "translation_cn": "职员问能帮什么忙;女孩想开第一个银行账户,因为下月要上大学;职员建议办一个免月费、含免费网银的账户;女孩想每周存点钱;职员说小额储蓄会随时间增长并产生利息;关于信用卡,职员提醒要谨慎使用、按时还款,否则信用分会下降;女孩说会小心不让自己负债。",
+      "questions": [
+        {
+          "stem": "Why does the girl want a bank account?",
+          "options": [
+            "She is about to start university.",
+            "She wants to buy a car.",
+            "She is moving abroad.",
+            "She lost her old card."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What kind of account does the clerk suggest?",
+          "options": [
+            "One that charges a high monthly fee.",
+            "One with free online banking and no fees.",
+            "One only for businesses.",
+            "One with no card at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the clerk say about small savings?",
+          "options": [
+            "They are a waste of time.",
+            "They must be spent at once.",
+            "They grow over time and earn interest.",
+            "They lose value quickly."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What advice is given about the credit card?",
+          "options": [
+            "Never pay the bill at all.",
+            "Use it for everything daily.",
+            "Give it to a friend.",
+            "Pay the bill on time and use it carefully."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the girl want to avoid?",
+          "options": [
+            "Going into debt.",
+            "Saving any money.",
+            "Opening an account.",
+            "Talking to the clerk."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·独白 The Joy of Sharing",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "The sharing economy lets people borrow things instead of buying them. With a phone, you can hire a bike for an hour or rent a room for a night. This saves money for both the lender and the borrower. It also helps the environment, because sharing means fewer cars on the road and less waste. Many people even make new friends while sharing. Of course, users must still protect their personal information. But for most people, sharing is a smart and friendly way to live.",
+      "translation_cn": "共享经济让人们借用而非购买物品。用手机,你可以租一辆自行车骑一小时,或租一个房间住一晚。这为出借者和借用者双方都省钱。它也有利于环境,因为共享意味着路上的车更少、浪费更少。许多人在共享中还结交了新朋友。当然,用户仍须保护个人信息。但对大多数人来说,共享是一种聪明又友好的生活方式。",
+      "questions": [
+        {
+          "stem": "What does the sharing economy let people do?",
+          "options": [
+            "Build their own factories.",
+            "Borrow things instead of buying them.",
+            "Stop using phones.",
+            "Throw old items away."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can you hire with a phone?",
+          "options": [
+            "A plane or a ship.",
+            "A teacher or a doctor.",
+            "A bike or a room.",
+            "A farm or a forest."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who saves money in this system?",
+          "options": [
+            "Only the lender.",
+            "Only the shops.",
+            "Nobody at all.",
+            "Both the lender and the borrower."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does sharing help the environment?",
+          "options": [
+            "Fewer cars on the road and less waste.",
+            "More factories are built.",
+            "More cars are sold.",
+            "More trees are cut down."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What must users still do?",
+          "options": [
+            "Give away their phones.",
+            "Protect their personal information.",
+            "Pay a large yearly fee.",
+            "Stop making friends."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 At the Flower Market",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Buyer: These roses look lovely. How much are they?",
+        "Seller: Twenty yuan a bunch. They were picked fresh this morning before sunrise.",
+        "Buyer: That's why they smell so sweet. Where are they grown?",
+        "Seller: In a valley not far from here, where the roses grow wild.",
+        "Buyer: Wonderful. I'll take three bunches for my shop.",
+        "Seller: Good choice. If you buy three, I'll give you a small discount.",
+        "Buyer: Thank you. Do you sell them online as well?",
+        "Seller: Yes, you can order more on our website any time."
+      ],
+      "translation_cn": "买家觉得玫瑰很美,问价;卖家说一束二十元,今早日出前刚采的;买家明白了它们为何这么香,问产地;卖家说产自附近一个玫瑰野生生长的山谷;买家要买三束给自己店里;卖家说买三束给个小折扣;买家又问是否网上也卖;卖家说可随时在网站下单。",
+      "questions": [
+        {
+          "stem": "How much is one bunch of roses?",
+          "options": [
+            "Twelve yuan.",
+            "Two yuan.",
+            "Twenty yuan.",
+            "Thirty yuan."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "When were the roses picked?",
+          "options": [
+            "Late in the evening.",
+            "At noon yesterday.",
+            "Two days ago.",
+            "Early in the morning, before sunrise."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Where are the roses grown?",
+          "options": [
+            "In a nearby valley.",
+            "In a big city.",
+            "On a high mountain top.",
+            "By the sea."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the seller offer for buying three bunches?",
+          "options": [
+            "A free vase.",
+            "A small discount.",
+            "Free delivery abroad.",
+            "A cup of coffee."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How else can the buyer order roses?",
+          "options": [
+            "By post only.",
+            "By visiting the valley.",
+            "Online, on the website.",
+            "Through a TV show."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·独白 Advice for Young Founders",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "If you dream of starting your own business, here is some advice. First, you need more than a good idea; you also need a clear plan and money to begin. Second, learn from people with more experience, and ask experts for guidance before you start. Third, work hard, but be realistic and know your own limits. Many young people fail because they are too ambitious. Remember, success takes time. With patience and careful planning, your small idea may one day grow into something great.",
+      "translation_cn": "如果你梦想自己创业,这里有几条建议。第一,光有好点子还不够,你还需要清晰的计划和启动资金。第二,向更有经验的人学习,起步前请教专家。第三,努力工作,但要现实,知道自己的极限。许多年轻人失败,是因为太好高骛远。记住,成功需要时间。凭借耐心和周密的计划,你的小点子也许有一天会成长为伟大的事业。",
+      "questions": [
+        {
+          "stem": "Besides a good idea, what else do you need?",
+          "options": [
+            "A large house and a car.",
+            "Many friends abroad.",
+            "A famous name.",
+            "A clear plan and money to begin."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Who should you learn from?",
+          "options": [
+            "People with more experience.",
+            "People who never worked.",
+            "Only your classmates.",
+            "Nobody at all."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do many young people fail?",
+          "options": [
+            "They never have ideas.",
+            "They are too ambitious.",
+            "They work too little.",
+            "They save too much."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does success take, according to the speaker?",
+          "options": [
+            "Luck alone.",
+            "A lot of cash only.",
+            "Time and patience.",
+            "No planning at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What may a small idea become one day?",
+          "options": [
+            "A complete failure.",
+            "A waste of money.",
+            "A quiet hobby.",
+            "Something great."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

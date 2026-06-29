@@ -1,0 +1,338 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "topic": "Welcome to Dunhuang",
+  "source": "外研社选择性必修四 Unit 3 同主题阅读(莫高窟/飞天/藏经洞/丝路上的敦煌/敦煌的衰落与复兴/守护壁画)。词限本单元及常见课标词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Mogao Grottoes",
+      "topic_cn": "说明·莫高窟",
+      "body": "On the edge of the desert near Dunhuang stand the Mogao Grottoes, one of China's greatest cultural treasures. These ancient caves were carved out of the rock over a period of about a thousand years, and there are more than seven hundred of them today. If you step inside and look up, you can see paintings that cover almost every part of the walls and ceilings. Many of the statues inside the caves are surprisingly lifelike, and they show elements from Ancient Greece, India and Iran. This mix is no accident. Because Dunhuang sat on the Silk Road, where East met West, artists from many lands left their mark here. The murals themselves cover an enormous area of about forty-five thousand square metres. Together, the caves are a quiet testimony to how trade and travel once brought very different cultures together in one small corner of the desert.",
+      "vocab_notes": [
+        {
+          "word": "grotto",
+          "cn": "洞窟"
+        },
+        {
+          "word": "carve",
+          "cn": "开凿;雕刻"
+        },
+        {
+          "word": "testimony",
+          "cn": "证明"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How long did it take to create the Mogao Grottoes?",
+          "options": [
+            "Roughly a thousand years.",
+            "Only a few months.",
+            "Exactly forty-five years.",
+            "Less than ten years."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'carved out of the rock over a period of about a thousand years' 的转述。"
+        },
+        {
+          "stem": "Why do the statues mix Greek, Indian and Iranian features?",
+          "options": [
+            "Because foreign artists copied each other by chance.",
+            "Because it lay on the trade route that joined East and West.",
+            "Because the caves were built outside China.",
+            "Because local people disliked Chinese art."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说敦煌位于丝路、东西方相遇,各国艺术家留下印记 → 因丝路交汇。"
+        },
+        {
+          "stem": "What does the writer say the caves prove?",
+          "options": [
+            "That different cultures were once joined here through travel and trade.",
+            "That the desert was once a great sea.",
+            "That painting is harder than carving.",
+            "That the statues were made in modern times."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'a quiet testimony to how trade and travel once brought very different cultures together' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Flying Apsaras",
+      "topic_cn": "说明·飞天",
+      "body": "Among all the wonderful images on the cave walls, one kind is found almost nowhere else in the world: the Apsaras, or Flying Immortals. These heavenly musicians, singers and dancers seem to float across the painted sky. In the murals they hold lotus flowers, play instruments and throw petals down towards the visitors below. Their long scarves fly out behind them, so that they look as if they are about to come down and join us. The painting of these figures was not always the same. It slowly developed over hundreds of years and finally reached a peak during the Tang Dynasty. The Tang images are especially full of life and movement. Many people believe the dancing figures reflect the confidence and optimism of the people who lived in that golden age. Today, the Flying Apsaras have become one of the best-loved symbols of Dunhuang, copied in dances, films and paintings all around the country.",
+      "vocab_notes": [
+        {
+          "word": "immortal",
+          "cn": "神;不朽的"
+        },
+        {
+          "word": "heavenly",
+          "cn": "天国的"
+        },
+        {
+          "word": "peak",
+          "cn": "顶峰"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is special about the Apsaras?",
+          "options": [
+            "They are the oldest paintings in China.",
+            "They are images rarely seen anywhere else.",
+            "They were painted by foreign visitors.",
+            "They appear in only one single cave."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'one kind is found almost nowhere else in the world' 的转述。"
+        },
+        {
+          "stem": "When did the art of painting the Apsaras reach its highest point?",
+          "options": [
+            "Before any caves were built.",
+            "Only in modern times.",
+            "During the Tang Dynasty.",
+            "After Dunhuang was forgotten."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'reached a peak during the Tang Dynasty'。"
+        },
+        {
+          "stem": "What do many people think the lively Tang figures show?",
+          "options": [
+            "The sadness of a dying city.",
+            "The fear of desert travellers.",
+            "The rules of religious painting.",
+            "The confident and hopeful spirit of that age."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'reflect the confidence and optimism of the people who lived in that golden age' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Library Cave",
+      "topic_cn": "记叙·藏经洞",
+      "body": "In 1900 something truly extraordinary happened at Dunhuang. A Taoist priest, who was clearing sand from one of the caves, suddenly found a small room that had been sealed shut for centuries. Inside were thousands of manuscripts, paintings, scrolls and even silk embroideries. This hidden room is now famous around the world as the Library Cave. The papers inside date from about the fifth century to the eleventh century, so they cover a very long stretch of history. They are so detailed that they describe the wide range of goods once carried along the Silk Road, from ceramics and medicine to perfumes and fruit. They also show how many different communities lived side by side inside this single great city. Thanks to these papers, scholars today understand far more about the trade and daily life of old Dunhuang. Yet one question is still unanswered: nobody knows for certain why the cave was sealed up in the first place.",
+      "vocab_notes": [
+        {
+          "word": "manuscript",
+          "cn": "手稿"
+        },
+        {
+          "word": "scroll",
+          "cn": "卷轴"
+        },
+        {
+          "word": "seal",
+          "cn": "封闭"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Who discovered the Library Cave?",
+          "options": [
+            "A Taoist priest clearing away sand.",
+            "A group of foreign scholars.",
+            "A famous Tang painter.",
+            "A team of modern builders."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'A Taoist priest, who was clearing sand… suddenly found' 的转述。"
+        },
+        {
+          "stem": "Why are the papers so valuable to scholars?",
+          "options": [
+            "Because they are written in gold.",
+            "Because they describe the goods and communities of the old Silk Road city.",
+            "Because they are the largest in the world.",
+            "Because they were painted by the priest."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说卷轴详细记录了丝路货物与各社群生活 → 揭示当时贸易与生活。"
+        },
+        {
+          "stem": "What remains unknown about the Library Cave?",
+          "options": [
+            "Where exactly it stands.",
+            "What was kept inside it.",
+            "The real reason it was closed up.",
+            "How old the papers are."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'nobody knows for certain why the cave was sealed up' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Dunhuang on the Silk Road",
+      "topic_cn": "说明·丝路上的敦煌",
+      "body": "Long ago, Dunhuang was far more than a quiet town in the desert. It was the gateway to and from ancient China, a green oasis where tired travellers could finally rest. As soon as a caravan reached the city, traders could buy food, water and a safe place to sleep before moving on. Because the Silk Road passed straight through it, Dunhuang became a busy meeting point where merchants from East and West did business together. Goods arrived from places as far away as North-east Europe, and Chinese goods were sent out across Asia and Europe in return. This trade made the city both rich and famous. Yet Dunhuang was never only about money. Along with silk and spices, new ideas, religions, music and art also travelled the road. In this way the small desert city grew into one of the most important centres of cultural exchange in the whole ancient world.",
+      "vocab_notes": [
+        {
+          "word": "gateway",
+          "cn": "门户"
+        },
+        {
+          "word": "oasis",
+          "cn": "绿洲"
+        },
+        {
+          "word": "merchant",
+          "cn": "商人"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What could traders do as soon as they reached Dunhuang?",
+          "options": [
+            "Sell their camels at once.",
+            "Cross the sea by boat.",
+            "Visit the painted caves for free.",
+            "Buy supplies and rest somewhere safe before moving on."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'traders could buy food, water and a safe place to sleep' 的转述。"
+        },
+        {
+          "stem": "Why did Dunhuang become such a busy meeting point?",
+          "options": [
+            "Because the Silk Road ran right through it.",
+            "Because it had the tallest buildings.",
+            "Because no other towns existed nearby.",
+            "Because the weather was always cool."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Because the Silk Road passed straight through it' 的转述。"
+        },
+        {
+          "stem": "Besides goods, what else travelled along the road?",
+          "options": [
+            "Only gold and silver.",
+            "Fresh ideas, faiths, music and other arts.",
+            "Nothing at all but silk.",
+            "Soldiers and weapons only."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'new ideas, religions, music and art also travelled the road' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "From Decline to New Life",
+      "topic_cn": "说明·敦煌的衰落与复兴",
+      "body": "Dunhuang did not stay at the top forever. During the Ming Dynasty the main trade routes changed, and ships began to carry many goods by sea instead. Although the city had once been so prosperous, it slowly grew quieter and less important. Over time it almost faded from memory, even though it still held priceless treasures inside its caves. For centuries Dunhuang waited, half forgotten by the wider world. Then, in our own century, its story took a happy turn. The Belt and Road Initiative has helped to bring the old Silk Road back to life, and Dunhuang has once again become a global crossroads. In 2017 the city hosted hundreds of guests from more than fifty countries for a great cultural Expo. The theme of that event was to promote exchange and strengthen mutual cooperation between nations along the route. After so long, the desert city is busy and welcoming once more.",
+      "vocab_notes": [
+        {
+          "word": "prosperous",
+          "cn": "繁荣的"
+        },
+        {
+          "word": "crossroads",
+          "cn": "汇集地"
+        },
+        {
+          "word": "mutual",
+          "cn": "相互的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Dunhuang become less important during the Ming Dynasty?",
+          "options": [
+            "Because the caves were destroyed.",
+            "Because its people moved abroad.",
+            "Because trade moved to sea routes.",
+            "Because the desert disappeared."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the main trade routes changed, and ships began to carry many goods by sea' 的转述。"
+        },
+        {
+          "stem": "What has helped bring the city back to life today?",
+          "options": [
+            "A new river through the desert.",
+            "The closing of all the caves.",
+            "A move away from cultural exchange.",
+            "A modern plan to bring the ancient route back to life."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'The Belt and Road Initiative has helped to bring the old Silk Road back to life' 的转述。"
+        },
+        {
+          "stem": "What was the aim of the 2017 Expo?",
+          "options": [
+            "To encourage exchange and cooperation between nations.",
+            "To sell the city's treasures.",
+            "To keep foreign guests away.",
+            "To end the Silk Road for good."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'to promote exchange and strengthen mutual cooperation between nations' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Protecting Dunhuang's Treasures",
+      "topic_cn": "说明·守护敦煌",
+      "body": "The paintings of Dunhuang have survived for more than a thousand years, but they are far more fragile than they look. Light, damp air and even the breath of too many visitors can slowly damage the ancient colours. Because of this, the people who care for the caves work hard to protect them. They keep the light inside very low so that the murals do not fade, and they limit how many tourists may enter each cave every day. In recent years, experts have also begun to copy the caves in a new way. Using cameras and computers, they make careful digital pictures of every wall, in order that future students can study the art without harming it. Visitors can now explore some caves on a screen before stepping inside the real ones. In this way, Dunhuang is being shared with the whole world while its precious treasures are kept safe for those who come after us.",
+      "vocab_notes": [
+        {
+          "word": "fragile",
+          "cn": "脆弱的"
+        },
+        {
+          "word": "fade",
+          "cn": "褪色"
+        },
+        {
+          "word": "digital",
+          "cn": "数字的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why are the murals at risk even now?",
+          "options": [
+            "Visitors paint over them.",
+            "Light, damp air and crowds can slowly harm the colours.",
+            "They were never finished.",
+            "The caves are too cold."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Light, damp air and even the breath of too many visitors can slowly damage the ancient colours' 的转述。"
+        },
+        {
+          "stem": "What do the cave keepers do to protect the paintings?",
+          "options": [
+            "Turn the lights up bright.",
+            "Allow everyone in at once.",
+            "Keep the light low and limit daily visitors.",
+            "Move the murals outdoors."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'keep the light inside very low… limit how many tourists may enter' 的转述。"
+        },
+        {
+          "stem": "Why do experts make digital pictures of the caves?",
+          "options": [
+            "To sell the photos for money.",
+            "To replace the real caves forever.",
+            "Because the caves will soon close.",
+            "To let later learners study the paintings without harm."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'in order that future students can study the art without harming it' 的转述。"
+        }
+      ]
+    }
+  ]
+}

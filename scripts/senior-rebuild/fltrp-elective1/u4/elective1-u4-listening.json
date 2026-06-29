@@ -1,0 +1,421 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "topic": "Meeting the Muse",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社(新标准)选择性必修一 Unit 4 同主题听力(逛艺术展/灵感来源/雕塑讨论/艺术与科技/写作选画/找灵感小贴士)。用词限本单元/常见词,答案唯一且可在 transcript 找到依据,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Planning a Museum Visit",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Hi Jack! Are you free this Saturday? There's a new art exhibition at the city museum.",
+        "Jack: That sounds great, Mia. What kind of art is it?",
+        "Mia: It's all about abstract painting. My art teacher says it's amazing.",
+        "Jack: I've never really understood abstract art. Will we be able to understand it?",
+        "Mia: Don't worry. There's a free guide who explains the ideas behind each painting.",
+        "Jack: Perfect. What time should we meet?",
+        "Mia: Let's meet at the museum gate at ten in the morning.",
+        "Jack: Ten o'clock is fine. I'm really excited now. See you on Saturday!"
+      ],
+      "translation_cn": "Mia 邀 Jack 周六去市博物馆看新展;是抽象画展,老师说很棒;Jack 担心看不懂抽象艺术;Mia 说有免费讲解员解释每幅画背后的想法;两人约定周六上午十点在博物馆门口见。",
+      "questions": [
+        {
+          "stem": "When will Mia and Jack go to the exhibition?",
+          "options": [
+            "On Saturday.",
+            "On Sunday.",
+            "On Monday.",
+            "On Friday."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What kind of art is the exhibition about?",
+          "options": [
+            "Stone sculpture.",
+            "Abstract painting.",
+            "Folk music.",
+            "Digital film."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Jack feel a little worried at first?",
+          "options": [
+            "He may not understand abstract art.",
+            "He has no money.",
+            "He is feeling ill.",
+            "He does not like Mia."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How will they get help understanding the paintings?",
+          "options": [
+            "They will read a long book.",
+            "A free guide will explain them.",
+            "They will phone the artist.",
+            "They will watch a film at home."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where will the two friends meet?",
+          "options": [
+            "At the school library.",
+            "At Jack's home.",
+            "At the museum gate.",
+            "At the train station."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 Where Artists Find Ideas",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Where do artists get their ideas? The answer is different for everyone.",
+        "For some, childhood memories are the richest source of inspiration.",
+        "Others find new ideas while travelling to faraway places.",
+        "Many artists say that nature, with its colours and shapes, never stops inspiring them.",
+        "In the end, inspiration can come from anywhere, as long as we keep our eyes and hearts open."
+      ],
+      "translation_cn": "艺术家从哪里获得创意?答案因人而异;对一些人来说,童年记忆是最丰富的灵感来源;另一些人在远方旅行中找到新点子;许多艺术家说大自然的色彩与形状永远启发着他们;只要保持眼睛和心灵的开放,灵感可来自任何地方。",
+      "questions": [
+        {
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How to sell famous paintings.",
+            "The price of modern art.",
+            "The history of old museums.",
+            "Where artists find their inspiration."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is a rich source of inspiration for some artists?",
+          "options": [
+            "Childhood memories.",
+            "Loud city noise.",
+            "Fast sports cars.",
+            "Crowded markets."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where do some artists find new ideas?",
+          "options": [
+            "While sleeping all day.",
+            "While travelling to faraway places.",
+            "While doing the shopping.",
+            "While cooking dinner."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What never stops inspiring many artists?",
+          "options": [
+            "Money and gold.",
+            "Television programmes.",
+            "Nature, with its colours and shapes.",
+            "Heavy traffic."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "According to the passage, where can inspiration come from?",
+          "options": [
+            "Only from school lessons.",
+            "Only from old books.",
+            "Only from famous teachers.",
+            "Almost anywhere, if we stay open."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Talking about a Sculpture",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Tom: Lily, did you see that huge sculpture in the city square?",
+        "Lily: Yes! The one made of metal wire and lights? It was breathtaking.",
+        "Tom: I agree. At night it looked like a giant fish floating in the air.",
+        "Lily: I heard the artist got the idea from an old folk tale.",
+        "Tom: Really? Which tale?",
+        "Lily: The story of a fish jumping through the Dragon Gate.",
+        "Tom: That's clever. I was amazed that cold metal could feel so alive.",
+        "Lily: Me too. I think it's the most creative work I've seen this year."
+      ],
+      "translation_cn": "Tom 问 Lily 是否看过城市广场那座巨大雕塑;是金属丝和灯做的,很震撼;夜里像漂浮在空中的大鱼;Lily 听说灵感来自一个古老的民间故事——鱼跃龙门;Tom 惊讶冰冷的金属竟能如此有生命;两人都认为这是今年看过最有创意的作品。",
+      "questions": [
+        {
+          "stem": "What was the sculpture made of?",
+          "options": [
+            "Metal wire and lights.",
+            "Wood and paper.",
+            "Stone and sand.",
+            "Glass and water."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did the sculpture look like at night?",
+          "options": [
+            "A small singing bird.",
+            "A giant fish floating in the air.",
+            "A tall green tree.",
+            "A bright red car."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where did the artist get the idea?",
+          "options": [
+            "From a science book.",
+            "From a strange dream.",
+            "From an old folk tale.",
+            "From a foreign film."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Which tale inspired the work?",
+          "options": [
+            "A flying white horse.",
+            "A talking old tree.",
+            "A sleeping dragon king.",
+            "A fish jumping through the Dragon Gate."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How did Tom feel about the sculpture?",
+          "options": [
+            "Amazed that metal could feel so alive.",
+            "Bored and very tired.",
+            "Angry about the high price.",
+            "Afraid of the bright lights."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 Art and Technology",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Technology is changing the way we enjoy art.",
+        "In the past, people had to travel far to see a famous painting.",
+        "Today, a digital version can be shown on a giant screen for everyone.",
+        "With 3D animation, the figures in an old painting seem to move and breathe.",
+        "In this way, great art has become more accessible to ordinary people than ever before."
+      ],
+      "translation_cn": "科技正在改变我们欣赏艺术的方式;过去人们要远行才能看到一幅名画;如今数字版可以在巨幕上向所有人展示;借助3D动画,古画中的人物仿佛会动、会呼吸;这样,伟大的艺术比以往任何时候都更贴近普通人。",
+      "questions": [
+        {
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How to paint a perfect picture.",
+            "How technology changes the way we enjoy art.",
+            "The life story of one painter.",
+            "The price of large screens."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "In the past, what did people have to do to see a famous painting?",
+          "options": [
+            "Pay nothing at all.",
+            "Stay quietly at home.",
+            "Travel far to see it.",
+            "Wait for many years."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How can a painting be shown to everyone today?",
+          "options": [
+            "Only inside a small book.",
+            "Only late at night.",
+            "Only to other artists.",
+            "As a digital version on a giant screen."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What can 3D animation do to figures in an old painting?",
+          "options": [
+            "Make them seem to move and breathe.",
+            "Make them disappear completely.",
+            "Turn all the colours grey.",
+            "Make the painting much smaller."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What has happened to great art, according to the passage?",
+          "options": [
+            "It has become much harder to see.",
+            "It has become more accessible to ordinary people.",
+            "It has lost all of its value.",
+            "It is now only for experts."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 Choosing an Artwork to Write About",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Teacher: For today's writing task, choose one artwork that makes a strong impression on you.",
+        "Sara: Mr Lee, can I write about the Floating Fish sculpture?",
+        "Teacher: Of course, Sara. Why did you choose it?",
+        "Sara: Because it shows how an old folk tale can inspire something modern.",
+        "Teacher: That's a wonderful reason. Remember to describe how it makes you feel.",
+        "Sara: I felt amazed and a little moved when I saw it.",
+        "Teacher: Good. Use words like 'inspiring' and 'breathtaking' to express your feelings.",
+        "Sara: Thank you, Mr Lee. I can't wait to start writing."
+      ],
+      "translation_cn": "老师布置写作任务:选一件给你深刻印象的艺术品;Sara 问能否写《漂浮的鱼》雕塑;老师问她为何选它;Sara 说它展现了古老民间故事如何启发现代作品;老师提醒她要写出自己的感受;Sara 说看到时既惊叹又有些感动;老师建议用 inspiring、breathtaking 这样的词表达感受;Sara 迫不及待要动笔。",
+      "questions": [
+        {
+          "stem": "What is today's writing task?",
+          "options": [
+            "To paint a new picture.",
+            "To sing a folk song.",
+            "To write about an artwork that impresses you.",
+            "To build a small model."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Which artwork does Sara choose?",
+          "options": [
+            "An old stone bridge.",
+            "A short digital film.",
+            "A music recording.",
+            "The Floating Fish sculpture."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why did Sara choose it?",
+          "options": [
+            "It shows how an old tale can inspire modern work.",
+            "It was very cheap to buy.",
+            "It was extremely small.",
+            "It was easy to draw."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How did Sara feel when she saw the artwork?",
+          "options": [
+            "Bored and sleepy.",
+            "Amazed and a little moved.",
+            "Angry and afraid.",
+            "Tired and unwell."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What kind of words does the teacher suggest using?",
+          "options": [
+            "Numbers and dates.",
+            "Names of faraway cities.",
+            "Words like 'inspiring' and 'breathtaking'.",
+            "Only the names of colours."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 A Tip for Finding Inspiration",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip for anyone who wants to find their own inspiration.",
+        "First, slow down and look carefully at the small things around you.",
+        "A leaf, a shadow or an old photo can all start a great idea.",
+        "Second, keep a notebook and write down anything that interests you.",
+        "Inspiration rarely arrives all at once; it grows from the details we notice every day."
+      ],
+      "translation_cn": "给任何想找到自己灵感的人一个简单的小贴士:第一,慢下来,仔细观察身边的小事物;一片叶子、一道影子或一张旧照片都能引出一个好点子;第二,随身带个本子,把任何让你感兴趣的东西记下来;灵感很少一下子到来,它从我们每天留意的细节中生长出来。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only world-famous artists.",
+            "Only school teachers.",
+            "Only young children.",
+            "Anyone who wants to find inspiration."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is the first piece of advice?",
+          "options": [
+            "Look carefully at small things around you.",
+            "Travel to other countries.",
+            "Buy expensive tools.",
+            "Copy other artists' work."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can start a great idea?",
+          "options": [
+            "A very loud noise.",
+            "A leaf, a shadow or an old photo.",
+            "A fast-moving car.",
+            "A large, busy crowd."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is the second piece of advice?",
+          "options": [
+            "Sleep much more.",
+            "Watch more television.",
+            "Keep a notebook of what interests you.",
+            "Talk far less."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How does inspiration usually grow?",
+          "options": [
+            "All at once, without effort.",
+            "Only from our dreams.",
+            "Only from having money.",
+            "From small details we notice every day."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

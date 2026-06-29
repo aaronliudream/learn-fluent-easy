@@ -1,0 +1,314 @@
+{
+  "volume": "elective3",
+  "unit": "U6",
+  "topic": "First Snow",
+  "source": "外研社新标准选择性必修第三册 Unit 6 同主题阅读(初雪之奇/冬晨光影变化/童年雪忆/雪花成形/动物过冬/《寂静的春天》)。用词限本单元/初中/常见词;答案为转述非照抄;4 选项唯一;与完形、听力关文章互不重复。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Magic of the First Snow",
+      "topic_cn": "说明·初雪的奇妙",
+      "body": "You go to bed in one ordinary world and wake up the next morning in a completely different one. That is the strange magic of the first snow of winter. When it falls quietly during the night, no one hears a sound, yet by dawn the whole garden has been changed. The grass, the paths and the roofs all lie hidden under a soft white blanket. Many writers have described this feeling of wonder. Some say that for certain quiet people, even a slight fall of snow is a real event, worth remembering for years. Children press their faces to the cold window and talk excitedly, as if a holiday had suddenly arrived. Grown-ups, too, often feel like children again. The very quietness and secrecy of the snow seem to make it more magical, and for a short while the busy, familiar world feels brand new and full of pleasant surprise.",
+      "vocab_notes": [
+        {
+          "word": "secrecy",
+          "cn": "隐秘"
+        },
+        {
+          "word": "hidden",
+          "cn": "被藏起的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What makes the first snow feel so magical, according to the text?",
+          "options": [
+            "The quiet, secret way it changes the world overnight.",
+            "The loud noise it makes as it falls.",
+            "The fact that it never melts away.",
+            "The money that people can earn from it."
+          ],
+          "answer_index": 0,
+          "explanation": "末段'quietness and secrecy of the snow… make it more magical'的转述。"
+        },
+        {
+          "stem": "How do the children in the passage react to the snow?",
+          "options": [
+            "They calmly ignore it.",
+            "They press to the window and talk with great excitement.",
+            "They feel frightened and start to cry.",
+            "They go straight back to sleep."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'press their faces to the cold window and talk excitedly'的转述。"
+        },
+        {
+          "stem": "What does the passage suggest about grown-ups and the first snow?",
+          "options": [
+            "They can feel young again, like children.",
+            "They never even notice it.",
+            "They only worry about the cold.",
+            "They must go to work as usual."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'Grown-ups, too, often feel like children again'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Winter Morning Changes",
+      "topic_cn": "记叙·冬晨光影的变化",
+      "body": "On the morning after the first snow, the world outside kept changing hour by hour. When the writer first got up, everything looked cold and pale, a place of dead white and soft blue. The light coming through the windows was so strange that even washing and dressing felt unfamiliar. Then the sun rose, and its warm rays began to flush the snow with delicate pink, turning the view into something like a beautiful painting. An hour or two later the scene changed once more: the gentle pink had gone, and everything became a cold sparkle of white and blue. By the afternoon the snow was falling again in great soft flakes, so thick that he could hardly see across the shallow valley. The roofs grew heavy, and the trees began to bend low under the weight. The same quiet garden had worn three or four different faces in a single winter morning.",
+      "vocab_notes": [
+        {
+          "word": "flush",
+          "cn": "使发红"
+        },
+        {
+          "word": "sparkle",
+          "cn": "闪光"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the world look when the writer first got up?",
+          "options": [
+            "Bright green and warm.",
+            "Cold and pale, all white and blue.",
+            "Dark, with heavy rain falling.",
+            "Exactly the same as every other day."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'cold and pale, a place of dead white and soft blue'的转述。"
+        },
+        {
+          "stem": "What happened to the snow when the sun rose?",
+          "options": [
+            "It melted all at once.",
+            "It made the sky turn black.",
+            "It turned a soft pink colour.",
+            "It started a heavy storm."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'flush the snow with delicate pink'的转述。"
+        },
+        {
+          "stem": "What was the weather doing by the afternoon?",
+          "options": [
+            "The snow had stopped completely.",
+            "Rain had replaced the snow.",
+            "The sun shone brightly all day.",
+            "Snow was falling thickly in large flakes."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'snow was falling again in great soft flakes'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Snow Memory from Childhood",
+      "topic_cn": "记叙·童年的雪忆",
+      "body": "Whenever heavy snow falls, an old man named Tom remembers a winter morning from long ago. As a boy, he would flatten his small nose against the cold window and watch the white flakes come slowly down. While he watched, he liked to repeat a funny little rhyme about snow that his grandmother had taught him. In the rhyme, the falling snow was compared to soft white feathers sent down from far away. To Tom, the snow seemed to fall faster each time he said the words aloud. Those mornings felt full of innocent happiness, with no worries about school or time. Now, many years later, the same rhyme still runs through his head when he sees the first snow. It brings back the warm kitchen, his grandmother's gentle voice and the bright wonder he felt as a child. A short childhood rhyme, he says, can keep a whole winter alive in the memory.",
+      "vocab_notes": [
+        {
+          "word": "rhyme",
+          "cn": "童谣"
+        },
+        {
+          "word": "innocent",
+          "cn": "天真的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Tom do as a boy when it snowed?",
+          "options": [
+            "He pressed his nose to the window and watched the flakes.",
+            "He stayed in bed and slept.",
+            "He ran outside without any coat.",
+            "He read science books all morning."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'flatten his small nose against the cold window and watch'的转述。"
+        },
+        {
+          "stem": "What was the snow compared to in the rhyme?",
+          "options": [
+            "Tiny pieces of broken glass.",
+            "Soft white feathers from far away.",
+            "Drops of warm summer rain.",
+            "Grains of golden wheat."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'compared to soft white feathers sent down from far away'的转述。"
+        },
+        {
+          "stem": "Why is the old rhyme important to Tom now?",
+          "options": [
+            "It teaches him modern science.",
+            "It helps him earn extra money.",
+            "It brings back happy childhood memories.",
+            "It tells him tomorrow's weather."
+          ],
+          "answer_index": 2,
+          "explanation": "末段'brings back the warm kitchen… the bright wonder he felt as a child'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "How Snowflakes Are Made",
+      "topic_cn": "说明·雪花的形成",
+      "body": "Have you ever looked closely at a single snowflake before it melts on your glove? Each one begins high up in the cold clouds, where tiny drops of water freeze around specks of dust. As the ice slowly grows, it forms a small crystal with six sides. No two snowflakes are ever exactly the same, because each one falls through slightly different air on its long way to the ground. When the air is very cold and still, the flakes stay small and dry, and they sparkle like tiny diamonds. When it is a little warmer, they join together into the great soft flakes that children love to catch. Although a single flake weighs almost nothing at all, billions of them together can cover a whole town, bend the branches of trees and hide the streets. The next time it snows, try to catch one flake on your dark glove and look at its beautiful, secret shape before it disappears.",
+      "vocab_notes": [
+        {
+          "word": "flake",
+          "cn": "雪片"
+        },
+        {
+          "word": "crystal",
+          "cn": "晶体"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where does a snowflake first begin to form?",
+          "options": [
+            "On the warm ground.",
+            "Deep down in the ocean.",
+            "Inside a warm house.",
+            "Inside cold clouds, around tiny specks of dust."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'begins high up in the cold clouds, where tiny drops of water freeze around specks of dust'的转述。"
+        },
+        {
+          "stem": "Why are no two snowflakes exactly alike?",
+          "options": [
+            "Every flake passes through air that keeps changing.",
+            "They are all made by machines.",
+            "People paint them by hand.",
+            "They never actually fall."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'each one falls through slightly different air'的转述。"
+        },
+        {
+          "stem": "What can billions of snowflakes together do?",
+          "options": [
+            "Disappear before they ever land.",
+            "Cover a town and weigh down branches.",
+            "Make the winter air much warmer.",
+            "Turn into rain at once."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'cover a whole town, bend the branches of trees and hide the streets'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "How Animals Survive the Snow",
+      "topic_cn": "说明·动物如何过冬",
+      "body": "Winter is a hard season for the animals that live in cold lands, yet many of them have clever ways to survive the snow. Some birds fly thousands of miles to warmer places before the first frost arrives, and they return only when spring flowers bloom again. Others stay behind and grow thicker feathers to keep out the bleak wind. Certain small animals, such as mice, dig narrow tunnels beneath the snow, where the air is surprisingly warm and still. A few large animals, like bears, eat as much as they can in autumn and then sleep deeply through the coldest months. Even under a frozen pond, fish can go on living quietly in the water below the ice. Without these clever tricks, few creatures could face the long, dark winter. When the snow finally melts and the warm sun returns, the whole world seems to wake up and come alive once more.",
+      "vocab_notes": [
+        {
+          "word": "frost",
+          "cn": "霜冻"
+        },
+        {
+          "word": "bleak",
+          "cn": "阴冷的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do some birds do before winter arrives?",
+          "options": [
+            "They stop eating completely.",
+            "They dig tunnels under the snow.",
+            "They fly far away to warmer places.",
+            "They sleep through the whole winter."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'fly thousands of miles to warmer places before the first frost'的转述。"
+        },
+        {
+          "stem": "How do small animals like mice survive the cold?",
+          "options": [
+            "They grow much larger.",
+            "They fly south with the birds.",
+            "They live inside frozen ponds.",
+            "They make warm tunnels beneath the snow."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'dig narrow tunnels beneath the snow, where the air is surprisingly warm'的转述。"
+        },
+        {
+          "stem": "What does the passage say about bears?",
+          "options": [
+            "They eat a lot in autumn, then sleep through the cold.",
+            "They never sleep at all in winter.",
+            "They grow brand new feathers.",
+            "They swim about under the ice."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'eat as much as they can in autumn and then sleep deeply through the coldest months'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Book That Woke the World",
+      "topic_cn": "议论·《寂静的春天》",
+      "body": "In 1962 a scientist named Rachel Carson published a book called Silent Spring, and it changed the way people think about nature. The book opens by imagining a quiet town where, one spring, no birds sing at all. The feeding places in the backyards stand empty, and the few birds left tremble and cannot fly. Carson used this sad picture to alert ordinary people, not just scientists, to the harm that certain chemicals were doing to living things. Her research was careful and precise, and a long list of sources showed how thorough she had been. Some companies attacked her and tried to damage her reputation, saying she was only a marine biologist. Yet most scientists supported her, and the beauty and elegance of her writing reached millions of readers. In the end, the harmful chemical she warned about was banned in many countries. People still feel the passionate message of her famous book today.",
+      "vocab_notes": [
+        {
+          "word": "alert",
+          "cn": "提醒"
+        },
+        {
+          "word": "reputation",
+          "cn": "名誉"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does the book Silent Spring begin?",
+          "options": [
+            "With a long list of chemical names.",
+            "By imagining a spring with no singing birds.",
+            "With a happy story about farming.",
+            "By describing a snowy winter scene."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'imagining a quiet town where, one spring, no birds sing at all'的转述。"
+        },
+        {
+          "stem": "Why did some companies attack Carson?",
+          "options": [
+            "Because her book had harmed nature.",
+            "Because she could not write well at all.",
+            "Because they wanted to stop her warning and hurt her good name.",
+            "Because she was a famous singer."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'tried to damage her reputation'的转述。"
+        },
+        {
+          "stem": "What finally happened because of the book?",
+          "options": [
+            "All the birds disappeared forever.",
+            "Carson stopped writing for good.",
+            "Nothing at all changed.",
+            "Many countries decided to stop using the harmful chemical."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'the harmful chemical she warned about was banned in many countries'的转述。"
+        }
+      ]
+    }
+  ]
+}

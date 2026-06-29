@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "topic": "Write an Experiment Report(写一篇实验报告)",
+  "title_en": "The Magic Bottle: How Air Pushes an Egg into a Bottle",
+  "genre": "实验报告 / 说明(introduce the aim → describe materials and procedure → report the result and conclusion)",
+  "source": "外研社(新标准)必修第三册 Unit 3 Developing ideas:Writing an experiment report(以\"魔法瓶\"鸡蛋入瓶实验为例,练习用被动语态描述步骤)。",
+  "prompt_cn": "你在科学课上做了一个\"魔法瓶\"实验:把一个剥壳的熟鸡蛋放在瓶口,鸡蛋竟被吸进瓶里。请用英语写一篇约90词的实验报告,内容包括:① 实验目的;② 所用材料和主要步骤(多用被动语态,如 the shell was removed / hot water was poured in);③ 实验结果和你得出的结论。注意:步骤清楚、用词准确。",
+  "prompt_en": "In a science class you did a 'magic bottle' experiment: a peeled boiled egg was placed on the mouth of a bottle and was suddenly pulled inside. Write an experiment report (about 90 words) including: 1) the aim of the experiment; 2) the materials used and the main steps (use the passive voice, e.g. the shell was removed / hot water was poured in); 3) the result and the conclusion you draw.",
+  "points": [
+    "说明实验目的(This experiment is designed to …)",
+    "列出材料和步骤、多用被动语态(First, the shell was removed …)",
+    "报告结果(After a few seconds, the egg was pulled inside.)",
+    "得出结论(I can draw the conclusion that …)"
+  ],
+  "word_count": "90 词左右",
+  "model_essay": "This experiment is designed to show how air pressure can push an egg into a bottle. To do this, I prepared a boiled egg, a glass bottle and some hot water. First, the shell of the egg was removed. Then hot water was poured into the bottle, shaken gently and poured out again. Finally, the egg was quickly placed on the mouth of the bottle. After a few seconds, the egg was pulled inside. From this, I can draw the conclusion that cooling air takes up less space, so the outside air pushes the egg in.",
+  "model_translation": "本实验旨在说明气压如何把鸡蛋压入瓶中。为此,我准备了一个熟鸡蛋、一个玻璃瓶和一些热水。首先,鸡蛋的壳被剥掉。然后把热水倒进瓶里,轻轻摇晃后再倒出。最后,鸡蛋被迅速放在瓶口上。几秒钟后,鸡蛋被吸进了瓶里。由此我可以得出结论:冷却的空气占据的空间变小,于是外面的空气把鸡蛋压了进去。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:实验目的 / 材料与步骤 / 结果与结论" },
+      { "dimension": "结构", "max": 4, "criteria": "按\"目的—步骤—结论\"顺序展开、用 first/then/finally 等连接、条理清楚" },
+      { "dimension": "语言", "max": 5, "criteria": "被动语态运用得当、词汇准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "目的 This experiment is designed to …",
+      "材料 I prepared … to do this experiment.",
+      "步骤 First, the shell was removed … Then … Finally …",
+      "结论 From this, I can draw the conclusion that …"
+    ],
+    "key_expressions": [
+      "This experiment is designed to show how air pressure works.",
+      "First, the shell of the egg was removed.",
+      "Hot water was poured into the bottle and then poured out.",
+      "From this, I can draw the conclusion that cooling air takes up less space."
+    ],
+    "useful_words": ["experiment", "designed", "prepare", "procedure", "remove", "pour", "place", "pressure", "result", "conclusion"]
+  },
+  "high_sentences": [
+    "This experiment is designed to show how air pressure can push an egg into a bottle.",
+    "First, the shell of the egg was removed.",
+    "After a few seconds, the egg was pulled inside.",
+    "From this, I can draw the conclusion that cooling air takes up less space."
+  ],
+  "error_pairs": [
+    { "wrong": "The shell was remove.", "correct": "The shell was removed.", "note": "被动语态用 be + 过去分词,remove 要变 removed。" },
+    { "wrong": "Hot water poured into the bottle.", "correct": "Hot water was poured into the bottle.", "note": "water 是动作承受者,描述步骤用被动 was poured。" },
+    { "wrong": "This experiment is design to test air.", "correct": "This experiment is designed to test air.", "note": "is designed to 固定被动结构,design 要变 designed。" }
+  ],
+  "paragraph_template": "【实验报告结构】\n第1句 目的:This experiment is designed to …\n第2句 材料:I prepared … to do this experiment.\n第3-4句 步骤(被动):First, … was removed. Then … was poured … Finally, … was placed …\n第5句 结果+结论:After a few seconds, … was pulled inside. From this, I can draw the conclusion that …"
+}

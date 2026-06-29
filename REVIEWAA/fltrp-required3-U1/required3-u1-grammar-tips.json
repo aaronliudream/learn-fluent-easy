@@ -1,0 +1,35 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "grade": 10,
+  "content": {
+    "title": "-ed 分词作状语速查",
+    "intro": "过去分词(-ed)作状语,逻辑主语就是主句主语;当主语是动作的承受者(被动)时用 -ed,可表原因、时间或条件。判断口诀:主语'被怎么样'→ 用 -ed;主语'主动做'→ 用 -ing。",
+    "table": {
+      "headers": ["用法", "例句 / 等价从句"],
+      "rows": [
+        ["原因", "Disappointed by his behaviour, I told my friend. = Because I was disappointed …"],
+        ["时间", "Seen from afar, the statue looks alive. = When it is seen from afar …"],
+        ["条件", "Given more time, we could solve it. = If we were given more time …"],
+        ["-ed vs -ing", "Worried about her, Joy helped.(被动→-ed) / Believing she is right, Joy leads.(主动→-ing)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "逻辑主语=主句主语,且主语是动作承受者(被动)→ 用过去分词 -ed", "mark": "Treated this way, you feel hurt(you 被这样对待)" },
+      { "rule": "主语是动作发出者(主动)→ 用现在分词 -ing", "mark": "Filled with anger, he spoke without thinking 对比 Smiling kindly, she helped me" },
+      { "rule": "情感类动词:人'被…'的感受用 -ed(interested/worried),'令人…'的性质用 -ing(interesting/worrying)", "mark": "I was interested. / The book is interesting." },
+      { "rule": "-ed 分词状语常可还原为 because / when / if 引导的状语从句", "mark": "Approached in this way = If it is approached in this way" }
+    ],
+    "why": [
+      "过去分词本身含被动、完成意味;作状语时它紧扣主句主语,只要主语是这个动作的'承受方',就用 -ed,而无需写出完整的被动从句,句子更简洁地道。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/短文改错高频:给动词,据逻辑主语判断填 -ed(被动)还是 -ing(主动)。",
+      "句首独立的 -ed/-ing 状语,务必核对它的逻辑主语与主句主语一致(避免'垂悬分词')。"
+    ],
+    "examVsReal": [
+      { "exam": "Disappointed by his behaviour, I told my friend everything.(考试/书面)", "real": "I was so disappointed by what he did that I told my friend everything.", "note": "考试爱考分词状语的简洁形式;日常口语常直接用从句或并列句,更自然。" },
+      { "exam": "Given more time, we could finish it.(考试)", "real": "If we had more time, we could finish it.", "note": "考试用 -ed 分词表条件;口语里直接说 if 从句更常见。" }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(匠心/手艺主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Tom visited an old toy maker, he expected to buy a finished wooden train. Instead, the old man invited him to sit down and carve a small wheel himself, slowly and by hand. Two hours later Tom held a single rough wheel, yet he felt prouder of it than of any toy he had ever bought.",
+    "questions": [
+      {
+        "q": "What had Tom planned to do at the toy maker's shop?",
+        "options": [
+          "Sit and watch other children play.",
+          "Buy a ready-made wooden train.",
+          "Sell some old toys of his own.",
+          "Learn to paint a picture."
+        ],
+        "answer": "B",
+        "explanation": "由 'he expected to buy a finished wooden train' 转述;其余短文未提或相反。"
+      },
+      {
+        "q": "Why did Tom feel proud at the end?",
+        "options": [
+          "He had made the small wheel with his own hands.",
+          "He had bought the most expensive toy.",
+          "He had finished the work in two minutes.",
+          "He had taught the old man a new skill."
+        ],
+        "answer": "A",
+        "explanation": "由末句 'he felt prouder of it than of any toy he had ever bought'(短文后半,覆盖不同位置)结合他亲手雕轮转述。"
+      }
+    ]
+  }
+}

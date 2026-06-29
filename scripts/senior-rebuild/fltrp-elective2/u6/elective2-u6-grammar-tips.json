@@ -1,0 +1,38 @@
+{
+  "volume": "elective2",
+  "unit": "U6",
+  "grade": 11,
+  "content": {
+    "title": "-ever 与 no matter 引导的让步状语从句速查",
+    "intro": "whatever/whoever/whichever/wherever/whenever/however 引导让步状语从句,意为“无论……”,都可换成 no matter + what/who/which/where/when/how。判断口诀:看从句缺什么成分,就用对应的 -ever 词;这些词本身充当主语/宾语/限定词/状语,所以 though/although 不能替换。",
+    "table": {
+      "headers": ["-ever 词", "= no matter …", "在从句中的角色 / 例句"],
+      "rows": [
+        ["whatever", "no matter what", "指物,作主语/宾语/限定词:Whatever happens, stay calm."],
+        ["whoever", "no matter who", "指人,作主语/宾语:Whoever finds the ice will help us."],
+        ["whichever", "no matter which", "从一组中择一,作限定词:Whichever path you take, be careful."],
+        ["wherever", "no matter where", "指地点,作状语:Wherever they go, animals find cities in their way."],
+        ["whenever", "no matter when", "指时间,作状语:Whenever a fire breaks out, leave calmly."],
+        ["however + adj./adv.", "no matter how + adj./adv.", "表程度:However hard it is, don't give up."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "however 在这里 = no matter how,后面必须紧跟形容词或副词,再接“主语+谓语”", "mark": "However fast the birds fly, some still crash.(However + adv. + 主谓)" },
+      { "rule": "别把让步的 however 和表示“但是”的 however 混淆", "mark": "It is dangerous; however, we go on.(=but,作连接副词)" },
+      { "rule": "whatever/whoever 既能引导让步状语,也能引导名词性从句作主语/宾语", "mark": "让步:Whatever happens, … ｜ 名词从句:Take whatever you need." },
+      { "rule": "though/although 引导让步从句时后接“完整主谓”,不能充当从句的主语/宾语/限定词", "mark": "Although he committed crimes √ / Although happens ×" }
+    ],
+    "why": [
+      "-ever 词把“让步”和“在从句里充当某个成分(主语/宾语/状语/限定词)”合二为一,所以它后面跟的是一个缺成分的从句;though/although 只表让步、不充当成分,因此两者不能互换。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:根据从句缺的成分及指人/指物/指地点/指时间,选 whatever/whoever/wherever/whenever/however。",
+      "however + adj./adv. = no matter how 是易错点;however 后绝不能直接接名词。",
+      "-ever 词与 no matter + 疑问词 的互换改写常考。"
+    ],
+    "examVsReal": [
+      { "exam": "No matter what happens, we will go on.（考试/书面)", "real": "Whatever happens, we'll go on.", "note": "口语里 -ever 单词形式更简洁,意思完全相同" },
+      { "exam": "However hard it is, she keeps trying.（考试)", "real": "No matter how hard it is, she keeps trying.", "note": "两种写法可互换;口语两者都常见" }
+    ]
+  }
+}

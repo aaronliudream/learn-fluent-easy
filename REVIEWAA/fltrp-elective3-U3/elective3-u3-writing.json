@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "topic": "Write a Short Review of a War Film(写一篇战争电影短评)",
+  "title_en": "A Review of a War Film",
+  "genre": "影评 / 说明+评价(introduce a war film + give your opinion)",
+  "source": "外研社版选择性必修第三册 Unit 3 Using language Activity 4:write a short review of a film on the theme of war,并注意主谓一致。",
+  "prompt_cn": "请用英语写一篇约100词的战争电影短评。内容包括:① 影片名称、导演及主要人物;② 简述故事或最难忘的一个场景;③ 谈谈影片传达的关于战争与和平的信息;④ 给出你的评价与推荐。注意:特别留意主谓一致(集合名词、and 连接的主语、a number of / the number of)。",
+  "prompt_en": "Write a short review (about 100 words) of a film on the theme of war. Include: 1) the film's title, director and main characters; 2) a brief account of the story or one unforgettable scene; 3) the message it sends about war and peace; 4) your opinion and recommendation. Pay special attention to subject-verb agreement (collective nouns, subjects joined by 'and', a number of / the number of).",
+  "points": [
+    "片名+导演+主要人物(… is a war film directed by …)",
+    "故事或难忘场景(The film tells the story of … / One scene that stays with me is …)",
+    "战争与和平的信息(Its message is simple: … )",
+    "评价与推荐(It is an unforgettable film that I would recommend to …)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Saving Private Ryan is a war film directed by Steven Spielberg. The two main characters are Captain Miller and Private Ryan, the last of four brothers still alive. A small rescue team is sent to bring him home, and the team is led by Miller, a survivor of Omaha Beach. The opening scene, in which the audience is thrown into thirty terrible minutes of the Normandy landings, shows the full horror of war. The number of lives lost is shocking, yet the film is also about courage and sacrifice. Its message is clear: we want peace, not war. I would warmly recommend it.",
+  "model_translation": "《拯救大兵瑞恩》是史蒂文·斯皮尔伯格执导的一部战争片。两位主角是米勒上尉和四兄弟中唯一幸存的瑞恩二等兵。一支小型救援队被派去把他带回家,这支队伍由奥马哈海滩的幸存者米勒率领。开场把观众猛然带入诺曼底登陆那可怕的三十分钟,展现了战争全部的恐怖。逝去生命的数目令人震惊,但影片同样讲述勇气与牺牲。它传达的信息很清楚:我们要和平,不要战争。我会诚挚地推荐这部影片。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:片名导演人物 / 故事或场景 / 战争与和平信息 / 评价推荐" },
+      { "dimension": "结构", "max": 4, "criteria": "先介绍后评价、层次清楚、衔接自然、首尾呼应" },
+      { "dimension": "语言", "max": 5, "criteria": "主谓一致正确(集合名词/and 主语/the number of)、词汇句式准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "开头 … is a war film directed by …",
+      "人物 The main characters are …",
+      "场景 The opening scene, in which …, shows the full horror of war.",
+      "信息+评价 Its message is clear: … I would recommend it."
+    ],
+    "key_expressions": [
+      "Saving Private Ryan is a war film directed by Steven Spielberg.",
+      "A small rescue team is sent to bring him home.",
+      "The number of lives lost is shocking.",
+      "Its message is clear: we want peace, not war."
+    ],
+    "useful_words": ["film", "director", "character", "rescue", "team", "scene", "horror", "courage", "sacrifice", "recommend"]
+  },
+  "high_sentences": [
+    "Saving Private Ryan is a war film directed by Steven Spielberg.",
+    "A small rescue team is sent to bring him home, and the team is led by Captain Miller.",
+    "The number of lives lost is shocking, yet the film is also about courage and sacrifice.",
+    "Its message is clear: we want peace, not war."
+  ],
+  "error_pairs": [
+    { "wrong": "The rescue team are led by Captain Miller.", "correct": "The rescue team is led by Captain Miller.", "note": "team 在此看作一个整体,谓语用单数 is。" },
+    { "wrong": "The number of lives lost are shocking.", "correct": "The number of lives lost is shocking.", "note": "the number of 作主语指‘数目’,谓语用单数 is。" },
+    { "wrong": "A number of soldiers was killed on the beach.", "correct": "A number of soldiers were killed on the beach.", "note": "a number of + 复数名词,谓语用复数 were。" }
+  ],
+  "paragraph_template": "【战争影评结构】\n第1句 片名+导演:… is a war film directed by …\n第2句 人物:The main characters are …\n第3-4句 场景+信息:The opening scene, in which …, shows the horror of war. Its message is …\n第5句 评价推荐:It is an unforgettable film that I would recommend to everyone."
+}

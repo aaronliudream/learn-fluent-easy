@@ -1,0 +1,79 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "grade": 12,
+  "content": {
+    "title": "定语从句综合复习·关系词速查",
+    "intro": "定语从句修饰名词(先行词)。判断口诀:先看先行词指人还是指物,再看从句缺什么成分——缺主语/宾语用关系代词,缺状语用关系副词(= 介词+which)。逗号后的非限制性从句绝不用 that。",
+    "table": {
+      "headers": [
+        "关系词",
+        "用法 / 例句"
+      ],
+      "rows": [
+        [
+          "who / whom",
+          "指人,作主语用 who、作宾语用 whom:the worker who came / the boss whom I trust"
+        ],
+        [
+          "which",
+          "指物,作主语或宾语:the plan which won;介词后只能用 which:in which"
+        ],
+        [
+          "that",
+          "指人或物(限制性);all/everything/the only/序数词后只能用 that;非限制性不用 that"
+        ],
+        [
+          "whose",
+          "所有格(……的),指人指物皆可:the brand whose name is famous"
+        ],
+        [
+          "when / where / why",
+          "从句缺状语:the day when = on which;the valley where = in which;the reason why = for which"
+        ]
+      ]
+    },
+    "specialRules": [
+      {
+        "rule": "从句缺主语/宾语 → 关系代词;只缺状语 → 关系副词(= 介词+which)",
+        "mark": "the valley where roses grow(缺地点状语→where)"
+      },
+      {
+        "rule": "介词后只能用 which / whom,绝不用 that 或 where/when",
+        "mark": "in which √ / in that ×"
+      },
+      {
+        "rule": "逗号后的非限制性从句不用 that;which 可指代前面整句话",
+        "mark": "She left, which surprised us."
+      },
+      {
+        "rule": "of which / of whom 表部分:all/most/none/some of which(物)/ whom(人)",
+        "mark": "ten workers, all of whom …"
+      },
+      {
+        "rule": "all/everything/the only/the first 等修饰先行词时只用 that",
+        "mark": "everything that he said"
+      }
+    ],
+    "why": [
+      "关系副词 = 介词 + which,本身在从句里作状语,所以从句主语、宾语都不缺;一旦主语或宾语缺了,就要换回关系代词 who/which/that。"
+    ],
+    "gaokaoPoints": [
+      "关系代词 vs 关系副词的判断(看从句缺主宾还是缺状语):语法填空与改错高频。",
+      "非限制性从句用 which/who/whose(不用 that),which 还可指代整句话——语篇填空常考。",
+      "of which / of whom 与 as is known 等固定结构,书面表达加分。"
+    ],
+    "examVsReal": [
+      {
+        "exam": "the house in which she lives（考试/正式）",
+        "real": "the house she lives in / the house where she lives",
+        "note": "口语常省略关系词、把介词放句末"
+      },
+      {
+        "exam": "the reason why he succeeded（考试）",
+        "real": "the reason he succeeded / the reason that he succeeded",
+        "note": "口语里 why 常被省略或用 that"
+      }
+    ]
+  }
+}

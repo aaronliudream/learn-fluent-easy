@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "topic": "Let's Celebrate!",
+  "source": "外研社版必修第二册 Unit 2 同主题完形(惊喜生日会/手作灯笼/中秋月饼/校园化装舞会/除夕烟花/自创节日)。用词限 U2/初中/常见词,答案唯一,4选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Surprise Birthday Party",
+      "text": "Last Saturday we planned a surprise party for my best friend Mia. We wanted to (1)____ her birthday in a special way. In the afternoon, we (2)____ the living room with balloons and bright paper flowers. My brother hid the cake in the kitchen so that Mia would not (3)____ it. At six o'clock, we turned off the lights and waited (4)____. When she opened the door, we all shouted, and the look of (5)____ on her face was wonderful. She said she had never expected such a warm (6)____. We sang together, and then everyone (7)____ a small gift in front of her. Mia was so happy that she almost (8)____. Later we played games and guessed funny (9)____ written on cards. It was a night full of (10)____, and none of us wanted it to end.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "celebrate",
+            "sell",
+            "repair",
+            "count"
+          ],
+          "answer_index": 0,
+          "explanation": "celebrate her birthday 庆祝生日。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "washed",
+            "decorated",
+            "sold",
+            "counted"
+          ],
+          "answer_index": 1,
+          "explanation": "decorated the room with balloons 用气球布置房间。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "drink",
+            "sell",
+            "find",
+            "drive"
+          ],
+          "answer_index": 2,
+          "explanation": "so that she would not find it 以免她发现。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "loudly",
+            "sadly",
+            "hungrily",
+            "quietly"
+          ],
+          "answer_index": 3,
+          "explanation": "是惊喜,所以安静地等待 quietly。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "surprise",
+            "anger",
+            "fear",
+            "boredom"
+          ],
+          "answer_index": 0,
+          "explanation": "脸上是惊喜的表情 the look of surprise。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "warning",
+            "welcome",
+            "loss",
+            "defeat"
+          ],
+          "answer_index": 1,
+          "explanation": "such a warm welcome 如此热情的欢迎。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "threw",
+            "broke",
+            "placed",
+            "burnt"
+          ],
+          "answer_index": 2,
+          "explanation": "placed a gift in front of her 把礼物放在她面前。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "slept",
+            "left",
+            "complained",
+            "cried"
+          ],
+          "answer_index": 3,
+          "explanation": "so happy that she almost cried 高兴得几乎哭出来。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "riddles",
+            "prices",
+            "tickets",
+            "plates"
+          ],
+          "answer_index": 0,
+          "explanation": "guessed funny riddles 猜有趣的谜语。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "fear",
+            "joy",
+            "anger",
+            "silence"
+          ],
+          "answer_index": 1,
+          "explanation": "a night full of joy 充满欢乐的夜晚。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Making a Paper Lantern",
+      "text": "During the festival season, my grandmother taught me how to make a paper (1)____ at home. First, we chose a sheet of bright red (2)____, because red is the colour of good luck. She showed me how to (3)____ the paper neatly in half and cut thin lines along one side. Then we (4)____ the two ends together to form a round shape. We added a handle made of (5)____ so that it could be carried easily. Grandmother told me to work (6)____, or the thin paper would tear. When it was (7)____, we placed a small light inside, and the whole lantern began to (8)____ softly. I felt very (9)____ of the bright little lamp I had made with my own hands. That evening, we hung it by the (10)____ for everyone passing by to enjoy.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "dragon",
+            "poet",
+            "lantern",
+            "harvest"
+          ],
+          "answer_index": 2,
+          "explanation": "make a paper lantern 做纸灯笼。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "water",
+            "bread",
+            "glass",
+            "paper"
+          ],
+          "answer_index": 3,
+          "explanation": "a sheet of red paper 一张红纸。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "fold",
+            "drink",
+            "drive",
+            "sing"
+          ],
+          "answer_index": 0,
+          "explanation": "fold the paper in half 把纸对折。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "dropped",
+            "joined",
+            "sold",
+            "washed"
+          ],
+          "answer_index": 1,
+          "explanation": "joined the two ends together 把两端接在一起。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sugar",
+            "ice",
+            "string",
+            "mud"
+          ],
+          "answer_index": 2,
+          "explanation": "a handle made of string 用绳子做的提手。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "loudly",
+            "angrily",
+            "sleepily",
+            "carefully"
+          ],
+          "answer_index": 3,
+          "explanation": "薄纸易破,要小心地做 carefully。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "finished",
+            "broken",
+            "empty",
+            "wet"
+          ],
+          "answer_index": 0,
+          "explanation": "when it was finished 做好之后。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "fall",
+            "glow",
+            "melt",
+            "shout"
+          ],
+          "answer_index": 1,
+          "explanation": "the lantern began to glow 灯笼开始发光。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "afraid",
+            "bored",
+            "proud",
+            "angry"
+          ],
+          "answer_index": 2,
+          "explanation": "proud of the lamp I made 为自己做的灯感到自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "river",
+            "forest",
+            "ocean",
+            "window"
+          ],
+          "answer_index": 3,
+          "explanation": "hung it by the window 把它挂在窗边。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Mid-Autumn Festival",
+      "text": "The Mid-Autumn Festival is one of the most loved (1)____ in China. It is held in the eighth lunar month, when the moon is at its (2)____ and roundest. On this night, families gather outdoors to (3)____ the bright full moon together. The round shape of the moon stands for (4)____, so being with family really matters. The special food of the festival is the (5)____, a small round cake filled with sweet paste. People often (6)____ mooncakes to friends and relatives as gifts. Long ago, farmers also used this time to celebrate the autumn (7)____, giving thanks for a good year. Children love to listen to old (8)____ about a lady who flew to the moon. Today, even Chinese people living (9)____ look up at the same moon and think of home. The festival fills people's hearts with warmth and (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "festivals",
+            "machines",
+            "deserts",
+            "sports"
+          ],
+          "answer_index": 0,
+          "explanation": "one of the most loved festivals 最受喜爱的节日之一。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "darkest",
+            "brightest",
+            "smallest",
+            "coldest"
+          ],
+          "answer_index": 1,
+          "explanation": "the moon is at its brightest 月亮最亮。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "drink",
+            "drive",
+            "admire",
+            "dig"
+          ],
+          "answer_index": 2,
+          "explanation": "admire the full moon 赏月。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "danger",
+            "illness",
+            "darkness",
+            "togetherness"
+          ],
+          "answer_index": 3,
+          "explanation": "round shape stands for togetherness 圆象征团圆。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "mooncake",
+            "lantern",
+            "envelope",
+            "riddle"
+          ],
+          "answer_index": 0,
+          "explanation": "the special food is the mooncake 节日特色食物是月饼。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "throw",
+            "send",
+            "break",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "send mooncakes as gifts 把月饼当礼物送人。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "winter",
+            "machine",
+            "harvest",
+            "river"
+          ],
+          "answer_index": 2,
+          "explanation": "celebrate the autumn harvest 庆祝秋收。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "prices",
+            "roofs",
+            "plates",
+            "stories"
+          ],
+          "answer_index": 3,
+          "explanation": "old stories about a lady 关于一位仙女的古老故事。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "overseas",
+            "quietly",
+            "sadly",
+            "loudly"
+          ],
+          "answer_index": 0,
+          "explanation": "Chinese people living overseas 居住海外的华人。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "fear",
+            "joy",
+            "silence",
+            "anger"
+          ],
+          "answer_index": 1,
+          "explanation": "warmth and joy 温暖与欢乐。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The School Fancy Dress Party",
+      "text": "Our class held a (1)____ dress party last Friday to celebrate the end of term. Everyone was asked to come (2)____ as a favourite character. I spent the whole evening before putting up balloons and (3)____, so by the night I felt quite tired. When the guests arrived, the classroom looked (4)____ and full of colour. One tall (5)____ came dressed as Batman, and a girl wore a beautiful bride's dress. We could not always (6)____ who was who, which made everyone laugh. Two students dressed as chickens kept (7)____ their arms and waving at us. Our teacher, who is usually very (8)____, even wore a funny hat. We played music, danced, and shared a big (9)____ that one parent had baked. By the end of the night, everyone agreed it had been an evening full of (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "lunar",
+            "polar",
+            "fancy",
+            "starving"
+          ],
+          "answer_index": 2,
+          "explanation": "a fancy dress party 化装舞会。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "washed",
+            "sold",
+            "cooked",
+            "dressed"
+          ],
+          "answer_index": 3,
+          "explanation": "come dressed as a character 打扮成某个角色来。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "decorations",
+            "deserts",
+            "machines",
+            "warnings"
+          ],
+          "answer_index": 0,
+          "explanation": "balloons and decorations 气球和装饰物。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "empty",
+            "bright",
+            "dull",
+            "silent"
+          ],
+          "answer_index": 1,
+          "explanation": "looked bright and full of colour 看上去明亮多彩。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "roof",
+            "riddle",
+            "guy",
+            "lantern"
+          ],
+          "answer_index": 2,
+          "explanation": "one tall guy dressed as Batman 一个高个子男生扮成蝙蝠侠。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "eat",
+            "sell",
+            "build",
+            "tell"
+          ],
+          "answer_index": 3,
+          "explanation": "could not tell who was who 分不清谁是谁。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "moving",
+            "selling",
+            "washing",
+            "cooking"
+          ],
+          "answer_index": 0,
+          "explanation": "moving their arms and waving 摆动手臂招手。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "hungry",
+            "strict",
+            "lunar",
+            "global"
+          ],
+          "answer_index": 1,
+          "explanation": "usually very strict 平时很严格。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lantern",
+            "envelope",
+            "cake",
+            "riddle"
+          ],
+          "answer_index": 2,
+          "explanation": "shared a big cake 分享一个大蛋糕。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "danger",
+            "silence",
+            "anger",
+            "laughter"
+          ],
+          "answer_index": 3,
+          "explanation": "an evening full of laughter 充满笑声的夜晚。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Fireworks on New Year's Eve",
+      "text": "On New Year's (1)____, my family always goes down to the river to watch the fireworks. We arrive early to find a good (2)____ near the water. As the night grows dark, the crowd by the bank gets (3)____ and more excited. Just before midnight, everyone counts down (4)____ together. Then the first firework shoots up and (5)____ into a thousand points of light. The colours are so (6)____ that the whole sky seems to come alive. Children point upwards and (7)____ with delight, while parents lift the smallest ones onto their shoulders. The light shines on the water, so it looks as if the river is (8)____, too. When the show finally (9)____, we walk home slowly, still talking about the most beautiful moment. For me, those few minutes by the river are the best (10)____ of the whole year.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "Eve",
+            "river",
+            "roof",
+            "plate"
+          ],
+          "answer_index": 0,
+          "explanation": "New Year's Eve 除夕。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "spot",
+            "warning",
+            "loss"
+          ],
+          "answer_index": 1,
+          "explanation": "find a good spot 找个好位置。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "smaller",
+            "quieter",
+            "larger",
+            "colder"
+          ],
+          "answer_index": 2,
+          "explanation": "the crowd gets larger 人群越来越多。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sadly",
+            "secretly",
+            "nervously",
+            "loudly"
+          ],
+          "answer_index": 3,
+          "explanation": "counts down loudly 大声倒数。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "bursts",
+            "sleeps",
+            "sells",
+            "melts"
+          ],
+          "answer_index": 0,
+          "explanation": "shoots up and bursts into light 升空后炸开成光点。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "dull",
+            "bright",
+            "dark",
+            "grey"
+          ],
+          "answer_index": 1,
+          "explanation": "the colours are so bright 颜色如此鲜艳。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sleep",
+            "complain",
+            "cheer",
+            "leave"
+          ],
+          "answer_index": 2,
+          "explanation": "point upwards and cheer 指着上方欢呼。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sleeping",
+            "falling",
+            "freezing",
+            "shining"
+          ],
+          "answer_index": 3,
+          "explanation": "the river is shining 河面也在闪光。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "ends",
+            "begins",
+            "rains",
+            "snows"
+          ],
+          "answer_index": 0,
+          "explanation": "when the show finally ends 表演终于结束时。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "prices",
+            "moments",
+            "warnings",
+            "losses"
+          ],
+          "answer_index": 1,
+          "explanation": "the best moments of the year 一年里最美的时刻。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Creating a Special Day",
+      "text": "Have you ever wondered why people (1)____ special days like World Smile Day? Such days are not old traditions; they are (2)____ by ordinary people who want to share a good idea. World Smile Day, for example, (3)____ people to be kind and to pass a smile on to others. The idea is (4)____: one friendly smile can brighten a stranger's whole day. On this day, some schools ask students to do one kind (5)____ for someone else, such as helping a classmate. Shops may give away free badges with a smiling (6)____ on them. The day does not cost much, yet it can (7)____ a lot of warmth among people. Our class once decided to (8)____ our own special day, which we called Thank-You Day. Everyone wrote a short note to someone they were (9)____ to. By the end, the whole school was full of (10)____ faces.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "break",
+            "create",
+            "count"
+          ],
+          "answer_index": 2,
+          "explanation": "why people create special days 人们为何创立特别的日子。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "washed",
+            "sold",
+            "eaten",
+            "invented"
+          ],
+          "answer_index": 3,
+          "explanation": "they are invented by ordinary people 由普通人发明。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "encourages",
+            "sells",
+            "breaks",
+            "counts"
+          ],
+          "answer_index": 0,
+          "explanation": "the day encourages people to be kind 鼓励人们友善。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "heavy",
+            "simple",
+            "wet",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "the idea is simple 这个想法很简单。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "roof",
+            "act",
+            "plate"
+          ],
+          "answer_index": 2,
+          "explanation": "do one kind act 做一件善事。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "river",
+            "machine",
+            "desert",
+            "face"
+          ],
+          "answer_index": 3,
+          "explanation": "a smiling face 一张微笑的脸。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "bring",
+            "sell",
+            "break",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "it can bring warmth 能带来温暖。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "throw",
+            "create",
+            "drive",
+            "wash"
+          ],
+          "answer_index": 1,
+          "explanation": "decided to create our own day 决定创立自己的节日。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "angry",
+            "cruel",
+            "grateful",
+            "afraid"
+          ],
+          "answer_index": 2,
+          "explanation": "someone they were grateful to 他们感激的人。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "crying",
+            "sleeping",
+            "empty",
+            "smiling"
+          ],
+          "answer_index": 3,
+          "explanation": "full of smiling faces 满是笑脸。"
+        }
+      ]
+    }
+  ]
+}

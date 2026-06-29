@@ -1,0 +1,41 @@
+{
+  "volume": "elective4",
+  "unit": "U6",
+  "grade": 12,
+  "content": {
+    "title": "情态动词综合复习·义务/推测/modal + have done 速查",
+    "intro": "情态动词后接动词原形,表达说话人的态度:必要、建议、许可、能力,以及对现在或过去的推测。判断口诀:看语境给的『证据强弱』和『时间(现在 / 过去)』——现在推测用『情态 + do/be』,过去推测用『情态 + have done』。",
+    "table": {
+      "headers": ["用途", "情态动词 / 例句"],
+      "rows": [
+        ["强制必要", "must / have to：Astronauts must wear a spacesuit outside."],
+        ["建议劝告", "should / ought to：You should rest before the launch."],
+        ["许可", "may / can：Visitors may take photos here."],
+        ["能力", "can / could / be able to：She could stay calm in danger."],
+        ["现在·肯定推测", "must be/do：The lights are on, so someone must be inside."],
+        ["现在·否定推测", "can't be/do：It moves too fast; it can't be a star."],
+        ["现在·可能", "may / might / could be：There might be life out there."],
+        ["过去推测/评论", "must / can't / should / needn't / could + have done"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "must have done = 对过去有把握的肯定推断", "mark": "The ground is wet; it must have rained." },
+      { "rule": "can't have done = 对过去绝无可能的否定推断", "mark": "He can't have seen it; it was too cloudy." },
+      { "rule": "should have done = 本该做却没做(批评/后悔)", "mark": "You should have checked the tank." },
+      { "rule": "needn't have done = 做了却没必要", "mark": "You needn't have worried; all went well." },
+      { "rule": "could / might have done = 过去本可能(往往未实现)", "mark": "She might have inspired a whole generation." }
+    ],
+    "why": [
+      "现在推测看『现在的证据』→ 情态 + 动词原形;过去推测看『过去发生的事』→ 情态 + have done。把握程度从强到弱:must(几乎肯定)> may/might/could(也许)> can't(几乎不可能)。"
+    ],
+    "gaokaoPoints": [
+      "must / have to 在肯定句都表必要,但否定:mustn't = 禁止,don't have to / needn't = 不必。",
+      "情态 + have done 是语法填空与单选高频:must have done(肯定) / can't have done(否定) / should have done(本该)/ needn't have done(白做了)的语义辨析。",
+      "情态动词后一律接动词原形,must to / can to 都是错的。"
+    ],
+    "examVsReal": [
+      { "exam": "You must finish it today.（考试:强制）", "real": "You've got to finish it today.", "note": "口语里常用 have got to / gotta 表必要,书面用 must / have to。" },
+      { "exam": "It must have rained last night.（考试:对过去肯定推测）", "real": "It must've rained last night.", "note": "口语 must have 常缩成 must've,听力里要听出 /əv/ 这个弱读。" }
+    ]
+  }
+}

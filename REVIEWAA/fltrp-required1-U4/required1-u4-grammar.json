@@ -1,0 +1,745 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "grammar_title": "限制性定语从句1:关系代词 who / whom / which / that / whose",
+  "source": "外研社版(新标准)必修第一册 Unit 4 Friends Forever · Using language:限制性定语从句(关系代词)。本单元只考关系代词(指人 who/whom、指物 which/that、所属 whose),不涉关系副词 when/where/why(留待 U5)。句子地道、友谊主题、答案唯一(干扰项为错误关系词)。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "who / whom(指人:主语 vs 宾语)",
+      "overview": "先行词指人、从句缺主语 → who;从句缺宾语且前面有介词 → 介词 + whom。who 不能作介词宾语,whom 不作主语。"
+    },
+    {
+      "code": "u4.02",
+      "point": "which / that(指物)",
+      "overview": "先行词指物(thing/tool/letter/gift 等)、从句缺主语或宾语 → 用 which 或 that;指物不能用 who/whom/whose 来代替。"
+    },
+    {
+      "code": "u4.03",
+      "point": "whose(所属)+ all/only/最高级后只用 that",
+      "overview": "表'……的'(所属关系)无论指人指物都用 whose;先行词被 all/every(thing)/the only/最高级修饰时,只能用 that,不用 which。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "Lucy is the friend ____ helped me most when I felt lonely.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 friend 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "I admire people ____ always keep their promises to their friends.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 people 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The boy ____ shared his lunch with me became my best friend.",
+      "options": [
+        "which",
+        "whose",
+        "who",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 boy 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She is the kind of person ____ never lets a friend down.",
+      "options": [
+        "which",
+        "whose",
+        "whom",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 person 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "A true friend is someone ____ stays with you in hard times.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 someone 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The classmates ____ welcomed me made my first day much easier.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 classmates 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He is a friend ____ knows almost all of my secrets.",
+      "options": [
+        "which",
+        "whose",
+        "who",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 friend 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The girl ____ sat next to me kindly explained the lesson.",
+      "options": [
+        "which",
+        "whose",
+        "whom",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 girl 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "I really respect teenagers ____ stand up for their friends.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 teenagers 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "My neighbour is a man ____ always greets everyone warmly.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 man 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The people ____ want to join our walking group are all teenagers.",
+      "options": [
+        "which",
+        "whose",
+        "who",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 people 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She warmly thanked the stranger ____ returned her lost phone.",
+      "options": [
+        "which",
+        "whose",
+        "whom",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 stranger 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Real friends are those ____ understand you without many words.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 those 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He is the friend with ____ I share all my worries.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 with 后指人 → whom(who 不作介词宾语)。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She is the person to ____ I owe most of my confidence.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 to 后指人 → whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "These are the classmates from ____ I have learnt so much.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 from 后指人 → whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Mr Lee is the teacher to ____ I am most grateful of all.",
+      "options": [
+        "whom",
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 to 后指人 → whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "They are the friends on ____ I can always rely.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 on 后指人 → whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He is someone for ____ I would gladly do anything.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 for 后指人 → whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She is the one with ____ I spent my happiest school days.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 with 后指人 → whom。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The app ____ connects old friends has become very popular.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 app 指物、从句缺主语 → which(指物不用 who/whom/whose)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Social media is a tool ____ helps us stay in touch with friends.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 tool 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "He sent me a letter ____ took almost two weeks to arrive.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 letter 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The photos ____ we posted online made everyone smile.",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 photos 指物、从句缺宾语 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Friendship is a gift ____ money simply cannot buy.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 gift 指物、从句缺宾语 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The message ____ she left for me cheered me up at once.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 message 指物、从句缺宾语 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "I still keep the small present ____ my friend gave me.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 present 指物、从句缺宾语 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "This is the recipe ____ describes a perfect 'friendship soup'.",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 recipe 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The advice ____ helped me most came from a faraway friend.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 advice 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Here is the update ____ my old roommate shared this morning.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 update 指物、从句缺宾语 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The story ____ touched me most was about two loyal friends.",
+      "options": [
+        "who",
+        "whom",
+        "that",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 story 指物、从句缺主语 → that(指物可用 that)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Trust is the quality ____ matters most in a friendship.",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 quality 指物、从句缺主语 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The card ____ arrived this morning was from my best friend.",
+      "options": [
+        "that",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 card 指物、从句缺主语 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "He told me a secret ____ I have carefully kept ever since.",
+      "options": [
+        "who",
+        "that",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 secret 指物、从句缺宾语 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The long walk ____ we took together cleared up our quarrel.",
+      "options": [
+        "who",
+        "whom",
+        "that",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 walk 指物、从句缺宾语 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "This is the song ____ always reminds me of my old friends.",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 song 指物、从句缺主语 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The kindness ____ she showed me was really hard to forget.",
+      "options": [
+        "that",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 kindness 指物、从句缺宾语 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The gift ____ she carefully chose brought the two of us closer.",
+      "options": [
+        "who",
+        "that",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 gift 指物、从句缺宾语 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The promise ____ he made to me has never once been broken.",
+      "options": [
+        "who",
+        "whom",
+        "that",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 promise 指物、从句缺宾语 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Comfort is something ____ a good friend always quietly offers.",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 something 指物、从句缺宾语 → that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Lucy is the girl ____ ideas are always so inspiring.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "表所属(她的 ideas)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "I have a friend ____ kindness everyone around her admires.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "表所属(他/她的 kindness)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "He is the classmate ____ notes saved me before the exam.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "表所属(他的 notes)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "She is a writer ____ stories are all about true friendship.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "表所属(她的 stories)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "That is the boy ____ phone I borrowed at school yesterday.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "表所属(他的 phone)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "We met a teacher ____ patience slowly changed our whole class.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "表所属(他/她的 patience)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "I know a girl ____ warm smile can brighten any bad day.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "表所属(她的 smile)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "He is a partner ____ help I could never have managed without.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "表所属(他的 help)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "They are the neighbours ____ door is always open to us.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "表所属(他们的 door)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "She is the friend ____ advice I trust more than anyone's.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "表所属(她的 advice)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "A real friend is the best gift ____ life can ever give you.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词被最高级 best 修饰 → 只用 that(不用 which)。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Everything ____ he said about friendship turned out to be true.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 everything → 只用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "This is the only thing ____ really matters between true friends.",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词被 the only 修饰 → 只用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Loyalty is all ____ I really ask of a good friend.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 all → 只用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was the kindest thing ____ anyone had ever done for me.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词被最高级 kindest 修饰 → 只用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "There is nothing ____ can break a friendship built on trust.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 nothing → 只用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was the most useful advice ____ I had ever received from her.",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词被最高级 most useful 修饰 → 只用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The only message ____ truly comforted me that night was from her.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词被 the only 修饰 → 只用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Friendship is the most precious thing ____ we can ever share.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词被最高级 most precious 修饰 → 只用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "He gave me all the support ____ I needed during that hard week.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词被 all 修饰 → 只用 that。"
+    }
+  ]
+}

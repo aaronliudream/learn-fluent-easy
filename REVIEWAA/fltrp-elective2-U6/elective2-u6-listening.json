@@ -1,0 +1,421 @@
+{
+  "volume": "elective2",
+  "unit": "U6",
+  "topic": "Survival",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);speaker 仅角色标注。",
+  "source": "外研社版选择性必修第二册 Unit 6 同主题听力(写求生故事/城市动物/野外蛇咬急救/鸟撞玻璃/聊鲁滨逊/危机小贴士)。用词限 U6/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U6 听力·对话 Planning a Survival Story",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Let's write a survival story together. Where should we set it?",
+        "Leo: How about Antarctica? The cold there is a real danger.",
+        "Mia: Good idea. So our hero is alone on the ice. What dangers does he face?",
+        "Leo: The freezing wind, no food, and no way to call for help.",
+        "Mia: How does he stay alive?",
+        "Leo: He builds a shelter from snow and melts ice for water.",
+        "Mia: And how does he feel?",
+        "Leo: Frightened at first, but he stays calm and never gives up hope."
+      ],
+      "translation_cn": "Mia 和 Leo 一起写求生故事;他们把背景定在南极,因为那里的严寒是真正的危险;主人公独自在冰上,面对刺骨寒风、没有食物、无法求救;他用雪搭建庇护所、把冰融化成水;一开始害怕,但保持冷静、从不放弃希望。",
+      "questions": [
+        {
+          "stem": "Where do Mia and Leo decide to set their story?",
+          "options": [
+            "In Antarctica.",
+            "In a big city.",
+            "On a warm beach.",
+            "In a forest."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do they choose that place?",
+          "options": [
+            "It is full of friendly people.",
+            "The freezing cold is a real danger.",
+            "It is easy to find food there.",
+            "It is close to their school."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does the hero get water?",
+          "options": [
+            "He melts ice.",
+            "He buys it from a shop.",
+            "He waits for the rain.",
+            "He drinks from a river."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the hero build for shelter?",
+          "options": [
+            "A house of bricks.",
+            "A shelter from snow.",
+            "A boat.",
+            "A tall tower."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does the hero feel by the end?",
+          "options": [
+            "He gives up at once.",
+            "He is angry with everyone.",
+            "He stays calm and keeps hoping.",
+            "He feels bored and sleepy."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U6 听力·短文 Animals in Our Cities",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "More and more wild animals are moving into our cities.",
+        "Foxes, racoons and even wild pigs now live among us.",
+        "As cities become greener, they offer good places for animals to live.",
+        "With fewer natural predators around, these newcomers often do very well.",
+        "Hungry animals also find plenty to eat in the food we throw away."
+      ],
+      "translation_cn": "越来越多的野生动物迁入我们的城市;狐狸、浣熊甚至野猪如今与我们共处;随着城市变得更绿,它们为动物提供了好的栖身之所;由于天敌更少,这些新来者往往过得很好;饥饿的动物也能在我们丢弃的食物里找到很多吃的。",
+      "questions": [
+        {
+          "stem": "What is happening to wild animals, according to the passage?",
+          "options": [
+            "They are dying out completely.",
+            "They are all kept in zoos.",
+            "They are leaving the country.",
+            "They are moving into our cities."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which animals are mentioned?",
+          "options": [
+            "Foxes, racoons and wild pigs.",
+            "Whales and sharks.",
+            "Cows and sheep only.",
+            "Tigers and elephants."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do greener cities suit the animals?",
+          "options": [
+            "They are quieter than the sea.",
+            "They offer good places to live.",
+            "They have colder weather.",
+            "They have no people at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do these newcomers often do well?",
+          "options": [
+            "They are fed by the government.",
+            "They sleep all winter.",
+            "There are fewer predators around.",
+            "They are very large."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Where do hungry animals find food?",
+          "options": [
+            "In locked shops.",
+            "Deep under the ground.",
+            "Only far outside the city.",
+            "In the food people throw away."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U6 听力·对话 A Snake Bite in the Wild",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: Help! A snake just bit Tom's leg while we were hiking.",
+        "Guide: Stay calm. Keep him still so the poison spreads slowly.",
+        "Anna: Should I try to suck out the poison?",
+        "Guide: No, never do that. Just clean the wound and cover it.",
+        "Anna: And then what?",
+        "Guide: We must get him to hospital as quickly as we can.",
+        "Anna: I'm so glad you knew what to do.",
+        "Guide: Whenever you go into the wild, it helps to know basic first aid."
+      ],
+      "translation_cn": "远足时一条蛇咬了 Tom 的腿;向导让 Anna 保持冷静、让 Tom 别动好让毒液扩散得慢些;Anna 问要不要把毒吸出来,向导说绝对不要,只需清理伤口并盖好;接着要尽快把他送到医院;向导说每次进野外都该懂些基本急救。",
+      "questions": [
+        {
+          "stem": "What happened to Tom?",
+          "options": [
+            "A snake bit his leg.",
+            "He fell off a rock.",
+            "He burnt his hand.",
+            "He got lost alone."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the guide tell Anna to do first?",
+          "options": [
+            "Run for help at once.",
+            "Stay calm and keep Tom still.",
+            "Carry Tom on her back.",
+            "Give Tom some food."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Should Anna suck out the poison?",
+          "options": [
+            "Yes, right away.",
+            "Yes, after a rest.",
+            "No, she should never do that.",
+            "Only if Tom agrees."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What must they do next?",
+          "options": [
+            "Wait until morning.",
+            "Look for the snake.",
+            "Climb higher up.",
+            "Get Tom to hospital quickly."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the guide advise about the wild?",
+          "options": [
+            "Learn basic first aid before you go.",
+            "Never go into the wild again.",
+            "Always travel completely alone.",
+            "Carry no water at all."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U6 听力·短文 Birds and Glass",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many birds cannot tell the difference between the open sky and clear glass.",
+        "Because of this, they fly straight into the windows of tall city buildings.",
+        "Scientists estimate that huge numbers of birds die this way every year.",
+        "Some kinds of birds are hurt much more than others.",
+        "They have not yet changed the old routes that take them through our cities."
+      ],
+      "translation_cn": "许多鸟分不清开阔的天空和透明的玻璃;因此它们径直撞向城市高楼的窗户;科学家估计每年有大量鸟因此死亡;有些种类的鸟受害远比其他鸟严重;它们还没有改变那些带它们穿过城市的古老路线。",
+      "questions": [
+        {
+          "stem": "Why do many birds fly into windows?",
+          "options": [
+            "They are chasing other birds.",
+            "They cannot tell the sky from clear glass.",
+            "They want to enter the buildings.",
+            "They are looking for nests."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What kind of buildings does this happen at?",
+          "options": [
+            "Small country houses.",
+            "Underground stations.",
+            "Tall city buildings.",
+            "Old wooden huts."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do scientists estimate?",
+          "options": [
+            "That birds avoid all cities.",
+            "That the danger is now gone.",
+            "That only one bird dies a year.",
+            "That huge numbers of birds die each year."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Are all kinds of birds hurt equally?",
+          "options": [
+            "No, some suffer much more.",
+            "Yes, exactly the same.",
+            "No bird is ever hurt.",
+            "Only city birds are safe."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why are some birds hurt more than others?",
+          "options": [
+            "They fly far too slowly.",
+            "Their old routes still lead them through cities.",
+            "They never leave the forest.",
+            "They are too small to see glass."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U6 听力·对话 Talking about Robinson Crusoe",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Sam: I've just finished Robinson Crusoe. What a survival story!",
+        "Kate: I think so too. He spends years alone on a desert island.",
+        "Sam: What helps him survive, do you think?",
+        "Kate: His calmness and patience, I believe. He never panics.",
+        "Sam: That's true. He also makes his own tools and grows his own food.",
+        "Kate: The way I see it, his clever and hopeful mind matters most.",
+        "Sam: I can't agree more. We can all learn from him in a crisis.",
+        "Kate: No matter how hard things get, he keeps on trying."
+      ],
+      "translation_cn": "Sam 刚读完《鲁滨逊漂流记》,觉得是了不起的求生故事;Kate 也这么认为,主人公在荒岛上独自生活多年;两人讨论是什么帮他活下来;Kate 认为是冷静和耐心,他从不惊慌;Sam 补充他还自制工具、自己种粮食;Kate 觉得最重要的是他聪明而充满希望的头脑;两人一致认为无论多难,他都坚持不懈。",
+      "questions": [
+        {
+          "stem": "What book have Sam and Kate read?",
+          "options": [
+            "A book about Mars.",
+            "A city guidebook.",
+            "Robinson Crusoe.",
+            "A cookery book."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Where does the man in the story live?",
+          "options": [
+            "In a busy city.",
+            "On a large ship.",
+            "In a mountain village.",
+            "Alone on a desert island."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What qualities help him survive, in Kate's view?",
+          "options": [
+            "Calmness and patience.",
+            "Wealth and good luck.",
+            "Strength and anger.",
+            "Speed and noise."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the man make and grow for himself?",
+          "options": [
+            "Money and gold.",
+            "His own tools and food.",
+            "Cars and boats.",
+            "Books and maps."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What lesson do Sam and Kate draw from him?",
+          "options": [
+            "It is better to give up early.",
+            "Survival is purely about luck.",
+            "We can learn from him in a crisis.",
+            "No one can survive alone."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U6 听力·短文 A Tip for a Crisis",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is one simple tip for facing any crisis.",
+        "First, stay calm, because panic only makes things worse.",
+        "Next, look closely at what you have and what you really need.",
+        "Then make a clear plan, one small step at a time.",
+        "No matter how hard the situation seems, a calm and hopeful mind will help you find a way through."
+      ],
+      "translation_cn": "这里有一个应对任何危机的简单贴士:第一,保持冷静,因为惊慌只会让情况更糟;第二,仔细看看你拥有什么、真正需要什么;然后制定清晰的计划,一次走一小步;无论情况看起来多难,冷静而充满希望的心态都会帮你找到出路。",
+      "questions": [
+        {
+          "stem": "What is the first thing to do in a crisis?",
+          "options": [
+            "Shout loudly.",
+            "Run away fast.",
+            "Call everyone.",
+            "Stay calm."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why should you not panic?",
+          "options": [
+            "Panic only makes things worse.",
+            "It wakes the neighbours.",
+            "It costs too much money.",
+            "It is against the rules."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should you look closely at?",
+          "options": [
+            "The weather outside.",
+            "What you have and really need.",
+            "Other people's plans.",
+            "The time on the clock."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How should you make your plan?",
+          "options": [
+            "All at once in a hurry.",
+            "By copying a friend.",
+            "One small step at a time.",
+            "Without any thinking."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What will help you find a way through?",
+          "options": [
+            "A large amount of money.",
+            "A very loud voice.",
+            "A long, fast run.",
+            "A calm and hopeful mind."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U6",
+  "topic": "The Call of the Challenger",
+  "source": "外研社新标准选择性必修第四册 Unit 6 同主题完形(太空营/追星少年/第一颗卫星/鼓起勇气申请/参观天文台/首次太空行走)。用词限本单元/常见词,答案唯一,选项同词性,与阅读·听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Week at Space Camp",
+      "text": "Last summer I spent a week at a space camp, and it was truly (1)____. On the first day we learned some basic (2)____ about astronomy in the observatory. Then we got the chance to design and (3)____ our own model rockets into the air. The most exciting part came when we tried the flight (4)____, a machine that makes you feel as if you are really flying. I put on a heavy (5)____ and went for a walk in 'zero gravity'. It felt so (6)____ that I almost forgot none of it was real. Floating around like that is strange, and a few campers even began to feel (7)____. Luckily, I was fine. Our trainers told us that real astronauts need great (8)____ to keep working in such conditions. By the end of the week, I (9)____ understood why people give years of their lives to space travel. I came home tired but proud, already (10)____ to go back next year.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "awesome",
+            "empty",
+            "quiet",
+            "cheap"
+          ],
+          "answer_index": 0,
+          "explanation": "truly awesome 真是太棒了。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "weather",
+            "theory",
+            "money",
+            "sport"
+          ],
+          "answer_index": 1,
+          "explanation": "basic theory about astronomy 关于天文学的基础理论。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "eat",
+            "sell",
+            "launch",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "launch model rockets 发射模型火箭。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "garden",
+            "market",
+            "ticket",
+            "simulator"
+          ],
+          "answer_index": 3,
+          "explanation": "flight simulator 飞行模拟器。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "spacesuit",
+            "umbrella",
+            "blanket",
+            "basket"
+          ],
+          "answer_index": 0,
+          "explanation": "put on a spacesuit 穿上宇航服。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "boring",
+            "lifelike",
+            "cheap",
+            "silent"
+          ],
+          "answer_index": 1,
+          "explanation": "so lifelike 如此逼真。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "proud",
+            "hungry",
+            "sick",
+            "calm"
+          ],
+          "answer_index": 2,
+          "explanation": "feel sick(空间病)感到难受。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "money",
+            "luck",
+            "noise",
+            "self-discipline"
+          ],
+          "answer_index": 3,
+          "explanation": "need great self-discipline 需要很强的自律。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "finally",
+            "hardly",
+            "never",
+            "rarely"
+          ],
+          "answer_index": 0,
+          "explanation": "finally understood 终于明白。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "afraid",
+            "eager",
+            "sorry",
+            "unable"
+          ],
+          "answer_index": 1,
+          "explanation": "eager to go back 渴望再去。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Boy Who Loved the Stars",
+      "text": "Ever since he was little, Tom had loved looking up at the (1)____ sky. While other children played games, he would lie on the grass and (2)____ the stars for hours. His grandfather gave him a small (3)____ so that he could see the Moon more clearly. Through it, Tom studied the (4)____ surface of the Moon, with its mountains and shadows. He read every book he could find about space (5)____, from the first satellites to the latest missions. His dream was to become an (6)____ one day and travel beyond the Earth. People sometimes told him that the stars were too (7)____ to reach, but Tom never gave up hope. He knew the journey would be hard and even (8)____, yet that only made him want it more. 'One day,' he said, 'I will (9)____ for the stars, no matter how far away they are.' His teachers admired his (10)____ and were sure he would go far.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "busy",
+            "narrow",
+            "night",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "night sky 夜空。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "eat",
+            "buy",
+            "watch"
+          ],
+          "answer_index": 3,
+          "explanation": "watch the stars 看星星。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "telescope",
+            "ticket",
+            "basket",
+            "mirror"
+          ],
+          "answer_index": 0,
+          "explanation": "a small telescope 一架小望远镜。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cheap",
+            "lunar",
+            "noisy",
+            "kind"
+          ],
+          "answer_index": 1,
+          "explanation": "the lunar surface 月球表面。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "shopping",
+            "cooking",
+            "exploration",
+            "traffic"
+          ],
+          "answer_index": 2,
+          "explanation": "space exploration 太空探索。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "actor",
+            "farmer",
+            "driver",
+            "astronaut"
+          ],
+          "answer_index": 3,
+          "explanation": "become an astronaut 成为宇航员。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "distant",
+            "cheap",
+            "heavy",
+            "quiet"
+          ],
+          "answer_index": 0,
+          "explanation": "too distant to reach 太遥远而够不到。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "funny",
+            "hazardous",
+            "easy",
+            "boring"
+          ],
+          "answer_index": 1,
+          "explanation": "hard and even hazardous 艰难甚至危险。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "pay",
+            "wait",
+            "reach",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "reach for the stars 追寻星辰。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "money",
+            "noise",
+            "fear",
+            "courage"
+          ],
+          "answer_index": 3,
+          "explanation": "admired his courage 钦佩他的勇气。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Night the First Satellite Flew",
+      "text": "In 1957, the world's first (1)____ was launched into space, and nothing was ever quite the same again. On that autumn night, families went outside and looked up, hoping to (2)____ a tiny moving light crossing the sky. Newspapers were full of the news, and many people could hardly (3)____ that such a thing was possible. The little machine could not do much by today's (4)____, but at the time it felt like magic. It (5)____ around the Earth again and again, sending back simple signals. Scientists were (6)____ to learn how it behaved so far above the ground. The success encouraged other countries to begin their own space (7)____. Soon rockets were carrying animals, and then brave people, into (8)____. Looking back, that first small satellite (9)____ the start of a great adventure. It reminded everyone that humans had finally begun to (10)____ the door to outer space.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "satellite",
+            "garden",
+            "market",
+            "lesson"
+          ],
+          "answer_index": 0,
+          "explanation": "the first satellite 第一颗卫星。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "spot",
+            "cook",
+            "paint"
+          ],
+          "answer_index": 1,
+          "explanation": "spot a moving light 看到一束移动的光。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "cook",
+            "believe",
+            "drive"
+          ],
+          "answer_index": 2,
+          "explanation": "hardly believe 几乎不敢相信。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "gardens",
+            "markets",
+            "tickets",
+            "standards"
+          ],
+          "answer_index": 3,
+          "explanation": "by today's standards 以今天的标准看。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "circled",
+            "sold",
+            "painted",
+            "cooked"
+          ],
+          "answer_index": 0,
+          "explanation": "circled around the Earth 绕地球运行。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "afraid",
+            "eager",
+            "angry",
+            "sorry"
+          ],
+          "answer_index": 1,
+          "explanation": "eager to learn 急于了解。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "dinners",
+            "gardens",
+            "programmes",
+            "songs"
+          ],
+          "answer_index": 2,
+          "explanation": "space programmes 太空计划。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sleep",
+            "water",
+            "traffic",
+            "space"
+          ],
+          "answer_index": 3,
+          "explanation": "into space 进入太空。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "marked",
+            "sold",
+            "ate",
+            "hid"
+          ],
+          "answer_index": 0,
+          "explanation": "marked the start 标志着开始。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lock",
+            "open",
+            "sell",
+            "paint"
+          ],
+          "answer_index": 1,
+          "explanation": "open the door to space 打开通往太空的大门。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Finding the Courage to Apply",
+      "text": "When I first saw the advertisement for the space programme, I almost did not (1)____. I was excited, but a small voice inside told me I was not (2)____ enough. To take part, you had to (3)____ a three-minute video explaining why you would make a good candidate. The very idea made my heart (4)____ with fear. For days I could not decide. Then I remembered the (5)____ of the early astronauts, who had faced real danger and still climbed aboard their rockets. If they (6)____ such great danger and still went on, surely I could record a short video. So I sat down, took a deep breath, and (7)____ my fear aside. I spoke about my love of the stars and my (8)____ to explore the unknown. When I finally pressed 'send', I felt (9)____ of myself for trying. Whatever the result, I had learned an important (10)____: courage is not having no fear, but acting in spite of it.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sleep",
+            "sell",
+            "apply",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "did not apply 没去申请。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "hungry",
+            "late",
+            "busy",
+            "brave"
+          ],
+          "answer_index": 3,
+          "explanation": "not brave enough 不够勇敢。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "submit",
+            "eat",
+            "paint",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "submit a video 提交一段视频。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleep",
+            "race",
+            "sing",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "made my heart race 让我心跳加速。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "weather",
+            "price",
+            "courage",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "the courage of the astronauts 宇航员的勇气。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "cooked",
+            "painted",
+            "faced"
+          ],
+          "answer_index": 3,
+          "explanation": "faced such danger 面对这样的危险。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "pushed",
+            "sold",
+            "ate",
+            "painted"
+          ],
+          "answer_index": 0,
+          "explanation": "pushed my fear aside 把恐惧推到一边。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "fear",
+            "wish",
+            "price",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "my wish to explore 想去探索的愿望。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "afraid",
+            "sorry",
+            "proud",
+            "bored"
+          ],
+          "answer_index": 2,
+          "explanation": "felt proud of myself 为自己感到骄傲。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "ticket",
+            "garden",
+            "lesson"
+          ],
+          "answer_index": 3,
+          "explanation": "learned an important lesson 学到重要一课。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A Visit to the Observatory",
+      "text": "Last weekend our class visited a large (1)____ on top of a quiet hill. We had come to learn about (2)____, the study of stars and planets. A friendly scientist showed us a huge (3)____ pointing up at the night sky. Through it, the Moon looked so close that we could see its (4)____ clearly, every hill and crater sharp and bright. The scientist explained that with the naked (5)____ we can see only a tiny part of the sky. He told us that our Sun is just one star among billions in our (6)____. Then he (7)____ the telescope towards a faint patch of light, which turned out to be a distant cloud where new stars are born. We were all (8)____ by what we saw. Before we left, he reminded us that the universe is still mostly (9)____, and that there is so much left to discover. I went home determined to keep (10)____ the night sky.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "observatory",
+            "restaurant",
+            "factory",
+            "library"
+          ],
+          "answer_index": 0,
+          "explanation": "an observatory 一座天文台。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cooking",
+            "astronomy",
+            "farming",
+            "shopping"
+          ],
+          "answer_index": 1,
+          "explanation": "learn about astronomy 学习天文学。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "basket",
+            "mirror",
+            "telescope",
+            "ladder"
+          ],
+          "answer_index": 2,
+          "explanation": "a huge telescope 一架巨大的望远镜。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "weather",
+            "surface"
+          ],
+          "answer_index": 3,
+          "explanation": "see its surface 看见它的表面。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "eye",
+            "ear",
+            "hand",
+            "foot"
+          ],
+          "answer_index": 0,
+          "explanation": "with the naked eye 用肉眼。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "garden",
+            "galaxy",
+            "market",
+            "village"
+          ],
+          "answer_index": 1,
+          "explanation": "billions in our galaxy 银河系中数十亿颗。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "ate",
+            "angled",
+            "painted"
+          ],
+          "answer_index": 2,
+          "explanation": "angled the telescope 把望远镜斜对过去。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "bored",
+            "angry",
+            "sleepy",
+            "amazed"
+          ],
+          "answer_index": 3,
+          "explanation": "all amazed 都惊叹不已。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "unknown",
+            "cheap",
+            "heavy",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "still mostly unknown 仍大多未知。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "selling",
+            "studying",
+            "cooking",
+            "hiding"
+          ],
+          "answer_index": 1,
+          "explanation": "keep studying the night sky 继续研究夜空。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "My First Spacewalk",
+      "text": "I will never forget my first (1)____ outside the spacecraft. Before I left the safety of the cabin, I had to put on my (2)____ very carefully and check it twice. My heart was beating fast, for I knew how (3)____ space could be. When the door opened, I floated out into the silent (4)____ and saw the blue Earth far below me. There was no up or down, and at first I felt a little (5)____. Slowly I learned to (6)____ my body with small, careful movements. Around me there was nothing but stars, shining like (7)____ in the dark. My job was to (8)____ a broken part back to the cabin, where my crewmates were waiting. It was harder than it sounds, because every tool kept trying to (9)____ away from my hands. When I finally finished and came back inside, the whole crew (10)____ with relief. I had done something I would remember for the rest of my life.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "holiday",
+            "picnic",
+            "spacewalk",
+            "lesson"
+          ],
+          "answer_index": 2,
+          "explanation": "my first spacewalk 我第一次太空行走。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "raincoat",
+            "blanket",
+            "hat",
+            "spacesuit"
+          ],
+          "answer_index": 3,
+          "explanation": "put on my spacesuit 穿上宇航服。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "hazardous",
+            "cheap",
+            "funny",
+            "quiet"
+          ],
+          "answer_index": 0,
+          "explanation": "how hazardous space could be 太空有多危险。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "market",
+            "darkness",
+            "garden",
+            "kitchen"
+          ],
+          "answer_index": 1,
+          "explanation": "the silent darkness 寂静的黑暗。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "hungry",
+            "proud",
+            "afraid",
+            "sleepy"
+          ],
+          "answer_index": 2,
+          "explanation": "felt a little afraid 有点害怕。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "paint",
+            "cook",
+            "control"
+          ],
+          "answer_index": 3,
+          "explanation": "control my body 控制身体。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "diamonds",
+            "stones",
+            "books",
+            "coins"
+          ],
+          "answer_index": 0,
+          "explanation": "shining like diamonds 像钻石般闪耀。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "throw",
+            "fetch",
+            "sell",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "fetch a broken part 取回一个损坏的部件。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sit",
+            "sleep",
+            "float",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "float away from my hands 从手中漂走。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "argued",
+            "slept",
+            "complained",
+            "cheered"
+          ],
+          "answer_index": 3,
+          "explanation": "cheered with relief 如释重负地欢呼。"
+        }
+      ]
+    }
+  ]
+}

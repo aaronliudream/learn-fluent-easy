@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "grammar_title": "-ing 分词作状语(时间/伴随、原因、与 -ed 分词的主动/被动区别)",
+  "source": "外研社版必修第二册 Unit 4 Using language:-ing as adverbial。句子地道、答案唯一(逻辑主语主动→-ing;被动→-ed;不定式表目的、谓语动词均讲不通)。零术语、全应用型。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "-ing 分词作时间/伴随状语(主动、与谓语同时发生)",
+      "overview": "当状语的逻辑主语与主句主语一致、且主动地做这个动作、并与主句动作同时发生时,用现在分词(-ing)。它相当于 when/while/as 引导的时间状语或表示伴随的情况。"
+    },
+    {
+      "code": "u4.02",
+      "point": "-ing 分词作原因状语(因为……所以……)",
+      "overview": "现在分词放在句首(常带 Not / Being / Having)表示原因,相当于 because/as/since 引导的原因状语;逻辑主语主动产生这一原因,故用 -ing,而非被动 -ed、表目的的不定式或谓语动词。"
+    },
+    {
+      "code": "u4.03",
+      "point": "-ing 与 -ed 分词作状语:主动用 -ing,被动用 -ed",
+      "overview": "看状语的逻辑主语(=主句主语)与该动作的关系:主语主动发出动作用现在分词(-ing);主语承受动作(常带 by)用过去分词(-ed)。不定式、谓语动词形式均不能作此类状语。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "____ the sad ending of the play, many in the audience could not hold back their tears.",
+      "options": [
+        "Watching",
+        "Watched",
+        "To watch",
+        "Watch"
+      ],
+      "answer_index": 0,
+      "explanation": "逻辑主语 the audience 主动观看、与流泪同时发生、无连词 → 用现在分词作时间状语;观众不是被看,被动讲不通,不定式表目的与情绪反应不搭。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She walked slowly onto the stage, ____ at the cheering crowd.",
+      "options": [
+        "smiled",
+        "smiling",
+        "to smile",
+        "smiles"
+      ],
+      "answer_index": 1,
+      "explanation": "她一边走一边对观众微笑,表伴随、与主句同时发生 → 现在分词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ the curtain rise, the whole theatre fell silent at once.",
+      "options": [
+        "Seen",
+        "To see",
+        "Seeing",
+        "Saw"
+      ],
+      "answer_index": 2,
+      "explanation": "主语(剧场里的人)主动看到幕布升起,表时间、同时发生 → 现在分词;被动、不定式、谓语动词都不成立。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The old actor sat backstage, ____ quietly to the music from the orchestra.",
+      "options": [
+        "listened",
+        "to listen",
+        "listens",
+        "listening"
+      ],
+      "answer_index": 3,
+      "explanation": "他坐着的同时静静地听音乐,表伴随 → 现在分词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ for the school play every evening, the students slowly grew more confident.",
+      "options": [
+        "Practising",
+        "Practised",
+        "To practise",
+        "Practise"
+      ],
+      "answer_index": 0,
+      "explanation": "学生主动排练、并随之变得自信,表时间/伴随 → 现在分词;被动讲不通。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He left the cinema in a hurry, ____ his phone behind on the seat.",
+      "options": [
+        "left",
+        "leaving",
+        "to leave",
+        "leaves"
+      ],
+      "answer_index": 1,
+      "explanation": "匆匆离开的同时把手机落下,表伴随结果 → 现在分词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ the final song, the children clapped and shouted with joy.",
+      "options": [
+        "Heard",
+        "To hear",
+        "Hearing",
+        "Hears"
+      ],
+      "answer_index": 2,
+      "explanation": "孩子们主动听到最后那首歌、并随之欢呼,表时间 → 现在分词;孩子不是被听,被动错。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The dancers moved across the stage, ____ their arms like the wings of a bird.",
+      "options": [
+        "waved",
+        "to wave",
+        "waves",
+        "waving"
+      ],
+      "answer_index": 3,
+      "explanation": "舞者移动的同时挥动手臂,表伴随动作 → 现在分词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ in the front row, we could see every detail of the performers' costumes.",
+      "options": [
+        "Sitting",
+        "Sat",
+        "To sit",
+        "Sits"
+      ],
+      "answer_index": 0,
+      "explanation": "我们坐在前排(主动、与看得清同时),表时间/伴随 → 现在分词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She read the script on the bus, ____ notes in the margin as she went.",
+      "options": [
+        "made",
+        "making",
+        "to make",
+        "makes"
+      ],
+      "answer_index": 1,
+      "explanation": "她读剧本的同时在空白处做笔记,表伴随 → 现在分词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ along to the music, the audience swayed gently in their seats.",
+      "options": [
+        "Sung",
+        "To sing",
+        "Singing",
+        "Sang"
+      ],
+      "answer_index": 2,
+      "explanation": "观众主动跟唱、同时摇摆,表伴随 → 现在分词;观众不是被唱,被动错。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The host welcomed us warmly, ____ each guest by name.",
+      "options": [
+        "greeted",
+        "to greet",
+        "greets",
+        "greeting"
+      ],
+      "answer_index": 3,
+      "explanation": "主持人欢迎我们的同时逐一称名问候,表伴随 → 现在分词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ the comedy show, we laughed so hard that our cheeks hurt.",
+      "options": [
+        "Enjoying",
+        "Enjoyed",
+        "To enjoy",
+        "Enjoys"
+      ],
+      "answer_index": 0,
+      "explanation": "我们看喜剧的同时大笑,表时间 → 现在分词;表目的、被动均不合逻辑。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He stood alone in the spotlight, ____ for the music to begin.",
+      "options": [
+        "waited",
+        "waiting",
+        "to wait",
+        "waits"
+      ],
+      "answer_index": 1,
+      "explanation": "他站着的同时等待音乐响起,表伴随 → 现在分词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ down the lights, the stage manager signalled that the play was about to start.",
+      "options": [
+        "Turned",
+        "To turn",
+        "Turning",
+        "Turns"
+      ],
+      "answer_index": 2,
+      "explanation": "舞台监督主动调暗灯光、随即示意开演,表时间 → 现在分词;他不是被调暗,被动错。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The little girl watched the ballet, ____ her eyes wide with wonder.",
+      "options": [
+        "kept",
+        "to keep",
+        "keeps",
+        "keeping"
+      ],
+      "answer_index": 3,
+      "explanation": "她看芭蕾的同时睁大眼睛,表伴随状态 → 现在分词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ the theatre after the show, the fans were still talking about the music.",
+      "options": [
+        "Leaving",
+        "Left",
+        "To leave",
+        "Leaves"
+      ],
+      "answer_index": 0,
+      "explanation": "粉丝离开剧院的同时仍在谈论音乐,表时间 → 现在分词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She practised her lines in front of the mirror, ____ every gesture again and again.",
+      "options": [
+        "repeated",
+        "repeating",
+        "to repeat",
+        "repeats"
+      ],
+      "answer_index": 1,
+      "explanation": "她对镜练台词的同时反复重复每个动作,表伴随 → 现在分词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ to the radio play in the dark, I could picture every scene in my mind.",
+      "options": [
+        "Listened",
+        "To listen",
+        "Listening",
+        "Listens"
+      ],
+      "answer_index": 2,
+      "explanation": "我听广播剧的同时在脑中想象画面,表时间 → 现在分词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The crowd poured out of the concert hall, ____ the songs they had just heard.",
+      "options": [
+        "hummed",
+        "to hum",
+        "hums",
+        "humming"
+      ],
+      "answer_index": 3,
+      "explanation": "人群涌出的同时哼着刚听到的歌,表伴随 → 现在分词。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ a huge fan of Peking Opera, Lucy watched the same show three times.",
+      "options": [
+        "Being",
+        "Been",
+        "To be",
+        "Was"
+      ],
+      "answer_index": 0,
+      "explanation": "句首表原因(因为是铁杆戏迷),逻辑主语主动 → 用 Being;Been 不能独立作状语,不定式表目的、谓语动词均错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Not ____ what the plot was about, the foreign guests felt a little lost.",
+      "options": [
+        "known",
+        "knowing",
+        "to know",
+        "knew"
+      ],
+      "answer_index": 1,
+      "explanation": "因为不了解情节(原因),逻辑主语主动 → Not + 现在分词;被动、不定式、谓语动词都不成立。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ confident about her lines, she stepped onto the stage without any fear.",
+      "options": [
+        "Felt",
+        "To feel",
+        "Feeling",
+        "Feels"
+      ],
+      "answer_index": 2,
+      "explanation": "因为对台词有信心(原因) → 现在分词;她主动产生这种感受,被动错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ no tickets for the evening show, we decided to watch the matinee instead.",
+      "options": [
+        "Had",
+        "To have",
+        "Has",
+        "Having"
+      ],
+      "answer_index": 3,
+      "explanation": "因为没有晚场票(原因) → Having;谓语动词、不定式都不能这样作状语。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ that the film was based on a true story, many viewers were deeply moved.",
+      "options": [
+        "Knowing",
+        "Known",
+        "To know",
+        "Knew"
+      ],
+      "answer_index": 0,
+      "explanation": "因为得知影片改编自真事(原因) → 现在分词;观众主动知道,被动错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ up in a family of actors, he loved the theatre from a young age.",
+      "options": [
+        "Grown",
+        "Growing",
+        "To grow",
+        "Grows"
+      ],
+      "answer_index": 1,
+      "explanation": "因为在演员家庭长大(原因) → 现在分词;grow up 为主动行为,被动错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Not ____ the language of the opera, the tourists relied on the subtitles to follow the story.",
+      "options": [
+        "understood",
+        "to understand",
+        "understanding",
+        "understands"
+      ],
+      "answer_index": 2,
+      "explanation": "因为听不懂歌剧语言(原因) → Not + 现在分词。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ such a moving story, the documentary touched audiences all over the world.",
+      "options": [
+        "Told",
+        "To tell",
+        "Tells",
+        "Telling"
+      ],
+      "answer_index": 3,
+      "explanation": "因为讲述了如此动人的故事(原因),纪录片主动讲述 → 现在分词;被动 Told 讲不通。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ from a bad cold, the lead singer had to cancel the concert.",
+      "options": [
+        "Suffering",
+        "Suffered",
+        "To suffer",
+        "Suffers"
+      ],
+      "answer_index": 0,
+      "explanation": "因为得了重感冒(原因),suffer from 为主动 → 现在分词。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ how difficult the dance was, I admired the performers even more.",
+      "options": [
+        "Realised",
+        "Realising",
+        "To realise",
+        "Realises"
+      ],
+      "answer_index": 1,
+      "explanation": "因为意识到舞蹈之难(原因) → 现在分词;我主动意识到,被动错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ a deep love of cinema, the two friends often watched films together.",
+      "options": [
+        "Shared",
+        "To share",
+        "Sharing",
+        "Shares"
+      ],
+      "answer_index": 2,
+      "explanation": "因为共同热爱电影(原因) → 现在分词;两人主动分享这份喜爱,被动错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ that the theatre was about to close, we hurried to buy the last tickets.",
+      "options": [
+        "Seen",
+        "To see",
+        "Sees",
+        "Seeing"
+      ],
+      "answer_index": 3,
+      "explanation": "因为看到剧院快关门(原因) → 现在分词;我们主动看到,被动错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ how the story would end, the readers could not put the novel down.",
+      "options": [
+        "Wondering",
+        "Wondered",
+        "To wonder",
+        "Wonders"
+      ],
+      "answer_index": 0,
+      "explanation": "因为想知道故事结局(原因) → 现在分词。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ both music and drama, she fell in love with opera at once.",
+      "options": [
+        "Enjoyed",
+        "Enjoying",
+        "To enjoy",
+        "Enjoys"
+      ],
+      "answer_index": 1,
+      "explanation": "因为既喜欢音乐又喜欢戏剧(原因) → 现在分词;她主动喜欢,被动错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ that the show might be cancelled, the fans kept checking their phones.",
+      "options": [
+        "Worried",
+        "To worry",
+        "Worrying",
+        "Worries"
+      ],
+      "answer_index": 2,
+      "explanation": "因为担心演出可能取消(原因) → 现在分词;此处需要句首分词状语,谓语动词形式错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ time before the show, we grabbed a quick dinner near the theatre.",
+      "options": [
+        "Lacked",
+        "To lack",
+        "Lacks",
+        "Lacking"
+      ],
+      "answer_index": 3,
+      "explanation": "因为开演前时间不够(原因) → 现在分词;lack 在此为主动,被动错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ romantic stories, she could not wait to see the new ballet.",
+      "options": [
+        "Loving",
+        "Loved",
+        "To love",
+        "Loves"
+      ],
+      "answer_index": 0,
+      "explanation": "因为喜爱浪漫的故事(原因) → 现在分词;她主动喜爱,被动错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ the last bus home, the fans had to walk back after the concert.",
+      "options": [
+        "Missed",
+        "Missing",
+        "To miss",
+        "Misses"
+      ],
+      "answer_index": 1,
+      "explanation": "因为错过了末班车(原因) → 现在分词;粉丝主动错过(没赶上),被动错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ to get a good seat, we arrived at the cinema an hour early.",
+      "options": [
+        "Hoped",
+        "To hope",
+        "Hoping",
+        "Hopes"
+      ],
+      "answer_index": 2,
+      "explanation": "因为希望抢到好座位(原因) → 现在分词;Hoping to do 常作原因状语,谓语动词形式错。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ far from any theatre, the village children rarely saw a live play.",
+      "options": [
+        "Lived",
+        "To live",
+        "Lives",
+        "Living"
+      ],
+      "answer_index": 3,
+      "explanation": "因为住得离剧院很远(原因) → 现在分词;live 在此为主动,被动错。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ the orchestra, the conductor raised his hands for silence.",
+      "options": [
+        "Facing",
+        "Faced",
+        "To face",
+        "Faces"
+      ],
+      "answer_index": 0,
+      "explanation": "指挥主动面对乐队 → 现在分词;他不是被面对,过去分词表被动错。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ by the loud applause, the actor came back on stage to bow again.",
+      "options": [
+        "Encouraging",
+        "Encouraged",
+        "To encourage",
+        "Encourages"
+      ],
+      "answer_index": 1,
+      "explanation": "演员被掌声鼓舞(带 by 表被动) → 过去分词;若用 -ing 则成了演员鼓舞掌声,讲不通。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ his lines perfectly, the young actor felt proud of himself.",
+      "options": [
+        "Remembered",
+        "To remember",
+        "Remembering",
+        "Remembers"
+      ],
+      "answer_index": 2,
+      "explanation": "他主动记住台词 → 现在分词;台词被记,但状语逻辑主语是 actor(主动),故不用被动。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ on a famous novel, the film attracted millions of viewers.",
+      "options": [
+        "Basing",
+        "To base",
+        "Bases",
+        "Based"
+      ],
+      "answer_index": 3,
+      "explanation": "影片是被改编自小说,be based on 用被动 → 过去分词;影片不会主动 base,-ing 错。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ a bright red costume, the clown ran around the stage.",
+      "options": [
+        "Wearing",
+        "Worn",
+        "To wear",
+        "Wears"
+      ],
+      "answer_index": 0,
+      "explanation": "小丑主动穿着戏服 → 现在分词;小丑不是被穿,过去分词错。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ by the sad music, the whole audience fell silent.",
+      "options": [
+        "Moving",
+        "Moved",
+        "To move",
+        "Moves"
+      ],
+      "answer_index": 1,
+      "explanation": "观众被悲伤的音乐打动(带 by 表被动) → 过去分词;-ing 会变成观众打动音乐,讲不通。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ a microphone in one hand, the singer walked to the front of the stage.",
+      "options": [
+        "Held",
+        "To hold",
+        "Holding",
+        "Holds"
+      ],
+      "answer_index": 2,
+      "explanation": "歌手主动手持话筒,表伴随 → 现在分词;话筒被握,但状语逻辑主语是歌手(主动),不用被动。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ as the best comedy of the year, the show became hugely popular.",
+      "options": [
+        "Choosing",
+        "To choose",
+        "Chooses",
+        "Chosen"
+      ],
+      "answer_index": 3,
+      "explanation": "节目是被选为年度最佳喜剧 → 过去分词;节目不会主动选,-ing 错。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ his first film at the age of twenty, he soon became famous.",
+      "options": [
+        "Directing",
+        "Directed",
+        "To direct",
+        "Directs"
+      ],
+      "answer_index": 0,
+      "explanation": "他主动执导自己的第一部电影 → 现在分词;他不是被导,过去分词错。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ for the first time in 1790, the opera is still loved by audiences today.",
+      "options": [
+        "Performing",
+        "Performed",
+        "To perform",
+        "Performs"
+      ],
+      "answer_index": 1,
+      "explanation": "歌剧是被首次上演,与主语 opera 是被动关系 → 过去分词;歌剧不会主动表演,-ing 错。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ a heavy box of costumes, the stagehand crossed the dark stage.",
+      "options": [
+        "Carried",
+        "To carry",
+        "Carrying",
+        "Carries"
+      ],
+      "answer_index": 2,
+      "explanation": "舞台工作人员主动搬着戏服箱,表伴随 → 现在分词;他不是被搬,过去分词错。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ in a small mountain village, the documentary showed everyday country life.",
+      "options": [
+        "Filming",
+        "To film",
+        "Films",
+        "Filmed"
+      ],
+      "answer_index": 3,
+      "explanation": "纪录片是被拍摄于小山村,与主语 documentary 是被动关系 → 过去分词;影片不会主动拍,-ing 错。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ the show with a funny joke, the host quickly put everyone at ease.",
+      "options": [
+        "Opening",
+        "Opened",
+        "To open",
+        "Opens"
+      ],
+      "answer_index": 0,
+      "explanation": "主持人主动以笑话开场 → 现在分词;主持人不是被开场,过去分词错。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ by the actor's sudden appearance, the children screamed with delight.",
+      "options": [
+        "Surprising",
+        "Surprised",
+        "To surprise",
+        "Surprises"
+      ],
+      "answer_index": 1,
+      "explanation": "孩子们被演员突然现身吓到(带 by 表被动) → 过去分词;-ing 会变成孩子使人吃惊,与句意不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ the main character, the actress appeared in almost every scene.",
+      "options": [
+        "Played",
+        "To play",
+        "Playing",
+        "Plays"
+      ],
+      "answer_index": 2,
+      "explanation": "女演员主动扮演主角 → 现在分词;她不是被扮演,过去分词错。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ as a king, the old actor walked slowly across the stage.",
+      "options": [
+        "Dressing",
+        "To dress",
+        "Dresses",
+        "Dressed"
+      ],
+      "answer_index": 3,
+      "explanation": "be dressed as 表“打扮成”,与主语是被动/状态关系 → 过去分词;此处习惯用 dressed,-ing 不合表达。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ the script aloud, the director explained each scene to the cast.",
+      "options": [
+        "Reading",
+        "Read",
+        "To read",
+        "Reads"
+      ],
+      "answer_index": 0,
+      "explanation": "导演主动朗读剧本,表伴随 → 现在分词;剧本被读,但状语逻辑主语是导演(主动),不用被动。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ over a hundred years ago, the play still speaks to today's audiences.",
+      "options": [
+        "Writing",
+        "Written",
+        "To write",
+        "Writes"
+      ],
+      "answer_index": 1,
+      "explanation": "剧本是被(人)在一百多年前写成,与主语 play 是被动关系 → 过去分词;剧本不会主动写,-ing 错。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ by the weak ending, many viewers left the cinema in silence.",
+      "options": [
+        "Disappointing",
+        "To disappoint",
+        "Disappointed",
+        "Disappoints"
+      ],
+      "answer_index": 2,
+      "explanation": "观众对软弱的结尾感到失望(带 by 表被动) → 过去分词;-ing 会变成观众令人失望,与句意不符。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ in a beautiful old theatre, the play felt even more magical to the audience.",
+      "options": [
+        "Staging",
+        "To stage",
+        "Stages",
+        "Staged"
+      ],
+      "answer_index": 3,
+      "explanation": "戏是被(人)搬上这座剧院上演的,与主语 play 是被动关系 → 过去分词;戏剧不会主动上演,-ing 错。"
+    }
+  ]
+}

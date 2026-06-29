@@ -1,0 +1,52 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "topic": "Write about a Good Friend(介绍一位好朋友)",
+  "title_en": "My Best Friend",
+  "genre": "记叙 / 人物描写(describe a friend's looks and personality + why the friendship matters)",
+  "source": "外研社版必修第一册 Unit 4 Friends Forever:write about a good friend(描写朋友的外貌与性格 + 一件体现友谊的事 + 为什么珍惜这段友谊)。语言上自然运用定语从句(who/whose/that)。",
+  "prompt_cn": "假设你叫李华,学校英文报正在征集'My Best Friend'主题短文。请用英语写一篇约80词的短文,内容包括:① 简单介绍这位朋友(外貌或性格,如'a girl who is always smiling');② 讲一件体现你们友谊的小事;③ 说说你为什么珍惜这段友谊。注意:至少用两处定语从句(who/whose/that),句子地道、围绕中心。",
+  "prompt_en": "Suppose you are Li Hua. Your school English newspaper is collecting short articles on the topic 'My Best Friend'. Write a passage of about 80 words including: 1) a short introduction to your friend (looks or personality, e.g. 'a girl who is always smiling'); 2) one small thing that shows your friendship; 3) why you value this friendship. Try to use at least two attributive clauses (who / whose / that).",
+  "points": [
+    "介绍朋友(My best friend is a boy/girl who … / whose …)",
+    "一件体现友谊的小事(I still remember the day … / the present that …)",
+    "为什么珍惜(She is the friend that I trust most because …)",
+    "至少两处定语从句、句子围绕中心、代词指代清楚"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "My best friend is a girl called Mia, who is always smiling and ready to help. She is the kind of person who never lets a friend down. I still remember the day when I felt anxious before a big test. Mia, whose words are always warm, sat beside me and said, \"Don't worry, I'm here.\" That small moment is something that I will never forget. She is the friend that I trust most, because true friendship, which money cannot buy, makes even ordinary days feel special.",
+  "model_translation": "我最好的朋友是个叫米娅的女孩,她总是面带微笑、乐于助人。她是那种从不让朋友失望的人。我仍记得有一次大考前我很焦虑,话语总是温暖的米娅坐到我身边说:\"别担心,有我在。\"那个小小的瞬间是我永远不会忘记的。她是我最信任的朋友,因为真挚的友谊——金钱买不到的东西——能让平凡的日子也变得特别。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:介绍朋友 / 体现友谊的小事 / 珍惜的原因" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一位朋友展开、句句相关、代词指代清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "至少两处定语从句(who/whose/that)运用得当、词汇句型准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "介绍 My best friend is a … who …",
+      "细节 I still remember the day … / the present that …",
+      "性格 She is the kind of person who …",
+      "珍惜 She is the friend that I trust most because …"
+    ],
+    "key_expressions": [
+      "My best friend is a girl who is always smiling.",
+      "She is the kind of person who never lets a friend down.",
+      "That small moment is something that I will never forget.",
+      "True friendship, which money cannot buy, makes ordinary days feel special."
+    ],
+    "useful_words": ["friend", "smiling", "helpful", "anxious", "trust", "remember", "personality", "kindness", "ordinary", "forever"]
+  },
+  "high_sentences": [
+    "My best friend is a girl who is always smiling and ready to help.",
+    "She is the kind of person who never lets a friend down.",
+    "I still remember the day when I felt anxious before a big test.",
+    "She is the friend that I trust most, because true friendship makes ordinary days feel special."
+  ],
+  "error_pairs": [
+    { "wrong": "She is a girl which is always smiling.", "correct": "She is a girl who is always smiling.", "note": "先行词指人,用 who,不用 which。" },
+    { "wrong": "Mia, who words are warm, helped me.", "correct": "Mia, whose words are warm, helped me.", "note": "表所属(她的话语)用 whose,不用 who。" },
+    { "wrong": "It is the only thing which matters.", "correct": "It is the only thing that matters.", "note": "先行词被 the only 修饰,只用 that,不用 which。" }
+  ],
+  "paragraph_template": "【My Best Friend 结构】\n第1句 介绍:My best friend is a … who … / whose …\n第2-3句 小事:I still remember the day … She is the kind of person who …\n第4句 珍惜:She is the friend that I trust most, because …"
+}

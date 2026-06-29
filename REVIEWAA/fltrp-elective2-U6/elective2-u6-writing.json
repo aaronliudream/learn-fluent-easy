@@ -1,0 +1,52 @@
+{
+  "volume": "elective2",
+  "unit": "U6",
+  "topic": "Write a Survival Story(写一篇求生故事)",
+  "title_en": "Survival",
+  "genre": "记叙文 / 故事(write a short survival story set in a dangerous place)",
+  "source": "外研社版选择性必修第二册 Unit 6 Developing ideas / Writing:写一篇求生故事(危险的地点 + 危险 + 如何活下来 + 心情),自然用上 -ever 与 no matter 让步状语从句。",
+  "prompt_cn": "想象你被困在一个危险的地方(如南极、太空、丛林),必须设法活下来。用英语写一篇约 90 词的求生故事,内容包括:① 你在哪里、面对什么危险;② 你已经做了什么来活下来;③ 你接下来打算怎么做;④ 你的心情。要求至少用上一个 -ever 或 no matter 引导的让步状语从句。",
+  "prompt_en": "Imagine you are trapped in a dangerous place (for example, Antarctica, space or the jungle) and must survive. Write a short survival story of about 90 words. Include: 1) where you are and what dangers you face; 2) what you have already done to stay alive; 3) what you plan to do next; 4) how you feel. Use at least one adverbial clause with -ever or no matter.",
+  "points": [
+    "交代地点与危险(I am trapped in … / The biggest danger is …)",
+    "已做的求生行动(So far, I have … to stay alive)",
+    "下一步打算(Next, I will … / My plan is to …)",
+    "心情 + 用上 -ever / no matter 从句(However hard it is, I will not give up. / No matter what happens, …)"
+  ],
+  "word_count": "90 词左右",
+  "model_essay": "I am trapped alone on Mars after a dust storm cut me off from the others. The biggest dangers are the deadly radiation outside and my shrinking supply of food. So far, I have stayed inside the landing capsule and found an underground store of ice, which gives me water and oxygen. Next, I will try to grow plants in the Martian soil with the seeds I carry. However hard this is, I refuse to give up. No matter what happens, I will keep calm and hopeful until rescue comes.",
+  "model_translation": "一场沙尘暴让我与其他人失去联系,我被独自困在火星上。最大的危险是外面致命的辐射和不断减少的食物。到目前为止,我一直待在着陆舱里,还找到了一处地下冰库,它给我水和氧气。接下来,我打算用随身携带的种子在火星土壤里种植物。无论这有多难,我都不会放弃。无论发生什么,我都会保持冷静和希望,直到救援到来。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:地点与危险 / 已做的求生行动 / 下一步打算 / 心情" },
+      { "dimension": "结构", "max": 4, "criteria": "按时间顺序展开、情节连贯、代词指代清楚、过渡自然" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、至少正确使用一个 -ever / no matter 让步状语从句、语法基本无误" }
+    ],
+    "required_structure": [
+      "地点与危险 I am trapped in … The biggest danger is …",
+      "已做行动 So far, I have …",
+      "下一步 Next, I will …",
+      "心情 + 让步从句 However hard this is, I refuse to give up. / No matter what happens, …"
+    ],
+    "key_expressions": [
+      "I am trapped alone on Mars after a dust storm.",
+      "So far, I have found an underground store of ice.",
+      "However hard this is, I refuse to give up.",
+      "No matter what happens, I will keep calm and hopeful until rescue comes."
+    ],
+    "useful_words": ["trapped", "danger", "survive", "shelter", "capsule", "supply", "plan", "calm", "hopeful", "rescue"]
+  },
+  "high_sentences": [
+    "I am trapped alone on Mars after a dust storm cut me off from the others.",
+    "So far, I have stayed inside the landing capsule and found an underground store of ice.",
+    "However hard this is, I refuse to give up.",
+    "No matter what happens, I will keep calm and hopeful until rescue comes."
+  ],
+  "error_pairs": [
+    { "wrong": "However it is hard, I will not give up.", "correct": "However hard it is, I will not give up.", "note": "however 后紧跟形容词/副词:however + adj. + 主语 + 谓语。" },
+    { "wrong": "No matter what happen, I keep calm.", "correct": "No matter what happens, I keep calm.", "note": "what 作主语时谓语用第三人称单数 happens。" },
+    { "wrong": "Whatever the danger is, but I keep trying.", "correct": "Whatever the danger is, I keep trying.", "note": "让步状语从句后主句不再用 but;-ever 从句本身已含让步义。" }
+  ],
+  "paragraph_template": "【求生故事结构】\n第1-2句 地点与危险:I am trapped in … The biggest danger is …\n第3-4句 已做的行动:So far, I have …\n第5句 下一步:Next, I will …\n第6句 心情 + 让步从句:However hard this is, I refuse to give up. No matter what happens, I will keep calm and hopeful."
+}

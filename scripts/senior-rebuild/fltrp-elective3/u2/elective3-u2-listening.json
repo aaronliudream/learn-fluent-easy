@@ -1,0 +1,428 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "topic": "Life Behind the Lens",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);speaker 仅角色标注。",
+  "source": "外研社选择性必修第三册 Unit 2 同主题听力(看Bill Cunningham摄影展/木鞋匠/采访年轻摄影师/剪纸复兴/博物馆讲古钟/观察小贴士)。用词限本单元/初中/常见词,答案唯一可在 transcript 找到依据,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 At the Photo Exhibition",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Emma: That exhibition of Bill Cunningham's street photos was wonderful, wasn't it?",
+        "Jack: It really was. I love that he photographed ordinary people, not just famous stars.",
+        "Emma: Yes. The guide said he rode the same old bicycle around New York for years.",
+        "Jack: And he always wore that simple blue jacket. He cared nothing for money.",
+        "Emma: My favourite part was that he went out every day, even in the rain.",
+        "Jack: Mine too. The photo of a woman on a snowy street felt so alive.",
+        "Emma: I think his secret was patience. He waited for the perfect moment.",
+        "Jack: Exactly. After today, I really want to try street photography myself."
+      ],
+      "translation_cn": "Emma 和 Jack 看完 Bill Cunningham 的街拍摄影展;他拍普通人而非明星;骑同一辆旧自行车、总穿蓝外套、不在乎钱;每天出门拍照,即使下雨;Jack 觉得雪天街上女子的照片很生动;Emma 认为他的秘诀是耐心、等待最佳时机;Jack 看完想自己尝试街拍。",
+      "questions": [
+        {
+          "stem": "What kind of exhibition did Emma and Jack see?",
+          "options": [
+            "Bill Cunningham's street photographs.",
+            "A show of old oil paintings.",
+            "A display of ancient maps.",
+            "A collection of film posters."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Who did Cunningham mainly photograph?",
+          "options": [
+            "Only world-famous singers.",
+            "Ordinary people, not only famous stars.",
+            "Animals in the city park.",
+            "Tall new buildings."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did Cunningham wear every day?",
+          "options": [
+            "A simple blue jacket.",
+            "A bright red coat.",
+            "An expensive black suit.",
+            "A white uniform."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When did he still go out to take photos?",
+          "options": [
+            "Only on sunny weekends.",
+            "Every day, even in the rain.",
+            "Just once a month.",
+            "Only at night."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Jack want to do after the visit?",
+          "options": [
+            "Buy a very expensive camera.",
+            "Open his own art gallery.",
+            "Try street photography himself.",
+            "Stop taking photos for good."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·独白 The Last Clog Maker",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In a small town lives one of the last traditional clog makers.",
+        "Every morning he chooses a block of soft wood and shapes it slowly by hand.",
+        "Making a single pair of wooden shoes can take him a whole day.",
+        "He says machines could do it faster, but they could never give each pair its own character.",
+        "Few young people want to learn the craft today, because it is hard and pays little.",
+        "Still, he keeps a small workshop open and teaches anyone who is truly interested.",
+        "He hopes the old skill will not disappear with him."
+      ],
+      "translation_cn": "一个小镇上住着最后几位传统木鞋匠之一。他每天清晨挑一块软木,慢慢用手雕成。做一双木鞋要花他一整天。他说机器更快,却给不了每双鞋独特的个性。如今很少有年轻人愿学这门又难又挣钱少的手艺。但他仍开着小作坊,教任何真心想学的人,希望这门老手艺不会随他消失。",
+      "questions": [
+        {
+          "stem": "What does the man make?",
+          "options": [
+            "Glass bottles.",
+            "Paper umbrellas.",
+            "Metal tools.",
+            "Traditional wooden shoes."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How long can one pair take him?",
+          "options": [
+            "About a whole day.",
+            "Only a few minutes.",
+            "Exactly one week.",
+            "Less than an hour."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does he prefer handwork to machines?",
+          "options": [
+            "Machines are far too cheap.",
+            "Each pair gains its own character.",
+            "He has never seen a machine.",
+            "Machines make the shoes too strong."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do few young people learn the craft?",
+          "options": [
+            "It is against the law.",
+            "It can only be done at night.",
+            "It is hard and earns little money.",
+            "It needs very expensive tools."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does he hope for the future?",
+          "options": [
+            "That machines will replace him.",
+            "That the workshop will close.",
+            "That prices will rise sharply.",
+            "That the skill will not die out."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 Interview with a Young Photographer",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Host: Today we're talking with Lily, a young photographer. Lily, how did you start?",
+        "Lily: Thank you. I started by simply watching people on the street for hours.",
+        "Host: Interesting. So observation came before the camera?",
+        "Lily: Yes. My teacher said a photographer must first learn to see.",
+        "Host: What do you enjoy photographing most?",
+        "Lily: Small everyday moments, like an old man feeding birds in the park.",
+        "Host: Do you use expensive equipment?",
+        "Lily: Not at all. Light and patience matter far more than a costly camera.",
+        "Host: That's wonderful advice. Thank you, Lily."
+      ],
+      "translation_cn": "主持人采访年轻摄影师 Lily。她说自己最初是花几小时观察街上的人;观察先于相机;老师说摄影师必须先学会观察;她最爱拍日常小瞬间,比如公园里喂鸟的老人;她不用昂贵器材,认为光线和耐心远比贵相机重要;主持人称赞这是很好的建议。",
+      "questions": [
+        {
+          "stem": "How did Lily begin learning photography?",
+          "options": [
+            "By watching people for hours.",
+            "By buying the newest camera.",
+            "By copying famous photos.",
+            "By taking a long holiday."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did her teacher say she must learn first?",
+          "options": [
+            "To run a busy studio.",
+            "To observe carefully, or to see.",
+            "To sell her photos quickly.",
+            "To use bright stage lights."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Lily most enjoy photographing?",
+          "options": [
+            "Tall mountains far away.",
+            "Famous film stars.",
+            "Small everyday moments.",
+            "New cars and machines."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Lily say matters more than a costly camera?",
+          "options": [
+            "Money and fame.",
+            "A large team of helpers.",
+            "A warm indoor studio.",
+            "Light and patience."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is the host's opinion of Lily's advice?",
+          "options": [
+            "He thinks it is wonderful.",
+            "He finds it rather silly.",
+            "He completely disagrees.",
+            "He is not interested."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·独白 Paper-cutting Comes Back to Life",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Paper-cutting is one of China's oldest folk arts.",
+        "For a while, fewer and fewer people practised it, and many feared it would be forgotten.",
+        "Recently, however, the art has become popular again.",
+        "Schools now invite old artists to teach children how to cut delicate flowers and animals from red paper.",
+        "Online videos of skilled artisans have been watched by millions of people.",
+        "Many say they enjoy the calm, careful nature of the work in such a busy world.",
+        "Thanks to this new interest, an ancient craft is finding fresh life."
+      ],
+      "translation_cn": "剪纸是中国最古老的民间艺术之一。曾有一阵子练习的人越来越少,许多人担心它会被遗忘。然而最近这门艺术又流行起来。学校请老艺人教孩子用红纸剪出精致的花鸟;技艺高超的艺人的网络视频被数百万人观看;很多人说在忙碌的世界里喜欢这种平静而专注的工作。多亏这股新兴趣,一门古老手艺正焕发新生。",
+      "questions": [
+        {
+          "stem": "What folk art does the passage describe?",
+          "options": [
+            "Wood painting.",
+            "Paper-cutting.",
+            "Stone building.",
+            "Glass blowing."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What happened to the art for a while?",
+          "options": [
+            "It was banned by law.",
+            "It became too expensive.",
+            "Fewer people practised it.",
+            "It was only done abroad."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How are schools helping the art today?",
+          "options": [
+            "They sell red paper to shops.",
+            "They print it in textbooks only.",
+            "They keep it a secret from children.",
+            "They invite old artists to teach children."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why have online videos mattered?",
+          "options": [
+            "Millions of people have watched skilled artisans.",
+            "They taught machines to cut paper.",
+            "They warned people to stop the art.",
+            "They were watched by no one."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do many people enjoy the work?",
+          "options": [
+            "It makes them rich very fast.",
+            "It is calm and careful in a busy world.",
+            "It is loud and exciting.",
+            "It needs no skill at all."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 In the Clock Room",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Guide: Welcome. This room holds some of the oldest clocks in our museum.",
+        "Visitor: They're beautiful! Where did they come from?",
+        "Guide: Many were gifts to Chinese emperors from foreign envoys long ago.",
+        "Visitor: How are such old clocks kept working?",
+        "Guide: A few skilled masters repair them, but each one takes months of work.",
+        "Visitor: Months? That sounds incredibly slow.",
+        "Guide: It must be slow. Every tiny part has to be cleaned and fixed by hand.",
+        "Visitor: When a clock chimes, it must feel like magic.",
+        "Guide: It does. To the masters, that sound is the finest music in the world."
+      ],
+      "translation_cn": "讲解员带访客参观博物馆里最古老的钟表。许多钟是古时外国使节献给中国皇帝的;少数技艺高超的师傅修理它们,但每件要花几个月;访客觉得很慢;讲解员说必须慢,每个小部件都要手工清洁、修复;钟报时时仿佛魔法;对师傅们来说,那声音是世上最美的音乐。",
+      "questions": [
+        {
+          "stem": "What does this museum room hold?",
+          "options": [
+            "Modern phones and screens.",
+            "Old war weapons.",
+            "Some of the oldest clocks.",
+            "Famous paintings."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Where did many of the clocks come from?",
+          "options": [
+            "A local toy factory.",
+            "Ordinary family homes.",
+            "A nearby school.",
+            "Gifts from foreign envoys to emperors."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How long can repairing one clock take?",
+          "options": [
+            "Several months.",
+            "A few seconds.",
+            "Exactly one hour.",
+            "Less than a day."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is the work so slow?",
+          "options": [
+            "The masters are very lazy.",
+            "Each part is cleaned and fixed by hand.",
+            "The clocks are made of paper.",
+            "There are too many visitors."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How do the masters feel about the chiming sound?",
+          "options": [
+            "They find it very annoying.",
+            "They never listen to it.",
+            "They love it like the finest music.",
+            "They think it is too quiet."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·独白 A Tip for Young Photographers",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is one simple tip for anyone who loves photography or any craft.",
+        "Slow down and really look at the world around you.",
+        "The best pictures and the finest work do not come from expensive tools, but from patience and a careful eye.",
+        "Notice the small things that others walk past: the light on a wall, the lines on an old hand.",
+        "If you train yourself to see, ideas will come from everywhere.",
+        "Remember, a careful observer today can become a true artist tomorrow."
+      ],
+      "translation_cn": "给所有热爱摄影或任何手艺的人一个简单建议:慢下来,真正去看你周围的世界。最好的照片和最精的作品不来自昂贵器材,而来自耐心和细致的眼睛。留意别人匆匆走过的小事:墙上的光、老人手上的纹路。若你训练自己去观察,灵感会来自四面八方。记住,今天细心的观察者,明天可以成为真正的艺术家。",
+      "questions": [
+        {
+          "stem": "Who is this tip mainly for?",
+          "options": [
+            "Only professional athletes.",
+            "Only museum guides.",
+            "People who dislike art.",
+            "People who love photography or a craft."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker tell listeners to do?",
+          "options": [
+            "Slow down and look carefully.",
+            "Buy the newest equipment.",
+            "Work as fast as possible.",
+            "Copy other people's photos."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where does the finest work come from?",
+          "options": [
+            "Expensive tools alone.",
+            "Patience and a careful eye.",
+            "Pure good luck.",
+            "A large, costly studio."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What small things should you notice?",
+          "options": [
+            "Only big, famous buildings.",
+            "Only bright stage lights.",
+            "Things others walk past, like light and lines.",
+            "Nothing at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can a careful observer become?",
+          "options": [
+            "A fast machine.",
+            "A famous singer.",
+            "A clock maker.",
+            "A true artist."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

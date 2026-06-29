@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "topic": "Write an Invitation to a School Art Festival(写一封艺术节邀请函)",
+  "title_en": "An Invitation to Our School Art Festival",
+  "genre": "应用文 / 邀请函(formal invitation to an art event)",
+  "source": "外研社(新标准)选择性必修一 Unit 4 Writing an invitation:为学校艺术节写一封正式邀请函(写清名称、时间、地点、活动内容与回复方式)。",
+  "prompt_cn": "假设你叫李华,是学校学生会成员。你校将举办一年一度的学生艺术节。请用英语写一封约80词的正式邀请函,邀请你的英语外教 Mr Smith 参加,内容包括:① 艺术节的名称、时间和地点;② 将展出的艺术作品(如绘画、雕塑、用电脑部件做的作品等);③ 礼貌地请他回复确认是否参加。注意:用正式得体的语气。",
+  "prompt_en": "Suppose you are Li Hua, a member of the Students' Union. Your school is holding its yearly Student Art Festival. Write a formal invitation (about 80 words) to your English teacher, Mr Smith, including: 1) the name, time and place of the festival; 2) the artworks that will be shown (e.g. paintings, sculptures, works made from computer parts); 3) a polite request for him to reply and confirm whether he can come. Use a formal and proper tone.",
+  "points": [
+    "写清活动名称、时间、地点(name, time and place)",
+    "介绍将展出的艺术作品(a wide variety of artworks)",
+    "礼貌邀请并请求回复(We would be honoured … Please reply to confirm.)",
+    "语气正式得体、结构清楚"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Dear Mr Smith, On behalf of the Students' Union, I am writing to invite you to our yearly Student Art Festival. The festival will be held in the school hall from 12 to 16 May, opening at six o'clock on the first evening. Visitors will be able to enjoy a wide variety of artworks, from paintings and sculptures to creative works made out of computer parts. It would be a great honour to have you with us. Please reply to confirm whether you are able to attend. Yours sincerely, Li Hua",
+  "model_translation": "尊敬的史密斯先生:我谨代表学生会,诚邀您参加我校一年一度的学生艺术节。艺术节将于5月12日至16日在学校礼堂举行,首日晚上六点开幕。来宾可以欣赏到丰富多样的艺术作品,从绘画、雕塑到用电脑部件制作的创意作品。能有您的到来将是我们莫大的荣幸。请回复确认您是否能够出席。此致 敬礼!李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:名称/时间/地点 + 展出作品 + 请求回复" },
+      { "dimension": "结构", "max": 4, "criteria": "邀请函格式规范、称呼与落款得体、信息层次清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "语气正式、句型词汇准确多样、表语/非谓语等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "开头表明来意 I am writing to invite you to …",
+      "时间地点 The festival will be held in … from … to …",
+      "展出内容 Visitors will be able to enjoy a wide variety of artworks …",
+      "请求回复 Please reply to confirm whether you are able to attend."
+    ],
+    "key_expressions": [
+      "On behalf of the Students' Union, I am writing to invite you to …",
+      "The festival will be held in the school hall from 12 to 16 May.",
+      "Visitors will be able to enjoy a wide variety of artworks.",
+      "It would be a great honour to have you with us."
+    ],
+    "useful_words": ["invitation", "invite", "festival", "exhibition", "artwork", "sculpture", "attend", "honour", "confirm", "reply"]
+  },
+  "high_sentences": [
+    "On behalf of the Students' Union, I am writing to invite you to our yearly Student Art Festival.",
+    "The festival will be held in the school hall from 12 to 16 May.",
+    "Visitors will be able to enjoy a wide variety of artworks, from paintings to works made out of computer parts.",
+    "It would be a great honour to have you with us."
+  ],
+  "error_pairs": [
+    { "wrong": "I am writing for invite you to the festival.", "correct": "I am writing to invite you to the festival.", "note": "表示目的用不定式 to do,不用 for doing。" },
+    { "wrong": "The festival will be hold in the hall.", "correct": "The festival will be held in the hall.", "note": "被动语态用 be + 过去分词 held。" },
+    { "wrong": "The exhibition is amazed.", "correct": "The exhibition is amazing.", "note": "主语是引起感受的事物,表语用 -ing 形式 amazing。" }
+  ],
+  "paragraph_template": "【艺术节邀请函结构】\n称呼:Dear Mr Smith,\n第1句 来意:On behalf of …, I am writing to invite you to …\n第2-3句 信息:The festival will be held in … from … to … Visitors will be able to enjoy …\n第4句 请求回复:It would be a great honour … Please reply to confirm …\n落款:Yours sincerely, Li Hua"
+}

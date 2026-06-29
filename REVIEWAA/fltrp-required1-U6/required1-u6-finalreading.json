@@ -1,0 +1,43 @@
+{
+  "volume": "required1",
+  "unit": "U6",
+  "note": "单元通关专属迷你阅读(自然/和谐主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "On a small island, the local farmers once cut down many trees to sell, and soon the wind blew their thin soil away. Years later, their children planted the slopes with new trees and learned to live in harmony with the land. Today the green hills hold the rain, the crops grow well again, and visitors come to admire a place that nature and people have healed together.",
+    "questions": [
+      {
+        "q": "What happened after the farmers cut down many trees?",
+        "options": [
+          "The wind carried away their thin soil.",
+          "The island became much richer at once.",
+          "Heavy snow covered the whole island.",
+          "More trees grew back by themselves."
+        ],
+        "answer": "A",
+        "explanation": "原文'soon the wind blew their thin soil away'的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "Why do visitors come to the island today?",
+        "options": [
+          "To buy cheap wood from the farmers.",
+          "To admire land that people and nature have healed.",
+          "To watch the trees being cut down.",
+          "To learn how to leave the island."
+        ],
+        "answer": "B",
+        "explanation": "末句'visitors come to admire a place that nature and people have healed together'的转述(短文后半,覆盖不同位置)。"
+      },
+      {
+        "q": "How did the children change the island?",
+        "options": [
+          "They sold even more trees than before.",
+          "They moved everyone away from the hills.",
+          "They replanted the bare slopes and cared for the land again.",
+          "They built large factories on the soil."
+        ],
+        "answer": "C",
+        "explanation": "原文'planted the slopes with new trees and learned to live in harmony with the land'的转述。"
+      }
+    ]
+  }
+}

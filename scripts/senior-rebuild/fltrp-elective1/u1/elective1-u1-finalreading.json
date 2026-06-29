@@ -1,0 +1,32 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(幽默/笑主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Tom forgot his lines during the school play, he did not panic. Instead, he made a funny face and pretended to trip over, which turned his mistake into the biggest laugh of the night. The audience clapped so hard that Tom began to wonder whether he might enjoy being a comedian after all.",
+    "questions": [
+      {
+        "q": "What did Tom do after he forgot his lines?",
+        "options": [
+          "He turned the moment into a joke.",
+          "He ran off the stage in tears.",
+          "He blamed the other actors.",
+          "He stopped the whole play."
+        ],
+        "answer": "A",
+        "explanation": "原文 'made a funny face and pretended to trip over... biggest laugh of the night' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did the evening change the way Tom saw himself?",
+        "options": [
+          "He decided never to act again.",
+          "He felt ashamed of his mistake.",
+          "He thought he might like being a comedian.",
+          "He grew afraid of large audiences."
+        ],
+        "answer": "C",
+        "explanation": "末句 'began to wonder whether he might enjoy being a comedian'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

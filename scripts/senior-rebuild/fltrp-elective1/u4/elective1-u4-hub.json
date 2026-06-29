@@ -1,0 +1,45 @@
+{
+  "listeningQuestions": [
+    { "audio": "Nature is a rich source of inspiration.", "opts": ["大自然是丰富的灵感来源。", "大自然需要我们的保护。", "灵感来自努力的练习。", "艺术家热爱旅行。"], "answer": 0 },
+    { "audio": "The new exhibition is really amazing.", "opts": ["这家博物馆很大。", "这场新展览真是令人惊叹。", "这幅画的价格很高。", "新展览下周开幕。"], "answer": 1 },
+    { "audio": "His passion is painting.", "opts": ["他害怕绘画。", "他正在学习绘画。", "他的热爱是绘画。", "他不喜欢绘画。"], "answer": 2 },
+    { "audio": "The visitors were deeply moved.", "opts": ["参观者很疲惫。", "参观者迟到了。", "参观者很失望。", "参观者深受感动。"], "answer": 3 },
+    { "audio": "Technology has made art more accessible.", "opts": ["科技让艺术更易接触。", "科技让艺术更昂贵。", "科技毁掉了艺术。", "艺术让科技更先进。"], "answer": 0 },
+    { "audio": "She felt inspired by the music.", "opts": ["她创作了那首音乐。", "她受到那音乐的鼓舞。", "她不喜欢那首音乐。", "她在弹奏音乐。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "单词 inspiration 的意思是?", "opts": ["灵感", "雕塑", "展览", "对比"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "单词 abstract 的意思是?", "opts": ["传统的", "抽象的", "数字的", "普遍的"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "下列哪个英文词表示'作曲家'?", "opts": ["artist", "dancer", "composer", "visitor"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "单词 contrast 的意思是?", "opts": ["灵感", "潮流", "印象", "对比"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "Every artist's wish is ____ something new.", "opts": ["to create", "creating", "created", "creates"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The exhibition is really ____.", "opts": ["amazed", "amazing", "amaze", "to amaze"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "The visitors were deeply ____ by the story.", "opts": ["moving", "move", "moved", "to move"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "His goal is ____ Chinese and Western sounds.", "opts": ["combining", "combined", "combines", "to combine"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "Where did the artist get his idea?", "opts": ["From an old folk tale.", "From a science book.", "From a dream.", "From a film."], "answer": 0, "point": "听力", "dim": "listening", "audio": "The artist got his idea from an old folk tale." },
+    { "q": "What has technology done to art?", "opts": ["Made it more expensive only.", "Made it more accessible to people.", "Made it disappear.", "Made it boring."], "answer": 1, "point": "听力", "dim": "listening", "audio": "Technology has made art more accessible to ordinary people." }
+  ],
+  "reading": {
+    "passage": "Many great artists say that inspiration is everywhere. A leaf, an old story or a childhood memory can all lead to a wonderful new work of art.",
+    "passageCn": "许多伟大的艺术家都说,灵感无处不在。一片叶子、一个古老的故事,或一段童年记忆,都可能催生出一件美妙的新艺术作品。",
+    "questions": [
+      { "q": "According to the passage, what can lead to a new work of art?", "opts": ["Everyday things like a leaf or a memory.", "Only very expensive tools.", "Only travel to other countries.", "Only a famous teacher's help."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short invitation (about 60 words) asking a friend to visit a school art festival with you. Mention the time, the place and one artwork you want to see.",
+    "promptCn": "写一封约60词的简短邀请,邀请朋友和你一起参观学校艺术节。写清时间、地点,以及一件你想看的作品。",
+    "sampleWords": ["invitation", "invite", "festival", "exhibition", "artwork", "sculpture", "amazing", "inspiring", "attend", "reply"]
+  },
+  "dialogues": [
+    {
+      "title": "Inviting a Friend to the Art Festival",
+      "lines": [
+        { "role": "A", "text": "There's an art festival at school this Friday. Would you like to come with me?", "cn": "这周五学校有个艺术节,你想和我一起去吗?" },
+        { "role": "B", "text": "I'd love to! What kind of artworks will be there?", "cn": "我很乐意!那里会有什么样的作品呢?" },
+        { "role": "A", "text": "Paintings, sculptures, and even works made from computer parts. They look amazing.", "cn": "有绘画、雕塑,甚至还有用电脑部件做的作品,看起来很惊艳。" },
+        { "role": "B", "text": "That sounds inspiring. Let's meet at the school gate at four.", "cn": "听起来很有启发。我们四点在校门口见吧。" }
+      ]
+    }
+  ]
+}

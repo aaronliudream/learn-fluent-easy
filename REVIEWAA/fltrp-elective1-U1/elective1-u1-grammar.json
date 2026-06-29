@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "grammar_title": "非限制性定语从句(which/who/whose · 介词+which/whom · 指代整句的 which)",
+  "source": "外研社(新标准)选择性必修一 Unit 1 Using language:非限制性定语从句。句子地道、幽默主题、答案唯一(选项排除其他成立项);非限制性从句前有逗号,that 不能引导。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "非限制性 who / which(逗号+补充信息;指人 who、指物 which,that 不可用)",
+      "overview": "先行词后有逗号、从句提供额外(可省去)信息时,指人用 who、指物 which;非限制性从句绝不用 that;从句缺主语/宾语时不用 where/when。"
+    },
+    {
+      "code": "u1.02",
+      "point": "非限制性 whose · 介词+which/whom(of which / of whom / in/for + whom)",
+      "overview": "whose+名词表所属;介词后指物用 which、指人用 whom(some of which / many of whom / for whom);介词后不可用 that,也不用 where。"
+    },
+    {
+      "code": "u1.03",
+      "point": "which 指代整个主句(…, which …,that 不能引导非限制性从句)",
+      "overview": "逗号后的 which 可指代前面整句话,在从句中作主语/宾语;that/what/it 都不能这样引导非限制性从句。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "My uncle, ____ tells jokes all day, used to work as a circus clown.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号补充信息、先行词 uncle 指人且从句缺主语 → who;非限制性不用 that,whom 需作宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The clown doctor, ____ wears a bright red nose, makes sick children laugh.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词指人、从句缺主语 → who;where 不能作主语,that 不引导非限制性。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Lara, ____ had hurt her ankle, soon began to smile again.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词为人名、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The old magazines, ____ had been read hundreds of times, lay on the chairs.",
+      "options": [
+        "who",
+        "that",
+        "when",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 magazines 指物、从句缺主语 → which;非限制性不用 that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Mark Twain, ____ was an American writer, was famous for his quick wit.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "His curly wig, ____ is bright and colourful, makes the children giggle.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 wig 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The on-duty nurse, ____ knew Lara well, told the clown her story.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 nurse 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Lin Yutang, ____ brought humour to Chinese literature, was a famous writer.",
+      "options": [
+        "which",
+        "that",
+        "where",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The hospital waiting room, ____ felt full of tension, was a rather sad place.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 room 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Charlie Chaplin, ____ made silent films, could make people laugh without words.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The funny scene, ____ takes place in a factory, always makes me laugh.",
+      "options": [
+        "who",
+        "that",
+        "which",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 scene 指物、从句缺主语 → which;where 不能作主语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Doctor Larry, ____ paints a big smile on his face, visits the children every week.",
+      "options": [
+        "which",
+        "that",
+        "whom",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The magic trick, ____ surprised the little girl, made her laugh out loud.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 trick 指物、从句缺主语 → which;非限制性不用 that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "My grandfather, ____ loves a good joke, often makes the whole family laugh.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The silly story, ____ had a clever ending, cheered everyone up.",
+      "options": [
+        "who",
+        "that",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 story 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The two kind doctors, ____ treated Lara's ankle, also enjoyed the clown's show.",
+      "options": [
+        "which",
+        "whom",
+        "that",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 doctors 指人、从句缺主语 → who;whom 需作宾语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Humour, ____ is found in every culture, brings people closer together.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 humour 指物(抽象)、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The class teacher, ____ rarely laughs at anything, finally cracked a smile.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 teacher 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The big red nose, ____ sits in the middle of his face, is the funniest part.",
+      "options": [
+        "who",
+        "that",
+        "which",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 nose 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Lin's quick wit, ____ saved him at the dinner, made everyone admire him.",
+      "options": [
+        "who",
+        "that",
+        "whom",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 wit 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The little girl, ____ ankle was badly hurt, would not stop crying.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "ankle 属于 girl,表所属 → whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Mark Twain, ____ books are still loved today, was a master of wit.",
+      "options": [
+        "which",
+        "whose",
+        "who",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "books 属于 Twain → whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The clown, ____ red nose had fallen off, quickly picked it up again.",
+      "options": [
+        "who",
+        "that",
+        "whose",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "red nose 属于 clown → whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Lin Yutang, ____ humour was always gentle, made the president laugh.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "humour 属于 Lin → whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The young patient, ____ smile returned at last, thanked the clown doctor.",
+      "options": [
+        "whose",
+        "who",
+        "that",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "smile 属于 patient → whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Charlie Chaplin, ____ most famous character is the Tramp, never spoke on screen.",
+      "options": [
+        "which",
+        "whose",
+        "that",
+        "who"
+      ],
+      "answer_index": 1,
+      "explanation": "character 属于 Chaplin → whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The Roman emperor, ____ wild animals all walked away, was completely astonished.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "animals 属于 emperor → whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The comedian, ____ jokes are always clean and kind, is loved by children.",
+      "options": [
+        "whom",
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "jokes 属于 comedian → whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "My best friend, ____ sense of humour is wonderful, can always make me laugh.",
+      "options": [
+        "whose",
+        "who",
+        "that",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "sense of humour 属于 friend → whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The busy hospital, ____ staff work very hard, warmly welcomes the clown doctors.",
+      "options": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "staff 属于 hospital → whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "He looked through the old magazines, all of ____ had been read many times before.",
+      "options": [
+        "whom",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 of 后指物 → of which;magazines 是物。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The clown doctors, many of ____ once trained as actors, also learn medical skills.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 of 后指人 → of whom;clown doctors 是人。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "On a typical day they meet many patients, some of ____ are very young.",
+      "options": [
+        "whom",
+        "which",
+        "that",
+        "who"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 of 后指人 → some of whom。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "He tried several jokes, none of ____ made the frightened boy laugh.",
+      "options": [
+        "whom",
+        "which",
+        "who",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 of 后指物 → none of which;jokes 是物。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The doctor used a special medicine, the effect of ____ surprised everyone.",
+      "options": [
+        "whom",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 of 后指物 → the effect of which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Lin met two professors, both of ____ enjoyed his witty little story.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 of 后指人 → both of whom。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The large audience, in front of ____ Lin stood, waited for his speech.",
+      "options": [
+        "whom",
+        "which",
+        "who",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 in front of 后指人 → whom。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "She told a long story, the ending of ____ made the whole class roar.",
+      "options": [
+        "whom",
+        "which",
+        "who",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 of 后指物 → the ending of which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The kind nurses keep us updated, for ____ we are all very grateful.",
+      "options": [
+        "which",
+        "that",
+        "whom",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 for 后指人 → for whom。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "He kept several red noses, one of ____ was far bigger than the others.",
+      "options": [
+        "whom",
+        "who",
+        "that",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 of 后指物 → one of which;noses 是物。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Laughter produces helpful chemicals, ____ means clown doctors can really help.",
+      "options": [
+        "which",
+        "that",
+        "what",
+        "it"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后指代前面整句话、作从句主语 → which;that/what/it 都不能引导非限制性从句。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He produced her sock from his pocket, ____ made the little girl laugh.",
+      "options": [
+        "what",
+        "which",
+        "that",
+        "it"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代整件事、作主语;that 不引导非限制性从句。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The clown sang and danced, ____ cheered up the whole ward.",
+      "options": [
+        "that",
+        "this",
+        "which",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代前面整句;this/that 都不能引导从句。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Twain replied with a witty remark, ____ completely surprised the barber.",
+      "options": [
+        "what",
+        "that",
+        "it",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代整句、作主语;非限制性不用 that。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Lin told a short joke, ____ made his whole audience roar with laughter.",
+      "options": [
+        "which",
+        "that",
+        "so",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "which 指代整句、作主语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The doctors did a great job, ____ made Lara's parents feel relieved.",
+      "options": [
+        "what",
+        "which",
+        "that",
+        "it"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代整句、作主语;it 会造成无连词的并列句。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The children kept laughing, ____ showed the magic medicine had worked.",
+      "options": [
+        "that",
+        "what",
+        "which",
+        "this"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代整句、作主语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He forgot all his lines on stage, ____ made the whole class laugh.",
+      "options": [
+        "what",
+        "that",
+        "it",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代整句、作主语;that 不引导非限制性从句。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Chaplin never spoke in his films, ____ made his clever acting even funnier.",
+      "options": [
+        "which",
+        "that",
+        "what",
+        "so"
+      ],
+      "answer_index": 0,
+      "explanation": "which 指代整句、作主语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She finally cracked a smile, ____ pleased her tired and worried parents.",
+      "options": [
+        "what",
+        "which",
+        "that",
+        "it"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代整件事、作主语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Their tent had been stolen, ____ Holmes had completely failed to notice.",
+      "options": [
+        "that",
+        "what",
+        "which",
+        "this"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代整句、作 notice 的宾语;that/what 不引导非限制性从句。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Humour brings people together, ____ is one reason we need it so much.",
+      "options": [
+        "what",
+        "that",
+        "it",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代整句、作主语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The clown pretended to trip over a chair, ____ made the children giggle.",
+      "options": [
+        "which",
+        "that",
+        "what",
+        "so"
+      ],
+      "answer_index": 0,
+      "explanation": "which 指代整件事、作主语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Twain often made witty remarks, ____ won him fame far beyond America.",
+      "options": [
+        "what",
+        "which",
+        "that",
+        "it"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代整句、作主语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The nurse kept us updated, ____ helped us care for each patient better.",
+      "options": [
+        "that",
+        "what",
+        "which",
+        "this"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代整件事、作主语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He put on his wig and red nose, ____ instantly changed him into a clown.",
+      "options": [
+        "what",
+        "that",
+        "it",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代整件事、作主语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Lara stopped crying at last, ____ was exactly what the clown had hoped for.",
+      "options": [
+        "which",
+        "that",
+        "what",
+        "so"
+      ],
+      "answer_index": 0,
+      "explanation": "which 指代整件事、作主语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The whole audience laughed loudly, ____ greatly encouraged the young comedian.",
+      "options": [
+        "what",
+        "which",
+        "that",
+        "it"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代整句、作主语。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Lin gently told off the president, ____ nobody had expected him to do.",
+      "options": [
+        "that",
+        "what",
+        "which",
+        "this"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代前面的行为、作 do 的宾语;that/what 不引导非限制性从句。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Good humour can lighten hard times, ____ is why people value it so highly.",
+      "options": [
+        "what",
+        "that",
+        "it",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代整句、作主语。"
+    }
+  ]
+}

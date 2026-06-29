@@ -1,0 +1,43 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(创业主题,独立短文,不在阅读关出现)。短文2句+3题,答案转述非照抄,覆盖不同位置。",
+  "finalReading": {
+    "passage": "After leaving her busy city job, Lin opened a small bakery in her home town, where few shops had ever lasted long. She worked from dawn till night and slowly won loyal customers, and within two years her little bakery, whose cakes became famous nearby, was making a steady profit.",
+    "questions": [
+      {
+        "q": "Where did Lin open her bakery?",
+        "options": [
+          "In the town where she had grown up.",
+          "In the big city she worked in.",
+          "Next to her old office.",
+          "In a foreign country."
+        ],
+        "answer": "A",
+        "explanation": "短文说她在 home town 开店,'回到家乡小镇'的转述。"
+      },
+      {
+        "q": "What had been true of shops in that town before?",
+        "options": [
+          "Few of them had stayed in business for long.",
+          "All of them were very successful.",
+          "They were all bakeries.",
+          "They sold only flowers."
+        ],
+        "answer": "A",
+        "explanation": "对 'where few shops had ever lasted long' 的转述。"
+      },
+      {
+        "q": "How was the bakery doing after two years?",
+        "options": [
+          "It was earning money steadily.",
+          "It had already closed down.",
+          "It was losing money fast.",
+          "It had moved to the city."
+        ],
+        "answer": "A",
+        "explanation": "对 'was making a steady profit' 的转述,而非照抄。"
+      }
+    ]
+  }
+}

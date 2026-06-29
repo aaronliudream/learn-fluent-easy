@@ -1,0 +1,35 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "grade": 11,
+  "content": {
+    "title": "过去进行被动语态 was/were being done 速查",
+    "intro": "过去某一时刻,某事正在被做(动作进行中 + 主语是承受者),用 was/were being + 过去分词。它把'进行体'和'被动'合在一起:强调那一刻动作正在进行、且尚未完成。判断口诀:看主语是不是被动作的对象→是,就用被动;再看动作是'正进行'还是'已完成'→正进行用 being,已完成不用 being。",
+    "table": {
+      "headers": ["结构 / 用法", "例句"],
+      "rows": [
+        ["was/were being + 过去分词", "The books were being packed.(书正被装箱)"],
+        ["过去某刻动作正被进行", "When I arrived, the gate was being torn down."],
+        ["常见时间标志", "when… / at that moment / right then / still / not finished yet"],
+        ["常配 by 短语点明施动者", "Customers were being attracted by chain stores."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主语是动作承受者才用被动;主语自己施动则用主动 was/were doing", "mark": "The gate was being torn down.(门被拆)/ The workers were tearing it down.(工人在拆)" },
+      { "rule": "过程未完用 was/were being done;到某时已完成、只看结果用一般过去被动 was/were done", "mark": "were being packed(正在装)/ were already packed(已装完)" },
+      { "rule": "助动词 was/were 须与主语单复数一致", "mark": "the book was being… / the books were being…" },
+      { "rule": "否定、疑问时把 not / 主语放在 was/were 之后", "mark": "was not being repaired / Was it being repaired?" }
+    ],
+    "why": [
+      "被动强调'什么被怎样了',进行体强调'当时正在进行、尚未完成';两者合起来,就是'过去某刻某事正被做'——既不是已完成的结果(was done),也不是主语自己在做(was doing)。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/短文改错高频:给动词原形 + 进行时间状语(when I arrived 等)→ 判断 was/were being done。",
+      "三组对比要分清:进行被动(过程·being)vs 一般过去被动(结果·无 being);被动(主语被动)vs 主动(主语施动);was vs were(数一致)。"
+    ],
+    "examVsReal": [
+      { "exam": "The road was being repaired then.（考试/书面,强调过程被动)", "real": "They were repairing the road then.", "note": "施动者明确时,口语更爱用主动" },
+      { "exam": "The old shop was being turned into a café.（考试)", "real": "They were turning the old shop into a café.", "note": "日常口语多用主动;被动多见于正式/书面或不想点明施动者时" }
+    ]
+  }
+}

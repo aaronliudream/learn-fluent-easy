@@ -1,0 +1,334 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "topic": "Onwards and Upwards",
+  "source": "外研社(新标准)选择性必修第一册 Unit 2 同主题阅读(罗琳的拒绝信/塞林格的坚持/勃朗特三姐妹/刘伟用脚弹琴/海伦·凯勒的愿望/看到光明的一面)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Twelve Times Rejected",
+      "topic_cn": "记叙·罗琳的坚持",
+      "body": "\"We regret to inform you...\" These are the words that every writer dreads receiving. When J.K. Rowling got her first rejection letter, she did not throw it away. Instead, she decided that it now gave her something in common with her favourite writers, and she stuck it on her kitchen wall. For years she had been living on very little money, spending all her time writing. When she finished her first book, publishers told her it was too long and that children would not be interested in it. Nevertheless, she persevered. She was not going to give up until every single publisher had turned her down. After twelve rejections, one publisher at last agreed to print just five hundred copies. As we all know, the story of the young wizard went on to become a global success, selling hundreds of millions of books around the world. Her endless effort had finally paid off.",
+      "vocab_notes": [
+        {
+          "word": "rejection",
+          "cn": "拒绝"
+        },
+        {
+          "word": "persevere",
+          "cn": "坚持不懈"
+        },
+        {
+          "word": "dread",
+          "cn": "畏惧"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Rowling do with her first rejection letter?",
+          "options": [
+            "She kept it and put it on her wall.",
+            "She threw it straight into the bin.",
+            "She sent it back to the publisher.",
+            "She tore it into small pieces."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'stuck it on her kitchen wall' 的转述;其余动作文中未发生。"
+        },
+        {
+          "stem": "Why did the early publishers turn her book down?",
+          "options": [
+            "They said it was far too short.",
+            "They thought it was too long for children.",
+            "They could not read her handwriting.",
+            "They had no money to print books."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'too long and that children would not be interested' 的转述。"
+        },
+        {
+          "stem": "What finally happened to the book about the young wizard?",
+          "options": [
+            "It became a huge success worldwide.",
+            "It was never printed at all.",
+            "It sold only five hundred copies.",
+            "It was rewritten by another author."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'became a global success, selling hundreds of millions' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Soldier with a Novel",
+      "topic_cn": "记叙·塞林格的坚持",
+      "body": "Many writers of great works have had to face criticism as well as rejection. J.D. Salinger began writing short stories while he was still in high school, but later he struggled to get his work published. One editor told him that they did not feel they knew the central character well enough. Several publishers turned the book down, yet Salinger refused to give up. Even when he was serving in the army during the Second World War, he carried six chapters of his unfinished novel with him. Amid the noise and danger of war, he kept working on the story whenever he could. He was determined to finish it, no matter how long it took. When the book was finally published, it became an immediate best-seller and went on to sell millions and millions of copies. His patience and endurance had turned years of hard struggle into a lasting success.",
+      "vocab_notes": [
+        {
+          "word": "criticism",
+          "cn": "批评"
+        },
+        {
+          "word": "manuscript",
+          "cn": "手稿"
+        },
+        {
+          "word": "endurance",
+          "cn": "耐力"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When did Salinger start writing short stories?",
+          "options": [
+            "Only after he left the army.",
+            "During his time in high school.",
+            "After his first book was printed.",
+            "When he became a famous editor."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'began writing short stories while he was still in high school' 的转述。"
+        },
+        {
+          "stem": "What did Salinger do with his novel during the war?",
+          "options": [
+            "He stopped writing completely.",
+            "He sold the chapters to a publisher.",
+            "He kept working on it whenever he could.",
+            "He left the chapters safely at home."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'kept working on the story whenever he could'(中段)。"
+        },
+        {
+          "stem": "How did the book sell once it was published?",
+          "options": [
+            "It sold very few copies.",
+            "It was banned by the army.",
+            "It was forgotten within a year.",
+            "It quickly became a best-seller."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'became an immediate best-seller' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Three Sisters Who Never Gave In",
+      "topic_cn": "记叙·勃朗特三姐妹",
+      "body": "Perhaps the greatest prize for perseverance should go to three sisters from a small English village who dreamt of seeing their words in print. Sadly, theirs was a time when women were not encouraged to become writers. One important poet of the day even wrote to one of them, saying that writing could not and should not be the business of a woman's life. Nevertheless, the sisters did not stop trying. Their answer was to publish a book of poems under men's names so that readers would take them seriously. Even when that book sold only two copies, the sisters still refused to give up. They turned instead to writing novels. Today their stories are regarded as classics of world literature, loved by readers everywhere. Their lives show that talent alone is never enough; it is patience and a refusal to give in that finally open the door to success.",
+      "vocab_notes": [
+        {
+          "word": "classic",
+          "cn": "名著"
+        },
+        {
+          "word": "literary",
+          "cn": "文学的"
+        },
+        {
+          "word": "persevere",
+          "cn": "坚持"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the sisters publish their poems under men's names?",
+          "options": [
+            "To win readers' respect for their work.",
+            "Because they had forgotten their own names.",
+            "Because the publisher chose the names.",
+            "So that they could win a money prize."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'so that readers would take them seriously' 的转述(意为想获得读者认真对待)。"
+        },
+        {
+          "stem": "How well did the sisters' book of poems sell?",
+          "options": [
+            "It became a best-seller.",
+            "It sold only two copies.",
+            "It sold millions of copies.",
+            "It was never printed."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'that book sold only two copies'(中段)。"
+        },
+        {
+          "stem": "What does the writer say finally leads to success?",
+          "options": [
+            "Natural talent on its own.",
+            "A large amount of money.",
+            "Patience and never giving in.",
+            "Being born into a rich family."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'it is patience and a refusal to give in' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Playing the Piano with His Toes",
+      "topic_cn": "记叙·刘伟",
+      "body": "At the age of ten, Liu Wei lost both of his arms in a terrible accident. Many people might have given up hope, but Liu Wei wanted to live life to the full. He learned to use his feet for everyday activities, such as eating and brushing his teeth. He also took up swimming, and he won two gold medals at the National Games for People with Disabilities. Later, health problems forced him to stop swimming, but he refused to feel sorry for himself. Instead, he decided to learn how to play the piano with his toes. It was extremely difficult, and progress was slow. Yet he kept practising, hour after hour, until at last he reached his goal. In 2010, he won a famous national talent show and became known across the whole country. Today Liu Wei still enjoys playing music, and his positive attitude is an inspiration to us all.",
+      "vocab_notes": [
+        {
+          "word": "attitude",
+          "cn": "态度"
+        },
+        {
+          "word": "disability",
+          "cn": "残疾"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Liu Wei learn to do with his feet?",
+          "options": [
+            "Only how to drive a car.",
+            "Nothing at all for years.",
+            "Just how to write letters.",
+            "Everyday tasks like eating."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'use his feet for everyday activities, such as eating'(中段)的转述。"
+        },
+        {
+          "stem": "Why did Liu Wei stop swimming?",
+          "options": [
+            "Because of some health problems.",
+            "He lost interest in the sport.",
+            "He was not good at it.",
+            "His coach told him to stop."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'health problems forced him to stop swimming' 的转述。"
+        },
+        {
+          "stem": "What does the writer say about Liu Wei's attitude?",
+          "options": [
+            "It is rather sad and hopeless.",
+            "It inspires everyone around him.",
+            "It changes from day to day.",
+            "It matters less than his talent."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'his positive attitude is an inspiration to us all' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "If I Could See for Three Days",
+      "topic_cn": "议论·海伦·凯勒的愿望",
+      "body": "The writer Helen Keller, who was both blind and deaf, once imagined what she would most like to see if she were given the use of her eyes for just three days. On the first day, she said, she would want to look at the faces of the people whose kindness and companionship had made her life worth living. She could only know these faces through the mere touch of her fingertips. On the second day, she would rise at dawn to watch the world wake up, and then go to the museums to follow the long story of human progress. In the afternoon she would take a long walk in the woods. She gave one simple piece of advice to those who can see: use your eyes as if tomorrow you would lose them. Smell the perfume of flowers and hear the mighty music of an orchestra as if you would never enjoy them again.",
+      "vocab_notes": [
+        {
+          "word": "companionship",
+          "cn": "陪伴"
+        },
+        {
+          "word": "fingertip",
+          "cn": "指尖"
+        },
+        {
+          "word": "dawn",
+          "cn": "黎明"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What would Helen Keller most want to see on the first day?",
+          "options": [
+            "A large and busy city.",
+            "The inside of a museum.",
+            "The faces of her loved ones.",
+            "A famous orchestra playing."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'look at the faces of the people whose kindness and companionship' 的转述。"
+        },
+        {
+          "stem": "How did Helen Keller normally come to know people's faces?",
+          "options": [
+            "By hearing their voices.",
+            "By reading about them.",
+            "Through old photographs.",
+            "Through the touch of her fingertips."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'only know these faces through the mere touch of her fingertips' 的转述。"
+        },
+        {
+          "stem": "What advice does Helen Keller give to people who can see?",
+          "options": [
+            "Use their eyes as if they might lose them.",
+            "Spend more time indoors.",
+            "Stop using their other senses.",
+            "Visit a museum every single day."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'use your eyes as if tomorrow you would lose them' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Looking on the Bright Side",
+      "topic_cn": "议论·积极心态",
+      "body": "Life is made up of ups and downs, so it is not always easy to keep a good and enthusiastic attitude. Nevertheless, looking on the bright side is one of the best things we can do, both for ourselves and for the people around us. A positive attitude can spread from one person to another, just as a cold can. When someone you know is feeling low and upset, you do not need to solve all their problems. Often it is enough simply to lend them an ear and to try to cheer them up with a few kind words. Remember that your mood is catching, so make sure you pass on a good one. A person who always finds fault and spoils the fun is like a wet blanket, while an enthusiastic, hard-working friend can lift the whole group. Choosing to stay hopeful, even after failure, is a small daily act of courage.",
+      "vocab_notes": [
+        {
+          "word": "enthusiastic",
+          "cn": "热情的"
+        },
+        {
+          "word": "upset",
+          "cn": "心烦的"
+        },
+        {
+          "word": "blanket",
+          "cn": "毯子(wet blanket=扫兴的人)"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is keeping a good attitude not always easy?",
+          "options": [
+            "Because friends are hard to find.",
+            "Because life has both ups and downs.",
+            "Because money is always short.",
+            "Because attitudes never change."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Life is made up of ups and downs' 的转述。"
+        },
+        {
+          "stem": "What does the writer suggest doing for an upset friend?",
+          "options": [
+            "Solving every one of their problems.",
+            "Leaving them completely alone.",
+            "Listening and cheering them up.",
+            "Telling them to stop complaining."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'lend them an ear and to try to cheer them up'(中段)的转述。"
+        },
+        {
+          "stem": "What does the writer compare a positive attitude to?",
+          "options": [
+            "A heavy wet blanket.",
+            "A long and tiring walk.",
+            "A difficult maths problem.",
+            "Something catching, like a cold."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'can spread… just as a cold can / your mood is catching' 的转述。"
+        }
+      ]
+    }
+  ]
+}

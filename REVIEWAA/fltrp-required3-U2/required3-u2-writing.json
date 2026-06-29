@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "topic": "Write a Short Biography of Someone Who Made a Difference(写一篇人物小传)",
+  "title_en": "A Person Who Made a Difference",
+  "genre": "人物小传 / 记叙(write a short biography: key actions + personal qualities)",
+  "source": "外研社必修三 Unit 2 Developing ideas:write a short biography(如屠呦呦),按时间顺序写关键事迹 + 个人品质。",
+  "prompt_cn": "请用英语写一篇约 80 词的人物小传,介绍一位'有所作为'的人(可以是屠呦呦、瑞安、温顿,也可以是你身边的人)。内容包括:① 他/她是谁、最大的成就是什么;② 按时间顺序写 2-3 件关键事迹;③ 他/她的个人品质,以及为什么激励你。注意:可用 -ed 分词作定语(如 the well built by him / the words spoken by her)。",
+  "prompt_en": "Write a short biography (about 80 words) of a person who has made a difference, such as Tu Youyou, Ryan or someone you admire. Include: 1) who the person is and his/her greatest achievement; 2) two or three key actions in time order; 3) the person's personal qualities and why he/she inspires you. Try to use the -ed participle as an attributive (e.g. the well built by him).",
+  "points": [
+    "介绍人物与最大成就(… is a … who is best known for …)",
+    "按时间顺序写关键事迹(In 1969, … / Later, … / Finally, …)",
+    "总结个人品质并说明激励(His/Her perseverance inspires me to …)",
+    "尝试用 -ed 分词作定语(the money raised by …, the children saved by …)"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Tu Youyou is a Chinese scientist best known for her work against malaria. Born in 1930, she studied medicine and later led a research team determined to find a cure. After years of patient work, the substance taken from a Chinese herb proved very effective, and millions of lives were saved. In 2015 she won the Nobel Prize. Her perseverance and quiet courage inspire me to keep trying, however hard the task. She shows that one determined person can truly make a difference.",
+  "model_translation": "屠呦呦是一位中国科学家,以抗击疟疾的工作而闻名。她生于 1930 年,学医,后来带领一个决心找到疗法的研究团队。经过多年耐心钻研,从一种中草药中提取的物质被证明非常有效,挽救了数百万人的生命。2015 年她获得诺贝尔奖。她坚持不懈、默默勇敢的精神激励着我无论任务多难都坚持下去。她证明了一个意志坚定的人真的能够有所作为。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:人物与成就 / 时间顺序的关键事迹 / 品质与激励" },
+      { "dimension": "结构", "max": 4, "criteria": "按时间顺序展开、衔接自然、人称与时态前后一致" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、正确使用 -ed 分词作定语、语法基本无误" }
+    ],
+    "required_structure": [
+      "开头 … is a … best known for …",
+      "事迹 In/By (year), … ; Later, …",
+      "品质 His/Her … inspires me to …",
+      "结尾 He/She shows that one determined person can make a difference."
+    ],
+    "key_expressions": [
+      "best known for her work against malaria",
+      "a research team determined to find a cure",
+      "the substance taken from a Chinese herb",
+      "one determined person can make a difference"
+    ],
+    "useful_words": ["contribution", "achievement", "donate", "volunteer", "determined", "generous", "treatment", "foundation", "grateful", "inspire"]
+  },
+  "high_sentences": [
+    "Tu Youyou is a Chinese scientist best known for her work against malaria.",
+    "She led a research team determined to find a cure.",
+    "The substance taken from a Chinese herb proved very effective, and millions of lives were saved.",
+    "She shows that one determined person can truly make a difference."
+  ],
+  "error_pairs": [
+    { "wrong": "the words speaking by her teacher", "correct": "the words spoken by her teacher", "note": "words 是被说出的,被动含义用过去分词 spoken,不用 -ing。" },
+    { "wrong": "the well builded near the school", "correct": "the well built near the school", "note": "build 的过去分词是 built,不是 builded。" },
+    { "wrong": "Born in 1930, she study medicine.", "correct": "Born in 1930, she studied medicine.", "note": "记叙过去的事用一般过去时 studied。" }
+  ],
+  "paragraph_template": "【人物小传结构】\n第1句 人物+成就:… is a … best known for …\n第2-3句 时间顺序事迹:Born in …, … In/By (year), … Later, …\n第4句 品质+激励:His/Her … inspires me to … ; one determined person can make a difference."
+}

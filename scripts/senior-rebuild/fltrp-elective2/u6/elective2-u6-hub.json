@@ -1,0 +1,47 @@
+{
+  "listeningQuestions": [
+    { "audio": "Wherever they go, wild animals find our cities in their way.", "opts": ["野生动物无论走到哪里,都发现城市挡在前路。", "野生动物只在夜里才进城。", "野生动物从不靠近城市。", "城市里根本没有野生动物。"], "answer": 0 },
+    { "audio": "Scientists estimate that up to a billion birds die from window crashes each year.", "opts": ["科学家说鸟类从不撞窗。", "科学家估计每年多达十亿只鸟死于撞窗。", "科学家认为撞窗对鸟无害。", "科学家说只有一只鸟撞窗。"], "answer": 1 },
+    { "audio": "Wherever you go in the wild, take a first-aid kit with you.", "opts": ["在野外把急救包留在家里。", "只有受伤时才需要急救包。", "在野外无论去哪儿,都要随身带急救包。", "急救包在野外没什么用。"], "answer": 2 },
+    { "audio": "However hard the situation seems, stay calm and keep hoping.", "opts": ["情况一难就该放弃。", "遇到困难要大声喊叫。", "困难时最好独自离开。", "无论情况多难,都要保持冷静、心怀希望。"], "answer": 3 },
+    { "audio": "No matter what happens, a calm mind is the best survival tool.", "opts": ["无论发生什么,冷静的头脑是最好的求生工具。", "求生最重要的是体力。", "遇事先惊慌才安全。", "求生全靠运气。"], "answer": 0 },
+    { "audio": "As cities become greener, they offer good homes to wild animals.", "opts": ["城市越变越绿,野生动物就越少。", "城市越变越绿,为野生动物提供了好家园。", "绿色城市会赶走所有动物。", "城市变绿和动物毫无关系。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "'郊区、城郊'对应哪个词?", "opts": ["suburb", "agency", "cave", "blaze"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "'估计、估算'用哪个动词?", "opts": ["restrict", "estimate", "react", "orbit"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "'至关重要的'用哪个形容词?", "opts": ["greedy", "monthly", "crucial", "urban"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "急救包:a first-aid ____", "opts": ["clay", "fuel", "dust", "kit"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "____ happens in the wild, a calm mind helps you survive.", "opts": ["Whatever", "Whoever", "Wherever", "Although"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ hard the climb was, the team kept going.", "opts": ["Whenever", "However", "Wherever", "Although"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "____ reaches the survivor first should keep him warm.", "opts": ["Whatever", "Wherever", "Whoever", "Although"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "____ a wildfire breaks out, leave the area calmly.", "opts": ["However", "Wherever", "Whatever", "Whenever"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["每当危机出现,冷静的人会寻找解决办法。", "危机出现时最好先逃跑。", "危机和冷静毫无关系。", "冷静的人从不遇到危机。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Whenever a crisis appears, calm people look for a solution." },
+    { "q": "听句子选中文:", "opts": ["城市里的狐狸怕人不敢出来。", "城市里的狐狸已学会与我们为邻而居。", "城市里没有狐狸。", "狐狸只在乡间生活。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "The urban fox has learned to live right beside us." }
+  ],
+  "reading": {
+    "passage": "A young fox slips into the streets of London at night to look for food. Far from the larger animals that once hunted it, the fox feels safe in the city. It opens bins, eats our leftovers, and has truly become a city animal.",
+    "passageCn": "夜里,一只年幼的狐狸溜进伦敦的街道找吃的。由于远离了曾经捕猎它的大型动物,这只狐狸在城里感到安全。它翻开垃圾箱,吃我们的剩饭,如今已经真正成了一只城市动物。",
+    "questions": [
+      { "q": "Why does the fox come into the city at night?", "opts": ["To look for food.", "To meet other foxes.", "To sleep in the park.", "To hide from the rain."], "answer": 0 },
+      { "q": "Why does the fox feel safe in the city?", "opts": ["The city is always quiet.", "It is far from the animals that once hunted it.", "People keep it as a pet.", "It never feels hungry there."], "answer": 1 },
+      { "q": "What has the fox become?", "opts": ["A wild forest hunter.", "A frightened newcomer.", "A true city animal.", "A rare night visitor."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "In about 60 words, write a short survival story about being lost in the wild. Use at least one clause with -ever or no matter.",
+    "promptCn": "用约60词写一个在野外迷路的小求生故事,至少用上一个 -ever 或 no matter 引导的从句。",
+    "sampleWords": ["lost", "wild", "danger", "calm", "shelter", "water", "fire", "survive", "hopeful", "rescue"]
+  },
+  "dialogues": [
+    {
+      "title": "Lost on a Hike",
+      "lines": [
+        { "role": "A", "text": "We've lost the path. What should we do now?", "cn": "我们找不到路了,现在该怎么办?" },
+        { "role": "B", "text": "Stay calm. Whatever happens, we must not split up.", "cn": "保持冷静。无论发生什么,我们都不能走散。" },
+        { "role": "A", "text": "Should we keep walking to look for the way?", "cn": "我们要继续走着找路吗?" },
+        { "role": "B", "text": "No. Wherever we are, it's safer to stay here and wait for help.", "cn": "不。无论我们在哪里,待在原地等救援都更安全。" }
+      ]
+    }
+  ]
+}

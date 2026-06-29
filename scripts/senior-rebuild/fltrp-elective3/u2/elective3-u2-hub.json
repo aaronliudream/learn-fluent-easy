@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Bill Cunningham rode an old bicycle around New York and photographed ordinary people.", "opts": ["比尔·坎宁安骑着旧自行车在纽约街头拍摄普通人。", "比尔从不离开他的摄影棚。", "比尔只给名人拍照。", "比尔每天都在修理自行车。"], "answer": 0 },
+    { "audio": "This is what makes his photos so special: he went out in every kind of weather.", "opts": ["他从来不在坏天气出门。", "让他的照片如此特别的,是他在各种天气都坚持出门。", "他只在晴天才拍照。", "他更喜欢在棚里拍照。"], "answer": 1 },
+    { "audio": "In a quiet courtyard, Wang Jin spends his days repairing antique clocks by hand.", "opts": ["王津用机器快速修理钟表。", "王津很少待在故宫里。", "在安静的庭院里,王津每天用手修复古董钟表。", "王津只修现代的电子表。"], "answer": 2 },
+    { "audio": "The reason each clock takes months is that every tiny part must be cleaned by hand.", "opts": ["钟表很快就能修好。", "工人们其实很懒。", "钟表是用纸做的。", "每件钟表要花数月,是因为每个小部件都得手工清洁。"], "answer": 3 },
+    { "audio": "A good photographer is first of all a careful observer of everyday life.", "opts": ["好的摄影师首先是日常生活的细心观察者。", "好的摄影师只需昂贵的相机。", "好的摄影师从不看周围的人。", "好的摄影师只拍名人。"], "answer": 0 },
+    { "audio": "When the old clock chimes again, that sound is the finest music in the world to him.", "opts": ["他觉得钟声很吵。", "当老钟再次报时,那声音对他来说是世上最美的音乐。", "他从不听钟声。", "钟表已经无法修好了。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "He never used costly cameras; he stayed focused on his ____ instead.", "opts": ["craft", "ticket", "garden", "engine"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Each old clock needs its own careful method of ____.", "opts": ["restoration", "shopping", "weather", "traffic"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "He sought no fame and chose to ____ the spotlight all his life.", "opts": ["shun", "enjoy", "demand", "buy"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "These masters work with skilful hands and ____ hearts, seeking no praise.", "opts": ["modest", "proud", "angry", "lazy"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Hard work and devotion are ____ made Bill Cunningham so special.", "opts": ["what", "that", "which", "why"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The simple truth is ____ he never took a single day off.", "opts": ["that", "what", "why", "which"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The reason his photos look so alive is ____ he always shot real people.", "opts": ["that", "because", "why", "what"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "A small restaurant was ____ he ate the same breakfast every day.", "opts": ["where", "why", "how", "when"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["让他的工作如此特别的,是他全然的专注。", "他对工作毫不在意。", "他每天只工作一小时。", "他更看重金钱而非手艺。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "What makes his work so special is his complete devotion to the craft." },
+    { "q": "听句子选中文:", "opts": ["今天细心的观察者,明天可以成为真正的艺术家。", "只有昂贵的相机才能拍出好照片。", "艺术家不需要任何耐心。", "他从不观察周围的世界。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "A careful observer today can become a true artist tomorrow." }
+  ],
+  "reading": {
+    "passage": "Bill Cunningham was a famous fashion photographer, yet his life was wonderfully simple. He rode an old bicycle, wore the same plain jacket, and went out every single day to photograph ordinary people on the streets of New York. To him, freedom mattered far more than money.",
+    "passageCn": "比尔·坎宁安是著名的时尚摄影师,但他的生活却出奇地简单。他骑一辆旧自行车,穿同一件朴素外套,每天都出门去拍摄纽约街头的普通人。对他来说,自由远比金钱重要。",
+    "questions": [
+      { "q": "What was Cunningham's life like?", "opts": ["Wonderfully simple.", "Full of luxury.", "Lonely and sad.", "Busy with parties."], "answer": 0 },
+      { "q": "What mattered more to him than money?", "opts": ["Freedom.", "Fame.", "Fine clothes.", "Expensive cars."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write about 60 words about a person who shows the spirit of craftsmanship. Use at least one predicative clause (e.g. This is what… / The reason … is that…).",
+    "promptCn": "用约60词写一位体现匠心精神的人物,至少用一个表语从句(如 This is what… / The reason … is that…)。",
+    "sampleWords": ["craftsmanship", "devotion", "antique", "restore", "modest", "patience", "skill", "preserve", "observe", "this is what"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking About a Photographer",
+      "lines": [
+        { "role": "A", "text": "Have you heard of Bill Cunningham, the street photographer?", "cn": "你听说过街拍摄影师比尔·坎宁安吗?" },
+        { "role": "B", "text": "Yes! What I admire most is that he photographed ordinary people.", "cn": "听过!我最敬佩的是他拍的是普通人。" },
+        { "role": "A", "text": "And the reason his photos feel so alive is that they show real life.", "cn": "他的照片之所以那么生动,是因为它们展现的是真实生活。" },
+        { "role": "B", "text": "That is why he is still remembered today.", "cn": "这就是为什么他至今仍被人铭记。" }
+      ]
+    },
+    {
+      "title": "At the Clock Workshop",
+      "lines": [
+        { "role": "A", "text": "Why does it take months to repair one old clock?", "cn": "为什么修一座老钟要花好几个月?" },
+        { "role": "B", "text": "The reason is that every tiny part must be cleaned by hand.", "cn": "原因是每个细小的部件都必须手工清洁。" },
+        { "role": "A", "text": "This is what real craftsmanship looks like, isn't it?", "cn": "这就是真正匠心的样子,对吧?" },
+        { "role": "B", "text": "Exactly. That is why we should respect these quiet masters.", "cn": "正是。这就是我们该尊敬这些默默无闻的大师的原因。" }
+      ]
+    }
+  ]
+}

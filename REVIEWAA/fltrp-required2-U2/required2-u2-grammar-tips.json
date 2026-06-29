@@ -1,0 +1,34 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "grade": 10,
+  "content": {
+    "title": "情态动词·对过去的推测(must / may / might / could / can't + have done)速查",
+    "intro": "推测「过去」发生过的事,统一用「情态动词 + have + 过去分词」。关键看证据有多强:几乎确定→must;只是可能→may/might/could;几乎不可能→can't/couldn't。注意:这是对过去的推测,绝不是 must do / may be 那种现在式。",
+    "table": {
+      "headers": ["确定程度", "结构 / 例句"],
+      "rows": [
+        ["几乎确定(肯定)", "must have done:The children must have been very excited.(孩子们一定很激动。)"],
+        ["也许(可能)", "may / might / could have done:He might have missed the invitation.(他也许没看到邀请。)"],
+        ["几乎不可能(否定)", "can't / couldn't have done:She can't have been at the fair then.(她那时不可能在灯会。)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "肯定推测过去用 must have done,不用 may have done(那是「也许」)", "mark": "证据确凿→must have done" },
+      { "rule": "否定推测过去用 can't/couldn't have done,不能用 mustn't have done", "mark": "mustn't 表「禁止」,不表「不可能」" },
+      { "rule": "could have done = 可能做过(推测);区别于 could do(过去能力/委婉)", "mark": "看上下文是推测还是能力" },
+      { "rule": "推测的是过去,动词一定是 have + 过去分词,不是原形或现在式", "mark": "must have gone √ / must go ×" }
+    ],
+    "why": [
+      "have done 表示动作已经发生在过去;前面的情态动词只负责表达说话人「有多确定」。证据越强→词越肯定(must),证据越弱→词越松(might),证据相反→否定(can't)。"
+    ],
+    "gaokaoPoints": [
+      "看句中证据(看得见的结果、时间地点能力)选 must / might / can't,语法填空与改错高频。",
+      "易混:对现在的推测用 must be / may be(无 have);对过去的推测才用 must have been / may have been。"
+    ],
+    "examVsReal": [
+      { "exam": "He must have left already.(考试:对过去的肯定推测)", "real": "He's definitely gone already.", "note": "口语常用 definitely/probably 直接表达确定程度" },
+      { "exam": "She can't have seen it.(考试:对过去的否定推测)", "real": "There's no way she saw it.", "note": "口语常说 there's no way 表示「绝不可能」" }
+    ]
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "topic": "Amazing Art",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);speaker 仅角色标注。long=对话,short=独白。",
+  "source": "外研社(新标准)必修三 Unit 4 同主题听力(约看展/展馆通告/蒙娜丽莎前/书法课/当代艺术之争/画马讲解)。用词限 U4/初中/常见词,答案可在 transcript 找到依据,与阅读/完形关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Where Shall We Go This Weekend?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Tom, are you free this Saturday? I'd love to go and see some art.",
+        "Tom: Sure, Mia. Shall we visit the new art museum in the city centre?",
+        "Mia: Actually, I went there last month. How about the contemporary art show by the river instead?",
+        "Tom: Good idea. I heard a famous self-portrait is being displayed there right now.",
+        "Mia: Yes, and the tickets are free for students on Saturdays.",
+        "Tom: Perfect. Let's meet at the bus stop at nine in the morning.",
+        "Mia: Great. Don't forget to bring your camera so we can take some photos.",
+        "Tom: I won't. See you on Saturday!"
+      ],
+      "translation_cn": "Mia 约 Tom 周六去看艺术;Tom 提议去市中心的新美术馆;Mia 上月去过了,改提议去河边的当代艺术展;那里正展出一幅名人自画像;周六学生门票免费;两人约定早九点在公交站碰面,并带相机拍照。",
+      "questions": [
+        {
+          "stem": "When are Mia and Tom going to see art?",
+          "options": [
+            "On Saturday.",
+            "On Sunday.",
+            "On Monday.",
+            "On Friday."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where do they finally decide to go?",
+          "options": [
+            "The new museum in the city centre.",
+            "The contemporary art show by the river.",
+            "A calligraphy class.",
+            "A street art festival."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why doesn't Mia want to go to the new museum?",
+          "options": [
+            "She has already been there recently.",
+            "It is closed on Saturdays.",
+            "It is much too far away.",
+            "The tickets there are expensive."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is free for students on Saturdays?",
+          "options": [
+            "The lunch.",
+            "The tickets.",
+            "The camera.",
+            "The bus ride."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where will the two friends meet?",
+          "options": [
+            "At the river gate.",
+            "At the school.",
+            "At the bus stop.",
+            "At Tom's house."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·独白 Museum Announcement",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Welcome to the City Art Museum. Please note that our main hall is closed this morning, because a new exhibition is being prepared for the weekend. About thirty famous paintings are being hung on the walls right now, and the floor is being cleaned by our staff. While you wait, you are welcome to visit the porcelain room on the second floor, where blue-and-white bowls and vases are on show. The museum café is open all day, and a short film about Chinese calligraphy is shown there every hour. Thank you for your patience, and enjoy your visit.",
+      "translation_cn": "欢迎来到城市美术馆。主厅今天上午关闭,因为正在为周末布置新展览;约三十幅名画此刻正被挂上墙,地面也正由工作人员清扫。等候期间,欢迎参观二楼瓷器厅,那里展出青花碗与花瓶;咖啡馆全天开放,每小时放一部关于中国书法的短片。感谢耐心,祝参观愉快。",
+      "questions": [
+        {
+          "stem": "Why is the main hall closed this morning?",
+          "options": [
+            "The roof is being repaired.",
+            "There is no electricity.",
+            "A film is being made there.",
+            "A new exhibition is being set up."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What can visitors see on the second floor?",
+          "options": [
+            "Blue-and-white porcelain.",
+            "Modern sculptures.",
+            "Old photographs.",
+            "Famous self-portraits."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is happening to the main-hall floor now?",
+          "options": [
+            "It is being painted.",
+            "It is being cleaned.",
+            "It is being sold.",
+            "It is being measured."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where is the short film shown?",
+          "options": [
+            "In the main hall.",
+            "On the second floor.",
+            "In the museum café.",
+            "At the front gate."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the short film about?",
+          "options": [
+            "Street graffiti.",
+            "Stone sculpture.",
+            "Oil painting.",
+            "Chinese calligraphy."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 In Front of the Mona Lisa",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: Ben, is this really the Mona Lisa? It's much smaller than I expected.",
+        "Ben: Yes, it is. That's why it is protected behind thick glass.",
+        "Anna: Look — so many people are taking photos of it right now.",
+        "Ben: I know. They say her eyes seem to follow you around the room.",
+        "Anna: That's a bit strange! Why does she attract so many visitors every day?",
+        "Ben: Because of her mysterious smile. One moment she looks happy, the next a little sad.",
+        "Anna: Amazing. Who painted her, by the way?",
+        "Ben: An Italian artist, hundreds of years ago. The painting is cleaned by experts once a year.",
+        "Anna: No wonder the colours still look so fresh."
+      ],
+      "translation_cn": "Anna 惊讶蒙娜丽莎比想象的小;Ben 说所以用厚玻璃保护;此刻许多人在拍照;据说她的眼睛仿佛会跟着你;Anna 问为何每天吸引众多游客;Ben 说因为她神秘的微笑,一会儿像高兴一会儿又有点忧伤;画是数百年前一位意大利艺术家所作,每年由专家清洗一次,所以颜色仍鲜亮。",
+      "questions": [
+        {
+          "stem": "What surprises Anna about the painting?",
+          "options": [
+            "It is smaller than she thought.",
+            "It is larger than she thought.",
+            "It has no frame.",
+            "It is very dark."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is the painting kept behind glass?",
+          "options": [
+            "To make it look bigger.",
+            "To keep it safe.",
+            "To hide its colours.",
+            "To stop people looking."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Ben say about her eyes?",
+          "options": [
+            "They are always closed.",
+            "They are painted blue.",
+            "They seem to follow the viewer.",
+            "They look angry."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why does the painting attract so many visitors?",
+          "options": [
+            "Its huge size.",
+            "Its golden frame.",
+            "Its low price.",
+            "Her mysterious smile."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How often is the painting cleaned by experts?",
+          "options": [
+            "Once a year.",
+            "Every week.",
+            "Every day.",
+            "Never at all."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·独白 The First Calligraphy Lesson",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_male",
+      "transcript": "Good afternoon, everyone, and welcome to your first calligraphy lesson. My name is Mr Zhang, and I have taught this art for twenty years. Today you will each get a brush, some black ink and a sheet of soft paper. Don't worry if your first characters look messy — even great artists started that way. Remember to sit up straight and hold the brush gently. Calligraphy is not a race; it should make your mind feel calm and quiet. At the end of the class, the best work will be shown on the wall, and once a month we hold a small exhibition for parents. Now, let's begin with a simple character meaning 'mountain'.",
+      "translation_cn": "张老师欢迎大家上第一节书法课,他教书法已二十年。今天每人会拿到一支笔、一些黑墨和一张软纸。第一次写得乱不要紧,连大艺术家也是这样起步的。要坐直、轻握笔。书法不是比赛,应让心安静下来。课末最佳作品会挂到墙上,每月还为家长办一次小展。现在从一个意为“山”的简单字开始。",
+      "questions": [
+        {
+          "stem": "How long has Mr Zhang taught calligraphy?",
+          "options": [
+            "For two years.",
+            "For twenty years.",
+            "For twelve years.",
+            "For thirty years."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will each student receive today?",
+          "options": [
+            "A book and a pen.",
+            "A computer.",
+            "A brush, ink and paper.",
+            "A box of oil paint."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Mr Zhang say about messy first characters?",
+          "options": [
+            "It means they should stop.",
+            "It will never get better.",
+            "It is not allowed in class.",
+            "It is normal for beginners."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How should calligraphy make the mind feel?",
+          "options": [
+            "Calm and quiet.",
+            "Excited and busy.",
+            "Tired and bored.",
+            "Angry and worried."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How often is there a small exhibition for parents?",
+          "options": [
+            "Once a week.",
+            "Once a month.",
+            "Once a year.",
+            "Every single day."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 What Do You Think of Contemporary Art?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Jill: Andrew, what did you think of that contemporary art show?",
+        "Andrew: Honestly, Jill, some of it confused me. The empty room with nothing in it seemed boring.",
+        "Jill: Really? I thought that piece was clever. The viewer has to imagine the meaning.",
+        "Andrew: Maybe. But the one with everyday objects looked rather lazy to me. The artist didn't seem to make much.",
+        "Jill: I disagree. I think everyday things can also be art if they make us think.",
+        "Andrew: Well, my favourite was the living room piece. Looking at the small details really moved me.",
+        "Jill: See? So art does mean different things to different people.",
+        "Andrew: You're right about that. That's exactly what makes it interesting."
+      ],
+      "translation_cn": "Jill 问 Andrew 对当代艺术展的看法;Andrew 说有些让他困惑,那间空房什么都没有,觉得无聊;Jill 却觉得那件作品很巧妙,观众要自己想象含义;Andrew 觉得用日常物品的那件很偷懒,艺术家似乎没做什么;Jill 反对,认为日常之物若能引人思考也是艺术;Andrew 最喜欢“客厅”那件,细节让他感动;两人最后认同:艺术对不同的人意味不同,这正是其有趣之处。",
+      "questions": [
+        {
+          "stem": "What did Andrew think of the empty room?",
+          "options": [
+            "He loved it most.",
+            "He thought it was clever.",
+            "He found it boring.",
+            "He did not see it."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why did Jill like the empty room?",
+          "options": [
+            "It was very colourful.",
+            "It was extremely large.",
+            "It cost a lot of money.",
+            "The viewer has to imagine the meaning."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did Andrew think of the everyday-objects piece?",
+          "options": [
+            "It seemed lazy.",
+            "It was his favourite.",
+            "It was too expensive.",
+            "It was beautiful."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which piece was Andrew's favourite?",
+          "options": [
+            "The empty room.",
+            "The living room piece.",
+            "The everyday objects.",
+            "The painted wall."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do Jill and Andrew finally agree on?",
+          "options": [
+            "Contemporary art is always bad.",
+            "Only museums show real art.",
+            "Art means different things to different people.",
+            "Everyone likes the same art."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·独白 A Guide to Night-Shining White",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_male",
+      "transcript": "Ladies and gentlemen, please gather round this famous painting, Night-Shining White. It shows a single white horse, tied to a post, with burning eyes and kicking legs. Even after more than a thousand years, we can still feel its power and energy. The work is now kept here in our museum, and at the moment it is being protected by a special glass case. Notice how the artist captured not only the shape of the horse but also its wild spirit. Many visitors say the horse looks ready to break free and gallop away. Please do not use flash when taking photos, and let's move quietly on to the next room.",
+      "translation_cn": "讲解员请大家围到名画《照夜白》前:画中一匹拴在柱上的白马,目光如火、奋蹄欲奔;历经千年仍能感到它的力量与活力。此画现藏于本馆,此刻正由特制玻璃罩保护。请注意艺术家不仅画出马的外形,还捕捉到它狂野的神韵;许多游客说这马仿佛要挣脱缰绳飞奔而去。拍照请勿用闪光灯,随后我们安静地前往下一展厅。",
+      "questions": [
+        {
+          "stem": "What does the painting show?",
+          "options": [
+            "A group of wild horses.",
+            "A horse and its rider.",
+            "An empty green field.",
+            "A single white horse."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How old is the painting, roughly?",
+          "options": [
+            "Over a thousand years old.",
+            "About a hundred years old.",
+            "Only ten years old.",
+            "Around five years old."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How is the painting protected at the moment?",
+          "options": [
+            "By a wooden box.",
+            "By a special glass case.",
+            "By a thick cloth cover.",
+            "By a high stone wall."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did the artist capture besides the horse's shape?",
+          "options": [
+            "Its exact age.",
+            "Its market price.",
+            "Its wild spirit.",
+            "Its owner's name."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the guide ask visitors not to do?",
+          "options": [
+            "Touch the glass case.",
+            "Talk to each other.",
+            "Take any photos at all.",
+            "Use flash when taking photos."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

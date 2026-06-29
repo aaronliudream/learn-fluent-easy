@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "topic": "Nature in Architecture",
+  "source": "外研社选必三 Unit 5 同主题完形(参观绿色高楼/像叶子的屋顶/会呼吸的学校/向鸟巢学习/家中小菜园/乡间周末)。用词限 U5/初中/常见词,选项同词性、答案唯一,与阅读听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "The Green Tower",
+      "text": "Last summer my class visited a tall green (1)____ in the city centre. From far away it looked like a giant tree made of glass and steel. Our guide told us that the (2)____ had studied real forests before drawing his plans. Living plants grew on every floor, so the air inside felt fresh and (3)____. The walls were covered with small panels that could (4)____ sunlight into clean electricity. I was (5)____ to learn that the building used almost no power from outside. On the roof there was a quiet (6)____ where birds came to drink. Our guide said that good design should (7)____ from nature instead of fighting against it. At the end of the visit, each of us tried to (8)____ a simple model of a green house. Mine was far from perfect, but making it helped me (9)____ how hard an architect's job really is. I left the tower feeling that nature and the city could live in (10)____ after all.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "tower",
+            "garden",
+            "river",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "a tall green tower 与下文 the tower 呼应。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "farmer",
+            "architect",
+            "driver",
+            "singer"
+          ],
+          "answer_index": 1,
+          "explanation": "drawing his plans 说明是建筑师。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "loud",
+            "dark",
+            "clean",
+            "heavy"
+          ],
+          "answer_index": 2,
+          "explanation": "fresh and clean 搭配,描述空气。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "throw",
+            "buy",
+            "hide",
+            "turn"
+          ],
+          "answer_index": 3,
+          "explanation": "turn sunlight into electricity 把阳光转化为电。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "surprised",
+            "angry",
+            "bored",
+            "afraid"
+          ],
+          "answer_index": 0,
+          "explanation": "得知建筑几乎不用外来电力,作者感到惊讶。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "road",
+            "pond",
+            "wall",
+            "door"
+          ],
+          "answer_index": 1,
+          "explanation": "鸟来喝水的地方是池塘。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "hide",
+            "escape",
+            "learn",
+            "fall"
+          ],
+          "answer_index": 2,
+          "explanation": "learn from nature 向自然学习。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "eat",
+            "sell",
+            "lose",
+            "build"
+          ],
+          "answer_index": 3,
+          "explanation": "build a model 制作模型。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "understand",
+            "forget",
+            "doubt",
+            "refuse"
+          ],
+          "answer_index": 0,
+          "explanation": "helped me understand 帮我理解。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "danger",
+            "harmony",
+            "silence",
+            "anger"
+          ],
+          "answer_index": 1,
+          "explanation": "live in harmony 和谐共处。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Roof Like a Leaf",
+      "text": "An engineer once spent a whole month watching how a large (1)____ collected rain and let it run off gently. She noticed that its surface was not flat but slightly (2)____, so the water never stayed too long. This simple idea gave her a clever (3)____ for a new kind of roof. Working with a small team, she began to (4)____ a roof that copied the shape of the leaf. The team had to (5)____ many models before they found one that worked. Their goal was to (6)____ rainwater and send it down into a tank below. When heavy rain came, the new roof stayed dry and (7)____, just like the leaf. People who saw it were (8)____ by how natural it looked. The engineer later said that nature had been her best (9)____ all along. Now several schools have asked her to (10)____ the same kind of roof for them.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "stone",
+            "box",
+            "leaf",
+            "clock"
+          ],
+          "answer_index": 2,
+          "explanation": "下文 like the leaf 指明是叶子。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "dry",
+            "dark",
+            "loud",
+            "curved"
+          ],
+          "answer_index": 3,
+          "explanation": "slightly curved 表面略微弯曲,使水不停留。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "idea",
+            "price",
+            "noise",
+            "meal"
+          ],
+          "answer_index": 0,
+          "explanation": "a clever idea 一个聪明的想法。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eat",
+            "design",
+            "buy",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "design a roof 设计屋顶。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "hide",
+            "lose",
+            "test",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "test many models 测试很多模型。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "waste",
+            "burn",
+            "spill",
+            "collect"
+          ],
+          "answer_index": 3,
+          "explanation": "collect rainwater 收集雨水。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "strong",
+            "wet",
+            "cold",
+            "soft"
+          ],
+          "answer_index": 0,
+          "explanation": "stayed dry and strong 又干又结实。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "bored",
+            "amazed",
+            "angry",
+            "tired"
+          ],
+          "answer_index": 1,
+          "explanation": "amazed by 对其自然外观感到惊叹。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "problem",
+            "enemy",
+            "teacher",
+            "secret"
+          ],
+          "answer_index": 2,
+          "explanation": "nature had been her best teacher 自然是她最好的老师。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "break",
+            "spoil",
+            "paint",
+            "build"
+          ],
+          "answer_index": 3,
+          "explanation": "build the same roof 为学校建造同样的屋顶。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The School That Breathes",
+      "text": "Our new school looks quite different from any other in the town. Its walls are covered with green (1)____ that grow all year round. In summer, the leaves give cool (2)____, so the classrooms never become too hot. In winter, sunlight passes through the bare branches and (3)____ the rooms naturally. The architect who designed it wanted us to (4)____ in harmony with nature every day. Instead of using a lot of (5)____, the building makes much of its own from the sun. Rain that falls on the roof is not (6)____; it is stored and used to water the plants. Even the air feels (7)____ because so many leaves clean it. Some visitors find it hard to (8)____ that a school can work this way. But our teachers say the design has helped us (9)____ that people and plants belong together. Studying here has changed the way I (10)____ about the future of our cities.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "plants",
+            "stones",
+            "signs",
+            "wires"
+          ],
+          "answer_index": 0,
+          "explanation": "green plants 绿色植物,与 leaves/branches 呼应。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "noise",
+            "shade",
+            "smoke",
+            "dust"
+          ],
+          "answer_index": 1,
+          "explanation": "cool shade 凉爽的树荫。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "cools",
+            "floods",
+            "warms",
+            "breaks"
+          ],
+          "answer_index": 2,
+          "explanation": "冬日阳光自然地温暖房间。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "fight",
+            "hide",
+            "sleep",
+            "live"
+          ],
+          "answer_index": 3,
+          "explanation": "live in harmony with nature 与自然和谐相处。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "power",
+            "salt",
+            "paper",
+            "glass"
+          ],
+          "answer_index": 0,
+          "explanation": "下文 makes much of its own from the sun 指电力/能源。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "planted",
+            "wasted",
+            "opened",
+            "frozen"
+          ],
+          "answer_index": 1,
+          "explanation": "雨水没有被浪费,而是被储存使用。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "heavy",
+            "dirty",
+            "fresh",
+            "warm"
+          ],
+          "answer_index": 2,
+          "explanation": "叶子净化空气,空气清新。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "count",
+            "paint",
+            "believe"
+          ],
+          "answer_index": 3,
+          "explanation": "hard to believe 难以相信。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "see",
+            "forget",
+            "doubt",
+            "deny"
+          ],
+          "answer_index": 0,
+          "explanation": "helped us see that 帮我们认识到。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "walk",
+            "think",
+            "eat",
+            "run"
+          ],
+          "answer_index": 1,
+          "explanation": "the way I think about the future 我对未来的看法。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Lessons from a Bird's Nest",
+      "text": "A young designer named Lin loved to watch birds build their (1)____ in the trees near her home. She was amazed by how strong and light they were, even though birds use only grass and (2)____. One spring she decided to (3)____ how the tiny builders worked. For weeks she sat quietly and made careful (4)____ of every step. She learned that a good nest must (5)____ both wind and rain without breaking. This wild wisdom gave her the (6)____ to design a new kind of light roof for camps. Her first model was too weak, so she had to (7)____ it again and again. In the end her design proved both cheap and (8)____. Lin often says that the birds were her real (9)____. Thanks to them, she now helps families build homes that can (10)____ strong winds far better than before.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "roads",
+            "shops",
+            "nests",
+            "boats"
+          ],
+          "answer_index": 2,
+          "explanation": "birds build their nests 鸟筑巢。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "gold",
+            "paint",
+            "glass",
+            "mud"
+          ],
+          "answer_index": 3,
+          "explanation": "grass and mud 草和泥,鸟筑巢的材料。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "study",
+            "sell",
+            "hide",
+            "win"
+          ],
+          "answer_index": 0,
+          "explanation": "study how the builders worked 研究小工匠如何工作。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "jokes",
+            "notes",
+            "meals",
+            "calls"
+          ],
+          "answer_index": 1,
+          "explanation": "made careful notes 做了仔细的记录。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "paint",
+            "face",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "face both wind and rain 经受风雨。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "fear",
+            "price",
+            "noise",
+            "idea"
+          ],
+          "answer_index": 3,
+          "explanation": "the idea to design 设计的灵感/想法。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "test",
+            "throw",
+            "buy",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "test it again and again 一次次测试。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "wet",
+            "strong",
+            "dark",
+            "slow"
+          ],
+          "answer_index": 1,
+          "explanation": "cheap and strong 又便宜又结实。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "problems",
+            "enemies",
+            "teachers",
+            "prizes"
+          ],
+          "answer_index": 2,
+          "explanation": "the birds were her real teachers 鸟是她真正的老师。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "enjoy",
+            "paint",
+            "sell",
+            "resist"
+          ],
+          "answer_index": 3,
+          "explanation": "homes that can resist strong winds 能抵御大风的房屋。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A Little Garden at Home",
+      "text": "Last year my grandmother taught me to grow vegetables in our small (1)____ behind the house. At first I had no idea how to (2)____ the seeds, so she showed me where each one should go. She told me that a good gardener must learn to (3)____ and never rush nature. Some mornings I felt (4)____ because nothing seemed to be growing at all. But slowly, tiny green leaves began to (5)____ through the dark soil. Grandmother said that watching them was her favourite (6)____ of the day. We gave the plants water, sunlight and plenty of (7)____. By the end of summer our garden was full of (8)____ vegetables. I was proud that my own hands had (9)____ them. From that little garden I learned that good things take time, and that patience can (10)____ a real reward.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "garden",
+            "kitchen",
+            "office",
+            "river"
+          ],
+          "answer_index": 0,
+          "explanation": "grow vegetables in our small garden 在小菜园里种菜。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eat",
+            "plant",
+            "sell",
+            "paint"
+          ],
+          "answer_index": 1,
+          "explanation": "plant the seeds 播种。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "shout",
+            "hide",
+            "wait",
+            "run"
+          ],
+          "answer_index": 2,
+          "explanation": "learn to wait 学会等待,不催促自然。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "proud",
+            "glad",
+            "brave",
+            "worried"
+          ],
+          "answer_index": 3,
+          "explanation": "什么都没长,作者感到担心。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "push",
+            "fall",
+            "sleep",
+            "fly"
+          ],
+          "answer_index": 0,
+          "explanation": "leaves began to push through the soil 嫩芽顶出泥土。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "part",
+            "noise",
+            "meal"
+          ],
+          "answer_index": 1,
+          "explanation": "her favourite part of the day 一天中最喜欢的时刻。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "salt",
+            "smoke",
+            "care",
+            "dust"
+          ],
+          "answer_index": 2,
+          "explanation": "plenty of care 充足的照料。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "broken",
+            "dirty",
+            "dead",
+            "fresh"
+          ],
+          "answer_index": 3,
+          "explanation": "fresh vegetables 新鲜的蔬菜。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "grown",
+            "lost",
+            "sold",
+            "burnt"
+          ],
+          "answer_index": 0,
+          "explanation": "my own hands had grown them 亲手种出。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "break",
+            "bring",
+            "hide",
+            "cost"
+          ],
+          "answer_index": 1,
+          "explanation": "patience can bring a reward 耐心能带来回报。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Weekend in the Country",
+      "text": "Last weekend I stayed in a small (1)____ deep in the countryside, far from the noisy town. There was no traffic, only the soft (2)____ of birds in the morning. The owner, an old farmer, lived there in great (3)____, with a garden, a few chickens and an old dog. He told me that he had once worked in a big city but had chosen to (4)____ from that busy life. Every evening he liked to (5)____ on the doorstep and watch the sun go down behind the hills. At first the deep silence made me feel a little (6)____, but soon I began to enjoy it. The fresh air and slow days helped me (7)____ all my worries. I understood why so many writers have loved this kind of (8)____ life. On Sunday I was almost (9)____ to leave such a peaceful place. The short stay taught me that quietness can be a real (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "factory",
+            "station",
+            "cottage",
+            "library"
+          ],
+          "answer_index": 2,
+          "explanation": "a small cottage 乡间小屋。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "smell",
+            "taste",
+            "weight",
+            "songs"
+          ],
+          "answer_index": 3,
+          "explanation": "the soft songs of birds 鸟儿轻柔的歌声。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "ease",
+            "danger",
+            "hurry",
+            "fear"
+          ],
+          "answer_index": 0,
+          "explanation": "lived there in great ease 过着十分悠闲的生活。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "copy",
+            "withdraw",
+            "build",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "withdraw from that busy life 退出忙碌的生活。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "cook",
+            "drive",
+            "sit",
+            "shout"
+          ],
+          "answer_index": 2,
+          "explanation": "sit on the doorstep 坐在门口台阶上。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "proud",
+            "hungry",
+            "brave",
+            "lonely"
+          ],
+          "answer_index": 3,
+          "explanation": "深深的寂静起初让人有点孤独。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "forget",
+            "count",
+            "sell",
+            "paint"
+          ],
+          "answer_index": 0,
+          "explanation": "helped me forget all my worries 帮我忘却烦恼。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "busy",
+            "simple",
+            "modern",
+            "crowded"
+          ],
+          "answer_index": 1,
+          "explanation": "this kind of simple life 这种简单的生活。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "glad",
+            "proud",
+            "sorry",
+            "eager"
+          ],
+          "answer_index": 2,
+          "explanation": "almost sorry to leave 几乎舍不得离开。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "problem",
+            "noise",
+            "crime",
+            "gift"
+          ],
+          "answer_index": 3,
+          "explanation": "quietness can be a real gift 宁静是一份真正的礼物。"
+        }
+      ]
+    }
+  ]
+}

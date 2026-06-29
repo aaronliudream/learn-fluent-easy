@@ -1,0 +1,52 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "topic": "Write a Personal Sports Story(写一篇个人运动故事)",
+  "title_en": "My Sports Story",
+  "genre": "记叙 / 个人故事(personal narrative:how you got started, how you felt, what you achieved)",
+  "source": "外研社版(新标准)必修第二册 Unit 3 Writing a sports story:为运动爱好者网站写一篇能激励读者的个人运动故事(如何开始、感受、为提高所做的努力、未来目标)。",
+  "prompt_cn": "假设你叫李华,一个运动爱好者网站正在征集能激励读者的个人运动故事。请用英语写一篇约100词的短文,内容包括:① 你做的是什么运动、当初是怎么开始的;② 你对这项运动的感受;③ 你为提高所做的努力,以及未来的目标。注意:试着用上不定式(如 a sport to enjoy / too tired to give up / trained hard enough to win)。",
+  "prompt_en": "Suppose you are Li Hua. A website for sports lovers is collecting personal stories to inspire its readers. Write a short passage (about 100 words) including: 1) what sport you do and how you got started; 2) how you feel about it; 3) what you have done to improve and your goal for the future. Try to use to-infinitives (e.g. a sport to enjoy, too tired to give up, trained hard enough to win).",
+  "points": [
+    "如何开始(When I was younger… / I never thought I'd…)",
+    "你的感受(Before I knew it, I had fallen in love with…)",
+    "为提高所做的努力 + 用上不定式(I trained hard enough to…)",
+    "未来目标(My ultimate goal is to…)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "When I was younger, I never thought I would be a runner. I had asthma, and even one lap was too hard for me to finish. Then a doctor told me that gentle exercise might make my lungs stronger, so I joined a small club. Before I knew it, I had fallen in love with running. I got up early every day to train, and slowly I grew strong enough to enter real races. Last month I won a medal at our city race. My ultimate goal is to run a marathon. If you feel too weak to start, please don't give up!",
+  "model_translation": "小时候,我从没想过自己会成为一名跑者。我有哮喘,连跑一圈对我来说都太难。后来一位医生告诉我,适度锻炼也许能让肺更强健,于是我加入了一个小俱乐部。不知不觉间,我爱上了跑步。我每天早起训练,慢慢变得足够强壮,能参加真正的比赛。上个月我在城市赛中赢得了一枚奖牌。我的最终目标是跑一次马拉松。如果你觉得自己太弱、迈不开第一步,请千万别放弃!",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:如何开始 / 你的感受 / 努力与未来目标" },
+      { "dimension": "结构", "max": 4, "criteria": "按'开始—感受—努力—目标'顺序展开、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、恰当运用不定式(定语/结果/目的)、语法基本无误" }
+    ],
+    "required_structure": [
+      "开始 When I was younger, I never thought I would…",
+      "感受 Before I knew it, I had fallen in love with…",
+      "努力 I got up early to train and grew strong enough to…",
+      "目标 My ultimate goal is to…"
+    ],
+    "key_expressions": [
+      "I never thought I would be a runner.",
+      "Even one lap was too hard for me to finish.",
+      "I grew strong enough to enter real races.",
+      "My ultimate goal is to run a marathon."
+    ],
+    "useful_words": ["sport", "start", "join", "train", "improve", "enough", "ache", "champion", "ultimate", "give up"]
+  },
+  "high_sentences": [
+    "When I was younger, I never thought I would be a runner.",
+    "Even one lap was too hard for me to finish.",
+    "I got up early every day to train, and slowly I grew strong enough to enter real races.",
+    "My ultimate goal is to run a marathon."
+  ],
+  "error_pairs": [
+    { "wrong": "It was too hard to me to finish.", "correct": "It was too hard for me to finish.", "note": "too…to 结构中动作者用 for sb,不用 to sb。" },
+    { "wrong": "I was strong enough win the race.", "correct": "I was strong enough to win the race.", "note": "enough to do 中 to 不能省略。" },
+    { "wrong": "I got up early to training.", "correct": "I got up early to train.", "note": "表目的用 to do(动词原形),不用 to + -ing。" }
+  ],
+  "paragraph_template": "【个人运动故事结构】\n第1-2句 如何开始:When I was younger, I never thought I would…\n第3-4句 感受:Before I knew it, I had fallen in love with…\n第5-6句 努力:I got up early to train and grew strong enough to…\n第7句 目标 + 鼓励:My ultimate goal is to… If you feel too weak to start, don't give up!"
+}

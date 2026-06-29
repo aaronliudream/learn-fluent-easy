@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "topic": "Introduce a Person You Find Truly Beautiful(介绍一个你认为真正美的人)",
+  "title_en": "The Most Beautiful Person I Know",
+  "genre": "人物介绍 / 短文(introduce a person + explain why, using subject clauses)",
+  "source": "外研社选择性必修三 Unit 1 Using language & Presenting ideas:用主语从句介绍人物(What impresses me most is…;It is clear that…;Whoever … )。围绕'真正的美'主题。",
+  "prompt_cn": "本单元的主题是'真正的美'。请用英语写一篇约80词的短文,介绍一个你认为'真正美'的人(可以是家人、朋友或你敬佩的人),内容包括:① 简单说明他/她是谁;② 用具体事例说明你为什么觉得他/她美;③ 谈谈他/她让你学到了什么。要求:至少用三个主语从句(如 What impresses me most is… / It is true that… / Whoever …),句子地道、围绕中心。",
+  "prompt_en": "The theme of this unit is true beauty. Write a short passage (about 80 words) introducing a person you think is truly beautiful (a family member, a friend or someone you admire). Include: 1) who the person is; 2) why you find them beautiful, with an example; 3) what they have taught you. Use at least three subject clauses (e.g. What impresses me most is…, It is true that…, Whoever…).",
+  "points": [
+    "说明人物是谁(The person I admire most is …)",
+    "用主语从句讲为什么美(What impresses me most is …)",
+    "用形式主语 it 补充观点(It is clear that …)",
+    "谈收获、句句围绕'真正的美'这一中心"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "The most beautiful person I know is my grandmother. What impresses me most is not her face but her kindness. Whoever meets her feels welcome at once, because she listens with a warm and honest heart. It is true that her hair is grey and her hands are rough, yet everyone says she shines. What she taught me is simple: real beauty comes from how we treat others. Whether we are young or old, that gentle kind of beauty never fades away.",
+  "model_translation": "我认识的最美的人是我的奶奶。最打动我的不是她的容貌,而是她的善良。无论谁见到她,都立刻感到被欢迎,因为她用温暖而真诚的心倾听。的确,她头发花白、双手粗糙,但人人都说她在发光。她教给我的道理很简单:真正的美源自我们如何待人。无论年轻还是年老,那种温柔的美永不褪色。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:人物是谁 / 为何美(有事例)/ 学到什么" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕'真正的美'展开、句句相关、至少三个主语从句运用自然、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、主语从句(what/that/whether/it/whoever)运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题人物 The most beautiful person I know is …",
+      "主语从句讲原因 What impresses me most is …",
+      "形式主语 it It is true that …",
+      "收获升华 What she taught me is that real beauty comes from …"
+    ],
+    "key_expressions": [
+      "What impresses me most is not her face but her kindness.",
+      "Whoever meets her feels welcome at once.",
+      "It is true that her hair is grey, yet everyone says she shines.",
+      "What she taught me is that real beauty comes from how we treat others."
+    ],
+    "useful_words": ["beauty", "kindness", "impress", "confidence", "honest", "appearance", "character", "admire", "inner", "true"]
+  },
+  "high_sentences": [
+    "What impresses me most is not her face but her kindness.",
+    "Whoever meets her feels welcome at once.",
+    "It is true that her hair is grey, yet everyone says she shines.",
+    "Whether we are young or old, that gentle beauty never fades away."
+  ],
+  "error_pairs": [
+    { "wrong": "What impresses me most are her kindness.", "correct": "What impresses me most is her kindness.", "note": "what 引导的主语从句作主语时,谓语动词通常用单数 is。" },
+    { "wrong": "Is important that we value inner beauty.", "correct": "It is important that we value inner beauty.", "note": "主语从句后置,句首必须用形式主语 it。" },
+    { "wrong": "If we should care about looks is hard to say.", "correct": "Whether we should care about looks is hard to say.", "note": "句首主语从句表'是否'用 whether,不用 if。" }
+  ],
+  "paragraph_template": "【真正的美·人物介绍结构】\n第1句 点题:The most beautiful person I know is …\n第2-3句 原因+事例:What impresses me most is … Whoever … because …\n第4句 形式主语补充:It is true that … , yet …\n第5句 收获升华:What she taught me is that real beauty comes from …"
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "topic": "What an Adventure",
+  "source": "外研社必修第三册 Unit 5 同主题完形(出发前的急救/船长回忆录/登山准备/洞穴探险/沙漠穿越/少年独自航海)。用词限 U5/初中/常见词,答案唯一,同词性,与阅读/听力关不撞文章。部分空考过去将来时(would/was going to)。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "First Aid Before an Adventure",
+      "text": "Before you set out on an adventure, it is wise to learn some simple first aid. A good first aid (1)____ should always be packed. If an insect (2)____ becomes hot and red, wash the area with some liquid medicine and try to (3)____ it down. For a bad cut, press on it with a clean (4)____ until the (5)____ stops, and then clean the wound with fresh water or (6)____. If someone breaks an arm, place an ice (7)____ on it to reduce the (8)____, and keep the arm still. In hot weather, watch for heatstroke: take the person to a cool place and use a (9)____ to check the temperature. Knowing what to (10)____ in these moments can keep a small problem from becoming a big one.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "kit",
+            "song",
+            "price",
+            "game"
+          ],
+          "answer_index": 0,
+          "explanation": "first aid kit 急救包。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "joke",
+            "bite",
+            "price",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "insect bite 昆虫叮咬处。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "lose",
+            "cool",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "cool it down 使其降温。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "noise",
+            "price",
+            "game",
+            "cloth"
+          ],
+          "answer_index": 3,
+          "explanation": "a clean cloth 干净的布。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "bleeding",
+            "singing",
+            "shopping",
+            "reading"
+          ],
+          "answer_index": 0,
+          "explanation": "the bleeding stops 止血。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "music",
+            "alcohol",
+            "weather",
+            "traffic"
+          ],
+          "answer_index": 1,
+          "explanation": "water or alcohol 清水或酒精。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "joke",
+            "price",
+            "pack",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "an ice pack 冰袋。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "game",
+            "pain"
+          ],
+          "answer_index": 3,
+          "explanation": "reduce the pain 减轻疼痛。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "thermometer",
+            "camera",
+            "ticket",
+            "basket"
+          ],
+          "answer_index": 0,
+          "explanation": "use a thermometer 用体温计。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "do",
+            "hide",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "what to do 该做什么。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Captain's Memoir",
+      "text": "It was spring, and we were sailing from (1)____. We were excited, and none of us knew that these (2)____ be our final days together. At first the waters were (3)____, and we spent our time fishing and playing cards, happily (4)____ that a great storm was near. The captain later wrote in his (5)____ that the trip (6)____ change all our lives. Hours later, huge waves (7)____ over the ship, breaking it in two and throwing us into the sea. Choking with water, we swam to the nearest (8)____. There we sat on the (9)____, cold and frightened, already making plans to (10)____. None of us would forget that terrible night.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "garden",
+            "kitchen",
+            "port",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "sail from port 从港口起航。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "will",
+            "shall",
+            "might",
+            "would"
+          ],
+          "answer_index": 3,
+          "explanation": "none of us knew(过去)+ 结局未发生 → 过去将来 would be。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "calm",
+            "angry",
+            "hungry",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "the waters were calm 海面平静。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "afraid",
+            "unaware",
+            "proud",
+            "sure"
+          ],
+          "answer_index": 1,
+          "explanation": "happily unaware 浑然不觉。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "ticket",
+            "basket",
+            "diary",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "wrote in his diary 写在日记里。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "will change",
+            "changed",
+            "changes",
+            "would change"
+          ],
+          "answer_index": 3,
+          "explanation": "wrote(过去)、改变尚未发生 → would change。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "rose",
+            "fell",
+            "slept",
+            "sold"
+          ],
+          "answer_index": 0,
+          "explanation": "waves rose over the ship 巨浪涌上船。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "garden",
+            "island",
+            "office",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "the nearest island 最近的岛。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "ceiling",
+            "roof",
+            "shore",
+            "wall"
+          ],
+          "answer_index": 2,
+          "explanation": "sat on the shore 坐在岸边。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sleep",
+            "shop",
+            "sing",
+            "escape"
+          ],
+          "answer_index": 3,
+          "explanation": "plans to escape 逃生的计划。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Getting Ready for the Mountain",
+      "text": "Climbing a high mountain takes months of (1)____. Long before the trip, climbers train hard to get used to thin air and low (2)____. They study maps and plan each (3)____ along the route, so that they can rest and sleep on the way up. Good gear matters too: a warm coat, strong boots and a thick (4)____ to protect the head. The (5)____ checks the weather every day, because a sudden storm can (6)____ a safe climb into a deadly one. Near the top lies the death (7)____, where the body can only last a few (8)____. Most climbers know that the journey (9)____ both body and mind. Yet, when they finally stand on the (10)____, they feel that every hard day was worth it.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "preparation",
+            "holiday",
+            "breakfast",
+            "music"
+          ],
+          "answer_index": 0,
+          "explanation": "months of preparation 数月准备。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "water",
+            "oxygen",
+            "traffic",
+            "money"
+          ],
+          "answer_index": 1,
+          "explanation": "low oxygen 低氧。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "song",
+            "price",
+            "camp",
+            "joke"
+          ],
+          "answer_index": 2,
+          "explanation": "plan each camp 规划每个营地。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "ticket",
+            "basket",
+            "garden",
+            "helmet"
+          ],
+          "answer_index": 3,
+          "explanation": "a thick helmet 厚头盔。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "guide",
+            "garden",
+            "ticket",
+            "river"
+          ],
+          "answer_index": 0,
+          "explanation": "the guide checks 向导查看。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "turn",
+            "sing",
+            "buy"
+          ],
+          "answer_index": 1,
+          "explanation": "turn … into … 把……变成……。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "song",
+            "price",
+            "zone",
+            "game"
+          ],
+          "answer_index": 2,
+          "explanation": "the death zone 死亡地带。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "songs",
+            "prices",
+            "games",
+            "days"
+          ],
+          "answer_index": 3,
+          "explanation": "a few days 几天。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "would test",
+            "will test",
+            "tested",
+            "tests"
+          ],
+          "answer_index": 0,
+          "explanation": "know 此处转述过去判断,旅程考验在将来 → would test。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "kitchen",
+            "summit",
+            "market",
+            "office"
+          ],
+          "answer_index": 1,
+          "explanation": "stand on the summit 站上峰顶。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Into the Cave",
+      "text": "Last summer I joined a small team to explore a deep (1)____ in the mountains. We each wore a helmet with a bright (2)____, because no sunlight could reach so far below the (3)____. Step by step we climbed down into the (4)____, and the air grew cold and wet. Our guide warned us that the path ahead (5)____ slippery, so we moved slowly and held the rope (6)____. Deep inside, we found a huge room whose walls (7)____ us like a stone castle. The silence there was so complete that it almost (8)____ me. We were going to go even (9)____, but our guide said it was getting late, so we turned back. It was the most (10)____ adventure I had ever had.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "garden",
+            "kitchen",
+            "cave",
+            "office"
+          ],
+          "answer_index": 2,
+          "explanation": "a deep cave 深洞。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "song",
+            "joke",
+            "light"
+          ],
+          "answer_index": 3,
+          "explanation": "a bright light 明亮的灯。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "ground",
+            "ceiling",
+            "roof",
+            "cloud"
+          ],
+          "answer_index": 0,
+          "explanation": "below the ground 地面之下。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sun",
+            "dark",
+            "sky",
+            "wind"
+          ],
+          "answer_index": 1,
+          "explanation": "into the dark 进入黑暗。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "will be",
+            "was",
+            "would be",
+            "is"
+          ],
+          "answer_index": 2,
+          "explanation": "warned us(过去)、前路情况尚未到 → would be。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "loudly",
+            "sweetly",
+            "kindly",
+            "tightly"
+          ],
+          "answer_index": 3,
+          "explanation": "held the rope tightly 紧紧抓绳。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "surrounded",
+            "sold",
+            "opened",
+            "painted"
+          ],
+          "answer_index": 0,
+          "explanation": "walls surrounded us 墙壁围着我们。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "helped",
+            "astonished",
+            "thanked",
+            "invited"
+          ],
+          "answer_index": 1,
+          "explanation": "almost astonished me 几乎让我吃惊。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "higher",
+            "lighter",
+            "deeper",
+            "wider"
+          ],
+          "answer_index": 2,
+          "explanation": "go deeper 往更深处。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "ordinary",
+            "quiet",
+            "amazing"
+          ],
+          "answer_index": 3,
+          "explanation": "the most amazing adventure 最精彩的冒险。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Crossing the Desert",
+      "text": "Crossing a great desert is one of the hardest (1)____ in the world. By day the sun is so strong that travellers must (2)____ their heads, and by night the air turns surprisingly (3)____. Long ago, traders rode camels across the sand, carrying salt, cloth and (4)____ for many weeks. A camel can go for days without (5)____, which made it the perfect animal for such a (6)____. The travellers followed the stars at night, because there were no roads to (7)____ them. They knew the trip (8)____ dangerous, but the riches waiting at the end were worth the (9)____. Even today, a few brave people still cross the desert to feel the same sense of (10)____ that those early traders once knew.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "adventures",
+            "holidays",
+            "dinners",
+            "songs"
+          ],
+          "answer_index": 0,
+          "explanation": "the hardest adventures 最艰难的冒险。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "cover",
+            "drop",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "cover their heads 遮住头部。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "warm",
+            "sweet",
+            "cold",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "turns cold 变冷。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "music",
+            "traffic",
+            "homework",
+            "water"
+          ],
+          "answer_index": 3,
+          "explanation": "carrying water 携带饮水。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "drinking",
+            "singing",
+            "shopping",
+            "reading"
+          ],
+          "answer_index": 0,
+          "explanation": "without drinking 不喝水。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "garden",
+            "journey",
+            "kitchen",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "such a journey 这样的旅程。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "paint",
+            "guide",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "no roads to guide them 没有路指引。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "will be",
+            "is",
+            "has been",
+            "would be"
+          ],
+          "answer_index": 3,
+          "explanation": "knew(过去)、危险尚在前路 → would be。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "risk",
+            "price",
+            "song",
+            "game"
+          ],
+          "answer_index": 0,
+          "explanation": "worth the risk 值得冒险。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "traffic",
+            "freedom",
+            "homework",
+            "furniture"
+          ],
+          "answer_index": 1,
+          "explanation": "a sense of freedom 自由感。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "My First Solo Sail",
+      "text": "When I was sixteen, I made my first solo sailing trip, and I will never (1)____ it. My father, who was a sailor, told me that the sea (2)____ me more than any school. Before I left, I checked the boat carefully and learned some first (3)____ in case of an injury. The first days were (4)____ and bright, and I sailed happily along the (5)____. Then, one evening, dark clouds began to (6)____, and I could see that a storm (7)____ hit before long. I lowered the sail and held on (8)____ as the waves rose around me. By morning the sea was quiet again, and I felt (9)____ that I had faced my fear alone. That trip taught me that courage (10)____ each time we meet a new challenge.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "buy",
+            "forget",
+            "open"
+          ],
+          "answer_index": 2,
+          "explanation": "never forget it 永远忘不了。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "will teach",
+            "taught",
+            "teaches",
+            "would teach"
+          ],
+          "answer_index": 3,
+          "explanation": "told me(过去)、教导发生在将来 → would teach。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "aid",
+            "price",
+            "song",
+            "joke"
+          ],
+          "answer_index": 0,
+          "explanation": "first aid 急救。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "angry",
+            "calm",
+            "hungry",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "calm and bright 平静明朗。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "ceiling",
+            "roof",
+            "coast",
+            "kitchen"
+          ],
+          "answer_index": 2,
+          "explanation": "along the coast 沿海岸。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sing",
+            "sell",
+            "sleep",
+            "gather"
+          ],
+          "answer_index": 3,
+          "explanation": "clouds gather 乌云聚集。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "was going to",
+            "is going to",
+            "will",
+            "may"
+          ],
+          "answer_index": 0,
+          "explanation": "过去看即将发生的事 → was going to hit;现在 is going to/will 视角错。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "loudly",
+            "tightly",
+            "sweetly",
+            "slowly"
+          ],
+          "answer_index": 1,
+          "explanation": "held on tightly 紧紧抓住。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "afraid",
+            "bored",
+            "proud",
+            "sorry"
+          ],
+          "answer_index": 2,
+          "explanation": "felt proud 感到自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sells",
+            "sleeps",
+            "hides",
+            "grows"
+          ],
+          "answer_index": 3,
+          "explanation": "courage grows 勇气增长。"
+        }
+      ]
+    }
+  ]
+}

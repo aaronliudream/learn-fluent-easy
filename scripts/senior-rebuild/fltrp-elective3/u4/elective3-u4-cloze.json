@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "topic": "Artificial Intelligence",
+  "source": "外研社选择性必修第三册 Unit 4 同主题完形(AI 助手的早晨/自动驾驶如何决策/软件写新闻/未来的 AI 医生/机器狗 Robutt/学会与 AI 共处)。选项同词性,答案唯一无双解,与阅读·听力关不复用文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Morning with My AI Helper",
+      "text": "Every morning, my AI assistant (1)____ me up with soft music at seven o'clock. While I have breakfast, it reads out the day's (2)____ so that I know what is happening in the world. If the weather looks bad, it (3)____ me to take an umbrella. On my way to school, the assistant (4)____ the fastest route and tells me which bus to catch. It has slowly learned my daily (5)____, so its advice fits me better and better. When I am not sure how to spell a word, I simply (6)____ it out loud and the answer appears at once. Some people (7)____ that we depend on such tools too much. Perhaps they are right. Still, I find that this kind of (8)____ saves me a lot of time and (9)____ my busy mornings far less stressful. I can hardly (10)____ how I once managed without it.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "wakes",
+            "builds",
+            "sells",
+            "forgets"
+          ],
+          "answer_index": 0,
+          "explanation": "wake sb up 把某人叫醒。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "shoes",
+            "news",
+            "trees",
+            "games"
+          ],
+          "answer_index": 1,
+          "explanation": "read out the news 读出新闻。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "stops",
+            "sells",
+            "reminds",
+            "throws"
+          ],
+          "answer_index": 2,
+          "explanation": "remind sb to do 提醒某人做。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eats",
+            "paints",
+            "loses",
+            "finds"
+          ],
+          "answer_index": 3,
+          "explanation": "find the fastest route 找出最快路线。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "habits",
+            "shoes",
+            "clouds",
+            "prices"
+          ],
+          "answer_index": 0,
+          "explanation": "daily habits 日常习惯。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "cut",
+            "say",
+            "plant",
+            "wash"
+          ],
+          "answer_index": 1,
+          "explanation": "say it out loud 大声说出来。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sing",
+            "drive",
+            "worry",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "worry that… 担心……。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "weather",
+            "furniture",
+            "clothing",
+            "technology"
+          ],
+          "answer_index": 3,
+          "explanation": "this kind of technology 这种技术。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "makes",
+            "breaks",
+            "buys",
+            "hides"
+          ],
+          "answer_index": 0,
+          "explanation": "make sth less stressful 使……不那么紧张。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "imagine",
+            "repair",
+            "paint"
+          ],
+          "answer_index": 1,
+          "explanation": "can hardly imagine 几乎无法想象。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "How a Self-Driving Car Decides",
+      "text": "A self-driving car is full of cameras and sensors that watch the road all the (1)____. As the car moves, these tools collect a huge amount of (2)____ about other cars, people and traffic lights. A computer inside the car then (3)____ all this information in a fraction of a second. Based on what it learns, the car can make sensible (4)____, such as when to slow down or stop. Unlike a human driver, the machine never feels (5)____ or angry, so it is less likely to make careless mistakes. If a child suddenly (6)____ into the road, the car reacts faster than most human drivers (7)____. Of course, the system is not yet (8)____. Engineers are still working hard to (9)____ the few problems that remain. Most experts believe that, in time, these clever cars will make our roads much (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "food",
+            "music",
+            "time",
+            "money"
+          ],
+          "answer_index": 2,
+          "explanation": "all the time 一直,始终。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "water",
+            "paint",
+            "bread",
+            "data"
+          ],
+          "answer_index": 3,
+          "explanation": "a huge amount of data 大量数据。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "analyses",
+            "paints",
+            "sells",
+            "eats"
+          ],
+          "answer_index": 0,
+          "explanation": "analyse the information 分析信息。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cakes",
+            "judgements",
+            "songs",
+            "shoes"
+          ],
+          "answer_index": 1,
+          "explanation": "make judgements 作出判断。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "square",
+            "golden",
+            "tired",
+            "wooden"
+          ],
+          "answer_index": 2,
+          "explanation": "feel tired 感到疲倦。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sings",
+            "cooks",
+            "sleeps",
+            "runs"
+          ],
+          "answer_index": 3,
+          "explanation": "run into the road 跑到路上。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "do",
+            "does",
+            "is",
+            "was"
+          ],
+          "answer_index": 0,
+          "explanation": "than most human drivers do;drivers 是复数,用 do。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "purple",
+            "perfect",
+            "heavy",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "not yet perfect 还不完美。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "paint",
+            "sing",
+            "solve",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "solve the problems 解决问题。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "louder",
+            "heavier",
+            "darker",
+            "safer"
+          ],
+          "answer_index": 3,
+          "explanation": "make our roads safer 使道路更安全。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "When Software Writes the News",
+      "text": "Not long ago, every news report was written by a human (1)____. Today, that is starting to change. Some simple reports, such as those about sports results or company profits, are now produced by (2)____ instead. A computer program can take raw numbers and turn them into a clear, readable (3)____ in just a few seconds. This saves newspapers a great deal of (4)____ and money. However, many journalists are (5)____ about the future of their jobs. They fear that machines may soon (6)____ them in many simple tasks. Supporters of the technology (7)____ that it only does the boring work, leaving humans free to write deeper stories. Whether this is (8)____ remains to be seen. What is certain is that writers will need to keep learning new (9)____ if they want to stay useful. The way we (10)____ the news may never be quite the same again.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "journalist",
+            "garden",
+            "engine",
+            "mountain"
+          ],
+          "answer_index": 0,
+          "explanation": "a human journalist 人类记者。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "furniture",
+            "software",
+            "weather",
+            "clothing"
+          ],
+          "answer_index": 1,
+          "explanation": "produced by software 由软件生成。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "river",
+            "forest",
+            "report",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "a readable report 一篇可读的报道。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "rain",
+            "grass",
+            "snow",
+            "time"
+          ],
+          "answer_index": 3,
+          "explanation": "a great deal of time 大量时间。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "worried",
+            "golden",
+            "square",
+            "wooden"
+          ],
+          "answer_index": 0,
+          "explanation": "be worried about 担心。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "paint",
+            "replace",
+            "plant",
+            "boil"
+          ],
+          "answer_index": 1,
+          "explanation": "replace them 取代他们。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sleep",
+            "swim",
+            "argue",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "argue that… 主张……。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "purple",
+            "heavy",
+            "loud",
+            "true"
+          ],
+          "answer_index": 3,
+          "explanation": "whether this is true 这是否属实。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "skills",
+            "clouds",
+            "shoes",
+            "trees"
+          ],
+          "answer_index": 0,
+          "explanation": "learn new skills 学习新技能。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "paint",
+            "receive",
+            "dig",
+            "fry"
+          ],
+          "answer_index": 1,
+          "explanation": "the way we receive the news 我们获取新闻的方式。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Doctors of the Future",
+      "text": "Imagine visiting a hospital where part of your treatment is planned by artificial (1)____. This may sound strange, but it could happen sooner than we (2)____. Already, smart programs can study thousands of medical pictures and (3)____ signs of illness that a busy doctor might miss. In the future, AI may even help scientists find new (4)____ for serious diseases such as cancer. Tiny robots, smaller than a single (5)____, might one day travel through the body and clear away harmful ones. Of course, few patients would feel (6)____ seeing a robot instead of a human doctor right now. Trust takes (7)____ to build. Most experts agree that AI will not (8)____ doctors; instead, it will work beside them as a helpful (9)____. With such support, doctors may be able to treat more people and (10)____ more lives than ever before.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "furniture",
+            "weather",
+            "intelligence",
+            "clothing"
+          ],
+          "answer_index": 2,
+          "explanation": "artificial intelligence 人工智能。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cut",
+            "plant",
+            "wash",
+            "think"
+          ],
+          "answer_index": 3,
+          "explanation": "sooner than we think 比我们想的更快。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "spot",
+            "sing",
+            "cook",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "spot signs of illness 发现患病的迹象。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "shoes",
+            "cures",
+            "clouds",
+            "games"
+          ],
+          "answer_index": 1,
+          "explanation": "find new cures 找到新疗法。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "mountain",
+            "river",
+            "cell",
+            "forest"
+          ],
+          "answer_index": 2,
+          "explanation": "smaller than a single cell 比一个细胞还小。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "square",
+            "golden",
+            "wooden",
+            "comfortable"
+          ],
+          "answer_index": 3,
+          "explanation": "feel comfortable 感到自在。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "time",
+            "rain",
+            "snow",
+            "grass"
+          ],
+          "answer_index": 0,
+          "explanation": "trust takes time to build 信任需要时间建立。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "paint",
+            "replace",
+            "boil",
+            "dig"
+          ],
+          "answer_index": 1,
+          "explanation": "will not replace doctors 不会取代医生。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "cloud",
+            "river",
+            "tool",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "a helpful tool 有用的工具。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "fry",
+            "paint",
+            "sing",
+            "save"
+          ],
+          "answer_index": 3,
+          "explanation": "save more lives 拯救更多生命。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A Boy and His Robot Dog",
+      "text": "On the Moon, a boy named Jimmy had a robot dog (1)____ Robutt. Robutt could not breathe or eat, yet it (2)____ Jimmy everywhere he went. With four metal legs and tendons of steel, it could easily (3)____ across the rocky ground. Whenever Jimmy came near, the little robot would (4)____ happily and jump into his arms. One day, Jimmy's father told him that a real dog from Earth would soon (5)____. He said that Robutt was only a (6)____ imitation and not truly alive. But Jimmy did not (7)____. To him, Robutt understood him and loved him, and that was what (8)____ most. He held the robot (9)____ in his arms and frowned. In the boy's heart, the difference between a machine and a living thing did not seem to (10)____ at all.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "called",
+            "painted",
+            "sold",
+            "eaten"
+          ],
+          "answer_index": 0,
+          "explanation": "a robot dog called Robutt 名叫罗巴特的机器狗。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cooked",
+            "followed",
+            "painted",
+            "sang"
+          ],
+          "answer_index": 1,
+          "explanation": "followed Jimmy 跟着吉米。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "cook",
+            "cry",
+            "race",
+            "sleep"
+          ],
+          "answer_index": 2,
+          "explanation": "race across the ground 在地面上奔跑。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cook",
+            "paint",
+            "dig",
+            "squeak"
+          ],
+          "answer_index": 3,
+          "explanation": "squeak happily 高兴地吱吱叫。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "arrive",
+            "melt",
+            "sink",
+            "fade"
+          ],
+          "answer_index": 0,
+          "explanation": "a dog would soon arrive 一只狗很快就到。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "golden",
+            "mechanical",
+            "square",
+            "sleepy"
+          ],
+          "answer_index": 1,
+          "explanation": "a mechanical imitation 机械仿制品。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "swim",
+            "fry",
+            "agree",
+            "dig"
+          ],
+          "answer_index": 2,
+          "explanation": "Jimmy did not agree 吉米并不同意。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "melted",
+            "painted",
+            "floated",
+            "mattered"
+          ],
+          "answer_index": 3,
+          "explanation": "that was what mattered most 那才是最要紧的。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "tightly",
+            "angrily",
+            "loudly",
+            "coldly"
+          ],
+          "answer_index": 0,
+          "explanation": "held the robot tightly 紧紧抱着机器狗。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "melt",
+            "matter",
+            "float",
+            "sink"
+          ],
+          "answer_index": 1,
+          "explanation": "did not seem to matter 似乎并不重要。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Learning to Live with AI",
+      "text": "Artificial intelligence is no longer something from science fiction; it is already (1)____ of our daily lives. Like any powerful tool, it can be used for good or for (2)____. A clever system might help us cure diseases, yet the same power could be (3)____ if it falls into the wrong hands. For this reason, many people believe that we must (4)____ AI with clear and fair rules. One thing is certain: the technology will not simply (5)____. We cannot stop the march of (6)____, so we must learn to live with it wisely. That means using AI to help people rather than to (7)____ them. It also means remembering that a person, not a machine, is always (8)____ for how a tool is used. Saying \"My AI did it\" can never be an (9)____ for illegal or unfair behaviour. If we are careful, AI may become one of humanity's greatest (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "rain",
+            "snow",
+            "part",
+            "grass"
+          ],
+          "answer_index": 2,
+          "explanation": "part of our daily lives 我们日常生活的一部分。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cake",
+            "song",
+            "shoe",
+            "harm"
+          ],
+          "answer_index": 3,
+          "explanation": "used for good or for harm 用于善或恶。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "dangerous",
+            "golden",
+            "square",
+            "wooden"
+          ],
+          "answer_index": 0,
+          "explanation": "could be dangerous 可能很危险。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "paint",
+            "regulate",
+            "boil",
+            "dig"
+          ],
+          "answer_index": 1,
+          "explanation": "regulate AI 管理人工智能。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sing",
+            "cook",
+            "disappear",
+            "swim"
+          ],
+          "answer_index": 2,
+          "explanation": "will not simply disappear 不会就这样消失。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "rain",
+            "grass",
+            "snow",
+            "progress"
+          ],
+          "answer_index": 3,
+          "explanation": "the march of progress 进步的步伐。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "control",
+            "paint",
+            "boil",
+            "fry"
+          ],
+          "answer_index": 0,
+          "explanation": "rather than to control them 而非控制人们。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "golden",
+            "responsible",
+            "square",
+            "wooden"
+          ],
+          "answer_index": 1,
+          "explanation": "be responsible for 对……负责。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "river",
+            "forest",
+            "excuse",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "an excuse for 为……的借口。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "clouds",
+            "shoes",
+            "storms",
+            "achievements"
+          ],
+          "answer_index": 3,
+          "explanation": "humanity's greatest achievements 人类最伟大的成就。"
+        }
+      ]
+    }
+  ]
+}

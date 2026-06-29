@@ -1,0 +1,52 @@
+{
+  "volume": "required2",
+  "unit": "U6",
+  "topic": "Write a Persuasive Letter about an Environmental Issue(就一个环境问题写一封倡议信)",
+  "title_en": "A Persuasive Letter to Save Our Environment",
+  "genre": "倡议信 / 议论(state a problem + give reasons + suggest actions to raise awareness)",
+  "source": "外研社版必修第二册 Unit 6 Developing ideas / Presenting ideas:write a persuasive letter to raise awareness of an environmental issue(描述问题 + 说明原因 + 提出建议)。",
+  "prompt_cn": "假设你是李华,学校环保社的成员。请就身边一个环境问题(如食物浪费/塑料垃圾/浪费用电),用英语写一封约100词的倡议信,内容包括:① 说明你担心的问题及其影响;② 给出两条具体可行的建议;③ 呼吁大家一起行动。注意:语气有礼貌而有说服力,可用分词作补语(如 keep the lights off, get rubbish recycled)。",
+  "prompt_en": "Suppose you are Li Hua, a member of the school Green Club. Write a persuasive letter (about 100 words) about an environmental problem around you (e.g. food waste, plastic litter, wasting electricity). Include: 1) the problem you are concerned about and its effects; 2) two practical suggestions; 3) a call for everyone to act together. Be polite but persuasive.",
+  "points": [
+    "说明问题与影响(We are writing to raise your awareness of … / We are concerned that …)",
+    "提出具体建议(We would like to suggest … / In order to improve the situation, we should …)",
+    "呼吁共同行动(We hope that you will join us in …)",
+    "语气礼貌而有说服力,可用分词作补语"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Dear Friends,\n\nWe are writing this letter to raise your awareness of the food wasted in our school canteen every day. Each lunchtime, we see large amounts of rice and vegetables thrown away, while many people in the world do not have enough to eat. We are concerned that such waste harms both others and our planet.\n\nIn order to improve the situation, we would like to suggest two things. First, only order the food you can finish, and get any leftovers packed to take home. Second, remind your friends to clear their plates.\n\nWe hope that you will join us and help make our school a greener place.\n\nYours,\nThe Green Club",
+  "model_translation": "亲爱的朋友们:\n\n我们写这封信是想唤起大家对学校食堂每天浪费食物问题的关注。每到午餐,我们都看到大量米饭和蔬菜被倒掉,而世界上还有许多人吃不饱。我们担心这样的浪费既伤害了他人,也伤害了我们的星球。\n\n为了改善这一状况,我们想提两点建议。第一,只点你能吃完的食物,把剩饭打包带回家。第二,提醒你的朋友把盘子吃光。\n\n我们希望你能加入我们,一起把学校变成更绿色的地方。\n\n此致\n环保社",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:说明问题及影响 / 两条具体建议 / 呼吁共同行动" },
+      { "dimension": "结构", "max": 4, "criteria": "倡议信格式正确(称呼+正文+落款)、分段清楚、行文连贯、语气有说服力" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、分词作补语等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "唤起关注 We are writing to raise your awareness of …",
+      "表达担忧 We are concerned that …",
+      "提出建议 In order to improve the situation, we would like to suggest …",
+      "呼吁行动 We hope that you will join us and …"
+    ],
+    "key_expressions": [
+      "We are writing this letter to raise your awareness of the food wasted every day.",
+      "We are concerned that such waste harms both others and our planet.",
+      "Only order the food you can finish, and get any leftovers packed.",
+      "We hope that you will join us and help make our school a greener place."
+    ],
+    "useful_words": ["awareness", "concerned", "waste", "reduce", "suggest", "leftover", "recycle", "environment", "sustainable", "campaign"]
+  },
+  "high_sentences": [
+    "We are writing this letter to raise your awareness of the food wasted in our canteen.",
+    "Each lunchtime, we see large amounts of rice and vegetables thrown away.",
+    "Only order the food you can finish, and get any leftovers packed to take home.",
+    "We hope that you will join us and help make our school a greener place."
+  ],
+  "error_pairs": [
+    { "wrong": "We see rice and vegetables throwing away.", "correct": "We see rice and vegetables thrown away.", "note": "rice/vegetables 是被扔的,被动 → -ed 分词 thrown 作补语。" },
+    { "wrong": "Please get the rubbish recycle.", "correct": "Please get the rubbish recycled.", "note": "get sth done,rubbish 被回收 → -ed 分词 recycled。" },
+    { "wrong": "We are concerned about that the waste is serious.", "correct": "We are concerned that the waste is serious.", "note": "be concerned that 从句,不加 about。" }
+  ],
+  "paragraph_template": "【环境倡议信结构】\n称呼:Dear Friends,\n第1段 唤起关注+问题影响:We are writing to raise your awareness of … We are concerned that …\n第2段 两条建议:In order to improve the situation, we would like to suggest … First, … Second, …\n第3段 呼吁行动:We hope that you will join us and …\n落款:Yours, The Green Club"
+}

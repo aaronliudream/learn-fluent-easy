@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(突破界限主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Maria joined an international rescue team, she could barely speak the local language and felt completely out of place. Instead of staying silent, she learned a few useful phrases each day and let her willingness to help speak for her. Within a month, the whole team trusted her, and she realised that real care can cross any boundary.",
+    "questions": [
+      {
+        "q": "How did Maria feel when she first joined the team?",
+        "options": [
+          "Confident and fully at home.",
+          "Out of place because of the language.",
+          "Bored with the rescue work.",
+          "Angry at her new colleagues."
+        ],
+        "answer": "B",
+        "explanation": "原文'几乎不会说当地语言、感到格格不入'的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What did Maria realise within a month?",
+        "options": [
+          "That she should give up and leave.",
+          "That language alone wins trust.",
+          "That sincere kindness can reach beyond any difference.",
+          "That the team did not need her."
+        ],
+        "answer": "C",
+        "explanation": "末句'真正的关怀能跨越任何界限'的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "volume": "elective1",
+  "unit": "U6",
+  "topic": "Nurturing Nature",
+  "source": "外研社选必一 Unit 6 同主题阅读(青藏铁路/羚羊通道/大堡礁最好的工作/什么是生态旅游/自然守护者/白沙滩酒店之争)。词限 U6/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Sky Railway",
+      "topic_cn": "说明·青藏铁路",
+      "body": "The Qinghai-Tibet Railway is often called the \"Sky Railway\", and it is easy to see why. Many foreign experts once said that building a line across the roof of the world would be impossible. Yet workers from all over China came together to make it real. The railway crosses high mountains, frozen ground and wide grassland, climbing past five thousand metres above the sea. At Tanggula, travellers reach the highest railway station anywhere on the planet. Up there the air is thin, the weather changes quickly, and the sunlight is strong, so the builders faced some of the hardest conditions they had ever met. To keep everyone well, they set up stations that made extra oxygen and gave the crews regular rest in lower places. Today the train races steadily across the plateau, and passengers from every part of the country have been enjoying scenery that once seemed beyond reach. The line shows what careful planning and hard work can achieve.",
+      "vocab_notes": [
+        {
+          "word": "plateau",
+          "cn": "高原"
+        },
+        {
+          "word": "oxygen",
+          "cn": "氧气"
+        },
+        {
+          "word": "grassland",
+          "cn": "草原"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the railway once thought to be impossible to build?",
+          "options": [
+            "It had to cross such high and difficult land.",
+            "There were no workers willing to help.",
+            "No trains were fast enough to use it.",
+            "The government had no money for it."
+          ],
+          "answer_index": 0,
+          "explanation": "全文说要翻越世界屋脊的高山冻土,环境极难 → 概括为'要穿越如此高而艰险的地带';其余文中未提或相反。"
+        },
+        {
+          "stem": "What made Tanggula Station special?",
+          "options": [
+            "It was the busiest station in China.",
+            "It sat higher than any other railway station on Earth.",
+            "It was built underground for safety.",
+            "It was the first station ever opened."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'the highest railway station anywhere on the planet'的转述。"
+        },
+        {
+          "stem": "How did the builders keep the crews healthy in the thin air?",
+          "options": [
+            "They made extra oxygen and rested in lower areas.",
+            "They worked only at night.",
+            "They wore special clothes all the time.",
+            "They drank large amounts of hot tea."
+          ],
+          "answer_index": 0,
+          "explanation": "原文造氧站+到低处休息的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Room for the Antelopes",
+      "topic_cn": "说明·野生动物通道",
+      "body": "When the Sky Railway was planned, one big worry was how to keep the wild animals safe. The land it crosses is the natural habitat of Tibetan antelopes, which travel long distances each year to give birth and raise their young. A railway can easily cut such a journey in two, leaving animals trapped on one side. To solve this, the builders left thirty-three passages under the line so that the antelopes could go on moving as freely as before. At first the shy animals were afraid of the strange new structures and would not go near them. The workers waited patiently and changed nothing, and slowly the antelopes learned that the passages were safe. Now the animals have been using these crossings for years, and they hardly seem to notice the trains rushing past above. Wetlands and grassland along the route were also protected with care. The story shows that a great project and healthy wildlife can share the same land.",
+      "vocab_notes": [
+        {
+          "word": "habitat",
+          "cn": "栖息地"
+        },
+        {
+          "word": "antelope",
+          "cn": "羚羊"
+        },
+        {
+          "word": "passage",
+          "cn": "(动物通行的)通道"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why could a railway be dangerous for the antelopes?",
+          "options": [
+            "It would make too much noise for them to sleep.",
+            "It could block the long journeys they make each year.",
+            "It would use up all the grass they eat.",
+            "It would bring hunters close to them."
+          ],
+          "answer_index": 1,
+          "explanation": "原文铁路会把迁徙路线切断、把动物困在一边的转述。"
+        },
+        {
+          "stem": "How did the antelopes react to the passages at first?",
+          "options": [
+            "They used them straight away.",
+            "They tried to break them down.",
+            "They were frightened and stayed away from them.",
+            "They moved to another country."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'were afraid… would not go near them'的转述。"
+        },
+        {
+          "stem": "What does the writer want to show with this story?",
+          "options": [
+            "That wild animals should be kept in zoos.",
+            "That building railways is always harmful.",
+            "That antelopes are too shy to survive.",
+            "That big projects and wildlife can exist together."
+          ],
+          "answer_index": 3,
+          "explanation": "末句'a great project and healthy wildlife can share the same land'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Best Job in the World",
+      "topic_cn": "记叙·大堡礁看护员",
+      "body": "A few years ago, an unusual advertisement appeared around the globe. It offered the chance to spend six months living on a beautiful island and looking after the Great Barrier Reef. The working hours were flexible, a place to stay was provided, and the main duties were exploring the area and telling the world about it through blogs, photos and short videos. People wondered whether it was a genuine job or just a clever way to draw attention to the reef. Either way, the idea worked: thousands of applicants from many countries sent in short videos showing how much they knew and why they were the right person. In the end, only eleven were chosen for interviews, and the post went to a young man from Britain named Ben. He spent his months blogging, taking pictures and speaking on television in defence of the reef. He later joked that the job should have been called the busiest, not the best, job in the world.",
+      "vocab_notes": [
+        {
+          "word": "applicant",
+          "cn": "申请人"
+        },
+        {
+          "word": "genuine",
+          "cn": "真正的"
+        },
+        {
+          "word": "reef",
+          "cn": "珊瑚礁"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was the main work of the island caretaker?",
+          "options": [
+            "To explore the reef and share it through blogs and videos.",
+            "To build new hotels along the coast.",
+            "To stop all visitors from coming.",
+            "To study fish in a laboratory."
+          ],
+          "answer_index": 0,
+          "explanation": "原文探索该地+用博客照片视频对外宣传的转述。"
+        },
+        {
+          "stem": "Why did so many people apply for the job?",
+          "options": [
+            "Because no skills were needed at all.",
+            "Because the advertisement was attractive and known worldwide.",
+            "Because it paid no money but was easy.",
+            "Because they were forced to by their schools."
+          ],
+          "answer_index": 1,
+          "explanation": "原文广告吸引全球、上千人申请的转述。"
+        },
+        {
+          "stem": "Why did Ben joke about the job's name?",
+          "options": [
+            "Because he disliked the reef.",
+            "Because he never had to work.",
+            "Because the work actually kept him very busy.",
+            "Because he was paid too little."
+          ],
+          "answer_index": 2,
+          "explanation": "末句他开玩笑说应叫'最忙'而非'最好'的转述,说明实际很忙。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "What Is Ecotourism?",
+      "topic_cn": "说明·生态旅游",
+      "body": "Ecotourism is a kind of travel that tries to care for nature instead of harming it. The idea is simple: people can still enjoy wild and beautiful places, but they should do so as responsible visitors. Good ecotourism teaches travellers about the natural world and asks them to leave it just as they found it. In countries such as Costa Rica, Kenya and Nepal, this type of tourism has become an important part of the economy, bringing jobs to people who live near forests, mountains and rivers. Some holidays of this kind even include voluntary work. Instead of only lying on a beach, visitors might spend a morning planting young trees or counting rare animals to help scientists. Of course, every trip still has some cost for nature, because cars and planes produce emissions. Yet supporters believe that, done well, ecotourism gives people a reason to protect wild places rather than destroy them, and that is surely worth a great deal.",
+      "vocab_notes": [
+        {
+          "word": "ecotourism",
+          "cn": "生态旅游"
+        },
+        {
+          "word": "responsible",
+          "cn": "负责任的"
+        },
+        {
+          "word": "voluntary",
+          "cn": "志愿的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the basic aim of ecotourism?",
+          "options": [
+            "To keep all tourists out of wild places.",
+            "To make as much money as possible quickly.",
+            "To build large hotels in every forest.",
+            "To let people travel while caring for nature."
+          ],
+          "answer_index": 3,
+          "explanation": "首句'cares for nature instead of harming it'+做负责任游客的转述。"
+        },
+        {
+          "stem": "Why is ecotourism important for countries like Kenya and Nepal?",
+          "options": [
+            "It brings work to people living near wild areas.",
+            "It removes the need for any farming.",
+            "It stops anyone from visiting at all.",
+            "It makes the weather more pleasant."
+          ],
+          "answer_index": 0,
+          "explanation": "原文成为经济重要部分、给森林山河附近的人带来工作的转述。"
+        },
+        {
+          "stem": "What do supporters believe ecotourism does best?",
+          "options": [
+            "It removes all cost to nature.",
+            "It encourages people to look after nature instead of ruining it.",
+            "It replaces every other kind of holiday.",
+            "It ends the use of cars and planes."
+          ],
+          "answer_index": 1,
+          "explanation": "末句生态旅游给人保护荒野的理由的转述;A 与文中'仍有一些代价'相反。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Guardians of Nature",
+      "topic_cn": "记叙·自然守护者",
+      "body": "Across China, ordinary people give their days to looking after the natural world, and three of them tell their stories here. On Mount Huangshan, one man calls himself the Guardian of the Pine Tree. His task is to watch over a single famous tree, checking it several times a day and writing down what he sees. He sometimes feels lonely, but he finds the work deeply rewarding. Far away, on the red cliffs of Mount Yuntai, another worker describes himself as a kind of spiderman. With a rope tied around his waist, he climbs up and down the rock face to clear away the rubbish that careless visitors leave behind. The job carries real danger, yet he is proud to help keep the mountain clean. The third is known as the Panda Nanny of Wolong. She cares for the pandas in a nature reserve, talks with visitors and posts updates online, hoping that one day more people will join her in protecting these gentle animals.",
+      "vocab_notes": [
+        {
+          "word": "guardian",
+          "cn": "守护者"
+        },
+        {
+          "word": "waist",
+          "cn": "腰"
+        },
+        {
+          "word": "reserve",
+          "cn": "保护区"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the Guardian of the Pine Tree do every day?",
+          "options": [
+            "He plants new trees on the mountain.",
+            "He sells photos of the tree to tourists.",
+            "He checks one famous tree and records what he notices.",
+            "He cuts the tree's branches for wood."
+          ],
+          "answer_index": 2,
+          "explanation": "原文一天查看几次并记录观察的转述。"
+        },
+        {
+          "stem": "Why does the second worker need a rope around his waist?",
+          "options": [
+            "To carry his lunch up the mountain.",
+            "To catch animals on the rocks.",
+            "To tie the trees together.",
+            "To climb the steep cliffs while clearing rubbish."
+          ],
+          "answer_index": 3,
+          "explanation": "原文系绳爬上下崖壁清理垃圾的转述。"
+        },
+        {
+          "stem": "What does the Panda Nanny hope for?",
+          "options": [
+            "That more people will help look after the pandas.",
+            "That the reserve will be closed soon.",
+            "That she can stop working with pandas.",
+            "That visitors will stop coming."
+          ],
+          "answer_index": 0,
+          "explanation": "末句希望有更多人加入保护熊猫的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Debate over White Beach",
+      "topic_cn": "议论·建酒店之争",
+      "body": "As more visitors arrive each year, the people of one small city are arguing about their coast. The question is whether a company should be allowed to build a hotel at White Beach. The owner of the company is firmly in favour of the plan. He says a smart new hotel would attract more tourists, create opportunities for fresh businesses and provide many jobs for families in the area. He also promises that the design will sit in harmony with the lovely surroundings. Local people are not so sure. They worry that the work is not eco-friendly and may disturb the wildlife, in particular the turtles that lay their eggs on the sand. Some of them admit that the hotel would help the local economy, yet they fear it might still spoil the very beauty that brings visitors in the first place. They also point out that more tourists mean more cars and planes, and so higher carbon emissions. The two sides have not yet reached an agreement.",
+      "vocab_notes": [
+        {
+          "word": "in favour of",
+          "cn": "支持"
+        },
+        {
+          "word": "disturb",
+          "cn": "干扰"
+        },
+        {
+          "word": "emission",
+          "cn": "排放物"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does the company owner support building the hotel?",
+          "options": [
+            "He wants to move the turtles somewhere else.",
+            "He thinks it will bring jobs and new business to the area.",
+            "He plans to live in the hotel himself.",
+            "He hopes to stop tourists from coming."
+          ],
+          "answer_index": 1,
+          "explanation": "原文吸引游客、创造商机、提供就业的转述。"
+        },
+        {
+          "stem": "What are the local people most worried about?",
+          "options": [
+            "That the hotel will be too small.",
+            "That the design will look too modern.",
+            "That the work may harm the wildlife, especially the turtles.",
+            "That no tourists will come at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文担心不环保、扰乱产卵海龟的转述。"
+        },
+        {
+          "stem": "What is the situation between the two sides at the end?",
+          "options": [
+            "They have happily agreed to build it.",
+            "They have decided never to discuss it again.",
+            "They have asked tourists to decide for them.",
+            "They still have not come to any agreement."
+          ],
+          "answer_index": 3,
+          "explanation": "末句双方尚未达成一致的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U5",
+  "topic": "Write an Observational Journal(写一篇自然观察日记)",
+  "title_en": "Watching a Sunflower Grow",
+  "genre": "观察日记 / 记叙说明(record how a living thing changes over time)",
+  "source": "外研社选必一 Unit 5 Developing ideas:Writing an observational journal(按时间记录一种植物/生物的生长变化,语言客观、可结合过去完成时表达先后)。",
+  "prompt_cn": "假设你在生物课上种了一株向日葵,并坚持记录它的生长。请用英语写一篇约90词的观察日记,内容包括:① 按时间(如第1周/第3周/第6周)记录向日葵的变化;② 至少一处用过去完成时说明'到某个时间点之前已经发生'的情况(如 By Week 6, it had already produced a flower);③ 结尾写下你的观察感受。注意语言客观、条理清楚。",
+  "prompt_en": "Suppose you grew a sunflower in your biology class and kept a record of its growth. Write an observational journal (about 90 words) that: 1) records the changes week by week (e.g. Week 1 / Week 3 / Week 6); 2) uses the past perfect at least once to show what had already happened by a certain point (e.g. By Week 6, it had already produced a flower); 3) ends with how the observation made you feel.",
+  "points": [
+    "按时间分段记录变化(Week 1 … / Week 3 … / Week 6 …)",
+    "用过去完成时表达'到某时间点之前已完成'(By Week 6, it had already produced a flower)",
+    "语言客观、用词准确(stem, leaves, centimetres, flower)",
+    "结尾写观察感受、句句围绕'生长'这一中心"
+  ],
+  "word_count": "90 词左右",
+  "model_essay": "Week 1: I planted three sunflower seeds in a pot of soft soil and placed it on the windowsill. The soil had been watered well before I added the seeds. Week 3: A thin green stem has pushed up from each seed, and the leaves are long and narrow. Week 6: The plants have grown to about thirty centimetres tall. By the time I measured them, one plant had already produced a small yellow flower. Watching nature reveal its secrets, day by day, has been truly wonderful.",
+  "model_translation": "第1周:我把三颗向日葵种子种进一盆松软的土里,放在窗台上。在放入种子之前,土已经浇透了水。第3周:每颗种子都钻出了一根细细的绿茎,叶子又长又窄。第6周:这些植株长到了大约三十厘米高。在我测量它们时,其中一株已经开出了一朵小小的黄花。日复一日地看着自然揭示它的奥秘,真是太奇妙了。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:按周记录变化 / 至少一处过去完成时 / 观察感受" },
+      { "dimension": "结构", "max": 4, "criteria": "按时间分段、条理清楚、句句围绕'生长'、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "用词准确客观、过去完成时与一般过去/现在完成运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "时间段 Week 1 / Week 3 / Week 6 …",
+      "过去完成时 By the time …, it had already produced …",
+      "客观描述 The stem is … / The leaves are … / It has grown to … centimetres",
+      "感受结尾 Watching it change has been wonderful."
+    ],
+    "key_expressions": [
+      "I planted three sunflower seeds in a pot of soft soil.",
+      "A thin green stem has pushed up from each seed.",
+      "By the time I measured them, one plant had already produced a flower.",
+      "Watching nature reveal its secrets has been truly wonderful."
+    ],
+    "useful_words": ["seed", "soil", "stem", "leaves", "centimetre", "flower", "measure", "grow", "produce", "observe"]
+  },
+  "high_sentences": [
+    "The soil had been watered well before I added the seeds.",
+    "A thin green stem has pushed up from each seed.",
+    "By the time I measured them, one plant had already produced a small yellow flower.",
+    "Watching nature reveal its secrets, day by day, has been truly wonderful."
+  ],
+  "error_pairs": [
+    { "wrong": "By Week 6, it produced already a flower.", "correct": "By Week 6, it had already produced a flower.", "note": "到某过去时间点之前已完成,用过去完成时 had done。" },
+    { "wrong": "The leaves is long and narrow.", "correct": "The leaves are long and narrow.", "note": "leaves 为复数主语,系动词用 are。" },
+    { "wrong": "I planted the seeds before I had watered the soil.", "correct": "I had watered the soil before I planted the seeds.", "note": "先发生的浇水动作用过去完成时,后发生的种子用一般过去时。" }
+  ],
+  "paragraph_template": "【自然观察日记结构】\nWeek 1 记录起点:I planted … and placed it on the windowsill.\nWeek 3 记录变化:A green stem has pushed up … The leaves are …\nWeek 6 用过去完成时:By the time I measured them, one plant had already produced a flower.\n结尾感受:Watching nature reveal its secrets has been wonderful."
+}

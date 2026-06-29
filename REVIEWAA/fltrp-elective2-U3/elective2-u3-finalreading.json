@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(时代变迁主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "For years, the little village library lent paper books to everyone nearby. When a new digital reading room was opened last spring, the old wooden shelves were being cleared even as the first e-readers arrived. Today most villagers borrow books on a screen, yet a few elderly readers still ask for a real book they can hold.",
+    "questions": [
+      {
+        "q": "What was happening when the new reading room opened?",
+        "options": [
+          "The old shelves were being emptied as e-readers came in.",
+          "New paper books were being delivered to every home.",
+          "The whole library was closing down for good.",
+          "Villagers were returning all of their screens."
+        ],
+        "answer": "A",
+        "explanation": "原文 'the old wooden shelves were being cleared even as the first e-readers arrived' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What do a few elderly readers still prefer?",
+        "options": [
+          "A faster Internet connection in the village.",
+          "A real paper book they can hold in their hands.",
+          "More screens for the digital reading room.",
+          "A brand-new library building nearby."
+        ],
+        "answer": "B",
+        "explanation": "末句 'a few elderly readers still ask for a real book they can hold' 的转述(覆盖短文结尾)。"
+      }
+    ]
+  }
+}

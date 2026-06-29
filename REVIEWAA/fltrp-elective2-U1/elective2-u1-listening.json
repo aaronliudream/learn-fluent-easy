@@ -1,0 +1,421 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "topic": "Growing Up",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社选择性必修第二册 Unit 1 同主题听力(盼望成年/世界各地的成年年龄/离家的担忧与建议/《小王子》/第一份工作/成长的小贴士)。用词限本单元/初中/常见词,答案唯一可在听力原文找到依据,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 Looking Forward to Eighteen",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: My eighteenth birthday is next month. I really can't wait!",
+        "Leo: Me too. What are you most looking forward to?",
+        "Mia: Being able to vote, I think. I want a say in how things are run.",
+        "Leo: That's a good one. For me, it's getting my driving licence.",
+        "Mia: Won't your mum worry about you on the road?",
+        "Leo: A little. But I think I'm mature enough to drive carefully.",
+        "Mia: I'm sure you are. Are you nervous about becoming an adult?",
+        "Leo: Not really. I know growing up is gradual, not something that happens overnight."
+      ],
+      "translation_cn": "Mia 下个月满18岁,十分期待;Leo 也是;Mia 最盼望能投票、对事情有发言权;Leo 最盼望拿驾照;Mia 担心他妈妈会不放心;Leo 说自己够成熟、会小心开车;两人都明白成长是逐渐的,不是一夜之间发生的。",
+      "questions": [
+        {
+          "stem": "When is Mia's eighteenth birthday?",
+          "options": [
+            "Next month.",
+            "Next week.",
+            "Tomorrow.",
+            "Last year."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Mia most looking forward to?",
+          "options": [
+            "Being able to vote.",
+            "Getting a credit card.",
+            "Buying a car.",
+            "Leaving school."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is Leo most looking forward to?",
+          "options": [
+            "Getting his driving licence.",
+            "Voting in an election.",
+            "Renting a flat.",
+            "Starting a new job."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why isn't Leo very worried about driving?",
+          "options": [
+            "He never makes mistakes.",
+            "He feels mature enough to be careful.",
+            "His mum will always drive him.",
+            "The roads are always empty."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How do both speakers see growing up?",
+          "options": [
+            "As something to be afraid of.",
+            "As a single event overnight.",
+            "As a gradual change, not a sudden one.",
+            "As something they cannot control."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·短文 The Age of Majority",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In most countries, turning eighteen marks the start of adulthood.",
+        "This age is often called the age of majority.",
+        "At this point, young people can usually vote and sign legal papers.",
+        "They also become responsible for choices their parents once made.",
+        "Yet many young adults find that real change comes slowly, not overnight."
+      ],
+      "translation_cn": "在多数国家,年满18岁标志成年的开始;这个年龄常被称为\"成年\";到此时,年轻人通常可以投票、签署法律文件;他们也开始为从前由父母做的选择负责;但许多年轻人发现,真正的改变是慢慢到来的,而非一夜之间。",
+      "questions": [
+        {
+          "stem": "In most countries, what does turning eighteen mark?",
+          "options": [
+            "The end of school forever.",
+            "The first day of work.",
+            "The start of childhood.",
+            "The start of adulthood."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is this age often called?",
+          "options": [
+            "The age of majority.",
+            "The age of childhood.",
+            "The age of retirement.",
+            "The age of travel."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can young people usually do at this age?",
+          "options": [
+            "Stop obeying every law.",
+            "Vote and sign legal papers.",
+            "Avoid all responsibility.",
+            "Never make a mistake."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they become responsible for?",
+          "options": [
+            "Only their schoolwork.",
+            "Nothing at all.",
+            "Choices their parents once made.",
+            "Their friends' choices."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do many young adults discover about change?",
+          "options": [
+            "It never happens to anyone.",
+            "It happens in a single day.",
+            "It only happens to older people.",
+            "It comes slowly rather than overnight."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 Leaving Home for the First Time",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Hannah: I'm a bit worried about moving into the dormitory next week.",
+        "Mr Reed: That's natural. What worries you most?",
+        "Hannah: I've never lived away from home. I don't know how to cook or do laundry.",
+        "Mr Reed: Think of it as a chance to learn. You can always ask others for help.",
+        "Hannah: I'm also afraid I won't see my family as much.",
+        "Mr Reed: Why not speak to them regularly over the phone or by video call?",
+        "Hannah: That's a good idea. Maybe I'll join some clubs too, to make new friends.",
+        "Mr Reed: Exactly. Living in a group teaches you a lot about growing up."
+      ],
+      "translation_cn": "Hannah 担心下周搬进宿舍;Reed 老师说这很正常,问她最担心什么;她从没离家住过,不会做饭和洗衣;老师说把这当作学习的机会,可以向别人求助;她还怕见不到家人;老师建议常打电话或视频;她觉得不错,还打算参加社团交新朋友;老师说集体生活会让人学到很多关于成长的东西。",
+      "questions": [
+        {
+          "stem": "What is Hannah worried about?",
+          "options": [
+            "Moving into the dormitory next week.",
+            "Failing her driving test.",
+            "Losing her part-time job.",
+            "Voting for the first time."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does she feel unsure about living away?",
+          "options": [
+            "She has no money at all.",
+            "She cannot cook or do laundry yet.",
+            "She dislikes all her classmates.",
+            "She has never been to school."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Mr Reed suggest about the difficulties?",
+          "options": [
+            "She should give up and stay home.",
+            "She should keep them secret.",
+            "She can treat them as a chance to learn.",
+            "She should ignore them completely."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How does Mr Reed suggest she keep in touch with family?",
+          "options": [
+            "By moving back home each weekend.",
+            "By writing one letter a year.",
+            "By never contacting them.",
+            "By calling or video-calling them regularly."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Hannah plan to do to make new friends?",
+          "options": [
+            "Join some clubs.",
+            "Stay alone in her room.",
+            "Leave the dormitory early.",
+            "Stop speaking to anyone."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·短文 The Little Prince",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The Little Prince was written by the French pilot Antoine de Saint-Exupéry.",
+        "It tells of a pilot who has crashed his plane in the desert.",
+        "While he tries to fix it, a little prince from another planet appears.",
+        "The two soon become close friends.",
+        "The book reminds us to look beneath the surface to find what truly matters."
+      ],
+      "translation_cn": "《小王子》由法国飞行员安托万·德·圣埃克苏佩里所写;讲述一位飞行员的飞机坠落在沙漠;他修飞机时,一位来自另一星球的小王子出现;两人很快成为好友;这本书提醒我们要看到表象之下,寻找真正重要的东西。",
+      "questions": [
+        {
+          "stem": "Who wrote The Little Prince?",
+          "options": [
+            "A British librarian.",
+            "A French pilot named Saint-Exupéry.",
+            "An American teacher.",
+            "A Chinese painter."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where has the pilot in the story crashed?",
+          "options": [
+            "In a busy city.",
+            "On a high mountain.",
+            "In the desert.",
+            "At sea."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who appears while the pilot tries to fix his plane?",
+          "options": [
+            "His old teacher.",
+            "A police officer.",
+            "His worried mother.",
+            "A little prince from another planet."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What happens between the two characters?",
+          "options": [
+            "They become close friends.",
+            "They argue and part forever.",
+            "They never speak at all.",
+            "They sell the plane together."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the book remind readers to do?",
+          "options": [
+            "Care only about money.",
+            "Look beneath the surface for what truly matters.",
+            "Forget their childhood quickly.",
+            "Trust only what they can see."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 My First Pay Day",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Sam: Guess what? I got my first wage today!",
+        "Ella: That's wonderful! How does it feel?",
+        "Sam: Amazing. I earned every cent of it at the café this month.",
+        "Ella: So, are you going to spend it all at once?",
+        "Sam: No way. I've decided to save most of it.",
+        "Ella: That's very sensible. What will you do with the rest?",
+        "Sam: I'll give some to help with the household bills at home.",
+        "Ella: Your parents will be really proud of you, Sam."
+      ],
+      "translation_cn": "Sam 今天拿到第一份工资,十分开心;Ella 替他高兴并问感受;Sam 说很棒,这是他这个月在咖啡馆挣的每一分钱;Ella 问他会不会一下子花光;Sam 说不会,决定把大部分存起来;剩下的会拿一些帮家里付账单;Ella 说他父母一定会为他自豪。",
+      "questions": [
+        {
+          "stem": "What good news does Sam share?",
+          "options": [
+            "He won a free holiday.",
+            "He passed his driving test.",
+            "He got his first wage today.",
+            "He moved into a new flat."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Where did Sam earn the money?",
+          "options": [
+            "At a library.",
+            "At a hospital.",
+            "At a school.",
+            "At a café."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What has Sam decided to do with most of the money?",
+          "options": [
+            "Save most of it.",
+            "Spend it all at once.",
+            "Give it all away.",
+            "Hide it and forget it."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What will Sam do with part of the money?",
+          "options": [
+            "Buy a new car.",
+            "Help pay the household bills.",
+            "Travel abroad alone.",
+            "Lend it to a stranger."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Ella think Sam's parents will feel?",
+          "options": [
+            "Angry with him.",
+            "Bored by his news.",
+            "Really proud of him.",
+            "Worried about him."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·短文 A Tip for Growing Up",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip for anyone who is growing up.",
+        "Real maturity is not only about new freedoms.",
+        "It is also about the small, everyday choices you make.",
+        "Try to act with integrity, even when no one is watching.",
+        "Step by step, these quiet choices shape the person you become."
+      ],
+      "translation_cn": "给正在成长的人一个简单的小贴士:真正的成熟不只是新获得的自由;它也在于你每天做出的小选择;努力以正直行事,哪怕无人在看;一步步地,这些不起眼的选择塑造你成为什么样的人。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only small children.",
+            "Only teachers.",
+            "Only older people.",
+            "Anyone who is growing up."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "According to the passage, real maturity is not only about what?",
+          "options": [
+            "New freedoms.",
+            "Doing well in sport.",
+            "Earning lots of money.",
+            "Travelling the world."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What else is maturity about?",
+          "options": [
+            "Avoiding all decisions.",
+            "Small, everyday choices.",
+            "Pleasing everyone.",
+            "Living without rules."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When should you act with integrity?",
+          "options": [
+            "Only when being rewarded.",
+            "Only in front of others.",
+            "Even when no one is watching.",
+            "Only on special days."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do these quiet choices do over time?",
+          "options": [
+            "Make no difference at all.",
+            "Bring instant fame.",
+            "Waste your time.",
+            "Shape the person you become."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

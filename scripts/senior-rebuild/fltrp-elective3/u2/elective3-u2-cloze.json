@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "topic": "Life Behind the Lens",
+  "source": "外研社选择性必修第三册 Unit 2 同主题完形(摄影社/祖父修怀表/学书法/手艺纪录片/学陶艺/手工礼物)。用词限本单元/初中/常见词,答案唯一,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Joining the Photography Club",
+      "text": "Last autumn I joined the school photography (1)____. At the first meeting, our teacher said that a camera is only a (2)____; the real art lies in how you look at the world. She asked us not to (3)____ about expensive equipment, but to practise every day with whatever we had. My first photos were (4)____ — blurred, dark and badly framed. Yet I did not give (5)____. Slowly I learned to wait for the right (6)____, when the sun was low and soft. I also began to (7)____ ordinary scenes that I had never paid attention to before, such as an old woman selling flowers. My teacher often (8)____ us that patience matters more than luck. By winter, my pictures had clearly (9)____, and I felt proud of every small (10)____ I had made.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "club",
+            "price",
+            "river",
+            "key"
+          ],
+          "answer_index": 0,
+          "explanation": "join the photography club 加入摄影社。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prize",
+            "tool",
+            "noise",
+            "season"
+          ],
+          "answer_index": 1,
+          "explanation": "a camera is only a tool 相机只是工具。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sing",
+            "drive",
+            "worry",
+            "sleep"
+          ],
+          "answer_index": 2,
+          "explanation": "not to worry about equipment 不必担心器材。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "perfect",
+            "golden",
+            "polite",
+            "terrible"
+          ],
+          "answer_index": 3,
+          "explanation": "blurred, dark → terrible 很糟糕。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "up",
+            "out",
+            "down",
+            "back"
+          ],
+          "answer_index": 0,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ticket",
+            "moment",
+            "garden",
+            "answer"
+          ],
+          "answer_index": 1,
+          "explanation": "the right moment 合适的时机。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "throw",
+            "buy",
+            "notice",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "begin to notice scenes 开始注意到景象。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "allowed",
+            "forced",
+            "feared",
+            "reminded"
+          ],
+          "answer_index": 3,
+          "explanation": "remind sb that … 提醒某人……。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "improved",
+            "fallen",
+            "stopped",
+            "ended"
+          ],
+          "answer_index": 0,
+          "explanation": "pictures had improved 照片有了进步。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "step",
+            "price",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "every small step 每一小步进步。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Grandfather's Pocket Watch",
+      "text": "My grandfather kept an old pocket (1)____ that had stopped working years ago. One winter evening, he decided to (2)____ it himself at the kitchen table. He opened the tiny back cover and looked at the (3)____ wheels inside with a magnifying glass. \"Each part must be cleaned with great (4)____,\" he told me softly. For hours he worked, his hands moving slowly and (5)____. I was amazed that he never lost his (6)____, even when a spring jumped out and rolled across the floor. At last he (7)____ the cover and gently wound it. To my (8)____, the old watch began to tick again. Grandfather smiled and said that fixing it was like bringing a small friend back to (9)____. That night I learned that (10)____ and care can repair almost anything.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "river",
+            "ticket",
+            "watch",
+            "road"
+          ],
+          "answer_index": 2,
+          "explanation": "a pocket watch 怀表。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "throw",
+            "paint",
+            "repair"
+          ],
+          "answer_index": 3,
+          "explanation": "repair it himself 自己修。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "tiny",
+            "loud",
+            "sweet",
+            "warm"
+          ],
+          "answer_index": 0,
+          "explanation": "the tiny wheels 细小的齿轮。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "noise",
+            "care",
+            "speed",
+            "luck"
+          ],
+          "answer_index": 1,
+          "explanation": "with great care 非常小心地。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "loudly",
+            "quickly",
+            "carefully",
+            "angrily"
+          ],
+          "answer_index": 2,
+          "explanation": "slowly and carefully 缓慢而仔细。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ticket",
+            "money",
+            "voice",
+            "patience"
+          ],
+          "answer_index": 3,
+          "explanation": "lost his patience 失去耐心。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "closed",
+            "opened",
+            "broke",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "closed the cover 合上盖子。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "garden",
+            "surprise",
+            "price",
+            "lesson"
+          ],
+          "answer_index": 1,
+          "explanation": "to my surprise 令我惊讶的是。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "school",
+            "work",
+            "life",
+            "town"
+          ],
+          "answer_index": 2,
+          "explanation": "back to life 恢复生机。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "money",
+            "luck",
+            "effort"
+          ],
+          "answer_index": 3,
+          "explanation": "effort and care 努力与用心。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Learning Calligraphy",
+      "text": "When I was ten, my mother sent me to learn Chinese (1)____. My first teacher was a patient old man who wrote beautiful characters with a soft (2)____. He told me that good writing needs a calm (3)____ and a steady hand. At first my lines were (4)____ and ugly, and I wanted to quit. But the teacher asked me to (5)____ the same stroke again and again until it felt natural. \"Skill grows through (6)____ and error,\" he often said. Day by day, my characters slowly became more (7)____. I learned to sit up straight, breathe slowly, and (8)____ fully on each line. After two years, I could write a whole poem that I was (9)____ of. Looking back, I see that calligraphy taught me not only to write, but also to be (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "calligraphy",
+            "football",
+            "cooking",
+            "swimming"
+          ],
+          "answer_index": 0,
+          "explanation": "learn Chinese calligraphy 学书法。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "stone",
+            "brush",
+            "glass",
+            "rope"
+          ],
+          "answer_index": 1,
+          "explanation": "wrote with a soft brush 用软毛笔写。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "noise",
+            "price",
+            "mind",
+            "road"
+          ],
+          "answer_index": 2,
+          "explanation": "a calm mind 平静的心。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "perfect",
+            "golden",
+            "polite",
+            "messy"
+          ],
+          "answer_index": 3,
+          "explanation": "messy and ugly 凌乱难看。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "repeat",
+            "sell",
+            "throw",
+            "buy"
+          ],
+          "answer_index": 0,
+          "explanation": "repeat the same stroke 重复同一笔画。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "music",
+            "trial",
+            "garden",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "through trial and error 反复试验。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "terrible",
+            "empty",
+            "beautiful",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "became more beautiful 越来越美。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "jump",
+            "shout",
+            "sleep",
+            "focus"
+          ],
+          "answer_index": 3,
+          "explanation": "focus on each line 专注于每一行。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "proud",
+            "afraid",
+            "tired",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "be proud of 为……自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lazy",
+            "patient",
+            "rude",
+            "careless"
+          ],
+          "answer_index": 1,
+          "explanation": "to be patient 变得有耐心。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Film About a Wood-carver",
+      "text": "Last week our class watched a (1)____ about a famous wood-carver. The film followed him for a whole (2)____ as he made a single screen by hand. We saw how he chose the wood with great (3)____, touching it and smelling it before cutting. Every tiny flower on the screen was carved with such (4)____ that it looked almost real. The artist said he had spent forty years (5)____ his skill, and he still practised every day. He never (6)____ to be famous; he simply loved his work. When the screen was finished, visitors were (7)____ by its beauty. The film ended with a clear (8)____: crafts like this must be passed on, or they will be (9)____ forever. After watching it, many of us felt a new (10)____ for the artists behind everyday objects.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sandwich",
+            "mountain",
+            "documentary",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "watched a documentary 看了一部纪录片。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "song",
+            "price",
+            "road",
+            "year"
+          ],
+          "answer_index": 3,
+          "explanation": "for a whole year 整整一年。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "attention",
+            "noise",
+            "speed",
+            "luck"
+          ],
+          "answer_index": 0,
+          "explanation": "with great attention 非常用心。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "hurry",
+            "skill",
+            "anger",
+            "fear"
+          ],
+          "answer_index": 1,
+          "explanation": "such skill that … 技艺高超以至于……。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "selling",
+            "hiding",
+            "improving",
+            "breaking"
+          ],
+          "answer_index": 2,
+          "explanation": "spent years improving his skill 多年精进技艺。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "refused",
+            "failed",
+            "began",
+            "wanted"
+          ],
+          "answer_index": 3,
+          "explanation": "never wanted to be famous 从不想出名。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "amazed",
+            "bored",
+            "angry",
+            "asleep"
+          ],
+          "answer_index": 0,
+          "explanation": "were amazed by its beauty 被美震撼。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "garden",
+            "message",
+            "price",
+            "season"
+          ],
+          "answer_index": 1,
+          "explanation": "a clear message 一个清晰的讯息。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "found",
+            "sold",
+            "lost",
+            "built"
+          ],
+          "answer_index": 2,
+          "explanation": "be lost forever 永远失传。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hunger",
+            "fear",
+            "doubt",
+            "respect"
+          ],
+          "answer_index": 3,
+          "explanation": "a new respect for … 对……新的敬意。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Pottery Class",
+      "text": "Mia had always wanted to make things with her own (1)____, so she joined a pottery class in her town. Her teacher, an old potter, first showed her how to prepare the (2)____ before shaping it. \"Never (3)____,\" he warned. \"Clay teaches you patience.\" Mia's first bowls were uneven and quickly fell (4)____. She felt like giving up, but the potter encouraged her to try (5)____. Little by little, her hands learned to feel the right (6)____ and pressure. After many weeks, she finally made a small cup that did not (7)____ in the oven. She was so (8)____ that she nearly cried. The potter told her that every master had once been a (9)____ like her. From that day on, Mia understood that real skill is built through slow, (10)____ effort.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "hands",
+            "ears",
+            "ships",
+            "roads"
+          ],
+          "answer_index": 0,
+          "explanation": "make things with her hands 亲手做东西。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "glass",
+            "clay",
+            "paper",
+            "metal"
+          ],
+          "answer_index": 1,
+          "explanation": "prepare the clay 准备陶土。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "smile",
+            "listen",
+            "hurry",
+            "rest"
+          ],
+          "answer_index": 2,
+          "explanation": "Never hurry 切勿心急。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "asleep",
+            "awake",
+            "indoors",
+            "apart"
+          ],
+          "answer_index": 3,
+          "explanation": "fell apart 散开/塌掉。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "again",
+            "never",
+            "hardly",
+            "almost"
+          ],
+          "answer_index": 0,
+          "explanation": "try again 再试一次。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "shape",
+            "price",
+            "smell"
+          ],
+          "answer_index": 1,
+          "explanation": "the right shape and pressure 合适的形状与力度。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sing",
+            "float",
+            "crack",
+            "grow"
+          ],
+          "answer_index": 2,
+          "explanation": "did not crack in the oven 在炉中没有裂开。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "sleepy",
+            "bored",
+            "happy"
+          ],
+          "answer_index": 3,
+          "explanation": "so happy that she nearly cried 高兴到几乎落泪。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "beginner",
+            "winner",
+            "teacher",
+            "stranger"
+          ],
+          "answer_index": 0,
+          "explanation": "had once been a beginner 也曾是新手。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lazy",
+            "patient",
+            "sudden",
+            "careless"
+          ],
+          "answer_index": 1,
+          "explanation": "slow, patient effort 缓慢而有耐心的努力。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Handmade Gift",
+      "text": "For my mother's birthday, I decided to make a (1)____ instead of buying one. I spent two weeks knitting her a warm (2)____ by hand. The work was harder than I had (3)____, and I had to start over twice. My fingers grew tired, but I did not want to (4)____. When she opened the gift, her eyes filled with (5)____. She said that a handmade present meant far more to her than anything from a (6)____. At last I understood why people (7)____ handmade things so much. Each one carries the (8)____ and care of the person who made it. A machine can copy a shape, but it cannot copy real (9)____. That birthday taught me that the best gifts are not the most expensive, but the ones made with (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "road",
+            "river",
+            "gift",
+            "key"
+          ],
+          "answer_index": 2,
+          "explanation": "make a gift 做一份礼物。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "river",
+            "ticket",
+            "window",
+            "scarf"
+          ],
+          "answer_index": 3,
+          "explanation": "knitting a warm scarf 织一条暖围巾。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "expected",
+            "forgotten",
+            "refused",
+            "allowed"
+          ],
+          "answer_index": 0,
+          "explanation": "harder than I had expected 比预想的难。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "win",
+            "stop",
+            "grow",
+            "float"
+          ],
+          "answer_index": 1,
+          "explanation": "did not want to stop 不想停下。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "prices",
+            "roads",
+            "tears",
+            "keys"
+          ],
+          "answer_index": 2,
+          "explanation": "eyes filled with tears 眼含泪水。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "song",
+            "garden",
+            "season",
+            "shop"
+          ],
+          "answer_index": 3,
+          "explanation": "anything from a shop 店里买的东西。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "value",
+            "throw",
+            "lose",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "value handmade things 珍视手工之物。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "noise",
+            "love",
+            "hurry",
+            "fear"
+          ],
+          "answer_index": 1,
+          "explanation": "the love and care 爱与用心。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "metal",
+            "glass",
+            "feeling",
+            "paper"
+          ],
+          "answer_index": 2,
+          "explanation": "cannot copy real feeling 无法复制真情。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hurry",
+            "noise",
+            "fear",
+            "heart"
+          ],
+          "answer_index": 3,
+          "explanation": "made with heart 用心制作。"
+        }
+      ]
+    }
+  ]
+}

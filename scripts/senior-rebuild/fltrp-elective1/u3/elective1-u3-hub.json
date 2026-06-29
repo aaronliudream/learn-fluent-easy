@@ -1,0 +1,56 @@
+{
+  "listeningQuestions": [
+    { "audio": "The motto of the Olympic Games is faster, higher and stronger.", "opts": ["奥林匹克的格言是更快、更高、更强。", "奥运会每四年举办一次。", "奥运会的颜色是蓝色。", "奥运冠军都很有钱。"], "answer": 0 },
+    { "audio": "He learned to play basketball on a poor backyard court.", "opts": ["他是在简陋的后院球场上学会打篮球的。", "他在大体育馆里训练。", "他从不打篮球。", "他在国外学会了打球。"], "answer": 0 },
+    { "audio": "Cooperation between team members is the key to winning.", "opts": ["队员之间的合作是取胜的关键。", "比赛靠运气取胜。", "教练决定一切。", "个人技术最重要。"], "answer": 0 },
+    { "audio": "She ran the rest of the race with just one shoe on.", "opts": ["她只穿着一只鞋跑完了余下的比赛。", "她比赛中途退出了。", "她换了一双新鞋。", "她赢得了金牌。"], "answer": 0 },
+    { "audio": "It is no use giving up after losing only one match.", "opts": ["仅输一场就放弃是没有用的。", "输了一场就该退队。", "比赛永远不会输。", "赢一场就够了。"], "answer": 0 },
+    { "audio": "Doing sport is good for both the body and the mind.", "opts": ["运动对身体和心灵都有好处。", "运动只对身体有好处。", "运动会让人变笨。", "只有年轻人才该运动。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "对手、竞争者,用哪个词?", "opts": ["opponent", "teammate", "coach", "fan"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "夺取、抓住,用哪个词?", "opts": ["seize", "drop", "miss", "lose"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "合作、团队配合,用哪个词?", "opts": ["teamwork", "weather", "noise", "money"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "(努力)取得成功、得到回报,用哪个短语?", "opts": ["pay off", "give way", "carry on", "burst onto"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "____ basketball on a muddy court taught him to be creative.", "opts": ["Playing", "Play", "Plays", "Played"], "answer": 0, "point": "动名词作主语", "dim": "grammar" },
+    { "q": "It is no use ____ about the result after the game.", "opts": ["complaining", "complain", "complains", "to complain"], "answer": 0, "point": "形式主语 it · no use + doing", "dim": "grammar" },
+    { "q": "Watching live matches ____ one of his favourite hobbies.", "opts": ["is", "are", "were", "have been"], "answer": 0, "point": "动名词主语主谓一致(单数)", "dim": "grammar" },
+    { "q": "____ as one team matters more than any single star.", "opts": ["Fighting", "Fight", "Fights", "Fought"], "answer": 0, "point": "动名词作主语", "dim": "grammar" },
+    { "q": "听句子选意思:", "opts": ["他们刻苦训练终于以一场反扑获胜。", "他们一开始就轻松取胜。", "他们放弃了比赛。", "他们从未训练过。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Their hard work paid off with an epic comeback." },
+    { "q": "听句子选意思:", "opts": ["每天早起训练最终很有回报。", "早起会让你变慢。", "训练毫无意义。", "睡懒觉更健康。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Getting up early to train really pays off in the end." }
+  ],
+  "reading": {
+    "passage": "A sports role model is someone whose hard work and self-belief inspire others. Such people show us that the words faster, higher and stronger are about far more than just winning medals; they are about never giving up.",
+    "passageCn": "体育榜样是那种用努力和自信激励他人的人。这样的人让我们明白,'更快、更高、更强'远不只是赢得奖牌,更在于永不放弃。",
+    "questions": [
+      { "q": "What makes someone a sports role model?", "opts": ["Their hard work and self-belief inspire others.", "They own the most medals.", "They are the tallest players.", "They never play sport."], "answer": 0 },
+      { "q": "What are the words 'faster, higher, stronger' really about?", "opts": ["Far more than just winning medals.", "Only winning gold.", "Buying new equipment.", "Beating friends."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write about an unforgettable sporting moment in about 60 words: what the event was and when, what you saw and heard, and how you felt. Try to use one -ing form as the subject.",
+    "promptCn": "用约60词写一个难忘的体育时刻:是什么比赛、何时,你看到和听到了什么,以及你的感受。试着用一个动名词作主语的句子。",
+    "sampleWords": ["tournament", "relay", "cheer", "intense", "moment", "teamwork", "shout", "thrilling", "win", "unforgettable"]
+  },
+  "dialogues": [
+    {
+      "title": "Choosing a Sport",
+      "lines": [
+        { "role": "A", "text": "The sports club is open to everyone. Which sport will you try?", "cn": "运动俱乐部对所有人开放,你想尝试哪项运动?" },
+        { "role": "B", "text": "I'll try basketball, because I like working with a team.", "cn": "我想打篮球,因为我喜欢团队配合。" },
+        { "role": "A", "text": "Good choice. Playing as a team is really fun.", "cn": "不错的选择,团队打球真的很有意思。" },
+        { "role": "B", "text": "What about you?", "cn": "那你呢?" },
+        { "role": "A", "text": "I'll join the swimming team. Getting up early is hard, but it pays off.", "cn": "我要加入游泳队。早起很难,但很有回报。" }
+      ]
+    },
+    {
+      "title": "After the Match",
+      "lines": [
+        { "role": "A", "text": "We lost the final by just two points. I feel awful.", "cn": "我们决赛只差两分输了,我太难受了。" },
+        { "role": "B", "text": "It is no use giving up after one loss. You all played well.", "cn": "输一场就放弃没有用,你们都打得很好。" },
+        { "role": "A", "text": "But we trained so hard for it.", "cn": "可我们为此训练得那么辛苦。" },
+        { "role": "B", "text": "And that hard work will pay off next time. Keep going!", "cn": "那些努力下次会有回报的。坚持下去!" }
+      ]
+    }
+  ]
+}

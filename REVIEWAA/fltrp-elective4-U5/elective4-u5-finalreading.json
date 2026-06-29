@@ -1,0 +1,32 @@
+{
+  "volume": "elective4",
+  "unit": "U5",
+  "note": "单元通关专属迷你阅读(玛雅之谜主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "For hundreds of years, the ruined Maya cities lay hidden under the thick jungle, forgotten by the wider world. When explorers finally cut through the trees and found them, they were amazed that such a skilled people could have vanished so completely. Even now, scientists still argue about exactly what drove the Maya from their homes.",
+    "questions": [
+      {
+        "q": "Why were the Maya cities forgotten for so long?",
+        "options": [
+          "Thick jungle had grown over and hidden them.",
+          "They had been built deep underwater.",
+          "They were never actually completed.",
+          "Their people had carried them abroad."
+        ],
+        "answer": "A",
+        "explanation": "原文 'lay hidden under the thick jungle, forgotten by the wider world' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What do scientists still argue about today?",
+        "options": [
+          "How to grow crops in the jungle.",
+          "Exactly what made the Maya leave their cities.",
+          "When the Maya calendar was first invented.",
+          "Where to build the next stone pyramid."
+        ],
+        "answer": "B",
+        "explanation": "末句 'argue about exactly what drove the Maya from their homes' 的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

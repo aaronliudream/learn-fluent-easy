@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "When I arrived, the old books were already being packed into boxes.", "opts": ["我到的时候,旧书已经在被装进箱子里了。", "我到的时候,新书正被摆上书架。", "我到的时候,书店刚刚开门。", "我到的时候,顾客在排队买书。"], "answer": 0 },
+    { "audio": "Tall skyscrapers were being put up where the small fishing town had stood.", "opts": ["在小渔镇曾经矗立的地方,高楼正拔地而起。", "小渔镇的渔船正被卖掉。", "人们正离开那座小镇。", "小镇周围的田地正在扩大。"], "answer": 0 },
+    { "audio": "The corner board had been replaced by a big digital screen.", "opts": ["角落里的木板已被一块大数字屏幕取代。", "角落里的屏幕被换成了木板。", "角落里摆上了一台咖啡机。", "角落里新建了一面玻璃墙。"], "answer": 0 },
+    { "audio": "These days, most interviews are done online instead of face to face.", "opts": ["如今大多数采访都在线上进行,而不再面对面。", "如今采访只能通过写信完成。", "如今没人再做采访了。", "如今采访都在报纸上刊登。"], "answer": 0 },
+    { "audio": "Emojis have become an integral part of the messages we send.", "opts": ["表情符号已成为我们所发信息中不可或缺的一部分。", "表情符号正在被人们渐渐遗忘。", "表情符号只能用于学校作业。", "表情符号让拼写变得更容易。"], "answer": 0 },
+    { "audio": "Like the phone box before it, the paper map is becoming a thing of the past.", "opts": ["就像之前的电话亭一样,纸质地图正在成为过去。", "纸质地图正变得越来越流行。", "电话亭又重新出现在街角。", "人们重新开始使用纸质地图。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "The small shop could not ____ with the big chain stores on price.(竞争)", "opts": ["compete", "sleep", "travel", "cook"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Under Jennifer's ____, the old bookstore came back to life.(领导)", "opts": ["leadership", "weather", "garden", "price"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Emojis now come in many ____, such as faces, animals and food.(类别)", "opts": ["categories", "mistakes", "tickets", "seasons"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "More than forty years ago, China began the ____ and opening-up.(改革)", "opts": ["reform", "holiday", "traffic", "weather"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "When I walked in, the books ____ into boxes at that very moment.", "opts": ["were being packed", "were packing", "were packed", "packed"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The old gate ____ down by the workers when I arrived.", "opts": ["was being torn", "was tearing", "was torn", "tore"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Right then, the news ____ onto the website, line by line.", "opts": ["was being uploaded", "was uploaded", "was uploading", "uploaded"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "While the builders worked, the shop ____ into a modern café.", "opts": ["was being turned", "was turned", "was turning", "turned"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["南方各地正在修路、建厂。", "南方的工厂都关门了。", "人们正离开南方。", "南方没有任何变化。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Roads were being laid and factories were being built across the south." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["人们干脆不再需要那些旧电话亭了。", "人们排队使用电话亭。", "电话亭变得越来越贵。", "电话亭被搬进了博物馆。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "People simply stopped needing the old phone boxes." }
+  ],
+  "reading": {
+    "passage": "The Rainbow Bookstore was once closing after fifty years of business. But the local community joined together to save it, and today it is a lively place with a café, a big screen for readers' comments and even jazz concerts on some evenings.",
+    "passageCn": "彩虹书店曾在经营五十年后面临关张。但当地社区齐心协力把它救了下来;如今它生机勃勃,有咖啡馆、供读者写评论的大屏幕,某些晚上还会举办爵士音乐会。",
+    "questions": [
+      { "q": "Why is the Rainbow Bookstore still open today?", "opts": ["Because the community worked together to save it.", "Because a chain store bought it.", "Because it never had any trouble.", "Because the government rebuilt it."], "answer": 0 },
+      { "q": "What can people enjoy in the store now?", "opts": ["A café and jazz concerts.", "Only old paper maps.", "Cheap mobile phones.", "A large swimming pool."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short passage about one thing you think will disappear in the future. Say what it is, why it will disappear, and give one reason that supports your view.",
+    "promptCn": "写一篇短文,谈一样你认为未来会消失的事物:它是什么、为什么会消失,并给出一条支持你看法的理由(试着用上过去进行被动,如 was being replaced)。",
+    "sampleWords": ["disappear", "reason", "replace", "no longer", "convenient", "tablet", "mobile phone", "decade", "era", "a thing of the past"]
+  },
+  "dialogues": [
+    {
+      "title": "Times Have Changed",
+      "lines": [
+        { "role": "A", "text": "Grandpa, did you really read the news on paper every day?", "cn": "爷爷,你以前真的每天看纸质报纸吗?" },
+        { "role": "B", "text": "Yes. Each morning the papers were being delivered to our door.", "cn": "是啊。每天早上报纸都被送到我们家门口。" },
+        { "role": "A", "text": "Now I just read everything on my phone.", "cn": "现在我什么都在手机上看。" },
+        { "role": "B", "text": "Times change. The tools are new, but the news goes on.", "cn": "时代变了。工具是新的,但新闻一直都在。" }
+      ]
+    },
+    {
+      "title": "At the New Bookstore",
+      "lines": [
+        { "role": "A", "text": "This old shop looks so different inside now!", "cn": "这家老店里面现在看起来太不一样了!" },
+        { "role": "B", "text": "When I came last week, the shelves were still being filled with new books.", "cn": "我上周来时,书架还在被摆上新书呢。" },
+        { "role": "A", "text": "And there's a café and a big screen for comments.", "cn": "而且还有咖啡馆和一块写评论的大屏幕。" },
+        { "role": "B", "text": "The community really brought it back to life.", "cn": "是社区真正让它重获新生。" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "grade": 11,
+  "content": {
+    "title": "动名词作主语 · 形式主语 it 速查",
+    "intro": "句子主语要表示'做某事'时,用动词的 -ing 形式(动名词);主语太长时常用 it 作形式主语放在句首。口诀:主语位置要'做某事'→ 用 doing;no use / worth 后→ 用 doing;动名词主语→ 谓语用单数。",
+    "table": {
+      "headers": ["结构", "用法 / 例句"],
+      "rows": [
+        ["Doing… + 单数谓语", "动名词作主语:Knowing where the ball would go wasn't easy."],
+        ["It is no use / no good + doing", "It is no use complaining about the result."],
+        ["It is worth / a waste of time + doing", "It is worth practising every day."],
+        ["It is + adj + to do", "形式主语 it 指代不定式:It is not easy to win gold."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "作主语只能用 -ing,原形/单三/过去式都不行", "mark": "Playing basketball is fun.(不是 Play / Plays)" },
+      { "rule": "动名词(短语)作主语 → 谓语用单数", "mark": "Watching matches is his hobby.(is 不是 are)" },
+      { "rule": "It is no use / no good / worth / a waste of time 后接 doing", "mark": "It is no use giving up.(不是 to give up)" },
+      { "rule": "it 也可作形式主语指代后面的不定式(to do)", "mark": "It is hard to stay calm.(真主语是 to stay calm)" }
+    ],
+    "why": [
+      "动名词兼有名词性质,能像名词一样放在主语位置;它表示一件'事',所以谓语按单数处理。主语很长时,英语习惯把它后移,用 it 占住句首的形式主语位置,让句子头轻尾重、更好读。"
+    ],
+    "gaokaoPoints": [
+      "动名词 vs 原形/不定式作主语的辨析;动名词主语的主谓一致(用单数)——语法填空、改错高频。",
+      "It is no use / no good / worth + doing 固定结构;与 It is + adj + to do 的形式主语对比。"
+    ],
+    "examVsReal": [
+      { "exam": "Getting up early is good for you.(书面/考试)", "real": "It's good to get up early. / Getting up early? Good for you!", "note": "考试爱考动名词主语;口语里常用 it 形式主语或更随意的说法" },
+      { "exam": "It is no use complaining.(考试)", "real": "No point complaining. / What's the use of complaining?", "note": "考试用固定句型;口语有更短的变体,但意思相同" }
+    ]
+  }
+}

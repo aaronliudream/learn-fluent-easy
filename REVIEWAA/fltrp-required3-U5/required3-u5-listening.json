@@ -1,0 +1,421 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "topic": "What an Adventure",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社必修第三册 Unit 5 同主题听力(计划露营/珠峰事实/单车之旅采访/凡尔纳/预订潜水/冒险小贴士)。用词限 U5/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U5 听力·对话 Planning a Camping Trip",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lucy: Jack, shall we go camping in the mountains this weekend?",
+        "Jack: That sounds great. But the weather can change fast up there.",
+        "Lucy: True. I checked the forecast, and it said it would stay dry until Sunday.",
+        "Jack: Good. Then we should bring warm coats. The nights get really cold.",
+        "Lucy: I was going to pack a small first aid kit too, in case someone gets hurt.",
+        "Jack: Smart idea. I'll bring the tent and some food.",
+        "Lucy: Perfect. Let's leave early on Saturday morning, before the crowds.",
+        "Jack: Agreed. This will be our best adventure yet!"
+      ],
+      "translation_cn": "Lucy 提议周末去山里露营;Jack 担心天气多变;Lucy 说天气预报称周日前不会下雨;两人决定带保暖外套,因为夜里很冷;Lucy 还打算带急救包以防受伤;Jack 负责帐篷和食物;两人约定周六一早趁人少出发。",
+      "questions": [
+        {
+          "stem": "Where do Lucy and Jack want to go this weekend?",
+          "options": [
+            "Camping in the mountains.",
+            "Diving in the sea.",
+            "Shopping in the city.",
+            "Cycling along a river."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did the forecast say about the weather?",
+          "options": [
+            "It would rain all weekend.",
+            "It would stay dry until Sunday.",
+            "It would snow heavily.",
+            "There would be a storm on Saturday."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do they decide to bring warm coats?",
+          "options": [
+            "Because the nights get very cold.",
+            "Because it will be very sunny.",
+            "Because the tent is too small.",
+            "Because they have nothing else to wear."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What was Lucy going to pack in case of injury?",
+          "options": [
+            "A camera.",
+            "A first aid kit.",
+            "Some books.",
+            "A pair of boots."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When do they plan to leave?",
+          "options": [
+            "Late on Sunday night.",
+            "On Friday afternoon.",
+            "Early on Saturday morning.",
+            "Next month."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U5 听力·短文 Facts about Qomolangma",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Qomolangma lies on the border between Nepal and China.",
+        "It is the highest mountain in the world.",
+        "The best time to climb it is in April and May.",
+        "The temperature there can drop as low as minus sixty degrees.",
+        "The first climbers confirmed to reach the top did so in 1953."
+      ],
+      "translation_cn": "珠穆朗玛峰位于尼泊尔和中国的边界上;它是世界最高峰;最佳攀登时间是4月和5月;那里的气温可低至零下六十度;最早被证实登顶的登山者是在1953年完成的。",
+      "questions": [
+        {
+          "stem": "Where does Qomolangma lie?",
+          "options": [
+            "In the middle of the ocean.",
+            "Inside a large city.",
+            "Far away from any country.",
+            "On the border between Nepal and China."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "When is the best time to climb it?",
+          "options": [
+            "In April and May.",
+            "In December and January.",
+            "Every day of the year.",
+            "Only at night."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How cold can it get on the mountain?",
+          "options": [
+            "About zero degrees.",
+            "As low as minus sixty degrees.",
+            "A little below freezing.",
+            "It never gets cold there."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When were the first climbers confirmed to reach the top?",
+          "options": [
+            "In 1924.",
+            "In 2011.",
+            "In 1953.",
+            "Last year."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the passage mainly tell us?",
+          "options": [
+            "How to cook on a mountain.",
+            "The history of one climber's life.",
+            "Why people enjoy the sea.",
+            "Some basic facts about Qomolangma."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U5 听力·对话 An Interview about a Cycling Trip",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Host: So, Tom, why did you cycle all that way?",
+        "Tom: We did it to raise money for children in need.",
+        "Host: That's wonderful. How did you prepare for such a hard trip?",
+        "Tom: We practised a lot. If we weren't studying, we were out on our bikes.",
+        "Host: What difficulties did you meet on the road?",
+        "Tom: We had to climb steep hills day after day, and we faced falling rocks too.",
+        "Host: And how did you feel when it was all over?",
+        "Tom: It was the best feeling in the world. We had an adventure and helped others."
+      ],
+      "translation_cn": "主持人问 Tom 为何骑行那么远;Tom 说是为有需要的孩子筹款;问他如何准备,Tom 说勤加练习,不学习时就骑车;路上的困难是日复一日爬陡坡、还有落石;结束时他感觉好极了,既冒了险又帮了人。",
+      "questions": [
+        {
+          "stem": "Why did Tom and his friends cycle so far?",
+          "options": [
+            "To raise money for children in need.",
+            "To win a big race.",
+            "To sell their bikes.",
+            "To find a new job."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How did they prepare for the trip?",
+          "options": [
+            "They did nothing special.",
+            "They practised a lot on their bikes.",
+            "They only read books about cycling.",
+            "They bought a car instead."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What was one difficulty they met?",
+          "options": [
+            "Too much free time.",
+            "No roads at all.",
+            "Climbing steep hills every day.",
+            "The trip was far too easy."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What danger did they face on the road?",
+          "options": [
+            "Wild seals.",
+            "Deep snow.",
+            "Heavy traffic only.",
+            "Falling rocks."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How did Tom feel when the trip ended?",
+          "options": [
+            "It was the best feeling in the world.",
+            "He was sorry he had started.",
+            "He felt bored and tired of it.",
+            "He never wanted to ride again."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U5 听力·短文 Jules Verne, Father of Science Fiction",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Jules Verne was a French writer who lived in the nineteenth century.",
+        "He is often called the Father of Science Fiction.",
+        "In his stories, he described machines years before they were really made.",
+        "One famous book follows a journey deep under the sea.",
+        "Even today, millions of readers still enjoy his amazing adventures."
+      ],
+      "translation_cn": "儒勒·凡尔纳是生活在19世纪的法国作家;他常被称为'科幻小说之父';在故事里,他在机器真正造出来之前数年就描写了它们;一部名著讲述了一段深海之旅;直到今天,数百万读者仍喜爱他精彩的冒险故事。",
+      "questions": [
+        {
+          "stem": "What was Jules Verne's job?",
+          "options": [
+            "He was a ship's captain.",
+            "He was a French writer.",
+            "He was a doctor.",
+            "He was a mountain guide."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is Verne often called?",
+          "options": [
+            "The King of Poems.",
+            "The Father of History.",
+            "The Father of Science Fiction.",
+            "The Master of Maps."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did Verne do in his stories?",
+          "options": [
+            "He copied old fairy tales.",
+            "He wrote only about his own city.",
+            "He drew pictures instead of writing.",
+            "He described machines before they were made."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does one famous book follow?",
+          "options": [
+            "A journey deep under the sea.",
+            "A walk through a desert.",
+            "A flight to the moon.",
+            "A climb up a mountain."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How do readers feel about his books today?",
+          "options": [
+            "No one reads them now.",
+            "Millions still enjoy them.",
+            "They find them boring.",
+            "Only writers can understand them."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U5 听力·对话 Booking a Diving Tour",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Visitor: Hello, I'd like to book a diving tour for this Saturday.",
+        "Guide: Of course. Would you prefer a wreck dive or a scenic dive?",
+        "Visitor: What's the difference between them?",
+        "Guide: On a wreck dive, you visit an old ship that sank long ago.",
+        "Visitor: And the scenic dive?",
+        "Guide: You swim with the grey seals that live around the islands all year.",
+        "Visitor: That sounds lovely. Are the seals dangerous?",
+        "Guide: Not at all. The young ones are curious and will follow you about."
+      ],
+      "translation_cn": "游客想预订本周六的潜水团;向导问他要沉船潜水还是观光潜水;游客问两者区别;向导说沉船潜水去看一艘很久前沉没的旧船,观光潜水则和常年生活在群岛周围的灰海豹一起游;游客担心海豹危险,向导说一点也不,小海豹很好奇,会跟着人。",
+      "questions": [
+        {
+          "stem": "What does the visitor want to do?",
+          "options": [
+            "Buy a fishing boat.",
+            "Climb a mountain.",
+            "Book a diving tour for Saturday.",
+            "Return a broken helmet."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can you see on a wreck dive?",
+          "options": [
+            "A row of new houses.",
+            "A busy fish market.",
+            "A forest on land.",
+            "An old ship that sank long ago."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do divers do on the scenic dive?",
+          "options": [
+            "They swim with the grey seals.",
+            "They study old maps.",
+            "They collect shells to sell.",
+            "They rest on the beach."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How long do the seals live around the islands?",
+          "options": [
+            "Only in summer.",
+            "All year round.",
+            "Just for a week.",
+            "Only on Saturdays."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the guide say about the young seals?",
+          "options": [
+            "They are very dangerous.",
+            "They quickly swim away.",
+            "They are curious and follow divers.",
+            "They never come near people."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U5 听力·短文 A Tip for Adventurers",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip before you go on any adventure.",
+        "Always learn some first aid, so you can help if someone is hurt.",
+        "Tell a friend where you are going and when you plan to come back.",
+        "Check the weather, and never set out if a storm is coming.",
+        "With good planning, even a hard trip can become a safe and happy one."
+      ],
+      "translation_cn": "出发去任何冒险之前给你一个小贴士:先学点急救,以便有人受伤时能帮忙;把你的去向和计划返回的时间告诉朋友;查看天气,有风暴来临时绝不出发;有了周密计划,再难的旅程也能变得安全又快乐。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only ship captains.",
+            "Only young children.",
+            "Only doctors.",
+            "Anyone going on an adventure."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why should you learn some first aid?",
+          "options": [
+            "To help if someone gets hurt.",
+            "To win a prize.",
+            "To save money on food.",
+            "To travel more cheaply."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should you tell a friend?",
+          "options": [
+            "How much money you have.",
+            "Where you are going and when you will return.",
+            "Which books you like.",
+            "What you ate for breakfast."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When should you never set out?",
+          "options": [
+            "When the sun is shining.",
+            "When you feel happy.",
+            "When a storm is coming.",
+            "When you have a map."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can good planning do, according to the passage?",
+          "options": [
+            "Make the weather change.",
+            "Stop all adventures.",
+            "Make a trip more dangerous.",
+            "Make a hard trip safe and happy."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

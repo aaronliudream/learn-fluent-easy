@@ -1,0 +1,32 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(AI 主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Grandpa first heard about AI doctors, he laughed and said that no machine could ever care for a patient. A year later, a smart program spotted his heart problem early, and the real doctors used its warning to treat him in time. Now Grandpa says that the cleverest care appears when people and machines work side by side.",
+    "questions": [
+      {
+        "q": "How did Grandpa feel about AI doctors at first?",
+        "options": [
+          "He doubted that a machine could care for patients.",
+          "He trusted them completely at once.",
+          "He decided to build one himself.",
+          "He had never heard of them before."
+        ],
+        "answer": "A",
+        "explanation": "原文 'he laughed and said that no machine could ever care for a patient' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What does Grandpa believe now?",
+        "options": [
+          "People should never rely on machines.",
+          "The best care comes when people and machines cooperate.",
+          "Human doctors are no longer needed.",
+          "AI doctors should be banned everywhere."
+        ],
+        "answer": "B",
+        "explanation": "末句 'the cleverest care appears when people and machines work side by side' 的转述(覆盖短文后半段)。"
+      }
+    ]
+  }
+}

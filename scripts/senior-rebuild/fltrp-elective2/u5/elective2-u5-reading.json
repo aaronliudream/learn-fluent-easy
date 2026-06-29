@@ -1,0 +1,322 @@
+{
+  "volume": "elective2",
+  "unit": "U5",
+  "topic": "A Delicate World",
+  "source": "外研社选择性必修第二册 Unit 5 同主题阅读(麦夸里岛入侵物种/神农架世界遗产/食物链/巴西龟入侵/梵净山/塞罕坝)。词限 U5/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Chaos on Macquarie Island",
+      "topic_cn": "说明·入侵物种如何破坏脆弱生态",
+      "body": "Macquarie Island lies in the cold ocean halfway between Australia and Antarctica. With its green grass and bare rock, it has a wild and natural beauty, and no visitor would think it surprising that the island became a World Heritage site. Sadly, its more recent history is a tragic one. When humans arrived in 1810, their ships secretly carried rats and mice, which quickly began eating the seabirds' eggs. Cats were then brought to control the rats, but the cats soon developed an appetite for the native birds as well. Later, rabbits were introduced as food for people. They multiplied rapidly, ate the vegetation and dug holes that caused serious soil erosion. With so many rabbits to feed on, the number of cats also grew, and even more birds were hunted. In the end, the parakeets that were once native to the island died out completely. The story shows how one small change, made by people, can throw a whole delicate world into chaos.",
+      "vocab_notes": [
+        {
+          "word": "erosion",
+          "cn": "侵蚀"
+        },
+        {
+          "word": "vegetation",
+          "cn": "草木"
+        },
+        {
+          "word": "chaos",
+          "cn": "混乱"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why would visitors not be surprised that the island is protected?",
+          "options": [
+            "Because of its wild, natural beauty.",
+            "Because it is close to a big city.",
+            "Because no animals live there.",
+            "Because it is easy to reach."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'wild and natural beauty… would think it surprising' 的转述。"
+        },
+        {
+          "stem": "What did the cats end up doing on the island?",
+          "options": [
+            "They left the island at once.",
+            "They began hunting the native birds.",
+            "They protected the seabirds' eggs.",
+            "They ate only the rabbits."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'developed an appetite for the native birds' 的转述。"
+        },
+        {
+          "stem": "What does the story mainly show?",
+          "options": [
+            "That human actions can upset a whole ecosystem.",
+            "That islands are good places for pets.",
+            "That rabbits make the best food.",
+            "That cats and birds are natural friends."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'one small change… can throw a whole delicate world into chaos' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Why Shennongjia Matters",
+      "topic_cn": "说明·世界遗产地的生物多样性",
+      "body": "Shennongjia, in central China, was added to the World Heritage List in 2016. It earned this status because it meets two important standards. First, it offers a naturally balanced environment where many different species can live and prosper. The land rises from about four hundred metres to over three thousand metres, and this vast range in altitude creates great variation in climate. As a result, a wide variety of plants and animals are able to thrive, and some of them have survived for millions of years. Second, Shennongjia has incredible biodiversity. More than three thousand plant species and over six hundred vertebrate species have been recorded there, including the rare golden snub-nosed monkey. To protect these animals, scientists brave heavy snow in winter to bring them food. Thanks to such hard work, the monkey's numbers have doubled since the 1980s. Local people also take what they need from nature without causing damage, living in harmony with the world around them.",
+      "vocab_notes": [
+        {
+          "word": "altitude",
+          "cn": "海拔"
+        },
+        {
+          "word": "thrive",
+          "cn": "茁壮成长"
+        },
+        {
+          "word": "vertebrate",
+          "cn": "脊椎动物"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was Shennongjia added to the Heritage List?",
+          "options": [
+            "Because it is the highest place in China.",
+            "Because it meets two key standards.",
+            "Because no one lives near it.",
+            "Because it has the most tourists."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'meets two important standards' 的转述。"
+        },
+        {
+          "stem": "What makes so many kinds of life able to thrive there?",
+          "options": [
+            "The lack of any rain.",
+            "The help of foreign animals.",
+            "The huge range in altitude and climate.",
+            "The absence of all winter."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'vast range in altitude creates great variation in climate… able to thrive' 的转述。"
+        },
+        {
+          "stem": "How do scientists help the monkeys in winter?",
+          "options": [
+            "They move the monkeys to cities.",
+            "They build large warm houses.",
+            "They feed them only in summer.",
+            "They carry food to them through heavy snow."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'brave heavy snow in winter to bring them food' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Links in the Food Chain",
+      "topic_cn": "说明·食物链各角色与生态平衡",
+      "body": "Every healthy ecosystem depends on a chain of living things that pass energy from one to another. At the bottom are the producers, such as green plants. They take in water and nutrients from the soil and make their own food using light from the sun. Next come the primary consumers, like insects, which feed on these green plants. They in turn become food for secondary consumers, such as small birds and mammals, that prey on the primary consumers. When plants and animals die, decomposers like fungi and bacteria break down their remains into nutrients. These nutrients are released back into the soil, where the producers can use them once more. In this way nothing is wasted, and the cycle begins again. If even one link in this chain is removed, the whole system can fall out of balance. That is why scientists say that every species, however small it may be, has its own part to play.",
+      "vocab_notes": [
+        {
+          "word": "nutrient",
+          "cn": "养分"
+        },
+        {
+          "word": "ecology",
+          "cn": "生态"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do producers use to make their own food?",
+          "options": [
+            "Sunlight, along with water and nutrients.",
+            "Only other animals.",
+            "Dead leaves alone.",
+            "Nothing at all."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'take in water and nutrients… using light from the sun' 的转述。"
+        },
+        {
+          "stem": "What is the job of the decomposers?",
+          "options": [
+            "To eat the green plants first.",
+            "To turn dead remains back into nutrients.",
+            "To hunt the secondary consumers.",
+            "To make food from sunlight."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'break down their remains into nutrients' 的转述。"
+        },
+        {
+          "stem": "What happens if one link in the chain disappears?",
+          "options": [
+            "The plants grow much faster.",
+            "Nothing changes at all.",
+            "The whole system may lose its balance.",
+            "The sun stops giving energy."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'one link… removed, the whole system can fall out of balance' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Cute but Dangerous Pet",
+      "topic_cn": "说明·外来宠物巴西龟的威胁",
+      "body": "The red-eared slider is a small freshwater turtle that comes from the southern United States and northern Mexico. Because it looks cute, many people once thought that it would make a perfect pet. Over the years, however, more and more owners have let their turtles escape or have set them free, believing that this does no harm. Experts now warn that releasing these turtles into the wild is far from harmless. In a new place the slider has no natural enemies, so it quickly multiplies and competes with local species for food and space. Some native animals have become endangered as a result. The turtle has now spread to lakes and rivers far from its original home, where it upsets the local balance of nature. Experts say that owners should keep their pets in an enclosed area, and that anyone who can no longer care for a turtle should take it to an animal shelter rather than abandon it in the wild.",
+      "vocab_notes": [
+        {
+          "word": "endangered",
+          "cn": "濒危的"
+        },
+        {
+          "word": "multiply",
+          "cn": "大量繁殖"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did people once want this turtle as a pet?",
+          "options": [
+            "Because it was very rare.",
+            "Because it could not move.",
+            "Because it ate harmful insects.",
+            "Because of its cute appearance."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Because it looks cute… a perfect pet' 的转述。"
+        },
+        {
+          "stem": "Why is releasing the slider into the wild dangerous?",
+          "options": [
+            "It breeds fast and crowds out native species.",
+            "It dies within a few days.",
+            "It only eats plants people grow.",
+            "It cannot live in lakes or rivers."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'quickly multiplies and competes with local species… endangered' 的转述。"
+        },
+        {
+          "stem": "What do experts advise turtle owners to do?",
+          "options": [
+            "Set the turtles free in any river.",
+            "Keep them enclosed or hand them to a shelter.",
+            "Sell the turtles to other countries.",
+            "Let the turtles find new homes alone."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'keep their pets in an enclosed area… take it to an animal shelter' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Treasure of Fanjing Mountain",
+      "topic_cn": "说明·梵净山自然遗产与绿色发展",
+      "body": "Fanjing Mountain, in Guizhou Province, is one of China's natural treasures. In recent years it was added to the World Heritage List, bringing the total number of such sites in China to fifty-three. The main reason for its inclusion is its remarkable biological diversity. About fifty endangered plant and animal species are found within its protected area, and some of them live nowhere else on Earth. As one of the first national nature reserves in the country, Fanjing Mountain stands as one of China's greatest achievements in protecting the environment. It is also famous for its breathtaking scenery, with green peaks that often rise above a sea of cloud, making it a popular summer resort. Yet the mountain is far more than a beautiful view. By keeping its forests safe, China protects a home for rare creatures and shows the world that economic growth and a healthy environment can stand side by side.",
+      "vocab_notes": [
+        {
+          "word": "rare",
+          "cn": "稀有的"
+        },
+        {
+          "word": "conservation",
+          "cn": "保护"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was Fanjing Mountain put on the Heritage List?",
+          "options": [
+            "Because it is the tallest mountain in China.",
+            "Because it has the largest city nearby.",
+            "Mainly because of its rich biological variety.",
+            "Because no plants grow on it."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'main reason for its inclusion is its remarkable biological diversity' 的转述。"
+        },
+        {
+          "stem": "What is special about some of the species there?",
+          "options": [
+            "They are kept only in zoos.",
+            "They were brought from abroad.",
+            "They have all died out.",
+            "They are found nowhere else in the world."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'some of them live nowhere else on Earth' 的转述。"
+        },
+        {
+          "stem": "What message does the mountain send, according to the text?",
+          "options": [
+            "Economic progress and nature can move forward together.",
+            "Tourists should stay away from nature.",
+            "Old forests should be cut down.",
+            "Only money really matters in the end."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'economic growth and a healthy environment can stand side by side' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "From Desert to Forest",
+      "topic_cn": "记叙·塞罕坝荒原变林海",
+      "body": "Sixty years ago, Saihanba in northern China was a cold, empty wasteland where strong winds blew sand across the bare ground. Few people believed that anything could grow there. Then a group of workers arrived with a bold dream: to turn the desert into a forest. Year after year, in freezing weather, they planted young trees by hand, and slowly the green began to spread. Many of the first trees died, but the workers refused to give up. Today Saihanba is the largest planted forest in the world. Its millions of trees hold the soil in place, clean the air, and store huge amounts of water for the cities to the south. Wild animals that had long disappeared have returned to live among the trees. The story of Saihanba shows that, with patience and hard work, people can not only stop damaging nature but also help a ruined land come back to life.",
+      "vocab_notes": [
+        {
+          "word": "vast",
+          "cn": "广大的"
+        },
+        {
+          "word": "thrive",
+          "cn": "茁壮成长"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was Saihanba like sixty years ago?",
+          "options": [
+            "A busy city full of people.",
+            "A cold, sandy wasteland with almost no plants.",
+            "A green forest full of animals.",
+            "A large lake beside the sea."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'cold, empty wasteland where strong winds blew sand' 的转述。"
+        },
+        {
+          "stem": "How did the workers create the forest?",
+          "options": [
+            "By buying trees from other countries.",
+            "By waiting for the rain to do the work.",
+            "Through years of planting trees by hand.",
+            "By moving a forest from the south."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'Year after year… they planted young trees by hand' 的转述。"
+        },
+        {
+          "stem": "What does the story of Saihanba mainly show?",
+          "options": [
+            "That deserts can never change.",
+            "That trees are not worth planting.",
+            "That nature looks after itself alone.",
+            "That damaged land can be brought back to life."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'help a ruined land come back to life' 的转述。"
+        }
+      ]
+    }
+  ]
+}

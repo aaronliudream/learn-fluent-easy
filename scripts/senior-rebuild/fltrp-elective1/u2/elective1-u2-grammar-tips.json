@@ -1,0 +1,35 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "grade": 11,
+  "content": {
+    "title": "-ing 与不定式作宾语·doing / to do 速查",
+    "intro": "有些动词后面只能接 doing,有些只能接 to do,还有一组接两者意义不同。判断口诀:看前面的主句动词;意义变化组再看句子语境是'未做/已做'。",
+    "table": {
+      "headers": ["类别", "代表动词 / 例句"],
+      "rows": [
+        ["只接 doing", "enjoy / finish / avoid / mind / practise / suggest / consider / keep / give up:She enjoys writing stories."],
+        ["只接 to do", "decide / hope / agree / promise / manage / offer / refuse / want / learn / fail:He decided to keep writing."],
+        ["接两者意义不同", "remember / forget / regret / stop / try / mean:remember to do(未做) vs remember doing(已做)"],
+        ["stop 特例", "stop to do = 停下来去做另一件事;stop doing = 停止正在做的事"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "remember/forget/regret + to do 指'该做、还没做';+ doing 指'已经做过'", "mark": "Remember to post it(还没寄) / I remember posting it(寄过了)" },
+      { "rule": "stop to do = 停下来去做;stop doing = 停止做某事", "mark": "He stopped to rest(停下休息) / He stopped swimming(不再游泳)" },
+      { "rule": "try to do = 努力设法;try doing = 试着做(看效果)", "mark": "try to finish(竭力做完) / try looking on the bright side(试着换个角度)" },
+      { "rule": "mean to do = 打算;mean doing = 意味着", "mark": "I meant to help(本打算) / Success means trying again(意味着)" }
+    ],
+    "why": [
+      "doing 强调动作本身或经历(已发生/正进行),to do 强调一次具体的、往往尚未发生的动作或目的;主句动词的性质决定了它后面要搭配哪一种,意义变化组则进一步靠语境区分'未做'还是'已做'。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:给出动词原形,按主句动词判断填 doing 还是 to do。",
+      "remember/forget/stop/try + doing vs to do 的意义辨析是改错与单选常考点;尤其 stop to do 与 stop doing。"
+    ],
+    "examVsReal": [
+      { "exam": "I enjoy reading.（考试要求 doing）", "real": "I love to read. / I love reading.", "note": "考试里 enjoy 只能接 doing;但 love/like/begin/start 两种都行,口语里更随意" },
+      { "exam": "Remember to lock the door.（考试强调未做）", "real": "Don't forget the door! / Lock up, yeah?", "note": "考试看 to do/doing 辨意;真实口语常省略动词、直接点到名词或短句" }
+    ]
+  }
+}

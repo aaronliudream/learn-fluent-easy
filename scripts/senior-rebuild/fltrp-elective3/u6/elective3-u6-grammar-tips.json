@@ -1,0 +1,38 @@
+{
+  "volume": "elective3",
+  "unit": "U6",
+  "grade": 12,
+  "content": {
+    "title": "非谓语动词作定语·状语·补语 速查",
+    "intro": "非谓语动词(doing / done / to do)没有时态人称变化,靠「主动还是被动」「进行还是完成」「将来还是已发生」来选形式。口诀:自己主动做→doing,被别人做(被动)→done,将要去做→to do。",
+    "table": {
+      "headers": ["位置 / 功能", "怎么选", "例句"],
+      "rows": [
+        ["定语 -ing(主动·进行)", "名词自己发出动作", "the falling snow 纷飞的雪 / the running water"],
+        ["定语 -ed(被动·完成)", "名词承受动作", "the frozen lake 结冰的湖 / branches bent by the snow"],
+        ["定语 to do(将来·要做)", "表'将要做、可去做的'", "the first child to see the snow / a place to sit"],
+        ["状语 -ing / -ed", "看主句主语:主动用 -ing,被动用 -ed", "Looking out, I saw … / Covered with snow, the fields …"],
+        ["补语 doing / done", "see/hear/find/watch + 宾语:进行用 doing,被动用 done", "I saw the children flattening … / found the garden covered"],
+        ["补语 to do", "want/ask/tell/expect + 宾语 + to do", "I want you to repeat the rhyme"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "定语:名词与动词是主动/进行关系 → -ing;被动/完成关系 → -ed", "mark": "the falling snow ✓ / the fallen leaves(已落下)" },
+      { "rule": "状语:分词的逻辑主语 = 主句主语;主动 -ing,被动 -ed", "mark": "Covered with snow, the field looked white(field 被覆盖)" },
+      { "rule": "see/hear/watch/feel/find + 宾语 + doing(进行)或 done(被动)", "mark": "see sb doing / find sth done" },
+      { "rule": "want/ask/tell/expect/cause/force + 宾语 + 不定式 to do", "mark": "ask sb to do;to do 也常作定语表'将要做的'" }
+    ],
+    "why": [
+      "非谓语动词其实是把一个动作'压缩'进句子里:作定语时它相当于一个定语从句的简化(the snow that is falling → the falling snow);作状语时相当于一个时间/原因状语从句的简化;作补语时补充说明宾语在'做什么'或'被怎样'。判断核心永远是:这个名词/宾语是主动做,还是被动承受。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:给动词原形,判断填 doing / done / to do —— 先看它与所修饰名词是主动还是被动。",
+      "读后续写/状语题:分词作状语时,逻辑主语必须与主句主语一致,主动 -ing、被动 -ed。",
+      "see/hear/find + 宾语 + 补语:动作进行用 doing,被动用 done(I saw the children playing / found the garden covered)。"
+    ],
+    "examVsReal": [
+      { "exam": "Looking out of the window, I saw the snow.(书面分词状语)", "real": "I looked out of the window and saw the snow.", "note": "口语更爱用并列句;书面写作偏爱分词状语,更简洁地道。" },
+      { "exam": "the falling snow(分词作定语)", "real": "the snow that was falling", "note": "分词定语 = 定语从句的简化,书面表达更紧凑。" }
+    ]
+  }
+}

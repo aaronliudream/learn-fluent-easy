@@ -1,0 +1,338 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "topic": "Making a Difference",
+  "source": "外研社必修三 Unit 2 同主题阅读(瑞安的井/温顿救童/屠呦呦/联合国儿童基金会/英国街头慈善/学生志愿者)。词限 U2/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Boy Who Dug Wells",
+      "topic_cn": "记叙·瑞安的井",
+      "body": "Ryan was a six-year-old boy in Canada when he first heard that many children in Africa could not get clean water. At his school a drinking fountain stood only ten steps away, so he could not understand why others had to walk for hours every single day. He decided to help. First he cleaned windows and did gardening to earn money, but he soon learned that a real well cost two thousand dollars, far more than his first seventy. Instead of giving up, Ryan asked his classmates and neighbours to donate, and a friend of his mother helped share his story with others. After several months he had raised enough, and a well was built near a school in Uganda. The grateful children no longer had to walk for hours, and they invited him to come and visit. Today his foundation has brought safe water to hundreds of thousands of people across Africa.",
+      "vocab_notes": [
+        {
+          "word": "fountain",
+          "cn": "饮水器;喷泉"
+        },
+        {
+          "word": "donate",
+          "cn": "捐赠"
+        },
+        {
+          "word": "grateful",
+          "cn": "感激的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why couldn't Ryan understand the African children's problem at first?",
+          "options": [
+            "Clean water was extremely easy for him to reach at home.",
+            "He had never drunk any water before.",
+            "He was living in Africa himself.",
+            "He disliked drinking water of any kind."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说他的饮水器只有十步远('only ten steps away'),即取水极方便,故难以理解他人要走几小时;此为转述。"
+        },
+        {
+          "stem": "What did Ryan do when he found that a well cost far more than he had?",
+          "options": [
+            "He simply abandoned the whole plan.",
+            "He kept going and asked others to give money.",
+            "He built the well entirely on his own.",
+            "He decided to keep all the money for himself."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Instead of giving up… asked his classmates and neighbours to donate' 的转述。"
+        },
+        {
+          "stem": "What has Ryan's foundation achieved according to the text?",
+          "options": [
+            "It has given safe water to very many people in Africa.",
+            "It has closed down all the wells it built.",
+            "It has stopped helping children in need.",
+            "It has moved all its work back to Canada."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'brought safe water to hundreds of thousands of people across Africa' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Quiet Hero of Prague",
+      "topic_cn": "记叙·温顿救童",
+      "body": "Nicholas Winton was a young British man who worked in business. In December 1938, a friend asked him to come to Prague, where many families were in great danger. Moved by what he saw there, Winton decided to bring children to safety in Britain. He set up an office, kept careful records, and found temporary homes for the children. He even used his own money to pay the fee that the government required for each child. By the summer of 1939, he had helped 669 children escape. After the war, Winton said little about what he had done, and his actions were almost forgotten. Then, in 1988, his wife found an old journal full of names and photographs. When his story finally appeared on a television programme, hundreds of the people he had saved stood up to thank him. Winton received many honours and lived to the age of 106.",
+      "vocab_notes": [
+        {
+          "word": "temporary",
+          "cn": "临时的"
+        },
+        {
+          "word": "aid",
+          "cn": "援助"
+        },
+        {
+          "word": "achievement",
+          "cn": "成就"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Winton travel to Prague in 1938?",
+          "options": [
+            "He simply wanted to take a long holiday.",
+            "A friend invited him to rescue families facing danger.",
+            "He was looking for a better-paid job there.",
+            "He had been born and raised in the city."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a friend asked him to come to Prague, where many families were in great danger' 的转述。"
+        },
+        {
+          "stem": "How did people finally learn about Winton's actions in 1988?",
+          "options": [
+            "He wrote and published a long book himself.",
+            "The government announced it to everyone.",
+            "His wife discovered the journal and a TV show revealed his story.",
+            "He told the whole story on the radio."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'his wife found an old journal… his story finally appeared on a television programme' 的转述。"
+        },
+        {
+          "stem": "What happened when Winton's story appeared on television?",
+          "options": [
+            "No one in the room seemed to remember him.",
+            "He refused to say a single word.",
+            "He immediately left Britain for good.",
+            "Many of those he had saved came forward to thank him."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'hundreds of the people he had saved stood up to thank him' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Gift to the World",
+      "topic_cn": "记叙·屠呦呦",
+      "body": "Tu Youyou is a Chinese scientist who has made a great contribution to medicine. She was born in Ningbo in 1930 and later studied at a medical college in Beijing. In 1969, she became the leader of a research team that was looking for a treatment for malaria, a disease that had killed millions of people. After years of patient, careful work, her team managed to take a useful substance from a Chinese herb in 1972. This substance turned out to be very effective in fighting the illness. In 1986, she obtained an official certificate for the new drug. Her perseverance was finally recognised by the whole world in 2015, when she won the Nobel Prize in Medicine. Even after this great honour, she chose to do further research. Her story shows that patience and hard work can help one single person save countless lives.",
+      "vocab_notes": [
+        {
+          "word": "treatment",
+          "cn": "疗法"
+        },
+        {
+          "word": "effective",
+          "cn": "有效的"
+        },
+        {
+          "word": "perseverance",
+          "cn": "坚持不懈"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was the goal of the team that Tu Youyou led in 1969?",
+          "options": [
+            "To find a way of treating malaria.",
+            "To build a brand-new medical college.",
+            "To win an international science prize.",
+            "To move her family out of Beijing."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a research team that was looking for a treatment for malaria' 的转述。"
+        },
+        {
+          "stem": "Where did the useful substance against the disease come from?",
+          "options": [
+            "From a foreign-made medicine.",
+            "From a traditional Chinese herb.",
+            "From a large modern factory.",
+            "From a kind of wild animal."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'take a useful substance from a Chinese herb' 的转述。"
+        },
+        {
+          "stem": "What does Tu Youyou's story show, according to the text?",
+          "options": [
+            "Only good luck can bring real success.",
+            "Scientific work is mostly useless.",
+            "Patience and effort can help one save many lives.",
+            "Big prizes are usually easy to win."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'patience and hard work can help one single person save countless lives' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Helping Children Everywhere",
+      "topic_cn": "说明·联合国儿童基金会",
+      "body": "UNICEF is a famous organisation of the United Nations. The name is short for the United Nations Children's Fund, and its main office is based in New York. UNICEF was founded in December 1946 to bring food and healthcare to children in countries that had been damaged in the Second World War. Over the years, its mission has been extended far beyond Europe. Today it helps children in the developing world, including those who live with diseases or a disability, and those whose lives are affected by fast change and environmental problems. The organisation now works in around 190 countries and territories. Wherever there is a child in need, UNICEF tries to offer assistance, from clean water and medicine to safe schools. Its long history shows how people around the world can work together to give every child a fairer start in life.",
+      "vocab_notes": [
+        {
+          "word": "mission",
+          "cn": "使命"
+        },
+        {
+          "word": "territory",
+          "cn": "地区"
+        },
+        {
+          "word": "assistance",
+          "cn": "援助"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was UNICEF first created to do in 1946?",
+          "options": [
+            "To build several offices in New York.",
+            "To sell medicine to rich countries.",
+            "To start a new world war.",
+            "To give food and medical help to children harmed by war."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'to bring food and healthcare to children in countries that had been damaged in the Second World War' 的转述。"
+        },
+        {
+          "stem": "Who does UNICEF try to help today?",
+          "options": [
+            "Children in need, including those who are ill or disabled.",
+            "Only wealthy families in big cities.",
+            "Only adults living in Europe.",
+            "Only the people who work for it."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'helps children in the developing world, including those who live with diseases or a disability' 的转述。"
+        },
+        {
+          "stem": "What does UNICEF's work show, according to the writer?",
+          "options": [
+            "That charity work almost never succeeds.",
+            "That people worldwide can work together to help every child.",
+            "That children should only help themselves.",
+            "That war is the best way to solve problems."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'people around the world can work together to give every child a fairer start' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Charity on the High Street",
+      "topic_cn": "说明·英国街头慈善",
+      "body": "In Britain, helping others through charity is part of everyday life. Walk along almost any high street, and you will come across people raising money for good causes. Some are collecting for Cancer Research UK, while others stand for the British Heart Foundation or the Royal National Lifeboat Institution, which saves lives at sea. Many of these groups depend on volunteers, ordinary people who give their free time without any pay. Some sort clothes in charity shops, while others answer phones or organise events. Becoming a volunteer is usually simple: you fill in a registration form, and the centre sends a confirmation before you start. The work is not always easy, but most volunteers say it gives them a strong sense of purpose. They feel grateful for the chance to make a difference, however small, to people they may never even meet.",
+      "vocab_notes": [
+        {
+          "word": "charity",
+          "cn": "慈善;慈善机构"
+        },
+        {
+          "word": "registration",
+          "cn": "登记"
+        },
+        {
+          "word": "confirmation",
+          "cn": "确认"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What will you often see on a British high street?",
+          "options": [
+            "Empty streets with no shops at all.",
+            "Doctors treating patients outdoors.",
+            "People collecting money for good causes.",
+            "Children walking to school together."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'you will come across people raising money for good causes' 的转述。"
+        },
+        {
+          "stem": "What do the volunteers in the text usually do?",
+          "options": [
+            "Work only when the pay is very high.",
+            "Run the country's government.",
+            "Stay at home and do nothing all day.",
+            "Give their free time to help without being paid."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'ordinary people who give their free time without any pay' 的转述。"
+        },
+        {
+          "stem": "How do most volunteers feel about their work?",
+          "options": [
+            "It fills their lives with real meaning.",
+            "It is a complete waste of their time.",
+            "It quickly makes them very rich.",
+            "It is always dull and boring."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'it gives them a strong sense of purpose' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Anna's Saturdays",
+      "topic_cn": "记叙·学生志愿者",
+      "body": "Anna is a senior high school student who spends her weekends as a volunteer. Every Saturday she goes to a centre that teaches young children with a disability. She is usually quite shy, yet she is also generous and never hesitates to help. At first some of the children were sensitive and did not want to join in, but Anna was patient and gentle, and slowly they began to trust her. She helps them paint, sing and play simple games, and she always cheers them up when they feel sad. Anna says that volunteering has taught her far more than any lesson at school. She has learned how to listen, how to be kind, and how a few warm words can change someone's whole day. For her, making a difference does not need money or fame; it only needs a caring heart and a little free time.",
+      "vocab_notes": [
+        {
+          "word": "generous",
+          "cn": "慷慨的"
+        },
+        {
+          "word": "sensitive",
+          "cn": "敏感的"
+        },
+        {
+          "word": "hesitate",
+          "cn": "犹豫"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does Anna do on Saturdays?",
+          "options": [
+            "She earns money working in a shop.",
+            "She helps teach young children who have a disability.",
+            "She studies hard for her exams.",
+            "She travels to other countries."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a centre that teaches young children with a disability' 的转述。"
+        },
+        {
+          "stem": "How did Anna slowly win the children's trust?",
+          "options": [
+            "By giving each of them money.",
+            "By being strict and very loud.",
+            "By being patient and gentle with them.",
+            "By ignoring them completely."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'Anna was patient and gentle… they began to trust her' 的转述。"
+        },
+        {
+          "stem": "What does Anna believe making a difference really needs?",
+          "options": [
+            "A great deal of money and fame.",
+            "Many years of special study.",
+            "Expensive professional training only.",
+            "A kind heart and a little spare time."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'it only needs a caring heart and a little free time' 的转述。"
+        }
+      ]
+    }
+  ]
+}

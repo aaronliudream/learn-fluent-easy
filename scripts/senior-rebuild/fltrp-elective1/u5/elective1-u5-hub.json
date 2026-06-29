@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Darwin collected many samples of plants and animals on his voyage.", "opts": ["达尔文在航行中采集了许多动植物样本。", "达尔文在航行中卖掉了许多样本。", "达尔文在航行中丢失了所有样本。", "达尔文在航行中画了许多动物。"], "answer": 0 },
+    { "audio": "The finches on each island had different beaks.", "opts": ["每座岛上的雀鸟长着不同的喙。", "每座岛上的雀鸟颜色相同。", "所有岛上只有一种鸟。", "雀鸟不会飞到别的岛。"], "answer": 0 },
+    { "audio": "Plants can warn each other by releasing chemicals.", "opts": ["植物能通过释放化学物质互相警告。", "植物只能用声音说话。", "植物从不互相帮助。", "植物会大声呼救。"], "answer": 0 },
+    { "audio": "The water bear can survive both great heat and freezing cold.", "opts": ["水熊能在酷热和严寒中存活。", "水熊只能生活在温暖的水里。", "水熊是世界上最大的动物。", "水熊从不需要食物。"], "answer": 0 },
+    { "audio": "After goats arrived, the tortoise population began to decline.", "opts": ["山羊到来后,陆龟数量开始减少。", "山羊到来后,陆龟数量增加了。", "山羊和陆龟成了好朋友。", "陆龟把山羊赶走了。"], "answer": 0 },
+    { "audio": "Each year scientists discover thousands of new species.", "opts": ["科学家每年都会发现成千上万的新物种。", "科学家每年都失去许多物种。", "科学家从不研究新物种。", "新物种每年都在减少。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "“suspect” 在“Darwin began to suspect that species could change”中意为?", "opts": ["猜想;怀疑", "证明", "忘记", "出售"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "“ancestor” 的意思是?", "opts": ["(动物的)原种;祖先", "敌人", "邻居", "陌生人"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "“habitat” 的意思是?", "opts": ["栖息地", "假期", "习惯", "帽子"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "“decline” 在“the tortoise population began to decline”中意为?", "opts": ["减少;下降", "上升", "唱歌", "建造"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "By the time the ship reached the islands, Darwin ____ many samples.", "opts": ["had collected", "collected", "has collected", "collects"], "answer": 0, "point": "过去完成时", "dim": "grammar" },
+    { "q": "After he ____ time in South America, he sailed on to the Galápagos.", "opts": ["had spent", "spent", "has spent", "spends"], "answer": 0, "point": "过去完成时", "dim": "grammar" },
+    { "q": "Darwin said that the finches ____ from a common ancestor.", "opts": ["had evolved", "evolved", "have evolved", "evolve"], "answer": 0, "point": "过去完成时(间接引语)", "dim": "grammar" },
+    { "q": "No sooner ____ the goats arrived than the tortoise numbers fell.", "opts": ["had", "has", "did", "was"], "answer": 0, "point": "过去完成时(倒装)", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["每个物种都发展出自己独特的特征。", "每个物种看上去都一样。", "物种从不改变。", "科学家无法研究物种。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Each species has developed its own special characteristics." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["真菌把森林里植物的根连接在一起。", "真菌会毒死所有植物。", "森林里没有真菌。", "植物的根从不相连。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Fungi link the roots of different plants together in a forest." }
+  ],
+  "reading": {
+    "passage": "Darwin noticed that the finches on each island had slightly different beaks. He suspected that they had all evolved from one common ancestor that reached the islands long ago.",
+    "passageCn": "达尔文注意到每座岛上的雀鸟喙略有不同。他猜想它们都是从很久以前到达这些岛屿的一个共同原种进化而来的。",
+    "questions": [
+      { "q": "What did Darwin notice about the finches?", "opts": ["Their beaks were slightly different.", "They were all exactly the same.", "They could not fly.", "They had no beaks."], "answer": 0 },
+      { "q": "What did Darwin suspect about the birds?", "opts": ["They shared one common ancestor.", "They came from different planets.", "They never changed.", "Sailors had brought them."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write three short journal entries (Week 1 / Week 3 / Week 6) describing how a sunflower grows. Use the past perfect at least once.",
+    "promptCn": "写三则简短的观察日记(第1周/第3周/第6周),描述向日葵的生长,至少用一处过去完成时。",
+    "sampleWords": ["seed", "soil", "stem", "leaves", "centimetre", "flower", "grow", "measure", "had produced", "observe"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking about Darwin's discovery",
+      "lines": [
+        { "role": "A", "text": "Why are the finches on each island different?", "cn": "为什么每座岛上的雀鸟都不一样?" },
+        { "role": "B", "text": "Darwin suspected they had all evolved from one ancestor.", "cn": "达尔文猜想它们都是从一个原种进化来的。" },
+        { "role": "A", "text": "So their beaks changed to match the food?", "cn": "所以它们的喙因食物而改变了?" },
+        { "role": "B", "text": "Exactly. Each group had adapted to its own island.", "cn": "正是。每群鸟都适应了自己所在的岛。" }
+      ]
+    },
+    {
+      "title": "Protecting nature",
+      "lines": [
+        { "role": "A", "text": "After the goats arrived, the tortoises had lost their food.", "cn": "山羊来了以后,陆龟就失去了食物。" },
+        { "role": "B", "text": "That's so sad. How can we protect such species?", "cn": "太可惜了。我们怎样才能保护这些物种?" },
+        { "role": "A", "text": "We can start by keeping their habitats clean and safe.", "cn": "我们可以从保持它们的栖息地干净、安全做起。" },
+        { "role": "B", "text": "Small actions really can change the world.", "cn": "小小的行动真的能改变世界。" }
+      ]
+    }
+  ]
+}

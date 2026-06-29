@@ -1,0 +1,421 @@
+{
+  "volume": "required2",
+  "unit": "U6",
+  "topic": "Earth First",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社版必修第二册 Unit 6 同主题听力(谈回收/什么是雾霾/家中节电/保护鲨鱼/参观自然保护区/绿色生活小贴士)。用词限 U6/初中/常见词,答案可在 transcript 找到依据,与读写关不撞。long/short 交替(3长3短)。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U6 听力·对话 Talking About Recycling",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Tom, what do you do with your empty bottles and cans?",
+        "Tom: I put them in the recycling bin near my house.",
+        "Mia: That's great. Do you recycle paper too?",
+        "Tom: Yes, and I use both sides of every sheet before I recycle it.",
+        "Mia: I should do the same. I usually just throw everything away.",
+        "Tom: You could start with plastic. Plastic takes hundreds of years to break down.",
+        "Mia: Really? Then I'll bring a reusable bag for shopping from now on.",
+        "Tom: Good idea. Small changes like that really help the Earth."
+      ],
+      "translation_cn": "Mia 问 Tom 如何处理空瓶和易拉罐;Tom 放进家附近的回收箱,纸张也双面使用后再回收;Mia 平时都扔掉,打算照做;Tom 建议先从塑料开始,因为塑料要数百年才分解;Mia 决定以后购物用可重复使用的袋子;Tom 说这样的小改变真的有助于地球。",
+      "questions": [
+        {
+          "stem": "What does Tom do with empty bottles and cans?",
+          "options": [
+            "He puts them in a recycling bin.",
+            "He throws them into the river.",
+            "He burns them in the garden.",
+            "He keeps them forever."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does Tom use old paper?",
+          "options": [
+            "He never uses paper at all.",
+            "He uses both sides before recycling it.",
+            "He sells it for money.",
+            "He eats his lunch on it."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Mia usually do with her rubbish?",
+          "options": [
+            "She just throws everything away.",
+            "She recycles all of it carefully.",
+            "She gives it to Tom.",
+            "She buries it in the garden."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why should people be careful with plastic?",
+          "options": [
+            "It is very expensive to buy.",
+            "It takes hundreds of years to break down.",
+            "It breaks down in a single day.",
+            "It is very good for sea animals."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will Mia do from now on?",
+          "options": [
+            "Stop shopping completely.",
+            "Use far more plastic bags.",
+            "Bring a reusable bag for shopping.",
+            "Throw all her bottles away."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U6 听力·短文 What Is Smog",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The word smog comes from the words smoke and fog.",
+        "It describes the dirty air that covers many busy cities.",
+        "Long ago, smog was mainly caused by burning coal at home.",
+        "Today, most smog comes from traffic and factories.",
+        "Smog is dangerous because it can cause serious breathing problems."
+      ],
+      "translation_cn": "smog 一词来自 smoke 和 fog;它描述覆盖许多繁忙城市的脏空气;很久以前,雾霾主要由家庭烧煤造成;如今大多数雾霾来自交通和工厂;雾霾很危险,会引起严重的呼吸问题。",
+      "questions": [
+        {
+          "stem": "Where does the word 'smog' come from?",
+          "options": [
+            "From 'sun' and 'fog'.",
+            "From 'smell' and 'frog'.",
+            "From 'smoke' and 'dog'.",
+            "From 'smoke' and 'fog'."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does smog describe?",
+          "options": [
+            "The dirty air over busy cities.",
+            "Clean air on a high mountain.",
+            "A kind of cloud above the sea.",
+            "Fresh air in the countryside."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What mainly caused smog long ago?",
+          "options": [
+            "Heavy traffic on the roads.",
+            "Burning coal at home.",
+            "Too many trees in cities.",
+            "Strong winds from the sea."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What causes most smog today?",
+          "options": [
+            "Only home coal fires.",
+            "Rain and snow.",
+            "Traffic and factories.",
+            "Cars in the countryside."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why is smog dangerous?",
+          "options": [
+            "It makes people very rich.",
+            "It cleans the city air.",
+            "It cools the whole city down.",
+            "It can cause serious breathing problems."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U6 听力·对话 Saving Energy at Home",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Dad: Lily, why have you unplugged the television?",
+        "Lily: Our teacher said devices in stand-by mode still use power.",
+        "Dad: Really? I always thought turning it off was enough.",
+        "Lily: No. Electricity keeps leaking from them, even when they look off.",
+        "Dad: So we waste power every night without knowing it.",
+        "Lily: Yes. If we remove the plug, we save energy and money.",
+        "Dad: That makes sense. Let's unplug the computer too.",
+        "Lily: Great. Small habits like this help fight global warming."
+      ],
+      "translation_cn": "爸爸问 Lily 为什么把电视拔了插头;Lily 说老师讲过待机状态的设备仍在耗电;爸爸原以为关掉就够了;Lily 说即使看起来关了,电仍在漏出;所以每晚都在不知不觉中浪费电;拔掉插头就能省电省钱;爸爸赞同,提议电脑也拔掉;Lily 说这样的小习惯有助于应对全球变暖。",
+      "questions": [
+        {
+          "stem": "Why did Lily unplug the television?",
+          "options": [
+            "Devices in stand-by mode still use power.",
+            "The television was broken.",
+            "She wanted to watch films.",
+            "It was making too much noise."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did Dad think was enough?",
+          "options": [
+            "Unplugging everything at night.",
+            "Just turning the television off.",
+            "Selling the old television.",
+            "Moving it outside the house."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What keeps happening even when a device looks off?",
+          "options": [
+            "It makes a very loud noise.",
+            "It quickly becomes ice-cold.",
+            "Electricity keeps leaking from it.",
+            "It cleans itself."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should they do to save energy?",
+          "options": [
+            "Buy a much bigger television.",
+            "Leave everything switched on.",
+            "Turn up the heating.",
+            "Remove the plug from the socket."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do small habits like this help do?",
+          "options": [
+            "Help fight global warming.",
+            "Waste much more power.",
+            "Make the bills higher.",
+            "Break the devices faster."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U6 听力·短文 Protecting Sharks",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "For many years, people were very afraid of sharks.",
+        "A famous film made them believe that all sharks were dangerous.",
+        "Because of this fear, fishermen killed millions of sharks.",
+        "In fact, sharks harm people only by accident.",
+        "Today, more and more people want to protect them from extinction."
+      ],
+      "translation_cn": "多年来,人们非常害怕鲨鱼;一部著名电影让他们相信所有鲨鱼都很危险;由于这种恐惧,渔民杀死了数百万条鲨鱼;事实上,鲨鱼伤人只是出于意外;如今越来越多的人想要保护它们免于灭绝。",
+      "questions": [
+        {
+          "stem": "How did people feel about sharks for many years?",
+          "options": [
+            "They loved them deeply.",
+            "They were very afraid of them.",
+            "They knew nothing about them.",
+            "They kept them as pets."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did the famous film make people believe?",
+          "options": [
+            "That sharks were friendly.",
+            "That sharks could fly.",
+            "That all sharks were dangerous.",
+            "That sharks were tiny."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did fishermen do because of this fear?",
+          "options": [
+            "They protected the sharks.",
+            "They carefully studied the sharks.",
+            "They fed the sharks every day.",
+            "They killed millions of sharks."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why do sharks attack people, in fact?",
+          "options": [
+            "They harm people only by accident.",
+            "Because they hate all people.",
+            "Because people are their main food.",
+            "Because they are never hungry."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do more people want to do today?",
+          "options": [
+            "Hunt many more sharks.",
+            "Protect sharks from extinction.",
+            "Forget about sharks completely.",
+            "Sell shark fins for soup."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U6 听力·对话 A Visit to a Nature Reserve",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Reporter: Lin Feng, can you tell us a little about this nature reserve?",
+        "Lin Feng: Of course. It was established in the year 2000 and is very large.",
+        "Reporter: What is the biggest problem you face here?",
+        "Lin Feng: Large areas of wetland have been damaged by human activity.",
+        "Reporter: How does that affect the plants and animals?",
+        "Lin Feng: It harms them, and we have also seen more droughts and floods.",
+        "Reporter: And what is your team doing to help?",
+        "Lin Feng: We protect and restore the land and find sustainable ways to farm."
+      ],
+      "translation_cn": "记者请林峰介绍这个自然保护区;林峰说它建立于2000年,面积很大;记者问最大的问题是什么;林峰说大片湿地被人类活动破坏;这影响了那里的动植物,还出现了更多旱灾和洪水;记者问团队在做什么;林峰说他们保护并修复土地,寻找可持续的耕作方式。",
+      "questions": [
+        {
+          "stem": "When was the reserve established?",
+          "options": [
+            "In 1952.",
+            "In 1975.",
+            "In the year 2000.",
+            "Only last year."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the biggest problem at the reserve?",
+          "options": [
+            "Too many visitors every day.",
+            "A lack of staff members.",
+            "Heavy snow all year round.",
+            "Wetland damaged by human activity."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What else has the team seen more of?",
+          "options": [
+            "More droughts and floods.",
+            "More sunny days.",
+            "More tourists.",
+            "More new factories."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Lin Feng's team doing to help?",
+          "options": [
+            "Building many new roads.",
+            "Protecting and restoring the land.",
+            "Removing all the animals.",
+            "Closing the reserve down."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What kind of farming are they looking for?",
+          "options": [
+            "Cheaper ways to hunt.",
+            "Faster ways to cut trees.",
+            "Sustainable ways to farm.",
+            "New ways to waste water."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U6 听力·短文 A Green Tip",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip to help the Earth every day.",
+        "Try to reduce the amount of energy you use at home.",
+        "Turn off the lights when you leave a room.",
+        "Unplug any device that you are not using.",
+        "These small actions save power and help slow down global warming."
+      ],
+      "translation_cn": "这里有一个每天帮助地球的小贴士;尽量减少你在家里使用的能源;离开房间时关灯;拔掉任何你不用的设备;这些小行动能省电,并有助于减缓全球变暖。",
+      "questions": [
+        {
+          "stem": "What is this tip meant to help?",
+          "options": [
+            "To help you make money.",
+            "To help you win a game.",
+            "To help you grow taller.",
+            "To help the Earth every day."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should you try to reduce at home?",
+          "options": [
+            "The amount of energy you use.",
+            "The number of books you read.",
+            "The amount of homework you do.",
+            "The time you spend sleeping."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should you do when you leave a room?",
+          "options": [
+            "Open all the windows.",
+            "Turn off the lights.",
+            "Turn up the heating.",
+            "Leave the TV on."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you do with devices you are not using?",
+          "options": [
+            "Buy more of them.",
+            "Leave them switched on.",
+            "Unplug them.",
+            "Sell them at once."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do these small actions do?",
+          "options": [
+            "Waste a lot of energy.",
+            "Make the bills much higher.",
+            "Harm the Earth more.",
+            "Save power and slow global warming."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

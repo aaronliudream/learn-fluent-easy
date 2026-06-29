@@ -1,0 +1,52 @@
+{
+  "volume": "elective4",
+  "unit": "U6",
+  "topic": "Write a Journal Entry about Living in Space(写一篇太空生活日记)",
+  "title_en": "A Day on Board the Spacecraft",
+  "genre": "日记 / 记叙(journal entry：describe what you did on board + how you felt)",
+  "source": "外研社新标准选择性必修第四册 Unit 6 Developing ideas Writing：imagine you have spent 24 hours on board a spacecraft and write a journal entry(你在航天器上度过24小时,写一篇日记:做了什么、感受如何、最喜欢/最不喜欢什么)。",
+  "prompt_cn": "假设你是一名航天员,在航天器上度过了第一天的24小时。请用英语写一篇约100词的日记,内容包括:① 你在航天器上做了哪些事(如失重中睡觉、锻炼、吃饭等);② 你的感受;③ 你最喜欢和最不喜欢的部分。注意:适当用上情态动词(如 have to / must / can / could),让推测与必要表达自然。",
+  "prompt_en": "Suppose you are an astronaut who has spent the first 24 hours on board a spacecraft. Write a journal entry (about 100 words) including: 1) what you did on board (e.g. sleeping, exercising and eating in zero gravity); 2) how you felt; 3) the part you enjoyed most and the part you enjoyed least. Try to use modal verbs (have to, must, can, could) naturally.",
+  "points": [
+    "做了什么(I had to strap myself in to sleep / I must exercise every day)",
+    "感受(At first everything felt strange, but it was awesome)",
+    "最喜欢 / 最不喜欢(What I enjoyed most was … The hardest part was …)",
+    "适当使用情态动词表必要与能力"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Day 1 on board. What an awesome day it has been! In this world without gravity, there is no up or down, so I had to strap myself into a sleeping bag just to rest safely. In the morning I must have spent an hour cleaning the cabin, because dust floats everywhere. We have to exercise every day, or our muscles will grow weak, so I worked hard on the machine. Eating was the strangest part: I could not use ordinary salt, since it would simply float away. What I enjoyed most was looking down at the blue Earth through the window. The hardest part was getting used to floating, but I am sure I can do better tomorrow.",
+  "model_translation": "在航天器上的第一天。今天真是太棒了!在这个没有重力的世界里,没有上下之分,所以我得把自己绑进睡袋才能安全休息。早上我大概花了一个小时打扫舱室,因为灰尘到处乱飘。我们必须每天锻炼,否则肌肉会变弱,所以我在机器上努力锻炼。吃饭最奇怪:我没法用普通的盐,因为它会直接飘走。我最喜欢的是透过舷窗俯瞰蓝色的地球。最难的是适应漂浮,但我相信明天会做得更好。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:做了什么 / 感受 / 最喜欢与最不喜欢" },
+      { "dimension": "结构", "max": 4, "criteria": "按日记顺序展开、衔接自然、人称时态一致" },
+      { "dimension": "语言", "max": 5, "criteria": "情态动词(have to/must/can/could)运用得当、词汇句型准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "开头点明 Day 1 on board + 总体感受",
+      "做了什么 I had to strap myself in to sleep / We have to exercise every day",
+      "细节感受 Eating was the strangest part …",
+      "结尾 最喜欢/最不喜欢 + 展望 I am sure I can do better tomorrow"
+    ],
+    "key_expressions": [
+      "In this world without gravity, there is no up or down.",
+      "I had to strap myself into a sleeping bag just to rest safely.",
+      "We have to exercise every day, or our muscles will grow weak.",
+      "What I enjoyed most was looking down at the blue Earth."
+    ],
+    "useful_words": ["gravity", "strap", "float", "exercise", "muscle", "crew", "spacecraft", "awesome", "spacesuit", "Earth"]
+  },
+  "high_sentences": [
+    "In this world without gravity, there is no up or down.",
+    "We have to exercise every day, or our muscles will grow weak.",
+    "I could not use ordinary salt, since it would simply float away.",
+    "The hardest part was getting used to floating, but I can do better tomorrow."
+  ],
+  "error_pairs": [
+    { "wrong": "I must to exercise every day.", "correct": "I must exercise every day.", "note": "情态动词 must 后接动词原形,不加 to。" },
+    { "wrong": "I had to strapped myself in.", "correct": "I had to strap myself in.", "note": "have to 后接动词原形 strap。" },
+    { "wrong": "The dust floats everywhere, so I must cleaned the cabin.", "correct": "The dust floats everywhere, so I had to clean the cabin.", "note": "表过去的必要用 had to + 原形,不用 must + 过去式。" }
+  ],
+  "paragraph_template": "【太空生活日记结构】\n开头 Day 1 on board. What an awesome day!\n做了什么 I had to … / We have to … / I must …\n细节感受 The strangest part was …\n结尾 What I enjoyed most was … The hardest part was … I can do better tomorrow."
+}

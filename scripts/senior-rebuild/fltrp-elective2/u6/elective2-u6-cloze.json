@@ -1,0 +1,710 @@
+{
+  "volume": "elective2",
+  "unit": "U6",
+  "topic": "Survival",
+  "source": "外研社版选择性必修第二册 Unit 6 同主题完形(城市狐狸/聪明浣熊/野外急救包/热浪危机/火星种植求生/会进化的蜥蜴)。用词限 U6/初中/常见词,答案唯一,与阅读/听力关不撞。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "An Urban Fox",
+      "text": "Late at night, a young fox slips into the streets of London to look for something to (1)____. Years ago, foxes lived only in the (2)____, but today many of them live right in the city. Far from their natural (3)____, such as larger animals that hunt them, these clever creatures feel safe. The fox soon learns that people leave plenty of food in the rubbish they (4)____ away. It can even open bins and other (5)____ to reach a meal. Some foxes have changed their habits and come out in (6)____, when there are fewer people about. The city is noisy and crowded, yet it gives the fox everything it needs to (7)____. Wherever new buildings go up, the fox quickly (8)____ to the change. It is no longer a (9)____ visitor from the woods but a true city animal. No matter how strange this seems, wild foxes have learned to (10)____ beside us.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "eat",
+            "buy",
+            "read",
+            "wear"
+          ],
+          "answer_index": 0,
+          "explanation": "look for something to eat 找吃的。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "classroom",
+            "countryside",
+            "kitchen",
+            "library"
+          ],
+          "answer_index": 1,
+          "explanation": "foxes lived only in the countryside 乡间。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "teachers",
+            "friends",
+            "predators",
+            "buyers"
+          ],
+          "answer_index": 2,
+          "explanation": "natural predators 天敌(后接 hunt them)。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cook",
+            "grow",
+            "buy",
+            "throw"
+          ],
+          "answer_index": 3,
+          "explanation": "rubbish they throw away 扔掉的垃圾。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "containers",
+            "songs",
+            "lessons",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "open bins and other containers 容器。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "danger",
+            "daylight",
+            "winter",
+            "water"
+          ],
+          "answer_index": 1,
+          "explanation": "come out in daylight 白天出来(fewer people)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "forget",
+            "lose",
+            "survive",
+            "fail"
+          ],
+          "answer_index": 2,
+          "explanation": "needs to survive 生存。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "refuses",
+            "returns",
+            "objects",
+            "adapts"
+          ],
+          "answer_index": 3,
+          "explanation": "quickly adapts to the change 适应变化。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "rare",
+            "rich",
+            "late",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "no longer a rare visitor 罕见的访客。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "cry",
+            "live",
+            "sleep",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "learned to live beside us 与我们为邻而居。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Clever City Racoons",
+      "text": "Racoons that live in cities seem to be more (1)____ than their wild cousins. To find a meal, they must often (2)____ out tricky problems, such as how to open a rubbish bin. In the wild they would never (3)____ such containers, so they have had to learn fast. Scientists have (4)____ that urban racoons solve these puzzles more quickly than country ones. Like the fox, the racoon has changed its (5)____ to fit its new home. It comes out at night and searches the (6)____ that people throw away. There it can find all kinds of (7)____, from bread to meat. Life in the city is not always (8)____, because cars and dogs are real dangers. Yet, out of (9)____ from many natural predators, the racoon often does very well. No matter how hard the city makes life, these animals seem able to (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "tired",
+            "afraid",
+            "intelligent",
+            "hungry"
+          ],
+          "answer_index": 2,
+          "explanation": "more intelligent than their wild cousins 更聪明。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "run",
+            "sleep",
+            "sell",
+            "work"
+          ],
+          "answer_index": 3,
+          "explanation": "work out tricky problems 解决难题。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "see",
+            "eat",
+            "buy",
+            "sing"
+          ],
+          "answer_index": 0,
+          "explanation": "never see such containers in the wild 野外见不到。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lost",
+            "found",
+            "sold",
+            "eaten"
+          ],
+          "answer_index": 1,
+          "explanation": "Scientists have found that… 发现。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "prices",
+            "songs",
+            "habits",
+            "seats"
+          ],
+          "answer_index": 2,
+          "explanation": "changed its habits 改变习性。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "music",
+            "water",
+            "sunlight",
+            "rubbish"
+          ],
+          "answer_index": 3,
+          "explanation": "searches the rubbish people throw away 垃圾。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "food",
+            "noise",
+            "paper",
+            "glass"
+          ],
+          "answer_index": 0,
+          "explanation": "all kinds of food, from bread to meat 食物。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cheap",
+            "safe",
+            "clean",
+            "quiet"
+          ],
+          "answer_index": 1,
+          "explanation": "not always safe, because cars and dogs are dangers 安全。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "order",
+            "date",
+            "reach",
+            "breath"
+          ],
+          "answer_index": 2,
+          "explanation": "out of reach from predators 够不到、远离天敌。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "disappear",
+            "complain",
+            "forget",
+            "survive"
+          ],
+          "answer_index": 3,
+          "explanation": "seem able to survive 生存。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Survival Kit",
+      "text": "Spending time in the wild can be wonderful, but it can also be (1)____. Whether you are a first-time (2)____ or an experienced camper, you should always plan ahead. Wherever you go, take a first-aid (3)____ with you, because it could one day save a (4)____. If a wildfire suddenly breaks out, leave the area quickly but stay (5)____. Never (6)____ up the group when people get lost; instead, stay together and wait for help to (7)____. Always carry enough water, since you cannot live long without it. Tell someone where you are (8)____ before you set off, so they know where to look for you. However hard the journey becomes, do not give up (9)____. No matter what happens, a calm and (10)____ mind is the most important survival tool of all.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "dangerous",
+            "cheap",
+            "sleepy",
+            "polite"
+          ],
+          "answer_index": 0,
+          "explanation": "the wild can also be dangerous 危险。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "teacher",
+            "hiker",
+            "driver",
+            "singer"
+          ],
+          "answer_index": 1,
+          "explanation": "a first-time hiker or camper 远足者。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "song",
+            "price",
+            "kit",
+            "seat"
+          ],
+          "answer_index": 2,
+          "explanation": "a first-aid kit 急救包。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "game",
+            "price",
+            "song",
+            "life"
+          ],
+          "answer_index": 3,
+          "explanation": "save a life 救命。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "calm",
+            "angry",
+            "proud",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "leave quickly but stay calm 冷静。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "wake",
+            "split",
+            "wash",
+            "pick"
+          ],
+          "answer_index": 1,
+          "explanation": "never split up the group 分散。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "escape",
+            "begin",
+            "arrive",
+            "refuse"
+          ],
+          "answer_index": 2,
+          "explanation": "wait for help to arrive 等救援到来。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cooking",
+            "singing",
+            "buying",
+            "going"
+          ],
+          "answer_index": 3,
+          "explanation": "where you are going 你要去哪儿。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "hope",
+            "money",
+            "water",
+            "food"
+          ],
+          "answer_index": 0,
+          "explanation": "do not give up hope 别放弃希望。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hungry",
+            "optimistic",
+            "sleepy",
+            "foreign"
+          ],
+          "answer_index": 1,
+          "explanation": "a calm and optimistic mind 乐观的。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "When the Heat Comes",
+      "text": "Every summer, a (1)____ heat wave hits parts of southern Europe. When the temperature (2)____ above forty degrees, the heat can be deadly. The government quickly (3)____ warnings and advises people to stay (4)____ during the hottest hours. Many families fill the swimming pools and (5)____ to cool down. Doctors warn that older people are in the most (6)____, so neighbours are asked to check on them. A heat wave is only one of the many (7)____ that the world now faces. Scientists believe such events will happen more (8)____ as the planet grows warmer. To (9)____ with the danger, cities are planting more trees and opening cool public rooms. However serious the problem becomes, people who stay calm and help one another will (10)____ it best.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "gentle",
+            "short",
+            "fierce",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "explanation": "a fierce heat wave 酷烈的(deadly)。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "falls",
+            "sleeps",
+            "sells",
+            "rises"
+          ],
+          "answer_index": 3,
+          "explanation": "the temperature rises above forty 升高。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "issues",
+            "eats",
+            "buys",
+            "loses"
+          ],
+          "answer_index": 0,
+          "explanation": "issues warnings 发出警告。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "awake",
+            "indoors",
+            "abroad",
+            "asleep"
+          ],
+          "answer_index": 1,
+          "explanation": "stay indoors during the hottest hours 室内。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "markets",
+            "libraries",
+            "beaches",
+            "factories"
+          ],
+          "answer_index": 2,
+          "explanation": "pools and beaches to cool down 海滩。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "comfort",
+            "silence",
+            "hurry",
+            "danger"
+          ],
+          "answer_index": 3,
+          "explanation": "in the most danger 最危险。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "crises",
+            "games",
+            "songs",
+            "prices"
+          ],
+          "answer_index": 0,
+          "explanation": "many crises the world faces 危机。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "slowly",
+            "often",
+            "quietly",
+            "cheaply"
+          ],
+          "answer_index": 1,
+          "explanation": "happen more often 更频繁。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "play",
+            "argue",
+            "cope",
+            "rest"
+          ],
+          "answer_index": 2,
+          "explanation": "cope with the danger 应对。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "waste",
+            "lose",
+            "handle"
+          ],
+          "answer_index": 3,
+          "explanation": "will handle it best 处理得最好。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Farming on Mars",
+      "text": "It has been a week since the other astronauts left, and I am now (1)____ alone on Mars. A dust storm cut off our (2)____, and I was left behind. Luckily, the landing (3)____ protects me from the deadly radiation outside. My biggest worry at first was (4)____, but I have found an underground store of ice nearby. From the ice I can get the water I need and even (5)____ oxygen. Now my real problem is (6)____. There is only enough for about four (7)____, which is not long enough. Part of our mission was to grow plants in the Martian (8)____, so I have many kinds of seeds. I must work out how to (9)____ on Mars. No matter how hard it is, I refuse to give up. If I can solve this challenge, I will (10)____ until a rescue ship finally arrives.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "left",
+            "sent",
+            "paid",
+            "sold"
+          ],
+          "answer_index": 0,
+          "explanation": "now left alone on Mars 被独自留下。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "breakfast",
+            "communication",
+            "holiday",
+            "music"
+          ],
+          "answer_index": 1,
+          "explanation": "cut off our communication 切断通讯。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "garden",
+            "library",
+            "capsule",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "the landing capsule protects me 着陆舱。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "money",
+            "homework",
+            "music",
+            "water"
+          ],
+          "answer_index": 3,
+          "explanation": "biggest worry was water(后接 ice/water)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "produce",
+            "sell",
+            "forget",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "get water and even produce oxygen 制造氧气。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleep",
+            "food",
+            "noise",
+            "rain"
+          ],
+          "answer_index": 1,
+          "explanation": "my real problem is food(后接 seeds/farm)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "seconds",
+            "metres",
+            "months",
+            "coins"
+          ],
+          "answer_index": 2,
+          "explanation": "enough for about four months 四个月。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "snow",
+            "glass",
+            "cloud",
+            "soil"
+          ],
+          "answer_index": 3,
+          "explanation": "grow plants in the Martian soil 土壤。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "farm",
+            "sleep",
+            "sing",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "how to farm on Mars 种地。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "disappear",
+            "survive",
+            "relax",
+            "quit"
+          ],
+          "answer_index": 1,
+          "explanation": "I will survive until rescue arrives 活下去。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Lizards That Changed",
+      "text": "The green lizards of Florida once lived happily on the lower (1)____ and trunks of the trees. Then a tougher kind, the brown lizards, was (2)____ from Cuba. Suddenly there was not enough (3)____ for everyone, and the green lizards came under great (4)____. To stay away from their new (5)____, they moved higher up the trees. Up there, the branches were smoother and much harder to (6)____. Over a fairly short time of about fifteen (7)____, the green lizards began to change. They grew bigger pads on their (8)____ and stickier skin to help them hold on. In this way they could stay high and (9)____ from the brown lizards below. The story shows that, no matter how tough life becomes, living things can (10)____ to survive.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "windows",
+            "streets",
+            "branches",
+            "rivers"
+          ],
+          "answer_index": 2,
+          "explanation": "lower branches and trunks 枝条。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "forgotten",
+            "painted",
+            "sold",
+            "introduced"
+          ],
+          "answer_index": 3,
+          "explanation": "was introduced from Cuba 被引入。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "food",
+            "music",
+            "paper",
+            "light"
+          ],
+          "answer_index": 0,
+          "explanation": "not enough food for everyone 食物。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "comfort",
+            "pressure",
+            "silence",
+            "colour"
+          ],
+          "answer_index": 1,
+          "explanation": "came under great pressure 压力。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "teachers",
+            "buyers",
+            "neighbours",
+            "singers"
+          ],
+          "answer_index": 2,
+          "explanation": "away from their new neighbours 邻居(指棕蜥蜴)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "buy",
+            "sell",
+            "read",
+            "grip"
+          ],
+          "answer_index": 3,
+          "explanation": "smoother and harder to grip 抓握。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "years",
+            "seconds",
+            "metres",
+            "coins"
+          ],
+          "answer_index": 0,
+          "explanation": "about fifteen years 年。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "books",
+            "toes",
+            "cars",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "bigger pads on their toes 脚趾。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "late",
+            "rich",
+            "safe",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "stay high and safe from the brown lizards 安全。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "refuse",
+            "forget",
+            "complain",
+            "adapt"
+          ],
+          "answer_index": 3,
+          "explanation": "living things can adapt to survive 适应。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "topic": "It's All About Me!",
+  "source": "外研社选择性必修三 Unit 1 同主题完形(接受雀斑/停止网上比较/内在美演讲/穿衣表达自我/戒掉修图/奶奶的一课)。用词限本单元/常见词,答案唯一,选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Learning to Love My Freckles",
+      "text": "When I was younger, I hated the freckles on my face and thought they made me ugly. Every morning I would (1)____ at the mirror and wish they would disappear. I begged my mother to buy a cream that promised to (2)____ them, but nothing worked. For a long time this small thing really (3)____ me, and I avoided having my photo taken. Then one summer my art teacher told me that my freckles were (4)____, like tiny stars across my cheeks. Her words slowly changed the way I (5)____ myself. I began to (6)____ that a face without any marks would be rather boring. Now, instead of hiding, I feel (7)____ of my freckles. They are part of who I am, and they make me (8)____ from everyone else. I have learned an important (9)____: real beauty is not about having a perfect face. It is about being (10)____ with the face you already have.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "stare",
+            "throw",
+            "drive",
+            "cook"
+          ],
+          "answer_index": 0,
+          "explanation": "stare at the mirror 盯着镜子;其余动词不搭配。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "borrow",
+            "remove",
+            "count",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "remove the freckles 去掉雀斑。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "thanked",
+            "invited",
+            "bothered",
+            "followed"
+          ],
+          "answer_index": 2,
+          "explanation": "really bothered me 让我苦恼。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "empty",
+            "loud",
+            "late",
+            "beautiful"
+          ],
+          "answer_index": 3,
+          "explanation": "freckles were beautiful 很美;形容词同类。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "saw",
+            "sold",
+            "drove",
+            "fed"
+          ],
+          "answer_index": 0,
+          "explanation": "the way I saw myself 看待自己的方式。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "refuse",
+            "realise",
+            "forget",
+            "escape"
+          ],
+          "answer_index": 1,
+          "explanation": "began to realise 开始意识到。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "afraid",
+            "sorry",
+            "proud",
+            "tired"
+          ],
+          "answer_index": 2,
+          "explanation": "feel proud of 为……自豪。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "absent",
+            "silent",
+            "asleep",
+            "different"
+          ],
+          "answer_index": 3,
+          "explanation": "make me different from 与众不同。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lesson",
+            "ticket",
+            "engine",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "an important lesson 一个重要的道理。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "angry",
+            "happy",
+            "hungry",
+            "busy"
+          ],
+          "answer_index": 1,
+          "explanation": "be happy with 对……满意;形容词同类。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Stop Comparing",
+      "text": "Last year I spent far too much time on social media, and it slowly made me (1)____. Every day I would scroll through photos of people who seemed prettier, richer and more (2)____ than me. The more I looked, the worse I (3)____. I started to believe that my own life was dull and that I would never be good (4)____. One evening my best friend noticed how quiet I had become and asked what was (5)____. When I explained, she smiled and said that those perfect online lives are mostly not (6)____. People only post their best moments, she reminded me, and (7)____ their bad days. Her words helped me see the truth. I decided to (8)____ less time on my phone and more time with real friends. Bit by bit, I stopped (9)____ myself to strangers on a screen. Now I feel much more (10)____ about who I am.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "famous",
+            "ancient",
+            "unhappy",
+            "golden"
+          ],
+          "answer_index": 2,
+          "explanation": "made me unhappy 让我不快乐;语境为负面。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "asleep",
+            "absent",
+            "empty",
+            "confident"
+          ],
+          "answer_index": 3,
+          "explanation": "more confident 更自信;形容词同类。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "felt",
+            "sold",
+            "drove",
+            "baked"
+          ],
+          "answer_index": 0,
+          "explanation": "the worse I felt 我越难受。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "instead",
+            "enough",
+            "however",
+            "almost"
+          ],
+          "answer_index": 1,
+          "explanation": "good enough 够好。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "polite",
+            "modern",
+            "wrong",
+            "cheap"
+          ],
+          "answer_index": 2,
+          "explanation": "what was wrong 出了什么问题。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "loud",
+            "free",
+            "heavy",
+            "real"
+          ],
+          "answer_index": 3,
+          "explanation": "not real 不真实;形容词同类。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "hide",
+            "share",
+            "enjoy",
+            "repeat"
+          ],
+          "answer_index": 0,
+          "explanation": "hide their bad days 藏起糟糕的日子;与 'post their best moments' 形成对比。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lose",
+            "spend",
+            "waste",
+            "borrow"
+          ],
+          "answer_index": 1,
+          "explanation": "spend less time 花更少时间;固定搭配 spend time。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "selling",
+            "feeding",
+            "comparing",
+            "driving"
+          ],
+          "answer_index": 2,
+          "explanation": "stop comparing myself 停止比较。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sleepy",
+            "hungry",
+            "empty",
+            "positive"
+          ],
+          "answer_index": 3,
+          "explanation": "more positive 更积极;形容词同类。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Speech on Inner Beauty",
+      "text": "Today I want to talk about something we often (1)____: inner beauty. Our world tells us again and again that looks come first. We are taught to (2)____ a lot about our faces, our weight and our clothes. Yet the people we truly (3)____ are seldom the prettiest ones. They are the kind, the honest and the (4)____. A warm smile and a caring heart leave a far deeper (5)____ than a perfect face ever could. Of course, I am not saying that appearance does not (6)____ at all. Looking neat and tidy can (7)____ our confidence and help us make friends. The problem begins when we let our looks (8)____ everything else. So my (9)____ to you is simple. Take care of your appearance, but spend even more energy becoming a person whose (10)____ shines from the inside. That is the kind of beauty that never fades.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "overlook",
+            "borrow",
+            "repair",
+            "count"
+          ],
+          "answer_index": 0,
+          "explanation": "often overlook 常常忽视。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sing",
+            "worry",
+            "drive",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "worry a lot about 非常担心。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "feed",
+            "admire",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "the people we admire 我们敬佩的人。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "absent",
+            "empty",
+            "asleep",
+            "brave"
+          ],
+          "answer_index": 3,
+          "explanation": "the brave 勇敢的人;形容词作名词,与 kind/honest 并列。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "impression",
+            "machine",
+            "ticket",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "leave a deeper impression 留下更深印象。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "matter",
+            "drive",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "does not matter 不重要。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lose",
+            "waste",
+            "boost",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "boost our confidence 增强自信。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "borrow",
+            "repair",
+            "count",
+            "decide"
+          ],
+          "answer_index": 3,
+          "explanation": "let our looks decide everything 让外表决定一切。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "advice",
+            "engine",
+            "ticket",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "my advice to you 我给你的建议。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "beauty",
+            "price",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "whose beauty shines 美由内而外。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Clothes That Say Who I Am",
+      "text": "For years I wore whatever everyone else wore, simply because I did not want to (1)____ out. If a certain style was popular, I bought it, even when it did not (2)____ me at all. Deep down, though, I felt like I was (3)____ to be someone I was not. Then a friend gave me a piece of (4)____ that changed things. She said that clothes can be a quiet way of (5)____ who you really are. So I began to choose pieces that I genuinely (6)____, rather than ones that were merely fashionable. To my surprise, dressing in my own style made me feel far more (7)____. People noticed the change, and a few even said I looked (8)____ than before. I learned that fashion is not about (9)____ everyone else. It is about letting your outside gently (10)____ the person you are inside.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "drive",
+            "cook",
+            "stand",
+            "sing"
+          ],
+          "answer_index": 2,
+          "explanation": "stand out 显得突出;此处不想引人注目。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "feed",
+            "throw",
+            "suit"
+          ],
+          "answer_index": 3,
+          "explanation": "did not suit me 不适合我。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "pretending",
+            "selling",
+            "driving",
+            "feeding"
+          ],
+          "answer_index": 0,
+          "explanation": "pretending to be 假装成。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "engine",
+            "advice",
+            "ticket",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a piece of advice 一条建议。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "selling",
+            "cooking",
+            "showing",
+            "driving"
+          ],
+          "answer_index": 2,
+          "explanation": "a way of showing 展示……的方式。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lost",
+            "sold",
+            "fed",
+            "liked"
+          ],
+          "answer_index": 3,
+          "explanation": "pieces that I liked 我喜欢的衣服。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "comfortable",
+            "absent",
+            "asleep",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "feel more comfortable 更自在;形容词同类。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "louder",
+            "happier",
+            "cheaper",
+            "heavier"
+          ],
+          "answer_index": 1,
+          "explanation": "looked happier 看起来更开心;形容词同类。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "selling",
+            "feeding",
+            "copying",
+            "driving"
+          ],
+          "answer_index": 2,
+          "explanation": "copying everyone else 模仿别人。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "borrow",
+            "repair",
+            "count",
+            "express"
+          ],
+          "answer_index": 3,
+          "explanation": "express the person you are 表达真实的你。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Breaking the Editing Habit",
+      "text": "I used to edit every photo before I dared to post it. I would (1)____ my skin, brighten my eyes and make my face look thinner. At first it felt (2)____, but soon it became a heavy habit. I grew (3)____ that friends would meet me and find the real me less pretty than my pictures. The (4)____ between the two faces made me anxious. One day my younger brother looked at a photo and asked why I did not look like (5)____ in real life. His simple question really made me (6)____. I realised that I was teaching myself to (7)____ my own face. So I made a quiet (8)____ to stop. The first unedited photo was hard to share, but the comments were (9)____, and nobody minded my freckles at all. Little by little, I have learned to (10)____ the face I see in the mirror every morning.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "smooth",
+            "drive",
+            "cook",
+            "sing"
+          ],
+          "answer_index": 0,
+          "explanation": "smooth my skin 把皮肤修平滑。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "absent",
+            "exciting",
+            "asleep",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "felt exciting 觉得新奇;形容词同类。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "proud",
+            "glad",
+            "afraid",
+            "calm"
+          ],
+          "answer_index": 2,
+          "explanation": "grew afraid that 越来越担心。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "engine",
+            "ticket",
+            "garden",
+            "difference"
+          ],
+          "answer_index": 3,
+          "explanation": "the difference between 两者的差别。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "that",
+            "those",
+            "these",
+            "them"
+          ],
+          "answer_index": 0,
+          "explanation": "look like that 指代照片里的样子;代词单数指那张照片。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "think",
+            "drive",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "made me think 让我反思。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "borrow",
+            "repair",
+            "dislike",
+            "count"
+          ],
+          "answer_index": 2,
+          "explanation": "teaching myself to dislike 让自己讨厌自己的脸。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "engine",
+            "ticket",
+            "garden",
+            "decision"
+          ],
+          "answer_index": 3,
+          "explanation": "a quiet decision 一个决定。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "kind",
+            "rude",
+            "loud",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "comments were kind 评论很友善;形容词同类。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "borrow",
+            "accept",
+            "sell",
+            "drive"
+          ],
+          "answer_index": 1,
+          "explanation": "learned to accept 学会接受。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Grandma's Lesson",
+      "text": "Whenever I felt sad about my looks, my grandmother had a gentle way of helping me. She would take my hand and (1)____ me a story from her own youth. As a girl, she had been teased for being too tall, and for years it (2)____ her greatly. But over time she came to (3)____ that her height was simply part of her. \"The mirror,\" she once told me, \"shows only your (4)____, never your heart.\" She believed that a kind word could leave a deeper (5)____ than the prettiest face. People might (6)____ you at first by your appearance, she said, but they remember you by your (7)____. Her own friends loved her not because she was (8)____, but because she was warm and honest. Those quiet talks taught me to (9)____ less about my reflection and more about the kind of person I wanted to (10)____. I still hear her gentle voice today.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "drive",
+            "tell",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "tell me a story 给我讲故事。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "thanked",
+            "invited",
+            "followed",
+            "troubled"
+          ],
+          "answer_index": 3,
+          "explanation": "it troubled her greatly 让她非常苦恼。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "accept",
+            "borrow",
+            "repair",
+            "count"
+          ],
+          "answer_index": 0,
+          "explanation": "came to accept 慢慢接受。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "engine",
+            "surface",
+            "ticket",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "shows only your surface 只显示外表。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "machine",
+            "price",
+            "impression",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "leave a deeper impression 留下更深印象。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "feed",
+            "throw",
+            "judge"
+          ],
+          "answer_index": 3,
+          "explanation": "judge you by your appearance 凭外表评判你。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "character",
+            "engine",
+            "ticket",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "remember you by your character 凭品格记住你。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "absent",
+            "pretty",
+            "asleep",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "not because she was pretty 不是因为漂亮;形容词同类。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sing",
+            "drive",
+            "worry",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "worry less about 少在意。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "borrow",
+            "sell",
+            "repair",
+            "become"
+          ],
+          "answer_index": 3,
+          "explanation": "the person I wanted to become 想成为的人。"
+        }
+      ]
+    }
+  ]
+}

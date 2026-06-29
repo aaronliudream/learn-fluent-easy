@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "topic": "Write about Overcoming a Challenge(写一篇克服困难的经历)",
+  "title_en": "A Challenge I Overcame",
+  "genre": "记叙文 / 励志(describe a difficulty + how you overcame it + what you learnt)",
+  "source": "外研社(新标准)选择性必修第一册 Unit 2 Developing ideas / Presenting ideas:write about an experience of overcoming a challenge,主题 Onwards and Upwards。",
+  "prompt_cn": "假设你叫李华,学校英语报正在征集“勇往直前”主题的故事。请用英语写一篇约100词的短文,内容包括:① 你曾遇到的一个困难是什么;② 最难的地方在哪里、你当时的感受;③ 你如何坚持并克服了它;④ 你从中学到了什么。注意:恰当使用本单元 doing / to do 作宾语的结构(如 enjoy doing、decide to do、keep doing、stop doing 等)。",
+  "prompt_en": "Suppose you are Li Hua. Your school English newspaper is collecting stories on the theme \"Onwards and Upwards\". Write a short passage (about 100 words) including: 1) a challenge you once faced; 2) what the hardest part was and how you felt; 3) how you kept going and overcame it; 4) what you learnt. Try to use object structures from this unit, such as enjoy doing, decide to do, keep doing and stop doing.",
+  "points": [
+    "清楚交代困难(The biggest challenge I faced was …)",
+    "写出最难处与感受(The hardest part was … and I felt like giving up)",
+    "如何坚持克服(But I decided to … and kept …)",
+    "收获与感悟(I learnt that success rarely happens overnight)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Last year, the biggest challenge I faced was learning to swim before our school sports day. At first I was the slowest in the class, and the hardest part was the fear of deep water. More than once I felt like giving up. However, I decided to keep trying. I asked my coach to help me, and I practised swimming a little every morning before lessons. Slowly, I stopped feeling afraid and began to enjoy moving through the water. On sports day, I did not win, but I managed to finish my first race. This experience taught me that success rarely happens overnight, and that we should never give up.",
+  "model_translation": "去年,我面临的最大挑战是在校运动会前学会游泳。起初我是班里最慢的,最难的地方是对深水的恐惧。我不止一次想放弃。然而,我决定坚持下去。我请教练帮我,每天上课前坚持游一会儿。慢慢地,我不再害怕,开始享受在水中前进。运动会那天我没有获胜,但我顺利游完了第一场比赛。这段经历让我懂得:成功很少一蹴而就,我们绝不应放弃。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:困难 / 最难处与感受 / 如何坚持 / 收获" },
+      { "dimension": "结构", "max": 4, "criteria": "按时间顺序展开、起承转合清楚、句句围绕主题、连贯自然" },
+      { "dimension": "语言", "max": 5, "criteria": "恰当运用 doing/to do 作宾语结构、词汇句型准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题困难 The biggest challenge I faced was …",
+      "最难处 The hardest part was … and I felt like giving up.",
+      "坚持 However, I decided to … and I kept …",
+      "收获 This experience taught me that success rarely happens overnight."
+    ],
+    "key_expressions": [
+      "The biggest challenge I faced was learning to swim.",
+      "More than once I felt like giving up.",
+      "I decided to keep trying and practised a little every day.",
+      "Success rarely happens overnight, so we should never give up."
+    ],
+    "useful_words": ["challenge", "give up", "keep trying", "decide", "practise", "overcome", "perseverance", "confident", "overnight", "worthwhile"]
+  },
+  "high_sentences": [
+    "The biggest challenge I faced was learning to swim before our school sports day.",
+    "More than once I felt like giving up, but I decided to keep trying.",
+    "Slowly, I stopped feeling afraid and began to enjoy moving through the water.",
+    "This experience taught me that success rarely happens overnight."
+  ],
+  "error_pairs": [
+    { "wrong": "I decided keeping trying.", "correct": "I decided to keep trying.", "note": "decide 后接不定式作宾语 to do。" },
+    { "wrong": "I enjoy to swim every morning.", "correct": "I enjoy swimming every morning.", "note": "enjoy 后接动名词作宾语 doing。" },
+    { "wrong": "I stopped to feel afraid and relaxed.", "correct": "I stopped feeling afraid and relaxed.", "note": "'不再害怕'用 stop doing;stop to do 意为'停下来去做'。" }
+  ],
+  "paragraph_template": "【克服困难记叙结构】\n第1句 点题困难:The biggest challenge I faced was …\n第2-3句 最难处与感受:The hardest part was … I felt like giving up.\n第4-6句 如何坚持克服:However, I decided to … I kept … Slowly, I …\n第7句 收获:This experience taught me that success rarely happens overnight."
+}

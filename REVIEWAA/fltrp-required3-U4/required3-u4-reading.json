@@ -1,0 +1,338 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "topic": "Amazing Art",
+  "source": "外研社(新标准)必修三 Unit 4 同主题阅读(卢浮宫直播/韩干画马/中国艺术形式/当代艺术之争/梵高向日葵/身边的艺术)。词限 U4/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Live from the Louvre",
+      "topic_cn": "记叙·卢浮宫现场直播",
+      "body": "Hi, it's Zack, and greetings from Paris! This broadcast is being brought to you from one of the largest museums on Earth, the Louvre. At the top of these stone stairs, get a load of that huge sculpture! It is the Winged Victory of Samothrace. She looks as if she has just flown down from the sky and landed on a ship. Her head and arms are missing, but you can still imagine her holding her arms up high to celebrate a battle. Just look at how her stone dress is being folded by the wind. I really cannot believe she is made of stone, for the skill of the sculptor is incredible. There are so many people here that I am being pushed around quite a bit. Coming up next is the one and only Mona Lisa, which is smaller than you would expect and protected by glass.",
+      "vocab_notes": [
+        {
+          "word": "broadcast",
+          "cn": "直播节目"
+        },
+        {
+          "word": "sculptor",
+          "cn": "雕塑家"
+        },
+        {
+          "word": "fold",
+          "cn": "折叠"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where is Zack speaking from?",
+          "options": [
+            "Inside one of the world's biggest museums.",
+            "On a busy street in Paris.",
+            "At a small private gallery.",
+            "From a television studio."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说直播来自地球上最大的博物馆之一卢浮宫,即世界上最大的博物馆之一。"
+        },
+        {
+          "stem": "Why is Zack being pushed about as he speaks?",
+          "options": [
+            "Because the floor is wet and slippery.",
+            "Because the hall is very crowded with people.",
+            "Because the guards are moving him on.",
+            "Because a storm has hit the building."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'There are so many people here that I am being pushed around',因人太多而被挤,即大厅很拥挤。"
+        },
+        {
+          "stem": "What does Zack say about the Mona Lisa?",
+          "options": [
+            "It is less large than most people imagine.",
+            "It hangs in the open with no cover.",
+            "It is the biggest work in the museum.",
+            "It has lost its head and arms."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'smaller than you would expect',即比人们想象的要小;玻璃保护说明并非露天,失去头臂的是雕像而非蒙娜丽莎。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Han Gan and His Horses",
+      "topic_cn": "记叙·画马大师韩干",
+      "body": "Born into a poor family in the early Tang Dynasty, young Han Gan had to work in a local wine shop to support his family. His talent was discovered by accident. One day he was sent to collect payment from the poet Wang Wei. While waiting at the gate, he used a stick to draw in the dirt and was seen by the poet himself. Wang Wei decided to sponsor the young man to study painting. Later, Han Gan was chosen to serve the emperor. The Tang emperors were very fond of horses, so the animal was a frequent subject for artists. Most painters at that time simply copied earlier works, but Han Gan's method was different: he observed real horses. He even moved in with the stable workers, and the animals gave him plenty of inspiration. When the emperor told him to take a master as his teacher, he replied that all the horses in the royal stables were his true teachers.",
+      "vocab_notes": [
+        {
+          "word": "sponsor",
+          "cn": "资助"
+        },
+        {
+          "word": "emperor",
+          "cn": "皇帝"
+        },
+        {
+          "word": "inspiration",
+          "cn": "灵感"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How was Han Gan's painting talent first noticed?",
+          "options": [
+            "He won a competition at the royal palace.",
+            "A poet happened to see him drawing on the ground.",
+            "A master came to teach him at home.",
+            "The emperor visited his family's wine shop."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 Wang Wei 在门口看到他用树枝在土里画画,即一位诗人偶然看见他在地上画画。"
+        },
+        {
+          "stem": "How did Han Gan's way of learning differ from other painters?",
+          "options": [
+            "He never looked at any real horses.",
+            "He only painted from his imagination.",
+            "He studied living horses instead of copying old pictures.",
+            "He refused to study painting at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说别人多临摹前人作品,而韩干观察真马,即研究活马而非临摹旧画。"
+        },
+        {
+          "stem": "What did Han Gan mean when he spoke to the emperor about teachers?",
+          "options": [
+            "He had never had any teacher in his life.",
+            "He wished to leave the royal palace soon.",
+            "He thought no one could paint horses well.",
+            "The real horses he watched were what taught him most."
+          ],
+          "answer_index": 3,
+          "explanation": "他说马厩里的马才是他真正的老师,意为他观察的真马教会了他最多。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Festival of Chinese Art Forms",
+      "topic_cn": "记叙·中国艺术形式体验",
+      "body": "Yesterday I went to an amazing Chinese art festival, where artists could demonstrate their skills and teach the visitors. The first thing that caught my attention was a fifteenth-century bowl in a breathtaking exhibition of porcelain. It vividly showed a dragon playing with a ball. Then I tried paper cutting, which means making images out of paper. It was difficult but great fun, and I managed to make one shaped like a fish. At the next stand, a woman was using a needle and thread to do some embroidery, and it looked so pretty. Later I saw two elegant Chinese paintings of a pine tree and some bamboo hanging on the wall. An old man was writing calligraphy in a wonderfully free style. Another man showed me how seal cutting works: Chinese characters are carved into small squares of stone and then stamped onto paper with ink. He even made one with my name in Chinese, which was awesome.",
+      "vocab_notes": [
+        {
+          "word": "demonstrate",
+          "cn": "示范"
+        },
+        {
+          "word": "embroidery",
+          "cn": "刺绣"
+        },
+        {
+          "word": "seal cutting",
+          "cn": "篆刻"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the writer first notice at the festival?",
+          "options": [
+            "An old painted bowl shown in a porcelain display.",
+            "A woman doing colourful embroidery.",
+            "An old man writing calligraphy.",
+            "A fish made out of cut paper."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说最先吸引注意的是瓷器展中一只十五世纪的碗,即瓷器展里的一只古碗。"
+        },
+        {
+          "stem": "What does the passage say about seal cutting?",
+          "options": [
+            "It is a way of painting bamboo and pine trees.",
+            "Characters are cut into stone and then pressed onto paper.",
+            "It uses a needle and thread to make pictures.",
+            "It means folding paper into animal shapes."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 '汉字被刻进小石块再蘸墨盖到纸上',即把字刻进石头再印到纸上;其余分别是国画/刺绣/剪纸。"
+        },
+        {
+          "stem": "How did the writer feel about trying paper cutting?",
+          "options": [
+            "It was easy and rather boring.",
+            "It was impossible and not worth doing.",
+            "It was hard yet enjoyable at the same time.",
+            "It was frightening and unpleasant."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'difficult but great fun',即虽难却很有乐趣。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Is It Really Art?",
+      "topic_cn": "议论·当代艺术之争",
+      "body": "Since it began in the late twentieth century, the Contemporary Art Movement has raised many questions, with people asking, \"Is it really art?\" This happened in 1999 with the British artist Tracey Emin's work My Bed, which was quite literally her own unmade bed. Then, in 2015, cleaners in an Italian gallery threw away an art piece, mistaking the pile of empty bottles, cigarette ends and pieces of coloured paper for rubbish. Some people say that contemporary art lacks skill, meaning and real value, and that anyone could make such works. Others argue that its worth lies in its power to stimulate new discussions and to change the way we understand everyday objects, such as water pipes and iron wires. Whatever side you take, one thing is clear: this kind of art makes people stop, look and think. Perhaps that is exactly what the artists want their viewers to do.",
+      "vocab_notes": [
+        {
+          "word": "contemporary",
+          "cn": "当代的"
+        },
+        {
+          "word": "lack",
+          "cn": "缺乏"
+        },
+        {
+          "word": "stimulate",
+          "cn": "激发"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the cleaners throw the artwork away in 2015?",
+          "options": [
+            "They were told to clean the gallery walls.",
+            "They disliked the colour of the paper.",
+            "They wanted to sell the bottles for money.",
+            "They believed the objects were just waste."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说清洁工把瓶子烟头等当成垃圾,即以为那些东西是废物。"
+        },
+        {
+          "stem": "What do supporters of contemporary art believe?",
+          "options": [
+            "It can spark fresh discussion and new ways of seeing.",
+            "It is always made with the highest skill.",
+            "It should only use expensive materials.",
+            "It has no connection to everyday life."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说其价值在于激发新讨论、改变我们对日常物品的理解,即引发新讨论和新视角。"
+        },
+        {
+          "stem": "What is the writer's final point about this kind of art?",
+          "options": [
+            "It is certainly a waste of time.",
+            "It pushes people to pause and reflect.",
+            "It will soon disappear completely.",
+            "It can only be enjoyed by experts."
+          ],
+          "answer_index": 1,
+          "explanation": "末段说这类艺术让人停下、观看、思考,即促使人们停下来反思。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Van Gogh's Sunflowers",
+      "topic_cn": "说明·梵高《向日葵》",
+      "body": "Van Gogh's sunflower paintings are among his most famous works, and this one was finished in Arles in 1889. It shows sunflowers standing in a vase, painted mostly in three shades of yellow. The colours of the flowers range from bright yellows to brownish yellows, which suggests that the flowers are at different stages of life. Some are fresh and open, while others are beginning to fade. These paintings held a special meaning for Van Gogh. When his friend Paul Gauguin, who was also a famous painter, came to live with him for a while, Van Gogh hung the first two sunflower pictures in his guest's room to make him feel welcome. To many people, the warm colours seem to glow with light and life, even though the artist himself was often poor and unhappy. Today the sunflowers are loved around the world, and copies of them are sold in shops far from France.",
+      "vocab_notes": [
+        {
+          "word": "vase",
+          "cn": "花瓶"
+        },
+        {
+          "word": "shade",
+          "cn": "(色彩)深浅"
+        },
+        {
+          "word": "mostly",
+          "cn": "主要地"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do the different shades of yellow suggest?",
+          "options": [
+            "The painter ran out of other colours.",
+            "The flowers were painted at night.",
+            "The flowers are at various points in their lives.",
+            "The vase was made of gold."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说颜色从明黄到褐黄,表明花处于不同的生命阶段,即处于不同时期。"
+        },
+        {
+          "stem": "Why did Van Gogh hang the first two sunflower paintings in the guest room?",
+          "options": [
+            "To sell them to a passing buyer.",
+            "To hide them from the public.",
+            "To protect them from sunlight.",
+            "To make his visiting friend feel welcome."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说为了欢迎来同住的朋友高更,即让来访的朋友感到受欢迎。"
+        },
+        {
+          "stem": "What does the passage suggest about Van Gogh's own life?",
+          "options": [
+            "He often had little money and was unhappy.",
+            "He was rich and famous while alive.",
+            "He never had any close friends.",
+            "He disliked the colour yellow."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the artist himself was often poor and unhappy',即他常常贫穷而不快乐。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Art Is All Around Us",
+      "topic_cn": "议论·身边的艺术",
+      "body": "Do you think that going to a museum is the only way to see art? Actually, art is everywhere around us. On the walls of my local pub, for example, young people are painting beautiful pictures full of colour. Some people find such graffiti too random and do not like it, but I really enjoy its bright shades. Even trees can become art. In our neighbourhood, some gardeners are trimming trees into interesting shapes, like animals or clouds, so that an ordinary park turns into an open-air gallery. And if you look up, you will see that builders are putting up original, impressive buildings in street after street. None of these works sits behind glass in a quiet hall, yet each one is being created with real care and imagination. So next time you walk down your own street, remember to slow down. Great art may be waiting for you in the most everyday places.",
+      "vocab_notes": [
+        {
+          "word": "graffiti",
+          "cn": "涂鸦"
+        },
+        {
+          "word": "neighbourhood",
+          "cn": "社区"
+        },
+        {
+          "word": "gallery",
+          "cn": "美术馆"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the main idea of the passage?",
+          "options": [
+            "Only museums can hold true works of art.",
+            "Art can be found in many ordinary, everyday places.",
+            "Graffiti should be removed from city walls.",
+            "Trees are too plain to be called art."
+          ],
+          "answer_index": 1,
+          "explanation": "全文强调艺术处处可见,即艺术存在于许多平常的地方。"
+        },
+        {
+          "stem": "How does the writer feel about the graffiti on the pub walls?",
+          "options": [
+            "He thinks it is ugly and messy.",
+            "He wishes it would be painted over.",
+            "He likes the bright colours of it.",
+            "He has never really noticed it."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'I really enjoy its bright shades',即喜欢它鲜艳的颜色。"
+        },
+        {
+          "stem": "Why does the writer mention the shaped trees in the park?",
+          "options": [
+            "To complain that the gardeners waste time.",
+            "To explain how to grow healthier trees.",
+            "To prove that parks are usually boring.",
+            "To show how everyday spots can become art."
+          ],
+          "answer_index": 3,
+          "explanation": "举修剪成形的树是为了说明平常之地也能变成艺术,即日常空间也能成为艺术。"
+        }
+      ]
+    }
+  ]
+}

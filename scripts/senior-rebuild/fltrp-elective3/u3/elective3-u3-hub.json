@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "The D-Day landings began at dawn on the sixth of June, 1944.", "opts": ["诺曼底登陆于1944年6月6日黎明开始。", "诺曼底登陆从未真正发生过。", "登陆是在深夜十二点开始的。", "登陆持续了整整十年。"], "answer": 0 },
+    { "audio": "The enemy were hiding above the beach, ready to attack the soldiers.", "opts": ["敌人埋伏在海滩上方,准备攻击士兵。", "敌人早已撤离了海滩。", "敌人在海滩上欢迎士兵。", "海滩上根本没有敌人。"], "answer": 0 },
+    { "audio": "By the end of August, the Allies had liberated Paris.", "opts": ["到八月底,同盟国已解放了巴黎。", "到八月底,巴黎被敌人占领。", "巴黎从未被解放。", "同盟国放弃了巴黎。"], "answer": 0 },
+    { "audio": "Each soldier was given a parachute before the night jump.", "opts": ["每名士兵在夜间跳伞前都领到一具降落伞。", "士兵们没有任何降落伞。", "只有军官才有降落伞。", "降落伞在白天才发放。"], "answer": 0 },
+    { "audio": "Today China plays an important role in UN peacekeeping.", "opts": ["如今中国在联合国维和行动中发挥重要作用。", "中国从不参加维和行动。", "维和行动已经停止。", "中国只派出一名维和人员。"], "answer": 0 },
+    { "audio": "We will remember the brave soldiers who never came home.", "opts": ["我们会铭记那些再未归来的勇敢士兵。", "我们已经忘记了那些士兵。", "所有士兵都平安回家了。", "士兵们拒绝回家。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "The general gave the order to ____ the city from the enemy.(解放)", "opts": ["liberate", "bomb", "drown", "recall"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Thousands of soldiers landed by ____ behind enemy lines.(降落伞)", "opts": ["parachute", "uniform", "weapon", "tank"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Chinese peacekeepers are praised for their ____.(专业素质)", "opts": ["professionalism", "horror", "violence", "aggression"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Every year people hold a ____ ceremony for the dead.(纪念的)", "opts": ["memorial", "violent", "supreme", "allied"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The whole army ____ ready to cross the Channel before dawn.", "opts": ["was", "were", "have", "do"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "A number of boats ____ hit by enemy fire that morning.", "opts": ["were", "was", "has", "is"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The number of casualties ____ rising hour by hour.", "opts": ["was", "were", "have", "are"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Bread and butter ____ all the soldiers had to eat at dawn.", "opts": ["was", "were", "have", "do"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["指挥官等待合适的天气和潮水才下令进攻。", "指挥官不顾天气立刻进攻。", "士兵们拒绝渡过海峡。", "进攻被推迟了一整年。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The commander waited for the right weather and tide before ordering the attack." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["这些维和人员帮助交战各方遵守和平协议。", "维和人员向当地出售武器。", "维和人员只是袖手旁观。", "维和人员发动了一场战争。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The peacekeepers help the warring sides keep to their peace agreement." }
+  ],
+  "reading": {
+    "passage": "Operation Overlord was the largest sea, air and land attack in history. Its aim was to free western Europe, and after years of secret planning it began on 6 June 1944. Though the cost in lives was high, the landings marked the beginning of the end of the war.",
+    "passageCn": "“霸王行动”是历史上最大规模的海陆空联合进攻。它的目标是解放西欧,经过数年秘密筹划,于1944年6月6日打响。尽管生命代价高昂,登陆却标志着战争走向终结的开端。",
+    "questions": [
+      { "q": "What was the aim of Operation Overlord?", "opts": ["To free western Europe.", "To attack England.", "To stop all trade.", "To build new ships."], "answer": 0 },
+      { "q": "What did the landings mark?", "opts": ["The beginning of the end of the war.", "The very start of the war.", "A long peace before the war.", "The defeat of the Allies."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a few sentences reviewing a war film you have seen. Say its name and director, describe one scene, and explain the message it sends about war and peace. Try to keep your subjects and verbs in agreement (e.g. the team is …, a number of soldiers were …).",
+    "promptCn": "写几句话评价一部你看过的战争电影:说出片名和导演,描述一个场景,并说明它传达的关于战争与和平的信息。注意主谓一致(如 the team is …,a number of soldiers were …)。",
+    "sampleWords": ["film", "director", "soldier", "scene", "horror", "courage", "team", "peace", "remember", "recommend"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking About the D-Day Landings",
+      "lines": [
+        { "role": "A", "text": "Have you finished reading about the D-Day landings?", "cn": "你读完关于诺曼底登陆的内容了吗?" },
+        { "role": "B", "text": "Yes. The whole army was ready, yet the fighting on Omaha Beach was terrible.", "cn": "读完了。整支部队都准备好了,可奥马哈海滩的战斗太可怕了。" },
+        { "role": "A", "text": "I know. A number of boats were hit before they reached the sand.", "cn": "是啊。许多船在到达海滩前就被击中了。" },
+        { "role": "B", "text": "Their courage changed the course of the war, though. We should remember them.", "cn": "不过他们的勇气改变了战争走向。我们应当铭记他们。" }
+      ]
+    },
+    {
+      "title": "Why Peace Matters",
+      "lines": [
+        { "role": "A", "text": "Why does our teacher want us to study so many old wars?", "cn": "老师为什么要我们学这么多旧战争?" },
+        { "role": "B", "text": "Because the number of people who remember them is getting smaller every year.", "cn": "因为记得这些事的人一年比一年少。" },
+        { "role": "A", "text": "So learning about war helps us value peace?", "cn": "所以了解战争能让我们珍惜和平?" },
+        { "role": "B", "text": "Exactly. Remembering the past is the first step towards keeping the peace.", "cn": "正是。铭记过去是守护和平的第一步。" }
+      ]
+    }
+  ]
+}

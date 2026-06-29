@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "topic": "Meeting the Muse",
+  "source": "外研社(新标准)选择性必修一 Unit 4 同主题完形(自然中的灵感/逛现代艺术馆/学水墨画/生活中的艺术/古画的数字版/民间故事谱曲)。用词限本单元/常见词,每空唯一答案,4选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Finding Inspiration in Nature",
+      "text": "Lin Yu has always loved to draw, and her greatest (1)____ is nature. Every weekend she walks in the hills near her home, looking closely at the trees, flowers and birds. She says that even a single leaf can give her a fresh (2)____ for a painting. Last spring, she was so (3)____ by a field of wild flowers that she could not wait to pick up her brush. Back home, she tried to (4)____ their bright colours on paper. At first the painting did not look right, and she felt a little (5)____. But she refused to (6)____. She painted the same scene again and again until she was finally (7)____ with the result. Her art teacher was deeply (8)____ by her hard work and her love of nature. He told the class that the best artists learn to (9)____ the world around them with fresh eyes. For Lin Yu, the message was clear: inspiration is everywhere, as long as you take the time to (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "inspiration",
+            "machine",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "her greatest inspiration 最大的灵感来源。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "ticket",
+            "idea",
+            "noise",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "a fresh idea 新创意。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "exciting",
+            "bored",
+            "excited",
+            "boring"
+          ],
+          "answer_index": 2,
+          "explanation": "主语 she 感到兴奋 → excited(-ed)。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "forget",
+            "lose",
+            "capture"
+          ],
+          "answer_index": 3,
+          "explanation": "capture their colours 捕捉色彩。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "disappointed",
+            "pleased",
+            "proud",
+            "glad"
+          ],
+          "answer_index": 0,
+          "explanation": "画得不理想 → felt disappointed 失望。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "quit",
+            "sleep",
+            "cry"
+          ],
+          "answer_index": 1,
+          "explanation": "refused to quit 拒绝放弃。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "satisfying",
+            "boring",
+            "satisfied",
+            "bored"
+          ],
+          "answer_index": 2,
+          "explanation": "主语 she 对结果满意 → satisfied(-ed)。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "impressing",
+            "amazing",
+            "boring",
+            "impressed"
+          ],
+          "answer_index": 3,
+          "explanation": "主语 teacher 留下深刻印象 → impressed(-ed)。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "observe",
+            "throw",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "observe the world 观察世界。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sleep",
+            "look",
+            "run",
+            "pay"
+          ],
+          "answer_index": 1,
+          "explanation": "take the time to look 花时间去看。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Visit to the Modern Art Museum",
+      "text": "Last Sunday, my friend and I went to a new (1)____ of abstract art at the city museum. As soon as we walked in, I was (2)____ by the bright colours on the walls. One large painting was so (3)____ that we stood in front of it for a long time. My friend said the shapes looked a little (4)____ at first, but the more we looked, the more we enjoyed them. A guide explained that abstract art does not always (5)____ real objects; instead, it tries to express feelings. That idea was completely new and very (6)____ to me. Near the exit, there was a modern artwork made entirely of (7)____ and light. It was truly (8)____ to see how the artist had turned cold metal into something beautiful. By the end of the visit, I had a much better (9)____ of what art can be. I left the museum feeling (10)____ and full of new ideas.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "machine",
+            "garden",
+            "exhibition",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "an exhibition of abstract art 抽象艺术展。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "amazing",
+            "bored",
+            "boring",
+            "amazed"
+          ],
+          "answer_index": 3,
+          "explanation": "主语 I 被惊艳 → amazed(-ed)。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "moving",
+            "moved",
+            "quiet",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "主语 painting 令人感动 → moving(-ing)。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cheap",
+            "strange",
+            "loud",
+            "sweet"
+          ],
+          "answer_index": 1,
+          "explanation": "shapes looked strange 形状看着奇怪。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "eat",
+            "sell",
+            "show",
+            "buy"
+          ],
+          "answer_index": 2,
+          "explanation": "does not always show real objects 不总是描绘实物。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "excited",
+            "boring",
+            "bored",
+            "exciting"
+          ],
+          "answer_index": 3,
+          "explanation": "主语 idea 令人兴奋 → exciting(-ing)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "wire",
+            "water",
+            "paper",
+            "glass"
+          ],
+          "answer_index": 0,
+          "explanation": "made of wire and light 由金属丝和光制成。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "amazed",
+            "amazing",
+            "tiring",
+            "tired"
+          ],
+          "answer_index": 1,
+          "explanation": "形式主语 It,是令人惊叹的事 → amazing(-ing)。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "ticket",
+            "understanding",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "a better understanding 更深的理解。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "inspiring",
+            "bored",
+            "tired",
+            "inspired"
+          ],
+          "answer_index": 3,
+          "explanation": "主语 I 受到鼓舞 → inspired(-ed)。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Learning Chinese Ink Painting",
+      "text": "My grandmother is the person (1)____ first taught me Chinese ink painting. She told me it was an art (2)____ done with a soft brush and black ink. At first my lines were shaky, and I almost wanted to (3)____. But Grandma said that painting shows the (4)____ of the person behind the brush, so I should be patient. Little by little, I learned to (5)____ each stroke slowly and carefully. Now ink painting is the hobby (6)____ I enjoy most of all. It makes me feel (7)____ and helps me forget the stress of school. It also (8)____ me to the past, because people have painted this way for thousands of (9)____. Whenever I pick up my brush, I feel proud to be part of such an old (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "who",
+            "which",
+            "where",
+            "when"
+          ],
+          "answer_index": 0,
+          "explanation": "the person who 指人作主语。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "form",
+            "noise",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "an art form 一种艺术形式。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "sleep",
+            "quit",
+            "run"
+          ],
+          "answer_index": 2,
+          "explanation": "wanted to quit 想放弃。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "weather",
+            "noise",
+            "character"
+          ],
+          "answer_index": 3,
+          "explanation": "the character of the person 人的品格。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "draw",
+            "throw",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "draw each stroke 画好每一笔。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "who",
+            "that",
+            "where",
+            "when"
+          ],
+          "answer_index": 1,
+          "explanation": "the hobby that I enjoy 指物作宾语。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "angry",
+            "afraid",
+            "calm",
+            "noisy"
+          ],
+          "answer_index": 2,
+          "explanation": "feel calm 感到平静。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sells",
+            "breaks",
+            "loses",
+            "connects"
+          ],
+          "answer_index": 3,
+          "explanation": "connects me to the past 把我和过去相连。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "years",
+            "minutes",
+            "metres",
+            "seconds"
+          ],
+          "answer_index": 0,
+          "explanation": "thousands of years 数千年。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "shop",
+            "art",
+            "game",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "an old art 古老的艺术。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Art in Everyday Life",
+      "text": "Art is not only found in museums; it is all (1)____ us in daily life. In some cities, artists paint bright pictures on the holes of old trees, turning a plain street into something (2)____. Others paint flat manhole covers with lovely (3)____ of animals and flowers. There is even an art form (4)____ uses colourful wool to cover lamp posts and railings. These small works often make people smile and (5)____ their day. The artists behind them want to bring beauty to ordinary (6)____. They believe that everyone should be able to (7)____ art, not just those who visit galleries. Many passers-by are pleasantly (8)____ when they suddenly meet such art on their way to work. This kind of street art is becoming a popular (9)____ in many countries. It reminds us that, with a little imagination, almost any corner can become a (10)____ of beauty.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "under",
+            "behind",
+            "around",
+            "between"
+          ],
+          "answer_index": 2,
+          "explanation": "all around us 在我们周围。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "empty",
+            "silent",
+            "cheap",
+            "beautiful"
+          ],
+          "answer_index": 3,
+          "explanation": "something beautiful 美丽的东西。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "pictures",
+            "prices",
+            "noises",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "lovely pictures 可爱的图画。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "who",
+            "that",
+            "where",
+            "when"
+          ],
+          "answer_index": 1,
+          "explanation": "an art form that uses 指物作主语。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "break",
+            "sell",
+            "brighten",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "brighten their day 点亮他们的一天。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "machines",
+            "tickets",
+            "people"
+          ],
+          "answer_index": 3,
+          "explanation": "ordinary people 普通人。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "enjoy",
+            "forget",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "able to enjoy art 能欣赏艺术。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "surprising",
+            "surprised",
+            "bored",
+            "boring"
+          ],
+          "answer_index": 1,
+          "explanation": "主语 passers-by 感到惊喜 → surprised(-ed)。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "trend",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "a popular trend 流行潮流。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "place"
+          ],
+          "answer_index": 3,
+          "explanation": "a place of beauty 美的所在。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Bringing an Old Painting to Life",
+      "text": "One of China's most famous paintings shows busy life along a river during the Song Dynasty. Because the original is rarely on (1)____, people once queued for hours just to see it for a few minutes. Thanks to new technology, however, millions more people can now enjoy a digital (2)____ of this work. With the help of 3D animation, viewers can watch the tiny figures (3)____ around and even seem to talk to one another. They can also see the scenes slowly (4)____ from day into night. Standing before the giant screen, I was completely (5)____ by what I saw. The whole experience was far more (6)____ than looking at a still picture. A guide explained that such technology makes old art more (7)____ to young people. I think this is a wonderful (8)____, because it helps more of us connect with the past. Some people (9)____ that machines may change art too much. But for me, seeing this old painting come alive was simply (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "display",
+            "holiday",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "on display 展出。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "machine",
+            "version",
+            "garden",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "a digital version 数字版本。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sleep",
+            "sell",
+            "move",
+            "buy"
+          ],
+          "answer_index": 2,
+          "explanation": "watch the figures move 看人物移动。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "lose",
+            "forget",
+            "change"
+          ],
+          "answer_index": 3,
+          "explanation": "scenes change from day into night 场景从白天变到夜晚。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "amazed",
+            "amazing",
+            "bored",
+            "boring"
+          ],
+          "answer_index": 0,
+          "explanation": "主语 I 被震撼 → amazed(-ed)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "excited",
+            "exciting",
+            "boring",
+            "bored"
+          ],
+          "answer_index": 1,
+          "explanation": "主语(经历)令人兴奋 → exciting(-ing)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "expensive",
+            "silent",
+            "accessible",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "more accessible 更易接触。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "idea"
+          ],
+          "answer_index": 3,
+          "explanation": "a wonderful idea 一个好主意。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "worry",
+            "sleep",
+            "sell",
+            "laugh"
+          ],
+          "answer_index": 0,
+          "explanation": "worry that 担心。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "amazed",
+            "amazing",
+            "tiring",
+            "tired"
+          ],
+          "answer_index": 1,
+          "explanation": "主语(这件事)令人惊叹 → amazing(-ing)。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Song from an Old Tale",
+      "text": "My uncle is a (1)____ who writes music for films. Last year he was asked to (2)____ a piece of music for a story about an old fishing village. To find ideas, he read many local folk (3)____ that had been passed down for hundreds of years. One story about a brave fisherman (4)____ him most of all. He spent weeks at the seaside, listening to the waves and the wind, hoping they would give him (5)____. Slowly, the music began to take (6)____ in his mind. He mixed the sound of traditional instruments with a few (7)____ ideas of his own. When the film was shown, the audience was deeply (8)____ by the beautiful music. Many people said the song felt both old and new at the same (9)____. My uncle told me that the best music often comes from listening carefully to the (10)____ around us.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "driver",
+            "farmer",
+            "composer",
+            "doctor"
+          ],
+          "answer_index": 2,
+          "explanation": "a composer 作曲家。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "buy",
+            "throw",
+            "compose"
+          ],
+          "answer_index": 3,
+          "explanation": "compose a piece of music 谱写乐曲。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "tales",
+            "prices",
+            "tickets",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "folk tales 民间故事。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "inspired",
+            "lost",
+            "left"
+          ],
+          "answer_index": 1,
+          "explanation": "inspired him most 最给他灵感。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "money",
+            "trouble",
+            "inspiration",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "give him inspiration 给他灵感。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "money",
+            "noise",
+            "ticket",
+            "shape"
+          ],
+          "answer_index": 3,
+          "explanation": "take shape 逐渐成形。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "innovative",
+            "heavy",
+            "cold",
+            "wet"
+          ],
+          "answer_index": 0,
+          "explanation": "innovative ideas 创新的想法。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "moving",
+            "moved",
+            "bored",
+            "boring"
+          ],
+          "answer_index": 1,
+          "explanation": "主语 audience 被感动 → moved(-ed)。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "time",
+            "place"
+          ],
+          "answer_index": 2,
+          "explanation": "at the same time 同时。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "prices",
+            "tickets",
+            "machines",
+            "sounds"
+          ],
+          "answer_index": 3,
+          "explanation": "the sounds around us 我们周围的声音。"
+        }
+      ]
+    }
+  ]
+}

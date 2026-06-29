@@ -1,0 +1,32 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(高中新开始主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "On his first day at senior high, Daniel was too shy to talk to anyone and ate lunch alone. The next morning, instead of waiting, he smiled and said hello to the boy beside him, who turned out to love football just as much as he did. A week later, the two were practising together every day, and Daniel no longer felt like a stranger at school.",
+    "questions": [
+      {
+        "q": "Why did Daniel eat lunch alone on his first day?",
+        "options": [
+          "He felt too nervous to speak to others.",
+          "He disliked all the food.",
+          "He had no time for lunch.",
+          "The other students left early."
+        ],
+        "answer": "A",
+        "explanation": "原文 'too shy to talk to anyone and ate lunch alone' 的转述;其余选项原文未提。"
+      },
+      {
+        "q": "How did Daniel feel at school a week later?",
+        "options": [
+          "Lonelier than before.",
+          "Sorry that he had spoken first.",
+          "No longer like a stranger.",
+          "Too busy to make friends."
+        ],
+        "answer": "C",
+        "explanation": "末句 'Daniel no longer felt like a stranger at school'(短文后半段,覆盖不同位置)的转述。"
+      }
+    ]
+  }
+}

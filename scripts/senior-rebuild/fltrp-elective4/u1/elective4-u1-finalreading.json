@@ -1,0 +1,32 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(面对未来主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Ten years ago, Sophie had no clear idea what her future would look like. She kept learning new skills, stayed open to change, and was never afraid to try unusual paths. Today she runs a small company that builds robots to help elderly people, a job that did not even exist when she was at school.",
+    "questions": [
+      {
+        "q": "What did Sophie do over those ten years?",
+        "options": [
+          "She kept learning and stayed open to change.",
+          "She gave up trying anything new.",
+          "She refused to change her early plans.",
+          "She waited for others to decide for her."
+        ],
+        "answer": 0,
+        "explanation": "对应短文 'kept learning new skills, stayed open to change' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What is special about Sophie's job today?",
+        "options": [
+          "It is exactly the job she planned at school.",
+          "It did not exist when she was young.",
+          "It has nothing to do with technology.",
+          "It pays her almost no money."
+        ],
+        "answer": 1,
+        "explanation": "末句 'a job that did not even exist when she was at school'(短文后半段,覆盖不同位置)的转述。"
+      }
+    ]
+  }
+}

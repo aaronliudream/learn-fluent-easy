@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "topic": "Laugh Out Loud",
+  "source": "外研社(新标准)选择性必修一 Unit 1 同主题完形(应聘小丑医生/马戏团的故事/讲好笑话/家庭晚餐趣事/加入喜剧社/爷爷的幽默)。用词限本单元/初中/常见词,答案唯一,4选项同词性,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Applying to Be a Clown Doctor",
+      "text": "Dear Sir or Madam, I saw your (1)____ for a part-time clown doctor and I would love to (2)____. Ever since I was a child, I have wanted to (3)____ sick people feel better. I am cheerful, patient and good at telling (4)____. I can also do simple magic (5)____, sing funny songs and make balloon animals. I understand that a clown doctor must be very (6)____, because some children are in too much pain to laugh. I would always work (7)____ with the doctors and nurses on the ward. Making a frightened child (8)____ again would be the best reward of all. I have included my CV and two (9)____ from my teachers. I really hope you will give me the (10)____ to join your wonderful team.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "advertisement",
+            "weather",
+            "machine",
+            "ankle"
+          ],
+          "answer_index": 0,
+          "explanation": "saw your advertisement 看到广告。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleep",
+            "apply",
+            "refuse",
+            "forget"
+          ],
+          "answer_index": 1,
+          "explanation": "love to apply 乐意应聘。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "lose",
+            "help",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "help sick people feel better 帮病人好起来。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "mistakes",
+            "machines",
+            "jokes"
+          ],
+          "answer_index": 3,
+          "explanation": "telling jokes 讲笑话。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "tricks",
+            "noises",
+            "debts",
+            "roots"
+          ],
+          "answer_index": 0,
+          "explanation": "magic tricks 魔术。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "angry",
+            "sensitive",
+            "lazy",
+            "careless"
+          ],
+          "answer_index": 1,
+          "explanation": "must be sensitive 必须善解人意。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "rarely",
+            "hardly",
+            "closely",
+            "badly"
+          ],
+          "answer_index": 2,
+          "explanation": "work closely with 密切合作。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "shout",
+            "fall",
+            "hide",
+            "smile"
+          ],
+          "answer_index": 3,
+          "explanation": "make a child smile 让孩子笑。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "letters",
+            "songs",
+            "tricks",
+            "noses"
+          ],
+          "answer_index": 0,
+          "explanation": "two letters from my teachers 两封推荐信。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "problem",
+            "chance",
+            "mistake",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "give me the chance 给我机会。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Story of the Circus",
+      "text": "Long before films and television, the (1)____ was one of the most exciting forms of entertainment. Families would travel for miles to (2)____ the show. Under the big tent, acrobats flew through the air, while trained animals (3)____ amazing tricks. But for many children, the (4)____ were the real stars. With their colourful wigs, painted faces and big red (5)____, they made the whole crowd (6)____ with laughter. A really good clown did not need to (7)____ a single word; a silly walk or a sudden fall was (8)____ to make everyone giggle. Some performers spent years learning how to (9)____ their audience. Even today, when we think of the circus, the first picture that comes to (10)____ is often a smiling clown.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "library",
+            "factory",
+            "circus",
+            "hospital"
+          ],
+          "answer_index": 2,
+          "explanation": "the circus 马戏团。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "forget",
+            "repair",
+            "watch"
+          ],
+          "answer_index": 3,
+          "explanation": "watch the show 看演出。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "performed",
+            "sold",
+            "lost",
+            "dropped"
+          ],
+          "answer_index": 0,
+          "explanation": "performed tricks 表演把戏。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "doctors",
+            "clowns",
+            "farmers",
+            "drivers"
+          ],
+          "answer_index": 1,
+          "explanation": "the clowns were the real stars 小丑才是明星。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "books",
+            "wheels",
+            "noses",
+            "coins"
+          ],
+          "answer_index": 2,
+          "explanation": "big red noses 大红鼻子。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleep",
+            "cry",
+            "leave",
+            "roar"
+          ],
+          "answer_index": 3,
+          "explanation": "roar with laughter 哄堂大笑。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "say",
+            "buy",
+            "throw",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "say a single word 说一个字。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "late",
+            "enough",
+            "empty",
+            "sorry"
+          ],
+          "answer_index": 1,
+          "explanation": "was enough 就足够了。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "frighten",
+            "ignore",
+            "entertain",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "entertain their audience 取悦观众。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "market",
+            "garden",
+            "machine",
+            "mind"
+          ],
+          "answer_index": 3,
+          "explanation": "comes to mind 浮现脑海。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "How to Tell a Good Joke",
+      "text": "Telling a joke well is a real (1)____. First, you need to choose a story that your listeners will (2)____. A joke that is too (3)____ may only confuse them, while one they have heard before will simply (4)____ them. Next, take your time. Good comedians never (5)____; they let the story build up slowly. The most important part is the punch (6)____ at the very end, which should come as a surprise. If you say it too early, you will (7)____ the whole joke. It also helps to keep a straight face, because laughing at your own joke can (8)____ the ending. Remember that even the funniest words will fall flat if your (9)____ is wrong. With a little practice, however, anyone can learn to make a room full of people (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "skill",
+            "price",
+            "noise",
+            "debt"
+          ],
+          "answer_index": 0,
+          "explanation": "a real skill 一门真本事。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "understand",
+            "lose",
+            "break"
+          ],
+          "answer_index": 1,
+          "explanation": "listeners will understand 听众能懂。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "cheap",
+            "quiet",
+            "complicated",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "too complicated 太复杂。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "help",
+            "save",
+            "please",
+            "bore"
+          ],
+          "answer_index": 3,
+          "explanation": "will bore them 让人厌倦。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "rush",
+            "sleep",
+            "sing",
+            "pay"
+          ],
+          "answer_index": 0,
+          "explanation": "never rush 从不着急。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "line",
+            "market",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "punch line 妙语;包袱。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "improve",
+            "win",
+            "ruin",
+            "enjoy"
+          ],
+          "answer_index": 2,
+          "explanation": "ruin the joke 毁掉笑话。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "save",
+            "repair",
+            "build",
+            "spoil"
+          ],
+          "answer_index": 3,
+          "explanation": "spoil the ending 破坏结尾。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "timing",
+            "weather",
+            "price",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "if your timing is wrong 时机不对。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "cry",
+            "laugh",
+            "sleep",
+            "leave"
+          ],
+          "answer_index": 1,
+          "explanation": "make people laugh 逗人笑。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Funny Family Dinner",
+      "text": "Last Sunday my whole family came together for (1)____. Everything was going well until my little brother told a (2)____ that he had heard at school. It was so silly that nobody could (3)____ a smile at first. Then Grandpa, who rarely (4)____ at anything, suddenly burst out laughing. His laugh was so loud that it made the rest of us (5)____ too. Soon the whole table was (6)____ with laughter, and Mum almost dropped the soup. My brother looked very (7)____ of himself. He said it felt wonderful to make everyone so (8)____. After dinner we kept telling silly stories, each one funnier than the (9)____. It was a simple evening, but it reminded me that a good laugh is one of the best ways to bring a family (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "school",
+            "market",
+            "dinner",
+            "factory"
+          ],
+          "answer_index": 2,
+          "explanation": "together for dinner 共进晚餐。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "machine",
+            "root",
+            "joke"
+          ],
+          "answer_index": 3,
+          "explanation": "told a joke 讲了个笑话。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "crack",
+            "sell",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "crack a smile 露出笑容。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "slept",
+            "laughed",
+            "paid",
+            "drove"
+          ],
+          "answer_index": 1,
+          "explanation": "rarely laughed 很少笑。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "cry",
+            "leave",
+            "grin",
+            "sleep"
+          ],
+          "answer_index": 2,
+          "explanation": "made us grin 让我们咧嘴笑。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleeping",
+            "crying",
+            "paying",
+            "roaring"
+          ],
+          "answer_index": 3,
+          "explanation": "roaring with laughter 哄堂大笑。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "proud",
+            "afraid",
+            "angry",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "proud of himself 为自己自豪。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sad",
+            "happy",
+            "tired",
+            "quiet"
+          ],
+          "answer_index": 1,
+          "explanation": "make everyone happy 让大家开心。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "last",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "funnier than the last 一个比一个好笑。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "apart",
+            "behind",
+            "away",
+            "together"
+          ],
+          "answer_index": 3,
+          "explanation": "bring a family together 让家人更亲近。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Joining the Comedy Club",
+      "text": "When I first joined the school (1)____ club, I was terribly nervous. I had always wanted to make people (2)____, but standing alone on a stage felt frightening. My teacher told me not to (3)____ up after my first try went badly. She said that every comedian (4)____ a few jokes that nobody laughs at. So I kept (5)____. I learned to speak slowly, to look at the audience, and to wait for the right (6)____ to deliver my best line. Little by little, my acts became (7)____, and people really started to laugh. At our last show, the whole hall (8)____ with laughter at my final joke. I felt so (9)____ as I walked off the stage. Now I know that, with patience and practice, anyone can learn to be truly (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "comedy",
+            "weather",
+            "market",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "the comedy club 喜剧社。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cry",
+            "laugh",
+            "sleep",
+            "leave"
+          ],
+          "answer_index": 1,
+          "explanation": "make people laugh 逗人笑。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "throw",
+            "give",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sells",
+            "breaks",
+            "hides",
+            "tells"
+          ],
+          "answer_index": 3,
+          "explanation": "every comedian tells 每个笑星都会讲。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "practising",
+            "sleeping",
+            "paying",
+            "leaving"
+          ],
+          "answer_index": 0,
+          "explanation": "kept practising 坚持练习。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "moment",
+            "noise",
+            "debt"
+          ],
+          "answer_index": 1,
+          "explanation": "the right moment 合适的时机。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "quieter",
+            "shorter",
+            "funnier",
+            "sadder"
+          ],
+          "answer_index": 2,
+          "explanation": "became funnier 越来越好笑。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "slept",
+            "cried",
+            "paid",
+            "roared"
+          ],
+          "answer_index": 3,
+          "explanation": "the hall roared 全场哄笑。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "proud",
+            "afraid",
+            "bored",
+            "angry"
+          ],
+          "answer_index": 0,
+          "explanation": "felt so proud 非常自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "silent",
+            "funny",
+            "lazy",
+            "rude"
+          ],
+          "answer_index": 1,
+          "explanation": "learn to be funny 学会幽默。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "My Grandfather's Sense of Humour",
+      "text": "My grandfather has the best sense of (1)____ of anyone I know. Even when life is (2)____, he always finds something to laugh about. He says that a good joke can (3)____ up even the darkest day. When I was small and felt sad, he would (4)____ a silly story to cheer me up. His jokes were never (5)____; they were always kind and gentle. People who meet him for the first time are quickly (6)____ by his warm laugh. He firmly believes that sharing humour helps to bring people (7)____. 'Laughter,' he often (8)____, 'is something everyone can share, like water and air.' Thanks to him, I have learned to look for the (9)____ side of things. Whenever I feel down, I remember his words and try to (10)____ a smile.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "weather",
+            "price",
+            "humour",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "sense of humour 幽默感。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "easy",
+            "quiet",
+            "empty",
+            "hard"
+          ],
+          "answer_index": 3,
+          "explanation": "life is hard 生活艰难。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "light",
+            "sell",
+            "lose",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "light up the day 照亮一天。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "tell",
+            "throw",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "tell a silly story 讲个傻故事。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "kind",
+            "funny",
+            "cruel",
+            "gentle"
+          ],
+          "answer_index": 2,
+          "explanation": "never cruel 从不刻薄(后文说总是友善)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "frightened",
+            "bored",
+            "ignored",
+            "impressed"
+          ],
+          "answer_index": 3,
+          "explanation": "impressed by his laugh 被他的笑声打动。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "together",
+            "apart",
+            "behind",
+            "down"
+          ],
+          "answer_index": 0,
+          "explanation": "bring people together 拉近人们。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sells",
+            "says",
+            "eats",
+            "drives"
+          ],
+          "answer_index": 1,
+          "explanation": "he often says 他常说。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "dark",
+            "heavy",
+            "bright",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "the bright side 光明的一面。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "throw",
+            "drop",
+            "crack"
+          ],
+          "answer_index": 3,
+          "explanation": "crack a smile 露出笑容。"
+        }
+      ]
+    }
+  ]
+}

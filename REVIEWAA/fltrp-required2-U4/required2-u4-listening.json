@@ -1,0 +1,403 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "topic": "Stage and Screen",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社版必修第二册 Unit 4 同主题听力(订歌剧票/初学芭蕾/今晚看什么电视/喜剧俱乐部广告/去外地看演唱会/影评独白)。用词限 U4/初中/常见词,答案可在 transcript 找到依据,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Booking Opera Tickets",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Clerk: Good afternoon, City Theatre box office. How can I help you?",
+        "Tom: Hi, I'd like to book two tickets for the Peking Opera on Saturday evening.",
+        "Clerk: Of course. Saturday's show starts at seven o'clock. The seats near the front are forty pounds each.",
+        "Tom: That's a bit too expensive for us. Do you have anything cheaper?",
+        "Clerk: We have seats at the back for twenty pounds. You can still see the stage clearly.",
+        "Tom: Great, I'll take two of those, please.",
+        "Clerk: No problem. Please arrive ten minutes early, because the doors close once the show begins.",
+        "Tom: Thank you. We're really looking forward to it."
+      ],
+      "translation_cn": "Tom 打电话到城市剧院售票处,想订周六晚上京剧的两张票;周六演出7点开始,前排每张40英镑,太贵;售票员推荐后排每张20英镑、仍能看清舞台;Tom 订了两张后排票;售票员提醒提前十分钟到,因为开演后就关门;Tom 表示很期待。",
+      "questions": [
+        {
+          "stem": "What does Tom want to book?",
+          "options": [
+            "Two tickets for the Peking Opera.",
+            "Three tickets for a comedy.",
+            "A table at a restaurant.",
+            "A room in a hotel."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When does Saturday's show start?",
+          "options": [
+            "At six o'clock.",
+            "At seven o'clock.",
+            "At ten o'clock.",
+            "At noon."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why doesn't Tom choose the front seats?",
+          "options": [
+            "They are too expensive for him.",
+            "They are already sold out.",
+            "They are too far from the stage.",
+            "They are only for members."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How much does each back seat cost?",
+          "options": [
+            "Forty pounds.",
+            "Twenty pounds.",
+            "Ten pounds.",
+            "Fifty pounds."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why should Tom arrive early?",
+          "options": [
+            "The tickets are not yet printed.",
+            "He has to cook dinner first.",
+            "The doors close once the show begins.",
+            "The theatre is hard to find."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·独白 My First Ballet Lesson",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Last month I went to my very first ballet lesson, and I was extremely nervous. I had always loved watching dancers move so gracefully on stage, but I had never tried it myself. At the beginning, even standing correctly felt difficult, and my legs ached after only ten minutes. My teacher was kind and patient. She told me that every great dancer was once a beginner, and that hard work matters far more than talent. Little by little, I began to enjoy each movement. Now I practise at home every evening, and I dream of dancing in a real performance one day.",
+      "translation_cn": "上个月我第一次上芭蕾课,非常紧张。我一直喜欢看舞者在台上优雅起舞,却从没自己试过。一开始连站姿都很难,十分钟后腿就酸了。老师友善又耐心,告诉我每位伟大舞者都曾是初学者,努力比天赋更重要。渐渐地我开始享受每个动作。如今我每晚在家练习,梦想有朝一日能在真正的演出中起舞。",
+      "questions": [
+        {
+          "stem": "How did the speaker feel at her first lesson?",
+          "options": [
+            "Completely bored.",
+            "Quite angry.",
+            "Rather sleepy.",
+            "Very nervous."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What was difficult for her at the beginning?",
+          "options": [
+            "Even standing in the correct way.",
+            "Remembering the teacher's name.",
+            "Finding the dance studio.",
+            "Paying for the lesson."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did her teacher say matters most?",
+          "options": [
+            "Wearing the most expensive shoes.",
+            "Hard work rather than natural talent.",
+            "Being born into a dancing family.",
+            "Starting at a very young age."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the speaker do now every evening?",
+          "options": [
+            "She watches comedy shows.",
+            "She writes film reviews.",
+            "She practises ballet at home.",
+            "She teaches other beginners."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the speaker's dream?",
+          "options": [
+            "To open her own theatre.",
+            "To become a film director.",
+            "To stop dancing forever.",
+            "To dance in a real performance one day."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 What Shall We Watch Tonight?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mum: There's nothing good on TV tonight. What would you like to watch, Lily?",
+        "Lily: How about that new talent show? Everyone at school is talking about it.",
+        "Mum: I'm not really a fan of talent shows. The judges talk too much.",
+        "Lily: Then what about a nature documentary? There's one about leopards at eight.",
+        "Mum: That sounds lovely. I do enjoy learning about wild animals.",
+        "Lily: Great. We can watch the talent show later online if you don't mind.",
+        "Mum: That's fine. Let's make some popcorn before the documentary starts.",
+        "Lily: Perfect. I'll get the bowls."
+      ],
+      "translation_cn": "妈妈说今晚电视没什么好看,问 Lily 想看什么;Lily 提议看大家都在聊的新选秀节目;妈妈不太喜欢选秀,觉得评委话太多;Lily 改提议八点的豹子纪录片;妈妈说喜欢了解野生动物,欣然同意;Lily 说选秀可以晚点在网上看;妈妈提议开演前做点爆米花;Lily 去拿碗。",
+      "questions": [
+        {
+          "stem": "What does Lily first suggest watching?",
+          "options": [
+            "A new talent show.",
+            "A football match.",
+            "A cooking programme.",
+            "The evening news."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why doesn't Mum like talent shows?",
+          "options": [
+            "They are always too short.",
+            "She thinks the judges talk too much.",
+            "They have no music.",
+            "They start too late."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will they watch at eight o'clock?",
+          "options": [
+            "A romantic film.",
+            "A comedy show.",
+            "A documentary about leopards.",
+            "A talk show."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How will Lily watch the talent show?",
+          "options": [
+            "On the big screen now.",
+            "At a friend's house.",
+            "She has decided not to.",
+            "Online later."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do they plan to make before the programme?",
+          "options": [
+            "Some popcorn.",
+            "A cup of tea.",
+            "A birthday cake.",
+            "A big dinner."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·独白 Comedy Club Advertisement",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_male",
+      "transcript": "Are you looking for a fun way to spend your weekend? Come to the Riverside Comedy Club, the brightest place in town for a good laugh. Every Friday and Saturday night, our stage welcomes some of the funniest performers in the country. Doors open at half past seven, and the show begins at eight. Tickets cost just fifteen pounds, and students pay only ten. Seats fill up quickly, so we strongly advise you to book early online. Bring your friends, leave your worries at home, and get ready for an evening full of jokes and laughter. We promise you will not be disappointed.",
+      "translation_cn": "想找个有趣的方式过周末吗?来河畔喜剧俱乐部——城里最欢乐的地方。每周五、周六晚,我们的舞台迎来全国最搞笑的表演者。七点半开门,八点开演。门票仅15英镑,学生只需10英镑。座位很快售罄,强烈建议提前网上订票。带上朋友,把烦恼留在家里,准备好享受充满笑声的夜晚。我们保证你不会失望。",
+      "questions": [
+        {
+          "stem": "What kind of place is being advertised?",
+          "options": [
+            "A swimming pool.",
+            "A comedy club.",
+            "A bookshop.",
+            "A train station."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "On which nights are there shows?",
+          "options": [
+            "Monday and Tuesday.",
+            "Only on Sunday.",
+            "Friday and Saturday.",
+            "Every night of the week."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What time does the show begin?",
+          "options": [
+            "At half past seven.",
+            "At nine o'clock.",
+            "At noon.",
+            "At eight o'clock."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How much do students pay?",
+          "options": [
+            "Ten pounds.",
+            "Fifteen pounds.",
+            "Five pounds.",
+            "Twenty pounds."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the advertisement advise listeners to do?",
+          "options": [
+            "Arrive after the show starts.",
+            "Book their tickets early online.",
+            "Come without any friends.",
+            "Pay at the door in cash."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 Travelling to a Concert",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: I've got two tickets for the concert in Manchester next Saturday. Do you want to come?",
+        "Ben: I'd love to! But Manchester is quite far. How are we going to get there?",
+        "Anna: I've already made all the arrangements. We'll take the morning train from London.",
+        "Ben: Good idea. Trains are faster than coaches. What time does it leave?",
+        "Anna: At nine, so we should meet at the station by half past eight.",
+        "Ben: Where are we staying for the night?",
+        "Anna: I've booked a small hotel near the concert hall, so we can walk there easily.",
+        "Ben: You've thought of everything. I can't wait!"
+      ],
+      "translation_cn": "Anna 有两张下周六曼彻斯特演唱会的票,邀请 Ben 同去;Ben 很想去,但担心曼彻斯特远,怎么去;Anna 说已安排好,坐早上从伦敦出发的火车;Ben 赞同,火车比长途车快,问几点出发;Anna 说九点,所以八点半在车站碰头;Ben 问晚上住哪;Anna 已在音乐厅附近订了小旅馆,步行即到;Ben 称赞她想得周到,十分期待。",
+      "questions": [
+        {
+          "stem": "Where is the concert?",
+          "options": [
+            "In London.",
+            "In Glasgow.",
+            "In Manchester.",
+            "In Liverpool."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How will they travel there?",
+          "options": [
+            "By coach.",
+            "By plane.",
+            "By bicycle.",
+            "By train."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What time will they meet at the station?",
+          "options": [
+            "At half past eight.",
+            "At nine o'clock.",
+            "At seven o'clock.",
+            "At ten o'clock."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where will they stay for the night?",
+          "options": [
+            "At Anna's cousin's house.",
+            "In a small hotel near the concert hall.",
+            "On the night train.",
+            "In a tent by the river."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Ben think of Anna's planning?",
+          "options": [
+            "She has forgotten the tickets.",
+            "She has chosen the wrong city.",
+            "She has thought of everything.",
+            "She has booked too late."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·独白 A Film I Saw Last Night",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_male",
+      "transcript": "Last night I watched a film that was based on a famous novel I had read at school. I went in expecting to be disappointed, because films often leave out my favourite parts of a story. To my surprise, this one was different. The director kept the main plot and most of the important characters, and the acting was wonderful. Of course, a few scenes were missing, but the film still captured the spirit of the book. By the end, I was deeply moved, and several people in the cinema were quietly clapping. I would definitely recommend it, whether or not you have read the original story.",
+      "translation_cn": "昨晚我看了一部根据我上学时读过的著名小说改编的电影。本以为会失望,因为电影常删掉我最喜欢的情节。出乎意料,这部不同:导演保留了主线和大多数重要角色,表演也很棒。当然有几场戏被删了,但电影仍抓住了原著的精神。看到最后我深受感动,影院里有几个人在轻轻鼓掌。无论你是否读过原著,我都强烈推荐。",
+      "questions": [
+        {
+          "stem": "What was the film based on?",
+          "options": [
+            "A true news story.",
+            "A children's cartoon.",
+            "The speaker's own life.",
+            "A famous novel the speaker had read."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why did the speaker expect to be disappointed?",
+          "options": [
+            "Films often cut his favourite parts of a story.",
+            "He dislikes all films.",
+            "The cinema was far away.",
+            "The tickets were expensive."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did the director keep in the film?",
+          "options": [
+            "Only the title of the book.",
+            "The main plot and most important characters.",
+            "None of the original story.",
+            "Just the final scene."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did the speaker feel by the end?",
+          "options": [
+            "Extremely bored.",
+            "Quite angry.",
+            "Deeply moved.",
+            "Rather sleepy."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker advise?",
+          "options": [
+            "He tells people to avoid it.",
+            "He says to read the book instead.",
+            "He warns it is only for children.",
+            "He recommends the film to everyone."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

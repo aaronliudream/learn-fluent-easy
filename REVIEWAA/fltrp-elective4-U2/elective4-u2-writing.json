@@ -1,0 +1,52 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "topic": "Write a Book Review of Tuesdays with Morrie(写一篇《相约星期二》读后感/书评)",
+  "title_en": "A Book That Changed the Way I Live",
+  "genre": "书评 / 读后感(introduce the book + share one life lesson + recommend it)",
+  "source": "外研社(新标准)选择性必修四 Unit 2 写作:为《相约星期二》写一篇约100词的书评/读后感,要求自然运用被动语态。",
+  "prompt_cn": "假设你叫李华,学校英语社团征集“一本改变了我的书”的短文。请用英语写一篇约100词的书评,内容包括:① 简要介绍《相约星期二》(作者/人物/它讲什么);② 谈一条你从中学到的人生道理;③ 把它推荐给同学。注意:恰当使用被动语态(如 The book was written by…/We are reminded that…),语言准确连贯。",
+  "prompt_en": "Suppose you are Li Hua. Your school English club is collecting short pieces titled 'A Book That Changed Me'. Write a book review (about 100 words) of Tuesdays with Morrie, including: 1) a brief introduction to the book (author, people, what it is about); 2) one life lesson you have learned from it; 3) a recommendation to your classmates. Use the passive voice naturally where appropriate.",
+  "points": [
+    "简介这本书(written by Mitch Albom / it is about…)",
+    "你学到的一条道理(I was reminded that… / We should…)",
+    "推荐给同学(It should be read by everyone who…)",
+    "恰当、自然地使用被动语态,行文连贯"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Tuesdays with Morrie was written by Mitch Albom, a busy journalist who was reunited with his old professor, Morrie. When it was discovered that Morrie was being weakened by a severe illness, Mitch began visiting him every Tuesday, and their talks were turned into this gentle book. I was deeply moved by one lesson: how we live should be chosen by ourselves, not decided by society. After reading it, I was reminded to value my family and to keep in touch with old friends. This book is filled with hope, and I believe it should be read by every young person at least once.",
+  "model_translation": "《相约星期二》由忙碌的记者米奇·阿尔博姆所写,他与老教授莫里重聚。当人们得知莫里正被一场重病拖垮时,米奇开始每周二去探望他,他们的谈话被写成了这本温柔的书。有一条道理深深打动了我:怎样生活应由自己选择,而不是由社会决定。读完后,我被提醒要珍惜家人、与老友保持联系。这本书满含希望,我相信每个年轻人都至少该读它一遍。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:介绍书 / 一条人生道理 / 推荐同学" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一本书展开、句句相关、衔接自然、代词指代清楚" },
+      { "dimension": "语言", "max": 5, "criteria": "被动语态等句型准确多样、词汇得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "介绍 Tuesdays with Morrie was written by Mitch Albom…",
+      "讲述 their talks were turned into this book",
+      "道理 I was reminded that… / how we live should be chosen by ourselves",
+      "推荐 It should be read by every young person at least once."
+    ],
+    "key_expressions": [
+      "Tuesdays with Morrie was written by Mitch Albom.",
+      "Morrie was being weakened by a severe illness.",
+      "I was reminded to value my family and keep in touch with old friends.",
+      "It should be read by every young person at least once."
+    ],
+    "useful_words": ["written", "reunite", "weaken", "lesson", "value", "remind", "hope", "recommend", "passive", "friendship"]
+  },
+  "high_sentences": [
+    "Tuesdays with Morrie was written by Mitch Albom, who was reunited with his old professor.",
+    "When it was discovered that Morrie was being weakened by a severe illness, Mitch began visiting him.",
+    "How we live should be chosen by ourselves, not decided by society.",
+    "This book is filled with hope, and it should be read by everyone at least once."
+  ],
+  "error_pairs": [
+    { "wrong": "The book was wrote by Mitch Albom.", "correct": "The book was written by Mitch Albom.", "note": "被动语态用过去分词 written,不是过去式 wrote。" },
+    { "wrong": "Morrie was weakened by a illness now.", "correct": "Morrie is being weakened by an illness now.", "note": "now 表示此刻正在进行 → 现在进行被动 is being done。" },
+    { "wrong": "This book should read by everyone.", "correct": "This book should be read by everyone.", "note": "情态动词后的被动是 should be done,不能漏掉 be。" }
+  ],
+  "paragraph_template": "【《相约星期二》书评结构】\n第1-2句 介绍:… was written by … / it is about …\n第3-4句 道理:I was reminded that … / how we live should be chosen by ourselves\n第5句 推荐:It should be read by every young person at least once."
+}

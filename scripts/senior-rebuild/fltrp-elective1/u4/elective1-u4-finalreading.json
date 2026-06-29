@@ -1,0 +1,32 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(艺术与灵感主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Leo first tried to paint, his pictures looked dull and he almost gave up. Then his teacher told him to stop copying others and to look closely at his own everyday life instead. A month later, a simple drawing of his grandmother's hands won first prize, and Leo finally understood that real inspiration was right in front of him all along.",
+    "questions": [
+      {
+        "q": "What advice did Leo's teacher give him?",
+        "options": [
+          "To watch his own daily life instead of imitating others.",
+          "To buy more expensive paints and brushes.",
+          "To give up painting completely.",
+          "To copy famous works more carefully."
+        ],
+        "answer": "A",
+        "explanation": "原文 'stop copying others and to look closely at his own everyday life' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What did Leo finally understand?",
+        "options": [
+          "That inspiration was close to him all the time.",
+          "That painting was a waste of his time.",
+          "That only travel can bring new ideas.",
+          "That winning prizes was the only goal."
+        ],
+        "answer": "A",
+        "explanation": "末句 'real inspiration was right in front of him all along'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

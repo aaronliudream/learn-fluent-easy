@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U6",
+  "grammar_title": "省略(Ellipsis):状语从句中的省略 / 并列与比较结构中的省略 / 不定式与对话中的省略",
+  "source": "外研社版(新标准)必修第三册 Unit 6 Using language:Ellipsis。句子地道、灾难/救援/希望主题,答案唯一(干扰项还原成错词或错形式)。",
+  "points": [
+    {
+      "code": "u6.01",
+      "point": "状语从句中省略「主语+be」(when/while/if/though/once/unless + 分词或形容词)",
+      "overview": "当状语从句的主语与主句主语一致时,可省去从句的「主语+be」,只留下 -ing(主动)/ -ed(被动)/ 形容词。判断:从句动作是主语主动发出用 -ing,被动承受用 -ed。"
+    },
+    {
+      "code": "u6.02",
+      "point": "并列与比较结构中省略重复动词(留下助动词/操作词)",
+      "overview": "并列句和 so/neither/nor/than/as/but 后,常省去与前面重复的动词(短语),只保留一个助动词或情态动词来代替;这个助动词要与原动词的时态、人称一致。"
+    },
+    {
+      "code": "u6.03",
+      "point": "不定式省略(只留 to)与对话中的省略",
+      "overview": "在 love/like/want/have/hope/try/able 等之后,可省去重复的动词原形,只保留不定式符号 to;在口语应答中也常省去重复的动词短语,只留一个助动词/情态动词。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u6.01",
+      "stem": "\"When ____ about the coming typhoon, the villagers quickly moved to higher ground.\"",
+      "options": [
+        "warned",
+        "warning",
+        "warn",
+        "to warn"
+      ],
+      "answer_index": 0,
+      "explanation": "从句主语 = villagers,他们是「被警告」,省略 they were 后留下被动的 -ed 形式 warned。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"While ____ for the rescue boat, we shared the little water we had.\"",
+      "options": [
+        "waited",
+        "waiting",
+        "wait",
+        "to wait"
+      ],
+      "answer_index": 1,
+      "explanation": "从句主语 = we,主动「等待」,省略 we were 后留下 -ing 形式 waiting。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"Though ____ of the danger, the firefighters still rushed into the building.\"",
+      "options": [
+        "awareness",
+        "awarely",
+        "aware",
+        "to aware"
+      ],
+      "answer_index": 2,
+      "explanation": "though they were aware 省略「主语+be」后留下形容词 aware。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"If ____ in time, a warning can save thousands of lives.\"",
+      "options": [
+        "sending",
+        "sends",
+        "to send",
+        "sent"
+      ],
+      "answer_index": 3,
+      "explanation": "warning 是「被送出」,省略 it is 后留下被动 -ed 形式 sent。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"Once ____, the wildfire spread across the dry hills within hours.\"",
+      "options": [
+        "started",
+        "starting",
+        "starts",
+        "to start"
+      ],
+      "answer_index": 0,
+      "explanation": "wildfire 是「被点燃/被引发」,省略 it was 后留下被动 -ed 形式 started。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"When ____ how to stay safe, children usually listen very carefully.\"",
+      "options": [
+        "telling",
+        "told",
+        "tell",
+        "to tell"
+      ],
+      "answer_index": 1,
+      "explanation": "children 是「被告知」,省略 they are 后留下被动 -ed 形式 told。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"While ____ through the ruined town, the reporter could not hold back her tears.\"",
+      "options": [
+        "walked",
+        "walks",
+        "walking",
+        "to walk"
+      ],
+      "answer_index": 2,
+      "explanation": "reporter 主动「行走」,省略 she was 后留下 -ing 形式 walking。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"Unless ____ at once, the injured man might not survive the night.\"",
+      "options": [
+        "treating",
+        "treats",
+        "to treat",
+        "treated"
+      ],
+      "answer_index": 3,
+      "explanation": "man 是「被救治」,省略 he is 后留下被动 -ed 形式 treated。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"Though ____ from the long search, the rescuers refused to rest.\"",
+      "options": [
+        "exhausted",
+        "exhausting",
+        "exhaust",
+        "to exhaust"
+      ],
+      "answer_index": 0,
+      "explanation": "rescuers「感到精疲力竭」,省略 they were 后留下形容词化的 -ed 形式 exhausted。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"When ____ by helicopter, the survivors finally felt safe.\"",
+      "options": [
+        "rescuing",
+        "rescued",
+        "rescue",
+        "to rescue"
+      ],
+      "answer_index": 1,
+      "explanation": "survivors 是「被营救」,省略 they were 后留下被动 -ed 形式 rescued。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"If ____ correctly, the warning system can give people enough time to leave.\"",
+      "options": [
+        "using",
+        "uses",
+        "used",
+        "to use"
+      ],
+      "answer_index": 2,
+      "explanation": "system 是「被使用」,省略 it is 后留下被动 -ed 形式 used。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"While ____ to the forecast on the radio, we packed our emergency bags.\"",
+      "options": [
+        "listened",
+        "listens",
+        "to listen",
+        "listening"
+      ],
+      "answer_index": 3,
+      "explanation": "we 主动「收听」,省略 we were 后留下 -ing 形式 listening。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"Once ____, the announcement was repeated on every radio station in the area.\"",
+      "options": [
+        "made",
+        "making",
+        "makes",
+        "to make"
+      ],
+      "answer_index": 0,
+      "explanation": "announcement 是「被发布」,省略 it was 后留下被动 -ed 形式 made。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"Though ____ for many hours, the rescue dogs did not give up.\"",
+      "options": [
+        "worked",
+        "working",
+        "works",
+        "to work"
+      ],
+      "answer_index": 1,
+      "explanation": "dogs 主动「工作」,省略 they had been 后留下 -ing 形式 working。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"When ____ with a serious crisis, a calm leader is very important.\"",
+      "options": [
+        "facing",
+        "faces",
+        "faced",
+        "to face"
+      ],
+      "answer_index": 2,
+      "explanation": "be faced with 「面临」,人是被动一方,省略后留下 -ed 形式 faced。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"If ____ early enough, a small fire can be put out quite easily.\"",
+      "options": [
+        "noticing",
+        "notices",
+        "to notice",
+        "noticed"
+      ],
+      "answer_index": 3,
+      "explanation": "fire 是「被发现」,省略 it is 后留下被动 -ed 形式 noticed。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"While ____ in the shelter, the children drew pictures to stay calm.\"",
+      "options": [
+        "staying",
+        "stayed",
+        "stays",
+        "to stay"
+      ],
+      "answer_index": 0,
+      "explanation": "children 主动「待在」,省略 they were 后留下 -ing 形式 staying。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"Though ____ by the disaster, the town slowly came back to life.\"",
+      "options": [
+        "shaking",
+        "shaken",
+        "shakes",
+        "to shake"
+      ],
+      "answer_index": 1,
+      "explanation": "town 是「被震撼/被冲击」,省略 it was 后留下被动 -ed 形式 shaken。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"Unless ____ carefully, the old houses may collapse in the next quake.\"",
+      "options": [
+        "repairing",
+        "repairs",
+        "repaired",
+        "to repair"
+      ],
+      "answer_index": 2,
+      "explanation": "houses 是「被修理」,省略 they are 后留下被动 -ed 形式 repaired。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "\"When ____ for advice, the experts always mention having an escape plan.\"",
+      "options": [
+        "asking",
+        "asks",
+        "to ask",
+        "asked"
+      ],
+      "answer_index": 3,
+      "explanation": "experts 是「被询问」,省略 they are 后留下被动 -ed 形式 asked。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"The earthquake destroyed the school, and so ____ the old library.\"",
+      "options": [
+        "did",
+        "does",
+        "was",
+        "had"
+      ],
+      "answer_index": 0,
+      "explanation": "前句动词 destroyed 是一般过去时,so 后省略重复动词、用过去时助动词 did 代替。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"My parents did not panic during the storm, and neither ____ I.\"",
+      "options": [
+        "do",
+        "did",
+        "was",
+        "have"
+      ],
+      "answer_index": 1,
+      "explanation": "前句一般过去时,neither 后倒装并省略动词,用 did 代替。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"She has already packed enough food, but her brother ____ not.\"",
+      "options": [
+        "does",
+        "did",
+        "has",
+        "is"
+      ],
+      "answer_index": 2,
+      "explanation": "前句现在完成时 has packed,省略重复动词后保留与之一致的 has。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"The rescue team worked far harder than anyone ____ imagined.\"",
+      "options": [
+        "has",
+        "was",
+        "does",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "than 后接的是先于过去发生的「想象」,与过去时主句相比用过去完成助动词 had imagined。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"He reacted to the warning much faster than his sister ____.\"",
+      "options": [
+        "did",
+        "was",
+        "had",
+        "does"
+      ],
+      "answer_index": 0,
+      "explanation": "比较从句省略重复的 reacted,用过去时助动词 did 代替。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"I can't reach the shelter on foot, and my grandmother ____, either.\"",
+      "options": [
+        "doesn't",
+        "can't",
+        "isn't",
+        "won't"
+      ],
+      "answer_index": 1,
+      "explanation": "前句用情态动词 can't,省略重复动词后保留 can't。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"They lost their home in the flood, and so ____ we.\"",
+      "options": [
+        "were",
+        "had",
+        "did",
+        "do"
+      ],
+      "answer_index": 2,
+      "explanation": "前句一般过去时 lost,so 后省略动词、用 did 代替。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"This forecast is far more reliable than the last one ____.\"",
+      "options": [
+        "did",
+        "has",
+        "does",
+        "was"
+      ],
+      "answer_index": 3,
+      "explanation": "比较的是过去那次预报「(可靠)是」,系动词省略后保留过去时 was。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"Helen survived the avalanche, and so ____ her dog.\"",
+      "options": [
+        "did",
+        "was",
+        "had",
+        "does"
+      ],
+      "answer_index": 0,
+      "explanation": "前句一般过去时 survived,so 后用 did 代替重复动词。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"We had not heard the announcement, and neither ____ our neighbours.\"",
+      "options": [
+        "did",
+        "had",
+        "were",
+        "have"
+      ],
+      "answer_index": 1,
+      "explanation": "前句过去完成时 had not heard,neither 后保留 had。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"She will help rebuild the homes, and so ____ her classmates.\"",
+      "options": [
+        "do",
+        "are",
+        "will",
+        "did"
+      ],
+      "answer_index": 2,
+      "explanation": "前句一般将来时 will help,so 后省略动词、保留 will。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"The storm caused much more damage this year than it ____ last year.\"",
+      "options": [
+        "does",
+        "was",
+        "had",
+        "did"
+      ],
+      "answer_index": 3,
+      "explanation": "比较从句省略重复的 caused,用过去时助动词 did 代替。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"I am not afraid of typhoons now, but my little sister still ____.\"",
+      "options": [
+        "is",
+        "does",
+        "has",
+        "did"
+      ],
+      "answer_index": 0,
+      "explanation": "前句用系动词 am(afraid),省略 afraid 后保留与之一致的 is。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"They prepared for the flood far more carefully than we ____.\"",
+      "options": [
+        "were",
+        "did",
+        "are",
+        "had"
+      ],
+      "answer_index": 1,
+      "explanation": "比较从句省略重复的 prepared,用过去时助动词 did 代替。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"He has rebuilt his house already, and his neighbours ____ too.\"",
+      "options": [
+        "has",
+        "did",
+        "have",
+        "are"
+      ],
+      "answer_index": 2,
+      "explanation": "前句现在完成时,主语 neighbours 为复数,省略动词后保留 have。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"We didn't get any warning, and the next village ____, either.\"",
+      "options": [
+        "wasn't",
+        "hasn't",
+        "won't",
+        "didn't"
+      ],
+      "answer_index": 3,
+      "explanation": "前句一般过去时否定 didn't get,省略动词后保留 didn't。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"The flood rose much faster than the rescuers ____ expected.\"",
+      "options": [
+        "had",
+        "has",
+        "were",
+        "did"
+      ],
+      "answer_index": 0,
+      "explanation": "than 后是先于过去的「预料」,用过去完成助动词 had expected。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"She can swim to safety, but the old man next door ____.\"",
+      "options": [
+        "doesn't",
+        "can't",
+        "isn't",
+        "hasn't"
+      ],
+      "answer_index": 1,
+      "explanation": "前句用 can,转折后表示「不能」,省略动词后保留 can't。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"Our town received emergency aid, and so ____ the nearby county.\"",
+      "options": [
+        "was",
+        "has",
+        "did",
+        "does"
+      ],
+      "answer_index": 2,
+      "explanation": "前句一般过去时 received,so 后用 did 代替重复动词。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "\"I have never seen such a terrible storm, and neither ____ my grandfather.\"",
+      "options": [
+        "did",
+        "was",
+        "have",
+        "has"
+      ],
+      "answer_index": 3,
+      "explanation": "前句现在完成时 have never seen,主语 grandfather 为第三人称单数,neither 后保留 has。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "A: \"Would you like to join the rescue team?\"  B: \"Yes, I'd love ____.\"",
+      "options": [
+        "to",
+        "to do",
+        "doing",
+        "do"
+      ],
+      "answer_index": 0,
+      "explanation": "为避免重复 join the rescue team,只保留不定式符号 to,即 I'd love to。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"I didn't want to leave my home, but in the end I had ____.\"",
+      "options": [
+        "to do",
+        "to",
+        "doing",
+        "done"
+      ],
+      "answer_index": 1,
+      "explanation": "have to 后省略重复的 leave my home,只留 to。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"You don't need to stay outside in the storm if you don't want ____.\"",
+      "options": [
+        "to do",
+        "doing",
+        "to",
+        "do"
+      ],
+      "answer_index": 2,
+      "explanation": "want 后省略 stay outside,只保留不定式符号 to。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"She hoped to find her lost cat, and in the end she was lucky enough ____.\"",
+      "options": [
+        "to do",
+        "doing",
+        "for",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "enough 后省略 find her cat,只留 to。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"He never expected to survive the flood, but somehow he managed ____.\"",
+      "options": [
+        "to",
+        "to do",
+        "doing",
+        "do"
+      ],
+      "answer_index": 0,
+      "explanation": "manage 后省略 survive the flood,只保留不定式符号 to。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"We can rebuild the school together if we really want ____.\"",
+      "options": [
+        "to do",
+        "to",
+        "doing",
+        "do"
+      ],
+      "answer_index": 1,
+      "explanation": "want 后省略 rebuild the school,只留 to。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"I'd help carry the water bottles, but I'm just not strong enough ____.\"",
+      "options": [
+        "to do",
+        "doing",
+        "to",
+        "for"
+      ],
+      "answer_index": 2,
+      "explanation": "enough 后省略 carry the bottles,只保留 to。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"They asked us to donate some clothes, and we were very glad ____.\"",
+      "options": [
+        "to do",
+        "doing",
+        "do",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "glad 后省略 donate some clothes,只留不定式符号 to。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"I tried to call for help during the storm, but I just wasn't able ____.\"",
+      "options": [
+        "to",
+        "to do",
+        "doing",
+        "do"
+      ],
+      "answer_index": 0,
+      "explanation": "be able 后省略 call for help,只保留 to。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"Nobody forced him to volunteer; he chose ____ all by himself.\"",
+      "options": [
+        "to do",
+        "to",
+        "doing",
+        "do"
+      ],
+      "answer_index": 1,
+      "explanation": "choose 后省略 volunteer,只留不定式符号 to。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "A: \"Will the new satellites help us forecast the typhoon?\"  B: \"Yes, they ____.\"",
+      "options": [
+        "are",
+        "do",
+        "will",
+        "have"
+      ],
+      "answer_index": 2,
+      "explanation": "应答省略 help us forecast the typhoon,保留与问句一致的助动词 will。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "A: \"Have the rescue teams reached the village yet?\"  B: \"No, they ____ yet.\"",
+      "options": [
+        "didn't",
+        "aren't",
+        "won't",
+        "haven't"
+      ],
+      "answer_index": 3,
+      "explanation": "问句用现在完成时 have reached,应答省略动词后保留 haven't。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "A: \"Did many families lose their homes?\"  B: \"Yes, thousands of them ____.\"",
+      "options": [
+        "did",
+        "do",
+        "were",
+        "had"
+      ],
+      "answer_index": 0,
+      "explanation": "问句一般过去时 did lose,应答省略动词后保留 did。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "A: \"Could you hear the emergency announcement?\"  B: \"No, I ____.\"",
+      "options": [
+        "didn't",
+        "couldn't",
+        "wasn't",
+        "haven't"
+      ],
+      "answer_index": 1,
+      "explanation": "问句用情态动词 could,应答省略 hear the announcement 后保留 couldn't。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "A: \"Should we leave before the storm arrives?\"  B: \"Yes, we ____.\"",
+      "options": [
+        "will",
+        "are",
+        "should",
+        "do"
+      ],
+      "answer_index": 2,
+      "explanation": "问句用情态动词 should,应答省略 leave 后保留 should。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "A: \"Are the roads still flooded?\"  B: \"Some ____, some aren't.\"",
+      "options": [
+        "do",
+        "have",
+        "were",
+        "are"
+      ],
+      "answer_index": 3,
+      "explanation": "问句用 are flooded,应答省略 flooded 后保留 are。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "A: \"Do you think the old bridge will hold?\"  B: \"I'm afraid it ____.\"",
+      "options": [
+        "won't",
+        "doesn't",
+        "isn't",
+        "hasn't"
+      ],
+      "answer_index": 0,
+      "explanation": "谈论将来 will hold,表否定时省略 hold 后保留 won't。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "A: \"Were you frightened during the earthquake?\"  B: \"Yes, I ____.\"",
+      "options": [
+        "did",
+        "was",
+        "were",
+        "had"
+      ],
+      "answer_index": 1,
+      "explanation": "问句用系动词 were frightened,应答省略 frightened 后保留与「I」一致的 was。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"You may go to the shelter now if you'd like ____.\"",
+      "options": [
+        "to do",
+        "doing",
+        "to",
+        "do"
+      ],
+      "answer_index": 2,
+      "explanation": "would like 后省略 go to the shelter,只保留不定式符号 to。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "\"She used to fear every storm, but these days she doesn't seem ____ any more.\"",
+      "options": [
+        "to do",
+        "doing",
+        "do",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "seem 后省略 fear every storm,只留不定式符号 to。"
+    }
+  ]
+}

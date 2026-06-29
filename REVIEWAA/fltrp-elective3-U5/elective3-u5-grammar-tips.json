@@ -1,0 +1,36 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "grade": 12,
+  "content": {
+    "title": "非谓语动词作主语 / 宾语 / 表语(to do · doing)速查",
+    "intro": "一个句子只能有一个谓语;其它动作要变成非谓语(to do 或 doing)。本单元三种用法:放句首作主语、放动词或介词后作宾语、放系动词 be 后作表语。判断口诀:句首作主语→谓语用单数;介词后→一律用 doing;动词后→看这个动词\"吃\"哪一种。",
+    "table": {
+      "headers": ["成分", "形式 / 例句"],
+      "rows": [
+        ["主语(句首)", "动名词或不定式:Designing such buildings takes years. / To copy nature requires skill.(谓语用单数)"],
+        ["宾语·动词后", "由动词决定:enjoy/finish/avoid/keep + doing;want/decide/hope/agree + to do"],
+        ["宾语·介词后", "一律 doing:be good at copying / by watching / instead of using / look forward to seeing"],
+        ["表语(be 后)", "His job is to design… / Her hobby is photographing… / Seeing is believing."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "动名词/不定式作主语,谓语动词用单数", "mark": "Collecting rainwater saves money.(saves 不用 save)" },
+      { "rule": "介词后只能用动名词,不用不定式", "mark": "be interested in studying √ / in to study ×" },
+      { "rule": "look forward to / be used to 里的 to 是介词,后接 doing", "mark": "look forward to visiting √" },
+      { "rule": "want/decide/hope/agree/manage/plan 后接不定式;enjoy/finish/avoid/keep/practise/consider 后接动名词", "mark": "decide to do √ / enjoy doing √" }
+    ],
+    "why": [
+      "非谓语就是把一个动作\"名词化\":作主语 = 谁/什么事;作宾语 = 对什么；作表语 = 主语\"是\"什么事。一旦动作不再充当句子的谓语,就必须换成 to do 或 doing。"
+    ],
+    "gaokaoPoints": [
+      "语法填空 / 短文改错高频:句首给动词原形要变 doing 或 to do;介词后给原形要变 doing。",
+      "主谓一致陷阱:动名词主语后谓语用单数(Designing… takes…)。",
+      "辨析:同一动词后 doing 与 to do 意义不同的(remember/forget/stop/try)本单元不强求,先掌握固定搭配。"
+    ],
+    "examVsReal": [
+      { "exam": "To copy nature requires skill.（考试/书面更正式）", "real": "Copying nature takes skill.", "note": "考试两种皆可;口语里动名词作主语更自然常见。" },
+      { "exam": "His job is to design green buildings.（不定式作表语)", "real": "His job is designing green buildings.", "note": "说明\"一直在做的事\"时,口语常用 doing 作表语,语感更强调\"经常性\"。" }
+    ]
+  }
+}

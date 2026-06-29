@@ -1,0 +1,35 @@
+{
+  "volume": "elective2",
+  "unit": "U5",
+  "grade": 11,
+  "content": {
+    "title": "形式宾语 it(find / make / think it + adj./n. + to do / that…)速查",
+    "intro": "当不定式或 that 从句作宾语、后面又跟形容词或名词作宾语补足语时,把真正的宾语后移,用 it 作形式宾语顶在前面。判断口诀:动词后先填 it,真正的宾语(to do / that…)躲在补足语后面。",
+    "table": {
+      "headers": ["结构", "例句 / 说明"],
+      "rows": [
+        ["find/think/feel it + 形容词 + to do", "We found it hard to remove the rabbits.(真宾语=to remove…)"],
+        ["make/find/think it + 形容词 + that 从句", "The incident made it clear that the problem had to be solved."],
+        ["consider/make it + 名词 + to do", "They consider it an honour to protect the bees.(名词作宾补)"],
+        ["常见动词", "find / make / think / consider / feel + it + 补足语 + 真宾语"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "只有当宾语是‘后移的不定式 / that 从句’时才用 it;若宾语是普通名词则不用", "mark": "find it hard to do √ / find the book hard(无 it)" },
+      { "rule": "补足语可以是形容词(clear, hard, necessary)也可以是名词(a rule, an honour, a pity)", "mark": "make it a rule to… / think it a pity that…" },
+      { "rule": "it 只是占位,本身无词义,不可换成 that / this / them", "mark": "make it clear that… √ / make that clear that… ×" },
+      { "rule": "think it important that… 后的从句常用虚拟语气(should + 动词原形,should 可省)", "mark": "think it important that everyone (should) join" }
+    ],
+    "why": [
+      "英语习惯把太长的不定式或从句放到句末,以免句子‘头重脚轻’;于是先用 it 顶住宾语的位置,真正的宾语后置,读起来更顺、更地道。"
+    ],
+    "gaokaoPoints": [
+      "形式宾语 it 与形式主语 it 的区别:形式宾语出现在‘动词+it+补足语+真宾语’里(make it clear that…)。",
+      "语法填空 / 改错高频:漏掉 it 是典型错误(We found ___ hard to…)。"
+    ],
+    "examVsReal": [
+      { "exam": "I find it difficult to finish the task.(考试/书面)", "real": "This task is really hard to finish.", "note": "考试爱考形式宾语;口语里常直接换个说法把形容词放前面" },
+      { "exam": "They made it clear that smoking was banned.(考试)", "real": "They were clear: no smoking.", "note": "真实英语口语可用更短、更直接的表达,但书面写作仍用 make it clear that…" }
+    ]
+  }
+}

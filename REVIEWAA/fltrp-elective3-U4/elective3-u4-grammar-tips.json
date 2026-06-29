@@ -1,0 +1,40 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "grade": 12,
+  "content": {
+    "title": "主谓一致(2)·分数百分比 / 不定代词 / 就近原则 速查",
+    "intro": "主谓一致(2)的核心:看清\"真正的主语是什么、它在意义上是单数还是复数\"。三条主线:① 分数/百分比/most/half/the rest of 看 of 后的名词;② 不定代词大多看作单数;③ either…or 等并列主语和 there be 看\"最近\"的那个名词。",
+    "table": {
+      "headers": ["主语类型", "谓语单/复 + 例句"],
+      "rows": [
+        ["分数/百分比 + of + 名词", "看 of 后名词:50 per cent of the work is… / 50 per cent of the jobs are…"],
+        ["most / half / part / the rest of + of", "看 of 后名词:the rest of the report was… / the rest of the workers were…"],
+        ["each / every / either / neither / one of", "单数:Each of the robots is… / Neither of them is…"],
+        ["everyone / everything / someone / nobody / none(正式)", "单数:Everyone is… / None of us is…"],
+        ["both / all(+复数) / a number of", "复数:Both are… / A number of clients have…"],
+        ["all / none(+不可数) / the number of", "单数:All of the data is… / The number of jobs is…"],
+        ["many a / more than one + 单数名词", "单数:Many a student has… / More than one expert has…"],
+        ["either…or / neither…nor / not only…but also", "就近原则:Neither the cars nor the robot is…"],
+        ["there be", "与紧跟的第一个名词一致:There is an assistant and apps… / There are apps and one assistant…"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "分数/百分比的单复数完全取决于 of 后的名词,本身不决定", "mark": "50% of time is √ / 50% of jobs are √" },
+      { "rule": "more than one + 单数名词,虽意义为多,仍用单数", "mark": "More than one robot is tested." },
+      { "rule": "a number of(许多)→复数;the number of(……的数量)→单数", "mark": "a number of … have / the number of … is" },
+      { "rule": "either…or / neither…nor / not only…but also + there be 一律就近", "mark": "与最近的主语保持一致" }
+    ],
+    "why": [
+      "谓语真正要呼应的是\"主语在意义上的数\":of 短语里真正的中心词在 of 之后;不定代词 each/every/none 等强调\"每一个/没有一个\",所以看作单数;并列主语和 there be 则按英语习惯只与离动词最近的名词呼应。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/短文改错高频:百分比、分数、none、neither of、there be、either…or 的动词单复数。",
+      "易错点:the number of(单) vs a number of(复);more than one(单);all/none + 不可数(单)vs + 复数(复)。"
+    ],
+    "examVsReal": [
+      { "exam": "None of us is ready.(考试/正式书面)", "real": "None of us are ready.", "note": "考试和正式写作里 none 多用单数;但日常口语中 none of + 复数常用复数,两者都听得到" },
+      { "exam": "Neither of the answers is correct.(考试)", "real": "Neither of them are correct.", "note": "考试严格用单数;口语里 neither of + 复数常被说成复数" }
+    ]
+  }
+}

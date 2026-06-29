@@ -1,0 +1,52 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "topic": "Write a Reflection on Improving Yourself(写一篇关于完善自己的反思)",
+  "title_en": "How I Changed a Bad Habit",
+  "genre": "反思 / 记叙(describe a habit you改掉了 + what you learnt)",
+  "source": "外研社版选择性必修第二册 Unit 2 Presenting ideas / Writing a reflection:reflect on an experience of improving yourself(描述你改掉的一个坏习惯或养成的好习惯,以及从中学到的东西)。",
+  "prompt_cn": "假设你叫李华。学校英语周刊正在征集'完善自己'主题的短文。请用英语写一篇约90词的反思,内容包括:① 描述你曾经的一个坏习惯(如熬夜刷手机、拖延、乱发脾气);② 你是怎样一步步改掉它的;③ 你从中学到了什么。注意:在合适处使用过去完成被动语态(had been done)。",
+  "prompt_en": "Suppose you are Li Hua. Your school's English weekly is collecting short pieces on the theme 'Improving Yourself'. Write a reflection (about 90 words) including: 1) a bad habit you used to have (e.g. using your phone late at night, putting things off, losing your temper); 2) how you changed it step by step; 3) what you learnt from the experience. Use the past perfect passive (had been done) where it fits.",
+  "points": [
+    "描述坏习惯(I used to … / My biggest problem was …)",
+    "改变过程(So I decided to … / Step by step, I …)",
+    "用过去完成被动(Before …, my time had been wasted on …)",
+    "收获与感悟(I learnt that … / Now I feel …)"
+  ],
+  "word_count": "90 词左右",
+  "model_essay": "I used to spend hours on my phone every night, and my homework was often left until the last minute. Before I made a change, much of my evening had been wasted on social media. So I decided to switch off my phone and put it in another room while I studied. The first days were hard, but step by step the habit was broken. By the end of the term, my marks had been raised and I felt calmer. I learnt that small daily efforts can truly improve who you are.",
+  "model_translation": "我以前每晚要在手机上花好几个小时,作业常常拖到最后一刻才做。在我做出改变之前,我的晚上有很大一部分都浪费在了社交媒体上。于是我决定学习时把手机关掉、放到另一个房间。最初几天很难,但一步一步地,这个习惯被改掉了。到学期末,我的成绩提高了,人也更平静了。我明白了:每天一点点的努力,真的能让你变得更好。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:描述坏习惯 / 改变过程 / 收获感悟" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一个习惯展开、过程有条理、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、过去完成被动(had been done)运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "描述坏习惯 I used to … / My homework was often left …",
+      "用过去完成被动 Before I made a change, … had been wasted …",
+      "改变过程 So I decided to … step by step …",
+      "收获 I learnt that small daily efforts can improve who you are."
+    ],
+    "key_expressions": [
+      "I used to spend hours on my phone every night.",
+      "Before I made a change, much of my evening had been wasted on social media.",
+      "Step by step, the habit was broken.",
+      "I learnt that small daily efforts can truly improve who you are."
+    ],
+    "useful_words": ["habit", "improve", "switch off", "distract", "procrastination", "temper", "step by step", "responsible", "deadline", "reflection"]
+  },
+  "high_sentences": [
+    "Before I made a change, much of my evening had been wasted on social media.",
+    "I decided to switch off my phone and put it in another room while I studied.",
+    "Step by step, the bad habit was broken.",
+    "I learnt that small daily efforts can truly improve who you are."
+  ],
+  "error_pairs": [
+    { "wrong": "Before I changed, my time had wasted on my phone.", "correct": "Before I changed, my time had been wasted on my phone.", "note": "time 是被浪费的,主语是承受者,要用 had been done。" },
+    { "wrong": "My homework was often leave until the last minute.", "correct": "My homework was often left until the last minute.", "note": "被动语态用过去分词 left,不用动词原形。" },
+    { "wrong": "I used to spending hours on my phone.", "correct": "I used to spend hours on my phone.", "note": "used to do sth 后接动词原形。" }
+  ],
+  "paragraph_template": "【完善自己·反思结构】\n第1句 坏习惯:I used to … / My homework was often left …\n第2句 过去完成被动:Before I made a change, … had been wasted/broken …\n第3-4句 过程:So I decided to … Step by step, the habit was broken.\n第5句 收获:I learnt that small daily efforts can improve who you are."
+}

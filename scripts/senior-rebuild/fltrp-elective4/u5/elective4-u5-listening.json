@@ -1,0 +1,421 @@
+{
+  "volume": "elective4",
+  "unit": "U5",
+  "topic": "The Mysteries of the Maya",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社版选择性必修第四册 Unit 5 同主题听力(参观计划/玛雅历法/城市为何衰亡/我们多不了解海洋/对话探险家/关于好奇心)。long/short 交替,答案 transcript 可查,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U5 听力·对话 Planning a Trip to the Maya Ruins",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lily: Sam, our class is planning a trip to the Maya ruins next month. Are you coming?",
+        "Sam: Of course! I've been fascinated by the Maya since I was little.",
+        "Lily: Me too. I really want to see one of those huge stone pyramids.",
+        "Sam: I'm more interested in their calendar. They tracked the stars so carefully.",
+        "Lily: That's amazing. Our guide says the writing on the walls still can't be fully read.",
+        "Sam: I know. No one has worked out every sign yet. It's a real mystery.",
+        "Lily: Let's bring notebooks and write down whatever the guide tells us.",
+        "Sam: Good idea. I can't wait to set out!"
+      ],
+      "translation_cn": "Lily 说班级下月要去参观玛雅遗址,问 Sam 去不去;Sam 当然去,从小就着迷玛雅;Lily 最想看巨大的石头金字塔;Sam 更感兴趣他们的历法和观星;导游说墙上的文字至今无法完全读懂;两人决定带笔记本,记下导游讲的内容。",
+      "questions": [
+        {
+          "stem": "Where is the class planning to go?",
+          "options": [
+            "To the Maya ruins.",
+            "To the South Pole.",
+            "To a deep-sea museum.",
+            "To a space centre."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Lily most want to see?",
+          "options": [
+            "An old shipwreck.",
+            "A huge stone pyramid.",
+            "A modern factory.",
+            "A coral reef."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is Sam most interested in?",
+          "options": [
+            "The Maya calendar and their study of the stars.",
+            "The price of the tickets.",
+            "The local food.",
+            "The weather that day."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the guide say about the wall writing?",
+          "options": [
+            "It was written last year.",
+            "It still cannot be fully read.",
+            "It is very easy to understand.",
+            "It has all been removed."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they decide to bring?",
+          "options": [
+            "A small boat.",
+            "Warm winter coats.",
+            "Notebooks to write down what the guide says.",
+            "A large telescope."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U5 听力·短文 The Maya Calendar",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The Maya were remarkable watchers of the sky.",
+        "Using only their eyes, they followed the movements of the stars and planets.",
+        "From this knowledge they built a calendar of great accuracy.",
+        "It lost only a few seconds each year, which is amazing for ancient times.",
+        "They did all of this without any of the machines we use today."
+      ],
+      "translation_cn": "玛雅人是了不起的观天者;仅凭肉眼追踪星辰和行星的运动;由此建立了极为精确的历法;每年只差几秒,这在古代令人惊叹;而这一切都没有借助我们今天使用的任何机器。",
+      "questions": [
+        {
+          "stem": "What were the Maya remarkable at?",
+          "options": [
+            "Building ships.",
+            "Growing rice.",
+            "Painting walls.",
+            "Watching the sky."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How did they follow the stars?",
+          "options": [
+            "Using only their eyes.",
+            "Using modern telescopes.",
+            "Using computers.",
+            "Using radios."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did they build from this knowledge?",
+          "options": [
+            "A large pyramid of gold.",
+            "A very accurate calendar.",
+            "A deep canal.",
+            "A fast sailing ship."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How accurate was the calendar?",
+          "options": [
+            "It was wrong by a whole month.",
+            "It changed every single day.",
+            "It lost only a few seconds a year.",
+            "It was never finished."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did they manage without?",
+          "options": [
+            "Any sunlight.",
+            "Any people.",
+            "Any water.",
+            "Any modern machines."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U5 听力·对话 Why Did the Cities Fall?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Emma: Jack, our history question asks why the Maya cities were abandoned. Any ideas?",
+        "Jack: The book says there wasn't just one reason. Several causes worked together.",
+        "Emma: Right. As the population grew, they needed much more land for farming.",
+        "Jack: So they cut down a lot of the forest. That may have harmed the land.",
+        "Emma: And then there were the droughts. The rains failed for years.",
+        "Jack: With less rain, the crops failed and food ran short.",
+        "Emma: No wonder the people finally left their homes.",
+        "Jack: Whatever the exact cause, the great cities slowly fell into ruin."
+      ],
+      "translation_cn": "Emma 和 Jack 讨论历史题:玛雅城市为何被弃;Jack 说书上讲并非单一原因,多个原因共同作用;人口增长需要更多农田;于是砍掉大量森林,可能损害了土地;接着又有连年干旱、雨水不至;雨水减少导致作物歉收、粮食短缺;人们最终离开家园;无论确切原因如何,伟大的城市慢慢沦为废墟。",
+      "questions": [
+        {
+          "stem": "What is the history question about?",
+          "options": [
+            "Why the Maya cities were abandoned.",
+            "How to build a pyramid.",
+            "Where to find coral.",
+            "When the calendar was made."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "According to Jack, how many causes were there?",
+          "options": [
+            "Only one clear cause.",
+            "Several causes acting together.",
+            "No causes at all.",
+            "Exactly two causes."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why did the people need more land?",
+          "options": [
+            "Because they loved travelling.",
+            "Because the sea was rising.",
+            "Because the population was growing.",
+            "Because they had no homes."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What happened when the rains failed?",
+          "options": [
+            "The cities grew much larger.",
+            "The forests quickly returned.",
+            "The calendar stopped working.",
+            "Crops failed and food ran short."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What finally happened to the great cities?",
+          "options": [
+            "They slowly fell into ruin.",
+            "They were rebuilt in gold.",
+            "They moved to the coast.",
+            "They were never affected."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U5 听力·短文 How Little We Know the Sea",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Beneath the oceans lie about three million shipwrecks.",
+        "Each one shows people trying to reach the edges of their world.",
+        "Yet today we have better maps of the Moon than of our own sea bed.",
+        "Only now are we learning to deal with the cold, darkness and pressure of great depths.",
+        "Much of the deep ocean is still waiting to be explored."
+      ],
+      "translation_cn": "海洋之下约有三百万艘沉船;每一艘都展现着人类努力抵达世界边缘;然而今天我们对月球的地图比对自家海床的还要详尽;直到现在我们才开始学会应对深海的寒冷、黑暗与压力;深海的大部分仍在等待被探索。",
+      "questions": [
+        {
+          "stem": "About how many shipwrecks lie beneath the oceans?",
+          "options": [
+            "About three hundred.",
+            "About three million.",
+            "Only two or three.",
+            "None at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does each shipwreck show?",
+          "options": [
+            "People who hated the sea.",
+            "Modern fishing boats.",
+            "People trying to reach the edges of their world.",
+            "Empty metal containers."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do we have better maps of than the sea bed?",
+          "options": [
+            "Our own gardens.",
+            "The city centre.",
+            "Ancient pyramids.",
+            "The Moon."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What are we only now learning to deal with?",
+          "options": [
+            "The cold, darkness and pressure of the depths.",
+            "The heat of the desert.",
+            "The noise of the city.",
+            "The light of the stars."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is true about much of the deep ocean?",
+          "options": [
+            "It has all been mapped.",
+            "It is still waiting to be explored.",
+            "It is completely empty.",
+            "It is too shallow to study."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U5 听力·对话 Talking to an Explorer",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Host: Dr Reed, you've explored some of the wildest places on Earth. What drives you?",
+        "Dr Reed: Simple curiosity. I just can't stop wondering what lies beyond the next hill.",
+        "Host: But aren't you ever afraid of the unknown?",
+        "Dr Reed: Of course. The trick is to subdue that fear and keep going.",
+        "Host: Many people would rather steer clear of such danger.",
+        "Dr Reed: True. But I always think twice and study the risks before I set out.",
+        "Host: So courage isn't the same as rushing in blindly?",
+        "Dr Reed: Exactly. A wise explorer looks into things carefully first."
+      ],
+      "translation_cn": "主持人问 Reed 博士是什么驱使她探险;她说只是纯粹的好奇,总忍不住想知道下一座山后面有什么;主持人问她难道不怕未知;她说当然怕,关键是克制恐惧、继续前进;很多人宁愿避开这种危险;但她出发前总会三思并研究风险;主持人问勇气是否等同于盲目冲入;她说正是如此,明智的探险者会先仔细调查。",
+      "questions": [
+        {
+          "stem": "What does Dr Reed say drives her exploring?",
+          "options": [
+            "A wish to be rich.",
+            "A love of comfort.",
+            "Simple curiosity.",
+            "A fear of home."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How does she handle her fear of the unknown?",
+          "options": [
+            "She gives up at once.",
+            "She ignores all danger.",
+            "She never feels any fear.",
+            "She subdues it and keeps going."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What would many people rather do?",
+          "options": [
+            "Steer clear of such danger.",
+            "Follow her everywhere.",
+            "Explore even more wildly.",
+            "Live in the jungle."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does she do before she sets out?",
+          "options": [
+            "She rushes in without any planning.",
+            "She thinks twice and studies the risks.",
+            "She forgets about the dangers.",
+            "She asks no questions at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Dr Reed say a wise explorer does?",
+          "options": [
+            "Acts blindly and very fast.",
+            "Avoids all new places.",
+            "Looks into things carefully first.",
+            "Travels without any aim."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U5 听力·短文 A Word on Curiosity",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Throughout history, curiosity has pushed humankind forward.",
+        "It led our ancestors to discover fire and to cross unknown seas.",
+        "When you face something strange, you do not always have to run away.",
+        "Take a careful look, think it over, and you may learn something new.",
+        "Whatever you discover, the courage to explore is always worth it."
+      ],
+      "translation_cn": "纵观历史,好奇心一直推动人类前进;它引领我们的祖先发现火、跨越未知的海洋;当你面对陌生事物时,不必总是逃开;仔细看一看、好好想一想,你也许会学到新东西;无论你发现什么,勇于探索永远值得。",
+      "questions": [
+        {
+          "stem": "What has pushed humankind forward through history?",
+          "options": [
+            "Fear.",
+            "Laziness.",
+            "Silence.",
+            "Curiosity."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did curiosity lead our ancestors to do?",
+          "options": [
+            "Discover fire and cross unknown seas.",
+            "Stay in one place forever.",
+            "Stop asking any questions.",
+            "Avoid all kinds of travel."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the speaker say you do not always have to do?",
+          "options": [
+            "Take a careful look.",
+            "Run away from something strange.",
+            "Learn something new.",
+            "Be brave and curious."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the speaker suggest you do instead?",
+          "options": [
+            "Shout as loudly as you can.",
+            "Close your eyes tightly.",
+            "Take a careful look and think it over.",
+            "Forget about it at once."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "According to the speaker, what is always worth it?",
+          "options": [
+            "The money you save.",
+            "The time you waste.",
+            "The fear you feel.",
+            "The courage to explore."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

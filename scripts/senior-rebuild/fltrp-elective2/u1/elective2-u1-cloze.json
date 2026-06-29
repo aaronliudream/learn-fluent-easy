@@ -1,0 +1,710 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "topic": "Growing Up",
+  "source": "外研社选择性必修第二册 Unit 1 同主题完形(规划未来的邮件/第一份兼职/考驾照/独自租房/难忘的毕业/学会担当)。用词限本单元/初中/常见词,选项同词性,答案唯一,与阅读听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "An Email about the Future",
+      "text": "Dear George, Thanks for your birthday card! You asked whether I have been (1)____ much about the future now that I am seventeen. The answer is yes! Time seems to (2)____ so quickly. In just a year, I will be an (3)____. This time next year, I will be (4)____ my final school exams. With luck, I will (5)____ them all! Then, in a couple of years, I will be (6)____ at university. I think I will (7)____ law, because I have always wanted to help people. After I (8)____, I will look for a job in the courts. In the long (9)____, I hope that twenty years from now I will be working as a (10)____. Let's see how things go!",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "thinking",
+            "eating",
+            "sleeping",
+            "driving"
+          ],
+          "answer_index": 0,
+          "explanation": "been thinking about the future 一直在思考未来。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "stop",
+            "pass",
+            "fall",
+            "win"
+          ],
+          "answer_index": 1,
+          "explanation": "time seems to pass quickly 时间过得飞快。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "animal",
+            "object",
+            "adult",
+            "error"
+          ],
+          "answer_index": 2,
+          "explanation": "I will be an adult 我将成年。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "washing",
+            "growing",
+            "building",
+            "taking"
+          ],
+          "answer_index": 3,
+          "explanation": "will be taking my final exams 正在参加期末考试。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "pass",
+            "lose",
+            "drop",
+            "miss"
+          ],
+          "answer_index": 0,
+          "explanation": "pass them 通过考试。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "cooking",
+            "studying",
+            "sleeping",
+            "shopping"
+          ],
+          "answer_index": 1,
+          "explanation": "will be studying at university 在大学读书。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lose",
+            "sell",
+            "choose",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "I will choose law 我会选择法律。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "retire",
+            "resign",
+            "fail",
+            "graduate"
+          ],
+          "answer_index": 3,
+          "explanation": "after I graduate 毕业以后。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "term",
+            "line",
+            "rope",
+            "road"
+          ],
+          "answer_index": 0,
+          "explanation": "in the long term 从长远看。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "painter",
+            "judge",
+            "farmer",
+            "pilot"
+          ],
+          "answer_index": 1,
+          "explanation": "working as a judge 当法官(与法律相关)。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "My First Part-time Job",
+      "text": "Last summer I got my first part-time (1)____ at a busy café. On my first day I felt very (2)____, but my manager was kind and patient. My job was to (3)____ customers and clear the tables. The work was harder than I had (4)____, and by evening my feet really (5)____. At the end of the month, I received my first (6)____. Holding that money felt (7)____, because I had earned every cent myself. I soon learned to (8)____ my money carefully instead of (9)____ it all at once. That summer taught me that earning a wage also means learning to be (10)____ with what you have.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "game",
+            "song",
+            "job",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "a part-time job 一份兼职。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "asleep",
+            "golden",
+            "square",
+            "nervous"
+          ],
+          "answer_index": 3,
+          "explanation": "felt very nervous 很紧张。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "serve",
+            "drop",
+            "hide",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "serve customers 招待顾客。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eaten",
+            "expected",
+            "sold",
+            "slept"
+          ],
+          "answer_index": 1,
+          "explanation": "harder than I had expected 比我预想的难。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "danced",
+            "cooked",
+            "hurt",
+            "drove"
+          ],
+          "answer_index": 2,
+          "explanation": "my feet hurt 脚很疼。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "holiday",
+            "mistake",
+            "garden",
+            "wage"
+          ],
+          "answer_index": 3,
+          "explanation": "my first wage 第一份工资。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "wonderful",
+            "boring",
+            "ugly",
+            "silent"
+          ],
+          "answer_index": 0,
+          "explanation": "felt wonderful 感觉很棒。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lose",
+            "manage",
+            "waste",
+            "drop"
+          ],
+          "answer_index": 1,
+          "explanation": "manage my money carefully 谨慎管理钱。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "saving",
+            "earning",
+            "wasting",
+            "keeping"
+          ],
+          "answer_index": 2,
+          "explanation": "instead of wasting it 而不是一下子挥霍。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "angry",
+            "asleep",
+            "famous",
+            "careful"
+          ],
+          "answer_index": 3,
+          "explanation": "be careful with money 用钱要谨慎。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "My Driving Test Day",
+      "text": "On the morning of my eighteenth birthday, I went to take my driving (1)____. I had been having lessons for months, yet I still felt (2)____. My instructor told me to stay (3)____ and trust my practice. As I sat (4)____ the wheel, my hands were shaking a little. I started the engine, checked my (5)____, and slowly pulled out onto the road. To my surprise, everything I had (6)____ came back to me. I remembered to (7)____ down at every corner and to watch for other cars. When the examiner finally said I had (8)____, I could hardly believe it. Driving, I realised, is not only a new (9)____ but also a serious duty, because I must protect my own life and the lives of (10)____ on the road.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "test",
+            "song",
+            "meal",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "a driving test 驾照考试。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "asleep",
+            "nervous",
+            "golden",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "felt nervous 紧张。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "loud",
+            "late",
+            "calm",
+            "busy"
+          ],
+          "answer_index": 2,
+          "explanation": "stay calm 保持冷静。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "under",
+            "across",
+            "between",
+            "behind"
+          ],
+          "answer_index": 3,
+          "explanation": "behind the wheel 在驾驶座上。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "mirrors",
+            "books",
+            "shoes",
+            "meals"
+          ],
+          "answer_index": 0,
+          "explanation": "checked my mirrors 查看后视镜。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "eaten",
+            "learned",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "everything I had learned 学过的一切。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "throw",
+            "sell",
+            "slow",
+            "cry"
+          ],
+          "answer_index": 2,
+          "explanation": "slow down 减速。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "slept",
+            "danced",
+            "cooked",
+            "passed"
+          ],
+          "answer_index": 3,
+          "explanation": "I had passed 我通过了。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "freedom",
+            "garden",
+            "machine",
+            "holiday"
+          ],
+          "answer_index": 0,
+          "explanation": "a new freedom 一种新的自由。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "prices",
+            "others",
+            "machines",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "the lives of others 他人的生命。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Living on My Own",
+      "text": "After saving for two years, I finally moved into my own (1)____. It was small and far from the city centre, but at last it was truly (2)____. On the first night, I sat on the floor because I had no (3)____ yet. The room felt strangely (4)____ without my family around me. I had to learn to (5)____ my own meals, wash my own clothes, and pay every (6)____ on time. At first I made many small (7)____, like forgetting to buy milk or losing my keys. Slowly, though, I grew more (8)____. I began to enjoy the quiet and the sense of (9)____ that came with looking after myself. Living alone was not always easy, but it taught me more about growing up than any (10)____ ever had.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "song",
+            "price",
+            "flat",
+            "error"
+          ],
+          "answer_index": 2,
+          "explanation": "my own flat 自己的公寓。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "yours",
+            "his",
+            "theirs",
+            "mine"
+          ],
+          "answer_index": 3,
+          "explanation": "it was mine 它属于我。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "furniture",
+            "weather",
+            "music",
+            "traffic"
+          ],
+          "answer_index": 0,
+          "explanation": "no furniture 没有家具。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "golden",
+            "quiet",
+            "square",
+            "wooden"
+          ],
+          "answer_index": 1,
+          "explanation": "strangely quiet 异常安静。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "throw",
+            "cook",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "cook my own meals 自己做饭。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "song",
+            "game",
+            "prize",
+            "bill"
+          ],
+          "answer_index": 3,
+          "explanation": "pay every bill 付清每张账单。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "mistakes",
+            "holidays",
+            "gardens",
+            "prizes"
+          ],
+          "answer_index": 0,
+          "explanation": "made many mistakes 犯了不少错。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "asleep",
+            "independent",
+            "absent",
+            "ancient"
+          ],
+          "answer_index": 1,
+          "explanation": "grew more independent 更加独立。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "hunger",
+            "danger",
+            "freedom",
+            "anger"
+          ],
+          "answer_index": 2,
+          "explanation": "a sense of freedom 自由感。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "machine",
+            "garden",
+            "ticket",
+            "lesson"
+          ],
+          "answer_index": 3,
+          "explanation": "than any lesson 比任何一课都多。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A Memorable Graduation",
+      "text": "I will never forget my graduation (1)____. After four years on the same campus, it was time to say (2)____. In the morning, we put on our gowns and (3)____ in the great hall. One by one, we walked across the (4)____ to receive our certificates. My parents sat in the audience, looking very (5)____ of me. When my name was (6)____, my heart beat fast and my eyes filled with tears. It was a (7)____ moment, both joyful and a little sad, because I knew my school days were (8)____. Afterwards we took photos and (9)____ to meet again in the future. As I left the campus for the last time, I felt ready to begin the next (10)____ of my life.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "day",
+            "price",
+            "song",
+            "error"
+          ],
+          "answer_index": 0,
+          "explanation": "my graduation day 毕业那天。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "money",
+            "goodbye",
+            "traffic",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "say goodbye 道别。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "slept",
+            "swam",
+            "gathered",
+            "drove"
+          ],
+          "answer_index": 2,
+          "explanation": "gathered in the hall 在礼堂集合。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "ocean",
+            "forest",
+            "market",
+            "stage"
+          ],
+          "answer_index": 3,
+          "explanation": "across the stage 走过舞台。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "proud",
+            "bored",
+            "angry",
+            "asleep"
+          ],
+          "answer_index": 0,
+          "explanation": "proud of me 为我自豪。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "eaten",
+            "called",
+            "sold",
+            "washed"
+          ],
+          "answer_index": 1,
+          "explanation": "my name was called 我的名字被念到。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "golden",
+            "square",
+            "bittersweet",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "a bittersweet moment 苦乐参半的时刻。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "kind",
+            "rich",
+            "calm",
+            "over"
+          ],
+          "answer_index": 3,
+          "explanation": "my school days were over 校园生活结束了。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "promised",
+            "slept",
+            "cooked",
+            "drove"
+          ],
+          "answer_index": 0,
+          "explanation": "promised to meet again 约定再见。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "garden",
+            "chapter",
+            "machine",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "the next chapter of my life 人生的新篇章。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Learning to Care",
+      "text": "Turning eighteen changed the way I saw the world around me. I no longer wanted to be the (1)____ teenager I used to be, thinking only of myself. Instead, I began to feel a stronger sense of (2)____ for other people. One weekend, I decided to (3)____ at a local care home. At first I was nervous, but the elderly residents soon made me feel (4)____. I spent my afternoons reading to them and listening to their (5)____. Their experiences taught me lessons that no textbook could ever (6)____. I also signed up to give blood and even agreed to (7)____ an organ donation form. My parents were a little surprised, but in the end they (8)____ of my choice. Helping others, I discovered, did not make me feel smaller; it gave my life real (9)____. Growing up, I now believe, is mostly about learning to care beyond (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "golden",
+            "sleepy",
+            "selfish",
+            "square"
+          ],
+          "answer_index": 2,
+          "explanation": "the selfish teenager 自私的少年。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "weather",
+            "hunger",
+            "traffic",
+            "responsibility"
+          ],
+          "answer_index": 3,
+          "explanation": "a sense of responsibility 责任感。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "volunteer",
+            "sleep",
+            "shop",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "volunteer at a care home 在养老院做志愿者。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "afraid",
+            "welcome",
+            "absent",
+            "asleep"
+          ],
+          "answer_index": 1,
+          "explanation": "made me feel welcome 让我感到受欢迎。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "prices",
+            "machines",
+            "stories",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "listening to their stories 听他们的故事。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "lose",
+            "throw",
+            "teach"
+          ],
+          "answer_index": 3,
+          "explanation": "no textbook could teach 课本教不了。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sign",
+            "eat",
+            "drop",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "sign an organ donation form 签器官捐献表。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "slept",
+            "approved",
+            "cooked",
+            "swam"
+          ],
+          "answer_index": 1,
+          "explanation": "they approved of my choice 他们赞成我的选择。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "traffic",
+            "weather",
+            "meaning",
+            "hunger"
+          ],
+          "answer_index": 2,
+          "explanation": "real meaning 真正的意义。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "himself",
+            "yourself",
+            "themselves",
+            "myself"
+          ],
+          "answer_index": 3,
+          "explanation": "care beyond myself 关心超越自我。"
+        }
+      ]
+    }
+  ]
+}

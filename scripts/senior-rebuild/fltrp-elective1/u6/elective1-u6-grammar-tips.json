@@ -1,0 +1,36 @@
+{
+  "volume": "elective1",
+  "unit": "U6",
+  "grade": 11,
+  "content": {
+    "title": "现在完成进行时 have/has been doing 速查",
+    "intro": "结构:have/has + been + 动词-ing。意义:某动作从过去某时开始、一直持续到现在(可能刚停、也可能还在继续),常强调'持续了多久'或'一直在做'。判断口诀:看到 for / since + 时间,且动作是持续性的、延续到此刻,就用 have/has been doing。",
+    "table": {
+      "headers": ["对比时态", "用法 / 例句"],
+      "rows": [
+        ["现在完成进行时", "强调持续过程:They have been using these passages for years.(一直在用)"],
+        ["现在完成时", "强调结果/完成:They have built 33 passages.(已建成,看数量结果)"],
+        ["现在进行时", "只表此刻:Look! An antelope is crossing now.(就在此刻)"],
+        ["标志词", "for + 时间段 / since + 起点 / all day / how long / 现在可见的结果(累、湿、脏)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "for/since + 一段时间 + 持续动作 → 用 have/has been doing,不用现在进行时", "mark": "I have been waiting for two hours.(× I am waiting for two hours.)" },
+      { "rule": "现在可见的状态/结果由持续动作造成 → 用进行式强调过程", "mark": "Your boots are muddy. You have been walking in the wetland.(强调一直在走)" },
+      { "rule": "强调'已完成/做了多少' → 用现在完成时(done),不用进行式", "mark": "I have planted ten trees.(数量结果,不用 have been planting ten trees)" },
+      { "rule": "主语单复数决定 have/has;been 不变", "mark": "He has been working / They have been working" }
+    ],
+    "why": [
+      "现在完成进行时把'过去开始'(完成体)和'持续进行'(进行体)合在一起,所以它既连接到现在,又突出动作一直没停;而现在完成时(have done)更看重那个'结果',现在进行时(am doing)只锁定'此刻'。"
+    ],
+    "gaokaoPoints": [
+      "语法填空给出动词原形 + for/since/all day 标记 → 多半填 have/has been doing;注意主谓一致(has/have)。",
+      "完成进行 vs 完成:有明确数量或 already/just/yet 看结果用 done;问 how long、强调过程用 been doing。",
+      "完成进行 vs 进行:带 for/since 用 been doing,只带 now/at the moment 用 am/is/are doing。"
+    ],
+    "examVsReal": [
+      { "exam": "I have been studying English for six years.(考试规范)", "real": "I've been studying English for six years.", "note": "口语里 have/has 常缩写成 've/'s;意义不变。" },
+      { "exam": "It has been raining since this morning.(考试)", "real": "It's been raining all morning.", "note": "真实英语里 all morning 与 since this morning 可互换,都表持续到现在。" }
+    ]
+  }
+}

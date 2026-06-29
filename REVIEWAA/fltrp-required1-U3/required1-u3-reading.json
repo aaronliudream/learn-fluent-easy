@@ -1,0 +1,346 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "topic": "Family Matters",
+  "source": "外研社必修第一册 Unit 3 同主题阅读(代沟与梦想/家庭回忆/外貌变化/兄弟之爱/国际家庭日/向家人道歉)。词限 U3/初中/常见词;答案转述非照抄(不取正文≥5词连续子串);4 选项唯一;阅读/完形/听力三关文章互不复用。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Dream and a Gap",
+      "topic_cn": "记叙·代沟与梦想",
+      "body": "One Friday evening, the son walked nervously up to his father and said they needed to talk. He had decided not to go to university. Instead, he wanted to focus on his band and have a career in music. The father raised his voice in surprise. He had always assumed that his son would become a lawyer, just like himself, because lawyers help people and are respected by others. But the son was not interested in law. He wanted to work in a music studio, not in a court. Luckily, the grandfather was there to calm everyone down. He reminded the father that, years ago, he too had once dreamed of being a footballer. In the end, his own father had only advised him to think carefully, and he had found a job that suited his talents. So the grandfather gently suggested that the son might study at university and play music at the same time, keeping two options open for the future.",
+      "vocab_notes": [
+        {
+          "word": "career",
+          "cn": "职业"
+        },
+        {
+          "word": "assume",
+          "cn": "认为;假定"
+        },
+        {
+          "word": "studio",
+          "cn": "录音室"
+        },
+        {
+          "word": "option",
+          "cn": "选择"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the father surprised by his son's decision?",
+          "options": [
+            "He had taken it for granted that his son would study law.",
+            "He wanted his son to play in a band.",
+            "He had never met a lawyer before.",
+            "He had already agreed to the music career."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'He had always assumed that his son would become a lawyer' 的转述。"
+        },
+        {
+          "stem": "What did the grandfather remind the father about?",
+          "options": [
+            "That lawyers earn a lot of money.",
+            "That he himself had once had a dream of his own.",
+            "That music is a waste of time.",
+            "That the son should leave home."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 grandfather 提醒父亲'years ago, he too had once dreamed of being a footballer'(中段)。"
+        },
+        {
+          "stem": "What solution did the grandfather suggest?",
+          "options": [
+            "Doing both university and music together.",
+            "Giving up music for good.",
+            "Leaving university at once.",
+            "Becoming a footballer instead."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'study at university and play music at the same time' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Burnt Eggs",
+      "topic_cn": "记叙·一段家庭回忆",
+      "body": "While I was tidying my room one afternoon, I found an old photo hidden inside a notebook, and a lovely memory came back to me. It was my mother's birthday ten years ago, and I had decided to surprise her with home-made scrambled eggs. I woke up really early and tiptoed to the kitchen so that nobody would hear me. I had never cooked anything before that morning, so I simply tried to copy the way Mum usually did it. Somehow, though, the eggs ended up burnt and black. I was just about to throw everything away when my mother walked in. Feeling rather sad, I showed her the eggs and explained what had gone wrong. To my great surprise, she tasted them and said they were not bad at all. We both started laughing and ended up eating every bit. Now I understand that love is indeed a magical ingredient, and this weekend I will cook for her again.",
+      "vocab_notes": [
+        {
+          "word": "memory",
+          "cn": "回忆"
+        },
+        {
+          "word": "indeed",
+          "cn": "确实"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What brought the writer's memory back?",
+          "options": [
+            "An old photo found while cleaning the room.",
+            "A birthday card from Mum.",
+            "A smell coming from the kitchen.",
+            "A phone call from a friend."
+          ],
+          "answer_index": 1,
+          "explanation": "本题答案对应原文'found an old photo… a lovely memory came back'的转述(改写为'cleaning the room')。"
+        },
+        {
+          "stem": "How did the eggs turn out that morning?",
+          "options": [
+            "They tasted perfect.",
+            "They got burnt and black.",
+            "They were never finished.",
+            "Mum cooked them instead."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the eggs ended up burnt and black'(中段)的转述。"
+        },
+        {
+          "stem": "How did the mother react to the burnt eggs?",
+          "options": [
+            "She was angry and left.",
+            "She threw them away at once.",
+            "She asked the writer never to cook again.",
+            "She reassured the writer and finished the eggs herself."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'she tasted them and said they were not bad… ate every bit' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "How Dad Has Changed",
+      "topic_cn": "说明·外貌的变化",
+      "body": "After our family holiday, I looked again at a photo we had taken at the same campsite ten years before, and I could not believe how much my dad had changed. Back in his thirties, he was quite thin and pale, and he had thick red hair. Nowadays he is well-built and tanned from working outdoors. He has always had a strong square jaw, but recently he has grown a beard. Strangely, his beard is still red, even though the hair on his head is slowly turning grey. My mother, on the other hand, looks almost the same as before. She still has smooth skin and straight black hair, and years of jogging every morning have kept her slim and fit. As for me, I still have light skin and dark hair, but these days I usually wear it in a ponytail, since it has grown much longer. Mum says I once had rosy cheeks, though now I have a few freckles instead.",
+      "vocab_notes": [
+        {
+          "word": "jaw",
+          "cn": "下巴"
+        },
+        {
+          "word": "beard",
+          "cn": "胡须"
+        },
+        {
+          "word": "slim",
+          "cn": "苗条的"
+        },
+        {
+          "word": "cheek",
+          "cn": "脸颊"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the writer's dad look like in his thirties?",
+          "options": [
+            "Thin, pale and red-haired.",
+            "Well-built and tanned.",
+            "Grey-bearded and tall.",
+            "Short with black hair."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'he was quite thin and pale, and he had thick red hair' 的转述。"
+        },
+        {
+          "stem": "Why does the writer's mother stay slim and fit?",
+          "options": [
+            "Because she eats very little.",
+            "Because she goes jogging every morning.",
+            "Because she is still young.",
+            "Because she works outdoors."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'years of jogging every morning have kept her slim and fit'(中段)的转述。"
+        },
+        {
+          "stem": "How has the writer's own appearance changed?",
+          "options": [
+            "The hair has turned grey.",
+            "The skin has become darker.",
+            "The hair is longer and worn in a ponytail.",
+            "The cheeks are rosier than before."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'wear it in a ponytail, since it has grown much longer' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Brother First",
+      "topic_cn": "记叙·兄弟之爱",
+      "body": "It was the final race of a world series in Mexico. With only a few hundred metres left, Alistair Brownlee was in third place, while his younger brother Jonny was leading. As Alistair pushed himself forward in the burning heat, he saw Jonny about to fall onto the track. In that moment he had to make a choice: love for his brother, or a chance to win. For Alistair the answer was clear. He ran to Jonny, caught him, and started pulling him towards the finish line. Then he pushed his brother across the line ahead of himself. The move put Jonny in second place and left Alistair in third. Watched by millions, the ending divided opinions: some thought the brothers should be praised, while others felt they should be disqualified. But Alistair did not care about a medal. He later explained that their mother would not have been happy if he had left Jonny behind. At that moment, he was simply a brother.",
+      "vocab_notes": [
+        {
+          "word": "track",
+          "cn": "跑道"
+        },
+        {
+          "word": "medal",
+          "cn": "奖牌"
+        },
+        {
+          "word": "disqualify",
+          "cn": "取消资格"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What difficult choice did Alistair face during the race?",
+          "options": [
+            "Whether to run faster or stop completely.",
+            "Whether to change his shoes or not.",
+            "Whether to start the race again.",
+            "Whether to help his brother or try to win."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'love for his brother, or a chance to win' 的转述。"
+        },
+        {
+          "stem": "What did Alistair actually do near the finish line?",
+          "options": [
+            "He pulled Jonny along and let him finish ahead.",
+            "He ran past his brother to win.",
+            "He stopped and gave up the race.",
+            "He called for the doctors."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'pushed his brother across the line ahead of himself'(中段)的转述。"
+        },
+        {
+          "stem": "Why did Alistair say he made that choice?",
+          "options": [
+            "Because he disliked racing.",
+            "Because their mother would have been unhappy otherwise.",
+            "Because the rules forced him to.",
+            "Because he was sure to lose anyway."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'their mother would not have been happy if he had left Jonny behind' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "A Day for Families",
+      "topic_cn": "说明·国际家庭日",
+      "body": "Did you know that there is a special day just for families? The International Day of Families was set by the United Nations back in 1993, and it is held on the fifteenth of May every year. The main aim of the day is to celebrate how important families are to people everywhere. It also tries to help people understand the many issues that families face in modern life, such as health, work and care for the old. Each year the day has a different theme, so the focus changes from one year to the next. Across the whole nation, and indeed around the world, a wide range of events are organised to mark it. Some are held in small towns, while others take place at the national level. Schools, libraries and local groups all join in with talks, shows and games. Through these activities, families are reminded to spend more time together and to value the people closest to them.",
+      "vocab_notes": [
+        {
+          "word": "nation",
+          "cn": "国家"
+        },
+        {
+          "word": "theme",
+          "cn": "主题"
+        },
+        {
+          "word": "range",
+          "cn": "一系列"
+        },
+        {
+          "word": "issue",
+          "cn": "议题"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When is the International Day of Families held each year?",
+          "options": [
+            "On the first day of the year.",
+            "Whenever a town decides.",
+            "Each year in the middle of May.",
+            "Only in the year 1993."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'held on the fifteenth of May every year' 的转述。"
+        },
+        {
+          "stem": "What is the main aim of the day?",
+          "options": [
+            "To sell family products.",
+            "To start new schools.",
+            "To stop families travelling.",
+            "To show people that families truly matter."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'celebrate how important families are to people everywhere'(中段)的转述。"
+        },
+        {
+          "stem": "How is the day marked around the world?",
+          "options": [
+            "Through many kinds of events at different levels.",
+            "By closing all the shops.",
+            "By a single official meeting.",
+            "By giving everyone a holiday from school."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a wide range of events are organised… small towns… national level' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Saying Sorry to Mum",
+      "topic_cn": "记叙·向家人道歉",
+      "body": "Today there was an important school event, but my mother missed it, and I felt really hurt. Later, on the phone, she said sorry and explained that she had been busy at work because a colleague was away. I could tell from her voice that she truly meant it. I know that she has been under a lot of pressure recently, and I understand that, yet I do not like seeing her so tired and worried all the time. I think she really needs to take some time off work to rest. So I decided to tell her how I felt, instead of keeping my worries to myself. To make up for the missed event, we have planned a trip together next week. We will go camping, share a big meal, and most importantly find time to talk properly. Mum says that placing stress on certain words can make an apology stronger, and her gentle 'I am truly sorry' was more than enough for me.",
+      "vocab_notes": [
+        {
+          "word": "apologise",
+          "cn": "道歉"
+        },
+        {
+          "word": "stress",
+          "cn": "重音;强调"
+        },
+        {
+          "word": "impact",
+          "cn": "影响"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the mother miss the school event?",
+          "options": [
+            "She forgot the date completely.",
+            "She had to cover work for an absent colleague.",
+            "She was on a camping trip.",
+            "She did not think it was important."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'busy at work because a colleague was away' 的转述。"
+        },
+        {
+          "stem": "How does the writer feel about the mother?",
+          "options": [
+            "Angry and unwilling to forgive her.",
+            "Glad that she stays away from home.",
+            "Worried about how tired she is.",
+            "Sure that she does not care."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'I do not like seeing her so tired and worried' 的转述。"
+        },
+        {
+          "stem": "What did they plan in order to make up for it?",
+          "options": [
+            "To buy each other gifts.",
+            "To stop talking for a while.",
+            "To ask the colleague to apologise.",
+            "To go camping and spend time together."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'planned a trip… go camping… find time to talk' 的转述。"
+        }
+      ]
+    }
+  ]
+}

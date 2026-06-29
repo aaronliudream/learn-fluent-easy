@@ -1,0 +1,37 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "grade": 11,
+  "content": {
+    "title": "形式主语 it 速查(It is + adj./n. + to do / that 从句)",
+    "intro": "当真正的主语是不定式、that 从句或 -ing 时,英语习惯把它放到句末,主语位置用 it 占位,这个 it 就叫'形式主语'。判断口诀:句首主语位置是空的、后面跟着 to do 或 that 从句,就填 it。",
+    "table": {
+      "headers": ["句式", "例句 / 说明"],
+      "rows": [
+        ["It is + adj. + to do", "It is vital not to take any chances.(真正主语 = 不定式)"],
+        ["It is + adj. + that 从句", "It is true that disease respects no borders.(真正主语 = that 从句)"],
+        ["It is + n. + that 从句", "It is a pity that some patients could not be saved."],
+        ["It takes + 时间/精力 + to do", "It takes courage to break boundaries."],
+        ["It seems/happens that …", "It seems that the world is getting smaller."],
+        ["It is no use/good doing", "It is no use worrying about culture shock."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主语位置只能用 it,不能用 that/this/there", "mark": "It is important to … √ / That is important to … ×" },
+      { "rule": "that 从句、不定式都可后置;-ing 多用于 It is no use/good doing", "mark": "It is no use crying. √" },
+      { "rule": "It is + adj. + of sb to do(评价人) vs for sb to do(说明难易)", "mark": "It is kind of you to help / It is hard for me to decide" },
+      { "rule": "there seems/happens 后只能接 to be,不接 that 从句", "mark": "It seems that… √ / There seems that… ×" }
+    ],
+    "why": [
+      "英语句子'头轻脚重',不喜欢主语太长。把长长的不定式或从句放到句末,用 it 占住主语位置,句子更顺、重点更清楚。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/改错高频:主语位置空着、后接 to do 或 that 从句 → 填 it。",
+      "区分形式主语 it 与形式宾语 it(find/think/make it + adj. + to do);区分 it 与 there be。"
+    ],
+    "examVsReal": [
+      { "exam": "It is important to remember this.(考试规范)", "real": "Remember this — it's important.", "note": "考试爱用完整形式主语句;口语常把重点前移、再补一句评价。" },
+      { "exam": "It is no use worrying.(考试)", "real": "No point worrying about it.", "note": "口语常用 No point / There's no point doing 表达同样意思。" }
+    ]
+  }
+}

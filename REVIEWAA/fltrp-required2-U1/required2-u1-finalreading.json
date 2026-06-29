@@ -1,0 +1,32 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(饮食/餐桌主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "At the school food festival, Mia felt nervous about tasting dishes from other countries. A classmate told her that she needn't eat anything she really disliked, but that she ought to give each dish at least a small bite. By the end of the day, Mia had found three new favourite foods and was glad that she had been brave enough to try.",
+    "questions": [
+      {
+        "q": "What did the classmate advise Mia to do?",
+        "options": [
+          "Take a small taste of every dish, even if she wasn't sure.",
+          "Avoid all the foreign dishes completely.",
+          "Eat only the dishes she already knew.",
+          "Leave the festival before tasting anything."
+        ],
+        "answer": "A",
+        "explanation": "同学建议每道菜至少尝一小口,即\"ought to give each dish at least a small bite\"的转述;其余与原文相反。"
+      },
+      {
+        "q": "How did Mia feel at the end of the day?",
+        "options": [
+          "Sorry that she had come to the festival.",
+          "Pleased that she had dared to try new foods.",
+          "Bored because the food was all the same.",
+          "Angry that nobody helped her choose."
+        ],
+        "answer": "B",
+        "explanation": "末句说她很高兴自己有勇气尝试,covers 短文后半段,转述而非照抄。"
+      }
+    ]
+  }
+}

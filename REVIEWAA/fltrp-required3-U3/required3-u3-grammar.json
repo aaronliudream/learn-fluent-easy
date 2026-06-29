@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "grammar_title": "现在完成被动语态(have/has been done)",
+  "source": "外研社(新标准)必修第三册 Unit 3 Using language:present perfect passive(have/has been done)。句子地道、科学/发明主题,答案唯一(干扰项为错语态或错时态);零术语、全应用型填空。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "现在完成被动语态基本形式(have/has been + 过去分词)",
+      "overview": "主语是动作的承受者、且有现在完成时间标志(recently / so far / over the past years / by + 施动者)时,用 have/has been + 过去分词。"
+    },
+    {
+      "code": "u3.02",
+      "point": "现在完成被动 vs 现在完成主动(主语承受 or 发出动作)",
+      "overview": "看主语是动作的承受者还是发出者:承受者(常带 by 施动者、空后无宾语)用 have/has been done;发出者(空后跟宾语)用 have/has done。"
+    },
+    {
+      "code": "u3.03",
+      "point": "现在完成被动 vs 一般现在/一般过去被动(时间标志定时态)",
+      "overview": "四个选项都是被动,但时态不同;already / so far / up to now / by now 等标志要求现在完成被动 have/has been done,而非 is/are done 或 was/were done。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "A great many new inventions ____ by scientists over the past few years.",
+      "options": [
+        "have been made",
+        "have made",
+        "are making",
+        "make"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 inventions 是动作承受者,又有 over the past few years → have been + made。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Recently, 3D printers ____ by doctors to create replacement hearts.",
+      "options": [
+        "have used",
+        "have been used",
+        "are using",
+        "use"
+      ],
+      "answer_index": 1,
+      "explanation": "printers 被使用、有 recently → have been used。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Since 2010, several new medicines ____ by researchers for this illness.",
+      "options": [
+        "have developed",
+        "develop",
+        "have been developed",
+        "are developing"
+      ],
+      "answer_index": 2,
+      "explanation": "medicines 被研发、since 2010 → have been developed。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "So far, an intelligent walking house ____ by a clever young team.",
+      "options": [
+        "has built",
+        "is building",
+        "builds",
+        "has been built"
+      ],
+      "answer_index": 3,
+      "explanation": "house 被建造、so far → has been built。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Up to now, only part of the energy problem ____ by engineers.",
+      "options": [
+        "has been solved",
+        "has solved",
+        "solves",
+        "is solving"
+      ],
+      "answer_index": 0,
+      "explanation": "problem 被解决、up to now → has been solved。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "In recent years, the flexible battery ____ greatly by engineers.",
+      "options": [
+        "has improved",
+        "has been improved",
+        "improves",
+        "is improving"
+      ],
+      "answer_index": 1,
+      "explanation": "battery 被改进、有 by engineers 施动者 → has been improved。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Just now, a strange new instrument ____ by the inventor.",
+      "options": [
+        "has designed",
+        "designs",
+        "has been designed",
+        "is designing"
+      ],
+      "answer_index": 2,
+      "explanation": "instrument 被设计、by the inventor → has been designed。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Over the past decade, many electric cars ____ by Chinese companies.",
+      "options": [
+        "have produced",
+        "produce",
+        "are producing",
+        "have been produced"
+      ],
+      "answer_index": 3,
+      "explanation": "cars 被生产、over the past decade → have been produced。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Lately, a smart watch for blind people ____ by a small start-up.",
+      "options": [
+        "has been created",
+        "has created",
+        "creates",
+        "is creating"
+      ],
+      "answer_index": 0,
+      "explanation": "watch 被创造、lately + by 短语 → has been created。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "This year, a cheaper solar panel ____ by the research centre.",
+      "options": [
+        "has introduced",
+        "has been introduced",
+        "introduces",
+        "is introducing"
+      ],
+      "answer_index": 1,
+      "explanation": "panel 被推出、by the research centre → has been introduced。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Already, the new heart pump ____ by the hospital team.",
+      "options": [
+        "has tested",
+        "tests",
+        "has been tested",
+        "is testing"
+      ],
+      "answer_index": 2,
+      "explanation": "pump 被测试、already + by 短语 → has been tested。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "For many years, the compass ____ by sailors all over the world.",
+      "options": [
+        "has used",
+        "uses",
+        "is using",
+        "has been used"
+      ],
+      "answer_index": 3,
+      "explanation": "compass 被使用、for many years + by 短语 → has been used。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Since last spring, the broken robot ____ by the students.",
+      "options": [
+        "has been repaired",
+        "has repaired",
+        "repairs",
+        "is repairing"
+      ],
+      "answer_index": 0,
+      "explanation": "robot 被修理、since last spring → has been repaired。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Recently, two damaged machines ____ by the workers.",
+      "options": [
+        "have replaced",
+        "have been replaced",
+        "replace",
+        "are replacing"
+      ],
+      "answer_index": 1,
+      "explanation": "machines 被更换、recently + by 短语 → have been replaced。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "So far, the old experiment ____ by several scientists.",
+      "options": [
+        "has examined",
+        "examines",
+        "has been examined",
+        "is examining"
+      ],
+      "answer_index": 2,
+      "explanation": "experiment 被检验、so far + by 短语 → has been examined。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Over the years, the inventor's story ____ by many writers.",
+      "options": [
+        "has recorded",
+        "records",
+        "is recording",
+        "has been recorded"
+      ],
+      "answer_index": 3,
+      "explanation": "story 被记述、over the years + by 短语 → has been recorded。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "This month, the team's results ____ by a famous science magazine.",
+      "options": [
+        "have been published",
+        "have published",
+        "publish",
+        "are publishing"
+      ],
+      "answer_index": 0,
+      "explanation": "results 被发表、by 短语 → have been published。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Recently, a minor planet ____ after the great scientist.",
+      "options": [
+        "has named",
+        "has been named",
+        "names",
+        "is naming"
+      ],
+      "answer_index": 1,
+      "explanation": "planet 被命名、recently → has been named。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Up to now, thousands of stars ____ by that astronomer.",
+      "options": [
+        "have studied",
+        "study",
+        "have been studied",
+        "are studying"
+      ],
+      "answer_index": 2,
+      "explanation": "stars 被研究、up to now + by 短语 → have been studied。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Since the fire, a new 3D-printed shell ____ to the injured turtle.",
+      "options": [
+        "has given",
+        "gives",
+        "is giving",
+        "has been given"
+      ],
+      "answer_index": 3,
+      "explanation": "shell 被给予、since the fire → has been given。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "So far, many great inventions ____ by ordinary people, not just experts.",
+      "options": [
+        "have been made",
+        "have made",
+        "are made",
+        "make"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 inventions 是承受者、带 by 短语 → have been made。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "So far, ordinary people ____ many great inventions, not just experts.",
+      "options": [
+        "have been made",
+        "have made",
+        "are making",
+        "makes"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 people 是发出者、空后跟宾语 inventions → 主动 have made。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Recently, the old theory ____ by more than one scientist.",
+      "options": [
+        "has questioned",
+        "is questioned",
+        "has been questioned",
+        "questions"
+      ],
+      "answer_index": 2,
+      "explanation": "theory 是承受者、带 by 短语 → has been questioned。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Recently, more than one scientist ____ the old theory.",
+      "options": [
+        "has been questioned",
+        "is questioning",
+        "question",
+        "has questioned"
+      ],
+      "answer_index": 3,
+      "explanation": "scientist 是发出者、空后跟宾语 theory → 主动 has questioned。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Up to now, the experiment ____ by students all over the country.",
+      "options": [
+        "has been repeated",
+        "has repeated",
+        "is repeated",
+        "repeats"
+      ],
+      "answer_index": 0,
+      "explanation": "experiment 是承受者、带 by 短语 → has been repeated。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Up to now, students all over the country ____ the experiment.",
+      "options": [
+        "have been repeated",
+        "have repeated",
+        "are repeating",
+        "repeats"
+      ],
+      "answer_index": 1,
+      "explanation": "students 是发出者、空后跟宾语 experiment → 主动 have repeated。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "For centuries, the compass ____ by sailors crossing the sea.",
+      "options": [
+        "has used",
+        "is used",
+        "has been used",
+        "uses"
+      ],
+      "answer_index": 2,
+      "explanation": "compass 是承受者、带 by 短语 → has been used。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "For centuries, sailors crossing the sea ____ the compass.",
+      "options": [
+        "have been used",
+        "are using",
+        "uses",
+        "have used"
+      ],
+      "answer_index": 3,
+      "explanation": "sailors 是发出者、空后跟宾语 compass → 主动 have used。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Lately, replacement body parts ____ by clever 3D printers.",
+      "options": [
+        "have been produced",
+        "have produced",
+        "are produced",
+        "produce"
+      ],
+      "answer_index": 0,
+      "explanation": "parts 是承受者、带 by 短语 → have been produced。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Lately, clever 3D printers ____ replacement body parts.",
+      "options": [
+        "have been produced",
+        "have produced",
+        "are producing",
+        "produces"
+      ],
+      "answer_index": 1,
+      "explanation": "printers 是发出者、空后跟宾语 parts → 主动 have produced。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "This year, a new energy car ____ by that young engineer.",
+      "options": [
+        "has designed",
+        "is designed",
+        "has been designed",
+        "designs"
+      ],
+      "answer_index": 2,
+      "explanation": "car 是承受者、带 by 短语 → has been designed。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "This year, that young engineer ____ a new energy car.",
+      "options": [
+        "has been designed",
+        "is designing",
+        "design",
+        "has designed"
+      ],
+      "answer_index": 3,
+      "explanation": "engineer 是发出者、空后跟宾语 car → 主动 has designed。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Already, the patient's heart problem ____ by the doctors.",
+      "options": [
+        "has been treated",
+        "has treated",
+        "is treated",
+        "treats"
+      ],
+      "answer_index": 0,
+      "explanation": "problem 是承受者、带 by 短语 → has been treated。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Already, the doctors ____ the patient's heart problem.",
+      "options": [
+        "have been treated",
+        "have treated",
+        "are treating",
+        "treats"
+      ],
+      "answer_index": 1,
+      "explanation": "doctors 是发出者、空后跟宾语 problem → 主动 have treated。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Since then, Franklin's story ____ by generations of children.",
+      "options": [
+        "has loved",
+        "is loved",
+        "has been loved",
+        "loves"
+      ],
+      "answer_index": 2,
+      "explanation": "story 是承受者、带 by 短语 → has been loved。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Since then, generations of children ____ Franklin's story.",
+      "options": [
+        "have been loved",
+        "are loving",
+        "loves",
+        "have loved"
+      ],
+      "answer_index": 3,
+      "explanation": "children 是发出者、空后跟宾语 story → 主动 have loved。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Over time, the truth about the apple ____ by several writers.",
+      "options": [
+        "has been doubted",
+        "has doubted",
+        "is doubted",
+        "doubts"
+      ],
+      "answer_index": 0,
+      "explanation": "truth 是承受者、带 by 短语 → has been doubted。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Over time, several writers ____ the truth about the apple.",
+      "options": [
+        "have been doubted",
+        "have doubted",
+        "are doubting",
+        "doubts"
+      ],
+      "answer_index": 1,
+      "explanation": "writers 是发出者、空后跟宾语 truth → 主动 have doubted。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Recently, many human body parts ____ with this new technology.",
+      "options": [
+        "have made",
+        "are made",
+        "have been made",
+        "make"
+      ],
+      "answer_index": 2,
+      "explanation": "parts 是承受者、with 表方式而非施动 → have been made。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Recently, this new technology ____ many human body parts.",
+      "options": [
+        "has been made",
+        "is making",
+        "makes",
+        "has made"
+      ],
+      "answer_index": 3,
+      "explanation": "technology 是发出者、空后跟宾语 parts → 主动 has made。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "By now, the new vaccine ____ to thousands of patients.",
+      "options": [
+        "has been given",
+        "is given",
+        "was given",
+        "will be given"
+      ],
+      "answer_index": 0,
+      "explanation": "by now 表到目前为止 → 现在完成被动 has been given。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Over the past ten years, many electric cars ____ in this city.",
+      "options": [
+        "are produced",
+        "have been produced",
+        "were produced",
+        "will be produced"
+      ],
+      "answer_index": 1,
+      "explanation": "over the past ten years → 现在完成被动 have been produced。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "So far, the broken telescope ____ twice this year.",
+      "options": [
+        "is repaired",
+        "was repaired",
+        "has been repaired",
+        "will be repaired"
+      ],
+      "answer_index": 2,
+      "explanation": "so far → 现在完成被动 has been repaired。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Already, the team's results ____ in a famous journal.",
+      "options": [
+        "are published",
+        "were published",
+        "will be published",
+        "have been published"
+      ],
+      "answer_index": 3,
+      "explanation": "already → 现在完成被动 have been published。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Up to now, the old theory ____ many times.",
+      "options": [
+        "has been tested",
+        "is tested",
+        "was tested",
+        "will be tested"
+      ],
+      "answer_index": 0,
+      "explanation": "up to now → 现在完成被动 has been tested。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Since last year, three new instruments ____ for the lab.",
+      "options": [
+        "are bought",
+        "have been bought",
+        "were bought",
+        "will be bought"
+      ],
+      "answer_index": 1,
+      "explanation": "since last year → 现在完成被动 have been bought。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Recently, the famous experiment ____ by several teams.",
+      "options": [
+        "is copied",
+        "was copied",
+        "has been copied",
+        "will be copied"
+      ],
+      "answer_index": 2,
+      "explanation": "recently → 现在完成被动 has been copied。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Lately, a great deal of money ____ on medical research.",
+      "options": [
+        "is spent",
+        "was spent",
+        "will be spent",
+        "has been spent"
+      ],
+      "answer_index": 3,
+      "explanation": "lately → 现在完成被动 has been spent。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "In the last decade, much progress ____ in solar power.",
+      "options": [
+        "has been made",
+        "is made",
+        "was made",
+        "will be made"
+      ],
+      "answer_index": 0,
+      "explanation": "in the last decade → 现在完成被动 has been made。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "This week, the damaged robot ____ at last.",
+      "options": [
+        "is fixed",
+        "has been fixed",
+        "was fixed",
+        "will be fixed"
+      ],
+      "answer_index": 1,
+      "explanation": "this week + at last → 现在完成被动 has been fixed。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Up to now, no time machine ____ anywhere in the world.",
+      "options": [
+        "is invented",
+        "was invented",
+        "has been invented",
+        "will be invented"
+      ],
+      "answer_index": 2,
+      "explanation": "up to now → 现在完成被动 has been invented。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "So far, the new heart pump ____ on many patients.",
+      "options": [
+        "is used",
+        "was used",
+        "will be used",
+        "has been used"
+      ],
+      "answer_index": 3,
+      "explanation": "so far → 现在完成被动 has been used。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "By now, the science museum ____ by millions of visitors.",
+      "options": [
+        "has been visited",
+        "is visited",
+        "was visited",
+        "will be visited"
+      ],
+      "answer_index": 0,
+      "explanation": "by now → 现在完成被动 has been visited。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Recently, the rare planet ____ after a Chinese scientist.",
+      "options": [
+        "is named",
+        "has been named",
+        "was named",
+        "will be named"
+      ],
+      "answer_index": 1,
+      "explanation": "recently → 现在完成被动 has been named。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Over the years, the inventor's name ____ almost everywhere.",
+      "options": [
+        "is heard",
+        "was heard",
+        "has been heard",
+        "will be heard"
+      ],
+      "answer_index": 2,
+      "explanation": "over the years → 现在完成被动 has been heard。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Already, the new calendar ____ across the whole country.",
+      "options": [
+        "is introduced",
+        "was introduced",
+        "will be introduced",
+        "has been introduced"
+      ],
+      "answer_index": 3,
+      "explanation": "already → 现在完成被动 has been introduced。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Since the fire, the injured turtle ____ a 3D-printed shell.",
+      "options": [
+        "has been given",
+        "is given",
+        "was given",
+        "will be given"
+      ],
+      "answer_index": 0,
+      "explanation": "since the fire → 现在完成被动 has been given。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Up to now, thousands of stars ____ through this telescope.",
+      "options": [
+        "are studied",
+        "have been studied",
+        "were studied",
+        "will be studied"
+      ],
+      "answer_index": 1,
+      "explanation": "up to now → 现在完成被动 have been studied。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Lately, several old machines ____ with safer ones.",
+      "options": [
+        "are replaced",
+        "were replaced",
+        "have been replaced",
+        "will be replaced"
+      ],
+      "answer_index": 2,
+      "explanation": "lately → 现在完成被动 have been replaced。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "By now, the whole report ____ into three languages.",
+      "options": [
+        "is translated",
+        "was translated",
+        "will be translated",
+        "has been translated"
+      ],
+      "answer_index": 3,
+      "explanation": "by now → 现在完成被动 has been translated。"
+    }
+  ]
+}

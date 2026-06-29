@@ -1,0 +1,423 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "topic": "Welcome to Dunhuang",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社选择性必修四 Unit 3 同主题听力(计划敦煌之行/莫高窟简介/洞中导览飞天/藏经洞发现/丝路与文化交流/参观贴士)。long/short 交替(3长3短);答案均可在 transcript 找到依据;与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Planning a Trip to Dunhuang",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Have you decided where to go for the summer holiday, Tom?",
+        "Tom: Yes, I really want to visit Dunhuang in the northwest of China.",
+        "Mia: Dunhuang? What is so special about it?",
+        "Tom: It has hundreds of ancient caves full of beautiful wall paintings.",
+        "Mia: That sounds amazing. How will you get there?",
+        "Tom: I'll take the fast train and then a bus to the grottoes.",
+        "Mia: Will you climb the famous sand mountain too?",
+        "Tom: Of course. I want to watch the sunset over the desert.",
+        "Mia: Send me lots of photos when you arrive!",
+        "Tom: I promise I will."
+      ],
+      "translation_cn": "Mia 问 Tom 暑假去哪儿;Tom 想去中国西北的敦煌,因为那里有数百个满是壁画的古老洞窟;他打算先坐高铁再转公交去石窟,还要爬鸣沙山看沙漠日落;Mia 让他到了多拍照片,Tom 答应了。",
+      "questions": [
+        {
+          "stem": "Where does Tom want to go?",
+          "options": [
+            "Dunhuang.",
+            "Beijing.",
+            "Shanghai.",
+            "Guangzhou."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Tom think the place is special?",
+          "options": [
+            "It has the biggest shopping centre.",
+            "It has ancient caves full of wall paintings.",
+            "It has a famous football team.",
+            "It is by the sea."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How will Tom get to the grottoes?",
+          "options": [
+            "By fast train and then a bus.",
+            "By plane only.",
+            "By boat across a lake.",
+            "On foot all the way."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom want to watch over the desert?",
+          "options": [
+            "A football match.",
+            "The sunset.",
+            "A street market.",
+            "A boat race."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Mia ask Tom to do?",
+          "options": [
+            "Buy her a new phone.",
+            "Bring back some sand.",
+            "Send her lots of photos.",
+            "Call her every hour."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 About the Mogao Grottoes",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The Mogao Grottoes lie near the city of Dunhuang.",
+        "They were carved out of the rock over about a thousand years.",
+        "There are more than seven hundred caves in all.",
+        "Inside, the walls are covered with colourful paintings and statues.",
+        "Today the caves are protected, and visitors come from many countries to see them."
+      ],
+      "translation_cn": "莫高窟坐落在敦煌城附近;历经约一千年从岩石中开凿而成;共有七百多个洞窟;洞内墙壁布满彩色壁画和雕像;如今洞窟受到保护,各国游客纷纷前来参观。",
+      "questions": [
+        {
+          "stem": "Where do the Mogao Grottoes lie?",
+          "options": [
+            "Inside a busy seaport.",
+            "On a small island.",
+            "Next to the capital.",
+            "Near the city of Dunhuang."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How long did it take to carve the caves?",
+          "options": [
+            "About a thousand years.",
+            "About ten days.",
+            "Around fifty years.",
+            "A single winter."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How many caves are there in all?",
+          "options": [
+            "Fewer than ten.",
+            "More than seven hundred.",
+            "Exactly one.",
+            "About fifty."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What covers the walls inside the caves?",
+          "options": [
+            "Modern photographs.",
+            "Maps of Europe.",
+            "Colourful paintings and statues.",
+            "Glass windows."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who comes to see the caves today?",
+          "options": [
+            "Only local farmers.",
+            "Nobody at all.",
+            "Only the painters.",
+            "Visitors from many countries."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 Looking at the Flying Apsaras",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Guide: Now look up at the wall in front of you. Can you see the flying figures?",
+        "Visitor: Yes! They look like dancers in the sky. Who are they?",
+        "Guide: They are the Apsaras, also called the Flying Immortals.",
+        "Visitor: Their scarves seem to move as if there were a wind.",
+        "Guide: That is the skill of the old painters. They painted these during the Tang Dynasty.",
+        "Visitor: The colours are still so bright after all these years.",
+        "Guide: That is why we keep the light very low, to protect them.",
+        "Visitor: Thank you. I will never forget these wonderful paintings."
+      ],
+      "translation_cn": "导游让游客抬头看墙上飞舞的人物;游客觉得他们像天空中的舞者,问是谁;导游说那是飞天,又称“飞行的神仙”,绘于唐代;色彩历经多年仍鲜亮,所以洞内灯光保持很暗以保护壁画;游客说永远不会忘记这些精美的画。",
+      "questions": [
+        {
+          "stem": "What does the guide ask the visitor to look at?",
+          "options": [
+            "The flying figures on the wall.",
+            "The floor of the cave.",
+            "A book on a table.",
+            "The door behind them."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What are the Apsaras also called?",
+          "options": [
+            "The Silk Traders.",
+            "The Flying Immortals.",
+            "The Desert Kings.",
+            "The Tang Soldiers."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When were these paintings made?",
+          "options": [
+            "Last year.",
+            "In modern times.",
+            "During the Tang Dynasty.",
+            "Before any caves existed."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why does the guide keep the light very low?",
+          "options": [
+            "To save electricity only.",
+            "Because the lamps are broken.",
+            "So visitors will leave quickly.",
+            "To protect the paintings."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does the visitor feel about the paintings?",
+          "options": [
+            "She will never forget them.",
+            "She finds them boring.",
+            "She wants to touch them.",
+            "She thinks they are ugly."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 The Library Cave",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In 1900, a Taoist priest made an amazing discovery at Dunhuang.",
+        "While cleaning a cave, he found a small room that had been closed for hundreds of years.",
+        "Inside were thousands of old papers, scrolls and paintings.",
+        "Today this room is called the Library Cave.",
+        "The papers tell us much about life on the Silk Road, but no one knows why the room was sealed."
+      ],
+      "translation_cn": "1900年,一位道士在敦煌有了惊人的发现;他在清理洞窟时,发现一个封闭了数百年的小室;里面藏有成千上万的古老纸卷、卷轴和画作;这个小室如今被称为藏经洞;这些文书让我们了解丝路上的生活,但无人知道它为何被封。",
+      "questions": [
+        {
+          "stem": "Who made the discovery in 1900?",
+          "options": [
+            "A foreign king.",
+            "A Taoist priest.",
+            "A young painter.",
+            "A train driver."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What was he doing when he found the room?",
+          "options": [
+            "Selling tickets.",
+            "Painting a wall.",
+            "Cleaning a cave.",
+            "Riding a camel."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What was inside the small room?",
+          "options": [
+            "Boxes of fresh fruit.",
+            "Modern machines.",
+            "Nothing at all.",
+            "Thousands of old papers, scrolls and paintings."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do the papers tell us about?",
+          "options": [
+            "Life on the Silk Road.",
+            "The price of gold today.",
+            "How to build trains.",
+            "The weather in Europe."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is still unknown?",
+          "options": [
+            "Where Dunhuang is.",
+            "Why the room was sealed.",
+            "Who found the room.",
+            "What was inside."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 East Meets West",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lily: Our history teacher said Dunhuang was a meeting point of East and West. Why?",
+        "Jack: Because the Silk Road passed right through it.",
+        "Lily: So traders from different lands all stopped there?",
+        "Jack: Yes, and they brought not only goods but also new ideas and art.",
+        "Lily: That must be why the cave paintings show so many cultures.",
+        "Jack: Exactly. Today the city holds a big cultural Expo every year.",
+        "Lily: I'd love to take part in it one day.",
+        "Jack: Me too. It's a great way to learn from other countries."
+      ],
+      "translation_cn": "Lily 问历史老师为何说敦煌是东西方交汇点;Jack 说因为丝绸之路正好穿城而过;各地商人都在此停留,带来货物,也带来新思想和艺术;这就是壁画展现多种文化的原因;如今城里每年举办大型文化博览会;两人都想有朝一日参加,因为这是向他国学习的好方式。",
+      "questions": [
+        {
+          "stem": "What did the teacher call Dunhuang?",
+          "options": [
+            "The capital of China.",
+            "A quiet fishing town.",
+            "A meeting point of East and West.",
+            "A modern factory city."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why was it a meeting point?",
+          "options": [
+            "It had the only airport.",
+            "It was beside the ocean.",
+            "It had no other towns nearby.",
+            "The Silk Road passed right through it."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Besides goods, what did traders bring?",
+          "options": [
+            "New ideas and art.",
+            "Only gold coins.",
+            "Soldiers and weapons.",
+            "Nothing else."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the city hold every year today?",
+          "options": [
+            "A camel race only.",
+            "A big cultural Expo.",
+            "A winter snow show.",
+            "A football cup."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Jack think the Expo is good?",
+          "options": [
+            "It makes the city quiet.",
+            "It keeps tourists away.",
+            "It is a way to learn from other countries.",
+            "It sells cheap food."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 Advice for Visitors",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "If you plan to visit the Dunhuang caves, here is some useful advice.",
+        "Book your ticket early, because only a few people may enter each cave every day.",
+        "Bring a hat and water, since the desert sun is very strong.",
+        "Inside the caves, please speak quietly and never touch the walls.",
+        "In this way, the wonderful paintings can be kept safe for everyone who comes after us."
+      ],
+      "translation_cn": "如果你打算参观敦煌的洞窟,这里有些实用建议:早点订票,因为每天每个洞窟只允许少数人进入;带上帽子和水,因为沙漠的阳光很强;在洞内请轻声说话,切勿触摸墙壁;这样,精美的壁画才能为后来的每个人妥善保存。",
+      "questions": [
+        {
+          "stem": "What should you do early?",
+          "options": [
+            "Eat your lunch.",
+            "Climb the mountain.",
+            "Pack your camera.",
+            "Book your ticket."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why should you book early?",
+          "options": [
+            "Only a few people may enter each cave each day.",
+            "Tickets are free in the morning.",
+            "The caves close at noon.",
+            "The train is always late."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why bring a hat and water?",
+          "options": [
+            "It often rains hard.",
+            "The desert sun is very strong.",
+            "The caves are very cold.",
+            "The walk is very short."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you do inside the caves?",
+          "options": [
+            "Shout to your friends.",
+            "Lean on the paintings.",
+            "Speak quietly and not touch the walls.",
+            "Run from cave to cave."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the purpose of this advice?",
+          "options": [
+            "To sell more drinks.",
+            "To make the visit longer.",
+            "To close the caves for good.",
+            "To keep the paintings safe for the future."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

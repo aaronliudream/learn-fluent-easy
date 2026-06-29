@@ -1,0 +1,338 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "topic": "Business Blossoms",
+  "source": "外研社选择性必修第四册 Unit 4 同主题阅读(玫瑰创业/共享经济/公平贸易/社会信用/学生理财/无现金支付)。词限 U4/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "From Roses to Riches",
+      "topic_cn": "记叙·玫瑰创业故事",
+      "body": "Zhang Yue is the chairwoman of a company that grows roses in a quiet valley far from any city. Before sunrise, she walks between the rows of rose plants, where the workers she hires will soon pick the delicate flowers. Zhang did not always plan this life. She grew up surrounded by roses but paid them little attention. It was only after she returned from studying overseas that she saw their potential. \"Conditions here are ideal,\" she says. \"This is a place where roses grow wild.\" She then decided to return to her home town and start a business, which surprised many people. The biggest challenge at the early phase was to persuade local people to work for her, because few believed she could build a successful business from flowers. After she appeared on television, a large company offered to purchase her product and help with its distribution. Today her roses are among the best in Asia, and she can pay every worker a fair bonus.",
+      "vocab_notes": [
+        {
+          "word": "chairwoman",
+          "cn": "女会长"
+        },
+        {
+          "word": "potential",
+          "cn": "潜力"
+        },
+        {
+          "word": "phase",
+          "cn": "阶段"
+        },
+        {
+          "word": "bonus",
+          "cn": "奖金"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Zhang Yue decide to go back to her home town?",
+          "options": [
+            "To set up a rose-growing business there.",
+            "To work in a television studio.",
+            "To study at a university overseas.",
+            "To buy flowers for a big company."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说她回乡 start a business(种玫瑰)的转述。"
+        },
+        {
+          "stem": "What was the hardest thing for Zhang at the start?",
+          "options": [
+            "Finding a valley with wild roses.",
+            "Getting local people to come and work for her.",
+            "Learning how to grow flowers.",
+            "Travelling to a foreign country."
+          ],
+          "answer_index": 1,
+          "explanation": "对 'persuade local people to work for her' 的概括转述。"
+        },
+        {
+          "stem": "What happened after Zhang appeared on television?",
+          "options": [
+            "A big company agreed to buy and distribute her roses.",
+            "She gave up the rose business completely.",
+            "Her workers all decided to leave.",
+            "She moved away from the valley."
+          ],
+          "answer_index": 0,
+          "explanation": "对 'a large company offered to purchase her product and help with its distribution' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Sharing Instead of Buying",
+      "topic_cn": "说明·共享经济",
+      "body": "The sharing economy is changing the way people use goods and services. Instead of buying things they rarely need, many people now borrow or rent them for a short time. These range from car shares to home shares, and even to shared power banks. With a single click on a phone, a person can hire a bike for an afternoon or rent out a spare room for a few days. Whether you are a lender or a borrower, it can be a win-win situation, because everyone makes or saves money. Sharing also encourages people to reuse items, which cuts down on waste, and bike and car sharing reduce the number of polluting cars on the road. However, the system is not perfect. It is growing faster than the rules that control it, and personal data is not always safe. Even so, the sharing economy is becoming more and more important to our daily lives and to the wider economy.",
+      "vocab_notes": [
+        {
+          "word": "hire",
+          "cn": "租用"
+        },
+        {
+          "word": "lender",
+          "cn": "出借者"
+        },
+        {
+          "word": "waste",
+          "cn": "浪费"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How to make roses grow faster.",
+            "How the sharing economy works and what it brings.",
+            "Why people should always buy new things.",
+            "How banks lend money to companies."
+          ],
+          "answer_index": 1,
+          "explanation": "全文围绕共享经济的运作与影响。"
+        },
+        {
+          "stem": "According to the text, how does sharing help the environment?",
+          "options": [
+            "It makes everyone buy more goods.",
+            "It builds more factories quickly.",
+            "It cuts waste and puts fewer cars on the road.",
+            "It stops people from using phones."
+          ],
+          "answer_index": 2,
+          "explanation": "对 'reuse items... cuts down on waste' 和 'reduce... cars' 的转述。"
+        },
+        {
+          "stem": "What problem with the sharing economy is mentioned?",
+          "options": [
+            "Nobody is willing to share anything.",
+            "It is far too slow to grow.",
+            "It only works for very rich people.",
+            "Rules cannot keep up, and personal data may be unsafe."
+          ],
+          "answer_index": 3,
+          "explanation": "对 'growing faster than the rules... personal data is not always safe' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Fairer Deal for Farmers",
+      "topic_cn": "说明·公平贸易",
+      "body": "Good Deal is a movement that helps farmers and workers in less developed areas get a fairer price for what they produce. Good Deal products, such as coffee or chocolate, may cost a little more than ordinary ones. However, up to one third of the sale price is returned to the producers, which is far more than they would earn under the usual trading system. The movement has become popular among young shoppers, who are happy to spend a bit more to support distant farmers. They believe that buying these products helps improve local people's lives. Not everyone agrees, though. Some people argue that the system is unfair to producers who are not part of the movement, because their goods may be ignored. Supporters reply that the aim is to share wealth more evenly, and that every small choice by a shopper can make a real difference to a family far away.",
+      "vocab_notes": [
+        {
+          "word": "producer",
+          "cn": "生产者"
+        },
+        {
+          "word": "conventional",
+          "cn": "传统的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is special about the price of Good Deal products?",
+          "options": [
+            "A large share of it is paid back to the producers.",
+            "It is always lower than ordinary products.",
+            "It never changes from year to year.",
+            "It is set only by the shoppers."
+          ],
+          "answer_index": 0,
+          "explanation": "对 'one third of the sale price is returned to the producers' 的转述。"
+        },
+        {
+          "stem": "Why do many young shoppers buy these products?",
+          "options": [
+            "Because they are the cheapest goods around.",
+            "To support farmers in poorer areas.",
+            "Because the law forces them to.",
+            "To save time when shopping online."
+          ],
+          "answer_index": 1,
+          "explanation": "对 'happy to spend a bit more to support distant farmers' 的转述。"
+        },
+        {
+          "stem": "What do critics of the movement say?",
+          "options": [
+            "It pays farmers far too much money.",
+            "It is loved by absolutely everyone.",
+            "It may be unfair to producers outside it.",
+            "It only sells flowers, not coffee."
+          ],
+          "answer_index": 2,
+          "explanation": "对 'unfair to producers who are not part of the movement' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "What Your Score Says About You",
+      "topic_cn": "说明·社会信用",
+      "body": "A social credit system records how honest and reliable people are in their daily activities. When a person pays bills on time, returns library books promptly and keeps promises, their credit score goes up. A good score can bring real rewards. In some cities, people with high scores do not have to pay a deposit when they book a hotel or hire a shared bike. A poor record, on the other hand, can make life harder. Someone with many unpaid debts may be stopped from buying expensive train tickets or borrowing money from a bank. Supporters say the system encourages people to behave well and to keep their word, which makes society more trustworthy. Others worry that it collects too much personal information, and that mistakes in the records may be hard to correct. Whatever people think, more and more services now check a person's credit before offering a loan or a deal.",
+      "vocab_notes": [
+        {
+          "word": "credit score",
+          "cn": "信用分"
+        },
+        {
+          "word": "deposit",
+          "cn": "押金"
+        },
+        {
+          "word": "trustworthy",
+          "cn": "可信赖的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How can a person make their credit score go up?",
+          "options": [
+            "By spending as much money as possible.",
+            "By borrowing from many banks at once.",
+            "By never using any services at all.",
+            "By paying on time and keeping their promises."
+          ],
+          "answer_index": 3,
+          "explanation": "对 'pays bills on time... keeps promises' 的转述。"
+        },
+        {
+          "stem": "What benefit can a high credit score bring?",
+          "options": [
+            "Skipping the deposit when booking a hotel or bike.",
+            "Free train tickets for life.",
+            "A larger house from the government.",
+            "A higher salary at work."
+          ],
+          "answer_index": 0,
+          "explanation": "对 'do not have to pay a deposit when they book a hotel or hire a shared bike' 的转述。"
+        },
+        {
+          "stem": "What worry about the system does the text mention?",
+          "options": [
+            "It is far too easy to cheat.",
+            "It gathers too much data, and errors are hard to fix.",
+            "It gives money to everyone equally.",
+            "It only works in the countryside."
+          ],
+          "answer_index": 1,
+          "explanation": "对 'collects too much personal information... mistakes... hard to correct' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Money Tips for New Students",
+      "topic_cn": "说明·学生理财",
+      "body": "For many students, university is the first time they must handle money on their own. Learning a few simple habits early can help them make ends meet and avoid going into debt. First, it is wise to choose a bank account with no hidden fees and free online services. Second, students should start saving a small amount each week and slowly increase it, because even tiny savings grow over time and earn interest. Building good credit also matters, so any credit card should be used carefully and every bill paid on time. Making extra money is fine, but a part-time job should never interfere with study, and any tax must be paid as the law requires. Above all, students should spend in a rational way and never go beyond their agreed credit limit. By avoiding luxuries they do not really need, young people can stay afloat and enjoy their studies without constant worry about money.",
+      "vocab_notes": [
+        {
+          "word": "make ends meet",
+          "cn": "收支相抵"
+        },
+        {
+          "word": "interest",
+          "cn": "利息"
+        },
+        {
+          "word": "afloat",
+          "cn": "周转得开"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the main advice about saving money?",
+          "options": [
+            "Save everything and never spend at all.",
+            "Wait until you are rich before saving.",
+            "Save small amounts regularly and let them grow.",
+            "Put all your money into one big purchase."
+          ],
+          "answer_index": 2,
+          "explanation": "对 'saving a small amount each week and slowly increase it' 的转述。"
+        },
+        {
+          "stem": "What rule about a part-time job does the writer give?",
+          "options": [
+            "It should replace all your classes.",
+            "It must pay more than the rent.",
+            "It should be done only at night.",
+            "It must not get in the way of studying."
+          ],
+          "answer_index": 3,
+          "explanation": "对 'a part-time job should never interfere with study' 的转述。"
+        },
+        {
+          "stem": "What is the overall message of the passage?",
+          "options": [
+            "Manage money carefully so you do not fall into debt.",
+            "Borrow as much as the bank will allow.",
+            "Buy luxuries to feel happier at university.",
+            "Avoid opening any bank account."
+          ],
+          "answer_index": 0,
+          "explanation": "全文主旨:养成理财好习惯、避免负债。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Goodbye to Cash?",
+      "topic_cn": "议论·无现金支付",
+      "body": "Fewer and fewer people carry cash today. Instead, they pay with cards, mobile phones and other electronic devices. Supporters of non-cash payment love how fast and easy it is. With a quick scan of a code, a bill is paid in the blink of an eye, and there is no need to carry heavy coins or worry about losing a purse. Shops and banks also find electronic records easier to manage. Yet not everyone is convinced. Some people worry about spending too much, because it feels less real to tap a phone than to hand over notes. Others point to safety: phones can be stolen or hacked, and criminals may copy personal information for their own use. There is also the problem of what happens when the Internet fails or a battery dies. For these reasons, some suggest that we should use cash less often rather than give it up completely.",
+      "vocab_notes": [
+        {
+          "word": "non-cash payment",
+          "cn": "无现金支付"
+        },
+        {
+          "word": "purse",
+          "cn": "钱包"
+        },
+        {
+          "word": "hack",
+          "cn": "黑客入侵"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do supporters like non-cash payment?",
+          "options": [
+            "It needs lots of heavy coins.",
+            "It is fast and very convenient.",
+            "It is the only legal way to pay.",
+            "It works without any phone or card."
+          ],
+          "answer_index": 1,
+          "explanation": "对 'love how fast and easy it is' 的转述。"
+        },
+        {
+          "stem": "What safety problem is mentioned in the text?",
+          "options": [
+            "Cards are always free of any risk.",
+            "Notes can never be stolen.",
+            "Phones can be hacked and personal data copied.",
+            "Banks refuse to keep records."
+          ],
+          "answer_index": 2,
+          "explanation": "对 'phones can be stolen or hacked, and criminals may copy personal information' 的转述。"
+        },
+        {
+          "stem": "What do some people finally suggest?",
+          "options": [
+            "Stop using phones to pay at once.",
+            "Return to carrying only coins.",
+            "Let banks decide how people pay.",
+            "Reduce how often we use cash instead of dropping it entirely."
+          ],
+          "answer_index": 3,
+          "explanation": "对 'use cash less often rather than give it up completely' 的转述。"
+        }
+      ]
+    }
+  ]
+}

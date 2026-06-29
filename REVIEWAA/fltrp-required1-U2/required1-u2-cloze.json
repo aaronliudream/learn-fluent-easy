@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "topic": "Exploring English",
+  "source": "外研社必修一 Unit 2 同主题完形(汉堡疑问/初遇美式词/像搭积木造词/网上聊天/晚餐误会/学习习语)。用词限 U2/初中/常见词,答案唯一,与阅读关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Boy and His Hamburger",
+      "text": "One afternoon my little brother held up his lunch and asked me a very (1)____ question: was there really ham inside a hamburger? I started to laugh, because of course there (2)____. His question made me notice how (3)____ English can be. There is no egg in an eggplant, and a pineapple has neither pine nor apple in it. The more examples I thought of, the more (4)____ they seemed. We sculpt a sculpture, but we just (5)____ a photo. We say it is (6)____ when water falls from the sky, yet we never say it is 'sunshining'. I told my brother that English was (7)____ by people, not by computers, so it is full of surprises. He listened with wide eyes and then asked another funny (8)____. That evening I realised that his simple questions had (9)____ me to look at my own language in a new way. Sometimes a child can (10)____ you something important.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "odd",
+            "tall",
+            "warm",
+            "rich"
+          ],
+          "answer_index": 0,
+          "explanation": "a very odd question 一个很奇怪的问题。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "did",
+            "wasn't",
+            "will",
+            "can"
+          ],
+          "answer_index": 1,
+          "explanation": "回答 was there...? 的省略 → there wasn't。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "boring",
+            "quiet",
+            "confusing",
+            "heavy"
+          ],
+          "answer_index": 2,
+          "explanation": "how confusing English can be 英语多令人困惑。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "easy",
+            "useful",
+            "safe",
+            "strange"
+          ],
+          "answer_index": 3,
+          "explanation": "越想越觉得 strange 奇怪。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "take",
+            "make",
+            "do",
+            "give"
+          ],
+          "answer_index": 0,
+          "explanation": "take a photo 固定搭配。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "shining",
+            "raining",
+            "burning",
+            "ringing"
+          ],
+          "answer_index": 1,
+          "explanation": "天上落水 → it is raining 在下雨。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "eaten",
+            "sold",
+            "created",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "was created by people 由人创造。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "answer",
+            "price",
+            "machine",
+            "question"
+          ],
+          "answer_index": 3,
+          "explanation": "asked another question 又问一个问题。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "helped",
+            "stopped",
+            "refused",
+            "forced"
+          ],
+          "answer_index": 0,
+          "explanation": "helped me to look 帮我去看。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "buy",
+            "teach",
+            "throw",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "teach you something 教你一些东西。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "My First Day with American Words",
+      "text": "On my first day in New York, I quickly learned that American and British English are not the (1)____. When my host asked me to put 'gas' in the car, I was (2)____, because in Britain we call it petrol. Then he said we would drive along the (3)____, which I knew as the motorway at home. Later we took the (4)____ to the top of a tall building; my family in London would have said 'lift'. To get across the city, we rode the (5)____, but in the UK people travel on the underground. That night I went back to my small (6)____, the kind of home an American would call an apartment. So many everyday (7)____ were different that my head was spinning. Luckily, my host could always guess my (8)____ from the situation, so we never had any real (9)____. By the end of the week, I could even (10)____ the two kinds of English apart, and the whole thing felt like a fun game.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "best",
+            "first",
+            "same",
+            "last"
+          ],
+          "answer_index": 2,
+          "explanation": "not the same 不一样。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "happy",
+            "tired",
+            "proud",
+            "confused"
+          ],
+          "answer_index": 3,
+          "explanation": "I was confused 我很困惑。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "highway",
+            "doorway",
+            "railway",
+            "runway"
+          ],
+          "answer_index": 0,
+          "explanation": "美式 highway = 英式 motorway。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "stairway",
+            "elevator",
+            "engine",
+            "ladder"
+          ],
+          "answer_index": 1,
+          "explanation": "美式 elevator = 英式 lift。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "highway",
+            "boat",
+            "subway",
+            "plane"
+          ],
+          "answer_index": 2,
+          "explanation": "美式 subway = 英式 underground。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "shop",
+            "office",
+            "garden",
+            "flat"
+          ],
+          "answer_index": 3,
+          "explanation": "英式 flat = 美式 apartment。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "words",
+            "songs",
+            "prices",
+            "games"
+          ],
+          "answer_index": 0,
+          "explanation": "everyday words 日常词汇。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "weather",
+            "meaning",
+            "price",
+            "age"
+          ],
+          "answer_index": 1,
+          "explanation": "guess my meaning 猜我的意思。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "money",
+            "fun",
+            "trouble",
+            "rest"
+          ],
+          "answer_index": 2,
+          "explanation": "any real trouble 真正的麻烦。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "throw",
+            "sell",
+            "lose",
+            "tell"
+          ],
+          "answer_index": 3,
+          "explanation": "tell ... apart 区分。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Building Words Like Blocks",
+      "text": "My English teacher once told us that making new words is a bit like (1)____ with blocks. Many long words are simply (2)____ from shorter ones we already know. The first way, she said, is to (3)____ two words together, so 'home' and 'work' give us 'homework'. The second way is to add a (4)____ or a suffix. If we put 'un-' in front of 'happy', the new word means the (5)____. If we add '-ment' to 'improve', we get a (6)____ called 'improvement'. The third way is to use a word as a different (7)____ of speech, the way we 'water' the plants. Once I understood these (8)____, reading became much easier. Whenever I met an (9)____ word, I broke it into parts and tried to guess its meaning. My teacher was right: knowing how words are built can really (10)____ you when you read.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "building",
+            "sleeping",
+            "running",
+            "cooking"
+          ],
+          "answer_index": 0,
+          "explanation": "like building with blocks 像搭积木。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "made",
+            "eaten",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "made from shorter ones 由更短的词构成。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "break",
+            "throw",
+            "join",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "join two words 把两个词合在一起。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "season",
+            "prefix"
+          ],
+          "answer_index": 3,
+          "explanation": "a prefix or a suffix 前缀或后缀。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "opposite",
+            "machine",
+            "garden",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "un- 使词义 opposite 相反。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noun",
+            "song",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "-ment 构成 noun 名词。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "piece",
+            "kind",
+            "part",
+            "side"
+          ],
+          "answer_index": 2,
+          "explanation": "a different part of speech 不同词性。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "prices",
+            "noises",
+            "tickets",
+            "patterns"
+          ],
+          "answer_index": 3,
+          "explanation": "understood these patterns 懂得这些规律。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "unfamiliar",
+            "easy",
+            "empty",
+            "early"
+          ],
+          "answer_index": 0,
+          "explanation": "an unfamiliar word 陌生的词。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "stop",
+            "help",
+            "lose",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "can really help you 真的能帮你。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Chatting with My Online Friend",
+      "text": "Last year I made a foreign friend on a learning (1)____, and we often chat online in English. At first, his messages were full of short forms that I could not (2)____. When he typed 'BRB', I had no idea he meant 'be right (3)____'. He also used 'COZ' instead of 'because', just to (4)____ time. Slowly, I got used to this kind of (5)____ language and even started to use it myself. But my friend gave me one piece of good (6)____: before sending such words, I should think about who would (7)____ them. With close friends they are clear and friendly, but a teacher might not (8)____ what I mean. So now I am more (9)____ of my reader. Learning to chat online has not only improved my English; it has also (10)____ me that the right words depend on the right situation.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "garden",
+            "market",
+            "forum",
+            "kitchen"
+          ],
+          "answer_index": 2,
+          "explanation": "a learning forum 学习论坛。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "throw",
+            "eat",
+            "understand"
+          ],
+          "answer_index": 3,
+          "explanation": "could not understand 看不懂。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "back",
+            "down",
+            "off",
+            "away"
+          ],
+          "answer_index": 0,
+          "explanation": "be right back 马上回来。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "waste",
+            "save",
+            "lose",
+            "spend"
+          ],
+          "answer_index": 1,
+          "explanation": "save time 节省时间。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "formal",
+            "ancient",
+            "informal",
+            "foreign"
+          ],
+          "answer_index": 2,
+          "explanation": "informal language 非正式语言。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "price",
+            "weather",
+            "advice"
+          ],
+          "answer_index": 3,
+          "explanation": "a piece of good advice 一条好建议。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "read",
+            "cook",
+            "drive",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "who would read them 谁会读。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "buy",
+            "know",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "might not know what I mean 可能不懂。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "afraid",
+            "tired",
+            "aware",
+            "free"
+          ],
+          "answer_index": 2,
+          "explanation": "more aware of my reader 更留意读者。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "stopped",
+            "sold",
+            "lost",
+            "taught"
+          ],
+          "answer_index": 3,
+          "explanation": "has taught me 教会了我。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A Surprising Dinner",
+      "text": "Last summer I stayed with a kind British (1)____. One evening, the mother smiled and said we would have 'toad-in-the-hole' for (2)____. I was really (3)____, because I thought a toad was a kind of animal like a frog. Why would anyone (4)____ a toad? I did not want to be (5)____, so I said nothing and waited nervously. To my (6)____, the dish turned out to be sausages baked in a kind of cake, and it was (7)____! Everyone laughed when I explained what I had (8)____ at first. The funny name had completely (9)____ me. After that night, I learned never to judge an English dish by its strange (10)____, and I happily tried everything the family offered.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "family",
+            "garden",
+            "machine",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "a British family 英国家庭。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "morning",
+            "dinner",
+            "summer",
+            "music"
+          ],
+          "answer_index": 1,
+          "explanation": "for dinner 当晚饭。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "bored",
+            "sleepy",
+            "surprised",
+            "angry"
+          ],
+          "answer_index": 2,
+          "explanation": "I was really surprised 我很惊讶。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "buy",
+            "sell",
+            "wash",
+            "eat"
+          ],
+          "answer_index": 3,
+          "explanation": "why would anyone eat a toad 为何要吃。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "rude",
+            "kind",
+            "early",
+            "rich"
+          ],
+          "answer_index": 0,
+          "explanation": "did not want to be rude 不想失礼。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "surprise",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "to my surprise 令我惊讶的是。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "terrible",
+            "empty",
+            "delicious",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "explanation": "it was delicious 很美味。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "thrown",
+            "lost",
+            "thought"
+          ],
+          "answer_index": 3,
+          "explanation": "what I had thought 我之前的想法。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "fooled",
+            "helped",
+            "saved",
+            "paid"
+          ],
+          "answer_index": 0,
+          "explanation": "had completely fooled me 把我骗了。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "name",
+            "size",
+            "colour"
+          ],
+          "answer_index": 1,
+          "explanation": "by its strange name 凭奇怪的名字。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Learning Tricky Expressions",
+      "text": "My favourite English lesson was the day our teacher taught us some (1)____ expressions that do not mean what they seem. She said that if someone has 'a frog in their (2)____', it does not mean they ate a frog; they just cannot speak (3)____ for a moment. If a friend has 'green fingers', their hands are not really (4)____; they are simply good at growing (5)____. When your mother tells you to 'pull up your (6)____', she is not talking about your clothes; she wants you to try (7)____. The teacher also warned us that in Britain, the (8)____ 'Not bad' is often real praise. It can mean something is rather (9)____, better than expected. I wrote all these expressions down, because I did not want a hidden meaning to (10)____ me one day.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "easy",
+            "empty",
+            "tricky",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "explanation": "tricky expressions 棘手的表达。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "pocket",
+            "window",
+            "throat"
+          ],
+          "answer_index": 3,
+          "explanation": "a frog in their throat 喉咙里有只青蛙。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "clearly",
+            "loudly",
+            "slowly",
+            "softly"
+          ],
+          "answer_index": 0,
+          "explanation": "cannot speak clearly 说不清楚。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "warm",
+            "green",
+            "wet",
+            "cold"
+          ],
+          "answer_index": 1,
+          "explanation": "hands are not really green 手并非真绿。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "cars",
+            "books",
+            "plants",
+            "coins"
+          ],
+          "answer_index": 2,
+          "explanation": "good at growing plants 擅长种植。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "shoes",
+            "books",
+            "bags",
+            "socks"
+          ],
+          "answer_index": 3,
+          "explanation": "pull up your socks 振作努力。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "harder",
+            "later",
+            "louder",
+            "slower"
+          ],
+          "answer_index": 0,
+          "explanation": "try harder 更努力。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "comment",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "the comment 'Not bad' 这句评论。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "wrong",
+            "empty",
+            "good",
+            "free"
+          ],
+          "answer_index": 2,
+          "explanation": "rather good 相当不错。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "help",
+            "pay",
+            "save",
+            "trick"
+          ],
+          "answer_index": 3,
+          "explanation": "a hidden meaning to trick me 误导我。"
+        }
+      ]
+    }
+  ]
+}

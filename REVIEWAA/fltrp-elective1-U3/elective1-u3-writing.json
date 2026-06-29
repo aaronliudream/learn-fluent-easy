@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "topic": "Write about a Sporting Moment(写一个体育时刻)",
+  "title_en": "An Unforgettable Sporting Moment",
+  "genre": "记叙文 / 描写(describe a sporting moment you saw or took part in)",
+  "source": "外研社选择性必修第一册 Unit 3 Developing ideas:write a passage about a sporting moment(描述一个你看过或参与过的体育时刻:时间地点、所见所闻、内心感受)。",
+  "prompt_cn": "请用英语写一篇约80词的短文,描述一个让你难忘的体育时刻(如一场比赛、一次接力或一次夺冠)。内容包括:① 简要介绍是什么比赛、何时何地;② 你看到和听到了什么;③ 你当时的感受。注意:用一两个动名词作主语的句子(如 Watching… was…)让行文更地道。",
+  "prompt_en": "Write a short passage (about 80 words) about an unforgettable sporting moment you saw or took part in. Include: 1) what the event was, and when and where it happened; 2) what you saw and heard; 3) how you felt. Try to use one or two sentences with an -ing form as the subject (e.g. Watching… was…).",
+  "points": [
+    "总起:是什么比赛、何时何地(Last … , I went to … to watch …)",
+    "所见所闻(I could see … / Everyone started cheering …)",
+    "内心感受(It was so exciting that …)",
+    "用动名词作主语让句子地道(Watching … was … / Being part of … felt …)"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Last Saturday, I watched the relay final at our school sports tournament. Before the race, everyone went quiet, and the atmosphere was very intense. Then the runners set off, and watching them race down the track was thrilling. Everyone stood up, cheering and shouting. I could see the runners straining to go faster, trying hard not to drop their batons. The whole race was over in a minute, and our class won! Being part of that moment felt truly wonderful, and I will never forget it.",
+  "model_translation": "上周六,我观看了学校运动会的接力决赛。比赛前,大家都安静下来,气氛非常紧张。随后运动员们起跑,看着他们在跑道上飞奔令人激动万分。所有人都站了起来,欢呼呐喊。我能看到运动员们竭力加速,努力不让接力棒掉落。整场比赛一分钟就结束了,我们班赢了!成为那一刻的一部分感觉真的很美妙,我永远不会忘记。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:比赛与时间地点 / 所见所闻 / 内心感受" },
+      { "dimension": "结构", "max": 4, "criteria": "按时间顺序展开、句句相关、过渡自然、含动名词作主语句型" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、动名词主语与主谓一致正确、语法基本无误" }
+    ],
+    "required_structure": [
+      "总起 Last … , I watched … at …",
+      "过程 Then the runners set off, and watching them … was …",
+      "细节 I could see … / Everyone started cheering …",
+      "感受 Being part of that moment felt …"
+    ],
+    "key_expressions": [
+      "Watching them race down the track was thrilling.",
+      "The atmosphere was very intense.",
+      "Everyone stood up, cheering and shouting.",
+      "Being part of that moment felt truly wonderful."
+    ],
+    "useful_words": ["tournament", "relay", "intense", "cheer", "atmosphere", "thrilling", "moment", "shout", "win", "unforgettable"]
+  },
+  "high_sentences": [
+    "Watching them race down the track was thrilling.",
+    "Before the race, everyone went quiet, and the atmosphere was very intense.",
+    "I could see the runners straining to go faster.",
+    "Being part of that moment felt truly wonderful."
+  ],
+  "error_pairs": [
+    { "wrong": "Watch them race was thrilling.", "correct": "Watching them race was thrilling.", "note": "主语位置表示'看…这件事',要用动名词 Watching。" },
+    { "wrong": "Being part of that moment feel wonderful.", "correct": "Being part of that moment felt wonderful.", "note": "动名词短语作主语视为单数,谓语用单数(过去式 felt)。" },
+    { "wrong": "It was no use to give up.", "correct": "It was no use giving up.", "note": "It is no use 后接动名词,不用不定式。" }
+  ],
+  "paragraph_template": "【体育时刻结构】\n第1句 总起:Last … , I watched … at …\n第2-3句 过程与细节:Then the runners set off, and watching them … was … I could see …\n第4句 感受:Being part of that moment felt …"
+}

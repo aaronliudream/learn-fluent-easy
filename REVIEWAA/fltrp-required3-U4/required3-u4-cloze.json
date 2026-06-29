@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "topic": "Amazing Art",
+  "source": "外研社(新标准)必修三 Unit 4 同主题完形(参观美术馆/学书法/瓷器制作/街头艺术家/学校美术社/雕塑家的一天)。用词限 U4/初中/常见词,答案唯一,选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Visit to the Art Museum",
+      "text": "Last Saturday my class (1)____ a famous art museum in the city. As soon as we (2)____ inside, a friendly guide came to (3)____ us at the door. She told us that thousands of (4)____ are kept in the building, which was once a royal palace. We walked up the wide stone (5)____ to the first floor, where the most famous works hang. My favourite was a (6)____ of an old king, painted hundreds of years ago. The guide explained that the picture was being (7)____ by experts to keep its colours bright. In another room, we saw beautiful blue-and-white (8)____ cups decorated with dragons. Before we left, I bought a small (9)____ of my favourite painting to put on my wall. It was a wonderful day, and I now understand why so many people are (10)____ of visiting museums.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "visited",
+            "sold",
+            "cooked",
+            "drove"
+          ],
+          "answer_index": 0,
+          "explanation": "visit a museum 参观博物馆。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "slept",
+            "stepped",
+            "shouted",
+            "swam"
+          ],
+          "answer_index": 1,
+          "explanation": "step inside 走进里面。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "fold",
+            "carve",
+            "greet",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "come to greet us 来迎接我们。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "mistakes",
+            "holidays",
+            "accidents",
+            "treasures"
+          ],
+          "answer_index": 3,
+          "explanation": "thousands of treasures 数千件珍宝。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "stairs",
+            "rivers",
+            "clouds",
+            "songs"
+          ],
+          "answer_index": 0,
+          "explanation": "stone stairs 石阶。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "recipe",
+            "portrait",
+            "ticket",
+            "password"
+          ],
+          "answer_index": 1,
+          "explanation": "a portrait of an old king 一幅老国王的肖像。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "eaten",
+            "driven",
+            "repaired",
+            "sung"
+          ],
+          "answer_index": 2,
+          "explanation": "was being repaired 正在被修复。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "woollen",
+            "rubber",
+            "paper",
+            "porcelain"
+          ],
+          "answer_index": 3,
+          "explanation": "blue-and-white porcelain cups 青花瓷杯。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "copy",
+            "noise",
+            "smell",
+            "storm"
+          ],
+          "answer_index": 0,
+          "explanation": "a small copy of the painting 一幅画的小复制品。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "ready",
+            "fond",
+            "able",
+            "willing"
+          ],
+          "answer_index": 1,
+          "explanation": "be fond of doing 喜欢做某事;ready/able/willing 后接 to do,不接 of doing。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Learning Calligraphy from Grandfather",
+      "text": "When I was ten, my grandfather began to (1)____ me Chinese calligraphy. At first, holding the brush felt strange, and my hand would not (2)____ the way I wanted. Grandfather was very (3)____, and he never shouted when I made a mistake. He told me that good calligraphy looks (4)____, like a slow dance on paper. Every (5)____ after school, I practised the same character again and again. Slowly, my lines became smoother and more (6)____. Grandfather said that calligraphy could (7)____ the mind and help a busy person feel peaceful. One day he gave me a small red (8)____ with my name carved on it, so that I could stamp my own works. I felt so (9)____ of that little stone. Now, years later, I still (10)____ calligraphy whenever I feel worried, and it always brings me peace.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "drive",
+            "teach",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "teach me calligraphy 教我书法。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleep",
+            "sing",
+            "cook",
+            "move"
+          ],
+          "answer_index": 3,
+          "explanation": "my hand would not move 我的手不听使唤。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "patient",
+            "angry",
+            "lazy",
+            "noisy"
+          ],
+          "answer_index": 0,
+          "explanation": "never shouted 说明他很有耐心 patient。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "ugly",
+            "elegant",
+            "heavy",
+            "dark"
+          ],
+          "answer_index": 1,
+          "explanation": "looks elegant, like a slow dance 看起来优雅。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "winter",
+            "mistake",
+            "evening",
+            "corner"
+          ],
+          "answer_index": 2,
+          "explanation": "every evening after school 每天放学后的傍晚。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "broken",
+            "empty",
+            "tired",
+            "beautiful"
+          ],
+          "answer_index": 3,
+          "explanation": "smoother and more beautiful 更流畅更美。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "calm",
+            "break",
+            "lose",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "calm the mind 使心静下来。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cloud",
+            "seal",
+            "river",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "a seal with my name carved on it 刻有名字的印章。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "afraid",
+            "tired",
+            "proud",
+            "bored"
+          ],
+          "answer_index": 2,
+          "explanation": "be proud of 为……自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "throw",
+            "burn",
+            "lose",
+            "practise"
+          ],
+          "answer_index": 3,
+          "explanation": "practise calligraphy 练习书法。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "How Porcelain Is Made",
+      "text": "Have you ever wondered how a beautiful blue-and-white (1)____ bowl is made? The work begins with soft clay, which is shaped on a fast-spinning wheel. The maker must be (2)____ and careful, because one small mistake can ruin the whole piece. After the bowl has dried, an artist (3)____ a design onto it with a thin brush. Many bowls are decorated with dragons, flowers or (4)____ of mountains and rivers. The colours are mostly different (5)____ of blue. Next, the bowl is put into a very hot oven, where it is (6)____ for many hours. The great heat makes the clay hard and gives the surface a smooth (7)____. When the bowl comes out, the blue design shines (8)____ against the white. A single fine bowl can take many days to (9)____, so we should treat such works with (10)____. Each one is truly a small masterpiece.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "porcelain",
+            "rubber",
+            "paper",
+            "plastic"
+          ],
+          "answer_index": 0,
+          "explanation": "blue-and-white porcelain 青花瓷。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleepy",
+            "patient",
+            "rude",
+            "hungry"
+          ],
+          "answer_index": 1,
+          "explanation": "patient and careful 既有耐心又细心。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "eats",
+            "drives",
+            "paints",
+            "sings"
+          ],
+          "answer_index": 2,
+          "explanation": "paints a design 画上图案。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "noises",
+            "holidays",
+            "pictures"
+          ],
+          "answer_index": 3,
+          "explanation": "pictures of mountains and rivers 山水图案。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "shades",
+            "sounds",
+            "weeks",
+            "prices"
+          ],
+          "answer_index": 0,
+          "explanation": "different shades of blue 深浅不同的蓝色。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "baked",
+            "washed",
+            "driven"
+          ],
+          "answer_index": 1,
+          "explanation": "it is baked in a hot oven 在热炉中烧制。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sound",
+            "smell",
+            "surface",
+            "season"
+          ],
+          "answer_index": 2,
+          "explanation": "a smooth surface 光滑的表面。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "slowly",
+            "quietly",
+            "sadly",
+            "brightly"
+          ],
+          "answer_index": 3,
+          "explanation": "the design shines brightly 图案明亮地闪耀。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "make",
+            "throw",
+            "lose",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "take many days to make 要花很多天来制作。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "anger",
+            "respect",
+            "hunger",
+            "fear"
+          ],
+          "answer_index": 1,
+          "explanation": "treat with respect 以敬意对待。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Young Street Artist",
+      "text": "Leo is sixteen, and he is already a well-known artist in our (1)____. He does not paint inside a museum or a (2)____. Instead, he creates huge, colourful pictures on old walls and bridges. Some neighbours think his (3)____ is messy, but most young people love it. Leo says that a grey, empty wall is (4)____ to look at, while a painted one can make people smile. Before he starts, he always asks the owner for (5)____, because he does not want to break any rules. Then he plans his picture (6)____ on paper. On painting day, his friends often come to (7)____ him work. Bit by bit, the dull wall is (8)____ into something bright and alive. Leo hopes that one day his art will (9)____ other young people to be creative. \"Art should not be locked away,\" he says. \"It should be (10)____ for everyone to enjoy.\"",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "kitchen",
+            "pocket",
+            "neighbourhood",
+            "future"
+          ],
+          "answer_index": 2,
+          "explanation": "a well-known artist in our neighbourhood 社区里有名的艺术家。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "station",
+            "market",
+            "gallery"
+          ],
+          "answer_index": 3,
+          "explanation": "a museum or a gallery 博物馆或美术馆。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "graffiti",
+            "homework",
+            "breakfast",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "his graffiti is messy 他的涂鸦很乱。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lovely",
+            "boring",
+            "tasty",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "an empty wall is boring 空墙很无趣,与下文 painted one 形成对比。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "breakfast",
+            "sleep",
+            "permission",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "ask for permission 请求许可。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "angrily",
+            "sadly",
+            "hungrily",
+            "carefully"
+          ],
+          "answer_index": 3,
+          "explanation": "plans his picture carefully 仔细地规划。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "watch",
+            "sell",
+            "cook",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "come to watch him work 来看他作画。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "turned",
+            "eaten",
+            "driven"
+          ],
+          "answer_index": 1,
+          "explanation": "the wall is turned into something bright 墙被变成明亮的东西。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "forget",
+            "lose",
+            "encourage",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "encourage others to be creative 鼓励他人发挥创造力。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "late",
+            "dark",
+            "empty",
+            "free"
+          ],
+          "answer_index": 3,
+          "explanation": "free for everyone to enjoy 人人都能免费欣赏。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Our School Art Club",
+      "text": "Every Friday afternoon, the art club in our school (1)____ in Room 12. About twenty students join, and our teacher, Mr Lin, makes each lesson great (2)____. Last month, we learned to draw faces, and this month we are (3)____ how to use colour. Mr Lin often shows us famous (4)____ by great painters and asks what we feel. He says there is no single right (5)____ in art, because everyone sees a picture in a different way. My best friend Mia is very (6)____ at drawing animals, while I prefer to paint flowers in a (7)____. At the end of each term, our work is (8)____ on the walls of the school hall for everyone to see. Last year, one of my paintings won a small (9)____, and I felt very happy. The art club has taught me to look at the world more (10)____ and to enjoy making beautiful things.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "meets",
+            "sleeps",
+            "sells",
+            "drives"
+          ],
+          "answer_index": 0,
+          "explanation": "the club meets in Room 12 社团在12号教室活动。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "noise",
+            "fun",
+            "trouble",
+            "danger"
+          ],
+          "answer_index": 1,
+          "explanation": "great fun 很有乐趣。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "eating",
+            "driving",
+            "learning",
+            "sleeping"
+          ],
+          "answer_index": 2,
+          "explanation": "we are learning how to use colour 我们在学如何用色。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "dinners",
+            "songs",
+            "games",
+            "paintings"
+          ],
+          "answer_index": 3,
+          "explanation": "famous paintings by great painters 名家名画。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "answer",
+            "weather",
+            "ticket",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "no single right answer 没有唯一正确答案。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "afraid",
+            "good",
+            "tired",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "be good at drawing 擅长画画。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "river",
+            "cloud",
+            "vase",
+            "pocket"
+          ],
+          "answer_index": 2,
+          "explanation": "flowers in a vase 花瓶里的花。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "eaten",
+            "sold",
+            "lost",
+            "shown"
+          ],
+          "answer_index": 3,
+          "explanation": "our work is shown on the walls 作品展示在墙上。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "prize",
+            "storm",
+            "lunch",
+            "key"
+          ],
+          "answer_index": 0,
+          "explanation": "won a small prize 获得了一个小奖。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hungrily",
+            "closely",
+            "angrily",
+            "sleepily"
+          ],
+          "answer_index": 1,
+          "explanation": "look at the world more closely 更仔细地观察世界。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Day with a Sculptor",
+      "text": "Last summer, I spent a day watching a (1)____ at work in his studio. His name is Mr Carter, and he makes statues out of stone and metal. When I arrived, a large (2)____ of a running horse was standing in the middle of the room. \"Get a load of (3)____!\" he said proudly, pointing at it. He explained that a good statue must show not only the shape of an animal but also its inner (4)____. All morning, he worked on the legs, slowly cutting the hard stone with his (5)____. Tiny bits of (6)____ covered the floor around him. He told me that one big statue can take several (7)____ to finish. He is very (8)____, and he never rushes his work. By the afternoon, the horse looked so real that it seemed ready to (9)____ off its stone base. I left the studio full of (10)____ for his amazing skill.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "farmer",
+            "driver",
+            "sculptor",
+            "doctor"
+          ],
+          "answer_index": 2,
+          "explanation": "watching a sculptor at work 看雕塑家工作。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "dinner",
+            "ticket",
+            "garden",
+            "statue"
+          ],
+          "answer_index": 3,
+          "explanation": "a statue of a running horse 一座奔马的雕像。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "that",
+            "soup",
+            "rain",
+            "paper"
+          ],
+          "answer_index": 0,
+          "explanation": "Get a load of that! 瞧瞧那个!固定说法。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "spirit",
+            "noise",
+            "pocket"
+          ],
+          "answer_index": 1,
+          "explanation": "its inner spirit 它内在的神韵。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "songs",
+            "dreams",
+            "tools",
+            "prices"
+          ],
+          "answer_index": 2,
+          "explanation": "cut the stone with his tools 用工具凿石头。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "music",
+            "weather",
+            "time",
+            "stone"
+          ],
+          "answer_index": 3,
+          "explanation": "bits of stone covered the floor 石屑铺满地面。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "weeks",
+            "songs",
+            "prices",
+            "dreams"
+          ],
+          "answer_index": 0,
+          "explanation": "take several weeks to finish 要花好几周才能完成。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lazy",
+            "patient",
+            "angry",
+            "noisy"
+          ],
+          "answer_index": 1,
+          "explanation": "very patient, never rushes 很有耐心,从不赶工。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sing",
+            "sleep",
+            "gallop",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "ready to gallop off its base 仿佛要从底座飞奔而出。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hunger",
+            "anger",
+            "fear",
+            "admiration"
+          ],
+          "answer_index": 3,
+          "explanation": "full of admiration for his skill 满怀对其技艺的钦佩。"
+        }
+      ]
+    }
+  ]
+}

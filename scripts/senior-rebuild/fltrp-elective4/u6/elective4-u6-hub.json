@@ -1,0 +1,48 @@
+{
+  "volume": "elective4",
+  "unit": "U6",
+  "listeningQuestions": [
+    { "audio": "The Challenger carried the first civilian, an ordinary teacher, into space.", "opts": ["挑战者号把第一位平民——一名普通教师——送入太空。", "挑战者号只运送了一些机器。", "挑战者号从未离开过地面。", "挑战者号载着一群游客去海边。"], "answer": 0 },
+    { "audio": "Millions of families watched the first lunar landing on television.", "opts": ["数百万家庭在电视上观看了首次登月。", "只有少数科学家知道这次登月。", "人们在报纸上读到登月已是多年以后。", "登月只是一部电影里的情节。"], "answer": 0 },
+    { "audio": "Without gravity, astronauts must strap themselves down to sleep safely.", "opts": ["没有重力,宇航员必须把自己绑住才能安全睡觉。", "宇航员在太空睡得比在地球更香。", "宇航员从不需要睡觉。", "宇航员睡觉时要开着所有的灯。"], "answer": 0 },
+    { "audio": "A powerful telescope lets us see galaxies billions of light years away.", "opts": ["强大的望远镜让我们看到数十亿光年外的星系。", "望远镜只能用来看近处的山。", "望远镜让星星看起来更小了。", "望远镜只在白天才能使用。"], "answer": 0 },
+    { "audio": "We must keep reaching for the stars, no matter how distant they seem.", "opts": ["无论星辰多么遥远,我们都必须继续追寻。", "星星太远了,我们应该放弃。", "我们只该研究地球上的事。", "追寻星辰毫无意义。"], "answer": 0 },
+    { "audio": "Real courage means doing the right thing even when you are afraid.", "opts": ["真正的勇气是即使害怕也去做对的事。", "勇气就是从不感到害怕。", "勇敢的人从不面对危险。", "害怕的时候就该立刻逃走。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "Without gravity, an astronaut's bones and ____ slowly grow weak.", "opts": ["muscles", "gardens", "markets", "tickets"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "An ordinary teacher was about to become the first ____ in space.", "opts": ["civilian", "soldier", "farmer", "driver"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "After the disaster, the shuttle flights were ____ for nearly three years.", "opts": ["suspended", "painted", "sold", "cooked"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Through the telescope she watched the ____ surface of the Moon.", "opts": ["lunar", "cheap", "noisy", "kind"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The lights are on and I hear voices, so the crew ____ be inside now.", "opts": ["must", "can't", "needn't", "would"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "You ____ checked the oxygen tank earlier; now it is far too late.", "opts": ["should have", "must have", "can't have", "needn't have"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "All astronauts ____ pass a strict medical check before any space flight.", "opts": ["must", "may", "could", "would"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "He ____ have seen the comet last night; the sky was full of cloud.", "opts": ["can't", "must", "should", "needn't"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Listen: 'The Challenger exploded just over a minute after take-off.' When did it explode?", "opts": ["Just over a minute after take-off.", "After a whole day in space.", "Before it left the ground.", "A week into the mission."], "answer": 0, "point": "听力", "dim": "listening", "audio": "The Challenger exploded just over a minute after take-off." },
+    { "q": "Listen: 'Christa hoped to rekindle young people's interest in space.' What did Christa hope to do?", "opts": ["Renew young people's interest in space.", "Close the space programme.", "Stop teaching forever.", "Travel to the Sun."], "answer": 0, "point": "听力", "dim": "listening", "audio": "Christa hoped to rekindle young people's interest in space." }
+  ],
+  "reading": {
+    "passage": "The space shuttle Challenger carried an ordinary teacher who hoped to give lessons from orbit. Tragically, it exploded soon after take-off and all seven crew members were lost. Yet people were determined to keep exploring space.",
+    "passageCn": "挑战者号航天飞机载着一名普通教师,她希望在太空轨道上讲课。不幸的是,它在起飞后不久爆炸,七名机组人员全部遇难。然而人们仍下定决心要继续探索太空。",
+    "questions": [
+      { "q": "Who did the Challenger carry into space?", "opts": ["An ordinary teacher.", "A famous singer.", "A football team.", "A group of farmers."], "answer": 0 },
+      { "q": "How did people respond after the disaster?", "opts": ["They decided to keep exploring space.", "They stopped all science.", "They forgot about the crew.", "They blamed the teacher."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a few sentences about a space hero you admire. Say what they did and why their courage inspires you. Try to use modal verbs such as 'must' and 'could'.",
+    "promptCn": "写几句话介绍一位你敬佩的航天英雄:他/她做了什么,为什么他们的勇气激励了你。试着用上 must、could 等情态动词。",
+    "sampleWords": ["astronaut", "courage", "explore", "mission", "must", "could", "spacecraft", "danger", "hero", "inspire"]
+  },
+  "dialogues": [
+    {
+      "title": "Watching a Rocket Launch",
+      "lines": [
+        { "role": "A", "text": "Hurry up! The rocket must be about to launch.", "cn": "快点!火箭一定快要发射了。" },
+        { "role": "B", "text": "Look at all that smoke and fire — the crew must be inside already.", "cn": "看那些浓烟和火焰——机组人员一定已经在里面了。" },
+        { "role": "A", "text": "They are so brave. I could never stay that calm.", "cn": "他们真勇敢,我绝不可能那么镇定。" },
+        { "role": "B", "text": "One day we should join a space camp and train like them.", "cn": "总有一天我们该去太空营,像他们一样训练。" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "grammar_title": "被动语态综合复习(各时态被动 + 非谓语被动 + 主动/被动选择)",
+  "source": "外研社(新标准)选择性必修四 Unit 2 Using language: Review passive voice。三个分点各20题,每题靠时间标志/句法环境只成立一种形式;干扰项是错时态或错语态;零术语、纯应用;句子围绕《相约星期二》与人生主题。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "一般时态被动(is/was/will be done,看时间标志判断)",
+      "overview": "主语是动作的承受者时用被动:现在 is/are done、过去 was/were done、将来 will be done;由句中时间标志(today/nowadays、last week/ago/in 1997、tomorrow/next year 等)决定时态;主动形式因主语不发出动作而排除。"
+    },
+    {
+      "code": "u2.02",
+      "point": "完成/进行时态被动(has been done · is being done · had been done)",
+      "overview": "现在完成被动 has/have been done(already/so far/since);过去完成被动 had been done(by the time…、by 1997);现在进行被动 is/are being done(right now/look!);过去进行被动 was/were being done(while…、when… came)。靠标志选一种。"
+    },
+    {
+      "code": "u2.03",
+      "point": "非谓语被动 + 情态被动 + 主动/被动选择(to be done · being done · must be done)",
+      "overview": "need/want/ask + to be done;介词(despite/after/without/by)+ being done;情态 must/should/can/will + be done;再由主语是施动者还是承受者,在主动与被动之间作选择。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "Nowadays, Morrie's lessons ____ by readers around the world.",
+      "options": [
+        "are shared",
+        "were shared",
+        "will be shared",
+        "share"
+      ],
+      "answer_index": 0,
+      "explanation": "时间标志 Nowadays 指现在、主语 lessons 是被分享的对象 → 一般现在被动 are shared。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The very first review of the book ____ by a journalist back in 1997.",
+      "options": [
+        "is written",
+        "was written",
+        "will be written",
+        "writes"
+      ],
+      "answer_index": 1,
+      "explanation": "back in 1997 指过去、review 被写 → 一般过去被动 was written。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "A new film about the book ____ next year.",
+      "options": [
+        "was made",
+        "is made",
+        "will be made",
+        "makes"
+      ],
+      "answer_index": 2,
+      "explanation": "next year 指将来、film 被拍 → 一般将来被动 will be made。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Today this moving novel ____ in many school libraries.",
+      "options": [
+        "was found",
+        "will be found",
+        "finds",
+        "is found"
+      ],
+      "answer_index": 3,
+      "explanation": "Today 指现在、novel 被找到/陈列 → 一般现在被动 is found。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Mitch ____ deeply by his old teacher's courage last winter.",
+      "options": [
+        "was moved",
+        "is moved",
+        "will be moved",
+        "moves"
+      ],
+      "answer_index": 0,
+      "explanation": "last winter 指过去、Mitch 被打动 → 一般过去被动 was moved。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "These study notes ____ to the new students tomorrow.",
+      "options": [
+        "were given",
+        "will be given",
+        "are given",
+        "give"
+      ],
+      "answer_index": 1,
+      "explanation": "tomorrow 指将来、notes 被发放 → 一般将来被动 will be given。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Every week, fresh flowers ____ to Morrie's room by his students.",
+      "options": [
+        "were brought",
+        "will be brought",
+        "are brought",
+        "bring"
+      ],
+      "answer_index": 2,
+      "explanation": "Every week 表示现在的习惯、flowers 被送来 → 一般现在被动 are brought。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The old photograph ____ on the wall years ago.",
+      "options": [
+        "is hung",
+        "will be hung",
+        "hangs",
+        "was hung"
+      ],
+      "answer_index": 3,
+      "explanation": "years ago 指过去、photograph 被挂 → 一般过去被动 was hung。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The professor's wisdom ____ down to future readers one day.",
+      "options": [
+        "will be passed",
+        "was passed",
+        "is passed",
+        "passes"
+      ],
+      "answer_index": 0,
+      "explanation": "one day 指将来、wisdom 被传递 → 一般将来被动 will be passed。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At present, the book ____ into more than thirty languages.",
+      "options": [
+        "was translated",
+        "is translated",
+        "will be translated",
+        "translates"
+      ],
+      "answer_index": 1,
+      "explanation": "At present 指现在、book 被翻译 → 一般现在被动 is translated。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "His final lecture ____ by the whole class yesterday.",
+      "options": [
+        "is recorded",
+        "will be recorded",
+        "was recorded",
+        "records"
+      ],
+      "answer_index": 2,
+      "explanation": "yesterday 指过去、lecture 被录下 → 一般过去被动 was recorded。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "A special edition of the novel ____ this coming spring.",
+      "options": [
+        "was printed",
+        "is printed",
+        "prints",
+        "will be printed"
+      ],
+      "answer_index": 3,
+      "explanation": "this coming spring 指将来、edition 被印刷 → 一般将来被动 will be printed。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "These days, a few kind words ____ more than expensive gifts.",
+      "options": [
+        "are valued",
+        "were valued",
+        "will be valued",
+        "value"
+      ],
+      "answer_index": 0,
+      "explanation": "These days 指现在、words 被珍视 → 一般现在被动 are valued。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The interview with Morrie ____ on the radio last night.",
+      "options": [
+        "is broadcast",
+        "was broadcast",
+        "will be broadcast",
+        "broadcasts"
+      ],
+      "answer_index": 1,
+      "explanation": "last night 指过去、interview 被播出 → 一般过去被动 was broadcast。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Many copies of the book ____ to the charity sale next week.",
+      "options": [
+        "were donated",
+        "are donated",
+        "will be donated",
+        "donate"
+      ],
+      "answer_index": 2,
+      "explanation": "next week 指将来、copies 被捐赠 → 一般将来被动 will be donated。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Usually the book club's choice ____ by all the members together.",
+      "options": [
+        "was made",
+        "will be made",
+        "makes",
+        "is made"
+      ],
+      "answer_index": 3,
+      "explanation": "Usually 表示现在的习惯、choice 被决定 → 一般现在被动 is made。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Morrie ____ to hospital two years ago when his illness grew worse.",
+      "options": [
+        "was taken",
+        "is taken",
+        "will be taken",
+        "takes"
+      ],
+      "answer_index": 0,
+      "explanation": "two years ago 指过去、Morrie 被送 → 一般过去被动 was taken。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The new reading list ____ to parents this coming weekend.",
+      "options": [
+        "was sent",
+        "will be sent",
+        "is sent",
+        "sends"
+      ],
+      "answer_index": 1,
+      "explanation": "this coming weekend 指将来、list 被发送 → 一般将来被动 will be sent。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Generally, his gentle advice ____ by people of all ages.",
+      "options": [
+        "was followed",
+        "will be followed",
+        "is followed",
+        "follows"
+      ],
+      "answer_index": 2,
+      "explanation": "Generally 表示一般情况(现在)、advice 被遵循 → 一般现在被动 is followed。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "That famous course ____ by Professor Schwartz for many years before he retired.",
+      "options": [
+        "is taught",
+        "will be taught",
+        "teaches",
+        "was taught"
+      ],
+      "answer_index": 3,
+      "explanation": "before he retired 指过去、course 被讲授 → 一般过去被动 was taught。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "So far, the book ____ into more than forty languages.",
+      "options": [
+        "has been translated",
+        "was translated",
+        "is being translated",
+        "had been translated"
+      ],
+      "answer_index": 0,
+      "explanation": "So far 与现在相连 → 现在完成被动 has been translated。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Right now, a new cover ____ for the next edition.",
+      "options": [
+        "has been designed",
+        "is being designed",
+        "was designed",
+        "had been designed"
+      ],
+      "answer_index": 1,
+      "explanation": "Right now 表示此刻正在 → 现在进行被动 is being designed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By the time Mitch came in, the lesson ____.",
+      "options": [
+        "has been finished",
+        "was being finished",
+        "had been finished",
+        "is finished"
+      ],
+      "answer_index": 2,
+      "explanation": "By the time + 过去动作,之前已完成 → 过去完成被动 had been finished。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "When the nurse entered, Morrie ____ gently by his wife.",
+      "options": [
+        "has been helped",
+        "had been helped",
+        "is being helped",
+        "was being helped"
+      ],
+      "answer_index": 3,
+      "explanation": "过去某动作发生时正在进行 → 过去进行被动 was being helped。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Morrie's story ____ on the evening news already.",
+      "options": [
+        "has been shown",
+        "is being shown",
+        "was being shown",
+        "had been shown"
+      ],
+      "answer_index": 0,
+      "explanation": "already 与现在相连 → 现在完成被动 has been shown。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Look! The old lecture hall ____ for the memorial.",
+      "options": [
+        "has been decorated",
+        "is being decorated",
+        "was decorated",
+        "had been decorated"
+      ],
+      "answer_index": 1,
+      "explanation": "Look! 表示此刻正在 → 现在进行被动 is being decorated。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Mitch realised that the manuscript ____ before the deadline.",
+      "options": [
+        "has been completed",
+        "is being completed",
+        "had been completed",
+        "was being completed"
+      ],
+      "answer_index": 2,
+      "explanation": "过去 realised 之前更早完成 → 过去完成被动 had been completed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Up to now, thousands of warm letters ____ to the author.",
+      "options": [
+        "are being sent",
+        "had been sent",
+        "were being sent",
+        "have been sent"
+      ],
+      "answer_index": 3,
+      "explanation": "Up to now 与现在相连 → 现在完成被动 have been sent。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "While the interview ____, the telephone suddenly rang.",
+      "options": [
+        "was being recorded",
+        "has been recorded",
+        "had been recorded",
+        "is being recorded"
+      ],
+      "answer_index": 0,
+      "explanation": "While + 过去正在进行 → 过去进行被动 was being recorded。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "At the moment, a documentary about Morrie ____.",
+      "options": [
+        "has been filmed",
+        "is being filmed",
+        "was being filmed",
+        "had been filmed"
+      ],
+      "answer_index": 1,
+      "explanation": "At the moment 表示此刻正在 → 现在进行被动 is being filmed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The novel ____ widely since it first appeared.",
+      "options": [
+        "is being read",
+        "was being read",
+        "has been read",
+        "had been read"
+      ],
+      "answer_index": 2,
+      "explanation": "since + 过去到现在 → 现在完成被动 has been read。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By 1997, the book ____ by millions of readers.",
+      "options": [
+        "has been bought",
+        "is being bought",
+        "was being bought",
+        "had been bought"
+      ],
+      "answer_index": 3,
+      "explanation": "By 1997(过去时间点之前)→ 过去完成被动 had been bought。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Currently, his ideas about life ____ in many classrooms.",
+      "options": [
+        "are being discussed",
+        "have been discussed",
+        "had been discussed",
+        "were being discussed"
+      ],
+      "answer_index": 0,
+      "explanation": "Currently 表示此刻正在 → 现在进行被动 are being discussed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "When Mitch knocked at the door, Morrie ____ to a softer chair.",
+      "options": [
+        "has been moved",
+        "was being moved",
+        "had been moved",
+        "is being moved"
+      ],
+      "answer_index": 1,
+      "explanation": "过去某动作发生时正被搬动 → 过去进行被动 was being moved。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Recently, the play of the story ____ in several theatres.",
+      "options": [
+        "is being performed",
+        "had been performed",
+        "has been performed",
+        "was being performed"
+      ],
+      "answer_index": 2,
+      "explanation": "Recently 与现在相连 → 现在完成被动 has been performed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The old man told us his garden ____ long before he fell ill.",
+      "options": [
+        "has been planted",
+        "is being planted",
+        "was being planted",
+        "had been planted"
+      ],
+      "answer_index": 3,
+      "explanation": "比过去 fell ill 更早完成 → 过去完成被动 had been planted。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Right now, the final chapter ____ aloud to the whole class.",
+      "options": [
+        "is being read",
+        "has been read",
+        "was read",
+        "had been read"
+      ],
+      "answer_index": 0,
+      "explanation": "Right now 表示此刻正在 → 现在进行被动 is being read。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "So far, the message of love ____ by many young readers.",
+      "options": [
+        "is being understood",
+        "has been understood",
+        "had been understood",
+        "was being understood"
+      ],
+      "answer_index": 1,
+      "explanation": "So far 与现在相连 → 现在完成被动 has been understood。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "At that moment yesterday, the meeting room ____ for the visitors.",
+      "options": [
+        "has been cleaned",
+        "had been cleaned",
+        "was being cleaned",
+        "is being cleaned"
+      ],
+      "answer_index": 2,
+      "explanation": "At that moment yesterday(过去某刻正在)→ 过去进行被动 was being cleaned。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Before the bell rang, all the homework ____ in.",
+      "options": [
+        "has been handed",
+        "is being handed",
+        "was being handed",
+        "had been handed"
+      ],
+      "answer_index": 3,
+      "explanation": "比过去 rang 更早完成 → 过去完成被动 had been handed。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Such important life lessons need ____ on to the young.",
+      "options": [
+        "to be passed",
+        "to pass",
+        "passing",
+        "passed"
+      ],
+      "answer_index": 0,
+      "explanation": "need + 不定式被动,lessons 是被传递的对象 → to be passed。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Despite ____ by a serious illness, Morrie stayed cheerful.",
+      "options": [
+        "weakening",
+        "being weakened",
+        "to weaken",
+        "weaken"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 Despite 后接动名词、Morrie 被削弱 → being weakened。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "A box of tissues will ____ to get through this moving book.",
+      "options": [
+        "need",
+        "being needed",
+        "be needed",
+        "needs"
+      ],
+      "answer_index": 2,
+      "explanation": "will + 情态/将来被动,tissues 被需要 → be needed。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Every Tuesday, Mitch ____ his old professor at his house.",
+      "options": [
+        "was visited",
+        "being visited",
+        "to be visited",
+        "visited"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 Mitch 是探望的发出者 → 用主动 visited。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The kind old professor ____ by Mitch every Tuesday.",
+      "options": [
+        "was visited",
+        "visited",
+        "visiting",
+        "to visit"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 professor 是被探望的对象、有 by Mitch → 用被动 was visited。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "These values are too personal ____ by anyone else.",
+      "options": [
+        "to decide",
+        "to be decided",
+        "deciding",
+        "decided"
+      ],
+      "answer_index": 1,
+      "explanation": "too…to + 被动不定式,values 被决定 → to be decided。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "After ____ widely by critics, the novel became a bestseller.",
+      "options": [
+        "reviewing",
+        "to review",
+        "being reviewed",
+        "reviewed"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 After 后接动名词、novel 被评论 → being reviewed。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Your own values must ____ by yourself, not by society.",
+      "options": [
+        "choose",
+        "being chosen",
+        "chooses",
+        "be chosen"
+      ],
+      "answer_index": 3,
+      "explanation": "情态 must + 被动,values 被选择 → be chosen。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "From his window, Morrie ____ everything as though through new eyes.",
+      "options": [
+        "observed",
+        "was observed",
+        "being observed",
+        "to be observed"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 Morrie 是观察的发出者 → 用主动 observed。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Mitch wanted his teacher's wisdom ____ down for others.",
+      "options": [
+        "to record",
+        "to be recorded",
+        "recording",
+        "recorded"
+      ],
+      "answer_index": 1,
+      "explanation": "want + 宾语 + 不定式被动,wisdom 被记录 → to be recorded。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Without ____ properly, the book's message can easily be missed.",
+      "options": [
+        "explaining",
+        "to explain",
+        "being explained",
+        "explained"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 Without 后接动名词、message 被解释 → being explained。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Such a moving story should ____ by everyone at least once.",
+      "options": [
+        "read",
+        "being read",
+        "to be read",
+        "be read"
+      ],
+      "answer_index": 3,
+      "explanation": "情态 should + 被动(by everyone),story 被读 → be read。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The whole book ____ in less than a year by a grateful student.",
+      "options": [
+        "was written",
+        "wrote",
+        "writing",
+        "to write"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 book 是被写的对象、有 by…→ 用被动 was written。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Mitch ____ the story so that others could learn from Morrie.",
+      "options": [
+        "was written",
+        "wrote",
+        "being written",
+        "to be written"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 Mitch 是写作的发出者 → 用主动 wrote。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Important truths can ____ even in the shortest of stories.",
+      "options": [
+        "find",
+        "being found",
+        "be found",
+        "finds"
+      ],
+      "answer_index": 2,
+      "explanation": "情态 can + 被动,truths 被发现 → be found。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Near the end, the dying man asked ____ closer to the window.",
+      "options": [
+        "to move",
+        "moving",
+        "moved",
+        "to be moved"
+      ],
+      "answer_index": 3,
+      "explanation": "ask + 不定式被动,他被移动 → to be moved。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By ____ by a wise teacher, we slowly learn how to live.",
+      "options": [
+        "being guided",
+        "guiding",
+        "to guide",
+        "guided"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 By 后接动名词、we 被引导 → being guided。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Such quiet bravery may never ____ by those who read the book.",
+      "options": [
+        "forget",
+        "be forgotten",
+        "being forgotten",
+        "forgets"
+      ],
+      "answer_index": 1,
+      "explanation": "情态 may + 被动,bravery 被遗忘 → be forgotten。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Old friendships deserve ____ alive with a few warm words.",
+      "options": [
+        "to keep",
+        "keeping",
+        "to be kept",
+        "kept"
+      ],
+      "answer_index": 2,
+      "explanation": "deserve + 不定式被动,friendships 被保持 → to be kept。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Great respect ____ to Morrie by all of his former students.",
+      "options": [
+        "gave",
+        "giving",
+        "to give",
+        "was given"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 respect 是被给予的对象、有 by…→ 用被动 was given。"
+    }
+  ]
+}

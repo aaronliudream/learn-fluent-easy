@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U5",
+  "note": "单元通关专属迷你阅读(脆弱世界/保护自然主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Lin joined a beach clean-up for the first time, she was shocked by how much plastic lay among the rocks. She and her friends filled twenty large bags in a single afternoon, and seabirds soon returned to feed where the rubbish had been. Lin says the day taught her that even one free Saturday can make a real difference to the natural world.",
+    "questions": [
+      {
+        "q": "Why was Lin shocked at the beach?",
+        "options": [
+          "There was a great deal of plastic among the rocks.",
+          "There were no rocks on the beach at all.",
+          "The sea had completely dried up.",
+          "She could not find any of her friends."
+        ],
+        "answer": "A",
+        "explanation": "原文 'shocked by how much plastic lay among the rocks' 的转述;其余与原文不符。"
+      },
+      {
+        "q": "What lesson did Lin learn from the day?",
+        "options": [
+          "Cleaning beaches is a waste of time.",
+          "Even a little effort can really help nature.",
+          "Only scientists can protect the sea.",
+          "Seabirds should be kept away from beaches."
+        ],
+        "answer": "B",
+        "explanation": "末句 'even one free Saturday can make a real difference to the natural world' 的转述(覆盖短文后半段)。"
+      }
+    ]
+  }
+}

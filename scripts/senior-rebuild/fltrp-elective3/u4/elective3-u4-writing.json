@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "topic": "Write an opinion essay: Is AI a real threat?(写一篇关于人工智能是否是真正威胁的议论文)",
+  "title_en": "Is AI a Real Threat?",
+  "genre": "议论文 / 观点写作(state your opinion + give reasons + a balanced conclusion)",
+  "source": "外研社选择性必修第三册 Unit 4 Writing:write an opinion essay about whether artificial intelligence is a real threat(亮明观点 + 给出理由 + 平衡的结论)。",
+  "prompt_cn": "假设你叫李华,学校英语论坛正在讨论\"人工智能是真正的威胁吗?\"。请用英语写一篇约 100 词的短文,内容包括:① 清楚亮明你的观点(威胁 / 机遇 / 各占一半);② 给出一两条理由,可举例(如就业、医疗、自动驾驶);③ 给出一个平衡、理性的结论。注意主谓一致(如 50 per cent of jobs are…、none of us is…)。",
+  "prompt_en": "Suppose you are Li Hua. Your school's English forum is discussing \"Is AI a real threat?\" Write a short essay (about 100 words) that: 1) clearly states your opinion; 2) gives one or two reasons with an example (e.g. jobs, medical care, self-driving cars); 3) ends with a balanced, sensible conclusion. Pay attention to subject-verb agreement.",
+  "points": [
+    "亮明观点(In my opinion, AI is … / I believe that …)",
+    "给理由 + 举例(For example, almost 50 per cent of jobs are at risk …)",
+    "平衡结论(We should embrace AI, but we must also regulate it.)",
+    "注意主谓一致(percentages / none / neither / there be)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Is artificial intelligence a real threat? In my opinion, it is both a chance and a challenge. On the one hand, AI brings great benefits. For example, much of its value lies in its capacity to analyse huge amounts of data and solve problems that are too hard for experts alone. On the other hand, there are real worries. Almost 50 per cent of some jobs are potentially at risk from automation, and none of us is fully prepared for such change. Therefore, we should not simply fear AI. Instead, we ought to embrace it and, at the same time, regulate it with clear and fair rules.",
+  "model_translation": "人工智能是真正的威胁吗?在我看来,它既是机遇也是挑战。一方面,AI 带来巨大益处。比如,它的价值大多在于分析海量数据、解决专家也难以应对的问题的能力。另一方面,也存在真实的担忧。某些工作中近 50% 都可能因自动化而面临风险,而我们没有谁为这样的变化做好了充分准备。因此,我们不应只是惧怕 AI,而应欣然接纳它,同时用清晰公正的规则加以管理。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:亮明观点 / 理由+举例 / 平衡结论" },
+      { "dimension": "结构", "max": 4, "criteria": "观点—理由—结论清楚,使用 On the one hand / On the other hand / Therefore 等连接,行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样,主谓一致(分数/百分比、none、there be)运用正确,语法基本无误" }
+    ],
+    "required_structure": [
+      "亮明观点 In my opinion, AI is …",
+      "理由1+举例 For example, much of its value lies in …",
+      "理由2 Almost 50 per cent of jobs are at risk … / none of us is prepared …",
+      "结论 Therefore, we should embrace it and regulate it."
+    ],
+    "key_expressions": [
+      "In my opinion, AI is both a chance and a challenge.",
+      "Much of its value lies in its capacity to analyse data.",
+      "Almost 50 per cent of some jobs are potentially at risk.",
+      "We should embrace AI and, at the same time, regulate it."
+    ],
+    "useful_words": ["artificial intelligence", "automation", "capacity", "analyse", "potentially", "at risk", "embrace", "regulate", "challenge", "benefit"]
+  },
+  "high_sentences": [
+    "In my opinion, AI is both a chance and a challenge.",
+    "Much of its value lies in its capacity to analyse huge amounts of data.",
+    "Almost 50 per cent of some jobs are potentially at risk from automation.",
+    "We should embrace AI and, at the same time, regulate it with clear rules."
+  ],
+  "error_pairs": [
+    { "wrong": "Almost 50 per cent of jobs is at risk.", "correct": "Almost 50 per cent of jobs are at risk.", "note": "百分比 of 后是复数 jobs,谓语用复数 are。" },
+    { "wrong": "None of us are fully prepared.", "correct": "None of us is fully prepared.", "note": "none of us 作主语,正式书面用单数 is。" },
+    { "wrong": "There is many worries about AI.", "correct": "There are many worries about AI.", "note": "there be 与紧跟其后的复数 worries 一致,用 are。" }
+  ],
+  "paragraph_template": "【AI 议论文结构】\n第1句 亮明观点:In my opinion, AI is both a chance and a challenge.\n第2-4句 理由+举例:On the one hand, … For example, … On the other hand, …\n第5-6句 平衡结论:Therefore, we should embrace AI and regulate it."
+}

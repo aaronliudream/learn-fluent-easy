@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "The museum was shaped to look like a giant lotus flower.", "opts": ["博物馆被设计成巨大的莲花形状。", "博物馆里养了很多鱼。", "博物馆建在山顶上。", "博物馆很快就要拆掉了。"], "answer": 0 },
+    { "audio": "Holes in the termite mound let air move in and out.", "opts": ["土丘是用石头砌成的。", "白蚁土丘上的孔让空气进出。", "白蚁住在树上。", "土丘里灌满了水。"], "answer": 1 },
+    { "audio": "The green panels turn sunlight into clean energy.", "opts": ["面板挡住了所有阳光。", "面板用来储存食物。", "绿色面板把阳光变成清洁能源。", "面板只是普通的玻璃窗。"], "answer": 2 },
+    { "audio": "Collecting rainwater helps the building save water.", "opts": ["这座建筑浪费了很多水。", "那里从来不下雨。", "雨水被倒进了大海。", "收集雨水帮建筑节约用水。"], "answer": 3 },
+    { "audio": "Thoreau lived alone in a small cottage by a pond.", "opts": ["梭罗独自住在池塘边的小屋里。", "梭罗住在城市的高楼里。", "梭罗和许多朋友同住。", "梭罗从不离开城市。"], "answer": 0 },
+    { "audio": "Engineers copied a bird's beak to build faster trains.", "opts": ["工程师很讨厌鸟。", "工程师模仿鸟喙造出更快的列车。", "工程师造了一座桥。", "列车变得更慢了。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "The Eastgate Centre is a ____ example of biomimicry.（出色的）", "opts": ["superb", "boring", "tiny", "broken"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Solar panels can ____ sunlight into electricity.（转化）", "opts": ["hide", "convert", "drop", "buy"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Architects often ____ the way nature solves problems.（模仿）", "opts": ["sell", "break", "mimic", "lose"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Living simply close to nature can bring deep ____.（满足感）", "opts": ["danger", "noise", "traffic", "fulfilment"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "____ inspiration from nature is an old tradition among architects.", "opts": ["Drawing", "Draw", "Draws", "Drawn"], "answer": 0, "point": "非谓语作主语", "dim": "grammar" },
+    { "q": "The architect decided ____ the museum like a lotus flower.", "opts": ["shaping", "to shape", "shape", "shaped"], "answer": 1, "point": "非谓语作宾语", "dim": "grammar" },
+    { "q": "Her main job is ____ green buildings for schools.", "opts": ["design", "designs", "to design", "designed"], "answer": 2, "point": "非谓语作表语", "dim": "grammar" },
+    { "q": "Designing such complex buildings ____ years of patient study.", "opts": ["take", "taking", "to take", "takes"], "answer": 3, "point": "非谓语作主语·主谓一致", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["屋顶收集雨水并循环利用。", "屋顶漏水很严重。", "屋顶上没有水。", "屋顶被风吹走了。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The roof collects rainwater and uses it again." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["人们很讨厌蜻蜓。", "通过观察蜻蜓,人们造出更好的无人机。", "蜻蜓很快飞走了。", "无人机坏掉了。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "By watching dragonflies, people built better drones." }
+  ],
+  "reading": {
+    "passage": "A new school in the city has green plants growing all over its walls. The leaves give cool shade in summer and let warm sunlight through in winter, so the rooms stay comfortable without using much power.",
+    "passageCn": "城里一所新学校的墙上爬满了绿色植物。夏天树叶带来凉爽的树荫,冬天又让温暖的阳光透进来,所以房间无需耗费太多电力就能保持舒适。",
+    "questions": [
+      { "q": "Why do the rooms stay comfortable all year?", "opts": ["Because wall plants give shade in summer and let in winter sun.", "Because the school is built deep underground.", "Because strong heaters run all day long.", "Because every window is always left open."], "answer": 0 },
+      { "q": "What grows all over the school walls?", "opts": ["Green plants with leaves.", "Sheets of coloured glass.", "Long metal wires.", "Heavy stone blocks."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short passage to introduce a building that learns from nature. Say what gave the designer the idea, how the building works, and why it is good for the environment. Try to use non-finite forms (Copying nature is…, His goal is to…, Using less energy…).",
+    "promptCn": "写一篇短文,介绍一座向自然学习的建筑:灵感来自什么、它如何运作、为何对环境有益。试着用非谓语结构(Copying nature is…、His goal is to…、Using less energy…)。",
+    "sampleWords": ["architect", "inspire", "mimic", "termite", "algae", "convert", "rainwater", "energy", "superb", "environment"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking About a Green Building",
+      "lines": [
+        { "role": "A", "text": "Have you seen the new building that looks like a lotus?", "cn": "你见过那座像莲花的新建筑吗?" },
+        { "role": "B", "text": "Yes! Its roof collects rainwater and uses it again.", "cn": "见过!它的屋顶收集雨水并循环利用。" },
+        { "role": "A", "text": "Designing something like that must be really hard.", "cn": "设计那样的东西一定很难。" },
+        { "role": "B", "text": "It is, but copying nature often gives the best ideas.", "cn": "是很难,但模仿自然常常带来最好的点子。" }
+      ]
+    },
+    {
+      "title": "Planning a Roof Garden",
+      "lines": [
+        { "role": "A", "text": "Why do you want plants on the school roof?", "cn": "你为什么想在校园屋顶种植物?" },
+        { "role": "B", "text": "Growing plants up there keeps the rooms cool in summer.", "cn": "在那上面种植物能让房间夏天保持凉爽。" },
+        { "role": "A", "text": "Good idea. Who will water them in the holidays?", "cn": "好主意。假期里谁来浇水呢?" },
+        { "role": "B", "text": "We'll collect rainwater, so saving water is easy.", "cn": "我们会收集雨水,所以节约用水很容易。" }
+      ]
+    }
+  ]
+}

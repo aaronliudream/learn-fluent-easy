@@ -1,0 +1,36 @@
+{
+  "volume": "elective4",
+  "unit": "U5",
+  "grade": 12,
+  "content": {
+    "title": "名词性从句(主语/宾语/表语/同位语)速查",
+    "intro": "名词性从句在句中相当于一个名词,可作主语、宾语、表语或同位语。判断连接词的口诀:从句缺成分→用 what;内容完整陈述事实→用 that;表'是否'→用 whether(or not/介词后不用 if);表'无论……'→用 whatever/whoever/however。",
+    "table": {
+      "headers": ["从句类型", "位置 / 常用连接词 / 例句"],
+      "rows": [
+        ["主语从句", "句首作主语:What caused the collapse is unknown. / That they had no metal tools is amazing."],
+        ["宾语从句", "动词或介词后:No one knows what the signs mean. / It depends on whether the rains return."],
+        ["表语从句", "be 动词后:The question is whether the drought lasted. / The truth is that no one has read it all."],
+        ["同位语从句", "说明 fact/idea/news/belief 等名词:The fact that they vanished still puzzles us."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "从句缺主语/宾语→what;内容完整→that", "mark": "what they planted(缺宾语) / that they planted crops(完整)" },
+      { "rule": "表'是否':句首作主语、介词后、紧跟 or not 时只能用 whether,不用 if", "mark": "whether… or not √ / if… or not ×" },
+      { "rule": "同位语从句内容完整用 that;但 question/doubt 后表'是否'用 whether", "mark": "the fact that… / the question whether…" },
+      { "rule": "表'无论……':whatever(物)/ whoever(人)/ however+形容词或副词", "mark": "recorded whatever they saw / however hard they looked" },
+      { "rule": "主语从句作主语,谓语动词用单数", "mark": "What caused it is(单数) still debated." }
+    ],
+    "why": [
+      "what 自身在从句里充当主语或宾语,所以从句会'缺一块';that 只起连接作用、不充当成分,所以从句必须完整。先看从句缺不缺成分,就能在 that 与 what 之间快速分辨。"
+    ],
+    "gaokaoPoints": [
+      "that vs what(看从句是否缺主语/宾语);whether vs if(or not、介词后、句首主语只用 whether);语法填空与改错高频。",
+      "同位语从句 the fact/idea/news that… 与定语从句的区别:同位语从句内容完整、that 不作成分,定语从句中关系词要作成分。"
+    ],
+    "examVsReal": [
+      { "exam": "I don't know whether he will come or not.（考试/书面)", "real": "I don't know if he'll come.", "note": "口语中宾语从句 if/whether 常通用;但 or not、介词后、句首主语只能 whether" },
+      { "exam": "What he said is true.（考试强调主语从句)", "real": "It's true, what he said.", "note": "口语常先说结论再补从句,书面则把主语从句放句首" }
+    ]
+  }
+}

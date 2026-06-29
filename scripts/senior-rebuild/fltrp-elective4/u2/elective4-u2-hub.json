@@ -1,0 +1,48 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "listeningQuestions": [
+    { "audio": "Morrie is being weakened by a severe illness.", "opts": ["莫里正被一场重病一点点拖垮。", "我昨天忘了带手机。", "这家商店今天关门了。", "他赢得了那场比赛。"], "answer": 0 },
+    { "audio": "Once you learn how to die, you learn how to live.", "opts": ["请把窗户关上。", "一旦学会面对死亡,你就学会了如何生活。", "我搬到了一座新城市。", "他从不说对不起。"], "answer": 1 },
+    { "audio": "Happiness is found in simple things, not in luxury.", "opts": ["明天会下大雨。", "她卖掉了旧手机。", "幸福在于简单的事物,而非奢华。", "我不喜欢任何运动。"], "answer": 2 },
+    { "audio": "A box of tissues will be needed to read this book.", "opts": ["把书还回图书馆。", "今天体育馆关门了。", "我们一起去看电影吧。", "读这本书会需要一盒纸巾。"], "answer": 3 },
+    { "audio": "We should always keep in touch with good friends.", "opts": ["我们应当一直和好友保持联系。", "他把秘密告诉了所有人。", "她忘了朋友的生日。", "快点跑,不然会迟到。"], "answer": 0 },
+    { "audio": "These lessons have been shared with readers around the world.", "opts": ["谎言能让朋友更亲近。", "这些人生道理已被分享给世界各地的读者。", "他拒绝了那个请求。", "请把灯打开。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Morrie was slowly ____ by a severe illness.", "opts": ["weakened", "painted", "sold", "washed"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Although the book is about dying, it is not ____.", "opts": ["cheap", "pessimistic", "loud", "tall"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Morrie taught us to ____ what we already have.", "opts": ["waste", "sell", "appreciate", "throw"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Each fable ends with a short ____ that teaches a lesson.", "opts": ["engine", "ticket", "price", "moral"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "So far, the book ____ into more than forty languages.", "opts": ["has been translated", "translated", "is translating", "translates"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Right now, a new cover ____ for the next edition.", "opts": ["designs", "is being designed", "designed", "has designed"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "Despite ____ by illness, Morrie stayed cheerful.", "opts": ["weakening", "to weaken", "being weakened", "weaken"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "Such wisdom must ____ down to the young.", "opts": ["pass", "passing", "passes", "be passed"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["莫里从窗口观察着每一次季节的变化。", "他迟到了一个小时。", "学校今天停电了。", "她卖掉了旧手机。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Morrie observed every change of season from his window." },
+    { "q": "听句子选中文:", "opts": ["明天的天气会很好。", "彼此相爱,否则就会消亡。", "他忘了带书包。", "请把门打开。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Love each other, or perish." }
+  ],
+  "reading": {
+    "passage": "After he became seriously ill, Morrie decided to share everything he had learned about love and life. Every Tuesday his former student came to visit him, and their honest talks were later turned into a book that has moved millions of readers.",
+    "passageCn": "在病重之后,莫里决定把自己关于爱与人生所学的一切分享出来。每个星期二,他从前的学生都来探望他,而他们坦诚的谈话后来被写成了一本打动了千百万读者的书。",
+    "questions": [
+      { "q": "Why did Morrie decide to share his ideas?", "opts": ["Because he wanted to pass on what he had learned.", "Because he wanted to become rich.", "Because he was simply bored.", "Because someone forced him to."], "answer": 0 },
+      { "q": "What were their Tuesday talks turned into?", "opts": ["A best-selling book.", "A popular pop song.", "A large oil painting.", "A TV game show."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about a book or person that changed the way you live. Say what happened and what you learned, using at least two passive sentences (e.g. The book was written by…, I was reminded that…).",
+    "promptCn": "用3-4句话写一本书或一个人如何改变了你的生活方式:发生了什么、你学到了什么,至少用两个被动句(如 The book was written by…, I was reminded that…)。",
+    "sampleWords": ["written", "reunite", "weaken", "lesson", "value", "remind", "hope", "friendship", "appreciate", "passive"]
+  },
+  "dialogues": [
+    {
+      "title": "Lessons Worth Sharing",
+      "lines": [
+        { "role": "A", "text": "I just finished Tuesdays with Morrie. I thought it would be sad, but I feel full of hope.", "cn": "我刚读完《相约星期二》。本以为会很悲伤,结果我满怀希望。" },
+        { "role": "B", "text": "I felt the same. Morrie was very ill, yet he was never pessimistic.", "cn": "我也是。莫里病得很重,却从不悲观。" },
+        { "role": "A", "text": "My favourite idea is that our values should be chosen by ourselves, not by society.", "cn": "我最喜欢的一点是:我们的价值观应由自己选择,而不是由社会决定。" },
+        { "role": "B", "text": "Mine is simpler: we must keep in touch with the good people we love.", "cn": "我喜欢的更简单:要和我们所爱的好人保持联系。" }
+      ]
+    }
+  ]
+}

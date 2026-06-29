@@ -1,0 +1,423 @@
+{
+  "volume": "required3",
+  "unit": "U6",
+  "topic": "Disaster and Hope",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社版必修第三册 Unit 6 同主题听力(台风备灾对话/海啸成因短文/地震幸存者访谈/卫星预报短文/热浪来电对话/希望寄语短文)。用词限 U6/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U6 听力·对话 Getting Ready for the Typhoon",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lily: Have you heard the news, Sam? A strong typhoon is coming tonight.",
+        "Sam: Yes, the forecast says it will reach our city after midnight.",
+        "Lily: We should buy enough water and some food that doesn't need cooking.",
+        "Sam: Good idea. I'll also buy some batteries in case the power goes off.",
+        "Lily: Don't forget to bring the plants inside and close all the windows.",
+        "Sam: Right. My dad said we should tape the big windows so the glass won't break.",
+        "Lily: And we must stay indoors once it starts. The streets won't be safe.",
+        "Sam: Agreed. Let's keep the radio on for the latest announcements."
+      ],
+      "translation_cn": "Lily 告诉 Sam 今晚有强台风;预报说午夜后到城;两人决定买足够的水和免煮食物、买电池以防停电;把植物搬进屋、关好窗;Sam 的爸爸说要给大窗户贴胶带以防玻璃碎;台风一来就待在室内、开着收音机听最新公告。",
+      "questions": [
+        {
+          "stem": "When will the typhoon reach the city?",
+          "options": [
+            "After midnight.",
+            "Early in the morning.",
+            "At noon.",
+            "Next week."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Sam want to buy batteries?",
+          "options": [
+            "To sell them later.",
+            "In case the power goes off.",
+            "To give them to Lily.",
+            "Because they are cheap."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Sam's dad suggest doing to the big windows?",
+          "options": [
+            "Taping them so the glass won't break.",
+            "Painting them white.",
+            "Opening them wide.",
+            "Removing them completely."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What must they do once the typhoon starts?",
+          "options": [
+            "Walk in the streets.",
+            "Stay indoors.",
+            "Drive to the beach.",
+            "Visit their neighbours."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How will they get the latest news?",
+          "options": [
+            "By reading old newspapers.",
+            "By calling the school.",
+            "By keeping the radio on.",
+            "By looking at the stars."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U6 听力·短文 How a Tsunami Forms",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "A tsunami is one of the most dangerous events in the sea.",
+        "Most tsunamis are caused by a strong earthquake under the ocean floor.",
+        "When the sea floor suddenly moves, it pushes a huge amount of water upward.",
+        "This water travels across the ocean as fast as a plane, but in deep water the waves are still quite low.",
+        "Only when the waves reach shallow water near the coast do they grow into giant walls of water, so people must move to high ground as soon as a warning is given."
+      ],
+      "translation_cn": "海啸是海上最危险的事件之一;大多数海啸由海底强烈地震引起;海底突然移动时,会把大量海水向上推;这股水以飞机般的速度横越大洋,但在深水区浪还很低;只有当波浪到达海岸边的浅水区才会长成巨墙般的水墙,所以一旦发出警报,人们必须立刻转移到高处。",
+      "questions": [
+        {
+          "stem": "What causes most tsunamis?",
+          "options": [
+            "Heavy rain on the beach.",
+            "Wind from the mountains.",
+            "A long drought.",
+            "A strong earthquake under the ocean floor."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How fast does the water travel across the ocean?",
+          "options": [
+            "As fast as a plane.",
+            "As slow as a person walking.",
+            "Slower than a boat.",
+            "It does not move at all."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "In deep water, what are the waves like?",
+          "options": [
+            "They are already giant walls.",
+            "They are still quite low.",
+            "They stop completely.",
+            "They turn into ice."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When do the waves grow into giant walls of water?",
+          "options": [
+            "When the wind stops.",
+            "When the sun rises.",
+            "When they reach shallow water near the coast.",
+            "When the rain begins."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What must people do when a warning is given?",
+          "options": [
+            "Run towards the sea.",
+            "Wait on the beach.",
+            "Go back to sleep.",
+            "Move to high ground at once."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U6 听力·对话 An Earthquake Survivor's Story",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: Mr Li, can you tell us what you remember about the earthquake?",
+        "Mr Li: It happened so fast. The ground shook, and our house came down in seconds.",
+        "Anna: That sounds terrible. How did you and your family escape?",
+        "Mr Li: We were lucky. A rescue team pulled us out from under the broken walls.",
+        "Anna: How long did you have to wait before help came?",
+        "Mr Li: About two days, but it felt like months in the dark.",
+        "Anna: What kept you going during that time?",
+        "Mr Li: My wife kept saying that as long as we were together, there was still hope.",
+        "Anna: And how is life now?",
+        "Mr Li: Now we are rebuilding our home, and many kind strangers have helped us."
+      ],
+      "translation_cn": "记者 Anna 采访地震幸存者李先生;地震发生极快,房子几秒就塌了;一支救援队把全家从断墙下救出;他们等了约两天才等到救援,黑暗中却觉得像几个月;支撑他的是妻子常说的——只要一家人在一起就还有希望;如今他们正在重建家园,许多好心的陌生人也帮助了他们。",
+      "questions": [
+        {
+          "stem": "What happened to Mr Li's house?",
+          "options": [
+            "It came down in seconds.",
+            "It was only slightly damaged.",
+            "It was moved to a new street.",
+            "It stayed completely safe."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How did the family escape?",
+          "options": [
+            "They climbed out by themselves.",
+            "A rescue team pulled them out.",
+            "A helicopter lifted the house.",
+            "They were never trapped."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How long did they wait for help?",
+          "options": [
+            "Only a few minutes.",
+            "Several months.",
+            "About two days.",
+            "Almost a year."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did his wife keep saying?",
+          "options": [
+            "They should give up.",
+            "Help would never come.",
+            "It was nobody's fault.",
+            "As long as they were together, there was still hope."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is the family doing now?",
+          "options": [
+            "Rebuilding their home.",
+            "Leaving the country.",
+            "Selling their land.",
+            "Living in the dark."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U6 听力·短文 Forecasting with Satellites",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "For thousands of years, people have tried to predict the weather.",
+        "Long ago, they watched the clouds, the wind and even the behaviour of animals.",
+        "Today, satellites high above the Earth send back pictures of storms while they are still far out at sea.",
+        "Computers then use this data to work out where a storm will go and how strong it will be.",
+        "Thanks to these tools, scientists can now forecast dangerous weather far more precisely, and a warning sent out in time can save thousands of lives."
+      ],
+      "translation_cn": "几千年来人们一直试图预测天气;很久以前,他们靠观察云、风,甚至动物的行为;如今,高悬地球上空的卫星在风暴还远在海上时就传回它们的图像;计算机再用这些数据算出风暴的去向和强度;借助这些工具,科学家如今能更精确地预报危险天气,而及时发出的警报能挽救成千上万的生命。",
+      "questions": [
+        {
+          "stem": "How did people predict the weather long ago?",
+          "options": [
+            "By using satellites.",
+            "By watching clouds, wind and animals.",
+            "By reading computer data.",
+            "By asking scientists."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do satellites send back?",
+          "options": [
+            "Boxes of food.",
+            "Weather reports on paper.",
+            "Pictures of storms far out at sea.",
+            "Phone numbers."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do computers use the satellite data for?",
+          "options": [
+            "To play music.",
+            "To draw maps of the past.",
+            "To count the stars.",
+            "To work out where a storm will go and how strong it will be."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What can scientists do better now than before?",
+          "options": [
+            "Forecast dangerous weather more precisely.",
+            "Stop storms completely.",
+            "Control the wind.",
+            "Make the rain warmer."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can a warning sent out in time do?",
+          "options": [
+            "Make storms stronger.",
+            "Save thousands of lives.",
+            "Cost a lot of money.",
+            "Hide the clouds."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U6 听力·对话 A Call About the Heatwave",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mr Brown: Hello, I'm calling to check how long this heatwave will last.",
+        "Ms Green: Good afternoon. I'm afraid it will continue for at least three more days.",
+        "Mr Brown: That's worrying. The temperature has already reached forty degrees here.",
+        "Ms Green: Yes, it's exceptionally hot. Please drink plenty of water and stay out of the sun.",
+        "Mr Brown: My grandmother feels dizzy. Is there anything I can do to help her?",
+        "Ms Green: Keep her in a cool room and give her cool water. If she gets worse, call a doctor.",
+        "Mr Brown: Thank you. Will there be any rain soon?",
+        "Ms Green: Some rain is expected at the weekend, which should make things cooler."
+      ],
+      "translation_cn": "Brown 先生致电气象站,询问热浪还会持续多久;Green 女士说至少还有三天;当地气温已达四十度;她提醒多喝水、避开阳光;Brown 的祖母头晕,Green 建议让老人待在凉爽房间、喝凉水,若加重就叫医生;周末预计有雨,天气会转凉。",
+      "questions": [
+        {
+          "stem": "Why is Mr Brown calling the weather station?",
+          "options": [
+            "To report a flood.",
+            "To ask about a typhoon.",
+            "To check how long the heatwave will last.",
+            "To buy a thermometer."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How much longer will the heatwave last?",
+          "options": [
+            "Only a few hours.",
+            "About a month.",
+            "It has already ended.",
+            "At least three more days."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Ms Green advise Mr Brown to do?",
+          "options": [
+            "Drink plenty of water and stay out of the sun.",
+            "Go for a long walk at noon.",
+            "Turn off all the lights.",
+            "Drive to the mountains."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should he do for his grandmother?",
+          "options": [
+            "Take her out into the sun.",
+            "Keep her in a cool room and give her cool water.",
+            "Give her hot soup.",
+            "Let her sleep on the roof."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When is some rain expected?",
+          "options": [
+            "Tonight.",
+            "In three months.",
+            "At the weekend.",
+            "Never this year."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U6 听力·短文 A Message of Hope",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "When a disaster strikes, it can take away our homes, but it cannot take away our courage.",
+        "All around the world, people who have lost almost everything still find the strength to start again.",
+        "Neighbours share food and shelter, strangers send money and clothes, and rescue teams travel from faraway countries to help.",
+        "Little by little, broken towns come back to life, and new homes rise where old ones once stood.",
+        "A disaster shows us how powerful nature can be, but it also shows that human kindness and hope can shine even in the darkest of times."
+      ],
+      "translation_cn": "灾难袭来时,它能夺走我们的家园,却夺不走我们的勇气;世界各地,失去几乎一切的人仍能找到重新开始的力量;邻里分享食物与庇护,陌生人寄来钱物,救援队从遥远的国度赶来相助;一点一点地,破碎的城镇重新焕发生机,新家在旧址上拔地而起;灾难让我们看到自然的强大,也让我们看到——人间的善意与希望,即使在最黑暗的时刻也能闪光。",
+      "questions": [
+        {
+          "stem": "What can a disaster NOT take away, according to the speaker?",
+          "options": [
+            "Our homes.",
+            "Our furniture.",
+            "Our streets.",
+            "Our courage."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do neighbours share?",
+          "options": [
+            "Food and shelter.",
+            "Cars and boats.",
+            "Phones and games.",
+            "Maps and books."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where do the rescue teams travel from?",
+          "options": [
+            "The same street.",
+            "Faraway countries.",
+            "Under the sea.",
+            "Outer space."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What happens to broken towns little by little?",
+          "options": [
+            "They are forgotten forever.",
+            "They sink into the sea.",
+            "They come back to life.",
+            "They stay empty."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker say can shine in the darkest times?",
+          "options": [
+            "Bright city lights.",
+            "The hot summer sun.",
+            "Expensive machines.",
+            "Human kindness and hope."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

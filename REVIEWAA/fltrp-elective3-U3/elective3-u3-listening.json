@@ -1,0 +1,470 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "topic": "The D-Day Landings · War and Peace",
+  "tts_voice": "nova",
+  "source": "外研社版选择性必修第三册 Unit 3 听力(战争与和平主题);6篇 long/short 交替;答案均可在 transcript 找到依据;与阅读/完形文章不复用。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "Interview with a D-Day Veteran",
+      "type": "对话:记者采访登陆日老兵",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Thank you for talking to us, Mr Brown. How old were you on the day of the landings?"
+        },
+        {
+          "speaker": "B",
+          "text": "I was just nineteen. I had never even seen the sea before I joined the army."
+        },
+        {
+          "speaker": "A",
+          "text": "What do you remember most about that morning?"
+        },
+        {
+          "speaker": "B",
+          "text": "The noise. The guns never stopped. I was more frightened than I had ever been in my life."
+        },
+        {
+          "speaker": "A",
+          "text": "How did you reach the beach?"
+        },
+        {
+          "speaker": "B",
+          "text": "Our boat was hit, so we had to swim the last part. Many of my friends never made it to the sand."
+        },
+        {
+          "speaker": "A",
+          "text": "Do you still think about them?"
+        },
+        {
+          "speaker": "B",
+          "text": "Every single day. That is why I come back here each year, to remember the ones we lost."
+        }
+      ],
+      "translation_cn": "记者采访一位登陆日老兵布朗先生。他说自己当年才十九岁,参军前从没见过海。那天清晨他记得最深的是枪炮声不停,他从未那么害怕过。他们的船被击中,只能游完最后一段,许多战友再也没能上岸。他每年都回来,为的是纪念逝去的战友。",
+      "questions": [
+        {
+          "stem": "How old was Mr Brown on the day of the landings?",
+          "options": [
+            "Nineteen.",
+            "Fifteen.",
+            "Twenty-five.",
+            "Thirty."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did he remember most about that morning?",
+          "options": [
+            "The cold rain.",
+            "The endless noise of the guns.",
+            "The taste of the food.",
+            "The long train ride."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why did the men have to swim the last part?",
+          "options": [
+            "Their boat had been hit.",
+            "They wanted to train harder.",
+            "The bridge was broken.",
+            "The water was warm and calm."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happened to many of his friends?",
+          "options": [
+            "They went home early.",
+            "They died before reaching the beach.",
+            "They became officers.",
+            "They were taken prisoner."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Mr Brown return every year?",
+          "options": [
+            "To meet famous film stars.",
+            "To sell his old uniform.",
+            "To remember the friends he lost.",
+            "To look for a new job."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "A Parachute in the Museum",
+      "type": "独白:博物馆讲解员介绍降落伞",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Welcome to the war museum. In front of you is a real parachute used during the Normandy landings. It belonged to a young soldier who dropped behind enemy lines before dawn. Notice how thin and light the silk is; men trusted their lives to it. Next to it you can see his torn uniform and a letter he wrote to his mother the night before the jump. Please look, but do not touch. These objects are over eighty years old, and they help us remember how much these young men gave.",
+      "translation_cn": "博物馆讲解员介绍眼前一具真实的诺曼底登陆用降落伞。它属于一名黎明前空降到敌后的年轻士兵。请注意伞布多么薄而轻,士兵们却把性命托付给它。旁边是他破损的军装,以及他在跳伞前夜写给母亲的信。只能看,不能触摸。这些物品已有八十多年,提醒人们这些年轻人付出了多少。",
+      "questions": [
+        {
+          "stem": "What is the main object the guide describes?",
+          "options": [
+            "A modern fighter plane.",
+            "A stone war memorial.",
+            "A wooden fishing boat.",
+            "A parachute from the Normandy landings."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Who did the parachute belong to?",
+          "options": [
+            "A young soldier who dropped behind enemy lines.",
+            "A famous general.",
+            "The museum's first owner.",
+            "A local fisherman."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is shown next to the parachute?",
+          "options": [
+            "A map of the whole world.",
+            "His uniform and a letter to his mother.",
+            "A box of medals.",
+            "A model of a tank."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What are visitors asked not to do?",
+          "options": [
+            "Take any photographs.",
+            "Speak to the guide.",
+            "Touch the objects.",
+            "Sit on the chairs."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why does the guide say the objects matter?",
+          "options": [
+            "They are worth a lot of money.",
+            "They were made very recently.",
+            "They belong to the guide herself.",
+            "They help people remember the soldiers' sacrifice."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "Choosing a Book About the War",
+      "type": "对话:两名学生选读战争书籍",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Our teacher wants each of us to read a book about the war and write a review. Have you chosen one yet?"
+        },
+        {
+          "speaker": "B",
+          "text": "Not really. There are so many. I was thinking of one about the D-Day landings."
+        },
+        {
+          "speaker": "A",
+          "text": "That sounds good. I might read the story of a wartime university instead, the one that moved thousands of kilometres on foot."
+        },
+        {
+          "speaker": "B",
+          "text": "Oh, Lianda? My grandfather told me about that. The students kept studying even while bombs were falling."
+        },
+        {
+          "speaker": "A",
+          "text": "Exactly. I find that more moving than the battles. It shows a different side of war."
+        },
+        {
+          "speaker": "B",
+          "text": "Then we'll have two different reviews. Shall we share our books when we finish?"
+        },
+        {
+          "speaker": "A",
+          "text": "Good idea. We can learn about both the fighting and the spirit behind it."
+        }
+      ],
+      "translation_cn": "两名学生在选老师布置的战争主题读物并写书评。男生还没定,想读关于诺曼底登陆的书。女生想读那所徒步迁移数千公里的战时大学(联大)的故事,因为学生们在炸弹落下时仍坚持学习,她觉得这比战役更动人。两人决定各写不同的书评,读完后互相交换书,既了解战斗,也了解背后的精神。",
+      "questions": [
+        {
+          "stem": "What does the teacher want each student to do?",
+          "options": [
+            "Read a war book and write a review.",
+            "Watch a film in class.",
+            "Draw a map of Europe.",
+            "Interview a real soldier."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which topic is the boy thinking of reading about?",
+          "options": [
+            "A peace garden.",
+            "The D-Day landings.",
+            "A modern factory.",
+            "A football match."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will the girl read about?",
+          "options": [
+            "The building of new ships.",
+            "A trip to the seaside.",
+            "A wartime university that moved on foot.",
+            "The life of a film star."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why does she find that story moving?",
+          "options": [
+            "The school was very rich.",
+            "The students never had any classes.",
+            "The war never reached the school.",
+            "Students kept studying even under bombing."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do the two students agree to do?",
+          "options": [
+            "Share their books when they finish.",
+            "Write a single review together.",
+            "Give up the task.",
+            "Ask for an easier book."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "Notice About the Memorial March",
+      "type": "独白:广播通知纪念游行安排",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Good evening. Here is a notice about this Sunday's memorial march. The march will begin at ten o'clock in the morning at the town hall and end at the peace garden. Veterans and their families will lead the way, followed by the local schools. Roads in the town centre will be closed from nine until noon, so please leave your car at home and come on foot. After the march, there will be a short ceremony at the stone wall, where flowers may be laid. Everyone is warmly welcome to take part.",
+      "translation_cn": "晚间广播通知本周日纪念游行安排:游行上午十点从市政厅出发,到和平花园结束。老兵及家属走在最前,随后是当地学校。市中心道路九点至中午封闭,请把车留在家中、步行前来。游行后会在石墙前举行简短仪式,可献花。欢迎人人参加。",
+      "questions": [
+        {
+          "stem": "When will the memorial march begin?",
+          "options": [
+            "At nine in the evening.",
+            "At ten in the morning.",
+            "At noon.",
+            "At dawn."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where will the march end?",
+          "options": [
+            "At the railway station.",
+            "At the seaside.",
+            "At the peace garden.",
+            "At the school gate."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who will lead the march?",
+          "options": [
+            "The police band.",
+            "A group of tourists.",
+            "The town's shopkeepers.",
+            "Veterans and their families."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What are people asked to do about their cars?",
+          "options": [
+            "Leave them at home and walk.",
+            "Park them at the town hall.",
+            "Drive slowly through the centre.",
+            "Lend them to the veterans."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can people do at the stone wall?",
+          "options": [
+            "Buy tickets.",
+            "Lay flowers.",
+            "Have lunch.",
+            "Play music."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "Why We Study War History",
+      "type": "对话:师生讨论学习战争历史的意义",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Sir, why do we have to learn so much about old wars? They happened long ago."
+        },
+        {
+          "speaker": "B",
+          "text": "That's a fair question. What do you think we might gain from it?"
+        },
+        {
+          "speaker": "A",
+          "text": "I suppose we learn some dates and names."
+        },
+        {
+          "speaker": "B",
+          "text": "More than that. When we understand how much war cost ordinary people, we work harder to keep the peace."
+        },
+        {
+          "speaker": "A",
+          "text": "So it's a kind of warning?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes. The people who lived through it are growing fewer every year. If we forget their stories, we may one day repeat their mistakes."
+        },
+        {
+          "speaker": "A",
+          "text": "I never thought of it that way. I'll read my book more carefully now."
+        },
+        {
+          "speaker": "B",
+          "text": "Good. Remembering is the first step towards peace."
+        }
+      ],
+      "translation_cn": "学生问老师为什么要学这么多久远的战争。老师反问能从中得到什么。学生以为只是记些日期和人名。老师说不止如此:当我们明白战争给普通人带来多大代价,就会更努力地维护和平。学生问这是不是一种警示。老师说是的,经历过战争的人一年比一年少,若忘了他们的故事,有朝一日可能重蹈覆辙。学生表示要更认真地读书,老师说铭记是走向和平的第一步。",
+      "questions": [
+        {
+          "stem": "What does the student ask the teacher?",
+          "options": [
+            "When the test will be held.",
+            "Where the war took place.",
+            "Why they must study old wars.",
+            "How to write a poem."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the student first think they learn?",
+          "options": [
+            "How to fight a battle.",
+            "How to draw maps.",
+            "How to make weapons.",
+            "Some dates and names."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "According to the teacher, what makes people value peace?",
+          "options": [
+            "Understanding war's cost to ordinary people.",
+            "Winning more battles.",
+            "Building bigger armies.",
+            "Forgetting the past quickly."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is it urgent to record the stories now?",
+          "options": [
+            "The books are being lost.",
+            "The people who lived through war are fewer each year.",
+            "Wars never happen any more.",
+            "Young people refuse to listen."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the teacher say is the first step towards peace?",
+          "options": [
+            "Forgetting.",
+            "Fighting.",
+            "Remembering.",
+            "Travelling."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "A Speech at a Peace Event",
+      "type": "独白:和平纪念活动上的简短讲话",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Friends, we have gathered here today not to celebrate war but to honour peace. Eighty years ago, young men left these very streets and never returned. They did not die so that we could forget; they died so that we could live in freedom. Every flower we lay today is a promise that their courage will be remembered. Let us teach our children that peace is precious and easily lost. And let us work, each in our own way, to make sure that such suffering never comes again. Thank you.",
+      "translation_cn": "演讲者在和平纪念活动上说:今天聚在这里不是为颂扬战争,而是为礼赞和平。八十年前,年轻人从这些街道离去,再未归来。他们的牺牲不是为了让我们遗忘,而是为了让我们自由地生活。今天献上的每一朵花,都是铭记他们勇气的承诺。让我们教育孩子:和平珍贵且易失。让我们各尽其力,确保这样的苦难不再发生。",
+      "questions": [
+        {
+          "stem": "Why have the people gathered?",
+          "options": [
+            "To celebrate a great victory.",
+            "To watch a sports match.",
+            "To open a new shop.",
+            "To honour peace and remember the dead."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What happened to the young men eighty years ago?",
+          "options": [
+            "They left and never came back.",
+            "They became rich traders.",
+            "They moved to another town.",
+            "They built the peace garden."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does each flower represent?",
+          "options": [
+            "A gift for the visitors.",
+            "A promise to remember their courage.",
+            "A sign of the new season.",
+            "A prize for the winners."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should children be taught?",
+          "options": [
+            "That war brings glory.",
+            "That history does not matter.",
+            "That peace is precious and easily lost.",
+            "That flowers are expensive."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker ask everyone to do?",
+          "options": [
+            "Forget the past as soon as possible.",
+            "Build a stronger army.",
+            "Leave the town for good.",
+            "Work to prevent such suffering again."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

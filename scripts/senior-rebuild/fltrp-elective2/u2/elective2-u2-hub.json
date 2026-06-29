@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "She switched off her phone before she started studying.", "opts": ["她学习前关掉了手机。", "她一边学习一边玩手机。", "她把手机弄丢了。", "她从不用手机。"], "answer": 0 },
+    { "audio": "Much of his time had been occupied by checking messages.", "opts": ["他把时间都用来运动了。", "他大量时间被查看消息占去了。", "他没有手机。", "他很少看消息。"], "answer": 1 },
+    { "audio": "By the end of term, every umbrella had been returned.", "opts": ["大多数伞都丢了。", "一半的伞坏了。", "学期末每把伞都被归还了。", "没人借过伞。"], "answer": 2 },
+    { "audio": "The boy learnt to hold his temper instead of hammering nails.", "opts": ["男孩更爱发脾气了。", "男孩喜欢钉钉子。", "男孩拆掉了栅栏。", "男孩学会了控制脾气，而不是钉钉子。"], "answer": 3 },
+    { "audio": "Saving a little each week gave her a clear goal.", "opts": ["每周存一点让她有了清晰的目标。", "她把钱都花光了。", "存钱让她很难过。", "她从不存钱。"], "answer": 0 },
+    { "audio": "Before the talk ended, several good examples had been given.", "opts": ["演讲一开始就结束了。", "演讲结束前已给出几个好例子。", "没人举任何例子。", "例子都讲错了。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Checking my phone had ____ much of my free time.（占用）", "opts": ["occupied", "saved", "cleaned", "sold"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "We should not ____ on social media for every bit of news.（依赖）", "opts": ["win", "rely", "print", "throw"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "A polite reminder shows you are ____ of others.（替他人着想的）", "opts": ["rude", "lazy", "considerate", "proud"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "The school used a clever programme to ____ honesty.（提倡）", "opts": ["forget", "lose", "break", "promote"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "By the time the bell rang, the test papers ____ already.（被收走）", "opts": ["had been collected", "had collected", "were collected", "has been collected"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Before the detox started, over 100 students ____ to join.（被劝说）", "opts": ["had persuaded", "had been persuaded", "were persuading", "has persuaded"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "By Friday, the whole project ____ two days early.（被完成）", "opts": ["had finished", "was finished", "had been finished", "has been finished"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "Before Jack noticed it, a present ____ on his desk.（被留下）", "opts": ["had left", "was leaving", "has left", "had been left"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["一步一步地，他拖延的习惯被改掉了。", "他变得更爱拖延了。", "他从没拖延过。", "他放弃了改变自己。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Step by step, his habit of delaying had been broken." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["规则太严格了。", "被信任让学生更想做正确的事。", "学生们讨厌考试。", "没人相信他们。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Being trusted made the students want to do the right thing." }
+  ],
+  "reading": {
+    "passage": "Mia set herself one small goal: to read ten English pages every night before bed. After two months, the habit had been firmly built, and reading no longer felt like hard work to her.",
+    "passageCn": "Mia 给自己定了一个小目标：每晚睡前读十页英语。两个月后，这个习惯已经牢牢养成，读书对她来说不再是苦差事。",
+    "questions": [
+      { "q": "What was Mia's small goal?", "opts": ["To read ten pages of English each night.", "To buy ten new books.", "To sleep ten hours a night.", "To write ten letters a week."], "answer": 0 },
+      { "q": "How did Mia feel about reading after two months?", "opts": ["It still felt impossible.", "It no longer felt like hard work.", "She had given it up.", "She found it more boring."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short reflection about one habit you have improved: what it was, how you changed it, and what you learnt. Try to use the past perfect passive (had been done).",
+    "promptCn": "写一篇关于你改善的一个习惯的简短反思：它是什么、你怎样改变它、你学到了什么。试着用过去完成被动语态（had been done）。",
+    "sampleWords": ["habit", "improve", "switch off", "distract", "procrastination", "temper", "responsible", "deadline", "reflection", "step by step"]
+  },
+  "dialogues": [
+    {
+      "title": "Planning a Phone-free Evening",
+      "lines": [
+        { "role": "A", "text": "I waste hours on my phone every night. I want to change that.", "cn": "我每晚都在手机上浪费好几个小时，我想改改。" },
+        { "role": "B", "text": "Why not switch it off and leave it in another room while you study?", "cn": "学习时为什么不把它关掉、放到另一个房间呢？" },
+        { "role": "A", "text": "Good idea. The first days will be hard, though.", "cn": "好主意。不过头几天会很难。" },
+        { "role": "B", "text": "Step by step it gets easier. Soon the habit will be broken.", "cn": "一步一步会越来越容易，很快这个习惯就被改掉了。" }
+      ]
+    },
+    {
+      "title": "Sharing a Saving Tip",
+      "lines": [
+        { "role": "A", "text": "I never manage to save any of my pocket money.", "cn": "我从来存不下一点零花钱。" },
+        { "role": "B", "text": "Try putting a little into a jar before you spend the rest.", "cn": "试试先往罐子里放一点，再花剩下的。" },
+        { "role": "A", "text": "Watching it grow might give me a clear goal.", "cn": "看着它变多也许会给我一个清晰的目标。" },
+        { "role": "B", "text": "Exactly. By the end of the year you'll be surprised how much has been saved.", "cn": "没错。到年底你会惊讶于已经存下了这么多。" }
+      ]
+    }
+  ]
+}

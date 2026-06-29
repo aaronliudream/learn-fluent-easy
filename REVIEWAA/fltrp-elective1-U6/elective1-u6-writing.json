@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U6",
+  "topic": "Write a Job Advertisement for a Nature Guardian(写一则自然守护者的招聘广告)",
+  "title_en": "Wanted: A Guardian for Our Nature Reserve",
+  "genre": "应用文 / 招聘广告(job advertisement:job + responsibilities + benefits + how to apply)",
+  "source": "外研社选必一 Unit 6 Developing ideas / Presenting ideas:write a job advertisement(为一处自然保护区写招聘广告,说明工作、职责、待遇与申请方式)。",
+  "prompt_cn": "假设你所在的自然保护区需要招聘一名'自然守护者'。请用英语写一则约80词的招聘广告,内容包括:① 这是什么工作、地点在哪里;② 主要职责(如巡查、保护野生动物、向游客介绍);③ 待遇(如薪水可协商、提供食宿);④ 申请要求与方式。注意:语言简洁清楚,适当用现在完成进行时说明保护区一直在做的工作。",
+  "prompt_en": "Suppose the nature reserve near you needs to hire a \"Nature Guardian\". Write a job advertisement of about 80 words including: 1) what the job is and where it is; 2) the main responsibilities (e.g. checking the area, protecting wildlife, talking to visitors); 3) the benefits (e.g. salary negotiable, food and accommodation provided); 4) the requirements and how to apply.",
+  "points": [
+    "工作与地点(We are looking for a Nature Guardian at … Reserve.)",
+    "主要职责(Your duties would include protecting wildlife and …)",
+    "待遇(The salary is negotiable; food and accommodation are provided.)",
+    "申请要求与方式(Preference will be given to those with … Apply by …)"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Wanted: A Nature Guardian for Green Valley Reserve! For years our team has been protecting the wild animals and delicate wetlands here, and now we need your help. Your main duties would be checking the area each day, looking after the wildlife and telling visitors how to be responsible travellers. The work is full-time, the salary is negotiable, and food and accommodation are provided. Preference will be given to those who love nature and have outdoor experience. To apply, send a short video to greenvalley@reserve.org before 30 June.",
+  "model_translation": "招聘:绿谷保护区自然守护者!多年来,我们的团队一直在保护这里的野生动物和脆弱湿地,如今我们需要你的帮助。你的主要职责是每天巡查保护区、照看野生动物,并告诉游客如何做负责任的旅行者。工作为全职,薪水可协商,提供食宿。我们会优先考虑热爱自然、有户外经验的人。申请请于6月30日前把一段短视频发送至 greenvalley@reserve.org。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:工作与地点 / 主要职责 / 待遇 / 申请要求与方式" },
+      { "dimension": "结构", "max": 4, "criteria": "广告格式清楚、分点呈现、行文连贯、信息一目了然" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、现在完成进行时等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "标题/工作 Wanted: A Nature Guardian for … Reserve",
+      "职责 Your main duties would be …",
+      "待遇 The salary is negotiable; food and accommodation are provided.",
+      "申请 Preference will be given to … To apply, send … before …"
+    ],
+    "key_expressions": [
+      "We have been protecting the wildlife here for years.",
+      "Your main duties would be checking the area and looking after the wildlife.",
+      "The salary is negotiable, and food and accommodation are provided.",
+      "Preference will be given to those with outdoor experience."
+    ],
+    "useful_words": ["guardian", "reserve", "wildlife", "duties", "responsible", "salary", "negotiable", "accommodation", "preference", "apply"]
+  },
+  "high_sentences": [
+    "For years our team has been protecting the wild animals and delicate wetlands here.",
+    "Your main duties would be checking the area and looking after the wildlife.",
+    "The salary is negotiable, and food and accommodation are provided.",
+    "Preference will be given to those who love nature and have outdoor experience."
+  ],
+  "error_pairs": [
+    { "wrong": "We are protecting the wildlife here for years.", "correct": "We have been protecting the wildlife here for years.", "note": "for years 表持续到现在,要用现在完成进行时,不用现在进行时。" },
+    { "wrong": "The salary are negotiable.", "correct": "The salary is negotiable.", "note": "salary 是单数,系动词用 is。" },
+    { "wrong": "Preference will give to divers.", "correct": "Preference will be given to divers.", "note": "preference 是被给予,要用被动语态 be given。" }
+  ],
+  "paragraph_template": "【招聘广告结构】\n标题/工作:Wanted: A Nature Guardian for … Reserve\n职责:Your main duties would be …\n待遇:The salary is negotiable; food and accommodation are provided.\n申请:Preference will be given to … To apply, send … before …"
+}

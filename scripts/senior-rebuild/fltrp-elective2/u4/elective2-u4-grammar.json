@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "grammar_title": "形式主语 it(It is + adj./n. + to do / that 从句;It takes/seems/happens;It is no use/good doing)",
+  "source": "外研社(新标准)选择性必修第二册 Unit 4 Using language:it as an empty subject。句子围绕'突破界限'主题、地道;干扰项 that/this/there 在该结构中均不成立,使 it 唯一正确;零术语、纯应用题。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "It is + 形容词 + to do(形式主语指代不定式)",
+      "overview": "真正主语是后面的不定式短语,前面用 it 作形式主语:It is important/necessary/vital/possible to do…。that/this/there 都不能这样统领不定式,故只能用 it。"
+    },
+    {
+      "code": "u4.02",
+      "point": "It is + 形容词/名词 + that 从句(形式主语指代从句)",
+      "overview": "真正主语是 that 从句,前面用 it 作形式主语:It is true/clear/a pity/no surprise that…。that/this/there 在此都不成立,只能用 it。"
+    },
+    {
+      "code": "u4.03",
+      "point": "It takes/seems/happens…;It is no use/good doing",
+      "overview": "固定句式:It takes + 时间/精力 + to do、It seems/happens that…、It is no use/good doing sth。主语位置只能用 it,that/this/there 都不行。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "\"____ is important to remember that diseases respect no borders.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "真正主语是后面的不定式 to remember…,主语位置用形式主语 it;that/this/there 都无法这样统领不定式。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is necessary to disinfect every surface in the ward.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "形式主语 it 指代后面的不定式 to disinfect…;其余三项不能引出不定式真正主语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is vital not to take any chances during an outbreak.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "it 作形式主语,真正主语是 not to take any chances;that/this/there 均不成立。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is possible for doctors from many countries to work as one team.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It is possible (for sb) to do 的形式主语结构,只能用 it。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is hard to imagine the courage these health workers show.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "真正主语是不定式 to imagine…,前面用形式主语 it。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is wonderful to see strangers join together in a common cause.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "it 指代后面的不定式 to see…;that/this/there 不能引出不定式主语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is dangerous to enter the clinic without proper protection.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "形式主语 it + 真正主语 to enter…,只能用 it。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is wise to listen carefully before you judge another culture.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It is wise to do 结构,it 作形式主语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is essential for us all to collaborate to build a better world.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "真正主语是 to collaborate…,主语位置用形式主语 it。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is difficult to describe the bonds formed in such a crisis.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "it 指代后面的不定式 to describe…;其余三项不成立。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is inspiring to have comrades from every continent on the team.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "形式主语 it + 真正主语 to have…,只能用 it。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is rewarding to help people who have lost everything.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It is rewarding to do,it 作形式主语指代不定式。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is not easy to relieve a doctor at the end of a long posting.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "真正主语是 to relieve…,前面用形式主语 it。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is useful to learn a few words of the local language first.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "it 指代后面的不定式 to learn…;that/this/there 不能这样使用。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is common to hear several languages spoken in the same room.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It is common to do,it 作形式主语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is brave of him to risk his life to combat the disease.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It is brave of sb to do 的形式主语结构,只能用 it。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is natural to feel nervous before your first day in the ward.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "真正主语是 to feel nervous…,前面用形式主语 it。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is safe to assume that teamwork saves more lives.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "形式主语 it 指代不定式 to assume…;其余三项不成立。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is impossible to win this fight without working together.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It is impossible to do,it 作形式主语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"____ is worthwhile to break down the boundaries between people.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It is worthwhile to do,真正主语是不定式,用形式主语 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is true that disease does not respect national boundaries.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "真正主语是 that 从句,主语位置用形式主语 it;that/this/there 都不能这样引出从句主语。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is clear that the whole team shares one common goal.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "it 作形式主语指代后面的 that 从句,其余三项不成立。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is obvious that no single country can fight an outbreak alone.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It is obvious that… 的形式主语结构,只能用 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is certain that their devotion saved many lives.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "真正主语是 that 从句,前面用形式主语 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is a pity that some patients could not be saved.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "It is a pity that…,名词后接从句,用形式主语 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is a fact that the death rate in the clinic was very high.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "It is a fact that…,it 作形式主语指代从句。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is no surprise that the boys' recovery amazed everyone.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It is no surprise that…,主语位置用形式主语 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is no wonder that such work creates powerful bonds between people.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "固定句式 It is no wonder that…,只能用 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is well known that Edgar Snow wrote influential books about China.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "It is well known that…,it 作形式主语指代从句。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is likely that more volunteers will join the mission next year.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "It is likely that…,真正主语是 that 从句,用形式主语 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is strange that we still build walls between different cultures.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It is strange that…,主语位置用形式主语 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is lucky that both brothers made a full recovery.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It is lucky that…,it 指代后面的从句。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is a shame that prejudice still keeps some people apart.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "It is a shame that…,名词后接从句,用形式主语 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is natural that newcomers feel culture shock at first.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "It is natural that…,真正主语是从句,用形式主语 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is amazing that people from so many nations work side by side.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It is amazing that…,只能用形式主语 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is important that we remember the soldiers who died here.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It is important that…,主语位置用形式主语 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is a good thing that cultures can learn from one another.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "It is a good thing that…,it 作形式主语指代从句。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is sad that the civil war divided so many families.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "It is sad that…,真正主语是从句,用形式主语 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is fortunate that technology now connects us across the world.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It is fortunate that…,主语位置用形式主语 it。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"____ is encouraging that minority actors are getting more leading roles.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It is encouraging that…,it 指代后面的 that 从句。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ takes great courage to work in a disease clinic.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "固定句式 It takes + 精力 + to do,主语位置只能用 it;that/this/there 都不行。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ takes many hands to build a community with a shared future.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "It takes … to do,只能用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ took two years of civil war before the nation found peace.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It took + 时间 的句式,主语用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ takes patience to overcome the culture shock of a new country.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It takes + 品质 + to do,只能用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ seems that the world is getting smaller every year.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "It seems that… 的固定句式,主语只能用 it;there seems 后只能接 to be。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ seems that no border can stop people from helping one another.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "It seems that…,主语位置用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ seemed that at least three languages were being spoken nearby.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It seemed that…,只能用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ happens that he was the only Chinese doctor on the team.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It happens that… 的固定句式,主语用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ happened that the two boys survived against all odds.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "It happened that…,主语位置只能用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ is no use worrying about mistakes when you learn a new culture.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "It is no use doing sth 的固定句式,主语用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ is no use pretending that prejudice has disappeared.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It is no use doing,只能用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ is no good blaming others for the divisions in society.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It is no good doing sth,主语位置用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ is no good waiting for someone else to break the boundary.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "It is no good doing,只能用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ takes time for two countries to build mutual trust.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "It takes time (for sb) to do,主语用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ seems that technology has brought distant cultures together.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It seems that…,主语位置只能用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ takes real devotion to relieve a doctor in a war zone.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It takes + 品质 + to do,只能用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ is no use complaining about a problem you will not tackle.\"",
+      "options": [
+        "It",
+        "That",
+        "This",
+        "There"
+      ],
+      "answer_index": 0,
+      "explanation": "It is no use doing sth,主语用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ happens that many great speeches have broken old boundaries.\"",
+      "options": [
+        "That",
+        "It",
+        "This",
+        "There"
+      ],
+      "answer_index": 1,
+      "explanation": "It happens that…,主语位置只能用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ takes courage to mount a platform and speak for equality.\"",
+      "options": [
+        "That",
+        "This",
+        "It",
+        "There"
+      ],
+      "answer_index": 2,
+      "explanation": "It takes courage to do,主语用 it。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"____ is no good keeping silent when people are treated unfairly.\"",
+      "options": [
+        "That",
+        "This",
+        "There",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It is no good doing sth,只能用 it。"
+    }
+  ]
+}

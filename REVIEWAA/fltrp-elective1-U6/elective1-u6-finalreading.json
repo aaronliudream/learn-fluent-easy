@@ -1,0 +1,32 @@
+{
+  "volume": "elective1",
+  "unit": "U6",
+  "note": "单元通关专属迷你阅读(培育自然主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "For the last three years, the people of our small town have been turning their bare rooftops into green gardens. The plants up there cool the buildings, clean the air and give bees and butterflies a new place to live. Now even strangers stop to look up and smile, and many of them want to start a rooftop garden of their own.",
+    "questions": [
+      {
+        "q": "What have the townspeople been doing for the last three years?",
+        "options": [
+          "Changing empty rooftops into green gardens.",
+          "Cutting down all the trees in the town.",
+          "Building tall hotels on the beach.",
+          "Moving away to bigger cities."
+        ],
+        "answer": "A",
+        "explanation": "原文'turning their bare rooftops into green gardens'的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How do strangers react to the rooftop gardens?",
+        "options": [
+          "They complain about the noise.",
+          "They take no notice at all.",
+          "They look up, smile and want gardens of their own.",
+          "They ask the town to remove them."
+        ],
+        "answer": "C",
+        "explanation": "末句'strangers stop to look up and smile… want to start a rooftop garden of their own'(短文后半段,覆盖不同位置)的转述。"
+      }
+    ]
+  }
+}

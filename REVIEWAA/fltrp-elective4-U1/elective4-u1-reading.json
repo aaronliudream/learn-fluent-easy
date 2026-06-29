@@ -1,0 +1,318 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "topic": "Facing the Future",
+  "source": "外研社(新标准)选择性必修第四册 Unit 1 同主题阅读(两位作家不同人生路/未来职业/海外间隔年/未选择的路/兼职与未来/为意外做准备)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Two Writers, Two Roads",
+      "topic_cn": "记叙·两位作家不同的人生道路",
+      "body": "Two famous writers, born about forty years apart, show how differently a life can unfold. Ernest Hemingway knew from his early years that he wanted to write. After school he took a job as a young reporter, and his unusual experiences in Europe and Cuba later fed his novels. One book about an old fisherman and a giant fish brought him a major prize, and in the end he won an even greater award for literature. Arthur Conan Doyle followed another road. He first earned his living as a doctor, yet he dreamed of writing serious historical novels. Strangely, it was his detective stories about Sherlock Holmes that made him famous, not the books he cared about most. Readers loved Holmes so much that Doyle was forced to keep the character alive. Though both men reached success, their paths were not the same, and neither future turned out exactly as they had planned.",
+      "vocab_notes": [
+        {
+          "word": "correspondent",
+          "cn": "记者"
+        },
+        {
+          "word": "detective",
+          "cn": "侦探"
+        },
+        {
+          "word": "historical",
+          "cn": "历史的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the passage suggest about the two writers' careers?",
+          "options": [
+            "Their lives developed in very different ways.",
+            "They both started out as doctors.",
+            "They wrote exactly the same kind of books.",
+            "Neither of them ever became well known."
+          ],
+          "answer_index": 0,
+          "explanation": "首句 'how differently a life can unfold' 及全文对比的转述。"
+        },
+        {
+          "stem": "Why was Doyle probably not fully satisfied with his fame?",
+          "options": [
+            "He disliked earning any money from writing.",
+            "He became known for stories he valued less than his historical novels.",
+            "He had never managed to sell a single book.",
+            "He really wished to go back to being a doctor."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说他因侦探故事出名,而非他最在意的历史小说,可推知他并不完全满意。"
+        },
+        {
+          "stem": "What lesson can readers draw from the two authors?",
+          "options": [
+            "The future may not match our plans, even after hard work.",
+            "Talent always guarantees an easy and smooth life.",
+            "Writing is the only path that leads to success.",
+            "Plans are useless and should always be avoided."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'neither future turned out exactly as they had planned' 的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Jobs of the Future",
+      "topic_cn": "说明·未来的职业",
+      "body": "What will we be doing in ten years' time? Nobody knows for sure, but experts can make some clever guesses. Many of today's jobs will be done by machines, while brand-new jobs will appear that we cannot even name yet. People may work as robot teachers, space farmers or designers of clean energy systems. One thing seems certain: the future will reward those who keep learning. Skills such as creativity, teamwork and clear thinking will matter more than ever, because machines are still poor at these. Workers will also need to change jobs several times in their lives, so being flexible will be a great advantage. Rather than fearing these changes, young people should welcome them. By staying curious and brave, you can turn an uncertain future into a world full of exciting chances. The best way to guess your future, after all, is to help build it.",
+      "vocab_notes": [
+        {
+          "word": "flexible",
+          "cn": "灵活的"
+        },
+        {
+          "word": "creativity",
+          "cn": "创造力"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the passage, what will happen to many of today's jobs?",
+          "options": [
+            "They will stay exactly the same.",
+            "Machines will take them over.",
+            "They will all disappear forever.",
+            "Nobody will be allowed to do them."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'done by machines' 的转述。"
+        },
+        {
+          "stem": "Why will skills like creativity matter more in the future?",
+          "options": [
+            "They are becoming very easy to learn.",
+            "Schools have stopped teaching them.",
+            "Machines are still weak at them.",
+            "Machines can already do them perfectly."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'machines are still poor at these' 的转述。"
+        },
+        {
+          "stem": "What attitude towards future change does the writer suggest?",
+          "options": [
+            "Ignoring it and hoping it goes away.",
+            "Trying to stop all new technology.",
+            "Waiting for others to decide everything.",
+            "Welcoming it rather than being afraid of it."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Rather than fearing these changes ... should welcome them' 的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Gap Year in Cambodia",
+      "topic_cn": "记叙·海外间隔年",
+      "body": "After finishing senior high, David chose to spend a gap year as a volunteer in a small Cambodian village. Each morning the birds woke him at dawn, and the day's work began at once. For two months his team had been building a new roof for the local school, hard and tiring work under the hot sun. Yet David never regretted his choice for a single moment. He loved meeting the friendly villagers, who were always happy to share their simple lives with him. The year was not always comfortable, but it taught him patience, courage and respect for other people. He also grew fitter and far more independent than before. When the year ended, David felt that this adventure had changed him deeply. He returned home ready to begin his university studies, certain that the experience would help shape a wiser and kinder future for himself.",
+      "vocab_notes": [
+        {
+          "word": "volunteer",
+          "cn": "志愿者"
+        },
+        {
+          "word": "independent",
+          "cn": "独立的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did David feel about the hard work in the village?",
+          "options": [
+            "He never regretted his decision to be there.",
+            "He wished he had stayed at home instead.",
+            "He found it boring and meaningless.",
+            "He gave up halfway through the year."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'never regretted his choice for a single moment' 的转述。"
+        },
+        {
+          "stem": "What did the gap year teach David?",
+          "options": [
+            "How to earn a great deal of money.",
+            "To be patient, brave and respectful to others.",
+            "How to avoid difficult people.",
+            "That travel is a waste of time."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'taught him patience, courage and respect for other people' 的转述。"
+        },
+        {
+          "stem": "What did David plan to do after the year ended?",
+          "options": [
+            "Stay in Cambodia for good.",
+            "Look for a full-time job abroad.",
+            "Start studying at university.",
+            "Take another gap year at once."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'ready to begin his university studies' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Road Not Taken",
+      "topic_cn": "赏析·《未选择的路》",
+      "body": "Robert Frost's famous poem The Road Not Taken describes a traveller who comes to two paths in a wood. He cannot walk both, so he must choose one and leave the other behind. The two roads look almost the same, which makes the choice even harder. In the end he takes the path that seems a little less used, knowing he will probably never come back to try the other. Many readers think the poem is about facing the future bravely and without regret. Others believe it is really about how we look back on our choices years later, sometimes with a quiet sigh. Both readings remind us that every decision closes some doors while opening others. We can never be completely sure that we chose well. What matters most, the poem suggests, is to accept our choices and make the very best of the road we have taken.",
+      "vocab_notes": [
+        {
+          "word": "diverge",
+          "cn": "(路)岔开"
+        },
+        {
+          "word": "symbolize",
+          "cn": "象征"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is the traveller's choice difficult?",
+          "options": [
+            "Both roads are clearly blocked.",
+            "He is told which road to take.",
+            "He has walked them many times.",
+            "The two paths look almost alike."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'The two roads look almost the same' 的转述。"
+        },
+        {
+          "stem": "What do some readers think the poem is mainly about?",
+          "options": [
+            "Facing the future with courage.",
+            "The danger of walking in woods.",
+            "How to find the shortest road.",
+            "Why poems are hard to read."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'about facing the future bravely and without regret' 的转述。"
+        },
+        {
+          "stem": "What does the poem suggest we should do about our choices?",
+          "options": [
+            "Change them as often as possible.",
+            "Accept them and make the most of them.",
+            "Refuse to make any choice at all.",
+            "Forget that we ever chose."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'accept our choices and make the very best of the road' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Part-time Jobs and the Future",
+      "topic_cn": "议论·兼职与未来",
+      "body": "A part-time job can be far more than a way to earn a little money. For many teenagers, it is an early step towards a mature and responsible adult life. Working in a cafe, an office or a shop teaches young people how to manage their time, deal with strangers and solve small problems on their own. These experiences build confidence and help students understand how society really works. Many countries also protect young workers with special rules. In the UK, for example, students aged fifteen and sixteen may work only a limited number of hours during term time, and they are not allowed to work very early or very late. Such laws make sure that a job never harms a student's health or studies. Used wisely, a part-time job can prepare teenagers for the choices and challenges of their future careers, long before they ever leave school.",
+      "vocab_notes": [
+        {
+          "word": "mature",
+          "cn": "成熟的"
+        },
+        {
+          "word": "responsible",
+          "cn": "有责任心的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the passage say a part-time job can teach teenagers?",
+          "options": [
+            "How to avoid all hard work.",
+            "How to leave school as early as possible.",
+            "How to manage time and solve problems by themselves.",
+            "How to spend money quickly."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'manage their time ... solve small problems on their own' 的转述。"
+        },
+        {
+          "stem": "Why do many countries have special rules for young workers?",
+          "options": [
+            "To make them work longer hours.",
+            "To stop them from earning money.",
+            "To keep them out of all jobs.",
+            "To protect their health and studies."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'a job never harms a student's health or studies' 的转述。"
+        },
+        {
+          "stem": "What is the main point of the passage?",
+          "options": [
+            "Part-time jobs help prepare teenagers for the future.",
+            "Part-time jobs are only about earning money.",
+            "Teenagers should never take a job.",
+            "School matters far less than work."
+          ],
+          "answer_index": 0,
+          "explanation": "末句关于为未来职业做准备的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Be Ready for the Unexpected",
+      "topic_cn": "议论·为意外做准备",
+      "body": "Life rarely follows the exact plan we draw for it. We may study hard for one career and then discover a completely different passion along the way. Both Ernest Hemingway and Arthur Conan Doyle reached success, yet their futures did not turn out as they first imagined. This is why wise people prepare not only for the goals they expect, but also for the surprises they cannot. Being ready for the unexpected does not mean giving up your dreams. It means staying flexible, learning new skills, and keeping an open mind when twists and turns appear. A sudden change can close one door but open another that is even better. So set clear goals and work towards them with energy, but hold your plans lightly. Whatever surprises the years may bring, a curious and brave heart will always find a new path forward.",
+      "vocab_notes": [
+        {
+          "word": "encounter",
+          "cn": "遇到"
+        },
+        {
+          "word": "flexible",
+          "cn": "灵活的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the passage say about life and our plans?",
+          "options": [
+            "Life always goes exactly as planned.",
+            "Life seldom follows our exact plan.",
+            "Plans never change once made.",
+            "Surprises should always be feared."
+          ],
+          "answer_index": 1,
+          "explanation": "首句 'Life rarely follows the exact plan' 的转述。"
+        },
+        {
+          "stem": "What does being ready for the unexpected mean, according to the writer?",
+          "options": [
+            "Giving up all of your dreams.",
+            "Refusing to learn anything new.",
+            "Staying flexible and open-minded.",
+            "Never setting any goals."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'staying flexible, learning new skills, and keeping an open mind' 的转述。"
+        },
+        {
+          "stem": "What advice does the writer give about goals?",
+          "options": [
+            "Ignore them and just wait.",
+            "Never tell anyone about them.",
+            "Choose them only after you are old.",
+            "Work towards them, but stay willing to change."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'set clear goals ... but hold your plans lightly' 的转述。"
+        }
+      ]
+    }
+  ]
+}

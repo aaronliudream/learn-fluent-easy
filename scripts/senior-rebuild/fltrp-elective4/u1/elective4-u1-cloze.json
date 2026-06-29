@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "topic": "Facing the Future",
+  "source": "外研社(新标准)选择性必修第四册 Unit 1 同主题完形(高中后的计划/AI与未来职业/年轻发明家/艰难抉择/面试准备/海外间隔年来信)。用词限本单元/初中/常见词,答案唯一、4选项同词性,与阅读听力关不撞。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "After Senior High",
+      "text": "Now that I have been at senior high for over a year, my teacher has asked us to think about the (1)____. I feel quite (2)____ about my progress so far, though there are still goals I have not (3)____ yet. My biggest (4)____ is to study computer science and one day build robots that help people. To reach it, I (5)____ to work much harder at maths and coding. I know that having a plan is no (6)____ that everything will come true, but it still gives me a clear (7)____. When I feel unsure, I try not to (8)____ up good chances too quickly. Instead, I (9)____ up the choices carefully before I (10)____ a decision. Step by step, I am getting ready for the future.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "future",
+            "weather",
+            "price",
+            "corner"
+          ],
+          "answer_index": 0,
+          "explanation": "think about the future,谈论未来。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "bored",
+            "satisfied",
+            "asleep",
+            "absent"
+          ],
+          "answer_index": 1,
+          "explanation": "feel satisfied about my progress,对进步感到满意。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "lost",
+            "eaten",
+            "achieved",
+            "closed"
+          ],
+          "answer_index": 2,
+          "explanation": "goals I have not achieved,尚未实现的目标。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "accident",
+            "illness",
+            "quarrel",
+            "ambition"
+          ],
+          "answer_index": 3,
+          "explanation": "My biggest ambition is to ...,最大的理想。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "plan",
+            "refuse",
+            "dislike",
+            "avoid"
+          ],
+          "answer_index": 0,
+          "explanation": "plan to work harder,打算更努力;后三个为否定意义,与上下文矛盾。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "question",
+            "guarantee",
+            "surprise",
+            "mistake"
+          ],
+          "answer_index": 1,
+          "explanation": "no guarantee that ...,不能保证。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "weather",
+            "price",
+            "direction",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "a clear direction,清晰的方向。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "stand",
+            "sit",
+            "walk",
+            "pass"
+          ],
+          "answer_index": 3,
+          "explanation": "pass up good chances,错过好机会。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "weigh",
+            "throw",
+            "drop",
+            "boil"
+          ],
+          "answer_index": 0,
+          "explanation": "weigh up the choices,权衡选择。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "take",
+            "make",
+            "do",
+            "have"
+          ],
+          "answer_index": 1,
+          "explanation": "make a decision,固定搭配。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "How AI Will Change Jobs",
+      "text": "Many people wonder how computers and robots will (1)____ the world of work. Some jobs that exist today may slowly (2)____, while completely new ones will appear. Machines are already good at boring and repeated tasks, so workers will have more time for (3)____ thinking and creative ideas. However, this change also brings a real (4)____: should we welcome the new technology or fear it? Experts say the wisest (5)____ is to keep learning new skills throughout our lives. A person who is willing to (6)____ to new tools will always be useful. We should not (7)____ up the chance to learn just because it feels hard. Instead, we ought to take (8)____ early and prepare for the future. Those who plan ahead are usually more (9)____ than those who simply wait. In the end, technology is a (10)____ of both challenge and opportunity.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "close",
+            "cook",
+            "change",
+            "clean"
+          ],
+          "answer_index": 2,
+          "explanation": "change the world of work,改变职场。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "arrive",
+            "sing",
+            "rise",
+            "disappear"
+          ],
+          "answer_index": 3,
+          "explanation": "jobs may disappear,工作可能消失。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "complex",
+            "sleepy",
+            "silent",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "complex thinking,复杂的思考。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "holiday",
+            "dilemma",
+            "picture",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "a real dilemma: ... or ...,两难。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "mistake",
+            "accident",
+            "choice",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "the wisest choice is to ...,最明智的选择。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "refuse",
+            "object",
+            "complain",
+            "adapt"
+          ],
+          "answer_index": 3,
+          "explanation": "willing to adapt to new tools,适应新工具;后三个为否定态度。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "give",
+            "put",
+            "take",
+            "cut"
+          ],
+          "answer_index": 0,
+          "explanation": "give up the chance,放弃机会。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lessons",
+            "action",
+            "photos",
+            "buses"
+          ],
+          "answer_index": 1,
+          "explanation": "take action,采取行动。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "asleep",
+            "absent",
+            "successful",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "more successful than ...,更成功。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "corner",
+            "bottle",
+            "window",
+            "mixture"
+          ],
+          "answer_index": 3,
+          "explanation": "a mixture of challenge and opportunity,二者的混合。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Young Inventor",
+      "text": "When Mia was still a girl, she already had a clear (1)____ to become an engineer. At school she joined every science club and never (2)____ up a chance to build something new. Her teachers said she was (3)____ and full of energy. One day she read about a robot that could help blind people cross the road, and the idea (4)____ in her mind for weeks. She decided to take (5)____ and design her own version. The work was not easy, and many problems (6)____ along the way. Sometimes she had (7)____ thoughts and wondered whether she should give up. But she always chose to (8)____ up the good and bad points and keep going. (9)____, after two years of hard work, her robot won a national prize. Mia is now sure that a strong dream, plus daily effort, can shape a bright (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "ambition",
+            "accident",
+            "illness",
+            "corner"
+          ],
+          "answer_index": 0,
+          "explanation": "a clear ambition to ...,明确的理想。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cooked",
+            "passed",
+            "painted",
+            "closed"
+          ],
+          "answer_index": 1,
+          "explanation": "never passed up a chance,从不错过机会。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sleepy",
+            "silent",
+            "ambitious",
+            "lazy"
+          ],
+          "answer_index": 2,
+          "explanation": "ambitious and full of energy,有抱负、充满活力。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "ate",
+            "sang",
+            "drove",
+            "stayed"
+          ],
+          "answer_index": 3,
+          "explanation": "the idea stayed in her mind,这个想法停留在脑海里。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "action",
+            "photos",
+            "buses",
+            "seats"
+          ],
+          "answer_index": 0,
+          "explanation": "take action,采取行动。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "smiled",
+            "arose",
+            "danced",
+            "cooked"
+          ],
+          "answer_index": 1,
+          "explanation": "many problems arose,出现了许多问题。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sweet",
+            "heavy",
+            "second",
+            "round"
+          ],
+          "answer_index": 2,
+          "explanation": "have second thoughts,犹豫。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "throw",
+            "boil",
+            "drop",
+            "weigh"
+          ],
+          "answer_index": 3,
+          "explanation": "weigh up the good and bad points,权衡利弊。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "Ultimately",
+            "Suddenly",
+            "Sadly",
+            "Quietly"
+          ],
+          "answer_index": 0,
+          "explanation": "Ultimately, after two years ...,最终。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "weather",
+            "future",
+            "price",
+            "corner"
+          ],
+          "answer_index": 1,
+          "explanation": "shape a bright future,塑造光明的未来。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Difficult Decision",
+      "text": "Li Ling was facing a hard (1)____ about her future. She had been (2)____ for early admission to study physics at a top university, which sounded wonderful. Yet she had always wanted to become a doctor, so she felt unable to (3)____ up her mind. Her friend Jenny told her not to (4)____ up such a rare opportunity without thinking. At the same time, Jenny said it would be wrong to (5)____ the dream of medicine completely. The two girls decided to (6)____ up the advantages and disadvantages of each path. Li Ling realised that, whatever she chose, the (7)____ would shape her whole life. She did not want to act too fast and later have (8)____ thoughts. In the end she promised to (9)____ off the final choice until she had spoken to her teacher. Sometimes the wisest step is to (10)____ a little more time.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "breakfast",
+            "picture",
+            "decision",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "a hard decision,艰难的决定。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cooked",
+            "painted",
+            "cleaned",
+            "recommended"
+          ],
+          "answer_index": 3,
+          "explanation": "been recommended for admission,被推荐录取。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "make",
+            "take",
+            "give",
+            "put"
+          ],
+          "answer_index": 0,
+          "explanation": "make up her mind,拿定主意。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "stand",
+            "pass",
+            "walk",
+            "jump"
+          ],
+          "answer_index": 1,
+          "explanation": "pass up the opportunity,错过机会。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "enjoy",
+            "repeat",
+            "reject",
+            "collect"
+          ],
+          "answer_index": 2,
+          "explanation": "reject the dream completely,完全放弃梦想。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "boil",
+            "throw",
+            "drop",
+            "weigh"
+          ],
+          "answer_index": 3,
+          "explanation": "weigh up the advantages and disadvantages,权衡利弊。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "choice",
+            "weather",
+            "corner",
+            "bottle"
+          ],
+          "answer_index": 0,
+          "explanation": "the choice would shape her life,选择决定人生。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sweet",
+            "second",
+            "heavy",
+            "round"
+          ],
+          "answer_index": 1,
+          "explanation": "have second thoughts,犹豫、反悔。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "take",
+            "cut",
+            "put",
+            "look"
+          ],
+          "answer_index": 2,
+          "explanation": "put off the final choice,推迟最终选择。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sing",
+            "cook",
+            "drive",
+            "take"
+          ],
+          "answer_index": 3,
+          "explanation": "take a little more time,多花点时间。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Getting Ready for an Interview",
+      "text": "Last summer Richard decided to apply for a part-time (1)____ at a local youth hostel. He had always been interested in travel, so the work seemed (2)____ for him. Before the interview, he prepared carefully and tried to think of polite (3)____ to ask the manager. He knew that good people skills would make him a strong (4)____. During the meeting, he spoke with (5)____ and answered every question clearly. When the manager asked why he wanted the job, Richard explained that the (6)____ would help him grow more independent. He also said that earlier holiday jobs had made him a (7)____ and flexible person. The manager was clearly (8)____ and offered him the position. Richard learned that being well prepared can (9)____ all the difference. If you ever (10)____ a job interview, remember to stay calm and be honest.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "job",
+            "song",
+            "meal",
+            "river"
+          ],
+          "answer_index": 0,
+          "explanation": "a part-time job,兼职工作。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "asleep",
+            "perfect",
+            "empty",
+            "silent"
+          ],
+          "answer_index": 1,
+          "explanation": "the work seemed perfect for him,非常合适。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "windows",
+            "bottles",
+            "questions",
+            "corners"
+          ],
+          "answer_index": 2,
+          "explanation": "polite questions to ask,礼貌的问题。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "breakfast",
+            "mountain",
+            "engine",
+            "candidate"
+          ],
+          "answer_index": 3,
+          "explanation": "a strong candidate,有力的应聘者。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "confidence",
+            "anger",
+            "hunger",
+            "fear"
+          ],
+          "answer_index": 0,
+          "explanation": "spoke with confidence,自信地说;后三个为消极情绪。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "experience",
+            "traffic",
+            "furniture"
+          ],
+          "answer_index": 1,
+          "explanation": "the experience would help him grow,这段经历有助成长。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sleepy",
+            "silent",
+            "confident",
+            "lazy"
+          ],
+          "answer_index": 2,
+          "explanation": "a confident and flexible person,自信而灵活的人。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "bored",
+            "asleep",
+            "absent",
+            "impressed"
+          ],
+          "answer_index": 3,
+          "explanation": "the manager was impressed,经理印象深刻。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "make",
+            "take",
+            "do",
+            "have"
+          ],
+          "answer_index": 0,
+          "explanation": "make all the difference,起决定性作用。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "cook",
+            "face",
+            "paint",
+            "drive"
+          ],
+          "answer_index": 1,
+          "explanation": "face a job interview,面对面试。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Gap Year Abroad",
+      "text": "Dear Anna, I am writing from a small village where I am spending my gap (1)____ as a volunteer. Every morning the birds wake me at dawn, and already the work (2)____. For the past two months we have been building a new roof for the village school. Despite the hard physical work, I do not (3)____ my choice for a single moment. The local people are friendly and (4)____ to share their lives with us. This experience has been a wonderful (5)____ for my personal growth. I feel happy, free, and a little (6)____ than before, because I exercise every day. Of course, life here is not always easy, and small problems often (7)____. Yet I have learned to (8)____ each difficulty calmly and find a solution. When this year (9)____, I will surely keep learning about how other people live. I am sure this adventure will (10)____ my whole future. Yours, David",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "metal",
+            "glass",
+            "year",
+            "paper"
+          ],
+          "answer_index": 2,
+          "explanation": "my gap year,间隔年。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleeps",
+            "sings",
+            "melts",
+            "begins"
+          ],
+          "answer_index": 3,
+          "explanation": "already the work begins,工作就开始了。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "regret",
+            "cook",
+            "paint",
+            "borrow"
+          ],
+          "answer_index": 0,
+          "explanation": "do not regret my choice,不后悔选择。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "asleep",
+            "willing",
+            "absent",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "willing to share,乐于分享。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "accident",
+            "illness",
+            "opportunity",
+            "quarrel"
+          ],
+          "answer_index": 2,
+          "explanation": "a wonderful opportunity,绝佳机会。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sadder",
+            "lazier",
+            "colder",
+            "fitter"
+          ],
+          "answer_index": 3,
+          "explanation": "a little fitter ... because I exercise,更健康。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "arise",
+            "smile",
+            "dance",
+            "cook"
+          ],
+          "answer_index": 0,
+          "explanation": "small problems arise,小问题出现。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "eat",
+            "face",
+            "sing",
+            "paint"
+          ],
+          "answer_index": 1,
+          "explanation": "face each difficulty calmly,冷静面对困难。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "opens",
+            "cooks",
+            "ends",
+            "flies"
+          ],
+          "answer_index": 2,
+          "explanation": "when this year ends,当这一年结束时。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boil",
+            "borrow",
+            "spill",
+            "shape"
+          ],
+          "answer_index": 3,
+          "explanation": "shape my whole future,塑造我的未来。"
+        }
+      ]
+    }
+  ]
+}

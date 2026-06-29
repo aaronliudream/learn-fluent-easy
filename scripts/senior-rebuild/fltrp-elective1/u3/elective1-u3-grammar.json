@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "grammar_title": "动名词作主语(-ing as subject;形式主语 it)",
+  "source": "外研社(新标准)选择性必修第一册 Unit 3 Using language:-ing 形式作主语(Doing… is…)、形式主语 it(It is no use/no good/worth + doing)、动名词主语的单数一致与作主语形式辨析。句子地道、答案唯一(干扰项为不能作主语的限定动词或一致错误形式)。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "动名词作主语(Doing… + 谓语)",
+      "overview": "句子主语位置要表示'做某事',只能用动词的 -ing 形式(动名词);原形/单三/过去式等限定形式都不能直接作主语。"
+    },
+    {
+      "code": "u3.02",
+      "point": "形式主语 it（It is no use/no good/worth + doing）",
+      "overview": "It is no use / no good / worth / a waste of time 等结构后接动名词(doing),it 是形式主语;不能用不定式 to do 或限定动词形式。"
+    },
+    {
+      "code": "u3.03",
+      "point": "动名词主语作形式辨析与主谓一致（视为单数）",
+      "overview": "动名词(短语)作主语时谓语用单数;并且作主语只能用 -ing 形式,干扰项为限定动词或复数谓语,使答案唯一。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "\"____ basketball on a muddy court taught Stephen to be creative.\"",
+      "options": [
+        "Playing",
+        "Play",
+        "Plays",
+        "Played"
+      ],
+      "answer_index": 0,
+      "explanation": "主语位置表示'打篮球这件事',只能用动名词 Playing。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ with great accuracy was another thing he had to learn.\"",
+      "options": [
+        "Shoot",
+        "Shooting",
+        "Shoots",
+        "Shot"
+      ],
+      "answer_index": 1,
+      "explanation": "主语表示'精准投篮',用动名词 Shooting。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ where the ball would go was not easy on that rough court.\"",
+      "options": [
+        "Know",
+        "Knows",
+        "Knowing",
+        "Knew"
+      ],
+      "answer_index": 2,
+      "explanation": "主语表示'判断球的去向',用动名词 Knowing。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ hard every single day is the secret behind his success.\"",
+      "options": [
+        "Train",
+        "Trains",
+        "Trained",
+        "Training"
+      ],
+      "answer_index": 3,
+      "explanation": "主语表示'刻苦训练',用动名词 Training。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ as a team matters more than the skill of any single player.\"",
+      "options": [
+        "Working",
+        "Work",
+        "Works",
+        "Worked"
+      ],
+      "answer_index": 0,
+      "explanation": "主语表示'团队协作',用动名词 Working。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ the latest equipment helps athletes get the best out of training.\"",
+      "options": [
+        "Use",
+        "Using",
+        "Uses",
+        "Used"
+      ],
+      "answer_index": 1,
+      "explanation": "主语表示'使用器材',用动名词 Using。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ for the gold medal kept the whole team going to the very end.\"",
+      "options": [
+        "Fight",
+        "Fights",
+        "Fighting",
+        "Fought"
+      ],
+      "answer_index": 2,
+      "explanation": "主语表示'拼搏争金',用动名词 Fighting。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ off the victory podium means starting again from zero.\"",
+      "options": [
+        "Step",
+        "Steps",
+        "Stepped",
+        "Stepping"
+      ],
+      "answer_index": 3,
+      "explanation": "主语表示'走下领奖台',用动名词 Stepping。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ the rules of a new sport takes time and patience.\"",
+      "options": [
+        "Learning",
+        "Learn",
+        "Learns",
+        "Learned"
+      ],
+      "answer_index": 0,
+      "explanation": "主语表示'学规则',用动名词 Learning。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ instant replay lets fans see all the action again.\"",
+      "options": [
+        "Watch",
+        "Watching",
+        "Watches",
+        "Watched"
+      ],
+      "answer_index": 1,
+      "explanation": "主语表示'观看回放',用动名词 Watching。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ every morning before school is part of his daily routine.\"",
+      "options": [
+        "Run",
+        "Runs",
+        "Running",
+        "Ran"
+      ],
+      "answer_index": 2,
+      "explanation": "主语表示'晨跑',用动名词 Running。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ a strong opponent made the young team even more determined.\"",
+      "options": [
+        "Face",
+        "Faces",
+        "Faced",
+        "Facing"
+      ],
+      "answer_index": 3,
+      "explanation": "主语表示'面对强敌',用动名词 Facing。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ to your teammates is just as important as scoring points.\"",
+      "options": [
+        "Listening",
+        "Listen",
+        "Listens",
+        "Listened"
+      ],
+      "answer_index": 0,
+      "explanation": "主语表示'倾听队友',用动名词 Listening。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ the ball over the net at the right moment won them the point.\"",
+      "options": [
+        "Send",
+        "Sending",
+        "Sends",
+        "Sent"
+      ],
+      "answer_index": 1,
+      "explanation": "主语表示'把球送过网',用动名词 Sending。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ after a serious injury showed her amazing courage.\"",
+      "options": [
+        "Return",
+        "Returns",
+        "Returning",
+        "Returned"
+      ],
+      "answer_index": 2,
+      "explanation": "主语表示'伤后复出',用动名词 Returning。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ calm under pressure is a skill every great player needs.\"",
+      "options": [
+        "Stay",
+        "Stays",
+        "Stayed",
+        "Staying"
+      ],
+      "answer_index": 3,
+      "explanation": "主语表示'保持冷静',用动名词 Staying。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ the same drill again and again can feel boring but useful.\"",
+      "options": [
+        "Repeating",
+        "Repeat",
+        "Repeats",
+        "Repeated"
+      ],
+      "answer_index": 0,
+      "explanation": "主语表示'反复练习',用动名词 Repeating。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ a healthy diet helps athletes perform at their best.\"",
+      "options": [
+        "Keep",
+        "Keeping",
+        "Keeps",
+        "Kept"
+      ],
+      "answer_index": 1,
+      "explanation": "主语表示'保持健康饮食',用动名词 Keeping。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ part in the Games matters more to some athletes than winning.\"",
+      "options": [
+        "Take",
+        "Takes",
+        "Taking",
+        "Took"
+      ],
+      "answer_index": 2,
+      "explanation": "主语表示'参赛',用动名词 Taking。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ for your country at the Olympics is a great honour.\"",
+      "options": [
+        "Compete",
+        "Competes",
+        "Competed",
+        "Competing"
+      ],
+      "answer_index": 3,
+      "explanation": "主语表示'为国出战',用动名词 Competing。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is no use ____ about the result after the game is over.\"",
+      "options": [
+        "complaining",
+        "complain",
+        "complains",
+        "to complain"
+      ],
+      "answer_index": 0,
+      "explanation": "It is no use 后接动名词 → complaining。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is no good ____ up just because you lost one match.\"",
+      "options": [
+        "give",
+        "giving",
+        "gives",
+        "to give"
+      ],
+      "answer_index": 1,
+      "explanation": "It is no good 后接动名词 → giving。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is worth ____ the same shot hundreds of times until it is perfect.\"",
+      "options": [
+        "practise",
+        "practises",
+        "practising",
+        "to practise"
+      ],
+      "answer_index": 2,
+      "explanation": "It is worth 后接动名词 → practising。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is a waste of time ____ that the referee was unfair.\"",
+      "options": [
+        "argue",
+        "argues",
+        "to argue",
+        "arguing"
+      ],
+      "answer_index": 3,
+      "explanation": "It is a waste of time 后接动名词 → arguing。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is no use ____ the other runners; just focus on your own race.\"",
+      "options": [
+        "watching",
+        "watch",
+        "watches",
+        "to watch"
+      ],
+      "answer_index": 0,
+      "explanation": "It is no use 后接动名词 → watching。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is no good ____ before the final whistle blows.\"",
+      "options": [
+        "celebrate",
+        "celebrating",
+        "celebrates",
+        "to celebrate"
+      ],
+      "answer_index": 1,
+      "explanation": "It is no good 后接动名词 → celebrating。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is worth ____ carefully to your coach's advice.\"",
+      "options": [
+        "listen",
+        "listens",
+        "listening",
+        "to listen"
+      ],
+      "answer_index": 2,
+      "explanation": "It is worth 后接动名词 → listening。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is no use ____ fast if you cannot pass the ball well.\"",
+      "options": [
+        "run",
+        "runs",
+        "to run",
+        "running"
+      ],
+      "answer_index": 3,
+      "explanation": "It is no use 后接动名词 → running。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is worth ____ a little every day rather than a lot once a week.\"",
+      "options": [
+        "training",
+        "train",
+        "trains",
+        "to train"
+      ],
+      "answer_index": 0,
+      "explanation": "It is worth 后接动名词 → training。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is a waste of time ____ about a mistake you cannot change.\"",
+      "options": [
+        "worry",
+        "worrying",
+        "worries",
+        "to worry"
+      ],
+      "answer_index": 1,
+      "explanation": "It is a waste of time 后接动名词 → worrying。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is no use ____ that you are tired; everyone is.\"",
+      "options": [
+        "say",
+        "says",
+        "saying",
+        "to say"
+      ],
+      "answer_index": 2,
+      "explanation": "It is no use 后接动名词 → saying。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is worth ____ how the best players move on the court.\"",
+      "options": [
+        "study",
+        "studies",
+        "to study",
+        "studying"
+      ],
+      "answer_index": 3,
+      "explanation": "It is worth 后接动名词 → studying。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is no good ____ others when your own team plays badly.\"",
+      "options": [
+        "blaming",
+        "blame",
+        "blames",
+        "to blame"
+      ],
+      "answer_index": 0,
+      "explanation": "It is no good 后接动名词 → blaming。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is worth ____ part in the Games even if you cannot win.\"",
+      "options": [
+        "take",
+        "taking",
+        "takes",
+        "to take"
+      ],
+      "answer_index": 1,
+      "explanation": "It is worth 后接动名词 → taking。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is no use ____ for an easy opponent; you must train hard.\"",
+      "options": [
+        "hope",
+        "hopes",
+        "hoping",
+        "to hope"
+      ],
+      "answer_index": 2,
+      "explanation": "It is no use 后接动名词 → hoping。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is a waste of time ____ around before the coach arrives.\"",
+      "options": [
+        "sit",
+        "sits",
+        "to sit",
+        "sitting"
+      ],
+      "answer_index": 3,
+      "explanation": "It is a waste of time 后接动名词 → sitting。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is worth ____ from your past mistakes after every match.\"",
+      "options": [
+        "learning",
+        "learn",
+        "learns",
+        "to learn"
+      ],
+      "answer_index": 0,
+      "explanation": "It is worth 后接动名词 → learning。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is no good ____ the same error in every single match.\"",
+      "options": [
+        "make",
+        "making",
+        "makes",
+        "to make"
+      ],
+      "answer_index": 1,
+      "explanation": "It is no good 后接动名词 → making。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is worth ____ calm when the score is very close.\"",
+      "options": [
+        "keep",
+        "keeps",
+        "keeping",
+        "to keep"
+      ],
+      "answer_index": 2,
+      "explanation": "It is worth 后接动名词 → keeping。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"It is no use ____ at home if you want to be fit.\"",
+      "options": [
+        "stay",
+        "stays",
+        "to stay",
+        "staying"
+      ],
+      "answer_index": 3,
+      "explanation": "It is no use 后接动名词 → staying。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Watching live matches ____ one of his favourite hobbies.\"",
+      "options": [
+        "is",
+        "are",
+        "were",
+        "have been"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词主语视为单数 → is。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Training with the national team ____ his confidence every season.\"",
+      "options": [
+        "build",
+        "builds",
+        "are building",
+        "have built"
+      ],
+      "answer_index": 1,
+      "explanation": "动名词主语视为单数 → builds。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Playing on a rough court ____ the young boy adjust his style.\"",
+      "options": [
+        "help",
+        "are helping",
+        "helps",
+        "have helped"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词主语视为单数 → helps。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Knowing when to pass ____ just as important as scoring.\"",
+      "options": [
+        "are",
+        "were",
+        "seem",
+        "is"
+      ],
+      "answer_index": 3,
+      "explanation": "动名词主语视为单数 → is。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Losing a few early games ____ not stop the team from fighting on.\"",
+      "options": [
+        "does",
+        "do",
+        "are",
+        "have"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词主语视为单数 → does。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Getting up early to train ____ a lot of willpower.\"",
+      "options": [
+        "take",
+        "takes",
+        "are taking",
+        "have taken"
+      ],
+      "answer_index": 1,
+      "explanation": "动名词主语视为单数 → takes。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Working closely with your teammates ____ to better results.\"",
+      "options": [
+        "lead",
+        "are leading",
+        "leads",
+        "have led"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词主语视为单数 → leads。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Cheering for your team ____ the players feel stronger.\"",
+      "options": [
+        "make",
+        "are making",
+        "have made",
+        "makes"
+      ],
+      "answer_index": 3,
+      "explanation": "动名词主语视为单数 → makes。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Practising the same move daily ____ boring, but it really works.\"",
+      "options": [
+        "seems",
+        "seem",
+        "are",
+        "have"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词主语视为单数 → seems。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Believing in yourself ____ the first step towards success.\"",
+      "options": [
+        "are",
+        "is",
+        "were",
+        "have been"
+      ],
+      "answer_index": 1,
+      "explanation": "动名词主语视为单数 → is。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"____ a healthy diet keeps young athletes in good shape.\"",
+      "options": [
+        "Keep",
+        "Keeps",
+        "Keeping",
+        "Kept"
+      ],
+      "answer_index": 2,
+      "explanation": "作主语只能用动名词 → Keeping。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"____ off the podium means the hard work starts all over again.\"",
+      "options": [
+        "Step",
+        "Steps",
+        "Stepped",
+        "Stepping"
+      ],
+      "answer_index": 3,
+      "explanation": "作主语只能用动名词 → Stepping。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"____ to the coach carefully saves you many mistakes.\"",
+      "options": [
+        "Listening",
+        "Listen",
+        "Listens",
+        "Listened"
+      ],
+      "answer_index": 0,
+      "explanation": "作主语只能用动名词 → Listening。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"____ for your country is a dream for many young players.\"",
+      "options": [
+        "Play",
+        "Playing",
+        "Plays",
+        "Played"
+      ],
+      "answer_index": 1,
+      "explanation": "作主语只能用动名词 → Playing。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"____ the rules quickly helps a new player fit into the team.\"",
+      "options": [
+        "Learn",
+        "Learns",
+        "Learning",
+        "Learned"
+      ],
+      "answer_index": 2,
+      "explanation": "作主语只能用动名词 → Learning。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"____ after a serious injury is never easy for any athlete.\"",
+      "options": [
+        "Return",
+        "Returns",
+        "Returned",
+        "Returning"
+      ],
+      "answer_index": 3,
+      "explanation": "作主语只能用动名词 → Returning。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"____ the ball over the net at the right time won the match point.\"",
+      "options": [
+        "Sending",
+        "Send",
+        "Sends",
+        "Sent"
+      ],
+      "answer_index": 0,
+      "explanation": "作主语只能用动名词 → Sending。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"____ calm under pressure separates the best from the rest.\"",
+      "options": [
+        "Stay",
+        "Staying",
+        "Stays",
+        "Stayed"
+      ],
+      "answer_index": 1,
+      "explanation": "作主语只能用动名词 → Staying。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"____ every single day is how he keeps improving.\"",
+      "options": [
+        "Practise",
+        "Practises",
+        "Practising",
+        "Practised"
+      ],
+      "answer_index": 2,
+      "explanation": "作主语只能用动名词 → Practising。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"____ as one team matters more than any single star player.\"",
+      "options": [
+        "Fight",
+        "Fights",
+        "Fought",
+        "Fighting"
+      ],
+      "answer_index": 3,
+      "explanation": "作主语只能用动名词 → Fighting。"
+    }
+  ]
+}

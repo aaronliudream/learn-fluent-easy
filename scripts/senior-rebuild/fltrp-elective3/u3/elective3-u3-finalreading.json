@@ -1,0 +1,43 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(战争与和平主题,独立短文,不在阅读关出现)。短文3句+3题,答案转述非照抄,题目覆盖不同位置。",
+  "finalReading": {
+    "passage": "In a small French village near the coast stands a single stone, no taller than a child. It marks the spot where a young Canadian soldier fell on the first morning of the landings, far from his home. Every June, the villagers still place fresh flowers at its foot, so that a stranger who died for them will never be forgotten.",
+    "questions": [
+      {
+        "q": "Why was the stone put up in the village?",
+        "options": [
+          "To mark where a young soldier died during the landings.",
+          "To show visitors the way down to the beach.",
+          "To celebrate the founding of the village.",
+          "To remember a famous local farmer."
+        ],
+        "answer": 0,
+        "explanation": "短文说石碑标记一名年轻士兵阵亡之处,选项为转述;其余原文未提或相反。"
+      },
+      {
+        "q": "What do the villagers do every June?",
+        "options": [
+          "They hold a large summer market.",
+          "They lay fresh flowers at the stone.",
+          "They rebuild the old stone each year.",
+          "They leave the village for the coast."
+        ],
+        "answer": 1,
+        "explanation": "末句说村民每年六月在石碑脚下献上鲜花,选项转述了这一行为。"
+      },
+      {
+        "q": "Why do the villagers still honour the soldier?",
+        "options": [
+          "Because he was born in their village.",
+          "Because he built the stone himself.",
+          "Because he died for them though he was a stranger.",
+          "Because he was a famous general."
+        ],
+        "answer": 2,
+        "explanation": "短文说一个为他们而死的陌生人不会被遗忘,故村民铭记这位远道而来的陌生士兵。"
+      }
+    ]
+  }
+}

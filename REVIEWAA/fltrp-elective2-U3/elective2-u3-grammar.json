@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "grammar_title": "过去进行被动语态(was/were being done):动作在过去某刻正在被进行",
+  "source": "外研社新标准选择性必修二 Unit 3 Using language:过去进行被动语态 was/were being done。句子地道、围绕'时代变迁/书店/新闻业/改革/表情符号'主题、答案唯一(选项以错误语态或错误时体排除);零术语、纯应用填空。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "was/were being done(过去某刻动作正在被进行)",
+      "overview": "过去某一时刻某动作正在进行、且主语是动作的承受者时,用 was/were being + 过去分词。常见标志:when I arrived / at that moment / right then / still / not finished yet。"
+    },
+    {
+      "code": "u3.02",
+      "point": "过去进行被动 vs 过去进行主动(看主语是不是施动者)",
+      "overview": "主语是动作承受者用被动 was/were being done;若主语自己在执行动作才用主动 was/were doing。常配 by 短语;助动词单复数须与主语一致。"
+    },
+    {
+      "code": "u3.03",
+      "point": "过去进行被动 vs 一般过去被动(过程未完 vs 已完成的结果)",
+      "overview": "强调过去某刻动作仍在进行、尚未完成,用 was/were being done;强调到某时动作已完成、只看结果(already/by then/completely),用一般过去被动 was/were done。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "When I hurried into the shop, the books ____ into boxes right in front of me.",
+      "options": [
+        "were being packed",
+        "were packing",
+        "were packed",
+        "packed"
+      ],
+      "answer_index": 0,
+      "explanation": "过去那一刻书正被装箱、书是承受者 → were being packed;'right in front of me'示进行中,排除表结果的 were packed,书不能自己装箱排除主动。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "As I walked past the market, the old gate ____ down by the workers.",
+      "options": [
+        "was tearing",
+        "was being torn",
+        "was torn",
+        "tore"
+      ],
+      "answer_index": 1,
+      "explanation": "门正被工人拆、门是承受者且有 by 短语 → was being torn;主语不会自己拆排除主动,正在进行排除表结果的 was torn。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "While all this was going on, photos ____ by a local journalist.",
+      "options": [
+        "were taking",
+        "were taken",
+        "were being taken",
+        "took"
+      ],
+      "answer_index": 2,
+      "explanation": "照片正被记者拍 → were being taken;while 引导同时进行,排除表结果的 were taken,照片是承受者排除主动。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "When I looked up, customers' comments ____ on the big screen at that very moment.",
+      "options": [
+        "were displaying",
+        "were displayed",
+        "displayed",
+        "were being displayed"
+      ],
+      "answer_index": 3,
+      "explanation": "评论那一刻正被显示 → were being displayed;'at that very moment'示进行,排除 were displayed,评论是承受者排除主动。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "I arrived just as the wooden stands ____ from the old market.",
+      "options": [
+        "were being removed",
+        "were removing",
+        "were removed",
+        "removed"
+      ],
+      "answer_index": 0,
+      "explanation": "'just as'示动作正进行、货摊被搬走 → were being removed;货摊是承受者排除主动,进行中排除表结果。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "When the bell rang, the rubbish ____ away from the floor.",
+      "options": [
+        "was clearing",
+        "was being cleared",
+        "was cleared",
+        "cleared"
+      ],
+      "answer_index": 1,
+      "explanation": "铃响那刻垃圾正被清走 → was being cleared;垃圾是承受者排除主动,正在进行排除表结果的 was cleared。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "As we entered the store, a book reading ____ in one corner.",
+      "options": [
+        "was delivering",
+        "was delivered",
+        "was being delivered",
+        "delivered"
+      ],
+      "answer_index": 2,
+      "explanation": "我们进门时朗读会正在进行 → was being delivered;活动是承受者排除主动,进行中排除表结果。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Right then, the tired old market ____ into a modern shopping mall.",
+      "options": [
+        "was turning",
+        "was turned",
+        "turned",
+        "was being turned"
+      ],
+      "answer_index": 3,
+      "explanation": "'right then'示那刻正被改造 → was being turned;市场是承受者排除主动,进行中排除表结果的 was turned。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "When I passed by last week, new roads ____ across the whole district.",
+      "options": [
+        "were being paved",
+        "were paving",
+        "were paved",
+        "paved"
+      ],
+      "answer_index": 0,
+      "explanation": "经过时道路正被铺设 → were being paved;道路是承受者排除主动,正在进行排除表结果。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "At that moment, the large board in the corner ____ by a big screen.",
+      "options": [
+        "was replacing",
+        "was being replaced",
+        "was replaced",
+        "replaced"
+      ],
+      "answer_index": 1,
+      "explanation": "'at that moment'+ by 短语,板子正被替换 → was being replaced;板子是承受者排除主动,进行中排除表结果。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "As I watched, the dusty shelves ____ with fresh new books.",
+      "options": [
+        "were filling",
+        "were filled",
+        "were being filled",
+        "filled"
+      ],
+      "answer_index": 2,
+      "explanation": "'as I watched'示动作正进行、书架被摆满 → were being filled;书架是承受者排除主动,进行中排除表结果。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "When the reporter called, the news story ____ for the morning paper.",
+      "options": [
+        "was writing",
+        "was written",
+        "wrote",
+        "was being written"
+      ],
+      "answer_index": 3,
+      "explanation": "记者打来时稿子正被赶写 → was being written;稿子是承受者排除主动,进行中排除表结果的 was written。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "As the camera turned on, an interview ____ live online.",
+      "options": [
+        "was being done",
+        "was doing",
+        "was done",
+        "did"
+      ],
+      "answer_index": 0,
+      "explanation": "镜头开时采访正被进行 → was being done;采访是承受者排除主动,正在进行排除表结果。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "When I stepped inside, the café tables ____ for the evening jazz concert.",
+      "options": [
+        "were setting",
+        "were being set",
+        "were set",
+        "set"
+      ],
+      "answer_index": 1,
+      "explanation": "进门那刻桌子正被布置 → were being set;桌子是承受者排除主动,进行中排除表结果的 were set。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "As I came in, fresh organic food ____ in the new café.",
+      "options": [
+        "was serving",
+        "was served",
+        "was being served",
+        "served"
+      ],
+      "answer_index": 2,
+      "explanation": "进来时食物正被供应 → was being served;食物是承受者排除主动,进行中排除表结果。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "When I returned, the shop's brick exterior ____ by a team of builders.",
+      "options": [
+        "was repairing",
+        "was repaired",
+        "repaired",
+        "was being repaired"
+      ],
+      "answer_index": 3,
+      "explanation": "回来时外墙正被工人修缮、有 by 短语 → was being repaired;外墙是承受者排除主动,进行中排除表结果。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Just as I sat down, posters and gifts ____ on the front shelves.",
+      "options": [
+        "were being arranged",
+        "were arranging",
+        "were arranged",
+        "arranged"
+      ],
+      "answer_index": 0,
+      "explanation": "坐下那刻海报礼品正被摆放 → were being arranged;它们是承受者排除主动,进行中排除表结果。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "When the manager arrived, the day's best-seller ____ in the window.",
+      "options": [
+        "was showing",
+        "was being shown",
+        "was shown",
+        "showed"
+      ],
+      "answer_index": 1,
+      "explanation": "经理到时畅销书正被展示 → was being shown;书是承受者排除主动,进行中排除表结果的 was shown。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "As the crowd gathered, an old phone box ____ away from the street corner.",
+      "options": [
+        "was taking",
+        "was taken",
+        "was being taken",
+        "took"
+      ],
+      "answer_index": 2,
+      "explanation": "人群聚拢时电话亭正被搬走 → was being taken (away);电话亭是承受者排除主动,进行中排除表结果。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "While I waited, the classic play ____ into a version full of emojis.",
+      "options": [
+        "was adapting",
+        "was adapted",
+        "adapted",
+        "was being adapted"
+      ],
+      "answer_index": 3,
+      "explanation": "等候时剧本正被改编 → was being adapted;剧本是承受者排除主动,进行中排除表结果的 was adapted。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When the photographer arrived, the old market ____ into a shopping mall.",
+      "options": [
+        "was being turned",
+        "was turning",
+        "were being turned",
+        "turned"
+      ],
+      "answer_index": 0,
+      "explanation": "市场是承受者、那刻正被改造 → was being turned;主语并非施动者排除主动 was turning,单数主语排除 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "All through that decade, Shenzhen ____ from a small town into a huge city.",
+      "options": [
+        "was transforming",
+        "was being transformed",
+        "were being transformed",
+        "transformed"
+      ],
+      "answer_index": 1,
+      "explanation": "深圳是被改变的对象 → was being transformed;城市不自行改造排除主动,单数主语排除 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "While the policy was new, thousands of factories ____ across the south by investors.",
+      "options": [
+        "were building",
+        "was being built",
+        "were being built",
+        "built"
+      ],
+      "answer_index": 2,
+      "explanation": "工厂是承受者、有 by 短语 → were being built;工厂不会自己建排除主动,复数主语排除 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When I visited, tall skyscrapers ____ up along the river by the construction teams.",
+      "options": [
+        "were putting",
+        "was being put",
+        "put",
+        "were being put"
+      ],
+      "answer_index": 3,
+      "explanation": "摩天楼是被建造的对象、有 by 短语 → were being put (up);它们不会自己建排除主动,复数主语排除 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "As the reform went on, old wooden houses ____ down one by one by the workers.",
+      "options": [
+        "were being pulled",
+        "were pulling",
+        "was being pulled",
+        "pulled"
+      ],
+      "answer_index": 0,
+      "explanation": "房子是被拆的对象、有 by 短语 → were being pulled (down);房子不会自己拆排除主动,复数主语排除 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Right then, a brand-new road ____ through the busy district.",
+      "options": [
+        "was laying",
+        "was being laid",
+        "were being laid",
+        "laid"
+      ],
+      "answer_index": 1,
+      "explanation": "道路是被铺设的对象 → was being laid;道路不自己铺排除主动,单数主语排除 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When the journalist arrived, the news ____ straight onto the Internet.",
+      "options": [
+        "was releasing",
+        "were being released",
+        "was being released",
+        "released"
+      ],
+      "answer_index": 2,
+      "explanation": "新闻是被发布的对象 → was being released;新闻不会自己发布排除主动,单数主语排除 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "In those years, more and more stories ____ on computers rather than on paper.",
+      "options": [
+        "were editing",
+        "was being edited",
+        "edited",
+        "were being edited"
+      ],
+      "answer_index": 3,
+      "explanation": "稿件是被编辑的对象 → were being edited;稿件不会自己编排除主动,复数主语排除 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "As I watched the documentary, an old interview ____ face to face.",
+      "options": [
+        "was being done",
+        "was doing",
+        "were being done",
+        "did"
+      ],
+      "answer_index": 0,
+      "explanation": "采访是被进行的对象 → was being done;采访不会自己进行排除主动,单数主语排除 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When the bell rang, the morning papers ____ to people's doors by the staff.",
+      "options": [
+        "were delivering",
+        "were being delivered",
+        "was being delivered",
+        "delivered"
+      ],
+      "answer_index": 1,
+      "explanation": "报纸是被投送的对象、有 by 短语 → were being delivered;报纸不会自己送排除主动,复数主语排除 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "While the campaign went on, the bookstore ____ back to life by the whole community.",
+      "options": [
+        "was bringing",
+        "were being brought",
+        "was being brought",
+        "brought"
+      ],
+      "answer_index": 2,
+      "explanation": "书店是被挽救的对象、有 by 短语 → was being brought (back);书店不会自己复活排除主动,单数主语排除 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When I came back, the dusty old shelves ____ with bright new books by two assistants.",
+      "options": [
+        "were stocking",
+        "was being stocked",
+        "stocked",
+        "were being stocked"
+      ],
+      "answer_index": 3,
+      "explanation": "书架是被摆放的对象、有 by 短语 → were being stocked;书架不会自己上货排除主动,复数主语排除 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "As the café opened, organic meals ____ to literature lovers by the new staff.",
+      "options": [
+        "were being offered",
+        "were offering",
+        "was being offered",
+        "offered"
+      ],
+      "answer_index": 0,
+      "explanation": "餐食是被提供的对象、有 by 短语 → were being offered;餐食不会自己提供排除主动,复数主语排除 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Right at that moment, customers ____ away by online discounts and chain stores.",
+      "options": [
+        "were attracting",
+        "were being attracted",
+        "was being attracted",
+        "attracted"
+      ],
+      "answer_index": 1,
+      "explanation": "顾客是被吸引的对象、有 by 短语 → were being attracted;此处顾客是承受者排除主动,复数主语排除 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When the new owner took over, the corner board ____ by a digital screen.",
+      "options": [
+        "was replacing",
+        "were being replaced",
+        "was being replaced",
+        "replaced"
+      ],
+      "answer_index": 2,
+      "explanation": "板子是被替换的对象、有 by 短语 → was being replaced;板子不会自己替换排除主动,单数主语排除 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Throughout the spring, the town's old streets ____ by the builders.",
+      "options": [
+        "were widening",
+        "was being widened",
+        "widened",
+        "were being widened"
+      ],
+      "answer_index": 3,
+      "explanation": "街道是被拓宽的对象、有 by 短语 → were being widened;街道不会自己变宽排除主动,复数主语排除 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "As trade grew, new markets ____ by local entrepreneurs across the region.",
+      "options": [
+        "were being opened",
+        "were opening",
+        "was being opened",
+        "opened"
+      ],
+      "answer_index": 0,
+      "explanation": "市场是被开办的对象、有 by 短语 → were being opened;市场不会自己开排除主动,复数主语排除 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When I arrived at the park, a welcome speech ____ to the new companies.",
+      "options": [
+        "was giving",
+        "was being given",
+        "were being given",
+        "gave"
+      ],
+      "answer_index": 1,
+      "explanation": "致辞是被发表的对象 → was being given;致辞不会自己发表排除主动,单数主语排除 were。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "During the festival, jazz concerts ____ in the bookshop café by young musicians.",
+      "options": [
+        "were holding",
+        "was being held",
+        "were being held",
+        "held"
+      ],
+      "answer_index": 2,
+      "explanation": "音乐会是被举办的对象、有 by 短语 → were being held;音乐会不会自己举办排除主动,复数主语排除 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "While reporters watched, the old printing machines ____ out of the building by the staff.",
+      "options": [
+        "were moving",
+        "was being moved",
+        "moved",
+        "were being moved"
+      ],
+      "answer_index": 3,
+      "explanation": "机器是被搬走的对象、有 by 短语 → were being moved;机器不会自己搬排除主动,复数主语排除 was。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "When I rushed in, the books ____ into boxes — the work was not finished yet.",
+      "options": [
+        "were being packed",
+        "were packed",
+        "were packing",
+        "packed"
+      ],
+      "answer_index": 0,
+      "explanation": "'not finished yet'示动作仍在进行 → were being packed;若用 were packed 就成了已完成的结果,与'尚未完成'矛盾。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "As I watched, the old gate ____ down; half of it still stood there.",
+      "options": [
+        "was pulled",
+        "was being pulled",
+        "was pulling",
+        "pulled"
+      ],
+      "answer_index": 1,
+      "explanation": "'half still stood'示拆除未完 → was being pulled (down);was pulled 表已拆完的结果,与'还剩一半'矛盾。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Right at that moment, the news ____ onto the website, line by line.",
+      "options": [
+        "was uploaded",
+        "was uploading",
+        "was being uploaded",
+        "uploaded"
+      ],
+      "answer_index": 2,
+      "explanation": "'line by line'+ at that moment 示正在上传 → was being uploaded;was uploaded 表已传完的结果,不合。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "While the builders worked, the brick wall ____ piece by piece.",
+      "options": [
+        "was repaired",
+        "was repairing",
+        "repaired",
+        "was being repaired"
+      ],
+      "answer_index": 3,
+      "explanation": "'while…piece by piece'示修缮正进行 → was being repaired;was repaired 表已修好的结果,不合。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "When the reporter phoned, the story ____ and was only half done.",
+      "options": [
+        "was being written",
+        "was written",
+        "was writing",
+        "wrote"
+      ],
+      "answer_index": 0,
+      "explanation": "'only half done'示写作未完 → was being written;was written 表已写完的结果,与'只写了一半'矛盾。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "As customers looked on, fresh books ____ onto the empty shelves.",
+      "options": [
+        "were placed",
+        "were being placed",
+        "were placing",
+        "placed"
+      ],
+      "answer_index": 1,
+      "explanation": "'as customers looked on'示动作正进行 → were being placed;were placed 表已摆好的结果,不合。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Just then, the corner board ____ with a new screen, and wires still hung loose.",
+      "options": [
+        "was replaced",
+        "was replacing",
+        "was being replaced",
+        "replaced"
+      ],
+      "answer_index": 2,
+      "explanation": "'wires still hung loose'示更换未完 → was being replaced;was replaced 表已换好的结果,与'电线还松垂'矛盾。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "While I waited, my friend's message ____ in emojis, one symbol at a time.",
+      "options": [
+        "was typed",
+        "was typing",
+        "typed",
+        "was being typed"
+      ],
+      "answer_index": 3,
+      "explanation": "'one symbol at a time'示正在输入 → was being typed;was typed 表已打完的结果,不合。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "As the festival opened, a jazz concert ____ on the little stage right then.",
+      "options": [
+        "was being held",
+        "was held",
+        "was holding",
+        "held"
+      ],
+      "answer_index": 0,
+      "explanation": "'right then'示那刻正在举办 → was being held;was held 表已结束的一次活动,与'正进行'不合。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "When I returned at noon, the market ____ into a mall, with cranes still working.",
+      "options": [
+        "was turned",
+        "was being turned",
+        "was turning",
+        "turned"
+      ],
+      "answer_index": 1,
+      "explanation": "'cranes still working'示改造未完 → was being turned;was turned 表已改造完的结果,与'吊车还在作业'矛盾。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "By the time I got there, the books ____ into boxes, and the shelves were already empty.",
+      "options": [
+        "were being packed",
+        "were packing",
+        "were packed",
+        "packed"
+      ],
+      "answer_index": 2,
+      "explanation": "'by the time…already empty'示动作已完成、只看结果 → were packed;were being packed 表过程进行,与'已装完、架空了'矛盾。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "When I arrived, the old gate ____ down completely; only a pile of bricks remained.",
+      "options": [
+        "was being pulled",
+        "was pulling",
+        "pulled",
+        "was pulled"
+      ],
+      "answer_index": 3,
+      "explanation": "'completely…only bricks remained'示已拆完 → was pulled (down);was being pulled 表正在拆,与'已全拆完'矛盾。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "By last night, the news ____ on every website, and everyone had already read it.",
+      "options": [
+        "was released",
+        "was being released",
+        "was releasing",
+        "released"
+      ],
+      "answer_index": 0,
+      "explanation": "'by last night…already read'示已发布完 → was released;was being released 表正在发布,与'大家都读过了'矛盾。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "When the editor checked it, the story ____ and ready to print.",
+      "options": [
+        "was being finished",
+        "was finished",
+        "was finishing",
+        "finished"
+      ],
+      "answer_index": 1,
+      "explanation": "'ready to print'示已完成 → was finished;was being finished 表正在收尾,与'已可付印'不合。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "By the time the café opened, the new shelves ____ with hundreds of books.",
+      "options": [
+        "were being filled",
+        "were filling",
+        "were filled",
+        "filled"
+      ],
+      "answer_index": 2,
+      "explanation": "'by the time…opened'示开门前已摆满 → were filled;were being filled 表正在摆放,与'已摆满'不合。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "When I looked again, the corner board ____ by a screen, and the change was complete.",
+      "options": [
+        "was being replaced",
+        "was replacing",
+        "replaced",
+        "was replaced"
+      ],
+      "answer_index": 3,
+      "explanation": "'the change was complete'示已换好 → was replaced;was being replaced 表正在更换,与'更换已完成'矛盾。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "By spring, the whole market ____ into a modern mall, and shoppers were already inside.",
+      "options": [
+        "was turned",
+        "was being turned",
+        "was turning",
+        "turned"
+      ],
+      "answer_index": 0,
+      "explanation": "'by spring…already inside'示已改造完 → was turned;was being turned 表正在改造,与'顾客已在里面'矛盾。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "When the staff arrived, the morning papers ____ and stacked neatly by the door.",
+      "options": [
+        "were being delivered",
+        "were delivered",
+        "were delivering",
+        "delivered"
+      ],
+      "answer_index": 1,
+      "explanation": "'stacked neatly'示已送达并码好 → were delivered;were being delivered 表正在投送,与'已码好'不合。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "By the end of the week, the old phone box ____ from the corner, and the street looked bare.",
+      "options": [
+        "was being removed",
+        "was removing",
+        "was removed",
+        "removed"
+      ],
+      "answer_index": 2,
+      "explanation": "'by the end…looked bare'示已搬走 → was removed;was being removed 表正在搬,与'已不见、街角空了'矛盾。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "When I opened the book, I saw that some scenes ____ into emojis already.",
+      "options": [
+        "were being adapted",
+        "were adapting",
+        "adapted",
+        "were adapted"
+      ],
+      "answer_index": 3,
+      "explanation": "'already'示已改编完 → were adapted;were being adapted 表正在改编,与'已经改完'矛盾。"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "listeningQuestions": [
+    { "audio": "What will we be doing in ten years' time?", "opts": ["十年后我们会在做什么呢?", "我昨天忘了带钥匙。", "这家商店今天关门了。", "他赢得了那场比赛。"], "answer": 0 },
+    { "audio": "Having a plan is no guarantee that it will come true.", "opts": ["请把窗户关上。", "有计划并不能保证它会实现。", "我搬到了一座新城市。", "她从不说对不起。"], "answer": 1 },
+    { "audio": "Whatever twists and turns you meet, be ready for the unexpected.", "opts": ["明天会下大雨。", "他卖掉了旧自行车。", "无论遇到怎样的曲折,都要为意外做好准备。", "我不喜欢任何运动。"], "answer": 2 },
+    { "audio": "I'm going to study computer science and build robots one day.", "opts": ["把书还回图书馆。", "今天体育馆关门了。", "我们一起去看电影吧。", "我打算学计算机科学,将来造机器人。"], "answer": 3 },
+    { "audio": "We can only connect the dots of our life by looking backwards.", "opts": ["我们只能通过回望把人生的点点滴滴连起来。", "他把秘密告诉了所有人。", "她忘了朋友的生日。", "快点跑,不然会迟到。"], "answer": 0 },
+    { "audio": "The future belongs to those who prepare for it with optimism.", "opts": ["这条路很难走。", "未来属于那些以乐观去准备的人。", "他拒绝了那个请求。", "请把灯打开。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "It would be a pity to ____ up such a wonderful opportunity.", "opts": ["pass", "stand", "walk", "jump"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Let's ____ up the options carefully before we decide.", "opts": ["boil", "weigh", "throw", "drop"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Having a plan is no ____ that everything will come true.", "opts": ["holiday", "picture", "guarantee", "song"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "We should face our future with energy and ____.", "opts": ["anger", "hunger", "fear", "optimism"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "By the time you come back next month, our team ____ the project.", "opts": ["will have finished", "finished", "is finishing", "finishes"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Look! The delivery robot ____ towards the gate right now.", "opts": ["moves", "is moving", "moved", "has moved"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "She told me on Monday that she ____ to study robotics the next year.", "opts": ["is going", "has gone", "was going", "goes"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "At this time next year, many of us ____ at university.", "opts": ["study", "studied", "have studied", "will be studying"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["每一个选择都在帮助塑造你想要的未来。", "我们一个接一个地自我介绍。", "学校今天停电了。", "她卖掉了旧手机。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Every choice helps to shape the future you want." },
+    { "q": "听句子选中文:", "opts": ["他迟到了一个小时。", "这段经历会让我更独立、更成熟。", "明天的天气会很好。", "他忘了带书包。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "The experience will make me more independent and mature." }
+  ],
+  "reading": {
+    "passage": "Nobody can be sure what the world will look like in twenty years. Yet the people who do well are usually those who keep learning, stay flexible, and are not afraid of change. Instead of fearing the future, they prepare for it and help to build it.",
+    "passageCn": "没人能确定二十年后的世界是什么样子。但通常过得好的人,是那些不断学习、保持灵活、不惧改变的人。他们不害怕未来,而是为未来做准备并参与创造未来。",
+    "questions": [
+      { "q": "Who usually does well in the future, according to the passage?", "opts": ["People who keep learning and stay flexible.", "People who never change anything.", "People who fear every new idea.", "People who refuse to work."], "answer": 0 },
+      { "q": "What do these people do instead of fearing the future?", "opts": ["They prepare for it and help build it.", "They ignore it completely.", "They wait for others to act.", "They give up their goals."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about your own plans for the future. Say what you are going to do and why, using at least two different future forms (e.g. I'm going to …, I will …, By 2030 I will have …).",
+    "promptCn": "用3-4句话写写你对未来的打算:你打算做什么、为什么,至少用两种不同的将来表达(如 I'm going to …, I will …, By 2030 I will have …)。",
+    "sampleWords": ["future", "ambition", "plan", "study", "career", "prepare", "skill", "optimism", "goal", "succeed"]
+  },
+  "dialogues": [
+    {
+      "title": "What Are You Going to Do?",
+      "lines": [
+        { "role": "A", "text": "Have you decided what you want to do after senior high?", "cn": "你想好高中毕业后做什么了吗?" },
+        { "role": "B", "text": "I think I'm going to study clean energy. I want to help fight climate change.", "cn": "我打算学清洁能源,想帮助应对气候变化。" },
+        { "role": "A", "text": "That sounds great. The world will need a lot more clean energy in the future.", "cn": "听起来很棒。未来世界会需要更多清洁能源。" },
+        { "role": "B", "text": "Exactly. Whatever happens, I'll keep learning and stay ready for change.", "cn": "正是。无论发生什么,我都会不断学习,随时准备迎接改变。" }
+      ]
+    }
+  ]
+}

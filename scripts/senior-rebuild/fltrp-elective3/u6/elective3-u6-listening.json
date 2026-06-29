@@ -1,0 +1,421 @@
+{
+  "volume": "elective3",
+  "unit": "U6",
+  "topic": "First Snow",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社新标准选择性必修第三册 Unit 6 同主题听力(初雪醒来/初雪的感觉/雪中上学/雪花/冬日护鸟/改变世界的书)。long/short 交替(3长3短);答案可在 transcript 找到依据;与读写关文章不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U6 听力·对话 Waking Up to the First Snow",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: Ben, wake up! Come and look out of the window!",
+        "Ben: What is it, Anna? It's still so early.",
+        "Anna: It snowed in the night. Everything outside is white!",
+        "Ben: Wow, you're right! The garden, the roofs, even the old plum tree are covered in snow.",
+        "Anna: Let's get dressed quickly and build a snowman before breakfast.",
+        "Ben: Good idea. But it's freezing. We should wear our thick coats and gloves.",
+        "Anna: Of course. Mum says we can play outside until nine o'clock.",
+        "Ben: Then let's hurry. I want to throw the very first snowball at you!"
+      ],
+      "translation_cn": "Anna 叫醒 Ben 看窗外;夜里下雪了,外面全白了;花园、屋顶、连那棵老李树都盖满了雪;两人决定早饭前堆个雪人;天很冷,要穿厚外套和手套;妈妈说能在外面玩到九点;Ben 想扔出第一个雪球。",
+      "questions": [
+        {
+          "stem": "Why does Anna wake Ben up?",
+          "options": [
+            "Because it has snowed in the night.",
+            "Because breakfast is ready.",
+            "Because they are late for school.",
+            "Because the plum tree has fallen."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Ben notice is covered in snow?",
+          "options": [
+            "Only the family car.",
+            "The garden, the roofs and the plum tree.",
+            "Just the kitchen window.",
+            "Nothing at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they decide to do before breakfast?",
+          "options": [
+            "Build a snowman.",
+            "Go back to sleep.",
+            "Do their homework.",
+            "Watch television."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Ben say they should wear?",
+          "options": [
+            "Thin summer clothes.",
+            "Thick coats and gloves.",
+            "Swimming suits.",
+            "Nothing special."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Until what time can the children play outside?",
+          "options": [
+            "Until noon.",
+            "Until eight o'clock.",
+            "Until nine o'clock.",
+            "All day long."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U6 听力·短文 How the First Snow Feels",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The first snow of winter often falls quietly during the night.",
+        "You go to bed in one world and wake up in another.",
+        "By morning the streets, gardens and roofs are all white.",
+        "The world feels clean, quiet and full of wonder.",
+        "For a short while, even grown-ups feel like happy children again."
+      ],
+      "translation_cn": "冬天的初雪常在夜里静静落下;你睡前是一个世界,醒来已是另一个;到清晨,街道、花园、屋顶都白了;世界显得干净、安静、充满惊奇;连大人也会短暂地像快乐的孩子。",
+      "questions": [
+        {
+          "stem": "When does the first snow often fall?",
+          "options": [
+            "At noon.",
+            "During a summer storm.",
+            "Only in the afternoon.",
+            "Quietly during the night."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What are white by morning?",
+          "options": [
+            "The streets, gardens and roofs.",
+            "Only the cars.",
+            "The inside of the house.",
+            "The summer flowers."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does the world feel after the snow?",
+          "options": [
+            "Dirty and noisy.",
+            "Clean, quiet and full of wonder.",
+            "Hot and crowded.",
+            "Dark and frightening."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who feels like happy children again?",
+          "options": [
+            "Only babies.",
+            "Only teachers.",
+            "Even grown-ups.",
+            "Nobody at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the main idea of the passage?",
+          "options": [
+            "Snow is dangerous and should be feared.",
+            "Snow only ever falls in cities.",
+            "Children always dislike the snow.",
+            "The first snow brings a feeling of quiet wonder."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U6 听力·对话 Walking to School in the Snow",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Tom: Be careful, Lucy. The path is covered with ice this morning.",
+        "Lucy: Thanks, Tom. I almost slipped just now. It's so slippery.",
+        "Tom: Hold my arm. We can walk slowly together.",
+        "Lucy: Look at the trees — they're all bending under the heavy snow.",
+        "Tom: They're beautiful. But I'm worried we might be late for class.",
+        "Lucy: Don't worry. The teacher said the first lesson starts ten minutes later today.",
+        "Tom: That's good news. Then we can stop and take a quick photo.",
+        "Lucy: Great! Let's send it to Grandma. She loves winter pictures."
+      ],
+      "translation_cn": "Tom 提醒 Lucy 小心结冰的路;Lucy 差点滑倒,路很滑;Tom 让她挽着胳膊慢慢走;树都被厚雪压弯了;Tom 担心上课迟到;Lucy 说今天第一节课晚十分钟开始;于是他们停下拍照,打算发给爱看冬日照片的奶奶。",
+      "questions": [
+        {
+          "stem": "What is the path like this morning?",
+          "options": [
+            "Covered with ice and slippery.",
+            "Dry and clean.",
+            "Full of flowers.",
+            "Completely free of snow."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom tell Lucy to do?",
+          "options": [
+            "Run quickly ahead of him.",
+            "Hold his arm and walk slowly.",
+            "Go straight back home.",
+            "Climb up the trees."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why are the trees bending?",
+          "options": [
+            "Because children are pulling them.",
+            "Because of the strong sun.",
+            "Because of the heavy snow.",
+            "Because they are very old."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why does Tom stop worrying about being late?",
+          "options": [
+            "School is closed for the day.",
+            "They are already at school.",
+            "The teacher is absent.",
+            "The first lesson starts ten minutes later today."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do they decide to do with the photo?",
+          "options": [
+            "Send it to Grandma.",
+            "Sell it online.",
+            "Throw it away.",
+            "Print a hundred copies."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U6 听力·短文 Snowflakes",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Have you ever looked closely at a single snowflake?",
+        "Each one is a tiny piece of ice with six sides.",
+        "No two snowflakes are ever exactly the same.",
+        "When the air is very cold, the flakes are small and dry.",
+        "When it is a little warmer, they join into the big soft flakes we love to catch."
+      ],
+      "translation_cn": "你仔细看过一片雪花吗?每片都是有六个面的小冰晶;没有两片雪花完全一样;空气很冷时,雪花又小又干;暖一些时,它们会合成我们爱接的大片软雪花。",
+      "questions": [
+        {
+          "stem": "How many sides does a snowflake have?",
+          "options": [
+            "Three.",
+            "Six.",
+            "Ten.",
+            "Twelve."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the passage say about two snowflakes?",
+          "options": [
+            "They are always the same.",
+            "They are perfectly square.",
+            "They are never exactly alike.",
+            "They never really fall."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What are the flakes like when the air is very cold?",
+          "options": [
+            "Large and wet.",
+            "Warm and soft.",
+            "Black and heavy.",
+            "Small and dry."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "When do flakes join into big soft ones?",
+          "options": [
+            "When it is a little warmer.",
+            "When it is much colder.",
+            "When there is no wind at all.",
+            "Only at night."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How to make ice cream.",
+            "What snowflakes are like.",
+            "Why birds fly south.",
+            "How to build a house."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U6 听力·对话 Caring for Birds in Winter",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Emma: Grandpa, why are you hanging that little box on the tree?",
+        "Grandpa: It's a bird feeder, Emma. In winter, birds find it hard to get food.",
+        "Emma: Oh, because the snow covers all the seeds on the ground?",
+        "Grandpa: Exactly. So we fill the feeder with seeds and nuts for them.",
+        "Emma: Should we give them water too?",
+        "Grandpa: Yes, very good. The ponds are frozen, so a dish of clean water really helps.",
+        "Emma: I'll check the feeder every morning before school.",
+        "Grandpa: Wonderful. If we are kind to them, the garden will be full of birdsong by spring."
+      ],
+      "translation_cn": "Emma 问爷爷为何在树上挂小盒子;爷爷说那是喂鸟器,冬天鸟难找食;因为雪盖住了地上的种子;所以装上种子和坚果;还要给水,因为池塘结冰了,一碟干净水很有用;Emma 答应每天上学前去查看;爷爷说只要善待它们,到春天花园就满是鸟鸣。",
+      "questions": [
+        {
+          "stem": "What is Grandpa hanging on the tree?",
+          "options": [
+            "A lamp.",
+            "A photo.",
+            "A bird feeder.",
+            "A clock."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why is it hard for birds to find food in winter?",
+          "options": [
+            "The birds are too lazy.",
+            "People take all the food.",
+            "The trees are too tall.",
+            "Snow covers the seeds on the ground."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do they put in the feeder?",
+          "options": [
+            "Seeds and nuts.",
+            "Bread and milk.",
+            "Ice and snow.",
+            "Paper and stones."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is a dish of clean water important?",
+          "options": [
+            "Because birds dislike seeds.",
+            "Because the ponds are frozen.",
+            "Because the water is warm.",
+            "Because it never snows."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Emma promise to do?",
+          "options": [
+            "Sell the feeder.",
+            "Catch the birds.",
+            "Check the feeder every morning.",
+            "Stop feeding them."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U6 听力·短文 A Book That Changed Minds",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In 1962 a scientist named Rachel Carson wrote a famous book.",
+        "It imagined a spring in which no birds sang at all.",
+        "She wanted to warn people about the harm done to nature.",
+        "Her careful research reached millions of readers.",
+        "In the end, a harmful chemical was banned in many countries."
+      ],
+      "translation_cn": "1962 年,科学家 Rachel Carson 写了一本著名的书;书中想象了一个没有鸟鸣的春天;她想警示人们对自然造成的伤害;她严谨的研究影响了数百万读者;最终一种有害化学品在许多国家被禁。",
+      "questions": [
+        {
+          "stem": "Who wrote the famous book in 1962?",
+          "options": [
+            "A famous singer.",
+            "A young farmer.",
+            "A school teacher.",
+            "Rachel Carson."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did the book imagine?",
+          "options": [
+            "A spring with no birdsong.",
+            "A hot summer day.",
+            "A busy modern city.",
+            "A long cold winter."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did Carson want to do?",
+          "options": [
+            "Sell many more chemicals.",
+            "Warn people about the harm done to nature.",
+            "Teach people how to sing.",
+            "Build a brand new town."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who did her research reach?",
+          "options": [
+            "Only a few scientists.",
+            "Nobody at all.",
+            "Millions of readers.",
+            "Only her own family."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What happened in the end?",
+          "options": [
+            "All the birds disappeared.",
+            "The book was soon forgotten.",
+            "Nothing changed at all.",
+            "A harmful chemical was banned in many countries."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

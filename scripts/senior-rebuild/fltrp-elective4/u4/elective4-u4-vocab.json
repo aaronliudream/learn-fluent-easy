@@ -1,0 +1,459 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "book_cn": "外研社版选择性必修第四册",
+  "unit_cn": "Unit 4 Business Blossoms 商业绽放",
+  "source": "外研社(新标准)选择性必修第四册 Unit 4 词表(p38-47 真词);IPA 标准词典英音回填;例句原创、创业/经济/财务主题、含目标词、不超纲;多义给多个中文释义。",
+  "words": [
+    {
+      "word": "forehead",
+      "ipa": "/ˈfɒrɪd/",
+      "pos": "n.",
+      "meaning_cn": "额,前额",
+      "phrase_en": "wipe one's forehead",
+      "example_en": "Before her speech, Zhang Yue wiped the sweat from her forehead.",
+      "example_cn": "演讲前,张悦擦去额头上的汗。",
+      "freq_rank": 1
+    },
+    {
+      "word": "blank",
+      "ipa": "/blæŋk/",
+      "pos": "adj.",
+      "meaning_cn": "无表情的,茫然的;空白的",
+      "phrase_en": "a blank face",
+      "example_en": "The investors stared back with blank faces, giving no clue what they thought.",
+      "example_cn": "投资人面无表情地回望,让人猜不透他们的想法。",
+      "freq_rank": 2
+    },
+    {
+      "word": "dizzy",
+      "ipa": "/ˈdɪzi/",
+      "pos": "adj.",
+      "meaning_cn": "头晕目眩的",
+      "phrase_en": "feel dizzy",
+      "example_en": "Feeling dizzy with fear, she took a deep breath and finished her business plan.",
+      "example_cn": "因恐惧而头晕的她深吸一口气,讲完了商业计划。",
+      "freq_rank": 3
+    },
+    {
+      "word": "chairwoman",
+      "ipa": "/ˈtʃeəˌwʊmən/",
+      "pos": "n.",
+      "meaning_cn": "女主席;女会长",
+      "phrase_en": "chairwoman of a company",
+      "example_en": "She is now the chairwoman of her own rose company.",
+      "example_cn": "她如今是自己玫瑰公司的女会长。",
+      "freq_rank": 4
+    },
+    {
+      "word": "sunrise",
+      "ipa": "/ˈsʌnraɪz/",
+      "pos": "n.",
+      "meaning_cn": "日出;黎明",
+      "phrase_en": "before sunrise",
+      "example_en": "The workers pick the delicate flowers before sunrise.",
+      "example_cn": "工人们在日出前采摘娇嫩的花朵。",
+      "freq_rank": 5
+    },
+    {
+      "word": "potential",
+      "ipa": "/pəˈtenʃ(ə)l/",
+      "pos": "n.",
+      "meaning_cn": "潜力,可能性",
+      "phrase_en": "see the potential",
+      "example_en": "Only after returning home did she realise the business potential of roses.",
+      "example_cn": "直到回到家乡,她才意识到玫瑰的商业潜力。",
+      "freq_rank": 6
+    },
+    {
+      "word": "bug",
+      "ipa": "/bʌɡ/",
+      "pos": "n.",
+      "meaning_cn": "突然的兴趣,迷恋",
+      "phrase_en": "the start-up bug",
+      "example_en": "Like many young people, she was bitten by the start-up bug.",
+      "example_cn": "和许多年轻人一样,她迷上了创业。",
+      "freq_rank": 7
+    },
+    {
+      "word": "enterprising",
+      "ipa": "/ˈentəpraɪzɪŋ/",
+      "pos": "adj.",
+      "meaning_cn": "有创业精神的,有进取心的",
+      "phrase_en": "an enterprising young person",
+      "example_en": "More enterprising young people are thinking of starting their own businesses.",
+      "example_cn": "越来越多有创业精神的年轻人想自己创业。",
+      "freq_rank": 8
+    },
+    {
+      "word": "input",
+      "ipa": "/ˈɪnpʊt/",
+      "pos": "n.",
+      "meaning_cn": "投入(物);投入的资源",
+      "phrase_en": "valuable input",
+      "example_en": "Experienced business people gave her important input and support.",
+      "example_cn": "经验丰富的商人给了她重要的投入和支持。",
+      "freq_rank": 9
+    },
+    {
+      "word": "obstacle",
+      "ipa": "/ˈɒbstək(ə)l/",
+      "pos": "n.",
+      "meaning_cn": "障碍,阻碍",
+      "phrase_en": "overcome an obstacle",
+      "example_en": "She has overcome a number of obstacles to make her business succeed.",
+      "example_cn": "她克服了许多障碍,使生意取得成功。",
+      "freq_rank": 10
+    },
+    {
+      "word": "phase",
+      "ipa": "/feɪz/",
+      "pos": "n.",
+      "meaning_cn": "阶段,时期",
+      "phrase_en": "the initial phase",
+      "example_en": "The biggest challenge at the initial phase was hiring workers.",
+      "example_cn": "起步阶段最大的挑战是雇人。",
+      "freq_rank": 11
+    },
+    {
+      "word": "manufacturer",
+      "ipa": "/ˌmænjʊˈfæktʃ(ə)rə/",
+      "pos": "n.",
+      "meaning_cn": "制造商,生产厂家",
+      "phrase_en": "a large manufacturer",
+      "example_en": "A major manufacturer of cosmetics offered to buy her product.",
+      "example_cn": "一家大型化妆品制造商提出购买她的产品。",
+      "freq_rank": 12
+    },
+    {
+      "word": "cosmetics",
+      "ipa": "/kɒzˈmetɪks/",
+      "pos": "n.",
+      "meaning_cn": "化妆品,美容品",
+      "phrase_en": "make cosmetics",
+      "example_en": "The company uses her roses to make expensive cosmetics.",
+      "example_cn": "这家公司用她的玫瑰制作昂贵的化妆品。",
+      "freq_rank": 13
+    },
+    {
+      "word": "purchase",
+      "ipa": "/ˈpɜːtʃəs/",
+      "pos": "v.",
+      "meaning_cn": "购买",
+      "phrase_en": "purchase a product",
+      "example_en": "The manufacturer was willing to purchase her product and help sell it.",
+      "example_cn": "制造商愿意购买她的产品并帮忙销售。",
+      "freq_rank": 14
+    },
+    {
+      "word": "distribution",
+      "ipa": "/ˌdɪstrɪˈbjuːʃ(ə)n/",
+      "pos": "n.",
+      "meaning_cn": "分销,经销",
+      "phrase_en": "help with distribution",
+      "example_en": "A big partner helped her with the distribution of the roses.",
+      "example_cn": "一个大合作伙伴帮她做玫瑰的分销。",
+      "freq_rank": 15
+    },
+    {
+      "word": "bonus",
+      "ipa": "/ˈbəʊnəs/",
+      "pos": "n.",
+      "meaning_cn": "奖金;红利",
+      "phrase_en": "a decent bonus",
+      "example_en": "This year she can pay every worker a decent bonus.",
+      "example_cn": "今年她能给每位工人发一笔可观的奖金。",
+      "freq_rank": 16
+    },
+    {
+      "word": "entrepreneurial",
+      "ipa": "/ˌɒntrəprəˈnɜːriəl/",
+      "pos": "adj.",
+      "meaning_cn": "创业的,有创业精神的",
+      "phrase_en": "entrepreneurial spirit",
+      "example_en": "She welcomes the new entrepreneurial spirit among young people.",
+      "example_cn": "她欢迎年轻人中新兴的创业精神。",
+      "freq_rank": 17
+    },
+    {
+      "word": "guidance",
+      "ipa": "/ˈɡaɪd(ə)ns/",
+      "pos": "n.",
+      "meaning_cn": "指导,引导",
+      "phrase_en": "seek guidance",
+      "example_en": "She advises young people to seek guidance from experts first.",
+      "example_cn": "她建议年轻人先向专家寻求指导。",
+      "freq_rank": 18
+    },
+    {
+      "word": "consultant",
+      "ipa": "/kənˈsʌltənt/",
+      "pos": "n.",
+      "meaning_cn": "顾问",
+      "phrase_en": "a business consultant",
+      "example_en": "Before starting out, ask an experienced consultant for advice.",
+      "example_cn": "在起步之前,向有经验的顾问请教。",
+      "freq_rank": 19
+    },
+    {
+      "word": "conventional",
+      "ipa": "/kənˈvenʃ(ə)nəl/",
+      "pos": "adj.",
+      "meaning_cn": "传统的,常规的",
+      "phrase_en": "the conventional way",
+      "example_en": "Fair-trade prices are higher than under the conventional trading system.",
+      "example_cn": "公平贸易的价格高于传统贸易体系下的价格。",
+      "freq_rank": 20
+    },
+    {
+      "word": "discriminate",
+      "ipa": "/dɪˈskrɪmɪneɪt/",
+      "pos": "v.",
+      "meaning_cn": "歧视;区别对待",
+      "phrase_en": "discriminate against",
+      "example_en": "Some argue that the system discriminates against producers outside it.",
+      "example_cn": "有人认为这一制度歧视体系外的生产者。",
+      "freq_rank": 21
+    },
+    {
+      "word": "equator",
+      "ipa": "/ɪˈkweɪtə/",
+      "pos": "n.",
+      "meaning_cn": "赤道",
+      "phrase_en": "near the equator",
+      "example_en": "The coffee is grown on an estate close to the equator.",
+      "example_cn": "这种咖啡产于赤道附近的庄园。",
+      "freq_rank": 22
+    },
+    {
+      "word": "estate",
+      "ipa": "/ɪˈsteɪt/",
+      "pos": "n.",
+      "meaning_cn": "庄园;大片土地",
+      "phrase_en": "a coffee estate",
+      "example_en": "The beans are grown on the Green Equator Estate.",
+      "example_cn": "咖啡豆产于绿赤道庄园。",
+      "freq_rank": 23
+    },
+    {
+      "word": "superior",
+      "ipa": "/suːˈpɪəriə/",
+      "pos": "adj.",
+      "meaning_cn": "质量上乘的,优质的",
+      "phrase_en": "superior quality",
+      "example_en": "Customers love the superior, smooth flavour of the product.",
+      "example_cn": "顾客喜爱这款产品上乘而顺滑的口感。",
+      "freq_rank": 24
+    },
+    {
+      "word": "mild",
+      "ipa": "/maɪld/",
+      "pos": "adj.",
+      "meaning_cn": "不浓烈的,温和的",
+      "phrase_en": "a mild flavour",
+      "example_en": "The coffee has a smooth blend with a mild flavour.",
+      "example_cn": "这款咖啡口感顺滑,味道不浓烈。",
+      "freq_rank": 25
+    },
+    {
+      "word": "calorie",
+      "ipa": "/ˈkæləri/",
+      "pos": "n.",
+      "meaning_cn": "卡(路里)",
+      "phrase_en": "less than one calorie",
+      "example_en": "Each cup contains less than one calorie.",
+      "example_cn": "每杯所含热量不到一卡路里。",
+      "freq_rank": 26
+    },
+    {
+      "word": "subjective",
+      "ipa": "/səbˈdʒektɪv/",
+      "pos": "adj.",
+      "meaning_cn": "主观的",
+      "phrase_en": "a subjective judgement",
+      "example_en": "In the past, lenders relied mainly on their subjective judgement.",
+      "example_cn": "过去,放贷者主要依靠自己的主观判断。",
+      "freq_rank": 27
+    },
+    {
+      "word": "freshman",
+      "ipa": "/ˈfreʃmən/",
+      "pos": "n.",
+      "meaning_cn": "(大学)一年级学生",
+      "phrase_en": "a college freshman",
+      "example_en": "As a freshman, you must handle your own money for the first time.",
+      "example_cn": "作为大一新生,你要第一次自己管理钱。",
+      "freq_rank": 28
+    },
+    {
+      "word": "afloat",
+      "ipa": "/əˈfləʊt/",
+      "pos": "adj.",
+      "meaning_cn": "不欠债的,经济上周转得开的",
+      "phrase_en": "stay afloat",
+      "example_en": "Here are some tips to help students stay afloat.",
+      "example_cn": "这里有一些帮助学生不欠债的建议。",
+      "freq_rank": 29
+    },
+    {
+      "word": "interfere",
+      "ipa": "/ˌɪntəˈfɪə/",
+      "pos": "v.",
+      "meaning_cn": "干涉,妨碍",
+      "phrase_en": "interfere with",
+      "example_en": "Make sure a part-time job does not interfere with your studies.",
+      "example_cn": "确保兼职工作不妨碍你的学业。",
+      "freq_rank": 30
+    },
+    {
+      "word": "rational",
+      "ipa": "/ˈræʃ(ə)nəl/",
+      "pos": "adj.",
+      "meaning_cn": "理性的,合理的",
+      "phrase_en": "rational spending",
+      "example_en": "Always make rational spending choices and avoid luxuries.",
+      "example_cn": "始终做出理性的消费选择,避免奢侈品。",
+      "freq_rank": 31
+    },
+    {
+      "word": "exceed",
+      "ipa": "/ɪkˈsiːd/",
+      "pos": "v.",
+      "meaning_cn": "超过,超出",
+      "phrase_en": "exceed the limit",
+      "example_en": "Never exceed your agreed credit limit.",
+      "example_cn": "切勿超出你约定的信用额度。",
+      "freq_rank": 32
+    },
+    {
+      "word": "financial",
+      "ipa": "/fɪˈnænʃ(ə)l/",
+      "pos": "adj.",
+      "meaning_cn": "财政的,金融的;财务的",
+      "phrase_en": "financial management",
+      "example_en": "Good financial management is a useful skill for life.",
+      "example_cn": "良好的财务管理是一项终身受用的技能。",
+      "freq_rank": 33
+    },
+    {
+      "word": "accumulate",
+      "ipa": "/əˈkjuːmjəleɪt/",
+      "pos": "v.",
+      "meaning_cn": "积累,积聚",
+      "phrase_en": "accumulate savings",
+      "example_en": "Save a little each week, and your money will accumulate over time.",
+      "example_cn": "每周存一点,你的钱会随时间积累起来。",
+      "freq_rank": 34
+    },
+    {
+      "word": "automatically",
+      "ipa": "/ˌɔːtəˈmætɪkli/",
+      "pos": "adv.",
+      "meaning_cn": "自动地",
+      "phrase_en": "charged automatically",
+      "example_en": "Annual fees are charged automatically to your credit card.",
+      "example_cn": "年费会自动从你的信用卡扣除。",
+      "freq_rank": 35
+    },
+    {
+      "word": "toddler",
+      "ipa": "/ˈtɒdlə/",
+      "pos": "n.",
+      "meaning_cn": "学步的儿童",
+      "phrase_en": "since we were toddlers",
+      "example_en": "Since we were toddlers, we have been told that it is good to share.",
+      "example_cn": "从蹒跚学步起,我们就被告知分享是好事。",
+      "freq_rank": 36
+    },
+    {
+      "word": "sorrow",
+      "ipa": "/ˈsɒrəʊ/",
+      "pos": "n.",
+      "meaning_cn": "悲伤;伤心事",
+      "phrase_en": "share sorrow",
+      "example_en": "We share toys, snacks and sometimes even sorrow with others.",
+      "example_cn": "我们与他人分享玩具、零食,有时甚至分享悲伤。",
+      "freq_rank": 37
+    },
+    {
+      "word": "frustration",
+      "ipa": "/frʌˈstreɪʃ(ə)n/",
+      "pos": "n.",
+      "meaning_cn": "懊丧,沮丧",
+      "phrase_en": "share frustration",
+      "example_en": "Sharing is not just about sweets; it can also ease our frustration.",
+      "example_cn": "分享不只是关于糖果,它也能缓解我们的沮丧。",
+      "freq_rank": 38
+    },
+    {
+      "word": "hire",
+      "ipa": "/haɪə/",
+      "pos": "v.",
+      "meaning_cn": "租用;雇用",
+      "phrase_en": "hire a bike",
+      "example_en": "With a phone you can hire a bike for the whole afternoon.",
+      "example_cn": "用手机你可以租一辆自行车骑一下午。",
+      "freq_rank": 39
+    },
+    {
+      "word": "thereby",
+      "ipa": "/ðeəˈbaɪ/",
+      "pos": "adv.",
+      "meaning_cn": "因此,由此",
+      "phrase_en": "thereby cutting waste",
+      "example_en": "Sharing encourages people to reuse items, thereby cutting down on waste.",
+      "example_cn": "分享鼓励人们重复使用物品,由此减少浪费。",
+      "freq_rank": 40
+    },
+    {
+      "word": "supervision",
+      "ipa": "/ˌsuːpəˈvɪʒ(ə)n/",
+      "pos": "n.",
+      "meaning_cn": "监督;管理",
+      "phrase_en": "under supervision",
+      "example_en": "The sharing economy grows faster than existing rules or supervision.",
+      "example_cn": "共享经济的发展快于现有规则或监管。",
+      "freq_rank": 41
+    },
+    {
+      "word": "expense",
+      "ipa": "/ɪkˈspens/",
+      "pos": "n.",
+      "meaning_cn": "费用,花费",
+      "phrase_en": "at the expense of",
+      "example_en": "Some firms expand at the expense of more traditional companies.",
+      "example_cn": "一些公司以损害传统企业为代价来扩张。",
+      "freq_rank": 42
+    },
+    {
+      "word": "abuse",
+      "ipa": "/əˈbjuːs/",
+      "pos": "n.",
+      "meaning_cn": "滥用",
+      "phrase_en": "abuse of trust",
+      "example_en": "The sharing economy is sometimes subject to abuse of trust.",
+      "example_cn": "共享经济有时会遭遇信任的滥用。",
+      "freq_rank": 43
+    },
+    {
+      "word": "theft",
+      "ipa": "/θeft/",
+      "pos": "n.",
+      "meaning_cn": "偷窃,偷盗",
+      "phrase_en": "victim of theft",
+      "example_en": "Some users have become victims of theft while sharing rides.",
+      "example_cn": "一些用户在拼车时成了盗窃的受害者。",
+      "freq_rank": 44
+    },
+    {
+      "word": "purse",
+      "ipa": "/pɜːs/",
+      "pos": "n.",
+      "meaning_cn": "(女式)钱包",
+      "phrase_en": "lose one's purse",
+      "example_en": "With phone payment, you never worry about losing your purse.",
+      "example_cn": "用手机支付,你再也不必担心丢钱包。",
+      "freq_rank": 45
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "topic": "Write an Expository Essay about a Person of Craftsmanship(写一篇关于匠心人物的说明文)",
+  "title_en": "A Life's Work",
+  "genre": "说明文 / 议论(expository essay:介绍一位体现匠心精神的人物,用事实与例子说明其品质)",
+  "source": "外研社选择性必修第三册 Unit 2 Developing ideas → Writing:写一篇说明文,选取一位体现匠心精神(craftsmanship)的人物,先点明主旨,再用事实/例子支撑,最后总结。要求运用表语从句(This is what… / The reason is that… / That is why…)。",
+  "prompt_cn": "请用英语写一篇约100词的说明文,介绍一位体现匠心精神的人物(可选王津、梅兰芳或你熟悉的手艺人)。内容包括:① 简要介绍这个人和他/她的工作;② 用具体例子说明他/她的两项可贵品质(如专注、谦逊、坚持);③ 总结他/她带给你的启发。请至少使用两个表语从句(如 This is what… / The reason … is that… / That is why…)。",
+  "prompt_en": "Write an expository essay of about 100 words about a person who shows the spirit of craftsmanship (for example Wang Jin, Mei Lanfang, or a craftworker you know). Include: 1) a short introduction to the person and his or her work; 2) two valuable qualities, each supported by an example; 3) a conclusion about what he or she teaches you. Use at least two predicative clauses (e.g. This is what… / The reason … is that… / That is why…).",
+  "points": [
+    "开头点明人物与主旨(… is a master who … / This essay is about …)",
+    "用事实/例子说明品质一(One quality is his devotion. This is what … )",
+    "用事实/例子说明品质二(The reason he is respected is that …)",
+    "结尾总结启发,运用表语从句(That is why … / This is why I admire him.)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Wang Jin is a master who repairs antique clocks in the Palace Museum. What makes his work so special is his complete devotion. Day after day, in a quiet courtyard, he cleans every tiny part by hand, and a single large clock may take him months. This is what true craftsmanship means. He is also remarkably modest. The reason he is so respected is that he still calls himself an ordinary worker, even when admirers stop him for photos. From him I have learnt that patience and humility matter far more than fame. That is why I deeply admire people who give their whole lives to one craft.",
+  "model_translation": "王津是故宫里修复古董钟表的大师。让他的工作如此特别的,是他全然的专注。日复一日,在安静的庭院里,他亲手清洁每一个细小的部件,一座大钟可能要花他数月。这正是真正匠心的含义。他还非常谦逊。他之所以如此受人尊敬,是因为即使仰慕者拦下他合影,他仍称自己是普通工人。从他身上我懂得,耐心与谦逊远比名声重要。这就是为什么我深深敬佩那些把一生献给一门手艺的人。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:人物与工作介绍 / 两项品质各配例子 / 启发总结" },
+      { "dimension": "结构", "max": 4, "criteria": "说明文结构清晰:点明主旨—事实支撑—总结;段落连贯、过渡自然" },
+      { "dimension": "语言", "max": 5, "criteria": "至少两处表语从句运用得当(what/that/why/because),句式词汇准确多样,语法基本无误" }
+    ],
+    "required_structure": [
+      "主旨 … is a master who …",
+      "品质1 What makes his work special is …",
+      "品质2 The reason he is respected is that …",
+      "总结 That is why I admire …"
+    ],
+    "key_expressions": [
+      "What makes his work so special is his complete devotion.",
+      "This is what true craftsmanship means.",
+      "The reason he is so respected is that he still calls himself an ordinary worker.",
+      "That is why I deeply admire people who give their whole lives to one craft."
+    ],
+    "useful_words": ["craftsmanship", "devotion", "restore", "antique", "modest", "patience", "humility", "respect", "skill", "preserve"]
+  },
+  "high_sentences": [
+    "What makes his work so special is his complete devotion.",
+    "This is what true craftsmanship means.",
+    "The reason he is so respected is that he still calls himself an ordinary worker.",
+    "That is why I deeply admire people who give their whole lives to one craft."
+  ],
+  "error_pairs": [
+    { "wrong": "The reason he is respected is because he is modest.", "correct": "The reason he is respected is that he is modest.", "note": "「The reason … is ____」后只能用 that,不能用 because。" },
+    { "wrong": "This is the reason makes his work special.", "correct": "This is what makes his work special.", "note": "从句缺主语,表语从句用 what 在句中作主语。" },
+    { "wrong": "That is the why I admire him.", "correct": "That is why I admire him.", "note": "why 引导表语从句,前面不加 the。" }
+  ],
+  "paragraph_template": "【匠心人物说明文结构】\n第1句 点明人物:… is a master who …\n第2-3句 品质1+例子:What makes his work special is … This is what …\n第4-5句 品质2+例子:The reason he is respected is that …\n第6句 总结启发:That is why I admire …"
+}

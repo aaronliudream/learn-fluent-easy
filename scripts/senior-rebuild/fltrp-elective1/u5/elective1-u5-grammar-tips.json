@@ -1,0 +1,35 @@
+{
+  "volume": "elective1",
+  "unit": "U5",
+  "grade": 11,
+  "content": {
+    "title": "过去完成时 had done 速查",
+    "intro": "过去完成时表示'过去的过去':一个动作在另一个过去动作或过去时间点之前就已经发生、完成。结构 had + 过去分词,主语无论单复数都用 had。判断口诀:看见两个过去动作,先发生的那个用 had done。",
+    "table": {
+      "headers": ["用法", "标志 / 例句"],
+      "rows": [
+        ["在过去时间点之前已完成", "by + 过去时间 / before + 过去:By 1835, the finches had evolved."],
+        ["在另一个过去动作之前完成", "before / after / when:After he had spent time there, he sailed on."],
+        ["间接引语回退", "He said that he had studied the birds."],
+        ["no sooner…than / hardly…when 倒装", "No sooner had the ship arrived than he saw the birds."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "一句两个过去动作,先发生的用 had done,后发生的用一般过去时", "mark": "After he had collected samples, he studied them." },
+      { "rule": "by / before / by the time + 过去,常配过去完成时", "mark": "By the time we arrived, it had already left." },
+      { "rule": "间接引语中,比'说'更早的过去动作回退为过去完成时", "mark": "said (that) he had left → 原话 I left" },
+      { "rule": "No sooner / Hardly 置于句首要倒装,助动词提前用 had", "mark": "No sooner had S done … than … / Hardly had S done … when …" }
+    ],
+    "why": [
+      "过去完成时是为了在两个过去事件之间分出先后:用 had done 标出'更早的那一个',这样听者一下就知道哪件事先发生,不用再多解释。"
+    ],
+    "gaokaoPoints": [
+      "看 before/after/by the time/when 等标志判断先后,先发生的填 had done;干扰项常给一般过去时或现在完成时。",
+      "间接引语回退、no sooner…than / hardly…when 句首倒装(助动词用 had)是语法填空与改错高频点。"
+    ],
+    "examVsReal": [
+      { "exam": "By the time I got there, the bus had left.（考试要求过去完成时）", "real": "By the time I got there, the bus left.", "note": "考试严格区分'过去的过去';口语里若先后很清楚,母语者常直接用一般过去时。" },
+      { "exam": "No sooner had he sat down than the phone rang.（考试倒装）", "real": "As soon as he sat down, the phone rang.", "note": "考试爱考 no sooner…than 倒装;真实表达更常用 as soon as,语序正常、更口语。" }
+    ]
+  }
+}

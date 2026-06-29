@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "topic": "Tuesdays with Morrie",
+  "source": "外研社(新标准)选择性必修四 Unit 2 同主题完形(写给恩师的信/窗前的莫里/与老友重联/简单的人生/读哭这本书/学会向死而生)。用词限本单元/初中/常见词,每空唯一解,4选项同词性,与阅读/听力关不复用文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Letter to a Mentor",
+      "text": "Dear Mr Lin, I am writing to thank you for everything you have (1)____ me over these three years. When I first joined your class, I was shy and often felt that something was (2)____ from my life. You taught me that the (3)____ things — how we think and what we value — must be chosen by ourselves. Like Morrie in my favourite (4)____, you never seemed (5)____, even on the most difficult days. Instead, you were always full of hope and quiet (6)____. You once said that money would not always make us (7)____, and that we should (8)____ what we already have. Those gentle words have stayed with me ever (9)____. Whenever I feel lost, your advice is still (10)____ safely in my heart. Thank you for being both my teacher and my friend.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "taught",
+            "sold",
+            "thrown",
+            "bought"
+          ],
+          "answer_index": 0,
+          "explanation": "thank you for everything you have taught me 教给我。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "shining",
+            "missing",
+            "sleeping",
+            "cooking"
+          ],
+          "answer_index": 1,
+          "explanation": "something was missing 缺了什么。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "cheap",
+            "loud",
+            "big",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "the big things 人生大事。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "garden",
+            "market",
+            "machine",
+            "book"
+          ],
+          "answer_index": 3,
+          "explanation": "my favourite book 我最爱的书。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "pessimistic",
+            "hungry",
+            "sleepy",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "never seemed pessimistic 从不显得悲观。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "joy",
+            "dust",
+            "traffic"
+          ],
+          "answer_index": 1,
+          "explanation": "full of hope and joy 满怀喜悦。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "angry",
+            "absent",
+            "happy",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "explanation": "make us happy 让我们快乐。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "waste",
+            "sell",
+            "forget",
+            "appreciate"
+          ],
+          "answer_index": 3,
+          "explanation": "appreciate what we have 珍惜所拥有的。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "since",
+            "ago",
+            "then",
+            "once"
+          ],
+          "answer_index": 0,
+          "explanation": "ever since 自那以后一直。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lost",
+            "kept",
+            "thrown",
+            "sold"
+          ],
+          "answer_index": 1,
+          "explanation": "kept safely in my heart 珍藏在心里。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Morrie at the Window",
+      "text": "As his illness grew worse, Morrie spent many quiet hours by his (1)____. From there, each change of (2)____ was watched by him as though through new eyes. The trees, the sky and the falling leaves all seemed more (3)____ than ever before. He knew that this autumn might be his (4)____, yet he was not filled with (5)____. Instead, he chose to (6)____ every small thing around him. He told Mitch that once you learn how to (7)____, you also learn how to truly live. Ordinary moments, he said, should never be (8)____ for granted. People who are always busy often (9)____ such beauty completely. Morrie's calm words have (10)____ many readers to slow down and notice the world.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "wallet",
+            "ticket",
+            "window",
+            "engine"
+          ],
+          "answer_index": 2,
+          "explanation": "by his window 在窗边。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "season"
+          ],
+          "answer_index": 3,
+          "explanation": "change of season 季节变化。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "beautiful",
+            "boring",
+            "ugly",
+            "cheap"
+          ],
+          "answer_index": 0,
+          "explanation": "more beautiful 更美。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "first",
+            "last",
+            "cheap",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "his last autumn 他最后的秋天。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "laughter",
+            "money",
+            "despair",
+            "traffic"
+          ],
+          "answer_index": 2,
+          "explanation": "filled with despair 陷入绝望。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "waste",
+            "sell",
+            "hide",
+            "treasure"
+          ],
+          "answer_index": 3,
+          "explanation": "treasure every small thing 珍视每件小事。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "die",
+            "drive",
+            "cook",
+            "shout"
+          ],
+          "answer_index": 0,
+          "explanation": "learn how to die 学会面对死亡。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sung",
+            "taken",
+            "driven",
+            "eaten"
+          ],
+          "answer_index": 1,
+          "explanation": "be taken for granted 被视为理所当然。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "build",
+            "wash",
+            "miss",
+            "paint"
+          ],
+          "answer_index": 2,
+          "explanation": "miss such beauty 错过这样的美。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "stopped",
+            "refused",
+            "failed",
+            "encouraged"
+          ],
+          "answer_index": 3,
+          "explanation": "encouraged readers to slow down 鼓励读者慢下来。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Keeping in Touch",
+      "text": "After reading Tuesdays with Morrie, I thought about all the good (1)____ I had slowly lost touch with over the years. The book reminded me how (2)____ such people really are. One of its clearest lessons is that we should always keep in (3)____ with those who matter. Like Morrie, we want to reach the end of life (4)____ that we have loved and been loved. So last week I finally (5)____ an old classmate I had not seen for ages. At first I felt (6)____, but as soon as we started talking, the years seemed to (7)____ away. We laughed about the past and (8)____ to meet again soon. That evening I understood why the poet wrote, \"Love each other or (9)____.\" A few warm words, I realised, can be more (10)____ than any expensive gift.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "friends",
+            "prices",
+            "tickets",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "good friends 好友。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cheap",
+            "precious",
+            "empty",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "how precious such people are 多么珍贵。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "line",
+            "price",
+            "touch",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "keep in touch 保持联系。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "selling",
+            "cooking",
+            "driving",
+            "knowing"
+          ],
+          "answer_index": 3,
+          "explanation": "knowing that we have loved 知道自己爱过。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "contacted",
+            "cooked",
+            "painted",
+            "washed"
+          ],
+          "answer_index": 0,
+          "explanation": "contacted an old classmate 联系了老同学。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "rich",
+            "nervous",
+            "late",
+            "tall"
+          ],
+          "answer_index": 1,
+          "explanation": "felt nervous 感到紧张。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "build",
+            "wash",
+            "melt",
+            "paint"
+          ],
+          "answer_index": 2,
+          "explanation": "the years seemed to melt away 岁月仿佛消融。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "refused",
+            "failed",
+            "forgot",
+            "promised"
+          ],
+          "answer_index": 3,
+          "explanation": "promised to meet again 约定再见。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "perish",
+            "sing",
+            "cook",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "Love each other or perish 彼此相爱否则消亡。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "important",
+            "cheap",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "more important than any gift 比礼物更重要。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Simple Life",
+      "text": "In a world that often measures success by money, Morrie's ideas feel refreshingly (1)____. He believed that happiness is not found in (2)____ such as fast cars or designer clothes. Real joy, he said, comes from simple (3)____: a good talk, a kind act, a quiet walk. Many people spend their whole lives (4)____ material possessions, only to feel empty in the end. Morrie warned that looking different from others does not make a person (5)____. What truly (6)____ is how we treat one another. He encouraged everyone to build their own (7)____ around love and honesty, instead of letting society (8)____ them. When I closed the book, I decided to (9)____ less about owning things and more about being kind. That single change has made my days far more (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "heavy",
+            "noisy",
+            "simple",
+            "sharp"
+          ],
+          "answer_index": 2,
+          "explanation": "refreshingly simple 清新而简单。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "mistakes",
+            "seasons",
+            "letters",
+            "luxuries"
+          ],
+          "answer_index": 3,
+          "explanation": "found in luxuries 在于奢侈品。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "pleasures",
+            "prices",
+            "engines",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "simple pleasures 简单的快乐。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "selling",
+            "chasing",
+            "washing",
+            "painting"
+          ],
+          "answer_index": 1,
+          "explanation": "chasing material possessions 追逐物质财产。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "hungry",
+            "late",
+            "abnormal",
+            "tall"
+          ],
+          "answer_index": 2,
+          "explanation": "make a person abnormal 让人变得反常。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sells",
+            "drives",
+            "cooks",
+            "matters"
+          ],
+          "answer_index": 3,
+          "explanation": "what truly matters 真正重要的。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "values",
+            "tickets",
+            "engines",
+            "prices"
+          ],
+          "answer_index": 0,
+          "explanation": "build their own values 建立自己的价值观。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "decide",
+            "wash",
+            "paint"
+          ],
+          "answer_index": 1,
+          "explanation": "letting society decide them 让社会替你决定。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "drive",
+            "cook",
+            "care",
+            "sing"
+          ],
+          "answer_index": 2,
+          "explanation": "care less about owning things 少在意拥有。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "empty",
+            "noisy",
+            "meaningful"
+          ],
+          "answer_index": 3,
+          "explanation": "far more meaningful 更有意义。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Book That Made Me Cry",
+      "text": "A friend warned me that a box of tissues would be (1)____ to get through Tuesdays with Morrie, and she was right. The book is not (2)____, even though it is about a dying man. Morrie's gentle (3)____ on love and friendship made me think about all the people I had lost (4)____ with over the years. I realised just how much I (5)____ them. One clear lesson of the book is that we should always keep in (6)____ with the good people we meet. Like Mitch, I now want to reach the end of my life (7)____ that I have loved and been loved. The story also (8)____ me to call an old friend that very night. We talked for hours, and a warm feeling slowly (9)____ my heart. Sometimes a single book can quietly (10)____ the way we live.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "needed",
+            "sold",
+            "painted",
+            "washed"
+          ],
+          "answer_index": 0,
+          "explanation": "a box of tissues would be needed 需要一盒纸巾。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "tall",
+            "sad",
+            "rich",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "the book is not sad 这本书并不悲伤。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "prices",
+            "engines",
+            "reflections",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "Morrie's reflections on love 莫里关于爱的沉思。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "speed",
+            "contact"
+          ],
+          "answer_index": 3,
+          "explanation": "lost contact with 失去联系。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "missed",
+            "sold",
+            "drove",
+            "cooked"
+          ],
+          "answer_index": 0,
+          "explanation": "how much I missed them 多么想念他们。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "line",
+            "touch",
+            "price",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "keep in touch 保持联系。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "selling",
+            "cooking",
+            "knowing",
+            "driving"
+          ],
+          "answer_index": 2,
+          "explanation": "knowing that I have loved 知道自己爱过。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "stopped",
+            "refused",
+            "failed",
+            "moved"
+          ],
+          "answer_index": 3,
+          "explanation": "the story moved me to call 打动我去打电话。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "filled",
+            "sold",
+            "broke",
+            "washed"
+          ],
+          "answer_index": 0,
+          "explanation": "a warm feeling filled my heart 暖意充满心间。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "wash",
+            "change",
+            "drive",
+            "paint"
+          ],
+          "answer_index": 1,
+          "explanation": "change the way we live 改变我们的生活方式。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Once You Learn How to Die",
+      "text": "One of Morrie's most famous (1)____ is this: \"Once you learn how to die, you learn how to live.\" At first these words sound (2)____, but their meaning is deep. Morrie believed that when people accept that life is (3)____, they finally stop wasting their days. Too many of us, he said, are not really (4)____ to the world around us. We are easily (5)____ by small worries and forget what truly matters. By facing the end calmly, Morrie was able to (6)____ each ordinary day as a gift. He watched every (7)____ change from his window, knowing it might be his last. His quiet courage has been (8)____ as inspirational by readers everywhere. The book gently (9)____ us to wake up, open our eyes, and (10)____ the most of the time we have.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "prices",
+            "engines",
+            "sayings",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "famous sayings 名言。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "tall",
+            "rich",
+            "late",
+            "absurd"
+          ],
+          "answer_index": 3,
+          "explanation": "sound absurd 听起来荒唐。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "short",
+            "cheap",
+            "loud",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "life is short 人生短暂。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "tall",
+            "awake",
+            "rich",
+            "cheap"
+          ],
+          "answer_index": 1,
+          "explanation": "not really awake to the world 没真正清醒地面对世界。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sold",
+            "painted",
+            "distracted",
+            "washed"
+          ],
+          "answer_index": 2,
+          "explanation": "easily distracted by small worries 易被琐事分心。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "waste",
+            "sell",
+            "hide",
+            "treasure"
+          ],
+          "answer_index": 3,
+          "explanation": "treasure each ordinary day 珍惜每个平凡的日子。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "season",
+            "price",
+            "noise",
+            "engine"
+          ],
+          "answer_index": 0,
+          "explanation": "every season change 每次季节变化。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "eaten",
+            "described",
+            "driven",
+            "sung"
+          ],
+          "answer_index": 1,
+          "explanation": "has been described as inspirational 被称为鼓舞人心。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sells",
+            "drives",
+            "reminds",
+            "cooks"
+          ],
+          "answer_index": 2,
+          "explanation": "the book reminds us 这本书提醒我们。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "wash",
+            "drive",
+            "sing",
+            "make"
+          ],
+          "answer_index": 3,
+          "explanation": "make the most of the time 充分利用时间。"
+        }
+      ]
+    }
+  ]
+}

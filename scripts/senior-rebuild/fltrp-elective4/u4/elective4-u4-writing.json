@@ -1,0 +1,87 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "topic": "Introduce a Local Product Using Attributive Clauses(用定语从句介绍一款本地产品)",
+  "title_en": "A Product Worth Trying",
+  "genre": "说明 / 产品介绍(introduce a product + describe its features + recommend)",
+  "source": "外研社选择性必修第四册 Unit 4 Using language:write an introduction to a product using attributive clauses。商业主题、用定语从句自然成文。",
+  "prompt_cn": "假设你叫李华,学校英语角要做一期\"家乡好物\"分享。请用英语写一篇约80词的短文,介绍一款你喜欢的本地产品,内容包括:① 这是什么产品、产自哪里;② 它有什么特别之处(品质/做法/价格);③ 为什么推荐它。要求:恰当使用定语从句(who/which/that/whose/where 等),句子地道、围绕中心。",
+  "prompt_en": "Suppose you are Li Hua. Your school English corner is holding a 'Local Treasures' show. Write a short passage (about 80 words) to introduce a local product you like, including: 1) what it is and where it comes from; 2) what makes it special (quality, the way it is made, or price); 3) why you recommend it. Use attributive clauses (who/which/that/whose/where) where appropriate.",
+  "points": [
+    "说明产品与产地(… , which comes from … / a place where …)",
+    "描述特别之处(made by farmers whose … / its taste, which …)",
+    "说明价格或意义(part of the money that you pay …)",
+    "给出推荐(a product you will not forget / I recommend …)"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "I'd like to introduce Rose Valley honey, which comes from a quiet valley where roses grow wild. The honey is made by local farmers, whose families have kept bees for years. What makes it special is its mild, sweet taste, which many customers love. Part of the money that you pay goes back to the workers who pick the flowers before sunrise. If you want a natural gift that supports a small business, this is a product you will not forget.",
+  "model_translation": "我想介绍\"玫瑰谷\"蜂蜜,它产自一个玫瑰野生生长的安静山谷。这种蜂蜜由当地农户酿制,他们的家庭养蜂已有多年。它的特别之处在于温和香甜的口感,许多顾客都很喜爱。你所付的钱有一部分会回到那些日出前采花的工人手中。如果你想要一份支持小生意的天然礼物,这会是一款让你难忘的产品。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      {
+        "dimension": "内容要点",
+        "max": 6,
+        "criteria": "三要素齐全:产品与产地 / 特别之处 / 推荐理由"
+      },
+      {
+        "dimension": "结构",
+        "max": 4,
+        "criteria": "围绕一款产品展开、层次清楚、行文连贯"
+      },
+      {
+        "dimension": "语言",
+        "max": 5,
+        "criteria": "恰当使用定语从句、词汇句型准确多样、语法基本无误"
+      }
+    ],
+    "required_structure": [
+      "点题 … , which comes from …",
+      "做法/出处 made by … whose …",
+      "特点 What makes it special is … , which …",
+      "推荐 this is a product you will not forget"
+    ],
+    "key_expressions": [
+      "Rose Valley honey, which comes from a quiet valley where roses grow wild",
+      "made by local farmers, whose families have kept bees for years",
+      "its mild, sweet taste, which many customers love",
+      "a product you will not forget"
+    ],
+    "useful_words": [
+      "product",
+      "local",
+      "quality",
+      "taste",
+      "farmer",
+      "support",
+      "business",
+      "recommend",
+      "fair",
+      "natural"
+    ]
+  },
+  "high_sentences": [
+    "I'd like to introduce Rose Valley honey, which comes from a quiet valley where roses grow wild.",
+    "The honey is made by local farmers, whose families have kept bees for years.",
+    "What makes it special is its mild, sweet taste, which many customers love.",
+    "If you want a natural gift that supports a small business, this is a product you will not forget."
+  ],
+  "error_pairs": [
+    {
+      "wrong": "the valley which roses grow wild",
+      "correct": "the valley where roses grow wild",
+      "note": "从句不缺主宾、只缺地点状语,用 where(= in which),不用 which。"
+    },
+    {
+      "wrong": "farmers which keep bees",
+      "correct": "farmers who keep bees",
+      "note": "先行词指人,用 who/that,不用 which。"
+    },
+    {
+      "wrong": "the honey, that is sweet, sells well",
+      "correct": "the honey, which is sweet, sells well",
+      "note": "非限制性定语从句(逗号)不能用 that,指物用 which。"
+    }
+  ],
+  "paragraph_template": "【产品介绍·定语从句结构】\n第1句 点题:… , which comes from a place where …\n第2句 做法/出处:made by … , whose …\n第3句 特点:What makes it special is … , which …\n第4句 推荐:this is a product (that) you will not forget."
+}

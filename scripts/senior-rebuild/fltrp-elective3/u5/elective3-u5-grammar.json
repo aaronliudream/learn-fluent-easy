@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "grammar_title": "非谓语动词作主语、宾语和表语(to do · doing 综合)",
+  "source": "外研社(新标准)选择性必修三 Unit 5 Using structures:非谓语动词(to do / doing)作主语、宾语、表语。句子建筑与自然主题、答案唯一(选项排除其他成立项)。",
+  "points": [
+    {
+      "code": "u5.01",
+      "point": "doing / to do 作主语(及与谓语动词的单数一致)",
+      "overview": "动名词(doing)或不定式(to do)可放在句首作主语,把动作名词化;作主语时谓语动词用单数(takes / is / requires)。"
+    },
+    {
+      "code": "u5.02",
+      "point": "doing / to do 作宾语(动词搭配 + 介词后)",
+      "overview": "及物动词后接动名词还是不定式由动词决定(enjoy doing / decide to do);介词后只能接动名词(be good at doing / by doing)。"
+    },
+    {
+      "code": "u5.03",
+      "point": "doing / to do 作表语(系动词 be 之后)",
+      "overview": "系动词 be 后的非谓语动词说明主语的内容或性质:His job is to design… / Her hobby is photographing…。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u5.01",
+      "stem": "____ inspiration from nature is a tradition that goes back centuries.",
+      "options": [
+        "Drawing",
+        "Draw",
+        "Draws",
+        "Drawn"
+      ],
+      "answer_index": 0,
+      "explanation": "句首作主语要用名词化的动名词形式,Drawing inspiration… 表示\"从自然中获取灵感\"这件事。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "____ how a termite mound stays cool helped the architect design the centre.",
+      "options": [
+        "Understand",
+        "Understanding",
+        "Understands",
+        "Understood"
+      ],
+      "answer_index": 1,
+      "explanation": "主语位置需要动名词,Understanding… 把\"理解\"这一动作当作一件事。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "____ nature closely is the first step that every good designer takes.",
+      "options": [
+        "Observe",
+        "Observes",
+        "Observing",
+        "Observed"
+      ],
+      "answer_index": 2,
+      "explanation": "主语要用动名词 Observing nature,原形或过去分词都不能作主语。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "____ buildings that breathe like living things is this architect's dream.",
+      "options": [
+        "Create",
+        "Creates",
+        "Created",
+        "Creating"
+      ],
+      "answer_index": 3,
+      "explanation": "主语用动名词 Creating buildings…,谓语用单数 is。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "____ from the way nature works can solve many design problems.",
+      "options": [
+        "Learning",
+        "Learn",
+        "Learns",
+        "Learned"
+      ],
+      "answer_index": 0,
+      "explanation": "句首作主语需用动名词 Learning,表示\"向自然学习\"这件事。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "____ natural forms has become popular among modern architects.",
+      "options": [
+        "Mimic",
+        "Mimicking",
+        "Mimics",
+        "Mimicked"
+      ],
+      "answer_index": 1,
+      "explanation": "主语为动名词 Mimicking natural forms,谓语 has become 用单数。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "____ the environment matters as much as building beautiful homes.",
+      "options": [
+        "Protect",
+        "Protects",
+        "Protecting",
+        "Protected"
+      ],
+      "answer_index": 2,
+      "explanation": "主语用动名词 Protecting the environment,与后面的 building… 并列,都是名词化动作。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "____ copy the cooling system of a mound was the architect's clever idea.",
+      "options": [
+        "Will",
+        "Does",
+        "Has",
+        "To"
+      ],
+      "answer_index": 3,
+      "explanation": "句首用不定式 To copy… 作主语,表示\"去模仿\"这件事;助动词不能引出主语。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "____ live close to nature was the simple wish of both poets.",
+      "options": [
+        "To",
+        "Is",
+        "Was",
+        "Did"
+      ],
+      "answer_index": 0,
+      "explanation": "不定式 To live… 作主语,谓语是后面的 was;be/do 不能放在主语动词前。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "____ build in harmony with the land takes both art and science.",
+      "options": [
+        "Build",
+        "To",
+        "Builds",
+        "Built"
+      ],
+      "answer_index": 1,
+      "explanation": "不定式 To build… 作主语;原形或变化形式都不能单独作主语。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "____ study how dolphins send signals led to better underwater systems.",
+      "options": [
+        "Studies",
+        "Studied",
+        "To",
+        "Study"
+      ],
+      "answer_index": 2,
+      "explanation": "不定式 To study… 作主语,把\"研究\"名词化。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "____ waste less energy is the main goal of these green buildings.",
+      "options": [
+        "Wastes",
+        "Wasted",
+        "Waste",
+        "To"
+      ],
+      "answer_index": 3,
+      "explanation": "不定式 To waste less energy 作主语,谓语为 is。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "____ respect natural forms makes a building part of its surroundings.",
+      "options": [
+        "To",
+        "Respects",
+        "Respected",
+        "Respect"
+      ],
+      "answer_index": 0,
+      "explanation": "不定式 To respect… 作主语,谓语 makes 用单数。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Designing such complex buildings ____ years of patient study.",
+      "options": [
+        "take",
+        "takes",
+        "taking",
+        "to take"
+      ],
+      "answer_index": 1,
+      "explanation": "动名词主语视为单数,谓语用 takes;非谓语形式不能作谓语。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "To copy the shape of a lotus flower ____ great skill.",
+      "options": [
+        "require",
+        "requiring",
+        "requires",
+        "to require"
+      ],
+      "answer_index": 2,
+      "explanation": "不定式主语用单数谓语 requires。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Collecting rainwater through the roof ____ the building a lot of money.",
+      "options": [
+        "save",
+        "saving",
+        "to save",
+        "saves"
+      ],
+      "answer_index": 3,
+      "explanation": "动名词主语为单数,谓语用 saves。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "To live in harmony with the environment ____ careful planning.",
+      "options": [
+        "needs",
+        "need",
+        "needing",
+        "to need"
+      ],
+      "answer_index": 0,
+      "explanation": "不定式主语用单数谓语 needs。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Capturing the beauty of natural forms ____ many young architects.",
+      "options": [
+        "inspire",
+        "inspires",
+        "inspiring",
+        "to inspire"
+      ],
+      "answer_index": 1,
+      "explanation": "动名词主语视为单数,谓语用 inspires。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Watching termites build their nests ____ the engineer a brilliant idea.",
+      "options": [
+        "give",
+        "giving",
+        "gives",
+        "to give"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词主语为单数,谓语用 gives。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "To imitate a bird's beak ____ engineers build quieter, faster trains.",
+      "options": [
+        "help",
+        "helping",
+        "to help",
+        "helps"
+      ],
+      "answer_index": 3,
+      "explanation": "不定式主语用单数谓语 helps。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The architect enjoys ____ natural shapes into his designs.",
+      "options": [
+        "bringing",
+        "bring",
+        "to bring",
+        "brought"
+      ],
+      "answer_index": 0,
+      "explanation": "enjoy 后接动名词作宾语,enjoy doing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "They finished ____ the algae panels onto the wall last week.",
+      "options": [
+        "fit",
+        "fitting",
+        "to fit",
+        "fitted"
+      ],
+      "answer_index": 1,
+      "explanation": "finish 后只能接动名词,finish doing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "We should avoid ____ so much energy in our buildings.",
+      "options": [
+        "waste",
+        "to waste",
+        "wasting",
+        "wasted"
+      ],
+      "answer_index": 2,
+      "explanation": "avoid 后接动名词作宾语,avoid doing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The designer kept ____ the way termites cool their mounds.",
+      "options": [
+        "study",
+        "to study",
+        "studied",
+        "studying"
+      ],
+      "answer_index": 3,
+      "explanation": "keep doing 表示\"不断做\",宾语用动名词。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Have you considered ____ rainwater for the garden?",
+      "options": [
+        "collecting",
+        "collect",
+        "to collect",
+        "collected"
+      ],
+      "answer_index": 0,
+      "explanation": "consider 后接动名词作宾语,consider doing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The class practised ____ small models of green houses.",
+      "options": [
+        "make",
+        "making",
+        "to make",
+        "made"
+      ],
+      "answer_index": 1,
+      "explanation": "practise 后接动名词作宾语,practise doing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Imagine ____ in a house whose walls are covered with living plants.",
+      "options": [
+        "live",
+        "to live",
+        "living",
+        "lived"
+      ],
+      "answer_index": 2,
+      "explanation": "imagine 后接动名词作宾语,imagine doing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The young architect decided ____ the museum like a lotus flower.",
+      "options": [
+        "shaping",
+        "shape",
+        "shaped",
+        "to shape"
+      ],
+      "answer_index": 3,
+      "explanation": "decide 后接不定式作宾语,decide to do。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Mick Pearce wanted ____ a building that needed no air conditioning.",
+      "options": [
+        "to create",
+        "creating",
+        "create",
+        "created"
+      ],
+      "answer_index": 0,
+      "explanation": "want 后接不定式作宾语,want to do。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Engineers hope ____ from nature to solve human problems.",
+      "options": [
+        "learning",
+        "to learn",
+        "learn",
+        "learned"
+      ],
+      "answer_index": 1,
+      "explanation": "hope 后接不定式作宾语,hope to do。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The city agreed ____ the old garden in its original style.",
+      "options": [
+        "restoring",
+        "restore",
+        "to restore",
+        "restored"
+      ],
+      "answer_index": 2,
+      "explanation": "agree 后接不定式作宾语,agree to do。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "She chose ____ in a quiet cottage far from the noisy city.",
+      "options": [
+        "living",
+        "live",
+        "lived",
+        "to live"
+      ],
+      "answer_index": 3,
+      "explanation": "choose 后接不定式作宾语,choose to do。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "They planned ____ the building's energy use by half.",
+      "options": [
+        "to cut",
+        "cutting",
+        "cuts",
+        "having cut"
+      ],
+      "answer_index": 0,
+      "explanation": "plan 后接不定式作宾语,plan to do。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The team managed ____ the algae alive through the cold winter.",
+      "options": [
+        "keeping",
+        "to keep",
+        "keep",
+        "kept"
+      ],
+      "answer_index": 1,
+      "explanation": "manage 后接不定式作宾语,manage to do。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The students are interested in ____ how nature really works.",
+      "options": [
+        "study",
+        "to study",
+        "studying",
+        "studied"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 in 后只能接动名词,be interested in doing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "By ____ a shark's skin, scientists created faster swimsuits.",
+      "options": [
+        "copy",
+        "to copy",
+        "copied",
+        "copying"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 by 后接动名词,by doing 表方式。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The architect is good at ____ ideas from the natural world.",
+      "options": [
+        "borrowing",
+        "borrow",
+        "to borrow",
+        "borrowed"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 at 后只能接动名词,be good at doing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Instead of ____ traditional heating, the building uses natural warm air.",
+      "options": [
+        "use",
+        "using",
+        "to use",
+        "used"
+      ],
+      "answer_index": 1,
+      "explanation": "介词短语 instead of 后接动名词,instead of doing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "We look forward to ____ the new nature-inspired library next month.",
+      "options": [
+        "visit",
+        "be visited",
+        "visiting",
+        "visited"
+      ],
+      "answer_index": 2,
+      "explanation": "look forward to 中的 to 是介词,后接动名词,visit 应改为 visiting。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "After ____ the documentary about termites, he had a new idea.",
+      "options": [
+        "watch",
+        "to watch",
+        "watched",
+        "watching"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 after 后接动名词,after doing。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The architect's goal is ____ a building that lives with nature.",
+      "options": [
+        "to design",
+        "design",
+        "designs",
+        "designed"
+      ],
+      "answer_index": 0,
+      "explanation": "be 后用不定式作表语,说明 goal 的具体内容。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Mick Pearce's idea was ____ the cooling system of termite mounds.",
+      "options": [
+        "copy",
+        "to copy",
+        "copies",
+        "copied"
+      ],
+      "answer_index": 1,
+      "explanation": "be 后用不定式作表语,was to copy 说明 idea 的内容。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The main aim of the design is ____ less energy than normal buildings.",
+      "options": [
+        "use",
+        "uses",
+        "to use",
+        "used"
+      ],
+      "answer_index": 2,
+      "explanation": "is 后用不定式作表语,说明 aim 是什么。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Her dream is ____ houses whose walls are full of green plants.",
+      "options": [
+        "build",
+        "builds",
+        "built",
+        "to build"
+      ],
+      "answer_index": 3,
+      "explanation": "be 后用不定式作表语,说明 dream 的内容。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The first step is ____ how natural forms actually work.",
+      "options": [
+        "to understand",
+        "understand",
+        "understands",
+        "understood"
+      ],
+      "answer_index": 0,
+      "explanation": "is 后用不定式作表语,the first step is to do。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The plan is ____ rainwater and reuse it inside the building.",
+      "options": [
+        "collect",
+        "to collect",
+        "collects",
+        "collected"
+      ],
+      "answer_index": 1,
+      "explanation": "be 后用不定式作表语,说明 plan 的内容。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Our task today is ____ which design best suits the hot climate.",
+      "options": [
+        "decide",
+        "decides",
+        "to decide",
+        "decided"
+      ],
+      "answer_index": 2,
+      "explanation": "is 后用不定式作表语,说明 task 是什么。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The architect's wish is ____ in closer harmony with the environment.",
+      "options": [
+        "live",
+        "lives",
+        "lived",
+        "to live"
+      ],
+      "answer_index": 3,
+      "explanation": "be 后用不定式作表语,说明 wish 的内容。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The point of biomimicry is ____ nature's clever solutions.",
+      "options": [
+        "to borrow",
+        "borrow",
+        "borrows",
+        "borrowed"
+      ],
+      "answer_index": 0,
+      "explanation": "is 后用不定式作表语,说明 the point 是什么。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The next goal is ____ the building's beauty without harming nature.",
+      "options": [
+        "keep",
+        "to keep",
+        "keeps",
+        "kept"
+      ],
+      "answer_index": 1,
+      "explanation": "is 后用不定式作表语,说明 goal 的内容。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The best part of his job is ____ ideas from plants and animals.",
+      "options": [
+        "borrow",
+        "borrows",
+        "borrowing",
+        "borrowed"
+      ],
+      "answer_index": 2,
+      "explanation": "be 后用动名词作表语,说明\"工作中最好的部分\"是哪件事。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Her hobby is ____ old buildings that copy natural shapes.",
+      "options": [
+        "photograph",
+        "photographs",
+        "photographed",
+        "photographing"
+      ],
+      "answer_index": 3,
+      "explanation": "be 后用动名词作表语,her hobby is doing。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "One way to save energy is ____ on natural light during the day.",
+      "options": [
+        "relying",
+        "rely",
+        "relies",
+        "relied"
+      ],
+      "answer_index": 0,
+      "explanation": "be 后用动名词作表语,说明\"省电的一种方式\"。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "His favourite activity is ____ wild plants in the botanical garden.",
+      "options": [
+        "draw",
+        "drawing",
+        "draws",
+        "drew"
+      ],
+      "answer_index": 1,
+      "explanation": "be 后用动名词作表语,说明\"最喜欢的活动\"是什么。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "A big part of green design is ____ less water and power.",
+      "options": [
+        "use",
+        "uses",
+        "using",
+        "used"
+      ],
+      "answer_index": 2,
+      "explanation": "be 后用动名词作表语,说明\"绿色设计的一大部分\"。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The hardest job was ____ the algae alive in winter.",
+      "options": [
+        "keep",
+        "keeps",
+        "kept",
+        "keeping"
+      ],
+      "answer_index": 3,
+      "explanation": "be 后用动名词作表语,说明\"最难的工作\"是哪件事。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "One pleasure of country life is ____ to the birds each morning.",
+      "options": [
+        "listening",
+        "listen",
+        "listens",
+        "listened"
+      ],
+      "answer_index": 0,
+      "explanation": "be 后用动名词作表语,说明\"乡村生活的一种乐趣\"。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Their main business is ____ gardens that copy wild nature.",
+      "options": [
+        "build",
+        "building",
+        "builds",
+        "built"
+      ],
+      "answer_index": 1,
+      "explanation": "be 后用动名词作表语,说明 business 是哪件事。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The real challenge is ____ comfort and nature at the same time.",
+      "options": [
+        "balance",
+        "balances",
+        "balancing",
+        "balanced"
+      ],
+      "answer_index": 2,
+      "explanation": "be 后用动名词作表语,说明\"真正的挑战\"是哪件事。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The best way to cool the rooms is ____ plants on the roof.",
+      "options": [
+        "grow",
+        "grows",
+        "grew",
+        "growing"
+      ],
+      "answer_index": 3,
+      "explanation": "be 后用动名词作表语,说明\"最好的办法\"是哪件事。"
+    }
+  ]
+}

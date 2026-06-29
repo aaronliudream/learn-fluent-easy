@@ -1,0 +1,37 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "grade": 11,
+  "content": {
+    "title": "非限制性定语从句·which / who / whose / 介词+which 速查",
+    "intro": "非限制性定语从句给先行词补充'额外的、可省去的'信息,前面一定有逗号。指人用 who、指物用 which、表所属用 whose;逗号后的 which 还能指代前面一整句话。关键铁律:非限制性从句绝不能用 that。",
+    "table": {
+      "headers": ["关系词", "用法 / 例句"],
+      "rows": [
+        ["who", "指人作主语/宾语:Mark Twain, who was a writer, loved jokes."],
+        ["which", "指物:His wig, which is bright, makes children laugh."],
+        ["whose", "表所属(……的):The girl, whose ankle hurt, cried."],
+        ["介词+which/whom", "some of which / many of whom / for whom:jokes, none of which were funny"],
+        ["which 指整句", "He told a joke, which made everyone laugh.(which=前面整件事)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "非限制性定语从句前必有逗号,且绝不能用 that", "mark": "…, who/which … √  …, that … ×" },
+      { "rule": "指人 who / 指物 which;表所属一律 whose(指人指物都行)", "mark": "the clown, whose nose fell off" },
+      { "rule": "介词后指物用 which、指人用 whom,不能用 that 或 where", "mark": "some of whom / one of which" },
+      { "rule": "逗号后的 which 可指代前面一整句话,在从句中作主语或宾语", "mark": "…, which means clown doctors can help." }
+    ],
+    "why": [
+      "限制性从句是'缺它不可'的身份信息,不加逗号;非限制性从句只是'顺便补充',去掉后主句意思仍完整,所以用逗号隔开,而 that 语气太'紧',不能用来引导这种松散的补充说明。"
+    ],
+    "gaokaoPoints": [
+      "逗号 + 空格几乎=不能填 that:指人 who、指物 which、表所属 whose 三选一。",
+      "'…, which + 谓语'指代整个主句,是写作高分句型(which means / which makes / which is why)。",
+      "介词+关系词:数量词 of which / of whom(some / many / none / both / one of …)是高频考点。"
+    ],
+    "examVsReal": [
+      { "exam": "The film, which is very funny, won a prize.(考试/书面)", "real": "The film's really funny — it won a prize.", "note": "口语常拆成两句、用破折号,而书面用非限制性从句更紧凑。" },
+      { "exam": "…, some of whom trained as actors（考试)", "real": "…, and some of them trained as actors", "note": "口语爱用'and + 代词',考试更看重'介词+whom/which'的规范形式。" }
+    ]
+  }
+}

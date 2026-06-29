@@ -1,0 +1,36 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "grade": 10,
+  "content": {
+    "title": "-ed 分词作定语(被动/完成含义)速查",
+    "intro": "-ed 分词作定语,核心是「中心词是动作的承受者」,表被动或已完成。判断口诀:东西被做 → 用 -ed;东西在做/使人怎样 → 用 -ing。短的放名词前(a broken cup),带短语的放名词后(the cup broken by him = which was broken by him)。",
+    "table": {
+      "headers": ["位置 / 形式", "用法 · 例句 · 等价"],
+      "rows": [
+        ["前置单个 -ed", "a finished well / a broken pump:中心词被动作 → 用 -ed"],
+        ["后置 -ed 短语", "the well built in 1990 = the well which was built in 1990(被动定语从句)"],
+        ["-ed vs -ing", "the frightened children(孩子受惊)vs a frightening film(电影令人害怕)"],
+        ["承受者判断", "看名词是'被做'还是'在做':被做用 -ed,在做用 -ing"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "中心词是动作的承受者(被动/已完成)→ 用 -ed", "mark": "the words spoken by his teacher(话被说出)" },
+      { "rule": "后置 -ed 短语 = 被动定语从句,可还原成 which/that + be + done", "mark": "the well built near the school = which was built near the school" },
+      { "rule": "情感类:人'感到'用 -ed,事物'令人'用 -ing", "mark": "the delighted students(学生很高兴)/ a delightful day" },
+      { "rule": "不及物动词的 -ed 多表'已完成'而非被动", "mark": "fallen leaves 落叶 / a retired teacher 退休教师" }
+    ],
+    "why": [
+      "及物动词的 -ed 分词天然带被动含义(被…),所以当名词是动作的承受者时,用 -ed 最简洁,等于省去了 which/that is(are/was/were) 的被动定语从句。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/短文改错高频:给动词原形,判断该填 -ed(被动)还是 -ing(主动)。看名词是承受者还是发出者。",
+      "-ed 短语后置 = 被动定语从句的缩写,常与 -ing 短语(主动)对比考查。",
+      "情感动词(interest/excite/frighten/satisfy 等):修饰人多用 -ed,修饰物多用 -ing。"
+    ],
+    "examVsReal": [
+      { "exam": "the money raised by his foundation(考试/书面常用后置 -ed 短语)", "real": "the money his foundation raised", "note": "口语里常直接用定语从句、省略关系词,书面更爱用 -ed 短语显得简洁。" },
+      { "exam": "the children saved by Winton(考试爱考被动 -ed)", "real": "the kids Winton saved", "note": "意思一样;考试看你会不会用过去分词的被动形式。" }
+    ]
+  }
+}

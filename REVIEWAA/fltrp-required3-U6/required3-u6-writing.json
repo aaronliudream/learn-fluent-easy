@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U6",
+  "topic": "Write Flood Safety Guidelines(写一份洪水安全指南)",
+  "title_en": "Flood Safety Guidelines",
+  "genre": "应用文 / 安全指南(safety guidelines:before / during / after a flood)",
+  "source": "外研社版必修第三册 Unit 6 Developing ideas:根据飓风安全指南,写一份洪水安全指南(灾前/灾中/灾后该做与不该做的事)。",
+  "prompt_cn": "假设你是学校广播站成员,最近你们地区进入雨季,常有洪水威胁。请用英语写一份约80词的「洪水安全指南」,内容包括:① 洪水来临前要做的1-2件事(如备足食物饮水、把贵重物品搬到高处);② 洪水期间要做和不要做的事(如立刻转移到高处、不要涉水);③ 一句鼓励大家做好准备的话。要求条理清晰、用上 Remember to… / Never… / It's important to… 等安全指南常用句式。",
+  "prompt_en": "Suppose you are a member of your school radio station. The rainy season has begun and floods are a common threat in your area. Write flood safety guidelines (about 80 words) including: 1) one or two things to do before a flood (e.g. store food and water, move valuables higher up); 2) what to do and what NOT to do during a flood (e.g. move to high ground at once, never walk through fast-moving water); 3) one sentence to encourage everyone to be prepared. Use expressions such as 'Remember to…', 'Never…', 'It's important to…'.",
+  "points": [
+    "灾前准备(Before a flood: store sufficient food and water; move valuables to a higher floor)",
+    "灾中行动(During a flood: move to high ground immediately; listen to warnings)",
+    "禁止事项(Never walk or drive through fast-moving water; do not drink flood water)",
+    "鼓励做好准备(Being prepared is the best way to stay safe.)"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Flood Safety Guidelines\n\nThe rainy season has arrived, and floods are a real threat. Here is how to stay safe.\n\nBefore a flood: Remember to store sufficient food, clean water and batteries. It's important to move valuable things to a higher floor.\n\nDuring a flood: Move to high ground immediately and listen to the latest warnings. Never walk or drive through fast-moving water, and do not drink the flood water; otherwise you may get sick.\n\nBeing well prepared is the best way to keep your family safe. Stay calm, stay safe!",
+  "model_translation": "洪水安全指南\n\n雨季已到,洪水是实实在在的威胁。下面教你如何保持安全。\n\n洪水来临前:记得备足食物、洁净饮用水和电池。把贵重物品搬到更高的楼层很重要。\n\n洪水期间:立刻转移到高处,收听最新警报。绝不要涉水或驾车穿过湍急的水流,也不要喝洪水,否则可能生病。\n\n做好充分准备是保护家人安全的最好办法。保持冷静,保持安全!",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:灾前准备 / 灾中该做与不该做 / 鼓励做好准备" },
+      { "dimension": "结构", "max": 4, "criteria": "分 before / during 等清晰分点、条目并列、行文连贯,符合安全指南文体" },
+      { "dimension": "语言", "max": 5, "criteria": "祈使句与 Remember to / Never / It's important to 等句式运用得当,语法基本无误" }
+    ],
+    "required_structure": [
+      "灾前 Before a flood: Remember to … / It's important to …",
+      "灾中 During a flood: Move to high ground immediately …",
+      "禁止 Never walk or drive through fast-moving water …",
+      "鼓励 Being well prepared is the best way to stay safe."
+    ],
+    "key_expressions": [
+      "Remember to store sufficient food and clean water.",
+      "Move to high ground immediately.",
+      "Never walk or drive through fast-moving water.",
+      "Being well prepared is the best way to stay safe."
+    ],
+    "useful_words": ["flood", "threat", "sufficient", "property", "shelter", "immediately", "warning", "otherwise", "prepared", "safe"]
+  },
+  "high_sentences": [
+    "Remember to store sufficient food, clean water and batteries.",
+    "Move to high ground immediately and listen to the latest warnings.",
+    "Never walk or drive through fast-moving water.",
+    "Being well prepared is the best way to keep your family safe."
+  ],
+  "error_pairs": [
+    { "wrong": "It's important moving valuables higher.", "correct": "It's important to move valuables higher.", "note": "It's important to do sth,后接不定式。" },
+    { "wrong": "Don't drink the flood water, otherwise you will sick.", "correct": "Don't drink the flood water; otherwise you will get sick.", "note": "sick 是形容词,要用 get/be sick;otherwise 前用分号或句号。" },
+    { "wrong": "When flooded, move to high ground are important.", "correct": "When flooded, moving to high ground is important.", "note": "动名词短语作主语视为单数,谓语用 is。" }
+  ],
+  "paragraph_template": "【洪水安全指南结构】\n标题 Flood Safety Guidelines\nBefore a flood: Remember to … / It's important to …\nDuring a flood: Move to high ground immediately … Never …\n结尾鼓励: Being well prepared is the best way to stay safe."
+}

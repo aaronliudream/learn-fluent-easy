@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U6",
+  "grammar_title": "现在完成进行时(have/has been doing)",
+  "source": "外研社(新标准)选择性必修第一册 Unit 6 Using language:现在完成进行时(have/has been doing)。句子地道、答案唯一(标答永远是现在完成进行时,干扰项为现在进行时/一般现在时/一般过去时/现在完成时,均因时间标记或当前结果而排除)。",
+  "points": [
+    {
+      "code": "u6.01",
+      "point": "have/has been doing:从过去持续到现在的动作(for / since / all day 标记)",
+      "overview": "当句中有 for + 一段时间、since + 起点、all morning 等标记,且动作从过去一直持续到现在仍在进行时,用 have/has been doing(主语单复数定 have/has);此时一般现在/进行/过去时都不能与该时间标记搭配。"
+    },
+    {
+      "code": "u6.02",
+      "point": "现在完成进行时 vs 现在完成时(强调持续/仍在进行 vs 结果/完成)",
+      "overview": "当句子强调动作一直在持续、并由此造成现在可见的状态或结果(累/脏/湿/喘气等),用现在完成进行时 have/has been doing;此处现在完成时(have done)因强调'已完成/数量结果'而不合语境,故标答唯一为进行式。"
+    },
+    {
+      "code": "u6.03",
+      "point": "现在完成进行时 vs 现在进行时(for/since vs now)",
+      "overview": "带 for/since + 一段时间且动作延续至今,要用 have/has been doing,而不是只表此刻的现在进行时(am/is/are doing);'for two hours / since this morning' 与现在进行时不搭配,故标答唯一为现在完成进行时。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u6.01",
+      "stem": "Since the railway opened, Tibetan antelopes ____ these passages every day.",
+      "options": [
+        "have been using",
+        "are using",
+        "use",
+        "used"
+      ],
+      "answer_index": 0,
+      "explanation": "since the railway opened 表从过去某点持续到现在,动作仍在进行 → have been using;现在进行/一般现在/过去时都无法与 since 从句搭配。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The train ____ steadily across the plateau since it left Xining.",
+      "options": [
+        "is racing",
+        "has been racing",
+        "races",
+        "raced"
+      ],
+      "answer_index": 1,
+      "explanation": "since it left Xining 表持续至今 → has been racing(主语 the train 单数用 has)。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Workers ____ the delicate wetland to a new area since early this morning.",
+      "options": [
+        "are moving",
+        "move",
+        "have been moving",
+        "moved"
+      ],
+      "answer_index": 2,
+      "explanation": "since early this morning 表从早上持续到现在 → have been moving。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "It ____ over the grassland since dawn, and the ground is soaked now.",
+      "options": [
+        "is raining",
+        "rains",
+        "rained",
+        "has been raining"
+      ],
+      "answer_index": 3,
+      "explanation": "since dawn + 现在已湿透,动作持续至今 → has been raining。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Cattle and sheep ____ across the open grassland since sunrise.",
+      "options": [
+        "have been wandering",
+        "are wandering",
+        "wander",
+        "wandered"
+      ],
+      "answer_index": 0,
+      "explanation": "since sunrise 表持续至今 → have been wandering。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Engineers ____ the massive bridge over the permafrost since last spring.",
+      "options": [
+        "are building",
+        "have been building",
+        "build",
+        "built"
+      ],
+      "answer_index": 1,
+      "explanation": "since last spring 表从去年春天一直到现在 → have been building。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Water birds ____ in the clear lake since we arrived this afternoon.",
+      "options": [
+        "are playing",
+        "play",
+        "have been playing",
+        "played"
+      ],
+      "answer_index": 2,
+      "explanation": "since we arrived 表持续至今 → have been playing。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Ben ____ about the reef on television since June.",
+      "options": [
+        "is speaking",
+        "speaks",
+        "spoke",
+        "has been speaking"
+      ],
+      "answer_index": 3,
+      "explanation": "since June 表从六月持续到现在 → has been speaking。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The conservationists ____ the turtles' nests since sunrise.",
+      "options": [
+        "have been watching",
+        "are watching",
+        "watch",
+        "watched"
+      ],
+      "answer_index": 0,
+      "explanation": "since sunrise 表持续至今 → have been watching。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "She ____ for the island job ever since the advertisement appeared.",
+      "options": [
+        "is hoping",
+        "has been hoping",
+        "hopes",
+        "hoped"
+      ],
+      "answer_index": 1,
+      "explanation": "ever since the advertisement appeared 表持续至今 → has been hoping。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Volunteers ____ trees on the bare hillside since breakfast.",
+      "options": [
+        "are planting",
+        "plant",
+        "have been planting",
+        "planted"
+      ],
+      "answer_index": 2,
+      "explanation": "since breakfast 表持续至今 → have been planting。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The guardian ____ the famous pine tree since he was a young man.",
+      "options": [
+        "is protecting",
+        "protects",
+        "protected",
+        "has been protecting"
+      ],
+      "answer_index": 3,
+      "explanation": "since he was a young man 表从年轻持续至今 → has been protecting。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "For the last twenty minutes, I ____ the headset to explore the rain forest.",
+      "options": [
+        "have been using",
+        "am using",
+        "use",
+        "used"
+      ],
+      "answer_index": 0,
+      "explanation": "for the last twenty minutes 表到现在为止的一段持续 → have been using。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Tourists ____ the splendid scenery ever since the train began to climb.",
+      "options": [
+        "are enjoying",
+        "have been enjoying",
+        "enjoy",
+        "enjoyed"
+      ],
+      "answer_index": 1,
+      "explanation": "ever since the train began to climb 表持续至今 → have been enjoying。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The Panda Nanny ____ the young pandas since early this morning.",
+      "options": [
+        "is feeding",
+        "feeds",
+        "has been feeding",
+        "fed"
+      ],
+      "answer_index": 2,
+      "explanation": "since early this morning 表持续至今 → has been feeding。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Scientists ____ the reef's delicate ecosystem since the 1970s.",
+      "options": [
+        "are studying",
+        "study",
+        "studied",
+        "have been studying"
+      ],
+      "answer_index": 3,
+      "explanation": "since the 1970s 表从上世纪七十年代持续至今 → have been studying。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "He ____ rubbish from the steep cliffs since nine o'clock.",
+      "options": [
+        "has been clearing",
+        "is clearing",
+        "clears",
+        "cleared"
+      ],
+      "answer_index": 0,
+      "explanation": "since nine o'clock 表持续至今 → has been clearing。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Local people ____ against the new beach hotel since the plan was announced.",
+      "options": [
+        "are arguing",
+        "have been arguing",
+        "argue",
+        "argued"
+      ],
+      "answer_index": 1,
+      "explanation": "since the plan was announced 表持续至今 → have been arguing。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "The oxygen stations ____ the railway workers healthy since the line opened.",
+      "options": [
+        "are keeping",
+        "keep",
+        "have been keeping",
+        "kept"
+      ],
+      "answer_index": 2,
+      "explanation": "since the line opened 表持续至今 → have been keeping。"
+    },
+    {
+      "code": "u6.01",
+      "stem": "Passengers ____ across the high plateau since the railway opened.",
+      "options": [
+        "are travelling",
+        "travel",
+        "travelled",
+        "have been travelling"
+      ],
+      "answer_index": 3,
+      "explanation": "since the railway opened 表持续至今 → have been travelling。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Look at the workers' muddy boots — they ____ in the wetland all morning.",
+      "options": [
+        "have been working",
+        "have worked",
+        "are working",
+        "worked"
+      ],
+      "answer_index": 0,
+      "explanation": "靴子沾泥是持续活动留下的现在结果,强调动作一直在进行 → have been working;现在完成时 have worked 强调'已完成',不合此处'活动造成现状'的语境。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The Panda Nanny looks exhausted because she ____ the heavy cubs since dawn.",
+      "options": [
+        "has carried",
+        "has been carrying",
+        "is carrying",
+        "carried"
+      ],
+      "answer_index": 1,
+      "explanation": "exhausted 是持续动作造成的现在状态,强调'一直在抱' → has been carrying。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Ben is out of breath because he ____ up the cliff for the last ten minutes.",
+      "options": [
+        "has climbed",
+        "is climbing",
+        "has been climbing",
+        "climbed"
+      ],
+      "answer_index": 2,
+      "explanation": "喘不过气是持续攀爬造成的现在结果 → has been climbing。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Your raincoat is wet through — you ____ in the rain forest, haven't you?",
+      "options": [
+        "have walked",
+        "are walking",
+        "walked",
+        "have been walking"
+      ],
+      "answer_index": 3,
+      "explanation": "湿透是持续活动的现在结果,强调过程 → have been walking。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "I wonder how long the volunteers ____ trees out on the hillside today.",
+      "options": [
+        "have been planting",
+        "have planted",
+        "are planting",
+        "planted"
+      ],
+      "answer_index": 0,
+      "explanation": "how long 询问动作持续多久,强调过程 → have been planting。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The guardian's hands are dirty because he ____ the mountain path all afternoon.",
+      "options": [
+        "has cleared",
+        "has been clearing",
+        "is clearing",
+        "cleared"
+      ],
+      "answer_index": 1,
+      "explanation": "手脏是持续清理留下的现在结果 → has been clearing。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The lake water is muddy because the machines ____ near the shore for hours.",
+      "options": [
+        "have dug",
+        "are digging",
+        "have been digging",
+        "dug"
+      ],
+      "answer_index": 2,
+      "explanation": "湖水变浑是持续作业造成的现在结果 → have been digging。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Rachel is tired but happy; she ____ rhinos at the reserve all day.",
+      "options": [
+        "has counted",
+        "is counting",
+        "counted",
+        "has been counting"
+      ],
+      "answer_index": 3,
+      "explanation": "tired 是一整天持续活动造成的现在状态,强调过程 → has been counting。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The conservationists' eyes are red because they ____ at screens for hours.",
+      "options": [
+        "have been staring",
+        "have stared",
+        "are staring",
+        "stared"
+      ],
+      "answer_index": 0,
+      "explanation": "眼睛红是长时间盯屏幕造成的现在结果 → have been staring。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "My arms ache because I ____ sandbags down to the lake all morning.",
+      "options": [
+        "have carried",
+        "have been carrying",
+        "am carrying",
+        "carried"
+      ],
+      "answer_index": 1,
+      "explanation": "胳膊酸是持续搬运造成的现在结果 → have been carrying。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The grass is flat over there, where the antelopes ____ all night.",
+      "options": [
+        "have rested",
+        "are resting",
+        "have been resting",
+        "rested"
+      ],
+      "answer_index": 2,
+      "explanation": "草被压平是动物整夜持续停留留下的现在痕迹 → have been resting。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "She is covered in dust because she ____ the red cliffs since lunchtime.",
+      "options": [
+        "has climbed",
+        "is climbing",
+        "climbed",
+        "has been climbing"
+      ],
+      "answer_index": 3,
+      "explanation": "满身灰尘是持续攀爬造成的现在结果 → has been climbing。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The hotel operator sounds annoyed; the locals ____ with him for weeks.",
+      "options": [
+        "have been arguing",
+        "have argued",
+        "are arguing",
+        "argued"
+      ],
+      "answer_index": 0,
+      "explanation": "强调争论持续了数周仍在进行,造成他现在的恼火 → have been arguing。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Look how green the rooftops are now — the city ____ gardens up there for years.",
+      "options": [
+        "has grown",
+        "has been growing",
+        "is growing",
+        "grew"
+      ],
+      "answer_index": 1,
+      "explanation": "屋顶现在很绿是多年持续种植的结果,强调持续过程 → has been growing。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "I feel dizzy because I ____ the virtual reality headset for far too long.",
+      "options": [
+        "have used",
+        "am using",
+        "have been using",
+        "used"
+      ],
+      "answer_index": 2,
+      "explanation": "头晕是长时间持续使用造成的现在结果 → have been using。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The train windows are dusty because we ____ through dry land all day.",
+      "options": [
+        "have travelled",
+        "are travelling",
+        "travelled",
+        "have been travelling"
+      ],
+      "answer_index": 3,
+      "explanation": "车窗积尘是一整天持续穿行造成的现在结果 → have been travelling。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Everyone on the platform is wet because it ____ over the plateau since noon.",
+      "options": [
+        "has been raining",
+        "has rained",
+        "is raining",
+        "rained"
+      ],
+      "answer_index": 0,
+      "explanation": "大家淋湿是从中午持续下雨造成的现在结果 → has been raining。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "Why are your gloves so dirty? You ____ in the tree nursery again, I see.",
+      "options": [
+        "have worked",
+        "have been working",
+        "are working",
+        "worked"
+      ],
+      "answer_index": 1,
+      "explanation": "手套脏是持续劳作造成的现在结果,强调过程 → have been working。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "The volunteers look sunburnt because they ____ trees in the open sun all day.",
+      "options": [
+        "have planted",
+        "are planting",
+        "have been planting",
+        "planted"
+      ],
+      "answer_index": 2,
+      "explanation": "晒伤是一整天持续户外活动造成的现在结果 → have been planting。"
+    },
+    {
+      "code": "u6.02",
+      "stem": "He is breathing hard because he ____ along the railway line for an hour.",
+      "options": [
+        "has run",
+        "is running",
+        "ran",
+        "has been running"
+      ],
+      "answer_index": 3,
+      "explanation": "喘气是持续奔跑造成的现在结果,强调过程 → has been running。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The conservationist ____ the antelopes through her telescope for over an hour.",
+      "options": [
+        "has been watching",
+        "is watching",
+        "watches",
+        "watched"
+      ],
+      "answer_index": 0,
+      "explanation": "for over an hour 表持续一小时多至今 → has been watching;现在进行时只表此刻,不能带 for + 时间段。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "We ____ for the train at this lonely station since noon.",
+      "options": [
+        "are waiting",
+        "have been waiting",
+        "wait",
+        "waited"
+      ],
+      "answer_index": 1,
+      "explanation": "since noon 表从中午等到现在 → have been waiting;现在进行时不与 since 搭配。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "It ____ heavily over the wetland since this morning.",
+      "options": [
+        "is raining",
+        "rains",
+        "has been raining",
+        "rained"
+      ],
+      "answer_index": 2,
+      "explanation": "since this morning 表持续至今 → has been raining。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Rachel and her dad ____ about their holiday plans for the last two hours.",
+      "options": [
+        "are talking",
+        "talk",
+        "talked",
+        "have been talking"
+      ],
+      "answer_index": 3,
+      "explanation": "for the last two hours 表持续两小时至今 → have been talking。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The team ____ the new bridge since the start of the year.",
+      "options": [
+        "has been building",
+        "is building",
+        "builds",
+        "built"
+      ],
+      "answer_index": 0,
+      "explanation": "since the start of the year 表从年初持续至今 → has been building。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "I ____ for this island job ever since I first saw the advert.",
+      "options": [
+        "am hoping",
+        "have been hoping",
+        "hope",
+        "hoped"
+      ],
+      "answer_index": 1,
+      "explanation": "ever since I first saw the advert 表持续至今 → have been hoping。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Look at the lake — the workers ____ sandbags along it for weeks.",
+      "options": [
+        "are stacking",
+        "stack",
+        "have been stacking",
+        "stacked"
+      ],
+      "answer_index": 2,
+      "explanation": "for weeks 表持续数周至今 → have been stacking;现在进行时不能带 for + 时间段。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The pandas ____ in the sun since the gate opened this morning.",
+      "options": [
+        "are sleeping",
+        "sleep",
+        "slept",
+        "have been sleeping"
+      ],
+      "answer_index": 3,
+      "explanation": "since the gate opened 表持续至今 → have been sleeping。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Ben ____ photos of the reef for his weekly blog since April.",
+      "options": [
+        "has been taking",
+        "is taking",
+        "takes",
+        "took"
+      ],
+      "answer_index": 0,
+      "explanation": "since April 表从四月持续至今 → has been taking。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Scientists ____ the delicate coral for signs of damage for months.",
+      "options": [
+        "are checking",
+        "have been checking",
+        "check",
+        "checked"
+      ],
+      "answer_index": 1,
+      "explanation": "for months 表持续数月至今 → have been checking。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The guardian ____ up and down the mountain path since sunrise.",
+      "options": [
+        "is walking",
+        "walks",
+        "has been walking",
+        "walked"
+      ],
+      "answer_index": 2,
+      "explanation": "since sunrise 表持续至今 → has been walking。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Volunteers ____ rubbish out of the jungle since early this morning.",
+      "options": [
+        "are carrying",
+        "carry",
+        "carried",
+        "have been carrying"
+      ],
+      "answer_index": 3,
+      "explanation": "since early this morning 表持续至今 → have been carrying。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "Tourists ____ along the famous railway for the whole afternoon.",
+      "options": [
+        "have been travelling",
+        "are travelling",
+        "travel",
+        "travelled"
+      ],
+      "answer_index": 0,
+      "explanation": "for the whole afternoon 表持续整个下午至今 → have been travelling。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "My grandfather ____ this art of caring for trees for fifty years.",
+      "options": [
+        "is practising",
+        "has been practising",
+        "practises",
+        "practised"
+      ],
+      "answer_index": 1,
+      "explanation": "for fifty years 表持续五十年至今 → has been practising。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The two sides ____ over the beach hotel since the meeting began.",
+      "options": [
+        "are arguing",
+        "argue",
+        "have been arguing",
+        "argued"
+      ],
+      "answer_index": 2,
+      "explanation": "since the meeting began 表持续至今 → have been arguing。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "She ____ rhinos at the nature reserve since breakfast.",
+      "options": [
+        "is counting",
+        "counts",
+        "counted",
+        "has been counting"
+      ],
+      "answer_index": 3,
+      "explanation": "since breakfast 表持续至今 → has been counting。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The machines ____ near the shore since early today.",
+      "options": [
+        "have been running",
+        "are running",
+        "run",
+        "ran"
+      ],
+      "answer_index": 0,
+      "explanation": "since early today 表持续至今 → have been running。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "People ____ to protect this reef for many years now.",
+      "options": [
+        "are trying",
+        "have been trying",
+        "try",
+        "tried"
+      ],
+      "answer_index": 1,
+      "explanation": "for many years now 表持续多年至今 → have been trying。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The river ____ more slowly ever since the new dam was built.",
+      "options": [
+        "is flowing",
+        "flows",
+        "has been flowing",
+        "flowed"
+      ],
+      "answer_index": 2,
+      "explanation": "ever since the new dam was built 表持续至今 → has been flowing。"
+    },
+    {
+      "code": "u6.03",
+      "stem": "The Zhuang people ____ in harmony with this land for hundreds of years.",
+      "options": [
+        "are living",
+        "live",
+        "lived",
+        "have been living"
+      ],
+      "answer_index": 3,
+      "explanation": "for hundreds of years 表持续数百年至今 → have been living;现在进行时不能带 for + 时间段。"
+    }
+  ]
+}

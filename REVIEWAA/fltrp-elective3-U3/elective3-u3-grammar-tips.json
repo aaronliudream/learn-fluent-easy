@@ -1,0 +1,40 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "grade": 12,
+  "content": {
+    "title": "主谓一致(1)速查:集合名词 · and 主语 · each/every · a number of / the number of",
+    "intro": "主谓一致就是谓语动词的‘数’要和主语的‘数’一致。本单元三大考点:① 集合名词看整体用单数、看成员用复数;② and 连接两者用复数、同一事物用单数;③ each/every/either/neither + 单数,a number of 用复数、the number of 用单数,以及 neither…nor… / either…or… 的就近原则。",
+    "table": {
+      "headers": ["主语类型", "谓语单/复 + 例句"],
+      "rows": [
+        ["集合名词作整体", "单数:The team is the best in the league.(看作一个队)"],
+        ["集合名词指成员", "复数:The team are arguing among themselves.(强调队员)"],
+        ["A and B(两者)", "复数:Tom and Jerry were in the same unit."],
+        ["A and B(同一事物)", "单数:Bread and butter is on the table. / The poet and soldier is …"],
+        ["each/every/either/neither + 名词", "单数:Each of the soldiers was given a gun."],
+        ["a number of + 复数名词", "复数:A number of boats were hit."],
+        ["the number of + 复数名词", "单数:The number of casualties was rising."],
+        ["neither…nor… / either…or…", "就近:Neither the captain nor his men were ready."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "police / people / cattle 等通常作复数", "mark": "The police were searching the area." },
+      { "rule": "every…and every… 与 many a + 单数名词,谓语用单数", "mark": "Many a man has died for peace." },
+      { "rule": "集合名词后用 it/itself → 单数;用 they/their/themselves → 复数(靠代词判断)", "mark": "The crew did its job. / The crew did their jobs." },
+      { "rule": "a number of(许多)≠ the number of(……的数目),前复后单", "mark": "对比 a/the number of" }
+    ],
+    "why": [
+      "‘数’的一致由主语真正的中心和说话人的视角决定:把集合体当‘一个’还是‘一群’,a number of 强调‘很多个’(复数),the number of 强调‘数目’这一概念(单数);并列主语是否指同一人或同一物,决定用单数还是复数。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/改错高频:the number of vs a number of 的单复数;集合名词随语境单复数。",
+      "neither…nor… / either…or… / not only…but also… 的就近原则。",
+      "every…and every… / each + 单数名词、many a + 单数名词一律用单数谓语。"
+    ],
+    "examVsReal": [
+      { "exam": "The team is playing well.（看作整体，单数）", "real": "英式口语常说 The team are playing well.", "note": "英式英语里集合名词常配复数动词;考试按‘整体=单数’更稳。" },
+      { "exam": "Neither of the plans was perfect.（neither of + 单数）", "real": "口语里也常听到 Neither of the plans were perfect.", "note": "书面/考试用单数 was 最稳妥。" }
+    ]
+  }
+}

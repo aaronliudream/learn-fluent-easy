@@ -1,0 +1,37 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "grade": 10,
+  "content": {
+    "title": "基本句型 Basic Sentence Structures 速查(SVOO / SVOC / SVP)",
+    "intro": "英语句子万变不离五种基本句型。先找出谓语动词,再看它后面带什么:带两个宾语(人+物)是 SVOO;带'宾语+补足语'是 SVOC;系动词后接形容词作表语是 SVP。判断的关键是动词的类型和它后面成分的性质。",
+    "table": {
+      "headers": ["句型", "结构 / 例句 / 要点"],
+      "rows": [
+        ["SV 主谓", "主语 + 不及物动词:The campus + was quiet 之前 I + arrived(后面不带宾语)"],
+        ["SVO 主谓宾", "主语 + 及物动词 + 宾语:I + saw + a white-haired man"],
+        ["SVOO 主谓宾宾", "give/tell/show/offer + 人 + 物:He + gave + me + a smile"],
+        ["SVOC 主谓宾补", "make/keep/find + 宾语 + 形容词:His words + made + me + relaxed"],
+        ["SVP 主系表", "be/feel/look/become + 形容词:I + felt + nervous"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "SVOO 的物主前若加 to/for,就变成'介词短语',不再是双宾语", "mark": "give me a book = give a book to me" },
+      { "rule": "SVOC 与 SVP 的补语/表语都用形容词,不用副词", "mark": "made me happy √ / made me happily ×" },
+      { "rule": "系动词后用形容词作表语;实义动词后才用副词作状语", "mark": "I felt nervous(系)/ I waited nervously(实义)" },
+      { "rule": "make/let/have sb do:宾补是不带 to 的动词原形", "mark": "His words made me feel relaxed √ / made me to feel ×" }
+    ],
+    "why": [
+      "句型本质是看'谓语动词要求几个、什么样的成分':不及物动词到 SV 就完整;及物动词要一个宾语(SVO);双宾动词要两个宾语(SVOO);使役/感官类动词要'宾语+补足语'(SVOC);系动词要一个表语(SVP)。抓住动词,就抓住了句型。"
+    ],
+    "gaokaoPoints": [
+      "SVOC 中宾补的形式高频:形容词(made it clear)、动词原形(let him go)、现在/过去分词(keep it running / get it done)。",
+      "系动词后用形容词作表语(语法填空、改错高频):feel/look/sound/taste/smell + adj。",
+      "双宾语与'动词+介词短语'的转换:bring me the book = bring the book to me。"
+    ],
+    "examVsReal": [
+      { "exam": "His words made me feel relaxed.(考试要求结构完整)", "real": "His words really helped me relax.", "note": "考试看句型是否成立;真实表达常换更自然的说法,意思相同" },
+      { "exam": "I felt nervous before the speech.(系表 + 形容词)", "real": "I had butterflies in my stomach.", "note": "考试用'系动词+形容词';口语爱用生动的习语表达同样的紧张感" }
+    ]
+  }
+}

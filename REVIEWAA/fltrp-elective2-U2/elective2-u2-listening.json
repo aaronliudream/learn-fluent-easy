@@ -1,0 +1,421 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "topic": "Improving Yourself",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社版选择性必修第二册 Unit 2 同主题听力(无手机周末/晨间学习/学着存钱/把难事放前面/平息怒气/守信被信任)。词围绕本单元,答案可在 transcript 找到依据,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 A Phone-free Weekend",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lily: Our class is doing a phone-free weekend. Are you joining, Tom?",
+        "Tom: I'm not sure. I check my phone almost every few minutes.",
+        "Lily: That's exactly why you should try it. It only lasts two days.",
+        "Tom: What are we supposed to do without our phones?",
+        "Lily: Read a book, play sport, or just talk to people face to face.",
+        "Tom: That sounds strange, but maybe good. What will you do?",
+        "Lily: I'll visit my grandmother and help her in the garden.",
+        "Tom: All right, I'll give it a try. Let's compare notes on Monday."
+      ],
+      "translation_cn": "Lily 邀请 Tom 参加班级的无手机周末;Tom 担心自己几分钟就要看一次手机;Lily 说正因如此才该试,只有两天;可以读书、运动或面对面聊天;Lily 打算去看望奶奶、帮她打理花园;Tom 决定试一试,周一交流感受。",
+      "questions": [
+        {
+          "stem": "What activity is the class taking part in?",
+          "options": [
+            "A phone-free weekend.",
+            "A football match.",
+            "A reading exam.",
+            "A garden sale."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is Tom unsure about joining?",
+          "options": [
+            "He has no phone at all.",
+            "He checks his phone very often.",
+            "He will be away that weekend.",
+            "He dislikes his classmates."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How long does the challenge last?",
+          "options": [
+            "Two days.",
+            "A whole week.",
+            "One month.",
+            "Just one hour."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Lily plan to do during the weekend?",
+          "options": [
+            "Play computer games.",
+            "Visit her grandmother and help in the garden.",
+            "Sleep all day.",
+            "Buy a new phone."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When will they share how it went?",
+          "options": [
+            "On Friday night.",
+            "Next month.",
+            "On Monday.",
+            "They will not share."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 A Good Morning Routine",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many successful students say the secret is a good morning routine.",
+        "They get up early, while the house is still quiet.",
+        "In those calm hours, nothing distracts them from their books.",
+        "A short walk or some water helps the brain wake up.",
+        "Starting the day well often makes the rest of it easier."
+      ],
+      "translation_cn": "许多成功的学生说,秘诀在于良好的晨间作息;他们趁屋里安静时早起;在那些安静的时段里,没有什么能让他们从书本上分心;散散步或喝点水有助于大脑清醒;开好头往往让一天剩下的时间更轻松。",
+      "questions": [
+        {
+          "stem": "What do many successful students see as the secret?",
+          "options": [
+            "Going to bed very late.",
+            "Studying only at night.",
+            "Skipping breakfast.",
+            "A good morning routine."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "When do they get up?",
+          "options": [
+            "Early, while the house is quiet.",
+            "After lunch.",
+            "Just before school starts.",
+            "Only at weekends."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why are the early hours useful for study?",
+          "options": [
+            "The room is very noisy.",
+            "Nothing distracts them then.",
+            "Friends keep calling.",
+            "The phone keeps ringing."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What helps the brain wake up?",
+          "options": [
+            "A big bowl of sweets.",
+            "Watching television.",
+            "A short walk or some water.",
+            "Playing loud music."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does starting the day well often do?",
+          "options": [
+            "It makes you tired all day.",
+            "It wastes the whole morning.",
+            "It has no real effect.",
+            "It makes the rest of the day easier."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 Saving My Pocket Money",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Ben: Mum, I really want that bike, but I never have enough money.",
+        "Mum: Where does your pocket money go each week?",
+        "Ben: I usually spend it all on snacks and small games.",
+        "Mum: Try this: put a little into a jar before you spend the rest.",
+        "Ben: But saving feels so slow. The jar will take ages to fill.",
+        "Mum: Watching it grow will give you a clear goal to aim for.",
+        "Ben: All right. How much should I put in each week?",
+        "Mum: Start with a small amount, and add more when you can."
+      ],
+      "translation_cn": "Ben 想买自行车却总是钱不够;妈妈问他零花钱都花在哪;Ben 说大多花在零食和小游戏上;妈妈建议先往罐子里存一点再花剩下的;Ben 觉得存钱太慢;妈妈说看着罐子变满会给他清晰的目标;Ben 同意,先从小额存起,有余力再多存。",
+      "questions": [
+        {
+          "stem": "What does Ben want to buy?",
+          "options": [
+            "A bike.",
+            "A new phone.",
+            "A pair of shoes.",
+            "A computer game."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does Ben usually use his pocket money?",
+          "options": [
+            "He gives it all away.",
+            "He spends it on snacks and small games.",
+            "He puts it in the bank.",
+            "He never spends it."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does his mum suggest?",
+          "options": [
+            "Stop eating any snacks.",
+            "Ask his friends for money.",
+            "Put a little into a jar before spending the rest.",
+            "Sell his old toys."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why does mum say watching the jar grow helps?",
+          "options": [
+            "It makes saving boring.",
+            "It hides the money.",
+            "It costs nothing at all.",
+            "It gives him a clear goal."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How much should Ben save at first?",
+          "options": [
+            "A small amount, adding more later.",
+            "All of his money at once.",
+            "Nothing for a year.",
+            "Exactly half his money."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 Hard Tasks First",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple way to stop putting things off.",
+        "Do not place your easiest task at the top of your list.",
+        "Instead, put the hardest job you least want to do there.",
+        "To avoid that task, you will gladly finish the smaller ones.",
+        "Bit by bit, your habit of delaying important work disappears."
+      ],
+      "translation_cn": "这里有个停止拖延的简单办法:别把最容易的事放在清单最上面;相反,把你最不想做的最难的事放在那里;为了逃避那件难事,你会乐意先做完较小的任务;一点一点地,你拖延重要工作的习惯就消失了。",
+      "questions": [
+        {
+          "stem": "What problem is the tip trying to solve?",
+          "options": [
+            "Sleeping too much.",
+            "Putting things off.",
+            "Spending too much money.",
+            "Talking too loudly."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you NOT put at the top of the list?",
+          "options": [
+            "Your hardest task.",
+            "Your homework.",
+            "Your easiest task.",
+            "Any task at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should go at the top instead?",
+          "options": [
+            "A list of snacks.",
+            "Your favourite hobby.",
+            "Nothing important.",
+            "The hardest job you least want to do."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why will you finish the smaller tasks?",
+          "options": [
+            "To avoid the hard task at the top.",
+            "Because they take longest.",
+            "Because a teacher watches you.",
+            "To win a prize."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happens to the habit of delaying?",
+          "options": [
+            "It grows stronger.",
+            "It slowly disappears.",
+            "It stays the same.",
+            "It becomes a reward."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 Keeping My Cool",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: I shouted at my little brother again, and now I feel terrible.",
+        "Grandpa: When you feel anger rising, what do you usually do?",
+        "Anna: Nothing. I just say whatever comes into my head.",
+        "Grandpa: Try counting slowly to ten before you speak next time.",
+        "Anna: Does that really make any difference?",
+        "Grandpa: By the time you reach ten, the worst of the anger has gone.",
+        "Anna: I see. Angry words are hard to take back, aren't they?",
+        "Grandpa: Exactly. They can leave a mark, just like a nail in wood."
+      ],
+      "translation_cn": "Anna 又冲弟弟吼了,事后很难过;爷爷问她生气时通常怎么做;Anna 说什么都不做,想到什么就说什么;爷爷建议下次开口前慢慢数到十;Anna 怀疑是否真有用;爷爷说数到十时最强烈的怒气已经消退;Anna 明白生气的话很难收回;爷爷说那会像木头上的钉子一样留下痕迹。",
+      "questions": [
+        {
+          "stem": "Why does Anna feel terrible?",
+          "options": [
+            "She lost her homework.",
+            "She failed an exam.",
+            "She shouted at her little brother.",
+            "She broke her phone."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Anna usually do when she is angry?",
+          "options": [
+            "She stays completely silent.",
+            "She goes for a long walk.",
+            "She writes a letter.",
+            "She says whatever comes into her head."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Grandpa advise her to do?",
+          "options": [
+            "Count slowly to ten before speaking.",
+            "Shout even louder.",
+            "Leave the house at once.",
+            "Call a friend."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "According to Grandpa, what happens by the time she reaches ten?",
+          "options": [
+            "She becomes angrier.",
+            "The worst of the anger has gone.",
+            "She forgets everything.",
+            "She falls asleep."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Grandpa compare angry words to?",
+          "options": [
+            "A glass of water.",
+            "A bright light.",
+            "A nail in wood.",
+            "A new book."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 Being Trusted",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Our school once gave out umbrellas that anyone could borrow.",
+        "On each umbrella was printed a short line about honesty.",
+        "There was no list and no one checking who took them.",
+        "At the end of term, every umbrella had been returned.",
+        "Being trusted, we learnt, makes people want to do the right thing."
+      ],
+      "translation_cn": "我们学校曾发放可以随意借用的雨伞;每把伞上都印着一句关于诚信的短句;没有登记表,也没人检查谁拿了伞;到学期末,每一把伞都被归还了;我们懂得:被信任会让人更想做正确的事。",
+      "questions": [
+        {
+          "stem": "What did the school give out?",
+          "options": [
+            "Free books.",
+            "New phones.",
+            "Sports shoes.",
+            "Umbrellas anyone could borrow."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What was printed on each umbrella?",
+          "options": [
+            "A short line about honesty.",
+            "The school's address.",
+            "A weather report.",
+            "A long list of rules."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How were the borrowed umbrellas checked?",
+          "options": [
+            "A teacher counted them daily.",
+            "There was no list and no one checking.",
+            "Cameras watched the rack.",
+            "Students signed a form each time."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What happened by the end of term?",
+          "options": [
+            "Most were lost.",
+            "Half were broken.",
+            "Every umbrella had been returned.",
+            "Nobody borrowed any."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What lesson did the students learn?",
+          "options": [
+            "Umbrellas are easy to lose.",
+            "Honesty does not matter.",
+            "Rules are always needed.",
+            "Being trusted makes people want to do right."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

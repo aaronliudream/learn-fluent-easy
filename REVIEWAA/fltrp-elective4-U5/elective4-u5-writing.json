@@ -1,0 +1,52 @@
+{
+  "volume": "elective4",
+  "unit": "U5",
+  "topic": "Write an Article about an Unexplained Mystery(写一篇关于未解之谜的文章)",
+  "title_en": "The Mystery of the Maya Collapse",
+  "genre": "说明 / 议论(article about an unexplained phenomenon)",
+  "source": "外研社版选择性必修第四册 Unit 5 Developing ideas / Presenting ideas:Writing about the unexplained。要求围绕一个未解之谜,运用名词性从句。",
+  "prompt_cn": "请用英语写一篇约120词的短文,介绍一个让你着迷的历史未解之谜(如玛雅文明的消失)。内容包括:① 用一个名词性从句点出谜题;② 列出一两种可能的解释;③ 表达哪些已知、哪些仍不确定;④ 给出你的思考或结论。注意尽量自然地使用主语/宾语/表语/同位语从句。",
+  "prompt_en": "Write an article of about 120 words about a historical mystery that fascinates you (for example, the disappearance of the Maya). Include: 1) a noun clause that introduces the mystery; 2) one or two possible explanations; 3) what is known and what is still uncertain; 4) your own reflection or conclusion. Try to use subject, object, predicative and appositive clauses naturally.",
+  "points": [
+    "用主语/同位语从句引出谜题(One mystery is what… / The fact that…)",
+    "列出可能的原因(Some believe that… others argue that…)",
+    "用 whether / what 从句表达不确定与已知(Whether… remains unclear; What we know is that…)",
+    "给出思考或结论(Why… may never be answered, but…)"
+  ],
+  "word_count": "120 词左右",
+  "model_essay": "One of the greatest mysteries in history is what caused the Maya to abandon their cities. The fact that such a clever people simply disappeared still puzzles scientists today. Some believe that years of drought destroyed their crops, while others argue that the people themselves harmed the land. Whether a single disaster or many causes ended the civilisation remains unclear. What we do know is that, within a few generations, the great cities fell into ruin. Perhaps the most important lesson is that no civilisation, however great, can ignore the world around it. Why the Maya vanished may never be fully answered, but the search for the truth still draws curious minds from all over the world.",
+  "model_translation": "历史上最大的谜团之一就是究竟是什么让玛雅人离弃了他们的城市。如此聪明的民族竟会凭空消失,这一事实至今仍令科学家困惑。有人认为连年干旱毁掉了他们的庄稼,也有人认为是人们自己损害了土地。究竟是单一灾难还是多种原因终结了这一文明,仍不清楚。我们所知道的是,在短短几代人之内,这些伟大的城市便沦为废墟。或许最重要的教训是:无论多么伟大,任何文明都不能忽视它周围的世界。玛雅人为何消失也许永远无法完全解答,但对真相的探寻仍吸引着全世界好奇的心灵。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:点出谜题 / 可能的解释 / 已知与不确定 / 思考结论" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一个谜题展开、层次清楚、衔接自然、首尾呼应" },
+      { "dimension": "语言", "max": 5, "criteria": "主语/宾语/表语/同位语从句运用得当、连接词准确、语法基本无误" }
+    ],
+    "required_structure": [
+      "引出谜题 One of the greatest mysteries is what …",
+      "同位语从句 The fact that … still puzzles us",
+      "对比解释 Some believe that … , while others argue that …",
+      "总结 What we know is that … / Why … may never be answered"
+    ],
+    "key_expressions": [
+      "One of the greatest mysteries is what caused the Maya to abandon their cities.",
+      "The fact that such a clever people disappeared still puzzles scientists.",
+      "Whether a single disaster or many causes ended it remains unclear.",
+      "What we do know is that the cities fell into ruin within a few generations."
+    ],
+    "useful_words": ["mystery", "civilisation", "abandon", "drought", "collapse", "ruin", "theory", "evidence", "disappear", "explore"]
+  },
+  "high_sentences": [
+    "One of the greatest mysteries in history is what caused the Maya to abandon their cities.",
+    "The fact that such a clever people simply disappeared still puzzles scientists today.",
+    "Whether a single disaster or many causes ended the civilisation remains unclear.",
+    "What we do know is that the great cities fell into ruin within a few generations."
+  ],
+  "error_pairs": [
+    { "wrong": "The fact what they disappeared puzzles us.", "correct": "The fact that they disappeared puzzles us.", "note": "同位语从句内容完整,用 that 引导,不用 what。" },
+    { "wrong": "It is unclear if a drought caused it or not.", "correct": "It is unclear whether a drought caused it or not.", "note": "紧跟 or not 只能用 whether,不用 if。" },
+    { "wrong": "What caused the collapse are still debated.", "correct": "What caused the collapse is still debated.", "note": "主语从句作主语时,谓语动词用单数 is。" }
+  ],
+  "paragraph_template": "【未解之谜文章结构】\n第1句 引出谜题:One of the greatest mysteries is what …\n第2句 同位语强调:The fact that … still puzzles us.\n第3-4句 解释:Some believe that … , while others argue that …\n第5句 已知:What we do know is that …\n第6句 结论:Why … may never be answered, but the search goes on."
+}

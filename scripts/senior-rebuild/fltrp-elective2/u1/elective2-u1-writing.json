@@ -1,0 +1,52 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "topic": "Write a Reply about Your Plans for the Future(写一封回信谈你对未来的计划)",
+  "title_en": "My Plans for the Future",
+  "genre": "书信 / 记叙·描述未来计划(reply to a pen-friend about future plans)",
+  "source": "外研社选择性必修第二册 Unit 1 Using language:write a reply to tell a friend about your own plans for the future(用将来进行时描述未来安排)。",
+  "prompt_cn": "假设你叫李华,你的笔友 Diana 来信问你对未来的打算。请用英语写一封约80词的回信,内容包括:① 一年后(成年时)你将会在做什么;② 几年后你打算在大学学什么;③ 长远来看你希望从事什么职业。注意:多用将来进行时(this time next year, I will be doing…),句子围绕中心、连贯自然。",
+  "prompt_en": "Suppose you are Li Hua. Your pen-friend Diana has asked about your plans for the future. Write a reply (about 80 words) including: 1) what you will be doing in a year's time, when you become an adult; 2) what you plan to study at university; 3) what job you hope to do in the long term. Try to use the future continuous (e.g. 'This time next year, I will be …').",
+  "points": [
+    "一年后的安排(In a year's time, I will be …)",
+    "大学的打算(In a couple of years, I will be studying …)",
+    "长远的职业理想(In the long term, I hope I will be working as …)",
+    "多用将来进行时、句子连贯、围绕'未来计划'中心"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Dear Diana, Thank you for your letter! You asked about my plans for the future, so here they are. This time next year, I will be an adult, and I will be taking my final school exams. With luck, I will pass them all. In a couple of years, I will be studying law at university, because I really want to help people. In the long term, I hope that one day I will be working as a judge. Let's see how things go! Best wishes, Li Hua",
+  "model_translation": "亲爱的 Diana,谢谢你的来信!你问起我对未来的打算,那我就说说看。明年的这个时候,我就成年了,那时我正在参加期末考试。运气好的话,我会全部通过。再过几年,我会在大学读法律,因为我真的很想帮助别人。从长远看,我希望有一天能当一名法官。看看事情会怎样发展吧!此致,李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:一年后的安排 / 大学的打算 / 长远职业理想" },
+      { "dimension": "结构", "max": 4, "criteria": "书信格式完整、围绕'未来计划'展开、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "将来进行时(will be doing)运用得当、词汇句型准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "称呼与感谢 Dear Diana, Thank you for your letter!",
+      "一年后 This time next year, I will be …",
+      "大学 In a couple of years, I will be studying …",
+      "长远 In the long term, I hope I will be working as …"
+    ],
+    "key_expressions": [
+      "This time next year, I will be an adult.",
+      "I will be taking my final school exams.",
+      "In a couple of years, I will be studying law at university.",
+      "In the long term, I hope I will be working as a judge."
+    ],
+    "useful_words": ["future", "plan", "adult", "exam", "university", "study", "career", "judge", "term", "hope"]
+  },
+  "high_sentences": [
+    "This time next year, I will be an adult, and I will be taking my final school exams.",
+    "In a couple of years, I will be studying law at university.",
+    "In the long term, I hope that one day I will be working as a judge.",
+    "Let's see how things go!"
+  ],
+  "error_pairs": [
+    { "wrong": "This time next year, I will take my final exams.", "correct": "This time next year, I will be taking my final exams.", "note": "表将来某一时刻正在进行的动作,用 will be doing。" },
+    { "wrong": "In a couple of years, I am studying at university.", "correct": "In a couple of years, I will be studying at university.", "note": "表将来正在进行,用 will be doing,而非现在进行时。" },
+    { "wrong": "I hope I will working as a judge.", "correct": "I hope I will be working as a judge.", "note": "将来进行时结构是 will be + doing,不能省略 be。" }
+  ],
+  "paragraph_template": "【未来计划回信结构】\n称呼+感谢:Dear …, Thank you for your letter!\n第1点 一年后:This time next year, I will be …\n第2点 大学:In a couple of years, I will be studying …\n第3点 长远:In the long term, I hope I will be working as …\n结尾:Let's see how things go! Best wishes, …"
+}

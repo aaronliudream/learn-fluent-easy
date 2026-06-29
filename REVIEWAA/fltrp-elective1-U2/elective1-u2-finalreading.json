@@ -1,0 +1,32 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(勇往直前主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Leo first tried to learn the guitar, his fingers hurt and the music sounded terrible, so he almost quit. Instead of giving up, he decided to practise for just ten minutes every evening, even on the days he felt tired. A year later, he could play his favourite songs with ease, and he was proud that a little daily effort had carried him so far.",
+    "questions": [
+      {
+        "q": "What did Leo do instead of giving up?",
+        "options": [
+          "He practised for ten minutes every evening.",
+          "He sold his guitar to a friend.",
+          "He asked someone else to play for him.",
+          "He decided to learn the piano instead."
+        ],
+        "answer": "A",
+        "explanation": "原文 'decided to practise for just ten minutes every evening' 的转述;其余选项文中未提或与原文相反。"
+      },
+      {
+        "q": "How did Leo feel a year later?",
+        "options": [
+          "Sorry that he had ever started.",
+          "Proud of what his daily effort had achieved.",
+          "Bored with playing the guitar.",
+          "Worried that he was getting worse."
+        ],
+        "answer": "B",
+        "explanation": "末句 'proud that a little daily effort had carried him so far'(短文后半段,覆盖不同位置)的转述。"
+      }
+    ]
+  }
+}

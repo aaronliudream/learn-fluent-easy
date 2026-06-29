@@ -1,0 +1,32 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(运动/竞赛主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Daniel joined the school running team, he came last in almost every race and often thought about quitting. Instead of giving up, he trained a little harder each week and learned from the runners who beat him. By the end of the year, he had cut his time by half a minute and felt proud of how far steady effort had carried him.",
+    "questions": [
+      {
+        "q": "What did Daniel do instead of quitting?",
+        "options": [
+          "He kept practising and learned from those who were quicker.",
+          "He left the team at once.",
+          "He asked to change to another sport.",
+          "He stopped going to races."
+        ],
+        "answer": "A",
+        "explanation": "原文 'trained a little harder each week and learned from the runners who beat him' 的转述;其余与文意相反。"
+      },
+      {
+        "q": "How did Daniel feel by the end of the year?",
+        "options": [
+          "Sorry that he had ever started.",
+          "Proud of what his steady effort had achieved.",
+          "Angry with his teammates.",
+          "Bored with running."
+        ],
+        "answer": "B",
+        "explanation": "末句 'felt proud of how far steady effort had carried him'(短文后半,覆盖不同位置)。"
+      }
+    ]
+  }
+}

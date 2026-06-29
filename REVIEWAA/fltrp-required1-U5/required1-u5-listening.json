@@ -1,0 +1,421 @@
+{
+  "volume": "required1",
+  "unit": "U5",
+  "topic": "Into the Wild",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社(新标准)2019必修第一册 Unit 5 同主题听力(计划观鸟之行/动物迁徙/动物园之辩/金斑蝶/拍摄野生动物的建议/如何尊重自然)。用词限 U5/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U5 听力·对话 Planning a Wildlife Trip",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lily: Where do you want to go this weekend, Tom?",
+        "Tom: I'd love to visit the national park to watch wild birds.",
+        "Lily: That sounds great. What do you hope to see there?",
+        "Tom: Mostly eagles. I really want to take a photo of one flying.",
+        "Lily: Then we should get up very early in the morning.",
+        "Tom: Yes, dawn is the time when most birds are active.",
+        "Lily: Good idea. I'll bring my camera too.",
+        "Tom: Perfect. Remember to stay quiet so we don't frighten them away."
+      ],
+      "translation_cn": "Lily 问 Tom 周末想去哪;Tom 想去国家公园观野鸟,主要想拍飞翔的鹰;两人决定清晨早起,因为黎明时鸟最活跃;Lily 也带相机;Tom 提醒要保持安静,以免吓跑鸟。",
+      "questions": [
+        {
+          "stem": "Where does Tom want to go this weekend?",
+          "options": [
+            "To the national park.",
+            "To a shopping centre.",
+            "To the seaside.",
+            "To a friend's house."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom mainly hope to see?",
+          "options": [
+            "Wild horses.",
+            "Eagles.",
+            "Whales.",
+            "Snakes."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do they decide to get up early?",
+          "options": [
+            "Because most birds are active at dawn.",
+            "To avoid the rain.",
+            "To buy cheap tickets.",
+            "Because the park closes at noon."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What will Lily bring along?",
+          "options": [
+            "A map.",
+            "Her camera.",
+            "Some food.",
+            "A warm coat."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Tom remind Lily to do?",
+          "options": [
+            "Walk as fast as possible.",
+            "Sing on the way.",
+            "Stay quiet so they do not frighten the birds.",
+            "Leave the camera at home."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U5 听力·短文 Why Animals Travel",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many animals do not spend the whole year in one place.",
+        "When food runs low in winter, they move to warmer areas.",
+        "Some travel a long way to find a safe place for their young.",
+        "Birds, fish and even some insects make these yearly journeys.",
+        "The trips are full of danger, but they help the animals live on."
+      ],
+      "translation_cn": "许多动物并非整年待在一个地方;冬天食物变少时,它们迁往温暖地区;有些长途跋涉为幼崽寻找安全之地;鸟、鱼甚至一些昆虫都进行这样的年度旅程;旅途充满危险,但帮助动物生存下去。",
+      "questions": [
+        {
+          "stem": "What do many animals NOT do?",
+          "options": [
+            "Look for food.",
+            "Move in winter.",
+            "Care for their young.",
+            "Spend the whole year in one place."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why do animals move when winter comes?",
+          "options": [
+            "Food becomes hard to find.",
+            "They enjoy the cold.",
+            "They want to swim.",
+            "They are bored."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do some animals travel a long way?",
+          "options": [
+            "To meet people.",
+            "To find a safe place for their young.",
+            "To find shops.",
+            "To get lost."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which animals make these yearly journeys?",
+          "options": [
+            "Only large animals.",
+            "Only sea animals.",
+            "Birds, fish and even some insects.",
+            "No animals at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do these dangerous trips help animals do?",
+          "options": [
+            "Forget the way home.",
+            "Stop eating.",
+            "Sleep all winter.",
+            "Live on and survive."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U5 听力·对话 The Zoo Debate",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: I think zoos are good because they protect animals in danger.",
+        "Jack: But a zoo can never give an animal its real home in the wild.",
+        "Mia: That's true, yet zoos help children learn about animals.",
+        "Jack: They can learn from films and books instead.",
+        "Mia: Still, seeing a real tiger is not the same as watching a film.",
+        "Jack: I agree it's exciting, but I worry the animals are not free.",
+        "Mia: So you think zoos are built more for people than for animals?",
+        "Jack: Exactly. That's my biggest reason for being against them."
+      ],
+      "translation_cn": "Mia 认为动物园好,因为能保护濒危动物;Jack 认为动物园永远给不了动物真正的野外家园;Mia 说动物园能让孩子了解动物;Jack 说看影片和书也能学;Mia 说亲眼看真老虎和看影片不一样;Jack 担心动物不自由,认为动物园更多是为人而建——这是他反对的最大理由。",
+      "questions": [
+        {
+          "stem": "Why does Mia think zoos are good?",
+          "options": [
+            "They protect animals in danger.",
+            "They make a lot of money.",
+            "They are quiet places.",
+            "They are easy to build."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Jack's first point against zoos?",
+          "options": [
+            "Zoos are too small.",
+            "A zoo cannot give an animal its real wild home.",
+            "Zoos cost too much.",
+            "Zoos have no visitors."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Mia reply when Jack mentions films and books?",
+          "options": [
+            "She agrees films are best.",
+            "She says books are useless.",
+            "She says seeing a real tiger is not the same as a film.",
+            "She stops talking."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Jack worry about?",
+          "options": [
+            "The price of tickets.",
+            "The weather in the zoo.",
+            "The food for visitors.",
+            "That the animals are not free."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is Jack's biggest reason for being against zoos?",
+          "options": [
+            "He believes zoos are built more for people than for animals.",
+            "He dislikes children.",
+            "He thinks animals are boring.",
+            "He never visits zoos."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U5 听力·短文 The Monarch Butterfly",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Each autumn, monarch butterflies fly thousands of kilometres south.",
+        "For years, no one knew how they found the right way.",
+        "Scientists learned that the insect uses the sun to guide it.",
+        "Sadly, the number of monarchs has dropped very fast.",
+        "People are now working together to help them survive."
+      ],
+      "translation_cn": "每年秋天,黑脉金斑蝶向南飞行数千公里;多年来无人知道它们如何找到正确方向;科学家发现这种昆虫靠太阳指引;遗憾的是,金斑蝶数量下降得很快;如今人们正合力帮助它们生存。",
+      "questions": [
+        {
+          "stem": "When do the monarch butterflies fly south?",
+          "options": [
+            "Every morning.",
+            "Each autumn.",
+            "In summer only.",
+            "Once in their life."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did people NOT know for years?",
+          "options": [
+            "What the butterflies ate.",
+            "Where the butterflies slept.",
+            "How the butterflies found the right way.",
+            "How big the butterflies were."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What guides the butterfly, according to scientists?",
+          "options": [
+            "The wind.",
+            "Other birds.",
+            "The rivers.",
+            "The sun."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What has happened to the number of monarchs?",
+          "options": [
+            "It has dropped very fast.",
+            "It has stayed the same.",
+            "It has grown quickly.",
+            "It is unknown."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What are people doing now?",
+          "options": [
+            "Catching all of them.",
+            "Working together to help them survive.",
+            "Ignoring the problem.",
+            "Moving them to zoos."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U5 听力·对话 Advice for Watching Bears",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Ben: I'm going to photograph bears next week. Any advice?",
+        "Sara: Yes. Never get too close to a wild bear.",
+        "Ben: How close is too close?",
+        "Sara: Keep at least a hundred metres away to stay safe.",
+        "Ben: What if a bear suddenly looks at me?",
+        "Sara: Stay calm, don't run, and move back slowly.",
+        "Ben: That's good to know. Anything else?",
+        "Sara: Yes, always respect the animal. We are visitors in its world."
+      ],
+      "translation_cn": "Ben 下周要拍熊,向 Sara 求建议;Sara 说绝不要太靠近野熊,至少保持一百米;若熊忽然看着你,要保持冷静、别跑、慢慢后退;最后她说要永远尊重动物,我们是它世界里的客人。",
+      "questions": [
+        {
+          "stem": "What is Ben going to do next week?",
+          "options": [
+            "Sell his camera.",
+            "Visit a city.",
+            "Photograph bears.",
+            "Stay at home."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is Sara's first piece of advice?",
+          "options": [
+            "Feed the bears.",
+            "Shout at the bears.",
+            "Touch the bears.",
+            "Never get too close to a wild bear."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How far away should Ben stay to be safe?",
+          "options": [
+            "At least a hundred metres.",
+            "About one metre.",
+            "About ten metres.",
+            "As close as possible."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should Ben do if a bear looks at him?",
+          "options": [
+            "Run away fast.",
+            "Stay calm and move back slowly.",
+            "Throw something.",
+            "Climb a tree."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Sara say at the end?",
+          "options": [
+            "Bears are not real.",
+            "Cameras are useless.",
+            "Always respect the animal.",
+            "Bears love people."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U5 听力·短文 Respecting Wild Animals",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Wild animals are not pets, and they belong in nature.",
+        "When we visit their world, we should be quiet and careful.",
+        "We must never leave rubbish that could harm them.",
+        "Cutting down their forests takes away the homes they need.",
+        "If we respect them, both animals and people can live well."
+      ],
+      "translation_cn": "野生动物不是宠物,它们属于大自然;当我们进入它们的世界时,应保持安静和小心;绝不能留下可能伤害它们的垃圾;砍伐森林会夺走它们所需的家园;如果我们尊重它们,动物和人都能生活得很好。",
+      "questions": [
+        {
+          "stem": "What does the passage say about wild animals?",
+          "options": [
+            "They make good pets.",
+            "They like living in cities.",
+            "They are all dangerous.",
+            "They are not pets and belong in nature."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How should we behave when visiting their world?",
+          "options": [
+            "Quietly and carefully.",
+            "Loudly and freely.",
+            "Quickly and carelessly.",
+            "Angrily and rudely."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What must we never leave behind?",
+          "options": [
+            "Our cameras.",
+            "Rubbish that could harm them.",
+            "Our footprints.",
+            "Our maps."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does cutting down forests do?",
+          "options": [
+            "It helps the animals.",
+            "It makes them happy.",
+            "It takes away the homes they need.",
+            "It gives them more food."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What happens if we respect wild animals?",
+          "options": [
+            "Only people benefit.",
+            "Animals disappear faster.",
+            "Nothing changes at all.",
+            "Both animals and people can live well."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "grade": 12,
+  "content": {
+    "title": "被动语态综合·各时态被动 + 非谓语被动 速查",
+    "intro": "被动语态 = be 的相应形式 + 过去分词(done)。主语是动作的承受者(被…)时用被动。判断口诀:先看主语是否‘被动作’,再由时间标志/句法环境决定 be 用什么形式。",
+    "table": {
+      "headers": ["时态/结构", "被动形式 / 标志 / 例句"],
+      "rows": [
+        ["一般现在", "am/is/are done(today, usually):The book is loved by readers."],
+        ["一般过去", "was/were done(ago, last…, in 1997):It was written in 1997."],
+        ["一般将来", "will be done(tomorrow, next…):A film will be made next year."],
+        ["现在完成", "has/have been done(already, so far, since):It has been translated."],
+        ["过去完成", "had been done(by the time…, by 1997):It had been finished."],
+        ["现在进行", "is/are being done(now, Look!):Morrie is being weakened."],
+        ["过去进行", "was/were being done(while…, when… came):It was being recorded."],
+        ["情态被动", "must/should/can + be done:Values must be chosen by yourself."],
+        ["不定式被动", "to be done(need/want/ask + to be done):It needs to be passed on."],
+        ["动名词被动", "being done(介词 despite/after/without/by 后):Despite being weakened…"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主语是动作的发出者 → 仍用主动,别误用被动", "mark": "Mitch visited Morrie.(Mitch 主动探望)" },
+      { "rule": "主语是动作的承受者、常带 by… → 用被动", "mark": "Morrie was visited by Mitch.(莫里被探望)" },
+      { "rule": "情态/将来后的被动必须保留 be:must be done / will be done", "mark": "should be read √ / should read ×(若主语被读)" },
+      { "rule": "介词后用动名词被动 being done,不能用 to be done", "mark": "Despite being weakened √ / Despite to be weakened ×" }
+    ],
+    "why": [
+      "被动语态把‘动作的承受者’放到主语位置,强调被影响的人或物;当动作的发出者不重要、未知或泛指‘人们’时,常省略 by 短语。",
+      "无论哪种时态,变化的只是 be 这个部分;后面的过去分词 done 不变——抓住‘be 随时态变、done 不变’就不易错。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:给出动词原形,按时间标志/语境填正确的被动形式(is done / was done / has been done / is being done / had been done)。",
+      "非谓语:need/ask + to be done、介词 + being done、情态 + be done 的被动易漏 be 或 being。",
+      "主动 vs 被动:先判断主语是施动者还是受动者,再决定用不用被动(尤其 happen/rise/appear 等不及物动词无被动)。"
+    ],
+    "examVsReal": [
+      { "exam": "The window is being cleaned.(考试强调进行被动)", "real": "Someone's cleaning the window.", "note": "口语里常用主动 + someone/they 来代替被动,显得更自然" },
+      { "exam": "It is said that he is wise.(考试爱考 it is said/believed that…)", "real": "People say he's wise.", "note": "考试偏好被动套语,日常更常用 people say…" }
+    ]
+  }
+}

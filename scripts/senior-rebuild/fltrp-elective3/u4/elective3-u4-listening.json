@@ -1,0 +1,421 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "topic": "Artificial Intelligence",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社选择性必修第三册 Unit 4 同主题听力(智能音箱/AI 学习软件/AI 是威胁吗/AI 助农/能否和机器人做朋友/无处不在的 AI)。答案可在 transcript 找到依据,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 A Smart Speaker at Home",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lin: We just got a smart speaker for the living room.",
+        "Sam: Really? What can it actually do?",
+        "Lin: I can ask it to play music, check the weather, or turn off the lights.",
+        "Sam: That sounds useful. Does it understand you easily?",
+        "Lin: Most of the time. It even learns which songs I like.",
+        "Sam: Aren't you worried that it is always listening?",
+        "Lin: A little, so I switch it off when we have guests.",
+        "Sam: That's sensible. I might get one for my kitchen."
+      ],
+      "translation_cn": "林家客厅新添了一个智能音箱;Sam 问它能做什么;林说能放音乐、查天气、关灯;它大多时候听得懂,还学会了她喜欢的歌;Sam 问是否担心它一直在听;林说有点,所以来客人时会关掉;Sam 觉得明智,想给自己厨房也买一个。",
+      "questions": [
+        {
+          "stem": "Where did Lin put the smart speaker?",
+          "options": [
+            "In the living room.",
+            "In the garage.",
+            "In the garden.",
+            "On the roof."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can Lin ask the speaker to do?",
+          "options": [
+            "Cook the dinner.",
+            "Play music and turn off the lights.",
+            "Wash the car.",
+            "Walk the dog."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the speaker learn over time?",
+          "options": [
+            "Which songs Lin likes.",
+            "Lin's home address.",
+            "The price of food.",
+            "The neighbours' names."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Lin switch it off sometimes?",
+          "options": [
+            "It is completely broken.",
+            "She worries about privacy when guests come.",
+            "To save the music.",
+            "Because it is far too loud."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Sam decide at the end?",
+          "options": [
+            "He will never use one.",
+            "He wants to sell his own.",
+            "He may get one for his kitchen.",
+            "He will give Lin some money."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 An AI Study App",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many students now use an AI app to help them learn.",
+        "The app gives each learner exercises at the right level.",
+        "If you make a mistake, it explains the rule in a simple way.",
+        "It also remembers the words you find hard and tests them again.",
+        "Used well, such an app can make study faster and more fun."
+      ],
+      "translation_cn": "如今许多学生用 AI 软件帮助学习;软件给每位学习者难度合适的练习;若答错,它会简单地讲解规则;它还会记住你觉得难的单词,再次考你;用得好,这样的软件能让学习更快、更有趣。",
+      "questions": [
+        {
+          "stem": "Who uses the AI app?",
+          "options": [
+            "Only teachers.",
+            "Only doctors.",
+            "Only farmers.",
+            "Many students."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the app give each learner?",
+          "options": [
+            "Exercises at the right level.",
+            "Free meals.",
+            "New phones.",
+            "Bus tickets."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happens if you make a mistake?",
+          "options": [
+            "It turns itself off.",
+            "It explains the rule in a simple way.",
+            "It charges you money.",
+            "It says nothing at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which words does the app test again?",
+          "options": [
+            "The words you already know well.",
+            "Only your own name.",
+            "The words you find difficult.",
+            "No words at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the main message of the passage?",
+          "options": [
+            "Apps are useless for study.",
+            "Students should never use apps.",
+            "Apps only waste time.",
+            "A good AI app can make study easier."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Is AI a Threat?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Did you read that AI could be either the best or the worst thing for us?",
+        "Tom: Yes, a famous scientist said that. It really made me think.",
+        "Mia: I feel AI is mostly good. It can solve problems that are too hard for people.",
+        "Tom: True, but what if a machine becomes too powerful one day?",
+        "Mia: Then we need clear rules to keep it under control.",
+        "Tom: I agree. The danger is not the tool itself but how we use it.",
+        "Mia: Exactly. We should welcome AI, yet stay careful.",
+        "Tom: Well said. Fear alone will not help us."
+      ],
+      "translation_cn": "Mia 问 Tom 是否读到 AI 可能是对人类最好或最坏的东西;Tom 说一位著名科学家这么讲,引人深思;Mia 觉得 AI 大体是好的,能解决人类难以应对的问题;Tom 担心机器有朝一日变得太强大;Mia 说那就需要明确规则加以控制;Tom 同意,危险不在工具本身,而在我们如何使用;两人一致认为既要欢迎 AI,又要保持谨慎;光靠恐惧无济于事。",
+      "questions": [
+        {
+          "stem": "What did the famous scientist say about AI?",
+          "options": [
+            "It could be either the best or the worst thing.",
+            "It is completely useless.",
+            "It will never change at all.",
+            "It is only a simple game."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Mia think AI is mostly good?",
+          "options": [
+            "It is cheap to buy.",
+            "It can solve very hard problems.",
+            "It looks beautiful.",
+            "It never needs any power."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What worries Tom?",
+          "options": [
+            "Running out of films.",
+            "Losing his mobile phone.",
+            "A machine becoming too powerful.",
+            "The bad weather."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Mia say we need?",
+          "options": [
+            "More fear of machines.",
+            "To stop all science.",
+            "To ignore the whole problem.",
+            "Clear rules to keep AI under control."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do they finally agree on?",
+          "options": [
+            "Welcome AI but remain careful.",
+            "Destroy every machine.",
+            "Trust AI completely.",
+            "Never discuss it again."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 AI on the Farm",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Artificial intelligence is now helping farmers grow food.",
+        "Small flying machines can check the fields and find weak plants.",
+        "Smart systems decide exactly when the crops need water.",
+        "This saves water and helps farmers harvest more.",
+        "Thanks to such tools, less food is wasted each year."
+      ],
+      "translation_cn": "人工智能如今正帮助农民种植粮食;小型飞行器能巡查农田、找出长势弱的作物;智能系统精确决定庄稼何时需要浇水;这样既节水又帮农民提高收成;有了这些工具,每年浪费的粮食更少了。",
+      "questions": [
+        {
+          "stem": "Who is AI helping in this passage?",
+          "options": [
+            "Pilots.",
+            "Farmers.",
+            "Doctors.",
+            "Singers."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can the small flying machines do?",
+          "options": [
+            "Cook hot meals.",
+            "Sell tickets.",
+            "Check fields and find weak plants.",
+            "Paint houses."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do the smart systems decide?",
+          "options": [
+            "Which songs to play.",
+            "Where to park.",
+            "What clothes to wear.",
+            "When the crops need water."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is one result of using these tools?",
+          "options": [
+            "Farmers can harvest more food.",
+            "Plants grow much more slowly.",
+            "More water is wasted.",
+            "The fields disappear."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happens to food waste?",
+          "options": [
+            "More food is thrown away.",
+            "Less food is wasted each year.",
+            "Food becomes useless.",
+            "No food is ever grown."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 Could You Be Friends with a Robot?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: If a robot pet acted just like a real dog, could you love it?",
+        "Ben: Maybe. A boy in a story I read truly loved his robot dog.",
+        "Anna: But a robot only pretends to love you. It is just a machine.",
+        "Ben: How can we be sure? We never really know what is inside.",
+        "Anna: That's a fair point. Still, a real animal is alive.",
+        "Ben: For the boy, what mattered was how he felt about it.",
+        "Anna: So friendship might be more about feelings than about metal.",
+        "Ben: Right. Perhaps the heart decides, not the wires."
+      ],
+      "translation_cn": "Anna 问 Ben:如果机器宠物表现得跟真狗一模一样,你能爱它吗;Ben 说也许吧,他读过的故事里有个男孩真心爱他的机器狗;Anna 说机器只是假装爱你,它不过是台机器;Ben 说我们怎能确定,谁也不真正知道里面是什么;Anna 承认有理,但真正的动物是活的;Ben 说对那男孩而言,重要的是他对它的感受;两人觉得友谊也许更多关乎感情而非金属;或许做决定的是心,而不是电线。",
+      "questions": [
+        {
+          "stem": "What does Anna ask at the start?",
+          "options": [
+            "Where to buy a real dog.",
+            "How to fix a broken phone.",
+            "Whether you could love a lifelike robot pet.",
+            "When the next bus comes."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did the boy in the story do?",
+          "options": [
+            "He sold his robot dog.",
+            "He feared all robots.",
+            "He never had any pet.",
+            "He truly loved his robot dog."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why does Anna doubt a robot's love?",
+          "options": [
+            "She thinks it only pretends and is just a machine.",
+            "She says it costs too much.",
+            "She finds it too quiet.",
+            "She says it eats too much."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Ben say we can never be sure of?",
+          "options": [
+            "The price of robots.",
+            "What is really inside another being.",
+            "The colour of the dog.",
+            "The time of day."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they decide friendship may depend on?",
+          "options": [
+            "Money more than love.",
+            "Size more than speed.",
+            "Feelings more than metal.",
+            "Noise more than care."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 AI All Around Us",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "These days, artificial intelligence is hidden in many everyday things.",
+        "It suggests films we might like and answers our spoken questions.",
+        "Most of the time, we hardly notice that it is even there.",
+        "AI is not magic, and it is not something to fear.",
+        "If we use it wisely, it can quietly make life better."
+      ],
+      "translation_cn": "如今人工智能藏在许多日常事物里;它会推荐我们可能喜欢的电影,回答我们口头的问题;大多数时候,我们几乎察觉不到它的存在;AI 不是魔法,也不是用来害怕的东西;只要善加利用,它能悄悄让生活变得更好。",
+      "questions": [
+        {
+          "stem": "Where is AI hidden, according to the passage?",
+          "options": [
+            "Only in space rockets.",
+            "Only in hospitals.",
+            "Nowhere at all.",
+            "In many everyday things."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is one thing AI does?",
+          "options": [
+            "Suggests films and answers questions.",
+            "Cooks our dinner.",
+            "Cleans the streets.",
+            "Drives the trains."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How often do we notice AI?",
+          "options": [
+            "We always notice it.",
+            "We hardly notice it.",
+            "We fear it every day.",
+            "We switch it off daily."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the speaker say about fearing AI?",
+          "options": [
+            "It is extremely dangerous.",
+            "It is pure magic.",
+            "It is not something to fear.",
+            "It should be banned at once."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can AI do if used wisely?",
+          "options": [
+            "Make life much worse.",
+            "Replace all people.",
+            "Stop all progress.",
+            "Quietly make life better."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

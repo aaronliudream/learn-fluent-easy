@@ -1,0 +1,421 @@
+{
+  "volume": "elective1",
+  "unit": "U5",
+  "topic": "Revealing Nature",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "外研社选必一 Unit 5 同主题听力(逛野生动物园/蜜蜂的重要/新蛙采访/大熊猫/逛植物园/保护自然小贴士)。用词限 U5/初中/常见词,答案唯一且 transcript 可查,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U5 听力·对话 A Trip to the Wildlife Park",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lucy: This weekend, would you like to visit the new wildlife park with me?",
+        "Tom: That sounds great! Which animals can we see there?",
+        "Lucy: They have tigers, monkeys and lots of beautiful birds.",
+        "Tom: I'd love to see the tigers most of all. When should we go?",
+        "Lucy: Let's go on Saturday morning, when the animals are most active.",
+        "Tom: Good idea. Should we bring our cameras?",
+        "Lucy: Yes, but remember we must stay quiet and not feed the animals.",
+        "Tom: Of course. I can't wait for Saturday!"
+      ],
+      "translation_cn": "露西约汤姆周末去新开的野生动物园;那里有老虎、猴子和许多漂亮的鸟;汤姆最想看老虎;两人决定周六上午去,因为动物那时最活跃;露西提醒要保持安静、不要喂动物。",
+      "questions": [
+        {
+          "stem": "Where does Lucy want to go this weekend?",
+          "options": [
+            "To a wildlife park.",
+            "To a coral reef.",
+            "To a museum.",
+            "To the seaside."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which animal does Tom want to see most?",
+          "options": [
+            "The monkeys.",
+            "The tigers.",
+            "The birds.",
+            "The fish."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When do they decide to go?",
+          "options": [
+            "On Saturday morning.",
+            "On Sunday evening.",
+            "On Friday night.",
+            "On Monday afternoon."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Lucy suggest going in the morning?",
+          "options": [
+            "The tickets are cheaper then.",
+            "The animals are most active then.",
+            "The park is empty then.",
+            "It is warmer then."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Lucy say they must NOT do?",
+          "options": [
+            "Bring a camera.",
+            "Stay quiet.",
+            "Feed the animals.",
+            "Arrive early."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U5 听力·短文 Why Bees Matter",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Bees may be small, but they are very important to nature.",
+        "As they move from flower to flower, they help plants make seeds and fruit.",
+        "Without bees, many of the foods we eat every day would disappear.",
+        "Sadly, the number of bees has been falling in many countries.",
+        "We can help them by planting flowers and using fewer chemicals in our gardens."
+      ],
+      "translation_cn": "蜜蜂虽小,却对自然非常重要;它们在花间穿梭,帮助植物结出种子和果实;没有蜜蜂,我们每天吃的许多食物都会消失;遗憾的是,许多国家的蜜蜂数量一直在下降;我们可以多种花、少用化学药剂来帮助它们。",
+      "questions": [
+        {
+          "stem": "What does the passage say about bees?",
+          "options": [
+            "They are harmful to plants.",
+            "They are the largest insects.",
+            "They never visit flowers.",
+            "They are very important to nature."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How do bees help plants?",
+          "options": [
+            "They help plants make seeds and fruit.",
+            "They water the plants.",
+            "They eat harmful insects.",
+            "They keep the soil warm."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What would happen without bees?",
+          "options": [
+            "Flowers would grow faster.",
+            "Many of our foods would disappear.",
+            "The weather would change.",
+            "Other insects would die."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What has been happening to the number of bees?",
+          "options": [
+            "It has been rising fast.",
+            "It has stayed the same.",
+            "It has been falling.",
+            "It has doubled."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How can people help bees?",
+          "options": [
+            "By keeping them in cages.",
+            "By moving them to cities.",
+            "By feeding them sugar.",
+            "By planting flowers and using fewer chemicals."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U5 听力·对话 A New Kind of Frog",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Host: Today we are talking to Dr Lee, who found a new kind of frog. Welcome!",
+        "Dr Lee: Thank you. Yes, we discovered it deep in the rainforest last year.",
+        "Host: How is this frog different from the others?",
+        "Dr Lee: It is bright blue, and it is no bigger than your thumb.",
+        "Host: Amazing! How did you know it was really a new species?",
+        "Dr Lee: We compared its body carefully with every frog we already knew.",
+        "Host: And what will you name it?",
+        "Dr Lee: We named it after the forest where it lives, to remind people to protect that place."
+      ],
+      "translation_cn": "主持人采访发现新蛙的李博士;李博士说去年在雨林深处发现了它;这种蛙亮蓝色、只有拇指大小;为确认是新物种,他们把它的身体与已知的每种蛙仔细比较;他们以它栖息的森林为它命名,以提醒人们保护那片森林。",
+      "questions": [
+        {
+          "stem": "What did Dr Lee find?",
+          "options": [
+            "A new kind of frog.",
+            "An ancient tortoise.",
+            "A rare flower.",
+            "A blue bird."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where was it discovered?",
+          "options": [
+            "High on a mountain.",
+            "Deep in the rainforest.",
+            "Under the sea.",
+            "In a city park."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the frog look like?",
+          "options": [
+            "It is grey and very large.",
+            "It has no colour at all.",
+            "It is bright blue and very small.",
+            "It looks like a snake."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How did the team make sure it was a new species?",
+          "options": [
+            "They asked the local people.",
+            "They guessed from its colour.",
+            "They counted how many there were.",
+            "They compared it with frogs they already knew."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why did they name it after the forest?",
+          "options": [
+            "To remind people to protect the forest.",
+            "Because the forest paid them.",
+            "Because the name was easy to say.",
+            "To make the frog famous."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U5 听力·短文 The Giant Panda",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The giant panda is one of the best-loved animals in China.",
+        "Although it is a kind of bear, it eats mostly bamboo.",
+        "A panda may spend over twelve hours a day just eating.",
+        "Years ago, pandas were in great danger because their forests were cut down.",
+        "Thanks to careful protection, their numbers are now slowly rising again."
+      ],
+      "translation_cn": "大熊猫是中国最受喜爱的动物之一;它虽是一种熊,却主要吃竹子;一只熊猫一天可能花十二个多小时进食;多年前,因森林被砍伐,熊猫曾陷入巨大危险;由于精心保护,如今它们的数量正在缓慢回升。",
+      "questions": [
+        {
+          "stem": "Where is the giant panda best loved?",
+          "options": [
+            "In Africa.",
+            "In China.",
+            "In Australia.",
+            "In the ocean."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the panda mostly eat?",
+          "options": [
+            "Fish.",
+            "Grass.",
+            "Bamboo.",
+            "Insects."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How long may a panda spend eating each day?",
+          "options": [
+            "About one hour.",
+            "Only at night.",
+            "Less than ten minutes.",
+            "Over twelve hours."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why were pandas once in great danger?",
+          "options": [
+            "Their forests were cut down.",
+            "They stopped eating bamboo.",
+            "Hunters wanted their wool.",
+            "The weather grew too cold."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is happening to panda numbers now?",
+          "options": [
+            "They are falling fast.",
+            "They are slowly rising.",
+            "They have all disappeared.",
+            "They never change."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U5 听力·对话 A Visit to the Botanical Garden",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Our biology teacher wants us to visit the botanical garden. Are you coming?",
+        "Jack: Definitely. I've heard they have plants from all over the world.",
+        "Mia: They do. There is even a special house full of plants that eat insects.",
+        "Jack: Plants that eat insects? I really want to see those!",
+        "Mia: Me too. We also need to choose one plant and write a short report.",
+        "Jack: Which plant will you choose?",
+        "Mia: I think I'll write about the giant water lily. Its leaves are huge.",
+        "Jack: Good choice. I'll write about the insect-eating plants, then."
+      ],
+      "translation_cn": "米娅约杰克去生物老师安排的植物园参观;那里有来自世界各地的植物;甚至有一间专门养食虫植物的温室;杰克特别想看食虫植物;参观后每人要选一种植物写一篇短报告;米娅打算写叶子巨大的王莲;杰克则决定写食虫植物。",
+      "questions": [
+        {
+          "stem": "Where does the teacher want the students to go?",
+          "options": [
+            "To the wildlife park.",
+            "To the seaside.",
+            "To the botanical garden.",
+            "To a farm."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What special plants are kept in one house?",
+          "options": [
+            "Plants that glow at night.",
+            "Plants that sing.",
+            "Plants that walk.",
+            "Plants that eat insects."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What must each student do after the visit?",
+          "options": [
+            "Choose a plant and write a report.",
+            "Draw a map of the garden.",
+            "Collect some seeds.",
+            "Take care of a plant at home."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which plant will Mia write about?",
+          "options": [
+            "The insect-eating plants.",
+            "The giant water lily.",
+            "The bamboo.",
+            "The coral."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which plant will Jack choose?",
+          "options": [
+            "The giant water lily.",
+            "The sunflower.",
+            "The insect-eating plants.",
+            "The mangrove."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U5 听力·短文 A Tip for Protecting Nature",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple way for anyone to help protect nature.",
+        "You do not need to travel far or spend a lot of money.",
+        "Start in your own neighbourhood by keeping it clean and green.",
+        "Plant a tree, save water, and never drop litter in wild places.",
+        "Small actions, repeated by millions of people, can truly change the world."
+      ],
+      "translation_cn": "这里有一个人人都能保护自然的简单方法;你不必远行,也不必花很多钱;从自己的社区做起,保持它干净、绿色;种一棵树、节约用水、绝不在野外乱扔垃圾;当千百万人重复这些小小的行动时,就能真正改变世界。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only scientists.",
+            "Only park keepers.",
+            "Only rich people.",
+            "Anyone who wants to help nature."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Does helping nature need a lot of travel and money?",
+          "options": [
+            "No, you can start close to home.",
+            "Yes, you must travel far.",
+            "Yes, it is very expensive.",
+            "Only if you go abroad."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where should you start?",
+          "options": [
+            "In a distant country.",
+            "In your own neighbourhood.",
+            "On a high mountain.",
+            "Deep in the ocean."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is one action the speaker suggests?",
+          "options": [
+            "Buy more new things.",
+            "Keep wild animals at home.",
+            "Plant a tree and save water.",
+            "Build a bigger house."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can small actions do when many people repeat them?",
+          "options": [
+            "Waste a lot of time.",
+            "Harm the environment.",
+            "Cost a lot of money.",
+            "Truly change the world."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

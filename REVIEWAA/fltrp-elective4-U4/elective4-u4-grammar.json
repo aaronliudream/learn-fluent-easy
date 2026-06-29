@@ -1,0 +1,745 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "grammar_title": "定语从句综合复习(限制/非限制 · 关系代词 who/which/that/whose · 关系副词 when/where/why 与介词+which)",
+  "source": "外研社(新标准)选择性必修第四册 Unit 4 Using language: Review attributive clauses。句子地道、围绕创业/玫瑰/经济主题,答案唯一(干扰项为错误关系词)。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "关系代词 who/whom/which/that/whose(限制性)",
+      "overview": "先行词指人用 who(主)/whom(宾);指物用 which;所有格用 whose;先行词被 all/everything/the only/序数词修饰或为不定代词时只能用 that。"
+    },
+    {
+      "code": "u4.02",
+      "point": "关系副词 when/where/why 与介词+which",
+      "overview": "从句只缺状语时:时间用 when(=on/in which)、地点用 where(=in/at which)、原因用 why(=for which);介词后只能用 which,不用 where/when/that。"
+    },
+    {
+      "code": "u4.03",
+      "point": "非限制性定语从句(逗号 + which/who/whose · 整句指代 · of which/whom · as)",
+      "overview": "逗号后非限制性从句指人用 who/whom、指物用 which、所有格用 whose,绝不用 that;which 可指代前面整句话;\"of which/whom\"表部分;\"As is known\"为固定 as 从句。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "The entrepreneur ____ started the rose farm is now famous all over Asia.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 entrepreneur 指人、从句缺主语 → 用指人的关系代词 who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The investors ____ we met in the studio liked her business plan.",
+      "options": [
+        "which",
+        "whom",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 investors 指人、在从句中作 met 的宾语、且要排除 who/that → 用 whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "A bonus is money ____ rewards workers for their hard effort.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 money 指物、从句缺主语、不与 who 同现 → 用指物的 which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The company ____ products sell well across Asia is hiring more staff.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 company、从句缺 products 前的所有格(公司的产品)→ 用 whose。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The customers ____ bought her roses last spring came back again.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 customers 指人、从句缺主语 → 用 who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "This is the manager ____ trained all the new workers at the farm.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 manager 指人、从句缺主语 → 用 who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The flowers ____ the workers pick before sunrise are very fresh.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 flowers 指物、从句缺 pick 的宾语 → 用 which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The worker ____ idea saved the company money got a reward.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 worker、从句缺 idea 前的所有格(工人的主意)→ 用 whose。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The plan ____ she presented on television finally won support.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 plan 指物、从句缺 presented 的宾语 → 用 which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "There is the consultant ____ gave the young owner useful advice.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 consultant 指人、从句缺主语 → 用 who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The farmers ____ she hired last year all work very hard.",
+      "options": [
+        "which",
+        "whose",
+        "whom",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 farmers 指人、在从句中作 hired 的宾语、排除 who/that → 用 whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The product ____ won the prize is completely organic.",
+      "options": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 product 指物、从句缺主语、不与 who 同现 → 用 which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The girl ____ parents grow roses decided to study business.",
+      "options": [
+        "whose",
+        "which",
+        "who",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 girl、从句缺 parents 前的所有格(女孩的父母)→ 用 whose。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Everything ____ he said about the profit later proved true.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词为不定代词 everything,定语从句只能用 that,不用 which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It was the only shop ____ stayed open after midnight.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词被 the only 修饰时,定语从句只能用 that。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The first customer ____ arrived in the morning got a free rose.",
+      "options": [
+        "which",
+        "whose",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词被序数词 the first 修饰时,用 that 引导定语从句。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "All ____ glitters is not gold, as the old saying goes.",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词为不定代词 all,定语从句用 that,不用 which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The brand ____ name is well known now sells abroad.",
+      "options": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 brand、从句缺 name 前的所有格(品牌的名字)→ 用 whose。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The team ____ he leads meets in the field every morning.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 team 指物(机构)、从句缺 leads 的宾语 → 用 which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The investor ____ we trusted most offered the largest sum.",
+      "options": [
+        "which",
+        "whose",
+        "where",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 investor 指人、作 trusted 的宾语、排除 who/that → 用 whom。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "This is the valley ____ roses grow wild all year round.",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 valley 表地点、从句不缺主宾(只缺地点状语)→ 用关系副词 where(= in which)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "I will never forget the day ____ I started my own business.",
+      "options": [
+        "where",
+        "when",
+        "why",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 day 表时间、从句只缺时间状语 → 用关系副词 when(= on which)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "That is the reason ____ she decided to return to her home town.",
+      "options": [
+        "when",
+        "where",
+        "why",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 reason 表原因、从句缺原因状语 → 用关系副词 why(= for which)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The town ____ she grew up has become famous for its roses.",
+      "options": [
+        "which",
+        "when",
+        "why",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 town 表地点、从句只缺地点状语 → 用 where。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "2017 was the year ____ her small company was set up.",
+      "options": [
+        "when",
+        "where",
+        "why",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 year 表时间、从句只缺时间状语 → 用 when。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Tell me the reason ____ the roses must be picked before sunrise.",
+      "options": [
+        "when",
+        "why",
+        "where",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 reason、从句缺原因状语 → 用 why。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "This is the little shop ____ we buy fresh flowers every week.",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 shop 表地点、从句只缺地点状语 → 用 where。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "There was a moment ____ everyone in the village doubted her.",
+      "options": [
+        "where",
+        "why",
+        "which",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 moment 表时间、从句只缺时间状语 → 用 when。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The greenhouse in ____ the roses grow stays warm in winter.",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 in 后只能用 which,不能用 where/that;in which = where。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The early morning on ____ we pick the flowers is always busy.",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 on 后只能用 which,不能用 when/that;on which = when。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "This is the office ____ she makes all the big decisions.",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 office 表地点、从句只缺地点状语 → 用 where。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Do you remember the date ____ the big order was signed?",
+      "options": [
+        "where",
+        "why",
+        "which",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 date 表时间、从句只缺时间状语 → 用 when。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The market ____ she sells her roses opens early at dawn.",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 market 表地点、从句只缺地点状语 → 用 where。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The day on ____ the TV show aired changed her whole life.",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 on 后只能用 which;on which = when。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "He carefully explained the reason ____ the profits had fallen.",
+      "options": [
+        "when",
+        "where",
+        "why",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 reason、从句缺原因状语 → 用 why。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The village ____ she was born now grows roses for export.",
+      "options": [
+        "which",
+        "when",
+        "why",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 village 表地点、从句只缺地点状语 → 用 where。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The week ____ the first orders arrived was extremely busy.",
+      "options": [
+        "when",
+        "where",
+        "why",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 week 表时间、从句只缺时间状语 → 用 when。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "There are times ____ running your own business feels very hard.",
+      "options": [
+        "where",
+        "when",
+        "why",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 times 表时间、从句只缺时间状语 → 用 when。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The house in ____ she now lives is close to the rose fields.",
+      "options": [
+        "where",
+        "that",
+        "which",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 in 后只能用 which;in which = where。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "This is the city ____ many young start-ups first begin.",
+      "options": [
+        "which",
+        "when",
+        "why",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 city 表地点、从句只缺地点状语 → 用 where。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Zhang Yue, ____ grew up among roses, started her own farm.",
+      "options": [
+        "who",
+        "that",
+        "which",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性定语从句指人作主语,只能用 who;非限制性中不用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "She decided to grow roses, ____ surprised many of her friends.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "who"
+      ],
+      "answer_index": 1,
+      "explanation": "关系词指代前面整句话、引导非限制性从句作主语 → 用 which。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "My boss, ____ I respect very much, gave me a generous bonus.",
+      "options": [
+        "that",
+        "which",
+        "whom",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性从句中指人作宾语 → 用 whom;非限制性不用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The roses, ____ smell is wonderful, sell out almost every day.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性从句缺 smell 前的所有格(玫瑰的香味)→ 用 whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Mr Li, ____ company makes cosmetics, bought her whole crop.",
+      "options": [
+        "whose",
+        "which",
+        "that",
+        "who"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性从句缺 company 前的所有格(李先生的公司)→ 用 whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The deal suddenly failed, ____ disappointed the whole team.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "who"
+      ],
+      "answer_index": 1,
+      "explanation": "关系词指代前面整句话、引导非限制性从句作主语 → 用 which。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "She hired ten workers, all of ____ came from the same village.",
+      "options": [
+        "which",
+        "that",
+        "whom",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "\"all of + 关系代词\"指人 → 用 whom(all of whom)。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "He gave several reasons, none of ____ really convinced us.",
+      "options": [
+        "whom",
+        "that",
+        "what",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "\"none of + 关系代词\"指物(reasons)→ 用 which(none of which)。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The factory has fifty machines, most of ____ are brand new.",
+      "options": [
+        "which",
+        "whom",
+        "that",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "\"most of + 关系代词\"指物(machines)→ 用 which(most of which)。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Her parents, ____ still grow roses, are very proud of her.",
+      "options": [
+        "that",
+        "who",
+        "which",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性从句指人作主语 → 用 who。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "He invested all his savings, ____ was a very brave choice.",
+      "options": [
+        "that",
+        "what",
+        "which",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "关系词指代前面整句话、引导非限制性从句作主语 → 用 which。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The manager, ____ we all trust completely, made the final call.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性从句指人作宾语 → 用 whom。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Our products, ____ quality is high, are now sold overseas.",
+      "options": [
+        "whose",
+        "which",
+        "that",
+        "who"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性从句缺 quality 前的所有格(产品的质量)→ 用 whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ is well known, running a small business is never easy.",
+      "options": [
+        "Which",
+        "As",
+        "That",
+        "What"
+      ],
+      "answer_index": 1,
+      "explanation": "\"As is well known\"为固定的 as 引导的非限制性从句,放句首,which 不能放句首。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "She works extremely hard, ____ we all greatly admire.",
+      "options": [
+        "that",
+        "who",
+        "which",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "关系词指代前面整件事、引导非限制性从句作 admire 的宾语 → 用 which。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Tom, ____ father runs a bank, knows a lot about money.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性从句缺 father 前的所有格(汤姆的父亲)→ 用 whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The shop sells roses, ____ are all grown on a local farm.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性从句指物(roses)作主语 → 用 which;非限制性不用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "There were many guests, some of ____ were rich investors.",
+      "options": [
+        "which",
+        "whom",
+        "that",
+        "who"
+      ],
+      "answer_index": 1,
+      "explanation": "\"some of + 关系代词\"指人(guests)→ 用 whom(some of whom)。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The new plan worked very well, ____ pleased everyone at work.",
+      "options": [
+        "that",
+        "what",
+        "which",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "关系词指代前面整句话、引导非限制性从句作主语 → 用 which。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Mary, ____ I met at the flower fair, runs a small shop.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性从句指人作 met 的宾语 → 用 whom。"
+    }
+  ]
+}

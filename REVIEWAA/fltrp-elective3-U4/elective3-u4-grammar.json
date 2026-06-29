@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "grammar_title": "主谓一致(2):分数/百分比 of 短语 · 不定代词 · 就近原则与 there be",
+  "source": "外研社选择性必修第三册 Unit 4 Using Language:Subject-verb agreement (2)。句子地道、人工智能主题;每题只一个数(单/复)正确,其余为错误的数或非谓语形式,答案唯一。解析不引用选项字母。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "分数/百分比/most/half/part/the rest of + of 短语",
+      "overview": "分数、百分比、most/half/part/the rest of 等 + of + 名词作主语时,谓语与 of 后面的名词保持一致:of 后是不可数名词或单数→用单数;of 后是复数名词→用复数。"
+    },
+    {
+      "code": "u4.02",
+      "point": "不定代词 + many a / more than one / the number of",
+      "overview": "each/every/either/neither/one(of)/everyone/everything/someone/nobody/none(正式)作主语→单数;both/all(+复数)→复数,all/none(+不可数)→单数;many a + 单数名词、more than one + 单数名词、the number of→单数;a number of→复数。"
+    },
+    {
+      "code": "u4.03",
+      "point": "就近原则(either…or / neither…nor / not only…but also)与 there be",
+      "overview": "either…or、neither…nor、not only…but also 连接并列主语时,谓语与最近的那个主语保持一致;there be 句型的谓语与紧跟其后的第一个名词保持一致。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "Almost 50 per cent of US jobs ____ at risk from automation in the next 20 years.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "being"
+      ],
+      "answer_index": 0,
+      "explanation": "百分比 of 后是复数名词 jobs,谓语用复数 are。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Fifty per cent of my time ____ spent looking for restaurants before I got an AI assistant.",
+      "options": [
+        "were",
+        "was",
+        "be",
+        "being"
+      ],
+      "answer_index": 1,
+      "explanation": "of 后是不可数名词 time,谓语用单数 was。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Two-thirds of the information ____ now stored safely in the cloud.",
+      "options": [
+        "are",
+        "be",
+        "is",
+        "been"
+      ],
+      "answer_index": 2,
+      "explanation": "分数 of 后是不可数名词 information,谓语用单数 is。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Three quarters of the surface ____ made up of land in their design for the new planet.",
+      "options": [
+        "are",
+        "be",
+        "being",
+        "is"
+      ],
+      "answer_index": 3,
+      "explanation": "of 后是单数名词 surface,谓语用单数 is。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Forty per cent of the robots in the factory ____ controlled by a single program.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "been"
+      ],
+      "answer_index": 0,
+      "explanation": "of 后是复数名词 robots,谓语用复数 are。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The rest of the workers ____ worried about losing their jobs to machines.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "being"
+      ],
+      "answer_index": 1,
+      "explanation": "the rest of 后是复数名词 workers,谓语用复数 are。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The rest of the report ____ written by an AI in just a few seconds.",
+      "options": [
+        "were",
+        "be",
+        "was",
+        "being"
+      ],
+      "answer_index": 2,
+      "explanation": "the rest of 后是单数名词 report,谓语用单数 was。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "A third of the students ____ already using AI tools to do their homework.",
+      "options": [
+        "is",
+        "be",
+        "been",
+        "are"
+      ],
+      "answer_index": 3,
+      "explanation": "分数 of 后是复数名词 students,谓语用复数 are。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Half of the news we read today ____ produced with the help of technology.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "being"
+      ],
+      "answer_index": 0,
+      "explanation": "half of 后是不可数名词 news,谓语用单数 is。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Half of the journalists ____ afraid that machines will replace them.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "been"
+      ],
+      "answer_index": 1,
+      "explanation": "half of 后是复数名词 journalists,谓语用复数 are。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Twenty per cent of the energy ____ saved by the building's smart system.",
+      "options": [
+        "are",
+        "be",
+        "is",
+        "being"
+      ],
+      "answer_index": 2,
+      "explanation": "百分比 of 后是不可数名词 energy,谓语用单数 is。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Most of the world's problems ____ too complex for one expert to solve alone.",
+      "options": [
+        "is",
+        "be",
+        "been",
+        "are"
+      ],
+      "answer_index": 3,
+      "explanation": "most of 后是复数名词 problems,谓语用复数 are。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Most of the software on this phone ____ updated automatically overnight.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "being"
+      ],
+      "answer_index": 0,
+      "explanation": "most of 后是不可数名词 software,谓语用单数 is。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Part of the danger ____ that AI may act without any human control.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "been"
+      ],
+      "answer_index": 1,
+      "explanation": "part of 后是不可数名词 danger,谓语用单数 is。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Sixty per cent of the questions ____ answered correctly by the chatbot.",
+      "options": [
+        "is",
+        "be",
+        "are",
+        "being"
+      ],
+      "answer_index": 2,
+      "explanation": "百分比 of 后是复数名词 questions,谓语用复数 are。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Three fifths of the building ____ run by automatic systems.",
+      "options": [
+        "are",
+        "be",
+        "been",
+        "is"
+      ],
+      "answer_index": 3,
+      "explanation": "分数 of 后是单数名词 building,谓语用单数 is。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "A large proportion of taxi drivers ____ likely to lose their jobs to AI.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "being"
+      ],
+      "answer_index": 0,
+      "explanation": "proportion of 后是复数名词 drivers,谓语用复数 are。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Nearly 90 per cent of the work ____ done by robots on this production line.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "been"
+      ],
+      "answer_index": 1,
+      "explanation": "百分比 of 后是不可数名词 work,谓语用单数 is。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The majority of scientists ____ that AI must be carefully regulated.",
+      "options": [
+        "believes",
+        "to believe",
+        "believe",
+        "believing"
+      ],
+      "answer_index": 2,
+      "explanation": "the majority of 后是复数名词 scientists,谓语用复数 believe。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Two-thirds of the city's traffic ____ now guided by AI.",
+      "options": [
+        "are",
+        "be",
+        "been",
+        "is"
+      ],
+      "answer_index": 3,
+      "explanation": "分数 of 后是不可数名词 traffic,谓语用单数 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Each of the new robots ____ able to make simple decisions on its own.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "being"
+      ],
+      "answer_index": 0,
+      "explanation": "each of 作主语,看作单数,谓语用 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Every recommendation the assistant gives me ____ surprisingly useful.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "been"
+      ],
+      "answer_index": 1,
+      "explanation": "every + 单数主语 recommendation,谓语用 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "None of us ____ fully prepared for the challenges that AI will bring.",
+      "options": [
+        "are",
+        "be",
+        "is",
+        "being"
+      ],
+      "answer_index": 2,
+      "explanation": "none of us 作主语,正式用法看作单数,谓语用 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Neither of the two programs ____ able to feel real emotion.",
+      "options": [
+        "are",
+        "be",
+        "been",
+        "is"
+      ],
+      "answer_index": 3,
+      "explanation": "neither of 作主语,看作单数,谓语用 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Everyone in the research lab ____ excited about the new breakthrough.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "being"
+      ],
+      "answer_index": 0,
+      "explanation": "everyone 作主语,看作单数,谓语用 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Everything the machine learns ____ stored for future use.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "been"
+      ],
+      "answer_index": 1,
+      "explanation": "everything 作主语,看作单数,谓语用 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Each of the children ____ given a report showing their possible talents.",
+      "options": [
+        "are",
+        "be",
+        "is",
+        "being"
+      ],
+      "answer_index": 2,
+      "explanation": "each of 作主语,看作单数,谓语用 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "More than one expert ____ warned us about the dangers of AI.",
+      "options": [
+        "have",
+        "to have",
+        "having",
+        "has"
+      ],
+      "answer_index": 3,
+      "explanation": "more than one + 单数名词作主语,谓语用单数 has。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Many a student ____ dreamed of building a machine that can think.",
+      "options": [
+        "has",
+        "have",
+        "to have",
+        "having"
+      ],
+      "answer_index": 0,
+      "explanation": "many a + 单数名词作主语,谓语用单数 has。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Both of the engineers ____ working hard on the self-driving car.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "being"
+      ],
+      "answer_index": 1,
+      "explanation": "both of 作主语表复数,谓语用 are。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "All of the data ____ kept safe on the company's own servers.",
+      "options": [
+        "are",
+        "be",
+        "is",
+        "been"
+      ],
+      "answer_index": 2,
+      "explanation": "all + 不可数名词 data,谓语用单数 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "All of the workers ____ been trained to use the new system.",
+      "options": [
+        "has",
+        "to have",
+        "having",
+        "have"
+      ],
+      "answer_index": 3,
+      "explanation": "all + 复数名词 workers,谓语用复数 have。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "One of the testing companies ____ the talents of twins on its website.",
+      "options": [
+        "compares",
+        "compare",
+        "to compare",
+        "comparing"
+      ],
+      "answer_index": 0,
+      "explanation": "主语是 one(of 短语作定语),看作单数,谓语用 compares。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Someone ____ left a robot dog at the rocket station.",
+      "options": [
+        "have",
+        "has",
+        "to have",
+        "having"
+      ],
+      "answer_index": 1,
+      "explanation": "someone 作主语,看作单数,谓语用 has。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "A number of clients ____ been attracted to genetic testing for children.",
+      "options": [
+        "has",
+        "to have",
+        "have",
+        "having"
+      ],
+      "answer_index": 2,
+      "explanation": "a number of + 复数名词作主语表复数,谓语用 have。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The number of jobs at risk ____ rising every single year.",
+      "options": [
+        "are",
+        "be",
+        "being",
+        "is"
+      ],
+      "answer_index": 3,
+      "explanation": "the number of 作主语,看作单数,谓语用 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Either of the answers ____ acceptable to the judges of the contest.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "been"
+      ],
+      "answer_index": 0,
+      "explanation": "either of 作主语,看作单数,谓语用 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Nobody on the design team ____ sure what the AI will do next.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "being"
+      ],
+      "answer_index": 1,
+      "explanation": "nobody 作主语,看作单数,谓语用 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Each robot and each program ____ tested carefully before it is sold.",
+      "options": [
+        "are",
+        "be",
+        "is",
+        "been"
+      ],
+      "answer_index": 2,
+      "explanation": "each…and each… 作主语,看作单数,谓语用 is。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Neither of the scientists ____ willing to ignore the risks of AI.",
+      "options": [
+        "are",
+        "be",
+        "being",
+        "is"
+      ],
+      "answer_index": 3,
+      "explanation": "neither of 作主语,看作单数,谓语用 is。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Either the manager or the workers ____ going to test the new robot today.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "being"
+      ],
+      "answer_index": 0,
+      "explanation": "either…or 连接主语,谓语与最近的 workers 一致,用复数 are。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Neither the workers nor the manager ____ ready for such a big change.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "been"
+      ],
+      "answer_index": 1,
+      "explanation": "neither…nor 连接主语,谓语与最近的 manager 一致,用单数 is。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Not only the students but also the teacher ____ using AI tools now.",
+      "options": [
+        "are",
+        "be",
+        "is",
+        "being"
+      ],
+      "answer_index": 2,
+      "explanation": "not only…but also 连接主语,谓语与最近的 teacher 一致,用单数 is。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Not only the teacher but also the students ____ using AI tools now.",
+      "options": [
+        "is",
+        "be",
+        "been",
+        "are"
+      ],
+      "answer_index": 3,
+      "explanation": "not only…but also 连接主语,谓语与最近的 students 一致,用复数 are。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "There ____ a few machine-learning problems when the first cars reach the market.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "being"
+      ],
+      "answer_index": 0,
+      "explanation": "there be 与紧跟其后的 problems 一致,用复数 are。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "There ____ a real danger that such powerful AI could be misused.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "been"
+      ],
+      "answer_index": 1,
+      "explanation": "there be 与紧跟其后的 danger 一致,用单数 is。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Either the robot or the cars ____ able to learn from new data.",
+      "options": [
+        "is",
+        "be",
+        "are",
+        "being"
+      ],
+      "answer_index": 2,
+      "explanation": "either…or 连接主语,谓语与最近的 cars 一致,用复数 are。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Neither the cars nor the robot ____ able to feel tired or bored.",
+      "options": [
+        "are",
+        "be",
+        "been",
+        "is"
+      ],
+      "answer_index": 3,
+      "explanation": "neither…nor 连接主语,谓语与最近的 robot 一致,用单数 is。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "There ____ many taxi drivers who could lose their jobs to AI.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "being"
+      ],
+      "answer_index": 0,
+      "explanation": "there be 与紧跟其后的 drivers 一致,用复数 are。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Not only the journalists but also the editor ____ being replaced by software.",
+      "options": [
+        "are",
+        "is",
+        "be",
+        "been"
+      ],
+      "answer_index": 1,
+      "explanation": "not only…but also 连接主语,谓语与最近的 editor 一致,用单数 is。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Either you or your friend ____ to decide whether to trust the AI.",
+      "options": [
+        "have",
+        "to have",
+        "has",
+        "having"
+      ],
+      "answer_index": 2,
+      "explanation": "either…or 连接主语,谓语与最近的 your friend 一致,用单数 has。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Neither the engineers nor the designer ____ to blame for the error.",
+      "options": [
+        "are",
+        "be",
+        "being",
+        "is"
+      ],
+      "answer_index": 3,
+      "explanation": "neither…nor 连接主语,谓语与最近的 designer 一致,用单数 is。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "There ____ an assistant and several apps built into my new phone.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "been"
+      ],
+      "answer_index": 0,
+      "explanation": "there be 与紧跟其后的第一个名词 an assistant 一致,用单数 is。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "There ____ several apps and one assistant built into my new phone.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "being"
+      ],
+      "answer_index": 1,
+      "explanation": "there be 与紧跟其后的第一个名词 several apps 一致,用复数 are。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Not only the company but also its clients ____ worried about privacy.",
+      "options": [
+        "is",
+        "be",
+        "are",
+        "been"
+      ],
+      "answer_index": 2,
+      "explanation": "not only…but also 连接主语,谓语与最近的 clients 一致,用复数 are。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Either the program or the robots ____ making the final choice.",
+      "options": [
+        "is",
+        "be",
+        "being",
+        "are"
+      ],
+      "answer_index": 3,
+      "explanation": "either…or 连接主语,谓语与最近的 robots 一致,用复数 are。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Neither the robots nor the program ____ truly alive in any real sense.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "been"
+      ],
+      "answer_index": 0,
+      "explanation": "neither…nor 连接主语,谓语与最近的 program 一致,用单数 is。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Not only the driver but also the passengers ____ protected by the safety system.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "being"
+      ],
+      "answer_index": 1,
+      "explanation": "not only…but also 连接主语,谓语与最近的 passengers 一致,用复数 are。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "There ____ no easy answer to the question of how to keep AI safe.",
+      "options": [
+        "are",
+        "be",
+        "is",
+        "been"
+      ],
+      "answer_index": 2,
+      "explanation": "there be 与紧跟其后的 answer 一致,用单数 is。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Either the scientists or the government ____ going to set the new rules.",
+      "options": [
+        "are",
+        "be",
+        "being",
+        "is"
+      ],
+      "answer_index": 3,
+      "explanation": "either…or 连接主语,谓语与最近的 government 一致,用单数 is。"
+    }
+  ]
+}

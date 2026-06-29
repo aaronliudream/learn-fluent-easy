@@ -1,0 +1,32 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(舞台与银幕主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Daniel first joined the school drama club, he was so shy that he could hardly say a word on stage. Instead of giving up, he practised his lines every evening and slowly learned to control his nerves. By the time of the final show, he played the leading role with confidence, and the whole audience rose to applaud him.",
+    "questions": [
+      {
+        "q": "What was Daniel like when he first joined the club?",
+        "options": [
+          "Too shy to speak much on stage.",
+          "Already a confident actor.",
+          "Angry with the other members.",
+          "Famous for his singing."
+        ],
+        "answer": "A",
+        "explanation": "首句说他太害羞,在台上几乎说不出话,即一开始很羞怯不敢开口;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did the audience react at the final show?",
+        "options": [
+          "They stood up and clapped for him.",
+          "They quietly left the theatre.",
+          "They asked him to start again.",
+          "They were disappointed by the play."
+        ],
+        "answer": "A",
+        "explanation": "末句说全场起立为他鼓掌(短文后半段,覆盖不同位置),即观众起身鼓掌喝彩。"
+      }
+    ]
+  }
+}

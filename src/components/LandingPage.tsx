@@ -4,6 +4,7 @@ import { useI18n } from "@/i18n/I18nProvider";
 import { LangToggleEnZh } from "@/i18n/LangToggleEnZh";
 import { T } from "@/i18n/T";
 import AiDashboardMock from "@/components/landing/AiDashboardMock";
+import DownloadsSection from "@/components/landing/DownloadsSection";
 import {
   ArrowRight,
   Award,
@@ -505,6 +506,9 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* ═══ 资料下载区(四学段卡之下·纯新增·DB 驱动,无数据自动隐藏) ═══ */}
+      <DownloadsSection />
 
       {/* ═══ AI Banner（左）+ 家长反馈（右） ═══ */}
       <section className="bg-white py-10 md:py-12">

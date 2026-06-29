@@ -7,6 +7,7 @@ import { resolveJuniorHubGrade } from "@/lib/juniorHub/resolveGrade";
 import { isJuniorGradeOpen } from "@/lib/juniorHub/access";
 import { useIsAdmin } from "@/hooks/useIsAdmin";
 import JuniorComingSoon from "@/components/junior/JuniorComingSoon";
+import { useStudySession } from "@/hooks/useStudySession";
 import type { JuniorHubGrade } from "@/lib/juniorHub/types";
 
 const GRADE_LABEL: Record<number, string> = { 8: "初二", 9: "初三" };
@@ -23,7 +24,7 @@ function BottomNav({ grade }: { grade: JuniorHubGrade }) {
   const isProfile = loc.pathname.includes("/profile") || loc.pathname.includes("/aihistory");
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-[#EEEAE0] bg-white/95 backdrop-blur">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-[#EEEAE0] bg-white/95 backdrop-blur md:hidden">
       <div className="mx-auto flex max-w-lg">
         <Link to={base} className={tab(isHome)}>
           <span className="text-xl">🏠</span>
@@ -50,6 +51,7 @@ export default function JuniorHubLayout() {
   const { grade: g } = useParams<{ grade: string }>();
   const grade = resolveJuniorHubGrade(g);
   const { isAdmin, loading } = useIsAdmin();
+  useStudySession(); // 学习时长埋点
 
   // 初二/初三整理中:非管理员拦截(覆盖闯关 hub 及全部子路由),防直链访问。
   if (!isJuniorGradeOpen(grade)) {

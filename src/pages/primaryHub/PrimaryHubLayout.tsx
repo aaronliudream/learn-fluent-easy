@@ -2,6 +2,7 @@ import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 import { PrimaryHubProvider } from "@/lib/primaryHub/context";
 import "@/lib/primaryHub/styles";
 import { resolvePrimaryGrade, writePrimaryGradeToStorage } from "@/lib/primaryGrade";
+import { useStudySession } from "@/hooks/useStudySession";
 import type { PrimaryHubGrade } from "@/lib/primaryHub/types";
 import { useEffect } from "react";
 
@@ -17,7 +18,7 @@ function BottomNav({ grade }: { grade: PrimaryHubGrade }) {
   const isProfile = loc.pathname.includes("/profile") || loc.pathname.includes("/aihistory");
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-[#EEEAE0] bg-white/95 backdrop-blur">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-[#EEEAE0] bg-white/95 backdrop-blur md:hidden">
       <div className="mx-auto flex max-w-lg">
         <Link to={base} className={tab("home", isHome)}>
           <span className="text-xl">🏠</span>
@@ -43,6 +44,7 @@ function BottomNav({ grade }: { grade: PrimaryHubGrade }) {
 export default function PrimaryHubLayout() {
   const { grade: g } = useParams<{ grade: string }>();
   const grade = resolvePrimaryGrade(g) as PrimaryHubGrade;
+  useStudySession(); // 学习时长埋点
 
   useEffect(() => {
     writePrimaryGradeToStorage(grade);

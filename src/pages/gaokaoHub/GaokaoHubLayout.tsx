@@ -4,6 +4,7 @@ import { GaokaoHubProvider } from "@/lib/gaokaoHub/context";
 import "@/lib/juniorHub/styles";
 import { resolveGaokaoHubGrade } from "@/lib/gaokaoHub/resolveGrade";
 import { readPublisherParam, withPublisher, DEFAULT_PUBLISHER, type Publisher } from "@/lib/gaokaoHub/publisher";
+import { useStudySession } from "@/hooks/useStudySession";
 import type { GaokaoHubGrade } from "@/lib/gaokaoHub/types";
 
 function BottomNav({ grade, publisher }: { grade: GaokaoHubGrade; publisher: Publisher }) {
@@ -19,7 +20,7 @@ function BottomNav({ grade, publisher }: { grade: GaokaoHubGrade; publisher: Pub
   const isProfile = loc.pathname.includes("/profile") || loc.pathname.includes("/aihistory");
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-[#EEEAE0] bg-white/95 backdrop-blur">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-[#EEEAE0] bg-white/95 backdrop-blur md:hidden">
       <div className="mx-auto flex max-w-lg">
         <Link to={wp(base)} className={tab(isHome)}>
           <span className="text-xl">🏠</span>
@@ -47,6 +48,7 @@ export default function GaokaoHubLayout() {
   const grade = resolveGaokaoHubGrade(g);
   const [sp] = useSearchParams();
   const publisher = readPublisherParam(sp);
+  useStudySession(); // 学习时长埋点
 
   return (
     <GaokaoHubProvider grade={grade} publisher={publisher}>

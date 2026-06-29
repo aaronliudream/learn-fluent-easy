@@ -51,10 +51,10 @@ export default function GaokaoHubLayout() {
   return (
     <GaokaoHubProvider grade={grade} publisher={publisher}>
       <div className="primary-hub-root mx-auto max-w-lg pb-20">
-        <div className="border-b border-[#EEEAE0] bg-white px-4 py-2">
+        <div className="border-b border-[#EEEAE0] bg-white px-4 py-2.5">
           <BackLink
             to={publisher === DEFAULT_PUBLISHER ? "/gaokao" : `/gaokao?publisher=${publisher}`}
-            className="text-sm text-muted-foreground"
+            className="inline-flex items-center gap-1 rounded-lg border border-indigo-300 bg-indigo-50 px-3 py-1.5 text-sm font-bold text-indigo-700 shadow-sm transition hover:bg-indigo-100 active:scale-95"
           >
             ← 返回高中专区
           </BackLink>

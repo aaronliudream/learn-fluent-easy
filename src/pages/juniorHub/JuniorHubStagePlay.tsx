@@ -164,6 +164,7 @@ function StageShell({
   stars,
   onBack,
   children,
+  prominentBack = false,
 }: {
   stageIdx: number;
   stageTitle: string;
@@ -171,13 +172,25 @@ function StageShell({
   stars: number;
   onBack: () => void;
   children: React.ReactNode;
+  /** 高中(方案B)用醒目的"返回单元"按钮;初中保持原样的裸"←"(零变化)。 */
+  prominentBack?: boolean;
 }) {
   return (
     <>
       <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
-        <button type="button" onClick={onBack} className="text-xl">
-          ←
-        </button>
+        {prominentBack ? (
+          <button
+            type="button"
+            onClick={onBack}
+            className="inline-flex shrink-0 items-center gap-1 rounded-lg border border-indigo-300 bg-indigo-50 px-3 py-1.5 text-sm font-bold text-indigo-700 shadow-sm transition hover:bg-indigo-100 active:scale-95"
+          >
+            ← 返回单元
+          </button>
+        ) : (
+          <button type="button" onClick={onBack} className="text-xl">
+            ←
+          </button>
+        )}
         <div className="text-lg font-bold">
           第 {stageIdx + 1} 关 · {stageTitle}
         </div>
@@ -2269,7 +2282,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
   })();
 
   return (
-    <StageShell stageIdx={stageIdx} stageTitle={stage.title} unit={unit} stars={stars} onBack={onBack}>
+    <StageShell stageIdx={stageIdx} stageTitle={stage.title} unit={unit} stars={stars} onBack={onBack} prominentBack={basePath.startsWith("/gaokao")}>
       {stageBody}
     </StageShell>
   );

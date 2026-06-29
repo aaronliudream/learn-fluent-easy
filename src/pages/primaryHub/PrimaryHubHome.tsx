@@ -34,6 +34,12 @@ export default function PrimaryHubHome() {
 
   return (
     <>
+      <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
+        <button type="button" onClick={() => nav("/primary")} className="text-xl" aria-label="返回小学专区">
+          ←
+        </button>
+        <div className="text-lg font-bold">{course.name}</div>
+      </div>
       <div className="bg-gradient-to-br from-[#FF6B35] to-[#FFB627] px-5 pb-6 pt-4 text-white">
         <div className="mb-3 flex items-center justify-between">
           <div className="flex items-center gap-2.5">

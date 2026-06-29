@@ -296,7 +296,8 @@
                   "Where is the museum shop.",
                   "science"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "博物馆商店在哪里?"
               },
               {
                 "audio": "It's near the door.",
@@ -306,7 +307,8 @@
                   "science",
                   "museum"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它在门旁边。"
               },
               {
                 "audio": "How can I get to the science museum?",
@@ -316,7 +318,8 @@
                   "How can I get to the science post office?",
                   "How can I get to the science museum."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我怎么去科学博物馆?"
               },
               {
                 "audio": "Turn left at the bookstore.",
@@ -326,7 +329,8 @@
                   "science",
                   "museum"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "在书店左转。"
               }
             ]
           },
@@ -620,7 +624,8 @@
                   "It's on foot.",
                   "by"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你怎么来学校?"
               },
               {
                 "audio": "Usually, I come on foot.",
@@ -630,7 +635,8 @@
                   "It's on foot.",
                   "by"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "通常我走路来。"
               },
               {
                 "audio": "Don't go at the red light!",
@@ -640,7 +646,8 @@
                   "by",
                   "bus"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "红灯不要走!"
               },
               {
                 "audio": "I must pay attention to the traffic lights!",
@@ -650,7 +657,8 @@
                   "by",
                   "bus"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我必须注意红绿灯!"
               }
             ]
           },
@@ -954,7 +962,8 @@
                   "visit",
                   "film"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你明天打算做什么?"
               },
               {
                 "audio": "I'm going to have an art lesson.",
@@ -964,7 +973,8 @@
                   "film",
                   "It's see a film."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我打算上一节美术课。"
               },
               {
                 "audio": "When are you going?",
@@ -974,7 +984,8 @@
                   "visit",
                   "film"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你什么时候去?"
               },
               {
                 "audio": "At 3 o'clock.",
@@ -984,7 +995,8 @@
                   "film",
                   "It's see a film."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "三点钟。"
               }
             ]
           },
@@ -1278,7 +1290,8 @@
                   "studies",
                   "puzzle"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你有什么爱好?"
               },
               {
                 "audio": "I like singing and doing kung fu.",
@@ -1288,7 +1301,8 @@
                   "puzzle",
                   "hiking"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我喜欢唱歌和练功夫。"
               },
               {
                 "audio": "Does he live in Sydney?",
@@ -1298,7 +1312,8 @@
                   "studies",
                   "puzzle"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "他住在悉尼吗?"
               },
               {
                 "audio": "No, he doesn't.",
@@ -1308,7 +1323,8 @@
                   "puzzle",
                   "hiking"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "不,他不住在那儿。"
               }
             ]
           },
@@ -1602,7 +1618,8 @@
                   "factory",
                   "worker"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "他是做什么工作的?"
               },
               {
                 "audio": "He's a businessman.",
@@ -1612,7 +1629,8 @@
                   "factory",
                   "worker"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "他是一名商人。"
               },
               {
                 "audio": "Where does he work?",
@@ -1622,7 +1640,8 @@
                   "factory",
                   "worker"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "他在哪里工作?"
               },
               {
                 "audio": "He works at sea.",
@@ -1632,7 +1651,8 @@
                   "worker",
                   "postman"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "他在海上工作。"
               }
             ]
           },
@@ -1925,7 +1945,8 @@
                   "angry",
                   "afraid"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你感觉怎么样?"
               },
               {
                 "audio": "I'm happy.",
@@ -1935,7 +1956,8 @@
                   "angry",
                   "afraid"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我很开心。"
               },
               {
                 "audio": "What's wrong?",
@@ -1945,7 +1967,8 @@
                   "What is wrong?",
                   "angry"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "怎么了?"
               },
               {
                 "audio": "I have a cold.",
@@ -1955,7 +1978,8 @@
                   "afraid",
                   "sad"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我感冒了。"
               }
             ]
           }
@@ -2255,7 +2279,8 @@
                   "younger",
                   "older"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你多高?"
               },
               {
                 "audio": "I'm 1.65 metres.",
@@ -2265,7 +2290,8 @@
                   "older",
                   "taller"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我1.65米。"
               },
               {
                 "audio": "What size are your shoes?",
@@ -2275,7 +2301,8 @@
                   "younger",
                   "older"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你的鞋子穿多大码?"
               },
               {
                 "audio": "Size 7.",
@@ -2285,7 +2312,8 @@
                   "older",
                   "taller"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "7码。"
               }
             ]
           },
@@ -2590,7 +2618,8 @@
                   "cleaned",
                   "stayed"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你上周末做了什么?"
               },
               {
                 "audio": "I cleaned my room.",
@@ -2600,7 +2629,8 @@
                   "cleaned",
                   "stayed"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我打扫了我的房间。"
               },
               {
                 "audio": "Did you see a film?",
@@ -2610,7 +2640,8 @@
                   "cleaned",
                   "stayed"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你看电影了吗?"
               },
               {
                 "audio": "Yes, I did.",
@@ -2620,7 +2651,8 @@
                   "stayed",
                   "washed"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "是的,我看了。"
               }
             ]
           },
@@ -2912,7 +2944,8 @@
                   "went",
                   "camp"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你去了哪里?"
               },
               {
                 "audio": "We went to Sanya.",
@@ -2922,7 +2955,8 @@
                   "went",
                   "camp"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我们去了三亚。"
               },
               {
                 "audio": "How did you go there?",
@@ -2932,7 +2966,8 @@
                   "went",
                   "camp"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你们怎么去的?"
               },
               {
                 "audio": "We went there by plane.",
@@ -2942,7 +2977,8 @@
                   "went",
                   "camp"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我们坐飞机去的。"
               }
             ]
           },
@@ -3235,7 +3271,8 @@
                   "grass",
                   "gym"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我以前的学校没有图书馆。"
               },
               {
                 "audio": "There is one now.",
@@ -3245,7 +3282,8 @@
                   "grass",
                   "gym"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "现在有一个了。"
               },
               {
                 "audio": "I was short.",
@@ -3255,7 +3293,8 @@
                   "grass",
                   "gym"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我以前很矮。"
               },
               {
                 "audio": "Now I'm tall.",
@@ -3265,7 +3304,8 @@
                   "grass",
                   "gym"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "现在我长高了。"
               }
             ]
           }

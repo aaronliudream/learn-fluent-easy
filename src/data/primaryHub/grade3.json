@@ -306,7 +306,8 @@
                   "pencil",
                   "eraser"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你好!我是迈克。"
               },
               {
                 "audio": "Hi! I'm Sarah.",
@@ -316,7 +317,8 @@
                   "pencil",
                   "eraser"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你好!我是萨拉。"
               },
               {
                 "audio": "Hello, John.",
@@ -326,7 +328,8 @@
                   "pencil",
                   "eraser"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你好,约翰。"
               },
               {
                 "audio": "Hi, Sarah. I have a new pencil box.",
@@ -336,7 +339,8 @@
                   "Hi, Sarah. I have a new pencil boxcil box.",
                   "Hi, Sarah. I have a new book."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "嗨,萨拉。我有一个新铅笔盒。"
               },
               {
                 "audio": "Oh, really? What's in it?",
@@ -346,7 +350,8 @@
                   "Oh, really? What is in it?",
                   "ruler"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "哦,真的吗?里面有什么?"
               },
               {
                 "audio": "Look! An eraser, a crayon and a ruler.",
@@ -356,7 +361,8 @@
                   "Look! An crayon, a crayon and a ruler.",
                   "Look! An eraser, a bag and a ruler."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "看!一块橡皮、一支蜡笔和一把尺子。"
               }
             ]
           },
@@ -670,7 +676,8 @@
                   "green",
                   "yellow"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "嗨,约翰!"
               },
               {
                 "audio": "Hi, Sarah! How are you?",
@@ -680,7 +687,8 @@
                   "red",
                   "green"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "嗨,萨拉!你好吗?"
               },
               {
                 "audio": "Fine, thank you.",
@@ -690,7 +698,8 @@
                   "green",
                   "yellow"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "很好,谢谢。"
               },
               {
                 "audio": "Let's go to school.",
@@ -700,7 +709,8 @@
                   "green",
                   "yellow"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我们去上学吧。"
               },
               {
                 "audio": "Good morning. This is Miss Jones.",
@@ -710,7 +720,8 @@
                   "green",
                   "yellow"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "早上好。这是琼斯老师。"
               },
               {
                 "audio": "Good morning, Miss Jones.",
@@ -720,7 +731,8 @@
                   "green",
                   "yellow"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "早上好,琼斯老师。"
               }
             ]
           },
@@ -1014,7 +1026,8 @@
                   "ear",
                   "eye"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你好!我是陈杰。"
               },
               {
                 "audio": "Hi! I'm Sarah.",
@@ -1024,7 +1037,8 @@
                   "ear",
                   "eye"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你好!我是萨拉。"
               },
               {
                 "audio": "Let's make a puppet!",
@@ -1034,7 +1048,8 @@
                   "ear",
                   "eye"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我们来做个木偶吧!"
               },
               {
                 "audio": "Great!",
@@ -1044,7 +1059,8 @@
                   "ear",
                   "eye"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "太好了!"
               }
             ]
           },
@@ -1338,7 +1354,8 @@
                   "What is this?",
                   "duck"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "这是什么?"
               },
               {
                 "audio": "It's a duck.",
@@ -1348,7 +1365,8 @@
                   "It is a duck.",
                   "duck"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "这是一只鸭子。"
               },
               {
                 "audio": "What's that?",
@@ -1358,7 +1376,8 @@
                   "What is that?",
                   "duck"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "那是什么?"
               },
               {
                 "audio": "It's a panda. I like it!",
@@ -1368,7 +1387,8 @@
                   "duck",
                   "pig"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "那是一只熊猫。我喜欢它!"
               }
             ]
           },
@@ -1674,7 +1694,8 @@
                   "bread",
                   "juice"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我想要一些果汁,谢谢。"
               },
               {
                 "audio": "Here you are.",
@@ -1684,7 +1705,8 @@
                   "juice",
                   "egg"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "给你。"
               },
               {
                 "audio": "Can I have some bread, please?",
@@ -1694,7 +1716,8 @@
                   "Can I have some bread, please.",
                   "bread"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我可以要一些面包吗?"
               }
             ]
           },
@@ -1988,7 +2011,8 @@
                   "one",
                   "two"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "请给我这个。"
               },
               {
                 "audio": "Sure.",
@@ -1998,7 +2022,8 @@
                   "two",
                   "three"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "当然可以。"
               },
               {
                 "audio": "How many plates?",
@@ -2008,7 +2033,8 @@
                   "one",
                   "two"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "要几个盘子?"
               },
               {
                 "audio": "Five.",
@@ -2018,7 +2044,8 @@
                   "two",
                   "three"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "五个。"
               }
             ]
           }
@@ -2318,7 +2345,8 @@
                   "Canada",
                   "USA"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "欢迎!"
               },
               {
                 "audio": "Welcome back to school!",
@@ -2328,7 +2356,8 @@
                   "Canada",
                   "USA"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "欢迎回到学校!"
               },
               {
                 "audio": "Where are you from?",
@@ -2338,7 +2367,8 @@
                   "Where are you from.",
                   "UK"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你来自哪里?"
               },
               {
                 "audio": "I'm from China.",
@@ -2348,7 +2378,8 @@
                   "UK",
                   "Canada"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我来自中国。"
               }
             ]
           },
@@ -2642,7 +2673,8 @@
                   "Who's that man.",
                   "father"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "那个男人是谁?"
               },
               {
                 "audio": "He's my father.",
@@ -2652,7 +2684,8 @@
                   "father",
                   "dad"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "他是我爸爸。"
               },
               {
                 "audio": "Who's that woman?",
@@ -2662,7 +2695,8 @@
                   "Who's that mother?",
                   "Who's that woman."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "那个女人是谁?"
               },
               {
                 "audio": "She's my mother.",
@@ -2672,7 +2706,8 @@
                   "father",
                   "dad"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "她是我妈妈。"
               }
             ]
           },
@@ -2966,7 +3001,8 @@
                   "thin",
                   "fat"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "看那只长颈鹿。"
               },
               {
                 "audio": "It's so tall!",
@@ -2976,7 +3012,8 @@
                   "It is so tall!",
                   "thin"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它好高啊!"
               },
               {
                 "audio": "Look at the monkey.",
@@ -2986,7 +3023,8 @@
                   "fat",
                   "tall"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "看那只猴子。"
               },
               {
                 "audio": "It's so funny!",
@@ -2996,7 +3034,8 @@
                   "thin",
                   "fat"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它好滑稽啊!"
               }
             ]
           },
@@ -3290,7 +3329,8 @@
                   "on",
                   "in"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我的铅笔盒在哪里?"
               },
               {
                 "audio": "It's on the desk.",
@@ -3300,7 +3340,8 @@
                   "It's on the cap.",
                   "It is on the desk."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它在书桌上。"
               },
               {
                 "audio": "Where is my map?",
@@ -3310,7 +3351,8 @@
                   "on",
                   "in"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我的地图在哪里?"
               },
               {
                 "audio": "It's in the desk.",
@@ -3320,7 +3362,8 @@
                   "It's in the cap.",
                   "It is in the desk."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它在书桌里。"
               }
             ]
           },
@@ -3626,7 +3669,8 @@
                   "Do you like pears.",
                   "pear"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你喜欢梨吗?"
               },
               {
                 "audio": "Yes, I do.",
@@ -3636,7 +3680,8 @@
                   "apple",
                   "orange"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "是的,我喜欢。"
               },
               {
                 "audio": "Do you like apples?",
@@ -3646,7 +3691,8 @@
                   "Do you like apples.",
                   "pear"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你喜欢苹果吗?"
               },
               {
                 "audio": "No, I don't. I like bananas.",
@@ -3656,7 +3702,8 @@
                   "pear",
                   "apple"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "不,我不喜欢。我喜欢香蕉。"
               }
             ]
           },
@@ -3950,7 +3997,8 @@
                   "eleven",
                   "twelve"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你看到几只风筝?"
               },
               {
                 "audio": "I see 12.",
@@ -3960,7 +4008,8 @@
                   "twelve",
                   "thirteen"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我看到12只。"
               },
               {
                 "audio": "How many crayons do you have?",
@@ -3970,7 +4019,8 @@
                   "eleven",
                   "twelve"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你有几支蜡笔?"
               },
               {
                 "audio": "I have 16.",
@@ -3980,7 +4030,8 @@
                   "twelve",
                   "thirteen"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我有16支。"
               }
             ]
           }

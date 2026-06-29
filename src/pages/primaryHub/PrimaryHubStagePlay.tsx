@@ -568,12 +568,12 @@ function ListenMcStage({
 }: {
   title: string;
   instruction: string;
-  questions: Array<{ audio: string; opts: string[]; answer: number; point?: string }>;
+  questions: Array<{ audio: string; opts: string[]; answer: number; point?: string; cn?: string }>;
   grade: number;
   unitId?: string;
   onFinish: () => void;
   onCorrect: () => void;
-  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string }) => void;
+  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string; cn?: string }) => void;
   initialIdx?: number;
   onProgress?: (percent: number) => void;
 }) {
@@ -700,6 +700,11 @@ function ListenMcStage({
       </div>
       <QuizOpts opts={q.opts} answer={q.answer} picked={picked} answered={answered} onPick={handlePick} />
       {feedback}
+      {answered && q.cn && (
+        <div className="mt-2 rounded-xl bg-[#F4F6F9] px-3 py-2 text-center text-sm text-[#5A5750]">
+          {q.cn}
+        </div>
+      )}
       {answered && (
         <PrimaryButton onClick={next} className="mt-3">
           {isLast ? "本关完成 →" : "下一题 →"}

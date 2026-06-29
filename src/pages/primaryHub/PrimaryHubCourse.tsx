@@ -12,6 +12,12 @@ export default function PrimaryHubCourse() {
 
   return (
     <>
+      <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
+        <button type="button" onClick={() => nav(base)} className="text-xl" aria-label="返回">
+          ←
+        </button>
+        <div className="text-lg font-bold">选择课程</div>
+      </div>
       <div className="bg-gradient-to-br from-[#FF6B35] to-[#FFB627] px-5 pb-6 pt-4 text-white">
         <div className="text-sm opacity-90">📚 学习中心</div>
         <div className="text-xl font-bold">选择课程开始学习</div>

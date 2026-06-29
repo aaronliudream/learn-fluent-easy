@@ -39,6 +39,7 @@ export type ListeningQuestion = {
   audio: string;
   opts: string[];
   answer: number;
+  cn?: string; // 听力句中文翻译(答完后展示;AI 预生成入 JSON,非实时)
 };
 
 export type StageDef = {

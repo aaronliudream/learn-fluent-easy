@@ -494,7 +494,8 @@
                   "What's in the classroom?",
                   "Let's clean the classroom!"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我们有一间新教室。"
               },
               {
                 "audio": "Really? What's in the classroom?",
@@ -504,7 +505,8 @@
                   "Let's go and see!",
                   "It's near the window."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "真的吗?教室里有什么?"
               },
               {
                 "audio": "Let's go and see!",
@@ -514,7 +516,8 @@
                   "Where is it?",
                   "It's so big!"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我们去看看吧!"
               },
               {
                 "audio": "Where is it?",
@@ -524,7 +527,8 @@
                   "It's near the window.",
                   "Let me help you."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它在哪里?"
               },
               {
                 "audio": "It's near the window.",
@@ -534,7 +538,8 @@
                   "It's under the desk.",
                   "It's on the fan."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它在窗户旁边。"
               },
               {
                 "audio": "Let's clean the classroom!",
@@ -544,7 +549,8 @@
                   "Let me help you.",
                   "We have a new classroom."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我们来打扫教室吧!"
               },
               {
                 "audio": "Let me clean the windows.",
@@ -554,7 +560,8 @@
                   "Let's clean the classroom!",
                   "Where is it?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "让我来擦窗户。"
               },
               {
                 "audio": "Let me help you.",
@@ -564,7 +571,8 @@
                   "It's near the window.",
                   "Thank you."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "让我来帮你。"
               }
             ]
           },
@@ -1028,7 +1036,8 @@
                   "I lost my schoolbag.",
                   "Here it is!"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我有一个新书包。"
               },
               {
                 "audio": "What's in your schoolbag?",
@@ -1038,7 +1047,8 @@
                   "I have a new schoolbag.",
                   "Wow! It's a panda!"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你的书包里有什么?"
               },
               {
                 "audio": "Wow! It's a panda!",
@@ -1048,7 +1058,8 @@
                   "It's blue and white.",
                   "Here it is!"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "哇!是一只熊猫!"
               },
               {
                 "audio": "Excuse me. I lost my schoolbag.",
@@ -1058,7 +1069,8 @@
                   "What's in it?",
                   "Here it is!"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "打扰一下,我的书包丢了。"
               },
               {
                 "audio": "What colour is it?",
@@ -1068,7 +1080,8 @@
                   "I lost my schoolbag.",
                   "It's blue and white."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它是什么颜色的?"
               },
               {
                 "audio": "It's blue and white.",
@@ -1078,7 +1091,8 @@
                   "The door is orange.",
                   "Wow! It's a panda!"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它是蓝白相间的。"
               },
               {
                 "audio": "What's in it?",
@@ -1088,7 +1102,8 @@
                   "Here it is!",
                   "I lost my schoolbag."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "里面有什么?"
               },
               {
                 "audio": "Oh no! My bag is heavy!",
@@ -1098,7 +1113,8 @@
                   "Let me help you.",
                   "I have a new schoolbag."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "哦不!我的包好重!"
               }
             ]
           },
@@ -1435,7 +1451,8 @@
                   "What's his name?",
                   "His name is Mike."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "他叫张鹏。"
               },
               {
                 "audio": "She has long hair.",
@@ -1445,7 +1462,8 @@
                   "He has long hair.",
                   "She has long shoes."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "她留着长头发。"
               },
               {
                 "audio": "His glasses are blue.",
@@ -1455,7 +1473,8 @@
                   "His glasses are brown.",
                   "His shoes are blue."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "他的眼镜是蓝色的。"
               }
             ]
           },
@@ -1843,7 +1862,8 @@
                   "It's on the kitchen.",
                   "She's in the kitchen."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它在厨房里。"
               },
               {
                 "audio": "The keys are on the fridge.",
@@ -1853,7 +1873,8 @@
                   "The keys are on the table.",
                   "The keys are under the fridge."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "钥匙在冰箱上。"
               },
               {
                 "audio": "Is she in the living room?",
@@ -1863,7 +1884,8 @@
                   "Is she in the bathroom?",
                   "Is she on the living room?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "她在客厅里吗?"
               }
             ]
           },
@@ -2261,7 +2283,8 @@
                   "I'd like some soup and bread.",
                   "I'd like some fish and noodles."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我想要一些牛肉和面条。"
               },
               {
                 "audio": "Would you like some soup?",
@@ -2271,7 +2294,8 @@
                   "Do you like soup?",
                   "Would you like a spoon?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你想喝点汤吗?"
               },
               {
                 "audio": "Pass me the knife and fork, please.",
@@ -2281,7 +2305,8 @@
                   "Pass me the chopsticks, please.",
                   "Give me the knife and fork."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "请把刀叉递给我。"
               }
             ]
           },
@@ -2630,7 +2655,8 @@
                   "My family has six cousins.",
                   "There are six rooms."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我家有六口人。"
               },
               {
                 "audio": "Is this your uncle?",
@@ -2640,7 +2666,8 @@
                   "Is he your uncle?",
                   "Is this your cousin?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "这是你叔叔吗?"
               },
               {
                 "audio": "She's a nurse.",
@@ -2650,7 +2677,8 @@
                   "He's a nurse.",
                   "She's a cook."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "她是一名护士。"
               }
             ]
           }
@@ -3179,7 +3207,8 @@
                   "Where's the lobby?",
                   "When's the library?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "图书馆在哪里?"
               },
               {
                 "audio": "It's on the second floor.",
@@ -3189,7 +3218,8 @@
                   "It's on the third floor.",
                   "It is in the second floor."
                 ],
-                "answer": 1
+                "answer": 1,
+                "cn": "它在二楼。"
               },
               {
                 "audio": "Is this the teachers' office?",
@@ -3199,7 +3229,8 @@
                   "Is this the teacher's house?",
                   "It's the teachers' office."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "这是老师办公室吗?"
               },
               {
                 "audio": "We have forty-five students.",
@@ -3209,7 +3240,8 @@
                   "We have forty-five students.",
                   "We have four students."
                 ],
-                "answer": 2
+                "answer": 2,
+                "cn": "我们有四十五名学生。"
               },
               {
                 "audio": "Do you have a music room?",
@@ -3219,7 +3251,8 @@
                   "Did you have a music room?",
                   "Do you like a music room?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你们有音乐教室吗?"
               },
               {
                 "audio": "The art room is next to the library.",
@@ -3229,7 +3262,8 @@
                   "The art room is near the library.",
                   "The art room is the library."
                 ],
-                "answer": 1
+                "answer": 1,
+                "cn": "美术教室在图书馆旁边。"
               }
             ]
           },
@@ -3705,7 +3739,8 @@
                   "What class is it?",
                   "When time is it?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "现在几点了?"
               },
               {
                 "audio": "It's 7 o'clock. It's time to get up.",
@@ -3715,7 +3750,8 @@
                   "It's 8 o'clock. It's time to get up.",
                   "It's 7 o'clock. It's time to go to bed."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "七点了。该起床了。"
               },
               {
                 "audio": "It's 8 o'clock. It's time to go to school.",
@@ -3725,7 +3761,8 @@
                   "It's 9 o'clock. It's time to go to school.",
                   "It's 8 o'clock. It's time for breakfast."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "八点了。该去上学了。"
               },
               {
                 "audio": "What time is it now?",
@@ -3735,7 +3772,8 @@
                   "What time now is it?",
                   "What is time now?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "现在几点了?"
               },
               {
                 "audio": "It's 9 o'clock. It's time for English class.",
@@ -3745,7 +3783,8 @@
                   "It's 10 o'clock. It's time for English class.",
                   "It's 9 o'clock. It's time to go to bed."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "九点了。该上英语课了。"
               },
               {
                 "audio": "It's twelve o'clock. It's time for lunch.",
@@ -3755,7 +3794,8 @@
                   "It's two o'clock. It's time for lunch.",
                   "It's twelve o'clock. It's time for breakfast."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "十二点了。该吃午饭了。"
               },
               {
                 "audio": "It's 4 o'clock. It's time to go home.",
@@ -3765,7 +3805,8 @@
                   "It's 5 o'clock. It's time to go home.",
                   "It's 4 o'clock. It's time for PE class."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "四点了。该回家了。"
               },
               {
                 "audio": "Hurry up! It's time for breakfast.",
@@ -3775,7 +3816,8 @@
                   "Come on! It's time for lunch.",
                   "Hurry up! It's time to go to bed."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "快点!该吃早饭了。"
               }
             ]
           },
@@ -4226,7 +4268,8 @@
                   "Mum, can you go outside now?",
                   "Mum, can I go outside then?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "妈妈,我现在可以出去吗?"
               },
               {
                 "audio": "No, you can't. It's cold outside.",
@@ -4236,7 +4279,8 @@
                   "No, you can't. It's cool outside.",
                   "Yes, you can. It's warm outside."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "不行。外面很冷。"
               },
               {
                 "audio": "What's the weather like in Beijing?",
@@ -4246,7 +4290,8 @@
                   "What time is it in Beijing?",
                   "Can I go outside in Beijing?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "北京的天气怎么样?"
               },
               {
                 "audio": "It's sunny and warm.",
@@ -4256,7 +4301,8 @@
                   "It's snowy and cold.",
                   "It's cloudy and hot."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "天气晴朗又暖和。"
               },
               {
                 "audio": "Is it windy?",
@@ -4266,7 +4312,8 @@
                   "Is it rainy?",
                   "Is it snowy?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "有风吗?"
               },
               {
                 "audio": "No, it isn't. It's cloudy.",
@@ -4276,7 +4323,8 @@
                   "No, it isn't. It's sunny.",
                   "No, you can't. It's cloudy."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "不,没有。天阴阴的。"
               },
               {
                 "audio": "How about New York?",
@@ -4286,7 +4334,8 @@
                   "What about New York?",
                   "How is New York?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "纽约呢?"
               },
               {
                 "audio": "It's rainy and cool. It's 26 degrees.",
@@ -4296,7 +4345,8 @@
                   "It's rainy and hot. It's 16 degrees.",
                   "It's snowy and cold. It's 26 degrees."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "下着雨,很凉快。26度。"
               }
             ]
           },
@@ -4777,7 +4827,8 @@
                   "Look at these! Are these tomatoes?",
                   "Look at these! What are those?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "看这些!这些是胡萝卜吗?"
               },
               {
                 "audio": "What are these?",
@@ -4787,7 +4838,8 @@
                   "How many horses?",
                   "Are these carrots?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "这些是什么?"
               },
               {
                 "audio": "They're tomatoes.",
@@ -4797,7 +4849,8 @@
                   "They're horses.",
                   "They're carrots."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它们是西红柿。"
               },
               {
                 "audio": "Yes, they are.",
@@ -4807,7 +4860,8 @@
                   "Yes, you can.",
                   "No, it isn't."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "是的,它们是。"
               },
               {
                 "audio": "What are those?",
@@ -4817,7 +4871,8 @@
                   "Are they horses?",
                   "How many horses do you have?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "那些是什么?"
               },
               {
                 "audio": "No, they aren't. They're ducks.",
@@ -4827,7 +4882,8 @@
                   "No, they aren't. They're horses.",
                   "No, you can't. It's cold outside."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "不,它们不是。它们是鸭子。"
               },
               {
                 "audio": "How many horses do you have?",
@@ -4837,7 +4893,8 @@
                   "What are those?",
                   "Are they horses?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你有几匹马?"
               },
               {
                 "audio": "Seventeen.",
@@ -4847,7 +4904,8 @@
                   "Seventy.",
                   "Sixteen."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "十七匹。"
               }
             ]
           },
@@ -5319,7 +5377,8 @@
                   "I like that green skirt. Me too. And I like those hats.",
                   "Whose coat is this? It's mine."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我喜欢那条绿色的裙子。我也是。我还喜欢那条裤子。"
               },
               {
                 "audio": "Are these yours, Mike?",
@@ -5329,7 +5388,8 @@
                   "Whose coat is this?",
                   "Are these John's?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "这些是你的吗,迈克?"
               },
               {
                 "audio": "No, they aren't. My shoes are green. They're Chen Jie's.",
@@ -5339,7 +5399,8 @@
                   "No, it isn't. It's Mike's.",
                   "They're Mike's."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "不,它们不是。我的鞋子是绿色的。它们是陈杰的。"
               },
               {
                 "audio": "Whose coat is this?",
@@ -5349,7 +5410,8 @@
                   "Are these yours?",
                   "Is this John's?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "这是谁的外套?"
               },
               {
                 "audio": "It's mine.",
@@ -5359,7 +5421,8 @@
                   "No, they aren't.",
                   "Yes, they are."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "是我的。"
               },
               {
                 "audio": "Whose pants are those? They're Mike's.",
@@ -5369,7 +5432,8 @@
                   "Whose coat is this? It's mine.",
                   "Are these yours? No, they aren't."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "那是谁的裤子?是迈克的。"
               },
               {
                 "audio": "Put on your shirt.",
@@ -5379,7 +5443,8 @@
                   "Hang up your dress.",
                   "Pack my clothes."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "穿上你的衬衫。"
               },
               {
                 "audio": "I want to wear my blue pants.",
@@ -5389,7 +5454,8 @@
                   "What colour are they? White.",
                   "Mum, where are my new socks?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我想穿我的蓝裤子。"
               }
             ]
           },
@@ -5893,7 +5959,8 @@
                   "How much is this skirt?",
                   "They're too small."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "需要帮忙吗?"
               },
               {
                 "audio": "Yes. This dress is pretty. How much is it?",
@@ -5903,7 +5970,8 @@
                   "Sorry, Sarah. It's too expensive.",
                   "They're just right!"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "嗯。这条连衣裙很漂亮。多少钱?"
               },
               {
                 "audio": "It's eighty-five yuan.",
@@ -5913,7 +5981,8 @@
                   "They are very cheap.",
                   "They're too big."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "八十五元。"
               },
               {
                 "audio": "Yes. These shoes are nice. Can I try them on? Size 6, please.",
@@ -5923,7 +5992,8 @@
                   "No. They're too small.",
                   "How much are those big shoes?"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "嗯。这双鞋很好看。我可以试穿吗?请拿6码的。"
               },
               {
                 "audio": "No. They're too small.",
@@ -5933,7 +6003,8 @@
                   "They're just right!",
                   "Of course. Here you are."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "不行。它们太小了。"
               },
               {
                 "audio": "They're just right!",
@@ -5943,7 +6014,8 @@
                   "They're too big.",
                   "Sorry, they're not for sale."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它们正合适!"
               },
               {
                 "audio": "Sorry, Sarah. It's too expensive.",
@@ -5953,7 +6025,8 @@
                   "It's very pretty.",
                   "They are very cheap."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "抱歉,萨拉。它太贵了。"
               },
               {
                 "audio": "Today all sunglasses and gloves are five yuan! They are very cheap.",
@@ -5963,7 +6036,8 @@
                   "Put on your shirt.",
                   "It's time to go home."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "今天所有的太阳镜和手套都只要五元!它们很便宜。"
               }
             ]
           }

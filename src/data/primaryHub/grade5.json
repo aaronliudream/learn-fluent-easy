@@ -296,7 +296,8 @@
                   "old",
                   "young"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你的美术老师是谁?"
               },
               {
                 "audio": "Mr Jones.",
@@ -306,7 +307,8 @@
                   "young",
                   "funny"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "琼斯先生。"
               },
               {
                 "audio": "What's he like?",
@@ -316,7 +318,8 @@
                   "What is he like?",
                   "old"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "他是个怎样的人?"
               },
               {
                 "audio": "He's tall and strong.",
@@ -326,7 +329,8 @@
                   "young",
                   "funny"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "他又高又壮。"
               }
             ]
           },
@@ -632,7 +636,8 @@
                   "What do you have on Mondays.",
                   "Monday"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你们周一有什么课?"
               },
               {
                 "audio": "I have Chinese, English and music.",
@@ -642,7 +647,8 @@
                   "Tuesday",
                   "Wednesday"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我有语文、英语和音乐课。"
               },
               {
                 "audio": "Do you often play ping-pong on Thursdays?",
@@ -652,7 +658,8 @@
                   "Do you often play ping-pong on Thursdays.",
                   "Monday"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你周四经常打乒乓球吗?"
               },
               {
                 "audio": "No, I don't.",
@@ -662,7 +669,8 @@
                   "Tuesday",
                   "Wednesday"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "不,我不经常。"
               }
             ]
           },
@@ -968,7 +976,8 @@
                   "sandwich",
                   "salad"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你想吃什么?"
               },
               {
                 "audio": "I'd like a sandwich, please.",
@@ -978,7 +987,8 @@
                   "sandwich",
                   "salad"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我想要一个三明治。"
               },
               {
                 "audio": "What would you like to drink?",
@@ -988,7 +998,8 @@
                   "sandwich",
                   "salad"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你想喝什么?"
               },
               {
                 "audio": "I'd like some water.",
@@ -998,7 +1009,8 @@
                   "salad",
                   "hamburger"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我想喝点水。"
               }
             ]
           },
@@ -1289,7 +1301,8 @@
                   "sing",
                   "song"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "孩子们,你们能为聚会做点什么?"
               },
               {
                 "audio": "I can sing English songs.",
@@ -1299,7 +1312,8 @@
                   "I can sing English sing English songss.",
                   "I can play the pipa."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "我会唱英文歌。"
               },
               {
                 "audio": "Can you do any kung fu, John?",
@@ -1309,7 +1323,8 @@
                   "Can you do any kung fu, John.",
                   "sing"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你会功夫吗,约翰?"
               },
               {
                 "audio": "Yes, I can.",
@@ -1319,7 +1334,8 @@
                   "song",
                   "It's sing English songs."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "是的,我会。"
               }
             ]
           },
@@ -1612,7 +1628,8 @@
                   "plant",
                   "bottle"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "有一张大床。"
               },
               {
                 "audio": "There is a nice photo, too.",
@@ -1622,7 +1639,8 @@
                   "clock",
                   "plant"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "还有一张漂亮的照片。"
               },
               {
                 "audio": "This is my bedroom.",
@@ -1632,7 +1650,8 @@
                   "plant",
                   "bottle"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "这是我的卧室。"
               },
               {
                 "audio": "Wow! You look cool!",
@@ -1642,7 +1661,8 @@
                   "plant",
                   "bottle"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "哇!你看起来真酷!"
               }
             ]
           },
@@ -1936,7 +1956,8 @@
                   "Is there a lake in the forest, Miss White?",
                   "Is there a river in the forest, Miss White."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "森林里有河吗,怀特老师?"
               },
               {
                 "audio": "Yes, there is.",
@@ -1946,7 +1967,8 @@
                   "river",
                   "lake"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "是的,有。"
               },
               {
                 "audio": "Are there any lakes on the mountain?",
@@ -1956,7 +1978,8 @@
                   "Are there any lakes on the hill?",
                   "Are there any lakes on the mountain."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "山上有湖吗?"
               },
               {
                 "audio": "No, there aren't.",
@@ -1966,7 +1989,8 @@
                   "river",
                   "lake"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "不,没有。"
               }
             ]
           }
@@ -2259,7 +2283,8 @@
                   "It's eat breakfast.",
                   "It's have … class."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "聚会是什么时候?"
               },
               {
                 "audio": "It's in April.",
@@ -2269,7 +2294,8 @@
                   "It's eat breakfast.",
                   "It's have … class."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "在四月。"
               },
               {
                 "audio": "When is Dragon Boat Festival?",
@@ -2279,7 +2305,8 @@
                   "It's eat breakfast.",
                   "It's have … class."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "端午节是什么时候?"
               },
               {
                 "audio": "It's usually in June.",
@@ -2289,7 +2316,8 @@
                   "It's eat breakfast.",
                   "It's have … class."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "通常在六月。"
               }
             ]
           },
@@ -2582,7 +2610,8 @@
                   "Which season do you like best, Mike.",
                   "spring"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你最喜欢哪个季节,迈克?"
               },
               {
                 "audio": "Winter.",
@@ -2592,7 +2621,8 @@
                   "summer",
                   "autumn"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "冬天。"
               },
               {
                 "audio": "Do you like summer?",
@@ -2602,7 +2632,8 @@
                   "Do you like summer.",
                   "spring"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "你喜欢夏天吗?"
               },
               {
                 "audio": "No, I don't. I like spring.",
@@ -2612,7 +2643,8 @@
                   "spring",
                   "summer"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "不,我不喜欢。我喜欢春天。"
               }
             ]
           },
@@ -2906,7 +2938,8 @@
                   "January",
                   "February"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "学校郊游是什么时候?"
               },
               {
                 "audio": "It's in May.",
@@ -2916,7 +2949,8 @@
                   "It is in May.",
                   "January"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "在五月。"
               },
               {
                 "audio": "When is the sports meet?",
@@ -2926,7 +2960,8 @@
                   "January",
                   "February"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "运动会是什么时候?"
               },
               {
                 "audio": "It's in April.",
@@ -2936,7 +2971,8 @@
                   "It is in April.",
                   "January"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "在四月。"
               }
             ]
           },
@@ -3242,7 +3278,8 @@
                   "first",
                   "second"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "需要帮忙吗?"
               },
               {
                 "audio": "Yes. Can I try these on?",
@@ -3252,7 +3289,8 @@
                   "first",
                   "second"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "嗯。我可以试穿这些吗?"
               },
               {
                 "audio": "How much are these shoes?",
@@ -3262,7 +3300,8 @@
                   "first",
                   "second"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "这双鞋多少钱?"
               },
               {
                 "audio": "They're ninety-nine yuan.",
@@ -3272,7 +3311,8 @@
                   "second",
                   "third"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "九十九元。"
               }
             ]
           },
@@ -3566,7 +3606,8 @@
                   "The dog is yclimbing.",
                   "mine"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "这只狗是你的。"
               },
               {
                 "audio": "No! It's his.",
@@ -3576,7 +3617,8 @@
                   "No! It is his.",
                   "mine"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "不!它是他的。"
               },
               {
                 "audio": "Is the dog eating?",
@@ -3586,7 +3628,8 @@
                   "Is the dog eating.",
                   "mine"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "这只狗在吃东西吗?"
               },
               {
                 "audio": "Yes, he is.",
@@ -3596,7 +3639,8 @@
                   "yours",
                   "his"
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "是的,它在吃。"
               }
             ]
           },
@@ -3895,7 +3939,8 @@
                   "It's having … class.",
                   "It's eating lunch."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "看这些熊猫。"
               },
               {
                 "audio": "They're so cute!",
@@ -3905,7 +3950,8 @@
                   "It's having … class.",
                   "It's eating lunch."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它们好可爱!"
               },
               {
                 "audio": "What's the little monkey doing?",
@@ -3915,7 +3961,8 @@
                   "What is the little monkey doing?",
                   "It's doing morning exercises."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "那只小猴子在做什么?"
               },
               {
                 "audio": "It's playing with its mother!",
@@ -3925,7 +3972,8 @@
                   "It's doing morning exercises.",
                   "It's having … class."
                 ],
-                "answer": 0
+                "answer": 0,
+                "cn": "它在和妈妈玩!"
               }
             ]
           }

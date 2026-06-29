@@ -1,6 +1,7 @@
 import { T } from "@/i18n/T";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { supabase } from "@/integrations/supabase/client";
 import { MasteryBar, MasteryCounts } from "@/components/learning-center/MasteryBar";
@@ -10,6 +11,7 @@ import { ShareButton } from "@/components/share/ShareButton";
 import { useStreakStats } from "@/hooks/useStreakStats";
 import { StageContinueCta } from "@/components/mastery/StageContinueCta";
 import { useDashboardExtras, type StageKey, type ModuleActivity } from "@/hooks/useDashboardExtras";
+import { getContinueTarget } from "@/lib/dashboardContinue";
 import { TodayHero } from "@/components/dashboard/TodayHero";
 import { TodayTasks } from "@/components/dashboard/TodayTasks";
 import { WeakSpots } from "@/components/dashboard/WeakSpots";
@@ -168,7 +170,9 @@ function StageView({
   if (!stat || (stat.total === 0 && modules.length === 0)) {
     return (
       <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-xs text-muted-foreground">
-        <T>还没有任何数据，先去做几道题。</T>
+        {stage === "primary"
+          ? <T>小学进度暂存在本地，云端汇总开发中，这里暂不显示掌握度。</T>
+          : <T>还没有任何数据，先去做几道题。</T>}
       </div>
     );
   }
@@ -395,6 +399,9 @@ export default function Dashboard() {
 
   const effectiveStage: StageKey = stageTab ?? "primary";
 
+  // 「继续上次」卡:从三学段 hub state(本地+云同步同源)读最后学习位置。纯展示。
+  const continueTarget = useMemo(() => getContinueTarget(stageTab), [stageTab]);
+
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-8 md:px-8 md:py-12">
       <PageHeader title="📊 学习中心" subtitle="一目了然知道掌握了什么、下一步学什么" back="/" />
@@ -422,6 +429,26 @@ export default function Dashboard() {
           rank={extras.rank}
         />
       </div>
+
+      {/* 1.5 Continue where you left off */}
+      {continueTarget && (
+        <Link
+          to={continueTarget.to}
+          className="mt-5 flex items-center gap-4 rounded-2xl border border-border bg-gradient-to-br from-indigo-500/10 to-violet-500/10 p-4 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
+        >
+          <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 text-2xl text-white">📍</div>
+          <div className="min-w-0 flex-1">
+            <div className="text-[11px] font-bold uppercase tracking-[0.15em] text-muted-foreground"><T>继续上次</T></div>
+            <div className="truncate text-base font-extrabold">
+              {continueTarget.stageLabel}英语 · {continueTarget.unitTitle} · 第 {continueTarget.nextStageNo} 关
+            </div>
+            {continueTarget.stageTitle && (
+              <div className="truncate text-xs text-muted-foreground">{continueTarget.stageTitle}</div>
+            )}
+          </div>
+          <ArrowRight className="size-5 shrink-0 text-muted-foreground" />
+        </Link>
+      )}
 
       {/* 2. Tasks + Weak spots */}
       <div className="mt-5 grid gap-5 lg:grid-cols-5">

@@ -19,6 +19,8 @@ type Ctx = {
   setState: React.Dispatch<React.SetStateAction<GaokaoHubPersist>>;
   persist: () => void;
   addMistake: (m: Omit<Mistake, "id" | "date">) => void;
+  removeMistake: (id: number) => void;
+  clearMistakes: () => void;
   completeStage: (unitId: string, stageIdx: number) => boolean;
 };
 
@@ -63,6 +65,25 @@ export function GaokaoHubProvider({
     [grade, publisher],
   );
 
+  const removeMistake = useCallback(
+    (id: number) => {
+      setState((prev) => {
+        const next = { ...prev, mistakes: prev.mistakes.filter((x) => x.id !== id) };
+        savePersist(grade, next);
+        return next;
+      });
+    },
+    [grade],
+  );
+
+  const clearMistakes = useCallback(() => {
+    setState((prev) => {
+      const next = { ...prev, mistakes: [] };
+      savePersist(grade, next);
+      return next;
+    });
+  }, [grade]);
+
   const completeStage = useCallback(
     (unitId: string, stageIdx: number) => {
       let needAi = false;
@@ -99,8 +120,8 @@ export function GaokaoHubProvider({
   );
 
   const value = useMemo(
-    () => ({ grade, publisher, state, setState, persist, addMistake, completeStage }),
-    [grade, publisher, state, persist, addMistake, completeStage],
+    () => ({ grade, publisher, state, setState, persist, addMistake, removeMistake, clearMistakes, completeStage }),
+    [grade, publisher, state, persist, addMistake, removeMistake, clearMistakes, completeStage],
   );
 
   return <GaokaoHubContext.Provider value={value}>{children}</GaokaoHubContext.Provider>;

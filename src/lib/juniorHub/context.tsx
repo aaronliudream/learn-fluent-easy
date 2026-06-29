@@ -31,6 +31,8 @@ type Ctx = {
   setState: React.Dispatch<React.SetStateAction<JuniorHubPersist>>;
   persist: () => void;
   addMistake: (m: Omit<Mistake, "id" | "date">) => void;
+  removeMistake: (id: number) => void;
+  clearMistakes: () => void;
   completeStage: (unitId: string, stageIdx: number) => boolean;
 };
 
@@ -125,6 +127,25 @@ export function JuniorHubProvider({ grade, children }: { grade: JuniorHubGrade; 
     [grade],
   );
 
+  const removeMistake = useCallback(
+    (id: number) => {
+      setState((prev) => {
+        const next = { ...prev, mistakes: prev.mistakes.filter((x) => x.id !== id) };
+        savePersist(grade, next);
+        return next;
+      });
+    },
+    [grade],
+  );
+
+  const clearMistakes = useCallback(() => {
+    setState((prev) => {
+      const next = { ...prev, mistakes: [] };
+      savePersist(grade, next);
+      return next;
+    });
+  }, [grade]);
+
   const completeStage = useCallback(
     (unitId: string, stageIdx: number) => {
       let needAi = false;
@@ -172,8 +193,8 @@ export function JuniorHubProvider({ grade, children }: { grade: JuniorHubGrade; 
   );
 
   const value = useMemo(
-    () => ({ grade, state, setState, persist, addMistake, completeStage, setVocabGroup }),
-    [grade, state, persist, addMistake, completeStage, setVocabGroup],
+    () => ({ grade, state, setState, persist, addMistake, removeMistake, clearMistakes, completeStage, setVocabGroup }),
+    [grade, state, persist, addMistake, removeMistake, clearMistakes, completeStage, setVocabGroup],
   );
 
   return <JuniorHubContext.Provider value={value}>{children}</JuniorHubContext.Provider>;

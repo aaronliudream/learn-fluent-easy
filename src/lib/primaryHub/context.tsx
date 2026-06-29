@@ -48,6 +48,8 @@ type Ctx = {
   guestMergePending: boolean;
   persist: () => void;
   addMistake: (m: Omit<Mistake, "id" | "date">) => void;
+  removeMistake: (id: number) => void;
+  clearMistakes: () => void;
   completeStage: (unitId: string, stageIdx: number) => boolean;
   updateStageProgress: (unitId: string, stageIdx: number, percent: number) => void;
   updateVocabViewed: (unitId: string, viewedIndices: number[]) => void;
@@ -222,6 +224,17 @@ export function PrimaryHubProvider({
     [commit],
   );
 
+  const removeMistake = useCallback(
+    (id: number) => {
+      setState((prev) => commit({ ...prev, mistakes: prev.mistakes.filter((x) => x.id !== id) }));
+    },
+    [commit],
+  );
+
+  const clearMistakes = useCallback(() => {
+    setState((prev) => commit({ ...prev, mistakes: [] }));
+  }, [commit]);
+
   const completeStage = useCallback(
     (unitId: string, stageIdx: number) => {
       let needAi = false;
@@ -313,6 +326,8 @@ export function PrimaryHubProvider({
       guestMergePending,
       persist,
       addMistake,
+      removeMistake,
+      clearMistakes,
       completeStage,
       updateStageProgress,
       updateVocabViewed,
@@ -325,6 +340,8 @@ export function PrimaryHubProvider({
       guestMergePending,
       persist,
       addMistake,
+      removeMistake,
+      clearMistakes,
       completeStage,
       updateStageProgress,
       updateVocabViewed,

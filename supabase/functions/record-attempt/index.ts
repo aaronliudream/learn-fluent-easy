@@ -150,20 +150,31 @@ Deno.serve(async (req) => {
     });
   }
 
-  // auto add to mistakes book
+  // mistakes book: 做错入册(再次做错则重新激活);做对自动移除
+  const mistakeKey = `${payload.stage}_${payload.module}_${payload.item_id}`;
   if (!payload.is_correct) {
     const ctx = (payload.context ?? {}) as Record<string, unknown>;
-    await supa.from("user_mistakes").insert({
+    // upsert(非 insert):同题再次做错时刷新复习时间并重新置为未解决,避免唯一键冲突静默失败
+    await supa.from("user_mistakes").upsert({
       user_id: user.id,
       module: payload.module,
-      source_key: `${payload.stage}_${payload.module}_${payload.item_id}`,
+      source_key: mistakeKey,
       source_label: payload.item_label ?? null,
       question: (ctx.question as string) ?? "",
       user_answer: payload.user_answer ?? null,
       correct_answer: payload.correct_answer ?? null,
       explanation: (ctx.explanation as string) ?? null,
+      is_resolved: false,
+      last_wrong_at: new Date().toISOString(),
       next_review_at: dueAt,
-    });
+    }, { onConflict: "user_id,module,source_key" });
+  } else {
+    // 做对 → 把该题从错题本/最近常错移除(若在册)
+    await supa.from("user_mistakes")
+      .update({ is_resolved: true, updated_at: new Date().toISOString() })
+      .eq("user_id", user.id)
+      .eq("source_key", mistakeKey)
+      .eq("is_resolved", false);
   }
 
   // smart cache invalidation for ai_diagnostics

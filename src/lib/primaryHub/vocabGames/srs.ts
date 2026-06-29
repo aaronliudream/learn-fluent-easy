@@ -1,4 +1,5 @@
 import type { GameWord, SrsStore, WordSRS } from "./types";
+import { recordGuestQuestion } from "@/lib/guestQuestionQuota";
 
 const KEY = "bme_vocab_srs_v1_g4";
 
@@ -47,6 +48,7 @@ function freshWord(): WordSRS {
 
 // 答题后更新（任意游戏、任意题型都调用它）
 export function recordResult(id: string, correct: boolean): void {
+  recordGuestQuestion(); // 游客小学词汇游戏也计入整站 20 题配额(登录用户 no-op)
   const store = load();
   const now = Date.now();
   const w = store.words[id] ?? freshWord();

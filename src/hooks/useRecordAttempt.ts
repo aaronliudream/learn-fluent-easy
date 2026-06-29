@@ -1,6 +1,7 @@
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { saveRedirectPath } from "@/lib/authRedirect";
+import { recordGuestQuestion } from "@/lib/guestQuestionQuota";
 
 export type AttemptStage = "primary" | "junior" | "senior";
 export type AttemptModule =
@@ -50,6 +51,7 @@ export async function recordUnifiedAttempt(input: AttemptInput): Promise<Attempt
   try {
     const { data: { session } } = await supabase.auth.getSession();
     if (!session) {
+      recordGuestQuestion(); // 游客整站 20 题配额:每道判分题 +1,满额由 GuestQuotaWall 拦截
       notifyGuestOnce();
       return { success: false, reason: "not_signed_in" };
     }

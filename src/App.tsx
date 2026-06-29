@@ -182,6 +182,7 @@ import { AIAssistantProvider } from "@/contexts/AIAssistantContext";
 import GlobalAIAssistant from "@/components/assistant/GlobalAIAssistant";
 import RouteContextRegistrar from "@/components/assistant/RouteContextRegistrar";
 import UserAvatarMenu from "@/components/UserAvatarMenu";
+import GuestQuotaWall from "@/components/GuestQuotaWall";
 
 const queryClient = new QueryClient();
 
@@ -546,6 +547,7 @@ const App = () => (
         <GlobalAIAssistant />
         <RouteContextRegistrar />
         <UserAvatarMenu />
+        <GuestQuotaWall />
       </BrowserRouter>
     </TooltipProvider>
     </AIAssistantProvider>

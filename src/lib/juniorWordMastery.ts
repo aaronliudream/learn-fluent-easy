@@ -5,6 +5,7 @@
 import { supabase } from "@/integrations/supabase/client";
 import { nextSrsState } from "@/lib/masteryFsrs";
 import { toast } from "sonner";
+import { recordGuestQuestion } from "@/lib/guestQuestionQuota";
 
 export type JuniorMasteryKind = "quiz" | "listen" | "spell" | "match" | "cloze" | "bento" | "context";
 
@@ -49,7 +50,10 @@ export async function recordJuniorWordMastery(opts: {
   isCorrect: boolean;
 }): Promise<boolean> {
   const { data: { user } } = await supabase.auth.getUser();
-  if (!user) return false;
+  if (!user) {
+    recordGuestQuestion(); // 游客词汇关(认词/配对/听词)也计入整站 20 题配额
+    return false;
+  }
 
   const { data: existing, error: readErr } = await supabase
     .from("junior_word_mastery")

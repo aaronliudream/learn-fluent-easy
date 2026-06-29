@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import { recordGuestQuestion } from "@/lib/guestQuestionQuota";
 
 /**
  * Lightweight spaced repetition for "key expressions" the learner has
@@ -168,7 +169,10 @@ export async function recordQuizAnswer(opts: {
   correct: boolean;
 }): Promise<void> {
   const { data: { user } } = await supabase.auth.getUser();
-  if (!user) return;
+  if (!user) {
+    recordGuestQuestion(); // 情景对话/职场英语小测也计入整站 20 题配额
+    return;
+  }
   const phrase = normalizeReviewPhrase(opts.seed.phrase);
   if (!phrase) return;
 

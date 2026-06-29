@@ -8,7 +8,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { stopSpeaking } from "@/lib/speak";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import ChineseOnlyRoute from "@/components/ChineseOnlyRoute";
-import AdminRoute from "@/components/AdminRoute";
 import JuniorGradeQueryGate from "@/components/junior/JuniorGradeQueryGate";
 import { GuestCardClaimer } from "@/components/GuestCardClaimer";
 import { RouteErrorBoundary } from "@/components/RouteErrorBoundary";
@@ -451,8 +450,7 @@ const App = () => (
           <Route path="/junior/suzhou/:examId" element={<ChineseOnlyRoute><SuzhouExamPlay /></ChineseOnlyRoute>} />
           <Route path="/junior/suzhou/report/:reportId" element={<ChineseOnlyRoute><SuzhouExamReportView /></ChineseOnlyRoute>} />
           </Route>
-          {/* 🔒 临时锁定(开发中):高中 /gaokao + /senior 仅管理员可访问;非 admin 重定向回首页 */}
-          <Route element={<AdminRoute />}>
+          {/* ✅ 高中 /gaokao + /senior 已开放(三社内容齐活)。游客 20 题配额在答题入口处控制。 */}
           <Route path="/gaokao/hub/:grade" element={<ChineseOnlyRoute><GaokaoHubLayout /></ChineseOnlyRoute>}>
             <Route index element={<GaokaoHubHome />} />
             <Route path="course" element={<GaokaoHubCourse />} />
@@ -510,8 +508,7 @@ const App = () => (
           <Route path="/gaokao/lesson/listening/:id" element={<ChineseOnlyRoute><JuniorListeningPlay /></ChineseOnlyRoute>} />
           <Route path="/gaokao/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           <Route path="/gaokao/g/:grade/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
-          </Route>
-          {/* 🔒 end admin-only(高中)*/}
+          {/* end 高中(已开放)*/}
           <Route path="/level/:levelId" element={<Level />} />
           <Route path="/levels" element={<Levels />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
@@ -532,7 +529,7 @@ const App = () => (
           <Route path="/me" element={<Me />} />
           {/* Sub-brand entry redirects (母品牌 → 子品牌内部已有的实现) */}
           <Route path="/kids" element={<Navigate to="/primary" replace />} />
-          <Route path="/senior" element={<AdminRoute><Navigate to="/gaokao" replace /></AdminRoute>} />
+          <Route path="/senior" element={<Navigate to="/gaokao" replace />} />
           <Route path="/cet" element={<Cet />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

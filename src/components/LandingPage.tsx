@@ -31,8 +31,8 @@ import { useIsAdmin } from "@/hooks/useIsAdmin";
 
 /** 首页营销落地页（新版式）— 仅用于 `/`，旧学习中枢见 `/?hub=1` */
 
-/** 整理中(开发中):高中入口可见但不可点。初中已开放(初一可用,初二/初三在内部整理中)。 */
-const SOON_HREFS = new Set(["/gaokao", "/senior"]);
+/** 全学段已开放(初中+高中三社内容齐活)。游客 20 题配额在答题入口处控制,不再锁学段入口。 */
+const SOON_HREFS = new Set<string>([]);
 
 const NAV_LINKS = [
   { href: "/kids", label: "小学" as const },

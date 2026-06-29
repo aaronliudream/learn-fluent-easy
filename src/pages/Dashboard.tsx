@@ -1,12 +1,10 @@
 import { T } from "@/i18n/T";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { supabase } from "@/integrations/supabase/client";
 import { MasteryBar, MasteryCounts } from "@/components/learning-center/MasteryBar";
 import { enrichMasteryGpsData } from "@/lib/enrichMasteryGps";
-import { SkillRadar } from "@/components/mastery/SkillRadar";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ShareButton } from "@/components/share/ShareButton";
 import { useStreakStats } from "@/hooks/useStreakStats";
@@ -179,7 +177,6 @@ function StageView({
     <div className="space-y-5">
       {/* Overview + Radar (merged) */}
       <section className="rounded-3xl border border-border bg-card p-5 md:p-6 shadow-tile">
-        <div className="grid gap-6 md:grid-cols-[1fr_auto]">
           <div className="min-w-0">
             <div className="flex items-baseline gap-3">
               <div className="text-5xl font-extrabold tabular-nums text-primary">{Math.round(stat.score_pct)}%</div>
@@ -211,15 +208,6 @@ function StageView({
               <MasteryCounts master={stat.master} fluent={stat.fluent} weak={stat.weak} none={stat.none} />
             </div>
           </div>
-
-          {/* Radar absorbed here so it has context */}
-          <div className="md:w-64 md:border-l md:border-border md:pl-6">
-            <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-2">
-              <T>五维能力</T>
-            </div>
-            <SkillRadar />
-          </div>
-        </div>
       </section>
 
       {/* Continue CTA (uses the project's enhanced component) */}
@@ -481,17 +469,6 @@ export default function Dashboard() {
         ))}
       </Tabs>
 
-      {/* 5. Grammar panorama (footer) */}
-      <Link
-        to="/dashboard/grammar"
-        className="mt-6 flex items-center gap-4 rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md">
-        <div className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-2xl text-white">📊</div>
-        <div className="flex-1">
-          <div className="text-base font-extrabold"><T>语法掌握全景图</T></div>
-          <div className="text-xs text-muted-foreground"><T>按考点查看每一项语法的强弱 · AI 自动诊断</T></div>
-        </div>
-        <ArrowRight className="size-5 text-muted-foreground" />
-      </Link>
     </main>
   );
 }

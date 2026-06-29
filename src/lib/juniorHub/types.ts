@@ -151,6 +151,7 @@ export type JuniorHubPersist = {
   aiTestHistory: AITestRecord[];
   currentUnit: string;
   currentSemester: string;
+  lastActiveAt?: number; // 最后做题活跃时间(给 dashboard「继续上次」排序用)
 };
 
 export const AI_DIMENSIONS = [

@@ -263,6 +263,7 @@ export function PrimaryHubProvider({
           ...prev,
           units: { ...prev.units, [unitId]: { ...us } },
           currentUnit: unitId,
+          lastActiveAt: Date.now(),
         };
         const total = getTotalCompletedStages(next);
         const lastTest = next.lastAITest || 0;

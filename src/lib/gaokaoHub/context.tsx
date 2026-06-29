@@ -109,6 +109,7 @@ export function GaokaoHubProvider({
         const next = {
           ...prev,
           units: { ...prev.units, [unitId]: { ...us } },
+          lastActiveAt: Date.now(),
         };
         if (!needAi) needAi = shouldTriggerUnitAITest(next, unitId);
         savePersist(grade, next);

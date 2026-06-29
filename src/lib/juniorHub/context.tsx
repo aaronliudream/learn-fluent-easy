@@ -165,6 +165,7 @@ export function JuniorHubProvider({ grade, children }: { grade: JuniorHubGrade; 
         const next = {
           ...prev,
           units: { ...prev.units, [unitId]: { ...us } },
+          lastActiveAt: Date.now(),
         };
         needAi = shouldTriggerUnitAITest(next, unitId);
         savePersist(grade, next);

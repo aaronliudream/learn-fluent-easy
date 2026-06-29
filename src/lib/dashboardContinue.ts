@@ -19,7 +19,8 @@ export interface ContinueTarget {
   unitTitle: string;
   stageTitle: string;
   nextStageNo: number; // 1-based, 给用户看
-  completed: number;   // 已完成关数(活跃度近似)
+  completed: number;   // 已完成关数(无时间戳时的活跃度近似)
+  lastActiveAt: number; // 最后活跃时间(有则按它排,真·最近)
   to: string;          // 跳转路由
 }
 
@@ -34,6 +35,7 @@ function gaokaoPublisher(unitId: string): Publisher {
 interface Persistish {
   currentUnit?: string;
   currentSemester?: string;
+  lastActiveAt?: number;
   units?: Record<string, { completedStages?: number[] } | undefined>;
 }
 interface Unitish {
@@ -63,6 +65,7 @@ function build(
     stageTitle: unit.stages?.[nextIdx]?.title ?? "",
     nextStageNo: nextIdx + 1,
     completed,
+    lastActiveAt: persist.lastActiveAt ?? 0,
     to: `${base}/semester/${semId}/unit/${unitId}/stage/${nextIdx}${publisherQuery}`,
   };
 }
@@ -107,10 +110,14 @@ export function getContinueTarget(prefer: ContinueStage | null): ContinueTarget 
     ...candidatesFor("senior"),
   ];
   if (all.length === 0) return null;
-  const byProgress = (a: ContinueTarget, b: ContinueTarget) => b.completed - a.completed;
+  // 有 lastActiveAt 就按它(真·最近);都没有则退回已完成关数近似。
+  const anyTimestamp = all.some((t) => t.lastActiveAt > 0);
+  const rank = anyTimestamp
+    ? (a: ContinueTarget, b: ContinueTarget) => b.lastActiveAt - a.lastActiveAt
+    : (a: ContinueTarget, b: ContinueTarget) => b.completed - a.completed;
   if (prefer) {
-    const inPrefer = all.filter((t) => t.stage === prefer).sort(byProgress);
+    const inPrefer = all.filter((t) => t.stage === prefer).sort(rank);
     if (inPrefer.length) return inPrefer[0];
   }
-  return [...all].sort(byProgress)[0];
+  return [...all].sort(rank)[0];
 }

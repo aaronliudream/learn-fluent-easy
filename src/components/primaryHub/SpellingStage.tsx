@@ -3,6 +3,7 @@ import type { VocabItem } from "@/lib/primaryHub/types";
 import { toHubTtsText } from "@/lib/primaryHub/speech";
 import { speakKid, stopSpeaking, prefetchTTSBatchKid, unlockAudioSync } from "@/lib/speak";
 import { isWebSpeechSupported, speakWebSpeech } from "@/lib/webSpeech";
+import { reportPrimaryAttempt } from "@/lib/primaryHub/reportAttempt";
 import {
   type GradeKey,
   getGradeConfig,
@@ -437,6 +438,7 @@ export default function SpellingStage({
       if (current.isBoss) gained *= 2;
       setGameScore((s) => s + gained);
       onCorrect();
+      reportPrimaryAttempt({ grade, module: "vocab", itemType: "spell", itemId: current.word.en, itemLabel: current.word.en, isCorrect: true });
       bumpRexXp(current.isBoss ? 24 : 12);
       setRexMood("happy");
       if (current.isReview) markReviewCorrect(current.word.en);
@@ -500,6 +502,7 @@ export default function SpellingStage({
       after(1000, () => setRexMood("happy"));
       bumpRexXp(-8);
       onWrong({ q: `拼写：${current.word.cn}`, opts: [target], answer: 0, point: "单词拼写" });
+      reportPrimaryAttempt({ grade, module: "vocab", itemType: "spell", itemId: current.word.en, itemLabel: current.word.en, isCorrect: false });
       recordWrongPool(current.word.en, { incrementWrong: true, outcome: "wrong" });
 
       const ratio = letterPositions.length ? correctCount / letterPositions.length : 0;
@@ -693,6 +696,9 @@ export default function SpellingStage({
           ) : (
             <div className="text-[58px] leading-none">{current.word.emoji}</div>
           )}
+          {current.word.cn && (
+            <div className="mt-1 text-xl font-extrabold text-[#2C2C2A]">{current.word.cn}</div>
+          )}
           <button
             type="button"
             disabled={speaking}
@@ -798,7 +804,7 @@ export default function SpellingStage({
         </div>
       </div>
 
-      <p className="mt-2 text-center text-xs text-[#888780]">看图 + 听音，拼出单词；拼对的字母会保留 🟢</p>
+      <p className="mt-2 text-center text-xs text-[#888780]">看中文 + 听音，拼出单词；拼对的字母会保留 🟢</p>
     </div>
   );
 }

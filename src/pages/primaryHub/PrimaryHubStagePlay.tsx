@@ -23,6 +23,7 @@ import { getListenWordConfig } from "@/lib/primaryHub/listenWordStageConfig";
 import { useHubSpeakSpeed } from "@/hooks/useHubSpeakSpeed";
 import { getReadWriteConfig } from "@/lib/primaryHub/readWriteRegistry";
 import { getSentenceLesson } from "@/lib/primaryHub/sentenceRegistry";
+import { reportPrimaryAttempt } from "@/lib/primaryHub/reportAttempt";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/primaryHub/types";
 
 type Props = {
@@ -628,6 +629,7 @@ function ListenMcStage({
     setAnswered(true);
     setPicked(optIdx);
     const isCorrect = optIdx === q.answer;
+    reportPrimaryAttempt({ grade, module: "listening", itemType: "listen", itemId: q.audio, itemLabel: q.audio, isCorrect });
     if (isCorrect) {
       setCorrectCount((c) => c + 1);
       onCorrect();
@@ -1077,7 +1079,7 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             vocabulary={unit.vocabulary}
             grade={grade}
             onFinish={handleFinish}
-            onMatch={addStar}
+            onMatch={(en) => { addStar(); reportPrimaryAttempt({ grade, module: "vocab", itemType: "match", itemId: en, itemLabel: en, isCorrect: true }); }}
             onProgressChange={reportStageProgress}
           />
         );

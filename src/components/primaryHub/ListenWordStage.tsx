@@ -9,6 +9,7 @@ import {
 } from "@/lib/speak";
 import { isWebSpeechSupported, speakWebSpeech } from "@/lib/webSpeech";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
+import { reportPrimaryAttempt } from "@/lib/primaryHub/reportAttempt";
 import type { GradeKey } from "@/lib/primaryHub/spellingStageConfig";
 import { getListenWordConfig } from "@/lib/primaryHub/listenWordStageConfig";
 
@@ -168,7 +169,9 @@ export default function ListenWordStage({
     if (answered || !q) return;
     setAnswered(true);
     setPicked(optIdx);
-    if (optIdx === q.answer) {
+    const isCorrect = optIdx === q.answer;
+    reportPrimaryAttempt({ grade, module: "vocab", itemType: "listen_word", itemId: q.audio, itemLabel: q.audio, isCorrect });
+    if (isCorrect) {
       setCorrectCount((c) => c + 1);
       onCorrect();
     } else {

@@ -171,7 +171,7 @@ function StageView({
     return (
       <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-xs text-muted-foreground">
         {stage === "primary"
-          ? <T>小学进度暂存在本地，云端汇总开发中，这里暂不显示掌握度。</T>
+          ? <T>小学掌握度从现在起开始记录，做几关新题就会显示（历史进度暂未迁移）。</T>
           : <T>还没有任何数据，先去做几道题。</T>}
       </div>
     );

@@ -77,7 +77,7 @@ export const BottomTabBar = () => {
     <>
     <nav
       aria-label={t("Main navigation")}
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur-md lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur-md md:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0)" }}
     >
       <ul className="mx-auto grid max-w-3xl grid-cols-5">
@@ -201,7 +201,7 @@ function CoursesPopover({ open, onClose }: { open: boolean; onClose: () => void 
   if (!open) return null;
 
   return (
-    <div className="lg:hidden" role="dialog" aria-label={t("选择学段")}>
+    <div className="md:hidden" role="dialog" aria-label={t("选择学段")}>
       {/* Backdrop */}
       <button
         type="button"

@@ -306,7 +306,7 @@ const App = () => (
         <EvolutionCelebration />
         <DigestionAnimation />
         <GrowthLetter />
-        <div className="pb-tabbar lg:pb-0">
+        <div className="pb-tabbar md:pb-0">
         <RouteErrorBoundary>
         <Suspense fallback={<RouteFallback />}>
         <Routes>

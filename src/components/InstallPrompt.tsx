@@ -103,7 +103,7 @@ export default function InstallPrompt() {
   if (!show) return null;
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-[calc(var(--tabbar-h,64px)+12px)] z-[60] flex justify-center px-4 lg:bottom-6">
+    <div className="pointer-events-none fixed inset-x-0 bottom-[calc(var(--tabbar-h,64px)+12px)] z-[60] flex justify-center px-4 md:bottom-6">
       <div className="pointer-events-auto relative flex w-full max-w-md items-start gap-3 rounded-2xl border border-border bg-card/95 p-4 shadow-xl backdrop-blur-md">
         <button
           aria-label="Dismiss"

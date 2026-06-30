@@ -12,7 +12,7 @@ import {
   isSubmoduleComplete,
   isSubmoduleUnlocked,
 } from "@/lib/primaryHub/sentenceProgress";
-import type { SentenceItem, SentenceLessonConfig, SentenceSubModule } from "@/lib/primaryHub/sentenceTypes";
+import type { SentenceItem, SentenceLessonConfig, SentenceLine, SentenceSubModule } from "@/lib/primaryHub/sentenceTypes";
 import { getUnitState, savePersist } from "@/lib/primaryHub/storage";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 
@@ -160,6 +160,127 @@ function trainingAudioText(item: SentenceItem): string {
   }
 }
 
+function shuffleIdx(n: number): number[] {
+  const a = Array.from({ length: n }, (_, i) => i);
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+/** 连线题:英文句 ↔ 中文意思配对,全部配对成功 → onSolved。自带交互状态,不依赖单选逻辑。 */
+function MatchDrill({ pairs, resolved, onSolved }: { pairs: SentenceLine[]; resolved: boolean; onSolved: () => void }) {
+  const [selEn, setSelEn] = useState<number | null>(null);
+  const [matched, setMatched] = useState<Set<number>>(() => new Set());
+  const [wrong, setWrong] = useState<{ en: number; zh: number } | null>(null);
+  const enOrder = useMemo(() => shuffleIdx(pairs.length), [pairs.length]);
+  const zhOrder = useMemo(() => shuffleIdx(pairs.length), [pairs.length]);
+
+  const pickEn = (i: number) => {
+    if (resolved || matched.has(i)) return;
+    setWrong(null);
+    setSelEn(i);
+  };
+  const pickZh = (i: number) => {
+    if (resolved || matched.has(i) || selEn == null) return;
+    if (selEn === i) {
+      const next = new Set(matched).add(i);
+      setMatched(next);
+      setSelEn(null);
+      if (next.size === pairs.length) onSolved();
+    } else {
+      const s = selEn;
+      setWrong({ en: s, zh: i });
+      setSelEn(null);
+      window.setTimeout(() => setWrong((w) => (w && w.en === s && w.zh === i ? null : w)), 500);
+    }
+  };
+  const cls = (done: boolean, sel: boolean, isWrong: boolean) =>
+    `w-full rounded-lg border-2 px-2 py-2 text-left text-sm font-medium transition ${
+      done
+        ? "border-[#6FA92A] bg-[#EAF3DE] text-[#3B6D11]"
+        : isWrong
+          ? "border-[#E24B4A] bg-[#FFF0EB] text-[#A32D2D]"
+          : sel
+            ? "border-[#FF6B35] bg-white text-[#2C2C2A]"
+            : "border-[#EEEAE0] bg-white text-[#2C2C2A]"
+    }`;
+
+  return (
+    <div className="mb-2 flex gap-3">
+      <div className="flex-1 space-y-2">
+        {enOrder.map((pi) => (
+          <button key={`me-${pi}`} type="button" disabled={resolved || matched.has(pi)} onClick={() => pickEn(pi)} className={cls(matched.has(pi), selEn === pi, wrong?.en === pi)}>
+            {pairs[pi].en}
+          </button>
+        ))}
+      </div>
+      <div className="flex-1 space-y-2">
+        {zhOrder.map((pi) => (
+          <button key={`mz-${pi}`} type="button" disabled={resolved || matched.has(pi)} onClick={() => pickZh(pi)} className={cls(matched.has(pi), false, wrong?.zh === pi)}>
+            {pairs[pi].zh}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/** 连词成句:按顺序点词块,排满后与正确顺序比对;对 → onSolved,错 → 短暂提示后清空重排。 */
+function OrderDrill({ tokens, answer, resolved, onSolved }: { tokens: string[]; answer: string[]; resolved: boolean; onSolved: () => void }) {
+  const [placed, setPlaced] = useState<number[]>([]);
+  const [wrong, setWrong] = useState(false);
+  const placedSet = new Set(placed);
+  const built = placed.map((i) => tokens[i]);
+
+  const place = (i: number) => {
+    if (resolved || placedSet.has(i)) return;
+    const next = [...placed, i];
+    setPlaced(next);
+    setWrong(false);
+    if (next.length === tokens.length) {
+      if (next.map((k) => tokens[k]).join(" ") === answer.join(" ")) onSolved();
+      else {
+        setWrong(true);
+        window.setTimeout(() => { setPlaced([]); setWrong(false); }, 700);
+      }
+    }
+  };
+
+  return (
+    <div className="mb-2">
+      <div className={`mb-2 flex min-h-[40px] flex-wrap items-center gap-1.5 rounded-lg border-2 border-dashed p-2 ${wrong ? "border-[#E24B4A] bg-[#FFF0EB]" : "border-[#FFB627] bg-[#FFF8F0]"}`}>
+        {built.length === 0 ? (
+          <span className="text-xs text-[#888780]">点下面的词块，按顺序排成句子</span>
+        ) : (
+          built.map((tok, i) => (
+            <span key={`b-${i}`} className="rounded-md bg-[#FF6B35] px-2 py-1 text-sm font-semibold text-white">{tok}</span>
+          ))
+        )}
+      </div>
+      <div className="flex flex-wrap gap-1.5">
+        {tokens.map((tok, i) => (
+          <button
+            key={`t-${i}`}
+            type="button"
+            disabled={resolved || placedSet.has(i)}
+            onClick={() => place(i)}
+            className={`rounded-md border-2 px-2 py-1 text-sm font-semibold transition ${
+              placedSet.has(i) ? "border-[#EEEAE0] bg-[#F4F0E6] text-[#C8C4BC]" : "border-[#EEEAE0] bg-white text-[#2C2C2A] hover:border-[#FF6B35]/50"
+            }`}
+          >
+            {tok}
+          </button>
+        ))}
+      </div>
+      {placed.length > 0 && !resolved && (
+        <button type="button" onClick={() => { setPlaced((p) => p.slice(0, -1)); setWrong(false); }} className="mt-2 text-xs font-semibold text-[#FF6B35]">↩ 撤回一个</button>
+      )}
+    </div>
+  );
+}
+
 /** Training-mode card (3-choice drill). Marks the sentence complete on a correct answer
  * or after the answer is revealed (2nd wrong). Awards +10 first-try / +5 retry / +0 revealed
  * via onAwardPoints; reports first-try correct via onFirstCorrect (for the 满星 badge). */
@@ -216,6 +337,16 @@ function TrainingCard({
     }
   };
 
+  // 连线/排序解出后,走与"答对"一样的给分+完成流程(不改 pick 单选路径)。
+  const markSolved = () => {
+    if (resolved) return;
+    setAwarded(10);
+    onAwardPoints?.(10);
+    onFirstCorrect?.();
+    setPhase("correct");
+    onComplete();
+  };
+
   const optionClass = (i: number) => {
     const base = "w-full rounded-xl border-2 px-3 py-2.5 text-left text-sm font-medium transition disabled:cursor-default ";
     if (!resolved) {
@@ -256,6 +387,14 @@ function TrainingCard({
         <AudioBtn text={audioText} grade={grade} speed={speed} label="播放" />
         <span className="text-xs text-[#888780]">点 🔊 听一听</span>
       </div>
+
+      {/* 新增题型:连线 / 连词成句(旧 5 种 type 不进这里,options 为空→下方单选块渲染空) */}
+      {t.type === "match" && t.pairs && t.pairs.length > 0 && (
+        <MatchDrill pairs={t.pairs} resolved={resolved} onSolved={markSolved} />
+      )}
+      {t.type === "sentence_order" && t.tokens && t.answer && (
+        <OrderDrill tokens={t.tokens} answer={t.answer} resolved={resolved} onSolved={markSolved} />
+      )}
 
       <div className="flex flex-col gap-2">
         {options.map((o, i) => (
@@ -346,6 +485,14 @@ export default function SentenceLessonStage({
 
   const [view, setView] = useState<View>("pick");
   const [activeModule, setActiveModule] = useState<SentenceSubModule | null>(null);
+  // 一次一题:当前显示的句子下标。进入子模块时跳到第一道未完成的句子(支持续做)。
+  const [cursor, setCursor] = useState(0);
+  useEffect(() => {
+    if (!activeModule) return;
+    const firstUndone = activeModule.sentences.findIndex((s) => !completed.has(s.id));
+    setCursor(firstUndone < 0 ? 0 : firstUndone);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeModule?.id]);
 
   const markSentence = useCallback(
     (sentenceId: string) => {
@@ -472,41 +619,48 @@ export default function SentenceLessonStage({
   if (view === "module" && activeModule) {
     const modDone = isSubmoduleComplete(activeModule, completed);
     const doneCount = countSubmoduleDone(activeModule, completed);
+    // 一次一题:只渲染当前 cursor 指向的这一道;做完(答对/解出)再点"下一题"翻下一道。
+    const sentences = activeModule.sentences;
+    const idx = Math.min(cursor, sentences.length - 1);
+    const item = sentences[idx];
+    const itemDone = !!item && completed.has(item.id);
+    const isLastSentence = idx >= sentences.length - 1;
 
     return (
       <LessonPanel speed={speed} onSpeedChange={setSpeed}>
         <p className="mb-1 text-xs text-[#888780]">{activeModule.title}</p>
         <p className="mb-3 text-sm">{activeModule.description}</p>
         <div className="mb-3 flex items-center justify-between text-xs text-[#888780]">
-          <span>进度 {doneCount}/{activeModule.sentences.length}</span>
+          <span>第 {idx + 1} / {sentences.length} 句 · 已完成 {doneCount}/{sentences.length}</span>
           {modDone && <span className="font-semibold text-[#3B6D11]">✓ 本子模块已完成</span>}
         </div>
-        {activeModule.sentences.map((item, i) =>
-          item.training && item.training.type !== "skip_chant" ? (
-            <TrainingCard
-              key={item.id}
-              item={item}
-              index={i}
-              color={activeModule.color}
-              grade={g}
-              speed={speed}
-              completed={completed.has(item.id)}
-              onComplete={() => onModuleSentenceComplete(activeModule, item.id)}
-              onAwardPoints={onAwardPoints}
-              onFirstCorrect={() => markFirstCorrect(item.id)}
-            />
-          ) : (
-            <SentenceCard
-              key={item.id}
-              item={item}
-              index={i}
-              color={activeModule.color}
-              grade={g}
-              speed={speed}
-              completed={completed.has(item.id)}
-              onComplete={() => onModuleSentenceComplete(activeModule, item.id)}
-            />
-          ),
+        {item && (item.training && item.training.type !== "skip_chant" ? (
+          <TrainingCard
+            key={item.id}
+            item={item}
+            index={idx}
+            color={activeModule.color}
+            grade={g}
+            speed={speed}
+            completed={completed.has(item.id)}
+            onComplete={() => onModuleSentenceComplete(activeModule, item.id)}
+            onAwardPoints={onAwardPoints}
+            onFirstCorrect={() => markFirstCorrect(item.id)}
+          />
+        ) : (
+          <SentenceCard
+            key={item.id}
+            item={item}
+            index={idx}
+            color={activeModule.color}
+            grade={g}
+            speed={speed}
+            completed={completed.has(item.id)}
+            onComplete={() => onModuleSentenceComplete(activeModule, item.id)}
+          />
+        ))}
+        {itemDone && !isLastSentence && (
+          <PrimaryButton onClick={() => setCursor((c) => c + 1)}>下一题 →</PrimaryButton>
         )}
         {modDone && moduleStarred(activeModule) && (
           <div className="mb-2 rounded-xl bg-[#FFF8E6] px-3 py-2 text-center text-sm font-bold text-[#B8860B]">
@@ -519,9 +673,7 @@ export default function SentenceLessonStage({
           <PrimaryButton onClick={() => { setActiveModule(null); setView("pick"); }}>
             返回子模块列表 →
           </PrimaryButton>
-        ) : (
-          <p className="mt-2 text-center text-xs text-[#888780]">展开并完成全部句子后继续</p>
-        )}
+        ) : null}
       </LessonPanel>
     );
   }

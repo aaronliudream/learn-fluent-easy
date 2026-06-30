@@ -8,7 +8,9 @@ export type SentenceTrainingType =
   | "fill_word"
   | "sentence_choice"
   | "structure_transfer"
-  | "skip_chant";
+  | "skip_chant"
+  | "match"
+  | "sentence_order";
 
 export type SentenceTrainingOption = {
   text: string;
@@ -23,6 +25,11 @@ export type SentenceTraining = {
   options?: SentenceTrainingOption[];
   explanationZh?: string;
   skipReason?: "rote_phrase" | "chant_song";
+  /** match(连线):多组英↔中配对。 */
+  pairs?: SentenceLine[];
+  /** sentence_order(连词成句):乱序词块 + 正确顺序。 */
+  tokens?: string[];
+  answer?: string[];
 };
 
 export type SentenceItem = {

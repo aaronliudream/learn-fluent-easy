@@ -77,6 +77,22 @@
             ],
             "explanationZh": "kind 意思是「体贴、友善」；kid 是「小孩」，king 是「国王」，只是长得像，意思完全不同。"
           }
+        },
+        {
+          "id": "A5",
+          "question": { "en": "Who's your art teacher? What's he like?", "zh": "你的美术老师是谁？他是个怎样的人？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "Who's your art teacher?", "zh": "你的美术老师是谁？" },
+              { "en": "What's he like?", "zh": "他是个怎样的人？" },
+              { "en": "He's tall and strong.", "zh": "他又高又壮。" }
+            ],
+            "explanationZh": "这三句是本单元问答老师「是谁、什么样」的核心句型，记住它们的中文意思。"
+          }
         }
       ]
     },
@@ -135,6 +151,19 @@
               { "text": "working-hard", "correct": false }
             ],
             "explanationZh": "hard-working 是合成形容词，意思「工作努力的」，中间有连字符；hard-work 是名词、working-hard 语序不对，都不能用来形容人。"
+          }
+        },
+        {
+          "id": "B3b",
+          "question": { "en": "Is he strict?", "zh": "他严格吗？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「他严格吗？」",
+            "tokens": ["strict?", "Is", "he"],
+            "answer": ["Is", "he", "strict?"],
+            "explanationZh": "一般疑问句把 be 动词 Is 放句首：Is + he + 形容词？"
           }
         },
         {

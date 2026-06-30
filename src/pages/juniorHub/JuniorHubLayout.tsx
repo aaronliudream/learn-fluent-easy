@@ -52,6 +52,9 @@ export default function JuniorHubLayout() {
   const grade = resolveJuniorHubGrade(g);
   const { isAdmin, loading } = useIsAdmin();
   useStudySession(); // 学习时长埋点
+  const loc = useLocation();
+  const base = `/junior/hub/${grade}`;
+  const isHubHome = loc.pathname === base || loc.pathname === `${base}/`;
 
   // 初二/初三整理中:非管理员拦截(覆盖闯关 hub 及全部子路由),防直链访问。
   if (!isJuniorGradeOpen(grade)) {
@@ -69,8 +72,8 @@ export default function JuniorHubLayout() {
     <JuniorHubProvider grade={grade}>
       <div className="primary-hub-root mx-auto max-w-lg pb-20">
         <div className="border-b border-[#EEEAE0] bg-white px-4 py-2">
-          <BackLink to="/junior" className="text-sm text-muted-foreground">
-            ← 返回初中专区
+          <BackLink to={isHubHome ? "/junior" : base} className="text-sm text-muted-foreground">
+            {isHubHome ? "← 返回初中专区" : "← 返回首页"}
           </BackLink>
         </div>
         <Outlet />

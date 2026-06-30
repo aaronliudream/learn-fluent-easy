@@ -1,0 +1,153 @@
+{
+  "lessonId": "g3v2_u1_grammar",
+  "unitId": "g3v2_u1",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "开学啦，先跟同学们说声欢迎回来，再问问新朋友是哪里人，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "欢迎回校 · Welcome back",
+      "description": "开学第一天，欢迎大家回到学校，还认识了新同学。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Welcome back to school!", "zh": "欢迎回到学校！" },
+          "answer": { "en": "Thank you!", "zh": "谢谢！" },
+          "tag": "A Let's talk",
+          "_note": "扩充：Thank you! 是回应「欢迎」的常用礼貌语，不是 dialogues 原句。",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "老师说「欢迎回到学校！」，你该怎么回应？",
+            "options": [
+              { "text": "Thank you!", "correct": true },
+              { "text": "I'm fine.", "correct": false },
+              { "text": "Goodbye!", "correct": false }
+            ],
+            "explanationZh": "别人欢迎你，礼貌地说 Thank you（谢谢）就对啦。I'm fine 是回答「你好吗」的话，Goodbye 是「再见」，都接不上「欢迎」。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Welcome back to school!", "zh": "欢迎回到学校！" },
+          "answer": null,
+          "tag": "A 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「欢迎回到学校！」",
+            "tokens": ["to", "Welcome", "school!", "back"],
+            "answer": ["Welcome", "back", "to", "school!"],
+            "explanationZh": "这句话的顺序是 Welcome + back + to + school！意思是「欢迎回到学校」。这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "She's a student.", "zh": "她是一名学生。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：She's a student 用本单元 vocab she+student 介绍同学，PEP 本单元课标内。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "班里来了新同学，老师指着一个女孩介绍她。",
+            "promptZh": "「她是一名学生」用英语怎么说？",
+            "options": [
+              { "text": "She's a student.", "correct": true },
+              { "text": "She a student.", "correct": false },
+              { "text": "She's a students.", "correct": false }
+            ],
+            "explanationZh": "介绍「她是一名学生」用 She's a student，She's 就是 She is。一个错项漏掉了 is（She 后面少了 's），一个把 student 加了 s 变成了好几个学生，说一个人时不能加 s。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Welcome back to school!", "zh": "欢迎回到学校！" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：She's a student / He's a student 用本单元 vocab，集中记意思。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "Welcome back to school!", "zh": "欢迎回到学校！" },
+              { "en": "She's a student.", "zh": "她是一名学生。" },
+              { "en": "He's a student.", "zh": "他是一名学生。" }
+            ],
+            "explanationZh": "这几句都是开学常用的句子，记住它们的中文意思。She's 是说女生「她」，He's 是说男生「他」，别记反了。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "你是哪里人 · Where are you from",
+      "description": "认识新朋友，问问对方来自哪个国家。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Where are you from?", "zh": "你是哪里人？" },
+          "answer": { "en": "I'm from China.", "zh": "我来自中国。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "新朋友问「你是哪里人？」，你来自中国，该怎么说？",
+            "options": [
+              { "text": "I'm from China.", "correct": true },
+              { "text": "I'm fine, thank you.", "correct": false },
+              { "text": "I'm nine.", "correct": false }
+            ],
+            "explanationZh": "问「你是哪里人」，就说 I'm from + 国家，所以答 I'm from China（我来自中国）。一个错项是回答「你好吗」的话，一个是说年龄「我九岁」，都对不上这个问题。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Where are you from?", "zh": "你是哪里人？" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你是哪里人？」",
+            "options": [
+              { "text": "Where are you from?", "correct": true },
+              { "text": "Where you are from?", "correct": false },
+              { "text": "Where are from you?", "correct": false }
+            ],
+            "explanationZh": "问「你是哪里人」的顺序是 Where + are + you + from？Where 放最前面。两个错项都是把 are、you 的位置弄乱了。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "I'm from China.", "zh": "我来自中国。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我来自中国」，该填哪个国家？",
+            "sentenceTemplate": "I'm from ___.",
+            "options": [
+              { "text": "China", "correct": true },
+              { "text": "UK", "correct": false },
+              { "text": "USA", "correct": false }
+            ],
+            "explanationZh": "China 是「中国」。UK 是「英国」、USA 是「美国」，它们也都是真的国家名，但意思不是中国，要按中文选对。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Welcome back, welcome back! Where are you from?", "zh": "欢迎回来，欢迎回来！你是哪里人？（歌谣）" },
+          "answer": { "en": "From China, from Canada, welcome, welcome all!", "zh": "来自中国，来自加拿大，欢迎，欢迎大家！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编开学小歌谣（跟读不计分），用本单元 vocab China、Canada。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

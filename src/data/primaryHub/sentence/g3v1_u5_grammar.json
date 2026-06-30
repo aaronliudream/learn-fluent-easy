@@ -1,0 +1,154 @@
+{
+  "lessonId": "g3v1_u5_grammar",
+  "unitId": "g3v1_u5",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "学会有礼貌地要一些果汁，再问问「请给我一些面包好吗？」，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "我想要 · I'd like some",
+      "description": "想要点吃的喝的，用 I'd like some 说出来。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "I'd like some juice, please.", "zh": "请给我一些果汁。" },
+          "answer": { "en": "Here you are.", "zh": "给你。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人说「请给我一些果汁」，你把果汁递过去，该怎么说？",
+            "options": [
+              { "text": "Here you are.", "correct": true },
+              { "text": "Thank you.", "correct": false },
+              { "text": "I'm fine.", "correct": false }
+            ],
+            "explanationZh": "把东西递给别人时说 Here you are，就是「给你」。错项里 Thank you 是收到东西后说的「谢谢」，I'm fine 是回答「你好吗」的话，都对不上这里。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "I'd like some juice, please.", "zh": "请给我一些果汁。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语说「请给我一些果汁。」",
+            "options": [
+              { "text": "I'd like some juice, please.", "correct": true },
+              { "text": "I like some juice, please.", "correct": false },
+              { "text": "I'd some juice like, please.", "correct": false }
+            ],
+            "explanationZh": "想要某样东西，用 I'd like some + 食物，please。I'd like 是「我想要」。一个错项写成 I like，意思变成「我喜欢」，不是要东西；另一个把 like 放到了后面，词序乱了。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "I'd like some milk, please.", "zh": "请给我一些牛奶。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：把 dialogues 的 juice 换成 milk（取自本单元 vocabulary），同句型。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「请给我一些牛奶」该填哪个词？",
+            "sentenceTemplate": "I'd like some ___, please.",
+            "options": [
+              { "text": "milk", "correct": true },
+              { "text": "juice", "correct": false },
+              { "text": "water", "correct": false }
+            ],
+            "explanationZh": "milk 是「牛奶」。juice（果汁）、water（水）也是真实的食物词，但和中文「牛奶」对不上，要按中文选 milk。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "I'd like some juice, please.", "zh": "请给我一些果汁。" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：I'd like some water, please 把 juice 换成 water（取自本单元 vocabulary），同句型；Here you are 为课本原句。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "I'd like some juice, please.", "zh": "请给我一些果汁。" },
+              { "en": "I'd like some water, please.", "zh": "请给我一些水。" },
+              { "en": "Here you are.", "zh": "给你。" }
+            ],
+            "explanationZh": "这几句都是「要东西」和「给东西」的核心句型，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "可以给我吗 · Can I have some",
+      "description": "有礼貌地问别人要一点东西，学会 Can I have some。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Can I have some bread, please?", "zh": "请给我一些面包好吗？" },
+          "answer": { "en": "Here you are.", "zh": "给你。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人有礼貌地问「请给我一些面包好吗？」，你把面包递过去，该怎么说？",
+            "options": [
+              { "text": "Here you are.", "correct": true },
+              { "text": "No, thanks.", "correct": false },
+              { "text": "Good morning.", "correct": false }
+            ],
+            "explanationZh": "别人说 Can I have some bread, please?（请给我一些面包好吗），你递东西时说 Here you are（给你）。错项一个是拒绝的话，一个是早上的问候语，都对不上。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Can I have some cake, please?", "zh": "请给我一些蛋糕好吗？" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：把 dialogues 的 bread 换成 cake（取自本单元 vocabulary），同句型本单元课标内。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "生日会上，你想吃一点蛋糕。",
+            "promptZh": "「请给我一些蛋糕好吗？」用英语怎么说？",
+            "options": [
+              { "text": "Can I have some cake, please?", "correct": true },
+              { "text": "Can I some cake have, please?", "correct": false },
+              { "text": "Have I can some cake, please?", "correct": false }
+            ],
+            "explanationZh": "有礼貌地要东西用 Can I have some + 食物，please？Can 放最前面帮忙提问，have 紧跟在 I 后面。两个错项都把 have、Can 的位置弄乱了。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Can I have some rice, please?", "zh": "请给我一些米饭好吗？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：把 dialogues 的 bread 换成 rice（取自本单元 vocabulary），同句型；句中无可移动副词，排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「请给我一些米饭好吗？」",
+            "tokens": ["have", "Can", "please?", "some", "I", "rice,"],
+            "answer": ["Can", "I", "have", "some", "rice,", "please?"],
+            "explanationZh": "有礼貌地要东西，Can 放句首：Can + I + have + some + 食物，please？这句没有能挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Bread and rice, fish and cake,", "zh": "面包米饭，鱼肉蛋糕，（歌谣）" },
+          "answer": { "en": "I'd like some, please. Here you are!", "zh": "请给我一些。给你！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编食物歌谣（跟读不计分），用本单元食物词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

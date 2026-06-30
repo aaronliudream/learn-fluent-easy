@@ -1,0 +1,153 @@
+{
+  "lessonId": "g3v1_u4_grammar",
+  "unitId": "g3v1_u4",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "看完近处的小动物，再看看远处那只，说说你喜欢哪个，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "这是什么 · What's this?",
+      "description": "指着近处的小动物，问问这是什么。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "What's this?", "zh": "这是什么？" },
+          "answer": { "en": "It's a duck.", "zh": "是一只鸭子。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "有人指着近处的小动物问「这是什么？」，那是一只鸭子，该怎么回答？",
+            "options": [
+              { "text": "It's a duck.", "correct": true },
+              { "text": "Yes, I do.", "correct": false },
+              { "text": "I'm Mike.", "correct": false }
+            ],
+            "explanationZh": "问「这是什么」，就说出那个动物：It's a + 动物，所以答 It's a duck（是一只鸭子）。一个错项是回答「是不是」的话，一个是自我介绍，都对不上问题。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "What's this?", "zh": "这是什么？" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「这是什么？」",
+            "options": [
+              { "text": "What's this?", "correct": true },
+              { "text": "What this?", "correct": false },
+              { "text": "This what's?", "correct": false }
+            ],
+            "explanationZh": "问「这是什么」的语序是 What's + this？What's 就是 What is，放在最前面。一个错项漏了 's（is），一个把词的顺序弄反了。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "It's a duck.", "zh": "是一只鸭子。" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「是一只鸭子」该填哪个动物？",
+            "sentenceTemplate": "It's a ___.",
+            "options": [
+              { "text": "duck", "correct": true },
+              { "text": "pig", "correct": false },
+              { "text": "cat", "correct": false }
+            ],
+            "explanationZh": "duck 是「鸭子」。pig（猪）、cat（猫）也是真实的动物词，但和中文对不上，要按中文选对那只鸭子。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "It's a duck.", "zh": "是一只鸭子。" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：It's a cat / It's a dog 为本单元课标核心句，cat、dog 取自本单元 vocabulary，集中记意思。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "It's a duck.", "zh": "是一只鸭子。" },
+              { "en": "It's a cat.", "zh": "是一只猫。" },
+              { "en": "It's a dog.", "zh": "是一只狗。" }
+            ],
+            "explanationZh": "这几句都是 It's a + 动物，用来说「是一只某种动物」，记住它们的意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "那是什么 · What's that?",
+      "description": "指着远处的动物，问那是什么，说说你喜欢它。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "What's that?", "zh": "那是什么？" },
+          "answer": { "en": "It's a panda. I like it!", "zh": "是一只熊猫。我喜欢它！" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "有人指着远处问「那是什么？」，那是一只熊猫，你很喜欢它，该怎么回答？",
+            "options": [
+              { "text": "It's a panda. I like it!", "correct": true },
+              { "text": "It's a duck.", "correct": false },
+              { "text": "How are you?", "correct": false }
+            ],
+            "explanationZh": "看远处的东西用 What's that?（那是什么？），回答还是 It's a + 动物，喜欢就再加一句 I like it!。一个错项说成了鸭子，和熊猫对不上；一个是问候的话，不是回答。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "It's a bear.", "zh": "是一只熊。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：It's a + 动物 为本单元课标答句；bear 取自本单元 vocabulary。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "你指着一只熊，想告诉同学那是什么。",
+            "promptZh": "「是一只熊」用英语怎么说？",
+            "options": [
+              { "text": "It's a bear.", "correct": true },
+              { "text": "It's bear a.", "correct": false },
+              { "text": "Bear it's a.", "correct": false }
+            ],
+            "explanationZh": "说「是一只……」用 It's a + 动物，bear 是「熊」。两个错项都把 a 和 bear 的顺序弄乱了，读起来不通。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "It's a pig.", "zh": "是一只猪。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：It's a + 动物 同句型，pig 取自本单元 vocabulary；句中无可移动副词，排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「是一只猪。」",
+            "tokens": ["a", "It's", "pig."],
+            "answer": ["It's", "a", "pig."],
+            "explanationZh": "这句的语序是 It's + a + 动物，It's 放最前面。这句词不多，只有一种排法。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "What's this? A cat, a cat!", "zh": "这是什么？一只猫，一只猫！（歌谣）" },
+          "answer": { "en": "What's that? A dog, a dog!", "zh": "那是什么？一只狗，一只狗！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编小动物歌谣（跟读不计分），用本单元 cat、dog 等动物词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

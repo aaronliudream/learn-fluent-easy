@@ -1,0 +1,151 @@
+{
+  "lessonId": "g3v2_u5_grammar",
+  "unitId": "g3v2_u5",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "聊完喜不喜欢梨，再来说说不喜欢什么、喜欢哪种水果，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "喜欢梨吗 · Do you like pears?",
+      "description": "问问别人喜不喜欢某种水果。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Do you like pears?", "zh": "你喜欢梨吗？" },
+          "answer": { "en": "Yes, I do.", "zh": "是的，我喜欢。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你喜欢梨吗？」，你喜欢，该怎么回答？",
+            "options": [
+              { "text": "Yes, I do.", "correct": true },
+              { "text": "No, thank you.", "correct": false },
+              { "text": "It's a pear.", "correct": false }
+            ],
+            "explanationZh": "别人用 Do you like...? 问你喜不喜欢，喜欢就回答 Yes, I do（是的，我喜欢）。两个错项一个是别人请你吃东西时才说的客气话，一个是在说「这是一个梨」，都没回答喜不喜欢。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Do you like pears?", "zh": "你喜欢梨吗？" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「你喜欢梨吗？」这句里该填哪种水果？",
+            "sentenceTemplate": "Do you like ___?",
+            "options": [
+              { "text": "pears", "correct": true },
+              { "text": "apples", "correct": false },
+              { "text": "oranges", "correct": false }
+            ],
+            "explanationZh": "pears 是「梨」，要按中文「梨」来选。apples 是「苹果」、oranges 是「橙子」，都是真实的水果词，但跟中文对不上，不能选。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "Do you like pears?", "zh": "你喜欢梨吗？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你喜欢梨吗？」",
+            "options": [
+              { "text": "Do you like pears?", "correct": true },
+              { "text": "Do you likes pears?", "correct": false },
+              { "text": "Like you do pears?", "correct": false }
+            ],
+            "explanationZh": "问「你喜欢……吗」的语序是 Do + you + like + 东西？Do 放在最前面帮忙提问。一个错项把 like 写成了 likes（这里不用加 s），一个把词的顺序排乱了。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Do you like pears?", "zh": "你喜欢梨吗？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：把本单元 A/B 课标核心问答句集中起来记意思，句子均取自本单元 dialogues。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "Do you like pears?", "zh": "你喜欢梨吗？" },
+              { "en": "Yes, I do.", "zh": "是的，我喜欢。" },
+              { "en": "I like bananas.", "zh": "我喜欢香蕉。" }
+            ],
+            "explanationZh": "这几句都是本单元问喜不喜欢水果的核心句，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "我喜欢香蕉 · I like bananas",
+      "description": "学会说不喜欢，再说出自己真正喜欢的水果。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Do you like apples?", "zh": "你喜欢苹果吗？" },
+          "answer": { "en": "No, I don't. I like bananas.", "zh": "不，我不喜欢。我喜欢香蕉。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你喜欢苹果吗？」，你不喜欢苹果、喜欢香蕉，该怎么说？",
+            "options": [
+              { "text": "No, I don't. I like bananas.", "correct": true },
+              { "text": "Yes, please.", "correct": false },
+              { "text": "I have apples.", "correct": false }
+            ],
+            "explanationZh": "用 Do you like...? 问你时，不喜欢就回答 No, I don't（不，我不喜欢），再加上 I like bananas 说出真正喜欢的。两个错项一个是别人给你东西时说的客气话，一个是在说「我有苹果」，都没说清喜不喜欢。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Do you like apples?", "zh": "你喜欢苹果吗？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「你喜欢苹果吗？」",
+            "tokens": ["like", "Do", "apples?", "you"],
+            "answer": ["Do", "you", "like", "apples?"],
+            "explanationZh": "问「你喜欢……吗」要把 Do 放句首：Do + you + like + 东西？这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "I like bananas.", "zh": "我喜欢香蕉。" },
+          "answer": null,
+          "tag": "B Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "别人问你喜不喜欢苹果，你想说出自己喜欢的水果。",
+            "promptZh": "「我喜欢香蕉」用英语怎么说？",
+            "options": [
+              { "text": "I like bananas.", "correct": true },
+              { "text": "I likes bananas.", "correct": false },
+              { "text": "Bananas I like.", "correct": false }
+            ],
+            "explanationZh": "说「我喜欢……」的语序是 I + like + 东西。一个错项把 like 写成了 likes（跟在 I 后面不用加 s），一个把词的顺序排乱了。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Apples, pears, do you like?", "zh": "苹果、梨，你喜欢吗？（歌谣）" },
+          "answer": { "en": "Grapes and oranges, yes, I like!", "zh": "葡萄和橙子，是的，我喜欢！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编水果歌谣（跟读不计分），用本单元 vocabulary 的水果词 apple/pear/grape/orange。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

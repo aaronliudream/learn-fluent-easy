@@ -1,0 +1,150 @@
+{
+  "lessonId": "g3v1_u2_grammar",
+  "unitId": "g3v1_u2",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "跟同学问完好、一起去上学，再去认认颜色，跟琼斯老师学英语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "问候同学 · How are you?",
+      "description": "见到同学问声好，再一起去上学。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Hi, Sarah! How are you?", "zh": "嗨，萨拉！你好吗？" },
+          "answer": { "en": "Fine, thank you.", "zh": "很好，谢谢。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "约翰问萨拉「你好吗？」，萨拉很好，该怎么回答？",
+            "options": [
+              { "text": "Fine, thank you.", "correct": true },
+              { "text": "Goodbye, John.", "correct": false },
+              { "text": "This is Miss Jones.", "correct": false }
+            ],
+            "explanationZh": "别人问 How are you?（你好吗？），就说 Fine, thank you.（很好，谢谢）。两个错项一个是道别的话，一个是介绍别人的话，都对不上「你好吗」。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "How are you?", "zh": "你好吗？" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你好吗？」",
+            "options": [
+              { "text": "How are you?", "correct": true },
+              { "text": "How you are?", "correct": false },
+              { "text": "Are you how?", "correct": false }
+            ],
+            "explanationZh": "问「你好吗」的说法是 How are you?，are 放在 you 前面。一个错项把 are 和 you 写反了，一个把 are 提到最前面，顺序都不对。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "Let's go to school.", "zh": "我们去上学吧。" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "萨拉想叫约翰一起去上学。",
+            "promptZh": "「我们去上学吧」用英语怎么说？",
+            "options": [
+              { "text": "Let's go to school.", "correct": true },
+              { "text": "Let's school go to.", "correct": false },
+              { "text": "Go to school let's.", "correct": false }
+            ],
+            "explanationZh": "招呼别人「一起去上学」用 Let's go to school.，Let's 放最前面，go to school 是「去上学」。两个错项都是把词的顺序弄乱了。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "How are you?", "zh": "你好吗？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "How are you?", "zh": "你好吗？" },
+              { "en": "Fine, thank you.", "zh": "很好，谢谢。" },
+              { "en": "Let's go to school.", "zh": "我们去上学吧。" }
+            ],
+            "explanationZh": "这几句都是见面问好、招呼上学的常用句，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "认颜色 · Show me red",
+      "description": "跟琼斯老师问好，听口令认颜色。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Good morning. This is Miss Jones.", "zh": "早上好。这是琼斯老师。" },
+          "answer": { "en": "Good morning, Miss Jones.", "zh": "早上好，琼斯老师。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "老师介绍「早上好，这是琼斯老师」，你早上该怎么回应？",
+            "options": [
+              { "text": "Good morning, Miss Jones.", "correct": true },
+              { "text": "Good afternoon, Miss Jones.", "correct": false },
+              { "text": "Goodbye, Miss Jones.", "correct": false }
+            ],
+            "explanationZh": "早上见面回 Good morning（早上好）。一个错项 Good afternoon 是「下午好」，时间不对；一个 Goodbye 是「再见」，是分别时说的，都不合适。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Show me red.", "zh": "给我看看红色。" },
+          "answer": { "en": "OK.", "zh": "好的。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「给我看看红色」该填哪个颜色？",
+            "sentenceTemplate": "Show me ___.",
+            "options": [
+              { "text": "red", "correct": true },
+              { "text": "green", "correct": false },
+              { "text": "blue", "correct": false }
+            ],
+            "explanationZh": "red 是「红色」。green（绿色）、blue（蓝色）也是真实的颜色词，但意思不是红色，要按中文选 red。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Show me red.", "zh": "给我看看红色。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「给我看看红色」",
+            "tokens": ["red.", "Show", "me"],
+            "answer": ["Show", "me", "red."],
+            "explanationZh": "请别人「给我看看……」用 Show + me + 颜色：Show me red.。这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Red and yellow, green and blue,", "zh": "红色黄色，绿色蓝色，（歌谣）" },
+          "answer": { "en": "I can see the colours, can you?", "zh": "我能看见这些颜色，你能吗？（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编颜色歌谣（跟读不计分），用本单元颜色词 red/yellow/green/blue。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

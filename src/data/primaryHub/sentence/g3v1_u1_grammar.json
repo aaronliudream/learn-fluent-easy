@@ -1,0 +1,152 @@
+{
+  "lessonId": "g3v1_u1_grammar",
+  "unitId": "g3v1_u1",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "打完招呼互相认识，再去看看 John 的新铅笔盒里装了什么，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "打招呼 · Hello, I'm...",
+      "description": "见到新朋友，打个招呼、介绍自己。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Hello! I'm Mike.", "zh": "你好！我是迈克。" },
+          "answer": { "en": "Hi! I'm Sarah.", "zh": "嗨！我是萨拉。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "迈克说「你好！我是迈克。」，萨拉也想介绍自己，该怎么回应？",
+            "options": [
+              { "text": "Hi! I'm Sarah.", "correct": true },
+              { "text": "Goodbye!", "correct": false },
+              { "text": "What's in it?", "correct": false }
+            ],
+            "explanationZh": "别人用 I'm + 名字 介绍自己，你也用 Hi! I'm + 自己的名字 来回应。两个错项一个是道别的话，一个是问「里面有什么」，都接不上自我介绍。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Hello! I'm Mike.", "zh": "你好！我是迈克。" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语说「你好！我是迈克。」",
+            "options": [
+              { "text": "Hello! I'm Mike.", "correct": true },
+              { "text": "Hello! I Mike.", "correct": false },
+              { "text": "I'm Hello! Mike.", "correct": false }
+            ],
+            "explanationZh": "介绍自己说 I'm + 名字，I'm 是 I am 的缩写，不能漏掉。一个错项漏了 'm，一个把 Hello 放错了位置。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "Hi! I'm Sarah.", "zh": "嗨！我是萨拉。" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "萨拉想向新同学介绍自己。",
+            "promptZh": "「嗨！我是萨拉。」用英语怎么说？",
+            "options": [
+              { "text": "Hi! I'm Sarah.", "correct": true },
+              { "text": "Hi! Sarah I'm.", "correct": false },
+              { "text": "Hi! Am I Sarah.", "correct": false }
+            ],
+            "explanationZh": "介绍自己的语序是 Hi! I'm + 名字，名字放在 I'm 后面。一个错项把名字放到了 I'm 前面，一个把 am 提到了前面变成了问句的样子，都不对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Hello! I'm Mike.", "zh": "你好！我是迈克。" },
+          "answer": null,
+          "tag": "A 连一连",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "Hello! I'm Mike.", "zh": "你好！我是迈克。" },
+              { "en": "Hi! I'm Sarah.", "zh": "嗨！我是萨拉。" },
+              { "en": "Hello, John.", "zh": "你好，约翰。" }
+            ],
+            "explanationZh": "这几句都是见面打招呼、介绍自己的核心句子，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "新文具 · What's in it?",
+      "description": "John 有个新铅笔盒，看看里面都装了什么。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "I have a new pencil box.", "zh": "我有一个新铅笔盒。" },
+          "answer": { "en": "Oh, really? What's in it?", "zh": "哦，真的吗？里面有什么？" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "约翰说「我有一个新铅笔盒。」，萨拉很好奇里面有什么，该怎么说？",
+            "options": [
+              { "text": "Oh, really? What's in it?", "correct": true },
+              { "text": "Goodbye, John.", "correct": false },
+              { "text": "I'm Mike.", "correct": false }
+            ],
+            "explanationZh": "想问「里面有什么」就用 What's in it？两个错项一个是道别的话，一个是介绍自己，都没有问到里面的东西。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "I have a new pen.", "zh": "我有一支新钢笔。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：仿 dialogues 的 I have a new pencil box，换成 pen（取自本单元 vocabulary），同句型。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我有一支新钢笔」该填哪个词？",
+            "sentenceTemplate": "I have a new ___.",
+            "options": [
+              { "text": "pen", "correct": true },
+              { "text": "pencil", "correct": false },
+              { "text": "book", "correct": false }
+            ],
+            "explanationZh": "pen 是「钢笔」。pencil（铅笔）和它长得很像但是不同的词，book 是「书」，意思都对不上，要按中文选 pen。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "I have a new bag.", "zh": "我有一个新书包。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：仿 I have a new pencil box，bag 取自本单元 vocabulary；句中无可移动副词，排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「我有一个新书包。」",
+            "tokens": ["new", "I", "bag.", "have", "a"],
+            "answer": ["I", "have", "a", "new", "bag."],
+            "explanationZh": "说「我有一个……」语序是 I + have + a + new + 东西。I 放最前面，bag 放最后。这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Hello, hello! What's in your bag?", "zh": "你好，你好！你的包里有什么？（歌谣）" },
+          "answer": { "en": "A pen, a ruler and a crayon!", "zh": "一支钢笔、一把尺子和一支蜡笔！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编打招呼+文具小歌谣（跟读不计分），用本单元 pen / ruler / crayon。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "lessonId": "g3v2_u6_grammar",
+  "unitId": "g3v2_u6",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "数完看见的风筝，再数数手里的蜡笔，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "看见多少 · How many do you see?",
+      "description": "问问别人看见多少东西，学会用 How many 数数。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "How many kites do you see?", "zh": "你看见多少只风筝？" },
+          "answer": { "en": "I see 12.", "zh": "我看见12只。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你看见多少只风筝？」，你看见12只，该怎么回答？",
+            "options": [
+              { "text": "I see 12.", "correct": true },
+              { "text": "Yes, I do.", "correct": false },
+              { "text": "They are kites.", "correct": false }
+            ],
+            "explanationZh": "问「看见多少」，就直接说出数字，所以答 I see 12（我看见12只）。一个错项是回答「是不是」的话，一个说的是「它们是风筝」，都对不上问题。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "How many kites do you see?", "zh": "你看见多少只风筝？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你看见多少只风筝？」",
+            "options": [
+              { "text": "How many kites do you see?", "correct": true },
+              { "text": "How many kites you see?", "correct": false },
+              { "text": "How many do you see kites?", "correct": false }
+            ],
+            "explanationZh": "问「看见多少只风筝」的语序是 How many + kites + do + you + see？do 帮助提问。一个错项漏了 do，一个把 kites 放错了位置。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "I see thirteen kites.", "zh": "我看见13只风筝。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：I see + 数字 + kites 为本单元课标答句；thirteen 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我看见13只风筝」该填哪个数字？",
+            "sentenceTemplate": "I see ___ kites.",
+            "options": [
+              { "text": "thirteen", "correct": true },
+              { "text": "fourteen", "correct": false },
+              { "text": "fifteen", "correct": false }
+            ],
+            "explanationZh": "thirteen 是「13」。fourteen（14）、fifteen（15）也是真实的数字词，但数字不对，要按中文选对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "How many do you see?", "zh": "你看见多少？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：eleven/twelve/thirteen 取自本单元 vocabulary，集中记数字意思。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文数字和中文意思连起来。",
+            "pairs": [
+              { "en": "eleven", "zh": "十一" },
+              { "en": "twelve", "zh": "十二" },
+              { "en": "thirteen", "zh": "十三" }
+            ],
+            "explanationZh": "这几个都是本单元要记的数字单词，记住它们对应的中文。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "有多少 · How many do you have?",
+      "description": "问问别人有多少东西，学会数自己手里的东西。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "How many crayons do you have?", "zh": "你有多少支蜡笔？" },
+          "answer": { "en": "I have 16.", "zh": "我有16支。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你有多少支蜡笔？」，你有16支，该怎么回答？",
+            "options": [
+              { "text": "I have 16.", "correct": true },
+              { "text": "Yes, please.", "correct": false },
+              { "text": "I like crayons.", "correct": false }
+            ],
+            "explanationZh": "问「有多少」，就直接说出数字，所以答 I have 16（我有16支）。一个错项是答应别人的话，一个说的是「我喜欢蜡笔」，都对不上问题。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "How many crayons do you have?", "zh": "你有多少支蜡笔？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：把 dialogues 的 How many crayons do you have? 拆词块练语序；句中无可移动副词，排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「你有多少支蜡笔？」",
+            "tokens": ["crayons", "you", "How", "have?", "do", "many"],
+            "answer": ["How", "many", "crayons", "do", "you", "have?"],
+            "explanationZh": "问「有多少」用 How many 开头：How many + crayons + do + you + have？这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "I have eighteen crayons.", "zh": "我有18支蜡笔。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：I have + 数字 + crayons 为本单元课标答句；eighteen 取自本单元 vocabulary。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "你想告诉同学你有多少支蜡笔。",
+            "promptZh": "「我有18支蜡笔」用英语怎么说？",
+            "options": [
+              { "text": "I have eighteen crayons.", "correct": true },
+              { "text": "I have crayons eighteen.", "correct": false },
+              { "text": "Eighteen I have crayons.", "correct": false }
+            ],
+            "explanationZh": "说「我有几支蜡笔」的语序是 I + have + 数字 + crayons，eighteen（18）放在 crayons 前面。两个错项都把单词顺序弄乱了。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Eleven, twelve, thirteen, fourteen,", "zh": "十一、十二、十三、十四，（歌谣）" },
+          "answer": { "en": "Fifteen, sixteen, count some more!", "zh": "十五、十六，接着数！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编数字歌谣（跟读不计分），用本单元数字词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

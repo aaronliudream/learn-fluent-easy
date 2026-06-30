@@ -1,0 +1,155 @@
+{
+  "lessonId": "g3v1_u3_grammar",
+  "unitId": "g3v1_u3",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "认识了新朋友、说了说我的脸，接下来一起做个木偶、摸摸身体部位，练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "打招呼 · I'm…",
+      "description": "和新朋友打招呼，说说「这是我的脸」。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Hello! I'm Chen Jie.", "zh": "你好！我是陈杰。" },
+          "answer": { "en": "Hi! I'm Sarah.", "zh": "嗨！我是萨拉。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "陈杰说「你好！我是陈杰。」，萨拉该怎么回应？",
+            "options": [
+              { "text": "Hi! I'm Sarah.", "correct": true },
+              { "text": "It's a dog.", "correct": false },
+              { "text": "Thank you.", "correct": false }
+            ],
+            "explanationZh": "别人介绍自己时，我们也回一句打招呼，再说出自己的名字：Hi! I'm + 名字。两个错项一个在说一只狗，一个是道谢，都对不上。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Hi! I'm Sarah.", "zh": "嗨！我是萨拉。" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语说「嗨！我是萨拉。」",
+            "options": [
+              { "text": "Hi! I'm Sarah.", "correct": true },
+              { "text": "Hi! I Sarah.", "correct": false },
+              { "text": "Hi! Sarah I'm.", "correct": false }
+            ],
+            "explanationZh": "介绍自己说 I'm + 名字，I'm 就是 I am 的简写。一个错项漏了 'm，一个把名字放到了 I'm 前面，位置错了。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "This is my face.", "zh": "这是我的脸。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：This is my + 身体部位 为本单元 PEP 课标核心句；face 取自本单元 vocabulary。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "陈杰指着自己，想介绍身体的部位。",
+            "promptZh": "「这是我的脸」用英语怎么说？",
+            "options": [
+              { "text": "This is my face.", "correct": true },
+              { "text": "This my is face.", "correct": false },
+              { "text": "This is my faces.", "correct": false }
+            ],
+            "explanationZh": "介绍自己身体的部位用 This is my + 部位，is 紧跟在 This 后面。一个错项把 is 和 my 的位置弄反了；一个用了 faces，可我们只有一张脸，要用 face。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "This is my eye.", "zh": "这是我的眼睛。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：This is my + 身体部位 同上；eye 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「这是我的眼睛」该填哪个词？",
+            "sentenceTemplate": "This is my ___.",
+            "options": [
+              { "text": "eye", "correct": true },
+              { "text": "ear", "correct": false },
+              { "text": "nose", "correct": false }
+            ],
+            "explanationZh": "eye 是「眼睛」。ear（耳朵）、nose（鼻子）也是身体部位的词，但意思不一样，要按中文选对。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "做木偶 · Look at me!",
+      "description": "一起做个木偶，摸摸身体的部位，最后跟读歌谣。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Let's make a puppet!", "zh": "我们一起做个木偶吧！" },
+          "answer": { "en": "Great!", "zh": "太棒了！" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "听到「我们一起做个木偶吧！」，你很想做，该怎么回应？",
+            "options": [
+              { "text": "Great!", "correct": true },
+              { "text": "I'm fine.", "correct": false },
+              { "text": "Goodbye.", "correct": false }
+            ],
+            "explanationZh": "别人提议一起做事，你愿意就用 Great!（太棒了！）表示赞成。两个错项一个是回答「你好吗」的话，一个是道别，都对不上。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Look at my face.", "zh": "看我的脸。" },
+          "answer": null,
+          "tag": "B 连一连",
+          "_note": "扩充：把本单元身体部位词集中记意思，词均取自本单元 vocabulary。",
+          "training": {
+            "type": "match",
+            "promptZh": "把身体部位的英文和中文连起来。",
+            "pairs": [
+              { "en": "face", "zh": "脸" },
+              { "en": "eye", "zh": "眼睛" },
+              { "en": "nose", "zh": "鼻子" },
+              { "en": "mouth", "zh": "嘴" }
+            ],
+            "explanationZh": "这些都是身体部位的词，记住它们的中文意思：face 脸、eye 眼睛、nose 鼻子、mouth 嘴。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Touch your nose.", "zh": "摸摸你的鼻子。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：Touch your + 身体部位 为本单元 PEP（Let's do）课标句；nose 取自本单元 vocabulary；句中无可移动副词，排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「摸摸你的鼻子。」",
+            "tokens": ["your", "Touch", "nose."],
+            "answer": ["Touch", "your", "nose."],
+            "explanationZh": "让别人做动作用 Touch your + 身体部位，Touch 放最前面。这句没有能挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Touch your face, touch your eye,", "zh": "摸摸脸，摸摸眼睛，（歌谣）" },
+          "answer": { "en": "Touch your nose, and say goodbye!", "zh": "摸摸鼻子，说再见！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编身体部位歌谣（跟读不计分），只用本单元 face / eye / nose 等部位词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

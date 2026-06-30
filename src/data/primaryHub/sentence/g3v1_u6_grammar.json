@@ -1,0 +1,153 @@
+{
+  "lessonId": "g3v1_u6_grammar",
+  "unitId": "g3v1_u6",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "生日会上挑好想要的东西，再一起数数桌上有多少，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "挑一挑 · This one, please",
+      "description": "生日会上挑自己想要的东西，学会礼貌地说「请给我这个」。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "This one, please.", "zh": "请给我这个。" },
+          "answer": { "en": "Sure.", "zh": "好的。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "有人指着礼物说「请给我这个」，你该怎么回应？",
+            "options": [
+              { "text": "Sure.", "correct": true },
+              { "text": "How old are you?", "correct": false },
+              { "text": "I'm fine, thank you.", "correct": false }
+            ],
+            "explanationZh": "别人礼貌地说「请给我这个」，答应他就说 Sure（好的）。一个错项是问「你几岁」，一个是回答「你好吗」，都和「给不给」对不上。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "This one, please.", "zh": "请给我这个。" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语礼貌地说「请给我这个。」",
+            "options": [
+              { "text": "This one, please.", "correct": true },
+              { "text": "This please one.", "correct": false },
+              { "text": "One this, please.", "correct": false }
+            ],
+            "explanationZh": "「请给我这个」英语说 This one, please，please（请）放在最后更有礼貌。两个错项把 this、one、please 的顺序排乱了。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "This one, please.", "zh": "请给我这个。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "生日会上，你想要桌上的这一个小蛋糕。",
+            "promptZh": "「请给我这个。」用英语怎么说？",
+            "options": [
+              { "text": "This one, please.", "correct": true },
+              { "text": "This is one.", "correct": false },
+              { "text": "Please this one.", "correct": false }
+            ],
+            "explanationZh": "想礼貌地要某样东西，说 This one, please（请给我这个）。This is one 是「这是一个」，意思不一样；另一个把词的顺序排乱了。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "How many?", "zh": "有多少？（数一数）" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：用本单元数字词 one–four 连线记意思（vocabulary）。",
+          "training": {
+            "type": "match",
+            "promptZh": "把数字和中文意思连起来。",
+            "pairs": [
+              { "en": "one", "zh": "一" },
+              { "en": "two", "zh": "二" },
+              { "en": "three", "zh": "三" },
+              { "en": "four", "zh": "四" }
+            ],
+            "explanationZh": "这些都是本单元学的数字，生日会上数东西要用，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "数一数 · How many?",
+      "description": "生日会上数数桌上有多少东西，学会用 How many 提问。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "How many plates?", "zh": "有多少个盘子？" },
+          "answer": { "en": "Five.", "zh": "五个。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "妈妈问「有多少个盘子？」，桌上有五个盘子，该怎么回答？",
+            "options": [
+              { "text": "Five.", "correct": true },
+              { "text": "I'm five.", "correct": false },
+              { "text": "Yes, please.", "correct": false }
+            ],
+            "explanationZh": "问 How many（有多少），直接说数字就行，五个就说 Five。一个错项 I'm five 是说「我五岁」，一个是「好的，请」，都不是在数数量。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "How many plates?", "zh": "有多少个盘子？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的问句：「有多少个盘子？」",
+            "tokens": ["plates?", "many", "How"],
+            "answer": ["How", "many", "plates?"],
+            "explanationZh": "问「有多少」用 How many + 名词？How many 永远放在最前面。这句没有能换位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "I see six plates.", "zh": "我看见六个盘子。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：把 How many plates? 的回答扩成数数句；six 取自本单元 vocabulary，与课本的 plates 搭配。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我看见六个盘子」该填哪个数字？",
+            "sentenceTemplate": "I see ___ plates.",
+            "options": [
+              { "text": "six", "correct": true },
+              { "text": "three", "correct": false },
+              { "text": "eight", "correct": false }
+            ],
+            "explanationZh": "six 是「六」。three（三）、eight（八）也是本单元真实的数字词，但数目不对，要按中文「六」来选。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "One, two, three, candles for me!", "zh": "一、二、三，蜡烛给我！（歌谣）" },
+          "answer": { "en": "Four, five, six, happy birthday!", "zh": "四、五、六，生日快乐！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编数字歌谣（跟读不计分），用本单元数字词 one–six。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

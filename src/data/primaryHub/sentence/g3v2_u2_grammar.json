@@ -1,0 +1,151 @@
+{
+  "lessonId": "g3v2_u2_grammar",
+  "unitId": "g3v2_u2",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "认识了爸爸，再来认识妈妈和家里人，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "那位男士是谁 · Who's that man?",
+      "description": "指着一位男士，问问他是谁。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Who's that man?", "zh": "那位男士是谁？" },
+          "answer": { "en": "He's my father.", "zh": "他是我爸爸。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "有人指着一位男士问「那位男士是谁？」，他是你爸爸，该怎么回答？",
+            "options": [
+              { "text": "He's my father.", "correct": true },
+              { "text": "She's my mother.", "correct": false },
+              { "text": "Yes, I do.", "correct": false }
+            ],
+            "explanationZh": "问的是一位男士，用 He 来指他，所以答 He's my father（他是我爸爸）。一个错项用了 She（她），指的是女士，对不上；另一个是回答「是不是」的话，没说他是谁。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Who's that man?", "zh": "那位男士是谁？" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「那位男士是谁？」",
+            "options": [
+              { "text": "Who's that man?", "correct": true },
+              { "text": "Who that man is?", "correct": false },
+              { "text": "Who's man that?", "correct": false }
+            ],
+            "explanationZh": "问「那位男士是谁」的语序是 Who's + that + man？Who's 放最前面。一个错项把 is 放到了句尾，一个把 man 和 that 调换了，顺序都错了。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "He's my father.", "zh": "他是我爸爸。" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「他是我爸爸」该填哪个词？",
+            "sentenceTemplate": "He's my ___.",
+            "options": [
+              { "text": "father", "correct": true },
+              { "text": "mother", "correct": false },
+              { "text": "woman", "correct": false }
+            ],
+            "explanationZh": "father 是「爸爸、父亲」。mother（妈妈）、woman（女人）也是真实的词，但说的是女的，和「爸爸」对不上，要按中文选 father。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Who's that man?", "zh": "那位男士是谁？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "Who's that man?", "zh": "那位男士是谁？" },
+              { "en": "He's my father.", "zh": "他是我爸爸。" },
+              { "en": "She's my mother.", "zh": "她是我妈妈。" }
+            ],
+            "explanationZh": "这几句都是问家里人「是谁」和回答的核心句，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "那位女士是谁 · Who's that woman?",
+      "description": "指着一位女士，问问她是谁，最后跟读家庭歌谣。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Who's that woman?", "zh": "那位女士是谁？" },
+          "answer": { "en": "She's my mother.", "zh": "她是我妈妈。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "有人指着一位女士问「那位女士是谁？」，她是你妈妈，该怎么回答？",
+            "options": [
+              { "text": "She's my mother.", "correct": true },
+              { "text": "He's my father.", "correct": false },
+              { "text": "It's a cat.", "correct": false }
+            ],
+            "explanationZh": "问的是一位女士，用 She 来指她，所以答 She's my mother（她是我妈妈）。一个错项用了 He（他），指的是男士，对不上；另一个说的是一只猫，不是人。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Who's that woman?", "zh": "那位女士是谁？" },
+          "answer": null,
+          "tag": "B Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "你想指着一位女士，问别人她是谁。",
+            "promptZh": "「那位女士是谁？」用英语怎么说？",
+            "options": [
+              { "text": "Who's that woman?", "correct": true },
+              { "text": "What's that woman?", "correct": false },
+              { "text": "Who's that man?", "correct": false }
+            ],
+            "explanationZh": "问「人是谁」要用 Who，所以是 Who's that woman？一个错项用了 What（什么），问人要用 Who；另一个把 woman（女士）说成了 man（男士），人不对。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "She's my mother.", "zh": "她是我妈妈。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：句中无可移动副词，排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「她是我妈妈」",
+            "tokens": ["my", "mother.", "She's"],
+            "answer": ["She's", "my", "mother."],
+            "explanationZh": "说「她是我妈妈」的顺序是 She's + my + mother。She's 放最前面，这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Who's that man? Who's that woman?", "zh": "那位男士是谁？那位女士是谁？（歌谣）" },
+          "answer": { "en": "He's my father, she's my mother!", "zh": "他是我爸爸，她是我妈妈！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编家庭歌谣（跟读不计分），用本单元 Who's that...? 句型和 father/mother。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

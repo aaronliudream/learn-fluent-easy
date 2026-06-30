@@ -1,0 +1,152 @@
+{
+  "lessonId": "g3v2_u3_grammar",
+  "unitId": "g3v2_u3",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "看完高高的长颈鹿，再去看看有趣的猴子，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "看长颈鹿 · Look at the giraffe",
+      "description": "在动物园里看长颈鹿，学会说「它好高啊」。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Look at the giraffe.", "zh": "看那只长颈鹿。" },
+          "answer": { "en": "It's so tall!", "zh": "它好高啊！" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "在动物园里看到一只高高的长颈鹿，朋友说「看那只长颈鹿」，该怎么接话？",
+            "options": [
+              { "text": "It's so tall!", "correct": true },
+              { "text": "Yes, I do.", "correct": false },
+              { "text": "How are you?", "correct": false }
+            ],
+            "explanationZh": "看到高高的长颈鹿，自然会感叹「它好高啊」，用 It's so tall！两个错项一个是回答「是不是」的话，一个是问好的话，都接不上看长颈鹿这句。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Look at the giraffe.", "zh": "看那只长颈鹿。" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语说「看那只长颈鹿。」",
+            "options": [
+              { "text": "Look at the giraffe.", "correct": true },
+              { "text": "Look the giraffe at.", "correct": false },
+              { "text": "Look at giraffe.", "correct": false }
+            ],
+            "explanationZh": "说「看那只…」用 Look at the + 动物，Look at 连在一起是「看」。一个错项把 at 放到了后面，词序乱了；一个漏掉了 the。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "It's so tall!", "zh": "它好高啊！" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "长颈鹿个子很高，该填哪个词？",
+            "sentenceTemplate": "It's so ___ !",
+            "options": [
+              { "text": "tall", "correct": true },
+              { "text": "short", "correct": false },
+              { "text": "long", "correct": false }
+            ],
+            "explanationZh": "tall 是「高的」，长颈鹿很高就用 tall。short 是「矮的」、long 是「长的」，都是真实的形容词，但意思不一样，放进这句不对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Look at the animals.", "zh": "看看这些动物。" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：tall / short / big 取自本单元 vocabulary，集中记形容词意思。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文和中文意思连起来。",
+            "pairs": [
+              { "en": "tall", "zh": "高的" },
+              { "en": "short", "zh": "矮的" },
+              { "en": "big", "zh": "大的" }
+            ],
+            "explanationZh": "这几个都是描述动物样子的形容词，记住它们的中文意思：tall 高的、short 矮的、big 大的。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "看猴子 · Look at the monkey",
+      "description": "再去看看猴子，说说动物们的样子，最后跟读歌谣。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Look at the monkey.", "zh": "看那只猴子。" },
+          "answer": { "en": "It's so funny!", "zh": "它真有趣！" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "朋友指着一只猴子说「看那只猴子」，猴子很好玩，该怎么接话？",
+            "options": [
+              { "text": "It's so funny!", "correct": true },
+              { "text": "Goodbye!", "correct": false },
+              { "text": "I like red.", "correct": false }
+            ],
+            "explanationZh": "看到好玩的猴子，自然会感叹「它真有趣」，用 It's so funny！两个错项一个是道别的话，一个是说喜欢颜色的话，都接不上看猴子这句。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "It's so fat!", "zh": "它好胖啊！" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：fat 取自本单元 vocabulary；It's so + 形容词同 dialogues 句型。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "动物园里有一只胖乎乎的小熊，你想说说它的样子。",
+            "promptZh": "「它好胖啊！」用英语怎么说？",
+            "options": [
+              { "text": "It's so fat!", "correct": true },
+              { "text": "It so fat!", "correct": false },
+              { "text": "So fat it's!", "correct": false }
+            ],
+            "explanationZh": "说「它好胖啊」用 It's so + 形容词，It's 是 It is 的缩写，里面的 is 不能少。一个错项漏掉了 's（也就是 is），一个把词序弄反了。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Look at the monkey.", "zh": "看那只猴子。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「看那只猴子。」",
+            "tokens": ["at", "the", "monkey.", "Look"],
+            "answer": ["Look", "at", "the", "monkey."],
+            "explanationZh": "「看那只猴子」的语序是 Look + at + the + monkey。这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Thin and fat, long and short,", "zh": "瘦的胖的，长的短的，（歌谣）" },
+          "answer": { "en": "Big and small, look at them all!", "zh": "大的小的，看看它们全部！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编动物形容词歌谣（跟读不计分），thin/fat/long/short/big/small 全取自本单元 vocabulary。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

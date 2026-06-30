@@ -1,0 +1,154 @@
+{
+  "lessonId": "g3v2_u4_grammar",
+  "unitId": "g3v2_u4",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "先学会问「我的东西在哪里」，再用 on、in、under 说清在上面、里面还是下面，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "在哪里 · Where is my...?",
+      "description": "东西找不到了，问问别人在哪里。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Where is my pencil box?", "zh": "我的铅笔盒在哪里？" },
+          "answer": { "en": "It's on the desk.", "zh": "在课桌上。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「我的铅笔盒在哪里？」，铅笔盒在课桌上，该怎么回答？",
+            "options": [
+              { "text": "It's on the desk.", "correct": true },
+              { "text": "Yes, I do.", "correct": false },
+              { "text": "I'm fine, thank you.", "correct": false }
+            ],
+            "explanationZh": "问「在哪里」时，回答用 It's + 介词短语说出位置，铅笔盒在课桌上就说 It's on the desk。一个错项是回答「是不是」的话，一个是问好的话，都对不上这个问题。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Where is my car?", "zh": "我的小汽车在哪里？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：把 dialogues 的 Where is my pencil box? 换成 car（取自本单元 vocabulary），同句型。",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「我的小汽车在哪里？」",
+            "options": [
+              { "text": "Where is my car?", "correct": true },
+              { "text": "Where my car is?", "correct": false },
+              { "text": "Is where my car?", "correct": false }
+            ],
+            "explanationZh": "问「在哪里」的语序是 Where + is + my + 东西？Where 放最前面，is 紧跟在后面。一个错项把 is 放到了句子末尾，一个把 is 提到了最前面，顺序都乱了。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "Where is my cap?", "zh": "我的帽子在哪里？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：cap 取自本单元 vocabulary，Where is my...? 为本单元课标核心句型。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "小朋友找不到帽子了，想问问同学。",
+            "promptZh": "「我的帽子在哪里？」用英语怎么说？",
+            "options": [
+              { "text": "Where is my cap?", "correct": true },
+              { "text": "My cap is where?", "correct": false },
+              { "text": "Where my cap?", "correct": false }
+            ],
+            "explanationZh": "问「我的帽子在哪里」也是 Where + is + my + cap？先 Where 再 is。一个错项把 where 放到了最后，一个漏掉了 is，都不对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Where is my map?", "zh": "我的地图在哪里？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "Where is my pencil box?", "zh": "我的铅笔盒在哪里？" },
+              { "en": "It's on the desk.", "zh": "在课桌上。" },
+              { "en": "Where is my map?", "zh": "我的地图在哪里？" }
+            ],
+            "explanationZh": "这几句都是问「东西在哪里」和回答位置的核心句，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "在上面·里面·下面 · on / in / under",
+      "description": "学会用 on、in、under 说清东西在什么位置。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Where is my map?", "zh": "我的地图在哪里？" },
+          "answer": { "en": "It's in the desk.", "zh": "在课桌里。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「我的地图在哪里？」，地图在课桌里，该怎么回答？",
+            "options": [
+              { "text": "It's in the desk.", "correct": true },
+              { "text": "It's a desk.", "correct": false },
+              { "text": "Thank you very much.", "correct": false }
+            ],
+            "explanationZh": "回答「在哪里」用 It's + 介词 + 地点，地图在课桌里面就用 in，说 It's in the desk。一个错项说成「它是一张桌子」，一个是道谢的话，都对不上问题。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "The ball is under the chair.", "zh": "球在椅子下面。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：under、ball、chair 均取自本单元 vocabulary，on/in/under 为本单元课标方位词。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「球在椅子下面」该填哪个词？",
+            "sentenceTemplate": "The ball is ___ the chair.",
+            "options": [
+              { "text": "under", "correct": true },
+              { "text": "on", "correct": false },
+              { "text": "in", "correct": false }
+            ],
+            "explanationZh": "under 是「在……下面」，球在椅子下面就用 under。on 是「在上面」、in 是「在里面」，都是真实的方位词，但和「下面」不一样，要按中文选 under。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Where is my ball?", "zh": "我的球在哪里？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：ball 取自本单元 vocabulary，同 Where is my...? 句型；句中无可移动词，排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「我的球在哪里？」",
+            "tokens": ["my", "Where", "ball?", "is"],
+            "answer": ["Where", "is", "my", "ball?"],
+            "explanationZh": "问「在哪里」把 Where 放句首：Where + is + my + 东西？这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "On the desk, in the desk,", "zh": "在桌上，在桌里，（歌谣）" },
+          "answer": { "en": "Under the chair — where is my car?", "zh": "在椅子下面——我的小汽车在哪里？（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编方位歌谣（跟读不计分），用本单元 on/in/under 和 desk/chair/car。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

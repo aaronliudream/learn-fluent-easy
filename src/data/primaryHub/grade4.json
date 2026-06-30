@@ -21,7 +21,21 @@
                 "emoji": "🏫",
                 "phonetic": "/ˈklɑːsruːm/",
                 "page": 5,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a big classroom",
+                    "cn": "一间大教室"
+                  },
+                  {
+                    "en": "in the classroom",
+                    "cn": "在教室里"
+                  },
+                  {
+                    "en": "a new classroom",
+                    "cn": "一间新教室"
+                  }
+                ]
               },
               {
                 "en": "window",
@@ -29,7 +43,21 @@
                 "emoji": "🪟",
                 "phonetic": "/ˈwɪndəʊ/",
                 "page": 5,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "open the window",
+                    "cn": "打开窗户"
+                  },
+                  {
+                    "en": "clean the window",
+                    "cn": "擦窗户"
+                  },
+                  {
+                    "en": "near the window",
+                    "cn": "在窗户旁边"
+                  }
+                ]
               },
               {
                 "en": "blackboard",
@@ -37,7 +65,21 @@
                 "emoji": "⬛",
                 "phonetic": "/ˈblækbɔːd/",
                 "page": 5,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a big blackboard",
+                    "cn": "一块大黑板"
+                  },
+                  {
+                    "en": "clean the blackboard",
+                    "cn": "擦黑板"
+                  },
+                  {
+                    "en": "on the blackboard",
+                    "cn": "在黑板上"
+                  }
+                ]
               },
               {
                 "en": "light",
@@ -45,7 +87,21 @@
                 "emoji": "💡",
                 "phonetic": "/laɪt/",
                 "page": 5,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "turn on the light",
+                    "cn": "打开灯"
+                  },
+                  {
+                    "en": "turn off the light",
+                    "cn": "关灯"
+                  },
+                  {
+                    "en": "a bright light",
+                    "cn": "一盏明亮的灯"
+                  }
+                ]
               },
               {
                 "en": "picture",
@@ -53,7 +109,21 @@
                 "emoji": "🖼️",
                 "phonetic": "/ˈpɪktʃə(r)/",
                 "page": 5,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a nice picture",
+                    "cn": "一幅漂亮的画"
+                  },
+                  {
+                    "en": "draw a picture",
+                    "cn": "画一幅画"
+                  },
+                  {
+                    "en": "put up the picture",
+                    "cn": "贴上图画"
+                  }
+                ]
               },
               {
                 "en": "door",
@@ -61,7 +131,21 @@
                 "emoji": "🚪",
                 "phonetic": "/dɔː(r)/",
                 "page": 5,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "open the door",
+                    "cn": "开门"
+                  },
+                  {
+                    "en": "close the door",
+                    "cn": "关门"
+                  },
+                  {
+                    "en": "a red door",
+                    "cn": "一扇红色的门"
+                  }
+                ]
               },
               {
                 "en": "teacher's desk",
@@ -69,7 +153,17 @@
                 "emoji": "🧑‍🏫",
                 "phonetic": "/ˈtiːtʃəz desk/",
                 "page": 8,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "clean the teacher's desk",
+                    "cn": "擦讲台"
+                  },
+                  {
+                    "en": "near the teacher's desk",
+                    "cn": "在讲台旁边"
+                  }
+                ]
               },
               {
                 "en": "computer",
@@ -78,7 +172,21 @@
                 "phonetic": "/kəmˈpjuːtə(r)/",
                 "page": 8,
                 "type": "core",
-                "image": "/primary/wordcard_images/fc_word_computer.png"
+                "image": "/primary/wordcard_images/fc_word_computer.png",
+                "chunks": [
+                  {
+                    "en": "a new computer",
+                    "cn": "一台新电脑"
+                  },
+                  {
+                    "en": "use the computer",
+                    "cn": "用电脑"
+                  },
+                  {
+                    "en": "on the computer",
+                    "cn": "在电脑上"
+                  }
+                ]
               },
               {
                 "en": "fan",
@@ -86,7 +194,21 @@
                 "emoji": "🌀",
                 "phonetic": "/fæn/",
                 "page": 8,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "turn on the fan",
+                    "cn": "打开风扇"
+                  },
+                  {
+                    "en": "a big fan",
+                    "cn": "一台大风扇"
+                  },
+                  {
+                    "en": "on the fan",
+                    "cn": "在风扇上"
+                  }
+                ]
               },
               {
                 "en": "wall",
@@ -94,7 +216,21 @@
                 "emoji": "🧱",
                 "phonetic": "/wɔːl/",
                 "page": 8,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "on the wall",
+                    "cn": "在墙上"
+                  },
+                  {
+                    "en": "a white wall",
+                    "cn": "一面白墙"
+                  },
+                  {
+                    "en": "a tall wall",
+                    "cn": "一堵高墙"
+                  }
+                ]
               },
               {
                 "en": "floor",
@@ -102,7 +238,21 @@
                 "emoji": "🟫",
                 "phonetic": "/flɔː(r)/",
                 "page": 8,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "clean the floor",
+                    "cn": "擦地板"
+                  },
+                  {
+                    "en": "on the floor",
+                    "cn": "在地板上"
+                  },
+                  {
+                    "en": "a clean floor",
+                    "cn": "干净的地板"
+                  }
+                ]
               },
               {
                 "en": "really",
@@ -111,7 +261,17 @@
                 "phonetic": "/ˈrɪəli/",
                 "page": 4,
                 "type": "extended",
-                "image": "/primary/wordcard_images/fc_word_really.png"
+                "image": "/primary/wordcard_images/fc_word_really.png",
+                "chunks": [
+                  {
+                    "en": "really big",
+                    "cn": "真的很大"
+                  },
+                  {
+                    "en": "really nice",
+                    "cn": "真的很好"
+                  }
+                ]
               },
               {
                 "en": "near",
@@ -120,7 +280,17 @@
                 "phonetic": "/nɪə(r)/",
                 "page": 4,
                 "type": "extended",
-                "image": "/primary/wordcard_images/fc_word_near.png"
+                "image": "/primary/wordcard_images/fc_word_near.png",
+                "chunks": [
+                  {
+                    "en": "near the door",
+                    "cn": "在门旁边"
+                  },
+                  {
+                    "en": "near my home",
+                    "cn": "在我家附近"
+                  }
+                ]
               },
               {
                 "en": "TV",
@@ -128,7 +298,21 @@
                 "emoji": "📺",
                 "phonetic": "/ˌtiː ˈviː/",
                 "page": 5,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "watch TV",
+                    "cn": "看电视"
+                  },
+                  {
+                    "en": "a new TV",
+                    "cn": "一台新电视"
+                  },
+                  {
+                    "en": "on TV",
+                    "cn": "在电视上"
+                  }
+                ]
               },
               {
                 "en": "clean",
@@ -136,7 +320,17 @@
                 "emoji": "🧹",
                 "phonetic": "/kliːn/",
                 "page": 7,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "clean the room",
+                    "cn": "打扫房间"
+                  },
+                  {
+                    "en": "clean the desk",
+                    "cn": "擦桌子"
+                  }
+                ]
               },
               {
                 "en": "help",
@@ -144,7 +338,21 @@
                 "emoji": "🤝",
                 "phonetic": "/help/",
                 "page": 7,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "help me",
+                    "cn": "帮我"
+                  },
+                  {
+                    "en": "help you",
+                    "cn": "帮你"
+                  },
+                  {
+                    "en": "ask for help",
+                    "cn": "求助"
+                  }
+                ]
               }
             ],
             "vocabGroups": [
@@ -591,7 +799,21 @@
                 "emoji": "🎒",
                 "phonetic": "/ˈskuːlbæɡ/",
                 "page": 15,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a new schoolbag",
+                    "cn": "一个新书包"
+                  },
+                  {
+                    "en": "in my schoolbag",
+                    "cn": "在我的书包里"
+                  },
+                  {
+                    "en": "a heavy schoolbag",
+                    "cn": "一个重书包"
+                  }
+                ]
               },
               {
                 "en": "maths book",
@@ -599,7 +821,17 @@
                 "emoji": "📐",
                 "phonetic": "/mæθs bʊk/",
                 "page": 15,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a maths book",
+                    "cn": "一本数学书"
+                  },
+                  {
+                    "en": "open the maths book",
+                    "cn": "打开数学书"
+                  }
+                ]
               },
               {
                 "en": "English book",
@@ -607,7 +839,17 @@
                 "emoji": "📕",
                 "phonetic": "/ˈɪŋɡlɪʃ bʊk/",
                 "page": 15,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "an English book",
+                    "cn": "一本英语书"
+                  },
+                  {
+                    "en": "read the English book",
+                    "cn": "读英语书"
+                  }
+                ]
               },
               {
                 "en": "Chinese book",
@@ -615,7 +857,17 @@
                 "emoji": "📗",
                 "phonetic": "/ˌtʃaɪˈniːz bʊk/",
                 "page": 15,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a Chinese book",
+                    "cn": "一本语文书"
+                  },
+                  {
+                    "en": "my Chinese book",
+                    "cn": "我的语文书"
+                  }
+                ]
               },
               {
                 "en": "storybook",
@@ -623,7 +875,21 @@
                 "emoji": "📚",
                 "phonetic": "/ˈstɔːribʊk/",
                 "page": 15,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a fun storybook",
+                    "cn": "一本有趣的故事书"
+                  },
+                  {
+                    "en": "read a storybook",
+                    "cn": "读故事书"
+                  },
+                  {
+                    "en": "three storybooks",
+                    "cn": "三本故事书"
+                  }
+                ]
               },
               {
                 "en": "notebook",
@@ -631,7 +897,17 @@
                 "emoji": "📓",
                 "phonetic": "/ˈnəʊtbʊk/",
                 "page": 18,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a new notebook",
+                    "cn": "一个新笔记本"
+                  },
+                  {
+                    "en": "write in the notebook",
+                    "cn": "在笔记本上写"
+                  }
+                ]
               },
               {
                 "en": "candy",
@@ -639,7 +915,21 @@
                 "emoji": "🍬",
                 "phonetic": "/ˈkændi/",
                 "page": 18,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a piece of candy",
+                    "cn": "一块糖果"
+                  },
+                  {
+                    "en": "sweet candy",
+                    "cn": "甜甜的糖果"
+                  },
+                  {
+                    "en": "eat candy",
+                    "cn": "吃糖果"
+                  }
+                ]
               },
               {
                 "en": "toy",
@@ -647,7 +937,21 @@
                 "emoji": "🧸",
                 "phonetic": "/tɔɪ/",
                 "page": 18,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a new toy",
+                    "cn": "一个新玩具"
+                  },
+                  {
+                    "en": "play with a toy",
+                    "cn": "玩玩具"
+                  },
+                  {
+                    "en": "two toys",
+                    "cn": "两个玩具"
+                  }
+                ]
               },
               {
                 "en": "key",
@@ -655,7 +959,21 @@
                 "emoji": "🔑",
                 "phonetic": "/kiː/",
                 "page": 18,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a small key",
+                    "cn": "一把小钥匙"
+                  },
+                  {
+                    "en": "my key",
+                    "cn": "我的钥匙"
+                  },
+                  {
+                    "en": "find the key",
+                    "cn": "找到钥匙"
+                  }
+                ]
               },
               {
                 "en": "wow",
@@ -664,7 +982,17 @@
                 "phonetic": "/waʊ/",
                 "page": 14,
                 "type": "extended",
-                "image": "/primary/wordcard_images/fc_word_wow.png"
+                "image": "/primary/wordcard_images/fc_word_wow.png",
+                "chunks": [
+                  {
+                    "en": "Wow, it's big!",
+                    "cn": "哇，它好大！"
+                  },
+                  {
+                    "en": "Wow, so nice!",
+                    "cn": "哇，真漂亮！"
+                  }
+                ]
               },
               {
                 "en": "lost",
@@ -672,7 +1000,17 @@
                 "emoji": "😢",
                 "phonetic": "/lɒst/",
                 "page": 17,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "lost my key",
+                    "cn": "丢了我的钥匙"
+                  },
+                  {
+                    "en": "lost my schoolbag",
+                    "cn": "丢了我的书包"
+                  }
+                ]
               },
               {
                 "en": "so much",
@@ -680,7 +1018,17 @@
                 "emoji": "😲",
                 "phonetic": "/səʊ mʌtʃ/",
                 "page": 17,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "like it so much",
+                    "cn": "非常喜欢它"
+                  },
+                  {
+                    "en": "thank you so much",
+                    "cn": "非常感谢你"
+                  }
+                ]
               },
               {
                 "en": "cute",
@@ -689,7 +1037,21 @@
                 "phonetic": "/kjuːt/",
                 "page": 19,
                 "type": "extended",
-                "image": "/primary/wordcard_images/fc_word_cute.png"
+                "image": "/primary/wordcard_images/fc_word_cute.png",
+                "chunks": [
+                  {
+                    "en": "a cute toy",
+                    "cn": "一个可爱的玩具"
+                  },
+                  {
+                    "en": "so cute",
+                    "cn": "太可爱了"
+                  },
+                  {
+                    "en": "a cute panda",
+                    "cn": "一只可爱的熊猫"
+                  }
+                ]
               }
             ],
             "vocabGroups": [
@@ -1131,44 +1493,148 @@
                 "en": "strong",
                 "cn": "强壮的",
                 "emoji": "💪",
-                "image": "/primary/wordcard_images/fc_word_strong.png"
+                "image": "/primary/wordcard_images/fc_word_strong.png",
+                "chunks": [
+                  {
+                    "en": "tall and strong",
+                    "cn": "又高又壮"
+                  },
+                  {
+                    "en": "a strong boy",
+                    "cn": "一个强壮的男孩"
+                  },
+                  {
+                    "en": "very strong",
+                    "cn": "非常强壮"
+                  }
+                ]
               },
               {
                 "en": "friendly",
                 "cn": "友好的",
                 "emoji": "😊",
-                "image": "/primary/wordcard_images/fc_word_friendly.png"
+                "image": "/primary/wordcard_images/fc_word_friendly.png",
+                "chunks": [
+                  {
+                    "en": "a friendly girl",
+                    "cn": "一个友好的女孩"
+                  },
+                  {
+                    "en": "quiet and friendly",
+                    "cn": "安静又友好"
+                  },
+                  {
+                    "en": "very friendly",
+                    "cn": "非常友好"
+                  }
+                ]
               },
               {
                 "en": "quiet",
                 "cn": "安静的",
                 "emoji": "🤫",
-                "image": "/primary/wordcard_images/fc_word_quiet.png"
+                "image": "/primary/wordcard_images/fc_word_quiet.png",
+                "chunks": [
+                  {
+                    "en": "a quiet boy",
+                    "cn": "一个安静的男孩"
+                  },
+                  {
+                    "en": "quiet and friendly",
+                    "cn": "安静又友好"
+                  },
+                  {
+                    "en": "be quiet",
+                    "cn": "安静点"
+                  }
+                ]
               },
               {
                 "en": "hair",
                 "cn": "头发",
-                "emoji": "💇"
+                "emoji": "💇",
+                "chunks": [
+                  {
+                    "en": "long hair",
+                    "cn": "长头发"
+                  },
+                  {
+                    "en": "short hair",
+                    "cn": "短头发"
+                  },
+                  {
+                    "en": "black hair",
+                    "cn": "黑头发"
+                  }
+                ]
               },
               {
                 "en": "shoe",
                 "cn": "鞋",
-                "emoji": "👟"
+                "emoji": "👟",
+                "chunks": [
+                  {
+                    "en": "a blue shoe",
+                    "cn": "一只蓝鞋"
+                  },
+                  {
+                    "en": "new shoes",
+                    "cn": "新鞋"
+                  },
+                  {
+                    "en": "my shoes",
+                    "cn": "我的鞋"
+                  }
+                ]
               },
               {
                 "en": "glasses",
                 "cn": "眼镜",
-                "emoji": "👓"
+                "emoji": "👓",
+                "chunks": [
+                  {
+                    "en": "wear glasses",
+                    "cn": "戴眼镜"
+                  },
+                  {
+                    "en": "blue glasses",
+                    "cn": "蓝色眼镜"
+                  },
+                  {
+                    "en": "his glasses",
+                    "cn": "他的眼镜"
+                  }
+                ]
               },
               {
                 "en": "his",
                 "cn": "他的",
-                "emoji": "👦"
+                "emoji": "👦",
+                "chunks": [
+                  {
+                    "en": "his name",
+                    "cn": "他的名字"
+                  },
+                  {
+                    "en": "his shoes",
+                    "cn": "他的鞋"
+                  }
+                ]
               },
               {
                 "en": "her",
                 "cn": "她的",
-                "emoji": "👧"
+                "emoji": "👧",
+                "chunks": [
+                  {
+                    "en": "her name",
+                    "cn": "她的名字"
+                  },
+                  {
+                    "en": "her hair",
+                    "cn": "她的头发"
+                  }
+                ]
               }
             ],
             "vocabGroups": [
@@ -1490,52 +1956,180 @@
               {
                 "en": "bedroom",
                 "cn": "卧室",
-                "emoji": "🛌"
+                "emoji": "🛌",
+                "chunks": [
+                  {
+                    "en": "in the bedroom",
+                    "cn": "在卧室里"
+                  },
+                  {
+                    "en": "my bedroom",
+                    "cn": "我的卧室"
+                  },
+                  {
+                    "en": "a small bedroom",
+                    "cn": "一间小卧室"
+                  }
+                ]
               },
               {
                 "en": "living room",
                 "cn": "客厅",
-                "emoji": "🛋️"
+                "emoji": "🛋️",
+                "chunks": [
+                  {
+                    "en": "in the living room",
+                    "cn": "在客厅里"
+                  },
+                  {
+                    "en": "a big living room",
+                    "cn": "一间大客厅"
+                  }
+                ]
               },
               {
                 "en": "study",
                 "cn": "书房",
-                "emoji": "📖"
+                "emoji": "📖",
+                "chunks": [
+                  {
+                    "en": "in the study",
+                    "cn": "在书房里"
+                  },
+                  {
+                    "en": "go to the study",
+                    "cn": "去书房"
+                  }
+                ]
               },
               {
                 "en": "kitchen",
                 "cn": "厨房",
-                "emoji": "🍳"
+                "emoji": "🍳",
+                "chunks": [
+                  {
+                    "en": "in the kitchen",
+                    "cn": "在厨房里"
+                  },
+                  {
+                    "en": "a clean kitchen",
+                    "cn": "干净的厨房"
+                  },
+                  {
+                    "en": "go to the kitchen",
+                    "cn": "去厨房"
+                  }
+                ]
               },
               {
                 "en": "bathroom",
                 "cn": "浴室",
-                "emoji": "🛁"
+                "emoji": "🛁",
+                "chunks": [
+                  {
+                    "en": "in the bathroom",
+                    "cn": "在浴室里"
+                  },
+                  {
+                    "en": "go to the bathroom",
+                    "cn": "去浴室"
+                  }
+                ]
               },
               {
                 "en": "bed",
                 "cn": "床",
-                "emoji": "🛏️"
+                "emoji": "🛏️",
+                "chunks": [
+                  {
+                    "en": "on the bed",
+                    "cn": "在床上"
+                  },
+                  {
+                    "en": "under the bed",
+                    "cn": "在床下"
+                  },
+                  {
+                    "en": "a big bed",
+                    "cn": "一张大床"
+                  }
+                ]
               },
               {
                 "en": "phone",
                 "cn": "电话",
-                "emoji": "📞"
+                "emoji": "📞",
+                "chunks": [
+                  {
+                    "en": "a new phone",
+                    "cn": "一部新电话"
+                  },
+                  {
+                    "en": "on the phone",
+                    "cn": "在打电话"
+                  },
+                  {
+                    "en": "answer the phone",
+                    "cn": "接电话"
+                  }
+                ]
               },
               {
                 "en": "table",
                 "cn": "桌子",
-                "emoji": "🪑"
+                "emoji": "🪑",
+                "chunks": [
+                  {
+                    "en": "on the table",
+                    "cn": "在桌子上"
+                  },
+                  {
+                    "en": "a big table",
+                    "cn": "一张大桌子"
+                  },
+                  {
+                    "en": "near the table",
+                    "cn": "在桌子旁边"
+                  }
+                ]
               },
               {
                 "en": "sofa",
                 "cn": "长沙发",
-                "emoji": "💺"
+                "emoji": "💺",
+                "chunks": [
+                  {
+                    "en": "on the sofa",
+                    "cn": "在沙发上"
+                  },
+                  {
+                    "en": "a soft sofa",
+                    "cn": "一个柔软的沙发"
+                  },
+                  {
+                    "en": "sit on the sofa",
+                    "cn": "坐在沙发上"
+                  }
+                ]
               },
               {
                 "en": "fridge",
                 "cn": "冰箱",
-                "emoji": "🧊"
+                "emoji": "🧊",
+                "chunks": [
+                  {
+                    "en": "in the fridge",
+                    "cn": "在冰箱里"
+                  },
+                  {
+                    "en": "on the fridge",
+                    "cn": "在冰箱上"
+                  },
+                  {
+                    "en": "open the fridge",
+                    "cn": "打开冰箱"
+                  }
+                ]
               }
             ],
             "vocabGroups": [
@@ -1902,61 +2496,197 @@
                 "en": "beef",
                 "cn": "牛肉",
                 "emoji": "🥩",
-                "phonetic": "/biːf/"
+                "phonetic": "/biːf/",
+                "chunks": [
+                  {
+                    "en": "some beef",
+                    "cn": "一些牛肉"
+                  },
+                  {
+                    "en": "beef and noodles",
+                    "cn": "牛肉面"
+                  },
+                  {
+                    "en": "eat beef",
+                    "cn": "吃牛肉"
+                  }
+                ]
               },
               {
                 "en": "chicken",
                 "cn": "鸡肉",
                 "emoji": "🍗",
-                "phonetic": "/ˈtʃɪkɪn/"
+                "phonetic": "/ˈtʃɪkɪn/",
+                "chunks": [
+                  {
+                    "en": "some chicken",
+                    "cn": "一些鸡肉"
+                  },
+                  {
+                    "en": "fried chicken",
+                    "cn": "炸鸡"
+                  },
+                  {
+                    "en": "chicken and vegetables",
+                    "cn": "鸡肉和蔬菜"
+                  }
+                ]
               },
               {
                 "en": "noodles",
                 "cn": "面条",
                 "emoji": "🍜",
-                "phonetic": "/ˈnuːdlz/"
+                "phonetic": "/ˈnuːdlz/",
+                "chunks": [
+                  {
+                    "en": "a bowl of noodles",
+                    "cn": "一碗面条"
+                  },
+                  {
+                    "en": "eat noodles",
+                    "cn": "吃面条"
+                  },
+                  {
+                    "en": "beef noodles",
+                    "cn": "牛肉面"
+                  }
+                ]
               },
               {
                 "en": "soup",
                 "cn": "汤",
                 "emoji": "🍲",
-                "phonetic": "/suːp/"
+                "phonetic": "/suːp/",
+                "chunks": [
+                  {
+                    "en": "some soup",
+                    "cn": "一些汤"
+                  },
+                  {
+                    "en": "a bowl of soup",
+                    "cn": "一碗汤"
+                  },
+                  {
+                    "en": "chicken soup",
+                    "cn": "鸡汤"
+                  }
+                ]
               },
               {
                 "en": "vegetable",
                 "cn": "蔬菜",
                 "emoji": "🥦",
-                "phonetic": "/ˈvedʒtəbl/"
+                "phonetic": "/ˈvedʒtəbl/",
+                "chunks": [
+                  {
+                    "en": "fresh vegetables",
+                    "cn": "新鲜蔬菜"
+                  },
+                  {
+                    "en": "eat vegetables",
+                    "cn": "吃蔬菜"
+                  },
+                  {
+                    "en": "green vegetables",
+                    "cn": "绿色蔬菜"
+                  }
+                ]
               },
               {
                 "en": "chopsticks",
                 "cn": "筷子",
                 "emoji": "🥢",
-                "phonetic": "/ˈtʃɒpstɪks/"
+                "phonetic": "/ˈtʃɒpstɪks/",
+                "chunks": [
+                  {
+                    "en": "a pair of chopsticks",
+                    "cn": "一双筷子"
+                  },
+                  {
+                    "en": "use chopsticks",
+                    "cn": "用筷子"
+                  }
+                ]
               },
               {
                 "en": "bowl",
                 "cn": "碗",
                 "emoji": "🥣",
-                "phonetic": "/bəʊl/"
+                "phonetic": "/bəʊl/",
+                "chunks": [
+                  {
+                    "en": "a bowl of soup",
+                    "cn": "一碗汤"
+                  },
+                  {
+                    "en": "a big bowl",
+                    "cn": "一个大碗"
+                  },
+                  {
+                    "en": "a rice bowl",
+                    "cn": "一个饭碗"
+                  }
+                ]
               },
               {
                 "en": "fork",
                 "cn": "餐叉",
                 "emoji": "🍴",
-                "phonetic": "/fɔːk/"
+                "phonetic": "/fɔːk/",
+                "chunks": [
+                  {
+                    "en": "a knife and fork",
+                    "cn": "一副刀叉"
+                  },
+                  {
+                    "en": "use a fork",
+                    "cn": "用叉子"
+                  },
+                  {
+                    "en": "pass me the fork",
+                    "cn": "把叉子递给我"
+                  }
+                ]
               },
               {
                 "en": "knife",
                 "cn": "刀",
                 "emoji": "🔪",
-                "phonetic": "/naɪf/"
+                "phonetic": "/naɪf/",
+                "chunks": [
+                  {
+                    "en": "a sharp knife",
+                    "cn": "一把锋利的刀"
+                  },
+                  {
+                    "en": "a knife and fork",
+                    "cn": "一副刀叉"
+                  },
+                  {
+                    "en": "cut with a knife",
+                    "cn": "用刀切"
+                  }
+                ]
               },
               {
                 "en": "spoon",
                 "cn": "勺",
                 "emoji": "🥄",
-                "phonetic": "/spuːn/"
+                "phonetic": "/spuːn/",
+                "chunks": [
+                  {
+                    "en": "a small spoon",
+                    "cn": "一把小勺"
+                  },
+                  {
+                    "en": "eat with a spoon",
+                    "cn": "用勺子吃"
+                  },
+                  {
+                    "en": "pass me the spoon",
+                    "cn": "把勺子递给我"
+                  }
+                ]
               }
             ],
             "vocabGroups": [
@@ -2323,61 +3053,173 @@
                 "en": "parents",
                 "cn": "父母",
                 "emoji": "👪",
-                "phonetic": "/ˈpeərənts/"
+                "phonetic": "/ˈpeərənts/",
+                "chunks": [
+                  {
+                    "en": "my parents",
+                    "cn": "我的父母"
+                  },
+                  {
+                    "en": "help my parents",
+                    "cn": "帮助我的父母"
+                  },
+                  {
+                    "en": "love my parents",
+                    "cn": "爱我的父母"
+                  }
+                ]
               },
               {
                 "en": "cousin",
                 "cn": "表(堂)亲",
                 "emoji": "🧑",
-                "phonetic": "/ˈkʌzn/"
+                "phonetic": "/ˈkʌzn/",
+                "chunks": [
+                  {
+                    "en": "my cousin",
+                    "cn": "我的表亲"
+                  },
+                  {
+                    "en": "a little cousin",
+                    "cn": "一个小表弟"
+                  }
+                ]
               },
               {
                 "en": "uncle",
                 "cn": "叔叔；舅舅",
                 "emoji": "👨",
-                "phonetic": "/ˈʌŋkl/"
+                "phonetic": "/ˈʌŋkl/",
+                "chunks": [
+                  {
+                    "en": "my uncle",
+                    "cn": "我的叔叔"
+                  },
+                  {
+                    "en": "a kind uncle",
+                    "cn": "一位和蔼的叔叔"
+                  }
+                ]
               },
               {
                 "en": "aunt",
                 "cn": "阿姨；姑姑",
                 "emoji": "👩",
-                "phonetic": "/ɑːnt/"
+                "phonetic": "/ɑːnt/",
+                "chunks": [
+                  {
+                    "en": "my aunt",
+                    "cn": "我的阿姨"
+                  },
+                  {
+                    "en": "a young aunt",
+                    "cn": "一位年轻的阿姨"
+                  }
+                ]
               },
               {
                 "en": "baby brother",
                 "cn": "小弟弟",
                 "emoji": "👶",
-                "phonetic": "/ˈbeɪbi ˈbrʌðə(r)/"
+                "phonetic": "/ˈbeɪbi ˈbrʌðə(r)/",
+                "chunks": [
+                  {
+                    "en": "my baby brother",
+                    "cn": "我的小弟弟"
+                  },
+                  {
+                    "en": "a cute baby brother",
+                    "cn": "一个可爱的小弟弟"
+                  }
+                ]
               },
               {
                 "en": "doctor",
                 "cn": "医生",
                 "emoji": "👨‍⚕️",
-                "phonetic": "/ˈdɒktə(r)/"
+                "phonetic": "/ˈdɒktə(r)/",
+                "chunks": [
+                  {
+                    "en": "a good doctor",
+                    "cn": "一位好医生"
+                  },
+                  {
+                    "en": "see a doctor",
+                    "cn": "看医生"
+                  },
+                  {
+                    "en": "be a doctor",
+                    "cn": "当医生"
+                  }
+                ]
               },
               {
                 "en": "cook",
                 "cn": "厨师",
                 "emoji": "👨‍🍳",
-                "phonetic": "/kʊk/"
+                "phonetic": "/kʊk/",
+                "chunks": [
+                  {
+                    "en": "a good cook",
+                    "cn": "一位好厨师"
+                  },
+                  {
+                    "en": "be a cook",
+                    "cn": "当厨师"
+                  }
+                ]
               },
               {
                 "en": "driver",
                 "cn": "司机",
                 "emoji": "🚕",
-                "phonetic": "/ˈdraɪvə(r)/"
+                "phonetic": "/ˈdraɪvə(r)/",
+                "chunks": [
+                  {
+                    "en": "a bus driver",
+                    "cn": "一位公交司机"
+                  },
+                  {
+                    "en": "a taxi driver",
+                    "cn": "一位出租车司机"
+                  },
+                  {
+                    "en": "be a driver",
+                    "cn": "当司机"
+                  }
+                ]
               },
               {
                 "en": "farmer",
                 "cn": "农民",
                 "emoji": "👨‍🌾",
-                "phonetic": "/ˈfɑːmə(r)/"
+                "phonetic": "/ˈfɑːmə(r)/",
+                "chunks": [
+                  {
+                    "en": "a hard-working farmer",
+                    "cn": "一位勤劳的农民"
+                  },
+                  {
+                    "en": "be a farmer",
+                    "cn": "当农民"
+                  }
+                ]
               },
               {
                 "en": "nurse",
                 "cn": "护士",
                 "emoji": "👩‍⚕️",
-                "phonetic": "/nɜːs/"
+                "phonetic": "/nɜːs/",
+                "chunks": [
+                  {
+                    "en": "a kind nurse",
+                    "cn": "一位善良的护士"
+                  },
+                  {
+                    "en": "be a nurse",
+                    "cn": "当护士"
+                  }
+                ]
               }
             ],
             "vocabGroups": [
@@ -2703,7 +3545,17 @@
                 "phonetic": "/fɜːst flɔː(r)/",
                 "icon": "building",
                 "page": 5,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "on the first floor",
+                    "cn": "在一楼"
+                  },
+                  {
+                    "en": "the first floor of the building",
+                    "cn": "大楼的一楼"
+                  }
+                ]
               },
               {
                 "en": "second floor",
@@ -2712,7 +3564,17 @@
                 "phonetic": "/ˈsekənd flɔː(r)/",
                 "icon": "building",
                 "page": 5,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "on the second floor",
+                    "cn": "在二楼"
+                  },
+                  {
+                    "en": "go up to the second floor",
+                    "cn": "上到二楼"
+                  }
+                ]
               },
               {
                 "en": "teachers' office",
@@ -2721,7 +3583,17 @@
                 "phonetic": "/ˈtiːtʃəz ˈɒfɪs/",
                 "icon": "briefcase",
                 "page": 5,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "the teachers' office",
+                    "cn": "教师办公室"
+                  },
+                  {
+                    "en": "go to the teachers' office",
+                    "cn": "去教师办公室"
+                  }
+                ]
               },
               {
                 "en": "library",
@@ -2730,7 +3602,17 @@
                 "phonetic": "/ˈlaɪbrəri/",
                 "icon": "books",
                 "page": 5,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "the school library",
+                    "cn": "学校图书馆"
+                  },
+                  {
+                    "en": "books in the library",
+                    "cn": "图书馆里的书"
+                  }
+                ]
               },
               {
                 "en": "playground",
@@ -2739,7 +3621,17 @@
                 "phonetic": "/ˈpleɪɡraʊnd/",
                 "icon": "ball-football",
                 "page": 8,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "on the playground",
+                    "cn": "在操场上"
+                  },
+                  {
+                    "en": "play on the playground",
+                    "cn": "在操场上玩"
+                  }
+                ]
               },
               {
                 "en": "computer room",
@@ -2748,7 +3640,17 @@
                 "phonetic": "/kəmˈpjuːtə(r) ruːm/",
                 "icon": "device-desktop",
                 "page": 8,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "the computer room",
+                    "cn": "计算机房"
+                  },
+                  {
+                    "en": "go to the computer room",
+                    "cn": "去计算机房"
+                  }
+                ]
               },
               {
                 "en": "art room",
@@ -2757,7 +3659,17 @@
                 "phonetic": "/ɑːt ruːm/",
                 "icon": "palette",
                 "page": 8,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "the art room",
+                    "cn": "美术教室"
+                  },
+                  {
+                    "en": "draw in the art room",
+                    "cn": "在美术教室画画"
+                  }
+                ]
               },
               {
                 "en": "music room",
@@ -2766,7 +3678,17 @@
                 "phonetic": "/ˈmjuːzɪk ruːm/",
                 "icon": "music",
                 "page": 8,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "the music room",
+                    "cn": "音乐教室"
+                  },
+                  {
+                    "en": "sing in the music room",
+                    "cn": "在音乐教室唱歌"
+                  }
+                ]
               },
               {
                 "en": "next to",
@@ -2776,7 +3698,17 @@
                 "icon": "arrow-right",
                 "page": 4,
                 "type": "extended",
-                "image": "/primary/wordcard_images/fc_word_nextto.png"
+                "image": "/primary/wordcard_images/fc_word_nextto.png",
+                "chunks": [
+                  {
+                    "en": "next to the library",
+                    "cn": "在图书馆旁边"
+                  },
+                  {
+                    "en": "sit next to me",
+                    "cn": "坐在我旁边"
+                  }
+                ]
               },
               {
                 "en": "homework",
@@ -2785,7 +3717,17 @@
                 "phonetic": "/ˈhəʊmwɜːk/",
                 "icon": "notebook",
                 "page": 4,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "do my homework",
+                    "cn": "做我的作业"
+                  },
+                  {
+                    "en": "a lot of homework",
+                    "cn": "很多作业"
+                  }
+                ]
               },
               {
                 "en": "class",
@@ -2794,7 +3736,17 @@
                 "phonetic": "/klɑːs/",
                 "icon": "users",
                 "page": 7,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "in our class",
+                    "cn": "在我们班"
+                  },
+                  {
+                    "en": "a big class",
+                    "cn": "一个大班级"
+                  }
+                ]
               },
               {
                 "en": "forty",
@@ -2803,7 +3755,17 @@
                 "phonetic": "/ˈfɔːti/",
                 "icon": "numbers",
                 "page": 7,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "forty students",
+                    "cn": "四十名学生"
+                  },
+                  {
+                    "en": "forty-five students",
+                    "cn": "四十五名学生"
+                  }
+                ]
               },
               {
                 "en": "way",
@@ -2812,7 +3774,17 @@
                 "phonetic": "/weɪ/",
                 "icon": "direction-sign",
                 "page": 7,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "on the way",
+                    "cn": "在路上"
+                  },
+                  {
+                    "en": "this way, please",
+                    "cn": "请这边走"
+                  }
+                ]
               },
               {
                 "en": "water",
@@ -3281,7 +4253,17 @@
                 "emoji": "🍳",
                 "phonetic": "/ˈbrekfəst/",
                 "page": 12,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "have breakfast",
+                    "cn": "吃早餐"
+                  },
+                  {
+                    "en": "time for breakfast",
+                    "cn": "该吃早餐了"
+                  }
+                ]
               },
               {
                 "en": "lunch",
@@ -3289,7 +4271,17 @@
                 "emoji": "🍱",
                 "phonetic": "/lʌntʃ/",
                 "page": 12,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "have lunch",
+                    "cn": "吃午餐"
+                  },
+                  {
+                    "en": "time for lunch",
+                    "cn": "该吃午餐了"
+                  }
+                ]
               },
               {
                 "en": "dinner",
@@ -3297,7 +4289,17 @@
                 "emoji": "🍽️",
                 "phonetic": "/ˈdɪnə(r)/",
                 "page": 12,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "have dinner",
+                    "cn": "吃晚餐"
+                  },
+                  {
+                    "en": "a big dinner",
+                    "cn": "一顿丰盛的晚餐"
+                  }
+                ]
               },
               {
                 "en": "English class",
@@ -3305,7 +4307,17 @@
                 "emoji": "📚",
                 "phonetic": "/ˈɪŋɡlɪʃ klɑːs/",
                 "page": 12,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "have an English class",
+                    "cn": "上一节英语课"
+                  },
+                  {
+                    "en": "time for English class",
+                    "cn": "该上英语课了"
+                  }
+                ]
               },
               {
                 "en": "music class",
@@ -3313,7 +4325,17 @@
                 "emoji": "🎵",
                 "phonetic": "/ˈmjuːzɪk klɑːs/",
                 "page": 12,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "have a music class",
+                    "cn": "上一节音乐课"
+                  },
+                  {
+                    "en": "time for music class",
+                    "cn": "该上音乐课了"
+                  }
+                ]
               },
               {
                 "en": "PE class",
@@ -3321,7 +4343,17 @@
                 "emoji": "⚽",
                 "phonetic": "/ˌpiː ˈiː klɑːs/",
                 "page": 12,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "have a PE class",
+                    "cn": "上一节体育课"
+                  },
+                  {
+                    "en": "time for PE class",
+                    "cn": "该上体育课了"
+                  }
+                ]
               },
               {
                 "en": "get up",
@@ -3329,7 +4361,17 @@
                 "emoji": "🌅",
                 "phonetic": "/ɡet ʌp/",
                 "page": 13,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "get up early",
+                    "cn": "早起"
+                  },
+                  {
+                    "en": "time to get up",
+                    "cn": "该起床了"
+                  }
+                ]
               },
               {
                 "en": "go to school",
@@ -3337,7 +4379,17 @@
                 "emoji": "🏫",
                 "phonetic": "/ɡəʊ tu skuːl/",
                 "page": 13,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "go to school by bus",
+                    "cn": "坐公交车上学"
+                  },
+                  {
+                    "en": "time to go to school",
+                    "cn": "该上学了"
+                  }
+                ]
               },
               {
                 "en": "go home",
@@ -3345,7 +4397,17 @@
                 "emoji": "🏠",
                 "phonetic": "/ɡəʊ həʊm/",
                 "page": 14,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "go home now",
+                    "cn": "现在回家"
+                  },
+                  {
+                    "en": "time to go home",
+                    "cn": "该回家了"
+                  }
+                ]
               },
               {
                 "en": "go to bed",
@@ -3353,7 +4415,17 @@
                 "emoji": "🛏️",
                 "phonetic": "/ɡəʊ tu bed/",
                 "page": 14,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "go to bed early",
+                    "cn": "早点睡觉"
+                  },
+                  {
+                    "en": "time to go to bed",
+                    "cn": "该睡觉了"
+                  }
+                ]
               },
               {
                 "en": "o'clock",
@@ -3361,7 +4433,17 @@
                 "emoji": "🕐",
                 "phonetic": "/əˈklɒk/",
                 "page": 12,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "seven o'clock",
+                    "cn": "七点钟"
+                  },
+                  {
+                    "en": "at nine o'clock",
+                    "cn": "在九点钟"
+                  }
+                ]
               },
               {
                 "en": "now",
@@ -3369,7 +4451,17 @@
                 "emoji": "⏰",
                 "phonetic": "/naʊ/",
                 "page": 12,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "right now",
+                    "cn": "立刻；现在"
+                  },
+                  {
+                    "en": "What time is it now?",
+                    "cn": "现在几点了？"
+                  }
+                ]
               },
               {
                 "en": "over",
@@ -3378,7 +4470,17 @@
                 "phonetic": "/ˈəʊvə(r)/",
                 "page": 14,
                 "type": "extended",
-                "image": "/primary/wordcard_images/fc_word_over.png"
+                "image": "/primary/wordcard_images/fc_word_over.png",
+                "chunks": [
+                  {
+                    "en": "School is over.",
+                    "cn": "放学了。"
+                  },
+                  {
+                    "en": "The class is over.",
+                    "cn": "这节课结束了。"
+                  }
+                ]
               },
               {
                 "en": "kid",
@@ -3386,7 +4488,17 @@
                 "emoji": "👦",
                 "phonetic": "/kɪd/",
                 "page": 14,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "a little kid",
+                    "cn": "一个小孩"
+                  },
+                  {
+                    "en": "come on, kids",
+                    "cn": "快点，孩子们"
+                  }
+                ]
               },
               {
                 "en": "thirty",
@@ -3394,7 +4506,17 @@
                 "emoji": "3️⃣",
                 "phonetic": "/ˈθɜːti/",
                 "page": 15,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "thirty minutes",
+                    "cn": "三十分钟"
+                  },
+                  {
+                    "en": "six thirty",
+                    "cn": "六点半"
+                  }
+                ]
               },
               {
                 "en": "hurry up",
@@ -3402,7 +4524,17 @@
                 "emoji": "⚡",
                 "phonetic": "/ˈhʌri ʌp/",
                 "page": 15,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "Hurry up!",
+                    "cn": "快点！"
+                  },
+                  {
+                    "en": "hurry up, please",
+                    "cn": "请快点"
+                  }
+                ]
               },
               {
                 "en": "come on",
@@ -3411,7 +4543,17 @@
                 "phonetic": "/kʌm ɒn/",
                 "page": 15,
                 "type": "extended",
-                "image": "/primary/wordcard_images/fc_word_comeon.png"
+                "image": "/primary/wordcard_images/fc_word_comeon.png",
+                "chunks": [
+                  {
+                    "en": "Come on!",
+                    "cn": "加油！"
+                  },
+                  {
+                    "en": "come on, let's go",
+                    "cn": "快点，我们走吧"
+                  }
+                ]
               },
               {
                 "en": "just a minute",
@@ -3420,7 +4562,17 @@
                 "phonetic": "/dʒʌst ə ˈmɪnɪt/",
                 "page": 15,
                 "type": "extended",
-                "image": "/primary/wordcard_images/fc_word_justaminute.png"
+                "image": "/primary/wordcard_images/fc_word_justaminute.png",
+                "chunks": [
+                  {
+                    "en": "Just a minute!",
+                    "cn": "稍等一会儿！"
+                  },
+                  {
+                    "en": "wait just a minute",
+                    "cn": "就等一会儿"
+                  }
+                ]
               }
             ],
             "vocabGroups": [
@@ -3835,7 +4987,17 @@
                 "emoji": "❄️",
                 "phonetic": "/kəʊld/",
                 "page": 22,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "It's cold today.",
+                    "cn": "今天很冷。"
+                  },
+                  {
+                    "en": "cold water",
+                    "cn": "冷水"
+                  }
+                ]
               },
               {
                 "en": "cool",
@@ -3843,7 +5005,17 @@
                 "emoji": "🌬️",
                 "phonetic": "/kuːl/",
                 "page": 22,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a cool day",
+                    "cn": "凉爽的一天"
+                  },
+                  {
+                    "en": "cool and windy",
+                    "cn": "凉爽多风"
+                  }
+                ]
               },
               {
                 "en": "warm",
@@ -3851,7 +5023,17 @@
                 "emoji": "🌤️",
                 "phonetic": "/wɔːm/",
                 "page": 22,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "warm weather",
+                    "cn": "暖和的天气"
+                  },
+                  {
+                    "en": "sunny and warm",
+                    "cn": "晴朗暖和"
+                  }
+                ]
               },
               {
                 "en": "hot",
@@ -3859,7 +5041,17 @@
                 "emoji": "🌡️",
                 "phonetic": "/hɒt/",
                 "page": 22,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a hot day",
+                    "cn": "炎热的一天"
+                  },
+                  {
+                    "en": "hot soup",
+                    "cn": "热汤"
+                  }
+                ]
               },
               {
                 "en": "sunny",
@@ -3867,7 +5059,17 @@
                 "emoji": "☀️",
                 "phonetic": "/ˈsʌni/",
                 "page": 23,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a sunny day",
+                    "cn": "晴朗的一天"
+                  },
+                  {
+                    "en": "It's sunny.",
+                    "cn": "天晴。"
+                  }
+                ]
               },
               {
                 "en": "windy",
@@ -3875,7 +5077,17 @@
                 "emoji": "💨",
                 "phonetic": "/ˈwɪndi/",
                 "page": 23,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a windy day",
+                    "cn": "多风的一天"
+                  },
+                  {
+                    "en": "It's windy.",
+                    "cn": "刮风了。"
+                  }
+                ]
               },
               {
                 "en": "cloudy",
@@ -3883,7 +5095,17 @@
                 "emoji": "☁️",
                 "phonetic": "/ˈklaʊdi/",
                 "page": 23,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a cloudy day",
+                    "cn": "阴天"
+                  },
+                  {
+                    "en": "It's cloudy.",
+                    "cn": "天阴。"
+                  }
+                ]
               },
               {
                 "en": "snowy",
@@ -3891,7 +5113,17 @@
                 "emoji": "🌨️",
                 "phonetic": "/ˈsnəʊi/",
                 "page": 23,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a snowy day",
+                    "cn": "下雪天"
+                  },
+                  {
+                    "en": "cold and snowy",
+                    "cn": "寒冷下雪"
+                  }
+                ]
               },
               {
                 "en": "rainy",
@@ -3899,7 +5131,17 @@
                 "emoji": "🌧️",
                 "phonetic": "/ˈreɪni/",
                 "page": 23,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a rainy day",
+                    "cn": "下雨天"
+                  },
+                  {
+                    "en": "rainy and cool",
+                    "cn": "阴雨凉爽"
+                  }
+                ]
               },
               {
                 "en": "outside",
@@ -3907,7 +5149,17 @@
                 "emoji": "🚪",
                 "phonetic": "/ˌaʊtˈsaɪd/",
                 "page": 24,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "go outside",
+                    "cn": "到外面去"
+                  },
+                  {
+                    "en": "play outside",
+                    "cn": "在外面玩"
+                  }
+                ]
               },
               {
                 "en": "be careful",
@@ -3915,7 +5167,17 @@
                 "emoji": "⚠️",
                 "phonetic": "/bi ˈkeəfl/",
                 "page": 24,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "Be careful!",
+                    "cn": "小心！"
+                  },
+                  {
+                    "en": "be careful outside",
+                    "cn": "在外面要小心"
+                  }
+                ]
               },
               {
                 "en": "weather",
@@ -3923,7 +5185,17 @@
                 "emoji": "🌈",
                 "phonetic": "/ˈweðə(r)/",
                 "page": 24,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "good weather",
+                    "cn": "好天气"
+                  },
+                  {
+                    "en": "the weather report",
+                    "cn": "天气预报"
+                  }
+                ]
               },
               {
                 "en": "New York",
@@ -3931,7 +5203,17 @@
                 "emoji": "🗽",
                 "phonetic": "/ˌnjuː ˈjɔːk/",
                 "page": 25,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "in New York",
+                    "cn": "在纽约"
+                  },
+                  {
+                    "en": "How about New York?",
+                    "cn": "纽约怎么样？"
+                  }
+                ]
               },
               {
                 "en": "how about",
@@ -3939,7 +5221,17 @@
                 "emoji": "💬",
                 "phonetic": "/haʊ əˈbaʊt/",
                 "page": 25,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "How about you?",
+                    "cn": "你呢？"
+                  },
+                  {
+                    "en": "How about Beijing?",
+                    "cn": "北京怎么样？"
+                  }
+                ]
               },
               {
                 "en": "degree",
@@ -3947,7 +5239,17 @@
                 "emoji": "🌡️",
                 "phonetic": "/dɪˈɡriː/",
                 "page": 25,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "twenty degrees",
+                    "cn": "二十度"
+                  },
+                  {
+                    "en": "It's 26 degrees.",
+                    "cn": "现在二十六度。"
+                  }
+                ]
               }
             ],
             "vocabGroups": [
@@ -4365,7 +5667,17 @@
                 "emoji": "🍅",
                 "phonetic": "/təˈmɑːtəʊ/",
                 "page": 39,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a red tomato",
+                    "cn": "一个红西红柿"
+                  },
+                  {
+                    "en": "some tomatoes",
+                    "cn": "一些西红柿"
+                  }
+                ]
               },
               {
                 "en": "potato",
@@ -4373,7 +5685,17 @@
                 "emoji": "🥔",
                 "phonetic": "/pəˈteɪtəʊ/",
                 "page": 39,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a big potato",
+                    "cn": "一个大土豆"
+                  },
+                  {
+                    "en": "some potatoes",
+                    "cn": "一些土豆"
+                  }
+                ]
               },
               {
                 "en": "green beans",
@@ -4381,7 +5703,17 @@
                 "emoji": "🫛",
                 "phonetic": "/ɡriːn biːnz/",
                 "page": 39,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "some green beans",
+                    "cn": "一些四季豆"
+                  },
+                  {
+                    "en": "a bag of green beans",
+                    "cn": "一袋四季豆"
+                  }
+                ]
               },
               {
                 "en": "carrot",
@@ -4389,7 +5721,17 @@
                 "emoji": "🥕",
                 "phonetic": "/ˈkærət/",
                 "page": 39,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "an orange carrot",
+                    "cn": "一根橙色的胡萝卜"
+                  },
+                  {
+                    "en": "some carrots",
+                    "cn": "一些胡萝卜"
+                  }
+                ]
               },
               {
                 "en": "horse",
@@ -4397,7 +5739,17 @@
                 "emoji": "🐴",
                 "phonetic": "/hɔːs/",
                 "page": 42,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a white horse",
+                    "cn": "一匹白马"
+                  },
+                  {
+                    "en": "ride a horse",
+                    "cn": "骑马"
+                  }
+                ]
               },
               {
                 "en": "cow",
@@ -4405,7 +5757,17 @@
                 "emoji": "🐄",
                 "phonetic": "/kaʊ/",
                 "page": 42,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a big cow",
+                    "cn": "一头大奶牛"
+                  },
+                  {
+                    "en": "some cows",
+                    "cn": "一些奶牛"
+                  }
+                ]
               },
               {
                 "en": "sheep",
@@ -4413,7 +5775,17 @@
                 "emoji": "🐑",
                 "phonetic": "/ʃiːp/",
                 "page": 42,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a white sheep",
+                    "cn": "一只白羊"
+                  },
+                  {
+                    "en": "ten sheep",
+                    "cn": "十只羊"
+                  }
+                ]
               },
               {
                 "en": "hen",
@@ -4421,7 +5793,17 @@
                 "emoji": "🐔",
                 "phonetic": "/hen/",
                 "page": 42,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a hen and eggs",
+                    "cn": "一只母鸡和鸡蛋"
+                  },
+                  {
+                    "en": "some hens",
+                    "cn": "一些母鸡"
+                  }
+                ]
               },
               {
                 "en": "these",
@@ -4429,7 +5811,17 @@
                 "emoji": "👆",
                 "phonetic": "/ðiːz/",
                 "page": 38,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "What are these?",
+                    "cn": "这些是什么？"
+                  },
+                  {
+                    "en": "these tomatoes",
+                    "cn": "这些西红柿"
+                  }
+                ]
               },
               {
                 "en": "yum",
@@ -4437,7 +5829,17 @@
                 "emoji": "😋",
                 "phonetic": "/jʌm/",
                 "page": 38,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "Yum!",
+                    "cn": "真好吃！"
+                  },
+                  {
+                    "en": "yum, so good",
+                    "cn": "真好吃，太棒了"
+                  }
+                ]
               },
               {
                 "en": "animal",
@@ -4445,7 +5847,17 @@
                 "emoji": "🐾",
                 "phonetic": "/ˈænɪml/",
                 "page": 41,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "a lot of animals",
+                    "cn": "很多动物"
+                  },
+                  {
+                    "en": "farm animals",
+                    "cn": "农场动物"
+                  }
+                ]
               },
               {
                 "en": "those",
@@ -4453,7 +5865,17 @@
                 "emoji": "👉",
                 "phonetic": "/ðəʊz/",
                 "page": 41,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "What are those?",
+                    "cn": "那些是什么？"
+                  },
+                  {
+                    "en": "those horses",
+                    "cn": "那些马"
+                  }
+                ]
               },
               {
                 "en": "garden",
@@ -4461,7 +5883,17 @@
                 "emoji": "🌱",
                 "phonetic": "/ˈɡɑːdn/",
                 "page": 43,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "in the garden",
+                    "cn": "在花园里"
+                  },
+                  {
+                    "en": "a big garden",
+                    "cn": "一个大花园"
+                  }
+                ]
               },
               {
                 "en": "farm",
@@ -4469,7 +5901,17 @@
                 "emoji": "🚜",
                 "phonetic": "/fɑːm/",
                 "page": 43,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "on the farm",
+                    "cn": "在农场里"
+                  },
+                  {
+                    "en": "a big farm",
+                    "cn": "一个大农场"
+                  }
+                ]
               },
               {
                 "en": "goat",
@@ -4477,7 +5919,17 @@
                 "emoji": "🐐",
                 "phonetic": "/ɡəʊt/",
                 "page": 43,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "a little goat",
+                    "cn": "一只小山羊"
+                  },
+                  {
+                    "en": "some goats",
+                    "cn": "一些山羊"
+                  }
+                ]
               },
               {
                 "en": "eat",
@@ -4485,7 +5937,17 @@
                 "emoji": "🍽️",
                 "phonetic": "/iːt/",
                 "page": 43,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "eat the carrots",
+                    "cn": "吃胡萝卜"
+                  },
+                  {
+                    "en": "eat lunch",
+                    "cn": "吃午饭"
+                  }
+                ]
               }
             ],
             "vocabGroups": [
@@ -4924,7 +6386,17 @@
                 "emoji": "👔",
                 "phonetic": "/kləʊðz/",
                 "page": 49,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "new clothes",
+                    "cn": "新衣服"
+                  },
+                  {
+                    "en": "pack the clothes",
+                    "cn": "收拾衣服"
+                  }
+                ]
               },
               {
                 "en": "pants",
@@ -4932,7 +6404,17 @@
                 "emoji": "👖",
                 "phonetic": "/pænts/",
                 "page": 49,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "blue pants",
+                    "cn": "蓝裤子"
+                  },
+                  {
+                    "en": "a pair of pants",
+                    "cn": "一条裤子"
+                  }
+                ]
               },
               {
                 "en": "hat",
@@ -4940,7 +6422,17 @@
                 "emoji": "🧢",
                 "phonetic": "/hæt/",
                 "page": 49,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a red hat",
+                    "cn": "一顶红帽子"
+                  },
+                  {
+                    "en": "put on a hat",
+                    "cn": "戴上帽子"
+                  }
+                ]
               },
               {
                 "en": "dress",
@@ -4948,7 +6440,17 @@
                 "emoji": "👗",
                 "phonetic": "/dres/",
                 "page": 49,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a pretty dress",
+                    "cn": "一条漂亮的连衣裙"
+                  },
+                  {
+                    "en": "a long dress",
+                    "cn": "一条长连衣裙"
+                  }
+                ]
               },
               {
                 "en": "skirt",
@@ -4956,7 +6458,17 @@
                 "emoji": "👚",
                 "phonetic": "/skɜːt/",
                 "page": 49,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a pink skirt",
+                    "cn": "一条粉色的裙子"
+                  },
+                  {
+                    "en": "a short skirt",
+                    "cn": "一条短裙"
+                  }
+                ]
               },
               {
                 "en": "coat",
@@ -4964,7 +6476,17 @@
                 "emoji": "🧥",
                 "phonetic": "/kəʊt/",
                 "page": 52,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a warm coat",
+                    "cn": "一件保暖的大衣"
+                  },
+                  {
+                    "en": "put on a coat",
+                    "cn": "穿上大衣"
+                  }
+                ]
               },
               {
                 "en": "sweater",
@@ -4972,7 +6494,17 @@
                 "emoji": "🧶",
                 "phonetic": "/ˈswetə(r)/",
                 "page": 52,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a red sweater",
+                    "cn": "一件红毛衣"
+                  },
+                  {
+                    "en": "a warm sweater",
+                    "cn": "一件暖和的毛衣"
+                  }
+                ]
               },
               {
                 "en": "sock",
@@ -4980,7 +6512,17 @@
                 "emoji": "🧦",
                 "phonetic": "/sɒk/",
                 "page": 52,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a pair of socks",
+                    "cn": "一双袜子"
+                  },
+                  {
+                    "en": "white socks",
+                    "cn": "白袜子"
+                  }
+                ]
               },
               {
                 "en": "shorts",
@@ -4988,7 +6530,17 @@
                 "emoji": "🩳",
                 "phonetic": "/ʃɔːts/",
                 "page": 52,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "black shorts",
+                    "cn": "黑短裤"
+                  },
+                  {
+                    "en": "a pair of shorts",
+                    "cn": "一条短裤"
+                  }
+                ]
               },
               {
                 "en": "jacket",
@@ -4996,7 +6548,17 @@
                 "emoji": "🦺",
                 "phonetic": "/ˈdʒækɪt/",
                 "page": 52,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a blue jacket",
+                    "cn": "一件蓝夹克"
+                  },
+                  {
+                    "en": "put on a jacket",
+                    "cn": "穿上夹克"
+                  }
+                ]
               },
               {
                 "en": "shirt",
@@ -5004,7 +6566,17 @@
                 "emoji": "👕",
                 "phonetic": "/ʃɜːt/",
                 "page": 52,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a white shirt",
+                    "cn": "一件白衬衫"
+                  },
+                  {
+                    "en": "a clean shirt",
+                    "cn": "一件干净的衬衫"
+                  }
+                ]
               },
               {
                 "en": "yours",
@@ -5012,7 +6584,17 @@
                 "emoji": "🫵",
                 "phonetic": "/jɔːz/",
                 "page": 48,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "Is this yours?",
+                    "cn": "这是你的吗？"
+                  },
+                  {
+                    "en": "Are these yours?",
+                    "cn": "这些是你的吗？"
+                  }
+                ]
               },
               {
                 "en": "whose",
@@ -5020,7 +6602,17 @@
                 "emoji": "❓",
                 "phonetic": "/huːz/",
                 "page": 51,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "Whose coat is this?",
+                    "cn": "这是谁的大衣？"
+                  },
+                  {
+                    "en": "Whose pants are those?",
+                    "cn": "那条裤子是谁的？"
+                  }
+                ]
               },
               {
                 "en": "mine",
@@ -5029,7 +6621,17 @@
                 "phonetic": "/maɪn/",
                 "page": 51,
                 "type": "extended",
-                "image": "/primary/wordcard_images/fc_word_mine.png"
+                "image": "/primary/wordcard_images/fc_word_mine.png",
+                "chunks": [
+                  {
+                    "en": "It's mine.",
+                    "cn": "这是我的。"
+                  },
+                  {
+                    "en": "They're mine.",
+                    "cn": "它们是我的。"
+                  }
+                ]
               },
               {
                 "en": "pack",
@@ -5037,7 +6639,17 @@
                 "emoji": "🧳",
                 "phonetic": "/pæk/",
                 "page": 53,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "pack the bag",
+                    "cn": "收拾包"
+                  },
+                  {
+                    "en": "pack your clothes",
+                    "cn": "收拾你的衣服"
+                  }
+                ]
               },
               {
                 "en": "wait",
@@ -5045,7 +6657,17 @@
                 "emoji": "⏳",
                 "phonetic": "/weɪt/",
                 "page": 53,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "wait for me",
+                    "cn": "等我"
+                  },
+                  {
+                    "en": "Wait a minute!",
+                    "cn": "等一下！"
+                  }
+                ]
               }
             ],
             "vocabGroups": [
@@ -5474,7 +7096,17 @@
                 "emoji": "🧤",
                 "phonetic": "/ɡlʌv/",
                 "page": 59,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a pair of gloves",
+                    "cn": "一双手套"
+                  },
+                  {
+                    "en": "warm gloves",
+                    "cn": "保暖的手套"
+                  }
+                ]
               },
               {
                 "en": "scarf",
@@ -5482,7 +7114,17 @@
                 "emoji": "🧣",
                 "phonetic": "/skɑːf/",
                 "page": 59,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a long scarf",
+                    "cn": "一条长围巾"
+                  },
+                  {
+                    "en": "a warm scarf",
+                    "cn": "一条暖和的围巾"
+                  }
+                ]
               },
               {
                 "en": "umbrella",
@@ -5490,7 +7132,17 @@
                 "emoji": "☂️",
                 "phonetic": "/ʌmˈbrelə/",
                 "page": 59,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a big umbrella",
+                    "cn": "一把大伞"
+                  },
+                  {
+                    "en": "open the umbrella",
+                    "cn": "撑开伞"
+                  }
+                ]
               },
               {
                 "en": "sunglasses",
@@ -5498,7 +7150,17 @@
                 "emoji": "🕶️",
                 "phonetic": "/ˈsʌnɡlɑːsɪz/",
                 "page": 59,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a pair of sunglasses",
+                    "cn": "一副太阳镜"
+                  },
+                  {
+                    "en": "cool sunglasses",
+                    "cn": "很酷的太阳镜"
+                  }
+                ]
               },
               {
                 "en": "pretty",
@@ -5506,7 +7168,17 @@
                 "emoji": "✨",
                 "phonetic": "/ˈprɪti/",
                 "page": 62,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a pretty dress",
+                    "cn": "一条漂亮的连衣裙"
+                  },
+                  {
+                    "en": "pretty and cheap",
+                    "cn": "漂亮又便宜"
+                  }
+                ]
               },
               {
                 "en": "expensive",
@@ -5514,7 +7186,17 @@
                 "emoji": "💎",
                 "phonetic": "/ɪkˈspensɪv/",
                 "page": 62,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "too expensive",
+                    "cn": "太贵了"
+                  },
+                  {
+                    "en": "an expensive coat",
+                    "cn": "一件昂贵的大衣"
+                  }
+                ]
               },
               {
                 "en": "cheap",
@@ -5522,7 +7204,17 @@
                 "emoji": "🏷️",
                 "phonetic": "/tʃiːp/",
                 "page": 62,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "It's cheap.",
+                    "cn": "它很便宜。"
+                  },
+                  {
+                    "en": "nice and cheap",
+                    "cn": "又好又便宜"
+                  }
+                ]
               },
               {
                 "en": "nice",
@@ -5530,7 +7222,17 @@
                 "emoji": "👍",
                 "phonetic": "/naɪs/",
                 "page": 62,
-                "type": "core"
+                "type": "core",
+                "chunks": [
+                  {
+                    "en": "a nice hat",
+                    "cn": "一顶不错的帽子"
+                  },
+                  {
+                    "en": "nice and pretty",
+                    "cn": "又好看又漂亮"
+                  }
+                ]
               },
               {
                 "en": "try on",
@@ -5538,7 +7240,17 @@
                 "emoji": "👗",
                 "phonetic": "/traɪ ɒn/",
                 "page": 58,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "try on the dress",
+                    "cn": "试穿这条连衣裙"
+                  },
+                  {
+                    "en": "Can I try it on?",
+                    "cn": "我可以试穿吗？"
+                  }
+                ]
               },
               {
                 "en": "size",
@@ -5546,7 +7258,17 @@
                 "emoji": "📏",
                 "phonetic": "/saɪz/",
                 "page": 58,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "What size?",
+                    "cn": "什么尺码？"
+                  },
+                  {
+                    "en": "the right size",
+                    "cn": "合适的尺码"
+                  }
+                ]
               },
               {
                 "en": "of course",
@@ -5555,7 +7277,17 @@
                 "phonetic": "/əv kɔːs/",
                 "page": 58,
                 "type": "extended",
-                "image": "/primary/wordcard_images/fc_word_ofcourse.png"
+                "image": "/primary/wordcard_images/fc_word_ofcourse.png",
+                "chunks": [
+                  {
+                    "en": "Of course!",
+                    "cn": "当然！"
+                  },
+                  {
+                    "en": "of course you can",
+                    "cn": "你当然可以"
+                  }
+                ]
               },
               {
                 "en": "too",
@@ -5563,7 +7295,17 @@
                 "emoji": "⚠️",
                 "phonetic": "/tuː/",
                 "page": 58,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "too big",
+                    "cn": "太大了"
+                  },
+                  {
+                    "en": "too expensive",
+                    "cn": "太贵了"
+                  }
+                ]
               },
               {
                 "en": "just",
@@ -5571,7 +7313,17 @@
                 "emoji": "👌",
                 "phonetic": "/dʒʌst/",
                 "page": 58,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "just right",
+                    "cn": "正好合适"
+                  },
+                  {
+                    "en": "It's just my size.",
+                    "cn": "正好是我的尺码。"
+                  }
+                ]
               },
               {
                 "en": "how much",
@@ -5579,7 +7331,17 @@
                 "emoji": "💵",
                 "phonetic": "/haʊ mʌtʃ/",
                 "page": 61,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "How much is it?",
+                    "cn": "它多少钱？"
+                  },
+                  {
+                    "en": "How much are they?",
+                    "cn": "它们多少钱？"
+                  }
+                ]
               },
               {
                 "en": "eighty",
@@ -5587,7 +7349,17 @@
                 "emoji": "8️⃣",
                 "phonetic": "/ˈeɪti/",
                 "page": 61,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "eighty yuan",
+                    "cn": "八十元"
+                  },
+                  {
+                    "en": "eighty-five yuan",
+                    "cn": "八十五元"
+                  }
+                ]
               },
               {
                 "en": "dollar",
@@ -5595,7 +7367,17 @@
                 "emoji": "💲",
                 "phonetic": "/ˈdɒlə(r)/",
                 "page": 61,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "ten dollars",
+                    "cn": "十美元"
+                  },
+                  {
+                    "en": "How many dollars?",
+                    "cn": "多少美元？"
+                  }
+                ]
               },
               {
                 "en": "sale",
@@ -5603,7 +7385,17 @@
                 "emoji": "🛒",
                 "phonetic": "/seɪl/",
                 "page": 63,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "on sale",
+                    "cn": "在打折"
+                  },
+                  {
+                    "en": "a big sale",
+                    "cn": "大减价"
+                  }
+                ]
               },
               {
                 "en": "more",
@@ -5611,7 +7403,17 @@
                 "emoji": "➕",
                 "phonetic": "/mɔː(r)/",
                 "page": 63,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "more clothes",
+                    "cn": "更多衣服"
+                  },
+                  {
+                    "en": "one more",
+                    "cn": "再来一个"
+                  }
+                ]
               },
               {
                 "en": "us",
@@ -5619,7 +7421,17 @@
                 "emoji": "👥",
                 "phonetic": "/ʌs/",
                 "page": 63,
-                "type": "extended"
+                "type": "extended",
+                "chunks": [
+                  {
+                    "en": "help us",
+                    "cn": "帮助我们"
+                  },
+                  {
+                    "en": "with us",
+                    "cn": "和我们一起"
+                  }
+                ]
               }
             ],
             "vocabGroups": [

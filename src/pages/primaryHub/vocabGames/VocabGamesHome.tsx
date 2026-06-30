@@ -3,6 +3,7 @@ import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { getGradeCourse } from "@/lib/primaryHub/courseData";
 import { getWordsForGrade } from "@/lib/primaryHub/vocabGames/words";
 import { getProgress } from "@/lib/primaryHub/vocabGames/srs";
+import VocabRings from "./VocabRings";
 
 const GAMES: Array<{
   key: string;
@@ -39,18 +40,11 @@ export default function VocabGamesHome() {
         </div>
       </div>
 
-      {/* 词汇收集进度卡 */}
-      <div className="mt-4 rounded-3xl bg-gradient-to-br from-[#B45EFF] to-[#7C5CFF] p-5 text-white shadow">
-        <div className="text-sm opacity-90">词汇收集进度</div>
-        <div className="mt-1 text-3xl font-extrabold">
-          已掌握 {p.mastered}
-          <span className="text-lg font-bold opacity-80"> / {p.total}</span>
-        </div>
-        <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-white/25">
-          <div className="h-full rounded-full bg-white transition-all" style={{ width: `${p.percent}%` }} />
-        </div>
-        <div className="mt-2 text-xs opacity-90">
-          已学过 {p.seen} 词 · 每个词答对 2 次就算掌握，越练越牢 💪
+      {/* 顶部双圆环：完成度 + 掌握度 */}
+      <div className="mt-4">
+        <VocabRings total={p.total} seen={p.seen} mastered={p.mastered} />
+        <div className="mt-2 text-center text-xs text-[#999]">
+          每个词答对 2 次就算掌握，越练越牢 💪
         </div>
       </div>
 

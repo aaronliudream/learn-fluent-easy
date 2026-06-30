@@ -13,6 +13,8 @@ export type VocabItem = {
   highlight?: string;
   page?: number;
   type?: VocabWordType;
+  /** language chunk：本词的 2-3 个地道搭配/语块（参初中 chunks），词汇游戏与单词卡展示用。 */
+  chunks?: { en: string; cn: string }[];
 };
 
 export type VocabGroupConfig = {

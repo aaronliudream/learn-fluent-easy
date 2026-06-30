@@ -1,0 +1,155 @@
+{
+  "lessonId": "g6v1_u1_grammar",
+  "unitId": "g6v1_u1",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "知道了地方在哪里，再来学怎么一步步走过去，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "在哪里 · Where is...?",
+      "description": "问问某个地方在哪里。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Where is the museum shop?", "zh": "博物馆的商店在哪里？" },
+          "answer": { "en": "It's near the door.", "zh": "在大门附近。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "有人问「博物馆的商店在哪里？」，商店就在大门附近，该怎么回答？",
+            "options": [
+              { "text": "It's near the door.", "correct": true },
+              { "text": "It's a museum.", "correct": false },
+              { "text": "How can I get there?", "correct": false }
+            ],
+            "explanationZh": "问「在哪里 Where」，要说出位置，所以答 It's near the door（在大门附近）。错项一个说的是「这是个博物馆」，一个反过来问怎么走，都没回答「在哪里」。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Where is the post office?", "zh": "邮局在哪里？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：把 dialogues 的 Where is the museum shop? 换成 post office（取自本单元 vocabulary），同句型，本单元课标内。",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「邮局在哪里？」",
+            "options": [
+              { "text": "Where is the post office?", "correct": true },
+              { "text": "Where the post office is?", "correct": false },
+              { "text": "Where do the post office?", "correct": false }
+            ],
+            "explanationZh": "问某个地方在哪里，用 Where + is + 地点？is 紧跟在 Where 后面。一个错项把 is 放到了最后，一个用了 do（这句没有动作，不用 do）。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "The cinema is near the hospital.", "zh": "电影院在医院附近。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：The ... is near ... 为本单元课标句型；cinema、hospital 均取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「电影院在医院附近」该填哪个地方？",
+            "sentenceTemplate": "The ___ is near the hospital.",
+            "options": [
+              { "text": "cinema", "correct": true },
+              { "text": "bookstore", "correct": false },
+              { "text": "post office", "correct": false }
+            ],
+            "explanationZh": "cinema 是「电影院」。bookstore（书店）、post office（邮局）也是真实的地方词，但和「电影院」对不上，要按中文选 cinema。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Where is the museum?", "zh": "博物馆在哪里？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：集中记本单元表示地点的核心词（取自本单元 vocabulary）。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文和中文意思连起来。",
+            "pairs": [
+              { "en": "museum", "zh": "博物馆" },
+              { "en": "post office", "zh": "邮局" },
+              { "en": "bookstore", "zh": "书店" },
+              { "en": "cinema", "zh": "电影院" }
+            ],
+            "explanationZh": "这些都是本单元表示「地方」的词，记住它们的中文意思，问路、找地方都用得上。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "怎么去 · How can I get there?",
+      "description": "问问怎么走到一个地方，学会用方向词指路。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "How can I get to the science museum?", "zh": "我怎么去科学博物馆？" },
+          "answer": { "en": "Turn left at the bookstore.", "zh": "在书店左转。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "有人问「我怎么去科学博物馆？」，要告诉他在书店左转，该怎么回答？",
+            "options": [
+              { "text": "Turn left at the bookstore.", "correct": true },
+              { "text": "It's near the door.", "correct": false },
+              { "text": "Yes, I can.", "correct": false }
+            ],
+            "explanationZh": "问「怎么走 How can I get to...」，要告诉对方怎么走（左转、右转），所以说 Turn left at the bookstore（在书店左转）。错项一个回答的是「在哪儿」，一个回答的是「能不能」，都对不上「怎么走」。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "How can I get to the hospital?", "zh": "我怎么去医院？" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：把 dialogues 的 How can I get to the science museum? 换成 hospital（取自本单元 vocabulary），同句型，本单元课标内。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "小明在街上迷路了，想问别人怎么走到医院。",
+            "promptZh": "「我怎么去医院？」用英语怎么说？",
+            "options": [
+              { "text": "How can I get to the hospital?", "correct": true },
+              { "text": "How I can get to the hospital?", "correct": false },
+              { "text": "Where can I get the hospital?", "correct": false }
+            ],
+            "explanationZh": "问怎么走到某地，语序是 How + can + I + get to + 地点？错项一个把 can 和 I 调反了，一个用了 Where 又漏掉 to，意思和语序都不对。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Turn left at the bookstore.", "zh": "在书店左转。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「在书店左转。」",
+            "tokens": ["at", "Turn", "bookstore.", "left", "the"],
+            "answer": ["Turn", "left", "at", "the", "bookstore."],
+            "explanationZh": "指路先说动作和方向：Turn + left（向左转），再用 at the + 地点 说在哪儿转。这句每个词只有一个合适的位置，顺序唯一。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Turn left, turn right, where do we go?", "zh": "左转，右转，我们去哪里？（歌谣）" },
+          "answer": { "en": "To the museum, let's say hello!", "zh": "去博物馆，打个招呼吧！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编方向歌谣（跟读不计分），用本单元 turn、museum 等词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

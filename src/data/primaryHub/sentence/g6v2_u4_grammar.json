@@ -1,0 +1,153 @@
+{
+  "lessonId": "g6v2_u4_grammar",
+  "unitId": "g6v2_u4",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "说完学校以前没有什么、现在有了，再聊聊你自己以前和现在有什么不一样，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "以前的学校 · There was no...",
+      "description": "说说学校以前没有什么、现在有了。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "There was no library in my old school.", "zh": "我以前的学校里没有图书馆。" },
+          "answer": { "en": "There is one now.", "zh": "现在有了。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "同学说「我以前的学校里没有图书馆」，你想接话说现在有了，该怎么说？",
+            "options": [
+              { "text": "There is one now.", "correct": true },
+              { "text": "There was no library.", "correct": false },
+              { "text": "Yes, I do.", "correct": false }
+            ],
+            "explanationZh": "说「现在有了」要用现在的说法 There is one now，one 指代前面那个图书馆。第一个错项还在说过去没有，没接上「现在」；第二个是回答「是不是」的话，对不上。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "There was no library in my old school.", "zh": "我以前的学校里没有图书馆。" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语说「我以前的学校里没有图书馆」。",
+            "options": [
+              { "text": "There was no library in my old school.", "correct": true },
+              { "text": "There is no library in my old school.", "correct": false },
+              { "text": "There were no library in my old school.", "correct": false }
+            ],
+            "explanationZh": "说「以前没有」要用过去的 was：There was no library。第一个错项用了现在的 is，说成「现在没有」，时间不对；第二个 library 是一个、单数，要用 was 不用 were。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "There was no gym in my old school.", "zh": "我以前的学校里没有体育馆。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：把 There was no library 换成 gym，同句型本单元课标内；gym 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我以前的学校里没有体育馆」该填哪个词？",
+            "sentenceTemplate": "There was no ___ in my old school.",
+            "options": [
+              { "text": "gym", "correct": true },
+              { "text": "grass", "correct": false },
+              { "text": "badminton", "correct": false }
+            ],
+            "explanationZh": "gym 是「体育馆」，正好对上中文。grass 是「草坪」、badminton 是「羽毛球」，都是本单元真实的词，但意思不一样，要按中文选对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "There was no library in my old school. There is one now.", "zh": "我以前的学校里没有图书馆。现在有了。" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充:第三句 There was no gym before 用本单元 vocabulary 的 gym,集中记「以前没有/现在有了」核心句。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "There was no library in my old school.", "zh": "我以前的学校里没有图书馆。" },
+              { "en": "There is one now.", "zh": "现在有了。" },
+              { "en": "There was no gym before.", "zh": "以前没有体育馆。" }
+            ],
+            "explanationZh": "这几句都是本单元说「以前没有、现在有了」的核心句型，was 讲过去、is 讲现在，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "我变了 · I was...",
+      "description": "比一比你以前和现在有什么不一样。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "I was short.", "zh": "我以前很矮。" },
+          "answer": { "en": "Now I'm tall.", "zh": "现在我长高了。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "看着小时候的照片，你想说「我以前很矮，现在长高了」，该怎么说？",
+            "options": [
+              { "text": "I was short. Now I'm tall.", "correct": true },
+              { "text": "I am short. Now I'm tall.", "correct": false },
+              { "text": "I was short. Now I was tall.", "correct": false }
+            ],
+            "explanationZh": "说「以前」用过去的 was，说「现在」用 'm(am)：I was short，Now I'm tall。第一个错项第一句用了现在的 am，成了「现在矮」；第二个错项第二句又用了过去的 was，跟「现在」对不上。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Now I'm tall.", "zh": "现在我长高了。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "Amy 翻出小时候的照片，想告诉朋友自己现在长高了。",
+            "promptZh": "「现在我长高了」用英语怎么说？",
+            "options": [
+              { "text": "Now I'm tall.", "correct": true },
+              { "text": "Now I was tall.", "correct": false },
+              { "text": "Now I tall.", "correct": false }
+            ],
+            "explanationZh": "说「现在」的样子用 'm(am)：Now I'm tall。第一个错项用了过去的 was，可 now 是现在，时间不对；第二个错项缺了 be 动词 'm，句子不完整。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "I can go cycling.", "zh": "我会去骑自行车。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充:go cycling 取自本单元 vocabulary,延续「以前不会、现在会了」的本单元话题;句中无可移动副词,排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「我会去骑自行车。」",
+            "tokens": ["go", "I", "cycling.", "can"],
+            "answer": ["I", "can", "go", "cycling."],
+            "explanationZh": "顺序是 I + can + go cycling，can 后面跟动作 go。这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Then I was small, then I was slow,", "zh": "以前我又小又慢，（歌谣）" },
+          "answer": { "en": "Now I'm tall, now watch me go!", "zh": "现在我长高啦，看我冲呀！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编「以前·现在」歌谣（跟读不计分），用本单元 was/now 对比句型。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

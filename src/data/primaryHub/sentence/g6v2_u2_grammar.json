@@ -1,0 +1,154 @@
+{
+  "lessonId": "g6v2_u2_grammar",
+  "unitId": "g6v2_u2",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "说完上周末做了什么，再来问问别人「做没做某事」，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "上周末做了什么 · What did you do?",
+      "description": "问问别人上个周末做了什么，学会用过去式回答。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "What did you do last weekend?", "zh": "你上周末做了什么？" },
+          "answer": { "en": "I cleaned my room.", "zh": "我打扫了房间。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "同学问「你上周末做了什么？」，你上周末打扫了房间，该怎么回答？",
+            "options": [
+              { "text": "I cleaned my room.", "correct": true },
+              { "text": "Yes, I did.", "correct": false },
+              { "text": "I'm cleaning my room.", "correct": false }
+            ],
+            "explanationZh": "问「上周末做了什么」，要说出做过的事，而且事情已经过去，用过去式 cleaned（打扫了），所以答 I cleaned my room。一个错项是回答「是不是」的话，对不上「做了什么」；一个用的是 I'm cleaning（正在打扫），说的是现在，不是上周末。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "What did you do last weekend?", "zh": "你上周末做了什么？" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你上周末做了什么？」",
+            "options": [
+              { "text": "What did you do last weekend?", "correct": true },
+              { "text": "What did you did last weekend?", "correct": false },
+              { "text": "What you do last weekend?", "correct": false }
+            ],
+            "explanationZh": "问过去的事，用 did 来帮忙提问，后面的动词用原形：What + did + you + do + last weekend？一个错项后面又用了 did，过去式只用一次就够了；一个错项漏掉了 did，就问不出「过去」的意思。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "I watched TV last weekend.", "zh": "我上周末看了电视。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：I + 动词过去式 为本单元课标答句；watched 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我上周末看了电视」该填哪个词？",
+            "sentenceTemplate": "I ___ TV last weekend.",
+            "options": [
+              { "text": "watched", "correct": true },
+              { "text": "washed", "correct": false },
+              { "text": "stayed", "correct": false }
+            ],
+            "explanationZh": "watched 是「看（电视）」的过去式，watch TV 就是「看电视」。washed（洗了）、stayed（待着）也是本单元真实的过去式词，但意思不一样，放进这句不对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "What did you do last weekend?", "zh": "你上周末做了什么？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：I washed my clothes 为本单元课标过去式句，washed 取自本单元 vocabulary；其余两句为 dialogues 原句，集中记意思。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "What did you do last weekend?", "zh": "你上周末做了什么？" },
+              { "en": "I cleaned my room.", "zh": "我打扫了房间。" },
+              { "en": "I washed my clothes.", "zh": "我洗了衣服。" }
+            ],
+            "explanationZh": "这几句都是本单元问答「上周末做了什么」的核心句型，回答时动词都用过去式，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "你做了吗 · Did you...?",
+      "description": "问问别人上周末做没做某件事，学会过去式的一般疑问句。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Did you see a film?", "zh": "你看电影了吗？" },
+          "answer": { "en": "Yes, I did.", "zh": "是的，我看了。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你看电影了吗？」，你确实看了，该怎么回答？",
+            "options": [
+              { "text": "Yes, I did.", "correct": true },
+              { "text": "Yes, I do.", "correct": false },
+              { "text": "Yes, I am.", "correct": false }
+            ],
+            "explanationZh": "Did you...? 这种问过去的一般疑问句，用 Yes, I did / No, I didn't 来回答。一个错项用 I do，说的是现在，不是上周末；一个错项用 I am，这句里是做事情（see），不是 be 动词，要用 did 来回答。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Did you watch TV?", "zh": "你看电视了吗？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：把 Did you see a film? 换成 watch TV，同句型；watched 取自本单元 vocabulary，疑问句里用原形 watch；句中无可移动副词，排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「你看电视了吗？」",
+            "tokens": ["you", "watch", "Did", "TV?"],
+            "answer": ["Did", "you", "watch", "TV?"],
+            "explanationZh": "问过去的一般疑问句，把 Did 放句首，后面动词用原形：Did + you + watch + TV？Did 已经表示「过去」了，所以后面的 watch 不再加 ed。这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "I had a cold last weekend.", "zh": "我上周末感冒了。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：had a cold 取自本单元 vocabulary；过去式陈述句为本单元课标。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "周一回到学校，同学问你上周末过得怎么样，你想说上周末感冒了。",
+            "promptZh": "「我上周末感冒了」用英语怎么说？",
+            "options": [
+              { "text": "I had a cold last weekend.", "correct": true },
+              { "text": "I have a cold last weekend.", "correct": false },
+              { "text": "I had cold last weekend.", "correct": false }
+            ],
+            "explanationZh": "说上周末发生的事要用过去式，「感冒」是 had a cold（had 是 have 的过去式），而且固定要带一个 a。一个错项用 have，说的是现在；一个错项漏掉了 a，就不完整了。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Cleaned and washed, watched and read,", "zh": "打扫、洗衣，看电视、读书，（歌谣）" },
+          "answer": { "en": "Last weekend, that's what I did!", "zh": "上周末，我就做了这些！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编上周末歌谣（跟读不计分），用本单元过去式动词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

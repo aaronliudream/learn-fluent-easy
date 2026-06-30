@@ -1,0 +1,153 @@
+{
+  "lessonId": "g6v1_u4_grammar",
+  "unitId": "g6v1_u4",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "说完自己的爱好，再聊聊笔友住在哪里、喜欢做什么，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "聊聊爱好 · What are your hobbies?",
+      "description": "问问别人有什么业余爱好，说说自己喜欢做什么。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "What are your hobbies?", "zh": "你的爱好是什么？" },
+          "answer": { "en": "I like singing and doing kung fu.", "zh": "我喜欢唱歌和练武术。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你的爱好是什么？」，你喜欢唱歌和练武术，该怎么回答？",
+            "options": [
+              { "text": "I like singing and doing kung fu.", "correct": true },
+              { "text": "Yes, I do.", "correct": false },
+              { "text": "He lives in Sydney.", "correct": false }
+            ],
+            "explanationZh": "问「你的爱好是什么」，要说出自己喜欢做的事，所以答 I like singing and doing kung fu（我喜欢唱歌和练武术）。一个错项是回答「是不是」的话，一个说的是别人住在哪里，都对不上问题。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "What are your hobbies?", "zh": "你的爱好是什么？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你的爱好是什么？」",
+            "options": [
+              { "text": "What are your hobbies?", "correct": true },
+              { "text": "What your hobbies are?", "correct": false },
+              { "text": "What is your hobbies?", "correct": false }
+            ],
+            "explanationZh": "hobbies（爱好）是复数，问「你的爱好是什么」用 What are your hobbies？be 动词用 are，放在 your hobbies 前面。一个错项把 are 挪到了句末，一个用了单数 is，和复数 hobbies 不搭配。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "I like hiking.", "zh": "我喜欢远足。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：hiking 取自本单元 vocabulary；I like + 活动 为本单元课标内说爱好的句子。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我喜欢远足」该填哪个词？",
+            "sentenceTemplate": "I like ___.",
+            "options": [
+              { "text": "hiking", "correct": true },
+              { "text": "jasmine", "correct": false },
+              { "text": "puzzle", "correct": false }
+            ],
+            "explanationZh": "hiking 是「远足」。jasmine 是「茉莉」、puzzle 是「谜」，都是本单元真实的词，但意思不一样，和「远足」对不上，要按中文选对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "What are your hobbies?", "zh": "你的爱好是什么？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：I like hiking 为扩充句（hiking 取自本单元 vocabulary）；另两句取自 dialogues。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "What are your hobbies?", "zh": "你的爱好是什么？" },
+              { "en": "I like singing and doing kung fu.", "zh": "我喜欢唱歌和练武术。" },
+              { "en": "I like hiking.", "zh": "我喜欢远足。" }
+            ],
+            "explanationZh": "这几句都是本单元问答「爱好」的核心句型，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "笔友住哪里 · Does he live in...?",
+      "description": "用 he/she 说说笔友住在哪里，学会第三人称的问与答。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Does he live in Sydney?", "zh": "他住在悉尼吗？" },
+          "answer": { "en": "No, he doesn't.", "zh": "不，他不住在悉尼。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「他住在悉尼吗？」，他不住在悉尼，该怎么回答？",
+            "options": [
+              { "text": "No, he doesn't.", "correct": true },
+              { "text": "No, I don't.", "correct": false },
+              { "text": "Yes, please.", "correct": false }
+            ],
+            "explanationZh": "Does he...? 这种问句用 Yes, he does / No, he doesn't 回答。说的是「他」，所以用 he doesn't。一个错项把人称说成了「我」（I don't），一个是请人帮忙的话，都对不上问题。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "He lives in Canberra.", "zh": "他住在堪培拉。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：Canberra 取自本单元 vocabulary；He lives in + 地点 为本单元课标内第三人称句。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "王兵想告诉同学，他的笔友住在堪培拉。",
+            "promptZh": "「他住在堪培拉」用英语怎么说？",
+            "options": [
+              { "text": "He lives in Canberra.", "correct": true },
+              { "text": "He live in Canberra.", "correct": false },
+              { "text": "He lives Canberra.", "correct": false }
+            ],
+            "explanationZh": "说「他住在某地」用 He lives in + 地点。主语是 he，动词 live 要加 s 变成 lives，地点前还要有 in。一个错项漏了 s，一个漏了 in。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Does he live in Sydney?", "zh": "他住在悉尼吗？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「他住在悉尼吗？」",
+            "tokens": ["live", "Does", "Sydney?", "he", "in"],
+            "answer": ["Does", "he", "live", "in", "Sydney?"],
+            "explanationZh": "问「他做不做某事」用 Does 放句首，后面的动词用原形 live（不加 s）：Does + he + live + in + 地点？这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "What are your hobbies? Do you like hiking?", "zh": "你的爱好是什么？你喜欢远足吗？（歌谣）" },
+          "answer": { "en": "My pen pal likes singing, hiking too!", "zh": "我的笔友喜欢唱歌，也喜欢远足！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编爱好歌谣（跟读不计分），用本单元 hobbies、hiking、pen pal 等词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

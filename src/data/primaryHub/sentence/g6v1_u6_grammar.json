@@ -1,0 +1,153 @@
+{
+  "lessonId": "g6v1_u6_grammar",
+  "unitId": "g6v1_u6",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "说完感觉怎么样，再聊聊哪里不舒服、该怎么办，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "感觉怎么样 · How do you feel?",
+      "description": "问问别人现在感觉如何，学会说自己的心情。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "How do you feel?", "zh": "你感觉怎么样？" },
+          "answer": { "en": "I'm happy.", "zh": "我很开心。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "同学问「你感觉怎么样？」，你现在很开心，该怎么回答？",
+            "options": [
+              { "text": "I'm happy.", "correct": true },
+              { "text": "Yes, I do.", "correct": false },
+              { "text": "I'm eleven.", "correct": false }
+            ],
+            "explanationZh": "问「你感觉怎么样」，要说出自己的心情，所以答 I'm happy（我很开心）。两个错项一个是回答「是不是」的话，一个说的是年龄，都对不上这个问题。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "How do you feel?", "zh": "你感觉怎么样？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你感觉怎么样？」",
+            "options": [
+              { "text": "How do you feel?", "correct": true },
+              { "text": "How you feel?", "correct": false },
+              { "text": "How do feel you?", "correct": false }
+            ],
+            "explanationZh": "问别人感觉如何的语序是 How + do + you + feel？do 帮助提问。一个错项漏了 do，一个把 feel 和 you 的位置排反了。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "I'm sad.", "zh": "我很难过。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：I'm + 心情词 为本单元课标答句；sad 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我很难过」该填哪个词？",
+            "sentenceTemplate": "I'm ___.",
+            "options": [
+              { "text": "sad", "correct": true },
+              { "text": "angry", "correct": false },
+              { "text": "worried", "correct": false }
+            ],
+            "explanationZh": "sad 意思是「难过的」。angry（生气的）、worried（担心的）也是真实的心情词，但意思不一样，要按中文选对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "How do you feel?", "zh": "你感觉怎么样？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：I'm happy 为 dialogues 原句，I'm sad 用本单元 vocabulary 同句型扩充，集中记意思。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "How do you feel?", "zh": "你感觉怎么样？" },
+              { "en": "I'm happy.", "zh": "我很开心。" },
+              { "en": "I'm sad.", "zh": "我很难过。" }
+            ],
+            "explanationZh": "这几句是本单元问答「感觉怎么样」的核心句型，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "怎么了 · What's wrong?",
+      "description": "问问别人哪里不舒服，并学会给出建议。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "What's wrong?", "zh": "怎么了？" },
+          "answer": { "en": "I have a cold.", "zh": "我感冒了。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "你感冒了，别人关心地问「怎么了？」，你该怎么说？",
+            "options": [
+              { "text": "I have a cold.", "correct": true },
+              { "text": "I'm happy.", "correct": false },
+              { "text": "Yes, I am.", "correct": false }
+            ],
+            "explanationZh": "问「怎么了」是在问你哪里不舒服，所以说 I have a cold（我感冒了）。两个错项一个说的是开心的心情，一个是回答「是不是」的话，都对不上。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "You should see a doctor.", "zh": "你应该去看医生。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：You should + 动词 为本单元课标建议句；see a doctor 取自本单元 vocabulary。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "好朋友感冒了，你想建议他去看医生。",
+            "promptZh": "「你应该去看医生」用英语怎么说？",
+            "options": [
+              { "text": "You should see a doctor.", "correct": true },
+              { "text": "You should a doctor.", "correct": false },
+              { "text": "You see should a doctor.", "correct": false }
+            ],
+            "explanationZh": "给建议用「You should + 动作」，所以是 You should see a doctor。一个错项漏了 see，没有了动作；一个把 see 和 should 的位置排错了。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "I have a cold.", "zh": "我感冒了。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「我感冒了。」",
+            "tokens": ["a", "cold.", "I", "have"],
+            "answer": ["I", "have", "a", "cold."],
+            "explanationZh": "说自己生病用 I + have + a + cold：have 是「患（病）」，a cold 是「一场感冒」。这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Happy, happy, how do you feel?", "zh": "开心呀开心，你感觉怎么样？（歌谣）" },
+          "answer": { "en": "Sad or angry? Tell me, please!", "zh": "难过还是生气？快告诉我吧！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编心情歌谣（跟读不计分），用本单元 happy / sad / angry 等心情词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "lessonId": "g6v2_u3_grammar",
+  "unitId": "g6v2_u3",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "说完去了哪儿，再聊聊怎么去的、路上做了什么，一起来练过去式口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "去哪儿了 · Where did you go?",
+      "description": "问问别人假期去了哪儿，学会用过去式回答。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Where did you go?", "zh": "你去哪儿了？" },
+          "answer": { "en": "We went to Sanya.", "zh": "我们去了三亚。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "同学问「你去哪儿了？」，你假期去了三亚，该怎么回答？",
+            "options": [
+              { "text": "We went to Sanya.", "correct": true },
+              { "text": "Yes, I did.", "correct": false },
+              { "text": "It's sunny.", "correct": false }
+            ],
+            "explanationZh": "Where（去哪儿）要用地点来回答，所以说 We went to Sanya（我们去了三亚）；went 是 go 的过去式，表示「已经去过」。一个错项是回答「是不是」的话，一个说的是天气，都对不上「去哪儿」。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Where did you go?", "zh": "你去哪儿了？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你去哪儿了？」",
+            "options": [
+              { "text": "Where did you go?", "correct": true },
+              { "text": "Where you did go?", "correct": false },
+              { "text": "Where did you went?", "correct": false }
+            ],
+            "explanationZh": "问过去「去哪儿了」的语序是 Where + did + you + go？did 已经表示过去，后面的动词要用原形 go，不再变 went。一个错项把 did 和 you 的顺序弄反了，一个在 did 后面又用了过去式 went。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "I rode a horse.", "zh": "我骑了马。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：rode（骑）取自本单元 vocabulary；rode a horse 为本单元课标过去式叙述句。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我骑了马」该填哪个词？",
+            "sentenceTemplate": "I ___ a horse.",
+            "options": [
+              { "text": "rode", "correct": true },
+              { "text": "ride", "correct": false },
+              { "text": "road", "correct": false }
+            ],
+            "explanationZh": "rode 是 ride（骑）的过去式，表示「骑了」，说过去的事要用它。ride 是现在式，没表示过去；road 是「马路」，只是长得像，意思完全不同。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Where did you go? How did you go there?", "zh": "你去哪儿了？你们怎么去的？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "Where did you go?", "zh": "你去哪儿了？" },
+              { "en": "We went to Sanya.", "zh": "我们去了三亚。" },
+              { "en": "How did you go there?", "zh": "你们怎么去的？" }
+            ],
+            "explanationZh": "这几句都是本单元问答「去哪儿、怎么去」的核心句型，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "怎么去的 · How did you go?",
+      "description": "问问别人怎么去的、路上做了什么，练过去式。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "How did you go there?", "zh": "你们怎么去的？" },
+          "answer": { "en": "We went there by plane.", "zh": "我们坐飞机去的。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你们怎么去的？」，你们是坐飞机去的，该怎么说？",
+            "options": [
+              { "text": "We went there by plane.", "correct": true },
+              { "text": "We went to Sanya.", "correct": false },
+              { "text": "I'm fine, thank you.", "correct": false }
+            ],
+            "explanationZh": "How（怎么）问的是去的方式，用 by + 交通工具来回答，所以说 We went there by plane（我们坐飞机去的）。一个错项答的是「去了哪儿」，一个是问候语，都对不上「怎么去」。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "How did you go there?", "zh": "你们怎么去的？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「你们怎么去的？」",
+            "tokens": ["go", "How", "there?", "did", "you"],
+            "answer": ["How", "did", "you", "go", "there?"],
+            "explanationZh": "问过去「怎么去的」语序是 How + did + you + go + there？did 表示过去，后面的 go 用原形。这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "We went camping.", "zh": "我们去野营了。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：went camping（野营）取自本单元 vocabulary；过去式叙述为本单元课标句。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "周末 Amy 一家去山里野营了，她想告诉同学这件事。",
+            "promptZh": "「我们去野营了」用英语怎么说？",
+            "options": [
+              { "text": "We went camping.", "correct": true },
+              { "text": "We go camping.", "correct": false },
+              { "text": "We went camp.", "correct": false }
+            ],
+            "explanationZh": "说过去做过的事要用过去式，go 的过去式是 went，「去野营」是 went camping。一个错项用了现在式 go，没表示过去；一个少了 -ing，camp 词形不对。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Where did you go? We went camping!", "zh": "你去哪儿了？我们去野营了！（歌谣）" },
+          "answer": { "en": "We rode, we ate, we had a great day!", "zh": "我们骑马、吃东西，玩了开心的一天！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编过去式歌谣（跟读不计分），用本单元 went/rode/ate 等过去式词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

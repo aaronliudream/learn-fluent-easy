@@ -1,0 +1,153 @@
+{
+  "lessonId": "g6v1_u3_grammar",
+  "unitId": "g6v1_u3",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "说完明天打算做什么，再聊聊什么时候去，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "明天的计划 · What are you going to do?",
+      "description": "问问别人明天打算做什么。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "What are you going to do tomorrow?", "zh": "你明天打算做什么？" },
+          "answer": { "en": "I'm going to have an art lesson.", "zh": "我打算上美术课。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "同学问「你明天打算做什么？」，你打算上美术课，该怎么回答？",
+            "options": [
+              { "text": "I'm going to have an art lesson.", "correct": true },
+              { "text": "Yes, I am.", "correct": false },
+              { "text": "It's an art lesson.", "correct": false }
+            ],
+            "explanationZh": "问「打算做什么」要说出具体计划，用 I'm going to 加上要做的事，所以答 I'm going to have an art lesson（我打算上美术课）。一个错项是回答「是不是」的话，一个只说「这是美术课」，都对不上「打算做什么」。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "What are you going to do tomorrow?", "zh": "你明天打算做什么？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你明天打算做什么？」",
+            "options": [
+              { "text": "What are you going to do tomorrow?", "correct": true },
+              { "text": "What you are going to do tomorrow?", "correct": false },
+              { "text": "What are you going do tomorrow?", "correct": false }
+            ],
+            "explanationZh": "问「打算做什么」的语序是 What + are + you + going to + do + tomorrow？be 动词 are 放在 you 前面，going to 后面再跟动词。一个错项把 are 的位置放错了，一个漏掉了 to。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "I'm going to see a film.", "zh": "我打算去看电影。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：I'm going to + 动词为本单元课标句型；see a film 取自本单元 vocabulary。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "周末到了，Mike 想告诉同学他打算去看电影。",
+            "promptZh": "「我打算去看电影」用英语怎么说？",
+            "options": [
+              { "text": "I'm going to see a film.", "correct": true },
+              { "text": "I'm going to a film.", "correct": false },
+              { "text": "I going to see a film.", "correct": false }
+            ],
+            "explanationZh": "说「打算做某事」用 I'm going to 加动词，see a film 是「看电影」。一个错项漏了动词 see，只剩 a film；一个漏了 'm（am），句子就不完整了。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "I'm going to the supermarket tonight.", "zh": "今晚我打算去超市。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：I'm going to + 地点为本单元课标句型；supermarket、tonight 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「今晚我打算去超市」该填哪个词？",
+            "sentenceTemplate": "I'm going to the ___ tonight.",
+            "options": [
+              { "text": "supermarket", "correct": true },
+              { "text": "film", "correct": false },
+              { "text": "trip", "correct": false }
+            ],
+            "explanationZh": "supermarket 是「超市」。film 是「电影」、trip 是「旅行」，也都是真实的词，但意思对不上，按中文要选 supermarket。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "什么时候去 · When are you going?",
+      "description": "问问别人什么时候去做这件事，学会用 When 提问。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "When are you going?", "zh": "你什么时候去？" },
+          "answer": { "en": "At 3 o'clock.", "zh": "3点。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你什么时候去？」，你打算3点去，该怎么说？",
+            "options": [
+              { "text": "At 3 o'clock.", "correct": true },
+              { "text": "By bus.", "correct": false },
+              { "text": "To the park.", "correct": false }
+            ],
+            "explanationZh": "When 问的是「什么时候」，要用时间来回答，所以说 At 3 o'clock（3点）。一个错项答的是「怎么去」，一个答的是「去哪里」，都对不上「什么时候」。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "When are you going?", "zh": "你什么时候去？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「你什么时候去？」",
+            "tokens": ["you", "When", "going?", "are"],
+            "answer": ["When", "are", "you", "going?"],
+            "explanationZh": "问「什么时候去」的语序是 When + are + you + going？疑问词 When 放最前面，be 动词 are 紧跟在后。这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "What are you going to do? When are you going?", "zh": "你打算做什么？你什么时候去？" },
+          "answer": null,
+          "tag": "B 连一连",
+          "_note": "扩充：I'm going to take a trip 为本单元课标答句，take a trip 取自本单元 vocabulary；集中记核心句意思。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "What are you going to do tomorrow?", "zh": "你明天打算做什么？" },
+              { "en": "When are you going?", "zh": "你什么时候去？" },
+              { "en": "I'm going to take a trip.", "zh": "我打算去旅行。" }
+            ],
+            "explanationZh": "这几句都是本单元「问打算、问时间」的核心句型，记住它们的中文意思。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Tomorrow, tonight, what are you going to do?", "zh": "明天，今晚，你打算做什么？（歌谣）" },
+          "answer": { "en": "See a film, take a trip — fun things to do!", "zh": "看电影，去旅行——好玩的事真不少！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编计划歌谣（跟读不计分），用本单元 going to 句型与 tonight/see a film/take a trip 等词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

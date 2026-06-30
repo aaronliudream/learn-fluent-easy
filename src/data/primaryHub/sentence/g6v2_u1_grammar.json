@@ -1,0 +1,155 @@
+{
+  "lessonId": "g6v2_u1_grammar",
+  "unitId": "g6v2_u1",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "聊完身高，再聊聊鞋码，比一比谁更高、谁更重，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "你多高 · How tall are you?",
+      "description": "问问别人多高，再比一比谁更高。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "How tall are you?", "zh": "你多高？" },
+          "answer": { "en": "I'm 1.65 metres.", "zh": "我1.65米。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你多高？」，你身高1.65米，该怎么回答？",
+            "options": [
+              { "text": "I'm 1.65 metres.", "correct": true },
+              { "text": "I'm eleven.", "correct": false },
+              { "text": "Size 7.", "correct": false }
+            ],
+            "explanationZh": "问「你多高」要说出身高，所以答 I'm 1.65 metres（我1.65米）。一个错项说的是年龄，一个说的是鞋码，都对不上「多高」这个问题。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "How tall are you?", "zh": "你多高？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充:把 dialogues 的 How tall are you? 用作问句型练习,同句本单元课标内。",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你多高？」",
+            "options": [
+              { "text": "How tall are you?", "correct": true },
+              { "text": "How tall you are?", "correct": false },
+              { "text": "How are you tall?", "correct": false }
+            ],
+            "explanationZh": "问身高的语序是 How + tall + are + you？be动词 are 要放在 you 前面。一个错项把 are 放到了 you 后面，一个把 tall 和 are 的位置弄反了。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "You're taller than me.", "zh": "你比我高。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充:taller 取自本单元 vocabulary;taller than 比较级为本单元课标核心句型。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「你比我高」该填哪个词？",
+            "sentenceTemplate": "You're ___ than me.",
+            "options": [
+              { "text": "taller", "correct": true },
+              { "text": "shorter", "correct": false },
+              { "text": "longer", "correct": false }
+            ],
+            "explanationZh": "比较两个人谁更高用 taller（更高的），后面加 than 表示「比……」。shorter 是「更矮的」、longer 是「更长的」，都是真实的词，但意思不对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "How tall are you?", "zh": "你多高？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充:You're taller than me 为本单元课标核心句,集中记意思。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "How tall are you?", "zh": "你多高？" },
+              { "en": "I'm 1.65 metres.", "zh": "我1.65米。" },
+              { "en": "You're taller than me.", "zh": "你比我高。" }
+            ],
+            "explanationZh": "这几句是本单元问答「多高、谁更高」的核心句型，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "比一比 · Taller and heavier",
+      "description": "问问鞋码，再用比较级比一比谁更瘦、更重。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "What size are your shoes?", "zh": "你穿多大号的鞋？" },
+          "answer": { "en": "Size 7.", "zh": "7号。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你穿多大号的鞋？」，你穿7号，该怎么回答？",
+            "options": [
+              { "text": "Size 7.", "correct": true },
+              { "text": "I'm 1.65 metres.", "correct": false },
+              { "text": "Yes, I do.", "correct": false }
+            ],
+            "explanationZh": "问鞋的号码要用 size 来回答，所以说 Size 7（7号）。一个错项说的是身高，一个是回答「是不是」的话，都对不上鞋码这个问题。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "I'm thinner than you.", "zh": "我比你瘦。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充:thinner 取自本单元 vocabulary;thinner than 比较级为本单元课标句型。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "量完体重，Amy 想告诉好朋友，自己比她瘦一些。",
+            "promptZh": "「我比你瘦」用英语怎么说？",
+            "options": [
+              { "text": "I'm thinner than you.", "correct": true },
+              { "text": "I'm thin than you.", "correct": false },
+              { "text": "Thinner I'm than you.", "correct": false }
+            ],
+            "explanationZh": "比较谁更瘦，要把 thin 变成比较级 thinner（更瘦的），句型是「主语 + am/is + thinner than + 另一个人」。一个错项还用着原级 thin 没变成比较级，一个把 thinner 放到了句子最前面，语序不对。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "You're heavier than me.", "zh": "你比我重。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充:heavier 取自本单元 vocabulary;比较级句型本单元课标内;句中无可移动副词,排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「你比我重。」",
+            "tokens": ["than", "You're", "heavier", "me."],
+            "answer": ["You're", "heavier", "than", "me."],
+            "explanationZh": "比较谁更重用 heavier（更重的），句型是「主语 + heavier + than + 另一个人」，than 要紧跟在比较级后面。这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Taller, shorter, who is who?", "zh": "更高、更矮，谁是谁？（歌谣）" },
+          "answer": { "en": "Heavier, thinner, me and you!", "zh": "更重、更瘦，我和你！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充:自编比较级歌谣(跟读不计分),用本单元 vocabulary。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

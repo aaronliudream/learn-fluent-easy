@@ -1,0 +1,154 @@
+{
+  "lessonId": "g6v1_u5_grammar",
+  "unitId": "g6v1_u5",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "聊完他是做什么的，再说说他在哪里工作，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "他是做什么的 · What does he do?",
+      "description": "问问别人是做什么工作的。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "What does he do?", "zh": "他是做什么的？" },
+          "answer": { "en": "He's a businessman.", "zh": "他是商人。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「他是做什么的？」，他是商人，该怎么回答？",
+            "options": [
+              { "text": "He's a businessman.", "correct": true },
+              { "text": "Yes, he does.", "correct": false },
+              { "text": "He's twelve.", "correct": false }
+            ],
+            "explanationZh": "问「他是做什么的」（做什么工作）要说出职业，所以答 He's a businessman（他是商人）。两个错项，一个是回答「是不是」的话，一个说的是年龄，都对不上这个问题。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "What does he do?", "zh": "他是做什么的？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「他是做什么的？」",
+            "options": [
+              { "text": "What does he do?", "correct": true },
+              { "text": "What does he does?", "correct": false },
+              { "text": "What do he do?", "correct": false }
+            ],
+            "explanationZh": "问「他做什么工作」用 What does he do？主语是 he，用 does 来帮忙提问，后面的动词 do 用原形。一个错项把后面的 do 也加了 s 变成 does，一个该用 does 却用了 do，都不对。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "He's a scientist.", "zh": "他是一名科学家。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：He's a + 职业 为本单元课标答句；scientist 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「他是一名科学家」该填哪个词？",
+            "sentenceTemplate": "He's a ___.",
+            "options": [
+              { "text": "scientist", "correct": true },
+              { "text": "worker", "correct": false },
+              { "text": "pilot", "correct": false }
+            ],
+            "explanationZh": "scientist 意思是「科学家」。worker（工人）、pilot（飞行员）也是真实的职业词，但和「科学家」不是同一个，要按中文选对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "What does he do?", "zh": "他是做什么的？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：businessman / postman / police officer / fisherman 均取自本单元 vocabulary，集中记职业词。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文职业词和中文意思连起来。",
+            "pairs": [
+              { "en": "businessman", "zh": "商人" },
+              { "en": "postman", "zh": "邮递员" },
+              { "en": "police officer", "zh": "警察" },
+              { "en": "fisherman", "zh": "渔民" }
+            ],
+            "explanationZh": "这些都是本单元的职业词，记住它们的中文意思，回答「他是做什么的」时就用得上。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "他在哪里工作 · Where does he work?",
+      "description": "问问别人在哪里工作，学会用 where 提问。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Where does he work?", "zh": "他在哪里工作？" },
+          "answer": { "en": "He works at sea.", "zh": "他在海上工作。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「他在哪里工作？」，他在海上工作，该怎么说？",
+            "options": [
+              { "text": "He works at sea.", "correct": true },
+              { "text": "He's a fisherman.", "correct": false },
+              { "text": "Yes, he works.", "correct": false }
+            ],
+            "explanationZh": "问「他在哪里工作」（where 是「哪里」）要说出工作的地点，所以答 He works at sea（他在海上工作）。两个错项，一个说的是职业，一个是回答「是不是」的话，都对不上「在哪里」。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "He works in a factory.", "zh": "他在工厂工作。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：He works in... 为本单元课标句；factory 取自本单元 vocabulary。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "Sarah 想告诉同学，她爸爸在工厂工作。",
+            "promptZh": "「他在工厂工作」用英语怎么说？",
+            "options": [
+              { "text": "He works in a factory.", "correct": true },
+              { "text": "He work in a factory.", "correct": false },
+              { "text": "He works a factory.", "correct": false }
+            ],
+            "explanationZh": "说「某人在某地工作」用「主语 + works + in + 地点」。主语是 he，work 要加 s 变 works；地点前面还要有 in。一个错项忘了给 work 加 s，一个漏掉了 in。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Where does he work?", "zh": "他在哪里工作？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「他在哪里工作？」",
+            "tokens": ["does", "Where", "work?", "he"],
+            "answer": ["Where", "does", "he", "work?"],
+            "explanationZh": "问「在哪里」用 Where 开头，再用 does 帮忙提问：Where + does + he + work？这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Worker, postman, what does he do?", "zh": "工人、邮递员，他是做什么的？（歌谣）" },
+          "answer": { "en": "Scientist, pilot, working for you!", "zh": "科学家、飞行员，为你工作！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编职业歌谣（跟读不计分），用本单元职业词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

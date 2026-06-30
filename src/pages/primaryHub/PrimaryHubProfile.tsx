@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { getGradeProgress, getTotalStars } from "@/lib/primaryHub/progress";
 import { getGradeCourse } from "@/lib/primaryHub/courseData";
 
 export default function PrimaryHubProfile() {
   const { grade, state } = usePrimaryHub();
+  const nav = useNavigate();
   const base = `/primary/hub/${grade}`;
   const course = getGradeCourse(grade);
   const gp = getGradeProgress(state, grade);
@@ -12,6 +13,12 @@ export default function PrimaryHubProfile() {
 
   return (
     <>
+      <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
+        <button type="button" onClick={() => nav(base)} className="text-xl" aria-label="返回">
+          ←
+        </button>
+        <div className="text-lg font-bold">我的</div>
+      </div>
       <div className="bg-gradient-to-br from-[#FF6B35] to-[#FFB627] px-5 pb-6 pt-4 text-white">
         <div className="text-4xl">{state.user.avatar}</div>
         <div className="text-xl font-bold">{state.user.name}</div>

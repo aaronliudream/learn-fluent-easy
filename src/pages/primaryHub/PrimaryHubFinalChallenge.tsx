@@ -96,6 +96,14 @@ export default function PrimaryHubFinalChallenge() {
         ...MAP_BG,
       }}
     >
+      <button
+        type="button"
+        onClick={() => navigate(base)}
+        aria-label="返回"
+        className="mb-3 inline-flex items-center gap-1 rounded-full bg-white/85 px-3 py-1.5 text-sm font-bold text-[#854F0B] shadow-sm backdrop-blur transition hover:bg-white"
+      >
+        ← 返回
+      </button>
       {/* 顶部总览 — 通关后切换为庆祝 banner */}
       {allCleared ? (
         <header

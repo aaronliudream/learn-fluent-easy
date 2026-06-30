@@ -1,0 +1,150 @@
+{
+  "lessonId": "g5v2_u3_grammar",
+  "unitId": "g5v2_u3",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "聊完郊游在几月，再问问运动会的月份，继续练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "校历 · When is the school trip?",
+      "description": "问问校历上的活动是在哪个月份。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "When is the school trip?", "zh": "学校郊游是什么时候？" },
+          "answer": { "en": "It's in May.", "zh": "在五月。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "同学问「学校郊游是什么时候？」，该怎么回答？",
+            "options": [
+              { "text": "It's in May.", "correct": true },
+              { "text": "I'm fine, thank you.", "correct": false },
+              { "text": "It's blue.", "correct": false }
+            ],
+            "explanationZh": "问「什么时候」要用 It's in + 月份 来回答。两个错项答的是心情和颜色，对不上问题。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "When is the sports meet?", "zh": "运动会是什么时候？" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「运动会是什么时候？」",
+            "options": [
+              { "text": "When is the sports meet?", "correct": true },
+              { "text": "When the sports meet is?", "correct": false },
+              { "text": "When is sports meet the?", "correct": false }
+            ],
+            "explanationZh": "问「什么时候」的语序是 When + is + the + 活动？be 动词 is 放在主语前面。错项一个把 is 挪到了最后，一个把 the 放错了位置。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "It's in May.", "zh": "在五月。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「在五月」该填哪个月份？",
+            "sentenceTemplate": "It's in ___.",
+            "options": [
+              { "text": "May", "correct": true },
+              { "text": "March", "correct": false },
+              { "text": "July", "correct": false }
+            ],
+            "explanationZh": "May 是「五月」。March（三月）、July（七月）也是真实的月份词，但月份不对，要按中文选对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "When is the school trip?", "zh": "学校郊游是什么时候？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "When is the school trip?", "zh": "学校郊游是什么时候？" },
+              { "en": "It's in May.", "zh": "在五月。" },
+              { "en": "When is the sports meet?", "zh": "运动会是什么时候？" }
+            ],
+            "explanationZh": "这几句都是问「校历活动是什么时候」和回答的核心句型，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "校历 · It's in April.",
+      "description": "练习用 When 提问、用 It's in 月份 回答。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "When is the sports meet?", "zh": "运动会是什么时候？" },
+          "answer": { "en": "It's in April.", "zh": "在四月。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「运动会是什么时候？」，该怎么回答？",
+            "options": [
+              { "text": "It's in April.", "correct": true },
+              { "text": "Yes, I do.", "correct": false },
+              { "text": "I have a ruler.", "correct": false }
+            ],
+            "explanationZh": "问「什么时候」用 It's in + 月份 来回答。错项一个是用来回答 Do you...? 的，一个说的是有什么东西，都对不上问题。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "When is the school trip?", "zh": "学校郊游是什么时候？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「学校郊游是什么时候？」",
+            "tokens": ["school", "is", "trip?", "When", "the"],
+            "answer": ["When", "is", "the", "school", "trip?"],
+            "explanationZh": "问「什么时候」把 When 放句首：When + is + the + 活动？这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "It's in April.", "zh": "在四月。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「在四月」该填哪个月份？",
+            "sentenceTemplate": "It's in ___.",
+            "options": [
+              { "text": "April", "correct": true },
+              { "text": "June", "correct": false },
+              { "text": "August", "correct": false }
+            ],
+            "explanationZh": "April 是「四月」。June（六月）、August（八月）也是真实的月份词，但月份不对，要按中文选对。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "January, February, March and more,", "zh": "一月、二月、三月还有更多，（歌谣）" },
+          "answer": { "en": "April, May, June, the calendar's full!", "zh": "四月、五月、六月，校历排满啦！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编月份歌谣（跟读不计分），用本单元月份词 January/February/March/April/May/June。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

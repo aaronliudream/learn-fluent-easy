@@ -1,0 +1,154 @@
+{
+  "lessonId": "g5v2_u5_grammar",
+  "unitId": "g5v2_u5",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "认完了东西是谁的，再去看看小动物们正在做什么，一起练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "这是谁的 · Whose is it?",
+      "description": "学会问东西是谁的，用 mine、yours、his 回答。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "The dog is yours.", "zh": "这只狗是你的。" },
+          "answer": { "en": "No! It's his.", "zh": "不！是他的。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "同学说「这只狗是你的。」，你想说不是、是他的，该怎么回应？",
+            "options": [
+              { "text": "No! It's his.", "correct": true },
+              { "text": "Yes, please.", "correct": false },
+              { "text": "I'm fine, thank you.", "correct": false }
+            ],
+            "explanationZh": "想说不是、是他的，就用 No! It's his.，his 是「他的」。两个错项一个是答应请求、一个是回答身体好不好，都对不上这句话。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Whose dog is it?", "zh": "这是谁的狗？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：Whose...? 提问句为本单元课标句型，非 dialogues 原句。",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「这是谁的狗？」",
+            "options": [
+              { "text": "Whose dog is it?", "correct": true },
+              { "text": "Who dog is it?", "correct": false },
+              { "text": "Whose is dog it?", "correct": false }
+            ],
+            "explanationZh": "问「谁的」用 Whose，语序是 Whose + dog + is + it？错项一个把 Whose（谁的）写成了 Who（谁），一个把 is 和 dog 的顺序弄反了。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "The book is mine.", "zh": "这本书是我的。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：用本单元 vocabulary 的物主代词 mine 造句，本单元课标句型。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「这本书是我的」该填哪个词？",
+            "sentenceTemplate": "The book is ___.",
+            "options": [
+              { "text": "mine", "correct": true },
+              { "text": "yours", "correct": false },
+              { "text": "his", "correct": false }
+            ],
+            "explanationZh": "mine 是「我的」。yours（你的）、his（他的）也是真实的物主代词，但意思不对，要按中文选 mine。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Whose dog is it?", "zh": "这是谁的狗？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：The book is mine. 为本单元课标句型，非 dialogues 原句；前两句为课本原句。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "The dog is yours.", "zh": "这只狗是你的。" },
+              { "en": "It's his.", "zh": "是他的。" },
+              { "en": "The book is mine.", "zh": "这本书是我的。" }
+            ],
+            "explanationZh": "这几句都是说东西「是谁的」，记住 mine 我的、yours 你的、his 他的。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "正在做什么 · Is it eating?",
+      "description": "问问小动物正在做什么，学会现在进行时。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Is the dog eating?", "zh": "那只狗在吃东西吗？" },
+          "answer": { "en": "Yes, he is.", "zh": "是的，它在吃。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「那只狗在吃东西吗？」，狗确实在吃，该怎么回答？",
+            "options": [
+              { "text": "Yes, he is.", "correct": true },
+              { "text": "No, thank you.", "correct": false },
+              { "text": "It's red.", "correct": false }
+            ],
+            "explanationZh": "Is the dog...? 这种问句用 Yes, he is / No, he isn't 回答。狗在吃，就说 Yes, he is。两个错项一个是婉拒、一个是说颜色，都对不上这个问句。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Is the dog eating?", "zh": "那只狗在吃东西吗？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「那只狗在吃东西吗？」",
+            "tokens": ["eating?", "the", "Is", "dog"],
+            "answer": ["Is", "the", "dog", "eating?"],
+            "explanationZh": "问「正在做某事吗」，把 Is 放句首：Is + the dog + eating？这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "The cat is climbing.", "zh": "那只猫在往上爬。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：climbing 取自本单元 vocabulary，本单元课标现在进行时句型。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「那只猫在往上爬」该填哪个词？",
+            "sentenceTemplate": "The cat is ___.",
+            "options": [
+              { "text": "climbing", "correct": true },
+              { "text": "eating", "correct": false },
+              { "text": "his", "correct": false }
+            ],
+            "explanationZh": "climbing 是「往上爬」。eating（吃）也是真实的动作词，但意思不对；his 是「他的」，根本不是动作词。按中文要选 climbing。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Whose, whose, whose is it?", "zh": "谁的、谁的，是谁的？（歌谣）" },
+          "answer": { "en": "Mine, yours, his — you guess it!", "zh": "我的、你的、他的——你来猜！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编物主代词歌谣（跟读不计分），用本单元 vocabulary。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

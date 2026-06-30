@@ -1,0 +1,155 @@
+{
+  "lessonId": "g5v2_u2_grammar",
+  "unitId": "g5v2_u2",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "聊完最喜欢哪个季节，再说说喜不喜欢、去做点什么，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "最喜欢的季节 · Which season",
+      "description": "问问别人最喜欢哪个季节。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Which season do you like best, Mike?", "zh": "迈克，你最喜欢哪个季节？" },
+          "answer": { "en": "Winter.", "zh": "冬天。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "迈克被问「你最喜欢哪个季节？」，他最喜欢冬天，该怎么回答？",
+            "options": [
+              { "text": "Winter.", "correct": true },
+              { "text": "Yes, I do.", "correct": false },
+              { "text": "It's hot.", "correct": false }
+            ],
+            "explanationZh": "问「最喜欢哪个季节」，直接说出那个季节就行，所以答 Winter（冬天）。两个错项一个是回答「是不是」的话，一个说的是天气，都对不上问题。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Which season do you like best?", "zh": "你最喜欢哪个季节？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：把 dialogues 的 Which season do you like best, Mike? 去掉称呼，同句型本单元课标内。",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你最喜欢哪个季节？」",
+            "options": [
+              { "text": "Which season do you like best?", "correct": true },
+              { "text": "Which season you like best?", "correct": false },
+              { "text": "Which do you like season best?", "correct": false }
+            ],
+            "explanationZh": "问「最喜欢哪个季节」的语序是 Which + season + do + you + like + best？do 帮助提问，best 放在最后。一个错项漏了 do，一个把 season 放错了位置。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "I like spring best.", "zh": "我最喜欢春天。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：I like + 季节 + best 为本单元课标答句；spring 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我最喜欢春天」该填哪个季节？",
+            "sentenceTemplate": "I like ___ best.",
+            "options": [
+              { "text": "spring", "correct": true },
+              { "text": "summer", "correct": false },
+              { "text": "autumn", "correct": false }
+            ],
+            "explanationZh": "spring 是「春天」。summer（夏天）、autumn（秋天）也是真实的季节词，但季节不对，要按中文选对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Which season do you like best?", "zh": "你最喜欢哪个季节？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：I like winter best / Do you like summer? 为本单元课标核心句，集中记意思。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "Which season do you like best?", "zh": "你最喜欢哪个季节？" },
+              { "en": "I like winter best.", "zh": "我最喜欢冬天。" },
+              { "en": "Do you like summer?", "zh": "你喜欢夏天吗？" }
+            ],
+            "explanationZh": "这几句都是问答「喜欢哪个季节」的核心句型，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "喜不喜欢 · Do you like",
+      "description": "问问别人喜不喜欢某个季节，学会一般疑问句。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Do you like summer?", "zh": "你喜欢夏天吗？" },
+          "answer": { "en": "No, I don't. I like spring.", "zh": "不，我不喜欢。我喜欢春天。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你喜欢夏天吗？」，你不喜欢夏天、喜欢春天，该怎么说？",
+            "options": [
+              { "text": "No, I don't. I like spring.", "correct": true },
+              { "text": "Yes, please.", "correct": false },
+              { "text": "It's winter.", "correct": false }
+            ],
+            "explanationZh": "Do you like...? 这种一般疑问句，用 Yes, I do / No, I don't 回答。不喜欢夏天就说 No, I don't，再加 I like spring 说出真正喜欢的。两个错项一个是请人帮忙的话，一个说的是季节本身，都对不上。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Do you like autumn?", "zh": "你喜欢秋天吗？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：把 Do you like summer? 换成 autumn（取自本单元 vocabulary），同句型；句中无可移动副词，排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「你喜欢秋天吗？」",
+            "tokens": ["you", "Do", "autumn?", "like"],
+            "answer": ["Do", "you", "like", "autumn?"],
+            "explanationZh": "一般疑问句把 Do 放句首：Do + you + like + 季节？这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "We go on a picnic in spring.", "zh": "春天我们去野餐。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：go on a picnic、picnic 取自本单元 vocabulary;野餐为本单元课标活动。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「春天我们去野餐」该填哪个词？",
+            "sentenceTemplate": "We go on a ___ in spring.",
+            "options": [
+              { "text": "picnic", "correct": true },
+              { "text": "season", "correct": false },
+              { "text": "pick", "correct": false }
+            ],
+            "explanationZh": "picnic 是「野餐」，go on a picnic 就是「去野餐」。season 是「季节」、pick 是「摘」，都是真实的词，但意思不一样，放进这句不对。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Spring, summer, which do you like?", "zh": "春天、夏天，你喜欢哪个？（歌谣）" },
+          "answer": { "en": "Autumn, winter, I like them all!", "zh": "秋天、冬天，我都喜欢！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编季节歌谣（跟读不计分），用本单元四季词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

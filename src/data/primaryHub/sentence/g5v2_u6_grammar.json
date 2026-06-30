@@ -1,0 +1,155 @@
+{
+  "lessonId": "g5v2_u6_grammar",
+  "unitId": "g5v2_u6",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "在动物园看够了正在玩耍的小动物，接着去图书馆——记得安静看书、保持整洁哦～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "动物园 · What's ... doing?",
+      "description": "在动物园看小动物，问问它们正在做什么。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Look at the pandas.", "zh": "看那些熊猫。" },
+          "answer": { "en": "They're so cute!", "zh": "它们真可爱！" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "朋友说「看那些熊猫！」，你觉得它们很可爱，该怎么回应？",
+            "options": [
+              { "text": "They're so cute!", "correct": true },
+              { "text": "Thank you.", "correct": false },
+              { "text": "I'm fine, thank you.", "correct": false }
+            ],
+            "explanationZh": "看到可爱的动物，用 They're so cute! 来感叹「它们真可爱」。Thank you 是别人夸你时的回应，I'm fine 是回答身体好不好，都接不上这句话。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "What's the little monkey doing?", "zh": "那只小猴子在干什么？" },
+          "answer": { "en": "It's playing with its mother!", "zh": "它在和妈妈玩！" },
+          "tag": "A Let's learn",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「那只小猴子在干什么？」",
+            "options": [
+              { "text": "What's the little monkey doing?", "correct": true },
+              { "text": "What the little monkey doing?", "correct": false },
+              { "text": "What's the little monkey do?", "correct": false }
+            ],
+            "explanationZh": "问「正在做什么」要用 What's + 谁 + doing？：What + 's(is) + the little monkey + doing。一个错项漏了 is（What's 里的 's），一个把 doing 写成了 do，没有了「正在」的意思。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "What's the girl doing?", "zh": "那个女孩在干什么？" },
+          "answer": { "en": "She's eating lunch.", "zh": "她在吃午饭。" },
+          "tag": "A Let's learn",
+          "_note": "扩充：eating lunch 取自本单元 vocabulary；现在进行时 She's + 动词ing 为本单元课标句型，非 dialogues 原句。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「那个女孩在吃午饭」该填哪个词？",
+            "sentenceTemplate": "She's ___ lunch.",
+            "options": [
+              { "text": "eating", "correct": true },
+              { "text": "reading", "correct": false },
+              { "text": "drinking", "correct": false }
+            ],
+            "explanationZh": "eating 是「吃」，配 lunch 就是「吃午饭」，正在吃用 She's eating。reading（读）、drinking（喝）也是真实的动作词，但都和 lunch 搭不上——午饭是「吃」的，不是读的、喝的。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "What's the little monkey doing?", "zh": "那只小猴子在干什么？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：The girl is listening to music. 用本单元 vocabulary（listening to music），其余两句为 dialogues 原句。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "What's the little monkey doing?", "zh": "那只小猴子在干什么？" },
+              { "en": "It's playing with its mother.", "zh": "它在和妈妈玩。" },
+              { "en": "The girl is listening to music.", "zh": "那个女孩在听音乐。" }
+            ],
+            "explanationZh": "这几句都是问、答「正在做什么」的核心句，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "图书馆 · keep 安静守则",
+      "description": "在图书馆安静看书，学会用 keep 提醒大家。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "What's Sarah doing?", "zh": "萨拉在干什么？" },
+          "answer": { "en": "She's reading a book.", "zh": "她在看书。" },
+          "tag": "B Let's talk",
+          "_note": "扩充：reading a book 取自本单元 vocabulary；What's...doing 的答句为本单元课标句型。",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「萨拉在干什么？」，你想说她正在看书，该怎么回答？",
+            "options": [
+              { "text": "She's reading a book.", "correct": true },
+              { "text": "Yes, she is.", "correct": false },
+              { "text": "She likes books.", "correct": false }
+            ],
+            "explanationZh": "问 What's...doing? 要用 She's + 动词ing 回答正在做的事：She's reading a book。Yes, she is 是回答 yes/no 问题的，She likes books 说的是喜好，都没回答「正在做什么」。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "She is reading a book.", "zh": "她正在看书。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：She is reading a book. 用本单元 vocabulary（reading a book），为本单元课标进行时句；句中无可移动副词，排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「她正在看书。」",
+            "tokens": ["reading", "a", "She", "book.", "is"],
+            "answer": ["She", "is", "reading", "a", "book."],
+            "explanationZh": "说「她正在看书」用 主语 + is + 动词ing：She + is + reading + a + book。这句没有能挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Please keep your desk clean.", "zh": "请保持你的课桌干净。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：keep your desk clean 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「请保持你的课桌干净」该填哪个词？",
+            "sentenceTemplate": "Please ___ your desk clean.",
+            "options": [
+              { "text": "keep", "correct": true },
+              { "text": "make", "correct": false },
+              { "text": "have", "correct": false }
+            ],
+            "explanationZh": "keep 是「保持」，Keep your desk clean 就是「保持课桌干净」。make、have 也是真实的词，但和 your desk clean 搭在一起意思不对。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Keep quiet, keep your desk clean,", "zh": "保持安静，保持课桌干净，（歌谣）" },
+          "answer": { "en": "Read a book, learning is fun!", "zh": "读本书，学习真有趣！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编图书馆安静守则歌谣（跟读不计分），用本单元 keep 句型与 read a book。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

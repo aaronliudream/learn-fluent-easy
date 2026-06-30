@@ -1,0 +1,152 @@
+{
+  "lessonId": "g5v2_u4_grammar",
+  "unitId": "g5v2_u4",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "学会了请营业员帮忙、试穿衣服，接下来到收银台问问价钱吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "进店挑选 · Can I help you?",
+      "description": "营业员主动帮忙，学会请求试穿。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Can I help you?", "zh": "我能帮你吗？" },
+          "answer": { "en": "Yes. Can I try these on?", "zh": "是的。我可以试穿这些吗？" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "营业员问「我能帮你吗？」，你想试穿这些，该怎么说？",
+            "options": [
+              { "text": "Yes. Can I try these on?", "correct": true },
+              { "text": "Yes. I'm ten years old.", "correct": false },
+              { "text": "Yes. It's Monday today.", "correct": false }
+            ],
+            "explanationZh": "营业员说「我能帮你吗？」，想试穿就用 Can I try these on? 来请求。两个错项分别答的是年龄和星期，跟买东西对不上。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Can I try these on?", "zh": "我可以试穿这些吗？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「我可以试穿这些吗？」",
+            "options": [
+              { "text": "Can I try these on?", "correct": true },
+              { "text": "Can I try on these?", "correct": false },
+              { "text": "Can I these try on?", "correct": false }
+            ],
+            "explanationZh": "试穿用 try ... on，中间放要试的东西：try these on。these 是「这些」，要夹在 try 和 on 中间。错项一个把 on 提前了，一个把 these 放错了位置。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "The shoes are on the first floor.", "zh": "鞋子在第一层。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：序数词 first 取自本单元 vocabulary；on the ... floor 为本单元课标购物场景句。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「鞋子在第一层」该填哪个词？",
+            "sentenceTemplate": "The shoes are on the ___ floor.",
+            "options": [
+              { "text": "first", "correct": true },
+              { "text": "second", "correct": false },
+              { "text": "third", "correct": false }
+            ],
+            "explanationZh": "first 是「第一」，第一层就是 the first floor。second（第二）、third（第三）也是真实的序数词，但层数不对，要按中文选「第一」。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Can I help you?", "zh": "我能帮你吗？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "Can I help you?", "zh": "我能帮你吗？" },
+              { "en": "Can I try these on?", "zh": "我可以试穿这些吗？" },
+              { "en": "How much are these shoes?", "zh": "这双鞋多少钱？" }
+            ],
+            "explanationZh": "这几句都是买东西时最常用的核心句型，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "到收银台 · How much?",
+      "description": "问价钱、说楼层，学会序数词。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "How much are these shoes?", "zh": "这双鞋多少钱？" },
+          "answer": { "en": "They're ninety-nine yuan.", "zh": "99元。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "你问「这双鞋多少钱？」，营业员该怎么回答价钱？",
+            "options": [
+              { "text": "They're ninety-nine yuan.", "correct": true },
+              { "text": "They're on Mondays.", "correct": false },
+              { "text": "Yes, I do.", "correct": false }
+            ],
+            "explanationZh": "问 How much...?（多少钱）要用 They're + 钱数 来回答价钱。错项一个答的是星期，一个是用来回答 Do you...? 的，都对不上问价钱。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "How much are these shoes?", "zh": "这双鞋多少钱？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「这双鞋多少钱？」",
+            "tokens": ["are", "shoes?", "much", "How", "these"],
+            "answer": ["How", "much", "are", "these", "shoes?"],
+            "explanationZh": "问价钱固定用 How much 开头：How much + are + these + shoes？这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "The coats are on the twelfth floor.", "zh": "外套在第十二层。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：序数词 twelfth 取自本单元 vocabulary；on the ... floor 为本单元课标购物场景句。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「外套在第十二层」该填哪个词？",
+            "sentenceTemplate": "The coats are on the ___ floor.",
+            "options": [
+              { "text": "twelfth", "correct": true },
+              { "text": "twentieth", "correct": false },
+              { "text": "twenty-first", "correct": false }
+            ],
+            "explanationZh": "twelfth 是「第十二」，第十二层就是 the twelfth floor。twentieth（第二十）、twenty-first（第二十一）也是真实的序数词，但层数不对，要按中文选「第十二」。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "First, second, third, let's go and shop!", "zh": "第一、第二、第三，一起去购物！（歌谣）" },
+          "answer": { "en": "Fourth, fifth floor, the shoes are on top!", "zh": "第四、第五层，鞋子在最上面！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编序数词歌谣（跟读不计分），用本单元 first/second/third/fourth/fifth。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

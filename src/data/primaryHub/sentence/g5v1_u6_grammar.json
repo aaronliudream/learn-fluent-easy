@@ -1,0 +1,155 @@
+{
+  "lessonId": "g5v1_u6_grammar",
+  "unitId": "g5v1_u6",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "森林里看完河和桥，再去山上数数湖和树，继续练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "森林里 · Is there...?",
+      "description": "问问自然公园里有没有某样景物。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Is there a river in the forest, Miss White?", "zh": "怀特老师，森林里有河吗？" },
+          "answer": { "en": "Yes, there is.", "zh": "是的，有。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "有人问「森林里有河吗？」，你想说「有」，该怎么回答？",
+            "options": [
+              { "text": "Yes, there is.", "correct": true },
+              { "text": "Yes, there are.", "correct": false },
+              { "text": "Yes, I am.", "correct": false }
+            ],
+            "explanationZh": "Is there...? 这种问句，用 Yes, there is / No, there isn't 来回答。问的是 a river（单数一条河），所以说「有」要用 there is。错项 there are 是回答复数的，I am 答的是人，都对不上。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Is there a bridge in the park?", "zh": "公园里有座桥吗？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：照 dialogues 的 Is there a...? 句型，把景物换成本单元 vocabulary 的 bridge（桥），本单元课标内。",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「公园里有座桥吗？」",
+            "options": [
+              { "text": "Is there a bridge in the park?", "correct": true },
+              { "text": "Is there bridge in the park?", "correct": false },
+              { "text": "Are there a bridge in the park?", "correct": false }
+            ],
+            "explanationZh": "问「有没有一座（单数）东西」用 Is there a + 名词？a 表示「一座」，单数要配 Is。错项一个漏了 a，一个把单数和 are 搭错了（单数得用 is，不能用 are）。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "There is a high mountain in the park.", "zh": "公园里有一座高山。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：mountain（高山）取自本单元 vocabulary，there is + 单数景物为本单元课标句型。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「公园里有一座高山」该填哪个词？",
+            "sentenceTemplate": "There is a high ___ in the park.",
+            "options": [
+              { "text": "mountain", "correct": true },
+              { "text": "hill", "correct": false },
+              { "text": "bridge", "correct": false }
+            ],
+            "explanationZh": "mountain 是「高山」。hill 是「小山丘」、bridge 是「桥」，都是真实的词，但意思不一样，要按中文「高山」选 mountain。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Is there a river in the forest?", "zh": "森林里有河吗？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：There is a bridge over the river / There are many trees on the hill 为本单元课标句型（there is/are + 自然景物），非 dialogues 原句。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "Is there a river in the forest?", "zh": "森林里有河吗？" },
+              { "en": "There is a bridge over the river.", "zh": "河上有一座桥。" },
+              { "en": "There are many trees on the hill.", "zh": "山丘上有许多树。" }
+            ],
+            "explanationZh": "这几句都是说「某地有没有某景物」的核心句型：一座（单数）用 there is，许多（复数）用 there are，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "山上 · Are there...?",
+      "description": "用复数问问山上有没有一些自然景物。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Are there any lakes on the mountain?", "zh": "山上有湖吗？" },
+          "answer": { "en": "No, there aren't.", "zh": "不，没有。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "有人问「山上有湖吗？」，你想说「没有」，该怎么回答？",
+            "options": [
+              { "text": "No, there aren't.", "correct": true },
+              { "text": "No, there isn't.", "correct": false },
+              { "text": "Yes, there are.", "correct": false }
+            ],
+            "explanationZh": "Are there any...? 这种问句，用 Yes, there are / No, there aren't 来回答。问的是 lakes（复数湖），所以说「没有」要用 there aren't。错项 there isn't 是回答单数的，there are 是肯定回答，都对不上。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Are there any trees on the hill?", "zh": "山丘上有树吗？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：照 dialogues 的 Are there any...? 句型，景物换成 vocabulary 的 trees、地点用 hill；句中无可移动副词，排序答案唯一。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「山丘上有树吗？」",
+            "tokens": ["trees", "Are", "the", "any", "there", "hill?", "on"],
+            "answer": ["Are", "there", "any", "trees", "on", "the", "hill?"],
+            "explanationZh": "问「有没有一些（复数）东西」用 Are there any + 复数名词 + on + 地点？Are 放句首帮助提问。这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Are there any tall buildings in the park?", "zh": "公园里有高大的建筑物吗？" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：buildings（建筑物）取自本单元 vocabulary，Are there any + 复数景物为本单元课标句型。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「公园里有高大的建筑物吗？」该填哪个词？",
+            "sentenceTemplate": "Are there any tall ___ in the park?",
+            "options": [
+              { "text": "buildings", "correct": true },
+              { "text": "trees", "correct": false },
+              { "text": "hills", "correct": false }
+            ],
+            "explanationZh": "building 是「建筑物」，问「有没有一些」用复数 buildings。trees 是「树」、hills 是「山丘」，都是真实的词，但意思不一样，要按中文「建筑物」选 buildings。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "River and lake, hill and tree,", "zh": "河和湖，山丘和树，（歌谣）" },
+          "answer": { "en": "In the nature park, come with me!", "zh": "在自然公园里，跟我来！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编自然公园歌谣（跟读不计分），用本单元 vocabulary 的自然景物词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

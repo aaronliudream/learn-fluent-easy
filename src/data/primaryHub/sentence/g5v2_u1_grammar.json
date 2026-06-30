@@ -1,0 +1,154 @@
+{
+  "lessonId": "g5v2_u1_grammar",
+  "unitId": "g5v2_u1",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "聊完派对在几月、节日什么时候，再说说每天什么时候做这些事，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "派对什么时候 · When is...?",
+      "description": "学会问某件事在什么时候、在几月。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "When is the party?", "zh": "派对什么时候？" },
+          "answer": { "en": "It's in April.", "zh": "在四月。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "同学问「派对什么时候？」，该怎么回答？",
+            "options": [
+              { "text": "It's in April.", "correct": true },
+              { "text": "I'm fine, thank you.", "correct": false },
+              { "text": "It's on the desk.", "correct": false }
+            ],
+            "explanationZh": "问 When is...?（什么时候）要用 It's in + 月份来回答，所以说 It's in April（在四月）。一个错项答的是身体好不好，一个答的是东西在哪里，都对不上「什么时候」。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "When is the party?", "zh": "派对什么时候？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：用 dialogues 原句型 When is...? 做情景表达练习，本单元课标内。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "你想问朋友派对在什么时候。",
+            "promptZh": "用英语该怎么问？",
+            "options": [
+              { "text": "When is the party?", "correct": true },
+              { "text": "When the party is?", "correct": false },
+              { "text": "Where is the party?", "correct": false }
+            ],
+            "explanationZh": "问「什么时候」要把 When 放句首，后面跟 is：When + is + the party？所以是 When is the party?。一个错项把 is 放到了后面，语序错了；另一个用了 Where，问的是「在哪里」，意思变了。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "I do morning exercises at seven.", "zh": "我七点做早操。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：do morning exercises 取自本单元 vocabulary；日常活动句为本单元课标内表达。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我七点做早操」该填哪个词？",
+            "sentenceTemplate": "I do morning ___ at seven.",
+            "options": [
+              { "text": "exercises", "correct": true },
+              { "text": "homework", "correct": false },
+              { "text": "games", "correct": false }
+            ],
+            "explanationZh": "do morning exercises 是「做早操」，所以填 exercises（操、锻炼）。homework（家庭作业）、games（游戏）也是真实的词，但意思不一样，要按中文「早操」选 exercises。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "When is the party?", "zh": "派对什么时候？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "When is the party?", "zh": "派对什么时候？" },
+              { "en": "It's in April.", "zh": "在四月。" },
+              { "en": "When is Dragon Boat Festival?", "zh": "端午节是什么时候？" }
+            ],
+            "explanationZh": "这几句都是说「什么时候、在几月」的核心句型，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "节日和活动 · When is...?",
+      "description": "问问节日在什么时候，说说每天的活动。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "When is Dragon Boat Festival?", "zh": "端午节是什么时候？" },
+          "answer": { "en": "It's usually in June.", "zh": "通常在六月。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「端午节是什么时候？」，该怎么回答？",
+            "options": [
+              { "text": "It's usually in June.", "correct": true },
+              { "text": "I'm twelve years old.", "correct": false },
+              { "text": "It's sunny today.", "correct": false }
+            ],
+            "explanationZh": "问 When is...?（什么时候）要用 It's in + 月份来回答，所以说 It's usually in June（通常在六月）。一个错项答的是年龄，一个答的是天气，都对不上「什么时候」。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "When is the party?", "zh": "派对什么时候？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「派对什么时候？」",
+            "tokens": ["party?", "When", "the", "is"],
+            "answer": ["When", "is", "the", "party?"],
+            "explanationZh": "问「什么时候」把 When 放句首，后面跟 is：When + is + the + party？这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "I eat breakfast at six in the morning.", "zh": "我早上六点吃早饭。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：eat breakfast 取自本单元 vocabulary；日常活动句为本单元课标内表达。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我早上六点吃早饭」该填哪个词？",
+            "sentenceTemplate": "I eat ___ at six in the morning.",
+            "options": [
+              { "text": "breakfast", "correct": true },
+              { "text": "lunch", "correct": false },
+              { "text": "dinner", "correct": false }
+            ],
+            "explanationZh": "早上吃的那顿饭叫 breakfast（早饭）。lunch（午饭）、dinner（晚饭）也是真实的词，但不是早上吃的，要按中文「早饭」选 breakfast。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "April, June, when is the day?", "zh": "四月、六月，是哪一天？（歌谣）" },
+          "answer": { "en": "Eat, play and walk, come out to play!", "zh": "吃饭、玩耍、散散步，快出来玩吧！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编月份与活动歌谣（跟读不计分），用本单元月份与 vocabulary 活动词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

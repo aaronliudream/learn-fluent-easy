@@ -1,0 +1,155 @@
+{
+  "lessonId": "g5v1_u5_grammar",
+  "unitId": "g5v1_u5",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "介绍完房间里有什么，再说说东西在哪里，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "我的房间 · There is...",
+      "description": "用 There is 介绍房间里有什么。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "What's in your bedroom?", "zh": "你的卧室里有什么？" },
+          "answer": { "en": "There is a big bed.", "zh": "有一张大床。" },
+          "tag": "A Let's talk",
+          "_note": "扩充：把 dialogues 的陈述句配上提问 What's in your bedroom?，本单元课标句型。",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "同学问「你的卧室里有什么？」，该怎么回答？",
+            "options": [
+              { "text": "There is a big bed.", "correct": true },
+              { "text": "I'm ten years old.", "correct": false },
+              { "text": "It's sunny today.", "correct": false }
+            ],
+            "explanationZh": "说'某处有某物'用 There is + 单数名词。There is a big bed = 有一张大床。两个错项答的是年龄和天气，对不上。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "There is a nice photo, too.", "zh": "还有一张漂亮的照片。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：photo 取自本单元 vocabulary，There is 句型为本单元课标。",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "Sarah 想说房间里还有一张漂亮的照片。",
+            "promptZh": "「还有一张漂亮的照片」用英语怎么说？",
+            "options": [
+              { "text": "There is a nice photo, too.", "correct": true },
+              { "text": "Have a nice photo, too.", "correct": false },
+              { "text": "It is a nice photo, too.", "correct": false }
+            ],
+            "explanationZh": "表示'有'用 There is，不用 Have。There is a nice photo = 有一张漂亮的照片；too 表示'也'，放句末。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "There is a clock on the wall.", "zh": "墙上有一个钟。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：clock、plant、bottle 均取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「墙上有一个钟」该填哪个词？",
+            "sentenceTemplate": "There is a ___ on the wall.",
+            "options": [
+              { "text": "clock", "correct": true },
+              { "text": "plant", "correct": false },
+              { "text": "bottle", "correct": false }
+            ],
+            "explanationZh": "clock 是'钟'。plant 是'植物'、bottle 是'瓶子'，都是本单元的词，但和'钟'意思不同。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "There is a big bed.", "zh": "有一张大床。" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：clock、plant 取自本单元 vocabulary，There is 句型为本单元课标。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "There is a big bed.", "zh": "有一张大床。" },
+              { "en": "There is a clock.", "zh": "有一个钟。" },
+              { "en": "There is a plant.", "zh": "有一盆植物。" }
+            ],
+            "explanationZh": "这几句都用 There is 表示'某处有某物'，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "东西在哪里 · in front of",
+      "description": "学会问有没有、说东西的位置。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Is there a bike in your room?", "zh": "你房间里有自行车吗？" },
+          "answer": { "en": "Yes, there is.", "zh": "是的，有。" },
+          "tag": "B Let's talk",
+          "_note": "扩充：bike 取自本单元 vocabulary，Is there...? 为本单元课标句型。",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你房间里有自行车吗？」，你房间里有，该怎么回答？",
+            "options": [
+              { "text": "Yes, there is.", "correct": true },
+              { "text": "Yes, I do.", "correct": false },
+              { "text": "It's blue.", "correct": false }
+            ],
+            "explanationZh": "Is there...? 用 Yes, there is / No, there isn't 回答。不能用 Yes, I do（那是回答 Do you...? 的）。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Is there a clock?", "zh": "有一个钟吗？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：clock 取自本单元 vocabulary，Is there...? 为本单元课标句型。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「有一个钟吗？」",
+            "tokens": ["clock?", "Is", "a", "there"],
+            "answer": ["Is", "there", "a", "clock?"],
+            "explanationZh": "问'有没有'用 Is there + a + 名词？把 Is 放在句首，there 紧跟其后。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "The bike is in front of the bed.", "zh": "自行车在床前面。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：front、in front of、bike 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「自行车在床前面」该填哪个词？",
+            "sentenceTemplate": "The bike is in ___ of the bed.",
+            "options": [
+              { "text": "front", "correct": true },
+              { "text": "back", "correct": false },
+              { "text": "side", "correct": false }
+            ],
+            "explanationZh": "in front of 是'在……前面'，所以填 front（前面）。back 是'后面'、side 是'旁边'，位置不一样。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "There is a bed, there is a chair,", "zh": "有一张床，有一把椅子，（歌谣）" },
+          "answer": { "en": "A clock, a plant, a bike right there!", "zh": "一个钟、一盆植物、一辆自行车就在那儿！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编房间歌谣（跟读不计分），用本单元房间物品词。",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
+        }
+      ]
+    }
+  ]
+}

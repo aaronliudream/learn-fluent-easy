@@ -1,0 +1,153 @@
+{
+  "lessonId": "g5v1_u1_grammar",
+  "unitId": "g5v1_u1",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "认识了新老师，再用形容词说说他们什么样，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "认识新老师 · Who's your teacher?",
+      "description": "问问对方的老师是谁、是个怎样的人。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Who's your art teacher?", "zh": "你的美术老师是谁？" },
+          "answer": { "en": "Mr Jones.", "zh": "琼斯老师。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "同学问「你的美术老师是谁？」，你该怎么回答？",
+            "options": [
+              { "text": "Mr Jones.", "correct": true },
+              { "text": "I'm eleven.", "correct": false },
+              { "text": "It's Monday.", "correct": false }
+            ],
+            "explanationZh": "Who（谁）要用人名来回答，所以说 Mr Jones；I'm eleven 答的是年龄，It's Monday 答的是星期，都对不上问题。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "What's he like?", "zh": "他是个怎样的人？" },
+          "answer": { "en": "He's tall and strong.", "zh": "他又高又壮。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "想问「他是个怎样的人？」，选正确的英语问句。",
+            "options": [
+              { "text": "What's he like?", "correct": true },
+              { "text": "What he is like?", "correct": false },
+              { "text": "How he like?", "correct": false }
+            ],
+            "explanationZh": "问某人长相、性格怎么样用 What's he like？这里的 like 是「像、样子」，不是「喜欢」。语序是 What + is(’s) + 主语 + like。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "He's tall and strong.", "zh": "他又高又壮。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "Sarah 想告诉同学，新来的体育老师又高又壮。",
+            "promptZh": "「他又高又壮」用英语怎么说？",
+            "options": [
+              { "text": "He's tall and strong.", "correct": true },
+              { "text": "He tall and strong.", "correct": false },
+              { "text": "Strong and tall is he.", "correct": false }
+            ],
+            "explanationZh": "描述「某人怎么样」用「主语 + is(’s) + 形容词」。He's = He is，缺了 is 句子就不完整；英语里也不会把形容词提到最前面。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "She's very kind.", "zh": "她很体贴。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「她很体贴」该填哪个词？",
+            "sentenceTemplate": "She's very ___.",
+            "options": [
+              { "text": "kind", "correct": true },
+              { "text": "kid", "correct": false },
+              { "text": "king", "correct": false }
+            ],
+            "explanationZh": "kind 意思是「体贴、友善」；kid 是「小孩」，king 是「国王」，只是长得像，意思完全不同。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "他/她什么样 · What's he/she like?",
+      "description": "用形容词描述老师，并学会一般疑问句的问与答。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Is your maths teacher strict?", "zh": "你的数学老师严格吗？" },
+          "answer": { "en": "Yes, he is. But he's very kind.", "zh": "是的。但他很体贴。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你的数学老师严格吗？」，你想说「严格，但很体贴」，该怎么说？",
+            "options": [
+              { "text": "Yes, he is. But he's very kind.", "correct": true },
+              { "text": "No, I don't like it.", "correct": false },
+              { "text": "It's a new classroom.", "correct": false }
+            ],
+            "explanationZh": "Is he...? 这种一般疑问句要用 Yes, he is / No, he isn't 来回答，后面再补一句 But he's very kind 说明他体贴。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Is she funny?", "zh": "她有趣吗？" },
+          "answer": { "en": "No, she isn't. She's quiet.", "zh": "不，她不有趣。她很安静。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「她有趣吗？」",
+            "options": [
+              { "text": "Is she funny?", "correct": true },
+              { "text": "She funny is?", "correct": false },
+              { "text": "Does she funny?", "correct": false }
+            ],
+            "explanationZh": "funny 是形容词，用 be 动词（is）提到句首变疑问句；does 用在动词前，这里没有动词，所以不用 does。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Our English teacher is hard-working.", "zh": "我们的英语老师工作努力。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「工作努力的」该填哪个词？",
+            "sentenceTemplate": "Our teacher is ___.",
+            "options": [
+              { "text": "hard-working", "correct": true },
+              { "text": "hard-work", "correct": false },
+              { "text": "working-hard", "correct": false }
+            ],
+            "explanationZh": "hard-working 是合成形容词，意思「工作努力的」，中间有连字符；hard-work 是名词、working-hard 语序不对，都不能用来形容人。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Young or old? Tall or short?", "zh": "年轻还是年老？高还是矮？（歌谣）" },
+          "answer": { "en": "Strict or kind? Tell me more!", "zh": "严格还是体贴？多告诉我！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

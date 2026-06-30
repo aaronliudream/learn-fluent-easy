@@ -1,0 +1,156 @@
+{
+  "lessonId": "g5v1_u3_grammar",
+  "unitId": "g5v1_u3",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "学会点吃的，再聊聊喝的和味道，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "点餐 · What would you like to eat?",
+      "description": "学会礼貌地说想吃什么。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "What would you like to eat?", "zh": "你想吃什么？" },
+          "answer": { "en": "I'd like a sandwich, please.", "zh": "请给我一个三明治。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "服务员问「你想吃什么？」，你想要三明治，该怎么说？",
+            "options": [
+              { "text": "I'd like a sandwich, please.", "correct": true },
+              { "text": "I'm from China.", "correct": false },
+              { "text": "It's on the desk.", "correct": false }
+            ],
+            "explanationZh": "问想吃什么，用 I'd like + 食物 来回答。I'd like 是 I would like 的缩写，意思是「我想要」，比 I want 更有礼貌。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "What would you like to drink?", "zh": "你想喝什么？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：把 dialogues 的 eat 换成 drink，同句型本单元课标内。",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你想喝什么？」",
+            "options": [
+              { "text": "What would you like to drink?", "correct": true },
+              { "text": "What you would like to drink?", "correct": false },
+              { "text": "What would like you to drink?", "correct": false }
+            ],
+            "explanationZh": "问别人想要什么，固定语序是 What + would + you + like to + 动词？把 would 提到 you 前面变成疑问句。错项把 would 或 you 放错了位置。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "The salad is fresh.", "zh": "这沙拉很新鲜。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：salad、fresh 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「这沙拉很新鲜」该填哪个词？",
+            "sentenceTemplate": "The salad is ___.",
+            "options": [
+              { "text": "fresh", "correct": true },
+              { "text": "free", "correct": false },
+              { "text": "fish", "correct": false }
+            ],
+            "explanationZh": "fresh 是「新鲜的」。free 是「免费的」、fish 是「鱼」，都是真实的英文词，但和「新鲜」意思不同。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "What would you like to eat?", "zh": "你想吃什么？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：I'd like a hamburger / It's delicious 用本单元 vocabulary 的词，本单元课标句型。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "What would you like to eat?", "zh": "你想吃什么？" },
+              { "en": "I'd like a hamburger.", "zh": "我想要一个汉堡。" },
+              { "en": "It's delicious!", "zh": "它很美味！" }
+            ],
+            "explanationZh": "这几句是点餐和评价食物的核心句型，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "饮料和味道 · drink",
+      "description": "学会回应邀请、说说食物的味道。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Would you like some ice cream?", "zh": "你想来点冰激凌吗？" },
+          "answer": { "en": "Yes, please.", "zh": "好的，谢谢。" },
+          "tag": "B Let's talk",
+          "_note": "扩充：ice cream 取自本单元 vocabulary；Would you like...? 为本单元课标句型。",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你想来点冰激凌吗？」，你想要，该怎么礼貌地说？",
+            "options": [
+              { "text": "Yes, please.", "correct": true },
+              { "text": "I'm nine.", "correct": false },
+              { "text": "It's Monday.", "correct": false }
+            ],
+            "explanationZh": "Would you like...? 是邀请别人。想要就说 Yes, please（好的，谢谢）；不想要就说 No, thank you。错项答的是年龄和星期，对不上。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "I'd like some tea.", "zh": "我想要一些茶。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：tea 取自本单元 vocabulary；I'd like some... 为本单元课标句型。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「我想要一些茶。」",
+            "tokens": ["tea.", "like", "I'd", "some"],
+            "answer": ["I'd", "like", "some", "tea."],
+            "explanationZh": "「我想要」用 I'd like；some 表示「一些」，修饰不可数的 tea（茶），放在 like 和 tea 中间。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "The hamburger is delicious.", "zh": "这汉堡很美味。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：hamburger、delicious、fresh 取自本单元 vocabulary；difficult 为学生已学的真实词，作明确错干扰（不形容味道）。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「这汉堡很美味」该填哪个词？",
+            "sentenceTemplate": "The hamburger is ___.",
+            "options": [
+              { "text": "delicious", "correct": true },
+              { "text": "fresh", "correct": false },
+              { "text": "difficult", "correct": false }
+            ],
+            "explanationZh": "这里表达「好吃」用 delicious（美味的）。fresh 是「新鲜的」、difficult 是「难的」，都是真实的英文词，但都不表示「好吃」。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Sandwich, salad, what would you like?", "zh": "三明治、沙拉，你想要哪个？（歌谣）" },
+          "answer": { "en": "Ice cream, tea, on a sunny day!", "zh": "冰激凌、茶，在晴朗的一天！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编食物歌谣（跟读不计分），用本单元食物/饮料词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

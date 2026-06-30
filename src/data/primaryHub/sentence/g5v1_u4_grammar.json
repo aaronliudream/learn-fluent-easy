@@ -1,0 +1,155 @@
+{
+  "lessonId": "g5v1_u4_grammar",
+  "unitId": "g5v1_u4",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "说说自己会做什么才艺，再问问同学，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "派对才艺 · What can you do?",
+      "description": "说说自己能为派对表演什么。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "What can you do for the party?", "zh": "你能为派对做什么？" },
+          "answer": { "en": "I can sing English songs.", "zh": "我会唱英文歌。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "老师问「你能为派对做什么？」，该怎么回答？",
+            "options": [
+              { "text": "I can sing English songs.", "correct": true },
+              { "text": "I'm hungry.", "correct": false },
+              { "text": "It's blue.", "correct": false }
+            ],
+            "explanationZh": "问能做什么，用 I can + 动词 来回答。can 后面跟动词原形 sing。两个错项说的是饿了和颜色，对不上问题。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Can you do any kung fu?", "zh": "你会武术吗？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：kung fu、do kung fu 取自本单元 vocabulary；问句来自 dialogues 同款句型。",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你会武术吗？」",
+            "options": [
+              { "text": "Can you do any kung fu?", "correct": true },
+              { "text": "Do you can kung fu?", "correct": false },
+              { "text": "You can do kung fu?", "correct": false }
+            ],
+            "explanationZh": "can 的疑问句把 can 提到句首：Can + you + 动词原形？不需要再加 do。错项一个 do 和 can 一起用了，一个没把 can 提前。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "I can dance.", "zh": "我会跳舞。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：dance 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我会跳舞」该填哪个词？",
+            "sentenceTemplate": "I can ___.",
+            "options": [
+              { "text": "dance", "correct": true },
+              { "text": "dancing", "correct": false },
+              { "text": "dancer", "correct": false }
+            ],
+            "explanationZh": "can 后面要用动词原形 dance（跳舞）。dancing 是「正在跳」的形式、dancer 是「舞蹈演员」，词形不对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "What can you do?", "zh": "你会做什么？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：play the pipa、do kung fu 取自本单元 vocabulary，本单元课标句型。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "What can you do?", "zh": "你会做什么？" },
+              { "en": "I can play the pipa.", "zh": "我会弹琵琶。" },
+              { "en": "I can do kung fu.", "zh": "我会武术。" }
+            ],
+            "explanationZh": "这几句都是说「会做什么才艺」的句型，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "问问同学 · can",
+      "description": "用一般疑问句问别人会不会，并学会回答。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Can you do any kung fu, John?", "zh": "约翰，你会武术吗？" },
+          "answer": { "en": "Yes, I can.", "zh": "是的，我会。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你会武术吗？」，你会，该怎么回答？",
+            "options": [
+              { "text": "Yes, I can.", "correct": true },
+              { "text": "Yes, I do.", "correct": false },
+              { "text": "No, it isn't.", "correct": false }
+            ],
+            "explanationZh": "Can you...? 要用 Yes, I can / No, I can't 来回答。不能用 Yes, I do（那是回答 Do you...? 的）。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "I can draw.", "zh": "我会画画。" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：draw 取自本单元 vocabulary。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「我会画画。」",
+            "tokens": ["draw.", "can", "I"],
+            "answer": ["I", "can", "draw."],
+            "explanationZh": "「我会……」用 I can + 动词原形；draw（画画）放在 can 后面。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "I can sing songs.", "zh": "我会唱歌。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：sing、song 取自本单元 vocabulary。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我会唱歌」该填哪个词？",
+            "sentenceTemplate": "I can ___ songs.",
+            "options": [
+              { "text": "sing", "correct": true },
+              { "text": "singing", "correct": false },
+              { "text": "sang", "correct": false }
+            ],
+            "explanationZh": "can 后面用动词原形 sing（唱）。singing 是「正在唱」、sang 是「唱」的过去式，跟在 can 后面词形不对。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Can you sing? Can you dance?", "zh": "你会唱歌吗？你会跳舞吗？（歌谣）" },
+          "answer": { "en": "Yes, we can! Let's have fun!", "zh": "是的，我们会！一起来玩吧！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编才艺歌谣（跟读不计分），用本单元动作词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

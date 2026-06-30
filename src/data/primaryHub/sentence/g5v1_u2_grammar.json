@@ -1,0 +1,155 @@
+{
+  "lessonId": "g5v1_u2_grammar",
+  "unitId": "g5v1_u2",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "聊完每天的课程表，再说说周末和爱好，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "课程表 · What do you have?",
+      "description": "问问别人一周里某天有什么课。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "What do you have on Mondays?", "zh": "你星期一有什么课？" },
+          "answer": { "en": "I have Chinese, English and music.", "zh": "我有语文、英语和音乐。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "同学问「你星期一有什么课？」，该怎么回答？",
+            "options": [
+              { "text": "I have Chinese, English and music.", "correct": true },
+              { "text": "I'm ten years old.", "correct": false },
+              { "text": "It's sunny today.", "correct": false }
+            ],
+            "explanationZh": "问星期几有什么课，要用 I have + 科目 来回答。两个错项答的是年龄和天气，对不上问题。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "What do you have on Fridays?", "zh": "你星期五有什么课？" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：把 dialogues 的 What do you have on Mondays? 换成 Fridays，同句型本单元课标内。",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「你星期五有什么课？」",
+            "options": [
+              { "text": "What do you have on Fridays?", "correct": true },
+              { "text": "What you have on Fridays?", "correct": false },
+              { "text": "What do have you Fridays?", "correct": false }
+            ],
+            "explanationZh": "问「星期几有什么课」的语序是 What + do + you + have + on + 星期？do 帮助提问，主语 you 放在 do 后、have 前。错项一个漏了 do，一个把 you 放错位置。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "I have art on Thursdays.", "zh": "我星期四有美术课。" },
+          "answer": null,
+          "tag": "A Let's learn",
+          "_note": "扩充：星期词 Thursday 取自本单元 vocabulary；art 课为本单元课标科目。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我星期四有美术课」该填哪个星期？",
+            "sentenceTemplate": "I have art on ___s.",
+            "options": [
+              { "text": "Thursday", "correct": true },
+              { "text": "Tuesday", "correct": false },
+              { "text": "Sunday", "correct": false }
+            ],
+            "explanationZh": "Thursday 是「星期四」。Tuesday（星期二）、Sunday（星期日）也是真实的星期词，但日子不对，要按中文选对。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "What do you have on Mondays?", "zh": "你星期一有什么课？" },
+          "answer": null,
+          "tag": "A 连一连",
+          "_note": "扩充：I have PE on Wednesdays / I have Chinese and music 为本单元课标句型（科目+星期），非 dialogues 原句。",
+          "training": {
+            "type": "match",
+            "promptZh": "把英文句和中文意思连起来。",
+            "pairs": [
+              { "en": "What do you have on Mondays?", "zh": "你星期一有什么课？" },
+              { "en": "I have Chinese and music.", "zh": "我有语文和音乐。" },
+              { "en": "I have PE on Wednesdays.", "zh": "我星期三有体育课。" }
+            ],
+            "explanationZh": "这几句都是说「星期几有什么课」的核心句型，记住它们的中文意思。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "周末和爱好 · weekend",
+      "description": "问问别人常做什么活动，学会一般疑问句。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Do you often play ping-pong on Thursdays?", "zh": "你星期四经常打乒乓球吗？" },
+          "answer": { "en": "No, I don't.", "zh": "不，我不经常。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你星期四经常打乒乓球吗？」，你想说不经常，该怎么说？",
+            "options": [
+              { "text": "No, I don't.", "correct": true },
+              { "text": "Yes, please.", "correct": false },
+              { "text": "I like red.", "correct": false }
+            ],
+            "explanationZh": "Do you...? 这种一般疑问句，用 Yes, I do / No, I don't 回答。问「经常吗」，想说不经常就用 No, I don't。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Do you have PE on Mondays?", "zh": "你星期一有体育课吗？" },
+          "answer": null,
+          "tag": "B 连词成句",
+          "_note": "扩充：把课程表问句改成一般疑问句（去掉可移动副词 often，保证排序答案唯一）；PE 为本单元课标科目、Monday 取自 vocabulary。",
+          "training": {
+            "type": "sentence_order",
+            "promptZh": "把词块排成正确的句子：「你星期一有体育课吗？」",
+            "tokens": ["have", "Do", "Mondays?", "you", "PE", "on"],
+            "answer": ["Do", "you", "have", "PE", "on", "Mondays?"],
+            "explanationZh": "一般疑问句把 Do 放句首：Do + you + have + 科目 + on + 星期？这句没有可以挪位置的词，顺序只有一种。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "I read books on the weekend.", "zh": "我周末看书。" },
+          "answer": null,
+          "tag": "B Let's learn",
+          "_note": "扩充：weekend 取自本单元 vocabulary；read books 为本单元课标活动。",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我周末看书」该填哪个词？",
+            "sentenceTemplate": "I read books on the ___.",
+            "options": [
+              { "text": "weekend", "correct": true },
+              { "text": "week", "correct": false },
+              { "text": "Monday", "correct": false }
+            ],
+            "explanationZh": "weekend 是「周末」。week 是「一周」、Monday 是「星期一」，都是真实的词，但意思不一样。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Monday, Tuesday, what do you do?", "zh": "周一、周二，你做什么？（歌谣）" },
+          "answer": { "en": "Wednesday, Thursday, school is fun too!", "zh": "周三、周四，上学也有趣！（歌谣）" },
+          "tag": "Let's chant · 歌谣",
+          "_note": "扩充：自编星期歌谣（跟读不计分），用本单元星期词。",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
+        }
+      ]
+    }
+  ]
+}

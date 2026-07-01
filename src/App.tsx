@@ -12,6 +12,7 @@ import JuniorGradeQueryGate from "@/components/junior/JuniorGradeQueryGate";
 import { GuestCardClaimer } from "@/components/GuestCardClaimer";
 import { RouteErrorBoundary } from "@/components/RouteErrorBoundary";
 import { saveRedirectPath, consumeRedirectPath } from "@/lib/authRedirect";
+import { saveLastPath, readLastPath } from "@/lib/lastPath";
 import { supabase } from "@/integrations/supabase/client";
 // Eagerly load home + auth (most common entry points) to avoid first-paint chunk fetch
 import Index from "./pages/Index.tsx";
@@ -242,6 +243,32 @@ const AuthRedirectGuard = () => {
   return null;
 };
 
+/**
+ * 「切走切回退回首页」第1层:每次导航存 lastPath;冷启动若落在首页且有 12h 内的
+ * lastPath,自动恢复到那一页(主要救 standalone/加主屏 被 start_url:"/" 强拉回首页)。
+ * 只做"存 path + 启动恢复",不碰做题组件/进度。
+ */
+const LastPathTracker = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const restored = useRef(false);
+  // 冷启动只跑一次:仅当此刻停在首页时才尝试恢复,避免打断用户主动导航。
+  useEffect(() => {
+    if (restored.current) return;
+    restored.current = true;
+    if (window.location.pathname === "/" && !window.location.search) {
+      const last = readLastPath();
+      if (last) navigate(last, { replace: true });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  // 每次路由变化存当前完整 path(lib 内部会跳过 "/"、/auth 等)。
+  useEffect(() => {
+    saveLastPath(location.pathname + location.search);
+  }, [location]);
+  return null;
+};
+
 /** OAuth 外部跳转回来后（通常在非 /auth 页面触发 SIGNED_IN），自动跳回之前的页面。 */
 const OAuthReturnRedirect = () => {
   const navigate = useNavigate();
@@ -292,6 +319,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <LastPathTracker />
         <AuthRedirectGuard />
         <OAuthReturnRedirect />
         <StopAudioOnRouteChange />

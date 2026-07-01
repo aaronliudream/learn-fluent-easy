@@ -75,7 +75,7 @@ export default function DialogueResponseLevel() {
     <LevelShell
       levelId={7}
       levelName="情景答语"
-      introHint="听一句问话,从 3 个答语里选出最合适的回答。问句会自动读两遍,也写在屏上。"
+      introHint="听一句问话,从 3 个答语里选出最合适的回答。问句会自动读两遍,仔细听哦。"
       introMood="encouraging"
       total={questions.length}
       onBeforeStart={unlockAudio}
@@ -280,29 +280,6 @@ function PlayCard({
           </kbd>{" "}
           也行
         </div>
-      </div>
-
-      {/* 屏上常驻问句 (情景答语:听 + 读双通道) */}
-      <div
-        style={{
-          margin: "16px auto 0",
-          maxWidth: 420,
-          padding: "12px 18px",
-          background: "var(--fc-blue-bg, #eaf3ff)",
-          borderRadius: "var(--fc-radius)",
-          border: "2px solid var(--fc-blue)",
-          textAlign: "center",
-          fontFamily: "var(--fc-font-body)",
-          fontWeight: 800,
-          fontSize: 19,
-          lineHeight: 1.3,
-          color: "var(--fc-ink)",
-        }}
-      >
-        <span aria-hidden style={{ marginRight: 6 }}>
-          💬
-        </span>
-        {q.prompt}
       </div>
 
       {/* 反馈横条 */}

@@ -6,6 +6,7 @@ import { selectWords, recordResult } from "@/lib/primaryHub/vocabGames/srs";
 import {
   buildContextItems,
   wordsWithContext,
+  pickDistractors,
   type ContextItem,
 } from "@/lib/primaryHub/vocabGames/context";
 import type { GameWord } from "@/lib/primaryHub/vocabGames/types";
@@ -31,20 +32,10 @@ function buildQuestions(picks: GameWord[], pool: GameWord[]): Q[] {
     const cand = byWord.get(word.id);
     if (!cand || cand.length === 0) return;
     const item = cand[i % cand.length]; // 稳定地在该词的多道题里轮换
-    const distractors: GameWord[] = [];
-    const shuffled = [...pool].sort((a, b) => {
-      const ka = (a.id.charCodeAt(0) + i * 7) % 97;
-      const kb = (b.id.charCodeAt(0) + i * 11) % 97;
-      return ka - kb || a.id.localeCompare(b.id);
-    });
-    for (const w of shuffled) {
-      if (distractors.length >= 3) break;
-      if (w.en === item.answer || w.cn === word.cn) continue;
-      if (distractors.some((d) => d.en === w.en)) continue;
-      distractors.push(w);
-    }
-    const options = [item.answer, ...distractors.map((d) => d.en)];
     const seed = word.id.split("").reduce((s, c) => s + c.charCodeAt(0), i);
+    const distractors = pickDistractors(word, item.cloze, pool, seed);
+    if (distractors.length < 3) return; // 凑不齐 3 个像样干扰项就跳过该题
+    const options = [item.answer, ...distractors];
     options.sort(
       (a, b) => ((a.length * 31 + seed) % 7) - ((b.length * 31 + seed) % 7) || a.localeCompare(b),
     );

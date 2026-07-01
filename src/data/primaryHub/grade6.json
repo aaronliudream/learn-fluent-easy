@@ -1277,10 +1277,10 @@
             "available": true,
             "vocabulary": [
               {
-                "en": "studies",
+                "en": "study",
                 "cn": "学习",
                 "emoji": "📚",
-                "phonetic": "/ˈstʌdiz/",
+                "phonetic": "/ˈstʌdi/",
                 "chunks": [
                   {
                     "en": "he studies English",
@@ -1309,10 +1309,10 @@
                 ]
               },
               {
-                "en": "hiking",
+                "en": "hike",
                 "cn": "远足",
                 "emoji": "🥾",
-                "phonetic": "/ˈhaɪkɪŋ/",
+                "phonetic": "/haɪk/",
                 "chunks": [
                   {
                     "en": "go hiking",
@@ -1497,7 +1497,7 @@
             ],
             "quizQuestions": [
               {
-                "q": "「studies」是什么意思？",
+                "q": "「study」是什么意思？",
                 "opts": [
                   "远足",
                   "想法",
@@ -1521,7 +1521,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "「hiking」是什么意思？",
+                "q": "「hike」是什么意思？",
                 "opts": [
                   "母亲",
                   "茉莉",
@@ -1596,8 +1596,8 @@
                 "q": "哪个是「学习」？",
                 "opts": [
                   "mother",
-                  "studies",
-                  "hiking",
+                  "study",
+                  "hike",
                   "pen pal"
                 ],
                 "answer": 1,
@@ -1617,7 +1617,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "「hiking」的意思是？",
+                "q": "「hike」的意思是？",
                 "opts": [
                   "叔叔",
                   "远足",
@@ -1635,7 +1635,7 @@
                 "opts": [
                   "What are your hobbies?",
                   "What are your hobbies.",
-                  "studies",
+                  "study",
                   "puzzle"
                 ],
                 "answer": 0,
@@ -1645,9 +1645,9 @@
                 "audio": "I like singing and doing kung fu.",
                 "opts": [
                   "I like singing and doing kung fu.",
-                  "studies",
+                  "study",
                   "puzzle",
-                  "hiking"
+                  "hike"
                 ],
                 "answer": 0,
                 "cn": "我喜欢唱歌和练功夫。"
@@ -1657,7 +1657,7 @@
                 "opts": [
                   "Does he live in Sydney?",
                   "Does he live in Sydney.",
-                  "studies",
+                  "study",
                   "puzzle"
                 ],
                 "answer": 0,
@@ -1667,9 +1667,9 @@
                 "audio": "No, he doesn't.",
                 "opts": [
                   "No, he doesn't.",
-                  "studies",
+                  "study",
                   "puzzle",
-                  "hiking"
+                  "hike"
                 ],
                 "answer": 0,
                 "cn": "不,他不住在那儿。"

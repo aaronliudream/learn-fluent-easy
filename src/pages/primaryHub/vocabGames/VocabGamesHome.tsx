@@ -13,6 +13,8 @@ const GAMES: Array<{
   from: string;
   to: string;
 }> = [
+  { key: "quiz", emoji: "🧠", name: "智能选义", desc: "看中文选词+地道搭配", from: "#FF8A00", to: "#FFB627" },
+  { key: "context", emoji: "🗺️", name: "情景闯关", desc: "在真实短语里选词", from: "#9B6BFF", to: "#6A8BFF" },
   { key: "match", emoji: "🃏", name: "单词配对", desc: "中英连连看", from: "#FF8A5B", to: "#FF6B35" },
   { key: "rain", emoji: "🌧️", name: "单词雨", desc: "听音抢答接住单词", from: "#5BA8FF", to: "#378ADD" },
   { key: "whack", emoji: "🔨", name: "打地鼠", desc: "看中文敲对的词", from: "#7C5CFF", to: "#B45EFF" },
@@ -58,8 +60,8 @@ export default function VocabGamesHome() {
             className="relative rounded-2xl p-4 text-left text-white shadow-sm transition active:scale-95"
             style={{ background: `linear-gradient(135deg, ${g.from}, ${g.to})` }}
           >
-            {g.key === "bubble" && (
-              <span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-[10px] font-extrabold text-[#7C5CFF]">
+            {(g.key === "quiz" || g.key === "context") && (
+              <span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-[10px] font-extrabold text-[#FF6B35]">
                 NEW
               </span>
             )}

@@ -93,6 +93,8 @@ const VocabRainGame = lazy(() => import("./pages/primaryHub/vocabGames/VocabRain
 const VocabWhackGame = lazy(() => import("./pages/primaryHub/vocabGames/VocabWhackGame.tsx"));
 const VocabSpellGame = lazy(() => import("./pages/primaryHub/vocabGames/VocabSpellGame.tsx"));
 const VocabBubbleGame = lazy(() => import("./pages/primaryHub/vocabGames/VocabBubbleGame.tsx"));
+const VocabQuizGame = lazy(() => import("./pages/primaryHub/vocabGames/VocabQuizGame.tsx"));
+const VocabContextGame = lazy(() => import("./pages/primaryHub/vocabGames/VocabContextGame.tsx"));
 const StageTests = lazy(() => import("./pages/StageTests.tsx"));
 const StageTestPlay = lazy(() => import("./pages/StageTestPlay.tsx"));
 const Junior = lazy(() => import("./pages/Junior.tsx"));
@@ -391,6 +393,8 @@ const App = () => (
             <Route path="vocab-games/whack" element={<VocabWhackGame />} />
             <Route path="vocab-games/spell" element={<VocabSpellGame />} />
             <Route path="vocab-games/bubble" element={<VocabBubbleGame />} />
+            <Route path="vocab-games/quiz" element={<VocabQuizGame />} />
+            <Route path="vocab-games/context" element={<VocabContextGame />} />
           </Route>
           <Route path="/primary/parent" element={<Navigate to="/parent" replace />} />
           <Route path="/primary/*" element={<ChineseOnlyRoute><PrimaryLegacyRedirect /></ChineseOnlyRoute>} />

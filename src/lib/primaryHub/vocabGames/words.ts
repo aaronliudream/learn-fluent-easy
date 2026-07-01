@@ -4,7 +4,14 @@ import grade5 from "@/data/primaryHub/grade5.json";
 import grade6 from "@/data/primaryHub/grade6.json";
 import type { GameWord } from "./types";
 
-type RawVocab = { en: string; cn: string; emoji?: string; phonetic?: string; type?: string };
+type RawVocab = {
+  en: string;
+  cn: string;
+  emoji?: string;
+  phonetic?: string;
+  type?: string;
+  chunks?: { en: string; cn: string }[];
+};
 type Grade = 3 | 4 | 5 | 6;
 
 const GRADE_JSON: Record<Grade, any> = {
@@ -43,6 +50,7 @@ export function getWordsForGrade(grade: Grade): GameWord[] {
           unitId: u.id,
           volume,
           type: v.type,
+          chunks: v.chunks,
         });
       }
     }

@@ -7,6 +7,8 @@ export type GameWord = {
   unitId: string;
   volume: 1 | 2;
   type?: string;
+  /** language chunk：本词 2-3 个地道搭配，智能选义/情景闯关展示与派生题目用。 */
+  chunks?: { en: string; cn: string }[];
 };
 
 export type WordSRS = {

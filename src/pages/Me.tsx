@@ -4,8 +4,8 @@ import { supabase } from "@/integrations/supabase/client";
 import type { User } from "@supabase/supabase-js";
 import { PageHeader } from "@/components/PageHeader";
 import {
-  BarChart3, BookMarked, Bookmark, Heart, Trophy, Users, Settings, Crown,
-  LogIn, LogOut, GraduationCap, Sparkles, ClipboardList, Target } from
+  BarChart3, Bookmark, Heart, Settings,
+  LogIn, LogOut, Sparkles, ClipboardList, Target } from
 "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fetchWeakKnowledgePoints } from "@/lib/knowledgePointMastery";
@@ -13,17 +13,15 @@ import { AlertCircle } from "lucide-react";
 
 type Tile = {to: string;label: string;sub: string;icon: React.ComponentType<{className?: string;}>;tone: string;};
 
+// 注:语法掌握全景(/dashboard/grammar)、详细数据(/stats)、排行榜(/leaderboard)、
+// 升级会员(/pricing)四个入口按需求隐藏(页面/路由保留,以后可能再启用)。
 const TILES: Tile[] = [
 { to: "/dashboard", label: "学习中心", sub: "总进度 · 各模块掌握度", icon: BarChart3, tone: "from-emerald-500 to-teal-500" },
-{ to: "/dashboard/grammar", label: "语法掌握全景", sub: "按考点查看强弱", icon: GraduationCap, tone: "from-violet-500 to-fuchsia-500" },
 { to: "/review", label: "复习与错题", sub: "FSRS 智能安排今日复习", icon: Target, tone: "from-orange-500 to-rose-500" },
 { to: "/mistakes", label: "我的错题本", sub: "回看做错的题", icon: ClipboardList, tone: "from-amber-500 to-orange-500" },
 { to: "/saved", label: "收藏的句子", sub: "随时复习好用的表达", icon: Bookmark, tone: "from-sky-500 to-indigo-500" },
-{ to: "/stats", label: "详细数据", sub: "学习时长、连胜、勋章", icon: Trophy, tone: "from-yellow-500 to-amber-500" },
-{ to: "/leaderboard", label: "排行榜", sub: "和大家一起竞争", icon: Users, tone: "from-pink-500 to-rose-500" },
 { to: "/pets", label: "我的宠物", sub: "陪你一起学英语", icon: Heart, tone: "from-rose-500 to-pink-500" },
-{ to: "/account", label: "账号设置", sub: "邮箱、隐私、数据导出", icon: Settings, tone: "from-slate-600 to-slate-800" },
-{ to: "/pricing", label: "升级会员", sub: "解锁无限对话与高级模型", icon: Crown, tone: "from-indigo-600 to-purple-600" }];
+{ to: "/account", label: "账号设置", sub: "邮箱、隐私、数据导出", icon: Settings, tone: "from-slate-600 to-slate-800" }];
 
 
 export default function Me() {

@@ -1,4 +1,4 @@
-import { ArrowRight, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Mic, Users, Trophy, UserPlus } from "lucide-react";
+import { ArrowRight, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Mic, Users, UserPlus } from "lucide-react";
 import { BrandLockup } from "@/components/brand/BrandLogo";
 import { Link, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -95,14 +95,7 @@ const sections = [
       desc: "A1 → C2 六个级别系统课程，从入门到精通，按 CEFR 标准循序渐进。",
       gradient: "from-indigo-500 via-violet-500 to-purple-500",
     },
-    {
-      to: "/leaderboard",
-      icon: Trophy,
-      eyebrow: "Community",
-      title: "Weekly leaderboard",
-      desc: "Climb the board with learners worldwide. Resets weekly.",
-      gradient: "from-yellow-500 via-amber-500 to-orange-500",
-    },
+    // 排行榜(/leaderboard)入口按需求隐藏(页面/路由保留)。
   ];
 
   const placementSection = {
@@ -120,11 +113,7 @@ const sections = [
         <OnboardingWizard userId={user.id} onClose={() => setNeedsOnboarding(false)} />
       )}
       <div className="sticky top-3 z-40 mb-4 flex items-center justify-start md:static md:justify-end">
-        <Button asChild variant="ghost" size="sm" className="mr-2 hidden md:inline-flex">
-          <Link to="/stats">
-            <BarChart3 className="size-4" /> {t("nav.myStats")}
-          </Link>
-        </Button>
+        {/* 详细数据(/stats)入口按需求隐藏(页面/路由保留)。 */}
         <Button asChild variant="ghost" size="sm" className="mr-2 hidden md:inline-flex">
           <Link to="/account">
             <UserCog className="size-4" /> {t("nav.account")}
@@ -215,12 +204,6 @@ const sections = [
                 : <T>Five minutes a day is enough to build the habit</T>}
             </div>
           </div>
-          <Link
-            to="/stats"
-            className="hidden shrink-0 items-center gap-1 rounded-full bg-primary px-4 py-2 text-xs font-bold text-primary-foreground hover:bg-primary/90 md:inline-flex"
-          >
-            <T>View progress</T> <ArrowRight className="size-3.5" />
-          </Link>
         </section>
       )}
 

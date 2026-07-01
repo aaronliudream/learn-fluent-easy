@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Brain, Sparkles, GraduationCap, ArrowRight, Flame, CheckCircle2, Zap,
-  ChevronDown, Target, BookOpen, MessageCircle, Headphones, Briefcase, Library,
+  ChevronDown, Target, BookOpen, Headphones, Briefcase, Library,
   Trophy, Award,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -170,23 +170,13 @@ export const TodayTaskCard = () => {
       });
     }
 
-    // 3) Engagement: AI talk OR slang
-    const hasTalk = reco?.top_area === "ai_talk" || reco?.top_area === "scenes";
-    if (hasTalk) {
-      out.push({
-        key: "talk-5min", icon: MessageCircle, tone: "from-emerald-500 to-teal-500",
-        label: t("和 AI 聊 5 分钟"),
-        detail: t("延续你最近的口语节奏,练 5 分钟就够"),
-        to: "/talk", cta: t("开口"), done: false, xp: 15, coins: 5,
-      });
-    } else {
-      out.push({
-        key: "slang-today", icon: Zap, tone: "from-amber-500 to-rose-500",
-        label: t("今日一句俚语"),
-        detail: todaySlang ? `"${todaySlang.phrase}" · ${t(todaySlang.meaning_cn)}` : t("看看今天的流行表达"),
-        to: "/slang", cta: t("去看"), done: false, xp: 10, coins: 3,
-      });
-    }
+    // 3) Engagement: slang
+    out.push({
+      key: "slang-today", icon: Zap, tone: "from-amber-500 to-rose-500",
+      label: t("今日一句俚语"),
+      detail: todaySlang ? `"${todaySlang.phrase}" · ${t(todaySlang.meaning_cn)}` : t("看看今天的流行表达"),
+      to: "/slang", cta: t("去看"), done: false, xp: 10, coins: 3,
+    });
 
     return out.slice(0, 3);
   }, [signedIn, reco, progress.completedLessons, next.title, next.to, todaySlang, t]);

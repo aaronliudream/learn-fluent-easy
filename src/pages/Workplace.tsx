@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ChevronRight, Clapperboard, Mic } from "lucide-react";
+import { ChevronRight, Clapperboard } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { WORK_GROUPS, WORK_DIALOGUES } from "@/data/workplace";
 import { T, useT } from "@/i18n/T";
@@ -19,7 +19,7 @@ const Workplace = () => {
         back="/"
       />
       <div className="space-y-8">
-        {/* Cross-links: Scenes (Real life conversation) + AI Talk now live inside Career Track */}
+        {/* Cross-link: Scenes (Real life conversation) inside Career Track */}
         <section>
           <h2 className="mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-muted-foreground">
             <span className="text-base">🎬</span> <T>真实对话 · 口语训练</T>
@@ -35,19 +35,6 @@ const Workplace = () => {
               <div className="flex-1 min-w-0">
                 <div className="text-base font-extrabold"><T>真实生活情景对话</T></div>
                 <div className="text-[11px] opacity-90">Real life, real conversation</div>
-              </div>
-              <ChevronRight className="size-4 opacity-80 transition-transform group-hover:translate-x-1" />
-            </Link>
-            <Link
-              to="/talk"
-              className="group flex items-center gap-3 rounded-2xl bg-gradient-to-br from-amber-500 via-orange-500 to-rose-500 p-4 text-white shadow-tile transition hover:-translate-y-0.5"
-            >
-              <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm">
-                <Mic className="size-5" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="text-base font-extrabold"><T>AI 实时对话练习</T></div>
-                <div className="text-[11px] opacity-90">Win at work in English</div>
               </div>
               <ChevronRight className="size-4 opacity-80 transition-transform group-hover:translate-x-1" />
             </Link>

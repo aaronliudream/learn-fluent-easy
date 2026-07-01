@@ -26,7 +26,7 @@ import {
 const HIDE_ON = [
 /^\/$/, // home — LandingPage / BrandHubNav render it inline
 /^\/kids/, /^\/senior/, /^\/about/, /^\/slang/, /^\/cet/, // brand-hub pages (junior 移除:它没有内联头,改用全局浮动头显示登录态)
-/^\/auth/, /^\/talk/, /^\/placement/];
+/^\/auth/, /^\/placement/];
 
 
 interface ProfileLite {

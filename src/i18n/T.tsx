@@ -10,7 +10,7 @@ import type { StringKey } from "./strings";
  * Returns the source text unchanged for Chinese / English users (zero cost).
  * Re-renders automatically when async translations land.
  */
-// forwardRef so parents like <Button asChild>, <Link>, or AITalkDialog can
+// forwardRef so parents like <Button asChild> or <Link> can
 // pass a ref through without React warning. The ref is intentionally
 // unused — <T> renders only a text node.
 export const T = forwardRef<unknown, { children: string | undefined | null }>(

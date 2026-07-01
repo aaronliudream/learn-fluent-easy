@@ -39,7 +39,6 @@ interface Msg {role: Role;content: string;}
 // Routes where the assistant should stay out of the way entirely.
 const HIDE_ON = [
 /^\/auth/,
-/^\/talk/,
 /^\/placement/,
 /^\/primary(\/|$)/,
 /^\/junior(\/|$)/];
@@ -316,9 +315,7 @@ const FULL_ANSWERS_CONCIERGE: Record<string, string> = {
 - 第 1 个月：能做 3-5 轮日常对话
 - 第 3 个月：开始自信地参与课堂口语
 
-**关键：每天 10 分钟，比每周 1 次外教课有效得多。**
-
-👉 [体验 AI 口语](/talk)`,
+**关键：每天 10 分钟，比每周 1 次外教课有效得多。**`,
 
   "中考/高考真题覆盖了吗？":
   `**完全覆盖**——而且不是简单堆题。

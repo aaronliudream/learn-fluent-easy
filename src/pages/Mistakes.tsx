@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Loader2, Sparkles, Volume2, Play, Star, Check, Trash2, Search,
-  BookOpen, Mic, AlertCircle, Filter, Trophy, MessageCircleQuestion, Wand2, X } from
+  BookOpen, AlertCircle, Filter, Trophy, MessageCircleQuestion, Wand2, X } from
 "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { T } from "@/i18n/T";
@@ -79,9 +79,7 @@ const MistakesPage = () => {
     return {
       all: items.length,
       due: items.filter((i) => new Date(i.next_review_at).getTime() <= now).length,
-      starred: items.filter((i) => i.is_starred).length,
-      ai_talk_target: items.filter((i) => i.module === "ai_talk_target").length,
-      ai_talk: items.filter((i) => i.module === "ai_talk").length
+      starred: items.filter((i) => i.is_starred).length
     };
   }, [items]);
 
@@ -145,7 +143,7 @@ const MistakesPage = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-4 py-8 md:px-8 md:py-12">
-      <PageHeader title="📒 错题本" subtitle="所有错题、Alex 教过的表达，按记忆曲线安排复习" />
+      <PageHeader title="📒 错题本" subtitle="所有错题按记忆曲线安排复习" />
 
       {loading &&
       <div className="mt-12 flex items-center justify-center gap-2 text-sm text-muted-foreground">
@@ -172,8 +170,6 @@ const MistakesPage = () => {
             <StatCard label="待复习" value={counts.due} emoji="⏰" highlight />
             <StatCard label="全部" value={counts.all} emoji="📒" />
             <StatCard label="已收藏" value={counts.starred} emoji="⭐" />
-            <StatCard label="Alex 教的" value={counts.ai_talk_target} emoji="✨" />
-            <StatCard label="对话错题" value={counts.ai_talk} emoji="💬" />
           </section>
 
           {/* Tabs */}
@@ -182,9 +178,7 @@ const MistakesPage = () => {
           { k: "due" as const, label: "今日复习", n: counts.due },
           { k: "topics" as const, label: "📂 专题分组", n: counts.all },
           { k: "all" as const, label: "全部", n: counts.all },
-          { k: "starred" as const, label: "⭐ 收藏", n: counts.starred },
-          { k: "ai_talk_target" as const, label: "✨ Alex 教的", n: counts.ai_talk_target },
-          { k: "ai_talk" as const, label: "💬 对话错题", n: counts.ai_talk }].
+          { k: "starred" as const, label: "⭐ 收藏", n: counts.starred }].
           map(({ k, label, n }) =>
           <button
             key={k}
@@ -284,14 +278,8 @@ function EmptyState({ tab }: {tab: ModuleKey;}) {
         {tab === "due" ? <T>今天没有要复习的，明天再来！</T> : <T>这里还是空的</T>}
       </p>
       <p className="mt-1 text-xs text-muted-foreground">
-        <T>多和 Alex 聊一聊，错题和新表达会自动收进这里。</T>
+        <T>去做题吧，错题会自动收进这里，按记忆曲线帮你复习。</T>
       </p>
-      <Link
-        to="/talk"
-        className="mt-5 inline-flex items-center gap-2 rounded-full bg-grad-title px-5 py-2.5 text-sm font-bold text-white shadow-tile hover:opacity-95">
-        
-        <Mic className="size-4" /> <T>去和 Alex 聊聊</T>
-      </Link>
     </div>);
 
 }

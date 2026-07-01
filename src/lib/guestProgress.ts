@@ -96,15 +96,6 @@ export function recordVocabLearned(count: number) {
   void logEvent({ event_type: "vocab_learned", vocab_count: count });
 }
 
-/** Record an AI conversation session (after it ends). */
-export function recordAITalk(durationSec: number) {
-  const mins = Math.max(1, Math.round(durationSec / 60));
-  const p = loadProgress();
-  p.studyMinutes += mins;
-  save(p);
-  void logEvent({ event_type: "ai_talk", study_minutes: mins });
-}
-
 /** Generic touch event so passive activities (slang/scenes/workplace pages) count toward streak. */
 export function recordVisit(area: string) {
   void logEvent({ event_type: "visit", lesson_key: area });

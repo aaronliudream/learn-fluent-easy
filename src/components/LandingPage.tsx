@@ -39,7 +39,6 @@ const NAV_LINKS = [
   { href: "/kids", label: "小学" as const },
   { href: "/junior", label: "初中" as const },
   { href: "/gaokao", label: "高中" as const },
-  { href: "/talk", label: "AI个性化学习" as const },
   { href: "#testimonials", label: "成功案例" as const },
   { href: "/about", label: "关于我们" as const },
 ] as const;
@@ -535,11 +534,6 @@ export default function LandingPage() {
                     );
                   })}
                 </div>
-                <Link
-                  to="/talk"
-                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#e5b567] px-5 py-2.5 text-sm font-extrabold text-[#0a1628] hover:bg-[#f0c97d]">
-                  <T>体验 AI 学习</T> <ArrowRight className="size-4 shrink-0" />
-                </Link>
               </div>
             </div>
           </div>

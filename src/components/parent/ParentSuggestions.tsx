@@ -140,17 +140,6 @@ function deriveSuggestions(d: ParentSuggestionInput): Suggestion[] {
       to: "/primary",
     });
   }
-  if (out.length === 1) {
-    out.push({
-      id: "ok-2",
-      rank: 2,
-      tone: "cool",
-      title: "试试 5 分钟英文小对话",
-      sub: "AI 对话能锻炼口语，孩子很喜欢",
-      cta: "开始",
-      to: "/talk",
-    });
-  }
   if (out.length === 2) {
     out.push({
       id: "ok-3",

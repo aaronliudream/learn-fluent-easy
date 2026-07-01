@@ -23,7 +23,6 @@ function segFromPath(p: string): Segment | null {
   if (p.startsWith("/gaokao") || p.startsWith("/senior")) return "gaokao";
   if (p.startsWith("/workplace")) return "workplace";
   if (p.startsWith("/scenes")) return "scenes";
-  if (p.startsWith("/talk")) return "talk";
   if (p.startsWith("/slang")) return "slang";
   // 系统课程：lesson / level / stage-test / placement
   if (

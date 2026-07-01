@@ -42,7 +42,6 @@ const ScenesPlay = lazy(() => import("./pages/ScenesPlay.tsx"));
 const Workplace = lazy(() => import("./pages/Workplace.tsx"));
 const WorkplaceCategory = lazy(() => import("./pages/WorkplaceCategory.tsx"));
 const WorkplacePlay = lazy(() => import("./pages/WorkplacePlay.tsx"));
-const Talk = lazy(() => import("./pages/Talk.tsx"));
 const Gaokao = lazy(() => import("./pages/Gaokao.tsx"));
 const GaokaoGrade = lazy(() => import("./pages/GaokaoGrade.tsx"));
 const GaokaoBooks = lazy(() => import("./pages/GaokaoBooks.tsx"));
@@ -208,7 +207,6 @@ const FloatingPetGate = () => {
   const hide =
     pathname === "/" ||                  // 首页已有英雄伙伴，避免重复
     pathname.startsWith("/auth") ||
-    pathname.startsWith("/talk") ||      // 全屏语音对话
     pathname.startsWith("/pets") ||      // 宠物详情页本身
     pathname.startsWith("/primary") ||   // 小学专区(首页+hub)统一隐藏彩虹鲸
     pathname.startsWith("/junior") ||    // 初中专区统一隐藏彩虹鲸
@@ -218,8 +216,6 @@ const FloatingPetGate = () => {
 };
 
 const FeedbackWidgetGate = () => {
-  const { pathname } = useLocation();
-  if (pathname.startsWith("/talk")) return null;
   return <FeedbackWidget />;
 };
 
@@ -346,7 +342,6 @@ const App = () => (
           <Route path="/workplace" element={<Workplace />} />
           <Route path="/workplace/:catKey" element={<WorkplaceCategory />} />
           <Route path="/workplace/:catKey/:dialogueId" element={<WorkplacePlay />} />
-          <Route path="/talk" element={<Talk />} />
           <Route path="/china" element={<ChineseOnlyRoute><China /></ChineseOnlyRoute>} />
           <Route path="/primary" element={<ChineseOnlyRoute><Primary /></ChineseOnlyRoute>} />
           <Route path="/primary/hub/:grade" element={<ChineseOnlyRoute><PrimaryHubLayout /></ChineseOnlyRoute>}>

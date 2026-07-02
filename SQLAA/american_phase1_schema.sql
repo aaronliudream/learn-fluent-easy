@@ -72,7 +72,8 @@ CREATE TABLE IF NOT EXISTS public.american_amencontrast (
   lesson_id text NOT NULL REFERENCES public.american_lessons(id) ON DELETE CASCADE,
   us        text NOT NULL,
   uk        text NOT NULL,
-  note_cn   text
+  note_cn   text,
+  UNIQUE(lesson_id, us)   -- 幂等键:seed ON CONFLICT (lesson_id,us);缺此约束会因 id 自动 uuid 每跑重复插
 );
 
 -- ---------- 掌握表(照抄 junior;仅改表名前缀) ----------

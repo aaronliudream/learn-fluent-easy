@@ -16,6 +16,14 @@ const g6 = readFileSync(D("美语课程_单元1_关6小测_v1.md"), "utf8");
 const batch2 = readFileSync(D("美语课程_批次2_第7-12课.md"), "utf8");
 const g5_2 = readFileSync(D("美语课程_单元2_关5题库_v1.md"), "utf8");
 const g6_2 = readFileSync(D("美语课程_单元2_关6小测_v1.md"), "utf8");
+// 单元3(第13-18课)
+const batch3 = readFileSync(D("美语课程_批次3_第13-18课.md"), "utf8");
+const g5_3 = readFileSync(D("美语课程_单元3_关5题库_v1.md"), "utf8");
+const g6_3 = readFileSync(D("美语课程_单元3_关6小测_v1.md"), "utf8");
+// 单元4(第19-24课)
+const batch4 = readFileSync(D("美语课程_批次4_第19-24课.md"), "utf8");
+const g5_4 = readFileSync(D("美语课程_单元4_关5题库_v1.md"), "utf8");
+const g6_4 = readFileSync(D("美语课程_单元4_关6小测_v1.md"), "utf8");
 
 // lesson_no → 内容 id(两位补零:am1_l01 … am1_l72)
 const pad = (n) => "am1_l" + String(n).padStart(2, "0");
@@ -360,28 +368,35 @@ for (const m of batch.matchAll(/#\s*Lesson\s*(\d)\s+[\s\S]*?(?=\n#\s*Lesson\s*\d
   const meta = { id: `am1_l0${ln}`, unit_no: 1, lesson_no: ln, title_en: titleMap[ln][0], title_cn: titleMap[ln][1] };
   lessons.push(parseLesson(m[0], meta));
 }
-// L7-12(单元2): 从 batch2 解析;标题从每课 block 头(# Lesson N <英> / 首个 ## <中>)提取
-for (const m of batch2.matchAll(/#\s*Lesson\s*(\d+)\s+[\s\S]*?(?=\n#\s*Lesson\s*\d+|\n#\s*单元 \d 完结|$)/g)) {
-  const ln = Number(m[1]);
-  const block = m[0];
-  const enM = block.match(/#\s*Lesson\s*\d+\s+(.+)/);
-  const cnM = block.match(/\n##\s+([^\n]+)/);
-  const meta = { id: pad(ln), unit_no: 2, lesson_no: ln,
-    title_en: enM ? enM[1].trim() : "", title_cn: cnM ? cnM[1].trim() : "" };
-  lessons.push(parseLesson(block, meta));
+// 单元2+(batch2/3/…): 标题从每课 block 头(# Lesson N <英> / 首个 ## <中>)提取。
+// unit_no 由 batch 显式给定;lesson_no 从 # Lesson N 读取。新增单元只需在此数组追加一行。
+const extraBatches = [
+  { text: batch2, unit: 2 },
+  { text: batch3, unit: 3 },
+  { text: batch4, unit: 4 },
+];
+for (const { text, unit } of extraBatches) {
+  for (const m of text.matchAll(/#\s*Lesson\s*(\d+)\s+[\s\S]*?(?=\n#\s*Lesson\s*\d+|\n#\s*单元 \d 完结|$)/g)) {
+    const ln = Number(m[1]);
+    const block = m[0];
+    const enM = block.match(/#\s*Lesson\s*\d+\s+(.+)/);
+    const cnM = block.match(/\n##\s+([^\n]+)/);
+    lessons.push(parseLesson(block, { id: pad(ln), unit_no: unit, lesson_no: ln,
+      title_en: enM ? enM[1].trim() : "", title_cn: cnM ? cnM[1].trim() : "" }));
+  }
 }
 lessons.sort((a, b) => a.lesson_no - b.lesson_no);
 
-// 关5/关6 两单元合并(键 1-6 与 7-12 不冲突)
-const g5byLesson = { ...parseGuan5(g5), ...parseGuan5(g5_2) };
-const g6byLesson = { ...parseGuan6(g6), ...parseGuan6(g6_2) };
+// 关5/关6 各单元合并(键 1-6 / 7-12 / 13-18 不冲突)
+const g5byLesson = { ...parseGuan5(g5), ...parseGuan5(g5_2), ...parseGuan5(g5_3), ...parseGuan5(g5_4) };
+const g6byLesson = { ...parseGuan6(g6), ...parseGuan6(g6_2), ...parseGuan6(g6_3), ...parseGuan6(g6_4) };
 const bodyByLesson = {};
 for (const L of lessons) bodyByLesson[L.lesson_no] = L.grammarBody;
 
 // ============ 生成 SQL ============
 const out = [];
-out.push("-- 美语课程 单元1+2 seed(生成器产出,勿手改;改 docs/american 源 md 后重跑 gen-unit1-seed.mjs)");
-out.push("-- 幂等:全部 ON CONFLICT,重跑安全、unit1 数据不动。合计 368 题(unit1 181 + unit2 187)。");
+out.push("-- 美语课程 seed(生成器产出,勿手改;改 docs/american 源 md 后重跑 gen-unit1-seed.mjs)");
+out.push("-- 幂等:全部 ON CONFLICT,重跑安全、已入库单元数据不动。逐单元计数见生成器输出 / docs/american/单元N_对账表.md。");
 out.push("BEGIN;");
 
 // lessons
@@ -402,9 +417,9 @@ for (const ln of Object.keys(g5byLesson)) {
     out.push(`INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES (${sq(p.id)},${sq(pad(Number(ln)))},${sq(p.name)},${sq(bodyByLesson[ln])}) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;`);
   }
 }
-// contrast
+// contrast(幂等靠 UNIQUE(lesson_id,us);裸 ON CONFLICT DO NOTHING 会因 id 自动 uuid 永不冲突→重跑重复插)
 for (const L of lessons) for (const c of L.contrast) {
-  out.push(`INSERT INTO public.american_amencontrast (lesson_id,us,uk,note_cn) VALUES (${sq(L.id)},${sq(c.us)},${sq(c.uk)},${sq(c.note_cn)}) ON CONFLICT DO NOTHING;`);
+  out.push(`INSERT INTO public.american_amencontrast (lesson_id,us,uk,note_cn) VALUES (${sq(L.id)},${sq(c.us)},${sq(c.uk)},${sq(c.note_cn)}) ON CONFLICT (lesson_id,us) DO UPDATE SET uk=EXCLUDED.uk,note_cn=EXCLUDED.note_cn;`);
 }
 
 // questions:统一按 (lesson,stage) 分组,choice 打散

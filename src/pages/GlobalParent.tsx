@@ -412,10 +412,10 @@ export default function GlobalParent() {
           <div className="text-3xl">🌱</div>
           <div className="mt-2 text-base font-extrabold"><T>孩子还没开始学习</T></div>
           <p className="mx-auto mt-1 max-w-md text-xs text-muted-foreground">
-            <T>让孩子先完成 5 分钟免费评估，我们会根据 CEFR 等级自动推荐适合的学习路径——无论你在中国、日本、韩国还是任何国家。</T>
+            <T>零基础学地道美语 · 72 课进阶</T>
           </p>
           <Link to="/american" className="mt-4 inline-block rounded-full bg-gradient-to-r from-violet-500 to-sky-500 px-5 py-2 text-sm font-extrabold text-white shadow">
-            <T>开始免费评估 →</T>
+            <T>去学美语课程 →</T>
           </Link>
         </section>
       )}

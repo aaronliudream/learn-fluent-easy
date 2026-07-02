@@ -28,6 +28,10 @@ const g6_4 = readFileSync(D("美语课程_单元4_关6小测_v1.md"), "utf8");
 const batch5 = readFileSync(D("美语课程_批次5_第25-30课.md"), "utf8");
 const g5_5 = readFileSync(D("美语课程_单元5_关5题库_v1.md"), "utf8");
 const g6_5 = readFileSync(D("美语课程_单元5_关6小测_v1.md"), "utf8");
+// 单元6(第31-36课)
+const batch6 = readFileSync(D("美语课程_批次6_第31-36课.md"), "utf8");
+const g5_6 = readFileSync(D("美语课程_单元6_关5题库_v1.md"), "utf8");
+const g6_6 = readFileSync(D("美语课程_单元6_关6小测_v1.md"), "utf8");
 
 // lesson_no → 内容 id(两位补零:am1_l01 … am1_l72)
 const pad = (n) => "am1_l" + String(n).padStart(2, "0");
@@ -379,6 +383,7 @@ const extraBatches = [
   { text: batch3, unit: 3 },
   { text: batch4, unit: 4 },
   { text: batch5, unit: 5 },
+  { text: batch6, unit: 6 },
 ];
 for (const { text, unit } of extraBatches) {
   for (const m of text.matchAll(/#\s*Lesson\s*(\d+)\s+[\s\S]*?(?=\n#\s*Lesson\s*\d+|\n#\s*单元 \d 完结|$)/g)) {
@@ -393,8 +398,8 @@ for (const { text, unit } of extraBatches) {
 lessons.sort((a, b) => a.lesson_no - b.lesson_no);
 
 // 关5/关6 各单元合并(键 1-6 / 7-12 / 13-18 不冲突)
-const g5byLesson = { ...parseGuan5(g5), ...parseGuan5(g5_2), ...parseGuan5(g5_3), ...parseGuan5(g5_4), ...parseGuan5(g5_5) };
-const g6byLesson = { ...parseGuan6(g6), ...parseGuan6(g6_2), ...parseGuan6(g6_3), ...parseGuan6(g6_4), ...parseGuan6(g6_5) };
+const g5byLesson = { ...parseGuan5(g5), ...parseGuan5(g5_2), ...parseGuan5(g5_3), ...parseGuan5(g5_4), ...parseGuan5(g5_5), ...parseGuan5(g5_6) };
+const g6byLesson = { ...parseGuan6(g6), ...parseGuan6(g6_2), ...parseGuan6(g6_3), ...parseGuan6(g6_4), ...parseGuan6(g6_5), ...parseGuan6(g6_6) };
 const bodyByLesson = {};
 for (const L of lessons) bodyByLesson[L.lesson_no] = L.grammarBody;
 

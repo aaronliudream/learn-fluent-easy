@@ -127,6 +127,8 @@ export type FCQuestion =
   | (FCQuestionBase & {
       type: "dialogue_response";
       audio: string;
+      /** 问句中文翻译:答对后与英文原文一起显示(答前/答错不显)。 */
+      cn?: string;
       options: string[];
       answer: number;
     })

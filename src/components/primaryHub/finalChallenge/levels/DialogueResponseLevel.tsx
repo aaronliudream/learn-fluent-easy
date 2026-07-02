@@ -3,7 +3,9 @@
  *
  * 以「听句选答」(ListenChooseAnswerLevel) 为模板:听 audio(问句) → 从 3 个
  * 答语里选最合适的回答。差异:
- *   - 问句本身常驻屏上 (q.prompt),孩子既能听也能读 ("情景答语" 题型约定)
+ *   - 答前只放音频、不显英文原文(和第3/4关一致,防"看着读答案")
+ *   - 选错重选(A 方案):标红试错项、不锁不记错题,选对才 pick() 推进;
+ *     答对后揭示英文原文 + 中文翻译
  *   - audio 是问句、options 是完整答语句子,选项竖排左对齐
  *   - 六年级每关抽 7 道 (getDrawCount)
  *
@@ -100,6 +102,8 @@ function PlayCard({
   const isCorrect = answered && picked === correctIdx;
 
   const [speaking, setSpeaking] = useState(false);
+  // 关7-A:选错不锁,记录本题已试错的选项(标红+禁用),只有选对才 pick() 锁定推进。
+  const [wrongPicks, setWrongPicks] = useState<Set<number>>(new Set());
   const timers = useRef<number[]>([]);
   useEffect(
     () => () => {
@@ -163,22 +167,35 @@ function PlayCard({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx, q.audio]);
 
-  const wrongInfoFor = (picked: number) => ({
-    questionId: q.id,
-    questionType: q.type,
-    stem: q.prompt,
-    userText: q.options[picked],
-    correctText: q.options[correctIdx],
-    vocab_domain: q.vocab_domain,
-    grammar_point: q.grammar_point,
-  });
+  // 换题时清空「已试错」标记(A 方案:每题独立重选)。
+  useEffect(() => {
+    setWrongPicks(new Set());
+  }, [idx]);
+
+  // A 方案(选错重选):选对才 pick() 锁定并推进;选错只标红本项、不锁、不记错题,
+  // 让孩子继续选到对为止(接受副作用:第7关星数恒满、不进错题回顾)。
+  const handlePick = useCallback(
+    (i: number) => {
+      if (answered) return;
+      if (i === correctIdx) {
+        pick(i, true);
+        return;
+      }
+      setWrongPicks((prev) => {
+        if (prev.has(i)) return prev;
+        const next = new Set(prev);
+        next.add(i);
+        return next;
+      });
+    },
+    [answered, correctIdx, pick],
+  );
 
   // 1-3 数字键选项。
   useMcKeyboard({
     optionCount: q.options.length,
     answered,
-    onPick: (i) =>
-      pick(i, i === correctIdx, i === correctIdx ? undefined : wrongInfoFor(i)),
+    onPick: handlePick,
     enabled: true,
   });
 
@@ -292,10 +309,10 @@ function PlayCard({
             margin: "20px 0 14px",
             fontSize: 16,
             fontWeight: 800,
-            color: isCorrect ? "var(--fc-green-dark)" : "var(--fc-soft-warn)",
+            color: "var(--fc-green-dark)",
           }}
         >
-          {isCorrect ? "✨ Nice! 答对啦" : "差一点点！正确答案已为你标出 ⬇"}
+          ✨ Nice! 答对啦
         </div>
       )}
 
@@ -311,6 +328,7 @@ function PlayCard({
         {q.options.map((opt, i) => {
           const isThisCorrect = i === correctIdx;
           const isThisPicked = picked === i;
+          const isWrongTried = wrongPicks.has(i);
 
           let bg = "white";
           let border = "var(--fc-border-medium)";
@@ -320,33 +338,33 @@ function PlayCard({
           let opacity = 1;
           let extraClass = "fc-btn-press";
 
-          if (answered) {
-            if (isThisCorrect) {
-              bg = "var(--fc-green-bg)";
-              border = "var(--fc-green)";
-              textColor = "var(--fc-green-dark)";
-              letterBg = "var(--fc-green)";
-              letterColor = "white";
-              if (isThisPicked) extraClass += " fc-pulse-correct";
-            } else if (isThisPicked) {
-              bg = "rgba(255, 136, 85, 0.12)";
-              border = "var(--fc-soft-warn)";
-              textColor = "var(--fc-soft-warn)";
-              letterBg = "var(--fc-soft-warn)";
-              letterColor = "white";
-            } else {
-              opacity = 0.5;
-            }
+          if (answered && isThisCorrect) {
+            // 选对后揭示正确项(绿色)。
+            bg = "var(--fc-green-bg)";
+            border = "var(--fc-green)";
+            textColor = "var(--fc-green-dark)";
+            letterBg = "var(--fc-green)";
+            letterColor = "white";
+            if (isThisPicked) extraClass += " fc-pulse-correct";
+          } else if (isWrongTried) {
+            // 已试错的选项:标红 + 禁用,但不揭示正确答案(A 方案:继续重选)。
+            bg = "rgba(255, 136, 85, 0.12)";
+            border = "var(--fc-soft-warn)";
+            textColor = "var(--fc-soft-warn)";
+            letterBg = "var(--fc-soft-warn)";
+            letterColor = "white";
+            opacity = answered ? 0.6 : 1;
+          } else if (answered) {
+            // 选对后,其余未试选项淡出。
+            opacity = 0.5;
           }
 
           return (
             <button
               key={i}
               type="button"
-              disabled={answered}
-              onClick={() =>
-                pick(i, isThisCorrect, isThisCorrect ? undefined : wrongInfoFor(i))
-              }
+              disabled={answered || isWrongTried}
+              onClick={() => handlePick(i)}
               className={extraClass}
               style={{
                 position: "relative",
@@ -361,7 +379,7 @@ function PlayCard({
                 border: `2px solid ${border}`,
                 color: textColor,
                 textAlign: "left",
-                cursor: answered ? "default" : "pointer",
+                cursor: answered || isWrongTried ? "default" : "pointer",
                 opacity,
                 transition: "background 200ms, border-color 200ms, opacity 200ms",
               }}
@@ -405,7 +423,7 @@ function PlayCard({
                   ✓
                 </span>
               )}
-              {answered && isThisPicked && !isThisCorrect && (
+              {isWrongTried && (
                 <span
                   style={{ fontSize: 18, color: "var(--fc-soft-warn)", lineHeight: 1, flex: "0 0 auto" }}
                   aria-hidden
@@ -450,6 +468,18 @@ function PlayCard({
           >
             再听
           </button>
+          {q.cn && (
+            <div
+              style={{
+                marginTop: 8,
+                fontSize: 15,
+                fontWeight: 600,
+                color: "var(--fc-ink-soft)",
+              }}
+            >
+              {q.cn}
+            </div>
+          )}
         </div>
       )}
 

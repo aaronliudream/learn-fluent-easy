@@ -414,7 +414,7 @@ export default function GlobalParent() {
           <p className="mx-auto mt-1 max-w-md text-xs text-muted-foreground">
             <T>让孩子先完成 5 分钟免费评估，我们会根据 CEFR 等级自动推荐适合的学习路径——无论你在中国、日本、韩国还是任何国家。</T>
           </p>
-          <Link to="/placement" className="mt-4 inline-block rounded-full bg-gradient-to-r from-violet-500 to-sky-500 px-5 py-2 text-sm font-extrabold text-white shadow">
+          <Link to="/american" className="mt-4 inline-block rounded-full bg-gradient-to-r from-violet-500 to-sky-500 px-5 py-2 text-sm font-extrabold text-white shadow">
             <T>开始免费评估 →</T>
           </Link>
         </section>

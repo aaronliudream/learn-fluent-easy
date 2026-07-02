@@ -39,7 +39,6 @@ interface Msg {role: Role;content: string;}
 // Routes where the assistant should stay out of the way entirely.
 const HIDE_ON = [
 /^\/auth/,
-/^\/placement/,
 /^\/primary(\/|$)/,
 /^\/junior(\/|$)/];
 
@@ -97,7 +96,7 @@ function FloatingButton({ onClick, unlocked }: {onClick: () => void;unlocked: bo
       }
       <button
         type="button"
-        onClick={() => {setShowHint(false);try {localStorage.setItem("xiaoyue_hint_seen", "1");} catch {}onClick();}}
+        onClick={() => {setShowHint(false);try {localStorage.setItem("xiaoyue_hint_seen", "1");} catch { /* ignore */ }onClick();}}
         aria-label="AI 学习助手 小月"
         className="group relative flex size-16 items-center justify-center rounded-full bg-gradient-to-br from-indigo-400 via-violet-500 to-amber-300 p-0.5 shadow-2xl ring-2 ring-background transition-transform hover:scale-105 active:scale-95">
         
@@ -160,9 +159,7 @@ const FULL_ANSWERS_CONCIERGE: Record<string, string> = {
 系统每天推 3-5 道针对薄弱点的题，做错立刻讲解，不用等老师。
 
 **第三步 · 复习**
-所有学过的内容自动按 1/3/7/15 天周期回顾，让大脑真正记住。
-
-👉 [立刻开始免费测评](/placement)`,
+所有学过的内容自动按 1/3/7/15 天周期回顾，让大脑真正记住。`,
 
   "AI 是怎么诊断薄弱点的？":
   `每道题做完，我们都会抓 **4 类信号**：
@@ -250,9 +247,7 @@ const FULL_ANSWERS_CONCIERGE: Record<string, string> = {
 3500 高考词、长难句拆解、新高考题型训练、雅思预备。
 ---SPLIT---
 **怎么选起点？**
-第一次进来会让孩子做一个 10 分钟的智能测评,系统自动定位真实水平——可能孩子在班里是初二，但实际词汇只到初一上,那就从初一上开始练。
-
-👉 [开始免费测评](/placement)`,
+第一次进来会让孩子做一个 10 分钟的智能测评,系统自动定位真实水平——可能孩子在班里是初二，但实际词汇只到初一上,那就从初一上开始练。`,
 
   "一天大概要练多久？":
   `建议 **每天 15-25 分钟**，少而稳比一次猛刷三小时管用得多。

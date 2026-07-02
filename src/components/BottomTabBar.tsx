@@ -2,6 +2,7 @@ import { Home, BookOpen, Zap, AlertCircle, User, GraduationCap, Sparkles, X } fr
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useT } from "@/i18n/T";
+import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_PATH } from "@/lib/american/brand";
 
 /**
  * Mobile-only bottom tab bar — 5 tabs with a centered "Start practice"
@@ -16,15 +17,11 @@ const TABS = [
     icon: BookOpen,
     courses: true as const,
     match: (p: string) =>
-      p.startsWith("/level") ||
-      p.startsWith("/lesson") ||
-      p.startsWith("/unit") ||
-      p.startsWith("/placement") ||
+      p.startsWith("/american") ||
       p.startsWith("/kids") ||
       p.startsWith("/primary") ||
       p.startsWith("/junior") ||
-      p.startsWith("/gaokao") ||
-      p.startsWith("/slang"),
+      p.startsWith("/gaokao"),
   },
   {
     to: "/dashboard",
@@ -184,10 +181,10 @@ const STAGES = [
     glow: "shadow-[0_0_40px_-8px_rgba(236,72,153,0.7)]",
   },
   {
-    to: "/levels",
-    label: "成人英语",
-    sub: "Adult · CEFR A1 – C2",
-    glyph: "A",
+    to: AMERICAN_COURSE_PATH,
+    label: AMERICAN_COURSE_NAME,
+    sub: "American · 12 单元",
+    glyph: "US",
     gradient: "from-[#6366F1] via-[#8B5CF6] to-[#EC4899]",
     glow: "shadow-[0_0_40px_-8px_rgba(139,92,246,0.7)]",
   },

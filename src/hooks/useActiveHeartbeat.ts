@@ -14,21 +14,15 @@ const IDLE_MS = 60_000;
 
 type Segment =
   | "primary" | "junior" | "gaokao"
-  | "workplace" | "scenes" | "talk" | "systematic" | "slang"
+  | "american" | "systematic"
   | "other";
 
 function segFromPath(p: string): Segment | null {
   if (p.startsWith("/primary")) return "primary";
   if (p.startsWith("/junior")) return "junior";
   if (p.startsWith("/gaokao") || p.startsWith("/senior")) return "gaokao";
-  if (p.startsWith("/workplace")) return "workplace";
-  if (p.startsWith("/scenes")) return "scenes";
-  if (p.startsWith("/slang")) return "slang";
-  // 系统课程：lesson / level / stage-test / placement
-  if (
-    p.startsWith("/lesson") || p.startsWith("/level") ||
-    p.startsWith("/stage-test") || p.startsWith("/placement")
-  ) return "systematic";
+  if (p.startsWith("/american")) return "american"; // 原成人系统课程/场景/俚语时长统一归美语课程
+  if (p.startsWith("/stage-test")) return "systematic"; // 阶段测(非成人板块,保留)
   // 落地页 / 登录 / 家长中心 / 设置等，不计入学习时长
   return null;
 }

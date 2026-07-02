@@ -25,8 +25,9 @@ import {
 // so the global floating one would overlap.
 const HIDE_ON = [
 /^\/$/, // home — LandingPage / BrandHubNav render it inline
-/^\/kids/, /^\/senior/, /^\/about/, /^\/slang/, /^\/cet/, // brand-hub pages (junior 移除:它没有内联头,改用全局浮动头显示登录态)
-/^\/auth/, /^\/placement/];
+/^\/kids/, /^\/senior/, /^\/about/, /^\/cet/, // brand-hub pages (junior 移除:它没有内联头,改用全局浮动头显示登录态)
+/^\/auth/];
+// 注:/american 不入列 —— 与旧成人首页 /levels 一致,显示全局浮动头(登录态)。
 
 
 interface ProfileLite {

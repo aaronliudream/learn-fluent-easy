@@ -27,8 +27,15 @@ import {
   X,
   Zap,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { useState, type SyntheticEvent } from "react";
 import { useIsAdmin } from "@/hooks/useIsAdmin";
+import {
+  AMERICAN_COURSE_NAME,
+  AMERICAN_COURSE_SUBTITLE,
+  AMERICAN_COURSE_SCALE,
+  AMERICAN_COURSE_PATH,
+} from "@/lib/american/brand";
 
 /** 首页营销落地页（新版式）— 仅用于 `/`，旧学习中枢见 `/?hub=1` */
 
@@ -73,7 +80,20 @@ function HeroCopy({ zh, en, className }: { zh: string; en: string; className?: s
   return <span className={className}>{isZh ? zh : en}</span>;
 }
 
-const COURSE_CARDS = [
+type CourseCardData = {
+  to: string;
+  icon: LucideIcon;
+  title: string;
+  desc: string;
+  tag: string;
+  /** 有照片走 <img>;无照片走 gradient(美语卡即用此,避开真实校名/地标商标风险)。 */
+  image?: string;
+  gradient?: string;
+  /** 右上角小标(其余三卡是校名;美语卡用中性文案,不用真实校名) */
+  badge?: string;
+};
+
+const COURSE_CARDS: CourseCardData[] = [
   {
     to: "/kids",
     icon: Backpack,
@@ -81,7 +101,7 @@ const COURSE_CARDS = [
     desc: "趣味启蒙 打好基础",
     tag: "三年级 - 六年级",
     image: "/landing/universities/stanford.jpg",
-    university: "斯坦福大学",
+    badge: "斯坦福大学",
   },
   {
     to: "/junior",
@@ -90,7 +110,7 @@ const COURSE_CARDS = [
     desc: "中考同步 高效提分",
     tag: "七年级 - 九年级",
     image: "/landing/universities/harvard.jpg",
-    university: "哈佛大学",
+    badge: "哈佛大学",
   },
   {
     to: "/gaokao",
@@ -99,18 +119,19 @@ const COURSE_CARDS = [
     desc: "高考冲刺 真题训练",
     tag: "高一 - 高三",
     image: "/landing/universities/oxford.jpg",
-    university: "牛津大学",
+    badge: "牛津大学",
   },
   {
-    to: "/levels",
-    icon: Target,
-    title: "成人英语",
-    desc: "职场口语 CEFR 分级",
-    tag: "A1 - C2",
-    image: "/landing/universities/tsinghua.jpg",
-    university: "清华大学",
+    // 成人英语卡已替换为美语课程(标题读自单一常量,定名后一处改全站)。
+    to: AMERICAN_COURSE_PATH,
+    icon: Sparkles,
+    title: AMERICAN_COURSE_NAME,
+    desc: AMERICAN_COURSE_SUBTITLE,
+    tag: AMERICAN_COURSE_SCALE,
+    gradient: "linear-gradient(135deg, #0a1628 0%, #16375f 52%, #c9922e 150%)",
+    badge: "美式课程",
   },
-] as const;
+];
 
 const WHY_ITEMS = [
   {
@@ -284,12 +305,20 @@ function CourseCard({ c, admin }: { c: (typeof COURSE_CARDS)[number]; admin?: bo
       : " hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(15,23,42,0.14)]");
   const inner = (
     <>
-      <img
-        src={c.image}
-        alt={c.university}
-        className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-105 saturate-110"
-        loading="lazy"
-      />
+      {c.image ? (
+        <img
+          src={c.image}
+          alt={c.badge ?? c.title}
+          className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-105 saturate-110"
+          loading="lazy"
+        />
+      ) : (
+        <div
+          className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+          style={{ background: c.gradient }}
+          aria-hidden
+        />
+      )}
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/50 to-slate-900/20" />
 
       <div className="relative z-10 flex h-full flex-col p-4 text-white">
@@ -297,9 +326,11 @@ function CourseCard({ c, admin }: { c: (typeof COURSE_CARDS)[number]; admin?: bo
           <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm">
             <Icon className="size-[18px] shrink-0" strokeWidth={2.2} aria-hidden />
           </span>
-          <span className="rounded-full bg-black/30 px-2 py-0.5 text-[10px] font-medium backdrop-blur-sm">
-            {c.university}
-          </span>
+          {c.badge && (
+            <span className="rounded-full bg-black/30 px-2 py-0.5 text-[10px] font-medium backdrop-blur-sm">
+              {c.badge}
+            </span>
+          )}
         </div>
 
         <div className="mt-auto space-y-1.5">

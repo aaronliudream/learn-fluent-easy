@@ -12,7 +12,7 @@ const ITEMS: { to: string; label: string; soon?: boolean }[] = [
   { to: "/kids", label: "小学" },
   { to: "/junior", label: "初中" },
   { to: "/senior", label: "高中", soon: true }, // 整理中:不可点
-  { to: "/slang", label: "俚语" },
+  { to: "/american", label: "美语" },
   { to: "/about", label: "关于我们" },
 ];
 

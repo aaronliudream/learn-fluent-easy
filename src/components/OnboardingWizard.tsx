@@ -27,10 +27,10 @@ type Goal = "travel" | "career" | "exam" | "general";
 type Level = "beginner" | "intermediate" | "advanced";
 
 const GOALS: { id: Goal; icon: typeof Globe2; titleEn: string; descEn: string; route: string }[] = [
-  { id: "travel",  icon: Plane,        titleEn: "Travel & life",      descEn: "Talk to people, order food, get around.", route: "/scenes" },
-  { id: "career",  icon: Briefcase,    titleEn: "Work & career",      descEn: "Meetings, emails, interviews.",            route: "/workplace" },
+  { id: "travel",  icon: Plane,        titleEn: "Travel & life",      descEn: "Talk to people, order food, get around.", route: "/american" },
+  { id: "career",  icon: Briefcase,    titleEn: "Work & career",      descEn: "Meetings, emails, interviews.",            route: "/american" },
   { id: "exam",    icon: GraduationCap, titleEn: "Exam prep",         descEn: "Gaokao, IELTS, school tests.",             route: "/china" },
-  { id: "general", icon: Sparkles,     titleEn: "Just get fluent",    descEn: "Build a strong, balanced foundation.",      route: "/levels" },
+  { id: "general", icon: Sparkles,     titleEn: "Just get fluent",    descEn: "Build a strong, balanced foundation.",      route: "/american" },
 ];
 
 const LEVELS: { id: Level; titleEn: string; descEn: string }[] = [

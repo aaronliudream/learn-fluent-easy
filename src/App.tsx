@@ -21,28 +21,18 @@ import NotFound from "./pages/NotFound.tsx";
 import { Navigate } from "react-router-dom";
 
 // Lazy-load everything else — each page becomes its own chunk
-const Level = lazy(() => import("./pages/Level.tsx"));
-const Levels = lazy(() => import("./pages/Levels.tsx"));
-const Unit = lazy(() => import("./pages/Unit.tsx"));
-const Lesson = lazy(() => import("./pages/Lesson.tsx"));
+// 成人英语(CEFR)板块已下线,页面归档至 _archived/adult/。旧路由 301 → /american(见 Routes)。
+const AmericanHome = lazy(() => import("./pages/american/AmericanHome.tsx"));
 const Stats = lazy(() => import("./pages/Stats.tsx"));
 const WeeklyReport = lazy(() => import("./pages/WeeklyReport.tsx"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe.tsx"));
 const AdminFeedback = lazy(() => import("./pages/AdminFeedback.tsx"));
 const AdminGrammarContent = lazy(() => import("./pages/AdminGrammarContent.tsx"));
-const Placement = lazy(() => import("./pages/Placement.tsx"));
-const Slang = lazy(() => import("./pages/Slang.tsx"));
 const Account = lazy(() => import("./pages/Account.tsx"));
 const Privacy = lazy(() => import("./pages/Privacy.tsx"));
 const Terms = lazy(() => import("./pages/Terms.tsx"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer.tsx"));
 const About = lazy(() => import("./pages/About.tsx"));
-const Scenes = lazy(() => import("./pages/Scenes.tsx"));
-const ScenesCategory = lazy(() => import("./pages/ScenesCategory.tsx"));
-const ScenesPlay = lazy(() => import("./pages/ScenesPlay.tsx"));
-const Workplace = lazy(() => import("./pages/Workplace.tsx"));
-const WorkplaceCategory = lazy(() => import("./pages/WorkplaceCategory.tsx"));
-const WorkplacePlay = lazy(() => import("./pages/WorkplacePlay.tsx"));
 const Gaokao = lazy(() => import("./pages/Gaokao.tsx"));
 const GaokaoGrade = lazy(() => import("./pages/GaokaoGrade.tsx"));
 const GaokaoBooks = lazy(() => import("./pages/GaokaoBooks.tsx"));
@@ -340,14 +330,15 @@ const App = () => (
           <Route path="/stats" element={<Stats />} />
           <Route path="/weekly-report" element={<WeeklyReport />} />
           <Route path="/unsubscribe" element={<Unsubscribe />} />
-          <Route path="/placement" element={<Placement />} />
-          <Route path="/slang" element={<Slang />} />
+          {/* 成人板块下线:旧路由 301 → /american */}
+          <Route path="/placement" element={<Navigate to="/american" replace />} />
+          <Route path="/slang" element={<Navigate to="/american" replace />} />
           <Route path="/account" element={<Account />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/about" element={<About />} />
-          <Route path="/scenes" element={<Scenes />} />
+          <Route path="/scenes" element={<Navigate to="/american" replace />} />
           <Route path="/review" element={<Review />} />
           <Route path="/mistakes" element={<Mistakes />} />
           <Route path="/review/today" element={<ReviewToday />} />
@@ -363,11 +354,11 @@ const App = () => (
           <Route path="/teacher/class/:id" element={<TeacherClass />} />
           <Route path="/teacher/cards" element={<TeacherCards />} />
           <Route path="/teacher/cards/:slug" element={<TeacherCardStats />} />
-          <Route path="/scenes/:catKey" element={<ScenesCategory />} />
-          <Route path="/scenes/:catKey/:dialogueId" element={<ScenesPlay />} />
-          <Route path="/workplace" element={<Workplace />} />
-          <Route path="/workplace/:catKey" element={<WorkplaceCategory />} />
-          <Route path="/workplace/:catKey/:dialogueId" element={<WorkplacePlay />} />
+          <Route path="/scenes/:catKey" element={<Navigate to="/american" replace />} />
+          <Route path="/scenes/:catKey/:dialogueId" element={<Navigate to="/american" replace />} />
+          <Route path="/workplace" element={<Navigate to="/american" replace />} />
+          <Route path="/workplace/:catKey" element={<Navigate to="/american" replace />} />
+          <Route path="/workplace/:catKey/:dialogueId" element={<Navigate to="/american" replace />} />
           <Route path="/china" element={<ChineseOnlyRoute><China /></ChineseOnlyRoute>} />
           <Route path="/primary" element={<ChineseOnlyRoute><Primary /></ChineseOnlyRoute>} />
           <Route path="/primary/hub/:grade" element={<ChineseOnlyRoute><PrimaryHubLayout /></ChineseOnlyRoute>}>
@@ -535,10 +526,13 @@ const App = () => (
           <Route path="/gaokao/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           <Route path="/gaokao/g/:grade/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           {/* end 高中(已开放)*/}
-          <Route path="/level/:levelId" element={<Level />} />
-          <Route path="/levels" element={<Levels />} />
-          <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
-          <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />
+          {/* 美语课程入口(Phase 1 占位页;Phase 2 换为 12 单元 hub) */}
+          <Route path="/american" element={<AmericanHome />} />
+          {/* 成人板块旧课程路由 301 → /american */}
+          <Route path="/level/:levelId" element={<Navigate to="/american" replace />} />
+          <Route path="/levels" element={<Navigate to="/american" replace />} />
+          <Route path="/level/:levelId/unit/:unitId" element={<Navigate to="/american" replace />} />
+          <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Navigate to="/american" replace />} />
           <Route path="/admin/feedback" element={<AdminFeedback />} />
           <Route path="/admin/grammar-content" element={<AdminGrammarContent />} />
           <Route path="/pricing" element={<Pricing />} />

@@ -131,16 +131,10 @@ const Review = () => {
           </div>
           <div className="mt-5 flex flex-wrap justify-center gap-2">
             <Link
-              to="/scenes"
+              to="/american"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground transition hover:opacity-90"
             >
-              <T>去学场景对话</T>
-            </Link>
-            <Link
-              to="/workplace"
-              className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-bold text-foreground transition hover:bg-primary/15"
-            >
-              <T>去学职场英语</T>
+              <T>去学美语课程</T>
             </Link>
           </div>
         </div>

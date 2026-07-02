@@ -2,30 +2,30 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { T, useT } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
+import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_PATH } from "@/lib/american/brand";
 
 /**
  * Three-track entry section shown at the very top of the homepage.
  * Maps the three primary user intents (exam / career / beginner) to existing modules.
  * Uses brand gradients (violet → magenta → coral) on the warm-paper canvas.
  */
-const ALL_TRACKS = [
+const ALL_TRACKS: {
+  to: string;
+  cefr: string;
+  zh: string;
+  en: string;
+  gradient: string;
+  btnTextColor: string;
+  chinaOnly: boolean;
+  badge?: string;
+}[] = [
   {
-    to: "/levels",
-    cefr: "CEFR Pre-A1 — A2",
-    zh: "系统学习课程",
-    en: "Structured Course",
+    to: AMERICAN_COURSE_PATH,
+    cefr: "American · 12 单元",
+    zh: AMERICAN_COURSE_NAME,
+    en: "American English",
     gradient: "linear-gradient(160deg, #F47C45 0%, #F59E0B 100%)",
     btnTextColor: "#F47C45",
-    chinaOnly: false,
-  },
-  {
-    to: "/workplace",
-    cefr: "CEFR B1 — C1",
-    zh: "职场英语",
-    en: "Career Track",
-    gradient: "linear-gradient(160deg, #ED3F8C 0%, #F47C45 100%)",
-    btnTextColor: "#ED3F8C",
-    badge: "热门",
     chinaOnly: false,
   },
   {

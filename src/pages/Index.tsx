@@ -1,4 +1,4 @@
-import { ArrowRight, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Mic, Users, UserPlus } from "lucide-react";
+import { ArrowRight, LogIn, LogOut, Sparkles, Cloud, BarChart3, UserCog, Mic, Users, UserPlus } from "lucide-react";
 import { BrandLockup } from "@/components/brand/BrandLogo";
 import { Link, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -21,6 +21,7 @@ import OnboardingWizard from "@/components/OnboardingWizard";
 import ProWaitlistButton from "@/components/ProWaitlistButton";
 import BrandHubNav from "@/components/BrandHubNav";
 import BrandFamilyHero from "@/components/BrandFamilyHero";
+import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_PATH } from "@/lib/american/brand";
 
 const HOME_COUNTS = {
   slang: 347,
@@ -80,32 +81,15 @@ const Index = () => {
 
 const sections = [
     {
-      to: "/slang",
-      icon: Zap,
-      eyebrow: "American Slang",
-      title: "347 条地道俚语",
-      desc: "从 'rizz' 到 'spill the tea'，认 / 听 / 想 / 用 四维掌握。",
-      gradient: "from-rose-500 via-orange-500 to-amber-500",
-    },
-    {
-      to: "/levels",
-      icon: Award,
-      eyebrow: "Adult English",
-      title: "成人英语",
-      desc: "A1 → C2 六个级别系统课程，从入门到精通，按 CEFR 标准循序渐进。",
+      to: AMERICAN_COURSE_PATH,
+      icon: Sparkles,
+      eyebrow: "American English",
+      title: AMERICAN_COURSE_NAME,
+      desc: "地道美语 · 72 课 12 单元，从零开始系统学。",
       gradient: "from-indigo-500 via-violet-500 to-purple-500",
     },
-    // 排行榜(/leaderboard)入口按需求隐藏(页面/路由保留)。
+    // 成人英语/俚语入口已随板块下线移除;排行榜(/leaderboard)入口按需求隐藏(页面/路由保留)。
   ];
-
-  const placementSection = {
-    to: "/placement",
-    icon: Award,
-    eyebrow: t("index.section.placement.eyebrow"),
-    title: t("index.section.placement.title"),
-    desc: t("index.section.placement.desc"),
-    gradient: "from-indigo-500 via-violet-500 to-purple-500",
-  };
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">

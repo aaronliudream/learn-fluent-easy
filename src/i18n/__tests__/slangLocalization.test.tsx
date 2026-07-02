@@ -1,6 +1,4 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { readFileSync } from "node:fs";
-import path from "node:path";
 import { render, act, cleanup } from "@testing-library/react";
 const screen = {
   getByTestId: (id: string) => document.querySelector(`[data-testid="${id}"]`) as HTMLElement,
@@ -17,6 +15,12 @@ const invokeMock = vi.fn();
 vi.mock("@/integrations/supabase/client", () => ({
   supabase: {
     functions: { invoke: (...args: unknown[]) => invokeMock(...args) },
+    // I18nProvider syncs profile language via auth; keep it logged-out so it no-ops.
+    auth: {
+      getSession: async () => ({ data: { session: null }, error: null }),
+      getUser: async () => ({ data: { user: null }, error: null }),
+      onAuthStateChange: () => ({ data: { subscription: { unsubscribe: () => {} } } }),
+    },
     from: () => ({
       select: () => ({
         order: () => ({
@@ -58,44 +62,8 @@ afterEach(() => {
   localStorage.clear();
 });
 
-// ─────────────────────────────────────────────────────────────
-// 1) Source-level guards: every localized idiom field must be
-//    wrapped in <T> so the translator catches it for every lang.
-// ─────────────────────────────────────────────────────────────
-describe("Slang page i18n source guards", () => {
-  const src = readFileSync(
-    path.resolve(__dirname, "../../pages/Slang.tsx"),
-    "utf8",
-  );
-
-  const mustHave: Array<{ name: string; pattern: RegExp }> = [
-    { name: "browse meaning_cn wrapped",      pattern: /<T>\{it\.meaning_cn\}<\/T>/ },
-    { name: "browse example_cn wrapped",      pattern: /<T>\{it\.example_cn\}<\/T>/ },
-    { name: "quiz cn2en prompt wrapped",      pattern: /<T>\{q\.prompt\}<\/T>/ },
-    { name: "fill/cn2en context wrapped",     pattern: /<T>\{q\.context\}<\/T>/ },
-    { name: "en2cn options translated",       pattern: /q\.kind === "en2cn" \? <T>\{opt\}<\/T> : opt/ },
-    { name: "reveal idiom meaning_cn wrapped",pattern: /<T>\{q\.idiom\.meaning_cn\}<\/T>/ },
-    { name: "reveal idiom example_cn wrapped",pattern: /<T>\{q\.idiom\.example_cn\}<\/T>/ },
-    { name: "result list meaning_cn wrapped", pattern: /<T>\{q\.idiom\.meaning_cn\}<\/T>/ },
-  ];
-
-  for (const { name, pattern } of mustHave) {
-    it(`Slang.tsx: ${name}`, () => {
-      expect(pattern.test(src)).toBe(true);
-    });
-  }
-
-  it("does not render raw {it.meaning_cn} outside a <T>", () => {
-    // Find all occurrences of {it.meaning_cn}; every one must sit
-    // inside a <T>...</T> wrapper.
-    const re = /\{it\.meaning_cn\}/g;
-    let m: RegExpExecArray | null;
-    while ((m = re.exec(src))) {
-      const around = src.slice(Math.max(0, m.index - 8), m.index + m[0].length + 8);
-      expect(around).toMatch(/<T>\{it\.meaning_cn\}<\/T>/);
-    }
-  });
-});
+// (成人 Slang 页已归档至 _archived/adult/ —— 原「Slang page i18n source guards」
+//  源码守卫用例随之移除;下方通用 <T> 翻译管线用例保留。)
 
 // ─────────────────────────────────────────────────────────────
 // 2) Runtime check: <T> translates native helper text for every

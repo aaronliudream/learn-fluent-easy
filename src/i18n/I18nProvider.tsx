@@ -252,7 +252,6 @@ const EN_FALLBACKS: Record<string, string> = {
   "无动画、无主动提醒": "No animation, no active reminders",
   "平衡的陪伴感": "Balanced companionship",
   "更频繁的鼓励反馈": "More frequent encouragement",
-  "在等你练习": "Waiting for you to practice",
   "没事，再来一次 💛": "No worries, try again 💛",
   "真棒": "Nice!",
   "闪光！": "Sparkle!",

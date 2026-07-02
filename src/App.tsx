@@ -167,7 +167,6 @@ import FeedbackWidget from "@/components/FeedbackWidget";
 import InstallPrompt from "@/components/InstallPrompt";
 import QuizKeyboardShortcuts from "@/components/QuizKeyboardShortcuts";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
-import { FloatingPet } from "@/components/pet/FloatingPet";
 import { DigestionAnimation } from "@/components/pet/DigestionAnimation";
 import { EvolutionCelebration } from "@/components/pet/EvolutionCelebration";
 import GrowthLetter from "@/components/pet/GrowthLetter";
@@ -193,20 +192,8 @@ const HeartbeatGate = () => {
   return null;
 };
 
-// 全站浮动伙伴：除了少数干扰场景（登录/落地英雄区/全屏对话）外都显示。
-// 未登录访客也会看到 demo 蛋，点击引导到注册→领养。
-const FloatingPetGate = () => {
-  const { pathname } = useLocation();
-  const hide =
-    pathname === "/" ||                  // 首页已有英雄伙伴，避免重复
-    pathname.startsWith("/auth") ||
-    pathname.startsWith("/pets") ||      // 宠物详情页本身
-    pathname.startsWith("/primary") ||   // 小学专区(首页+hub)统一隐藏彩虹鲸
-    pathname.startsWith("/junior") ||    // 初中专区统一隐藏彩虹鲸
-    pathname.startsWith("/placement");   // 评测专注模式
-  if (hide) return null;
-  return <FloatingPet />;
-};
+// 全站浮动伙伴（彩虹鲸/FloatingPet）已下线，组件归档至 _archived/pet/。
+// /pets 详情页、伙伴养成/聊天等独立功能保留，仅移除右下角浮窗。
 
 const FeedbackWidgetGate = () => {
   return <FeedbackWidget />;
@@ -320,7 +307,6 @@ const App = () => (
         {/* LanguagePickerModal removed — first visit defaults to 简体中文;
             switchable via LangToggleEnZh / LanguageSwitcher in the header. */}
         <GaokaoBreakReminder />
-        <FloatingPetGate />
         <EvolutionCelebration />
         <DigestionAnimation />
         <GrowthLetter />

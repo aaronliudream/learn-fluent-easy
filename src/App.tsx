@@ -145,7 +145,6 @@ const GaokaoWritingPlay = lazy(() => import("./pages/GaokaoWritingPlay.tsx"));
 const GaokaoListening = lazy(() => import("./pages/GaokaoListening.tsx"));
 const GaokaoListeningPlay = lazy(() => import("./pages/GaokaoListeningPlay.tsx"));
 const GaokaoMistakes = lazy(() => import("./pages/GaokaoMistakes.tsx"));
-const SavedPhrases = lazy(() => import("./pages/SavedPhrases.tsx"));
 const Review = lazy(() => import("./pages/Review.tsx"));
 const Mistakes = lazy(() => import("./pages/Mistakes.tsx"));
 const ReviewToday = lazy(() => import("./pages/ReviewToday.tsx"));
@@ -349,7 +348,6 @@ const App = () => (
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/about" element={<About />} />
           <Route path="/scenes" element={<Scenes />} />
-          <Route path="/saved" element={<SavedPhrases />} />
           <Route path="/review" element={<Review />} />
           <Route path="/mistakes" element={<Mistakes />} />
           <Route path="/review/today" element={<ReviewToday />} />

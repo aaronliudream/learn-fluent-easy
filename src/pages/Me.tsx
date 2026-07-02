@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import type { User } from "@supabase/supabase-js";
 import { PageHeader } from "@/components/PageHeader";
 import {
-  BarChart3, Bookmark, Heart, Settings,
+  BarChart3, Heart, Settings,
   LogIn, LogOut, Sparkles, ClipboardList, Target } from
 "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,7 +19,6 @@ const TILES: Tile[] = [
 { to: "/dashboard", label: "学习中心", sub: "总进度 · 各模块掌握度", icon: BarChart3, tone: "from-emerald-500 to-teal-500" },
 { to: "/review", label: "复习与错题", sub: "FSRS 智能安排今日复习", icon: Target, tone: "from-orange-500 to-rose-500" },
 { to: "/mistakes", label: "我的错题本", sub: "回看做错的题", icon: ClipboardList, tone: "from-amber-500 to-orange-500" },
-{ to: "/saved", label: "收藏的句子", sub: "随时复习好用的表达", icon: Bookmark, tone: "from-sky-500 to-indigo-500" },
 { to: "/pets", label: "我的宠物", sub: "陪你一起学英语", icon: Heart, tone: "from-rose-500 to-pink-500" },
 { to: "/account", label: "账号设置", sub: "邮箱、隐私、数据导出", icon: Settings, tone: "from-slate-600 to-slate-800" }];
 

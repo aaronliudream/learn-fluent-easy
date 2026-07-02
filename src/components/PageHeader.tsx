@@ -1,4 +1,4 @@
-import { ArrowLeft, Home, Star, Brain, MoreVertical, Globe, Settings2, UserCog, LogOut, LogIn } from "lucide-react";
+import { ArrowLeft, Home, Brain, MoreVertical, Globe, Settings2, UserCog, LogOut, LogIn } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -137,12 +137,6 @@ export const PageHeader = ({ title, subtitle, back, hideReviewBanner }: Props) =
                 }
               </Link>
             </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              <Link to="/saved" className="flex items-center gap-2">
-                <Star className="size-4 text-amber-500" /> <T>我的收藏</T>
-              </Link>
-            </DropdownMenuItem>
-
             <DropdownMenuSeparator />
 
             {loggedIn ?

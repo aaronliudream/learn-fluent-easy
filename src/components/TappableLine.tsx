@@ -1,13 +1,10 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Loader2, Volume2, Sparkles, Star } from "lucide-react";
+import { Loader2, Volume2, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { stripTags } from "@/lib/richText";
 import { T } from "@/i18n/T";
-import { addSavedPhrase, isSaved, removeSavedPhrase, normalizePhrase } from "@/lib/savedPhrases";
-import { toast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
 
 type EnCnPair = { en: string; cn: string };
 type LiteralWord = { word: string; meaning_cn: string; note_cn?: string };
@@ -184,55 +181,6 @@ function ExplainPopover({
   const [data, setData] = useState<Explanation | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [saved, setSaved] = useState(false);
-  const [savingBusy, setSavingBusy] = useState(false);
-  const nav = useNavigate();
-
-  useEffect(() => {
-    if (!open) return;
-    let cancelled = false;
-    isSaved(phrase).then((v) => {
-      if (!cancelled) setSaved(v);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [open, phrase]);
-
-  const toggleSave = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (savingBusy) return;
-    setSavingBusy(true);
-    try {
-      if (saved) {
-        await removeSavedPhrase(normalizePhrase(phrase));
-        setSaved(false);
-        toast({ title: "已从收藏中移除" });
-      } else {
-        await addSavedPhrase({
-          phrase,
-          contextText,
-          source: typeof window !== "undefined" ? window.location.pathname : null,
-        });
-        setSaved(true);
-        toast({ title: "已加入我的收藏" });
-      }
-    } catch (err: any) {
-      if (err?.message === "not_signed_in") {
-        toast({
-          title: "请先登录",
-          description: "登录后即可收藏短语到学习列表",
-        });
-        nav("/auth");
-      } else {
-        console.warn("[saved] toggle error", err);
-        toast({ title: "操作失败,请稍后再试", variant: "destructive" });
-      }
-    } finally {
-      setSavingBusy(false);
-    }
-  };
 
   const fetchExplanation = async () => {
     if (data || loading) return;
@@ -289,18 +237,6 @@ function ExplainPopover({
               ) : null}
             </div>
             <div className="flex shrink-0 items-center gap-1.5">
-              <button
-                onClick={toggleSave}
-                disabled={savingBusy}
-                aria-label={saved ? "Remove from favorites" : "Save phrase"}
-                className={`grid size-8 place-items-center rounded-full transition ${
-                  saved
-                    ? "bg-amber-100 text-amber-600 hover:bg-amber-200 dark:bg-amber-500/20 dark:text-amber-300"
-                    : "bg-secondary text-foreground/70 hover:bg-amber-100 hover:text-amber-600 dark:hover:bg-amber-500/20 dark:hover:text-amber-300"
-                }`}
-              >
-                <Star className={`size-4 ${saved ? "fill-current" : ""}`} />
-              </button>
               <button
                 onClick={(e) => {
                   e.preventDefault();

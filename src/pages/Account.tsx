@@ -18,7 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Download, Trash2, Shield, FileText, LogIn, LogOut, UserCog, Trophy, Save, BookMarked, Bookmark, Sparkles, Mail, MessageSquare } from "lucide-react";
+import { Download, Trash2, Shield, FileText, LogIn, LogOut, UserCog, Trophy, Save, BookMarked, Sparkles, Mail, MessageSquare } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { loadProgress } from "@/lib/guestProgress";
 import { T, useT } from "@/i18n/T";
@@ -354,11 +354,6 @@ const Account = () => {
             <Button asChild variant="outline" className="justify-start">
               <Link to="/mistakes">
                 <BookMarked className="size-4" /> <T>错题本</T>
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="justify-start">
-              <Link to="/saved">
-                <Bookmark className="size-4" /> <T>收藏的表达</T>
               </Link>
             </Button>
           </div>

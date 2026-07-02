@@ -12,15 +12,15 @@ export type AmericanStageDef = {
 
 export const AMERICAN_STAGES: AmericanStageDef[] = [
   { stage: 1, label: "课文学习", emoji: "📖", ready: true },
-  { stage: 2, label: "核心词汇", emoji: "🔤", ready: false },
-  { stage: 3, label: "听音辨词", emoji: "👂", ready: false },
-  { stage: 4, label: "词义配对", emoji: "🃏", ready: false },
-  { stage: 5, label: "语法专项", emoji: "🧩", ready: false },
-  { stage: 6, label: "美语点睛", emoji: "🇺🇸", ready: false },
-  { stage: 7, label: "对话填空", emoji: "✏️", ready: false },
-  { stage: 8, label: "听对话答题", emoji: "🎧", ready: false },
-  { stage: 9, label: "情景应答", emoji: "💬", ready: false },
-  { stage: 10, label: "本课通关", emoji: "🏆", ready: false },
+  { stage: 2, label: "核心词汇", emoji: "🔤", ready: true },
+  { stage: 3, label: "听音辨词", emoji: "👂", ready: true },
+  { stage: 4, label: "词义配对", emoji: "🃏", ready: true },
+  { stage: 5, label: "语法专项", emoji: "🧩", ready: true },
+  { stage: 6, label: "美语点睛", emoji: "🇺🇸", ready: true },
+  { stage: 7, label: "对话填空", emoji: "✏️", ready: true },
+  { stage: 8, label: "听对话答题", emoji: "🎧", ready: true },
+  { stage: 9, label: "情景应答", emoji: "💬", ready: true },
+  { stage: 10, label: "本课通关", emoji: "🏆", ready: true },
 ];
 
 export function stageDef(stage: number): AmericanStageDef | undefined {

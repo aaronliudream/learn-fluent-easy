@@ -210,6 +210,52 @@ export async function markSentenceRead(sentenceId: string): Promise<void> {
   return recordMastery("am_sentence", sentenceId, true);
 }
 
+// ---------- 词掌握(关2/3/4 共享,答对 2 次=掌握;schema 无 consec,按总答对数判定) ----------
+export type WordGame = "quiz" | "listen" | "match";
+
+/** 记录一次词游戏结果 → american_word_mastery(per-game 计数 + 总答对>=2 置掌握)。 */
+export async function recordWordMastery(wordId: string, unitNo: number, game: WordGame, isCorrect: boolean): Promise<void> {
+  const user = await uid();
+  if (!user) return;
+  const cCol = `${game}_correct`;
+  const wCol = `${game}_wrong`;
+  const { data: prev } = await db
+    .from("american_word_mastery")
+    .select("id,quiz_correct,listen_correct,match_correct,quiz_wrong,listen_wrong,match_wrong")
+    .eq("user_id", user)
+    .eq("word_id", wordId)
+    .maybeSingle();
+  const base = prev ?? { quiz_correct: 0, listen_correct: 0, match_correct: 0, quiz_wrong: 0, listen_wrong: 0, match_wrong: 0 };
+  const next: Record<string, number> = {
+    quiz_correct: base.quiz_correct ?? 0, listen_correct: base.listen_correct ?? 0, match_correct: base.match_correct ?? 0,
+    quiz_wrong: base.quiz_wrong ?? 0, listen_wrong: base.listen_wrong ?? 0, match_wrong: base.match_wrong ?? 0,
+  };
+  next[isCorrect ? cCol : wCol] += 1;
+  const totalCorrect = next.quiz_correct + next.listen_correct + next.match_correct;
+  const mastery_level = totalCorrect >= AM_MASTER_AT ? 4 : totalCorrect > 0 ? 1 : 0;
+  const payload = { ...next, mastery_level, last_seen_at: new Date().toISOString() };
+  if (prev?.id) await db.from("american_word_mastery").update(payload).eq("id", prev.id);
+  else await db.from("american_word_mastery").insert({ user_id: user, word_id: wordId, grade: unitNo, ...payload });
+}
+
+/** 一课词掌握:返回 {mastered, total}(总答对>=2 计掌握,三游戏共享)。 */
+export async function fetchWordProgress(words: AmericanWord[]): Promise<{ mastered: number; total: number }> {
+  const total = words.length;
+  const user = await uid();
+  if (!user || !total) return { mastered: 0, total };
+  const ids = words.map((w) => w.id);
+  const { data } = await db
+    .from("american_word_mastery")
+    .select("word_id,quiz_correct,listen_correct,match_correct")
+    .eq("user_id", user)
+    .in("word_id", ids);
+  let mastered = 0;
+  for (const r of (data ?? []) as { quiz_correct: number; listen_correct: number; match_correct: number }[]) {
+    if ((r.quiz_correct ?? 0) + (r.listen_correct ?? 0) + (r.match_correct ?? 0) >= AM_MASTER_AT) mastered++;
+  }
+  return { mastered, total };
+}
+
 /** 读取一课的掌握明细,聚合成每关的 masteredFrac(供列表页双环)。 */
 export async function fetchLessonMastery(bundle: LessonBundle): Promise<Record<number, StageProgress>> {
   const user = await uid();
@@ -234,6 +280,13 @@ export async function fetchLessonMastery(bundle: LessonBundle): Promise<Record<n
     for (const s of bundle.sentences) if ((byItem.get(`am_sentence:${s.id}`) ?? 0) >= 1) read++;
     if (bundle.lesson.prelisten_question && (byItem.get(`am_prelisten:${bundle.lesson.id}`) ?? 0) >= 1) read++;
     result[1].masteredFrac = read / sentTotal;
+  }
+
+  // 关2/3/4 掌握 = 已掌握词 / 总词(三游戏共享同一份词掌握)
+  if (bundle.words.length) {
+    const wp = await fetchWordProgress(bundle.words);
+    const frac = wp.total ? wp.mastered / wp.total : 0;
+    for (const s of [2, 3, 4]) result[s] = { done: completed.has(s), masteredFrac: frac };
   }
 
   // 关5-10 掌握 = 该关题答对>=2 占比

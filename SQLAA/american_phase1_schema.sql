@@ -2,10 +2,10 @@
 -- 美语课程 · Phase 1 建表(方案 A:新建 american_* 表;掌握表照抄 junior)
 -- ============================================================
 -- 项目 ref: degqpiiddkxcuzwombwp   执行:Aaron service role
--- ⚠️ 本文件为 **DRAFT**(草案)。种子(INSERT)不在此文件——种子需 6 个内容 md 定稿,
---    CC 尚未拿到,拿到后另出 american_phase1_seed.sql + 对账表。
--- ⚠️ 三处判断点(见文中 [决策?] 标注)想核对《美语课程_内容生产规格_v1》后再定,
---    确认前**先别在线上跑**;或你确认这三处后我即定稿。
+-- ✅ 三处判断点 Aaron 已拍板(2026-07-01):①item_id=text ②grade 存 unit_no(见 COMMENT) ③per-game 列全保留。
+--    此文件已可跑。种子(INSERT)另出 american_phase1_seed.sql(见对账表 docs/american/单元1_对账表.md;
+--    L1 词/关5/关10 待「美语第1课 v1」、全课关5语法题库待补,见对账表 gap)。
+-- 幂等:全部 IF NOT EXISTS + DROP POLICY IF EXISTS,可重复跑。
 -- 依据:《美语课程落地指令 v1》§1 + junior_user_mastery / junior_word_mastery 实际 schema。
 -- RLS 口径:内容表匿名+登录可读(service role 写);用户表 auth.uid()=user_id 自域读写(照 junior)。
 -- ============================================================
@@ -127,6 +127,8 @@ CREATE TABLE IF NOT EXISTS public.american_word_mastery (
   updated_at timestamptz NOT NULL DEFAULT now(),
   UNIQUE(user_id, word_id)
 );
+COMMENT ON COLUMN public.american_word_mastery.grade IS
+  '美语课程此列语义为 unit_no(1-12);列名沿用 junior_word_mastery.grade 以复用掌握代码,勿误读为学段年级。';
 
 -- ---------- 每关完成度 ----------
 CREATE TABLE IF NOT EXISTS public.american_lesson_progress (
@@ -149,17 +151,19 @@ CREATE INDEX IF NOT EXISTS idx_awm_user_grade ON public.american_word_mastery(us
 CREATE INDEX IF NOT EXISTS idx_alp_user_lesson ON public.american_lesson_progress(user_id, lesson_id);
 
 -- ---------- RLS ----------
+-- 幂等:先 DROP POLICY IF EXISTS 再 CREATE(避免 plpgsql 循环内 EXCEPTION 非法 + 可重复跑)
 -- 内容表:匿名+登录只读
 DO $$
-DECLARE t text;
+DECLARE t text; pol text;
 BEGIN
   FOREACH t IN ARRAY ARRAY[
     'american_lessons','american_sentences','american_words',
     'american_grammar_points','american_questions','american_amencontrast'
   ] LOOP
     EXECUTE format('ALTER TABLE public.%I ENABLE ROW LEVEL SECURITY', t);
-    EXECUTE format($p$CREATE POLICY "%1$s read all" ON public.%1$I FOR SELECT USING (true)$p$, t);
-  EXCEPTION WHEN duplicate_object THEN NULL;
+    pol := t || ' read all';
+    EXECUTE format('DROP POLICY IF EXISTS %I ON public.%I', pol, t);
+    EXECUTE format('CREATE POLICY %I ON public.%I FOR SELECT USING (true)', pol, t);
   END LOOP;
 END $$;
 
@@ -169,10 +173,12 @@ DECLARE t text;
 BEGIN
   FOREACH t IN ARRAY ARRAY['american_user_mastery','american_word_mastery','american_lesson_progress'] LOOP
     EXECUTE format('ALTER TABLE public.%I ENABLE ROW LEVEL SECURITY', t);
-    EXECUTE format($p$CREATE POLICY "%1$s select own" ON public.%1$I FOR SELECT USING (auth.uid() = user_id)$p$, t);
-    EXECUTE format($p$CREATE POLICY "%1$s insert own" ON public.%1$I FOR INSERT WITH CHECK (auth.uid() = user_id)$p$, t);
-    EXECUTE format($p$CREATE POLICY "%1$s update own" ON public.%1$I FOR UPDATE USING (auth.uid() = user_id)$p$, t);
-  EXCEPTION WHEN duplicate_object THEN NULL;
+    EXECUTE format('DROP POLICY IF EXISTS %I ON public.%I', t || ' select own', t);
+    EXECUTE format('CREATE POLICY %I ON public.%I FOR SELECT USING (auth.uid() = user_id)', t || ' select own', t);
+    EXECUTE format('DROP POLICY IF EXISTS %I ON public.%I', t || ' insert own', t);
+    EXECUTE format('CREATE POLICY %I ON public.%I FOR INSERT WITH CHECK (auth.uid() = user_id)', t || ' insert own', t);
+    EXECUTE format('DROP POLICY IF EXISTS %I ON public.%I', t || ' update own', t);
+    EXECUTE format('CREATE POLICY %I ON public.%I FOR UPDATE USING (auth.uid() = user_id)', t || ' update own', t);
   END LOOP;
 END $$;
 

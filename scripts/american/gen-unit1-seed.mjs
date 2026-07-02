@@ -9,7 +9,9 @@ const ROOT = process.cwd();
 const D = (f) => path.join(ROOT, "docs/american", f);
 const batch = readFileSync(D("美语课程_批次1_第2-6课.md"), "utf8");
 const l1v2 = readFileSync(D("美语第1课_定稿v2.md"), "utf8");
+const l1v1 = readFileSync(D("美语第1课_v1.md"), "utf8");
 const g5 = readFileSync(D("美语课程_单元1_关5题库_v1.md"), "utf8");
+const g6 = readFileSync(D("美语课程_单元1_关6小测_v1.md"), "utf8");
 
 // ---------- 确定性 PRNG(mulberry32),保证每次生成同一 SQL ----------
 let _s = 0x9e3779b9;
@@ -41,21 +43,24 @@ function assignAnswerPositions(M, P, attempts = 400) {
   }
   return seq;
 }
-// 对一组 choice 题统一配额放置答案。q.options[0] 视为正确项(解析时把正确项放首位),打散后回填 answer_index。
+// 对一组 choice 题按"选项个数"分组统一配额放置答案(3 选/4 选各自配额)。
+// q.options[0] 视为正确项(解析时把正确项放首位),打散后回填 answer_index。
 function placeQuota(qs) {
-  const P = 4;
-  const seq = assignAnswerPositions(qs.length, P);
-  qs.forEach((q, k) => {
-    const pos = Math.min(seq[k], q.options.length - 1);
-    const correct = q.options[0];
-    const rest = q.options.slice(1);
-    // 洗牌干扰项
-    for (let i = rest.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [rest[i], rest[j]] = [rest[j], rest[i]]; }
-    const out = new Array(q.options.length);
-    out[pos] = correct; let d = 0;
-    for (let p = 0; p < out.length; p++) { if (p === pos) continue; out[p] = rest[d++]; }
-    q.options = out; q.answer_index = pos;
-  });
+  const byLen = new Map();
+  for (const q of qs) { const n = q.options.length; if (!byLen.has(n)) byLen.set(n, []); byLen.get(n).push(q); }
+  for (const [P, group] of byLen) {
+    const seq = assignAnswerPositions(group.length, P);
+    group.forEach((q, k) => {
+      const pos = seq[k];
+      const correct = q.options[0];
+      const rest = q.options.slice(1);
+      for (let i = rest.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [rest[i], rest[j]] = [rest[j], rest[i]]; }
+      const out = new Array(q.options.length);
+      out[pos] = correct; let d = 0;
+      for (let p = 0; p < out.length; p++) { if (p === pos) continue; out[p] = rest[d++]; }
+      q.options = out; q.answer_index = pos;
+    });
+  }
 }
 
 const sq = (s) => (s == null ? "NULL" : "'" + String(s).replace(/'/g, "''") + "'");
@@ -143,7 +148,81 @@ function parseLesson(block, meta) {
   L.scenario = parseScenario(section(block, "关9"));
   // 关10 通关
   L.guan10 = parseGuan10(section(block, "关10"));
+  // 关5 语法讲解原文(body_md,批次1已审,原文填入)
+  L.grammarBody = stripHeaderLine(section(block, "关5"));
   return L;
+}
+function stripHeaderLine(s) {
+  if (!s) return null;
+  const body = s.replace(/^##[^\n]*\n/, "").trim();
+  return body || null;
+}
+function between(text, a, b) {
+  const i = text.indexOf(a); if (i < 0) return "";
+  const j = b ? text.indexOf(b, i + a.length) : -1;
+  return text.slice(i + a.length, j < 0 ? undefined : j);
+}
+// v1 L1 生词表(## 二、生词...)
+function parseV1Words(text) {
+  const sec = between(text, "## 二、生词", "## 三");
+  const out = [];
+  for (const row of tableRows(sec)) {
+    if (row.length >= 5 && row[0] !== "词汇" && !/^-+$/.test(row[0])) {
+      out.push({ word: row[0].trim(), ipa: clean(row[1]), pos: clean(row[2]), meaning_cn: clean(row[3]), example: clean(row[4]) });
+    }
+  }
+  return out;
+}
+// v1 L1 关10(## 五、练习 A 选择填空[3选] + B 句型转换),答案在"参考答案"块
+function parseV1Guan10(text) {
+  const out = [];
+  const aBlock = between(text, "### A", "### B");
+  const bBlock = between(text, "### B", "### C");
+  const ansBlock = text.slice(text.indexOf("参考答案"));
+  const ansA = {}; const mA = ansBlock.match(/A[：:]\s*([^\n]+)/);
+  if (mA) for (const p of mA[1].matchAll(/(\d+)\s*-\s*([a-d])/g)) ansA[+p[1]] = p[2];
+  const ansB = {}; const mB = ansBlock.match(/B[：:]\s*([^\n]+)/);
+  if (mB) for (const it of mB[1].split(/(?=\d+\.)/)) { const mm = it.match(/(\d+)\.\s*(.+?)[\s　]*$/); if (mm) ansB[+mm[1]] = mm[2].trim(); }
+  const aLines = aBlock.split("\n").map((x) => x.replace(/\s+$/, ""));
+  for (let i = 0; i < aLines.length; i++) {
+    const ms = aLines[i].match(/^\s*(\d+)\.\s*(.+)$/);
+    if (!ms) continue;
+    const n = +ms[1]; const stem = ms[2].trim();
+    let optLine = "";
+    for (let j = i + 1; j < aLines.length; j++) { if (/[a-d]\)/.test(aLines[j])) { optLine = aLines[j]; break; } if (/^\s*\d+\./.test(aLines[j])) break; }
+    if (!optLine) continue;
+    const { options } = parseInlineOptions(optLine);
+    const ci = "abcd".indexOf(ansA[n]);
+    const correct = options[ci];
+    out.push({ qtype: "choice", stem, options: [correct, ...options.filter((_, k) => k !== ci)], answer_index: 0 });
+  }
+  for (const line of bBlock.split("\n")) {
+    const mb = line.match(/^\s*(\d+)\.\s*(.+?)\s*(?:→|->)\s*(.*)$/);
+    if (!mb) continue;
+    const n = +mb[1]; const sentence = mb[2].trim(); const tail = mb[3] || "";
+    const nm = tail.match(/[（(]([^）)]*)[）)]/);
+    const stem = sentence + "（变一般疑问句" + (nm ? "；" + nm[1] : "") + "）";
+    out.push({ qtype: "transform", stem, answer_text: ansB[n] });
+  }
+  return out;
+}
+// 关6 小测题库 → {lessonNo:[choice...]}
+function parseGuan6(text) {
+  const byLesson = {};
+  const blocks = text.split(/##\s*L(\d)（am1_l0\d）/).slice(1);
+  for (let i = 0; i < blocks.length; i += 2) {
+    const ln = +blocks[i]; const body = blocks[i + 1]; const qs = [];
+    for (const row of tableRows(body)) {
+      if (row.length >= 5 && /^\d+$/.test(row[0])) {
+        const stem = row[2].trim();
+        const opts = row[3].split("/").map((x) => x.trim()).filter(Boolean);
+        const ans = row[4].trim();
+        qs.push({ qtype: "choice", stem, options: [ans, ...opts.filter((o) => o !== ans)] });
+      }
+    }
+    byLesson[ln] = qs;
+  }
+  return byLesson;
 }
 
 function cap(s) { return s.replace(/\b\w/g, (c) => c.toUpperCase()).replace(/\b(\w)(\w*)/g, (_, a, b) => a + b.toLowerCase()); }
@@ -254,9 +333,10 @@ const lessons = [];
 {
   const meta = { id: "am1_l01", unit_no: 1, lesson_no: 1,
     title_en: "Excuse me, is this your phone?", title_cn: "打扰一下，这是你的手机吗？" };
-  const L = parseLesson(l1v2, meta);
-  L.words = [];        // 缺 v1 详情
-  L.guan10 = [];       // 缺 v1
+  const L = parseLesson(l1v2, meta);          // 句/prelisten/关6/关7/关8/关9 用 v2 定稿
+  L.words = parseV1Words(l1v1);               // L1 词详情来自 v1
+  L.guan10 = parseV1Guan10(l1v1);             // L1 关10 来自 v1
+  L.grammarBody = (between(l1v1, "## 三、语法", "## 四").trim()) || null; // L1 语法讲解来自 v1
   lessons.push(L);
 }
 // L2-6: 从 batch 解析
@@ -276,6 +356,9 @@ for (const m of batch.matchAll(/#\s*Lesson\s*(\d)\s+[\s\S]*?(?=\n#\s*Lesson\s*\d
 lessons.sort((a, b) => a.lesson_no - b.lesson_no);
 
 const g5byLesson = parseGuan5(g5);
+const g6byLesson = parseGuan6(g6);
+const bodyByLesson = {};
+for (const L of lessons) bodyByLesson[L.lesson_no] = L.grammarBody;
 
 // ============ 生成 SQL ============
 const out = [];
@@ -295,10 +378,10 @@ for (const L of lessons) for (const s of L.sentences) {
 for (const L of lessons) for (const w of L.words) {
   out.push(`INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES (${sq(L.id)},${sq(w.word)},${sq(w.ipa)},${sq(w.pos)},${sq(w.meaning_cn)},${sq(w.example)}) ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;`);
 }
-// grammar_points (15,来自关5题库考点定义;body_md 待审填)
+// grammar_points (15,来自关5题库考点定义;body_md=本课语法讲解原文[批次1已审])
 for (const ln of Object.keys(g5byLesson)) {
   for (const p of g5byLesson[ln].points) {
-    out.push(`INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES (${sq(p.id)},${sq("am1_l0" + ln)},${sq(p.name)},NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;`);
+    out.push(`INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES (${sq(p.id)},${sq("am1_l0" + ln)},${sq(p.name)},${sq(bodyByLesson[ln])}) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;`);
   }
 }
 // contrast
@@ -322,7 +405,7 @@ function emitQuestions(lessonId, stage, items) {
   }
 }
 
-const counts = { lessons: lessons.length, sentences: 0, words: 0, grammar_points: 0, contrast: 0, q5: 0, q7: 0, q8: 0, q9: 0, q10: 0 };
+const counts = { lessons: lessons.length, sentences: 0, words: 0, grammar_points: 0, contrast: 0, q5: 0, q6: 0, q7: 0, q8: 0, q9: 0, q10: 0 };
 for (const L of lessons) { counts.sentences += L.sentences.length; counts.words += L.words.length; counts.contrast += L.contrast.length; }
 for (const ln of Object.keys(g5byLesson)) counts.grammar_points += g5byLesson[ln].points.length;
 
@@ -331,6 +414,9 @@ for (const L of lessons) {
   // 关5(题库)
   const g5q = (g5byLesson[ln]?.questions || []).map((q) => ({ ...q }));
   if (g5q.length) { emitQuestions(L.id, 5, g5q); counts.q5 += g5q.length; }
+  // 关6 美语点睛小测
+  const g6q = (g6byLesson[ln] || []).map((q) => ({ ...q }));
+  if (g6q.length) { emitQuestions(L.id, 6, g6q); counts.q6 += g6q.length; }
   // 关7 cloze(每空一题)
   if (L.cloze && L.cloze.blanks.length) {
     const items = L.cloze.blanks.map((b) => ({ qtype: "cloze", stem: `第 ${b.blank_no} 空`, context: L.cloze.context, blank_no: b.blank_no, options: b.options, answer_index: b.answer_index }));
@@ -363,8 +449,8 @@ out.push("COMMIT;");
 mkdirSync(path.join(ROOT, "SQLAA"), { recursive: true });
 writeFileSync(path.join(ROOT, "SQLAA/american_phase1_seed.sql"), out.join("\n") + "\n", "utf8");
 
-const totalQ = counts.q5 + counts.q7 + counts.q8 + counts.q9 + counts.q10;
+const totalQ = counts.q5 + counts.q6 + counts.q7 + counts.q8 + counts.q9 + counts.q10;
 console.log("对账(生成器实测):");
 console.table(counts);
-console.log("questions 合计 =", totalQ, "(关5", counts.q5, "关7", counts.q7, "关8", counts.q8, "关9", counts.q9, "关10", counts.q10, ")");
+console.log("questions 合计 =", totalQ, "(关5", counts.q5, "关6", counts.q6, "关7", counts.q7, "关8", counts.q8, "关9", counts.q9, "关10", counts.q10, ")");
 console.log("写出 SQLAA/american_phase1_seed.sql");

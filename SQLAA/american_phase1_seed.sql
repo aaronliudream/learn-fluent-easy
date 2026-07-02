@@ -62,6 +62,16 @@ INSERT INTO public.american_sentences (lesson_id,seq,speaker,text_en,text_cn) VA
 INSERT INTO public.american_sentences (lesson_id,seq,speaker,text_en,text_cn) VALUES ('am1_l06',6,'Chris','Oh, yes! That''s my mug. Thanks, Tina!','克里斯：哦，是的！那是我的杯子。谢谢，蒂娜！') ON CONFLICT (lesson_id,seq) DO UPDATE SET speaker=EXCLUDED.speaker,text_en=EXCLUDED.text_en,text_cn=EXCLUDED.text_cn;
 INSERT INTO public.american_sentences (lesson_id,seq,speaker,text_en,text_cn) VALUES ('am1_l06',7,'Tina','No problem. Please wash it, okay?','蒂娜：不客气。请把它洗了，好吗？') ON CONFLICT (lesson_id,seq) DO UPDATE SET speaker=EXCLUDED.speaker,text_en=EXCLUDED.text_en,text_cn=EXCLUDED.text_cn;
 INSERT INTO public.american_sentences (lesson_id,seq,speaker,text_en,text_cn) VALUES ('am1_l06',8,'Chris','My bad. Sorry!','克里斯：我的错。抱歉！') ON CONFLICT (lesson_id,seq) DO UPDATE SET speaker=EXCLUDED.speaker,text_en=EXCLUDED.text_en,text_cn=EXCLUDED.text_cn;
+INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l01','excuse me','/ɪkˈskjuz mi/','短语','打扰一下；借过','Excuse me, where''s the restroom?') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
+INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l01','ma''am','/mæm/','n.','女士（对陌生女性的礼貌称呼）','Can I help you, ma''am?') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
+INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l01','phone','/foʊn/','n.','手机（= cell phone）','my phone / on the phone') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
+INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l01','chair','/tʃɛr/','n.','椅子','on the chair') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
+INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l01','my','/maɪ/','pron.','我的','my phone, my name') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
+INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l01','your','/jʊr/','pron.','你的','your phone, your job') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
+INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l01','Here you go.','/hɪr ju ɡoʊ/','短语','给你（递东西时说）','递咖啡、找零时都可用') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
+INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l01','lifesaver','/ˈlaɪfˌseɪvər/','n.','救星；帮大忙的人','You''re a lifesaver!') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
+INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l01','No problem.','/noʊ ˈprɑbləm/','短语','不客气（美语高频）','回应 Thank you') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
+INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l01','Have a good one!','—','短语','祝你愉快（美语告别语）','店员、路人常用') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
 INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l02','evening','/ˈivnɪŋ/','n.','傍晚','Good evening.') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
 INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l02','sir','/sɜr/','n.','先生（礼貌称呼）','Welcome, sir.') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
 INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l02','welcome','/ˈwɛlkəm/','v./int.','欢迎','Welcome to Seattle.') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
@@ -119,21 +129,320 @@ INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VA
 INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l06','that','/ðæt/','pron.','那个','That''s my mug.') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
 INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l06','wash','/wɑʃ/','v.','洗','wash it') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
 INSERT INTO public.american_words (lesson_id,word,ipa,pos,meaning_cn,example) VALUES ('am1_l06','My bad.','—','短语','我的错（美语口语）','My bad. Sorry!') ON CONFLICT (lesson_id,word) DO UPDATE SET ipa=EXCLUDED.ipa,pos=EXCLUDED.pos,meaning_cn=EXCLUDED.meaning_cn,example=EXCLUDED.example;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l01_gp1','am1_l01','Is this...? 一般疑问句与 it 应答',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l01_gp2','am1_l01','物主代词 my / your',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l01_gp3','am1_l01','Excuse me 的用法',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l02_gp1','am1_l02','Here''s / Here are 单复数',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l02_gp2','am1_l02','I''m sorry vs Excuse me',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l02_gp3','am1_l02','服务场景礼貌用语',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l03_gp1','am1_l03','冠词 a / an',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l03_gp2','am1_l03','This is + 人（介绍）与国籍表达',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l04_gp1','am1_l04','Are you...? 问答',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l04_gp2','am1_l04','What''s your job? 与 a/an + 职业',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l05_gp1','am1_l05','How are you? / How''s...? 问答与告别语',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l05_gp2','am1_l05','be + 形容词作表语',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l06_gp1','am1_l06','Whose...? 与名词所有格 ''s',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l06_gp2','am1_l06','物主代词 his / her',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
-INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l06_gp3','am1_l06','this vs that',NULL) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l01_gp1','am1_l01','Is this...? 一般疑问句与 it 应答','（Grammar）
+
+### 1. be 动词一般疑问句：Is this...?
+
+陈述句变问句，把 **is 提到句首**：
+
+| 陈述句 | 一般疑问句 | 肯定回答 | 否定回答 |
+|---|---|---|---|
+| This is your phone. | **Is this** your phone? | Yes, **it is**. | No, **it isn''t**. |
+| This is my seat. | **Is this** my seat? | Yes, it is. | No, it isn''t. |
+
+⚠️ 回答时用 **it** 代替 this：不说 ~~Yes, this is~~，要说 **Yes, it is**。
+
+### 2. 指示代词 this
+
+**this** 指"这个"——离说话人**近**的一个东西。
+
+- **This** is my phone.（这是我的手机。）
+- Is **this** your coffee?（这是你的咖啡吗？）
+
+### 3. 物主代词 my / your
+
+| 人称代词 | 物主代词 | 例子 |
+|---|---|---|
+| I 我 | **my** 我的 | **my** phone |
+| you 你 | **your** 你的 | **your** phone |
+
+物主代词后面**必须跟名词**：my phone ✓　~~This is my.~~ ✗
+
+### 4. Excuse me 的用法（美语点睛 🇺🇸）
+
+| 场合 | 说法 |
+|---|---|
+| 引起陌生人注意 | **Excuse me**, is this your phone? |
+| 借过、穿过人群 | **Excuse me.**（英式常说 Sorry） |
+| 没听清对方的话 | **Excuse me?** / **Sorry?**（英式常说 Pardon?） |
+| 做错事道歉 | **I''m sorry.** |
+
+---') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l01_gp2','am1_l01','物主代词 my / your','（Grammar）
+
+### 1. be 动词一般疑问句：Is this...?
+
+陈述句变问句，把 **is 提到句首**：
+
+| 陈述句 | 一般疑问句 | 肯定回答 | 否定回答 |
+|---|---|---|---|
+| This is your phone. | **Is this** your phone? | Yes, **it is**. | No, **it isn''t**. |
+| This is my seat. | **Is this** my seat? | Yes, it is. | No, it isn''t. |
+
+⚠️ 回答时用 **it** 代替 this：不说 ~~Yes, this is~~，要说 **Yes, it is**。
+
+### 2. 指示代词 this
+
+**this** 指"这个"——离说话人**近**的一个东西。
+
+- **This** is my phone.（这是我的手机。）
+- Is **this** your coffee?（这是你的咖啡吗？）
+
+### 3. 物主代词 my / your
+
+| 人称代词 | 物主代词 | 例子 |
+|---|---|---|
+| I 我 | **my** 我的 | **my** phone |
+| you 你 | **your** 你的 | **your** phone |
+
+物主代词后面**必须跟名词**：my phone ✓　~~This is my.~~ ✗
+
+### 4. Excuse me 的用法（美语点睛 🇺🇸）
+
+| 场合 | 说法 |
+|---|---|
+| 引起陌生人注意 | **Excuse me**, is this your phone? |
+| 借过、穿过人群 | **Excuse me.**（英式常说 Sorry） |
+| 没听清对方的话 | **Excuse me?** / **Sorry?**（英式常说 Pardon?） |
+| 做错事道歉 | **I''m sorry.** |
+
+---') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l01_gp3','am1_l01','Excuse me 的用法','（Grammar）
+
+### 1. be 动词一般疑问句：Is this...?
+
+陈述句变问句，把 **is 提到句首**：
+
+| 陈述句 | 一般疑问句 | 肯定回答 | 否定回答 |
+|---|---|---|---|
+| This is your phone. | **Is this** your phone? | Yes, **it is**. | No, **it isn''t**. |
+| This is my seat. | **Is this** my seat? | Yes, it is. | No, it isn''t. |
+
+⚠️ 回答时用 **it** 代替 this：不说 ~~Yes, this is~~，要说 **Yes, it is**。
+
+### 2. 指示代词 this
+
+**this** 指"这个"——离说话人**近**的一个东西。
+
+- **This** is my phone.（这是我的手机。）
+- Is **this** your coffee?（这是你的咖啡吗？）
+
+### 3. 物主代词 my / your
+
+| 人称代词 | 物主代词 | 例子 |
+|---|---|---|
+| I 我 | **my** 我的 | **my** phone |
+| you 你 | **your** 你的 | **your** phone |
+
+物主代词后面**必须跟名词**：my phone ✓　~~This is my.~~ ✗
+
+### 4. Excuse me 的用法（美语点睛 🇺🇸）
+
+| 场合 | 说法 |
+|---|---|
+| 引起陌生人注意 | **Excuse me**, is this your phone? |
+| 借过、穿过人群 | **Excuse me.**（英式常说 Sorry） |
+| 没听清对方的话 | **Excuse me?** / **Sorry?**（英式常说 Pardon?） |
+| 做错事道歉 | **I''m sorry.** |
+
+---') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l02_gp1','am1_l02','Here''s / Here are 单复数','**① Here''s... / Here are...（递东西时说）**
+
+| 单数 | 复数 |
+|---|---|
+| **Here''s** my ticket.（= Here is） | **Here are** your keys. |
+| **Here''s** your coffee. | **Here are** your bags. |
+
+⚠️ 后面名词是复数时必须用 Here are，不说 ~~Here''s your keys~~。
+
+**② 礼貌请求与回应**：One moment, please.（请稍等）→ 常用于服务场景。
+
+**③ I''m sorry vs Excuse me（承接第1课）**
+- 做错了事（认错车、踩到脚）→ **I''m sorry.**
+- 引起注意、借过 → **Excuse me.**
+
+**④ my/your + 名词 复习**：my ticket / your keys / your tip。') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l02_gp2','am1_l02','I''m sorry vs Excuse me','**① Here''s... / Here are...（递东西时说）**
+
+| 单数 | 复数 |
+|---|---|
+| **Here''s** my ticket.（= Here is） | **Here are** your keys. |
+| **Here''s** your coffee. | **Here are** your bags. |
+
+⚠️ 后面名词是复数时必须用 Here are，不说 ~~Here''s your keys~~。
+
+**② 礼貌请求与回应**：One moment, please.（请稍等）→ 常用于服务场景。
+
+**③ I''m sorry vs Excuse me（承接第1课）**
+- 做错了事（认错车、踩到脚）→ **I''m sorry.**
+- 引起注意、借过 → **Excuse me.**
+
+**④ my/your + 名词 复习**：my ticket / your keys / your tip。') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l02_gp3','am1_l02','服务场景礼貌用语','**① Here''s... / Here are...（递东西时说）**
+
+| 单数 | 复数 |
+|---|---|
+| **Here''s** my ticket.（= Here is） | **Here are** your keys. |
+| **Here''s** your coffee. | **Here are** your bags. |
+
+⚠️ 后面名词是复数时必须用 Here are，不说 ~~Here''s your keys~~。
+
+**② 礼貌请求与回应**：One moment, please.（请稍等）→ 常用于服务场景。
+
+**③ I''m sorry vs Excuse me（承接第1课）**
+- 做错了事（认错车、踩到脚）→ **I''m sorry.**
+- 引起注意、借过 → **Excuse me.**
+
+**④ my/your + 名词 复习**：my ticket / your keys / your tip。') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l03_gp1','am1_l03','冠词 a / an','**① 冠词 a/an（一个）**
+
+| 规则 | 例子 |
+|---|---|
+| 辅音音素开头 → **a** | **a** teacher, **a** party, **a** friend |
+| 元音音素开头 → **an** | **an** engineer, **an** apple, **an** umbrella |
+
+⚠️ 看**发音**不看字母：a university（/j/ 音）、an hour（h 不发音）。
+
+**② This is + 人（介绍某人）**：This is my friend Diego. → 回应：Nice to meet you.
+
+**③ 国籍表达**：I''m from + 国家（Mexico / China / Korea）；I''m + 国籍形容词（Mexican / Chinese / Korean / American）。
+
+**④ He''s / She''s**：Diego is an engineer. = **He''s** an engineer.') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l03_gp2','am1_l03','This is + 人（介绍）与国籍表达','**① 冠词 a/an（一个）**
+
+| 规则 | 例子 |
+|---|---|
+| 辅音音素开头 → **a** | **a** teacher, **a** party, **a** friend |
+| 元音音素开头 → **an** | **an** engineer, **an** apple, **an** umbrella |
+
+⚠️ 看**发音**不看字母：a university（/j/ 音）、an hour（h 不发音）。
+
+**② This is + 人（介绍某人）**：This is my friend Diego. → 回应：Nice to meet you.
+
+**③ 国籍表达**：I''m from + 国家（Mexico / China / Korea）；I''m + 国籍形容词（Mexican / Chinese / Korean / American）。
+
+**④ He''s / She''s**：Diego is an engineer. = **He''s** an engineer.') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l04_gp1','am1_l04','Are you...? 问答','**① Are you...? 一般疑问句（主语是 you）**
+
+| 问 | 肯定答 | 否定答 |
+|---|---|---|
+| **Are you** new here? | Yes, **I am**. | No, **I''m not**. |
+| **Are you** American? | Yes, I am. | No, I''m not. |
+| **Are you** a nurse? | Yes, I am. | No, I''m not. |
+
+⚠️ 肯定简答不缩写：Yes, I am. ✓　~~Yes, I''m.~~ ✗
+
+**② What''s your job? 问职业**
+- 答：I''m a/an + 职业（I''m a nurse. / I''m an electrician.）
+- 回问：What about you? / How about you?
+
+**③ a/an + 职业 复习**：a nurse / a plumber / an electrician / an Uber driver。') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l04_gp2','am1_l04','What''s your job? 与 a/an + 职业','**① Are you...? 一般疑问句（主语是 you）**
+
+| 问 | 肯定答 | 否定答 |
+|---|---|---|
+| **Are you** new here? | Yes, **I am**. | No, **I''m not**. |
+| **Are you** American? | Yes, I am. | No, I''m not. |
+| **Are you** a nurse? | Yes, I am. | No, I''m not. |
+
+⚠️ 肯定简答不缩写：Yes, I am. ✓　~~Yes, I''m.~~ ✗
+
+**② What''s your job? 问职业**
+- 答：I''m a/an + 职业（I''m a nurse. / I''m an electrician.）
+- 回问：What about you? / How about you?
+
+**③ a/an + 职业 复习**：a nurse / a plumber / an electrician / an Uber driver。') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l05_gp1','am1_l05','How are you? / How''s...? 问答与告别语','**① How are you? 及其变体**
+
+| 问 | 常见回答（好→一般） |
+|---|---|
+| How are you (today)? | I''m great. / I''m pretty good. / I''m fine. / Not bad. |
+| How''s your wife? | She''s fine. / She''s doing well. |
+| How''s your puppy? | He''s happy. / He''s a handful! |
+
+**② 形容词作表语（be + 形容词）**：主语 + be + adj.
+- I''m **great**. / She''s **fine**. / He''s **happy**. / We''re **tired**.
+
+⚠️ 不加 a/an：~~I''m a fine.~~ ✗（对比：I''m **a** nurse. 职业是名词才加）
+
+**③ How''s = How is**：问单个人/物的状态。') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l05_gp2','am1_l05','be + 形容词作表语','**① How are you? 及其变体**
+
+| 问 | 常见回答（好→一般） |
+|---|---|
+| How are you (today)? | I''m great. / I''m pretty good. / I''m fine. / Not bad. |
+| How''s your wife? | She''s fine. / She''s doing well. |
+| How''s your puppy? | He''s happy. / He''s a handful! |
+
+**② 形容词作表语（be + 形容词）**：主语 + be + adj.
+- I''m **great**. / She''s **fine**. / He''s **happy**. / We''re **tired**.
+
+⚠️ 不加 a/an：~~I''m a fine.~~ ✗（对比：I''m **a** nurse. 职业是名词才加）
+
+**③ How''s = How is**：问单个人/物的状态。') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l06_gp1','am1_l06','Whose...? 与名词所有格 ''s','**① Whose...? 问归属**
+- **Whose** mug is this? → It''s **Chris''s** mug. / It''s **his**（第49课学名词性物主代词，此处答 his mug）.
+
+**② 名词所有格 ''s**
+
+| 规则 | 例子 |
+|---|---|
+| 人名 + **''s** | Amanda**''s** mug, Chris**''s** mug, Tina**''s** desk |
+
+⚠️ 以 s 结尾的人名也加 ''s：Chris → Chris**''s**（美语主流写法）。
+
+**③ 物主代词扩展：his / her**
+
+| 人称 | 物主代词 | 例子 |
+|---|---|---|
+| he 他 | **his** 他的 | his mug |
+| she 她 | **her** 她的 | her mug |
+
+（累计已学：my / your / his / her）
+
+**④ this vs that**：近处用 this（This one is black.），稍远或刚才提到的用 that（That''s my mug.）。') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l06_gp2','am1_l06','物主代词 his / her','**① Whose...? 问归属**
+- **Whose** mug is this? → It''s **Chris''s** mug. / It''s **his**（第49课学名词性物主代词，此处答 his mug）.
+
+**② 名词所有格 ''s**
+
+| 规则 | 例子 |
+|---|---|
+| 人名 + **''s** | Amanda**''s** mug, Chris**''s** mug, Tina**''s** desk |
+
+⚠️ 以 s 结尾的人名也加 ''s：Chris → Chris**''s**（美语主流写法）。
+
+**③ 物主代词扩展：his / her**
+
+| 人称 | 物主代词 | 例子 |
+|---|---|---|
+| he 他 | **his** 他的 | his mug |
+| she 她 | **her** 她的 | her mug |
+
+（累计已学：my / your / his / her）
+
+**④ this vs that**：近处用 this（This one is black.），稍远或刚才提到的用 that（That''s my mug.）。') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
+INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES ('am1_l06_gp3','am1_l06','this vs that','**① Whose...? 问归属**
+- **Whose** mug is this? → It''s **Chris''s** mug. / It''s **his**（第49课学名词性物主代词，此处答 his mug）.
+
+**② 名词所有格 ''s**
+
+| 规则 | 例子 |
+|---|---|
+| 人名 + **''s** | Amanda**''s** mug, Chris**''s** mug, Tina**''s** desk |
+
+⚠️ 以 s 结尾的人名也加 ''s：Chris → Chris**''s**（美语主流写法）。
+
+**③ 物主代词扩展：his / her**
+
+| 人称 | 物主代词 | 例子 |
+|---|---|---|
+| he 他 | **his** 他的 | his mug |
+| she 她 | **her** 她的 | her mug |
+
+（累计已学：my / your / his / her）
+
+**④ this vs that**：近处用 this（This one is black.），稍远或刚才提到的用 that（That''s my mug.）。') ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;
 INSERT INTO public.american_amencontrast (lesson_id,us,uk,note_cn) VALUES ('am1_l01','cell phone','mobile phone',NULL) ON CONFLICT DO NOTHING;
 INSERT INTO public.american_amencontrast (lesson_id,us,uk,note_cn) VALUES ('am1_l01','No problem.','Not at all.',NULL) ON CONFLICT DO NOTHING;
 INSERT INTO public.american_amencontrast (lesson_id,us,uk,note_cn) VALUES ('am1_l01','Excuse me?','Pardon?',NULL) ON CONFLICT DO NOTHING;
@@ -168,143 +477,175 @@ INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,pa
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',5,'am1_l01_gp2','transform','{"stem":"用\"我的钱包\"组句：This is ___ ___.","answer_text":"This is my wallet."}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',5,'am1_l01_gp3','choice','{"stem":"你想引起前面陌生人的注意，先说：","options":["No problem.","Excuse me.","I''m sorry.","Thank you."],"answer_index":1}'::jsonb,8) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',5,'am1_l01_gp3','choice','{"stem":"没听清对方的话，美语常说：","options":["Excuse me?","My bad.","Yes?","Here you go."],"answer_index":0}'::jsonb,9) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',6,NULL,'choice','{"stem":"美国人说\"手机\"最常用：","options":["hand phone","telephone set","mobile phone","cell phone"],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',6,NULL,'choice','{"stem":"回应 \"Thank you\"，美语最高频的是：","options":["Not at all.","Pardon?","No problem.","Cheers!"],"answer_index":2}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',6,NULL,'choice','{"stem":"没听清对方的话，美语说：","options":["Pardon?","My bad.","Here you go.","Excuse me?"],"answer_index":3}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',6,NULL,'choice','{"stem":"告别时美国人常说：","options":["Not at all.","Cheers!","Have a good one!","How do you do?"],"answer_index":2}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',6,NULL,'choice','{"stem":"对陌生女士的礼貌称呼，美语用：","options":["lady","ma''am","mister","boy"],"answer_index":1}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',7,NULL,'cloze','{"stem":"第 1 空","context":"TYLER: ___1___, ma''am.\nTYLER: Is this ___2___ phone? It was on the chair.\nEMMA: Oh! Yes, ___3___ is. It''s my phone.\nTYLER: ___4___ you go.","blank_no":1,"options":["I''m sorry","Excuse me","Thank you","Hello you"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',7,NULL,'cloze','{"stem":"第 2 空","context":"TYLER: ___1___, ma''am.\nTYLER: Is this ___2___ phone? It was on the chair.\nEMMA: Oh! Yes, ___3___ is. It''s my phone.\nTYLER: ___4___ you go.","blank_no":2,"options":["my","you","your","I"],"answer_index":2}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',7,NULL,'cloze','{"stem":"第 3 空","context":"TYLER: ___1___, ma''am.\nTYLER: Is this ___2___ phone? It was on the chair.\nEMMA: Oh! Yes, ___3___ is. It''s my phone.\nTYLER: ___4___ you go.","blank_no":3,"options":["this","that","phone","it"],"answer_index":3}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',7,NULL,'cloze','{"stem":"第 4 空","context":"TYLER: ___1___, ma''am.\nTYLER: Is this ___2___ phone? It was on the chair.\nEMMA: Oh! Yes, ___3___ is. It''s my phone.\nTYLER: ___4___ you go.","blank_no":4,"options":["Here","There","Give","Take"],"answer_index":0}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',8,NULL,'choice','{"stem":"Where was the phone?","options":["On the table","On the floor","In Emma''s bag","On the chair"],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',8,NULL,'choice','{"stem":"Whose phone is it?","options":["Nobody''s","The store''s","Emma''s","Tyler''s"],"answer_index":2}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',8,NULL,'choice','{"stem":"What does Emma say to thank Tyler?","options":["\"Have a good one!\"","\"You''re a lifesaver.\"","\"No problem.\"","\"Excuse me.\""],"answer_index":1}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',8,NULL,'choice','{"stem":"Where was the phone?","options":["On the floor","On the chair","On the table","In Emma''s bag"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',8,NULL,'choice','{"stem":"Whose phone is it?","options":["The store''s","Tyler''s","Nobody''s","Emma''s"],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',8,NULL,'choice','{"stem":"What does Emma say to thank Tyler?","options":["\"Excuse me.\"","\"Have a good one!\"","\"You''re a lifesaver.\"","\"No problem.\""],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',9,NULL,'scenario','{"stem":"有人说 \"Thank you so much!\"","answer_text":"No problem. / You''re welcome."}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',9,NULL,'scenario','{"stem":"递东西给别人","answer_text":"Here you go."}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',9,NULL,'scenario','{"stem":"想引起陌生人注意","answer_text":"Excuse me!"}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp1','choice','{"stem":"___ your coffee, ma''am.","options":["Here are","This are","Here am","Here''s"],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp1','choice','{"stem":"___ your gloves, sir.","options":["This is","Here''s","Here are","It is"],"answer_index":2}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp1','choice','{"stem":"Here ___ my ticket.","options":["be","is","are","am"],"answer_index":1}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',10,NULL,'choice','{"stem":"___ this your backpack? — Yes, it is.","options":["Am","Are","Is"],"answer_index":2}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',10,NULL,'choice','{"stem":"Is this ___ coffee? — No, it isn''t.","options":["your","you","I"],"answer_index":0}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',10,NULL,'choice','{"stem":"Is this your phone? — Yes, ___ is.","options":["that","it","this"],"answer_index":1}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',10,NULL,'choice','{"stem":"___, is this seat taken?","options":["I''m sorry","Thank you","Excuse me"],"answer_index":2}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',10,NULL,'transform','{"stem":"This is your umbrella.（变一般疑问句）","answer_text":"Is this your umbrella?"}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',10,NULL,'transform','{"stem":"This is my wallet.（变一般疑问句；注意 my → your）","answer_text":"Is this your wallet?"}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l01',10,NULL,'transform','{"stem":"This is your car.（变一般疑问句）","answer_text":"Is this your car?"}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp1','choice','{"stem":"___ your coffee, ma''am.","options":["Here are","This are","Here''s","Here am"],"answer_index":2}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp1','choice','{"stem":"___ your gloves, sir.","options":["Here are","This is","It is","Here''s"],"answer_index":0}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp1','choice','{"stem":"Here ___ my ticket.","options":["be","am","is","are"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp1','transform','{"stem":"Here''s your key.（key 改为 keys）","answer_text":"Here are your keys."}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp2','choice','{"stem":"你在停车场认错了车主，应说：","options":["I''m sorry.","One moment.","Excuse me?","Have a great night."],"answer_index":0}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp2','choice','{"stem":"你想请远处的服务员过来，先说：","options":["Welcome.","I''m sorry.","Thanks.","Excuse me."],"answer_index":3}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp3','choice','{"stem":"顾客递来取车票，你需要一点时间去取车：","options":["One moment, please.","Here you go.","Yes, it is.","I''m sorry."],"answer_index":0}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp3','choice','{"stem":"服务结束向客人道别：","options":["Excuse me!","One moment!","Have a great night!","Yes?"],"answer_index":2}'::jsonb,8) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp2','choice','{"stem":"你在停车场认错了车主，应说：","options":["Have a great night.","Excuse me?","One moment.","I''m sorry."],"answer_index":3}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp2','choice','{"stem":"你想请远处的服务员过来，先说：","options":["Excuse me.","Welcome.","Thanks.","I''m sorry."],"answer_index":0}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp3','choice','{"stem":"顾客递来取车票，你需要一点时间去取车：","options":["Yes, it is.","One moment, please.","I''m sorry.","Here you go."],"answer_index":1}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',5,'am1_l02_gp3','choice','{"stem":"服务结束向客人道别：","options":["One moment!","Excuse me!","Yes?","Have a great night!"],"answer_index":3}'::jsonb,8) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',6,NULL,'choice','{"stem":"\"灰色\"的美式拼写是：","options":["gray","grei","grey","graey"],"answer_index":0}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',6,NULL,'choice','{"stem":"酒店门口帮客人停车取车的服务叫：","options":["park service","valet parking","self parking","bus parking"],"answer_index":1}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',6,NULL,'choice','{"stem":"美国服务业的小费通常给：","options":["50%以上","不用给","15–20%","1–2%"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',6,NULL,'choice','{"stem":"晚间与客人道别说：","options":["Have a great night!","Excuse me?","One moment!","Good morning!"],"answer_index":0}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',7,NULL,'cloze','{"stem":"第 1 空","context":"DAVID: Hi. ___1___ my ticket.\nMARCUS: Thank you. One ___2___, please. Is this ___3___ car?\nMARCUS: I''m ___4___, sir. Here ___5___ your keys.","blank_no":1,"options":["Here''s","Here are","This are","You''re"],"answer_index":0}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',7,NULL,'cloze','{"stem":"第 2 空","context":"DAVID: Hi. ___1___ my ticket.\nMARCUS: Thank you. One ___2___, please. Is this ___3___ car?\nMARCUS: I''m ___4___, sir. Here ___5___ your keys.","blank_no":2,"options":["minute time","moment","clock","watch"],"answer_index":1}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',7,NULL,'cloze','{"stem":"第 3 空","context":"DAVID: Hi. ___1___ my ticket.\nMARCUS: Thank you. One ___2___, please. Is this ___3___ car?\nMARCUS: I''m ___4___, sir. Here ___5___ your keys.","blank_no":3,"options":["my","you","your","it"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',7,NULL,'cloze','{"stem":"第 4 空","context":"DAVID: Hi. ___1___ my ticket.\nMARCUS: Thank you. One ___2___, please. Is this ___3___ car?\nMARCUS: I''m ___4___, sir. Here ___5___ your keys.","blank_no":4,"options":["excuse me","sorry","welcome","thank"],"answer_index":1}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',7,NULL,'cloze','{"stem":"第 5 空","context":"DAVID: Hi. ___1___ my ticket.\nMARCUS: Thank you. One ___2___, please. Is this ___3___ car?\nMARCUS: I''m ___4___, sir. Here ___5___ your keys.","blank_no":5,"options":["is","am","be","are"],"answer_index":3}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',8,NULL,'choice','{"stem":"Where is David?","options":["At a hotel","At a coffee shop","At a school","At an airport"],"answer_index":0}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',8,NULL,'choice','{"stem":"Is the gray SUV David''s car?","options":["Yes, it does.","Yes, it is.","We don''t know.","No, it isn''t."],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',8,NULL,'choice','{"stem":"What does David give Marcus at the end?","options":["His phone","His ticket","A tip","His keys"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',8,NULL,'choice','{"stem":"Where is David?","options":["At a coffee shop","At a school","At an airport","At a hotel"],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',8,NULL,'choice','{"stem":"Is the gray SUV David''s car?","options":["Yes, it is.","Yes, it does.","No, it isn''t.","We don''t know."],"answer_index":2}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',8,NULL,'choice','{"stem":"What does David give Marcus at the end?","options":["A tip","His keys","His ticket","His phone"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',9,NULL,'scenario','{"stem":"店员递给你咖啡，你没听清他刚才的话","answer_text":"Excuse me?"}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',9,NULL,'scenario','{"stem":"你把文件递给同事","answer_text":"Here''s the file. / Here you go."}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',9,NULL,'scenario','{"stem":"你不小心拿错了别人的伞","answer_text":"I''m sorry!"}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',10,NULL,'choice','{"stem":"___ your keys, sir. — Thank you!","options":["They is","This is","Here''s","Here are"],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',10,NULL,'choice','{"stem":"___ my ticket. — One moment, please.","options":["Give","Here are","Here''s","You are"],"answer_index":2}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',10,NULL,'choice','{"stem":"Is this your car? — No, ___.","options":["it isn''t","this isn''t","I''m not","it is"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',10,NULL,'choice','{"stem":"你认错了人，应该说：","options":["No problem.","Excuse me?","I''m sorry.","Here you go."],"answer_index":2}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',10,NULL,'choice','{"stem":"___ your keys, sir. — Thank you!","options":["Here''s","This is","They is","Here are"],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',10,NULL,'choice','{"stem":"___ my ticket. — One moment, please.","options":["Here''s","You are","Here are","Give"],"answer_index":0}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',10,NULL,'choice','{"stem":"Is this your car? — No, ___.","options":["it is","this isn''t","it isn''t","I''m not"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',10,NULL,'choice','{"stem":"你认错了人，应该说：","options":["I''m sorry.","No problem.","Excuse me?","Here you go."],"answer_index":0}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',10,NULL,'transform','{"stem":"This is your tip.（变一般疑问句）","answer_text":"Is this your tip?"}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',10,NULL,'transform','{"stem":"Here''s your key.（key 改为 keys）","answer_text":"Here are your keys."}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l02',10,NULL,'transform','{"stem":"My car is the blue one.（变一般疑问句，my","answer_text":"your）→ Is your car the blue one?"}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp1','choice','{"stem":"He''s ___ engineer.","options":["不填","a","the","an"],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp1','choice','{"stem":"He''s ___ engineer.","options":["a","an","不填","the"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp1','choice','{"stem":"She''s ___ teacher.","options":["a","an","不填","the"],"answer_index":0}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp1','choice','{"stem":"It''s ___ apple.","options":["不填","an","the","a"],"answer_index":1}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp1','choice','{"stem":"This is ___ great party.","options":["a","an","the","不填"],"answer_index":0}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp2','choice','{"stem":"___ is my friend Maria.","options":["He","She","This","You"],"answer_index":2}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp2','choice','{"stem":"朋友介绍新同事给你后，你回应：","options":["Nice to meet you.","I''m sorry.","One moment.","Here you go."],"answer_index":0}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp2','choice','{"stem":"I''m from Mexico. I''m ___.","options":["America","Mexico","Mexican","engineer"],"answer_index":2}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp1','choice','{"stem":"It''s ___ apple.","options":["the","不填","an","a"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp1','choice','{"stem":"This is ___ great party.","options":["a","不填","an","the"],"answer_index":0}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp2','choice','{"stem":"___ is my friend Maria.","options":["You","She","This","He"],"answer_index":2}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp2','choice','{"stem":"朋友介绍新同事给你后，你回应：","options":["Nice to meet you.","One moment.","Here you go.","I''m sorry."],"answer_index":0}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp2','choice','{"stem":"I''m from Mexico. I''m ___.","options":["Mexico","Mexican","engineer","America"],"answer_index":1}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',5,'am1_l03_gp2','transform','{"stem":"He is a teacher.（职业改为 engineer）","answer_text":"He is an engineer."}'::jsonb,8) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',6,NULL,'choice','{"stem":"美国社区的邻里聚会叫：","options":["work party","block party","class party","tea party"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',6,NULL,'choice','{"stem":"美制 6–8 年级的学校叫：","options":["secondary school","high school","primary school","middle school"],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',6,NULL,'choice','{"stem":"初次见面，美语最自然的问候是：","options":["Nice to meet you.","One moment.","Take care!","How do you do?"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',6,NULL,'choice','{"stem":"\"社区\"的美式拼写是：","options":["neighborhod","nabourhood","neighborhood","neighbourhood"],"answer_index":2}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',7,NULL,'cloze','{"stem":"第 1 空","context":"RACHEL: Hi, Ben! ___1___ is my friend Diego.\nBEN: Nice to ___2___ you, Diego. Are you new to the neighborhood?\nDIEGO: Yes, I am. I''m ___3___ Mexico.\nRACHEL: Diego is ___4___ engineer.\nBEN: Oh, nice! I''m ___5___ teacher.","blank_no":1,"options":["He","This","You","My"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',7,NULL,'cloze','{"stem":"第 2 空","context":"RACHEL: Hi, Ben! ___1___ is my friend Diego.\nBEN: Nice to ___2___ you, Diego. Are you new to the neighborhood?\nDIEGO: Yes, I am. I''m ___3___ Mexico.\nRACHEL: Diego is ___4___ engineer.\nBEN: Oh, nice! I''m ___5___ teacher.","blank_no":2,"options":["meet","see you","look","nice"],"answer_index":0}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',7,NULL,'cloze','{"stem":"第 3 空","context":"RACHEL: Hi, Ben! ___1___ is my friend Diego.\nBEN: Nice to ___2___ you, Diego. Are you new to the neighborhood?\nDIEGO: Yes, I am. I''m ___3___ Mexico.\nRACHEL: Diego is ___4___ engineer.\nBEN: Oh, nice! I''m ___5___ teacher.","blank_no":3,"options":["at","in","from","of"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',7,NULL,'cloze','{"stem":"第 4 空","context":"RACHEL: Hi, Ben! ___1___ is my friend Diego.\nBEN: Nice to ___2___ you, Diego. Are you new to the neighborhood?\nDIEGO: Yes, I am. I''m ___3___ Mexico.\nRACHEL: Diego is ___4___ engineer.\nBEN: Oh, nice! I''m ___5___ teacher.","blank_no":4,"options":["a","an","the","不填"],"answer_index":1}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',7,NULL,'cloze','{"stem":"第 5 空","context":"RACHEL: Hi, Ben! ___1___ is my friend Diego.\nBEN: Nice to ___2___ you, Diego. Are you new to the neighborhood?\nDIEGO: Yes, I am. I''m ___3___ Mexico.\nRACHEL: Diego is ___4___ engineer.\nBEN: Oh, nice! I''m ___5___ teacher.","blank_no":5,"options":["an","the","不填","a"],"answer_index":3}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',8,NULL,'choice','{"stem":"Who is new to the neighborhood?","options":["Rachel","Nobody","Ben","Diego"],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',8,NULL,'choice','{"stem":"Where is Diego from?","options":["Spain","Canada","Mexico","The U.S."],"answer_index":2}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',8,NULL,'choice','{"stem":"What is Ben''s job?","options":["A student","A teacher","An engineer","A nurse"],"answer_index":1}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',8,NULL,'choice','{"stem":"Where is Diego from?","options":["Mexico","Canada","The U.S.","Spain"],"answer_index":0}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',8,NULL,'choice','{"stem":"What is Ben''s job?","options":["An engineer","A student","A teacher","A nurse"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',9,NULL,'scenario','{"stem":"朋友把新同事介绍给你（\"This is my coworker Lisa.\"）","answer_text":"Nice to meet you, Lisa."}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',9,NULL,'scenario','{"stem":"你把你的朋友 Sam 介绍给妈妈","answer_text":"Mom, this is my friend Sam."}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',9,NULL,'scenario','{"stem":"有人问 \"Are you new here?\"，你确实是新来的","answer_text":"Yes, I am."}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',10,NULL,'choice','{"stem":"Diego is ___ engineer.","options":["不填","an","a","the"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',10,NULL,'choice','{"stem":"I''m ___ Mexico.","options":["to","on","at","from"],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',10,NULL,'choice','{"stem":"___ is my friend Kate.","options":["He","This","You","She"],"answer_index":1}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',10,NULL,'choice','{"stem":"She''s ___ teacher.","options":["不填","two","an","a"],"answer_index":3}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',10,NULL,'choice','{"stem":"Diego is ___ engineer.","options":["an","不填","a","the"],"answer_index":0}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',10,NULL,'choice','{"stem":"I''m ___ Mexico.","options":["at","from","to","on"],"answer_index":1}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',10,NULL,'choice','{"stem":"___ is my friend Kate.","options":["This","He","She","You"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',10,NULL,'choice','{"stem":"She''s ___ teacher.","options":["an","two","a","不填"],"answer_index":2}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',10,NULL,'transform','{"stem":"He is a teacher.（主语换成 engineer 职业句）","answer_text":"He is an engineer."}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',10,NULL,'transform','{"stem":"This is my friend.（变一般疑问句，my","answer_text":"your）→ Is this your friend?"}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l03',10,NULL,'transform','{"stem":"I''m from Mexico.（改为\"我是墨西哥人\"）","answer_text":"I''m Mexican."}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp1','choice','{"stem":"___ you a nurse? — Yes, I am.","options":["Do","Are","Am","Is"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp1','choice','{"stem":"Are you new here? — Yes, ___.","options":["it is","you are","I''m","I am"],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp1','choice','{"stem":"Are you American? — No, ___.","options":["I not","I''m not","you aren''t","I amn''t"],"answer_index":1}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp1','choice','{"stem":"___ you a nurse? — Yes, I am.","options":["Am","Is","Are","Do"],"answer_index":2}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp1','choice','{"stem":"Are you new here? — Yes, ___.","options":["I''m","I am","it is","you are"],"answer_index":1}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp1','choice','{"stem":"Are you American? — No, ___.","options":["you aren''t","I amn''t","I not","I''m not"],"answer_index":3}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp1','transform','{"stem":"You are a student.（变一般疑问句）","answer_text":"Are you a student?"}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp2','choice','{"stem":"What''s your job? — ___","options":["Nice to meet you.","I''m fine.","Yes, I am.","I''m a cashier."],"answer_index":3}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp2','choice','{"stem":"He''s ___ electrician.","options":["an","不填","a","the"],"answer_index":0}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp2','choice','{"stem":"你想反问对方的职业：","options":["Are you?","Excuse me?","What about you?","Here you go?"],"answer_index":2}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp2','choice','{"stem":"She''s ___ driver.","options":["two","不填","an","a"],"answer_index":3}'::jsonb,8) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp2','choice','{"stem":"What''s your job? — ___","options":["Nice to meet you.","Yes, I am.","I''m a cashier.","I''m fine."],"answer_index":2}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp2','choice','{"stem":"He''s ___ electrician.","options":["不填","a","the","an"],"answer_index":3}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp2','choice','{"stem":"你想反问对方的职业：","options":["What about you?","Excuse me?","Here you go?","Are you?"],"answer_index":0}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',5,'am1_l04_gp2','choice','{"stem":"She''s ___ driver.","options":["an","a","不填","two"],"answer_index":1}'::jsonb,8) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',6,NULL,'choice','{"stem":"美国人日常问职业更常说：","options":["What is your work name?","How is your job?","What do you do?","Who are you?"],"answer_index":2}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',6,NULL,'choice','{"stem":"美语表示\"真棒！\"常用：","options":["Awesome!","Lovely!","How do you do!","Brilliant!"],"answer_index":0}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',6,NULL,'choice','{"stem":"美国面向社区成人、提供两年制课程的学校叫：","options":["middle school","kindergarten","community college","driving school"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',6,NULL,'choice','{"stem":"修电路的工人叫：","options":["electrician","cashier","driver","plumber"],"answer_index":0}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',7,NULL,'cloze','{"stem":"第 1 空","context":"KEVIN: Hi, I''m Kevin. ___1___ you new here?\nSOFIA: Yes, I ___2___. My name''s Sofia.\nSOFIA: No, I''m ___3___. I''m Brazilian.\nKEVIN: What''s your ___4___?\nSOFIA: I''m ___5___ nurse.","blank_no":1,"options":["Is","Are","Am","Be"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',7,NULL,'cloze','{"stem":"第 2 空","context":"KEVIN: Hi, I''m Kevin. ___1___ you new here?\nSOFIA: Yes, I ___2___. My name''s Sofia.\nSOFIA: No, I''m ___3___. I''m Brazilian.\nKEVIN: What''s your ___4___?\nSOFIA: I''m ___5___ nurse.","blank_no":2,"options":["am","is","are","not"],"answer_index":0}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',7,NULL,'cloze','{"stem":"第 3 空","context":"KEVIN: Hi, I''m Kevin. ___1___ you new here?\nSOFIA: Yes, I ___2___. My name''s Sofia.\nSOFIA: No, I''m ___3___. I''m Brazilian.\nKEVIN: What''s your ___4___?\nSOFIA: I''m ___5___ nurse.","blank_no":3,"options":["no","isn''t","not","am"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',7,NULL,'cloze','{"stem":"第 4 空","context":"KEVIN: Hi, I''m Kevin. ___1___ you new here?\nSOFIA: Yes, I ___2___. My name''s Sofia.\nSOFIA: No, I''m ___3___. I''m Brazilian.\nKEVIN: What''s your ___4___?\nSOFIA: I''m ___5___ nurse.","blank_no":4,"options":["name","job","home","class"],"answer_index":1}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',7,NULL,'cloze','{"stem":"第 5 空","context":"KEVIN: Hi, I''m Kevin. ___1___ you new here?\nSOFIA: Yes, I ___2___. My name''s Sofia.\nSOFIA: No, I''m ___3___. I''m Brazilian.\nKEVIN: What''s your ___4___?\nSOFIA: I''m ___5___ nurse.","blank_no":5,"options":["an","the","不填","a"],"answer_index":3}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',8,NULL,'choice','{"stem":"Where are Kevin and Sofia?","options":["At a hotel","At a party","At a hospital","At an English class"],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',8,NULL,'choice','{"stem":"Is Sofia American?","options":["No, she isn''t.","Yes, he is.","Yes, she is.","We don''t know."],"answer_index":0}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',8,NULL,'choice','{"stem":"What is Kevin''s job?","options":["A teacher","A nurse","An electrician","A student only"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',8,NULL,'choice','{"stem":"Where are Kevin and Sofia?","options":["At a hotel","At an English class","At a party","At a hospital"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',8,NULL,'choice','{"stem":"Is Sofia American?","options":["We don''t know.","Yes, she is.","Yes, he is.","No, she isn''t."],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',8,NULL,'choice','{"stem":"What is Kevin''s job?","options":["A student only","A nurse","An electrician","A teacher"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',9,NULL,'scenario','{"stem":"同学问 \"Are you new here?\"，你不是新来的","answer_text":"No, I''m not."}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',9,NULL,'scenario','{"stem":"别人问你职业，你想反问对方","answer_text":"I''m a/an ___. What about you?"}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',9,NULL,'scenario','{"stem":"对方说自己是消防员（firefighter），你表示赞叹","answer_text":"Cool! / Awesome!"}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',10,NULL,'choice','{"stem":"___ you a student? — Yes, I am.","options":["Do","Are","Is","Am"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',10,NULL,'choice','{"stem":"What''s your job? — ___","options":["I''m fine.","Nice to meet you.","Yes, I am.","I''m a cashier."],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',10,NULL,'choice','{"stem":"Are you Brazilian? — No, ___.","options":["I''m not","you aren''t","I amn''t","I not"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',10,NULL,'choice','{"stem":"He''s ___ Uber driver.","options":["a","不填","the","an"],"answer_index":3}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',10,NULL,'choice','{"stem":"___ you a student? — Yes, I am.","options":["Are","Do","Am","Is"],"answer_index":0}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',10,NULL,'choice','{"stem":"What''s your job? — ___","options":["I''m fine.","Nice to meet you.","I''m a cashier.","Yes, I am."],"answer_index":2}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',10,NULL,'choice','{"stem":"Are you Brazilian? — No, ___.","options":["I''m not","I not","you aren''t","I amn''t"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',10,NULL,'choice','{"stem":"He''s ___ Uber driver.","options":["the","不填","a","an"],"answer_index":3}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',10,NULL,'transform','{"stem":"You are a nurse.（变一般疑问句）","answer_text":"Are you a nurse?"}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',10,NULL,'transform','{"stem":"I''m a plumber.（变否定句）","answer_text":"I''m not a plumber."}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l04',10,NULL,'transform','{"stem":"Are you new here?（作肯定简答）","answer_text":"Yes, I am."}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp1','choice','{"stem":"How ___ you today?","options":["is","am","be","are"],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp1','choice','{"stem":"How ___ your husband? — He''s fine.","options":["am","are","is","do"],"answer_index":2}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp1','choice','{"stem":"How are you? — ___","options":["I''m pretty good.","This is Tom.","Yes, I am.","I''m a nurse."],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp1','choice','{"stem":"How ___ you today?","options":["be","are","is","am"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp1','choice','{"stem":"How ___ your husband? — He''s fine.","options":["are","do","am","is"],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp1','choice','{"stem":"How are you? — ___","options":["I''m pretty good.","I''m a nurse.","This is Tom.","Yes, I am."],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp1','transform','{"stem":"She is fine.（变 How 疑问句）","answer_text":"How is she?"}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp1','choice','{"stem":"道别时叮嘱对方保重：","options":["Excuse me!","Yes, I am!","Take care!","One moment!"],"answer_index":2}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp2','choice','{"stem":"The puppy is ___.","options":["happies","a happy","an happy","happy"],"answer_index":3}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp2','choice','{"stem":"I''m ___.（疲惫的）","options":["tireds","tired","the tired","a tired"],"answer_index":1}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp2','choice','{"stem":"They are ___ today.（很棒）","options":["greats","a great","great","the great"],"answer_index":2}'::jsonb,8) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp2','choice','{"stem":"The puppy is ___.","options":["an happy","happy","a happy","happies"],"answer_index":1}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp2','choice','{"stem":"I''m ___.（疲惫的）","options":["tireds","a tired","tired","the tired"],"answer_index":2}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',5,'am1_l05_gp2','choice','{"stem":"They are ___ today.（很棒）","options":["great","the great","a great","greats"],"answer_index":0}'::jsonb,8) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',6,NULL,'choice','{"stem":"pretty good 里的 pretty 意思是：","options":["漂亮的","少许","很、相当","差劲的"],"answer_index":2}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',6,NULL,'choice','{"stem":"熟人间随意打招呼，美语常说：","options":["How do you do?","Cheerio!","Not at all.","What''s up?"],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',6,NULL,'choice','{"stem":"下列告别语中属于美语常用的是：","options":["Not at all.","See you later.","Pardon?","Cheerio!"],"answer_index":1}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',6,NULL,'choice','{"stem":"回答 How are you?，美语口语最高频的是：","options":["I''m a good.","I''m well.","Me is fine.","I''m good."],"answer_index":3}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',7,NULL,'cloze','{"stem":"第 1 空","context":"MEGAN: Good morning, Carlos! ___1___ are you today?\nCARLOS: I''m ___2___, thanks. And you?\nMEGAN: I''m pretty good. ___3___ your wife?\nCARLOS: ___4___ fine, thank you.\nCARLOS: ___5___ care!","blank_no":1,"options":["What","How","Who","Where"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',7,NULL,'cloze','{"stem":"第 2 空","context":"MEGAN: Good morning, Carlos! ___1___ are you today?\nCARLOS: I''m ___2___, thanks. And you?\nMEGAN: I''m pretty good. ___3___ your wife?\nCARLOS: ___4___ fine, thank you.\nCARLOS: ___5___ care!","blank_no":2,"options":["great","nurse","new","a great"],"answer_index":0}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',7,NULL,'cloze','{"stem":"第 3 空","context":"MEGAN: Good morning, Carlos! ___1___ are you today?\nCARLOS: I''m ___2___, thanks. And you?\nMEGAN: I''m pretty good. ___3___ your wife?\nCARLOS: ___4___ fine, thank you.\nCARLOS: ___5___ care!","blank_no":3,"options":["How are","What''s","How''s","Who''s"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',7,NULL,'cloze','{"stem":"第 4 空","context":"MEGAN: Good morning, Carlos! ___1___ are you today?\nCARLOS: I''m ___2___, thanks. And you?\nMEGAN: I''m pretty good. ___3___ your wife?\nCARLOS: ___4___ fine, thank you.\nCARLOS: ___5___ care!","blank_no":4,"options":["He''s","I''m","You''re","She''s"],"answer_index":3}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',7,NULL,'cloze','{"stem":"第 5 空","context":"MEGAN: Good morning, Carlos! ___1___ are you today?\nCARLOS: I''m ___2___, thanks. And you?\nMEGAN: I''m pretty good. ___3___ your wife?\nCARLOS: ___4___ fine, thank you.\nCARLOS: ___5___ care!","blank_no":5,"options":["See","Take","Have","Be"],"answer_index":1}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',8,NULL,'choice','{"stem":"When do Megan and Carlos meet?","options":["In the morning","In the evening","At noon","At night"],"answer_index":0}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',8,NULL,'choice','{"stem":"How is Carlos today?","options":["Sad","Great","Tired","Sick"],"answer_index":1}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',8,NULL,'choice','{"stem":"Who is \"a handful\"?","options":["Carlos","Carlos''s wife","Megan","The puppy"],"answer_index":3}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',8,NULL,'choice','{"stem":"When do Megan and Carlos meet?","options":["At night","In the evening","In the morning","At noon"],"answer_index":2}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',8,NULL,'choice','{"stem":"How is Carlos today?","options":["Tired","Sad","Sick","Great"],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',8,NULL,'choice','{"stem":"Who is \"a handful\"?","options":["The puppy","Megan","Carlos''s wife","Carlos"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',9,NULL,'scenario','{"stem":"邻居早上问你 \"How are you today?\"","answer_text":"I''m great, thanks. And you? / Pretty good, how about you?"}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',9,NULL,'scenario','{"stem":"你想问同事的孩子近况","answer_text":"How''s your son? / How''s your daughter?"}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',9,NULL,'scenario','{"stem":"和朋友道别，叮嘱他保重","answer_text":"Take care! / See you later!"}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',10,NULL,'choice','{"stem":"How ___ your husband? — He''s fine.","options":["are","am","is","be"],"answer_index":2}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',10,NULL,'choice','{"stem":"How are you? — ___","options":["Yes, I am.","I''m pretty good.","Here you go.","I''m a teacher."],"answer_index":1}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',10,NULL,'choice','{"stem":"The puppy is ___.","options":["happy","happies","an happy","a happy"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',10,NULL,'choice','{"stem":"道别时说：","options":["Nice to meet you.","Take care!","Excuse me!","Here you go."],"answer_index":1}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',10,NULL,'choice','{"stem":"How ___ your husband? — He''s fine.","options":["be","is","are","am"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',10,NULL,'choice','{"stem":"How are you? — ___","options":["I''m a teacher.","Yes, I am.","Here you go.","I''m pretty good."],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',10,NULL,'choice','{"stem":"The puppy is ___.","options":["happy","a happy","happies","an happy"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',10,NULL,'choice','{"stem":"道别时说：","options":["Excuse me!","Take care!","Nice to meet you.","Here you go."],"answer_index":1}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',10,NULL,'transform','{"stem":"She is fine.（变疑问句问状态：她怎么样？）","answer_text":"How is she?"}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',10,NULL,'transform','{"stem":"I''m tired.（主语换成 He）","answer_text":"He''s tired."}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l05',10,NULL,'transform','{"stem":"How are you?（用 great 回答）","answer_text":"I''m great, thanks."}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp1','choice','{"stem":"___ backpack is this? — It''s Tyler''s.","options":["Which","What","Whose","Who"],"answer_index":2}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp1','choice','{"stem":"This is ___ desk.（Emma 的）","options":["the Emma","Emma''s","Emmas","Emma"],"answer_index":1}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp1','choice','{"stem":"___ backpack is this? — It''s Tyler''s.","options":["What","Which","Whose","Who"],"answer_index":2}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp1','choice','{"stem":"This is ___ desk.（Emma 的）","options":["Emma''s","Emmas","Emma","the Emma"],"answer_index":0}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp1','transform','{"stem":"This is Chris''s jacket.（变 whose 疑问句）","answer_text":"Whose jacket is this?"}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp2','choice','{"stem":"He is my brother. ___ name is Alex.","options":["His","My","Your","Her"],"answer_index":0}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp2','choice','{"stem":"She is my sister. ___ mug is pink.","options":["Your","My","Her","His"],"answer_index":2}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp2','choice','{"stem":"Amanda is a nurse. This is ___ car.","options":["her","she","hers","his"],"answer_index":0}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp3','choice','{"stem":"（手里拿着杯子）___ is my mug.","options":["That","This","Her","Whose"],"answer_index":1}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp3','choice','{"stem":"（指着桌子那头的杯子）___ is Jake''s mug.","options":["Whose","His","That","This"],"answer_index":2}'::jsonb,8) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp2','choice','{"stem":"He is my brother. ___ name is Alex.","options":["Her","His","My","Your"],"answer_index":1}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp2','choice','{"stem":"She is my sister. ___ mug is pink.","options":["His","Your","My","Her"],"answer_index":3}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp2','choice','{"stem":"Amanda is a nurse. This is ___ car.","options":["hers","her","she","his"],"answer_index":1}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp3','choice','{"stem":"（手里拿着杯子）___ is my mug.","options":["This","Whose","Her","That"],"answer_index":0}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',5,'am1_l06_gp3','choice','{"stem":"（指着桌子那头的杯子）___ is Jake''s mug.","options":["Whose","That","His","This"],"answer_index":1}'::jsonb,8) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',6,NULL,'choice','{"stem":"承认自己的小错误，美语口语说：","options":["I''m bad.","My wrong.","Bad me.","My bad."],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',6,NULL,'choice','{"stem":"办公室的茶水间/休息室，美语叫：","options":["staff room","rest home","break room","tea house"],"answer_index":2}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',6,NULL,'choice','{"stem":"\"Please wash it, ___?\" 句尾补哪个词表示\"好吗\"：","options":["welcome","okay","sorry","yes"],"answer_index":1}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',6,NULL,'choice','{"stem":"美国办公室文化中，员工通常人手一只专属的：","options":["TV（电视）","bike（自行车）","pillow（枕头）","mug（马克杯）"],"answer_index":3}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',7,NULL,'cloze','{"stem":"第 1 空","context":"TINA: ___1___ coffee mug is this?\nTINA: No, ___2___ mug is pink. This one is black.\nJAKE: Maybe it''s ___3___ mug. His mug is black.\nCHRIS: Oh, yes! ___4___ my mug. Thanks!\nCHRIS: ___5___. Sorry!","blank_no":1,"options":["Who","Whose","What","Which"],"answer_index":1}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',7,NULL,'cloze','{"stem":"第 2 空","context":"TINA: ___1___ coffee mug is this?\nTINA: No, ___2___ mug is pink. This one is black.\nJAKE: Maybe it''s ___3___ mug. His mug is black.\nCHRIS: Oh, yes! ___4___ my mug. Thanks!\nCHRIS: ___5___. Sorry!","blank_no":2,"options":["his","my","your","her"],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',7,NULL,'cloze','{"stem":"第 3 空","context":"TINA: ___1___ coffee mug is this?\nTINA: No, ___2___ mug is pink. This one is black.\nJAKE: Maybe it''s ___3___ mug. His mug is black.\nCHRIS: Oh, yes! ___4___ my mug. Thanks!\nCHRIS: ___5___. Sorry!","blank_no":3,"options":["Chris''s","Chris","Chrises","the Chris"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',7,NULL,'cloze','{"stem":"第 4 空","context":"TINA: ___1___ coffee mug is this?\nTINA: No, ___2___ mug is pink. This one is black.\nJAKE: Maybe it''s ___3___ mug. His mug is black.\nCHRIS: Oh, yes! ___4___ my mug. Thanks!\nCHRIS: ___5___. Sorry!","blank_no":4,"options":["This are","That''s","Those","Whose"],"answer_index":1}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',7,NULL,'cloze','{"stem":"第 5 空","context":"TINA: ___1___ coffee mug is this?\nTINA: No, ___2___ mug is pink. This one is black.\nJAKE: Maybe it''s ___3___ mug. His mug is black.\nCHRIS: Oh, yes! ___4___ my mug. Thanks!\nCHRIS: ___5___. Sorry!","blank_no":5,"options":["No problem","Here you go","My bad","Take care"],"answer_index":2}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',8,NULL,'choice','{"stem":"Where was the mug?","options":["In a bag","On the desk","In the sink","On the chair"],"answer_index":2}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',8,NULL,'choice','{"stem":"Where was the mug?","options":["On the chair","On the desk","In a bag","In the sink"],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',8,NULL,'choice','{"stem":"What color is Amanda''s mug?","options":["Black","Pink","Gray","Blue"],"answer_index":1}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',8,NULL,'choice','{"stem":"What does Tina ask Chris to do?","options":["Wash the mug","Buy a new mug","Drink coffee","Give her the mug"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',8,NULL,'choice','{"stem":"What does Tina ask Chris to do?","options":["Wash the mug","Give her the mug","Buy a new mug","Drink coffee"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',9,NULL,'scenario','{"stem":"你在会议室捡到一副眼镜，问大家","answer_text":"Whose glasses are these?（教学提示：眼镜是复数用 are these）"}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',9,NULL,'scenario','{"stem":"同事提醒你外卖拿错了，你认错","answer_text":"My bad. Sorry!"}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',9,NULL,'scenario','{"stem":"有人问 \"Is this your pen?\"，是你同事 Maria 的","answer_text":"No, it''s Maria''s pen."}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',10,NULL,'choice','{"stem":"___ car is that? — It''s Jake''s.","options":["Which","Who","Whose","What"],"answer_index":2}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',10,NULL,'choice','{"stem":"This is ___ desk.（Amanda 的）","options":["the Amanda","Amandas","Amanda","Amanda''s"],"answer_index":3}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',10,NULL,'choice','{"stem":"She is my sister. ___ name is Emily.","options":["His","My","Her","Your"],"answer_index":2}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
-INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',10,NULL,'choice','{"stem":"Is this your phone? — Yes, ___ my phone.","options":["this''re","that''s","it are","whose"],"answer_index":1}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',10,NULL,'choice','{"stem":"___ car is that? — It''s Jake''s.","options":["Which","Who","What","Whose"],"answer_index":3}'::jsonb,1) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',10,NULL,'choice','{"stem":"This is ___ desk.（Amanda 的）","options":["the Amanda","Amandas","Amanda''s","Amanda"],"answer_index":2}'::jsonb,2) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',10,NULL,'choice','{"stem":"She is my sister. ___ name is Emily.","options":["Her","Your","My","His"],"answer_index":0}'::jsonb,3) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
+INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',10,NULL,'choice','{"stem":"Is this your phone? — Yes, ___ my phone.","options":["whose","that''s","it are","this''re"],"answer_index":1}'::jsonb,4) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',10,NULL,'transform','{"stem":"This is Chris''s mug.（变 whose 疑问句）","answer_text":"Whose mug is this?"}'::jsonb,5) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',10,NULL,'transform','{"stem":"This is her bag.（her 换成\"杰克的\"）","answer_text":"This is Jake''s bag."}'::jsonb,6) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;
 INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES ('am1_l06',10,NULL,'transform','{"stem":"That is his jacket.（变一般疑问句）","answer_text":"Is that his jacket?"}'::jsonb,7) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;

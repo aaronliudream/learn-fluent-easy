@@ -12,7 +12,6 @@ import { useI18n } from "@/i18n/I18nProvider";
 import { LangToggleEnZh } from "@/i18n/LangToggleEnZh";
 import { T } from "@/i18n/T";
 import { TodayTaskCard } from "@/components/TodayTaskCard";
-import CompanionHero from "@/components/pet/CompanionHero";
 import ThreeTracksHero from "@/components/ThreeTracksHero";
 import LandingPage from "@/components/LandingPage";
 import { XPRing } from "@/components/game/XPRing";
@@ -164,9 +163,6 @@ const sections = [
           </div>
         </Link>
       )}
-
-      {/* Emotional anchor: learning companion as hero */}
-      <CompanionHero />
 
       {/* Streak / XP momentum banner — surfaces the live streak so it's the
           first thing returning learners see. (Zeigarnik + SDT competence) */}

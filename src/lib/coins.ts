@@ -146,5 +146,7 @@ export function notifyWrong() {
 type PetReactKind = "correct" | "wrong" | "flash" | "happy";
 export function petReact(kind: PetReactKind, detail?: { coins?: number }) {
   if (typeof window === "undefined") return;
-  window.dispatchEvent(new CustomEvent("pet:react", { detail: { kind, ...detail } }));
+  // 宠物养成展示层已下线,pet:react 唯一监听者(FloatingPet)已归档 → 停派发。
+  // 保留本函数与调用点(notifyCorrect/notifyWrong 等)为无操作,不动 XP/金币核心逻辑。
+  void kind; void detail;
 }

@@ -142,9 +142,7 @@ const Review = lazy(() => import("./pages/Review.tsx"));
 const Mistakes = lazy(() => import("./pages/Mistakes.tsx"));
 const ReviewToday = lazy(() => import("./pages/ReviewToday.tsx"));
 const Leaderboard = lazy(() => import("./pages/Leaderboard.tsx"));
-const Pets = lazy(() => import("./pages/Pets.tsx"));
-const Friends = lazy(() => import("./pages/Friends.tsx"));
-const FriendPet = lazy(() => import("./pages/FriendPet.tsx"));
+// 宠物养成展示层已下线,页面归档至 _archived/pet/。/pets /friends /friend/* 301 → /(见 Routes)。
 const GlobalParent = lazy(() => import("./pages/GlobalParent.tsx"));
 const Social = lazy(() => import("./pages/Social.tsx"));
 const Ask = lazy(() => import("./pages/Ask.tsx"));
@@ -167,9 +165,6 @@ import FeedbackWidget from "@/components/FeedbackWidget";
 import InstallPrompt from "@/components/InstallPrompt";
 import QuizKeyboardShortcuts from "@/components/QuizKeyboardShortcuts";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
-import { DigestionAnimation } from "@/components/pet/DigestionAnimation";
-import { EvolutionCelebration } from "@/components/pet/EvolutionCelebration";
-import GrowthLetter from "@/components/pet/GrowthLetter";
 import useActiveHeartbeat from "@/hooks/useActiveHeartbeat";
 import { AIAssistantProvider } from "@/contexts/AIAssistantContext";
 import GlobalAIAssistant from "@/components/assistant/GlobalAIAssistant";
@@ -307,9 +302,6 @@ const App = () => (
         {/* LanguagePickerModal removed — first visit defaults to 简体中文;
             switchable via LangToggleEnZh / LanguageSwitcher in the header. */}
         <GaokaoBreakReminder />
-        <EvolutionCelebration />
-        <DigestionAnimation />
-        <GrowthLetter />
         <div className="pb-tabbar md:pb-0">
         <RouteErrorBoundary>
         <Suspense fallback={<RouteFallback />}>
@@ -332,9 +324,10 @@ const App = () => (
           <Route path="/mistakes" element={<Mistakes />} />
           <Route path="/review/today" element={<ReviewToday />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
-          <Route path="/pets" element={<Pets />} />
-          <Route path="/friends" element={<Friends />} />
-          <Route path="/friend/:id" element={<FriendPet />} />
+          {/* 宠物养成下线:旧路由 301 → 首页 */}
+          <Route path="/pets" element={<Navigate to="/" replace />} />
+          <Route path="/friends" element={<Navigate to="/" replace />} />
+          <Route path="/friend/:id" element={<Navigate to="/" replace />} />
           <Route path="/parent" element={<GlobalParent />} />
           <Route path="/social" element={<Social />} />
           <Route path="/ask" element={<Ask />} />

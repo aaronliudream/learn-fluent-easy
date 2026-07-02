@@ -44,7 +44,6 @@ const TABS = [
       p.startsWith("/me") ||
       p.startsWith("/account") ||
       p.startsWith("/stats") ||
-      p.startsWith("/pets") ||
       p.startsWith("/leaderboard"),
   },
 ];

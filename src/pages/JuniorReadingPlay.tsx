@@ -444,7 +444,6 @@ export default function JuniorReadingPlay() {
         <div className="mt-10 pt-6 border-t exam-divider flex flex-wrap items-center justify-center gap-2">
           <Link to={returnTo ?? (r?.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading")} className="exam-btn exam-btn-primary"><ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回阅读列表"}</T></Link>
           <Link to="/junior" className="exam-btn exam-btn-ghost"><T>初中首页</T></Link>
-          <Link to="/pets" className="exam-btn exam-btn-ghost"><T>宠物</T></Link>
         </div>
       </ExamContainer>
     </ExamPaper>);

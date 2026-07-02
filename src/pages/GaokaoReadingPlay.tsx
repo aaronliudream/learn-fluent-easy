@@ -278,7 +278,6 @@ export default function GaokaoReadingPlay() {
                 <ArrowLeft className="size-4" /> <T>返回阅读列表</T>
               </BackLink>
               <Link to="/gaokao" className="exam-btn exam-btn-ghost"><T>高考首页</T></Link>
-              <Link to="/pets" className="exam-btn exam-btn-ghost"><T>宠物</T></Link>
             </div>
           </div>
         </div>

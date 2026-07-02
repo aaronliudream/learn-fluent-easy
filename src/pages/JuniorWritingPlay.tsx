@@ -255,7 +255,6 @@ export default function JuniorWritingPlay() {
       <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
         <BackLink to={p?.grade ? `/junior/writing?grade=${p.grade}` : "/junior/writing"} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> <T>返回写作题库</T></BackLink>
         <Link to="/junior" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🏫 初中首页</T></Link>
-        <Link to="/pets" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🐾 宠物</T></Link>
       </div>
     </main>);
 

@@ -145,7 +145,6 @@ export function ThisWeekHero(props: {
       <div className="relative mt-5 grid grid-cols-2 md:grid-cols-4 gap-2">
         <Chip emoji="🪙" value={coins.toLocaleString()} label="coins" />
         <Chip emoji="🏆" value={badges.toLocaleString()} label="badges" />
-        <Chip emoji="🐉" value={`Lv.${petLevel}`} label={`pet · ${petName}`} />
         <Chip emoji="🥇" value={rank ? `#${rank}` : "—"} label="本周排名" />
       </div>
 

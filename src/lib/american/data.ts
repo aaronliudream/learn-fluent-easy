@@ -1,0 +1,252 @@
+/**
+ * 美语课程 · 数据访问层 —— 直连 american_* 表(方案 A)。
+ * 掌握/进度绑定内容 ID(词绑 word_id、题绑考点/题 ID),答对 2 次 = 掌握;
+ * 将来"美语专项板块"必须读写这同一份表(互通铁律,见 docs/american/美语课程_关卡结构_v1.1.md §一)。
+ *
+ * 注:american_* 表尚未进 supabase 生成类型(types.ts),这里对 client 做 `as any`,
+ *     并把结果 cast 成本文件定义的接口 —— tsc 干净,运行期照常。
+ */
+import { supabase } from "@/integrations/supabase/client";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const db = supabase as any;
+
+// 答对 2 次 = 掌握(全站统一口径)
+export const AM_MASTER_AT = 2;
+
+export type AmericanLesson = {
+  id: string;
+  unit_no: number;
+  lesson_no: number;
+  title_en: string;
+  title_cn: string;
+  grammar_focus: string | null;
+  scene: string | null;
+  prelisten_question: PrelistenQuestion | null;
+};
+
+export type PrelistenQuestion = { q: string; options: string[]; answer_index: number };
+
+export type AmericanSentence = {
+  id: string;
+  lesson_id: string;
+  seq: number;
+  speaker: string | null;
+  text_en: string;
+  text_cn: string;
+  audio_key: string | null;
+};
+
+export type AmericanWord = {
+  id: string;
+  lesson_id: string;
+  word: string;
+  ipa: string | null;
+  pos: string | null;
+  meaning_cn: string | null;
+  example: string | null;
+};
+
+export type AmericanGrammarPoint = {
+  id: string;
+  lesson_id: string;
+  name: string;
+  body_md: string | null;
+};
+
+export type AmericanQuestion = {
+  id: string;
+  lesson_id: string;
+  stage: number;
+  grammar_point_id: string | null;
+  qtype: "choice" | "cloze" | "transform" | "scenario";
+  payload: {
+    stem: string;
+    options?: string[];
+    answer_index?: number;
+    answer_text?: string;
+    context?: string;
+    blank_no?: number;
+    situation?: string;
+  };
+  seq: number | null;
+};
+
+export type AmericanContrast = {
+  id: string;
+  lesson_id: string;
+  us: string;
+  uk: string;
+  note_cn: string | null;
+};
+
+export type AmericanUnit = { unit_no: number; lessons: AmericanLesson[] };
+
+export type LessonBundle = {
+  lesson: AmericanLesson;
+  sentences: AmericanSentence[];
+  words: AmericanWord[];
+  grammarPoints: AmericanGrammarPoint[];
+  questions: AmericanQuestion[];
+  contrast: AmericanContrast[];
+};
+
+/** 单元 tab 列表 —— 从 american_lessons 汇总已上线单元(distinct unit_no)。 */
+export async function fetchUnits(): Promise<AmericanUnit[]> {
+  const { data, error } = await db
+    .from("american_lessons")
+    .select("id,unit_no,lesson_no,title_en,title_cn,grammar_focus,scene,prelisten_question")
+    .order("unit_no", { ascending: true })
+    .order("lesson_no", { ascending: true });
+  if (error) throw error;
+  const rows = (data ?? []) as AmericanLesson[];
+  const byUnit = new Map<number, AmericanLesson[]>();
+  for (const r of rows) {
+    if (!byUnit.has(r.unit_no)) byUnit.set(r.unit_no, []);
+    byUnit.get(r.unit_no)!.push(r);
+  }
+  return [...byUnit.entries()]
+    .sort((a, b) => a[0] - b[0])
+    .map(([unit_no, lessons]) => ({ unit_no, lessons }));
+}
+
+/** 一课全部内容(6 关素材一次取全)。 */
+export async function fetchLessonBundle(lessonId: string): Promise<LessonBundle | null> {
+  const [lessonRes, sRes, wRes, gRes, qRes, cRes] = await Promise.all([
+    db.from("american_lessons").select("id,unit_no,lesson_no,title_en,title_cn,grammar_focus,scene,prelisten_question").eq("id", lessonId).maybeSingle(),
+    db.from("american_sentences").select("id,lesson_id,seq,speaker,text_en,text_cn,audio_key").eq("lesson_id", lessonId).order("seq", { ascending: true }),
+    db.from("american_words").select("id,lesson_id,word,ipa,pos,meaning_cn,example").eq("lesson_id", lessonId),
+    db.from("american_grammar_points").select("id,lesson_id,name,body_md").eq("lesson_id", lessonId).order("id", { ascending: true }),
+    db.from("american_questions").select("id,lesson_id,stage,grammar_point_id,qtype,payload,seq").eq("lesson_id", lessonId).order("stage", { ascending: true }).order("seq", { ascending: true }),
+    db.from("american_amencontrast").select("id,lesson_id,us,uk,note_cn").eq("lesson_id", lessonId),
+  ]);
+  const lesson = lessonRes.data as AmericanLesson | null;
+  if (!lesson) return null;
+  return {
+    lesson,
+    sentences: (sRes.data ?? []) as AmericanSentence[],
+    words: (wRes.data ?? []) as AmericanWord[],
+    grammarPoints: (gRes.data ?? []) as AmericanGrammarPoint[],
+    questions: (qRes.data ?? []) as AmericanQuestion[],
+    contrast: (cRes.data ?? []) as AmericanContrast[],
+  };
+}
+
+// ---------- 用户态:进度 + 掌握(需登录;RLS auth.uid()=user_id) ----------
+
+async function uid(): Promise<string | null> {
+  const { data } = await supabase.auth.getUser();
+  return data.user?.id ?? null;
+}
+
+/** 每关聚合进度(完成环 + 掌握环用)。key = stage(1–10)。 */
+export type StageProgress = { done: boolean; masteredFrac: number };
+
+/** 关卡完成:写 american_lesson_progress(幂等,重复完成不报错)。 */
+export async function markStageComplete(lessonId: string, stage: number): Promise<void> {
+  const user = await uid();
+  if (!user) return;
+  await db
+    .from("american_lesson_progress")
+    .upsert({ user_id: user, lesson_id: lessonId, stage }, { onConflict: "user_id,lesson_id,stage", ignoreDuplicates: true });
+}
+
+/** 已完成的关卡集合。 */
+export async function fetchCompletedStages(lessonId: string): Promise<Set<number>> {
+  const user = await uid();
+  if (!user) return new Set();
+  const { data } = await db.from("american_lesson_progress").select("stage").eq("user_id", user).eq("lesson_id", lessonId);
+  return new Set(((data ?? []) as { stage: number }[]).map((r) => r.stage));
+}
+
+/** 批量:一组课各自已完成的关卡数(单元页 6 张课卡的完成环用,一次查询)。 */
+export async function fetchCompletedCounts(lessonIds: string[]): Promise<Record<string, number>> {
+  const out: Record<string, number> = {};
+  for (const id of lessonIds) out[id] = 0;
+  const user = await uid();
+  if (!user || !lessonIds.length) return out;
+  const { data } = await db
+    .from("american_lesson_progress")
+    .select("lesson_id")
+    .eq("user_id", user)
+    .in("lesson_id", lessonIds);
+  for (const r of (data ?? []) as { lesson_id: string }[]) out[r.lesson_id] = (out[r.lesson_id] ?? 0) + 1;
+  return out;
+}
+
+export type AmMasteryItemType =
+  | "am_sentence" // 关1 逐句点读覆盖(correct_count>=1 = 点读过)
+  | "am_prelisten" // 关1 前置题
+  | "am_question" // 关5-10 题(correct>=2 = 掌握)
+  | "am_grammar_point"; // 关5 考点(correct>=2 = 考点掌握)
+
+/** 记录一次掌握尝试(read-then-write,复刻 junior 口径)。 */
+export async function recordMastery(itemType: AmMasteryItemType, itemId: string, isCorrect: boolean): Promise<void> {
+  const user = await uid();
+  if (!user) return;
+  const { data: prev } = await db
+    .from("american_user_mastery")
+    .select("id,correct_count,wrong_count")
+    .eq("user_id", user)
+    .eq("item_type", itemType)
+    .eq("item_id", itemId)
+    .maybeSingle();
+  const correct = (prev?.correct_count ?? 0) + (isCorrect ? 1 : 0);
+  const wrong = (prev?.wrong_count ?? 0) + (isCorrect ? 0 : 1);
+  const level = correct >= AM_MASTER_AT ? 4 : correct + wrong > 0 ? 1 : 0;
+  const payload = {
+    correct_count: correct,
+    wrong_count: wrong,
+    mastery_level: level,
+    last_seen_at: new Date().toISOString(),
+    last_result: isCorrect ? "correct" : "wrong",
+  };
+  if (prev?.id) await db.from("american_user_mastery").update(payload).eq("id", prev.id);
+  else await db.from("american_user_mastery").insert({ user_id: user, item_type: itemType, item_id: itemId, ...payload });
+}
+
+/** 关1 逐句点读:某句点读过一次即记覆盖(item_type=am_sentence)。 */
+export async function markSentenceRead(sentenceId: string): Promise<void> {
+  return recordMastery("am_sentence", sentenceId, true);
+}
+
+/** 读取一课的掌握明细,聚合成每关的 masteredFrac(供列表页双环)。 */
+export async function fetchLessonMastery(bundle: LessonBundle): Promise<Record<number, StageProgress>> {
+  const user = await uid();
+  const completed = await fetchCompletedStages(bundle.lesson.id);
+  const result: Record<number, StageProgress> = {};
+  for (let s = 1; s <= 10; s++) result[s] = { done: completed.has(s), masteredFrac: 0 };
+  if (!user) return result;
+
+  // american_user_mastery 全量(该课相关 item)
+  const { data: mData } = await db
+    .from("american_user_mastery")
+    .select("item_type,item_id,correct_count")
+    .eq("user_id", user);
+  const rows = (mData ?? []) as { item_type: string; item_id: string; correct_count: number }[];
+  const byItem = new Map<string, number>();
+  for (const r of rows) byItem.set(`${r.item_type}:${r.item_id}`, r.correct_count);
+
+  // 关1 掌握 = 逐句点读覆盖率 +(前置题作答)/(句数+prelisten)
+  const sentTotal = bundle.sentences.length + (bundle.lesson.prelisten_question ? 1 : 0);
+  if (sentTotal > 0) {
+    let read = 0;
+    for (const s of bundle.sentences) if ((byItem.get(`am_sentence:${s.id}`) ?? 0) >= 1) read++;
+    if (bundle.lesson.prelisten_question && (byItem.get(`am_prelisten:${bundle.lesson.id}`) ?? 0) >= 1) read++;
+    result[1].masteredFrac = read / sentTotal;
+  }
+
+  // 关5-10 掌握 = 该关题答对>=2 占比
+  const qByStage = new Map<number, AmericanQuestion[]>();
+  for (const q of bundle.questions) {
+    if (!qByStage.has(q.stage)) qByStage.set(q.stage, []);
+    qByStage.get(q.stage)!.push(q);
+  }
+  for (const [stage, qs] of qByStage) {
+    if (!qs.length) continue;
+    let mastered = 0;
+    for (const q of qs) if ((byItem.get(`am_question:${q.id}`) ?? 0) >= AM_MASTER_AT) mastered++;
+    result[stage] = { done: completed.has(stage), masteredFrac: mastered / qs.length };
+  }
+  return result;
+}

@@ -22,7 +22,10 @@ import { Navigate } from "react-router-dom";
 
 // Lazy-load everything else — each page becomes its own chunk
 // 成人英语(CEFR)板块已下线,页面归档至 _archived/adult/。旧路由 301 → /american(见 Routes)。
-const AmericanHome = lazy(() => import("./pages/american/AmericanHome.tsx"));
+const AmericanHub = lazy(() => import("./pages/american/AmericanHub.tsx"));
+const AmericanUnit = lazy(() => import("./pages/american/AmericanUnit.tsx"));
+const AmericanLesson = lazy(() => import("./pages/american/AmericanLesson.tsx"));
+const AmericanStage = lazy(() => import("./pages/american/AmericanStage.tsx"));
 const Stats = lazy(() => import("./pages/Stats.tsx"));
 const WeeklyReport = lazy(() => import("./pages/WeeklyReport.tsx"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe.tsx"));
@@ -526,8 +529,11 @@ const App = () => (
           <Route path="/gaokao/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           <Route path="/gaokao/g/:grade/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           {/* end 高中(已开放)*/}
-          {/* 美语课程入口(Phase 1 占位页;Phase 2 换为 12 单元 hub) */}
-          <Route path="/american" element={<AmericanHome />} />
+          {/* 美语课程(/american hub → 单元 → 本课 10 关 → 关卡) */}
+          <Route path="/american" element={<AmericanHub />} />
+          <Route path="/american/hub/:unit" element={<AmericanUnit />} />
+          <Route path="/american/lesson/:lessonId" element={<AmericanLesson />} />
+          <Route path="/american/lesson/:lessonId/stage/:stage" element={<AmericanStage />} />
           {/* 成人板块旧课程路由 301 → /american */}
           <Route path="/level/:levelId" element={<Navigate to="/american" replace />} />
           <Route path="/levels" element={<Navigate to="/american" replace />} />

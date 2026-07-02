@@ -12,6 +12,13 @@ const l1v2 = readFileSync(D("美语第1课_定稿v2.md"), "utf8");
 const l1v1 = readFileSync(D("美语第1课_v1.md"), "utf8");
 const g5 = readFileSync(D("美语课程_单元1_关5题库_v1.md"), "utf8");
 const g6 = readFileSync(D("美语课程_单元1_关6小测_v1.md"), "utf8");
+// 单元2(第7-12课)
+const batch2 = readFileSync(D("美语课程_批次2_第7-12课.md"), "utf8");
+const g5_2 = readFileSync(D("美语课程_单元2_关5题库_v1.md"), "utf8");
+const g6_2 = readFileSync(D("美语课程_单元2_关6小测_v1.md"), "utf8");
+
+// lesson_no → 内容 id(两位补零:am1_l01 … am1_l72)
+const pad = (n) => "am1_l" + String(n).padStart(2, "0");
 
 // ---------- 确定性 PRNG(mulberry32),保证每次生成同一 SQL ----------
 let _s = 0x9e3779b9;
@@ -209,7 +216,7 @@ function parseV1Guan10(text) {
 // 关6 小测题库 → {lessonNo:[choice...]}
 function parseGuan6(text) {
   const byLesson = {};
-  const blocks = text.split(/##\s*L(\d)（am1_l0\d）/).slice(1);
+  const blocks = text.split(/##\s*L(\d+)（am1_l\d\d）/).slice(1);
   for (let i = 0; i < blocks.length; i += 2) {
     const ln = +blocks[i]; const body = blocks[i + 1]; const qs = [];
     for (const row of tableRows(body)) {
@@ -299,18 +306,18 @@ function parseGuan10(s) {
 // ============ 解析 关5 题库 ============
 function parseGuan5(text) {
   const byLesson = {}; // lessonNo -> {points:[{gp,name}], questions:[...]}
-  const lessonBlocks = text.split(/##\s*L(\d)（am1_l0\d）考点定义/).slice(1);
+  const lessonBlocks = text.split(/##\s*L(\d+)（am1_l\d\d）考点定义/).slice(1);
   for (let i = 0; i < lessonBlocks.length; i += 2) {
     const ln = Number(lessonBlocks[i]);
     const body = lessonBlocks[i + 1];
     const points = [];
-    for (const m of body.matchAll(/-\s*(am1_l0\d_gp\d)[：:]\s*(.+)/g)) points.push({ id: m[1], name: m[2].trim() });
+    for (const m of body.matchAll(/-\s*(am1_l\d\d_gp\d)[：:]\s*(.+)/g)) points.push({ id: m[1], name: m[2].trim() });
     const questions = [];
     for (const row of tableRows(body)) {
       if (row.length >= 6 && /^\d+$/.test(row[0])) {
         const gp = row[1].trim(); const qtype = row[2].trim();
         const stem = row[3].trim(); const optRaw = row[4].trim(); const ans = row[5].trim();
-        const gpId = `am1_l0${ln}_${gp}`;
+        const gpId = `${pad(ln)}_${gp}`;
         if (qtype === "transform") {
           questions.push({ gpId, qtype: "transform", stem, answer_text: ans });
         } else {
@@ -353,17 +360,28 @@ for (const m of batch.matchAll(/#\s*Lesson\s*(\d)\s+[\s\S]*?(?=\n#\s*Lesson\s*\d
   const meta = { id: `am1_l0${ln}`, unit_no: 1, lesson_no: ln, title_en: titleMap[ln][0], title_cn: titleMap[ln][1] };
   lessons.push(parseLesson(m[0], meta));
 }
+// L7-12(单元2): 从 batch2 解析;标题从每课 block 头(# Lesson N <英> / 首个 ## <中>)提取
+for (const m of batch2.matchAll(/#\s*Lesson\s*(\d+)\s+[\s\S]*?(?=\n#\s*Lesson\s*\d+|\n#\s*单元 \d 完结|$)/g)) {
+  const ln = Number(m[1]);
+  const block = m[0];
+  const enM = block.match(/#\s*Lesson\s*\d+\s+(.+)/);
+  const cnM = block.match(/\n##\s+([^\n]+)/);
+  const meta = { id: pad(ln), unit_no: 2, lesson_no: ln,
+    title_en: enM ? enM[1].trim() : "", title_cn: cnM ? cnM[1].trim() : "" };
+  lessons.push(parseLesson(block, meta));
+}
 lessons.sort((a, b) => a.lesson_no - b.lesson_no);
 
-const g5byLesson = parseGuan5(g5);
-const g6byLesson = parseGuan6(g6);
+// 关5/关6 两单元合并(键 1-6 与 7-12 不冲突)
+const g5byLesson = { ...parseGuan5(g5), ...parseGuan5(g5_2) };
+const g6byLesson = { ...parseGuan6(g6), ...parseGuan6(g6_2) };
 const bodyByLesson = {};
 for (const L of lessons) bodyByLesson[L.lesson_no] = L.grammarBody;
 
 // ============ 生成 SQL ============
 const out = [];
-out.push("-- 美语课程 单元1 seed(生成器产出,勿手改;改 docs/american 源 md 后重跑 gen-unit1-seed.mjs)");
-out.push("-- 幂等:全部 ON CONFLICT。gap 未含:L1 词/关10、关6 小测、grammar_points.body_md。");
+out.push("-- 美语课程 单元1+2 seed(生成器产出,勿手改;改 docs/american 源 md 后重跑 gen-unit1-seed.mjs)");
+out.push("-- 幂等:全部 ON CONFLICT,重跑安全、unit1 数据不动。合计 368 题(unit1 181 + unit2 187)。");
 out.push("BEGIN;");
 
 // lessons
@@ -381,7 +399,7 @@ for (const L of lessons) for (const w of L.words) {
 // grammar_points (15,来自关5题库考点定义;body_md=本课语法讲解原文[批次1已审])
 for (const ln of Object.keys(g5byLesson)) {
   for (const p of g5byLesson[ln].points) {
-    out.push(`INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES (${sq(p.id)},${sq("am1_l0" + ln)},${sq(p.name)},${sq(bodyByLesson[ln])}) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;`);
+    out.push(`INSERT INTO public.american_grammar_points (id,lesson_id,name,body_md) VALUES (${sq(p.id)},${sq(pad(Number(ln)))},${sq(p.name)},${sq(bodyByLesson[ln])}) ON CONFLICT (id) DO UPDATE SET name=EXCLUDED.name,body_md=EXCLUDED.body_md;`);
   }
 }
 // contrast
@@ -450,7 +468,31 @@ mkdirSync(path.join(ROOT, "SQLAA"), { recursive: true });
 writeFileSync(path.join(ROOT, "SQLAA/american_phase1_seed.sql"), out.join("\n") + "\n", "utf8");
 
 const totalQ = counts.q5 + counts.q6 + counts.q7 + counts.q8 + counts.q9 + counts.q10;
-console.log("对账(生成器实测):");
+
+// 分单元对账(逐单元核对底账)
+function unitCounts(U) {
+  const ls = lessons.filter((L) => L.unit_no === U);
+  const c = { unit: U, lessons: ls.length, sentences: 0, words: 0, contrast: 0, grammar_points: 0, q5: 0, q6: 0, q7: 0, q8: 0, q9: 0, q10: 0 };
+  for (const L of ls) {
+    c.sentences += L.sentences.length;
+    c.words += L.words.length;
+    c.contrast += L.contrast.length;
+    const ln = L.lesson_no;
+    c.grammar_points += g5byLesson[ln]?.points.length || 0;
+    c.q5 += g5byLesson[ln]?.questions.length || 0;
+    c.q6 += g6byLesson[ln]?.length || 0;
+    c.q7 += L.cloze?.blanks.length || 0;
+    c.q8 += L.listening.length;
+    c.q9 += L.scenario.length;
+    c.q10 += L.guan10.length;
+  }
+  c.qTotal = c.q5 + c.q6 + c.q7 + c.q8 + c.q9 + c.q10;
+  return c;
+}
+const units = [...new Set(lessons.map((L) => L.unit_no))].sort((a, b) => a - b);
+console.log("对账(生成器实测·合计):");
 console.table(counts);
 console.log("questions 合计 =", totalQ, "(关5", counts.q5, "关6", counts.q6, "关7", counts.q7, "关8", counts.q8, "关9", counts.q9, "关10", counts.q10, ")");
+console.log("\n分单元对账:");
+console.table(units.map(unitCounts));
 console.log("写出 SQLAA/american_phase1_seed.sql");

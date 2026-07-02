@@ -14,6 +14,10 @@ import {
   groupByVocabDomain,
   groupByGrammarPoint,
 } from "./mistakes";
+import {
+  selectStrengthenQuestions,
+  type FCVolume,
+} from "./questionBank";
 
 const SUPABASE_FN_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/fc-strengthen-questions`;
 const SUPABASE_ANON = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string;
@@ -39,6 +43,52 @@ function topNTags(
     .sort((a, b) => b[1].length - a[1].length)
     .slice(0, n)
     .map(([k]) => k);
+}
+
+/**
+ * 题库版强化训练选题(替代 AI,秒开)。
+ * 复用同一套薄弱标签聚合(getMistakes + topNTags),把 top5 弱项标签交给
+ * questionBank.selectStrengthenQuestions 从本地种子库按命中优先抽题。
+ *
+ * - 仍要求至少 1 条错题(没错题无从针对 → no_mistakes,同 AI 版行为)。
+ * - 全同步:直接返回题目,无网络/超时/降级逻辑。
+ */
+export function selectStrengthenFromBank(
+  userId: string | null | undefined,
+  grade: number,
+  volume: FCVolume,
+  count: number,
+): StrengthenResult | StrengthenError {
+  const mistakes = getMistakes(userId, grade);
+  if (mistakes.length === 0) {
+    return {
+      ok: false,
+      kind: "no_mistakes",
+      message:
+        "还没有错题数据。先去关卡里答几道题, 答错的我帮你记住, 然后再来强化训练。",
+    };
+  }
+
+  const weak_vocab_domains = topNTags(groupByVocabDomain(mistakes), 5);
+  const weak_grammar_points = topNTags(groupByGrammarPoint(mistakes), 5);
+
+  const questions = selectStrengthenQuestions(
+    grade,
+    volume,
+    count,
+    weak_vocab_domains,
+    weak_grammar_points,
+  );
+
+  if (questions.length === 0) {
+    return {
+      ok: false,
+      kind: "ai_failed",
+      message: "本册题库暂时抽不到强化题, 换个关卡多答几道再来试试。",
+    };
+  }
+
+  return { ok: true, questions, warnings: [] };
 }
 
 /**

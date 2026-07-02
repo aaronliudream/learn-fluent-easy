@@ -214,6 +214,62 @@ export function getQuestionsByType<T extends FinalChallengeQuestionType>(
   return applyAnswerQuota(drawn);
 }
 
+/**
+ * 强化训练支持渲染的题型(strengthen 页 renderPlay 有对应 PlayCard、且种子库里有题)。
+ * 排除:阅读题(MVP 不出)、listen_and_choose_answer(种子库 0 道 → 永远抽不到)、
+ * 六年级专属的 dialogue_response / fill_in_choose / sentence_* (strengthen 不路由)。
+ */
+const STRENGTHEN_TYPES: FinalChallengeQuestionType[] = [
+  "picture_match_sentence",
+  "listen_and_choose_word",
+  "listen_and_judge_picture",
+  "odd_one_out",
+];
+
+/**
+ * 强化训练选题(题库版,替代 AI 出题):从本地种子库按用户薄弱标签
+ * (weak vocab_domain / grammar_point)优先抽题,命中越多分越高;
+ * 不足 count 时用同库其它题随机补足(绝不因某考点无题而阻塞)。
+ * 最后统一走 applyAnswerQuota(答案位置不扎堆 + 选项打散)。
+ *
+ * 全同步、0 网络等待 —— 秒开。无薄弱标签命中时优雅退化为"库内随机练习"。
+ */
+export function selectStrengthenQuestions(
+  grade: number,
+  volume: FCVolume,
+  count: number,
+  weakVocab: readonly string[],
+  weakGrammar: readonly string[],
+): FCQuestion[] {
+  const wV = new Set(weakVocab);
+  const wG = new Set(weakGrammar);
+  const pool = bankFor(grade, volume).filter((q) =>
+    STRENGTHEN_TYPES.includes(q.type),
+  );
+  const score = (q: FCQuestion) =>
+    q.vocab_domain.filter((d) => wV.has(d)).length +
+    q.grammar_point.filter((g) => wG.has(g)).length;
+  const shuffle = (arr: readonly FCQuestion[]) =>
+    [...arr].sort(() => Math.random() - 0.5);
+
+  // 先随机、再按命中分稳定降序 → 同分内部随机,高分优先。
+  const onTarget = shuffle(pool.filter((q) => score(q) > 0)).sort(
+    (a, b) => score(b) - score(a),
+  );
+  const offTarget = shuffle(pool.filter((q) => score(q) === 0));
+
+  const chosen: FCQuestion[] = [];
+  const seen = new Set<string>();
+  for (const q of [...onTarget, ...offTarget]) {
+    if (chosen.length >= count) break;
+    if (seen.has(q.id)) continue;
+    seen.add(q.id);
+    chosen.push(q);
+  }
+  // 打散顺序,避免"命中题全排前面";再套配额/选项打散。
+  return applyAnswerQuota(shuffle(chosen));
+}
+
 /** 按 id 精确取题。未命中返回 null。 */
 export function getQuestionById(
   id: string,

@@ -9,7 +9,7 @@
  * 来自 PR #72a 的纯加法 export, 跳过 reading_judge_TF MVP 不出阅读题).
  */
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { unlockAudioSync, prefetchTTSBatchKid } from "@/lib/speak";
@@ -18,12 +18,11 @@ import LevelShell, {
 } from "@/components/primaryHub/finalChallenge/LevelShell";
 import RexMascot from "@/components/primaryHub/finalChallenge/RexMascot";
 import {
-  fetchStrengthenQuestions,
-  type StrengthenResult,
+  selectStrengthenFromBank,
   type StrengthenError,
 } from "@/lib/primaryHub/finalChallenge/strengthen";
+import type { FCVolume } from "@/lib/primaryHub/finalChallenge/questionBank";
 import type { FCQuestion } from "@/lib/primaryHub/finalChallenge/types";
-import { getQuestionsByType } from "@/lib/primaryHub/finalChallenge/questionBank";
 
 // 5 个 PlayCard (按 type 路由, 排除 reading_judge_TF)
 import { PicMatchSentencePlayCard } from "@/components/primaryHub/finalChallenge/levels/PicMatchSentenceLevel";
@@ -39,32 +38,6 @@ interface ErrorState {
   message: string;
 }
 
-// 垫场题用的题型(都无需配图、strengthen 里渲染干净):听音辨词 / 找不同 / 听句判图
-const SEED_WARMUP_TYPES = [
-  "listen_and_choose_word",
-  "odd_one_out",
-  "listen_and_judge_picture",
-] as const;
-
-/** 从本地大题库挑 n 道"垫场热身题"(0 生成等待),跨题型、按当前年级+册别随机。
- *  作用:孩子先做这几道,后台 AI 针对题趁机生成完,接上时几乎无等待。 */
-function pickSeedWarmupQuestions(grade: number, n: number): FCQuestion[] {
-  const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
-  const picked: FCQuestion[] = [];
-  const usedIds = new Set<string>();
-  for (let i = 0; picked.length < n && i < SEED_WARMUP_TYPES.length * 4; i++) {
-    const type = SEED_WARMUP_TYPES[i % SEED_WARMUP_TYPES.length];
-    const pool = getQuestionsByType(type, 99, vol, grade);
-    if (!pool || pool.length === 0) continue;
-    const shuffled = [...pool].sort(() => Math.random() - 0.5);
-    const q = shuffled.find((x) => !usedIds.has(x.id));
-    if (!q) continue;
-    usedIds.add(q.id);
-    picked.push({ ...q, id: `seed_warmup_${q.id}` } as FCQuestion);
-  }
-  return picked;
-}
-
 export default function PrimaryHubFinalChallengeStrengthen() {
   const { grade, userId } = usePrimaryHub();
   const navigate = useNavigate();
@@ -76,24 +49,14 @@ export default function PrimaryHubFinalChallengeStrengthen() {
   const [phase, setPhase] = useState<Phase>("loading");
   const [questions, setQuestions] = useState<FCQuestion[]>([]);
   const [error, setError] = useState<ErrorState | null>(null);
-  // 进度条/isLast 用的预期总题数;先乐观按 5(1 热身 + 4 针对),AI 回来后settle 成实际数。
-  const [expectedTotal, setExpectedTotal] = useState(5);
-  // 后台生成失败但种子题在玩 → 轻提示,不打断。
-  const [bgError, setBgError] = useState<string | null>(null);
-  // AI 生成是否已"落定"(成功/失败/超时都算)。用于:孩子答得比 AI 出题快、停在
-  // 还没到的题位时,若生成已落定且不会再有题,就直接收尾,绝不永久卡在"马上来下一题"。
-  const [settled, setSettled] = useState(false);
   // 用 nonce 触发"再来一轮" — 把 effect 重跑
   const [reloadNonce, setReloadNonce] = useState(0);
 
-  // 拉题:第一题用现成种子题秒出,4 道针对题后台生成、回来追加(消除 Gemini 等待)
+  // 拉题:全同步,从本地种子题库按错题薄弱标签抽题(秒开,0 网络等待)。
   useEffect(() => {
-    let cancelled = false;
     setError(null);
-    setBgError(null);
-    setSettled(false);
 
-    // 没登录:强化训练需要账号(错题/出题按用户),直接提示,不卡死。
+    // 没登录:强化训练按用户错题出题,直接提示,不卡死。
     if (!userId) {
       setError({ kind: "ai_failed", message: "请先登录后再使用强化训练。" });
       setPhase("error");
@@ -101,59 +64,17 @@ export default function PrimaryHubFinalChallengeStrengthen() {
     }
 
     const TOTAL = 8; // 每轮强化训练目标总题数
+    const vol: FCVolume =
+      sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2";
 
-    // 1) 立刻放 3 道本地垫场题(跨题型、秒出),马上进入 playing(0 等待)
-    const seedQs = pickSeedWarmupQuestions(grade, 3);
-    setQuestions(seedQs);
-    setExpectedTotal(TOTAL);
-    setPhase(seedQs.length > 0 ? "playing" : "loading");
-
-    // 2) 后台生成针对性 AI 题补足到 8 道(多取 1 道做缓冲,合并时截到 8)
-    (async () => {
-      const aiCount = Math.max(1, TOTAL - seedQs.length + 1);
-      const result: StrengthenResult | StrengthenError | "timeout" =
-        await Promise.race([
-          fetchStrengthenQuestions(userId, grade, aiCount),
-          new Promise<"timeout">((r) => setTimeout(() => r("timeout"), 20000)),
-        ]);
-      if (cancelled) return;
-      // 走到这里 = 生成已落定(成功/失败/超时),之后不会再有新题进来。
-      setSettled(true);
-      if (result === "timeout") {
-        if (seedQs.length > 0) {
-          setBgError("AI 出题有点慢,先做这几道,做完可以再点一次「强化训练」。");
-          setExpectedTotal(seedQs.length);
-        } else {
-          setError({ kind: "ai_failed", message: "AI 出题超时了,请稍后重试。" });
-          setPhase("error");
-        }
-        return;
-      }
-      if (!result.ok) {
-        if (seedQs.length > 0) {
-          setBgError(result.message);
-          setExpectedTotal(seedQs.length);
-        } else {
-          setError({ kind: result.kind, message: result.message });
-          setPhase("error");
-        }
-        return;
-      }
-      // 追加 AI 题到垫场题后面;按 audio/id 去重,合并后截到 TOTAL 道
-      const base = seedQs;
-      const seen = new Set(base.map((q) => ("audio" in q ? q.audio : q.id)));
-      const fresh = result.questions.filter(
-        (q) => !seen.has("audio" in q ? q.audio : q.id),
-      );
-      const next = [...base, ...fresh].slice(0, TOTAL);
-      setQuestions(next);
-      setExpectedTotal(next.length);
-      if (seedQs.length === 0) setPhase("playing");
-    })();
-
-    return () => {
-      cancelled = true;
-    };
+    const result = selectStrengthenFromBank(userId, grade, vol, TOTAL);
+    if (!result.ok) {
+      setError({ kind: result.kind, message: result.message });
+      setPhase("error");
+      return;
+    }
+    setQuestions(result.questions);
+    setPhase("playing");
   }, [userId, grade, reloadNonce]);
 
   // 题目就绪后预热所有听力题的 TTS:strengthen 直接渲染 PlayCard,绕过了关卡组件的
@@ -170,27 +91,7 @@ export default function PrimaryHubFinalChallengeStrengthen() {
   const renderPlay = useCallback(
     (api: LevelShellPlayApi) => {
       const q = questions[api.idx];
-      if (!q) {
-        // 生成已落定却还没题 → 不会再有了,直接收尾到 done,绝不永久卡住。
-        if (settled) return <FinishWhenNoMore api={api} />;
-        // 后台题还没到(用户答得快):给轻量 loading 兜底,不白屏;到了自动渲染。
-        return (
-          <div style={{ padding: 48, textAlign: "center", color: "var(--fc-ink-soft)" }}>
-            <div
-              className="fc-pulse-glow-purple"
-              style={{
-                margin: "0 auto 14px",
-                width: 14,
-                height: 14,
-                borderRadius: "50%",
-                background: "var(--fc-purple)",
-              }}
-              aria-label="loading"
-            />
-            马上来下一题…
-          </div>
-        );
-      }
+      if (!q) return null; // 题目全同步就绪,越界仅作兜底。
       switch (q.type) {
         case "picture_match_sentence":
           return <PicMatchSentencePlayCard q={q} api={api} />;
@@ -211,7 +112,7 @@ export default function PrimaryHubFinalChallengeStrengthen() {
           );
       }
     },
-    [questions, grade, settled],
+    [questions, grade],
   );
 
   // ============ LOADING ============
@@ -238,7 +139,7 @@ export default function PrimaryHubFinalChallengeStrengthen() {
               color: "var(--fc-ink-soft)",
             }}
           >
-            按你的错题考点定制 5 道针对性强化题
+            按你的错题考点从题库挑针对性强化题
           </p>
           <div
             className="fc-pulse-glow-purple"
@@ -320,62 +221,18 @@ export default function PrimaryHubFinalChallengeStrengthen() {
   }
 
   // ============ PLAYING ============
-  // LevelShell 渲染 intro/play/done 三段, 我们在 done 末尾再补一个"再来一轮"按钮.
+  // LevelShell 渲染 intro/play/done 三段。题目全同步就绪,total = 实际题数。
   return (
-    <>
-      <LevelShell
-        levelId={0}                       // strengthen mode 占位; 不写 progress
-        mode="strengthen"
-        levelName="AI 强化训练"
-        introHint="Rex 按你的错题考点出了 5 道针对性强化题, 准备好了吗?"
-        introMood="excited"
-        total={expectedTotal}             // 预期总数(种子题秒出时 questions 只有 1,用 expectedTotal 让进度/收尾正确)
-        onBeforeStart={unlockAudioSync}   // iOS 音频解锁: 给 sharedAudio 一个 gesture-triggered play(), 保证混合题型里第一道是听力时也能响 (backlog #2 follow-up audit)
-        renderPlay={renderPlay}
-      />
-      {/* 后台生成失败但种子题在玩:顶部轻提示,不打断当前题 */}
-      {bgError && (
-        <div
-          style={{
-            position: "fixed",
-            top: 8,
-            left: "50%",
-            transform: "translateX(-50%)",
-            zIndex: 50,
-            background: "var(--fc-soft-warn)",
-            color: "white",
-            padding: "6px 14px",
-            borderRadius: 999,
-            fontSize: 12,
-            fontWeight: 700,
-            boxShadow: "var(--fc-shadow-card)",
-          }}
-        >
-          后续题加载失败,做完可「再来一轮」
-        </div>
-      )}
-      {/* "再来一轮"由 LevelShell 的 done 屏不直接管, 这里全局监听 done 进入后插一个按钮的
-        做法会很笨;改用更简单的方式: 在 done 屏返回按钮旁边由用户走"返回地图 → 再次进入 strengthen"
-        循环, 已足够 MVP. */}
-    </>
-  );
-}
-
-/**
- * 生成已落定但当前题位没有题(孩子答得比 AI 快、AI 又没出/超时/失败)。
- * 此时再没有新题会进来,挂载即收尾到 done —— 避免永久卡在"马上来下一题"。
- * (此分支仅在 settled 时渲染,所以 expectedTotal 已 settle 成实际题数,
- *  api.advance() 命中 isLast → 进入 done。)
- */
-function FinishWhenNoMore({ api }: { api: LevelShellPlayApi }) {
-  useEffect(() => {
-    api.advance();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  return (
-    <div style={{ padding: 48, textAlign: "center", color: "var(--fc-ink-soft)" }}>
-      本轮就到这儿啦,正在收尾…
-    </div>
+    <LevelShell
+      levelId={0}                       // strengthen mode 占位; 不写 progress
+      mode="strengthen"
+      levelName="强化训练"
+      introHint="按你的错题考点从题库挑了一组针对性强化题, 准备好了吗?"
+      introMood="excited"
+      total={questions.length}
+      onBeforeStart={unlockAudioSync}   // iOS 音频解锁: 给 sharedAudio 一个 gesture-triggered play(), 保证混合题型里第一道是听力时也能响
+      renderPlay={renderPlay}
+    />
   );
 }
 

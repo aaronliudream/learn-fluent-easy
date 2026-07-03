@@ -4,7 +4,7 @@
  * - reveal:句型转换/情景应答等开放题 → 显示参考答案 → 自评"答对/没答对"记掌握。
  * 每题作答回调 onAnswer(id,isCorrect) 由各关落库(american_user_mastery)。
  */
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { Check, X, Volume2, ChevronRight } from "lucide-react";
 import { T } from "@/i18n/T";
 import { speakUS, unlockAmericanAudio } from "@/lib/american/audio";
@@ -29,19 +29,23 @@ export function QuizRunner({
   onComplete,
   speakStem = false,
   header,
+  suppressFinish = false,
 }: {
   items: QuizItem[];
   onAnswer: (id: string, isCorrect: boolean) => void;
-  onComplete: (scorePct: number) => void;
+  onComplete: (scorePct: number, wrongIds: string[]) => void;
   /** choice 题干朗读(听力关用);reveal 参考答案总是可朗读。 */
   speakStem?: boolean;
   header?: React.ReactNode;
+  /** 抑制内置结算屏,由父组件接管结算(关10 全对通关/重考用)。 */
+  suppressFinish?: boolean;
 }) {
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [revealed, setRevealed] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
   const [finished, setFinished] = useState(false);
+  const wrongIdsRef = useRef<string[]>([]);
 
   const total = items.length;
   const item = items[idx];
@@ -50,7 +54,7 @@ export function QuizRunner({
     if (idx + 1 >= total) {
       setFinished(true);
       const pct = total ? Math.round((correctCount / total) * 100) : 0;
-      onComplete(pct);
+      onComplete(pct, wrongIdsRef.current.slice());
     } else {
       setIdx((i) => i + 1);
       setPicked(null);
@@ -63,18 +67,21 @@ export function QuizRunner({
     setPicked(i);
     const ok = i === item.answerIndex;
     if (ok) setCorrectCount((c) => c + 1);
+    else wrongIdsRef.current.push(item.id);
     onAnswer(item.id, ok);
   }, [picked, item, onAnswer]);
 
   const selfGrade = useCallback((ok: boolean) => {
     if (item.kind !== "reveal") return;
     if (ok) setCorrectCount((c) => c + 1);
+    else wrongIdsRef.current.push(item.id);
     onAnswer(item.id, ok);
     next();
   }, [item, onAnswer, next]);
 
   const pct = useMemo(() => (total ? Math.round((correctCount / total) * 100) : 0), [correctCount, total]);
 
+  if (finished && suppressFinish) return null;
   if (finished) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-16 text-center">

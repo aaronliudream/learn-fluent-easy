@@ -32,6 +32,30 @@ const g6_5 = readFileSync(D("美语课程_单元5_关6小测_v1.md"), "utf8");
 const batch6 = readFileSync(D("美语课程_批次6_第31-36课.md"), "utf8");
 const g5_6 = readFileSync(D("美语课程_单元6_关5题库_v1.md"), "utf8");
 const g6_6 = readFileSync(D("美语课程_单元6_关6小测_v1.md"), "utf8");
+// 单元7(第37-42课)
+const batch7 = readFileSync(D("美语课程_批次7_第37-42课.md"), "utf8");
+const g5_7 = readFileSync(D("美语课程_单元7_关5题库_v1.md"), "utf8");
+const g6_7 = readFileSync(D("美语课程_单元7_关6小测_v1.md"), "utf8");
+// 单元8(第43-48课)
+const batch8 = readFileSync(D("美语课程_批次8_第43-48课.md"), "utf8");
+const g5_8 = readFileSync(D("美语课程_单元8_关5题库_v1.md"), "utf8");
+const g6_8 = readFileSync(D("美语课程_单元8_关6小测_v1.md"), "utf8");
+// 单元9(第49-54课)
+const batch9 = readFileSync(D("美语课程_批次9_第49-54课.md"), "utf8");
+const g5_9 = readFileSync(D("美语课程_单元9_关5题库_v1.md"), "utf8");
+const g6_9 = readFileSync(D("美语课程_单元9_关6小测_v1.md"), "utf8");
+// 单元10(第55-60课)
+const batch10 = readFileSync(D("美语课程_批次10_第55-60课.md"), "utf8");
+const g5_10 = readFileSync(D("美语课程_单元10_关5题库_v1.md"), "utf8");
+const g6_10 = readFileSync(D("美语课程_单元10_关6小测_v1.md"), "utf8");
+// 单元11(第61-66课)
+const batch11 = readFileSync(D("美语课程_批次11_第61-66课.md"), "utf8");
+const g5_11 = readFileSync(D("美语课程_单元11_关5题库_v1.md"), "utf8");
+const g6_11 = readFileSync(D("美语课程_单元11_关6小测_v1.md"), "utf8");
+// 单元12(第67-72课)
+const batch12 = readFileSync(D("美语课程_批次12_第67-72课.md"), "utf8");
+const g5_12 = readFileSync(D("美语课程_单元12_关5题库_v1.md"), "utf8");
+const g6_12 = readFileSync(D("美语课程_单元12_关6小测_v1.md"), "utf8");
 
 // lesson_no → 内容 id(两位补零:am1_l01 … am1_l72)
 const pad = (n) => "am1_l" + String(n).padStart(2, "0");
@@ -384,9 +408,15 @@ const extraBatches = [
   { text: batch4, unit: 4 },
   { text: batch5, unit: 5 },
   { text: batch6, unit: 6 },
+  { text: batch7, unit: 7 },
+  { text: batch8, unit: 8 },
+  { text: batch9, unit: 9 },
+  { text: batch10, unit: 10 },
+  { text: batch11, unit: 11 },
+  { text: batch12, unit: 12 },
 ];
 for (const { text, unit } of extraBatches) {
-  for (const m of text.matchAll(/#\s*Lesson\s*(\d+)\s+[\s\S]*?(?=\n#\s*Lesson\s*\d+|\n#\s*单元 \d 完结|$)/g)) {
+  for (const m of text.matchAll(/#\s*Lesson\s*(\d+)\s+[\s\S]*?(?=\n#\s*Lesson\s*\d+|\n#\s*单元 \d+ 完结|$)/g)) {
     const ln = Number(m[1]);
     const block = m[0];
     const enM = block.match(/#\s*Lesson\s*\d+\s+(.+)/);
@@ -398,8 +428,8 @@ for (const { text, unit } of extraBatches) {
 lessons.sort((a, b) => a.lesson_no - b.lesson_no);
 
 // 关5/关6 各单元合并(键 1-6 / 7-12 / 13-18 不冲突)
-const g5byLesson = { ...parseGuan5(g5), ...parseGuan5(g5_2), ...parseGuan5(g5_3), ...parseGuan5(g5_4), ...parseGuan5(g5_5), ...parseGuan5(g5_6) };
-const g6byLesson = { ...parseGuan6(g6), ...parseGuan6(g6_2), ...parseGuan6(g6_3), ...parseGuan6(g6_4), ...parseGuan6(g6_5), ...parseGuan6(g6_6) };
+const g5byLesson = { ...parseGuan5(g5), ...parseGuan5(g5_2), ...parseGuan5(g5_3), ...parseGuan5(g5_4), ...parseGuan5(g5_5), ...parseGuan5(g5_6), ...parseGuan5(g5_7), ...parseGuan5(g5_8), ...parseGuan5(g5_9), ...parseGuan5(g5_10), ...parseGuan5(g5_11), ...parseGuan5(g5_12) };
+const g6byLesson = { ...parseGuan6(g6), ...parseGuan6(g6_2), ...parseGuan6(g6_3), ...parseGuan6(g6_4), ...parseGuan6(g6_5), ...parseGuan6(g6_6), ...parseGuan6(g6_7), ...parseGuan6(g6_8), ...parseGuan6(g6_9), ...parseGuan6(g6_10), ...parseGuan6(g6_11), ...parseGuan6(g6_12) };
 const bodyByLesson = {};
 for (const L of lessons) bodyByLesson[L.lesson_no] = L.grammarBody;
 

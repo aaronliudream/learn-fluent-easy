@@ -1,28 +1,88 @@
 /**
- * 关7 · 对话填空。展示挖空对话,逐空选词填入(选项为原文位置,不打散)。
- * 记 am_question(答对2次=掌握),全部作答 → 完成。
+ * 关7 · 对话填空(抽题池,Plan C #4)。
+ * 池 = 本课全部 stage7 题(既有 + 扩容)。每轮随机抽 6 空(池不足则全取);
+ * 跨轮去重优先(localStorage 记已出空,新一轮先抽没出过的);池抽尽 → 去重集重置(可再抽,不报错不缩轮)。
+ * 每空逐题作答,展示该空自带 context(既有空=对话原文;扩容空=单句),记 am_question(答对2次=掌握)。
  */
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Check, X, ChevronRight, Volume2 } from "lucide-react";
 import { T } from "@/i18n/T";
 import { speakUS, unlockAmericanAudio } from "@/lib/american/audio";
-import { markStageComplete, recordMastery, type LessonBundle } from "@/lib/american/data";
+import { markStageComplete, recordMastery, type AmericanQuestion, type LessonBundle } from "@/lib/american/data";
+
+const PER_ROUND = 6;
+const seenKey = (lessonId: string) => `am.cloze.seen.${lessonId}`;
+
+function loadSeen(lessonId: string): Set<string> {
+  try {
+    const raw = localStorage.getItem(seenKey(lessonId));
+    return new Set(raw ? (JSON.parse(raw) as string[]) : []);
+  } catch {
+    return new Set();
+  }
+}
+function saveSeen(lessonId: string, seen: Set<string>) {
+  try {
+    localStorage.setItem(seenKey(lessonId), JSON.stringify([...seen]));
+  } catch {
+    /* quota — ignore */
+  }
+}
+/** Fisher-Yates 取样 n 个(不改原数组)。 */
+function sample<T>(arr: T[], n: number): T[] {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a.slice(0, n);
+}
+
+/** 抽一轮:跨轮去重优先,池抽尽重置。返回本轮题(按 blank_no 升序)+ 写回后的 seen 集。 */
+function pickRound(pool: AmericanQuestion[], lessonId: string): { items: AmericanQuestion[]; nextSeen: Set<string> } {
+  const take = Math.min(PER_ROUND, pool.length);
+  let seen = loadSeen(lessonId);
+  // 去重集若已覆盖全池(或更大),先重置,保证还能抽满
+  if (seen.size >= pool.length) seen = new Set();
+  const unseen = pool.filter((q) => !seen.has(q.id));
+  let picked: AmericanQuestion[];
+  if (unseen.length >= take) {
+    picked = sample(unseen, take);
+  } else {
+    // 未出的不足 take → 全取未出的 + 重置去重集,从剩余池补足(排除本轮已选)
+    picked = unseen.slice();
+    seen = new Set();
+    const pickedIds = new Set(picked.map((q) => q.id));
+    const rest = pool.filter((q) => !pickedIds.has(q.id));
+    picked = picked.concat(sample(rest, take - picked.length));
+  }
+  const nextSeen = new Set(seen);
+  for (const q of picked) nextSeen.add(q.id);
+  const items = picked.slice().sort((a, b) => (a.payload.blank_no ?? 0) - (b.payload.blank_no ?? 0));
+  return { items, nextSeen };
+}
 
 export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; onDone?: () => void }) {
-  const blanks = useMemo(
+  const pool = useMemo(
     () => bundle.questions.filter((q) => q.stage === 7).sort((a, b) => (a.payload.blank_no ?? 0) - (b.payload.blank_no ?? 0)),
     [bundle],
   );
-  const context = blanks[0]?.payload.context ?? "";
+  // 抽一轮(mount 时定,lazy init 纯计算);seen 写回放 effect,避开 StrictMode 双写。
+  const [round] = useState(() => pickRound(pool, bundle.lesson.id));
+  useEffect(() => {
+    saveSeen(bundle.lesson.id, round.nextSeen);
+  }, [bundle.lesson.id, round]);
 
+  const items = round.items;
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [correct, setCorrect] = useState(0);
   const [done, setDone] = useState(false);
 
-  const q = blanks[idx];
+  const q = items[idx];
   const opts = q?.payload.options ?? [];
   const ans = q?.payload.answer_index ?? 0;
+  const context = q?.payload.context ?? "";
 
   const pick = useCallback((i: number) => {
     if (picked !== null || !q) return;
@@ -33,19 +93,19 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
   }, [picked, q, ans]);
 
   const next = useCallback(() => {
-    if (idx + 1 >= blanks.length) {
+    if (idx + 1 >= items.length) {
       void markStageComplete(bundle.lesson.id, 7);
       setDone(true);
       if (onDone) setTimeout(onDone, 1600);
     } else { setIdx((i) => i + 1); setPicked(null); }
-  }, [idx, blanks.length, bundle.lesson.id, onDone]);
+  }, [idx, items.length, bundle.lesson.id, onDone]);
 
   if (done) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-16 text-center">
         <p className="text-5xl">✏️</p>
         <h2 className="mt-3 text-xl font-bold text-slate-800"><T>对话填空完成!</T></h2>
-        <p className="mt-1 text-sm text-slate-500"><T>答对</T> {correct}/{blanks.length}</p>
+        <p className="mt-1 text-sm text-slate-500"><T>答对</T> {correct}/{items.length}</p>
       </div>
     );
   }
@@ -53,7 +113,7 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
 
   return (
     <div className="mx-auto max-w-2xl px-4 pb-28 pt-4">
-      {/* 对话原文 */}
+      {/* 该空所在对话/句子原文 */}
       {context && (
         <div className="mb-5 rounded-2xl border border-slate-100 bg-slate-50 p-4">
           <p className="whitespace-pre-line text-sm leading-relaxed text-slate-600">{context}</p>
@@ -61,9 +121,9 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
       )}
       <div className="mb-4 flex items-center gap-3">
         <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-100">
-          <div className="h-full rounded-full bg-sky-500 transition-all" style={{ width: `${(idx / blanks.length) * 100}%` }} />
+          <div className="h-full rounded-full bg-sky-500 transition-all" style={{ width: `${(idx / items.length) * 100}%` }} />
         </div>
-        <span className="text-xs font-semibold text-slate-400">{idx + 1}/{blanks.length}</span>
+        <span className="text-xs font-semibold text-slate-400">{idx + 1}/{items.length}</span>
       </div>
 
       <p className="mb-3 text-base font-semibold text-slate-800"><T>第</T> {q.payload.blank_no} <T>空,选择正确的词</T></p>
@@ -97,7 +157,7 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
       {picked !== null && (
         <button type="button" onClick={next}
           className="mt-5 inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-sky-600 py-3 text-sm font-semibold text-white">
-          {idx + 1 >= blanks.length ? <T>完成本关</T> : <><T>下一空</T> <ChevronRight className="size-4" /></>}
+          {idx + 1 >= items.length ? <T>完成本关</T> : <><T>下一空</T> <ChevronRight className="size-4" /></>}
         </button>
       )}
     </div>

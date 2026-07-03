@@ -26,6 +26,7 @@ const AmericanHub = lazy(() => import("./pages/american/AmericanHub.tsx"));
 const AmericanUnit = lazy(() => import("./pages/american/AmericanUnit.tsx"));
 const AmericanLesson = lazy(() => import("./pages/american/AmericanLesson.tsx"));
 const AmericanStage = lazy(() => import("./pages/american/AmericanStage.tsx"));
+const AmericanReview = lazy(() => import("./pages/american/AmericanReview.tsx"));
 const Stats = lazy(() => import("./pages/Stats.tsx"));
 const WeeklyReport = lazy(() => import("./pages/WeeklyReport.tsx"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe.tsx"));
@@ -510,6 +511,7 @@ const App = () => (
           {/* end 高中(已开放)*/}
           {/* 美语课程(/american hub → 单元 → 本课 10 关 → 关卡) */}
           <Route path="/american" element={<AmericanHub />} />
+          <Route path="/american/review" element={<AmericanReview />} />
           <Route path="/american/hub/:unit" element={<AmericanUnit />} />
           <Route path="/american/lesson/:lessonId" element={<AmericanLesson />} />
           <Route path="/american/lesson/:lessonId/stage/:stage" element={<AmericanStage />} />

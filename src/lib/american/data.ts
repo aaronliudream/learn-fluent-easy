@@ -180,13 +180,19 @@ export type AmMasteryItemType =
   | "am_question" // 关5-10 题(correct>=2 = 掌握)
   | "am_grammar_point"; // 关5 考点(correct>=2 = 考点掌握)
 
-/** 记录一次掌握尝试(read-then-write,复刻 junior 口径)。 */
+// ---- Plan C #1 SRS 复习池(仅 am_question,复用 american_user_mastery 现有 due_at 列)----
+// 阶梯:答错→入池/打回,due=now(下轮必出);答对且在池中→+1天→+3天→+7天→出池(due=NULL)。
+// 从不答错的题永不入池(入池的唯一触发是答错)。
+const AM_SRS_LADDER_DAYS = [1, 3, 7];
+const DAY_MS = 86400000;
+
+/** 记录一次掌握尝试(read-then-write,复刻 junior 口径)。am_question 附带 SRS 复习调度。 */
 export async function recordMastery(itemType: AmMasteryItemType, itemId: string, isCorrect: boolean): Promise<void> {
   const user = await uid();
   if (!user) return;
   const { data: prev } = await db
     .from("american_user_mastery")
-    .select("id,correct_count,wrong_count")
+    .select("id,correct_count,wrong_count,mastery_matrix,lapses,due_at")
     .eq("user_id", user)
     .eq("item_type", itemType)
     .eq("item_id", itemId)
@@ -194,15 +200,79 @@ export async function recordMastery(itemType: AmMasteryItemType, itemId: string,
   const correct = (prev?.correct_count ?? 0) + (isCorrect ? 1 : 0);
   const wrong = (prev?.wrong_count ?? 0) + (isCorrect ? 0 : 1);
   const level = correct >= AM_MASTER_AT ? 4 : correct + wrong > 0 ? 1 : 0;
-  const payload = {
+  const now = new Date();
+  const payload: Record<string, unknown> = {
     correct_count: correct,
     wrong_count: wrong,
     mastery_level: level,
-    last_seen_at: new Date().toISOString(),
+    last_seen_at: now.toISOString(),
     last_result: isCorrect ? "correct" : "wrong",
   };
+  if (itemType === "am_question") {
+    const matrix = (prev?.mastery_matrix ?? {}) as Record<string, unknown>;
+    const inPool = prev?.due_at != null; // 当前是否在复习池(有到期时间)
+    if (!isCorrect) {
+      // 答错 → 入池/打回 step0,下轮必出
+      payload.mastery_matrix = { ...matrix, srs_step: 0 };
+      payload.due_at = now.toISOString();
+      payload.next_review_at = now.toISOString();
+      payload.lapses = (prev?.lapses ?? 0) + 1;
+    } else if (inPool) {
+      // 在池中答对 → 按阶梯推进,连过 1/3/7 天三档后毕业出池
+      let step = Number(matrix.srs_step ?? 0);
+      let dueAt: string | null;
+      if (step < AM_SRS_LADDER_DAYS.length) {
+        dueAt = new Date(now.getTime() + AM_SRS_LADDER_DAYS[step] * DAY_MS).toISOString();
+        step += 1;
+      } else {
+        dueAt = null; // 毕业出池
+      }
+      payload.mastery_matrix = { ...matrix, srs_step: step };
+      payload.due_at = dueAt;
+      payload.next_review_at = dueAt;
+    }
+    // 不在池中 + 答对 → 不动 SRS(永不因答对而入池)
+  }
   if (prev?.id) await db.from("american_user_mastery").update(payload).eq("id", prev.id);
   else await db.from("american_user_mastery").insert({ user_id: user, item_type: itemType, item_id: itemId, ...payload });
+}
+
+/** 复习池到期题数(hub"今日复习"卡角标)。 */
+export async function fetchReviewCount(): Promise<number> {
+  const user = await uid();
+  if (!user) return 0;
+  const { count } = await db
+    .from("american_user_mastery")
+    .select("id", { count: "exact", head: true })
+    .eq("user_id", user)
+    .eq("item_type", "am_question")
+    .not("due_at", "is", null)
+    .lte("due_at", new Date().toISOString());
+  return count ?? 0;
+}
+
+/** 拉到期复习题(跨全课程,按 due_at 升序),回捞 american_questions 原题供 QuizRunner。 */
+export async function fetchReviewDue(limit = 30): Promise<AmericanQuestion[]> {
+  const user = await uid();
+  if (!user) return [];
+  const { data } = await db
+    .from("american_user_mastery")
+    .select("item_id")
+    .eq("user_id", user)
+    .eq("item_type", "am_question")
+    .not("due_at", "is", null)
+    .lte("due_at", new Date().toISOString())
+    .order("due_at", { ascending: true })
+    .limit(limit);
+  const ids = ((data ?? []) as { item_id: string }[]).map((r) => r.item_id);
+  if (!ids.length) return [];
+  const { data: qs } = await db
+    .from("american_questions")
+    .select("id,lesson_id,stage,grammar_point_id,qtype,payload,seq")
+    .in("id", ids);
+  // 保持 due_at 顺序
+  const order = new Map(ids.map((id, i) => [id, i]));
+  return ((qs ?? []) as AmericanQuestion[]).sort((a, b) => (order.get(a.id) ?? 0) - (order.get(b.id) ?? 0));
 }
 
 /** 关1 逐句点读:某句点读过一次即记覆盖(item_type=am_sentence)。 */

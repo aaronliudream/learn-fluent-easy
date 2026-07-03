@@ -4,9 +4,9 @@
  */
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, Lock, Sparkles } from "lucide-react";
+import { ArrowLeft, Lock, Sparkles, RotateCcw, ChevronRight } from "lucide-react";
 import { T } from "@/i18n/T";
-import { fetchUnits, type AmericanUnit } from "@/lib/american/data";
+import { fetchUnits, fetchReviewCount, type AmericanUnit } from "@/lib/american/data";
 import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_SUBTITLE, AMERICAN_COURSE_SCALE } from "@/lib/american/brand";
 
 const TOTAL_UNITS = 12;
@@ -15,6 +15,7 @@ export default function AmericanHub() {
   const nav = useNavigate();
   const [units, setUnits] = useState<AmericanUnit[]>([]);
   const [loading, setLoading] = useState(true);
+  const [reviewCount, setReviewCount] = useState(0);
 
   useEffect(() => {
     let alive = true;
@@ -22,6 +23,7 @@ export default function AmericanHub() {
       .then((u) => { if (alive) setUnits(u); })
       .catch(() => { if (alive) setUnits([]); })
       .finally(() => { if (alive) setLoading(false); });
+    fetchReviewCount().then((n) => { if (alive) setReviewCount(n); }).catch(() => {});
     return () => { alive = false; };
   }, []);
 
@@ -42,6 +44,20 @@ export default function AmericanHub() {
           <p className="mt-1 text-sm text-white/85">{AMERICAN_COURSE_SUBTITLE}</p>
           <span className="mt-3 inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-semibold">{AMERICAN_COURSE_SCALE}</span>
         </header>
+
+        {reviewCount > 0 && (
+          <Link to="/american/review"
+            className="mt-4 flex items-center gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 transition hover:border-amber-300 hover:shadow-sm">
+            <span className="inline-flex size-10 items-center justify-center rounded-xl bg-amber-100 text-amber-600">
+              <RotateCcw className="size-5" />
+            </span>
+            <div className="flex-1">
+              <p className="text-sm font-bold text-slate-800"><T>今日复习</T> · {reviewCount} <T>题</T></p>
+              <p className="text-xs text-slate-500"><T>做错的题到期了,复习一遍更牢</T></p>
+            </div>
+            <ChevronRight className="size-5 text-amber-400" />
+          </Link>
+        )}
 
         <h2 className="mb-3 mt-6 text-sm font-bold text-slate-500"><T>选择单元</T></h2>
         {loading ? (

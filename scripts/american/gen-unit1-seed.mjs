@@ -57,6 +57,17 @@ const batch12 = readFileSync(D("美语课程_批次12_第67-72课.md"), "utf8");
 const g5_12 = readFileSync(D("美语课程_单元12_关5题库_v1.md"), "utf8");
 const g6_12 = readFileSync(D("美语课程_单元12_关6小测_v1.md"), "utf8");
 
+// ---------- Plan C 扩容包(独立 american_expand_unitNN.sql,幂等增补,不动既有) ----------
+// 每包每课增补:关5(+8,挂既有考点)/关7(挖空池,seq 续号)/关10(+3)。
+// 关5 考点:含 gpN 码的直接用;含"考点描述"的按 gpSeq 覆盖表(题序→gpN)。
+// gpSeq 由人工核对得来(门禁):数组长度须=该课关5增补题数,且每个 gpId 必须命中既有 grammar_point。
+const readOpt = (f) => { try { return readFileSync(D(f), "utf8"); } catch { return null; } };
+const EXPANSIONS = [
+  { unit: 1, text: readOpt("美语课程_单元1_扩容包_v1.md"),
+    gpSeq: { 1: [1,1,1,1,1,2,2,2], 2: [1,1,1,1,1,2,2,2], 3: [1,1,1,1,1,2,2,2], 4: [1,1,1,1,1,2,2,2], 5: [1,1,1,1,1,2,2,2], 6: [1,1,1,1,1,2,2,2] } },
+  // 单元2/3 待 Aaron 确认后启用(unit2: L7/L8/L9 A线拆挂;unit3: 基线290确认)
+];
+
 // lesson_no → 内容 id(两位补零:am1_l01 … am1_l72)
 const pad = (n) => "am1_l" + String(n).padStart(2, "0");
 
@@ -577,3 +588,110 @@ console.log("\n分单元对账:");
 console.table(units.map(unitCounts));
 console.log(`\n写出 3 分片(共 ${out.length} INSERT 行):`);
 for (const sh of shards) console.log("  SQLAA/" + sh.file);
+
+// ============ Plan C 扩容包 → 独立 american_expand_unitNN.sql(幂等增补,seq 续号,不动既有) ============
+const p2 = (n) => String(n).padStart(2, "0");
+
+function expLessonBlocks(text) {
+  const out = {};
+  for (const m of text.matchAll(/#\s*Lesson\s*(\d+)（am1_l\d\d）([\s\S]*?)(?=\n#\s*Lesson\s*\d+|\n#\s*扩容包底账|$)/g)) {
+    out[Number(m[1])] = m[2];
+  }
+  return out;
+}
+function parseExpansionLesson(block, ln, gpSeq) {
+  const sec = (key) => {
+    const m = block.match(new RegExp("##\\s*" + key + "[^\\n]*\\n([\\s\\S]*?)(?=\\n##\\s|$)"));
+    return m ? m[1] : "";
+  };
+  const ext5 = []; let idx = 0;
+  for (const row of tableRows(sec("关5"))) {
+    if (!/^\d+$/.test(row[0])) continue;
+    const gpCell = row[1].trim(), qtype = row[2].trim(), stem = row[3].trim(), optRaw = row[4].trim(), ans = row[5].trim();
+    const gm = gpCell.match(/gp(\d)/);
+    const gpN = gm ? Number(gm[1]) : (gpSeq ? gpSeq[idx] : null);
+    const gpId = gpN ? `${pad(ln)}_gp${gpN}` : null;
+    if (qtype === "transform") ext5.push({ gpId, qtype: "transform", stem, answer_text: ans });
+    else { const opts = optRaw.split("/").map((s) => s.trim()).filter(Boolean); ext5.push({ gpId, qtype: "choice", stem, options: [ans, ...opts.filter((o) => o !== ans)] }); }
+    idx++;
+  }
+  const ext7 = [];
+  for (const row of tableRows(sec("关7"))) {
+    if (!/^\d+$/.test(row[0])) continue;
+    const blank_no = Number(row[0]), context = row[1].trim(), optRaw = row[2].trim(), ans = row[3].trim();
+    const opts = optRaw.split("/").map((s) => s.trim()).filter(Boolean);
+    ext7.push({ blank_no, context, options: [ans, ...opts.filter((o) => o !== ans)] });
+  }
+  const ext10 = [];
+  for (const row of tableRows(sec("关10"))) {
+    if (!(row.length >= 5 && (row[1] === "choice" || row[1] === "transform"))) continue;
+    const qtype = row[1], stem = row[2].trim(), optRaw = row[3].trim(), ans = row[4].trim();
+    if (qtype === "transform") ext10.push({ qtype: "transform", stem, answer_text: ans });
+    else { const opts = optRaw.split("/").map((s) => s.trim()).filter(Boolean); ext10.push({ qtype: "choice", stem, options: [ans, ...opts.filter((o) => o !== ans)] }); }
+  }
+  return { ext5, ext7, ext10 };
+}
+function emitExpansion(cfg) {
+  if (!cfg.text) { console.log(`\n扩容单元${cfg.unit}: 无 md,跳过`); return; }
+  const blocks = expLessonBlocks(cfg.text);
+  const lessonsInUnit = lessons.filter((L) => L.unit_no === cfg.unit);
+  const lines = [
+    `-- 美语课程 扩容包 单元${cfg.unit}(生成器产出,勿手改)。幂等:ON CONFLICT,只 INSERT 增补行(seq 续号),既有题零改动。`,
+    `-- 落 american_questions 关5/关7/关10。seq 接既有之后,可独立跑(不依赖重跑基础 seed)。`,
+    "BEGIN;",
+  ];
+  const gate = []; const cnt = { q5: 0, q7: 0, q10: 0 }; const poolRep = [];
+  _s = (0x9e3779b9 ^ (cfg.unit * 0x6d2b79f5)) | 0; // 每单元重置 PRNG → 各 expand 文件独立可复现
+  const emitQ = (lid, stage, gpId, qtype, payload, seq) =>
+    lines.push(`INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES (${sq(lid)},${stage},${sq(gpId)},${sq(qtype)},${jb(payload)},${seq}) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;`);
+  for (const L of lessonsInUnit) {
+    const ln = L.lesson_no;
+    const ext = blocks[ln] ? parseExpansionLesson(blocks[ln], ln, cfg.gpSeq?.[ln]) : null;
+    if (!ext) { gate.push(`L${ln}: 扩容包缺该课块`); continue; }
+    const base5 = g5byLesson[ln]?.questions.length || 0;
+    const base7 = L.cloze?.blanks.length || 0;
+    const base10 = L.guan10.length;
+    const existingGp = new Set((g5byLesson[ln]?.points || []).map((p) => p.id));
+    // 关5(考点门禁 + 打散)
+    placeQuota(ext.ext5.filter((q) => q.qtype === "choice"));
+    let seq = base5;
+    for (const q of ext.ext5) {
+      if (!q.gpId) gate.push(`L${ln} 关5 第${seq - base5 + 1}题: 挂不到考点(gpSeq 缺或题数不符)`);
+      else if (!existingGp.has(q.gpId)) gate.push(`L${ln} 关5: 考点 ${q.gpId} 不在既有[${[...existingGp].join(",")}]`);
+      seq++;
+      const payload = q.qtype === "choice" ? { stem: q.stem, options: q.options, answer_index: q.answer_index } : { stem: q.stem, answer_text: q.answer_text };
+      emitQ(L.id, 5, q.gpId, q.qtype, payload, seq); cnt.q5++;
+    }
+    // 关7(挖空池增补,打散避免答案全 index0)
+    placeQuota(ext.ext7);
+    seq = base7;
+    for (const b of ext.ext7) {
+      seq++;
+      emitQ(L.id, 7, null, "cloze", { stem: `第 ${b.blank_no} 空`, context: b.context, blank_no: b.blank_no, options: b.options, answer_index: b.answer_index }, seq);
+      cnt.q7++;
+    }
+    poolRep.push(`L${ln}=${base7 + ext.ext7.length}`);
+    // 关10
+    placeQuota(ext.ext10.filter((q) => q.qtype === "choice"));
+    seq = base10;
+    for (const q of ext.ext10) {
+      seq++;
+      const payload = q.qtype === "choice" ? { stem: q.stem, options: q.options, answer_index: q.answer_index } : { stem: q.stem, answer_text: q.answer_text };
+      emitQ(L.id, 10, null, q.qtype, payload, seq); cnt.q10++;
+    }
+  }
+  if (gate.length) {
+    console.log(`\n❌ 扩容单元${cfg.unit} 考点门禁失败,停止写出(报差异,不猜):`);
+    for (const g of gate) console.log("   " + g);
+    throw new Error(`扩容单元${cfg.unit} 门禁未过`);
+  }
+  lines.push("COMMIT;");
+  writeFileSync(path.join(ROOT, "SQLAA", `american_expand_unit${p2(cfg.unit)}.sql`), lines.join("\n") + "\n", "utf8");
+  const baseTot = unitCounts(cfg.unit).qTotal;
+  const add = cnt.q5 + cnt.q7 + cnt.q10;
+  console.log(`\n扩容单元${cfg.unit}: 关5+${cnt.q5} · 关7+${cnt.q7} · 关10+${cnt.q10} = +${add}`);
+  console.log(`  关7 池总空数: ${poolRep.join(" / ")}`);
+  console.log(`  入库后单元${cfg.unit}总题 = ${baseTot} + ${add} = ${baseTot + add}`);
+  console.log(`  写出 SQLAA/american_expand_unit${p2(cfg.unit)}.sql`);
+}
+for (const cfg of EXPANSIONS) emitExpansion(cfg);

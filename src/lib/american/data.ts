@@ -176,6 +176,25 @@ export async function fetchCompletedCounts(lessonIds: string[]): Promise<Record<
   return out;
 }
 
+/**
+ * 单元完成度(hub 单元卡用)。
+ * 口径:单课完成度=已通关卡数/10;单元完成度=该单元各课均值,四舍五入取整 N%。
+ * 未登录 → loggedIn=false(不显示百分比,不显示 0%)。全 12 单元一次查询。
+ */
+export async function fetchUnitCompletion(units: AmericanUnit[]): Promise<{ loggedIn: boolean; pct: Record<number, number> }> {
+  const pct: Record<number, number> = {};
+  const user = await uid();
+  if (!user) return { loggedIn: false, pct };
+  const allIds = units.flatMap((u) => u.lessons.map((l) => l.id));
+  const counts = await fetchCompletedCounts(allIds);
+  for (const u of units) {
+    if (!u.lessons.length) { pct[u.unit_no] = 0; continue; }
+    const sum = u.lessons.reduce((a, l) => a + Math.min(counts[l.id] ?? 0, 10) / 10, 0);
+    pct[u.unit_no] = Math.round((sum / u.lessons.length) * 100);
+  }
+  return { loggedIn: true, pct };
+}
+
 export type AmMasteryItemType =
   | "am_sentence" // 关1 逐句点读覆盖(correct_count>=1 = 点读过)
   | "am_prelisten" // 关1 前置题

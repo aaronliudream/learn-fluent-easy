@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Lock, Sparkles, RotateCcw, ChevronRight, BookOpen, Download } from "lucide-react";
 import { T } from "@/i18n/T";
-import { fetchUnits, fetchReviewCount, type AmericanUnit } from "@/lib/american/data";
+import { fetchUnits, fetchReviewCount, fetchUnitCompletion, type AmericanUnit } from "@/lib/american/data";
 import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_SUBTITLE, AMERICAN_COURSE_SCALE } from "@/lib/american/brand";
 
 const TOTAL_UNITS = 12;
@@ -21,11 +21,16 @@ export default function AmericanHub() {
   const [units, setUnits] = useState<AmericanUnit[]>([]);
   const [loading, setLoading] = useState(true);
   const [reviewCount, setReviewCount] = useState(0);
+  const [prog, setProg] = useState<{ loggedIn: boolean; pct: Record<number, number> }>({ loggedIn: false, pct: {} });
 
   useEffect(() => {
     let alive = true;
     fetchUnits()
-      .then((u) => { if (alive) setUnits(u); })
+      .then((u) => {
+        if (!alive) return;
+        setUnits(u);
+        fetchUnitCompletion(u).then((p) => { if (alive) setProg(p); }).catch(() => {});
+      })
       .catch(() => { if (alive) setUnits([]); })
       .finally(() => { if (alive) setLoading(false); });
     fetchReviewCount().then((n) => { if (alive) setReviewCount(n); }).catch(() => {});
@@ -41,7 +46,7 @@ export default function AmericanHub() {
           <ArrowLeft className="size-4" /> <T>返回首页</T>
         </Link>
 
-        <header className="mt-4 rounded-3xl bg-gradient-to-br from-sky-600 to-indigo-600 p-6 text-white shadow-sm">
+        <header className="mt-4 rounded-3xl bg-gradient-to-br from-sky-600 to-indigo-600 p-6 text-center text-white shadow-sm">
           <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-white/15">
             <Sparkles className="size-6 text-amber-300" />
           </span>
@@ -94,7 +99,7 @@ export default function AmericanHub() {
                   type="button"
                   disabled={!open}
                   onClick={() => open && nav(`/american/hub/${n}`)}
-                  className={`flex flex-col items-start rounded-2xl border p-4 text-left transition ${
+                  className={`flex flex-col items-center rounded-2xl border p-4 text-center transition ${
                     open ? "border-sky-200 bg-white shadow-sm hover:border-sky-400 hover:shadow" : "border-slate-100 bg-slate-100/60"
                   }`}>
                   <span className={`text-xs font-bold ${open ? "text-sky-600" : "text-slate-400"}`}>
@@ -104,6 +109,14 @@ export default function AmericanHub() {
                     <>
                       <span className="mt-1 text-sm font-semibold text-slate-800">{u!.lessons.length} <T>课</T></span>
                       <span className="mt-0.5 line-clamp-1 text-xs text-slate-400">{u!.lessons[0]?.title_cn ?? ""}</span>
+                      {prog.loggedIn && (
+                        <div className="mt-2 w-full">
+                          <div className="text-[11px] font-semibold text-sky-600">{prog.pct[n] ?? 0}%</div>
+                          <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-sky-100">
+                            <div className="h-full rounded-full bg-sky-500 transition-all" style={{ width: `${prog.pct[n] ?? 0}%` }} />
+                          </div>
+                        </div>
+                      )}
                     </>
                   ) : (
                     <span className="mt-2 inline-flex items-center gap-1 text-xs text-slate-400">

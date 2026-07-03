@@ -11,8 +11,10 @@ import { supabase } from "@/integrations/supabase/client";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const db = supabase as any;
 
-// 答对 2 次 = 掌握(全站统一口径)
+// 答对 2 次 = 掌握(全站统一口径:词/单题环)
 export const AM_MASTER_AT = 2;
+// Plan C #2 考点口径收紧:净分(答对+1/答错-1下限0)≥3 且末次答对 = 考点掌握
+export const AM_GP_MASTER_AT = 3;
 
 export type AmericanLesson = {
   id: string;
@@ -197,9 +199,19 @@ export async function recordMastery(itemType: AmMasteryItemType, itemId: string,
     .eq("item_type", itemType)
     .eq("item_id", itemId)
     .maybeSingle();
-  const correct = (prev?.correct_count ?? 0) + (isCorrect ? 1 : 0);
+  const prevCorrect = prev?.correct_count ?? 0;
   const wrong = (prev?.wrong_count ?? 0) + (isCorrect ? 0 : 1);
-  const level = correct >= AM_MASTER_AT ? 4 : correct + wrong > 0 ? 1 : 0;
+  let correct: number;
+  let level: number;
+  if (itemType === "am_grammar_point") {
+    // #2 收紧:correct_count 作净分(答对+1/答错-1,下限0);掌握 = 净分≥3 且这次答对
+    correct = isCorrect ? prevCorrect + 1 : Math.max(0, prevCorrect - 1);
+    level = correct >= AM_GP_MASTER_AT && isCorrect ? 4 : correct + wrong > 0 ? 1 : 0;
+  } else {
+    // 其余(单题/句/前置题):累计答对,答对2次=掌握
+    correct = prevCorrect + (isCorrect ? 1 : 0);
+    level = correct >= AM_MASTER_AT ? 4 : correct + wrong > 0 ? 1 : 0;
+  }
   const now = new Date();
   const payload: Record<string, unknown> = {
     correct_count: correct,

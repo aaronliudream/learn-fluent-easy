@@ -154,6 +154,12 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
           );
         })}
       </div>
+      {picked !== null && q.payload.explanation_cn && (
+        <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
+          <p className="text-xs font-bold text-amber-700">💡 <T>点评</T></p>
+          <p className="mt-1 whitespace-pre-line text-sm leading-relaxed text-amber-900">{q.payload.explanation_cn}</p>
+        </div>
+      )}
       {picked !== null && (
         <button type="button" onClick={next}
           className="mt-5 inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-sky-600 py-3 text-sm font-semibold text-white">

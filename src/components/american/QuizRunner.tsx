@@ -11,15 +11,26 @@ import { speakUS, unlockAmericanAudio } from "@/lib/american/audio";
 import type { AmericanQuestion } from "@/lib/american/data";
 
 export type QuizItem =
-  | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number }
-  | { kind: "reveal"; id: string; prompt: string; answer: string };
+  | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number; explanation?: string }
+  | { kind: "reveal"; id: string; prompt: string; answer: string; explanation?: string };
 
 /** american_questions → QuizItem(choice / reveal[transform·scenario])。 */
 export function questionsToItems(qs: AmericanQuestion[]): QuizItem[] {
   return qs.map((q) =>
     q.qtype === "transform" || q.qtype === "scenario"
-      ? { kind: "reveal", id: q.id, prompt: q.payload.stem, answer: q.payload.answer_text ?? "" }
-      : { kind: "choice", id: q.id, stem: q.payload.stem, options: q.payload.options ?? [], answerIndex: q.payload.answer_index ?? 0 },
+      ? { kind: "reveal", id: q.id, prompt: q.payload.stem, answer: q.payload.answer_text ?? "", explanation: q.payload.explanation_cn }
+      : { kind: "choice", id: q.id, stem: q.payload.stem, options: q.payload.options ?? [], answerIndex: q.payload.answer_index ?? 0, explanation: q.payload.explanation_cn },
+  );
+}
+
+/** 答题后「💡 点评」框(点评存 payload.explanation_cn,按 lesson×gp 共享)。 */
+function ExplanationNote({ text }: { text?: string }) {
+  if (!text) return null;
+  return (
+    <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
+      <p className="text-xs font-bold text-amber-700">💡 <T>点评</T></p>
+      <p className="mt-1 whitespace-pre-line text-sm leading-relaxed text-amber-900">{text}</p>
+    </div>
   );
 }
 
@@ -137,6 +148,7 @@ export function QuizRunner({
               );
             })}
           </div>
+          {picked !== null && <ExplanationNote text={item.explanation} />}
           {picked !== null && (
             <button type="button" onClick={next}
               className="mt-5 inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-sky-600 py-3 text-sm font-semibold text-white">
@@ -162,6 +174,7 @@ export function QuizRunner({
                   <Volume2 className="size-4" />
                 </button>
               </div>
+              <ExplanationNote text={item.explanation} />
               <div className="mt-4 grid grid-cols-2 gap-2.5">
                 <button type="button" onClick={() => selfGrade(false)}
                   className="rounded-full border border-slate-200 py-3 text-sm font-semibold text-slate-500">

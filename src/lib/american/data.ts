@@ -70,6 +70,7 @@ export type AmericanQuestion = {
     context?: string;
     blank_no?: number;
     situation?: string;
+    explanation_cn?: string; // 语法点评(答题后显示;按 lesson×gp 共享同一段)
   };
   seq: number | null;
 };

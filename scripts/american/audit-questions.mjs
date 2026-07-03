@@ -67,6 +67,17 @@ for (const lid of orderedLids) {
   cumVocab[lid] = new Set(seen); // 快照(含该课)
 }
 
+// 全局专有名词白名单(超纲豁免):课文任一句"非句首大写词" + speaker 名 => 人名/地名,全局小写归一豁免。
+const PROPER = new Set();
+for (const s of S) {
+  if (s.speaker) PROPER.add(String(s.speaker).toLowerCase().replace(/[’']/g, "'").trim());
+  const ws = stripSpeaker(s.text_en || "").split(/\s+/);
+  ws.forEach((w, i) => {
+    const m = w.match(/^[A-Z][A-Za-z'’-]+/);
+    if (m && i > 0) PROPER.add(m[0].toLowerCase().replace(/[’']/g, "'"));
+  });
+}
+
 // ============ ① 关7 cloze ============
 // 按 blank_no 定位目标空(基础"___N___"/扩容单"___"),抽该空所在句子,填答案后按序子串核课文。
 const SENT = ""; // 同句其他空的通配哨兵
@@ -91,8 +102,9 @@ for (const q of clozes) {
   if (targetRaw) {
     // 目标空填答案,同句其他空→哨兵
     const filledSent = targetRaw.replace(marker, ans).replace(/_{2,}(?:\d+_{2,})?/g, SENT);
-    const parts = norm(filledSent).split(SENT).map((x) => x.trim()).filter(Boolean);
-    const ok = courseSents.some((cs) => seqMatch(cs, parts));
+    // 子串匹配:按未知空切段,逐段去首尾空格与结尾标点,顺序子串命中任一原文行即通过
+    const parts = norm(filledSent).split(SENT).map((x) => x.replace(/^\s+|[\s.?!,]+$/g, "").trim()).filter(Boolean);
+    const ok = parts.length > 0 && courseSents.some((cs) => seqMatch(cs, parts));
     if (!ok) add("sus", "C7-未匹配原句", q.lesson_id, q.id, `空${p.blank_no}填"${ans}"后无逐字匹配(疑精简/改写/错词): "${norm(targetRaw).slice(0,55)}"`);
   } else {
     add("sus", "C7-定位失败", q.lesson_id, q.id, `context 内找不到空${p.blank_no}标记`);
@@ -121,7 +133,7 @@ for (const q of Q) {
   const oov = [];
   for (const raw of (parts.match(/[A-Za-z]+(?:'[A-Za-z]+)?/g) || [])) {
     const t = raw.toLowerCase();
-    if (FUNC.has(t) || vocab.has(t)) continue;
+    if (FUNC.has(t) || vocab.has(t) || PROPER.has(t)) continue;
     // 轻量词形还原:去 -s/-ed/-ing/-es/-er/-est/-ly
     const bases = [t.replace(/s$/,""), t.replace(/es$/,""), t.replace(/ed$/,""), t.replace(/d$/,""), t.replace(/ing$/,""), t.replace(/ing$/,"e"), t.replace(/ly$/,""), t.replace(/er$/,""), t.replace(/est$/,""), t.replace(/ies$/,"y")];
     if (bases.some((b) => vocab.has(b))) continue;
@@ -138,7 +150,7 @@ for (const q of Q) {
 const stemMap = {};
 for (const q of Q) {
   const p = q.payload || {};
-  const key = (q.qtype === "cloze" || q.stage === 7) ? norm(p.context) : norm(p.stem);
+  const key = (q.qtype === "cloze" || q.stage === 7) ? norm(p.context) + "|#" + (p.blank_no ?? "") : norm(p.stem);
   if (!key) continue;
   (stemMap[key] ??= []).push(q);
 }
@@ -149,18 +161,50 @@ for (const [stem, arr] of Object.entries(stemMap)) {
   }
 }
 
-// ============ ⑤ transform 答案风险 ============
+// ============ ⑤ transform 答案判定(放宽后复扫) ============
+// 判定放宽已落地 src/lib/american/answerEquiv.ts:缩写≡全写 + that 可省 + 大小写/末标点/空白无关。
+// 此处镜像同规则复扫:对每个 transform 答案生成"另一种合理写法"(缩写→全写 + 删 that),
+// 若等价函数判为相等 → 已被放宽覆盖,不再报风险;仅当仍判不等(疑非缩写/that 类差异)才列入残余交语义复审。
+const T_FOLD = [
+  [/\bcan not\b/g, "can't"], [/\bcannot\b/g, "can't"],
+  [/\bdo not\b/g, "don't"], [/\bdoes not\b/g, "doesn't"], [/\bdid not\b/g, "didn't"],
+  [/\bis not\b/g, "isn't"], [/\bare not\b/g, "aren't"], [/\bwas not\b/g, "wasn't"], [/\bwere not\b/g, "weren't"],
+  [/\bwill not\b/g, "won't"], [/\bwould not\b/g, "wouldn't"], [/\bshould not\b/g, "shouldn't"],
+  [/\bcould not\b/g, "couldn't"], [/\bmust not\b/g, "mustn't"], [/\bneed not\b/g, "needn't"],
+  [/\bhave not\b/g, "haven't"], [/\bhas not\b/g, "hasn't"], [/\bhad not\b/g, "hadn't"], [/\blet us\b/g, "let's"],
+  [/\bi am\b/g, "i'm"], [/\byou are\b/g, "you're"], [/\bwe are\b/g, "we're"], [/\bthey are\b/g, "they're"],
+  [/\bit is\b/g, "it's"], [/\bhe is\b/g, "he's"], [/\bshe is\b/g, "she's"], [/\bthat is\b/g, "that's"],
+  [/\bthere is\b/g, "there's"], [/\bhere is\b/g, "here's"], [/\bwhat is\b/g, "what's"], [/\bwho is\b/g, "who's"],
+  [/\bwhere is\b/g, "where's"], [/\bhow is\b/g, "how's"],
+  [/\bi will\b/g, "i'll"], [/\byou will\b/g, "you'll"], [/\bhe will\b/g, "he'll"], [/\bshe will\b/g, "she'll"],
+  [/\bwe will\b/g, "we'll"], [/\bthey will\b/g, "they'll"],
+  [/\bi have\b/g, "i've"], [/\byou have\b/g, "you've"], [/\bwe have\b/g, "we've"], [/\bthey have\b/g, "they've"],
+  [/\bi would\b/g, "i'd"], [/\byou would\b/g, "you'd"],
+];
+const T_EXPAND = [
+  [/\bcan't\b/g, "cannot"], [/\bwon't\b/g, "will not"], [/\bdon't\b/g, "do not"], [/\bdoesn't\b/g, "does not"],
+  [/\bdidn't\b/g, "did not"], [/\bisn't\b/g, "is not"], [/\baren't\b/g, "are not"], [/\bwasn't\b/g, "was not"],
+  [/\bweren't\b/g, "were not"], [/\bwouldn't\b/g, "would not"], [/\bshouldn't\b/g, "should not"],
+  [/\bcouldn't\b/g, "could not"], [/\bmustn't\b/g, "must not"], [/\bneedn't\b/g, "need not"],
+  [/\bhaven't\b/g, "have not"], [/\bhasn't\b/g, "has not"], [/\bhadn't\b/g, "had not"], [/\blet's\b/g, "let us"],
+  [/\bi'm\b/g, "i am"], [/\byou're\b/g, "you are"], [/\bwe're\b/g, "we are"], [/\bthey're\b/g, "they are"],
+  [/\bit's\b/g, "it is"], [/\bhe's\b/g, "he is"], [/\bshe's\b/g, "she is"], [/\bthat's\b/g, "that is"],
+  [/\bthere's\b/g, "there is"], [/\bhere's\b/g, "here is"], [/\bwhat's\b/g, "what is"], [/\bwho's\b/g, "who is"],
+  [/\bi'll\b/g, "i will"], [/\byou'll\b/g, "you will"], [/\bwe'll\b/g, "we will"], [/\bthey'll\b/g, "they will"],
+  [/\bi've\b/g, "i have"], [/\byou've\b/g, "you have"], [/\bwe've\b/g, "we have"], [/\bthey've\b/g, "they have"],
+];
+const tNorm = (s) => { let x = (s || "").toLowerCase().replace(/[’‘`]/g, "'").replace(/\s+/g, " ").trim().replace(/[.?!,;:]+$/g, "").trim(); for (const [re, to] of T_FOLD) x = x.replace(re, to); return x.replace(/\s+/g, " ").trim(); };
+const tDropThat = (s) => s.replace(/(?<= )that\b(?!')/g, " ").replace(/\s+/g, " ").trim();
+const tEquiv = (a, b) => { const ca = tNorm(a), cb = tNorm(b); return ca === cb || tDropThat(ca) === tDropThat(cb); };
+const swapForm = (s) => { let x = (s || "").toLowerCase().replace(/[’‘`]/g, "'").replace(/\s+/g, " ").trim(); for (const [re, to] of T_EXPAND) x = x.replace(re, to); return x.replace(/(?<= )that\b(?!')/g, " ").replace(/\s+/g, " ").trim(); };
 const transforms = Q.filter((q) => q.qtype === "transform");
 const tRisk = [];
 for (const q of transforms) {
   const a = (q.payload || {}).answer_text || "";
-  const risks = [];
-  if (/[A-Za-z]'[A-Za-z]/.test(a)) risks.push("缩写");
-  if (/\bthat\b/i.test(a)) risks.push("可省that");
-  if (/\bdo not\b|\bdoes not\b|\bis not\b|\bare not\b|\bwill not\b|\bcannot\b/i.test(a)) risks.push("全写式");
-  if (risks.length) tRisk.push({ q, a, risks });
+  const v = swapForm(a);
+  if (v && !tEquiv(v, a)) tRisk.push({ q, a, v });
 }
-for (const { q, a, risks } of tRisk) add("flag", "transform风险", q.lesson_id, q.id, `${risks.join("/")}: "${a}"`);
+for (const { q, a, v } of tRisk) add("flag", "transform残余", q.lesson_id, q.id, `放宽后仍判不等: "${a}" vs 变体"${v}"`);
 
 // ============ ⑥ 输出 ============
 const OUT = path.join(ROOT, "scripts/american/audit-out");
@@ -180,19 +224,19 @@ for (const sev of ["err", "sus", "flag"]) {
   // flag 超纲/风险量大 → 按单元汇总;err/sus 逐条
   const list = findings[sev].slice().sort((a, b) => a.unit - b.unit || a.lid.localeCompare(b.lid));
   rep += "| 单元 | 课 | code | 说明 | qid |\n|---|---|---|---|---|\n";
-  for (const f of list.slice(0, sev === "flag" ? 400 : 1000)) {
+  for (const f of list.slice(0, sev === "flag" ? 2000 : 2000)) {
     rep += `| ${f.unit} | ${f.lid} | ${f.code} | ${f.msg.replace(/\|/g, "\\|")} | \`${String(f.qid).slice(0,8)}\` |\n`;
   }
-  if (list.length > (sev === "flag" ? 400 : 1000)) rep += `\n_…余 ${list.length - (sev==="flag"?400:1000)} 条见数据_\n`;
+  if (list.length > (sev === "flag" ? 2000 : 2000)) rep += `\n_…余 ${list.length - (sev==="flag"?400:1000)} 条见数据_\n`;
   rep += "\n";
 }
-// ⑤ transform 放宽提案
-rep += `## transform 判定放宽提案（报 Aaron 拍板）\n\n`;
-rep += `共 ${transforms.length} 道 transform,其中 ${tRisk.length} 道答案含判定风险(缩写/可省that/全写式)。现行判定=answer_text 全匹配(忽略大小写与末尾标点)。建议放宽规则(任一命中即判对):\n\n`;
-rep += `1. **缩写 ≡ 全写**:don't≡do not / isn't≡is not / it's≡it is / I'll≡I will 等(双向)。\n`;
-rep += `2. **that 可省**:said (that) / a book (that) I bought —— 含/省 that 均判对。\n`;
-rep += `3. **末尾标点 + 首字母大小写**已忽略(现状保留)。\n`;
-rep += `4. 需 Aaron 拍板是否落地为判定层规则(逻辑侧改 american 判分函数,非改库)。\n\n`;
+// ⑤ transform 放宽(已实装)
+rep += `## transform 判定放宽（已实装 src/lib/american/answerEquiv.ts + 单测）\n\n`;
+rep += `共 ${transforms.length} 道 transform。放宽规则已落地(任一命中即判对),本次复扫仅剩 **${tRisk.length}** 道残余:\n\n`;
+rep += `1. **缩写 ≡ 全写**:don't≡do not / isn't≡is not / it's≡it is / I'll≡I will 等(双向,规范形取缩写)。\n`;
+rep += `2. **that 可省**:said (that) / a book (that) I bought —— 含/省 that 均判对(保护句首 That / that's)。\n`;
+rep += `3. **末尾标点 + 首字母大小写 + 多余空白**已忽略。\n`;
+rep += `4. 运行时关5/10 transform 现为"显示参考答案→自评";answerEquiv 供机审复扫 + 将来键入自动判分直接复用。\n\n`;
 
 fs.writeFileSync(path.join(OUT, "audit_report.md"), rep, "utf8");
 

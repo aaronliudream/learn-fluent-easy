@@ -4,12 +4,17 @@
  */
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, Lock, Sparkles, RotateCcw, ChevronRight } from "lucide-react";
+import { ArrowLeft, Lock, Sparkles, RotateCcw, ChevronRight, BookOpen, Download } from "lucide-react";
 import { T } from "@/i18n/T";
 import { fetchUnits, fetchReviewCount, type AmericanUnit } from "@/lib/american/data";
 import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_SUBTITLE, AMERICAN_COURSE_SCALE } from "@/lib/american/brand";
 
 const TOTAL_UNITS = 12;
+
+// 课本 PDF 公开直链(Supabase 公开桶 textbooks,anon 可读;?download 强制附件下载)。
+// 文件名带版本号,更新出 v2 不覆盖旧缓存。册名与书封面一致(brand 去 1-4册 后缀)。
+const BOOK1_PDF_URL = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/textbooks/american-book1-v1.pdf?download`;
+const BOOK1_TITLE = `${AMERICAN_COURSE_NAME.replace(/1-4册$/, "")} · 第一册`;
 
 export default function AmericanHub() {
   const nav = useNavigate();
@@ -58,6 +63,22 @@ export default function AmericanHub() {
             <ChevronRight className="size-5 text-amber-400" />
           </Link>
         )}
+
+        <a
+          href={BOOK1_PDF_URL}
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 flex items-center gap-3 rounded-2xl border border-sky-200 bg-white p-4 shadow-sm transition hover:border-sky-400 hover:shadow">
+          <span className="inline-flex size-10 items-center justify-center rounded-xl bg-sky-100 text-sky-600">
+            <BookOpen className="size-5" />
+          </span>
+          <div className="flex-1">
+            <p className="text-sm font-bold text-slate-800">📖 {BOOK1_TITLE}</p>
+            <p className="text-xs text-slate-500"><T>72课完整课本 · 免费下载</T> · <T>约</T> 11 MB</p>
+          </div>
+          <Download className="size-5 text-sky-400" />
+        </a>
 
         <h2 className="mb-3 mt-6 text-sm font-bold text-slate-500"><T>选择单元</T></h2>
         {loading ? (

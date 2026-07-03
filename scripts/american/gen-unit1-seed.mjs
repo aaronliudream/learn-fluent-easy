@@ -72,6 +72,8 @@ const EXPANSIONS = [
   { unit: 3, text: readOpt("美语课程_单元3_扩容包_v1.md") },
   // 单元4:同上用 gp 码;基线实查184→288
   { unit: 4, text: readOpt("美语课程_单元4_扩容包_v1.md") },
+  // 单元5:gp 码直挂;L28叙述体句子填空;基线实查183→284
+  { unit: 5, text: readOpt("美语课程_单元5_扩容包_v1.md") },
   // 单元6:gp 码;L33/L36 关7"新N"已换算为真实 blank_no(base7=5);基线实查184→284
   { unit: 6, text: readOpt("美语课程_单元6_扩容包_v1.md") },
   // 单元7:v1+v1.1合并(L37/L42关7来自v1.1);L37/L40/L41/L42 gp直挂,L38/L39 对号gpSeq(核题库:L38不规则2批×5+too×3,L39 Did×4+didn't×4);基线187→287

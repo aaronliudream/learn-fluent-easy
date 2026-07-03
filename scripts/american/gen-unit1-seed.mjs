@@ -434,10 +434,8 @@ const bodyByLesson = {};
 for (const L of lessons) bodyByLesson[L.lesson_no] = L.grammarBody;
 
 // ============ 生成 SQL ============
+// out 只装 INSERT 行(不含 BEGIN/COMMIT/注释);分片时按 lesson_id 前缀归到各单元。
 const out = [];
-out.push("-- 美语课程 seed(生成器产出,勿手改;改 docs/american 源 md 后重跑 gen-unit1-seed.mjs)");
-out.push("-- 幂等:全部 ON CONFLICT,重跑安全、已入库单元数据不动。逐单元计数见生成器输出 / docs/american/单元N_对账表.md。");
-out.push("BEGIN;");
 
 // lessons
 for (const L of lessons) {
@@ -517,11 +515,6 @@ function reorderCorrectFirst(q) {
   return [correct, ...q.options.filter((_, i) => i !== q.answer_index)];
 }
 
-out.push("COMMIT;");
-
-mkdirSync(path.join(ROOT, "SQLAA"), { recursive: true });
-writeFileSync(path.join(ROOT, "SQLAA/american_phase1_seed.sql"), out.join("\n") + "\n", "utf8");
-
 const totalQ = counts.q5 + counts.q6 + counts.q7 + counts.q8 + counts.q9 + counts.q10;
 
 // 分单元对账(逐单元核对底账)
@@ -545,9 +538,42 @@ function unitCounts(U) {
   return c;
 }
 const units = [...new Set(lessons.map((L) => L.unit_no))].sort((a, b) => a - b);
+
+// ============ 分片写出(每片独立事务、幂等;绕开 SQL Editor 单查询大小上限) ============
+// 每行 INSERT 均以 VALUES ('am1_lNN'... 开头(含 gp 的 'am1_lNN_gpK');据此把行归到单元。
+const unitOfLine = (line) => { const m = line.match(/VALUES \('am1_l(\d\d)/); return m ? Math.ceil(Number(m[1]) / 6) : null; };
+const shards = [
+  { file: "american_seed_part1_unit01-04.sql", units: [1, 2, 3, 4] },
+  { file: "american_seed_part2_unit05-08.sql", units: [5, 6, 7, 8] },
+  { file: "american_seed_part3_unit09-12.sql", units: [9, 10, 11, 12] },
+];
+mkdirSync(path.join(ROOT, "SQLAA"), { recursive: true });
+let shardedLines = 0;
+for (const sh of shards) {
+  const set = new Set(sh.units);
+  const lines = out.filter((l) => set.has(unitOfLine(l)));
+  shardedLines += lines.length;
+  const uc = sh.units.map(unitCounts);
+  const sumL = uc.reduce((a, c) => a + c.lessons, 0);
+  const sumQ = uc.reduce((a, c) => a + c.qTotal, 0);
+  const sumC = uc.reduce((a, c) => a + c.contrast, 0);
+  const first = sh.units[0], last = sh.units[sh.units.length - 1];
+  const hdr = [
+    `-- 美语课程 seed 分片:单元 ${first}-${last}(生成器 gen-unit1-seed.mjs 产出,勿手改;改源 md 后重跑)`,
+    `-- 幂等:全部 ON CONFLICT,分片重跑 / 乱序补跑均安全。唯一约束由 SQLAA/american_fix_contrast_dedup.sql 预建(仅需跑一次)。`,
+    `-- 预期计数:lessons ${sumL} · questions ${sumQ} · contrast ${sumC}`,
+    `-- 逐单元:${uc.map((c) => `U${c.unit}=${c.qTotal}题/${c.contrast}对照`).join(" · ")}`,
+    "BEGIN;",
+  ];
+  writeFileSync(path.join(ROOT, "SQLAA", sh.file), hdr.concat(lines, ["COMMIT;", ""]).join("\n"), "utf8");
+}
+// 安全网:每一行都必须归入且仅归入一个分片(无孤行、无重复)
+if (shardedLines !== out.length) throw new Error(`分片行数 ${shardedLines} ≠ 总行数 ${out.length}:有 INSERT 行未匹配 am1_lNN 前缀!`);
+
 console.log("对账(生成器实测·合计):");
 console.table(counts);
 console.log("questions 合计 =", totalQ, "(关5", counts.q5, "关6", counts.q6, "关7", counts.q7, "关8", counts.q8, "关9", counts.q9, "关10", counts.q10, ")");
 console.log("\n分单元对账:");
 console.table(units.map(unitCounts));
-console.log("写出 SQLAA/american_phase1_seed.sql");
+console.log(`\n写出 3 分片(共 ${out.length} INSERT 行):`);
+for (const sh of shards) console.log("  SQLAA/" + sh.file);

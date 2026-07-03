@@ -126,7 +126,7 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
         <span className="text-xs font-semibold text-slate-400">{idx + 1}/{items.length}</span>
       </div>
 
-      <p className="mb-3 text-base font-semibold text-slate-800"><T>第</T> {q.payload.blank_no} <T>空,选择正确的词</T></p>
+      <p className="mb-3 text-base font-semibold text-slate-800"><T>第</T> {q.payload.blank_no} <T>空 · 还原课文原句,选择原文中的词</T></p>
       <div className="grid gap-2.5">
         {opts.map((opt, i) => {
           const isAns = i === ans;

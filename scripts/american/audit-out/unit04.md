@@ -1,0 +1,598 @@
+# 单元4 题库全量导出（语义复审用）
+
+> 共 288 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+
+
+## am1_l19
+
+- **s5** `choice` [gp1] I'm ___ to make dinner tonight.
+    - 选项: goes / gone / go / ★going
+- **s5** `choice` [gp1] She is going to ___ a salad.
+    - 选项: makes / ★make / made / making
+- **s5** `choice` [gp1] We ___ going to have a party.
+    - 选项: am / is / ★are / be
+- **s5** `transform` [gp1] He grills burgers.（变 be going to 计划）
+    - 答案: He is going to grill burgers.
+- **s5** `choice` [gp2] ___ you going to bring soda? — Yes, I am.
+    - 选项: ★Are / Is / Can / Do
+- **s5** `choice` [gp2] What are you going to ___ this weekend?
+    - 选项: doing / did / ★do / does
+- **s5** `transform` [gp2] They are going to come.（变否定句）
+    - 答案: They aren't going to come.
+- **s5** `choice` [gp2] It's going to ___ fun!
+    - 选项: ★be / being / are / is
+- **s5** `choice` [gp1] Tina ___ going to bring brownies.
+    - 选项: are / am / be / ★is
+- **s5** `choice` [gp1] I'm going to ___ lemonade and soda.
+    - 选项: getting / gets / ★get / got
+- **s5** `choice` [gp1] be going to 后面接：
+    - 选项: ★动词原形 / 动词-ing / to+动词-ing / 动词-s
+- **s5** `transform` [gp1] She makes potato salad.（变 be going to 计划）
+    - 答案: She is going to make potato salad.
+- **s5** `choice` [gp2] ___ she going to come to the BBQ? — Yes, she is.
+    - 选项: Do / ★Is / Can / Are
+- **s5** `choice` [gp2] What ___ you going to do this Saturday?
+    - 选项: do / can / is / ★are
+- **s5** `choice` [gp2] Are you going to grill burgers? — ___
+    - 选项: Yes, I do. / Yes, it is. / ★Yes, I am. / Yes, I can.
+- **s5** `transform` [gp2] He is going to bring soda.（变否定句）
+    - 答案: He isn't going to bring soda.
+- **s6** `choice`  美国家庭周末常在后院办：
+    - 选项: 庙会 / 滑雪 / 游泳课 / ★BBQ（烧烤）
+- **s6** `choice`  "汽水"美语叫：
+    - 选项: ★soda / bubble juice / gas water / fizzy drink
+- **s6** `choice`  hot dog 是：
+    - 选项: 辣味热汤 / 一种宠物 / ★热狗（面包夹香肠） / 烤红薯
+- **s6** `choice`  美国聚会"各自带一道菜"的形式叫：
+    - 选项: foodshare / ★potluck / luckpot / potdish
+- **s7** `cloze`  〔MARK: We're ___1___ to have a BBQ! MARK: I'm going to ___2__〕 第 1 空
+    - 选项: ★going / go / goes / gone
+- **s7** `cloze`  〔MARK: We're ___1___ to have a BBQ! MARK: I'm going to ___2__〕 第 2 空
+    - 选项: grilling / grills / ★grill / grilled
+- **s7** `cloze`  〔MARK: We're ___1___ to have a BBQ! MARK: I'm going to ___2__〕 第 3 空
+    - 选项: ★make / making / makes / made
+- **s7** `cloze`  〔MARK: We're ___1___ to have a BBQ! MARK: I'm going to ___2__〕 第 4 空
+    - 选项: getting / ★get / gets / got
+- **s7** `cloze`  〔MARK: We're ___1___ to have a BBQ! MARK: I'm going to ___2__〕 第 5 空
+    - 选项: bringing / brings / brought / ★bring
+- **s7** `cloze`  〔MARK: Hey, Tina! Are you ___ this Saturday?〕 第 6 空
+    - 选项: ★free / busy / fine / cool
+- **s7** `cloze`  〔TINA: Fun! What's the ___?〕 第 7 空
+    - 选项: point / party / ★plan / place
+- **s7** `cloze`  〔TINA: Yum! What ___ drinks?〕 第 8 空
+    - 选项: for / ★about / of / on
+- **s7** `cloze`  〔MARK: We're going to have a BBQ in our ___!〕 第 9 空
+    - 选项: garage / park / ★backyard / kitchen
+- **s7** `cloze`  〔MARK: Awesome! It's going to ___ a great day.〕 第 10 空
+    - 选项: being / ★be / is / are
+- **s7** `cloze`  〔TINA: See you ___!〕 第 11 空
+    - 选项: ★Saturday / tonight / Sunday / soon
+- **s8** `choice`  When is the BBQ?
+    - 选项: ★Saturday / Monday / Friday / Sunday
+- **s8** `choice`  What is Mark going to grill?
+    - 选项: Tacos / Corn / Potato salad / ★Burgers and hot dogs
+- **s8** `choice`  What is Lisa going to make?
+    - 选项: Brownies / Lemonade / ★Potato salad / Cookies
+- **s8** `choice`  What is Tina going to bring?
+    - 选项: ★Brownies / Soda / Burgers / A banner
+- **s9** `scenario`  告诉朋友你们周末打算办烧烤
+    - 答案: We're going to have a BBQ this weekend.
+- **s9** `scenario`  问朋友这周六有没有空
+    - 答案: Are you free this Saturday?
+- **s9** `scenario`  说你打算带布朗尼来
+    - 答案: I'm going to bring brownies.
+- **s10** `choice`  I'm ___ to make dinner.
+    - 选项: go / goes / went / ★going
+- **s10** `choice`  She is going to ___ a cake.
+    - 选项: made / makes / ★make / making
+- **s10** `choice`  ___ you going to come? — Yes, I am.
+    - 选项: ★Are / Do / Can / Is
+- **s10** `choice`  It's going to ___ a great day!
+    - 选项: being / are / ★be / is
+- **s10** `transform`  I grill burgers.（变 be going to 计划）
+    - 答案: I am going to grill burgers.
+- **s10** `transform`  They are going to bring soda.（变一般疑问句）
+    - 答案: Are they going to bring soda?
+- **s10** `transform`  We are going to have a party.（变否定句）
+    - 答案: We aren't going to have a party.
+- **s10** `choice`  We ___ going to get soda.
+    - 选项: is / ★are / be / am
+- **s10** `choice`  He's going to ___ hot dogs.
+    - 选项: grilling / grills / ★grill / grilled
+- **s10** `transform`  They are going to have a BBQ.（变否定句）
+    - 答案: They aren't going to have a BBQ.
+
+## am1_l20
+
+- **s5** `choice` [gp1] ___ drop the phone!
+    - 选项: Not / No / ★Don't / Doesn't
+- **s5** `choice` [gp1] Don't ___ the cake—it's for Mom!
+    - 选项: touches / touched / touching / ★touch
+- **s5** `choice` [gp1] 图书馆里让同伴别出声，说：
+    - 选项: Make a sound! / ★Don't make a sound! / Turn it on! / Hurry up loud!
+- **s5** `transform` [gp1] You worry.（变否定祈使句）
+    - 答案: Don't worry.
+- **s5** `transform` [gp1] Touch the balloons.（变否定祈使句）
+    - 答案: Don't touch the balloons.
+- **s5** `choice` [gp2] ___ off the lights, please.
+    - 选项: Turns / Turning / ★Turn / Turned
+- **s5** `choice` [gp2] Mom is coming! ___!
+    - 选项: ★Hurry / To hurry / Hurries / Hurrying
+- **s5** `choice` [gp2] The banner is low. ___ it up a little.
+    - 选项: Moves / Moved / Moving / ★Move
+- **s5** `choice` [gp1] ___ eat the cookies—they're for the party!
+    - 选项: Not / Doesn't / ★Don't / No
+- **s5** `choice` [gp1] Don't ___ it! It's heavy.
+    - 选项: ★drop / dropping / dropped / drops
+- **s5** `choice` [gp1] 提醒朋友别担心，说：
+    - 选项: No worry you! / Worry! / Don't happy! / ★Don't worry!
+- **s5** `transform` [gp1] You make a sound.（变否定祈使句）
+    - 答案: Don't make a sound.
+- **s5** `choice` [gp2] The lights are on. ___ them off.
+    - 选项: Turning / ★Turn / Turned / Turns
+- **s5** `choice` [gp2] We're late. ___!
+    - 选项: ★Hurry / Worry / Carry / Marry
+- **s5** `choice` [gp2] The banner is ready. ___ it up.
+    - 选项: Hanging / ★Hang / Hangs / Hung
+- **s5** `transform` [gp2] You turn off the lights.（变祈使句）
+    - 答案: Turn off the lights.
+- **s6** `choice`  为寿星保密筹备的派对叫：
+    - 选项: secret school / hide day / quiet party / ★surprise party
+- **s6** `choice`  让大家安静的拟声词：
+    - 选项: Oops! / Yay! / ★Shh! / Boom!
+- **s6** `choice`  生日祝福说：
+    - 选项: ★Happy birthday! / Merry day! / Good night! / Happy Thanksgiving!
+- **s6** `choice`  "关掉（灯/电视）"美语常说：
+    - 选项: shut light / close off / switch off / ★turn off
+- **s7** `cloze`  〔RUBY: I'm ___1___ the banner. ALEX: I'm ___2___ the cake. It〕 第 1 空
+    - 选项: ★hanging / hang / hangs / hung
+- **s7** `cloze`  〔RUBY: I'm ___1___ the banner. ALEX: I'm ___2___ the cake. It〕 第 2 空
+    - 选项: carry / carries / ★carrying / carried
+- **s7** `cloze`  〔RUBY: I'm ___1___ the banner. ALEX: I'm ___2___ the cake. It〕 第 3 空
+    - 选项: Doesn't / ★Don't / Not / No
+- **s7** `cloze`  〔RUBY: I'm ___1___ the banner. ALEX: I'm ___2___ the cake. It〕 第 4 空
+    - 选项: touching / touches / touched / ★touch
+- **s7** `cloze`  〔RUBY: I'm ___1___ the banner. ALEX: I'm ___2___ the cake. It〕 第 5 空
+    - 选项: ★Turn / Turning / Turns / Turned
+- **s7** `cloze`  〔ALEX: Okay, Mom is coming at six. ___!〕 第 6 空
+    - 选项: ★Hurry / Carry / Worry / Sorry
+- **s7** `cloze`  〔ALEX: ___ it up a little... Perfect!〕 第 7 空
+    - 选项: Drop / Turn / ★Move / Make
+- **s7** `cloze`  〔ALEX: I'm carrying the cake. It's ___!〕 第 8 空
+    - 选项: ★heavy / ready / happy / hot
+- **s7** `cloze`  〔ALEX: ___ worry!〕 第 9 空
+    - 选项: Doesn't / Not / ★Don't / No
+- **s7** `cloze`  〔RUBY: And don't touch the balloons—they're ___.〕 第 10 空
+    - 选项: ★ready / new / heavy / happy
+- **s7** `cloze`  〔RUBY: Shh! Don't make a ___!〕 第 11 空
+    - 选项: banner / song / ★sound / surprise
+- **s7** `cloze`  〔ALEX & RUBY: SURPRISE! Happy ___, Mom!〕 第 12 空
+    - 选项: Saturday / ★birthday / party / day
+- **s8** `choice`  Who is the party for?
+    - 选项: Alex / Ruby / Dad / ★Mom
+- **s8** `choice`  What is Ruby hanging?
+    - 选项: The cake / ★The banner / The lights / The balloons
+- **s8** `choice`  What is Alex carrying?
+    - 选项: ★The cake / The banner / The balloons / The lights
+- **s8** `choice`  What do they say at the end?
+    - 选项: Hurry! / Shh! / Careful! / ★Surprise!
+- **s9** `scenario`  提醒朋友别把手机摔了
+    - 答案: Don't drop it! / Don't drop your phone!
+- **s9** `scenario`  让大家安静别出声
+    - 答案: Shh! Don't make a sound!
+- **s9** `scenario`  朋友很紧张，你安慰他别担心
+    - 答案: Don't worry!
+- **s10** `choice`  ___ touch the cake! It's for the party.
+    - 选项: Not / ★Don't / Doesn't / No
+- **s10** `choice`  Don't ___ a sound!
+    - 选项: ★make / made / makes / making
+- **s10** `choice`  ___ off the TV, please.
+    - 选项: To turn / Turning / ★Turn / Turns
+- **s10** `choice`  朋友端着热汤，你提醒小心：
+    - 选项: Surprise! / Hurry! / Shh! / ★Careful!
+- **s10** `transform`  You drop the cake.（变否定祈使句）
+    - 答案: Don't drop the cake.
+- **s10** `transform`  Touch the balloons.（变否定祈使句）
+    - 答案: Don't touch the balloons.
+- **s10** `transform`  You worry.（变否定祈使句安慰对方）
+    - 答案: Don't worry.
+- **s10** `choice`  ___ worry! It's okay.
+    - 选项: Doesn't / Not / ★Don't / No
+- **s10** `choice`  Please ___ off your phone.
+    - 选项: ★turn / turned / turning / turns
+- **s10** `transform`  You drop the balloons.（变否定祈使句）
+    - 答案: Don't drop the balloons.
+
+## am1_l21
+
+- **s5** `choice` [gp1] 下列哪个是不可数名词：
+    - 选项: box / cookie / ★milk / egg
+- **s5** `choice` [gp1] 下列哪个是可数名词：
+    - 选项: ★egg / water / bread / cheese
+- **s5** `choice` [gp1] There is some ___.
+    - 选项: a juice / juices / ★juice / egg
+- **s5** `choice` [gp2] There's ___ milk in the fridge.（一些）
+    - 选项: any / an / a / ★some
+- **s5** `choice` [gp2] Is there ___ bread?
+    - 选项: ★any / a / some / one
+- **s5** `choice` [gp2] There isn't ___ cheese.
+    - 选项: some / an / ★any / a
+- **s5** `choice` [gp2] There's a ___ of water.
+    - 选项: lots one / much / many / ★lot
+- **s5** `transform` [gp2] There is some juice.（变否定句，some→any）
+    - 答案: There isn't any juice.
+- **s5** `choice` [gp1] 下列哪个是不可数名词：
+    - 选项: burger / ★bread / cookie / banner
+- **s5** `choice` [gp1] 下列哪个是可数名词：
+    - 选项: ★cookie / sugar / juice / milk
+- **s5** `choice` [gp1] There is some ___ in the fridge.
+    - 选项: eggs / cheeses / ★cheese / a cheese
+- **s5** `transform` [gp1] There is an egg.（变复数：两个）
+    - 答案: There are two eggs.
+- **s5** `choice` [gp2] There's ___ juice on the counter.（一些）
+    - 选项: ★some / any / a / an
+- **s5** `choice` [gp2] Is there ___ milk?
+    - 选项: some / ★any / a / an
+- **s5** `choice` [gp2] There are a lot ___ eggs.
+    - 选项: for / off / ★of / on
+- **s5** `transform` [gp2] There is some cheese.（变一般疑问句，some→any）
+    - 答案: Is there any cheese?
+- **s6** `choice`  fridge 是哪个词的简称：
+    - 选项: freezer（冷冻柜） / fridger / ★refrigerator（冰箱） / cooler
+- **s6** `choice`  领到任务马上去办，说：
+    - 选项: In it! / ★On it! / At it! / Off it!
+- **s6** `choice`  "We're good." 在对话里的意思是：
+    - 选项: 我们很擅长 / 没问题 / 我们不缺了 / ★我们不缺了/没问题 / 我们赢了 / 我们是好人
+- **s6** `choice`  追问"那……呢？"用：
+    - 选项: ★What about...? / What color...? / Which one...? / Who is...?
+- **s7** `cloze`  〔AMY: I'm making a shopping ___1___. NATE: There's ___2___ mi〕 第 1 空
+    - 选项: ★list / line / plan / chart
+- **s7** `cloze`  〔AMY: I'm making a shopping ___1___. NATE: There's ___2___ mi〕 第 2 空
+    - 选项: any / an / ★some / a
+- **s7** `cloze`  〔AMY: I'm making a shopping ___1___. NATE: There's ___2___ mi〕 第 3 空
+    - 选项: some / ★any / a / an
+- **s7** `cloze`  〔AMY: I'm making a shopping ___1___. NATE: There's ___2___ mi〕 第 4 空
+    - 选项: egg / a egg / milks / ★eggs
+- **s7** `cloze`  〔AMY: I'm making a shopping ___1___. NATE: There's ___2___ mi〕 第 5 空
+    - 选项: ★lot / lots one / many / much
+- **s7** `cloze`  〔AMY: Nate, I'm making a shopping list. ___ the fridge.〕 第 6 空
+    - 选项: Catch / Cook / ★Check / Clean
+- **s7** `cloze`  〔NATE: On ___! Okay... there's some milk.〕 第 7 空
+    - 选项: at / ★it / on / in
+- **s7** `cloze`  〔NATE: No, there isn't. And there isn't any ___.〕 第 8 空
+    - 选项: water / eggs / milk / ★cheese
+- **s7** `cloze`  〔NATE: There's some bread, but it's ___.〕 第 9 空
+    - 选项: ★old / hot / good / new
+- **s7** `cloze`  〔AMY: Bread too, then. ___ eggs?〕 第 10 空
+    - 选项: An / ★Any / Some / One
+- **s7** `cloze`  〔NATE: There's a lot of water. We're ___!〕 第 11 空
+    - 选项: ★good / six / old / great
+- **s8** `choice`  What is Amy making?
+    - 选项: Lemonade / A cake / ★A shopping list / Dinner
+- **s8** `choice`  Is there any juice?
+    - 选项: ★No, there isn't. / We don't know. / Yes, there is. / Yes, there are.
+- **s8** `choice`  How many eggs are there?
+    - 选项: Four / Ten / Two / ★Six
+- **s9** `scenario`  问冰箱里还有没有牛奶
+    - 答案: Is there any milk?
+- **s9** `scenario`  领到任务，马上去办
+    - 答案: On it!
+- **s9** `scenario`  确认东西够了、不用买
+    - 答案: We're good!
+- **s10** `choice`  There ___ some milk in the fridge.
+    - 选项: are / ★is / am / be
+- **s10** `choice`  Is there ___ cheese?
+    - 选项: ★any / an / a / some
+- **s10** `choice`  There are some ___.
+    - 选项: egg / a egg / ★eggs / milks
+- **s10** `choice`  milk 是______名词。
+    - 选项: 专有 / ★不可数 / 可数 / 复数
+- **s10** `transform`  There is some juice.（变一般疑问句，some
+    - 答案: any）→ Is there any juice?
+- **s10** `transform`  There is some bread.（变否定句，some
+    - 答案: any）→ There isn't any bread.
+- **s10** `transform`  There is an egg in the fridge.（变复数：一些鸡蛋）
+    - 答案: There are some eggs in the fridge.
+- **s10** `choice`  There isn't ___ juice.
+    - 选项: some / a / an / ★any
+- **s10** `choice`  bread 是______名词。
+    - 选项: ★不可数 / 复数 / 专有 / 可数
+- **s10** `transform`  There is some milk.（变一般疑问句，some→any）
+    - 答案: Is there any milk?
+
+## am1_l22
+
+- **s5** `choice` [gp1] I ___ play the drums.
+    - 选项: can to / cans / am can / ★can
+- **s5** `choice` [gp1] can 后面接：
+    - 选项: 动词-ing / ★动词原形 / 动词-s / to+动词
+- **s5** `choice` [gp1] He can't ___.
+    - 选项: ★sing / sings / sang / singing
+- **s5** `transform` [gp1] She plays bass.（用 can 表能力）
+    - 答案: She can play bass.
+- **s5** `transform` [gp1] I can play the guitar.（变否定句）
+    - 答案: I can't play the guitar.
+- **s5** `choice` [gp2] ___ you play the guitar? — Yes, I can.
+    - 选项: Are / Do / ★Can / Is
+- **s5** `choice` [gp2] Can he sing? — No, he ___.
+    - 选项: ★can't / doesn't / isn't / not
+- **s5** `transform` [gp2] You can practice on weekends.（变一般疑问句）
+    - 答案: Can you practice on weekends?
+- **s5** `choice` [gp1] She can ___ a little.
+    - 选项: singing / sings / sang / ★sing
+- **s5** `choice` [gp1] He ___ play the drums.（不会）
+    - 选项: cans not / ★can't / don't / isn't
+- **s5** `choice` [gp1] They can ___ in the garage.
+    - 选项: practices / practicing / ★practice / practiced
+- **s5** `transform` [gp1] He sings.（用 can 表能力）
+    - 答案: He can sing.
+- **s5** `choice` [gp2] ___ she play bass? — Yes, she can.
+    - 选项: Is / ★Can / Do / Are
+- **s5** `choice` [gp2] Can you play the drums? — ___
+    - 选项: ★Yes, I can. / Yes, I do. / Yes, I am. / Yes, it is.
+- **s5** `choice` [gp2] Can they practice on weekends? — No, they ___.
+    - 选项: don't / aren't / not / ★can't
+- **s5** `transform` [gp2] She can play the guitar.（变一般疑问句）
+    - 答案: Can she play the guitar?
+- **s6** `choice`  在车库排练起家的业余乐队叫：
+    - 选项: road band / ★garage band / home team / car band
+- **s6** `choice`  同意加入，说：
+    - 选项: ★I'm in! / I'm off! / I'm out! / I'm up!
+- **s6** `choice`  表示惊讶"真的吗？"：
+    - 选项: Real? / True me? / Fact you? / ★Really?
+- **s6** `choice`  "I can sing a little." 里 a little 表示：
+    - 选项: 完全不会 / ★会一点（谦虚） / 非常精通 / 只会一首儿歌
+- **s7** `cloze`  〔JORDAN: ___1___ you play the guitar? CHLOE: No, I ___2___. B〕 第 1 空
+    - 选项: ★Can / Are / Do / Is
+- **s7** `cloze`  〔JORDAN: ___1___ you play the guitar? CHLOE: No, I ___2___. B〕 第 2 空
+    - 选项: don't / ★can't / am not / not
+- **s7** `cloze`  〔JORDAN: ___1___ you play the guitar? CHLOE: No, I ___2___. B〕 第 3 空
+    - 选项: guitar / bass / ★drums / band
+- **s7** `cloze`  〔JORDAN: ___1___ you play the guitar? CHLOE: No, I ___2___. B〕 第 4 空
+    - 选项: singing / sings / sang / ★sing
+- **s7** `cloze`  〔JORDAN: ___1___ you play the guitar? CHLOE: No, I ___2___. B〕 第 5 空
+    - 选项: ★practice / practicing / practices / practiced
+- **s7** `cloze`  〔JORDAN: Hey! Are you here for the ___?〕 第 6 空
+    - 选项: bass / ★band / game / party
+- **s7** `cloze`  〔JORDAN: Really? ___ us!〕 第 7 空
+    - 选项: See / Shh / ★Show / Sing
+- **s7** `cloze`  〔JORDAN: Wow! You can ___ play!〕 第 8 空
+    - 选项: good / a little / very / ★really
+- **s7** `cloze`  〔JORDAN: Mike can play ___, and I can play guitar.〕 第 9 空
+    - 选项: ★bass / drums / band / piano
+- **s7** `cloze`  〔CHLOE: Nice! Can you guys practice on ___?〕 第 10 空
+    - 选项: nights / streets / Saturdays / ★weekends
+- **s7** `cloze`  〔CHLOE: Then I'm ___!〕 第 11 空
+    - 选项: ★in / on / out / up
+- **s8** `choice`  Can Chloe play the guitar?
+    - 选项: Yes, he can. / Yes, she can. / We don't know. / ★No, she can't.
+- **s8** `choice`  What can Chloe play?
+    - 选项: The piano / Bass / ★The drums / The guitar
+- **s8** `choice`  Where can they practice?
+    - 选项: ★In Jordan's garage / At school / In the park / In a coffee shop
+- **s9** `scenario`  问朋友会不会弹吉他
+    - 答案: Can you play the guitar?
+- **s9** `scenario`  谦虚地说你会唱一点歌
+    - 答案: I can sing a little.
+- **s9** `scenario`  同意加入活动
+    - 答案: I'm in!
+- **s10** `choice`  ___ you swim? — Yes, I can.
+    - 选项: Is / Are / ★Can / Do
+- **s10** `choice`  He ___ play bass.
+    - 选项: cans / can to / is can / ★can
+- **s10** `choice`  I can't ___ the drums.
+    - 选项: plays / ★play / played / playing
+- **s10** `choice`  Can you sing? — No, I ___.
+    - 选项: not / am not / ★can't / don't
+- **s10** `transform`  She plays the guitar.（用 can 表能力）
+    - 答案: She can play the guitar.
+- **s10** `transform`  You can play the drums.（变一般疑问句）
+    - 答案: Can you play the drums?
+- **s10** `transform`  I can sing.（变否定句）
+    - 答案: I can't sing.
+- **s10** `choice`  She ___ sing a little.
+    - 选项: ★can / cans / is can / can to
+- **s10** `choice`  Can you play bass? — No, I ___.
+    - 选项: no / don't / ★can't / am not
+- **s10** `transform`  They practice in the garage.（用 can 表能力）
+    - 答案: They can practice in the garage.
+
+## am1_l23
+
+- **s5** `choice` [gp1] ___ you help me, please?
+    - 选项: ★Can / Am / Is / Are
+- **s5** `choice` [gp1] Can you print the report? — ___
+    - 选项: Me too. / ★Sure! / Yes, it is. / I'm fine.
+- **s5** `transform` [gp1] You check the charts.（变礼貌请求）
+    - 答案: Can you check the charts?
+- **s5** `choice` [gp2] Can you help ___?（我）
+    - 选项: ★me / my / I / mine
+- **s5** `choice` [gp2] That's Kim's gift. Give it to ___.
+    - 选项: him / she / ★her / hers
+- **s5** `choice` [gp2] The charts are ready. Print ___, please.
+    - 选项: they / it / their / ★them
+- **s5** `choice` [gp2] We're lost. Can you help ___?
+    - 选项: ★us / our / them / we
+- **s5** `transform` [gp2] Can you give the box to Sam?（用 him 替代 Sam）
+    - 答案: Can you give the box to him?
+- **s5** `choice` [gp1] ___ you check the report for me?
+    - 选项: ★Can / Are / Is / Do
+- **s5** `choice` [gp1] Can you help me? — ___
+    - 选项: Me too. / ★No problem. / I'm Kim. / Yes, it is.
+- **s5** `transform` [gp1] You print the charts.（变礼貌请求）
+    - 答案: Can you print the charts?
+- **s5** `choice` [gp2] This is for Mike. Give it to ___.
+    - 选项: ★him / his / her / he
+- **s5** `choice` [gp2] The report is ready. Check ___, please.
+    - 选项: they / ★it / them / its
+- **s5** `choice` [gp2] 宾语代词：they → ___
+    - 选项: ★them / they's / their / theirs
+- **s5** `choice` [gp2] Dana and I are lost. Can you help ___?
+    - 选项: our / ours / we / ★us
+- **s5** `transform` [gp2] Give the charts to Kim and Sam.（用 them 替代 Kim and Sam）
+    - 答案: Give the charts to them.
+- **s6** `choice`  同事找你，你问"什么事？"口语说：
+    - 选项: Who's up? / Where's up? / What's on? / ★What's up?
+- **s6** `choice`  夸人帮了大忙：
+    - 选项: You're the last! / Best you are! / ★You're the best! / You're the most!
+- **s6** `choice`  "The report is due at three." 里 due 指：
+    - 选项: 三点付款 / ★三点前必须交 / 三点开始写 / 三点作废
+- **s6** `choice`  简短表示"成交/说定了"：
+    - 选项: Do. / Dealing. / Dealt. / ★Deal.
+- **s7** `cloze`  〔DANA: Can you help ___1___? DANA: Can you check ___2___ for 〕 第 1 空
+    - 选项: ★me / I / my / mine
+- **s7** `cloze`  〔DANA: Can you help ___1___? DANA: Can you check ___2___ for 〕 第 2 空
+    - 选项: them / its / ★it / him
+- **s7** `cloze`  〔DANA: Can you help ___1___? DANA: Can you check ___2___ for 〕 第 3 空
+    - 选项: it / ★them / they / their
+- **s7** `cloze`  〔DANA: Can you help ___1___? DANA: Can you check ___2___ for 〕 第 4 空
+    - 选项: she / hers / him / ★her
+- **s7** `cloze`  〔DANA: Can you help ___1___? DANA: Can you check ___2___ for 〕 第 5 空
+    - 选项: ★best / most / good / first
+- **s7** `cloze`  〔DANA: Sam, are you ___? Can you help me?〕 第 6 空
+    - 选项: free / due / best / ★busy
+- **s7** `cloze`  〔DANA: This report is ___ at three.〕 第 7 空
+    - 选项: do / done / ★due / date
+- **s7** `cloze`  〔SAM: No problem. ___ it to me.〕 第 8 空
+    - 选项: ★Give / Get / Got / Go
+- **s7** `cloze`  〔SAM: Sure ___. And this box?〕 第 9 空
+    - 选项: things / ★thing / it / deal
+- **s7** `cloze`  〔SAM: Got it. Anything ___?〕 第 10 空
+    - 选项: other / more / ★else / again
+- **s7** `cloze`  〔SAM: Ha! ___.〕 第 11 空
+    - 选项: Dear / Do / Really / ★Deal
+- **s8** `choice`  What is due at three?
+    - 选项: The charts / The box / ★The report / The coffee
+- **s8** `choice`  What does Dana ask Sam to print?
+    - 选项: ★The charts / A photo / The report / A list
+- **s8** `choice`  Who is the box for?
+    - 选项: Mike / ★Kim / Sam / Dana
+- **s9** `scenario`  请同事帮你打印这些文件
+    - 答案: Can you print them for me?
+- **s9** `scenario`  别人帮了大忙，夸他
+    - 答案: You're the best!
+- **s9** `scenario`  同事问 "Can you help me?"，你答应
+    - 答案: Sure! / No problem.
+- **s10** `choice`  Can you help ___?
+    - 选项: my / ★me / I / mine
+- **s10** `choice`  This gift is for Kim. Give it to ___.
+    - 选项: she / he / hers / ★her
+- **s10** `choice`  These are my charts. Can you print ___?
+    - 选项: they / ★them / it / their
+- **s10** `choice`  We're lost. Can you help ___?
+    - 选项: we / our / ★us / they
+- **s10** `transform`  Can you check the report?（用 it 替代 the report）
+    - 答案: Can you check it?
+- **s10** `transform`  Give the box to Kim.（用 her 替代 Kim）
+    - 答案: Give the box to her.
+- **s10** `transform`  You can help me.（变礼貌请求疑问句）
+    - 答案: Can you help me?
+- **s10** `choice`  Give the box to ___.（他）
+    - 选项: ★him / he / his / they
+- **s10** `choice`  The cookies are ready. Can you get ___?
+    - 选项: it / ★them / theirs / they
+- **s10** `transform`  Can you print the charts?（用 them 替代 the charts）
+    - 答案: Can you print them?
+
+## am1_l24
+
+- **s5** `choice` [gp1] I ___ an iced latte.
+    - 选项: am want / ★want / wants / wanting
+- **s5** `choice` [gp1] They ___ oat milk.
+    - 选项: are like / liking / likes / ★like
+- **s5** `choice` [gp1] I want ___ cookie.
+    - 选项: any / ★a / an / some
+- **s5** `choice` [gp2] ___ you like coffee?
+    - 选项: ★Do / Can / Are / Is
+- **s5** `choice` [gp2] Do you want sugar? — No, I ___.
+    - 选项: can't / no / am not / ★don't
+- **s5** `choice` [gp2] I ___ like sweet drinks.
+    - 选项: ★don't / no / am not / can't be
+- **s5** `transform` [gp2] You want a brownie.（变一般疑问句）
+    - 答案: Do you want a brownie?
+- **s5** `transform` [gp2] I like hot coffee.（变否定句）
+    - 答案: I don't like hot coffee.
+- **s5** `choice` [gp1] We ___ iced coffee.
+    - 选项: likes / ★like / liking / are like
+- **s5** `choice` [gp1] I ___ a cookie and a latte.
+    - 选项: wanting / am want / ★want / wants
+- **s5** `choice` [gp1] They want ___ iced latte.
+    - 选项: any / a / some one / ★an
+- **s5** `transform` [gp1] You like oat milk.（主语换成 They）
+    - 答案: They like oat milk.
+- **s5** `choice` [gp2] ___ you want a cookie? — Yes, I do.
+    - 选项: ★Do / Are / Is / Can
+- **s5** `choice` [gp2] Do you like iced coffee? — ___
+    - 选项: Yes, it is. / ★Yes, I do. / Yes, I am. / Yes, I can.
+- **s5** `choice` [gp2] I ___ want sugar in my coffee.
+    - 选项: ★don't / can't be / am not / no
+- **s5** `transform` [gp2] You want oat milk.（变一般疑问句）
+    - 答案: Do you want oat milk?
+- **s6** `choice`  店员问顾客"要点什么？"常说：
+    - 选项: Where can I get? / Can I get you go? / ★What can I get you? / What can you get me?
+- **s6** `choice`  关于美国的 iced coffee，正确的是：
+    - 选项: 其实是热咖啡 / ★一年四季都有人喝 / 只在夏天出售 / 只给儿童喝
+- **s6** `choice`  店员爽快应下点单，常说：
+    - 选项: Got you it! / You get it! / It got you! / ★You got it!
+- **s6** `choice`  委婉表示"不太喜欢"：
+    - 选项: No way! / ★Not really. / Never ever! / Really not!
+- **s6** `choice`  oat milk 是：
+    - 选项: ★燕麦奶 / 牛奶 / 椰子水 / 羊奶
+- **s7** `cloze`  〔BARISTA: What can I ___1___ you? ROSA: I ___2___ a latte, pl〕 第 1 空
+    - 选项: ★get / give / help / make
+- **s7** `cloze`  〔BARISTA: What can I ___1___ you? ROSA: I ___2___ a latte, pl〕 第 2 空
+    - 选项: wanting / wants / ★want / wanted
+- **s7** `cloze`  〔BARISTA: What can I ___1___ you? ROSA: I ___2___ a latte, pl〕 第 3 空
+    - 选项: Are / ★Do / Can / Is
+- **s7** `cloze`  〔BARISTA: What can I ___1___ you? ROSA: I ___2___ a latte, pl〕 第 4 空
+    - 选项: likes / liking / liked / ★like
+- **s7** `cloze`  〔BARISTA: What can I ___1___ you? ROSA: I ___2___ a latte, pl〕 第 5 空
+    - 选项: ★don't / am not / can't be / no
+- **s7** `cloze`  〔BARISTA: Hot or ___?〕 第 6 空
+    - 选项: warm / hot / cold / ★iced
+- **s7** `cloze`  〔ROSA: Iced, please. It's so ___ today.〕 第 7 空
+    - 选项: ★warm / iced / sweet / cold
+- **s7** `cloze`  〔BARISTA: Nice ___. Do you like sweet drinks?〕 第 8 空
+    - 选项: chance / chart / cheese / ★choice
+- **s7** `cloze`  〔BARISTA: Do you ___ sweet drinks?〕 第 9 空
+    - 选项: get / want / ★like / make
+- **s7** `cloze`  〔BARISTA: Got it. One iced oat milk latte, no ___.〕 第 10 空
+    - 选项: ★sugar / salt / ice / milk
+- **s7** `cloze`  〔ROSA: Oh—and I want a ___ too!〕 第 11 空
+    - 选项: taco / brownie / ★cookie / latte
+- **s7** `cloze`  〔BARISTA: You ___ it!〕 第 12 空
+    - 选项: get / gave / go / ★got
+- **s8** `choice`  Where is Rosa?
+    - 选项: ★At a coffee shop / At a library / At the office / At a BBQ
+- **s8** `choice`  Rosa's latte
+    - 选项: We don't know / Hot / ★Iced / hot or iced? — / Warm
+- **s8** `choice`  Rosa says "I don't like ___ in my coffee."
+    - 选项: Ice / ★Sugar / Oat milk / Milk
+- **s8** `choice`  Rosa also wants a ___.
+    - 选项: Taco / Brownie / ★Cookie / Burger
+- **s9** `scenario`  店员问你要什么，你要一杯冰拿铁
+    - 答案: I want an iced latte, please.
+- **s9** `scenario`  问朋友喜不喜欢甜的饮品
+    - 答案: Do you like sweet drinks?
+- **s9** `scenario`  别人问你喜不喜欢，你不太喜欢（委婉）
+    - 答案: Not really.
+- **s10** `choice`  ___ you like coffee? — Yes, I do.
+    - 选项: ★Do / Is / Can / Are
+- **s10** `choice`  I ___ a cookie, please.
+    - 选项: am want / ★want / wanting / wants
+- **s10** `choice`  I don't ___ sugar.
+    - 选项: liking / likes / ★like / liked
+- **s10** `choice`  Do you want milk? — No, I ___.
+    - 选项: am not / ★don't / no / can't
+- **s10** `transform`  You like iced coffee.（变一般疑问句）
+    - 答案: Do you like iced coffee?
+- **s10** `transform`  I like sweet drinks.（变否定句）
+    - 答案: I don't like sweet drinks.
+- **s10** `transform`  I want a latte.（加 please 变礼貌点单）
+    - 答案: I want a latte, please.
+- **s10** `choice`  ___ you want milk or oat milk?
+    - 选项: ★Do / Is / Are / Can
+- **s10** `choice`  I don't ___ a cookie.
+    - 选项: wanted / wanting / wants / ★want
+- **s10** `transform`  You like lattes.（变否定句）
+    - 答案: You don't like lattes.

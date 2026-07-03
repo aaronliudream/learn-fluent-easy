@@ -1,0 +1,600 @@
+# 单元2 题库全量导出（语义复审用）
+
+> 共 289 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+
+
+## am1_l07
+
+- **s5** `choice` [gp1] What ___ is the sky? — It's blue.
+    - 选项: ★color / size / name / job
+- **s5** `choice` [gp1] What color is your car? — ___
+    - 选项: It's Tom's. / ★It's white. / Yes, it is. / It's a medium.
+- **s5** `transform` [gp1] The T-shirt is yellow.（变 what color 问句）
+    - 答案: What color is the T-shirt?
+- **s5** `choice` [gp2] It's ___.（一件绿色 T 恤）
+    - 选项: a T-shirt green / an green T-shirt / green a T-shirt / ★a green T-shirt
+- **s5** `choice` [gp2] Look at that ___!（红色汽车）
+    - 选项: a car red / car red / ★red car / red a car
+- **s5** `transform` [gp2] a dress + orange 组名词短语
+    - 答案: an orange dress
+- **s5** `choice` [gp3] What ___ is this jacket? — It's a small.
+    - 选项: ★size / matter / job / color
+- **s5** `choice` [gp3] My favorite ___ is purple.
+    - 选项: name / ★color / school / size
+- **s5** `choice` [gp1] ___ color is your favorite?
+    - 选项: Which one / Who / How / ★What
+- **s5** `choice` [gp3] What ___ is that T-shirt? — It's a medium.
+    - 选项: big / ★size / small / color
+- **s5** `transform` [gp1] That cup is blue.（变问颜色的特殊疑问句）
+    - 答案: What color is that cup?
+- **s5** `transform` [gp3] What size is this T-shirt?（用 small 回答）
+    - 答案: It's a small.
+- **s5** `choice` [gp2] Here's a ___ T-shirt.（绿色的）
+    - 选项: ★green / greens / color green / green color
+- **s5** `choice` [gp2] I want the ___ one.（橙色那件）
+    - 选项: orange color one / color it / oranges / ★orange
+- **s5** `choice` [gp2] 颜色词修饰名词时放在名词的：
+    - 选项: ★前面 / 句尾 / 句首 / 后面
+- **s5** `transform` [gp2] The cup is pink.（改说"这是一只粉色杯子"）
+    - 答案: This is a pink cup.
+- **s6** `choice`  "颜色"的美式拼写是：
+    - 选项: culor / collor / colour / ★color
+- **s6** `choice`  "最喜欢的"的美式拼写是：
+    - 选项: favrite / favorit / ★favorite / favourite
+- **s6** `choice`  商品打折促销，美国店里标：
+    - 选项: of sale / ★on sale / at sale / in the sale
+- **s6** `choice`  美语口语里 a buck 指：
+    - 选项: 一小时 / 一本书 / 一辆车 / ★一美元
+- **s6** `choice`  美语夸东西好看可爱常说：
+    - 选项: How do you do! / Not at all! / ★It's cute! / It's brilliant!
+- **s7** `cloze`  〔CLERK: Hi! Can I ___1___ you? LILY: Yes, please. I'm here __〕 第 1 空
+    - 选项: ★help / here / go / meet
+- **s7** `cloze`  〔CLERK: Hi! Can I ___1___ you? LILY: Yes, please. I'm here __〕 第 2 空
+    - 选项: at / ★for / from / of
+- **s7** `cloze`  〔CLERK: Hi! Can I ___1___ you? LILY: Yes, please. I'm here __〕 第 3 空
+    - 选项: size / name / ★color / job
+- **s7** `cloze`  〔CLERK: Hi! Can I ___1___ you? LILY: Yes, please. I'm here __〕 第 4 空
+    - 选项: are / am / be / ★is
+- **s7** `cloze`  〔CLERK: Hi! Can I ___1___ you? LILY: Yes, please. I'm here __〕 第 5 空
+    - 选项: ★popular / a popular / populars / small size
+- **s7** `cloze`  〔CLERK: Hi! Can I ___1___ you? LILY: Yes, please. I'm here __〕 第 6 空
+    - 选项: color / ★size / dollar / sale
+- **s7** `cloze`  〔LILY: It's cute! But it's a ___.〕 第 7 空
+    - 选项: big it / medium / ★small / cute one
+- **s7** `cloze`  〔LILY: What size is that one over there? — CLERK: It's a ___.〕 第 8 空
+    - 选项: middle / ★medium / mid one / media
+- **s7** `cloze`  〔LILY: And what color is ___ T-shirt?〕 第 9 空
+    - 选项: there / this one / it one / ★that
+- **s7** `cloze`  〔CLERK: It's orange. It's on ___ — only ten dollars.〕 第 10 空
+    - 选项: ★sale / shop / sales one / sell
+- **s7** `cloze`  〔LILY: The green T-shirt and the ___ T-shirt, please.〕 第 11 空
+    - 选项: pink / green / blue / ★orange
+- **s7** `cloze`  〔CLERK: Sure! ___ you go.〕 第 12 空
+    - 选项: ★Here / Take / There / Give
+- **s8** `choice`  Where is Lily?
+    - 选项: At a party / ★At a store / At a library / At a hotel
+- **s8** `choice`  What is Lily's favorite color?
+    - 选项: Orange / Blue / ★Green / Pink
+- **s8** `choice`  What size does Lily want?
+    - 选项: An extra large / A large / A small / ★A medium
+- **s8** `choice`  How much is the orange T
+    - 选项: Five dollars / shirt? — / ★Ten dollars / Two dollars / Twenty dollars
+- **s9** `scenario`  想问朋友新书包的颜色
+    - 答案: What color is your new backpack?
+- **s9** `scenario`  店员问 "Can I help you?"，你想买顶帽子（hat）
+    - 答案: Yes, please. I'm here for a hat.
+- **s9** `scenario`  夸对方的 T 恤好看
+    - 答案: It's cute! / Your T-shirt is cute!
+- **s10** `choice`  What ___ is your car? — It's white.
+    - 选项: size / ★color / job / name
+- **s10** `choice`  My favorite color ___ red.
+    - 选项: be / am / ★is / are
+- **s10** `choice`  It's ___ green T-shirt.
+    - 选项: an / two / 不填 / ★a
+- **s10** `choice`  What size is it? — ___
+    - 选项: It's Tyler's. / ★It's a medium. / It's green. / Yes, it is.
+- **s10** `transform`  This T-shirt is green.（变 what color 问句）
+    - 答案: What color is this T-shirt?
+- **s10** `transform`  a shirt + red 组名词短语
+    - 答案: a red shirt
+- **s10** `transform`  It is orange.（变一般疑问句）
+    - 答案: Is it orange?
+- **s10** `choice`  What color ___ your car?
+    - 选项: am / do / are / ★is
+- **s10** `choice`  I want a small, not a ___.（中码）
+    - 选项: size one / ★medium / media / middles
+- **s10** `transform`  The bag is pink.（变问颜色的特殊疑问句）
+    - 答案: What color is the bag?
+
+## am1_l08
+
+- **s5** `choice` [gp1] one gift, two ___
+    - 选项: giftes / ★gifts / a gifts / gift
+- **s5** `choice` [gp1] These are my ___.（台灯们）
+    - 选项: lamp / a lamp / lampes / ★lamps
+- **s5** `transform` [gp1] This is a chocolate.（变复数）
+    - 答案: These are chocolates.
+- **s5** `choice` [gp2] ___ are my keys.（这些）
+    - 选项: ★These / This / That / It
+- **s5** `choice` [gp2] ___ suitcases are heavy.（那些）
+    - 选项: This / It / That / ★Those
+- **s5** `choice` [gp3] ___ these your passports?
+    - 选项: ★Are / Am / Be / Is
+- **s5** `choice` [gp3] Are those your bags? — Yes, ___ are.
+    - 选项: it / these / ★they / those
+- **s5** `transform` [gp3] Those are your gifts.（变一般疑问句）
+    - 答案: Are those your gifts?
+- **s5** `choice` [gp1] one chair, two ___
+    - 选项: chair / chairses / chaires / ★chairs
+- **s5** `choice` [gp1] box 的复数形式是：
+    - 选项: boxies / boxs / ★boxes / box's
+- **s5** `choice` [gp1] They are ___.（书）
+    - 选项: a books / ★books / book / bookes
+- **s5** `transform` [gp1] This is a lamp.（改为复数：这些是台灯）
+    - 答案: These are lamps.
+- **s5** `choice` [gp3] ___ those your keys?
+    - 选项: Am / Is / Do / ★Are
+- **s5** `choice` [gp3] Are those Emma's chairs? — Yes, ___ are.
+    - 选项: those / ★they / them / she
+- **s5** `choice` [gp2] 离说话人远的多个东西用：
+    - 选项: this / that one / these / ★those
+- **s5** `transform` [gp2] That is my chair.（改为复数：那些是我的椅子）
+    - 答案: Those are my chairs.
+- **s6** `choice`  "卡车"美语叫：
+    - 选项: ★truck / trunk / track / lorry
+- **s6** `choice`  "Pizza is on me." 的意思是：
+    - 选项: 披萨归我一个人吃 / ★披萨我请客 / 我坐在披萨上 / 披萨在我身上
+- **s6** `choice`  美国朋友互助搬家后，惯例请大家吃：
+    - 选项: cake / soup / turkey / ★pizza
+- **s6** `choice`  特别爱读书的人被称为：
+    - 选项: bookfish / booksnake / ★bookworm / bookbird
+- **s7** `cloze`  〔JAKE: Are ___1___ your boxes? SARA: Yes, ___2___ are. They'r〕 第 1 空
+    - 选项: ★these / this / that / it
+- **s7** `cloze`  〔JAKE: Are ___1___ your boxes? SARA: Yes, ___2___ are. They'r〕 第 2 空
+    - 选项: these / it / ★they / those
+- **s7** `cloze`  〔JAKE: Are ___1___ your boxes? SARA: Yes, ___2___ are. They'r〕 第 3 空
+    - 选项: this / ★those / that / they
+- **s7** `cloze`  〔JAKE: Are ___1___ your boxes? SARA: Yes, ___2___ are. They'r〕 第 4 空
+    - 选项: isn't / not / am not / ★aren't
+- **s7** `cloze`  〔JAKE: Are ___1___ your boxes? SARA: Yes, ___2___ are. They'r〕 第 5 空
+    - 选项: ★on / in / at / for
+- **s7** `cloze`  〔JAKE: Wow, they're ___!〕 第 6 空
+    - 选项: new one / ★heavy / light / big it
+- **s7** `cloze`  〔SARA: Sorry! I'm a ___.〕 第 7 空
+    - 选项: booker / bookman / ★bookworm / bookcase
+- **s7** `cloze`  〔JAKE: Got it. And this ___?〕 第 8 空
+    - 选项: box / ★lamp / truck / chair
+- **s7** `cloze`  〔SARA: It's my lamp. Careful—it's ___!〕 第 9 空
+    - 选项: old / big / late / ★new
+- **s7** `cloze`  〔JAKE: No problem. The truck is ___!〕 第 10 空
+    - 选项: far / ★full / fully / fun
+- **s7** `cloze`  〔SARA: Thanks, Jake. Pizza is ___ me!〕 第 11 空
+    - 选项: ★on / to / for / at
+- **s8** `choice`  What's in the boxes?
+    - 选项: Chairs / Pizzas / ★Books / Lamps
+- **s8** `choice`  Whose chairs are those?
+    - 选项: Jake's / Nobody's / Sara's / ★Emma's
+- **s8** `choice`  Is the lamp new?
+    - 选项: No, it isn't. / ★Yes, it is. / Yes, they are. / We don't know.
+- **s9** `scenario`  帮朋友搬家，指着几个箱子确认是不是他的
+    - 答案: Are these your boxes?
+- **s9** `scenario`  提醒别人小心拿新台灯
+    - 答案: Careful—it's new!
+- **s9** `scenario`  想说这顿饭你请客
+    - 答案: It's on me!
+- **s10** `choice`  ___ these your keys? — Yes, they are.
+    - 选项: Is / Be / ★Are / Am
+- **s10** `choice`  one box, two ___
+    - 选项: boxs / box / a box / ★boxes
+- **s10** `choice`  Are those your chairs? — No, ___ aren't.
+    - 选项: these / it / ★they / those
+- **s10** `choice`  ___ are Emma's chairs.（那些）
+    - 选项: This / These / It / ★Those
+- **s10** `transform`  This is a box.（变复数）
+    - 答案: These are boxes.
+- **s10** `transform`  Those are your books.（变一般疑问句）
+    - 答案: Are those your books?
+- **s10** `transform`  That is my lamp.（变复数：那些是我的台灯）
+    - 答案: Those are my lamps.
+- **s10** `choice`  one dollar, ten ___
+    - 选项: dollar / ★dollars / dollar's / dollares
+- **s10** `choice`  These are my books. ___ are heavy.
+    - 选项: Them / These one / It / ★They
+- **s10** `transform`  This lamp is new.（改为复数：这些台灯是新的）
+    - 答案: These lamps are new.
+
+## am1_l09
+
+- **s5** `choice` [gp1] ___ is my uncle Ben.
+    - 选项: ★This / These / We / They
+- **s5** `choice` [gp1] ___ are my cousins, Emma and Jack.
+    - 选项: It / This / That / ★These
+- **s5** `transform` [gp1] This is my aunt.（介绍两位阿姨）
+    - 答案: These are my aunts.
+- **s5** `choice` [gp2] Are you students? — Yes, ___ are.
+    - 选项: ★we / I / you / they
+- **s5** `choice` [gp2] My cousins are in college. ___ are students.
+    - 选项: We / It / You / ★They
+- **s5** `choice` [gp2] My friend and I are tired. ___ are so tired.
+    - 选项: You / It / ★We / They
+- **s5** `choice` [gp3] They are ___.
+    - 选项: doctor / ★doctors / an doctor / a doctor
+- **s5** `transform` [gp3] She is a nurse.（变复数 They）
+    - 答案: They are nurses.
+- **s5** `choice` [gp1] ___ is my aunt Carol.（介绍一位）
+    - 选项: We / ★This / They / These
+- **s5** `choice` [gp1] ___ are my friends, Sam and Kate.（介绍两位）
+    - 选项: She / It / ★These / This
+- **s5** `choice` [gp1] This is my grandpa Joe. ___ a great cook.
+    - 选项: ★He's / They're / She's / His
+- **s5** `transform` [gp1] This is my friend.（改为复数：这些是我的朋友们）
+    - 答案: These are my friends.
+- **s5** `choice` [gp2] Are you nurses? — Yes, ___ are.
+    - 选项: they / ★we / you / us
+- **s5** `choice` [gp3] Sofia and Amy are ___.（护士）
+    - 选项: a nurses / nurse / ★nurses / nurser
+- **s5** `choice` [gp2] Ethan and Ava are in college. ___ are students.
+    - 选项: He / ★They / These one / We
+- **s5** `transform` [gp3] He is a cook.（主语换成 They：他们是厨师）
+    - 答案: They are cooks.
+- **s6** `choice`  美国感恩节在：
+    - 选项: 10月31日 / 12月25日 / ★11月的第四个星期四 / 7月4日
+- **s6** `choice`  美语口语称呼一群人"你们"高频说：
+    - 选项: ★you guys / you peoples / you mans / you sirs
+- **s6** `choice`  美国人口语说 college 泛指：
+    - 选项: 幼儿园 / 小学 / ★大学 / 驾校
+- **s6** `choice`  美语表示"太棒了"常说：
+    - 选项: ★amazing / cheerio / brilliant / lovely
+- **s7** `cloze`  〔MIA: Welcome, Noah! Happy ___1___! MIA: This ___2___ my aunt〕 第 1 空
+    - 选项: ★Thanksgiving / Morning / Dinner / College
+- **s7** `cloze`  〔MIA: Welcome, Noah! Happy ___1___! MIA: This ___2___ my aunt〕 第 2 空
+    - 选项: are / ★is / am / be
+- **s7** `cloze`  〔MIA: Welcome, Noah! Happy ___1___! MIA: This ___2___ my aunt〕 第 3 空
+    - 选项: is / am / ★are / be
+- **s7** `cloze`  〔MIA: Welcome, Noah! Happy ___1___! MIA: This ___2___ my aunt〕 第 4 空
+    - 选项: they / you / I / ★we
+- **s7** `cloze`  〔MIA: Welcome, Noah! Happy ___1___! MIA: This ___2___ my aunt〕 第 5 空
+    - 选项: ★cook / doctor / student / turkey
+- **s7** `cloze`  〔MIA: Welcome, Noah! Happy ___1___! MIA: This ___2___ my aunt〕 第 6 空
+    - 选项: dinner / ★turkey / family / college
+- **s7** `cloze`  〔MIA: Noah, this is my ___ Carol.〕 第 7 空
+    - 选项: ★aunt / grandpa / cousin / doctor
+- **s7** `cloze`  〔MIA: She's a ___.〕 第 8 空
+    - 选项: teacher / nurse / driver / ★doctor
+- **s7** `cloze`  〔ETHAN 一行人被问：Hi, guys! Are you ___?〕 第 9 空
+    - 选项: teachers one / cookers / ★students / student
+- **s7** `cloze`  〔ETHAN: Yes, we are. We're in ___.〕 第 10 空
+    - 选项: ★college / home / dinner / class
+- **s7** `cloze`  〔MIA: And this is my ___ Joe.〕 第 11 空
+    - 选项: aunt / ★grandpa / friend one / cousin
+- **s7** `cloze`  〔GRANDPA JOE: Welcome to the family ___.〕 第 12 空
+    - 选项: party / house / ★dinner / school
+- **s7** `cloze`  〔NOAH: I'm ___ to be here!〕 第 13 空
+    - 选项: great one / hungry / tired / ★happy
+- **s8** `choice`  What holiday is it?
+    - 选项: ★Thanksgiving / Halloween / Christmas / New Year
+- **s8** `choice`  What is Aunt Carol's job?
+    - 选项: A cook / A nurse / ★A doctor / A student
+- **s8** `choice`  Are Ethan and Ava students?
+    - 选项: Yes, he is. / ★Yes, they are. / No, they aren't. / We don't know.
+- **s8** `choice`  Who is a great cook?
+    - 选项: ★Grandpa Joe / Carol / Mia / Noah
+- **s9** `scenario`  向朋友介绍你的两位表亲
+    - 答案: These are my cousins, Ben and Amy.
+- **s9** `scenario`  有人问你和同伴 "Are you students?"，你们是
+    - 答案: Yes, we are.
+- **s9** `scenario`  感恩节当天向邻居送祝福
+    - 答案: Happy Thanksgiving!
+- **s10** `choice`  This is my aunt. ___ a doctor.
+    - 选项: They're / ★She's / It's / He's
+- **s10** `choice`  ___ are my cousins, Ben and Amy.
+    - 选项: This / That / It / ★These
+- **s10** `choice`  Are you students? — Yes, ___ are.
+    - 选项: ★we / they / I / you
+- **s10** `choice`  They are ___.（教师们）
+    - 选项: an teacher / ★teachers / a teacher / teacher
+- **s10** `transform`  This is my cousin.（复数：两位表亲）
+    - 答案: These are my cousins.
+- **s10** `transform`  We are students.（变一般疑问句问对方）
+    - 答案: Are you students?
+- **s10** `transform`  She is a doctor.（变复数 They）
+    - 答案: They are doctors.
+- **s10** `choice`  My aunt is a doctor. My cousins ___ students.
+    - 选项: be / ★are / is / am
+- **s10** `choice`  Ethan and I are students. ___ are in college.
+    - 选项: They / He / ★We / Us
+- **s10** `transform`  They are cooks.（变一般疑问句，they→you：你们是厨师吗？）
+    - 答案: Are you cooks?
+
+## am1_l10
+
+- **s5** `choice` [gp1] What's the ___? — I'm so tired.
+    - 选项: color / size / name / ★matter
+- **s5** `choice` [gp1] What's the matter? — ___
+    - 选项: ★I'm thirsty. / It's blue. / He's a doctor. / This is Tom.
+- **s5** `choice` [gp1] 朋友说 "I'm so hungry."，你也饿：
+    - 选项: No, it isn't. / ★Me too. / Here you go. / Which one?
+- **s5** `choice` [gp2] I'm ___ tired.（非常）
+    - 选项: an / a / ★so / the
+- **s5** `choice` [gp2] They are ___.
+    - 选项: hungrys / a hungry / hungries / ★hungry
+- **s5** `choice` [gp2] The trail is ___.（长）
+    - 选项: ★long / longs / the long / a long
+- **s5** `transform` [gp2] She is thirsty.（变一般疑问句）
+    - 答案: Is she thirsty?
+- **s5** `transform` [gp2] We are tired.（加程度词 so）
+    - 答案: We are so tired.
+- **s5** `choice` [gp1] ___ the matter?
+    - 选项: ★What's / Where's / Who's / How's
+- **s5** `choice` [gp1] What's the matter? — ___
+    - 选项: Here they are. / Take care. / Yes, it is. / ★I'm so tired.
+- **s5** `choice` [gp1] 朋友看起来不舒服，你关心地问：
+    - 选项: Who are you? / How much? / ★What's the matter? / What color?
+- **s5** `transform` [gp1] You are thirsty.（变一般疑问句）
+    - 答案: Are you thirsty?
+- **s5** `choice` [gp2] I'm ___ tired!（如此）
+    - 选项: ★so / many / very much / such
+- **s5** `choice` [gp2] We're ___ hungry.（真的）
+    - 选项: much so / many / realy / ★really
+- **s5** `choice` [gp2] That trail is ___!
+    - 选项: longly / length / ★long / a long
+- **s5** `transform` [gp2] I am hungry.（加 so 强调）
+    - 答案: I am so hungry.
+- **s6** `choice`  "加油站"美语叫：
+    - 选项: ★gas station / petrol station / oil shop / car house
+- **s6** `choice`  美国的徒步步道叫：
+    - 选项: trial / train / rail / ★trail
+- **s6** `choice`  附和别人"我也是"，说：
+    - 选项: I two. / ★Me too. / Too me. / Me two.
+- **s6** `choice`  两餐之间吃的零食叫：
+    - 选项: ★snack / snake / snap / sneak
+- **s7** `cloze`  〔RYAN: What's the ___1___? ZOE: I'm so ___2___. And I'm thirs〕 第 1 空
+    - 选项: ★matter / color / size / name
+- **s7** `cloze`  〔RYAN: What's the ___1___? ZOE: I'm so ___2___. And I'm thirs〕 第 2 空
+    - 选项: a tired / new / ★tired / popular
+- **s7** `cloze`  〔RYAN: What's the ___1___? ZOE: I'm so ___2___. And I'm thirs〕 第 3 空
+    - 选项: two / ★too / to / also me
+- **s7** `cloze`  〔RYAN: What's the ___1___? ZOE: I'm so ___2___. And I'm thirs〕 第 4 空
+    - 选项: boxes / snacks / waters / ★bottles
+- **s7** `cloze`  〔RYAN: What's the ___1___? ZOE: I'm so ___2___. And I'm thirs〕 第 5 空
+    - 选项: ★hungry / hungrys / a hungry / thirstys
+- **s7** `cloze`  〔ZOE: Me too. That ___ is long!〕 第 6 空
+    - 选项: tree / train / trip / ★trail
+- **s7** `cloze`  〔RYAN: Look, a gas ___!〕 第 7 空
+    - 选项: stop / ★station / store / shop
+- **s7** `cloze`  〔ZOE: I'm ___ thirsty.〕 第 8 空
+    - 选项: ★really / much / very much / so much
+- **s7** `cloze`  〔CLERK: Water ___ you?〕 第 9 空
+    - 选项: at / of / to / ★for
+- **s7** `cloze`  〔CLERK: Here you go. Anything ___?〕 第 10 空
+    - 选项: others / elses / ★else / other one
+- **s7** `cloze`  〔CLERK: Sure! Here ___ are.〕 第 11 空
+    - 选项: ★they / these go / it / them
+- **s8** `choice`  Where are Ryan and Zoe at the end?
+    - 选项: At a library / At a store / At home / ★At a gas station
+- **s8** `choice`  How does Zoe feel?
+    - 选项: Happy / Cold / ★Tired and thirsty / Great
+- **s8** `choice`  Are they hungry?
+    - 选项: ★Yes, they are. / No, they aren't. / Yes, he is. / We don't know.
+- **s9** `scenario`  朋友看起来不舒服，你关心地问
+    - 答案: What's the matter?
+- **s9** `scenario`  别人说 "I'm so tired."，你也很累
+    - 答案: Me too.
+- **s9** `scenario`  在便利店买两瓶水
+    - 答案: Two bottles of water, please.
+- **s10** `choice`  What's the ___? — I'm tired.
+    - 选项: job / color / name / ★matter
+- **s10** `choice`  I'm ___.（口渴）
+    - 选项: the thirsty / ★thirsty / a thirsty / thirsties
+- **s10** `choice`  We're ___!（饿了）
+    - 选项: a hungry / hungrys / ★hungry / hungries
+- **s10** `choice`  I'm so tired. — ___
+    - 选项: ★Me too. / What color? / Yes, it is. / Here you go.
+- **s10** `transform`  You are tired.（变问句关心对方）
+    - 答案: Are you tired?
+- **s10** `transform`  I am thirsty.（加程度词 so）
+    - 答案: I am so thirsty.
+- **s10** `transform`  He is hungry.（变复数 They）
+    - 答案: They are hungry.
+- **s10** `choice`  I'm tired ___ thirsty.（而且）
+    - 选项: or / but / so much / ★and
+- **s10** `choice`  ___, a gas station!
+    - 选项: Eye / See you / ★Look / Watch it
+- **s10** `transform`  We are hungry.（变一般疑问句，we→you）
+    - 答案: Are you hungry?
+
+## am1_l11
+
+- **s5** `choice` [gp1] ___ book is your favorite?
+    - 选项: How / ★Which / What / Whose
+- **s5** `choice` [gp1] Which cup is Amy's? — ___
+    - 选项: It's a cup. / Yes, it is. / ★The pink one. / She's a nurse.
+- **s5** `transform` [gp1] That backpack is Jake's.（变 which 问句）
+    - 答案: Which backpack is Jake's?
+- **s5** `choice` [gp1] 桌上两支笔让对方选，你问：
+    - 选项: How are you? / ★Which one? / What color? / Whose?
+- **s5** `choice` [gp2] Which car is your car? — The blue ___.
+    - 选项: ★one / that / it / this
+- **s5** `choice` [gp2] Not this one—___ one, please.
+    - 选项: they / it / ★that / an
+- **s5** `choice` [gp2] The small ___ is my mug.
+    - 选项: it / ★one / this / ones
+- **s5** `transform` [gp2] The red bag is my bag.（用 one 避免重复 bag）
+    - 答案: The red one is my bag.
+- **s5** `choice` [gp1] ___ bag is Emma's?
+    - 选项: Whose one / ★Which / What size / Who
+- **s5** `choice` [gp1] Which mug is Chris's? — The black ___.
+    - 选项: mug it / that / it / ★one
+- **s5** `choice` [gp1] Which 用于：
+    - 选项: ★在多个里挑一个 / 问颜色 / 问尺寸 / 问归属
+- **s5** `transform` [gp1] The big box is Jake's.（变 which 疑问句：哪个箱子是 Jake 的？）
+    - 答案: Which box is Jake's?
+- **s5** `choice` [gp2] This ___ or that ___?（同一个词填两空）
+    - 选项: book / it / ★one / thing
+- **s5** `choice` [gp2] Not that one. The big blue ___.
+    - 选项: ★one / it / ones / book it
+- **s5** `choice` [gp2] The green ___ is my phone.
+    - 选项: ones / this / it / ★one
+- **s5** `transform` [gp2] I want the blue book.（用 one 替代 book）
+    - 答案: I want the blue one.
+- **s6** `choice`  表示"明白了"，美语口语说：
+    - 选项: Get it out. / ★Got it. / Take it. / Made it.
+- **s6** `choice`  回应感谢，除 No problem 外还可说：
+    - 选项: What's up? / Excuse me? / ★You're welcome. / Me too.
+- **s6** `choice`  在美国公共图书馆借书：
+    - 选项: 只对学生开放 / 按小时收费 / 需要买门票 / ★免费
+- **s6** `choice`  把书递给别人并祝阅读愉快，说：
+    - 选项: ★Enjoy! / Which one? / Hurry! / Sorry!
+- **s7** `cloze`  〔EMMA: Excuse me. Is "The Lost Trail" ___1___? LIBRARIAN: Yes〕 第 1 空
+    - 选项: ★here / it / this / where
+- **s7** `cloze`  〔EMMA: Excuse me. Is "The Lost Trail" ___1___? LIBRARIAN: Yes〕 第 2 空
+    - 选项: lamp / truck / ★shelf / drawer
+- **s7** `cloze`  〔EMMA: Excuse me. Is "The Lost Trail" ___1___? LIBRARIAN: Yes〕 第 3 空
+    - 选项: What / ★Which / Whose / How
+- **s7** `cloze`  〔EMMA: Excuse me. Is "The Lost Trail" ___1___? LIBRARIAN: Yes〕 第 4 空
+    - 选项: it / book / this / ★one
+- **s7** `cloze`  〔EMMA: Excuse me. Is "The Lost Trail" ___1___? LIBRARIAN: Yes〕 第 5 空
+    - 选项: this / ★that / it / which
+- **s7** `cloze`  〔EMMA: The blue one, ___ to the lamp.〕 第 6 空
+    - 选项: near / nearly / close / ★next
+- **s7** `cloze`  〔EMMA: Oh! This one. ___ it.〕 第 7 空
+    - 选项: Take / ★Got / Get you / Have to
+- **s7** `cloze`  〔LIBRARIAN: That's a great book. My ___!〕 第 8 空
+    - 选项: flavor / favor / ★favorite / famous
+- **s7** `cloze`  〔EMMA: ___. Thank you so much!〕 第 9 空
+    - 选项: ★Awesome / Awful / Excuse me / Sorry
+- **s7** `cloze`  〔LIBRARIAN: You're welcome. ___!〕 第 10 空
+    - 选项: Sorry / Thanks / ★Enjoy / Excuse
+- **s8** `choice`  Where is Emma?
+    - 选项: ★At a library / At school / At a store / At a gas station
+- **s8** `choice`  Which book is "The Lost Trail"?
+    - 选项: The old black one / ★The big blue one / The small red one / The new green one
+- **s8** `choice`  Is the book the librarian's favorite?
+    - 选项: No, it isn't. / We don't know. / Yes, they are. / ★Yes, it is.
+- **s9** `scenario`  桌上有两支笔，问朋友要哪支
+    - 答案: Which one? / Which pen?
+- **s9** `scenario`  别人问 "Which cup is yours?"，是蓝色那只
+    - 答案: The blue one.
+- **s9** `scenario`  听懂对方指路后，美语随口回应
+    - 答案: Got it.
+- **s10** `choice`  ___ T-shirt is your favorite? — The green one.
+    - 选项: How / Whose / ★Which / What
+- **s10** `choice`  Which car is Jake's? — The gray ___.
+    - 选项: ★one / it / this / that
+- **s10** `choice`  Is it this one? — No, not ___ one. The big one.
+    - 选项: an / ★that / which / it
+- **s10** `choice`  Which one is your mug? — ___
+    - 选项: ★The pink one. / Here you go. / It's a mug. / Yes, it is.
+- **s10** `transform`  Which book is it?（用"红色那本"回答）
+    - 答案: The red one.
+- **s10** `transform`  That pen is Amy's.（变 which 问句：哪支笔是 Amy 的）
+    - 答案: Which pen is Amy's?
+- **s10** `transform`  The small bag is my bag.（用 one 避免重复 bag）
+    - 答案: The small one is my bag.
+- **s10** `choice`  The book is next ___ the lamp.
+    - 选项: at / of / ★to / on
+- **s10** `choice`  ___ welcome. Enjoy!
+    - 选项: You / Yours / Your / ★You're
+- **s10** `transform`  Which book is Emma's?（用 The big one 回答）
+    - 答案: The big one.
+
+## am1_l12
+
+- **s5** `choice` [gp1] Which ___ are your shoes? — The brown ones.
+    - 选项: it / one / ★ones / they
+- **s5** `choice` [gp1] Which gloves are new? — The black ___.
+    - 选项: ★ones / it / one / them
+- **s5** `transform` [gp1] Which one is your key?（改复数：哪些是你的钥匙）
+    - 答案: Which ones are your keys?
+- **s5** `choice` [gp1] These black sunglasses are new. Those brown ___ are on sale.
+    - 选项: one / this / ★ones / it
+- **s5** `choice` [gp2] The books are ___ the shelf.
+    - 选项: am / ★on / in / an
+- **s5** `choice` [gp2] The snacks are ___ the drawer.
+    - 选项: ★in / on / at / an
+- **s5** `choice` [gp2] My phone is ___ the chair.（椅子上）
+    - 选项: is / ★on / a / in
+- **s5** `transform` [gp2] The gifts are in the bag.（变一般疑问句）
+    - 答案: Are the gifts in the bag?
+- **s5** `choice` [gp1] ___ ones are popular?
+    - 选项: ★Which / What one / Whose / How many one
+- **s5** `choice` [gp1] These black ___ are new.
+    - 选项: them / one / ★ones / thing
+- **s5** `choice` [gp1] Which ones are your keys? — The small ___.
+    - 选项: ★ones / it / one / them
+- **s5** `transform` [gp1] I like the brown sunglasses.（用 ones 替代 sunglasses）
+    - 答案: I like the brown ones.
+- **s5** `choice` [gp2] The book is ___ that shelf.（架子上）
+    - 选项: in / to / ★on / under
+- **s5** `choice` [gp2] The keys are ___ my bag.（包里）
+    - 选项: ★in / on / at / for
+- **s5** `choice` [gp2] "在架子上"用 on，"在抽屉里"用：
+    - 选项: at / on / to / ★in
+- **s5** `transform` [gp2] The mugs are in the sink.（变一般疑问句）
+    - 答案: Are the mugs in the sink?
+- **s6** `choice`  爽快答应对方请求，美语常说：
+    - 选项: ★Sure thing! / OK thing! / Sure sure! / Thing yes!
+- **s6** `choice`  美国店员迎客常说：
+    - 选项: Stand there! / Come here you! / ★Welcome in! / Go out!
+- **s6** `choice`  "太阳镜"的美语口语说法：
+    - 选项: ★shades / glassy / shadows / shines
+- **s6** `choice`  口语里 actually 的意思是：
+    - 选项: 大声地 / 从不 / 立刻 / ★其实、实际上
+- **s7** `cloze`  〔CLERK: Are you here ___1___ glasses? CLERK: The sunglasses a〕 第 1 空
+    - 选项: ★for / at / of / from
+- **s7** `cloze`  〔CLERK: Are you here ___1___ glasses? CLERK: The sunglasses a〕 第 2 空
+    - 选项: in / at / ★on / an
+- **s7** `cloze`  〔CLERK: Are you here ___1___ glasses? CLERK: The sunglasses a〕 第 3 空
+    - 选项: one / ★ones / it / this
+- **s7** `cloze`  〔CLERK: Are you here ___1___ glasses? CLERK: The sunglasses a〕 第 4 空
+    - 选项: ★They're / It's / This is / That's
+- **s7** `cloze`  〔CLERK: Are you here ___1___ glasses? CLERK: The sunglasses a〕 第 5 空
+    - 选项: on / at / an / ★in
+- **s7** `cloze`  〔CLERK: Are you here ___1___ glasses? CLERK: The sunglasses a〕 第 6 空
+    - 选项: one / ★ones / them / shelf
+- **s7** `cloze`  〔DAN: Sunglasses, ___.〕 第 7 空
+    - 选项: actual / really so / action / ★actually
+- **s7** `cloze`  〔DAN: And those ___ ones? Are they new too?〕 第 8 空
+    - 选项: gray / pink / ★brown / orange
+- **s7** `cloze`  〔CLERK: No, they ___. But they're on sale.〕 第 9 空
+    - 选项: not / ★aren't / am not / isn't
+- **s7** `cloze`  〔CLERK: Yes, they are. Here—try ___ on!〕 第 10 空
+    - 选项: it / they / ★them / these go
+- **s7** `cloze`  〔DAN: Wow, these are ___. The brown ones, please!〕 第 11 空
+    - 选项: ★perfect / pink / popular one / perfectly
+- **s7** `cloze`  〔CLERK: Sure ___!〕 第 12 空
+    - 选项: it / things / think / ★thing
+- **s8** `choice`  What is Dan here for?
+    - 选项: ★Sunglasses / A lamp / Glasses / A book
+- **s8** `choice`  Where are the sunglasses?
+    - 选项: In the drawer / In a bag / ★On the top shelf / On the chair
+- **s8** `choice`  Which ones are new?
+    - 选项: The brown ones / ★The black ones / The blue ones / The small ones
+- **s8** `choice`  Which ones are on sale?
+    - 选项: The new ones / The big ones / The black ones / ★The brown ones
+- **s9** `scenario`  店里问哪几款帽子受欢迎
+    - 答案: Which ones are popular?
+- **s9** `scenario`  别人问 "Which shoes are yours?"，棕色那双
+    - 答案: The brown ones.
+- **s9** `scenario`  店员递来眼镜请你试戴，他会说
+    - 答案: Try them on!
+- **s10** `choice`  Which ___ are your gloves? — The black ones.
+    - 选项: it / one / this / ★ones
+- **s10** `choice`  The keys are ___ the drawer.
+    - 选项: ★in / on / an / at
+- **s10** `choice`  The books are ___ the shelf.
+    - 选项: am / a / ★on / in
+- **s10** `choice`  Which sunglasses are new? — ___
+    - 选项: ★The black ones. / It's a medium. / Yes, they are. / On the shelf.
+- **s10** `transform`  Which one is your bag?（改问复数：哪些是你的包）
+    - 答案: Which ones are your bags?
+- **s10** `transform`  The red gloves are my gloves.（用 ones 避免重复）
+    - 答案: The red ones are my gloves.
+- **s10** `transform`  The snacks are in the drawer.（变一般疑问句）
+    - 答案: Are the snacks in the drawer?
+- **s10** `choice`  Here—try them ___!
+    - 选项: ★on / up you / at / in
+- **s10** `choice`  The brown ones are on ___.
+    - 选项: shop / sales one / sell / ★sale
+- **s10** `transform`  The black ones are new.（变一般疑问句）
+    - 答案: Are the black ones new?

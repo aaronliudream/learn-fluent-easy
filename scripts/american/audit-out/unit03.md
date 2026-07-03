@@ -1,0 +1,602 @@
+# 单元3 题库全量导出（语义复审用）
+
+> 共 290 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+
+
+## am1_l13
+
+- **s5** `choice` [gp1] ___ there a lamp on the desk? — Yes, there is.
+    - 选项: ★Is / Are / Am / Do
+- **s5** `choice` [gp1] There ___ a bike on the street.
+    - 选项: are / am / ★is / be
+- **s5** `choice` [gp1] Is there a pen in the box? — No, there ___.
+    - 选项: ★isn't / not / aren't / is
+- **s5** `transform` [gp1] There is a cup on the counter.（变一般疑问句）
+    - 答案: Is there a cup on the counter?
+- **s5** `choice` [gp2] The salt is ___ the counter.（台面上）
+    - 选项: under / in / ★on / an
+- **s5** `choice` [gp2] The pan is ___ the cabinet.（柜子里）
+    - 选项: under / at / on / ★in
+- **s5** `choice` [gp2] The dog is ___ the table.（桌子下）
+    - 选项: on / in / ★under / at
+- **s5** `transform` [gp2] The keys are in the box.（改成"盒子下面"）
+    - 答案: The keys are under the box.
+- **s5** `choice` [gp1] There ___ a coffee maker on the counter.
+    - 选项: be / am / are / ★is
+- **s5** `choice` [gp1] ___ there a phone on the chair? — No, there isn't.
+    - 选项: ★Is / Are / Am / Do
+- **s5** `choice` [gp1] Is there a bag here? — Yes, ___ is.
+    - 选项: this / ★there / that / it
+- **s5** `transform` [gp1] There is a book on the chair.（变否定句）
+    - 答案: There isn't a book on the chair.
+- **s5** `choice` [gp2] The cup is ___ the table.（桌子上）
+    - 选项: at / in / ★on / under
+- **s5** `choice` [gp2] The bag is ___ the chair.（椅子下面）
+    - 选项: on / in / at / ★under
+- **s5** `choice` [gp2] The phone is ___ the bag.（包里）
+    - 选项: at / ★in / on / under
+- **s5** `transform` [gp2] The salt is on the counter.（改成"柜子里"）
+    - 答案: The salt is in the cabinet.
+- **s6** `choice`  厨房的橱柜美语叫：
+    - 选项: cupboard / cook box / closet / ★cabinet
+- **s6** `choice`  厨房台面美语叫：
+    - 选项: worktop / ★counter / desk / floor
+- **s6** `choice`  炉灶美语叫：
+    - 选项: heat table / fire box / ★stove / cooker
+- **s6** `choice`  美国家庭的 taco night 指：
+    - 选项: ★周中固定吃塔可的家庭传统 / 只在生日吃塔可 / 餐厅促销日 / 墨西哥国庆活动
+- **s6** `choice`  自己出了个小差错时说：
+    - 选项: Yay! / Cheers! / ★Oops! / Wow!
+- **s7** `cloze`  〔OWEN: Is ___1___ a pan here? NINA: Yes, there ___2___. It's 〕 第 1 空
+    - 选项: ★there / it / this / here
+- **s7** `cloze`  〔OWEN: Is ___1___ a pan here? NINA: Yes, there ___2___. It's 〕 第 2 空
+    - 选项: are / am / ★is / be
+- **s7** `cloze`  〔OWEN: Is ___1___ a pan here? NINA: Yes, there ___2___. It's 〕 第 3 空
+    - 选项: on / ★in / under / at
+- **s7** `cloze`  〔OWEN: Is ___1___ a pan here? NINA: Yes, there ___2___. It's 〕 第 4 空
+    - 选项: in / under / at / ★on
+- **s7** `cloze`  〔OWEN: Is ___1___ a pan here? NINA: Yes, there ___2___. It's 〕 第 5 空
+    - 选项: ★under / on / in / next
+- **s7** `cloze`  〔OWEN: Nice ___, Nina!〕 第 6 空
+    - 选项: ★kitchen / place / park / garage
+- **s7** `cloze`  〔NINA: Thanks! It's small but ___.〕 第 7 空
+    - 选项: fresh / hot / big / ★cozy
+- **s7** `cloze`  〔OWEN: Okay, ___ night! Is there a pan here?〕 第 8 空
+    - 选项: ★taco / movie / game / pizza
+- **s7** `cloze`  〔OWEN: ___ it. And the salt?〕 第 9 空
+    - 选项: Have / Take / ★Got / Get
+- **s7** `cloze`  〔NINA: It's on the counter, ___ to the stove.〕 第 10 空
+    - 选项: behind / near / under / ★next
+- **s7** `cloze`  〔OWEN: Hmm, it ___ here.〕 第 11 空
+    - 选项: aren't / is / ★isn't / not
+- **s7** `cloze`  〔OWEN: Ha! There it ___.〕 第 12 空
+    - 选项: ★is / be / are / am
+- **s8** `choice`  What night is it?
+    - 选项: Game night / ★Taco night / Movie night / Pizza night
+- **s8** `choice`  Where is the pan?
+    - 选项: ★In the cabinet / Under the table / Next to the stove / On the counter
+- **s8** `choice`  Where is the salt?
+    - 选项: Next to the sink / On the stove / ★Under the coffee maker / In the pan
+- **s9** `scenario`  问朋友家里有没有杯子
+    - 答案: Is there a cup here?
+- **s9** `scenario`  别人在找钥匙，钥匙就在椅子下面
+    - 答案: It's under the chair.
+- **s9** `scenario`  终于找到了手机
+    - 答案: There it is!
+- **s10** `choice`  ___ there a lamp in your room? — Yes, there is.
+    - 选项: Am / Are / ★Is / Be
+- **s10** `choice`  There ___ a truck on the street.
+    - 选项: are / be / am / ★is
+- **s10** `choice`  The keys are ___ the box.（盒子里）
+    - 选项: at / ★in / on / under
+- **s10** `choice`  Is there a pen here? — No, there ___.
+    - 选项: ★isn't / aren't / is / not
+- **s10** `transform`  There is a lamp on the desk.（变一般疑问句）
+    - 答案: Is there a lamp on the desk?
+- **s10** `transform`  The cat is on the chair.（改到椅子下面）
+    - 答案: The cat is under the chair.
+- **s10** `transform`  There is a pan in the cabinet.（变否定句）
+    - 答案: There isn't a pan in the cabinet.
+- **s10** `choice`  There ___ a coffee maker in the kitchen.
+    - 选项: be / ★is / are / am
+- **s10** `choice`  The book is ___ the chair.（椅子下面）
+    - 选项: at / on / in / ★under
+- **s10** `transform`  There is a stove in the kitchen.（变一般疑问句）
+    - 答案: Is there a stove in the kitchen?
+
+## am1_l14
+
+- **s5** `choice` [gp1] ___ there any bikes in the garage? — Yes, there are.
+    - 选项: ★Are / Am / Is / Be
+- **s5** `choice` [gp1] There ___ two games on the shelf.
+    - 选项: be / ★are / is / am
+- **s5** `transform` [gp1] There are some tools here.（变否定句，some→any）
+    - 答案: There aren't any tools here.
+- **s5** `choice` [gp2] There are ___ books in the box.（一些）
+    - 选项: ★some / an / a / any
+- **s5** `choice` [gp2] Are there ___ old chairs here?
+    - 选项: one / a / ★any / some
+- **s5** `choice` [gp2] There aren't ___ cups on the table.
+    - 选项: a / some / an / ★any
+- **s5** `choice` [gp3] The bikes are ___ the boxes.（箱子后面）
+    - 选项: under / on / ★behind / in
+- **s5** `transform` [gp3] The truck is behind the house.（变一般疑问句）
+    - 答案: Is the truck behind the house?
+- **s5** `choice` [gp1] There ___ some books on the shelf.
+    - 选项: am / is / be / ★are
+- **s5** `choice` [gp1] ___ there any games in the garage? — No, there aren't.
+    - 选项: Am / ★Are / Do / Is
+- **s5** `transform` [gp1] There are some paintbrushes on the table.（变否定句，some→any）
+    - 答案: There aren't any paintbrushes on the table.
+- **s5** `choice` [gp2] There are ___ old chairs in the garage.（一些）
+    - 选项: any / a / ★some / an
+- **s5** `choice` [gp2] There aren't ___ tools on the shelf.
+    - 选项: a / some / an / ★any
+- **s5** `choice` [gp2] Are there ___ cups in the box?
+    - 选项: an / ★any / some / a
+- **s5** `choice` [gp3] The garage is ___ the house.（房子后面）
+    - 选项: on / under / ★behind / in
+- **s5** `transform` [gp3] The bikes are behind the table.（变否定句）
+    - 答案: The bikes aren't behind the table.
+- **s6** `choice`  美国人在自家车库/院子出售旧物叫：
+    - 选项: garage party / car sale / ★garage sale / old shop
+- **s6** `choice`  "It's a mess!" 的意思是：
+    - 选项: ★乱糟糟 / 很贵 / 很干净 / 很大
+- **s6** `choice`  附和对方"就是说啊"，说：
+    - 选项: Know I. / Me know. / ★I know. / I now.
+- **s6** `choice`  bike 是哪个词的简称：
+    - 选项: bucket / ★bicycle / basket / motorcycle
+- **s7** `cloze`  〔KATE: This garage is a ___1___! KATE: Are there ___2___ old 〕 第 1 空
+    - 选项: ★mess / cozy / sale / game
+- **s7** `cloze`  〔KATE: This garage is a ___1___! KATE: Are there ___2___ old 〕 第 2 空
+    - 选项: some / ★any / a / an
+- **s7** `cloze`  〔KATE: This garage is a ___1___! KATE: Are there ___2___ old 〕 第 3 空
+    - 选项: is / am / ★are / be
+- **s7** `cloze`  〔KATE: This garage is a ___1___! KATE: Are there ___2___ old 〕 第 4 空
+    - 选项: on / in / under / ★behind
+- **s7** `cloze`  〔KATE: This garage is a ___1___! KATE: Are there ___2___ old 〕 第 5 空
+    - 选项: ★some / any / an / one
+- **s7** `cloze`  〔BEN: I know. Okay—garage ___ time.〕 第 6 空
+    - 选项: night / game / shop / ★sale
+- **s7** `cloze`  〔BEN: Yes, there are. There are ___ bikes behind the boxes.〕 第 7 空
+    - 选项: any / ★two / three / some
+- **s7** `cloze`  〔BEN: Are there any ___ in this box?〕 第 8 空
+    - 选项: books / games / bikes / ★tools
+- **s7** `cloze`  〔KATE: No, there aren't. There are ___ books in it.〕 第 9 空
+    - 选项: some / ★only / any / two
+- **s7** `cloze`  〔BEN: Hmm, there are some ___ under the table too.〕 第 10 空
+    - 选项: bikes / games / ★paintbrushes / tools
+- **s7** `cloze`  〔KATE: Those are Dad's. Not for ___!〕 第 11 空
+    - 选项: shop / ★sale / sell / free
+- **s8** `choice`  What are Kate and Ben planning?
+    - 选项: ★A garage sale / Taco night / A party / A trip
+- **s8** `choice`  Where are the bikes?
+    - 选项: Under the table / In a box / ★Behind the boxes / On the shelf
+- **s8** `choice`  Are there tools in the box?
+    - 选项: We don't know. / ★No, there aren't. / Yes, there are. / Yes, there is.
+- **s9** `scenario`  问车库里有没有旧椅子
+    - 答案: Are there any old chairs in the garage?
+- **s9** `scenario`  别人问 "Are there any snacks?"，有一些
+    - 答案: Yes, there are. / Yes, there are some snacks.
+- **s9** `scenario`  指着爸爸的东西说明不卖
+    - 答案: Not for sale!
+- **s10** `choice`  ___ there any books on the shelf? — Yes, there are.
+    - 选项: ★Are / Am / Do / Is
+- **s10** `choice`  There are ___ games in the box.（一些）
+    - 选项: any / ★some / an / a
+- **s10** `choice`  Are there ___ bikes here?
+    - 选项: an / a / ★any / some
+- **s10** `choice`  The truck is ___ the house.（房子后面）
+    - 选项: under / in / on / ★behind
+- **s10** `transform`  There are some tools in the garage.（变一般疑问句，some
+    - 答案: any）→ Are there any tools in the garage?
+- **s10** `transform`  There is a bike here.（变复数：两辆）
+    - 答案: There are two bikes here.
+- **s10** `transform`  There are some cups on the table.（变否定句，some
+    - 答案: any）→ There aren't any cups on the table.
+- **s10** `choice`  ___ there any paintbrushes under the table? — Yes, there are.
+    - 选项: ★Are / Am / Is / Do
+- **s10** `choice`  There aren't ___ games on the shelf.
+    - 选项: some / ★any / an / a
+- **s10** `transform`  There are some old chairs in the garage.（变一般疑问句，some→any）
+    - 答案: Are there any old chairs in the garage?
+
+## am1_l15
+
+- **s5** `choice` [gp1] ___ in, please!
+    - 选项: ★Come / Coming / To come / Comes
+- **s5** `choice` [gp1] ___ some cookies.
+    - 选项: Has / Had / Having / ★Have
+- **s5** `choice` [gp1] 请客人坐下，说：
+    - 选项: Go out! / Stand up! / ★Sit down, please. / Careful!
+- **s5** `transform` [gp1] You try the lemonade.（变祈使句）
+    - 答案: Try the lemonade.
+- **s5** `transform` [gp1] You have some water.（变祈使句并加 please）
+    - 答案: Have some water, please.
+- **s5** `choice` [gp2] You ___ try this pie. It's amazing!
+    - 选项: ★must / are / do / is
+- **s5** `choice` [gp2] must 后面接：
+    - 选项: to+动词 / ★动词原形 / 动词-s / 动词-ing
+- **s5** `choice` [gp2] You must ___ my brownies.
+    - 选项: ★try / to try / tries / trying
+- **s5** `choice` [gp1] ___ these brownies. They're fresh!
+    - 选项: To try / ★Try / Tries / Trying
+- **s5** `choice` [gp1] ___ some lemonade. It's cold.
+    - 选项: ★Have / Having / Has / Had
+- **s5** `choice` [gp1] 请客人进门，说：
+    - 选项: Careful! / ★Come in, please. / Sit down! / Go home!
+- **s5** `transform` [gp1] You have some brownies.（变祈使句）
+    - 答案: Have some brownies.
+- **s5** `choice` [gp2] You ___ try her lemonade. It's fresh!
+    - 选项: are / is / ★must / do
+- **s5** `choice` [gp2] You must ___ these cookies.
+    - 选项: to try / trying / tries / ★try
+- **s5** `choice` [gp2] "You must try my tacos." 中 must 表示：
+    - 选项: 过去发生 / ★强烈推荐 / 禁止 / 提问
+- **s5** `transform` [gp2] You try my cookies.（用 must 表强烈推荐）
+    - 答案: You must try my cookies.
+- **s6** `choice`  请客人别拘束，美语说：
+    - 选项: Be careful. / ★Make yourself at home. / Go to your home. / Stay out.
+- **s6** `choice`  美式 lemonade 指：
+    - 选项: ★鲜榨柠檬水 / 热柠檬茶 / 柠檬蛋糕 / 柠檬味汽水
+- **s6** `choice`  "曲奇饼干"美语叫：
+    - 选项: candy / ★cookie / biscuit / bread
+- **s6** `choice`  "It's a deal!" 的意思是：
+    - 选项: 这是商品 / 太贵了 / ★一言为定 / 算了吧
+- **s6** `choice`  brownie 是一种：
+    - 选项: 棕色面包 / 巧克力热饮 / 曲奇饼干 / ★巧克力布朗尼蛋糕（美式甜点）
+- **s7** `cloze`  〔PRIYA: Leo! ___1___ in! PRIYA: ___2___ down, please. PRIYA: 〕 第 1 空
+    - 选项: ★Come / Go / Sit / Try
+- **s7** `cloze`  〔PRIYA: Leo! ___1___ in! PRIYA: ___2___ down, please. PRIYA: 〕 第 2 空
+    - 选项: Come / Have / ★Sit / Stand
+- **s7** `cloze`  〔PRIYA: Leo! ___1___ in! PRIYA: ___2___ down, please. PRIYA: 〕 第 3 空
+    - 选项: Try on / ★Have / Sit / Come
+- **s7** `cloze`  〔PRIYA: Leo! ___1___ in! PRIYA: ___2___ down, please. PRIYA: 〕 第 4 空
+    - 选项: Have on / Come / Sit / ★Try
+- **s7** `cloze`  〔PRIYA: Leo! ___1___ in! PRIYA: ___2___ down, please. PRIYA: 〕 第 5 空
+    - 选项: ★must / is / are / am
+- **s7** `cloze`  〔LEO: Thanks, Priya. Wow, your ___ is nice!〕 第 6 空
+    - 选项: pan / park / plate / ★place
+- **s7** `cloze`  〔PRIYA: Have some lemonade. It's ___.〕 第 7 空
+    - 选项: hot / cold / ★fresh / sweet
+- **s7** `cloze`  〔PRIYA: And try these cookies. But careful—they're ___!〕 第 8 空
+    - 选项: cold / ★hot / old / fresh
+- **s7** `cloze`  〔LEO: Ha! Okay. Oh wow, they're ___.〕 第 9 空
+    - 选项: ★amazing / sunny / only / charming
+- **s7** `cloze`  〔PRIYA: You must try my brownies ___ time.〕 第 10 空
+    - 选项: last / ★next / one / first
+- **s7** `cloze`  〔LEO: It's a ___!〕 第 11 空
+    - 选项: day / meal / ★deal / mess
+- **s8** `choice`  Where is Leo?
+    - 选项: ★At Priya's place / At a garage sale / At school / At a coffee shop
+- **s8** `choice`  What is fresh?
+    - 选项: The brownies / ★The lemonade / The cookies / The tacos
+- **s8** `choice`  What must Leo try next time?
+    - 选项: The pizza / The cookies / The lemonade / ★The brownies
+- **s9** `scenario`  朋友敲门，请他进来
+    - 答案: Come in!
+- **s9** `scenario`  请客人随意别拘束
+    - 答案: Make yourself at home.
+- **s9** `scenario`  强烈推荐朋友尝你做的披萨
+    - 答案: You must try my pizza!
+- **s10** `choice`  ___ down, please.
+    - 选项: ★Sit / Sitting / Sits / To sit
+- **s10** `choice`  ___ some water.
+    - 选项: Has / ★Have / To have / Having
+- **s10** `choice`  You ___ try this cake. It's amazing!
+    - 选项: ★must / is / am / are
+- **s10** `choice`  请朋友进门时说：
+    - 选项: Go out! / ★Come in! / Careful! / Sit down!
+- **s10** `transform`  You sit down.（变祈使句）
+    - 答案: Sit down.
+- **s10** `transform`  Try the cookies.（加 please 表礼貌）
+    - 答案: Try the cookies, please. / Please try the cookies.
+- **s10** `transform`  You try my tacos.（用 must 表强烈推荐）
+    - 答案: You must try my tacos.
+- **s10** `choice`  ___ in, Leo!
+    - 选项: Comes / Came / ★Come / Coming
+- **s10** `choice`  You must ___ this lemonade.
+    - 选项: to try / trying / tries / ★try
+- **s10** `transform`  Please come in.（把 please 移到句尾）
+    - 答案: Come in, please.
+
+## am1_l16
+
+- **s5** `choice` [gp1] She ___ working in the garden.
+    - 选项: am / ★is / are / be
+- **s5** `choice` [gp1] I ___ making dinner.
+    - 选项: be / is / ★am / are
+- **s5** `transform` [gp1] He watches TV.（变现在进行时）
+    - 答案: He is watching TV.
+- **s5** `choice` [gp2] What are you ___? — I'm eating.
+    - 选项: ★doing / do / does / did
+- **s5** `choice` [gp2] What is he doing? — ___
+    - 选项: Yes, he is. / He's tall. / ★He's sleeping. / He's a doctor.
+- **s5** `choice` [gp3] make 的 -ing 形式：
+    - 选项: ★making / makeing / maked / makking
+- **s5** `choice` [gp3] sit 的 -ing 形式：
+    - 选项: siting / sited / sits / ★sitting
+- **s5** `transform` [gp1] She is sleeping.（变一般疑问句）
+    - 答案: Is she sleeping?
+- **s5** `choice` [gp1] He ___ eating a taco.
+    - 选项: am / ★is / are / be
+- **s5** `choice` [gp1] Buster ___ sleeping under the table.
+    - 选项: am / be / ★is / are
+- **s5** `transform` [gp1] She makes dinner.（变现在进行时）
+    - 答案: She is making dinner.
+- **s5** `choice` [gp2] What is she ___? — She's working.
+    - 选项: do / does / did / ★doing
+- **s5** `choice` [gp2] What are you doing? — ___
+    - 选项: ★I'm making dinner. / Yes, I am. / I'm a student. / I'm ten.
+- **s5** `choice` [gp3] run 的 -ing 形式：
+    - 选项: runs / ★running / runned / runing
+- **s5** `choice` [gp3] watch 的 -ing 形式：
+    - 选项: watched / watchs / ★watching / watcing
+- **s5** `choice` [gp3] come 的 -ing 形式：
+    - 选项: comeing / comming / comes / ★coming
+- **s6** `choice`  美式对家人/孩子的亲昵称呼：
+    - 选项: sweater / salty / ★sweetie / sweaty
+- **s6** `choice`  gotta go 是哪句的口语缩略：
+    - 选项: go to go / good to go / get a goal / ★got to go（得走了）
+- **s6** `choice`  美国人说 watch the game 通常指看：
+    - 选项: ★体育比赛 / 新闻 / 动画片 / 电影
+- **s6** `choice`  和家人挂电话前常说：
+    - 选项: My love it! / ★Love you! / Love me! / Lovely!
+- **s7** `cloze`  〔GRANDMA: What are you ___1___? CARMEN: I'm ___2___ dinner. C〕 第 1 空
+    - 选项: ★doing / do / does / done
+- **s7** `cloze`  〔GRANDMA: What are you ___1___? CARMEN: I'm ___2___ dinner. C〕 第 2 空
+    - 选项: makeing / make / ★making / makes
+- **s7** `cloze`  〔GRANDMA: What are you ___1___? CARMEN: I'm ___2___ dinner. C〕 第 3 空
+    - 选项: watch / ★watching / watches / watched
+- **s7** `cloze`  〔GRANDMA: What are you ___1___? CARMEN: I'm ___2___ dinner. C〕 第 4 空
+    - 选项: works / work / worked / ★working
+- **s7** `cloze`  〔GRANDMA: What are you ___1___? CARMEN: I'm ___2___ dinner. C〕 第 5 空
+    - 选项: ★sleeping / sleep / sleeps / slept
+- **s7** `cloze`  〔GRANDMA: What are you ___1___? CARMEN: I'm ___2___ dinner. C〕 第 6 空
+    - 选项: gonna / ★gotta / getta / go to
+- **s7** `cloze`  〔GRANDMA: Nice! ___ your dad?〕 第 7 空
+    - 选项: ★Where's / Who's / What's / How's
+- **s7** `cloze`  〔CARMEN: He's watching the game in the living ___.〕 第 8 空
+    - 选项: street / ★room / garden / house
+- **s7** `cloze`  〔CARMEN: He's sleeping ___ the table.〕 第 9 空
+    - 选项: on / behind / ★under / in
+- **s7** `cloze`  〔CARMEN: Wait—no! He's ___ my taco!〕 第 10 空
+    - 选项: ★eating / making / watching / selling
+- **s7** `cloze`  〔GRANDMA: Ha ha! ___ dog!〕 第 11 空
+    - 选项: Old / Hot / Big / ★Bad
+- **s7** `cloze`  〔GRANDMA: Go, go! ___ you, sweetie!〕 第 12 空
+    - 选项: ★Love / Like / See / Miss
+- **s8** `choice`  What is Carmen doing?
+    - 选项: ★Making dinner / Working / Watching TV / Sleeping
+- **s8** `choice`  What is Dad doing?
+    - 选项: Making dinner / Eating a taco / ★Watching the game / Working in the garden
+- **s8** `choice`  Where is Mom working?
+    - 选项: ★In the garden / In the living room / In the kitchen / In the garage
+- **s8** `choice`  What is Buster eating?
+    - 选项: A sandwich / Dog food / ★Carmen's taco / A cookie
+- **s9** `scenario`  视频通话时问对方在干什么
+    - 答案: What are you doing?
+- **s9** `scenario`  别人问你在干嘛，你在做晚饭
+    - 答案: I'm making dinner.
+- **s9** `scenario`  有急事要挂电话
+    - 答案: Sorry—gotta go!
+- **s10** `choice`  What ___ you doing? — I'm eating.
+    - 选项: be / ★are / is / am
+- **s10** `choice`  She ___ working now.
+    - 选项: are / am / be / ★is
+- **s10** `choice`  He's ___ TV.
+    - 选项: watch / watches / ★watching / to watch
+- **s10** `choice`  make 的 -ing 形式是：
+    - 选项: makes / makeing / makking / ★making
+- **s10** `transform`  He watches the game.（变现在进行时）
+    - 答案: He is watching the game.
+- **s10** `transform`  She is sleeping.（变一般疑问句）
+    - 答案: Is she sleeping?
+- **s10** `transform`  I am making dinner.（变问句问对方在做什么）
+    - 答案: What are you doing?
+- **s10** `choice`  The dog ___ eating a taco.
+    - 选项: ★is / be / am / are
+- **s10** `choice`  sleep 的 -ing 形式是：
+    - 选项: sleepping / ★sleeping / slept / sleeps
+- **s10** `transform`  He is watching the game.（变一般疑问句）
+    - 答案: Is he watching the game?
+
+## am1_l17
+
+- **s5** `choice` [gp1] The kids ___ flying kites.
+    - 选项: be / ★are / am / is
+- **s5** `choice` [gp1] They are ___ ice cream.
+    - 选项: sell / sold / ★selling / sells
+- **s5** `transform` [gp1] The guy is playing guitar.（变复数 The guys）
+    - 答案: The guys are playing guitar.
+- **s5** `choice` [gp1] ___ they waiting in line? — Yes, they are.
+    - 选项: ★Are / Do / Am / Is
+- **s5** `choice` [gp2] What's the ___ like? — It's sunny.
+    - 选项: water / whether / matter / ★weather
+- **s5** `choice` [gp2] What's the weather like? — ___
+    - 选项: They're kites. / It's a park. / ★It's warm. / Yes, it is.
+- **s5** `choice` [gp2] 天上一朵云也没有，天气是：
+    - 选项: rainy / snowy / cloudy / ★sunny
+- **s5** `transform` [gp1] People are waiting in line.（变一般疑问句）
+    - 答案: Are people waiting in line?
+- **s5** `choice` [gp1] The guys ___ playing guitar under a tree.
+    - 选项: is / ★are / be / am
+- **s5** `choice` [gp1] People are ___ in line.
+    - 选项: waits / wait / ★waiting / waited
+- **s5** `choice` [gp1] We ___ sitting near the fountain.
+    - 选项: be / ★are / am / is
+- **s5** `transform` [gp1] They sell ice cream.（变现在进行时）
+    - 答案: They are selling ice cream.
+- **s5** `choice` [gp2] What's the weather like? — ___
+    - 选项: Yes, it is. / It's a park. / ★It's sunny. / I'm coming.
+- **s5** `choice` [gp2] It's ___ and warm today.
+    - 选项: sun / line / cloud / ★sunny
+- **s5** `choice` [gp2] 问"那边正在发生什么"，说：
+    - 选项: ★What's happening? / Who is it? / What's the weather like? / Where are you?
+- **s5** `transform` [gp2] It is warm.（变天气问句）
+    - 答案: What's the weather like?
+- **s6** `choice`  "排队"美语说：
+    - 选项: wait in queue / ★wait in line / stand queue / queue
+- **s6** `choice`  卖餐食的移动餐车叫：
+    - 选项: meal bus / eat truck / ★food truck / food car
+- **s6** `choice`  "Say no more." 的意思是：
+    - 选项: 闭嘴 / 我不同意 / 再说一遍 / ★别说了，我懂了
+- **s6** `choice`  "孩子们"美语口语常说：
+    - 选项: kiddens / smalls / ★kids / childs
+- **s7** `cloze`  〔TOM: It's ___1___ and warm. JESS: What's ___2___ there? TOM:〕 第 1 空
+    - 选项: ★sunny / cloud / mess / fresh
+- **s7** `cloze`  〔TOM: It's ___1___ and warm. JESS: What's ___2___ there? TOM:〕 第 2 空
+    - 选项: doing you / weather / ★happening / matter
+- **s7** `cloze`  〔TOM: It's ___1___ and warm. JESS: What's ___2___ there? TOM:〕 第 3 空
+    - 选项: flies / ★flying / fly / flew
+- **s7** `cloze`  〔TOM: It's ___1___ and warm. JESS: What's ___2___ there? TOM:〕 第 4 空
+    - 选项: sell / sells / sold / ★selling
+- **s7** `cloze`  〔TOM: It's ___1___ and warm. JESS: What's ___2___ there? TOM:〕 第 5 空
+    - 选项: ★line / queue / road / list
+- **s7** `cloze`  〔TOM: Jess! Come to Riverside Park. It's a beautiful ___!〕 第 6 空
+    - 选项: dog / ★day / dinner / deal
+- **s7** `cloze`  〔JESS: Oh yeah? What's the ___ like?〕 第 7 空
+    - 选项: park / water / game / ★weather
+- **s7** `cloze`  〔TOM: It's sunny and ___. No clouds!〕 第 8 空
+    - 选项: hot / cold / ★warm / fresh
+- **s7** `cloze`  〔TOM: Two guys are playing ___ under a tree.〕 第 9 空
+    - 选项: ★guitar / games / kites / tacos
+- **s7** `cloze`  〔JESS: Say no more. I'm ___!〕 第 10 空
+    - 选项: going / flying / ★coming / making
+- **s7** `cloze`  〔TOM: Awesome. We're ___ near the fountain.〕 第 11 空
+    - 选项: ★sitting / sleeping / selling / waiting
+- **s8** `choice`  What's the weather like?
+    - 选项: Cloudy / Cold / ★Sunny and warm / Rainy
+- **s8** `choice`  What are the kids doing?
+    - 选项: Sleeping / ★Flying kites / Selling ice cream / Playing guitar
+- **s8** `choice`  What are the food trucks selling?
+    - 选项: ★Tacos and ice cream / Lemonade and cookies / Water and snacks / Coffee and brownies
+- **s8** `choice`  Where is Tom sitting?
+    - 选项: Behind the park / ★Near the fountain / Under a tree / In a food truck
+- **s9** `scenario`  电话里问对方那边天气如何
+    - 答案: What's the weather like?
+- **s9** `scenario`  描述孩子们在放风筝
+    - 答案: The kids are flying kites.
+- **s9** `scenario`  告诉朋友你马上就到
+    - 答案: I'm coming!
+- **s10** `choice`  The kids ___ playing soccer.
+    - 选项: am / ★are / is / be
+- **s10** `choice`  What's the ___ like? — It's sunny.
+    - 选项: water / whether / ★weather / matter
+- **s10** `choice`  They are ___ ice cream.
+    - 选项: sell / ★selling / to sell / sells
+- **s10** `choice`  People are waiting ___ line.
+    - 选项: under / at / ★in / on
+- **s10** `transform`  The guy is playing guitar.（变复数：两个小伙）
+    - 答案: Two guys are playing guitar.
+- **s10** `transform`  They are flying kites.（变一般疑问句）
+    - 答案: Are they flying kites?
+- **s10** `transform`  It is sunny.（变天气问句）
+    - 答案: What's the weather like?
+- **s10** `choice`  They ___ waiting in line.
+    - 选项: be / ★are / am / is
+- **s10** `choice`  The kids are flying ___ in the park.
+    - 选项: guitars / lines / ★kites / kite
+- **s10** `transform`  They are selling ice cream.（变一般疑问句）
+    - 答案: Are they selling ice cream?
+
+## am1_l18
+
+- **s5** `choice` [gp1] ___ a market on Main Street today.
+    - 选项: They're / It are / ★There's / There am
+- **s5** `choice` [gp1] There are two bands, and they ___ playing now.
+    - 选项: ★are / be / is / am
+- **s5** `transform` [gp1] There is a coffee shop in town.（变一般疑问句）
+    - 答案: Is there a coffee shop in town?
+- **s5** `choice` [gp1] Look! A band ___ playing over there.
+    - 选项: are / do / am / ★is
+- **s5** `transform` [gp1] The kids are flying kites in the park.（变否定句）
+    - 答案: The kids aren't flying kites in the park.
+- **s5** `choice` [gp2] This is my cousins' dog. It's ___ dog.
+    - 选项: them / ★their / they / his
+- **s5** `choice` [gp2] 物主代词地图：they → ___
+    - 选项: them / they's / there / ★their
+- **s5** `choice` [gp2] The brothers are running ___ shop.
+    - 选项: them / they / ★their / there
+- **s5** `choice` [gp1] There's a market, and a band ___ playing there.
+    - 选项: am / be / ★is / are
+- **s5** `choice` [gp1] There ___ some food stands over there.
+    - 选项: is / ★are / be / am
+- **s5** `choice` [gp1] Two brothers ___ running the ice cream shop.
+    - 选项: is / be / am / ★are
+- **s5** `transform` [gp1] There is a bookstore on Main Street.（变复数：两家）
+    - 答案: There are two bookstores on Main Street.
+- **s5** `choice` [gp2] The brothers love ___ shop.
+    - 选项: theirs / ★their / them / they
+- **s5** `choice` [gp2] This is my cousins' bike. It's ___ bike.
+    - 选项: them / they / his / ★their
+- **s5** `choice` [gp2] They are selling ___ flowers at the market.
+    - 选项: them / they / ★their / theirs
+- **s5** `transform` [gp2] They run a shop. The shop is nice.（用 their 合并成一句）
+    - 答案: Their shop is nice.
+- **s6** `choice`  周末的本地农产品集市叫：
+    - 选项: farm store / field shop / ★farmers market / vegetable mall
+- **s6** `choice`  美国小镇的商业主街通常叫：
+    - 选项: Center Line / First Home / Big Road / ★Main Street
+- **s6** `choice`  latte 是一种：
+    - 选项: 果汁 / 茶 / ★咖啡 / 汽水
+- **s6** `choice`  Yep 是哪个词的口语说法：
+    - 选项: ★Yes / Help / Keep / Jump
+- **s7** `cloze`  〔MAYA: ___1___ a farmers market every Saturday. SAM: What are〕 第 1 空
+    - 选项: ★There's / They're / It's / There are
+- **s7** `cloze`  〔MAYA: ___1___ a farmers market every Saturday. SAM: What are〕 第 2 空
+    - 选项: sell / sold / ★selling / sells
+- **s7** `cloze`  〔MAYA: ___1___ a farmers market every Saturday. SAM: What are〕 第 3 空
+    - 选项: is / ★are / am / be
+- **s7** `cloze`  〔MAYA: ___1___ a farmers market every Saturday. SAM: What are〕 第 4 空
+    - 选项: plays / play / played / ★playing
+- **s7** `cloze`  〔MAYA: ___1___ a farmers market every Saturday. SAM: What are〕 第 5 空
+    - 选项: ★running / runing / run / runs
+- **s7** `cloze`  〔MAYA: Welcome to Maplewood! This is ___ Street.〕 第 6 空
+    - 选项: ★Main / Big / Park / First
+- **s7** `cloze`  〔SAM: It's so ___!〕 第 7 空
+    - 选项: cozy / ★charming / amazing / warm
+- **s7** `cloze`  〔MAYA: There's a farmers market every ___.〕 第 8 空
+    - 选项: Monday / Sunday / day / ★Saturday
+- **s7** `cloze`  〔MAYA: And there's a coffee shop next to it. ___ lattes are a〕 第 9 空
+    - 选项: They / ★Their / Them / There
+- **s7** `cloze`  〔SAM: Wait—is there an ice cream ___ too?〕 第 10 空
+    - 选项: stand / truck / ★shop / street
+- **s7** `cloze`  〔MAYA: Of course! It's ___ the market. Two brothers are runni〕 第 11 空
+    - 选项: under / in / on / ★behind
+- **s7** `cloze`  〔SAM: Maplewood, I'm ___ forever!〕 第 12 空
+    - 选项: ★staying / playing / running / selling
+- **s8** `choice`  What day is the farmers market?
+    - 选项: ★Saturday / Friday / Sunday / Monday
+- **s8** `choice`  Where is the band playing?
+    - 选项: On the fountain / In the coffee shop / ★Near the bookstore / Behind the market
+- **s8** `choice`  What's next to the bookstore?
+    - 选项: An ice cream shop / ★A coffee shop / A library / A food stand
+- **s8** `choice`  Where is the ice cream shop?
+    - 选项: On Main Street corner / Next to the band / ★Behind the market / Near the flowers
+- **s9** `scenario`  介绍你家附近每周六有集市
+    - 答案: There's a farmers market every Saturday.
+- **s9** `scenario`  描述远处有支乐队在演奏
+    - 答案: A band is playing over there.
+- **s9** `scenario`  问镇上有没有咖啡店
+    - 答案: Is there a coffee shop in town?
+- **s10** `choice`  ___ a market on Main Street.
+    - 选项: They're / There are / It are / ★There's
+- **s10** `choice`  There ___ two coffee shops in town.
+    - 选项: is / am / ★are / be
+- **s10** `choice`  A band ___ playing near the park.
+    - 选项: am / ★is / be / are
+- **s10** `choice`  This is my cousins' car. It's ___ car.
+    - 选项: theirs / them / they / ★their
+- **s10** `transform`  There is a food stand here.（变复数：一些摊位）
+    - 答案: There are some food stands here.
+- **s10** `transform`  The brothers run the shop.（变现在进行时）
+    - 答案: The brothers are running the shop.
+- **s10** `transform`  There's an ice cream shop behind the market.（变一般疑问句）
+    - 答案: Is there an ice cream shop behind the market?
+- **s10** `choice`  There's a bookstore, and a band is ___ near it.
+    - 选项: played / plays / ★playing / play
+- **s10** `choice`  The girls love ___ new bikes.
+    - 选项: ★their / them / they / theirs
+- **s10** `transform`  There is a food truck near the fountain.（变一般疑问句）
+    - 答案: Is there a food truck near the fountain?

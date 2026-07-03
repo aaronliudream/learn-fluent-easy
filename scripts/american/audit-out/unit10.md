@@ -1,0 +1,600 @@
+# 单元10 题库全量导出（语义复审用）
+
+> 共 289 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+
+
+## am1_l55
+
+- **s5** `choice` [gp1] This hotel is ___ expensive than that one.
+    - 选项: much of / ★more / most / very
+- **s5** `choice` [gp1] expensive 的比较级：
+    - 选项: ★more expensive / expensivest / much expensive / expensiver
+- **s5** `choice` [gp1] This chair is ___ comfortable than mine.
+    - 选项: too / most / many / ★more
+- **s5** `transform` [gp1] This book is interesting. That book is not.（用 more 合成）
+    - 答案: This book is more interesting than that book.
+- **s5** `choice` [gp2] 单音节形容词的比较级一般：
+    - 选项: ★加 -er / 用 most / 用 more / 不变
+- **s5** `choice` [gp2] fresh 的比较级：
+    - 选项: freshest / ★fresher / freshly / more fresh
+- **s5** `choice` [gp2] romantic 的比较级：
+    - 选项: most romantic / romanticer / romanticest / ★more romantic
+- **s5** `transform` [gp2] The seafood is fresh there.（改为比较级：比这里更新鲜）
+    - 答案: The seafood is fresher there than here.
+- **s5** `choice` [gp1] expensive 的比较级：
+    - 选项: ★more expensive / most expensive / expensively / expensiver
+- **s5** `choice` [gp1] famous 的比较级：
+    - 选项: famouser / ★more famous / famously / most famous
+- **s5** `choice` [gp1] 多音节形容词比较级用：
+    - 选项: ★more + 原级 / most + 原级 / -est / -er
+- **s5** `transform` [gp1] comfortable → 比较级
+    - 答案: more comfortable
+- **s5** `choice` [gp2] This restaurant is ___ romantic than that one.
+    - 选项: much of / most / ★more / many
+- **s5** `choice` [gp2] The seafood is ___ than the pasta.（更新鲜）
+    - 选项: freshest / ★fresher / more fresh much / freshly
+- **s5** `choice` [gp2] 下列哪句正确：
+    - 选项: This one is deliciouser. / This one is most delicious that. / ★This one is more delicious. / This one is more delicious than.
+- **s5** `transform` [gp2] 海港比贝拉罗马更吵（用 louder than 造句，主语 The Harbor）
+    - 答案: The Harbor is louder than Bella Roma.
+- **s6** `choice`  结婚纪念日晚餐叫：
+    - 选项: annual lunch / university dinner / year meal / ★anniversary dinner
+- **s6** `choice`  "Tough call" 的意思是：
+    - 选项: 电话难打通 / 严厉的批评 / ★难以抉择 / 硬汉来电
+- **s6** `choice`  big spender 指：
+    - 选项: 大个子 / ★出手大方的人 / 花钱机器 / 大商场
+- **s6** `choice`  "Best husband ever" 的 ever 表示：
+    - 选项: 曾经一次 / 每次都 / ★有史以来（夸张强化） / 永远不
+- **s7** `cloze`  〔CARLA: Bella Roma is more ___1___. WES: The Harbor House is 〕 第 1 空
+    - 选项: ★romantic / romanticer / romantics / romance
+- **s7** `cloze`  〔CARLA: Bella Roma is more ___1___. WES: The Harbor House is 〕 第 2 空
+    - 选项: most / many / ★more / much of
+- **s7** `cloze`  〔CARLA: Bella Roma is more ___1___. WES: The Harbor House is 〕 第 3 空
+    - 选项: expensiver / ★expensive / expense / expensively
+- **s7** `cloze`  〔CARLA: Bella Roma is more ___1___. WES: The Harbor House is 〕 第 4 空
+    - 选项: comfortabler / comfort / comfortably / ★comfortable
+- **s7** `cloze`  〔CARLA: Bella Roma is more ___1___. WES: The Harbor House is 〕 第 5 空
+    - 选项: ★quieter / more quiet much / quietest / quietly
+- **s7** `cloze`  〔WES: Okay, Carla—___ dinner. Bella Roma or The Harbor House?〕 第 6 空
+    - 选项: February / university / ★anniversary / annual
+- **s7** `cloze`  〔WES: True. But The Harbor House is more famous. The ___ is i〕 第 7 空
+    - 选项: villa / ★view / vine / veal
+- **s7** `cloze`  〔WES: Hey, it's our tenth anniversary! Tonight, ___ is not th〕 第 8 空
+    - 选项: ★money / menu / Monday / music
+- **s7** `cloze`  〔WES: Honestly, Bella Roma's ___ is more delicious.〕 第 9 空
+    - 选项: paint / pizza / ★pasta / party
+- **s7** `cloze`  〔WES: Bella Roma. The Harbor is always ___—and louder.〕 第 10 空
+    - 选项: closed / ★crowded / crooked / cloudy
+- **s7** `cloze`  〔CARLA: Best ___ ever.〕 第 11 空
+    - 选项: human / house / harbor / ★husband
+- **s8** `choice`  What are they celebrating?
+    - 选项: A birthday / A holiday / A new job / ★Their tenth anniversary
+- **s8** `choice`  Which restaurant is more expensive?
+    - 选项: Both the same / Bella Roma / ★The Harbor House / We don't know
+- **s8** `choice`  Which restaurant has fresher seafood?
+    - 选项: ★The Harbor House / Bella Roma / Both / Neither
+- **s8** `choice`  Which restaurant do they pick?
+    - 选项: A diner / They stay home / The Harbor House / ★Bella Roma
+- **s9** `scenario`  说这家餐厅更浪漫
+    - 答案: This restaurant is more romantic.
+- **s9** `scenario`  说那家贵得多得多
+    - 答案: That one is way more expensive.
+- **s9** `scenario`  面对两难选择感叹"难选啊"
+    - 答案: Tough call!
+- **s10** `choice`  This hotel is ___ expensive than that one.
+    - 选项: ★more / much of / very / most
+- **s10** `choice`  expensive 的比较级：
+    - 选项: expensiver / much expensive / expensivest / ★more expensive
+- **s10** `choice`  单音节形容词的比较级一般：
+    - 选项: 用 most / 不变 / ★加 -er / 用 more
+- **s10** `choice`  This chair is ___ comfortable than mine.
+    - 选项: ★more / too / many / most
+- **s10** `transform`  Bella Roma is romantic. The Harbor is less.（用 more 合成：贝拉罗马更浪漫）
+    - 答案: Bella Roma is more romantic than The Harbor.
+- **s10** `transform`  This book is interesting. That book is not.（用 more 合成）
+    - 答案: This book is more interesting than that book.
+- **s10** `transform`  The seafood is fresh there.（改为比较级：比这里更新鲜）
+    - 答案: The seafood is fresher there than here.
+- **s10** `choice`  delicious 的比较级：
+    - 选项: most delicious / deliciously / deliciouser / ★more delicious
+- **s10** `choice`  This place is more comfortable ___ that one.
+    - 选项: as / ★than / to / then
+- **s10** `transform`  This café is romantic.（改为"更浪漫"）
+    - 答案: This café is more romantic.
+
+## am1_l56
+
+- **s5** `choice` [gp1] This is ___ cheapest car here.
+    - 选项: an / more / a / ★the
+- **s5** `choice` [gp1] popular 的最高级：
+    - 选项: ★the most popular / most popular go / the popularest / popularer
+- **s5** `choice` [gp1] new 的最高级：
+    - 选项: the most new / ★the newest / newer the / most newest
+- **s5** `transform` [gp1] This car is new. The others are not.（用最高级）
+    - 答案: This car is the newest.
+- **s5** `choice` [gp2] good 的最高级：
+    - 选项: ★the best / the goodest / the better / most good
+- **s5** `choice` [gp2] bad 的最高级：
+    - 选项: the worse / the baddest / most bad / ★the worst
+- **s5** `choice` [gp2] Best price ___ town!（全城最低价）
+    - 选项: ★in / of the / on / at
+- **s5** `transform` [gp2] She is a nice teacher.（改为最高级：全校最好的老师）
+    - 答案: She is the nicest teacher in the school.
+- **s5** `choice` [gp1] cheap 的最高级：
+    - 选项: cheaper / most cheap / ★cheapest / cheapiest
+- **s5** `choice` [gp1] popular 的最高级：
+    - 选项: popularest / ★most popular / more popular / most popularly
+- **s5** `choice` [gp1] new 的最高级：
+    - 选项: newly / most new / ★newest / newer
+- **s5** `choice` [gp1] bad 的最高级：
+    - 选项: ★worst / worse / most bad / baddest
+- **s5** `choice` [gp2] This is ___ cheapest car on the lot.
+    - 选项: an / more / ★the / a
+- **s5** `choice` [gp2] She bought the ___ car in town.（最安全的）
+    - 选项: most safe / safely / safer / ★safest
+- **s5** `transform` [gp2] big → 最高级
+    - 答案: biggest
+- **s5** `transform` [gp2] This car is new.（改为最高级："全场最新的"，句尾加 on the lot）
+    - 答案: This car is the newest on the lot.
+- **s6** `choice`  美国的汽车销售场地叫：
+    - 选项: car park / auto home / ★car lot（dealership） / wheel yard
+- **s6** `choice`  test-drive 是：
+    - 选项: 测速 / 修车检测 / 驾照考试 / ★试驾
+- **s6** `choice`  "Best price in town!" 是典型的：
+    - 选项: 道歉用语 / 天气预报 / ★销售话术（全城最低价） / 新闻标题
+- **s6** `choice`  worst case 的意思是：
+    - 选项: 输掉的官司 / ★最坏的情况（大不了） / 最差的箱子 / 坏掉的外壳
+- **s7** `cloze`  〔BIG AL: This one is the ___1___ car on the lot. NICOLE: And 〕 第 1 空
+    - 选项: ★cheapest / cheaper / cheap / most cheap
+- **s7** `cloze`  〔BIG AL: This one is the ___1___ car on the lot. NICOLE: And 〕 第 2 空
+    - 选项: safer / most safe / ★safest / safely
+- **s7** `cloze`  〔BIG AL: This one is the ___1___ car on the lot. NICOLE: And 〕 第 3 空
+    - 选项: more / ★most / very / much
+- **s7** `cloze`  〔BIG AL: This one is the ___1___ car on the lot. NICOLE: And 〕 第 4 空
+    - 选项: newer / most new / new / ★newest
+- **s7** `cloze`  〔BIG AL: This one is the ___1___ car on the lot. NICOLE: And 〕 第 5 空
+    - 选项: ★Worst / Worse / Bad / Baddest
+- **s7** `cloze`  〔BIG AL: Welcome to Big Al's ___! I'm Big Al.〕 第 6 空
+    - 选项: Hotels / ★Autos / Photos / Autumns
+- **s7** `cloze`  〔NICOLE: Hi! I need a car for work. Safe, cheap, and easy to 〕 第 7 空
+    - 选项: ★park / paint / pick / pack
+- **s7** `cloze`  〔BIG AL: That's this one—five ___. It's also the most popular〕 第 8 空
+    - 选项: steps / starts / ★stars / stores
+- **s7** `cloze`  〔BIG AL: For you? Twelve thousand. Best ___ in town!〕 第 9 空
+    - 选项: place / ★price / prize / piece
+- **s7** `cloze`  〔NICOLE: Hmm... it's the nicest one, honestly. Can I ___-driv〕 第 10 空
+    - 选项: tent / taste / text / ★test
+- **s7** `cloze`  〔BIG AL: Of course! Here are the ___.〕 第 11 空
+    - 选项: ★keys / kids / knees / keels
+- **s8** `choice`  What does Nicole need a car for?
+    - 选项: A road trip / ★Work / Racing / Camping
+- **s8** `choice`  How much is the cheapest car?
+    - 选项: Twelve thousand / Five thousand / ★Nine thousand / Twenty thousand
+- **s8** `choice`  Which car is the most popular model?
+    - 选项: ★The safest one / The oldest one / The blue one / The cheapest one
+- **s8** `choice`  What does Nicole want to do at the end?
+    - 选项: Call her boss / Go home / Buy two cars / ★Test-drive the car
+- **s9** `scenario`  说这是店里最便宜的一辆
+    - 答案: This is the cheapest one here.
+- **s9** `scenario`  问哪辆最安全
+    - 答案: Which one is the safest?
+- **s9** `scenario`  安慰人"大不了也就……"
+    - 答案: Worst case, ...
+- **s10** `choice`  This is ___ cheapest car here.
+    - 选项: a / ★the / more / an
+- **s10** `choice`  popular 的最高级：
+    - 选项: most popular go / the popularest / popularer / ★the most popular
+- **s10** `choice`  good 的最高级：
+    - 选项: most good / the goodest / ★the best / the better
+- **s10** `choice`  bad 的最高级：
+    - 选项: most bad / the baddest / the worse / ★the worst
+- **s10** `transform`  This car is new. The others are not.（用最高级：这是最新的）
+    - 答案: This car is the newest.
+- **s10** `transform`  This model is popular. No other model is more popular.（用最高级合成）
+    - 答案: This model is the most popular.
+- **s10** `transform`  She is a nice teacher.（改为最高级：全校最好的老师）
+    - 答案: She is the nicest teacher in the school.
+- **s10** `choice`  good 的最高级：
+    - 选项: better / most good / goodest / ★best
+- **s10** `choice`  This is the ___ model this year.（最热销）
+    - 选项: more popular / ★most popular / most popularly / popularest
+- **s10** `transform`  small → 最高级
+    - 答案: smallest
+
+## am1_l57
+
+- **s5** `choice` [gp1] Do you have any quarters? — Sorry, I don't have ___.
+    - 选项: ★any / none of they / no / some
+- **s5** `choice` [gp1] There are ___ in my car. Take two!（一些，代词）
+    - 选项: none / no one / any / ★some
+- **s5** `choice` [gp1] Take two, if you have ___.
+    - 选项: some no / ★any / none the / every
+- **s5** `transform` [gp1] Do you have some coins?（改为更自然的疑问，用 any）
+    - 答案: Do you have any coins?
+- **s5** `choice` [gp2] How many coins do you have? — ___.（一个也没有）
+    - 选项: No one them. / Any. / ★None. / Nothing they.
+- **s5** `choice` [gp2] ___ of my friends can come tonight.
+    - 选项: ★None / Any / Some of no / No
+- **s5** `choice` [gp2] I looked in my purse. I have ___.（啥也没有）
+    - 选项: any / no / ★none / some
+- **s5** `transform` [gp2] I have some quarters.（变否定：一个也没有，用 any）
+    - 答案: I don't have any quarters.
+- **s5** `choice` [gp1] There are ___ coins in my car.（一些）
+    - 选项: no one / none / ★some / any
+- **s5** `choice` [gp1] Do you have ___ dimes?
+    - 选项: none / some of / no / ★any
+- **s5** `choice` [gp1] I don't have ___.（一个也没有）
+    - 选项: some / ★any / none of it / no
+- **s5** `choice` [gp1] some 用于___句，any 多用于___句。
+    - 选项: ★肯定·疑问和否定 / 否定·肯定 / 祈使·感叹 / 疑问·肯定
+- **s5** `choice` [gp2] ___ of my friends have quarters.（没有一个）
+    - 选项: Some no / ★None / Any / No one of
+- **s5** `choice` [gp2] How many do you need? — Two, if you have ___.
+    - 选项: ★any / some / none / them no
+- **s5** `transform` [gp2] I have some quarters.（变否定句）
+    - 答案: I don't have any quarters.
+- **s5** `transform` [gp2] Do you have some bills?（改正为更自然的疑问）
+    - 答案: Do you have any bills?
+- **s6** `choice`  美国 25 美分硬币叫：
+    - 选项: penny / nickel / ★quarter / dime
+- **s6** `choice`  dime 和 nickel 分别是：
+    - 选项: ★10 美分和 5 美分 / 5 美分和 10 美分 / 1 美元和 50 美分 / 25 美分和 1 美分
+- **s6** `choice`  夸帮了大忙的人说：
+    - 选项: Life you save! / Saver life go! / ★You're a lifesaver! / You're a lifeboat!
+- **s6** `choice`  "Pay it forward" 的意思是：
+    - 选项: ★把善意传递给下一个人 / 提前付款 / 往前挪车再付钱 / 预付小费
+- **s6** `choice`  "别客气/没事儿"美语常说：
+    - 选项: Not worries me! / ★No worries. / No worry you! / Worries no go!
+- **s7** `cloze`  〔JAMAL: This meter only takes ___1___. JAMAL: Do you have ___〕 第 1 空
+    - 选项: ★quarters / bills / dollars / cards
+- **s7** `cloze`  〔JAMAL: This meter only takes ___1___. JAMAL: Do you have ___〕 第 2 空
+    - 选项: some of / none / ★any / no
+- **s7** `cloze`  〔JAMAL: This meter only takes ___1___. JAMAL: Do you have ___〕 第 3 空
+    - 选项: some / ★any / none of it / no
+- **s7** `cloze`  〔JAMAL: This meter only takes ___1___. JAMAL: Do you have ___〕 第 4 空
+    - 选项: any / none / no / ★some
+- **s7** `cloze`  〔JAMAL: This meter only takes ___1___. JAMAL: Do you have ___〕 第 5 空
+    - 选项: ★None / Any / No / Some no
+- **s7** `cloze`  〔JAMAL: Oh no. This ___ only takes quarters.〕 第 6 空
+    - 选项: meat / mother / ★meter / matter
+- **s7** `cloze`  〔GRACE: Let me check my ___... Hmm, I don't think I have any.〕 第 7 空
+    - 选项: press / ★purse / nurse / phrase
+- **s7** `cloze`  〔GRACE: Okay: dimes, ___... and quarters! How many do you nee〕 第 8 空
+    - 选项: pickles / nibbles / ★nickels / tickets
+- **s7** `cloze`  〔GRACE: I have three. Take them ___.〕 第 9 空
+    - 选项: at / ★all / always / also
+- **s7** `cloze`  〔JAMAL: You're a ___! Here—I have some bills. Let me pay you 〕 第 10 空
+    - 选项: ★lifesaver / lawyer / lifeguard / loser
+- **s7** `cloze`  〔GRACE: Pay it ___! Have a good one!〕 第 11 空
+    - 选项: forever / backward / for it / ★forward
+- **s8** `choice`  What does the meter take?
+    - 选项: Bills / Dimes / Cards / ★Quarters
+- **s8** `choice`  How many quarters does Jamal need?
+    - 选项: ★Two / One / Four / Three
+- **s8** `choice`  How many quarters does Grace have?
+    - 选项: None / ★Three / Ten / Two
+- **s8** `choice`  How much is the parking?
+    - 选项: Two dollars / Five cents / A quarter / ★Seventy-five cents
+- **s9** `scenario`  问路人有没有硬币（如果有的话）
+    - 答案: Do you have any coins?
+- **s9** `scenario`  别人帮了大忙，夸"救星啊"
+    - 答案: You're a lifesaver!
+- **s9** `scenario`  婉拒对方还钱
+    - 答案: No need!
+- **s10** `choice`  Do you have any coins? — Sorry, I have ___.
+    - 选项: ★none / any / no / nothing of
+- **s10** `choice`  There are ___ quarters in my bag.（一些）
+    - 选项: none / any / ★some / no
+- **s10** `choice`  I don't have ___.（一个也没有，代词）
+    - 选项: ★any / no / none of it the / some
+- **s10** `choice`  ___ of my friends can come.
+    - 选项: Some of no / Any / ★None / No
+- **s10** `transform`  I have some quarters.（变否定：一个也没有，用 any）
+    - 答案: I don't have any quarters.
+- **s10** `transform`  Do you have some coins?（改为更自然的疑问，用 any）
+    - 答案: Do you have any coins?
+- **s10** `transform`  How many coins do you have?（用 none 一词作答"一个没有"）
+    - 答案: None.
+- **s10** `choice`  I don't have ___ coins.
+    - 选项: no one / some / ★any / none
+- **s10** `choice`  There are ___ bills in my purse.（一些）
+    - 选项: ★some / none / no / any
+- **s10** `transform`  She has some quarters.（变否定句）
+    - 答案: She doesn't have any quarters.
+
+## am1_l58
+
+- **s5** `choice` [gp1] ___ is at the door!（有人）
+    - 选项: ★Somebody / Anybody / Every / Nobody
+- **s5** `choice` [gp1] Did ___ see my keys?
+    - 选项: nobody yes / every one no / somebody not / ★anybody
+- **s5** `choice` [gp1] ___ came. The room was empty.（没人）
+    - 选项: ★Nobody / Somebody / Everybody / Anybody sure
+- **s5** `choice` [gp1] ___ loves Halloween here!（人人）
+    - 选项: Anybody / Some person all / ★Everybody / Nobody
+- **s5** `transform` [gp1] Some person took the candy.（用 somebody 改写）
+    - 答案: Somebody took the candy.
+- **s5** `transform` [gp1] Did any person hear that?（用 anybody 改写）
+    - 答案: Did anybody hear that?
+- **s5** `choice` [gp2] Somebody ___ at the door.
+    - 选项: are / ★is / be / were
+- **s5** `choice` [gp2] Everybody ___ costumes tonight.
+    - 选项: loving / love / ★loves / are love
+- **s5** `choice` [gp1] ___ took the candy!（有人）
+    - 选项: ★Somebody / Every / Anybody / Nobody
+- **s5** `choice` [gp1] ___ will believe this.（没人）
+    - 选项: Somebody / ★Nobody / Anybody / Every one
+- **s5** `choice` [gp1] "Nobody's here." 的意思是：
+    - 选项: 任何人都在 / 大家都在 / 有人在这里 / ★这里没有人
+- **s5** `transform` [gp1] Somebody is at the door.（变"没人在门口"）
+    - 答案: Nobody is at the door.
+- **s5** `choice` [gp1] Did ___ see the dog?（有任何人）
+    - 选项: every / ★anybody / somebody yes / nobody
+- **s5** `choice` [gp1] Send the video to ___!（所有人）
+    - 选项: somebody one / anybody / nobody / ★everybody
+- **s5** `choice` [gp2] nobody 作主语时动词用：
+    - 选项: 过去式必须 / ★单数 / 复数 / 原形必须
+- **s5** `transform` [gp1] "大家保持冷静"（everybody 开头）
+    - 答案: Everybody stay calm.
+- **s6** `choice`  万圣节孩子们挨家挨户说：
+    - 选项: Treat me now! / ★Trick or treat! / Knock and eat! / Candy or run!
+- **s6** `choice`  万圣节门口的南瓜灯用的是：
+    - 选项: ★pumpkin / apple / watermelon / potato
+- **s6** `choice`  costume 是：
+    - 选项: 老客户 / 化妆品 / 风俗习惯 / ★（角色扮演的）服装
+- **s6** `choice`  万圣节夜美国人常在门口放：
+    - 选项: 意见簿 / 现金箱 / ★自助糖果碗 / 水果篮
+- **s7** `cloze`  〔FAITH: ___1___ is at the door again! DEREK: ___2___'s here. 〕 第 1 空
+    - 选项: ★Somebody / Nobody / Anybody / Every
+- **s7** `cloze`  〔FAITH: ___1___ is at the door again! DEREK: ___2___'s here. 〕 第 2 空
+    - 选项: Somebody / Anybody / ★Nobody / Everybody
+- **s7** `cloze`  〔FAITH: ___1___ is at the door again! DEREK: ___2___'s here. 〕 第 3 空
+    - 选项: somebody no / ★anybody / nobody yes / every
+- **s7** `cloze`  〔FAITH: ___1___ is at the door again! DEREK: ___2___'s here. 〕 第 4 空
+    - 选项: anybody / nobody / somebody one / ★everybody
+- **s7** `cloze`  〔FAITH: ___1___ is at the door again! DEREK: ___2___'s here. 〕 第 5 空
+    - 选项: ★empty / full / heavy / weird
+- **s7** `cloze`  〔DEREK: Coming! ...Nobody's here. Just a ___ on the steps.〕 第 6 空
+    - 选项: ★pumpkin / pigeon / napkin / penguin
+- **s7** `cloze`  〔FAITH: Weird. That's the third ___ tonight.〕 第 7 空
+    - 选项: turn / tone / team / ★time
+- **s7** `cloze`  〔DEREK: No way. Okay, everybody stay calm. I'll check the ___〕 第 8 空
+    - 选项: camp / carpet / ★camera / candy
+- **s7** `cloze`  〔FAITH: Is that... a dog? A dog in a dinosaur ___?!〕 第 9 空
+    - 选项: ★costume / curtain / custom / cousin
+- **s7** `cloze`  〔DEREK: Ha! The Hendersons' ___! He took the whole bowl!〕 第 10 空
+    - 选项: door / doll / dot / ★dog
+- **s7** `cloze`  〔DEREK: Best ___ ever.〕 第 11 空
+    - 选项: ★Halloween / Holiday / Thanksgiving / Hallway
+- **s8** `choice`  What night is it?
+    - 选项: ★Halloween / A birthday / Thanksgiving / New Year
+- **s8** `choice`  What was on the steps?
+    - 选项: A dog / A bowl / A camera / ★A pumpkin
+- **s8** `choice`  Who took the candy?
+    - 选项: ★A dog / A kid / Nobody / The Hendersons
+- **s8** `choice`  What costume was the dog wearing?
+    - 选项: A cat costume / No costume / ★A dinosaur costume / A pumpkin costume
+- **s9** `scenario`  说有人在敲门
+    - 答案: Somebody is at the door.
+- **s9** `scenario`  问有没有人看到你的钥匙
+    - 答案: Did anybody see my keys?
+- **s9** `scenario`  说没人会相信这事
+    - 答案: Nobody will believe this!
+- **s10** `choice`  ___ is at the door. Go check!（有人）
+    - 选项: Every / Nobody / ★Somebody / Anybody
+- **s10** `choice`  Did ___ call me?
+    - 选项: somebody no / ★anybody / nobody yes / every
+- **s10** `choice`  ___ came to the party. It was empty.（没人）
+    - 选项: Everybody / Somebody / Anybody sure / ★Nobody
+- **s10** `choice`  Somebody ___ at the door.
+    - 选项: are / were / ★is / be
+- **s10** `transform`  Some person took the candy.（用 somebody 改写）
+    - 答案: Somebody took the candy.
+- **s10** `transform`  Did any person see it?（用 anybody 改写）
+    - 答案: Did anybody see it?
+- **s10** `transform`  All the people love Halloween.（用 everybody 改写）
+    - 答案: Everybody loves Halloween.
+- **s10** `choice`  ___ took my sandwich!（有人）
+    - 选项: Anybody / Nobody / ★Somebody / Every
+- **s10** `choice`  Did ___ call me?
+    - 选项: ★anybody / nobody at / somebody yes / every
+- **s10** `transform`  Everybody is here.（变"没有人在这里"）
+    - 答案: Nobody is here.
+
+## am1_l59
+
+- **s5** `choice` [gp1] I ___ watching TV at 9 p.m.
+    - 选项: ★was / is / am / were
+- **s5** `choice` [gp1] They ___ playing soccer then.
+    - 选项: was / are / ★were / be
+- **s5** `choice` [gp1] ___ you sleeping at noon?
+    - 选项: Are / ★Were / Was / Did
+- **s5** `transform` [gp1] You were sleeping.（变一般疑问句）
+    - 答案: Were you sleeping?
+- **s5** `choice` [gp2] I was cooking ___ the phone rang.（打断）
+    - 选项: ★when / during / while / if
+- **s5** `choice` [gp2] She was reading ___ he was cooking.（同时）
+    - 选项: then / when so / but / ★while
+- **s5** `transform` [gp2] I ride my bike. A dog runs out.（用 was...when 合成过去场景）
+    - 答案: I was riding my bike when a dog ran out.
+- **s5** `transform` [gp2] He watched TV. She cooked.（用 while 改为同时进行）
+    - 答案: He was watching TV while she was cooking.
+- **s5** `choice` [gp1] I ___ riding my bike at 5 p.m.
+    - 选项: did / am / were / ★was
+- **s5** `choice` [gp1] They ___ telling stories.
+    - 选项: are / did / ★were / was
+- **s5** `choice` [gp1] ___ you sleeping at midnight?
+    - 选项: Did / Was / Are / ★Were
+- **s5** `transform` [gp1] He rides his bike.（改为"当时正在骑"）
+    - 答案: He was riding his bike.
+- **s5** `choice` [gp2] I was sleeping ___ you called.
+    - 选项: ★when / so / because of / while at
+- **s5** `choice` [gp2] She was running ___ I was reading.（两个动作同时进行）
+    - 选项: so / but / when at / ★while
+- **s5** `choice` [gp2] when 后常接___动作，while 后常接___动作。
+    - 选项: 相同·相同 / ★短（一般过去时）·长（过去进行时） / 长·短 / 将来·过去
+- **s5** `transform` [gp2] I was watching TV. You called.（用 when 合并成一句）
+    - 答案: I was watching TV when you called.
+- **s6** `choice`  骑车戴头盔的经典口号：
+    - 选项: First ride go! / Helmet last! / Speed first! / ★Safety first!
+- **s6** `choice`  美国街头公园无处不在的小动物是：
+    - 选项: panda（熊猫） / ★squirrel（松鼠） / kangaroo（袋鼠） / camel（骆驼）
+- **s6** `choice`  对无礼行为俏皮抗议一句：
+    - 选项: Root! / Rode! / Ruler! / ★Rude!
+- **s6** `choice`  骨折后打的石膏叫：
+    - 选项: ★cast / coast / cost / case
+- **s7** `cloze`  〔RAJ: I was ___1___ my bike when a squirrel ran into the road〕 第 1 空
+    - 选项: ★riding / ride / rode / rides
+- **s7** `cloze`  〔RAJ: I was ___1___ my bike when a squirrel ran into the road〕 第 2 空
+    - 选项: Was / Did / ★Were / Are
+- **s7** `cloze`  〔RAJ: I was ___1___ my bike when a squirrel ran into the road〕 第 3 空
+    - 选项: when at / ★while / so / but then
+- **s7** `cloze`  〔RAJ: I was ___1___ my bike when a squirrel ran into the road〕 第 4 空
+    - 选项: run / ran / runs / ★running
+- **s7** `cloze`  〔RAJ: I was ___1___ my bike when a squirrel ran into the road〕 第 5 空
+    - 选项: ★cast / cost / case / coast
+- **s7** `cloze`  〔MOLLY: Raj, why is your ___ in a cast?!〕 第 6 空
+    - 选项: art / ★arm / aim / army
+- **s7** `cloze`  〔RAJ: Funny ___. I was riding my bike when a squirrel ran int〕 第 7 空
+    - 选项: ★story / stone / store / step
+- **s7** `cloze`  〔RAJ: Yep. I was going ___, so I turned fast... and met a tre〕 第 8 空
+    - 选项: down low / downtown / ★downhill / downstairs
+- **s7** `cloze`  〔RAJ: I was! Safety ___. The helmet is fine. My arm... less f〕 第 9 空
+    - 选项: ★first / fast / for / fine
+- **s7** `cloze`  〔RAJ: Oh, he was totally fine. He was eating an ___ while I w〕 第 10 空
+    - 选项: orange / onion / apple / ★acorn
+- **s7** `cloze`  〔RAJ: Right? Anyway, six weeks in a cast. No ___.〕 第 11 空
+    - 选项: ★biking / baking / barking / booking
+- **s8** `choice`  What was Raj doing when the squirrel appeared?
+    - 选项: Running / ★Riding his bike / Driving / Walking
+- **s8** `choice`  Was Raj wearing a helmet?
+    - 选项: We don't know / No, he wasn't / ★Yes, he was / Only sometimes
+- **s8** `choice`  What was the squirrel doing?
+    - 选项: ★Eating an acorn / Sleeping / Climbing a tree / Running away
+- **s8** `choice`  What was Molly doing that weekend?
+    - 选项: Working / ★Running her first 5K / Biking / Breaking her arm
+- **s9** `scenario`  说你骑车时一只松鼠窜上了路
+    - 答案: I was riding my bike when a squirrel ran into the road.
+- **s9** `scenario`  问对方当时有没有戴头盔
+    - 答案: Were you wearing a helmet?
+- **s9** `scenario`  对无礼行为俏皮抗议
+    - 答案: Rude!
+- **s10** `choice`  I ___ watching TV at 9 p.m. last night.
+    - 选项: is / ★was / am / were
+- **s10** `choice`  They ___ playing soccer when it rained.
+    - 选项: are / was / be / ★were
+- **s10** `choice`  I was cooking ___ the phone rang.
+    - 选项: if / ★when / during / while was
+- **s10** `choice`  She was reading ___ he was cooking.（同时）
+    - 选项: when at / but then / so / ★while
+- **s10** `transform`  I ride my bike. A dog runs out.（用 was...when 合成过去场景）
+    - 答案: I was riding my bike when a dog ran out.
+- **s10** `transform`  He watched TV. She cooked.（用 while 改为同时进行）
+    - 答案: He was watching TV while she was cooking.
+- **s10** `transform`  You were sleeping.（变一般疑问句）
+    - 答案: Were you sleeping?
+- **s10** `choice`  She ___ sleeping when you called.
+    - 选项: is / were / ★was / did
+- **s10** `choice`  We ___ watching TV at nine.
+    - 选项: ★were / was / did / are
+- **s10** `transform`  I read a book. You called.（用 when 合并："我正在看书这时你打来了"）
+    - 答案: I was reading a book when you called.
+
+## am1_l60
+
+- **s5** `choice` [gp1] They ___ sitting by the fire.
+    - 选项: ★were / is / are / was
+- **s5** `choice` [gp1] Something ___ moving in the trees.
+    - 选项: are / were / ★was / is
+- **s5** `transform` [gp1] His hands shake.（改为过去进行时）
+    - 答案: His hands were shaking.
+- **s5** `transform` [gp1] The raccoon eats marshmallows.（改为过去进行时）
+    - 答案: The raccoon was eating marshmallows.
+- **s5** `transform` [gp1] We sit by the fire. We hear a sound.（合成：正坐着时听到）
+    - 答案: We were sitting by the fire when we heard a sound.
+- **s5** `choice` [gp2] hear 的过去式：
+    - 选项: hears / heared / hearing / ★heard
+- **s5** `choice` [gp2] It walked away ___.（慢慢地）
+    - 选项: ★slowly / slowest / slow more / slowness
+- **s5** `choice` [gp2] 叙事中"背景动作"用：
+    - 选项: 一般现在时 / 将来时 / ★过去进行时 / 祈使句
+- **s5** `choice` [gp1] They ___ sitting by the fire.
+    - 选项: are / was / ★were / did
+- **s5** `choice` [gp1] Something ___ moving behind the tent.
+    - 选项: is / ★was / did / were
+- **s5** `choice` [gp1] sit 的 -ing 形式：
+    - 选项: ★sitting / sits / sitted / siting
+- **s5** `transform` [gp1] The raccoon eats their marshmallows.（改为"当时正在吃"）
+    - 答案: The raccoon was eating their marshmallows.
+- **s5** `choice` [gp1] ___ Kyle was looking for his phone, the sound came closer.
+    - 选项: When so / But at / So / ★While
+- **s5** `choice` [gp1] While I was sleeping, my dog ___ eating my shoe.
+    - 选项: is / ★was / were / did
+- **s5** `choice` [gp2] 叙述"突然"用：
+    - 选项: Suddenness / Slowly at / ★Suddenly / Sadly so
+- **s5** `transform` [gp1] He was telling stories. She was making coffee.（用 while 合并成一句）
+    - 答案: He was telling stories while she was making coffee.
+- **s6** `choice`  美国露营篝火边的经典吃法是烤：
+    - 选项: ★marshmallow（棉花糖） / 披萨 / 苹果 / 玉米
+- **s6** `choice`  raccoon 是：
+    - 选项: 狐狸 / 松鼠 / ★浣熊 / 刺猬
+- **s6** `choice`  "like a boss" 形容：
+    - 选项: 刚当上老板 / ★潇洒霸气地（做某事） / 像老板一样发工资 / 被老板批评
+- **s6** `choice`  campsite 是：
+    - 选项: 野餐布 / 校园 / 停车场 / ★营地
+- **s7** `cloze`  〔They were ___1___ by the fire and telling stories. Suddenly,〕 第 1 空
+    - 选项: ★sitting / sit / sat / sits
+- **s7** `cloze`  〔They were ___1___ by the fire and telling stories. Suddenly,〕 第 2 空
+    - 选项: hear / hears / ★heard / hearing
+- **s7** `cloze`  〔They were ___1___ by the fire and telling stories. Suddenly,〕 第 3 空
+    - 选项: move / ★moving / moved / moves
+- **s7** `cloze`  〔They were ___1___ by the fire and telling stories. Suddenly,〕 第 4 空
+    - 选项: shake / shakes / shook / ★shaking
+- **s7** `cloze`  〔They were ___1___ by the fire and telling stories. Suddenly,〕 第 5 空
+    - 选项: ★eating / eat / ate / eats
+- **s7** `cloze`  〔Last month, Kyle and Andre went ___ at Bear Lake.〕 第 6 空
+    - 选项: coming / cooking / ★camping / campus
+- **s7** `cloze`  〔Suddenly, they heard a strange ___ in the trees.〕 第 7 空
+    - 选项: ★sound / song / side / south
+- **s7** `cloze`  〔"Shh! Did you hear that?" Kyle ___.〕 第 8 空
+    - 选项: wondered / whistled / ★whispered / watched
+- **s7** `cloze`  〔Andre grabbed his ___, but his hands were shaking.〕 第 9 空
+    - 选项: ★flashlight / lamplight / headlight / flashcard
+- **s7** `cloze`  〔Then Andre turned on the light. ___ was there—just a fat rac〕 第 10 空
+    - 选项: Somebody / Everybody / ★Nobody / Anybody
+- **s7** `cloze`  〔The raccoon finished the whole bag and walked away ___, like〕 第 11 空
+    - 选项: slow / ★slowly / sadly / lowly
+- **s8** `choice`  Where did Kyle and Andre go camping?
+    - 选项: ★Bear Lake / Riverside Park / The Grand Canyon / Maplewood
+- **s8** `choice`  What were they doing on the first night?
+    - 选项: Swimming / ★Sitting by the fire and telling stories / Playing games / Sleeping
+- **s8** `choice`  What was making the sound?
+    - 选项: ★A raccoon / The wind / A squirrel / A bear
+- **s8** `choice`  What was the raccoon eating?
+    - 选项: Acorns / Corn dogs / Candy / ★Marshmallows
+- **s9** `scenario`  讲故事开头"我们正坐在篝火旁，突然……"
+    - 答案: We were sitting by the fire. Suddenly, ...
+- **s9** `scenario`  说你当时手在发抖
+    - 答案: My hands were shaking.
+- **s9** `scenario`  形容某人潇洒离场"像个大佬"
+    - 答案: ...like a boss.
+- **s10** `choice`  They ___ sitting by the fire at night.
+    - 选项: was / are / is / ★were
+- **s10** `choice`  Something ___ moving in the trees.
+    - 选项: were / ★was / are / is
+- **s10** `choice`  hear 的过去式：
+    - 选项: heared / hearing / ★heard / hears
+- **s10** `choice`  It walked away ___.（慢慢地）
+    - 选项: slowest / ★slowly / slowness / slow more
+- **s10** `transform`  We sit by the fire. We hear a sound.（改为过去场景：正坐着时听到）
+    - 答案: We were sitting by the fire when we heard a sound.
+- **s10** `transform`  His hands shake.（改为过去进行时）
+    - 答案: His hands were shaking.
+- **s10** `transform`  The raccoon eats marshmallows.（改为过去进行时）
+    - 答案: The raccoon was eating marshmallows.
+- **s10** `choice`  The kids ___ telling stories by the fire.
+    - 选项: are / did / ★were / was
+- **s10** `choice`  While I was cooking, he ___ watching TV.
+    - 选项: were / ★was / did / is
+- **s10** `transform`  The dog eats my shoe.（改为"当时正在吃"）
+    - 答案: The dog was eating my shoe.

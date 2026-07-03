@@ -1,0 +1,600 @@
+# 单元9 题库全量导出（语义复审用）
+
+> 共 289 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+
+
+## am1_l49
+
+- **s5** `choice` [gp1] Is this phone ___?（你的）
+    - 选项: ★yours / you / yourself / your
+- **s5** `choice` [gp1] That bag is ___.（我的）
+    - 选项: my / ★mine / myself / me
+- **s5** `choice` [gp1] This is Leo's cup. It's ___.
+    - 选项: he / him / himself / ★his
+- **s5** `choice` [gp1] That car is ___.（他们的）
+    - 选项: they / ★theirs / them / their
+- **s5** `transform` [gp1] This is her towel.（用 hers 改写）
+    - 答案: This towel is hers.
+- **s5** `choice` [gp2] ___ bottle is black.（我的+名词）
+    - 选项: Mine / Me / ★My / Myself
+- **s5** `choice` [gp2] 名词性物主代词（mine/yours）后面：
+    - 选项: ★不接名词 / 接动词原形 / 必接名词 / 接副词
+- **s5** `transform` [gp2] These are our seats.（用 ours 改写）
+    - 答案: These seats are ours.
+- **s5** `choice` [gp1] This bottle is ___.（我的）
+    - 选项: ★mine / my / myself / me
+- **s5** `choice` [gp1] my → mine，your → ___
+    - 选项: your's / ★yours / you / yourself
+- **s5** `choice` [gp1] our 的名词性形式：
+    - 选项: ★ours / ourself / our's / us
+- **s5** `transform` [gp1] This is my bottle.（用 mine 改写）
+    - 答案: This bottle is mine.
+- **s5** `choice` [gp2] Is this seat ___?（你的）
+    - 选项: you's / you / ★yours / your
+- **s5** `choice` [gp2] That towel isn't mine—it's ___.（他的）
+    - 选项: he / ★his / hers / him
+- **s5** `choice` [gp2] These aren't ___.（我们的）
+    - 选项: ★ours / we / us / our
+- **s5** `transform` [gp2] These are our headphones.（用 ours 改写）
+    - 答案: These headphones are ours.
+- **s6** `choice`  商店/健身房的失物招领处叫：
+    - 选项: lose and find / find house / lost or found / ★lost and found
+- **s6** `choice`  "前台"美语叫：
+    - 选项: head table / ★front desk / first door / face desk
+- **s6** `choice`  美国健身房里人们通常自带：
+    - 选项: 锅具 / 雨伞 / ★水瓶 / 枕头
+- **s6** `choice`  headphones 是：
+    - 选项: ★头戴式耳机 / 头灯 / 电话听筒 / 发箍
+- **s7** `cloze`  〔PAUL: Is it in the lost and ___1___? JENNA: Is this blue one〕 第 1 空
+    - 选项: ★found / find / lose / kept
+- **s7** `cloze`  〔PAUL: Is it in the lost and ___1___? JENNA: Is this blue one〕 第 2 空
+    - 选项: your / you / ★yours / yourself
+- **s7** `cloze`  〔PAUL: Is it in the lost and ___1___? JENNA: Is this blue one〕 第 3 空
+    - 选项: my / ★mine / me / myself
+- **s7** `cloze`  〔PAUL: Is it in the lost and ___1___? JENNA: Is this blue one〕 第 4 空
+    - 选项: him / he / his self / ★his
+- **s7** `cloze`  〔PAUL: Is it in the lost and ___1___? JENNA: Is this blue one〕 第 5 空
+    - 选项: ★ours / our / us / we
+- **s7** `cloze`  〔PAUL: Hi. I left my water ___ here yesterday. Is it in the l〕 第 6 空
+    - 选项: battle / butter / ★bottle / basket
+- **s7** `cloze`  〔JENNA: Let's see... We have three ___. Is this blue one your〕 第 7 空
+    - 选项: bags / things / towels / ★bottles
+- **s7** `cloze`  〔PAUL: No, that's not mine. Mine is black with a ___.〕 第 8 空
+    - 选项: snack / sneaker / ★sticker / speaker
+- **s7** `cloze`  〔JENNA: Great. Oh—and is this ___ yours too?〕 第 9 空
+    - 选项: ★towel / token / table / tower
+- **s7** `cloze`  〔JENNA: Got it. And these ___?〕 第 10 空
+    - 选项: handbags / headlines / ★headphones / hats
+- **s7** `cloze`  〔PAUL: Thanks so much. You're the ___!〕 第 11 空
+    - 选项: last / ★best / most / first
+- **s8** `choice`  What did Paul leave at the gym?
+    - 选项: A sticker / A towel / ★A water bottle / Headphones
+- **s8** `choice`  What does Paul's bottle look like?
+    - 选项: Blue with a logo / ★Black with a sticker / White and big / Green and small
+- **s8** `choice`  Whose is the towel?
+    - 选项: Nobody's / Paul's / ★Leo's / Jenna's
+- **s8** `choice`  Are the headphones theirs?
+    - 选项: We don't know / They're Leo's / Yes, they are / ★No, they aren't
+- **s9** `scenario`  问这个杯子是不是对方的
+    - 答案: Is this yours?
+- **s9** `scenario`  说那不是你的，你的是黑色的
+    - 答案: That's not mine. Mine is black.
+- **s9** `scenario`  说这些东西不是你们的
+    - 答案: These aren't ours.
+- **s10** `choice`  Is this bottle ___?（你的）
+    - 选项: your / yourself / you / ★yours
+- **s10** `choice`  That's not my towel. ___ is blue.
+    - 选项: ★Mine / Me / My / Myself
+- **s10** `choice`  This is Leo's bag. It's ___.
+    - 选项: he / ★his / him / himself
+- **s10** `choice`  名词性物主代词后面：
+    - 选项: 必接名词 / 接动词 / ★不接名词 / 接副词
+- **s10** `transform`  This is my bottle.（用 mine 改写）
+    - 答案: This bottle is mine.
+- **s10** `transform`  That is her towel.（用 hers 改写）
+    - 答案: That towel is hers.
+- **s10** `transform`  These are our headphones.（用 ours 改写）
+    - 答案: These headphones are ours.
+- **s10** `choice`  That black bag is ___.（我的）
+    - 选项: me / myself / ★mine / my
+- **s10** `choice`  Is this phone ___?（他的）
+    - 选项: he / ★his / him / hers
+- **s10** `transform`  This is your towel.（用 yours 改写）
+    - 答案: This towel is yours.
+
+## am1_l50
+
+- **s5** `choice` [gp1] I hurt ___ at the gym.
+    - 选项: ★myself / mine / my / me self
+- **s5** `choice` [gp1] He made dinner by ___.
+    - 选项: his / hisself / ★himself / him
+- **s5** `choice` [gp1] She pushed ___ too hard.
+    - 选项: she / ★herself / hers / her self
+- **s5** `choice` [gp1] They enjoyed ___ at the party.
+    - 选项: ★themselves / theirselves / them / themself
+- **s5** `transform` [gp1] You hurt you.（改正：用反身代词）
+    - 答案: You hurt yourself.
+- **s5** `choice` [gp2] 请客人自便，说：
+    - 选项: Self help you! / Yourself help! / ★Help yourself. / Help you!
+- **s5** `choice` [gp2] 道别嘱咐"保重"，说：
+    - 选项: Take you care! / Care yourself take! / Self care you go! / ★Take care of yourself.
+- **s5** `transform` [gp2] I made the cake. No one helped.（用 by myself 合成一句）
+    - 答案: I made the cake by myself.
+- **s5** `choice` [gp1] I hurt ___ in the game.
+    - 选项: ★myself / my / me / mine
+- **s5** `choice` [gp1] he 的反身代词：
+    - 选项: hisself / ★himself / heself / him
+- **s5** `choice` [gp1] you 的反身代词：
+    - 选项: yours / your / youself / ★yourself
+- **s5** `transform` [gp1] I hurt me.（改正错误）
+    - 答案: I hurt myself.
+- **s5** `choice` [gp2] He did it all by ___.
+    - 选项: ★himself / hisself / him / his
+- **s5** `choice` [gp2] Take care of ___!（你自己）
+    - 选项: yours / you / ★yourself / your
+- **s5** `choice` [gp2] Help ___ to some water.（随便喝）
+    - 选项: you / ★yourself / myself / your
+- **s5** `transform` [gp2] He should take care of him.（改正错误："照顾他自己"）
+    - 答案: He should take care of himself.
+- **s6** `choice`  美式硬汉梗 walk it off 的意思是：
+    - 选项: 把它走丢了 / 散步减肥 / 走开别烦我 / ★走两步就没事了
+- **s6** `choice`  美语称呼哥们儿常说：
+    - 选项: Duke / ★Dude / Dudu / Dood
+- **s6** `choice`  first aid kit 是：
+    - 选项: ★急救箱 / 化妆包 / 工具箱 / 第一名奖杯
+- **s6** `choice`  运动员 "out for six weeks" 指：
+    - 选项: 休假六周 / ★伤停六周 / 被开除六周 / 出国六周
+- **s7** `cloze`  〔ANDRE: I hurt ___1___ a little. KYLE: You can't stand up by 〕 第 1 空
+    - 选项: ★myself / mine / me self / my
+- **s7** `cloze`  〔ANDRE: I hurt ___1___ a little. KYLE: You can't stand up by 〕 第 2 空
+    - 选项: you / yours / ★yourself / your
+- **s7** `cloze`  〔ANDRE: I hurt ___1___ a little. KYLE: You can't stand up by 〕 第 3 空
+    - 选项: you / ★yourself / your / yours
+- **s7** `cloze`  〔ANDRE: I hurt ___1___ a little. KYLE: You can't stand up by 〕 第 4 空
+    - 选项: hisself / him / his / ★himself
+- **s7** `cloze`  〔ANDRE: I hurt ___1___ a little. KYLE: You can't stand up by 〕 第 5 空
+    - 选项: ★yourself / you / your / myself
+- **s7** `cloze`  〔KYLE: Andre! Are you okay? That ___ looked bad.〕 第 6 空
+    - 选项: fault / wall / ball / ★fall
+- **s7** `cloze`  〔ANDRE: Okay... my ___ hurts. But I can walk it off.〕 第 7 空
+    - 选项: arm / ★ankle / angle / uncle
+- **s7** `cloze`  〔KYLE: No way. Sit down. Don't ___ yourself.〕 第 8 空
+    - 选项: ★push / pass / put / pull
+- **s7** `cloze`  〔ANDRE: Kyle, relax. It's just a ___.〕 第 9 空
+    - 选项: pain / ★game / gym / gain
+- **s7** `cloze`  〔KYLE: Smart. I'll get the first aid ___. Help yourself to my〕 第 10 空
+    - 选项: cap / key / ★kit / cat
+- **s7** `cloze`  〔ANDRE: Thanks, man. You take care of ___.〕 第 11 空
+    - 选项: ★everyone / anyone / yourself / no one
+- **s8** `choice`  What hurts?
+    - 选项: Nothing / Andre's hand / ★Andre's ankle / Kyle's ankle
+- **s8** `choice`  Who hurt himself last month?
+    - 选项: Andre / Kyle / Leo / ★Marcus
+- **s8** `choice`  How long was Marcus out?
+    - 选项: Six months / ★Six weeks / Six days / Two weeks
+- **s8** `choice`  What will Kyle get?
+    - 选项: ★The first aid kit / Water / Ice only / A towel
+- **s9** `scenario`  说你不小心伤到了自己
+    - 答案: I hurt myself.
+- **s9** `scenario`  请客人随便吃
+    - 答案: Help yourself!
+- **s9** `scenario`  道别时嘱咐对方保重
+    - 答案: Take care of yourself!
+- **s10** `choice`  I hurt ___ yesterday.
+    - 选项: ★myself / me self / my / mine
+- **s10** `choice`  She made the cake ___.（独自）
+    - 选项: for she / by her / herself by / ★by herself
+- **s10** `choice`  They enjoyed ___ at the party.
+    - 选项: ★themselves / them / themself / theirselves
+- **s10** `choice`  He hurt ___ at the game.
+    - 选项: his / him self / hisself / ★himself
+- **s10** `transform`  I made dinner. No one helped.（用 by myself 合成一句）
+    - 答案: I made dinner by myself.
+- **s10** `transform`  You hurt you.（改正：用反身代词）
+    - 答案: You hurt yourself.
+- **s10** `transform`  She pushed her too hard.（她把自己逼太狠，改正）
+    - 答案: She pushed herself too hard.
+- **s10** `choice`  He can't stand up by ___.
+    - 选项: ★himself / his / hisself / him
+- **s10** `choice`  Don't push ___! You're hurt.（你自己）
+    - 选项: you / ★yourself / your / myself
+- **s10** `transform`  Take care of you.（改正错误）
+    - 答案: Take care of yourself.
+
+## am1_l51
+
+- **s5** `choice` [gp1] I've ___ finished my homework.（已经）
+    - 选项: ★already / ever / ago / yet
+- **s5** `choice` [gp1] already 的位置：have ___ 过去分词
+    - 选项: 最前 / ★中间 / 最后 / 句外
+- **s5** `transform` [gp1] I called Mom.（改为"已经打过了"）
+    - 答案: I have already called Mom.
+- **s5** `transform` [gp1] He told her.（改为"已经告诉她了"）
+    - 答案: He has already told her.
+- **s5** `choice` [gp2] She has ___ arrived—one minute ago!（刚刚）
+    - 选项: yet / already / ★just / never
+- **s5** `choice` [gp2] Have you packed ___?
+    - 选项: so / already just / ago / ★yet
+- **s5** `choice` [gp2] "已经"用于肯定句的是：
+    - 选项: ever / ★already / ago / yet
+- **s5** `transform` [gp2] Did you tell them?（改为完成时问"告诉了吗"）
+    - 答案: Have you told them yet?
+- **s5** `choice` [gp1] She has ___ finished her homework.（已经）
+    - 选项: never / ago / yet / ★already
+- **s5** `choice` [gp1] already 常用于___句。
+    - 选项: ★肯定 / 否定 / 疑问 / 祈使
+- **s5** `choice` [gp1] They have ___ eaten dinner.（已经）
+    - 选项: ever since / ★already / yet / ago
+- **s5** `transform` [gp1] I have read it.（加"已经"）
+    - 答案: I have already read it.
+- **s5** `choice` [gp2] Have you finished the test ___?
+    - 选项: already / ago / just now / ★yet
+- **s5** `choice` [gp2] He hasn't opened it ___.
+    - 选项: already / ago / ★yet / ever
+- **s5** `choice` [gp2] yet 用于___句。
+    - 选项: 肯定 / ★疑问和否定 / 祈使 / 感叹
+- **s5** `transform` [gp2] Have you eaten?（加 yet）
+    - 答案: Have you eaten yet?
+- **s6** `choice`  美国学生喊 "I got in!" 指：
+    - 选项: 入伙了 / 上车了 / ★被（学校）录取了 / 进屋了
+- **s6** `choice`  祝贺别人说：
+    - 选项: Congratulation you! / ★Congratulations! / Celebrate you now! / Grats it goes!
+- **s6** `choice`  by the way 的意思是：
+    - 选项: 靠这条路走 / 挡住路了 / ★顺便说一句 / 在路边
+- **s6** `choice`  "Sorry not sorry" 的语气是：
+    - 选项: ★嘴上道歉其实不觉得有错（俏皮） / 生气地拒绝道歉 / 真诚道歉两次 / 非常抱歉
+- **s7** `cloze`  〔DAD: Have you opened it ___1___? DAD: I've ___2___ called yo〕 第 1 空
+    - 选项: ★yet / already / just / never
+- **s7** `cloze`  〔DAD: Have you opened it ___1___? DAD: I've ___2___ called yo〕 第 2 空
+    - 选项: yet / ever / ★already / ago
+- **s7** `cloze`  〔DAD: Have you opened it ___1___? DAD: I've ___2___ called yo〕 第 3 空
+    - 选项: yet / ★just / never / ago
+- **s7** `cloze`  〔DAD: Have you opened it ___1___? DAD: I've ___2___ called yo〕 第 4 空
+    - 选项: welcome / goodbye / sorry / ★congratulations
+- **s7** `cloze`  〔DAD: Have you opened it ___1___? DAD: I've ___2___ called yo〕 第 5 空
+    - 选项: ★texted / text / texts / texting
+- **s7** `cloze`  〔HAILEY: DAD! DAD! It's here! The email from Westfield ___!〕 第 6 空
+    - 选项: Country / ★College / Company / Collage
+- **s7** `cloze`  〔HAILEY: Not yet! I'm ___. You open it!〕 第 7 空
+    - 选项: ★scared / scary / scarred / sacred
+- **s7** `cloze`  〔DAD: Of course! Okay, deep ___. Open it.〕 第 8 空
+    - 选项: bread / break / ★breath / breathe
+- **s7** `cloze`  〔DAD: YES! I knew it! I never ___ you!〕 第 9 空
+    - 选项: dotted / ★doubted / counted / shouted
+- **s7** `cloze`  〔HAILEY: I've just read it three times. It's ___!〕 第 10 空
+    - 选项: really / right / ★real / read
+- **s7** `cloze`  〔DAD: ...I texted her a ___. Sorry not sorry!〕 第 11 空
+    - 选项: phone / note / poem / ★photo
+- **s8** `choice`  What email did Hailey get?
+    - 选项: From a store / ★From Westfield College / From her mom / From the gym
+- **s8** `choice`  Did Hailey get in?
+    - 选项: ★Yes, she got in! / We don't know / She's on a wait list / No, she didn't
+- **s8** `choice`  Who did Dad already call?
+    - 选项: Grandma / The college / Hailey's friends / ★Hailey's mom
+- **s8** `choice`  How many times has Hailey read the email?
+    - 选项: Ten times / ★Three times / Twice / Once
+- **s9** `scenario`  朋友收到好消息，你祝贺
+    - 答案: Congratulations!
+- **s9** `scenario`  说你已经给妈妈打过电话了
+    - 答案: I've already called Mom.
+- **s9** `scenario`  宣布你被录取了
+    - 答案: I got in!
+- **s10** `choice`  I've ___ finished my homework.（已经）
+    - 选项: ever / ★already / yet / ago
+- **s10** `choice`  She has ___ arrived—one minute ago!（刚刚）
+    - 选项: never / yet / ★just / already now
+- **s10** `choice`  Have you eaten ___?
+    - 选项: very / already just / ago / ★yet
+- **s10** `choice`  already 常用于：
+    - 选项: 否定句 / ★肯定句 / 祈使句 / 疑问句
+- **s10** `transform`  I called Mom.（改为"已经打过了"）
+    - 答案: I have already called Mom.
+- **s10** `transform`  She has texted me.（加"刚刚"）
+    - 答案: She has just texted me.
+- **s10** `transform`  Did you tell your friends?（改为完成时问"告诉了吗"）
+    - 答案: Have you told your friends yet?
+- **s10** `choice`  She has ___ told everyone.（已经）
+    - 选项: ever / yet / ★already / ago
+- **s10** `choice`  Has the email arrived ___?
+    - 选项: just / already / ago / ★yet
+- **s10** `transform`  They have left.（加"已经"）
+    - 答案: They have already left.
+
+## am1_l52
+
+- **s5** `choice` [gp1] The box is ___ heavy for me.
+    - 选项: so many / ★too / very much / enough
+- **s5** `choice` [gp1] The tea is too hot ___ drink.
+    - 选项: of / for / at / ★to
+- **s5** `transform` [gp1] The test is hard. I can't do it.（用 too...for 合成）
+    - 答案: The test is too hard for me.
+- **s5** `transform` [gp1] He is tired. He can't drive.（用 too...to 合成）
+    - 答案: He is too tired to drive.
+- **s5** `choice` [gp2] I don't have ___ money.
+    - 选项: too / very / ★enough / many too
+- **s5** `choice` [gp2] You've studied ___.（够了）
+    - 选项: too / ★enough / more too / very
+- **s5** `choice` [gp2] enough 修饰名词时在名词的：
+    - 选项: 无关位置 / 中间 / 后面 / ★前面
+- **s5** `transform` [gp2] I have time. It's enough.（合成一句）
+    - 答案: I have enough time.
+- **s5** `choice` [gp1] The coffee is too cold ___ drink.
+    - 选项: of / ★to / for / at
+- **s5** `choice` [gp1] He's too busy ___ come.
+    - 选项: ★to / at / so / for
+- **s5** `choice` [gp1] too + 形容词 + to 表示：
+    - 选项: 一点点 / ★太……而不能 / 刚刚好 / 非常能
+- **s5** `transform` [gp1] The coffee is cold. I can't drink it.（用 too...to 合并成一句）
+    - 答案: The coffee is too cold to drink.
+- **s5** `choice` [gp2] I don't have ___ time.
+    - 选项: ★enough / very much / too / more of
+- **s5** `choice` [gp2] Is one day ___ for this book?
+    - 选项: too / much / more / ★enough
+- **s5** `choice` [gp2] enough 放在名词的___。
+    - 选项: ★前面 / 中间 / 后面 / 句尾必须
+- **s5** `transform` [gp2] You have studied. + enough（合并成一句）
+    - 答案: You have studied enough.
+- **s6** `choice`  "期末考试"美国大学口语叫：
+    - 选项: finally / last school / ★final / end test
+- **s6** `choice`  给人打气"你可以的"：
+    - 选项: Got you this now! / This got you! / You get that! / ★You've got this!
+- **s6** `choice`  "More than enough" 的意思是：
+    - 选项: 刚刚好 / ★绰绰有余 / 多余的钱 / 远远不够
+- **s6** `choice`  pack up 的意思是：
+    - 选项: ★收拾东西（走人） / 打包裹寄走 / 堆起来 / 包起来吃
+- **s7** `cloze`  〔SEAN: You've studied ___1___. NADIA: Chapter nine is ___2___〕 第 1 空
+    - 选项: ★enough / too / very much / more
+- **s7** `cloze`  〔SEAN: You've studied ___1___. NADIA: Chapter nine is ___2___〕 第 2 空
+    - 选项: so a / enough / ★too / very much
+- **s7** `cloze`  〔SEAN: You've studied ___1___. NADIA: Chapter nine is ___2___〕 第 3 空
+    - 选项: for / ★to / at / of
+- **s7** `cloze`  〔SEAN: You've studied ___1___. NADIA: Chapter nine is ___2___〕 第 4 空
+    - 选项: times / hour / clock / ★time
+- **s7** `cloze`  〔SEAN: You've studied ___1___. NADIA: Chapter nine is ___2___〕 第 5 空
+    - 选项: ★got / get / getting / gets
+- **s7** `cloze`  〔SEAN: Nadia, it's ___. Go home. You've studied enough.〕 第 6 空
+    - 选项: Monday / ★midnight / morning / midday
+- **s7** `cloze`  〔NADIA: I can't! The final is ___, and chapter nine is too ha〕 第 7 空
+    - 选项: Tuesday / tonight / today / ★tomorrow
+- **s7** `cloze`  〔SEAN: You do. The test is at 2 p.m. ___ now, review in the m〕 第 8 空
+    - 选项: ★Sleep / Sleepy / Slept / Sleeps
+- **s7** `cloze`  〔SEAN: For you? More than enough. You've got ___.〕 第 9 空
+    - 选项: them / it all / ★this / that
+- **s7** `cloze`  〔NADIA: Okay, okay. But this coffee is too cold to ___ anyway〕 第 10 空
+    - 选项: eat / drank / drinking / ★drink
+- **s7** `cloze`  〔SEAN: Ha! That's your fourth ___. That's enough coffee for o〕 第 11 空
+    - 选项: cop / ★cup / club / cap
+- **s8** `choice`  When is the final?
+    - 选项: At noon / At midnight / ★At 2 p.m. / At 9 a.m.
+- **s8** `choice`  Which chapter is too hard for Nadia?
+    - 选项: ★Chapter nine / Chapter two / Chapter four / Chapter one
+- **s8** `choice`  Why can't Nadia drink the coffee?
+    - 选项: It's gone / ★It's too cold / It's too sweet / It's too hot
+- **s8** `choice`  How many cups of coffee has Nadia had?
+    - 选项: Five / Three / ★Four / Two
+- **s9** `scenario`  说这道题对你来说太难了
+    - 答案: This question is too hard for me.
+- **s9** `scenario`  说你没有足够的时间
+    - 答案: I don't have enough time.
+- **s9** `scenario`  给紧张的朋友打气"你可以的"
+    - 答案: You've got this!
+- **s10** `choice`  The box is ___ heavy for me.
+    - 选项: very much / so many / ★too / enough
+- **s10** `choice`  I don't have ___ money.
+    - 选项: ★enough / too / many too / very
+- **s10** `choice`  The soup is too hot ___ eat.
+    - 选项: for / of / at / ★to
+- **s10** `choice`  enough 修饰名词时在名词的：
+    - 选项: 无关位置 / 中间 / ★前面 / 后面
+- **s10** `transform`  The test is hard. I can't do it.（用 too...for 合成）
+    - 答案: The test is too hard for me.
+- **s10** `transform`  She is tired. She can't think.（用 too...to 合成）
+    - 答案: She is too tired to think.
+- **s10** `transform`  I have time. It's enough.（合成一句）
+    - 答案: I have enough time.
+- **s10** `choice`  This soup is ___ hot to eat.
+    - 选项: ★too / so a / very much / enough
+- **s10** `choice`  We don't have ___ cups.
+    - 选项: too / much of / very / ★enough
+- **s10** `transform`  She is tired. She can't drive.（用 too...to 合并成一句）
+    - 答案: She is too tired to drive.
+
+## am1_l53
+
+- **s5** `choice` [gp1] She sings ___.
+    - 选项: ★beautifully / beautiful / beautify / beauty
+- **s5** `choice` [gp1] He speaks ___.（清楚地）
+    - 选项: clear more / ★clearly / clearful / clearness
+- **s5** `choice` [gp1] quick 的副词形式：
+    - 选项: quicky / quickness / quicker / ★quickly
+- **s5** `transform` [gp1] She is a careful driver.（改为副词句）
+    - 答案: She drives carefully.
+- **s5** `choice` [gp2] They work ___.（努力）
+    - 选项: hardly / ★hard / harding / hardful
+- **s5** `choice` [gp2] "He hardly works" 的意思是：
+    - 选项: 他工作到很晚 / 他工作很辛苦 / ★他几乎不工作 / 他努力工作
+- **s5** `choice` [gp2] good 对应的副词是：
+    - 选项: goodness / goodly / better / ★well
+- **s5** `transform` [gp2] Your English is good.（用 well 改为"你说得好"）
+    - 答案: You speak English well.
+- **s5** `choice` [gp1] quick 的副词：
+    - 选项: quicky / quicker / quickness / ★quickly
+- **s5** `choice` [gp1] He speaks ___.（清楚地）
+    - 选项: more clear / clear / ★clearly / clearness
+- **s5** `choice` [gp1] 副词修饰___。
+    - 选项: 名词 / ★动作 / 代词 / 冠词
+- **s5** `transform` [gp1] He is a quick runner.（用副词改写："他跑得快"）
+    - 答案: He runs quickly.
+- **s5** `choice` [gp2] She works ___.（努力）
+    - 选项: ★hard / hardly / hardful / harding
+- **s5** `choice` [gp2] He ___ works. = 他很懒。
+    - 选项: hardest / harder / hard / ★hardly
+- **s5** `choice` [gp2] "他写得好"英语说：
+    - 选项: ★He writes well. / He good writes. / He wells write. / He writes good.
+- **s5** `transform` [gp2] He is a good cook.（用副词改写："他做饭做得好"）
+    - 答案: He cooks well.
+- **s6** `choice`  美国课堂的 peer review 是：
+    - 选项: ★同学互评作业 / 老师批改 / 机器评分 / 家长检查
+- **s6** `choice`  表示"完全正确！"：
+    - 选项: Correctly me! / Right of way! / ★Exactly! / Exact you!
+- **s6** `choice`  Whoa 表达的情绪是：
+    - 选项: ★惊讶（哇哦） / 愤怒 / 悲伤 / 困倦
+- **s6** `choice`  tricky 形容事情：
+    - 选项: 干净整洁 / 爱骗人的人 / ★难缠、暗藏陷阱 / 有魔法
+- **s7** `cloze`  〔ERIN: "He runs quick." That needs an L-Y: "___1___." ERIN: "〕 第 1 空
+    - 选项: ★quickly / quicker / quickness / quicky
+- **s7** `cloze`  〔ERIN: "He runs quick." That needs an L-Y: "___1___." ERIN: "〕 第 2 空
+    - 选项: beautiful / beauty / ★beautifully / beautify
+- **s7** `cloze`  〔ERIN: "He runs quick." That needs an L-Y: "___1___." ERIN: "〕 第 3 空
+    - 选项: hardly / ★hard / harding / hardful
+- **s7** `cloze`  〔ERIN: "He runs quick." That needs an L-Y: "___1___." ERIN: "〕 第 4 空
+    - 选项: always / never good / very / ★not
+- **s7** `cloze`  〔ERIN: "He runs quick." That needs an L-Y: "___1___." ERIN: "〕 第 5 空
+    - 选项: ★clearly / clear / clearness / more clear
+- **s7** `cloze`  〔ERIN: Okay, Jamal. I read your ___. It's really good!〕 第 6 空
+    - 选项: e-mail / ★essay / eraser / easy
+- **s7** `cloze`  〔JAMAL: Really? Be honest. ___ it hard.〕 第 7 空
+    - 选项: Guard / Grab / ★Grade / Great
+- **s7** `cloze`  〔JAMAL: Ah, right. ___.〕 第 8 空
+    - 选项: Article / Adjective / Answer / ★Adverb
+- **s7** `cloze`  〔JAMAL: Got it. Adjectives describe things, adverbs describe 〕 第 9 空
+    - 选项: adverbs / ★actions / answers / artists
+- **s7** `cloze`  〔ERIN: No! "Hardly" means "almost not." He hardly works = he'〕 第 10 空
+    - 选项: lucky / lately / large / ★lazy
+- **s7** `cloze`  〔JAMAL: Whoa. English is ___.〕 第 11 空
+    - 选项: ★tricky / truly / tacky / trick
+- **s8** `choice`  What did Erin read?
+    - 选项: ★Jamal's essay / A textbook / A note / An email
+- **s8** `choice`  What should "He runs quick" be?
+    - 选项: He run quick / ★He runs quickly / He runs quicker / He quickly run
+- **s8** `choice`  What does "hardly" mean?
+    - 选项: Strongly / Very hard / With effort / ★Almost not
+- **s8** `choice`  What does Erin say about Jamal's writing?
+    - 选项: ★He writes well / It needs more adverbs / It's lazy / It's too long
+- **s9** `scenario`  夸别人唱歌唱得美
+    - 答案: You sing beautifully!
+- **s9** `scenario`  感叹英语真难缠
+    - 答案: English is tricky.
+- **s9** `scenario`  夸对方解释得清楚
+    - 答案: You explain things clearly.
+- **s10** `choice`  She sings ___.
+    - 选项: beautify / beautiful / ★beautifully / beauty
+- **s10** `choice`  He runs ___.
+    - 选项: quicker much / ★quickly / quick more / quickness
+- **s10** `choice`  They work ___.（努力）
+    - 选项: hardful / harding / hardly / ★hard
+- **s10** `choice`  "He hardly works" 的意思是：
+    - 选项: 他工作很难 / 他努力工作 / ★他几乎不工作 / 他辛苦地工作
+- **s10** `transform`  She is a careful driver.（改为副词句：她开车很小心）
+    - 答案: She drives carefully.
+- **s10** `transform`  He is a quick runner.（改为副词句）
+    - 答案: He runs quickly.
+- **s10** `transform`  Your English is good.（用 well 夸"你英语说得好"）
+    - 答案: You speak English well.
+- **s10** `choice`  slow 的副词：
+    - 选项: slowness / slower / ★slowly / slowy
+- **s10** `choice`  He works ___. = 他工作努力。
+    - 选项: harding / ★hard / hardful / hardly
+- **s10** `transform`  She is a beautiful singer.（用副词改写："她唱得优美"）
+    - 答案: She sings beautifully.
+
+## am1_l54
+
+- **s5** `choice` [gp1] big 的比较级：
+    - 选项: bigest / more big / ★bigger / biger
+- **s5** `choice` [gp1] cheap 的比较级：
+    - 选项: cheapper / ★cheaper / cheapest / more cheap
+- **s5** `choice` [gp1] good 的比较级：
+    - 选项: more good / gooder / ★better / best
+- **s5** `choice` [gp1] hot 的比较级：
+    - 选项: hoter / hottest / more hot / ★hotter
+- **s5** `transform` [gp1] I need a small size.（改为"更小一号"）
+    - 答案: I need a smaller size.
+- **s5** `choice` [gp2] These jeans are cheaper ___ those.
+    - 选项: then / that / ★than / to
+- **s5** `choice` [gp2] This one is ___ softer.（口语强化"软太多"）
+    - 选项: too much / ★way / most / very a
+- **s5** `transform` [gp2] This bag is light. That bag is heavy.（用比较级说"这个更轻"）
+    - 答案: This bag is lighter than that bag.
+- **s5** `choice` [gp1] big 的比较级：
+    - 选项: biger / bigest / more big / ★bigger
+- **s5** `choice` [gp1] soft 的比较级：
+    - 选项: ★softer / more soft / softest / softter
+- **s5** `choice` [gp1] 单音节形容词比较级一般加：
+    - 选项: -est / more / ★-er / -ly
+- **s5** `transform` [gp1] cheap → 比较级
+    - 答案: cheaper
+- **s5** `choice` [gp2] These jeans are cheaper ___ the first pair.
+    - 选项: then / ★than / as / that
+- **s5** `choice` [gp2] You're better at this ___ me.
+    - 选项: to / as / ★than / then
+- **s5** `choice` [gp2] 下列哪句正确：
+    - 选项: These are bigger then those. / These are more big than those. / These are big than those. / ★These are bigger than those.
+- **s5** `transform` [gp2] 黑色牛仔裤比蓝色的更酷（用 cooler than 造句，主语 The black jeans）
+    - 答案: The black jeans are cooler than the blue jeans.
+- **s6** `choice`  "牛仔裤"英语叫：
+    - 选项: genes / jean one / ★jeans / janes
+- **s6** `choice`  衣服 "runs big" 的意思是：
+    - 选项: 越洗越大 / ★尺码偏大 / 跑得快 / 卖得贵
+- **s6** `choice`  被说服后说 "Sold!" 表示：
+    - 选项: 已经卖完了 / 我要卖掉它 / ★成交，我被说服了 / 正在出售中
+- **s6** `choice`  "Way better" 里 way 表示：
+    - 选项: 方法更好 / ★程度强化（好太多了） / 道路更好 / 方向对了
+- **s6** `choice`  店员给顾客的 tip 指：
+    - 选项: 倾斜角度 / 笔尖 / 小费（顾客给店员的） / ★小建议
+- **s7** `cloze`  〔TESSA: Do you have a ___1___ size? RAY: These are bigger... 〕 第 1 空
+    - 选项: ★bigger / big / biggest / more big
+- **s7** `cloze`  〔TESSA: Do you have a ___1___ size? RAY: These are bigger... 〕 第 2 空
+    - 选项: soft / softest / ★softer / more soft
+- **s7** `cloze`  〔TESSA: Do you have a ___1___ size? RAY: These are bigger... 〕 第 3 空
+    - 选项: cheap / ★cheaper / cheapest / more cheap
+- **s7** `cloze`  〔TESSA: Do you have a ___1___ size? RAY: These are bigger... 〕 第 4 空
+    - 选项: small / smallest / more small / ★smaller
+- **s7** `cloze`  〔TESSA: Do you have a ___1___ size? RAY: These are bigger... 〕 第 5 空
+    - 选项: ★cooler / cool / coolest / more cool
+- **s7** `cloze`  〔RAY: Hey, welcome back! The sneaker ___!〕 第 6 空
+    - 选项: land / lad / ★lady / lately
+- **s7** `cloze`  〔TESSA: Ha! That's me. Today I need ___.〕 第 7 空
+    - 选项: beans / ★jeans / genes / jars
+- **s7** `cloze`  〔TESSA: Hmm, they're nice, but a little ___. Do you have a bi〕 第 8 空
+    - 选项: ★tight / light / tall / tired
+- **s7** `cloze`  〔RAY: And they're cheaper than the first pair. Twenty ___ che〕 第 9 空
+    - 选项: backs / books / ★bucks / banks
+- **s7** `cloze`  〔TESSA: Cheaper AND better? ___!〕 第 10 空
+    - 选项: Gold / ★Sold / Old / Cold
+- **s7** `cloze`  〔RAY: Ha! One tip: they run ___. Maybe try the smaller size i〕 第 11 空
+    - 选项: bog / bag / beg / ★big
+- **s8** `choice`  What does Tessa need today?
+    - 选项: Sneakers / ★Jeans / A jacket / Sunglasses
+- **s8** `choice`  The first pair is a little ___.
+    - 选项: Cheap / Soft / ★Tight / Big
+- **s8** `choice`  How much cheaper is the second pair?
+    - 选项: ★Twenty bucks / Two bucks / Ten bucks / Five bucks
+- **s8** `choice`  Which color does Tessa pick?
+    - 选项: White / Blue / ★Black / Gray
+- **s9** `scenario`  问店员有没有大一号的
+    - 答案: Do you have a bigger size?
+- **s9** `scenario`  说这条比那条便宜
+    - 答案: These are cheaper than those.
+- **s9** `scenario`  被说服决定买了
+    - 答案: Sold!
+- **s10** `choice`  big 的比较级：
+    - 选项: more big / ★bigger / bigest / biger
+- **s10** `choice`  These jeans are cheaper ___ those.
+    - 选项: to / then / that / ★than
+- **s10** `choice`  good 的比较级：
+    - 选项: ★better / gooder / more good / best
+- **s10** `choice`  This one is ___ softer.（口语"软太多了"）
+    - 选项: most / too much a / very a / ★way
+- **s10** `transform`  This shirt is soft. That shirt is not.（用比较级合成）
+    - 答案: This shirt is softer than that shirt.
+- **s10** `transform`  The blue one is cool. The black one is more.（合成：黑色比蓝色酷）
+    - 答案: The black one is cooler than the blue one.
+- **s10** `transform`  I need a small size.（改为"更小一号"）
+    - 答案: I need a smaller size.
+- **s10** `choice`  small 的比较级：
+    - 选项: smallest / ★smaller / more small / smaler
+- **s10** `choice`  This one is softer ___ that one.
+    - 选项: to / then / as / ★than
+- **s10** `transform`  These jeans are soft.（改为比较级："这条更软"）
+    - 答案: These jeans are softer.

@@ -1,0 +1,590 @@
+# 单元6 题库全量导出（语义复审用）
+
+> 共 284 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+
+
+## am1_l31
+
+- **s5** `choice` [gp1] I ___ a bad cold.
+    - 选项: having / am / ★have / has
+- **s5** `choice` [gp1] She ___ a fever.
+    - 选项: is / ★has / have / haves
+- **s5** `choice` [gp1] I have a sore ___.
+    - 选项: ★throat / hand hot / foot cold / head water
+- **s5** `transform` [gp1] You have a headache.（变一般疑问句）
+    - 答案: Do you have a headache?
+- **s5** `transform` [gp1] He has a cold.（变否定句）
+    - 答案: He doesn't have a cold.
+- **s5** `choice` [gp2] I don't ___ well today.
+    - 选项: feels / feeling / ★feel / felt
+- **s5** `choice` [gp2] 朋友生病，祝早日康复说：
+    - 选项: See you around! / Have fun! / Good game! / ★Feel better soon!
+- **s5** `choice` [gp2] Do you have a fever? — Yes, I ___.
+    - 选项: have it / ★do / am / does
+- **s5** `choice` [gp1] He ___ a headache.
+    - 选项: haves / have / ★has / is
+- **s5** `choice` [gp1] I have a ___.（发烧）
+    - 选项: favor / cover / cold water / ★fever
+- **s5** `choice` [gp1] Do you ___ a sore throat?
+    - 选项: has / ★have / had / having
+- **s5** `transform` [gp1] She has a fever.（变否定句）
+    - 答案: She doesn't have a fever.
+- **s5** `transform` [gp1] I have a cold.（主语改 He）
+    - 答案: He has a cold.
+- **s5** `choice` [gp2] She doesn't feel ___ today.
+    - 选项: good at / fine so / better up / ★well
+- **s5** `choice` [gp2] I don't feel well. I'm ___.
+    - 选项: silly / ★sick / six / sock
+- **s5** `choice` [gp2] Do you have a cold? — No, I ___.
+    - 选项: no / am not / ★don't / haven't it
+- **s6** `choice`  朋友生病，祝早日康复说：
+    - 选项: ★Feel better soon! / You got it! / Have a good one! / Lucky you!
+- **s6** `choice`  "打电话请病假"美语叫：
+    - 选项: sick call out / phone ill day / ★call in sick / say sick home
+- **s6** `choice`  "That sounds rough." 里 rough 的意思是：
+    - 选项: 声音很大 / 路面粗糙 / ★难受/不好过 / 特别搞笑 / 难受 / 不好过
+- **s6** `choice`  别人道歉，你说"没事别放心上"：
+    - 选项: Worry about it! / ★Don't worry about it. / No about worry. / Don't it worry.
+- **s7** `cloze`  〔KAYLA: I don't ___1___ well today. KAYLA: I ___2___ a bad co〕 第 1 空
+    - 选项: ★feel / feels / feeling / felt
+- **s7** `cloze`  〔KAYLA: I don't ___1___ well today. KAYLA: I ___2___ a bad co〕 第 2 空
+    - 选项: has / am / ★have / having
+- **s7** `cloze`  〔KAYLA: I don't ___1___ well today. KAYLA: I ___2___ a bad co〕 第 3 空
+    - 选项: throat / ★fever / cold water / rest
+- **s7** `cloze`  〔KAYLA: I don't ___1___ well today. KAYLA: I ___2___ a bad co〕 第 4 空
+    - 选项: work / run / hurry / ★rest
+- **s7** `cloze`  〔KAYLA: I don't ___1___ well today. KAYLA: I ___2___ a bad co〕 第 5 空
+    - 选项: ★better / good / well up / fine so
+- **s7** `cloze`  〔KAYLA: Good morning, Mr. Reed. ___ is Kayla.〕 第 6 空
+    - 选项: That / ★This / It / Here
+- **s7** `cloze`  〔MR. REED: Morning, Kayla! What's ___?〕 第 7 空
+    - 选项: it / new / on / ★up
+- **s7** `cloze`  〔KAYLA: A little. And I have a sore ___ too.〕 第 8 空
+    - 选项: hand / foot / ★throat / head
+- **s7** `cloze`  〔MR. REED: That sounds ___. Stay home and rest.〕 第 9 空
+    - 选项: right / ★rough / round / ready
+- **s7** `cloze`  〔MR. REED: Don't worry about it. ___ a lot of water!〕 第 10 空
+    - 选项: Drank / Drinking / ★Drink / Drinks
+- **s7** `cloze`  〔KAYLA: I will. ___, Mr. Reed.〕 第 11 空
+    - 选项: Bye / Sorry / Thank / ★Thanks
+- **s8** `choice`  Who is Kayla talking to?
+    - 选项: ★Her boss / Her mom / Her doctor / Her roommate
+- **s8** `choice`  What does Kayla have?
+    - 选项: Nothing / ★A bad cold / A headache / A stomachache
+- **s8** `choice`  What does Mr. Reed say at the end?
+    - 选项: Lucky you! / You got it! / ★Feel better soon! / Have a good one!
+- **s9** `scenario`  说你感冒了
+    - 答案: I have a cold.
+- **s9** `scenario`  告诉老板你今天不舒服
+    - 答案: I don't feel well today. I have a bad cold.
+- **s9** `scenario`  朋友生病了，祝他早日康复
+    - 答案: Feel better soon!
+- **s10** `choice`  I ___ a sore throat.
+    - 选项: ★have / having / has / am
+- **s10** `choice`  She ___ a fever.
+    - 选项: is / ★has / haves / have
+- **s10** `choice`  I don't ___ well.
+    - 选项: feels / felt / ★feel / feeling
+- **s10** `choice`  朋友生病，你说：
+    - 选项: You got it! / Have a good one! / Lucky you! / ★Feel better soon!
+- **s10** `transform`  You have a cold.（变一般疑问句）
+    - 答案: Do you have a cold?
+- **s10** `transform`  I have a headache.（变否定句）
+    - 答案: I don't have a headache.
+- **s10** `transform`  He has a fever.（变一般疑问句，用 Does）
+    - 答案: Does he have a fever?
+- **s10** `choice`  He ___ a bad cold.
+    - 选项: have / ★has / haves / is
+- **s10** `choice`  打电话请病假，开头说自己不舒服：
+    - 选项: I'm well good. / I feel very well! / ★I don't feel well today. / Well I don't.
+- **s10** `transform`  She has a sore throat.（变否定句）
+    - 答案: She doesn't have a sore throat.
+
+## am1_l32
+
+- **s5** `choice` [gp1] You ___ rest for three days.（必须）
+    - 选项: ★must / needn't / mustn't / don't
+- **s5** `choice` [gp1] You must ___ a lot of water.
+    - 选项: drank / ★drink / drinks / drinking
+- **s5** `transform` [gp1] You sleep well.（用 must 表医嘱）
+    - 答案: You must sleep well.
+- **s5** `choice` [gp2] You ___ go to work. You're sick!（禁止）
+    - 选项: do / need / ★mustn't / must
+- **s5** `choice` [gp2] mustn't 表示：
+    - 选项: ★禁止 / 不必 / 必须 / 可以
+- **s5** `choice` [gp2] You mustn't ___ coffee for now.
+    - 选项: drinks / to drink / ★drink / drinking
+- **s5** `transform` [gp2] You drink soda.（用 mustn't 表禁止）
+    - 答案: You mustn't drink soda.
+- **s5** `transform` [gp2] You must go to work.（改为禁止）
+    - 答案: You mustn't go to work.
+- **s5** `choice` [gp1] You ___ drink a lot of water.（必须）
+    - 选项: don't / aren't / ★must / mustn't
+- **s5** `choice` [gp1] She must ___ at home.
+    - 选项: ★rest / resting / rests / rested
+- **s5** `choice` [gp1] must 没有人称变化：He ___ rest.
+    - 选项: is must / ★must / musts / must to
+- **s5** `transform` [gp1] You drink water.（用 must 表医嘱）
+    - 答案: You must drink water.
+- **s5** `choice` [gp2] You ___ drink soda. You're sick!（禁止）
+    - 选项: ★mustn't / must / don't be / needn't
+- **s5** `choice` [gp2] "千万不能去上班"英语说：
+    - 选项: You don't need to work. / ★You mustn't go to work. / You can work go. / You must go to work.
+- **s5** `transform` [gp2] You eat ice cream.（用 mustn't 表禁止）
+    - 答案: You mustn't eat ice cream.
+- **s5** `transform` [gp2] You mustn't rest.（改为必须）
+    - 答案: You must rest.
+- **s6** `choice`  美国医生看诊的开场常问：
+    - 选项: Who brings you here go? / Where are you in? / What do you bring me? / ★What brings you in today?
+- **s6** `choice`  医生检查喉咙时让你说：
+    - 选项: "Hello." / ★"Ahh." / "Cheese!" / "Yes."
+- **s6** `choice`  "健康第一"英语说：
+    - 选项: ★Health comes first. / Healthy number one be. / First health go. / Health is one.
+- **s6** `choice`  "没有例外/没得商量"说：
+    - 选项: No outside rule! / Not accept me! / ★No exceptions! / No questions ask!
+- **s7** `cloze`  〔DR. PATEL: What ___1___ you in today? KAYLA: My throat ___2_〕 第 1 空
+    - 选项: ★brings / bring / bringing / brought
+- **s7** `cloze`  〔DR. PATEL: What ___1___ you in today? KAYLA: My throat ___2_〕 第 2 空
+    - 选项: hurt / hurting / ★hurts / is hurt
+- **s7** `cloze`  〔DR. PATEL: What ___1___ you in today? KAYLA: My throat ___2_〕 第 3 空
+    - 选项: mustn't / ★must / don't / aren't
+- **s7** `cloze`  〔DR. PATEL: What ___1___ you in today? KAYLA: My throat ___2_〕 第 4 空
+    - 选项: must / need / don't be / ★mustn't
+- **s7** `cloze`  〔DR. PATEL: What ___1___ you in today? KAYLA: My throat ___2_〕 第 5 空
+    - 选项: ★soup / coffee / soda / juice
+- **s7** `cloze`  〔DR. PATEL: Let's take a ___... Say "ahh."〕 第 6 空
+    - 选项: book / photo / ★look / seat
+- **s7** `cloze`  〔DR. PATEL: Okay. It's not ___, but you must rest for three d〕 第 7 空
+    - 选项: ★serious / sorry / sunny / small
+- **s7** `cloze`  〔KAYLA: Three days? I have a big ___ on Friday!〕 第 8 空
+    - 选项: market / moment / morning / ★meeting
+- **s7** `cloze`  〔DR. PATEL: ___ comes first. You must drink a lot of water.〕 第 9 空
+    - 选项: Help / ★Health / Heart / Home
+- **s7** `cloze`  〔DR. PATEL: And you mustn't go to work. No ___!〕 第 10 空
+    - 选项: expressions / questions / ★exceptions / examples
+- **s7** `cloze`  〔KAYLA: No coffee?! That's the hard ___.〕 第 11 空
+    - 选项: party / point / place / ★part
+- **s8** `choice`  Where is Kayla?
+    - 选项: At work / At home / At a store / ★At the doctor's office
+- **s8** `choice`  How many days must Kayla rest?
+    - 选项: ★Three / Seven / Five / Two
+- **s8** `choice`  What mustn't Kayla drink for now?
+    - 选项: Water / Soup / ★Coffee / Juice
+- **s9** `scenario`  医生嘱咐病人必须多喝水
+    - 答案: You must drink a lot of water.
+- **s9** `scenario`  告诉朋友这几天千万不能上班
+    - 答案: You mustn't go to work.
+- **s9** `scenario`  劝人健康第一
+    - 答案: Health comes first.
+- **s10** `choice`  You ___ rest today.（必须）
+    - 选项: don't / ★must / mustn't / can't
+- **s10** `choice`  You ___ drink coffee now.（禁止）
+    - 选项: aren't / must / ★mustn't / needn't
+- **s10** `choice`  must 后面接：
+    - 选项: 动词三单 / to+动词 / 动词-ing / ★动词原形
+- **s10** `choice`  mustn't 表示：
+    - 选项: ★禁止 / 不必 / 可以 / 建议
+- **s10** `transform`  You go to work.（用 mustn't 表禁止）
+    - 答案: You mustn't go to work.
+- **s10** `transform`  You rest for three days.（用 must 表必须）
+    - 答案: You must rest for three days.
+- **s10** `transform`  You must drink coffee.（改为禁止）
+    - 答案: You mustn't drink coffee.
+- **s10** `choice`  She ___ rest at home.（必须）
+    - 选项: ★must / mustn't / don't / isn't
+- **s10** `choice`  Kids ___ play with fire.（禁止）
+    - 选项: don't be / ★mustn't / needn't / must
+- **s10** `transform`  You watch TV all night.（用 mustn't 表禁止）
+    - 答案: You mustn't watch TV all night.
+
+## am1_l33
+
+- **s5** `choice` [gp1] You ___ to clean your room.
+    - 选项: needing / must to / needs be / ★need
+- **s5** `choice` [gp1] You ___ need to bring anything.（不必）
+    - 选项: ★don't / mustn't / can't / aren't
+- **s5** `choice` [gp1] Do I need to finish it today? — No, you ___.
+    - 选项: needn't do / aren't / ★don't / mustn't
+- **s5** `transform` [gp1] I need to clean the room.（变一般疑问句）
+    - 答案: Do I need to clean the room?
+- **s5** `transform` [gp1] You need to do homework today.（变否定：不必）
+    - 答案: You don't need to do homework today.
+- **s5** `choice` [gp2] "不必做"用：
+    - 选项: must / mustn't / can't / ★don't need to
+- **s5** `choice` [gp2] "禁止做"用：
+    - 选项: need to / ★mustn't / don't need to / can
+- **s5** `choice` [gp2] "你必须完成作业"用：
+    - 选项: needn't / don't need to / ★must / mustn't
+- **s5** `choice` [gp1] You ___ to finish it by Sunday night.
+    - 选项: must to / are need / ★need / needing
+- **s5** `choice` [gp1] You don't need ___ wash the dishes.
+    - 选项: at / of / for / ★to
+- **s5** `choice` [gp1] ___ I need to clean it right now?
+    - 选项: Can be / Am / ★Do / Must
+- **s5** `transform` [gp1] You need to do homework today.（变一般疑问句）
+    - 答案: Do you need to do homework today?
+- **s5** `choice` [gp2] "你不必带任何东西"英语说：
+    - 选项: ★You don't need to bring anything. / You must bring anything. / You mustn't bring anything. / You need bring nothing to.
+- **s5** `choice` [gp2] 病人不能喝咖啡（禁止），用：
+    - 选项: don't need to / ★mustn't / need to / must not be
+- **s5** `choice` [gp2] You're early. You ___ hurry.
+    - 选项: ★don't need to / need / must / mustn't
+- **s5** `choice` [gp2] Kids ___ play with the stove.（禁止）
+    - 选项: need to / needn't / ★mustn't / don't need to
+- **s6** `choice`  "不必"的美语口语更常说：
+    - 选项: needn't（英式偏书面） / not must be / no need do / ★don't need to
+- **s6** `choice`  美国青少年周末爱去的购物中心叫：
+    - 选项: ★mall / wall / hall / mill
+- **s6** `choice`  text 作动词指：
+    - 选项: 读课本 / 写信封 / 打印文件 / ★发短信
+- **s6** `choice`  谈判时说"最终条件，就这样了"：
+    - 选项: ★Final offer. / Offer final go. / Last money. / End deal you.
+- **s7** `cloze`  〔HAILEY: Do I ___1___ to clean it right now? DAD: You ___2___〕 第 1 空
+    - 选项: ★need / needs / must / needing
+- **s7** `cloze`  〔HAILEY: Do I ___1___ to clean it right now? DAD: You ___2___〕 第 2 空
+    - 选项: mustn't / aren't / ★don't / can't
+- **s7** `cloze`  〔HAILEY: Do I ___1___ to clean it right now? DAD: You ___2___〕 第 3 空
+    - 选项: finishing / ★finish / finishes / finished
+- **s7** `cloze`  〔HAILEY: Do I ___1___ to clean it right now? DAD: You ___2___〕 第 4 空
+    - 选项: Call to / Talk / Say / ★Text
+- **s7** `cloze`  〔HAILEY: Do I ___1___ to clean it right now? DAD: You ___2___〕 第 5 空
+    - 选项: ★worry / worries / worrying / worried
+- **s7** `cloze`  〔HAILEY: Dad, my friends are going to the ___ today. Can I go〕 第 6 空
+    - 选项: park / ★mall / mail / hall
+- **s7** `cloze`  〔DAD: Sure. But first—is your room ___?〕 第 7 空
+    - 选项: ★clean / dirty / cool / close
+- **s7** `cloze`  〔HAILEY: ...Almost. Do I ___ to clean it right now?〕 第 8 空
+    - 选项: must / have go / ★need / want be
+- **s7** `cloze`  〔DAD: Yes, you do. But you don't need to wash the ___—I'm on 〕 第 9 空
+    - 选项: rooms / cups / clothes / ★dishes
+- **s7** `cloze`  〔DAD: But you need to finish it by Sunday ___.〕 第 10 空
+    - 选项: nights / day / ★night / noon
+- **s8** `choice`  Where does Hailey want to go?
+    - 选项: The library / The beach / ★The mall / A wedding
+- **s8** `choice`  What does Dad say Hailey doesn't need to do?
+    - 选项: Clean her room / Text him / Finish homework / ★Wash the dishes
+- **s8** `choice`  How often must Hailey text Dad in the end?
+    - 选项: Never / ★Every two hours / Every day / Every hour
+- **s9** `scenario`  说你今天不必上班
+    - 答案: I don't need to work today.
+- **s9** `scenario`  问是不是现在就得打扫房间
+    - 答案: Do I need to clean it right now?
+- **s9** `scenario`  谈判后给出最终条件
+    - 答案: Final offer.
+- **s10** `choice`  You ___ need to bring anything.（不必）
+    - 选项: mustn't / can't / ★don't / aren't
+- **s10** `choice`  Do I ___ to finish it today?
+    - 选项: must / ★need / needs / needing
+- **s10** `choice`  "不必做"用：
+    - 选项: can't / must / ★don't need to / mustn't
+- **s10** `choice`  "你必须完成作业"用：
+    - 选项: ★must / needn't / don't need to / mustn't
+- **s10** `transform`  You need to clean your room.（变否定：不必）
+    - 答案: You don't need to clean your room.
+- **s10** `transform`  I need to clean the room.（变一般疑问句）
+    - 答案: Do I need to clean the room?
+- **s10** `transform`  You must wash the dishes.（改为"不必"）
+    - 答案: You don't need to wash the dishes.
+- **s10** `choice`  You ___ need to bring food.（不必）
+    - 选项: aren't / mustn't / can't be / ★don't
+- **s10** `choice`  Do I need to clean the garage? — No, you ___.
+    - 选项: mustn't / ★don't / aren't / need
+- **s10** `transform`  You need to finish homework by Sunday.（变否定：不必）
+    - 答案: You don't need to finish homework by Sunday.
+
+## am1_l34
+
+- **s5** `choice` [gp1] I ___ at home yesterday.
+    - 选项: ★was / is / were / am
+- **s5** `choice` [gp1] They ___ at the beach.
+    - 选项: was / ★were / are / is
+- **s5** `choice` [gp1] The music ___ loud last night.
+    - 选项: are / were / is / ★was
+- **s5** `transform` [gp1] I am at work.（改为昨天）
+    - 答案: I was at work yesterday.
+- **s5** `transform` [gp1] They are at the wedding.（改为过去式）
+    - 答案: They were at the wedding.
+- **s5** `choice` [gp2] ___ you at the party? — Yes, I was.
+    - 选项: Are / ★Were / Did / Was
+- **s5** `choice` [gp2] How ___ your weekend?
+    - 选项: ★was / are / is doing / were
+- **s5** `choice` [gp2] Was the food good? — Yes, it ___.
+    - 选项: is / were / ★was / did
+- **s5** `choice` [gp1] We ___ at the fair last summer.
+    - 选项: was / are / is / ★were
+- **s5** `choice` [gp1] The weather ___ great yesterday.
+    - 选项: are / were / ★was / is
+- **s5** `choice` [gp1] My parents ___ on the dance floor.
+    - 选项: is / ★were / was / are
+- **s5** `transform` [gp1] She is at the wedding.（改为昨天）
+    - 答案: She was at the wedding yesterday.
+- **s5** `choice` [gp2] ___ you at the party last night? — Yes, I was.
+    - 选项: Is / Are / ★Were / Was
+- **s5** `choice` [gp2] Was the music loud? — ___
+    - 选项: Yes, I am. / Yes, it is. / Yes, they were. / ★Yes, it was.
+- **s5** `choice` [gp2] Where ___ they yesterday?
+    - 选项: was / is / ★were / are
+- **s5** `transform` [gp2] They were at the beach.（变一般疑问句）
+    - 答案: Were they at the beach?
+- **s6** `choice`  周一见面，美国同事常问：
+    - 选项: Where is weekend go? / ★How was your weekend? / What weekend do you? / How is Monday you?
+- **s6** `choice`  beach day 指：
+    - 选项: 沙滩排球赛 / 冲浪比赛日 / ★去海边玩的一天 / 海鲜大餐
+- **s6** `choice`  美国婚礼上宾客常在哪里狂欢一整晚：
+    - 选项: ★舞池（dance floor） / 停车场 / 厨房 / 图书室
+- **s6** `choice`  "还是周末最棒"说：
+    - 选项: Week best end go. / Best is end week. / ★Weekends are the best. / Weekend is week.
+- **s7** `cloze`  〔OMAR: How ___1___ your weekend? NICOLE: I ___2___ at the bea〕 第 1 空
+    - 选项: ★was / were / is / are
+- **s7** `cloze`  〔OMAR: How ___1___ your weekend? NICOLE: I ___2___ at the bea〕 第 2 空
+    - 选项: were / am / ★was / is
+- **s7** `cloze`  〔OMAR: How ___1___ your weekend? NICOLE: I ___2___ at the bea〕 第 3 空
+    - 选项: was / ★were / are / is
+- **s7** `cloze`  〔OMAR: How ___1___ your weekend? NICOLE: I ___2___ at the bea〕 第 4 空
+    - 选项: quiet / sunny / warm / ★loud
+- **s7** `cloze`  〔OMAR: How ___1___ your weekend? NICOLE: I ___2___ at the bea〕 第 5 空
+    - 选项: ★were / was / are / did
+- **s7** `cloze`  〔NICOLE: Fun! Was the ___ good?〕 第 6 空
+    - 选项: floor / fair / ★food / photo
+- **s7** `cloze`  〔OMAR: It was ___. But the music was so loud!〕 第 7 空
+    - 选项: all day / ★amazing / away / angry
+- **s7** `cloze`  〔NICOLE: Ha! ___ your parents there?〕 第 8 空
+    - 选项: Is / Was / ★Were / Are
+- **s7** `cloze`  〔OMAR: Yes, they were. They were on the dance ___ all night!〕 第 9 空
+    - 选项: door / ★floor / hall / food
+- **s7** `cloze`  〔NICOLE: I love that. Weekends are the ___.〕 第 10 空
+    - 选项: first / last / most / ★best
+- **s8** `choice`  Where was Nicole on Saturday?
+    - 选项: ★At the beach / At a wedding / At home / At work
+- **s8** `choice`  Was the weather good?
+    - 选项: No, it wasn't. / Yes, they were. / ★Yes, it was. / We don't know.
+- **s8** `choice`  Where was Omar?
+    - 选项: At the beach / At home / At a fair / ★At a wedding in Dallas
+- **s8** `choice`  Who was on the dance floor all night?
+    - 选项: ★Omar's parents / Omar / Omar's cousin / Nicole
+- **s9** `scenario`  周一问同事周末过得怎么样
+    - 答案: How was your weekend?
+- **s9** `scenario`  说你周六在海滩
+    - 答案: I was at the beach on Saturday.
+- **s9** `scenario`  别人问 "Were you at the party?"，你在
+    - 答案: Yes, I was.
+- **s10** `choice`  I ___ at home yesterday.
+    - 选项: were / am / is / ★was
+- **s10** `choice`  They ___ at the wedding.
+    - 选项: ★were / are be / is / was
+- **s10** `choice`  ___ the food good? — Yes, it was.
+    - 选项: Were / Is / ★Was / Are
+- **s10** `choice`  Where ___ you last night?
+    - 选项: is / are / was / ★were
+- **s10** `transform`  I am at the beach.（改为昨天）
+    - 答案: I was at the beach yesterday.
+- **s10** `transform`  They are at the party.（改为过去式）
+    - 答案: They were at the party.
+- **s10** `transform`  The music was loud.（变一般疑问句）
+    - 答案: Was the music loud?
+- **s10** `choice`  The weather ___ great all day.
+    - 选项: is / ★was / be / were
+- **s10** `choice`  ___ your parents at the wedding? — Yes, they were.
+    - 选项: Are / Was / Is / ★Were
+- **s10** `transform`  The music is loud.（改为昨晚）
+    - 答案: The music was loud last night.
+
+## am1_l35
+
+- **s5** `choice` [gp1] There ___ a big Ferris wheel at the fair.
+    - 选项: ★was / are / were / is
+- **s5** `choice` [gp1] There ___ pony rides for the kids.
+    - 选项: was / ★were / is / be
+- **s5** `choice` [gp1] ___ there a contest? — Yes, there was.
+    - 选项: Is / Are / Were / ★Was
+- **s5** `transform` [gp1] There is a food stand.（改为去年）
+    - 答案: There was a food stand last year.
+- **s5** `transform` [gp1] There are two bands.（改为过去式）
+    - 答案: There were two bands.
+- **s5** `choice` [gp2] We were at the fair ___ summer.
+    - 选项: every the / ★last / this now / next
+- **s5** `choice` [gp2] The party was ___ night.
+    - 选项: ★last / yesterday on / next / tomorrow
+- **s5** `choice` [gp2] "去年"英语说：
+    - 选项: this year now / every year / next year / ★last year
+- **s5** `choice` [gp1] There ___ a pie contest last year.
+    - 选项: is / were / are / ★was
+- **s5** `choice` [gp1] There ___ corn dogs everywhere.
+    - 选项: be / was / ★were / is
+- **s5** `choice` [gp1] ___ there a Ferris wheel? — Yes, there was.
+    - 选项: Were / Is / Are / ★Was
+- **s5** `transform` [gp1] There is so much funnel cake.（改为去年夏天）
+    - 答案: There was so much funnel cake last summer.
+- **s5** `transform` [gp1] There is a contest.（改为过去式）
+    - 答案: There was a contest.
+- **s5** `choice` [gp2] We were at the fair ___ year.
+    - 选项: this now / ★last / next / every
+- **s5** `choice` [gp2] The wedding was last ___.
+    - 选项: now / tonight / ★night / tomorrow
+- **s5** `choice` [gp2] "去年夏天"英语说：
+    - 选项: next summer / this summer now / summer last / ★last summer
+- **s6** `choice`  美国夏天的县级游乐集市叫：
+    - 选项: court fair / county fire / ★county fair / country fear
+- **s6** `choice`  funnel cake 是集市经典的：
+    - 选项: 咸味薄饼 / 水果生日蛋糕 / 漏斗形蜡烛 / ★炸面糊甜点（撒糖粉）
+- **s6** `choice`  corn dog 是：
+    - 选项: ★裹面糊炸的热狗肠（插棍） / 玉米味狗粮 / 烤玉米棒 / 狗形玉米饼
+- **s6** `choice`  "摩天轮"英语叫：
+    - 选项: flying wheel / ★Ferris wheel / festival ring / fair wheel
+- **s6** `choice`  集市上的 pie contest 是：
+    - 选项: 派价格竞猜 / 扔派游戏 / ★派烘焙评比 / 派命名投票
+- **s7** `cloze`  〔PETE: That was the county fair ___1___ summer. JUNE: There _〕 第 1 空
+    - 选项: ★last / next / this now / every
+- **s7** `cloze`  〔PETE: That was the county fair ___1___ summer. JUNE: There _〕 第 2 空
+    - 选项: were / ★was / is / are
+- **s7** `cloze`  〔PETE: That was the county fair ___1___ summer. JUNE: There _〕 第 3 空
+    - 选项: was / is / ★were / are
+- **s7** `cloze`  〔PETE: That was the county fair ___1___ summer. JUNE: There _〕 第 4 空
+    - 选项: Were / Is / Are / ★Was
+- **s7** `cloze`  〔PETE: That was the county fair ___1___ summer. JUNE: There _〕 第 5 空
+    - 选项: ★second / two / first two / double
+- **s7** `cloze`  〔JUNE: Dad, look at this ___! Where was this?〕 第 6 空
+    - 选项: piano / paper / phone / ★photo
+- **s7** `cloze`  〔JUNE: Oh yeah! There was a ___ Ferris wheel!〕 第 7 空
+    - 选项: second / tiny / ★huge / loud
+- **s7** `cloze`  〔JUNE: The food! There was so much funnel ___.〕 第 8 空
+    - 选项: coke / ★cake / lake / case
+- **s7** `cloze`  〔PETE: And there were corn dogs ___.〕 第 9 空
+    - 选项: nowhere / here all / ★everywhere / anywhere
+- **s7** `cloze`  〔PETE: I know! The judges were ___.〕 第 10 空
+    - 选项: right / ★wrong / loud / second
+- **s7** `cloze`  〔JUNE: Ha! Let's go again this ___.〕 第 11 空
+    - 选项: winter / year last / week now / ★summer
+- **s8** `choice`  When was the county fair?
+    - 选项: Last night / Last Friday / This morning / ★Last summer
+- **s8** `choice`  What was huge?
+    - 选项: The pie / ★The Ferris wheel / The corn dog / The pony
+- **s8** `choice`  Were there pony rides?
+    - 选项: ★Yes, there were. / Yes, there was. / We don't know. / No, there weren't.
+- **s8** `choice`  What place was Grandma's pie?
+    - 选项: Third / First / ★Second / Last
+- **s9** `scenario`  回忆去年集市上有个巨大的摩天轮
+    - 答案: There was a huge Ferris wheel last summer.
+- **s9** `scenario`  问当时有没有派比赛
+    - 答案: Was there a pie contest?
+- **s9** `scenario`  说当时到处都是炸热狗棒
+    - 答案: There were corn dogs everywhere.
+- **s10** `choice`  There ___ a big race last year.
+    - 选项: were / is / ★was / are
+- **s10** `choice`  There ___ two bands at the fair.
+    - 选项: be / ★were / was / is
+- **s10** `choice`  ___ there a contest? — Yes, there was.
+    - 选项: Are / Is / ★Was / Were
+- **s10** `choice`  We were there ___ summer.
+    - 选项: ★last / next / tomorrow / every now
+- **s10** `transform`  There is a Ferris wheel.（改为去年）
+    - 答案: There was a Ferris wheel last year.
+- **s10** `transform`  There are pony rides.（改为过去式）
+    - 答案: There were pony rides.
+- **s10** `transform`  There was a pie contest.（变一般疑问句）
+    - 答案: Was there a pie contest?
+- **s10** `choice`  There ___ funnel cakes everywhere.
+    - 选项: are / is / was / ★were
+- **s10** `choice`  Was there a contest? — No, there ___.
+    - 选项: ★wasn't / weren't / isn't / not
+- **s10** `transform`  There are two contests.（改为过去式）
+    - 答案: There were two contests.
+
+## am1_l36
+
+- **s5** `choice` [gp1] I ___ to school yesterday.
+    - 选项: walk / ★walked / walking / walks
+- **s5** `choice` [gp1] stop 的过去式：
+    - 选项: stopping / stoped / ★stopped / stops
+- **s5** `choice` [gp1] She ___ her grandma last night.
+    - 选项: ★called / calling / calls / call
+- **s5** `choice` [gp1] 过去式动词随人称：
+    - 选项: 变 ing / ★不变化 / 变原形 / 加 s
+- **s5** `transform` [gp1] I miss the bus.（改为昨天）
+    - 答案: I missed the bus yesterday.
+- **s5** `transform` [gp1] They close at six.（改为过去式）
+    - 答案: They closed at six.
+- **s5** `choice` [gp2] walked 的 -ed 读音：
+    - 选项: d / w / t / ɪd / ★/t/
+- **s5** `choice` [gp2] 讲故事开头"首先"用：
+    - 选项: Start of / Begin at / ★First / One
+- **s5** `choice` [gp1] He ___ the bus yesterday.
+    - 选项: missing / misses / ★missed / miss
+- **s5** `choice` [gp1] spill 的过去式：
+    - 选项: spiled / ★spilled / spills / spilling
+- **s5** `choice` [gp1] close 的过去式：
+    - 选项: closeed / closd / ★closed / closing
+- **s5** `choice` [gp1] They ___ to work in the rain.
+    - 选项: walks / walk / walking / ★walked
+- **s5** `transform` [gp1] She calls her grandma.（改为昨晚）
+    - 答案: She called her grandma last night.
+- **s5** `choice` [gp2] called 的 -ed 读音：
+    - 选项: ɪd / t / k / ★/d/ / d
+- **s5** `choice` [gp2] 叙事"然后"用：
+    - 选项: End / ★Then / Two / So far
+- **s5** `choice` [gp2] 叙事"所以"用：
+    - 选项: ★So / Then at / First / Or
+- **s6** `choice`  表示"不会吧！"的惊叹：
+    - 选项: Way no! / ★No way! / No road! / Not way go!
+- **s6** `choice`  公司里的 IT 指：
+    - 选项: ★技术支持部门 / 食堂 / 会计部 / 前台
+- **s6** `choice`  laptop 是：
+    - 选项: 平板支架 / 台式机 / ★笔记本电脑 / 大腿垫
+- **s6** `choice`  安慰人"今天又是新的一天"：
+    - 选项: ★Today is a new day. / New today day is. / Today is day new. / Day new is today go.
+- **s7** `cloze`  〔MAX: I ___1___ the bus. MAX: So I ___2___ to work in the rai〕 第 1 空
+    - 选项: ★missed / miss / missing / misses
+- **s7** `cloze`  〔MAX: I ___1___ the bus. MAX: So I ___2___ to work in the rai〕 第 2 空
+    - 选项: walk / walking / ★walked / walks
+- **s7** `cloze`  〔MAX: I ___1___ the bus. MAX: So I ___2___ to work in the rai〕 第 3 空
+    - 选项: spill / ★spilled / spilling / spills
+- **s7** `cloze`  〔MAX: I ___1___ the bus. MAX: So I ___2___ to work in the rai〕 第 4 空
+    - 选项: stops / stop / stopping / ★stopped
+- **s7** `cloze`  〔MAX: I ___1___ the bus. MAX: So I ___2___ to work in the rai〕 第 5 空
+    - 选项: ★closed / close / closing / closes
+- **s7** `cloze`  〔IVY: Hey, Max. You look ___.〕 第 6 空
+    - 选项: fired / timed / ★tired / tried
+- **s7** `cloze`  〔MAX: Ugh. Yesterday was a ___.〕 第 7 空
+    - 选项: ★mess / miss / most / mass
+- **s7** `cloze`  〔IVY: What ___?〕 第 8 空
+    - 选项: happens / ★happened / happening / happen
+- **s7** `cloze`  〔MAX: Everything! First, I ___ the bus.〕 第 9 空
+    - 选项: miss / messed / mixed / ★missed
+- **s7** `cloze`  〔MAX: So I ___ to work... in the rain.〕 第 10 空
+    - 选项: worked / ★walked / washed / watched
+- **s7** `cloze`  〔MAX: Then I ___ coffee on my laptop.〕 第 11 空
+    - 选项: ★spilled / spoiled / spelled / skilled
+- **s8** `choice`  Max says "Yesterday was ___."
+    - 选项: Fun / A new day / ★A mess / Great
+- **s8** `choice`  Max spilled coffee on his ___.
+    - 选项: Shirt / ★Laptop / Charts / Desk
+- **s8** `choice`  Max ___ to work in the rain.
+    - 选项: Ran / Biked / Drove / ★Walked
+- **s8** `choice`  What closed at lunch?
+    - 选项: ★Max's favorite taco place / The bus stop / The office / IT
+- **s9** `scenario`  问朋友"发生什么事了？"
+    - 答案: What happened?
+- **s9** `scenario`  说你昨天错过了公交
+    - 答案: I missed the bus yesterday.
+- **s9** `scenario`  听到离谱的事，惊呼
+    - 答案: No way!
+- **s10** `choice`  I ___ to school yesterday.
+    - 选项: walk / walking / walks / ★walked
+- **s10** `choice`  stop 的过去式：
+    - 选项: stops / ★stopped / stopping / stoped
+- **s10** `choice`  She ___ her mom last night.
+    - 选项: ★called / call / calling / calls
+- **s10** `choice`  missed 的 -ed 读音是：
+    - 选项: /s/ / ★/t/ / /d/ / /ɪd/
+- **s10** `transform`  I walk to work.（改为昨天）
+    - 答案: I walked to work yesterday.
+- **s10** `transform`  He calls IT.（改为过去式：两次）
+    - 答案: He called IT twice.
+- **s10** `transform`  They close the taco place.（改为过去式）
+    - 答案: They closed the taco place.
+- **s10** `choice`  They ___ the store at six.（过去式）
+    - 选项: closing / close / closes / ★closed
+- **s10** `choice`  spilled 的 -ed 读音：
+    - 选项: d / t / ɪd / ★/d/ / s
+- **s10** `transform`  He walks to work.（改为昨天）
+    - 答案: He walked to work yesterday.

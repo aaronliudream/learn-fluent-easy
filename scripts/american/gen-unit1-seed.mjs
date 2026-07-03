@@ -72,6 +72,8 @@ const EXPANSIONS = [
   { unit: 3, text: readOpt("美语课程_单元3_扩容包_v1.md") },
   // 单元4:同上用 gp 码;基线实查184→288
   { unit: 4, text: readOpt("美语课程_单元4_扩容包_v1.md") },
+  // 单元6:gp 码;L33/L36 关7"新N"已换算为真实 blank_no(base7=5);基线实查184→284
+  { unit: 6, text: readOpt("美语课程_单元6_扩容包_v1.md") },
 ];
 
 // lesson_no → 内容 id(两位补零:am1_l01 … am1_l72)

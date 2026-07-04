@@ -103,20 +103,24 @@ export default function AmericanHub() {
                     open ? "border-sky-200 bg-white shadow-sm hover:border-sky-400 hover:shadow" : "border-slate-100 bg-slate-100/60"
                   }`}>
                   <span className={`text-xs font-bold ${open ? "text-sky-600" : "text-slate-400"}`}>
-                    <T>单元</T> {n}
+                    <T>单元</T> {n}{open ? <> · {u!.lessons.length} <T>课</T></> : null}
                   </span>
                   {open ? (
                     <>
-                      <span className="mt-1 text-sm font-semibold text-slate-800">{u!.lessons.length} <T>课</T></span>
-                      <span className="mt-0.5 line-clamp-1 text-xs text-slate-400">{u!.lessons[0]?.title_cn ?? ""}</span>
-                      {prog.loggedIn && (
-                        <div className="mt-2 w-full">
-                          <div className="text-[11px] font-semibold text-sky-600">{prog.pct[n] ?? 0}%</div>
-                          <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-sky-100">
-                            <div className="h-full rounded-full bg-sky-500 transition-all" style={{ width: `${prog.pct[n] ?? 0}%` }} />
+                      <span className="mt-1 line-clamp-1 text-xs text-slate-400">{u!.lessons[0]?.title_cn ?? ""}</span>
+                      {prog.loggedIn &&
+                        ((prog.pct[n] ?? 0) > 0 ? (
+                          // 有进度:显示百分比 + 进度条
+                          <div className="mt-2 w-full">
+                            <div className="text-[11px] font-semibold text-sky-600">{prog.pct[n]}%</div>
+                            <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-sky-100">
+                              <div className="h-full rounded-full bg-sky-500 transition-all" style={{ width: `${prog.pct[n]}%` }} />
+                            </div>
                           </div>
-                        </div>
-                      )}
+                        ) : (
+                          // 0% 未开始:不显示空进度条,给个淡标签(避免满屏 0% 观感差)
+                          <span className="mt-2 text-[11px] font-medium text-slate-300"><T>未开始</T></span>
+                        ))}
                     </>
                   ) : (
                     <span className="mt-2 inline-flex items-center gap-1 text-xs text-slate-400">

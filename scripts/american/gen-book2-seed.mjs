@@ -60,6 +60,16 @@ function placeQuota(qs) {
 const sq = (v) => (v == null ? "NULL" : "'" + String(v).replace(/'/g, "''") + "'");
 const jb = (o) => "'" + JSON.stringify(o).replace(/'/g, "''") + "'::jsonb";
 
+// 逐题解释合并:若存在 <id>_explanations_final.md(格式 "### sN seqM | ans: ..."+解释),
+// 按 (stage,seq) 注入 payload.explanation_cn → 重跑 seed 不抹掉已审解释(防 ON CONFLICT 覆盖)。
+function loadExp(id) {
+  const map = new Map();
+  let text; try { text = readFileSync(path.join(SRCDIR, `${id}_explanations_final.md`), "utf8"); } catch { return map; }
+  const re = /###\s*s(\d+)\s+seq(\d+)\s*\|\s*ans:.+?\n([\s\S]*?)(?=\n###\s*s\d+\s+seq|\s*$)/g;
+  let m; while ((m = re.exec(text)) !== null) map.set(`${m[1]}:${m[2]}`, m[3].trim());
+  return map;
+}
+
 // ---------- 载入所有 am2_l*.json ----------
 const files = readdirSync(SRCDIR).filter((f) => /^am2_l\d+\.json$/.test(f)).sort();
 if (!files.length) { console.error("docs/american/book2/ 下无 am2_l*.json"); process.exit(1); }
@@ -74,6 +84,7 @@ const verify = []; // 自检回显
 for (const L of lessons) {
   const U = L.unit_no;
   const gpId = (gp) => `${L.id}_${gp}`;
+  const expMap = loadExp(L.id); // (stage:seq) → explanation_cn(已审定稿,若有)
 
   // american_lessons(含 grammar_card:关5 语法小知识折叠卡 jsonb;依赖 american_add_grammar_card.sql 已跑)
   push(U, `INSERT INTO public.american_lessons (id,book_no,unit_no,lesson_no,title_en,title_cn,grammar_focus,scene,prelisten_question,grammar_card) VALUES (${sq(L.id)},2,${L.unit_no},${L.lesson_no},${sq(L.title_en)},${sq(L.title_cn)},${sq(L.grammar_focus)},${sq(L.scene)},${L.prelisten ? jb(L.prelisten) : "NULL"},${L.grammar_card ? jb(L.grammar_card) : "NULL"}) ON CONFLICT (id) DO UPDATE SET book_no=EXCLUDED.book_no,title_en=EXCLUDED.title_en,title_cn=EXCLUDED.title_cn,grammar_focus=EXCLUDED.grammar_focus,scene=EXCLUDED.scene,prelisten_question=EXCLUDED.prelisten_question,grammar_card=EXCLUDED.grammar_card;`);
@@ -108,6 +119,7 @@ for (const L of lessons) {
     let seq = 1;
     for (const q of qs) {
       const payload = { stem: q.stem, options: q.options, answer_index: q.answer_index, ...extra(q) };
+      const ex = expMap.get(`${stage}:${seq}`); if (ex) payload.explanation_cn = ex;
       push(U, `INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES (${sq(L.id)},${stage},${sq(q.gpId || null)},'choice',${jb(payload)},${seq}) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;`);
       verify.push(`  ${L.id} s${stage} #${seq} [${"abcd"[q.answer_index]}] ${q.options[q.answer_index]}`);
       seq++;
@@ -125,6 +137,7 @@ for (const L of lessons) {
     let seq = 1;
     for (const b of L.stage7_cloze.blanks) {
       const payload = { stem: `第 ${b.blank_no} 空`, context: L.stage7_cloze.context, blank_no: b.blank_no, options: b.options, answer_index: b.answer_index };
+      const ex = expMap.get(`7:${seq}`); if (ex) payload.explanation_cn = ex;
       push(U, `INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES (${sq(L.id)},7,NULL,'cloze',${jb(payload)},${seq}) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET payload=EXCLUDED.payload;`);
       verify.push(`  ${L.id} s7 #${seq} 空${b.blank_no} [${"abcd"[b.answer_index]}] ${b.options[b.answer_index]}`);
       seq++;

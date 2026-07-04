@@ -80,7 +80,7 @@
     { "gp": "gp3", "stem": "He looked ___ when he heard the news.", "options": ["angry", "angrily", "anger", "angers"] },
     { "gp": "gp4", "stem": "\"The play was really funny.\" 属于哪种句型?", "options": ["主系表", "主谓", "主谓宾", "主谓双宾"] },
     { "gp": "gp4", "stem": "下列哪句不完整,动词后面还缺\"什么\"(缺宾语)?", "options": ["I really enjoyed.", "He arrived yesterday.", "They were talking loudly.", "She smiled."] },
-    { "gp": "gp4", "stem": "哪句的 play 后面不接任何东西,意思也完整?", "options": ["The kids play in the park.", "They play soccer.", "She plays the piano.", "We played a game."] },
+    { "gp": "gp4", "stem": "哪句的 play 后面没有宾语(动作的对象),意思也完整?", "options": ["The kids play in the park.", "They play soccer.", "She plays the piano.", "We played a game."] },
     { "gp": "gp5", "stem": "哪句是复合宾语?(判别法:宾语后面加 be 能成句 → him is captain ✓)", "options": ["They made him captain.", "She gave him a ticket.", "I told her the truth.", "He bought me coffee."] },
     { "gp": "gp6", "stem": "把 \"He likes the play.\" 变否定:", "options": ["He doesn't like the play.", "He don't like the play.", "He not likes the play.", "He isn't like the play."] },
     { "gp": "gp6", "stem": "下列哪个否定式没有缩写形式?", "options": ["am not", "is not", "do not", "cannot"] },
@@ -98,7 +98,9 @@
     { "stem": "\"剧院\" 的美式拼写是:", "options": ["theater", "theatre", "theator", "theatr"] },
     { "stem": "\"转过身\" 的地道美语说法是:", "options": ["turn around", "turn round", "turn about", "turn back"] },
     { "stem": "语块 get angry 的意思是:", "options": ["生气", "高兴", "害怕", "惊讶"] },
-    { "stem": "\"in the end\" 的意思是:", "options": ["最后,终于", "在结尾的位置", "立刻,马上", "从头开始"] }
+    { "stem": "\"in the end\" 的意思是:", "options": ["最后,终于", "在结尾的位置", "立刻,马上", "从头开始"] },
+    { "stem": "语块 pay attention (to) 的意思是:", "options": ["注意,留心", "付钱", "参加", "道歉"] },
+    { "stem": "\"我受不了了!\" 更常用的美语口语说法是:", "options": ["I can't stand it!", "I can't sit it!", "I can't stay it!", "I can't carry it!"] }
   ],
   "contrast": [
     { "us": "theater", "uk": "theatre", "note_cn": "拼写差异,发音相同" },

@@ -23,7 +23,7 @@ const About = () => {
         <h3><T>核心价值</T></h3>
         <ul>
           <li><Globe2 className="inline size-4" /> <T>全球可用，为非英语母语者设计；支持 23+ 界面语言。</T></li>
-          <li><Heart className="inline size-4" /> <T>不卖广告、不滥用数据。订阅与一次性付费支撑产品。</T></li>
+          <li><Heart className="inline size-4" /> <T>不卖广告、不滥用数据。</T></li>
         </ul>
 
         <h3><T>联系我们</T></h3>

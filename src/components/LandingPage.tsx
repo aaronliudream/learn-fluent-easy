@@ -87,6 +87,8 @@ type CourseCardData = {
   title: string;
   desc: string;
   tag: string;
+  /** 标题/副标题下方的覆盖说明行(仅美语卡有;其余卡不填则不渲染) */
+  coverage?: string;
   /** 有照片走 <img>;无照片走 gradient(美语卡即用此,避开真实校名/地标商标风险)。 */
   image?: string;
   gradient?: string;
@@ -342,7 +344,7 @@ function CourseCard({ c, admin }: { c: (typeof COURSE_CARDS)[number]; admin?: bo
           <p className="text-xs leading-relaxed text-white/85">
             <T>{c.desc}</T>
           </p>
-          {"coverage" in c && c.coverage && (
+          {c.coverage && (
             <p className="text-[11px] leading-relaxed text-white/70">
               <T>{c.coverage}</T>
             </p>

@@ -4,6 +4,7 @@
  */
 import { useCallback, useMemo } from "react";
 import { QuizRunner, questionsToItems } from "@/components/american/QuizRunner";
+import { GrammarTipsView, type TipContent } from "@/components/grammar/GrammarTipsCard";
 import { markStageComplete, recordMastery, type LessonBundle } from "@/lib/american/data";
 
 export function AmericanGrammarStage({ bundle, onDone }: { bundle: LessonBundle; onDone?: () => void }) {
@@ -22,5 +23,13 @@ export function AmericanGrammarStage({ bundle, onDone }: { bundle: LessonBundle;
     if (onDone) setTimeout(onDone, 1400);
   }, [bundle.lesson.id, onDone]);
 
-  return <QuizRunner items={items} onAnswer={onAnswer} onComplete={onComplete} />;
+  // 关5「教了再考」:题目前先展示语法小知识折叠卡(本课术语现场拆解)。无卡→不渲染。
+  const card = bundle.lesson.grammar_card;
+  const header = card ? (
+    <div className="mx-auto max-w-2xl px-4 pt-4">
+      <GrammarTipsView tip={card as TipContent} />
+    </div>
+  ) : undefined;
+
+  return <QuizRunner items={items} onAnswer={onAnswer} onComplete={onComplete} header={header} />;
 }

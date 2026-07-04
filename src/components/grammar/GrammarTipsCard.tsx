@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BookOpen, ChevronDown, ChevronUp, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
-type TipContent = {
+export type TipContent = {
   title?: string;
   intro?: string;
   table?: { headers: string[]; rows: string[][] }; // 通用速查表(2列:用法/句型 → 例句/规则)
@@ -19,7 +19,6 @@ type TipContent = {
  */
 export default function GrammarTipsCard({ volume, unit, publisher }: { volume?: string; unit?: string; publisher?: string | null }) {
   const [tip, setTip] = useState<TipContent | null>(null);
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     if (!volume || !unit) return;
@@ -37,6 +36,16 @@ export default function GrammarTipsCard({ volume, unit, publisher }: { volume?: 
     return () => { cancelled = true; };
   }, [volume, unit, publisher]);
 
+  if (!tip) return null;
+  return <GrammarTipsView tip={tip} />;
+}
+
+/**
+ * 纯渲染折叠卡(内容由 prop 传入,不查库)。junior/高考走 GrammarTipsCard(DB 包装),
+ * 美语课程直接 <GrammarTipsView tip={lesson.grammar_card} /> 复用同款视觉,零耦合 junior 表。
+ */
+export function GrammarTipsView({ tip }: { tip: TipContent }) {
+  const [open, setOpen] = useState(false);
   if (!tip) return null;
 
   return (

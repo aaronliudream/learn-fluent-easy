@@ -13,6 +13,7 @@ import {
 import { listExams } from "@/data/exams";
 import { isReviewUnlocked } from "@/lib/suzhouExamProgress";
 import { useIsAdmin } from "@/hooks/useIsAdmin";
+import { useExamWhitelisted } from "@/lib/gaokaoHub/examGate";
 import JuniorComingSoon from "@/components/junior/JuniorComingSoon";
 import { isJuniorGradeOpen } from "@/lib/juniorHub/access";
 
@@ -80,6 +81,7 @@ export default function Junior() {
   const [practiced, setPracticed] = useState<number | null>(null);     // get_user_practiced_count() distinct 题
   const [totalMinutes, setTotalMinutes] = useState<number | null>(null); // get_user_total_minutes() 累计分钟
 
+  const examOk = useExamWhitelisted();                   // 中考真题仅 email 白名单可见(纯前端藏入口,对齐高考真题)
   const overview = useMasteryOverview("junior");        // 学科卡进度 + 已掌握单词 + 完成课程%
   const classroom = useJuniorClassroomSync(grade);       // 课堂同步掌握度(项已掌握 + 百分比)
   const { stats: streak } = useStreakStats(userId);      // 连续学习天数
@@ -376,7 +378,7 @@ export default function Junior() {
 
         {/* ===== 学科卡片 3×2 ===== */}
         <section className="mb-10 grid grid-cols-1 gap-[18px] sm:grid-cols-2 md:grid-cols-3">
-          {CARDS.map((card) => {
+          {CARDS.filter((card) => card.key !== "exam" || examOk).map((card) => {
             const s = statByKey[card.moduleKey] ?? { done: 0, total: 0, percent: 0 };
             const pct = Math.max(0, Math.min(100, s.percent));
             const label = pct > 0 ? "继续学习 →" : "开始学习 →"; // 真按进度驱动

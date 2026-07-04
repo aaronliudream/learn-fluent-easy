@@ -1,5 +1,7 @@
 /**
- * 关6 · 美语点睛。先看美语 vs 英语对照卡(完成度),再做 stage6 小测(掌握度)。
+ * 关6 · 美语点睛。先看卡片(完成度),再做 stage6 小测(掌握度)。
+ * 方案A改良:同一张 american_amencontrast 表混装两种卡,按该条有无 example1 切换渲染:
+ *   有 example1 → 语块卡(chunk + 音标 + 中文 + 2 例句);无 → 美英对照卡(us / uk / note_cn)。
  */
 import { useCallback, useMemo, useState } from "react";
 import { Volume2, ArrowRight } from "lucide-react";
@@ -25,29 +27,64 @@ export function AmericanContrastStage({ bundle, onDone }: { bundle: LessonBundle
     <div className="mx-auto max-w-2xl px-4 pb-28 pt-4">
       <header className="mb-4">
         <h1 className="text-lg font-bold text-slate-800">🇺🇸 <T>美语点睛</T></h1>
-        <p className="mt-0.5 text-sm text-slate-500"><T>看看这些地道美式说法,和英式有何不同</T></p>
+        <p className="mt-0.5 text-sm text-slate-500"><T>地道美式说法与常用语块,一起积累</T></p>
       </header>
       <div className="space-y-2.5">
-        {bundle.contrast.map((c) => (
-          <div key={c.id} className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
-            <div className="flex items-center gap-2">
-              <span className="rounded-md bg-sky-100 px-2 py-0.5 text-xs font-bold text-sky-700">🇺🇸 US</span>
-              <span className="flex-1 text-[15px] font-semibold text-slate-800">{c.us}</span>
-              <button type="button" aria-label="朗读美语说法"
-                onClick={() => { unlockAmericanAudio(); void speakUS(c.us); }}
-                className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-sky-50 text-sky-600">
-                <Volume2 className="size-4" />
-              </button>
-            </div>
-            {c.uk && c.uk !== "—" && (
-              <div className="mt-1.5 flex items-center gap-2 text-sm text-slate-400">
-                <span className="rounded-md bg-slate-100 px-2 py-0.5 text-xs font-bold">🇬🇧 UK</span>
-                <span>{c.uk}</span>
+        {bundle.contrast.map((c) =>
+          c.example1 ? (
+            // 语块卡:chunk(us) + 音标(ipa) + 中文(note_cn) + 最多 2 例句
+            <div key={c.id} className="rounded-2xl border border-amber-100 bg-white p-4 shadow-sm">
+              <div className="flex items-center gap-2">
+                <span className="rounded-md bg-amber-100 px-2 py-0.5 text-xs font-bold text-amber-700">💬 <T>语块</T></span>
+                <span className="flex-1 text-[15px] font-semibold text-slate-800">{c.us}</span>
+                <button type="button" aria-label="朗读语块"
+                  onClick={() => { unlockAmericanAudio(); void speakUS(c.us); }}
+                  className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-amber-50 text-amber-600">
+                  <Volume2 className="size-4" />
+                </button>
               </div>
-            )}
-            {c.note_cn && <p className="mt-1.5 text-sm text-slate-500">{c.note_cn}</p>}
-          </div>
-        ))}
+              {c.ipa && <p className="mt-1 text-sm text-slate-400">{c.ipa}</p>}
+              {c.note_cn && <p className="mt-1 text-sm text-slate-600">{c.note_cn}</p>}
+              <div className="mt-2.5 space-y-2 border-t border-slate-100 pt-2.5">
+                {[[c.example1, c.example1_cn], [c.example2, c.example2_cn]]
+                  .filter(([en]) => en)
+                  .map(([en, cn], i) => (
+                    <div key={i} className="text-sm">
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-slate-700">{en}</span>
+                        <button type="button" aria-label="朗读例句"
+                          onClick={() => { unlockAmericanAudio(); void speakUS(en as string); }}
+                          className="inline-flex size-6 shrink-0 items-center justify-center rounded-full bg-amber-50 text-amber-500">
+                          <Volume2 className="size-3.5" />
+                        </button>
+                      </div>
+                      {cn && <div className="mt-0.5 text-[13px] text-slate-400">{cn}</div>}
+                    </div>
+                  ))}
+              </div>
+            </div>
+          ) : (
+            // 美英对照卡:us / uk / note_cn(原样)
+            <div key={c.id} className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+              <div className="flex items-center gap-2">
+                <span className="rounded-md bg-sky-100 px-2 py-0.5 text-xs font-bold text-sky-700">🇺🇸 US</span>
+                <span className="flex-1 text-[15px] font-semibold text-slate-800">{c.us}</span>
+                <button type="button" aria-label="朗读美语说法"
+                  onClick={() => { unlockAmericanAudio(); void speakUS(c.us); }}
+                  className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-sky-50 text-sky-600">
+                  <Volume2 className="size-4" />
+                </button>
+              </div>
+              {c.uk && c.uk !== "—" && (
+                <div className="mt-1.5 flex items-center gap-2 text-sm text-slate-400">
+                  <span className="rounded-md bg-slate-100 px-2 py-0.5 text-xs font-bold">🇬🇧 UK</span>
+                  <span>{c.uk}</span>
+                </div>
+              )}
+              {c.note_cn && <p className="mt-1.5 text-sm text-slate-500">{c.note_cn}</p>}
+            </div>
+          )
+        )}
       </div>
       <button type="button" onClick={() => setPhase("quiz")}
         className="mt-6 inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-sky-600 py-3 text-sm font-semibold text-white">

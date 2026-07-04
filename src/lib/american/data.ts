@@ -81,6 +81,13 @@ export type AmericanContrast = {
   us: string;
   uk: string;
   note_cn: string | null;
+  // 方案A改良:同表混装「语块卡」。有 example1 = 语块卡(chunk+ipa+中文+2例句),无 = 美英对照卡。
+  // 这些列可能尚未落库(加字段 SQL 未跑),故 fetch 用 select("*"),缺列时为 undefined → 当对照卡渲染。
+  ipa?: string | null;
+  example1?: string | null;
+  example1_cn?: string | null;
+  example2?: string | null;
+  example2_cn?: string | null;
 };
 
 export type AmericanUnit = { unit_no: number; lessons: AmericanLesson[] };
@@ -121,7 +128,8 @@ export async function fetchLessonBundle(lessonId: string): Promise<LessonBundle 
     db.from("american_words").select("id,lesson_id,word,ipa,pos,meaning_cn,example").eq("lesson_id", lessonId),
     db.from("american_grammar_points").select("id,lesson_id,name,body_md").eq("lesson_id", lessonId).order("id", { ascending: true }),
     db.from("american_questions").select("id,lesson_id,stage,grammar_point_id,qtype,payload,seq").eq("lesson_id", lessonId).order("stage", { ascending: true }).order("seq", { ascending: true }),
-    db.from("american_amencontrast").select("id,lesson_id,us,uk,note_cn").eq("lesson_id", lessonId),
+    // select("*"):新增的 ipa/example* 列可能尚未落库,用 * 避免"列不存在"报错清空关6(缺列→undefined→当对照卡)。
+    db.from("american_amencontrast").select("*").eq("lesson_id", lessonId),
   ]);
   const lesson = lessonRes.data as AmericanLesson | null;
   if (!lesson) return null;

@@ -5,6 +5,8 @@
  */
 export const AMERICAN_COURSE_NAME = "现代版美语新概念英语1-4册"; // Aaron 定名(2026-07-03)
 export const AMERICAN_COURSE_SUBTITLE = "地道美语 从零开始";
+/** 标题下方覆盖说明行(涵盖范围) */
+export const AMERICAN_COURSE_COVERAGE = "涵盖新概念1-4册全部词汇与核心知识点";
 /** 卡片左下标签 & 规模文案 */
 export const AMERICAN_COURSE_SCALE = "学完四册，托福雅思高分不是问题";
 /** 课程入口路径 */

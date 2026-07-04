@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Lock, Sparkles, RotateCcw, ChevronRight, BookOpen, Download } from "lucide-react";
 import { T } from "@/i18n/T";
 import { fetchUnits, fetchReviewCount, fetchUnitCompletion, type AmericanUnit } from "@/lib/american/data";
-import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_SUBTITLE, AMERICAN_COURSE_SCALE } from "@/lib/american/brand";
+import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_SUBTITLE, AMERICAN_COURSE_SCALE, AMERICAN_COURSE_COVERAGE } from "@/lib/american/brand";
 
 const TOTAL_UNITS = 12;
 
@@ -52,6 +52,7 @@ export default function AmericanHub() {
           </span>
           <h1 className="mt-3 text-2xl font-bold">{AMERICAN_COURSE_NAME}</h1>
           <p className="mt-1 text-sm text-white/85">{AMERICAN_COURSE_SUBTITLE}</p>
+          <p className="mt-1 text-xs text-white/70"><T>{AMERICAN_COURSE_COVERAGE}</T></p>
           <span className="mt-3 inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-semibold">{AMERICAN_COURSE_SCALE}</span>
         </header>
 

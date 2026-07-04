@@ -34,6 +34,7 @@ import {
   AMERICAN_COURSE_NAME,
   AMERICAN_COURSE_SUBTITLE,
   AMERICAN_COURSE_SCALE,
+  AMERICAN_COURSE_COVERAGE,
   AMERICAN_COURSE_PATH,
 } from "@/lib/american/brand";
 
@@ -127,6 +128,7 @@ const COURSE_CARDS: CourseCardData[] = [
     icon: Sparkles,
     title: AMERICAN_COURSE_NAME,
     desc: AMERICAN_COURSE_SUBTITLE,
+    coverage: AMERICAN_COURSE_COVERAGE,
     tag: AMERICAN_COURSE_SCALE,
     gradient: "linear-gradient(135deg, #0a1628 0%, #16375f 52%, #c9922e 150%)",
     badge: "美式课程",
@@ -340,6 +342,11 @@ function CourseCard({ c, admin }: { c: (typeof COURSE_CARDS)[number]; admin?: bo
           <p className="text-xs leading-relaxed text-white/85">
             <T>{c.desc}</T>
           </p>
+          {"coverage" in c && c.coverage && (
+            <p className="text-[11px] leading-relaxed text-white/70">
+              <T>{c.coverage}</T>
+            </p>
+          )}
           <span className="inline-block w-fit rounded-md bg-white/15 px-2 py-0.5 text-[10px] font-semibold text-white/90">
             {c.tag}
           </span>

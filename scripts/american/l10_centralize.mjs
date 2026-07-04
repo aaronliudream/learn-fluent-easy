@@ -5,8 +5,14 @@
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 
-const SCRATCH = 'C:/Users/willi/AppData/Local/Temp/claude/C--Projects-learn-fluent-easy/dce5bb16-1d15-4c48-a6cb-7dba17192a75/scratchpad';
+// 册号:--book N(默认1)。输入 l10_out_U*.json 目录用 L10_DIR 传(册无关)。
+// lesson_id 前缀(am1_/am2_/…)从数据里读,不硬编码。用法:
+//   L10_DIR=<目录> node scripts/american/l10_centralize.mjs --book 2
+const BOOK = (() => { const i = process.argv.indexOf('--book'); return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : '1'; })();
+const SCRATCH = process.env.L10_DIR || 'C:/Users/willi/AppData/Local/Temp/claude/C--Projects-learn-fluent-easy/dce5bb16-1d15-4c48-a6cb-7dba17192a75/scratchpad';
 const SQLAA = 'C:/Projects/learn-fluent-easy/SQLAA';
+// 输出 SQL 文件名:第一册沿用原名(回归零差异),第二册起带 amN 前缀防撞。
+const OUTPREFIX = BOOK === '1' ? 'american' : `american_am${BOOK}`;
 
 // 说话人标签清洗(与 speak.ts / ttsClean 同口径),用于 audio 清单预热核对
 const SPEAKER_LABEL = /(^|[\r\n]+|[.?!]["'’)\]]?[ \t]+|\b\d{1,2}\.[ \t]+)([A-Z][a-zA-Z]{0,5}):[ \t]+(?=["'“‘A-Z])/g;
@@ -30,7 +36,7 @@ function shuffleOptions(options, answerIndex, seedStr) {
 }
 
 const esc = (s) => String(s).replace(/'/g, "''");
-const lessonNum = (id) => Number(id.replace('am1_l', ''));
+const lessonNum = (id) => Number(String(id).replace(/^am\d+_l/, '')); // 册无关
 const unitOf = (id) => Math.ceil(lessonNum(id) / 6);
 const pad2 = (n) => String(n).padStart(2, '0');
 
@@ -87,8 +93,8 @@ const summary = [];
 for (let u = 1; u <= 12; u++) {
   const lessons = (units[u] || []).sort((a, b) => lessonNum(a.lesson) - lessonNum(b.lesson));
   if (!lessons.length) { errors.push(`单元${u} 无课`); continue; }
-  let sql = `-- american_stage10_enrich_unit${pad2(u)}.sql\n`;
-  sql += `-- ⑤ 关10 丰富化 · 单元${u}(${lessons.map(l => l.lesson.replace('am1_l', 'L')).join('/')})。单调复用题 → 五题型综合检验。\n`;
+  let sql = `-- ${OUTPREFIX}_stage10_enrich_unit${pad2(u)}.sql\n`;
+  sql += `-- ⑤ 关10 丰富化 · 单元${u}(${lessons.map(l => l.lesson.replace(/^am\d+_l/, 'L')).join('/')})。单调复用题 → 五题型综合检验。\n`;
   sql += `-- 每课:删旧关10冗余(deleteSeqs)+ 上轮增量(seq>=21),再插新五题型(seq 21+);保留的句型题(keepSeqs≤10)不动。\n`;
   sql += `-- 幂等可重跑;词义/情景/阅读(带passage)/听力(带audio)全本课取材,选项已打散答案位置。\n`;
   sql += `BEGIN;\n\n`;
@@ -122,7 +128,7 @@ for (let u = 1; u <= 12; u++) {
   sql += `FROM american_questions WHERE lesson_id IN (${ids}) AND stage=10 GROUP BY lesson_id ORDER BY lesson_id;\n\n`;
   sql += `COMMIT;\n`;
 
-  writeFileSync(`${SQLAA}/american_stage10_enrich_unit${pad2(u)}.sql`, sql);
+  writeFileSync(`${SQLAA}/${OUTPREFIX}_stage10_enrich_unit${pad2(u)}.sql`, sql);
 }
 
 // audio 清单(去重,写预热用)

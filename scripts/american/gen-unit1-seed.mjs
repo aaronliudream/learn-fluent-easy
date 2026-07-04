@@ -96,8 +96,14 @@ const EXPANSIONS = [
     gpSeq: { 67: [1,1,1,1,2,2,2,2], 68: [1,1,1,1,2,2,2,2], 69: [2,2,2,2,1,1,1,1], 70: [1,1,1,1,1,1,1,1], 71: [1,1,1,1,2,2,2,2], 72: [1,1,1,1,2,2,2,2] } },
 ];
 
-// lesson_no → 内容 id(两位补零:am1_l01 … am1_l72)
-const pad = (n) => "am1_l" + String(n).padStart(2, "0");
+// 册号:--book N(默认1)。⚠️ 本生成器的「内容」(源 md 文件名 / titleMap / meta / gpSeq / EXPANSIONS)
+// 是第一册专属;第二册 seed 需另备 am2 源材料(docs/american/book2/)并适配这些内容段——属内容生产,不在本参数化范围。
+// 此处仅参数化「可移植外壳」:lesson_id 前缀 / 分片文件名 / 每单元课数;--book 1 输出与现状逐字节一致。
+const BOOK = (() => { const i = process.argv.indexOf("--book"); return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : "1"; })();
+const UNIT_SIZE = BOOK === "1" ? 6 : 8;                            // 第一册 6 课/单元;第二册起 8 课/单元
+const SEEDPFX = BOOK === "1" ? "american" : `american_am${BOOK}`;  // 分片/扩容文件名前缀(册1沿用原名回归零差异)
+// lesson_no → 内容 id(两位补零:am1_l01 … / am2_l01 …)
+const pad = (n) => `am${BOOK}_l` + String(n).padStart(2, "0");
 
 // ---------- 确定性 PRNG(mulberry32),保证每次生成同一 SQL ----------
 let _s = 0x9e3779b9;
@@ -295,7 +301,7 @@ function parseV1Guan10(text) {
 // 关6 小测题库 → {lessonNo:[choice...]}
 function parseGuan6(text) {
   const byLesson = {};
-  const blocks = text.split(/##\s*L(\d+)（am1_l\d\d）/).slice(1);
+  const blocks = text.split(/##\s*L(\d+)（am\d+_l\d\d）/).slice(1);
   for (let i = 0; i < blocks.length; i += 2) {
     const ln = +blocks[i]; const body = blocks[i + 1]; const qs = [];
     for (const row of tableRows(body)) {
@@ -385,12 +391,12 @@ function parseGuan10(s) {
 // ============ 解析 关5 题库 ============
 function parseGuan5(text) {
   const byLesson = {}; // lessonNo -> {points:[{gp,name}], questions:[...]}
-  const lessonBlocks = text.split(/##\s*L(\d+)（am1_l\d\d）考点定义/).slice(1);
+  const lessonBlocks = text.split(/##\s*L(\d+)（am\d+_l\d\d）考点定义/).slice(1);
   for (let i = 0; i < lessonBlocks.length; i += 2) {
     const ln = Number(lessonBlocks[i]);
     const body = lessonBlocks[i + 1];
     const points = [];
-    for (const m of body.matchAll(/-\s*(am1_l\d\d_gp\d)[：:]\s*(.+)/g)) points.push({ id: m[1], name: m[2].trim() });
+    for (const m of body.matchAll(/-\s*(am\d+_l\d\d_gp\d)[：:]\s*(.+)/g)) points.push({ id: m[1], name: m[2].trim() });
     const questions = [];
     for (const row of tableRows(body)) {
       if (row.length >= 6 && /^\d+$/.test(row[0])) {
@@ -417,7 +423,7 @@ function parseGuan5(text) {
 const lessons = [];
 // L1(部分): 从 v2 解析 sentences/prelisten/contrast/cloze/listening/scenario(词/关10 缺 v1,跳过)
 {
-  const meta = { id: "am1_l01", unit_no: 1, lesson_no: 1,
+  const meta = { id: `am${BOOK}_l01`, unit_no: 1, lesson_no: 1,
     title_en: "Excuse me, is this your phone?", title_cn: "打扰一下，这是你的手机吗？" };
   const L = parseLesson(l1v2, meta);          // 句/prelisten/关6/关7/关8/关9 用 v2 定稿
   L.words = parseV1Words(l1v1);               // L1 词详情来自 v1
@@ -436,7 +442,7 @@ const titleMap = {
 for (const m of batch.matchAll(/#\s*Lesson\s*(\d)\s+[\s\S]*?(?=\n#\s*Lesson\s*\d|\n#\s*单元 1 完结|$)/g)) {
   const ln = Number(m[1]);
   if (ln < 2) continue;
-  const meta = { id: `am1_l0${ln}`, unit_no: 1, lesson_no: ln, title_en: titleMap[ln][0], title_cn: titleMap[ln][1] };
+  const meta = { id: `am${BOOK}_l0${ln}`, unit_no: 1, lesson_no: ln, title_en: titleMap[ln][0], title_cn: titleMap[ln][1] };
   lessons.push(parseLesson(m[0], meta));
 }
 // 单元2+(batch2/3/…): 标题从每课 block 头(# Lesson N <英> / 首个 ## <中>)提取。
@@ -580,11 +586,11 @@ const units = [...new Set(lessons.map((L) => L.unit_no))].sort((a, b) => a - b);
 
 // ============ 分片写出(每片独立事务、幂等;绕开 SQL Editor 单查询大小上限) ============
 // 每行 INSERT 均以 VALUES ('am1_lNN'... 开头(含 gp 的 'am1_lNN_gpK');据此把行归到单元。
-const unitOfLine = (line) => { const m = line.match(/VALUES \('am1_l(\d\d)/); return m ? Math.ceil(Number(m[1]) / 6) : null; };
+const unitOfLine = (line) => { const m = line.match(/VALUES \('am\d+_l(\d\d)/); return m ? Math.ceil(Number(m[1]) / UNIT_SIZE) : null; };
 const shards = [
-  { file: "american_seed_part1_unit01-04.sql", units: [1, 2, 3, 4] },
-  { file: "american_seed_part2_unit05-08.sql", units: [5, 6, 7, 8] },
-  { file: "american_seed_part3_unit09-12.sql", units: [9, 10, 11, 12] },
+  { file: `${SEEDPFX}_seed_part1_unit01-04.sql`, units: [1, 2, 3, 4] },
+  { file: `${SEEDPFX}_seed_part2_unit05-08.sql`, units: [5, 6, 7, 8] },
+  { file: `${SEEDPFX}_seed_part3_unit09-12.sql`, units: [9, 10, 11, 12] },
 ];
 mkdirSync(path.join(ROOT, "SQLAA"), { recursive: true });
 let shardedLines = 0;
@@ -607,7 +613,7 @@ for (const sh of shards) {
   writeFileSync(path.join(ROOT, "SQLAA", sh.file), hdr.concat(lines, ["COMMIT;", ""]).join("\n"), "utf8");
 }
 // 安全网:每一行都必须归入且仅归入一个分片(无孤行、无重复)
-if (shardedLines !== out.length) throw new Error(`分片行数 ${shardedLines} ≠ 总行数 ${out.length}:有 INSERT 行未匹配 am1_lNN 前缀!`);
+if (shardedLines !== out.length) throw new Error(`分片行数 ${shardedLines} ≠ 总行数 ${out.length}:有 INSERT 行未匹配 amN_lNN 前缀!`);
 
 console.log("对账(生成器实测·合计):");
 console.table(counts);
@@ -622,7 +628,7 @@ const p2 = (n) => String(n).padStart(2, "0");
 
 function expLessonBlocks(text) {
   const out = {};
-  for (const m of text.matchAll(/#\s*Lesson\s*(\d+)（am1_l\d\d）([\s\S]*?)(?=\n#\s*Lesson\s*\d+|\n#\s*扩容包底账|$)/g)) {
+  for (const m of text.matchAll(/#\s*Lesson\s*(\d+)（am\d+_l\d\d）([\s\S]*?)(?=\n#\s*Lesson\s*\d+|\n#\s*扩容包底账|$)/g)) {
     out[Number(m[1])] = m[2];
   }
   return out;
@@ -714,7 +720,7 @@ function emitExpansion(cfg) {
     throw new Error(`扩容单元${cfg.unit} 门禁未过`);
   }
   lines.push("COMMIT;");
-  writeFileSync(path.join(ROOT, "SQLAA", `american_expand_unit${p2(cfg.unit)}.sql`), lines.join("\n") + "\n", "utf8");
+  writeFileSync(path.join(ROOT, "SQLAA", `${SEEDPFX}_expand_unit${p2(cfg.unit)}.sql`), lines.join("\n") + "\n", "utf8");
   const baseTot = unitCounts(cfg.unit).qTotal;
   const add = cnt.q5 + cnt.q7 + cnt.q10;
   console.log(`\n扩容单元${cfg.unit}: 关5+${cnt.q5} · 关7+${cnt.q7} · 关10+${cnt.q10} = +${add}`);

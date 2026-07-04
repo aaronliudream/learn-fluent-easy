@@ -59,9 +59,13 @@ const SLOW = args.includes("--slow");
 const UNIT = Number((args.find((a) => a.startsWith("--unit=")) || "").split("=")[1]) || null;
 const PART = (args.find((a) => a.startsWith("--part=")) || "").split("=")[1] || "all";
 const wantUnit = UNIT || (ALL ? null : 1); // 无 --all 且无 --unit → 默认单元1 验证
+// 册号:--book N(默认1)。多册共表,按 lesson_id 前缀过滤本册。每单元课数:册1=6,册2起=8。
+const BOOK = (() => { const i = args.indexOf("--book"); return i >= 0 && args[i + 1] ? args[i + 1] : "1"; })();
+const UNIT_SIZE = BOOK === "1" ? 6 : 8;
+const LFILT = `&lesson_id=like.am${BOOK}_l*`;
 
 function uniq(arr) { return Array.from(new Set(arr.map((s) => cleanForTTS((s || "").trim())).filter(Boolean))); }
-const unitOf = (lid) => Math.ceil(Number(String(lid).match(/am1_l(\d\d)/)?.[1]) / 6);
+const unitOf = (lid) => Math.ceil(Number(String(lid).match(/am\d+_l(\d\d)/)?.[1]) / UNIT_SIZE);
 
 async function fetchAllRest(path) {
   const out = []; const PAGE = 1000;
@@ -75,15 +79,15 @@ async function fetchAllRest(path) {
 }
 
 async function collectSentences() {
-  const rows = await fetchAllRest("american_sentences?select=lesson_id,text_en");
+  const rows = await fetchAllRest(`american_sentences?select=lesson_id,text_en${LFILT}`);
   return uniq(rows.filter((r) => !wantUnit || unitOf(r.lesson_id) === wantUnit).map((r) => r.text_en));
 }
 async function collectWords() {
-  const rows = await fetchAllRest("american_words?select=lesson_id,word");
+  const rows = await fetchAllRest(`american_words?select=lesson_id,word${LFILT}`);
   return uniq(rows.filter((r) => !wantUnit || unitOf(r.lesson_id) === wantUnit).map((r) => r.word));
 }
 async function collectContrast() {
-  const rows = await fetchAllRest("american_amencontrast?select=lesson_id,us");
+  const rows = await fetchAllRest(`american_amencontrast?select=lesson_id,us${LFILT}`);
   return uniq(rows.filter((r) => !wantUnit || unitOf(r.lesson_id) === wantUnit).map((r) => r.us));
 }
 

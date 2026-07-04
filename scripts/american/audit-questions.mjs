@@ -10,6 +10,10 @@ const env = fs.readFileSync(".env", "utf8");
 const g = (k) => env.split("\n").find((l) => l.startsWith(k + "="))?.slice(k.length + 1).trim().replace(/^["']|["']$/g, "");
 const SUP = g("VITE_SUPABASE_URL"), KEY = g("VITE_SUPABASE_PUBLISHABLE_KEY");
 
+// 册号:--book N(默认1)。多册共表(lesson_id 前缀 amN_l),审某册按前缀过滤,
+// 否则 am1_l07 与 am2_l07 都→unit2 撞车。用法: node scripts/american/audit-questions.mjs --book 2
+const BOOK = (() => { const i = process.argv.indexOf("--book"); return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : "1"; })();
+
 async function all(table, query) {
   const out = [];
   for (let from = 0; ; from += 1000) {
@@ -24,8 +28,10 @@ async function all(table, query) {
   return out;
 }
 
-const unitOf = (lid) => Math.ceil(Number(String(lid).match(/am1_l(\d+)/)?.[1]) / 6);
-const lnOf = (lid) => Number(String(lid).match(/am1_l(\d+)/)?.[1]);
+// 每单元课数:第一册 6 课/单元,第二册起 8 课/单元(NCE2=96课/12单元)。
+const UNIT_SIZE = BOOK === "1" ? 6 : 8;
+const unitOf = (lid) => Math.ceil(Number(String(lid).match(/am\d+_l(\d+)/)?.[1]) / UNIT_SIZE);
+const lnOf = (lid) => Number(String(lid).match(/am\d+_l(\d+)/)?.[1]);
 const norm = (s) => (s || "").toLowerCase().replace(/[’']/g, "'").replace(/\s+/g, " ").trim();
 const stripSpeaker = (s) => (s || "").replace(/^[A-Z][A-Za-z .&']*:\s*/, "");
 const tokens = (s) => (s || "").toLowerCase().match(/[a-z]+(?:'[a-z]+)?/g) || [];
@@ -46,10 +52,10 @@ const findings = { err: [], sus: [], flag: [] };
 const add = (sev, code, lid, qid, msg) => findings[sev].push({ code, unit: unitOf(lid), lid, qid, msg });
 
 const [Q, S, W, L] = await Promise.all([
-  all("american_questions", "select=*&order=lesson_id.asc,stage.asc,seq.asc"),
-  all("american_sentences", "select=lesson_id,seq,text_en,text_cn,speaker&order=lesson_id.asc,seq.asc"),
-  all("american_words", "select=lesson_id,word&order=lesson_id.asc"),
-  all("american_lessons", "select=id,unit_no,lesson_no,title_cn&order=unit_no.asc,lesson_no.asc"),
+  all("american_questions", `select=*&lesson_id=like.am${BOOK}_l*&order=lesson_id.asc,stage.asc,seq.asc`),
+  all("american_sentences", `select=lesson_id,seq,text_en,text_cn,speaker&lesson_id=like.am${BOOK}_l*&order=lesson_id.asc,seq.asc`),
+  all("american_words", `select=lesson_id,word&lesson_id=like.am${BOOK}_l*&order=lesson_id.asc`),
+  all("american_lessons", `select=id,unit_no,lesson_no,title_cn&id=like.am${BOOK}_l*&order=unit_no.asc,lesson_no.asc`),
 ]);
 console.log(`拉取:题${Q.length} 句${S.length} 词${W.length} 课${L.length}`);
 
@@ -207,7 +213,7 @@ for (const q of transforms) {
 for (const { q, a, v } of tRisk) add("flag", "transform残余", q.lesson_id, q.id, `放宽后仍判不等: "${a}" vs 变体"${v}"`);
 
 // ============ ⑥ 输出 ============
-const OUT = path.join(ROOT, "scripts/american/audit-out");
+const OUT = path.join(ROOT, "scripts/american/audit-out", BOOK === "1" ? "." : `book${BOOK}`);
 fs.mkdirSync(OUT, { recursive: true });
 
 // 报告
@@ -253,7 +259,7 @@ for (let u = 1; u <= 12; u++) {
   for (const q of qs) {
     if (q.lesson_id !== curL) { curL = q.lesson_id; md += `\n## ${q.lesson_id}\n\n`; }
     const p = q.payload || {};
-    md += `- **s${q.stage}** \`${q.qtype}\` ${q.grammar_point_id ? "["+q.grammar_point_id.replace("am1_l"+String(lnOf(q.lesson_id)).padStart(2,"0")+"_","")+"]" : ""} ${p.context ? "〔"+p.context.replace(/\n/g," ").slice(0,60)+"〕 " : ""}${String(p.stem||"").replace(/\n/g," ")}\n`;
+    md += `- **s${q.stage}** \`${q.qtype}\` ${q.grammar_point_id ? "["+q.grammar_point_id.replace(/^am\d+_l\d+_/,"")+"]" : ""} ${p.context ? "〔"+p.context.replace(/\n/g," ").slice(0,60)+"〕 " : ""}${String(p.stem||"").replace(/\n/g," ")}\n`;
     if (Array.isArray(p.options)) md += `    - 选项: ${p.options.map((o,i)=>(i===p.answer_index?"★":"")+o).join(" / ")}\n`;
     if (p.answer_text) md += `    - 答案: ${p.answer_text}\n`;
   }
@@ -261,4 +267,4 @@ for (let u = 1; u <= 12; u++) {
 }
 
 console.log(`\n机审完成: 🔴${findings.err.length} 🟡${findings.sus.length} ⚪${findings.flag.length}`);
-console.log(`产出: scripts/american/audit-out/audit_report.md + unit01..12.md`);
+console.log(`产出: ${path.relative(ROOT, OUT).replace(/\\/g, "/")}/audit_report.md + unit01..12.md`);

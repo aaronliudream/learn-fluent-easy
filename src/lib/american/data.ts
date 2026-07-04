@@ -16,6 +16,16 @@ export const AM_MASTER_AT = 2;
 // Plan C #2 考点口径收紧:净分(答对+1/答错-1下限0)≥3 且末次答对 = 考点掌握
 export const AM_GP_MASTER_AT = 3;
 
+/** 关5「语法小知识」折叠卡内容(TipContent 同形;用 GrammarTipsView 渲染)。 */
+export type AmericanGrammarCard = {
+  title?: string;
+  intro?: string;
+  table?: { headers: string[]; rows: string[][] };
+  specialRules?: { rule: string; mark?: string }[];
+  why?: string[];
+  examVsReal?: { exam: string; real: string; note?: string }[];
+};
+
 export type AmericanLesson = {
   id: string;
   unit_no: number;
@@ -25,6 +35,7 @@ export type AmericanLesson = {
   grammar_focus: string | null;
   scene: string | null;
   prelisten_question: PrelistenQuestion | null;
+  grammar_card?: AmericanGrammarCard | null; // 关5 折叠卡(可能未落库→undefined)
 };
 
 export type PrelistenQuestion = { q: string; options: string[]; answer_index: number };
@@ -105,7 +116,15 @@ export type LessonBundle = {
 
 /** 内容 id 前缀(am1_ / am2_ …)推册号;等价于 book_no,前端据此按册分组,不依赖 3a schema 落库。 */
 export function bookOf(id: string): number {
-  return Number(String(id).match(/^am(\d+)_/)?.[1] ?? 1);
+  const m = String(id).match(/^am(\d+)_/);
+  if (!m) {
+    // id 理应恒为 amN_ 前缀(所有查询都按 amN_l% 过滤)。走到这里=数据异常。
+    // 渲染路径不宜 throw(bookOf 在 fetchBooks 里遍历全部课程,一条坏数据会连累整册落地页),
+    // 故显式告警报人 + 安全兜底 1,而非静默默认。
+    console.warn(`[american] bookOf: 无法从 id "${id}" 解析册号(期望 amN_ 前缀),兜底为第 1 册`);
+    return 1;
+  }
+  return Number(m[1]);
 }
 
 /**
@@ -155,7 +174,8 @@ export async function fetchBooks(): Promise<AmericanBook[]> {
 /** 一课全部内容(6 关素材一次取全)。 */
 export async function fetchLessonBundle(lessonId: string): Promise<LessonBundle | null> {
   const [lessonRes, sRes, wRes, gRes, qRes, cRes] = await Promise.all([
-    db.from("american_lessons").select("id,unit_no,lesson_no,title_en,title_cn,grammar_focus,scene,prelisten_question").eq("id", lessonId).maybeSingle(),
+    // select("*"):grammar_card 列可能尚未落库(加字段 SQL 未跑),用 * 避免"列不存在"报错清空整课(缺列→undefined→不渲染卡)。
+    db.from("american_lessons").select("*").eq("id", lessonId).maybeSingle(),
     db.from("american_sentences").select("id,lesson_id,seq,speaker,text_en,text_cn,audio_key").eq("lesson_id", lessonId).order("seq", { ascending: true }),
     db.from("american_words").select("id,lesson_id,word,ipa,pos,meaning_cn,example").eq("lesson_id", lessonId),
     db.from("american_grammar_points").select("id,lesson_id,name,body_md").eq("lesson_id", lessonId).order("id", { ascending: true }),

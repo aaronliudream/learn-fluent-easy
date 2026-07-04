@@ -1,0 +1,146 @@
+{
+  "id": "am2_l01",
+  "unit_no": 1,
+  "lesson_no": 1,
+  "title_en": "A Private Conversation",
+  "title_cn": "私人谈话",
+  "grammar_focus": "句子成分与语序 · 五种基本句型 · 疑问与否定 · how用法与频率",
+  "scene": "市中心剧院 · 被身后情侣大声聊天打扰",
+  "grammar_card": {
+    "title": "句子的骨架(用本课句子看懂它)",
+    "intro": "先认识句子的几个\"零件\",再做题就不抽象了。下面全用本课句子举例。",
+    "table": {
+      "headers": ["句子成分", "看本课例子"],
+      "rows": [
+        ["主语 = 句子在说\"谁/什么\"", "The play was really funny.(主语 = The play)"],
+        ["谓语动词 = 主语\"做什么/是什么\"", "The play was really funny.(谓语 = was)"],
+        ["系动词 = 不表动作,像\"等号\",连接主语和描述(be / look / feel / get)", "I got angry.(系动词 = got,\"变得\"生气)"],
+        ["表语 = 系动词后面补充说明主语的词", "The play was really funny.(表语 = really funny)"],
+        ["宾语 = 动作落在谁/什么上", "I couldn't hear the actors.(宾语 = the actors)"],
+        ["双宾语 = 给\"人\" + \"物\"", "She gave me a great seat.(me + a great seat)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "宾语补足语 = 补充说明宾语;判别法:中间加 be 能成句 → They made him captain(him is captain ✓)", "mark": "判别法" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why was the writer unhappy at the theater?",
+    "options": ["The play was boring", "A couple behind kept talking", "His seat was bad", "The actors were too quiet"],
+    "answer_index": 1
+  },
+  "passage": "Last Friday I went to the theater downtown. I had a great seat, right in the center. The play was a comedy, and it was really funny. But I didn't enjoy it at all. A young couple was sitting behind me, and they were talking loudly the whole time. I got angry because I couldn't hear the actors. I turned around and looked at them, but they didn't pay any attention. In the end I couldn't bear it. I turned around again. \"I can't hear a word!\" I said angrily. \"It's none of your business,\" the young man said rudely. \"This is a private conversation!\"",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Last Friday I went to the theater downtown.", "text_cn": "上周五我去了市中心的剧院。" },
+    { "seq": 2, "speaker": null, "text_en": "I had a great seat, right in the center.", "text_cn": "我的座位很好,正在中间。" },
+    { "seq": 3, "speaker": null, "text_en": "The play was a comedy, and it was really funny.", "text_cn": "那出戏是喜剧,非常好笑。" },
+    { "seq": 4, "speaker": null, "text_en": "But I didn't enjoy it at all.", "text_cn": "可我一点也没享受。" },
+    { "seq": 5, "speaker": null, "text_en": "A young couple was sitting behind me, and they were talking loudly the whole time.", "text_cn": "一对年轻情侣坐在我后面,全程大声说话。" },
+    { "seq": 6, "speaker": null, "text_en": "I got angry because I couldn't hear the actors.", "text_cn": "我很生气,因为我听不见演员的台词。" },
+    { "seq": 7, "speaker": null, "text_en": "I turned around and looked at them, but they didn't pay any attention.", "text_cn": "我转过身看着他们,可他们毫不理会。" },
+    { "seq": 8, "speaker": null, "text_en": "In the end I couldn't bear it.", "text_cn": "最后我实在忍不了了。" },
+    { "seq": 9, "speaker": null, "text_en": "I turned around again. \"I can't hear a word!\" I said angrily.", "text_cn": "我又转过身。\"我一个字都听不见!\"我生气地说。" },
+    { "seq": 10, "speaker": null, "text_en": "\"It's none of your business,\" the young man said rudely.", "text_cn": "\"不关你的事,\"那个年轻男人无礼地说。" },
+    { "seq": 11, "speaker": null, "text_en": "\"This is a private conversation!\"", "text_cn": "\"这是私人谈话!\"" }
+  ],
+  "words": [
+    { "word": "private", "ipa": "/ˈpraɪvət/", "pos": "adj", "meaning_cn": "私人的", "example": "This is a private conversation." },
+    { "word": "conversation", "ipa": "/ˌkɑːnvərˈseɪʃn/", "pos": "n", "meaning_cn": "谈话", "example": "We had a long conversation." },
+    { "word": "theater", "ipa": "/ˈθiːətər/", "pos": "n", "meaning_cn": "剧院", "example": "We went to the theater." },
+    { "word": "seat", "ipa": "/siːt/", "pos": "n", "meaning_cn": "座位", "example": "I had a great seat." },
+    { "word": "play", "ipa": "/pleɪ/", "pos": "n", "meaning_cn": "戏,剧", "example": "The play was really funny." },
+    { "word": "loudly", "ipa": "/ˈlaʊdli/", "pos": "adv", "meaning_cn": "大声地", "example": "They were talking loudly." },
+    { "word": "angry", "ipa": "/ˈæŋɡri/", "pos": "adj", "meaning_cn": "生气的", "example": "I got angry." },
+    { "word": "angrily", "ipa": "/ˈæŋɡrəli/", "pos": "adv", "meaning_cn": "生气地", "example": "\"I can't hear a word!\" I said angrily." },
+    { "word": "attention", "ipa": "/əˈtenʃn/", "pos": "n", "meaning_cn": "注意", "example": "They didn't pay any attention." },
+    { "word": "bear", "ipa": "/ber/", "pos": "v", "meaning_cn": "容忍,忍受", "example": "In the end I couldn't bear it." },
+    { "word": "business", "ipa": "/ˈbɪznəs/", "pos": "n", "meaning_cn": "事,事务", "example": "It's none of your business." },
+    { "word": "rudely", "ipa": "/ˈruːdli/", "pos": "adv", "meaning_cn": "无礼地", "example": "\"It's none of your business,\" he said rudely." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "简单陈述句的语序(六成分框架;时间状语可句首或句尾)" },
+    { "gp": "gp2", "name": "动词分类(实义动词 / 助动词 / 情态动词)" },
+    { "gp": "gp3", "name": "系动词与表语(副词不作表语)" },
+    { "gp": "gp4", "name": "五种基本句型 + 及物/不及物兼类(play)" },
+    { "gp": "gp5", "name": "双宾语 vs 复合宾语" },
+    { "gp": "gp6", "name": "陈述句的否定与缩写" },
+    { "gp": "gp7", "name": "一般疑问句与 Yes/No 回答" },
+    { "gp": "gp8", "name": "特殊疑问句(who/what/when/where/how/why)" },
+    { "gp": "gp9", "name": "特殊疑问句(which / whose)" },
+    { "gp": "gp10", "name": "how 用法与频率提问" },
+    { "gp": "gp11", "name": "课文语言点(宾格 / pay no attention / 方位介词 / go to the theater)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "选出语序正确的句子:", "options": ["Yesterday I went to the theater.", "I went yesterday to the theater.", "I yesterday went to the theater.", "To the theater I went yesterday."] },
+    { "gp": "gp1", "stem": "时间状语可放句首或句尾。下列哪句与 \"Every morning she reads the news\" 同义且正确?", "options": ["She reads the news every morning.", "She every morning reads the news.", "Reads she the news every morning.", "She reads every morning the news."] },
+    { "gp": "gp1", "stem": "把 the actors / couldn't / I / hear 组成正确的句子:", "options": ["I couldn't hear the actors.", "I the actors couldn't hear.", "Couldn't I hear the actors.", "The actors I couldn't hear."] },
+    { "gp": "gp2", "stem": "\"She can swim well.\" 句中 can 是哪类词?", "options": ["情态动词", "实义动词", "助动词", "系动词"] },
+    { "gp": "gp5", "stem": "\"She gave me a great seat.\" 换一种说法:She gave a great seat ___ me.", "options": ["to", "for", "at", "with"] },
+    { "gp": "gp3", "stem": "The pizza smells ___.", "options": ["good", "well", "nicely", "badly"] },
+    { "gp": "gp3", "stem": "He looked ___ when he heard the news.", "options": ["angry", "angrily", "anger", "angers"] },
+    { "gp": "gp4", "stem": "\"The play was really funny.\" 属于哪种句型?", "options": ["主系表", "主谓", "主谓宾", "主谓双宾"] },
+    { "gp": "gp4", "stem": "下列哪句不完整,动词后面还缺\"什么\"(缺宾语)?", "options": ["I really enjoyed.", "He arrived yesterday.", "They were talking loudly.", "She smiled."] },
+    { "gp": "gp4", "stem": "哪句的 play 后面没有宾语(动作的对象),意思也完整?", "options": ["The kids play in the park.", "They play soccer.", "She plays the piano.", "We played a game."] },
+    { "gp": "gp5", "stem": "哪句是复合宾语?(判别法:宾语后面加 be 能成句 → him is captain ✓)", "options": ["They made him captain.", "She gave him a ticket.", "I told her the truth.", "He bought me coffee."] },
+    { "gp": "gp6", "stem": "把 \"He likes the play.\" 变否定:", "options": ["He doesn't like the play.", "He don't like the play.", "He not likes the play.", "He isn't like the play."] },
+    { "gp": "gp6", "stem": "下列哪个否定式没有缩写形式?", "options": ["am not", "is not", "do not", "cannot"] },
+    { "gp": "gp7", "stem": "把 \"You saw the play.\" 变一般疑问句:", "options": ["Did you see the play?", "Do you saw the play?", "Saw you the play?", "Are you see the play?"] },
+    { "gp": "gp7", "stem": "\"Is this your seat?\" 的正确肯定回答:", "options": ["Yes, it is.", "Yes, this is.", "Yes, it's.", "Yes, is it."] },
+    { "gp": "gp8", "stem": "\"___ do you go to the theater?\"(答:By subway.)", "options": ["How", "Where", "When", "Who"] },
+    { "gp": "gp8", "stem": "对 \"The couple sat behind me\" 中的 behind me 提问:", "options": ["Where did the couple sit?", "When did the couple sit?", "How did the couple sit?", "Why did the couple sit?"] },
+    { "gp": "gp9", "stem": "\"___ seat is this? It's mine.\"", "options": ["Whose", "Who", "Which", "What"] },
+    { "gp": "gp10", "stem": "\"___ do you go to the theater?\"(答:Three times a year.)", "options": ["How often", "How far", "How long", "How much"] },
+    { "gp": "gp10", "stem": "\"How ___ is the theater from here?\"(答:About two miles.)", "options": ["far", "tall", "old", "many"] },
+    { "gp": "gp11", "stem": "I looked at ___ angrily.(指那对情侣)", "options": ["them", "they", "their", "theirs"] },
+    { "gp": "gp11", "stem": "\"pay no attention\" = \"not pay ___ attention\"", "options": ["any", "some", "much", "a"] }
+  ],
+  "stage6": [
+    { "stem": "\"剧院\" 的美式拼写是:", "options": ["theater", "theatre", "theator", "theatr"] },
+    { "stem": "\"转过身\" 的地道美语说法是:", "options": ["turn around", "turn round", "turn about", "turn back"] },
+    { "stem": "语块 get angry 的意思是:", "options": ["生气", "高兴", "害怕", "惊讶"] },
+    { "stem": "\"in the end\" 的意思是:", "options": ["最后,终于", "在结尾的位置", "立刻,马上", "从头开始"] },
+    { "stem": "语块 pay attention (to) 的意思是:", "options": ["注意,留心", "付钱", "参加", "道歉"] },
+    { "stem": "\"我受不了了!\" 更常用的美语口语说法是:", "options": ["I can't stand it!", "I can't sit it!", "I can't stay it!", "I can't carry it!"] }
+  ],
+  "contrast": [
+    { "us": "theater", "uk": "theatre", "note_cn": "拼写差异,发音相同" },
+    { "us": "turn around", "uk": "turn round", "note_cn": "美语用 around" },
+    { "us": "can't stand", "uk": "can't bear", "note_cn": "口语更常用 stand/take;bear 亦通用" }
+  ],
+  "chunks": [
+    { "us": "get angry", "ipa": "/ɡet ˈæŋɡri/", "example1": "I got angry at the noise.", "example1_cn": "我被噪音弄得很生气。", "example2": "Don't get angry over small things.", "example2_cn": "别为小事生气。" },
+    { "us": "pay attention (to)", "ipa": "/peɪ əˈtenʃn/", "example1": "Please pay attention to the actors.", "example1_cn": "请注意听演员的台词。", "example2": "They didn't pay any attention to me.", "example2_cn": "他们完全不理会我。" },
+    { "us": "in the end", "ipa": "/ɪn ði end/", "example1": "In the end I couldn't bear it.", "example1_cn": "最后我实在忍不住了。", "example2": "In the end, everything worked out.", "example2_cn": "最后一切都顺利解决了。" }
+  ],
+  "stage7_cloze": {
+    "context": "Last Friday I went to the ___1___ downtown. A young couple was sitting ___2___ me, and they were talking ___3___. I turned around and looked at ___4___, but they didn't pay any attention.",
+    "blanks": [
+      { "blank_no": 1, "options": ["theater", "theatre", "seat", "play"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["in front of", "behind", "next", "under"], "answer_index": 1 },
+      { "blank_no": 3, "options": ["loudness", "loudly", "aloud", "louder"], "answer_index": 1 },
+      { "blank_no": 4, "options": ["they", "their", "them", "theirs"], "answer_index": 2 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did the writer go last Friday?", "options": ["The theater", "A concert", "A restaurant", "The movies"] },
+    { "stem": "Why did the writer get angry?", "options": ["A couple talked loudly", "The seat was bad", "The play was boring", "It was too cold"] },
+    { "stem": "What did the young man say to the writer?", "options": ["It's none of your business.", "I'm sorry.", "Have a good one.", "Thank you."] }
+  ],
+  "stage9_scenario": [
+    { "stem": "剧院里有人在你身后大声聊天,你想让他们安静,礼貌的说法是:", "options": ["Excuse me, could you please keep it down?", "It's none of your business!", "Shut up!", "I can't hear a word!"] },
+    { "stem": "别人问起你不想透露的私事,你想婉拒:", "options": ["I'd rather not say.", "Pay attention!", "Have a good one.", "Turn around."] },
+    { "stem": "你没听清对方的话,想请他再说一遍:", "options": ["Sorry, I couldn't hear you — could you say that again?", "It's none of your business.", "I got angry.", "This is a private conversation."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "\"生气地\" 对应的英文单词是:", "options": ["angrily", "angry", "loudly", "rudely"] },
+    { "kind": "vocab", "stem": "课文里 \"I couldn't bear it\" 中 bear 的意思是:", "options": ["忍受,容忍", "一种动物", "携带", "出生"] },
+    { "kind": "grammar", "stem": "\"They paid attention.\" 的正确否定形式是:", "options": ["They didn't pay attention.", "They didn't paid attention.", "They don't paid attention.", "They not pay attention."] },
+    { "kind": "grammar", "stem": "\"The play was funny.\" 的正确一般疑问句是:", "options": ["Was the play funny?", "Did the play be funny?", "Was funny the play?", "The play was funny?"] },
+    { "kind": "scenario", "stem": "有人无礼地对你说 \"It's none of your business.\",意思是:", "options": ["让你别多管闲事", "欢迎你参与", "他在做生意", "他想和你谈话"] },
+    { "kind": "scenario", "stem": "\"I can't hear a word!\" 表达的是:", "options": ["一个字都听不见", "想学新单词", "不识字", "声音太小需要道歉"] },
+    { "kind": "reading", "stem": "Where did the young couple sit?", "options": ["Behind the writer.", "In front of the writer.", "Next to the actors.", "On the stage."], "passage": true },
+    { "kind": "reading", "stem": "Why didn't the writer enjoy the play?", "options": ["He couldn't hear the actors.", "The seat was bad.", "The play was boring.", "He arrived late."], "passage": true },
+    { "kind": "listening", "stem": "How did the writer feel during the play?", "options": ["Angry.", "Happy.", "Bored.", "Scared."], "audio": true },
+    { "kind": "listening", "stem": "What kind of play was it?", "options": ["A comedy.", "A tragedy.", "A musical.", "A mystery."], "audio": true }
+  ]
+}

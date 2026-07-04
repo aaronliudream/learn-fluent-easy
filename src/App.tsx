@@ -532,6 +532,7 @@ const App = () => (
           <Route path="/american" element={<AmericanBooks />} />
           <Route path="/american/book/:bookNo" element={<AmericanHub />} />
           <Route path="/american/review" element={<AmericanReview />} />
+          <Route path="/american/book/:bookNo/hub/:unit" element={<AmericanUnit />} />
           <Route path="/american/hub/:unit" element={<AmericanUnit />} />
           <Route path="/american/lesson/:lessonId" element={<AmericanLesson />} />
           <Route path="/american/lesson/:lessonId/stage/:stage" element={<AmericanStage />} />

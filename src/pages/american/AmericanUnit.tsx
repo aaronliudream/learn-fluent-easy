@@ -12,8 +12,9 @@ import { fetchUnits, fetchCompletedCounts, type AmericanLesson } from "@/lib/ame
 const STAGES_PER_LESSON = 10;
 
 export default function AmericanUnit() {
-  const { unit } = useParams<{ unit: string }>();
+  const { unit, bookNo: bookNoParam } = useParams<{ unit: string; bookNo: string }>();
   const unitNo = Number(unit) || 1;
+  const bookNo = Number(bookNoParam) || 1; // 旧路由 /american/hub/:unit 无 bookNo → 默认第一册(零回归)
   const nav = useNavigate();
   const [lessons, setLessons] = useState<AmericanLesson[]>([]);
   const [counts, setCounts] = useState<Record<string, number>>({});
@@ -23,7 +24,7 @@ export default function AmericanUnit() {
     let alive = true;
     (async () => {
       try {
-        const units = await fetchUnits();
+        const units = await fetchUnits(bookNo);
         const u = units.find((x) => x.unit_no === unitNo);
         const ls = u?.lessons ?? [];
         if (!alive) return;
@@ -35,14 +36,14 @@ export default function AmericanUnit() {
       }
     })();
     return () => { alive = false; };
-  }, [unitNo]);
+  }, [unitNo, bookNo]);
 
   const title = useMemo(() => lessons[0]?.title_cn ?? "", [lessons]);
 
   return (
     <main className="min-h-dvh bg-slate-50">
       <div className="mx-auto max-w-2xl px-4 py-5">
-        <Link to="/american/book/1" className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-700">
+        <Link to={`/american/book/${bookNo}`} className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-700">
           <ArrowLeft className="size-4" /> <T>全部单元</T>
         </Link>
 

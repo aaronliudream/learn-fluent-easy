@@ -105,7 +105,7 @@ export default function AmericanHub() {
                   key={n}
                   type="button"
                   disabled={!open}
-                  onClick={() => open && nav(`/american/hub/${n}`)}
+                  onClick={() => open && nav(`/american/book/${bookNo}/hub/${n}`)}
                   className={`flex flex-col items-center rounded-2xl border p-4 text-center transition ${
                     open ? "border-sky-200 bg-white shadow-sm hover:border-sky-400 hover:shadow" : "border-slate-100 bg-slate-100/60"
                   }`}>

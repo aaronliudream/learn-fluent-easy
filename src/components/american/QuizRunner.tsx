@@ -11,7 +11,7 @@ import { speakUS, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
 import type { AmericanQuestion } from "@/lib/american/data";
 
 export type QuizItem =
-  | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number; explanation?: string; context?: string; audio?: string }
+  | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number; explanation?: string; context?: string; audio?: string; passage?: string }
   | { kind: "reveal"; id: string; prompt: string; answer: string; explanation?: string };
 
 /** american_questions → QuizItem(choice / reveal[transform·scenario])。 */
@@ -22,7 +22,8 @@ export function questionsToItems(qs: AmericanQuestion[]): QuizItem[] {
       // cloze 的 stem 只是"第N空",填空所在句在 payload.context(已含 ___ 标空);带出来给复习页显示。
       // 仅 cloze 显示 context;防将来听力/阅读题若挂 context(听力原文)被误显示而泄露答案。
       // audio:关10听力题要朗读的本课文本(题干只显示指令,不露 audio 文本)。
-      : { kind: "choice", id: q.id, stem: q.payload.stem, options: q.payload.options ?? [], answerIndex: q.payload.answer_index ?? 0, explanation: q.payload.explanation_cn, context: q.qtype === "cloze" ? q.payload.context : undefined, audio: q.payload.audio },
+      // passage:关10阅读题在题目上方显示的本课课文(对着读作答)。
+      : { kind: "choice", id: q.id, stem: q.payload.stem, options: q.payload.options ?? [], answerIndex: q.payload.answer_index ?? 0, explanation: q.payload.explanation_cn, context: q.qtype === "cloze" ? q.payload.context : undefined, audio: q.payload.audio, passage: q.payload.passage },
   );
 }
 
@@ -131,6 +132,13 @@ export function QuizRunner({
 
       {item.kind === "choice" ? (
         <section>
+          {/* 阅读题:题目上方显示本课课文,对着读作答(真·阅读理解) */}
+          {item.passage && (
+            <div className="mb-4 rounded-2xl border border-sky-100 bg-sky-50/60 p-4">
+              <p className="mb-1.5 text-xs font-bold text-sky-700">📖 <T>读课文</T></p>
+              <p className="whitespace-pre-line text-sm leading-relaxed text-slate-700">{item.passage}</p>
+            </div>
+          )}
           {/* 听力题:大喇叭播本课音频(题干只给指令,不露 audio 文本) */}
           {item.audio && (
             <div className="mb-5 flex flex-col items-center">

@@ -72,6 +72,7 @@ export type AmericanQuestion = {
     situation?: string;
     explanation_cn?: string; // 语法点评(答题后显示;按 lesson×gp 共享同一段)
     audio?: string; // 关10听力题:要朗读的本课词/句/对话文本(speakUS 播,自动上CDN;题干只显示指令不露此文本)
+    passage?: string; // 关10阅读题:题目上方显示的本课课文(对着读作答,真·阅读理解)
   };
   seq: number | null;
 };

@@ -219,6 +219,21 @@ const AuthRedirectGuard = () => {
 };
 
 /**
+ * 已安装 PWA(standalone/全屏/minimal-ui,或 iOS navigator.standalone)判定。
+ * 只有这种场景 start_url:"/" 才会在冷启动时把用户强拉回首页 —— 冷启动恢复只在此生效。
+ */
+const isStandalonePWA = (): boolean => {
+  if (typeof window === "undefined") return false;
+  const mm = window.matchMedia;
+  const dm =
+    !!mm &&
+    (mm("(display-mode: standalone)").matches ||
+      mm("(display-mode: fullscreen)").matches ||
+      mm("(display-mode: minimal-ui)").matches);
+  return dm || (navigator as { standalone?: boolean }).standalone === true;
+};
+
+/**
  * 「切走切回退回首页」第1层:每次导航存 lastPath;冷启动若落在首页且有 12h 内的
  * lastPath,自动恢复到那一页(主要救 standalone/加主屏 被 start_url:"/" 强拉回首页)。
  * 只做"存 path + 启动恢复",不碰做题组件/进度。
@@ -231,6 +246,9 @@ const LastPathTracker = () => {
   useEffect(() => {
     if (restored.current) return;
     restored.current = true;
+    // 仅在已安装 PWA 里做恢复:那才是 start_url:"/" 强拉首页的场景。
+    // 普通浏览器标签刷新首页 → 停在首页,不劫持(修:刷新 / 被跳去 lastPath)。
+    if (!isStandalonePWA()) return;
     if (window.location.pathname === "/" && !window.location.search) {
       const last = readLastPath();
       if (last) navigate(last, { replace: true });

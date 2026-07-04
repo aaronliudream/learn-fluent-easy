@@ -1,12 +1,12 @@
-import { Home, BookOpen, Zap, AlertCircle, User, GraduationCap, Sparkles, X } from "lucide-react";
+import { Home, BookOpen, AlertCircle, User, GraduationCap, Sparkles, X } from "lucide-react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useT } from "@/i18n/T";
 import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_PATH } from "@/lib/american/brand";
 
 /**
- * Mobile-only bottom tab bar — 5 tabs with a centered "Start practice"
- * elevated CTA. AI chat lives in the floating Xiaoyue FAB, so it does
+ * Mobile-only bottom tab bar — 4 evenly-spaced tabs (Home / Courses /
+ * Mistakes / Me). AI chat lives in the floating Xiaoyue FAB, so it does
  * not compete for a tab slot.
  */
 const TABS = [
@@ -22,13 +22,6 @@ const TABS = [
       p.startsWith("/primary") ||
       p.startsWith("/junior") ||
       p.startsWith("/gaokao"),
-  },
-  {
-    to: "/dashboard",
-    label: "Practice",
-    icon: Zap,
-    cta: true,
-    match: (p: string) => p.startsWith("/dashboard") || p.startsWith("/today"),
   },
   {
     to: "/mistakes",
@@ -75,32 +68,11 @@ export const BottomTabBar = () => {
       className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur-md md:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0)" }}
     >
-      <ul className="mx-auto grid max-w-3xl grid-cols-5">
+      <ul className="mx-auto grid max-w-3xl grid-cols-4">
         {TABS.map((tab) => {
           const Icon = tab.icon;
           const active = tab.match(pathname);
-          const isCta = (tab as { cta?: boolean }).cta;
           const isCourses = (tab as { courses?: boolean }).courses;
-
-          if (isCta) {
-            return (
-              <li key={tab.to} className="relative">
-                <NavLink
-                  to={tab.to}
-                  aria-label={t(tab.label)}
-                  className="flex h-16 flex-col items-center justify-end pb-1.5 text-center text-[11px] font-bold text-primary"
-                >
-                  <span
-                    className="absolute -top-5 grid size-14 place-items-center rounded-full bg-gradient-to-br from-[#7B3FF1] to-[#ED3F8C] text-white shadow-[0_10px_24px_-6px_rgba(123,63,241,0.6)] ring-4 ring-background transition-transform active:scale-95"
-                    aria-hidden
-                  >
-                    <Icon className="size-6" />
-                  </span>
-                  <span className="mt-9 leading-tight">{t(tab.label)}</span>
-                </NavLink>
-              </li>
-            );
-          }
 
           if (isCourses) {
             return (

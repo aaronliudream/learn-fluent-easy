@@ -4,14 +4,14 @@
  * - reveal:句型转换/情景应答等开放题 → 显示参考答案 → 自评"答对/没答对"记掌握。
  * 每题作答回调 onAnswer(id,isCorrect) 由各关落库(american_user_mastery)。
  */
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Check, X, Volume2, ChevronRight } from "lucide-react";
 import { T } from "@/i18n/T";
-import { speakUS, unlockAmericanAudio } from "@/lib/american/audio";
+import { speakUS, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
 import type { AmericanQuestion } from "@/lib/american/data";
 
 export type QuizItem =
-  | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number; explanation?: string; context?: string }
+  | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number; explanation?: string; context?: string; audio?: string }
   | { kind: "reveal"; id: string; prompt: string; answer: string; explanation?: string };
 
 /** american_questions → QuizItem(choice / reveal[transform·scenario])。 */
@@ -21,7 +21,8 @@ export function questionsToItems(qs: AmericanQuestion[]): QuizItem[] {
       ? { kind: "reveal", id: q.id, prompt: q.payload.stem, answer: q.payload.answer_text ?? "", explanation: q.payload.explanation_cn }
       // cloze 的 stem 只是"第N空",填空所在句在 payload.context(已含 ___ 标空);带出来给复习页显示。
       // 仅 cloze 显示 context;防将来听力/阅读题若挂 context(听力原文)被误显示而泄露答案。
-      : { kind: "choice", id: q.id, stem: q.payload.stem, options: q.payload.options ?? [], answerIndex: q.payload.answer_index ?? 0, explanation: q.payload.explanation_cn, context: q.qtype === "cloze" ? q.payload.context : undefined },
+      // audio:关10听力题要朗读的本课文本(题干只显示指令,不露 audio 文本)。
+      : { kind: "choice", id: q.id, stem: q.payload.stem, options: q.payload.options ?? [], answerIndex: q.payload.answer_index ?? 0, explanation: q.payload.explanation_cn, context: q.qtype === "cloze" ? q.payload.context : undefined, audio: q.payload.audio },
   );
 }
 
@@ -62,6 +63,16 @@ export function QuizRunner({
 
   const total = items.length;
   const item = items[idx];
+
+  // 听力题:进关预热全部音频 → 点喇叭即命中缓存直接播。
+  useEffect(() => {
+    const auds = items.map((it) => (it.kind === "choice" ? it.audio : undefined)).filter(Boolean) as string[];
+    if (auds.length) prewarmUS(auds);
+  }, [items]);
+  // 听力题:切到该题时自动朗读一次本课音频(桌面自动;iOS 需点喇叭)。
+  useEffect(() => {
+    if (item?.kind === "choice" && item.audio) void speakUS(item.audio);
+  }, [idx, item]);
 
   const next = useCallback(() => {
     if (idx + 1 >= total) {
@@ -120,6 +131,17 @@ export function QuizRunner({
 
       {item.kind === "choice" ? (
         <section>
+          {/* 听力题:大喇叭播本课音频(题干只给指令,不露 audio 文本) */}
+          {item.audio && (
+            <div className="mb-5 flex flex-col items-center">
+              <button type="button" aria-label="播放录音"
+                onClick={() => { unlockAmericanAudio(); void speakUS(item.audio!); }}
+                className="inline-flex size-16 items-center justify-center rounded-full bg-sky-600 text-white shadow-lg transition hover:scale-105">
+                <Volume2 className="size-7" />
+              </button>
+              <p className="mt-1.5 text-xs text-slate-400"><T>点击播放录音</T></p>
+            </div>
+          )}
           {/* cloze:填空所在对话/句子原句(context 已含 ___ 标出空位),让复习时也能看到填在哪 */}
           {item.context && (
             <div className="mb-4 rounded-2xl border border-slate-100 bg-slate-50 p-4">
@@ -128,8 +150,8 @@ export function QuizRunner({
           )}
           <div className="mb-4 flex items-start gap-2">
             <p className="flex-1 text-lg font-semibold leading-relaxed text-slate-800">{item.stem}</p>
-            {/* cloze 的 stem 是"第N空",朗读无意义 → 有 context(=cloze)时不显示朗读键 */}
-            {speakStem && !item.context && (
+            {/* cloze 的 stem 是"第N空",朗读无意义 → 有 context(=cloze)时不显示朗读键;听力题用上方大喇叭 */}
+            {speakStem && !item.context && !item.audio && (
               <button type="button" aria-label="朗读题干"
                 onClick={() => { unlockAmericanAudio(); void speakUS(item.stem); }}
                 className="mt-1 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-600">

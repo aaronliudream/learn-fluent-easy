@@ -5,7 +5,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Volume2 } from "lucide-react";
 import { T } from "@/i18n/T";
-import { speakUS, unlockAmericanAudio } from "@/lib/american/audio";
+import { speakUS, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
 import { markStageComplete, recordWordMastery, type AmericanWord, type LessonBundle } from "@/lib/american/data";
 
 const PER_ROUND = 5;
@@ -31,6 +31,9 @@ export function AmericanMatchStage({ bundle, onDone }: { bundle: LessonBundle; o
   const [selR, setSelR] = useState<string | null>(null);
   const [wrong, setWrong] = useState<string | null>(null);
   const [done, setDone] = useState(false);
+
+  // 进关预热全部生词音频 → 点喇叭永远命中缓存直接播(消除冷词首播竞态/iOS 静音)。
+  useEffect(() => { prewarmUS(bundle.words.map((w) => w.word)); }, [bundle.words]);
 
   const roundWords = useMemo(() => rounds[ri] ?? [], [rounds, ri]);
   const left = roundWords;

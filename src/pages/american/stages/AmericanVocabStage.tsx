@@ -5,7 +5,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Volume2, RotateCcw } from "lucide-react";
 import { T } from "@/i18n/T";
-import { speakUS, unlockAmericanAudio } from "@/lib/american/audio";
+import { speakUS, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
 import { markStageComplete, recordWordMastery, type LessonBundle } from "@/lib/american/data";
 
 export function AmericanVocabStage({ bundle, onDone }: { bundle: LessonBundle; onDone?: () => void }) {
@@ -17,6 +17,9 @@ export function AmericanVocabStage({ bundle, onDone }: { bundle: LessonBundle; o
   const [done, setDone] = useState(false);
 
   const w = words[idx];
+
+  // 进关预热全部生词音频 → 后续点喇叭永远命中缓存直接播(消除冷词首播竞态/iOS 静音)。
+  useEffect(() => { prewarmUS(words.map((x) => x.word)); }, [words]);
 
   // 每张卡出现时自动朗读一次
   useEffect(() => {

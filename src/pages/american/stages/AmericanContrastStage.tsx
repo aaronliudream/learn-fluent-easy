@@ -3,17 +3,22 @@
  * 方案A改良:同一张 american_amencontrast 表混装两种卡,按该条有无 example1 切换渲染:
  *   有 example1 → 语块卡(chunk + 音标 + 中文 + 2 例句);无 → 美英对照卡(us / uk / note_cn)。
  */
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Volume2, ArrowRight } from "lucide-react";
 import { T } from "@/i18n/T";
 import { QuizRunner, questionsToItems } from "@/components/american/QuizRunner";
-import { speakUS, unlockAmericanAudio } from "@/lib/american/audio";
+import { speakUS, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
 import { markStageComplete, recordMastery, type LessonBundle } from "@/lib/american/data";
 
 export function AmericanContrastStage({ bundle, onDone }: { bundle: LessonBundle; onDone?: () => void }) {
   const [phase, setPhase] = useState<"learn" | "quiz">("learn");
   const qs = useMemo(() => bundle.questions.filter((q) => q.stage === 6), [bundle]);
   const items = useMemo(() => questionsToItems(qs), [qs]);
+
+  // 进关预热美语说法(us)+语块例句音频 → 点喇叭直接播;新语块例句(从未播过)也借此触发 edge 现合成回填 CDN。
+  useEffect(() => {
+    prewarmUS(bundle.contrast.flatMap((c) => [c.us, c.example1, c.example2]));
+  }, [bundle.contrast]);
 
   const onAnswer = useCallback((id: string, ok: boolean) => { void recordMastery("am_question", id, ok); }, []);
   const onComplete = useCallback(() => {

@@ -9,7 +9,7 @@ import { ArrowLeft, Lock } from "lucide-react";
 import { T } from "@/i18n/T";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
 import { AMERICAN_STAGES } from "@/lib/american/stages";
-import { fetchLessonBundle, fetchLessonMastery, type LessonBundle, type StageProgress } from "@/lib/american/data";
+import { bookOf, fetchLessonBundle, fetchLessonMastery, type LessonBundle, type StageProgress } from "@/lib/american/data";
 
 export default function AmericanLesson() {
   const { lessonId = "" } = useParams<{ lessonId: string }>();
@@ -44,7 +44,7 @@ export default function AmericanLesson() {
   return (
     <main className="min-h-dvh bg-slate-50">
       <div className="mx-auto max-w-2xl px-4 py-5">
-        <Link to={`/american/hub/${lesson.unit_no}`} className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-700">
+        <Link to={`/american/book/${bookOf(lesson.id)}/hub/${lesson.unit_no}`} className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-700">
           <ArrowLeft className="size-4" /> <T>单元</T> {lesson.unit_no}
         </Link>
 

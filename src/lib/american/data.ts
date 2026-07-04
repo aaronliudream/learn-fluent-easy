@@ -116,7 +116,15 @@ export type LessonBundle = {
 
 /** 内容 id 前缀(am1_ / am2_ …)推册号;等价于 book_no,前端据此按册分组,不依赖 3a schema 落库。 */
 export function bookOf(id: string): number {
-  return Number(String(id).match(/^am(\d+)_/)?.[1] ?? 1);
+  const m = String(id).match(/^am(\d+)_/);
+  if (!m) {
+    // id 理应恒为 amN_ 前缀(所有查询都按 amN_l% 过滤)。走到这里=数据异常。
+    // 渲染路径不宜 throw(bookOf 在 fetchBooks 里遍历全部课程,一条坏数据会连累整册落地页),
+    // 故显式告警报人 + 安全兜底 1,而非静默默认。
+    console.warn(`[american] bookOf: 无法从 id "${id}" 解析册号(期望 amN_ 前缀),兜底为第 1 册`);
+    return 1;
+  }
+  return Number(m[1]);
 }
 
 /**

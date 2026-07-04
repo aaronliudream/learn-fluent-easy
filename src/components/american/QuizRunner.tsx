@@ -11,7 +11,7 @@ import { speakUS, unlockAmericanAudio } from "@/lib/american/audio";
 import type { AmericanQuestion } from "@/lib/american/data";
 
 export type QuizItem =
-  | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number; explanation?: string }
+  | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number; explanation?: string; context?: string }
   | { kind: "reveal"; id: string; prompt: string; answer: string; explanation?: string };
 
 /** american_questions → QuizItem(choice / reveal[transform·scenario])。 */
@@ -19,7 +19,9 @@ export function questionsToItems(qs: AmericanQuestion[]): QuizItem[] {
   return qs.map((q) =>
     q.qtype === "transform" || q.qtype === "scenario"
       ? { kind: "reveal", id: q.id, prompt: q.payload.stem, answer: q.payload.answer_text ?? "", explanation: q.payload.explanation_cn }
-      : { kind: "choice", id: q.id, stem: q.payload.stem, options: q.payload.options ?? [], answerIndex: q.payload.answer_index ?? 0, explanation: q.payload.explanation_cn },
+      // cloze 的 stem 只是"第N空",填空所在句在 payload.context(已含 ___ 标空);带出来给复习页显示。
+      // 仅 cloze 显示 context;防将来听力/阅读题若挂 context(听力原文)被误显示而泄露答案。
+      : { kind: "choice", id: q.id, stem: q.payload.stem, options: q.payload.options ?? [], answerIndex: q.payload.answer_index ?? 0, explanation: q.payload.explanation_cn, context: q.qtype === "cloze" ? q.payload.context : undefined },
   );
 }
 
@@ -118,9 +120,16 @@ export function QuizRunner({
 
       {item.kind === "choice" ? (
         <section>
+          {/* cloze:填空所在对话/句子原句(context 已含 ___ 标出空位),让复习时也能看到填在哪 */}
+          {item.context && (
+            <div className="mb-4 rounded-2xl border border-slate-100 bg-slate-50 p-4">
+              <p className="whitespace-pre-line text-sm leading-relaxed text-slate-600">{item.context}</p>
+            </div>
+          )}
           <div className="mb-4 flex items-start gap-2">
             <p className="flex-1 text-lg font-semibold leading-relaxed text-slate-800">{item.stem}</p>
-            {speakStem && (
+            {/* cloze 的 stem 是"第N空",朗读无意义 → 有 context(=cloze)时不显示朗读键 */}
+            {speakStem && !item.context && (
               <button type="button" aria-label="朗读题干"
                 onClick={() => { unlockAmericanAudio(); void speakUS(item.stem); }}
                 className="mt-1 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-600">

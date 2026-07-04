@@ -42,7 +42,7 @@ export default function AmericanUnit() {
   return (
     <main className="min-h-dvh bg-slate-50">
       <div className="mx-auto max-w-2xl px-4 py-5">
-        <Link to="/american" className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-700">
+        <Link to="/american/book/1" className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-700">
           <ArrowLeft className="size-4" /> <T>全部单元</T>
         </Link>
 

@@ -22,6 +22,7 @@ import { Navigate } from "react-router-dom";
 
 // Lazy-load everything else — each page becomes its own chunk
 // 成人英语(CEFR)板块已下线,页面归档至 _archived/adult/。旧路由 301 → /american(见 Routes)。
+const AmericanBooks = lazy(() => import("./pages/american/AmericanBooks.tsx"));
 const AmericanHub = lazy(() => import("./pages/american/AmericanHub.tsx"));
 const AmericanUnit = lazy(() => import("./pages/american/AmericanUnit.tsx"));
 const AmericanLesson = lazy(() => import("./pages/american/AmericanLesson.tsx"));
@@ -527,8 +528,9 @@ const App = () => (
           <Route path="/gaokao/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           <Route path="/gaokao/g/:grade/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           {/* end 高中(已开放)*/}
-          {/* 美语课程(/american hub → 单元 → 本课 10 关 → 关卡) */}
-          <Route path="/american" element={<AmericanHub />} />
+          {/* 美语课程(/american 四册 → book/:bookNo 单元 → 本课 10 关 → 关卡) */}
+          <Route path="/american" element={<AmericanBooks />} />
+          <Route path="/american/book/:bookNo" element={<AmericanHub />} />
           <Route path="/american/review" element={<AmericanReview />} />
           <Route path="/american/hub/:unit" element={<AmericanUnit />} />
           <Route path="/american/lesson/:lessonId" element={<AmericanLesson />} />

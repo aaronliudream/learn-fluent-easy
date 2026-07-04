@@ -1,15 +1,17 @@
 /**
- * 美语课程 · 总入口(/american)—— 12 单元总览。
+ * 美语课程 · 某册单元总览(/american/book/:bookNo)—— 该册 12 单元。
  * 已上线单元(american_lessons 有数据)可进;其余显示"敬请期待"。
+ * bookNo 缺省 1(第一册),渲染与改版前 /american 一致(回归点)。
  */
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Lock, Sparkles, RotateCcw, ChevronRight, BookOpen, Download } from "lucide-react";
 import { T } from "@/i18n/T";
 import { fetchUnits, fetchReviewCount, fetchUnitCompletion, type AmericanUnit } from "@/lib/american/data";
 import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_SUBTITLE, AMERICAN_COURSE_SCALE, AMERICAN_COURSE_COVERAGE } from "@/lib/american/brand";
 
 const TOTAL_UNITS = 12;
+const BOOK_LABEL: Record<number, string> = { 1: "第一册", 2: "第二册", 3: "第三册", 4: "第四册" };
 
 // 课本 PDF 公开直链(Supabase 公开桶 textbooks,anon 可读;?download 强制附件下载)。
 // 文件名带版本号,更新出 v2 不覆盖旧缓存。册名与书封面一致(brand 去 1-4册 后缀)。
@@ -18,6 +20,8 @@ const BOOK1_TITLE = `${AMERICAN_COURSE_NAME.replace(/1-4册$/, "")} · 第一册
 
 export default function AmericanHub() {
   const nav = useNavigate();
+  const { bookNo: bookNoParam } = useParams<{ bookNo: string }>();
+  const bookNo = Number(bookNoParam) || 1;
   const [units, setUnits] = useState<AmericanUnit[]>([]);
   const [loading, setLoading] = useState(true);
   const [reviewCount, setReviewCount] = useState(0);
@@ -25,7 +29,7 @@ export default function AmericanHub() {
 
   useEffect(() => {
     let alive = true;
-    fetchUnits()
+    fetchUnits(bookNo)
       .then((u) => {
         if (!alive) return;
         setUnits(u);
@@ -35,15 +39,15 @@ export default function AmericanHub() {
       .finally(() => { if (alive) setLoading(false); });
     fetchReviewCount().then((n) => { if (alive) setReviewCount(n); }).catch(() => {});
     return () => { alive = false; };
-  }, []);
+  }, [bookNo]);
 
   const available = new Map(units.map((u) => [u.unit_no, u]));
 
   return (
     <main className="min-h-dvh bg-slate-50">
       <div className="mx-auto max-w-2xl px-4 py-5">
-        <Link to="/" className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-700">
-          <ArrowLeft className="size-4" /> <T>返回首页</T>
+        <Link to="/american" className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-700">
+          <ArrowLeft className="size-4" /> <T>全部分册</T>
         </Link>
 
         <header className="mt-4 rounded-3xl bg-gradient-to-br from-sky-600 to-indigo-600 p-6 text-center text-white shadow-sm">
@@ -53,7 +57,7 @@ export default function AmericanHub() {
           <h1 className="mt-3 text-2xl font-bold">{AMERICAN_COURSE_NAME}</h1>
           <p className="mt-1 text-sm text-white/85">{AMERICAN_COURSE_SUBTITLE}</p>
           <p className="mt-1 text-xs text-white/70"><T>{AMERICAN_COURSE_COVERAGE}</T></p>
-          <span className="mt-3 inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-semibold">{AMERICAN_COURSE_SCALE}</span>
+          <span className="mt-3 inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-semibold"><T>{BOOK_LABEL[bookNo] ?? `第${bookNo}册`}</T> · {AMERICAN_COURSE_SCALE}</span>
         </header>
 
         {reviewCount > 0 && (
@@ -70,21 +74,23 @@ export default function AmericanHub() {
           </Link>
         )}
 
-        <a
-          href={BOOK1_PDF_URL}
-          download
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 flex items-center gap-3 rounded-2xl border border-sky-200 bg-white p-4 shadow-sm transition hover:border-sky-400 hover:shadow">
-          <span className="inline-flex size-10 items-center justify-center rounded-xl bg-sky-100 text-sky-600">
-            <BookOpen className="size-5" />
-          </span>
-          <div className="flex-1">
-            <p className="text-sm font-bold text-slate-800">📖 {BOOK1_TITLE}</p>
-            <p className="text-xs text-slate-500"><T>72课完整课本 · 免费下载</T> · <T>约</T> 11 MB</p>
-          </div>
-          <Download className="size-5 text-sky-400" />
-        </a>
+        {bookNo === 1 && (
+          <a
+            href={BOOK1_PDF_URL}
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 flex items-center gap-3 rounded-2xl border border-sky-200 bg-white p-4 shadow-sm transition hover:border-sky-400 hover:shadow">
+            <span className="inline-flex size-10 items-center justify-center rounded-xl bg-sky-100 text-sky-600">
+              <BookOpen className="size-5" />
+            </span>
+            <div className="flex-1">
+              <p className="text-sm font-bold text-slate-800">📖 {BOOK1_TITLE}</p>
+              <p className="text-xs text-slate-500"><T>72课完整课本 · 免费下载</T> · <T>约</T> 11 MB</p>
+            </div>
+            <Download className="size-5 text-sky-400" />
+          </a>
+        )}
 
         <h2 className="mb-3 mt-6 text-sm font-bold text-slate-500"><T>选择单元</T></h2>
         {loading ? (

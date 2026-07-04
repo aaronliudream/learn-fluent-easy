@@ -103,11 +103,21 @@ export type LessonBundle = {
   contrast: AmericanContrast[];
 };
 
-/** 单元 tab 列表 —— 从 american_lessons 汇总已上线单元(distinct unit_no)。 */
-export async function fetchUnits(): Promise<AmericanUnit[]> {
+/** 内容 id 前缀(am1_ / am2_ …)推册号;等价于 book_no,前端据此按册分组,不依赖 3a schema 落库。 */
+export function bookOf(id: string): number {
+  return Number(String(id).match(/^am(\d+)_/)?.[1] ?? 1);
+}
+
+/**
+ * 某册的单元列表 —— 从 american_lessons 按册(lesson_id 前缀 amN_)过滤 + distinct unit_no。
+ * 每单元课数不硬编码,来自 DB 实际分组(第一册 6 课/单元、第二册 8 课/单元同一套代码)。
+ * bookNo 默认 1:旧调用点(AmericanUnit 深链 /american/hub/:unit)保持解析第一册,零回归。
+ */
+export async function fetchUnits(bookNo = 1): Promise<AmericanUnit[]> {
   const { data, error } = await db
     .from("american_lessons")
     .select("id,unit_no,lesson_no,title_en,title_cn,grammar_focus,scene,prelisten_question")
+    .like("id", `am${bookNo}_l%`)
     .order("unit_no", { ascending: true })
     .order("lesson_no", { ascending: true });
   if (error) throw error;
@@ -120,6 +130,26 @@ export async function fetchUnits(): Promise<AmericanUnit[]> {
   return [...byUnit.entries()]
     .sort((a, b) => a[0] - b[0])
     .map(([unit_no, lessons]) => ({ unit_no, lessons }));
+}
+
+export type AmericanBook = { bookNo: number; launched: boolean; lessonCount: number };
+
+/**
+ * 四册总览 —— 扫 american_lessons id 前缀,统计每册已落库课数;有课=已上线可进,无课=制作中。
+ * 数据驱动:am2 落库后第二册自动点亮,无需改前端。
+ */
+export async function fetchBooks(): Promise<AmericanBook[]> {
+  const { data, error } = await db.from("american_lessons").select("id");
+  if (error) throw error;
+  const count = new Map<number, number>();
+  for (const r of (data ?? []) as { id: string }[]) {
+    const b = bookOf(r.id);
+    count.set(b, (count.get(b) ?? 0) + 1);
+  }
+  return [1, 2, 3, 4].map((bookNo) => {
+    const lessonCount = count.get(bookNo) ?? 0;
+    return { bookNo, launched: lessonCount > 0, lessonCount };
+  });
 }
 
 /** 一课全部内容(6 关素材一次取全)。 */

@@ -5,7 +5,7 @@
  * 每空逐题作答,展示该空自带 context(既有空=对话原文;扩容空=单句),记 am_question(答对2次=掌握)。
  */
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Check, X, ChevronRight, Volume2 } from "lucide-react";
+import { Check, X, ChevronRight, ChevronLeft, Volume2 } from "lucide-react";
 import { T } from "@/i18n/T";
 import { speakUS, unlockAmericanAudio } from "@/lib/american/audio";
 import { markStageComplete, recordMastery, type AmericanQuestion, type LessonBundle } from "@/lib/american/data";
@@ -75,7 +75,8 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
 
   const items = round.items;
   const [idx, setIdx] = useState(0);
-  const [picked, setPicked] = useState<number | null>(null);
+  const [maxIdx, setMaxIdx] = useState(0);                       // 已到达前沿;idx<maxIdx=回看只读
+  const [records, setRecords] = useState<Record<number, number>>({}); // idx → 所选项
   const [correct, setCorrect] = useState(0);
   const [done, setDone] = useState(false);
 
@@ -83,22 +84,34 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
   const opts = q?.payload.options ?? [];
   const ans = q?.payload.answer_index ?? 0;
   const context = q?.payload.context ?? "";
+  const rec = records[idx];
+  const answered = rec !== undefined;
+  const reviewing = idx < maxIdx;                                // 回看模式:只读、不计分、不改掌握
+  const picked = rec ?? null;
 
   const pick = useCallback((i: number) => {
-    if (picked !== null || !q) return;
-    setPicked(i);
+    if (!q || answered || idx !== maxIdx) return;                // 已答或回看:禁止作答(防刷分/改答)
+    setRecords((r) => ({ ...r, [idx]: i }));
     const ok = i === ans;
     if (ok) setCorrect((c) => c + 1);
     void recordMastery("am_question", q.id, ok);
-  }, [picked, q, ans]);
+  }, [q, answered, idx, maxIdx, ans]);
+
+  const prev = useCallback(() => {
+    if (idx === 0) return;
+    unlockAmericanAudio();
+    setIdx((i) => i - 1);
+  }, [idx]);
 
   const next = useCallback(() => {
+    unlockAmericanAudio();
+    if (idx < maxIdx) { setIdx((i) => i + 1); return; }          // 回看前进:仅移动光标
     if (idx + 1 >= items.length) {
       void markStageComplete(bundle.lesson.id, 7);
       setDone(true);
       if (onDone) setTimeout(onDone, 1600);
-    } else { setIdx((i) => i + 1); setPicked(null); }
-  }, [idx, items.length, bundle.lesson.id, onDone]);
+    } else { setMaxIdx((m) => Math.max(m, idx + 1)); setIdx((i) => i + 1); }
+  }, [idx, maxIdx, items.length, bundle.lesson.id, onDone]);
 
   if (done) {
     return (
@@ -121,9 +134,12 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
       )}
       <div className="mb-4 flex items-center gap-3">
         <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-100">
-          <div className="h-full rounded-full bg-sky-500 transition-all" style={{ width: `${(idx / items.length) * 100}%` }} />
+          {/* 进度按前沿 maxIdx 计:回看不倒退 */}
+          <div className="h-full rounded-full bg-sky-500 transition-all" style={{ width: `${(maxIdx / items.length) * 100}%` }} />
         </div>
-        <span className="text-xs font-semibold text-slate-400">{idx + 1}/{items.length}</span>
+        <span className="text-xs font-semibold text-slate-400">
+          {reviewing ? <span className="text-amber-500"><T>回看</T> {idx + 1}/{items.length}</span> : `${idx + 1}/${items.length}`}
+        </span>
       </div>
 
       <p className="mb-3 text-base font-semibold text-slate-800"><T>第</T> {q.payload.blank_no} <T>空 · 还原课文原句,选择原文中的词</T></p>
@@ -160,12 +176,21 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
           <p className="mt-1 whitespace-pre-line text-sm leading-relaxed text-amber-900">{q.payload.explanation_cn}</p>
         </div>
       )}
-      {picked !== null && (
-        <button type="button" onClick={next}
-          className="mt-5 inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-sky-600 py-3 text-sm font-semibold text-white">
-          {idx + 1 >= items.length ? <T>完成本关</T> : <><T>下一空</T> <ChevronRight className="size-4" /></>}
+      {/* 底部导航:上一空(回看)/下一空。首空禁用上一空;当前空未作答时禁用下一空 */}
+      <div className="mt-5 flex items-center gap-3">
+        <button type="button" onClick={prev} disabled={idx === 0}
+          className={`inline-flex items-center justify-center gap-1 rounded-full border px-5 py-3 text-sm font-semibold transition ${
+            idx === 0 ? "cursor-not-allowed border-slate-100 text-slate-300" : "border-slate-200 text-slate-500 hover:border-slate-300"
+          }`}>
+          <ChevronLeft className="size-4" /> <T>上一空</T>
         </button>
-      )}
+        <button type="button" onClick={next} disabled={!answered}
+          className={`inline-flex flex-1 items-center justify-center gap-1.5 rounded-full py-3 text-sm font-semibold transition ${
+            answered ? "bg-sky-600 text-white" : "cursor-not-allowed bg-slate-100 text-slate-300"
+          }`}>
+          {idx + 1 >= items.length && !reviewing ? <T>完成本关</T> : <><T>下一空</T> <ChevronRight className="size-4" /></>}
+        </button>
+      </div>
     </div>
   );
 }

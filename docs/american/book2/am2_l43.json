@@ -1,0 +1,136 @@
+{
+  "id": "am2_l43",
+  "unit_no": 6,
+  "lesson_no": 43,
+  "title_en": "Over the South Pole",
+  "title_cn": "飞越南极",
+  "grammar_focus": "can / be able to 的用法(KS19)主考——can → be able to(能力互换)、将来用 will be able to(can 无将来式)、过去用 was/were able to;was able to 表'(具体一次)成功做到了',此时不能用 could;run into trouble、order sb to do、a great many + 复数、get over / by 表相差(辅考·课文①类)",
+  "scene": "1929年,美国探险家 R.E. 伯德在飞越北极3年之后,第一次飞越了南极。虽然起初伯德和助手们拍下了飞机下面连绵群山的大量照片,但他们很快就陷入了困境。在有个地方,飞机似乎肯定要坠毁了——只有飞到一万英尺的高度,它才能飞过这些山头。伯德马上命令助手们把两个沉重的食物袋扔掉,于是飞机得以升高,在离山头400英尺的高度飞越了过去。伯德这时知道他能够顺利飞抵300英里以外的南极了,因为前面再没有山了。飞机毫无困难地飞过了这片茫茫无际的白色原野。",
+  "grammar_card": {
+    "title": "can 与 be able to:表'能够'",
+    "intro": "can 和 be able to 都表'能够'。can 没有将来式,要说将来的'能'得用 will be able to;过去用 was/were able to。关键:表示'(某一次)成功做成了'时,必须用 was able to,不能用 could。全用本课句子举例。",
+    "table": {
+      "headers": ["场景", "说法"],
+      "rows": [
+        ["现在能力", "He is able to swim. = He can swim."],
+        ["将来能力(can 无将来)", "I'll be able to see you tomorrow."],
+        ["过去能力", "They were able to take photographs."],
+        ["某次成功做成(不用 could)", "The plane was able to rise and cleared the mountains."],
+        ["转述将来能力", "He said he would be able to see me next week."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "表示'(某一次)终于成功做成'时,只能用 was/were able to,不能用 could:The plane was able to rise(飞机成功升高了)。", "mark": "成功做成用 was able to" },
+      { "rule": "can 没有将来式,说将来的'能'用 will be able to;转述里用 would be able to。", "mark": "将来用 will be able to" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How was the plane able to clear the mountains?",
+    "options": ["By throwing out two heavy food sacks so it could rise higher", "By flying around them", "By waiting for better weather", "By landing and refueling"],
+    "answer_index": 0
+  },
+  "passage": "In 1929, three years after his flight over the North Pole, the American explorer, R.E. Byrd, successfully flew over the South Pole for the first time. Though, at first, Byrd and his men were able to take a great many photographs of the mountains that lay below, they soon ran into serious trouble. At one point, it seemed certain that their plane would crash. It could only get over the mountains if it rose to 10,000 feet. Byrd at once ordered his men to throw out two heavy food sacks. The plane was then able to rise and it cleared the mountains by 400 feet. Byrd now knew that he would be able to reach the South Pole which was 300 miles away, for there were no more mountains in sight. The aircraft was able to fly over the endless white plains without difficulty.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "In 1929, three years after his flight over the North Pole, the American explorer, R.E. Byrd, successfully flew over the South Pole for the first time.", "text_cn": "1929年,在飞越北极3年之后,美国探险家 R.E. 伯德第一次飞越了南极。" },
+    { "seq": 2, "speaker": null, "text_en": "Though, at first, Byrd and his men were able to take a great many photographs of the mountains that lay below, they soon ran into serious trouble.", "text_cn": "虽然起初伯德和助手们拍下了下面群山的大量照片,但他们很快就陷入了困境。" },
+    { "seq": 3, "speaker": null, "text_en": "At one point, it seemed certain that their plane would crash.", "text_cn": "在某个地方,飞机似乎肯定要坠毁了。" },
+    { "seq": 4, "speaker": null, "text_en": "It could only get over the mountains if it rose to 10,000 feet.", "text_cn": "只有升到一万英尺的高度,它才能飞过这些山头。" },
+    { "seq": 5, "speaker": null, "text_en": "Byrd at once ordered his men to throw out two heavy food sacks.", "text_cn": "伯德马上命令助手们把两个沉重的食物袋扔掉。" },
+    { "seq": 6, "speaker": null, "text_en": "The plane was then able to rise and it cleared the mountains by 400 feet.", "text_cn": "于是飞机得以升高,在离山头400英尺的高度飞越了过去。" },
+    { "seq": 7, "speaker": null, "text_en": "Byrd now knew that he would be able to reach the South Pole which was 300 miles away, for there were no more mountains in sight.", "text_cn": "伯德这时知道他能够飞抵300英里以外的南极了,因为前面再没有山了。" },
+    { "seq": 8, "speaker": null, "text_en": "The aircraft was able to fly over the endless white plains without difficulty.", "text_cn": "飞机毫无困难地飞过了这片茫茫无际的白色原野。" }
+  ],
+  "words": [
+    { "word": "explorer", "ipa": "/ɪkˈsplɔːrər/", "pos": "n", "meaning_cn": "探险家", "example": "the American explorer R.E. Byrd" },
+    { "word": "flight", "ipa": "/flaɪt/", "pos": "n", "meaning_cn": "飞行", "example": "his flight over the North Pole" },
+    { "word": "serious", "ipa": "/ˈsɪriəs/", "pos": "adj", "meaning_cn": "严重的;严肃的", "example": "ran into serious trouble" },
+    { "word": "seem", "ipa": "/siːm/", "pos": "v", "meaning_cn": "似乎,好像", "example": "it seemed certain" },
+    { "word": "crash", "ipa": "/kræʃ/", "pos": "v", "meaning_cn": "坠毁,撞毁", "example": "their plane would crash" },
+    { "word": "sack", "ipa": "/sæk/", "pos": "n", "meaning_cn": "袋子", "example": "two heavy food sacks" },
+    { "word": "clear", "ipa": "/klɪr/", "pos": "v", "meaning_cn": "越过,清除", "example": "it cleared the mountains by 400 feet" },
+    { "word": "aircraft", "ipa": "/ˈerkræft/", "pos": "n", "meaning_cn": "飞机", "example": "The aircraft was able to fly" },
+    { "word": "endless", "ipa": "/ˈendləs/", "pos": "adj", "meaning_cn": "无尽的", "example": "the endless white plains" },
+    { "word": "plain", "ipa": "/pleɪn/", "pos": "n", "meaning_cn": "平原", "example": "the endless white plains" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "can = be able to(现在能力)" },
+    { "gp": "gp2", "name": "will be able to(将来能力,can 无将来式)" },
+    { "gp": "gp3", "name": "was / were able to(过去能力)" },
+    { "gp": "gp4", "name": "was able to 表'成功做成'(不用 could)" },
+    { "gp": "gp5", "name": "run into trouble(遇到麻烦·辅考)" },
+    { "gp": "gp6", "name": "order sb to do(命令某人做·辅考)" },
+    { "gp": "gp7", "name": "a great many + 复数(大量·辅考)" },
+    { "gp": "gp8", "name": "get over / by 表相差(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He will come if he is ___ to.\"(现在'能够')", "stem_cn": "他要是能来就会来。", "options": ["able", "can", "could", "possible"] },
+    { "gp": "gp1", "stem": "\"Are you ___ to help me now?\"(现在'能够')", "stem_cn": "你现在能帮我吗?", "options": ["able", "can", "could", "possible"] },
+    { "gp": "gp2", "stem": "\"After I finish school next year, I ___ get a job.\"(将来才'能',can 没有将来式)", "stem_cn": "明年毕业后,我就能找份工作了。", "options": ["will be able to", "can", "could", "am able to"] },
+    { "gp": "gp2", "stem": "\"One day humans ___ live on Mars.\"(将来才'能')", "stem_cn": "总有一天人类能在火星上生活。", "options": ["will be able to", "can", "could", "are able to"] },
+    { "gp": "gp2", "stem": "\"He said he ___ see me next week.\"(转述:将来'能')", "stem_cn": "他说他下周能见我。", "options": ["would be able to", "can", "could", "is able to"] },
+    { "gp": "gp3", "stem": "\"When I was young, I ___ run very fast.\"(过去'能够')", "stem_cn": "我小时候能跑得很快。", "options": ["was able to", "am able to", "will be able to", "is able to"] },
+    { "gp": "gp3", "stem": "\"At first they ___ take many photographs.\"(过去'能够')", "stem_cn": "起初他们能拍很多照片。", "options": ["were able to", "are able to", "will be able to", "is able to"] },
+    { "gp": "gp4", "stem": "\"The plane ___ rise and cleared the mountains.\"(某一次'成功做到了',强调结果)", "stem_cn": "飞机得以升高,越过了山头。", "options": ["was able to", "could", "can", "will"] },
+    { "gp": "gp4", "stem": "\"Byrd ___ reach the South Pole in the end.\"(某一次'成功做到了',强调结果)", "stem_cn": "伯德最终成功飞抵南极。", "options": ["was able to", "could", "can", "is able to"] },
+    { "gp": "gp4", "stem": "\"After hours of climbing, we ___ get to the top.\"(某一次'成功做到了',强调结果)", "stem_cn": "爬了几个小时后,我们终于登顶了。", "options": ["were able to", "could", "can", "will"] },
+    { "gp": "gp4", "stem": "\"The firemen ___ put out the fire quickly.\"(某一次'成功做到了',强调结果)", "stem_cn": "消防员迅速把火扑灭了。", "options": ["were able to", "could", "can", "are able to"] },
+    { "gp": "gp5", "stem": "\"They soon ___ serious trouble.\"(遇到麻烦)", "stem_cn": "他们很快陷入了严重的困境。", "options": ["ran into", "ran out", "ran after", "ran over"] },
+    { "gp": "gp5", "stem": "\"We ___ trouble when the car broke down.\"(遇到麻烦)", "stem_cn": "车抛锚时我们遇到了麻烦。", "options": ["ran into", "ran out", "ran away", "ran after"] },
+    { "gp": "gp6", "stem": "\"Byrd ___ his men to throw out two food sacks.\"(命令某人做某事)", "stem_cn": "伯德命令部下扔出两个食物袋。", "options": ["ordered", "said", "spoke", "suggested"] },
+    { "gp": "gp6", "stem": "\"The captain ___ the sailors to lower the boat.\"(命令某人做某事)", "stem_cn": "船长命令水手放下小艇。", "options": ["ordered", "said", "spoke", "demanded"] },
+    { "gp": "gp7", "stem": "\"They took ___ photographs of the mountains.\"(大量,后接可数名词复数)", "stem_cn": "他们拍了大量群山的照片。", "options": ["a great many", "a great deal of", "much", "a little"] },
+    { "gp": "gp8", "stem": "\"The plane could only ___ the mountains if it rose higher.\"(越过)", "stem_cn": "飞机只有升得更高才能越过山头。", "options": ["get over", "get on", "get off", "get up"] },
+    { "gp": "gp8", "stem": "\"It cleared the mountains ___ 400 feet.\"(表'相差')", "stem_cn": "飞机在离山头400英尺处飞越过去。", "options": ["by", "with", "of", "in"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"飞机\"常说:", "options": ["airplane", "aeroplane", "aircraft", "flyer"] },
+    { "stem": "美语里\"手电筒\"常说:", "options": ["flashlight", "torch", "lamp", "light stick"] },
+    { "stem": "explorer 的意思是:", "options": ["探险家", "乘客", "司机", "科学家"] },
+    { "stem": "serious 的意思是:", "options": ["严重的;严肃的", "有趣的", "简单的", "短暂的"] },
+    { "stem": "endless 的意思是:", "options": ["无尽的", "有限的", "狭窄的", "危险的"] },
+    { "stem": "crash 的意思是:", "options": ["坠毁,撞毁", "起飞", "降落", "转弯"] }
+  ],
+  "contrast": [
+    { "us": "airplane", "uk": "aeroplane", "note_cn": "飞机;美语 airplane,英式 aeroplane(作文 aeroplanes)" },
+    { "us": "flashlight", "uk": "torch", "note_cn": "手电筒;美语 flashlight,英式 torch(探险场景)" },
+    { "us": "gas", "uk": "petrol", "note_cn": "汽油;美语 gas(gasoline),英式 petrol(交通工具燃料)" },
+    { "us": "round trip", "uk": "return", "note_cn": "往返;美语 round trip,英式 return(旅行购票)" }
+  ],
+  "chunks": [
+    { "us": "be able to", "ipa": "/bi ˈeɪbl tuː/", "example1": "The plane was able to rise and clear the mountains.", "example1_cn": "飞机得以升高,越过了山头。", "example2": "He will be able to see you tomorrow.", "example2_cn": "他明天能见你。" },
+    { "us": "run into (trouble)", "ipa": "/rʌn ˈɪntə/", "example1": "They soon ran into serious trouble.", "example1_cn": "他们很快陷入了困境。", "example2": "We ran into trouble on the way.", "example2_cn": "我们途中遇到了麻烦。" },
+    { "us": "order sb to do sth", "ipa": "/ˈɔːrdər ... tuː duː/", "example1": "Byrd ordered his men to throw out the food sacks.", "example1_cn": "伯德命令部下把食物袋扔出去。", "example2": "The captain ordered them to stop.", "example2_cn": "船长命令他们停下。" },
+    { "us": "get over", "ipa": "/ɡet ˈoʊvər/", "example1": "The plane could only get over the mountains if it rose higher.", "example1_cn": "飞机只有升得更高才能越过山头。", "example2": "How can we get over this difficulty?", "example2_cn": "我们怎样克服这个困难?" }
+  ],
+  "stage7_cloze": {
+    "context": "In 1929, Byrd ___1___ fly over the South Pole. At first his men ___2___ take many photographs, but they soon ran into trouble. The plane ___3___ rise only after they threw out two food sacks. In the end, the plane ___4___ clear the mountains and reach the Pole.",
+    "blanks": [
+      { "blank_no": 1, "options": ["was able to", "can", "could", "is able to"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["were able to", "are able to", "can", "will be able to"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["was able to", "can", "could", "is able to"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["was able to", "can", "could", "is able to"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Who was the first man to fly over the South Pole?", "options": ["The American explorer R.E. Byrd", "A British pilot", "A French sailor", "An Italian climber"] },
+    { "stem": "Why did Byrd order his men to throw out the food sacks?", "options": ["So the plane could rise high enough to clear the mountains", "Because the food was bad", "To make room for photographs", "Because they were too heavy to carry home"] },
+    { "stem": "How did the plane finally get over the mountains?", "options": ["It rose and cleared them by 400 feet", "It flew around them", "It landed and waited", "It crashed into them"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"飞机终于成功升高越过了山头\"(表'成功做到'用 was able to,不用 could):", "options": ["The plane was able to rise and clear the mountains.", "The plane could rise and clear the mountains.", "The plane is able to rise and clear the mountains.", "The plane able to rise and clear the mountains."] },
+    { "stem": "你想说\"我明天就能见你\"(将来的'能'用 will be able to):", "options": ["I'll be able to see you tomorrow.", "I will can see you tomorrow.", "I am able see you tomorrow.", "I be able to see you tomorrow."] },
+    { "stem": "你想说\"他们很快遇到了严重的麻烦\"(遇到麻烦用 run into):", "options": ["They soon ran into serious trouble.", "They soon ran out serious trouble.", "They soon ran after serious trouble.", "They soon ran serious trouble into."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "explorer 的意思是:", "options": ["探险家", "乘客", "医生", "士兵"] },
+    { "kind": "vocab", "stem": "endless 的意思是:", "options": ["无尽的", "短暂的", "狭窄的", "危险的"] },
+    { "kind": "grammar", "stem": "\"The plane ___ rise and cleared the mountains.\"(表'成功做到了',不用 could)", "stem_cn": "飞机得以升高,越过了山头。", "options": ["was able to", "could", "can", "will"] },
+    { "kind": "grammar", "stem": "\"They soon ___ serious trouble.\"(遇到麻烦)", "stem_cn": "他们很快陷入了严重的困境。", "options": ["ran into", "ran out", "ran after", "ran over"] },
+    { "kind": "scenario", "stem": "\"It cleared the mountains by 400 feet.\" 这句话的意思是:", "options": ["飞机在离山头400英尺的高度飞越了过去。", "飞机撞上了山头。", "飞机在山头下方400英尺。", "飞机绕过了山头。"] },
+    { "kind": "scenario", "stem": "\"Byrd ordered his men to throw out two heavy food sacks.\" 这句话的意思是:", "options": ["伯德命令部下把两个沉重的食物袋扔出去。", "伯德请求部下多带些食物。", "伯德自己扔掉了食物袋。", "伯德把食物分给部下。"] },
+    { "kind": "reading", "stem": "Why did the plane nearly crash?", "options": ["It could not get over the mountains unless it rose to 10,000 feet", "It ran out of fuel", "A storm hit it", "The pilot fell asleep"], "passage": true },
+    { "kind": "reading", "stem": "What did Byrd know once the plane cleared the mountains?", "options": ["That he would be able to reach the South Pole, 300 miles away", "That the plane would crash", "That they had to turn back", "That more mountains lay ahead"], "passage": true },
+    { "kind": "listening", "stem": "How many years after his North Pole flight did Byrd fly over the South Pole?", "options": ["Three years", "Ten years", "One year", "Twenty years"], "audio": true },
+    { "kind": "listening", "stem": "What lay beyond the mountains?", "options": ["Endless white plains with no more mountains", "A large city", "The ocean", "Another range of mountains"], "audio": true }
+  ]
+}

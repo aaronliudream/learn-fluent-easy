@@ -8,7 +8,7 @@
 
 ## 📌 本批变化(2026-07-05 session · L39–L42)
 - 🔴 **需跑** `american_am2_seed_unit05.sql` —— 本批加了 **L39、L40**(整单元 8 课齐),期望 **+352**(整单元;若之前跑过 L33–38 则本次净增 L39+L40 的 +88,幂等重跑整包无害)。
-- 🔴 **需跑** `american_am2_seed_unit06.sql` —— 本批新增 **L41、L42**,期望 **+88**(2 课×44)。
+- 🔴 **需跑** `american_am2_seed_unit06.sql` —— 本批新增 **L41、L42、L43**,期望 **+132**(3 课×44)。
 - ⏭️ **无需重跑** `unit01 / unit02 / unit03 / unit04` —— 本批**未改**其内容,时间戳不会变;跑了也无害(幂等),但可跳过。
 
 ## 已跑(Aaron 确认)
@@ -27,7 +27,7 @@
 | 3 | `american_am2_seed_unit03.sql` | +352(8课×44) | am2 U3(L17–24)整单元新增,已过三维闸门(L17/18/21 元语法已转运用) | 无 |
 | 4 | `american_am2_seed_unit04.sql` | +352(8课×44) | am2 U4 **整单元 L25–32 完成**(L32 Shopping made easy as…as同级比较+量词·分歧第六例),全过机器12项🟢 | 无 |
 | 5 | `american_am2_seed_unit05.sql` | +352(8课×44) | am2 U5 **整单元 L33–40 完成**(L40 Food and talk 虚拟条件句 if+过去式/would原形/be用were·KS16),全过机器12项🟢 | 无 |
-| 6 | `american_am2_seed_unit06.sql` | +88(2课×44,续增) | am2 U6 L41–42(L41 must/have to/need/needn't/mustn't·KS17;L42 Not very musical have用法·KS18,have+名词代替动词,美语差 take a walk/bath),机器12项🟢;L43-48 陆续追加 | 无 |
+| 6 | `american_am2_seed_unit06.sql` | +132(3课×44,续增) | am2 U6 L41–43(L41 must/need/needn't/mustn't·KS17;L42 have用法·KS18;L43 can/be able to·KS19,was able to表成功做成不用could),机器12项🟢;L44-48 陆续追加 | 无 |
 
 > **✅ unit03/04 已解除暂缓**:24 道🔴元语法定义题全部转成运用题,全 27 课第11项 =0、十二项全绿。
 > **🟡 待 Aaron 复核(非阻断,不影响上面照跑)**:`REVIEWAA/american-instructional-design-audit.md` 里的 ~98 道"概念辨认🟡"(如"关于X正确的是""police 后面动词用")按三维闸门属中间地带,已过机器闸(非红),留你复核是否进一步降级;要改也是幂等 UPDATE,不影响先跑。

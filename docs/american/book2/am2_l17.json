@@ -1,0 +1,137 @@
+{
+  "id": "am2_l17",
+  "unit_no": 3,
+  "lesson_no": 17,
+  "title_en": "Always young",
+  "title_cn": "青春常驻",
+  "grammar_focus": "must 的用法(主考:must 表不可逃避的义务 = have to / have got to 三者可互换 · 跟 will 用 have to · must 无过去式,过去用 had to · must 表推测'一定是'must be)+ as 的多义与 in spite of(辅考:as = 因为/当…时/作为 · in spite of + 名词表'尽管')",
+  "scene": "姑姑詹妮弗是位演员,至少三十五岁却总在台上扮演小姑娘——演出时必须穿鲜红连衣裙和黑长筒袜,去年还不得不穿短袜;被问年龄时她只笑答'长大成人一定很可怕'",
+  "grammar_card": {
+    "title": "说\"必须/不得不\"(must 和 have to)",
+    "intro": "本课讲怎么说\"必须做某事\"——must 和 have to。注意:两者意思相近、常可互换;但 must 没有过去式,过去的\"必须\"要用 had to;must 还能表示\"一定是\"(推测)。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课 / 常见例子"],
+      "rows": [
+        ["must 表\"不可逃避的必须\",= have to / have got to", "She must appear in a red dress. = She has to appear…"],
+        ["跟 will 说将来的\"必须\":用 have to,不用 must", "Jennifer will have to take part in a new play."],
+        ["must 没有过去式,过去的\"必须\"用 had to", "Last year she had to wear short socks."],
+        ["must 还能表\"一定是\"(有把握的推测)", "She must be at least thirty-five years old."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "问句里问\"必须吗\"常用 have to:Must you go? = Do you have to go?", "mark": "疑问互换" },
+      { "rule": "as 有多种含义:因为(as I am busy)/当…时(as I was leaving)/作为(as an engineer)", "mark": "as 多义" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why doesn't Aunt Jennifer tell anyone how old she is?",
+    "options": ["Because she thinks it must be terrible to be grown up", "Because she has forgotten her real age", "Because she is exactly seventeen", "Because nobody ever asks her"],
+    "answer_index": 0
+  },
+  "passage": "My aunt Jennifer is an actress. She must be at least thirty-five years old. In spite of this, she often appears on the stage as a young girl. Every evening she goes to the theater and becomes someone new. Jennifer will have to take part in a new play soon. This time, she will play a girl of seventeen. In the play, she must appear in a bright red dress and long black stockings. Last year, in another play, she had to wear short socks and a bright, orange-colored dress. Jennifer never tells anyone her real age. If anyone ever asks her how old she is, she always laughs and answers, 'Darling, it must be terrible to be grown up!'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "My aunt Jennifer is an actress.", "text_cn": "我的姑姑詹妮弗是位演员。" },
+    { "seq": 2, "speaker": null, "text_en": "She must be at least thirty-five years old.", "text_cn": "她少说也有三十五岁了。" },
+    { "seq": 3, "speaker": null, "text_en": "In spite of this, she often appears on the stage as a young girl.", "text_cn": "尽管如此,她却常在台上扮演小姑娘。" },
+    { "seq": 4, "speaker": null, "text_en": "Every evening she goes to the theater and becomes someone new.", "text_cn": "每天晚上她去剧院,变成一个全新的角色。" },
+    { "seq": 5, "speaker": null, "text_en": "Jennifer will have to take part in a new play soon.", "text_cn": "詹妮弗很快又要参加一部新剧的演出。" },
+    { "seq": 6, "speaker": null, "text_en": "This time, she will play a girl of seventeen.", "text_cn": "这一次,她将扮演一个十七岁的少女。" },
+    { "seq": 7, "speaker": null, "text_en": "In the play, she must appear in a bright red dress and long black stockings.", "text_cn": "演出时她必须穿一条鲜红的连衣裙和黑色的长筒袜。" },
+    { "seq": 8, "speaker": null, "text_en": "Last year, in another play, she had to wear short socks and a bright, orange-colored dress.", "text_cn": "去年演另一部剧时,她不得不穿短袜和一件鲜艳的橘红色连衣裙。" },
+    { "seq": 9, "speaker": null, "text_en": "Jennifer never tells anyone her real age.", "text_cn": "詹妮弗从不告诉任何人她的真实年龄。" },
+    { "seq": 10, "speaker": null, "text_en": "If anyone ever asks her how old she is, she always laughs and answers, 'Darling, it must be terrible to be grown up!'", "text_cn": "一旦有人问起她的年龄,她总是笑着回答:\"亲爱的,长大成人一定很可怕吧!\"" }
+  ],
+  "words": [
+    { "word": "actress", "ipa": "/ˈæktrəs/", "pos": "n", "meaning_cn": "女演员", "example": "My aunt Jennifer is an actress." },
+    { "word": "appear", "ipa": "/əˈpɪr/", "pos": "v", "meaning_cn": "登台;出现", "example": "she often appears on the stage" },
+    { "word": "stage", "ipa": "/steɪdʒ/", "pos": "n", "meaning_cn": "舞台", "example": "on the stage" },
+    { "word": "theater", "ipa": "/ˈθiːətər/", "pos": "n", "meaning_cn": "剧院", "example": "she goes to the theater" },
+    { "word": "bright", "ipa": "/braɪt/", "pos": "adj", "meaning_cn": "鲜艳的", "example": "a bright red dress" },
+    { "word": "dress", "ipa": "/dres/", "pos": "n", "meaning_cn": "连衣裙", "example": "a bright red dress" },
+    { "word": "stocking", "ipa": "/ˈstɑːkɪŋ/", "pos": "n", "meaning_cn": "(女用)长筒袜", "example": "long black stockings" },
+    { "word": "sock", "ipa": "/sɑːk/", "pos": "n", "meaning_cn": "短袜", "example": "short socks" },
+    { "word": "terrible", "ipa": "/ˈterəbl/", "pos": "adj", "meaning_cn": "可怕的;糟糕的", "example": "it must be terrible" },
+    { "word": "play", "ipa": "/pleɪ/", "pos": "n", "meaning_cn": "戏剧,剧本", "example": "a new play" },
+    { "word": "grown-up", "ipa": "/ˈɡroʊnʌp/", "pos": "adj", "meaning_cn": "成年的,成人的", "example": "to be grown up" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "must 表义务——不可逃避的\"必须\"" },
+    { "gp": "gp2", "name": "must = have to / have got to(义务可互换)" },
+    { "gp": "gp3", "name": "跟 will 或问句——用 have to 代替 must" },
+    { "gp": "gp4", "name": "must 无过去式——过去的\"必须\"用 had to" },
+    { "gp": "gp5", "name": "must 表推测——\"一定是\"must be" },
+    { "gp": "gp6", "name": "must / have to 综合运用" },
+    { "gp": "gp7", "name": "as 的多义(辅考:因为 / 当…时 / 作为)" },
+    { "gp": "gp8", "name": "in spite of + 名词——\"尽管\"(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "must 常常用来表示什么?", "options": ["不可逃避的义务(必须)", "过去做过的事", "此刻正在做的事", "将来可能发生的事"] },
+    { "gp": "gp1", "stem": "\"She ___ appear in a bright red dress.\"(表义务:必须穿)", "stem_cn": "她必须穿一条鲜红的连衣裙登台。", "options": ["must", "musts", "must to", "musting"] },
+    { "gp": "gp1", "stem": "\"I ___ finish my homework tonight.\"(表义务:必须)", "stem_cn": "我今晚必须完成作业。", "options": ["must", "musts", "am must", "must to"] },
+    { "gp": "gp2", "stem": "must 表\"必须\"时,可以用哪个短语替换?", "options": ["have to / have got to", "want to", "would like to", "used to"] },
+    { "gp": "gp2", "stem": "\"He must leave now.\" 与它意思相同的是:", "options": ["He has to leave now.", "He may leave now.", "He can leave now.", "He might leave now."] },
+    { "gp": "gp3", "stem": "\"Jennifer will ___ take part in a new play.\"(将来的\"必须\":must 没有将来式)", "stem_cn": "詹妮弗将不得不参加一部新剧的演出。", "options": ["have to", "must", "musts", "have got"] },
+    { "gp": "gp3", "stem": "\"Must you go now?\" 用 have to 提问,同样意思:", "options": ["Do you have to go now?", "Do you must go now?", "Have you to go now?", "You have to go now?"] },
+    { "gp": "gp4", "stem": "must 表\"必须\"时,它的过去表达是:", "options": ["had to", "musted", "must-ed", "did must"] },
+    { "gp": "gp4", "stem": "\"Last year she ___ wear short socks.\"(去年:过去的\"必须\")", "stem_cn": "去年她不得不穿短袜。", "options": ["had to", "must", "musted", "have to"] },
+    { "gp": "gp5", "stem": "must 除了表\"必须\",还能表示什么?", "options": ["有把握的推测(\"一定是…\")", "客气的请求", "随口的建议", "热情的邀请"] },
+    { "gp": "gp5", "stem": "\"She ___ be at least thirty-five.\"(有把握的推测:一定有)", "stem_cn": "她一定有至少三十五岁了。", "options": ["must", "may", "might", "could"] },
+    { "gp": "gp6", "stem": "\"It ___ be terrible to be grown up!\"(说话人很肯定的推测)", "stem_cn": "长大成人一定很可怕!", "options": ["must", "may", "can", "would"] },
+    { "gp": "gp6", "stem": "\"Yesterday I ___ work late.\"(昨天:过去的\"不得不\")", "stem_cn": "昨天我不得不加班到很晚。", "options": ["had to", "must", "have to", "musted"] },
+    { "gp": "gp7", "stem": "\"I cannot come, ___ I am busy.\"(表原因:因为我忙)", "stem_cn": "我不能来,因为我很忙。", "options": ["as", "so", "or", "but"] },
+    { "gp": "gp7", "stem": "在 \"He works as an engineer\" 里,as 的意思是:", "options": ["作为,担任", "因为", "当…的时候", "正如"] },
+    { "gp": "gp7", "stem": "在 \"As I was leaving, the phone rang\" 里,as 的意思是:", "options": ["当…的时候", "因为", "作为", "但是"] },
+    { "gp": "gp8", "stem": "in spite of 的意思是\"尽管\",它后面接的是:", "options": ["名词 / 动名词", "一个完整的句子", "一个动词原形", "一个形容词"] },
+    { "gp": "gp8", "stem": "\"___ the rain, they went out.\"(尽管下雨,后面接名词 the rain)", "stem_cn": "尽管下着雨,他们还是出门了。", "options": ["In spite of", "Though", "Because", "Although"] }
+  ],
+  "stage6": [
+    { "stem": "美语\"颜色\"拼作:", "options": ["color", "colour", "collor", "colar"] },
+    { "stem": "美语\"剧院\"拼作:", "options": ["theater", "theatre", "teater", "theator"] },
+    { "stem": "take part in 的意思是:", "options": ["参加", "离开", "观看", "负责"] },
+    { "stem": "in spite of 的意思是:", "options": ["尽管", "因为", "为了", "除了"] },
+    { "stem": "grow up 的意思是:", "options": ["长大成人", "变老", "站起来", "培育庄稼"] },
+    { "stem": "at least 的意思是:", "options": ["至少", "至多", "大约", "正好"] }
+  ],
+  "contrast": [
+    { "us": "color", "uk": "colour", "note_cn": "颜色;美语 color,英式 colour(如 orange-colored)" },
+    { "us": "theater", "uk": "theatre", "note_cn": "剧院;美语 theater,英式 theatre" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;美语 gray,英式 grey" }
+  ],
+  "chunks": [
+    { "us": "take part in", "ipa": "/teɪk pɑːrt ɪn/", "example1": "Jennifer will take part in a new play.", "example1_cn": "詹妮弗将参加一部新剧的演出。", "example2": "Many students took part in the contest.", "example2_cn": "许多学生参加了比赛。" },
+    { "us": "in spite of", "ipa": "/ɪn spaɪt əv/", "example1": "In spite of this, she plays young girls.", "example1_cn": "尽管如此,她仍扮演小姑娘。", "example2": "In spite of the rain, we went out.", "example2_cn": "尽管下着雨,我们还是出门了。" },
+    { "us": "grow up", "ipa": "/ɡroʊ ʌp/", "example1": "It must be terrible to be grown up.", "example1_cn": "长大成人一定很可怕。", "example2": "She grew up in a small town.", "example2_cn": "她在一个小镇长大。" },
+    { "us": "at least", "ipa": "/ət liːst/", "example1": "She must be at least thirty-five.", "example1_cn": "她至少有三十五岁了。", "example2": "It takes at least an hour.", "example2_cn": "这至少要花一个小时。" }
+  ],
+  "stage7_cloze": {
+    "context": "My aunt Jennifer is an actress. She ___1___ be at least thirty-five years old. Jennifer will ___2___ take part in a new play soon. Last year she ___3___ wear short socks. It ___4___ be terrible to be grown up!",
+    "blanks": [
+      { "blank_no": 1, "options": ["must", "may", "can", "should"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["have to", "must", "has to", "musted"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["had to", "must", "has to", "have to"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["must", "has to", "may", "should"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What is Aunt Jennifer's job?", "options": ["She is an actress", "She is a nurse", "She is a teacher", "She is a singer"] },
+    { "stem": "How old must Jennifer be at least?", "options": ["At least thirty-five", "About seventeen", "Under twenty", "Exactly forty"] },
+    { "stem": "What must Jennifer wear in the new play?", "options": ["A bright red dress and long black stockings", "A blue coat and white socks", "A school uniform", "A raincoat and boots"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我现在必须走了\"(表义务):", "options": ["I must leave now.", "I leave now must.", "I am must leave now.", "I must to leave now."] },
+    { "stem": "你想说\"他一定很累\"(有把握的推测):", "options": ["He must be very tired.", "He must very tired.", "He is must tired.", "He musts be tired."] },
+    { "stem": "你想说\"昨天我不得不早起\"(过去的\"必须\"用 had to):", "options": ["Yesterday I had to get up early.", "Yesterday I must get up early.", "Yesterday I have to got up early.", "Yesterday I must to get up early."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "appear 的意思是:", "options": ["登台;出现", "消失", "购买", "休息"] },
+    { "kind": "vocab", "stem": "stocking 的意思是:", "options": ["长筒袜", "短袜", "帽子", "手套"] },
+    { "kind": "grammar", "stem": "\"She ___ be very rich; look at her car.\"(有把握的推测:一定)", "stem_cn": "她一定很有钱,看看她的车。", "options": ["must", "may", "can", "should"] },
+    { "kind": "grammar", "stem": "\"Last night I ___ study for the test.\"(过去的\"不得不\")", "stem_cn": "昨晚我不得不为考试复习。", "options": ["had to", "must", "have to", "musted"] },
+    { "kind": "scenario", "stem": "\"You must be joking!\" 这句话的意思是:", "options": ["你一定是在开玩笑吧!", "你必须讲个笑话!", "你不许开玩笑!", "你会开玩笑。"] },
+    { "kind": "scenario", "stem": "朋友说 \"I have to go now.\",意思最接近:", "options": ["我现在必须走了", "我想再待一会儿", "我可以走了", "我不想走"] },
+    { "kind": "reading", "stem": "In the new play, how old will Jennifer's character be?", "options": ["Seventeen", "Thirty-five", "Seven", "Forty"], "passage": true },
+    { "kind": "reading", "stem": "What did Jennifer have to wear in last year's play?", "options": ["Short socks and an orange-colored dress", "A red dress and black stockings", "A school uniform", "A long white coat"], "passage": true },
+    { "kind": "listening", "stem": "What does Jennifer answer when people ask her age?", "options": ["'Darling, it must be terrible to be grown up!'", "'I am seventeen.'", "'I never act.'", "'Please ask my mother.'"], "audio": true },
+    { "kind": "listening", "stem": "Does Jennifer tell people her real age?", "options": ["No, she never tells anyone", "Yes, she tells everyone", "Only on the stage", "Only to children"], "audio": true }
+  ]
+}

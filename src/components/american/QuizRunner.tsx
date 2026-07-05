@@ -11,7 +11,7 @@ import { speakUS, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
 import type { AmericanQuestion } from "@/lib/american/data";
 
 export type QuizItem =
-  | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number; explanation?: string; context?: string; audio?: string; passage?: string }
+  | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number; explanation?: string; stemCn?: string; context?: string; audio?: string; passage?: string }
   | { kind: "reveal"; id: string; prompt: string; answer: string; explanation?: string };
 
 /** american_questions → QuizItem(choice / reveal[transform·scenario])。 */
@@ -23,7 +23,7 @@ export function questionsToItems(qs: AmericanQuestion[]): QuizItem[] {
       // 仅 cloze 显示 context;防将来听力/阅读题若挂 context(听力原文)被误显示而泄露答案。
       // audio:关10听力题要朗读的本课文本(题干只显示指令,不露 audio 文本)。
       // passage:关10阅读题在题目上方显示的本课课文(对着读作答)。
-      : { kind: "choice", id: q.id, stem: q.payload.stem, options: q.payload.options ?? [], answerIndex: q.payload.answer_index ?? 0, explanation: q.payload.explanation_cn, context: q.qtype === "cloze" ? q.payload.context : undefined, audio: q.payload.audio, passage: q.payload.passage },
+      : { kind: "choice", id: q.id, stem: q.payload.stem, options: q.payload.options ?? [], answerIndex: q.payload.answer_index ?? 0, explanation: q.payload.explanation_cn, stemCn: q.payload.stem_cn, context: q.qtype === "cloze" ? q.payload.context : undefined, audio: q.payload.audio, passage: q.payload.passage },
   );
 }
 
@@ -208,6 +208,12 @@ export function QuizRunner({
               );
             })}
           </div>
+          {/* ④ 句型题答对后显示"填入正确答案后整句"的中文翻译(在💡点评上方;无 stem_cn 则不显示) */}
+          {picked !== null && item.stemCn && (
+            <div className="mt-4 rounded-xl border border-sky-100 bg-sky-50/70 px-4 py-2.5">
+              <p className="text-sm leading-relaxed text-slate-700">🇨🇳 {item.stemCn}</p>
+            </div>
+          )}
           {picked !== null && <ExplanationNote text={item.explanation} />}
         </section>
       ) : (

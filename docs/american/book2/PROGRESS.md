@@ -80,6 +80,13 @@
 - 词10全用官方(operation/successful/following/patient/alone/exchange/inquire/certain/caller/relative);关6美英=in the hospital/call/busy/elevator(电话·医院主题)。⚠️ 串味坑:META_STEM 正则含"疑问句用"→gp6 hint 改"动词跟在主语后"避误红。
 - 44题;机器12项🟢(1条[c]黄警=cloze 空3从句含 would、与空4答案 would 不同句,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-39=308)。⏭️ L40(U5末课)。
 
+## ✅ U5 L40《Food and talk》(进餐与交谈)· 🟢全绿(零黄警)· **U5 末课**
+- 主教材 Key structures = **虚拟条件句/非真实条件**("If you ate more and talked less, we would both enjoy our dinner!",KS16):if + 过去式, would + 动词原形;be 一律用 were;与真实条件(if + 现在时→will/祈使句)对比。
+- ⚠️ **坑已避**:课文注释5 说"Will you be seeing it 用将来进行时委婉",易误判主考=将来进行时;实读 Key structures 页(印183)确认主考=**虚拟条件**(KS16),将来进行时只是课文①类。**铁律:主考以 Key structures 页为准,别被 Notes 带偏**。
+- 裁决(自决):虚拟条件 gp1-3(if过去式/would原形/be用were)+ 真实条件对比 gp4-5 主考;将来进行时 will be+V-ing 委婉 gp6 + ask sb to do gp7 + be busy doing gp8 辅考(均课文①类)。
+- 词10(hostess/unsmiling/tight/fix/globe/despair 官方6 + companion/conversation/abroad/plate 补4对齐体量);关6美英=vacation/theater/check/napkin(度假·剧院·晚宴主题)。
+- 44题;机器12项🟢**零黄警**(cloze 原 would not talk→refused to talk 规避[c];三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(**L33-40=352,U5 整单元 8 课完成**)。
+
 ---
 
 

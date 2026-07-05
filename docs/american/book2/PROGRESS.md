@@ -60,7 +60,13 @@
 - 主教材 Key structure = **be going to**("She is going to swim across the Channel tomorrow",KS12):表打算/计划的将来,替代 will/shall;条件句结果部分用 will 不用 going to。
 - 裁决(自决):be going to gp1-3(be形式/接原形/疑问否定)+ will 表将来 gp4 + 将来进行时 gp5(will be watching)+ 综合选将来 gp6 主考;intend/mean to do gp7 + 倒装 Among/On…be gp8 辅考(均课文①类)。
 - 词10(record/strong/swimmer/succeed/train/anxiously/intend/solid/channel/rest);关6美英-偏薄(Mr./Mr 标点差 grounded + vacation/candy/movie 高频),⚠️待裁决记美英点薄。
-- 44题;机器12项🟢(首验红1:s9seq1 解释含"主语"串味→改措辞;另 s5#18 集合名词 crowd+were 陷阱黄警→改 On the coast+plural 规避,复验全绿;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-36=176)。⏭️ L37。
+- 44题;机器12项🟢(首验红1:s9seq1 解释含"主语"串味→改措辞;另 s5#18 集合名词 crowd+were 陷阱黄警→改 On the coast+plural 规避,复验全绿;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-36=176)。
+
+## ✅ U5 L37《The Olympic Games》(奥林匹克运动会)· 🟢全绿(首验无红)
+- 主教材 Key structures = **将来完成时**("Workers will have completed the new roads by the end of this year",KS13):will have+过去分词,表到将来某时刻已完成(by+时间点 / in…time),对比一般将来(will finish)与将来进行(will be building)。
+- 裁决(自决):将来完成 gp1-4(will have+过分/by时间点/in…time/对比一般将来)+ 将来进行 gp5 + 将来被动 gp6 主考;look forward to+动名词 gp7(to是介词)+ as=因为/当 gp8 辅考(均课文①类)。
+- 词10(Olympic/hold/government/immense/stadium/standard/capital/fantastic/design/complete);美语化 railway→railroad 入关6(+highway/subway/downtown 城建交通词)。
+- 44题;机器12项🟢首验全绿。seed→`american_am2_seed_unit05.sql`(L33-37=220)。⏭️ L38。
 
 ---
 

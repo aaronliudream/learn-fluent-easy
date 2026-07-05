@@ -139,6 +139,16 @@
 - 词10(pull/collect/collection/nod/meanwhile 官方 + dentist/tooth/tongue/worried/hole 补)。关6美英=cotton balls/candy/drugstore/dentist's office(牙医·药棉主题;**cotton balls=美语、cotton wool=英式**)。
 - 44题;机器12项🟢(首验红1:s9seq2 解释含"主语"串味→改"不再倒装/陈述语序"复验全绿)。seed→`american_am2_seed_unit06.sql`(**L41-48=352,U6 整单元 8 课完成**)。
 
+# ===== 课程 Unit 7(L49–56)= 教材 Unit 3 起 =====
+
+> ⚠️ **教材 Unit 3(L49–72)格式变化**:每课=短文 + Summary writing(理解题)+ Composition,**无每课独立 Key structures 页**;语法在**单元层面统一**=用从属连词(when/as/while/because/although/until/after)把简单句连成**复合句**。每课主考按该课短文实际用到的连词定,schema 不变(仍 44 题),grammar_focus 从单元语法+课文连词导出。
+
+## ✅ U7 L49《The end of a dream》(美梦告终)· 🟢全绿(零黄警)· **教材 Unit 3 首课**
+- 主考(教材 Unit 3 复合句连词)= 课文实际用到的:because 原因、when 时间、although 让步、not…until 直到才、after 先后。
+- 裁决(自决):连词 gp1-5 主考;be tired of gp6 + save up/blow up gp7 + send sth doing gp8 辅考(均课文①类)。全运用题(选正确连词),元语法定义题=0。
+- 词10(tired/owner/mattress/gust/sweep/courtyard/smash/miraculously/unhurt/promptly)。关6美英=yard/first floor/apartment/closet(院子·住房主题);美语化 Teheran→Tehran、on to→onto。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit07.sql`(**L49=44,U7 起**)。⏭️ L50。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

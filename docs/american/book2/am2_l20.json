@@ -1,0 +1,137 @@
+{
+  "id": "am2_l20",
+  "unit_no": 3,
+  "lesson_no": 20,
+  "title_en": "One man in a boat",
+  "title_cn": "独坐孤舟",
+  "grammar_focus": "动名词(主考:动词 + -ing 当名词用——作主语 Fishing is fun · 作介词宾语 interested in fishing · 完成式 having done 表更早发生 · 介词/连词 + 动名词连接短句 without/before/after doing)+ 常见搭配(辅考:enjoy/give up/finish + 动名词 · instead of / be afraid of + 动名词)",
+  "scene": "钓鱼是我最爱的运动,却常常一无所获、空袋回家;朋友劝我'别钓了,浪费时间'——他们不懂,我要的只是独坐孤舟、什么也不干",
+  "grammar_card": {
+    "title": "把动词当名词用(动名词 -ing)",
+    "intro": "本课讲动名词——动词加 -ing 后当名词用。它可以放句首当名词、跟在介词后面、还能把两个短句连起来。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课 / 常见例子"],
+      "rows": [
+        ["动名词 = 动词 + -ing,当名词用", "Fishing is my favorite sport."],
+        ["放在句首当名词(后面 be 用单数 is)", "Sitting in a boat is my real pleasure."],
+        ["介词(in / on / of / without)后面用动名词", "I'm interested in fishing."],
+        ["完成式 having done:比句子的动作更早发生", "After having spent the morning, I went home."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "enjoy / give up / finish 后面只能接动名词:enjoy reading, give up fishing", "mark": "只接 -ing" },
+      { "rule": "instead of / be afraid of + 动名词:instead of catching fish", "mark": "介词 + -ing" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why is fishing the writer's favorite sport?",
+    "options": ["Because he loves sitting in a boat and doing nothing", "Because he catches many fish", "Because he wins fishing contests", "Because his friends fish too"],
+    "answer_index": 0
+  },
+  "passage": "Fishing is my favorite sport. I often fish for hours without catching anything. But this does not worry me. Some fishermen are unlucky. Instead of catching fish, they catch old boots and trash. I am even less lucky. I never catch anything — not even old boots. After having spent whole mornings on the river, I always go home with an empty bag. 'You must give up fishing!' my friends say. 'It's a waste of time.' But they don't realize one important thing. I'm not really interested in fishing. I am only interested in sitting in a boat and doing nothing at all!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Fishing is my favorite sport.", "text_cn": "钓鱼是我最喜爱的一项运动。" },
+    { "seq": 2, "speaker": null, "text_en": "I often fish for hours without catching anything.", "text_cn": "我经常一钓数小时却一无所获。" },
+    { "seq": 3, "speaker": null, "text_en": "But this does not worry me. Some fishermen are unlucky.", "text_cn": "但我从不为此烦恼。有些垂钓者就是不走运。" },
+    { "seq": 4, "speaker": null, "text_en": "Instead of catching fish, they catch old boots and trash.", "text_cn": "他们往往鱼钓不到,却钓上来些旧靴子和垃圾。" },
+    { "seq": 5, "speaker": null, "text_en": "I am even less lucky. I never catch anything — not even old boots.", "text_cn": "我的运气甚至还不及他们。我什么东西都未钓到过——就连旧靴子也没有。" },
+    { "seq": 6, "speaker": null, "text_en": "After having spent whole mornings on the river, I always go home with an empty bag.", "text_cn": "我总是在河上呆整整一上午,然后空着袋子回家。" },
+    { "seq": 7, "speaker": null, "text_en": "'You must give up fishing!' my friends say. 'It's a waste of time.'", "text_cn": "\"你可别再钓鱼了!\"我的朋友们说,\"这是浪费时间。\"" },
+    { "seq": 8, "speaker": null, "text_en": "But they don't realize one important thing.", "text_cn": "然而他们没有认识到重要的一点。" },
+    { "seq": 9, "speaker": null, "text_en": "I'm not really interested in fishing.", "text_cn": "我并不是真的对钓鱼有兴趣。" },
+    { "seq": 10, "speaker": null, "text_en": "I am only interested in sitting in a boat and doing nothing at all!", "text_cn": "我感兴趣的只是独坐孤舟,无所事事!" }
+  ],
+  "words": [
+    { "word": "fishing", "ipa": "/ˈfɪʃɪŋ/", "pos": "n", "meaning_cn": "钓鱼", "example": "Fishing is my favorite sport." },
+    { "word": "favorite", "ipa": "/ˈfeɪvərɪt/", "pos": "adj", "meaning_cn": "最喜欢的", "example": "my favorite sport" },
+    { "word": "catch", "ipa": "/kætʃ/", "pos": "v", "meaning_cn": "抓到,钓到(过去式 caught)", "example": "without catching anything" },
+    { "word": "fisherman", "ipa": "/ˈfɪʃərmən/", "pos": "n", "meaning_cn": "钓鱼人,渔民", "example": "Some fishermen are unlucky." },
+    { "word": "boot", "ipa": "/buːt/", "pos": "n", "meaning_cn": "靴子", "example": "old boots and trash" },
+    { "word": "trash", "ipa": "/træʃ/", "pos": "n", "meaning_cn": "垃圾", "example": "old boots and trash" },
+    { "word": "waste", "ipa": "/weɪst/", "pos": "n", "meaning_cn": "浪费", "example": "a waste of time" },
+    { "word": "realize", "ipa": "/ˈriːəlaɪz/", "pos": "v", "meaning_cn": "意识到,认识到", "example": "they don't realize" },
+    { "word": "empty", "ipa": "/ˈempti/", "pos": "adj", "meaning_cn": "空的", "example": "an empty bag" },
+    { "word": "interested", "ipa": "/ˈɪntrəstɪd/", "pos": "adj", "meaning_cn": "感兴趣的", "example": "interested in fishing" },
+    { "word": "sport", "ipa": "/spɔːrt/", "pos": "n", "meaning_cn": "运动,爱好", "example": "my favorite sport" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "动名词——动词 + -ing 当名词用(构成与识别)" },
+    { "gp": "gp2", "name": "动名词作主语(Fishing is fun,be 用单数)" },
+    { "gp": "gp3", "name": "动名词作介词宾语(interested in fishing)" },
+    { "gp": "gp4", "name": "动名词完成式 having done——比谓语更早发生" },
+    { "gp": "gp5", "name": "介词/连词 + 动名词连接短句(without/before doing)" },
+    { "gp": "gp6", "name": "动名词综合运用" },
+    { "gp": "gp7", "name": "enjoy/give up/finish + 动名词(辅考)" },
+    { "gp": "gp8", "name": "instead of / be afraid of + 动名词(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "动名词是怎么构成、当什么用的?", "options": ["动词 + -ing,当名词用", "动词 + -ed,当形容词用", "动词原形,当命令用", "be + 动词,表进行"] },
+    { "gp": "gp1", "stem": "下面哪个是动名词(-ing 当名词用)?", "options": ["Swimming is fun.", "He swims fast.", "He is swimming now.", "Swim right now!"] },
+    { "gp": "gp2", "stem": "动名词作主语时,后面的谓语动词一般用:", "options": ["单数(is / was)", "复数(are / were)", "过去分词", "不定式 to do"] },
+    { "gp": "gp2", "stem": "\"___ is my favorite sport.\"(动名词作主语:钓鱼)", "stem_cn": "钓鱼是我最喜欢的运动。", "options": ["Fishing", "Fish", "Fished", "Fishes"] },
+    { "gp": "gp2", "stem": "\"___ television is fun.\"(动名词作主语:看电视)", "stem_cn": "看电视很有意思。", "options": ["Watching", "Watch", "Watched", "Watches"] },
+    { "gp": "gp3", "stem": "介词(in / on / of / without…)后面的动词要用:", "options": ["动名词(-ing)", "动词原形", "不定式 to do", "过去式"] },
+    { "gp": "gp3", "stem": "\"I'm interested in ___.\"(be interested in + 动名词:钓鱼)", "stem_cn": "我对钓鱼感兴趣。", "options": ["fishing", "fish", "to fish", "fished"] },
+    { "gp": "gp3", "stem": "\"He is keen on ___ every day.\"(介词 on + 动名词:骑车)", "stem_cn": "他每天都热衷于骑车。", "options": ["cycling", "cycle", "to cycle", "cycled"] },
+    { "gp": "gp4", "stem": "动名词完成式 having done 表示的是:", "options": ["这个动作比句子的动作更早发生", "将来才发生的动作", "正在进行的动作", "被动的动作"] },
+    { "gp": "gp4", "stem": "\"After ___ the letter, he went out.\"(动名词完成式:写完之后)", "stem_cn": "写完信后,他就出去了。", "options": ["having written", "write", "wrote", "to write"] },
+    { "gp": "gp5", "stem": "\"He left without ___ goodbye.\"(介词 without 后用动名词:说再见)", "stem_cn": "他没说再见就走了。", "options": ["saying", "say", "said", "to say"] },
+    { "gp": "gp5", "stem": "\"Before ___ the room, he turned off the light.\"(before 后用动名词:离开)", "stem_cn": "离开房间前,他关了灯。", "options": ["leaving", "leave", "left", "to leave"] },
+    { "gp": "gp6", "stem": "\"I enjoy ___ in bed.\"(enjoy 后接动名词:看书)", "stem_cn": "我喜欢躺在床上看书。", "options": ["reading", "read", "to read", "reads"] },
+    { "gp": "gp6", "stem": "\"Thank you for ___ me.\"(for 后接动名词:帮我)", "stem_cn": "谢谢你帮我。", "options": ["helping", "help", "to help", "helped"] },
+    { "gp": "gp7", "stem": "下面哪个动词后面只能接动名词(不能接 to do)?", "options": ["enjoy(enjoy doing)", "want(want to do)", "hope(hope to do)", "decide(decide to do)"] },
+    { "gp": "gp7", "stem": "\"I finished ___ my homework.\"(finish 后接动名词:做完作业)", "stem_cn": "我做完了作业。", "options": ["doing", "do", "to do", "did"] },
+    { "gp": "gp8", "stem": "instead of 后面接动词时,要用:", "options": ["动名词(instead of doing)", "动词原形", "不定式 to do", "过去式"] },
+    { "gp": "gp8", "stem": "\"She is afraid of ___ alone.\"(be afraid of + 动名词:独自待着)", "stem_cn": "她害怕独自待着。", "options": ["staying", "stay", "to stay", "stayed"] }
+  ],
+  "stage6": [
+    { "stem": "美语\"最喜欢的\"拼作:", "options": ["favorite", "favourite", "favrite", "favorito"] },
+    { "stem": "美语\"垃圾\"常说:", "options": ["trash / garbage", "rubbish", "waste bin", "dust"] },
+    { "stem": "give up 的意思是:", "options": ["放弃;戒掉", "举起", "赠送", "追上"] },
+    { "stem": "a waste of time 的意思是:", "options": ["浪费时间", "很花钱", "很值得", "省时间"] },
+    { "stem": "be interested in 的意思是:", "options": ["对…感兴趣", "对…厌烦", "参与其中", "负责…"] },
+    { "stem": "instead of 的意思是:", "options": ["而不是;代替", "除…之外", "为了", "由于"] }
+  ],
+  "contrast": [
+    { "us": "favorite", "uk": "favourite", "note_cn": "最喜欢的;美语 favorite,英式 favourite" },
+    { "us": "trash", "uk": "rubbish", "note_cn": "垃圾;美语 trash / garbage,英式 rubbish" },
+    { "us": "garbage can", "uk": "dustbin", "note_cn": "垃圾桶;美语 garbage can / trash can,英式 dustbin / bin" }
+  ],
+  "chunks": [
+    { "us": "give up", "ipa": "/ɡɪv ʌp/", "example1": "You must give up fishing.", "example1_cn": "你必须放弃钓鱼。", "example2": "He gave up smoking.", "example2_cn": "他戒了烟。" },
+    { "us": "be interested in", "ipa": "/bi ˈɪntrəstɪd ɪn/", "example1": "I'm interested in sitting in a boat.", "example1_cn": "我喜欢独坐孤舟。", "example2": "She is interested in music.", "example2_cn": "她对音乐感兴趣。" },
+    { "us": "instead of", "ipa": "/ɪnˈsted əv/", "example1": "Instead of catching fish, they catch boots.", "example1_cn": "他们没钓到鱼,却钓上靴子。", "example2": "Let's walk instead of driving.", "example2_cn": "我们走路吧,别开车了。" },
+    { "us": "a waste of time", "ipa": "/ə weɪst əv taɪm/", "example1": "It's a waste of time.", "example1_cn": "这是浪费时间。", "example2": "Waiting here is a waste of time.", "example2_cn": "在这儿等纯属浪费时间。" }
+  ],
+  "stage7_cloze": {
+    "context": "Fishing is my favorite sport. I often fish for hours without ___1___ anything. Instead of ___2___ home, I stay on the river all morning. ___3___ in a boat is my real pleasure. My friends say I should give up ___4___, but I don't agree.",
+    "blanks": [
+      { "blank_no": 1, "options": ["catching", "catch", "caught", "to catch"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["going", "go", "went", "to go"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["Sitting", "Sit", "Sat", "Sits"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["fishing", "fish", "to fish", "fished"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What is the writer's favorite sport?", "options": ["Fishing", "Swimming", "Cycling", "Reading"] },
+    { "stem": "Does the writer often catch fish?", "options": ["No, he never catches anything", "Yes, he catches a lot", "Yes, but only boots", "No, but he catches a lot of trash"] },
+    { "stem": "What is the writer really interested in?", "options": ["Sitting in a boat and doing nothing", "Winning fishing contests", "Catching big fish", "Selling fish at the market"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"钓鱼是我最喜欢的运动\"(动名词放句首当名词):", "options": ["Fishing is my favorite sport.", "Fish is my favorite sport.", "To fishing is my favorite sport.", "Fished is my favorite sport."] },
+    { "stem": "你想说\"他不打招呼就走了\"(without + 动名词):", "options": ["He left without saying goodbye.", "He left without say goodbye.", "He left without to say goodbye.", "He left no saying goodbye."] },
+    { "stem": "你想说\"我对唱歌感兴趣\"(be interested in + 动名词):", "options": ["I am interested in singing.", "I am interested in sing.", "I am interested to sing.", "I am interested in to sing."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "realize 的意思是:", "options": ["意识到,认识到", "忘记", "怀疑", "拒绝"] },
+    { "kind": "vocab", "stem": "waste 的意思是:", "options": ["浪费", "节省", "赚取", "收集"] },
+    { "kind": "grammar", "stem": "\"I am fond of ___ books.\"(介词 of + 动名词:读)", "stem_cn": "我喜欢读书。", "options": ["reading", "read", "to read", "reads"] },
+    { "kind": "grammar", "stem": "\"___ early is good for your health.\"(动名词作主语:早起)", "stem_cn": "早起有益健康。", "options": ["Getting up", "Get up", "Gets up", "Got up"] },
+    { "kind": "scenario", "stem": "\"It's a waste of time.\" 这句话的意思是:", "options": ["这是浪费时间。", "这很省时间。", "这很值得。", "这要花很多钱。"] },
+    { "kind": "scenario", "stem": "\"You must give up smoking.\" 这句话的意思是:", "options": ["你必须戒烟。", "你必须开始抽烟。", "你可以随便抽烟。", "你举起香烟。"] },
+    { "kind": "reading", "stem": "Why doesn't the writer worry about catching nothing?", "options": ["Because he only wants to sit in a boat and relax", "Because he catches boots instead", "Because he sells the fish later", "Because his friends catch fish for him"], "passage": true },
+    { "kind": "reading", "stem": "What do some unlucky fishermen catch instead of fish?", "options": ["Old boots and trash", "Big sharks", "Nothing at all", "Gold coins"], "passage": true },
+    { "kind": "listening", "stem": "What do the writer's friends tell him to do?", "options": ["Give up fishing", "Buy a bigger boat", "Fish in the sea", "Catch more boots"], "audio": true },
+    { "kind": "listening", "stem": "Is the writer really interested in fishing?", "options": ["No, only in sitting in a boat doing nothing", "Yes, he loves catching fish", "Yes, he wants to win a prize", "No, he hates the river"], "audio": true }
+  ]
+}

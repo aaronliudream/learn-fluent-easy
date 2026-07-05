@@ -202,6 +202,15 @@ const CN = {
     '"The children ___ playing in the yard."(过去进行时,复数)': "孩子们当时正在院子里玩。",
     '"I ___ TV when you called."(当时正在看)': "你打电话来时,我正在看电视。",
   },
+  am2_l08: {
+    '"Bill\'s garden is ___ than Joe\'s."(large 的比较级)': "比尔的花园比乔的大。",
+    '"She is ___ girl in the class."(tall 的最高级)': "她是班里最高的女孩。",
+    '"Bill works ___ Joe."(比乔更卖力)': "比尔干得比乔更卖力。",
+    '"Joe has the most beautiful garden ___ our town."(在…中最)': "乔拥有我们镇上最漂亮的花园。",
+    '"Bill grows ___ flowers than Joe."(更多的花)': "比尔种的花比乔多。",
+    '"This tree is ___ than that one."(tall 的比较级)': "这棵树比那棵高。",
+    '"This is the ___ movie I\'ve ever seen."(good 的最高级)': "这是我看过的最好的电影。",
+  },
 };
 
 let total = 0, patched = 0;

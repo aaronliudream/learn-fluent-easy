@@ -66,8 +66,8 @@
     { "gp": "gp8", "name": "课文语言点(enter for / hard work)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "\"Bill's garden is ___ than Joe's.\"(large 的比较级)", "options": ["larger", "more large", "largest", "largeer"] },
-    { "gp": "gp1", "stem": "\"She is ___ girl in the class.\"(tall 的最高级)", "options": ["the tallest", "the most tall", "taller", "most tallest"] },
+    { "gp": "gp1", "stem": "\"Bill's garden is ___ than Joe's.\"(large 的比较级)", "stem_cn": "比尔的花园比乔的大。", "options": ["larger", "more large", "largest", "largeer"] },
+    { "gp": "gp1", "stem": "\"She is ___ girl in the class.\"(tall 的最高级)", "stem_cn": "她是班里最高的女孩。", "options": ["the tallest", "the most tall", "taller", "most tallest"] },
     { "gp": "gp2", "stem": "big 的比较级是:", "options": ["bigger", "biger", "more big", "bigest"] },
     { "gp": "gp2", "stem": "nice 的最高级是:", "options": ["nicest", "niceest", "most nice", "nicist"] },
     { "gp": "gp2", "stem": "happy 的比较级是:", "options": ["happier", "happyer", "more happy", "happiest"] },
@@ -76,11 +76,11 @@
     { "gp": "gp4", "stem": "good 的比较级和最高级是:", "options": ["better / best", "gooder / goodest", "more good / most good", "well / bestest"] },
     { "gp": "gp4", "stem": "bad 的最高级是:", "options": ["worst", "baddest", "most bad", "worse"] },
     { "gp": "gp4", "stem": "good、bad、many 这几个词的比较级和最高级:", "options": ["是不规则的,要单独记", "直接加 -er/-est", "前面加 more/most", "保持不变"] },
-    { "gp": "gp5", "stem": "\"Bill works ___ Joe.\"(比乔更卖力)", "options": ["harder than", "harder as", "more hard than", "harder then"] },
+    { "gp": "gp5", "stem": "\"Bill works ___ Joe.\"(比乔更卖力)", "stem_cn": "比尔干得比乔更卖力。", "options": ["harder than", "harder as", "more hard than", "harder then"] },
     { "gp": "gp5", "stem": "\"我的花园比你的大\"应说:", "options": ["My garden is bigger than yours.", "My garden is biggest than yours.", "My garden is more big than yours.", "My garden is bigger as yours."] },
-    { "gp": "gp6", "stem": "\"Joe has the most beautiful garden ___ our town.\"(在…中最)", "options": ["in", "of", "on", "for"] },
+    { "gp": "gp6", "stem": "\"Joe has the most beautiful garden ___ our town.\"(在…中最)", "stem_cn": "乔拥有我们镇上最漂亮的花园。", "options": ["in", "of", "on", "for"] },
     { "gp": "gp6", "stem": "选出正确的最高级句子:", "options": ["Mary's dress is the most expensive.", "Mary's dress is most expensive.", "Mary's dress is the more expensive.", "Mary's dress is expensivest."] },
-    { "gp": "gp7", "stem": "\"Bill grows ___ flowers than Joe.\"(更多的花)", "options": ["more", "most", "much", "the most"] },
+    { "gp": "gp7", "stem": "\"Bill grows ___ flowers than Joe.\"(更多的花)", "stem_cn": "比尔种的花比乔多。", "options": ["more", "most", "much", "the most"] },
     { "gp": "gp7", "stem": "\"more flowers\" 里的 more 是什么意思?", "options": ["更多的(修饰名词)", "最多的", "更少的", "非常"] },
     { "gp": "gp8", "stem": "enter for the competition 的意思是:", "options": ["报名参加比赛", "退出比赛", "赢得比赛", "观看比赛"] },
     { "gp": "gp8", "stem": "\"I do not like hard work.\" 里 hard work 的意思是:", "options": ["辛苦的活儿,重活", "简单的活", "有趣的活", "没有活干"] }
@@ -125,8 +125,8 @@
   "stage10": [
     { "kind": "vocab", "stem": "competition 的意思是:", "options": ["比赛,竞赛", "合作", "展览", "表演"] },
     { "kind": "vocab", "stem": "neat 的意思是:", "options": ["整洁的", "肮脏的", "巨大的", "昂贵的"] },
-    { "kind": "grammar", "stem": "\"This tree is ___ than that one.\"(tall 的比较级)", "options": ["taller", "tallest", "more tall", "taler"] },
-    { "kind": "grammar", "stem": "\"This is the ___ movie I've ever seen.\"(good 的最高级)", "options": ["best", "goodest", "most good", "better"] },
+    { "kind": "grammar", "stem": "\"This tree is ___ than that one.\"(tall 的比较级)", "stem_cn": "这棵树比那棵高。", "options": ["taller", "tallest", "more tall", "taler"] },
+    { "kind": "grammar", "stem": "\"This is the ___ movie I've ever seen.\"(good 的最高级)", "stem_cn": "这是我看过的最好的电影。", "options": ["best", "goodest", "most good", "better"] },
     { "kind": "scenario", "stem": "\"Your garden is the best in town!\" 是在:", "options": ["夸这个花园全镇最好", "说这个花园很差", "问花园在哪儿", "要买这个花园"] },
     { "kind": "scenario", "stem": "别人说 \"Mine is bigger than yours.\" 意思是:", "options": ["他的比你的大", "他的和你的一样大", "你的比他的大", "他的是最大的"] },
     { "kind": "reading", "stem": "Whose garden is bigger, Joe's or Bill's?", "options": ["Bill's garden is bigger", "Joe's garden is bigger", "They are the same size", "The writer's is bigger"], "passage": true },

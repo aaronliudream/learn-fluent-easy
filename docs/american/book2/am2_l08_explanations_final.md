@@ -65,24 +65,31 @@ hard work = 辛苦的活儿、重体力活。✓ I do not like hard work.
 
 ### s6 seq4 | ans: 报名参加
 enter for = 报名参加。✓ enter for the competition.
+顺带记:退出 = drop out / withdraw;赢得 = win;观看 = watch.
 
 ### s6 seq5 | ans: 赢得奖品
 win a prize = 赢得奖品。✓ Joe wins a prize every year.
+顺带记:交报名费 = pay the entry fee;输掉比赛 = lose the game;颁发奖品 = give out a prize.
 
 ### s6 seq6 | ans: 辛苦的活儿
 hard work = 辛苦的活儿、重活。✓ I do not like hard work.
+顺带记:简单的事 = an easy job;开心的事 = a happy thing;一点点活 = a little work.
 
 ### s7 seq1 | ans: most beautiful
 beautiful 是长词,最高级 = the most beautiful。✓ Joe has the most beautiful garden.
+✗ beautifulest:beautiful 是长词,最高级用 most beautiful,不加 -est;✗ more beautiful:这里是最高级(in town),不是比较级;✗ most beautifulest:most 和 -est 不能重复叠加.
 
 ### s7 seq2 | ans: bigger
 big→bigger(双写 g),后面接 than。✓ Bill's garden is bigger than Joe's.
+✗ biggest:后面有 than,该用比较级 bigger,不用最高级;✗ more big:big 是短词,比较级双写加 -er,不用 more;✗ biger:拼写错,big 要双写成 bigger.
 
 ### s7 seq3 | ans: harder
 hard 的比较级 harder。✓ Bill works harder.
+✗ hardest:这里是"比…更卖力",用比较级 harder;✗ more hard:hard 是短词,比较级加 -er,不用 more;✗ harderer:拼写错,没有这种叠加.
 
 ### s7 seq4 | ans: worst
 bad 不规则,最高级 worst。✓ the worst garden.
+✗ baddest:bad 的最高级是不规则的 worst,不是 baddest;✗ most bad:bad 最高级用 worst,不用 most bad;✗ worse:有 the + in town,该用最高级 worst,不用比较级 worse.
 
 ### s8 seq1 | ans: Joe's
 课文说 Joe Sanders has the most beautiful garden,乔的花园全镇最美。
@@ -104,9 +111,11 @@ good 不规则,比较级 better,"比上次"用 than。✓ My grades are better t
 
 ### s10 seq1 | ans: 比赛,竞赛
 competition = 比赛、竞赛。✓ the Nicest Garden Competition.
+顺带记:合作 = cooperation;展览 = exhibition;表演 = performance.
 
 ### s10 seq2 | ans: 整洁的
 neat = 整齐的、整洁的。✓ neat paths.
+顺带记:肮脏的 = dirty;巨大的 = huge;昂贵的 = expensive.
 
 ### s10 seq3 | ans: taller
 tall 的比较级 taller,后接 than。✓ This tree is taller than that one.

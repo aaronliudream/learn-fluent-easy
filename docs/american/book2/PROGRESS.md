@@ -13,7 +13,9 @@
 | L5 | 1 | No wrong numbers | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 现在完成时续(up to now/a great many/since/时态切换);三源p31/p42-45/新思维p120已核;与L4分工不重复;seed归单元1批次;prewarm待批次;真机待抽验 |
 | L6 | 1 | Percy Buttons | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 冠词 a/an/some/the;三源 教材p36 KeyStruct + 同步p49 LESSON6 + 新思维冠词 已核;定冠词地理习语细则留后;seed归单元1批次;prewarm待批次;真机待抽验 |
 | L7 | 1 | Too late | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 过去进行时(跨课备用落点·还账);三源 教材p40 KeyStruct + 同步p56 LESSON7 + 新思维p118 已核;过去完成时had told/would排除;seed归单元1批次;prewarm待批次;真机待抽验 |
-| L8 | 1 | (待扫描确认标题) | ⬜ 下一课(单元1收官) | — | NCE2 L8=The best and the worst;L8三源扫描确认标题+主题,不凭记忆;做完出单元1批次汇报 |
+| L8 | 1 | The best and the worst | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 比较级和最高级;三源 教材p44 KeyStruct + 同步p58 LESSON8 + 新思维比较级 已核;as…as/进阶比较排除;seed归单元1批次;prewarm待批次;真机待抽验 |
+
+> **✅ 单元1(L1–L8)全部生产完成(2026-07-04)。** L1 上线;L2–L8 seed 累积于 `SQLAA/american_am2_seed_unit01.sql`(幂等)。单元1批次汇报见 `REVIEWAA/american-book2-U1/UNIT1-batch-report.md`。⏭️ 下一步:Aaron 真机抽验指定 2 课(L4/L7)+ prewarm 音频;然后开工单元2(L9–L16)。
 
 ## L2 流水线步骤跟踪
 - [x] 1 三源扫描(scan-evidence-lesson02.md:教材p19-22 / 同步p33-37 / 新思维p110,112;主题一致无冲突)
@@ -74,6 +76,23 @@
 - [x] 8 JSON + seed(am2_l07.json;gen-book2-seed 重生成 unit01 含L1-L7,解释合并)
 - [x] 9 机器校验套件(validate-am2-lesson.mjs am2_l07 八项全绿:44=44=44/解释44/零串味/G8全覆盖)
 - [x] 10 落盘 + commit(L7 docs 一 commit;seed SQL 归单元1批次)
+
+## L8 流水线步骤跟踪(比较级和最高级)
+- [x] 1 三源扫描(scan-evidence-lesson08.md:教材p44 KeyStruct[比较+Note3不规则+ExC]权威 / 同步p58 LESSON8[比较级与最高级构成] / 新思维比较级;逐页页眉;as…as/进阶排除;三源一致)
+- [x] 2 建考点清单(grammar-syllabus-lesson08.md:G1-G8 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)
+- [x] 4 课文美语定稿(11句·比较级最高级8处全形态·11词/3语块全落·favorite/color/meter美语化)
+- [x] 5 题库生产(关5=18[G1-8,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44题)
+- [x] 6 逐题解释(am2_l08_explanations_final.md,44条)
+- [x] 7 双角色自审(coverage-lesson08.md §四;首轮无抓修)
+- [x] 8 JSON + seed(am2_l08.json;gen-book2-seed 重生成 unit01 含L1-L8,解释合并)
+- [x] 9 机器校验套件(validate-am2-lesson.mjs am2_l08 八项全绿:44=44=44/解释44/零串味/G8全覆盖)
+- [x] 10 落盘 + commit(L8 docs 一 commit;seed SQL 归单元1批次)
+
+## L8 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表官方5词→补至11(competition/garden/neat/path/wooden/pool + prize/flower/bridge/grow/win)→ 默认 **A**:对齐体量;favorite/color/meter 另作关6对照卡。
+2. as…as 同级比较 + much/even/a little+比较级进阶 + 倍数比较 → 默认 **排除**:本课只教规则/不规则构成+than+the…in 主线,进阶留后续比较加深课(记 scan §四)。
+3. 关6 美英对照 favorite/color/meter → 默认 **采纳**:三个高频 -or/-our 与 -er/-re 差,贴花园描写语境。
 
 ## L7 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
 1. 词表官方13词→取11(detective/airport/expect/valuable/diamond/thief/steal/guard/parcel/precious/stone)→ 默认 **A**:main/airfield/sand 入课文但不单列词卡,控体量对齐 L1-L6。

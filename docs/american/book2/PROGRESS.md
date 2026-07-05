@@ -161,6 +161,12 @@
 - 词10(reward/virtue/diet/forbid/hurriedly/embarrass/guiltily/strict/occasionally + 补 parcel)。关6美英=candy/cookie(节食/食物主题)+contrast potato chips·dessert;美语化 passage sweets→candy(两处)。
 - 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit07.sql`(**L49+L50+L51=132**)。⏭️ L52。
 
+## ✅ U7 L52《A pretty carpet》(漂亮的地毯)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc283-284)= **KS28 现在完成时(have done,完成/次数/结果)vs 现在完成进行时(have been doing,一直在进行)**。Special difficulties **SD28 形容词与副词辨析**(sings beautifully、works slowly + hard≠hardly、late≠lately、high≠highly、near≠nearly)。
+- 裁决(自决):gp1 现在完成时(4)+ gp2 现在完成进行时(4)+ gp3 两者对比(2)= KS28 主考;gp4 形容词vs副词(3)+ gp5 易混副词 hard/hardly·lately(3)= SD28 主考级辅;gp6 get…in order/make matters worse/spare time(2)= 课文辅考。全运用题,元语法定义题=0。
+- 词10(temporarily/inch/space/actually + 补 bookcase/gaze/surprise/spare/order/rather)。关6美英=elevator/apartment(房子主题)+contrast first floor·closet;passage 无需美语化(已 AmE)。
+- 44题;机器12项🟢(1黄=s5#14 "hard worker→works hard" 是 SD28 形/副对照的教学句式,人工核合法)。seed→`american_am2_seed_unit07.sql`(**L49-L52=176**)。⏭️ L53。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

@@ -1,0 +1,134 @@
+{
+  "id": "am2_l52",
+  "unit_no": 7,
+  "lesson_no": 52,
+  "title_en": "A pretty carpet",
+  "title_cn": "漂亮的地毯",
+  "grammar_focus": "KS28 现在完成时(have done,完成/次数/结果)vs 现在完成进行时(have been doing,一直在进行)(教材 L52 Key structures)主考;SD28 形容词与副词辨析(sings beautifully、hard≠hardly、late≠lately、high≠highly、near≠nearly)+ 课文 get…in order、to make matters worse、in your spare time(辅考)",
+  "scene": "我们刚刚搬进一所新房子,我辛辛苦苦地干了整整一个上午。我试图把新房间收拾整齐,但这并不容易,因为我有 1,000 多本书。更糟糕的是,房间还非常小,所以我暂时把书放在了地板上。这会儿,书把地板的每一点空隙都占据了,我实际上是踩着这些书进出房间的。几分钟前,我妹妹帮我把一个旧书橱抬上了楼。她走进我的房间,当她看到地板上那些书时,大吃一惊。“这是我见过的最漂亮的地毯,”她说。她盯着“地毯”看了一会儿,又说:“你根本用不着书橱,空闲时你可以坐在这儿读地毯!”",
+  "grammar_card": {
+    "title": "现在完成时 vs 现在完成进行时",
+    "intro": "KS28:现在完成时(have/has + 过去分词)强调动作已完成、次数,或对现在的结果;现在完成进行时(have/has been + doing)强调动作在一段时间里一直在进行(常常还在继续)。",
+    "table": {
+      "headers": ["时态", "例子"],
+      "rows": [
+        ["现在完成(次数/结果)", "He has rung me five times.(打了 5 次)"],
+        ["现在完成进行(一直在做)", "He has been ringing me all morning.(一直在打)"],
+        ["现在完成(读过几遍)", "I have read it five times."],
+        ["现在完成进行(读了一下午)", "I have been reading all afternoon."],
+        ["否定·至今", "It hasn't rained for six weeks."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "现在完成进行时 = have/has been + 现在分词,强调持续;不能带明确的次数(不说 has been ringing five times)。", "mark": "have been doing" },
+      { "rule": "SD28 形容词 vs 副词:修饰动词用副词(sings beautifully、works slowly)。注意 hard(努力,形容词副词同形)≠ hardly(几乎不);late(晚)≠ lately(最近);high(高)≠ highly(高度地);near(近)≠ nearly(差点)。", "mark": "SD28 副词辨析" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is the writer's carpet made of?",
+    "options": ["His own books, spread all over the floor", "Real wool", "Old newspapers", "Colored tiles"],
+    "answer_index": 0
+  },
+  "passage": "We have just moved into a new house and I have been working hard all morning. I have been trying to get my new room in order. This has not been easy because I own over a thousand books. To make matters worse, the room is rather small, so I have temporarily put my books on the floor. At the moment, they cover every inch of floor space and I actually have to walk on them to get in or out of the room. A short while ago, my sister helped me to carry one of my old bookcases up the stairs. She went into my room and got a big surprise when she saw all those books on the floor. 'This is the prettiest carpet I have ever seen,' she said. She gazed at it for some time then added, 'You don't need bookcases at all. You can sit here in your spare time and read the carpet!'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "We have just moved into a new house and I have been working hard all morning.", "text_cn": "我们刚搬进一所新房子,我辛辛苦苦地干了整整一个上午。" },
+    { "seq": 2, "speaker": null, "text_en": "I have been trying to get my new room in order. This has not been easy because I own over a thousand books.", "text_cn": "我试图把新房间收拾整齐,但这并不容易,因为我有 1,000 多本书。" },
+    { "seq": 3, "speaker": null, "text_en": "To make matters worse, the room is rather small, so I have temporarily put my books on the floor.", "text_cn": "更糟糕的是,房间还非常小,所以我暂时把书放在了地板上。" },
+    { "seq": 4, "speaker": null, "text_en": "At the moment, they cover every inch of floor space and I actually have to walk on them to get in or out of the room.", "text_cn": "这会儿,书把地板的每一点空隙都占据了,我实际上是踩着这些书进出房间的。" },
+    { "seq": 5, "speaker": null, "text_en": "A short while ago, my sister helped me to carry one of my old bookcases up the stairs.", "text_cn": "几分钟前,我妹妹帮我把一个旧书橱抬上了楼。" },
+    { "seq": 6, "speaker": null, "text_en": "She went into my room and got a big surprise when she saw all those books on the floor.", "text_cn": "她走进我的房间,当她看到地板上那些书时,大吃一惊。" },
+    { "seq": 7, "speaker": null, "text_en": "'This is the prettiest carpet I have ever seen,' she said.", "text_cn": "“这是我见过的最漂亮的地毯,”她说。" },
+    { "seq": 8, "speaker": null, "text_en": "She gazed at it for some time then added, 'You don't need bookcases at all. You can sit here in your spare time and read the carpet!'", "text_cn": "她盯着“地毯”看了一会儿,又说:“你根本用不着书橱,空闲时你可以坐在这儿读地毯!”" }
+  ],
+  "words": [
+    { "word": "temporarily", "ipa": "/ˈtempərerɪli/", "pos": "adv", "meaning_cn": "暂时地", "example": "temporarily put my books on the floor" },
+    { "word": "inch", "ipa": "/ɪntʃ/", "pos": "n", "meaning_cn": "英寸(度量单位)", "example": "every inch of floor space" },
+    { "word": "space", "ipa": "/speɪs/", "pos": "n", "meaning_cn": "空间,地方", "example": "every inch of floor space" },
+    { "word": "actually", "ipa": "/ˈæktʃuəli/", "pos": "adv", "meaning_cn": "实际上,竟然", "example": "I actually have to walk on them" },
+    { "word": "bookcase", "ipa": "/ˈbʊkkeɪs/", "pos": "n", "meaning_cn": "书橱,书架", "example": "carry one of my old bookcases" },
+    { "word": "gaze", "ipa": "/ɡeɪz/", "pos": "v", "meaning_cn": "凝视,盯着看", "example": "She gazed at it for some time" },
+    { "word": "surprise", "ipa": "/sərˈpraɪz/", "pos": "n", "meaning_cn": "惊奇,意外", "example": "got a big surprise" },
+    { "word": "spare", "ipa": "/sper/", "pos": "adj", "meaning_cn": "空闲的,多余的", "example": "in your spare time" },
+    { "word": "order", "ipa": "/ˈɔːrdər/", "pos": "n", "meaning_cn": "整齐,秩序", "example": "get my room in order" },
+    { "word": "rather", "ipa": "/ˈræðər/", "pos": "adv", "meaning_cn": "相当,颇", "example": "the room is rather small" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "现在完成时(have/has + 过去分词)" },
+    { "gp": "gp2", "name": "现在完成进行时(have/has been + doing)" },
+    { "gp": "gp3", "name": "现在完成 vs 现在完成进行(对比)" },
+    { "gp": "gp4", "name": "形容词 vs 副词(SD28)" },
+    { "gp": "gp5", "name": "易混副词 hard/hardly、late/lately(SD28)" },
+    { "gp": "gp6", "name": "get…in order / make matters worse(辅考·课文)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"We ___ just moved into a new house.\"(现在完成时:刚刚做完)", "stem_cn": "我们刚搬进一所新房子。", "options": ["have", "are", "did", "will"] },
+    { "gp": "gp1", "stem": "\"This is the prettiest carpet I have ever ___.\"(现在完成时:see 的过去分词)", "stem_cn": "这是我见过的最漂亮的地毯。", "options": ["seen", "saw", "see", "seeing"] },
+    { "gp": "gp1", "stem": "\"He has ___ me up five times since 12 o'clock.\"(现在完成时:ring 的过去分词)", "stem_cn": "从 12 点起他给我打了 5 次电话。", "options": ["rung", "rang", "ring", "ringing"] },
+    { "gp": "gp1", "stem": "\"It ___ rained for six weeks.\"(现在完成时否定:一直没下)", "stem_cn": "已经 6 个星期没下雨了。", "options": ["hasn't", "isn't", "didn't", "won't"] },
+    { "gp": "gp2", "stem": "\"I ___ working hard all morning.\"(现在完成进行时:一直在做)", "stem_cn": "我整个上午一直在干活。", "options": ["have been", "have", "am", "was"] },
+    { "gp": "gp2", "stem": "\"It has ___ raining hard since yesterday.\"(现在完成进行时:一直在下)", "stem_cn": "从昨天起一直在下大雨。", "options": ["been", "be", "being", "was"] },
+    { "gp": "gp2", "stem": "\"He has been ___ me up all morning.\"(现在完成进行时:ring 的 -ing 形式)", "stem_cn": "整个上午他一直在给我打电话。", "options": ["ringing", "rung", "rang", "ring"] },
+    { "gp": "gp2", "stem": "\"He ___ been staying at this hotel for three weeks.\"(现在完成进行时,he 后面用哪个助动词)", "stem_cn": "他一直住在这家酒店有 3 周了。", "options": ["has", "have", "is", "was"] },
+    { "gp": "gp3", "stem": "\"He ___ me up five times since 12 o'clock.\"(强调打了几次·结果:用现在完成时)", "stem_cn": "从 12 点起他给我打了 5 次电话(强调次数)。", "options": ["has rung", "has been ringing", "rings", "is ringing"] },
+    { "gp": "gp3", "stem": "\"He ___ me up all morning.\"(强调整个上午一直在打:用现在完成进行时)", "stem_cn": "整个上午他一直在给我打电话(强调持续)。", "options": ["has been ringing", "has rung", "rings", "rang"] },
+    { "gp": "gp4", "stem": "\"She has a beautiful voice. She sings ___.\"(修饰动词 sing,要用副词)", "stem_cn": "她嗓音很美,她唱歌很动听。", "options": ["beautifully", "beautiful", "beauty", "more beautiful"] },
+    { "gp": "gp4", "stem": "\"He is a slow worker. He works ___.\"(修饰动词 work,要用副词)", "stem_cn": "他是个迟钝的人,工作很慢。", "options": ["slowly", "slow", "slower", "slowness"] },
+    { "gp": "gp4", "stem": "\"She dusted the furniture very ___.\"(修饰动词 dust,要用副词)", "stem_cn": "她非常仔细地掸去家具上的灰。", "options": ["carefully", "careful", "care", "carefulness"] },
+    { "gp": "gp5", "stem": "\"He is a hard worker. He works very ___.\"(努力地,这个词形容词副词同形)", "stem_cn": "他很勤奋,工作非常努力。", "options": ["hard", "hardly", "hardness", "more hardly"] },
+    { "gp": "gp5", "stem": "\"He ___ ever does any work.\"(几乎不、几乎没)", "stem_cn": "他几乎从不干活。", "options": ["hardly", "hard", "nearly", "lately"] },
+    { "gp": "gp5", "stem": "\"Have you travelled by train ___?\"(最近、近来)", "stem_cn": "最近你有没有乘火车旅行?", "options": ["lately", "late", "later", "lastly"] },
+    { "gp": "gp6", "stem": "\"To make matters ___, the room is rather small.\"(更糟糕的是,bad 的比较级)", "stem_cn": "更糟糕的是,房间相当小。", "options": ["worse", "bad", "badly", "worst"] },
+    { "gp": "gp6", "stem": "\"You can sit here in your ___ time and read.\"(空闲的、空余的时间)", "stem_cn": "你空闲时可以坐这儿看。", "options": ["spare", "free of", "empty", "rest"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"电梯\"常说:", "options": ["elevator", "lift", "hoist", "climber"] },
+    { "stem": "美语里\"(一套)公寓\"常说:", "options": ["apartment", "flat", "block", "unit house"] },
+    { "stem": "temporarily 的意思是:", "options": ["暂时地", "永久地", "立刻", "仔细地"] },
+    { "stem": "inch 的意思是:", "options": ["英寸(度量单位)", "公里", "重量", "面积"] },
+    { "stem": "space 的意思是:", "options": ["空间,地方", "时间", "速度", "声音"] },
+    { "stem": "actually 的意思是:", "options": ["实际上,竟然", "很少", "从不", "也许"] }
+  ],
+  "contrast": [
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "first floor", "uk": "ground floor", "note_cn": "一楼;美语 first floor 即地面层,英式叫 ground floor" },
+    { "us": "closet", "uk": "cupboard", "note_cn": "壁橱、储物间;美语 closet,英式 cupboard" }
+  ],
+  "chunks": [
+    { "us": "get ... in order", "ipa": "/ɡet ɪn ˈɔːrdər/", "example1": "I have been trying to get my room in order.", "example1_cn": "我一直想把房间整理好。", "example2": "Please get your papers in order.", "example2_cn": "请把你的文件整理好。" },
+    { "us": "to make matters worse", "ipa": "/meɪk ˈmætərz wɜːrs/", "example1": "To make matters worse, the room is small.", "example1_cn": "更糟的是,房间很小。", "example2": "To make matters worse, it started to rain.", "example2_cn": "更糟的是,开始下雨了。" },
+    { "us": "at the moment", "ipa": "/æt ðə ˈmoʊmənt/", "example1": "At the moment, books cover the floor.", "example1_cn": "此刻,书铺满了地板。", "example2": "I'm rather busy at the moment.", "example2_cn": "我此刻挺忙。" },
+    { "us": "in one's spare time", "ipa": "/ɪn ... sper taɪm/", "example1": "Read the carpet in your spare time.", "example1_cn": "空闲时读读地毯吧。", "example2": "I paint in my spare time.", "example2_cn": "我空闲时画画。" }
+  ],
+  "stage7_cloze": {
+    "context": "We have just moved into a new house. I ___1___ working hard all morning, and it ___2___ not been easy because I own over a thousand books. 'This is the prettiest carpet I have ever ___3___,' my sister said. 'You ___4___ reading all afternoon — now read the carpet!'",
+    "blanks": [
+      { "blank_no": 1, "options": ["have been", "have", "am", "was"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["has", "is", "was", "have"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["seen", "saw", "see", "seeing"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["have been", "have", "are", "did"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What has the writer been doing all morning?", "options": ["Working hard to get his new room in order", "Reading a novel", "Sleeping", "Cooking"] },
+    { "stem": "Why are the books on the floor?", "options": ["He has over a thousand books and the room is too small", "He likes them there", "The bookcases broke", "He is selling them"] },
+    { "stem": "What did his sister call the books on the floor?", "options": ["The prettiest carpet she had ever seen", "A terrible mess", "A waste of money", "A fire hazard"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我整个上午一直在干活\"(强调一直在进行,用现在完成进行时):", "options": ["I have been working hard all morning.", "I have been work hard all morning.", "I have being working hard all morning.", "I am been working hard all morning."] },
+    { "stem": "你想说\"《雾都孤儿》我已经读过 5 遍了\"(强调读过几遍,用现在完成时):", "options": ["I have read 'Oliver Twist' five times.", "I have been reading 'Oliver Twist' five times.", "I have read 'Oliver Twist' since five times.", "I am read 'Oliver Twist' five times."] },
+    { "stem": "你想说\"他工作很努力\"(修饰动词 work 用 hard,不是 hardly):", "options": ["He works very hard.", "He works very hardly.", "He works very hardness.", "He work very hard."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "space 的意思是:", "options": ["空间,地方", "时间", "速度", "声音"] },
+    { "kind": "vocab", "stem": "actually 的意思是:", "options": ["实际上,竟然", "很少", "从不", "也许"] },
+    { "kind": "grammar", "stem": "\"I ___ working hard all morning.\"(现在完成进行时)", "stem_cn": "我整个上午一直在干活。", "options": ["have been", "have", "am", "was"] },
+    { "kind": "grammar", "stem": "\"It ___ rained for six weeks.\"(现在完成时否定)", "stem_cn": "已经 6 个星期没下雨了。", "options": ["hasn't", "isn't", "didn't", "won't"] },
+    { "kind": "scenario", "stem": "\"to make matters worse\" 这个短语的意思是:", "options": ["更糟糕的是", "更好的是", "总而言之", "顺便说一句"] },
+    { "kind": "scenario", "stem": "\"get the room in order\" 这个短语的意思是:", "options": ["把房间整理好", "命令房间", "订购房间", "打扫院子"] },
+    { "kind": "reading", "stem": "Why did the writer put his books on the floor?", "options": ["The room was small, so he temporarily put them there", "He wanted a carpet", "He was reading them all", "He had no books left"], "passage": true },
+    { "kind": "reading", "stem": "What did the sister suggest?", "options": ["He doesn't need bookcases — he can sit and 'read the carpet'", "He should buy more bookcases", "He should sell his books", "He should get a bigger room"], "passage": true },
+    { "kind": "listening", "stem": "What is the writer's 'carpet' really made of?", "options": ["His books, spread over the floor", "Wool", "Old newspapers", "Colored tiles"], "audio": true },
+    { "kind": "listening", "stem": "How does the writer get in and out of the room?", "options": ["He has to walk on the books", "Through a window", "He crawls under them", "There is a clear path"], "audio": true }
+  ]
+}

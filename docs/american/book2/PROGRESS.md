@@ -42,7 +42,13 @@
 - 主教材 Key structures = **方向/位置介词短语**("Where did he go? He went to the cinema",Compare KS9):to/from、into/out of、for、towards、at,回答 Where / Which direction。
 - 裁决(自决):方向介词 gp1-5(to/from·into/out of·for·towards·at)+ 综合选介词 gp6 = 主考;on + 动名词(=as soon as '一…就…',On arriving…)gp7 + that 定语从句可省 gp8 辅考(均课文①类)。
 - 词10(darkness/explain/coast/storm/rock/shore/ahead/cliff/struggle/hospital);美语化 towards→toward、in hospital→in the hospital 入关6(+flashlight/torch、fall/autumn 高频美语点)。
-- 44题(关5=18[方向介词14+on doing/that 4]/关6=6/关7=4/关8=3/关9=3/关10=10);机器12项🟢首验全绿。seed→`american_am2_seed_unit05.sql`(L33=44,U5起)。⏭️ L34。
+- 44题(关5=18[方向介词14+on doing/that 4]/关6=6/关7=4/关8=3/关9=3/关10=10);机器12项🟢首验全绿。seed→`american_am2_seed_unit05.sql`(L33=44,U5起)。
+
+## ✅ U5 L34《Quick work》(破案“神速”)· 🟢全绿
+- 主教材 Key structures = **被动语态**("He was asked to call at the station",KS10):主动变被动 be+过去分词。本课覆盖各时态被动——一般过去(was stolen/was picked up)、**现在进行(is being sent,Note6 重点)**、过去完成(had been found)、ask sb to do 的被动(was asked to do)。
+- 裁决(自决):被动 gp1-6(主动变被动/一般过去被动/现在进行被动/过去完成被动/be asked to do/by短语)主考;most=very+过去分词 gp7(most surprised)+ too/as well gp8(amused too)辅考(均课文①类)。
+- 词10(station/receive/local/wonder/expect/steal/amuse/news/village/most);美语化 policeman→police officer、post→mail 入关6(+apartment/elevator 高频)。
+- 44题;机器12项🟢(首验红1:s5#12 stem 含箭头"→"泄漏[a]→改直填复验全绿;2条[c]黄警=被动/不定式 cloze 他处含 to/was,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-34=88)。⏭️ L35。
 
 ---
 

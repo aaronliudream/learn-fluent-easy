@@ -1,0 +1,138 @@
+{
+  "id": "am2_l34",
+  "unit_no": 5,
+  "lesson_no": 34,
+  "title_en": "Quick work",
+  "title_cn": "破案“神速”",
+  "grammar_focus": "被动语态(be + 过去分词;主动变被动,KS10)——一般过去被动(was stolen / was picked up)、现在进行被动(is being sent)、过去完成被动(had been found)、ask sb to do 的被动(be asked to do)+ by 短语引出执行者(主考)+ most = very + 过去分词(most surprised)/ 句尾 too·as well 表'也'(辅考·课文①类)",
+  "scene": "丹·鲁宾逊焦虑了整整一个星期。上星期二他收到当地警察局的一封信,要他到警局去一趟。丹奇怪警察为什么找他,但昨天还是去了,结果不再担心了——一位面带微笑的警察告诉他,他的自行车找到了:5天前在400英里外的一个小村里被发现,现在正用火车给他运回家来。丹听到这消息非常吃惊,又觉得好笑,因为他从没指望那辆车还能找到——它是20年前丹还是个15岁孩子时被人偷走的!",
+  "grammar_card": {
+    "title": "被动语态:be + 过去分词",
+    "intro": "被动语态用 be + 过去分词,表示'某事被…'。动作执行者用 by 引出。不同时态改 be:一般过去 was/were、现在进行 is/are being、过去完成 had been。全用本课和 Key structures 的句子举例。",
+    "table": {
+      "headers": ["时态", "被动形式 / 例子"],
+      "rows": [
+        ["一般过去 → was/were + 过去分词", "This bridge was built in 1942. / It was stolen."],
+        ["现在进行 → is/are being + 过去分词", "It is now being sent to his home."],
+        ["过去完成 → had been + 过去分词", "His bicycle had been found."],
+        ["ask sb to do 的被动", "I was asked to make a speech."],
+        ["by 短语引出执行者", "built by prisoners of war"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "most = very,常与作形容词的过去分词连用:Dan was most surprised = 非常吃惊。", "mark": "most = very" },
+      { "rule": "too / as well 放句尾表'也':He was amused too. / amused as well.", "mark": "too / as well" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How long had the police taken to find his bicycle?",
+    "options": ["Twenty years — it was stolen when Dan was fifteen", "One week", "Five days", "A few months"],
+    "answer_index": 0
+  },
+  "passage": "Dan Robinson has been worried all week. Last Tuesday he received a letter from the local police. In the letter, he was asked to call at the station. Dan wondered why he was wanted by the police, but he went to the station yesterday and now he is not worried anymore. At the station, he was told by a smiling policeman that his bicycle had been found. Five days ago, the policeman told him, the bicycle was picked up in a small village four hundred miles away. It is now being sent to his home by train. Dan was most surprised when he heard the news. He was amused too, because he never expected the bicycle to be found. It was stolen twenty years ago when Dan was a boy of fifteen!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Dan Robinson has been worried all week.", "text_cn": "丹·鲁宾逊焦虑了整整一个星期。" },
+    { "seq": 2, "speaker": null, "text_en": "Last Tuesday he received a letter from the local police.", "text_cn": "上星期二他收到当地警察局的一封信。" },
+    { "seq": 3, "speaker": null, "text_en": "In the letter, he was asked to call at the station.", "text_cn": "信中要他到警察局去一趟。" },
+    { "seq": 4, "speaker": null, "text_en": "Dan wondered why he was wanted by the police, but he went to the station yesterday and now he is not worried anymore.", "text_cn": "丹奇怪警察为什么找他,但昨天还是去了警局,现在不再担心了。" },
+    { "seq": 5, "speaker": null, "text_en": "At the station, he was told by a smiling policeman that his bicycle had been found.", "text_cn": "在警局,一位面带微笑的警察告诉他,他的自行车已经找到了。" },
+    { "seq": 6, "speaker": null, "text_en": "Five days ago, the policeman told him, the bicycle was picked up in a small village four hundred miles away.", "text_cn": "那警察说,那辆自行车是5天前在400英里外的一个小村里被发现的。" },
+    { "seq": 7, "speaker": null, "text_en": "It is now being sent to his home by train.", "text_cn": "现在正用火车把它给他运回家来。" },
+    { "seq": 8, "speaker": null, "text_en": "Dan was most surprised when he heard the news.", "text_cn": "丹听到这个消息时非常吃惊。" },
+    { "seq": 9, "speaker": null, "text_en": "He was amused too, because he never expected the bicycle to be found.", "text_cn": "他也觉得好笑,因为他从没指望那辆车还能找到。" },
+    { "seq": 10, "speaker": null, "text_en": "It was stolen twenty years ago when Dan was a boy of fifteen!", "text_cn": "它是20年前丹还是个15岁的孩子时被人偷走的!" }
+  ],
+  "words": [
+    { "word": "station", "ipa": "/ˈsteɪʃən/", "pos": "n", "meaning_cn": "(警察)局;车站", "example": "call at the station" },
+    { "word": "receive", "ipa": "/rɪˈsiːv/", "pos": "v", "meaning_cn": "收到", "example": "received a letter" },
+    { "word": "local", "ipa": "/ˈloʊkəl/", "pos": "adj", "meaning_cn": "当地的", "example": "the local police" },
+    { "word": "wonder", "ipa": "/ˈwʌndər/", "pos": "v", "meaning_cn": "想知道,纳闷", "example": "Dan wondered why" },
+    { "word": "expect", "ipa": "/ɪkˈspekt/", "pos": "v", "meaning_cn": "指望,预料", "example": "never expected the bicycle to be found" },
+    { "word": "steal", "ipa": "/stiːl/", "pos": "v", "meaning_cn": "偷(stole, stolen)", "example": "It was stolen twenty years ago" },
+    { "word": "amuse", "ipa": "/əˈmjuːz/", "pos": "v", "meaning_cn": "逗乐,使觉得好笑", "example": "He was amused too" },
+    { "word": "news", "ipa": "/nuːz/", "pos": "n", "meaning_cn": "消息,新闻", "example": "when he heard the news" },
+    { "word": "village", "ipa": "/ˈvɪlɪdʒ/", "pos": "n", "meaning_cn": "村庄", "example": "a small village" },
+    { "word": "most", "ipa": "/moʊst/", "pos": "adv", "meaning_cn": "相当,非常", "example": "Dan was most surprised" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "主动变被动:be + 过去分词" },
+    { "gp": "gp2", "name": "一般过去被动 was/were + 过去分词" },
+    { "gp": "gp3", "name": "现在进行被动 is/are being + 过去分词(本课重点)" },
+    { "gp": "gp4", "name": "过去完成被动 had been + 过去分词" },
+    { "gp": "gp5", "name": "ask sb to do 的被动(be asked to do)" },
+    { "gp": "gp6", "name": "by 短语引出动作执行者" },
+    { "gp": "gp7", "name": "most = very + 过去分词(辅考)" },
+    { "gp": "gp8", "name": "too / as well 表'也'(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"This bridge ___ built in 1942.\"(被动,一般过去)", "stem_cn": "这座桥是1942年建的。", "options": ["was", "is", "did", "has"] },
+    { "gp": "gp1", "stem": "\"The letter ___ written by Dan's friend.\"(被动,一般过去)", "stem_cn": "这封信是丹的朋友写的。", "options": ["was", "is", "did", "has"] },
+    { "gp": "gp2", "stem": "\"Dan's bicycle ___ stolen twenty years ago.\"(一般过去被动)", "stem_cn": "丹的自行车是20年前被偷的。", "options": ["was", "is", "has", "did"] },
+    { "gp": "gp2", "stem": "\"The bicycle ___ picked up in a small village.\"(一般过去被动)", "stem_cn": "自行车在一个小村子里被找到。", "options": ["was", "is", "has", "did"] },
+    { "gp": "gp2", "stem": "\"The prisoners ___ set free after the war.\"(复数主语,一般过去被动)", "stem_cn": "战后囚犯们被释放了。", "options": ["were", "was", "are", "did"] },
+    { "gp": "gp3", "stem": "\"The bicycle ___ now being sent to his home.\"(现在进行被动)", "stem_cn": "自行车现在正被送回他家。", "options": ["is", "was", "has", "had"] },
+    { "gp": "gp3", "stem": "\"The bridge is ___ repaired at the moment.\"(此刻正被…,进行时被动)", "stem_cn": "这座桥此刻正在被修。", "options": ["being", "been", "be", "to be"] },
+    { "gp": "gp3", "stem": "\"The rooms are ___ cleaned right now.\"(此刻正被…,进行时被动)", "stem_cn": "房间现在正被打扫。", "options": ["being", "been", "be", "to be"] },
+    { "gp": "gp4", "stem": "\"He was told his bicycle ___ been found.\"(过去完成被动)", "stem_cn": "他被告知自行车已被找到。", "options": ["had", "was", "has", "did"] },
+    { "gp": "gp4", "stem": "\"When he arrived, the work ___ already been finished.\"(过去完成被动)", "stem_cn": "他到时,工作已经被完成了。", "options": ["had", "was", "has", "did"] },
+    { "gp": "gp5", "stem": "\"In the letter, Dan ___ asked to call at the station.\"(被动:被要求)", "stem_cn": "信里丹被要求到警局去一趟。", "options": ["was", "did", "has", "is"] },
+    { "gp": "gp5", "stem": "\"I was asked ___ make a speech at the party.\"(被动 be asked 后接动词不定式)", "stem_cn": "聚会上我被邀请作演讲。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp6", "stem": "\"This bridge was built ___ prisoners of war.\"(引出动作的执行者)", "stem_cn": "这座桥是战俘建造的。", "options": ["by", "with", "from", "for"] },
+    { "gp": "gp6", "stem": "\"He was told the news ___ a smiling policeman.\"(引出动作的执行者)", "stem_cn": "一位面带微笑的警察告诉了他这个消息。", "options": ["by", "with", "from", "to"] },
+    { "gp": "gp7", "stem": "\"Dan was ___ surprised when he heard the news.\"(表'非常',与过去分词连用)", "stem_cn": "听到消息时丹非常吃惊。", "options": ["most", "almost", "mostly", "the most"] },
+    { "gp": "gp7", "stem": "\"I was ___ pleased to hear the good news.\"(表'非常',与过去分词连用)", "stem_cn": "听到好消息我非常高兴。", "options": ["most", "almost", "mostly", "the most"] },
+    { "gp": "gp8", "stem": "\"Dan was surprised, and he was amused ___.\"(句尾表'也')", "stem_cn": "丹很吃惊,也觉得好笑。", "options": ["too", "also too", "either", "yet"] },
+    { "gp": "gp8", "stem": "\"He never expected it, but he was pleased ___ well.\"(与 well 搭配表'也')", "stem_cn": "他没料到,但也很高兴。", "options": ["as", "so", "too", "very"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"警察\"中性说法常用:", "options": ["police officer", "policeman", "police guy", "cop man"] },
+    { "stem": "美语里\"邮件\"常说:", "options": ["mail", "post", "letter box", "send paper"] },
+    { "stem": "receive 的意思是:", "options": ["收到", "寄出", "撕毁", "阅读"] },
+    { "stem": "wonder 的意思是:", "options": ["想知道,纳闷", "确信", "忘记", "抱怨"] },
+    { "stem": "amuse 的意思是:", "options": ["逗乐,使觉得好笑", "激怒", "吓唬", "安慰"] },
+    { "stem": "expect 的意思是:", "options": ["指望,预料", "拒绝", "怀疑", "放弃"] }
+  ],
+  "contrast": [
+    { "us": "police officer", "uk": "policeman", "note_cn": "警察;美语中性说 police officer(口语 cop),英式 policeman(课文 a smiling policeman)" },
+    { "us": "mail", "uk": "post", "note_cn": "邮件;美语 mail,英式 post(课文 received a letter)" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat(高频美语点)" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift(高频美语点)" }
+  ],
+  "chunks": [
+    { "us": "be asked to do", "ipa": "/bi æskt tuː duː/", "example1": "He was asked to call at the station.", "example1_cn": "他被要求到警局去一趟。", "example2": "I was asked to make a speech.", "example2_cn": "我被邀请作演讲。" },
+    { "us": "pick up", "ipa": "/pɪk ʌp/", "example1": "The bicycle was picked up in a village.", "example1_cn": "自行车在一个村子里被找到。", "example2": "He picked up the phone.", "example2_cn": "他拿起了电话。" },
+    { "us": "call at", "ipa": "/kɔːl æt/", "example1": "He was asked to call at the station.", "example1_cn": "他被要求到警局去一趟。", "example2": "Please call at my office.", "example2_cn": "请到我办公室来一趟。" },
+    { "us": "most + 过去分词", "ipa": "/moʊst/", "example1": "Dan was most surprised.", "example1_cn": "丹非常吃惊。", "example2": "I was most pleased to hear it.", "example2_cn": "听到这事我非常高兴。" }
+  ],
+  "stage7_cloze": {
+    "context": "Dan was asked ___1___ call at the station. There he was told that his bicycle ___2___ been found. It ___3___ now being sent to his home. The bicycle ___4___ stolen twenty years ago.",
+    "blanks": [
+      { "blank_no": 1, "options": ["to", "for", "at", "of"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["had", "was", "has", "is"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["is", "was", "has", "had"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["was", "is", "has", "had"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did Dan receive a letter from the police?", "options": ["His lost bicycle had been found", "He had broken the law", "He had won a prize", "He was asked to join the police"] },
+    { "stem": "Where was the bicycle picked up?", "options": ["In a small village four hundred miles away", "At the local station", "In Dan's own garden", "At a big city market"] },
+    { "stem": "When was the bicycle stolen?", "options": ["Twenty years ago, when Dan was fifteen", "Last Tuesday", "Five days ago", "When Dan was a grown man"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"这座桥是1942年建的\"(被动:be + 过去分词):", "options": ["This bridge was built in 1942.", "This bridge built in 1942.", "This bridge is build in 1942.", "This bridge was build in 1942."] },
+    { "stem": "你想说\"自行车正用火车运回来\"(现在进行被动:is being + 过去分词):", "options": ["The bicycle is being sent by train.", "The bicycle is sending by train.", "The bicycle is sent being by train.", "The bicycle being sent by train."] },
+    { "stem": "你想说\"我被邀请作一次演讲\"(被动:was asked to do):", "options": ["I was asked to make a speech.", "I asked to make a speech.", "I was ask to make a speech.", "I am asked making a speech."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "receive 的意思是:", "options": ["收到", "寄出", "丢失", "购买"] },
+    { "kind": "vocab", "stem": "amuse 的意思是:", "options": ["逗乐,使觉得好笑", "激怒", "吓唬", "无聊"] },
+    { "kind": "grammar", "stem": "\"This bridge ___ built in 1942.\"(被动:be + 过去分词)", "stem_cn": "这座桥是1942年建的。", "options": ["was", "is", "did", "has"] },
+    { "kind": "grammar", "stem": "\"The bicycle ___ now being sent home.\"(现在进行被动)", "stem_cn": "自行车正被运回家。", "options": ["is", "was", "has", "had"] },
+    { "kind": "scenario", "stem": "\"His bicycle had been found.\" 这句话的意思是:", "options": ["他的自行车已经被找到了。", "他把自行车弄丢了。", "他要去找自行车。", "他卖掉了自行车。"] },
+    { "kind": "scenario", "stem": "\"It was stolen twenty years ago.\" 这句话的意思是:", "options": ["它是20年前被偷的。", "它20年前就卖了。", "它20年前坏了。", "它20年前找到了。"] },
+    { "kind": "reading", "stem": "Why is Dan not worried anymore?", "options": ["He learned his lost bicycle had been found", "He gave up his old bicycle", "The police let him go free", "He bought a new bicycle"], "passage": true },
+    { "kind": "reading", "stem": "Why was Dan amused?", "options": ["He never expected the bicycle to be found after twenty years", "The policeman told a funny joke", "The bicycle was broken", "He got a big reward"], "passage": true },
+    { "kind": "listening", "stem": "How long had it taken to find Dan's bicycle?", "options": ["Twenty years — it was stolen when he was fifteen", "One week", "Five days", "Four hundred days"], "audio": true },
+    { "kind": "listening", "stem": "How is the bicycle being sent to Dan?", "options": ["By train", "By airplane", "By ship", "By mail truck"], "audio": true }
+  ]
+}

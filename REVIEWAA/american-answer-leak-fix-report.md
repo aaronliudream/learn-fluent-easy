@@ -106,7 +106,22 @@
 - **① seed 生成器逐课断言合并数**:`gen-book2-seed` 现逐课打印 `l01: merged 48`;凡存在 `*_explanations_final.md` 却合并 0 条 → **生成即红灯 exit(1)**,不产出无解释 seed(堵住 ON CONFLICT 整包覆盖抹解释的 footgun)。
 - **② 全量校验器**:新增 `validate-am2-all.mjs`,九项对 seed 内**全部课**跑(可选单元过滤),不再只验当轮新课——L1 的 0/48 换这个当场就炸。
 
-## 八、Aaron 待跑 SQL(幂等,前后 COUNT)
-- `SQLAA/american_am2_seed_unit01.sql`(356 题,含 l01 新回填解释)
-- `SQLAA/american_am2_seed_unit02.sql`(355 题)
-- am1 受影响:`american_expand_unit01/02/03/09/10/11/12.sql`
+## 八、第一册(am1)DB 为准回扫(独立一批,与 am2 分开)
+
+anon 全库扫描 3556 题(`scripts/american/scan-am1-db.mjs`):
+- **A. 泄漏 RED 11**:9 箭头 + 1 直给「may」(l66) + 1 时态注(l67)。**含之前漏的 am1_l21 两条**——原因:l21 属 unit04,而 `DONE_american_expand_unit04.sql` 被改名带 `DONE_` 前缀,P0 那次基于文件的扫描 glob 没匹配到。DB 扫描补齐了。
+- **B. 语域**:仅 **am1_l70 May I**(s5#13/s10#9)为真命中——加语感注即可(干扰项是 Am/Must/Did,`Can` 没被当错项,无第二正确答案问题)。其余 [I'm fine]/[whom] 命中经逐条核实**全是合法干扰项**(答非"How are you"、whom 是 which/that 题的错误干扰项),不改。shall 表将来:am1 零命中。
+- YELLOW(c)77 条:均 gp 讲解正当复现 / cloze 上下文自然词,不改。
+
+**修法(关键纠错)**:am1 走 **`SQLAA/american_am1_register_leak_fix.sql`**(按 qid 幂等 `payload || ` 局部覆盖,只改 stem/加语感注,options/answer_index/answer_text 不动,无删题、无答案键改动)。
+
+> ⚠️ **收回 P0 里"重跑 am1 expand_unit"的说法——那样会闯祸**:实测 am1_l01 s5#17 线上 payload 有 `explanation_cn`(perq 落的),而 `expand_unit*.sql` 的 payload 里**没有**解释字段,其 `ON CONFLICT DO UPDATE SET payload=EXCLUDED.payload` 是整包覆盖 → **重跑会把 am1 全库逐题解释抹掉**(正是 CRLF 那类静默事故的同源 footgun)。**am1 只跑上面这一个 UPDATE-by-qid 文件,别碰 expand_unit。**
+
+## 九、Aaron 待跑 SQL
+**am2(与本轮语域回扫合并成一次)**:
+- `SQLAA/american_am2_seed_unit01.sql`(356 题,含 l01 回填解释 48/48)
+- `SQLAA/american_am2_seed_unit02.sql`(355 题,L14=47)
+
+**am1(独立一批)**:
+- `SQLAA/american_am1_register_leak_fix.sql`(11 泄漏 + 2 语感注,by-qid 合并;跑前 leak_before=11、跑后 leak_after=0 自带核对)
+- ~~am1 expand_unit~~ **不要跑**(见上警告)

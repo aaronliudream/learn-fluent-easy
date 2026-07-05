@@ -1,0 +1,137 @@
+{
+  "id": "am2_l18",
+  "unit_no": 3,
+  "lesson_no": 18,
+  "title_en": "He often does this!",
+  "title_cn": "他经常干这种事!",
+  "grammar_focus": "过去完成时(主考:had + 过去分词表'过去的过去'——在另一个过去动作之前就已完成 · 常与 after/before/by the time 连用 · 否定 hadn't、疑问把 had 提前)+ have 的用法/give 短语动词/beside vs besides(辅考:have = 拥有 = have got · give back 归还/give up 放弃/give in 屈服 · beside 在旁边≠besides 除…之外)",
+  "scene": "在乡村小餐馆吃完午饭却找不到提包、付不了账——原来是店主的狗把包叼到院子里去了,'他经常干这种事!'",
+  "grammar_card": {
+    "title": "说'过去的过去'(过去完成时 had + 过去分词)",
+    "intro": "本课讲怎么表示'在过去某件事之前就已经完成'的动作——过去完成时。构成:had + 过去分词(不分人称都用 had)。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课 / 常见例子"],
+      "rows": [
+        ["过去完成时 = had + 过去分词(不分人称都用 had)", "I had left it on a chair beside the door."],
+        ["表'过去的过去':比另一个过去动作更早完成", "After I had had lunch, I looked for my bag."],
+        ["常和 after / before / by the time 连用分先后", "By the time I looked, his dog had taken the bag."],
+        ["否定用 hadn't;疑问把 had 提前", "Had his dog taken it? / It hadn't done this before."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "have 表'拥有'时 = have got:He has a dog = He has got a dog", "mark": "have=拥有" },
+      { "rule": "give 短语:give back 归还 / give up 放弃 / give in 屈服", "mark": "give 短语" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What had happened to the writer's bag?",
+    "options": ["The owner's dog had taken it into the yard", "A thief had stolen it on the street", "The writer had left it at home", "It had fallen into the river"],
+    "answer_index": 0
+  },
+  "passage": "After I had had lunch at a village café, I looked for my bag. I had left it on a chair beside the door, and now it wasn't there! As I was looking for it, the owner came in. 'Did you enjoy your meal?' he asked. 'Yes, thank you,' I answered, 'but I can't pay the check. I don't have my bag.' The owner smiled and immediately went out. In a few minutes, he came back with my bag and gave it back to me. 'I'm very sorry,' he said. 'My dog had taken it into the yard. He often does this!'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "After I had had lunch at a village café, I looked for my bag.", "text_cn": "我在一家乡村小餐馆吃过午饭后,就找我的提包。" },
+    { "seq": 2, "speaker": null, "text_en": "I had left it on a chair beside the door, and now it wasn't there!", "text_cn": "我原先把它放在门边的椅子上,可这会儿却不见了!" },
+    { "seq": 3, "speaker": null, "text_en": "As I was looking for it, the owner came in.", "text_cn": "我正找着的时候,店主走了进来。" },
+    { "seq": 4, "speaker": null, "text_en": "'Did you enjoy your meal?' he asked.", "text_cn": "\"您用餐还满意吗?\"他问道。" },
+    { "seq": 5, "speaker": null, "text_en": "'Yes, thank you,' I answered, 'but I can't pay the check. I don't have my bag.'", "text_cn": "\"很好,谢谢,\"我回答,\"可我付不了账,我的提包不见了。\"" },
+    { "seq": 6, "speaker": null, "text_en": "The owner smiled and immediately went out.", "text_cn": "店主笑了笑,马上走了出去。" },
+    { "seq": 7, "speaker": null, "text_en": "In a few minutes, he came back with my bag and gave it back to me.", "text_cn": "几分钟后,他拿着我的提包回来,把它还给了我。" },
+    { "seq": 8, "speaker": null, "text_en": "'I'm very sorry,' he said.", "text_cn": "\"实在抱歉,\"他说。" },
+    { "seq": 9, "speaker": null, "text_en": "'My dog had taken it into the yard.'", "text_cn": "\"我的狗把它叼到院子里去了。\"" },
+    { "seq": 10, "speaker": null, "text_en": "'He often does this!'", "text_cn": "\"他经常干这种事!\"" }
+  ],
+  "words": [
+    { "word": "café", "ipa": "/kæˈfeɪ/", "pos": "n", "meaning_cn": "小餐馆,咖啡馆", "example": "lunch at a village café" },
+    { "word": "owner", "ipa": "/ˈoʊnər/", "pos": "n", "meaning_cn": "老板;主人", "example": "the owner came in" },
+    { "word": "check", "ipa": "/tʃek/", "pos": "n", "meaning_cn": "(餐馆)账单", "example": "pay the check" },
+    { "word": "meal", "ipa": "/miːl/", "pos": "n", "meaning_cn": "一餐,饭", "example": "Did you enjoy your meal?" },
+    { "word": "immediately", "ipa": "/ɪˈmiːdiətli/", "pos": "adv", "meaning_cn": "立即,马上", "example": "immediately went out" },
+    { "word": "return", "ipa": "/rɪˈtɜːrn/", "pos": "v", "meaning_cn": "返回;归还", "example": "he came back with my bag" },
+    { "word": "yard", "ipa": "/jɑːrd/", "pos": "n", "meaning_cn": "院子", "example": "into the yard" },
+    { "word": "chair", "ipa": "/tʃer/", "pos": "n", "meaning_cn": "椅子", "example": "on a chair beside the door" },
+    { "word": "beside", "ipa": "/bɪˈsaɪd/", "pos": "prep", "meaning_cn": "在…旁边", "example": "beside the door" },
+    { "word": "bag", "ipa": "/bæɡ/", "pos": "n", "meaning_cn": "提包,袋子", "example": "I looked for my bag" },
+    { "word": "lunch", "ipa": "/lʌntʃ/", "pos": "n", "meaning_cn": "午饭", "example": "I had had lunch" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "过去完成时——构成 had + 过去分词" },
+    { "gp": "gp2", "name": "过去完成时——'过去的过去'(先完成用过去完成)" },
+    { "gp": "gp3", "name": "过去完成时——after/before/by the time 分先后" },
+    { "gp": "gp4", "name": "过去完成时——否定 / 疑问" },
+    { "gp": "gp5", "name": "have 表'拥有'= have got(辅考)" },
+    { "gp": "gp6", "name": "have a bath / have a good time——have 作'进行'讲(辅考)" },
+    { "gp": "gp7", "name": "give 短语动词——give back/up/in/away(辅考)" },
+    { "gp": "gp8", "name": "beside(在旁)≠ besides(除…外)(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "过去完成时(表'过去的过去')的构成是:", "options": ["had + 过去分词", "will + 动词原形", "is/are + 动词-ing", "have/has + 过去分词"] },
+    { "gp": "gp1", "stem": "\"By the time I arrived, the train ___ left.\"(我到之前火车就已开走)", "stem_cn": "我到达时,火车已经开走了。", "options": ["had left", "has left", "left", "was leaving"] },
+    { "gp": "gp1", "stem": "\"When I saw her, she ___ already finished her work.\"(我看到她之前就已完成)", "stem_cn": "我见到她时,她已经完成了工作。", "options": ["had", "has", "was", "did"] },
+    { "gp": "gp2", "stem": "过去完成时用来表示:", "options": ["在过去某个动作'之前'就已完成的事", "此刻正在做的事", "将来要做的事", "经常反复的习惯"] },
+    { "gp": "gp2", "stem": "\"After I ___ had lunch, I looked for my bag.\"(先吃完午饭,再找包)", "stem_cn": "我吃完午饭后,就去找我的包。", "options": ["had", "have", "has", "was"] },
+    { "gp": "gp2", "stem": "\"He told me he ___ seen the movie before.\"(他说他之前已看过)", "stem_cn": "他告诉我他以前看过这部电影。", "options": ["had", "has", "have", "did"] },
+    { "gp": "gp3", "stem": "\"By the time the owner came in, his dog ___ taken the bag.\"(老板进来前狗已叼走)", "stem_cn": "老板进来时,他的狗已经把包叼走了。", "options": ["had", "has", "have", "was"] },
+    { "gp": "gp3", "stem": "两件都发生在过去的事,先发生的那件用:", "options": ["过去完成时(had + 过去分词)", "一般现在时", "一般将来时", "现在进行时"] },
+    { "gp": "gp4", "stem": "过去完成时的否定式是:", "options": ["hadn't + 过去分词", "don't + 动词原形", "wasn't + 动词-ing", "haven't + 过去分词"] },
+    { "gp": "gp4", "stem": "\"___ his dog taken the bag before he came in?\"(过去完成的疑问:助动词提前)", "stem_cn": "他进来之前,他的狗已经把包叼走了吗?", "options": ["Had", "Has", "Did", "Was"] },
+    { "gp": "gp5", "stem": "have 表示'拥有'时,可以换成:", "options": ["have got", "have gone", "have done", "have been"] },
+    { "gp": "gp5", "stem": "\"He has a big house.\" 与它意思相同的是:", "options": ["He has got a big house.", "He is got a big house.", "He does got a big house.", "He has getting a big house."] },
+    { "gp": "gp6", "stem": "\"I ___ a bath before dinner.\"(晚饭前洗了个澡,have 作'洗、进行'讲)", "stem_cn": "我在晚饭前洗了个澡。", "options": ["had", "had got", "have got", "was having got"] },
+    { "gp": "gp6", "stem": "下面哪个说法'不能'用 have got 替换?", "options": ["have a good time(玩得开心)", "have a car(有辆车)", "have money(有钱)", "have a house(有房子)"] },
+    { "gp": "gp7", "stem": "give back 的意思是:", "options": ["归还", "放弃", "赠送", "屈服"] },
+    { "gp": "gp7", "stem": "\"Don't ___! You can still win.\"(别放弃,表示'放弃')", "stem_cn": "别放弃!你还能赢。", "options": ["give up", "give back", "give in", "give away"] },
+    { "gp": "gp8", "stem": "beside 和 besides 的区别是:", "options": ["beside=在…旁边;besides=除…之外", "两个意思完全一样", "beside=除…之外;besides=在旁边", "两个都表示'反对'"] },
+    { "gp": "gp8", "stem": "\"Come and sit ___ me.\"(坐到我旁边:在…旁边)", "stem_cn": "过来坐在我旁边。", "options": ["beside", "besides", "between", "among"] }
+  ],
+  "stage6": [
+    { "stem": "美语餐馆里\"账单\"常说:", "options": ["check", "bill", "note", "paper"] },
+    { "stem": "give back 的意思是:", "options": ["归还", "放弃", "赠送", "屈服"] },
+    { "stem": "give up 的意思是:", "options": ["放弃;戒掉", "归还", "赠送", "举起"] },
+    { "stem": "give in 的意思是:", "options": ["屈服,让步", "归还", "参加", "放大"] },
+    { "stem": "beside 的意思是:", "options": ["在…旁边", "除…之外", "在…下面", "在…后面"] },
+    { "stem": "besides 的意思是:", "options": ["除…之外(还)", "在…旁边", "尽管", "反对"] }
+  ],
+  "contrast": [
+    { "us": "check", "uk": "bill", "note_cn": "(餐馆)账单;美语 check,英式 bill" },
+    { "us": "cookie", "uk": "biscuit", "note_cn": "饼干;美语 cookie,英式 biscuit" },
+    { "us": "yard", "uk": "garden", "note_cn": "(房子的)院子;美语常用 yard,英式 garden" }
+  ],
+  "chunks": [
+    { "us": "give back", "ipa": "/ɡɪv bæk/", "example1": "He gave it back to me.", "example1_cn": "他把它还给了我。", "example2": "Please give back the book.", "example2_cn": "请把书还回来。" },
+    { "us": "give up", "ipa": "/ɡɪv ʌp/", "example1": "Don't give up! You can win.", "example1_cn": "别放弃!你能赢。", "example2": "He gave up smoking last year.", "example2_cn": "他去年戒了烟。" },
+    { "us": "look for", "ipa": "/lʊk fɔːr/", "example1": "I looked for my bag.", "example1_cn": "我找我的提包。", "example2": "She is looking for her keys.", "example2_cn": "她在找她的钥匙。" },
+    { "us": "pay the check", "ipa": "/peɪ ðə tʃek/", "example1": "I can't pay the check.", "example1_cn": "我付不了账。", "example2": "Let me pay the check tonight.", "example2_cn": "今晚让我来付账。" }
+  ],
+  "stage7_cloze": {
+    "context": "By the time I looked for my bag, someone ___1___ taken it. I was sure I ___2___ it on a chair by the door. The owner listened, then went out. He explained that his dog ___3___ carried the bag into the yard. The dog ___4___ done this many times before.",
+    "blanks": [
+      { "blank_no": 1, "options": ["had", "has", "have", "was"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["had left", "left", "have left", "was leaving"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["had", "has", "was", "did"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["had", "has", "have", "did"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did the writer have lunch?", "options": ["At a village café", "At home", "At a big hotel", "On a train"] },
+    { "stem": "Why couldn't the writer pay the check?", "options": ["Because the bag was gone", "Because the food was bad", "Because the café was closed", "Because the owner was rude"] },
+    { "stem": "Who had taken the bag?", "options": ["The owner's dog", "A thief", "Another customer", "A waiter"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我到那儿时,火车已经开走了\"(先发生的用过去完成):", "options": ["When I got there, the train had already left.", "When I got there, the train has already left.", "When I got there, the train leaves already.", "When I got there, the train was leaving already ago."] },
+    { "stem": "你想说\"请把书还给我\"(归还用 give back):", "options": ["Please give the book back to me.", "Please give back to me the.", "Please giving the book back me.", "Please give the book to back me."] },
+    { "stem": "你想说\"除了英语,他还会说法语\"(除…之外用 besides):", "options": ["Besides English, he can speak French.", "Beside English, he can speak French.", "Between English, he can speak French.", "Among English, he can speak French."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "check 在餐馆里的意思是:", "options": ["账单", "支票本以外的纸", "菜单", "小费"] },
+    { "kind": "vocab", "stem": "owner 的意思是:", "options": ["老板;主人", "顾客", "服务员", "厨师"] },
+    { "kind": "grammar", "stem": "\"When we arrived, the movie ___ already started.\"(我们到之前电影就已开始)", "stem_cn": "我们到的时候,电影已经开始了。", "options": ["had", "has", "was", "did"] },
+    { "kind": "grammar", "stem": "\"She told me she ___ lost her keys.\"(她说她之前已把钥匙丢了)", "stem_cn": "她告诉我她把钥匙弄丢了。", "options": ["had", "has", "have", "was"] },
+    { "kind": "scenario", "stem": "\"My dog often does this!\" 这句话的意思是:", "options": ["我的狗经常干这种事!", "我的狗从不这样!", "我讨厌这只狗!", "我的狗会做很多事!"] },
+    { "kind": "scenario", "stem": "朋友泄气时你说 \"Don't give up!\",意思是:", "options": ["别放弃!", "别还回来!", "别送人!", "别参加!"] },
+    { "kind": "reading", "stem": "What had the writer done with the bag before it went missing?", "options": ["Left it on a chair beside the door", "Given it to the owner", "Put it in the car", "Taken it into the yard"], "passage": true },
+    { "kind": "reading", "stem": "Why did the owner smile and go out at once?", "options": ["Because he knew his dog had taken the bag", "Because he was angry with the writer", "Because he wanted more money", "Because the café was closing"], "passage": true },
+    { "kind": "listening", "stem": "What did the owner say at the end?", "options": ["'My dog had taken it into the yard. He often does this!'", "'You must pay the check now.'", "'I never saw your bag.'", "'Please leave my café.'"], "audio": true },
+    { "kind": "listening", "stem": "Did the writer get the bag back?", "options": ["Yes, the owner brought it back", "No, it was lost forever", "No, the dog ate it", "Yes, but it was empty"], "audio": true }
+  ]
+}

@@ -121,6 +121,7 @@ for (const L of lessons) {
     let seq = 1;
     for (const q of qs) {
       const payload = { stem: q.stem, options: q.options, answer_index: q.answer_index, ...extra(q) };
+      if (q.stem_cn) payload.stem_cn = q.stem_cn; // ④ 句型题填答案后整句中译(关5/关10)
       const ex = expMap.get(`${stage}:${seq}`); if (ex) { payload.explanation_cn = ex; mergedExp++; }
       push(U, `INSERT INTO public.american_questions (lesson_id,stage,grammar_point_id,qtype,payload,seq) VALUES (${sq(L.id)},${stage},${sq(q.gpId || null)},'choice',${jb(payload)},${seq}) ON CONFLICT (lesson_id,stage,seq) DO UPDATE SET qtype=EXCLUDED.qtype,payload=EXCLUDED.payload,grammar_point_id=EXCLUDED.grammar_point_id;`);
       verify.push(`  ${L.id} s${stage} #${seq} [${"abcd"[q.answer_index]}] ${q.options[q.answer_index]}`);
@@ -129,7 +130,7 @@ for (const L of lessons) {
   };
 
   // 关5(gp 挂题)
-  emitChoice(5, L.stage5.map((q) => ({ stem: q.stem, options: q.options, gpId: gpId(q.gp) })));
+  emitChoice(5, L.stage5.map((q) => ({ stem: q.stem, options: q.options, gpId: gpId(q.gp), stem_cn: q.stem_cn })));
 
   // 关6 美语点睛小测(stage6;看卡后小测,必须有题否则空 QuizRunner 崩)
   emitChoice(6, (L.stage6 || []).map((q) => ({ stem: q.stem, options: q.options })));
@@ -153,7 +154,7 @@ for (const L of lessons) {
   emitChoice(9, L.stage9_scenario.map((q) => ({ stem: q.stem, options: q.options })));
 
   // 关10 通关(全 choice;reading→passage、listening→audio 均=本课课文)
-  emitChoice(10, L.stage10.map((q) => ({ stem: q.stem, options: q.options, _kind: q.kind, _passage: q.passage, _audio: q.audio })),
+  emitChoice(10, L.stage10.map((q) => ({ stem: q.stem, options: q.options, _kind: q.kind, _passage: q.passage, _audio: q.audio, stem_cn: q.stem_cn })),
     (q) => {
       const ex = {};
       if (q._passage) ex.passage = L.passage;

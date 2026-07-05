@@ -59,7 +59,7 @@
               { "text": "grass", "correct": false },
               { "text": "badminton", "correct": false }
             ],
-            "explanationZh": "gym 是「体育馆」，正好对上中文。grass 是「草坪」、badminton 是「羽毛球」，都是本单元真实的词，但意思不一样，要按中文选对。"
+            "explanationZh": "gym 是「体育馆」，正好对上中文。grass 是「草;草地」、badminton 是「羽毛球」，都是本单元真实的词，但意思不一样，要按中文选对。"
           }
         },
         {

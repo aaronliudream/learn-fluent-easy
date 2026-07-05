@@ -13,7 +13,7 @@
 
 | # | 文件 | 期望 COUNT | 说明 | 依赖 |
 |---|---|---|---|---|
-| — | (暂无) | — | am2 U3(L17–24)生产中,产完追加 `american_am2_seed_unit03.sql` | — |
+| 1 | `american_am2_seed_unit03.sql` | +352(8课×44) | am2 U3(L17–24)整单元新增:L17 Always young/L18 He often does this/L19 Sold out/L20 One man in a boat/L21 Mad or not/L22 A glass envelope/L23 A new house/L24 It could be worse。幂等 ON CONFLICT,含 lessons+sentences+words+grammar_points+amencontrast+questions | 无 |
 
 > 说明:六项修正的 ④⑤⑥ 是给**已存在题目**加字段/补解释,COUNT 不增;跑最新版本即可覆盖。已全部跑完。
 > 后续 am2 U3–U12(L17–L96)、am3、am4 会新增 `american_am2_seed_unitNN.sql` / `american_am3_seed_unitNN.sql` / `american_am4_seed_unitNN.sql`,每单元完成追加到本表(带期望 COUNT 增量)。

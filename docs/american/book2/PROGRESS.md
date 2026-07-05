@@ -28,7 +28,13 @@
 - 主教材 Key structures = **used to do**("He used to work fourteen hours a day",过去习惯/状态·现已停止,对比 KS7 过去进行/一般过去)。**主题分歧第五例**:同步 L30~31 讲 状语从句/方向介词(so…that/toward 已在 L30 用尽),L31 主考锚定教材 **used to do**。
 - 裁决(自决未停):used to do 主考(过去习惯 gp1/状态 gp2/否定疑问 gp3/vs一般过去 gp4/vs过去进行 gp5/与现在对比 gp6)+ which 定语从句指物 gp7 / when 时间状语从句 gp8 辅考(均课文①类:a factory which employed…、smiled when…)。
 - 词10(retire/company/bicycle/save/workshop/helper/employ/grandson/factory/spare);美语化 aeroplane→airplane、shop→store、postman→mailman 入关6。
-- 44题(关5=18[used to 14+which/when 4]/关6=6/关7=4/关8=3/关9=3/关10=10);机器12项🟢(首验红1:s9seq2 解释含"定语"串味→改"修饰句"复验全绿)。seed→`american_am2_seed_unit04.sql`(L25-31=308)。commit 见下。⏭️ L32(U4 末课)。
+- 44题(关5=18[used to 14+which/when 4]/关6=6/关7=4/关8=3/关9=3/关10=10);机器12项🟢(首验红1:s9seq2 解释含"定语"串味→改"修饰句"复验全绿)。seed→`american_am2_seed_unit04.sql`(L25-31=308)。commit 见下。
+
+## ✅ U4 L32《Shopping made easy》(购物变得很方便)· 🟢全绿 · **U4 整单元收官**
+- 主教材 Key structures = **as…as / not so…as 同级比较**("People are not so honest as they once were",KS8)+ Part b **量词 much/many↔little/few/a little/a few**。**主题分歧第六例**:同步侧重比较/量词,与教材一致偏多。
+- 裁决(自决未停):同级比较 gp1-3(as…as/not so…as/as…as possible)+ 比较级 than gp4 + 最高级 gp5 + 量词 gp6 = 主考;it 形式主语 gp7(it was easier for sb to do)+ 介词+动名词 gp8(without paying)辅考(均课文①类)。
+- 词10(once/temptation/article/wrap/simply/arrest/honest/steal/dress/assistant);美语化 shop→store、parcel→package、shop assistant→sales clerk、shopping centre→mall 入关6。
+- 44题;机器12项🟢(8条[c]黄警=as…as 题干他处含 as/so,同级比较固有,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit04.sql`(**L25-32=352,整单元**)。⏭️ U5 L33。
 
 ---
 

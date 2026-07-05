@@ -1,0 +1,137 @@
+{
+  "id": "am2_l32",
+  "unit_no": 4,
+  "lesson_no": 32,
+  "title_en": "Shopping made easy",
+  "title_cn": "购物变得很方便",
+  "grammar_focus": "as…as / not so…as 同级比较(和…一样 / 不如…那样,KS8)+ 比较级 than / 最高级 the most + 量词 much/many 与 little/few/a little/a few(主考)+ it 形式主语(it is + adj + for sb + to do)/ 介词 + 动名词(without paying)(辅考·课文①类)",
+  "scene": "人们不再像从前那样诚实,偷窃的诱惑比以往更大——尤其在大商店里。一名侦探最近盯上一位总在星期一上午进大商店的穿着讲究的妇女。一个星期一,店里人比平常少,侦探更容易监视她。妇女先买了几样小商品,过一会儿又挑了一件最贵的连衣裙,递给一个售货员让她尽快包好;然后妇女拿起包裹没付钱就走出商店。她被捕后,侦探发现那售货员竟是她女儿——那姑娘每星期'送'母亲一件免费的连衣裙!",
+  "grammar_card": {
+    "title": "as…as 同级比较 与 量词",
+    "intro": "as + 形容词/副词 + as 表示'和…一样';not so/as … as 表示'不如…那样'。再复习比较级 than、最高级 the most,以及量词 much/many 和 little/few/a little/a few。全用本课和 Key structures 的句子举例。",
+    "table": {
+      "headers": ["表达", "例子"],
+      "rows": [
+        ["和…一样 → as … as", "He is as old as I am."],
+        ["不如…那样 → not so/as … as", "People are not so honest as they once were."],
+        ["尽可能… → as … as possible", "He wrapped it up as quickly as possible."],
+        ["更… → 比较级 + than", "fewer people than usual"],
+        ["最… → the most / -est", "one of the most expensive dresses"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "it 作形式主语,真正主语是后面的不定式:It was easier for the detective to watch her.", "mark": "it…for sb to do" },
+      { "rule": "介词后面动词用 -ing 形式:walked out without paying;量词 little/few 表'几乎没有',a little/a few 表'一些'", "mark": "介词+-ing / 量词" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Who was the thief?",
+    "options": ["The well-dressed woman (helped by her daughter)", "The shop assistant alone", "The detective", "The store manager"],
+    "answer_index": 0
+  },
+  "passage": "People are not so honest as they once were. The temptation to steal is greater than ever before — especially in large stores. A detective recently watched a well-dressed woman who always went into a large store on Monday mornings. One Monday, there were fewer people in the store than usual when the woman came in, so it was easier for the detective to watch her. The woman first bought a few small articles. After a little time, she chose one of the most expensive dresses in the store and handed it to an assistant who wrapped it up for her as quickly as possible. Then the woman simply took the package and walked out of the store without paying. When she was arrested, the detective found out that the assistant was her daughter. The girl 'gave' her mother a free dress once a week!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "People are not so honest as they once were.", "text_cn": "人们不像从前那样诚实了。" },
+    { "seq": 2, "speaker": null, "text_en": "The temptation to steal is greater than ever before — especially in large stores.", "text_cn": "偷窃的诱惑比以往任何时候都更强烈——尤其是在大商店里。" },
+    { "seq": 3, "speaker": null, "text_en": "A detective recently watched a well-dressed woman who always went into a large store on Monday mornings.", "text_cn": "一名侦探最近注意上了一位总在星期一上午进大商店的穿着讲究的妇女。" },
+    { "seq": 4, "speaker": null, "text_en": "One Monday, there were fewer people in the store than usual when the woman came in, so it was easier for the detective to watch her.", "text_cn": "一个星期一,那妇女进来时店里的人比平常少,因此侦探更容易监视她。" },
+    { "seq": 5, "speaker": null, "text_en": "The woman first bought a few small articles.", "text_cn": "那妇女先买了几样小商品。" },
+    { "seq": 6, "speaker": null, "text_en": "After a little time, she chose one of the most expensive dresses in the store and handed it to an assistant who wrapped it up for her as quickly as possible.", "text_cn": "过了一会儿,她挑了店里最贵的一件连衣裙,递给一个售货员,让她尽快包好。" },
+    { "seq": 7, "speaker": null, "text_en": "Then the woman simply took the package and walked out of the store without paying.", "text_cn": "然后那妇女拿起包裹,没付钱就走出了商店。" },
+    { "seq": 8, "speaker": null, "text_en": "When she was arrested, the detective found out that the assistant was her daughter.", "text_cn": "她被捕后,侦探发现那售货员原来是她的女儿。" },
+    { "seq": 9, "speaker": null, "text_en": "The girl 'gave' her mother a free dress once a week!", "text_cn": "那姑娘每星期'送'母亲一件免费的连衣裙!" }
+  ],
+  "words": [
+    { "word": "once", "ipa": "/wʌns/", "pos": "adv", "meaning_cn": "曾经,以前", "example": "as they once were" },
+    { "word": "temptation", "ipa": "/tempˈteɪʃən/", "pos": "n", "meaning_cn": "诱惑", "example": "the temptation to steal" },
+    { "word": "article", "ipa": "/ˈɑːrtɪkəl/", "pos": "n", "meaning_cn": "物品,东西", "example": "a few small articles" },
+    { "word": "wrap", "ipa": "/ræp/", "pos": "v", "meaning_cn": "包,包裹", "example": "wrapped it up for her" },
+    { "word": "simply", "ipa": "/ˈsɪmpli/", "pos": "adv", "meaning_cn": "仅仅,就这样", "example": "simply took the package" },
+    { "word": "arrest", "ipa": "/əˈrest/", "pos": "v", "meaning_cn": "逮捕", "example": "When she was arrested" },
+    { "word": "honest", "ipa": "/ˈɑːnɪst/", "pos": "adj", "meaning_cn": "诚实的", "example": "not so honest as they once were" },
+    { "word": "steal", "ipa": "/stiːl/", "pos": "v", "meaning_cn": "偷窃", "example": "the temptation to steal" },
+    { "word": "dress", "ipa": "/dres/", "pos": "n", "meaning_cn": "连衣裙", "example": "the most expensive dresses" },
+    { "word": "assistant", "ipa": "/əˈsɪstənt/", "pos": "n", "meaning_cn": "售货员;助手", "example": "handed it to an assistant" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "as + 形容词/副词 + as:和…一样" },
+    { "gp": "gp2", "name": "not so/as … as:不如…那样" },
+    { "gp": "gp3", "name": "as … as possible / as … as one can:尽可能…" },
+    { "gp": "gp4", "name": "比较级 + than(greater than / fewer … than)" },
+    { "gp": "gp5", "name": "最高级 the most / -est" },
+    { "gp": "gp6", "name": "量词 much/many 与 little/few/a little/a few" },
+    { "gp": "gp7", "name": "it 形式主语(it is + adj + for sb + to do,辅考)" },
+    { "gp": "gp8", "name": "介词 + 动名词(without paying,辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He is ___ old as I am.\"(表示'和…一样')", "stem_cn": "他和我年龄一样大。", "options": ["as", "so", "very", "too"] },
+    { "gp": "gp1", "stem": "\"She ran ___ fast as her brother.\"(表示'和…一样快')", "stem_cn": "她跑得和她哥哥一样快。", "options": ["as", "so", "more", "very"] },
+    { "gp": "gp1", "stem": "\"He unlocked the door as quickly ___ he could.\"(同级比较的第二个词)", "stem_cn": "他尽快把门打开了。", "options": ["as", "than", "so", "that"] },
+    { "gp": "gp2", "stem": "\"People are not ___ honest as they once were.\"(表示'不如…那样')", "stem_cn": "人们不像从前那样诚实了。", "options": ["so", "very", "too", "more"] },
+    { "gp": "gp2", "stem": "\"She is not ___ intelligent as we think.\"(表示'不如…那样')", "stem_cn": "她不像我们想的那么聪明。", "options": ["so", "very", "too", "much"] },
+    { "gp": "gp2", "stem": "\"This book is not ___ interesting as that one.\"(表示'不如…那样')", "stem_cn": "这本书不如那本有趣。", "options": ["as", "very", "too", "more"] },
+    { "gp": "gp3", "stem": "\"He wrapped it up ___ quickly as possible.\"(表示'尽可能…')", "stem_cn": "他尽快把它包好。", "options": ["as", "so", "more", "very"] },
+    { "gp": "gp3", "stem": "\"Please come ___ soon as you can.\"(表示'尽…')", "stem_cn": "请尽快来。", "options": ["as", "so", "than", "more"] },
+    { "gp": "gp4", "stem": "\"The temptation to steal is ___ than ever before.\"(比…更强,用比较级)", "stem_cn": "偷窃的诱惑比以往任何时候都更强烈。", "options": ["greater", "great", "greatest", "more great"] },
+    { "gp": "gp4", "stem": "\"There were ___ people than usual that Monday.\"(比…少,修饰可数名词)", "stem_cn": "那个星期一人比平常少。", "options": ["fewer", "less", "few", "little"] },
+    { "gp": "gp5", "stem": "\"She chose one of the ___ expensive dresses.\"(表示'最…')", "stem_cn": "她挑了一件最贵的连衣裙。", "options": ["most", "more", "much", "very"] },
+    { "gp": "gp5", "stem": "\"It was the ___ store in town.\"(表示'最大的')", "stem_cn": "那是城里最大的商店。", "options": ["biggest", "bigger", "most big", "big"] },
+    { "gp": "gp6", "stem": "\"The woman first bought ___ small articles.\"(可数名词,表示'几样')", "stem_cn": "那妇女先买了几样小商品。", "options": ["a few", "a little", "much", "little"] },
+    { "gp": "gp6", "stem": "\"There is ___ milk in the bottle, so we can't make tea.\"(不可数,表示'几乎没有')", "stem_cn": "瓶里几乎没有牛奶,泡不了茶。", "options": ["little", "few", "a few", "many"] },
+    { "gp": "gp7", "stem": "\"It was easier ___ the detective to watch her.\"(it 是形式主语,真正主语在后面)", "stem_cn": "侦探更容易监视她了。", "options": ["for", "of", "to", "with"] },
+    { "gp": "gp7", "stem": "\"It is important ___ us to be honest.\"(it 是形式主语,真正主语在后面)", "stem_cn": "诚实对我们很重要。", "options": ["for", "of", "to", "that"] },
+    { "gp": "gp8", "stem": "\"The woman walked out without ___.\"(介词后面动词用 -ing 形式)", "stem_cn": "那妇女没付钱就走了出去。", "options": ["paying", "pay", "paid", "to pay"] },
+    { "gp": "gp8", "stem": "\"She left after ___ the dress.\"(介词后面动词用 -ing 形式)", "stem_cn": "她拿了连衣裙后就离开了。", "options": ["taking", "take", "took", "to take"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"商店\"常说:", "options": ["store", "shop", "market house", "sell place"] },
+    { "stem": "美语里\"包裹\"常说:", "options": ["package", "parcel", "box mail", "wrap bag"] },
+    { "stem": "temptation 的意思是:", "options": ["诱惑", "惩罚", "邀请", "警告"] },
+    { "stem": "arrest 的意思是:", "options": ["逮捕", "释放", "追赶", "审判"] },
+    { "stem": "article(a few small articles)的意思是:", "options": ["物品,东西", "文章标题", "关节", "冠词"] },
+    { "stem": "once(as they once were)的意思是:", "options": ["曾经,以前", "一次就", "立刻", "从不"] }
+  ],
+  "contrast": [
+    { "us": "store", "uk": "shop", "note_cn": "商店;美语 store(大商店 department store),英式 shop(课文 large store)" },
+    { "us": "package", "uk": "parcel", "note_cn": "包裹;美语 package,英式 parcel(课文 took the package)" },
+    { "us": "sales clerk", "uk": "shop assistant", "note_cn": "售货员;美语 sales clerk / salesperson,英式 shop assistant" },
+    { "us": "mall", "uk": "shopping centre", "note_cn": "购物中心;美语 mall,英式 shopping centre" }
+  ],
+  "chunks": [
+    { "us": "as ... as possible", "ipa": "/æz ... æz ˈpɑːsəbəl/", "example1": "He wrapped it up as quickly as possible.", "example1_cn": "他尽快把它包好。", "example2": "Come as soon as possible.", "example2_cn": "请尽快来。" },
+    { "us": "the temptation to do", "ipa": "/ðə tempˈteɪʃən tuː duː/", "example1": "The temptation to steal is great.", "example1_cn": "偷窃的诱惑很大。", "example2": "I resisted the temptation to buy it.", "example2_cn": "我忍住了买它的诱惑。" },
+    { "us": "without paying", "ipa": "/wɪˈðaʊt ˈpeɪɪŋ/", "example1": "She walked out without paying.", "example1_cn": "她没付钱就走了出去。", "example2": "He left without saying goodbye.", "example2_cn": "他没道别就走了。" },
+    { "us": "one of the most ...", "ipa": "/wʌn əv ðə moʊst/", "example1": "one of the most expensive dresses", "example1_cn": "最贵的连衣裙之一", "example2": "one of the most famous singers", "example2_cn": "最有名的歌手之一" }
+  ],
+  "stage7_cloze": {
+    "context": "People are not ___1___ honest as they once were. One Monday there were ___2___ people than usual, so it was easier ___3___ the detective to watch her. The woman took the package and walked out without ___4___.",
+    "blanks": [
+      { "blank_no": 1, "options": ["so", "very", "too", "more"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["fewer", "less", "few", "little"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["for", "of", "to", "with"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["paying", "pay", "paid", "to pay"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Who did the detective watch in the large store?", "options": ["A well-dressed woman", "A young shop assistant", "The store manager", "A police officer"] },
+    { "stem": "What did the woman do with the expensive dress?", "options": ["She took it and walked out without paying", "She paid for it at once", "She returned it to the assistant", "She tried it on and left it"] },
+    { "stem": "Who was the assistant who wrapped up the dress?", "options": ["The woman's daughter", "The detective's wife", "The store manager", "A stranger"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"他和我年龄一样大\"(和…一样用 as…as):", "options": ["He is as old as I am.", "He is so old as I am.", "He is as old than I am.", "He is more old as I am."] },
+    { "stem": "你想说\"她不像我们想的那么聪明\"(不如…那样):", "options": ["She is not so intelligent as we think.", "She is not intelligent than we think.", "She is not so intelligent than we think.", "She is not more intelligent so we think."] },
+    { "stem": "你想说\"那妇女没付钱就走了\"(介词后用 -ing):", "options": ["The woman walked out without paying.", "The woman walked out without pay.", "The woman walked out without to pay.", "The woman walked out without paid."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "temptation 的意思是:", "options": ["诱惑", "惩罚", "邀请", "休息"] },
+    { "kind": "vocab", "stem": "arrest 的意思是:", "options": ["逮捕", "释放", "雇用", "逃跑"] },
+    { "kind": "grammar", "stem": "\"People are not ___ honest as they once were.\"(表示'不如…那样')", "stem_cn": "人们不像从前那样诚实了。", "options": ["so", "very", "too", "more"] },
+    { "kind": "grammar", "stem": "\"He wrapped it up as quickly ___ possible.\"(表示'尽可能…')", "stem_cn": "他尽快把它包好。", "options": ["as", "so", "than", "that"] },
+    { "kind": "scenario", "stem": "\"People are not so honest as they once were.\" 这句话的意思是:", "options": ["人们不像从前那样诚实了。", "人们比从前更诚实了。", "人们一向都很诚实。", "人们从不诚实。"] },
+    { "kind": "scenario", "stem": "\"She took the package and walked out without paying.\" 这句话的意思是:", "options": ["她拿了包裹没付钱就走了。", "她付了钱才拿走包裹。", "她把包裹还了回去。", "她买了包裹很高兴。"] },
+    { "kind": "reading", "stem": "Why was it easier for the detective to watch the woman that Monday?", "options": ["There were fewer people in the store than usual", "The woman moved very slowly", "The store was brightly lit", "The woman was completely alone"], "passage": true },
+    { "kind": "reading", "stem": "What did the detective find out when the woman was arrested?", "options": ["The assistant was her daughter", "The dress was not expensive", "The woman had paid after all", "The store was closing down"], "passage": true },
+    { "kind": "listening", "stem": "Who was the thief?", "options": ["The well-dressed woman", "The detective", "The store manager", "An honest customer"], "audio": true },
+    { "kind": "listening", "stem": "How often did the girl 'give' her mother a free dress?", "options": ["Once a week", "Once a year", "Every day", "Never"], "audio": true }
+  ]
+}

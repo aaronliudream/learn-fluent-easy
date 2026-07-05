@@ -1,0 +1,137 @@
+{
+  "id": "am2_l23",
+  "unit_no": 3,
+  "lesson_no": 23,
+  "title_en": "A new house",
+  "title_cn": "新居",
+  "grammar_focus": "综合复习(主考:一般将来时 will · 过去完成时 had done · 间接引语 said/told + 从句将来变 would · if 条件句 if + 现在时/主句 will · must 推测 & had to 过去 · can/may 请求与 could 过去 · 被动语态 be + 过去分词)+ there is / there are 存在句(辅考)",
+  "scene": "收到远在尼日利亚的姐姐来信,说明年要来;她若来准会大吃一惊——我们已搬进乡间一栋崭新的现代化住宅,五个月前竣工,是全区唯一的现代房,在有些人看来还挺古怪",
+  "grammar_card": {
+    "title": "综合复习:把学过的时态和句型串起来",
+    "intro": "本课不学新语法,而是把前面几课的关键句型复习一遍——将来时、过去完成时、间接引语、if 条件句、must / have to、can / may、被动语态。全用本课句子举例。",
+    "table": {
+      "headers": ["复习点", "本课 / 常见例子"],
+      "rows": [
+        ["一般将来时 will + 动词原形", "If she comes, she will get a surprise."],
+        ["过去完成时 had + 过去分词('过去的过去')", "Work on it had begun before my sister left."],
+        ["间接引语:主句过去,从句 will 变 would", "She said that she would come to America."],
+        ["被动语态 be + 过去分词", "The house was completed five months ago."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "if 条件句:if 那半句用一般现在时,主句用 will(If she comes, she will…)", "mark": "if 条件句" },
+      { "rule": "存在句:There is + 单数 / There are + 复数(There is a lovely garden)", "mark": "there is/are" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why is the new house special?",
+    "options": ["It is very modern, maybe the only modern house in the district", "It is very old", "It has no garden", "It is very small"],
+    "answer_index": 0
+  },
+  "passage": "I had a letter from my sister yesterday. She lives in Nigeria. In her letter, she said that she would come to America next year. If she comes, she will get a surprise. We are now living in a beautiful new house in the country. Work on it had begun before my sister left. The house was completed five months ago. In my letter, I told her that she could stay with us. The house has many large rooms, and there is a lovely garden. It is a very modern house, so it looks strange to some people. It must be the only modern house in the district.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "I had a letter from my sister yesterday.", "text_cn": "昨天我收到了姐姐的一封信。" },
+    { "seq": 2, "speaker": null, "text_en": "She lives in Nigeria.", "text_cn": "她住在尼日利亚。" },
+    { "seq": 3, "speaker": null, "text_en": "In her letter, she said that she would come to America next year.", "text_cn": "在信中她说她明年将到美国来。" },
+    { "seq": 4, "speaker": null, "text_en": "If she comes, she will get a surprise.", "text_cn": "如果她来了,她会感到非常意外。" },
+    { "seq": 5, "speaker": null, "text_en": "We are now living in a beautiful new house in the country.", "text_cn": "我们现在住在乡间的一栋漂亮的新住宅里。" },
+    { "seq": 6, "speaker": null, "text_en": "Work on it had begun before my sister left.", "text_cn": "这栋房子在我姐姐离开之前就已动工了。" },
+    { "seq": 7, "speaker": null, "text_en": "The house was completed five months ago.", "text_cn": "它是在五个月以前竣工的。" },
+    { "seq": 8, "speaker": null, "text_en": "In my letter, I told her that she could stay with us.", "text_cn": "我在信中告诉她,她可以和我们住在一起。" },
+    { "seq": 9, "speaker": null, "text_en": "The house has many large rooms, and there is a lovely garden.", "text_cn": "这栋房子有许多房间,还有一个漂亮的花园。" },
+    { "seq": 10, "speaker": null, "text_en": "It is a very modern house, so it looks strange to some people. It must be the only modern house in the district.", "text_cn": "它是一栋非常现代化的住宅,因此在有些人看来很奇怪。它肯定是这个地区唯一的一栋现代化住宅。" }
+  ],
+  "words": [
+    { "word": "complete", "ipa": "/kəmˈpliːt/", "pos": "v", "meaning_cn": "完成,竣工", "example": "The house was completed." },
+    { "word": "modern", "ipa": "/ˈmɑːdərn/", "pos": "adj", "meaning_cn": "现代的,新式的", "example": "a very modern house" },
+    { "word": "strange", "ipa": "/streɪndʒ/", "pos": "adj", "meaning_cn": "奇怪的", "example": "it looks strange" },
+    { "word": "district", "ipa": "/ˈdɪstrɪkt/", "pos": "n", "meaning_cn": "地区", "example": "the only modern house in the district" },
+    { "word": "surprise", "ipa": "/sərˈpraɪz/", "pos": "n", "meaning_cn": "意外,惊奇", "example": "she will get a surprise" },
+    { "word": "country", "ipa": "/ˈkʌntri/", "pos": "n", "meaning_cn": "乡下;国家", "example": "a new house in the country" },
+    { "word": "garden", "ipa": "/ˈɡɑːrdn/", "pos": "n", "meaning_cn": "花园", "example": "a lovely garden" },
+    { "word": "letter", "ipa": "/ˈletər/", "pos": "n", "meaning_cn": "信", "example": "a letter from my sister" },
+    { "word": "apartment", "ipa": "/əˈpɑːrtmənt/", "pos": "n", "meaning_cn": "公寓", "example": "a modern apartment" },
+    { "word": "lovely", "ipa": "/ˈlʌvli/", "pos": "adj", "meaning_cn": "漂亮的,可爱的", "example": "a lovely garden" },
+    { "word": "begin", "ipa": "/bɪˈɡɪn/", "pos": "v", "meaning_cn": "开始(began, begun)", "example": "Work on it had begun." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "复习:一般将来时 will + 动词原形" },
+    { "gp": "gp2", "name": "复习:过去完成时 had + 过去分词" },
+    { "gp": "gp3", "name": "复习:间接引语 say/tell + 从句(将来变 would)" },
+    { "gp": "gp4", "name": "复习:if 条件句(if + 现在时,主句 will)" },
+    { "gp": "gp5", "name": "复习:must 推测 / had to 过去" },
+    { "gp": "gp6", "name": "复习:can/may 请求与 could 过去" },
+    { "gp": "gp7", "name": "复习:被动语态 be + 过去分词" },
+    { "gp": "gp8", "name": "there is / there are 存在句(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"明年将要来\"用一般将来时,怎么构成?", "options": ["will + 动词原形", "had + 过去分词", "is + 动词-ing", "did + 动词原形"] },
+    { "gp": "gp1", "stem": "\"If she comes, she ___ get a surprise.\"(主句用一般将来时)", "stem_cn": "如果她来,她会大吃一惊。", "options": ["will get", "gets", "got", "getting"] },
+    { "gp": "gp2", "stem": "\"在姐姐离开之前就已动工\"用哪个时态?", "options": ["过去完成时(had + 过去分词)", "一般现在时", "一般将来时", "现在进行时"] },
+    { "gp": "gp2", "stem": "\"Work on it ___ begun before my sister left.\"(过去完成:早已开始)", "stem_cn": "在我姐姐离开之前,建设就已开始了。", "options": ["had", "has", "was", "did"] },
+    { "gp": "gp3", "stem": "间接引语里,主句是过去时,从句里的将来 will 要变成:", "options": ["would", "will", "shall", "won't"] },
+    { "gp": "gp3", "stem": "\"She said that she ___ come to America.\"(间接引语:将来要变)", "stem_cn": "她说她会来美国。", "options": ["would", "will", "has", "is"] },
+    { "gp": "gp3", "stem": "\"告诉某人某事\"用 say 还是 tell?", "options": ["tell sb sth(told her that…)", "say sb sth", "tell to sb sth", "say sb that"] },
+    { "gp": "gp4", "stem": "if 条件句(讲将来),if 那半句用什么时态?", "options": ["一般现在时(不用 will)", "一般将来时 will", "一般过去时", "现在完成时"] },
+    { "gp": "gp4", "stem": "\"If she ___, she will get a surprise.\"(if 那半句用现在时)", "stem_cn": "如果她来了,她会感到意外。", "options": ["comes", "will come", "came", "come"] },
+    { "gp": "gp4", "stem": "\"If it ___ tomorrow, we will stay home.\"(if 那半句用现在时)", "stem_cn": "如果明天下雨,我们就待在家里。", "options": ["rains", "will rain", "rained", "is raining"] },
+    { "gp": "gp5", "stem": "\"It ___ be the only modern house here.\"(有把握的推测:一定是)", "stem_cn": "这一定是这里唯一的现代化住宅。", "options": ["must", "may", "can", "should"] },
+    { "gp": "gp5", "stem": "\"昨天我不得不加班\"里,过去的\"必须\"用哪个词?", "options": ["had to", "must", "have to", "musted"] },
+    { "gp": "gp6", "stem": "\"I told her that she ___ stay with us.\"(过去语境:可以/能)", "stem_cn": "我告诉她她可以和我们住在一起。", "options": ["could", "can", "must", "will"] },
+    { "gp": "gp6", "stem": "委婉地请求\"我可以进来吗\",用:", "options": ["May I come in?", "Do I come in?", "Am I come in?", "Shall I coming in?"] },
+    { "gp": "gp7", "stem": "\"The house ___ completed five months ago.\"(过去被动:被完工)", "stem_cn": "这房子五个月前竣工。", "options": ["was", "is", "has", "were"] },
+    { "gp": "gp7", "stem": "被动语态(be + 过去分词)表示:", "options": ["主语是动作的承受者(被…)", "主语主动做某事", "动作正在进行", "动作将来才发生"] },
+    { "gp": "gp8", "stem": "\"___ a lovely garden behind the house.\"(存在句:有一个花园)", "stem_cn": "房子后面有一个漂亮的花园。", "options": ["There is", "It is", "There are", "Have"] },
+    { "gp": "gp8", "stem": "\"There ___ many large rooms in the house.\"(存在句:有许多房间,复数)", "stem_cn": "房子里有许多大房间。", "options": ["are", "is", "has", "have"] }
+  ],
+  "stage6": [
+    { "stem": "美语\"公寓\"常说:", "options": ["apartment", "flat", "living room", "house block"] },
+    { "stem": "get a surprise 的意思是:", "options": ["感到意外,大吃一惊", "送出礼物", "感到无聊", "赢得比赛"] },
+    { "stem": "in the country 的意思是:", "options": ["在乡下", "在国外", "在城里", "在路上"] },
+    { "stem": "stay with sb 的意思是:", "options": ["在某人家做客;和某人住", "离开某人", "跟随某人", "帮助某人"] },
+    { "stem": "complete 的意思是:", "options": ["完成,竣工", "开始", "取消", "修理"] },
+    { "stem": "modern 的意思是:", "options": ["现代的,新式的", "古老的", "奇怪的", "空的"] }
+  ],
+  "contrast": [
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "first floor", "uk": "ground floor", "note_cn": "一楼(临街那层);美语 first floor,英式 ground floor" },
+    { "us": "closet", "uk": "wardrobe", "note_cn": "壁橱,衣橱;美语 closet,英式 wardrobe" }
+  ],
+  "chunks": [
+    { "us": "get a surprise", "ipa": "/ɡet ə sərˈpraɪz/", "example1": "If she comes, she will get a surprise.", "example1_cn": "她要是来,准会大吃一惊。", "example2": "I got a nice surprise today.", "example2_cn": "我今天遇到件意外的好事。" },
+    { "us": "stay with", "ipa": "/steɪ wɪð/", "example1": "She could stay with us.", "example1_cn": "她可以和我们住在一起。", "example2": "I stayed with my aunt last summer.", "example2_cn": "去年夏天我住在姑姑家。" },
+    { "us": "in the country", "ipa": "/ɪn ðə ˈkʌntri/", "example1": "a new house in the country", "example1_cn": "乡间的一栋新房子", "example2": "They live in the country now.", "example2_cn": "他们现在住在乡下。" },
+    { "us": "work on", "ipa": "/wɜːrk ɑːn/", "example1": "Work on it had begun.", "example1_cn": "它的建设已经开始了。", "example2": "He is working on a new plan.", "example2_cn": "他正在制订一个新计划。" }
+  ],
+  "stage7_cloze": {
+    "context": "I ___1___ a letter from my sister yesterday. She said she ___2___ come to America next year. If she ___3___, she will get a surprise. Our new house ___4___ completed five months ago.",
+    "blanks": [
+      { "blank_no": 1, "options": ["got", "get", "have", "will get"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["would", "will", "has", "is"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["comes", "will come", "came", "come"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["was", "is", "has", "were"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where does the writer's sister live?", "options": ["In Nigeria", "In America", "In England", "In the country"] },
+    { "stem": "Why will the sister get a surprise?", "options": ["Because they now live in a new modern house", "Because the writer is rich", "Because the house is very old", "Because there is no garden"] },
+    { "stem": "What does the new house look like to some people?", "options": ["Strange, because it is very modern", "Old and small", "Just like all the others", "Dark and cold"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"她说她明年会来\"(间接引语:said + would):", "options": ["She said she would come next year.", "She said she will come next year.", "She said she come next year.", "She said she comes next year."] },
+    { "stem": "你想说\"如果他来,我会很高兴\"(if 条件句):", "options": ["If he comes, I will be happy.", "If he will come, I will be happy.", "If he came, I will be happy.", "If he come, I am happy."] },
+    { "stem": "你想说\"房子五个月前完工了\"(过去被动):", "options": ["The house was completed five months ago.", "The house is completed five months ago.", "The house completed five months ago.", "The house has completed five months ago."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "complete 的意思是:", "options": ["完成,竣工", "开始", "破坏", "购买"] },
+    { "kind": "vocab", "stem": "strange 的意思是:", "options": ["奇怪的", "普通的", "美丽的", "现代的"] },
+    { "kind": "grammar", "stem": "\"He said he ___ tired.\"(间接引语:过去语境)", "stem_cn": "他说他累了。", "options": ["was", "is", "has", "will"] },
+    { "kind": "grammar", "stem": "\"If it ___ tomorrow, we will stay home.\"(if 那半句用现在时)", "stem_cn": "如果明天下雨,我们就待在家里。", "options": ["rains", "will rain", "rained", "is raining"] },
+    { "kind": "scenario", "stem": "\"You will get a surprise!\" 这句话的意思是:", "options": ["你会大吃一惊!", "你会送礼物!", "你会很无聊!", "你会迟到!"] },
+    { "kind": "scenario", "stem": "\"It must be the only one.\" 这句话的意思是:", "options": ["它一定是唯一的一个。", "它必须变成一个。", "它可能是一个。", "它不是唯一的。"] },
+    { "kind": "reading", "stem": "When did the writer get the letter from the sister?", "options": ["Yesterday", "Five months ago", "Next year", "Last week"], "passage": true },
+    { "kind": "reading", "stem": "When was the new house completed?", "options": ["Five months ago", "Yesterday", "Next year", "Ten years ago"], "passage": true },
+    { "kind": "listening", "stem": "Why is the writer's new house special?", "options": ["It may be the only modern house in the district", "It is the oldest house in town", "It has no rooms", "It is under the sea"], "audio": true },
+    { "kind": "listening", "stem": "Did the writer invite the sister to stay?", "options": ["Yes, she could stay with them", "No, there was no room", "No, the sister refused", "Yes, but only for one night"], "audio": true }
+  ]
+}

@@ -11,10 +11,16 @@
 
 ## 待跑(按序)
 
+> 全部经**机器12项校验全绿**(含第11项三维闸门:全27课元语法定义题=0)。幂等 ON CONFLICT,可重复跑。
+
 | # | 文件 | 期望 COUNT | 说明 | 依赖 |
 |---|---|---|---|---|
-| 1 | `american_am2_seed_unit02.sql`(**重跑**) | +0(改题不增) | L16 集合名词修正:family are→family is(方向纠正+美语单数)、as well as 陷阱→and 自然题、if 概念题→运用题。幂等 UPDATE,COUNT 不变 | 无 |
+| 1 | `american_am2_seed_unit01.sql`(**重跑**) | +0(改题不增) | L1–8:2 道🔴元语法定义题→运用题(L01 can 词类/句型题) | 无 |
+| 2 | `american_am2_seed_unit02.sql`(**重跑**) | +0(改题不增) | L9–16:元语法转运用(L10/11/12/13/14/15)+ L16 集合名词修正(family are→is、as well as 陷阱→and、if 概念→运用) | 无 |
+| 3 | `american_am2_seed_unit03.sql` | +352(8课×44) | am2 U3(L17–24)整单元新增,已过三维闸门(L17/18/21 元语法已转运用) | 无 |
+| 4 | `american_am2_seed_unit04.sql` | +132(3课×44) | am2 U4 目前 L25–27,已过三维闸门(L26/27 元语法已转运用);后续加课本行 COUNT 递增 | 无 |
 
-> **⏸ unit03 / unit04(L17–L27)暂缓**:这些课在新加的**机器第11项三维闸门**下红灯(每课有多道元语法定义题 >1)。按"不绿不落库",等三维闸门回扫(REVIEWAA/american-instructional-design-audit.md 复核后逐课改)完成、复验全绿再跑。届时更新本表。
-> 说明:六项修正的 ④⑤⑥ 是给**已存在题目**加字段/补解释,COUNT 不增;跑最新版本即可覆盖。已全部跑完。
+> **✅ unit03/04 已解除暂缓**:24 道🔴元语法定义题全部转成运用题,全 27 课第11项 =0、十二项全绿。
+> **🟡 待 Aaron 复核(非阻断,不影响上面照跑)**:`REVIEWAA/american-instructional-design-audit.md` 里的 ~98 道"概念辨认🟡"(如"关于X正确的是""police 后面动词用")按三维闸门属中间地带,已过机器闸(非红),留你复核是否进一步降级;要改也是幂等 UPDATE,不影响先跑。
+> 说明:六项修正的 ④⑤⑥ 是给**已存在题目**加字段/补解释,COUNT 不增;跑最新版本即可覆盖。
 > 后续 am2 U3–U12(L17–L96)、am3、am4 会新增 `american_am2_seed_unitNN.sql` / `american_am3_seed_unitNN.sql` / `american_am4_seed_unitNN.sql`,每单元完成追加到本表(带期望 COUNT 增量)。

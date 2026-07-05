@@ -178,6 +178,17 @@ const CN = {
     '"Up to now, he ___ many letters."(填正确时态)': "到目前为止,他已经寄了许多信。",
     '"Last week I ___ a new phone."(有 last week)': "上周我买了部新手机。",
   },
+  am2_l06: {
+    '"He asked me for ___ sandwich."(一个,可数单数)': "他向我要一个三明治。",
+    '"I have moved into ___ apartment."(apartment 元音开头)': "我搬进了一套公寓。",
+    '"I gave him ___ food."(一些,food 不可数)': "我给了他一些食物。",
+    '"He asked for a sandwich. He ate ___ sandwich."(再次提到同一个)': "他要了一个三明治,然后把那个三明治吃了。",
+    '"A man is walking to me. ___ man is carrying a bag."(特指刚说的那个人)': "一个男人正朝我走来,那个男人提着一个包。",
+    '"___ is good for you."(牛奶,泛指一类)': "牛奶对你有好处。",
+    '"His name is ___ Percy Buttons."(专有名词前)': "他叫珀西·巴顿斯。",
+    '"I saw ___ elephant."(elephant 元音开头)': "我看见一头大象。",
+    '"___ is important for health."(水,泛指一类)': "水对健康很重要。",
+  },
 };
 
 let total = 0, patched = 0;

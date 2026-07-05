@@ -65,24 +65,31 @@ call at + 地点 = 拜访、光顾(某处)。✓ He calls at every house once a 
 
 ### s6 seq4 | ans: 作为报答
 in return for = 作为报答。✓ In return for the meal, he sang.
+顺带记:为了钱 = for money;在返回时 = on the way back;免费地 = for free / free of charge.
 
 ### s6 seq5 | ans: 向某人要某物
 ask sb for sth = 向某人要某物。✓ He asked me for a meal.
+顺带记:问某人是谁 = ask who sb is;帮某人 = help sb;替某人买 = buy sth for sb.
 
 ### s6 seq6 | ans: 一杯(的量)
 a cup of = 一杯(的量),用来计量咖啡、茶等。✓ a cup of coffee.
+顺带记:一壶 = a pot of;一箱 = a box of;一滴 = a drop of.
 
 ### s7 seq1 | ans: an
 apartment 读音元音开头,可数单数用 an。✓ an apartment.
+✗ a:apartment 读音以元音开头,用 an,不用 a;✗ the:第一次提到用不定冠词 an,不用 the;✗ some:apartment 是可数单数,用 an 不用 some.
 
 ### s7 seq2 | ans: a
 beggar 是可数单数、第一次提到,用 a。✓ a beggar knocked on my door.
+✗ an:beggar 读音以辅音开头,用 a 不用 an;✗ the:第一次提到用 a;✗ some:可数单数用 a 不用 some.
 
 ### s7 seq3 | ans: the
 sandwich 前面已经提过一次,再次提到同一个用 the。✓ He ate the sandwich.
+✗ a:再次提到刚说的那个三明治,用 the 特指;✗ an:同理该用 the,sandwich 辅音开头也不用 an;✗ some:特指那一个用 the.
 
 ### s7 seq4 | ans: some
 food 是不可数名词,"一些"用 some。✓ I gave him some food.
+✗ a:food 不可数,不用 a;✗ an:food 不可数且辅音开头,不用 an;✗ the:这里泛指"一些食物",用 some 不特指.
 
 ### s8 seq1 | ans: He stood on his head and sang
 课文说 In return, the beggar stood on his head and sang a funny song,乞丐倒立唱歌作报答。
@@ -104,9 +111,11 @@ food 是不可数名词,"一些"用 some。✓ I gave him some food.
 
 ### s10 seq1 | ans: 乞丐
 beggar = 乞丐。✓ A beggar knocked on my door.
+顺带记:邻居 = neighbor;顾客 = customer;服务员 = waiter.
 
 ### s10 seq2 | ans: 拜访,光顾
 call at + 地点 = 拜访、光顾;这里指他挨家挨户去讨饭。✓ He calls at every house.
+顺带记:打电话 = call(另一义);大喊 = shout;取消 = cancel.
 
 ### s10 seq3 | ans: an
 elephant 读音元音开头,可数单数用 an。✓ an elephant.

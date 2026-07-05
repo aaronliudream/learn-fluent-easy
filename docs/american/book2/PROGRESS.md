@@ -149,6 +149,12 @@
 - 词10(tired/owner/mattress/gust/sweep/courtyard/smash/miraculously/unhurt/promptly)。关6美英=yard/first floor/apartment/closet(院子·住房主题);美语化 Teheran→Tehran、on to→onto。
 - 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit07.sql`(**L49=44,U7 起**)。⏭️ L50。
 
+## ✅ U7 L50《Taken for a ride》(乘车兜风)· 🟢全绿(零黄) · 教材 Unit 3
+- **⚠️ 主考修正**:初稿误把连词/疑问词不定式当主考;实读 L50 Key structures 页(doc276-277)后按**主考铁律**改正——**主考=KS26 一般现在时表习惯性动作 + 状态动词(belong to/consist of/contain/desire/detest/dislike/hate/hope/love/matter/mean/mind/need/want/wish)不用进行时**;Special difficulties **SD26 易混词 lose/loose/miss、expect/wait for**。
+- 裁决(自决):gp1 状态动词一般现在(6题)+ gp2 习惯 vs 正在进行(4题)= KS26 主考;gp3 lose/loose/miss + gp4 expect/wait for = SD26 主考级辅;gp5 疑问词+不定式 + gp6 prefer to do/take sb for a ride = 课文 Notes 辅考。全运用题,元语法定义题=0。cloze 用教材 SD26 Exercise B(prefer/understand/mean/know 状态动词一般现在)。
+- 词10(ride/excursion/conductor/view/prefer/passenger/countryside/shock/expect/matter;expect 正好是 SD26 考点)。关6美英=subway/sidewalk(交通街道主题)+contrast round trip·gas;美语化 travelling→traveling。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit07.sql`(**L49+L50=88**)。⏭️ L51。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

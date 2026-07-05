@@ -34,6 +34,23 @@ const CN = {
     '"The window ___ by the boy."(break,一般过去被动)': "窗户是那个男孩打破的。",
     '"Rice ___ in many countries."(grow,一般现在被动)': "水稻在许多国家被种植。",
   },
+  am2_l11: {
+    '"Tony worked in an office before, but he ___ at a bank now."(now，现在进行)': "托尼以前在办公室上班,但现在他在一家银行工作。",
+    '"Tony ___ in a lawyer\'s office years ago."(years ago，一般过去)': "托尼几年前在一家律师事务所工作。",
+    '"To my surprise, he ___ me the money immediately."(give,过去完成的动作)': "令我意外的是,他立刻把钱给了我。",
+    '"He ___ money from me before."(never,到现在为止的经历，现在完成)': "他以前从没向我借过钱。",
+    '"I ___ dinner when Tony walked in."(have,过去某刻正在进行，过去进行)': "托尼走进来时,我正在吃晚饭。",
+    '"___ he was eating, I asked him to lend me money."(过去某段时间正在进行)': "他吃饭的时候,我请他借我一些钱。",
+    '"This bridge ___ in 1990."(build,某物\'被建\'，被动语态复习)': "这座桥建于1990年。",
+    '"Listen! Someone ___ at the door."(Listen!，此刻正在)': "听!有人正在敲门。",
+    '"Tony saw me, ___ he came over and sat down."(两件事相加，并列)': "托尼看见了我,就走过来坐下了。",
+    '"He gets a good salary, ___ he always borrows money."(前后相反，转折)': "他薪水不错,但他总是借钱。",
+    '"He didn\'t buy the car, ___ he was short of money."(表原因)': "他没买那辆车,因为他钱不够。",
+    '"I asked him ___ me twenty dollars."(ask sb to do)': "我请他借给我二十美元。",
+    '"The teacher wants us ___ hard."(want sb to do)': "老师希望我们努力学习。",
+    '"He ___ money from his friends every week."(every week,习惯，一般现在)': "他每周都向朋友借钱。",
+    '"I ___ TV when the phone rang."(过去某刻正在，过去进行)': "电话响的时候,我正在看电视。",
+  },
 };
 
 let total = 0, patched = 0;

@@ -65,24 +65,31 @@ want sb to do sth = 想让某人做某事;us 后面用不定式 to work。✓ Th
 
 ### s6 seq4 | ans: 令我惊讶的是
 to my surprise = 令我惊讶的是、出乎我意料。✓ To my surprise, he handed me the money.
+顺带记:在我看来 = in my opinion;据我所知 = as far as I know;对我来说 = to me.
 
 ### s6 seq5 | ans: 向…借入
 borrow … from = 向某人/某处借入(东西到自己这儿)。✓ He borrows money from his friends.
+顺带记:借出给… = lend … to;买下… = buy;还给… = return … to / pay back.
 
 ### s6 seq6 | ans: 为…付款
 pay for = 为某样东西付钱。✓ Now you can pay for my dinner.
+顺带记:偿还欠款 = pay back / repay;赚取 = earn;讨价还价 = bargain.
 
 ### s7 seq1 | ans: worked
 years ago 是过去时间,用一般过去时 worked。✓ Tony worked in a lawyer's office years ago.
+✗ works:years ago 是过去,不用一般现在 works;✗ is working:那是过去发生的,不是此刻正在;✗ has worked:有明确过去时间 years ago,用一般过去,不用现在完成.
 
 ### s7 seq2 | ans: is working
 now 表示现阶段,用现在进行时 is working。✓ Now he is working at a bank.
+✗ works:now 与"以前"对比、强调此刻正在,用现在进行;✗ worked:now 指现在不是过去;✗ was working:now 是现在,不用过去进行.
 
 ### s7 seq3 | ans: was having
 While + 过去某段时间正在进行,用过去进行时 was having。✓ While he was having dinner…
+✗ had:while 引导"当时正在",要用过去进行 was having;✗ has:过去的事不用现在完成;✗ is having:过去的事不用现在进行.
 
 ### s7 seq4 | ans: has
 never borrowed…before 强调到现在的经历,用现在完成时 has + 过去分词。✓ He has never borrowed money from me before.
+✗ had:到现在为止的经历(before+never)用现在完成 has,不用过去完成 had;✗ is:is borrowed 成了被动,意思错;✗ was:was borrowed 也是被动,意思不对.
 
 ### s8 seq1 | ans: At a bank
 课文说 he is now working at a bank,托尼现在在银行上班。
@@ -104,9 +111,11 @@ never borrowed…before 强调到现在的经历,用现在完成时 has + 过去
 
 ### s10 seq1 | ans: 应得,值得
 deserve = 应得到、值得。✓ One good turn deserves another.(好心有好报 / 礼尚往来)
+顺带记:应付了事 = do sth carelessly;保存 = save / keep;服务 = serve.
 
 ### s10 seq2 | ans: 立刻,马上
 immediately = 立刻、马上。✓ He handed me the money immediately.
+顺带记:最近 = recently / lately;偶尔 = occasionally;慢慢地 = slowly.
 
 ### s10 seq3 | ans: borrows
 every week(每周)说明是反复的习惯,用一般现在时 borrows。✓ He borrows money from his friends every week.

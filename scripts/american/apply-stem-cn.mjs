@@ -189,6 +189,19 @@ const CN = {
     '"I saw ___ elephant."(elephant 元音开头)': "我看见一头大象。",
     '"___ is important for health."(水,泛指一类)': "水对健康很重要。",
   },
+  am2_l07: {
+    '"The detectives ___ waiting near the gate."(主语复数)': "侦探们正在登机口附近等候。",
+    '"A guard ___ opening the parcel."(主语单数)': "一名警卫正在打开那个包裹。",
+    '"He was ___ to the gate."(run 的 -ing 形式)': "他当时正朝登机口跑去。",
+    '"They were ___ dinner at eight."(have 的 -ing 形式)': "他们八点时正在吃晚饭。",
+    '"I was ___ on the grass."(sit 的 -ing 形式)': "我当时正坐在草地上。",
+    '"At ten last night, I ___ a movie."(那个时刻正在看)': "昨晚十点,我正在看电影。",
+    '"The detectives were watching ___ the plane landed."(飞机降落这一突发动作)': "飞机降落时,侦探们正盯着看。",
+    '"I was having breakfast ___ the phone suddenly rang."': "我正在吃早餐,这时电话突然响了。",
+    '"___ one guard was keeping watch, another was opening the box."(两件事同时进行)': "一名警卫在望风,另一名在打开箱子。",
+    '"The children ___ playing in the yard."(过去进行时,复数)': "孩子们当时正在院子里玩。",
+    '"I ___ TV when you called."(当时正在看)': "你打电话来时,我正在看电视。",
+  },
 };
 
 let total = 0, patched = 0;

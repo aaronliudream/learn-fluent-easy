@@ -65,24 +65,31 @@ be full of = 装满、充满。✓ The parcel was full of stones and sand.
 
 ### s6 seq4 | ans: 守卫,站岗
 keep guard = 守卫、站岗。✓ One guard was keeping watch.
+顺带记:放弃看守 = give up guarding;偷偷藏起来 = hide secretly;查看时间 = check the time.
 
 ### s6 seq5 | ans: 令他们吃惊的是
 to their surprise = 令他们吃惊的是。✓ To their surprise, the parcel was full of sand.
+顺带记:在他们家里 = at their home;为了惊喜 = for a surprise;使他们放心 = set their mind at rest.
 
 ### s6 seq6 | ans: 装满,充满
 be full of = 装满、充满。✓ It was full of stones.
+顺带记:缺少 = be short of / lack;来自 = come from;离开 = leave.
 
 ### s7 seq1 | ans: were
 主语 The detectives 复数,过去进行时用 were + V-ing。✓ The detectives were waiting.
+✗ was:主语 detectives 复数,用 were;✗ are:过去的事不用一般现在 are;✗ did:过去进行时用 were+V-ing,不用 did.
 
 ### s7 seq2 | ans: landed
 "飞机降落"是突然发生的一下,用一般过去时 landed。✓ When the plane landed…
+✗ was landing:飞机降落是突发的短暂动作,用一般过去 landed;✗ lands:过去的事不用一般现在;✗ land:过去的事不用原形.
 
 ### s7 seq3 | ans: were
 some of them 指多个侦探(复数),背景动作用过去进行时 were watching。✓ some of them were watching.
+✗ was:主语 some of them 复数,用 were;✗ are:过去的事不用一般现在;✗ had:过去进行时用 were,不用 had.
 
 ### s7 seq4 | ans: was
 one guard 单数,过去进行时用 was + V-ing。✓ While one guard was keeping watch…
+✗ were:主语 one guard 单数,用 was;✗ is:过去的事不用一般现在;✗ did:过去进行时用 was+V-ing,不用 did.
 
 ### s8 seq1 | ans: At the airport
 课文说 The detectives were waiting near the gate… at the airport,侦探们在机场等候。
@@ -104,9 +111,11 @@ one guard 单数,过去进行时用 was + V-ing。✓ While one guard was keepin
 
 ### s10 seq1 | ans: 侦探
 detective = 侦探。✓ The detectives were waiting at the airport.
+顺带记:小偷 = thief;警卫 = guard;司机 = driver.
 
 ### s10 seq2 | ans: 珍贵的
 precious = 珍贵的、宝贵的。✓ the precious parcel.
+顺带记:廉价的 = cheap;普通的 = ordinary;破旧的 = worn-out.
 
 ### s10 seq3 | ans: were
 The children 是复数,过去进行时用 were + V-ing。✓ The children were playing in the yard.

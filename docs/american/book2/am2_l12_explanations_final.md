@@ -67,24 +67,31 @@ shall 在现代美语里几乎只剩一个活用法:提建议、征求意见,用
 
 ### s6 seq4 | ans: 启程,出发
 set out = 启程、动身出发。✓ He will set out at eight o'clock.
+顺带记:停下 = stop;返回 = return / go back;到达 = arrive / get to.
 
 ### s6 seq5 | ans: 参加
 take part in = 参加(活动/比赛)。✓ take part in a race.
+顺带记:离开 = leave;负责 = be in charge of;放弃 = give up.
 
 ### s6 seq6 | ans: 为…感到自豪
 be proud of = 为…感到自豪、骄傲。✓ We are proud of him.
+顺带记:害怕… = be afraid of;厌倦… = be tired of;担心… = be worried about.
 
 ### s7 seq1 | ans: will sail
 tomorrow → 一般将来时 will sail。✓ Captain Reed will sail from the harbor tomorrow.
+✗ sails:tomorrow 是将来,不用一般现在 sails;✗ sailed:tomorrow 不是过去;✗ is sailing:这里陈述明天将起航这件将来的事,用 will,不用现在进行.
 
 ### s7 seq2 | ans: will meet
 将来要做的事 → will meet。✓ We will meet him at the dock early.
+✗ meet:将来的事不用一般现在 meet;✗ met:不是过去发生的;✗ are meeting:此处是泛说将来的送行安排,用 will 更贴切.
 
 ### s7 seq3 | ans: will be
 将来的状态(不在) → will be。✓ He will be away for two months.
+✗ is:将来的状态不用现在 is;✗ was:不是过去;✗ be:be 不能单独作谓语,前面缺 will.
 
 ### s7 seq4 | ans: will watch
 将来要做的事 → will watch。✓ We will watch him win the race.
+✗ watch:将来的事不用一般现在 watch;✗ watched:不是过去;✗ have watched:现在完成表"已经看过",与"将要看"矛盾.
 
 ### s8 seq1 | ans: At eight o'clock
 课文说 Captain Reed will set out at eight o'clock sharp,船长八点整启程。
@@ -106,9 +113,11 @@ tomorrow → 一般将来时 will sail。✓ Captain Reed will sail from the har
 
 ### s10 seq1 | ans: 船长
 captain = 船长(也可指队长)。✓ Captain David Reed.
+顺带记:水手 = sailor;乘客 = passenger;渔民 = fisherman.
 
 ### s10 seq2 | ans: 自豪的
 proud = 自豪的、骄傲的。✓ We are proud of him.
+顺带记:害怕的 = afraid / scared;伤心的 = sad;疲倦的 = tired.
 
 ### s10 seq3 | ans: will come
 tomorrow → 一般将来时 will + 动词原形 come。✓ They will come here on foot tomorrow.

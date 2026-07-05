@@ -51,6 +51,18 @@ const CN = {
     '"He ___ money from his friends every week."(every week,习惯，一般现在)': "他每周都向朋友借钱。",
     '"I ___ TV when the phone rang."(过去某刻正在，过去进行)': "电话响的时候,我正在看电视。",
   },
+  am2_l12: {
+    '"Captain Reed ___ tomorrow."(sail,一般将来)': "里德船长明天将起航。",
+    '"We ___ him at the dock."(meet,一般将来)': "我们将去码头迎接他。",
+    '"He ___ away for two months."(将来的状态:不在)': "他将离开两个月。",
+    '"We ___ at the dock early tomorrow."(将来在某地)': "明天一早我们就会在码头。",
+    '"I ___ buy a new bike next week."(打算、计划好要做)': "我下周打算买辆新自行车。",
+    '"Dark clouds are gathering. It ___ rain."(有迹象、马上要发生)': "乌云正在聚集,快要下雨了。",
+    '"The train ___ at 8:20."(时刻表，一般现在时表将来)': "火车8点20分发车。",
+    '"We ___ a party this Friday."(已安排好，现在进行表将来)': "这周五我们要办一场聚会。",
+    '"They ___ here on foot tomorrow."(come,一般将来)': "他们明天会步行来这儿。",
+    '"Look at those clouds! It ___ snow."(有迹象、马上要发生)': "看那些云!要下雪了。",
+  },
 };
 
 let total = 0, patched = 0;

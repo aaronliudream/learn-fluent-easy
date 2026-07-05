@@ -4,7 +4,7 @@
   "lesson_no": 14,
   "title_en": "Do you speak English?",
   "title_cn": "你会讲英语吗?",
-  "grammar_focus": "过去完成时(主考:had+过去分词 · after/before/as soon as/when/until 引导 · 两个过去动作里更早的用过去完成 · 否定 had not · 一般过去 vs 过去完成辨析)+ had planned/hoped 未实现的计划(辅考讲深)+ It was the…time that…had done(辅考讲深)",
+  "grammar_focus": "过去完成时(主考:had+过去分词 · after/before/as soon as/when/until 引导 · 两个过去动作里更早的用过去完成 · 否定 had not · 一般过去 vs 过去完成辨析)+ had planned/hoped 未实现的计划(辅考讲深)+ It was the…time that…had done(辅考讲深)+ 反身代词(辅考:形式/作宾语/强调,同步L14章+课文 himself)",
   "scene": "去年在法国旅行搭载招手青年 · 全程用法语没说话 · 快到镇上时青年突然慢慢问\"你会讲英语吗\"——原来他也是英国人",
   "grammar_card": {
     "title": "说\"在另一件过去的事之前已经做了\"(过去完成时)",
@@ -63,7 +63,8 @@
     { "gp": "gp5", "name": "一般过去 vs 过去完成 辨析" },
     { "gp": "gp6", "name": "had planned/hoped/intended to(未实现的计划)——辅考讲深" },
     { "gp": "gp7", "name": "It was the first/third time that … had done——辅考讲深" },
-    { "gp": "gp8", "name": "过去完成时——否定 had not / 疑问 Had you…?" }
+    { "gp": "gp8", "name": "过去完成时——否定 had not / 疑问 Had you…?" },
+    { "gp": "gp9", "name": "反身代词——形式/作宾语/强调(辅考,同步L14章+课文 himself)" }
   ],
   "stage5": [
     { "gp": "gp1", "stem": "过去完成时由什么构成?", "options": ["had + 过去分词", "have + 过去分词", "was + 过去分词", "will + 动词原形"] },
@@ -83,7 +84,10 @@
     { "gp": "gp7", "stem": "\"It was the third time that I ___ him.\"(在…句式里用过去完成)", "options": ["had met", "met", "have met", "meet"] },
     { "gp": "gp8", "stem": "过去完成时的否定是:", "options": ["had not + 过去分词", "did not + 过去分词", "have not + 过去分词", "was not + 过去分词"] },
     { "gp": "gp8", "stem": "\"___ you ever seen him before that day?\"(过去完成疑问)", "options": ["Had", "Did", "Have", "Were"] },
-    { "gp": "gp8", "stem": "\"By six o'clock, they ___ dinner.\"(到六点之前已吃完 → 过去完成)", "options": ["had finished", "finished", "have finished", "finish"] }
+    { "gp": "gp8", "stem": "\"By six o'clock, they ___ dinner.\"(到六点之前已吃完 → 过去完成)", "options": ["had finished", "finished", "have finished", "finish"] },
+    { "gp": "gp9", "stem": "\"他自己\"的反身代词是:", "options": ["himself", "hisself", "heself", "him self"] },
+    { "gp": "gp9", "stem": "\"God helps those who help ___.\"(动作回到自己身上,用反身代词)", "options": ["themselves", "them", "they", "theirs"] },
+    { "gp": "gp9", "stem": "\"The young man was English ___.\"(强调\"他本人就是\",课文原句)", "options": ["himself", "his", "him", "he"] }
   ],
   "stage6": [
     { "stem": "美语里\"搭便车\"更常说:", "options": ["ride", "lift", "hitch stop", "car help"] },

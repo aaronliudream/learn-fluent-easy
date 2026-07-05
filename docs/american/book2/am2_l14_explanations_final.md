@@ -54,6 +54,15 @@ had gotten in 是过去完成时,表示更早发生;said hi 是一般过去时,�
 ### s5 seq18 | ans: had finished
 "到六点之前他们已吃完饭"——吃完在"六点"之前,用过去完成时 had finished。✓ By six o'clock, they had finished dinner.
 
+### s5 seq19 | ans: himself
+"他自己"的反身代词是 himself(没有 hisself 这种拼法)。反身代词:myself/yourself/himself/herself/itself/ourselves/yourselves/themselves。✓
+
+### s5 seq20 | ans: themselves
+当动作又回到做这个动作的人身上时,用反身代词;those(那些人)对应 themselves。✓ God helps those who help themselves.(天助自助者)
+
+### s5 seq21 | ans: himself
+反身代词还能放在名词后面起强调作用,强调"他本人就是"。✓ The young man was English himself.(那青年本人就是英国人 —— 课文原句)
+
 ### s6 seq1 | ans: ride
 美语里"搭便车"更常说 ride(give sb a ride);英式说 lift。✓ Can you give me a ride?
 

@@ -26,7 +26,7 @@
 | L11 | 2 | One good turn deserves another | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | **主题分歧第二例**:教材Key structures=Review KS2-10(时态语态综合复习,主考11题) vs 同步L11=v.+sb+to do宾补 + 并列连词(辅考7题)→ 按 [[am2-source-divergence-rule]] 自决(不停),裁决A+覆盖补丁第二次执行;三源 教材p56 KeyStruct Review + 同步p83-85 宾补/连词 + 新思维时态各章L2-L10已扫(连词/宾补专题未定点补扫,诚实标注);宾补/连词深度细则挂账(见下);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
 | L12 | 2 | Goodbye and good luck | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 一般将来时(主考,教材 Key structures=I'll see you tomorrow.)+ be going to/表将来的现在时(辅考讲深);**教材/同步同主题讲深(非分歧)**——同步L12讲更深(be going to/be to/将来进行时);三源 教材p60 KeyStruct + 同步p88-89 将来时各表达 + 新思维将来时章未定点补扫(诚实标注);**be to/be about to/将来进行时挂账**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
 | L13 | 2 | The Greenwood Boys | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 将来进行时(主考,教材 Key structures=What will you be doing tomorrow?)+ by交通工具/现在进行复习(辅考);**单一主题三源一致(无分歧)**;**承接兑现 L12 将来进行时挂账→L12该项清零**;三源 教材p64 KeyStruct + 同步p89 将来进行时基本用法 + 新思维将来进行章未定点补扫(诚实标注);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
-| L14 | 2 | Do you speak English? | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 过去完成时(主考,教材 Key structures=After he had finished work he went home.)+ had planned/hoped 未实现计划/It was the…time that had done(辅考讲深);**同主题讲深无分歧**;**承接兑现 L7/L9 排除留后的过去完成时→该跨课账清零**;三源 教材p68 KeyStruct + 同步p92 过去完成时用法 + 新思维过去完成章未定点补扫(诚实标注);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L14 | 2 | Do you speak English? | ✅ 生产完成(**47题**/解释47/关6=6/认知3/**9gp**) | 🟢八项全绿(补题后复验) | 过去完成时(主考,教材 Key structures=After he had finished work he went home.)+ had planned/hoped 未实现计划/It was the…time that had done(辅考讲深)+ **反身代词(G9辅考,就地补回)**;**同主题讲深无分歧**;**承接兑现 L7/L9 排除留后的过去完成时→该跨课账清零**;三源 教材p68 KeyStruct + 同步p92 过去完成时用法 + 同步L14章反身代词 + 新思维过去完成章未定点补扫;⚠️**反身代词修订**:Aaron 反馈教材L14就教(himself在课文)不推U3,seed未跑就地补3题(关5 18→21,44→47);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
 | L15 | 2 | Good news | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 间接引语(主考,教材 Key structures=He said that… He told me…)+ 宾语从句 if/whether/过去将来时 would(辅考讲深);**同主题讲深无分歧**(同步 L15=宾语从句+过去将来时=间接引语底层机制);三源 教材p72 KeyStruct + 同步p99 宾语从句+过去将来时 + 新思维间接引语章未定点补扫(诚实标注);⚠️**发现反身代词遗漏→补挂账**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
 | L16 | 2 | A polite request | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | **主题分歧第三例**:教材Key structures=if 条件句(第一类真实条件) vs 同步L16=主谓一致→按 [[am2-source-divergence-rule]] 自决(不停),裁决A+覆盖补丁第三次执行;主考if条件句12+辅考主谓一致6(课文"Traffic police are"①类);三源 教材p76 KeyStruct + 同步p103 主谓一致 + 新思维条件句章未定点补扫(诚实标注);**主谓一致深度挂账**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
 
@@ -41,7 +41,7 @@
 
 ## L16 挂账 + 单元2末挂账汇总(⚠️ 批次汇报逐条处置)
 - **本课挂账:主谓一致深度**(the+adj 作主语单复数、politics is/glasses are/ten years is、数词单用):本课只教集合名词+就近/就前;深度挂账。
-- **单元2末挂账逐条**(见 UNIT2-batch-report.md 处置):L10 名词所有格深度 / L11 宾补深度+连词深度 / L12 be to+be about to / L15 反身代词 / L16 主谓一致深度。
+- **单元2末挂账逐条**(见 UNIT2-batch-report.md 处置):L10 名词所有格深度 / L11 宾补深度+连词深度 / L12 be to+be about to / ~~L15 反身代词~~(**✅ 已就地补回 L14 G9,Aaron 反馈不推 U3**)/ L16 主谓一致深度。
 
 ## L16 待裁决(单元末汇总报 Aaron;分歧已按裁决自决,非阻塞)
 1. 教材/同步主题分歧第三例(if 条件句 vs 主谓一致)→ 已按 [[am2-source-divergence-rule]] 自决:if条件句主考 + 主谓一致辅考(课文 police are)+ 深度挂账。第三次执行,记录供 Aaron 复核裁决落地质量。
@@ -56,7 +56,7 @@
 - [x] 7 双角色自审(coverage U2/lesson15.md;首轮无抓修) · [x] 8 JSON+seed(am2_l15.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44/解释44/零串味14条未用"宾语从句"术语/G1-G8全覆盖/W11) · [x] 10 commit
 
 ## L15 挂账(⚠️ 单元2末批次汇报核对)
-- **⚠️ 补挂账:反身代词**(himself/themselves):同步 L14 章(印95-97 四、反身代词)含此点 + 教材 L14 课文"he was English himself"实际出现(=①类);L14 只做过去完成时漏覆盖 → 补挂账,单元2末单开补充处置或并入 L16 若含反身代词语境。
+- **✅ 反身代词已闭环**(himself/themselves):同步 L14 章(印95-97 四、反身代词)+ 教材 L14 课文"he was English himself"(=①类);L15 扫描时发现 L14 漏覆盖 → Aaron 反馈"教材就在 L14 教,不推 U3",seed 未跑就地补回 L14 G9(+3 题,44→47),复验八项全绿。**教训**:①类岔题(课文实际出现)必须当课辅考,不得跨课延后。
 - **遗留继续挂账**:L10 名词所有格深度 / L11 宾补深度+连词深度 / L12 be to+be about to → 继续挂账,L16 单元末统一核对。
 
 ## L15 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)

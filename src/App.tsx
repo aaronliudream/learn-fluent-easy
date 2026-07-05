@@ -174,7 +174,19 @@ import RouteContextRegistrar from "@/components/assistant/RouteContextRegistrar"
 import UserAvatarMenu from "@/components/UserAvatarMenu";
 import GuestQuotaWall from "@/components/GuestQuotaWall";
 
-const queryClient = new QueryClient();
+// 可用性/性能默认:失败自动重试2次(弱网抖动可恢复)、指数退避封顶8s、
+// 数据缓存5分钟(切页不重复打库)、不在窗口聚焦时重刷(省国内弱网请求)。
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 2,
+      retryDelay: (n) => Math.min(1000 * 2 ** n, 8000),
+      staleTime: 5 * 60_000,
+      gcTime: 30 * 60_000,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 const StopAudioOnRouteChange = () => {
   const location = useLocation();

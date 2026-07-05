@@ -133,6 +133,21 @@ const CN = {
     '"Look! It ___ outside now."(此刻正在下雨)': "快看!外面正在下雨。",
     '"I ___ early on Sundays."(周日的习惯:从不早起)': "周日我从不早起。",
   },
+  am2_l03: {
+    '"I ___ three museums yesterday."(visit 的过去式)': "我昨天参观了三家博物馆。",
+    '"She ___ when she heard the news."(cry 的过去式)': "她听到那消息时哭了。",
+    '"Last summer I ___ to Italy."(go 的过去式)': "去年夏天我去了意大利。",
+    '"He ___ me a book."(lend"借出"的过去式)': "他借给我一本书。",
+    '"I ___ thirty-seven cards."(buy 的过去式)': "我买了三十七张明信片。",
+    '"I read a few lines, but I ___ a word."(understand 的否定)': "我读了几行,但一个字也没看懂。",
+    '"___ cards did he buy?"(问买了多少张)': "他买了多少张明信片?",
+    '"___ I went to Italy."(去年夏天)': "去年夏天我去了意大利。",
+    '"The weather ___ warm, and the people ___ friendly."': "天气很暖和,人们也很友好。",
+    '"___ you afraid of the dog?" — "No, I wasn\'t."': "你怕那条狗吗?——不,我不怕。",
+    '"I ___ the whole day in my room."(spend 的过去式)': "我在房间里待了一整天。",
+    '"I ___ a book yesterday."(yesterday,这个动词的过去式拼写不变)': "我昨天读了一本书。",
+    '"She ___ up early this morning."(get 的过去式)': "她今天早上很早就起床了。",
+  },
 };
 
 let total = 0, patched = 0;

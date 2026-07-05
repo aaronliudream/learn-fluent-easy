@@ -56,12 +56,15 @@ spend 是不规则动词,过去式 spent。✓ I spent the whole day in my room.
 
 ### s6 seq1 | ans: 借出(把东西借给别人)
 lend = 借出:把自己的东西借给别人。✓ He lent me a book. 和 borrow(借入)方向相反。
+顺带记:借入(从别人处借) = borrow;购买 = buy;出售 = sell.
 
 ### s6 seq2 | ans: 做决定
 make a decision = 做决定、下决心。✓ I made a big decision.
+顺带记:犯错误 = make a mistake;改主意 = change one's mind;提问题 = ask a question.
 
 ### s6 seq3 | ans: 几个(修饰可数名词)
 a few = 几个,修饰可数名词复数。✓ a few words / a few cards. 修饰不可数名词要用 a little。
+顺带记:很多 = many / a lot of;一点点(修饰不可数) = a little;没有 = no / none.
 
 ### s6 seq4 | ans: mail
 美语"寄(信/卡)"用 mail;英式用 post。✓ I'll mail the card tomorrow.
@@ -74,15 +77,19 @@ spoil 的过去式,美式规则拼写 spoiled;英式 spoilt。✓ The rain spoil
 
 ### s7 seq1 | ans: went
 "去年夏天去意大利"用一般过去时,go→went。✓ Last summer I went to Italy.
+✗ go:Last summer 是过去,用过去式 went;✗ goes:过去的事不用一般现在,主语 I 也不用 goes;✗ going:缺助动词,单独不能作谓语.
 
 ### s7 seq2 | ans: taught
 teach 是不规则动词,过去式 taught。✓ A waiter taught me some Italian.
+✗ teached:teach 是不规则动词,过去式是 taught 不是 teached;✗ teaches:过去的事不用一般现在;✗ teaching:缺助动词,单独不能作谓语.
 
 ### s7 seq3 | ans: thought
 think 是不规则动词,过去式 thought。✓ Every day I thought about postcards.
+✗ think:过去的事用过去式 thought;✗ thinks:过去的事不用一般现在,主语 I 也不用 thinks;✗ thinking:缺助动词.
 
 ### s7 seq4 | ans: didn't
 "却一张也没寄"用过去否定 didn't + 动词原形 send。✓ but I didn't send any.
+✗ don't:过去的否定用 didn't,不用 don't;✗ wasn't:send 是实义动词,否定借 didn't,不用 wasn't;✗ weren't:主语 I 不配 weren't,实义动词否定也该用 didn't.
 
 ### s8 seq1 | ans: Italy
 听 Last summer I went to Italy,作者去的是意大利。
@@ -104,9 +111,11 @@ think 是不规则动词,过去式 thought。✓ Every day I thought about postc
 
 ### s10 seq1 | ans: museum
 "博物馆"对应 museum。✓ I visited a lot of museums.
+顺带记:library = 图书馆;theater = 剧院;garden = 花园.
 
 ### s10 seq2 | ans: 唯一的,一张也(没写)
 single = 唯一的、单单一个。a single card = 连一张都(没写)。✓ I didn't write a single card.
+顺带记:双人的 = double;单身的 = single(另一义);简单的 = simple.
 
 ### s10 seq3 | ans: read
 read 是不规则动词,过去式拼写不变,还是 read(只是读音变了)。✓ I read a book yesterday. 别写成 readed。

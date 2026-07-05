@@ -64,6 +64,8 @@ export function AmericanListenWordStage({ bundle, onDone }: { bundle: LessonBund
   }
   if (!round) return <p className="py-16 text-center text-sm text-slate-400"><T>本课暂无生词</T></p>;
 
+  const allHaveMeaning = round.options.every((o) => !!o.meaning_cn);
+
   return (
     <div className="mx-auto max-w-2xl px-4 pb-28 pt-4">
       <div className="mb-4 flex items-center gap-3">
@@ -85,6 +87,8 @@ export function AmericanListenWordStage({ bundle, onDone }: { bundle: LessonBund
       <div className="grid grid-cols-2 gap-2.5">
         {round.options.map((o) => {
           const isAns = o.id === round.word.id;
+          // 全部选项都有释义→答后每项都显中文;有任一项查不到→降级只显正确项释义(不报错)
+          const showMeaning = !!picked && !!o.meaning_cn && (allHaveMeaning || isAns);
           const isPicked = picked === o.id;
           let cls = "border-slate-200 bg-white text-slate-700 hover:border-sky-300";
           if (picked) {
@@ -94,10 +98,15 @@ export function AmericanListenWordStage({ bundle, onDone }: { bundle: LessonBund
           }
           return (
             <button key={o.id} type="button" disabled={!!picked} onClick={() => pick(o.id)}
-              className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-[15px] font-medium transition ${cls}`}>
-              <span>{o.word}</span>
-              {picked && isAns && <Check className="size-4 text-emerald-600" />}
-              {picked && isPicked && !isAns && <X className="size-4 text-rose-500" />}
+              className={`flex flex-col rounded-xl border px-4 py-3 text-left text-[15px] font-medium transition ${cls}`}>
+              <span className="flex w-full items-center justify-between">
+                <span>{o.word}</span>
+                {picked && isAns && <Check className="size-4 text-emerald-600" />}
+                {picked && isPicked && !isAns && <X className="size-4 text-rose-500" />}
+              </span>
+              {showMeaning && (
+                <span className="mt-0.5 text-xs font-normal opacity-80">{o.meaning_cn}</span>
+              )}
             </button>
           );
         })}

@@ -4,7 +4,7 @@
   "lesson_no": 16,
   "title_en": "A polite request",
   "title_cn": "彬彬有礼的要求",
-  "grammar_focus": "if 条件句(主考:第一类真实条件 if + 一般现在时,主句 will/won't/祈使句/can · 前置后置 · 从句用现在时不用 will)+ 主谓一致(辅考:集合名词 police/family 用复数 · 就近/就前 as well as/neither nor)",
+  "grammar_focus": "if 条件句(主考:第一类真实条件 if + 一般现在时,主句 will/won't/祈使句/can · 前置后置 · 从句用现在时不用 will)+ 主谓一致(辅考:police 永远用复数 are/were · 集合名词 family/team 美语默认单数 is · 就近/就前 as well as/neither nor)",
   "scene": "停错车通常会被警察贴罚单 · 但在瑞典度假时车上发现一张客气的便条——欢迎光临本市、此处禁停、请留意路牌、这只是提醒",
   "grammar_card": {
     "title": "说\"如果…就…\"(if 条件句)",
@@ -62,11 +62,11 @@
     { "gp": "gp4", "name": "if 条件句——if 那半句用一般现在时(不用 will)" },
     { "gp": "gp5", "name": "if 条件句——条件疑问(If…, will you…?)" },
     { "gp": "gp6", "name": "if 条件句——综合运用" },
-    { "gp": "gp7", "name": "主谓一致——集合名词 police/family 用复数(辅考)" },
+    { "gp": "gp7", "name": "主谓一致——police 永远复数;集合名词 family 美语用单数(辅考)" },
     { "gp": "gp8", "name": "主谓一致——就近/就前 as well as/neither nor(辅考)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "if 条件句用来说什么?", "options": ["如果满足条件,将来就会发生的事", "过去发生的事", "此刻正在做的事", "经常反复的习惯"] },
+    { "gp": "gp1", "stem": "\"If you ___ hard, you will pass the exam.\"(if 那半句用一般现在时,不用 will)", "stem_cn": "如果你努力学习,就会通过考试。", "options": ["study", "will study", "studied", "are studying"] },
     { "gp": "gp1", "stem": "\"If it ___ tomorrow, we will stay home.\"(rain,if 那半句用现在时)", "stem_cn": "如果明天下雨,我们就待在家里。", "options": ["rains", "will rain", "rained", "is raining"] },
     { "gp": "gp1", "stem": "\"If you park here, a police officer ___ your car.\"(find,后半句用将来)", "stem_cn": "如果你停在这儿,警察会找到你的车。", "options": ["will find", "finds", "found", "finding"] },
     { "gp": "gp2", "stem": "if 那半句(说条件的)可以放在:", "options": ["句首(后加逗号)或句尾都行", "只能放句首", "只能放句尾", "只能放句子中间"] },
@@ -80,8 +80,8 @@
     { "gp": "gp6", "stem": "\"If they can help you, they ___.\"(条件成立,主句表将来)", "stem_cn": "如果他们能帮你,他们会帮的。", "options": ["will", "do", "are", "can to"] },
     { "gp": "gp7", "stem": "police(警察)这个词,后面的动词一般用:", "options": ["复数动词(are/were)", "单数动词(is/was)", "过去分词", "不定式"] },
     { "gp": "gp7", "stem": "\"Traffic police ___ sometimes very polite.\"(police 用复数)", "stem_cn": "交通警察有时非常客气。", "options": ["are", "is", "was", "am"] },
-    { "gp": "gp7", "stem": "\"My family ___ all early risers.\"(把家人看成一个个成员,用复数)", "stem_cn": "我家人都是早起的人。", "options": ["are", "is", "am", "was"] },
-    { "gp": "gp8", "stem": "\"The father as well as his children ___ here.\"(as well as 跟前面的 father)", "stem_cn": "父亲和他的孩子们都在这儿。", "options": ["is", "are", "were", "am"] },
+    { "gp": "gp7", "stem": "\"My family ___ a big one.\"(美语里 family 看成整体,用单数)", "stem_cn": "我家是个大家庭。", "options": ["is", "are", "were", "am"] },
+    { "gp": "gp8", "stem": "\"The father and his children ___ here.\"(and 连接两个主语,看成复数)", "stem_cn": "父亲和孩子们都在这儿。", "options": ["are", "is", "was", "am"] },
     { "gp": "gp8", "stem": "as well as / with / along with 连接两个名词作起点时,动词跟:", "options": ["前面那个词(就前一致)", "后面那个词", "两个一起", "永远用复数"] },
     { "gp": "gp8", "stem": "\"Neither you nor he ___ right.\"(neither…nor 跟离得近的 he)", "stem_cn": "你和他都不对。", "options": ["is", "are", "am", "were"] }
   ],

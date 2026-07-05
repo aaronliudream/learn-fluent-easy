@@ -1,7 +1,7 @@
 # AM2 L16 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
 
-### s5 seq1 | ans: 如果满足条件,将来就会发生的事
-if 条件句用来说"如果满足某个条件,将来就会怎样"。✓ If you park here, a police officer will find it.
+### s5 seq1 | ans: study
+if 条件句里,if 那半句(说条件)用一般现在时,不用 will。✓ If you study hard, you will pass the exam.(不说 will study)
 
 ### s5 seq2 | ans: rains
 if 那半句(说条件的)用一般现在时,不用 will;rain 加 s → rains。✓ If it rains tomorrow, we will stay home.
@@ -42,11 +42,11 @@ police(警察)是集合名词,指一群人,后面的动词用复数(are/were)。
 ### s5 seq14 | ans: are
 police 后面的动词用复数 are。✓ Traffic police are sometimes very polite.
 
-### s5 seq15 | ans: are
-把 family(家人)看成一个个成员时,后面的动词用复数 are。✓ My family are all early risers.
+### s5 seq15 | ans: is
+美语里 family(家庭)通常看成一个整体,用单数 is。✓ My family is a big one. 📌 现代美语几乎总说 My family is…;My family are… 是英式说法。
 
-### s5 seq16 | ans: is
-as well as 连接两个名词时,动词跟前面那个(the father),father 是单数,用 is。✓ The father as well as his children is here.
+### s5 seq16 | ans: are
+两个主语用 and 连接,看成复数,动词用 are。✓ The father and his children are here. 📌 这是最自然、最高频的说法。(原 as well as … is 属正式书面低频陷阱,基础课不作核心练习。)
 
 ### s5 seq17 | ans: 前面那个词(就前一致)
 as well as / with / along with 连接名词作起点时,动词跟前面那个词(就前一致),不受后面词影响。✓

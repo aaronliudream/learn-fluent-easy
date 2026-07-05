@@ -36,5 +36,6 @@
 | fewer/less | fewer + 可数 | less + 可数(口语常见) | 后续课次 |
 | Yes, it is(简答不缩写) | Yes, it is | 同样说 Yes, it is | **硬规则非语域**,不动;仅确认解释没把口语说成错 |
 | have got vs have | — | 美语用 have | 应已美语化,扫描确认零 have got |
+| 集合名词主谓一致 | family/team are(英式可复数) | family/team **is**(美语默认单数) | 美语几乎总把 family/team/government/company 当单数集合名词用 is/was。**只有 police(及 people/cattle)永远用复数 are/were**。出题:优先考 police 复数或 family 单数;若必须出 family 复数,题干标`(英式)`否则视为方向错。**am2 L16 s5#15 已回扫:family are→family is** |
 
 > 扫描中发现清单外分化点 → 先补进本表再处置,并在汇报列明。

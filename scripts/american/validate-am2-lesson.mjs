@@ -1,7 +1,9 @@
 /**
  * AM2 单课机器校验套件(自主生产步骤9)。用法: node validate-am2-lesson.mjs am2_lNN
- * 九项:计数对账(声明=JSON=SQL)· 解释全覆盖 · 选项无重复 · 答案位置(生成器保证) ·
- *       串味扫描(情景/套话零术语)· 禁引选项字母 · 词义唯一(人工标注) · G/W 覆盖 · 答案泄漏扫描(a/b红·c黄)。
+ * 计数对账(声明=JSON=SQL)· 解释全覆盖 · 选项无重复 · 答案位置(生成器保证) ·
+ * 串味扫描(情景/套话零术语)· 禁引选项字母 · 词义唯一(人工标注) · G/W 覆盖 ·
+ * 第11项 三维闸门(instructional_design_spec:元语法定义题>1或无卡→红;低频陷阱结构→黄) ·
+ * 第12项 答案泄漏扫描(a/b红·c黄)。第11/12 项不绿不许落库。
  */
 import { readFileSync } from "node:fs";
 const id = process.argv[2]; if(!id){console.error("用法: validate-am2-lesson.mjs am2_lNN");process.exit(1);}
@@ -66,5 +68,20 @@ const needCn=[];
 const CS=(arr,st)=>(arr||[]).forEach((q,i)=>{if(isPatternQ(q.stem||"")&&!(q.stem_cn&&q.stem_cn.trim()))needCn.push(`s${st}#${i+1}: ${q.stem}`);});
 CS(J.stage5,5);CS(J.stage10,10);
 needCn.length===0?ok(`stem_cn 覆盖 句型题全有中译`):needCn.forEach(m=>fail(`缺 stem_cn ${m}`));
+// 第11项:教学价值三维闸门(instructional_design_spec)。红=元语法定义题>1或无卡;黄=低频陷阱结构(人工确认)。
+// 注:不含"是什么意思"——那对词义/短语题是误红(用户定义"指语法概念而非词义")。
+const META_STEM=/用来(说|表示|讲|做)什么|表示什么|属于哪[种类]|由什么构成|的构成是|的否定式?是|疑问句用|一般在词尾|哪[类种](动词|词|时态|句型)|是哪类(词|动词)/;
+const gateQs=[];
+(J.stage5||[]).forEach((q,i)=>gateQs.push({tag:`s5#${i+1}`,q}));
+(J.stage10||[]).forEach((q,i)=>{if(!q.kind||q.kind==="grammar")gateQs.push({tag:`s10#${i+1}`,q});});
+const metaHits=gateQs.filter(g=>META_STEM.test(g.q.stem||""));
+const trapHits=[];
+for(const g of gateQs){const q=g.q;const blob=[q.stem,q.context,...(q.options||[])].join(" ");const correct=(q.options&&q.options[0]||"").trim();
+  if(/as well as|together with|along with/i.test(blob)&&/^(is|was)$/i.test(correct))trapHits.push(`${g.tag} 插入结构陷阱(答案 ${correct}):${q.stem} → 建议降级/标(正式书面语)`);
+  else if(/\b(family|team|government|committee|audience|staff|crowd|company)\b/i.test(blob)&&/^(are|were)$/i.test(correct))trapHits.push(`${g.tag} 集合名词英式复数(答案 ${correct}):${q.stem} → 建议改自然题(and/单数)或标(正式)`);}
+trapHits.forEach(t=>console.log("  🟡 "+t));
+if(metaHits.length>1)fail(`三维闸门:元语法定义题 ${metaHits.length} 道 >1(须改运用题或只留1道带卡)—— ${metaHits.map(g=>g.tag).join(",")}`);
+else if(metaHits.length===1&&!J.grammar_card)fail(`三维闸门:1道元语法题但无语法卡(${metaHits[0].tag})—— 须先教再考或改运用`);
+else ok(`三维闸门 元语法定义题 ${metaHits.length}/≤1${metaHits.length?`(${metaHits[0].tag},已带卡)`:""}${trapHits.length?` · ${trapHits.length}条陷阱黄警待人工`:""}`);
 console.log("\n"+(pass?"🟢 全绿":"🔴 有红灯"));
 process.exit(pass?0:1);

@@ -66,15 +66,19 @@ behind me(在我身后)说的是地点,对地点提问用 Where:✓ Where did th
 
 ### s7 seq1 | ans: theater
 美式拼写是 theater(-er 结尾),英式才写 theatre。本课课文用美语:✓ I went to the theater downtown.
+✗ theatre:英式拼法,美语课文用 theater;✗ seat:意思是"座位",go to the seat 不通;✗ play:意思是"戏",go to the play 不搭配.
 
 ### s7 seq2 | ans: behind
 那对情侣坐在"我"身后,"在…后面"用 behind:✓ sitting behind me。in front of 是"在…前面",方向正相反。
+✗ in front of:意思相反(在前面),课文是坐在后面;✗ next:表方位要说 next to,单独 next 不对;✗ under:"在…下面",不合语境.
 
 ### s7 seq3 | ans: loudly
 说"说话说得大声",修饰动词 talking 要用副词 loudly:✓ talking loudly。loud 是形容词,描述人或声音本身,不修饰动作。
+✗ loudness:名词"响度",这里要副词修饰 talking;✗ aloud:意为"出声地(读)",不表"大声吵闹";✗ louder:比较级,这句不是在作比较.
 
 ### s7 seq4 | ans: them
 looked at 后面是动作的对象,用宾格 them(他们):✓ looked at them。they 是主格,只能放在主语位置。
+✗ they:主格,介词 at 后面要用宾格;✗ their:形容词性物主代词,后面得接名词;✗ theirs:名词性物主代词,意思对不上.
 
 ### s8 seq1 | ans: The theater
 听开头第一句:I went to the theater downtown.(我去了市中心的剧院)。注意别选 the movies——看电影和看戏是两个地方,课文里看的是 play(戏)。
@@ -96,9 +100,11 @@ looked at 后面是动作的对象,用宾格 them(他们):✓ looked at them。t
 
 ### s10 seq1 | ans: angrily
 "生气地"说话,修饰动词要用副词 angrily。angry 是形容词"生气的"(描述人),带 -ly 的 angrily 才是"生气地"(描述动作)。
+顺带记:angry = 生气的;loudly = 大声地;rudely = 无礼地.
 
 ### s10 seq2 | ans: 忍受,容忍
 课文里 I couldn't bear it. = 我忍不了了,bear 在这里是"忍受/容忍"。bear 还有"熊"的意思,但放进这句话讲不通——一词多义要看语境。
+顺带记:一种动物 = a bear(熊);携带 = carry;出生 = be born.
 
 ### s10 seq3 | ans: They didn't pay attention.
 paid 是实义动词的过去形式,变否定借 didn't,动词回到原形 pay:✓ They didn't pay attention. 易错:不说 didn't paid。
@@ -132,12 +138,15 @@ I can't hear a word! 直译是"一个字都听不见"。not…a word 是"一点�
 
 ### s6 seq3 | ans: 生气
 get angry = 生气。get 在这里表示"变得"(从不生气变成生气)。✓ I got angry because I couldn't hear the actors.(课文原句)
+顺带记:高兴 = be happy;害怕 = be afraid;惊讶 = be surprised.
 
 ### s6 seq4 | ans: 最后,终于
 in the end = 最后/终于(说事情的结局)。✓ In the end I couldn't bear it. 易混:at the end (of…) 是"在…的末尾位置",两者别搞混。
+顺带记:在结尾的位置 = at the end;立刻,马上 = at once / right away;从头开始 = from the start.
 
 ### s6 seq5 | ans: 注意,留心
 pay attention (to) = 注意/留心。pay 在这里不是"付钱",这是固定搭配,整个记。✓ They didn't pay any attention.(他们毫不理会——课文原句)
+顺带记:付钱 = pay;参加 = take part in / join;道歉 = apologize.
 
 ### s6 seq6 | ans: I can't stand it!
 美语口语"受不了"更常说 can't stand it(can't bear 也对,偏书面,课文里用的是 couldn't bear it)。stand 在这里是"忍受",不是"站着"。✓ I can't stand the noise!

@@ -109,6 +109,16 @@ const CN = {
     '"If he plays well, he ___ into the team."(get,后半句用将来)': "如果他表现出色,就会入选球队。",
     '"The police ___ looking for the thief." 横线填(police 用复数):': "警察正在搜捕小偷。",
   },
+  am2_l01: {
+    'The pizza smells ___.': "这披萨闻起来很香。",
+    'He looked ___ when he heard the news.': "他听到那消息时看起来很生气。",
+    '"___ do you go to the theater?"(答:By subway.)': "你怎么去剧院?",
+    '"___ seat is this? It\'s mine."': "这是谁的座位?是我的。",
+    '"___ do you go to the theater?"(答:Three times a year.)': "你多久去一次剧院?",
+    '"How ___ is the theater from here?"(答:About two miles.)': "剧院离这儿有多远?",
+    'I looked at ___ angrily.(指那对情侣)': "我生气地看着他们。",
+    '"pay no attention" = "not pay ___ attention"': "一点都不理会(pay no attention = not pay any attention)。",
+  },
 };
 
 let total = 0, patched = 0;

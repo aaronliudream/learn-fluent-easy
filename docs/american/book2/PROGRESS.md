@@ -10,8 +10,9 @@
 | L2 | 1 | Breakfast or lunch? | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿 | 步骤1-9完成;seed 归单元1批次待跑;prewarm 待单元批次;真机待Aaron抽验 |
 | L3 | 1 | Please send me a card | ✅ 生产完成(44题/解释44/关6=6/认知2) | 🟢八项全绿 | 一般过去时;新思维p117已补扫并入讲深;seed归单元1批次;prewarm待批次;真机待抽验 |
 | L4 | 1 | An exciting trip | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 现在完成时;三源p27-28/p42-44/新思维p119-120已核;现在完成进行时p122排除记备用;seed归单元1批次;prewarm待批次;真机待抽验 |
-| L5 | 1 | (待扫描确认标题) | ⬜ 下一课 | — | NCE2 L5=No wrong numbers;同步L4/5合并现在完成时,L5三源扫描确认标题+主题,不凭记忆 |
-| L6–L8 | 1 | — | ⬜ 未开工 | — | — |
+| L5 | 1 | No wrong numbers | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 现在完成时续(up to now/a great many/since/时态切换);三源p31/p42-45/新思维p120已核;与L4分工不重复;seed归单元1批次;prewarm待批次;真机待抽验 |
+| L6 | 1 | (待扫描确认标题) | ⬜ 下一课 | — | NCE2 L6=Percy Buttons;L6三源扫描确认标题+主题,不凭记忆 |
+| L7–L8 | 1 | — | ⬜ 未开工 | — | — |
 
 ## L2 流水线步骤跟踪
 - [x] 1 三源扫描(scan-evidence-lesson02.md:教材p19-22 / 同步p33-37 / 新思维p110,112;主题一致无冲突)
@@ -36,6 +37,23 @@
 - [x] 8 JSON + seed(am2_l04.json;gen-book2-seed 重生成 unit01 含L1-L4,解释合并)
 - [x] 9 机器校验套件(validate-am2-lesson.mjs am2_l04 八项全绿:44=44=44/解释44/零串味/G9全覆盖)
 - [x] 10 落盘 + commit(L4 docs 一 commit;seed SQL 归单元1批次)
+
+## L5 流水线步骤跟踪(现在完成时·续)
+- [x] 1 三源扫描(scan-evidence-lesson05.md:教材p31含Notes权威[up to now/a great many/from距离] / 同步p44(四)短暂动词+新闻→追问切换 / 新思维p120状语;逐页页眉;与L4互补无冲突)
+- [x] 2 建考点清单(grammar-syllabus-lesson05.md:G1-G8 / W1-W11 / C1-C6;与L4分工写清)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)
+- [x] 4 课文美语定稿(11句·现完+过去时天然对比·11词/3语块全落·store/downtown/mail美语化)
+- [x] 5 题库生产(关5=18[G1-8,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44题)
+- [x] 6 逐题解释(am2_l05_explanations_final.md,44条)
+- [x] 7 双角色自审(coverage-lesson05.md §四;首轮无抓修)
+- [x] 8 JSON + seed(am2_l05.json;gen-book2-seed 重生成 unit01 含L1-L5,解释合并)
+- [x] 9 机器校验套件(validate-am2-lesson.mjs am2_l05 八项全绿:44=44=44/解释44/零串味/G8全覆盖)
+- [x] 10 落盘 + commit(L5 docs 一 commit;seed SQL 归单元1批次)
+
+## L5 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表弃 spare part(备件)→ 默认 **A**:美语化书店场景不宜"备件",改用 install/note/mile/private/own 凑11词(对齐L1-L4体量)。
+2. L4 讲深遗漏(receive vs take 易混、独立 since 题)→ 默认 **since 已由 L5 G4 接住**;receive/take 易混非现在完成时主线,不回补(记此备用,若单元真机反馈需要再议)。
+3. L5 与 L4 均现在完成时(同步合并 L4/5)→ 默认 **分工制**:L4 构成/gone-been/状语位置,L5 up to now/a great many/时态切换,零重复(已在两课 syllabus 写明)。
 
 ## L4 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
 1. 词表偏薄(官方6词)→ 默认 **A**:补 letter/engineer/arrive/recently/already 凑11词(对齐L1-L3体量)。

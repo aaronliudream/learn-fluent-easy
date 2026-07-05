@@ -1,0 +1,137 @@
+{
+  "id": "am2_l05",
+  "unit_no": 1,
+  "lesson_no": 5,
+  "title_en": "No wrong numbers",
+  "title_cn": "无错号之虞",
+  "grammar_focus": "现在完成时(续)· up to now/so far 信号词 · a great many+可数复数 · since+时间点/从句 · 短暂动词不接一段时间 · 现在完成时↔一般过去时对话切换",
+  "scene": "叔叔 Jack 开第二家书店装不上电话 · 买十只鸽子在两店间送信 · 办起私人'鸽子邮递'业务",
+  "grammar_card": {
+    "title": "现在完成时(续):说'到现在为止' & 报新闻",
+    "intro": "L4 学了现在完成时的构成,本课讲它的三个常用场合。全用本课句子举例。",
+    "table": {
+      "headers": ["用法 / 规则", "本课例子"],
+      "rows": [
+        ["up to now / so far / lately(到目前为止 / 最近)是现在完成时的信号词", "Up to now, Jack has sent many messages."],
+        ["a great many + 可数名词复数(许多),只修饰可数复数", "He has sent a great many requests."],
+        ["报'新消息'常用现在完成时开头,只讲事情本身、不点过去具体时间", "He has just bought ten pigeons!"],
+        ["short 动词(buy/open/start…)的完成时不接'一段时间';要说多久用 for/since 得配否定或延续动词", "He hasn't lost a message since he started.(否定可表持续)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "一旦追问'什么时候'等过去具体情况,就从现在完成时改用一般过去时(—Have you seen it? —Yes. —When did you see it?)", "mark": "新闻→追问" },
+      { "rule": "有明确过去时间(last month / yesterday)只能用一般过去时,不能用现在完成时", "mark": "vs 一般过去时" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What has Jack bought to send messages?",
+    "options": ["Ten pigeons", "A telephone", "A car", "A computer"],
+    "answer_index": 0
+  },
+  "passage": "My uncle Jack has owned a small bookstore downtown for years. Last month he opened a second store across the river. The new store is only two miles away. But the phone company hasn't installed a phone line yet. So my uncle has come up with a clever idea. He has just bought ten pigeons! Yesterday, one pigeon carried his first note from the new store to the old one. The little bird covered the distance in just four minutes. Up to now, Jack has sent a great many requests and messages from one store to the other. He has never lost a single message. In this way, he has started his own private \"pigeon mail\" service.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "My uncle Jack has owned a small bookstore downtown for years.", "text_cn": "我叔叔 Jack 在市中心开了一家小书店,已经好多年了。" },
+    { "seq": 2, "speaker": null, "text_en": "Last month he opened a second store across the river.", "text_cn": "上个月他在河对岸开了第二家店。" },
+    { "seq": 3, "speaker": null, "text_en": "The new store is only two miles away.", "text_cn": "新店离得只有两英里。" },
+    { "seq": 4, "speaker": null, "text_en": "But the phone company hasn't installed a phone line yet.", "text_cn": "但电话公司还没给装电话线。" },
+    { "seq": 5, "speaker": null, "text_en": "So my uncle has come up with a clever idea.", "text_cn": "于是我叔叔想出了个妙招。" },
+    { "seq": 6, "speaker": null, "text_en": "He has just bought ten pigeons!", "text_cn": "他刚买了十只鸽子!" },
+    { "seq": 7, "speaker": null, "text_en": "Yesterday, one pigeon carried his first note from the new store to the old one.", "text_cn": "昨天,一只鸽子把他第一张便条从新店送到了老店。" },
+    { "seq": 8, "speaker": null, "text_en": "The little bird covered the distance in just four minutes.", "text_cn": "这只小鸟只用四分钟就飞完了全程。" },
+    { "seq": 9, "speaker": null, "text_en": "Up to now, Jack has sent a great many requests and messages from one store to the other.", "text_cn": "到目前为止,Jack 已经在两家店之间送了许多请求和信息。" },
+    { "seq": 10, "speaker": null, "text_en": "He has never lost a single message.", "text_cn": "他从没丢过一条信息。" },
+    { "seq": 11, "speaker": null, "text_en": "In this way, he has started his own private \"pigeon mail\" service.", "text_cn": "就这样,他办起了自己私人的\"鸽子邮递\"业务。" }
+  ],
+  "words": [
+    { "word": "pigeon", "ipa": "/ˈpɪdʒɪn/", "pos": "n", "meaning_cn": "鸽子", "example": "He has just bought ten pigeons." },
+    { "word": "message", "ipa": "/ˈmesɪdʒ/", "pos": "n", "meaning_cn": "信息,消息", "example": "He has never lost a single message." },
+    { "word": "cover", "ipa": "/ˈkʌvər/", "pos": "v", "meaning_cn": "越过,走完(一段距离)", "example": "The bird covered the distance in four minutes." },
+    { "word": "distance", "ipa": "/ˈdɪstəns/", "pos": "n", "meaning_cn": "距离", "example": "The bird covered the distance quickly." },
+    { "word": "request", "ipa": "/rɪˈkwest/", "pos": "n", "meaning_cn": "请求,要求", "example": "Jack has sent a great many requests." },
+    { "word": "service", "ipa": "/ˈsɜːrvɪs/", "pos": "n", "meaning_cn": "业务,服务", "example": "He has started his own private service." },
+    { "word": "install", "ipa": "/ɪnˈstɔːl/", "pos": "v", "meaning_cn": "安装", "example": "The phone company hasn't installed a line yet." },
+    { "word": "note", "ipa": "/noʊt/", "pos": "n", "meaning_cn": "便条", "example": "One pigeon carried his first note." },
+    { "word": "mile", "ipa": "/maɪl/", "pos": "n", "meaning_cn": "英里", "example": "The new store is only two miles away." },
+    { "word": "private", "ipa": "/ˈpraɪvət/", "pos": "adj", "meaning_cn": "私人的", "example": "his own private service" },
+    { "word": "own", "ipa": "/oʊn/", "pos": "v", "meaning_cn": "拥有", "example": "My uncle has owned a bookstore for years." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "现在完成时——构成 have/has+过去分词(复现)" },
+    { "gp": "gp2", "name": "现在完成时——up to now / so far 信号词" },
+    { "gp": "gp3", "name": "a great many + 可数名词复数" },
+    { "gp": "gp4", "name": "现在完成时——since + 时间点/从句" },
+    { "gp": "gp5", "name": "现在完成时 vs 一般过去时(明确过去时间)" },
+    { "gp": "gp6", "name": "时态对话切换(报新闻→追问 When 转过去)" },
+    { "gp": "gp7", "name": "不规则过去分词复现(bought/begun/sent)" },
+    { "gp": "gp8", "name": "课文语言点(come up with / from 距离 / cover)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He ___ started his own service.\"(主语 He)", "options": ["has", "have", "is", "did"] },
+    { "gp": "gp1", "stem": "\"They ___ sent many messages.\"(主语 They)", "options": ["have", "has", "is", "was"] },
+    { "gp": "gp2", "stem": "\"___ , Jack has sent many orders.\"(到目前为止)", "options": ["Up to now", "Long ago", "Next week", "Two days ago"] },
+    { "gp": "gp2", "stem": "\"Up to now, Mr. Scott ___ a great many messages.\"(填正确时态)", "options": ["has sent", "sent", "sends", "will send"] },
+    { "gp": "gp3", "stem": "\"He has sent a great many ___ .\"(许多信息)", "options": ["messages", "message", "much message", "a message"] },
+    { "gp": "gp3", "stem": "a great many 后面接的是:", "options": ["可数名词复数", "不可数名词", "形容词", "动词原形"] },
+    { "gp": "gp4", "stem": "\"I haven't heard from him ___ he left.\"(自从)", "options": ["since", "for", "when", "during"] },
+    { "gp": "gp4", "stem": "\"自从1990年\"用英语说:", "options": ["since 1990", "for 1990", "since 1990 years", "from 1990 years"] },
+    { "gp": "gp5", "stem": "\"上个月他开了第二家店\"(有 last month)应说:", "options": ["He opened a second store last month.", "He has opened a second store last month.", "He has been opened a second store last month.", "He opens a second store last month."] },
+    { "gp": "gp5", "stem": "\"Yesterday I have finished it.\" 为什么错?", "options": ["有明确过去时间 yesterday,要用一般过去时(I finished it)", "yesterday 要放句尾", "have 要改成 has", "finished 拼错了"] },
+    { "gp": "gp6", "stem": "\"—Have you seen the new movie? —Yes, I have. —___ ?\"(接着问什么时候看的)", "options": ["When did you see it?", "When have you seen it?", "When do you see it?", "When you saw it?"] },
+    { "gp": "gp6", "stem": "报新闻用现在完成时开头,接着追问\"什么时候\"时,时态要:", "options": ["换成一般过去时", "还用现在完成时", "换成一般将来时", "换成现在进行时"] },
+    { "gp": "gp7", "stem": "\"He has just ___ ten pigeons.\"(buy 的过去分词)", "options": ["bought", "buyed", "buy", "buying"] },
+    { "gp": "gp7", "stem": "\"Jack has ___ his own service.\"(begin 的过去分词)", "options": ["begun", "began", "begin", "beginning"] },
+    { "gp": "gp7", "stem": "\"He has ___ many messages by pigeon.\"(send 的过去分词)", "options": ["sent", "sended", "send", "sending"] },
+    { "gp": "gp8", "stem": "come up with 的意思是:", "options": ["想出(主意/办法)", "赶上", "放弃", "走下来"] },
+    { "gp": "gp8", "stem": "\"The new store is only two miles ___ .\"(距离多远,与 away 义近)", "options": ["away", "far", "long", "off from"] },
+    { "gp": "gp8", "stem": "\"The bird covered the distance.\" 里 cover 的意思是:", "options": ["越过,走完(一段距离)", "覆盖住", "掩盖真相", "采访报道"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"商店\"常用词是:", "options": ["store", "shop", "stall", "booth"] },
+    { "stem": "美语里\"市中心\"说:", "options": ["downtown", "city centre", "midtown", "the middle city"] },
+    { "stem": "美语里\"邮寄 / 信件\"用:", "options": ["mail", "post", "throw", "carry"] },
+    { "stem": "up to now 的意思是:", "options": ["到目前为止", "很久以前", "马上", "从今以后"] },
+    { "stem": "a great many 的意思是:", "options": ["许多(修饰可数名词复数)", "一点点", "大约", "一半"] },
+    { "stem": "come up with an idea 的意思是:", "options": ["想出一个主意", "追上某人", "放弃主意", "站起来"] }
+  ],
+  "contrast": [
+    { "us": "store", "uk": "shop", "note_cn": "商店;美语常用 store,英式用 shop;bookstore / bookshop" },
+    { "us": "downtown", "uk": "city centre", "note_cn": "市中心;美语 downtown,英式 (in the) city centre" },
+    { "us": "mail", "uk": "post", "note_cn": "邮寄/信件;美语 mail,英式 post(承 L3,本课 pigeon mail 语境复现)" }
+  ],
+  "chunks": [
+    { "us": "up to now", "ipa": "/ʌp tə naʊ/", "example1": "Up to now, Jack has sent many messages.", "example1_cn": "到目前为止,Jack 已经送了许多信息。", "example2": "Up to now, I have read three books.", "example2_cn": "到目前为止,我已经读了三本书。" },
+    { "us": "a great many", "ipa": "/ə ɡreɪt ˈmeni/", "example1": "He has sent a great many requests.", "example1_cn": "他已经送了许多请求。", "example2": "A great many people use pigeons.", "example2_cn": "很多人用鸽子。" },
+    { "us": "come up with", "ipa": "/kʌm ʌp wɪð/", "example1": "He has come up with a clever idea.", "example1_cn": "他想出了个妙招。", "example2": "Can you come up with a better plan?", "example2_cn": "你能想出更好的办法吗?" }
+  ],
+  "stage7_cloze": {
+    "context": "My uncle Jack ___1___ a second store last month. The phone company hasn't ___2___ a line yet, so he ___3___ bought ten pigeons. ___4___ now, Jack has sent many messages by pigeon.",
+    "blanks": [
+      { "blank_no": 1, "options": ["opened", "has opened", "opens", "opening"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["installed", "install", "installing", "installs"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["has", "have", "had", "is"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["Up to", "For", "Since", "In"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What has Jack bought to send messages?", "options": ["Ten pigeons", "A telephone", "A computer", "A car"] },
+    { "stem": "How far is the new store from the old one?", "options": ["Two miles", "Ten miles", "Five minutes", "Half a mile"] },
+    { "stem": "When did Jack open his second store?", "options": ["Last month", "Yesterday", "This morning", "A year ago"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想告诉朋友一条新消息\"我刚买了辆新车\":", "options": ["I have just bought a new car.", "I just have bought a new car.", "I have just buy a new car.", "I just buying a new car."] },
+    { "stem": "你想说\"到目前为止,我已经读了三本书\":", "options": ["Up to now, I have read three books.", "Up to now, I read three books.", "Up to now, I am reading three books.", "Up to now, I will read three books."] },
+    { "stem": "朋友说\"I have visited Japan.\",你想接着问\"你什么时候去的\":", "options": ["When did you go?", "When have you gone?", "When do you go?", "When you went?"] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "pigeon 的意思是:", "options": ["鸽子", "鸽笼", "麻雀", "信封"] },
+    { "kind": "vocab", "stem": "\"cover the distance\" 里 distance 的意思是:", "options": ["距离", "方向", "速度", "地址"] },
+    { "kind": "grammar", "stem": "\"Up to now, he ___ many letters.\"(填正确时态)", "options": ["has sent", "sent", "sends", "send"] },
+    { "kind": "grammar", "stem": "\"Last week I ___ a new phone.\"(有 last week)", "options": ["bought", "have bought", "has bought", "buy"] },
+    { "kind": "scenario", "stem": "\"The store has just opened!\" 是在说:", "options": ["那家店刚刚开业(报新消息)", "那家店明天开业", "那家店关门了", "那家店很旧了"] },
+    { "kind": "scenario", "stem": "别人说完 \"I have seen that movie\",你想问他什么时候看的,该说:", "options": ["When did you see it?", "When have you seen it?", "When you see it?", "When did you saw it?"] },
+    { "kind": "reading", "stem": "Why did Jack buy pigeons?", "options": ["Because the new store had no phone line", "Because he likes birds", "Because pigeons are cheap", "Because he sells pigeons"], "passage": true },
+    { "kind": "reading", "stem": "How long did the pigeon take to cover the distance?", "options": ["Four minutes", "Three minutes", "An hour", "Two miles"], "passage": true },
+    { "kind": "listening", "stem": "What service has Jack started?", "options": ["A private 'pigeon mail' service", "A taxi service", "A phone company", "A delivery truck"], "audio": true },
+    { "kind": "listening", "stem": "Where is Jack's first bookstore?", "options": ["Downtown", "Across the river", "In another city", "Near the airport"], "audio": true }
+  ]
+}

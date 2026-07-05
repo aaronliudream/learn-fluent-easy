@@ -1,0 +1,137 @@
+{
+  "id": "am2_l14",
+  "unit_no": 2,
+  "lesson_no": 14,
+  "title_en": "Do you speak English?",
+  "title_cn": "你会讲英语吗?",
+  "grammar_focus": "过去完成时(主考:had+过去分词 · after/before/as soon as/when/until 引导 · 两个过去动作里更早的用过去完成 · 否定 had not · 一般过去 vs 过去完成辨析)+ had planned/hoped 未实现的计划(辅考讲深)+ It was the…time that…had done(辅考讲深)",
+  "scene": "去年在法国旅行搭载招手青年 · 全程用法语没说话 · 快到镇上时青年突然慢慢问\"你会讲英语吗\"——原来他也是英国人",
+  "grammar_card": {
+    "title": "说\"在另一件过去的事之前已经做了\"(过去完成时)",
+    "intro": "本课讲怎么说\"过去的两件事里,哪一件先发生\"——先发生的那件用过去完成时。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课 / 常见例子"],
+      "rows": [
+        ["过去完成时 = had + 过去分词(表示'过去的过去')", "After I had left the village, I drove on.(先离开,后开车)"],
+        ["两个过去动作里,先发生的用过去完成,后发生的用一般过去", "As soon as he had gotten in, I said good morning.(先上车,后问好)"],
+        ["常配 after / before / as soon as / when 连词", "When he had finished lunch, he asked for water."],
+        ["否定:had not + 过去分词;常和 until 连用", "I had not understood the problem until he explained it."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "相继发生、按顺序讲的动作,用一般过去时(and/but 连接);过去完成时是'回头看'更早发生的那件事", "mark": "过去 vs 过去完成" },
+      { "rule": "had planned/hoped/intended to + 原形,表示'本打算…(但没实现)'", "mark": "未实现的计划" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Did the young man speak English?",
+    "options": ["Yes — he was English himself", "No, only French", "No, he was silent the whole time", "Yes, but very badly"],
+    "answer_index": 0
+  },
+  "passage": "I had an amusing experience last summer while I was on vacation in France. After I had left a small village in the south of France, I drove on toward the next town. On the way, a young man waved at me and asked me for a lift. As soon as he had gotten into the car, I said good morning to him in French. He replied in the same language, so I figured he was a local Frenchman. Apart from a few words, I did not know any French at all. Neither of us spoke during the whole journey. I had nearly reached the town when the young man suddenly turned to me. Very slowly, he asked, \"Do you speak English?\" I was surprised, because before he spoke, I had thought he was French. As I soon learned, the young man was English himself!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "I had an amusing experience last summer while I was on vacation in France.", "text_cn": "去年夏天我在法国度假时,有过一次有趣的经历。" },
+    { "seq": 2, "speaker": null, "text_en": "After I had left a small village in the south of France, I drove on toward the next town.", "text_cn": "离开法国南部的一个小村庄后,我继续驶向下一个城镇。" },
+    { "seq": 3, "speaker": null, "text_en": "On the way, a young man waved at me and asked me for a lift.", "text_cn": "途中,一个青年向我招手,请求搭个便车。" },
+    { "seq": 4, "speaker": null, "text_en": "As soon as he had gotten into the car, I said good morning to him in French.", "text_cn": "他一上车,我就用法语跟他道了早安。" },
+    { "seq": 5, "speaker": null, "text_en": "He replied in the same language, so I figured he was a local Frenchman.", "text_cn": "他也用法语回答我,于是我以为他是本地的法国人。" },
+    { "seq": 6, "speaker": null, "text_en": "Apart from a few words, I did not know any French at all.", "text_cn": "除了几个单词,我根本不会法语。" },
+    { "seq": 7, "speaker": null, "text_en": "Neither of us spoke during the whole journey.", "text_cn": "一路上我们俩谁也没说话。" },
+    { "seq": 8, "speaker": null, "text_en": "I had nearly reached the town when the young man suddenly turned to me.", "text_cn": "我快到镇上时,那青年突然转向我。" },
+    { "seq": 9, "speaker": null, "text_en": "Very slowly, he asked, \"Do you speak English?\"", "text_cn": "他慢慢地问道:\"你会讲英语吗?\"" },
+    { "seq": 10, "speaker": null, "text_en": "I was surprised, because before he spoke, I had thought he was French.", "text_cn": "我很吃惊,因为在他开口之前,我一直以为他是法国人。" },
+    { "seq": 11, "speaker": null, "text_en": "As I soon learned, the young man was English himself!", "text_cn": "我很快就知道,这青年自己就是个英国人!" }
+  ],
+  "words": [
+    { "word": "amusing", "ipa": "/əˈmjuːzɪŋ/", "pos": "adj", "meaning_cn": "有趣的,好笑的", "example": "an amusing experience" },
+    { "word": "experience", "ipa": "/ɪkˈspɪriəns/", "pos": "n", "meaning_cn": "经历", "example": "an amusing experience" },
+    { "word": "wave", "ipa": "/weɪv/", "pos": "v", "meaning_cn": "招手", "example": "A young man waved at me." },
+    { "word": "lift", "ipa": "/lɪft/", "pos": "n", "meaning_cn": "搭便车", "example": "He asked me for a lift." },
+    { "word": "reply", "ipa": "/rɪˈplaɪ/", "pos": "v", "meaning_cn": "回答", "example": "He replied in the same language." },
+    { "word": "language", "ipa": "/ˈlæŋɡwɪdʒ/", "pos": "n", "meaning_cn": "语言", "example": "in the same language" },
+    { "word": "journey", "ipa": "/ˈdʒɜːrni/", "pos": "n", "meaning_cn": "旅行,旅程", "example": "during the whole journey" },
+    { "word": "village", "ipa": "/ˈvɪlɪdʒ/", "pos": "n", "meaning_cn": "村庄", "example": "a small village" },
+    { "word": "drive", "ipa": "/draɪv/", "pos": "v", "meaning_cn": "开车", "example": "I drove on toward the next town." },
+    { "word": "reach", "ipa": "/riːtʃ/", "pos": "v", "meaning_cn": "到达", "example": "I had nearly reached the town." },
+    { "word": "suddenly", "ipa": "/ˈsʌdənli/", "pos": "adv", "meaning_cn": "突然", "example": "He suddenly turned to me." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "过去完成时——构成 had + 过去分词" },
+    { "gp": "gp2", "name": "过去完成时——用法:两个过去动作里更早的用过去完成" },
+    { "gp": "gp3", "name": "过去完成时——after/before/as soon as/when 引导" },
+    { "gp": "gp4", "name": "过去完成时——until(had not…until)" },
+    { "gp": "gp5", "name": "一般过去 vs 过去完成 辨析" },
+    { "gp": "gp6", "name": "had planned/hoped/intended to(未实现的计划)——辅考讲深" },
+    { "gp": "gp7", "name": "It was the first/third time that … had done——辅考讲深" },
+    { "gp": "gp8", "name": "过去完成时——否定 had not / 疑问 Had you…?" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "过去完成时由什么构成?", "options": ["had + 过去分词", "have + 过去分词", "was + 过去分词", "will + 动词原形"] },
+    { "gp": "gp1", "stem": "\"After I ___ the village, I drove on.\"(leave,先离开 → 过去完成)", "options": ["had left", "left", "have left", "was leaving"] },
+    { "gp": "gp1", "stem": "\"When he ___ lunch, he asked for water.\"(finish,先吃完 → 过去完成)", "options": ["had finished", "finished", "has finished", "finishes"] },
+    { "gp": "gp2", "stem": "过去完成时用来表示什么?", "options": ["过去两个动作里,先发生的那个", "此刻正在做的事", "将来要做的事", "经常反复的习惯"] },
+    { "gp": "gp2", "stem": "\"As soon as he had gotten into the car, I said hi.\" 哪件事先发生?", "options": ["他上车(had gotten in)", "我打招呼(said hi)", "两件同时", "都没发生"] },
+    { "gp": "gp3", "stem": "\"The children ran away ___ they had broken the window.\"(在…之后)", "options": ["after", "before", "so", "and"] },
+    { "gp": "gp3", "stem": "\"___ the sun had set, we returned to the hotel.\"(太阳一下山就…)", "options": ["As soon as", "Because", "Although", "Unless"] },
+    { "gp": "gp3", "stem": "\"She went to the post office ___ she had written the letter.\"(先写完信)", "options": ["after", "until", "or", "but"] },
+    { "gp": "gp4", "stem": "\"I ___ the problem until he explained it.\"(否定 + until,过去完成)", "options": ["had not understood", "did not understand", "have not understood", "was not understanding"] },
+    { "gp": "gp5", "stem": "关于一般过去时和过去完成时,正确的是:", "options": ["相继发生按顺序讲用一般过去;回头看更早的用过去完成", "两个时态完全一样", "过去完成时表将来", "一般过去时表此刻正在"] },
+    { "gp": "gp5", "stem": "\"He arrived and (then) sat down.\" 两件相继发生、按顺序讲,用:", "options": ["一般过去(arrived, sat)", "过去完成(had arrived, had sat)", "现在完成", "将来时"] },
+    { "gp": "gp5", "stem": "\"When I got to the station, the train ___ already ___.\"(我到之前车已开走 → 过去完成)", "options": ["had … left", "has … left", "did … leave", "was … leaving"] },
+    { "gp": "gp6", "stem": "\"I ___ to go shopping, but my mom came.\"(本打算…但没成 → had planned)", "options": ["had planned", "plan", "will plan", "am planning"] },
+    { "gp": "gp6", "stem": "\"She ___ that he would come, but he didn't.\"(原本希望…但落空 → had hoped)", "options": ["had hoped", "hopes", "will hope", "is hoping"] },
+    { "gp": "gp7", "stem": "\"It was the third time that I ___ him.\"(在…句式里用过去完成)", "options": ["had met", "met", "have met", "meet"] },
+    { "gp": "gp8", "stem": "过去完成时的否定是:", "options": ["had not + 过去分词", "did not + 过去分词", "have not + 过去分词", "was not + 过去分词"] },
+    { "gp": "gp8", "stem": "\"___ you ever seen him before that day?\"(过去完成疑问)", "options": ["Had", "Did", "Have", "Were"] },
+    { "gp": "gp8", "stem": "\"By six o'clock, they ___ dinner.\"(到六点之前已吃完 → 过去完成)", "options": ["had finished", "finished", "have finished", "finish"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"搭便车\"更常说:", "options": ["ride", "lift", "hitch stop", "car help"] },
+    { "stem": "美语里\"旅程/旅行\"更常说:", "options": ["trip", "journey", "voyage road", "way go"] },
+    { "stem": "美语里\"假期\"用:", "options": ["vacation", "holiday", "restday", "offtime"] },
+    { "stem": "on the way 的意思是:", "options": ["在途中", "在路边", "迷路了", "在起点"] },
+    { "stem": "ask for a lift 的意思是:", "options": ["要求搭便车", "问路", "要一杯水", "请求帮忙提东西"] },
+    { "stem": "apart from 的意思是:", "options": ["除了…以外", "紧挨着", "属于", "关于"] }
+  ],
+  "contrast": [
+    { "us": "ride", "uk": "lift", "note_cn": "搭便车;美语 give sb a ride,英式 give sb a lift(课文保留 lift 教官方词)" },
+    { "us": "trip", "uk": "journey", "note_cn": "旅程;美语常说 trip,英式常说 journey(课文保留 journey 教官方词)" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" }
+  ],
+  "chunks": [
+    { "us": "on the way", "ipa": "/ɑːn ðə weɪ/", "example1": "On the way, a young man waved at me.", "example1_cn": "途中,一个青年向我招手。", "example2": "I bought some coffee on the way to work.", "example2_cn": "上班途中我买了点咖啡。" },
+    { "us": "ask for a lift", "ipa": "/æsk fər ə lɪft/", "example1": "He asked me for a lift.", "example1_cn": "他请求搭我的便车。", "example2": "She asked her neighbor for a lift to the airport.", "example2_cn": "她请邻居捎她去机场。" },
+    { "us": "apart from", "ipa": "/əˈpɑːrt frəm/", "example1": "Apart from a few words, I did not know any French.", "example1_cn": "除了几个单词,我根本不会法语。", "example2": "Apart from Tom, everyone came.", "example2_cn": "除了汤姆,大家都来了。" }
+  ],
+  "stage7_cloze": {
+    "context": "After I ___1___ the village, I ___2___ on toward the next town. A young man asked me for a lift. As soon as he ___3___ into the car, I said hi in French. I ___4___ nearly reached the town when he asked, \"Do you speak English?\"",
+    "blanks": [
+      { "blank_no": 1, "options": ["had left", "leave", "have left", "was leaving"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["drove", "had driven", "drive", "was driven"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["had gotten", "got", "has gotten", "gets"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["had", "have", "was", "did"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did the writer pick up the young man?", "options": ["On the way to the next town", "At the airport", "In the town center", "At a gas station"] },
+    { "stem": "Did they talk during the journey?", "options": ["No, neither of them spoke", "Yes, they talked a lot", "Yes, in English", "Only the driver spoke"] },
+    { "stem": "What nationality was the young man?", "options": ["English", "French", "American", "German"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我到车站时,火车已经开走了\"(到之前已开走 → 过去完成):", "options": ["When I got to the station, the train had already left.", "When I got to the station, the train leaves.", "When I got to the station, the train has left.", "When I got to the station, the train was leaving now."] },
+    { "stem": "你想说\"她写完作业后就睡了\"(先写完 → after…had done):", "options": ["After she had finished her homework, she went to bed.", "After she finishes her homework, she went to bed.", "After she has finished her homework, she went to bed.", "After she will finish her homework, she went to bed."] },
+    { "stem": "你想说\"我本打算去看你,但太忙了\"(本打算但没成 → had planned):", "options": ["I had planned to visit you, but I was too busy.", "I plan to visit you, but I was too busy.", "I have planned to visit you, but I was too busy.", "I will plan to visit you, but I was too busy."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "amusing 的意思是:", "options": ["有趣的,好笑的", "无聊的", "危险的", "重要的"] },
+    { "kind": "vocab", "stem": "journey 的意思是:", "options": ["旅程,旅行", "工作", "语言", "村庄"] },
+    { "kind": "grammar", "stem": "\"He told me that he ___ the book before.\"(read,更早读过 → 过去完成)", "options": ["had read", "reads", "has read", "will read"] },
+    { "kind": "grammar", "stem": "\"By the time we arrived, the movie ___.\"(我们到之前已开始 → 过去完成)", "options": ["had started", "starts", "has started", "was starting now"] },
+    { "kind": "scenario", "stem": "\"After he had eaten, he washed the dishes.\" 哪件事先发生?", "options": ["他吃饭(had eaten)", "他洗碗(washed)", "两件同时", "都没发生"] },
+    { "kind": "scenario", "stem": "\"我本想给你打电话,可手机没电了\"(本打算但没成)用:", "options": ["had planned to call", "plan to call", "will call", "am calling"] },
+    { "kind": "reading", "stem": "Why did the writer speak French to the young man?", "options": ["He thought the young man was a local Frenchman", "The young man asked him to", "He wanted to practice French", "It was the law in France"], "passage": true },
+    { "kind": "reading", "stem": "What surprised the writer at the end?", "options": ["The young man was actually English", "The young man could not speak", "The town was closed", "The car broke down"], "passage": true },
+    { "kind": "listening", "stem": "How did the young man get the writer's attention?", "options": ["He waved at him on the way", "He called his phone", "He blocked the road", "He shouted from a window"], "audio": true },
+    { "kind": "listening", "stem": "When did the young man ask \"Do you speak English?\"", "options": ["Near the end, close to the town", "Right when he got in the car", "Before the trip started", "At the gas station"], "audio": true }
+  ]
+}

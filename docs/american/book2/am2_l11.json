@@ -67,7 +67,7 @@
     { "gp": "gp8", "name": "v.+sb+to do 宾补 ask/want/tell sb to do(辅考)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "现在进行时(is/are + doing)表示什么时候的动作?", "options": ["此刻 / 现阶段正在进行", "过去某一刻正在进行", "通常反复发生的习惯", "到现在为止的经历"] },
+    { "gp": "gp1", "stem": "\"Look! The children ___ in the yard right now.\"(此刻正在:play)", "stem_cn": "看!孩子们正在院子里玩。", "options": ["are playing","play","played","have played"] },
     { "gp": "gp1", "stem": "\"Tony worked in an office before, but he ___ at a bank now.\"(now，现在进行)", "stem_cn": "托尼以前在办公室上班,但现在他在一家银行工作。", "options": ["is working", "works", "worked", "has worked"] },
     { "gp": "gp2", "stem": "\"Tony ___ in a lawyer's office years ago.\"(years ago，一般过去)", "stem_cn": "托尼几年前在一家律师事务所工作。", "options": ["worked", "works", "is working", "has worked"] },
     { "gp": "gp2", "stem": "\"To my surprise, he ___ me the money immediately.\"(give,过去完成的动作)", "stem_cn": "令我意外的是,他立刻把钱给了我。", "options": ["gave", "gives", "has given", "is giving"] },

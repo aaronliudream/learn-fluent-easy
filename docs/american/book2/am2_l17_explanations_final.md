@@ -1,7 +1,7 @@
 # AM2 L17 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
 
-### s5 seq1 | ans: 不可逃避的义务(必须)
-must 常用来表示一种不可逃避的必须,说话人觉得没有选择余地。✓ She must appear in a red dress.
+### s5 seq1 | ans: must
+must 表示不可逃避的义务“必须”,后接动词原形。✓ You must wear a seat belt in the car.
 
 ### s5 seq2 | ans: must
 表"必须"用 must,后面直接跟动词原形 appear。must 本身不加 -s、也不加 to。✓ She must appear in a bright red dress.
@@ -27,8 +27,8 @@ must 没有过去式,过去的"必须"用 had to;musted、did must 都不存在�
 ### s5 seq9 | ans: had to
 Last year(去年)是过去,过去的"必须"用 had to,不能用 must(它没有过去式)。✓ Last year she had to wear short socks.
 
-### s5 seq10 | ans: 有把握的推测("一定是…")
-must 除了"必须",还能表示很有把握的推测"一定是"。✓ She must be at least thirty-five.
+### s5 seq10 | ans: must
+must 还能表示很有把握的推测"一定是…"。✓ The lights are on, so someone must be home.
 
 ### s5 seq11 | ans: must
 "一定有三十五岁"是很有把握的推测,用 must be。may/might/could 是"也许",把握没那么大。✓ She must be at least thirty-five.

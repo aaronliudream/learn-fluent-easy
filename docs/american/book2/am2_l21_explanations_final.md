@@ -1,7 +1,7 @@
 # AM2 L21 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
 
-### s5 seq1 | ans: 主语是动作的承受者(被…)
-被动语态里,主语是动作的承受者,表示"被…、受…"。✓ The airport was built = 机场被建。
+### s5 seq1 | ans: are
+被动语态 = be + 过去分词;一般现在、主语复数用 are made。✓ These cars are made in Japan.
 
 ### s5 seq2 | ans: be + 过去分词
 被动语态的基本构成 = be + 过去分词。✓ is / was + done。be 随时态和人称变化。

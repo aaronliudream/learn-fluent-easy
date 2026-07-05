@@ -67,7 +67,7 @@
     { "gp": "gp8", "name": "名词所有格——双重所有格(辅考)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "被动语态的谓语动词由什么构成?", "options": ["be + 过去分词", "be + 现在分词", "have + 过去分词", "情态动词 + 原形"] },
+    { "gp": "gp1", "stem": "\"The window ___ broken by the storm.\"(一般过去被动,单数:被打破)", "stem_cn": "窗户被暴风雨打破了。", "options": ["was","were","is","did"] },
     { "gp": "gp1", "stem": "\"The instrument ___ made in Germany.\"(一般过去被动,单数)", "stem_cn": "这件乐器是在德国制造的。", "options": ["was", "were", "is", "has"] },
     { "gp": "gp2", "stem": "\"This song ___ by many people.\"(一般现在被动,单数)", "stem_cn": "这首歌被许多人传唱。", "options": ["is sung", "sings", "is singing", "sang"] },
     { "gp": "gp2", "stem": "\"Our papers ___ every morning.\"(deliver,一般现在被动,复数)", "stem_cn": "我们的报纸每天早上被送来。", "options": ["are delivered", "deliver", "delivers", "is delivered"] },

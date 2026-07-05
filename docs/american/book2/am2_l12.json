@@ -67,7 +67,7 @@
     { "gp": "gp8", "name": "shall——仅 Shall we…?/Shall I…? 礼貌提议(美语将来用 will)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "一般将来时表示什么?", "options": ["将来要发生的事(will + 动词原形)", "此刻正在做的事", "过去发生的事", "到现在为止的经历"] },
+    { "gp": "gp1", "stem": "\"They ___ at noon tomorrow.\"(一般将来:will+动词原形)", "stem_cn": "他们明天中午会到。", "options": ["will arrive","arrive","arrived","are arriving"] },
     { "gp": "gp1", "stem": "\"Captain Reed ___ tomorrow.\"(sail,一般将来)", "stem_cn": "里德船长明天将起航。", "options": ["will sail", "sails", "sailed", "is sailing"] },
     { "gp": "gp1", "stem": "\"We ___ him at the dock.\"(meet,一般将来)", "stem_cn": "我们将去码头迎接他。", "options": ["will meet", "meet", "met", "have met"] },
     { "gp": "gp2", "stem": "\"I will see you tomorrow.\" 口语缩略成:", "options": ["I'll see you tomorrow.", "I see you tomorrow.", "I'm see you tomorrow.", "I willn't see you tomorrow."] },
@@ -78,12 +78,12 @@
     { "gp": "gp4", "stem": "\"他明天会走吗?\"(will 疑问):", "options": ["Will he leave tomorrow?", "Does he will leave tomorrow?", "He will leave tomorrow?", "Will he leaves tomorrow?"] },
     { "gp": "gp5", "stem": "把 \"I went to the party.\" 改成\"将要去\":", "options": ["I will go to the party.", "I will went to the party.", "I go to the party.", "I am go to the party."] },
     { "gp": "gp5", "stem": "下面哪一句表示\"将来要发生的事\"?", "options": ["The play will be very successful.", "The play was very successful.", "The play is very successful now.", "The play has been successful."] },
-    { "gp": "gp6", "stem": "be going to + 动词原形 表示什么?", "options": ["计划好、打算要做的事", "已经做完的事", "经常反复的习惯", "过去正在做的事"] },
+    { "gp": "gp6", "stem": "\"We ___ visit our grandparents this weekend.\"(计划好的打算:be going to)", "stem_cn": "这周末我们打算去看祖父母。", "options": ["are going to","will going to","go to","is going to"] },
     { "gp": "gp6", "stem": "\"I ___ buy a new bike next week.\"(打算、计划好要做)", "stem_cn": "我下周打算买辆新自行车。", "options": ["am going to", "will going to", "go to", "am go to"] },
     { "gp": "gp6", "stem": "\"Dark clouds are gathering. It ___ rain.\"(有迹象、马上要发生)", "stem_cn": "乌云正在聚集,快要下雨了。", "options": ["is going to", "will going to", "goes to", "is go to"] },
     { "gp": "gp7", "stem": "\"The train ___ at 8:20.\"(时刻表，一般现在时表将来)", "stem_cn": "火车8点20分发车。", "options": ["leaves", "will leaves", "is leave", "leaved"] },
     { "gp": "gp7", "stem": "\"We ___ a party this Friday.\"(已安排好，现在进行表将来)", "stem_cn": "这周五我们要办一场聚会。", "options": ["are having", "will having", "have had", "was having"] },
-    { "gp": "gp8", "stem": "shall 在现代美语里主要用来做什么?", "options": ["提建议、征求意见(Shall we…? / Shall I…?)", "表示将来(美语这么用已过时,要用 will)", "表示过去发生的事", "表示此刻正在做的事"] },
+    { "gp": "gp8", "stem": "\"___ I carry your bag for you?\"(主动提议帮忙:美语 shall 只用于提议)", "stem_cn": "我帮你拿包好吗?", "options": ["Shall","Will","Do","Am"] },
     { "gp": "gp8", "stem": "\"我们走吧?\"(提议一起做,注意人称和语序):", "options": ["Shall we go?", "Shall you go?", "Will I go?", "Do we shall go?"] }
   ],
   "stage6": [

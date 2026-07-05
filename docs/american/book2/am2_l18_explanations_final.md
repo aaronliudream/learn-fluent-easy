@@ -1,7 +1,7 @@
 # AM2 L18 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
 
-### s5 seq1 | ans: had + 过去分词
-过去完成时 = had + 过去分词,不分人称都用 had。它表示"过去的过去"。✓ I had left it on a chair beside the door.
+### s5 seq1 | ans: had
+"逃走"在"警察来"之前(过去的过去),用过去完成时 had + 过去分词。✓ When the police came, the thief had already run away.
 
 ### s5 seq2 | ans: had left
 "我到之前火车就开走了","开走"比"到达"更早,先发生的用过去完成 had left。✓ By the time I arrived, the train had left.
@@ -24,8 +24,8 @@ After 引导先发生的"吃午饭",用过去完成 had had(第一个 had 帮忙
 ### s5 seq8 | ans: 过去完成时(had + 过去分词)
 两件过去的事,先发生的那件用过去完成时,后发生的用一般过去时。✓ After he had gone, I called him.
 
-### s5 seq9 | ans: hadn't + 过去分词
-过去完成时的否定 = hadn't(had not)+ 过去分词。✓ It hadn't done this before.
+### s5 seq9 | ans: had not
+过去完成时否定 = had not + 过去分词。✓ I had not met her before that party.
 
 ### s5 seq10 | ans: Had
 过去完成的疑问句,把 had 提到主语前面。✓ Had his dog taken the bag before he came in?

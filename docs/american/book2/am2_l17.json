@@ -65,7 +65,7 @@
     { "gp": "gp8", "name": "in spite of + 名词——\"尽管\"(辅考)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "must 常常用来表示什么?", "options": ["不可逃避的义务(必须)", "过去做过的事", "此刻正在做的事", "将来可能发生的事"] },
+    { "gp": "gp1", "stem": "\"You ___ wear a seat belt in the car.\"(表义务:必须)", "stem_cn": "在车里你必须系安全带。", "options": ["must","musts","must to","are must"] },
     { "gp": "gp1", "stem": "\"She ___ appear in a bright red dress.\"(表义务:必须穿)", "stem_cn": "她必须穿一条鲜红的连衣裙登台。", "options": ["must", "musts", "must to", "musting"] },
     { "gp": "gp1", "stem": "\"I ___ finish my homework tonight.\"(表义务:必须)", "stem_cn": "我今晚必须完成作业。", "options": ["must", "musts", "am must", "must to"] },
     { "gp": "gp2", "stem": "must 表\"必须\"时,可以用哪个短语替换?", "options": ["have to / have got to", "want to", "would like to", "used to"] },
@@ -74,7 +74,7 @@
     { "gp": "gp3", "stem": "\"Must you go now?\" 用 have to 提问,同样意思:", "options": ["Do you have to go now?", "Do you must go now?", "Have you to go now?", "You have to go now?"] },
     { "gp": "gp4", "stem": "must 表\"必须\"时,它的过去表达是:", "options": ["had to", "musted", "must-ed", "did must"] },
     { "gp": "gp4", "stem": "\"Last year she ___ wear short socks.\"(去年:过去的\"必须\")", "stem_cn": "去年她不得不穿短袜。", "options": ["had to", "must", "musted", "have to"] },
-    { "gp": "gp5", "stem": "must 除了表\"必须\",还能表示什么?", "options": ["有把握的推测(\"一定是…\")", "客气的请求", "随口的建议", "热情的邀请"] },
+    { "gp": "gp5", "stem": "\"The lights are on, so someone ___ be home.\"(有把握的推测:一定在家)", "stem_cn": "灯亮着,所以一定有人在家。", "options": ["must","can","would","may"] },
     { "gp": "gp5", "stem": "\"She ___ be at least thirty-five.\"(有把握的推测:一定有)", "stem_cn": "她一定有至少三十五岁了。", "options": ["must", "may", "might", "could"] },
     { "gp": "gp6", "stem": "\"It ___ be terrible to be grown up!\"(说话人很肯定的推测)", "stem_cn": "长大成人一定很可怕!", "options": ["must", "may", "can", "would"] },
     { "gp": "gp6", "stem": "\"Yesterday I ___ work late.\"(昨天:过去的\"不得不\")", "stem_cn": "昨天我不得不加班到很晚。", "options": ["had to", "must", "have to", "musted"] },

@@ -65,7 +65,7 @@
     { "gp": "gp8", "name": "one 代替名词避免重复(辅考)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "一般现在时常用来表示什么?", "options": ["经常发生的事 / 习惯性动作", "此刻正在做的事", "将来要做的事", "刚做完的事"] },
+    { "gp": "gp1", "stem": "\"The store ___ at nine every morning.\"(表习惯/规律:open)", "stem_cn": "这家店每天早上九点开门。", "options": ["opens","is opening","opened","will open"] },
     { "gp": "gp1", "stem": "\"I ___ a lot of pictures.\"(经常做:一般现在时)", "stem_cn": "我画很多画。", "options": ["paint", "am painting", "painted", "will paint"] },
     { "gp": "gp2", "stem": "\"I ___ breakfast now.\"(此刻正在:现在进行时)", "stem_cn": "我正在吃早饭。", "options": ["am having", "have", "had", "will have"] },
     { "gp": "gp2", "stem": "\"Do you always ___ up so late?\"(经常:一般现在时)", "stem_cn": "你总是起这么晚吗?", "options": ["get", "getting", "are getting", "got"] },
@@ -75,7 +75,7 @@
     { "gp": "gp4", "stem": "主语是第三人称单数(he/she/it)时,一般现在时的动词要:", "options": ["加 -s / -es", "加 -ing", "加 -ed", "不变"] },
     { "gp": "gp4", "stem": "\"She always ___ me the truth.\"(她总是…真相:第三人称单数)", "stem_cn": "她总是告诉我真相。", "options": ["tells", "tell", "telling", "told"] },
     { "gp": "gp4", "stem": "\"My sister ___ modern art.\"(我妹妹…现代艺术:第三人称单数)", "stem_cn": "我妹妹欣赏现代艺术。", "options": ["appreciates", "appreciate", "is appreciating", "appreciated"] },
-    { "gp": "gp5", "stem": "下面哪类动词一般不用进行时(-ing)?", "options": ["表状态的动词(like / know / understand 等)", "表动作的动词(run / jump)", "所有及物动词", "所有短动词"] },
+    { "gp": "gp5", "stem": "\"I ___ this book is very interesting.\"(表'认为',状态动词不用进行时)", "stem_cn": "我认为这本书很有趣。", "options": ["think","am thinking","thought","will think"] },
     { "gp": "gp5", "stem": "\"I ___ what you mean.\"(表'明白',状态动词不用进行时)", "stem_cn": "我明白你的意思。", "options": ["understand", "am understanding", "understood", "will understand"] },
     { "gp": "gp5", "stem": "\"She ___ this song.\"(表'喜欢',不用进行时)", "stem_cn": "她喜欢这首歌。", "options": ["likes", "is liking", "liked", "will like"] },
     { "gp": "gp6", "stem": "\"I ___ you like classical music.\"(表'听说',一般现在时)", "stem_cn": "我听说你喜欢古典音乐。", "options": ["hear", "am hearing", "heard", "will hear"] },

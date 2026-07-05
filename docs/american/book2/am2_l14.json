@@ -67,10 +67,10 @@
     { "gp": "gp9", "name": "反身代词——形式/作宾语/强调(辅考,同步L14章+课文 himself)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "过去完成时由什么构成?", "options": ["had + 过去分词", "have + 过去分词", "was + 过去分词", "will + 动词原形"] },
+    { "gp": "gp1", "stem": "\"She ___ never seen snow before she came here.\"(她来这之前从没见过:过去完成)", "stem_cn": "她来这儿之前从没见过雪。", "options": ["had","has","was","did"] },
     { "gp": "gp1", "stem": "\"After I ___ the village, I drove on.\"(leave,先离开，过去完成)", "stem_cn": "我离开村庄后,继续往前开。", "options": ["had left", "left", "have left", "was leaving"] },
     { "gp": "gp1", "stem": "\"When he ___ lunch, he asked for water.\"(finish,先吃完，过去完成)", "stem_cn": "他吃完午饭后,要了些水。", "options": ["had finished", "finished", "has finished", "finishes"] },
-    { "gp": "gp2", "stem": "过去完成时用来表示什么?", "options": ["过去两个动作里,先发生的那个", "此刻正在做的事", "将来要做的事", "经常反复的习惯"] },
+    { "gp": "gp2", "stem": "\"He told me he ___ the book before.\"(他说他之前读过:过去完成 read)", "stem_cn": "他告诉我他以前读过这本书。", "options": ["had read","read","has read","reads"] },
     { "gp": "gp2", "stem": "\"As soon as he had gotten into the car, I said hi.\" 哪件事先发生?", "options": ["他上车(had gotten in)", "我打招呼(said hi)", "两件同时", "都没发生"] },
     { "gp": "gp3", "stem": "\"The children ran away ___ they had broken the window.\"(在…之后)", "stem_cn": "孩子们打碎窗户之后就跑掉了。", "options": ["after", "before", "so", "and"] },
     { "gp": "gp3", "stem": "\"___ the sun had set, we returned to the hotel.\"(太阳一下山就…)", "stem_cn": "太阳一下山,我们就回了旅馆。", "options": ["As soon as", "Because", "Although", "Unless"] },
@@ -82,7 +82,7 @@
     { "gp": "gp6", "stem": "\"I ___ to go shopping, but my mom came.\"(本打算…但没成)", "stem_cn": "我本打算去购物,但我妈妈来了。", "options": ["had planned", "plan", "will plan", "am planning"] },
     { "gp": "gp6", "stem": "\"She ___ that he would come, but he didn't.\"(原本希望…但落空)", "stem_cn": "她原本希望他会来,但他没来。", "options": ["had hoped", "hopes", "will hope", "is hoping"] },
     { "gp": "gp7", "stem": "\"It was the third time that I ___ him.\"(正式/书面:此句式规范用过去完成)", "stem_cn": "那是我第三次见他。", "options": ["had met", "have met", "meeting", "meet"] },
-    { "gp": "gp8", "stem": "过去完成时的否定是:", "options": ["had not + 过去分词", "did not + 过去分词", "have not + 过去分词", "was not + 过去分词"] },
+    { "gp": "gp8", "stem": "\"She ___ finished her homework when the guests came.\"(客人来时还没写完:过去完成否定)", "stem_cn": "客人来时,她还没写完作业。", "options": ["had not","did not","was not","have not"] },
     { "gp": "gp8", "stem": "\"___ you ever seen him before that day?\"(过去完成疑问)", "stem_cn": "那天之前你见过他吗?", "options": ["Had", "Did", "Have", "Were"] },
     { "gp": "gp8", "stem": "\"By six o'clock, they ___ dinner.\"(到六点之前已吃完，过去完成)", "stem_cn": "到六点时,他们已经吃完晚饭了。", "options": ["had finished", "finished", "have finished", "finish"] },
     { "gp": "gp9", "stem": "\"他自己\"的反身代词是:", "options": ["himself", "hisself", "heself", "him self"] },

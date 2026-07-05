@@ -7,8 +7,8 @@
 ### s5 seq3 | ans: I couldn't hear the actors.
 按"谁 + 做什么 + 对象"排:I(谁)couldn't hear(做什么)the actors(对象)。✓ I couldn't hear the actors.
 
-### s5 seq4 | ans: 情态动词
-can(能/会)不表示具体动作,它放在动词前面表示"有能力做",这类词叫情态动词,同类的还有 will、must。✓ She can swim well.
+### s5 seq4 | ans: can
+情态动词 can 表"会/能",后面接动词原形。✓ He can speak three languages.
 
 ### s5 seq5 | ans: to
 give 有两种说法:give + 人 + 物,或 give + 物 + to + 人。"物"放前面时,"人"前要加 to。✓ She gave a great seat to me. 易错:不用 for(buy 才和 for 搭配)。
@@ -19,8 +19,8 @@ smell(闻起来)这类词后面接形容词,描述东西本身:✓ The pizza sme
 ### s5 seq7 | ans: angry
 look 在这里是"看起来",后面接形容词说明"他"的状态:✓ He looked angry.(他看起来很生气)。angrily 是"生气地做某事",这句没有动作,所以不用。
 
-### s5 seq8 | ans: 主系表
-The play(主语,说的是"什么")+ was(系动词,像个等号)+ really funny(表语,描述主语)——"谁/什么 + 是 + 怎么样"就是主系表。语法卡第一行的例子就是这句。
+### s5 seq8 | ans: tastes
+taste 是系动词,后接形容词 delicious 作表语——"主语+系动词+表语"就是主系表。✓ The soup tastes delicious.
 
 ### s5 seq9 | ans: I really enjoyed.
 enjoy(喜欢/享受)必须说清"享受什么",后面一定要带对象(宾语):✓ I really enjoyed it. 另外三句的动词(arrived 到达、were talking 说话、smiled 微笑)自己就能把意思说完整,不需要对象。

@@ -1,7 +1,7 @@
 # AM2 L15 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
 
-### s5 seq1 | ans: 转述别人说过的话
-间接引语就是把别人说过的话"转述"出来(不加引号,不照搬原话)。✓ He said that business was bad.
+### s5 seq1 | ans: was
+转述过去说的话,从句时态往过去退一步:am → was。✓ She said that she was tired.
 
 ### s5 seq2 | ans: say/tell + that + 从句
 间接引语常用 say/tell + that + 从句 的结构。✓ He told me that…

@@ -1,10 +1,10 @@
 # AM2 L13 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
 
-### s5 seq1 | ans: 将来某个时候正在进行的事
-将来进行时表示"将来某个时候正在做"的事,比如明天这个时候正在干什么。✓ They will be arriving tomorrow.
+### s5 seq1 | ans: will be flying
+将来某个时候正在进行,用将来进行时 will be + 动词-ing。✓ This time tomorrow, they will be flying over the ocean.
 
-### s5 seq2 | ans: will/shall be + 动词-ing
-将来进行时 = will/shall be + 动词-ing。✓ They will be singing tomorrow evening.
+### s5 seq2 | ans: will be cooking
+将来某个时刻正在进行,用将来进行时 will be + 动词-ing。✓ At 8 tonight, she will be cooking dinner.
 
 ### s5 seq3 | ans: will be arriving
 tomorrow(明天)+ "将要到达"用将来进行时 will be arriving。✓ They will be arriving here tomorrow.

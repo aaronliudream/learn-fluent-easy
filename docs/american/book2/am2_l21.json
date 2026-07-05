@@ -64,7 +64,7 @@
     { "gp": "gp8", "name": "drive sb mad / be determined to(辅考短语)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "被动语态(be + 过去分词)表示什么?", "options": ["主语是动作的承受者(被…)", "主语主动去做某事", "动作正在进行", "动作将来才发生"] },
+    { "gp": "gp1", "stem": "\"These cars ___ made in Japan.\"(一般现在被动,复数:被制造)", "stem_cn": "这些车是日本制造的。", "options": ["are","is","does","have"] },
     { "gp": "gp1", "stem": "被动语态的基本构成是:", "options": ["be + 过去分词", "have + 过去分词", "be + 动词-ing", "will + 动词原形"] },
     { "gp": "gp2", "stem": "\"The airport ___ built years ago.\"(过去被动:被建造)", "stem_cn": "机场是许多年前建的。", "options": ["was", "is", "has", "does"] },
     { "gp": "gp2", "stem": "\"This room ___ cleaned every day.\"(一般现在被动:被打扫)", "stem_cn": "这个房间每天都打扫。", "options": ["is", "are", "has", "does"] },

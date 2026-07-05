@@ -67,7 +67,7 @@
     { "gp": "gp8", "name": "间接引语——转述疑问(asked if/whether + 陈述语序)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "间接引语是用来做什么的?", "options": ["转述别人说过的话", "问别人问题", "描述正在发生的事", "命令别人做事"] },
+    { "gp": "gp1", "stem": "\"'I am tired,' she said.\" 转述:She said that she ___ tired.(时态后退)", "stem_cn": "她说她累了。", "options": ["was","is","will be","been"] },
     { "gp": "gp1", "stem": "间接引语常用哪个结构?", "options": ["say/tell + that + 从句", "will + 动词原形", "be + 过去分词", "had + 过去分词"] },
     { "gp": "gp1", "stem": "\"He said ___ business was bad.\"(引出转述的内容)", "stem_cn": "他说生意很糟糕。", "options": ["that", "what", "which", "who"] },
     { "gp": "gp2", "stem": "关于 say 和 tell,正确的是:", "options": ["say 后不接人,tell 后必须接人", "say 后必须接人,tell 后不接人", "两个都必须接人", "两个都不接人"] },

@@ -65,7 +65,7 @@
     { "gp": "gp8", "name": "beside(在旁)≠ besides(除…外)(辅考)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "过去完成时(表'过去的过去')的构成是:", "options": ["had + 过去分词", "will + 动词原形", "is/are + 动词-ing", "have/has + 过去分词"] },
+    { "gp": "gp1", "stem": "\"When the police came, the thief ___ already run away.\"(警察来之前已逃走:过去完成)", "stem_cn": "警察来时,小偷已经逃走了。", "options": ["had","has","was","did"] },
     { "gp": "gp1", "stem": "\"By the time I arrived, the train ___ left.\"(我到之前火车就已开走)", "stem_cn": "我到达时,火车已经开走了。", "options": ["had left", "has left", "left", "was leaving"] },
     { "gp": "gp1", "stem": "\"When I saw her, she ___ already finished her work.\"(我看到她之前就已完成)", "stem_cn": "我见到她时,她已经完成了工作。", "options": ["had", "has", "was", "did"] },
     { "gp": "gp2", "stem": "过去完成时用来表示:", "options": ["在过去某个动作'之前'就已完成的事", "此刻正在做的事", "将来要做的事", "经常反复的习惯"] },
@@ -73,7 +73,7 @@
     { "gp": "gp2", "stem": "\"He told me he ___ seen the movie before.\"(他说他之前已看过)", "stem_cn": "他告诉我他以前看过这部电影。", "options": ["had", "has", "have", "did"] },
     { "gp": "gp3", "stem": "\"By the time the owner came in, his dog ___ taken the bag.\"(老板进来前狗已叼走)", "stem_cn": "老板进来时,他的狗已经把包叼走了。", "options": ["had", "has", "have", "was"] },
     { "gp": "gp3", "stem": "两件都发生在过去的事,先发生的那件用:", "options": ["过去完成时(had + 过去分词)", "一般现在时", "一般将来时", "现在进行时"] },
-    { "gp": "gp4", "stem": "过去完成时的否定式是:", "options": ["hadn't + 过去分词", "don't + 动词原形", "wasn't + 动词-ing", "haven't + 过去分词"] },
+    { "gp": "gp4", "stem": "\"I ___ met her before that party.\"(那次聚会前没见过:过去完成否定)", "stem_cn": "那次聚会之前我没见过她。", "options": ["had not","did not","have not","was not"] },
     { "gp": "gp4", "stem": "\"___ his dog taken the bag before he came in?\"(过去完成的疑问:助动词提前)", "stem_cn": "他进来之前,他的狗已经把包叼走了吗?", "options": ["Had", "Has", "Did", "Was"] },
     { "gp": "gp5", "stem": "have 表示'拥有'时,可以换成:", "options": ["have got", "have gone", "have done", "have been"] },
     { "gp": "gp5", "stem": "\"He has a big house.\" 与它意思相同的是:", "options": ["He has got a big house.", "He is got a big house.", "He does got a big house.", "He has getting a big house."] },

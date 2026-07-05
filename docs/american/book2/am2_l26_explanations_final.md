@@ -1,7 +1,7 @@
 # AM2 L26 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
 
-### s5 seq1 | ans: 经常发生的事 / 习惯性动作
-一般现在时表示经常做、习惯性的动作,或反复发生的事。✓ I paint a lot of pictures 我经常画画。
+### s5 seq1 | ans: opens
+经常、规律发生的事用一般现在时;主语 the store 第三人称单数,open 加 -s。✓ The store opens at nine every morning.
 
 ### s5 seq2 | ans: paint
 "我经常画画"是习惯,用一般现在时 paint。✓ I paint a lot of pictures. am painting 是此刻正在。
@@ -30,8 +30,8 @@ always(总是)表示经常,用一般现在时 get。✓ Do you always get up so 
 ### s5 seq10 | ans: appreciates
 主语 My sister 是第三人称单数,appreciate 加 -s 变 appreciates。✓ My sister appreciates modern art.
 
-### s5 seq11 | ans: 表状态的动词(like / know / understand 等)
-like / know / understand / see / hear 这类表状态的动词,一般不用进行时。
+### s5 seq11 | ans: think
+think 表"认为"是状态动词,用一般现在时,不用进行时。✓ I think this book is very interesting.
 
 ### s5 seq12 | ans: understand
 understand(明白)是状态动词,用一般现在时,不说 am understanding。✓ I understand what you mean.

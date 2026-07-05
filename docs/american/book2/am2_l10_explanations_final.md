@@ -1,7 +1,7 @@
 # AM2 L10 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
 
-### s5 seq1 | ans: be + 过去分词
-被动语态的谓语 = be + 过去分词(表示"被…")。✓ It was made in Germany.(be=was,过去分词=made)
+### s5 seq1 | ans: was
+被动语态 = be + 过去分词;一般过去、主语单数用 was broken。✓ The window was broken by the storm.
 
 ### s5 seq2 | ans: was
 一般过去被动 = was/were + 过去分词;The instrument 是单数,用 was。✓ The instrument was made in Germany.

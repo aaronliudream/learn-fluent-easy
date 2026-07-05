@@ -1,13 +1,13 @@
 # AM2 L27 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
 
-### s5 seq1 | ans: 过去某时发生并已结束的动作
-一般过去时表示过去某个时候发生、并且已经结束的动作。✓ They cooked a meal 他们(当时)做了一顿饭。
+### s5 seq1 | ans: watched
+过去发生并已结束的动作,用一般过去时 watched。✓ We watched a movie yesterday evening.
 
 ### s5 seq2 | ans: cooked
 "在火上做了饭"是过去发生的事,用一般过去时 cooked。✓ They cooked a meal over an open fire.
 
-### s5 seq3 | ans: 加 -ed
-规则动词的过去式一般在词尾加 -ed。✓ cook→cooked / form→formed / shout→shouted.
+### s5 seq3 | ans: opened
+规则动词过去式在词尾加 -ed:open → opened。✓ She opened the door and went out.
 
 ### s5 seq4 | ans: hurried
 "匆忙跑到外面"是过去发生;hurry 以辅音字母+y 结尾,变 y 为 i 再加 -ed → hurried。✓ They hurried outside.
@@ -24,14 +24,14 @@
 ### s5 seq8 | ans: wound
 "小溪蜿蜒流过"是过去发生;wind 是不规则动词,过去式是 wound(读 /waʊnd/)。✓ The stream wound its way across the field.
 
-### s5 seq9 | ans: did not + 动词原形
-一般过去时的否定式是 did not(didn't)+ 动词原形。✓ They did not stay inside.
+### s5 seq9 | ans: did not
+一般过去时否定 = did not + 动词原形。✓ They did not see the stream in the dark.
 
 ### s5 seq10 | ans: did not
 "起初没听见"是过去时否定,用 did not + 动词原形 hear。✓ They did not hear the rain at first.
 
-### s5 seq11 | ans: Did + 主语 + 动词原形
-一般过去时的一般疑问句:Did + 主语 + 动词原形。✓ Did they cook a meal?
+### s5 seq11 | ans: Did
+一般过去时的一般疑问句:Did + 主语 + 动词原形。✓ Did the boys hear the rain at first?
 
 ### s5 seq12 | ans: Did
 过去时一般疑问句用 Did 开头,后面动词用原形 cook。✓ Did they cook a meal over the fire?

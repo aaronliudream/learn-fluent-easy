@@ -67,8 +67,8 @@
     { "gp": "gp8", "name": "现在进行时(at present 正在)——复习对照" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "将来进行时表示什么?", "options": ["将来某个时候正在进行的事", "此刻正在进行的事", "过去发生的事", "到现在为止的经历"] },
-    { "gp": "gp1", "stem": "将来进行时由什么构成?", "options": ["will/shall be + 动词-ing", "will + 动词原形", "be + 过去分词", "have + 过去分词"] },
+    { "gp": "gp1", "stem": "\"This time tomorrow, they ___ over the ocean.\"(明天此刻正在飞:将来进行 fly)", "stem_cn": "明天这个时候,他们将在飞越大洋。", "options": ["will be flying","will fly","are flying","flew"] },
+    { "gp": "gp1", "stem": "\"At 8 tonight, she ___ dinner.\"(今晚8点正在做:将来进行 cook)", "stem_cn": "今晚8点,她将在做饭。", "options": ["will be cooking","will cook","is cooking","cooked"] },
     { "gp": "gp1", "stem": "\"They ___ here tomorrow.\"(arrive,将来进行时)", "stem_cn": "他们明天将要到达这儿。", "options": ["will be arriving", "will arrived", "are arriving", "arrived"] },
     { "gp": "gp2", "stem": "\"现在他们正在踢球\"(此刻正在，现在进行):", "options": ["They are playing football.", "They will be playing football.", "They played football.", "They play football."] },
     { "gp": "gp2", "stem": "\"明天这个时候他们将在踢球\"(将来某时正在，将来进行):", "options": ["They will be playing football tomorrow.", "They are playing football tomorrow.", "They played football tomorrow.", "They play football tomorrow."] },

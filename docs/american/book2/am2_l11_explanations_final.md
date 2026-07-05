@@ -1,7 +1,7 @@
 # AM2 L11 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
 
-### s5 seq1 | ans: 此刻 / 现阶段正在进行
-现在进行时(is/are + doing)表示"此刻正在做"或"这段时间正在做"的事。✓ He is now working at a bank.(现阶段在银行上班)
+### s5 seq1 | ans: are playing
+此刻正在进行,用现在进行时 are + playing。✓ Look! The children are playing in the yard right now.
 
 ### s5 seq2 | ans: is working
 句尾 now 是"现在"的信号,表示现阶段正在做的事,用现在进行时 is working。✓ He is now working at a bank.

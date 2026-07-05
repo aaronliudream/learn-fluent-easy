@@ -1,7 +1,7 @@
 # AM2 L14 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
 
-### s5 seq1 | ans: had + 过去分词
-过去完成时 = had + 过去分词,表示"过去的过去"(比某个过去时间更早发生)。✓ After I had left the village…
+### s5 seq1 | ans: had
+过去某动作之前就已完成,用过去完成时 had + 过去分词。✓ She had never seen snow before she came here.
 
 ### s5 seq2 | ans: had left
 "离开村庄"发生在"开车走"之前,先发生的用过去完成时 had left。✓ After I had left the village, I drove on.
@@ -9,8 +9,8 @@
 ### s5 seq3 | ans: had finished
 "吃完午饭"在"要水"之前,先发生的用过去完成时 had finished。✓ When he had finished lunch, he asked for water.
 
-### s5 seq4 | ans: 过去两个动作里,先发生的那个
-过去完成时用来表示过去的两个动作里,哪一个更早发生(先发生的用过去完成)。✓
+### s5 seq4 | ans: had read
+"读过"发生在"告诉"之前(过去的过去),用过去完成时 had read。✓ He told me he had read the book before.
 
 ### s5 seq5 | ans: 他上车(had gotten in)
 had gotten in 是过去完成时,表示更早发生;said hi 是一般过去时,后发生。所以先发生的是"上车"。✓
@@ -46,8 +46,8 @@ had gotten in 是过去完成时,表示更早发生;said hi 是一般过去时,�
 "这是我第三次见他"用 "It was the … time that + 过去完成时" 句式,填 had met。✓ It was the third time that I had met him.
 📌 口语里美国人也常说 "It was the third time I met him"(裸过去);考试和正式写作用 "had met"。两种都对,场合不同。
 
-### s5 seq16 | ans: had not + 过去分词
-过去完成时的否定 = had not + 过去分词。✓ I had not seen him before.
+### s5 seq16 | ans: had not
+过去完成时否定 = had not + 过去分词。✓ She had not finished her homework when the guests came.
 
 ### s5 seq17 | ans: Had
 过去完成时的疑问,把 had 提到句子最前面。✓ Had you ever seen him before that day?

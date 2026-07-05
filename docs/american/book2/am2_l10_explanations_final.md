@@ -65,24 +65,31 @@ Two strings 是复数,一般过去被动用 were + 过去分词 broken。✓ Two
 
 ### s6 seq4 | ans: 在…制造 / 产自…
 be made in = 在…制造、产自…。✓ It was made in Germany.
+顺带记:被拿走 = be taken away;被弄坏 = be damaged;被展示 = be shown / be on display.
 
 ### s6 seq5 | ans: 属于
 belong to = 属于。✓ It has belonged to my family.
+顺带记:离开 = leave;来自 = come from;送给 = give to.
 
 ### s6 seq6 | ans: 被允许(做某事)
 be allowed to = 被允许做某事。✓ We are not allowed to touch it.
+顺带记:被禁止 = be forbidden;被要求 = be asked to;被邀请 = be invited.
 
 ### s7 seq1 | ans: was
 一般过去被动;It(古钢琴)单数,用 was + 过去分词 made。✓ It was made in Germany.
+✗ is:made 是过去的事,不用一般现在 is;✗ were:主语 It 单数,配 was 不配 were;✗ has:被动是 be+过去分词,不用 has.
 
 ### s7 seq2 | ans: was
 一般过去被动;was + 过去分词 bought。✓ It was bought by my grandpa.
+✗ is:过去的事用 was,不用 is;✗ were:主语 It 单数;✗ did:被动是 be+过去分词,不用助动词 did.
 
 ### s7 seq3 | ans: was
 一般过去被动;was + 过去分词 damaged。✓ Recently it was damaged.
+✗ is:过去的事用 was;✗ were:主语 it 单数;✗ had:被动用 be,不用 had.
 
 ### s7 seq4 | ans: were
 two strings 是复数,一般过去被动用 were + 过去分词 broken。✓ Two strings were broken.
+✗ was:主语 two strings 复数,要用 were;✗ is:过去的事且复数;✗ has:被动用 be,不用 has.
 
 ### s8 seq1 | ans: In Germany
 课文说 It was made in Germany,古钢琴产自德国。
@@ -104,9 +111,11 @@ two strings 是复数,一般过去被动用 were + 过去分词 broken。✓ Two
 
 ### s10 seq1 | ans: 损坏
 damage = 损坏。✓ It was damaged by a visitor.
+顺带记:修理 = repair / fix;购买 = buy;展示 = show / display.
 
 ### s10 seq2 | ans: 允许
 allow = 允许、让。✓ We are not allowed to touch it.
+顺带记:拒绝 = refuse;禁止 = forbid;命令 = order.
 
 ### s10 seq3 | ans: was broken
 一般过去被动 = was + 过去分词 broken。✓ The window was broken by the boy.

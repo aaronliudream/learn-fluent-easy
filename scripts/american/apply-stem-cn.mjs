@@ -23,6 +23,17 @@ const CN = {
     '"The movie starts ___ 8 o\'clock."(钟点)': "电影八点开始。",
     '"It often snows ___ January."(只说月份)': "一月常常下雪。",
   },
+  am2_l10: {
+    '"The instrument ___ made in Germany."(一般过去被动,单数)': "这件乐器是在德国制造的。",
+    '"This song ___ by many people."(一般现在被动,单数)': "这首歌被许多人传唱。",
+    '"Our papers ___ every morning."(deliver,一般现在被动,复数)': "我们的报纸每天早上被送来。",
+    '"The bridge ___ in 1942."(build,一般过去被动)': "这座桥建于1942年。",
+    '"Two strings ___ by the visitor."(break,一般过去被动,复数)': "两根琴弦被那位访客弄断了。",
+    '"The clavichord ___ by my grandpa."(buy,一般过去被动)': "这架古钢琴是我爷爷买的。",
+    '"This bridge was built ___ prisoners of war."(指出谁建的)': "这座桥是战俘建造的。",
+    '"The window ___ by the boy."(break,一般过去被动)': "窗户是那个男孩打破的。",
+    '"Rice ___ in many countries."(grow,一般现在被动)': "水稻在许多国家被种植。",
+  },
 };
 
 let total = 0, patched = 0;

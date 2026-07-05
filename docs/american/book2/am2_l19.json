@@ -1,0 +1,137 @@
+{
+  "id": "am2_l19",
+  "unit_no": 3,
+  "lesson_no": 19,
+  "title_en": "Sold out",
+  "title_cn": "票已售完",
+  "grammar_focus": "can / could / may / might 的用法(主考:表请求 Can/Could/May I…?——could/might 更委婉 · 表推测'可能'He may come · may/might + have + 过去分词表'可能已经'——对过去的推测)+ 感叹句 What a…! 与 might as well(辅考:What a pity! · might as well = 不妨、还是…的好)",
+  "scene": "剧就要开演了,匆匆赶到售票处却被告知票已售完;正巧一名男子来退票,但那两张是下周三的——'我还是买下吧',我丧气地说",
+  "grammar_card": {
+    "title": "说'可以…吗 / 可能…'(can / could / may / might)",
+    "intro": "本课讲用 can / could / may / might 提出请求('可以…吗')和表示推测('可能…')。请求时 could / might 更委婉;'可能已经…了'用 may/might + have + 过去分词。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课 / 常见例子"],
+      "rows": [
+        ["提请求'可以…吗':Can / Could / May / Might I …?", "May I have two tickets, please?"],
+        ["could / might 比 can / may 更委婉、更客气", "Could I have those two tickets, please?"],
+        ["may / might 表推测'可能、也许'", "The play may begin at any moment."],
+        ["'可能已经…了'= may/might + have + 过去分词", "It may have begun already."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "感叹句 What a + 名词:What a pity! 真遗憾!", "mark": "What a…!" },
+      { "rule": "might as well = 不妨、还是…的好:I might as well take them.", "mark": "might as well" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — When will the writer see the play?",
+    "options": ["At next Wednesday's performance", "That same evening", "Never, the play was canceled", "The following morning"],
+    "answer_index": 0
+  },
+  "passage": "'The play may begin at any moment,' I said. 'It may have begun already,' Susan answered. I hurried to the box office. 'May I have two tickets, please?' I asked. 'I'm sorry, we've sold out,' the girl said. 'What a pity!' Susan exclaimed. Just then, a man hurried to the box office. 'Can I return these two tickets?' he asked. 'Certainly,' the girl said. I went back to the box office at once. 'Could I have those two tickets, please?' I asked. 'Certainly,' the girl said, 'but they're for next Wednesday's performance. Do you still want them?' 'I might as well have them,' I said sadly.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "'The play may begin at any moment,' I said.", "text_cn": "\"剧马上就要开演了,\"我说。" },
+    { "seq": 2, "speaker": null, "text_en": "'It may have begun already,' Susan answered.", "text_cn": "\"也许已经开演了呢,\"苏珊回答说。" },
+    { "seq": 3, "speaker": null, "text_en": "I hurried to the box office. 'May I have two tickets, please?' I asked.", "text_cn": "我匆匆赶到售票处,问:\"我可以买两张票吗?\"" },
+    { "seq": 4, "speaker": null, "text_en": "'I'm sorry, we've sold out,' the girl said.", "text_cn": "\"对不起,票已售完,\"那姑娘说。" },
+    { "seq": 5, "speaker": null, "text_en": "'What a pity!' Susan exclaimed.", "text_cn": "\"真可惜!\"苏珊大声说。" },
+    { "seq": 6, "speaker": null, "text_en": "Just then, a man hurried to the box office.", "text_cn": "正在这时,一个男子匆匆奔向售票处。" },
+    { "seq": 7, "speaker": null, "text_en": "'Can I return these two tickets?' he asked. 'Certainly,' the girl said.", "text_cn": "\"我可以退掉这两张票吗?\"他问。\"当然可以,\"那姑娘说。" },
+    { "seq": 8, "speaker": null, "text_en": "I went back to the box office at once.", "text_cn": "我马上又回到售票处。" },
+    { "seq": 9, "speaker": null, "text_en": "'Could I have those two tickets, please?' I asked.", "text_cn": "\"我可以买那两张票吗?\"我问。" },
+    { "seq": 10, "speaker": null, "text_en": "'Certainly,' the girl said, 'but they're for next Wednesday's performance. Do you still want them?' 'I might as well have them,' I said sadly.", "text_cn": "\"当然可以,不过这两张票是下星期三的,您还要吗?\"\"我还是买下的好,\"我垂头丧气地说。" }
+  ],
+  "words": [
+    { "word": "hurry", "ipa": "/ˈhɜːri/", "pos": "v", "meaning_cn": "匆忙,赶紧", "example": "I hurried to the box office" },
+    { "word": "box office", "ipa": "/ˈbɑːks ˌɔːfɪs/", "pos": "n", "meaning_cn": "(剧院/影院)售票处", "example": "hurried to the box office" },
+    { "word": "pity", "ipa": "/ˈpɪti/", "pos": "n", "meaning_cn": "令人遗憾的事", "example": "What a pity!" },
+    { "word": "exclaim", "ipa": "/ɪkˈskleɪm/", "pos": "v", "meaning_cn": "惊叫,大声说", "example": "Susan exclaimed" },
+    { "word": "return", "ipa": "/rɪˈtɜːrn/", "pos": "v", "meaning_cn": "退回,归还", "example": "return these two tickets" },
+    { "word": "sadly", "ipa": "/ˈsædli/", "pos": "adv", "meaning_cn": "丧气地,悲哀地", "example": "I said sadly" },
+    { "word": "performance", "ipa": "/pərˈfɔːrməns/", "pos": "n", "meaning_cn": "演出", "example": "next Wednesday's performance" },
+    { "word": "moment", "ipa": "/ˈmoʊmənt/", "pos": "n", "meaning_cn": "片刻,瞬间", "example": "at any moment" },
+    { "word": "certainly", "ipa": "/ˈsɜːrtnli/", "pos": "adv", "meaning_cn": "当然可以", "example": "Certainly, the girl said" },
+    { "word": "ticket", "ipa": "/ˈtɪkɪt/", "pos": "n", "meaning_cn": "票", "example": "two tickets" },
+    { "word": "play", "ipa": "/pleɪ/", "pos": "n", "meaning_cn": "戏剧", "example": "The play may begin" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "can/could/may/might 表请求(Can/Could/May I…?)" },
+    { "gp": "gp2", "name": "could/might 比 can/may 更委婉" },
+    { "gp": "gp3", "name": "may/might 表推测'可能、也许'" },
+    { "gp": "gp4", "name": "may/might + have + 过去分词——'可能已经'(推测过去)" },
+    { "gp": "gp5", "name": "请求还是推测?——can/may 两种用法辨析" },
+    { "gp": "gp6", "name": "can/could/may/might 综合运用" },
+    { "gp": "gp7", "name": "感叹句 What a + 名词!(辅考)" },
+    { "gp": "gp8", "name": "might as well——'不妨、还是…好'(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "表示'请求'(可以…吗)可以用哪些词?", "options": ["can / could / may / might", "must / should", "will / shall", "do / does"] },
+    { "gp": "gp1", "stem": "\"___ I have two tickets, please?\"(请求:我可以买两张票吗)", "stem_cn": "我可以买两张票吗?", "options": ["May", "Do", "Am", "Shall"] },
+    { "gp": "gp1", "stem": "\"___ I borrow your pen?\"(请求:可以借用你的笔吗)", "stem_cn": "我可以借你的笔用一下吗?", "options": ["Can", "Does", "Is", "Being"] },
+    { "gp": "gp2", "stem": "提请求时,哪组词语气更委婉、更客气?", "options": ["Could / Might", "Can / May 就是最客气的", "Will / Shall", "Do / Does"] },
+    { "gp": "gp2", "stem": "\"___ I have those two tickets, please?\"(更委婉地请求)", "stem_cn": "我可以要那两张票吗?", "options": ["Could", "Do", "Was", "Am"] },
+    { "gp": "gp3", "stem": "may / might 表推测,意思是:", "options": ["可能,也许", "必须", "当然", "从不"] },
+    { "gp": "gp3", "stem": "\"The play ___ begin at any moment.\"(推测:可能随时开演)", "stem_cn": "这出戏可能随时开演。", "options": ["may", "must", "does", "is"] },
+    { "gp": "gp3", "stem": "\"He ___ come tomorrow; I'm not sure.\"(推测:可能来)", "stem_cn": "他明天可能会来,我不确定。", "options": ["may", "will", "does", "is"] },
+    { "gp": "gp4", "stem": "'可能已经…了'(对过去的推测)用什么结构?", "options": ["may / might + have + 过去分词", "will + 动词原形", "must + 动词原形", "is / are + 动词-ing"] },
+    { "gp": "gp4", "stem": "\"It ___ have begun already.\"(推测:可能已经开演了)", "stem_cn": "戏可能已经开演了。", "options": ["may", "will", "does", "is"] },
+    { "gp": "gp4", "stem": "\"He ___ have telephoned last night, but I'm not sure.\"(推测:可能已打过电话)", "stem_cn": "他昨晚可能打过电话,我不确定。", "options": ["may", "will", "must", "does"] },
+    { "gp": "gp5", "stem": "\"Can I return these tickets?\" 这里 can 表示的是:", "options": ["请求(可以…吗)", "推测(可能)", "命令", "过去的能力"] },
+    { "gp": "gp5", "stem": "\"He may be at home now.\" 这里 may 表示的是:", "options": ["推测(可能)", "请求(可以…吗)", "义务(必须)", "邀请"] },
+    { "gp": "gp6", "stem": "\"___ I ask you a question, please?\"(委婉请求)", "stem_cn": "我可以问你一个问题吗?", "options": ["May", "Do", "Am", "Shall"] },
+    { "gp": "gp6", "stem": "\"She ___ have missed the bus.\"(推测:可能已经错过了)", "stem_cn": "她可能已经错过公交车了。", "options": ["may", "will", "does", "is"] },
+    { "gp": "gp7", "stem": "\"___ a pity!\"(意思是'真遗憾!')", "stem_cn": "真遗憾!", "options": ["What", "How", "Which", "That"] },
+    { "gp": "gp8", "stem": "might as well 的意思是:", "options": ["还是…的好;不妨", "一定要", "绝不", "最好别"] },
+    { "gp": "gp8", "stem": "\"I ___ as well take the Wednesday tickets.\"(不妨、还是…好)", "stem_cn": "我还是买下星期三的票吧。", "options": ["might", "must", "will", "should"] }
+  ],
+  "stage6": [
+    { "stem": "美语里剧院/影院\"售票处\"常说:", "options": ["box office", "ticket office", "sell room", "pay desk"] },
+    { "stem": "美语\"电影院\"常说:", "options": ["movie theater", "cinema", "film house", "picture hall"] },
+    { "stem": "What a pity! 的意思是:", "options": ["真遗憾!", "太好了!", "多谢!", "别客气!"] },
+    { "stem": "sold out 的意思是:", "options": ["票(货)售完了", "打折出售", "刚开始卖", "退货"] },
+    { "stem": "at once 的意思是:", "options": ["立刻,马上", "偶尔", "一次也没", "慢慢地"] },
+    { "stem": "might as well 的意思是:", "options": ["还是…的好;不妨", "根本不该", "务必要", "差一点"] }
+  ],
+  "contrast": [
+    { "us": "box office", "uk": "ticket office", "note_cn": "(剧院/影院)售票处;美语 box office,英式 ticket office" },
+    { "us": "movie theater", "uk": "cinema", "note_cn": "电影院;美语 movie theater / the movies,英式 cinema" },
+    { "us": "intermission", "uk": "interval", "note_cn": "(演出)幕间休息;美语 intermission,英式 interval" }
+  ],
+  "chunks": [
+    { "us": "sold out", "ipa": "/soʊld aʊt/", "example1": "I'm sorry, we've sold out.", "example1_cn": "对不起,票已售完。", "example2": "The concert is sold out.", "example2_cn": "音乐会的票卖光了。" },
+    { "us": "at once", "ipa": "/ət wʌns/", "example1": "I went back to the box office at once.", "example1_cn": "我马上又回到售票处。", "example2": "Come here at once!", "example2_cn": "马上过来!" },
+    { "us": "might as well", "ipa": "/maɪt əz wel/", "example1": "I might as well have them.", "example1_cn": "我还是买下的好。", "example2": "It's late; we might as well go home.", "example2_cn": "很晚了,我们不妨回家吧。" },
+    { "us": "hurry to", "ipa": "/ˈhɜːri tə/", "example1": "I hurried to the box office.", "example1_cn": "我匆匆赶到售票处。", "example2": "She hurried to the station.", "example2_cn": "她匆忙赶往车站。" }
+  ],
+  "stage7_cloze": {
+    "context": "Susan was not sure. 'The play ___1___ have begun already,' she said. At the box office I asked politely, '___2___ I have two tickets?' They were sold out. Then a man returned his, so the girl said I ___3___ have them — but for next Wednesday. 'I ___4___ as well take them,' I said sadly.",
+    "blanks": [
+      { "blank_no": 1, "options": ["may", "will", "must", "is"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["May", "Do", "Shall", "Am"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["could", "must", "should", "would"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["might", "must", "will", "does"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did the writer go to buy tickets?", "options": ["To the box office", "To the library", "To a restaurant", "To the train station"] },
+    { "stem": "Why couldn't the writer buy tickets at first?", "options": ["They were sold out", "The office was closed", "He had no money", "He was too late for the bus"] },
+    { "stem": "The two tickets the writer finally got were for:", "options": ["Next Wednesday's performance", "That same evening", "A concert", "A movie"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想委婉地问\"我能借用你的电话吗\"(委婉请求用 Could):", "options": ["Could I use your phone?", "Could I using your phone?", "I could use your phone?", "Do I could use your phone?"] },
+    { "stem": "你想说\"他可能已经到家了\"(推测'可能已经'用 may have + 过去分词):", "options": ["He may have gone home already.", "He may gone home already.", "He may has gone home already.", "He may going home already."] },
+    { "stem": "你想感叹\"真遗憾!\"(感叹用 What a + 名词):", "options": ["What a pity!", "How a pity!", "What pity a!", "What an pity!"] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "exclaim 的意思是:", "options": ["惊叫,大声说", "低声说", "沉默", "回答"] },
+    { "kind": "vocab", "stem": "pity 的意思是:", "options": ["令人遗憾的事", "怜悯的对象以外的喜事", "礼物", "机会"] },
+    { "kind": "grammar", "stem": "\"___ I ask you a question, please?\"(委婉请求)", "stem_cn": "我可以问你一个问题吗?", "options": ["May", "Do", "Am", "Shall"] },
+    { "kind": "grammar", "stem": "\"He ___ have missed the train.\"(推测:可能已经)", "stem_cn": "他可能已经错过火车了。", "options": ["may", "will", "does", "is"] },
+    { "kind": "scenario", "stem": "\"What a pity!\" 这句话的意思是:", "options": ["真遗憾!", "太棒了!", "无所谓!", "快点!"] },
+    { "kind": "scenario", "stem": "\"I might as well go.\" 这句话的意思是:", "options": ["我还是去了吧(不妨去)", "我绝不去", "我必须去", "我不想去"] },
+    { "kind": "reading", "stem": "Why couldn't the writer see the play at first?", "options": ["The tickets were sold out", "The theater was closed", "Susan didn't want to go", "It was raining hard"], "passage": true },
+    { "kind": "reading", "stem": "What were the two tickets the writer finally bought for?", "options": ["Next Wednesday's performance", "That very evening", "A morning show", "A different play"], "passage": true },
+    { "kind": "listening", "stem": "What did Susan exclaim when the tickets were sold out?", "options": ["'What a pity!'", "'How wonderful!'", "'Let's go home.'", "'Buy them anyway!'"], "audio": true },
+    { "kind": "listening", "stem": "How did the writer feel at the end?", "options": ["Sad and disappointed", "Very happy", "Angry and loud", "Excited"], "audio": true }
+  ]
+}

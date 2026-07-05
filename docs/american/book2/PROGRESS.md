@@ -87,6 +87,15 @@
 - 词10(hostess/unsmiling/tight/fix/globe/despair 官方6 + companion/conversation/abroad/plate 补4对齐体量);关6美英=vacation/theater/check/napkin(度假·剧院·晚宴主题)。
 - 44题;机器12项🟢**零黄警**(cloze 原 would not talk→refused to talk 规避[c];三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(**L33-40=352,U5 整单元 8 课完成**)。
 
+# ===== 课程 Unit 6(L41–48)=====
+
+## ✅ U6 L41《Do you call that a hat?》(你把那个叫帽子吗?)· 🟢全绿(零黄警)
+- 主教材 Key structures = **Must, Have to and Need**(KS17):need 需要 / must·have to 必须 / needn't 不必(= don't have to)/ mustn't 禁止;核心难点 **mustn't(禁止)≠ needn't(不必)** + needn't have done(本来不必却做了)。
+- 裁决(自决):need/needn't/mustn't/must/have to 主考 gp1-5(mustn't≠needn't 给4题重点辨);regret doing gp6 + remind sb of sth gp7 + remark/observe/notice 辨析 gp8 辅考(均课文/难点①类)。
+- ⚠️ **串味坑**:"情态动词/助动词/宾补"是禁词,关6/8/9/10 一律用 must/needn't 原词或"不必/禁止/必须",不写元语法术语。全做成运用题(给情景选对词),元语法定义题=0。
+- 词10(rude/mirror/hole/remark/remind/lighthouse 官方6 + regret/observe/notice/tie 补4,对齐体量+接难点)。关6美英=store/pants/line/closet(服装店·收纳主题)。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit06.sql`(**L41=44,U6 起**)。⏭️ L42。
+
 ---
 
 

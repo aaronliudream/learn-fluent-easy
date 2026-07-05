@@ -6,7 +6,7 @@
  *   做法=把句子切成"加粗/不加粗"的连续段,每段仍各自过 TappableLine(点词查词不受影响),
  *   加粗段外面套 <strong>。整词边界匹配,不会把 in 命中进 minutes。
  */
-import { useMemo } from "react";
+import { Fragment, useMemo } from "react";
 import { TappableLine } from "@/components/TappableLine";
 
 /** 词干:小写 + 去屈折后缀 + 去尾 e + 去尾部双写辅音,用于词表词/语块的屈折匹配(gather/gathered/gathering 同干)。 */
@@ -77,15 +77,27 @@ export function AmericanTappableLine({
   return (
     <span className={className}>
       {segments
-        ? segments.map((seg, i) =>
-            seg.bold ? (
-              <strong key={i} className="font-bold text-slate-900">
-                <TappableLine sentence={seg.text} />
-              </strong>
-            ) : (
-              <TappableLine key={i} sentence={seg.text} />
-            ),
-          )
+        ? segments.map((seg, i) => {
+            // 把段首/段尾的空白抽成"字面文本节点"渲染在 TappableLine 之外——
+            // 因为 TappableLine 会对每段各自 stripTags().trim(),会吃掉边界空格,
+            // 造成加粗词与邻词粘连(Traffic+police→Trafficpolice)。词内空格不受影响。
+            const [, lead, core, trail] = seg.text.match(/^(\s*)([\s\S]*?)(\s*)$/)!;
+            return (
+              <Fragment key={i}>
+                {lead}
+                {core ? (
+                  seg.bold ? (
+                    <strong className="font-bold text-slate-900">
+                      <TappableLine sentence={core} />
+                    </strong>
+                  ) : (
+                    <TappableLine sentence={core} />
+                  )
+                ) : null}
+                {trail}
+              </Fragment>
+            );
+          })
         : <TappableLine sentence={sentence} />}
     </span>
   );

@@ -1,0 +1,136 @@
+{
+  "id": "am2_l21",
+  "unit_no": 3,
+  "lesson_no": 21,
+  "title_en": "Mad or not?",
+  "title_cn": "是不是疯了?",
+  "grammar_focus": "被动语态(主考:be + 过去分词表'被…' · 一般时被动 is/was built · 情态被动 can/must/will + be + 过去分词 · 现在完成被动 has been done · must have been + 过去分词——对过去的被动推测 · by 引出施动者)+ 现在分词作定语 / 本课短语(辅考:passing planes 过往的飞机 · drive sb mad 逼疯 · be determined to 决心)",
+  "scene": "住在机场附近,过往飞机日夜不绝于耳、快把人逼疯;一百多邻居被噪音赶走,有人出大价钱让我搬走——但我决心留下,大家都说我一定是疯了",
+  "grammar_card": {
+    "title": "说'某事被…'(被动语态 be + 过去分词)",
+    "intro": "本课讲被动语态——主语是动作的承受者('被…')。构成:be + 过去分词。跟 can/must/will 一起用时是 can/must/will + be + 过去分词;'肯定已被…了'用 must have been + 过去分词。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课 / 常见例子"],
+      "rows": [
+        ["被动 = be + 过去分词('被…')", "The airport was built years ago."],
+        ["can / must / will + be + 过去分词", "Passing planes can be heard night and day."],
+        ["现在完成的被动:has / have been + 过去分词", "I have been offered a large sum of money."],
+        ["'肯定已被…了'= must have been + 过去分词", "A hundred people must have been driven away."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "'被谁做的'用 by 引出:The thieves will be arrested by the police.", "mark": "by 施动者" },
+      { "rule": "passing planes:passing 是现在分词作定语,'过往的飞机'", "mark": "-ing 作定语" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why do people think the writer is mad?",
+    "options": ["Because he refuses to leave a house near a noisy airport", "Because he cannot hear the planes", "Because he wants to build an airport", "Because he has too much money"],
+    "answer_index": 0
+  },
+  "passage": "Airplanes are slowly driving me mad. I live near an airport, and passing planes can be heard night and day. The airport was built years ago, but for some reason it could not be used then. Last year, however, it came into use. Over a hundred people must have been driven away from their homes by the noise. Most of my neighbors have already left, and I am one of the few people who stay. Sometimes I think this house will be knocked down by a passing plane. I have been offered a large sum of money to go away, but I am determined to stay here. Everybody says I must be mad, and they are probably right.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Airplanes are slowly driving me mad.", "text_cn": "飞机正在逐渐把我逼疯。" },
+    { "seq": 2, "speaker": null, "text_en": "I live near an airport, and passing planes can be heard night and day.", "text_cn": "我住在一个机场附近,过往飞机日夜不绝于耳。" },
+    { "seq": 3, "speaker": null, "text_en": "The airport was built years ago, but for some reason it could not be used then.", "text_cn": "机场是许多年前建的,但由于某种原因当时未能启用。" },
+    { "seq": 4, "speaker": null, "text_en": "Last year, however, it came into use.", "text_cn": "然而去年机场开始使用了。" },
+    { "seq": 5, "speaker": null, "text_en": "Over a hundred people must have been driven away from their homes by the noise.", "text_cn": "有一百多人肯定是被噪音逼得已经弃家远去。" },
+    { "seq": 6, "speaker": null, "text_en": "Most of my neighbors have already left, and I am one of the few people who stay.", "text_cn": "我的大多数邻居都已搬走,我是少数留下来的人中的一个。" },
+    { "seq": 7, "speaker": null, "text_en": "Sometimes I think this house will be knocked down by a passing plane.", "text_cn": "有时我觉得这房子就要被一架飞过的飞机撞倒。" },
+    { "seq": 8, "speaker": null, "text_en": "I have been offered a large sum of money to go away, but I am determined to stay here.", "text_cn": "他们曾向我提供一大笔钱让我搬走,但我决定留在这儿。" },
+    { "seq": 9, "speaker": null, "text_en": "Everybody says I must be mad, and they are probably right.", "text_cn": "大家都说我肯定是疯了,也许他们说的是对的。" }
+  ],
+  "words": [
+    { "word": "airplane", "ipa": "/ˈerpleɪn/", "pos": "n", "meaning_cn": "飞机", "example": "Airplanes are driving me mad." },
+    { "word": "mad", "ipa": "/mæd/", "pos": "adj", "meaning_cn": "发疯的", "example": "driving me mad" },
+    { "word": "airport", "ipa": "/ˈerpɔːrt/", "pos": "n", "meaning_cn": "机场", "example": "near an airport" },
+    { "word": "reason", "ipa": "/ˈriːzn/", "pos": "n", "meaning_cn": "原因", "example": "for some reason" },
+    { "word": "noise", "ipa": "/nɔɪz/", "pos": "n", "meaning_cn": "噪音", "example": "driven away by the noise" },
+    { "word": "neighbor", "ipa": "/ˈneɪbər/", "pos": "n", "meaning_cn": "邻居", "example": "most of my neighbors" },
+    { "word": "sum", "ipa": "/sʌm/", "pos": "n", "meaning_cn": "金额,量", "example": "a large sum of money" },
+    { "word": "determined", "ipa": "/dɪˈtɜːrmɪnd/", "pos": "adj", "meaning_cn": "坚定的,下决心的", "example": "I am determined to stay" },
+    { "word": "knock down", "ipa": "/nɑːk daʊn/", "pos": "v", "meaning_cn": "撞倒,击倒", "example": "knocked down by a plane" },
+    { "word": "offer", "ipa": "/ˈɔːfər/", "pos": "v", "meaning_cn": "提供,给予", "example": "I have been offered money" },
+    { "word": "pass", "ipa": "/pæs/", "pos": "v", "meaning_cn": "经过,飞过", "example": "a passing plane" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "被动语态——be + 过去分词(表'被…')" },
+    { "gp": "gp2", "name": "一般时被动(is/are/was/were + 过去分词)" },
+    { "gp": "gp3", "name": "情态动词被动(can/must/will + be + 过去分词)" },
+    { "gp": "gp4", "name": "现在完成被动(has/have been + 过去分词)" },
+    { "gp": "gp5", "name": "must have been + 过去分词——对过去的被动推测" },
+    { "gp": "gp6", "name": "主动变被动 + by 引出施动者" },
+    { "gp": "gp7", "name": "现在分词作定语(passing planes)(辅考)" },
+    { "gp": "gp8", "name": "drive sb mad / be determined to(辅考短语)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "被动语态(be + 过去分词)表示什么?", "options": ["主语是动作的承受者(被…)", "主语主动去做某事", "动作正在进行", "动作将来才发生"] },
+    { "gp": "gp1", "stem": "被动语态的基本构成是:", "options": ["be + 过去分词", "have + 过去分词", "be + 动词-ing", "will + 动词原形"] },
+    { "gp": "gp2", "stem": "\"The airport ___ built years ago.\"(过去被动:被建造)", "stem_cn": "机场是许多年前建的。", "options": ["was", "is", "has", "does"] },
+    { "gp": "gp2", "stem": "\"This room ___ cleaned every day.\"(一般现在被动:被打扫)", "stem_cn": "这个房间每天都打扫。", "options": ["is", "are", "has", "does"] },
+    { "gp": "gp2", "stem": "\"English ___ spoken here.\"(一般现在被动:被说)", "stem_cn": "这里说英语。", "options": ["is", "are", "has", "does"] },
+    { "gp": "gp3", "stem": "情态动词(can/must/will)后面变被动,用:", "options": ["情态动词 + be + 过去分词", "情态动词 + 过去分词", "情态动词 + being + 过去分词", "情态动词 + have + 过去分词"] },
+    { "gp": "gp3", "stem": "\"Passing planes can ___ heard.\"(情态被动:能被听到)", "stem_cn": "过往的飞机日夜可闻。", "options": ["be", "are", "being", "been"] },
+    { "gp": "gp3", "stem": "\"This letter must ___ written again.\"(情态被动:必须被重写)", "stem_cn": "这封信必须重写。", "options": ["be", "is", "been", "being"] },
+    { "gp": "gp4", "stem": "\"My bag has ___ stolen.\"(现在完成被动:已被偷)", "stem_cn": "我的包被偷了。", "options": ["been", "be", "being", "was"] },
+    { "gp": "gp4", "stem": "现在完成时的被动语态是:", "options": ["has/have been + 过去分词", "has/have + 过去分词", "is/are + 过去分词", "will be + 过去分词"] },
+    { "gp": "gp5", "stem": "\"肯定已经被…了\"(对过去的被动推测)用:", "options": ["must have been + 过去分词", "must be + 过去分词", "must have + 过去分词", "must + 过去分词"] },
+    { "gp": "gp5", "stem": "\"Over a hundred people must ___ been driven away.\"(对过去的被动推测)", "stem_cn": "肯定有一百多人被赶走了。", "options": ["have", "has", "be", "had"] },
+    { "gp": "gp5", "stem": "\"My bag is gone; it must have ___ stolen.\"(肯定已被偷)", "stem_cn": "我的包不见了,肯定是被偷了。", "options": ["been", "be", "being", "was"] },
+    { "gp": "gp6", "stem": "主动句 \"The police will arrest the thieves\" 变被动是:", "options": ["The thieves will be arrested by the police.", "The thieves will arrest the police.", "The police will be arrested by the thieves.", "The thieves arrested the police."] },
+    { "gp": "gp6", "stem": "被动句里,\"被谁做的\"用哪个词引出?", "options": ["by", "with", "for", "of"] },
+    { "gp": "gp7", "stem": "\"passing planes\" 里的 passing 是:", "options": ["现在分词作定语(过往的飞机)", "过去分词", "动词谓语", "一个名词"] },
+    { "gp": "gp7", "stem": "\"a sleeping baby\" 里的 sleeping 修饰 baby,意思是:", "options": ["正在睡觉的婴儿", "被睡着的婴儿", "婴儿在睡这个动作", "睡眠这件事"] },
+    { "gp": "gp8", "stem": "drive sb mad 的意思是:", "options": ["把某人逼疯", "开车送某人", "让某人开车", "使某人高兴"] }
+  ],
+  "stage6": [
+    { "stem": "美语\"飞机\"拼作:", "options": ["airplane", "aeroplane", "airplaine", "areoplane"] },
+    { "stem": "美语\"邻居\"拼作:", "options": ["neighbor", "neighbour", "naybor", "neighber"] },
+    { "stem": "drive sb mad 的意思是:", "options": ["把某人逼疯", "开车送某人", "使某人开心", "让某人生病"] },
+    { "stem": "come into use 的意思是:", "options": ["开始使用,启用", "停止使用", "很有用", "用光了"] },
+    { "stem": "be determined to 的意思是:", "options": ["决心做…", "拒绝做…", "害怕做…", "忘记做…"] },
+    { "stem": "a sum of money 的意思是:", "options": ["一笔钱", "一堆废纸", "一张地图", "一份工作"] }
+  ],
+  "contrast": [
+    { "us": "airplane", "uk": "aeroplane", "note_cn": "飞机;美语 airplane,英式 aeroplane" },
+    { "us": "neighbor", "uk": "neighbour", "note_cn": "邻居;美语 neighbor,英式 neighbour" },
+    { "us": "tear down", "uk": "pull down", "note_cn": "拆除(建筑);美语 tear down,英式 pull down / knock down" }
+  ],
+  "chunks": [
+    { "us": "drive sb mad", "ipa": "/draɪv ˈsʌmbədi mæd/", "example1": "Airplanes are driving me mad.", "example1_cn": "飞机正把我逼疯。", "example2": "The noise drives me mad.", "example2_cn": "这噪音快把我逼疯了。" },
+    { "us": "come into use", "ipa": "/kʌm ˈɪntə juːs/", "example1": "Last year it came into use.", "example1_cn": "去年它开始启用。", "example2": "The new bridge came into use in May.", "example2_cn": "新桥五月启用。" },
+    { "us": "be determined to", "ipa": "/bi dɪˈtɜːrmɪnd tə/", "example1": "I am determined to stay here.", "example1_cn": "我决心留在这儿。", "example2": "She is determined to win.", "example2_cn": "她决心要赢。" },
+    { "us": "a sum of money", "ipa": "/ə sʌm əv ˈmʌni/", "example1": "I was offered a large sum of money.", "example1_cn": "有人给我一大笔钱。", "example2": "He saved a large sum of money.", "example2_cn": "他存了一大笔钱。" }
+  ],
+  "stage7_cloze": {
+    "context": "I live near an airport, and passing planes can ___1___ heard all day. The airport ___2___ built years ago, but nobody used it then. Over a hundred people ___3___ driven away by the noise. I ___4___ offered money to leave, but I want to stay.",
+    "blanks": [
+      { "blank_no": 1, "options": ["be", "are", "being", "been"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["was", "is", "has", "were"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["must have been", "must be", "have", "are"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["have been", "have", "am", "was"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where does the writer live?", "options": ["Near an airport", "Near a train station", "In the city center", "By the sea"] },
+    { "stem": "Why is the writer slowly going mad?", "options": ["Because of the noise of passing planes", "Because he has no money", "Because he is sick", "Because he lives all alone"] },
+    { "stem": "What is the writer determined to do?", "options": ["To stay in the house", "To sell the house", "To move to the city", "To build an airport"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"这块表能修好\"(能被…用 can be + 过去分词):", "options": ["Your watch can be repaired.", "Your watch can repair.", "Your watch can be repair.", "Your watch is can repaired."] },
+    { "stem": "你想说\"这封信必须重写\"(必须被…用 must be + 过去分词):", "options": ["This letter must be written again.", "This letter must write again.", "This letter must be write again.", "This letter is must written again."] },
+    { "stem": "你想说\"小偷会被抓住\"(会被…用 will be + 过去分词):", "options": ["The thief will be caught.", "The thief will catch.", "The thief will be catch.", "The thief is will caught."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "determined 的意思是:", "options": ["坚定的,下决心的", "犹豫的", "疲惫的", "害怕的"] },
+    { "kind": "vocab", "stem": "reason 的意思是:", "options": ["原因", "结果", "季节", "地区"] },
+    { "kind": "grammar", "stem": "\"The room ___ cleaned every day.\"(一般现在被动:被打扫)", "stem_cn": "这个房间每天都被打扫。", "options": ["is", "are", "has", "being"] },
+    { "kind": "grammar", "stem": "\"My bag ___ been stolen.\"(现在完成被动:已被偷)", "stem_cn": "我的包被偷了。", "options": ["has", "have", "is", "was"] },
+    { "kind": "scenario", "stem": "\"You must be mad!\" 这句话的意思是:", "options": ["你一定是疯了!", "你必须变疯!", "你不许发疯!", "你可能会疯。"] },
+    { "kind": "scenario", "stem": "\"I am determined to stay.\" 这句话的意思是:", "options": ["我下决心留下来。", "我被迫留下来。", "我不想留下来。", "我可能会留下来。"] },
+    { "kind": "reading", "stem": "Why couldn't the airport be used at first?", "options": ["For some reason it could not be used then", "Because it was too small", "Because there were no planes", "Because it was closed for repairs"], "passage": true },
+    { "kind": "reading", "stem": "What has the writer been offered?", "options": ["A large sum of money to go away", "A new house by the sea", "A job at the airport", "A quieter apartment"], "passage": true },
+    { "kind": "listening", "stem": "What can be heard near the writer's home night and day?", "options": ["Passing planes", "Loud music", "Barking dogs", "Passing trains"], "audio": true },
+    { "kind": "listening", "stem": "Does the writer want to leave?", "options": ["No, he is determined to stay", "Yes, he leaves tomorrow", "Yes, for a lot of money", "No, but he has to go"], "audio": true }
+  ]
+}

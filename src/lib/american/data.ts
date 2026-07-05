@@ -106,6 +106,18 @@ export type AmericanContrast = {
 
 export type AmericanUnit = { unit_no: number; lessons: AmericanLesson[] };
 
+// ---------- 元数据本地缓存(版本化):老用户秒出骨架 → 后台刷新(性能修复③)----------
+const META_VER = "v1";
+function cacheGet<T>(key: string): T | null {
+  try { const raw = localStorage.getItem(`am.meta.${META_VER}.${key}`); return raw ? (JSON.parse(raw) as T) : null; } catch { return null; }
+}
+function cacheSet(key: string, val: unknown): void {
+  try { localStorage.setItem(`am.meta.${META_VER}.${key}`, JSON.stringify(val)); } catch { /* quota — 忽略 */ }
+}
+/** 同步读缓存的册总览/单元列表(供组件首帧即渲染,随后 fetch 刷新)。 */
+export function cachedBooks(): AmericanBook[] | null { return cacheGet<AmericanBook[]>("books"); }
+export function cachedUnits(bookNo: number): AmericanUnit[] | null { return cacheGet<AmericanUnit[]>(`units.${bookNo}`); }
+
 export type LessonBundle = {
   lesson: AmericanLesson;
   sentences: AmericanSentence[];
@@ -147,9 +159,11 @@ export async function fetchUnits(bookNo = 1): Promise<AmericanUnit[]> {
     if (!byUnit.has(r.unit_no)) byUnit.set(r.unit_no, []);
     byUnit.get(r.unit_no)!.push(r);
   }
-  return [...byUnit.entries()]
+  const units = [...byUnit.entries()]
     .sort((a, b) => a[0] - b[0])
     .map(([unit_no, lessons]) => ({ unit_no, lessons }));
+  cacheSet(`units.${bookNo}`, units);
+  return units;
 }
 
 export type AmericanBook = { bookNo: number; launched: boolean; lessonCount: number };
@@ -166,10 +180,12 @@ export async function fetchBooks(): Promise<AmericanBook[]> {
     const b = bookOf(r.id);
     count.set(b, (count.get(b) ?? 0) + 1);
   }
-  return [1, 2, 3, 4].map((bookNo) => {
+  const books = [1, 2, 3, 4].map((bookNo) => {
     const lessonCount = count.get(bookNo) ?? 0;
     return { bookNo, launched: lessonCount > 0, lessonCount };
   });
+  cacheSet("books", books);
+  return books;
 }
 
 /** 一课全部内容(6 关素材一次取全)。 */

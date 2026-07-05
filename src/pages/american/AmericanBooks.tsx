@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Lock, Sparkles, ChevronRight } from "lucide-react";
 import { T } from "@/i18n/T";
-import { fetchBooks, type AmericanBook } from "@/lib/american/data";
+import { fetchBooks, cachedBooks, type AmericanBook } from "@/lib/american/data";
 import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_SUBTITLE, AMERICAN_COURSE_SCALE, AMERICAN_COURSE_COVERAGE } from "@/lib/american/brand";
 
 const BOOK_LABEL: Record<number, string> = { 1: "第一册", 2: "第二册", 3: "第三册", 4: "第四册" };
@@ -20,19 +20,23 @@ const BOOK_SUB: Record<number, string> = {
 };
 
 export default function AmericanBooks() {
-  const [books, setBooks] = useState<AmericanBook[]>([1, 2, 3, 4].map((bookNo) => ({ bookNo, launched: false, lessonCount: 0 })));
-  const [loading, setLoading] = useState(true);
+  // 老用户秒出:先用本地缓存的册总览渲染(有缓存则不显示 loading),再后台刷新
+  const cached = cachedBooks();
+  const [books, setBooks] = useState<AmericanBook[]>(cached ?? [1, 2, 3, 4].map((bookNo) => ({ bookNo, launched: false, lessonCount: 0 })));
+  const [loading, setLoading] = useState(!cached);
   const [failed, setFailed] = useState(false); // 加载失败 → 显示重试按钮(弱网防"打不开")
   const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
     let alive = true;
-    setLoading(true); setFailed(false);
+    if (!cached) setLoading(true);           // 有缓存则后台静默刷新,不闪 loading
+    setFailed(false);
     fetchBooks()
       .then((b) => { if (alive) setBooks(b); })
-      .catch(() => { if (alive) setFailed(true); })
+      .catch(() => { if (alive && !cached) setFailed(true); }) // 有缓存则失败静默,仍显示旧数据
       .finally(() => { if (alive) setLoading(false); });
     return () => { alive = false; };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reloadKey]);
 
   return (

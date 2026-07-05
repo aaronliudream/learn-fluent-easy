@@ -15,7 +15,27 @@
 | L7 | 1 | Too late | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 过去进行时(跨课备用落点·还账);三源 教材p40 KeyStruct + 同步p56 LESSON7 + 新思维p118 已核;过去完成时had told/would排除;seed归单元1批次;prewarm待批次;真机待抽验 |
 | L8 | 1 | The best and the worst | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 比较级和最高级;三源 教材p44 KeyStruct + 同步p58 LESSON8 + 新思维比较级 已核;as…as/进阶比较排除;seed归单元1批次;prewarm待批次;真机待抽验 |
 
-> **✅ 单元1(L1–L8)全部生产完成(2026-07-04)。** L1 上线;L2–L8 seed 累积于 `SQLAA/american_am2_seed_unit01.sql`(幂等)。单元1批次汇报见 `REVIEWAA/american-book2-U1/UNIT1-batch-report.md`。⏭️ 下一步:Aaron 真机抽验指定 2 课(L4/L7)+ prewarm 音频;然后开工单元2(L9–L16)。
+> **✅ 单元1(L1–L8)全部生产完成 + 全部落库(2026-07-04)。** L1 上线;L2–L8 seed 在 `SQLAA/american_am2_seed_unit01.sql`(Aaron 已跑到 L8,全落库)。单元1批次汇报见 `REVIEWAA/american-book2-U1/UNIT1-batch-report.md`。⏭️ Aaron 真机抽验 L4/L7 + prewarm 音频(待)。
+
+### 单元2(L9–L16)
+
+| 课 | 单元 | 标题 | 状态 | 校验八项 | 备注 |
+|---|---|---|---|---|---|
+| L9 | 2 | A cold welcome | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 时间介词 at/in/on;三源 教材p48 KeyStruct + 同步p67 LESSON9 + 新思维介词 已核;过去完成had gathered/过去将来would strike排除;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L10 | 2 | (待扫描确认标题) | ⬜ 下一课 | — | NCE2 L10=Not for jazz;L10三源扫描确认标题+主题,不凭记忆 |
+| L11–L16 | 2 | — | ⬜ 未开工 | — | — |
+
+## L9 流水线步骤跟踪(时间介词 at/in/on)
+- [x] 1 三源扫描(scan-evidence-lesson09.md:教材p48 KeyStruct[at/in/on/other+ExB]权威 / 同步p67 LESSON9[表示时间的介词at,in,on,during] / 新思维介词;逐页页眉;had gathered/would strike排除;三源一致)
+- [x] 2 建考点清单(grammar-syllabus-lesson09.md:G1-G8 / W1-W11 / C1-C6)
+- [x] 3 清单自审 · [x] 4 课文定稿(11句·at/in/on全覆盖·11词/3语块全落·on the weekend/sidewalk/line美语化)
+- [x] 5 题库(关5=18[认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson09.md;首轮无抓修) · [x] 8 JSON+seed(am2_l09.json→unit02.sql) · [x] 9 机器校验八项全绿 · [x] 10 commit
+
+## L9 待裁决(单元末汇总报;非阻塞已自决)
+1. 词表官方7词→补至11(+clock/midnight/strike/moment)对齐体量 → 采纳A。
+2. 过去完成时(had gathered)/过去将来时(would strike)课文偶现 → 排除留后(记 scan §四)。
+3. 关6 美英对照选 on the weekend/at the weekend(时间介词差,贴本课)+ sidewalk/line → 采纳。
 
 ## L2 流水线步骤跟踪
 - [x] 1 三源扫描(scan-evidence-lesson02.md:教材p19-22 / 同步p33-37 / 新思维p110,112;主题一致无冲突)

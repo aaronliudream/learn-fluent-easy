@@ -1,0 +1,137 @@
+{
+  "id": "am2_l09",
+  "unit_no": 2,
+  "lesson_no": 9,
+  "title_en": "A cold welcome",
+  "title_cn": "冷遇",
+  "grammar_focus": "时间介词 at/in/on(at钟点/时刻词 · in月年季节/上午下午晚上/一段时间后=将来 · on星期日期具体某天 · 易混对比)",
+  "scene": "除夕夜去市政厅看大钟报时 · 大钟却在差5分12点时停摆,'拒绝'迎接新年",
+  "grammar_card": {
+    "title": "at / in / on:时间介词怎么选",
+    "intro": "本课讲怎么在时间前面用对 at、in、on。全用本课句子举例。",
+    "table": {
+      "headers": ["规则", "本课 / 常见例子"],
+      "rows": [
+        ["at + 具体钟点 / 某个时刻词:at 8 o'clock / at night / at noon / at that moment", "The clock stopped at five to twelve."],
+        ["in + 月 / 年 / 季节 / 上午下午晚上:in July / in 2020 / in summer / in the morning", "It happened in December, in the evening."],
+        ["on + 星期 / 日期 / 具体某一天:on Monday / on April 27th / on my birthday", "We went to the Town Hall on Saturday night."],
+        ["in + 一段时间 = '…之后'(将来):in ten minutes = 十分钟后", "The clock would strike twelve in a few minutes."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "小心对比:in the morning(上午)但 on Monday morning(具体某天上午);at night 但 in the evening", "mark": "易混对比" },
+      { "rule": "只说月份用 in(in October);说到具体某天用 on(on October 5th)", "mark": "月 vs 日" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — When did they go to the Town Hall?",
+    "options": ["On New Year's Eve", "On New Year's Day", "In the summer", "On a Monday morning"],
+    "answer_index": 0
+  },
+  "passage": "It was New Year's Eve, and that year it fell on the weekend. On Saturday night, my friends and I went to the old Town Hall. A huge crowd gathered on the sidewalk under the big clock. People stood in a long line, waiting to welcome the New Year. The clock would strike twelve at midnight, in just a few minutes. But at five to twelve, the big clock suddenly stopped! The minute hand did not move at all. We waited and waited in the cold, but nothing happened. At that moment, someone shouted, \"It's already past twelve — the clock has stopped!\" I looked at my watch, and it was true: the clock refused to welcome the New Year. Everybody began to laugh, and then we all started to sing.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "It was New Year's Eve, and that year it fell on the weekend.", "text_cn": "那是除夕夜,那年除夕正好赶在周末。" },
+    { "seq": 2, "speaker": null, "text_en": "On Saturday night, my friends and I went to the old Town Hall.", "text_cn": "周六晚上,我和朋友们去了那座老市政厅。" },
+    { "seq": 3, "speaker": null, "text_en": "A huge crowd gathered on the sidewalk under the big clock.", "text_cn": "一大群人聚集在大钟下面的人行道上。" },
+    { "seq": 4, "speaker": null, "text_en": "People stood in a long line, waiting to welcome the New Year.", "text_cn": "人们排成长长的一队,等着迎接新年。" },
+    { "seq": 5, "speaker": null, "text_en": "The clock would strike twelve at midnight, in just a few minutes.", "text_cn": "再过几分钟,大钟就会在午夜敲响十二点。" },
+    { "seq": 6, "speaker": null, "text_en": "But at five to twelve, the big clock suddenly stopped!", "text_cn": "可就在差五分十二点时,那座大钟突然停了!" },
+    { "seq": 7, "speaker": null, "text_en": "The minute hand did not move at all.", "text_cn": "分针一动也不动。" },
+    { "seq": 8, "speaker": null, "text_en": "We waited and waited in the cold, but nothing happened.", "text_cn": "我们在寒风里等了又等,却什么也没发生。" },
+    { "seq": 9, "speaker": null, "text_en": "At that moment, someone shouted, \"It's already past twelve — the clock has stopped!\"", "text_cn": "就在那一刻,有人喊道:\"已经过十二点了——钟停了!\"" },
+    { "seq": 10, "speaker": null, "text_en": "I looked at my watch, and it was true: the clock refused to welcome the New Year.", "text_cn": "我看了看手表,果真如此:大钟拒绝迎接新年。" },
+    { "seq": 11, "speaker": null, "text_en": "Everybody began to laugh, and then we all started to sing.", "text_cn": "大家都笑了起来,接着我们一起唱起歌来。" }
+  ],
+  "words": [
+    { "word": "welcome", "ipa": "/ˈwelkəm/", "pos": "v", "meaning_cn": "欢迎;迎接", "example": "The clock refused to welcome the New Year." },
+    { "word": "crowd", "ipa": "/kraʊd/", "pos": "n", "meaning_cn": "人群", "example": "A huge crowd gathered under the clock." },
+    { "word": "gather", "ipa": "/ˈɡæðər/", "pos": "v", "meaning_cn": "聚集", "example": "A crowd gathered on the sidewalk." },
+    { "word": "hand", "ipa": "/hænd/", "pos": "n", "meaning_cn": "(钟表的)指针", "example": "The minute hand did not move." },
+    { "word": "shout", "ipa": "/ʃaʊt/", "pos": "v", "meaning_cn": "喊叫", "example": "Someone shouted, \"The clock has stopped!\"" },
+    { "word": "refuse", "ipa": "/rɪˈfjuːz/", "pos": "v", "meaning_cn": "拒绝", "example": "The clock refused to welcome the New Year." },
+    { "word": "laugh", "ipa": "/læf/", "pos": "v", "meaning_cn": "笑", "example": "Everybody began to laugh." },
+    { "word": "clock", "ipa": "/klɑːk/", "pos": "n", "meaning_cn": "钟", "example": "the big Town Hall clock" },
+    { "word": "midnight", "ipa": "/ˈmɪdnaɪt/", "pos": "n", "meaning_cn": "午夜", "example": "The clock would strike twelve at midnight." },
+    { "word": "strike", "ipa": "/straɪk/", "pos": "v", "meaning_cn": "(钟)敲响(struck)", "example": "The clock would strike twelve." },
+    { "word": "moment", "ipa": "/ˈmoʊmənt/", "pos": "n", "meaning_cn": "时刻", "example": "At that moment, someone shouted." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "时间介词——at + 钟点 / 时刻词" },
+    { "gp": "gp2", "name": "时间介词——in + 月 / 年 / 季节" },
+    { "gp": "gp3", "name": "时间介词——in + 上午 / 下午 / 晚上" },
+    { "gp": "gp4", "name": "时间介词——on + 星期 / 日期 / 具体某天" },
+    { "gp": "gp5", "name": "时间介词——in + 一段时间(…之后,将来)" },
+    { "gp": "gp6", "name": "时间介词——易混对比(morning/evening/月vs日)" },
+    { "gp": "gp7", "name": "时间介词——at + 年龄 / other(from…till)" },
+    { "gp": "gp8", "name": "课文语言点(a large crowd of / in…minutes' time / at that moment)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The clock stopped ___ five to twelve.\"(具体钟点)", "options": ["at", "in", "on", "by"] },
+    { "gp": "gp1", "stem": "\"___ that moment, everybody laughed.\"", "options": ["At", "In", "On", "During"] },
+    { "gp": "gp2", "stem": "\"The war ended ___ 1945.\"(年份)", "options": ["in", "on", "at", "by"] },
+    { "gp": "gp2", "stem": "\"It is very cold ___ winter.\"(季节)", "options": ["in", "on", "at", "during"] },
+    { "gp": "gp3", "stem": "\"I get up early ___ the morning.\"", "options": ["in", "on", "at", "by"] },
+    { "gp": "gp3", "stem": "\"上午 / 下午 / 晚上(the morning/afternoon/evening)\"前一般用:", "options": ["in", "at", "on", "during"] },
+    { "gp": "gp4", "stem": "\"We went to the Town Hall ___ Wednesday.\"(星期)", "options": ["on", "in", "at", "by"] },
+    { "gp": "gp4", "stem": "\"My birthday is ___ November 7th.\"(具体日期)", "options": ["on", "in", "at", "of"] },
+    { "gp": "gp4", "stem": "\"具体某一天(星期几 / 几月几号)\"前用:", "options": ["on", "in", "at", "by"] },
+    { "gp": "gp5", "stem": "\"The train is leaving ___ ten minutes.\"(十分钟后)", "options": ["in", "after", "on", "at"] },
+    { "gp": "gp5", "stem": "\"The clock would strike twelve ___ twenty minutes' time.\"(20分钟后)", "options": ["in", "on", "at", "for"] },
+    { "gp": "gp6", "stem": "选出正确的一句:", "options": ["I saw him on Monday morning.", "I saw him in Monday morning.", "I saw him at Monday morning.", "I saw him on the Monday in morning."] },
+    { "gp": "gp6", "stem": "只说\"十月\"(不带具体某天)用:", "options": ["in October", "on October", "at October", "on October day"] },
+    { "gp": "gp6", "stem": "\"在晚上\"一般说 ___;但\"在夜里\"用 at night。", "options": ["in the evening", "on the evening", "at the evening", "on evening"] },
+    { "gp": "gp7", "stem": "\"He got married ___ twenty.\"(在20岁时)", "options": ["at", "in", "on", "by"] },
+    { "gp": "gp7", "stem": "\"The shops are open ___ 9 ___ 5.\"(从9点到5点)", "options": ["from … till", "in … to", "at … at", "on … on"] },
+    { "gp": "gp8", "stem": "a large crowd of people 的意思是:", "options": ["一大群人", "几个人", "一小队人", "没有人"] },
+    { "gp": "gp8", "stem": "in twenty minutes' time 的意思是:", "options": ["20分钟之后", "20分钟之内", "正好20分钟", "20分钟以前"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"在周末\"说:", "options": ["on the weekend", "at the weekend", "in the weekend", "by the weekend"] },
+    { "stem": "美语里\"人行道\"用:", "options": ["sidewalk", "pavement", "footpath", "roadside"] },
+    { "stem": "美语里\"排队(的队伍)\"用:", "options": ["line", "queue", "row", "file"] },
+    { "stem": "a large crowd of 的意思是:", "options": ["一大群", "一小撮", "一对", "没有"] },
+    { "stem": "in twenty minutes' time 的意思是:", "options": ["20分钟之后", "20分钟之内", "20分钟以前", "整整20分钟"] },
+    { "stem": "at that moment 的意思是:", "options": ["就在那一刻", "过了一会儿", "从那以后", "在这之前"] }
+  ],
+  "contrast": [
+    { "us": "on the weekend", "uk": "at the weekend", "note_cn": "在周末;美语 on the weekend,英式 at the weekend(正好是时间介词差)" },
+    { "us": "sidewalk", "uk": "pavement", "note_cn": "人行道;美语 sidewalk,英式 pavement" },
+    { "us": "line", "uk": "queue", "note_cn": "排队的队伍;美语 line(stand in line),英式 queue" }
+  ],
+  "chunks": [
+    { "us": "a large crowd of", "ipa": "/ə lɑːrdʒ kraʊd əv/", "example1": "A large crowd of people gathered.", "example1_cn": "一大群人聚集起来。", "example2": "A large crowd of fans waited outside.", "example2_cn": "一大群粉丝在外面等着。" },
+    { "us": "in … minutes' time", "ipa": "/ɪn ˈmɪnɪts taɪm/", "example1": "The clock would strike twelve in twenty minutes' time.", "example1_cn": "再过二十分钟大钟就会敲十二点。", "example2": "The bus will come in five minutes' time.", "example2_cn": "公交车五分钟后就到。" },
+    { "us": "at that moment", "ipa": "/æt ðæt ˈmoʊmənt/", "example1": "At that moment, someone shouted.", "example1_cn": "就在那一刻,有人喊了起来。", "example2": "At that moment, the lights went out.", "example2_cn": "就在那一刻,灯灭了。" }
+  ],
+  "stage7_cloze": {
+    "context": "We went to the Town Hall ___1___ New Year's Eve. A big crowd gathered ___2___ the evening. The clock would strike twelve ___3___ a few minutes. But ___4___ five to twelve, it suddenly stopped!",
+    "blanks": [
+      { "blank_no": 1, "options": ["on", "in", "at", "by"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["in", "on", "at", "during"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["in", "on", "after", "at"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["at", "in", "on", "by"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "When did they go to the Town Hall?", "options": ["On New Year's Eve", "On New Year's Day", "In the summer", "On a Monday morning"] },
+    { "stem": "What happened at five to twelve?", "options": ["The clock stopped", "The clock struck twelve", "The crowd went home", "It started to rain"] },
+    { "stem": "What did everybody do at the end?", "options": ["They laughed and sang", "They went home", "They fixed the clock", "They shouted angrily"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想约朋友\"我们晚上7点见\"(具体钟点):", "options": ["Let's meet at seven in the evening.", "Let's meet in seven at the evening.", "Let's meet on seven in evening.", "Let's meet at seven on the evening."] },
+    { "stem": "你想说\"我的生日在10月1号\":", "options": ["My birthday is on October 1st.", "My birthday is in October 1st.", "My birthday is at October 1st.", "My birthday is at the October 1st."] },
+    { "stem": "你想说\"火车十分钟后到\"(将来的'…之后'):", "options": ["The train will arrive in ten minutes.", "The train will arrive after ten minutes later.", "The train will arrive on ten minutes.", "The train will arrive at ten minutes."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "crowd 的意思是:", "options": ["人群", "云", "王冠", "吵闹声"] },
+    { "kind": "vocab", "stem": "refuse 的意思是:", "options": ["拒绝", "接受", "欢迎", "害怕"] },
+    { "kind": "grammar", "stem": "\"The movie starts ___ 8 o'clock.\"(钟点)", "options": ["at", "in", "on", "by"] },
+    { "kind": "grammar", "stem": "\"It often snows ___ January.\"(只说月份)", "options": ["in", "on", "at", "during"] },
+    { "kind": "scenario", "stem": "\"See you on Monday!\" 的意思是:", "options": ["星期一见", "上午见", "一会儿见", "月底见"] },
+    { "kind": "scenario", "stem": "\"I'll be back in five minutes.\" 的意思是:", "options": ["我五分钟后回来", "我回来待五分钟", "我五点回来", "我已经回来五分钟了"] },
+    { "kind": "reading", "stem": "Why is it called \"a cold welcome\"?", "options": ["Because the clock stopped and refused to welcome the New Year", "Because it was snowing hard", "Because nobody came", "Because the crowd was rude"], "passage": true },
+    { "kind": "reading", "stem": "What did the minute hand do?", "options": ["It did not move at all", "It moved very fast", "It fell off", "It struck twelve"], "passage": true },
+    { "kind": "listening", "stem": "Where did the crowd gather?", "options": ["Under the Town Hall clock", "At the train station", "In a restaurant", "At the airport"], "audio": true },
+    { "kind": "listening", "stem": "How did people feel at the end?", "options": ["Happy — they laughed and sang", "Angry and upset", "Bored and tired", "Scared"], "audio": true }
+  ]
+}

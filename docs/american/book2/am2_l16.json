@@ -1,0 +1,137 @@
+{
+  "id": "am2_l16",
+  "unit_no": 2,
+  "lesson_no": 16,
+  "title_en": "A polite request",
+  "title_cn": "彬彬有礼的要求",
+  "grammar_focus": "if 条件句(主考:第一类真实条件 if + 一般现在时,主句 will/won't/祈使句/can · 前置后置 · 从句用现在时不用 will)+ 主谓一致(辅考:集合名词 police/family 用复数 · 就近/就前 as well as/neither nor)",
+  "scene": "停错车通常会被警察贴罚单 · 但在瑞典度假时车上发现一张客气的便条——欢迎光临本市、此处禁停、请留意路牌、这只是提醒",
+  "grammar_card": {
+    "title": "说\"如果…就…\"(if 条件句)",
+    "intro": "本课讲怎么说\"如果满足某个条件,将来就会怎样\"——if 条件句。注意:if 后面那半句用一般现在时,后半句才用将来时(will)。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课 / 常见例子"],
+      "rows": [
+        ["if + 一般现在时,另一半用将来时 will", "If you park here, a police officer will find it."],
+        ["if 那半句(说条件)用现在时,不用 will", "If it rains tomorrow(不是 will rain), we will stay home."],
+        ["if 这半句可以放句首(加逗号)也可以放句尾", "If you hurry, you'll catch it. = You'll catch it if you hurry."],
+        ["后半句也可以是 won't / 祈使句 / can", "If you make a mistake, correct it. / If he can, he will come."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "if 条件疑问:if + 现在时 + 疑问(If you see him, will you tell him?)", "mark": "条件疑问" },
+      { "rule": "police(警察)是集合名词,后面的动词用复数:Traffic police are polite(主谓一致)", "mark": "police 用复数" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was the polite request?",
+    "options": ["A friendly note asking the driver to obey the No Parking signs", "A parking ticket", "An invitation to a party", "A traffic fine notice"],
+    "answer_index": 0
+  },
+  "passage": "If you park in the wrong parking lot, a police officer will find your car fast. You will be lucky if the officer lets you off without a ticket. However, that does not always happen. Traffic police are sometimes surprisingly polite. On a trip downtown in Sweden, I found this friendly note on my car: \"Welcome to our city! This is a No Parking area. You will enjoy your stay here if you pay attention to our street signs. We have your license plate, but this note is only a reminder.\" If you get a polite note like this, you cannot fail to obey it. A kind reminder often works better than an angry ticket. If you ever visit this city, you will surely feel welcome.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "If you park in the wrong parking lot, a police officer will find your car fast.", "text_cn": "要是你把车停错了停车场,警察很快就会找到你的车。" },
+    { "seq": 2, "speaker": null, "text_en": "You will be lucky if the officer lets you off without a ticket.", "text_cn": "要是警察没给你开罚单就放你走,算你走运。" },
+    { "seq": 3, "speaker": null, "text_en": "However, that does not always happen.", "text_cn": "不过,情况并不总是这样。" },
+    { "seq": 4, "speaker": null, "text_en": "Traffic police are sometimes surprisingly polite.", "text_cn": "交通警察有时客气得出人意料。" },
+    { "seq": 5, "speaker": null, "text_en": "On a trip downtown in Sweden, I found this friendly note on my car:", "text_cn": "有一次在瑞典市中心闲逛,我发现车上有这样一张友好的便条:" },
+    { "seq": 6, "speaker": null, "text_en": "\"Welcome to our city! This is a No Parking area.", "text_cn": "\"欢迎光临本市!此处为禁停区。" },
+    { "seq": 7, "speaker": null, "text_en": "You will enjoy your stay here if you pay attention to our street signs.", "text_cn": "只要您留意我们的路牌,您在这儿一定会过得愉快。" },
+    { "seq": 8, "speaker": null, "text_en": "We have your license plate, but this note is only a reminder.\"", "text_cn": "我们已记下您的车牌,但这张便条只是善意提醒。\"" },
+    { "seq": 9, "speaker": null, "text_en": "If you get a polite note like this, you cannot fail to obey it.", "text_cn": "要是你收到这样一张客气的便条,你是不会不照办的。" },
+    { "seq": 10, "speaker": null, "text_en": "A kind reminder often works better than an angry ticket.", "text_cn": "一句善意的提醒往往比一张冷冰冰的罚单更管用。" },
+    { "seq": 11, "speaker": null, "text_en": "If you ever visit this city, you will surely feel welcome.", "text_cn": "要是你哪天来这座城市,你一定会感到宾至如归。" }
+  ],
+  "words": [
+    { "word": "park", "ipa": "/pɑːrk/", "pos": "v", "meaning_cn": "停放(汽车)", "example": "park in the wrong parking lot" },
+    { "word": "traffic", "ipa": "/ˈtræfɪk/", "pos": "n", "meaning_cn": "交通", "example": "traffic police" },
+    { "word": "ticket", "ipa": "/ˈtɪkɪt/", "pos": "n", "meaning_cn": "交通违规罚款单", "example": "without a ticket" },
+    { "word": "note", "ipa": "/noʊt/", "pos": "n", "meaning_cn": "便条", "example": "this friendly note" },
+    { "word": "area", "ipa": "/ˈeriə/", "pos": "n", "meaning_cn": "地段,区域", "example": "a No Parking area" },
+    { "word": "sign", "ipa": "/saɪn/", "pos": "n", "meaning_cn": "指示牌,标志", "example": "our street signs" },
+    { "word": "reminder", "ipa": "/rɪˈmaɪndər/", "pos": "n", "meaning_cn": "提示,提醒", "example": "only a reminder" },
+    { "word": "fail", "ipa": "/feɪl/", "pos": "v", "meaning_cn": "无视,未能(做)", "example": "cannot fail to obey" },
+    { "word": "obey", "ipa": "/oʊˈbeɪ/", "pos": "v", "meaning_cn": "服从,遵守", "example": "obey it" },
+    { "word": "polite", "ipa": "/pəˈlaɪt/", "pos": "adj", "meaning_cn": "礼貌的,客气的", "example": "a polite note" },
+    { "word": "enjoy", "ipa": "/ɪnˈdʒɔɪ/", "pos": "v", "meaning_cn": "享受", "example": "enjoy your stay" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "if 条件句——构成 if + 一般现在时,主句 will" },
+    { "gp": "gp2", "name": "if 条件句——前置 / 后置(逗号)" },
+    { "gp": "gp3", "name": "if 条件句——主句变体 won't / 祈使句 / can" },
+    { "gp": "gp4", "name": "if 条件句——if 那半句用一般现在时(不用 will)" },
+    { "gp": "gp5", "name": "if 条件句——条件疑问(If…, will you…?)" },
+    { "gp": "gp6", "name": "if 条件句——综合运用" },
+    { "gp": "gp7", "name": "主谓一致——集合名词 police/family 用复数(辅考)" },
+    { "gp": "gp8", "name": "主谓一致——就近/就前 as well as/neither nor(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "if 条件句用来说什么?", "options": ["如果满足条件,将来就会发生的事", "过去发生的事", "此刻正在做的事", "经常反复的习惯"] },
+    { "gp": "gp1", "stem": "\"If it ___ tomorrow, we will stay home.\"(rain,if 那半句用现在时)", "options": ["rains", "will rain", "rained", "is raining"] },
+    { "gp": "gp1", "stem": "\"If you park here, a police officer ___ your car.\"(find,后半句用将来)", "options": ["will find", "finds", "found", "finding"] },
+    { "gp": "gp2", "stem": "if 那半句(说条件的)可以放在:", "options": ["句首(后加逗号)或句尾都行", "只能放句首", "只能放句尾", "只能放句子中间"] },
+    { "gp": "gp2", "stem": "下面标点正确的一句是:", "options": ["If you hurry, you will catch the bus.", "If you hurry you will, catch the bus.", "If, you hurry you will catch the bus.", "You will catch, the bus if you hurry."] },
+    { "gp": "gp3", "stem": "\"If he is working, I ___ disturb him.\"(后半句:不去打扰)", "options": ["won't", "will", "don't will", "not will"] },
+    { "gp": "gp3", "stem": "\"If you make a mistake, ___ it.\"(if + 让人做某事:改正它)", "options": ["correct", "corrects", "will correct", "corrected"] },
+    { "gp": "gp4", "stem": "if 条件句里,表示将来的事,if 那半句里的动词用:", "options": ["一般现在时(不用 will)", "一般将来时 will", "一般过去时", "现在完成时"] },
+    { "gp": "gp4", "stem": "选出正确的一句:", "options": ["If it rains, we will stay home.", "If it will rain, we will stay home.", "If it will rains, we stay home.", "If it rain, we will stayed home."] },
+    { "gp": "gp5", "stem": "\"If you see him, ___ you tell him about it?\"(if + 疑问)", "options": ["will", "do", "are", "did"] },
+    { "gp": "gp6", "stem": "\"You ___ the train if you don't hurry.\"(miss,后半句将来)", "options": ["will miss", "miss", "missed", "are missing"] },
+    { "gp": "gp6", "stem": "\"If they can help you, they ___.\"(后半句用 will 结尾)", "options": ["will", "do", "are", "can to"] },
+    { "gp": "gp7", "stem": "police(警察)这个词,后面的动词一般用:", "options": ["复数动词(are/were)", "单数动词(is/was)", "过去分词", "不定式"] },
+    { "gp": "gp7", "stem": "\"Traffic police ___ sometimes very polite.\"(police 用复数)", "options": ["are", "is", "was", "am"] },
+    { "gp": "gp7", "stem": "\"My family ___ all early risers.\"(把家人看成一个个成员,用复数)", "options": ["are", "is", "am", "was"] },
+    { "gp": "gp8", "stem": "\"The father as well as his children ___ here.\"(as well as 跟前面的 father)", "options": ["is", "are", "were", "am"] },
+    { "gp": "gp8", "stem": "as well as / with / along with 连接两个名词作起点时,动词跟:", "options": ["前面那个词(就前一致)", "后面那个词", "两个一起", "永远用复数"] },
+    { "gp": "gp8", "stem": "\"Neither you nor he ___ right.\"(neither…nor 跟离得近的 he)", "options": ["is", "are", "am", "were"] }
+  ],
+  "stage6": [
+    { "stem": "美语\"停车场\"用:", "options": ["parking lot", "car park", "stop place", "park zone"] },
+    { "stem": "美语\"市中心\"用:", "options": ["downtown", "city centre", "mid city", "town heart"] },
+    { "stem": "美语\"车牌\"用:", "options": ["license plate", "number plate", "car number", "plate card"] },
+    { "stem": "pay attention to 的意思是:", "options": ["注意,留意", "付钱给", "忽视", "指出"] },
+    { "stem": "fail to 的意思是:", "options": ["未能 / 没做到", "成功做到", "打算做", "拒绝做"] },
+    { "stem": "welcome to 的意思是:", "options": ["欢迎来到", "告别", "欢送", "拒绝进入"] }
+  ],
+  "contrast": [
+    { "us": "parking lot", "uk": "car park", "note_cn": "停车场;美语 parking lot,英式 car park" },
+    { "us": "downtown", "uk": "city centre", "note_cn": "市中心;美语 downtown,英式 city centre" },
+    { "us": "license plate", "uk": "number plate", "note_cn": "车牌;美语 license plate,英式 number plate" }
+  ],
+  "chunks": [
+    { "us": "pay attention to", "ipa": "/peɪ əˈtenʃn tə/", "example1": "Pay attention to our street signs.", "example1_cn": "请留意我们的路牌。", "example2": "You should pay attention to the teacher.", "example2_cn": "你该认真听老师讲。" },
+    { "us": "fail to", "ipa": "/feɪl tə/", "example1": "You cannot fail to obey it.", "example1_cn": "你不会不照办的。", "example2": "He failed to finish the work on time.", "example2_cn": "他没能按时完成工作。" },
+    { "us": "welcome to", "ipa": "/ˈwelkəm tə/", "example1": "Welcome to our city!", "example1_cn": "欢迎光临本市!", "example2": "Welcome to my home.", "example2_cn": "欢迎来我家。" }
+  ],
+  "stage7_cloze": {
+    "context": "If you ___1___ in the wrong spot, a police officer ___2___ your car. You will enjoy your stay if you ___3___ attention to the signs. If you ___4___ a polite note, you cannot fail to obey it.",
+    "blanks": [
+      { "blank_no": 1, "options": ["park", "will park", "parked", "are parking"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["will find", "finds", "found", "find"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["pay", "will pay", "paid", "paying"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["get", "will get", "got", "getting"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What happens if you park in the wrong place?", "options": ["A police officer will find your car", "Nothing ever happens", "You get a prize", "The car disappears"] },
+    { "stem": "What did the writer find on the car in Sweden?", "options": ["A polite note", "A parking ticket", "A flower", "A map"] },
+    { "stem": "Was the note a fine or just a reminder?", "options": ["Only a reminder", "A big fine", "A court order", "A bill"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"如果明天下雨,我就待在家\"(if 条件表将来):", "options": ["If it rains tomorrow, I will stay home.", "If it will rain tomorrow, I stay home.", "If it rained tomorrow, I will stay home.", "If it rains tomorrow, I stayed home."] },
+    { "stem": "你想说\"如果你饿了,就吃点东西\"(if + 让对方做某事):", "options": ["If you are hungry, eat something.", "If you will be hungry, eat something.", "If you are hungry, you eating something.", "If you hungry, ate something."] },
+    { "stem": "你想说\"警察正在维持秩序\"(police 用复数动词):", "options": ["The police are keeping order.", "The police is keeping order.", "The police keeps order now.", "The police am keeping order."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "obey 的意思是:", "options": ["服从,遵守", "拒绝", "忘记", "停车"] },
+    { "kind": "vocab", "stem": "reminder 的意思是:", "options": ["提示,提醒", "罚款单", "车牌", "地图"] },
+    { "kind": "grammar", "stem": "\"If you ___ hard, you will pass the test.\"(work,if 那半句用现在时)", "options": ["work", "will work", "worked", "working"] },
+    { "kind": "grammar", "stem": "\"If he plays well, he ___ into the team.\"(get,后半句用将来)", "options": ["will get", "gets", "got", "getting"] },
+    { "kind": "scenario", "stem": "\"If you don't like it, don't buy it.\" 这句话的意思是:", "options": ["如果你不喜欢,就别买", "你不喜欢也得买", "你买了就会喜欢", "别人不喜欢你就别买"] },
+    { "kind": "scenario", "stem": "\"The police ___ looking for the thief.\" 横线填(police 用复数):", "options": ["are", "is", "am", "was"] },
+    { "kind": "reading", "stem": "Why do people usually get a ticket?", "options": ["Because they park in the wrong place", "Because they drive too slowly", "Because they are polite", "Because they visit Sweden"], "passage": true },
+    { "kind": "reading", "stem": "How was the note in Sweden different from a normal ticket?", "options": ["It was polite and only a reminder, not a fine", "It was much bigger", "It was written in French", "It was a court summons"], "passage": true },
+    { "kind": "listening", "stem": "Where did the writer get the polite note?", "options": ["In Sweden, on a trip downtown", "At home", "At the airport", "In a garage in France"], "audio": true },
+    { "kind": "listening", "stem": "What did the note ask the driver to do?", "options": ["Pay attention to the street signs", "Pay a big fine", "Leave the city at once", "Move to another hotel"], "audio": true }
+  ]
+}

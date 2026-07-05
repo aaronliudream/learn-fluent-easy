@@ -28,7 +28,25 @@
 | L13 | 2 | The Greenwood Boys | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 将来进行时(主考,教材 Key structures=What will you be doing tomorrow?)+ by交通工具/现在进行复习(辅考);**单一主题三源一致(无分歧)**;**承接兑现 L12 将来进行时挂账→L12该项清零**;三源 教材p64 KeyStruct + 同步p89 将来进行时基本用法 + 新思维将来进行章未定点补扫(诚实标注);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
 | L14 | 2 | Do you speak English? | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 过去完成时(主考,教材 Key structures=After he had finished work he went home.)+ had planned/hoped 未实现计划/It was the…time that had done(辅考讲深);**同主题讲深无分歧**;**承接兑现 L7/L9 排除留后的过去完成时→该跨课账清零**;三源 教材p68 KeyStruct + 同步p92 过去完成时用法 + 新思维过去完成章未定点补扫(诚实标注);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
 | L15 | 2 | Good news | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 间接引语(主考,教材 Key structures=He said that… He told me…)+ 宾语从句 if/whether/过去将来时 would(辅考讲深);**同主题讲深无分歧**(同步 L15=宾语从句+过去将来时=间接引语底层机制);三源 教材p72 KeyStruct + 同步p99 宾语从句+过去将来时 + 新思维间接引语章未定点补扫(诚实标注);⚠️**发现反身代词遗漏→补挂账**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
-| L16 | 2 | (待扫描确认标题) | ⬜ 下一课(单元2末课) | — | NCE2 L16=A polite request;L16三源扫描确认标题+主题,不凭记忆;单元2末→出批次汇报+核对挂账清零 |
+| L16 | 2 | A polite request | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | **主题分歧第三例**:教材Key structures=if 条件句(第一类真实条件) vs 同步L16=主谓一致→按 [[am2-source-divergence-rule]] 自决(不停),裁决A+覆盖补丁第三次执行;主考if条件句12+辅考主谓一致6(课文"Traffic police are"①类);三源 教材p76 KeyStruct + 同步p103 主谓一致 + 新思维条件句章未定点补扫(诚实标注);**主谓一致深度挂账**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+
+> **✅ 单元2(L9–L16)全部生产完成(2026-07-04)。** seed 累积在 `SQLAA/american_am2_seed_unit02.sql`(待 Aaron 批次跑)。单元2批次汇报见 `REVIEWAA/american-book2-U2/UNIT2-batch-report.md`(含挂账逐条处置)。⏭️ Aaron 批次跑 unit02 seed + 真机抽验 2 课 + prewarm 音频。
+
+## L16 流水线步骤跟踪(if 条件句主考 + 主谓一致辅考)
+- [x] 1 三源扫描(scan-evidence-lesson16.md:**主题分歧第三例**——教材p76 Key structures=if 条件句(If you open the door you will get a surprise) vs 同步p103=主谓一致;逐页页眉;课文"Traffic police are"①类→主谓一致辅考;主考教材权威已足,新思维条件句章诚实标"未定点补扫";**按裁决自决未停**[[am2-source-divergence-rule]])
+- [x] 2 建考点清单(grammar-syllabus-lesson16.md:G1-G6 if条件句12 + G7集合名词3 + G8就近就前3 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对裁决执行,结论写入清单头 ★)· [x] 4 课文定稿(11句·if条件句密集If you park…will find/if pay/if get…cannot fail to obey + 主谓一致 Traffic police are·11词/3语块全落·parking lot/downtown/license plate美语化)
+- [x] 5 题库(关5=18[if条件12+主谓一致6,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson16.md;首轮无抓修;裁决执行核对✓) · [x] 8 JSON+seed(am2_l16.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44/解释44/零串味14条未用主谓术语/G1-G8全覆盖/W11) · [x] 10 commit
+
+## L16 挂账 + 单元2末挂账汇总(⚠️ 批次汇报逐条处置)
+- **本课挂账:主谓一致深度**(the+adj 作主语单复数、politics is/glasses are/ten years is、数词单用):本课只教集合名词+就近/就前;深度挂账。
+- **单元2末挂账逐条**(见 UNIT2-batch-report.md 处置):L10 名词所有格深度 / L11 宾补深度+连词深度 / L12 be to+be about to / L15 反身代词 / L16 主谓一致深度。
+
+## L16 待裁决(单元末汇总报 Aaron;分歧已按裁决自决,非阻塞)
+1. 教材/同步主题分歧第三例(if 条件句 vs 主谓一致)→ 已按 [[am2-source-divergence-rule]] 自决:if条件句主考 + 主谓一致辅考(课文 police are)+ 深度挂账。第三次执行,记录供 Aaron 复核裁决落地质量。
+2. 词表官方9词→补至11(+polite/enjoy)对齐体量 → 采纳A。
+3. 关6 美英对照 parking lot/car park · downtown/city centre · license plate/number plate → 采纳:贴停车罚单场景。
 
 ## L15 流水线步骤跟踪(间接引语主考)
 - [x] 1 三源扫描(scan-evidence-lesson15.md:**同主题讲深无分歧**——教材p72 Key structures=间接引语(He said that… He told me…,say/tell+that+时态后移) / 同步p99=宾语从句(that/if/whether)+过去将来时(would)=间接引语底层机制;逐页页眉;新思维间接引语章诚实标"未定点补扫";⚠️**发现同步 L14 章反身代词+教材 L14 himself→L14漏覆盖→补挂账**)

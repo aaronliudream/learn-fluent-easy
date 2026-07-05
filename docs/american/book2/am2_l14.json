@@ -81,7 +81,7 @@
     { "gp": "gp5", "stem": "\"When I got to the station, the train ___ already ___.\"(我到之前车已开走，过去完成)", "options": ["had … left", "has … left", "did … leave", "was … leaving"] },
     { "gp": "gp6", "stem": "\"I ___ to go shopping, but my mom came.\"(本打算…但没成)", "options": ["had planned", "plan", "will plan", "am planning"] },
     { "gp": "gp6", "stem": "\"She ___ that he would come, but he didn't.\"(原本希望…但落空)", "options": ["had hoped", "hopes", "will hope", "is hoping"] },
-    { "gp": "gp7", "stem": "\"It was the third time that I ___ him.\"(在…句式里用过去完成)", "options": ["had met", "met", "have met", "meet"] },
+    { "gp": "gp7", "stem": "\"It was the third time that I ___ him.\"(正式/书面:此句式规范用过去完成)", "options": ["had met", "have met", "meeting", "meet"] },
     { "gp": "gp8", "stem": "过去完成时的否定是:", "options": ["had not + 过去分词", "did not + 过去分词", "have not + 过去分词", "was not + 过去分词"] },
     { "gp": "gp8", "stem": "\"___ you ever seen him before that day?\"(过去完成疑问)", "options": ["Had", "Did", "Have", "Were"] },
     { "gp": "gp8", "stem": "\"By six o'clock, they ___ dinner.\"(到六点之前已吃完，过去完成)", "options": ["had finished", "finished", "have finished", "finish"] },

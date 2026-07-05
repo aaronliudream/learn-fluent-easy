@@ -1,7 +1,8 @@
 # AM2 L12 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
 
-### s5 seq1 | ans: 将来要发生的事(will/shall + 动词原形)
-一般将来时表示"将来要发生、将来要做"的事,用 will(或 shall)+ 动词原形。✓ He will sail tomorrow.
+### s5 seq1 | ans: 将来要发生的事(will + 动词原形)
+一般将来时表示"将来要发生、将来要做"的事,用 will + 动词原形。✓ He will sail tomorrow.
+📌 表将来美语一律用 will;"I shall / we shall" 是英式或很正式的书面语,美语口语不用。
 
 ### s5 seq2 | ans: will sail
 tomorrow(明天)是将来时间,用一般将来时 will + 动词原形 sail。✓ Captain Reed will sail tomorrow.
@@ -48,11 +49,12 @@ be going to + 动词原形,表示计划好、打算要做的事,或有迹象很�
 ### s5 seq16 | ans: are having
 已经安排好的事,可以用现在进行时表将来;We 用 are having。✓ We are having a party this Friday.
 
-### s5 seq17 | ans: 第一人称 I / we
-shall 常用于第一人称 I / we;will 可用于所有人称。✓ Shall we…?
+### s5 seq17 | ans: 提建议、征求意见(Shall we…? / Shall I…?)
+shall 在现代美语里几乎只剩一个活用法:提建议、征求意见,用 Shall we…? / Shall I…?。✓ Shall we go? / Shall I open the window? 用它表将来("I shall go")是英式/古旧说法,美语该用 will。
+📌 美国人提议说 "Shall we…?";表将来说 "will",不说 "I shall"。
 
 ### s5 seq18 | ans: Shall we go?
-提议"我们…好吗?"用 Shall we + 动词原形。✓ Shall we go?
+提议"我们…好吗?"用 Shall we + 动词原形。✓ Shall we go? 这是 shall 在美语里最常见的活用法。
 
 ### s6 seq1 | ans: harbor
 美语"港口"拼 harbor;英式拼 harbour。✓ sail from the harbor.

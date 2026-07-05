@@ -17,6 +17,7 @@ say 后面不直接接人(He said that…);tell 后面必须接人(He told me th
 
 ### s5 seq6 | ans: 往过去退一步(am→was, will→would)
 转述过去说过的话时,从句里的时态往过去"退一步":am→was, do→did, will→would, can→could。✓
+📌 如果所述的事现在仍然成立,美国人口语里也常不退,直接说 "She said she's coming"(她说她要来,人还没到);考试和正式写作按规范退成 "She said she was coming"。两种都对,场合不同。
 
 ### s5 seq7 | ans: He said that he was busy.
 原话 I am busy 转述时,am 往过去退成 was。✓ He said that he was busy.

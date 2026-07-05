@@ -44,6 +44,7 @@ had gotten in 是过去完成时,表示更早发生;said hi 是一般过去时,�
 
 ### s5 seq15 | ans: had met
 "这是我第三次见他"用 "It was the … time that + 过去完成时" 句式,填 had met。✓ It was the third time that I had met him.
+📌 口语里美国人也常说 "It was the third time I met him"(裸过去);考试和正式写作用 "had met"。两种都对,场合不同。
 
 ### s5 seq16 | ans: had not + 过去分词
 过去完成时的否定 = had not + 过去分词。✓ I had not seen him before.

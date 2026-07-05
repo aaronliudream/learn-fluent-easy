@@ -86,7 +86,27 @@
 
 → Aaron 重跑 unit01 seed 时,l01 的逐题解释会一并补进线上库(顺带补齐历史缺口)。
 
-## 六、Aaron 待跑 SQL(幂等,前后 COUNT)
+## 六、语域注回扫(与泄漏修复合并进同一次 seed 重跑)
+
+新规范固化:`scripts/american/specs/register_spec.md`(三条硬规则 + 分化点清单)。am2 L1–16 命中 3 处,均已修:
+
+| 课/题 | 分化点 | 处置 |
+|---|---|---|
+| **L12 shall(G8+卡+focus)** | shall 表将来=英式/古旧,美语用 will;仅 Shall we…?/Shall I…? 提议活着 | 语法卡/gp名/grammar_focus 全改口径;认知题「shall 常用哪个人称」→「shall 现代美语主要做什么」(答:提建议 Shall we…?);Shall we…? 提议题保留;解释加语感注 |
+| **L14 #15** `It was the third time that I ___ him` | had done(规范) vs 裸过去 did(口语常用) | 题干锚定 `(正式/书面:此句式规范用过去完成)`;裸过去 `met` 移出干扰项(换 `meeting` 非谓语病句);解释加语感注(口语 "I met him" 也对) |
+| **L15 时态后移** | said she was coming(规范) vs said she's coming(所述仍真) | 教规范退步不变;解释加语感注(所述现仍成立时口语可不退) |
+
+其余分化点(If I were / who-whom / fewer-less / May I 独立成题)**am2 L1–16 未命中**;L15 课文里的 "may I say something?" 是 NCE2 原文、正式办公场景,语域得当,非题目,不动。
+
+**校验**:L1–16 九项(含第9泄漏)**16/16 🟢**;`validate-am2-all.mjs`(新增,对 seed 内全部课跑,防只验新课漏老课)全绿;泄漏全扫 RED 0。
+
+## 七、CRLF 静默失效 —— 补两块板子
+
+修根(正则 `\r?\n`)之外,按你要求加防线:
+- **① seed 生成器逐课断言合并数**:`gen-book2-seed` 现逐课打印 `l01: merged 48`;凡存在 `*_explanations_final.md` 却合并 0 条 → **生成即红灯 exit(1)**,不产出无解释 seed(堵住 ON CONFLICT 整包覆盖抹解释的 footgun)。
+- **② 全量校验器**:新增 `validate-am2-all.mjs`,九项对 seed 内**全部课**跑(可选单元过滤),不再只验当轮新课——L1 的 0/48 换这个当场就炸。
+
+## 八、Aaron 待跑 SQL(幂等,前后 COUNT)
 - `SQLAA/american_am2_seed_unit01.sql`(356 题,含 l01 新回填解释)
 - `SQLAA/american_am2_seed_unit02.sql`(355 题)
 - am1 受影响:`american_expand_unit01/02/03/09/10/11/12.sql`

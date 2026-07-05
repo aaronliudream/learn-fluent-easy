@@ -4,7 +4,7 @@
   "lesson_no": 12,
   "title_en": "Goodbye and good luck",
   "title_cn": "再见,一路顺风",
-  "grammar_focus": "一般将来时(主考:will/shall+动词原形 · 'll缩略 · 各人称 · will be · 否定won't · 疑问Will…? · shall提议 · 过去→将来改写)+ be going to(辅考讲深)+ 一般现在·现在进行表将来(辅考讲深)",
+  "grammar_focus": "一般将来时(主考:will+动词原形 · 'll缩略 · 各人称 · will be · 否定won't · 疑问Will…? · shall 仅 Shall we/Shall I 提议 · 过去转将来改写)+ be going to(辅考讲深)+ 一般现在·现在进行表将来(辅考讲深)",
   "scene": "邻居船长明天启航 · 独自驾小帆船横渡大洋参加比赛 · 大家去码头送行、道别、加油",
   "grammar_card": {
     "title": "说\"将来要做什么\"(一般将来时)",
@@ -13,7 +13,7 @@
       "headers": ["规则 / 构成", "本课 / 常见例子"],
       "rows": [
         ["一般将来时 = will + 动词原形(表示'将要…')", "Captain Reed will sail tomorrow.(明天将起航)"],
-        ["shall 也可代 will,常用于第一人称 I / we", "Shall we go now?(我们走吧?)"],
+        ["shall 在美语里只剩 Shall we…?/Shall I…? 提议这一用;表将来一律用 will(I shall 是英式/正式,美语不说)", "Shall we go now?(要不要现在走?)"],
         ["口语里 will 常缩略为 'll(I'll / he'll / we'll / they'll)", "We'll say goodbye to him.(我们会跟他道别)"],
         ["将来的状态 / 位置用 will be", "He will be away for two months.(他将离开两个月)"],
         ["否定:won't(will not);疑问:把 will 提前(Will he…?)", "She won't be late. / Will he leave tomorrow?"]
@@ -57,17 +57,17 @@
     { "word": "away", "ipa": "/əˈweɪ/", "pos": "adv", "meaning_cn": "离开,不在", "example": "away for two months" }
   ],
   "grammar_points": [
-    { "gp": "gp1", "name": "一般将来时——构成 will/shall + 动词原形" },
+    { "gp": "gp1", "name": "一般将来时——构成 will + 动词原形" },
     { "gp": "gp2", "name": "一般将来时——'ll 缩略 + 各人称" },
     { "gp": "gp3", "name": "一般将来时——will be(将来的状态/位置)" },
     { "gp": "gp4", "name": "一般将来时——否定 won't / 疑问 Will…?" },
     { "gp": "gp5", "name": "一般将来时——过去，将来 改写辨识" },
     { "gp": "gp6", "name": "be going to(计划打算 / 迹象)——辅考讲深" },
     { "gp": "gp7", "name": "一般现在/现在进行 表将来(timetable/arranged)——辅考讲深" },
-    { "gp": "gp8", "name": "一般将来时——shall(第一人称 · Shall we…? 提议)" }
+    { "gp": "gp8", "name": "shall——仅 Shall we…?/Shall I…? 礼貌提议(美语将来用 will)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "一般将来时表示什么?", "options": ["将来要发生的事(will/shall + 动词原形)", "此刻正在做的事", "过去发生的事", "到现在为止的经历"] },
+    { "gp": "gp1", "stem": "一般将来时表示什么?", "options": ["将来要发生的事(will + 动词原形)", "此刻正在做的事", "过去发生的事", "到现在为止的经历"] },
     { "gp": "gp1", "stem": "\"Captain Reed ___ tomorrow.\"(sail,一般将来)", "options": ["will sail", "sails", "sailed", "is sailing"] },
     { "gp": "gp1", "stem": "\"We ___ him at the dock.\"(meet,一般将来)", "options": ["will meet", "meet", "met", "have met"] },
     { "gp": "gp2", "stem": "\"I will see you tomorrow.\" 口语缩略成:", "options": ["I'll see you tomorrow.", "I see you tomorrow.", "I'm see you tomorrow.", "I willn't see you tomorrow."] },
@@ -83,7 +83,7 @@
     { "gp": "gp6", "stem": "\"Dark clouds are gathering. It ___ rain.\"(有迹象、马上要发生)", "options": ["is going to", "will going to", "goes to", "is go to"] },
     { "gp": "gp7", "stem": "\"The train ___ at 8:20.\"(时刻表，一般现在时表将来)", "options": ["leaves", "will leaves", "is leave", "leaved"] },
     { "gp": "gp7", "stem": "\"We ___ a party this Friday.\"(已安排好，现在进行表将来)", "options": ["are having", "will having", "have had", "was having"] },
-    { "gp": "gp8", "stem": "shall 常用在哪个人称后面?", "options": ["第一人称 I / we", "第二人称 you", "第三人称 he / she", "所有人称都不用"] },
+    { "gp": "gp8", "stem": "shall 在现代美语里主要用来做什么?", "options": ["提建议、征求意见(Shall we…? / Shall I…?)", "表示将来(美语这么用已过时,要用 will)", "表示过去发生的事", "表示此刻正在做的事"] },
     { "gp": "gp8", "stem": "\"我们走吧?\"(提议一起做,注意人称和语序):", "options": ["Shall we go?", "Shall you go?", "Will I go?", "Do we shall go?"] }
   ],
   "stage6": [

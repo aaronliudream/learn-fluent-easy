@@ -1,0 +1,137 @@
+{
+  "id": "am2_l26",
+  "unit_no": 4,
+  "lesson_no": 26,
+  "title_en": "The best art critics",
+  "title_cn": "最佳艺术评论家",
+  "grammar_focus": "一般现在时(主考:表经常/习惯性动作 · 表客观真理 The earth goes round the sun · 第三人称单数动词 +s/es · 状态动词 like/know/understand 不用进行时 · 对比现在进行时'此刻正在')+ whether 引导宾语从句 / one 代替名词(辅考)",
+  "scene": "学美术的'我'画了很多画;大人爱假装懂现代艺术,其实小孩子才最会欣赏——七岁的妹妹一眼看出我新挂的画'是不是挂倒了',一看,果然倒了!",
+  "grammar_card": {
+    "title": "说'经常发生的事'(一般现在时)",
+    "intro": "本课讲一般现在时——表示经常/习惯做的事、客观真理。注意:主语是第三人称单数时动词加 -s/es;like/know/understand 这类表状态的词不用进行时。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课 / 常见例子"],
+      "rows": [
+        ["表经常/习惯:一般现在时", "I paint a lot of pictures."],
+        ["表客观真理:一般现在时", "The earth goes round the sun."],
+        ["第三人称单数:动词 +s/es", "My sister appreciates modern art."],
+        ["like/know/understand 等状态词不用进行时", "I understand what you mean.(不说 am understanding)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "对比:I am having breakfast(此刻正在)↔ I always get up late(经常)", "mark": "现在进行 vs 一般现在" },
+      { "rule": "whether = 是否,引导宾语从句:She tells me whether it is good.", "mark": "whether 是否" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Who is the student's best critic?",
+    "options": ["His seven-year-old sister", "His art teacher", "A famous painter", "His mother"],
+    "answer_index": 0
+  },
+  "passage": "I am an art student, and I paint a lot of pictures. Many people pretend that they understand modern art. They always tell you what a picture is 'about'. Of course, many pictures are not 'about' anything. They are just pretty patterns. We like them in the same way that we like pretty curtain material. I think that young children often appreciate modern pictures better than anyone else. They notice more. My sister is only seven, but she always tells me whether my pictures are good or not. She came into my room yesterday. 'What are you doing?' she asked. 'I'm hanging this picture on the wall,' I answered. 'It's a new one. Do you like it?' She looked at it critically for a moment. 'It's all right,' she said, 'but isn't it upside down?' I looked at it again. She was right! It was!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "I am an art student, and I paint a lot of pictures.", "text_cn": "我是个学艺术的学生,画了很多画。" },
+    { "seq": 2, "speaker": null, "text_en": "Many people pretend that they understand modern art.", "text_cn": "有很多人装成很懂现代艺术的样子。" },
+    { "seq": 3, "speaker": null, "text_en": "They always tell you what a picture is 'about'. Of course, many pictures are not 'about' anything.", "text_cn": "他们总是告诉你一幅画的'意思'是什么。当然,有很多画根本没什么'意思'。" },
+    { "seq": 4, "speaker": null, "text_en": "They are just pretty patterns. We like them in the same way that we like pretty curtain material.", "text_cn": "它们只是些好看的图案。我们喜欢它们,就像我们喜欢漂亮的窗帘布一样。" },
+    { "seq": 5, "speaker": null, "text_en": "I think that young children often appreciate modern pictures better than anyone else. They notice more.", "text_cn": "我觉得小孩子往往比任何人都更能欣赏现代绘画,他们观察到的东西更多。" },
+    { "seq": 6, "speaker": null, "text_en": "My sister is only seven, but she always tells me whether my pictures are good or not.", "text_cn": "我妹妹只有七岁,但她总能说出我的画是好还是坏。" },
+    { "seq": 7, "speaker": null, "text_en": "She came into my room yesterday. 'What are you doing?' she asked.", "text_cn": "昨天她到我房里来了。\"你在干什么呢?\"她问。" },
+    { "seq": 8, "speaker": null, "text_en": "'I'm hanging this picture on the wall,' I answered. 'It's a new one. Do you like it?'", "text_cn": "\"我正把这幅画挂到墙上去,\"我回答说,\"这是幅新画,你喜欢吗?\"" },
+    { "seq": 9, "speaker": null, "text_en": "She looked at it critically for a moment. 'It's all right,' she said, 'but isn't it upside down?'", "text_cn": "她用挑剔的目光看了一会儿。\"还可以吧,\"她说,\"不过,是不是挂倒了?\"" },
+    { "seq": 10, "speaker": null, "text_en": "I looked at it again. She was right! It was!", "text_cn": "我再次看了看画。她说对了!是挂倒了!" }
+  ],
+  "words": [
+    { "word": "art", "ipa": "/ɑːrt/", "pos": "n", "meaning_cn": "艺术", "example": "an art student" },
+    { "word": "critic", "ipa": "/ˈkrɪtɪk/", "pos": "n", "meaning_cn": "评论家", "example": "the best art critics" },
+    { "word": "paint", "ipa": "/peɪnt/", "pos": "v", "meaning_cn": "画,绘画", "example": "I paint a lot of pictures." },
+    { "word": "pretend", "ipa": "/prɪˈtend/", "pos": "v", "meaning_cn": "假装", "example": "pretend that they understand" },
+    { "word": "pattern", "ipa": "/ˈpætərn/", "pos": "n", "meaning_cn": "图案", "example": "just pretty patterns" },
+    { "word": "curtain", "ipa": "/ˈkɜːrtn/", "pos": "n", "meaning_cn": "窗帘,幕布", "example": "pretty curtain material" },
+    { "word": "appreciate", "ipa": "/əˈpriːʃieɪt/", "pos": "v", "meaning_cn": "欣赏,鉴赏", "example": "appreciate modern pictures" },
+    { "word": "notice", "ipa": "/ˈnoʊtɪs/", "pos": "v", "meaning_cn": "注意到", "example": "They notice more." },
+    { "word": "whether", "ipa": "/ˈweðər/", "pos": "conj", "meaning_cn": "是否", "example": "whether my pictures are good" },
+    { "word": "hang", "ipa": "/hæŋ/", "pos": "v", "meaning_cn": "悬挂(过去式 hung)", "example": "hanging this picture on the wall" },
+    { "word": "upside down", "ipa": "/ˌʌpsaɪd ˈdaʊn/", "pos": "adv", "meaning_cn": "上下颠倒地", "example": "isn't it upside down?" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般现在时表经常/习惯性动作" },
+    { "gp": "gp2", "name": "一般现在时 vs 现在进行时(经常 vs 此刻正在)" },
+    { "gp": "gp3", "name": "一般现在时表客观真理" },
+    { "gp": "gp4", "name": "第三人称单数动词 +s/es" },
+    { "gp": "gp5", "name": "状态动词(like/know/understand)不用进行时" },
+    { "gp": "gp6", "name": "一般现在时综合运用" },
+    { "gp": "gp7", "name": "whether(是否)引导宾语从句(辅考)" },
+    { "gp": "gp8", "name": "one 代替名词避免重复(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "一般现在时常用来表示什么?", "options": ["经常发生的事 / 习惯性动作", "此刻正在做的事", "将来要做的事", "刚做完的事"] },
+    { "gp": "gp1", "stem": "\"I ___ a lot of pictures.\"(经常做:一般现在时)", "stem_cn": "我画很多画。", "options": ["paint", "am painting", "painted", "will paint"] },
+    { "gp": "gp2", "stem": "\"I ___ breakfast now.\"(此刻正在:现在进行时)", "stem_cn": "我正在吃早饭。", "options": ["am having", "have", "had", "will have"] },
+    { "gp": "gp2", "stem": "\"Do you always ___ up so late?\"(经常:一般现在时)", "stem_cn": "你总是起这么晚吗?", "options": ["get", "getting", "are getting", "got"] },
+    { "gp": "gp2", "stem": "\"此刻正在做\"用现在进行时;\"经常/习惯做\"用:", "options": ["一般现在时", "一般将来时", "一般过去时", "过去进行时"] },
+    { "gp": "gp3", "stem": "\"The earth ___ round the sun.\"(客观真理:一般现在时)", "stem_cn": "地球绕着太阳转。", "options": ["goes", "is going", "went", "will go"] },
+    { "gp": "gp3", "stem": "\"The sun ___ in the east.\"(客观真理)", "stem_cn": "太阳从东方升起。", "options": ["rises", "is rising", "rose", "will rise"] },
+    { "gp": "gp4", "stem": "主语是第三人称单数(he/she/it)时,一般现在时的动词要:", "options": ["加 -s / -es", "加 -ing", "加 -ed", "不变"] },
+    { "gp": "gp4", "stem": "\"She always ___ me the truth.\"(她总是…真相:第三人称单数)", "stem_cn": "她总是告诉我真相。", "options": ["tells", "tell", "telling", "told"] },
+    { "gp": "gp4", "stem": "\"My sister ___ modern art.\"(我妹妹…现代艺术:第三人称单数)", "stem_cn": "我妹妹欣赏现代艺术。", "options": ["appreciates", "appreciate", "is appreciating", "appreciated"] },
+    { "gp": "gp5", "stem": "下面哪类动词一般不用进行时(-ing)?", "options": ["表状态的动词(like / know / understand 等)", "表动作的动词(run / jump)", "所有及物动词", "所有短动词"] },
+    { "gp": "gp5", "stem": "\"I ___ what you mean.\"(表'明白',状态动词不用进行时)", "stem_cn": "我明白你的意思。", "options": ["understand", "am understanding", "understood", "will understand"] },
+    { "gp": "gp5", "stem": "\"She ___ this song.\"(表'喜欢',不用进行时)", "stem_cn": "她喜欢这首歌。", "options": ["likes", "is liking", "liked", "will like"] },
+    { "gp": "gp6", "stem": "\"I ___ you like classical music.\"(表'听说',一般现在时)", "stem_cn": "我听说你喜欢古典音乐。", "options": ["hear", "am hearing", "heard", "will hear"] },
+    { "gp": "gp6", "stem": "\"Water ___ at 0°C.\"(客观真理:水在0℃结冰)", "stem_cn": "水在 0℃ 时结冰。", "options": ["freezes", "is freezing", "froze", "will freeze"] },
+    { "gp": "gp7", "stem": "\"She tells me ___ my pictures are good.\"(是否)", "stem_cn": "她告诉我我的画好不好。", "options": ["whether", "that", "what", "which"] },
+    { "gp": "gp7", "stem": "whether 引导宾语从句时,意思是:", "options": ["是否", "因为", "虽然", "如果不"] },
+    { "gp": "gp8", "stem": "\"It's a new ___.\"(代替前面的名词 picture,避免重复)", "stem_cn": "这是一幅新的。", "options": ["one", "it", "that", "this"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"窗帘\"也常说:", "options": ["drapes", "curtains", "window cloth", "wall cover"] },
+    { "stem": "upside down 的意思是:", "options": ["上下颠倒", "正面朝上", "从左到右", "里外反了"] },
+    { "stem": "appreciate 的意思是:", "options": ["欣赏,鉴赏", "讨厌", "假装", "忽视"] },
+    { "stem": "whether 的意思是:", "options": ["是否", "因为", "尽管", "所以"] },
+    { "stem": "pretend 的意思是:", "options": ["假装", "证明", "推迟", "假设成立"] },
+    { "stem": "notice 的意思是:", "options": ["注意到", "无视", "通知", "记住"] }
+  ],
+  "contrast": [
+    { "us": "drapes", "uk": "curtains", "note_cn": "(厚)窗帘;美语常用 drapes,英式/通用 curtains" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" }
+  ],
+  "chunks": [
+    { "us": "upside down", "ipa": "/ˌʌpsaɪd ˈdaʊn/", "example1": "Isn't it upside down?", "example1_cn": "它是不是挂倒了?", "example2": "The picture is upside down.", "example2_cn": "这幅画挂倒了。" },
+    { "us": "look at", "ipa": "/lʊk æt/", "example1": "She looked at it critically.", "example1_cn": "她挑剔地看着它。", "example2": "Look at this picture.", "example2_cn": "看这幅画。" },
+    { "us": "in the same way", "ipa": "/ɪn ðə seɪm weɪ/", "example1": "We like them in the same way.", "example1_cn": "我们以同样的方式喜欢它们。", "example2": "Do it in the same way.", "example2_cn": "照同样的方法做。" },
+    { "us": "pretend to", "ipa": "/prɪˈtend tə/", "example1": "They pretend to understand art.", "example1_cn": "他们假装懂艺术。", "example2": "Don't pretend to be asleep.", "example2_cn": "别装睡。" }
+  ],
+  "stage7_cloze": {
+    "context": "I am an art student, and I ___1___ a lot of pictures. Many people ___2___ that they understand modern art. The sun ___3___ in the east every morning. My little sister ___4___ what a good picture is.",
+    "blanks": [
+      { "blank_no": 1, "options": ["paint", "am painting", "painted", "will paint"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["pretend", "are pretending", "pretended", "will pretend"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["rises", "is rising", "rose", "will rise"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["knows", "is knowing", "knew", "will know"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What does the writer do?", "options": ["He is an art student who paints pictures", "He is a music teacher", "He sells curtains", "He is a famous critic"] },
+    { "stem": "Who does the writer think appreciates modern art best?", "options": ["Young children", "Rich collectors", "Art teachers", "Museum guides"] },
+    { "stem": "What was wrong with the picture on the wall?", "options": ["It was hung upside down", "It was too small", "It was torn", "It was the wrong color"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"地球围绕太阳转\"(客观真理用一般现在时):", "options": ["The earth goes round the sun.", "The earth is going round the sun.", "The earth go round the sun.", "The earth went round the sun."] },
+    { "stem": "你想说\"我明白你的意思\"(understand 这类词不用进行时):", "options": ["I understand what you mean.", "I am understanding what you mean.", "I understands what you mean.", "I understood what you mean now."] },
+    { "stem": "你想说\"她每天七点起床\"(习惯用一般现在时):", "options": ["She gets up at seven every day.", "She is getting up at seven every day.", "She get up at seven every day.", "She got up at seven every day."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "appreciate 的意思是:", "options": ["欣赏,鉴赏", "贬低", "假装", "购买"] },
+    { "kind": "vocab", "stem": "pretend 的意思是:", "options": ["假装", "承认", "预防", "延长"] },
+    { "kind": "grammar", "stem": "\"Water ___ at 100°C.\"(客观真理:水100℃沸腾)", "stem_cn": "水在 100℃ 时沸腾。", "options": ["boils", "is boiling", "boiled", "will boil"] },
+    { "kind": "grammar", "stem": "\"I ___ you are right.\"(表'认为',一般现在时)", "stem_cn": "我认为你是对的。", "options": ["think", "am thinking", "thought", "will think"] },
+    { "kind": "scenario", "stem": "\"Isn't it upside down?\" 这句话的意思是:", "options": ["它是不是挂倒了?", "它是不是太大了?", "它是不是旧的?", "它是不是很贵?"] },
+    { "kind": "scenario", "stem": "\"She looked at it critically.\" 这句话的意思是:", "options": ["她用挑剔的目光看它。", "她随便看了一眼。", "她根本没看。", "她赞叹地看着它。"] },
+    { "kind": "reading", "stem": "Why does the writer think children are the best art critics?", "options": ["They notice more and appreciate pictures better", "They paint faster", "They buy more art", "They study art in school"], "passage": true },
+    { "kind": "reading", "stem": "What did the sister say about the new picture?", "options": ["'It's all right, but isn't it upside down?'", "'It's terrible.'", "'It's the best ever.'", "'Sell it now.'"], "passage": true },
+    { "kind": "listening", "stem": "Who is the student's best critic?", "options": ["His seven-year-old sister", "His teacher", "A gallery owner", "His father"], "audio": true },
+    { "kind": "listening", "stem": "Was the sister right about the picture?", "options": ["Yes, it was upside down", "No, it was fine", "No, it was too dark", "Yes, it was too big"], "audio": true }
+  ]
+}

@@ -70,8 +70,8 @@
     { "gp": "gp1", "stem": "将来进行时表示什么?", "options": ["将来某个时候正在进行的事", "此刻正在进行的事", "过去发生的事", "到现在为止的经历"] },
     { "gp": "gp1", "stem": "将来进行时由什么构成?", "options": ["will/shall be + 动词-ing", "will + 动词原形", "be + 过去分词", "have + 过去分词"] },
     { "gp": "gp1", "stem": "\"They ___ here tomorrow.\"(arrive,将来进行时)", "options": ["will be arriving", "will arrived", "are arriving", "arrived"] },
-    { "gp": "gp2", "stem": "\"现在他们正在踢球\"(此刻正在 → 现在进行):", "options": ["They are playing football.", "They will be playing football.", "They played football.", "They play football."] },
-    { "gp": "gp2", "stem": "\"明天这个时候他们将在踢球\"(将来某时正在 → 将来进行):", "options": ["They will be playing football tomorrow.", "They are playing football tomorrow.", "They played football tomorrow.", "They play football tomorrow."] },
+    { "gp": "gp2", "stem": "\"现在他们正在踢球\"(此刻正在，现在进行):", "options": ["They are playing football.", "They will be playing football.", "They played football.", "They play football."] },
+    { "gp": "gp2", "stem": "\"明天这个时候他们将在踢球\"(将来某时正在，将来进行):", "options": ["They will be playing football tomorrow.", "They are playing football tomorrow.", "They played football tomorrow.", "They play football tomorrow."] },
     { "gp": "gp2", "stem": "\"He is working in the garden.\" 改成明天(将来进行时):", "options": ["He will be working in the garden tomorrow.", "He is working in the garden tomorrow.", "He works in the garden tomorrow.", "He worked in the garden tomorrow."] },
     { "gp": "gp3", "stem": "\"我下周会见到你\"(将来进行,口语缩略):", "options": ["I'll be seeing you next week.", "I be seeing you next week.", "I'll seeing you next week.", "I am be seeing you next week."] },
     { "gp": "gp3", "stem": "\"他将乘火车来\"(将来进行,he):", "options": ["He'll be coming by train.", "He'll be come by train.", "He be coming by train.", "He'll being come by train."] },
@@ -80,10 +80,10 @@
     { "gp": "gp5", "stem": "\"He'll arrive in a minute.\" 换成将来进行时,意思不变:", "options": ["He'll be arriving in a minute.", "He arriving in a minute.", "He'll been arriving in a minute.", "He is arrive in a minute."] },
     { "gp": "gp5", "stem": "关于将来进行时和一般将来时,正确的是:", "options": ["两者常可互换,都表将来", "将来进行时表过去", "一般将来时表此刻正在", "两者意思完全相反"] },
     { "gp": "gp6", "stem": "\"They will be arriving here tomorrow.\" 这句将来进行时表示:", "options": ["已经安排好、最近就要发生的事", "过去正在做的事", "经常反复的习惯", "已经完成的事"] },
-    { "gp": "gp6", "stem": "\"明晚他们将在俱乐部演出\"(安排好的将来 → 将来进行):", "options": ["Tomorrow evening they will be singing at the club.", "Tomorrow evening they sang at the club.", "Tomorrow evening they are sung at the club.", "Tomorrow evening they sing at the club yesterday."] },
+    { "gp": "gp6", "stem": "\"明晚他们将在俱乐部演出\"(安排好的将来，将来进行):", "options": ["Tomorrow evening they will be singing at the club.", "Tomorrow evening they sang at the club.", "Tomorrow evening they are sung at the club.", "Tomorrow evening they sing at the club yesterday."] },
     { "gp": "gp7", "stem": "\"他们将乘火车来\"—— 乘坐交通工具用:", "options": ["by train", "on train", "in train", "with train"] },
     { "gp": "gp7", "stem": "\"坐飞机\"用英语说:", "options": ["by air", "by airplane's", "on the air", "with air"] },
-    { "gp": "gp8", "stem": "\"目前他们正在全国巡演\"(at present,此刻正在 → 现在进行):", "options": ["At present, they are traveling.", "At present, they will be traveling.", "At present, they traveled.", "At present, they travel yesterday."] },
+    { "gp": "gp8", "stem": "\"目前他们正在全国巡演\"(at present,此刻正在，现在进行):", "options": ["At present, they are traveling.", "At present, they will be traveling.", "At present, they traveled.", "At present, they travel yesterday."] },
     { "gp": "gp8", "stem": "at present 后面常配哪个时态?", "options": ["现在进行时(am/is/are + doing)", "一般过去时", "过去进行时", "将来进行时"] }
   ],
   "stage6": [
@@ -119,7 +119,7 @@
     { "stem": "How long will the band stay?", "options": ["Five days", "Two days", "One week", "Ten days"] }
   ],
   "stage9_scenario": [
-    { "stem": "你想说\"明天这个时候我将在飞机上\"(将来某时正在 → 将来进行):", "options": ["This time tomorrow I will be flying.", "This time tomorrow I fly.", "This time tomorrow I flew.", "This time tomorrow I am flying now."] },
+    { "stem": "你想说\"明天这个时候我将在飞机上\"(将来某时正在，将来进行):", "options": ["This time tomorrow I will be flying.", "This time tomorrow I fly.", "This time tomorrow I flew.", "This time tomorrow I am flying now."] },
     { "stem": "你想问朋友\"今晚八点你会在做什么?\"(将来进行疑问):", "options": ["What will you be doing at eight tonight?", "What do you doing at eight tonight?", "What you will be doing at eight?", "What will you did at eight tonight?"] },
     { "stem": "\"我一会儿就到\"—— 下面哪句用将来进行时,意思一样?", "options": ["I'll be coming in a minute.", "I came in a minute.", "I am come in a minute.", "I be coming in a minute."] }
   ],

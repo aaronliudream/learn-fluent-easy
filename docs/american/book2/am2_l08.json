@@ -120,7 +120,7 @@
   "stage9_scenario": [
     { "stem": "你想说\"这本书比那本更有趣\":", "options": ["This book is more interesting than that one.", "This book is interestinger than that one.", "This book is most interesting than that one.", "This book is more interesting as that one."] },
     { "stem": "你想夸朋友\"你是我们班最高的\":", "options": ["You are the tallest in our class.", "You are the most tall in our class.", "You are tallest in our class.", "You are the taller in our class."] },
-    { "stem": "你想说\"我这次成绩比上次好\"(good→better):", "options": ["My grades are better than last time.", "My grades are gooder than last time.", "My grades are best than last time.", "My grades are more good than last time."] }
+    { "stem": "你想说\"我这次成绩比上次好\"(用比较级):", "options": ["My grades are better than last time.", "My grades are gooder than last time.", "My grades are best than last time.", "My grades are more good than last time."] }
   ],
   "stage10": [
     { "kind": "vocab", "stem": "competition 的意思是:", "options": ["比赛,竞赛", "合作", "展览", "表演"] },

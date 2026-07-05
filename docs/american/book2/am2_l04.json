@@ -69,7 +69,7 @@
     { "gp": "gp9", "name": "现在进行时 vs 现在完成时" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "\"I ___ just received a letter.\"(主语 I,填 have 还是 has)", "options": ["have", "has", "am", "was"] },
+    { "gp": "gp1", "stem": "\"I ___ just received a letter.\"(主语是 I,现在完成时的助动词用哪个)", "options": ["have", "has", "am", "was"] },
     { "gp": "gp1", "stem": "\"He ___ already visited many cities.\"(主语 He)", "options": ["has", "have", "is", "did"] },
     { "gp": "gp2", "stem": "\"I have just ___ a letter from Tom.\"(receive 的过去分词)", "options": ["received", "receive", "receiving", "receives"] },
     { "gp": "gp2", "stem": "\"He has ___ to Alice Springs.\"(go 的过去分词)", "options": ["gone", "went", "goed", "going"] },

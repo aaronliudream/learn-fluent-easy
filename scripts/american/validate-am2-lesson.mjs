@@ -1,7 +1,7 @@
 /**
  * AM2 单课机器校验套件(自主生产步骤9)。用法: node validate-am2-lesson.mjs am2_lNN
- * 八项:计数对账(声明=JSON=SQL)· 解释全覆盖 · 选项无重复 · 答案位置(生成器保证) ·
- *       串味扫描(情景/套话零术语)· 禁引选项字母 · 词义唯一(人工标注) · G/W 覆盖。
+ * 九项:计数对账(声明=JSON=SQL)· 解释全覆盖 · 选项无重复 · 答案位置(生成器保证) ·
+ *       串味扫描(情景/套话零术语)· 禁引选项字母 · 词义唯一(人工标注) · G/W 覆盖 · 答案泄漏扫描(a/b红·c黄)。
  */
 import { readFileSync } from "node:fs";
 const id = process.argv[2]; if(!id){console.error("用法: validate-am2-lesson.mjs am2_lNN");process.exit(1);}
@@ -35,5 +35,28 @@ lb===0?ok(`禁引选项字母 ✓`):fail(`${lb}条引用字母`);
 const gps=new Set(J.stage5.map(q=>q.gp));
 J.grammar_points.every(p=>gps.has(p.gp))?ok(`G 覆盖 ${J.grammar_points.length}点≥1题`):fail(`G点漏:${J.grammar_points.filter(p=>!gps.has(p.gp)).map(p=>p.gp)}`);
 ok(`W 词表 ${J.words.length} 词`);
+// 第9项:答案泄漏扫描(a=箭头/b=括号直给答案 → 红;c=英文主体含答案词 → 黄警,不判红)
+const hasArrow=(s)=>typeof s==="string"&&/→|->/.test(s);
+const parenHints=(s)=>[...String(s).matchAll(/[（(]([^（()）]*)[)）]/g)].map(m=>m[1]);
+const stemBody=(s)=>String(s).replace(/[（(][^（()）]*[)）]/g," ");
+const leakRed=[],leakYel=[];
+function leakCheck(tag,stem,correct,ctx){
+  const text=ctx||stem; const fld=ctx?"context":"stem";
+  if(hasArrow(text))leakRed.push(`[a] ${tag} ${fld}含箭头: ${text}`);
+  if(correct&&correct.length>=2){
+    const isEn=/^[A-Za-z][A-Za-z .'…]*$/.test(correct);
+    const esc=correct.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+    const inHint=isEn?new RegExp(`(^|[^A-Za-z])${esc}([^A-Za-z]|$)`):{test:(h)=>h.includes(correct)};
+    for(const h of parenHints(text))if(inHint.test(h)){leakRed.push(`[b] ${tag} 括号直给答案「${correct}」: ${text}`);break;}
+    if(/[A-Za-z]/.test(correct)&&new RegExp(`(^|[^A-Za-z])${esc}([^A-Za-z]|$)`).test(stemBody(text)))
+      leakYel.push(`[c] ${tag} 英文主体含答案词「${correct}」(人工判): ${stemBody(text).trim().slice(0,80)}`);
+  }
+}
+const LS=(arr,st)=>(arr||[]).forEach((q,i)=>leakCheck(`s${st}#${i+1}`,q.stem,q.options?q.options[0]:null));
+LS(J.stage5,5);LS(J.stage6,6);LS(J.stage8_listening,8);LS(J.stage9_scenario,9);LS(J.stage10,10);
+if(J.stage7_cloze){const cl=J.stage7_cloze;if(hasArrow(cl.context))leakRed.push(`[a] s7 context含箭头: ${cl.context}`);
+  cl.blanks.forEach(b=>leakCheck(`s7空${b.blank_no}`,cl.context,b.options?b.options[b.answer_index]:null,cl.context));}
+leakYel.forEach(y=>console.log("  🟡 "+y));
+leakRed.length===0?ok(`答案泄漏扫描 无泄漏(a/b)${leakYel.length?` · ${leakYel.length}条黄警已人工核`:""}`):leakRed.forEach(r=>fail("泄漏 "+r));
 console.log("\n"+(pass?"🟢 全绿":"🔴 有红灯"));
 process.exit(pass?0:1);

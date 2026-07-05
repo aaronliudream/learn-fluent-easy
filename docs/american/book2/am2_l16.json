@@ -77,7 +77,7 @@
     { "gp": "gp4", "stem": "选出正确的一句:", "options": ["If it rains, we will stay home.", "If it will rain, we will stay home.", "If it will rains, we stay home.", "If it rain, we will stayed home."] },
     { "gp": "gp5", "stem": "\"If you see him, ___ you tell him about it?\"(if + 疑问)", "options": ["will", "do", "are", "did"] },
     { "gp": "gp6", "stem": "\"You ___ the train if you don't hurry.\"(miss,后半句将来)", "options": ["will miss", "miss", "missed", "are missing"] },
-    { "gp": "gp6", "stem": "\"If they can help you, they ___.\"(后半句用 will 结尾)", "options": ["will", "do", "are", "can to"] },
+    { "gp": "gp6", "stem": "\"If they can help you, they ___.\"(条件成立,主句表将来)", "options": ["will", "do", "are", "can to"] },
     { "gp": "gp7", "stem": "police(警察)这个词,后面的动词一般用:", "options": ["复数动词(are/were)", "单数动词(is/was)", "过去分词", "不定式"] },
     { "gp": "gp7", "stem": "\"Traffic police ___ sometimes very polite.\"(police 用复数)", "options": ["are", "is", "was", "am"] },
     { "gp": "gp7", "stem": "\"My family ___ all early risers.\"(把家人看成一个个成员,用复数)", "options": ["are", "is", "am", "was"] },
@@ -125,7 +125,7 @@
   "stage10": [
     { "kind": "vocab", "stem": "obey 的意思是:", "options": ["服从,遵守", "拒绝", "忘记", "停车"] },
     { "kind": "vocab", "stem": "reminder 的意思是:", "options": ["提示,提醒", "罚款单", "车牌", "地图"] },
-    { "kind": "grammar", "stem": "\"If you ___ hard, you will pass the test.\"(work,if 那半句用现在时)", "options": ["work", "will work", "worked", "working"] },
+    { "kind": "grammar", "stem": "\"If you ___ hard, you will pass the test.\"(if 那半句用一般现在时,不用将来时)", "options": ["work", "will work", "worked", "working"] },
     { "kind": "grammar", "stem": "\"If he plays well, he ___ into the team.\"(get,后半句用将来)", "options": ["will get", "gets", "got", "getting"] },
     { "kind": "scenario", "stem": "\"If you don't like it, don't buy it.\" 这句话的意思是:", "options": ["如果你不喜欢,就别买", "你不喜欢也得买", "你买了就会喜欢", "别人不喜欢你就别买"] },
     { "kind": "scenario", "stem": "\"The police ___ looking for the thief.\" 横线填(police 用复数):", "options": ["are", "is", "am", "was"] },

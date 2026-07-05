@@ -65,7 +65,7 @@ const jb = (o) => "'" + JSON.stringify(o).replace(/'/g, "''") + "'::jsonb";
 function loadExp(id) {
   const map = new Map();
   let text; try { text = readFileSync(path.join(SRCDIR, `${id}_explanations_final.md`), "utf8"); } catch { return map; }
-  const re = /###\s*s(\d+)\s+seq(\d+)\s*\|\s*ans:.+?\n([\s\S]*?)(?=\n###\s*s\d+\s+seq|\s*$)/g;
+  const re = /###\s*s(\d+)\s+seq(\d+)\s*\|\s*ans:.+?\r?\n([\s\S]*?)(?=\r?\n###\s*s\d+\s+seq|\s*$)/g;
   let m; while ((m = re.exec(text)) !== null) map.set(`${m[1]}:${m[2]}`, m[3].trim());
   return map;
 }

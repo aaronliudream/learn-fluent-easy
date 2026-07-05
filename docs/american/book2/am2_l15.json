@@ -75,16 +75,16 @@
     { "gp": "gp3", "stem": "转述过去说的话,从句里的时态要怎么变?", "options": ["往过去退一步(am→was, will→would)", "往将来走一步", "保持不变", "都改成现在时"] },
     { "gp": "gp3", "stem": "\"'I am busy,' he said.\" 改成间接引语:", "options": ["He said that he was busy.", "He said that he is busy.", "He said that he will busy.", "He said that he be busy."] },
     { "gp": "gp3", "stem": "\"'I will see you,' she said.\" 里的 will 转述时变成:", "options": ["would", "will", "shall", "was"] },
-    { "gp": "gp4", "stem": "\"'I broke the plate,' he said.\" 改成间接引语(broke→had broken):", "options": ["He said that he had broken the plate.", "He said that he broke the plate now.", "He said that he breaks the plate.", "He said that he will break the plate."] },
-    { "gp": "gp4", "stem": "\"'I have just finished,' he said.\" 改成间接引语(have finished→had finished):", "options": ["He said that he had just finished.", "He said that he has just finished.", "He said that he will just finish.", "He said that he just finish."] },
+    { "gp": "gp4", "stem": "\"'I broke the plate,' he said.\" 改成间接引语(broke 往过去退一步):", "options": ["He said that he had broken the plate.", "He said that he broke the plate now.", "He said that he breaks the plate.", "He said that he will break the plate."] },
+    { "gp": "gp4", "stem": "\"'I have just finished,' he said.\" 改成间接引语(have done 往过去退):", "options": ["He said that he had just finished.", "He said that he has just finished.", "He said that he will just finish.", "He said that he just finish."] },
     { "gp": "gp5", "stem": "\"I don't know ___ he will come.\"(表示'是否',后面无 or not)", "options": ["if 或 whether 都行", "只能用 that", "只能用 what", "只能用 which"] },
     { "gp": "gp5", "stem": "\"I don't know ___ or not he comes.\"(紧跟 or not,只能用):", "options": ["whether", "if", "that", "what"] },
-    { "gp": "gp6", "stem": "\"He said he ___ go to the north for vacation.\"(从过去看将来 → 过去将来时)", "options": ["would", "will", "shall", "is"] },
+    { "gp": "gp6", "stem": "\"He said he ___ go to the north for vacation.\"(从过去看将来,过去将来时)", "options": ["would", "will", "shall", "is"] },
     { "gp": "gp6", "stem": "过去将来时怎么构成?", "options": ["would/should + 动词原形", "will + 动词原形", "had + 过去分词", "was + 现在分词"] },
     { "gp": "gp7", "stem": "\"'I broke my cup,' Tom said.\" 转述时 I 和 my 变成:", "options": ["he 和 his", "I 和 my", "you 和 your", "she 和 her"] },
     { "gp": "gp8", "stem": "转述一般疑问句 \"'Are you busy?' he asked.\" 用:", "options": ["He asked if I was busy.", "He asked that I was busy.", "He asked if was I busy?", "He asked are you busy."] },
     { "gp": "gp8", "stem": "转述疑问句时,从句要用什么语序?", "options": ["陈述语序(主语在前,不倒装,不加问号)", "疑问语序(把 be/助动词提前)", "感叹语序", "命令语序"] },
-    { "gp": "gp7", "stem": "\"'You can go now,' the teacher said.\" 转述(can→could,you→I):", "options": ["The teacher said that I could go then.", "The teacher said that you can go now.", "The teacher said that I can go now.", "The teacher said that you could went."] }
+    { "gp": "gp7", "stem": "\"'You can go now,' the teacher said.\" 转述(时态和人称都要变):", "options": ["The teacher said that I could go then.", "The teacher said that you can go now.", "The teacher said that I can go now.", "The teacher said that you could went."] }
   ],
   "stage6": [
     { "stem": "美语里\"加薪\"用:", "options": ["a raise", "a pay rise", "a pay up", "a money add"] },
@@ -119,15 +119,15 @@
     { "stem": "What was the good news at the end?", "options": ["The writer would get a raise", "The writer was fired", "The firm was sold", "Everyone got a holiday"] }
   ],
   "stage9_scenario": [
-    { "stem": "你想转述\"汤姆说他很累\"(转述过去说的话 → 时态后移):", "options": ["Tom said that he was tired.", "Tom said that he is tired.", "Tom said me that he tired.", "Tom say that he was tired."] },
-    { "stem": "你想转述\"她告诉我她会来\"(will→would,tell 接人):", "options": ["She told me that she would come.", "She said me that she will come.", "She told that she would come.", "She told me that she will come."] },
-    { "stem": "你想转述别人问的\"你饿吗?\"(转述一般疑问句 → ask if + 陈述语序):", "options": ["He asked if I was hungry.", "He asked that I was hungry.", "He asked was I hungry.", "He asked if was I hungry."] }
+    { "stem": "你想转述\"汤姆说他很累\"(转述过去说的话,时态后移):", "options": ["Tom said that he was tired.", "Tom said that he is tired.", "Tom said me that he tired.", "Tom say that he was tired."] },
+    { "stem": "你想转述\"她告诉我她会来\"(时态后移,tell 后面接人):", "options": ["She told me that she would come.", "She said me that she will come.", "She told that she would come.", "She told me that she will come."] },
+    { "stem": "你想转述别人问的\"你饿吗?\"(转述一般疑问句,注意语序):", "options": ["He asked if I was hungry.", "He asked that I was hungry.", "He asked was I hungry.", "He asked if was I hungry."] }
   ],
   "stage10": [
     { "kind": "vocab", "stem": "nervous 的意思是:", "options": ["紧张的", "生气的", "开心的", "困倦的"] },
     { "kind": "vocab", "stem": "afford 的意思是:", "options": ["负担得起", "打断", "收到", "拒绝"] },
-    { "kind": "grammar", "stem": "\"He said that he ___ busy that day.\"(转述过去,is→?)", "options": ["was", "is", "will be", "has been"] },
-    { "kind": "grammar", "stem": "\"She told me that she ___ finished the work.\"(have finished→?)", "options": ["had", "has", "have", "will have"] },
+    { "kind": "grammar", "stem": "\"He said that he ___ busy that day.\"(转述过去,is 要变成什么)", "options": ["was", "is", "will be", "has been"] },
+    { "kind": "grammar", "stem": "\"She told me that she ___ finished the work.\"(have finished 要变成什么)", "options": ["had", "has", "have", "will have"] },
     { "kind": "scenario", "stem": "\"He told me that he would call.\" 意思是:", "options": ["他告诉我他会打电话", "他问我是否会打电话", "他让我打电话", "他正在打电话"] },
     { "kind": "scenario", "stem": "转述\"她说'我明天来'\",下面对的是:", "options": ["She said that she would come the next day.", "She said that she will come tomorrow.", "She said me she comes tomorrow.", "She told that she come the next day."] },
     { "kind": "reading", "stem": "Why did the writer feel nervous at first?", "options": ["He thought he was about to be fired", "He was late for work", "He had lost some money", "He did not know the boss"], "passage": true },

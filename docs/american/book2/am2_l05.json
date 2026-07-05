@@ -82,7 +82,7 @@
     { "gp": "gp7", "stem": "\"Jack has ___ his own service.\"(begin 的过去分词)", "options": ["begun", "began", "begin", "beginning"] },
     { "gp": "gp7", "stem": "\"He has ___ many messages by pigeon.\"(send 的过去分词)", "options": ["sent", "sended", "send", "sending"] },
     { "gp": "gp8", "stem": "come up with 的意思是:", "options": ["想出(主意/办法)", "赶上", "放弃", "走下来"] },
-    { "gp": "gp8", "stem": "\"The new store is only two miles ___ .\"(距离多远,与 away 义近)", "options": ["away", "far", "long", "off from"] },
+    { "gp": "gp8", "stem": "\"The new store is only two miles ___ .\"(表示\"离这儿有多远\")", "options": ["away", "far", "long", "off from"] },
     { "gp": "gp8", "stem": "\"The bird covered the distance.\" 里 cover 的意思是:", "options": ["越过,走完(一段距离)", "覆盖住", "掩盖真相", "采访报道"] }
   ],
   "stage6": [

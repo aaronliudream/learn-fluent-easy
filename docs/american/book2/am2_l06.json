@@ -67,7 +67,7 @@
     { "gp": "gp8", "name": "课文语言点(ask sb for sth / in return for / call at)" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "\"___ hour\"(填 a 还是 an;hour 的 h 不发音)", "options": ["an", "a", "the", "some"] },
+    { "gp": "gp1", "stem": "\"___ hour\"(hour 的 h 不发音,以元音开头)", "options": ["an", "a", "the", "some"] },
     { "gp": "gp1", "stem": "\"___ university\"(university 读 /juː/,辅音开头)", "options": ["a", "an", "the", "some"] },
     { "gp": "gp2", "stem": "\"He asked me for ___ sandwich.\"(一个,可数单数)", "options": ["a", "an", "some", "the"] },
     { "gp": "gp2", "stem": "\"I have moved into ___ apartment.\"(apartment 元音开头)", "options": ["an", "a", "some", "the"] },

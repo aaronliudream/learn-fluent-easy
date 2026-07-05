@@ -74,6 +74,12 @@
 - 词10(except/Mediterranean/complain/continually/bitterly/sunshine/settle/shock/bear/dream);关6美英-偏薄(文本无独特美英词),用 fall/gas/cookie/garbage 高频通用,⚠️待裁决记。
 - 44题;机器12项🟢(首验红1:s10#4 括号"as if"泄漏答案 as→改措辞;3条[c]黄警=过去完成 cloze 他处含 had,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-38=264)。⏭️ L39。
 
+## ✅ U5 L39《Am I all right?》(我是否痊愈?)· 🟢全绿
+- 主教材 Key structures = **间接引语**("He said that… He told me… He asked…",KS15):say/tell+that、ask if/whether、ask+疑问词 when/why、时态后移(will→would/have→had)、疑问转述用陈述语序。
+- 裁决(自决):与 L15(间接引语)**分工**——L39 侧重**疑问句转述**(ask if/whether/疑问词+陈述语序)。间接引语 gp1-6 主考;ask sb to do/refuse to do/be allowed to do gp7-8 辅考(均课文①类)。
+- 词10全用官方(operation/successful/following/patient/alone/exchange/inquire/certain/caller/relative);关6美英=in the hospital/call/busy/elevator(电话·医院主题)。⚠️ 串味坑:META_STEM 正则含"疑问句用"→gp6 hint 改"动词跟在主语后"避误红。
+- 44题;机器12项🟢(1条[c]黄警=cloze 空3从句含 would、与空4答案 would 不同句,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-39=308)。⏭️ L40(U5末课)。
+
 ---
 
 

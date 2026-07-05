@@ -1,0 +1,134 @@
+{
+  "id": "am2_l22",
+  "unit_no": 3,
+  "lesson_no": 22,
+  "title_en": "A glass envelope",
+  "title_cn": "玻璃信封",
+  "grammar_focus": "动词 + 介词固定搭配(主考:dream/think/hear + of · receive/suffer/borrow + from · believe/succeed/persist + in · depend/rely/insist + on · 介词后接动名词 dream of doing)+ 过去进行时作背景 / throw 不规则动词(辅考:we were traveling…put · throw-threw-thrown)",
+  "scene": "女儿简把写着姓名地址的纸条塞进瓶子扔进大海;十个月后竟收到荷兰一位同龄姑娘的来信——如今两人定期通信,只是改用了邮寄,虽贵一点却快得多",
+  "grammar_card": {
+    "title": "动词后面跟哪个介词(of / from / in / on)",
+    "intro": "本课讲一批'动词 + 介词'的固定搭配:哪个动词后面跟 of、哪个跟 from、哪个跟 in、哪个跟 on。介词后面接动词时要用动名词。全用本课句子举例。",
+    "table": {
+      "headers": ["搭配", "本课 / 常见例子"],
+      "rows": [
+        ["+ of:dream / think / hear / approve of", "Jane never dreamed of receiving a letter."],
+        ["+ from:receive / suffer / borrow / prevent from", "She received a letter from a girl in Holland."],
+        ["+ in:believe / succeed / persist / take part in", "They believe in writing to each other."],
+        ["+ on:depend / rely / insist / congratulate on", "Now they depend on the mail."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "介词后面接动词用动名词:dream of receiving, think of doing", "mark": "介词 + -ing" },
+      { "rule": "throw 是不规则动词:throw – threw – thrown", "mark": "不规则动词" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How did Jane receive a letter from a stranger?",
+    "options": ["A girl in Holland found the bottle Jane threw into the sea", "A friend gave her the letter", "She found it in a store", "Her teacher mailed it to her"],
+    "answer_index": 0
+  },
+  "passage": "My daughter, Jane, never dreamed of receiving a letter from a girl of her own age in Holland. Last year, we were traveling across the English Channel, and Jane put a piece of paper with her name and address on it into a bottle. She threw the bottle into the sea. She never thought of it again, but ten months later, she received a letter from a girl in Holland. The two girls write to each other regularly now. However, they have decided to use the mail. Letters will cost a little more, but they will certainly travel faster.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "My daughter, Jane, never dreamed of receiving a letter from a girl of her own age in Holland.", "text_cn": "我的女儿简从未想过会接到荷兰一位同龄姑娘的来信。" },
+    { "seq": 2, "speaker": null, "text_en": "Last year, we were traveling across the English Channel, and Jane put a piece of paper with her name and address on it into a bottle.", "text_cn": "去年,当我们横渡英吉利海峡时,简把写有她姓名和住址的一张纸条装进了一只瓶子。" },
+    { "seq": 3, "speaker": null, "text_en": "She threw the bottle into the sea.", "text_cn": "又将瓶子扔进了大海。" },
+    { "seq": 4, "speaker": null, "text_en": "She never thought of it again, but ten months later, she received a letter from a girl in Holland.", "text_cn": "此后她就再没去想那只瓶子。但十个月以后,她收到了荷兰一位姑娘的来信。" },
+    { "seq": 5, "speaker": null, "text_en": "The two girls write to each other regularly now.", "text_cn": "现在这两位姑娘定期通信了。" },
+    { "seq": 6, "speaker": null, "text_en": "However, they have decided to use the mail.", "text_cn": "然而她们还是决定利用邮寄。" },
+    { "seq": 7, "speaker": null, "text_en": "Letters will cost a little more, but they will certainly travel faster.", "text_cn": "这样会稍微多花点钱,但肯定是快得多了。" }
+  ],
+  "words": [
+    { "word": "dream", "ipa": "/driːm/", "pos": "v", "meaning_cn": "梦想,做梦", "example": "dreamed of receiving a letter" },
+    { "word": "age", "ipa": "/eɪdʒ/", "pos": "n", "meaning_cn": "年龄", "example": "a girl of her own age" },
+    { "word": "channel", "ipa": "/ˈtʃænl/", "pos": "n", "meaning_cn": "海峡", "example": "across the English Channel" },
+    { "word": "throw", "ipa": "/θroʊ/", "pos": "v", "meaning_cn": "扔,抛(过去式 threw)", "example": "She threw the bottle into the sea." },
+    { "word": "receive", "ipa": "/rɪˈsiːv/", "pos": "v", "meaning_cn": "收到", "example": "she received a letter" },
+    { "word": "bottle", "ipa": "/ˈbɑːtl/", "pos": "n", "meaning_cn": "瓶子", "example": "into a bottle" },
+    { "word": "address", "ipa": "/ˈædres/", "pos": "n", "meaning_cn": "地址", "example": "her name and address" },
+    { "word": "regularly", "ipa": "/ˈreɡjələrli/", "pos": "adv", "meaning_cn": "定期地,经常", "example": "write to each other regularly" },
+    { "word": "mail", "ipa": "/meɪl/", "pos": "n", "meaning_cn": "邮件,邮寄", "example": "use the mail" },
+    { "word": "envelope", "ipa": "/ˈenvəloʊp/", "pos": "n", "meaning_cn": "信封", "example": "A glass envelope" },
+    { "word": "travel", "ipa": "/ˈtrævl/", "pos": "v", "meaning_cn": "旅行,行进", "example": "they will travel faster" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "动词 + of(dream/think/hear/approve of)" },
+    { "gp": "gp2", "name": "动词 + from(receive/suffer/borrow/prevent from)" },
+    { "gp": "gp3", "name": "动词 + in(believe/succeed/persist in)" },
+    { "gp": "gp4", "name": "动词 + on(depend/rely/insist/congratulate on)" },
+    { "gp": "gp5", "name": "介词后接动名词(dream of doing)" },
+    { "gp": "gp6", "name": "选对介词——综合运用" },
+    { "gp": "gp7", "name": "过去进行时作背景 + 一般过去时(辅考)" },
+    { "gp": "gp8", "name": "throw–threw–thrown 不规则动词(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "dream(梦想)后面通常接哪个介词?", "options": ["of", "from", "in", "at"] },
+    { "gp": "gp1", "stem": "\"Jane never dreamed ___ receiving a letter.\"(梦想到、想到)", "stem_cn": "简从没想过会收到一封信。", "options": ["of", "from", "in", "on"] },
+    { "gp": "gp2", "stem": "receive / suffer / borrow 后面常接哪个介词?", "options": ["from", "of", "in", "on"] },
+    { "gp": "gp2", "stem": "\"She received a letter ___ a girl in Holland.\"(收到…的来信)", "stem_cn": "她收到了荷兰一位姑娘的来信。", "options": ["from", "of", "in", "on"] },
+    { "gp": "gp3", "stem": "believe / succeed / persist 后面常接哪个介词?", "options": ["in", "of", "from", "on"] },
+    { "gp": "gp3", "stem": "\"They believe ___ writing to each other.\"(信奉、坚持)", "stem_cn": "她们相信要常常互相写信。", "options": ["in", "of", "from", "on"] },
+    { "gp": "gp4", "stem": "depend / rely / insist 后面常接哪个介词?", "options": ["on", "of", "from", "in"] },
+    { "gp": "gp4", "stem": "\"It all depends ___ the weather.\"(取决于、全看)", "stem_cn": "这全看天气。", "options": ["on", "of", "from", "in"] },
+    { "gp": "gp4", "stem": "\"He congratulated me ___ my success.\"(祝贺)", "stem_cn": "他祝贺我成功。", "options": ["on", "of", "from", "in"] },
+    { "gp": "gp5", "stem": "介词(of / in / on…)后面接动词时,要用:", "options": ["动名词(-ing)", "动词原形", "不定式 to do", "过去式"] },
+    { "gp": "gp5", "stem": "\"I dream of ___ a pilot.\"(dream of + 动名词:成为)", "stem_cn": "我梦想成为一名飞行员。", "options": ["becoming", "become", "to become", "became"] },
+    { "gp": "gp5", "stem": "\"She is interested in ___ stamps.\"(对…感兴趣:收集)", "stem_cn": "她喜欢集邮。", "options": ["collecting", "collect", "to collect", "collected"] },
+    { "gp": "gp6", "stem": "\"The medicine saved him ___ death.\"(救他免于)", "stem_cn": "那药救了他一命。", "options": ["from", "of", "in", "on"] },
+    { "gp": "gp6", "stem": "\"Success depends ___ hard work.\"(靠、取决于)", "stem_cn": "成功靠努力。", "options": ["on", "of", "from", "in"] },
+    { "gp": "gp7", "stem": "\"We ___ traveling when Jane threw the bottle.\"(过去进行时作背景:正在旅行)", "stem_cn": "简扔瓶子时,我们正在旅行途中。", "options": ["were", "are", "have", "did"] },
+    { "gp": "gp7", "stem": "过去进行时(was/were + 动词-ing)在故事里常用来:", "options": ["描述当时正在进行的背景", "表示将来的计划", "表示反复的习惯", "表示一件被动的事"] },
+    { "gp": "gp8", "stem": "throw 的过去式和过去分词是:", "options": ["threw / thrown", "throwed / throwed", "threw / threw", "thrown / threw"] },
+    { "gp": "gp8", "stem": "\"She ___ the bottle into the sea.\"(throw 的过去式:扔)", "stem_cn": "她把瓶子扔进了大海。", "options": ["threw", "throwed", "thrown", "throws"] }
+  ],
+  "stage6": [
+    { "stem": "美语\"旅行/行进\"拼作:", "options": ["traveling", "travelling", "travling", "travelin"] },
+    { "stem": "美语\"邮件/邮寄\"常说:", "options": ["mail", "post", "sending", "letter box"] },
+    { "stem": "dream of 的意思是:", "options": ["梦想;想到", "害怕", "厌倦", "属于"] },
+    { "stem": "receive a letter from 的意思是:", "options": ["收到…的来信", "给…写信", "把信寄给…", "拒收…的信"] },
+    { "stem": "think of 的意思是:", "options": ["想起;考虑", "同意", "逃离", "包含"] },
+    { "stem": "regularly 的意思是:", "options": ["定期地,经常", "偶尔地", "从不", "突然地"] }
+  ],
+  "contrast": [
+    { "us": "traveling", "uk": "travelling", "note_cn": "旅行(现在分词/过去式);美语单写 l:traveling / traveled,英式双写:travelling / travelled" },
+    { "us": "mail", "uk": "post", "note_cn": "邮件/邮寄;美语 mail,英式 post" },
+    { "us": "mailbox", "uk": "postbox", "note_cn": "邮筒/信箱;美语 mailbox,英式 postbox / pillar box" }
+  ],
+  "chunks": [
+    { "us": "dream of", "ipa": "/driːm əv/", "example1": "Jane never dreamed of receiving a letter.", "example1_cn": "简从没想过会收到一封信。", "example2": "I dream of becoming a doctor.", "example2_cn": "我梦想成为一名医生。" },
+    { "us": "think of", "ipa": "/θɪŋk əv/", "example1": "She never thought of it again.", "example1_cn": "她再没想起那只瓶子。", "example2": "What do you think of this idea?", "example2_cn": "你觉得这个主意怎么样?" },
+    { "us": "receive from", "ipa": "/rɪˈsiːv frəm/", "example1": "She received a letter from a girl in Holland.", "example1_cn": "她收到荷兰一位姑娘的来信。", "example2": "I received a gift from my aunt.", "example2_cn": "我收到姑姑送的礼物。" },
+    { "us": "write to", "ipa": "/raɪt tə/", "example1": "The two girls write to each other.", "example1_cn": "两个姑娘互相写信。", "example2": "Please write to me soon.", "example2_cn": "请尽快给我写信。" }
+  ],
+  "stage7_cloze": {
+    "context": "Jane never dreamed ___1___ getting a letter one day. Months later she received a nice letter ___2___ a stranger. The two girls now believe ___3___ writing often, and they depend ___4___ the mail to stay close.",
+    "blanks": [
+      { "blank_no": 1, "options": ["of", "from", "in", "on"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["from", "of", "in", "on"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["in", "of", "from", "on"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["on", "of", "from", "in"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did Jane's letter come from?", "options": ["From a girl in Holland", "From Jane's teacher", "From a boy in France", "From the post office"] },
+    { "stem": "What did Jane put into the bottle?", "options": ["A piece of paper with her name and address", "A small toy", "A photo of herself", "Some money"] },
+    { "stem": "How do the two girls send letters now?", "options": ["By mail", "In bottles", "By flying there themselves", "They don't write anymore"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我梦想成为一名医生\"(dream of + 动名词):", "options": ["I dream of becoming a doctor.", "I dream of become a doctor.", "I dream to become a doctor.", "I dream becoming a doctor."] },
+    { "stem": "你想说\"我收到了朋友的来信\"(receive a letter from):", "options": ["I received a letter from my friend.", "I received a letter of my friend.", "I received a letter to my friend.", "I received a letter by my friend."] },
+    { "stem": "你想说\"这取决于天气\"(depend on):", "options": ["It depends on the weather.", "It depends of the weather.", "It depends in the weather.", "It depends to the weather."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "throw 的意思是:", "options": ["扔,抛", "接住", "购买", "推动"] },
+    { "kind": "vocab", "stem": "receive 的意思是:", "options": ["收到", "寄出", "撕碎", "阅读"] },
+    { "kind": "grammar", "stem": "\"He insisted ___ paying the bill.\"(坚持要)", "stem_cn": "他坚持要付账。", "options": ["on", "of", "in", "from"] },
+    { "kind": "grammar", "stem": "\"This cake consists ___ eggs and flour.\"(由…组成)", "stem_cn": "这蛋糕由鸡蛋和面粉做成。", "options": ["of", "from", "in", "on"] },
+    { "kind": "scenario", "stem": "\"It depends on you.\" 这句话的意思是:", "options": ["这取决于你。", "这与你无关。", "这属于你。", "这靠不住。"] },
+    { "kind": "scenario", "stem": "\"I dream of traveling the world.\" 这句话的意思是:", "options": ["我梦想周游世界。", "我讨厌旅行。", "我昨晚梦见了世界地图。", "我正在环游世界。"] },
+    { "kind": "reading", "stem": "How did Jane's friendship with the Holland girl begin?", "options": ["She threw a bottle with her address into the sea", "They met on a boat", "They were in the same class", "A teacher introduced them"], "passage": true },
+    { "kind": "reading", "stem": "Why did the two girls decide to use the mail?", "options": ["Because letters travel faster than bottles", "Because bottles are cheaper", "Because they lost the bottle", "Because the sea was too rough"], "passage": true },
+    { "kind": "listening", "stem": "How did Jane receive a letter from a stranger?", "options": ["A girl in Holland found her bottle", "She wrote to a pen-pal club", "Her father gave it to her", "She found it in the mailbox by chance"], "audio": true },
+    { "kind": "listening", "stem": "Do the girls still send letters in bottles?", "options": ["No, they use the mail now", "Yes, every month", "Yes, but only in summer", "No, they stopped writing"], "audio": true }
+  ]
+}

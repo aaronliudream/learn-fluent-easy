@@ -1,0 +1,136 @@
+{
+  "id": "am2_l24",
+  "unit_no": 3,
+  "lesson_no": 24,
+  "title_en": "It could be worse",
+  "title_cn": "不幸中之万幸",
+  "grammar_focus": "易混词辨析复习(主考:borrow 借入 / lend 借出 · its 它的 / it's = it is · exciting 令人激动 / excited 感到激动 · beside 在旁 / besides 除…外 · remind 提醒 / remember 记得 · home / house · police 用复数)+ What a…! 感叹句 / It could be worse(辅考)",
+  "scene": "在饭店经理办公室报失 50 美元,经理深表同情却无能为力、正抱怨世道不古——一个姑娘送来装着 50 美元的信封:'在这位先生房门外捡到的。'这世上到底还是有诚实可言!",
+  "grammar_card": {
+    "title": "易混词复习:一字之差,意思大不同",
+    "intro": "本课复习一批容易搞混的词:borrow / lend、its / it's、exciting / excited、beside / besides、remind / remember 等,再复习 What a…! 感叹句。全用本课句子举例。",
+    "table": {
+      "headers": ["易混点", "本课 / 常见例子"],
+      "rows": [
+        ["borrow 借入 ↔ lend 借出", "Can I borrow your pen? / Lend me your pen."],
+        ["its 它的 ↔ it's = it is / it has", "The dog wagged its tail. / It's raining."],
+        ["exciting 令人激动(修饰物)↔ excited 感到激动(修饰人)", "an exciting game / the excited children"],
+        ["beside 在…旁边 ↔ besides 除…之外", "beside the window / Besides English…"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "remind sb 提醒别人 ↔ remember 自己记得:Please remind me to call.", "mark": "remind/remember" },
+      { "rule": "感叹句 What a + 名词!:What a wonderful garden!", "mark": "What a…!" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Had the writer's money been stolen?",
+    "options": ["No, an honest girl found it outside his room", "Yes, a thief took it", "Yes, the manager took it", "No, he had just spent it"],
+    "answer_index": 0
+  },
+  "passage": "I entered the hotel manager's office and sat down. I had just lost $50 and I felt very upset. 'I left the money in my room,' I said, 'and it's not there now.' The manager was sympathetic, but he could do nothing. 'Everyone's losing money these days,' he said. He started to complain about this wicked world but was interrupted by a knock at the door. A girl came in and put an envelope on his desk. It contained $50. 'I found this outside this gentleman's room,' she said. 'Well,' I said to the manager, 'there is still some honesty in this world!'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "I entered the hotel manager's office and sat down.", "text_cn": "我走进饭店经理的办公室,坐了下来。" },
+    { "seq": 2, "speaker": null, "text_en": "I had just lost $50 and I felt very upset.", "text_cn": "我刚刚丢了 50 美元,感到非常烦恼。" },
+    { "seq": 3, "speaker": null, "text_en": "'I left the money in my room,' I said, 'and it's not there now.'", "text_cn": "\"我把钱放在房间里,\"我说,\"可现在没有了。\"" },
+    { "seq": 4, "speaker": null, "text_en": "The manager was sympathetic, but he could do nothing.", "text_cn": "经理深表同情,但却无能为力。" },
+    { "seq": 5, "speaker": null, "text_en": "'Everyone's losing money these days,' he said.", "text_cn": "\"现在大家都在丢钱,\"他说。" },
+    { "seq": 6, "speaker": null, "text_en": "He started to complain about this wicked world but was interrupted by a knock at the door.", "text_cn": "他开始抱怨起这个邪恶的世道来,却被一阵敲门声打断了。" },
+    { "seq": 7, "speaker": null, "text_en": "A girl came in and put an envelope on his desk. It contained $50.", "text_cn": "一个姑娘走了进来,把一个信封放在了他桌上。里面装着 50 美元。" },
+    { "seq": 8, "speaker": null, "text_en": "'I found this outside this gentleman's room,' she said.", "text_cn": "\"这是我在这位先生的房门外捡到的,\"她说。" },
+    { "seq": 9, "speaker": null, "text_en": "'Well,' I said to the manager, 'there is still some honesty in this world!'", "text_cn": "\"是啊,\"我对那位经理说,\"这世界上还是有诚实可言的!\"" }
+  ],
+  "words": [
+    { "word": "manager", "ipa": "/ˈmænɪdʒər/", "pos": "n", "meaning_cn": "经理", "example": "the hotel manager's office" },
+    { "word": "upset", "ipa": "/ˌʌpˈset/", "pos": "adj", "meaning_cn": "不安的,心烦的", "example": "I felt very upset" },
+    { "word": "sympathetic", "ipa": "/ˌsɪmpəˈθetɪk/", "pos": "adj", "meaning_cn": "表示同情的", "example": "The manager was sympathetic." },
+    { "word": "complain", "ipa": "/kəmˈpleɪn/", "pos": "v", "meaning_cn": "抱怨", "example": "complain about this world" },
+    { "word": "wicked", "ipa": "/ˈwɪkɪd/", "pos": "adj", "meaning_cn": "邪恶的", "example": "this wicked world" },
+    { "word": "contain", "ipa": "/kənˈteɪn/", "pos": "v", "meaning_cn": "包含,内装", "example": "It contained $50." },
+    { "word": "honesty", "ipa": "/ˈɑːnəsti/", "pos": "n", "meaning_cn": "诚实", "example": "some honesty in this world" },
+    { "word": "envelope", "ipa": "/ˈenvəloʊp/", "pos": "n", "meaning_cn": "信封", "example": "put an envelope on his desk" },
+    { "word": "dollar", "ipa": "/ˈdɑːlər/", "pos": "n", "meaning_cn": "美元", "example": "I had just lost $50." },
+    { "word": "interrupt", "ipa": "/ˌɪntəˈrʌpt/", "pos": "v", "meaning_cn": "打断", "example": "was interrupted by a knock" },
+    { "word": "gentleman", "ipa": "/ˈdʒentlmən/", "pos": "n", "meaning_cn": "先生,绅士", "example": "this gentleman's room" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "borrow 借入 ↔ lend 借出" },
+    { "gp": "gp2", "name": "its 它的 ↔ it's = it is / it has" },
+    { "gp": "gp3", "name": "exciting 令人激动 ↔ excited 感到激动" },
+    { "gp": "gp4", "name": "beside 在旁 ↔ besides 除…之外" },
+    { "gp": "gp5", "name": "remind 提醒 ↔ remember 记得" },
+    { "gp": "gp6", "name": "home / house · police 用复数(其他易混复习)" },
+    { "gp": "gp7", "name": "What a + 名词!感叹句(辅考)" },
+    { "gp": "gp8", "name": "It could be worse——could 表可能(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "borrow 的意思是:", "options": ["借入(向别人借来)", "借出(借给别人)", "归还", "购买"] },
+    { "gp": "gp1", "stem": "\"Can I ___ your pen?\"(向你借用)", "stem_cn": "我可以借用你的笔吗?", "options": ["borrow", "lend", "borrowed", "lent"] },
+    { "gp": "gp2", "stem": "its 和 it's 的区别是:", "options": ["its = 它的;it's = it is / it has", "两个完全一样", "its = it is;it's = 它的", "都表示'它们'"] },
+    { "gp": "gp2", "stem": "\"The dog wagged ___ tail.\"(它的尾巴:所有关系)", "stem_cn": "狗摇着它的尾巴。", "options": ["its", "it's", "its'", "it"] },
+    { "gp": "gp2", "stem": "\"___ raining outside.\"(外面在下雨:it is 缩写)", "stem_cn": "外面在下雨。", "options": ["It's", "Its", "Its'", "It"] },
+    { "gp": "gp3", "stem": "exciting 和 excited 的区别是:", "options": ["exciting = 令人激动的(修饰物);excited = 感到激动的(修饰人)", "两个完全一样", "exciting = 感到激动;excited = 令人激动", "两个都是名词"] },
+    { "gp": "gp3", "stem": "\"The game was very ___.\"(令人激动的)", "stem_cn": "这场比赛非常精彩。", "options": ["exciting", "excited", "excite", "excitement"] },
+    { "gp": "gp3", "stem": "\"The children were ___ about the trip.\"(感到激动的)", "stem_cn": "孩子们对这次旅行感到兴奋。", "options": ["excited", "exciting", "excite", "excitement"] },
+    { "gp": "gp4", "stem": "\"He was standing ___ the window.\"(在窗户旁边)", "stem_cn": "他站在窗户旁边。", "options": ["beside", "besides", "between", "among"] },
+    { "gp": "gp4", "stem": "\"___ English, she speaks French.\"(除英语之外还)", "stem_cn": "除了英语,她还会说法语。", "options": ["Besides", "Beside", "Between", "Among"] },
+    { "gp": "gp5", "stem": "remind 和 remember 的区别是:", "options": ["remind = 提醒(别人);remember = 记得(自己)", "两个完全一样", "remind = 记得;remember = 提醒", "都表示'忘记'"] },
+    { "gp": "gp5", "stem": "\"Please ___ me to call her.\"(提醒我做某事)", "stem_cn": "请提醒我给她打电话。", "options": ["remind", "remember", "reminded", "forget"] },
+    { "gp": "gp6", "stem": "\"I was glad to get ___.\"(回到家里)", "stem_cn": "能回到家我很高兴。", "options": ["home", "to home", "the house", "at home"] },
+    { "gp": "gp6", "stem": "borrow(借入)的反义词(借出给别人)是:", "options": ["lend", "borrow", "keep", "take"] },
+    { "gp": "gp6", "stem": "\"The police ___ looking for him.\"(police 用复数)", "stem_cn": "警察正在找他。", "options": ["are", "is", "was", "has"] },
+    { "gp": "gp7", "stem": "\"___ a wonderful garden!\"(感叹句开头,后接名词短语)", "stem_cn": "多美的花园啊!", "options": ["What", "How", "Which", "That"] },
+    { "gp": "gp7", "stem": "感叹句里 What 和 How 的区别,What 后面接:", "options": ["名词(What a nice day!)", "形容词(How nice!)", "一个动词", "一个副词"] },
+    { "gp": "gp8", "stem": "\"It could be worse.\" 这里 could 表示:", "options": ["可能(情况本可更糟,言下之意还不算太坏)", "过去的能力", "客气的请求", "必须"] }
+  ],
+  "stage6": [
+    { "stem": "美语里最常见的货币单位是:", "options": ["dollar($)", "pound(£)", "euro", "yen"] },
+    { "stem": "borrow 的意思是:", "options": ["借入(向别人借)", "借出", "归还", "买下"] },
+    { "stem": "its 的意思是:", "options": ["它的", "它是", "它们", "他的"] },
+    { "stem": "besides 的意思是:", "options": ["除…之外(还)", "在…旁边", "反对", "尽管"] },
+    { "stem": "remind sb 的意思是:", "options": ["提醒某人", "记得某人", "忘记某人", "感谢某人"] },
+    { "stem": "contain 的意思是:", "options": ["装有,包含", "倒空", "打开", "丢失"] }
+  ],
+  "contrast": [
+    { "us": "dollar ($)", "uk": "pound (£)", "note_cn": "货币单位;美国用 dollar 美元($),英国用 pound 英镑(£)" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "restroom", "uk": "toilet", "note_cn": "(公共场所)洗手间;美语 restroom,英式 toilet" }
+  ],
+  "chunks": [
+    { "us": "these days", "ipa": "/ðiːz deɪz/", "example1": "Everyone's losing money these days.", "example1_cn": "如今大家都在丢钱。", "example2": "These days, kids love phones.", "example2_cn": "如今的孩子都爱玩手机。" },
+    { "us": "could do nothing", "ipa": "/kʊd du ˈnʌθɪŋ/", "example1": "He could do nothing.", "example1_cn": "他无能为力。", "example2": "We could do nothing but wait.", "example2_cn": "我们除了等别无办法。" },
+    { "us": "come in", "ipa": "/kʌm ɪn/", "example1": "A girl came in.", "example1_cn": "一个姑娘走了进来。", "example2": "Please come in!", "example2_cn": "请进!" },
+    { "us": "sit down", "ipa": "/sɪt daʊn/", "example1": "I entered and sat down.", "example1_cn": "我走进去坐了下来。", "example2": "Please sit down.", "example2_cn": "请坐。" }
+  ],
+  "stage7_cloze": {
+    "context": "I had just lost $50, so I felt very ___1___. The manager was ___2___, but he could do nothing. A girl came in with an envelope. It ___3___ $50. 'There is still some ___4___ in this world!' I said.",
+    "blanks": [
+      { "blank_no": 1, "options": ["upset", "upsetting", "exciting", "excited"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["sympathetic", "honest", "wicked", "upset"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["contained", "complained", "remained", "explained"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["honesty", "honest", "honestly", "dishonest"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How much money had the writer lost?", "options": ["$50", "$5", "$500", "Nothing at all"] },
+    { "stem": "Was the manager able to help?", "options": ["No, he could do nothing", "Yes, he found the money", "Yes, he gave his own money", "No, he was angry"] },
+    { "stem": "Who brought the money back?", "options": ["An honest girl who found it outside the room", "The manager", "A police officer", "The writer's friend"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我可以借用你的笔吗\"(借入用 borrow):", "options": ["Can I borrow your pen?", "Can I lend your pen?", "Can I borrow you pen?", "Can I borrowed your pen?"] },
+    { "stem": "你想说\"这部电影很精彩\"(令人激动用 exciting):", "options": ["The movie is very exciting.", "The movie is very excited.", "The movie is very excite.", "The movie is very excitement."] },
+    { "stem": "你想感叹\"多好的一天啊!\"(What a + 名词):", "options": ["What a nice day!", "How a nice day!", "What nice a day!", "What an nice day!"] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "complain 的意思是:", "options": ["抱怨", "称赞", "解释", "同意"] },
+    { "kind": "vocab", "stem": "honesty 的意思是:", "options": ["诚实", "礼貌", "勇敢", "运气"] },
+    { "kind": "grammar", "stem": "\"The news is very ___.\"(令人激动的)", "stem_cn": "这消息真令人激动。", "options": ["exciting", "excited", "excite", "excitement"] },
+    { "kind": "grammar", "stem": "\"The dog wagged ___ tail.\"(它的:所有关系)", "stem_cn": "狗摇着它的尾巴。", "options": ["its", "it's", "its'", "it"] },
+    { "kind": "scenario", "stem": "\"It could be worse.\" 这句话的意思是:", "options": ["情况本可能更糟(还算不错)。", "情况一定更糟。", "情况不可能更糟。", "情况必须更糟。"] },
+    { "kind": "scenario", "stem": "\"Everyone's losing money these days.\" 这句话的意思是:", "options": ["如今大家都在丢钱。", "从前大家都在赚钱。", "没人会丢钱。", "钱越来越多了。"] },
+    { "kind": "reading", "stem": "Why did the writer go to the manager's office?", "options": ["Because he had lost $50", "Because he wanted a room", "Because he was hungry", "Because he worked there"], "passage": true },
+    { "kind": "reading", "stem": "What was in the envelope the girl brought?", "options": ["$50", "A letter", "A key", "Nothing"], "passage": true },
+    { "kind": "listening", "stem": "Had the writer's money been stolen?", "options": ["No, a girl found it outside his room", "Yes, a thief took it", "Yes, the manager took it", "No, he never lost it"], "audio": true },
+    { "kind": "listening", "stem": "What did the writer conclude at the end?", "options": ["There is still some honesty in this world", "The world is completely wicked", "He would never return", "Money is not important"], "audio": true }
+  ]
+}

@@ -115,6 +115,12 @@
 - 词10(forest/risk/picnic/edge/strap/possession/breath/contents/mend 官方9 + fright 补1)。关6美英=purse/cookie/candy/sneakers(野餐·追逐主题)。
 - 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit06.sql`(**L41-44=176**)。⏭️ L45。
 
+## ✅ U6 L45《A clear conscience》(问心无愧)· 🟢全绿(零黄警)· **复习课**
+- 主教材 Key structures = **Review KS10/21/34 复习被动语态(the passive)**:各时态被动(was built 一般过去、had been sent 过去完成)、情态被动 must be/have been done(对过去推测:must have been found)、主动↔被动、by 引出执行者。
+- 裁决(自决):被动复习 gp1-5 主考(情态被动 must have been done 给4题重点);while+doing gp6 + in time gp7 + a large sum of/in this way gp8 辅考(均课文①类)。分工:L34(U5)首讲被动各时态;L45 复习+侧重情态被动/主被动转换。
+- 词10(clear/conscience/wallet/savings/villager/percent 官方6 + thief/honest/note/wrap 补4)。关6美英=zip code/bill/mail/**percent**(邮局·钱主题;**percent 一词=美语,per cent 两词=英式**,课文原文已美语化)。
+- 44题;机器12项🟢(首验红2:s5#10/#11 主动变被动含箭头"→"→改"把X改成被动"措辞;2条[c]黄警=cloze"He was sure"撞被动 was→改 felt sure 规避,复验零黄警)。seed→`american_am2_seed_unit06.sql`(**L41-45=220**)。⏭️ L46。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

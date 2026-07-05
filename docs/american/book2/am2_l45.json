@@ -1,0 +1,136 @@
+{
+  "id": "am2_l45",
+  "unit_no": 6,
+  "lesson_no": 45,
+  "title_en": "A clear conscience",
+  "title_cn": "问心无愧",
+  "grammar_focus": "被动语态复习(the passive,复习 KS10/21/34)主考——各时态被动(was/were done 一般过去、had been done 过去完成)、情态被动 must be done / must have been done(对过去推测)、主动↔被动转换、by 引出执行者;while + doing(在…时)、in time(最后终于)、a large sum of / in this way(辅考·课文①类)。美语差:百分之 美语拼 percent(一个词),英式 per cent(见关6对照)",
+  "scene": "整个村子很快知道有一大笔钱丢失了。当地的屠户萨姆·本顿在把存款送往邮局的途中把钱包丢了。萨姆确信那钱包一定被某个村民捡到了,可是却一直不见有人来送还他。3个月过去了,后来一天早晨,萨姆在自己的大门外发现了他的钱包:钱包用报纸包着,里面有他丢失的钱的一半,还附着一张纸条,上面写着:“一个小偷,是的,但只是一个50%的小偷!”又过了两个月,又有一些钱送还给萨姆,又附了一张字条:“这回只是25%的小偷了!”很快,萨姆全部的钱都用同样的方式还了回来。最后那张字条上写道:“我现在是一个100%的诚实人了!”",
+  "grammar_card": {
+    "title": "被动语态复习:各时态 + 情态被动",
+    "intro": "被动语态 = be + 过去分词,表示'被…'。复习各时态:一般过去 was/were done、过去完成 had been done;情态被动 must be done / must have been done(对过去的推测)。动作的执行者用 by 引出。全用本课和 Key structures 的句子举例。",
+    "table": {
+      "headers": ["时态/情况", "被动说法"],
+      "rows": [
+        ["一般过去", "This bridge was built in 1942.(桥被建造)"],
+        ["一般过去 + by", "The thief was arrested by the police.(被警察抓)"],
+        ["过去完成", "The parcel had been sent to the wrong address.(被寄错)"],
+        ["情态 + 被动(对过去推测)", "It must have been stolen.(一定被偷了)"],
+        ["情态 + 被动", "This must be paid for.(必须被付款)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "对过去的推测用 must have been + 过去分词:The wallet must have been found(钱包一定被捡到了)。", "mark": "must have been done" },
+      { "rule": "被动句里动作的执行者用 by 引出:was arrested by the police。", "mark": "by 引出执行者" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How did Sam get his money back?",
+    "options": ["The thief returned it bit by bit, wrapped in newspaper with notes", "The police recovered it", "A villager confessed and repaid him", "He was refunded by the post office"],
+    "answer_index": 0
+  },
+  "passage": "The whole village soon learnt that a large sum of money had been lost. Sam Benton, the local butcher, had lost his wallet while taking his savings to the post office. Sam was sure that the wallet must have been found by one of the villagers, but it was not returned to him. Three months passed, and then one morning, Sam found his wallet outside his front door. It had been wrapped up in newspaper and it contained half the money he had lost, together with a note which said: 'A thief, yes, but only 50 percent a thief!' Two months later, some more money was sent to Sam with another note: 'Only 25 percent a thief now!' In time, all Sam's money was paid back in this way. The last note said: 'I am 100 percent honest now!'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "The whole village soon learnt that a large sum of money had been lost.", "text_cn": "整个村子很快知道有一大笔钱丢失了。" },
+    { "seq": 2, "speaker": null, "text_en": "Sam Benton, the local butcher, had lost his wallet while taking his savings to the post office.", "text_cn": "当地的屠户萨姆·本顿在把存款送往邮局的途中把钱包丢了。" },
+    { "seq": 3, "speaker": null, "text_en": "Sam was sure that the wallet must have been found by one of the villagers, but it was not returned to him.", "text_cn": "萨姆确信那钱包一定被某个村民捡到了,可是却一直不见有人送还他。" },
+    { "seq": 4, "speaker": null, "text_en": "Three months passed, and then one morning, Sam found his wallet outside his front door.", "text_cn": "3个月过去了,后来一天早晨,萨姆在自家门外发现了他的钱包。" },
+    { "seq": 5, "speaker": null, "text_en": "It had been wrapped up in newspaper and it contained half the money he had lost, together with a note which said: 'A thief, yes, but only 50 percent a thief!'", "text_cn": "钱包用报纸包着,里面有他丢失的钱的一半,还附着一张纸条,上面写着:“一个小偷,是的,但只是一个50%的小偷!”" },
+    { "seq": 6, "speaker": null, "text_en": "Two months later, some more money was sent to Sam with another note: 'Only 25 percent a thief now!'", "text_cn": "又过了两个月,又有一些钱送还给萨姆,又附了一张字条:“这回只是25%的小偷了!”" },
+    { "seq": 7, "speaker": null, "text_en": "In time, all Sam's money was paid back in this way.", "text_cn": "很快,萨姆全部的钱都用同样的方式还了回来。" },
+    { "seq": 8, "speaker": null, "text_en": "The last note said: 'I am 100 percent honest now!'", "text_cn": "最后那张字条上写道:“我现在是一个100%的诚实人了!”" }
+  ],
+  "words": [
+    { "word": "clear", "ipa": "/klɪr/", "pos": "adj", "meaning_cn": "无罪的,不亏心的", "example": "a clear conscience" },
+    { "word": "conscience", "ipa": "/ˈkɑːnʃəns/", "pos": "n", "meaning_cn": "良心,道德心", "example": "a clear conscience" },
+    { "word": "wallet", "ipa": "/ˈwɑːlɪt/", "pos": "n", "meaning_cn": "皮夹,钱夹", "example": "had lost his wallet" },
+    { "word": "savings", "ipa": "/ˈseɪvɪŋz/", "pos": "n", "meaning_cn": "存款,积蓄", "example": "taking his savings to the post office" },
+    { "word": "villager", "ipa": "/ˈvɪlɪdʒər/", "pos": "n", "meaning_cn": "村民", "example": "one of the villagers" },
+    { "word": "percent", "ipa": "/pərˈsent/", "pos": "n", "meaning_cn": "百分之…", "example": "only 50 percent a thief" },
+    { "word": "thief", "ipa": "/θiːf/", "pos": "n", "meaning_cn": "小偷", "example": "A thief, yes" },
+    { "word": "honest", "ipa": "/ˈɑːnɪst/", "pos": "adj", "meaning_cn": "诚实的", "example": "100 percent honest now" },
+    { "word": "note", "ipa": "/noʊt/", "pos": "n", "meaning_cn": "字条,便条", "example": "together with a note" },
+    { "word": "wrap", "ipa": "/ræp/", "pos": "v", "meaning_cn": "包,裹", "example": "wrapped up in newspaper" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般过去被动 was/were done" },
+    { "gp": "gp2", "name": "过去完成被动 had been done" },
+    { "gp": "gp3", "name": "情态被动 must be/have been done" },
+    { "gp": "gp4", "name": "主动变被动" },
+    { "gp": "gp5", "name": "by 引出动作执行者" },
+    { "gp": "gp6", "name": "while + doing(在…时·辅考)" },
+    { "gp": "gp7", "name": "in time(最后,终于·辅考)" },
+    { "gp": "gp8", "name": "a large sum of / in this way(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"This bridge ___ in 1942.\"(一般过去被动:被建造)", "stem_cn": "这座桥建于1942年。", "options": ["was built", "built", "builds", "is built"] },
+    { "gp": "gp1", "stem": "\"The thief ___ by the police.\"(一般过去被动:被逮捕)", "stem_cn": "小偷被警察抓住了。", "options": ["was arrested", "arrested", "arrests", "is arresting"] },
+    { "gp": "gp2", "stem": "\"Sam found out that the parcel ___ to the wrong address.\"(过去完成被动:被寄错)", "stem_cn": "萨姆发现包裹被寄错了地址。", "options": ["had been sent", "had sent", "sent", "was sending"] },
+    { "gp": "gp2", "stem": "\"He told me the thief ___ by the police.\"(过去完成被动:已被逮捕)", "stem_cn": "他告诉我小偷已被警察抓住。", "options": ["had been arrested", "had arrested", "arrested", "was arresting"] },
+    { "gp": "gp2", "stem": "\"The village learnt that a large sum of money ___.\"(过去完成被动:已丢失)", "stem_cn": "全村得知一大笔钱已经丢失。", "options": ["had been lost", "had lost", "lost", "was losing"] },
+    { "gp": "gp3", "stem": "\"I can't find my bag. It must ___ stolen.\"(对过去推测 + 被动:一定被偷了)", "stem_cn": "我找不到包了,一定是被偷了。", "options": ["have been", "be", "been", "have"] },
+    { "gp": "gp3", "stem": "\"Sam was sure the wallet must ___ found by a villager.\"(对过去推测 + 被动)", "stem_cn": "萨姆确信钱包一定被某个村民捡到了。", "options": ["have been", "be", "been", "has"] },
+    { "gp": "gp3", "stem": "\"This ___ paid for at once.\"(情态 + 被动:必须被付款)", "stem_cn": "这必须马上付款。", "options": ["must be", "must", "must have", "is must"] },
+    { "gp": "gp3", "stem": "\"The window is broken; it must ___ broken by the boys.\"(对过去推测 + 被动)", "stem_cn": "窗户碎了,一定是被男孩们打碎的。", "options": ["have been", "be", "been", "has"] },
+    { "gp": "gp4", "stem": "把 \"Someone had sent the parcel\" 改成被动:The parcel ___.(主动变被动)", "stem_cn": "包裹被(某人)寄出。", "options": ["had been sent", "had sent", "has sent", "sent"] },
+    { "gp": "gp4", "stem": "把 \"The police arrested the thief\" 改成被动:The thief ___ by the police.(主动变被动)", "stem_cn": "小偷被警察逮捕。", "options": ["was arrested", "arrested", "has arrested", "arrests"] },
+    { "gp": "gp5", "stem": "\"The wallet must have been found ___ one of the villagers.\"(被动句里动作的执行者前用哪个介词)", "stem_cn": "钱包一定是被某个村民捡到的。", "options": ["by", "with", "from", "of"] },
+    { "gp": "gp5", "stem": "\"This bridge was built ___ a famous engineer.\"(被动句里动作的执行者前用哪个介词)", "stem_cn": "这座桥是由一位著名工程师建造的。", "options": ["by", "with", "from", "for"] },
+    { "gp": "gp6", "stem": "\"Sam lost his wallet ___ his savings to the post office.\"(在…的时候,连词后直接用 -ing)", "stem_cn": "萨姆在把存款送往邮局时丢了钱包。", "options": ["while taking", "while took", "while take", "while taken"] },
+    { "gp": "gp6", "stem": "\"___ the road, be careful of cars.\"(在…的时候,连词后直接用 -ing)", "stem_cn": "过马路时要当心车。", "options": ["While crossing", "While cross", "While crossed", "While to cross"] },
+    { "gp": "gp7", "stem": "\"___, all Sam's money was paid back.\"(最后,终于)", "stem_cn": "最后,萨姆全部的钱都还回来了。", "options": ["In time", "On time", "At time", "By time"] },
+    { "gp": "gp8", "stem": "\"A large ___ of money had been lost.\"(一大笔钱)", "stem_cn": "一大笔钱丢失了。", "options": ["sum", "number", "piece", "group"] },
+    { "gp": "gp8", "stem": "\"All Sam's money was paid back ___ this way.\"(用这种方式)", "stem_cn": "萨姆全部的钱都用这种方式还了回来。", "options": ["in", "by", "with", "on"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"邮政编码\"常说:", "options": ["zip code", "postcode", "post number", "mail code"] },
+    { "stem": "美语里\"钞票(纸币)\"常说:", "options": ["bill", "note", "paper money", "cash slip"] },
+    { "stem": "conscience 的意思是:", "options": ["良心,道德心", "知识", "意识丧失", "礼貌"] },
+    { "stem": "wallet 的意思是:", "options": ["钱包,皮夹", "背包", "口袋", "钱箱"] },
+    { "stem": "savings 的意思是:", "options": ["存款,积蓄", "工资", "债务", "零钱"] },
+    { "stem": "villager 的意思是:", "options": ["村民", "市民", "农民", "邻居"] }
+  ],
+  "contrast": [
+    { "us": "zip code", "uk": "postcode", "note_cn": "邮政编码;美语 zip code,英式 postcode(邮局场景)" },
+    { "us": "bill", "uk": "note", "note_cn": "钞票;美语 bill 指纸币,英式 note(钱的场景)" },
+    { "us": "mail", "uk": "post", "note_cn": "邮件;美语 mail(mailbox),英式 post(postbox)(课文 post office)" },
+    { "us": "percent", "uk": "per cent", "note_cn": "百分之;美语拼 percent(一个词),英式 per cent(两个词)(课文原文 per cent)" }
+  ],
+  "chunks": [
+    { "us": "must have been + 过去分词", "ipa": "/mʌst həv bɪn/", "example1": "The wallet must have been found by a villager.", "example1_cn": "钱包一定是被村民捡到了。", "example2": "My bag is gone; it must have been stolen.", "example2_cn": "我的包不见了,一定是被偷了。" },
+    { "us": "had been + 过去分词", "ipa": "/həd bɪn/", "example1": "A large sum of money had been lost.", "example1_cn": "一大笔钱丢失了。", "example2": "The parcel had been sent to the wrong address.", "example2_cn": "包裹被寄错了地址。" },
+    { "us": "while + doing", "ipa": "/waɪl ˈduːɪŋ/", "example1": "He lost his wallet while taking his savings to the post office.", "example1_cn": "他在送存款去邮局时丢了钱包。", "example2": "Be careful while crossing the road.", "example2_cn": "过马路时要小心。" },
+    { "us": "in time(最后,终于)", "ipa": "/ɪn taɪm/", "example1": "In time, all his money was paid back.", "example1_cn": "最后,他所有的钱都还回来了。", "example2": "In time, she learned to forgive him.", "example2_cn": "最终,她学会了原谅他。" }
+  ],
+  "stage7_cloze": {
+    "context": "Sam, the local butcher, lost his wallet while ___1___ his savings to the post office. He felt sure it ___2___ found by a villager. Months later the wallet ___3___ returned with half the money and a note. In time, all his money ___4___ paid back.",
+    "blanks": [
+      { "blank_no": 1, "options": ["taking", "take", "took", "to take"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["must have been", "must be", "must have", "has been"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["was", "is", "has", "does"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["was", "is", "has", "does"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How did Sam Benton lose his wallet?", "options": ["He dropped it while taking his savings to the post office", "It was stolen at the market", "He left it at home", "A villager took it from his shop"] },
+    { "stem": "What was inside the wallet when it came back the first time?", "options": ["Half the lost money and a note", "All the money", "Nothing at all", "A different wallet"] },
+    { "stem": "What did the last note say?", "options": ["'I am 100 percent honest now!'", "'Keep the money.'", "'I am 50 percent a thief.'", "'Sorry, I spent it all.'"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"钱包一定是被某个村民捡到了\"(对过去推测 + 被动:must have been + 过去分词):", "options": ["The wallet must have been found by a villager.", "The wallet must be found by a villager.", "The wallet must found by a villager.", "The wallet must have found by a villager."] },
+    { "stem": "你想说\"这座桥建于1942年\"(一般过去被动:was + 过去分词):", "options": ["This bridge was built in 1942.", "This bridge built in 1942.", "This bridge was build in 1942.", "This bridge is built in 1942."] },
+    { "stem": "你想说\"小偷被警察抓住了\"(被动 + by 引出执行者):", "options": ["The thief was arrested by the police.", "The thief arrested by the police.", "The thief was arrested with the police.", "The thief was arrest by the police."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "conscience 的意思是:", "options": ["良心,道德心", "知识", "勇气", "习惯"] },
+    { "kind": "vocab", "stem": "savings 的意思是:", "options": ["存款,积蓄", "工资", "债务", "罚款"] },
+    { "kind": "grammar", "stem": "\"The wallet must ___ found by a villager.\"(对过去推测 + 被动)", "stem_cn": "钱包一定是被某个村民捡到了。", "options": ["have been", "be", "been", "has"] },
+    { "kind": "grammar", "stem": "\"This bridge ___ in 1942.\"(一般过去被动)", "stem_cn": "这座桥建于1942年。", "options": ["was built", "built", "builds", "is built"] },
+    { "kind": "scenario", "stem": "\"A thief, yes, but only 50 percent a thief!\" 这句话的意思是:", "options": ["是个小偷,但只是个50%的小偷!", "一个小偷偷了50元。", "有50个小偷。", "小偷被抓了50次。"] },
+    { "kind": "scenario", "stem": "\"In time, all Sam's money was paid back.\" 这句话的意思是:", "options": ["最后,萨姆全部的钱都还回来了。", "萨姆按时付了钱。", "萨姆的钱花光了。", "萨姆借了一笔钱。"] },
+    { "kind": "reading", "stem": "Why did Sam think the wallet had been found by a villager?", "options": ["The whole village soon knew a large sum of money had been lost", "He saw someone pick it up", "A villager told him", "The police found it"], "passage": true },
+    { "kind": "reading", "stem": "How was Sam's money returned to him?", "options": ["Bit by bit, wrapped in newspaper with notes, until it was all paid back", "All at once by the police", "He never got it back", "The post office refunded him"], "passage": true },
+    { "kind": "listening", "stem": "How long after losing it did Sam first find his wallet?", "options": ["Three months later, outside his front door", "The next day", "A year later", "He never found it"], "audio": true },
+    { "kind": "listening", "stem": "What did the notes show about the thief over time?", "options": ["He gradually returned all the money and became '100 percent honest'", "He kept all the money", "He was caught by the police", "He moved away"], "audio": true }
+  ]
+}

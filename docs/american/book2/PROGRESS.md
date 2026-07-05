@@ -23,8 +23,25 @@
 |---|---|---|---|---|---|
 | L9 | 2 | A cold welcome | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 时间介词 at/in/on;三源 教材p48 KeyStruct + 同步p67 LESSON9 + 新思维介词 已核;过去完成had gathered/过去将来would strike排除;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
 | L10 | 2 | Not for jazz | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | **主题分歧首例**:教材Key structures=被动语态(主考15题) vs 同步L10=名词所有格(辅考3题)→ Aaron裁决 A+覆盖补丁([[am2-source-divergence-rule]]);三源 教材p52 KeyStruct被动 + 教材注释②双重所有格 + 同步p75-76所有格 + 新思维被动p127-131(页眉核过);进行/完成/将来被动展示不设题;**同步所有格深度细则挂账(见下,单元末清零)**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
-| L11 | 2 | (待扫描确认标题) | ⬜ 下一课 | — | NCE2 L11=One good turn deserves another;L11三源扫描确认标题+主题,不凭记忆 |
-| L12–L16 | 2 | — | ⬜ 未开工 | — | — |
+| L11 | 2 | One good turn deserves another | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | **主题分歧第二例**:教材Key structures=Review KS2-10(时态语态综合复习,主考11题) vs 同步L11=v.+sb+to do宾补 + 并列连词(辅考7题)→ 按 [[am2-source-divergence-rule]] 自决(不停),裁决A+覆盖补丁第二次执行;三源 教材p56 KeyStruct Review + 同步p83-85 宾补/连词 + 新思维时态各章L2-L10已扫(连词/宾补专题未定点补扫,诚实标注);宾补/连词深度细则挂账(见下);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L12 | 2 | (待扫描确认标题) | ⬜ 下一课 | — | NCE2 L12=Goodbye and good luck;L12三源扫描确认标题+主题,不凭记忆 |
+| L13–L16 | 2 | — | ⬜ 未开工 | — | — |
+
+## L11 流水线步骤跟踪(时态语态综合复习主考 + 连词/宾补辅考)
+- [x] 1 三源扫描(scan-evidence-lesson11.md:**主题分歧第二例**——教材p56 Key structures=Review KS2-10(时态语态综合复习) vs 同步p83-85=v.+sb+to do宾补+并列连词;逐页页眉;主考各时态回溯L2-L10已扫新思维章;连词/宾补辅考以同步p83-85为权威,新思维专题诚实标"未定点补扫";课文含asked him to lend + and/but/so → 同步双岔题均①类;**按裁决自决未停**[[am2-source-divergence-rule]])
+- [x] 2 建考点清单(grammar-syllabus-lesson11.md:G1-G6复习11 + G7连词4 + G8宾补3 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对裁决执行,结论写入清单头 ★)· [x] 4 课文定稿(11句·时态语态满篇混用was having/worked/is working/gets/has never borrowed + ask sb to do + and/but/so·11词/3语块全落·downtown restaurant/dollars/check/immediately美语化)
+- [x] 5 题库(关5=18[复习11+连词4+宾补3,认知3全复习框架] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson11.md;首轮无抓修;裁决执行核对✓) · [x] 8 JSON+seed(am2_l11.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44/解释44/零串味14条/G1-G8全覆盖/W11) · [x] 10 commit
+
+## L11 挂账(⚠️ 单元2末批次汇报必须核对清零)
+- **同步宾补深度细则**(let/make/have + sb + do 省 to · 变被动加 to · had better/would rather 省 to · do nothing but do):本课只教 ask/want/tell/allow sb to do 基础;深度挂账,并入后续非谓语/宾补语境课。
+- **同步连词深度细则**(连接性副词 however/therefore 位置灵活 · and·or 表条件=if 从句 · not only…but also · neither…nor):本课只教 and/but/for/so 基础;深度挂账,并入后续连词/复合句课。
+
+## L11 待裁决(单元末汇总报 Aaron;分歧已按裁决自决,非阻塞)
+1. 教材/同步主题分歧第二例(Review KS2-10 vs 宾补+连词)→ 已按 [[am2-source-divergence-rule]] 自决:时态语态复习主考 + 宾补/连词双辅考(均课文出现=①类)+ 深度挂账。第二次执行,记录供 Aaron 单元末复核裁决落地质量。
+2. 词表官方6词→补至11(+restaurant/borrow/lend/surprise/pay)对齐体量 → 采纳A。
+3. 关6 美英对照 dollars/pounds · check/bill · attorney/lawyer → 采纳:贴餐馆结账/律师场景;课文保留 lawyer/pounds→dollars 教官方词+落美语化。
 
 ## L10 流水线步骤跟踪(被动语态主考 + 名词所有格辅考)
 - [x] 1 三源扫描(scan-evidence-lesson10.md:**主题分歧首例**——教材Key structures=被动语态 vs 同步L10=名词所有格;逐页页眉;被动=教材p52 KeyStruct + 新思维p127-131(渲染TOC定位第24-25周印117-121→PDF p127-131,读TX_p127页眉"被动语态构成"be+过去分词八时态表);所有格=教材注释②双重所有格 a friend of my father's + 同步p75-76;**STOP并报→Aaron裁决 A+覆盖补丁**[[am2-source-divergence-rule]])

@@ -167,6 +167,12 @@
 - 词10(temporarily/inch/space/actually + 补 bookcase/gaze/surprise/spare/order/rather)。关6美英=elevator/apartment(房子主题)+contrast first floor·closet;passage 无需美语化(已 AmE)。
 - 44题;机器12项🟢(1黄=s5#14 "hard worker→works hard" 是 SD28 形/副对照的教学句式,人工核合法)。seed→`american_am2_seed_unit07.sql`(**L49-L52=176**)。⏭️ L53。
 
+## ✅ U7 L53《Hot snake》(触电的蛇)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc288-289)= **KS29+KS52 三种时态综合复习**:一般过去时(What happened)/ 现在完成时(What has happened)/ 现在完成进行时(What has been happening),核心=看时间标志(ago/yesterday→过去;ever/just→完成;since/for→完成进行)选时态。Special difficulties = **易混词 throw to/at/away、quite/quiet、cause/reason、drop/fall**。
+- 裁决(自决):gp1 一般过去(3)+ gp2 现在完成(3)+ gp3 现在完成进行(3)+ gp4 三时态看标志选(3)= KS 主考;gp5 throw to/at/away(3)+ gp6 quite/quiet·drop/fall(3)= SD 辅考。全运用题,元语法定义题=0。
+- **词表13词全收**(hot/fireman/cause/examine/accidentally/remains/wire/volt/power line/solve/mystery/snatch/spark),守零遗漏铁律不截断。关6美英=flashlight/firefighter(火/电主题)+contrast kerosene·outlet。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit07.sql`(**L49-L53=220**)。⏭️ L54。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

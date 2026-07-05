@@ -67,6 +67,24 @@ const CN = {
     '"They ___ here tomorrow."(arrive,将来进行时)': "他们明天将要到达这儿。",
     '"This time tomorrow, I ___ on the beach."(lie,将来进行)': "明天这个时候,我将躺在沙滩上。",
   },
+  am2_l14: {
+    '"After I ___ the village, I drove on."(leave,先离开，过去完成)': "我离开村庄后,继续往前开。",
+    '"When he ___ lunch, he asked for water."(finish,先吃完，过去完成)': "他吃完午饭后,要了些水。",
+    '"The children ran away ___ they had broken the window."(在…之后)': "孩子们打碎窗户之后就跑掉了。",
+    '"___ the sun had set, we returned to the hotel."(太阳一下山就…)': "太阳一下山,我们就回了旅馆。",
+    '"She went to the post office ___ she had written the letter."(先写完信)': "她写完信后去了邮局。",
+    '"I ___ the problem until he explained it."(否定 + until,过去完成)': "直到他解释,我才弄懂这个问题。",
+    '"When I got to the station, the train ___ already ___."(我到之前车已开走，过去完成)': "我到车站时,火车已经开走了。",
+    '"I ___ to go shopping, but my mom came."(本打算…但没成)': "我本打算去购物,但我妈妈来了。",
+    '"She ___ that he would come, but he didn\'t."(原本希望…但落空)': "她原本希望他会来,但他没来。",
+    '"It was the third time that I ___ him."(正式/书面:此句式规范用过去完成)': "那是我第三次见他。",
+    '"___ you ever seen him before that day?"(过去完成疑问)': "那天之前你见过他吗?",
+    '"By six o\'clock, they ___ dinner."(到六点之前已吃完，过去完成)': "到六点时,他们已经吃完晚饭了。",
+    '"God helps those who help ___."(动作回到自己身上,用反身代词)': "天助自助者(上天帮助自己帮自己的人)。",
+    '"The young man was English ___."(强调"他本人就是",课文原句)': "那青年本人就是英国人。",
+    '"He told me that he ___ the book before."(read,更早读过，过去完成)': "他告诉我他以前读过这本书。",
+    '"By the time we arrived, the movie ___."(我们到之前已开始，过去完成)': "我们到的时候,电影已经开始了。",
+  },
 };
 
 let total = 0, patched = 0;

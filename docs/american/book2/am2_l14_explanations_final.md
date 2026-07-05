@@ -75,24 +75,31 @@ had gotten in 是过去完成时,表示更早发生;said hi 是一般过去时,�
 
 ### s6 seq4 | ans: 在途中
 on the way = 在途中、在路上。✓ On the way, a young man waved.
+顺带记:在路边 = by the roadside;迷路了 = get lost / lose one's way;在起点 = at the start.
 
 ### s6 seq5 | ans: 要求搭便车
 ask for a lift = 要求搭便车。✓ He asked me for a lift.
+顺带记:问路 = ask the way / ask for directions;要一杯水 = ask for a glass of water;请求帮忙提东西 = ask for help carrying sth.
 
 ### s6 seq6 | ans: 除了…以外
 apart from = 除了…以外。✓ Apart from a few words, I did not know any French.
+顺带记:紧挨着 = next to / close to;属于 = belong to;关于 = about.
 
 ### s7 seq1 | ans: had left
 "离开村庄"先发生,用过去完成时 had left。✓ After I had left the village…
+✗ leave:过去的事不用动词原形;✗ have left:现在完成表到现在,这是"过去的过去"要用 had;✗ was leaving:过去进行不表"更早已完成".
 
 ### s7 seq2 | ans: drove
 "继续开车"后发生,用一般过去时 drove。✓ I drove on toward the next town.
+✗ had driven:开车是后发生的动作,用一般过去 drove,不用过去完成;✗ drive:过去的事不用原形;✗ was driven:被动语态,意思变成"被开走"了.
 
 ### s7 seq3 | ans: had gotten
 "上车"先于"打招呼",用过去完成时 had gotten。✓ As soon as he had gotten into the car…
+✗ got:这里强调"一上车(更早)就…",用过去完成 had gotten;✗ has gotten:现在完成表到现在,不用于过去的过去;✗ gets:一般现在时,过去的事不用.
 
 ### s7 seq4 | ans: had
 "快到镇上"是更早的背景,用过去完成时 had reached。✓ I had nearly reached the town when…
+✗ have:过去的背景用 had reached,不用 have;✗ was:was reached 成了被动,意思错;✗ did:助动词 did 不与过去分词 reached 搭配.
 
 ### s8 seq1 | ans: On the way to the next town
 课文说 On the way, a young man waved at me,作者在去下个镇的途中搭上他。
@@ -114,9 +121,11 @@ apart from = 除了…以外。✓ Apart from a few words, I did not know any Fr
 
 ### s10 seq1 | ans: 有趣的,好笑的
 amusing = 有趣的、好笑的。✓ an amusing experience.
+顺带记:无聊的 = boring;危险的 = dangerous;重要的 = important.
 
 ### s10 seq2 | ans: 旅程,旅行
 journey = 旅程、旅行。✓ during the whole journey.
+顺带记:工作 = job / work;语言 = language;村庄 = village.
 
 ### s10 seq3 | ans: had read
 "他更早读过这本书"(在告诉我之前),用过去完成时 had read。✓ He told me that he had read the book before.

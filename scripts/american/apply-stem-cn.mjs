@@ -63,6 +63,10 @@ const CN = {
     '"They ___ here on foot tomorrow."(come,一般将来)': "他们明天会步行来这儿。",
     '"Look at those clouds! It ___ snow."(有迹象、马上要发生)': "看那些云!要下雪了。",
   },
+  am2_l13: {
+    '"They ___ here tomorrow."(arrive,将来进行时)': "他们明天将要到达这儿。",
+    '"This time tomorrow, I ___ on the beach."(lie,将来进行)': "明天这个时候,我将躺在沙滩上。",
+  },
 };
 
 let total = 0, patched = 0;

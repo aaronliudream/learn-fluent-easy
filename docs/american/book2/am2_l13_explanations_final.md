@@ -65,24 +65,31 @@ at present(目前/现在)常和现在进行时搭配,表示此刻正在做的事
 
 ### s6 seq4 | ans: 目前,现在
 at present = 目前、现在。✓ At present, they are traveling.
+顺带记:过去 = in the past;将来 = in the future;立刻 = at once / immediately.
 
 ### s6 seq5 | ans: 像往常一样
 as usual = 像往常一样、照例。✓ As usual, the police will be busy.
+顺带记:不同寻常地 = unusually;偶尔 = occasionally;第一次 = for the first time.
 
 ### s6 seq6 | ans: 维持秩序
 keep order = 维持秩序。✓ They will be trying to keep order.
+顺带记:点菜 = order (food);下命令 = give an order;排顺序 = put in order.
 
 ### s7 seq1 | ans: will be arriving
 tomorrow + 将来某时正在 → 将来进行时 will be arriving。✓ The Silver Hawks will be arriving tomorrow.
+✗ arrived:tomorrow 是将来,不用过去式;✗ are arriving now:now(此刻)与 tomorrow 矛盾;✗ arrive yesterday:yesterday 是过去,与 tomorrow 冲突.
 
 ### s7 seq2 | ans: will be coming
 将来进行时 will be coming。✓ They will be coming by train.
+✗ came:过去式,tomorrow 是将来;✗ come yesterday:yesterday 与将来的行程矛盾;✗ were coming:过去进行时不表将来.
 
 ### s7 seq3 | ans: will be meeting
 将来进行时 will be meeting。✓ The fans will be meeting them at the station.
+✗ met:过去式;✗ meet yesterday:yesterday 是过去;✗ were meeting:过去进行时,不表将来的接站安排.
 
 ### s7 seq4 | ans: will be singing
 安排好的将来 → 将来进行时 will be singing。✓ Tomorrow evening, they will be singing at the club.
+✗ sang:过去式;✗ are singing now:now(此刻)与"明晚"矛盾;✗ sing yesterday:yesterday 是过去.
 
 ### s8 seq1 | ans: Tomorrow
 课文说 They will be arriving in our town tomorrow,乐队明天到。
@@ -104,9 +111,11 @@ tomorrow + 将来某时正在 → 将来进行时 will be arriving。✓ The Sil
 
 ### s10 seq1 | ans: 团体,小组
 group = 团体、小组。✓ a group of pop singers.
+顺带记:个人 = individual;老师 = teacher;城市 = city.
 
 ### s10 seq2 | ans: 场合
 occasion = 场合。✓ on these big occasions.
+顺带记:假期 = holiday / vacation;职业 = job / occupation;习惯 = habit.
 
 ### s10 seq3 | ans: will be lying
 This time tomorrow(明天这个时候)+ 正在 → 将来进行时 will be lying。✓ I will be lying on the beach.

@@ -1,0 +1,135 @@
+{
+  "id": "am2_l29",
+  "unit_no": 4,
+  "lesson_no": 29,
+  "title_en": "Taxi!",
+  "title_cn": "出租汽车!",
+  "grammar_focus": "一般过去时 vs 现在完成时对比(主考:有明确过去时间 in 1994/ago/last month → 一般过去 · 与现在有联系 since/for/up till now/ever/before → 现在完成 · has/have + 过去分词)+ 定语从句 who / 表语从句 that(辅考)",
+  "scene": "本·弗西特机长买了一架小型瑞士飞机'皮勒特斯·波特'当'出租汽车',能在雪地、水面甚至耕过的田里降落,已把乘客送到屋顶、废弃停车场等许多稀奇地方;但他刚拒绝了一位商人飞往大西洋孤岛罗卡尔的请求——因为那趟太危险了。",
+  "grammar_card": {
+    "title": "一般过去时 vs 现在完成时",
+    "intro": "本课对比两个时态:有明确的过去时间(in 1994 / ago / last month)用一般过去时;和现在有联系(since / for / up till now / ever)用现在完成时。全用本课句子举例。",
+    "table": {
+      "headers": ["用哪个时态", "信号词 / 本课例子"],
+      "rows": [
+        ["有明确过去时间 → 一般过去时", "I saw him in 1994. / last month"],
+        ["自从…以来 → 现在完成时(since)", "I have not seen him since 1994."],
+        ["持续一段时间 → 现在完成时(for)", "I have not seen him for three years."],
+        ["至今 / 曾经 → 现在完成时(up till now / ever)", "Have you ever stayed here?"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "ago(…以前)配一般过去;since/for 配现在完成:three years ago(过去)↔ for three years(现在完成)", "mark": "ago vs for/since" },
+      { "rule": "定语从句 who 指人:a doctor who flew…;表语从句 that:The surprising thing is that it can land anywhere.", "mark": "who / that 从句" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Does Captain Fawcett think any trip is too dangerous?",
+    "options": ["Yes — he refused to fly to Rockall", "No, he will fly anywhere", "Only trips at night", "Only trips over the sea"],
+    "answer_index": 0
+  },
+  "passage": "Captain Ben Fawcett has bought an unusual taxi and has begun a new service. The 'taxi' is a small Swiss airplane called a 'Pilatus Porter'. This wonderful plane can carry seven passengers. The most surprising thing about it, however, is that it can land anywhere: on snow, water, or even on a plowed field. Captain Fawcett's first passenger was a doctor who flew from Birmingham to a lonely village in the Welsh mountains. Since then, Captain Fawcett has flown passengers to many unusual places. Once he landed on the roof of an apartment building and on another occasion, he landed in a deserted parking lot. Captain Fawcett has just refused a strange request from a businessman. The man wanted to fly to Rockall, a lonely island in the Atlantic Ocean, but Captain Fawcett did not take him because the trip was too dangerous.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Captain Ben Fawcett has bought an unusual taxi and has begun a new service.", "text_cn": "本·弗西特机长买了一辆不同寻常的出租汽车,并开始了一项新业务。" },
+    { "seq": 2, "speaker": null, "text_en": "The 'taxi' is a small Swiss airplane called a 'Pilatus Porter'. This wonderful plane can carry seven passengers.", "text_cn": "这辆'出租汽车'是一架小型瑞士飞机,叫'皮勒特斯·波特'号。这架奇妙的飞机可载7名乘客。" },
+    { "seq": 3, "speaker": null, "text_en": "The most surprising thing about it, however, is that it can land anywhere: on snow, water, or even on a plowed field.", "text_cn": "然而,最令人惊奇的是它能够在任何地方降落:雪地上、水面上,甚至刚耕过的田里。" },
+    { "seq": 4, "speaker": null, "text_en": "Captain Fawcett's first passenger was a doctor who flew from Birmingham to a lonely village in the Welsh mountains.", "text_cn": "弗西特机长的第一名乘客是位医生,他从伯明翰飞往威尔士山区一个偏僻的村庄。" },
+    { "seq": 5, "speaker": null, "text_en": "Since then, Captain Fawcett has flown passengers to many unusual places.", "text_cn": "从那时起,弗西特机长已经载送乘客到过许多不寻常的地方。" },
+    { "seq": 6, "speaker": null, "text_en": "Once he landed on the roof of an apartment building and on another occasion, he landed in a deserted parking lot.", "text_cn": "一次,他把飞机降落在了一栋公寓楼的屋顶上;还有一次,降落在了一个废弃的停车场上。" },
+    { "seq": 7, "speaker": null, "text_en": "Captain Fawcett has just refused a strange request from a businessman.", "text_cn": "弗西特机长刚刚拒绝了一位商人的奇特要求。" },
+    { "seq": 8, "speaker": null, "text_en": "The man wanted to fly to Rockall, a lonely island in the Atlantic Ocean, but Captain Fawcett did not take him because the trip was too dangerous.", "text_cn": "这个人想要飞往大西洋上的一个孤岛——罗卡尔岛,弗西特机长之所以不送他去,是因为那趟飞行太危险了。" }
+  ],
+  "words": [
+    { "word": "taxi", "ipa": "/ˈtæksi/", "pos": "n", "meaning_cn": "出租汽车", "example": "an unusual taxi" },
+    { "word": "airplane", "ipa": "/ˈerpleɪn/", "pos": "n", "meaning_cn": "飞机(美语)", "example": "a small Swiss airplane" },
+    { "word": "land", "ipa": "/lænd/", "pos": "v", "meaning_cn": "着陆,降落", "example": "it can land anywhere" },
+    { "word": "plow", "ipa": "/plaʊ/", "pos": "v", "meaning_cn": "耕(地)(美语)", "example": "a plowed field" },
+    { "word": "lonely", "ipa": "/ˈloʊnli/", "pos": "adj", "meaning_cn": "偏僻的;孤独的", "example": "a lonely village" },
+    { "word": "Welsh", "ipa": "/welʃ/", "pos": "adj", "meaning_cn": "威尔士的", "example": "the Welsh mountains" },
+    { "word": "roof", "ipa": "/ruːf/", "pos": "n", "meaning_cn": "屋顶,楼顶", "example": "the roof of a building" },
+    { "word": "block", "ipa": "/blɑːk/", "pos": "n", "meaning_cn": "一大楼;街区", "example": "a block of flats" },
+    { "word": "desert", "ipa": "/dɪˈzɜːrt/", "pos": "v", "meaning_cn": "遗弃,舍弃", "example": "a deserted parking lot" },
+    { "word": "request", "ipa": "/rɪˈkwest/", "pos": "n", "meaning_cn": "请求,要求", "example": "refused a strange request" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般过去时:有明确过去时间(in 1994/ago/last month)" },
+    { "gp": "gp2", "name": "现在完成时:since + 过去时间点(自从)" },
+    { "gp": "gp3", "name": "现在完成时:for + 一段时间(持续)" },
+    { "gp": "gp4", "name": "现在完成时:ever/never/before(经历)" },
+    { "gp": "gp5", "name": "现在完成时:has/have + 过去分词" },
+    { "gp": "gp6", "name": "一般过去 vs 现在完成:看信号词选时态" },
+    { "gp": "gp7", "name": "定语从句 who / which(指人/指物,辅考)" },
+    { "gp": "gp8", "name": "表语从句 that(is that…,辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"I ___ him in 1994.\"(有明确过去时间 in 1994,用一般过去)", "stem_cn": "我1994年见到他。", "options": ["saw", "have seen", "see", "had seen"] },
+    { "gp": "gp1", "stem": "\"He ___ at this hotel last month.\"(last month:一般过去)", "stem_cn": "上个月他住在这家酒店。", "options": ["stayed", "has stayed", "stays", "had stayed"] },
+    { "gp": "gp1", "stem": "\"Captain Fawcett ___ not take him to Rockall.\"(过去某次、已结束:一般过去)", "stem_cn": "弗西特机长没送他去罗卡尔岛。", "options": ["did", "has", "have", "was"] },
+    { "gp": "gp2", "stem": "\"I have not seen him ___ 1994.\"(接过去时间点:自从)", "stem_cn": "自从1994年以来我没见过他。", "options": ["since", "for", "in", "ago"] },
+    { "gp": "gp2", "stem": "\"Since then, he ___ flown passengers to many places.\"(与现在有联系:现在完成)", "stem_cn": "从那以后,他已把乘客送到许多地方。", "options": ["has", "did", "was", "had"] },
+    { "gp": "gp3", "stem": "\"I have not seen him ___ three years.\"(接一段时间:达三年)", "stem_cn": "我三年没见过他了。", "options": ["for", "since", "ago", "in"] },
+    { "gp": "gp3", "stem": "\"They ___ known each other for years.\"(持续多年:现在完成)", "stem_cn": "他们相识多年了。", "options": ["have", "did", "are", "had"] },
+    { "gp": "gp4", "stem": "\"Have you ___ stayed at this hotel?\"(问经历'曾经':现在完成)", "stem_cn": "你在这家酒店住过吗?", "options": ["ever", "yet", "ago", "since"] },
+    { "gp": "gp4", "stem": "\"Up till now, I have ___ been abroad.\"(至今'从未':现在完成)", "stem_cn": "至今我还没出过国。", "options": ["never", "ever", "yet", "ago"] },
+    { "gp": "gp4", "stem": "\"I have not been abroad ___.\"(现在完成句尾'以前')", "stem_cn": "我以前没出过国。", "options": ["before", "ago", "last year", "then"] },
+    { "gp": "gp5", "stem": "\"Captain Fawcett ___ bought an unusual taxi.\"(现在完成,主语单数)", "stem_cn": "弗西特机长买了一辆不寻常的出租车。", "options": ["has", "have", "did", "was"] },
+    { "gp": "gp5", "stem": "\"He has ___ a new service.\"(begin 的过去分词:开始了)", "stem_cn": "他开始了一项新业务。", "options": ["begun", "began", "begin", "beginning"] },
+    { "gp": "gp6", "stem": "\"She ___ to Paris last summer.\"(last summer,用一般过去时)", "stem_cn": "她去年夏天去了巴黎。", "options": ["went", "has gone", "goes", "had gone"] },
+    { "gp": "gp6", "stem": "\"___ you ever eaten sushi?\"(ever,用现在完成时)", "stem_cn": "你吃过寿司吗?", "options": ["Have", "Did", "Do", "Were"] },
+    { "gp": "gp7", "stem": "\"His first passenger was a doctor ___ flew to a village.\"(指人,作主语)", "stem_cn": "他的第一位乘客是位飞往村庄的医生。", "options": ["who", "which", "whose", "where"] },
+    { "gp": "gp7", "stem": "\"The 'taxi' ___ can land anywhere is a Swiss plane.\"(指物,作主语)", "stem_cn": "那辆能在任何地方降落的'出租车'是架瑞士飞机。", "options": ["which", "who", "whose", "whom"] },
+    { "gp": "gp8", "stem": "\"The most surprising thing is ___ it can land anywhere.\"(is 后引出后面的从句)", "stem_cn": "最令人惊奇的是它能在任何地方降落。", "options": ["that", "what", "which", "who"] },
+    { "gp": "gp8", "stem": "\"The truth is ___ the trip was too dangerous.\"(is 后引出后面的从句)", "stem_cn": "事实是那次飞行太危险了。", "options": ["that", "what", "which", "because"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"飞机\"常说:", "options": ["airplane", "aeroplane", "air machine", "fly car"] },
+    { "stem": "美语里\"停车场\"常说:", "options": ["parking lot", "car park", "car field", "stop place"] },
+    { "stem": "lonely 的意思是:", "options": ["偏僻的;孤独的", "热闹的", "宽阔的", "危险的"] },
+    { "stem": "land(动词)的意思是:", "options": ["着陆,降落", "起飞", "坠毁", "加速"] },
+    { "stem": "desert(动词)的意思是:", "options": ["遗弃,舍弃", "建造", "打扫", "装满"] },
+    { "stem": "roof 的意思是:", "options": ["屋顶,楼顶", "地下室", "走廊", "花园"] }
+  ],
+  "contrast": [
+    { "us": "airplane", "uk": "aeroplane", "note_cn": "飞机;美语 airplane,英式 aeroplane" },
+    { "us": "plow", "uk": "plough", "note_cn": "耕(地);美语 plow,英式 plough" },
+    { "us": "parking lot", "uk": "car park", "note_cn": "停车场;美语 parking lot,英式 car park" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment(building),英式 flat / block of flats" }
+  ],
+  "chunks": [
+    { "us": "has just + 过去分词", "ipa": "/hæz dʒʌst/", "example1": "Captain Fawcett has just refused a request.", "example1_cn": "弗西特机长刚刚拒绝了一个请求。", "example2": "I have just finished lunch.", "example2_cn": "我刚吃完午饭。" },
+    { "us": "since then", "ipa": "/sɪns ðen/", "example1": "Since then, he has flown to many places.", "example1_cn": "从那以后,他已飞往许多地方。", "example2": "Since then, things have changed.", "example2_cn": "从那以后,情况变了。" },
+    { "us": "on another occasion", "ipa": "/ɑːn əˈnʌðər əˈkeɪʒən/", "example1": "On another occasion, he landed in a parking lot.", "example1_cn": "还有一次,他降落在停车场。", "example2": "On another occasion, we met again.", "example2_cn": "还有一次,我们又见面了。" },
+    { "us": "carry passengers", "ipa": "/ˈkæri ˈpæsɪndʒərz/", "example1": "This plane can carry seven passengers.", "example1_cn": "这架飞机能载七名乘客。", "example2": "The bus can carry forty people.", "example2_cn": "这辆公交能载四十人。" }
+  ],
+  "stage7_cloze": {
+    "context": "Captain Fawcett ___1___ bought an unusual taxi. His first passenger ___2___ a doctor last year. Since then, he ___3___ flown to many places. But yesterday he ___4___ not take a man to Rockall.",
+    "blanks": [
+      { "blank_no": 1, "options": ["has", "have", "did", "was"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["was", "has been", "is", "had been"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["has", "did", "was", "had"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["did", "has", "have", "was"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What has Captain Fawcett bought?", "options": ["An unusual taxi — a small Swiss airplane", "A new sports car", "A large boat", "A helicopter"] },
+    { "stem": "What is the most surprising thing about the plane?", "options": ["It can land almost anywhere", "It flies very fast", "It carries fifty people", "It is very cheap"] },
+    { "stem": "Why did Captain Fawcett refuse the businessman?", "options": ["The trip to Rockall was too dangerous", "The man had no money", "The plane was broken", "It was too far to fly"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我1994年见过他\"(有明确过去时间用一般过去时):", "options": ["I saw him in 1994.", "I have seen him in 1994.", "I see him in 1994.", "I had seen him in 1994."] },
+    { "stem": "你想说\"自从那以后我没见过他\"(since 与现在有联系,用现在完成时):", "options": ["I haven't seen him since then.", "I didn't see him since then.", "I don't see him since then.", "I hadn't seen him since then."] },
+    { "stem": "你想说\"你去过国外吗?\"(问经历用 Have you ever been):", "options": ["Have you ever been abroad?", "Did you ever been abroad?", "Have you ever went abroad?", "Are you ever abroad?"] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "plow 的意思是:", "options": ["耕(地)", "收割", "浇水", "播种"] },
+    { "kind": "vocab", "stem": "block 的意思是:", "options": ["一大楼;街区", "一扇门", "一条河", "一个洞"] },
+    { "kind": "grammar", "stem": "\"She ___ to Paris last summer.\"(last summer,用一般过去时)", "stem_cn": "她去年夏天去了巴黎。", "options": ["went", "has gone", "goes", "had gone"] },
+    { "kind": "grammar", "stem": "\"___ you ever flown in a small plane?\"(ever,用现在完成时)", "stem_cn": "你坐过小飞机吗?", "options": ["Have", "Did", "Do", "Were"] },
+    { "kind": "scenario", "stem": "\"It can land anywhere.\" 这句话的意思是:", "options": ["它能在任何地方降落。", "它不能降落。", "它降落得很慢。", "它只能在机场降落。"] },
+    { "kind": "scenario", "stem": "\"The trip was too dangerous.\" 这句话的意思是:", "options": ["那次飞行太危险了。", "那次飞行很有趣。", "那次飞行很便宜。", "那次飞行很短。"] },
+    { "kind": "reading", "stem": "Who was Captain Fawcett's first passenger?", "options": ["A doctor flying to a village in the Welsh mountains", "A businessman going to Rockall", "A pilot from Birmingham", "A farmer with a plowed field"], "passage": true },
+    { "kind": "reading", "stem": "Where has Captain Fawcett landed his plane?", "options": ["On snow, water, a roof, and a deserted parking lot", "Only at big airports", "Only on water", "Only in the mountains"], "passage": true },
+    { "kind": "listening", "stem": "Does Captain Fawcett think any trip is too dangerous?", "options": ["Yes — he refused to fly to Rockall", "No, he flies anywhere", "Only trips over water", "Only night trips"], "audio": true },
+    { "kind": "listening", "stem": "How many passengers can the plane carry?", "options": ["Seven", "Two", "Twenty", "Fifty"], "audio": true }
+  ]
+}

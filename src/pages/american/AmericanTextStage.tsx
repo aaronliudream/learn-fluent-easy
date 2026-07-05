@@ -7,12 +7,13 @@
  * - iOS 音频铁律:所有播放入口的 onClick 先同步 unlockAudioSync() 再异步播放
  * - 完成:整篇播放完 + 前置题答对 → markStageComplete(lessonId, 1);逐句点读 → markSentenceRead
  */
-import { useCallback, useEffect, useRef, useState } from "react";
-import { Play, Square, Volume2, Check, Gauge } from "lucide-react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Play, Square, Volume2, Check, Gauge, ArrowLeft } from "lucide-react";
 import { speak, stopSpeaking, unlockAudioSync } from "@/lib/speak";
 import { T } from "@/i18n/T";
 import { AmericanTappableLine } from "@/components/american/AmericanTappableLine";
-import { markSentenceRead, markStageComplete, recordMastery, type LessonBundle } from "@/lib/american/data";
+import { bookOf, markSentenceRead, markStageComplete, recordMastery, type LessonBundle } from "@/lib/american/data";
 
 type Mode = "en" | "both" | "cn";
 const MODES: { key: Mode; label: string }[] = [
@@ -24,6 +25,11 @@ const MODES: { key: Mode; label: string }[] = [
 export function AmericanTextStage({ bundle, onDone }: { bundle: LessonBundle; onDone?: () => void }) {
   const { lesson, sentences } = bundle;
   const pre = lesson.prelisten_question;
+  const navigate = useNavigate();
+
+  // ③ 加粗数据:本课词表词(词干匹配屈折形)+ 语块(contrast 里带 example1 的即语块卡,us=语块串)
+  const boldWords = useMemo(() => bundle.words.map((w) => w.word), [bundle.words]);
+  const boldChunks = useMemo(() => bundle.contrast.filter((c) => c.example1).map((c) => c.us), [bundle.contrast]);
 
   const [mode, setMode] = useState<Mode>("both");
   const [slow, setSlow] = useState(false);
@@ -37,8 +43,25 @@ export function AmericanTextStage({ bundle, onDone }: { bundle: LessonBundle; on
 
   const playSeq = useRef(0); // 递增以中断进行中的整篇播放
   const speed = slow ? 0.7 : 1.0;
+  const liRefs = useRef<(HTMLLIElement | null)[]>([]);   // ② 各句卡片 DOM,用于自动跟随滚动
+  const lastUserScrollRef = useRef(0);                    // ② 手势优先:记最近一次用户手动滚动时刻
 
   useEffect(() => () => { playSeq.current++; stopSpeaking(); }, []);
+
+  // ② 用户手动滚动 → 记时刻(手势优先,1.2s 内不抢滚动,下一句恢复)
+  useEffect(() => {
+    const onUserScroll = () => { lastUserScrollRef.current = Date.now(); };
+    window.addEventListener("wheel", onUserScroll, { passive: true });
+    window.addEventListener("touchmove", onUserScroll, { passive: true });
+    return () => { window.removeEventListener("wheel", onUserScroll); window.removeEventListener("touchmove", onUserScroll); };
+  }, []);
+
+  // ② 整篇播放推进到某句时,该句卡片平滑滚入视野中央(手势优先则本句跳过)
+  useEffect(() => {
+    if (!playingAll || current < 0) return;
+    if (Date.now() - lastUserScrollRef.current < 1200) return;
+    liRefs.current[current]?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, [current, playingAll]);
 
   const stopAll = useCallback(() => {
     playSeq.current++;
@@ -183,7 +206,7 @@ export function AmericanTextStage({ bundle, onDone }: { bundle: LessonBundle; on
           const active = current === i;
           const wasRead = readIds.has(s.id);
           return (
-            <li key={s.id}
+            <li key={s.id} ref={(el) => { liRefs.current[i] = el; }}
               className={`rounded-2xl border p-3 transition ${active ? "border-sky-400 bg-sky-50/70" : "border-slate-100 bg-white"}`}>
               <div className="flex items-start gap-2.5">
                 <button type="button" onClick={() => readOne(i)} aria-label="播放本句"
@@ -194,7 +217,7 @@ export function AmericanTextStage({ bundle, onDone }: { bundle: LessonBundle; on
                   {s.speaker && <span className="mr-1.5 text-xs font-bold uppercase tracking-wide text-slate-400">{s.speaker}</span>}
                   {mode !== "cn" && (
                     <span className="text-[15px] leading-relaxed text-slate-800">
-                      <AmericanTappableLine sentence={s.text_en} />
+                      <AmericanTappableLine sentence={s.text_en} boldWords={boldWords} boldChunks={boldChunks} />
                     </span>
                   )}
                   {mode === "both" && <div className="mt-0.5 text-sm text-slate-500">{s.text_cn}</div>}
@@ -219,6 +242,15 @@ export function AmericanTextStage({ bundle, onDone }: { bundle: LessonBundle; on
           )}
         </div>
       )}
+
+      {/* ① 课文读到底一键回本单元(book-aware,复用 bookOf) */}
+      <div className="mt-8 flex justify-center">
+        <button type="button"
+          onClick={() => navigate(`/american/book/${bookOf(lesson.id)}/hub/${lesson.unit_no}`)}
+          className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-600 transition hover:border-slate-300 hover:text-slate-800">
+          <ArrowLeft className="size-4" /> <T>返回本单元</T>
+        </button>
+      </div>
     </div>
   );
 }

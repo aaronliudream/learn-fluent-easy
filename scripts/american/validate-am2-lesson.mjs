@@ -58,5 +58,13 @@ if(J.stage7_cloze){const cl=J.stage7_cloze;if(hasArrow(cl.context))leakRed.push(
   cl.blanks.forEach(b=>leakCheck(`s7空${b.blank_no}`,cl.context,b.options?b.options[b.answer_index]:null,cl.context));}
 leakYel.forEach(y=>console.log("  🟡 "+y));
 leakRed.length===0?ok(`答案泄漏扫描 无泄漏(a/b)${leakYel.length?` · ${leakYel.length}条黄警已人工核`:""}`):leakRed.forEach(r=>fail("泄漏 "+r));
+// 第10项:关5/关10 填空句型题(题干=带 ___ 的完整英文句)必须有 stem_cn(填答案后整句中译)
+// 句型题=带 ___ 空的"完整英文句"(≥3 英文词、题干主体几乎全英文);排除中文讲解式题干(如"在晚上说 ___")
+const cnCount=(s)=>(s.match(/[一-鿿]/g)||[]).length;
+const isPatternQ=(stem)=>{const b=stemBody(stem);return /_{2,}/.test(b)&&(b.match(/[A-Za-z]+/g)||[]).length>=3&&cnCount(b)<=3;};
+const needCn=[];
+const CS=(arr,st)=>(arr||[]).forEach((q,i)=>{if(isPatternQ(q.stem||"")&&!(q.stem_cn&&q.stem_cn.trim()))needCn.push(`s${st}#${i+1}: ${q.stem}`);});
+CS(J.stage5,5);CS(J.stage10,10);
+needCn.length===0?ok(`stem_cn 覆盖 句型题全有中译`):needCn.forEach(m=>fail(`缺 stem_cn ${m}`));
 console.log("\n"+(pass?"🟢 全绿":"🔴 有红灯"));
 process.exit(pass?0:1);

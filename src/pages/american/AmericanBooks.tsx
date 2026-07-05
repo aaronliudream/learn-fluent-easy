@@ -22,15 +22,18 @@ const BOOK_SUB: Record<number, string> = {
 export default function AmericanBooks() {
   const [books, setBooks] = useState<AmericanBook[]>([1, 2, 3, 4].map((bookNo) => ({ bookNo, launched: false, lessonCount: 0 })));
   const [loading, setLoading] = useState(true);
+  const [failed, setFailed] = useState(false); // 加载失败 → 显示重试按钮(弱网防"打不开")
+  const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
     let alive = true;
+    setLoading(true); setFailed(false);
     fetchBooks()
       .then((b) => { if (alive) setBooks(b); })
-      .catch(() => { /* 网络失败:保留全灰,不报错 */ })
+      .catch(() => { if (alive) setFailed(true); })
       .finally(() => { if (alive) setLoading(false); });
     return () => { alive = false; };
-  }, []);
+  }, [reloadKey]);
 
   return (
     <main className="min-h-dvh bg-slate-50">
@@ -90,6 +93,15 @@ export default function AmericanBooks() {
           })}
         </div>
         {loading && <p className="mt-4 text-center text-xs text-slate-400"><T>加载中…</T></p>}
+        {failed && !loading && (
+          <div className="mt-4 text-center">
+            <p className="text-sm text-slate-500"><T>加载失败,请检查网络</T></p>
+            <button type="button" onClick={() => setReloadKey((k) => k + 1)}
+              className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-sky-600 px-5 py-2 text-sm font-semibold text-white">
+              <T>点此重试</T>
+            </button>
+          </div>
+        )}
       </div>
     </main>
   );

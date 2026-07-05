@@ -65,24 +65,31 @@ in twenty minutes' time = 20分钟之后。✓ The clock would strike in twenty 
 
 ### s6 seq4 | ans: 一大群
 a large crowd of = 一大群。✓ a large crowd of people.
+顺带记:一小撮 = a handful of;一对 = a pair of;一小群 = a small group of.
 
 ### s6 seq5 | ans: 20分钟之后
 in twenty minutes' time = 20分钟之后。✓
+顺带记:20分钟之内 = within twenty minutes;20分钟以前 = twenty minutes ago;整整20分钟 = for twenty minutes.
 
 ### s6 seq6 | ans: 就在那一刻
 at that moment = 就在那一刻。✓ At that moment, someone shouted.
+顺带记:过了一会儿 = after a while;从那以后 = from then on;在这之前 = before that.
 
 ### s7 seq1 | ans: on
 New Year's Eve 是具体某一天,用 on。✓ on New Year's Eve.
+✗ in:in 接月份/年份(in July),不接具体某一天;✗ at:at 接钟点(at eight),不接日期;✗ by:by 是"到…之前",不表"在某天".
 
 ### s7 seq2 | ans: in
 "在晚上"用 in the evening。✓ gathered in the evening.
+✗ on:on 接具体某天(on Monday),不接泛指的"晚上";✗ at:at 只跟 night(at night),不跟 the evening;✗ during:during 后接一段事件(during the party),不接 the evening.
 
 ### s7 seq3 | ans: in
 "再过几分钟 / 几分钟后"用 in。✓ in a few minutes.
+✗ on:on 接具体某天,不表"多久之后";✗ after:after a few minutes 是"几分钟过后(回顾已发生)",而原文说的是将来"再过几分钟";✗ at:at 接具体钟点,不接"一段时间后".
 
 ### s7 seq4 | ans: at
 具体钟点"差5分12点"用 at。✓ at five to twelve.
+✗ in:in 接月/时段(in the morning),不接具体钟点;✗ on:on 接具体某天,不接钟点;✗ by:by 是"到…之前",不表"正好在某钟点".
 
 ### s8 seq1 | ans: On New Year's Eve
 课文说 It was New Year's Eve… we went to the Town Hall,他们是除夕夜去的。
@@ -104,9 +111,11 @@ New Year's Eve 是具体某一天,用 on。✓ on New Year's Eve.
 
 ### s10 seq1 | ans: 人群
 crowd = 人群。✓ A huge crowd gathered under the clock.
+顺带记:云 = cloud;王冠 = crown;吵闹声 = noise.
 
 ### s10 seq2 | ans: 拒绝
 refuse = 拒绝。✓ The clock refused to welcome the New Year.
+顺带记:接受 = accept;欢迎 = welcome;害怕 = be afraid.
 
 ### s10 seq3 | ans: at
 具体钟点用 at。✓ The movie starts at 8 o'clock.

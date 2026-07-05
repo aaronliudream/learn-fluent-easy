@@ -24,8 +24,24 @@
 | L9 | 2 | A cold welcome | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 时间介词 at/in/on;三源 教材p48 KeyStruct + 同步p67 LESSON9 + 新思维介词 已核;过去完成had gathered/过去将来would strike排除;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
 | L10 | 2 | Not for jazz | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | **主题分歧首例**:教材Key structures=被动语态(主考15题) vs 同步L10=名词所有格(辅考3题)→ Aaron裁决 A+覆盖补丁([[am2-source-divergence-rule]]);三源 教材p52 KeyStruct被动 + 教材注释②双重所有格 + 同步p75-76所有格 + 新思维被动p127-131(页眉核过);进行/完成/将来被动展示不设题;**同步所有格深度细则挂账(见下,单元末清零)**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
 | L11 | 2 | One good turn deserves another | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | **主题分歧第二例**:教材Key structures=Review KS2-10(时态语态综合复习,主考11题) vs 同步L11=v.+sb+to do宾补 + 并列连词(辅考7题)→ 按 [[am2-source-divergence-rule]] 自决(不停),裁决A+覆盖补丁第二次执行;三源 教材p56 KeyStruct Review + 同步p83-85 宾补/连词 + 新思维时态各章L2-L10已扫(连词/宾补专题未定点补扫,诚实标注);宾补/连词深度细则挂账(见下);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
-| L12 | 2 | (待扫描确认标题) | ⬜ 下一课 | — | NCE2 L12=Goodbye and good luck;L12三源扫描确认标题+主题,不凭记忆 |
-| L13–L16 | 2 | — | ⬜ 未开工 | — | — |
+| L12 | 2 | Goodbye and good luck | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 一般将来时(主考,教材 Key structures=I'll see you tomorrow.)+ be going to/表将来的现在时(辅考讲深);**教材/同步同主题讲深(非分歧)**——同步L12讲更深(be going to/be to/将来进行时);三源 教材p60 KeyStruct + 同步p88-89 将来时各表达 + 新思维将来时章未定点补扫(诚实标注);**be to/be about to/将来进行时挂账**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L13 | 2 | (待扫描确认标题) | ⬜ 下一课 | — | NCE2 L13=The Greenwood Boys;L13三源扫描确认标题+主题,不凭记忆 |
+| L14–L16 | 2 | — | ⬜ 未开工 | — | — |
+
+## L12 流水线步骤跟踪(一般将来时主考 + be going to/表将来的现在时辅考讲深)
+- [x] 1 三源扫描(scan-evidence-lesson12.md:**同主题讲深非分歧**——教材p60 Key structures=一般将来时(I'll see you tomorrow) / 同步p88-89=将来时各种表达(will/shall+be going to+be to+be about to+一般现在·现在进行表将来)+将来进行时;逐页页眉;主考由教材KeyStruct+同步双权威覆盖,新思维将来时章诚实标"未定点补扫";be to/be about to/将来进行时挂账)
+- [x] 2 建考点清单(grammar-syllabus-lesson12.md:G1-G5+G8一般将来时13 + G6 be going to 3 + G7表将来现在时2 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)· [x] 4 课文定稿(11句·一般将来时密集will sail/we'll meet/will be/will take part + be going to·11词/3语块全落·harbor/neighbor/sailboat美语化)
+- [x] 5 题库(关5=18[将来时13+讲深5,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson12.md;首轮无抓修) · [x] 8 JSON+seed(am2_l12.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44/解释44/零串味14条/G1-G8全覆盖/W11) · [x] 10 commit
+
+## L12 挂账(⚠️ 单元2末批次汇报必须核对清零)
+- **将来时进阶细则**(be to + 原形约定/命令 · be about to 即将 · **将来进行时 will be doing**):本课只教一般将来时(will/shall/'ll)+ be going to + 一般现在·现在进行表将来;进阶挂账,并入后续将来时/复合时态加深课。
+
+## L12 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表官方6词→补至11(+neighbor/boat/race/famous/away)对齐体量 → 采纳A。
+2. 同步同主题深料(be going to/be to/be about to/将来进行时)→ 取常用(be going to+表将来现在时)并入,进阶(be to/be about to/将来进行时)挂账。
+3. 关6 美英对照 harbor/harbour · neighbor/neighbour · sailboat/sailing boat → 采纳:贴港口帆船场景,-our→-or 拼写差 + 复合词差。
 
 ## L11 流水线步骤跟踪(时态语态综合复习主考 + 连词/宾补辅考)
 - [x] 1 三源扫描(scan-evidence-lesson11.md:**主题分歧第二例**——教材p56 Key structures=Review KS2-10(时态语态综合复习) vs 同步p83-85=v.+sb+to do宾补+并列连词;逐页页眉;主考各时态回溯L2-L10已扫新思维章;连词/宾补辅考以同步p83-85为权威,新思维专题诚实标"未定点补扫";课文含asked him to lend + and/but/so → 同步双岔题均①类;**按裁决自决未停**[[am2-source-divergence-rule]])

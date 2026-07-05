@@ -1,0 +1,138 @@
+{
+  "id": "am2_l12",
+  "unit_no": 2,
+  "lesson_no": 12,
+  "title_en": "Goodbye and good luck",
+  "title_cn": "再见,一路顺风",
+  "grammar_focus": "一般将来时(主考:will/shall+动词原形 · 'll缩略 · 各人称 · will be · 否定won't · 疑问Will…? · shall提议 · 过去→将来改写)+ be going to(辅考讲深)+ 一般现在·现在进行表将来(辅考讲深)",
+  "scene": "邻居船长明天启航 · 独自驾小帆船横渡大洋参加比赛 · 大家去码头送行、道别、加油",
+  "grammar_card": {
+    "title": "说\"将来要做什么\"(一般将来时)",
+    "intro": "本课讲怎么说\"将来要发生、将来要做的事\"——一般将来时。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课 / 常见例子"],
+      "rows": [
+        ["一般将来时 = will + 动词原形(表示'将要…')", "Captain Reed will sail tomorrow.(明天将起航)"],
+        ["shall 也可代 will,常用于第一人称 I / we", "Shall we go now?(我们走吧?)"],
+        ["口语里 will 常缩略为 'll(I'll / he'll / we'll / they'll)", "We'll say goodbye to him.(我们会跟他道别)"],
+        ["将来的状态 / 位置用 will be", "He will be away for two months.(他将离开两个月)"],
+        ["否定:won't(will not);疑问:把 will 提前(Will he…?)", "She won't be late. / Will he leave tomorrow?"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "be going to + 动词原形:表示计划好、打算要做的事,或有迹象很可能发生", "mark": "be going to" },
+      { "rule": "时刻表用一般现在时、已安排好的事用现在进行时,也能表将来(The train leaves at 8 / We are having a party Friday)", "mark": "现在时表将来" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Where is Captain Reed going, and how?",
+    "options": ["Across the ocean, on his little sailboat", "To another city, by train", "To an island, by plane", "Nowhere, he will stay home"],
+    "answer_index": 0
+  },
+  "passage": "Our neighbor, Captain David Reed, will sail from the harbor tomorrow morning. We are going to meet him at the dock bright and early. He will be on his little sailboat, the Seabird. The Seabird is a famous little boat, and it has crossed the Atlantic many times. Captain Reed will set out at eight o'clock sharp, so we'll have plenty of time. We'll watch his boat leave, and then we'll say goodbye to him. \"Good luck!\" we will all shout from the dock. He is going to be away for about two months. We are all very proud of him. He will take part in an important race across the ocean. I think he will win, and we will welcome him home like a hero.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Our neighbor, Captain David Reed, will sail from the harbor tomorrow morning.", "text_cn": "我们的邻居戴维·里德船长明天早上就要起航了。" },
+    { "seq": 2, "speaker": null, "text_en": "We are going to meet him at the dock bright and early.", "text_cn": "我们打算一大早就到码头为他送行。" },
+    { "seq": 3, "speaker": null, "text_en": "He will be on his little sailboat, the Seabird.", "text_cn": "他将乘坐他那艘名叫\"海鸟号\"的小帆船。" },
+    { "seq": 4, "speaker": null, "text_en": "The Seabird is a famous little boat, and it has crossed the Atlantic many times.", "text_cn": "\"海鸟号\"是艘有名的小船,已经多次横渡大西洋。" },
+    { "seq": 5, "speaker": null, "text_en": "Captain Reed will set out at eight o'clock sharp, so we'll have plenty of time.", "text_cn": "里德船长将于八点整启程,所以我们时间很充裕。" },
+    { "seq": 6, "speaker": null, "text_en": "We'll watch his boat leave, and then we'll say goodbye to him.", "text_cn": "我们会目送他的船离开,然后跟他道别。" },
+    { "seq": 7, "speaker": null, "text_en": "\"Good luck!\" we will all shout from the dock.", "text_cn": "\"祝你好运!\"我们会一起在码头上喊。" },
+    { "seq": 8, "speaker": null, "text_en": "He is going to be away for about two months.", "text_cn": "他将要离开大约两个月。" },
+    { "seq": 9, "speaker": null, "text_en": "We are all very proud of him.", "text_cn": "我们都为他感到骄傲。" },
+    { "seq": 10, "speaker": null, "text_en": "He will take part in an important race across the ocean.", "text_cn": "他将参加一场横渡大洋的重要比赛。" },
+    { "seq": 11, "speaker": null, "text_en": "I think he will win, and we will welcome him home like a hero.", "text_cn": "我想他会赢,到时我们会像迎接英雄一样迎他回家。" }
+  ],
+  "words": [
+    { "word": "luck", "ipa": "/lʌk/", "pos": "n", "meaning_cn": "运气,幸运", "example": "Good luck!" },
+    { "word": "captain", "ipa": "/ˈkæptən/", "pos": "n", "meaning_cn": "船长", "example": "Captain David Reed" },
+    { "word": "sail", "ipa": "/seɪl/", "pos": "v", "meaning_cn": "航行,起航", "example": "He will sail from the harbor." },
+    { "word": "harbor", "ipa": "/ˈhɑːrbər/", "pos": "n", "meaning_cn": "港口", "example": "sail from the harbor" },
+    { "word": "proud", "ipa": "/praʊd/", "pos": "adj", "meaning_cn": "自豪的,骄傲的", "example": "We are very proud of him." },
+    { "word": "important", "ipa": "/ɪmˈpɔːrtənt/", "pos": "adj", "meaning_cn": "重要的", "example": "an important race" },
+    { "word": "neighbor", "ipa": "/ˈneɪbər/", "pos": "n", "meaning_cn": "邻居", "example": "Our neighbor, Captain Reed" },
+    { "word": "boat", "ipa": "/boʊt/", "pos": "n", "meaning_cn": "小船", "example": "his little sailboat" },
+    { "word": "race", "ipa": "/reɪs/", "pos": "n", "meaning_cn": "比赛", "example": "take part in a race" },
+    { "word": "famous", "ipa": "/ˈfeɪməs/", "pos": "adj", "meaning_cn": "著名的", "example": "a famous little boat" },
+    { "word": "away", "ipa": "/əˈweɪ/", "pos": "adv", "meaning_cn": "离开,不在", "example": "away for two months" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般将来时——构成 will/shall + 动词原形" },
+    { "gp": "gp2", "name": "一般将来时——'ll 缩略 + 各人称" },
+    { "gp": "gp3", "name": "一般将来时——will be(将来的状态/位置)" },
+    { "gp": "gp4", "name": "一般将来时——否定 won't / 疑问 Will…?" },
+    { "gp": "gp5", "name": "一般将来时——过去 → 将来 改写辨识" },
+    { "gp": "gp6", "name": "be going to(计划打算 / 迹象)——辅考讲深" },
+    { "gp": "gp7", "name": "一般现在/现在进行 表将来(timetable/arranged)——辅考讲深" },
+    { "gp": "gp8", "name": "一般将来时——shall(第一人称 · Shall we…? 提议)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "一般将来时表示什么?", "options": ["将来要发生的事(will/shall + 动词原形)", "此刻正在做的事", "过去发生的事", "到现在为止的经历"] },
+    { "gp": "gp1", "stem": "\"Captain Reed ___ tomorrow.\"(sail,一般将来)", "options": ["will sail", "sails", "sailed", "is sailing"] },
+    { "gp": "gp1", "stem": "\"We ___ him at the dock.\"(meet,一般将来)", "options": ["will meet", "meet", "met", "have met"] },
+    { "gp": "gp2", "stem": "\"I will see you tomorrow.\" 口语缩略成:", "options": ["I'll see you tomorrow.", "I see you tomorrow.", "I'm see you tomorrow.", "I willn't see you tomorrow."] },
+    { "gp": "gp2", "stem": "\"他会坐火车来\"的口语缩略说法:", "options": ["He'll come by train.", "He come by train.", "He's come by train.", "He will to come by train."] },
+    { "gp": "gp3", "stem": "\"He ___ away for two months.\"(将来的状态:不在)", "options": ["will be", "is", "was", "will"] },
+    { "gp": "gp3", "stem": "\"We ___ at the dock early tomorrow.\"(将来在某地)", "options": ["will be", "are", "were", "be"] },
+    { "gp": "gp4", "stem": "\"她不会迟到\"的正确说法(will 否定):", "options": ["She won't be late.", "She not will be late.", "She will not to be late.", "She doesn't will be late."] },
+    { "gp": "gp4", "stem": "\"他明天会走吗?\"(will 疑问):", "options": ["Will he leave tomorrow?", "Does he will leave tomorrow?", "He will leave tomorrow?", "Will he leaves tomorrow?"] },
+    { "gp": "gp5", "stem": "把 \"I went to the party.\" 改成\"将要去\":", "options": ["I will go to the party.", "I will went to the party.", "I go to the party.", "I am go to the party."] },
+    { "gp": "gp5", "stem": "下面哪一句表示\"将来要发生的事\"?", "options": ["The play will be very successful.", "The play was very successful.", "The play is very successful now.", "The play has been successful."] },
+    { "gp": "gp6", "stem": "be going to + 动词原形 表示什么?", "options": ["计划好、打算要做的事", "已经做完的事", "经常反复的习惯", "过去正在做的事"] },
+    { "gp": "gp6", "stem": "\"I ___ buy a new bike next week.\"(打算 → be going to)", "options": ["am going to", "will going to", "go to", "am go to"] },
+    { "gp": "gp6", "stem": "\"Dark clouds are gathering. It ___ rain.\"(有迹象 → be going to)", "options": ["is going to", "will going to", "goes to", "is go to"] },
+    { "gp": "gp7", "stem": "\"The train ___ at 8:20.\"(时刻表 → 一般现在时表将来)", "options": ["leaves", "will leaves", "is leave", "leaved"] },
+    { "gp": "gp7", "stem": "\"We ___ a party this Friday.\"(已安排好 → 现在进行表将来)", "options": ["are having", "will having", "have had", "was having"] },
+    { "gp": "gp8", "stem": "shall 常用在哪个人称后面?", "options": ["第一人称 I / we", "第二人称 you", "第三人称 he / she", "所有人称都不用"] },
+    { "gp": "gp8", "stem": "\"我们走吧?\"(提议,用 shall):", "options": ["Shall we go?", "Shall you go?", "Will I go?", "Do we shall go?"] }
+  ],
+  "stage6": [
+    { "stem": "美语\"港口\"的拼写是:", "options": ["harbor", "harbour", "harber", "harbur"] },
+    { "stem": "美语\"邻居\"的拼写是:", "options": ["neighbor", "neighbour", "nieghbor", "neighour"] },
+    { "stem": "美语\"帆船\"常说:", "options": ["sailboat", "sailing boat", "boat sail", "sailship"] },
+    { "stem": "set out 的意思是:", "options": ["启程,出发", "停下", "返回", "到达"] },
+    { "stem": "take part in 的意思是:", "options": ["参加", "离开", "负责", "放弃"] },
+    { "stem": "be proud of 的意思是:", "options": ["为…感到自豪", "害怕…", "厌倦…", "担心…"] }
+  ],
+  "contrast": [
+    { "us": "harbor", "uk": "harbour", "note_cn": "港口;美语拼 harbor,英式拼 harbour" },
+    { "us": "neighbor", "uk": "neighbour", "note_cn": "邻居;美语拼 neighbor,英式拼 neighbour" },
+    { "us": "sailboat", "uk": "sailing boat", "note_cn": "帆船;美语说 sailboat,英式说 sailing boat" }
+  ],
+  "chunks": [
+    { "us": "set out", "ipa": "/set aʊt/", "example1": "Captain Reed will set out at eight o'clock.", "example1_cn": "里德船长将于八点启程。", "example2": "We set out early to avoid the traffic.", "example2_cn": "我们早早出发,避开堵车。" },
+    { "us": "take part in", "ipa": "/teɪk pɑːrt ɪn/", "example1": "He will take part in an important race.", "example1_cn": "他将参加一场重要的比赛。", "example2": "Many students took part in the contest.", "example2_cn": "很多学生参加了这次比赛。" },
+    { "us": "be proud of", "ipa": "/bi praʊd əv/", "example1": "We are all very proud of him.", "example1_cn": "我们都为他感到骄傲。", "example2": "She is proud of her work.", "example2_cn": "她为自己的工作感到自豪。" }
+  ],
+  "stage7_cloze": {
+    "context": "Captain Reed ___1___ from the harbor tomorrow. We ___2___ him at the dock early. He ___3___ away for two months. We are all very proud of him, and we ___4___ him win the race.",
+    "blanks": [
+      { "blank_no": 1, "options": ["will sail", "sails", "sailed", "is sailing"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["will meet", "meet", "met", "are meeting"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["will be", "is", "was", "be"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["will watch", "watch", "watched", "have watched"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "When will Captain Reed set out?", "options": ["At eight o'clock", "At nine o'clock", "At noon", "In the evening"] },
+    { "stem": "How long will he be away?", "options": ["About two months", "Two weeks", "Two years", "Two days"] },
+    { "stem": "What will Captain Reed take part in?", "options": ["A race across the ocean", "A boat show", "A fishing trip", "A concert"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"明天我会给你打电话\"(将来要做 → 一般将来时):", "options": ["I will call you tomorrow.", "I call you tomorrow.", "I called you tomorrow.", "I am call you tomorrow."] },
+    { "stem": "你想说\"我打算这个周末去爬山\"(计划好 → be going to):", "options": ["I am going to climb the mountain this weekend.", "I climb the mountain this weekend.", "I climbed the mountain this weekend.", "I will going to climb this weekend."] },
+    { "stem": "你想提议\"我们一起吃午饭好吗?\"(提议 → Shall we):", "options": ["Shall we have lunch together?", "Will I have lunch together?", "Do we shall have lunch?", "We shall having lunch?"] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "captain 的意思是:", "options": ["船长", "水手", "乘客", "渔民"] },
+    { "kind": "vocab", "stem": "proud 的意思是:", "options": ["自豪的", "害怕的", "伤心的", "疲倦的"] },
+    { "kind": "grammar", "stem": "\"They ___ here on foot tomorrow.\"(come,一般将来)", "options": ["will come", "came", "come", "have come"] },
+    { "kind": "grammar", "stem": "\"Look at those clouds! It ___ snow.\"(有迹象 → be going to)", "options": ["is going to", "will going to", "goes to", "snowed"] },
+    { "kind": "scenario", "stem": "\"我们几点出发?\"(询问将来的安排,用 shall):", "options": ["What time shall we set out?", "What time did we set out?", "What time we shall set out?", "What time set out we?"] },
+    { "kind": "scenario", "stem": "\"I'll be back at six.\" 的意思是:", "options": ["我六点会回来", "我六点前一直不在", "我六点已经回来了", "我六点正在回来的路上"] },
+    { "kind": "reading", "stem": "How will the writer's group say goodbye to the captain?", "options": ["They will watch his boat leave and shout 'Good luck!'", "They will sail across the ocean with him", "They will send him a letter", "They will call him on the phone"], "passage": true },
+    { "kind": "reading", "stem": "Why is everyone proud of Captain Reed?", "options": ["He will take part in an important ocean race", "He just bought a new house", "He is very rich", "He won a prize last year"], "passage": true },
+    { "kind": "listening", "stem": "What is the name of the captain's boat?", "options": ["The Seabird", "The Topsail", "The Atlantic", "The Portsmouth"], "audio": true },
+    { "kind": "listening", "stem": "Where will they meet the captain?", "options": ["At the dock by the harbor", "At his house", "At the school", "At the airport"], "audio": true }
+  ]
+}

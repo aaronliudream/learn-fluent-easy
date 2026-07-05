@@ -1,0 +1,138 @@
+{
+  "id": "am2_l35",
+  "unit_no": 5,
+  "lesson_no": 35,
+  "title_en": "Stop thief!",
+  "title_cn": "捉贼!",
+  "grammar_focus": "时态语态综合复习(Review KS26-34:一般现在 These things always happen / 一般过去 What happened / 现在完成 has not regretted / used to drive / 被动 were arrested)主考 + far/much + 比较级(far more exciting)/ such + a + 名词 + that(such a fright that)辅考·课文①类",
+  "scene": "罗伊·特雷顿原先开出租车,不久前改开了公共汽车,并不后悔——他觉得新工作有意思得多。最近他开车沿凯特福德街行驶时,看到两个小偷从一家商店冲出来,奔向一辆等着的汽车,其中一个提着一只装满钞票的提包。罗伊行动迅速,把公共汽车直冲小偷开去;拿钱的小偷吓得扔了提包。小偷企图开车逃跑,罗伊把公交车撞进他们车的后尾。趁被撞坏的车开走时,罗伊停车给警察打了电话——小偷的车损坏严重、极易辨认;没过多久,警察截住了车,两人都被抓住。",
+  "grammar_card": {
+    "title": "时态语态综合复习",
+    "intro": "本课复习前几课的时态语态:一般现在时(总是发生)、一般过去时(过去发生)、现在完成时(与现在有联系)、used to(过去的习惯)、被动语态(be + 过去分词)。看信号词选对形式。全用本课句子举例。",
+    "table": {
+      "headers": ["时态 / 语态", "本课例子"],
+      "rows": [
+        ["一般现在时", "These things always happen."],
+        ["一般过去时", "He saw two thieves rush out."],
+        ["现在完成时", "He has not regretted it."],
+        ["used to(过去习惯)", "Roy used to drive a taxi."],
+        ["被动语态", "Both men were arrested."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "far / much + 比较级,表示程度'…得多':far more exciting = 有意思得多。", "mark": "far + 比较级" },
+      { "rule": "such + a/an + 名词 + that,'如此…以至于…':such a fright that he dropped the bag。", "mark": "such…that" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How did Roy stop the thieves?",
+    "options": ["He drove his bus straight at them and into their car", "He chased them on foot", "He shouted for help only", "He set up a roadblock"],
+    "answer_index": 0
+  },
+  "passage": "Roy Trenton used to drive a taxi. A short while ago, however, he became a bus driver and he has not regretted it. He is finding his new work far more exciting. When he was driving along Catford Street recently, he saw two thieves rush out of a store and run toward a waiting car. One of them was carrying a bag full of money. Roy acted quickly and drove the bus straight at the thieves. The one with the money got such a fright that he dropped the bag. As the thieves were trying to get away in their car, Roy drove his bus into the back of it. While the battered car was moving away, Roy stopped his bus and telephoned the police. The thieves' car was badly damaged and easy to recognize, and shortly afterward, the police stopped the car and both men were arrested.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Roy Trenton used to drive a taxi.", "text_cn": "罗伊·特雷顿过去是开出租车的。" },
+    { "seq": 2, "speaker": null, "text_en": "A short while ago, however, he became a bus driver and he has not regretted it.", "text_cn": "然而不久前,他改开了公共汽车,而且并不后悔。" },
+    { "seq": 3, "speaker": null, "text_en": "He is finding his new work far more exciting.", "text_cn": "他觉得新工作有意思得多。" },
+    { "seq": 4, "speaker": null, "text_en": "When he was driving along Catford Street recently, he saw two thieves rush out of a store and run toward a waiting car.", "text_cn": "最近他沿凯特福德街开车时,看到两个小偷从一家商店冲出来,奔向一辆等着的汽车。" },
+    { "seq": 5, "speaker": null, "text_en": "One of them was carrying a bag full of money.", "text_cn": "其中一个提着一只装满钞票的提包。" },
+    { "seq": 6, "speaker": null, "text_en": "Roy acted quickly and drove the bus straight at the thieves.", "text_cn": "罗伊行动迅速,把公共汽车直冲小偷开去。" },
+    { "seq": 7, "speaker": null, "text_en": "The one with the money got such a fright that he dropped the bag.", "text_cn": "拿钱的那个小偷吓得把提包都扔了。" },
+    { "seq": 8, "speaker": null, "text_en": "As the thieves were trying to get away in their car, Roy drove his bus into the back of it.", "text_cn": "当小偷企图开车逃跑时,罗伊把公交车撞进了他们车的后尾。" },
+    { "seq": 9, "speaker": null, "text_en": "While the battered car was moving away, Roy stopped his bus and telephoned the police.", "text_cn": "趁被撞坏的车开走时,罗伊停下车给警察打了电话。" },
+    { "seq": 10, "speaker": null, "text_en": "The thieves' car was badly damaged and easy to recognize, and shortly afterward, the police stopped the car and both men were arrested.", "text_cn": "小偷的车损坏严重、很容易辨认;没过多久,警察就截住了车,两人都被抓住了。" }
+  ],
+  "words": [
+    { "word": "while", "ipa": "/waɪl/", "pos": "n", "meaning_cn": "一段时间", "example": "a short while ago" },
+    { "word": "regret", "ipa": "/rɪˈɡret/", "pos": "v", "meaning_cn": "后悔", "example": "he has not regretted it" },
+    { "word": "far", "ipa": "/fɑːr/", "pos": "adv", "meaning_cn": "…得多(修饰比较级)", "example": "far more exciting" },
+    { "word": "rush", "ipa": "/rʌʃ/", "pos": "v", "meaning_cn": "冲,奔", "example": "rush out of a store" },
+    { "word": "act", "ipa": "/ækt/", "pos": "v", "meaning_cn": "行动", "example": "Roy acted quickly" },
+    { "word": "straight", "ipa": "/streɪt/", "pos": "adv", "meaning_cn": "径直", "example": "drove the bus straight at the thieves" },
+    { "word": "fright", "ipa": "/fraɪt/", "pos": "n", "meaning_cn": "害怕,惊吓", "example": "got such a fright" },
+    { "word": "battered", "ipa": "/ˈbætərd/", "pos": "adj", "meaning_cn": "撞坏的,破旧的", "example": "the battered car" },
+    { "word": "shortly", "ipa": "/ˈʃɔːrtli/", "pos": "adv", "meaning_cn": "很快,不久", "example": "shortly afterward" },
+    { "word": "afterward", "ipa": "/ˈæftərwərd/", "pos": "adv", "meaning_cn": "以后,随后(美语)", "example": "shortly afterward" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般现在时(总是 / 现阶段发生)" },
+    { "gp": "gp2", "name": "一般过去时(过去某刻发生)" },
+    { "gp": "gp3", "name": "现在完成时(与现在有联系:has not regretted)" },
+    { "gp": "gp4", "name": "used to(过去的习惯,现已停止)" },
+    { "gp": "gp5", "name": "被动语态(be + 过去分词:were arrested)" },
+    { "gp": "gp6", "name": "看信号词综合选时态" },
+    { "gp": "gp7", "name": "far / much + 比较级(…得多,辅考)" },
+    { "gp": "gp8", "name": "such + a + 名词 + that(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"These things always ___.\"(总是发生,一般现在时)", "stem_cn": "这些事总会发生。", "options": ["happen", "happened", "have happened", "will happen"] },
+    { "gp": "gp1", "stem": "\"Roy ___ his new job very exciting these days.\"(现阶段,一般现在时)", "stem_cn": "罗伊觉得新工作很带劲。", "options": ["finds", "found", "has found", "find"] },
+    { "gp": "gp2", "stem": "\"When he was driving, he ___ two thieves.\"(过去某刻,一般过去时)", "stem_cn": "他开车时看到两个小偷。", "options": ["saw", "sees", "has seen", "was seeing"] },
+    { "gp": "gp2", "stem": "\"Roy ___ the bus straight at the thieves.\"(过去动作,一般过去时)", "stem_cn": "罗伊把公交车直冲小偷开去。", "options": ["drove", "drives", "has driven", "was driving"] },
+    { "gp": "gp2", "stem": "\"The thief ___ the bag and ran.\"(过去动作,一般过去时)", "stem_cn": "小偷扔下包跑了。", "options": ["dropped", "drops", "has dropped", "was dropping"] },
+    { "gp": "gp3", "stem": "\"He ___ not regretted becoming a bus driver.\"(与现在有联系,现在完成时)", "stem_cn": "他没后悔当公交司机。", "options": ["has", "did", "was", "is"] },
+    { "gp": "gp3", "stem": "\"'What ___ happened?' asked the policeman.\"(现在完成时)", "stem_cn": "“出什么事了?”警察问。", "options": ["has", "did", "was", "is"] },
+    { "gp": "gp4", "stem": "\"Roy ___ drive a taxi, but now he drives a bus.\"(过去经常做、现已停止)", "stem_cn": "罗伊过去开出租车,现在开公交。", "options": ["used to", "use to", "is used to", "was used to"] },
+    { "gp": "gp4", "stem": "\"He ___ work long hours when he was young.\"(过去经常做、现已停止)", "stem_cn": "他年轻时常长时间工作。", "options": ["used to", "use to", "uses to", "is used to"] },
+    { "gp": "gp5", "stem": "\"Both men ___ arrested by the police.\"(被动,一般过去,复数)", "stem_cn": "两人都被警察逮捕了。", "options": ["were", "was", "are", "did"] },
+    { "gp": "gp5", "stem": "\"The thieves' car ___ badly damaged in the crash.\"(被动,一般过去,单数)", "stem_cn": "小偷的车在撞击中严重损坏。", "options": ["was", "were", "is", "did"] },
+    { "gp": "gp5", "stem": "\"The stolen money ___ found in the bag.\"(被动,一般过去)", "stem_cn": "被偷的钱在包里被找到。", "options": ["was", "were", "is", "did"] },
+    { "gp": "gp6", "stem": "\"Yesterday Roy ___ his bus into their car.\"(yesterday 明确过去)", "stem_cn": "昨天罗伊把车撞进他们车里。", "options": ["drove", "drives", "has driven", "drive"] },
+    { "gp": "gp6", "stem": "\"So far he ___ not regretted his choice.\"(so far,现在完成时)", "stem_cn": "到目前为止他不后悔自己的选择。", "options": ["has", "did", "was", "is"] },
+    { "gp": "gp7", "stem": "\"He finds his new work ___ more exciting.\"(表'…得多',修饰比较级)", "stem_cn": "他觉得新工作有意思得多。", "options": ["far", "very", "too", "so"] },
+    { "gp": "gp7", "stem": "\"This car is ___ better than that one.\"(表'…得多',修饰比较级)", "stem_cn": "这辆车比那辆好得多。", "options": ["far", "very", "too", "quite"] },
+    { "gp": "gp8", "stem": "\"He got ___ a fright that he dropped the bag.\"(如此…以至于,后接名词)", "stem_cn": "他吓得把包都扔了。", "options": ["such", "so", "very", "too"] },
+    { "gp": "gp8", "stem": "\"It was ___ a shock that she could not speak.\"(如此…以至于,后接名词)", "stem_cn": "那么震惊,她说不出话。", "options": ["such", "so", "very", "too"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"商店\"常说:", "options": ["store", "shop", "sell house", "goods room"] },
+    { "stem": "美语里\"以后、随后\"常写作(不带 s):", "options": ["afterward", "afterwards", "afterhand", "laterward"] },
+    { "stem": "regret 的意思是:", "options": ["后悔", "高兴", "期待", "忘记"] },
+    { "stem": "rush 的意思是:", "options": ["冲,奔", "慢走", "停下", "躲藏"] },
+    { "stem": "fright 的意思是:", "options": ["害怕,惊吓", "喜悦", "愤怒", "好奇"] },
+    { "stem": "battered 的意思是:", "options": ["撞坏的,破旧的", "崭新的", "昂贵的", "巨大的"] }
+  ],
+  "contrast": [
+    { "us": "store", "uk": "shop", "note_cn": "商店;美语 store,英式 shop(课文 rush out of a store)" },
+    { "us": "afterward", "uk": "afterwards", "note_cn": "以后,随后;美语常用 afterward(不带 s),英式 afterwards(课文 shortly afterward)" },
+    { "us": "toward", "uk": "towards", "note_cn": "朝,向;美语常用 toward(不带 s),英式 towards(课文 run toward a car)" },
+    { "us": "cab", "uk": "taxi", "note_cn": "出租车;美语口语常说 cab,英式 taxi(课文 used to drive a taxi)" }
+  ],
+  "chunks": [
+    { "us": "far more exciting", "ipa": "/fɑːr mɔːr ɪkˈsaɪtɪŋ/", "example1": "He finds his new work far more exciting.", "example1_cn": "他觉得新工作有意思得多。", "example2": "This one is far more expensive.", "example2_cn": "这个贵得多。" },
+    { "us": "rush out of", "ipa": "/rʌʃ aʊt əv/", "example1": "Two thieves rushed out of a store.", "example1_cn": "两个小偷从店里冲出来。", "example2": "She rushed out of the room.", "example2_cn": "她冲出了房间。" },
+    { "us": "such a fright that", "ipa": "/sʌtʃ ə fraɪt ðæt/", "example1": "He got such a fright that he dropped the bag.", "example1_cn": "他吓得把包都扔了。", "example2": "It was such a shock that she cried.", "example2_cn": "那么震惊,她哭了。" },
+    { "us": "get away", "ipa": "/ɡet əˈweɪ/", "example1": "The thieves tried to get away.", "example1_cn": "小偷企图逃跑。", "example2": "You can't get away with it.", "example2_cn": "你别想蒙混过关。" }
+  ],
+  "stage7_cloze": {
+    "context": "Roy ___1___ to drive a taxi, but now he drives a bus. Recently he ___2___ two thieves rush out of a store. He drove his bus at them, and shortly afterward both men ___3___ arrested. Roy ___4___ not regretted his new job.",
+    "blanks": [
+      { "blank_no": 1, "options": ["used", "use", "uses", "is used"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["saw", "sees", "has seen", "was seeing"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["were", "was", "are", "did"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["has", "did", "was", "is"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What job does Roy Trenton do now?", "options": ["He is a bus driver", "He is a taxi driver", "He is a police officer", "He is a shop owner"] },
+    { "stem": "What did Roy do when he saw the thieves?", "options": ["He drove his bus straight at them", "He ran after them on foot", "He called the police first", "He hid inside the bus"] },
+    { "stem": "What happened to the thieves in the end?", "options": ["The police stopped their car and arrested both men", "They got away with the money", "They crashed into a store", "They gave the money back"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"他过去开出租车\"(过去经常用 used to):", "options": ["He used to drive a taxi.", "He use to drive a taxi.", "He is used to drive a taxi.", "He was used to drive a taxi."] },
+    { "stem": "你想说\"两个小偷都被捕了\"(被动:were + 过去分词):", "options": ["Both thieves were arrested.", "Both thieves arrested.", "Both thieves were arrest.", "Both thieves are arrest."] },
+    { "stem": "你想说\"他觉得新工作有意思得多\"(far 修饰比较级):", "options": ["He finds his new work far more exciting.", "He finds his new work far exciting.", "He finds his new work more far exciting.", "He finds his new work very more exciting."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "regret 的意思是:", "options": ["后悔", "高兴", "害怕", "期待"] },
+    { "kind": "vocab", "stem": "rush 的意思是:", "options": ["冲,奔", "散步", "停下", "坐下"] },
+    { "kind": "grammar", "stem": "\"Roy ___ not regretted his new job.\"(现在完成时)", "stem_cn": "罗伊没有后悔他的新工作。", "options": ["has", "did", "was", "is"] },
+    { "kind": "grammar", "stem": "\"Both men ___ arrested by the police.\"(被动,一般过去)", "stem_cn": "两人都被警察逮捕了。", "options": ["were", "was", "are", "did"] },
+    { "kind": "scenario", "stem": "\"He is finding his new work far more exciting.\" 这句话的意思是:", "options": ["他觉得新工作有意思得多。", "他不喜欢新工作。", "他的新工作很轻松。", "他想换回旧工作。"] },
+    { "kind": "scenario", "stem": "\"The thieves tried to get away in their car.\" 这句话的意思是:", "options": ["小偷企图开车逃跑。", "小偷把车卖了。", "小偷停下了车。", "小偷修好了车。"] },
+    { "kind": "reading", "stem": "Why does Roy like his new job better?", "options": ["He finds being a bus driver far more exciting", "It pays much more money", "He works fewer hours", "He can drive faster"], "passage": true },
+    { "kind": "reading", "stem": "How did Roy stop the thieves?", "options": ["He drove his bus at them and into their car, then called the police", "He chased them on foot", "He blocked the road with his taxi", "He shouted for help"], "passage": true },
+    { "kind": "listening", "stem": "How did Roy stop the thieves?", "options": ["He drove his bus straight at them and into their car", "He jumped out and caught them", "He set up a roadblock", "He followed them home"], "audio": true },
+    { "kind": "listening", "stem": "Why was the thieves' car easy to recognize?", "options": ["It was badly damaged (battered)", "It was bright red", "It was brand new", "It had no license plate"], "audio": true }
+  ]
+}

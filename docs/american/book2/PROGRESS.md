@@ -48,7 +48,13 @@
 - 主教材 Key structures = **被动语态**("He was asked to call at the station",KS10):主动变被动 be+过去分词。本课覆盖各时态被动——一般过去(was stolen/was picked up)、**现在进行(is being sent,Note6 重点)**、过去完成(had been found)、ask sb to do 的被动(was asked to do)。
 - 裁决(自决):被动 gp1-6(主动变被动/一般过去被动/现在进行被动/过去完成被动/be asked to do/by短语)主考;most=very+过去分词 gp7(most surprised)+ too/as well gp8(amused too)辅考(均课文①类)。
 - 词10(station/receive/local/wonder/expect/steal/amuse/news/village/most);美语化 policeman→police officer、post→mail 入关6(+apartment/elevator 高频)。
-- 44题;机器12项🟢(首验红1:s5#12 stem 含箭头"→"泄漏[a]→改直填复验全绿;2条[c]黄警=被动/不定式 cloze 他处含 to/was,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-34=88)。⏭️ L35。
+- 44题;机器12项🟢(首验红1:s5#12 stem 含箭头"→"泄漏[a]→改直填复验全绿;2条[c]黄警=被动/不定式 cloze 他处含 to/was,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-34=88)。
+
+## ✅ U5 L35《Stop thief!》(捉贼!)· 🟢全绿 · **复习课**
+- 主教材 Key structures = **Review KS26-34**(时态语态综合复习:一般现在 These things always happen / 一般过去 What happened / 现在完成 has not regretted / used to drive / 被动 were arrested)。类比 L11 复习课处理。
+- 裁决(自决):时态语态综合 gp1-6(现在/过去/完成/used to/被动/综合选)主考;far/much+比较级 gp7(far more exciting)+ such+a+名词+that gp8(such a fright that)辅考(均课文①类)。
+- 词10(while/regret/far/rush/act/straight/fright/battered/shortly/afterward);美语化 shop→store、towards→toward、afterwards→afterward、taxi→cab 入关6。
+- 44题;机器12项🟢(首验红1:s9seq2 解释含"主语"串味→改"两个人复数"复验全绿;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-35=132)。⏭️ L36。
 
 ---
 

@@ -18,7 +18,7 @@
 | 1 | `american_am2_seed_unit01.sql`(**重跑**) | +0(改题不增) | L1–8:2 道🔴元语法定义题→运用题(L01 can 词类/句型题) | 无 |
 | 2 | `american_am2_seed_unit02.sql`(**重跑**) | +0(改题不增) | L9–16:元语法转运用(L10/11/12/13/14/15)+ L16 集合名词修正(family are→is、as well as 陷阱→and、if 概念→运用) | 无 |
 | 3 | `american_am2_seed_unit03.sql` | +352(8课×44) | am2 U3(L17–24)整单元新增,已过三维闸门(L17/18/21 元语法已转运用) | 无 |
-| 4 | `american_am2_seed_unit04.sql` | +264(6课×44) | am2 U4 目前 L25–30(L30 Football or polo? 冠词 the/some/any+专名·分歧第四例),全过机器12项🟢;后续加课本行 COUNT 递增 | 无 |
+| 4 | `american_am2_seed_unit04.sql` | +308(7课×44) | am2 U4 目前 L25–31(L31 Success story used to do·分歧第五例),全过机器12项🟢;后续加课本行 COUNT 递增 | 无 |
 
 > **✅ unit03/04 已解除暂缓**:24 道🔴元语法定义题全部转成运用题,全 27 课第11项 =0、十二项全绿。
 > **🟡 待 Aaron 复核(非阻断,不影响上面照跑)**:`REVIEWAA/american-instructional-design-audit.md` 里的 ~98 道"概念辨认🟡"(如"关于X正确的是""police 后面动词用")按三维闸门属中间地带,已过机器闸(非红),留你复核是否进一步降级;要改也是幂等 UPDATE,不影响先跑。

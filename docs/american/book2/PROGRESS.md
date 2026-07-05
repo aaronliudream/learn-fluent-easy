@@ -22,7 +22,13 @@
 - [x] 步骤3 清单自审 · [x] 4 课文美语定稿(10句·冠词密集 the Wayle/the park/a ball/a passing boat + so…that + toward + that定从;美语化 towards→toward、riverbank、realize、soccer入关6)
 - [x] 5 题库(关5=18[冠词12+辅考6]/关6=6/关7=4/关8=3/关9=3/关10=10=44) · [x] 6 解释44
 - [x] 7 双角色自审(冠词句义逐题回读;方向 toward、so…that、that定从三辅考均课文①类) · [x] 8 JSON+seed(am2_l30.json→unit04.sql,264题=L25-30×44) · [x] 9 机器12项🟢全绿(三维闸门元语法=0;3条[c]黄警=冠词/that题干他处含 the/that,人工判过) · [x] 10 commit
-> **L30 ✅ 生产完成 · 🟢全绿。** 主题分歧第四例已自决(冠词主考+so…that/toward/that定从辅考)。seed 归 `american_am2_seed_unit04.sql`。⏭️ L31 往下。
+> **L30 ✅ 生产完成 · 🟢全绿。** 主题分歧第四例已自决(冠词主考+so…that/toward/that定从辅考)。seed 归 `american_am2_seed_unit04.sql`。
+
+## ✅ U4 L31《Success story》(成功者的故事)· 🟢全绿
+- 主教材 Key structures = **used to do**("He used to work fourteen hours a day",过去习惯/状态·现已停止,对比 KS7 过去进行/一般过去)。**主题分歧第五例**:同步 L30~31 讲 状语从句/方向介词(so…that/toward 已在 L30 用尽),L31 主考锚定教材 **used to do**。
+- 裁决(自决未停):used to do 主考(过去习惯 gp1/状态 gp2/否定疑问 gp3/vs一般过去 gp4/vs过去进行 gp5/与现在对比 gp6)+ which 定语从句指物 gp7 / when 时间状语从句 gp8 辅考(均课文①类:a factory which employed…、smiled when…)。
+- 词10(retire/company/bicycle/save/workshop/helper/employ/grandson/factory/spare);美语化 aeroplane→airplane、shop→store、postman→mailman 入关6。
+- 44题(关5=18[used to 14+which/when 4]/关6=6/关7=4/关8=3/关9=3/关10=10);机器12项🟢(首验红1:s9seq2 解释含"定语"串味→改"修饰句"复验全绿)。seed→`american_am2_seed_unit04.sql`(L25-31=308)。commit 见下。⏭️ L32(U4 末课)。
 
 ---
 

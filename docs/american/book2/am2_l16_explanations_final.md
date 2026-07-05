@@ -65,24 +65,31 @@ neither…nor 连接两个词时,动词跟离得近的那个(he),he 用 is。✓
 
 ### s6 seq4 | ans: 注意,留意
 pay attention to = 注意、留意。✓ Pay attention to our street signs.
+顺带记:付钱给 = pay (for);忽视 = ignore;指出 = point out.
 
 ### s6 seq5 | ans: 未能 / 没做到
 fail to = 未能、没做到;cannot fail to = 一定会(双重否定)。✓ You cannot fail to obey it.
+顺带记:成功做到 = succeed in / manage to;打算做 = plan to do;拒绝做 = refuse to do.
 
 ### s6 seq6 | ans: 欢迎来到
 welcome to = 欢迎来到(某地)。✓ Welcome to our city!
+顺带记:告别 = say goodbye to;欢送 = see off;拒绝进入 = refuse entry / keep out.
 
 ### s7 seq1 | ans: park
 if 那半句用一般现在时 park。✓ If you park in the wrong spot…
+✗ will park:if 那半句用一般现在时,不用 will;✗ parked:说的是将来可能发生的条件,不是过去;✗ are parking:if 从句一般不用现在进行,用一般现在 park.
 
 ### s7 seq2 | ans: will find
 后半句表将来,用 will find。✓ a police officer will find your car.
+✗ finds:主句说将来的结果,用 will find;✗ found:不是过去发生的事;✗ find:主句结果要加 will,不能光用原形.
 
 ### s7 seq3 | ans: pay
 if 半句用一般现在时 pay。✓ if you pay attention to the signs.
+✗ will pay:if 那半句用一般现在时,不用 will;✗ paid:不是过去;✗ paying:缺助动词,单独 paying 不能作谓语.
 
 ### s7 seq4 | ans: get
 if 半句用一般现在时 get。✓ If you get a polite note…
+✗ will get:if 那半句用一般现在时,不用 will;✗ got:不是过去;✗ getting:缺助动词,单独 getting 不能作谓语.
 
 ### s8 seq1 | ans: A police officer will find your car
 课文说 If you park in the wrong place, a police officer will find your car,停错地方警察会找到车。
@@ -104,9 +111,11 @@ police 后面的动词用复数 are。✓ The police are keeping order. 场合:�
 
 ### s10 seq1 | ans: 服从,遵守
 obey = 服从、遵守。✓ you cannot fail to obey it.
+顺带记:拒绝 = refuse;忘记 = forget;停车 = park.
 
 ### s10 seq2 | ans: 提示,提醒
 reminder = 提示、提醒。✓ this note is only a reminder.
+顺带记:罚款单 = ticket / fine;车牌 = license plate;地图 = map.
 
 ### s10 seq3 | ans: work
 if 那半句用一般现在时 work。✓ If you work hard, you will pass the test.

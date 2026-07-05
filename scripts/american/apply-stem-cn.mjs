@@ -93,6 +93,22 @@ const CN = {
     '"He said that he ___ busy that day."(转述过去,is 要变成什么)': "他说他那天很忙。",
     '"She told me that she ___ finished the work."(have finished 要变成什么)': "她告诉我她已经完成了那项工作。",
   },
+  am2_l16: {
+    '"If it ___ tomorrow, we will stay home."(rain,if 那半句用现在时)': "如果明天下雨,我们就待在家里。",
+    '"If you park here, a police officer ___ your car."(find,后半句用将来)': "如果你停在这儿,警察会找到你的车。",
+    '"If he is working, I ___ disturb him."(后半句:不去打扰)': "如果他在工作,我就不去打扰他。",
+    '"If you make a mistake, ___ it."(if + 让人做某事:改正它)': "如果你犯了错,就改正它。",
+    '"If you see him, ___ you tell him about it?"(if + 疑问)': "如果你见到他,你会告诉他这件事吗?",
+    '"You ___ the train if you don\'t hurry."(miss,后半句将来)': "如果你不快点,就会错过火车。",
+    '"If they can help you, they ___."(条件成立,主句表将来)': "如果他们能帮你,他们会帮的。",
+    '"Traffic police ___ sometimes very polite."(police 用复数)': "交通警察有时非常客气。",
+    '"My family ___ all early risers."(把家人看成一个个成员,用复数)': "我家人都是早起的人。",
+    '"The father as well as his children ___ here."(as well as 跟前面的 father)': "父亲和他的孩子们都在这儿。",
+    '"Neither you nor he ___ right."(neither…nor 跟离得近的 he)': "你和他都不对。",
+    '"If you ___ hard, you will pass the test."(if 那半句用一般现在时,不用将来时)': "如果你努力学习,就会通过考试。",
+    '"If he plays well, he ___ into the team."(get,后半句用将来)': "如果他表现出色,就会入选球队。",
+    '"The police ___ looking for the thief." 横线填(police 用复数):': "警察正在搜捕小偷。",
+  },
 };
 
 let total = 0, patched = 0;

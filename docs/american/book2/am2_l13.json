@@ -1,0 +1,138 @@
+{
+  "id": "am2_l13",
+  "unit_no": 2,
+  "lesson_no": 13,
+  "title_en": "The Greenwood Boys",
+  "title_cn": "绿林少年(流行歌手团)",
+  "grammar_focus": "将来进行时(主考:will/shall be + V-ing · 现在进行 vs 将来进行 · 各人称 · 疑问Will you be doing…? · ≈一般将来时 · 表安排好的将来)+ by+交通工具(辅考)+ 现在进行时复习对照(辅考)",
+  "scene": "流行歌手团明天乘火车到镇上 · 粉丝去车站接、晚上俱乐部演出、待五天 · 警察照例忙着维持秩序",
+  "grammar_card": {
+    "title": "说\"将来某时正在做什么\"(将来进行时)",
+    "intro": "本课讲怎么说\"将来某个时候正在做某事\"——将来进行时。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课 / 常见例子"],
+      "rows": [
+        ["将来进行时 = will/shall be + 动词-ing(将来某时正在进行)", "They will be arriving tomorrow.(明天将要到达)"],
+        ["现在'正在'用 am/is/are + doing;将来'正在'用 will be + doing", "现在:They are playing. 明天:They will be playing tomorrow."],
+        ["各人称都用 will be(第一人称也可用 shall be);口语 'll be", "I'll be seeing you. / He'll be coming by train."],
+        ["疑问:把 will 提前(Will you be doing…?);否定:won't be + doing", "Will you be washing your car tomorrow?"],
+        ["将来进行时和一般将来时常可互换,都表将来", "He'll arrive soon. = He'll be arriving soon."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "将来进行时常表示'已经安排好的、最近就要发生'的事(will be arriving = 快到了)", "mark": "安排好的将来" },
+      { "rule": "乘坐交通工具用 by:by train / by air / by sea / by bus(名词前不加 the/a)", "mark": "by + 交通工具" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why will the police have a difficult time?",
+    "options": ["Huge crowds of fans will gather for the band", "The band is dangerous", "The station is closed", "There is a storm coming"],
+    "answer_index": 0
+  },
+  "passage": "The Silver Hawks are a group of pop singers. At present, they are traveling all across the country. They will be arriving in our town tomorrow. They will be coming by train, and most of the young fans will be meeting them at the station. Tomorrow evening, they will be singing downtown at the Community Club. The Silver Hawks will be staying for five days, and they will give five performances. Hundreds of fans will be lining up outside the club for hours. As usual, the police will have a difficult time. They will be trying hard to keep order. It is always the same on these big occasions. What will you be doing when the Silver Hawks arrive?",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "The Silver Hawks are a group of pop singers.", "text_cn": "\"银鹰\"是一个流行歌手组合。" },
+    { "seq": 2, "speaker": null, "text_en": "At present, they are traveling all across the country.", "text_cn": "目前,他们正在全国各地巡演。" },
+    { "seq": 3, "speaker": null, "text_en": "They will be arriving in our town tomorrow.", "text_cn": "他们明天就要到我们镇上了。" },
+    { "seq": 4, "speaker": null, "text_en": "They will be coming by train, and most of the young fans will be meeting them at the station.", "text_cn": "他们将乘火车来,镇上大多数年轻粉丝都会去车站迎接他们。" },
+    { "seq": 5, "speaker": null, "text_en": "Tomorrow evening, they will be singing downtown at the Community Club.", "text_cn": "明天晚上,他们将在市中心的社区俱乐部演出。" },
+    { "seq": 6, "speaker": null, "text_en": "The Silver Hawks will be staying for five days, and they will give five performances.", "text_cn": "\"银鹰\"将逗留五天,一共演出五场。" },
+    { "seq": 7, "speaker": null, "text_en": "Hundreds of fans will be lining up outside the club for hours.", "text_cn": "成百上千的粉丝会在俱乐部外排队等上好几个小时。" },
+    { "seq": 8, "speaker": null, "text_en": "As usual, the police will have a difficult time.", "text_cn": "和往常一样,警察的日子会不好过。" },
+    { "seq": 9, "speaker": null, "text_en": "They will be trying hard to keep order.", "text_cn": "他们将竭力维持秩序。" },
+    { "seq": 10, "speaker": null, "text_en": "It is always the same on these big occasions.", "text_cn": "每逢这种大场合,情况总是这样。" },
+    { "seq": 11, "speaker": null, "text_en": "What will you be doing when the Silver Hawks arrive?", "text_cn": "\"银鹰\"来的时候,你会在做什么呢?" }
+  ],
+  "words": [
+    { "word": "group", "ipa": "/ɡruːp/", "pos": "n", "meaning_cn": "团体,小组", "example": "a group of pop singers" },
+    { "word": "pop singer", "ipa": "/ˈpɑːp ˌsɪŋər/", "pos": "n", "meaning_cn": "流行歌手", "example": "The Silver Hawks are pop singers." },
+    { "word": "club", "ipa": "/klʌb/", "pos": "n", "meaning_cn": "俱乐部", "example": "at the Community Club" },
+    { "word": "performance", "ipa": "/pərˈfɔːrməns/", "pos": "n", "meaning_cn": "演出", "example": "give five performances" },
+    { "word": "occasion", "ipa": "/əˈkeɪʒn/", "pos": "n", "meaning_cn": "场合", "example": "on these big occasions" },
+    { "word": "train", "ipa": "/treɪn/", "pos": "n", "meaning_cn": "火车", "example": "come by train" },
+    { "word": "station", "ipa": "/ˈsteɪʃn/", "pos": "n", "meaning_cn": "车站", "example": "at the station" },
+    { "word": "order", "ipa": "/ˈɔːrdər/", "pos": "n", "meaning_cn": "秩序", "example": "keep order" },
+    { "word": "fan", "ipa": "/fæn/", "pos": "n", "meaning_cn": "粉丝,迷", "example": "young fans" },
+    { "word": "usual", "ipa": "/ˈjuːʒuəl/", "pos": "adj", "meaning_cn": "通常的", "example": "as usual" },
+    { "word": "present", "ipa": "/ˈprezənt/", "pos": "n", "meaning_cn": "目前,现在", "example": "at present" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "将来进行时——构成 will/shall be + V-ing" },
+    { "gp": "gp2", "name": "将来进行时——现在进行 vs 将来进行(now vs tomorrow)" },
+    { "gp": "gp3", "name": "将来进行时——'ll be / shall be 各人称" },
+    { "gp": "gp4", "name": "将来进行时——疑问 Will you be doing…? / 否定 won't be" },
+    { "gp": "gp5", "name": "将来进行时——≈ 一般将来时(同义可换)" },
+    { "gp": "gp6", "name": "将来进行时——用法(安排好的/最近将来正在进行)" },
+    { "gp": "gp7", "name": "by + 交通工具(by train/air/sea)——辅考语言点" },
+    { "gp": "gp8", "name": "现在进行时(at present 正在)——复习对照" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "将来进行时表示什么?", "options": ["将来某个时候正在进行的事", "此刻正在进行的事", "过去发生的事", "到现在为止的经历"] },
+    { "gp": "gp1", "stem": "将来进行时由什么构成?", "options": ["will/shall be + 动词-ing", "will + 动词原形", "be + 过去分词", "have + 过去分词"] },
+    { "gp": "gp1", "stem": "\"They ___ here tomorrow.\"(arrive,将来进行时)", "options": ["will be arriving", "will arrived", "are arriving", "arrived"] },
+    { "gp": "gp2", "stem": "\"现在他们正在踢球\"(此刻正在 → 现在进行):", "options": ["They are playing football.", "They will be playing football.", "They played football.", "They play football."] },
+    { "gp": "gp2", "stem": "\"明天这个时候他们将在踢球\"(将来某时正在 → 将来进行):", "options": ["They will be playing football tomorrow.", "They are playing football tomorrow.", "They played football tomorrow.", "They play football tomorrow."] },
+    { "gp": "gp2", "stem": "\"He is working in the garden.\" 改成明天(将来进行时):", "options": ["He will be working in the garden tomorrow.", "He is working in the garden tomorrow.", "He works in the garden tomorrow.", "He worked in the garden tomorrow."] },
+    { "gp": "gp3", "stem": "\"我下周会见到你\"(将来进行,口语缩略):", "options": ["I'll be seeing you next week.", "I be seeing you next week.", "I'll seeing you next week.", "I am be seeing you next week."] },
+    { "gp": "gp3", "stem": "\"他将乘火车来\"(将来进行,he):", "options": ["He'll be coming by train.", "He'll be come by train.", "He be coming by train.", "He'll being come by train."] },
+    { "gp": "gp4", "stem": "\"明天这时候你会在洗车吗?\"(将来进行疑问):", "options": ["Will you be washing your car tomorrow?", "Do you be washing your car tomorrow?", "Are you will be washing your car?", "Will you washing your car tomorrow?"] },
+    { "gp": "gp4", "stem": "将来进行时的否定形式是:", "options": ["won't be + 动词-ing", "don't be + 动词-ing", "not will be + 动词-ing", "won't + 动词原形"] },
+    { "gp": "gp5", "stem": "\"He'll arrive in a minute.\" 换成将来进行时,意思不变:", "options": ["He'll be arriving in a minute.", "He arriving in a minute.", "He'll been arriving in a minute.", "He is arrive in a minute."] },
+    { "gp": "gp5", "stem": "关于将来进行时和一般将来时,正确的是:", "options": ["两者常可互换,都表将来", "将来进行时表过去", "一般将来时表此刻正在", "两者意思完全相反"] },
+    { "gp": "gp6", "stem": "\"They will be arriving here tomorrow.\" 这句将来进行时表示:", "options": ["已经安排好、最近就要发生的事", "过去正在做的事", "经常反复的习惯", "已经完成的事"] },
+    { "gp": "gp6", "stem": "\"明晚他们将在俱乐部演出\"(安排好的将来 → 将来进行):", "options": ["Tomorrow evening they will be singing at the club.", "Tomorrow evening they sang at the club.", "Tomorrow evening they are sung at the club.", "Tomorrow evening they sing at the club yesterday."] },
+    { "gp": "gp7", "stem": "\"他们将乘火车来\"—— 乘坐交通工具用:", "options": ["by train", "on train", "in train", "with train"] },
+    { "gp": "gp7", "stem": "\"坐飞机\"用英语说:", "options": ["by air", "by airplane's", "on the air", "with air"] },
+    { "gp": "gp8", "stem": "\"目前他们正在全国巡演\"(at present,此刻正在 → 现在进行):", "options": ["At present, they are traveling.", "At present, they will be traveling.", "At present, they traveled.", "At present, they travel yesterday."] },
+    { "gp": "gp8", "stem": "at present 后面常配哪个时态?", "options": ["现在进行时(am/is/are + doing)", "一般过去时", "过去进行时", "将来进行时"] }
+  ],
+  "stage6": [
+    { "stem": "美语\"市中心\"常说:", "options": ["downtown", "town centre", "city inside", "mid-town road"] },
+    { "stem": "美语\"排队\"常说:", "options": ["line up", "queue", "stand line", "row up"] },
+    { "stem": "\"旅行\"进行时的美式拼写(单 l):", "options": ["traveling", "travelling", "traveleing", "travling"] },
+    { "stem": "at present 的意思是:", "options": ["目前,现在", "过去", "将来", "立刻"] },
+    { "stem": "as usual 的意思是:", "options": ["像往常一样", "不同寻常地", "偶尔", "第一次"] },
+    { "stem": "keep order 的意思是:", "options": ["维持秩序", "点菜", "下命令", "排顺序"] }
+  ],
+  "contrast": [
+    { "us": "downtown", "uk": "town centre", "note_cn": "市中心;美语说 downtown,英式说 town centre" },
+    { "us": "line up", "uk": "queue", "note_cn": "排队;美语说 line up,英式说 queue" },
+    { "us": "traveling", "uk": "travelling", "note_cn": "旅行(-ing 形式);美语单 l traveling,英式双 l travelling" }
+  ],
+  "chunks": [
+    { "us": "at present", "ipa": "/ət ˈprezənt/", "example1": "At present, they are traveling across the country.", "example1_cn": "目前,他们正在全国巡演。", "example2": "At present, I am living in New York.", "example2_cn": "目前,我住在纽约。" },
+    { "us": "as usual", "ipa": "/əz ˈjuːʒuəl/", "example1": "As usual, the police will have a difficult time.", "example1_cn": "和往常一样,警察会很忙。", "example2": "As usual, he was late.", "example2_cn": "和往常一样,他迟到了。" },
+    { "us": "keep order", "ipa": "/kiːp ˈɔːrdər/", "example1": "They will be trying to keep order.", "example1_cn": "他们将努力维持秩序。", "example2": "The teachers keep order at the school gate.", "example2_cn": "老师们在校门口维持秩序。" }
+  ],
+  "stage7_cloze": {
+    "context": "The Silver Hawks ___1___ in our town tomorrow. They ___2___ by train, and the fans ___3___ them at the station. Tomorrow evening, they ___4___ at the club.",
+    "blanks": [
+      { "blank_no": 1, "options": ["will be arriving", "arrived", "are arriving now", "arrive yesterday"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["will be coming", "came", "come yesterday", "were coming"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["will be meeting", "met", "meet yesterday", "were meeting"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["will be singing", "sang", "are singing now", "sing yesterday"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "When will the Silver Hawks arrive in town?", "options": ["Tomorrow", "Next week", "Today", "Next month"] },
+    { "stem": "How will they be coming?", "options": ["By train", "By plane", "By bus", "By car"] },
+    { "stem": "How long will the band stay?", "options": ["Five days", "Two days", "One week", "Ten days"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"明天这个时候我将在飞机上\"(将来某时正在 → 将来进行):", "options": ["This time tomorrow I will be flying.", "This time tomorrow I fly.", "This time tomorrow I flew.", "This time tomorrow I am flying now."] },
+    { "stem": "你想问朋友\"今晚八点你会在做什么?\"(将来进行疑问):", "options": ["What will you be doing at eight tonight?", "What do you doing at eight tonight?", "What you will be doing at eight?", "What will you did at eight tonight?"] },
+    { "stem": "\"我一会儿就到\"—— 下面哪句用将来进行时,意思一样?", "options": ["I'll be coming in a minute.", "I came in a minute.", "I am come in a minute.", "I be coming in a minute."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "group 的意思是:", "options": ["团体,小组", "个人", "老师", "城市"] },
+    { "kind": "vocab", "stem": "occasion 的意思是:", "options": ["场合", "假期", "职业", "习惯"] },
+    { "kind": "grammar", "stem": "\"This time tomorrow, I ___ on the beach.\"(lie,将来进行)", "options": ["will be lying", "lie", "lay", "am lying now"] },
+    { "kind": "grammar", "stem": "\"他们明天将在俱乐部演出\"(将来进行):", "options": ["They will be performing at the club tomorrow.", "They performed at the club tomorrow.", "They are performing at the club yesterday.", "They perform at the club last night."] },
+    { "kind": "scenario", "stem": "\"Will you be using the car tomorrow?\" 这句话在问:", "options": ["你明天会用车吗", "你昨天用车了吗", "你现在正在用车吗", "你会修车吗"] },
+    { "kind": "scenario", "stem": "\"坐公交车\"用英语说:", "options": ["by bus", "on a bus's", "in bus", "with the bus"] },
+    { "kind": "reading", "stem": "How will the fans welcome the Silver Hawks?", "options": ["They will be meeting the band at the station", "They will send letters", "They will stay home", "They will call the band"], "passage": true },
+    { "kind": "reading", "stem": "Why will the police be busy?", "options": ["They will be trying to keep order among the crowds", "They will be singing with the band", "They will be closing the roads all day", "They will be selling tickets"], "passage": true },
+    { "kind": "listening", "stem": "Where will the band perform?", "options": ["At the Community Club downtown", "At the train station", "At a school", "At the harbor"], "audio": true },
+    { "kind": "listening", "stem": "What are the Silver Hawks doing at present?", "options": ["Traveling across the country", "Resting at home", "Recording an album", "Making a movie"], "audio": true }
+  ]
+}

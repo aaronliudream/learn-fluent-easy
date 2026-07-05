@@ -7,7 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { fetchGaokaoVocabPool } from "@/lib/gaokaoVocabPool";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
-import { speak } from "@/lib/speak";
+import { speak, unlockAudioSync } from "@/lib/speak";
 import { bumpMastery, recordAttempt } from "@/lib/gaokaoMastery";
 import { recordCohortAttempt, pickPracticeSource } from "@/lib/cohortProgress";
 import { useCohortAttemptContext } from "@/hooks/useActiveCohort";
@@ -1987,6 +1987,9 @@ function QuizQuestion({ item, onResult }: {item: QuizItem;onResult: (ok: boolean
 
   const onPick = (c: Vocab) => {
     if (picked) return;
+    // iOS 音频铁律:在用户点击手势内同步解锁共享 <audio>,这样下一题
+    // useEffect 里 setTimeout 的自动播放(非手势)才不会被 iOS 阻塞/延迟。
+    unlockAudioSync();
     setPicked(c.id);
     const ok = c.id === v.id;
     if (ok && (item.kind === "cn2en" || item.kind === "en2word")) speakWord(v);

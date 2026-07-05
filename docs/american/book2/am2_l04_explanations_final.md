@@ -65,24 +65,31 @@ get 的过去分词,美语常用 gotten。✓ He has gotten a new car. 英式则
 
 ### s6 seq4 | ans: 许多(修饰可数名词复数)
 a great number of = 许多,后面接可数名词复数。✓ a great number of cities.
+顺带记:一点点 = a little;一半 = half;只有几个 = only a few.
 
 ### s6 seq5 | ans: 达六个月(一段时间)
 for six months = 达六个月,表示一段持续的时间。✓ He has been there for six months.
+顺带记:在六月份 = in June;六个月前 = six months ago;第六个月 = the sixth month.
 
 ### s6 seq6 | ans: 在这个国家的中心
 in the center of the country = 在这个国家的中心位置。✓ a town in the center of the country.
+顺带记:在国家外面 = outside the country;在国家旁边 = next to the country;去这个国家 = go to the country.
 
 ### s7 seq1 | ans: received
 "我刚收到一封信"用现在完成时 have received;receive 的过去分词是 received。✓ I have just received a letter.
+✗ receive:完成时 have 后要用过去分词 received;✗ receiving:现在分词不作完成时;✗ receives:完成时用过去分词,不用单三 receives.
 
 ### s7 seq2 | ans: been
 "在那儿待了六个月"用 has been there;be 的过去分词是 been。✓ He has been there for six months.
+✗ be:has 后接过去分词 been,不用原形;✗ was:完成时不用 was;✗ being:being 不是过去分词.
 
 ### s7 seq3 | ans: already
 "已经找到了好工作"用 already,放在 has 和过去分词中间。✓ He has already gotten a good job.
+✗ yet:yet 多用于否定/疑问且放句末,这是肯定句用 already;✗ ever:ever 多用于疑问"曾经";✗ since:since 引导时间起点,不作副词插这儿.
 
 ### s7 seq4 | ans: driven
 "开车去了小镇"用 has driven;drive 的过去分词是 driven(不是 drove)。✓ He has driven to a small town.
+✗ drove:完成时用过去分词 driven,不用过去式 drove;✗ drive:原形不作完成时;✗ driving:现在分词不作完成时.
 
 ### s8 seq1 | ans: In Canada
 课文说 He is now living in Canada,Tom 现在在加拿大。
@@ -104,9 +111,11 @@ in the center of the country = 在这个国家的中心位置。✓ a town in th
 
 ### s10 seq1 | ans: 公司
 firm 在课文里是"公司"的意思。✓ He works at a big firm. 不是"农场",也不是"坚固的"。
+顺带记:农场 = farm;坚固的 = firm(另一义);签名 = signature.
 
 ### s10 seq2 | ans: 出国,去国外
 go abroad = 出国、去国外。✓ Tom has moved abroad.
+顺带记:上船 = board a ship;走开 = go away;登机 = board a plane.
 
 ### s10 seq3 | ans: have
 主语 I 用 have + 过去分词。✓ I have finished my homework.

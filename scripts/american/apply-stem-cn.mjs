@@ -148,6 +148,21 @@ const CN = {
     '"I ___ a book yesterday."(yesterday,这个动词的过去式拼写不变)': "我昨天读了一本书。",
     '"She ___ up early this morning."(get 的过去式)': "她今天早上很早就起床了。",
   },
+  am2_l04: {
+    '"I ___ just received a letter."(主语是 I,现在完成时的助动词用哪个)': "我刚收到一封信。",
+    '"He ___ already visited many cities."(主语 He)': "他已经参观了许多城市。",
+    '"I have just ___ a letter from Tom."(receive 的过去分词)': "我刚收到 Tom 的一封信。",
+    '"He has ___ to Alice Springs."(go 的过去分词)': "他去了艾利斯斯普林斯。",
+    '"___ you ever been to Canada?"(问对方去过没有)': "你去过加拿大吗?",
+    '"My brother has ___ been abroad before."(从来没有)': "我哥哥以前从没出过国。",
+    '"The train has not arrived ___ ."(火车还没到)': "火车还没到。",
+    '"Have you finished your homework ___ ?"(问\'……了吗\')': "你作业做完了吗?",
+    '"He has been there ___ six months."(达六个月)': "他在那儿已经待了六个月了。",
+    '"Tom has ___ to Alice Springs."(他去了,现在还没回来)': "Tom 去了艾利斯斯普林斯,现在还没回来。",
+    '"The bell ___ ."(铃刚刚响过,现在停了)': "铃刚刚响过。",
+    '"I ___ finished my homework."(现在完成时,主语 I)': "我已经完成了作业。",
+    '"He has ___ to the store; he\'ll be back soon."(去了还没回)': "他去商店了,很快就回来。",
+  },
 };
 
 let total = 0, patched = 0;

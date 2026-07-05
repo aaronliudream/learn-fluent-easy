@@ -66,7 +66,13 @@
 - 主教材 Key structures = **将来完成时**("Workers will have completed the new roads by the end of this year",KS13):will have+过去分词,表到将来某时刻已完成(by+时间点 / in…time),对比一般将来(will finish)与将来进行(will be building)。
 - 裁决(自决):将来完成 gp1-4(will have+过分/by时间点/in…time/对比一般将来)+ 将来进行 gp5 + 将来被动 gp6 主考;look forward to+动名词 gp7(to是介词)+ as=因为/当 gp8 辅考(均课文①类)。
 - 词10(Olympic/hold/government/immense/stadium/standard/capital/fantastic/design/complete);美语化 railway→railroad 入关6(+highway/subway/downtown 城建交通词)。
-- 44题;机器12项🟢首验全绿。seed→`american_am2_seed_unit05.sql`(L33-37=220)。⏭️ L38。
+- 44题;机器12项🟢首验全绿。seed→`american_am2_seed_unit05.sql`(L33-37=220)。
+
+## ✅ U5 L38《Everything except the weather》(唯独没有考虑到天气)· 🟢全绿
+- 主教材 Key structures = **过去完成时**("He acted as if he had never lived in England before",KS14):had+过去分词,过去的过去,before/after/when/until 时间从句,与一般过去对比。
+- 裁决(自决):过去完成 gp1-5(had+过分/vs一般过去/before-after/until-as soon as/过去的过去)+ no sooner…than/hardly…when gp6(主句过去完成)主考;as if+过去完成 gp7 + even though gp8 辅考(均课文①类)。
+- 词10(except/Mediterranean/complain/continually/bitterly/sunshine/settle/shock/bear/dream);关6美英-偏薄(文本无独特美英词),用 fall/gas/cookie/garbage 高频通用,⚠️待裁决记。
+- 44题;机器12项🟢(首验红1:s10#4 括号"as if"泄漏答案 as→改措辞;3条[c]黄警=过去完成 cloze 他处含 had,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-38=264)。⏭️ L39。
 
 ---
 

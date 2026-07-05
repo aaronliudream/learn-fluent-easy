@@ -1,0 +1,138 @@
+{
+  "id": "am2_l38",
+  "unit_no": 5,
+  "lesson_no": 38,
+  "title_en": "Everything except the weather",
+  "title_cn": "唯独没有考虑到天气",
+  "grammar_focus": "过去完成时(had + 过去分词,表'过去的过去';与一般过去对比,before/after/when/until 时间从句,KS14)主考 + no sooner…than / hardly…when(一…就…,主句用过去完成)+ as if + 过去完成(好像)/ even though(即使,让步)(辅考·课文①类)",
+  "scene": "我的老朋友哈里森在回到英国以前,曾多年居住在地中海地区。他过去常幻想退休后回英国,并计划在乡间定居下来。他一回到英国就买下一幢房子住了进去。但紧接着他就开始抱怨那里的天气——因为即使那时仍是夏季,雨总是下个不停,而且常常冷得厉害。在阳光下生活了那么多年的哈里森对此感到惊奇,他的举动就好像从未在英国生活过一样。最后,他再也忍受不住,还没安顿下来就卖掉了房子,离开了这个国家。他多年来的幻想从此破灭——哈里森把每件事情都考虑到了,唯独没有想到天气。",
+  "grammar_card": {
+    "title": "过去完成时:过去的过去",
+    "intro": "过去完成时用 had + 过去分词,表示'过去某动作之前'已经发生的事(过去的过去)。常和一般过去时对比:先发生的用过去完成,后发生的用一般过去。全用本课和 Key structures 的句子举例。",
+    "table": {
+      "headers": ["用法", "例子"],
+      "rows": [
+        ["过去的过去 → had + 过去分词", "He had lived there for years before he returned."],
+        ["对比:后发生 → 一般过去", "He bought a house and went to live there."],
+        ["before / after / when 时间从句", "When he had finished lunch, he asked for water."],
+        ["until … 之前一直没…", "I had not understood it until he explained."],
+        ["no sooner … than 一…就…", "He had no sooner returned than he bought a house."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "as if + 过去完成,表'好像(过去)已经…':He acted as if he had never lived in England.", "mark": "as if + 过去完成" },
+      { "rule": "even though = 即使,引出让步:even though it was summer, it rained continually。", "mark": "even though" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did Harrison sell his house so quickly?",
+    "options": ["He could not bear the cold, rainy English weather", "The house was too small", "He ran out of money", "He missed Mediterranean food"],
+    "answer_index": 0
+  },
+  "passage": "My old friend, Harrison, had lived in the Mediterranean for many years before he returned to England. He had often dreamed of retiring in England and had planned to settle down in the country. He had no sooner returned than he bought a house and went to live there. Almost immediately he began to complain about the weather, for even though it was still summer, it rained continually and it was often bitterly cold. After so many years of sunshine, Harrison got a shock. He acted as if he had never lived in England before. In the end, it was more than he could bear. He had hardly had time to settle down when he sold the house and left the country. The dream he had had for so many years ended there. Harrison had thought of everything except the weather.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "My old friend, Harrison, had lived in the Mediterranean for many years before he returned to England.", "text_cn": "我的老朋友哈里森在回英国以前,曾多年居住在地中海地区。" },
+    { "seq": 2, "speaker": null, "text_en": "He had often dreamed of retiring in England and had planned to settle down in the country.", "text_cn": "他过去常幻想退休后回英国,并计划在乡间定居。" },
+    { "seq": 3, "speaker": null, "text_en": "He had no sooner returned than he bought a house and went to live there.", "text_cn": "他一回到英国便买下一幢房子住了进去。" },
+    { "seq": 4, "speaker": null, "text_en": "Almost immediately he began to complain about the weather, for even though it was still summer, it rained continually and it was often bitterly cold.", "text_cn": "但紧接着他就开始抱怨那里的天气,因为即使那时仍是夏季,雨也总下个不停,而且常常冷得厉害。" },
+    { "seq": 5, "speaker": null, "text_en": "After so many years of sunshine, Harrison got a shock.", "text_cn": "在阳光下生活了那么多年的哈里森对此感到惊奇。" },
+    { "seq": 6, "speaker": null, "text_en": "He acted as if he had never lived in England before.", "text_cn": "他的举动就好像他从未在英国生活过一样。" },
+    { "seq": 7, "speaker": null, "text_en": "In the end, it was more than he could bear.", "text_cn": "最后,他再也忍受不住了。" },
+    { "seq": 8, "speaker": null, "text_en": "He had hardly had time to settle down when he sold the house and left the country.", "text_cn": "他还没来得及安顿下来,就卖掉了房子,离开了这个国家。" },
+    { "seq": 9, "speaker": null, "text_en": "The dream he had had for so many years ended there.", "text_cn": "他多年来的幻想从此破灭。" },
+    { "seq": 10, "speaker": null, "text_en": "Harrison had thought of everything except the weather.", "text_cn": "哈里森把每件事情都考虑到了,唯独没有想到天气。" }
+  ],
+  "words": [
+    { "word": "except", "ipa": "/ɪkˈsept/", "pos": "prep", "meaning_cn": "除了", "example": "everything except the weather" },
+    { "word": "Mediterranean", "ipa": "/ˌmedɪtəˈreɪniən/", "pos": "n", "meaning_cn": "地中海(the ~)", "example": "lived in the Mediterranean" },
+    { "word": "complain", "ipa": "/kəmˈpleɪn/", "pos": "v", "meaning_cn": "抱怨", "example": "began to complain about the weather" },
+    { "word": "continually", "ipa": "/kənˈtɪnjuəli/", "pos": "adv", "meaning_cn": "不断地", "example": "it rained continually" },
+    { "word": "bitterly", "ipa": "/ˈbɪtərli/", "pos": "adv", "meaning_cn": "刺骨地,极其", "example": "bitterly cold" },
+    { "word": "sunshine", "ipa": "/ˈsʌnʃaɪn/", "pos": "n", "meaning_cn": "阳光", "example": "so many years of sunshine" },
+    { "word": "settle", "ipa": "/ˈsetəl/", "pos": "v", "meaning_cn": "定居,安顿", "example": "settle down in the country" },
+    { "word": "shock", "ipa": "/ʃɑːk/", "pos": "n", "meaning_cn": "震惊,吃惊", "example": "Harrison got a shock" },
+    { "word": "bear", "ipa": "/ber/", "pos": "v", "meaning_cn": "忍受", "example": "more than he could bear" },
+    { "word": "dream", "ipa": "/driːm/", "pos": "v", "meaning_cn": "梦想,幻想", "example": "had often dreamed of retiring" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "过去完成时 had + 过去分词" },
+    { "gp": "gp2", "name": "过去完成 vs 一般过去(先发生用过去完成)" },
+    { "gp": "gp3", "name": "before / after + 过去完成" },
+    { "gp": "gp4", "name": "until / as soon as + 过去完成" },
+    { "gp": "gp5", "name": "过去完成表'过去的过去'" },
+    { "gp": "gp6", "name": "no sooner … than / hardly … when(一…就…)" },
+    { "gp": "gp7", "name": "as if + 过去完成(好像,辅考)" },
+    { "gp": "gp8", "name": "even though(即使,让步,辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Harrison ___ lived in the Mediterranean for many years.\"(过去完成时)", "stem_cn": "哈里森曾在地中海地区住了多年。", "options": ["had", "was", "has", "did"] },
+    { "gp": "gp1", "stem": "\"He ___ often dreamed of retiring in England.\"(过去完成时)", "stem_cn": "他常梦想退休后回英国。", "options": ["had", "was", "has", "did"] },
+    { "gp": "gp2", "stem": "\"He ___ lived in Scotland before he came to England.\"(先发生,用过去完成)", "stem_cn": "他来英国前曾在苏格兰住过。", "options": ["had", "was", "has", "did"] },
+    { "gp": "gp2", "stem": "\"When he ___ finished lunch, he asked for water.\"(先完成,用过去完成)", "stem_cn": "他吃完午饭后,要了杯水。", "options": ["had", "was", "has", "did"] },
+    { "gp": "gp2", "stem": "\"The children ran away after they ___ broken the window.\"(先发生,用过去完成)", "stem_cn": "孩子们打碎窗户后跑了。", "options": ["had", "was", "has", "did"] },
+    { "gp": "gp3", "stem": "\"He had lived there for years ___ he returned to England.\"(在…之前)", "stem_cn": "他回英国前在那儿住了多年。", "options": ["before", "after", "until", "than"] },
+    { "gp": "gp3", "stem": "\"The police found Billy last night. He had run away five days ___.\"(…之前)", "stem_cn": "昨晚警察找到比利。他5天前逃走了。", "options": ["before", "after", "ago", "then"] },
+    { "gp": "gp4", "stem": "\"I ___ not understood the problem until he explained it.\"(之前一直没,过去完成)", "stem_cn": "直到他解释我才明白。", "options": ["had", "was", "has", "did"] },
+    { "gp": "gp4", "stem": "\"As soon as the sun ___ set, we returned to our hotel.\"(先发生,过去完成)", "stem_cn": "太阳一落山,我们就回旅馆。", "options": ["had", "was", "has", "did"] },
+    { "gp": "gp5", "stem": "\"By the time I arrived, they ___ already left.\"(我到之前已离开,过去完成)", "stem_cn": "我到时他们已经走了。", "options": ["had", "was", "has", "did"] },
+    { "gp": "gp5", "stem": "\"She could not find the letter she ___ written.\"(先写后找,过去完成)", "stem_cn": "她找不到她写的那封信。", "options": ["had", "was", "has", "did"] },
+    { "gp": "gp6", "stem": "\"He had no sooner returned ___ he bought a house.\"(与 no sooner 搭配的词)", "stem_cn": "他一回来就买了房子。", "options": ["than", "when", "then", "that"] },
+    { "gp": "gp6", "stem": "\"He had hardly had time to settle down ___ he sold the house.\"(与 hardly 搭配的词)", "stem_cn": "他还没安顿好就把房子卖了。", "options": ["when", "than", "then", "that"] },
+    { "gp": "gp6", "stem": "\"He ___ no sooner sat down than the phone rang.\"(no sooner 主句用过去完成)", "stem_cn": "他刚坐下电话就响了。", "options": ["had", "was", "has", "did"] },
+    { "gp": "gp7", "stem": "\"He acted ___ if he had never lived in England.\"(表示'好像')", "stem_cn": "他表现得好像从没在英国住过。", "options": ["as", "like", "so", "than"] },
+    { "gp": "gp7", "stem": "\"She looked ___ if she had seen a ghost.\"(表示'好像')", "stem_cn": "她看上去像见了鬼。", "options": ["as", "like", "so", "than"] },
+    { "gp": "gp8", "stem": "\"___ though it was still summer, it rained continually.\"(表示'即使')", "stem_cn": "即使还是夏天,雨还是下个不停。", "options": ["Even", "Only", "So", "As"] },
+    { "gp": "gp8", "stem": "\"He went out ___ though it was bitterly cold.\"(表示'即使')", "stem_cn": "即使天寒地冻,他还是出门了。", "options": ["even", "only", "so", "as"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"秋天\"常说:", "options": ["fall", "autumn", "cold season", "leaf time"] },
+    { "stem": "美语里\"汽油\"常说:", "options": ["gas", "petrol", "oil", "fuel water"] },
+    { "stem": "complain 的意思是:", "options": ["抱怨", "称赞", "解释", "询问"] },
+    { "stem": "continually 的意思是:", "options": ["不断地", "偶尔地", "立刻", "缓慢地"] },
+    { "stem": "bitterly(bitterly cold)的意思是:", "options": ["刺骨地,极其", "温和地", "稍微", "愉快地"] },
+    { "stem": "bear(more than he could bear)的意思是:", "options": ["忍受", "携带", "出生", "熊"] }
+  ],
+  "contrast": [
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn(天气主题,高频美语点)" },
+    { "us": "gas", "uk": "petrol", "note_cn": "汽油;美语 gas(gasoline),英式 petrol(高频美语点)" },
+    { "us": "cookie", "uk": "biscuit", "note_cn": "饼干;美语 cookie,英式 biscuit(高频美语点)" },
+    { "us": "garbage", "uk": "rubbish", "note_cn": "垃圾;美语 garbage / trash,英式 rubbish(高频美语点)" }
+  ],
+  "chunks": [
+    { "us": "no sooner ... than", "ipa": "/noʊ ˈsuːnər ... ðæn/", "example1": "He had no sooner returned than he bought a house.", "example1_cn": "他一回来就买了房子。", "example2": "No sooner had she arrived than it rained.", "example2_cn": "她一到就下雨了。" },
+    { "us": "dream of", "ipa": "/driːm əv/", "example1": "He had often dreamed of retiring in England.", "example1_cn": "他常梦想退休后回英国。", "example2": "I dream of a long vacation.", "example2_cn": "我梦想有个长假。" },
+    { "us": "settle down", "ipa": "/ˈsetəl daʊn/", "example1": "He had planned to settle down in the country.", "example1_cn": "他计划在乡下定居。", "example2": "They settled down in a small town.", "example2_cn": "他们在小镇定居下来。" },
+    { "us": "as if", "ipa": "/æz ɪf/", "example1": "He acted as if he had never lived in England.", "example1_cn": "他表现得好像从没在英国住过。", "example2": "She looked as if she had seen a ghost.", "example2_cn": "她看上去像见了鬼。" }
+  ],
+  "stage7_cloze": {
+    "context": "Harrison ___1___ lived in the Mediterranean for many years before he returned. He ___2___ no sooner returned than he bought a house. He acted ___3___ if he had never lived in England before. He ___4___ hardly had time to settle down when he sold the house.",
+    "blanks": [
+      { "blank_no": 1, "options": ["had", "was", "has", "did"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["had", "was", "has", "did"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["as", "like", "so", "than"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["had", "was", "has", "did"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where had Harrison lived before returning to England?", "options": ["In the Mediterranean", "In Scotland", "In the mountains", "In a big city"] },
+    { "stem": "What did Harrison complain about?", "options": ["The cold, rainy weather", "The noisy neighbors", "The high prices", "The small house"] },
+    { "stem": "Why did Harrison sell his house so quickly?", "options": ["He could not bear the bad weather", "The house was too expensive", "He missed his old friends", "The house was falling apart"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"他一回来就买了房子\"(一…就用 no sooner…than,主句过去完成):", "options": ["He had no sooner returned than he bought a house.", "He had no sooner returned when he bought a house.", "He no sooner returned than he had bought a house.", "He had no sooner return than he bought a house."] },
+    { "stem": "你想说\"他表现得好像从没在英国住过\"(as if + 过去完成):", "options": ["He acted as if he had never lived in England.", "He acted as if he never lived in England.", "He acted like he had never live in England.", "He acted as if he has never lived in England."] },
+    { "stem": "你想说\"他来英国前曾在苏格兰住了15年\"(先发生的用过去完成):", "options": ["He had lived in Scotland before he came to England.", "He lived in Scotland before he had come to England.", "He has lived in Scotland before he came to England.", "He was living in Scotland before he came to England."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "complain 的意思是:", "options": ["抱怨", "称赞", "感谢", "邀请"] },
+    { "kind": "vocab", "stem": "bitterly 的意思是:", "options": ["刺骨地,极其", "温和地", "愉快地", "缓慢地"] },
+    { "kind": "grammar", "stem": "\"He ___ lived in the Mediterranean before he returned to England.\"(先发生,过去完成时)", "stem_cn": "他回英国前曾在地中海地区住过。", "options": ["had", "was", "has", "did"] },
+    { "kind": "grammar", "stem": "\"He acted ___ if he had never lived in England.\"(表示'好像',与 if 搭配)", "stem_cn": "他表现得好像从没在英国住过。", "options": ["as", "like", "so", "than"] },
+    { "kind": "scenario", "stem": "\"He had no sooner returned than he bought a house.\" 这句话的意思是:", "options": ["他一回来就买了房子。", "他回来后很久才买房子。", "他没回来也没买房子。", "他买了房子才回来。"] },
+    { "kind": "scenario", "stem": "\"It was more than he could bear.\" 这句话的意思是:", "options": ["这超过了他所能忍受的。", "这正合他的心意。", "这对他毫无影响。", "这让他很开心。"] },
+    { "kind": "reading", "stem": "Why was Harrison shocked by the weather?", "options": ["After years of sunshine, it rained continually and was bitterly cold", "It was too hot in England", "There was a big storm", "It snowed all summer"], "passage": true },
+    { "kind": "reading", "stem": "What had Harrison forgotten to think about when planning to retire in England?", "options": ["The weather", "The cost of the house", "His old friends", "The long journey"], "passage": true },
+    { "kind": "listening", "stem": "Why did Harrison sell his house so quickly?", "options": ["He could not bear the cold, rainy weather", "He needed the money", "He found a better house", "He wanted to travel"], "audio": true },
+    { "kind": "listening", "stem": "What had Harrison dreamed of doing for many years?", "options": ["Retiring and settling down in England", "Sailing around the world", "Building his own house", "Moving to the Mediterranean"], "audio": true }
+  ]
+}

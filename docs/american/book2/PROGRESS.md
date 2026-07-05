@@ -54,7 +54,13 @@
 - 主教材 Key structures = **Review KS26-34**(时态语态综合复习:一般现在 These things always happen / 一般过去 What happened / 现在完成 has not regretted / used to drive / 被动 were arrested)。类比 L11 复习课处理。
 - 裁决(自决):时态语态综合 gp1-6(现在/过去/完成/used to/被动/综合选)主考;far/much+比较级 gp7(far more exciting)+ such+a+名词+that gp8(such a fright that)辅考(均课文①类)。
 - 词10(while/regret/far/rush/act/straight/fright/battered/shortly/afterward);美语化 shop→store、towards→toward、afterwards→afterward、taxi→cab 入关6。
-- 44题;机器12项🟢(首验红1:s9seq2 解释含"主语"串味→改"两个人复数"复验全绿;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-35=132)。⏭️ L36。
+- 44题;机器12项🟢(首验红1:s9seq2 解释含"主语"串味→改"两个人复数"复验全绿;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-35=132)。
+
+## ✅ U5 L36《Across the Channel》(横渡海峡)· 🟢全绿
+- 主教材 Key structure = **be going to**("She is going to swim across the Channel tomorrow",KS12):表打算/计划的将来,替代 will/shall;条件句结果部分用 will 不用 going to。
+- 裁决(自决):be going to gp1-3(be形式/接原形/疑问否定)+ will 表将来 gp4 + 将来进行时 gp5(will be watching)+ 综合选将来 gp6 主考;intend/mean to do gp7 + 倒装 Among/On…be gp8 辅考(均课文①类)。
+- 词10(record/strong/swimmer/succeed/train/anxiously/intend/solid/channel/rest);关6美英-偏薄(Mr./Mr 标点差 grounded + vacation/candy/movie 高频),⚠️待裁决记美英点薄。
+- 44题;机器12项🟢(首验红1:s9seq1 解释含"主语"串味→改措辞;另 s5#18 集合名词 crowd+were 陷阱黄警→改 On the coast+plural 规避,复验全绿;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-36=176)。⏭️ L37。
 
 ---
 

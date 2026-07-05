@@ -96,6 +96,18 @@
 - 词10(rude/mirror/hole/remark/remind/lighthouse 官方6 + regret/observe/notice/tie 补4,对齐体量+接难点)。关6美英=store/pants/line/closet(服装店·收纳主题)。
 - 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit06.sql`(**L41=44,U6 起**)。⏭️ L42。
 
+## ✅ U6 L42《Not very musical》(并非很懂音乐)· 🟢全绿(零黄警)
+- 主教材 Key structures = **Have**(KS18):own/possess → have / have got 表'拥有';**have + 名词代替普通动词**(have a look / a good time / a drink / a talk)。
+- 裁决(自决):have=拥有 gp1 + have got gp2 + have+名词 gp3-4 主考;pick up(拿起/学会/接人)gp5 + pick out(挑选)gp6 + tell the difference between gp7 + as soon as gp8 辅考(均课文/难点 SD6-7 ①类)。
+- ⚠️ **美语关键点**:散步/洗澡/休息/看一看,美语多用 **take** a walk/bath/rest/look(BrE 用 have)——正好做成 L42 的 关6 美英对照(高相关,非凑数)。关5 只用 AmE-natural 的 have 搭配(have a good time/drink/talk/lunch/party),**不把 take 当错误干扰项**(那会误判,因 AmE take 也对)。
+- 词10全用官方(musical/market/pipe/tune/glimpse/snake/movement/continue/obviously/difference)。关6美英=take a walk/bath/rest/look(have→take 的美语偏好,4张全命中主考)。
+- 44题;机器12项🟢(首验红1:s10#3 hint 含答案 have→改"填代替动词的那个词"复验全绿)。seed→`american_am2_seed_unit06.sql`(**L41-42=88**)。⏭️ L43。
+
+## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
+- **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
+- **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。
+- 生成器结尾打印「✍️需跑 / ⏭️无需重跑」小结;`_RUN_ME` 顶部加「本批变化」块,明确列本批真变的 unit + COUNT 增量 + 无变化标注。见 [[assertions-need-evidence]]。
+
 ---
 
 

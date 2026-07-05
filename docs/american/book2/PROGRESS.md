@@ -127,6 +127,12 @@
 - 词10(unload/extremely/occur/astonish/pile/discover/admit/confine/normal/goods)。关6美英=baggage/sweater/one-way ticket/restroom(机场·服装主题)。
 - 44题;机器12项🟢(首验1条[c]黄警=s5#2"occurred to…to open"两个 to→改 that 从句规避,复验零黄警)。seed→`american_am2_seed_unit06.sql`(**L41-46=264**)。⏭️ L47。
 
+## ✅ U6 L47《A thirsty ghost》(嗜酒的鬼魂)· 🟢全绿(零黄警)· **综合复习课**
+- 主教材 Key structures = **Review KS36–45(综合复习)**:be going to/将来完成时/过去完成·as if/间接引语/虚拟条件/must·have to·need/have/can·be able to/被动。
+- 裁决(自决):以本课"嗜酒鬼魂"故事最突出的 **must have done(对过去推测)** 为核心 gp1(×4);被动 had been done gp2 + 间接引语 gp3 + be going to gp4 + 将来完成时 gp5 + 虚拟条件 gp6 + as if gp7 + be able to gp8 串讲复习(每点2-1题)。全运用题,元语法定义题=0。
+- 词10(thirsty/ghost/haunt/block/furniture/whisky/suggest/shake/accept 官方9 + noise 补1)。关6美英=bar/whiskey/apartment/faucet(酒馆·房产主题;**bar=美语 pub、whiskey=美语拼**)。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit06.sql`(**L41-47=308**)。⏭️ L48(U6末课)。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

@@ -85,6 +85,14 @@ const CN = {
     '"He told me that he ___ the book before."(read,更早读过，过去完成)': "他告诉我他以前读过这本书。",
     '"By the time we arrived, the movie ___."(我们到之前已开始，过去完成)': "我们到的时候,电影已经开始了。",
   },
+  am2_l15: {
+    '"He said ___ business was bad."(引出转述的内容)': "他说生意很糟糕。",
+    '"I don\'t know ___ he will come."(表示\'是否\',后面无 or not)': "我不知道他是否会来。",
+    '"I don\'t know ___ or not he comes."(紧跟 or not,只能用):': "我不知道他到底来不来。",
+    '"He said he ___ go to the north for vacation."(从过去看将来,过去将来时)': "他说他要去北方度假。",
+    '"He said that he ___ busy that day."(转述过去,is 要变成什么)': "他说他那天很忙。",
+    '"She told me that she ___ finished the work."(have finished 要变成什么)': "她告诉我她已经完成了那项工作。",
+  },
 };
 
 let total = 0, patched = 0;

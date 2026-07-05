@@ -66,24 +66,31 @@ if 不能紧跟 or not(不说 if or not);紧跟 or not 只能用 whether。✓ I
 
 ### s6 seq4 | ans: 抬头看
 look up = 抬头看。✓ He did not look up from his desk.
+顺带记:低头看 = look down;查阅(单词) = look up / check;放弃 = give up.
 
 ### s6 seq5 | ans: 负担得起(做某事)
 afford to = 负担得起做某事,常和 can/could 连用。✓ could not afford to pay.
+顺带记:拒绝做 = refuse to do;忘记做 = forget to do;打算做 = plan to do.
 
 ### s6 seq6 | ans: 用微弱的声音
 in a weak voice = 用微弱的声音、有气无力地。✓ I said in a weak voice.
+顺带记:大声地 = in a loud voice / loudly;用生气的语气 = in an angry voice;小声偷笑 = giggle quietly.
 
 ### s7 seq1 | ans: would
 转述过去说的话,will→would。✓ told me that Mr. Harrison would see me.
+✗ will:转述过去说的话,will 要后移成 would;✗ shall:同理不用 shall,转述统一用 would;✗ is:is see 不通,这里需要情态动词 would.
 
 ### s7 seq2 | ans: was
 转述过去说的话,is→was。✓ He said that business was very bad.
+✗ is:转述过去说的话,is 要后移成 was;✗ will be:这不是将来,是转述当时的状况;✗ has been:时态后移不用现在完成.
 
 ### s7 seq3 | ans: could
 转述过去说的话,can→could。✓ the firm could not afford high salaries.
+✗ can:转述过去,can 要后移成 could;✗ will:意思不对,不是将来;✗ may:时态和语气都不合,应是 could.
 
 ### s7 seq4 | ans: had
 "该轮到我了"发生在"我知道"之前,用过去完成 had come。✓ I knew that my turn had come.
+✗ has:"该轮到我"在"我知道"之前,过去的过去用 had come,不用 has;✗ have:主语 my turn 是单数且要过去完成 had;✗ will:不是将来,是更早发生的事.
 
 ### s8 seq1 | ans: Mr. Harrison, the boss
 课文说 The secretary told me that Mr. Harrison would see me,老板哈里森要见作者。
@@ -105,9 +112,11 @@ in a weak voice = 用微弱的声音、有气无力地。✓ I said in a weak vo
 
 ### s10 seq1 | ans: 紧张的
 nervous = 紧张的。✓ I felt very nervous.
+顺带记:生气的 = angry;开心的 = happy;困倦的 = sleepy.
 
 ### s10 seq2 | ans: 负担得起
 afford = 负担得起。✓ could not afford to pay.
+顺带记:打断 = interrupt;收到 = receive;拒绝 = refuse.
 
 ### s10 seq3 | ans: was
 转述过去说的话,is→was。✓ He said that he was busy that day.

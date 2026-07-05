@@ -1,0 +1,140 @@
+{
+  "id": "am2_l04",
+  "unit_no": 1,
+  "lesson_no": 4,
+  "title_en": "An exciting trip",
+  "title_cn": "激动人心的旅行",
+  "grammar_focus": "现在完成时(构成 have/has+过去分词 · 状语 just/already/never/ever/yet · for+时间段 · gone vs been · vs 一般过去时/现在进行时)",
+  "scene": "哥哥 Tom 移居国外(加拿大)· 来信讲这半年当工程师、游历多地、买车的新鲜经历",
+  "grammar_card": {
+    "title": "说\"已经做过 / 一直在\"的事(现在完成时)",
+    "intro": "本课讲怎么说\"到现在为止已经做过、或一直持续到现在\"的事。下面全用本课句子举例。",
+    "table": {
+      "headers": ["用法 / 构成", "本课例子"],
+      "rows": [
+        ["构成:have/has + 过去分词(I/you/we/they → have;he/she/it → has)", "I have received a letter. / He has visited many cities."],
+        ["过去分词:规则动词=+ed(receive→received);不规则要单独记(be→been / go→gone / get→gotten / buy→bought / drive→driven)", "He has already gotten a job.(get→gotten)"],
+        ["否定:have/has + not + 过去分词", "He has not felt tired yet."],
+        ["疑问:Have/Has + 主语 + 过去分词?", "Have you ever been to Canada?"],
+        ["have gone(去了还没回)vs have been(去过又回来了)", "He has gone to Alice Springs.(还在那)/ I have been abroad.(去过)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "状语 just / already / never / ever 放在 have/has 和过去分词中间;yet 放句末(多用于否定/疑问)", "mark": "状语位置" },
+      { "rule": "for + 一段时间(for six months);since + 过去时间点(since 1980)。注意:不能说 since three years,要说 since three years ago", "mark": "for / since" },
+      { "rule": "有明确的过去时间点(yesterday / last year)时,用一般过去时,不用现在完成时", "mark": "vs 一般过去时" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How long has Tom been in Canada?",
+    "options": ["Six months", "Three months", "A year", "A week"],
+    "answer_index": 0
+  },
+  "passage": "My brother Tom has moved abroad. He is now living in Canada, and he has been there for six months. I have just received a long letter from him. Tom is an engineer, and he has already gotten a good job at a big firm. He works hard, but he has not felt tired yet. Since he arrived, he has traveled to a great number of different cities. He has recently bought a used car. Right now he has driven to a small town in the center of the country. Have you ever been to Canada? Tom has never lived abroad before. He is finding this trip really exciting!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "My brother Tom has moved abroad.", "text_cn": "我哥哥 Tom 搬到国外去了。" },
+    { "seq": 2, "speaker": null, "text_en": "He is now living in Canada, and he has been there for six months.", "text_cn": "他现在住在加拿大,已经在那儿待了六个月了。" },
+    { "seq": 3, "speaker": null, "text_en": "I have just received a long letter from him.", "text_cn": "我刚收到他一封长信。" },
+    { "seq": 4, "speaker": null, "text_en": "Tom is an engineer, and he has already gotten a good job at a big firm.", "text_cn": "Tom 是个工程师,他已经在一家大公司找到了一份好工作。" },
+    { "seq": 5, "speaker": null, "text_en": "He works hard, but he has not felt tired yet.", "text_cn": "他工作很努力,但到现在还不觉得累。" },
+    { "seq": 6, "speaker": null, "text_en": "Since he arrived, he has traveled to a great number of different cities.", "text_cn": "自从到那儿以后,他已经去过许多不同的城市。" },
+    { "seq": 7, "speaker": null, "text_en": "He has recently bought a used car.", "text_cn": "他最近买了一辆二手车。" },
+    { "seq": 8, "speaker": null, "text_en": "Right now he has driven to a small town in the center of the country.", "text_cn": "此刻他已经开车去了这个国家中心的一个小镇。" },
+    { "seq": 9, "speaker": null, "text_en": "Have you ever been to Canada?", "text_cn": "你去过加拿大吗?" },
+    { "seq": 10, "speaker": null, "text_en": "Tom has never lived abroad before.", "text_cn": "Tom 以前从没在国外生活过。" },
+    { "seq": 11, "speaker": null, "text_en": "He is finding this trip really exciting!", "text_cn": "他觉得这趟旅行真是激动人心!" }
+  ],
+  "words": [
+    { "word": "exciting", "ipa": "/ɪkˈsaɪtɪŋ/", "pos": "adj", "meaning_cn": "令人激动的", "example": "He is finding this trip really exciting!" },
+    { "word": "receive", "ipa": "/rɪˈsiːv/", "pos": "v", "meaning_cn": "收到(received)", "example": "I have just received a long letter from him." },
+    { "word": "letter", "ipa": "/ˈletər/", "pos": "n", "meaning_cn": "信", "example": "I received a long letter from him." },
+    { "word": "firm", "ipa": "/fɜːrm/", "pos": "n", "meaning_cn": "公司", "example": "He has gotten a good job at a big firm." },
+    { "word": "engineer", "ipa": "/ˌendʒɪˈnɪr/", "pos": "n", "meaning_cn": "工程师", "example": "Tom is an engineer." },
+    { "word": "different", "ipa": "/ˈdɪfrənt/", "pos": "adj", "meaning_cn": "不同的", "example": "He has traveled to many different cities." },
+    { "word": "center", "ipa": "/ˈsentər/", "pos": "n", "meaning_cn": "中心(美 center / 英 centre)", "example": "a small town in the center of the country." },
+    { "word": "abroad", "ipa": "/əˈbrɔːd/", "pos": "adv", "meaning_cn": "在国外,到国外", "example": "My brother Tom has moved abroad." },
+    { "word": "arrive", "ipa": "/əˈraɪv/", "pos": "v", "meaning_cn": "到达(arrived)", "example": "Since he arrived, he has traveled a lot." },
+    { "word": "recently", "ipa": "/ˈriːsntli/", "pos": "adv", "meaning_cn": "最近", "example": "He has recently bought a used car." },
+    { "word": "already", "ipa": "/ɔːlˈredi/", "pos": "adv", "meaning_cn": "已经", "example": "He has already gotten a good job." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "现在完成时——构成 have/has+过去分词(主谓一致)" },
+    { "gp": "gp2", "name": "现在完成时——过去分词形式(规则/不规则)" },
+    { "gp": "gp3", "name": "现在完成时——just/already 位置" },
+    { "gp": "gp4", "name": "现在完成时——never/ever 表经历" },
+    { "gp": "gp5", "name": "现在完成时——yet(否定/疑问句末)" },
+    { "gp": "gp6", "name": "现在完成时——for+时间段" },
+    { "gp": "gp7", "name": "have gone vs have been" },
+    { "gp": "gp8", "name": "现在完成时 vs 一般过去时" },
+    { "gp": "gp9", "name": "现在进行时 vs 现在完成时" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"I ___ just received a letter.\"(主语是 I,现在完成时的助动词用哪个)", "options": ["have", "has", "am", "was"] },
+    { "gp": "gp1", "stem": "\"He ___ already visited many cities.\"(主语 He)", "options": ["has", "have", "is", "did"] },
+    { "gp": "gp2", "stem": "\"I have just ___ a letter from Tom.\"(receive 的过去分词)", "options": ["received", "receive", "receiving", "receives"] },
+    { "gp": "gp2", "stem": "\"He has ___ to Alice Springs.\"(go 的过去分词)", "options": ["gone", "went", "goed", "going"] },
+    { "gp": "gp2", "stem": "下列哪个动词的过去分词是不规则的(不是直接加 -ed)?", "options": ["buy → bought", "visit → visited", "receive → received", "arrive → arrived"] },
+    { "gp": "gp3", "stem": "把 just 放到正确位置:\"I have had breakfast.\"(我刚吃过早饭)", "options": ["I have just had breakfast.", "I just have had breakfast.", "I have had just breakfast.", "I have had breakfast just."] },
+    { "gp": "gp3", "stem": "just / already / never 在现在完成时里的位置一般是:", "options": ["在 have/has 和过去分词中间", "在句子最前面", "在句子最后面", "在主语前面"] },
+    { "gp": "gp4", "stem": "\"___ you ever been to Canada?\"(问对方去过没有)", "options": ["Have", "Has", "Did", "Are"] },
+    { "gp": "gp4", "stem": "\"My brother has ___ been abroad before.\"(从来没有)", "options": ["never", "ever", "yet", "just"] },
+    { "gp": "gp5", "stem": "\"The train has not arrived ___ .\"(火车还没到)", "options": ["yet", "already", "just", "ever"] },
+    { "gp": "gp5", "stem": "\"Have you finished your homework ___ ?\"(问'……了吗')", "options": ["yet", "already", "ever", "since"] },
+    { "gp": "gp6", "stem": "\"He has been there ___ six months.\"(达六个月)", "options": ["for", "since", "in", "at"] },
+    { "gp": "gp6", "stem": "选出正确的一句(他在这儿住了三年了):", "options": ["He has lived here for three years.", "He has lived here since three years.", "He lives here for three years.", "He is living here for three years."] },
+    { "gp": "gp7", "stem": "\"Tom has ___ to Alice Springs.\"(他去了,现在还没回来)", "options": ["gone", "been", "went", "being"] },
+    { "gp": "gp7", "stem": "\"He has gone to Canada\" 和 \"He has been to Canada\" 的区别是:", "options": ["gone=去了还没回;been=去过又回来了", "gone=去过回来了;been=去了没回", "两句意思完全一样", "gone 指将来,been 指过去"] },
+    { "gp": "gp8", "stem": "选出用现在完成时、强调\"对现在的结果\"的一句:", "options": ["He has broken his leg, so he can't walk now.", "He broke his leg last year.", "He breaks his leg every winter.", "He is breaking his leg."] },
+    { "gp": "gp8", "stem": "\"我去年去了加拿大\"(有明确过去时间 last year)应该说:", "options": ["I went to Canada last year.", "I have gone to Canada last year.", "I have been to Canada last year.", "I go to Canada last year."] },
+    { "gp": "gp9", "stem": "\"The bell ___ .\"(铃刚刚响过,现在停了)", "options": ["has just rung", "is ringing", "rings", "rang just"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"中心\"的拼写是:", "options": ["center", "centre", "senter", "cencer"] },
+    { "stem": "get 的过去分词,美式常用:\"He has ___ a new car.\"", "options": ["gotten", "got", "getted", "goten"] },
+    { "stem": "travel(旅行)的过去分词,美式拼写是:", "options": ["traveled", "travelled", "traveleded", "travled"] },
+    { "stem": "a great number of 的意思是:", "options": ["许多(修饰可数名词复数)", "一点点", "一半", "只有几个"] },
+    { "stem": "for six months 表示:", "options": ["达六个月(一段时间)", "在六月份", "六个月前", "第六个月"] },
+    { "stem": "in the center of the country 的意思是:", "options": ["在这个国家的中心", "在国家外面", "在国家旁边", "去这个国家"] }
+  ],
+  "contrast": [
+    { "us": "center", "uk": "centre", "note_cn": "中心;美语 -er 结尾 center,英式 -re 结尾 centre;同类 theater/theatre" },
+    { "us": "gotten", "uk": "got", "note_cn": "get 的过去分词;美语现在完成时用 has gotten,英式用 has got" },
+    { "us": "traveled", "uk": "travelled", "note_cn": "travel 的过去式/过去分词;美语单 l,英式双 l" }
+  ],
+  "chunks": [
+    { "us": "a great number of", "ipa": "/ə ɡreɪt ˈnʌmbər əv/", "example1": "He has visited a great number of different cities.", "example1_cn": "他去过许多不同的城市。", "example2": "A great number of people came.", "example2_cn": "来了很多人。" },
+    { "us": "for six months", "ipa": "/fɔːr sɪks mʌnθs/", "example1": "He has been there for six months.", "example1_cn": "他已经在那儿待了六个月了。", "example2": "I have studied English for six months.", "example2_cn": "我学英语已经六个月了。" },
+    { "us": "in the center of", "ipa": "/ɪn ðə ˈsentər əv/", "example1": "a small town in the center of the country", "example1_cn": "位于这个国家中心的一个小镇", "example2": "The hotel is in the center of the city.", "example2_cn": "这家酒店在市中心。" }
+  ],
+  "stage7_cloze": {
+    "context": "My brother Tom has moved abroad. I have just ___1___ a letter from him. He has ___2___ there for six months. He has ___3___ gotten a good job. Right now he has ___4___ to a small town.",
+    "blanks": [
+      { "blank_no": 1, "options": ["received", "receive", "receiving", "receives"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["been", "be", "was", "being"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["already", "yet", "ever", "since"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["driven", "drove", "drive", "driving"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where is Tom now?", "options": ["In Canada", "In Italy", "In Australia", "In France"] },
+    { "stem": "How long has Tom been abroad?", "options": ["Six months", "Three months", "A year", "Two weeks"] },
+    { "stem": "Has Tom been abroad before?", "options": ["No, he has never been abroad before", "Yes, many times", "Yes, once", "No, he is still at home"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你刚吃完午饭,想说\"我刚吃过午饭\":", "options": ["I have just had lunch.", "I just have had lunch.", "I have had lunch yet.", "I just having lunch."] },
+    { "stem": "你想问朋友\"你去过加拿大吗\"(问经历):", "options": ["Have you ever been to Canada?", "Do you ever go to Canada?", "Did you ever been to Canada?", "Are you ever been to Canada?"] },
+    { "stem": "你想说\"我学英语已经三年了\"(一直持续到现在):", "options": ["I have learned English for three years.", "I have learned English since three years.", "I learn English for three years.", "I am learning English for three years ago."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "课文里 firm 的意思是:", "options": ["公司", "农场", "坚固的", "签名"] },
+    { "kind": "vocab", "stem": "go abroad 的意思是:", "options": ["出国,去国外", "上船", "走开", "登机"] },
+    { "kind": "grammar", "stem": "\"I ___ finished my homework.\"(现在完成时,主语 I)", "options": ["have", "has", "am", "did"] },
+    { "kind": "grammar", "stem": "\"He has ___ to the store; he'll be back soon.\"(去了还没回)", "options": ["gone", "been", "went", "being"] },
+    { "kind": "scenario", "stem": "\"Have you ever been to Canada?\" 是在问:", "options": ["你去过加拿大吗", "你要去加拿大吗", "你在加拿大吗", "你想去加拿大吗"] },
+    { "kind": "scenario", "stem": "\"I have just gotten your letter.\" 意思是:", "options": ["我刚收到你的信", "我要给你写信", "我弄丢了你的信", "我读过你的信很多遍"] },
+    { "kind": "reading", "stem": "Where has Tom moved?", "options": ["Abroad, to Canada", "To Italy", "Back to his hometown", "To a village nearby"], "passage": true },
+    { "kind": "reading", "stem": "How does Tom feel about the trip?", "options": ["He finds it very exciting", "He feels bored", "He feels very tired", "He wants to go home"], "passage": true },
+    { "kind": "listening", "stem": "What is Tom's job?", "options": ["He is an engineer", "He is a waiter", "He is a teacher", "He is a driver"], "audio": true },
+    { "kind": "listening", "stem": "What has Tom recently bought?", "options": ["A used car", "A new house", "A bike", "A boat"], "audio": true }
+  ]
+}

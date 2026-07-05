@@ -5,7 +5,7 @@
  * 每题作答回调 onAnswer(id,isCorrect) 由各关落库(american_user_mastery)。
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Check, X, Volume2, ChevronRight } from "lucide-react";
+import { Check, X, Volume2, ChevronRight, ChevronLeft } from "lucide-react";
 import { T } from "@/i18n/T";
 import { speakUS, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
 import type { AmericanQuestion } from "@/lib/american/data";
@@ -56,14 +56,22 @@ export function QuizRunner({
   suppressFinish?: boolean;
 }) {
   const [idx, setIdx] = useState(0);
-  const [picked, setPicked] = useState<number | null>(null);
-  const [revealed, setRevealed] = useState(false);
+  // maxIdx=已到达的最前沿(=当前正在作答的题);idx<maxIdx 即"回看已答题"(只读)。
+  const [maxIdx, setMaxIdx] = useState(0);
+  // 每题作答记录:choice 存所选项 picked;reveal 存自评 selfOk。存在=已答,回看时据此只读复现。
+  const [records, setRecords] = useState<Record<number, { picked?: number; selfOk?: boolean }>>({});
+  const [revealed, setRevealed] = useState(false); // reveal 题:前沿题是否已"显示参考答案"(回看题强制显示)
   const [correctCount, setCorrectCount] = useState(0);
   const [finished, setFinished] = useState(false);
   const wrongIdsRef = useRef<string[]>([]);
 
   const total = items.length;
   const item = items[idx];
+  const rec = records[idx];
+  const answered = rec !== undefined;
+  const reviewing = idx < maxIdx;          // 回看模式:只读,不计分、不改掌握
+  const picked = rec?.picked ?? null;      // choice 当前(或历史)所选
+  const showAnswer = reviewing || revealed; // reveal 题是否展示答案
 
   // 听力题:进关预热全部音频 → 点喇叭即命中缓存直接播。
   useEffect(() => {
@@ -75,34 +83,44 @@ export function QuizRunner({
     if (item?.kind === "choice" && item.audio) void speakUS(item.audio);
   }, [idx, item]);
 
+  const prev = useCallback(() => {
+    if (idx === 0) return;
+    unlockAmericanAudio(); // 手势栈顶同步解锁,回看听力题切题自动重播不被 iOS 静音
+    setIdx((i) => i - 1);
+  }, [idx]);
+
   const next = useCallback(() => {
-    if (idx + 1 >= total) {
+    unlockAmericanAudio();
+    if (idx < maxIdx) { setIdx((i) => i + 1); return; } // 回看中前进:仅移动光标,不计分/不结算
+    if (idx + 1 >= total) {                              // 前沿最后一题:结算
       setFinished(true);
       const pct = total ? Math.round((correctCount / total) * 100) : 0;
       onComplete(pct, wrongIdsRef.current.slice());
-    } else {
+    } else {                                             // 前沿推进到新题
+      setMaxIdx((m) => Math.max(m, idx + 1));
       setIdx((i) => i + 1);
-      setPicked(null);
       setRevealed(false);
     }
-  }, [idx, total, correctCount, onComplete]);
+  }, [idx, maxIdx, total, correctCount, onComplete]);
 
   const answerChoice = useCallback((i: number) => {
-    if (picked !== null || item.kind !== "choice") return;
-    setPicked(i);
+    if (item.kind !== "choice") return;
+    if (answered || idx !== maxIdx) return; // 已答或回看态:禁止作答(防刷分/防改答)
     const ok = i === item.answerIndex;
+    setRecords((r) => ({ ...r, [idx]: { picked: i } }));
     if (ok) setCorrectCount((c) => c + 1);
     else wrongIdsRef.current.push(item.id);
     onAnswer(item.id, ok);
-  }, [picked, item, onAnswer]);
+  }, [item, answered, idx, maxIdx, onAnswer]);
 
   const selfGrade = useCallback((ok: boolean) => {
     if (item.kind !== "reveal") return;
+    if (answered || idx !== maxIdx) return; // 已评或回看态:不可重评
+    setRecords((r) => ({ ...r, [idx]: { selfOk: ok } }));
     if (ok) setCorrectCount((c) => c + 1);
     else wrongIdsRef.current.push(item.id);
-    onAnswer(item.id, ok);
     next();
-  }, [item, onAnswer, next]);
+  }, [item, answered, idx, maxIdx, next]);
 
   const pct = useMemo(() => (total ? Math.round((correctCount / total) * 100) : 0), [correctCount, total]);
 
@@ -125,9 +143,12 @@ export function QuizRunner({
       {/* 进度 */}
       <div className="mb-4 flex items-center gap-3">
         <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-100">
-          <div className="h-full rounded-full bg-sky-500 transition-all" style={{ width: `${((idx) / total) * 100}%` }} />
+          {/* 进度按前沿 maxIdx 计:回看已答题不会让进度条倒退 */}
+          <div className="h-full rounded-full bg-sky-500 transition-all" style={{ width: `${(maxIdx / total) * 100}%` }} />
         </div>
-        <span className="text-xs font-semibold text-slate-400">{idx + 1}/{total}</span>
+        <span className="text-xs font-semibold text-slate-400">
+          {reviewing ? <span className="text-amber-500"><T>回看</T> {idx + 1}/{total}</span> : `${idx + 1}/${total}`}
+        </span>
       </div>
 
       {item.kind === "choice" ? (
@@ -188,17 +209,11 @@ export function QuizRunner({
             })}
           </div>
           {picked !== null && <ExplanationNote text={item.explanation} />}
-          {picked !== null && (
-            <button type="button" onClick={next}
-              className="mt-5 inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-sky-600 py-3 text-sm font-semibold text-white">
-              {idx + 1 >= total ? <T>完成本关</T> : <><T>下一题</T> <ChevronRight className="size-4" /></>}
-            </button>
-          )}
         </section>
       ) : (
         <section>
           <p className="mb-4 text-lg font-semibold leading-relaxed text-slate-800">{item.prompt}</p>
-          {!revealed ? (
+          {!showAnswer ? (
             <button type="button" onClick={() => setRevealed(true)}
               className="inline-flex w-full items-center justify-center rounded-full border border-sky-300 bg-sky-50 py-3 text-sm font-semibold text-sky-700">
               <T>显示参考答案</T>
@@ -214,20 +229,43 @@ export function QuizRunner({
                 </button>
               </div>
               <ExplanationNote text={item.explanation} />
-              <div className="mt-4 grid grid-cols-2 gap-2.5">
-                <button type="button" onClick={() => selfGrade(false)}
-                  className="rounded-full border border-slate-200 py-3 text-sm font-semibold text-slate-500">
-                  <T>没答对</T>
-                </button>
-                <button type="button" onClick={() => selfGrade(true)}
-                  className="rounded-full bg-emerald-600 py-3 text-sm font-semibold text-white">
-                  <T>我答对了</T>
-                </button>
-              </div>
+              {reviewing ? (
+                // 回看态:只读展示当时的自评结果,不能重评(防刷分)
+                <div className={`mt-4 rounded-full py-3 text-center text-sm font-semibold ${rec?.selfOk ? "bg-emerald-50 text-emerald-700" : "bg-slate-100 text-slate-500"}`}>
+                  {rec?.selfOk ? <T>当时:我答对了</T> : <T>当时:没答对</T>}
+                </div>
+              ) : (
+                <div className="mt-4 grid grid-cols-2 gap-2.5">
+                  <button type="button" onClick={() => selfGrade(false)}
+                    className="rounded-full border border-slate-200 py-3 text-sm font-semibold text-slate-500">
+                    <T>没答对</T>
+                  </button>
+                  <button type="button" onClick={() => selfGrade(true)}
+                    className="rounded-full bg-emerald-600 py-3 text-sm font-semibold text-white">
+                    <T>我答对了</T>
+                  </button>
+                </div>
+              )}
             </>
           )}
         </section>
       )}
+
+      {/* 底部导航:上一题(回看)/下一题。首题禁用上一题;当前题未作答时禁用下一题(reveal 靠自评推进) */}
+      <div className="mt-5 flex items-center gap-3">
+        <button type="button" onClick={prev} disabled={idx === 0}
+          className={`inline-flex items-center justify-center gap-1 rounded-full border px-5 py-3 text-sm font-semibold transition ${
+            idx === 0 ? "cursor-not-allowed border-slate-100 text-slate-300" : "border-slate-200 text-slate-500 hover:border-slate-300"
+          }`}>
+          <ChevronLeft className="size-4" /> <T>上一题</T>
+        </button>
+        <button type="button" onClick={next} disabled={!answered}
+          className={`inline-flex flex-1 items-center justify-center gap-1.5 rounded-full py-3 text-sm font-semibold transition ${
+            answered ? "bg-sky-600 text-white" : "cursor-not-allowed bg-slate-100 text-slate-300"
+          }`}>
+          {idx + 1 >= total && !reviewing ? <T>完成本关</T> : <><T>下一题</T> <ChevronRight className="size-4" /></>}
+        </button>
+      </div>
     </div>
   );
 }

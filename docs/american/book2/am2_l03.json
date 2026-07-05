@@ -1,0 +1,137 @@
+{
+  "id": "am2_l03",
+  "unit_no": 1,
+  "lesson_no": 3,
+  "title_en": "Please send me a card",
+  "title_cn": "请给我寄一张明信片",
+  "grammar_focus": "一般过去时(规则/不规则动词·否定·疑问)· be动词过去式 · lend vs borrow",
+  "scene": "去意大利度假 · 拖到最后一天买了37张明信片却一张没写",
+  "grammar_card": {
+    "title": "说过去发生的事(一般过去时)",
+    "intro": "本课讲怎么说\"已经发生过、结束了\"的事。下面全用本课句子举例。",
+    "table": {
+      "headers": ["用法 / 构成", "本课例子"],
+      "rows": [
+        ["规则动词:一般 +ed;e结尾 +d;辅音+y→ied;重读闭音节末单辅音双写+ed", "I visited museums.(visit→visited)"],
+        ["不规则动词:要单独记(go→went / buy→bought / get→got / make→made / read→read)", "Last summer I went to Italy.(go→went)"],
+        ["否定:didn't + 动词原形(动词要变回原形)", "I didn't send any cards.(不是 didn't sent)"],
+        ["疑问:Did + 主语 + 动词原形?", "Did you go out last night?"],
+        ["be 动词过去式:am/is→was,are→were", "The weather was warm."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "时间状语 last summer / yesterday / … ago / on the last day 前面不加介词(不能说 in last summer)", "mark": "时间状语" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How many cards did the writer send?",
+    "options": ["None", "Thirty-seven", "A few", "Only one"],
+    "answer_index": 0
+  },
+  "passage": "Postcards always spoil my vacations. Last summer I went to Italy. I visited a lot of museums and sat in public parks. The museums were free, and the weather was warm. A friendly waiter taught me a few words of Italian, and then he lent me a book. I read a few lines, but I didn't understand a word. Every day I thought about the postcards, but I didn't send any. My vacation passed quickly. On the last day I made a big decision. I got up early and bought thirty-seven postcards. I spent the whole day in my room, but I didn't write a single card!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Postcards always spoil my vacations.", "text_cn": "明信片总是搅得我假期不得安宁。" },
+    { "seq": 2, "speaker": null, "text_en": "Last summer I went to Italy.", "text_cn": "去年夏天我去了意大利。" },
+    { "seq": 3, "speaker": null, "text_en": "I visited a lot of museums and sat in public parks.", "text_cn": "我参观了很多博物馆,还在公共公园里坐了坐。" },
+    { "seq": 4, "speaker": null, "text_en": "The museums were free, and the weather was warm.", "text_cn": "博物馆免费,天气也暖和。" },
+    { "seq": 5, "speaker": null, "text_en": "A friendly waiter taught me a few words of Italian, and then he lent me a book.", "text_cn": "一位友好的服务员教了我几句意大利语,之后还借给我一本书。" },
+    { "seq": 6, "speaker": null, "text_en": "I read a few lines, but I didn't understand a word.", "text_cn": "我读了几行,但一个字也没看懂。" },
+    { "seq": 7, "speaker": null, "text_en": "Every day I thought about the postcards, but I didn't send any.", "text_cn": "我每天都想着明信片的事,却一张也没寄。" },
+    { "seq": 8, "speaker": null, "text_en": "My vacation passed quickly.", "text_cn": "假期过得飞快。" },
+    { "seq": 9, "speaker": null, "text_en": "On the last day I made a big decision.", "text_cn": "到了最后一天,我下了一个重大决心。" },
+    { "seq": 10, "speaker": null, "text_en": "I got up early and bought thirty-seven postcards.", "text_cn": "我早早起床,买了三十七张明信片。" },
+    { "seq": 11, "speaker": null, "text_en": "I spent the whole day in my room, but I didn't write a single card!", "text_cn": "我在房间里待了一整天,却一张明信片也没写成!" }
+  ],
+  "words": [
+    { "word": "send", "ipa": "/send/", "pos": "v", "meaning_cn": "寄,送(sent)", "example": "I didn't send any cards." },
+    { "word": "postcard", "ipa": "/ˈpoʊstkɑːrd/", "pos": "n", "meaning_cn": "明信片", "example": "I bought thirty-seven postcards." },
+    { "word": "spoil", "ipa": "/spɔɪl/", "pos": "v", "meaning_cn": "破坏,使扫兴(spoiled)", "example": "Postcards always spoil my vacations." },
+    { "word": "museum", "ipa": "/mjuˈziːəm/", "pos": "n", "meaning_cn": "博物馆", "example": "I visited a lot of museums." },
+    { "word": "public", "ipa": "/ˈpʌblɪk/", "pos": "adj", "meaning_cn": "公共的", "example": "I sat in public parks." },
+    { "word": "friendly", "ipa": "/ˈfrendli/", "pos": "adj", "meaning_cn": "友好的", "example": "A friendly waiter taught me some Italian." },
+    { "word": "waiter", "ipa": "/ˈweɪtər/", "pos": "n", "meaning_cn": "服务员", "example": "The waiter lent me a book." },
+    { "word": "lend", "ipa": "/lend/", "pos": "v", "meaning_cn": "借给,借出(lent)", "example": "He lent me a book." },
+    { "word": "decision", "ipa": "/dɪˈsɪʒn/", "pos": "n", "meaning_cn": "决定", "example": "I made a big decision." },
+    { "word": "whole", "ipa": "/hoʊl/", "pos": "adj", "meaning_cn": "整个的", "example": "I spent the whole day in my room." },
+    { "word": "single", "ipa": "/ˈsɪŋɡl/", "pos": "adj", "meaning_cn": "唯一的,单一的", "example": "I didn't write a single card." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般过去时——规则动词 -ed" },
+    { "gp": "gp2", "name": "一般过去时——不规则动词" },
+    { "gp": "gp3", "name": "一般过去时——否定(didn't + 动词原形)" },
+    { "gp": "gp4", "name": "一般过去时——一般疑问(Did + 原形)" },
+    { "gp": "gp5", "name": "一般过去时——特殊疑问" },
+    { "gp": "gp6", "name": "一般过去时的时间状语" },
+    { "gp": "gp7", "name": "be 动词过去式(was/were)" },
+    { "gp": "gp8", "name": "课文语言点(lend vs borrow)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"I ___ three museums yesterday.\"(visit 的过去式)", "options": ["visited", "visit", "visiting", "visitted"] },
+    { "gp": "gp1", "stem": "\"She ___ when she heard the news.\"(cry 的过去式)", "options": ["cried", "cryed", "cryied", "cries"] },
+    { "gp": "gp2", "stem": "\"Last summer I ___ to Italy.\"(go 的过去式)", "options": ["went", "goed", "gone", "going"] },
+    { "gp": "gp2", "stem": "\"He ___ me a book.\"(lend\"借出\"的过去式)", "options": ["lent", "lended", "lends", "lend"] },
+    { "gp": "gp2", "stem": "\"I ___ thirty-seven cards.\"(buy 的过去式)", "options": ["bought", "buyed", "boughted", "buys"] },
+    { "gp": "gp3", "stem": "\"I read a few lines, but I ___ a word.\"(understand 的否定)", "options": ["didn't understand", "didn't understood", "don't understand", "not understood"] },
+    { "gp": "gp3", "stem": "过去时的否定 didn't 后面,动词要用:", "options": ["动词原形", "过去式", "加 -ing", "加 -ed"] },
+    { "gp": "gp4", "stem": "把 \"You saw the play.\" 变一般过去疑问句:", "options": ["Did you see the play?", "Did you saw the play?", "Do you see the play?", "Were you see the play?"] },
+    { "gp": "gp4", "stem": "\"Did you go out last night?\" 的正确回答:", "options": ["Yes, I did.", "Yes, I do.", "Yes, I went.", "Yes, I was."] },
+    { "gp": "gp5", "stem": "\"___ cards did he buy?\"(问买了多少张)", "options": ["How many", "How much", "What", "How long"] },
+    { "gp": "gp5", "stem": "对 \"He stayed in his room.\" 中的 in his room 提问:", "options": ["Where did he stay?", "Where did he stayed?", "Where he stayed?", "Where was he stay?"] },
+    { "gp": "gp6", "stem": "\"___ I went to Italy.\"(去年夏天)", "options": ["Last summer", "In last summer", "At last summer", "On last summer"] },
+    { "gp": "gp6", "stem": "下列哪句在说\"已经发生过、结束了\"的事?", "options": ["Last summer I went to Italy.", "I go to Italy every year.", "I'm going to Italy now.", "The sun rises in the east."] },
+    { "gp": "gp7", "stem": "\"The weather ___ warm, and the people ___ friendly.\"", "options": ["was / were", "were / was", "was / was", "is / are"] },
+    { "gp": "gp7", "stem": "\"___ you afraid of the dog?\" — \"No, I wasn't.\"", "options": ["Were", "Was", "Did", "Are"] },
+    { "gp": "gp8", "stem": "\"他借给我一本书\"——lend 是\"借出\"。选正确的:", "options": ["He lent me a book.", "He borrowed me a book.", "He lent me from a book.", "He borrowed me from a book."] },
+    { "gp": "gp8", "stem": "\"我从图书馆借了一本书\"——\"借入\"用 borrow:", "options": ["I borrowed a book from the library.", "I lent a book from the library.", "I borrowed the library a book.", "I lent the library a book."] },
+    { "gp": "gp2", "stem": "\"I ___ the whole day in my room.\"(spend 的过去式)", "options": ["spent", "spended", "spend", "spendt"] }
+  ],
+  "stage6": [
+    { "stem": "语块 lend 的意思是:", "options": ["借出(把东西借给别人)", "借入(从别人处借)", "购买", "出售"] },
+    { "stem": "make a decision 的意思是:", "options": ["做决定", "犯错误", "改主意", "提问题"] },
+    { "stem": "a few 的意思是:", "options": ["几个(修饰可数名词)", "很多", "一点点(修饰不可数)", "没有"] },
+    { "stem": "\"寄(明信片)\"的美语常用词是:", "options": ["mail", "post", "throw", "drop"] },
+    { "stem": "\"假期\"的美语说法是:", "options": ["vacation", "holiday", "weekend", "festival"] },
+    { "stem": "spoil(破坏)的过去式,美式拼写是:", "options": ["spoiled", "spoilt", "spoilded", "spoild"] }
+  ],
+  "contrast": [
+    { "us": "mail", "uk": "post", "note_cn": "寄(信/卡);美语 mail a card,英式 post a card;邮箱 mailbox / postbox" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;承 L2,美语用 vacation" },
+    { "us": "spoiled", "uk": "spoilt", "note_cn": "spoil 的过去式;美语规则 -ed" }
+  ],
+  "chunks": [
+    { "us": "lend / borrow", "ipa": "/lend/ /ˈbɑːroʊ/", "example1": "He lent me a book.", "example1_cn": "他借给我一本书。(借出)", "example2": "I borrowed a book from him.", "example2_cn": "我从他那儿借了一本书。(借入)" },
+    { "us": "make a decision", "ipa": "/meɪk ə dɪˈsɪʒn/", "example1": "On the last day I made a big decision.", "example1_cn": "最后一天我下了个重大决定。", "example2": "It's hard to make a decision.", "example2_cn": "做决定很难。" },
+    { "us": "a few", "ipa": "/ə fjuː/", "example1": "He taught me a few words of Italian.", "example1_cn": "他教了我几句意大利语。", "example2": "I read a few lines.", "example2_cn": "我读了几行。" }
+  ],
+  "stage7_cloze": {
+    "context": "Last summer I ___1___ to Italy. A friendly waiter ___2___ me a few words of Italian. Every day I ___3___ about postcards, but I ___4___ send any.",
+    "blanks": [
+      { "blank_no": 1, "options": ["went", "go", "goes", "going"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["teached", "taught", "teaches", "teaching"], "answer_index": 1 },
+      { "blank_no": 3, "options": ["think", "thought", "thinks", "thinking"], "answer_index": 1 },
+      { "blank_no": 4, "options": ["don't", "didn't", "wasn't", "weren't"], "answer_index": 1 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did the writer go last summer?", "options": ["Italy", "France", "Spain", "Greece"] },
+    { "stem": "What did the friendly waiter do?", "options": ["He taught the writer some Italian and lent him a book", "He sold postcards", "He cooked dinner", "He drove the writer around"] },
+    { "stem": "How many cards did the writer write?", "options": ["None", "Thirty-seven", "A few", "Only one"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "朋友问你昨晚干嘛了,你想说\"我去看了电影\"(过去时):", "options": ["I went to the movies.", "I go to the movies.", "I'm going to the movies.", "I will go to the movies."] },
+    { "stem": "你想问朋友\"你昨天去哪儿了\":", "options": ["Where did you go yesterday?", "Where do you go yesterday?", "Where you went yesterday?", "Where did you went yesterday?"] },
+    { "stem": "服务员借给你一本书,你想说\"谢谢你借给我这本书\":", "options": ["Thank you for lending me this book.", "Thank you for borrowing me this book.", "Thank you for lend me this book.", "Thank you for borrow me this book."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "\"博物馆\" 对应的英文单词是:", "options": ["museum", "library", "theater", "garden"] },
+    { "kind": "vocab", "stem": "课文里 \"a single card\" 中 single 的意思是:", "options": ["唯一的,一张也(没写)", "双人的", "单身的", "简单的"] },
+    { "kind": "grammar", "stem": "\"I ___ a book yesterday.\"(yesterday,这个动词的过去式拼写不变)", "options": ["read", "readed", "red", "reads"] },
+    { "kind": "grammar", "stem": "\"She ___ up early this morning.\"(get 的过去式)", "options": ["got", "getted", "gots", "geted"] },
+    { "kind": "scenario", "stem": "有人问 \"What happened?\",是在问:", "options": ["发生了什么事", "现在几点", "你叫什么", "多少钱"] },
+    { "kind": "scenario", "stem": "\"I made a big decision.\" 意思是:", "options": ["我下了一个重大决心", "我犯了个大错", "我改变了主意", "我提了个问题"] },
+    { "kind": "reading", "stem": "What did the writer buy on the last day?", "options": ["Thirty-seven postcards", "A book", "A train ticket", "Some food"], "passage": true },
+    { "kind": "reading", "stem": "Did the writer send the cards?", "options": ["No, he didn't write a single one", "Yes, he sent all of them", "Yes, he sent a few", "No, but he wrote them all"], "passage": true },
+    { "kind": "listening", "stem": "Who lent the writer a book?", "options": ["A friendly waiter", "A museum guide", "His friend", "A teacher"], "audio": true },
+    { "kind": "listening", "stem": "What did the writer do on the last day?", "options": ["He got up early and bought postcards", "He visited a museum", "He left Italy", "He wrote letters"], "audio": true }
+  ]
+}

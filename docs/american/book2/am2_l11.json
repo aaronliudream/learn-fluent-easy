@@ -1,0 +1,138 @@
+{
+  "id": "am2_l11",
+  "unit_no": 2,
+  "lesson_no": 11,
+  "title_en": "One good turn deserves another",
+  "title_cn": "礼尚往来",
+  "grammar_focus": "时态语态综合复习(主考:一般现在/现在进行/一般过去/现在完成/过去进行/被动 · 依语境选时态)+ 并列连词 and/but/for/so(辅考)+ v.+sb+to do 宾补(辅考)",
+  "scene": "餐馆里遇到从不还钱的老熟人托尼 · 借他二十美元 · 反被他借势\"礼尚往来\"让作者付账",
+  "grammar_card": {
+    "title": "怎么选时态——看语境和时间状语(复习)",
+    "intro": "本课把前面学过的时态语态放在一起复习。挑时态的关键不是背规则,而是看句子说的是什么时候、什么样的事。全用本课句子举例。",
+    "table": {
+      "headers": ["什么时候 / 什么样的事", "用哪个时态 · 本课例子"],
+      "rows": [
+        ["此刻 / 现阶段正在进行", "现在进行(is/are + doing):He is now working at a bank."],
+        ["通常 / 反复发生的习惯", "一般现在(do/does):He gets a good salary but always borrows money."],
+        ["过去某个时间完成的动作", "一般过去(did):Tony walked in. / He gave me the money."],
+        ["到现在为止的经历 / 影响", "现在完成(has/have + done):He has never borrowed money from me."],
+        ["过去某一刻正在进行", "过去进行(was/were + doing):While he was eating, I asked him…"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "'某物被…'用被动语态(be + 过去分词),是前面第10课学的,本课一起复习", "mark": "被动复习" },
+      { "rule": "选时态先找时间信号:now→现在进行 · always/every day→一般现在 · years ago→一般过去 · never/so far→现在完成 · when/while + 过去→过去进行", "mark": "看时间信号" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Who paid for the writer's dinner?",
+    "options": ["The writer did (Tony turned it around)", "Tony paid", "They split it", "The restaurant gave it free"],
+    "answer_index": 0
+  },
+  "passage": "I was having dinner at a downtown restaurant when Tony Steele walked in. Tony worked in a lawyer's office years ago, but he is now working at a bank. He gets a good salary, but he always borrows money from his friends and never pays it back. Tony saw me, and he came over and sat down at my table. He has never borrowed a single dollar from me before. While he was eating, I asked him to lend me twenty dollars. To my surprise, he handed me the money immediately. \"I have never borrowed any money from you,\" Tony said with a smile. \"So now you can pay for my dinner!\" I looked at the check on the table and could not help laughing. One good turn deserves another, I guess.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "I was having dinner at a downtown restaurant when Tony Steele walked in.", "text_cn": "我正在市中心一家餐馆吃饭,这时托尼·斯蒂尔走了进来。" },
+    { "seq": 2, "speaker": null, "text_en": "Tony worked in a lawyer's office years ago, but he is now working at a bank.", "text_cn": "托尼几年前在一家律师事务所工作,不过现在在一家银行上班。" },
+    { "seq": 3, "speaker": null, "text_en": "He gets a good salary, but he always borrows money from his friends and never pays it back.", "text_cn": "他薪水不低,却总是向朋友借钱,而且从不归还。" },
+    { "seq": 4, "speaker": null, "text_en": "Tony saw me, and he came over and sat down at my table.", "text_cn": "托尼看见了我,就走过来坐到了我这桌。" },
+    { "seq": 5, "speaker": null, "text_en": "He has never borrowed a single dollar from me before.", "text_cn": "他以前从没向我借过一分钱。" },
+    { "seq": 6, "speaker": null, "text_en": "While he was eating, I asked him to lend me twenty dollars.", "text_cn": "趁他吃饭的时候,我请他借给我二十美元。" },
+    { "seq": 7, "speaker": null, "text_en": "To my surprise, he handed me the money immediately.", "text_cn": "令我意外的是,他立刻把钱递给了我。" },
+    { "seq": 8, "speaker": null, "text_en": "\"I have never borrowed any money from you,\" Tony said with a smile.", "text_cn": "\"我可从没向你借过钱,\"托尼笑着说。" },
+    { "seq": 9, "speaker": null, "text_en": "\"So now you can pay for my dinner!\"", "text_cn": "\"所以现在你可以替我付这顿饭钱啦!\"" },
+    { "seq": 10, "speaker": null, "text_en": "I looked at the check on the table and could not help laughing.", "text_cn": "我看着桌上的账单,忍不住笑了。" },
+    { "seq": 11, "speaker": null, "text_en": "One good turn deserves another, I guess.", "text_cn": "礼尚往来嘛,我想。" }
+  ],
+  "words": [
+    { "word": "turn", "ipa": "/tɜːrn/", "pos": "n", "meaning_cn": "行为,举止", "example": "One good turn deserves another." },
+    { "word": "deserve", "ipa": "/dɪˈzɜːrv/", "pos": "v", "meaning_cn": "应得,值得", "example": "One good turn deserves another." },
+    { "word": "lawyer", "ipa": "/ˈlɔːjər/", "pos": "n", "meaning_cn": "律师", "example": "He worked in a lawyer's office." },
+    { "word": "bank", "ipa": "/bæŋk/", "pos": "n", "meaning_cn": "银行", "example": "He is now working at a bank." },
+    { "word": "salary", "ipa": "/ˈsæləri/", "pos": "n", "meaning_cn": "工资,薪水", "example": "He gets a good salary." },
+    { "word": "immediately", "ipa": "/ɪˈmiːdiətli/", "pos": "adv", "meaning_cn": "立刻,马上", "example": "He handed me the money immediately." },
+    { "word": "restaurant", "ipa": "/ˈrestrɑːnt/", "pos": "n", "meaning_cn": "餐馆", "example": "I was having dinner at a restaurant." },
+    { "word": "borrow", "ipa": "/ˈbɑːroʊ/", "pos": "v", "meaning_cn": "借入(向别人借)", "example": "He borrows money from his friends." },
+    { "word": "lend", "ipa": "/lend/", "pos": "v", "meaning_cn": "借出(借给别人)", "example": "I asked him to lend me twenty dollars." },
+    { "word": "surprise", "ipa": "/sərˈpraɪz/", "pos": "n", "meaning_cn": "惊讶,意外", "example": "To my surprise, he gave me the money." },
+    { "word": "pay", "ipa": "/peɪ/", "pos": "v", "meaning_cn": "付钱,支付", "example": "Now you can pay for my dinner." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "复习——一般现在 vs 现在进行(习惯 gets / 此刻 is working)" },
+    { "gp": "gp2", "name": "复习——一般过去时(worked/saw/gave)" },
+    { "gp": "gp3", "name": "复习——现在完成 vs 一般过去(has never borrowed vs worked)" },
+    { "gp": "gp4", "name": "复习——过去进行时(was having…when / while…was eating)" },
+    { "gp": "gp5", "name": "复习——被动语态(was built)" },
+    { "gp": "gp6", "name": "复习——时态综合辨析(依语境/时间信号选时态)" },
+    { "gp": "gp7", "name": "并列连词 and/but/for/so(辅考)" },
+    { "gp": "gp8", "name": "v.+sb+to do 宾补 ask/want/tell sb to do(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "现在进行时(is/are + doing)表示什么时候的动作?", "options": ["此刻 / 现阶段正在进行", "过去某一刻正在进行", "通常反复发生的习惯", "到现在为止的经历"] },
+    { "gp": "gp1", "stem": "\"Tony worked in an office before, but he ___ at a bank now.\"(now，现在进行)", "options": ["is working", "works", "worked", "has worked"] },
+    { "gp": "gp2", "stem": "\"Tony ___ in a lawyer's office years ago.\"(years ago，一般过去)", "options": ["worked", "works", "is working", "has worked"] },
+    { "gp": "gp2", "stem": "\"To my surprise, he ___ me the money immediately.\"(give,过去完成的动作)", "options": ["gave", "gives", "has given", "is giving"] },
+    { "gp": "gp3", "stem": "\"He ___ money from me before.\"(never,到现在为止的经历，现在完成)", "options": ["has never borrowed", "never borrowed", "never borrows", "is never borrowing"] },
+    { "gp": "gp3", "stem": "有明确的过去时间(years ago)时,该用一般过去还是现在完成?", "options": ["一般过去(worked)", "现在完成(has worked)", "现在进行(is working)", "两个都行"] },
+    { "gp": "gp4", "stem": "\"I ___ dinner when Tony walked in.\"(have,过去某刻正在进行，过去进行)", "options": ["was having", "had", "have had", "am having"] },
+    { "gp": "gp4", "stem": "\"___ he was eating, I asked him to lend me money.\"(过去某段时间正在进行)", "options": ["While", "Before", "After", "Since"] },
+    { "gp": "gp5", "stem": "\"This bridge ___ in 1990.\"(build,某物'被建'，被动语态复习)", "options": ["was built", "built", "was build", "builds"] },
+    { "gp": "gp6", "stem": "挑时态时,最该看的是什么?", "options": ["句子里的时间信号和上下文语境", "句子的长短", "有没有生词", "主语是不是人"] },
+    { "gp": "gp6", "stem": "\"Listen! Someone ___ at the door.\"(Listen!，此刻正在)", "options": ["is knocking", "knocks", "knocked", "has knocked"] },
+    { "gp": "gp7", "stem": "\"Tony saw me, ___ he came over and sat down.\"(两件事相加，并列)", "options": ["and", "but", "for", "so"] },
+    { "gp": "gp7", "stem": "\"He gets a good salary, ___ he always borrows money.\"(前后相反，转折)", "options": ["but", "and", "so", "or"] },
+    { "gp": "gp7", "stem": "\"Now you can pay for my dinner!\" —— 前因后果,'所以'用:", "options": ["so", "but", "or", "for"] },
+    { "gp": "gp7", "stem": "\"He didn't buy the car, ___ he was short of money.\"(表原因)", "options": ["for", "so", "but", "or"] },
+    { "gp": "gp8", "stem": "ask sb ___ sth（请某人做某事）,'某人'后面的动作用:", "options": ["to do(不定式)", "doing", "do(原形)", "did"] },
+    { "gp": "gp8", "stem": "\"I asked him ___ me twenty dollars.\"(ask sb to do)", "options": ["to lend", "lend", "lending", "lent"] },
+    { "gp": "gp8", "stem": "\"The teacher wants us ___ hard.\"(want sb to do)", "options": ["to work", "work", "working", "works"] }
+  ],
+  "stage6": [
+    { "stem": "美语版把 twenty pounds 换成美元,用:", "options": ["dollars", "pounds", "cents", "coins"] },
+    { "stem": "美语里\"餐馆账单\"用:", "options": ["the check", "the bill", "the ticket", "the note"] },
+    { "stem": "美语里\"律师\"除了 lawyer,还常说:", "options": ["attorney", "solicitor", "barrister", "advocate"] },
+    { "stem": "to my surprise 的意思是:", "options": ["令我惊讶的是", "在我看来", "据我所知", "对我来说"] },
+    { "stem": "borrow … from 的意思是:", "options": ["向…借入", "借出给…", "买下…", "还给…"] },
+    { "stem": "pay for 的意思是:", "options": ["为…付款", "偿还欠款", "赚取", "讨价还价"] }
+  ],
+  "contrast": [
+    { "us": "dollars", "uk": "pounds", "note_cn": "货币;美语版用 dollars(美元),英式原文 pounds(英镑)" },
+    { "us": "the check", "uk": "the bill", "note_cn": "餐馆账单;美语说 the check,英式说 the bill" },
+    { "us": "attorney", "uk": "lawyer", "note_cn": "律师;美语常说 attorney,英式多说 lawyer(课文保留 lawyer 教官方词)" }
+  ],
+  "chunks": [
+    { "us": "to my surprise", "ipa": "/tə maɪ sərˈpraɪz/", "example1": "To my surprise, he handed me the money immediately.", "example1_cn": "令我意外的是,他立刻把钱递给了我。", "example2": "To my surprise, the test was easy.", "example2_cn": "令我意外的是,考试很简单。" },
+    { "us": "borrow ... from", "ipa": "/ˈbɑːroʊ frəm/", "example1": "He borrows money from his friends.", "example1_cn": "他向朋友借钱。", "example2": "I borrowed a book from the library.", "example2_cn": "我从图书馆借了一本书。" },
+    { "us": "pay for", "ipa": "/peɪ fər/", "example1": "Now you can pay for my dinner.", "example1_cn": "现在你可以替我付饭钱了。", "example2": "Let me pay for the coffee.", "example2_cn": "咖啡我来付。" }
+  ],
+  "stage7_cloze": {
+    "context": "Tony ___1___ in a lawyer's office years ago, but now he ___2___ at a bank. While he ___3___ dinner, I asked him to lend me twenty dollars. He ___4___ never borrowed money from me before.",
+    "blanks": [
+      { "blank_no": 1, "options": ["worked", "works", "is working", "has worked"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["is working", "works", "worked", "was working"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["was having", "had", "has", "is having"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["has", "had", "is", "was"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where is Tony working now?", "options": ["At a bank", "In a lawyer's office", "At a restaurant", "In a school"] },
+    { "stem": "How much did the writer ask to borrow?", "options": ["Twenty dollars", "Ten dollars", "Fifty dollars", "Twenty pounds"] },
+    { "stem": "Who paid for the dinner in the end?", "options": ["The writer", "Tony", "They split it", "The restaurant"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我此刻正在写作业\"(此刻正在做的事):", "options": ["I am doing my homework now.", "I do my homework now.", "I did my homework now.", "I have done my homework now."] },
+    { "stem": "你想说\"我到家时,妈妈正在做饭\"(过去某一刻正在做的事):", "options": ["When I got home, my mom was cooking.", "When I got home, my mom cooks.", "When I got home, my mom cooked.", "When I got home, my mom has cooked."] },
+    { "stem": "你想说\"我从没去过北京\"(到现在为止的经历):", "options": ["I have never been to Beijing.", "I never go to Beijing.", "I was never in Beijing.", "I am never in Beijing."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "deserve 的意思是:", "options": ["应得,值得", "应付了事", "保存", "服务"] },
+    { "kind": "vocab", "stem": "immediately 的意思是:", "options": ["立刻,马上", "最近", "偶尔", "慢慢地"] },
+    { "kind": "grammar", "stem": "\"He ___ money from his friends every week.\"(every week,习惯，一般现在)", "options": ["borrows", "is borrowing", "borrowed", "has borrowed"] },
+    { "kind": "grammar", "stem": "\"I ___ TV when the phone rang.\"(过去某刻正在，过去进行)", "options": ["was watching", "watched", "watch", "have watched"] },
+    { "kind": "scenario", "stem": "\"He is rich, ___ he is not happy.\" 中间填哪个词(前后意思相反)?", "options": ["but", "and", "so", "for"] },
+    { "kind": "scenario", "stem": "\"My mom told me ___ early.\"(告诉某人做某事)横线上填:", "options": ["to come", "come", "coming", "came"] },
+    { "kind": "reading", "stem": "What does Tony always do with money he borrows from friends?", "options": ["He borrows it and never pays it back", "He saves it in the bank", "He gives it away", "He pays it back the next day"], "passage": true },
+    { "kind": "reading", "stem": "How did the writer end up paying for the dinner?", "options": ["After borrowing, Tony said the writer could pay for his dinner", "The writer offered to pay first", "They shared the bill equally", "Tony paid and left"], "passage": true },
+    { "kind": "listening", "stem": "What was Tony's job years ago?", "options": ["He worked in a lawyer's office", "He worked at a bank", "He was a waiter", "He was a driver"], "audio": true },
+    { "kind": "listening", "stem": "What did Tony do when the writer asked to borrow money?", "options": ["He gave the money immediately", "He refused", "He asked why", "He walked away"], "audio": true }
+  ]
+}

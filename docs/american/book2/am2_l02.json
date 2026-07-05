@@ -1,0 +1,138 @@
+{
+  "id": "am2_l02",
+  "unit_no": 1,
+  "lesson_no": 2,
+  "title_en": "Breakfast or lunch?",
+  "title_cn": "早餐还是午餐?",
+  "grammar_focus": "一般现在时 vs 现在进行时 · V-ing拼写 · 频度副词 · What/How感叹句",
+  "scene": "懒觉的周日 · 姑妈来电,\"一点钟还在吃早餐\"",
+  "grammar_card": {
+    "title": "现在的两种时态(用本课句子看懂它)",
+    "intro": "本课要分清两种\"现在\":经常做的事,还是此刻正在做的事。下面全用本课句子举例。",
+    "table": {
+      "headers": ["时态", "什么时候用 · 本课例子"],
+      "rows": [
+        ["一般现在时(动词原形 / 第三人称 +s)", "说经常、习惯、每天的事:I never get up early on Sundays.(周日从不早起=习惯)"],
+        ["一般现在时也说客观事实", "The sun rises in the east.(太阳东升=永远的事实)"],
+        ["现在进行时(am/is/are + V-ing)", "说此刻正在做的事:I'm having breakfast.(此刻正在吃)"],
+        ["现在进行时也说近期安排", "I'm coming over tonight.(近期打算来=已安排好)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "V-ing 拼写:一般直接加 -ing;去掉不发音的 e(have→having);重读闭音节末尾单辅音字母双写(run→running);ie→y(lie→lying)", "mark": "拼写" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why is the writer's aunt surprised?",
+    "options": ["He is still sleeping", "He is still having breakfast at one o'clock", "He is not at home", "He is late for the train"],
+    "answer_index": 1
+  },
+  "passage": "It was Sunday, and I was still fast asleep. I never get up early on Sundays — I usually stay in bed until noon. That morning it was raining, and it was dark outside. \"What a lazy Sunday!\" I thought. Then my cell phone rang. It was my aunt Kate; I'm her only nephew, so she calls me every weekend. \"I just arrived by train,\" she said. \"I'm coming over to see you right now!\" \"But I'm still having breakfast,\" I said. \"Breakfast? What are you doing?\" she asked. \"I'm having breakfast,\" I repeated. \"Oh my!\" she said. \"Do you always get up this late? It's already one o'clock!\" For me, breakfast is the first meal of the day — even at lunchtime.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "It was Sunday, and I was still fast asleep.", "text_cn": "那是个星期天,我还在呼呼大睡。" },
+    { "seq": 2, "speaker": null, "text_en": "I never get up early on Sundays — I usually stay in bed until noon.", "text_cn": "周日我从来不早起——通常会赖床到中午。" },
+    { "seq": 3, "speaker": null, "text_en": "That morning it was raining, and it was dark outside.", "text_cn": "那天早上在下雨,外面一片昏暗。" },
+    { "seq": 4, "speaker": null, "text_en": "\"What a lazy Sunday!\" I thought.", "text_cn": "\"多懒的一个周日啊!\"我心想。" },
+    { "seq": 5, "speaker": null, "text_en": "Then my cell phone rang.", "text_cn": "这时我的手机响了。" },
+    { "seq": 6, "speaker": null, "text_en": "It was my aunt Kate; I'm her only nephew, so she calls me every weekend.", "text_cn": "是我姑妈凯特;我是她唯一的外甥,所以她每个周末都给我打电话。" },
+    { "seq": 7, "speaker": null, "text_en": "\"I just arrived by train,\" she said. \"I'm coming over to see you right now!\"", "text_cn": "\"我刚坐火车到,\"她说,\"我这就过来看你!\"" },
+    { "seq": 8, "speaker": null, "text_en": "\"But I'm still having breakfast,\" I said.", "text_cn": "\"可我还在吃早餐呢,\"我说。" },
+    { "seq": 9, "speaker": null, "text_en": "\"Breakfast? What are you doing?\" she asked.", "text_cn": "\"早餐?你在干什么?\"她问道。" },
+    { "seq": 10, "speaker": null, "text_en": "\"I'm having breakfast,\" I repeated.", "text_cn": "\"我在吃早餐,\"我又说了一遍。" },
+    { "seq": 11, "speaker": null, "text_en": "\"Oh my!\" she said. \"Do you always get up this late? It's already one o'clock!\"", "text_cn": "\"天哪!\"她说,\"你总是起这么晚吗?已经一点钟了!\"" },
+    { "seq": 12, "speaker": null, "text_en": "For me, breakfast is the first meal of the day — even at lunchtime.", "text_cn": "对我来说,早餐是一天的第一顿饭——哪怕在午饭时间吃。" }
+  ],
+  "words": [
+    { "word": "until", "ipa": "/ənˈtɪl/", "pos": "prep", "meaning_cn": "直到", "example": "I stay in bed until noon." },
+    { "word": "outside", "ipa": "/ˌaʊtˈsaɪd/", "pos": "adv", "meaning_cn": "外面", "example": "It was dark outside." },
+    { "word": "ring", "ipa": "/rɪŋ/", "pos": "v", "meaning_cn": "(电话/铃)响", "example": "My phone rang." },
+    { "word": "aunt", "ipa": "/ænt/", "pos": "n", "meaning_cn": "姑妈,姨妈", "example": "It was my aunt Kate." },
+    { "word": "nephew", "ipa": "/ˈnefjuː/", "pos": "n", "meaning_cn": "外甥,侄子", "example": "I'm her only nephew." },
+    { "word": "repeat", "ipa": "/rɪˈpiːt/", "pos": "v", "meaning_cn": "重复", "example": "\"I'm having breakfast,\" I repeated." },
+    { "word": "arrive", "ipa": "/əˈraɪv/", "pos": "v", "meaning_cn": "到达", "example": "I just arrived by train." },
+    { "word": "breakfast", "ipa": "/ˈbrekfəst/", "pos": "n", "meaning_cn": "早餐", "example": "I'm still having breakfast." },
+    { "word": "lunch", "ipa": "/lʌntʃ/", "pos": "n", "meaning_cn": "午餐", "example": "It's almost lunchtime." },
+    { "word": "meal", "ipa": "/miːl/", "pos": "n", "meaning_cn": "一餐,一顿饭", "example": "Breakfast is the first meal of the day." },
+    { "word": "phone", "ipa": "/foʊn/", "pos": "n", "meaning_cn": "电话,手机", "example": "My cell phone rang." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般现在时——表习惯/经常动作(配频度副词)" },
+    { "gp": "gp2", "name": "一般现在时——表客观真理/事实" },
+    { "gp": "gp3", "name": "现在进行时——表此刻正在进行(be+V-ing)" },
+    { "gp": "gp4", "name": "现在进行时的构成 + V-ing 拼写规则" },
+    { "gp": "gp5", "name": "现在进行时——表最近已定的安排" },
+    { "gp": "gp6", "name": "一般现在时 vs 现在进行时 辨析" },
+    { "gp": "gp7", "name": "频度副词的位置" },
+    { "gp": "gp8", "name": "What / How 感叹句" },
+    { "gp": "gp9", "name": "课文语言点(go to bed / late 副词)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "说\"周日的习惯\",选正确的句子:", "options": ["I never get up early on Sundays.", "I am never getting up early on Sundays.", "I never got up early on Sundays.", "I never getting up early on Sundays."] },
+    { "gp": "gp1", "stem": "\"She ___ me every weekend.\"(每周都打来的习惯)", "options": ["calls", "is calling", "called", "call"] },
+    { "gp": "gp2", "stem": "\"The sun ___ in the east and ___ in the west.\"(客观事实)", "options": ["rises / sets", "rise / set", "is rising / is setting", "rose / set"] },
+    { "gp": "gp3", "stem": "\"Look outside! It ___ right now.\"(此刻正在下)", "options": ["is raining", "rains", "rained", "rain"] },
+    { "gp": "gp3", "stem": "\"What ___ you ___ now?\" — \"I'm having breakfast.\"", "options": ["are / doing", "do / do", "did / do", "are / do"] },
+    { "gp": "gp4", "stem": "\"run\" 的现在进行时:He is ___ to the station.", "options": ["running", "runing", "runnning", "runy"] },
+    { "gp": "gp4", "stem": "下面哪个是 \"have\" 的正确现在分词(V-ing)?", "options": ["having", "haveing", "havving", "haing"] },
+    { "gp": "gp5", "stem": "\"I'm coming over to see you tonight.\" 这句话表示:", "options": ["我近期打算/安排来看你", "我经常来看你", "我现在正在路上", "我昨天来看过你"] },
+    { "gp": "gp6", "stem": "下列哪句在说\"此刻正在做的事\"?", "options": ["I'm having breakfast right now.", "I get up at noon on Sundays.", "She reads the news every morning.", "The earth moves around the sun."] },
+    { "gp": "gp6", "stem": "\"He ___ to work by subway every day, but today he ___ the bus.\"", "options": ["goes / is taking", "is going / takes", "go / take", "is going / is taking"] },
+    { "gp": "gp6", "stem": "\"Be quiet! The baby ___.\"(此刻)", "options": ["is sleeping", "sleeps", "sleep", "slept"] },
+    { "gp": "gp7", "stem": "下面哪句 always 的位置正确?", "options": ["She always gets up late.", "She gets always up late.", "Gets up she always late.", "She gets up late always."] },
+    { "gp": "gp7", "stem": "频度副词(always/never/usually)在句中一般放在什么位置?", "options": ["实义动词前、be 动词后", "句子最前面", "句子最后面", "宾语后面"] },
+    { "gp": "gp8", "stem": "\"___ a rainy day!\"(感叹\"多雨/糟糕的一天\")", "options": ["What", "How", "Which", "Very"] },
+    { "gp": "gp8", "stem": "\"___ fast time flies!\"(感叹时间过得快)", "options": ["How", "What", "What a", "How a"] },
+    { "gp": "gp8", "stem": "\"It's a beautiful garden.\" 改成 What 感叹句:", "options": ["What a beautiful garden it is!", "How a beautiful garden it is!", "What beautiful a garden it is!", "What a beautiful garden is it!"] },
+    { "gp": "gp9", "stem": "\"I stayed up late, so I went ___ bed after midnight.\"(上床睡觉)", "options": ["to", "in", "at", "on"] },
+    { "gp": "gp9", "stem": "\"He doesn't get up early. He gets up ___.\"(起得晚)", "options": ["late", "lately", "later", "lateness"] }
+  ],
+  "stage6": [
+    { "stem": "语块 get up 的意思是:", "options": ["起床", "睡觉", "坐下", "出门"] },
+    { "stem": "语块 stay in bed 的意思是:", "options": ["赖床/待在床上", "铺床", "起床", "换床单"] },
+    { "stem": "\"我这就过来看你\" 用哪个语块?", "options": ["come over", "come up", "go over", "come out"] },
+    { "stem": "\"手机\" 的美语常用说法是:", "options": ["cell phone", "mobile", "telephone box", "hand machine"] },
+    { "stem": "\"假期\" 的美语说法是:", "options": ["vacation", "holiday", "festival", "weekend"] },
+    { "stem": "\"旅行(travel)\" 的现在分词美式拼写是:", "options": ["traveling", "travelling", "traveleing", "travling"] }
+  ],
+  "contrast": [
+    { "us": "cell phone", "uk": "mobile", "note_cn": "手机;美语常说 cell phone 或直接 phone,英式 mobile" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "(名词)假期;on vacation = 在度假" },
+    { "us": "traveling", "uk": "travelling", "note_cn": "-ing 双写差异,美语单 l(travel→traveling)" }
+  ],
+  "chunks": [
+    { "us": "get up", "ipa": "/ɡet ˈʌp/", "example1": "I never get up early on Sundays.", "example1_cn": "周日我从来不早起。", "example2": "What time do you get up?", "example2_cn": "你几点起床?" },
+    { "us": "stay in bed", "ipa": "/steɪ ɪn ˈbed/", "example1": "I usually stay in bed until noon.", "example1_cn": "我通常赖床到中午。", "example2": "She stays in bed when it rains.", "example2_cn": "下雨天她就赖在床上。" },
+    { "us": "come over", "ipa": "/kʌm ˈoʊvər/", "example1": "I'm coming over to see you.", "example1_cn": "我这就过来看你。", "example2": "Come over any time!", "example2_cn": "随时过来玩!" }
+  ],
+  "stage7_cloze": {
+    "context": "It was Sunday. I never ___1___ early on Sundays. That morning my aunt Kate called. \"I ___2___ over to see you,\" she said. \"But I ___3___ breakfast,\" I said. She was surprised. \"___4___ a lazy Sunday!\"",
+    "blanks": [
+      { "blank_no": 1, "options": ["get up", "am getting up", "got up", "getting up"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["come", "'m coming", "came", "comes"], "answer_index": 1 },
+      { "blank_no": 3, "options": ["have", "'m having", "had", "has"], "answer_index": 1 },
+      { "blank_no": 4, "options": ["How", "What", "Which", "Very"], "answer_index": 1 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What day is it?", "options": ["Sunday", "Saturday", "Monday", "Friday"] },
+    { "stem": "Who is calling the writer?", "options": ["His aunt", "His friend", "His mom", "His boss"] },
+    { "stem": "Why is the aunt surprised?", "options": ["He is having breakfast at one o'clock", "It's raining", "He missed the train", "He is still asleep"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "朋友周日早上打来,你还在睡,想说\"我周日从不早起\":", "options": ["I never get up early on Sundays.", "I got up early today.", "I'm getting up now.", "I always get up early."] },
+    { "stem": "你此刻正在吃早餐,别人问 \"What are you doing?\",你回答:", "options": ["I'm having breakfast.", "I have breakfast every day.", "I had breakfast.", "I will have breakfast."] },
+    { "stem": "姑妈说这就过来,你想表达\"我这就过来看你\"的地道美语:", "options": ["I'm coming over to see you.", "I come over you.", "I came over you.", "I'm come over."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "\"外面\" 对应的英文单词是:", "options": ["outside", "inside", "outdoors", "outer"] },
+    { "kind": "vocab", "stem": "课文里 \"the first meal of the day\" 中 meal 的意思是:", "options": ["一餐,一顿饭", "面粉", "时间", "心情"] },
+    { "kind": "grammar", "stem": "\"Look! It ___ outside now.\"(此刻正在下雨)", "options": ["is raining", "rains", "rained", "rain"] },
+    { "kind": "grammar", "stem": "\"I ___ early on Sundays.\"(周日的习惯:从不早起)", "options": ["never get up", "am never getting up", "never got up", "never getting up"] },
+    { "kind": "scenario", "stem": "姑妈看到你一点还在吃早餐,惊讶地说 \"Oh my!\",意思是:", "options": ["表示惊讶/意外(天哪)", "她很生气", "她在打招呼", "她要走了"] },
+    { "kind": "scenario", "stem": "\"What a lazy Sunday!\" 表达的是:", "options": ["感叹这个周日真慵懒", "询问星期几", "命令别人起床", "抱怨天气很冷"] },
+    { "kind": "reading", "stem": "What does the writer usually do on Sundays?", "options": ["He stays in bed until noon.", "He gets up early.", "He goes to work.", "He visits his aunt."], "passage": true },
+    { "kind": "reading", "stem": "Why was the aunt surprised?", "options": ["He was having breakfast at one o'clock.", "He was asleep.", "He was out.", "He missed the train."], "passage": true },
+    { "kind": "listening", "stem": "How does the writer know his aunt has arrived?", "options": ["She calls him on the phone.", "She knocks on the door.", "She sends a text.", "She emails him."], "audio": true },
+    { "kind": "listening", "stem": "What is the weather like that morning?", "options": ["It's raining.", "It's sunny.", "It's snowing.", "It's windy."], "audio": true }
+  ]
+}

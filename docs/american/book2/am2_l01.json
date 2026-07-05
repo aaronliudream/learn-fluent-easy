@@ -81,7 +81,7 @@
     { "gp": "gp4", "stem": "\"The play was really funny.\" 属于哪种句型?", "options": ["主系表", "主谓", "主谓宾", "主谓双宾"] },
     { "gp": "gp4", "stem": "下列哪句不完整,动词后面还缺\"什么\"(缺宾语)?", "options": ["I really enjoyed.", "He arrived yesterday.", "They were talking loudly.", "She smiled."] },
     { "gp": "gp4", "stem": "哪句的 play 后面没有宾语(动作的对象),意思也完整?", "options": ["The kids play in the park.", "They play soccer.", "She plays the piano.", "We played a game."] },
-    { "gp": "gp5", "stem": "哪句是复合宾语?(判别法:宾语后面加 be 能成句 → him is captain ✓)", "options": ["They made him captain.", "She gave him a ticket.", "I told her the truth.", "He bought me coffee."] },
+    { "gp": "gp5", "stem": "哪句是复合宾语?(判别法:宾语后面加 be 能成句,如 him is captain)", "options": ["They made him captain.", "She gave him a ticket.", "I told her the truth.", "He bought me coffee."] },
     { "gp": "gp6", "stem": "把 \"He likes the play.\" 变否定:", "options": ["He doesn't like the play.", "He don't like the play.", "He not likes the play.", "He isn't like the play."] },
     { "gp": "gp6", "stem": "下列哪个否定式没有缩写形式?", "options": ["am not", "is not", "do not", "cannot"] },
     { "gp": "gp7", "stem": "把 \"You saw the play.\" 变一般疑问句:", "options": ["Did you see the play?", "Do you saw the play?", "Saw you the play?", "Are you see the play?"] },

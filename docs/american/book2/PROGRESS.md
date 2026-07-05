@@ -1,0 +1,276 @@
+# AM2 第二册生产进度(L2–L96 自主生产 · 断点续做)
+
+> 授权 2026-07-04:L2–L96 由 CC 自主走 10 步流水线(豁免逐课网页版评审),机器校验+双角色自审。
+> 不变项:SQL 只 Aaron service role 跑 · 每单元真机抽验 2 课 · 禁区4文件不改 · 不擅自合 main · 第五节升级情形停。
+> 交付批次=单元(8课)。每课一行:状态 / 校验 / 挂起原因。
+
+| 课 | 单元 | 标题 | 状态 | 校验八项 | 备注 |
+|---|---|---|---|---|---|
+| L1 | 1 | A Private Conversation | ✅ 上线(48题/解释48/关6=6) | 全绿 | 真机双验通过 |
+| L2 | 1 | Breakfast or lunch? | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿 | 步骤1-9完成;seed 归单元1批次待跑;prewarm 待单元批次;真机待Aaron抽验 |
+| L3 | 1 | Please send me a card | ✅ 生产完成(44题/解释44/关6=6/认知2) | 🟢八项全绿 | 一般过去时;新思维p117已补扫并入讲深;seed归单元1批次;prewarm待批次;真机待抽验 |
+| L4 | 1 | An exciting trip | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 现在完成时;三源p27-28/p42-44/新思维p119-120已核;现在完成进行时p122排除记备用;seed归单元1批次;prewarm待批次;真机待抽验 |
+| L5 | 1 | No wrong numbers | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 现在完成时续(up to now/a great many/since/时态切换);三源p31/p42-45/新思维p120已核;与L4分工不重复;seed归单元1批次;prewarm待批次;真机待抽验 |
+| L6 | 1 | Percy Buttons | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 冠词 a/an/some/the;三源 教材p36 KeyStruct + 同步p49 LESSON6 + 新思维冠词 已核;定冠词地理习语细则留后;seed归单元1批次;prewarm待批次;真机待抽验 |
+| L7 | 1 | Too late | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 过去进行时(跨课备用落点·还账);三源 教材p40 KeyStruct + 同步p56 LESSON7 + 新思维p118 已核;过去完成时had told/would排除;seed归单元1批次;prewarm待批次;真机待抽验 |
+| L8 | 1 | The best and the worst | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 比较级和最高级;三源 教材p44 KeyStruct + 同步p58 LESSON8 + 新思维比较级 已核;as…as/进阶比较排除;seed归单元1批次;prewarm待批次;真机待抽验 |
+
+> **✅ 单元1(L1–L8)全部生产完成 + 全部落库(2026-07-04)。** L1 上线;L2–L8 seed 在 `SQLAA/american_am2_seed_unit01.sql`(Aaron 已跑到 L8,全落库)。单元1批次汇报见 `REVIEWAA/american-book2-U1/UNIT1-batch-report.md`。⏭️ Aaron 真机抽验 L4/L7 + prewarm 音频(待)。
+
+### 单元2(L9–L16)
+
+| 课 | 单元 | 标题 | 状态 | 校验八项 | 备注 |
+|---|---|---|---|---|---|
+| L9 | 2 | A cold welcome | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 时间介词 at/in/on;三源 教材p48 KeyStruct + 同步p67 LESSON9 + 新思维介词 已核;过去完成had gathered/过去将来would strike排除;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L10 | 2 | Not for jazz | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | **主题分歧首例**:教材Key structures=被动语态(主考15题) vs 同步L10=名词所有格(辅考3题)→ Aaron裁决 A+覆盖补丁([[am2-source-divergence-rule]]);三源 教材p52 KeyStruct被动 + 教材注释②双重所有格 + 同步p75-76所有格 + 新思维被动p127-131(页眉核过);进行/完成/将来被动展示不设题;**同步所有格深度细则挂账(见下,单元末清零)**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L11 | 2 | One good turn deserves another | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | **主题分歧第二例**:教材Key structures=Review KS2-10(时态语态综合复习,主考11题) vs 同步L11=v.+sb+to do宾补 + 并列连词(辅考7题)→ 按 [[am2-source-divergence-rule]] 自决(不停),裁决A+覆盖补丁第二次执行;三源 教材p56 KeyStruct Review + 同步p83-85 宾补/连词 + 新思维时态各章L2-L10已扫(连词/宾补专题未定点补扫,诚实标注);宾补/连词深度细则挂账(见下);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L12 | 2 | Goodbye and good luck | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 一般将来时(主考,教材 Key structures=I'll see you tomorrow.)+ be going to/表将来的现在时(辅考讲深);**教材/同步同主题讲深(非分歧)**——同步L12讲更深(be going to/be to/将来进行时);三源 教材p60 KeyStruct + 同步p88-89 将来时各表达 + 新思维将来时章未定点补扫(诚实标注);**be to/be about to/将来进行时挂账**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L13 | 2 | The Greenwood Boys | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 将来进行时(主考,教材 Key structures=What will you be doing tomorrow?)+ by交通工具/现在进行复习(辅考);**单一主题三源一致(无分歧)**;**承接兑现 L12 将来进行时挂账→L12该项清零**;三源 教材p64 KeyStruct + 同步p89 将来进行时基本用法 + 新思维将来进行章未定点补扫(诚实标注);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L14 | 2 | Do you speak English? | ✅ 生产完成(**47题**/解释47/关6=6/认知3/**9gp**) | 🟢八项全绿(补题后复验) | 过去完成时(主考,教材 Key structures=After he had finished work he went home.)+ had planned/hoped 未实现计划/It was the…time that had done(辅考讲深)+ **反身代词(G9辅考,就地补回)**;**同主题讲深无分歧**;**承接兑现 L7/L9 排除留后的过去完成时→该跨课账清零**;三源 教材p68 KeyStruct + 同步p92 过去完成时用法 + 同步L14章反身代词 + 新思维过去完成章未定点补扫;⚠️**反身代词修订**:Aaron 反馈教材L14就教(himself在课文)不推U3,seed未跑就地补3题(关5 18→21,44→47);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L15 | 2 | Good news | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 间接引语(主考,教材 Key structures=He said that… He told me…)+ 宾语从句 if/whether/过去将来时 would(辅考讲深);**同主题讲深无分歧**(同步 L15=宾语从句+过去将来时=间接引语底层机制);三源 教材p72 KeyStruct + 同步p99 宾语从句+过去将来时 + 新思维间接引语章未定点补扫(诚实标注);⚠️**发现反身代词遗漏→补挂账**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L16 | 2 | A polite request | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | **主题分歧第三例**:教材Key structures=if 条件句(第一类真实条件) vs 同步L16=主谓一致→按 [[am2-source-divergence-rule]] 自决(不停),裁决A+覆盖补丁第三次执行;主考if条件句12+辅考主谓一致6(课文"Traffic police are"①类);三源 教材p76 KeyStruct + 同步p103 主谓一致 + 新思维条件句章未定点补扫(诚实标注);**主谓一致深度挂账**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+
+> **✅ 单元2(L9–L16)全部生产完成(2026-07-04)。** seed 累积在 `SQLAA/american_am2_seed_unit02.sql`(待 Aaron 批次跑)。单元2批次汇报见 `REVIEWAA/american-book2-U2/UNIT2-batch-report.md`(含挂账逐条处置)。⏭️ Aaron 批次跑 unit02 seed + 真机抽验 2 课 + prewarm 音频。
+
+## L16 流水线步骤跟踪(if 条件句主考 + 主谓一致辅考)
+- [x] 1 三源扫描(scan-evidence-lesson16.md:**主题分歧第三例**——教材p76 Key structures=if 条件句(If you open the door you will get a surprise) vs 同步p103=主谓一致;逐页页眉;课文"Traffic police are"①类→主谓一致辅考;主考教材权威已足,新思维条件句章诚实标"未定点补扫";**按裁决自决未停**[[am2-source-divergence-rule]])
+- [x] 2 建考点清单(grammar-syllabus-lesson16.md:G1-G6 if条件句12 + G7集合名词3 + G8就近就前3 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对裁决执行,结论写入清单头 ★)· [x] 4 课文定稿(11句·if条件句密集If you park…will find/if pay/if get…cannot fail to obey + 主谓一致 Traffic police are·11词/3语块全落·parking lot/downtown/license plate美语化)
+- [x] 5 题库(关5=18[if条件12+主谓一致6,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson16.md;首轮无抓修;裁决执行核对✓) · [x] 8 JSON+seed(am2_l16.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44/解释44/零串味14条未用主谓术语/G1-G8全覆盖/W11) · [x] 10 commit
+
+## L16 挂账 + 单元2末挂账汇总(⚠️ 批次汇报逐条处置)
+- **本课挂账:主谓一致深度**(the+adj 作主语单复数、politics is/glasses are/ten years is、数词单用):本课只教集合名词+就近/就前;深度挂账。
+- **单元2末挂账逐条**(见 UNIT2-batch-report.md 处置):L10 名词所有格深度 / L11 宾补深度+连词深度 / L12 be to+be about to / ~~L15 反身代词~~(**✅ 已就地补回 L14 G9,Aaron 反馈不推 U3**)/ L16 主谓一致深度。
+
+## L16 待裁决(单元末汇总报 Aaron;分歧已按裁决自决,非阻塞)
+1. 教材/同步主题分歧第三例(if 条件句 vs 主谓一致)→ 已按 [[am2-source-divergence-rule]] 自决:if条件句主考 + 主谓一致辅考(课文 police are)+ 深度挂账。第三次执行,记录供 Aaron 复核裁决落地质量。
+2. 词表官方9词→补至11(+polite/enjoy)对齐体量 → 采纳A。
+3. 关6 美英对照 parking lot/car park · downtown/city centre · license plate/number plate → 采纳:贴停车罚单场景。
+
+## L15 流水线步骤跟踪(间接引语主考)
+- [x] 1 三源扫描(scan-evidence-lesson15.md:**同主题讲深无分歧**——教材p72 Key structures=间接引语(He said that… He told me…,say/tell+that+时态后移) / 同步p99=宾语从句(that/if/whether)+过去将来时(would)=间接引语底层机制;逐页页眉;新思维间接引语章诚实标"未定点补扫";⚠️**发现同步 L14 章反身代词+教材 L14 himself→L14漏覆盖→补挂账**)
+- [x] 2 建考点清单(grammar-syllabus-lesson15.md:G1-G4+G7+G8间接引语14 + G5宾语从句if/whether 2 + G6过去将来时2 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)· [x] 4 课文定稿(11句·间接引语密集told me that…would/said that…was/could/had come + say·tell区分·11词/3语块全落·elevator/let go/raise/dollars美语化)
+- [x] 5 题库(关5=18[间接引语14+讲深4,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson15.md;首轮无抓修) · [x] 8 JSON+seed(am2_l15.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44/解释44/零串味14条未用"宾语从句"术语/G1-G8全覆盖/W11) · [x] 10 commit
+
+## L15 挂账(⚠️ 单元2末批次汇报核对)
+- **✅ 反身代词已闭环**(himself/themselves):同步 L14 章(印95-97 四、反身代词)+ 教材 L14 课文"he was English himself"(=①类);L15 扫描时发现 L14 漏覆盖 → Aaron 反馈"教材就在 L14 教,不推 U3",seed 未跑就地补回 L14 G9(+3 题,44→47),复验八项全绿。**教训**:①类岔题(课文实际出现)必须当课辅考,不得跨课延后。
+- **遗留继续挂账**:L10 名词所有格深度 / L11 宾补深度+连词深度 / L12 be to+be about to → 继续挂账,L16 单元末统一核对。
+
+## L15 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表官方5词→补至11(+office/business/firm/receive/extra/raise)对齐体量 → 采纳A。
+2. 同步同主题深料(宾语从句+过去将来时)=间接引语底层机制 → 取常用(if/whether转述疑问+would后移)并入讲深,细则(was going to/was to)不设题。
+3. 关6 美英对照 raise/rise · dollars/pounds · elevator/lift → 采纳:贴办公室加薪场景,加薪 raise 是本课好消息核心美语差。
+
+## L14 流水线步骤跟踪(过去完成时主考)
+- [x] 1 三源扫描(scan-evidence-lesson14.md:**同主题讲深无分歧**——教材p68 Key structures=过去完成时(After he had finished work he went home) / 同步p92 过去完成时用法(含 had planned/hoped 未实现计划、It was the…time that had done、一般过去vs过去完成比较);逐页页眉;**承接 L7/L9 排除留后**的 had told/had gathered→L14主考;新思维过去完成章诚实标"未定点补扫")
+- [x] 2 建考点清单(grammar-syllabus-lesson14.md:G1-G5+G8过去完成15 + G6 had planned 2 + G7 It was the…time 1 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)· [x] 4 课文定稿(11句·过去完成had left/had gotten/had reached/had thought + 一般过去混用·11词/3语块全落·on vacation/gotten/toward/learned美语化)
+- [x] 5 题库(关5=18[过去完成15+讲深3,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson14.md;首轮无抓修) · [x] 8 JSON+seed(am2_l14.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44/解释44/零串味14条/G1-G8全覆盖/W11) · [x] 10 commit
+
+## L14 挂账兑现 + 遗留(⚠️ 单元2末批次汇报核对)
+- **✅ 兑现清零**:L7 had told、L9 had gathered 排除留后的过去完成时 → L14 主考落地,清零。
+- **遗留继续挂账**:L10 名词所有格深度(教材 L13 SD 印62 也有 three hours' time/ten pounds' worth 同类素材;L14-L16 若非所有格主题则单元2末单开补充课处置)/ L11 宾补深度+连词深度 / L12 be to+be about to → 继续挂账,单元2末统一核对。
+
+## L14 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表官方7词→补至11(+village/drive/reach/suddenly)对齐体量 → 采纳A。
+2. 承接 L7/L9 过去完成时排除留后作 L14 主考 → 跨课账兑现,正确。
+3. 关6 美英对照 ride/lift · trip/journey · vacation/holiday → 采纳:贴搭便车旅行度假场景;课文保留 lift/journey 教官方词+卡教美语更常说。
+
+## L13 流水线步骤跟踪(将来进行时主考)
+- [x] 1 三源扫描(scan-evidence-lesson13.md:**单一主题三源一致无分歧**——教材p64 Key structures=将来进行时(What will you be doing tomorrow) / 同步p89 二、将来进行时基本用法 / 课文满篇will be+V-ing;逐页页眉;**承接 L12 挂账**将来进行时→L13主考;主考教材+同步双权威覆盖,新思维将来进行章诚实标"未定点补扫")
+- [x] 2 建考点清单(grammar-syllabus-lesson13.md:G1-G6将来进行14 + G7 by交通2 + G8现在进行复习2 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)· [x] 4 课文定稿(11句·将来进行时密集will be arriving/coming/meeting/singing/staying/trying + 现进对照are traveling·11词/3语块全落·downtown/line up/traveling美语化)
+- [x] 5 题库(关5=18[将来进行14+辅考4,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson13.md;首轮无抓修) · [x] 8 JSON+seed(am2_l13.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44/解释44/零串味14条/G1-G8全覆盖/W11) · [x] 10 commit
+
+## L13 挂账兑现 + 遗留(⚠️ 单元2末批次汇报核对)
+- **✅ 兑现清零**:L12 挂账的"将来进行时(will be doing)"在 L13 已作主考完整落地 → **L12 该项挂账清零**。
+- **遗留继续挂账**:L10 名词所有格深度 / L11 宾补深度+连词深度 / L12 be to+be about to → 继续挂账,单元2末统一核对。
+
+## L13 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表官方5词→补至11(+train/station/order/fan/usual/present)对齐体量 → 采纳A。
+2. 承接 L12 将来进行时挂账作 L13 主考 → 覆盖铁律兑现,正确。
+3. 关6 美英对照 downtown/town centre · line up/queue · traveling/travelling → 采纳:贴巡演粉丝排队场景 + -ing 拼写差。
+
+## L12 流水线步骤跟踪(一般将来时主考 + be going to/表将来的现在时辅考讲深)
+- [x] 1 三源扫描(scan-evidence-lesson12.md:**同主题讲深非分歧**——教材p60 Key structures=一般将来时(I'll see you tomorrow) / 同步p88-89=将来时各种表达(will/shall+be going to+be to+be about to+一般现在·现在进行表将来)+将来进行时;逐页页眉;主考由教材KeyStruct+同步双权威覆盖,新思维将来时章诚实标"未定点补扫";be to/be about to/将来进行时挂账)
+- [x] 2 建考点清单(grammar-syllabus-lesson12.md:G1-G5+G8一般将来时13 + G6 be going to 3 + G7表将来现在时2 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)· [x] 4 课文定稿(11句·一般将来时密集will sail/we'll meet/will be/will take part + be going to·11词/3语块全落·harbor/neighbor/sailboat美语化)
+- [x] 5 题库(关5=18[将来时13+讲深5,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson12.md;首轮无抓修) · [x] 8 JSON+seed(am2_l12.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44/解释44/零串味14条/G1-G8全覆盖/W11) · [x] 10 commit
+
+## L12 挂账(⚠️ 单元2末批次汇报必须核对清零)
+- **将来时进阶细则**(be to + 原形约定/命令 · be about to 即将 · **将来进行时 will be doing**):本课只教一般将来时(will/shall/'ll)+ be going to + 一般现在·现在进行表将来;进阶挂账,并入后续将来时/复合时态加深课。
+
+## L12 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表官方6词→补至11(+neighbor/boat/race/famous/away)对齐体量 → 采纳A。
+2. 同步同主题深料(be going to/be to/be about to/将来进行时)→ 取常用(be going to+表将来现在时)并入,进阶(be to/be about to/将来进行时)挂账。
+3. 关6 美英对照 harbor/harbour · neighbor/neighbour · sailboat/sailing boat → 采纳:贴港口帆船场景,-our→-or 拼写差 + 复合词差。
+
+## L11 流水线步骤跟踪(时态语态综合复习主考 + 连词/宾补辅考)
+- [x] 1 三源扫描(scan-evidence-lesson11.md:**主题分歧第二例**——教材p56 Key structures=Review KS2-10(时态语态综合复习) vs 同步p83-85=v.+sb+to do宾补+并列连词;逐页页眉;主考各时态回溯L2-L10已扫新思维章;连词/宾补辅考以同步p83-85为权威,新思维专题诚实标"未定点补扫";课文含asked him to lend + and/but/so → 同步双岔题均①类;**按裁决自决未停**[[am2-source-divergence-rule]])
+- [x] 2 建考点清单(grammar-syllabus-lesson11.md:G1-G6复习11 + G7连词4 + G8宾补3 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对裁决执行,结论写入清单头 ★)· [x] 4 课文定稿(11句·时态语态满篇混用was having/worked/is working/gets/has never borrowed + ask sb to do + and/but/so·11词/3语块全落·downtown restaurant/dollars/check/immediately美语化)
+- [x] 5 题库(关5=18[复习11+连词4+宾补3,认知3全复习框架] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson11.md;首轮无抓修;裁决执行核对✓) · [x] 8 JSON+seed(am2_l11.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44/解释44/零串味14条/G1-G8全覆盖/W11) · [x] 10 commit
+
+## L11 挂账(⚠️ 单元2末批次汇报必须核对清零)
+- **同步宾补深度细则**(let/make/have + sb + do 省 to · 变被动加 to · had better/would rather 省 to · do nothing but do):本课只教 ask/want/tell/allow sb to do 基础;深度挂账,并入后续非谓语/宾补语境课。
+- **同步连词深度细则**(连接性副词 however/therefore 位置灵活 · and·or 表条件=if 从句 · not only…but also · neither…nor):本课只教 and/but/for/so 基础;深度挂账,并入后续连词/复合句课。
+
+## L11 待裁决(单元末汇总报 Aaron;分歧已按裁决自决,非阻塞)
+1. 教材/同步主题分歧第二例(Review KS2-10 vs 宾补+连词)→ 已按 [[am2-source-divergence-rule]] 自决:时态语态复习主考 + 宾补/连词双辅考(均课文出现=①类)+ 深度挂账。第二次执行,记录供 Aaron 单元末复核裁决落地质量。
+2. 词表官方6词→补至11(+restaurant/borrow/lend/surprise/pay)对齐体量 → 采纳A。
+3. 关6 美英对照 dollars/pounds · check/bill · attorney/lawyer → 采纳:贴餐馆结账/律师场景;课文保留 lawyer/pounds→dollars 教官方词+落美语化。
+
+## L10 流水线步骤跟踪(被动语态主考 + 名词所有格辅考)
+- [x] 1 三源扫描(scan-evidence-lesson10.md:**主题分歧首例**——教材Key structures=被动语态 vs 同步L10=名词所有格;逐页页眉;被动=教材p52 KeyStruct + 新思维p127-131(渲染TOC定位第24-25周印117-121→PDF p127-131,读TX_p127页眉"被动语态构成"be+过去分词八时态表);所有格=教材注释②双重所有格 a friend of my father's + 同步p75-76;**STOP并报→Aaron裁决 A+覆盖补丁**[[am2-source-divergence-rule]])
+- [x] 2 建考点清单(grammar-syllabus-lesson10.md:G1-G6被动主考15 + G7-G8所有格辅考3 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对裁决执行,结论写入清单头 ★)· [x] 4 课文定稿(11句·被动全形态密集was made/is kept/was bought by/was damaged by/were broken/are allowed/is being repaired + 双重所有格 a friend of my dad's·11词/3语块全落·living room/grandpa/practice美语化)
+- [x] 5 题库(关5=18[被动15+所有格3,认知3全被动] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson10.md;首轮无抓修;裁决执行核对✓) · [x] 8 JSON+seed(am2_l10.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44=44/解释44/零串味/G1-G8全覆盖) · [x] 10 commit
+
+## L10 挂账(⚠️ 单元2末批次汇报必须核对清零)
+- **同步 L10 名词所有格深度细则**(无生命属格 today's paper/two pounds' weight/China's population、of 属格进阶、所有格意义主谓关系):本课只做基础辅考(3题+关6语言点);深度细则**并入后续含所有格语境的合适课次**(或单元2补充课)。单元2批次汇报时若仍无落点,则单开补充课处置——**不得让此知识点永久遗漏**(裁决 A+覆盖补丁铁律)。
+
+## L10 待裁决(单元末汇总报 Aaron;分歧已按裁决自决,非阻塞)
+1. 教材/同步主题分歧(被动 vs 所有格)→ 已按 [[am2-source-divergence-rule]] 自决:被动主考+所有格辅考+深度挂账。首次执行,记录供 Aaron 单元末复核裁决落地质量。
+2. 进行时被动(is being repaired,课文有)/完成被动/将来被动 → 排除只作展示,不设题(记 scan §四)。
+3. 关6 美英对照 living room/sitting room · grandpa/grandad · practice/practise(动词) → 采纳:贴古钢琴居家场景。
+
+## L9 流水线步骤跟踪(时间介词 at/in/on)
+- [x] 1 三源扫描(scan-evidence-lesson09.md:教材p48 KeyStruct[at/in/on/other+ExB]权威 / 同步p67 LESSON9[表示时间的介词at,in,on,during] / 新思维介词;逐页页眉;had gathered/would strike排除;三源一致)
+- [x] 2 建考点清单(grammar-syllabus-lesson09.md:G1-G8 / W1-W11 / C1-C6)
+- [x] 3 清单自审 · [x] 4 课文定稿(11句·at/in/on全覆盖·11词/3语块全落·on the weekend/sidewalk/line美语化)
+- [x] 5 题库(关5=18[认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson09.md;首轮无抓修) · [x] 8 JSON+seed(am2_l09.json→unit02.sql) · [x] 9 机器校验八项全绿 · [x] 10 commit
+
+## L9 待裁决(单元末汇总报;非阻塞已自决)
+1. 词表官方7词→补至11(+clock/midnight/strike/moment)对齐体量 → 采纳A。
+2. 过去完成时(had gathered)/过去将来时(would strike)课文偶现 → 排除留后(记 scan §四)。
+3. 关6 美英对照选 on the weekend/at the weekend(时间介词差,贴本课)+ sidewalk/line → 采纳。
+
+## L2 流水线步骤跟踪
+- [x] 1 三源扫描(scan-evidence-lesson02.md:教材p19-22 / 同步p33-37 / 新思维p110,112;主题一致无冲突)
+- [x] 2 建考点清单(grammar-syllabus-lesson02.md:G1-G9 / W1-W7 / C1-C7)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)
+- [x] 4 课文美语定稿(12句·过去叙事框+现在时对白·11词/语块/感叹句全落课文)
+- [x] 5 题库生产(关5=19[G1-9,认知3] / 关6=6卡6题 / 关7=4 / 关8=3 / 关9=3 / 关10=10 ≈ 41题)
+- [x] 6 逐题解释(am2_l02_explanations_final.md,44条)
+- [x] 7 双角色自审(coverage-lesson02.md §四;抓修2处:haveing重复/rain不可数)
+- [x] 8 JSON + seed(am2_l02.json;gen-book2-seed 重生成 unit01 含L1+L2,解释合并)
+- [x] 9 机器校验套件(validate_l02.mjs 八项全绿:44=44=44/解释44/零串味/G9全覆盖)
+- [x] 10 落盘 + commit(L2 docs 一 commit;seed SQL 归单元1批次)
+
+## L4 流水线步骤跟踪(现在完成时)
+- [x] 1 三源扫描(scan-evidence-lesson04.md:教材p27-28含Key structures权威状语清单 / 同步p42-44 / 新思维p119构成·p120状语·p122完成进行时排除;逐页页眉清单守"没找到也是断言";主题一致无冲突)
+- [x] 2 建考点清单(grammar-syllabus-lesson04.md:G1-G9 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)
+- [x] 4 课文美语定稿(11句·现在完成时叙事·11词/3语块全落课文·gotten/center/traveled 美语化)
+- [x] 5 题库生产(关5=18[G1-9,认知3] / 关6=6卡6题 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44题)
+- [x] 6 逐题解释(am2_l04_explanations_final.md,44条)
+- [x] 7 双角色自审(coverage-lesson04.md §四;首轮无抓修)
+- [x] 8 JSON + seed(am2_l04.json;gen-book2-seed 重生成 unit01 含L1-L4,解释合并)
+- [x] 9 机器校验套件(validate-am2-lesson.mjs am2_l04 八项全绿:44=44=44/解释44/零串味/G9全覆盖)
+- [x] 10 落盘 + commit(L4 docs 一 commit;seed SQL 归单元1批次)
+
+## L5 流水线步骤跟踪(现在完成时·续)
+- [x] 1 三源扫描(scan-evidence-lesson05.md:教材p31含Notes权威[up to now/a great many/from距离] / 同步p44(四)短暂动词+新闻→追问切换 / 新思维p120状语;逐页页眉;与L4互补无冲突)
+- [x] 2 建考点清单(grammar-syllabus-lesson05.md:G1-G8 / W1-W11 / C1-C6;与L4分工写清)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)
+- [x] 4 课文美语定稿(11句·现完+过去时天然对比·11词/3语块全落·store/downtown/mail美语化)
+- [x] 5 题库生产(关5=18[G1-8,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44题)
+- [x] 6 逐题解释(am2_l05_explanations_final.md,44条)
+- [x] 7 双角色自审(coverage-lesson05.md §四;首轮无抓修)
+- [x] 8 JSON + seed(am2_l05.json;gen-book2-seed 重生成 unit01 含L1-L5,解释合并)
+- [x] 9 机器校验套件(validate-am2-lesson.mjs am2_l05 八项全绿:44=44=44/解释44/零串味/G8全覆盖)
+- [x] 10 落盘 + commit(L5 docs 一 commit;seed SQL 归单元1批次)
+
+## L6 流水线步骤跟踪(冠词)
+- [x] 1 三源扫描(scan-evidence-lesson06.md:教材p36 KeyStruct[A.The and Some]权威 / 同步p49 LESSON6[一.冠词] / 新思维冠词专题;逐页页眉;三源一致无冲突)
+- [x] 2 建考点清单(grammar-syllabus-lesson06.md:G1-G8 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)
+- [x] 4 课文美语定稿(11句·冠词密集 an apartment/a beggar/some food/the sandwich/a cup of/专名·11词/3语块全落·apartment/neighbor/cookie美语化)
+- [x] 5 题库生产(关5=18[G1-8,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44题)
+- [x] 6 逐题解释(am2_l06_explanations_final.md,44条)
+- [x] 7 双角色自审(coverage-lesson06.md §四;首轮无抓修)
+- [x] 8 JSON + seed(am2_l06.json;gen-book2-seed 重生成 unit01 含L1-L6,解释合并)
+- [x] 9 机器校验套件(validate-am2-lesson.mjs am2_l06 八项全绿:44=44=44/解释44/零串味/G8全覆盖)
+- [x] 10 落盘 + commit(L6 docs 一 commit;seed SQL 归单元1批次)
+
+## L7 流水线步骤跟踪(过去进行时)
+- [x] 1 三源扫描(scan-evidence-lesson07.md:教材p40 KeyStruct[过去进行时8例句+ExD]权威 / 同步p56 LESSON7[一.过去进行时] / 新思维p118;逐页页眉;had told过去完成时/would排除;三源一致)
+- [x] 2 建考点清单(grammar-syllabus-lesson07.md:G1-G8 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)
+- [x] 4 课文美语定稿(11句·过去进行时8处密集+when背景突发+while双进行·11词/3语块全落·package对照/gray/airplane美语化)
+- [x] 5 题库生产(关5=18[G1-8,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44题)
+- [x] 6 逐题解释(am2_l07_explanations_final.md,44条)
+- [x] 7 双角色自审(coverage-lesson07.md §四;首轮无抓修)
+- [x] 8 JSON + seed(am2_l07.json;gen-book2-seed 重生成 unit01 含L1-L7,解释合并)
+- [x] 9 机器校验套件(validate-am2-lesson.mjs am2_l07 八项全绿:44=44=44/解释44/零串味/G8全覆盖)
+- [x] 10 落盘 + commit(L7 docs 一 commit;seed SQL 归单元1批次)
+
+## L8 流水线步骤跟踪(比较级和最高级)
+- [x] 1 三源扫描(scan-evidence-lesson08.md:教材p44 KeyStruct[比较+Note3不规则+ExC]权威 / 同步p58 LESSON8[比较级与最高级构成] / 新思维比较级;逐页页眉;as…as/进阶排除;三源一致)
+- [x] 2 建考点清单(grammar-syllabus-lesson08.md:G1-G8 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)
+- [x] 4 课文美语定稿(11句·比较级最高级8处全形态·11词/3语块全落·favorite/color/meter美语化)
+- [x] 5 题库生产(关5=18[G1-8,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44题)
+- [x] 6 逐题解释(am2_l08_explanations_final.md,44条)
+- [x] 7 双角色自审(coverage-lesson08.md §四;首轮无抓修)
+- [x] 8 JSON + seed(am2_l08.json;gen-book2-seed 重生成 unit01 含L1-L8,解释合并)
+- [x] 9 机器校验套件(validate-am2-lesson.mjs am2_l08 八项全绿:44=44=44/解释44/零串味/G8全覆盖)
+- [x] 10 落盘 + commit(L8 docs 一 commit;seed SQL 归单元1批次)
+
+## L8 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表官方5词→补至11(competition/garden/neat/path/wooden/pool + prize/flower/bridge/grow/win)→ 默认 **A**:对齐体量;favorite/color/meter 另作关6对照卡。
+2. as…as 同级比较 + much/even/a little+比较级进阶 + 倍数比较 → 默认 **排除**:本课只教规则/不规则构成+than+the…in 主线,进阶留后续比较加深课(记 scan §四)。
+3. 关6 美英对照 favorite/color/meter → 默认 **采纳**:三个高频 -or/-our 与 -er/-re 差,贴花园描写语境。
+
+## L7 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表官方13词→取11(detective/airport/expect/valuable/diamond/thief/steal/guard/parcel/precious/stone)→ 默认 **A**:main/airfield/sand 入课文但不单列词卡,控体量对齐 L1-L6。
+2. 过去完成时(had told,课文偶现)+ would(thieves would try)→ 默认 **排除**:不在教材 Key structures 考点,留后续课(记 scan §四)。
+3. 关6 美英对照选 package/parcel(课文保留 parcel 教官方词,卡教"美语更常说 package")→ 默认 **采纳**:既守官方词又落美语化。
+
+## L6 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表官方仅4词(beggar/food/pocket/call)→ 默认 **A**:补 apartment/knock/sandwich/meal/neighbor/cookie/street 凑11词(对齐体量;cookie/neighbor/apartment 兼作关6对照卡)。
+2. L5 讲深遗漏(way 短语 in the/on the/in this way、spare/to spare)→ 默认 **不回补**:非冠词主线,记备用;若单元真机反馈需要再议。
+3. 定冠词 the 的地理/习语细则(the United States / play the piano)→ 默认 **留后续冠词加深课**:本课只教四主线(初提a/再提the/泛指省/专名不用),不超载。
+
+## L5 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表弃 spare part(备件)→ 默认 **A**:美语化书店场景不宜"备件",改用 install/note/mile/private/own 凑11词(对齐L1-L4体量)。
+2. L4 讲深遗漏(receive vs take 易混、独立 since 题)→ 默认 **since 已由 L5 G4 接住**;receive/take 易混非现在完成时主线,不回补(记此备用,若单元真机反馈需要再议)。
+3. L5 与 L4 均现在完成时(同步合并 L4/5)→ 默认 **分工制**:L4 构成/gone-been/状语位置,L5 up to now/a great many/时态切换,零重复(已在两课 syllabus 写明)。
+
+## L4 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表偏薄(官方6词)→ 默认 **A**:补 letter/engineer/arrive/recently/already 凑11词(对齐L1-L3体量)。
+2. gotten 作美式过去分词入关6对照卡 → 默认 **采纳**:现在完成时特有美式差(has gotten / has got),thematically 贴切。
+3. 认知题达上限3(G2规则辨识/G3状语位置/G7 gone-been)→ 默认 **保留3**:现在完成时+过去分词是硬新概念,3道认知铺垫合理。
+
+## L2 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表偏薄(官方仅5词+多选2)→ 默认 **A**:补 breakfast/lunch/arrive/telephone 凑~11词(对齐L1体量)。
+2. 现在进行时+always表抱怨 → 默认 **A**:并入G7作补充例句,不单设题。
+3. G8 感叹句题量 → 默认 **2–3 题**(what+how 各覆盖)。
+
+## 跨课备用素材(扫到但不属当课)
+- **过去进行时**(was/were+V-ing,新思维 印108/PDF p117→p118 第22周;与一般过去时配合作"背景"):不入 L3;留给**同步书讲过去进行时的那一课**(届时并入讲深)。L1 课文 "was sitting/were talking" 是其已见例句。
+- **现在完成进行时**(has/have been V-ing,新思维 印112/PDF p122 第23周,页眉即"现在完成进行时 与 现在完成时比较"):不入 L4;留给后续讲现在完成进行时的课(届时可对比 has lived / has been living)。
+- **现在完成时延续 vs 影响两大用法**:同步 L4/5 合并讲现在完成时(p42 合并标题 "Lesson 4 / 5");L4 已覆盖构成+状语+经历+for/gone-been+vs过去时/进行时;若 L5《No wrong numbers》同步仍归现在完成时,L5 可侧重"延续用法 since+从句 / 与一般过去时更细对比",避免与 L4 重复(L5 扫描时按三源实际定,别预设)。
+
+## 证据纪律补充(2026-07-04 Aaron 点)
+- **"没找到"也是断言**:凡下"某书没有 X"的结论,凭证里必须附**逐页页眉清单(页码+各页标题)**证明逐页核过;没逐页核只能写"**未定位到**",不能写"没有"。反例:L3 v1 曾断言"新思维无简单过去时",实为漏读 p117(一般过去时用法就在渲染范围内)。见 [[assertions-need-evidence]]。
+
+## 单元汇报模板(硬规则)
+- **分关计数只留终值**:汇报必须逐关列明细(关5/6/7/8/9/10),且**加和恰等于总数**;禁止"早前口径"与"终值"两套数字并存(§三.7 对账延伸,2026-07-04 Aaron 点)。中途自审改题量后,回头把定稿/coverage/汇报的旧数一并改成终值。
+- 汇报含:课数 / 分关计数终值总表 / 解释数 / 卡数 / 校验八项结果 / 挂起清单 / 待裁决A/B/C / SQL 文件清单(分片) / 指定抽验 2 课(附直达链接)。
+
+## L3《Please send me a card》专项指引(还账课)
+- **接住 L1/L2 攒的账**:一般过去时是 L1、L2 两次裁决"留对应课次"的落点,对应课次=L3。建 L3 清单时,**前两课课文里已出现的过去式(went/got/said/were sitting/rang/arrived…)这回名正言顺入 G 表**,别当全新知识从零讲——可复用它们作已见例句,降低认知负荷。
+- 同步 L3 主题=一般过去时(已扫到 PDF p38 标题确认)。三源:教材 L3 + 同步 L3(p38 起)+ 新思维一般过去时专题。
+
+## 单元1 阻塞/升级项
+- (无)

@@ -1,0 +1,137 @@
+{
+  "id": "am2_l08",
+  "unit_no": 1,
+  "lesson_no": 8,
+  "title_en": "The best and the worst",
+  "title_cn": "最好的和最差的",
+  "grammar_focus": "比较级和最高级(规则-er/-est · 拼写去e/双写/变y · 多音节more/most · 不规则good-better-best/bad-worse-worst/many-more-most · 比较级+than · the+最高级+in · more+名词)",
+  "scene": "乔的花园全镇最美、年年获奖;比尔的更大更勤;而'我'总因最差的花园得个小奖",
+  "grammar_card": {
+    "title": "比一比:更…、最…(比较级和最高级)",
+    "intro": "本课讲怎么说'更…'(比较级)和'最…'(最高级)。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课例子"],
+      "rows": [
+        ["短词:加 -er(更…)/ 加 -est(最…);去e:large→larger;双写:big→bigger;变y:pretty→prettiest", "Bill's garden is bigger than Joe's."],
+        ["长词(两个以上音节):前面加 more(更…)/ most(最…),不加 -er/-est", "Joe's garden is more interesting. / the most beautiful garden"],
+        ["不规则(要单独记):good→better→best;bad→worse→worst;many/much→more→most", "I win a prize for the worst garden."],
+        ["比较级 + than(比…);the + 最高级 + in/of(在…中最…)", "Bill works harder than Joe. / the most beautiful garden in town"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "more 也能直接加名词,表示'更多的':more flowers = 更多的花", "mark": "more+名词" },
+      { "rule": "副词也有比较级:works harder(干得更卖力)/ runs faster(跑得更快)", "mark": "副词比较" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Whose garden is the most beautiful in town?",
+    "options": ["Joe's", "Bill's", "The writer's", "Nobody's"],
+    "answer_index": 0
+  },
+  "passage": "Joe Sanders has the most beautiful garden in our whole town. Joe's garden is my favorite of all. Every year, almost everyone enters for the \"Nicest Garden Competition.\" But Joe wins the prize every single time. Bill Frith's garden is bigger than Joe's, and Bill works much harder. He also grows more flowers and colorful vegetables. But Joe's garden is more interesting than Bill's. Joe has made the neatest paths and built a wooden bridge over a small pool. His garden is only ten meters wide, but it is the prettiest one around. I love gardens too, but I do not like hard work. Each year I enter for the competition as well, and I always win a little prize for the worst garden in town!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Joe Sanders has the most beautiful garden in our whole town.", "text_cn": "乔·桑德斯拥有我们全镇最漂亮的花园。" },
+    { "seq": 2, "speaker": null, "text_en": "Joe's garden is my favorite of all.", "text_cn": "乔的花园是我最喜欢的。" },
+    { "seq": 3, "speaker": null, "text_en": "Every year, almost everyone enters for the \"Nicest Garden Competition.\"", "text_cn": "每年,几乎人人都报名参加\"最佳花园竞赛\"。" },
+    { "seq": 4, "speaker": null, "text_en": "But Joe wins the prize every single time.", "text_cn": "但每次都是乔获奖。" },
+    { "seq": 5, "speaker": null, "text_en": "Bill Frith's garden is bigger than Joe's, and Bill works much harder.", "text_cn": "比尔·弗里斯的花园比乔的大,比尔也干得更卖力。" },
+    { "seq": 6, "speaker": null, "text_en": "He also grows more flowers and colorful vegetables.", "text_cn": "他还种了更多的花和五颜六色的蔬菜。" },
+    { "seq": 7, "speaker": null, "text_en": "But Joe's garden is more interesting than Bill's.", "text_cn": "可乔的花园比比尔的更有情趣。" },
+    { "seq": 8, "speaker": null, "text_en": "Joe has made the neatest paths and built a wooden bridge over a small pool.", "text_cn": "乔修了最整洁的小路,还在一个小水池上架了一座木桥。" },
+    { "seq": 9, "speaker": null, "text_en": "His garden is only ten meters wide, but it is the prettiest one around.", "text_cn": "他的花园只有十米宽,却是周围最漂亮的一个。" },
+    { "seq": 10, "speaker": null, "text_en": "I love gardens too, but I do not like hard work.", "text_cn": "我也喜欢花园,但我不喜欢干重活。" },
+    { "seq": 11, "speaker": null, "text_en": "Each year I enter for the competition as well, and I always win a little prize for the worst garden in town!", "text_cn": "每年我也报名参赛,却总因全镇最差的花园得个小奖!" }
+  ],
+  "words": [
+    { "word": "competition", "ipa": "/ˌkɑːmpəˈtɪʃn/", "pos": "n", "meaning_cn": "比赛,竞赛", "example": "Everyone enters for the competition." },
+    { "word": "garden", "ipa": "/ˈɡɑːrdn/", "pos": "n", "meaning_cn": "花园", "example": "Joe has the most beautiful garden." },
+    { "word": "neat", "ipa": "/niːt/", "pos": "adj", "meaning_cn": "整齐的,整洁的", "example": "Joe has made the neatest paths." },
+    { "word": "path", "ipa": "/pæθ/", "pos": "n", "meaning_cn": "小路,小径", "example": "He has made neat paths." },
+    { "word": "wooden", "ipa": "/ˈwʊdn/", "pos": "adj", "meaning_cn": "木头的", "example": "a wooden bridge over a pool" },
+    { "word": "pool", "ipa": "/puːl/", "pos": "n", "meaning_cn": "水池", "example": "a bridge over a small pool" },
+    { "word": "prize", "ipa": "/praɪz/", "pos": "n", "meaning_cn": "奖,奖品", "example": "I always win a little prize." },
+    { "word": "flower", "ipa": "/ˈflaʊər/", "pos": "n", "meaning_cn": "花", "example": "He grows more flowers." },
+    { "word": "bridge", "ipa": "/brɪdʒ/", "pos": "n", "meaning_cn": "桥", "example": "a wooden bridge over a pool" },
+    { "word": "grow", "ipa": "/ɡroʊ/", "pos": "v", "meaning_cn": "种植(grew/grown)", "example": "He grows more flowers and vegetables." },
+    { "word": "win", "ipa": "/wɪn/", "pos": "v", "meaning_cn": "赢,获得(won)", "example": "Joe wins the prize every time." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "比较级/最高级——规则 -er / -est" },
+    { "gp": "gp2", "name": "比较级/最高级——拼写(去e / 双写 / 变y)" },
+    { "gp": "gp3", "name": "比较级/最高级——多音节 more / most" },
+    { "gp": "gp4", "name": "比较级/最高级——不规则(good/bad/many)" },
+    { "gp": "gp5", "name": "比较级 + than(含副词比较)" },
+    { "gp": "gp6", "name": "the + 最高级 + in / of" },
+    { "gp": "gp7", "name": "more + 名词(更多的)" },
+    { "gp": "gp8", "name": "课文语言点(enter for / hard work)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Bill's garden is ___ than Joe's.\"(large 的比较级)", "options": ["larger", "more large", "largest", "largeer"] },
+    { "gp": "gp1", "stem": "\"She is ___ girl in the class.\"(tall 的最高级)", "options": ["the tallest", "the most tall", "taller", "most tallest"] },
+    { "gp": "gp2", "stem": "big 的比较级是:", "options": ["bigger", "biger", "more big", "bigest"] },
+    { "gp": "gp2", "stem": "nice 的最高级是:", "options": ["nicest", "niceest", "most nice", "nicist"] },
+    { "gp": "gp2", "stem": "happy 的比较级是:", "options": ["happier", "happyer", "more happy", "happiest"] },
+    { "gp": "gp3", "stem": "interesting 的比较级(两个以上音节的长词)是:", "options": ["more interesting", "interestinger", "most interesting", "interestingest"] },
+    { "gp": "gp3", "stem": "两个以上音节的长词,比较级和最高级怎么构成?", "options": ["前面加 more / most(不加 -er/-est)", "词尾加 -er/-est", "双写词尾再加 -er/-est", "把 y 变成 i"] },
+    { "gp": "gp4", "stem": "good 的比较级和最高级是:", "options": ["better / best", "gooder / goodest", "more good / most good", "well / bestest"] },
+    { "gp": "gp4", "stem": "bad 的最高级是:", "options": ["worst", "baddest", "most bad", "worse"] },
+    { "gp": "gp4", "stem": "good、bad、many 这几个词的比较级和最高级:", "options": ["是不规则的,要单独记", "直接加 -er/-est", "前面加 more/most", "保持不变"] },
+    { "gp": "gp5", "stem": "\"Bill works ___ Joe.\"(比乔更卖力)", "options": ["harder than", "harder as", "more hard than", "harder then"] },
+    { "gp": "gp5", "stem": "\"我的花园比你的大\"应说:", "options": ["My garden is bigger than yours.", "My garden is biggest than yours.", "My garden is more big than yours.", "My garden is bigger as yours."] },
+    { "gp": "gp6", "stem": "\"Joe has the most beautiful garden ___ our town.\"(在…中最)", "options": ["in", "of", "on", "for"] },
+    { "gp": "gp6", "stem": "选出正确的最高级句子:", "options": ["Mary's dress is the most expensive.", "Mary's dress is most expensive.", "Mary's dress is the more expensive.", "Mary's dress is expensivest."] },
+    { "gp": "gp7", "stem": "\"Bill grows ___ flowers than Joe.\"(更多的花)", "options": ["more", "most", "much", "the most"] },
+    { "gp": "gp7", "stem": "\"more flowers\" 里的 more 是什么意思?", "options": ["更多的(修饰名词)", "最多的", "更少的", "非常"] },
+    { "gp": "gp8", "stem": "enter for the competition 的意思是:", "options": ["报名参加比赛", "退出比赛", "赢得比赛", "观看比赛"] },
+    { "gp": "gp8", "stem": "\"I do not like hard work.\" 里 hard work 的意思是:", "options": ["辛苦的活儿,重活", "简单的活", "有趣的活", "没有活干"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"最喜欢的\"拼作:", "options": ["favorite", "favourite", "favrite", "favorit"] },
+    { "stem": "美语里\"颜色\"拼作:", "options": ["color", "colour", "collor", "colur"] },
+    { "stem": "美语里\"米(长度单位)\"用:", "options": ["meter", "metre", "meture", "meeter"] },
+    { "stem": "enter for 的意思是:", "options": ["报名参加", "退出", "赢得", "观看"] },
+    { "stem": "win a prize 的意思是:", "options": ["赢得奖品", "交报名费", "输掉比赛", "颁发奖品"] },
+    { "stem": "hard work 的意思是:", "options": ["辛苦的活儿", "简单的事", "开心的事", "一点点活"] }
+  ],
+  "contrast": [
+    { "us": "favorite", "uk": "favourite", "note_cn": "最喜欢的;美语 -or 结尾 favorite,英式 -our 结尾 favourite" },
+    { "us": "color", "uk": "colour", "note_cn": "颜色;美语 color,英式 colour;colorful / colourful" },
+    { "us": "meter", "uk": "metre", "note_cn": "米(长度);美语 meter,英式 metre" }
+  ],
+  "chunks": [
+    { "us": "enter for", "ipa": "/ˈentər fɔːr/", "example1": "Everyone enters for the competition.", "example1_cn": "人人都报名参加比赛。", "example2": "She entered for the singing contest.", "example2_cn": "她报名参加了歌唱比赛。" },
+    { "us": "win a prize", "ipa": "/wɪn ə praɪz/", "example1": "Joe wins a prize every year.", "example1_cn": "乔每年都得奖。", "example2": "I hope to win a prize.", "example2_cn": "我希望能得个奖。" },
+    { "us": "hard work", "ipa": "/hɑːrd wɜːrk/", "example1": "I do not like hard work.", "example1_cn": "我不喜欢干重活。", "example2": "A good garden takes hard work.", "example2_cn": "好花园需要辛勤劳动。" }
+  ],
+  "stage7_cloze": {
+    "context": "Joe has the ___1___ (beautiful) garden in town. Bill's garden is ___2___ (big) than Joe's, and Bill works ___3___ (hard). But I always win a prize for the ___4___ (bad) garden!",
+    "blanks": [
+      { "blank_no": 1, "options": ["most beautiful", "beautifulest", "more beautiful", "most beautifulest"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["bigger", "biggest", "more big", "biger"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["harder", "hardest", "more hard", "harderer"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["worst", "baddest", "most bad", "worse"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Whose garden is the most beautiful in town?", "options": ["Joe's", "Bill's", "The writer's", "Nobody's"] },
+    { "stem": "Why does Joe win the competition every year?", "options": ["Because his garden is the most beautiful", "Because he works the hardest", "Because his garden is the biggest", "Because he grows the most vegetables"] },
+    { "stem": "What prize does the writer win?", "options": ["A prize for the worst garden", "A prize for the best garden", "A prize for the most flowers", "No prize at all"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"这本书比那本更有趣\":", "options": ["This book is more interesting than that one.", "This book is interestinger than that one.", "This book is most interesting than that one.", "This book is more interesting as that one."] },
+    { "stem": "你想夸朋友\"你是我们班最高的\":", "options": ["You are the tallest in our class.", "You are the most tall in our class.", "You are tallest in our class.", "You are the taller in our class."] },
+    { "stem": "你想说\"我这次成绩比上次好\"(用比较级):", "options": ["My grades are better than last time.", "My grades are gooder than last time.", "My grades are best than last time.", "My grades are more good than last time."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "competition 的意思是:", "options": ["比赛,竞赛", "合作", "展览", "表演"] },
+    { "kind": "vocab", "stem": "neat 的意思是:", "options": ["整洁的", "肮脏的", "巨大的", "昂贵的"] },
+    { "kind": "grammar", "stem": "\"This tree is ___ than that one.\"(tall 的比较级)", "options": ["taller", "tallest", "more tall", "taler"] },
+    { "kind": "grammar", "stem": "\"This is the ___ movie I've ever seen.\"(good 的最高级)", "options": ["best", "goodest", "most good", "better"] },
+    { "kind": "scenario", "stem": "\"Your garden is the best in town!\" 是在:", "options": ["夸这个花园全镇最好", "说这个花园很差", "问花园在哪儿", "要买这个花园"] },
+    { "kind": "scenario", "stem": "别人说 \"Mine is bigger than yours.\" 意思是:", "options": ["他的比你的大", "他的和你的一样大", "你的比他的大", "他的是最大的"] },
+    { "kind": "reading", "stem": "Whose garden is bigger, Joe's or Bill's?", "options": ["Bill's garden is bigger", "Joe's garden is bigger", "They are the same size", "The writer's is bigger"], "passage": true },
+    { "kind": "reading", "stem": "Why does the writer win a prize every year?", "options": ["Because he has the worst garden", "Because he has the best garden", "Because he works the hardest", "Because he grows the most flowers"], "passage": true },
+    { "kind": "listening", "stem": "What has Joe built in his garden?", "options": ["A wooden bridge over a pool", "A tall stone wall", "A big house", "A swimming pool"], "audio": true },
+    { "kind": "listening", "stem": "Does the writer like hard work?", "options": ["No, he does not like hard work", "Yes, he loves it", "Yes, a little", "He never gardens"], "audio": true }
+  ]
+}

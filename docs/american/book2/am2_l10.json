@@ -1,0 +1,138 @@
+{
+  "id": "am2_l10",
+  "unit_no": 2,
+  "lesson_no": 10,
+  "title_en": "Not for jazz",
+  "title_cn": "不适于演奏爵士乐",
+  "grammar_focus": "被动语态(主考:be+过去分词 · 一般现在/过去被动 · by · 主动↔被动转换 · 否定疑问)+ 名词所有格(辅考:'s/of属格/双重所有格)",
+  "scene": "家里一架古钢琴 · 被来访客人用力弹爵士乐弄断了弦 · 现在不许碰、正由父亲的朋友修理",
+  "grammar_card": {
+    "title": "说\"某物被…\"(被动语态)",
+    "intro": "本课讲怎么说\"某物被别人怎么样了\"——被动语态。主角是动作的承受者。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课 / 常见例子"],
+      "rows": [
+        ["被动语态 = be + 过去分词(主角是'被…的那一方')", "It was made in Germany.(古钢琴被造)"],
+        ["一般现在被动:am / is / are + 过去分词", "The clavichord is kept in the living room."],
+        ["一般过去被动:was / were + 过去分词", "Two of the strings were broken."],
+        ["要指出'谁做的',用 by + 动作执行者", "It was bought by my grandpa."],
+        ["主动变被动:原来的宾语挪到前面当主角,动词变 be + 过去分词", "Workmen built the road. → The road was built by workmen."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "被动语态的时态靠改变 be 来体现,过去分词永远不变", "mark": "时态看 be" },
+      { "rule": "否定:be + not + 过去分词(are not allowed);疑问:把 be 提前(Was it made…?)", "mark": "否定 / 疑问" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What happened to the clavichord?",
+    "options": ["It was damaged by a visitor", "It was sold", "It was lost", "It was repainted"],
+    "answer_index": 0
+  },
+  "passage": "My family owns an old musical instrument called a clavichord. It was made in Germany over three hundred years ago. The clavichord is kept in our living room. It has belonged to my family for generations. It was bought by my grandpa a long time ago. Recently, it was damaged by a visitor. She wanted to practice jazz on it and struck the keys too hard. Two of the strings were broken, and my dad was shocked. Now none of us are allowed to touch it. It is being repaired by a friend of my dad's. Soon we will be able to play it again.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "My family owns an old musical instrument called a clavichord.", "text_cn": "我家有一件古老的乐器,叫古钢琴。" },
+    { "seq": 2, "speaker": null, "text_en": "It was made in Germany over three hundred years ago.", "text_cn": "它是三百多年前在德国制造的。" },
+    { "seq": 3, "speaker": null, "text_en": "The clavichord is kept in our living room.", "text_cn": "这架古钢琴摆放在我们的客厅里。" },
+    { "seq": 4, "speaker": null, "text_en": "It has belonged to my family for generations.", "text_cn": "它在我家已经传了好几代。" },
+    { "seq": 5, "speaker": null, "text_en": "It was bought by my grandpa a long time ago.", "text_cn": "它是我爷爷很久以前买下的。" },
+    { "seq": 6, "speaker": null, "text_en": "Recently, it was damaged by a visitor.", "text_cn": "最近,它被一位来访的客人弄坏了。" },
+    { "seq": 7, "speaker": null, "text_en": "She wanted to practice jazz on it and struck the keys too hard.", "text_cn": "她想用它练爵士乐,击键时用力过猛。" },
+    { "seq": 8, "speaker": null, "text_en": "Two of the strings were broken, and my dad was shocked.", "text_cn": "两根弦断了,我爸爸大为吃惊。" },
+    { "seq": 9, "speaker": null, "text_en": "Now none of us are allowed to touch it.", "text_cn": "现在我们谁也不许碰它。" },
+    { "seq": 10, "speaker": null, "text_en": "It is being repaired by a friend of my dad's.", "text_cn": "它正由我爸爸的一位朋友修理。" },
+    { "seq": 11, "speaker": null, "text_en": "Soon we will be able to play it again.", "text_cn": "很快我们就又能弹它了。" }
+  ],
+  "words": [
+    { "word": "instrument", "ipa": "/ˈɪnstrəmənt/", "pos": "n", "meaning_cn": "乐器;器械", "example": "an old musical instrument" },
+    { "word": "musical", "ipa": "/ˈmjuːzɪkl/", "pos": "adj", "meaning_cn": "音乐的", "example": "a musical instrument" },
+    { "word": "clavichord", "ipa": "/ˈklævɪkɔːrd/", "pos": "n", "meaning_cn": "古钢琴", "example": "an instrument called a clavichord" },
+    { "word": "recently", "ipa": "/ˈriːsntli/", "pos": "adv", "meaning_cn": "最近", "example": "Recently, it was damaged." },
+    { "word": "damage", "ipa": "/ˈdæmɪdʒ/", "pos": "v", "meaning_cn": "损坏", "example": "It was damaged by a visitor." },
+    { "word": "key", "ipa": "/kiː/", "pos": "n", "meaning_cn": "琴键", "example": "She struck the keys too hard." },
+    { "word": "string", "ipa": "/strɪŋ/", "pos": "n", "meaning_cn": "(乐器的)弦", "example": "Two of the strings were broken." },
+    { "word": "shock", "ipa": "/ʃɑːk/", "pos": "v", "meaning_cn": "使震惊", "example": "My dad was shocked." },
+    { "word": "allow", "ipa": "/əˈlaʊ/", "pos": "v", "meaning_cn": "允许,让", "example": "We are not allowed to touch it." },
+    { "word": "touch", "ipa": "/tʌtʃ/", "pos": "v", "meaning_cn": "触摸", "example": "None of us are allowed to touch it." },
+    { "word": "jazz", "ipa": "/dʒæz/", "pos": "n", "meaning_cn": "爵士乐", "example": "She wanted to practice jazz on it." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "被动语态——构成 be + 过去分词" },
+    { "gp": "gp2", "name": "被动语态——一般现在被动(is/are+过去分词)" },
+    { "gp": "gp3", "name": "被动语态——一般过去被动(was/were+过去分词)" },
+    { "gp": "gp4", "name": "被动语态——by + 动作执行者" },
+    { "gp": "gp5", "name": "被动语态——主动 ↔ 被动转换" },
+    { "gp": "gp6", "name": "被动语态——否定/疑问/辨识(时态看be)" },
+    { "gp": "gp7", "name": "名词所有格——'s / of 属格(辅考)" },
+    { "gp": "gp8", "name": "名词所有格——双重所有格(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "被动语态的谓语动词由什么构成?", "options": ["be + 过去分词", "be + 现在分词", "have + 过去分词", "情态动词 + 原形"] },
+    { "gp": "gp1", "stem": "\"The instrument ___ made in Germany.\"(一般过去被动,单数)", "options": ["was", "were", "is", "has"] },
+    { "gp": "gp2", "stem": "\"This song ___ by many people.\"(一般现在被动,单数)", "options": ["is sung", "sings", "is singing", "sang"] },
+    { "gp": "gp2", "stem": "\"Our papers ___ every morning.\"(deliver,一般现在被动,复数)", "options": ["are delivered", "deliver", "delivers", "is delivered"] },
+    { "gp": "gp3", "stem": "\"The bridge ___ in 1942.\"(build,一般过去被动)", "options": ["was built", "built", "was build", "is built"] },
+    { "gp": "gp3", "stem": "\"Two strings ___ by the visitor.\"(break,一般过去被动,复数)", "options": ["were broken", "was broken", "broke", "are broken"] },
+    { "gp": "gp3", "stem": "\"The clavichord ___ by my grandpa.\"(buy,一般过去被动)", "options": ["was bought", "bought", "was buy", "is bought"] },
+    { "gp": "gp4", "stem": "\"This bridge was built ___ prisoners of war.\"(指出谁建的)", "options": ["by", "with", "from", "of"] },
+    { "gp": "gp4", "stem": "被动句里要指出\"动作是谁做的\",用:", "options": ["by + 动作执行者", "with + 动作执行者", "for + 动作执行者", "to + 动作执行者"] },
+    { "gp": "gp5", "stem": "把 \"The police arrested the thief.\" 变成被动语态:", "options": ["The thief was arrested (by the police).", "The thief arrested the police.", "The thief was arrest.", "The police was arrested."] },
+    { "gp": "gp5", "stem": "主动句变被动句,原来的宾语要变成:", "options": ["被动句的主语(挪到前面)", "被动句的宾语", "by 后面的词", "保持不变"] },
+    { "gp": "gp5", "stem": "把 \"Workmen built the road.\" 变成被动语态:", "options": ["The road was built by workmen.", "The road built by workmen.", "The road was build by workmen.", "The workmen was built."] },
+    { "gp": "gp6", "stem": "\"我们不许碰它\"的正确说法(be not allowed):", "options": ["We are not allowed to touch it.", "We are not allow to touch it.", "We do not allowed to touch it.", "We not are allowed to touch it."] },
+    { "gp": "gp6", "stem": "下面哪一句是被动语态?", "options": ["The letter was written by Tom.", "Tom wrote the letter.", "Tom is writing a letter.", "Tom will write a letter."] },
+    { "gp": "gp6", "stem": "被动语态的时态,是靠改变哪个词来体现的?", "options": ["be 动词", "过去分词", "句子的主角", "by 后面的词"] },
+    { "gp": "gp7", "stem": "\"我姐姐的书\"用英语说:", "options": ["my sister's book", "my sister book's", "my sisters book", "the book of my sister's"] },
+    { "gp": "gp7", "stem": "\"这首歌的名字\"(无生命,常用 of):", "options": ["the name of the song", "the song's name of", "the song name", "of the song name"] },
+    { "gp": "gp8", "stem": "\"我父亲的一位朋友\"(双重所有格,'s 和 of 同用):", "options": ["a friend of my father's", "a friend of my father", "a father's friend of", "my father a friend"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"客厅\"用:", "options": ["living room", "sitting room", "hall", "lounge"] },
+    { "stem": "美语里\"爷爷(口语)\"用:", "options": ["grandpa", "grandad", "granddad", "grandfa"] },
+    { "stem": "动词\"练习\"的美式拼写是:", "options": ["practice", "practise", "practis", "practicing"] },
+    { "stem": "be made in 的意思是:", "options": ["在…制造 / 产自…", "被拿走", "被弄坏", "被展示"] },
+    { "stem": "belong to 的意思是:", "options": ["属于", "离开", "来自", "送给"] },
+    { "stem": "be allowed to 的意思是:", "options": ["被允许(做某事)", "被禁止", "被要求", "被邀请"] }
+  ],
+  "contrast": [
+    { "us": "living room", "uk": "sitting room", "note_cn": "客厅;美语 living room,英式 sitting room" },
+    { "us": "grandpa", "uk": "grandad", "note_cn": "爷爷/外公(口语);美语 grandpa,英式 grandad" },
+    { "us": "practice", "uk": "practise", "note_cn": "练习(动词);美语动词也拼 practice,英式动词拼 practise" }
+  ],
+  "chunks": [
+    { "us": "be made in", "ipa": "/bi meɪd ɪn/", "example1": "It was made in Germany.", "example1_cn": "它是德国制造的。", "example2": "This watch was made in Switzerland.", "example2_cn": "这块表是瑞士产的。" },
+    { "us": "belong to", "ipa": "/bɪˈlɔːŋ tə/", "example1": "It has belonged to my family for generations.", "example1_cn": "它在我家传了好几代。", "example2": "This book belongs to me.", "example2_cn": "这本书是我的。" },
+    { "us": "be allowed to", "ipa": "/bi əˈlaʊd tə/", "example1": "None of us are allowed to touch it.", "example1_cn": "我们谁也不许碰它。", "example2": "You are allowed to leave early today.", "example2_cn": "你今天可以早走。" }
+  ],
+  "stage7_cloze": {
+    "context": "The old clavichord ___1___ made in Germany. It ___2___ bought by my grandpa. Recently it ___3___ damaged by a visitor, and two strings ___4___ broken.",
+    "blanks": [
+      { "blank_no": 1, "options": ["was", "is", "were", "has"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["was", "is", "were", "did"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["was", "is", "were", "had"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["were", "was", "is", "has"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where was the clavichord made?", "options": ["In Germany", "In France", "In America", "In China"] },
+    { "stem": "What did the visitor try to do?", "options": ["Play jazz on it", "Clean it", "Sell it", "Fix it"] },
+    { "stem": "Who is repairing the clavichord now?", "options": ["A friend of the writer's dad", "The visitor", "The grandpa", "A music teacher"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"这座桥是1990年建的\"(强调桥,用被动):", "options": ["This bridge was built in 1990.", "This bridge built in 1990.", "This bridge was build in 1990.", "This bridge is build in 1990."] },
+    { "stem": "你想说\"我的自行车被偷了\"(被动):", "options": ["My bike was stolen.", "My bike stole.", "My bike was steal.", "My bike is stealing."] },
+    { "stem": "你想说\"这儿不许拍照\"(be not allowed):", "options": ["Photos are not allowed here.", "Photos not allow here.", "Photos do not allowed here.", "Photos are not allow here."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "damage 的意思是:", "options": ["损坏", "修理", "购买", "展示"] },
+    { "kind": "vocab", "stem": "allow 的意思是:", "options": ["允许", "拒绝", "禁止", "命令"] },
+    { "kind": "grammar", "stem": "\"The window ___ by the boy.\"(break,一般过去被动)", "options": ["was broken", "broke", "was break", "breaks"] },
+    { "kind": "grammar", "stem": "\"Rice ___ in many countries.\"(grow,一般现在被动)", "options": ["is grown", "grows", "is growing", "grew"] },
+    { "kind": "scenario", "stem": "\"This house was built 100 years ago.\" 的意思是:", "options": ["这房子是100年前建的", "这房子要建100年", "有人100年前住这儿", "这房子有100间房"] },
+    { "kind": "scenario", "stem": "\"a friend of my father's\" 的意思是:", "options": ["我父亲的一位朋友", "我父亲的所有朋友", "一位朋友的父亲", "我和父亲的朋友"] },
+    { "kind": "reading", "stem": "Why was the clavichord damaged?", "options": ["A visitor struck the keys too hard playing jazz", "It was too old", "It fell down", "Nobody cleaned it"], "passage": true },
+    { "kind": "reading", "stem": "Can the family touch the clavichord now?", "options": ["No, none of them are allowed to touch it", "Yes, anytime", "Yes, but carefully", "Only the grandpa can"], "passage": true },
+    { "kind": "listening", "stem": "Who bought the clavichord?", "options": ["The writer's grandpa", "The writer's dad", "A visitor", "A friend"], "audio": true },
+    { "kind": "listening", "stem": "What was broken?", "options": ["Two of the strings", "Two keys", "The whole instrument", "The lid"], "audio": true }
+  ]
+}

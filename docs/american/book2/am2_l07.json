@@ -1,0 +1,137 @@
+{
+  "id": "am2_l07",
+  "unit_no": 1,
+  "lesson_no": 7,
+  "title_en": "Too late",
+  "title_cn": "为时太晚",
+  "grammar_focus": "过去进行时(was/were+V-ing · 用法过去某时正在进行 · when背景+突发一般过去 · while双进行 · vs一般过去时 · 否定/疑问)",
+  "scene": "侦探们在机场守候一批贵重钻石包裹 · 打开却发现里面全是石头和沙子",
+  "grammar_card": {
+    "title": "说\"过去正在做\"的事(过去进行时)",
+    "intro": "本课讲怎么说\"过去某个时刻正在进行\"的动作。全用本课句子举例。",
+    "table": {
+      "headers": ["用法 / 构成", "本课例子"],
+      "rows": [
+        ["构成:was/were + 动词-ing(I/he/she/it → was;you/we/they → were)", "The detectives were waiting. / A guard was opening the parcel."],
+        ["用法:表示过去某个时刻正在进行的动作", "At that moment, everyone was holding their breath."],
+        ["背景(过去进行时,历时较长)+ 突发(一般过去时,短暂),常用 when 连接", "Some detectives were watching when the plane landed."],
+        ["while + 两个过去进行时,表示两件事同时进行", "While one guard was keeping watch, another was opening the parcel."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "常用时间连词:when(当…时)/ while(在…期间,后面多接进行时)/ as(一边…一边)/ just as(正当…时)", "mark": "时间连词" },
+      { "rule": "'正在进行的背景'用过去进行时,'突然发生的一下'用一般过去时;两者常在同一句里配合", "mark": "背景 vs 突发" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was inside the parcel in the end?",
+    "options": ["Stones and sand", "Diamonds", "Gold coins", "Money"],
+    "answer_index": 0
+  },
+  "passage": "It was a cold, rainy afternoon at the airport. The detectives were waiting near the gate all afternoon. They were expecting a shipment of valuable diamonds from overseas. That morning, a caller warned them that thieves were planning to steal it. When the plane landed, some detectives were watching the main hall. Others were standing outside on the airfield. Two workers carried the parcel into a small office. While one guard was keeping watch at the door, another was opening the parcel. Everyone was holding their breath. Then a detective slowly cut the precious parcel open. To their surprise, it was full of gray stones and sand!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "It was a cold, rainy afternoon at the airport.", "text_cn": "那是机场一个又冷又下雨的下午。" },
+    { "seq": 2, "speaker": null, "text_en": "The detectives were waiting near the gate all afternoon.", "text_cn": "侦探们在登机口附近等了整整一下午。" },
+    { "seq": 3, "speaker": null, "text_en": "They were expecting a shipment of valuable diamonds from overseas.", "text_cn": "他们正等着一批从海外运来的贵重钻石。" },
+    { "seq": 4, "speaker": null, "text_en": "That morning, a caller warned them that thieves were planning to steal it.", "text_cn": "那天早上,有人打电话警告他们:小偷正打算偷走这批钻石。" },
+    { "seq": 5, "speaker": null, "text_en": "When the plane landed, some detectives were watching the main hall.", "text_cn": "飞机降落时,一些侦探正盯着主大厅。" },
+    { "seq": 6, "speaker": null, "text_en": "Others were standing outside on the airfield.", "text_cn": "另一些则站在外面的停机坪上。" },
+    { "seq": 7, "speaker": null, "text_en": "Two workers carried the parcel into a small office.", "text_cn": "两名工作人员把包裹搬进了一间小办公室。" },
+    { "seq": 8, "speaker": null, "text_en": "While one guard was keeping watch at the door, another was opening the parcel.", "text_cn": "一名警卫在门口守着,另一名则在打开那个包裹。" },
+    { "seq": 9, "speaker": null, "text_en": "Everyone was holding their breath.", "text_cn": "所有人都屏住了呼吸。" },
+    { "seq": 10, "speaker": null, "text_en": "Then a detective slowly cut the precious parcel open.", "text_cn": "接着,一名侦探慢慢把那个珍贵的包裹割开。" },
+    { "seq": 11, "speaker": null, "text_en": "To their surprise, it was full of gray stones and sand!", "text_cn": "令他们吃惊的是,里面装的全是灰色的石头和沙子!" }
+  ],
+  "words": [
+    { "word": "detective", "ipa": "/dɪˈtektɪv/", "pos": "n", "meaning_cn": "侦探", "example": "The detectives were waiting at the airport." },
+    { "word": "airport", "ipa": "/ˈerpɔːrt/", "pos": "n", "meaning_cn": "机场", "example": "It was a rainy afternoon at the airport." },
+    { "word": "expect", "ipa": "/ɪkˈspekt/", "pos": "v", "meaning_cn": "期待,等候", "example": "They were expecting a shipment of diamonds." },
+    { "word": "valuable", "ipa": "/ˈvæljuəbl/", "pos": "adj", "meaning_cn": "贵重的", "example": "a shipment of valuable diamonds" },
+    { "word": "diamond", "ipa": "/ˈdaɪəmənd/", "pos": "n", "meaning_cn": "钻石", "example": "a shipment of valuable diamonds" },
+    { "word": "thief", "ipa": "/θiːf/", "pos": "n", "meaning_cn": "小偷(复数 thieves)", "example": "Thieves were planning to steal it." },
+    { "word": "steal", "ipa": "/stiːl/", "pos": "v", "meaning_cn": "偷(stole/stolen)", "example": "Thieves were planning to steal the diamonds." },
+    { "word": "guard", "ipa": "/ɡɑːrd/", "pos": "n", "meaning_cn": "警卫;守卫", "example": "One guard was keeping watch at the door." },
+    { "word": "parcel", "ipa": "/ˈpɑːrsl/", "pos": "n", "meaning_cn": "包裹(美语常说 package)", "example": "Two workers carried the parcel inside." },
+    { "word": "precious", "ipa": "/ˈpreʃəs/", "pos": "adj", "meaning_cn": "珍贵的", "example": "He cut the precious parcel open." },
+    { "word": "stone", "ipa": "/stoʊn/", "pos": "n", "meaning_cn": "石头", "example": "It was full of gray stones and sand." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "过去进行时——构成 was/were + V-ing(主谓一致)" },
+    { "gp": "gp2", "name": "过去进行时——V-ing 拼写(run→running / have→having)" },
+    { "gp": "gp3", "name": "过去进行时——用法(过去某时正在进行)" },
+    { "gp": "gp4", "name": "过去进行时——when(背景过去进行 + 突发一般过去)" },
+    { "gp": "gp5", "name": "过去进行时——while + 双过去进行(同时)" },
+    { "gp": "gp6", "name": "过去进行时 vs 一般过去时(was doing / did)" },
+    { "gp": "gp7", "name": "过去进行时——否定 / 疑问" },
+    { "gp": "gp8", "name": "课文语言点(keep guard / to their surprise / be full of)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The detectives ___ waiting near the gate.\"(主语复数)", "options": ["were", "was", "are", "is"] },
+    { "gp": "gp1", "stem": "\"A guard ___ opening the parcel.\"(主语单数)", "options": ["was", "were", "is", "did"] },
+    { "gp": "gp2", "stem": "\"He was ___ to the gate.\"(run 的 -ing 形式)", "options": ["running", "runing", "ranning", "runned"] },
+    { "gp": "gp2", "stem": "\"They were ___ dinner at eight.\"(have 的 -ing 形式)", "options": ["having", "haveing", "haiving", "haved"] },
+    { "gp": "gp2", "stem": "\"I was ___ on the grass.\"(sit 的 -ing 形式)", "options": ["sitting", "siting", "sittting", "seating"] },
+    { "gp": "gp3", "stem": "\"At ten last night, I ___ a movie.\"(那个时刻正在看)", "options": ["was watching", "watched", "watch", "am watching"] },
+    { "gp": "gp3", "stem": "过去进行时表示的是:", "options": ["过去某个时刻正在进行的动作", "将来要做的动作", "经常做的习惯", "已经做完的动作"] },
+    { "gp": "gp4", "stem": "\"The detectives were watching ___ the plane landed.\"(飞机降落这一突发动作)", "options": ["when", "while", "for", "during"] },
+    { "gp": "gp4", "stem": "\"I was having breakfast ___ the phone suddenly rang.\"", "options": ["when", "while", "as soon", "during"] },
+    { "gp": "gp5", "stem": "\"___ one guard was keeping watch, another was opening the box.\"(两件事同时进行)", "options": ["While", "When suddenly", "Because", "After"] },
+    { "gp": "gp5", "stem": "while 表示\"在…期间\",后面常接:", "options": ["过去进行时(正在进行的动作)", "一般将来时", "祈使句", "现在完成时"] },
+    { "gp": "gp6", "stem": "\"我昨晚十点正在看电视\"应说:", "options": ["I was watching TV at ten last night.", "I watched TV at ten last night.", "I watch TV at ten last night.", "I have watched TV at ten last night."] },
+    { "gp": "gp6", "stem": "was watching(过去进行时) 和 watched(一般过去时) 的区别是:", "options": ["was watching 强调当时正在进行;watched 只说'做过'", "was watching 强调做完了;watched 强调正在进行", "两个意思完全一样", "was watching 表示将来"] },
+    { "gp": "gp7", "stem": "\"他当时没在睡觉\"的正确说法:", "options": ["He wasn't sleeping.", "He didn't sleeping.", "He wasn't slept.", "He not was sleeping."] },
+    { "gp": "gp7", "stem": "\"你当时在做什么?\"的正确说法:", "options": ["What were you doing?", "What did you doing?", "What you were doing?", "What was you doing?"] },
+    { "gp": "gp8", "stem": "keep guard / keep watch 的意思是:", "options": ["守卫,站岗", "放弃看守", "偷偷藏起来", "查看时间"] },
+    { "gp": "gp8", "stem": "to their surprise 的意思是:", "options": ["令他们吃惊的是", "在他们看来", "为了给他们惊喜", "让他们放心"] },
+    { "gp": "gp8", "stem": "be full of 的意思是:", "options": ["装满…,充满…", "缺少…", "远离…", "属于…"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"包裹\"常说:", "options": ["package", "parcel", "pack", "packet"] },
+    { "stem": "美语里\"灰色\"拼作:", "options": ["gray", "grey", "graye", "greay"] },
+    { "stem": "美语里\"飞机\"用:", "options": ["airplane", "aeroplane", "airplan", "planeair"] },
+    { "stem": "keep guard 的意思是:", "options": ["守卫,站岗", "放弃看守", "偷偷藏起来", "查看时间"] },
+    { "stem": "to their surprise 的意思是:", "options": ["令他们吃惊的是", "在他们家里", "为了惊喜", "使他们放心"] },
+    { "stem": "be full of 的意思是:", "options": ["装满,充满", "缺少", "来自", "离开"] }
+  ],
+  "contrast": [
+    { "us": "package", "uk": "parcel", "note_cn": "包裹;美语常说 package,英式用 parcel(课文保留 parcel 以教官方词)" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;美语拼 gray,英式拼 grey" },
+    { "us": "airplane", "uk": "aeroplane", "note_cn": "飞机;美语 airplane,英式 aeroplane" }
+  ],
+  "chunks": [
+    { "us": "keep guard / keep watch", "ipa": "/kiːp ɡɑːrd/", "example1": "One guard was keeping watch at the door.", "example1_cn": "一名警卫在门口守着。", "example2": "The soldiers kept guard all night.", "example2_cn": "士兵们守卫了整夜。" },
+    { "us": "to one's surprise", "ipa": "/tə wʌnz sərˈpraɪz/", "example1": "To their surprise, it was full of stones.", "example1_cn": "令他们吃惊的是,里面全是石头。", "example2": "To my surprise, he passed the test.", "example2_cn": "令我吃惊的是,他通过了考试。" },
+    { "us": "be full of", "ipa": "/bi fʊl əv/", "example1": "The parcel was full of stones and sand.", "example1_cn": "包裹里装满了石头和沙子。", "example2": "The room was full of people.", "example2_cn": "房间里挤满了人。" }
+  ],
+  "stage7_cloze": {
+    "context": "The detectives ___1___ waiting at the airport. When the plane ___2___, some of them ___3___ watching the main hall. While one guard ___4___ keeping watch, another opened the parcel.",
+    "blanks": [
+      { "blank_no": 1, "options": ["were", "was", "are", "did"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["landed", "was landing", "lands", "land"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["were", "was", "are", "had"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["was", "were", "is", "did"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where were the detectives waiting?", "options": ["At the airport", "At the bank", "At the train station", "At home"] },
+    { "stem": "What were they expecting?", "options": ["A shipment of valuable diamonds", "A box of gold coins", "A letter", "A package of books"] },
+    { "stem": "What was inside the parcel in the end?", "options": ["Stones and sand", "Diamonds", "Gold coins", "Money"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "别人问你昨晚八点在干嘛,你想说\"我当时在做作业\":", "options": ["I was doing my homework.", "I did my homework.", "I do my homework.", "I am doing my homework."] },
+    { "stem": "你想说\"我洗澡的时候电话响了\":", "options": ["The phone rang while I was taking a shower.", "The phone rings while I take a shower.", "The phone was ringing while I took a shower.", "The phone rang while I take a shower."] },
+    { "stem": "你想问朋友\"我打电话时你正在做什么\":", "options": ["What were you doing when I called?", "What did you do when I called you?", "What you were doing when I call?", "What were you do when I called?"] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "detective 的意思是:", "options": ["侦探", "小偷", "警卫", "司机"] },
+    { "kind": "vocab", "stem": "precious 的意思是:", "options": ["珍贵的", "廉价的", "普通的", "破旧的"] },
+    { "kind": "grammar", "stem": "\"The children ___ playing in the yard.\"(过去进行时,复数)", "options": ["were", "was", "are", "did"] },
+    { "kind": "grammar", "stem": "\"I ___ TV when you called.\"(当时正在看)", "options": ["was watching", "watched", "watch", "am watching"] },
+    { "kind": "scenario", "stem": "\"I was cooking when the doorbell rang.\" 意思是:", "options": ["门铃响时我正在做饭", "我做完饭门铃才响", "我一边做饭一边按门铃", "门铃响我才开始做饭"] },
+    { "kind": "scenario", "stem": "别人问 \"What were you doing at noon?\" 是在问:", "options": ["中午那会儿你正在做什么", "中午你打算做什么", "中午你做完了什么", "你中午几点吃饭"] },
+    { "kind": "reading", "stem": "Why were the detectives at the airport?", "options": ["They were guarding a parcel of diamonds", "They were catching a plane", "They were meeting a friend", "They were on vacation"], "passage": true },
+    { "kind": "reading", "stem": "What was the parcel really full of?", "options": ["Gray stones and sand", "Diamonds", "Gold coins", "Old letters"], "passage": true },
+    { "kind": "listening", "stem": "What were two workers doing when the plane stopped?", "options": ["Carrying the parcel to an office", "Flying the plane", "Selling diamonds", "Guarding the gate"], "audio": true },
+    { "kind": "listening", "stem": "How did the detectives feel at the end?", "options": ["Surprised", "Happy", "Bored", "Sleepy"], "audio": true }
+  ]
+}

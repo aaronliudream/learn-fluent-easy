@@ -109,6 +109,12 @@
 - 词10全用官方(explorer/flight/serious/seem/crash/sack/clear/aircraft/endless/plain)。关6美英=airplane/flashlight/gas/round trip(飞机·探险·旅行主题)。
 - 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit06.sql`(**L41-43=132**)。⏭️ L44。
 
+## ✅ U6 L44《Through the forest》(穿过森林)· 🟢全绿(零黄警)
+- 主教材 Key structures = **动名词 -ing(Gerund)**(KS20):动名词作主语(Eating is a pleasure)、介词后用动名词(keen on cycling / without saying / for not letting)、动词后接动名词(start/keep/enjoy/mind + doing)、动名词的否定(not + doing)。
+- 裁决(自决):动名词 gp1-4 主考;so…that/such…that gp5 + need+doing(被动含义)gp6 + run after/catch up with gp7 + out of breath gp8 辅考(均课文①类)。
+- 词10(forest/risk/picnic/edge/strap/possession/breath/contents/mend 官方9 + fright 补1)。关6美英=purse/cookie/candy/sneakers(野餐·追逐主题)。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit06.sql`(**L41-44=176**)。⏭️ L45。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

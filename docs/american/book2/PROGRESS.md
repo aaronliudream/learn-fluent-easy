@@ -133,6 +133,12 @@
 - 词10(thirsty/ghost/haunt/block/furniture/whisky/suggest/shake/accept 官方9 + noise 补1)。关6美英=bar/whiskey/apartment/faucet(酒馆·房产主题;**bar=美语 pub、whiskey=美语拼**)。
 - 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit06.sql`(**L41-47=308**)。⏭️ L48(U6末课)。
 
+## ✅ U6 L48《Did you want to tell me something?》(你想对我说什么吗?)· 🟢全绿 · **U6 末课**
+- ⚠️ 本课**无 Key structures 页**——难点页是 **Special difficulties: Review SD26-45(易混词辨析 Words often confused)**。故主考=间接引语疑问句(ask whether/how,课文核心,呼应 L39)+ 易混词辨析(SD26-45 复习)。
+- 裁决(自决):间接引语 gp1-2(whether/if + how/what+陈述语序);易混词 too/very gp3、steal/rob gp4、which/who gp5、continuously/continually gp6、past/passed gp7、deny/refuse gp8。全运用题(选正确词/形式),元语法定义题=0。
+- 词10(pull/collect/collection/nod/meanwhile 官方 + dentist/tooth/tongue/worried/hole 补)。关6美英=cotton balls/candy/drugstore/dentist's office(牙医·药棉主题;**cotton balls=美语、cotton wool=英式**)。
+- 44题;机器12项🟢(首验红1:s9seq2 解释含"主语"串味→改"不再倒装/陈述语序"复验全绿)。seed→`american_am2_seed_unit06.sql`(**L41-48=352,U6 整单元 8 课完成**)。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

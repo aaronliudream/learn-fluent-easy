@@ -169,7 +169,6 @@ import QuizKeyboardShortcuts from "@/components/QuizKeyboardShortcuts";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
 import useActiveHeartbeat from "@/hooks/useActiveHeartbeat";
 import { AIAssistantProvider } from "@/contexts/AIAssistantContext";
-import GlobalAIAssistant from "@/components/assistant/GlobalAIAssistant";
 import RouteContextRegistrar from "@/components/assistant/RouteContextRegistrar";
 import UserAvatarMenu from "@/components/UserAvatarMenu";
 import GuestQuotaWall from "@/components/GuestQuotaWall";
@@ -583,7 +582,7 @@ const App = () => (
         {/* <FeedbackWidgetGate /> */}
         <InstallPrompt />
         <QuizKeyboardShortcuts />
-        <GlobalAIAssistant />
+        {/* 小月 AI 顾问浮动入口已下线(Aaron 2026-07-05:图标+功能一并去掉);组件/边缘函数保留壳,如需恢复重新挂载即可 */}
         <RouteContextRegistrar />
         <UserAvatarMenu />
         <GuestQuotaWall />

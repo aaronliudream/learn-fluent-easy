@@ -1,0 +1,133 @@
+{
+  "id": "am2_l28",
+  "unit_no": 4,
+  "lesson_no": 28,
+  "title_en": "No parking",
+  "title_cn": "禁止停车",
+  "grammar_focus": "现在完成时复习(主考:have/has + 过去分词 · since + 过去时间点/从句 · for + 一段时间 · up till now/so far 至今 · ever/just/already 位置 · have been to 去过 vs have gone to 去了没回)+ 定语从句 who/which/that/whose(辅考:指人/指物/所属,作主语不可省)",
+  "scene": "贾斯珀·怀特刚在城里买了新房,可自从搬进去,就老有人把车停在他家大门外,他自己的车一次都开不进车库;'禁止停车'的牌子毫无效果,于是他在门上装了一个丑陋的美杜莎石雕头像,盼着能把车和车主都变成石头——不过至今还没一个变成石头呢!",
+  "grammar_card": {
+    "title": "说'到现在已经…'(现在完成时)",
+    "intro": "本课复习现在完成时——have/has + 过去分词,表示到现在为止已发生或完成的事。注意:since 接过去的时间点,for 接一段时间;up till now / so far 表'至今'。全用本课句子举例。",
+    "table": {
+      "headers": ["规则 / 构成", "本课 / 常见例子"],
+      "rows": [
+        ["构成:have/has + 过去分词", "He has just bought a new house."],
+        ["since + 过去时间点(自从)", "I have not seen Tim since 1994."],
+        ["for + 一段时间(持续多久)", "Tim has been abroad for three years."],
+        ["up till now / so far(至今为止)", "Up till now he has won five prizes."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "been to = 去过(回来了);gone to = 去了(还没回):I have been to New York.", "mark": "been to vs gone to" },
+      { "rule": "定语从句:who/that 指人、which 指物、whose 表所属;作主语不能省:the people who believe…", "mark": "who/which/that" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is Jasper White's problem?",
+    "options": ["People keep parking cars outside his gate", "He has lost his house key", "His car has broken down", "He can't find a parking sign"],
+    "answer_index": 0
+  },
+  "passage": "Jasper White is one of those rare people who believes in ancient myths. He has just bought a new house in the city, but ever since he moved in, he has had trouble with cars and their owners. When he returns home at night, he always finds that someone has parked a car outside his gate. Because of this, he has not been able to get his own car into his garage even once. Jasper has put up 'No Parking' signs outside his gate, but these have not had any effect. Now he has put an ugly stone head over the gate. It is one of the ugliest faces I have ever seen. I asked him what it was and he told me that it was Medusa, the Gorgon. Jasper hopes that she will turn cars and their owners to stone. But none of them has been turned to stone yet!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Jasper White is one of those rare people who believes in ancient myths.", "text_cn": "贾斯珀·怀特是少有的相信古代神话的人之一。" },
+    { "seq": 2, "speaker": null, "text_en": "He has just bought a new house in the city, but ever since he moved in, he has had trouble with cars and their owners.", "text_cn": "他刚在城里买下一所新房子,但自从搬进去后,就和汽车及车主们发生了摩擦。" },
+    { "seq": 3, "speaker": null, "text_en": "When he returns home at night, he always finds that someone has parked a car outside his gate.", "text_cn": "当他夜里回到家时,总是发现有人把车停在他家大门外。" },
+    { "seq": 4, "speaker": null, "text_en": "Because of this, he has not been able to get his own car into his garage even once.", "text_cn": "为此,他甚至一次也没能把自己的车开进车库。" },
+    { "seq": 5, "speaker": null, "text_en": "Jasper has put up 'No Parking' signs outside his gate, but these have not had any effect.", "text_cn": "贾斯珀曾把几块'禁止停车'的牌子挂在大门外边,但没有任何效果。" },
+    { "seq": 6, "speaker": null, "text_en": "Now he has put an ugly stone head over the gate. It is one of the ugliest faces I have ever seen.", "text_cn": "现在他把一个丑陋的石雕头像放在了大门上边,这是我见过的最丑陋的头像之一。" },
+    { "seq": 7, "speaker": null, "text_en": "I asked him what it was and he told me that it was Medusa, the Gorgon.", "text_cn": "我问他那是什么,他告诉我那是蛇发女怪美杜莎。" },
+    { "seq": 8, "speaker": null, "text_en": "Jasper hopes that she will turn cars and their owners to stone. But none of them has been turned to stone yet!", "text_cn": "贾斯珀希望她能把汽车和车主们都变成石头。但到目前为止还没有一个变成石头呢!" }
+  ],
+  "words": [
+    { "word": "rare", "ipa": "/rer/", "pos": "adj", "meaning_cn": "罕见的,稀有的", "example": "one of those rare people" },
+    { "word": "ancient", "ipa": "/ˈeɪnʃənt/", "pos": "adj", "meaning_cn": "古代的,古老的", "example": "ancient myths" },
+    { "word": "myth", "ipa": "/mɪθ/", "pos": "n", "meaning_cn": "神话故事", "example": "believes in ancient myths" },
+    { "word": "trouble", "ipa": "/ˈtrʌbəl/", "pos": "n", "meaning_cn": "麻烦,难题", "example": "trouble with cars" },
+    { "word": "effect", "ipa": "/ɪˈfekt/", "pos": "n", "meaning_cn": "结果,效果", "example": "have not had any effect" },
+    { "word": "garage", "ipa": "/ɡəˈrɑːʒ/", "pos": "n", "meaning_cn": "车库", "example": "get his car into his garage" },
+    { "word": "gate", "ipa": "/ɡeɪt/", "pos": "n", "meaning_cn": "大门", "example": "outside his gate" },
+    { "word": "Medusa", "ipa": "/məˈduːsə/", "pos": "n", "meaning_cn": "美杜莎(希腊神话蛇发女怪)", "example": "it was Medusa, the Gorgon" },
+    { "word": "Gorgon", "ipa": "/ˈɡɔːrɡən/", "pos": "n", "meaning_cn": "戈耳工(蛇发女怪)", "example": "Medusa, the Gorgon" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "现在完成时构成:have/has + 过去分词" },
+    { "gp": "gp2", "name": "since + 过去时间点/从句(自从…以来)" },
+    { "gp": "gp3", "name": "for + 一段时间(持续多久)" },
+    { "gp": "gp4", "name": "up till now / so far(至今为止)" },
+    { "gp": "gp5", "name": "ever / just / already 的位置" },
+    { "gp": "gp6", "name": "have been to(去过)vs have gone to(去了没回)" },
+    { "gp": "gp7", "name": "定语从句 who / which(指人/指物,辅考)" },
+    { "gp": "gp8", "name": "定语从句 whose / whom(所属/作宾语,辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He ___ just bought a new house.\"(现在完成时,主语单数)", "stem_cn": "他刚买了一所新房子。", "options": ["has", "have", "is", "did"] },
+    { "gp": "gp1", "stem": "\"The signs ___ not had any effect.\"(现在完成时,主语复数)", "stem_cn": "这些牌子没起任何作用。", "options": ["have", "has", "are", "did"] },
+    { "gp": "gp1", "stem": "\"He hasn't found a parking spot ___.\"(否定句尾'还没':用于现在完成)", "stem_cn": "他还没找到停车位。", "options": ["yet", "already", "ever", "since"] },
+    { "gp": "gp2", "stem": "\"I have not seen him ___ 1994.\"(接过去的时间点:自从)", "stem_cn": "自从1994年以来我没见过他。", "options": ["since", "for", "in", "at"] },
+    { "gp": "gp2", "stem": "\"She has lived here ___ she was a child.\"(接从句:自从…以来)", "stem_cn": "她从小就住在这里。", "options": ["since", "for", "when", "during"] },
+    { "gp": "gp3", "stem": "\"Tim has been abroad ___ three years.\"(接一段时间:达三年)", "stem_cn": "蒂姆出国已三年了。", "options": ["for", "since", "in", "during"] },
+    { "gp": "gp3", "stem": "\"They ___ in this city for five years.\"(住了五年:现在完成)", "stem_cn": "他们在这座城市住了五年了。", "options": ["have lived", "lived", "are living", "live"] },
+    { "gp": "gp4", "stem": "\"___, he has won five prizes.\"(至今为止)", "stem_cn": "至今为止,他已得了五个奖。", "options": ["Up till now", "Long ago", "Next year", "Yesterday"] },
+    { "gp": "gp4", "stem": "\"I have been to New York three times ___.\"(迄今、到目前为止)", "stem_cn": "迄今我已去过纽约三次。", "options": ["so far", "ago", "then", "last year"] },
+    { "gp": "gp5", "stem": "\"It is one of the ugliest faces I have ___ seen.\"(表'曾经',放助动词和过去分词之间)", "stem_cn": "这是我见过的最丑的脸之一。", "options": ["ever", "yet", "ago", "since"] },
+    { "gp": "gp5", "stem": "\"He has ___ bought a new house.\"(表'刚刚',放中间)", "stem_cn": "他刚买了一所新房子。", "options": ["just", "yet", "ago", "since"] },
+    { "gp": "gp5", "stem": "\"I have ___ finished my homework.\"(表'已经',放中间)", "stem_cn": "我已经写完作业了。", "options": ["already", "yet", "ever", "since"] },
+    { "gp": "gp6", "stem": "\"I have ___ to New York twice.\"(去过又回来了)", "stem_cn": "我去过纽约两次。", "options": ["been", "gone", "went", "being"] },
+    { "gp": "gp6", "stem": "\"He isn't here; he has ___ to the store.\"(去了还没回来)", "stem_cn": "他不在;他去商店了。", "options": ["gone", "been", "went", "being"] },
+    { "gp": "gp7", "stem": "\"The people ___ believe in myths are rare.\"(指人,作主语)", "stem_cn": "相信神话的人很少见。", "options": ["who", "which", "whose", "where"] },
+    { "gp": "gp7", "stem": "\"This is the hotel ___ was built last year.\"(指物,作主语)", "stem_cn": "这就是去年建的那家酒店。", "options": ["which", "who", "whose", "whom"] },
+    { "gp": "gp8", "stem": "\"The pilot ___ plane landed safely was not hurt.\"(表'那个人的',所属)", "stem_cn": "那位飞机安全着陆的飞行员没有受伤。", "options": ["whose", "who", "which", "whom"] },
+    { "gp": "gp8", "stem": "\"The man ___ you met yesterday is an actor.\"(指人,作宾语)", "stem_cn": "你昨天遇见的那个人是演员。", "options": ["whom", "which", "whose", "where"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"停车场\"常说:", "options": ["parking lot", "car park", "parking place", "stop yard"] },
+    { "stem": "美语里 get 的过去分词(have ___)常用:", "options": ["gotten", "got", "getted", "gat"] },
+    { "stem": "rare 的意思是:", "options": ["罕见的,稀有的", "常见的", "便宜的", "巨大的"] },
+    { "stem": "ancient 的意思是:", "options": ["古代的,古老的", "现代的", "未来的", "短暂的"] },
+    { "stem": "trouble 的意思是:", "options": ["麻烦,难题", "乐趣", "礼物", "休息"] },
+    { "stem": "effect 的意思是:", "options": ["结果,效果", "原因", "错误", "开始"] }
+  ],
+  "contrast": [
+    { "us": "parking lot", "uk": "car park", "note_cn": "停车场;美语 parking lot,英式 car park" },
+    { "us": "gotten", "uk": "got", "note_cn": "get 的过去分词;美语 have gotten,英式 have got" },
+    { "us": "downtown", "uk": "city centre", "note_cn": "市中心;美语 downtown,英式 city centre" }
+  ],
+  "chunks": [
+    { "us": "put up", "ipa": "/pʊt ʌp/", "example1": "He has put up 'No Parking' signs.", "example1_cn": "他张贴了'禁止停车'的牌子。", "example2": "They put up a new sign.", "example2_cn": "他们挂了一块新牌子。" },
+    { "us": "ever since", "ipa": "/ˈevər sɪns/", "example1": "Ever since he moved in, he has had trouble.", "example1_cn": "自从他搬进来,就一直有麻烦。", "example2": "I've liked music ever since then.", "example2_cn": "从那以后我就一直喜欢音乐。" },
+    { "us": "be able to", "ipa": "/bi ˈeɪbl tə/", "example1": "He has not been able to get his car in.", "example1_cn": "他一直没能把车开进去。", "example2": "I am able to help you.", "example2_cn": "我能帮你。" },
+    { "us": "one of the + 最高级", "ipa": "/wʌn əv ðə/", "example1": "It is one of the ugliest faces I have ever seen.", "example1_cn": "这是我见过的最丑的脸之一。", "example2": "She is one of the best students.", "example2_cn": "她是最优秀的学生之一。" }
+  ],
+  "stage7_cloze": {
+    "context": "Jasper ___1___ just bought a new house. Ever since he moved in, he ___2___ trouble with cars and their owners. He ___3___ not been able to park his own car even once. The 'No Parking' signs ___4___ not had any effect.",
+    "blanks": [
+      { "blank_no": 1, "options": ["has", "have", "is", "did"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["has had", "have had", "had", "is having"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["has", "have", "was", "did"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["have", "has", "was", "did"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What has Jasper White just done?", "options": ["He has bought a new house in the city", "He has sold his old car", "He has moved to the countryside", "He has built a new garage"] },
+    { "stem": "Why can't Jasper get his car into his garage?", "options": ["Someone always parks a car outside his gate", "His garage is too small", "His car is broken", "He has lost his keys"] },
+    { "stem": "What has Jasper put over his gate?", "options": ["An ugly stone head of Medusa", "A new 'No Parking' sign", "A security camera", "A bright light"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我从1994年就没见过他了\"(自从某时间点用 since + 现在完成时):", "options": ["I haven't seen him since 1994.", "I haven't seen him for 1994.", "I didn't see him since 1994.", "I don't see him since 1994."] },
+    { "stem": "你想说\"他们相识十年了\"(持续一段时间用 for + 现在完成时):", "options": ["They have known each other for ten years.", "They have known each other since ten years.", "They knew each other for ten years.", "They know each other for ten years."] },
+    { "stem": "你想说\"你去过纽约吗?\"(问经历用 Have you been to):", "options": ["Have you been to New York?", "Have you gone to New York?", "Did you been to New York?", "Have you ever go to New York?"] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "myth 的意思是:", "options": ["神话故事", "历史事实", "科学理论", "一首诗"] },
+    { "kind": "vocab", "stem": "effect 的意思是:", "options": ["结果,效果", "原因", "计划", "错误"] },
+    { "kind": "grammar", "stem": "\"I have ___ seen such an ugly face.\"(表'从未',放中间)", "stem_cn": "我从没见过这么丑的脸。", "options": ["never", "ever", "yet", "already"] },
+    { "kind": "grammar", "stem": "\"He is the man ___ car was stolen.\"(表'那个人的':所属)", "stem_cn": "他就是那个车被偷的人。", "options": ["whose", "who", "which", "whom"] },
+    { "kind": "scenario", "stem": "\"He has not been able to get his car in.\" 这句话的意思是:", "options": ["他一直没能把车开进去。", "他不想把车开进去。", "他把车开出去了。", "他正在把车开进去。"] },
+    { "kind": "scenario", "stem": "\"These signs have not had any effect.\" 这句话的意思是:", "options": ["这些牌子没起任何作用。", "这些牌子很有用。", "这些牌子被拿走了。", "这些牌子是新的。"] },
+    { "kind": "reading", "stem": "Why has Jasper put a stone head over his gate?", "options": ["He hopes it will turn cars and their owners to stone", "He thinks it looks beautiful", "It was a gift from a friend", "It keeps the rain off"], "passage": true },
+    { "kind": "reading", "stem": "Have the 'No Parking' signs worked?", "options": ["No, they have not had any effect", "Yes, no one parks there now", "Yes, but only at night", "No, they were stolen"], "passage": true },
+    { "kind": "listening", "stem": "What is Jasper White's problem?", "options": ["People keep parking cars outside his gate", "He can't afford a new car", "His neighbors are too noisy", "He has lost his house"], "audio": true },
+    { "kind": "listening", "stem": "Has anyone been turned to stone yet?", "options": ["No, no one has been turned to stone yet", "Yes, several car owners have", "Yes, one car was", "No, but the cars have"], "audio": true }
+  ]
+}

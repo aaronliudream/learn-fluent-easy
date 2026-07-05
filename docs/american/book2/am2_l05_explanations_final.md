@@ -65,24 +65,31 @@ cover 在这里是"越过、走完(一段距离)"的意思。✓ The bird covere
 
 ### s6 seq4 | ans: 到目前为止
 up to now = 到目前为止(和现在完成时连用)。✓ Up to now, he has sent many messages.
+顺带记:很久以前 = long ago;马上 = right away / at once;从今以后 = from now on.
 
 ### s6 seq5 | ans: 许多(修饰可数名词复数)
 a great many = 许多,后面接可数名词复数。✓ a great many requests.
+顺带记:一点点 = a little;大约 = about / around;一半 = half.
 
 ### s6 seq6 | ans: 想出一个主意
 come up with an idea = 想出一个主意/办法。✓ He has come up with a clever idea.
+顺带记:追上某人 = catch up with sb;放弃主意 = give up an idea;站起来 = stand up.
 
 ### s7 seq1 | ans: opened
 有明确的过去时间 last month,用一般过去时 opened,不能用现在完成时。✓ He opened a second store last month.
+✗ has opened:有明确过去时间 last month,用一般过去时,不用现在完成;✗ opens:过去的事不用一般现在;✗ opening:缺助动词,单独不能作谓语.
 
 ### s7 seq2 | ans: installed
 "还没安装"用现在完成时否定 hasn't installed;install 的过去分词是 installed。✓ The phone company hasn't installed a line yet.
+✗ install:hasn't 后要用过去分词 installed;✗ installing:现在分词不作完成时;✗ installs:完成时用过去分词,不用单三 installs.
 
 ### s7 seq3 | ans: has
 主语 he 用 has + 过去分词。✓ He has bought ten pigeons.
+✗ have:主语 he 用 has,不用 have;✗ had:报新消息用现在完成 has,不用过去完成 had;✗ is:完成时用 has+过去分词,不用 is.
 
 ### s7 seq4 | ans: Up to
 "到目前为止"是 Up to now,这里填 Up to。✓ Up to now, Jack has sent many messages.
+✗ For:"到现在为止"是 up to now,没有 for now 这种说法;✗ Since:since 后接时间点,不构成"up to now";✗ In:搭配不对,应是 up to now.
 
 ### s8 seq1 | ans: Ten pigeons
 课文说 He has just bought ten pigeons,Jack 买了十只鸽子来送信。
@@ -104,9 +111,11 @@ come up with an idea = 想出一个主意/办法。✓ He has come up with a cle
 
 ### s10 seq1 | ans: 鸽子
 pigeon = 鸽子。✓ He has bought ten pigeons.
+顺带记:鸽笼 = pigeon loft;麻雀 = sparrow;信封 = envelope.
 
 ### s10 seq2 | ans: 距离
 distance = 距离;cover the distance = 走完这段距离。✓ The bird covered the distance.
+顺带记:方向 = direction;速度 = speed;地址 = address.
 
 ### s10 seq3 | ans: has sent
 句首 Up to now 提示用现在完成时;主语 he 用 has + 过去分词 sent。✓ Up to now, he has sent many letters.

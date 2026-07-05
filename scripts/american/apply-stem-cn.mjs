@@ -163,6 +163,21 @@ const CN = {
     '"I ___ finished my homework."(现在完成时,主语 I)': "我已经完成了作业。",
     '"He has ___ to the store; he\'ll be back soon."(去了还没回)': "他去商店了,很快就回来。",
   },
+  am2_l05: {
+    '"He ___ started his own service."(主语 He)': "他已经办起了自己的业务。",
+    '"They ___ sent many messages."(主语 They)': "他们已经送出了许多信息。",
+    '"___ , Jack has sent many orders."(到目前为止)': "到目前为止,Jack 已经送了许多订单。",
+    '"Up to now, Mr. Scott ___ a great many messages."(填正确时态)': "到目前为止,斯科特先生已经送了许多信息。",
+    '"He has sent a great many ___ ."(许多信息)': "他已经送了许多信息。",
+    '"I haven\'t heard from him ___ he left."(自从)': "自从他离开后,我就没有他的消息了。",
+    '"—Have you seen the new movie? —Yes, I have. —___ ?"(接着问什么时候看的)': "——你看过那部新电影了吗?——看过。——你什么时候看的?",
+    '"He has just ___ ten pigeons."(buy 的过去分词)': "他刚买了十只鸽子。",
+    '"Jack has ___ his own service."(begin 的过去分词)': "Jack 已经办起了自己的业务。",
+    '"He has ___ many messages by pigeon."(send 的过去分词)': "他用鸽子送了许多信息。",
+    '"The new store is only two miles ___ ."(表示"离这儿有多远")': "新店离这儿只有两英里。",
+    '"Up to now, he ___ many letters."(填正确时态)': "到目前为止,他已经寄了许多信。",
+    '"Last week I ___ a new phone."(有 last week)': "上周我买了部新手机。",
+  },
 };
 
 let total = 0, patched = 0;

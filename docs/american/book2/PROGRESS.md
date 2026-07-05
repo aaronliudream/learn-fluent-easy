@@ -155,6 +155,12 @@
 - 词10(ride/excursion/conductor/view/prefer/passenger/countryside/shock/expect/matter;expect 正好是 SD26 考点)。关6美英=subway/sidewalk(交通街道主题)+contrast round trip·gas;美语化 travelling→traveling。
 - 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit07.sql`(**L49+L50=88**)。⏭️ L51。
 
+## ✅ U7 L51《Reward for virtue》(对美德的奖赏)· 🟢全绿(零黄) · 教材 Unit 3
+- 主考(实读 Key structures 页 doc280-281)= **KS27 What happened? 一般过去时**(过去发生的动作;不规则过去式 got/began/wrote/paid/rang/led/hid + 过去被动 was sent/was burnt)。Special difficulties **SD27 易混动词 raise/rise、lay/lie、beat/win**。
+- 裁决(自决):gp1 一般过去时不规则过去式(6题)+ gp2 过去被动(2题)= KS27 主考;gp3 raise/rise + gp4 lay/lie + gp5 beat/win = SD27 主考级辅;gp6 so…that 结果 + go on a diet = 课文辅考。全运用题,元语法定义题=0。cloze 用教材 Exercise B(paid/rang/led/hid 不规则过去式)。
+- 词10(reward/virtue/diet/forbid/hurriedly/embarrass/guiltily/strict/occasionally + 补 parcel)。关6美英=candy/cookie(节食/食物主题)+contrast potato chips·dessert;美语化 passage sweets→candy(两处)。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit07.sql`(**L49+L50+L51=132**)。⏭️ L52。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

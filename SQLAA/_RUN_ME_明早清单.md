@@ -9,7 +9,7 @@
 ## 📌 本批变化(2026-07-05 session · L39–L46)
 - 🔴 **需跑** `american_am2_seed_unit05.sql` —— 本批加了 **L39、L40**(整单元 8 课齐),期望 **+352**(整单元;若之前跑过 L33–38 则本次净增 L39+L40 的 +88,幂等重跑整包无害)。
 - 🔴 **需跑** `american_am2_seed_unit06.sql` —— 本批 **整单元 L41–L48 完成**,期望 **+352**(8 课×44)。
-- 🔴 **需跑** `american_am2_seed_unit07.sql` —— 本批新增 **L49、L50**(U7 起,教材 Unit 3),期望 **+88**(2 课×44)。
+- 🔴 **需跑** `american_am2_seed_unit07.sql` —— 本批新增 **L49、L50、L51**(U7 起,教材 Unit 3),期望 **+132**(3 课×44)。
 - 🔴 **需跑(重跑)** `american_am2_seed_unit01.sql` —— 本批改了 **L02 s5#8**:原"这句话表示"翻译题正确项中文把 tonight(今晚)虚化成"近期",与句子/点评不一致→**转成运用题**(中文场景"我打算今晚过来看你"→选 I'm coming over…tonight),今晚↔tonight 对齐。期望 **+0**(改题不增,幂等 UPDATE 覆盖)。
 - ⏭️ **无需重跑** `unit02 / unit03 / unit04` —— 本批**未改**其内容,时间戳不会变;跑了也无害(幂等),但可跳过。
 
@@ -30,7 +30,7 @@
 | 4 | `american_am2_seed_unit04.sql` | +352(8课×44) | am2 U4 **整单元 L25–32 完成**(L32 Shopping made easy as…as同级比较+量词·分歧第六例),全过机器12项🟢 | 无 |
 | 5 | `american_am2_seed_unit05.sql` | +352(8课×44) | am2 U5 **整单元 L33–40 完成**(L40 Food and talk 虚拟条件句 if+过去式/would原形/be用were·KS16),全过机器12项🟢 | 无 |
 | 6 | `american_am2_seed_unit06.sql` | +352(8课×44) | am2 U6 **整单元 L41–48 完成**(KS17-20 + KS10/21/34被动 + KS22动词介词 + KS36-45综合复习 + SD26-45易混词),全过机器12项🟢 | 无 |
-| 7 | `american_am2_seed_unit07.sql` | +88(2课×44,续增) | am2 U7 L49(The end of a dream 复合句连词)+ L50(Taken for a ride 疑问词+不定式/as/after/比较级than/as far as),机器12项🟢;L51-56 陆续追加 | 无 |
+| 7 | `american_am2_seed_unit07.sql` | +132(3课×44,续增) | am2 U7 L49(复合句连词)+ L50(KS26 一般现在/状态动词 + SD26 lose·loose·miss/expect·wait for)+ L51(KS27 一般过去时 + SD27 raise·rise/lay·lie/beat·win),机器12项🟢;L52-56 陆续追加 | 无 |
 
 > **✅ unit03/04 已解除暂缓**:24 道🔴元语法定义题全部转成运用题,全 27 课第11项 =0、十二项全绿。
 > **🟡 待 Aaron 复核(非阻断,不影响上面照跑)**:`REVIEWAA/american-instructional-design-audit.md` 里的 ~98 道"概念辨认🟡"(如"关于X正确的是""police 后面动词用")按三维闸门属中间地带,已过机器闸(非红),留你复核是否进一步降级;要改也是幂等 UPDATE,不影响先跑。

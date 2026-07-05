@@ -22,8 +22,24 @@
 | 课 | 单元 | 标题 | 状态 | 校验八项 | 备注 |
 |---|---|---|---|---|---|
 | L9 | 2 | A cold welcome | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 时间介词 at/in/on;三源 教材p48 KeyStruct + 同步p67 LESSON9 + 新思维介词 已核;过去完成had gathered/过去将来would strike排除;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
-| L10 | 2 | (待扫描确认标题) | ⬜ 下一课 | — | NCE2 L10=Not for jazz;L10三源扫描确认标题+主题,不凭记忆 |
-| L11–L16 | 2 | — | ⬜ 未开工 | — | — |
+| L10 | 2 | Not for jazz | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | **主题分歧首例**:教材Key structures=被动语态(主考15题) vs 同步L10=名词所有格(辅考3题)→ Aaron裁决 A+覆盖补丁([[am2-source-divergence-rule]]);三源 教材p52 KeyStruct被动 + 教材注释②双重所有格 + 同步p75-76所有格 + 新思维被动p127-131(页眉核过);进行/完成/将来被动展示不设题;**同步所有格深度细则挂账(见下,单元末清零)**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L11 | 2 | (待扫描确认标题) | ⬜ 下一课 | — | NCE2 L11=One good turn deserves another;L11三源扫描确认标题+主题,不凭记忆 |
+| L12–L16 | 2 | — | ⬜ 未开工 | — | — |
+
+## L10 流水线步骤跟踪(被动语态主考 + 名词所有格辅考)
+- [x] 1 三源扫描(scan-evidence-lesson10.md:**主题分歧首例**——教材Key structures=被动语态 vs 同步L10=名词所有格;逐页页眉;被动=教材p52 KeyStruct + 新思维p127-131(渲染TOC定位第24-25周印117-121→PDF p127-131,读TX_p127页眉"被动语态构成"be+过去分词八时态表);所有格=教材注释②双重所有格 a friend of my father's + 同步p75-76;**STOP并报→Aaron裁决 A+覆盖补丁**[[am2-source-divergence-rule]])
+- [x] 2 建考点清单(grammar-syllabus-lesson10.md:G1-G6被动主考15 + G7-G8所有格辅考3 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对裁决执行,结论写入清单头 ★)· [x] 4 课文定稿(11句·被动全形态密集was made/is kept/was bought by/was damaged by/were broken/are allowed/is being repaired + 双重所有格 a friend of my dad's·11词/3语块全落·living room/grandpa/practice美语化)
+- [x] 5 题库(关5=18[被动15+所有格3,认知3全被动] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson10.md;首轮无抓修;裁决执行核对✓) · [x] 8 JSON+seed(am2_l10.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44=44/解释44/零串味/G1-G8全覆盖) · [x] 10 commit
+
+## L10 挂账(⚠️ 单元2末批次汇报必须核对清零)
+- **同步 L10 名词所有格深度细则**(无生命属格 today's paper/two pounds' weight/China's population、of 属格进阶、所有格意义主谓关系):本课只做基础辅考(3题+关6语言点);深度细则**并入后续含所有格语境的合适课次**(或单元2补充课)。单元2批次汇报时若仍无落点,则单开补充课处置——**不得让此知识点永久遗漏**(裁决 A+覆盖补丁铁律)。
+
+## L10 待裁决(单元末汇总报 Aaron;分歧已按裁决自决,非阻塞)
+1. 教材/同步主题分歧(被动 vs 所有格)→ 已按 [[am2-source-divergence-rule]] 自决:被动主考+所有格辅考+深度挂账。首次执行,记录供 Aaron 单元末复核裁决落地质量。
+2. 进行时被动(is being repaired,课文有)/完成被动/将来被动 → 排除只作展示,不设题(记 scan §四)。
+3. 关6 美英对照 living room/sitting room · grandpa/grandad · practice/practise(动词) → 采纳:贴古钢琴居家场景。
 
 ## L9 流水线步骤跟踪(时间介词 at/in/on)
 - [x] 1 三源扫描(scan-evidence-lesson09.md:教材p48 KeyStruct[at/in/on/other+ExB]权威 / 同步p67 LESSON9[表示时间的介词at,in,on,during] / 新思维介词;逐页页眉;had gathered/would strike排除;三源一致)

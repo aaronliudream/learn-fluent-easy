@@ -1,0 +1,138 @@
+{
+  "id": "am2_l30",
+  "unit_no": 4,
+  "lesson_no": 30,
+  "title_en": "Football or polo?",
+  "title_cn": "足球还是水球?",
+  "grammar_focus": "冠词 the/a/some/any + 专有名词(主考:肯定句用 some、否定疑问用 any · 河流/海洋/山脉/含普通名词的国名前用 the:the Wayle/the Thames/the Pacific/the Alps/the United States · 人名/城市/单个国名不加冠词)+ so…that 结果状语从句 / 方向介词 toward / that 定语从句(辅考·课文①类)",
+  "scene": "威尔河横穿'我'家附近的公园。上星期天天气暖和,'我'像往常一样坐在河岸边;有孩子在岸上玩,有人在河上划船。突然一个孩子狠狠踢出一球,球朝一只驶过的小船飞去,重重打在船上那人身上,他差点掉进水里。'我'回头找孩子,却一个也不见——全跑光了!那人明白过来后大笑,冲孩子们喊话,把球扔回岸上。",
+  "grammar_card": {
+    "title": "冠词 the / a / some / any + 专名",
+    "intro": "本课学冠词:肯定句用 some,否定和疑问用 any;河流、海洋、山脉、含普通名词的国名前用 the(the Wayle / the Pacific / the Alps / the United States);人名、城市、单个国名前不用冠词。全用本课和 Key structures 的句子举例。",
+    "table": {
+      "headers": ["用哪个冠词", "信号 / 例子"],
+      "rows": [
+        ["肯定句 → some", "There were some people rowing."],
+        ["否定 / 疑问 → any", "There weren't any children in sight."],
+        ["河流 / 海洋 / 山脉前 → the", "the Wayle / the Pacific / the Alps"],
+        ["含普通名词的国名 → the", "the United States / the People's Republic of China"],
+        ["人名 / 城市 / 单个国名 → 不加冠词", "John lives in England. Paris, Rome"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "so + 形容词 + that:表示'如此…以至于…',前面接形容词或副词(struck him so hard that he nearly fell)", "mark": "so…that" },
+      { "rule": "方向介词 toward(美语常不带 s):the ball went toward the boat;that 引导定语从句指物:a river that cuts across the park", "mark": "toward / that" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What happened to the man in the boat?",
+    "options": ["The ball struck him and he nearly fell into the water", "He fell asleep in the boat", "He caught a big fish", "He rowed away before the ball came"],
+    "answer_index": 0
+  },
+  "passage": "The Wayle is a small river that cuts across the park near my home. I like sitting by the Wayle on fine afternoons. It was warm last Sunday, so I went and sat on the riverbank as usual. Some children were playing games on the bank, and there were some people rowing on the river. Suddenly, one of the children kicked a ball very hard, and it went toward a passing boat. Some people on the bank called out to the man in the boat, but he did not hear them. The ball struck him so hard that he nearly fell into the water. I turned to look at the children, but there weren't any in sight — they had all run away! The man laughed when he realized what had happened. He called out to the children and threw the ball back to the bank.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "The Wayle is a small river that cuts across the park near my home.", "text_cn": "威尔河是一条横穿我家附近公园的小河。" },
+    { "seq": 2, "speaker": null, "text_en": "I like sitting by the Wayle on fine afternoons.", "text_cn": "我喜欢在天气晴朗的下午坐在威尔河边。" },
+    { "seq": 3, "speaker": null, "text_en": "It was warm last Sunday, so I went and sat on the riverbank as usual.", "text_cn": "上星期天天气暖和,于是我像往常一样去河岸边坐着。" },
+    { "seq": 4, "speaker": null, "text_en": "Some children were playing games on the bank, and there were some people rowing on the river.", "text_cn": "岸上有些孩子在玩游戏,河上有些人在划船。" },
+    { "seq": 5, "speaker": null, "text_en": "Suddenly, one of the children kicked a ball very hard, and it went toward a passing boat.", "text_cn": "突然,一个孩子狠狠踢了一个球,球朝一只驶过的小船飞去。" },
+    { "seq": 6, "speaker": null, "text_en": "Some people on the bank called out to the man in the boat, but he did not hear them.", "text_cn": "岸上的一些人对船上的人大声喊,但他没有听见。" },
+    { "seq": 7, "speaker": null, "text_en": "The ball struck him so hard that he nearly fell into the water.", "text_cn": "球重重地打在他身上,他差点掉进水里。" },
+    { "seq": 8, "speaker": null, "text_en": "I turned to look at the children, but there weren't any in sight — they had all run away!", "text_cn": "我转过头去看那些孩子,但一个也不见了——他们全跑光了!" },
+    { "seq": 9, "speaker": null, "text_en": "The man laughed when he realized what had happened.", "text_cn": "那人明白发生了什么事后,笑了起来。" },
+    { "seq": 10, "speaker": null, "text_en": "He called out to the children and threw the ball back to the bank.", "text_cn": "他冲孩子们喊话,把球扔回了岸上。" }
+  ],
+  "words": [
+    { "word": "polo", "ipa": "/ˈpoʊloʊ/", "pos": "n", "meaning_cn": "水球;马球", "example": "Football or polo?" },
+    { "word": "cut", "ipa": "/kʌt/", "pos": "v", "meaning_cn": "穿过(cut, cut)", "example": "a river that cuts across the park" },
+    { "word": "row", "ipa": "/roʊ/", "pos": "v", "meaning_cn": "划(船)", "example": "some people rowing on the river" },
+    { "word": "kick", "ipa": "/kɪk/", "pos": "v", "meaning_cn": "踢", "example": "kicked a ball very hard" },
+    { "word": "toward", "ipa": "/tɔːrd/", "pos": "prep", "meaning_cn": "朝,向(美语)", "example": "it went toward a passing boat" },
+    { "word": "nearly", "ipa": "/ˈnɪrli/", "pos": "adv", "meaning_cn": "几乎,差不多", "example": "he nearly fell into the water" },
+    { "word": "sight", "ipa": "/saɪt/", "pos": "n", "meaning_cn": "视野;看得见的范围", "example": "there weren't any in sight" },
+    { "word": "bank", "ipa": "/bæŋk/", "pos": "n", "meaning_cn": "河岸;岸边", "example": "sat on the riverbank" },
+    { "word": "strike", "ipa": "/straɪk/", "pos": "v", "meaning_cn": "撞;击中(struck)", "example": "The ball struck him so hard" },
+    { "word": "realize", "ipa": "/ˈriːəlaɪz/", "pos": "v", "meaning_cn": "意识到,明白(美语拼写)", "example": "when he realized what had happened" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "some / any:肯定句用 some,否定疑问用 any" },
+    { "gp": "gp2", "name": "the + 河流 / 海洋专名(the Wayle / the Pacific)" },
+    { "gp": "gp3", "name": "the + 山脉 / 含普通名词的国名(the Alps / the United States)" },
+    { "gp": "gp4", "name": "a / an:初次提及、单数泛指(辅音前 a、元音前 an)" },
+    { "gp": "gp5", "name": "the:特指 / 再次提及" },
+    { "gp": "gp6", "name": "so + 形容词 + that 结果状语从句(辅考)" },
+    { "gp": "gp7", "name": "方向介词 toward / to(辅考)" },
+    { "gp": "gp8", "name": "that 引导定语从句(指物,辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"There were ___ people rowing on the river.\"(肯定句,表示\"一些\")", "stem_cn": "河上有一些人在划船。", "options": ["some", "any", "much", "a"] },
+    { "gp": "gp1", "stem": "\"There weren't ___ children in sight.\"(否定句,表示\"任何\")", "stem_cn": "一个孩子也看不见了。", "options": ["any", "some", "much", "one"] },
+    { "gp": "gp1", "stem": "\"Is there ___ milk in the bottle?\"(疑问句,表示\"任何\")", "stem_cn": "瓶子里有牛奶吗?", "options": ["any", "some", "a", "the"] },
+    { "gp": "gp2", "stem": "\"___ Wayle cuts across the park near my home.\"(河流专名前加定冠词)", "stem_cn": "威尔河横穿我家附近的公园。", "options": ["The", "A", "An", "One"] },
+    { "gp": "gp2", "stem": "\"London is on ___ Thames.\"(河流名前加定冠词)", "stem_cn": "伦敦在泰晤士河畔。", "options": ["the", "a", "an", "one"] },
+    { "gp": "gp2", "stem": "\"Heyerdahl crossed ___ Pacific on a raft.\"(海洋名前加定冠词)", "stem_cn": "海尔达尔乘筏横渡了太平洋。", "options": ["the", "a", "an", "one"] },
+    { "gp": "gp3", "stem": "\"He has climbed in ___ Alps and the Himalayas.\"(山脉名前加定冠词)", "stem_cn": "他曾在阿尔卑斯山和喜马拉雅山攀登。", "options": ["the", "a", "an", "one"] },
+    { "gp": "gp3", "stem": "\"She has visited ___ United States twice.\"(国名全称含普通名词时加定冠词)", "stem_cn": "她去过美国两次。", "options": ["the", "a", "an", "one"] },
+    { "gp": "gp4", "stem": "\"One of the children kicked ___ ball very hard.\"(初次提及、单数,辅音前)", "stem_cn": "一个孩子狠狠踢了一个球。", "options": ["a", "an", "the", "some"] },
+    { "gp": "gp4", "stem": "\"He saw ___ apple float on the water.\"(下一个词以元音音开头)", "stem_cn": "他看见一个苹果浮在水面上。", "options": ["an", "a", "the", "some"] },
+    { "gp": "gp5", "stem": "\"I sat on ___ riverbank as usual.\"(特指我常坐的那处河岸)", "stem_cn": "我像往常一样坐在河岸上。", "options": ["the", "a", "an", "some"] },
+    { "gp": "gp5", "stem": "\"The ball struck the man, and ___ man nearly fell in.\"(再次提及,特指刚说的那人)", "stem_cn": "球打中了那人,那人差点掉进水里。", "options": ["the", "a", "an", "one"] },
+    { "gp": "gp6", "stem": "\"The ball struck him ___ hard that he nearly fell in.\"(如此…以至于,后接形容词/副词)", "stem_cn": "球打得他那么重,他差点落水。", "options": ["so", "very", "too", "such"] },
+    { "gp": "gp6", "stem": "\"The river was ___ wide that we could not swim across.\"(那么…以至于,填结果连词)", "stem_cn": "河那么宽,我们游不过去。", "options": ["so", "such", "very", "too"] },
+    { "gp": "gp7", "stem": "\"The ball went ___ a passing boat.\"(表示\"朝、向\"的方向)", "stem_cn": "球朝一只驶过的小船飞去。", "options": ["toward", "at", "of", "for"] },
+    { "gp": "gp7", "stem": "\"The children ran ___ the gate and disappeared.\"(朝…方向跑去)", "stem_cn": "孩子们朝大门跑去,不见了。", "options": ["toward", "of", "with", "from"] },
+    { "gp": "gp8", "stem": "\"The Wayle is a river ___ cuts across the park.\"(指物,引导定语从句作主语)", "stem_cn": "威尔河是一条横穿公园的河。", "options": ["that", "who", "whom", "whose"] },
+    { "gp": "gp8", "stem": "\"He threw back the ball ___ had hit him.\"(指物,引导定语从句)", "stem_cn": "他把打中他的那个球扔了回去。", "options": ["that", "who", "whom", "where"] }
+  ],
+  "stage6": [
+    { "stem": "美语里踢球的那种球赛(英式叫 football)叫:", "options": ["soccer", "football", "kickball", "polo"] },
+    { "stem": "美语里\"朝、向\"常写作(不带 s)的形式是:", "options": ["toward", "towards", "forward", "onward"] },
+    { "stem": "polo 的意思是:", "options": ["水球;马球", "篮球", "网球", "排球"] },
+    { "stem": "动词 cut(cuts across)在本课的意思是:", "options": ["穿过", "切碎", "剪短", "砍倒"] },
+    { "stem": "kick 的意思是:", "options": ["踢", "扔", "推", "抓"] },
+    { "stem": "sight(in sight)的意思是:", "options": ["视野;看得见的范围", "声音", "气味", "味道"] }
+  ],
+  "contrast": [
+    { "us": "soccer", "uk": "football", "note_cn": "(踢的)足球;美语 soccer,英式 football(美语 football 指橄榄球)" },
+    { "us": "toward", "uk": "towards", "note_cn": "朝,向;美语常用 toward(不带 s),英式 towards" },
+    { "us": "realize", "uk": "realise", "note_cn": "意识到,明白;美语 -ize 拼 realize,英式 -ise 拼 realise" },
+    { "us": "riverbank", "uk": "river bank", "note_cn": "河岸;美语常合写 riverbank,英式分写 river bank" }
+  ],
+  "chunks": [
+    { "us": "cut across", "ipa": "/kʌt əˈkrɔːs/", "example1": "The Wayle cuts across the park.", "example1_cn": "威尔河横穿公园。", "example2": "A path cuts across the field.", "example2_cn": "一条小路横穿田野。" },
+    { "us": "call out to", "ipa": "/kɔːl aʊt tuː/", "example1": "Some people called out to the man in the boat.", "example1_cn": "一些人对船上的人大声喊。", "example2": "She called out to her friend across the street.", "example2_cn": "她隔着街对朋友喊。" },
+    { "us": "so ... that ...", "ipa": "/soʊ ... ðæt/", "example1": "The ball struck him so hard that he nearly fell in.", "example1_cn": "球打得他那么重,他差点落水。", "example2": "He was so tired that he fell asleep.", "example2_cn": "他累得睡着了。" },
+    { "us": "run away", "ipa": "/rʌn əˈweɪ/", "example1": "The children had all run away.", "example1_cn": "孩子们全跑光了。", "example2": "The dog ran away last night.", "example2_cn": "那条狗昨晚跑走了。" }
+  ],
+  "stage7_cloze": {
+    "context": "The Wayle is ___1___ small river that cuts across ___2___ park near my home. Last Sunday some children kicked ___3___ ball so hard ___4___ it nearly hit a man in a boat.",
+    "blanks": [
+      { "blank_no": 1, "options": ["a", "an", "the", "some"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["the", "a", "an", "some"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["a", "an", "the", "any"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["that", "so", "which", "as"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did the writer sit last Sunday?", "options": ["On the riverbank by the Wayle", "At the top of a mountain", "In a small boat on the river", "In a cafe in the park"] },
+    { "stem": "What did one of the children do?", "options": ["Kicked a ball hard toward a passing boat", "Fell into the river", "Rowed a boat across the water", "Threw a stone at a bird"] },
+    { "stem": "What happened to the man in the boat?", "options": ["The ball struck him and he nearly fell into the water", "He caught the ball and smiled", "He rowed away at once", "He did not notice anything at all"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"伦敦在泰晤士河畔\"(河流专名前加定冠词):", "options": ["London is on the Thames.", "London is on Thames.", "London is on a Thames.", "London is on an Thames."] },
+    { "stem": "你想说\"球朝小船飞去\"(方向用 toward):", "options": ["The ball went toward the boat.", "The ball went at the boat.", "The ball went of the boat.", "The ball went with the boat."] },
+    { "stem": "你想说\"球撞得他那么重,他差点掉进水里\"(如此…以至于):", "options": ["The ball struck him so hard that he nearly fell in.", "The ball struck him such hard that he nearly fell in.", "The ball struck him so hard as he nearly fell in.", "The ball struck him very hard that he nearly fell in."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "polo 的意思是:", "options": ["水球;马球", "足球", "篮球", "棒球"] },
+    { "kind": "vocab", "stem": "nearly 的意思是:", "options": ["几乎,差不多", "从不", "突然", "仔细地"] },
+    { "kind": "grammar", "stem": "\"Heyerdahl crossed ___ Pacific on a raft.\"(海洋专名前加定冠词)", "stem_cn": "海尔达尔乘筏横渡太平洋。", "options": ["the", "a", "an", "one"] },
+    { "kind": "grammar", "stem": "\"There weren't ___ children in sight.\"(否定句,表示\"任何\")", "stem_cn": "一个孩子也看不见。", "options": ["any", "some", "much", "one"] },
+    { "kind": "scenario", "stem": "\"The ball went toward the boat.\" 这句话的意思是:", "options": ["球朝小船飞去。", "球从船里飞出。", "球正好落在船上。", "球飞过了小船。"] },
+    { "kind": "scenario", "stem": "\"They had all run away.\" 这句话的意思是:", "options": ["他们全都跑掉了。", "他们都留了下来。", "他们都笑了起来。", "他们都睡着了。"] },
+    { "kind": "reading", "stem": "What is the Wayle?", "options": ["A small river that cuts across the park", "A large lake near the sea", "A famous mountain", "A busy city street"], "passage": true },
+    { "kind": "reading", "stem": "Why couldn't the writer see any children afterward?", "options": ["They had all run away", "They were hiding in the boat", "They had gone home for lunch", "They were swimming in the river"], "passage": true },
+    { "kind": "listening", "stem": "What happened to the man in the boat?", "options": ["The ball struck him and he nearly fell into the water", "He won a game of polo", "He rowed safely to the bank", "He caught all the children"], "audio": true },
+    { "kind": "listening", "stem": "How did the man react when he realized what had happened?", "options": ["He laughed and threw the ball back", "He got angry and shouted", "He called the police", "He rowed away quickly"], "audio": true }
+  ]
+}

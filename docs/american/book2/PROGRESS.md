@@ -18,10 +18,11 @@
   - 课文①类实证:Note5 "so hard that he nearly fell"(so…that)、Note1 "a river that cuts across"(that 定语从句)、l.6 "towards a passing boat"(方向介词)——**均课文实际出现=①类,必须本课辅考,不得延后**。
   - **裁决(按 [[am2-source-divergence-rule]] 自决未停,第四次执行)**:冠词 the/some/any+专名=主考(~12) + so…that 结果状语 + towards 方向介词 + that 定语从句=辅考(~6,均①类)。新思维冠词/结果状语章待定点补扫(诚实标注)。
   - 新词(教材 New words):polo/Wayle/cut/row/kick/towards/nearly/sight(8官方词,待补至~11对齐体量)。
-- [ ] 步骤2 建考点清单 G1–G8 / W / C(冠词主考 + so…that/towards/that定从辅考)
-- [ ] 步骤3 清单自审 · [ ] 4 课文美语定稿(11句·冠词密集+so…that+towards+that定从;美语化 towards→toward、river bank 等)
-- [ ] 5 题库(关5=18[冠词12+辅考3,认知3]/关6=6/关7=4/关8=3/关9=3/关10=10=44) · [ ] 6 解释44
-- [ ] 7 双角色自审 · [ ] 8 JSON+seed(am2_l30.json→unit04.sql) · [ ] 9 机器12项全绿 · [ ] 10 commit
+- [x] 步骤2 建考点清单 G1–G8(some/any 3 + the河流海洋 3 + the山脉国名 2 + a/an 2 + the特指 2 = 冠词主考12 + so…that 2 + toward 2 + that定从 2 = 辅考6)/ W10 / C4
+- [x] 步骤3 清单自审 · [x] 4 课文美语定稿(10句·冠词密集 the Wayle/the park/a ball/a passing boat + so…that + toward + that定从;美语化 towards→toward、riverbank、realize、soccer入关6)
+- [x] 5 题库(关5=18[冠词12+辅考6]/关6=6/关7=4/关8=3/关9=3/关10=10=44) · [x] 6 解释44
+- [x] 7 双角色自审(冠词句义逐题回读;方向 toward、so…that、that定从三辅考均课文①类) · [x] 8 JSON+seed(am2_l30.json→unit04.sql,264题=L25-30×44) · [x] 9 机器12项🟢全绿(三维闸门元语法=0;3条[c]黄警=冠词/that题干他处含 the/that,人工判过) · [x] 10 commit
+> **L30 ✅ 生产完成 · 🟢全绿。** 主题分歧第四例已自决(冠词主考+so…that/toward/that定从辅考)。seed 归 `american_am2_seed_unit04.sql`。⏭️ L31 往下。
 
 ---
 

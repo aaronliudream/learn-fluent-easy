@@ -1,0 +1,138 @@
+{
+  "id": "am2_l06",
+  "unit_no": 1,
+  "lesson_no": 6,
+  "title_en": "Percy Buttons",
+  "title_cn": "珀西·巴顿斯",
+  "grammar_focus": "冠词(a vs an 看发音 · a/an+可数单数 · some+复数/不可数 · a初提 vs the再提/特指 · 泛指省冠词 · 专有名词不用冠词 · 量词 a…of)",
+  "scene": "刚搬进公寓 · 乞丐来敲门倒立唱歌换一顿饭 · 邻居说他叫 Percy Buttons,每月光顾街上每一户",
+  "grammar_card": {
+    "title": "a / an / some / the 怎么用(冠词)",
+    "intro": "本课讲名词前面的小词——冠词。全用本课句子举例。",
+    "table": {
+      "headers": ["用法 / 规则", "本课例子"],
+      "rows": [
+        ["a + 读音辅音开头的可数单数;an + 读音元音开头(看发音,不看字母:a university / an hour)", "a beggar / an apartment / an hour"],
+        ["some + 可数名词复数 或 不可数名词(表'一些 / 不确定数量')", "some food / some cookies"],
+        ["第一次提到某物用 a/an;再次提到同一个、或特指时用 the", "…a sandwich… He ate the sandwich."],
+        ["泛指一类事物时,复数名词/不可数名词前不加 the(也不加 a)", "Everybody knows him. / Milk is good.(泛指)"],
+        ["人名、街名等专有名词前不用 a 或 the", "His name is Percy Buttons."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "单数可数名词不能光秃秃单独用,前面必须有 a/an/the/my… 之类", "mark": "可数单数必带冠词" },
+      { "rule": "不可数名词靠量词计数:a cup of coffee / a piece of cake / a glass of water", "mark": "量词 a…of" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What did the beggar do in return for the food?",
+    "options": ["He stood on his head and sang", "He paid money", "He washed the dishes", "He cleaned the room"],
+    "answer_index": 0
+  },
+  "passage": "I have just moved into an apartment on Oak Street. Yesterday a beggar knocked on my door. He asked me for a sandwich and a cup of coffee. In return, the beggar stood on his head and sang a funny song. I gave him some food. He ate the sandwich and drank the coffee. Then he put a cookie in his pocket and walked away. Later, a neighbor told me about him. Everybody on the street knows him — his name is Percy Buttons. He calls at every house once a month. He always asks for a meal and never takes money.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "I have just moved into an apartment on Oak Street.", "text_cn": "我刚搬进 Oak 街上的一套公寓。" },
+    { "seq": 2, "speaker": null, "text_en": "Yesterday a beggar knocked on my door.", "text_cn": "昨天一个乞丐来敲我的门。" },
+    { "seq": 3, "speaker": null, "text_en": "He asked me for a sandwich and a cup of coffee.", "text_cn": "他向我要一个三明治和一杯咖啡。" },
+    { "seq": 4, "speaker": null, "text_en": "In return, the beggar stood on his head and sang a funny song.", "text_cn": "作为报答,这个乞丐倒立起来,唱了一首滑稽的歌。" },
+    { "seq": 5, "speaker": null, "text_en": "I gave him some food.", "text_cn": "我给了他一些食物。" },
+    { "seq": 6, "speaker": null, "text_en": "He ate the sandwich and drank the coffee.", "text_cn": "他吃了那个三明治,喝了那杯咖啡。" },
+    { "seq": 7, "speaker": null, "text_en": "Then he put a cookie in his pocket and walked away.", "text_cn": "然后他把一块饼干装进口袋,走开了。" },
+    { "seq": 8, "speaker": null, "text_en": "Later, a neighbor told me about him.", "text_cn": "后来,一位邻居跟我说起他。" },
+    { "seq": 9, "speaker": null, "text_en": "Everybody on the street knows him — his name is Percy Buttons.", "text_cn": "街上人人都认识他——他叫 Percy Buttons。" },
+    { "seq": 10, "speaker": null, "text_en": "He calls at every house once a month.", "text_cn": "他每月光顾每一户人家一次。" },
+    { "seq": 11, "speaker": null, "text_en": "He always asks for a meal and never takes money.", "text_cn": "他总是讨一顿饭,却从不要钱。" }
+  ],
+  "words": [
+    { "word": "apartment", "ipa": "/əˈpɑːrtmənt/", "pos": "n", "meaning_cn": "公寓(美 apartment / 英 flat)", "example": "I have just moved into an apartment." },
+    { "word": "beggar", "ipa": "/ˈbeɡər/", "pos": "n", "meaning_cn": "乞丐", "example": "Yesterday a beggar knocked on my door." },
+    { "word": "knock", "ipa": "/nɑːk/", "pos": "v", "meaning_cn": "敲", "example": "A beggar knocked on my door." },
+    { "word": "sandwich", "ipa": "/ˈsænwɪtʃ/", "pos": "n", "meaning_cn": "三明治", "example": "He asked me for a sandwich." },
+    { "word": "meal", "ipa": "/miːl/", "pos": "n", "meaning_cn": "一顿饭", "example": "He always asks for a meal." },
+    { "word": "food", "ipa": "/fuːd/", "pos": "n", "meaning_cn": "食物", "example": "I gave him some food." },
+    { "word": "pocket", "ipa": "/ˈpɑːkɪt/", "pos": "n", "meaning_cn": "口袋", "example": "He put a cookie in his pocket." },
+    { "word": "neighbor", "ipa": "/ˈneɪbər/", "pos": "n", "meaning_cn": "邻居(美 neighbor / 英 neighbour)", "example": "A neighbor told me about him." },
+    { "word": "cookie", "ipa": "/ˈkʊki/", "pos": "n", "meaning_cn": "曲奇饼干(美 cookie / 英 biscuit)", "example": "He put a cookie in his pocket." },
+    { "word": "call", "ipa": "/kɔːl/", "pos": "v", "meaning_cn": "拜访,光顾", "example": "He calls at every house once a month." },
+    { "word": "street", "ipa": "/striːt/", "pos": "n", "meaning_cn": "街道", "example": "Everybody on the street knows him." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "冠词——a vs an(看发音)" },
+    { "gp": "gp2", "name": "冠词——a/an + 可数名词单数" },
+    { "gp": "gp3", "name": "冠词——some + 复数/不可数" },
+    { "gp": "gp4", "name": "冠词——a(初提) vs the(再提/特指)" },
+    { "gp": "gp5", "name": "冠词——泛指省冠词(复数/不可数不加 the/a)" },
+    { "gp": "gp6", "name": "冠词——专有名词前不用冠词" },
+    { "gp": "gp7", "name": "冠词——可数单数必带限定词 + 量词 a…of" },
+    { "gp": "gp8", "name": "课文语言点(ask sb for sth / in return for / call at)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ hour\"(填 a 还是 an;hour 的 h 不发音)", "options": ["an", "a", "the", "some"] },
+    { "gp": "gp1", "stem": "\"___ university\"(university 读 /juː/,辅音开头)", "options": ["a", "an", "the", "some"] },
+    { "gp": "gp2", "stem": "\"He asked me for ___ sandwich.\"(一个,可数单数)", "options": ["a", "an", "some", "the"] },
+    { "gp": "gp2", "stem": "\"I have moved into ___ apartment.\"(apartment 元音开头)", "options": ["an", "a", "some", "the"] },
+    { "gp": "gp3", "stem": "\"I gave him ___ food.\"(一些,food 不可数)", "options": ["some", "a", "an", "the"] },
+    { "gp": "gp3", "stem": "some 后面可以接:", "options": ["可数名词复数 或 不可数名词", "只能可数名词单数", "只能专有名词", "只能形容词"] },
+    { "gp": "gp4", "stem": "\"He asked for a sandwich. He ate ___ sandwich.\"(再次提到同一个)", "options": ["the", "a", "an", "some"] },
+    { "gp": "gp4", "stem": "\"A man is walking to me. ___ man is carrying a bag.\"(特指刚说的那个人)", "options": ["The", "A", "An", "Some"] },
+    { "gp": "gp5", "stem": "\"___ is good for you.\"(牛奶,泛指一类)", "options": ["Milk", "A milk", "An milk", "The milks"] },
+    { "gp": "gp5", "stem": "泛指一类事物时,复数名词或不可数名词前:", "options": ["不加 the,也不加 a", "一定加 the", "一定加 a", "一定加 an"] },
+    { "gp": "gp6", "stem": "\"His name is ___ Percy Buttons.\"(专有名词前)", "options": ["不填(直接 Percy Buttons)", "a", "the", "an"] },
+    { "gp": "gp6", "stem": "选出正确的一句:", "options": ["I saw Percy Buttons yesterday.", "I saw a Percy Buttons yesterday.", "I saw the Percy Buttons yesterday.", "I saw an Percy Buttons yesterday."] },
+    { "gp": "gp7", "stem": "单数可数名词(如 computer)在句子里:", "options": ["前面必须加 a/an/the 等,不能光秃秃单独用", "可以直接单独用", "只能加 some", "只能加形容词"] },
+    { "gp": "gp7", "stem": "\"一杯咖啡\"怎么说?", "options": ["a cup of coffee", "a coffee cup of", "a cup coffee", "coffee a cup"] },
+    { "gp": "gp7", "stem": "\"一块蛋糕\"(cake 不可数,论块)用:", "options": ["a piece of cake", "a cake", "two cake", "an cake"] },
+    { "gp": "gp8", "stem": "ask sb for sth 的意思是:", "options": ["向某人要某物", "替某人问问题", "帮某人做事", "问某人是谁"] },
+    { "gp": "gp8", "stem": "in return for this 的意思是:", "options": ["作为对此的报答", "为了换钱", "在回来的路上", "毫无回报"] },
+    { "gp": "gp8", "stem": "\"He calls at every house.\" 里 call at 的意思是:", "options": ["拜访,光顾(某处)", "给…打电话", "大声喊叫", "取消"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"公寓\"用:", "options": ["apartment", "flat", "room", "house"] },
+    { "stem": "美语里\"邻居\"拼作:", "options": ["neighbor", "neighbour", "nabor", "neighber"] },
+    { "stem": "美语里\"曲奇饼干\"用:", "options": ["cookie", "biscuit", "cracker", "bread"] },
+    { "stem": "in return for 的意思是:", "options": ["作为报答", "为了钱", "在返回时", "免费地"] },
+    { "stem": "ask sb for sth 的意思是:", "options": ["向某人要某物", "问某人是谁", "帮某人", "替某人买"] },
+    { "stem": "a cup of coffee 里 a cup of 表示:", "options": ["一杯(的量)", "一壶", "一箱", "一滴"] }
+  ],
+  "contrast": [
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "neighbor", "uk": "neighbour", "note_cn": "邻居;美语 -or 结尾 neighbor,英式 -our 结尾 neighbour;同类 color/colour" },
+    { "us": "cookie", "uk": "biscuit", "note_cn": "(甜)饼干;美语 cookie,英式 biscuit" }
+  ],
+  "chunks": [
+    { "us": "in return (for)", "ipa": "/ɪn rɪˈtɜːrn/", "example1": "In return, the beggar sang a song.", "example1_cn": "作为报答,乞丐唱了一首歌。", "example2": "She helped me, and I gave her a gift in return.", "example2_cn": "她帮了我,我回赠了她一份礼物。" },
+    { "us": "ask sb for sth", "ipa": "/æsk fɔːr/", "example1": "He asked me for a meal.", "example1_cn": "他向我讨一顿饭。", "example2": "The child asked his mom for some candy.", "example2_cn": "孩子向妈妈要糖吃。" },
+    { "us": "a cup of", "ipa": "/ə kʌp əv/", "example1": "He asked for a cup of coffee.", "example1_cn": "他要了一杯咖啡。", "example2": "I drink a cup of tea every morning.", "example2_cn": "我每天早上喝一杯茶。" }
+  ],
+  "stage7_cloze": {
+    "context": "I have just moved into ___1___ apartment. Yesterday ___2___ beggar knocked on my door. He asked for a sandwich, and then he ate ___3___ sandwich. I also gave him ___4___ food.",
+    "blanks": [
+      { "blank_no": 1, "options": ["an", "a", "the", "some"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["a", "an", "the", "some"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["the", "a", "an", "some"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["some", "a", "an", "the"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What did the beggar do in return for the food?", "options": ["He stood on his head and sang", "He paid money", "He washed the dishes", "He told a long story"] },
+    { "stem": "What did the beggar put in his pocket?", "options": ["A cookie", "A sandwich", "A cup of coffee", "A book"] },
+    { "stem": "How often does Percy Buttons call at every house?", "options": ["Once a month", "Once a week", "Every day", "Once a year"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "在咖啡店你想说\"我要一杯咖啡\":", "options": ["I'd like a cup of coffee.", "I'd like cup of coffee.", "I'd like a coffee cup.", "I'd like coffee of cup."] },
+    { "stem": "你第一次跟别人提到\"一个乞丐\",该用:", "options": ["a beggar", "the beggar", "some beggar", "beggar"] },
+    { "stem": "别人帮了你,你想说\"作为报答,我请你吃饭\":", "options": ["In return, let me buy you dinner.", "In return for, let me buy you dinner.", "For return, I buy you dinner.", "Return you, I buy dinner."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "beggar 的意思是:", "options": ["乞丐", "邻居", "顾客", "服务员"] },
+    { "kind": "vocab", "stem": "\"He calls at every house.\" 里 call 的意思是:", "options": ["拜访,光顾", "打电话", "大喊", "取消"] },
+    { "kind": "grammar", "stem": "\"I saw ___ elephant.\"(elephant 元音开头)", "options": ["an", "a", "the", "some"] },
+    { "kind": "grammar", "stem": "\"___ is important for health.\"(水,泛指一类)", "options": ["Water", "A water", "An water", "The waters"] },
+    { "kind": "scenario", "stem": "\"Can I have a glass of water?\" 是在:", "options": ["要一杯水", "问路", "点评这杯水", "拒绝喝水"] },
+    { "kind": "scenario", "stem": "朋友说 \"In return, I'll help you.\" 意思是:", "options": ["作为回报,我会帮你", "我不会帮你", "我回来再帮你", "请你先帮我"] },
+    { "kind": "reading", "stem": "Why did the beggar stand on his head and sing?", "options": ["In return for the meal", "Because he was tired", "To ask for money", "Because he was sick"], "passage": true },
+    { "kind": "reading", "stem": "Who is Percy Buttons?", "options": ["A beggar everyone on the street knows", "The writer's new neighbor", "A singer on TV", "The writer's old friend"], "passage": true },
+    { "kind": "listening", "stem": "Where has the writer just moved?", "options": ["Into an apartment on Oak Street", "To another city", "Into a hotel", "Back to his hometown"], "audio": true },
+    { "kind": "listening", "stem": "What did the writer give the beggar?", "options": ["Some food", "Money", "A book", "Nothing at all"], "audio": true }
+  ]
+}

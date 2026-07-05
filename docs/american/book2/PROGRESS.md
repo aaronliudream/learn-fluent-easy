@@ -11,8 +11,9 @@
 | L3 | 1 | Please send me a card | ✅ 生产完成(44题/解释44/关6=6/认知2) | 🟢八项全绿 | 一般过去时;新思维p117已补扫并入讲深;seed归单元1批次;prewarm待批次;真机待抽验 |
 | L4 | 1 | An exciting trip | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 现在完成时;三源p27-28/p42-44/新思维p119-120已核;现在完成进行时p122排除记备用;seed归单元1批次;prewarm待批次;真机待抽验 |
 | L5 | 1 | No wrong numbers | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 现在完成时续(up to now/a great many/since/时态切换);三源p31/p42-45/新思维p120已核;与L4分工不重复;seed归单元1批次;prewarm待批次;真机待抽验 |
-| L6 | 1 | (待扫描确认标题) | ⬜ 下一课 | — | NCE2 L6=Percy Buttons;L6三源扫描确认标题+主题,不凭记忆 |
-| L7–L8 | 1 | — | ⬜ 未开工 | — | — |
+| L6 | 1 | Percy Buttons | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 冠词 a/an/some/the;三源 教材p36 KeyStruct + 同步p49 LESSON6 + 新思维冠词 已核;定冠词地理习语细则留后;seed归单元1批次;prewarm待批次;真机待抽验 |
+| L7 | 1 | (待扫描确认标题) | ⬜ 下一课 | — | NCE2 L7=Too late;L7三源扫描确认标题+主题,不凭记忆 |
+| L8 | 1 | — | ⬜ 未开工 | — | — |
 
 ## L2 流水线步骤跟踪
 - [x] 1 三源扫描(scan-evidence-lesson02.md:教材p19-22 / 同步p33-37 / 新思维p110,112;主题一致无冲突)
@@ -49,6 +50,23 @@
 - [x] 8 JSON + seed(am2_l05.json;gen-book2-seed 重生成 unit01 含L1-L5,解释合并)
 - [x] 9 机器校验套件(validate-am2-lesson.mjs am2_l05 八项全绿:44=44=44/解释44/零串味/G8全覆盖)
 - [x] 10 落盘 + commit(L5 docs 一 commit;seed SQL 归单元1批次)
+
+## L6 流水线步骤跟踪(冠词)
+- [x] 1 三源扫描(scan-evidence-lesson06.md:教材p36 KeyStruct[A.The and Some]权威 / 同步p49 LESSON6[一.冠词] / 新思维冠词专题;逐页页眉;三源一致无冲突)
+- [x] 2 建考点清单(grammar-syllabus-lesson06.md:G1-G8 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)
+- [x] 4 课文美语定稿(11句·冠词密集 an apartment/a beggar/some food/the sandwich/a cup of/专名·11词/3语块全落·apartment/neighbor/cookie美语化)
+- [x] 5 题库生产(关5=18[G1-8,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44题)
+- [x] 6 逐题解释(am2_l06_explanations_final.md,44条)
+- [x] 7 双角色自审(coverage-lesson06.md §四;首轮无抓修)
+- [x] 8 JSON + seed(am2_l06.json;gen-book2-seed 重生成 unit01 含L1-L6,解释合并)
+- [x] 9 机器校验套件(validate-am2-lesson.mjs am2_l06 八项全绿:44=44=44/解释44/零串味/G8全覆盖)
+- [x] 10 落盘 + commit(L6 docs 一 commit;seed SQL 归单元1批次)
+
+## L6 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表官方仅4词(beggar/food/pocket/call)→ 默认 **A**:补 apartment/knock/sandwich/meal/neighbor/cookie/street 凑11词(对齐体量;cookie/neighbor/apartment 兼作关6对照卡)。
+2. L5 讲深遗漏(way 短语 in the/on the/in this way、spare/to spare)→ 默认 **不回补**:非冠词主线,记备用;若单元真机反馈需要再议。
+3. 定冠词 the 的地理/习语细则(the United States / play the piano)→ 默认 **留后续冠词加深课**:本课只教四主线(初提a/再提the/泛指省/专名不用),不超载。
 
 ## L5 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
 1. 词表弃 spare part(备件)→ 默认 **A**:美语化书店场景不宜"备件",改用 install/note/mile/private/own 凑11词(对齐L1-L4体量)。

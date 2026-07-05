@@ -37,5 +37,6 @@
 | Yes, it is(简答不缩写) | Yes, it is | 同样说 Yes, it is | **硬规则非语域**,不动;仅确认解释没把口语说成错 |
 | have got vs have | — | 美语用 have | 应已美语化,扫描确认零 have got |
 | 集合名词主谓一致 | family/team are(英式可复数) | family/team **is**(美语默认单数) | 美语几乎总把 family/team/government/company 当单数集合名词用 is/was。**只有 police(及 people/cattle)永远用复数 are/were**。出题:优先考 police 复数或 family 单数;若必须出 family 复数,题干标`(英式)`否则视为方向错。**am2 L16 s5#15 已回扫:family are→family is** |
+| the + 形容词表群体(the English/the rich/the poor) | the English like tea(书面/正式) | British people like…(口语常用) | **低频、英式书面**,可迁移性★☆——学完学生现实里说 British people。**移出关5 主谓一致选择题**:换成 people/常用复数主语(British/Chinese/American people + 复数动词);正式用法只进关6 美语点睛/文化卡说明 the English = English people,不做 like/likes 辨析题。同理 cattle/staff/the+adj 等"特殊一致"陷阱一并按此降级。**am2 L25 s5#16/17 已回扫:the English→British people / Many people** |
 
 > 扫描中发现清单外分化点 → 先补进本表再处置,并在汇报列明。

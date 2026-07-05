@@ -19,7 +19,7 @@
       ]
     },
     "specialRules": [
-      { "rule": "the + 形容词(the English / the rich)指一个群体,动词用复数:The English like tea.", "mark": "the + 形容词" },
+      { "rule": "people 作主语永远用复数动词:British/American/Chinese people like tea. 文化卡:the English = English people(书面/正式),口语常说 British people。", "mark": "people 用复数" },
       { "rule": "at last = 终于、最后:I arrived in London at last.", "mark": "at last" }
     ]
   },
@@ -61,7 +61,7 @@
     { "gp": "gp4", "name": "neither A nor B(两者都不)" },
     { "gp": "gp5", "name": "not only A but also/as well B(不但…而且)" },
     { "gp": "gp6", "name": "并列连词综合运用" },
-    { "gp": "gp7", "name": "the + 形容词(the English)群体用复数(辅考)" },
+    { "gp": "gp7", "name": "主谓一致——people 等复数主语用复数动词(辅考)" },
     { "gp": "gp8", "name": "at last(终于)——本课短语(辅考)" }
   ],
   "stage5": [
@@ -80,8 +80,8 @@
     { "gp": "gp5", "stem": "\"I spoke not only carefully but clearly ___.\"(不但…而且…:句尾用'也')", "stem_cn": "我说得不但仔细而且清楚。", "options": ["as well", "as", "too much", "also as"] },
     { "gp": "gp6", "stem": "\"I saw him yesterday ___ he did not greet me.\"(转折:但)", "stem_cn": "我昨天见到他,但他没理我。", "options": ["but", "and", "or", "so"] },
     { "gp": "gp6", "stem": "\"It was late, ___ we went home.\"(因此)", "stem_cn": "天晚了,所以我们回家了。", "options": ["so", "but", "or", "nor"] },
-    { "gp": "gp7", "stem": "\"The English ___ tea very much.\"(the English 指英国人,用复数)", "stem_cn": "英国人非常喜欢喝茶。", "options": ["like", "likes", "is", "was"] },
-    { "gp": "gp7", "stem": "\"the + 形容词\"(如 the English / the rich)表示一个群体时,动词用:", "options": ["复数", "单数", "过去分词", "不定式"] },
+    { "gp": "gp7", "stem": "\"British people ___ tea very much.\"(people 作主语,用复数动词)", "stem_cn": "英国人非常喜欢喝茶。", "options": ["like", "likes", "is", "was"] },
+    { "gp": "gp7", "stem": "\"Many people ___ coffee in the morning.\"(people 作主语,用复数动词)", "stem_cn": "许多人早上喝咖啡。", "options": ["drink", "drinks", "is", "was"] },
     { "gp": "gp8", "stem": "at last 的意思是:", "options": ["终于,最后", "立刻", "从不", "偶尔"] }
   ],
   "stage6": [

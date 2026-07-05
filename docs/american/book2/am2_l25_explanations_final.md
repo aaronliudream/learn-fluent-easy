@@ -46,10 +46,10 @@ not only … but … as well 也表示"不但…而且",as well 放句尾。✓ 
 "天晚了"因此"回家",是因果,用 so。✓ It was late, so we went home.
 
 ### s5 seq16 | ans: like
-the English 指英国人(一个群体),动词用复数 like。✓ The English like tea.
+British people 是复数主语,动词用复数 like。✓ British people like tea. 顺带记:people 作主语永远配复数,可套 Chinese/American people like…。📌 the English = English people 是书面/正式说法,口语常说 British people。
 
-### s5 seq17 | ans: 复数
-the + 形容词(the English / the rich)表示一类人时看作复数,动词用复数。✓ The rich are not always happy.
+### s5 seq17 | ans: drink
+people 是复数主语,动词用复数 drink。✓ Many people drink coffee in the morning. 顺带记:people 永远当复数,不说 drinks。
 
 ### s5 seq18 | ans: 终于,最后
 at last = 终于、最后。✓ I arrived in London at last 我终于到了伦敦。

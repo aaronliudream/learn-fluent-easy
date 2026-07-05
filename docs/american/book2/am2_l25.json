@@ -1,0 +1,137 @@
+{
+  "id": "am2_l25",
+  "unit_no": 4,
+  "lesson_no": 25,
+  "title_en": "Do the English speak English?",
+  "title_cn": "英国人讲的是英语吗?",
+  "grammar_focus": "并列句与并列连词(主考:and/but/so/or 连接两个简单句 · both A and B 两者都 · either A or B 二者选一 · neither A nor B 两者都不 · not only A but also/as well B 不但…而且)+ the English 群体名词用复数 / at last(辅考)",
+  "scene": "初到伦敦,火车站又黑又暗;向搬运工问路,自己说得又慢又清楚他却听不懂,他回话又快又含糊——我这才发现:英国人彼此听得懂,我却听不懂他们,他们说的到底是不是英语?",
+  "grammar_card": {
+    "title": "把两个简单句连起来(并列连词)",
+    "intro": "本课讲怎么用连词把两个简单句连成并列句:and(和)、but(但)、so(所以)、or(或),还有成对的 both…and、either…or、neither…nor、not only…but also。全用本课句子举例。",
+    "table": {
+      "headers": ["连词", "本课 / 常见例子"],
+      "rows": [
+        ["and 顺接 / but 转折 / so 因果 / or 选择", "He finished lunch and went into the garden."],
+        ["both A and B:两者都", "He is both tall and strong."],
+        ["either A or B:二者选一;neither A nor B:两者都不", "He spoke neither slowly nor clearly."],
+        ["not only A but also/as well B:不但…而且", "I spoke not only carefully but clearly as well."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "the + 形容词(the English / the rich)指一个群体,动词用复数:The English like tea.", "mark": "the + 形容词" },
+      { "rule": "at last = 终于、最后:I arrived in London at last.", "mark": "at last" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why does the writer not understand the porter?",
+    "options": ["The porter spoke neither slowly nor clearly, unlike the teacher's English", "The porter spoke Chinese", "The writer was not listening", "The porter said nothing at all"],
+    "answer_index": 0
+  },
+  "passage": "I arrived in London at last. The train station was big, black, and dark. I did not know the way to my hotel, so I asked a porter. I not only spoke English very carefully, but very clearly as well. The porter, however, could not understand me. I repeated my question several times, and at last he understood. He answered me, but he spoke neither slowly nor clearly. 'I am a foreigner,' I said. Then he spoke slowly, but I could not understand him. My teacher never spoke English like that! The porter and I looked at each other and smiled. Then he said something and I understood it. 'You'll soon learn English!' he said. I wonder. In England, each person seems to speak a different language. The English understand each other, but I don't understand them! Do they speak English?",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "I arrived in London at last. The train station was big, black, and dark.", "text_cn": "我终于到了伦敦。火车站又大又黑又暗。" },
+    { "seq": 2, "speaker": null, "text_en": "I did not know the way to my hotel, so I asked a porter.", "text_cn": "我不知道去饭店的路怎么走,于是向一个搬运工打听。" },
+    { "seq": 3, "speaker": null, "text_en": "I not only spoke English very carefully, but very clearly as well.", "text_cn": "我的英语讲得不但非常认真,而且咬字也非常清楚。" },
+    { "seq": 4, "speaker": null, "text_en": "The porter, however, could not understand me.", "text_cn": "然而搬运工却不明白我的话。" },
+    { "seq": 5, "speaker": null, "text_en": "I repeated my question several times, and at last he understood.", "text_cn": "我把问话重复了很多遍,他终于听懂了。" },
+    { "seq": 6, "speaker": null, "text_en": "He answered me, but he spoke neither slowly nor clearly.", "text_cn": "他回答了我,但他讲得既不慢也不清楚。" },
+    { "seq": 7, "speaker": null, "text_en": "'I am a foreigner,' I said. Then he spoke slowly, but I could not understand him.", "text_cn": "\"我是个外国人,\"我说。于是他说得慢了,可我还是听不懂。" },
+    { "seq": 8, "speaker": null, "text_en": "My teacher never spoke English like that! The porter and I looked at each other and smiled.", "text_cn": "我的老师从来不那样讲英语!我和搬运工相视一笑。" },
+    { "seq": 9, "speaker": null, "text_en": "Then he said something and I understood it. 'You'll soon learn English!' he said.", "text_cn": "接着,他说了点什么,这回我听懂了。\"您会很快学会英语的!\"他说。" },
+    { "seq": 10, "speaker": null, "text_en": "The English understand each other, but I don't understand them! Do they speak English?", "text_cn": "英国人之间相互听得懂,可我却不懂他们的话!他们说的是英语吗?" }
+  ],
+  "words": [
+    { "word": "train station", "ipa": "/treɪn ˈsteɪʃn/", "pos": "n", "meaning_cn": "火车站", "example": "The train station was big and dark." },
+    { "word": "porter", "ipa": "/ˈpɔːrtər/", "pos": "n", "meaning_cn": "搬运工", "example": "I asked a porter." },
+    { "word": "several", "ipa": "/ˈsevrəl/", "pos": "det", "meaning_cn": "几个,数个", "example": "several times" },
+    { "word": "foreigner", "ipa": "/ˈfɔːrənər/", "pos": "n", "meaning_cn": "外国人", "example": "I am a foreigner." },
+    { "word": "wonder", "ipa": "/ˈwʌndər/", "pos": "v", "meaning_cn": "感到奇怪,想知道", "example": "I wonder." },
+    { "word": "railroad", "ipa": "/ˈreɪlroʊd/", "pos": "n", "meaning_cn": "铁路", "example": "a railroad station" },
+    { "word": "carefully", "ipa": "/ˈkerfəli/", "pos": "adv", "meaning_cn": "仔细地,认真地", "example": "spoke very carefully" },
+    { "word": "clearly", "ipa": "/ˈklɪrli/", "pos": "adv", "meaning_cn": "清楚地", "example": "very clearly as well" },
+    { "word": "repeat", "ipa": "/rɪˈpiːt/", "pos": "v", "meaning_cn": "重复", "example": "I repeated my question." },
+    { "word": "understand", "ipa": "/ˌʌndərˈstænd/", "pos": "v", "meaning_cn": "听懂,理解", "example": "could not understand me" },
+    { "word": "hotel", "ipa": "/hoʊˈtel/", "pos": "n", "meaning_cn": "旅馆,饭店", "example": "the way to my hotel" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "and/but/so/or 连接两个简单句" },
+    { "gp": "gp2", "name": "both A and B(两者都)" },
+    { "gp": "gp3", "name": "either A or B(二者选一)" },
+    { "gp": "gp4", "name": "neither A nor B(两者都不)" },
+    { "gp": "gp5", "name": "not only A but also/as well B(不但…而且)" },
+    { "gp": "gp6", "name": "并列连词综合运用" },
+    { "gp": "gp7", "name": "the + 形容词(the English)群体用复数(辅考)" },
+    { "gp": "gp8", "name": "at last(终于)——本课短语(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "把两个简单句连成并列句,常用哪些连词?", "options": ["and / but / so / or 等", "very / too / quite", "the / a / an", "in / on / at"] },
+    { "gp": "gp1", "stem": "\"He finished lunch ___ went into the garden.\"(顺接:然后)", "stem_cn": "他吃完午饭,然后走进了花园。", "options": ["and", "but", "or", "nor"] },
+    { "gp": "gp1", "stem": "\"I ran to the station ___ missed the train.\"(转折:但是)", "stem_cn": "我跑到车站,但还是误了火车。", "options": ["but", "and", "so", "or"] },
+    { "gp": "gp2", "stem": "both A and B 的意思是:", "options": ["A 和 B 两者都", "要么 A 要么 B", "既不 A 也不 B", "不但 A 而且 B"] },
+    { "gp": "gp2", "stem": "\"He is ___ tall and strong.\"(两者都:又高又壮)", "stem_cn": "他又高又壮。", "options": ["both", "either", "neither", "not"] },
+    { "gp": "gp3", "stem": "either A or B 的意思是:", "options": ["要么 A 要么 B(二者选一)", "A 和 B 都", "既不 A 也不 B", "不但 A 而且 B"] },
+    { "gp": "gp3", "stem": "\"Either you go ___ I go.\"(要么…要么)", "stem_cn": "要么你去,要么我去。", "options": ["or", "nor", "and", "but"] },
+    { "gp": "gp4", "stem": "neither A nor B 的意思是:", "options": ["既不 A 也不 B(两者都不)", "A 和 B 都", "要么 A 要么 B", "不但 A 而且 B"] },
+    { "gp": "gp4", "stem": "\"He spoke ___ slowly nor clearly.\"(既不…也不)", "stem_cn": "他说得既不慢也不清楚。", "options": ["neither", "either", "both", "not"] },
+    { "gp": "gp4", "stem": "\"I like neither tea ___ coffee.\"(既不…也不)", "stem_cn": "茶和咖啡我都不喜欢。", "options": ["nor", "or", "and", "but"] },
+    { "gp": "gp5", "stem": "not only A but also B 的意思是:", "options": ["不但 A 而且 B", "既不 A 也不 B", "要么 A 要么 B", "A 但不 B"] },
+    { "gp": "gp5", "stem": "\"He is not only clever ___ also kind.\"(不但…而且)", "stem_cn": "他不但聪明而且善良。", "options": ["but", "and", "or", "nor"] },
+    { "gp": "gp5", "stem": "\"I spoke not only carefully but clearly ___.\"(不但…而且…:句尾用'也')", "stem_cn": "我说得不但仔细而且清楚。", "options": ["as well", "as", "too much", "also as"] },
+    { "gp": "gp6", "stem": "\"I saw him yesterday ___ he did not greet me.\"(转折:但)", "stem_cn": "我昨天见到他,但他没理我。", "options": ["but", "and", "or", "so"] },
+    { "gp": "gp6", "stem": "\"It was late, ___ we went home.\"(因此)", "stem_cn": "天晚了,所以我们回家了。", "options": ["so", "but", "or", "nor"] },
+    { "gp": "gp7", "stem": "\"The English ___ tea very much.\"(the English 指英国人,用复数)", "stem_cn": "英国人非常喜欢喝茶。", "options": ["like", "likes", "is", "was"] },
+    { "gp": "gp7", "stem": "\"the + 形容词\"(如 the English / the rich)表示一个群体时,动词用:", "options": ["复数", "单数", "过去分词", "不定式"] },
+    { "gp": "gp8", "stem": "at last 的意思是:", "options": ["终于,最后", "立刻", "从不", "偶尔"] }
+  ],
+  "stage6": [
+    { "stem": "美语\"火车站\"常说:", "options": ["train station", "railway station", "car station", "rail house"] },
+    { "stem": "美语\"铁路\"常说:", "options": ["railroad", "railway", "trainway", "ironroad"] },
+    { "stem": "at last 的意思是:", "options": ["终于,最后", "立刻", "从不", "偶尔"] },
+    { "stem": "not only ... but also 的意思是:", "options": ["不但…而且…", "既不…也不…", "要么…要么…", "虽然…但是…"] },
+    { "stem": "neither ... nor 的意思是:", "options": ["既不…也不…", "不但…而且…", "要么…要么…", "又…又…"] },
+    { "stem": "look at each other 的意思是:", "options": ["互相看着对方", "看向别处", "互相帮助", "彼此争吵"] }
+  ],
+  "contrast": [
+    { "us": "train station", "uk": "railway station", "note_cn": "火车站;美语 train station,英式 railway station" },
+    { "us": "railroad", "uk": "railway", "note_cn": "铁路;美语 railroad,英式 railway" },
+    { "us": "subway", "uk": "underground", "note_cn": "地铁;美语 subway,英式 underground / tube" }
+  ],
+  "chunks": [
+    { "us": "at last", "ipa": "/ət læst/", "example1": "I arrived in London at last.", "example1_cn": "我终于到了伦敦。", "example2": "At last, the bus came.", "example2_cn": "公交车终于来了。" },
+    { "us": "not only ... but also", "ipa": "/nɑːt ˈoʊnli bʌt ˈɔːlsoʊ/", "example1": "not only carefully but clearly as well", "example1_cn": "不但仔细而且清楚", "example2": "She is not only smart but also kind.", "example2_cn": "她不但聪明而且善良。" },
+    { "us": "neither ... nor", "ipa": "/ˈniːðər nɔːr/", "example1": "He spoke neither slowly nor clearly.", "example1_cn": "他说得既不慢也不清楚。", "example2": "I like neither tea nor coffee.", "example2_cn": "茶和咖啡我都不喜欢。" },
+    { "us": "look at", "ipa": "/lʊk æt/", "example1": "We looked at each other.", "example1_cn": "我们互相看着对方。", "example2": "Look at the picture.", "example2_cn": "看这张图片。" }
+  ],
+  "stage7_cloze": {
+    "context": "I spoke not only carefully ___1___ clearly. The porter could not understand me, ___2___ I repeated my question. He spoke ___3___ slowly nor clearly. Either he was confused, ___4___ my English was strange!",
+    "blanks": [
+      { "blank_no": 1, "options": ["but", "and", "nor", "so"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["so", "but", "or", "nor"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["neither", "either", "both", "not"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["or", "nor", "and", "but"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did the writer arrive?", "options": ["In London, at the train station", "In Paris", "At an airport", "At a hotel in New York"] },
+    { "stem": "Who did the writer ask for directions?", "options": ["A porter", "A police officer", "A taxi driver", "A teacher"] },
+    { "stem": "Could the writer understand the porter at first?", "options": ["No, the porter spoke neither slowly nor clearly", "Yes, very easily", "Yes, the porter spoke Chinese", "No, the porter said nothing"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"他不但会唱歌而且会跳舞\"(not only ... but also):", "options": ["He can not only sing but also dance.", "He can not only sing but also dances.", "He not only can sing but dance also.", "He can sing not only but also dance."] },
+    { "stem": "你想说\"我既不喜欢茶也不喜欢咖啡\"(neither ... nor):", "options": ["I like neither tea nor coffee.", "I like neither tea or coffee.", "I like either tea nor coffee.", "I like neither tea and coffee."] },
+    { "stem": "你想说\"要么你去要么我去\"(either ... or):", "options": ["Either you go or I go.", "Either you go nor I go.", "Neither you go or I go.", "Both you go or I go."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "foreigner 的意思是:", "options": ["外国人", "陌生人", "外交官", "游客"] },
+    { "kind": "vocab", "stem": "wonder 的意思是:", "options": ["感到奇怪,想知道", "确信", "抱怨", "回答"] },
+    { "kind": "grammar", "stem": "\"He is not only clever ___ also kind.\"(不但…而且)", "stem_cn": "他不但聪明而且善良。", "options": ["but", "and", "or", "nor"] },
+    { "kind": "grammar", "stem": "\"___ you nor I can do it.\"(…都不能)", "stem_cn": "你和我都做不了这件事。", "options": ["Neither", "Either", "Both", "Not"] },
+    { "kind": "scenario", "stem": "\"Do they speak English?\" 这句话的意思是:", "options": ["他们说的是英语吗?", "他们会说英语。", "他们不说英语。", "请说英语。"] },
+    { "kind": "scenario", "stem": "\"You'll soon learn English.\" 这句话的意思是:", "options": ["你很快就会学会英语。", "你必须学英语。", "你学不会英语。", "你已经学会英语了。"] },
+    { "kind": "reading", "stem": "Why couldn't the writer understand the porter?", "options": ["The porter spoke neither slowly nor clearly", "The porter spoke Chinese", "The writer was deaf", "The porter whispered"], "passage": true },
+    { "kind": "reading", "stem": "What did the porter say at the end?", "options": ["'You'll soon learn English!'", "'Go away!'", "'I don't know.'", "'Speak louder!'"], "passage": true },
+    { "kind": "listening", "stem": "Why does the writer joke that he can't understand the English?", "options": ["Their spoken English sounds different from his teacher's", "They speak too quietly", "They only speak French", "They never talk to him"], "audio": true },
+    { "kind": "listening", "stem": "How did the writer and the porter feel toward the end?", "options": ["They looked at each other and smiled", "They got angry", "They walked away", "They started shouting"], "audio": true }
+  ]
+}

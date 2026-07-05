@@ -74,7 +74,7 @@
     { "gp": "gp3", "stem": "\"What ___ you ___ now?\" — \"I'm having breakfast.\"", "stem_cn": "你现在在做什么?——我在吃早餐。", "options": ["are / doing", "do / do", "did / do", "are / do"] },
     { "gp": "gp4", "stem": "\"run\" 的现在进行时:He is ___ to the station.", "options": ["running", "runing", "runnning", "runy"] },
     { "gp": "gp4", "stem": "下面哪个是 \"have\" 的正确现在分词(V-ing)?", "options": ["having", "haveing", "havving", "haing"] },
-    { "gp": "gp5", "stem": "\"I'm coming over to see you tonight.\" 这句话表示:", "options": ["我近期打算/安排来看你", "我经常来看你", "我现在正在路上", "我昨天来看过你"] },
+    { "gp": "gp5", "stem": "你想说\"我打算今晚过来看你\"(现在进行时表已安排好的将来):", "options": ["I'm coming over to see you tonight.", "I come over to see you tonight.", "I came over to see you tonight.", "I will coming over to see you tonight."] },
     { "gp": "gp6", "stem": "下列哪句在说\"此刻正在做的事\"?", "options": ["I'm having breakfast right now.", "I get up at noon on Sundays.", "She reads the news every morning.", "The earth moves around the sun."] },
     { "gp": "gp6", "stem": "\"He ___ to work by subway every day, but today he ___ the bus.\"", "stem_cn": "他每天坐地铁上班,但今天他改乘公交车。", "options": ["goes / is taking", "is going / takes", "go / take", "is going / is taking"] },
     { "gp": "gp6", "stem": "\"Be quiet! The baby ___.\"(此刻)", "stem_cn": "安静!宝宝在睡觉。", "options": ["is sleeping", "sleeps", "sleep", "slept"] },

@@ -10,6 +10,21 @@
 
 ---
 
+## 🚧 主线续做:U4 L30《Football or polo?》(足球还是水球?)· 进行中
+> 断点续做锚点。教材文本页 doc181/p142,Key structures 页 doc182/p143(均已渲染读过)。
+- **[x] 步骤1 三源扫描(主题分歧第四例)**:
+  - 教材 Key structures(**主考权威**)= **A. The, Some and Any (KS6 深化)**:①some/any 区分(对比第9课)②专名前冠词——人名/地名不加 a/the;但海洋/河流/山脉/部分国名前必用 the(the Pacific / the Mediterranean)。→ **主考=冠词 the/some/any + 专名**。
+  - 同步 L30~31(p182/184/191)= **so/such...that 结果状语从句**(真题 The weather was so cold that…)+ 状语从句连词(because/though/unless/when)+ **方向介词 to/towards**(swim to the shore)。
+  - 课文①类实证:Note5 "so hard that he nearly fell"(so…that)、Note1 "a river that cuts across"(that 定语从句)、l.6 "towards a passing boat"(方向介词)——**均课文实际出现=①类,必须本课辅考,不得延后**。
+  - **裁决(按 [[am2-source-divergence-rule]] 自决未停,第四次执行)**:冠词 the/some/any+专名=主考(~12) + so…that 结果状语 + towards 方向介词 + that 定语从句=辅考(~6,均①类)。新思维冠词/结果状语章待定点补扫(诚实标注)。
+  - 新词(教材 New words):polo/Wayle/cut/row/kick/towards/nearly/sight(8官方词,待补至~11对齐体量)。
+- [ ] 步骤2 建考点清单 G1–G8 / W / C(冠词主考 + so…that/towards/that定从辅考)
+- [ ] 步骤3 清单自审 · [ ] 4 课文美语定稿(11句·冠词密集+so…that+towards+that定从;美语化 towards→toward、river bank 等)
+- [ ] 5 题库(关5=18[冠词12+辅考3,认知3]/关6=6/关7=4/关8=3/关9=3/关10=10=44) · [ ] 6 解释44
+- [ ] 7 双角色自审 · [ ] 8 JSON+seed(am2_l30.json→unit04.sql) · [ ] 9 机器12项全绿 · [ ] 10 commit
+
+---
+
 
 > 授权 2026-07-04:L2–L96 由 CC 自主走 10 步流水线(豁免逐课网页版评审),机器校验+双角色自审。
 > 不变项:SQL 只 Aaron service role 跑 · 每单元真机抽验 2 课 · 禁区4文件不改 · 不擅自合 main · 第五节升级情形停。

@@ -34,7 +34,15 @@
 - 主教材 Key structures = **as…as / not so…as 同级比较**("People are not so honest as they once were",KS8)+ Part b **量词 much/many↔little/few/a little/a few**。**主题分歧第六例**:同步侧重比较/量词,与教材一致偏多。
 - 裁决(自决未停):同级比较 gp1-3(as…as/not so…as/as…as possible)+ 比较级 than gp4 + 最高级 gp5 + 量词 gp6 = 主考;it 形式主语 gp7(it was easier for sb to do)+ 介词+动名词 gp8(without paying)辅考(均课文①类)。
 - 词10(once/temptation/article/wrap/simply/arrest/honest/steal/dress/assistant);美语化 shop→store、parcel→package、shop assistant→sales clerk、shopping centre→mall 入关6。
-- 44题;机器12项🟢(8条[c]黄警=as…as 题干他处含 as/so,同级比较固有,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit04.sql`(**L25-32=352,整单元**)。⏭️ U5 L33。
+- 44题;机器12项🟢(8条[c]黄警=as…as 题干他处含 as/so,同级比较固有,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit04.sql`(**L25-32=352,整单元**)。
+
+# ===== 课程 Unit 5(L33–40)=====
+
+## ✅ U5 L33《Out of the darkness》(冲出黑暗)· 🟢全绿(首验无黄警)
+- 主教材 Key structures = **方向/位置介词短语**("Where did he go? He went to the cinema",Compare KS9):to/from、into/out of、for、towards、at,回答 Where / Which direction。
+- 裁决(自决):方向介词 gp1-5(to/from·into/out of·for·towards·at)+ 综合选介词 gp6 = 主考;on + 动名词(=as soon as '一…就…',On arriving…)gp7 + that 定语从句可省 gp8 辅考(均课文①类)。
+- 词10(darkness/explain/coast/storm/rock/shore/ahead/cliff/struggle/hospital);美语化 towards→toward、in hospital→in the hospital 入关6(+flashlight/torch、fall/autumn 高频美语点)。
+- 44题(关5=18[方向介词14+on doing/that 4]/关6=6/关7=4/关8=3/关9=3/关10=10);机器12项🟢首验全绿。seed→`american_am2_seed_unit05.sql`(L33=44,U5起)。⏭️ L34。
 
 ---
 

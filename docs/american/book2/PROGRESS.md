@@ -121,6 +121,12 @@
 - 词10(clear/conscience/wallet/savings/villager/percent 官方6 + thief/honest/note/wrap 补4)。关6美英=zip code/bill/mail/**percent**(邮局·钱主题;**percent 一词=美语,per cent 两词=英式**,课文原文已美语化)。
 - 44题;机器12项🟢(首验红2:s5#10/#11 主动变被动含箭头"→"→改"把X改成被动"措辞;2条[c]黄警=cloze"He was sure"撞被动 was→改 felt sure 规避,复验零黄警)。seed→`american_am2_seed_unit06.sql`(**L41-45=220**)。⏭️ L46。
 
+## ✅ U6 L46《Expensive and uncomfortable》(既昂贵又受罪)· 🟢全绿(零黄警)
+- 主教材 Key structures = **动词/形容词 + 介词搭配**(verb + to/at/for/with,复习 KS22):belong/occur/confine **to**、astonished/surprised/arrive **at**、account/pay/wait **for**、agree/cope/satisfied **with**。
+- 裁决(自决):四组 verb+prep gp1-4 主考(各3题);so…that gp5 + admit+doing gp6 + be ordered/confined to gp7 + a number of gp8 辅考(均课文①类)。"X 后面用哪个介词"=运用题(填真句介词),非元语法定义(哪个≠哪类/种,不触 META 闸),元语法定义题=0。
+- 词10(unload/extremely/occur/astonish/pile/discover/admit/confine/normal/goods)。关6美英=baggage/sweater/one-way ticket/restroom(机场·服装主题)。
+- 44题;机器12项🟢(首验1条[c]黄警=s5#2"occurred to…to open"两个 to→改 that 从句规避,复验零黄警)。seed→`american_am2_seed_unit06.sql`(**L41-46=264**)。⏭️ L47。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

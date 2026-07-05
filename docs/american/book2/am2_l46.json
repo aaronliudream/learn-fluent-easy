@@ -1,0 +1,136 @@
+{
+  "id": "am2_l46",
+  "unit_no": 6,
+  "lesson_no": 46,
+  "title_en": "Expensive and uncomfortable",
+  "title_cn": "既昂贵又受罪",
+  "grammar_focus": "动词/形容词 + 介词搭配(verb + to/at/for/with,复习 KS22)主考——belong/occur/confine to、astonished/surprised/arrive at、account/pay/wait for、agree/cope/satisfied with;so…that、admit + doing、be ordered to do / be confined to、a number of(辅考·课文①类)",
+  "scene": "当一架来自伦敦的飞机抵达悉尼机场时,工人们开始卸下装有服装的一批木箱。其中有只箱子特别重,谁也弄不清是怎么回事。突然,一个工人想到打开这只箱子看看。看到的情景使他大吃一惊——箱内有一个人正躺在一堆羊毛织品之上。他由于被人发现而感到非常吃惊,甚至都没有企图逃跑。此人被捕后,承认是在飞机离开伦敦前躲进箱里的。他经历了一次漫长而又难受的旅程,因为他在那木箱里闷了18个多小时。此人被责令交付旅费3500英镑,而正常票价才2000英镑!",
+  "grammar_card": {
+    "title": "动词 + 介词:to / at / for / with 各有搭配",
+    "intro": "很多动词或形容词后面要跟固定的介词,换了介词意思就变。记住常见搭配:属于/想到/关在用 to;对…惊讶/到达/看用 at;说明/付款/等待用 for;同意/应付/满意用 with。全用本课句子举例。",
+    "table": {
+      "headers": ["搭配", "例子"],
+      "rows": [
+        ["belong to / occur to / confine to", "It occurred to him.(他想到) / confined to the box(关在箱里)"],
+        ["astonished at / surprised at / arrive at", "astonished at what he found(对所见吃惊)"],
+        ["account for / pay for / wait for", "account for the fact(说明) / pay for the trip(付旅费)"],
+        ["agree with / cope with / satisfied with", "I agree with you.(同意) / cope with it(应付)"],
+        ["admit + doing", "admitted hiding in the box(承认藏箱里)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "同一个动词换介词意思会变:see Tom(看见汤姆)≠ see to the dinner(负责做饭)。", "mark": "换介词 = 换意思" },
+      { "rule": "admit / finish / enjoy 等后面接动名词:admitted hiding(承认藏)、finished eating(吃完)。", "mark": "admit + doing" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What did the man in this story do?",
+    "options": ["He hid in a wooden box to travel from London to Sydney for free", "He stole a plane ticket", "He worked at the airport", "He shipped clothing"],
+    "answer_index": 0
+  },
+  "passage": "When a plane from London arrived at Sydney airport, workers began to unload a number of wooden boxes which contained clothing. No one could account for the fact that one of the boxes was extremely heavy. It suddenly occurred to one of the workers to open up the box. He was astonished at what he found. A man was lying in the box on top of a pile of woollen goods. He was so surprised at being discovered that he did not even try to run away. After he was arrested, the man admitted hiding in the box before the plane left London. He had had a long and uncomfortable trip, for he had been confined to the wooden box for over eighteen hours. The man was ordered to pay £3,500 for the cost of the trip. The normal price of a ticket is £2,000!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "When a plane from London arrived at Sydney airport, workers began to unload a number of wooden boxes which contained clothing.", "text_cn": "当一架来自伦敦的飞机抵达悉尼机场时,工人们开始卸下装有服装的一批木箱。" },
+    { "seq": 2, "speaker": null, "text_en": "No one could account for the fact that one of the boxes was extremely heavy.", "text_cn": "其中有只箱子特别重,谁也弄不清是怎么回事。" },
+    { "seq": 3, "speaker": null, "text_en": "It suddenly occurred to one of the workers to open up the box.", "text_cn": "突然,一个工人想到打开这只箱子看看。" },
+    { "seq": 4, "speaker": null, "text_en": "He was astonished at what he found. A man was lying in the box on top of a pile of woollen goods.", "text_cn": "看到的情景使他大吃一惊——箱内有一个人正躺在一堆羊毛织品之上。" },
+    { "seq": 5, "speaker": null, "text_en": "He was so surprised at being discovered that he did not even try to run away.", "text_cn": "他由于被人发现而感到非常吃惊,甚至都没有企图逃跑。" },
+    { "seq": 6, "speaker": null, "text_en": "After he was arrested, the man admitted hiding in the box before the plane left London.", "text_cn": "此人被捕后,承认是在飞机离开伦敦前躲进箱里的。" },
+    { "seq": 7, "speaker": null, "text_en": "He had had a long and uncomfortable trip, for he had been confined to the wooden box for over eighteen hours.", "text_cn": "他经历了一次漫长而又难受的旅程,因为他在那木箱里闷了18个多小时。" },
+    { "seq": 8, "speaker": null, "text_en": "The man was ordered to pay £3,500 for the cost of the trip. The normal price of a ticket is £2,000!", "text_cn": "此人被责令交付旅费3500英镑,而正常票价才2000英镑!" }
+  ],
+  "words": [
+    { "word": "unload", "ipa": "/ʌnˈloʊd/", "pos": "v", "meaning_cn": "卸(货)", "example": "unload a number of wooden boxes" },
+    { "word": "extremely", "ipa": "/ɪkˈstriːmli/", "pos": "adv", "meaning_cn": "非常,极其", "example": "extremely heavy" },
+    { "word": "occur", "ipa": "/əˈkɜːr/", "pos": "v", "meaning_cn": "发生;想起", "example": "It occurred to one of the workers" },
+    { "word": "astonish", "ipa": "/əˈstɑːnɪʃ/", "pos": "v", "meaning_cn": "使惊讶", "example": "He was astonished at what he found" },
+    { "word": "pile", "ipa": "/paɪl/", "pos": "n", "meaning_cn": "堆", "example": "a pile of woollen goods" },
+    { "word": "discover", "ipa": "/dɪˈskʌvər/", "pos": "v", "meaning_cn": "发现", "example": "surprised at being discovered" },
+    { "word": "admit", "ipa": "/ədˈmɪt/", "pos": "v", "meaning_cn": "承认", "example": "the man admitted hiding" },
+    { "word": "confine", "ipa": "/kənˈfaɪn/", "pos": "v", "meaning_cn": "关在,限制在", "example": "confined to the wooden box" },
+    { "word": "normal", "ipa": "/ˈnɔːrməl/", "pos": "adj", "meaning_cn": "正常的,通常的", "example": "the normal price of a ticket" },
+    { "word": "goods", "ipa": "/ɡʊdz/", "pos": "n", "meaning_cn": "(常用复数)货物,商品", "example": "a pile of woollen goods" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "verb + to(belong/occur/confine to)" },
+    { "gp": "gp2", "name": "verb/adj + at(astonished/surprised/arrive at)" },
+    { "gp": "gp3", "name": "verb + for(account/pay/wait for)" },
+    { "gp": "gp4", "name": "verb/adj + with(agree/cope/satisfied with)" },
+    { "gp": "gp5", "name": "so…that / such…that(辅考)" },
+    { "gp": "gp6", "name": "admit + doing(辅考)" },
+    { "gp": "gp7", "name": "be ordered to do / be confined to(辅考)" },
+    { "gp": "gp8", "name": "a number of(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"This box ___ one of the passengers.\"(belong 后面用哪个介词)", "stem_cn": "这箱子属于其中一位乘客。", "options": ["to", "at", "for", "with"] },
+    { "gp": "gp1", "stem": "\"It suddenly occurred ___ a worker that the box was too heavy.\"(occur 后面用哪个介词)", "stem_cn": "一个工人突然想到这箱子太重了。", "options": ["to", "at", "for", "with"] },
+    { "gp": "gp1", "stem": "\"The man was confined ___ the wooden box for 18 hours.\"(confine 后面用哪个介词)", "stem_cn": "这人被关在木箱里18个小时。", "options": ["to", "at", "for", "with"] },
+    { "gp": "gp2", "stem": "\"He was astonished ___ what he found.\"(astonished 后面用哪个介词)", "stem_cn": "他对所看到的感到惊讶。", "options": ["at", "to", "for", "with"] },
+    { "gp": "gp2", "stem": "\"He was so surprised ___ being discovered that he didn't run.\"(surprised 后面用哪个介词)", "stem_cn": "他对被发现感到非常吃惊。", "options": ["at", "to", "for", "with"] },
+    { "gp": "gp2", "stem": "\"The plane arrived ___ Sydney airport.\"(arrive 到达某地点用哪个介词)", "stem_cn": "飞机抵达悉尼机场。", "options": ["at", "to", "for", "with"] },
+    { "gp": "gp3", "stem": "\"No one could account ___ the fact that the box was so heavy.\"(account 后面用哪个介词)", "stem_cn": "谁也说不清箱子为何这么重。", "options": ["for", "to", "at", "with"] },
+    { "gp": "gp3", "stem": "\"The man was ordered to pay £3,500 ___ the cost of the trip.\"(pay 为某事付款用哪个介词)", "stem_cn": "此人被责令支付3500英镑旅费。", "options": ["for", "to", "at", "with"] },
+    { "gp": "gp3", "stem": "\"She had to wait ___ him at the airport.\"(wait 后面用哪个介词)", "stem_cn": "她得在机场等他。", "options": ["for", "to", "at", "with"] },
+    { "gp": "gp4", "stem": "\"I don't agree ___ you.\"(agree 后面用哪个介词)", "stem_cn": "我不同意你的看法。", "options": ["with", "to", "at", "for"] },
+    { "gp": "gp4", "stem": "\"Poor Mary has so much to cope ___.\"(cope 后面用哪个介词)", "stem_cn": "可怜的玛丽有太多要应付。", "options": ["with", "to", "at", "for"] },
+    { "gp": "gp4", "stem": "\"I'm not satisfied ___ your work.\"(satisfied 后面用哪个介词)", "stem_cn": "我对你的工作不满意。", "options": ["with", "to", "at", "for"] },
+    { "gp": "gp5", "stem": "\"He was ___ surprised at being discovered that he did not run away.\"(…得…以至于,后接形容词)", "stem_cn": "他被发现时太吃惊了,以至于没逃跑。", "options": ["so", "such", "very", "too"] },
+    { "gp": "gp5", "stem": "\"It was ___ a heavy box that no one could lift it.\"(…得…以至于,后接 a+名词)", "stem_cn": "那箱子太重了,没人搬得动。", "options": ["such", "so", "very", "too"] },
+    { "gp": "gp6", "stem": "\"The man admitted ___ in the box before the plane left.\"(admit 后面接动名词)", "stem_cn": "这人承认在飞机起飞前藏进了箱子。", "options": ["hiding", "to hide", "hide", "hid"] },
+    { "gp": "gp6", "stem": "\"He admitted ___ the money.\"(admit 后面接动名词)", "stem_cn": "他承认拿了钱。", "options": ["taking", "to take", "take", "took"] },
+    { "gp": "gp7", "stem": "\"The man ___ to pay £3,500.\"(被命令做某事,用被动 be + 过去分词)", "stem_cn": "此人被责令支付3500英镑。", "options": ["was ordered", "was order", "ordered", "was ordering"] },
+    { "gp": "gp8", "stem": "\"Workers unloaded ___ wooden boxes.\"(许多,后接可数名词复数)", "stem_cn": "工人们卸下许多木箱。", "options": ["a number of", "a great deal of", "much", "a little"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"行李\"常说:", "options": ["baggage", "luggage", "cases", "packs"] },
+    { "stem": "美语里\"毛衣\"常说:", "options": ["sweater", "jumper", "woolly", "knit top"] },
+    { "stem": "extremely 的意思是:", "options": ["非常,极其", "偶尔", "几乎不", "仅仅"] },
+    { "stem": "astonish 的意思是:", "options": ["使惊讶", "使高兴", "使害怕", "使疲惫"] },
+    { "stem": "confine 的意思是:", "options": ["关在,限制在", "释放", "扩大", "移动"] },
+    { "stem": "normal 的意思是:", "options": ["正常的,通常的", "昂贵的", "特殊的", "错误的"] }
+  ],
+  "contrast": [
+    { "us": "baggage", "uk": "luggage", "note_cn": "行李;美语 baggage,英式 luggage(机场场景)" },
+    { "us": "sweater", "uk": "jumper", "note_cn": "毛衣;美语 sweater,英式 jumper(课文 woollen goods)" },
+    { "us": "one-way ticket", "uk": "single", "note_cn": "单程票;美语 one-way ticket,英式 single(机票场景)" },
+    { "us": "restroom", "uk": "toilet", "note_cn": "卫生间;美语 restroom,英式 toilet(机场公共设施)" }
+  ],
+  "chunks": [
+    { "us": "account for", "ipa": "/əˈkaʊnt fɔːr/", "example1": "No one could account for the heavy box.", "example1_cn": "谁也说不清那只重箱子。", "example2": "How do you account for this?", "example2_cn": "你怎么解释这件事?" },
+    { "us": "occur to sb", "ipa": "/əˈkɜːr tuː/", "example1": "It occurred to one of the workers to open the box.", "example1_cn": "一个工人想到打开箱子。", "example2": "A good idea occurred to me.", "example2_cn": "我想到一个好主意。" },
+    { "us": "be confined to", "ipa": "/kənˈfaɪnd tuː/", "example1": "He had been confined to the box for over 18 hours.", "example1_cn": "他被关在箱子里18个多小时。", "example2": "She was confined to bed for a week.", "example2_cn": "她卧床一周。" },
+    { "us": "admit + doing", "ipa": "/ədˈmɪt ˈduːɪŋ/", "example1": "The man admitted hiding in the box.", "example1_cn": "这人承认藏在箱子里。", "example2": "He admitted taking the money.", "example2_cn": "他承认拿了钱。" }
+  ],
+  "stage7_cloze": {
+    "context": "When a plane arrived ___1___ Sydney airport, workers found a very heavy box. No one could account ___2___ its weight. A worker was astonished ___3___ what he found: a man inside! The man was ordered to pay ___4___ the trip.",
+    "blanks": [
+      { "blank_no": 1, "options": ["at", "to", "for", "with"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["for", "to", "at", "with"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["at", "to", "for", "with"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["for", "to", "at", "with"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What did the workers unload from the plane at Sydney airport?", "options": ["Wooden boxes containing clothing", "Live animals", "Furniture", "Cars"] },
+    { "stem": "What did a worker find inside the extremely heavy box?", "options": ["A man lying on a pile of woollen goods", "Only clothing", "Gold bars", "Nothing unusual"] },
+    { "stem": "Why didn't the man try to run away when discovered?", "options": ["He was so surprised at being discovered", "He was asleep", "He was tied up", "He wanted to be caught"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"谁也说不清这个事实\"(说明原因用 account for):", "options": ["No one could account for the fact.", "No one could account at the fact.", "No one could account with the fact.", "No one could account the fact."] },
+    { "stem": "你想说\"一个工人突然想到打开箱子\"(想起某事用 occur to):", "options": ["It occurred to a worker to open the box.", "It occurred at a worker to open the box.", "It occurred for a worker to open the box.", "It occurred a worker to open the box."] },
+    { "stem": "你想说\"他被关在箱子里18个小时\"(关在…用 be confined to):", "options": ["He was confined to the box for 18 hours.", "He was confined at the box for 18 hours.", "He was confined for the box for 18 hours.", "He was confined the box for 18 hours."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "astonish 的意思是:", "options": ["使惊讶", "使高兴", "使生气", "使疲惫"] },
+    { "kind": "vocab", "stem": "normal 的意思是:", "options": ["正常的,通常的", "昂贵的", "罕见的", "危险的"] },
+    { "kind": "grammar", "stem": "\"No one could account ___ the fact.\"(说明原因)", "stem_cn": "谁也说不清这个事实。", "options": ["for", "to", "at", "with"] },
+    { "kind": "grammar", "stem": "\"He was astonished ___ what he found.\"(对…感到惊讶)", "stem_cn": "他对所看到的感到惊讶。", "options": ["at", "to", "for", "with"] },
+    { "kind": "scenario", "stem": "\"He was so surprised at being discovered that he did not try to run away.\" 这句话的意思是:", "options": ["他被发现时太吃惊了,以至于没试图逃跑。", "他发现后很高兴。", "他被发现后立刻逃跑了。", "他假装很吃惊。"] },
+    { "kind": "scenario", "stem": "\"He had been confined to the box for over eighteen hours.\" 这句话的意思是:", "options": ["他被关在箱子里18个多小时。", "他在箱子上待了18小时。", "他花了18小时做箱子。", "他18小时前离开了箱子。"] },
+    { "kind": "reading", "stem": "Why was one of the boxes extremely heavy?", "options": ["A man was hiding inside it", "It was full of gold", "It held machinery", "It was made of stone"], "passage": true },
+    { "kind": "reading", "stem": "How much was the man ordered to pay, and how did it compare to a normal ticket?", "options": ["£3,500 — far more than the normal £2,000 ticket", "£2,000 — the same as a ticket", "Nothing at all", "£500 — less than a ticket"], "passage": true },
+    { "kind": "listening", "stem": "When had the man hidden in the box?", "options": ["Before the plane left London", "At Sydney airport", "During the flight", "After landing"], "audio": true },
+    { "kind": "listening", "stem": "Why is the story called 'Expensive and uncomfortable'?", "options": ["He paid more than a ticket and was cramped in a box for 18 hours", "The box was made of gold", "The flight was delayed", "The clothing was costly"], "audio": true }
+  ]
+}

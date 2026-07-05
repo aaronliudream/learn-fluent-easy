@@ -27,8 +27,24 @@
 | L12 | 2 | Goodbye and good luck | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 一般将来时(主考,教材 Key structures=I'll see you tomorrow.)+ be going to/表将来的现在时(辅考讲深);**教材/同步同主题讲深(非分歧)**——同步L12讲更深(be going to/be to/将来进行时);三源 教材p60 KeyStruct + 同步p88-89 将来时各表达 + 新思维将来时章未定点补扫(诚实标注);**be to/be about to/将来进行时挂账**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
 | L13 | 2 | The Greenwood Boys | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 将来进行时(主考,教材 Key structures=What will you be doing tomorrow?)+ by交通工具/现在进行复习(辅考);**单一主题三源一致(无分歧)**;**承接兑现 L12 将来进行时挂账→L12该项清零**;三源 教材p64 KeyStruct + 同步p89 将来进行时基本用法 + 新思维将来进行章未定点补扫(诚实标注);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
 | L14 | 2 | Do you speak English? | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 过去完成时(主考,教材 Key structures=After he had finished work he went home.)+ had planned/hoped 未实现计划/It was the…time that had done(辅考讲深);**同主题讲深无分歧**;**承接兑现 L7/L9 排除留后的过去完成时→该跨课账清零**;三源 教材p68 KeyStruct + 同步p92 过去完成时用法 + 新思维过去完成章未定点补扫(诚实标注);seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
-| L15 | 2 | (待扫描确认标题) | ⬜ 下一课 | — | NCE2 L15=Good news;L15三源扫描确认标题+主题,不凭记忆 |
-| L16 | 2 | — | ⬜ 未开工 | — | — |
+| L15 | 2 | Good news | ✅ 生产完成(44题/解释44/关6=6/认知3) | 🟢八项全绿(首轮) | 间接引语(主考,教材 Key structures=He said that… He told me…)+ 宾语从句 if/whether/过去将来时 would(辅考讲深);**同主题讲深无分歧**(同步 L15=宾语从句+过去将来时=间接引语底层机制);三源 教材p72 KeyStruct + 同步p99 宾语从句+过去将来时 + 新思维间接引语章未定点补扫(诚实标注);⚠️**发现反身代词遗漏→补挂账**;seed=`american_am2_seed_unit02.sql`;prewarm待批次;真机待抽验 |
+| L16 | 2 | (待扫描确认标题) | ⬜ 下一课(单元2末课) | — | NCE2 L16=A polite request;L16三源扫描确认标题+主题,不凭记忆;单元2末→出批次汇报+核对挂账清零 |
+
+## L15 流水线步骤跟踪(间接引语主考)
+- [x] 1 三源扫描(scan-evidence-lesson15.md:**同主题讲深无分歧**——教材p72 Key structures=间接引语(He said that… He told me…,say/tell+that+时态后移) / 同步p99=宾语从句(that/if/whether)+过去将来时(would)=间接引语底层机制;逐页页眉;新思维间接引语章诚实标"未定点补扫";⚠️**发现同步 L14 章反身代词+教材 L14 himself→L14漏覆盖→补挂账**)
+- [x] 2 建考点清单(grammar-syllabus-lesson15.md:G1-G4+G7+G8间接引语14 + G5宾语从句if/whether 2 + G6过去将来时2 / W1-W11 / C1-C6)
+- [x] 3 清单自审(评审角色核对,结论写入清单头 ★)· [x] 4 课文定稿(11句·间接引语密集told me that…would/said that…was/could/had come + say·tell区分·11词/3语块全落·elevator/let go/raise/dollars美语化)
+- [x] 5 题库(关5=18[间接引语14+讲深4,认知3] / 关6=6 / 关7=4 / 关8=3 / 关9=3 / 关10=10 = 44) · [x] 6 解释44条
+- [x] 7 双角色自审(coverage U2/lesson15.md;首轮无抓修) · [x] 8 JSON+seed(am2_l15.json→unit02.sql) · [x] 9 机器校验八项全绿(44=44/解释44/零串味14条未用"宾语从句"术语/G1-G8全覆盖/W11) · [x] 10 commit
+
+## L15 挂账(⚠️ 单元2末批次汇报核对)
+- **⚠️ 补挂账:反身代词**(himself/themselves):同步 L14 章(印95-97 四、反身代词)含此点 + 教材 L14 课文"he was English himself"实际出现(=①类);L14 只做过去完成时漏覆盖 → 补挂账,单元2末单开补充处置或并入 L16 若含反身代词语境。
+- **遗留继续挂账**:L10 名词所有格深度 / L11 宾补深度+连词深度 / L12 be to+be about to → 继续挂账,L16 单元末统一核对。
+
+## L15 待裁决(单元末汇总报 Aaron;均非阻塞,已按推荐默认继续)
+1. 词表官方5词→补至11(+office/business/firm/receive/extra/raise)对齐体量 → 采纳A。
+2. 同步同主题深料(宾语从句+过去将来时)=间接引语底层机制 → 取常用(if/whether转述疑问+would后移)并入讲深,细则(was going to/was to)不设题。
+3. 关6 美英对照 raise/rise · dollars/pounds · elevator/lift → 采纳:贴办公室加薪场景,加薪 raise 是本课好消息核心美语差。
 
 ## L14 流水线步骤跟踪(过去完成时主考)
 - [x] 1 三源扫描(scan-evidence-lesson14.md:**同主题讲深无分歧**——教材p68 Key structures=过去完成时(After he had finished work he went home) / 同步p92 过去完成时用法(含 had planned/hoped 未实现计划、It was the…time that had done、一般过去vs过去完成比较);逐页页眉;**承接 L7/L9 排除留后**的 had told/had gathered→L14主考;新思维过去完成章诚实标"未定点补扫")

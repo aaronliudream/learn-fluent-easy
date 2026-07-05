@@ -119,6 +119,20 @@ const CN = {
     'I looked at ___ angrily.(指那对情侣)': "我生气地看着他们。",
     '"pay no attention" = "not pay ___ attention"': "一点都不理会(pay no attention = not pay any attention)。",
   },
+  am2_l02: {
+    '"She ___ me every weekend."(每周都打来的习惯)': "她每周都给我打电话。",
+    '"The sun ___ in the east and ___ in the west."(客观事实)': "太阳从东边升起,从西边落下。",
+    '"Look outside! It ___ right now."(此刻正在下)': "快看外面!现在正在下雨。",
+    '"What ___ you ___ now?" — "I\'m having breakfast."': "你现在在做什么?——我在吃早餐。",
+    '"He ___ to work by subway every day, but today he ___ the bus."': "他每天坐地铁上班,但今天他改乘公交车。",
+    '"Be quiet! The baby ___."(此刻)': "安静!宝宝在睡觉。",
+    '"___ a rainy day!"(感叹"多雨/糟糕的一天")': "多糟糕的雨天啊!",
+    '"___ fast time flies!"(感叹时间过得快)': "时间过得真快啊!",
+    '"I stayed up late, so I went ___ bed after midnight."(上床睡觉)': "我熬夜了,所以过了午夜才上床睡觉。",
+    '"He doesn\'t get up early. He gets up ___."(起得晚)': "他不早起,他起得晚。",
+    '"Look! It ___ outside now."(此刻正在下雨)': "快看!外面正在下雨。",
+    '"I ___ early on Sundays."(周日的习惯:从不早起)': "周日我从不早起。",
+  },
 };
 
 let total = 0, patched = 0;

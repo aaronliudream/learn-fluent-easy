@@ -56,9 +56,11 @@ What 感叹句结构:What + a + 形容词 + 可数名词单数 + 主谓!→ What
 
 ### s6 seq1 | ans: 起床
 get up = 起床(从床上起来)。✓ I get up at seven. 和 stay in bed(赖床)正好相反。
+顺带记:睡觉 = go to bed / sleep;坐下 = sit down;出门 = go out.
 
 ### s6 seq2 | ans: 赖床/待在床上
 stay in bed = 待在床上、赖床不起。✓ I stay in bed until noon on Sundays.
+顺带记:铺床 = make the bed;起床 = get up;换床单 = change the sheets.
 
 ### s6 seq3 | ans: come over
 come over = (到某人那儿)过来、串门。✓ I'm coming over to see you. 想说"我这就过来"就用它。
@@ -74,15 +76,19 @@ travel 变现在分词,美式拼写单 l → traveling;英式双 l → travellin
 
 ### s7 seq1 | ans: get up
 "周日从不早起"是习惯,用一般现在时原形 get up(前面有频度副词 never)。✓ I never get up early on Sundays.
+✗ am getting up:never 表习惯用一般现在时,不用现在进行;✗ got up:说的是习惯,不是过去;✗ getting up:缺助动词,单独不能作谓语.
 
 ### s7 seq2 | ans: 'm coming
 "我这就过来看你"是近期安排,用现在进行时 → I'm coming over。表示已经打算好的事。
+✗ come:表最近安排的"这就过来"用现在进行 'm coming;✗ came:不是过去;✗ comes:主语 I 不用第三人称 comes,这里也该用进行时.
 
 ### s7 seq3 | ans: 'm having
 "此刻还在吃早餐"用现在进行时 → I'm having breakfast。still + 进行时强调"仍在进行"。
+✗ have:此刻正在吃,用现在进行 'm having;✗ had:不是过去;✗ has:主语 I 不用 has.
 
 ### s7 seq4 | ans: What
 感叹"多懒的一个周日",Sunday 是名词,用 What 引导 → What a lazy Sunday!
+✗ How:后面是名词短语 a lazy Sunday,感叹名词用 What a…;✗ Which:意为"哪一个",不是感叹;✗ Very:不能引导感叹句.
 
 ### s8 seq1 | ans: Sunday
 听开头 It was Sunday(那是个星期天),所以这天是周日。
@@ -104,9 +110,11 @@ travel 变现在分词,美式拼写单 l → traveling;英式双 l → travellin
 
 ### s10 seq1 | ans: outside
 "外面"对应 outside。✓ It was dark outside. inside 是"里面",方向相反。
+顺带记:inside = 里面;outdoors = 户外(地);outer = 外部的.
 
 ### s10 seq2 | ans: 一餐,一顿饭
 meal = 一餐、一顿饭。✓ Breakfast is the first meal of the day.(早餐是一天的第一顿饭)。
+顺带记:面粉 = flour;时间 = time;心情 = mood.
 
 ### s10 seq3 | ans: is raining
 "now"此刻正在下雨,用现在进行时 is raining。✓ It is raining outside now.

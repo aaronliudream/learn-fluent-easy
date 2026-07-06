@@ -292,7 +292,14 @@
 - 裁决:gp1 一般过去被动(3)+ gp2 情态/推测被动(3)+ gp3 现在完成被动(3)+ gp4 过去完成被动(2)+ gp5 过去进行被动(3)+ gp6 完成非谓语/不定式被动(4)=18。全运用题,元语法定义题=0。
 - 词10(净化包表:instruct/acquire/confidence/restore/original/engine/maker/garage/condition/rare;原暴力词 murder 降级不入表)。关6美英=gas/petrol+tire/tyre+trunk/boot+hood/bonnet(汽车族);chunks=come back to life/a great deal of/restore…to/work on。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L69=220**)。
-- ⏸️ **L70 挂起**:风险表标 🔴 换情节包,包未到(网页版陆续给,优先 L69→L70);我本已读源 doc355-357(形容词+介词搭配),但按方案B**不用源产出、等 L70 换情节包**。⏭️ 收到 L70 包即做;期间可穿插 ✅/🟢 可读课。
+- ⏸️ **L70 挂起**:风险表标 🔴 换情节包,包未到(网页版陆续给,优先 L69→L70);我本已读源 doc355-357(形容词+介词搭配),但按方案B**不用源产出、等 L70 换情节包**。⏭️ 收到 L70 包即做;期间穿插 ✅/🟢 可读课。
+
+## ✅ U9 L71《A famous clock》(一个著名的大钟)· 🟢全绿 · 🟡试读通过(未被拦)
+- 🟡试读课:风险表标 🟡,我试读源 doc359-361**未被拦**,正常读源产出;SD 里 hang/hanged(绞死)按方案B原则降级=只教 hang→hung 悬挂(neutral 例句),hanged 仅认读一句注,不出暴力题。
+- 主考(源 doc360 = Key structures)= **Review KS60-69 综合复习**:与过去相反虚拟条件句(passage 核心:Parliament had not been burned down → clock would never have been erected)+ 各时态被动(can be heard/were being built/are connected)+ have sth done(have the clock checked)+ 现在完成/过去完成进行/将来完成。Special difficulties = **SD official/employee/salesclerk(美语 clerk)、hang→hung 悬挂**。
+- 裁决:gp1 与过去相反虚拟(3)+ gp2 各时态被动(3)+ gp3 have sth done(2)+ gp4 现在完成/过去完成进行/将来完成(3)= 复习主考11;gp5 official/employee/clerk(3)+ gp6 hang→hung(4)= SD 辅考7。全运用题,元语法定义题=0。
+- 词11(官方9:parliament/erect/accurate/official/Greenwich/observatory/check/microphone/tower + 补2 immense/strike)。美语化 shop assistant→**salesclerk/clerk**;关6美英=salesclerk/shop assistant+elevator/lift+first floor/ground floor+apartment/flat;chunks=take one's name from/be responsible for/all over the world/have sth checked。Big Ben/Parliament/Greenwich 系伦敦真实专名(纪实课文),保留。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-69+L71=264**,L70 空缺待换情节包补)。⏭️ L72(✅正常读)。
 
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。

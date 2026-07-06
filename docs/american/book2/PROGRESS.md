@@ -753,3 +753,12 @@
 - **关6**:美语对照 apartment(公寓)/trash(垃圾) + 4 词义(dust/tidy/guest/vacuum)。contrast: apartment↔flat / trash↔rubbish / faucet↔tap / elevator↔lift。chunks: be covered in / before the guests come / that can wait / more than。
 - **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-92 = 176);已勾收官包 checkbox。
 - **待裁决**:无。
+
+═══════════════════════════════════════
+## L93《A Generous Gift 一份慷慨的礼物》· U12 · 收官包·换道具照搬结构 · 被动语态各时态(KS21/45/69)
+- **来源**:收官包(Aaron 2026-07-05);原课《A noble gift》自由女神像→换道具为「镇上捐赠的手工古钟」,被动语态各时态结构照搬,KS21/45/69 考点原样。
+- **考点**:一般现在/过去被动/现在完成被动/将来被动/现在进行被动/情态被动 + by短语/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:generous, gift, entirely, by hand, admire, town hall, wind(上发条), caretaker, mayor, treasure。
+- **关6**:美语对照 elevator(电梯)/first floor(一楼) + 4 词义(generous/admire/treasure/entirely)。contrast: elevator↔lift / first floor↔ground floor / fall↔autumn / movie↔film。chunks: by hand / town hall / for generations / on display。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-93 = 220);已勾收官包 checkbox。
+- **待裁决**:无。

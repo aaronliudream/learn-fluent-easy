@@ -228,6 +228,13 @@
 - **词17全收**(零遗漏:Hubble/telescope/launch/space/NASA/billion/faulty/astronaut/shuttle/Endeavour/robot-arm/grab/atmosphere/distant/galaxy/universe/eagle eye,含3专名)。关6美英=bill/note(钞票)+check/bill(账单,呼应 cost 主题)+elevator·apartment;chunks=right from the start/at a cost of/a great deal/put…right。
 - 44题;机器12项🟢一次过。seed→`american_am2_seed_unit08.sql`(**L57-L61=220**)。⏭️ L62。
 
+## ✅ U8 L62《After the fire》(大火之后)· 🟢全绿 · 教材 Unit 3
+- ⚠️ content filtering 第3次误拦(L55/L57/L62,均为含 fire/pirates/punish 等词的无害老课文)。**本课我实际未被拦**——完整读到源 doc323-326;Aaron 净化包随后到,与我从源提取的考点/词表**完全一致**(KS38+同 SD 三组+同15词),仅额外指定 firemen→firefighters 美语化。已按包对齐。
+- 主考(源 doc324 = Key structures)= **KS38 过去完成时(had done)vs 过去完成进行时(had been doing)**:had done 看结果/完成(had covered/had already taken root/had lost)、had been doing 看过程/持续(had been fighting for 3 weeks/had been planting for a month/had been growing for centuries),含宾语从句 I asked what he had lost/had been doing。Special difficulties **SD 三组易混词 control/check、great/big、soil/ground**。
+- 裁决:gp1 过去完成(4)+ gp2 过去完成进行(3)+ gp3 宾语从句中的完成(2)= KS38 主考;gp4 control/check(3)+ gp5 great/big(3)+ gp6 soil/ground(3)= SD 辅考。全运用题,元语法定义题=0。
+- **词15全收**(control/smoke/desolate/threaten/surrounding/destruction/flood/authority/grass-seed/spray/quantity/root/century/patch/blacken)。美语化 firemen→**firefighters**、aeroplanes→**airplanes**;关6美英=firefighter/fireman+airplane/aeroplane+truck/lorry+gas/petrol;chunks=under control/take root/in place of/wash away。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit08.sql`(**L57-L62=264**)。⏭️ L63。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

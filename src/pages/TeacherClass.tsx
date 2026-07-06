@@ -189,7 +189,7 @@ export default function TeacherClass() {
         <Kpi label="本周活跃" value={`${activeWeek} / ${activeStudents.length}`}
              sub={activeStudents.length > 0 ? `${Math.round(activeWeek / activeStudents.length * 100)}% 活跃率` : "—"}
              tone="emerald" />
-        <Kpi label="本周总学习" value={fmtHM(weekMinutes)} sub="累计 study_minutes" tone="emerald" />
+        <Kpi label="本周总学习" value={fmtHM(weekMinutes)} sub="累计学习时长" tone="emerald" />
         <Kpi label="平均周时长" value={`${avgWeekMins} 分钟`} sub="每位学生" />
         <Kpi label="需关注学生" value={weakStudents}
              sub={weakStudents > 0 ? "≥ 3 未解决错题" : "暂无"}

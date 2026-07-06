@@ -734,3 +734,13 @@
 - **关6**:美语对照 stove(炉灶)/faucet(水龙头) + 4 词义(chop/knife/taste/remind)。contrast: stove↔cooker / faucet↔tap / cookie↔biscuit / candy↔sweets。chunks: what's for dinner / go shopping / be careful with / cook together。
 - **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-90 = 88);已勾合集 checkbox。
 - **待裁决**:无(L89/L90 同考点为教材螺旋设计,故事+词表全异,作间隔练习互补)。
+
+═══════════════════════════════════════
+## L91《Three People in a Hot-Air Balloon 热气球上的三个人》· U12 · 收官包·干净课美语化 · can/be able to/manage to(KS19/43/67)
+- **来源**:收官包(Aaron 2026-07-05);原课干净(热气球趣事),照搬美语化,KS19/43/67 考点原样。
+- **考点**:can·could/be able to(各时态·某次做到)/manage to/can't·couldn't/三者辨析(某次做到不用could,could用于一贯能力)/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:hot-air balloon, basket, pilot, fit, valley, steer, handle, tense, land, adventure。
+- **关6**:美语对照 vacation(度假)/fall(秋天) + 4 词义(basket/steer/adventure/tense)。contrast: vacation↔holiday / fall↔autumn / elevator↔lift / movie↔film。chunks: be able to / manage to / hot-air balloon / of a lifetime。
+- **泄漏防护**:be able to/managed to/could 型题中文提示改写为纯语义描述(“过去某一次成功做到了”“费了一番劲设法做成”“一贯具备的能力”),不含任何英文答案词。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-91 = 132);已勾收官包 checkbox。
+- **待裁决**:无。

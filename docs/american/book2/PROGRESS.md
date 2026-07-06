@@ -256,6 +256,14 @@
 - **真机抽验指定2课**:①**L62**(净化包生产+过去完成时态对比,验听力音频/时态题呈现)②**L64**(虚拟语气三型+draw短语动词,验条件句题干与SD辨析呈现)。
 - ⏭️ L65 起进教材 Unit 3 后段(课程 U9,L65-72)。
 
+# ===== 课程 Unit 9(L65–72)=====
+
+## ✅ U9 L65《Jumbo versus the police》(小象对警察)· 🟢全绿 · 教材 Unit 3
+- 主考(源 doc336-337 = Key structures)= **KS17 must/have to/should/ought to** + **should have done / ought to have done(过去本应做而没做)**:must/have to=必须(过去义务用 had to,must 无过去式)、should/ought to=应该、should/ought to have done=懊悔本该做没做(He should have known / ought to have gone)。Special difficulties(源 doc337)= **3组**:短语动词 let off/down/in/out、agree to do vs accept sth、dress up as vs dress。
+- 裁决:gp1 must/have to/had to(3)+ gp2 should/ought to(2)+ gp3 should/ought to have done(4)= KS17 主考;gp4 let 短语动词(3)+ gp5 agree/accept(3)+ gp6 dress up/dress(3)= SD 辅考。全运用题,元语法定义题=0。
+- 词12(官方9:versus/Christmas/circus/present/accompany/approach/ought/weigh/fortunate;补3 elephant/arrest/traffic——官方仅9词补足至~12)。美语化 Father Christmas→**Santa Claus**、honour→**honor**;关6美英=Santa Claus/Father Christmas+honor/honour+candy/sweets+cookie/biscuit;chunks=set off/hold up the traffic/let…off/dress up as。
+- 44题;机器12项🟢一次过。seed→**新建 `american_am2_seed_unit09.sql`**(**L65=44**)。⏭️ L66。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

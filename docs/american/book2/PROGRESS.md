@@ -173,6 +173,12 @@
 - **词表13词全收**(hot/fireman/cause/examine/accidentally/remains/wire/volt/power line/solve/mystery/snatch/spark),守零遗漏铁律不截断。关6美英=flashlight/firefighter(火/电主题)+contrast kerosene·outlet。
 - 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit07.sql`(**L49-L53=220**)。⏭️ L54。
 
+## ✅ U7 L54《Sticky fingers》(粘糊的手指)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc292-293)= **KS30 冠词 a/an/the 与 some/any 综合复习**:some(肯定)/any(疑问否定)、a/an 泛指、the 特指、**the+形容词表一类人**(the rich/the poor/the deaf/the blind)、the+最高级 vs most(大多数)、零冠词固定短语(go to school/at work)vs the(go to the cinema)。**本课无独立 Special difficulties 页**(KS30 内含 SD9 some/any 引用)。
+- 裁决(自决):gp1 some/any(4)+ gp2 a/an(3)+ gp3 the/the+形容词(3)+ gp4 零冠词vs the(3)+ gp5 the+最高级/most(2)= KS30 主考;gp6 no sooner…than/what a mess/ring back(3)= 课文辅考。全运用题,元语法定义题=0。
+- **词表14词全收**(sticky/finger/pie/mix/pastry/annoying/receiver/dismay/recognize/persuade/mess/doorknob/sign/register)。关6美英=mailman/faucet(家/邮件主题)+contrast mail·zip code。
+- 44题;机器12项🟢(1黄=s5#10 "the deaf and the blind" 是 the+形容词并列的教学句式,人工核合法)。seed→`american_am2_seed_unit07.sql`(**L49-L54=264**)。⏭️ L55。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

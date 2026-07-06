@@ -696,3 +696,12 @@
 - **关6**:美语对照 soccer(足球)/sneakers(运动鞋) + 4 词义(string/disappear/field/search)。contrast: soccer↔football / sneakers↔trainers / fall↔autumn / cookie↔biscuit。chunks: look forward to / by the time / hold on / fly a kite。
 - **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit11.sql(L81-86 = 264);已勾合集 checkbox。
 - **待裁决**:无。
+
+═══════════════════════════════════════
+## L87《What Did She Say? 她说了什么》· U11 · 合集·方案B换情节 · 间接引语(KS15/39/63)
+- **来源**:换情节合集(Aaron 2026-07-05);KS15/39/63 考点原样,情节换「记者赛前采访教练转述」中性新闻场景。
+- **考点**:时态后移/say vs tell sb/一般疑问 ask if·whether/特殊疑问 ask+疑问词并改陈述语序/will→would综合/词汇辨析 = 6 gp × 3 = 18。语域注(口语当下仍成立可不后移)入 specialRules。
+- **词表(10)**:reporter, coach, prepare, confident, join, definitely, positive, cheer, fan, add。
+- **关6**:美语对照 field(足球场)/movie(电影) + 4 词义(reporter/confident/cheer/prepare)。contrast: field↔pitch / movie↔film / fall↔autumn / vacation↔holiday。chunks: ask about / get ready / the big game / come and cheer。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit11.sql(L81-87 = 308);已勾合集 checkbox。
+- **待裁决**:无。

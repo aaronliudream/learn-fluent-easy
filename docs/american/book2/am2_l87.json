@@ -1,0 +1,131 @@
+{
+  "id": "am2_l87",
+  "unit_no": 11,
+  "lesson_no": 87,
+  "title_en": "What Did She Say?",
+  "title_cn": "她说了什么?",
+  "grammar_focus": "复习 KS15/39/63 间接引语(方案B换情节包):直接引语变间接引语时的时态后移、say that / tell sb that 的区别、一般疑问用 ask if/whether、特殊疑问用 ask + 疑问词并改陈述语序;附语域注(口语转述当下仍成立的事时态可不后移)",
+  "scene": "昨天,一位记者就那场大赛采访了我们的教练。她问他球队是怎么备战的。他说他们那一个月一直在刻苦训练。他告诉她,队员们都准备好了,信心十足。记者问明星球员会不会上场。他说她状态很好,肯定会打。她问比赛几点开始。他告诉她当晚七点开赛。他还补充说,希望球迷们都来加油助威。后来,记者写道,这位教练听上去非常乐观。",
+  "grammar_card": {
+    "title": "复习 KS15/39/63 间接引语",
+    "intro": "把别人的话转述出来,就是间接引语。要点:①时态后移——主句是过去时(said/told/asked)时,从句里的现在→过去、现在完成→过去完成、will→would(He said they had been training / the players were ready);②say 与 tell 的区别——tell 后面要跟人(told her that…),say 后面不直接跟人(said that…);③一般疑问的转述用 ask if / whether(asked whether she would play);④特殊疑问的转述用 ask + 疑问词,且从句改成陈述语序、不倒装(asked when the game would start,不是 when would the game start)。",
+    "table": {
+      "headers": ["转述方式", "例子"],
+      "rows": [
+        ["say that / tell sb that", "He said that… / He told her that…"],
+        ["时态后移", "\"They are ready\" → He said they were ready."],
+        ["一般疑问 ask if/whether", "\"Will she play?\" → She asked whether she would play."],
+        ["特殊疑问 ask + 疑问词(陈述语序)", "\"When does it start?\" → She asked when it started."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语“足球场”常说 field(英式 pitch);“电影”说 movie(英式 film)。本课已按美语写。", "mark": "field / movie" },
+      { "rule": "tell 后面必须跟人(told her that…),say 后面不直接跟人(said that…);特殊疑问转述后从句用陈述语序,不倒装。", "mark": "say/tell + 语序" },
+      { "rule": "语域注:口语里转述“当下仍成立”的事,时态可以不后移(He said the team is ready 也自然);正式书面则一般后移(was ready)。本课按正式书面的后移作答。", "mark": "语域" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Who did the reporter interview?",
+    "options": ["The team's coach", "A star player", "A fan in the crowd", "The referee"],
+    "answer_index": 0
+  },
+  "passage": "Yesterday a reporter asked our coach about the big game. She asked him how the team had prepared. He said that they had been training hard all month. He told her that the players were ready and confident. The reporter asked whether the star player would join the match. He said that she was feeling great and would definitely play. She asked when the game would start. He told her that it would begin at seven that evening. He added that he hoped the fans would come and cheer. Later, the reporter wrote that the coach sounded very positive.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Yesterday a reporter asked our coach about the big game. She asked him how the team had prepared.", "text_cn": "昨天,一位记者就那场大赛采访了我们的教练。她问他球队是怎么备战的。" },
+    { "seq": 2, "speaker": null, "text_en": "He said that they had been training hard all month. He told her that the players were ready and confident.", "text_cn": "他说他们那一个月一直在刻苦训练。他告诉她,队员们都准备好了,信心十足。" },
+    { "seq": 3, "speaker": null, "text_en": "The reporter asked whether the star player would join the match. He said that she was feeling great and would definitely play.", "text_cn": "记者问明星球员会不会上场。他说她状态很好,肯定会打。" },
+    { "seq": 4, "speaker": null, "text_en": "She asked when the game would start. He told her that it would begin at seven that evening.", "text_cn": "她问比赛几点开始。他告诉她当晚七点开赛。" },
+    { "seq": 5, "speaker": null, "text_en": "He added that he hoped the fans would come and cheer. Later, the reporter wrote that the coach sounded very positive.", "text_cn": "他还补充说,希望球迷们都来加油助威。后来,记者写道,这位教练听上去非常乐观。" }
+  ],
+  "words": [
+    { "word": "reporter", "ipa": "/rɪˈpɔːrtər/", "pos": "n", "meaning_cn": "记者", "example": "a reporter asked our coach" },
+    { "word": "coach", "ipa": "/koʊtʃ/", "pos": "n", "meaning_cn": "教练", "example": "asked our coach about the big game" },
+    { "word": "prepare", "ipa": "/prɪˈper/", "pos": "v", "meaning_cn": "准备,备战", "example": "how the team had prepared" },
+    { "word": "confident", "ipa": "/ˈkɑːnfɪdənt/", "pos": "adj", "meaning_cn": "自信的", "example": "the players were ready and confident" },
+    { "word": "join", "ipa": "/dʒɔɪn/", "pos": "v", "meaning_cn": "参加,加入", "example": "join the match" },
+    { "word": "definitely", "ipa": "/ˈdefɪnətli/", "pos": "adv", "meaning_cn": "肯定地,一定", "example": "she would definitely play" },
+    { "word": "positive", "ipa": "/ˈpɑːzətɪv/", "pos": "adj", "meaning_cn": "乐观的,积极的", "example": "the coach sounded very positive" },
+    { "word": "cheer", "ipa": "/tʃɪr/", "pos": "v", "meaning_cn": "欢呼,加油", "example": "the fans would come and cheer" },
+    { "word": "fan", "ipa": "/fæn/", "pos": "n", "meaning_cn": "球迷,粉丝", "example": "he hoped the fans would come" },
+    { "word": "add", "ipa": "/æd/", "pos": "v", "meaning_cn": "补充说", "example": "he added that he hoped the fans would come" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "间接引语的时态后移(are→were / has→had)" },
+    { "gp": "gp2", "name": "say that 与 tell sb that 的区别" },
+    { "gp": "gp3", "name": "一般疑问的转述 ask if / whether" },
+    { "gp": "gp4", "name": "特殊疑问的转述 ask + 疑问词(陈述语序)" },
+    { "gp": "gp5", "name": "间接引语综合(will→would / 疑问词后移)" },
+    { "gp": "gp6", "name": "词汇辨析(reporter / confident / cheer)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He said that they ___ hard all month.\"(直接引语 have been training,转述后时态后移)", "stem_cn": "他说他们那一个月一直在刻苦训练。", "options": ["had been training", "have been training", "are training", "train"] },
+    { "gp": "gp1", "stem": "\"He told her that the players ___ ready.\"(直接引语 are ready,转述后时态后移)", "stem_cn": "他告诉她队员们都准备好了。", "options": ["were", "are", "will be", "have been"] },
+    { "gp": "gp1", "stem": "\"The reporter wrote that the coach ___ very positive.\"(直接引语 sounds,转述后时态后移)", "stem_cn": "记者写道,这位教练听上去非常乐观。", "options": ["sounded", "sounds", "will sound", "has sounded"] },
+    { "gp": "gp2", "stem": "\"He ___ her that it would begin at seven.\"(后面直接跟人 her,用哪个词)", "stem_cn": "他告诉她当晚七点开赛。", "options": ["told", "said", "spoke", "talked"] },
+    { "gp": "gp2", "stem": "\"He ___ that they had trained hard.\"(后面不跟人,用哪个词)", "stem_cn": "他说他们一直刻苦训练。", "options": ["said", "told", "told to", "spoke"] },
+    { "gp": "gp2", "stem": "\"He ___ that he hoped the fans would cheer.\"(补充说,用哪个词)", "stem_cn": "他补充说,希望球迷们都来加油。", "options": ["added", "told", "spoke to", "said to"] },
+    { "gp": "gp3", "stem": "\"The reporter asked ___ the star player would join the match.\"(转述一般疑问)", "stem_cn": "记者问明星球员会不会上场。", "options": ["whether", "that", "what", "how"] },
+    { "gp": "gp3", "stem": "\"She asked ___ the team was ready.\"(转述一般疑问,另一种说法)", "stem_cn": "她问球队是否准备好了。", "options": ["if", "that", "what", "so"] },
+    { "gp": "gp3", "stem": "\"He asked me ___ I had enjoyed the game.\"(转述一般疑问)", "stem_cn": "他问我是否喜欢这场比赛。", "options": ["whether", "that", "which", "so"] },
+    { "gp": "gp4", "stem": "\"She asked him ___ the team had prepared.\"(用“如何”引导,陈述语序)", "stem_cn": "她问他球队是怎么备战的。", "options": ["how", "that", "whether", "if"] },
+    { "gp": "gp4", "stem": "\"She asked ___ the game would start.\"(用“何时”引导)", "stem_cn": "她问比赛几点开始。", "options": ["when", "that", "if", "whether"] },
+    { "gp": "gp4", "stem": "\"She asked where they ___ every day.\"(特殊疑问转述,陈述语序、不倒装)", "stem_cn": "她问他们每天在哪里训练。", "options": ["trained", "do train", "did they train", "train"] },
+    { "gp": "gp5", "stem": "\"He said that she ___ definitely play.\"(直接引语 will play,转述后 will 变哪个词)", "stem_cn": "他说她肯定会上场打。", "options": ["would", "will", "would to", "shall"] },
+    { "gp": "gp5", "stem": "\"She asked when the game ___ start.\"(直接引语 will start,转述后 will 变哪个词)", "stem_cn": "她问比赛几点开始。", "options": ["would", "will", "would to", "shall"] },
+    { "gp": "gp5", "stem": "\"She asked him how the team ___.\"(直接引语 has prepared,转述后时态后移)", "stem_cn": "她问他球队是怎么备战的。", "options": ["had prepared", "has prepared", "prepared", "prepares"] },
+    { "gp": "gp6", "stem": "\"A ___ asked the coach about the big game.\"(记者用哪个词)", "stem_cn": "一位记者就大赛采访了教练。", "options": ["reporter", "farmer", "driver", "doctor"] },
+    { "gp": "gp6", "stem": "\"He said the players were ready and ___.\"(自信的用哪个词)", "stem_cn": "他说队员们都准备好了,信心十足。", "options": ["confident", "hungry", "sleepy", "afraid"] },
+    { "gp": "gp6", "stem": "\"He hoped the fans would come and ___.\"(欢呼、加油用哪个词)", "stem_cn": "他希望球迷们都来加油助威。", "options": ["cheer", "cry", "sleep", "leave"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"足球场\"说:", "options": ["field", "pitch", "ground", "court"] },
+    { "stem": "美语里\"电影\"说:", "options": ["movie", "film", "cinema-show", "picture-play"] },
+    { "stem": "reporter 的意思是:", "options": ["记者", "教练", "球迷", "队长"] },
+    { "stem": "confident 的意思是:", "options": ["自信的", "害怕的", "疲惫的", "生气的"] },
+    { "stem": "cheer 的意思是:", "options": ["欢呼,加油", "哭泣", "离开", "睡觉"] },
+    { "stem": "prepare 的意思是:", "options": ["准备,备战", "忘记", "出售", "隐藏"] }
+  ],
+  "contrast": [
+    { "us": "field", "uk": "pitch", "note_cn": "(足球)球场;美语 field,英式 pitch" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" }
+  ],
+  "chunks": [
+    { "us": "ask about", "ipa": "/æsk əˈbaʊt/", "example1": "A reporter asked our coach about the big game.", "example1_cn": "一位记者就大赛采访了我们的教练。", "example2": "She asked me about my new job.", "example2_cn": "她问起我的新工作。" },
+    { "us": "get ready", "ipa": "/ɡet ˈredi/", "example1": "The players got ready for the big game.", "example1_cn": "队员们为大赛做好了准备。", "example2": "Get ready — the show is about to start.", "example2_cn": "准备好——演出就要开始了。" },
+    { "us": "the big game", "ipa": "/ðə bɪɡ ɡeɪm/", "example1": "A reporter asked the coach about the big game.", "example1_cn": "记者向教练问起那场大赛。", "example2": "Everyone is excited about the big game tonight.", "example2_cn": "大家都为今晚的大赛感到兴奋。" },
+    { "us": "come and cheer", "ipa": "/kʌm ənd tʃɪr/", "example1": "He hoped the fans would come and cheer.", "example1_cn": "他希望球迷们都来加油。", "example2": "Come and cheer for our team on Saturday!", "example2_cn": "周六来为我们队加油吧!" }
+  ],
+  "stage7_cloze": {
+    "context": "Yesterday a reporter asked our coach ___1___ the team had prepared. He ___2___ that they had trained hard. He told her that the players ___3___ ready. She asked ___4___ the game would start.",
+    "blanks": [
+      { "blank_no": 1, "options": ["how", "that", "if", "whether"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["said", "told", "spoke", "talked"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["were", "are", "will be", "have been"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["when", "that", "so", "which"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Who did the reporter interview about the big game?", "options": ["The team's coach", "A star player", "A fan", "The referee"] },
+    { "stem": "What did the coach say about the players?", "options": ["They were ready and confident", "They were tired and nervous", "They needed more time", "They had already lost"] },
+    { "stem": "When would the game start?", "options": ["At seven that evening", "At noon", "The next morning", "At nine o'clock"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"他说他们那个月一直在刻苦训练\"(间接引语时态后移):", "options": ["He said that they had been training hard all month.", "He said that they have been training hard all month.", "He said that they are training hard all month.", "He said that they train hard all month."] },
+    { "stem": "你想说\"记者问明星球员是否会参赛\"(一般疑问用 whether/if):", "options": ["The reporter asked whether the star player would join the match.", "The reporter asked that the star player would join the match.", "The reporter asked will the star player join the match.", "The reporter asked the star player would join the match?"] },
+    { "stem": "你想说\"她问比赛什么时候开始\"(特殊疑问,陈述语序、不倒装):", "options": ["She asked when the game would start.", "She asked when would the game start.", "She asked when does the game start.", "She asked when will the game start."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "reporter 的意思是:", "options": ["记者", "教练", "球迷", "队长"] },
+    { "kind": "vocab", "stem": "cheer 的意思是:", "options": ["欢呼,加油", "哭泣", "离开", "睡觉"] },
+    { "kind": "grammar", "stem": "\"He ___ her that the players were ready.\"(后面直接跟人 her)", "stem_cn": "他告诉她队员们都准备好了。", "options": ["told", "said", "spoke", "talked"] },
+    { "kind": "grammar", "stem": "\"The reporter asked ___ the star player would play.\"(转述一般疑问)", "stem_cn": "记者问明星球员会不会上场。", "options": ["whether", "that", "what", "how"] },
+    { "kind": "scenario", "stem": "\"the big game\" 的意思是:", "options": ["那场大赛(重要比赛)", "很大的游戏机", "大型玩具", "宽阔的场地"] },
+    { "kind": "scenario", "stem": "\"come and cheer\" 的意思是:", "options": ["来加油、欢呼助威", "过来又走了", "来变高兴", "来道歉"] },
+    { "kind": "reading", "stem": "What did the reporter ask the coach about?", "options": ["The big game", "The weather", "His salary", "A new stadium"], "passage": true },
+    { "kind": "reading", "stem": "What did the coach hope the fans would do?", "options": ["Come and cheer", "Stay at home", "Bring food", "Be quiet"], "passage": true },
+    { "kind": "listening", "stem": "Who did the reporter talk to?", "options": ["The coach", "A star player", "A referee", "A fan"], "audio": true },
+    { "kind": "listening", "stem": "When would the game start?", "options": ["At seven that evening", "At noon", "The next day", "At nine"], "audio": true }
+  ]
+}

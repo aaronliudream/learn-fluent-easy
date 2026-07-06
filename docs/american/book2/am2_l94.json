@@ -1,0 +1,131 @@
+{
+  "id": "am2_l94",
+  "unit_no": 12,
+  "lesson_no": 94,
+  "title_en": "The New Library",
+  "title_cn": "新图书馆",
+  "grammar_focus": "复习 KS21/45/69 被动语态各时态综合(方案B换情节包):一般现在/一般过去被动(is admired / was built)、现在完成被动(have been added)、将来被动(will be opened)、情态被动(can be taught / must be returned)、现在进行被动(is being built),以及被动句中用 by 引出动作的发出者",
+  "scene": "去年,我们镇建起了一座漂亮的新图书馆。它由一位著名的建筑师设计,人人都很喜爱。上万册图书已被添置到书架上。每天开馆前,阅览室都会被打扫干净。这里还免费开设各种课程,任何人都能学会使用电脑。上个月,一幅珍稀的古地图被捐赠过来,如今就陈列在大厅里。明年,二楼将开设一个儿童区。图书必须在三周内归还,否则会被收取一小笔罚款。至今已有一万多人参观过这座图书馆。全镇的人都爱它,它也将在未来很多年里被大家享用。",
+  "grammar_card": {
+    "title": "复习 KS21/45/69 被动语态各时态",
+    "intro": "被动语态由 be + 过去分词构成,表示“被……”。本课在“新图书馆”的场景里复习各时态的被动:①一般现在/一般过去——is admired / was built;②现在完成——have been added(已被……);③将来——will be opened;④情态——can be taught / must be returned;⑤现在进行——is being built(正在被……)。被动句里若要说“由谁做的”,用 by 引出(was designed by a famous architect)。",
+    "table": {
+      "headers": ["时态(被动)", "例子"],
+      "rows": [
+        ["一般现在 / 一般过去", "The rooms are cleaned daily. / It was built last year."],
+        ["现在完成", "Thousands of books have been added."],
+        ["将来", "A children's section will be opened next year."],
+        ["情态", "Anyone can be taught. / Books must be returned."],
+        ["现在进行 / by 短语", "A room is being built. / It was designed by an architect."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语“二楼”说 second floor(英式 first floor);“公寓”说 apartment(英式 flat)。本课已按美语写。", "mark": "second floor / apartment" },
+      { "rule": "被动 = be 的相应时态 + 过去分词;情态被动是 can/must + be + 过去分词;现在进行被动是 is/are being + 过去分词;“由谁做”用 by 引出。", "mark": "被动构成" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — When was the new library built?",
+    "options": ["Last year", "Ten years ago", "This month", "Next year"],
+    "answer_index": 0
+  },
+  "passage": "A beautiful new library was built in our town last year. It was designed by a famous architect and is admired by everyone. Thousands of books have been added to its shelves. The reading rooms are cleaned every morning before opening. Free classes are offered there, and anyone can be taught to use the computers. Last month, a rare old map was donated and is now displayed in the hall. Next year, a children's section will be opened on the second floor. Books must be returned within three weeks, or a small fine is charged. The library has been visited by more than ten thousand people already. It is loved by the whole town, and it will be enjoyed for many years to come.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "A beautiful new library was built in our town last year. It was designed by a famous architect and is admired by everyone.", "text_cn": "去年,我们镇建起了一座漂亮的新图书馆。它由一位著名的建筑师设计,人人都很喜爱。" },
+    { "seq": 2, "speaker": null, "text_en": "Thousands of books have been added to its shelves. The reading rooms are cleaned every morning before opening.", "text_cn": "上万册图书已被添置到书架上。每天开馆前,阅览室都会被打扫干净。" },
+    { "seq": 3, "speaker": null, "text_en": "Free classes are offered there, and anyone can be taught to use the computers. Last month, a rare old map was donated and is now displayed in the hall.", "text_cn": "这里还免费开设各种课程,任何人都能学会使用电脑。上个月,一幅珍稀的古地图被捐赠过来,如今就陈列在大厅里。" },
+    { "seq": 4, "speaker": null, "text_en": "Next year, a children's section will be opened on the second floor. Books must be returned within three weeks, or a small fine is charged.", "text_cn": "明年,二楼将开设一个儿童区。图书必须在三周内归还,否则会被收取一小笔罚款。" },
+    { "seq": 5, "speaker": null, "text_en": "The library has been visited by more than ten thousand people already. It is loved by the whole town, and it will be enjoyed for many years to come.", "text_cn": "至今已有一万多人参观过这座图书馆。全镇的人都爱它,它也将在未来很多年里被大家享用。" }
+  ],
+  "words": [
+    { "word": "library", "ipa": "/ˈlaɪbreri/", "pos": "n", "meaning_cn": "图书馆", "example": "a beautiful new library" },
+    { "word": "build", "ipa": "/bɪld/", "pos": "v", "meaning_cn": "建造", "example": "was built in our town last year" },
+    { "word": "design", "ipa": "/dɪˈzaɪn/", "pos": "v", "meaning_cn": "设计", "example": "was designed by a famous architect" },
+    { "word": "architect", "ipa": "/ˈɑːrkɪtekt/", "pos": "n", "meaning_cn": "建筑师", "example": "designed by a famous architect" },
+    { "word": "shelf", "ipa": "/ʃelf/", "pos": "n", "meaning_cn": "架子,书架", "example": "added to its shelves" },
+    { "word": "offer", "ipa": "/ˈɔːfər/", "pos": "v", "meaning_cn": "提供", "example": "Free classes are offered there." },
+    { "word": "donate", "ipa": "/ˈdoʊneɪt/", "pos": "v", "meaning_cn": "捐赠", "example": "a rare old map was donated" },
+    { "word": "section", "ipa": "/ˈsekʃn/", "pos": "n", "meaning_cn": "区域,部分", "example": "a children's section on the second floor" },
+    { "word": "return", "ipa": "/rɪˈtɜːrn/", "pos": "v", "meaning_cn": "归还,返回", "example": "Books must be returned within three weeks." },
+    { "word": "fine", "ipa": "/faɪn/", "pos": "n", "meaning_cn": "罚款", "example": "a small fine is charged" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般现在 / 一般过去被动(is admired / was built)" },
+    { "gp": "gp2", "name": "现在完成被动(have been added / has been visited)" },
+    { "gp": "gp3", "name": "将来被动(will be opened / enjoyed)" },
+    { "gp": "gp4", "name": "情态被动(can be taught / must be returned)" },
+    { "gp": "gp5", "name": "现在进行被动与 by 短语(is being built / by an architect)" },
+    { "gp": "gp6", "name": "词汇辨析(library / donate / architect)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"A beautiful new library ___ in our town last year.\"(一般过去被动:被建造)", "stem_cn": "去年我们镇建起了一座漂亮的新图书馆。", "options": ["was built", "built", "is built", "has built"] },
+    { "gp": "gp1", "stem": "\"It ___ by everyone in town.\"(一般现在被动:被喜爱)", "stem_cn": "镇上人人都喜爱它。", "options": ["is admired", "admires", "was admired", "is admiring"] },
+    { "gp": "gp1", "stem": "\"The reading rooms ___ every morning before opening.\"(一般现在被动:被打扫)", "stem_cn": "每天开馆前,阅览室都会被打扫。", "options": ["are cleaned", "clean", "are cleaning", "were cleaned"] },
+    { "gp": "gp2", "stem": "\"Thousands of books ___ to its shelves.\"(现在完成被动:已被添置)", "stem_cn": "上万册图书已被添置到书架上。", "options": ["have been added", "have added", "are added", "were adding"] },
+    { "gp": "gp2", "stem": "\"The library ___ by more than ten thousand people already.\"(现在完成被动:已被参观)", "stem_cn": "至今已有一万多人参观过这座图书馆。", "options": ["has been visited", "has visited", "is visited", "was visiting"] },
+    { "gp": "gp2", "stem": "\"Many new computers ___ this year.\"(现在完成被动:已被安装)", "stem_cn": "今年已安装了许多新电脑。", "options": ["have been installed", "have installed", "are installing", "installed"] },
+    { "gp": "gp3", "stem": "\"Next year, a children's section ___ on the second floor.\"(将来被动:将被开设)", "stem_cn": "明年二楼将开设一个儿童区。", "options": ["will be opened", "will open", "is opened", "has opened"] },
+    { "gp": "gp3", "stem": "\"It ___ by the whole town for years to come.\"(将来被动:将被享用)", "stem_cn": "它将在未来很多年里被全镇享用。", "options": ["will be enjoyed", "will enjoy", "is enjoyed", "enjoyed"] },
+    { "gp": "gp3", "stem": "\"A new sign ___ above the door next week.\"(将来被动:将被挂)", "stem_cn": "下周门上方将挂一块新招牌。", "options": ["will be put", "will put", "is putting", "put"] },
+    { "gp": "gp4", "stem": "\"Anyone ___ to use the computers there.\"(情态被动:能被教)", "stem_cn": "任何人都能在那里被教会用电脑。", "options": ["can be taught", "can teach", "teaches", "is teaching"] },
+    { "gp": "gp4", "stem": "\"Books ___ within three weeks.\"(情态被动:必须被归还)", "stem_cn": "图书必须在三周内归还。", "options": ["must be returned", "must return", "returns", "is returning"] },
+    { "gp": "gp4", "stem": "\"Food ___ into the reading rooms.\"(情态被动的否定:不得被带入)", "stem_cn": "食物不得被带入阅览室。", "options": ["must not be brought", "must not bring", "doesn't bring", "isn't bringing"] },
+    { "gp": "gp5", "stem": "\"Right now, a new reading room ___ upstairs.\"(现在进行被动:正在被建造)", "stem_cn": "此刻,楼上正在建一间新阅览室。", "options": ["is being built", "is building", "builds", "has built"] },
+    { "gp": "gp5", "stem": "\"The shelves ___ by workers at the moment.\"(现在进行被动:正在被整理)", "stem_cn": "此刻工人们正在整理书架。", "options": ["are being arranged", "are arranging", "arrange", "arranged"] },
+    { "gp": "gp5", "stem": "\"The library was designed ___ a famous architect.\"(被动句里引出“由谁设计”)", "stem_cn": "这座图书馆由一位著名建筑师设计。", "options": ["by", "with", "for", "of"] },
+    { "gp": "gp6", "stem": "\"The books are kept on tall ___.\"(书架用哪个词)", "stem_cn": "书都放在高高的书架上。", "options": ["shelves", "rivers", "clouds", "roads"] },
+    { "gp": "gp6", "stem": "\"A rare old map was ___ to the library.\"(捐赠用哪个词)", "stem_cn": "一幅珍稀的古地图被捐给了图书馆。", "options": ["donated", "eaten", "painted", "lost"] },
+    { "gp": "gp6", "stem": "\"The library was designed by a famous ___.\"(建筑师用哪个词)", "stem_cn": "这座图书馆由一位著名建筑师设计。", "options": ["architect", "cook", "singer", "driver"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"二楼\"说:", "options": ["second floor", "first floor", "level-two", "upper-one"] },
+    { "stem": "美语里\"公寓\"说:", "options": ["apartment", "flat", "room-set", "house-unit"] },
+    { "stem": "library 的意思是:", "options": ["图书馆", "实验室", "体育馆", "餐厅"] },
+    { "stem": "donate 的意思是:", "options": ["捐赠", "出售", "借入", "打碎"] },
+    { "stem": "offer 的意思是:", "options": ["提供", "拒绝", "隐藏", "损坏"] },
+    { "stem": "return 的意思是:", "options": ["归还,返回", "购买", "丢失", "打碎"] }
+  ],
+  "contrast": [
+    { "us": "second floor", "uk": "first floor", "note_cn": "二楼;美语 second floor,英式 first floor" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" }
+  ],
+  "chunks": [
+    { "us": "add to", "ipa": "/æd tu/", "example1": "Thousands of books have been added to the shelves.", "example1_cn": "上万册书已被添置到书架上。", "example2": "New photos were added to the album.", "example2_cn": "相册里又添了些新照片。" },
+    { "us": "for years to come", "ipa": "/fɔːr jɪrz tu kʌm/", "example1": "It will be enjoyed for years to come.", "example1_cn": "它将在未来很多年里被大家享用。", "example2": "This bridge will serve the town for years to come.", "example2_cn": "这座桥将在未来很多年里服务全镇。" },
+    { "us": "within three weeks", "ipa": "/wɪˈðɪn θriː wiːks/", "example1": "Books must be returned within three weeks.", "example1_cn": "图书必须在三周内归还。", "example2": "The work must be finished within three weeks.", "example2_cn": "这项工作必须在三周内完成。" },
+    { "us": "on the second floor", "ipa": "/ɑːn ðə ˈsekənd flɔːr/", "example1": "A children's section will be opened on the second floor.", "example1_cn": "二楼将开设一个儿童区。", "example2": "The reading room is on the second floor.", "example2_cn": "阅览室在二楼。" }
+  ],
+  "stage7_cloze": {
+    "context": "A beautiful new library ___1___ last year. Thousands of books ___2___ to its shelves. Next year, a children's section ___3___ upstairs. Books ___4___ within three weeks.",
+    "blanks": [
+      { "blank_no": 1, "options": ["was built", "built", "is built", "has built"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["have been added", "have added", "are adding", "added"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["will be opened", "will open", "is opened", "opened"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["must be returned", "must return", "returns", "returned"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "When was the new library built?", "options": ["Last year", "Ten years ago", "This month", "Next year"] },
+    { "stem": "What was donated to the library last month?", "options": ["A rare old map", "A new computer", "A painting", "A piano"] },
+    { "stem": "How long can books be kept before they must be returned?", "options": ["Three weeks", "Three days", "Three months", "One year"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"去年我们镇建了一座漂亮的新图书馆\"(一般过去被动):", "options": ["A beautiful new library was built in our town last year.", "A beautiful new library built in our town last year.", "A beautiful new library is built in our town last year.", "A beautiful new library has built in our town last year."] },
+    { "stem": "你想说\"成千上万本书已经被添到书架上\"(现在完成被动):", "options": ["Thousands of books have been added to its shelves.", "Thousands of books have added to its shelves.", "Thousands of books are added to its shelves.", "Thousands of books were adding to its shelves."] },
+    { "stem": "你想说\"书必须在三周内归还\"(情态被动):", "options": ["Books must be returned within three weeks.", "Books must return within three weeks.", "Books must be return within three weeks.", "Books must returned within three weeks."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "library 的意思是:", "options": ["图书馆", "实验室", "体育馆", "餐厅"] },
+    { "kind": "vocab", "stem": "architect 的意思是:", "options": ["建筑师", "厨师", "歌手", "司机"] },
+    { "kind": "grammar", "stem": "\"The reading rooms ___ every morning before opening.\"(一般现在被动)", "stem_cn": "每天开馆前,阅览室都会被打扫。", "options": ["are cleaned", "clean", "are cleaning", "were cleaned"] },
+    { "kind": "grammar", "stem": "\"Next year, a children's section ___ on the second floor.\"(将来被动)", "stem_cn": "明年二楼将开设一个儿童区。", "options": ["will be opened", "will open", "is opened", "has opened"] },
+    { "kind": "scenario", "stem": "\"for years to come\" 的意思是:", "options": ["在未来很多年里", "多年以前", "一年之内", "为了未来"] },
+    { "kind": "scenario", "stem": "\"on the second floor\" 的意思是:", "options": ["在二楼", "在第二秒", "在地面上", "在楼下"] },
+    { "kind": "reading", "stem": "Who designed the new library?", "options": ["A famous architect", "The mayor", "A schoolteacher", "A local artist"], "passage": true },
+    { "kind": "reading", "stem": "What must readers do within three weeks?", "options": ["Return their books", "Pay for a card", "Move house", "Buy new books"], "passage": true },
+    { "kind": "listening", "stem": "When was the library built?", "options": ["Last year", "Ten years ago", "Next year", "This week"], "audio": true },
+    { "kind": "listening", "stem": "What was donated last month?", "options": ["A rare old map", "A new piano", "A painting", "A statue"], "audio": true }
+  ]
+}

@@ -762,3 +762,13 @@
 - **关6**:美语对照 elevator(电梯)/first floor(一楼) + 4 词义(generous/admire/treasure/entirely)。contrast: elevator↔lift / first floor↔ground floor / fall↔autumn / movie↔film。chunks: by hand / town hall / for generations / on display。
 - **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-93 = 220);已勾收官包 checkbox。
 - **待裁决**:无。
+
+═══════════════════════════════════════
+## L94《The New Library 新图书馆》· U12 · 合集·方案B换情节 · 被动语态各时态(KS21/45/69)· ★合集10课收官
+- **来源**:换情节合集(Aaron 2026-07-05);与 L93 同 KS21/45/69 被动(教材 Unit 4 螺旋复习),情节「镇上新图书馆落成」中性。
+- **考点**:一般现在/过去被动/现在完成被动/将来被动/情态被动/现在进行被动 + by短语/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:library, build, design, architect, shelf, offer, donate, section, return, fine。
+- **关6**:美语对照 second floor(二楼)/apartment(公寓) + 4 词义(library/donate/offer/return)。contrast: second floor↔first floor / apartment↔flat / elevator↔lift / fall↔autumn。chunks: add to / for years to come / within three weeks / on the second floor。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-94 = 264);已勾合集 checkbox。
+- **★ 换情节合集(L70/75/76/79/81/84/86/87/90/94)10课全部收官**。
+- **待裁决**:无(L93/L94 同考点为教材螺旋设计,道具+词表全异,作间隔练习互补)。

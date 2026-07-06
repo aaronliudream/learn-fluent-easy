@@ -247,7 +247,7 @@ export default function TeacherClass() {
                   </tr>
                 </thead>
                 <tbody>
-                  {filteredSorted.map((s) => <StudentRow key={s.member_id} s={s} />)}
+                  {filteredSorted.map((s) => <StudentRow key={s.member_id} s={s} classId={cls.id} />)}
                 </tbody>
               </table>
             )}
@@ -375,7 +375,7 @@ function Mini({ label, v }: { label: string; v: string }) {
   );
 }
 
-function StudentRow({ s }: { s: Student }) {
+function StudentRow({ s, classId }: { s: Student; classId: string }) {
   const initial = (s.display_name ?? "").charAt(0) || "?";
   const statusEmoji =
     s.weekly_minutes === 0 && s.unresolved_weak_count >= 5 ? "🔴" :
@@ -392,7 +392,12 @@ function StudentRow({ s }: { s: Student }) {
           <span className="grid size-8 place-items-center rounded-full bg-primary/10 text-primary font-bold text-sm">
             {initial}
           </span>
-          <span className="font-semibold">{s.display_name || "未命名"}</span>
+          <Link
+            to={`/teacher/class/${classId}/student/${s.member_id}`}
+            state={{ name: s.display_name || "" }}
+            className="font-semibold text-primary hover:underline">
+            {s.display_name || "未命名"}
+          </Link>
           <span>{statusEmoji}</span>
         </div>
       </td>

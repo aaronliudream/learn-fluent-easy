@@ -151,6 +151,7 @@ const Social = lazy(() => import("./pages/Social.tsx"));
 const Ask = lazy(() => import("./pages/Ask.tsx"));
 const Teacher = lazy(() => import("./pages/Teacher.tsx"));
 const TeacherClass = lazy(() => import("./pages/TeacherClass.tsx"));
+const TeacherStudent = lazy(() => import("./pages/TeacherStudent.tsx"));
 const TeacherCards = lazy(() => import("./pages/TeacherCards.tsx"));
 const TeacherCardStats = lazy(() => import("./pages/TeacherCardStats.tsx"));
 const KnowledgeCard = lazy(() => import("./pages/KnowledgeCard.tsx"));
@@ -367,6 +368,7 @@ const App = () => (
           <Route path="/q/:slug" element={<KnowledgeCard />} />
           <Route path="/teacher" element={<TeacherRoute><Teacher /></TeacherRoute>} />
           <Route path="/teacher/class/:id" element={<TeacherRoute><TeacherClass /></TeacherRoute>} />
+          <Route path="/teacher/class/:id/student/:studentId" element={<TeacherRoute><TeacherStudent /></TeacherRoute>} />
           <Route path="/teacher/cards" element={<TeacherRoute><TeacherCards /></TeacherRoute>} />
           <Route path="/teacher/cards/:slug" element={<TeacherRoute><TeacherCardStats /></TeacherRoute>} />
           <Route path="/scenes/:catKey" element={<Navigate to="/american" replace />} />

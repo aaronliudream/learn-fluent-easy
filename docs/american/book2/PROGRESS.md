@@ -264,6 +264,13 @@
 - 词12(官方9:versus/Christmas/circus/present/accompany/approach/ought/weigh/fortunate;补3 elephant/arrest/traffic——官方仅9词补足至~12)。美语化 Father Christmas→**Santa Claus**、honour→**honor**;关6美英=Santa Claus/Father Christmas+honor/honour+candy/sweets+cookie/biscuit;chunks=set off/hold up the traffic/let…off/dress up as。
 - 44题;机器12项🟢一次过。seed→**新建 `american_am2_seed_unit09.sql`**(**L65=44**)。⏭️ L66。
 
+## ✅ U9 L66《Sweet as honey!》(像蜜一样甜!)· 🟢全绿 · 教材 Unit 3
+- ⚠️ content-filter 第4次误拦(L55/L57/L62/L66);触发词=课文 "Lancaster **bomber**"(军用轰炸机)+crash/wreck 军事联想。**本课我实读源 doc339-341 未被拦**;Aaron 净化包随后到,做了2项**正确决策**我照采:①bomber→**old airplane** 中性化(去军事触发词,故事/考点不变)②SD 集合名词改**美语单数**(教材 SD 原是英式 team are/audience were=错误语域,美语课程一律单数)。
+- 主考(源 doc340 = Key structures)= **KS18+KS42 使役结构 have sth done**:have + 物 + 过去分词=请/让别人做(had the plane packaged、have my car washed、had his hair cut、have it restored/rebuilt);否定疑问借 do/did。Special difficulties(源 doc341→净化包改写)= **集合名词主谓一致·美语单数**(team/group/audience/crew/government + is/was/has,附📌美语语域注,不出英式复数陷阱题)。
+- 裁决:gp1 have sth done 请人做vs自己做(4)+ gp2 否定疑问(3)+ gp3 各时态(3)+ gp4 生活场景(2)= 主考12;gp5 集合名词作整体单数(3)+ gp6 不同名词/时态单数(3)= SD 辅考6。全运用题,元语法定义题=0。
+- **词20全收**(净化包表:remote/Pacific/damage/wreck/rediscover/aerial/survey/rescue/package/enthusiast/restore/imagine/packing case/colony/bee/hive/preserve/beeswax/engine/condition;Lancaster/bomber 因中性化不入表)。关6美英=trunk/boot+hood/bonnet+wrench/spanner+airplane/aeroplane(汽车机械族);chunks=have sth done/break open/in perfect condition/turn…into。
+- 44题;机器12项🟢(1黄=cloze上下文另一 had,人工核过)。seed→`american_am2_seed_unit09.sql`(**L65-L66=88**)。⏭️ L67。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

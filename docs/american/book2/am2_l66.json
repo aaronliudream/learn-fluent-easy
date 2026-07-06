@@ -1,0 +1,140 @@
+{
+  "id": "am2_l66",
+  "unit_no": 9,
+  "lesson_no": 66,
+  "title_en": "Sweet as honey!",
+  "title_cn": "像蜜一样甜!",
+  "grammar_focus": "KS18+KS42 使役结构 have sth done(请/让别人做某事:have + 物 + 过去分词;had the plane packaged / have my car washed / have the plane restored)(教材 L66 Key structures)主考;SD 集合名词主谓一致——美语里 team/group/audience/crew 等作整体用单数(is/was/has)(辅考,美语规则,不出英式复数陷阱)",
+  "scene": "1963年,一架老式飞机坠落在南太平洋一个偏僻的小岛上,远离任何地方。飞机损坏不严重,但多年后被人遗忘,残骸静静躺着无人问津。后来在1989年,一次对小岛的航拍勘测中它被重新发现了。那时,一架状态这么好的飞机已经很稀有,值得抢救。法国当局请人把飞机打包,分件运回了法国。如今一群爱好者打算请人把飞机修复。它有四个引擎,但这群人只需请人修复其中三个。想象一下他们打开包装箱时有多惊讶——第四个引擎“像蜜一样甜”,依然完好无损。一群蜜蜂把这个引擎变成了蜂房,它被蜂蜡完完全全地封存了起来!",
+  "grammar_card": {
+    "title": "使役结构 have sth done",
+    "intro": "KS18+KS42 have + 物 + 过去分词 = 请/让别人做某事(自己不亲自做,而是请人代劳,或遭遇某事)。对比:I washed my car(自己洗)vs I had my car washed(请人洗)。常见生活场景:have my hair cut(理发)、have my watch repaired(修表)、have the plane restored(请人修复飞机)。否定/疑问借助 do:Did you have it repaired? / I didn't have it repaired。",
+    "table": {
+      "headers": ["自己做", "请别人做(have sth done)"],
+      "rows": [
+        ["I washed my car.", "I had my car washed."],
+        ["I'll clean my suit.", "I'll have my suit cleaned."],
+        ["He cut his hair? (自己)", "He had his hair cut."],
+        ["They restored the plane.", "They had the plane restored."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "否定与疑问用 do/did 助动:Did you have your watch repaired? / I didn't have my watch repaired。各种时态皆可:will have to have it repaired、are going to have it restored、need to have it rebuilt。", "mark": "have sth done 时态" },
+      { "rule": "📌 美语规则:team/group/audience/crew/government/staff 等集合名词通常当作一个整体、用单数动词(is/was/has);英式英语有时用复数(are/were),但本美语课程一律以单数为准。", "mark": "集合名词用美语单数" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was 'sweet as honey' and why?",
+    "options": ["The fourth engine — a colony of bees had turned it into a hive and preserved it in beeswax", "A jar of real honey found on the plane", "The island's wild fruit", "The pilot's old lunch box"],
+    "answer_index": 0
+  },
+  "passage": "In 1963, an old airplane came down on a remote island in the South Pacific, a long way from anywhere. The plane wasn't badly damaged, but over the years it was forgotten, and the wreck lay undisturbed. Then in 1989, it was rediscovered during an aerial survey of the island. By then, a plane in such condition was rare and worth rescuing. The French authorities had the plane packaged and moved back to France in parts. Now a group of enthusiasts is going to have the plane restored. It has four engines, but the group only needs to have three of them rebuilt. Imagine their surprise when they broke open the packing cases! The fourth engine was sweet as honey — still in perfect condition. A colony of bees had turned the engine into a hive, and it was completely preserved in beeswax!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "In 1963, an old airplane came down on a remote island in the South Pacific, a long way from anywhere. The plane wasn't badly damaged, but over the years it was forgotten, and the wreck lay undisturbed.", "text_cn": "1963年,一架老式飞机坠落在南太平洋一个偏僻的小岛上,远离任何地方。飞机损坏不严重,但多年后被人遗忘,残骸静静躺着无人问津。" },
+    { "seq": 2, "speaker": null, "text_en": "Then in 1989, it was rediscovered during an aerial survey of the island. By then, a plane in such condition was rare and worth rescuing.", "text_cn": "后来在1989年,一次对小岛的航拍勘测中它被重新发现了。那时,一架状态这么好的飞机已经很稀有,值得抢救。" },
+    { "seq": 3, "speaker": null, "text_en": "The French authorities had the plane packaged and moved back to France in parts. Now a group of enthusiasts is going to have the plane restored.", "text_cn": "法国当局请人把飞机打包,分件运回了法国。如今一群爱好者打算请人把飞机修复。" },
+    { "seq": 4, "speaker": null, "text_en": "It has four engines, but the group only needs to have three of them rebuilt. Imagine their surprise when they broke open the packing cases!", "text_cn": "它有四个引擎,但这群人只需请人修复其中三个。想象一下他们打开包装箱时有多惊讶!" },
+    { "seq": 5, "speaker": null, "text_en": "The fourth engine was sweet as honey — still in perfect condition. A colony of bees had turned the engine into a hive, and it was completely preserved in beeswax!", "text_cn": "第四个引擎“像蜜一样甜”——依然完好无损。一群蜜蜂把这个引擎变成了蜂房,它被蜂蜡完完全全地封存了起来!" }
+  ],
+  "words": [
+    { "word": "remote", "ipa": "/rɪˈmoʊt/", "pos": "adj", "meaning_cn": "遥远的,偏僻的", "example": "a remote island in the South Pacific" },
+    { "word": "Pacific", "ipa": "/pəˈsɪfɪk/", "pos": "n", "meaning_cn": "太平洋", "example": "in the South Pacific" },
+    { "word": "damage", "ipa": "/ˈdæmɪdʒ/", "pos": "v", "meaning_cn": "损坏", "example": "The plane wasn't badly damaged." },
+    { "word": "wreck", "ipa": "/rek/", "pos": "n", "meaning_cn": "残骸", "example": "the wreck lay undisturbed" },
+    { "word": "rediscover", "ipa": "/ˌriːdɪsˈkʌvər/", "pos": "v", "meaning_cn": "重新发现", "example": "it was rediscovered in 1989" },
+    { "word": "aerial", "ipa": "/ˈeriəl/", "pos": "adj", "meaning_cn": "空中的,航空的", "example": "an aerial survey of the island" },
+    { "word": "survey", "ipa": "/ˈsɜːrveɪ/", "pos": "n", "meaning_cn": "勘测,调查", "example": "an aerial survey" },
+    { "word": "rescue", "ipa": "/ˈreskjuː/", "pos": "v", "meaning_cn": "抢救,营救", "example": "rare and worth rescuing" },
+    { "word": "package", "ipa": "/ˈpækɪdʒ/", "pos": "v", "meaning_cn": "打包,包装", "example": "had the plane packaged" },
+    { "word": "enthusiast", "ipa": "/ɪnˈθuːziæst/", "pos": "n", "meaning_cn": "爱好者,热心人", "example": "a group of enthusiasts" },
+    { "word": "restore", "ipa": "/rɪˈstɔːr/", "pos": "v", "meaning_cn": "修复,复原", "example": "have the plane restored" },
+    { "word": "imagine", "ipa": "/ɪˈmædʒɪn/", "pos": "v", "meaning_cn": "想象", "example": "Imagine their surprise!" },
+    { "word": "packing case", "ipa": "/ˈpækɪŋ keɪs/", "pos": "n", "meaning_cn": "包装箱", "example": "they broke open the packing cases" },
+    { "word": "colony", "ipa": "/ˈkɑːləni/", "pos": "n", "meaning_cn": "群,群落", "example": "a colony of bees" },
+    { "word": "bee", "ipa": "/biː/", "pos": "n", "meaning_cn": "蜜蜂", "example": "a colony of bees" },
+    { "word": "hive", "ipa": "/haɪv/", "pos": "n", "meaning_cn": "蜂房,蜂巢", "example": "turned the engine into a hive" },
+    { "word": "preserve", "ipa": "/prɪˈzɜːrv/", "pos": "v", "meaning_cn": "保存,保护", "example": "preserved in beeswax" },
+    { "word": "beeswax", "ipa": "/ˈbiːzwæks/", "pos": "n", "meaning_cn": "蜂蜡", "example": "preserved in beeswax" },
+    { "word": "engine", "ipa": "/ˈendʒɪn/", "pos": "n", "meaning_cn": "引擎,发动机", "example": "It has four engines." },
+    { "word": "condition", "ipa": "/kənˈdɪʃən/", "pos": "n", "meaning_cn": "状态,状况", "example": "in perfect condition" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "have sth done(请别人做 vs 自己做)" },
+    { "gp": "gp2", "name": "have sth done(否定与疑问)" },
+    { "gp": "gp3", "name": "have sth done(各时态:将来/需要/打算)" },
+    { "gp": "gp4", "name": "have sth done(生活场景运用)" },
+    { "gp": "gp5", "name": "集合名词作整体用美语单数" },
+    { "gp": "gp6", "name": "集合名词美语单数(不同名词/时态)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"I don't wash my car myself; I ___ at the garage.\"(请人洗车:have + 物 + 过去分词)", "stem_cn": "我不自己洗车,送到修车行去洗。", "options": ["have it washed", "wash it", "have washed it", "have it wash"] },
+    { "gp": "gp1", "stem": "\"The French authorities ___ and moved back to France.\"(请人把飞机打包)", "stem_cn": "法国当局请人把飞机打包运回。", "options": ["had the plane packaged", "packaged the plane", "had packaged the plane", "had the plane package"] },
+    { "gp": "gp1", "stem": "\"I'm not going to clean my suit myself; I'm going to ___.\"(请人洗西服)", "stem_cn": "我不自己洗西服,要送去洗。", "options": ["have it cleaned", "clean it", "have cleaned it", "have it clean"] },
+    { "gp": "gp1", "stem": "\"Someone else washed it for me — I ___.\"(请人把车洗了)", "stem_cn": "别人替我洗的——我(请人)把车洗了。", "options": ["had my car washed", "washed my car", "had washed my car", "had my car wash"] },
+    { "gp": "gp2", "stem": "\"___ your watch repaired?\"(疑问:你(请人)把表修好了吗)", "stem_cn": "你把表修好了吗?", "options": ["Did you have", "Have you did", "Did you had", "Do you had"] },
+    { "gp": "gp2", "stem": "\"I ___ my watch repaired.\"(否定:我没(请人)把表修好)", "stem_cn": "我没有把表修好。", "options": ["didn't have", "don't had", "hadn't have", "wasn't have"] },
+    { "gp": "gp2", "stem": "\"___ the house painted yet?\"(疑问完成体:你把房子刷好了吗)", "stem_cn": "你把房子粉刷好了吗?", "options": ["Have you had", "Did you have had", "Have you have", "Had you have"] },
+    { "gp": "gp3", "stem": "\"My watch has stopped. I will have to ___.\"(将来:得去请人修表)", "stem_cn": "我的表停了,得去把它修好。", "options": ["have it repaired", "repair it", "have repaired it", "have it repair"] },
+    { "gp": "gp3", "stem": "\"The group only needs to have three engines ___.\"(需要请人重修三台发动机)", "stem_cn": "这群人只需请人重修三台发动机。", "options": ["rebuilt", "rebuild", "rebuilding", "to rebuild"] },
+    { "gp": "gp3", "stem": "\"They are going to have the plane ___.\"(打算请人修复飞机)", "stem_cn": "他们打算请人把飞机修复。", "options": ["restored", "restore", "restoring", "to restore"] },
+    { "gp": "gp4", "stem": "\"He ___ yesterday at the barber's.\"(请人做:昨天理了发)", "stem_cn": "他昨天在理发店理了发。", "options": ["had his hair cut", "cut his hair", "had cut his hair", "had his hair cutting"] },
+    { "gp": "gp4", "stem": "\"These shoes are worn out; I must ___.\"(请人修鞋)", "stem_cn": "这鞋穿破了,我得拿去修。", "options": ["have them repaired", "repair them", "have repaired them", "have them repair"] },
+    { "gp": "gp5", "stem": "\"(American English) The team ___ restoring the plane.\"(美语:集合名词作整体用单数)", "stem_cn": "(美语)这个团队在修复飞机。", "options": ["is", "are", "were", "have"] },
+    { "gp": "gp5", "stem": "\"(American English) The group ___ going to have the plane restored.\"(美语:集合名词用单数)", "stem_cn": "(美语)这群人打算请人修复飞机。", "options": ["is", "are", "were", "have"] },
+    { "gp": "gp5", "stem": "\"(American English) The audience ___ made up of school children.\"(美语:集合名词作整体用单数)", "stem_cn": "(美语)观众由学生组成。", "options": ["is", "are", "were", "have"] },
+    { "gp": "gp6", "stem": "\"(American English) The crew ___ rescued from the water by helicopter.\"(美语:集合名词用单数,过去)", "stem_cn": "(美语)船员被直升机从水中救起。", "options": ["was", "were", "are", "have"] },
+    { "gp": "gp6", "stem": "\"(American English) The government ___ taken strong measures against inflation.\"(美语:集合名词用单数,完成体)", "stem_cn": "(美语)政府已采取有力措施抑制通胀。", "options": ["has", "have", "were", "are"] },
+    { "gp": "gp6", "stem": "\"A colony of bees ___ turned the engine into a hive.\"(集合名词作整体用单数)", "stem_cn": "一群蜜蜂把发动机变成了蜂房。", "options": ["has", "have", "were", "are"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"(汽车)后备箱\"常说:", "options": ["trunk", "boot", "back box", "car case"] },
+    { "stem": "美语里\"(汽车)引擎盖\"常说:", "options": ["hood", "bonnet", "engine lid", "front cover"] },
+    { "stem": "wreck 的意思是:", "options": ["(失事的)残骸", "引擎", "港口", "货物"] },
+    { "stem": "rescue 的意思是:", "options": ["营救,抢救", "摧毁", "埋葬", "忽视"] },
+    { "stem": "preserve 的意思是:", "options": ["保存,保护", "毁坏", "出售", "丢弃"] },
+    { "stem": "colony 的意思是:", "options": ["群,群落", "单独一只", "森林", "沙漠"] }
+  ],
+  "contrast": [
+    { "us": "trunk", "uk": "boot", "note_cn": "(汽车)后备箱;美语 trunk,英式 boot" },
+    { "us": "hood", "uk": "bonnet", "note_cn": "(汽车)引擎盖;美语 hood,英式 bonnet" },
+    { "us": "wrench", "uk": "spanner", "note_cn": "扳手;美语 wrench,英式 spanner" },
+    { "us": "airplane", "uk": "aeroplane", "note_cn": "飞机;美语 airplane,英式 aeroplane" }
+  ],
+  "chunks": [
+    { "us": "have sth done", "ipa": "/hæv ˈsʌmθɪŋ dʌn/", "example1": "I had my car washed.", "example1_cn": "我(请人)把车洗了。", "example2": "She had her hair cut.", "example2_cn": "她(请人)把头发剪了。" },
+    { "us": "break open", "ipa": "/breɪk ˈoʊpən/", "example1": "They broke open the packing cases.", "example1_cn": "他们打开了包装箱。", "example2": "He broke open the box with a hammer.", "example2_cn": "他用锤子把箱子砸开。" },
+    { "us": "in perfect condition", "ipa": "/ɪn ˈpɜːrfɪkt kənˈdɪʃən/", "example1": "The engine was still in perfect condition.", "example1_cn": "引擎依然完好无损。", "example2": "The car is in perfect condition.", "example2_cn": "这辆车状况完好。" },
+    { "us": "turn ... into", "ipa": "/tɜːrn ˈɪntuː/", "example1": "The bees turned the engine into a hive.", "example1_cn": "蜜蜂把引擎变成了蜂房。", "example2": "They turned the barn into a house.", "example2_cn": "他们把谷仓改成了住房。" }
+  ],
+  "stage7_cloze": {
+    "context": "The French authorities had the plane ___1___ and moved back to France. Now a group of enthusiasts is going to have the plane ___2___. They only need to have three engines ___3___. A colony of bees ___4___ turned the fourth engine into a hive.",
+    "blanks": [
+      { "blank_no": 1, "options": ["packaged", "package", "packaging", "to package"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["restored", "restore", "restoring", "to restore"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["rebuilt", "rebuild", "rebuilding", "to rebuild"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["had", "have", "were", "was"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where and when did the old airplane come down?", "options": ["On a remote island in the South Pacific, in 1963", "In France in 1989", "In the North Atlantic in 1963", "On a busy city street in 1989"] },
+    { "stem": "How was the wreck found again after so many years?", "options": ["It was rediscovered during an aerial survey of the island in 1989", "A fisherman found it", "The French navy searched for it", "It was never really lost"] },
+    { "stem": "Why was the fourth engine still in perfect condition?", "options": ["A colony of bees had turned it into a hive, preserving it in beeswax", "It was made of solid gold", "It had just been repaired", "It was kept in a museum"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我请人洗了车(不是自己洗的)\"(have sth done):", "options": ["I had my car washed.", "I had washed my car.", "I had my car wash.", "I washed my car."] },
+    { "stem": "你想问\"你把表修好了吗?\"(请人修:have sth done 的疑问):", "options": ["Did you have your watch repaired?", "Did you have your watch repair?", "Have you repaired your watch?", "Did you had your watch repaired?"] },
+    { "stem": "你想说\"(美语)这个团队打算修复那架飞机\"(集合名词用美语单数):", "options": ["The team is going to restore the plane.", "The team are going to restore the plane.", "The team were going to restores the plane.", "The team be going to restore the plane."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "wreck 的意思是:", "options": ["(失事的)残骸", "引擎", "港口", "货物"] },
+    { "kind": "vocab", "stem": "rescue 的意思是:", "options": ["营救,抢救", "摧毁", "埋葬", "忽视"] },
+    { "kind": "grammar", "stem": "\"He ___ yesterday at the barber's.\"(请人做:昨天理了发)", "stem_cn": "他昨天在理发店理了发。", "options": ["had his hair cut", "cut his hair", "had cut his hair", "had his hair cutting"] },
+    { "kind": "grammar", "stem": "\"(American English) The group ___ going to have the plane restored.\"(集合名词用美语单数)", "stem_cn": "(美语)这群人打算请人修复飞机。", "options": ["is", "are", "were", "have"] },
+    { "kind": "scenario", "stem": "\"have + 物 + 过去分词\" 这种结构表示:", "options": ["请/让别人做某事", "自己亲手做某事", "已经做完某事", "将要亲自去做"] },
+    { "kind": "scenario", "stem": "\"in perfect condition\" 的意思是:", "options": ["完好无损", "快要坏了", "正在维修", "刚刚做好"] },
+    { "kind": "reading", "stem": "What did the French authorities do with the plane?", "options": ["They had it packaged and moved back to France in parts", "They rebuilt it on the island", "They sold it to a museum", "They left it on the island"], "passage": true },
+    { "kind": "reading", "stem": "What surprising thing was found in the fourth engine?", "options": ["A colony of bees had turned it into a hive, preserved in beeswax", "It was full of gold coins", "It had been stolen", "It was completely rusted"], "passage": true },
+    { "kind": "listening", "stem": "How many of the four engines does the group need to have rebuilt?", "options": ["Only three", "All four", "Just one", "None"], "audio": true },
+    { "kind": "listening", "stem": "What was 'sweet as honey'?", "options": ["The fourth engine, which bees had preserved in beeswax", "A jar of real honey", "The pilot's lunch", "The island's fruit"], "audio": true }
+  ]
+}

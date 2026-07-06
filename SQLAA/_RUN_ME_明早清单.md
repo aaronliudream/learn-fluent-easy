@@ -32,7 +32,7 @@
 | 6 | `american_am2_seed_unit06.sql` | +352(8课×44) | am2 U6 **整单元 L41–48 完成**(KS17-20 + KS10/21/34被动 + KS22动词介词 + KS36-45综合复习 + SD26-45易混词),全过机器12项🟢 | 无 |
 | 7 | `american_am2_seed_unit07.sql` | +352(**整单元8课**×44) | am2 U7 L49–L56 全:复合句连词/KS26状态动词/KS27一般过去/KS28现在完成vs完成进行/KS29+52三时态/KS30冠词综合/**KS31 would·used to(L55净化包)**/KS32数量词与比较,机器12项🟢全绿 | 无 |
 | 8 | `american_am2_seed_unit08.sql` | +352(**整单元8课**×44) | am2 U8 L57(KS9+33介词·净化包)+ L58(KS34被动语态综合+双宾语被动)+ L59(Review KS50-58时态综合复习 + SD表目的多方式)+ L60(KS36+16表将来的几种方式 + SD名词作定语)+ L61(KS37将来进行/完成/完成进行时 + SD cost/price/value)+ L62(KS38过去完成vs过去完成进行 + SD control·great·soil,净化包)+ L63(KS15+39间接引语 + 间接疑问陈述语序)+ L64(KS16+40真实与非真实条件句+虚拟 + SD draw短语动词),**整单元8课齐**,机器12项🟢全绿 | 无 |
-| 9 | `american_am2_seed_unit09.sql`(**新建·续增**) | +44(L65,续增) | am2 U9 L65(KS17 must/have to/should/ought to + should/ought to have done过去本应做 + SD let短语动词·agree/accept·dress up/dress),机器12项🟢;L66-72 陆续追加 | 无 |
+| 9 | `american_am2_seed_unit09.sql`(**新建·续增**) | +88(2课×44,续增) | am2 U9 L65(KS17 must/have to/should/ought to + should/ought to have done过去本应做 + SD let短语动词·agree/accept·dress up/dress)+ L66(KS18+42使役结构 have sth done + SD集合名词美语单数·净化包),机器12项🟢;L67-72 陆续追加 | 无 |
 
 > **✅ unit03/04 已解除暂缓**:24 道🔴元语法定义题全部转成运用题,全 27 课第11项 =0、十二项全绿。
 > **🟡 待 Aaron 复核(非阻断,不影响上面照跑)**:`REVIEWAA/american-instructional-design-audit.md` 里的 ~98 道"概念辨认🟡"(如"关于X正确的是""police 后面动词用")按三维闸门属中间地带,已过机器闸(非红),留你复核是否进一步降级;要改也是幂等 UPDATE,不影响先跑。

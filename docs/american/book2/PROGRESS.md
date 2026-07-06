@@ -338,6 +338,11 @@
 - 词14(包给官方词为下限全含:examine/discover/expert/original/stone/repair/condition/century/recently/wooden/replace/remain/ancient/structure)。美语化:sidewalk/downtown/elevator;关6美英=sidewalk/pavement + downtown/city centre + elevator/lift + fall/autumn;chunks=have been doing (for/since)/stand over the river/be replaced with/remain the same。cloze 去掉“for six months”防 for 预现(黄警清)。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73+L74+L77=132**,L75/L76 空缺→现已收到换情节包合集,即将补齐)。⏭️ L75/L76(用合集包补做),再 L78。
 
+## ✅ U10 L75《The Big Race》(大比赛)· 🟢全绿 · 🔄方案B换情节包(合集)
+- 换情节=学校运动会接力赛(无害,替换原情节)。考点原样=**KS3/27/51 一般过去时综合**:规则过去式(entered/passed/shouted/crossed/raced)+ 不规则过去式(held/shone/came/ran/shot/fell/took/won)+ 过去叙事连续动作 + 过去时间状语(last Saturday/two weeks ago/yesterday)+ 否定与疑问(didn't/Did…?)。全填过去式运用题,元语法定义题=0。串味红灯(s9/s10 解释含“主语”)已改“Did 开头+动词用原形”。
+- 词10(yearly/relay/whistle/baton/breath/ahead/crowd/shout/cross/expect)。美语化 soccer/sneakers/gym class/field;chunks=take a deep breath/fall behind/as fast as one can/just ahead of。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73+74+75+77=176**,L76 空缺待补)。⏭️ L76(合集包)。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

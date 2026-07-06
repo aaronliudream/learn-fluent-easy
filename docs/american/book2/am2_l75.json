@@ -1,0 +1,131 @@
+{
+  "id": "am2_l75",
+  "unit_no": 10,
+  "lesson_no": 75,
+  "title_en": "The Big Race",
+  "title_cn": "大比赛",
+  "grammar_focus": "KS3/27/51 一般过去时综合(教材 L75 Key structures,方案B换情节包):规则与不规则动词过去式(held/shone/came/ran/blew/shot/fell/took/won 与 entered/passed/handed/raced/shouted/crossed)、一般过去时叙事(过去连续动作)、过去时间状语(last Saturday/yesterday/two weeks ago)、否定与疑问(didn't / Did…?)",
+  "scene": "上周六,我们学校举办了一年一度的运动会。阳光灿烂,几百个家庭前来观看。我们班报名参加了接力赛,我跑最后一棒。哨声一响,选手们猛冲向前。起初我们落后了,我以为我们没戏了。但我们的第三棒超过了另外两人,把接力棒交到了我手里。我深吸一口气,拼尽全力地跑。人群欢呼起来,我刚好领先其他人冲过了终点线。我们以半秒之差赢了!我根本没料到会赢。那是我们班有史以来最棒的一次运动会。",
+  "grammar_card": {
+    "title": "KS3/27/51 一般过去时综合",
+    "intro": "本课复习一般过去时(讲过去发生、已经结束的事):①规则动词加 -ed(enter→entered, race→raced);②不规则动词要单独记(hold→held, come→came, run→ran, shoot→shot, fall→fell, take→took, win→won);③叙述过去一连串动作,都用过去式;④过去时间状语:last Saturday、yesterday、two weeks ago;⑤否定与疑问借助 did:didn't + 原形 / Did + 主语 + 原形。",
+    "table": {
+      "headers": ["类别", "例子"],
+      "rows": [
+        ["规则过去式 -ed", "entered / passed / raced / shouted / crossed"],
+        ["不规则过去式", "hold→held, come→came, run→ran, win→won"],
+        ["过去叙事(连续动作)", "The whistle blew and the runners shot forward."],
+        ["过去时间状语", "last Saturday / yesterday / two weeks ago"],
+        ["否定与疑问(did)", "I didn't expect it. / Did your class win?"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语里“足球”说 soccer(英式 football)、“运动鞋”说 sneakers(英式 trainers)、“体育课”说 gym class(英式 PE);本课已按美语写。", "mark": "soccer/sneakers/gym" },
+      { "rule": "一般过去的否定和疑问都靠 did:didn't + 动词原形(didn't expect)、Did + 主语 + 动词原形(Did your class win?),动词本身不再变过去式。", "mark": "did / didn't" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Did the writer's class win the race?",
+    "options": ["Yes — they won by half a second", "No — they came in last", "No — they didn't finish", "Yes — they won by a full minute"],
+    "answer_index": 0
+  },
+  "passage": "Last Saturday our school held its yearly sports day. The sun shone, and hundreds of families came to watch. My class entered the relay race, and I ran the last leg. When the whistle blew, the runners shot forward. At first we fell behind, and I thought we had no chance. But our third runner passed two others and handed me the baton. I took a deep breath and raced as fast as I could. The crowd shouted, and I crossed the line just ahead of the others. We won by half a second! I didn't expect it at all. It was the best sports day our class ever had.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Last Saturday our school held its yearly sports day. The sun shone, and hundreds of families came to watch.", "text_cn": "上周六,我们学校举办了一年一度的运动会。阳光灿烂,几百个家庭前来观看。" },
+    { "seq": 2, "speaker": null, "text_en": "My class entered the relay race, and I ran the last leg. When the whistle blew, the runners shot forward.", "text_cn": "我们班报名参加了接力赛,我跑最后一棒。哨声一响,选手们猛冲向前。" },
+    { "seq": 3, "speaker": null, "text_en": "At first we fell behind, and I thought we had no chance. But our third runner passed two others and handed me the baton.", "text_cn": "起初我们落后了,我以为我们没戏了。但我们的第三棒超过了另外两人,把接力棒交到了我手里。" },
+    { "seq": 4, "speaker": null, "text_en": "I took a deep breath and raced as fast as I could. The crowd shouted, and I crossed the line just ahead of the others.", "text_cn": "我深吸一口气,拼尽全力地跑。人群欢呼起来,我刚好领先其他人冲过了终点线。" },
+    { "seq": 5, "speaker": null, "text_en": "We won by half a second! I didn't expect it at all. It was the best sports day our class ever had.", "text_cn": "我们以半秒之差赢了!我根本没料到会赢。那是我们班有史以来最棒的一次运动会。" }
+  ],
+  "words": [
+    { "word": "yearly", "ipa": "/ˈjɪrli/", "pos": "adj", "meaning_cn": "一年一度的", "example": "its yearly sports day" },
+    { "word": "relay", "ipa": "/ˈriːleɪ/", "pos": "n", "meaning_cn": "接力赛", "example": "My class entered the relay race" },
+    { "word": "whistle", "ipa": "/ˈwɪsl/", "pos": "n", "meaning_cn": "哨子", "example": "When the whistle blew" },
+    { "word": "baton", "ipa": "/bəˈtɑːn/", "pos": "n", "meaning_cn": "接力棒", "example": "handed me the baton" },
+    { "word": "breath", "ipa": "/breθ/", "pos": "n", "meaning_cn": "呼吸,气息", "example": "I took a deep breath" },
+    { "word": "ahead", "ipa": "/əˈhed/", "pos": "adv", "meaning_cn": "在前面,领先", "example": "just ahead of the others" },
+    { "word": "crowd", "ipa": "/kraʊd/", "pos": "n", "meaning_cn": "人群", "example": "The crowd shouted" },
+    { "word": "shout", "ipa": "/ʃaʊt/", "pos": "v", "meaning_cn": "呼喊,欢呼", "example": "The crowd shouted" },
+    { "word": "cross", "ipa": "/krɔːs/", "pos": "v", "meaning_cn": "越过,穿过", "example": "I crossed the line" },
+    { "word": "expect", "ipa": "/ɪkˈspekt/", "pos": "v", "meaning_cn": "预料,期待", "example": "I didn't expect it at all" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "不规则动词过去式(held/shot/won)" },
+    { "gp": "gp2", "name": "规则动词过去式 -ed(entered/passed/shouted)" },
+    { "gp": "gp3", "name": "一般过去时叙事(过去连续动作)" },
+    { "gp": "gp4", "name": "过去时间状语(last Saturday / ago / yesterday)" },
+    { "gp": "gp5", "name": "一般过去的否定与疑问(didn't / Did…?)" },
+    { "gp": "gp6", "name": "词汇辨析(relay / baton / whistle / ahead)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Last Saturday our school ___ its yearly sports day.\"(hold 的过去式)", "stem_cn": "上周六我们学校举办了一年一度的运动会。", "options": ["held", "holded", "holds", "holding"] },
+    { "gp": "gp1", "stem": "\"When the whistle blew, the runners ___ forward.\"(shoot 的过去式,猛冲)", "stem_cn": "哨声一响,选手们猛冲向前。", "options": ["shot", "shooted", "shoot", "shooting"] },
+    { "gp": "gp1", "stem": "\"We ___ by half a second!\"(win 的过去式)", "stem_cn": "我们以半秒之差赢了!", "options": ["won", "winned", "win", "winning"] },
+    { "gp": "gp2", "stem": "\"My class ___ the relay race.\"(enter 的过去式,报名参加)", "stem_cn": "我们班报名参加了接力赛。", "options": ["entered", "enter", "entering", "enters"] },
+    { "gp": "gp2", "stem": "\"Our third runner ___ two others.\"(pass 的过去式,超过)", "stem_cn": "我们的第三棒超过了另外两人。", "options": ["passed", "past", "passing", "passes"] },
+    { "gp": "gp2", "stem": "\"The crowd ___ as I crossed the line.\"(shout 的过去式)", "stem_cn": "我冲过终点线时,人群欢呼起来。", "options": ["shouted", "shout", "shouting", "shouts"] },
+    { "gp": "gp3", "stem": "\"I ___ a deep breath and raced as fast as I could.\"(take 的过去式)", "stem_cn": "我深吸一口气,拼尽全力地跑。", "options": ["took", "take", "taken", "taking"] },
+    { "gp": "gp3", "stem": "\"At first we ___ behind.\"(fall 的过去式,落后)", "stem_cn": "起初我们落后了。", "options": ["fell", "fall", "fallen", "falling"] },
+    { "gp": "gp3", "stem": "\"Hundreds of families ___ to watch.\"(come 的过去式)", "stem_cn": "几百个家庭前来观看。", "options": ["came", "come", "comes", "coming"] },
+    { "gp": "gp4", "stem": "\"The race ___ place last Saturday.\"(take place 与 last Saturday 搭配的形式)", "stem_cn": "比赛于上周六举行。", "options": ["took", "takes", "will take", "is taking"] },
+    { "gp": "gp4", "stem": "\"The team won the city final two weeks ___.\"(“两周前”用哪个词)", "stem_cn": "这支队伍两周前赢了市决赛。", "options": ["ago", "later", "since", "before"] },
+    { "gp": "gp4", "stem": "\"Yesterday I ___ in the relay for the first time.\"(与 yesterday 搭配:run 的过去式)", "stem_cn": "昨天我第一次参加接力赛。", "options": ["ran", "run", "will run", "am running"] },
+    { "gp": "gp5", "stem": "\"I ___ expect to win at all.\"(一般过去的否定:根本没料到)", "stem_cn": "我根本没料到能赢。", "options": ["didn't", "don't", "wasn't", "haven't"] },
+    { "gp": "gp5", "stem": "\"___ your class win the relay race?\"(一般过去的一般疑问)", "stem_cn": "你们班赢了接力赛吗?", "options": ["Did", "Was", "Do", "Has"] },
+    { "gp": "gp5", "stem": "\"The other team ___ finish in time.\"(一般过去的否定:没能及时完成)", "stem_cn": "另一队没能及时跑完。", "options": ["didn't", "wasn't", "hasn't", "doesn't"] },
+    { "gp": "gp6", "stem": "\"In a relay race, each runner passes a ___ to the next.\"(接力棒用哪个词)", "stem_cn": "在接力赛中,每名选手把接力棒传给下一个人。", "options": ["baton", "whistle", "medal", "rope"] },
+    { "gp": "gp6", "stem": "\"When the ___ blew, the race began.\"(哨子用哪个词)", "stem_cn": "哨声一响,比赛就开始了。", "options": ["whistle", "drum", "bell", "horn"] },
+    { "gp": "gp6", "stem": "\"I crossed the line just ___ of the others.\"(在…前面、领先用哪个词)", "stem_cn": "我刚好领先其他人冲过了终点线。", "options": ["ahead", "behind", "beside", "below"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"足球\"常说:", "options": ["soccer", "football", "foot-game", "kick-ball"] },
+    { "stem": "美语里\"运动鞋\"常说:", "options": ["sneakers", "trainers", "run-shoes", "sport-boots"] },
+    { "stem": "relay 的意思是:", "options": ["接力赛", "马拉松", "跳高", "游泳"] },
+    { "stem": "whistle 的意思是:", "options": ["哨子", "奖杯", "旗帜", "号角"] },
+    { "stem": "crowd 的意思是:", "options": ["人群", "裁判", "教练", "冠军"] },
+    { "stem": "expect 的意思是:", "options": ["预料,期待", "放弃", "忘记", "害怕"] }
+  ],
+  "contrast": [
+    { "us": "soccer", "uk": "football", "note_cn": "足球;美语 soccer,英式 football" },
+    { "us": "sneakers", "uk": "trainers", "note_cn": "运动鞋;美语 sneakers,英式 trainers" },
+    { "us": "gym class", "uk": "PE", "note_cn": "体育课;美语 gym class,英式 PE" },
+    { "us": "field", "uk": "pitch", "note_cn": "(运动)场地;美语 field,英式 pitch" }
+  ],
+  "chunks": [
+    { "us": "take a deep breath", "ipa": "/teɪk ə diːp breθ/", "example1": "I took a deep breath and raced.", "example1_cn": "我深吸一口气,然后开跑。", "example2": "Take a deep breath and stay calm.", "example2_cn": "深吸一口气,保持冷静。" },
+    { "us": "fall behind", "ipa": "/fɔːl bɪˈhaɪnd/", "example1": "At first we fell behind.", "example1_cn": "起初我们落后了。", "example2": "Don't fall behind the rest of the class.", "example2_cn": "别落在全班后面。" },
+    { "us": "as fast as one can", "ipa": "/æz fæst æz wʌn kæn/", "example1": "I raced as fast as I could.", "example1_cn": "我尽可能快地跑。", "example2": "Run as fast as you can to the gate.", "example2_cn": "尽你所能快跑到大门。" },
+    { "us": "just ahead of", "ipa": "/dʒʌst əˈhed əv/", "example1": "I crossed the line just ahead of the others.", "example1_cn": "我刚好领先其他人冲线。", "example2": "Her car stopped just ahead of ours.", "example2_cn": "她的车停在我们车的前面一点点。" }
+  ],
+  "stage7_cloze": {
+    "context": "Last Saturday our school ___1___ its sports day. My class ___2___ the relay race, and I ran the last leg. When the whistle blew, the runners ___3___ forward. We ___4___ by half a second!",
+    "blanks": [
+      { "blank_no": 1, "options": ["held", "holds", "holded", "holding"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["entered", "enter", "enters", "entering"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["shot", "shoot", "shooted", "shooting"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["won", "win", "winned", "winning"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "When did the school hold its sports day?", "options": ["Last Saturday", "Next Saturday", "Yesterday morning", "Two years ago"] },
+    { "stem": "Which race did the writer's class enter?", "options": ["The relay race — the writer ran the last leg", "The high jump", "The long-distance run", "The swimming race"] },
+    { "stem": "How did the race end?", "options": ["The writer's class won by half a second", "The writer's class came in last", "The race was canceled", "It ended in a tie"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"上周六我们学校举办了运动会\"(一般过去时,hold 的过去式):", "options": ["Last Saturday our school held its sports day.", "Last Saturday our school holds its sports day.", "Last Saturday our school will hold its sports day.", "Last Saturday our school holded its sports day."] },
+    { "stem": "你想说\"你们班赢了接力赛吗?\"(一般过去的一般疑问,用 Did):", "options": ["Did your class win the relay race?", "Did your class won the relay race?", "Does your class win the relay race?", "Was your class win the relay race?"] },
+    { "stem": "你想说\"我根本没料到能赢\"(一般过去的否定,用 didn't):", "options": ["I didn't expect to win at all.", "I don't expect to win at all.", "I didn't expected to win at all.", "I wasn't expect to win at all."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "relay 的意思是:", "options": ["接力赛", "马拉松", "跳高", "游泳"] },
+    { "kind": "vocab", "stem": "expect 的意思是:", "options": ["预料,期待", "放弃", "忘记", "害怕"] },
+    { "kind": "grammar", "stem": "\"Last Saturday our school ___ its sports day.\"(hold 的过去式)", "stem_cn": "上周六我们学校举办了运动会。", "options": ["held", "holds", "holded", "holding"] },
+    { "kind": "grammar", "stem": "\"___ your class win the relay race?\"(一般过去的一般疑问)", "stem_cn": "你们班赢了接力赛吗?", "options": ["Did", "Was", "Do", "Has"] },
+    { "kind": "scenario", "stem": "\"take a deep breath\" 的意思是:", "options": ["深吸一口气", "停下休息", "大声喊叫", "转身离开"] },
+    { "kind": "scenario", "stem": "\"fall behind\" 的意思是:", "options": ["落后", "领先", "摔倒", "加速"] },
+    { "kind": "reading", "stem": "Why did the writer think they had no chance at first?", "options": ["Because at first their team fell behind", "Because it started to rain", "Because a runner got hurt", "Because they arrived late"], "passage": true },
+    { "kind": "reading", "stem": "How did the writer's class win the race?", "options": ["The third runner passed two others and handed over the baton, and the writer raced ahead to cross first", "The other teams gave up", "The writer started before the whistle", "They only had two runners"], "passage": true },
+    { "kind": "listening", "stem": "By how much did the class win?", "options": ["By half a second", "By ten seconds", "By a full minute", "By one meter"], "audio": true },
+    { "kind": "listening", "stem": "Did the writer expect to win?", "options": ["No — not at all", "Yes — she was sure of it", "Yes — she had practiced for years", "No comment was made"], "audio": true }
+  ]
+}

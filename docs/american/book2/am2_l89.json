@@ -1,0 +1,131 @@
+{
+  "id": "am2_l89",
+  "unit_no": 12,
+  "lesson_no": 89,
+  "title_en": "A Slip of the Tongue",
+  "title_cn": "一次口误",
+  "grammar_focus": "复习 KS17/41/65 情态表达(收官包·干净课美语化):must(必须、务必;must have done 对过去的肯定推测)、have to / had to(客观上必须)、needn't 与 don't have to(不必)、should / should have done(应该/过去本应做)、mustn't(禁止)的用法与辨析",
+  "scene": "“上台一定要沉住气,”老师叮嘱新来的主持人。“你不必做到完美,但要吐字清楚。”那天晚上,主持人要介绍一位著名作家。他太紧张了,一定是把名字说混了。“你不用担心,”作家轻声安慰道,“谁都会这样。”“我当时真该多练练的,”主持人事后说。“别太苛责自己了,”她笑着回答。“下次我一定记得先深呼吸,”他笑道。“你该为自己骄傲——你坚持下来了!”她说。大家都认同:一个小小的口误,不必毁掉一个愉快的夜晚。",
+  "grammar_card": {
+    "title": "复习 KS17/41/65 情态表达",
+    "intro": "本课复习几个常用的情态说法:①must——主观上“必须、务必”(You must stay calm);must have done——对过去的肯定推测“一定……过了”(He must have mixed up the names);②have to / had to——客观上“不得不、必须”,过去用 had to(He had to introduce the writer);③needn't 和 don't have to——“不必、无需”(You needn't worry / You don't have to be perfect);④should——“应该”,should have done——“过去本应做而没做”(I should have practiced more);⑤mustn't——“禁止、别”(You mustn't be so hard on yourself)。",
+    "table": {
+      "headers": ["表达", "例子"],
+      "rows": [
+        ["must / must have done", "You must stay calm. / He must have mixed up the names."],
+        ["have to / had to", "He had to introduce a famous writer."],
+        ["needn't / don't have to", "You needn't worry. / You don't have to be perfect."],
+        ["should / should have done", "You should speak clearly. / I should have practiced more."],
+        ["mustn't", "You mustn't be so hard on yourself."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语“剧院”说 theater(英式 theatre);“电梯”说 elevator(英式 lift)。本课已按美语写。", "mark": "theater / elevator" },
+      { "rule": "needn't / don't have to = 不必(没必要),mustn't = 禁止(一定别);must have done 是对过去的推测,should have done 是“本应做却没做”。", "mark": "情态辨析" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What did the teacher tell the new host to do?",
+    "options": ["Stay calm on stage", "Speak very fast", "Leave the stage early", "Read from a script"],
+    "answer_index": 0
+  },
+  "passage": "\"You must stay calm on stage,\" the teacher told the new host. \"You don't have to be perfect, but you should speak clearly.\" That evening, the host had to introduce a famous writer. He was so nervous that he must have mixed up the names. \"You needn't worry,\" the writer whispered kindly. \"It happens to everyone.\" \"I should have practiced more,\" the host said afterward. \"You mustn't be so hard on yourself,\" she replied with a smile. \"Next time, I must remember to breathe first,\" he laughed. \"You should be proud — you kept going!\" she said. Everyone agreed: a small slip needn't ruin a good evening.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "\"You must stay calm on stage,\" the teacher told the new host. \"You don't have to be perfect, but you should speak clearly.\"", "text_cn": "“上台一定要沉住气,”老师叮嘱新来的主持人。“你不必做到完美,但要吐字清楚。”" },
+    { "seq": 2, "speaker": null, "text_en": "That evening, the host had to introduce a famous writer. He was so nervous that he must have mixed up the names.", "text_cn": "那天晚上,主持人要介绍一位著名作家。他太紧张了,一定是把名字说混了。" },
+    { "seq": 3, "speaker": null, "text_en": "\"You needn't worry,\" the writer whispered kindly. \"It happens to everyone.\" \"I should have practiced more,\" the host said afterward.", "text_cn": "“你不用担心,”作家轻声安慰道,“谁都会这样。”“我当时真该多练练的,”主持人事后说。" },
+    { "seq": 4, "speaker": null, "text_en": "\"You mustn't be so hard on yourself,\" she replied with a smile. \"Next time, I must remember to breathe first,\" he laughed.", "text_cn": "“别太苛责自己了,”她笑着回答。“下次我一定记得先深呼吸,”他笑道。" },
+    { "seq": 5, "speaker": null, "text_en": "\"You should be proud — you kept going!\" she said. Everyone agreed: a small slip needn't ruin a good evening.", "text_cn": "“你该为自己骄傲——你坚持下来了!”她说。大家都认同:一个小小的口误,不必毁掉一个愉快的夜晚。" }
+  ],
+  "words": [
+    { "word": "slip of the tongue", "ipa": "/slɪp əv ðə tʌŋ/", "pos": "n", "meaning_cn": "口误,说错话", "example": "a small slip needn't ruin the evening" },
+    { "word": "host", "ipa": "/hoʊst/", "pos": "n", "meaning_cn": "主持人", "example": "the teacher told the new host" },
+    { "word": "stage", "ipa": "/steɪdʒ/", "pos": "n", "meaning_cn": "舞台", "example": "stay calm on stage" },
+    { "word": "calm", "ipa": "/kɑːm/", "pos": "adj", "meaning_cn": "镇静的,冷静的", "example": "You must stay calm" },
+    { "word": "introduce", "ipa": "/ˌɪntrəˈduːs/", "pos": "v", "meaning_cn": "介绍", "example": "had to introduce a famous writer" },
+    { "word": "nervous", "ipa": "/ˈnɜːrvəs/", "pos": "adj", "meaning_cn": "紧张的", "example": "He was so nervous" },
+    { "word": "mix up", "ipa": "/mɪks ʌp/", "pos": "phr", "meaning_cn": "弄混,搞混", "example": "he must have mixed up the names" },
+    { "word": "whisper", "ipa": "/ˈwɪspər/", "pos": "v", "meaning_cn": "低声说,耳语", "example": "the writer whispered kindly" },
+    { "word": "breathe", "ipa": "/briːð/", "pos": "v", "meaning_cn": "呼吸", "example": "remember to breathe first" },
+    { "word": "ruin", "ipa": "/ˈruːɪn/", "pos": "v", "meaning_cn": "毁掉,糟蹋", "example": "needn't ruin a good evening" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "must(必须)与 must have done(对过去的推测)" },
+    { "gp": "gp2", "name": "have to / had to(客观上必须)" },
+    { "gp": "gp3", "name": "needn't 与 don't have to(不必)" },
+    { "gp": "gp4", "name": "should 与 should have done(应该/本应做)" },
+    { "gp": "gp5", "name": "mustn't(禁止)与情态综合辨析" },
+    { "gp": "gp6", "name": "词汇辨析(host / nervous / introduce)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"'You ___ stay calm on stage,' the teacher said.\"(主观上“必须、务必”)", "stem_cn": "“上台一定要沉住气,”老师说。", "options": ["must", "can", "may", "would"] },
+    { "gp": "gp1", "stem": "\"He was so nervous that he ___ mixed up the names.\"(对过去的肯定推测:一定是)", "stem_cn": "他太紧张了,一定是把名字说混了。", "options": ["must have", "must", "should have", "can have"] },
+    { "gp": "gp1", "stem": "\"'Next time, I ___ remember to breathe first,' he laughed.\"(必须、一定要)", "stem_cn": "“下次我一定记得先深呼吸,”他笑道。", "options": ["must", "could", "might", "would"] },
+    { "gp": "gp2", "stem": "\"That evening, the host ___ introduce a famous writer.\"(过去客观上不得不)", "stem_cn": "那天晚上,主持人要介绍一位著名作家。", "options": ["had to", "must", "has to", "would"] },
+    { "gp": "gp2", "stem": "\"Actors ___ practice a lot before a big show.\"(客观上必须)", "stem_cn": "演员在大型演出前必须多加排练。", "options": ["have to", "must to", "has to", "are to"] },
+    { "gp": "gp2", "stem": "\"Yesterday she ___ leave early to catch a train.\"(过去客观上不得不)", "stem_cn": "昨天她不得不早走去赶火车。", "options": ["had to", "must", "has to", "will have to"] },
+    { "gp": "gp3", "stem": "\"'You ___ be perfect,' the teacher said.\"(不必、没必要)", "stem_cn": "“你不必做到完美,”老师说。", "options": ["don't have to", "must not", "have to", "should"] },
+    { "gp": "gp3", "stem": "\"'You ___ worry,' the writer whispered.\"(不必、无需)", "stem_cn": "“你不用担心,”作家轻声说。", "options": ["needn't", "mustn't", "must", "should"] },
+    { "gp": "gp3", "stem": "\"A small slip ___ ruin a good evening.\"(不必、无需)", "stem_cn": "一个小口误不必毁掉一个愉快的夜晚。", "options": ["needn't", "mustn't", "must", "has to"] },
+    { "gp": "gp4", "stem": "\"'You ___ speak clearly,' the teacher said.\"(应该)", "stem_cn": "“你应该吐字清楚,”老师说。", "options": ["should", "must have", "need", "would"] },
+    { "gp": "gp4", "stem": "\"'I ___ practiced more,' the host said afterward.\"(过去本应做却没做)", "stem_cn": "“我当时真该多练练的,”主持人事后说。", "options": ["should have", "should", "must", "had to"] },
+    { "gp": "gp4", "stem": "\"'You ___ be proud — you kept going!' she said.\"(应该)", "stem_cn": "“你该为自己骄傲——你坚持下来了!”她说。", "options": ["should", "must have", "need", "would have"] },
+    { "gp": "gp5", "stem": "\"'You ___ be so hard on yourself,' she replied.\"(表示“别、禁止这样”)", "stem_cn": "“别太苛责自己了,”她回答。", "options": ["mustn't", "must", "have to", "are to"] },
+    { "gp": "gp5", "stem": "\"He didn't prepare, so he ___ have mixed up the names.\"(对过去的肯定推测)", "stem_cn": "他没准备,所以一定是把名字说混了。", "options": ["must", "need", "should", "would"] },
+    { "gp": "gp5", "stem": "\"There's no rule about it; you ___ come if you don't want to.\"(主观上不必)", "stem_cn": "这事没规定,你要是不想来就不必来。", "options": ["don't have to", "mustn't", "must", "have to"] },
+    { "gp": "gp6", "stem": "\"The new ___ welcomed everyone to the show.\"(主持人用哪个词)", "stem_cn": "新主持人欢迎大家来看演出。", "options": ["host", "cook", "driver", "farmer"] },
+    { "gp": "gp6", "stem": "\"He was very ___ before speaking to the crowd.\"(紧张的用哪个词)", "stem_cn": "在对众人讲话前,他非常紧张。", "options": ["nervous", "sleepy", "hungry", "angry"] },
+    { "gp": "gp6", "stem": "\"'Try to stay ___,' the teacher said.\"(镇静的、冷静的用哪个词)", "stem_cn": "“尽量保持冷静,”老师说。", "options": ["calm", "loud", "late", "lost"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"剧院\"说:", "options": ["theater", "theatre", "playhouse", "showroom"] },
+    { "stem": "美语里\"电梯\"说:", "options": ["elevator", "lift", "mover", "riser"] },
+    { "stem": "host 的意思是:", "options": ["主持人", "观众", "演员", "作家"] },
+    { "stem": "nervous 的意思是:", "options": ["紧张的", "快乐的", "疲惫的", "生气的"] },
+    { "stem": "introduce 的意思是:", "options": ["介绍", "责备", "离开", "隐藏"] },
+    { "stem": "ruin 的意思是:", "options": ["毁掉,糟蹋", "建造", "修理", "表扬"] }
+  ],
+  "contrast": [
+    { "us": "theater", "uk": "theatre", "note_cn": "剧院;美语 theater,英式 theatre" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "first floor", "uk": "ground floor", "note_cn": "一楼;美语 first floor,英式 ground floor" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" }
+  ],
+  "chunks": [
+    { "us": "a slip of the tongue", "ipa": "/ə slɪp əv ðə tʌŋ/", "example1": "A small slip of the tongue needn't ruin the evening.", "example1_cn": "一个小口误不必毁掉整个晚上。", "example2": "Calling her by the wrong name was just a slip of the tongue.", "example2_cn": "把她叫错名字只是个口误。" },
+    { "us": "be hard on", "ipa": "/bi hɑːrd ɑːn/", "example1": "You mustn't be so hard on yourself.", "example1_cn": "你别太苛责自己了。", "example2": "Don't be too hard on the new student.", "example2_cn": "别对新来的学生太严厉。" },
+    { "us": "mix up", "ipa": "/mɪks ʌp/", "example1": "He must have mixed up the names.", "example1_cn": "他一定是把名字弄混了。", "example2": "I always mix up those two words.", "example2_cn": "我总是把那两个词弄混。" },
+    { "us": "keep going", "ipa": "/kiːp ˈɡoʊɪŋ/", "example1": "You should be proud — you kept going!", "example1_cn": "你该骄傲——你坚持下来了!", "example2": "It was hard, but she kept going.", "example2_cn": "尽管很难,她还是坚持了下去。" }
+  ],
+  "stage7_cloze": {
+    "context": "\"You ___1___ stay calm on stage,\" the teacher said. \"You ___2___ be perfect, but you should speak clearly.\" That evening, the host ___3___ introduce a famous writer. \"You ___4___ worry,\" the writer whispered.",
+    "blanks": [
+      { "blank_no": 1, "options": ["must", "can", "may", "would"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["don't have to", "must not", "have to", "should"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["had to", "must", "has to", "would"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["needn't", "mustn't", "must", "should"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What did the teacher tell the new host to do?", "options": ["Stay calm on stage", "Speak very fast", "Leave early", "Read a script"] },
+    { "stem": "What did the host have to do that evening?", "options": ["Introduce a famous writer", "Sing a song", "Sell tickets", "Clean the stage"] },
+    { "stem": "What did the writer say about the slip?", "options": ["It happens to everyone", "It ruined the evening", "It was unforgivable", "It never happens"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"那天晚上主持人得介绍一位著名作家\"(过去客观上必须,用 had to):", "options": ["That evening, the host had to introduce a famous writer.", "That evening, the host must introduce a famous writer.", "That evening, the host has to introduce a famous writer.", "That evening, the host had introduce a famous writer."] },
+    { "stem": "你想说\"你不必做到完美\"(不必,用 don't have to):", "options": ["You don't have to be perfect.", "You mustn't be perfect.", "You don't must be perfect.", "You haven't to be perfect."] },
+    { "stem": "你想说\"我当时应该多练练的\"(过去本应做却没做,用 should have done):", "options": ["I should have practiced more.", "I should practice more.", "I must have practiced more.", "I had to practice more."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "host 的意思是:", "options": ["主持人", "观众", "演员", "作家"] },
+    { "kind": "vocab", "stem": "nervous 的意思是:", "options": ["紧张的", "快乐的", "疲惫的", "生气的"] },
+    { "kind": "grammar", "stem": "\"That evening, the host ___ introduce a famous writer.\"(过去客观上必须)", "stem_cn": "那天晚上,主持人要介绍一位著名作家。", "options": ["had to", "must", "has to", "would"] },
+    { "kind": "grammar", "stem": "\"'You ___ worry,' the writer whispered.\"(不必、无需)", "stem_cn": "“你不用担心,”作家轻声说。", "options": ["needn't", "mustn't", "must", "should"] },
+    { "kind": "scenario", "stem": "\"a slip of the tongue\" 的意思是:", "options": ["口误,说错话", "舌头受伤", "滑了一跤", "尝一口"] },
+    { "kind": "scenario", "stem": "\"keep going\" 的意思是:", "options": ["坚持下去,继续", "一直走开", "保持不动", "反复出发"] },
+    { "kind": "reading", "stem": "What did the teacher tell the host to do on stage?", "options": ["Stay calm", "Sing loudly", "Sit down", "Read fast"], "passage": true },
+    { "kind": "reading", "stem": "What did the host say he should have done?", "options": ["Practiced more", "Left earlier", "Stayed home", "Written a book"], "passage": true },
+    { "kind": "listening", "stem": "What did the writer say about small slips?", "options": ["They happen to everyone", "They ruin everything", "They never happen", "They are unforgivable"], "audio": true },
+    { "kind": "listening", "stem": "What did the teacher tell the host at the start?", "options": ["Stay calm on stage", "Speak very fast", "Skip the show", "Read a script"], "audio": true }
+  ]
+}

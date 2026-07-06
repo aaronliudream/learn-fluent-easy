@@ -716,3 +716,12 @@
 - **校验**:机器12项 🟢 全绿。
 - **★ U11 整单元 L81-88 = 8课×44 = 352 齐**,落库 american_am2_seed_unit11.sql(收官)。
 - **待裁决**:无。
+
+═══════════════════════════════════════
+## L89《A Slip of the Tongue 一次口误》· U12 · 收官包·干净课美语化 · 情态表达(KS17/41/65)· ★U12开篇
+- **来源**:收官包(Aaron 2026-07-05);原课干净(口误闹笑话温情),照搬美语化,KS17/41/65 情态考点原样。
+- **考点**:must/must have done(推测)/have to·had to/needn't·don't have to/should·should have done/mustn't·综合辨析/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:slip of the tongue, host, stage, calm, introduce, nervous, mix up, whisper, breathe, ruin。
+- **关6**:美语对照 theater(剧院)/elevator(电梯) + 4 词义(host/nervous/introduce/ruin)。contrast: theater↔theatre / elevator↔lift / first floor↔ground floor / movie↔film。chunks: a slip of the tongue / be hard on / mix up / keep going。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(新建,L89 = 44,U12开篇)。
+- **待裁决**:无。

@@ -242,6 +242,20 @@
 - 词10(官方6:circle/admire/close/wedding/reception/sort;补4 humor/speech/popular/amuse——官方词表仅6词,按词表铁律补足至~10)。美语化 humour→**humor**;关6美英=humor/humour+favorite/favourite+color/colour+neighbor/neighbour(-or vs -our 拼写族);chunks=a sense of humor/make a speech/to one's surprise/a circle of friends。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit08.sql`(**L57-L63=308**)。⏭️ L64(U8 收官课)。
 
+## ✅ U8 L64《The Channel Tunnel》(海峡隧道)· 🟢全绿 · 教材 Unit 3 · **U8 收官**
+- 主考(源 doc332-333 = Key structures)= **KS16+KS40 真实与非真实条件句**:①真实(if+一般现在→will/shall,If it is fine we shall go)②与现在相反(if+过去式/be→were→would+原形,If I were you I would…)③与过去相反(if+had done→would have done,If the British had not feared invasion it would have been completed)+ suggest/demand that…should(虚拟)。Special difficulties(源 doc333)= **SD 短语动词 draw 辨析**:draw in 吸入 / draw back 退回 / draw off 开走 / draw up 停下·拟定签订(drawn up)。
+- 裁决:gp1 真实条件(3)+ gp2 与现在相反(3)+ gp3 与过去相反(4)+ gp4 suggest/demand should(2)= 主考;gp5 draw in/back/off(3)+ gp6 draw up 双义(3)= SD 辅考。全运用题,元语法定义题=0。
+- ⚠️ leak[b]坑复现:条件句题里"be 用 were""主句用 would have"写进括号提示=直给答案红;已改"be 动词用特殊虚拟形式""用完成体的虚拟形式",泄漏清零。
+- 词13全收(tunnel/port/ventilate/chimney/sea level/double/ventilation/fear/invasion/officially/connect/European/continent)。美语化 centre→**center**、railway→**railroad**;关6美英=center/centre+railroad/railway+subway/underground+elevator/lift(交通基建族);chunks=put forward/serve as/above sea level/connect…to。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit08.sql`(**L57-L64=352,整单元8课齐**)。
+
+## 🎯 U8(L57–L64)批次汇报 · 整单元完成
+- **8课全绿**:L57 KS9+33介词(净化包)/ L58 KS34被动语态综合+双宾被动 / L59 Review时态综合+SD表目的 / L60 KS36+16表将来 / L61 KS37三种将来时态 / L62 KS38过去完成vs过去完成进行(净化包)/ L63 KS15+39间接引语 / L64 KS16+40真实与非真实条件句+虚拟。
+- seed=`american_am2_seed_unit08.sql` 期望 **+352**(8课×44),已同步 _RUN_ME 第8行。
+- 含2次 content-filter 净化包(L57/L62);L62 我本地实读源未被拦、与净化包完全一致。
+- **真机抽验指定2课**:①**L62**(净化包生产+过去完成时态对比,验听力音频/时态题呈现)②**L64**(虚拟语气三型+draw短语动词,验条件句题干与SD辨析呈现)。
+- ⏭️ L65 起进教材 Unit 3 后段(课程 U9,L65-72)。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

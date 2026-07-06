@@ -1,0 +1,132 @@
+{
+  "id": "am3_l01",
+  "unit_no": 1,
+  "lesson_no": 1,
+  "title_en": "The Mountain Lion",
+  "title_cn": "美洲狮",
+  "grammar_focus": "过去叙事时态:一般过去时(叙事主干、发生完成的动作) vs 过去进行时(过去某刻正在进行的背景动作),以及 when(短促打断→一般过去)与 while(持续背景/两动作同时→过去进行)的辨析(原创承载 NCE3 L1 考点·美国小镇目击美洲狮)",
+  "scene": "去年秋天,科罗拉多一个小镇附近有人看见一头美洲狮在游荡。起初没人相信,但证据慢慢多了起来。一天早上,一位女士正沿着安静的小径遛狗,忽然发现那只大猫正卧在松树下。她吓得一动不动,那只动物则从阴影里一直盯着她。很快更多人报告见到了美洲狮——有人发现新鲜爪印,有人发现挂在栅栏上的毛。小镇觉得必须行动,于是官员组织了一次谨慎的搜寻。护林员在山里搜寻时,美洲狮却悄悄往相反方向走。好几天都找不到它,踪迹总是断掉。一头没被捕获、又饿的大猫离家这么近,让所有人都很不安。最后,美洲狮自己回到了山里,小镇又慢慢恢复了平静。",
+  "grammar_card": {
+    "title": "过去叙事的两把刷子:一般过去时 & 过去进行时",
+    "intro": "讲过去的故事,常靠两种时态配合:①一般过去时——讲一件件发生、已经完成的动作,是叙事的主干(spotted、found、organized、wandered);②过去进行时(was/were + doing)——讲过去某个时刻正在进行、用来当背景的动作(was walking、were searching、was watching)。when 后常接一个短促、打断背景的动作(一般过去);while 后常接一个持续的背景动作(过去进行);两个同时持续的动作,可以都用过去进行(While the rangers were searching, the lion was moving).",
+    "table": {
+      "headers": ["时态", "用来讲", "例子"],
+      "rows": [
+        ["一般过去时", "一件件发生、已完成的动作(叙事主干)", "spotted the cat / found prints / organized a hunt"],
+        ["过去进行时", "过去某刻正在进行的背景动作", "was walking / were searching / was watching"],
+        ["when + 一般过去", "短促、打断背景的那个动作", "When she saw the cat, she froze."],
+        ["while + 过去进行", "持续的背景 / 两个动作同时进行", "While she was walking, she spotted it."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "when 常带出一个短促、打断性的动作(用一般过去);while 常带出一个持续的背景动作(用过去进行)。两件事同时在进行,两边都用过去进行。", "mark": "when / while" },
+      { "rule": "美语里这种大猫常叫 mountain lion 或 cougar,和 puma 是同一种动物;“秋天”美语说 fall(英式 autumn)。本课已按美语写。", "mark": "mountain lion / fall" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What animal was seen near the town?",
+    "options": ["A mountain lion (puma)", "A brown bear", "A gray wolf", "A wild horse"],
+    "answer_index": 0
+  },
+  "passage": "Last fall, a mountain lion was seen wandering near a small town in Colorado. At first, people did not believe the reports, but the evidence slowly accumulated. One morning, while a woman was walking her dog along a quiet trail, she spotted the big cat resting under a pine tree. She stood completely still while the animal was watching her from the shadows. Soon, more people reported seeing the puma; some found fresh paw prints, and others found fur clinging to their fences. The town felt obliged to act, so the officials organized a careful hunt. While the rangers were searching the hills, the mountain lion was moving quietly in the opposite direction. For several days, no one could find it, because the trail always seemed to disappear. The thought of an unhunted, hungry cat so close to their homes was disturbing to everyone. In the end, the puma wandered back into the mountains, and the town slowly returned to its quiet life.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Last fall, a mountain lion was seen wandering near a small town in Colorado. At first, people did not believe the reports, but the evidence slowly accumulated.", "text_cn": "去年秋天,科罗拉多一个小镇附近有人看见一头美洲狮在游荡。起初,人们不相信这些报告,但证据慢慢积累起来。" },
+    { "seq": 2, "speaker": null, "text_en": "One morning, while a woman was walking her dog along a quiet trail, she spotted the big cat resting under a pine tree. She stood completely still while the animal was watching her from the shadows.", "text_cn": "一天早上,一位女士正沿着安静的小径遛狗,忽然发现那只大猫正卧在一棵松树下。她一动不动地站着,那只动物则从阴影里一直盯着她。" },
+    { "seq": 3, "speaker": null, "text_en": "Soon, more people reported seeing the puma; some found fresh paw prints, and others found fur clinging to their fences.", "text_cn": "很快,更多人报告见到了这头美洲狮;有人发现了新鲜的爪印,有人发现毛挂在自家栅栏上。" },
+    { "seq": 4, "speaker": null, "text_en": "The town felt obliged to act, so the officials organized a careful hunt. While the rangers were searching the hills, the mountain lion was moving quietly in the opposite direction.", "text_cn": "小镇觉得必须行动,于是官员们组织了一次谨慎的搜寻。护林员们正在山里搜寻时,美洲狮却悄悄地朝相反方向走。" },
+    { "seq": 5, "speaker": null, "text_en": "For several days, no one could find it, because the trail always seemed to disappear. The thought of an unhunted, hungry cat so close to their homes was disturbing to everyone. In the end, the puma wandered back into the mountains, and the town slowly returned to its quiet life.", "text_cn": "一连好几天都没人能找到它,因为踪迹总是断掉。一头没被捕获、又饥饿的大猫离家这么近,这想法让所有人都很不安。最后,美洲狮自己漫步回到了山里,小镇也慢慢恢复了平静。" }
+  ],
+  "words": [
+    { "word": "puma", "ipa": "/ˈpuːmə/", "pos": "n", "meaning_cn": "美洲狮(美洲又称 mountain lion / cougar)", "example": "a mountain lion, or puma" },
+    { "word": "spot", "ipa": "/spɑːt/", "pos": "v", "meaning_cn": "认出,发现", "example": "she spotted the big cat" },
+    { "word": "evidence", "ipa": "/ˈevɪdəns/", "pos": "n", "meaning_cn": "证据,迹象", "example": "the evidence slowly accumulated" },
+    { "word": "accumulate", "ipa": "/əˈkjuːmjəleɪt/", "pos": "v", "meaning_cn": "(逐渐)积累,积聚", "example": "the evidence accumulated" },
+    { "word": "oblige", "ipa": "/əˈblaɪdʒ/", "pos": "v", "meaning_cn": "使(某人)感到必须做", "example": "the town felt obliged to act" },
+    { "word": "hunt", "ipa": "/hʌnt/", "pos": "n/v", "meaning_cn": "搜寻;追猎", "example": "organized a careful hunt" },
+    { "word": "trail", "ipa": "/treɪl/", "pos": "n", "meaning_cn": "小径;一串痕迹", "example": "along a quiet trail" },
+    { "word": "print", "ipa": "/prɪnt/", "pos": "n", "meaning_cn": "印痕,足迹", "example": "fresh paw prints" },
+    { "word": "cling", "ipa": "/klɪŋ/", "pos": "v", "meaning_cn": "(clung)粘住,附着", "example": "fur clinging to their fences" },
+    { "word": "unhunted", "ipa": "/ˌʌnˈhʌntɪd/", "pos": "adj", "meaning_cn": "未被捕获的", "example": "an unhunted, hungry cat" },
+    { "word": "disturbing", "ipa": "/dɪˈstɜːrbɪŋ/", "pos": "adj", "meaning_cn": "令人不安的", "example": "the thought was disturbing" },
+    { "word": "wander", "ipa": "/ˈwɑːndər/", "pos": "v", "meaning_cn": "游荡,漫步", "example": "wandering near a small town" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般过去时(叙事主干、发生完成的动作)" },
+    { "gp": "gp2", "name": "过去进行时(过去某刻正在进行的背景动作)" },
+    { "gp": "gp3", "name": "when 短促打断(一般过去)" },
+    { "gp": "gp4", "name": "while 两个动作同时进行(过去进行)" },
+    { "gp": "gp5", "name": "一般过去 vs 过去进行 综合辨析" },
+    { "gp": "gp6", "name": "词汇辨析(evidence / trail / oblige)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Last fall, people ___ a mountain lion near the town.\"(叙事主干:已经发生、完成的动作)", "stem_cn": "去年秋天,人们在镇子附近看见了一头美洲狮。", "options": ["spotted", "were spotting", "spot", "have spotted"] },
+    { "gp": "gp1", "stem": "\"The town ___ a careful hunt to find the animal.\"(叙事主干:已经发生、完成的动作)", "stem_cn": "小镇组织了一次谨慎的搜寻来找那只动物。", "options": ["organized", "was organizing", "organizes", "organize"] },
+    { "gp": "gp1", "stem": "\"Some people ___ fresh paw prints near the fence.\"(发生完成的动作,不规则过去式)", "stem_cn": "有些人在栅栏附近发现了新鲜的爪印。", "options": ["found", "were finding", "find", "have found"] },
+    { "gp": "gp1", "stem": "\"In the end, the puma ___ back into the mountains.\"(叙事收尾:发生完成的动作)", "stem_cn": "最后,美洲狮漫步回到了山里。", "options": ["wandered", "was wandering", "wanders", "wander"] },
+    { "gp": "gp2", "stem": "\"One morning, a woman ___ her dog along a quiet trail.\"(当时正在进行的背景动作)", "stem_cn": "一天早上,一位女士正沿着安静的小径遛狗。", "options": ["was walking", "walked", "walks", "has walked"] },
+    { "gp": "gp2", "stem": "\"While the rangers ___ the hills, the cat slipped away.\"(持续的背景动作,复数主体)", "stem_cn": "护林员们正在搜山的时候,那只猫溜走了。", "options": ["were searching", "searched", "are searching", "search"] },
+    { "gp": "gp2", "stem": "\"At that moment, the animal ___ her from under a tree.\"(过去某一刻正在进行的动作)", "stem_cn": "那一刻,那只动物正从树下盯着她。", "options": ["was watching", "watched", "watches", "had watched"] },
+    { "gp": "gp2", "stem": "\"The dog ___ loudly when the woman first saw the cat.\"(当时正在进行的背景动作)", "stem_cn": "女士第一次看见那只猫时,狗正在大声叫。", "options": ["was barking", "barked", "barks", "has barked"] },
+    { "gp": "gp3", "stem": "\"While she was walking her dog, she suddenly ___ the puma.\"(背景持续、被打断时,那个短促动作用一般过去)", "stem_cn": "她正遛狗时,突然看见了美洲狮。", "options": ["spotted", "was spotting", "spots", "had spotted"] },
+    { "gp": "gp3", "stem": "\"When the woman ___ the cat, she froze at once.\"(一看见就……:短促打断的动作用一般过去)", "stem_cn": "女士一看见那只猫,立刻僵住了。", "options": ["saw", "was seeing", "sees", "had been seeing"] },
+    { "gp": "gp3", "stem": "\"The rangers were climbing the hill when they ___ fresh tracks on the path.\"(正在进行时被打断:那个短促动作用一般过去)", "stem_cn": "护林员们正在爬山,这时发现了小路上的新鲜踪迹。", "options": ["found", "were finding", "find", "have found"] },
+    { "gp": "gp4", "stem": "\"While the rangers were searching, the lion ___ in the opposite direction.\"(两个动作同时进行,都用过去进行)", "stem_cn": "护林员们在搜寻时,狮子正朝相反方向走。", "options": ["was moving", "moved", "moves", "has moved"] },
+    { "gp": "gp4", "stem": "\"While the townspeople were sleeping, the cat ___ quietly through the empty streets.\"(两个动作同时进行,都用过去进行)", "stem_cn": "镇上的人都在睡觉时,那只猫正悄悄穿过空荡荡的街道。", "options": ["was walking", "walked", "walks", "had walked"] },
+    { "gp": "gp5", "stem": "\"The evidence ___ day by day until the whole town believed it.\"(一步步完成的叙事动作:一般过去)", "stem_cn": "证据一天天积累,直到全镇都相信了。", "options": ["accumulated", "was accumulating", "accumulates", "accumulate"] },
+    { "gp": "gp5", "stem": "\"She stood still while the animal ___ her.\"(持续的背景动作:过去进行)", "stem_cn": "她一动不动地站着,那只动物一直盯着她。", "options": ["was watching", "watched", "watches", "watch"] },
+    { "gp": "gp6", "stem": "\"There was clear ___ that a big cat was nearby: prints, fur, and tracks.\"(证据用哪个词)", "stem_cn": "有明显的证据表明附近有只大猫:足迹、毛和踪迹。", "options": ["evidence", "weather", "ticket", "furniture"] },
+    { "gp": "gp6", "stem": "\"The rangers followed the ___ of paw prints up the hill.\"(小径、一串痕迹用哪个词)", "stem_cn": "护林员们顺着一串爪印往山上追。", "options": ["trail", "garden", "kitchen", "market"] },
+    { "gp": "gp6", "stem": "\"The danger ___ the town to organize a hunt.\"(使……感到必须做,用哪个词)", "stem_cn": "危险迫使小镇组织了一次搜寻。", "options": ["obliged", "invited", "allowed", "reminded"] }
+  ],
+  "stage6": [
+    { "stem": "美语里这种大猫常叫:", "options": ["mountain lion", "hill-tiger", "snow-cat", "wild-dog"] },
+    { "stem": "美语里\"秋天\"说:", "options": ["fall", "autumn", "harvest-time", "cold-season"] },
+    { "stem": "evidence 的意思是:", "options": ["证据", "天气", "家具", "门票"] },
+    { "stem": "spot(动词)的意思是:", "options": ["认出,发现", "丢失", "出售", "打碎"] },
+    { "stem": "trail 的意思是:", "options": ["小径;一串痕迹", "厨房", "市场", "花园"] },
+    { "stem": "disturbing 的意思是:", "options": ["令人不安的", "令人愉快的", "很普通的", "很便宜的"] }
+  ],
+  "contrast": [
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" },
+    { "us": "flashlight", "uk": "torch", "note_cn": "手电筒;美语 flashlight,英式 torch" },
+    { "us": "backyard", "uk": "back garden", "note_cn": "后院;美语 backyard,英式 back garden" },
+    { "us": "downtown", "uk": "town centre", "note_cn": "市中心;美语 downtown,英式 town centre" }
+  ],
+  "chunks": [
+    { "us": "catch sight of", "ipa": "/kætʃ saɪt əv/", "example1": "She caught sight of the puma under a tree.", "example1_cn": "她瞥见树下有头美洲狮。", "example2": "I caught sight of my friend at the door.", "example2_cn": "我在门口瞥见了我的朋友。" },
+    { "us": "feel obliged to", "ipa": "/fiːl əˈblaɪdʒd tuː/", "example1": "The town felt obliged to act.", "example1_cn": "小镇觉得必须采取行动。", "example2": "I felt obliged to help my neighbor.", "example2_cn": "我觉得自己有义务帮邻居。" },
+    { "us": "cling to", "ipa": "/klɪŋ tuː/", "example1": "Fur was clinging to the fence.", "example1_cn": "毛挂在栅栏上。", "example2": "The child clung to her mother.", "example2_cn": "孩子紧紧抱着妈妈。" },
+    { "us": "in the opposite direction", "ipa": "/ɪn ði ˈɑːpəzɪt dəˈrekʃn/", "example1": "The lion moved in the opposite direction.", "example1_cn": "狮子朝相反方向走。", "example2": "They ran in the opposite direction.", "example2_cn": "他们朝相反方向跑。" }
+  ],
+  "stage7_cloze": {
+    "context": "One morning, while a woman ___1___ her dog, she ___2___ a mountain lion under a tree. She stood still while the animal ___3___ her. Later, the officials ___4___ a careful hunt, but no one could find the cat.",
+    "blanks": [
+      { "blank_no": 1, "options": ["walked", "was walking", "walks", "has walked"], "answer_index": 1 },
+      { "blank_no": 2, "options": ["spotted", "was spotting", "spots", "had spotted"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["watched", "was watching", "watches", "watch"], "answer_index": 1 },
+      { "blank_no": 4, "options": ["organized", "were organizing", "organize", "have organized"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What did the woman see while walking her dog?", "options": ["A mountain lion under a tree", "A brown bear in a cave", "A wolf on the road", "A deer in a field"] },
+    { "stem": "What did people find as evidence?", "options": ["Fresh paw prints and fur", "Broken windows", "Lost keys", "Empty cans"] },
+    { "stem": "How did the story end?", "options": ["The puma wandered back into the mountains", "The puma was caught in a net", "The puma attacked a ranger", "The puma stayed in the town"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我正遛狗时看见了那只猫\"(正在进行的背景 + 短促打断的动作):", "options": ["I was walking my dog when I saw the cat.", "I walked my dog when I was seeing the cat.", "I am walking my dog when I saw the cat.", "I was walking my dog when I was seeing the cat."] },
+    { "stem": "你想说\"护林员搜山时,狮子朝相反方向走\"(两个动作同时进行):", "options": ["While the rangers were searching, the lion was moving away.", "While the rangers searched, the lion moved away and back.", "While the rangers are searching, the lion was moving away.", "While the rangers were searching, the lion moves away."] },
+    { "stem": "你想说\"她一看见那只猫就僵住了\"(短促打断用一般过去):", "options": ["When she saw the cat, she froze.", "When she was seeing the cat, she froze.", "When she sees the cat, she froze.", "When she saw the cat, she was freezing."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "puma 的意思是:", "options": ["美洲狮", "棕熊", "灰狼", "野马"] },
+    { "kind": "vocab", "stem": "disturbing 的意思是:", "options": ["令人不安的", "令人愉快的", "很普通的", "很便宜的"] },
+    { "kind": "grammar", "stem": "\"While she ___ her dog, she saw the cat.\"(正在进行的背景动作)", "stem_cn": "她正遛狗时看见了那只猫。", "options": ["was walking", "walked", "walks", "has walked"] },
+    { "kind": "grammar", "stem": "\"When the woman saw the cat, she ___ at once.\"(短促打断:一般过去)", "stem_cn": "女士一看见那只猫就立刻僵住了。", "options": ["froze", "was freezing", "freezes", "has frozen"] },
+    { "kind": "scenario", "stem": "\"feel obliged to\" 的意思是:", "options": ["觉得必须(做)", "乐意(做)", "拒绝(做)", "忘记(做)"] },
+    { "kind": "scenario", "stem": "\"in the opposite direction\" 的意思是:", "options": ["朝相反方向", "朝同一方向", "在半路上", "在原地"] },
+    { "kind": "reading", "stem": "Where did the woman first spot the mountain lion?", "options": ["Resting under a pine tree", "Inside a barn", "On a rooftop", "In a river"], "passage": true },
+    { "kind": "reading", "stem": "Why did the town organize a hunt?", "options": ["A dangerous cat was near their homes", "They wanted to hold a festival", "They had lost a pet", "They were simply bored"], "passage": true },
+    { "kind": "listening", "stem": "What evidence did people find?", "options": ["Paw prints and fur", "Only footprints in snow", "Nothing at all", "A clear photograph"], "audio": true },
+    { "kind": "listening", "stem": "What happened to the puma in the end?", "options": ["It went back into the mountains", "It was captured by rangers", "It was never seen again with no trace", "It hurt a person"], "audio": true }
+  ]
+}

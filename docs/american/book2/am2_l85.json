@@ -1,0 +1,130 @@
+{
+  "id": "am2_l85",
+  "unit_no": 11,
+  "lesson_no": 85,
+  "title_en": "Never Too Old to Learn",
+  "title_cn": "活到老,学到老",
+  "grammar_focus": "复习 KS13/37/61 将来的各种时态(收官包·干净课照搬美语化):一般将来时 will do、将来进行时 will be doing、将来完成时 will have done、将来完成进行时 will have been doing 的构成与辨析,以及 by/in/at this time 等时间标志的搭配",
+  "scene": "下个月,我七十岁的爷爷就要上大学了。到明年这个时候,他就读完一年级了。“到我下个生日,我就整整学满一年了,”他自豪地说。开学那天,大家都会关注他表现如何。“有些人会笑话我,”他坦言,“但我不介意。五年后,我就能拿到学位了。”他会和比自己小六十岁的同学坐在同一间教室里。“学新东西,永远不嫌老,”他对我说。等他毕业时,他会证明所有人都想错了。我觉得,他会成为这所大学有史以来最鼓舞人心的学生。",
+  "grammar_card": {
+    "title": "复习 KS13/37/61 将来的各种时态",
+    "intro": "本课把“将来”的四种时态放在一起复习:①一般将来 will do——单纯说将来会怎样(Some people will laugh);②将来进行 will be doing——将来某个时刻正在进行(This time tomorrow, he will be sitting in class);③将来完成 will have done——到将来某个时间点之前已经完成(By next year, he will have finished his first year);④将来完成进行 will have been doing——到将来某时为止一直持续(By my next birthday, I will have been studying for a year)。看时间标志选形式:by + 时间点 常配将来完成,at/this time + 时间点 常配将来进行,in + 一段时间 表“……之后”。",
+    "table": {
+      "headers": ["时态", "例子"],
+      "rows": [
+        ["一般将来 will do", "Some people will laugh, but he doesn't mind."],
+        ["将来进行 will be doing", "This time tomorrow, he will be sitting in class."],
+        ["将来完成 will have done", "By next year, he will have finished his first year."],
+        ["将来完成进行 will have been doing", "By his birthday, he will have been studying for a year."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语“成绩、分数”说 grade(英式 mark);“数学”说 math(英式 maths)。本课已按美语写。", "mark": "grade / math" },
+      { "rule": "by + 时间点 → 将来完成(之前完成);at/this time + 时间点 → 将来进行(那一刻正在做);in + 一段时间 → “……之后”。", "mark": "时间标志" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is the grandfather going to do next month?",
+    "options": ["Start college at seventy", "Retire from his job", "Move to another city", "Teach a math class"],
+    "answer_index": 0
+  },
+  "passage": "Next month, my grandfather will be starting college at the age of seventy. By this time next year, he will have finished his first year. \"By my next birthday, I will have been studying for a whole year,\" he says proudly. On the first day, everyone will be watching to see how he does. \"Some people will laugh,\" he admits, \"but I don't mind. In five years, I will have earned my degree.\" He will be sitting in class with students sixty years younger. \"You will never be too old to learn something new,\" he tells me. By the time he graduates, he will have proved everyone wrong. I think he will be the most inspiring student the college has ever seen.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Next month, my grandfather will be starting college at the age of seventy. By this time next year, he will have finished his first year.", "text_cn": "下个月,我七十岁的爷爷就要上大学了。到明年这个时候,他就读完一年级了。" },
+    { "seq": 2, "speaker": null, "text_en": "\"By my next birthday, I will have been studying for a whole year,\" he says proudly. On the first day, everyone will be watching to see how he does.", "text_cn": "“到我下个生日,我就整整学满一年了,”他自豪地说。开学那天,大家都会关注他表现如何。" },
+    { "seq": 3, "speaker": null, "text_en": "\"Some people will laugh,\" he admits, \"but I don't mind. In five years, I will have earned my degree.\"", "text_cn": "“有些人会笑话我,”他坦言,“但我不介意。五年后,我就能拿到学位了。”" },
+    { "seq": 4, "speaker": null, "text_en": "He will be sitting in class with students sixty years younger. \"You will never be too old to learn something new,\" he tells me.", "text_cn": "他会和比自己小六十岁的同学坐在同一间教室里。“学新东西,永远不嫌老,”他对我说。" },
+    { "seq": 5, "speaker": null, "text_en": "By the time he graduates, he will have proved everyone wrong. I think he will be the most inspiring student the college has ever seen.", "text_cn": "等他毕业时,他会证明所有人都想错了。我觉得,他会成为这所大学有史以来最鼓舞人心的学生。" }
+  ],
+  "words": [
+    { "word": "college", "ipa": "/ˈkɑːlɪdʒ/", "pos": "n", "meaning_cn": "大学,学院", "example": "starting college at the age of seventy" },
+    { "word": "degree", "ipa": "/dɪˈɡriː/", "pos": "n", "meaning_cn": "学位", "example": "I will have earned my degree" },
+    { "word": "graduate", "ipa": "/ˈɡrædʒueɪt/", "pos": "v", "meaning_cn": "毕业", "example": "by the time he graduates" },
+    { "word": "admit", "ipa": "/ədˈmɪt/", "pos": "v", "meaning_cn": "承认,坦言", "example": "\"Some people will laugh,\" he admits" },
+    { "word": "proudly", "ipa": "/ˈpraʊdli/", "pos": "adv", "meaning_cn": "自豪地", "example": "he says proudly" },
+    { "word": "inspiring", "ipa": "/ɪnˈspaɪrɪŋ/", "pos": "adj", "meaning_cn": "鼓舞人心的", "example": "the most inspiring student" },
+    { "word": "prove", "ipa": "/pruːv/", "pos": "v", "meaning_cn": "证明", "example": "he will have proved everyone wrong" },
+    { "word": "earn", "ipa": "/ɜːrn/", "pos": "v", "meaning_cn": "获得,挣得", "example": "I will have earned my degree" },
+    { "word": "mind", "ipa": "/maɪnd/", "pos": "v", "meaning_cn": "介意", "example": "but I don't mind" },
+    { "word": "retire", "ipa": "/rɪˈtaɪr/", "pos": "v", "meaning_cn": "退休", "example": "Most people retire and rest, but he wants to study" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般将来时 will do(单纯说将来)" },
+    { "gp": "gp2", "name": "将来进行时 will be doing(将来某刻正在进行)" },
+    { "gp": "gp3", "name": "将来完成时 will have done(将来某时前已完成)" },
+    { "gp": "gp4", "name": "将来完成进行时 will have been doing(到将来某时持续)" },
+    { "gp": "gp5", "name": "时间标志与将来时的搭配(by / at this time / in)" },
+    { "gp": "gp6", "name": "词汇辨析(degree / admit / inspiring)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Some people ___,\" he admits, \"but I don't mind.\"(单纯说将来会怎样)", "stem_cn": "“有些人会笑话我,”他坦言,“但我不介意。”", "options": ["will laugh", "are laughing", "laughed", "have laughed"] },
+    { "gp": "gp1", "stem": "\"You ___ too old to learn something new,\" he tells me.(一般将来的否定)", "stem_cn": "“学新东西,永远不嫌老,”他对我说。", "options": ["will never be", "are never", "were never", "have never been"] },
+    { "gp": "gp1", "stem": "\"I think he ___ the most inspiring student the college has seen.\"(单纯对将来的判断)", "stem_cn": "我觉得他会是这所大学最鼓舞人心的学生。", "options": ["will be", "is being", "was", "has been"] },
+    { "gp": "gp2", "stem": "\"At this time next month, grandfather ___ his first college classes.\"(将来某刻正在进行)", "stem_cn": "下个月的这个时候,爷爷正在上他的第一批大学课程。", "options": ["will be taking", "will take", "is taking", "took"] },
+    { "gp": "gp2", "stem": "\"This time tomorrow, he ___ in class with younger students.\"(将来某刻正在进行)", "stem_cn": "明天这个时候,他正和更年轻的同学一起坐在教室里。", "options": ["will be sitting", "will sit", "is sitting", "sat"] },
+    { "gp": "gp2", "stem": "\"Everyone ___ closely as he walks in on the first day.\"(将来某刻正在进行)", "stem_cn": "开学第一天他走进来时,大家都在密切关注。", "options": ["will be watching", "watches", "watched", "has watched"] },
+    { "gp": "gp3", "stem": "\"By this time next year, he ___ his first year.\"(将来某时点之前已完成)", "stem_cn": "到明年这个时候,他就读完一年级了。", "options": ["will have finished", "will finish", "has finished", "finished"] },
+    { "gp": "gp3", "stem": "\"In five years, I ___ my degree,\" he said.(将来某时点之前已完成)", "stem_cn": "“五年后,我就拿到学位了,”他说。", "options": ["will have earned", "will earn", "have earned", "earned"] },
+    { "gp": "gp3", "stem": "\"By the time he graduates, he ___ everyone wrong.\"(将来某时点之前已完成)", "stem_cn": "等他毕业时,他就证明了所有人都想错了。", "options": ["will have proved", "will prove", "has proved", "proved"] },
+    { "gp": "gp4", "stem": "\"By my next birthday, I ___ for a whole year,\" he says.(到将来某时为止一直持续)", "stem_cn": "“到我下个生日,我就整整学满一年了,”他说。", "options": ["will have been studying", "will study", "have been studying", "studied"] },
+    { "gp": "gp4", "stem": "\"By June, he ___ English every day for six months.\"(到将来某时为止一直持续)", "stem_cn": "到六月,他就每天学英语学满六个月了。", "options": ["will have been learning", "will learn", "has been learning", "learned"] },
+    { "gp": "gp4", "stem": "\"By the time the course ends, he ___ hard for a full year.\"(到将来某时为止一直持续)", "stem_cn": "到课程结束时,他就刻苦学习满整整一年了。", "options": ["will have been working", "will work", "has worked", "worked"] },
+    { "gp": "gp5", "stem": "\"___ five years, I will have earned my degree.\"(表示“……之后”用哪个词)", "stem_cn": "五年后,我就拿到学位了。", "options": ["In", "By", "Since", "For"] },
+    { "gp": "gp5", "stem": "\"___ the time he graduates, he will have proved everyone wrong.\"(引出“将来某时点”的词)", "stem_cn": "等他毕业时,他就证明了所有人都想错了。", "options": ["By", "In", "On", "For"] },
+    { "gp": "gp5", "stem": "\"At this time next month, grandfather ___ college.\"(与“at this time next month”搭配)", "stem_cn": "下个月这个时候,爷爷正在上大学。", "options": ["will be starting", "will have started", "starts", "started"] },
+    { "gp": "gp6", "stem": "\"He is going back to school to earn a college ___.\"(学位用哪个词)", "stem_cn": "他重返校园去攻读大学学位。", "options": ["degree", "ticket", "prize", "seat"] },
+    { "gp": "gp6", "stem": "\"'Some people will laugh,' he ___, 'but I don't mind.'\"(坦言、承认用哪个词)", "stem_cn": "“有些人会笑话我,”他坦言,“但我不介意。”", "options": ["admits", "refuses", "forgets", "hides"] },
+    { "gp": "gp6", "stem": "\"He will be the most ___ student the college has seen.\"(鼓舞人心的用哪个词)", "stem_cn": "他会是这所大学见过的最鼓舞人心的学生。", "options": ["inspiring", "boring", "lazy", "angry"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"成绩、分数\"说:", "options": ["grade", "mark", "point", "note"] },
+    { "stem": "美语里\"数学\"说:", "options": ["math", "maths", "number", "count"] },
+    { "stem": "degree 的意思是:", "options": ["学位", "门票", "奖品", "座位"] },
+    { "stem": "admit 的意思是:", "options": ["承认,坦言", "拒绝", "忘记", "隐藏"] },
+    { "stem": "inspiring 的意思是:", "options": ["鼓舞人心的", "无聊的", "懒惰的", "生气的"] },
+    { "stem": "graduate 的意思是:", "options": ["毕业", "入学", "退学", "逃学"] }
+  ],
+  "contrast": [
+    { "us": "grade", "uk": "mark", "note_cn": "成绩、分数;美语 grade,英式 mark" },
+    { "us": "math", "uk": "maths", "note_cn": "数学;美语 math,英式 maths" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天(秋季学期);美语 fall,英式 autumn" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" }
+  ],
+  "chunks": [
+    { "us": "go to college", "ipa": "/ɡoʊ tu ˈkɑːlɪdʒ/", "example1": "He is going to college at the age of seventy.", "example1_cn": "他七十岁时去上大学。", "example2": "She hopes to go to college next fall.", "example2_cn": "她希望明年秋天上大学。" },
+    { "us": "at the age of", "ipa": "/ət ði eɪdʒ əv/", "example1": "He is starting college at the age of seventy.", "example1_cn": "他七十岁开始上大学。", "example2": "She learned to swim at the age of five.", "example2_cn": "她五岁时学会了游泳。" },
+    { "us": "too old to", "ipa": "/tuː oʊld tu/", "example1": "You will never be too old to learn.", "example1_cn": "学习永远不嫌老。", "example2": "He is never too old to try new things.", "example2_cn": "他学新事物从不嫌老。" },
+    { "us": "earn a degree", "ipa": "/ɜːrn ə dɪˈɡriː/", "example1": "In five years, he will have earned his degree.", "example1_cn": "五年后,他就拿到学位了。", "example2": "She worked hard to earn a degree in science.", "example2_cn": "她努力攻读科学学位。" }
+  ],
+  "stage7_cloze": {
+    "context": "Next month, grandfather ___1___ college at seventy. By this time next year, he ___2___ his first year. In five years, he ___3___ his degree. He ___4___ never be too old to learn.",
+    "blanks": [
+      { "blank_no": 1, "options": ["will be starting", "will have started", "starts", "started"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["will have finished", "will finish", "has finished", "finished"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["will have earned", "will earn", "has earned", "earned"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["will", "is", "was", "has"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How old is the grandfather when he starts college?", "options": ["Seventy", "Seventeen", "Sixty", "Eighty"] },
+    { "stem": "What does he say some people will do?", "options": ["Laugh at him", "Help him study", "Go with him", "Stop him"] },
+    { "stem": "How does the writer describe the grandfather?", "options": ["The most inspiring student the college has seen", "The oldest teacher in town", "A lazy student", "A shy young boy"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"到明年这时候,他就读完一年级了\"(将来某时前已完成,用 will have done):", "options": ["By this time next year, he will have finished his first year.", "By this time next year, he will finish his first year.", "By this time next year, he finishes his first year.", "By this time next year, he has finished his first year."] },
+    { "stem": "你想说\"明天这时候,他正坐在教室里\"(将来某刻正在进行,用 will be doing):", "options": ["This time tomorrow, he will be sitting in class.", "This time tomorrow, he will sit in class.", "This time tomorrow, he sits in class.", "This time tomorrow, he is sitting in class."] },
+    { "stem": "你想说\"到下次生日,我就学满一整年了\"(到将来某时持续,用 will have been doing):", "options": ["By my next birthday, I will have been studying for a whole year.", "By my next birthday, I will study for a whole year.", "By my next birthday, I have been studying for a whole year.", "By my next birthday, I am studying for a whole year."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "degree 的意思是:", "options": ["学位", "门票", "奖品", "座位"] },
+    { "kind": "vocab", "stem": "admit 的意思是:", "options": ["承认,坦言", "拒绝", "忘记", "出售"] },
+    { "kind": "grammar", "stem": "\"By this time next year, he ___ his first year.\"(将来某时前已完成)", "stem_cn": "到明年这个时候,他就读完一年级了。", "options": ["will have finished", "will finish", "has finished", "finished"] },
+    { "kind": "grammar", "stem": "\"This time tomorrow, he ___ in class.\"(将来某刻正在进行)", "stem_cn": "明天这个时候,他正坐在教室里。", "options": ["will be sitting", "will sit", "is sitting", "sat"] },
+    { "kind": "scenario", "stem": "\"too old to learn\" 的意思是:", "options": ["年纪太大而学不了新东西", "老了以后才学习", "学得年纪太大", "老学生"] },
+    { "kind": "scenario", "stem": "\"earn a degree\" 的意思是:", "options": ["取得学位", "赚一笔钱", "得一个名次", "拿一张票"] },
+    { "kind": "reading", "stem": "What is the grandfather going to do next month?", "options": ["Start college at seventy", "Retire and rest", "Move to a new town", "Teach a class"], "passage": true },
+    { "kind": "reading", "stem": "In five years, what will the grandfather have earned?", "options": ["His college degree", "A lot of money", "A gold medal", "A new car"], "passage": true },
+    { "kind": "listening", "stem": "What does the grandfather say some people will do?", "options": ["Laugh at him", "Help him", "Join him", "Stop him"], "audio": true },
+    { "kind": "listening", "stem": "How is the grandfather described at the end?", "options": ["The most inspiring student", "The laziest student", "A very shy boy", "An angry old man"], "audio": true }
+  ]
+}

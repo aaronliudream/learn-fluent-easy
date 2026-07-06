@@ -678,3 +678,12 @@
 - **泄漏防护**:be going to 型题干扰项全用错形(is going/will going to/be going to 缺件),保证 options[0] 唯一合法;中文提示不含答案词(计划已定/有迹象/临时决定,不写 be going to)。
 - **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit11.sql(L81-84 = 176);已勾合集 checkbox。
 - **待裁决**:无。
+
+═══════════════════════════════════════
+## L85《Never Too Old to Learn 活到老学到老》· U11 · 收官包·干净课美语化 · 将来各时态(KS13/37/61)
+- **来源**:收官包(Aaron 2026-07-05);原课干净(老人上学温情),照搬美语化,KS13/37/61 将来时考点原样。
+- **考点**:一般将来 will do / 将来进行 will be doing / 将来完成 will have done / 将来完成进行 will have been doing / by·in·at this time 时间标志搭配 / 词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:college, degree, graduate, admit, proudly, inspiring, prove, earn, mind, retire。
+- **关6**:美语对照 grade(成绩)/math(数学) + 4 词义(degree/admit/inspiring/graduate)。contrast: grade↔mark / math↔maths / fall↔autumn / vacation↔holiday。chunks: go to college / at the age of / too old to / earn a degree。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit11.sql(L81-85 = 220);已勾收官包 checkbox。
+- **待裁决**:无。

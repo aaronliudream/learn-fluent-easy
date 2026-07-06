@@ -278,6 +278,14 @@
 - 词12全收(volcano/active/Kivu/Congo/Kituro/erupt/violently/manage/brilliant/liquid/escape/alive)。关6美英=center/centre+meter/metre+liter/litre+theater/theatre(-er/-re 拼写族);chunks=set up/just in time/spend one's lifetime doing/risk one's life。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L67=132**)。⏭️ L68。
 
+## ✅ U9 L68《Persistent》(甩不掉的人)· 🟢全绿 · 教材 Unit 3
+- ⚠️ content-filter 第5次误拦(L55/57/62/66/68);触发=课文"躲人/甩不掉黏人熟人"(avoid/following)联想。**本课我实读源 doc347-350 未被拦**;Aaron 净化包随后到,**无重大内容改动**(仅措辞中性化=社交喜剧),已采其 sanctioned 课文+10词表。
+- 主考(源 doc348-349 = Key structures a-d)= **KS20+KS44 动名词 -ing**:动词+doing(avoid/enjoy/deny/finish)、结构+doing(It's no use/not worth/be busy/prevent from)、动名词逻辑主语(mind my doing)、感官动词 see/hear/smell+doing、go/come+doing。反义疑问句(Note 7)辅考。**无独立 SD 页**,KS 本身覆盖全部 -ing 用法。
+- 裁决:gp1 动词+doing(4)+ gp2 结构+doing(4)+ gp3 逻辑主语(2)+ gp4 感官动词+doing(3)+ gp5 go/come+doing(3)+ gp6 反义疑问(2)=18。净化包只列 G1-G5,我按源补回感官动词/go-come(真 KS 内容,防欠覆盖)。全运用题,元语法定义题=0。
+- ⚠️ 两坑复现:①反义疑问题括号"前否定→后肯定"含箭头=leak[a]红→改"前面否定,后面就用肯定";②s9解释"逻辑主语"含 banned"主语"→改"my 表示是'我'要做"。均清零。
+- 词10(官方3:persistent/avoid/insist + 补7:pretend/wave/fancy/wonder/mind/dentist/waiting room)。关6美英=traveling/travelling+canceling/cancelling+colored/coloured+labeled/labelled(-l- 单双写族);chunks=it's no use doing/would you mind doing/be busy doing/Fancy meeting you here。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L68=176**)。⏭️ L69。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

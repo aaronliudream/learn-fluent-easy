@@ -1,0 +1,132 @@
+{
+  "id": "am2_l78",
+  "unit_no": 10,
+  "lesson_no": 78,
+  "title_en": "The Last Game",
+  "title_cn": "最后一局",
+  "grammar_focus": "复习 KS6/30/54 冠词 a/an/the 与零冠词(收官包·方案B换情节:戒手机游戏):a/an 泛指首次提及、the 特指、零冠词(泛指复数/不可数/抽象名词)、a→the 指代链的辨析",
+  "scene": "读完一篇讲屏幕时间的文章后,我下决心戒掉手机游戏。我玩了“最后一局”让自己平静下来,然后整整一周没碰游戏。那一周家人可遭了罪——我脾气暴躁、食欲惊人,一副戒瘾的样子。朋友约我玩,我都努力拒绝。“你有英雄般的意志力,”姐姐打趣道。可到了星期天,我拿起手机“只想看看时间”,一小时后就已经沉迷在一局新游戏里了。所谓“最后一局”,也就那样了。",
+  "grammar_card": {
+    "title": "复习 KS6/30/54 冠词 a / an / the 与零冠词",
+    "intro": "冠词看似小,却处处要选对。本课集中复习:①a / an——泛指,第一次提到、表示“一个”,元音开头的词前用 an(an article、an effort),辅音开头用 a(a game、a hero);②the——特指,上文提过、独一无二、双方都清楚的那一个(the last one、the phone);③零冠词——泛指的复数、不可数或抽象名词前不加冠词(games、willpower);④指代链——第一次 a game,再次提到同一个用 the game。",
+    "table": {
+      "headers": ["冠词", "什么时候用", "例子"],
+      "rows": [
+        ["a", "泛指“一个”,辅音开头词前", "a game / a habit / a hero"],
+        ["an", "泛指“一个”,元音开头词前", "an article / an effort / an appetite"],
+        ["the", "特指:提过的、唯一的、都知道的", "the last one / the phone / the week"],
+        ["零冠词", "泛指复数 / 不可数 / 抽象名词", "games / willpower / concentration"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "用 a 还是 an,看后面词的读音:元音音开头用 an(an article、an effort、an enormous appetite),辅音音开头用 a(a game、a hero)。", "mark": "a / an" },
+      { "rule": "美语“手机”常说 cell phone(英式 mobile phone);“电影”说 movie(英式 film)。本课已按美语写。", "mark": "cell phone / movie" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What did the narrator decide to give up?",
+    "options": ["Games on the phone", "Coffee", "Movies", "Candy"],
+    "answer_index": 0
+  },
+  "passage": "After reading an article about screen time, I made a big decision. I played one last game on my phone to calm my nerves. I played that last game with concentration and pleasure — I was sure it would be the last one. For a whole week, I did not touch a single game. During the week, my family suffered terribly. I had all the usual symptoms of someone giving up a habit: a bad temper and an enormous appetite. My friends kept offering to play games with me, but I made an effort to say no. \"You have the willpower of a hero,\" my sister joked. Then, on Sunday, I picked up the phone \"just to check the time.\" An hour later, I was deep in a new game. So much for the last one!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "After reading an article about screen time, I made a big decision. I played one last game on my phone to calm my nerves.", "text_cn": "读完一篇讲屏幕时间的文章后,我做了一个重大决定。我在手机上玩了最后一局游戏来让自己平静下来。" },
+    { "seq": 2, "speaker": null, "text_en": "I played that last game with concentration and pleasure — I was sure it would be the last one. For a whole week, I did not touch a single game.", "text_cn": "我全神贯注、津津有味地玩了那最后一局——我确信它会是最后一局。整整一周,我一局游戏都没碰。" },
+    { "seq": 3, "speaker": null, "text_en": "During the week, my family suffered terribly. I had all the usual symptoms of someone giving up a habit: a bad temper and an enormous appetite.", "text_cn": "那一周里,我的家人可遭了罪。我有着戒掉一个习惯的人所有的常见症状:脾气暴躁、食欲惊人。" },
+    { "seq": 4, "speaker": null, "text_en": "My friends kept offering to play games with me, but I made an effort to say no. \"You have the willpower of a hero,\" my sister joked.", "text_cn": "朋友们不停地邀我一起玩游戏,但我努力克制着说不。“你有英雄般的意志力,”我姐姐打趣道。" },
+    { "seq": 5, "speaker": null, "text_en": "Then, on Sunday, I picked up the phone \"just to check the time.\" An hour later, I was deep in a new game. So much for the last one!", "text_cn": "然后,星期天,我拿起手机“只是想看看时间”。一小时后,我已经沉迷在一局新游戏里了。所谓的“最后一局”,也就那样了!" }
+  ],
+  "words": [
+    { "word": "article", "ipa": "/ˈɑːrtɪkl/", "pos": "n", "meaning_cn": "文章", "example": "an article about screen time" },
+    { "word": "entitle", "ipa": "/ɪnˈtaɪtl/", "pos": "v", "meaning_cn": "以…为题,给…命名", "example": "an article entitled \"Screen Time\"" },
+    { "word": "promise", "ipa": "/ˈprɑːmɪs/", "pos": "n/v", "meaning_cn": "承诺,保证", "example": "I made a promise to stop playing." },
+    { "word": "calm", "ipa": "/kɑːm/", "pos": "v/adj", "meaning_cn": "使平静;平静的", "example": "to calm my nerves" },
+    { "word": "nerve", "ipa": "/nɜːrv/", "pos": "n", "meaning_cn": "神经;镇定", "example": "to calm my nerves" },
+    { "word": "concentration", "ipa": "/ˌkɑːnsnˈtreɪʃn/", "pos": "n", "meaning_cn": "专注,专心", "example": "played with concentration" },
+    { "word": "symptom", "ipa": "/ˈsɪmptəm/", "pos": "n", "meaning_cn": "症状,表现", "example": "the usual symptoms of giving up a habit" },
+    { "word": "temper", "ipa": "/ˈtempər/", "pos": "n", "meaning_cn": "脾气", "example": "a bad temper" },
+    { "word": "appetite", "ipa": "/ˈæpɪtaɪt/", "pos": "n", "meaning_cn": "食欲,胃口", "example": "an enormous appetite" },
+    { "word": "effort", "ipa": "/ˈefərt/", "pos": "n", "meaning_cn": "努力", "example": "I made an effort to say no." },
+    { "word": "willpower", "ipa": "/ˈwɪlpaʊər/", "pos": "n", "meaning_cn": "意志力", "example": "the willpower of a hero" },
+    { "word": "habit", "ipa": "/ˈhæbɪt/", "pos": "n", "meaning_cn": "习惯", "example": "giving up a habit" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "a / an(泛指首次提及,元音前用 an)" },
+    { "gp": "gp2", "name": "the(特指:提过的/唯一的/都知道的)" },
+    { "gp": "gp3", "name": "零冠词(泛指复数/不可数/抽象名词)" },
+    { "gp": "gp4", "name": "a → the 指代链(再次提及同一个)" },
+    { "gp": "gp5", "name": "冠词综合辨析(a/an/the/零)" },
+    { "gp": "gp6", "name": "词汇辨析(promise / willpower / habit)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"After reading ___ article about screen time, I made a big decision.\"(泛指:首次提及、以元音开头的词前)", "stem_cn": "读完一篇讲屏幕时间的文章后,我做了一个重大决定。", "options": ["an", "a", "the", "不填"] },
+    { "gp": "gp1", "stem": "\"I made ___ big decision.\"(泛指:第一次提到、表示一个)", "stem_cn": "我做了一个重大决定。", "options": ["a", "an", "the", "不填"] },
+    { "gp": "gp1", "stem": "\"It was ___ habit I really wanted to break.\"(泛指:表示一个)", "stem_cn": "那是一个我很想改掉的习惯。", "options": ["a", "an", "the", "不填"] },
+    { "gp": "gp1", "stem": "\"My sister called me ___ hero for trying.\"(泛指:表示一个,辅音开头的词前)", "stem_cn": "我姐姐因为我肯尝试而叫我英雄。", "options": ["a", "an", "the", "不填"] },
+    { "gp": "gp2", "stem": "\"I was sure it would be ___ last one.\"(特指:独一无二的那一个)", "stem_cn": "我确信它会是最后一局。", "options": ["the", "a", "an", "不填"] },
+    { "gp": "gp2", "stem": "\"During ___ week, my family suffered terribly.\"(特指:上文提到过的那一周)", "stem_cn": "那一周里,我的家人可遭了罪。", "options": ["the", "a", "an", "不填"] },
+    { "gp": "gp2", "stem": "\"On Sunday, I picked up ___ phone again.\"(特指:双方都清楚的那部手机)", "stem_cn": "星期天,我又拿起了手机。", "options": ["the", "a", "an", "不填"] },
+    { "gp": "gp2", "stem": "\"I had all ___ usual symptoms of giving up a habit.\"(特指:那些惯常的症状)", "stem_cn": "我有着戒掉习惯的人所有的常见症状。", "options": ["the", "a", "an", "不填"] },
+    { "gp": "gp3", "stem": "\"I decided to give up ___ games for a week.\"(泛指复数,不加冠词)", "stem_cn": "我决定戒掉游戏一个星期。", "options": ["不填", "a", "an", "the"] },
+    { "gp": "gp3", "stem": "\"___ willpower is very hard to keep.\"(抽象名词,不加冠词)", "stem_cn": "意志力很难坚持。", "options": ["不填", "a", "an", "the"] },
+    { "gp": "gp3", "stem": "\"My friends kept offering to play ___ games with me.\"(泛指复数,不加冠词)", "stem_cn": "朋友们不停地邀我一起玩游戏。", "options": ["不填", "a", "an", "the"] },
+    { "gp": "gp4", "stem": "\"An hour later, I started ___ new game on my phone.\"(第一次提及、表示一个)", "stem_cn": "一小时后,我在手机上开了一局新游戏。", "options": ["a", "an", "the", "不填"] },
+    { "gp": "gp4", "stem": "\"I started a new game, and soon I was deep in ___ game.\"(再次提及同一个,特指)", "stem_cn": "我开了一局新游戏,很快就沉浸在那局游戏里了。", "options": ["the", "a", "an", "不填"] },
+    { "gp": "gp5", "stem": "\"I made ___ effort to say no.\"(表示一个、以元音开头的词前)", "stem_cn": "我努力克制着说不。", "options": ["an", "a", "the", "不填"] },
+    { "gp": "gp5", "stem": "\"So much for ___ last one!\"(特指:那唯一的最后一局)", "stem_cn": "所谓的最后一局,也就那样了!", "options": ["the", "a", "an", "不填"] },
+    { "gp": "gp6", "stem": "\"I made a ___ to give up games.\"(承诺、决心用哪个词)", "stem_cn": "我许下承诺要戒掉游戏。", "options": ["promise", "ticket", "window", "ladder"] },
+    { "gp": "gp6", "stem": "\"___ is the strength to keep going when it is hard.\"(意志力用哪个词)", "stem_cn": "意志力是在艰难时坚持下去的力量。", "options": ["Willpower", "Weather", "Furniture", "Luggage"] },
+    { "gp": "gp6", "stem": "\"Giving up a bad ___ is never easy.\"(习惯用哪个词)", "stem_cn": "戒掉一个坏习惯从来都不容易。", "options": ["habit", "corner", "mirror", "ticket"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"手机\"更常说:", "options": ["cell phone", "mobile", "handy", "phone-box"] },
+    { "stem": "美语里\"电影\"说:", "options": ["movie", "film", "picture-show", "cinema-piece"] },
+    { "stem": "willpower 的意思是:", "options": ["意志力", "天气", "家具", "行李"] },
+    { "stem": "habit 的意思是:", "options": ["习惯", "角落", "镜子", "门票"] },
+    { "stem": "appetite 的意思是:", "options": ["食欲,胃口", "脾气", "症状", "努力"] },
+    { "stem": "promise 的意思是:", "options": ["承诺", "文章", "神经", "专注"] }
+  ],
+  "contrast": [
+    { "us": "cell phone", "uk": "mobile phone", "note_cn": "手机;美语 cell phone,英式 mobile phone" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" }
+  ],
+  "chunks": [
+    { "us": "give up", "ipa": "/ɡɪv ʌp/", "example1": "I decided to give up games.", "example1_cn": "我决定戒掉游戏。", "example2": "She gave up coffee last year.", "example2_cn": "她去年戒了咖啡。" },
+    { "us": "make a promise", "ipa": "/meɪk ə ˈprɑːmɪs/", "example1": "I made a promise to stop playing.", "example1_cn": "我许下承诺不再玩了。", "example2": "He made a promise and kept it.", "example2_cn": "他许下承诺并做到了。" },
+    { "us": "make an effort", "ipa": "/meɪk ən ˈefərt/", "example1": "I made an effort to say no.", "example1_cn": "我努力克制着说不。", "example2": "Please make an effort to be on time.", "example2_cn": "请努力做到准时。" },
+    { "us": "so much for", "ipa": "/soʊ mʌtʃ fɔːr/", "example1": "So much for the last one!", "example1_cn": "所谓的最后一局,也就那样了!", "example2": "So much for my early night.", "example2_cn": "我那个早睡的打算,也就那样了。" }
+  ],
+  "stage7_cloze": {
+    "context": "After reading ___1___ article about screen time, I made ___2___ big decision. I was sure it would be ___3___ last game I played. For ___4___ whole week, I did not touch a single game.",
+    "blanks": [
+      { "blank_no": 1, "options": ["a", "an", "the", "不填"], "answer_index": 1 },
+      { "blank_no": 2, "options": ["a", "an", "the", "不填"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["a", "an", "the", "不填"], "answer_index": 2 },
+      { "blank_no": 4, "options": ["a", "an", "the", "不填"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What did the narrator decide to give up?", "options": ["Playing games on the phone", "Drinking coffee", "Watching movies", "Eating snacks"] },
+    { "stem": "How long did the narrator last without games?", "options": ["One week", "One month", "One day", "One year"] },
+    { "stem": "What happened on Sunday?", "options": ["The narrator picked up the phone and started a new game", "The narrator threw away the phone", "The narrator won a prize", "The narrator read another article"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我读了一篇文章\"(首次提及、元音开头词前该用哪个冠词):", "options": ["I read an article.", "I read a article.", "I read the article.", "I read article."] },
+    { "stem": "你想说\"那是最后一局\"(独一无二、特指该用哪个冠词):", "options": ["It was the last one.", "It was a last one.", "It was last one.", "It was an last one."] },
+    { "stem": "你想说\"我戒掉了打游戏\"(泛指复数、不加冠词):", "options": ["I gave up games.", "I gave up a games.", "I gave up the a games.", "I gave up an games."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "willpower 的意思是:", "options": ["意志力", "天气", "家具", "门票"] },
+    { "kind": "vocab", "stem": "habit 的意思是:", "options": ["习惯", "角落", "镜子", "文章"] },
+    { "kind": "grammar", "stem": "\"I made ___ big decision.\"(第一次提到、表示一个)", "stem_cn": "我做了一个重大决定。", "options": ["a", "an", "the", "不填"] },
+    { "kind": "grammar", "stem": "\"It would be ___ last one.\"(独一无二、特指)", "stem_cn": "那会是最后一局。", "options": ["the", "a", "an", "不填"] },
+    { "kind": "scenario", "stem": "\"make an effort\" 的意思是:", "options": ["努力", "休息", "失败", "放弃"] },
+    { "kind": "scenario", "stem": "\"give up\" 的意思是:", "options": ["放弃,戒掉", "捡起", "加入", "继续"] },
+    { "kind": "reading", "stem": "What did the narrator read before making the decision?", "options": ["An article about screen time", "A cookbook", "A comic", "A map"], "passage": true },
+    { "kind": "reading", "stem": "What happened an hour after Sunday's \"quick check\"?", "options": ["The narrator was deep in a new game", "The narrator fell asleep", "The narrator finished homework", "The narrator called a friend"], "passage": true },
+    { "kind": "listening", "stem": "What did the narrator give up?", "options": ["Games on the phone", "Coffee", "Movies", "Candy"], "audio": true },
+    { "kind": "listening", "stem": "Did the narrator keep the promise?", "options": ["No — the narrator started playing again on Sunday", "Yes — forever", "Yes — for a whole year", "No — the narrator never even tried"], "audio": true }
+  ]
+}

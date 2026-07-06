@@ -365,6 +365,11 @@
 - 词10(palace/extraordinary/exhibition/iron/various/machinery/display/steam/profit/college)。美语化 first floor/movie/elevator/fall;Crystal Palace/Hyde Park 伦敦史实专名保留;traveling(非 travelling);chunks=on display/be made of/on arriving/in all。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73-77+L79+L80=308,U10 仅差 L78🚩**)。⏭️ L78 等换情节包;转 U11 起 L81(合集包·介词综合)。
 
+## ✅ U11 L81《A Day at the Museum》(博物馆的一天)· 🟢全绿 · 🔄方案B换情节包(合集)
+- **U11 首课**(U11=L81-88,=教材 Unit 4 后段)。换情节=参观科学博物馆(无害,替换原"越狱")。考点原样=**KS9/33/57 介词综合**:at(钟点/点状地点)+ in(在内/穿着)+ to(方向)+ with(带着/以…方式)+ into(进入)+ about(谈论)。全介词运用题,元语法定义题=0。in vs into 设对比。
+- 词10(museum/guide/uniform/hall/model/machine/robot/section/excitement/amazement)。美语化 elevator/downtown/first floor/restroom/city center;chunks=with great care/look at sth with amazement/talk about/on the way home。
+- 44题;机器12项🟢。seed→**新建 `american_am2_seed_unit11.sql`**(L81=44)。⏭️ L82(✅正常读源)。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

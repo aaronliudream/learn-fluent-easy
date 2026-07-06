@@ -1,0 +1,130 @@
+{
+  "id": "am2_l92",
+  "unit_no": 12,
+  "lesson_no": 92,
+  "title_en": "The Windows Need Cleaning",
+  "title_cn": "窗户该擦了",
+  "grammar_focus": "复习 KS20/44/68 need / want + 动名词的用法(收官包·干净课美语化):need + doing 与 want + doing 都表示“需要被……”,用主动的 -ing 形式表达被动的意思(need cleaning = need to be cleaned);对比 need + to do(主语主动去做)",
+  "scene": "“我觉得窗户不用擦吧,”爸爸看着窗户说。“其实真该擦了,”妈妈笑道,“上面全是灰。”“客人来之前,整间屋子都得收拾一下,”她又说。“地毯得用吸尘器吸一吸,花也该浇水了。”“花园也要拾掇吗?”我哼唧着问。“草是该剪了,”爸爸承认,“不过那个可以缓缓。”我们都同意厨房最该打扫。“我房间不用收拾,”弟弟嘴硬,没人信他。三个小时后,再没什么要做的了。“这屋子需要的可不只是打扫,”爸爸打趣道,“它需要好好歇一歇!”",
+  "grammar_card": {
+    "title": "复习 KS20/44/68 need / want + 动名词",
+    "intro": "本课复习一个特别的用法:need 和 want 后面接动名词(-ing)时,用主动的形式表达被动的意思,等于“需要被……”。①need + doing = need to be done(The windows need cleaning = 窗户需要被擦);②want + doing 同义(The grass wants cutting = 草需要被剪);③各种主语、时态都可以(The kitchen needed cleaning;My room doesn't need tidying)。对比:need + to do 则是“主语主动去做某事”(You need to take a rest = 你需要去休息)。",
+    "table": {
+      "headers": ["用法", "例子"],
+      "rows": [
+        ["need + doing(= 需要被……)", "The windows need cleaning."],
+        ["want + doing(同义)", "The grass wants cutting."],
+        ["各主语 / 时态", "The kitchen needed cleaning. / My room doesn't need tidying."],
+        ["对比 need + to do", "You need to take a rest.(主语主动去做)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语“公寓”说 apartment(英式 flat);“垃圾”说 trash(英式 rubbish)。本课已按美语写。", "mark": "apartment / trash" },
+      { "rule": "need / want + doing 用主动的 -ing 表被动“需要被……”;need + to do 则是主语主动去做。别把 need cleaning 说成 need to clean(意思会变)。", "mark": "doing vs to do" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What did Mom say about the windows?",
+    "options": ["They need washing", "They look perfectly clean", "They should stay closed", "They need replacing"],
+    "answer_index": 0
+  },
+  "passage": "\"I don't think the windows need cleaning,\" Dad said, looking at them. \"Actually, they really need washing,\" Mom laughed. \"They're covered in dust.\" \"The whole house wants tidying before the guests come,\" she added. \"The carpet needs vacuuming, and the plants need watering.\" \"Does the garden need doing too?\" I asked with a groan. \"The grass wants cutting,\" Dad admitted, \"but that can wait.\" We all agreed the kitchen needed cleaning the most. \"My room doesn't need tidying,\" my brother claimed. Nobody believed him. After three hours, nothing needed doing anymore. \"The house needs more than cleaning,\" Dad joked. \"It needs a rest!\"",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "\"I don't think the windows need cleaning,\" Dad said, looking at them. \"Actually, they really need washing,\" Mom laughed. \"They're covered in dust.\"", "text_cn": "“我觉得窗户不用擦吧,”爸爸看着窗户说。“其实真该擦了,”妈妈笑道,“上面全是灰。”" },
+    { "seq": 2, "speaker": null, "text_en": "\"The whole house wants tidying before the guests come,\" she added. \"The carpet needs vacuuming, and the plants need watering.\"", "text_cn": "“客人来之前,整间屋子都得收拾一下,”她又说。“地毯得用吸尘器吸一吸,花也该浇水了。”" },
+    { "seq": 3, "speaker": null, "text_en": "\"Does the garden need doing too?\" I asked with a groan. \"The grass wants cutting,\" Dad admitted, \"but that can wait.\"", "text_cn": "“花园也要拾掇吗?”我哼唧着问。“草是该剪了,”爸爸承认,“不过那个可以缓缓。”" },
+    { "seq": 4, "speaker": null, "text_en": "We all agreed the kitchen needed cleaning the most. \"My room doesn't need tidying,\" my brother claimed. Nobody believed him.", "text_cn": "我们都同意厨房最该打扫。“我房间不用收拾,”弟弟嘴硬,没人信他。" },
+    { "seq": 5, "speaker": null, "text_en": "After three hours, nothing needed doing anymore. \"The house needs more than cleaning,\" Dad joked. \"It needs a rest!\"", "text_cn": "三个小时后,再没什么要做的了。“这屋子需要的可不只是打扫,”爸爸打趣道,“它需要好好歇一歇!”" }
+  ],
+  "words": [
+    { "word": "need doing", "ipa": "/niːd ˈduːɪŋ/", "pos": "phr", "meaning_cn": "需要(被)做", "example": "The windows need cleaning." },
+    { "word": "tidy", "ipa": "/ˈtaɪdi/", "pos": "v", "meaning_cn": "整理,收拾", "example": "the whole house wants tidying" },
+    { "word": "dust", "ipa": "/dʌst/", "pos": "n", "meaning_cn": "灰尘", "example": "They're covered in dust." },
+    { "word": "carpet", "ipa": "/ˈkɑːrpɪt/", "pos": "n", "meaning_cn": "地毯", "example": "the carpet needs vacuuming" },
+    { "word": "vacuum", "ipa": "/ˈvækjuːm/", "pos": "v", "meaning_cn": "用吸尘器打扫", "example": "the carpet needs vacuuming" },
+    { "word": "water", "ipa": "/ˈwɔːtər/", "pos": "v", "meaning_cn": "浇水", "example": "the plants need watering" },
+    { "word": "groan", "ipa": "/ɡroʊn/", "pos": "n", "meaning_cn": "抱怨声,哼唧", "example": "I asked with a groan" },
+    { "word": "admit", "ipa": "/ədˈmɪt/", "pos": "v", "meaning_cn": "承认", "example": "Dad admitted" },
+    { "word": "claim", "ipa": "/kleɪm/", "pos": "v", "meaning_cn": "声称,坚称", "example": "my brother claimed" },
+    { "word": "guest", "ipa": "/ɡest/", "pos": "n", "meaning_cn": "客人", "example": "before the guests come" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "need + doing(= 需要被……)" },
+    { "gp": "gp2", "name": "want + doing(同义:需要被……)" },
+    { "gp": "gp3", "name": "主动 -ing 形式表被动意义" },
+    { "gp": "gp4", "name": "各主语与时态(needed / doesn't need)" },
+    { "gp": "gp5", "name": "need + doing 与 need + to do 的对比" },
+    { "gp": "gp6", "name": "词汇辨析(dust / tidy / guest)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"'I don't think the windows need ___,' Dad said.\"(need + 动名词,表“需要被擦”)", "stem_cn": "“我觉得窗户不用擦吧,”爸爸说。", "options": ["cleaning", "to clean", "cleaned", "clean"] },
+    { "gp": "gp1", "stem": "\"The carpet needs ___ — it's very dusty.\"(need + 动名词)", "stem_cn": "地毯得用吸尘器吸一吸——太脏了。", "options": ["vacuuming", "to vacuum", "vacuumed", "vacuum"] },
+    { "gp": "gp1", "stem": "\"The plants need ___ every day.\"(need + 动名词)", "stem_cn": "花每天都需要浇水。", "options": ["watering", "to water", "watered", "water"] },
+    { "gp": "gp2", "stem": "\"'The whole house wants ___ before the guests come,' Mom said.\"(want + 动名词,表“需要被收拾”)", "stem_cn": "“客人来之前,整间屋子都得收拾一下,”妈妈说。", "options": ["tidying", "to tidy", "tidied", "tidy"] },
+    { "gp": "gp2", "stem": "\"'The grass wants ___,' Dad admitted.\"(want + 动名词)", "stem_cn": "“草是该剪了,”爸爸承认。", "options": ["cutting", "to cut", "cut", "cuts"] },
+    { "gp": "gp2", "stem": "\"These old shoes want ___; they're really dirty.\"(want + 动名词)", "stem_cn": "这双旧鞋该刷了,太脏了。", "options": ["cleaning", "to clean", "cleaned", "clean"] },
+    { "gp": "gp3", "stem": "\"'They really need ___,' Mom laughed. 'They're covered in dust.'\"(主动 -ing 表被动“需要被洗”)", "stem_cn": "“它们真该洗了,”妈妈笑道,“上面全是灰。”", "options": ["washing", "to wash", "washed", "wash"] },
+    { "gp": "gp3", "stem": "\"The kitchen floor needs ___ after dinner.\"(主动 -ing 表被动)", "stem_cn": "晚饭后厨房地板需要拖一拖。", "options": ["mopping", "to mop", "mopped", "mop"] },
+    { "gp": "gp3", "stem": "\"That broken gate needs ___ soon.\"(主动 -ing 表被动)", "stem_cn": "那扇坏了的门很快就得修了。", "options": ["fixing", "to fix", "fixed", "fix"] },
+    { "gp": "gp4", "stem": "\"We all agreed the kitchen ___ cleaning the most.\"(过去:need 的过去式 + 动名词)", "stem_cn": "我们都同意厨房最该打扫。", "options": ["needed", "need", "needs", "needing"] },
+    { "gp": "gp4", "stem": "\"'My room doesn't need ___,' my brother claimed.\"(否定:doesn't need + 动名词)", "stem_cn": "“我房间不用收拾,”弟弟坚称。", "options": ["tidying", "to tidy", "tidied", "tidy"] },
+    { "gp": "gp4", "stem": "\"After three hours, nothing ___ doing anymore.\"(过去:need 的过去式)", "stem_cn": "三个小时后,再没什么要做的了。", "options": ["needed", "need", "needs", "is needing"] },
+    { "gp": "gp5", "stem": "\"'Does the garden need ___ too?' I asked.\"(疑问:need + 动名词)", "stem_cn": "“花园也要拾掇吗?”我问。", "options": ["doing", "to do", "done", "do"] },
+    { "gp": "gp5", "stem": "\"You look tired. You need ___ a rest.\"(need + to do:你主动去做)", "stem_cn": "你看着累了,你需要休息一下。", "options": ["to take", "taking", "take", "taken"] },
+    { "gp": "gp5", "stem": "\"The car is dirty; it needs ___.\"(need + 动名词:需要被洗)", "stem_cn": "车脏了,该洗了。", "options": ["washing", "to wash", "washed", "wash"] },
+    { "gp": "gp6", "stem": "\"The floor was covered in ___.\"(灰尘用哪个词)", "stem_cn": "地板上落满了灰尘。", "options": ["dust", "water", "gold", "snow"] },
+    { "gp": "gp6", "stem": "\"Please ___ your room before the guests arrive.\"(整理、收拾用哪个词)", "stem_cn": "客人到之前请把你的房间收拾好。", "options": ["tidy", "break", "lose", "drop"] },
+    { "gp": "gp6", "stem": "\"The visitors are our ___ tonight.\"(客人用哪个词)", "stem_cn": "今晚这些来访者是我们的客人。", "options": ["guests", "teachers", "drivers", "doctors"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"公寓\"说:", "options": ["apartment", "flat", "room-set", "house-unit"] },
+    { "stem": "美语里\"垃圾\"说:", "options": ["trash", "rubbish", "waste-bin", "litter-box"] },
+    { "stem": "dust 的意思是:", "options": ["灰尘", "水", "花", "石头"] },
+    { "stem": "tidy 的意思是:", "options": ["整理,收拾", "弄乱", "打碎", "丢弃"] },
+    { "stem": "guest 的意思是:", "options": ["客人", "主人", "邻居", "陌生人"] },
+    { "stem": "vacuum 的意思是:", "options": ["用吸尘器打扫", "浇水", "做饭", "洗涤"] }
+  ],
+  "contrast": [
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "trash", "uk": "rubbish", "note_cn": "垃圾;美语 trash,英式 rubbish" },
+    { "us": "faucet", "uk": "tap", "note_cn": "水龙头;美语 faucet,英式 tap" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" }
+  ],
+  "chunks": [
+    { "us": "be covered in", "ipa": "/bi ˈkʌvərd ɪn/", "example1": "The windows are covered in dust.", "example1_cn": "窗户上全是灰。", "example2": "The desk was covered in books.", "example2_cn": "桌子上堆满了书。" },
+    { "us": "before the guests come", "ipa": "/bɪˈfɔːr ðə ɡests kʌm/", "example1": "The house wants tidying before the guests come.", "example1_cn": "客人来之前屋子得收拾一下。", "example2": "Let's finish before the guests come.", "example2_cn": "咱们赶在客人来之前弄完吧。" },
+    { "us": "that can wait", "ipa": "/ðæt kæn weɪt/", "example1": "The grass wants cutting, but that can wait.", "example1_cn": "草是该剪了,不过那个可以缓缓。", "example2": "It's not urgent — that can wait.", "example2_cn": "不急——那个可以缓缓。" },
+    { "us": "more than", "ipa": "/mɔːr ðæn/", "example1": "The house needs more than cleaning.", "example1_cn": "这屋子需要的不只是打扫。", "example2": "It cost more than I expected.", "example2_cn": "它比我预想的还要贵。" }
+  ],
+  "stage7_cloze": {
+    "context": "\"The windows need ___1___,\" Mom said. \"The carpet needs ___2___ too.\" \"Does the garden need ___3___?\" I asked. We all agreed the kitchen ___4___ cleaning the most.",
+    "blanks": [
+      { "blank_no": 1, "options": ["washing", "to wash", "washed", "wash"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["vacuuming", "to vacuum", "vacuumed", "vacuum"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["doing", "to do", "done", "do"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["needed", "need", "needs", "needing"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What did Mom say about the windows?", "options": ["They need washing", "They look clean", "They are broken", "They need painting"] },
+    { "stem": "What did Dad admit wanted cutting?", "options": ["The grass", "The bread", "His hair", "The rope"] },
+    { "stem": "What did everyone agree needed cleaning the most?", "options": ["The kitchen", "The garden", "The car", "The attic"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"窗户该擦了\"(need + 动名词,主动形式表被动):", "options": ["The windows need cleaning.", "The windows need clean.", "The windows need to cleaning.", "The windows needs cleaning."] },
+    { "stem": "你想说\"客人来之前整间屋子都得收拾\"(want + 动名词):", "options": ["The whole house wants tidying before the guests come.", "The whole house wants to tidying before the guests come.", "The whole house want tidying before the guests come.", "The whole house wants tidy before the guests come."] },
+    { "stem": "你想说\"地毯需要用吸尘器吸一吸\"(need + 动名词):", "options": ["The carpet needs vacuuming.", "The carpet needs vacuumed.", "The carpet need vacuuming.", "The carpet needs to vacuuming."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "dust 的意思是:", "options": ["灰尘", "水", "花", "石头"] },
+    { "kind": "vocab", "stem": "guest 的意思是:", "options": ["客人", "主人", "邻居", "陌生人"] },
+    { "kind": "grammar", "stem": "\"The windows need ___.\"(need + 动名词,表“需要被擦”)", "stem_cn": "窗户该擦了。", "options": ["cleaning", "to clean", "cleaned", "clean"] },
+    { "kind": "grammar", "stem": "\"The whole house wants ___ before the guests come.\"(want + 动名词)", "stem_cn": "客人来之前整间屋子都得收拾。", "options": ["tidying", "to tidy", "tidied", "tidy"] },
+    { "kind": "scenario", "stem": "\"need cleaning\" 的意思是:", "options": ["需要(被)清洗", "需要去清洗别的", "喜欢清洗", "刚清洗过"] },
+    { "kind": "scenario", "stem": "\"be covered in\" 的意思是:", "options": ["布满、覆盖着", "藏在……下面", "远离……", "属于……"] },
+    { "kind": "reading", "stem": "What did Mom say about the windows?", "options": ["They really need washing", "They are already clean", "They should stay shut", "They need new glass"], "passage": true },
+    { "kind": "reading", "stem": "What did the brother claim?", "options": ["His room didn't need tidying", "He would clean the kitchen", "The windows were fine", "He was too tired"], "passage": true },
+    { "kind": "listening", "stem": "What did Dad say wanted cutting?", "options": ["The grass", "The bread", "The paper", "The rope"], "audio": true },
+    { "kind": "listening", "stem": "What needed cleaning the most?", "options": ["The kitchen", "The garden", "The attic", "The car"], "audio": true }
+  ]
+}

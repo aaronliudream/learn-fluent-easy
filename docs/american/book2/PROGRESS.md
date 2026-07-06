@@ -744,3 +744,12 @@
 - **泄漏防护**:be able to/managed to/could 型题中文提示改写为纯语义描述(“过去某一次成功做到了”“费了一番劲设法做成”“一贯具备的能力”),不含任何英文答案词。
 - **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-91 = 132);已勾收官包 checkbox。
 - **待裁决**:无。
+
+═══════════════════════════════════════
+## L92《The Windows Need Cleaning 窗户该擦了》· U12 · 收官包·干净课美语化 · need/want + 动名词(KS20/44/68)
+- **来源**:收官包(Aaron 2026-07-05);原课干净(大扫除趣事),照搬美语化,KS20/44/68 考点原样。
+- **考点**:need + doing/want + doing(= 需要被…)/主动-ing表被动意义/各主语时态(needed·doesn't need)/对比 need + to do(主动去做)/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:need doing, tidy, dust, carpet, vacuum, water, groan, admit, claim, guest。
+- **关6**:美语对照 apartment(公寓)/trash(垃圾) + 4 词义(dust/tidy/guest/vacuum)。contrast: apartment↔flat / trash↔rubbish / faucet↔tap / elevator↔lift。chunks: be covered in / before the guests come / that can wait / more than。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-92 = 176);已勾收官包 checkbox。
+- **待裁决**:无。

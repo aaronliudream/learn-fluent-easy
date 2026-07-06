@@ -370,6 +370,12 @@
 - 词10(museum/guide/uniform/hall/model/machine/robot/section/excitement/amazement)。美语化 elevator/downtown/first floor/restroom/city center;chunks=with great care/look at sth with amazement/talk about/on the way home。
 - 44题;机器12项🟢。seed→**新建 `american_am2_seed_unit11.sql`**(L81=44)。⏭️ L82(✅正常读源)。
 
+## ✅ U11 L82《The Thing in the Attic》(阁楼里的东西)· 🟢全绿 · 🔄方案B换情节包(单独包·非合集)
+- **风险再分级**:原标✅,我实读源 doc417-420《Monster or fish?》(马达加斯加捕获皇带鱼被误认海怪的科普趣闻)**未被拦**;网页版复判会拦(触发=monster/sea monster 联想),**单独**出换情节包(非 L70-94 合集内)。用包产。unit_no=11 正确。
+- 换情节=阁楼发现被遗忘的古怪旧物、被专家鉴定进博物馆(无害,替换海怪误会,保留"奇特之物被研究"科普内核)。考点原样=**KS10/34/58 被动语态各时态**:was found/was cleaned(过去)+ is being examined(进行)+ have been seen/had been forgotten(完成/过去完成)+ is kept/is checked(现在)+ will be shown(将来);辅考 **SD laugh/laugh at、wash/wash up**。全被动运用题(设主动干扰项),元语法定义题=0。
+- 词12(attic/examine/expert/rare/object/display/discover/dust/valuable/curious/museum/shelf)。美语化 trash/flashlight/elevator/apartment;chunks=be covered in dust/laugh at/go on display/for the first time。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit11.sql`(**L81+L82=88**)。⏭️ L83(✅正常读源)。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

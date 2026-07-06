@@ -301,6 +301,13 @@
 - 词11(官方9:parliament/erect/accurate/official/Greenwich/observatory/check/microphone/tower + 补2 immense/strike)。美语化 shop assistant→**salesclerk/clerk**;关6美英=salesclerk/shop assistant+elevator/lift+first floor/ground floor+apartment/flat;chunks=take one's name from/be responsible for/all over the world/have sth checked。Big Ben/Parliament/Greenwich 系伦敦真实专名(纪实课文),保留。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-69+L71=264**,L70 空缺待换情节包补)。⏭️ L72(✅正常读)。
 
+## ✅ U9 L72《A car called Bluebird》(“蓝鸟”汽车)· 🟢全绿 · ✅正常读源
+- ✅净课:风险表标 ✅,试读源 doc363-365 顺利,正常读源产出。是**复习课**:教材 L72 Special difficulties = **Review SD50-71**(经常容易混淆的词复习),整课以词义辨析为主考,配课文语法作辅。
+- 主考(源 doc363-365)= **Review SD50-71 易混词**:lose/miss、expect/wait(SD50)+ raise/rise、lie-lay、beat/win(SD51)+ value/cost/price(SD61)+ accept/agree、say/tell、dress up(SD65/67)+ hung(悬挂)、hard/hardly、near/nearly(SD52/71);辅考=**课文过去完成被动**(had been specially built / a mistake had been made)+ 现在完成(have reached)。全词选/时态运用题,元语法定义题=0。
+- 裁决:gp1 SD50(3)+ gp2 SD51(3)+ gp3 SD61(3)+ gp4 SD65/67(3)= 易混词主考12;gp5 SD52/71(3)+ gp6 课文完成体被动/主动(3)= 辅考6。
+- 词10(官方7:racing/per/Utah/horsepower/burst/average/footstep + 补3 record/specially/disappointed)。美语化:**tyre→tire**、**Father Christmas→Santa Claus**;**British practise/practice 区别按方案降级**——美语课只教 practice 一种拼法(名词动词同形),grammar_card 加📌 register 注,不出 practise 陷阱题。关6美英=trunk/boot(后备箱)+ hood/bonnet(引擎盖)+ gas/petrol + windshield/windscreen;chunks=set up a record/have great difficulty in doing/follow in one's footsteps/be disappointed to learn。MC comprehension 正解(a)"是否达到301一度有疑问"已用作 s10 reading#7。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-69+L71+L72=308**,L70 空缺待换情节包补)。⏭️ L73(🟢低,正常读)。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

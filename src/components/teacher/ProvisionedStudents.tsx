@@ -10,7 +10,7 @@ import {
   AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
-import { UserPlus, Loader2, KeyRound, Copy, Check, LogOut, GraduationCap } from "lucide-react";
+import { UserPlus, Loader2, KeyRound, Copy, Check, LogOut, GraduationCap, Pencil } from "lucide-react";
 
 /**
  * 老师代建学生账号（Phase 1.5）—— 挂在班级详情页 roster tab。
@@ -55,6 +55,9 @@ export function ProvisionedStudents({ classId }: { classId: string }) {
   const [cred, setCred] = useState<Credential>(null);
   const [copied, setCopied] = useState(false);
   const [removeTarget, setRemoveTarget] = useState<Row | null>(null);
+  const [editTarget, setEditTarget] = useState<Row | null>(null);
+  const [editName, setEditName] = useState("");
+  const [savingName, setSavingName] = useState(false);
 
   const reload = useCallback(async () => {
     setLoading(true);
@@ -94,6 +97,30 @@ export function ProvisionedStudents({ classId }: { classId: string }) {
       toast.error((e as Error).message);
     } finally {
       setResettingId(null);
+    }
+  }
+
+  function openEdit(row: Row) {
+    setEditTarget(row);
+    setEditName(row.real_name ?? "");
+  }
+
+  async function saveName() {
+    if (!editTarget) return;
+    setSavingName(true);
+    try {
+      await invokeProvision({
+        action: "update_real_name",
+        student_user_id: editTarget.student_user_id,
+        real_name: editName.trim() || null,
+      });
+      toast.success(t("已更新姓名"));
+      setEditTarget(null);
+      reload();
+    } catch (e) {
+      toast.error((e as Error).message);
+    } finally {
+      setSavingName(false);
     }
   }
 
@@ -166,6 +193,9 @@ export function ProvisionedStudents({ classId }: { classId: string }) {
                     <span><T>创建于</T> {new Date(r.created_at).toLocaleDateString()}</span>
                   </div>
                 </div>
+                <Button variant="ghost" size="sm" onClick={() => openEdit(r)} className="shrink-0">
+                  <Pencil className="mr-1 size-3.5" /> <T>改名</T>
+                </Button>
                 <Button variant="outline" size="sm" onClick={() => resetPassword(r)} disabled={resettingId === r.student_user_id} className="shrink-0">
                   {resettingId === r.student_user_id ? <Loader2 className="size-3.5 animate-spin" /> : <><KeyRound className="mr-1 size-3.5" /> <T>重置密码</T></>}
                 </Button>
@@ -205,6 +235,31 @@ export function ProvisionedStudents({ classId }: { classId: string }) {
               {copied ? <><Check className="mr-1 size-4" /> <T>已复制</T></> : <><Copy className="mr-1 size-4" /> <T>复制登录ID+密码</T></>}
             </Button>
             <Button onClick={() => { setCred(null); setCopied(false); }}><T>我已抄好，关闭</T></Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* 改名 / 补填姓名 */}
+      <Dialog open={!!editTarget} onOpenChange={(v) => { if (!v) setEditTarget(null); }}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>✏️ <T>修改真实姓名</T></DialogTitle>
+          </DialogHeader>
+          <div className="space-y-2">
+            <Label htmlFor="edit-rn" className="text-xs"><T>真实姓名（仅你可见）</T></Label>
+            <Input id="edit-rn" value={editName} onChange={(e) => setEditName(e.target.value)}
+              placeholder={t("如：张三")} autoFocus
+              onKeyDown={(e) => { if (e.key === "Enter" && !savingName) saveName(); }} />
+            <p className="text-[11px] text-muted-foreground">
+              <T>登录ID</T> <span className="font-mono">{editTarget?.login_id}</span>
+              <T>。留空则清除姓名。</T>
+            </p>
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setEditTarget(null)} disabled={savingName}><T>取消</T></Button>
+            <Button onClick={saveName} disabled={savingName}>
+              {savingName ? <Loader2 className="size-4 animate-spin" /> : <T>保存</T>}
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

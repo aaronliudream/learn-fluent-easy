@@ -668,3 +668,13 @@
 - **校验**:机器12项 🟢 全绿(计数44=SQL、解释44/44、串味0、泄漏0、三维闸门0)。
 - **落库**:american_am2_seed_unit11.sql(L81+L82+L83 = 132);已勾收官包 checkbox。
 - **待裁决**:无(收官包标准中性情节)。
+
+═══════════════════════════════════════
+## L84《The School Play 校园话剧》· U11 · 合集·方案B换情节 · 一般将来时(KS12/36/60)
+- **来源**:换情节合集(Aaron 2026-07-05);原课涉暴力/罢工题材→改「筹备校园话剧」中性情节,KS12/36/60 一般将来时考点原样保留。
+- **考点**:will do(预测/临时决定)/be going to do(计划、迹象)/when·if·as soon as 从句用一般现在表将来/将来否定 won't 与疑问 Will…·Are you going to… = 6 gp × 3 = 18。
+- **词表(10,故事自设·合集无给定官方词)**:play, costume, design, background, invite, ticket, scene, practice, indoors, show。
+- **关6**:美语对照 theater(剧院)/stand in line(排队) + 4 词义(costume/design/invite/scene)。contrast: theater↔theatre / stand in line↔queue / intermission↔interval / movie↔film。chunks: put on a play / be going to / on sale / as soon as。
+- **泄漏防护**:be going to 型题干扰项全用错形(is going/will going to/be going to 缺件),保证 options[0] 唯一合法;中文提示不含答案词(计划已定/有迹象/临时决定,不写 be going to)。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit11.sql(L81-84 = 176);已勾合集 checkbox。
+- **待裁决**:无。

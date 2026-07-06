@@ -1,0 +1,130 @@
+{
+  "id": "am2_l86",
+  "unit_no": 11,
+  "lesson_no": 86,
+  "title_en": "The Runaway Kite",
+  "title_cn": "跑掉的风筝",
+  "grammar_focus": "复习 KS14/38/62 过去完成时 vs 过去完成进行时(方案B换情节包):had done(过去的过去、已完成)与 had been doing(持续到过去某点)的构成与辨析,以及与 before/after/when/by the time 的搭配,后发生的动作用一般过去时",
+  "scene": "等我们到公园时,风已经变得很强了。我们盼着放这只新风筝盼了一整周。风筝是里奥自己做的,他还给它上了两天的色。我们还没开始,风就把风筝从他手里扯走了。风筝才飞高了一分钟,线就断了。我们还没来得及去抓,风筝已经飞过树梢不见了。我们到处找,可它早已落在了远处的一片田野里。一个小女孩捡到了它,一直小心地抱着。她一直在等有人回来找它。等我们到家时,我们已经交到了一个新朋友——也学会了要抓得更紧!",
+  "grammar_card": {
+    "title": "复习 KS14/38/62 过去完成 vs 过去完成进行",
+    "intro": "本课复习“过去的过去”两种时态及其区别:①过去完成 had done——在过去某个时间点之前已经完成的动作(By the time we reached the park, the wind had grown strong);②过去完成进行 had been doing——持续到过去某个时间点的动作,强调“一直在做”(We had been looking forward to it all week);③二者对比:强调“已完成/结果”用 had done,强调“持续过程”用 had been doing;④常配 before / after / when / by the time,后发生的那个动作用一般过去时(…before the string broke)。",
+    "table": {
+      "headers": ["时态", "例子"],
+      "rows": [
+        ["过去完成 had done", "By the time we arrived, the wind had grown strong."],
+        ["过去完成进行 had been doing", "We had been looking forward to it all week."],
+        ["对比", "It had been flying (过程) … had disappeared (结果)."],
+        ["后发生的动作用一般过去", "It had been flying for a minute when the string broke."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语“足球”说 soccer(英式 football);“运动鞋”说 sneakers(英式 trainers)。本课已按美语写。", "mark": "soccer / sneakers" },
+      { "rule": "过去完成看“过去某点之前是否已完成”,过去完成进行强调“持续到那个点”;两件事里先发生的用过去完成,后发生的用一般过去。", "mark": "时态辨析" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What happened when the kite's string broke?",
+    "options": ["The kite flew away over the trees", "The kite fell straight down", "Leo caught the kite at once", "Nothing happened at all"],
+    "answer_index": 0
+  },
+  "passage": "By the time we reached the park, the wind had already grown strong. We had been looking forward to flying our new kite all week. Leo had built it himself, and he had been painting it for two days. Before we even started, the wind had pulled the kite from his hands. It had been flying high for only a minute when the string broke. The kite had disappeared over the trees before we could catch it. We searched everywhere, but it had already landed in a far field. A little girl had found it and had been holding it carefully. She had been waiting for someone to come back for it. By the time we got home, we had made a new friend — and learned to hold on tighter!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "By the time we reached the park, the wind had already grown strong. We had been looking forward to flying our new kite all week.", "text_cn": "等我们到公园时,风已经变得很强了。我们盼着放这只新风筝盼了一整周。" },
+    { "seq": 2, "speaker": null, "text_en": "Leo had built it himself, and he had been painting it for two days. Before we even started, the wind had pulled the kite from his hands.", "text_cn": "风筝是里奥自己做的,他还给它上了两天的色。我们还没开始,风就把风筝从他手里扯走了。" },
+    { "seq": 3, "speaker": null, "text_en": "It had been flying high for only a minute when the string broke. The kite had disappeared over the trees before we could catch it.", "text_cn": "风筝才飞高了一分钟,线就断了。我们还没来得及去抓,风筝已经飞过树梢不见了。" },
+    { "seq": 4, "speaker": null, "text_en": "We searched everywhere, but it had already landed in a far field. A little girl had found it and had been holding it carefully.", "text_cn": "我们到处找,可它早已落在了远处的一片田野里。一个小女孩捡到了它,一直小心地抱着。" },
+    { "seq": 5, "speaker": null, "text_en": "She had been waiting for someone to come back for it. By the time we got home, we had made a new friend — and learned to hold on tighter!", "text_cn": "她一直在等有人回来找它。等我们到家时,我们已经交到了一个新朋友——也学会了要抓得更紧!" }
+  ],
+  "words": [
+    { "word": "kite", "ipa": "/kaɪt/", "pos": "n", "meaning_cn": "风筝", "example": "flying our new kite all week" },
+    { "word": "string", "ipa": "/strɪŋ/", "pos": "n", "meaning_cn": "线,绳", "example": "the string broke" },
+    { "word": "reach", "ipa": "/riːtʃ/", "pos": "v", "meaning_cn": "到达", "example": "by the time we reached the park" },
+    { "word": "disappear", "ipa": "/ˌdɪsəˈpɪr/", "pos": "v", "meaning_cn": "消失,不见", "example": "the kite had disappeared over the trees" },
+    { "word": "field", "ipa": "/fiːld/", "pos": "n", "meaning_cn": "田野,场地", "example": "landed in a far field" },
+    { "word": "search", "ipa": "/sɜːrtʃ/", "pos": "v", "meaning_cn": "搜寻,寻找", "example": "we searched everywhere" },
+    { "word": "break", "ipa": "/breɪk/", "pos": "v", "meaning_cn": "断,破,弄坏", "example": "the string broke" },
+    { "word": "grow", "ipa": "/ɡroʊ/", "pos": "v", "meaning_cn": "变得,生长", "example": "the wind had grown strong" },
+    { "word": "land", "ipa": "/lænd/", "pos": "v", "meaning_cn": "降落,着陆", "example": "it had landed in a far field" },
+    { "word": "hold on", "ipa": "/hoʊld ɑːn/", "pos": "phr", "meaning_cn": "抓紧;坚持", "example": "learned to hold on tighter" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "过去完成时 had done(过去某点前已完成)" },
+    { "gp": "gp2", "name": "过去完成进行时 had been doing(持续到过去某点)" },
+    { "gp": "gp3", "name": "过去完成 vs 过去完成进行(结果 vs 过程)" },
+    { "gp": "gp4", "name": "与 before/after/when/by the time 的搭配" },
+    { "gp": "gp5", "name": "过去完成与一般过去的先后配合" },
+    { "gp": "gp6", "name": "词汇辨析(string / search / field)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"By the time we reached the park, the wind ___ strong.\"(过去某时之前已经变强)", "stem_cn": "等我们到公园时,风已经变强了。", "options": ["had grown", "grew", "has grown", "was growing"] },
+    { "gp": "gp1", "stem": "\"Before we even started, the wind ___ the kite from his hands.\"(在开始之前就已经)", "stem_cn": "我们还没开始,风就已经把风筝从他手里扯走了。", "options": ["had pulled", "pulled", "has pulled", "was pulling"] },
+    { "gp": "gp1", "stem": "\"We searched everywhere, but the kite ___ in a far field.\"(此前已经落下)", "stem_cn": "我们到处找,但风筝早已落在远处的田野里。", "options": ["had landed", "landed", "has landed", "was landing"] },
+    { "gp": "gp2", "stem": "\"We ___ to flying our new kite all week.\"(持续到过去某点)", "stem_cn": "我们盼着放新风筝盼了一整周。", "options": ["had been looking forward", "looked forward", "have looked forward", "were looking forward"] },
+    { "gp": "gp2", "stem": "\"Leo ___ the kite for two days before the trip.\"(持续到过去某点)", "stem_cn": "出发前,里奥已经给风筝上了两天的色。", "options": ["had been painting", "painted", "has painted", "was painting"] },
+    { "gp": "gp2", "stem": "\"A little girl ___ the kite carefully when we found her.\"(持续到过去某点)", "stem_cn": "我们找到她时,小女孩一直小心地抱着风筝。", "options": ["had been holding", "held", "has held", "holds"] },
+    { "gp": "gp3", "stem": "\"It ___ high for a minute when the string broke.\"(强调持续了一分钟)", "stem_cn": "风筝才飞高了一分钟,线就断了。", "options": ["had been flying", "had flown", "flew", "flies"] },
+    { "gp": "gp3", "stem": "\"By the time we got home, we ___ a new friend.\"(强调已完成的结果)", "stem_cn": "等我们到家时,我们已经交到一个新朋友。", "options": ["had made", "had been making", "made", "make"] },
+    { "gp": "gp3", "stem": "\"She ___ for someone to come back for it.\"(强调一直在等)", "stem_cn": "她一直在等有人回来找它。", "options": ["had been waiting", "had waited", "waited", "waits"] },
+    { "gp": "gp4", "stem": "\"___ we reached the park, the wind had grown strong.\"(引出“过去某个时间点”)", "stem_cn": "等我们到公园时,风已经变强了。", "options": ["By the time", "Since", "For", "During"] },
+    { "gp": "gp4", "stem": "\"The kite had disappeared ___ we could catch it.\"(在……之前)", "stem_cn": "我们还没来得及抓,风筝就已经不见了。", "options": ["before", "since", "during", "so"] },
+    { "gp": "gp4", "stem": "\"___ we even started, the wind had pulled the kite away.\"(在……之前)", "stem_cn": "我们还没开始,风就已经把风筝扯走了。", "options": ["Before", "After", "Since", "While"] },
+    { "gp": "gp5", "stem": "\"It had been flying high when the string ___.\"(后发生的动作用一般过去)", "stem_cn": "风筝正飞得高高的,线断了。", "options": ["broke", "had broken", "breaks", "has broken"] },
+    { "gp": "gp5", "stem": "\"By the time we ___ home, we had made a new friend.\"(时间从句用一般过去)", "stem_cn": "等我们到家时,已经交到一个新朋友。", "options": ["got", "had got", "get", "have got"] },
+    { "gp": "gp5", "stem": "\"The kite had disappeared before we ___ catch it.\"(后一动作用一般过去)", "stem_cn": "我们还没来得及抓,风筝就不见了。", "options": ["could", "had could", "can", "will"] },
+    { "gp": "gp6", "stem": "\"The kite flew away when the ___ broke.\"(线、绳用哪个词)", "stem_cn": "线一断,风筝就飞走了。", "options": ["string", "chair", "window", "plate"] },
+    { "gp": "gp6", "stem": "\"We ___ everywhere for the lost kite.\"(到处寻找用哪个词)", "stem_cn": "我们到处寻找丢失的风筝。", "options": ["searched", "cooked", "slept", "sang"] },
+    { "gp": "gp6", "stem": "\"The kite had landed in a far ___.\"(田野用哪个词)", "stem_cn": "风筝落在了远处的一片田野里。", "options": ["field", "kitchen", "pocket", "book"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"足球\"说:", "options": ["soccer", "football", "kickball", "ball-game"] },
+    { "stem": "美语里\"运动鞋\"说:", "options": ["sneakers", "trainers", "runners", "gym-shoes"] },
+    { "stem": "string 的意思是:", "options": ["线,绳", "树", "石头", "云"] },
+    { "stem": "disappear 的意思是:", "options": ["消失,不见", "出现", "停下", "落下"] },
+    { "stem": "field 的意思是:", "options": ["田野,场地", "厨房", "卧室", "商店"] },
+    { "stem": "search 的意思是:", "options": ["搜寻,寻找", "购买", "出售", "忘记"] }
+  ],
+  "contrast": [
+    { "us": "soccer", "uk": "football", "note_cn": "足球;美语 soccer,英式 football" },
+    { "us": "sneakers", "uk": "trainers", "note_cn": "运动鞋;美语 sneakers,英式 trainers" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" },
+    { "us": "cookie", "uk": "biscuit", "note_cn": "饼干;美语 cookie,英式 biscuit" }
+  ],
+  "chunks": [
+    { "us": "look forward to", "ipa": "/lʊk ˈfɔːrwərd tu/", "example1": "We had been looking forward to it all week.", "example1_cn": "我们盼这件事盼了一整周。", "example2": "I look forward to seeing you again.", "example2_cn": "我期待再见到你。" },
+    { "us": "by the time", "ipa": "/baɪ ðə taɪm/", "example1": "By the time we reached the park, the wind had grown strong.", "example1_cn": "等我们到公园时,风已经变强了。", "example2": "By the time she called, we had left.", "example2_cn": "她打电话时,我们已经走了。" },
+    { "us": "hold on", "ipa": "/hoʊld ɑːn/", "example1": "We learned to hold on tighter.", "example1_cn": "我们学会了抓得更紧。", "example2": "Hold on to the rope with both hands.", "example2_cn": "双手抓紧绳子。" },
+    { "us": "fly a kite", "ipa": "/flaɪ ə kaɪt/", "example1": "We had been looking forward to flying our new kite.", "example1_cn": "我们一直盼着放新风筝。", "example2": "It's a windy day — let's fly a kite.", "example2_cn": "今天风大——我们去放风筝吧。" }
+  ],
+  "stage7_cloze": {
+    "context": "By the time we reached the park, the wind ___1___ already grown strong. We ___2___ looking forward to it all week. The kite ___3___ high for a minute when the string ___4___.",
+    "blanks": [
+      { "blank_no": 1, "options": ["had", "has", "was", "have"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["had been", "have been", "were", "are"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["had been flying", "had flown", "flew", "flies"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["broke", "had broken", "breaks", "has broken"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What had happened to the wind by the time they reached the park?", "options": ["It had grown strong", "It had stopped", "It had turned warm", "It had died down"] },
+    { "stem": "What happened when the string broke?", "options": ["The kite flew away over the trees", "The kite fell straight down", "Leo caught it at once", "The kite tore in two"] },
+    { "stem": "Who found the kite in the end?", "options": ["A little girl", "A farmer", "A dog", "Their teacher"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我们到公园时,风已经变强了\"(过去的过去,用 had done):", "options": ["By the time we reached the park, the wind had grown strong.", "By the time we reached the park, the wind grew strong.", "By the time we reached the park, the wind has grown strong.", "By the time we reached the park, the wind was growing strong."] },
+    { "stem": "你想说\"我们已经期待放新风筝一整周了\"(持续到过去某点,用 had been doing):", "options": ["We had been looking forward to flying our new kite all week.", "We looked forward to flying our new kite all week.", "We have been looking forward to flying our new kite all week.", "We are looking forward to flying our new kite all week."] },
+    { "stem": "你想说\"风筝飞了一分钟,线就断了\"(先持续、后一般过去):", "options": ["The kite had been flying for a minute when the string broke.", "The kite had been flying for a minute when the string had broken.", "The kite was flying for a minute when the string breaks.", "The kite has been flying for a minute when the string broke."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "string 的意思是:", "options": ["线,绳", "树", "石头", "云"] },
+    { "kind": "vocab", "stem": "field 的意思是:", "options": ["田野,场地", "厨房", "卧室", "商店"] },
+    { "kind": "grammar", "stem": "\"By the time we reached the park, the wind ___ grown strong.\"(过去完成)", "stem_cn": "等我们到公园时,风已经变强了。", "options": ["had", "has", "was", "have"] },
+    { "kind": "grammar", "stem": "\"She ___ for someone to come back for it.\"(过去完成进行)", "stem_cn": "她一直在等有人回来找它。", "options": ["had been waiting", "had waited", "waited", "waits"] },
+    { "kind": "scenario", "stem": "\"look forward to\" 的意思是:", "options": ["期待,盼望", "向前看路", "回头看", "抬头看"] },
+    { "kind": "scenario", "stem": "\"by the time\" 的意思是:", "options": ["到……的时候(为止)", "按时地", "偶尔地", "花时间"] },
+    { "kind": "reading", "stem": "What had Leo done with the kite before the trip?", "options": ["He had built it himself", "He had bought it in a store", "He had borrowed it", "He had broken it"], "passage": true },
+    { "kind": "reading", "stem": "Where had the kite landed?", "options": ["In a far field", "On a tall tree", "In the river", "On the roof"], "passage": true },
+    { "kind": "listening", "stem": "What had grown strong by the time they reached the park?", "options": ["The wind", "The rain", "The sun", "The crowd"], "audio": true },
+    { "kind": "listening", "stem": "Who had been holding the kite carefully?", "options": ["A little girl", "Leo", "A police officer", "A teacher"], "audio": true }
+  ]
+}

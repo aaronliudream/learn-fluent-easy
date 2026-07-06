@@ -687,3 +687,12 @@
 - **关6**:美语对照 grade(成绩)/math(数学) + 4 词义(degree/admit/inspiring/graduate)。contrast: grade↔mark / math↔maths / fall↔autumn / vacation↔holiday。chunks: go to college / at the age of / too old to / earn a degree。
 - **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit11.sql(L81-85 = 220);已勾收官包 checkbox。
 - **待裁决**:无。
+
+═══════════════════════════════════════
+## L86《The Runaway Kite 跑掉的风筝》· U11 · 合集·方案B换情节 · 过去完成 vs 过去完成进行(KS14/38/62)
+- **来源**:换情节合集(Aaron 2026-07-05);KS14/38/62 考点原样,情节换「放风筝线断追风筝、遇小女孩交新友」中性温情。
+- **考点**:过去完成 had done(结果)/过去完成进行 had been doing(过程)/二者对比/配 before·after·when·by the time/与一般过去先后配合(后动作用一般过去)/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:kite, string, reach, disappear, field, search, break, grow, land, hold on。
+- **关6**:美语对照 soccer(足球)/sneakers(运动鞋) + 4 词义(string/disappear/field/search)。contrast: soccer↔football / sneakers↔trainers / fall↔autumn / cookie↔biscuit。chunks: look forward to / by the time / hold on / fly a kite。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit11.sql(L81-86 = 264);已勾合集 checkbox。
+- **待裁决**:无。

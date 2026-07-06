@@ -271,6 +271,13 @@
 - **词20全收**(净化包表:remote/Pacific/damage/wreck/rediscover/aerial/survey/rescue/package/enthusiast/restore/imagine/packing case/colony/bee/hive/preserve/beeswax/engine/condition;Lancaster/bomber 因中性化不入表)。关6美英=trunk/boot+hood/bonnet+wrench/spanner+airplane/aeroplane(汽车机械族);chunks=have sth done/break open/in perfect condition/turn…into。
 - 44题;机器12项🟢(1黄=cloze上下文另一 had,人工核过)。seed→`american_am2_seed_unit09.sql`(**L65-L66=88**)。⏭️ L67。
 
+## ✅ U9 L67《Volcanoes》(火山)· 🟢全绿 · 教材 Unit 3
+- 主考(源 doc344-345 = Key structures)= **KS43 can/could·be able to·manage to**:could=一般能力、was able to/managed to=过去"设法做成一件具体难事"(managed to escape/set up/climb)、没能做成=couldn't=wasn't able to=didn't manage to。Special difficulties(源 doc345)= **SD 带 say 与 tell 的短语辨析**:say so/say nothing/said his prayers vs tell the time/tell lies/tell the truth/tell the difference。
+- 裁决:gp1 could 能力(2)+ gp2 was able to/managed to 成功做成(4)+ gp3 没能做成 didn't manage to(3)= 主考9;gp4 say 短语(3)+ gp5 tell 短语(3)+ gp6 say/tell 辨析(3)= SD 辅考9。全运用题,元语法定义题=0。
+- ⚠️ leak[b]坑复现:say/tell 辨析题括号写"带 say/tell 的短语"=直给答案红;已改"选词:'…的固定说法'"纯语义提示,泄漏清零。此坑固化:词汇辨析题括号禁写候选词本身。
+- 词12全收(volcano/active/Kivu/Congo/Kituro/erupt/violently/manage/brilliant/liquid/escape/alive)。关6美英=center/centre+meter/metre+liter/litre+theater/theatre(-er/-re 拼写族);chunks=set up/just in time/spend one's lifetime doing/risk one's life。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L67=132**)。⏭️ L68。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

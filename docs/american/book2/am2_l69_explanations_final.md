@@ -1,145 +1,145 @@
-# AM2 L69 逐题解释(定稿) · 供 gen-book2-seed.mjs loadExp 合并
+# AM2 L69 逐题解释(定稿·方案B换情节) · 供 gen-book2-seed.mjs loadExp 合并
 
 ### s5 seq1 | ans: was made
-一般过去的被动 = was/were + 过去分词。✓ This clock was made in Germany in 1681. ✗ made:是主动;✗ was making:过去进行主动;✗ has made:现在完成主动。
+一般过去的被动 = was/were + 过去分词。✓ This car was made in Germany in 1925. ✗ made:是主动;✗ was making:过去进行主动;✗ has made:现在完成主动。
 
-### s5 seq2 | ans: was being questioned
-过去进行的被动 = was being + 过去分词。✓ The man was being questioned by the police. ✗ was questioning:主动;✗ questioned:一般过去主动;✗ had questioned:过去完成主动。
+### s5 seq2 | ans: were
+一般过去被动;主语复数(ten of them)用 were built。✓ Only ten of them were ever built. ✗ was:主语复数不用 was;✗ have:构不成过去被动;✗ are:时态应是过去。
 
-### s5 seq3 | ans: could be done
-"能被做到"用 could be + 过去分词。✓ I told you it could be done. ✗ could do:主动;✗ could been done:缺 be;✗ could did:形式错。
+### s5 seq3 | ans: was found
+一般过去被动:名字"被发现"。✓ The maker's name was found under the seat. ✗ found:主动;✗ was finding:过去进行主动;✗ has found:现在完成主动。
 
-### s5 seq4 | ans: were thrown
-一般过去被动;主语 we 用 were thrown。✓ We were both thrown forward. ✗ threw:主动;✗ were throwing:过去进行主动;✗ had thrown:过去完成主动。
+### s5 seq4 | ans: be started
+情态被动 = can/could + be + 过去分词;"几乎发动不了"用 could hardly be started。✓ the engine could hardly be started. ✗ start:主动;✗ started:缺 be;✗ been started:缺 be。
 
-### s5 seq5 | ans: had been sent
-过去完成的被动 = had been + 过去分词。✓ I found the parcel had been sent to the wrong address. ✗ had sent:主动;✗ was sending:过去进行主动;✗ sent:一般过去。
+### s5 seq5 | ans: can be repaired
+情态被动 = can be + 过去分词。✓ It can be repaired. ✗ can repair:主动;✗ can be repair:缺过去分词;✗ can repaired:缺 be。
 
-### s5 seq6 | ans: must have been
-对过去的推测(被动)用 must have been + 过去分词。✓ It must have been stolen. ✗ must be:推测现在;✗ must have:缺 been,构不成被动;✗ must been:缺 have。
+### s5 seq6 | ans: must have been kept
+对过去的推测(被动)用 must have been + 过去分词。✓ It must have been kept in a dry garage. ✗ must keep:主动且推测现在;✗ must be keeping:进行;✗ must kept:形式错。
 
-### s5 seq7 | ans: must have been
-对过去的推测用 must have been + 过去分词。✓ The examiner must have been pleased. ✗ must be:推测现在;✗ must have:缺 been;✗ may be:推测现在且不确定。
+### s5 seq7 | ans: has been
+现在完成的被动 = has been + 过去分词。✓ the car has been fully restored. ✗ was being:过去进行被动;✗ is:构不成完成;✗ had:构不成现在完成被动。
 
-### s5 seq8 | ans: being
-介词/连词 After 后接动名词;被动用 being + 过去分词。✓ After being arrested, the man confessed. ✗ been:缺 being;✗ to be:After 后不接不定式;✗ was:After 后不接谓语形式。
+### s5 seq8 | ans: has acquired
+"博物馆已收购"是主动的现在完成(museum 主动做);= has + 过去分词。✓ The museum has acquired several rare cars. ✗ has been acquired:那是"博物馆被收购",意思反了;✗ was acquired:一般过去被动;✗ acquiring:缺助动词。
 
-### s5 seq9 | ans: having
-完成式动名词的被动 = having been + 过去分词。✓ After having been instructed to drive out of town… ✗ has / had:After 后不接这类形式;✗ being:此处强调"先被指令、再有信心",用完成式 having been。
+### s5 seq9 | ans: have been
+现在完成被动;主语复数(parts)用 have been + 过去分词。✓ All the broken parts have been replaced. ✗ has been:主语复数不用 has;✗ was:一般过去且数不合;✗ were being:过去进行。
 
-### s5 seq10 | ans: advice
-"建议"作名词用 advice(不可数)。✓ I want to give you some advice. ✗ advise:是动词;✗ advices:advice 不可数,无复数;✗ advising:动名词不合。
+### s5 seq10 | ans: had been kept
+过去完成的被动 = had been + 过去分词。✓ For years it had been kept in an old garage. ✗ kept:一般过去;✗ was keeping:过去进行主动;✗ has kept:现在完成主动。
 
-### s5 seq11 | ans: advise
-"建议"作动词用 advise。✓ What do you advise me to do? ✗ advice:是名词;✗ advices:名词误用;✗ adviced:拼写错(应 advised)。
+### s5 seq11 | ans: had been stored
+过去完成的被动 = had been + 过去分词。✓ The car had been stored for so long. ✗ had stored:主动;✗ was storing:过去进行主动;✗ stored:一般过去。
 
-### s5 seq12 | ans: advised
-"建议"作动词的过去式是 advised;美语 license 名词动词同形。✓ He advised me to get a license. ✗ adviced:拼写错;✗ advice:名词;✗ advise:未用过去式。
+### s5 seq12 | ans: was being
+过去进行的被动 = was being + 过去分词。✓ While the car was being cleaned… ✗ was:缺 being,构不成进行被动;✗ is being:时态应是过去;✗ had been:过去完成被动。
 
-### s5 seq13 | ans: enjoyed
-"玩得开心"用 enjoy oneself。✓ We enjoyed ourselves at the party. ✗ entertained:招待(别人);✗ amused:逗乐(别人);✗ pleased:使高兴,搭配不同。
+### s5 seq13 | ans: was being
+过去进行被动 = was being + 过去分词。✓ the engine was being repaired by two mechanics. ✗ was:缺 being;✗ is being:时态应是过去;✗ has been:现在完成被动。
 
-### s5 seq14 | ans: entertained
-"招待、请客"用 entertain sb。✓ He entertained us to dinner. ✗ enjoyed:玩得开心(用 oneself);✗ amused:逗乐;✗ invited to:意思是"邀请",此处是"款待"。
+### s5 seq14 | ans: was being
+过去进行被动 = was being + 过去分词。✓ Every part was being checked when the manager arrived. ✗ was:缺 being;✗ is being:时态应是过去;✗ had been:过去完成被动。
 
-### s5 seq15 | ans: amused
-"逗乐、使发笑"用 amuse sb。✓ The clown amused the children with his tricks. ✗ enjoyed:玩得开心(用 oneself);✗ entertained to:搭配错;✗ pleased of:搭配错。
+### s5 seq15 | ans: Having been
+完成式的非谓语被动 = Having been + 过去分词,作状语说明原因/先发生。✓ Having been stored for so long, the car needed a lot of work. ✗ Being:表当前状态,不强调"已被…";✗ Have been:非谓语不用原形;✗ Been:缺 having。
 
-### s5 seq16 | ans: amused
-"被逗乐"用 be amused (by)。✓ The children were amused by the circus clown. ✗ amusing:令人发笑的(形容事物);✗ enjoying:玩得开心用 oneself;✗ entertaining:令人愉快的。
+### s5 seq16 | ans: Having been
+完成式非谓语被动 = Having been + 过去分词。✓ Having been kept in a dry place, the engine was still in good condition. ✗ Being:不强调"已被…";✗ Has been:非谓语不用;✗ Been:缺 having。
 
-### s5 seq17 | ans: amused
-"某事物把人逗乐"用 sth amuse sb。✓ His funny stories amused us all. ✗ enjoyed:用 oneself;✗ were amused:主语是 stories,不是被逗乐的人;✗ amused by:后不接宾语这样用。
+### s5 seq17 | ans: to be found
+不定式的被动 = to be + 过去分词。✓ We expected the maker's name to be found somewhere. ✗ to find:主动;✗ to be find:缺过去分词;✗ found:缺 to be。
 
-### s5 seq18 | ans: amuse
-"自娱自乐、自己打发时间"用 amuse oneself。✓ That child can amuse himself for hours. ✗ enjoy:后一般接具体活动或 oneself+介词;✗ entertain:招待别人;✗ amused:此处需原形。
+### s5 seq18 | ans: to be restored
+不定式的被动 = to be + 过去分词。✓ The owner wanted the car to be restored. ✗ to restore:主动;✗ to be restore:缺过去分词;✗ restoring:不合此结构。
 
-### s6 seq1 | ans: license
-美语"驾照、执照"拼作 license(名词、动词同形);英式名词拼 licence。✓ a driver's license 驾照。
+### s6 seq1 | ans: gas
+美语"汽油"常说 gas(gasoline);英式说 petrol。✓ fill up with gas 加满油。
 
-### s6 seq2 | ans: practice
-美语"练习(动词)"拼作 practice(与名词同形);英式动词拼 practise。✓ practice the piano every day 每天练琴。
+### s6 seq2 | ans: tire
+美语"轮胎"拼作 tire;英式拼作 tyre。✓ a flat tire 瘪了的轮胎。
 
-### s6 seq3 | ans: 谋杀
-murder = 谋杀。✓ But not murder! 并非谋杀!
-顺带记:抢劫 = rob;绑架 = kidnap;欺骗 = cheat.
+### s6 seq3 | ans: 修复,复原
+restore = 修复、复原。✓ restored to its original condition 修复到原来的状态。
+顺带记:拆毁 = demolish;出售 = sell;隐藏 = hide.
 
-### s6 seq4 | ans: 取得,获得
-acquire = 取得、获得。✓ I began to acquire confidence. 我开始有了信心。
-顺带记:失去 = lose;借出 = lend;归还 = return.
+### s6 seq4 | ans: 稀有的,罕见的
+rare = 稀有的、罕见的。✓ a rare old car 一辆稀有的老爷车。
+顺带记:普通的 = common;廉价的 = cheap;巨大的 = huge.
 
-### s6 seq5 | ans: 信心
-confidence = 信心。✓ acquire confidence 获得信心。
-顺带记:恐惧 = fear;怀疑 = doubt;好奇 = curiosity.
+### s6 seq5 | ans: 获得,取得
+acquire = 获得、取得。✓ the museum had acquired it 博物馆收购了它。
+顺带记:丢弃 = discard;借出 = lend;归还 = return.
 
-### s6 seq6 | ans: 悲哀的,忧伤的
-mournful = 悲哀的、忧伤的。✓ in a mournful voice 以悲伤的声调。
-顺带记:愤怒的 = angry;兴奋的 = excited;平静的 = calm.
+### s6 seq6 | ans: 最初的,原来的
+original = 最初的、原来的。✓ its original condition 它最初的状态。
+顺带记:最后的 = final;假的 = fake;现代的 = modern.
 
-### s7 seq1 | ans: was being tested
-过去进行的被动 = was being + 过去分词。✓ I was being tested for a driver's license.
-✗ tested:一般过去;✗ was testing:主动;✗ had tested:过去完成主动。
+### s7 seq1 | ans: was made
+一般过去的被动 = was + 过去分词。✓ The car was made in Germany in 1925.
+✗ made:主动;✗ was making:过去进行主动;✗ has made:现在完成主动。
 
-### s7 seq2 | ans: having
-完成式动名词的被动 = having been + 过去分词。✓ After having been instructed to drive out of town…
-✗ has / had:After 后不接;✗ being:此处强调先后,用完成式 having been。
+### s7 seq2 | ans: had been kept
+过去完成的被动 = had been + 过去分词。✓ it had been kept in an old garage.
+✗ kept:一般过去;✗ was keeping:过去进行主动;✗ has kept:现在完成主动。
 
-### s7 seq3 | ans: must have been
-对过去的推测(被动)用 must have been + 过去分词。✓ The examiner must have been pleased.
-✗ must be:推测现在;✗ must have:缺 been;✗ may be:不确定且推测现在。
+### s7 seq3 | ans: was being
+过去进行的被动 = was being + 过去分词。✓ While it was being cleaned, the name was found.
+✗ is being:时态应是过去;✗ was:缺 being;✗ had been:过去完成被动。
 
-### s7 seq4 | ans: could be heard
-"能被听见"用 could be + 过去分词。✓ the sound could be heard clearly.
-✗ could hear:主动;✗ could been heard:缺 be;✗ heard:缺情态与被动。
+### s7 seq4 | ans: has been
+现在完成的被动 = has been + 过去分词。✓ it has been fully restored.
+✗ was being:过去进行被动;✗ is:构不成完成;✗ had:构不成现在完成被动。
 
-### s8 seq1 | ans: He had driven in heavy traffic successfully and was doing well
-课文说 He had been asked to drive in heavy traffic and had done so successfully… began to acquire confidence。
+### s8 seq1 | ans: A rare old car made in Germany in 1925, one of only ten ever built
+课文说 a rare old car… was made in Germany in 1925, and only ten of them were ever built。
 
-### s8 seq2 | ans: Stop within five feet, as if a child had run across the road
-课文说 Let us suppose that a child suddenly crosses the road… As soon as I tap on the window, you must stop within five feet。
+### s8 seq2 | ans: The maker's name, under the seat
+课文说 While the car was being cleaned, the maker's name was found under the seat。
 
-### s8 seq3 | ans: It took Eames too long to react; the examiner said he had 'killed' the child
-课文说 it took me a long time to react… 'you have just killed that child!'
+### s8 seq3 | ans: It has been fully restored to its original condition and is admired by visitors
+课文说 the car has been fully restored to its original condition… it is admired by everyone who visits the museum。
 
-### s9 seq1 | ans: This clock was made in Germany in 1681.
-一般过去的被动 = was + 过去分词。✓ This clock was made in Germany in 1681. 场合:说某物是被(在过去)制造的。
+### s9 seq1 | ans: This car was made in Germany in 1925.
+一般过去的被动 = was + 过去分词。✓ This car was made in Germany in 1925. 场合:说某物是被(在过去)制造的。
 
-### s9 seq2 | ans: My bag must have been stolen.
-对过去的推测(被动)用 must have been + 过去分词。✓ My bag must have been stolen. 场合:根据现状推测过去一定发生了某事。
+### s9 seq2 | ans: The car has been fully restored.
+现在完成的被动 = has been + 过去分词。✓ The car has been fully restored. 场合:说某事到现在已经被做完。
 
-### s9 seq3 | ans: He advised me to get a license.
-"建议"作动词用 advise(过去 advised);美语"执照"拼 license。✓ He advised me to get a license. 场合:说别人给的建议;注意美语拼 license。
+### s9 seq3 | ans: While the car was being cleaned, we found the maker's name.
+过去进行的被动 = was being + 过去分词。✓ While the car was being cleaned, we found the maker's name. 场合:说过去某时某事正在被做。
 
-### s10 seq1 | ans: 谋杀
-murder = 谋杀。✓ But not murder! 并非谋杀!
-顺带记:抢劫 = rob;绑架 = kidnap;欺骗 = cheat.
+### s10 seq1 | ans: 修复,复原
+restore = 修复、复原。✓ restored to its original condition 修复到原来的状态。
+顺带记:拆毁 = demolish;出售 = sell;隐藏 = hide.
 
-### s10 seq2 | ans: 信心
-confidence = 信心。✓ acquire confidence 获得信心。
-顺带记:恐惧 = fear;怀疑 = doubt;好奇 = curiosity.
+### s10 seq2 | ans: 稀有的,罕见的
+rare = 稀有的、罕见的。✓ a rare old car 一辆稀有的老爷车。
+顺带记:普通的 = common;廉价的 = cheap;巨大的 = huge.
 
-### s10 seq3 | ans: must have been
-对过去的推测(被动)用 must have been + 过去分词。✓ It must have been stolen.
-✗ must be:推测现在;✗ must have:缺 been;✗ must been:缺 have。
+### s10 seq3 | ans: was made
+一般过去的被动 = was + 过去分词。✓ This car was made in Germany in 1925.
+✗ made:主动;✗ was making:过去进行主动;✗ has made:现在完成主动。
 
-### s10 seq4 | ans: was being questioned
-过去进行的被动 = was being + 过去分词。✓ The man was being questioned by the police.
-✗ was questioning:主动;✗ questioned:一般过去;✗ had questioned:过去完成主动。
+### s10 seq4 | ans: has been
+现在完成的被动 = has been + 过去分词。✓ the car has been fully restored.
+✗ was being:过去进行被动;✗ is:构不成完成;✗ had:构不成现在完成被动。
 
-### s10 seq5 | ans: 对过去情况的推测(一定已经…)
-must have been + 过去分词表示对过去情况的有把握推测(当时一定已经…)。
+### s10 seq5 | ans: be + 过去分词
+被动语态的基本结构是 be + 过去分词;时态的变化体现在 be 上(was done / has been done / was being done)。
 
-### s10 seq6 | ans: practice、license
-美语里动词"练习"拼 practice(与名词同形)、"执照"拼 license(与名词同形),都不用英式的 practise/licence。
+### s10 seq6 | ans: 重获新生,恢复活力
+come back to life = 重获新生、恢复活力(重新变得有生气)。✓ The old car came back to life. 老爷车重获新生。
 
-### s10 seq7 | ans: Because Eames took too long to react and braked too late
-课文说 it took me a long time to react… 'you have just killed that child!',反应太慢等于"撞死"了假想的小孩。
+### s10 seq7 | ans: It had been stored for years and was in poor condition
+课文说 it had been kept in an old garage… Having been stored for so long, the car needed a great deal of work。
 
-### s10 seq8 | ans: Probably not — he failed the emergency stop by reacting too slowly
-课文最后主考人说 'you have just killed that child!',说明紧急停车这项没做好,多半没通过。
+### s10 seq8 | ans: It was found under the seat while the car was being cleaned
+课文说 While the car was being cleaned, the maker's name was found under the seat。
 
-### s10 seq9 | ans: A driver's license, for the third time
-课文说 I was being tested for a driver's license for the third time。
+### s10 seq9 | ans: In an old garage, almost forgotten
+课文说 For years it had been kept in an old garage and almost forgotten。
 
-### s10 seq10 | ans: In a mournful (sad) voice
-课文说 he said, in a mournful voice, 'you have just killed that child!'
+### s10 seq10 | ans: They admire it
+课文说 Now it is admired by everyone who visits the museum。

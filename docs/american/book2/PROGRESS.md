@@ -286,12 +286,13 @@
 - 词10(官方3:persistent/avoid/insist + 补7:pretend/wave/fancy/wonder/mind/dentist/waiting room)。关6美英=traveling/travelling+canceling/cancelling+colored/coloured+labeled/labelled(-l- 单双写族);chunks=it's no use doing/would you mind doing/be busy doing/Fancy meeting you here。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L68=176**)。⏭️ L69。
 
-## ✅ U9 L69《But not murder!》(并非谋杀!)· 🟢全绿 · 教材 Unit 3
-- 主考(源 doc352-353 = Key structures)= **KS10/21/34/45 被动语态综合复习**:各时态被动(was made/was being questioned/had been sent/could be done/were thrown)+ 介词后动名词被动(After being arrested / having been instructed 完成式)+ **must have been done 对过去的推测被动**(examiner must have been pleased)。Special difficulties(源 doc353)= **SD 易混词**:advice(n)/advise(v)、美语 practice/license 名动同形、enjoy(oneself)/entertain(sb)/amuse(sb/oneself)。
-- 裁决:gp1 各时态被动(4)+ gp2 完成体与推测被动(3)+ gp3 介词后 being/having been done(2)= 主考9;gp4 advice/advise+美语practice/license(3)+ gp5 enjoy/entertain/amuse(3)+ gp6 amuse 三用法(3)= SD 辅考9。全运用题,元语法定义题=0。
-- ⚠️ leak[b]坑复现:amuse 题括号写"be amused by/amuse oneself"=直给答案红→改纯语义"'被…'的被动形式/自得其乐"。清零。
-- 词11全收(murder/instruct/acquire/confidence/examiner/suppose/tap/react/brake/pedal/mournful)。美语化 driving licence→**driver's license**、practise→**practice**;关6美英=license/licence+practice/practise+defense/defence+pretense/pretence(-se/-ce 与名动同形族);chunks=acquire confidence/react to/in front of/must have been。
-- 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L69=220**)。⏭️ L70。
+## ✅ U9 L69《The old car comes back to life》(老爷车重获新生)· 🟢全绿 · **方案B换情节**
+- ⚠️ **方案B换情节**(Aaron 2026-07-05 拍板,见 [[am2-filter-risk-plan-l69-96]]):原《But not murder!》驾照版含"谋杀玩笑"触发词=🔴高危。**我实读源已产出并 committed(59d18f07 原版),但按方案B用换情节包替换**:情节换成"博物馆修复古董车"(无害),**原 KS 被动语态综合考点原样承载**。
+- 主考=**被动语态综合复习**:一般过去 was made/were built、情态 can/could be/must have been kept、现在完成 has been restored、过去完成 had been kept/stored、过去进行 was being cleaned、完成式非谓语 having been stored、不定式被动 to be restored。原 SD 易混词(advice/practice/amuse)随换情节去掉,聚焦被动(净化包定的范围)。
+- 裁决:gp1 一般过去被动(3)+ gp2 情态/推测被动(3)+ gp3 现在完成被动(3)+ gp4 过去完成被动(2)+ gp5 过去进行被动(3)+ gp6 完成非谓语/不定式被动(4)=18。全运用题,元语法定义题=0。
+- 词10(净化包表:instruct/acquire/confidence/restore/original/engine/maker/garage/condition/rare;原暴力词 murder 降级不入表)。关6美英=gas/petrol+tire/tyre+trunk/boot+hood/bonnet(汽车族);chunks=come back to life/a great deal of/restore…to/work on。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L69=220**)。
+- ⏸️ **L70 挂起**:风险表标 🔴 换情节包,包未到(网页版陆续给,优先 L69→L70);我本已读源 doc355-357(形容词+介词搭配),但按方案B**不用源产出、等 L70 换情节包**。⏭️ 收到 L70 包即做;期间可穿插 ✅/🟢 可读课。
 
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。

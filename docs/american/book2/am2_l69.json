@@ -2,131 +2,131 @@
   "id": "am2_l69",
   "unit_no": 9,
   "lesson_no": 69,
-  "title_en": "But not murder!",
-  "title_cn": "并非谋杀!",
-  "grammar_focus": "KS10/21/34/45 被动语态综合复习(各时态被动 was made/was being questioned/had been sent/could be done + 介词后 being done / having been done + must have been done 对过去的推测被动)(教材 L69 Key structures)主考;SD 易混词 advice/advise、美语 practice/license 名动同形、enjoy/entertain/amuse 辨析(辅考)",
-  "scene": "我第3次接受驾照考试。按照要求在车辆拥挤的路上驾驶,我圆满地完成了。在接到把车开出城的指令后,我开始有了信心。确信我已通过考试,所以我几乎开始喜欢起这次考试。主考人对我的驾驶想必是满意的,因为他微笑着说:“埃姆斯先生,只剩1项了。让我们假设一个小孩子突然在你前面穿过马路。我一敲车窗,你必须把车停在5英尺之内。”我继续往前开着。过了一会儿,主考人砰砰地敲了起来。虽然声音听得很清楚,但我过了好一会儿才作出反应。我突然用力踩紧刹车踏板,结果我俩的身体都向前冲去。主考人伤心地看着我:“埃姆斯先生,”他以悲伤的声调说,“你刚刚把那个小孩压死了!”",
+  "title_en": "The old car comes back to life",
+  "title_cn": "老爷车重获新生",
+  "grammar_focus": "被动语态综合复习(方案B换情节·原 L69 KS10/21/34/45 考点原样承载):一般过去被动 was/were made、情态被动 can/could/must be done、现在完成被动 has been done、过去完成被动 had been kept、过去进行被动 was being cleaned、完成式非谓语被动 having been stored",
+  "scene": "上个月,一辆稀有的老爷车被送到了我们博物馆——博物馆最近才收购了它。它1925年在德国制造,一共只造过十辆。多年来它一直被存放在一个旧车库里,几乎被人遗忘。送来时,引擎几乎发动不了。“它能修好,”我们的首席技师说,并指示他的团队检查每一个零件。在清理这辆车时,座位下面发现了制造商的名字。由于被存放了这么久,这辆车需要大量的修理。每个零件都被仔细检查,坏的都被更换。随着信心不断增强,团队一直干下去,几个月后这辆车已被完全修复到它最初的状态。如今它受到每一位参观博物馆的人的赞赏。",
   "grammar_card": {
     "title": "被动语态综合复习",
-    "intro": "KS10/21/34/45 各种时态的被动都是 be + 过去分词,时态变在 be 上:一般过去 was made、过去进行 was being questioned、过去完成 had been sent、能被做到 could be done。介词或连词后用动名词被动:After being arrested(被捕后)、After having been instructed(接到指令后,完成式)。对过去情况的推测(被动)用 must have been + 过去分词:It must have been stolen(一定是被偷了)。",
+    "intro": "各种时态的被动都是 be + 过去分词,时态变在 be 上:一般过去 was made、情态 can/could/must be done、过去进行 was being cleaned、过去完成 had been kept、现在完成 has been restored。介词或连词后用动名词被动,完成式为 having been done(Having been stored for years…)。对过去的推测(被动)用 must have been + 过去分词。",
     "table": {
       "headers": ["时态/形式", "被动"],
       "rows": [
-        ["一般过去", "was made / were thrown"],
-        ["过去进行", "was being questioned"],
-        ["过去完成", "had been sent"],
-        ["情态/推测", "could be done / must have been stolen"],
-        ["介词后动名词", "After being / having been instructed"]
+        ["一般过去", "was made / were built"],
+        ["情态/推测", "can be repaired / must have been kept"],
+        ["过去进行", "was being cleaned"],
+        ["过去完成", "had been kept / had been stored"],
+        ["现在完成", "has been restored"],
+        ["完成式非谓语", "having been stored"]
       ]
     },
     "specialRules": [
-      { "rule": "对过去的推测用 must have been + 过去分词:The examiner must have been pleased(主考人当时想必是满意的);I can't find my bag — it must have been stolen。", "mark": "must have been done" },
-      { "rule": "SD 美语拼写:美语里 practice、license 名词动词同形(动词也拼 practice/license,不用英式 practise/licence);advice 是名词,advise 是动词。", "mark": "practice/license·advice/advise" }
+      { "rule": "完成式的非谓语被动用 having been + 过去分词,作状语说明原因或先发生:Having been stored for so long, the car needed a lot of work。", "mark": "having been done" },
+      { "rule": "对过去情况的推测(被动)用 must have been + 过去分词:It must have been kept in a dry garage(它一定是被放在干燥的车库里)。", "mark": "must have been done" }
     ]
   },
   "prelisten": {
-    "q": "Listen and answer — Do you think that the writer passed his driving test? Why?",
-    "options": ["Probably not — he reacted too slowly to the emergency stop and 'killed' the child", "Yes — he drove perfectly the whole time", "Yes — the examiner was pleased at the end", "No — he crashed the car into a wall"],
+    "q": "Listen and answer — What happened to the old car at the museum?",
+    "options": ["It was fully restored to its original condition after months of work", "It was sold to a private collector", "It was scrapped for parts", "It was left in the garage"],
     "answer_index": 0
   },
-  "passage": "I was being tested for a driver's license for the third time. I had been asked to drive in heavy traffic and had done so successfully. After having been instructed to drive out of town, I began to acquire confidence. Sure that I had passed, I was almost beginning to enjoy my test. The examiner must have been pleased with my performance, for he smiled and said, 'Just one more thing, Mr. Eames. Let us suppose that a child suddenly crosses the road in front of you. As soon as I tap on the window, you must stop within five feet.' I continued driving and after some time, the examiner tapped loudly. Though the sound could be heard clearly, it took me a long time to react. I suddenly pressed the brake pedal hard and we were both thrown forward. The examiner looked at me sadly. 'Mr. Eames,' he said, in a mournful voice, 'you have just killed that child!'",
+  "passage": "Last month, a rare old car was brought to our museum, which had recently acquired it. It was made in Germany in 1925, and only ten of them were ever built. For years it had been kept in an old garage and almost forgotten. When it arrived, the engine could hardly be started. 'It can be repaired,' our chief mechanic said, and he instructed his team to check every part. While the car was being cleaned, the maker's name was found under the seat. Having been stored for so long, the car needed a great deal of work. Every part was carefully checked, and the broken ones were replaced. With growing confidence, the team worked on, and after months the car has been fully restored to its original condition. Now it is admired by everyone who visits the museum.",
   "sentences": [
-    { "seq": 1, "speaker": null, "text_en": "I was being tested for a driver's license for the third time. I had been asked to drive in heavy traffic and had done so successfully. After having been instructed to drive out of town, I began to acquire confidence.", "text_cn": "我第3次接受驾照考试。按照要求在车辆拥挤的路上驾驶,我圆满地完成了。在接到把车开出城的指令后,我开始有了信心。" },
-    { "seq": 2, "speaker": null, "text_en": "Sure that I had passed, I was almost beginning to enjoy my test. The examiner must have been pleased with my performance, for he smiled and said, 'Just one more thing, Mr. Eames.", "text_cn": "确信我已通过考试,所以我几乎开始喜欢起这次考试。主考人对我的驾驶想必是满意的,因为他微笑着说:“埃姆斯先生,只剩1项了。" },
-    { "seq": 3, "speaker": null, "text_en": "Let us suppose that a child suddenly crosses the road in front of you. As soon as I tap on the window, you must stop within five feet.'", "text_cn": "让我们假设一个小孩子突然在你前面穿过马路。我一敲车窗,你必须把车停在5英尺之内。”" },
-    { "seq": 4, "speaker": null, "text_en": "I continued driving and after some time, the examiner tapped loudly. Though the sound could be heard clearly, it took me a long time to react.", "text_cn": "我继续往前开着。过了一会儿,主考人砰砰地敲了起来。虽然声音听得很清楚,但我过了好一会儿才作出反应。" },
-    { "seq": 5, "speaker": null, "text_en": "I suddenly pressed the brake pedal hard and we were both thrown forward. The examiner looked at me sadly. 'Mr. Eames,' he said, in a mournful voice, 'you have just killed that child!'", "text_cn": "我突然用力踩紧刹车踏板,结果我俩的身体都向前冲去。主考人伤心地看着我:“埃姆斯先生,”他以悲伤的声调说,“你刚刚把那个小孩压死了!”" }
+    { "seq": 1, "speaker": null, "text_en": "Last month, a rare old car was brought to our museum, which had recently acquired it. It was made in Germany in 1925, and only ten of them were ever built.", "text_cn": "上个月,一辆稀有的老爷车被送到了我们博物馆——博物馆最近才收购了它。它1925年在德国制造,一共只造过十辆。" },
+    { "seq": 2, "speaker": null, "text_en": "For years it had been kept in an old garage and almost forgotten. When it arrived, the engine could hardly be started.", "text_cn": "多年来它一直被存放在一个旧车库里,几乎被人遗忘。送来时,引擎几乎发动不了。" },
+    { "seq": 3, "speaker": null, "text_en": "'It can be repaired,' our chief mechanic said, and he instructed his team to check every part. While the car was being cleaned, the maker's name was found under the seat.", "text_cn": "“它能修好,”我们的首席技师说,并指示他的团队检查每一个零件。在清理这辆车时,座位下面发现了制造商的名字。" },
+    { "seq": 4, "speaker": null, "text_en": "Having been stored for so long, the car needed a great deal of work. Every part was carefully checked, and the broken ones were replaced.", "text_cn": "由于被存放了这么久,这辆车需要大量的修理。每个零件都被仔细检查,坏的都被更换。" },
+    { "seq": 5, "speaker": null, "text_en": "With growing confidence, the team worked on, and after months the car has been fully restored to its original condition. Now it is admired by everyone who visits the museum.", "text_cn": "随着信心不断增强,团队一直干下去,几个月后这辆车已被完全修复到它最初的状态。如今它受到每一位参观博物馆的人的赞赏。" }
   ],
   "words": [
-    { "word": "murder", "ipa": "/ˈmɜːrdər/", "pos": "n", "meaning_cn": "谋杀", "example": "But not murder!" },
-    { "word": "instruct", "ipa": "/ɪnˈstrʌkt/", "pos": "v", "meaning_cn": "命令,指示", "example": "After having been instructed to drive out of town" },
-    { "word": "acquire", "ipa": "/əˈkwaɪr/", "pos": "v", "meaning_cn": "取得,获得", "example": "I began to acquire confidence." },
-    { "word": "confidence", "ipa": "/ˈkɑːnfɪdəns/", "pos": "n", "meaning_cn": "信心", "example": "acquire confidence" },
-    { "word": "examiner", "ipa": "/ɪɡˈzæmɪnər/", "pos": "n", "meaning_cn": "主考人", "example": "The examiner must have been pleased." },
-    { "word": "suppose", "ipa": "/səˈpoʊz/", "pos": "v", "meaning_cn": "假设,假定", "example": "Let us suppose that a child crosses the road." },
-    { "word": "tap", "ipa": "/tæp/", "pos": "v", "meaning_cn": "轻敲", "example": "As soon as I tap on the window" },
-    { "word": "react", "ipa": "/riˈækt/", "pos": "v", "meaning_cn": "反应,作出反应", "example": "it took me a long time to react" },
-    { "word": "brake", "ipa": "/breɪk/", "pos": "n", "meaning_cn": "刹车,闸", "example": "I pressed the brake pedal hard." },
-    { "word": "pedal", "ipa": "/ˈpedl/", "pos": "n", "meaning_cn": "踏板", "example": "the brake pedal" },
-    { "word": "mournful", "ipa": "/ˈmɔːrnfəl/", "pos": "adj", "meaning_cn": "悲哀的,忧伤的", "example": "in a mournful voice" }
+    { "word": "instruct", "ipa": "/ɪnˈstrʌkt/", "pos": "v", "meaning_cn": "指示,命令", "example": "he instructed his team to check every part" },
+    { "word": "acquire", "ipa": "/əˈkwaɪr/", "pos": "v", "meaning_cn": "取得,获得", "example": "the museum had recently acquired it" },
+    { "word": "confidence", "ipa": "/ˈkɑːnfɪdəns/", "pos": "n", "meaning_cn": "信心", "example": "With growing confidence, the team worked on." },
+    { "word": "restore", "ipa": "/rɪˈstɔːr/", "pos": "v", "meaning_cn": "修复,复原", "example": "the car has been fully restored" },
+    { "word": "original", "ipa": "/əˈrɪdʒənl/", "pos": "adj", "meaning_cn": "最初的,原来的", "example": "restored to its original condition" },
+    { "word": "engine", "ipa": "/ˈendʒɪn/", "pos": "n", "meaning_cn": "引擎,发动机", "example": "the engine could hardly be started" },
+    { "word": "maker", "ipa": "/ˈmeɪkər/", "pos": "n", "meaning_cn": "制造者,厂商", "example": "the maker's name was found under the seat" },
+    { "word": "garage", "ipa": "/ɡəˈrɑːʒ/", "pos": "n", "meaning_cn": "车库", "example": "kept in an old garage" },
+    { "word": "condition", "ipa": "/kənˈdɪʃən/", "pos": "n", "meaning_cn": "状况,状态", "example": "its original condition" },
+    { "word": "rare", "ipa": "/rer/", "pos": "adj", "meaning_cn": "稀有的,罕见的", "example": "a rare old car" }
   ],
   "grammar_points": [
-    { "gp": "gp1", "name": "被动语态·各时态(was made/was being questioned/could be done)" },
-    { "gp": "gp2", "name": "被动语态·完成体与推测(had been sent/must have been done)" },
-    { "gp": "gp3", "name": "介词后动名词被动(being done / having been done)" },
-    { "gp": "gp4", "name": "SD advice/advise + 美语 practice/license" },
-    { "gp": "gp5", "name": "SD enjoy / entertain / amuse 辨析" },
-    { "gp": "gp6", "name": "SD amuse 的三种用法" }
+    { "gp": "gp1", "name": "一般过去被动 was/were done" },
+    { "gp": "gp2", "name": "情态被动 can/could/must be done" },
+    { "gp": "gp3", "name": "现在完成被动 has been done" },
+    { "gp": "gp4", "name": "过去完成被动 had been done" },
+    { "gp": "gp5", "name": "过去进行被动 was being done" },
+    { "gp": "gp6", "name": "完成式非谓语被动 having been done / 不定式被动" }
   ],
   "stage5": [
-    { "gp": "gp1", "stem": "\"This clock ___ in Germany in 1681.\"(一般过去被动)", "stem_cn": "这钟1681年在德国制造。", "options": ["was made", "made", "was making", "has made"] },
-    { "gp": "gp1", "stem": "\"The man ___ by the police when I arrived.\"(过去进行被动)", "stem_cn": "我到时,那人正被警察盘问。", "options": ["was being questioned", "was questioning", "questioned", "had questioned"] },
-    { "gp": "gp1", "stem": "\"I told you it ___.\"(能被做到——情态被动)", "stem_cn": "我告诉过你这是能做到的。", "options": ["could be done", "could do", "could been done", "could did"] },
-    { "gp": "gp1", "stem": "\"I pressed the brake hard and we ___ forward.\"(一般过去被动:被甩向前)", "stem_cn": "我用力踩刹车,我俩都被甩向前去。", "options": ["were thrown", "threw", "were throwing", "had thrown"] },
-    { "gp": "gp2", "stem": "\"I found the parcel ___ to the wrong address.\"(过去完成被动)", "stem_cn": "我发现包裹被寄错了地址。", "options": ["had been sent", "had sent", "was sending", "sent"] },
-    { "gp": "gp2", "stem": "\"I can't find my bag. It ___ stolen.\"(对过去的推测·被动:一定是被偷了)", "stem_cn": "我找不到包了,一定是被偷了。", "options": ["must have been", "must be", "must have", "must been"] },
-    { "gp": "gp2", "stem": "\"The examiner ___ pleased with my driving.\"(对过去的推测:当时想必满意)", "stem_cn": "主考人对我的驾驶想必是满意的。", "options": ["must have been", "must be", "must have", "may be"] },
-    { "gp": "gp3", "stem": "\"After ___ arrested, the man confessed.\"(介词后动名词被动:被捕后)", "stem_cn": "被捕后,那人招供了。", "options": ["being", "been", "to be", "was"] },
-    { "gp": "gp3", "stem": "\"After ___ been instructed to drive out of town, I began to acquire confidence.\"(介词后完成式动名词被动)", "stem_cn": "在接到把车开出城的指令后,我开始有了信心。", "options": ["having", "has", "had", "being"] },
-    { "gp": "gp4", "stem": "\"I want to give you some ___.\"(名词'建议')", "stem_cn": "我想给你一些建议。", "options": ["advice", "advise", "advices", "advising"] },
-    { "gp": "gp4", "stem": "\"What do you ___ me to do?\"(动词'建议')", "stem_cn": "你建议我做什么?", "options": ["advise", "advice", "advices", "adviced"] },
-    { "gp": "gp4", "stem": "\"He ___ me to get a license.\"(动词'建议';美语 license 名动同形)", "stem_cn": "他建议我去考驾照。", "options": ["advised", "adviced", "advice", "advise"] },
-    { "gp": "gp5", "stem": "\"We ___ ourselves at the party.\"(玩得开心:enjoy oneself)", "stem_cn": "我们在聚会上玩得很开心。", "options": ["enjoyed", "entertained", "amused", "pleased"] },
-    { "gp": "gp5", "stem": "\"He ___ us to dinner.\"(请客、招待)", "stem_cn": "他请我们吃饭。", "options": ["entertained", "enjoyed", "amused", "invited to"] },
-    { "gp": "gp5", "stem": "\"The clown ___ the children with his tricks.\"(逗乐、使发笑)", "stem_cn": "小丑用把戏把孩子们逗乐了。", "options": ["amused", "enjoyed", "entertained to", "pleased of"] },
-    { "gp": "gp6", "stem": "\"The children were ___ by the circus clown.\"(被逗乐——'被…'的被动形式)", "stem_cn": "孩子们被马戏团小丑逗乐了。", "options": ["amused", "amusing", "enjoying", "entertaining"] },
-    { "gp": "gp6", "stem": "\"His funny stories ___ us all.\"(他的故事把大家逗乐了)", "stem_cn": "他那些有趣的故事把我们都逗乐了。", "options": ["amused", "enjoyed", "were amused", "pleased of"] },
-    { "gp": "gp6", "stem": "\"That child can ___ himself for hours.\"(自己一个人自得其乐、打发时间)", "stem_cn": "那孩子能一个人玩好几个小时。", "options": ["amuse", "enjoy", "entertain", "amused"] }
+    { "gp": "gp1", "stem": "\"This car ___ in Germany in 1925.\"(一般过去被动)", "stem_cn": "这辆车1925年在德国制造。", "options": ["was made", "made", "was making", "has made"] },
+    { "gp": "gp1", "stem": "\"Only ten of them ___ ever built.\"(一般过去被动,主语复数)", "stem_cn": "这种车一共只造过十辆。", "options": ["were", "was", "have", "are"] },
+    { "gp": "gp1", "stem": "\"The maker's name ___ under the seat.\"(一般过去被动:被发现)", "stem_cn": "制造商的名字在座位下被发现了。", "options": ["was found", "found", "was finding", "has found"] },
+    { "gp": "gp2", "stem": "\"When it arrived, the engine could hardly ___.\"(情态被动:几乎发动不了)", "stem_cn": "送来时,引擎几乎发动不了。", "options": ["be started", "start", "started", "been started"] },
+    { "gp": "gp2", "stem": "\"'It ___,' said the mechanic.\"(情态被动:它能被修好)", "stem_cn": "“它能修好,”技师说。", "options": ["can be repaired", "can repair", "can be repair", "can repaired"] },
+    { "gp": "gp2", "stem": "\"It ___ in a dry garage — it looks so clean.\"(对过去的推测·被动:一定是被放在…)", "stem_cn": "它一定是被放在干燥的车库里——看起来这么干净。", "options": ["must have been kept", "must keep", "must be keeping", "must kept"] },
+    { "gp": "gp3", "stem": "\"After months of work, the car ___ fully restored.\"(现在完成被动)", "stem_cn": "几个月的修理后,这辆车已被完全修复。", "options": ["has been", "was being", "is", "had"] },
+    { "gp": "gp3", "stem": "\"The museum ___ several rare cars this year.\"(现在完成主动对照:已收购)", "stem_cn": "博物馆今年已收购了几辆稀有的车。", "options": ["has acquired", "has been acquired", "was acquired", "acquiring"] },
+    { "gp": "gp3", "stem": "\"All the broken parts ___ replaced.\"(现在完成被动,主语复数)", "stem_cn": "所有坏零件都已被更换。", "options": ["have been", "has been", "was", "were being"] },
+    { "gp": "gp4", "stem": "\"For years it ___ in an old garage.\"(过去完成被动:一直被存放)", "stem_cn": "多年来它一直被存放在一个旧车库里。", "options": ["had been kept", "kept", "was keeping", "has kept"] },
+    { "gp": "gp4", "stem": "\"The car ___ for so long that it needed a lot of work.\"(过去完成被动:被存放)", "stem_cn": "这辆车被存放了这么久,需要大量修理。", "options": ["had been stored", "had stored", "was storing", "stored"] },
+    { "gp": "gp5", "stem": "\"While the car ___ cleaned, the name was found.\"(过去进行被动)", "stem_cn": "在清理这辆车时,发现了名字。", "options": ["was being", "was", "is being", "had been"] },
+    { "gp": "gp5", "stem": "\"When I visited, the engine ___ repaired by two mechanics.\"(过去进行被动)", "stem_cn": "我参观时,引擎正被两名技师修理。", "options": ["was being", "was", "is being", "has been"] },
+    { "gp": "gp5", "stem": "\"Every part ___ checked when the manager arrived.\"(过去进行被动)", "stem_cn": "经理到时,每个零件正被检查。", "options": ["was being", "was", "is being", "had been"] },
+    { "gp": "gp6", "stem": "\"___ stored for so long, the car needed a great deal of work.\"(完成式非谓语被动,作状语)", "stem_cn": "由于被存放了这么久,这辆车需要大量修理。", "options": ["Having been", "Being", "Have been", "Been"] },
+    { "gp": "gp6", "stem": "\"___ kept in a dry place, the engine was still in good condition.\"(完成式非谓语被动)", "stem_cn": "由于被放在干燥处,引擎仍然状况良好。", "options": ["Having been", "Being", "Has been", "Been"] },
+    { "gp": "gp6", "stem": "\"We expected the maker's name ___ somewhere on the car.\"(不定式被动)", "stem_cn": "我们估计制造商的名字会印在车上某处。", "options": ["to be found", "to find", "to be find", "found"] },
+    { "gp": "gp6", "stem": "\"The owner wanted the car ___ to its original condition.\"(不定式被动:想让车被修复)", "stem_cn": "车主想让这辆车被修复到原来的状态。", "options": ["to be restored", "to restore", "to be restore", "restoring"] }
   ],
   "stage6": [
-    { "stem": "美语里\"驾照、执照\"拼作:", "options": ["license", "licence", "lisence", "licanse"] },
-    { "stem": "美语里\"练习(动词)\"拼作:", "options": ["practice", "practise", "practece", "practize"] },
-    { "stem": "murder 的意思是:", "options": ["谋杀", "抢劫", "绑架", "欺骗"] },
-    { "stem": "acquire 的意思是:", "options": ["取得,获得", "失去", "借出", "归还"] },
-    { "stem": "confidence 的意思是:", "options": ["信心", "恐惧", "怀疑", "好奇"] },
-    { "stem": "mournful 的意思是:", "options": ["悲哀的,忧伤的", "愤怒的", "兴奋的", "平静的"] }
+    { "stem": "美语里\"汽油\"常说:", "options": ["gas", "petrol", "oil fuel", "car juice"] },
+    { "stem": "美语里\"轮胎\"拼作:", "options": ["tire", "tyre", "tier", "tyer"] },
+    { "stem": "restore 的意思是:", "options": ["修复,复原", "拆毁", "出售", "隐藏"] },
+    { "stem": "rare 的意思是:", "options": ["稀有的,罕见的", "普通的", "廉价的", "巨大的"] },
+    { "stem": "acquire 的意思是:", "options": ["获得,取得", "丢弃", "借出", "归还"] },
+    { "stem": "original 的意思是:", "options": ["最初的,原来的", "最后的", "假的", "现代的"] }
   ],
   "contrast": [
-    { "us": "license", "uk": "licence", "note_cn": "执照;美语 license(名词动词同形),英式名词 licence" },
-    { "us": "practice", "uk": "practise", "note_cn": "练习;美语动词也拼 practice,英式动词拼 practise" },
-    { "us": "defense", "uk": "defence", "note_cn": "防御;美语 defense,英式 defence(-se vs -ce)" },
-    { "us": "pretense", "uk": "pretence", "note_cn": "假装;美语 pretense,英式 pretence" }
+    { "us": "gas", "uk": "petrol", "note_cn": "汽油;美语 gas(gasoline),英式 petrol" },
+    { "us": "tire", "uk": "tyre", "note_cn": "轮胎;美语 tire,英式 tyre" },
+    { "us": "trunk", "uk": "boot", "note_cn": "(汽车)后备箱;美语 trunk,英式 boot" },
+    { "us": "hood", "uk": "bonnet", "note_cn": "(汽车)引擎盖;美语 hood,英式 bonnet" }
   ],
   "chunks": [
-    { "us": "acquire confidence", "ipa": "/əˈkwaɪr ˈkɑːnfɪdəns/", "example1": "I began to acquire confidence.", "example1_cn": "我开始有了信心。", "example2": "She acquired confidence with practice.", "example2_cn": "她通过练习获得了自信。" },
-    { "us": "react to", "ipa": "/riˈækt tuː/", "example1": "It took me a long time to react.", "example1_cn": "我过了好一会儿才作出反应。", "example2": "How did he react to the news?", "example2_cn": "他对这消息有什么反应?" },
-    { "us": "in front of", "ipa": "/ɪn frʌnt əv/", "example1": "A child crosses the road in front of you.", "example1_cn": "一个小孩在你前面穿过马路。", "example2": "He parked in front of the house.", "example2_cn": "他把车停在房子前面。" },
-    { "us": "must have been", "ipa": "/mʌst həv bɪn/", "example1": "The examiner must have been pleased.", "example1_cn": "主考人想必是满意的。", "example2": "It must have been stolen.", "example2_cn": "它一定是被偷了。" }
+    { "us": "come back to life", "ipa": "/kʌm bæk tə laɪf/", "example1": "The old car came back to life.", "example1_cn": "这辆老爷车重获新生。", "example2": "The town comes back to life in summer.", "example2_cn": "小镇一到夏天就热闹起来。" },
+    { "us": "a great deal of", "ipa": "/ə ɡreɪt diːl əv/", "example1": "The car needed a great deal of work.", "example1_cn": "这辆车需要大量修理。", "example2": "It took a great deal of time.", "example2_cn": "这花了大量时间。" },
+    { "us": "restore ... to", "ipa": "/rɪˈstɔːr tuː/", "example1": "It has been restored to its original condition.", "example1_cn": "它已被修复到原来的状态。", "example2": "They restored the house to its former glory.", "example2_cn": "他们把房子修复到往日的辉煌。" },
+    { "us": "work on", "ipa": "/wɜːrk ɑːn/", "example1": "The team worked on the car for months.", "example1_cn": "团队修了这辆车好几个月。", "example2": "She is working on a new project.", "example2_cn": "她在做一个新项目。" }
   ],
   "stage7_cloze": {
-    "context": "I ___1___ for a driver's license for the third time. After ___2___ been instructed to drive out of town, I began to acquire confidence. The examiner ___3___ pleased with my performance. When he tapped the window, the sound ___4___ clearly, but it took me a long time to react.",
+    "context": "The car ___1___ in Germany in 1925. For years it ___2___ in an old garage. While it ___3___ cleaned, the maker's name was found. After months of work, it ___4___ fully restored to its original condition.",
     "blanks": [
-      { "blank_no": 1, "options": ["was being tested", "tested", "was testing", "had tested"], "answer_index": 0 },
-      { "blank_no": 2, "options": ["having", "has", "had", "being"], "answer_index": 0 },
-      { "blank_no": 3, "options": ["must have been", "must be", "must have", "may be"], "answer_index": 0 },
-      { "blank_no": 4, "options": ["could be heard", "could hear", "could been heard", "heard"], "answer_index": 0 }
+      { "blank_no": 1, "options": ["was made", "made", "was making", "has made"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["had been kept", "kept", "was keeping", "has kept"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["was being", "is being", "was", "had been"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["has been", "was being", "is", "had"], "answer_index": 0 }
     ]
   },
   "stage8_listening": [
-    { "stem": "Why was Mr. Eames feeling confident during his driving test?", "options": ["He had driven in heavy traffic successfully and was doing well", "He had failed only once before", "The examiner was his good friend", "The roads were completely empty"] },
-    { "stem": "What did the examiner tell Mr. Eames to do when he tapped the window?", "options": ["Stop within five feet, as if a child had run across the road", "Drive much faster", "Turn the car around", "Park by the side of the road"] },
-    { "stem": "What happened when the examiner tapped the window?", "options": ["It took Eames too long to react; the examiner said he had 'killed' the child", "Eames stopped instantly and passed", "Eames drove straight on", "Eames jumped out of the car"] }
+    { "stem": "What kind of car was brought to the museum?", "options": ["A rare old car made in Germany in 1925, one of only ten ever built", "A brand-new sports car", "A common family car", "A racing car from the 1960s"] },
+    { "stem": "What was found while the car was being cleaned?", "options": ["The maker's name, under the seat", "A box of money", "An old map", "The original keys"] },
+    { "stem": "What condition is the car in now?", "options": ["It has been fully restored to its original condition and is admired by visitors", "It is still broken and unusable", "It was sold to a collector", "It was scrapped for parts"] }
   ],
   "stage9_scenario": [
-    { "stem": "你想说\"这钟1681年在德国制造\"(一般过去被动 be + 过去分词):", "options": ["This clock was made in Germany in 1681.", "This clock made in Germany in 1681.", "This clock was make in Germany in 1681.", "This clock has made in Germany in 1681."] },
-    { "stem": "你想说\"我的包一定是被偷了\"(对过去的推测·被动 must have been + 过去分词):", "options": ["My bag must have been stolen.", "My bag must be stolen.", "My bag must have stolen.", "My bag must been stolen."] },
-    { "stem": "你想说\"他建议我去考驾照\"(动词'建议'用 advise;美语拼 license):", "options": ["He advised me to get a license.", "He adviced me to get a license.", "He advice me to get a license.", "He advised me to get a licence."] }
+    { "stem": "你想说\"这辆车1925年在德国制造\"(一般过去被动 be + 过去分词):", "options": ["This car was made in Germany in 1925.", "This car made in Germany in 1925.", "This car was make in Germany in 1925.", "This car is made in Germany in 1925."] },
+    { "stem": "你想说\"这辆车已被完全修复\"(现在完成被动 has been + 过去分词):", "options": ["The car has been fully restored.", "The car has fully restored.", "The car is fully restore.", "The car had been fully restoring."] },
+    { "stem": "你想说\"清理这辆车时,我们发现了制造商的名字\"(过去进行被动 was being done):", "options": ["While the car was being cleaned, we found the maker's name.", "While the car was cleaning, we found the maker's name.", "While the car cleaned, we found the maker's name.", "While the car has been cleaned, we found the maker's name."] }
   ],
   "stage10": [
-    { "kind": "vocab", "stem": "murder 的意思是:", "options": ["谋杀", "抢劫", "绑架", "欺骗"] },
-    { "kind": "vocab", "stem": "confidence 的意思是:", "options": ["信心", "恐惧", "怀疑", "好奇"] },
-    { "kind": "grammar", "stem": "\"I can't find my bag. It ___ stolen.\"(对过去的推测·被动)", "stem_cn": "我找不到包了,一定是被偷了。", "options": ["must have been", "must be", "must have", "must been"] },
-    { "kind": "grammar", "stem": "\"The man ___ by the police when I arrived.\"(过去进行被动)", "stem_cn": "我到时,那人正被警察盘问。", "options": ["was being questioned", "was questioning", "questioned", "had questioned"] },
-    { "kind": "scenario", "stem": "\"must have been + 过去分词\" 表示的意思是:", "options": ["对过去情况的推测(一定已经…)", "命令别人去做", "将来的计划", "现在的能力"] },
-    { "kind": "scenario", "stem": "美语里\"练习(动词)\"和\"执照\"这两个词拼作:", "options": ["practice、license", "practise、licence", "practise、license", "practice、licence"] },
-    { "kind": "reading", "stem": "Why did the examiner say 'you have just killed that child'?", "options": ["Because Eames took too long to react and braked too late", "Because Eames drove into a wall", "Because there was a real child on the road", "Because Eames drove far too fast"], "passage": true },
-    { "kind": "reading", "stem": "Do you think Mr. Eames passed his test? Why?", "options": ["Probably not — he failed the emergency stop by reacting too slowly", "Yes — he drove perfectly the whole time", "Yes — the examiner smiled at the end", "No — he crashed the car"], "passage": true },
-    { "kind": "listening", "stem": "What was Mr. Eames being tested for?", "options": ["A driver's license, for the third time", "A pilot's license", "A new job", "A school exam"], "audio": true },
-    { "kind": "listening", "stem": "How did the examiner speak at the end?", "options": ["In a mournful (sad) voice", "Angrily and loudly", "Cheerfully", "In a whisper"], "audio": true }
+    { "kind": "vocab", "stem": "restore 的意思是:", "options": ["修复,复原", "拆毁", "出售", "隐藏"] },
+    { "kind": "vocab", "stem": "rare 的意思是:", "options": ["稀有的,罕见的", "普通的", "廉价的", "巨大的"] },
+    { "kind": "grammar", "stem": "\"This car ___ in Germany in 1925.\"(一般过去被动)", "stem_cn": "这辆车1925年在德国制造。", "options": ["was made", "made", "was making", "has made"] },
+    { "kind": "grammar", "stem": "\"After months of work, the car ___ fully restored.\"(现在完成被动)", "stem_cn": "几个月后,这辆车已被完全修复。", "options": ["has been", "was being", "is", "had"] },
+    { "kind": "scenario", "stem": "被动语态的基本结构是:", "options": ["be + 过去分词", "be + 现在分词", "have + 过去分词", "will + 动词原形"] },
+    { "kind": "scenario", "stem": "\"come back to life\" 的意思是:", "options": ["重获新生,恢复活力", "突然死去", "回到家里", "醒过来吃饭"] },
+    { "kind": "reading", "stem": "Why did the old car need a great deal of work?", "options": ["It had been stored for years and was in poor condition", "It had crashed on the road", "It was brand new", "It was too modern to run"], "passage": true },
+    { "kind": "reading", "stem": "How was the maker's name discovered?", "options": ["It was found under the seat while the car was being cleaned", "It was printed on the door", "The former owner told them", "It was in an old newspaper"], "passage": true },
+    { "kind": "listening", "stem": "Where had the car been kept for years?", "options": ["In an old garage, almost forgotten", "In a museum", "In a showroom", "On a race track"], "audio": true },
+    { "kind": "listening", "stem": "How do visitors feel about the restored car now?", "options": ["They admire it", "They ignore it", "They dislike it", "They are afraid of it"], "audio": true }
   ]
 }

@@ -348,6 +348,17 @@
 - 词10(photography/photo/painting/café/busy/chat/finally/afternoon/miss/learn)。美语化 apartment/vacation/movie/elevator;chunks=haven't seen sb for ages/What have you been up to?/free time/So have I。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73-77=220**,L78-80 待补)。⏭️ L78(🟢低,读源)。
 
+## ⚠️ U10 L78《The last one?》(最后一枝吗?)· 🚩已报 Aaron,待换情节包(题材不宜)
+- 我实读源 doc401-403**未被 content filter 拦**,但**题材=戒烟/吸烟**("I smoked with concentration and pleasure… smoked with satisfaction"),对 K-12 学生课程不宜,与已换掉的暴力/犯罪课同类。**不自产**,已报 Aaron 出换情节包(题材不宜而非过滤,流程同)。
+- 考点(可原样承载):主考 **冠词/限定词 a / an / the / some / any**;SD **keep 短语动词**(keep on/keep off/keep away from/keep it up/keep up with/keep out/be kept in)。
+- 官方词表:entitle/calm/nerve/concentration/suffer/symptom/temper/appetite/produce/urge/satisfaction/delighted。
+- 建议换情节:无害"戒掉某习惯"故事(戒碳酸饮料/熬夜打游戏),承载同样 a/the/some/any + keep 短语。⏸️ U10 内空缺,等包补做。
+
+## ✅ U10 L79《A Long Journey Home》(漫长的回家路)· 🟢全绿 · 🔄方案B换情节包(合集)
+- 换情节=难忘的火车旅行(无害,替换原"飞机+炸弹")。考点原样=**KS7/31/55 一般过去 vs 过去进行 vs used to/would**:一般过去(stopped/cleared/started/opened)+ 过去进行作背景(were traveling/was raining/was sleeping/was waiting)+ used to(过去习惯·现在不再)+ would(过去反复动作)+ 三者叙事配合。全时态运用题,元语法定义题=0。used to vs be used to、would vs will 均设干扰项。
+- 词10(journey/field/track/suddenly/clear/quietly/arrive/remember/pass/summer)。美语化 railroad/fall/vacation/downtown;chunks=used to do/would always do/pass the time/go by。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73-77+L79=264**,L78🚩+L80 待补)。⏭️ L80(🟢低,读源)。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

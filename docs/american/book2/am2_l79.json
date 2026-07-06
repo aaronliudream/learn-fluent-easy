@@ -1,0 +1,131 @@
+{
+  "id": "am2_l79",
+  "unit_no": 10,
+  "lesson_no": 79,
+  "title_en": "A Long Journey Home",
+  "title_cn": "漫长的回家路",
+  "grammar_focus": "KS7/31/55 一般过去 vs 过去进行 vs used to/would(教材 L79 Key structures,方案B换情节包):一般过去时讲发生的事(stopped/cleared/arrived/opened)、过去进行时讲当时正发生的背景(were traveling/was raining/was waiting/was sleeping)、used to / would 讲过去的习惯(used to take/would always sit/would tell),以及三者在叙事中的配合",
+  "scene": "我小时候,一家人每年夏天都坐火车去外婆家。我们总是坐在窗边,看着田野掠过。有一年,我们往北走的途中,火车突然停了。当时雨下得很大,前方一棵树倒在了铁轨上。大家安静地等着,工人们把树清走。我弟弟在睡觉,我却看着雨水顺着玻璃往下流。从前,爸爸总会给我们讲故事打发时间。那天,他聊起了他小时候常坐的那些旅行。几个小时后,火车又开动了,我们终于在夜里到了。我至今还记得,外婆开门时那张多么开心的脸。",
+  "grammar_card": {
+    "title": "KS7/31/55 一般过去 / 过去进行 / used to·would",
+    "intro": "讲过去的故事,三种说法配合用:①一般过去时——一件件“发生了”的事(the train stopped / we arrived);②过去进行时——某时“正在发生”的背景(while we were traveling / it was raining);③used to / would——过去“习惯性、反复”做的事(my family used to take the train / we would always sit by the window)。used to 强调“过去常、现在不再”;would 强调“过去反复的动作”(不用于状态)。",
+    "table": {
+      "headers": ["说法", "例子"],
+      "rows": [
+        ["一般过去(发生的事)", "The train suddenly stopped. / We arrived at night."],
+        ["过去进行(正发生的背景)", "While we were traveling north… / It was raining hard."],
+        ["used to(过去的习惯)", "My family used to take the train every summer."],
+        ["would(过去反复的动作)", "We would always sit by the window."],
+        ["三者配合", "While we were traveling, the train stopped; dad would tell stories."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语里“铁路”说 railroad(英式 railway)、“秋天”说 fall(英式 autumn)、“假期”说 vacation(英式 holiday);本课已按美语写。", "mark": "railroad/fall" },
+      { "rule": "used to + 动词原形=过去常做(现在不再);would + 动词原形=过去反复的动作。二者都讲过去习惯,但 would 不用于“状态”(说 There used to be…,不说 There would be…)。", "mark": "used to / would" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did the train stop that year?",
+    "options": ["A tree had fallen across the track", "It ran out of fuel", "There was a strike", "It reached the last station"],
+    "answer_index": 0
+  },
+  "passage": "When I was a child, my family used to take the train to my grandma's every summer. We would always sit by the window and watch the fields go by. One year, while we were traveling north, the train suddenly stopped. It was raining hard, and a tree had fallen across the track ahead. Everyone was waiting quietly while the workers cleared it away. My little brother was sleeping, but I watched the rain run down the glass. In the old days, my dad would tell us stories to pass the time. That day he told us about the trips he used to take as a boy. Hours later, the train started again, and we finally arrived at night. I still remember how happy grandma looked when she opened the door.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "When I was a child, my family used to take the train to my grandma's every summer. We would always sit by the window and watch the fields go by.", "text_cn": "我小时候,一家人每年夏天都坐火车去外婆家。我们总是坐在窗边,看着田野掠过。" },
+    { "seq": 2, "speaker": null, "text_en": "One year, while we were traveling north, the train suddenly stopped. It was raining hard, and a tree had fallen across the track ahead.", "text_cn": "有一年,我们往北走的途中,火车突然停了。当时雨下得很大,前方一棵树倒在了铁轨上。" },
+    { "seq": 3, "speaker": null, "text_en": "Everyone was waiting quietly while the workers cleared it away. My little brother was sleeping, but I watched the rain run down the glass.", "text_cn": "大家安静地等着,工人们把树清走。我弟弟在睡觉,我却看着雨水顺着玻璃往下流。" },
+    { "seq": 4, "speaker": null, "text_en": "In the old days, my dad would tell us stories to pass the time. That day he told us about the trips he used to take as a boy.", "text_cn": "从前,爸爸总会给我们讲故事打发时间。那天,他聊起了他小时候常坐的那些旅行。" },
+    { "seq": 5, "speaker": null, "text_en": "Hours later, the train started again, and we finally arrived at night. I still remember how happy grandma looked when she opened the door.", "text_cn": "几个小时后,火车又开动了,我们终于在夜里到了。我至今还记得,外婆开门时那张多么开心的脸。" }
+  ],
+  "words": [
+    { "word": "journey", "ipa": "/ˈdʒɜːrni/", "pos": "n", "meaning_cn": "旅程", "example": "A Long Journey Home" },
+    { "word": "field", "ipa": "/fiːld/", "pos": "n", "meaning_cn": "田野", "example": "watch the fields go by" },
+    { "word": "track", "ipa": "/træk/", "pos": "n", "meaning_cn": "轨道,铁轨", "example": "a tree had fallen across the track" },
+    { "word": "suddenly", "ipa": "/ˈsʌdnli/", "pos": "adv", "meaning_cn": "突然", "example": "the train suddenly stopped" },
+    { "word": "clear", "ipa": "/klɪr/", "pos": "v", "meaning_cn": "清除,清理", "example": "the workers cleared it away" },
+    { "word": "quietly", "ipa": "/ˈkwaɪətli/", "pos": "adv", "meaning_cn": "安静地", "example": "Everyone was waiting quietly" },
+    { "word": "arrive", "ipa": "/əˈraɪv/", "pos": "v", "meaning_cn": "到达", "example": "we finally arrived at night" },
+    { "word": "remember", "ipa": "/rɪˈmembər/", "pos": "v", "meaning_cn": "记得", "example": "I still remember how happy grandma looked" },
+    { "word": "pass", "ipa": "/pæs/", "pos": "v", "meaning_cn": "打发(时间),度过", "example": "stories to pass the time" },
+    { "word": "summer", "ipa": "/ˈsʌmər/", "pos": "n", "meaning_cn": "夏天", "example": "every summer" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般过去时(发生的事)" },
+    { "gp": "gp2", "name": "过去进行时(正发生的背景)" },
+    { "gp": "gp3", "name": "used to(过去的习惯)" },
+    { "gp": "gp4", "name": "would(过去反复的动作)" },
+    { "gp": "gp5", "name": "三者在叙事中的配合" },
+    { "gp": "gp6", "name": "词汇辨析(journey / field / track / pass)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"One year, while we were traveling north, the train suddenly ___.\"(stop 的过去式,突然停下)", "stem_cn": "有一年,我们往北走的途中,火车突然停了。", "options": ["stopped", "was stopping", "stops", "had stopped"] },
+    { "gp": "gp1", "stem": "\"The workers ___ the fallen tree away.\"(clear 的过去式,清走)", "stem_cn": "工人们把倒下的树清走了。", "options": ["cleared", "were clearing", "clear", "had cleared"] },
+    { "gp": "gp1", "stem": "\"Hours later, the train ___ again, and we finally arrived at night.\"(start 的过去式)", "stem_cn": "几个小时后,火车又开动了,我们终于在夜里到了。", "options": ["started", "was starting", "starts", "had started"] },
+    { "gp": "gp2", "stem": "\"One year, while we ___ north, the train stopped.\"(当时正往北走:过去进行)", "stem_cn": "有一年,我们正往北走时,火车停了。", "options": ["were traveling", "traveled", "travel", "had traveled"] },
+    { "gp": "gp2", "stem": "\"It ___ hard, and a tree had fallen across the track.\"(当时正下大雨:过去进行)", "stem_cn": "当时雨下得很大,一棵树倒在了铁轨上。", "options": ["was raining", "rained", "rains", "had rained"] },
+    { "gp": "gp2", "stem": "\"My little brother ___ while I watched the rain.\"(当时正在睡:过去进行)", "stem_cn": "我看着雨的时候,我弟弟正在睡觉。", "options": ["was sleeping", "slept", "sleeps", "had slept"] },
+    { "gp": "gp3", "stem": "\"When I was a child, my family ___ take the train every summer.\"(过去常做、现在不再)", "stem_cn": "我小时候,一家人每年夏天都坐火车。", "options": ["used to", "use to", "are used to", "would have"] },
+    { "gp": "gp3", "stem": "\"That day, dad talked about the trips he ___ take as a boy.\"(过去常做的事)", "stem_cn": "那天,爸爸聊起他小时候常坐的那些旅行。", "options": ["used to", "uses to", "is used to", "would be"] },
+    { "gp": "gp3", "stem": "\"There ___ be a small station here, but it closed years ago.\"(过去有、现在没了)", "stem_cn": "这儿以前有个小车站,但多年前就关了。", "options": ["used to", "would", "was used to", "is used to"] },
+    { "gp": "gp4", "stem": "\"We ___ always sit by the window and watch the fields go by.\"(过去反复的动作)", "stem_cn": "我们总是坐在窗边,看着田野掠过。", "options": ["would", "will", "used to be", "are"] },
+    { "gp": "gp4", "stem": "\"In the old days, my dad ___ tell us stories to pass the time.\"(过去反复的动作)", "stem_cn": "从前,爸爸总会给我们讲故事打发时间。", "options": ["would", "will", "is going to", "was"] },
+    { "gp": "gp4", "stem": "\"Every summer, grandma ___ wait at the door for us.\"(过去反复的习惯动作)", "stem_cn": "每年夏天,奶奶总会在门口等我们。", "options": ["would", "will", "is used to", "was being"] },
+    { "gp": "gp5", "stem": "\"While everyone ___ quietly, the workers cleared the track.\"(当时正安静等待:过去进行作背景)", "stem_cn": "大家安静等待的时候,工人们清理着铁轨。", "options": ["was waiting", "waited", "waits", "used to wait"] },
+    { "gp": "gp5", "stem": "\"When the sun came out, grandma ___ the door and smiled.\"(叙事里发生的动作:一般过去)", "stem_cn": "太阳出来时,奶奶开了门,笑了。", "options": ["opened", "was opening", "would open", "opens"] },
+    { "gp": "gp5", "stem": "\"As a boy, my dad ___ climb that hill every day, but he can't now.\"(过去的习惯:现在不再)", "stem_cn": "爸爸小时候每天都爬那座山,可现在爬不动了。", "options": ["used to", "is used to", "was climbing", "climbs"] },
+    { "gp": "gp6", "stem": "\"The train ran along the ___ through the fields.\"(铁轨用哪个词)", "stem_cn": "火车沿着铁轨穿过田野。", "options": ["track", "road", "river", "path"] },
+    { "gp": "gp6", "stem": "\"We watched the green ___ go by from the window.\"(田野用哪个词)", "stem_cn": "我们从窗口看着绿色的田野掠过。", "options": ["fields", "oceans", "mountains", "buildings"] },
+    { "gp": "gp6", "stem": "\"Dad told stories to ___ the time on the long trip.\"(打发(时间)用哪个词)", "stem_cn": "长途旅行中,爸爸讲故事来打发时间。", "options": ["pass", "waste", "lose", "save"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"铁路\"常说:", "options": ["railroad", "railway", "iron-road", "train-line"] },
+    { "stem": "美语里\"秋天\"常说:", "options": ["fall", "autumn", "leaf-time", "cold-season"] },
+    { "stem": "journey 的意思是:", "options": ["旅程", "车站", "车票", "行李"] },
+    { "stem": "suddenly 的意思是:", "options": ["突然", "缓慢地", "安静地", "经常"] },
+    { "stem": "remember 的意思是:", "options": ["记得", "忘记", "想象", "怀疑"] },
+    { "stem": "arrive 的意思是:", "options": ["到达", "出发", "停留", "返回"] }
+  ],
+  "contrast": [
+    { "us": "railroad", "uk": "railway", "note_cn": "铁路;美语 railroad,英式 railway" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" },
+    { "us": "downtown", "uk": "city centre", "note_cn": "市中心;美语 downtown,英式 city centre" }
+  ],
+  "chunks": [
+    { "us": "used to do", "ipa": "/ˈjuːst tə duː/", "example1": "My family used to take the train every summer.", "example1_cn": "我家过去每年夏天都坐火车。", "example2": "I used to live near the sea.", "example2_cn": "我过去住在海边。" },
+    { "us": "would always do", "ipa": "/wʊd ˈɔːlweɪz duː/", "example1": "We would always sit by the window.", "example1_cn": "我们过去总是坐在窗边。", "example2": "Grandpa would always sing on the way home.", "example2_cn": "爷爷过去回家路上总是唱歌。" },
+    { "us": "pass the time", "ipa": "/pæs ðə taɪm/", "example1": "Dad told stories to pass the time.", "example1_cn": "爸爸讲故事来打发时间。", "example2": "We played cards to pass the time.", "example2_cn": "我们打牌来打发时间。" },
+    { "us": "go by", "ipa": "/ɡoʊ baɪ/", "example1": "We watched the fields go by.", "example1_cn": "我们看着田野从窗外掠过。", "example2": "The years went by quickly.", "example2_cn": "岁月飞快地流逝。" }
+  ],
+  "stage7_cloze": {
+    "context": "When I was a child, my family ___1___ take the train every summer. One year, while we ___2___ north, the train suddenly ___3___. It ___4___ hard, and a tree had fallen across the track.",
+    "blanks": [
+      { "blank_no": 1, "options": ["used to", "use to", "are used to", "would have"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["were traveling", "traveled", "travel", "had traveled"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["stopped", "was stopping", "stops", "had stopped"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["was raining", "rained", "rains", "had rained"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How did the family travel to grandma's every summer?", "options": ["By train — they used to take it every summer", "By car", "By plane", "On foot"] },
+    { "stem": "Why did everyone have to wait on the train that year?", "options": ["A tree had fallen across the track and workers were clearing it", "The driver was sick", "There were no more tickets", "The station was closed"] },
+    { "stem": "What did the father do to pass the time?", "options": ["He told stories about the trips he used to take as a boy", "He slept the whole way", "He read a newspaper", "He argued with the workers"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我们小时候每年夏天都坐火车\"(过去的习惯,用 used to):", "options": ["We used to take the train every summer.", "We use to take the train every summer.", "We are used to take the train every summer.", "We were taking the train every summer."] },
+    { "stem": "你想说\"我们正往北走时,火车停了\"(过去进行作背景 + 一般过去):", "options": ["While we were traveling north, the train stopped.", "While we traveled north, the train was stopping.", "While we travel north, the train stopped.", "While we had traveled north, the train stops."] },
+    { "stem": "你想说\"爸爸(从前)总会给我们讲故事\"(过去反复的动作,用 would):", "options": ["My dad would tell us stories.", "My dad will tell us stories.", "My dad is telling us stories.", "My dad would telling us stories."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "journey 的意思是:", "options": ["旅程", "车站", "车票", "行李"] },
+    { "kind": "vocab", "stem": "arrive 的意思是:", "options": ["到达", "出发", "停留", "返回"] },
+    { "kind": "grammar", "stem": "\"My family ___ take the train every summer.\"(过去的习惯,现在不再)", "stem_cn": "我家过去每年夏天都坐火车。", "options": ["used to", "use to", "are used to", "would have"] },
+    { "kind": "grammar", "stem": "\"While we ___ north, the train stopped.\"(当时正在进行的背景:过去进行)", "stem_cn": "我们正往北走时,火车停了。", "options": ["were traveling", "traveled", "travel", "had traveled"] },
+    { "kind": "scenario", "stem": "\"used to do\" 的意思是:", "options": ["过去常做(现在不再)", "习惯于做某事", "将要做某事", "正在做某事"] },
+    { "kind": "scenario", "stem": "\"pass the time\" 的意思是:", "options": ["打发时间", "准时到达", "错过时间", "浪费金钱"] },
+    { "kind": "reading", "stem": "Why was everyone waiting quietly on the train?", "options": ["A tree had fallen across the track and the workers were clearing it away", "The train had reached the last stop", "Everyone was asleep", "The lights had gone out"], "passage": true },
+    { "kind": "reading", "stem": "What does the writer remember most about the trips?", "options": ["How happy grandma looked when she opened the door", "How much the tickets cost", "How fast the train went", "How crowded the station was"], "passage": true },
+    { "kind": "listening", "stem": "What had fallen across the track?", "options": ["A tree", "A rock", "A wall", "A sign"], "audio": true },
+    { "kind": "listening", "stem": "When did the train finally arrive?", "options": ["At night", "At noon", "Early in the morning", "The next day"], "audio": true }
+  ]
+}

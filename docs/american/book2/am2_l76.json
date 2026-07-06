@@ -1,0 +1,131 @@
+{
+  "id": "am2_l76",
+  "unit_no": 10,
+  "lesson_no": 76,
+  "title_en": "What Have You Been Up To?",
+  "title_cn": "你最近在忙什么?",
+  "grammar_focus": "KS4/28/52 现在完成时 vs 现在完成进行时(教材 L76 Key structures,方案B换情节包):现在完成 has/have done(结果、经历,如 have taken/have learned/have found)、现在完成进行 has/have been doing(持续过程,如 have been studying/have been working/have been painting)、两者对比、以及 since(时间点)/ for(时段)",
+  "scene": "“我好久没见你了!”埃玛说,“你最近在忙什么?”“从一月起我一直在学摄影,”利奥说,“我已经拍了几百张照片了,也学到了好多。”“太好了!我一直在咖啡馆打工,不过一直没多少空闲时间。”“你的画画完了吗?”利奥问。“还没——我已经画了三个星期了,不过快好了。”“那咱俩都挺忙的。”“是啊,但我们终于挤出一个下午见面了!”“我一直很想念这些闲聊,”埃玛笑着说。“我也是。下次别隔这么久了。”",
+  "grammar_card": {
+    "title": "KS4/28/52 现在完成 vs 现在完成进行 + since/for",
+    "intro": "两种时态都连着“过去到现在”,但侧重不同:①现在完成 have/has done——强调“结果、已完成、经历”(I have taken hundreds of photos 已经拍了;I have learned a lot 学到了);②现在完成进行 have/has been doing——强调“一直在做、持续的过程”(I have been studying photography 一直在学;I have been painting it 一直在画)。时间词:since + 时间点(since January);for + 一段时间(for three weeks / for ages)。疑问与否定:Have you…? / haven't done。",
+    "table": {
+      "headers": ["时态", "侧重与例子"],
+      "rows": [
+        ["现在完成(结果/经历)", "I have taken hundreds of photos already."],
+        ["现在完成进行(持续过程)", "I have been studying photography since January."],
+        ["对比", "have learned(学到了) vs have been studying(一直在学)"],
+        ["since + 时间点 / for + 时段", "since January / for three weeks"],
+        ["疑问与否定", "Have you finished? / I haven't had much time."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语里“公寓”说 apartment(英式 flat)、“假期”说 vacation(英式 holiday)、“电梯”说 elevator(英式 lift);本课已按美语写。", "mark": "apartment/vacation" },
+      { "rule": "强调“做出的结果/数量/是否完成”用现在完成(have done);强调“一直在进行、还没停”用现在完成进行(have been doing)。since 接时间点,for 接一段时间。", "mark": "done vs been doing" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why haven't Emma and Leo met for so long?",
+    "options": ["They have both been very busy", "They had an argument", "They live in different countries", "They forgot each other"],
+    "answer_index": 0
+  },
+  "passage": "\"I haven't seen you for ages!\" said Emma. \"What have you been doing?\" \"I have been studying photography since January,\" said Leo. \"I have taken hundreds of photos already, and I have learned so much.\" \"That's great! I have been working at the café, but I haven't had much free time.\" \"Have you finished your painting?\" Leo asked. \"Not yet — I have been painting it for three weeks, but it's almost done.\" \"We have both been busy, then.\" \"Yes, but we have finally found an afternoon to meet!\" \"I have missed these chats,\" Emma said with a smile. \"So have I. Let's not wait so long next time.\"",
+  "sentences": [
+    { "seq": 1, "speaker": "Emma", "text_en": "\"I haven't seen you for ages!\" said Emma. \"What have you been doing?\"", "text_cn": "“我好久没见你了!”埃玛说,“你最近在忙什么?”" },
+    { "seq": 2, "speaker": "Leo", "text_en": "\"I have been studying photography since January,\" said Leo. \"I have taken hundreds of photos already, and I have learned so much.\"", "text_cn": "“从一月起我一直在学摄影,”利奥说,“我已经拍了几百张照片了,也学到了好多。”" },
+    { "seq": 3, "speaker": "Emma", "text_en": "\"That's great! I have been working at the café, but I haven't had much free time.\" \"Have you finished your painting?\" Leo asked.", "text_cn": "“太好了!我一直在咖啡馆打工,不过一直没多少空闲时间。”“你的画画完了吗?”利奥问。" },
+    { "seq": 4, "speaker": "Emma", "text_en": "\"Not yet — I have been painting it for three weeks, but it's almost done.\" \"We have both been busy, then.\"", "text_cn": "“还没——我已经画了三个星期了,不过快好了。”“那咱俩都挺忙的。”" },
+    { "seq": 5, "speaker": "Emma", "text_en": "\"Yes, but we have finally found an afternoon to meet!\" \"I have missed these chats,\" Emma said with a smile. \"So have I. Let's not wait so long next time.\"", "text_cn": "“是啊,但我们终于挤出一个下午见面了!”“我一直很想念这些闲聊,”埃玛笑着说。“我也是。下次别隔这么久了。”" }
+  ],
+  "words": [
+    { "word": "photography", "ipa": "/fəˈtɑːɡrəfi/", "pos": "n", "meaning_cn": "摄影", "example": "I have been studying photography" },
+    { "word": "photo", "ipa": "/ˈfoʊtoʊ/", "pos": "n", "meaning_cn": "照片", "example": "I have taken hundreds of photos" },
+    { "word": "painting", "ipa": "/ˈpeɪntɪŋ/", "pos": "n", "meaning_cn": "画作,绘画", "example": "Have you finished your painting?" },
+    { "word": "café", "ipa": "/kæˈfeɪ/", "pos": "n", "meaning_cn": "咖啡馆", "example": "I have been working at the café" },
+    { "word": "busy", "ipa": "/ˈbɪzi/", "pos": "adj", "meaning_cn": "忙碌的", "example": "We have both been busy" },
+    { "word": "chat", "ipa": "/tʃæt/", "pos": "n", "meaning_cn": "闲聊,聊天", "example": "I have missed these chats" },
+    { "word": "finally", "ipa": "/ˈfaɪnəli/", "pos": "adv", "meaning_cn": "终于,最后", "example": "we have finally found an afternoon" },
+    { "word": "afternoon", "ipa": "/ˌæftərˈnuːn/", "pos": "n", "meaning_cn": "下午", "example": "an afternoon to meet" },
+    { "word": "miss", "ipa": "/mɪs/", "pos": "v", "meaning_cn": "想念", "example": "I have missed these chats" },
+    { "word": "learn", "ipa": "/lɜːrn/", "pos": "v", "meaning_cn": "学习,学会", "example": "I have learned so much" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "现在完成时(结果/经历,have done)" },
+    { "gp": "gp2", "name": "现在完成进行时(持续过程,have been doing)" },
+    { "gp": "gp3", "name": "两者对比(have done vs have been doing)" },
+    { "gp": "gp4", "name": "since(时间点) / for(时段)" },
+    { "gp": "gp5", "name": "现在完成的疑问与否定(Have you…? / haven't)" },
+    { "gp": "gp6", "name": "词汇辨析(photography / chat / busy)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"I ___ hundreds of photos already.\"(强调已拍到的结果:现在完成)", "stem_cn": "我已经拍了几百张照片了。", "options": ["have taken", "took", "am taking", "had taken"] },
+    { "gp": "gp1", "stem": "\"We have finally ___ an afternoon to meet.\"(find 的过去分词:现在完成)", "stem_cn": "我们终于找到了一个下午能见面。", "options": ["found", "find", "founded", "finding"] },
+    { "gp": "gp1", "stem": "\"I ___ so much this year.\"(强调学到的结果:现在完成)", "stem_cn": "我今年学到了很多。", "options": ["have learned", "learned", "am learning", "had learned"] },
+    { "gp": "gp2", "stem": "\"I ___ photography since January.\"(一直在学、强调过程:现在完成进行)", "stem_cn": "从一月起我一直在学摄影。", "options": ["have been studying", "studied", "study", "had studied"] },
+    { "gp": "gp2", "stem": "\"I ___ at the café lately.\"(一直在打工:现在完成进行)", "stem_cn": "最近我一直在咖啡馆打工。", "options": ["have been working", "worked", "work", "had worked"] },
+    { "gp": "gp2", "stem": "\"I ___ this painting for three weeks.\"(一直在画:现在完成进行)", "stem_cn": "这幅画我已经画了三个星期了。", "options": ["have been painting", "painted", "paint", "had painted"] },
+    { "gp": "gp3", "stem": "\"'I ___ hundreds of photos,' she said, showing the finished album.\"(强调结果与数量:现在完成)", "stem_cn": "“我拍了几百张照片,”她说着,拿出了做好的相册。", "options": ["have taken", "have been taking", "took", "take"] },
+    { "gp": "gp3", "stem": "\"'I ___ photography, and I still go to class every week.'\"(强调一直在学、还没停:现在完成进行)", "stem_cn": "“我一直在学摄影,现在每周还去上课。”", "options": ["have been studying", "have studied", "studied", "study"] },
+    { "gp": "gp3", "stem": "\"'We ___ busy all month,' they agreed.\"(一直处于忙碌状态:现在完成)", "stem_cn": "“我们这一整月一直都很忙,”他们都这么说。", "options": ["have been", "are being", "were", "had been"] },
+    { "gp": "gp4", "stem": "\"I've been studying photography ___ January.\"(接时间点用哪个词)", "stem_cn": "从一月起我一直在学摄影。", "options": ["since", "for", "ago", "from"] },
+    { "gp": "gp4", "stem": "\"I haven't seen you ___ ages!\"(接一段时间用哪个词)", "stem_cn": "我好久没见你了!", "options": ["for", "since", "ago", "in"] },
+    { "gp": "gp4", "stem": "\"I've been painting it ___ three weeks.\"(接一段时间用哪个词)", "stem_cn": "这幅画我画了三个星期了。", "options": ["for", "since", "ago", "by"] },
+    { "gp": "gp5", "stem": "\"___ you finished your painting yet?\"(现在完成的一般疑问)", "stem_cn": "你的画画完了吗?", "options": ["Have", "Did", "Are", "Do"] },
+    { "gp": "gp5", "stem": "\"I ___ much free time lately.\"(现在完成的否定:一直没多少空)", "stem_cn": "最近我一直没多少空闲时间。", "options": ["haven't had", "didn't have", "don't have", "hadn't had"] },
+    { "gp": "gp5", "stem": "\"I ___ you for ages!\"(现在完成的否定:好久没见)", "stem_cn": "我好久没见到你了!", "options": ["haven't seen", "didn't see", "don't see", "hadn't seen"] },
+    { "gp": "gp6", "stem": "\"Leo has been learning ___ — taking pictures with a camera.\"(摄影用哪个词)", "stem_cn": "利奥一直在学摄影——用相机拍照。", "options": ["photography", "painting", "cooking", "singing"] },
+    { "gp": "gp6", "stem": "\"'I've missed these ___,' Emma said.\"(闲聊、聊天用哪个词)", "stem_cn": "“我很想念这些闲聊,”埃玛说。", "options": ["chats", "races", "exams", "meals"] },
+    { "gp": "gp6", "stem": "\"They've both been very ___ this month.\"(忙碌用哪个词)", "stem_cn": "他们俩这个月都很忙。", "options": ["busy", "lazy", "sleepy", "angry"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"公寓\"常说:", "options": ["apartment", "flat", "live-room", "stay-house"] },
+    { "stem": "美语里\"假期\"常说:", "options": ["vacation", "holiday", "off-time", "rest-day"] },
+    { "stem": "photography 的意思是:", "options": ["摄影", "绘画", "写作", "唱歌"] },
+    { "stem": "busy 的意思是:", "options": ["忙碌的", "空闲的", "疲惫的", "无聊的"] },
+    { "stem": "miss 的意思是:", "options": ["想念", "遇见", "忘记", "讨厌"] },
+    { "stem": "finally 的意思是:", "options": ["终于,最后", "起初", "突然", "从不"] }
+  ],
+  "contrast": [
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" }
+  ],
+  "chunks": [
+    { "us": "haven't seen sb for ages", "ipa": "/ˈhævnt siːn fɔːr ˈeɪdʒɪz/", "example1": "I haven't seen you for ages!", "example1_cn": "我好久没见你了!", "example2": "We haven't seen each other for ages.", "example2_cn": "我们好久没见面了。" },
+    { "us": "What have you been up to?", "ipa": "/wʌt hæv juː bɪn ʌp tuː/", "example1": "Hi! What have you been up to?", "example1_cn": "嗨!你最近在忙些什么?", "example2": "What have the kids been up to today?", "example2_cn": "孩子们今天都在忙些什么?" },
+    { "us": "free time", "ipa": "/friː taɪm/", "example1": "I haven't had much free time.", "example1_cn": "我一直没多少空闲时间。", "example2": "She reads in her free time.", "example2_cn": "她在空闲时间读书。" },
+    { "us": "So have I", "ipa": "/soʊ hæv aɪ/", "example1": "\"I've missed this.\" \"So have I.\"", "example1_cn": "“我一直很想念这个。”“我也是。”", "example2": "\"I've finished mine.\" \"So have I.\"", "example2_cn": "“我做完我的了。”“我也是。”" }
+  ],
+  "stage7_cloze": {
+    "context": "\"I ___1___ you for ages!\" said Emma. \"I ___2___ photography since January,\" said Leo. \"I ___3___ hundreds of photos already.\" \"I've been working at the café, but I ___4___ much free time.\"",
+    "blanks": [
+      { "blank_no": 1, "options": ["haven't seen", "didn't see", "don't see", "hadn't seen"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["have been studying", "studied", "study", "had studied"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["have taken", "took", "am taking", "had taken"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["haven't had", "didn't have", "don't have", "hadn't had"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What has Leo been studying since January?", "options": ["Photography", "Cooking", "Music", "Painting"] },
+    { "stem": "What has Emma been doing?", "options": ["Working at the café, with little free time", "Traveling abroad", "Resting at home", "Studying photography too"] },
+    { "stem": "Has Emma finished her painting?", "options": ["Not yet, but it's almost done", "Yes, she finished it months ago", "No, she never started it", "Yes, she finished it this morning"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"从一月起我一直在学摄影\"(现在完成进行,强调持续 + since 时间点):", "options": ["I have been studying photography since January.", "I studied photography since January.", "I have been studying photography for January.", "I am studying photography since January."] },
+    { "stem": "你想说\"我已经拍了几百张照片了\"(现在完成,强调结果):", "options": ["I have taken hundreds of photos already.", "I have been taking hundreds of photos already.", "I took hundreds of photos already.", "I take hundreds of photos already."] },
+    { "stem": "你想说\"我好久没见你了!\"(现在完成的否定 + for ages):", "options": ["I haven't seen you for ages!", "I didn't see you for ages!", "I don't see you for ages!", "I haven't seen you since ages!"] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "photography 的意思是:", "options": ["摄影", "绘画", "写作", "唱歌"] },
+    { "kind": "vocab", "stem": "miss 的意思是:", "options": ["想念", "遇见", "忘记", "讨厌"] },
+    { "kind": "grammar", "stem": "\"I ___ photography since January.\"(一直在学、强调过程:现在完成进行)", "stem_cn": "从一月起我一直在学摄影。", "options": ["have been studying", "studied", "study", "had studied"] },
+    { "kind": "grammar", "stem": "\"I ___ hundreds of photos already.\"(强调结果:现在完成)", "stem_cn": "我已经拍了几百张照片了。", "options": ["have taken", "took", "am taking", "had taken"] },
+    { "kind": "scenario", "stem": "\"What have you been up to?\" 的意思是:", "options": ["你最近一直在忙些什么?", "你要去哪里?", "你叫什么名字?", "你几点起床?"] },
+    { "kind": "scenario", "stem": "\"I've been painting it ___ three weeks.\" 空里应填:", "options": ["for", "since", "ago", "at"] },
+    { "kind": "reading", "stem": "Why haven't Emma and Leo met for a long time?", "options": ["They have both been very busy", "They live far apart", "They had a quarrel", "They lost each other's numbers"], "passage": true },
+    { "kind": "reading", "stem": "What have Emma and Leo each been doing recently?", "options": ["Leo has been studying photography; Emma has been working at the café", "Both have been on vacation", "Leo has been painting; Emma has been studying", "Both have been resting"], "passage": true },
+    { "kind": "listening", "stem": "How long has Leo been studying photography?", "options": ["Since January", "For three weeks", "Since last year", "For ages"], "audio": true },
+    { "kind": "listening", "stem": "How does Emma feel about their chats?", "options": ["She has missed them", "She finds them boring", "She has no time for them", "She dislikes them"], "audio": true }
+  ]
+}

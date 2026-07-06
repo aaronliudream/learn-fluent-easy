@@ -179,6 +179,12 @@
 - **词表14词全收**(sticky/finger/pie/mix/pastry/annoying/receiver/dismay/recognize/persuade/mess/doorknob/sign/register)。关6美英=mailman/faucet(家/邮件主题)+contrast mail·zip code。
 - 44题;机器12项🟢(1黄=s5#10 "the deaf and the blind" 是 the+形容词并列的教学句式,人工核合法)。seed→`american_am2_seed_unit07.sql`(**L49-L54=264**)。⏭️ L55。
 
+## ⏸️ U7 L55《Not a gold mine》(并非金矿)· **挂起·内容过滤拦截**(2026-07-05)
+- **状态**:CC 生产被内容过滤拦截,Aaron 指示**跳过、由他这边扫源材料出净化版考点清单再回喂**。CC 不再碰 L55,U7 先做 L56+ 往下推,L55 事后补齐。
+- **已知(供 Aaron 净化版参考)**:课名《Not a gold mine》,lesson_no=55,unit_no=7;**主考 KS31 would/used to 表过去习惯**(would 过去反复动作、used to 过去习惯/状态、状态只能 used to);**SD(KS44)used to do / be used to doing / be used to do 三辨析**;**词表19词**(gold/mine/treasure/revealer/invent/detect/bury/cave/seashore/pirate/arm/soil/entrance/finally/worthless/thoroughly/trunk/confident/value);源页 passage=doc295(印256)/KS31=doc296/SD=doc297/MC≈doc298。
+- **触发推测**:课文为寻宝题材(金属探测器 The Revealer 在海边山洞探测海盗埋藏的金子,最终只挖到近乎无价值的小金币+空铁皮箱);疑似 treasure/pirate/buried gold/gold mine 词簇触发。
+- **seed 影响**:unit07 seed 现含 L49-L54 + 后续 L56…,**L55 处留空缺号**,补齐后再并入,COUNT 届时 +44。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

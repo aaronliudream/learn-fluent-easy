@@ -772,3 +772,12 @@
 - **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-94 = 264);已勾合集 checkbox。
 - **★ 换情节合集(L70/75/76/79/81/84/86/87/90/94)10课全部收官**。
 - **待裁决**:无(L93/L94 同考点为教材螺旋设计,道具+词表全异,作间隔练习互补)。
+
+═══════════════════════════════════════
+## L95《A Very Special Day 非常特别的一天》· U12 · 收官包·方案B换情节 · 动词形式综合复习(Review 全册)
+- **来源**:收官包(Aaron 2026-07-05);原课《A fantasy》含 fire×6 想象场景→改「社区丰收节」中性温情,全册动词形式综合考点原样。
+- **考点**:一般现在/现在完成进行/现在完成 · 过去被动/过去完成被动/过去进行 · 一般将来/条件句 · 现在进行被动/将来被动/一般现在被动 · 情态+过去完成/过去进行对比 · 词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:harvest, festival, booth, square, hang, serve, musician, stage, alive, remember。
+- **关6**:美语对照 fall(秋天)/candy(糖果) + 4 词义(harvest/booth/alive/remember)。contrast: fall↔autumn / candy↔sweets / cookie↔biscuit / movie↔film。chunks: look forward to / set up / harvest festival / for a long time。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-95 = 308);已勾收官包 checkbox。
+- **待裁决**:无。

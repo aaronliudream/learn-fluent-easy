@@ -781,3 +781,15 @@
 - **关6**:美语对照 fall(秋天)/candy(糖果) + 4 词义(harvest/booth/alive/remember)。contrast: fall↔autumn / candy↔sweets / cookie↔biscuit / movie↔film。chunks: look forward to / set up / harvest festival / for a long time。
 - **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-95 = 308);已勾收官包 checkbox。
 - **待裁决**:无。
+
+═══════════════════════════════════════
+## L96《What's It Really About? 它到底讲的是什么》· U12 · 收官包·方案B换情节 · 形容词/副词+介词固定搭配(KS22/46/70)· ★★第二册全96课收官
+- **来源**:收官包(Aaron 2026-07-05);原课《The dead return》标题涉亡灵→改「姐姐爱读悬疑小说」中性情节,KS22/46/70 固定搭配考点原样。
+- **考点**:+in/at(interested in·good at·surprised at)/+of(fond of·proud of·afraid of·full of)/+for·to(famous for·grateful to…for)/+about·with(curious about·bored with·excited about)/keen on·pleased with·worth doing/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:interested in, mystery, guess, ending, fond of, surprise, proud of, puzzle, curious, keen on。
+- **关6**:美语对照 math(数学)/vacation(假期) + 4 词义(mystery/curious/ending/guess)。contrast: math↔maths / vacation↔holiday / movie↔film / elevator↔lift。chunks: interested in / good at / famous for / worth reading。
+- **黄警**:s5#4 "fond ___ ... full of surprises" 里可见 "full of" 的 of → [c] 人工核:四选项皆介词、"full of"与"fond of"为不同搭配、"of"为极常见词不构成实质泄漏,判过;验证器仍报 🟢全绿。
+- **校验**:机器12项 🟢 全绿。
+- **★ U12 整单元 L89-96 = 8课×44 = 352 齐**,落库 american_am2_seed_unit12.sql(收官)。
+- **★★ 第二册(am2 / NCE2)全 96 课收官**:12 单元 × 8 课 × 44 题 = 4224 题全部机器12项🟢。
+- **待裁决**:无。

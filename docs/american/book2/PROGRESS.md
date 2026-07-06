@@ -184,6 +184,13 @@
 - **已知(供 Aaron 净化版参考)**:课名《Not a gold mine》,lesson_no=55,unit_no=7;**主考 KS31 would/used to 表过去习惯**(would 过去反复动作、used to 过去习惯/状态、状态只能 used to);**SD(KS44)used to do / be used to doing / be used to do 三辨析**;**词表19词**(gold/mine/treasure/revealer/invent/detect/bury/cave/seashore/pirate/arm/soil/entrance/finally/worthless/thoroughly/trunk/confident/value);源页 passage=doc295(印256)/KS31=doc296/SD=doc297/MC≈doc298。
 - **触发推测**:课文为寻宝题材(金属探测器 The Revealer 在海边山洞探测海盗埋藏的金子,最终只挖到近乎无价值的小金币+空铁皮箱);疑似 treasure/pirate/buried gold/gold mine 词簇触发。
 - **seed 影响**:unit07 seed 现含 L49-L54 + 后续 L56…,**L55 处留空缺号**,补齐后再并入,COUNT 届时 +44。
+- **更新(2026-07-05)**:Aaron+网页版 Claude 核查 p262,确认**纯误判(false positive)**——课文完全无害(金属探测器寻宝趣味文,语法 would/used to)。L55 净化素材由网页版整理后转 CC,CC**用那份干净素材生产、不再自读该课 PDF**。
+
+## ✅ U7 L56《Faster than sound!》(比声音还快!)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc300-301)= **KS32 数量词与比较**:as…as / not as…as、**little·few(否定)vs a little·a few(肯定)**、a lot of / a great deal of(不可数)/ a great many(可数)、the same as / different from。Special difficulties **SD 易混词 handsome/beautiful/pretty/good-looking、reach(接地点/速度)/ arrive in·at**。
+- 裁决(自决):gp1 as…as(3)+ gp2 a lot of/a great deal of/a great many(4)+ gp3 little·few vs a little·a few(4)+ gp4 same as/different from(2)= KS32 主考;gp5 handsome·pretty/reach·arrive(3)+ gp6 break down/过去分词状语(2)= SD+课文辅考。全运用题,元语法定义题=0。
+- 词表11词全收(sound/excitement/handsome/Rolls-Royce/Benz/wheel/explosion/course/rival/speed/downhill)。关6美英=trunk/windshield(汽车主题)+contrast hood·gas;different from 用美语标准搭配(非英式 different to)。
+- 44题;机器12项🟢(3黄=s5#1/2/3 as…as 两个 as 同现,教学结构必然,人工核合法)。seed→`american_am2_seed_unit07.sql`(**L49-L54+L56=308**,缺 L55)。⏭️ L57。
 
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。

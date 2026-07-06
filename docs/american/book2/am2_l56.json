@@ -1,0 +1,135 @@
+{
+  "id": "am2_l56",
+  "unit_no": 7,
+  "lesson_no": 56,
+  "title_en": "Faster than sound!",
+  "title_cn": "比声音还快!",
+  "grammar_focus": "KS32 数量词与比较(as…as/not as…as、little·few vs a little·a few、a lot of·a great deal of·a great many、the same as/different from)(教材 L56 Key structures)主考;SD 易混词 handsome/beautiful/pretty/good-looking、reach/arrive in·at + 课文 break down、no less…than、过去分词作状语(辅考)",
+  "scene": "旧式汽车的比赛每年举行一次。去年有很多汽车参加了这项比赛。比赛开始之前,人们异常激动。最漂亮的汽车之一是罗尔斯-罗伊斯生产的银鬼汽车,而最不寻常的一辆则要属只有 3 只轮子的奔驰牌汽车了。该车造于 1885 年,是参赛车中最老的一辆。在好一阵喧闹的爆炸声之后,比赛开始了。很多汽车在中途就抛了锚,而有些驾驶员花在汽车底下的时间比坐在车里的时间还长。然而还是有几辆汽车跑完了全程。获胜的那辆车达到了时速 40 英里——远远超过任何对手。它在接近终点时,冲下了山坡,驾驶员费了好大劲才把车停下来。这次比赛使每个人都挺开心。它虽然与现代汽车比赛大不相同,但激动人心的程度并不亚于现代汽车大赛。",
+  "grammar_card": {
+    "title": "数量词与比较",
+    "intro": "KS32:as…as 表'和…一样',not as…as 表'不如…';little/few 含否定意味(几乎没有),a little/a few 含肯定意味(一些);a lot of / a great deal of(不可数)/ a great many(可数)表'大量';the same as(相同)/ different from(不同)。",
+    "table": {
+      "headers": ["用法", "例子"],
+      "rows": [
+        ["as…as / not as…as", "He is as old as I am."],
+        ["little·few(否定) vs a little·a few(肯定)", "few people / pick a few"],
+        ["a great deal of(不可数)", "a great deal of excitement"],
+        ["a great many(可数)", "a great many of our products"],
+        ["the same as / different from", "different from modern races"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "SD 易混词:handsome(男子英俊)/ beautiful(女子、事物美丽)/ pretty(女孩、小巧可爱)/ good-looking(好看,男女皆可);reach 后直接接地点或速度(reach a speed),arrive in(大城市/国家)/ arrive at(小地方)。", "mark": "SD 易混词" },
+      { "rule": "过去分词短语作状语(Built in 1885 = 造于 1885 年);no less … than 表'不亚于、同样…'。", "mark": "分词状语·no less than" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How fast did the winning car go?",
+    "options": ["Forty miles an hour", "Forty kilometers an hour", "One hundred miles an hour", "Ten miles an hour"],
+    "answer_index": 0
+  },
+  "passage": "Once a year, a race is held for old cars. A lot of cars entered for this race last year and there was a great deal of excitement just before it began. One of the most handsome cars was a Rolls-Royce Silver Ghost. The most unusual car was a Benz which had only three wheels. Built in 1885, it was the oldest car taking part. After a great many loud explosions, the race began. Many of the cars broke down on the course and some drivers spent more time under their cars than in them! A few cars, however, completed the race. The winning car reached a speed of forty miles an hour — much faster than any of its rivals. It sped downhill at the end of the race and its driver had a lot of trouble trying to stop it. The race gave everyone a great deal of pleasure. It was very different from modern car races but no less exciting.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Once a year, a race is held for old cars. A lot of cars entered for this race last year and there was a great deal of excitement just before it began.", "text_cn": "旧式汽车的比赛每年举行一次。去年有很多汽车参加了这项比赛,比赛开始之前,人们异常激动。" },
+    { "seq": 2, "speaker": null, "text_en": "One of the most handsome cars was a Rolls-Royce Silver Ghost. The most unusual car was a Benz which had only three wheels.", "text_cn": "最漂亮的汽车之一是罗尔斯-罗伊斯生产的银鬼汽车,而最不寻常的一辆则要属只有 3 只轮子的奔驰牌汽车了。" },
+    { "seq": 3, "speaker": null, "text_en": "Built in 1885, it was the oldest car taking part. After a great many loud explosions, the race began.", "text_cn": "该车造于 1885 年,是参赛车中最老的一辆。在好一阵喧闹的爆炸声之后,比赛开始了。" },
+    { "seq": 4, "speaker": null, "text_en": "Many of the cars broke down on the course and some drivers spent more time under their cars than in them!", "text_cn": "很多汽车在中途就抛了锚,而有些驾驶员花在汽车底下的时间比坐在车里的时间还长。" },
+    { "seq": 5, "speaker": null, "text_en": "A few cars, however, completed the race. The winning car reached a speed of forty miles an hour — much faster than any of its rivals.", "text_cn": "然而还是有几辆汽车跑完了全程。获胜的那辆车达到了时速 40 英里——远远超过任何对手。" },
+    { "seq": 6, "speaker": null, "text_en": "It sped downhill at the end of the race and its driver had a lot of trouble trying to stop it.", "text_cn": "它在接近终点时冲下了山坡,驾驶员费了好大劲才把车停下来。" },
+    { "seq": 7, "speaker": null, "text_en": "The race gave everyone a great deal of pleasure.", "text_cn": "这次比赛使每个人都挺开心。" },
+    { "seq": 8, "speaker": null, "text_en": "It was very different from modern car races but no less exciting.", "text_cn": "它虽然与现代汽车比赛大不相同,但激动人心的程度并不亚于现代汽车大赛。" }
+  ],
+  "words": [
+    { "word": "sound", "ipa": "/saʊnd/", "pos": "n", "meaning_cn": "声音", "example": "Faster than sound!" },
+    { "word": "excitement", "ipa": "/ɪkˈsaɪtmənt/", "pos": "n", "meaning_cn": "激动,兴奋", "example": "a great deal of excitement" },
+    { "word": "handsome", "ipa": "/ˈhænsəm/", "pos": "adj", "meaning_cn": "漂亮的,美观的;清秀的", "example": "one of the most handsome cars" },
+    { "word": "Rolls-Royce", "ipa": "/ˌroʊlz ˈrɔɪs/", "pos": "n", "meaning_cn": "罗尔斯-罗伊斯(汽车品牌)", "example": "a Rolls-Royce Silver Ghost" },
+    { "word": "Benz", "ipa": "/benz/", "pos": "n", "meaning_cn": "奔驰(汽车品牌)", "example": "The most unusual car was a Benz" },
+    { "word": "wheel", "ipa": "/wiːl/", "pos": "n", "meaning_cn": "轮子", "example": "had only three wheels" },
+    { "word": "explosion", "ipa": "/ɪkˈsploʊʒən/", "pos": "n", "meaning_cn": "爆炸,轰响", "example": "a great many loud explosions" },
+    { "word": "course", "ipa": "/kɔːrs/", "pos": "n", "meaning_cn": "跑道;行程", "example": "broke down on the course" },
+    { "word": "rival", "ipa": "/ˈraɪvəl/", "pos": "n", "meaning_cn": "对手,竞争者", "example": "faster than any of its rivals" },
+    { "word": "speed", "ipa": "/spiːd/", "pos": "v/n", "meaning_cn": "疾驶;速度", "example": "It sped downhill" },
+    { "word": "downhill", "ipa": "/ˌdaʊnˈhɪl/", "pos": "adv", "meaning_cn": "下坡地", "example": "It sped downhill" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "as…as / not as…as(同级比较)" },
+    { "gp": "gp2", "name": "a lot of / a great deal of / a great many(大量)" },
+    { "gp": "gp3", "name": "little·few(否定) vs a little·a few(肯定)" },
+    { "gp": "gp4", "name": "the same as / different from" },
+    { "gp": "gp5", "name": "handsome/pretty · reach/arrive 辨析(SD)" },
+    { "gp": "gp6", "name": "break down / 过去分词作状语(辅考·课文)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He is as old ___ I am.\"(和…一样…结构的后半个词)", "stem_cn": "他和我同龄。", "options": ["as", "than", "that", "like"] },
+    { "gp": "gp1", "stem": "\"This car is ___ fast as that one.\"(和…一样…结构的前半个词)", "stem_cn": "这辆车和那辆一样快。", "options": ["as", "so", "very", "too"] },
+    { "gp": "gp1", "stem": "\"She is not as intelligent ___ we think.\"(并不像…那样…结构的后半个词)", "stem_cn": "她并不像我们想的那么聪明。", "options": ["as", "than", "that", "like"] },
+    { "gp": "gp2", "stem": "\"There was a great deal ___ excitement before the race.\"(表大量·后接不可数名词,a great deal 后的介词)", "stem_cn": "赛前有很大的激动气氛。", "options": ["of", "in", "on", "for"] },
+    { "gp": "gp2", "stem": "\"A great ___ of our products are sold overseas.\"(表大量·后接可数复数名词的那个词)", "stem_cn": "我们很多产品销往海外。", "options": ["many", "deal", "much", "lot"] },
+    { "gp": "gp2", "stem": "\"There isn't ___ whiskey left.\"(否定句中修饰不可数名词的'多')", "stem_cn": "剩下的威士忌不多了。", "options": ["much", "many", "a few", "few"] },
+    { "gp": "gp2", "stem": "\"A ___ of cars entered for the race.\"(表'许多',a ___ of cars)", "stem_cn": "许多汽车报名参赛。", "options": ["lot", "deal", "many", "much"] },
+    { "gp": "gp3", "stem": "\"There is ___ I can do to help him.\"(几乎没有·修饰不可数,含否定意味)", "stem_cn": "我几乎帮不了他什么。", "options": ["little", "a little", "few", "a few"] },
+    { "gp": "gp3", "stem": "\"There isn't much whiskey, but you can have ___.\"(一点点·肯定意味·修饰不可数)", "stem_cn": "威士忌不多,但你可以喝一点。", "options": ["a little", "little", "a few", "few"] },
+    { "gp": "gp3", "stem": "\"There were ___ people in the shop; it was almost empty.\"(几乎没有·修饰可数复数,含否定意味)", "stem_cn": "店里几乎没人,差不多空了。", "options": ["few", "a few", "little", "a little"] },
+    { "gp": "gp3", "stem": "\"There aren't many apples, but you can pick ___.\"(一些·肯定意味·修饰可数复数)", "stem_cn": "苹果不多,但你可以摘一些。", "options": ["a few", "few", "a little", "little"] },
+    { "gp": "gp4", "stem": "\"My jacket is the same ___ yours.\"(表'和…相同',the same 后的词)", "stem_cn": "我的夹克和你的一样。", "options": ["as", "from", "than", "with"] },
+    { "gp": "gp4", "stem": "\"The old race was very different ___ modern car races.\"(表'和…不同',different 后的介词)", "stem_cn": "旧式赛车与现代车赛很不一样。", "options": ["from", "than", "as", "with"] },
+    { "gp": "gp5", "stem": "\"He is a very ___ young man.\"(形容男子'英俊、清秀')", "stem_cn": "他是个非常清秀的年轻人。", "options": ["handsome", "pretty", "beautiful", "cute"] },
+    { "gp": "gp5", "stem": "\"The winning car ___ a speed of forty miles an hour.\"('达到'某速度,后面直接接宾语)", "stem_cn": "获胜的车达到了每小时 40 英里的速度。", "options": ["reached", "arrived", "arrived at", "got"] },
+    { "gp": "gp5", "stem": "\"They ___ New York late last night.\"(到达大城市或国家时用的'到达 + 介词')", "stem_cn": "他们昨天深夜到达纽约。", "options": ["arrived in", "reached in", "arrived to", "arrived"] },
+    { "gp": "gp6", "stem": "\"Many cars ___ on the course during the race.\"(汽车'抛锚、出故障'的过去式)", "stem_cn": "比赛中许多车在跑道上抛锚了。", "options": ["broke down", "broke out", "broke up", "broke in"] },
+    { "gp": "gp6", "stem": "\"___ in 1885, it was the oldest car taking part.\"(过去分词短语作状语:被造于)", "stem_cn": "它造于 1885 年,是参赛车中最老的。", "options": ["Built", "Building", "To build", "Build"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"(汽车)后备箱\"常说:", "options": ["trunk", "boot", "back box", "car chest"] },
+    { "stem": "美语里\"挡风玻璃\"常说:", "options": ["windshield", "windscreen", "front glass", "wind glass"] },
+    { "stem": "excitement 的意思是:", "options": ["激动,兴奋", "无聊", "恐惧", "悲伤"] },
+    { "stem": "handsome 的意思是:", "options": ["漂亮的,清秀的", "丑陋的", "高大的", "年老的"] },
+    { "stem": "rival 的意思是:", "options": ["对手,竞争者", "朋友", "观众", "裁判"] },
+    { "stem": "downhill 的意思是:", "options": ["下坡地", "上坡地", "水平地", "向后地"] }
+  ],
+  "contrast": [
+    { "us": "trunk", "uk": "boot", "note_cn": "汽车后备箱;美语 trunk,英式 boot" },
+    { "us": "windshield", "uk": "windscreen", "note_cn": "挡风玻璃;美语 windshield,英式 windscreen" },
+    { "us": "hood", "uk": "bonnet", "note_cn": "发动机罩;美语 hood,英式 bonnet" },
+    { "us": "gas", "uk": "petrol", "note_cn": "汽油;美语 gas(gasoline),英式 petrol" }
+  ],
+  "chunks": [
+    { "us": "break down", "ipa": "/breɪk daʊn/", "example1": "Many cars broke down on the course.", "example1_cn": "许多车在赛道上抛锚了。", "example2": "My car broke down on the way home.", "example2_cn": "我的车在回家路上抛锚了。" },
+    { "us": "a great deal of", "ipa": "/ə ɡreɪt diːl əv/", "example1": "There was a great deal of excitement.", "example1_cn": "当时有极大的激动气氛。", "example2": "It gave us a great deal of pleasure.", "example2_cn": "这给了我们极大的乐趣。" },
+    { "us": "no less ... than", "ipa": "/noʊ les ðæn/", "example1": "It was no less exciting than modern races.", "example1_cn": "它不亚于现代赛车那么激动人心。", "example2": "She is no less clever than her sister.", "example2_cn": "她不比姐姐逊色。" },
+    { "us": "different from", "ipa": "/ˈdɪfrənt frɑːm/", "example1": "It was very different from modern car races.", "example1_cn": "它和现代汽车赛很不一样。", "example2": "My idea is different from yours.", "example2_cn": "我的想法和你的不同。" }
+  ],
+  "stage7_cloze": {
+    "context": "A ___1___ of cars entered for this race, and there was a great ___2___ of excitement before it began. Many of the cars broke down, but ___3___ few cars completed it. The winning car was very different ___4___ modern racing cars.",
+    "blanks": [
+      { "blank_no": 1, "options": ["lot", "deal", "many", "much"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["deal", "lot", "many", "number"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["a", "the", "some", "any"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["from", "than", "as", "with"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How often is the old-car race held?", "options": ["Once a year", "Every month", "Once in ten years", "Every weekend"] },
+    { "stem": "What was unusual about the Benz?", "options": ["It had only three wheels and was built in 1885", "It was bright red", "It had no engine", "It could fly"] },
+    { "stem": "What trouble did the winning driver have?", "options": ["He had a lot of trouble trying to stop the car as it sped downhill", "He ran out of gas", "He got lost", "He crashed into a rival"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"这辆车和那辆一样快\"(和…一样…用 as...as):", "options": ["This car is as fast as that one.", "This car is so fast as that one.", "This car is as fast than that one.", "This car is fast as that one."] },
+    { "stem": "你想说\"苹果不多,但你可以摘一些\"(肯定'一些'用 a few):", "options": ["There aren't many apples, but you can pick a few.", "There aren't many apples, but you can pick few.", "There aren't many apples, but you can pick a little.", "There aren't many apples, but you can pick little."] },
+    { "stem": "你想说\"它和现代汽车赛很不一样\"(和…不同用 different from):", "options": ["It was very different from modern car races.", "It was very different than modern car races.", "It was very different to modern car races.", "It was very different with modern car races."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "excitement 的意思是:", "options": ["激动,兴奋", "无聊", "恐惧", "悲伤"] },
+    { "kind": "vocab", "stem": "rival 的意思是:", "options": ["对手,竞争者", "朋友", "观众", "裁判"] },
+    { "kind": "grammar", "stem": "\"There was a great deal ___ excitement.\"(a great deal 后接的介词)", "stem_cn": "当时有极大的激动气氛。", "options": ["of", "in", "on", "for"] },
+    { "kind": "grammar", "stem": "\"There is ___ I can do to help him.\"(几乎没有·含否定意味·不可数)", "stem_cn": "我几乎帮不了他什么。", "options": ["little", "a little", "few", "a few"] },
+    { "kind": "scenario", "stem": "\"break down\"(用于汽车)的意思是:", "options": ["抛锚,出故障", "加速", "刹车", "转弯"] },
+    { "kind": "scenario", "stem": "\"no less exciting\" 的意思是:", "options": ["同样激动人心(不亚于)", "不那么激动人心", "毫无乐趣", "非常危险"] },
+    { "kind": "reading", "stem": "How fast did the winning car go?", "options": ["Forty miles an hour", "Forty kilometers an hour", "One hundred miles an hour", "Ten miles an hour"], "passage": true },
+    { "kind": "reading", "stem": "How was this race compared to modern car races?", "options": ["Very different, but no less exciting", "Exactly the same", "Much more boring", "Much more dangerous"], "passage": true },
+    { "kind": "listening", "stem": "What happened to many of the cars during the race?", "options": ["They broke down on the course", "They won prizes", "They caught fire", "They all finished easily"], "audio": true },
+    { "kind": "listening", "stem": "Which car had only three wheels?", "options": ["The Benz, built in 1885", "The Rolls-Royce Silver Ghost", "A modern racing car", "None of them"], "audio": true }
+  ]
+}

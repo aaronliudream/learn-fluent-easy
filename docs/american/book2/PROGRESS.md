@@ -326,6 +326,18 @@
 - 词10(包给词表为下限:limelight/disguise/costume/actor/director/scene/perfect/recognize/crowd/famous,原 sheriff/sneer/notice 等强绑词已降级不进课文)。美语化:movie/downtown/on vacation;关6美英=movie/film + downtown/city centre + on vacation/on holiday + fall/autumn;chunks=out of the limelight/get on with it/get through to sb/too good to be true。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73+L74=88**)。⏭️ L75(🔴换情节包待网页版)。
 
+## 🔁 过滤误判处理**统一化**(2026-07-05 三次拍板·凌驾风险分级)
+- 不再按风险级分流:**每课 CC 正常试读源产出;一旦被 content filtering 拦→立即跳过、不重试,报 Aaron `课号+课名+已知考点(KS)+官方词表`**;Aaron 转网页版出换情节包(方案B:考点原样、情节换无害),CC 用包补做。
+- 风险清单只作“网页版**主动优先**出包”的参考,**不作 CC 判断依据**。核心:**撞了就跳+报,不卡线;能否预判不重要。**
+- 实例:L74《Out of the limelight》、L77《A successful operation》我实读源均**未被拦**,但网页版预扫复判会拦并主动出换情节包→按 L69 先例用包产(honesty:照实说“实读未被拦”)。
+
+## ✅ U10 L77《The Oldest Bridge in Town》(镇上最老的桥)· 🟢全绿 · 🔄方案B换情节包
+- **风险再分级**:原标✅,我实读源 doc397-400《A successful operation》(埃及木乃伊做手术查死因)**未被拦**;网页版复判会拦(触发=how the woman died + mummy/operation 死亡-医疗联想),主动出换情节包。用包产。
+- **unit 号**:包头 unit_no=10 正确(U10=L73-80),无需纠偏。
+- 换情节=《镇上最老的桥》:考古专家研究小镇最老石桥(无害,替换木乃伊死因)。考点原样保留:主考 **KS5/29/53 一般过去 / 现在完成 / 现在完成进行 三时态对比**(was built/appeared vs has stood/have crossed/has remained vs have been examining/have been working)+ 辅考 **for(时段)/ since(时间点)/ ago(时段+ago)**。全时态运用题,元语法定义题=0。
+- 词14(包给官方词为下限全含:examine/discover/expert/original/stone/repair/condition/century/recently/wooden/replace/remain/ancient/structure)。美语化:sidewalk/downtown/elevator;关6美英=sidewalk/pavement + downtown/city centre + elevator/lift + fall/autumn;chunks=have been doing (for/since)/stand over the river/be replaced with/remain the same。cloze 去掉“for six months”防 for 预现(黄警清)。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73+L74+L77=132**,L75/L76 空缺→现已收到换情节包合集,即将补齐)。⏭️ L75/L76(用合集包补做),再 L78。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

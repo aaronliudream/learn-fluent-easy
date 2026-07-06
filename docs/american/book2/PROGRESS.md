@@ -725,3 +725,12 @@
 - **关6**:美语对照 theater(剧院)/elevator(电梯) + 4 词义(host/nervous/introduce/ruin)。contrast: theater↔theatre / elevator↔lift / first floor↔ground floor / movie↔film。chunks: a slip of the tongue / be hard on / mix up / keep going。
 - **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(新建,L89 = 44,U12开篇)。
 - **待裁决**:无。
+
+═══════════════════════════════════════
+## L90《What's for Dinner? 晚饭吃什么》· U12 · 合集·方案B换情节 · 情态表达(KS17/41/65)
+- **来源**:换情节合集(Aaron 2026-07-05);与 L89 同 KS17/41/65 情态(教材 Unit 4 螺旋复习),情节换「一家人一起做晚饭」中性日常。
+- **考点**:must/推测/have to·had to/needn't·don't have to/should/must vs have to 主客观区别/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:dinner, cook, shopping, chop, vegetable, knife, soup, taste, smell, remind。
+- **关6**:美语对照 stove(炉灶)/faucet(水龙头) + 4 词义(chop/knife/taste/remind)。contrast: stove↔cooker / faucet↔tap / cookie↔biscuit / candy↔sweets。chunks: what's for dinner / go shopping / be careful with / cook together。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-90 = 88);已勾合集 checkbox。
+- **待裁决**:无(L89/L90 同考点为教材螺旋设计,故事+词表全异,作间隔练习互补)。

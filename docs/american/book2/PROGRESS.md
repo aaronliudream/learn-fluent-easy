@@ -308,6 +308,17 @@
 - 词10(官方7:racing/per/Utah/horsepower/burst/average/footstep + 补3 record/specially/disappointed)。美语化:**tyre→tire**、**Father Christmas→Santa Claus**;**British practise/practice 区别按方案降级**——美语课只教 practice 一种拼法(名词动词同形),grammar_card 加📌 register 注,不出 practise 陷阱题。关6美英=trunk/boot(后备箱)+ hood/bonnet(引擎盖)+ gas/petrol + windshield/windscreen;chunks=set up a record/have great difficulty in doing/follow in one's footsteps/be disappointed to learn。MC comprehension 正解(a)"是否达到301一度有疑问"已用作 s10 reading#7。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-69+L71+L72=308**,L70 空缺待换情节包补)。⏭️ L73(🟢低,正常读)。
 
+## 📖 教材结构发现:Unit 4(L73-96)换格式
+- **源 doc 定位**:L72 后依次是 **PRE-UNIT TEST 4**(doc368-374)+ 空白页 + **Unit 4 单元封面**(doc376)+ Unit 4 Instructions/Example《The sacred tree》范例(doc377-380)+ KS/SD 说明页(doc381 顶),**Lesson 73 正文起 doc381**(book p342)。以后 L74+ 每课约 doc+4(passage / summary-CONNECTIONS / KS+MC / MC续)。
+- **Unit 4 每课格式变了**:24 篇短文,课文后**不再有 Comprehension 小题**,改成 Summary writing 的 CONNECTIONS(连词造句)+ Composition + Letter writing;但**语言点仍在**——Key structures **复习** Units 1/2/3 学过的语法(revise),KS 后接 Special difficulties,再接 Multiple choice。⇒ 与本流水线兼容:照旧从 KS/SD 抽语法做关5/6,MC 抽 comprehension 做关8/10 reading。风险表里 L73-96 的“语法点”即来自这些复习 KS。
+
+## ✅ U10 L73《The record-holder》(纪录保持者)· 🟢全绿 · 🟢低,正常读源
+- **U10 首课**(U10=L73-80)。🟢低课:试读源 doc381-384 顺利,正常读源产出。逃学男孩搭便车旅行1600英里被警察送回——无害记叙,未被拦。
+- 主考(源 doc383 = Key structures)= **KS1/25/49 简单句·并列句·复合句**(用连词把句子连成一句):who/whose(定语)、when/as、after+分词被动、although/in spite of the fact that/though(让步)、not only...but...as well、such...that、before;辅考=**课文被动复习**(was given/was picked up/wasn't noticed by anyone)+ **词汇辨析**(evade=escape、ashamed≠shameful、imagination 名词)。全连词/时态运用题,元语法定义题=0。MC#1 正解(c)搭便车。
+- 裁决:gp1 who/whose(3)+ gp2 when/as/after分词(3)+ gp3 让步(3)+ gp4 并列结果(3)= 连词主考12;gp5 被动复习(3)+ gp6 词汇辨析(3)= 辅考6。
+- 词10(官方9:record-holder/truant/unimaginative/shame/hitchhike/meantime/lorry→**truck**/border/evade + 补1 authorities)。美语化:**lorry→truck、biscuit→cookie、cinema→movie theater、film→movie、towards→toward、centre→center、travelled→traveled**;关6美英=truck/lorry + cookie/biscuit + movie theater/cinema + movie/film;chunks=put sb to shame/as far as sb gets/set up a record/dream of doing。
+- 44题;机器12项🟢。seed→**新建 `american_am2_seed_unit10.sql`**(L73=44)。⏭️ L74(🟢低,正常读)。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

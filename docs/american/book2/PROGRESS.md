@@ -191,7 +191,18 @@
 - 主考(实读 Key structures 页 doc300-301)= **KS32 数量词与比较**:as…as / not as…as、**little·few(否定)vs a little·a few(肯定)**、a lot of / a great deal of(不可数)/ a great many(可数)、the same as / different from。Special difficulties **SD 易混词 handsome/beautiful/pretty/good-looking、reach(接地点/速度)/ arrive in·at**。
 - 裁决(自决):gp1 as…as(3)+ gp2 a lot of/a great deal of/a great many(4)+ gp3 little·few vs a little·a few(4)+ gp4 same as/different from(2)= KS32 主考;gp5 handsome·pretty/reach·arrive(3)+ gp6 break down/过去分词状语(2)= SD+课文辅考。全运用题,元语法定义题=0。
 - 词表11词全收(sound/excitement/handsome/Rolls-Royce/Benz/wheel/explosion/course/rival/speed/downhill)。关6美英=trunk/windshield(汽车主题)+contrast hood·gas;different from 用美语标准搭配(非英式 different to)。
-- 44题;机器12项🟢(3黄=s5#1/2/3 as…as 两个 as 同现,教学结构必然,人工核合法)。seed→`american_am2_seed_unit07.sql`(**L49-L54+L56=308**,缺 L55)。⏭️ L57。
+- 44题;机器12项🟢(3黄=s5#1/2/3 as…as 两个 as 同现,教学结构必然,人工核合法)。seed→`american_am2_seed_unit07.sql`(**U7 整单元 L49-L56=352**,含 L55 净化包)。⏭️ L57(U8)。
+
+# ===== 课程 Unit 8(L57–64)= 教材 Unit 3 续 =====
+> Unit 3(L49-72)后段;每课仍有自己的 KS/SD 页,逐课渲染定主考(除误判课走净化包)。seed→`american_am2_seed_unit08.sql`。
+
+## ✅ U8 L57《Can I help you?》(有什么需要帮忙的吗?)· 🟢全绿(零黄) · **净化包生产**(2026-07-05)
+- **背景**:原课文 PDF 读取内容过滤**误判**(纯 false positive,势利店员讽刺小故事);Aaron+网页版 Claude 出净化生产包,CC 用干净素材生产,**未读源 PDF**。
+- 主考 = **KS9+KS33 介词 at/in/off/with 综合复习**(at 某一点、in 之内/穿着、off 离开脱落、with 带有拿着)。SD = **make/let sb do**(使役动词后接不带 to 的动词原形)。
+- **⚠️ unit_no 自决修正**:净化包写 unit_no=7,但按课程 8课/单元 分组(U7=L49-56 已收 352),L57 应属 **U8** → CC 改 unit_no=8、落 `american_am2_seed_unit08.sql`(否则 U7 会变 9 课破坏分组)。已报 Aaron。
+- 裁决:gp1 at(3)+ gp2 in(4)+ gp3 off(3)+ gp4 with(3)= KS 主考;gp5 make/let sb do(3)+ gp6 the way 从句/into(2)= SD+课文辅考。全运用题,元语法定义题=0。
+- 美语化:store(非 shop)/salesclerk(非 shop assistant)/purse(非 handbag),去英式 madam 称呼。词表13词全收。关6美英=store/purse(购物主题)+contrast salesclerk·pants。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit08.sql`(**L57=44**)。⏭️ L58。
 
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。

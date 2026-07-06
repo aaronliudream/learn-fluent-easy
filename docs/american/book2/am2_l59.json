@@ -1,0 +1,134 @@
+{
+  "id": "am2_l59",
+  "unit_no": 8,
+  "lesson_no": 59,
+  "title_en": "In or out?",
+  "title_cn": "进来还是出去?",
+  "grammar_focus": "Review KS50-58 时态综合复习(一般现在/过去、现在完成/完成进行、would·used to 过去习惯、被动语态/is said to 转述被动)(教材 L59 Key structures)主考;SD 表目的的多种方式(to/in order to/so as to/so that/in order that)+ 课文 every time、so…that、become an expert at(辅考)",
+  "scene": "我家的狗雷克斯,过去常坐在大门外面叫。每当它想到院子里来时,便汪汪叫个不停,直到有人把门打开。由于邻居们对狗叫很有意见,所以我丈夫花了几个星期的时间训练它用脚爪按住门闩把自己放进来。雷克斯很快成了开门的专家。然而上星期我正要出去买东西时,发现它正呆在院子里边挨门的地方。这次它叫着让人把它放出去!从那以后,它养成了另外一种坏习惯。它从外面把门一打开,就走进院子,等着门自动关上。这之后它就坐下汪汪叫起来,直到有人来把它放出去。出去之后,它又马上把自己放进来,接着再开始叫。昨天,我丈夫把大门卸了下来,雷克斯很生气,此后我们便再也没有见到它。",
+  "grammar_card": {
+    "title": "时态综合复习(KS50-58)",
+    "intro": "复习第 50-58 课的时态与句型:一般现在(经常/习惯 barks)、一般过去(complained)、现在完成(has developed)、现在完成进行(have been coming)、would/used to(过去习惯)、被动语态(was trained / is said to)。根据时间标志和语境选对时态。",
+    "table": {
+      "headers": ["时态/句型", "例子"],
+      "rows": [
+        ["一般现在(习惯)", "Every time he wants in, he barks."],
+        ["一般过去", "My husband removed the gate."],
+        ["现在完成", "he has developed a bad habit."],
+        ["过去习惯 would/used to", "Rex used to sit and bark."],
+        ["被动 / 转述被动", "The dog was trained. / is said to…"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "SD 表目的的多种方式:to do、in order to do、so as (not) to do、so that + 从句、in order that + 从句、for sb to do。", "mark": "表目的多方式" },
+      { "rule": "every time 作连词'每当';so … that 表'如此…以致…'(that 可省略);become an expert at doing。", "mark": "课文连词/搭配" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did Rex run away?",
+    "options": ["He got so annoyed when his owner removed the gate", "He found a bigger yard", "He was afraid of the neighbors", "He chased a cat and got lost"],
+    "answer_index": 0
+  },
+  "passage": "Our dog, Rex, used to sit outside our front gate and bark. Every time he wanted to come into the yard he would bark until someone opened the gate. As the neighbors complained of the noise, my husband spent weeks training him to press his paw on the latch to let himself in. Rex soon became an expert at opening the gate. However, when I was going out shopping last week, I noticed him in the yard near the gate. This time he was barking so that someone would let him out! Since then, he has developed another bad habit. As soon as he opens the gate from the outside, he comes into the yard and waits until the gate shuts. Then he sits and barks until someone lets him out. After this he immediately lets himself in and begins barking again. Yesterday my husband removed the gate and Rex got so annoyed we have not seen him since.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Our dog, Rex, used to sit outside our front gate and bark. Every time he wanted to come into the yard he would bark until someone opened the gate.", "text_cn": "我家的狗雷克斯过去常坐在大门外面叫。每当它想到院子里来,便汪汪叫个不停,直到有人开门。" },
+    { "seq": 2, "speaker": null, "text_en": "As the neighbors complained of the noise, my husband spent weeks training him to press his paw on the latch to let himself in.", "text_cn": "由于邻居们对狗叫很有意见,我丈夫花了几个星期训练它用脚爪按门闩把自己放进来。" },
+    { "seq": 3, "speaker": null, "text_en": "Rex soon became an expert at opening the gate.", "text_cn": "雷克斯很快成了开门的专家。" },
+    { "seq": 4, "speaker": null, "text_en": "However, when I was going out shopping last week, I noticed him in the yard near the gate. This time he was barking so that someone would let him out!", "text_cn": "然而上星期我正要出去买东西时,发现它正呆在院子里挨门的地方。这次它叫着让人把它放出去!" },
+    { "seq": 5, "speaker": null, "text_en": "Since then, he has developed another bad habit.", "text_cn": "从那以后,它养成了另外一种坏习惯。" },
+    { "seq": 6, "speaker": null, "text_en": "As soon as he opens the gate from the outside, he comes into the yard and waits until the gate shuts. Then he sits and barks until someone lets him out.", "text_cn": "它从外面把门一打开,就走进院子,等着门自动关上。然后坐下汪汪叫,直到有人把它放出去。" },
+    { "seq": 7, "speaker": null, "text_en": "After this he immediately lets himself in and begins barking again.", "text_cn": "出去之后,它又马上把自己放进来,接着再开始叫。" },
+    { "seq": 8, "speaker": null, "text_en": "Yesterday my husband removed the gate and Rex got so annoyed we have not seen him since.", "text_cn": "昨天我丈夫把大门卸了下来,雷克斯很生气,此后我们便再也没有见到它。" }
+  ],
+  "words": [
+    { "word": "bark", "ipa": "/bɑːrk/", "pos": "v", "meaning_cn": "(狗)叫,吠", "example": "sit outside and bark" },
+    { "word": "press", "ipa": "/pres/", "pos": "v", "meaning_cn": "按,压", "example": "press his paw on the latch" },
+    { "word": "paw", "ipa": "/pɔː/", "pos": "n", "meaning_cn": "脚爪", "example": "press his paw" },
+    { "word": "latch", "ipa": "/lætʃ/", "pos": "n", "meaning_cn": "门闩", "example": "press his paw on the latch" },
+    { "word": "expert", "ipa": "/ˈekspɜːrt/", "pos": "n", "meaning_cn": "专家,能手", "example": "an expert at opening the gate" },
+    { "word": "develop", "ipa": "/dɪˈveləp/", "pos": "v", "meaning_cn": "养成;发展", "example": "developed another bad habit" },
+    { "word": "habit", "ipa": "/ˈhæbɪt/", "pos": "n", "meaning_cn": "习惯", "example": "another bad habit" },
+    { "word": "remove", "ipa": "/rɪˈmuːv/", "pos": "v", "meaning_cn": "拆掉,取下,移开", "example": "removed the gate" },
+    { "word": "annoyed", "ipa": "/əˈnɔɪd/", "pos": "adj", "meaning_cn": "恼怒的,生气的", "example": "Rex got so annoyed" },
+    { "word": "neighbor", "ipa": "/ˈneɪbər/", "pos": "n", "meaning_cn": "邻居", "example": "the neighbors complained" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般现在/一般过去" },
+    { "gp": "gp2", "name": "现在完成/现在完成进行" },
+    { "gp": "gp3", "name": "would/used to(过去习惯)" },
+    { "gp": "gp4", "name": "被动语态/转述被动" },
+    { "gp": "gp5", "name": "表目的的多种方式(SD)" },
+    { "gp": "gp6", "name": "every time / so…that / expert at(辅考·课文)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Every time he wants to come in, he ___ until someone opens the gate.\"(经常性习惯,用一般现在时)", "stem_cn": "每当它想进来,就叫个不停,直到有人开门。", "options": ["barks", "is barking", "barked", "has barked"] },
+    { "gp": "gp1", "stem": "\"Yesterday my husband ___ the gate.\"(过去某时,remove 的过去式)", "stem_cn": "昨天我丈夫把大门卸了下来。", "options": ["removed", "removes", "has removed", "is removing"] },
+    { "gp": "gp1", "stem": "\"As the neighbors ___ of the noise, my husband trained the dog.\"(过去,complain 的过去式)", "stem_cn": "由于邻居们抱怨噪音,我丈夫训练了狗。", "options": ["complained", "complain", "have complained", "are complaining"] },
+    { "gp": "gp2", "stem": "\"Since then, he ___ another bad habit.\"(现在完成时:已养成)", "stem_cn": "从那以后,它养成了另一个坏习惯。", "options": ["has developed", "developed", "is developing", "develops"] },
+    { "gp": "gp2", "stem": "\"Rex got so annoyed that we ___ him since.\"(现在完成时:一直没见到)", "stem_cn": "雷克斯很生气,此后我们再没见到它。", "options": ["have not seen", "did not see", "are not seeing", "do not see"] },
+    { "gp": "gp2", "stem": "\"Tourists ___ coming to see the tree for weeks.\"(现在完成进行时:一直在来)", "stem_cn": "游客们一连几周一直来看这棵树。", "options": ["have been", "are", "were", "has been"] },
+    { "gp": "gp3", "stem": "\"Our dog ___ sit outside the gate and bark.\"(过去常做、现在不做了的习惯)", "stem_cn": "我家的狗过去常坐在门外叫。", "options": ["used to", "would be", "uses to", "is used to"] },
+    { "gp": "gp3", "stem": "\"Every time he wanted to come in, he ___ bark until someone opened the gate.\"(过去反复动作)", "stem_cn": "每当它想进来,就会叫到有人开门为止。", "options": ["would", "used to be", "will", "is"] },
+    { "gp": "gp4", "stem": "\"The dog ___ trained to press the latch.\"(过去被动:被训练)", "stem_cn": "这只狗被训练用爪子按门闩。", "options": ["was", "is", "has", "were"] },
+    { "gp": "gp4", "stem": "\"The village is ___ to possess a cursed tree.\"(转述被动:据说)", "stem_cn": "据说这个村庄有一棵被诅咒的树。", "options": ["said", "say", "saying", "told"] },
+    { "gp": "gp4", "stem": "\"Your wallet ___ found.\"(现在完成被动:已被找到)", "stem_cn": "你的钱包被找到了。", "options": ["has been", "is being", "was being", "has"] },
+    { "gp": "gp5", "stem": "\"He ran to the station ___ catch the train.\"(表目的,用不定式)", "stem_cn": "他跑到车站去赶火车。", "options": ["to", "for", "so", "that"] },
+    { "gp": "gp5", "stem": "\"This time he was barking ___ that someone would let him out.\"(表目的'为的是',引导从句的那个词)", "stem_cn": "这次它叫着,为的是让人把它放出去。", "options": ["so", "in", "for", "as"] },
+    { "gp": "gp5", "stem": "\"I opened the door quietly ___ as not to disturb him.\"(表目的否定'以免、免得'的第一个词)", "stem_cn": "我轻轻把门打开,为的是不打搅他。", "options": ["so", "in", "for", "to"] },
+    { "gp": "gp5", "stem": "\"He works hard in ___ to pass his exams.\"(表目的'为了',与 in…to 搭配的名词)", "stem_cn": "他学习刻苦,为的是通过考试。", "options": ["order", "that", "so", "case"] },
+    { "gp": "gp6", "stem": "\"___ time he wanted to come in, he barked.\"(每当…,作时间连词)", "stem_cn": "每当它想进来,就叫。", "options": ["Every", "Some", "Any", "No"] },
+    { "gp": "gp6", "stem": "\"Rex got ___ annoyed that we have not seen him since.\"(如此…以致…的前一个词)", "stem_cn": "雷克斯很生气,此后我们再没见到它。", "options": ["so", "such", "too", "very"] },
+    { "gp": "gp6", "stem": "\"Rex soon became an expert ___ opening the gate.\"('成为…能手'后接的介词)", "stem_cn": "雷克斯很快成了开门的专家。", "options": ["at", "in", "on", "of"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"(房子的)院子\"常说:", "options": ["yard", "garden", "lawn plot", "grass area"] },
+    { "stem": "美语拼写\"邻居\"是:", "options": ["neighbor", "neighbour", "naybor", "neighber"] },
+    { "stem": "bark 的意思是:", "options": ["(狗)叫,吠", "跑", "跳", "咬"] },
+    { "stem": "expert 的意思是:", "options": ["专家,能手", "新手", "学生", "顾客"] },
+    { "stem": "develop 的意思是:", "options": ["养成;发展", "破坏", "忘记", "隐藏"] },
+    { "stem": "remove 的意思是:", "options": ["拆掉,移开,取下", "安装", "修理", "购买"] }
+  ],
+  "contrast": [
+    { "us": "yard", "uk": "garden", "note_cn": "(房子的)院子;美语 yard,英式 garden" },
+    { "us": "neighbor", "uk": "neighbour", "note_cn": "邻居;美语 neighbor,英式 neighbour(拼写)" },
+    { "us": "trash", "uk": "rubbish", "note_cn": "垃圾;美语 trash,英式 rubbish" },
+    { "us": "line", "uk": "queue", "note_cn": "(排)队;美语 line,英式 queue" }
+  ],
+  "chunks": [
+    { "us": "every time", "ipa": "/ˈevri taɪm/", "example1": "Every time he wanted in, he barked.", "example1_cn": "每当它想进来就叫。", "example2": "Every time I see her, she smiles.", "example2_cn": "每次见到她,她都微笑。" },
+    { "us": "so that", "ipa": "/soʊ ðæt/", "example1": "He barked so that someone would let him out.", "example1_cn": "它叫是为了让人放它出去。", "example2": "Speak loudly so that everyone can hear.", "example2_cn": "大声说,好让大家都听见。" },
+    { "us": "become an expert at", "ipa": "/ˈekspɜːrt æt/", "example1": "Rex became an expert at opening the gate.", "example1_cn": "雷克斯成了开门的能手。", "example2": "She became an expert at cooking.", "example2_cn": "她成了烹饪能手。" },
+    { "us": "develop a (bad) habit", "ipa": "/dɪˈveləp ə ˈhæbɪt/", "example1": "He has developed another bad habit.", "example1_cn": "它又养成了个坏习惯。", "example2": "Try not to develop bad habits.", "example2_cn": "尽量别养成坏习惯。" }
+  ],
+  "stage7_cloze": {
+    "context": "Our dog Rex ___1___ sit outside our gate and bark. Every time he wanted in, he ___2___ bark until someone opened the gate. My husband ___3___ weeks training him. Since then, he ___4___ another bad habit.",
+    "blanks": [
+      { "blank_no": 1, "options": ["used to", "would be", "uses to", "is used to"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["would", "will", "is", "has"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["spent", "spends", "has spent", "is spending"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["has developed", "developed", "is developing", "develops"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What did Rex used to do at the front gate?", "options": ["Sit outside and bark until someone opened it", "Guard it silently", "Sleep beside it", "Dig under it"] },
+    { "stem": "What did the husband train Rex to do?", "options": ["Press his paw on the latch to let himself in", "Fetch the newspaper", "Stop barking", "Open the door with his mouth"] },
+    { "stem": "Why did Rex disappear at the end?", "options": ["He got so annoyed when the gate was removed", "He found a new home", "He was afraid of the husband", "He chased a cat"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我家的狗过去常坐在门外叫\"(过去习惯用 used to):", "options": ["Our dog used to sit outside the gate and bark.", "Our dog use to sit outside the gate and bark.", "Our dog is used to sit outside the gate and bark.", "Our dog used to sitting outside the gate and bark."] },
+    { "stem": "你想说\"它叫着,为的是让人放它出去\"(表目的用 so that):", "options": ["He was barking so that someone would let him out.", "He was barking so as someone would let him out.", "He was barking for that someone would let him out.", "He was barking in that someone would let him out."] },
+    { "stem": "你想说\"从那以后它养成了另一个坏习惯\"(现在完成用 has done):", "options": ["Since then, he has developed another bad habit.", "Since then, he developed another bad habit.", "Since then, he is developing another bad habit.", "Since then, he develops another bad habit."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "bark 的意思是:", "options": ["(狗)叫,吠", "跑", "跳", "咬"] },
+    { "kind": "vocab", "stem": "expert 的意思是:", "options": ["专家,能手", "新手", "学生", "顾客"] },
+    { "kind": "grammar", "stem": "\"Every time he wants in, he ___ until someone opens the gate.\"(经常性习惯,一般现在时)", "stem_cn": "每当它想进来,就叫到有人开门。", "options": ["barks", "is barking", "barked", "has barked"] },
+    { "kind": "grammar", "stem": "\"Since then, he ___ another bad habit.\"(现在完成时)", "stem_cn": "从那以后它养成了另一个坏习惯。", "options": ["has developed", "developed", "is developing", "develops"] },
+    { "kind": "scenario", "stem": "\"every time\" 作连词的意思是:", "options": ["每当,每次", "有时", "从不", "立刻"] },
+    { "kind": "scenario", "stem": "\"become an expert at\" 的意思是:", "options": ["成为…的能手/专家", "对…感到厌倦", "放弃…", "害怕…"] },
+    { "kind": "reading", "stem": "How did Rex learn to let himself in?", "options": ["The husband trained him to press the latch with his paw", "He watched the neighbors do it", "He was born knowing how", "He broke the gate open"], "passage": true },
+    { "kind": "reading", "stem": "What new bad habit did Rex develop?", "options": ["Letting himself out, then barking to be let in again, over and over", "Chewing the gate", "Barking only at cats", "Running away every day"], "passage": true },
+    { "kind": "listening", "stem": "Why did the neighbors complain?", "options": ["Rex's barking noise", "The husband's shouting", "A broken gate", "Loud music"], "audio": true },
+    { "kind": "listening", "stem": "What happened after the gate was removed?", "options": ["Rex got so annoyed he disappeared", "Rex was happy", "Rex learned a new trick", "Nothing changed"], "audio": true }
+  ]
+}

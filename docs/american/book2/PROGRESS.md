@@ -210,6 +210,12 @@
 - **词表16词全收**(blessing/disguise/tiny/possess/cursed/increase/plant/church/evil/reputation/claim/victim/vicar/source/income/trunk)。关6美英=fall/bill(季节/收入主题)+contrast downtown·vacation。
 - 44题;机器12项🟢(初版 s5#10/11 双宾语被动用了箭头→触发泄漏[a],改成独立被动句去箭头后全绿)。seed→`american_am2_seed_unit08.sql`(**L57+L58=88**)。⏭️ L59。
 
+## ✅ U8 L59《In or out?》(进来还是出去?)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc312-313)= **Review KS50-58 时态综合复习**(一般现在习惯/一般过去/现在完成/现在完成进行/would·used to 过去习惯/被动·is said to)。Special difficulties **SD 表目的的多种方式**(to do、in order to、so as (not) to、so that、in order that、for sb to do)。
+- 裁决:gp1 一般现在·过去(3)+ gp2 现在完成·完成进行(3)+ gp3 would/used to(2)+ gp4 被动/转述被动(3)= 时态复习主考;gp5 表目的多方式(4)+ gp6 every time/so…that/expert at(3)= SD+课文辅考。全运用题,元语法定义题=0。
+- 美语化:garden→yard、neighbours→neighbors。词10(bark/press/paw/latch/expert/develop/habit/remove + 补 annoyed/neighbor)。关6美英=yard/neighbor(院子/拼写主题)+contrast trash·line。
+- 44题;机器12项🟢(1黄=s5#12 "ran to the station...to catch" 两个 to 不同,人工核合法)。seed→`american_am2_seed_unit08.sql`(**L57-L59=132**)。⏭️ L60。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

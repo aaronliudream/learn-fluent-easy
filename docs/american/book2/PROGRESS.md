@@ -292,7 +292,7 @@
 - 裁决:gp1 一般过去被动(3)+ gp2 情态/推测被动(3)+ gp3 现在完成被动(3)+ gp4 过去完成被动(2)+ gp5 过去进行被动(3)+ gp6 完成非谓语/不定式被动(4)=18。全运用题,元语法定义题=0。
 - 词10(净化包表:instruct/acquire/confidence/restore/original/engine/maker/garage/condition/rare;原暴力词 murder 降级不入表)。关6美英=gas/petrol+tire/tyre+trunk/boot+hood/bonnet(汽车族);chunks=come back to life/a great deal of/restore…to/work on。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L69=220**)。
-- ⏸️ **L70 挂起**:风险表标 🔴 换情节包,包未到(网页版陆续给,优先 L69→L70);我本已读源 doc355-357(形容词+介词搭配),但按方案B**不用源产出、等 L70 换情节包**。⏭️ 收到 L70 包即做;期间穿插 ✅/🟢 可读课。
+- ✅ **L70 已补做(方案B换情节包《What Are You Good At?》)** —— 见下方 U9 收官块。风险表标 🔴,换情节包=校园社团招新;考点原样=**形容词+介词固定搭配**(famous for/eager for/responsible for + proud of/afraid of/capable of + good at/quick at/surprised at + grateful to/kind to/pleased with + worried about/keen on)。词10(eager/famous/grateful/responsible/qualified/proud/fond/afraid/capable/keen)。美语化 math/eraser/grade/recess。44题机器12项🟢。**⇒ U9(L65-72)8课全齐,整单元 352 收官。**
 
 ## ✅ U9 L71《A famous clock》(一个著名的大钟)· 🟢全绿 · 🟡试读通过(未被拦)
 - 🟡试读课:风险表标 🟡,我试读源 doc359-361**未被拦**,正常读源产出;SD 里 hang/hanged(绞死)按方案B原则降级=只教 hang→hung 悬挂(neutral 例句),hanged 仅认读一句注,不出暴力题。

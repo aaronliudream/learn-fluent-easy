@@ -18,7 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Download, Trash2, Shield, FileText, LogIn, LogOut, UserCog, Trophy, Save, BookMarked, Sparkles, Mail, MessageSquare } from "lucide-react";
+import { Download, Trash2, Shield, FileText, LogIn, LogOut, UserCog, Trophy, Save, BookMarked, Sparkles, Mail, MessageSquare, GraduationCap, Loader2 } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { loadProgress } from "@/lib/guestProgress";
 import { T, useT } from "@/i18n/T";
@@ -43,6 +43,8 @@ const Account = () => {
   const [upgradePw, setUpgradePw] = useState("");
   const [upgrading, setUpgrading] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isTeacher, setIsTeacher] = useState(false);
+  const [enablingTeacher, setEnablingTeacher] = useState(false);
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
@@ -66,6 +68,15 @@ const Account = () => {
         .eq("role", "admin")
         .maybeSingle();
       if (!cancelled) setIsAdmin(!!data);
+    })();
+    (async () => {
+      const { data } = await supabase
+        .from("user_roles")
+        .select("role")
+        .eq("user_id", user.id)
+        .eq("role", "teacher" as never)
+        .maybeSingle();
+      if (!cancelled) setIsTeacher(!!data);
     })();
     (async () => {
       const { data } = await supabase
@@ -104,6 +115,23 @@ const Account = () => {
       toast.error((e as Error).message);
     } finally {
       setUpgrading(false);
+    }
+  };
+
+  const handleEnableTeacher = async () => {
+    if (!user) return;
+    setEnablingTeacher(true);
+    try {
+      // 新建 RPC，types.ts 未重生成，故 rpc 名做 string 转义。
+      const rpc = supabase.rpc.bind(supabase) as (fn: string) => Promise<{ error: unknown }>;
+      const { error } = await rpc("enable_teacher_role");
+      if (error) throw error as Error;
+      setIsTeacher(true);
+      toast.success(t("已开通教师功能 🎓"));
+    } catch (e) {
+      toast.error((e as Error).message);
+    } finally {
+      setEnablingTeacher(false);
     }
   };
 
@@ -280,6 +308,39 @@ const Account = () => {
             <Button asChild className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white">
               <Link to="/admin/feedback"><MessageSquare className="size-4" /> <T>反馈管理</T></Link>
             </Button>
+          </div>
+        </section>
+      )}
+
+      {/* Teacher — self-service opt-in / enter teacher hub (signed-in users) */}
+      {user && (
+        <section className="mb-6 rounded-2xl border-2 border-fuchsia-300 bg-gradient-to-br from-fuchsia-50 to-orange-50 p-6 shadow-card dark:border-fuchsia-500/30 dark:from-fuchsia-500/10 dark:to-orange-500/10">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="min-w-0">
+              <div className="flex items-center gap-2">
+                <GraduationCap className="size-5 text-fuchsia-600" />
+                <h3 className="text-base font-extrabold"><T>教师功能</T></h3>
+              </div>
+              <p className="mt-1 text-sm text-fuchsia-900/70 dark:text-fuchsia-100/70">
+                {isTeacher
+                  ? <T>创建班级、发邀请码、关注学生学习进度。你的学习功能完全不变。</T>
+                  : <T>你是老师？开通后可创建班级、发邀请码给学生，在后台看他们的学习进度。开通不影响你自己的学习。</T>}
+              </p>
+            </div>
+            {isTeacher ? (
+              <Button asChild className="bg-gradient-to-r from-fuchsia-500 to-orange-500 text-white">
+                <Link to="/teacher"><GraduationCap className="size-4" /> <T>进入教师后台</T></Link>
+              </Button>
+            ) : (
+              <Button
+                onClick={handleEnableTeacher}
+                disabled={enablingTeacher}
+                className="bg-gradient-to-r from-fuchsia-500 to-orange-500 text-white">
+                {enablingTeacher
+                  ? <Loader2 className="size-4 animate-spin" />
+                  : <><GraduationCap className="size-4" /> <T>开通教师功能</T></>}
+              </Button>
+            )}
           </div>
         </section>
       )}

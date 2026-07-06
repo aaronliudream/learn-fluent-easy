@@ -8,6 +8,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { stopSpeaking } from "@/lib/speak";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import ChineseOnlyRoute from "@/components/ChineseOnlyRoute";
+import TeacherRoute from "@/components/TeacherRoute";
 import JuniorGradeQueryGate from "@/components/junior/JuniorGradeQueryGate";
 import { GuestCardClaimer } from "@/components/GuestCardClaimer";
 import { RouteErrorBoundary } from "@/components/RouteErrorBoundary";
@@ -364,10 +365,10 @@ const App = () => (
           <Route path="/social" element={<Social />} />
           <Route path="/ask" element={<Ask />} />
           <Route path="/q/:slug" element={<KnowledgeCard />} />
-          <Route path="/teacher" element={<Teacher />} />
-          <Route path="/teacher/class/:id" element={<TeacherClass />} />
-          <Route path="/teacher/cards" element={<TeacherCards />} />
-          <Route path="/teacher/cards/:slug" element={<TeacherCardStats />} />
+          <Route path="/teacher" element={<TeacherRoute><Teacher /></TeacherRoute>} />
+          <Route path="/teacher/class/:id" element={<TeacherRoute><TeacherClass /></TeacherRoute>} />
+          <Route path="/teacher/cards" element={<TeacherRoute><TeacherCards /></TeacherRoute>} />
+          <Route path="/teacher/cards/:slug" element={<TeacherRoute><TeacherCardStats /></TeacherRoute>} />
           <Route path="/scenes/:catKey" element={<Navigate to="/american" replace />} />
           <Route path="/scenes/:catKey/:dialogueId" element={<Navigate to="/american" replace />} />
           <Route path="/workplace" element={<Navigate to="/american" replace />} />

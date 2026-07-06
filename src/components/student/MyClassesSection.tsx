@@ -14,7 +14,7 @@ import { Users, Loader2, LogOut, Plus } from "lucide-react";
 /**
  * 学生 / 家长在 Account 页面看到的「我加入的班级」入口。
  *
- *   1. 输入老师给的 8 位邀请码（例如 MOON-A47K）→ join_class_by_code RPC
+ *   1. 输入老师给的 8 位邀请码（例如 ABCD-EFGH）→ join_class_by_code RPC
  *   2. 列出自己已加入的班级（通过 RLS 直接 SELECT class_members + classes）
  *   3. 每个班级可一键退出 → leave_class RPC（软删 removed_at）
  *
@@ -105,7 +105,7 @@ export function MyClassesSection() {
     setJoinErr(null);
     const normalized = normalizeCode(code);
     if (!normalized || normalized.length < 8) {
-      setJoinErr("请输入完整的 8 位邀请码（例如 MOON-A47K）");
+      setJoinErr("请输入完整的 8 位邀请码（例如 ABCD-EFGH）");
       return;
     }
     setJoining(true);
@@ -147,7 +147,7 @@ export function MyClassesSection() {
         <h3 className="text-base font-bold"><T>我加入的班级</T></h3>
       </div>
       <p className="mt-1 text-sm text-muted-foreground">
-        <T>找老师要 8 位邀请码（例如 MOON-A47K），输入即可加入班级。老师可看到你的学习进度。</T>
+        <T>找老师要 8 位邀请码（例如 ABCD-EFGH），输入即可加入班级。老师可看到你的学习进度。</T>
       </p>
 
       {/* JOIN INPUT */}
@@ -158,7 +158,7 @@ export function MyClassesSection() {
             id="class-code"
             value={code}
             onChange={(e) => { setCode(e.target.value); setJoinErr(null); }}
-            placeholder="MOON-A47K"
+            placeholder="ABCD-EFGH"
             className="mt-1 font-mono tracking-widest uppercase"
             maxLength={9}
             onKeyDown={(e) => { if (e.key === "Enter") joinNow(); }}
@@ -249,7 +249,7 @@ function mapJoinError(raw: string): string {
   const m = raw.toLowerCase();
   if (m.includes("not found"))                return "邀请码错误，找老师确认一下";
   if (m.includes("you are the teacher"))      return "你是这个班级的老师，不能加入自己的班级";
-  if (m.includes("invalid code"))             return "邀请码格式不对，应该是 8 位字母数字（例如 MOON-A47K）";
+  if (m.includes("invalid code"))             return "邀请码格式不对，应该是 8 位字母数字（例如 ABCD-EFGH）";
   if (m.includes("not authenticated"))        return "请先登录";
   return raw;
 }

@@ -292,6 +292,18 @@ export const stopSpeaking = () => {
   stopCurrent();
 };
 
+/**
+ * 当前是否正在播放音频（供学习时长心跳把"被动听音/读课文"算作活跃）。
+ * 直接读 currentAudio 的实时状态：播放中 = 有元素且未暂停未结束。
+ * 自纠正——自然结束(.ended)、出错(.paused)、stopCurrent(置 null) 都会立刻转 false，
+ * 即使没有显式 stop 广播也不会"卡住一直计时"。
+ * 注：仅覆盖 HTMLAudioElement 播放（美语/新概念 TTS 走此路）；SpeechSynthesis 回退不计。
+ */
+export const isSpeaking = (): boolean => {
+  const a = currentAudio;
+  return !!a && !a.paused && !a.ended;
+};
+
 const getSharedAudio = () => {
   if (typeof window === "undefined") return null;
   if (!sharedAudio) {

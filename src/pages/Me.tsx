@@ -5,11 +5,12 @@ import type { User } from "@supabase/supabase-js";
 import { PageHeader } from "@/components/PageHeader";
 import {
   BarChart3, Heart, Settings,
-  LogIn, LogOut, Sparkles, ClipboardList, Target } from
+  LogIn, LogOut, Sparkles, ClipboardList, Target, GraduationCap } from
 "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fetchWeakKnowledgePoints } from "@/lib/knowledgePointMastery";
 import { AlertCircle } from "lucide-react";
+import { useIsTeacher } from "@/hooks/useIsTeacher";
 
 type Tile = {to: string;label: string;sub: string;icon: React.ComponentType<{className?: string;}>;tone: string;};
 
@@ -27,6 +28,7 @@ export default function Me() {
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<{display_name?: string | null;} | null>(null);
   const [weakKps, setWeakKps] = useState<any[]>([]);
+  const { isTeacher } = useIsTeacher(); // 仅老师显示"教师中心"卡片(调 is_teacher() RPC)
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_e, s) => setUser(s?.user ?? null));
@@ -133,6 +135,21 @@ export default function Me() {
 
       {/* Tiles */}
       <section className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {/* 教师中心 —— 仅当 is_teacher() 为真时显示;普通用户主页保持干净 */}
+        {isTeacher && (
+          <Link
+            to="/teacher"
+            className="group flex items-center gap-3 rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md">
+
+            <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-fuchsia-500 to-orange-500 text-white shadow-sm">
+              <GraduationCap className="size-5" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="truncate text-sm font-bold"><T>教师中心</T></div>
+              <div className="truncate text-[11px] text-muted-foreground"><T>管理班级 · 关注学生进度</T></div>
+            </div>
+          </Link>
+        )}
         {TILES.map((t) => {
           const Icon = t.icon;
           return (

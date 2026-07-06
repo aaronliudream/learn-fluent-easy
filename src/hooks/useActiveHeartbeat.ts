@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import { isSpeaking } from "@/lib/speak";
 
 /**
  * 有效学习时长心跳
@@ -58,7 +59,9 @@ export function useActiveHeartbeat() {
     const timer = window.setInterval(async () => {
       if (cancelled) return;
       if (document.visibilityState !== "visible") return;
-      if (Date.now() - lastInteract.current > IDLE_MS) return;
+      // 活跃判定 = 最近 60s 内有交互 OR 当前正在播放音频（听音/读课文的被动学习也计时）。
+      // isSpeaking() 读音频元素实时状态，异常/结束会自动转 false，不会卡住计时。
+      if (Date.now() - lastInteract.current > IDLE_MS && !isSpeaking()) return;
       const seg = segFromPath(loc.pathname);
       if (!seg) return;
       const { data: u } = await supabase.auth.getUser();

@@ -77,12 +77,32 @@ export default function TeacherClass() {
   async function loadAll() {
     if (!id) return;
     setLoading(true);
-    const [clsR, stuR, wkR] = await Promise.all([
-      supabase.from("classes").select("*").eq("id", id).maybeSingle(),
+
+    // 取班级走列表页同款 RPC get_my_teacher_classes（SECURITY DEFINER + auth.uid()），
+    // 从中挑出当前班级 → 与列表页口径完全一致，绕开直查 classes 的会话/RLS 问题。
+    const { data: myClasses } = await supabase.rpc("get_my_teacher_classes");
+    const rpcRow = (Array.isArray(myClasses) ? myClasses : []).find(
+      (c: { id: string }) => c.id === id,
+    ) as (ClassRow & Record<string, unknown>) | undefined;
+
+    const [stuR, wkR] = await Promise.all([
       supabase.rpc("get_class_students", { _class_id: id }),
       supabase.rpc("get_class_weakness", { _class_id: id, _limit: 10 }),
     ]);
-    if (clsR.data) setCls(clsR.data as ClassRow);
+
+    // 映射成 ClassRow（RPC 不返回 description，置 null，渲染未用到）。
+    const resolved: ClassRow | null = rpcRow
+      ? {
+          id: rpcRow.id,
+          name: rpcRow.name,
+          stage: rpcRow.stage,
+          join_code: rpcRow.join_code,
+          description: null,
+          archived_at: rpcRow.archived_at,
+          created_at: rpcRow.created_at,
+        }
+      : null;
+    setCls(resolved);
     if (!stuR.error) setStudents((stuR.data ?? []) as Student[]);
     if (!wkR.error) setWeakness((wkR.data ?? []) as WeaknessRow[]);
     setLoading(false);
@@ -169,7 +189,7 @@ export default function TeacherClass() {
         <Kpi label="本周活跃" value={`${activeWeek} / ${activeStudents.length}`}
              sub={activeStudents.length > 0 ? `${Math.round(activeWeek / activeStudents.length * 100)}% 活跃率` : "—"}
              tone="emerald" />
-        <Kpi label="本周总学习" value={fmtHM(weekMinutes)} sub="累计 study_minutes" tone="emerald" />
+        <Kpi label="本周总学习" value={fmtHM(weekMinutes)} sub="累计学习时长" tone="emerald" />
         <Kpi label="平均周时长" value={`${avgWeekMins} 分钟`} sub="每位学生" />
         <Kpi label="需关注学生" value={weakStudents}
              sub={weakStudents > 0 ? "≥ 3 未解决错题" : "暂无"}

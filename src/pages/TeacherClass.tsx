@@ -77,6 +77,12 @@ export default function TeacherClass() {
   async function loadAll() {
     if (!id) return;
     setLoading(true);
+    // 先等 auth 会话就绪再发请求：直查 classes 受 RLS(auth.uid()=teacher_id)管，
+    // 若在会话 hydrate 前就发，请求不带 Bearer token → auth.uid() 为 null → 本班
+    // 被 RLS 挡掉 → cls=null → 误报"班级未找到"。与列表页 Teacher.tsx 口径一致
+    // （那边先 await getUser 再查，故正常）。getSession 读本地已持久化会话，确保
+    // token 已附带后再发 Promise.all。
+    await supabase.auth.getSession();
     const [clsR, stuR, wkR] = await Promise.all([
       supabase.from("classes").select("*").eq("id", id).maybeSingle(),
       supabase.rpc("get_class_students", { _class_id: id }),

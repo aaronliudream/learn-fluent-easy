@@ -77,18 +77,52 @@ export default function TeacherClass() {
   async function loadAll() {
     if (!id) return;
     setLoading(true);
-    // 先等 auth 会话就绪再发请求：直查 classes 受 RLS(auth.uid()=teacher_id)管，
-    // 若在会话 hydrate 前就发，请求不带 Bearer token → auth.uid() 为 null → 本班
-    // 被 RLS 挡掉 → cls=null → 误报"班级未找到"。与列表页 Teacher.tsx 口径一致
-    // （那边先 await getUser 再查，故正常）。getSession 读本地已持久化会话，确保
-    // token 已附带后再发 Promise.all。
-    await supabase.auth.getSession();
-    const [clsR, stuR, wkR] = await Promise.all([
-      supabase.from("classes").select("*").eq("id", id).maybeSingle(),
+
+    // ── 实证日志（临时诊断，定位清楚后可删）─────────────────────────
+    // 与列表页对齐用 getUser（会主动向服务器校验并确保 token），并同时看 getSession。
+    const { data: sessionData } = await supabase.auth.getSession();
+    const { data: userData, error: userErr } = await supabase.auth.getUser();
+    console.log("[TeacherClass] getSession →",
+      { hasSession: !!sessionData?.session,
+        user: sessionData?.session?.user?.id ?? null,
+        hasAccessToken: !!sessionData?.session?.access_token });
+    console.log("[TeacherClass] getUser →",
+      { user: userData?.user?.id ?? null, email: userData?.user?.email ?? null, err: userErr?.message ?? null });
+
+    // 直查 classes（RLS-gated）——保留仅为诊断：打印 data/error/status，
+    // 区分"被 RLS 挡（data=null 无 error）"还是"真的报错（有 error/非 200）"。
+    const clsDirect = await supabase.from("classes").select("*").eq("id", id).maybeSingle();
+    console.log("[TeacherClass] direct from(classes) →",
+      { data: clsDirect.data, error: clsDirect.error, status: (clsDirect as { status?: number }).status });
+
+    // ── 真正取数：走列表页同款 RPC get_my_teacher_classes（SECURITY DEFINER +
+    //    auth.uid()，已证实在列表页可用），从中挑出当前班级 → 彻底绕开直查 classes 的问题。
+    const { data: myClasses, error: rpcErr } = await supabase.rpc("get_my_teacher_classes");
+    console.log("[TeacherClass] get_my_teacher_classes →",
+      { count: Array.isArray(myClasses) ? myClasses.length : null, error: rpcErr?.message ?? null });
+    const rpcRow = (Array.isArray(myClasses) ? myClasses : []).find(
+      (c: { id: string }) => c.id === id,
+    ) as (ClassRow & Record<string, unknown>) | undefined;
+
+    const [stuR, wkR] = await Promise.all([
       supabase.rpc("get_class_students", { _class_id: id }),
       supabase.rpc("get_class_weakness", { _class_id: id, _limit: 10 }),
     ]);
-    if (clsR.data) setCls(clsR.data as ClassRow);
+
+    // 优先用 RPC 结果（映射成 ClassRow；RPC 不返回 description，此处置 null，渲染未用到）；
+    // RPC 若没命中再兜底直查结果。
+    const resolved: ClassRow | null = rpcRow
+      ? {
+          id: rpcRow.id,
+          name: rpcRow.name,
+          stage: rpcRow.stage,
+          join_code: rpcRow.join_code,
+          description: null,
+          archived_at: rpcRow.archived_at,
+          created_at: rpcRow.created_at,
+        }
+      : (clsDirect.data as ClassRow | null) ?? null;
+    setCls(resolved);
     if (!stuR.error) setStudents((stuR.data ?? []) as Student[]);
     if (!wkR.error) setWeakness((wkR.data ?? []) as WeaknessRow[]);
     setLoading(false);

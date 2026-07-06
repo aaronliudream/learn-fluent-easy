@@ -286,6 +286,13 @@
 - 词10(官方3:persistent/avoid/insist + 补7:pretend/wave/fancy/wonder/mind/dentist/waiting room)。关6美英=traveling/travelling+canceling/cancelling+colored/coloured+labeled/labelled(-l- 单双写族);chunks=it's no use doing/would you mind doing/be busy doing/Fancy meeting you here。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L68=176**)。⏭️ L69。
 
+## ✅ U9 L69《But not murder!》(并非谋杀!)· 🟢全绿 · 教材 Unit 3
+- 主考(源 doc352-353 = Key structures)= **KS10/21/34/45 被动语态综合复习**:各时态被动(was made/was being questioned/had been sent/could be done/were thrown)+ 介词后动名词被动(After being arrested / having been instructed 完成式)+ **must have been done 对过去的推测被动**(examiner must have been pleased)。Special difficulties(源 doc353)= **SD 易混词**:advice(n)/advise(v)、美语 practice/license 名动同形、enjoy(oneself)/entertain(sb)/amuse(sb/oneself)。
+- 裁决:gp1 各时态被动(4)+ gp2 完成体与推测被动(3)+ gp3 介词后 being/having been done(2)= 主考9;gp4 advice/advise+美语practice/license(3)+ gp5 enjoy/entertain/amuse(3)+ gp6 amuse 三用法(3)= SD 辅考9。全运用题,元语法定义题=0。
+- ⚠️ leak[b]坑复现:amuse 题括号写"be amused by/amuse oneself"=直给答案红→改纯语义"'被…'的被动形式/自得其乐"。清零。
+- 词11全收(murder/instruct/acquire/confidence/examiner/suppose/tap/react/brake/pedal/mournful)。美语化 driving licence→**driver's license**、practise→**practice**;关6美英=license/licence+practice/practise+defense/defence+pretense/pretence(-se/-ce 与名动同形族);chunks=acquire confidence/react to/in front of/must have been。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L69=220**)。⏭️ L70。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

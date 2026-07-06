@@ -235,6 +235,13 @@
 - **词15全收**(control/smoke/desolate/threaten/surrounding/destruction/flood/authority/grass-seed/spray/quantity/root/century/patch/blacken)。美语化 firemen→**firefighters**、aeroplanes→**airplanes**;关6美英=firefighter/fireman+airplane/aeroplane+truck/lorry+gas/petrol;chunks=under control/take root/in place of/wash away。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit08.sql`(**L57-L62=264**)。⏭️ L63。
 
+## ✅ U8 L63《She was not amused》(她并不觉得好笑)· 🟢全绿 · 教材 Unit 3
+- 主考(源 doc328 = Key structures)= **KS15+KS39 间接引语**:①陈述句 said/told that + 时态后移(want→wanted)②祈使句/请求 ask/tell sb (not) to do③insist/suggest that…should④疑问句转述用陈述语序(一般疑问 if/whether、特殊疑问保留 wh-)。Special difficulties(源 doc329 exercise D)= **间接疑问句 I wonder if/when/why + 陈述语序** + 转述时人称/时间地点指示词相应变化(you→me、now→then、here→there、come→go)。
+- 裁决:gp1 祈使/请求转间接(4)+ gp2 陈述转间接(3)+ gp3 insist/suggest that should(2)= 主考;gp4 间接一般疑问 if(3)+ gp5 间接特殊疑问 wh-(3)+ gp6 指示词变化(3)= 辅考。全运用题,元语法定义题=0。
+- ⚠️ **本课特有坑**:间接引语题天然是"直接→间接"转换,初版 stem 用箭头 → 触发泄漏闸[a]红;已全部改写为**冒号引导 + 单句填空**(转述 'X':间接句 ___),并从括号提示去掉答案词(should/if),泄漏 a/b 清零。此坑固化:凡间接引语/句型转换课禁用 → 箭头,改冒号+单句。
+- 词10(官方6:circle/admire/close/wedding/reception/sort;补4 humor/speech/popular/amuse——官方词表仅6词,按词表铁律补足至~10)。美语化 humour→**humor**;关6美英=humor/humour+favorite/favourite+color/colour+neighbor/neighbour(-or vs -our 拼写族);chunks=a sense of humor/make a speech/to one's surprise/a circle of friends。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit08.sql`(**L57-L63=308**)。⏭️ L64(U8 收官课)。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

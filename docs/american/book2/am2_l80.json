@@ -1,0 +1,131 @@
+{
+  "id": "am2_l80",
+  "unit_no": 10,
+  "lesson_no": 80,
+  "title_en": "The Crystal Palace",
+  "title_cn": "水晶宫",
+  "grammar_focus": "KS8/32/56 形容词和副词的比较级和最高级(教材 L80 Key structures):最高级(the most extraordinary / one of the biggest / the most famous)、比较级(easier than / more beautiful than / different from)、同级比较(not as easy as it is today);辅以 SD 带 on 的短语(on display / on show / on foot / on business / on duty / on fire / on purpose / on the whole)",
+  "scene": "19世纪最不平常的建筑也许要数水晶宫了,它是为1851年的“世界博览会”而建在海德公园的。水晶宫不同于世界上所有其他建筑,因为它是用钢和玻璃建成的。它是有史以来最大的建筑物之一,各个国家的许多人纷纷前来参观。大量商品从世界各地送到了博览会,展出的还有很多机器,其中最奇妙的是史密斯的蒸汽锤。尽管当时旅行不像现在这么容易,但汽船还是把成千上万的参观者从欧洲大陆送过了英吉利海峡。一到英国,火车就把他们送到了水晶宫。参观人数总共600万,博览会的赢利用来建造博物馆和高等学校。后来,水晶宫被移到了伦敦南部。在1936年被焚毁之前,它一直是世界上最著名的建筑物之一。",
+  "grammar_card": {
+    "title": "KS8/32/56 比较级和最高级 + on 短语",
+    "intro": "形容词/副词的三种比较:①最高级——“最…”,短词加 the -est(the biggest),长词用 the most(the most extraordinary),“最…之一”用 one of the + 最高级 + 复数;②比较级——“更…”,短词加 -er + than(easier than),长词用 more…than(more beautiful than),“与…不同”用 different from;③同级比较——as + 原级 + as(as big as),否定 not as/so…as(not as easy as it is today)。SD:带 on 的短语 on display(展出)、on foot(步行)、on business(出差)、on fire(着火)、on purpose(故意)、on the whole(总的来说)。",
+    "table": {
+      "headers": ["比较", "例子"],
+      "rows": [
+        ["最高级 the most / the -est", "the most extraordinary building / one of the biggest buildings"],
+        ["比较级 -er than / more…than", "easier than / more beautiful than"],
+        ["different from", "different from all other buildings"],
+        ["同级 as…as / not as…as", "not as easy as it is today"],
+        ["on 短语", "on display / on foot / on business / on fire / on purpose"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语里“一楼”说 first floor(英式 ground floor)、“电影”说 movie(英式 film)、“电梯”说 elevator(英式 lift);本课已按美语写。(Crystal Palace / Hyde Park 为伦敦真实史实专名,保留。)", "mark": "first floor/movie" },
+      { "rule": "带 on 的固定短语要整组记:on display / on show(展出)、on foot(步行)、on business(出差)、on duty(值班)、on fire(着火)、on purpose(故意)、on the whole(总的来说)。", "mark": "phrases with on" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How many people visited the Great Exhibition of 1851?",
+    "options": ["Six million in all", "About sixty thousand", "Around one million", "Ten million"],
+    "answer_index": 0
+  },
+  "passage": "Perhaps the most extraordinary building of the nineteenth century was the Crystal Palace, which was built in Hyde Park for the Great Exhibition of 1851. The Crystal Palace was different from all other buildings in the world, for it was made of iron and glass. It was one of the biggest buildings of all time and a lot of people from many countries came to see it. A great many goods were sent to the exhibition from various parts of the world. There was also a great deal of machinery on display. The most wonderful piece of machinery on show was Nasmyth's steam hammer. Though in those days, traveling was not as easy as it is today, steam boats carried thousands of visitors across the Channel from Europe. On arriving in England, they were taken to the Crystal Palace by train. There were six million visitors in all, and the profits from the exhibition were used to build museums and colleges. Later, the Crystal Palace was moved to South London. It remained one of the most famous buildings in the world until it was burnt down in 1936.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Perhaps the most extraordinary building of the nineteenth century was the Crystal Palace, which was built in Hyde Park for the Great Exhibition of 1851.", "text_cn": "19世纪最不平常的建筑也许要数水晶宫了,它是为1851年的“世界博览会”而建在海德公园的。" },
+    { "seq": 2, "speaker": null, "text_en": "The Crystal Palace was different from all other buildings in the world, for it was made of iron and glass. It was one of the biggest buildings of all time and a lot of people from many countries came to see it.", "text_cn": "水晶宫不同于世界上所有其他建筑,因为它是用钢和玻璃建成的。它是有史以来最大的建筑物之一,各个国家的许多人纷纷前来参观。" },
+    { "seq": 3, "speaker": null, "text_en": "A great many goods were sent to the exhibition from various parts of the world. There was also a great deal of machinery on display. The most wonderful piece of machinery on show was Nasmyth's steam hammer.", "text_cn": "大量商品从世界各地送到了博览会,展出的还有很多机器,其中最奇妙的是史密斯的蒸汽锤。" },
+    { "seq": 4, "speaker": null, "text_en": "Though in those days, traveling was not as easy as it is today, steam boats carried thousands of visitors across the Channel from Europe. On arriving in England, they were taken to the Crystal Palace by train.", "text_cn": "尽管当时旅行不像现在这么容易,但汽船还是把成千上万的参观者从欧洲大陆送过了英吉利海峡。一到英国,火车就把他们送到了水晶宫。" },
+    { "seq": 5, "speaker": null, "text_en": "There were six million visitors in all, and the profits from the exhibition were used to build museums and colleges. Later, the Crystal Palace was moved to South London. It remained one of the most famous buildings in the world until it was burnt down in 1936.", "text_cn": "参观人数总共600万,博览会的赢利用来建造博物馆和高等学校。后来,水晶宫被移到了伦敦南部。在1936年被焚毁之前,它一直是世界上最著名的建筑物之一。" }
+  ],
+  "words": [
+    { "word": "palace", "ipa": "/ˈpæləs/", "pos": "n", "meaning_cn": "宫殿", "example": "the Crystal Palace" },
+    { "word": "extraordinary", "ipa": "/ɪkˈstrɔːrdəneri/", "pos": "adj", "meaning_cn": "不平常的,非凡的", "example": "the most extraordinary building" },
+    { "word": "exhibition", "ipa": "/ˌeksɪˈbɪʃn/", "pos": "n", "meaning_cn": "展览,展览会", "example": "the Great Exhibition of 1851" },
+    { "word": "iron", "ipa": "/ˈaɪərn/", "pos": "n", "meaning_cn": "铁", "example": "it was made of iron and glass" },
+    { "word": "various", "ipa": "/ˈveriəs/", "pos": "adj", "meaning_cn": "各种各样的", "example": "from various parts of the world" },
+    { "word": "machinery", "ipa": "/məˈʃiːnəri/", "pos": "n", "meaning_cn": "机器(总称)", "example": "a great deal of machinery on display" },
+    { "word": "display", "ipa": "/dɪˈspleɪ/", "pos": "n", "meaning_cn": "展览,陈列", "example": "machinery on display" },
+    { "word": "steam", "ipa": "/stiːm/", "pos": "n", "meaning_cn": "蒸汽", "example": "Nasmyth's steam hammer" },
+    { "word": "profit", "ipa": "/ˈprɑːfɪt/", "pos": "n", "meaning_cn": "利润", "example": "the profits from the exhibition" },
+    { "word": "college", "ipa": "/ˈkɑːlɪdʒ/", "pos": "n", "meaning_cn": "学院,高等学校", "example": "used to build museums and colleges" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "最高级(the most / the -est / one of the most)" },
+    { "gp": "gp2", "name": "比较级(-er than / more…than / different from)" },
+    { "gp": "gp3", "name": "同级比较(as…as / not as…as)" },
+    { "gp": "gp4", "name": "SD on 短语①(on display / on foot / on business)" },
+    { "gp": "gp5", "name": "SD on 短语②(on fire / on purpose / on the whole)" },
+    { "gp": "gp6", "name": "词汇辨析(extraordinary / various / profit)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The Crystal Palace was perhaps the ___ extraordinary building of the century.\"(最高级:最不平常的,长词用哪个词)", "stem_cn": "水晶宫也许是那个世纪最不平常的建筑。", "options": ["most", "more", "much", "very"] },
+    { "gp": "gp1", "stem": "\"It was one of the ___ buildings of all time.\"(最高级:最大的之一,big 的最高级)", "stem_cn": "它是有史以来最大的建筑之一。", "options": ["biggest", "bigger", "big", "more big"] },
+    { "gp": "gp1", "stem": "\"It remained one of the ___ famous buildings in the world.\"(最高级:最著名的之一)", "stem_cn": "它一直是世界上最著名的建筑之一。", "options": ["most", "more", "very", "much"] },
+    { "gp": "gp2", "stem": "\"The Crystal Palace was different ___ all other buildings.\"(“与…不同”配哪个介词)", "stem_cn": "水晶宫与所有其他建筑都不同。", "options": ["from", "than", "to", "with"] },
+    { "gp": "gp2", "stem": "\"Travel today is ___ than it was in 1851.\"(easy 的比较级)", "stem_cn": "如今旅行比1851年时更容易。", "options": ["easier", "easy", "easiest", "more easy"] },
+    { "gp": "gp2", "stem": "\"The new museum is ___ beautiful than the old one.\"(长词的比较级用哪个词)", "stem_cn": "新博物馆比旧的更漂亮。", "options": ["more", "most", "very", "much"] },
+    { "gp": "gp3", "stem": "\"In those days, traveling was ___ it is today.\"(“不像现在这么容易”,填完整的同级比较结构)", "stem_cn": "那时候旅行不像现在这么容易。", "options": ["not as easy as", "not so easy than", "not as easier as", "not easy so as"] },
+    { "gp": "gp3", "stem": "\"This exhibition hall is ___ a football field.\"(“和…一样大”,填完整的同级比较结构)", "stem_cn": "这个展览大厅和一个足球场一样大。", "options": ["as big as", "so big as", "as bigger as", "as big than"] },
+    { "gp": "gp3", "stem": "\"Nothing there was ___ the steam hammer.\"(“和…一样奇妙”,填完整的同级比较结构)", "stem_cn": "那里没有什么东西像蒸汽锤那样奇妙。", "options": ["as wonderful as", "so wonderful than", "as more wonderful as", "as wonderful than"] },
+    { "gp": "gp4", "stem": "\"There was a great deal of machinery ___ display.\"(展出:配哪个介词)", "stem_cn": "有大量机器在展出。", "options": ["on", "in", "at", "for"] },
+    { "gp": "gp4", "stem": "\"I didn't catch the bus; I came here ___ foot.\"(步行:配哪个介词)", "stem_cn": "我没赶上公交,是走来的。", "options": ["on", "by", "in", "with"] },
+    { "gp": "gp4", "stem": "\"He has gone to Frankfurt ___ business.\"(出差:配哪个介词)", "stem_cn": "他去法兰克福出差了。", "options": ["on", "for", "in", "at"] },
+    { "gp": "gp5", "stem": "\"Look at that smoke — the building must be ___ fire!\"(着火:配哪个介词)", "stem_cn": "看那烟——那栋楼肯定着火了!", "options": ["on", "in", "at", "with"] },
+    { "gp": "gp5", "stem": "\"I don't think it was an accident; he did it ___ purpose.\"(故意:配哪个介词)", "stem_cn": "我觉得那不是意外,他是故意的。", "options": ["on", "by", "for", "with"] },
+    { "gp": "gp5", "stem": "\"___ the whole, it has been a very successful year.\"(总的来说:配哪个介词)", "stem_cn": "总的来说,这是很成功的一年。", "options": ["On", "In", "By", "At"] },
+    { "gp": "gp6", "stem": "\"The Crystal Palace was extraordinary — it was quite ___.\"(非凡的、出众的用哪个词)", "stem_cn": "水晶宫非同寻常,相当出众。", "options": ["exceptional", "funny", "empty", "ordinary"] },
+    { "gp": "gp6", "stem": "\"Goods came from ___ parts of the world.\"(各种各样的用哪个词)", "stem_cn": "商品来自世界各地。", "options": ["various", "single", "equal", "empty"] },
+    { "gp": "gp6", "stem": "\"Museums were built with the ___ from the exhibition.\"(利润、收益用哪个词)", "stem_cn": "博物馆是用博览会的利润建的。", "options": ["profits", "losses", "debts", "taxes"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"一楼\"常说:", "options": ["first floor", "ground floor", "bottom-floor", "level-one"] },
+    { "stem": "美语里\"电影\"常说:", "options": ["movie", "film", "picture-show", "screen-play"] },
+    { "stem": "extraordinary 的意思是:", "options": ["不平常的,非凡的", "普通的", "古老的", "廉价的"] },
+    { "stem": "machinery 的意思是:", "options": ["机器(总称)", "家具", "服装", "食品"] },
+    { "stem": "profit 的意思是:", "options": ["利润", "损失", "债务", "税款"] },
+    { "stem": "various 的意思是:", "options": ["各种各样的", "单一的", "相同的", "空的"] }
+  ],
+  "contrast": [
+    { "us": "first floor", "uk": "ground floor", "note_cn": "一楼;美语 first floor,英式 ground floor" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" }
+  ],
+  "chunks": [
+    { "us": "on display", "ipa": "/ɑːn dɪˈspleɪ/", "example1": "There was a great deal of machinery on display.", "example1_cn": "有大量机器在展出。", "example2": "The paintings are on display in the hall.", "example2_cn": "这些画正在大厅里展出。" },
+    { "us": "be made of", "ipa": "/bi meɪd əv/", "example1": "It was made of iron and glass.", "example1_cn": "它是用钢和玻璃建成的。", "example2": "The bridge is made of stone.", "example2_cn": "这座桥是石头做的。" },
+    { "us": "on arriving", "ipa": "/ɑːn əˈraɪvɪŋ/", "example1": "On arriving in England, they were taken to the palace by train.", "example1_cn": "一到英国,他们就被火车送到了水晶宫。", "example2": "On arriving home, she called her mother.", "example2_cn": "一到家,她就给母亲打了电话。" },
+    { "us": "in all", "ipa": "/ɪn ɔːl/", "example1": "There were six million visitors in all.", "example1_cn": "参观人数总共600万。", "example2": "We spent fifty dollars in all.", "example2_cn": "我们总共花了50美元。" }
+  ],
+  "stage7_cloze": {
+    "context": "The Crystal Palace was perhaps the ___1___ extraordinary building of the century. It was different ___2___ all other buildings, for it was made ___3___ iron and glass. It was one of the ___4___ buildings of all time.",
+    "blanks": [
+      { "blank_no": 1, "options": ["most", "more", "very", "much"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["from", "than", "to", "with"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["of", "from", "with", "by"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["biggest", "bigger", "big", "more big"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What made the Crystal Palace different from all other buildings?", "options": ["It was made of iron and glass", "It was painted bright red", "It stood on water", "It had no windows"] },
+    { "stem": "What was the most wonderful machine on show?", "options": ["Nasmyth's steam hammer", "A printing press", "A steam train", "A weaving loom"] },
+    { "stem": "How many people visited the Great Exhibition?", "options": ["Six million in all", "About one thousand", "Sixty thousand", "One hundred million"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"水晶宫是那个世纪最不平常的建筑\"(最高级,长词用 the most):", "options": ["The Crystal Palace was the most extraordinary building of the century.", "The Crystal Palace was the extraordinariest building of the century.", "The Crystal Palace was the more extraordinary building of the century.", "The Crystal Palace was a very extraordinary building of the century."] },
+    { "stem": "你想说\"那时候旅行不像现在这么容易\"(not as … as 同级比较):", "options": ["In those days, traveling was not as easy as it is today.", "In those days, traveling was not so easy than it is today.", "In those days, traveling was not easier as it is today.", "In those days, traveling was not as easy than it is today."] },
+    { "stem": "你想说\"有大量机器在展出\"(on display):", "options": ["There was a great deal of machinery on display.", "There was a great deal of machinery in display.", "There was a great deal of machinery at display.", "There was a great deal of machinery for display."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "extraordinary 的意思是:", "options": ["不平常的,非凡的", "普通的", "古老的", "廉价的"] },
+    { "kind": "vocab", "stem": "profit 的意思是:", "options": ["利润", "损失", "债务", "税款"] },
+    { "kind": "grammar", "stem": "\"It was one of the ___ buildings of all time.\"(最高级:最大的之一)", "stem_cn": "它是有史以来最大的建筑之一。", "options": ["biggest", "bigger", "big", "more big"] },
+    { "kind": "grammar", "stem": "\"Traveling then was ___ it is today.\"(“不像现在这么容易”,填完整的同级比较结构)", "stem_cn": "那时旅行不像现在这么容易。", "options": ["not as easy as", "not so easy than", "not as easier as", "not easy so as"] },
+    { "kind": "scenario", "stem": "\"on display\" 的意思是:", "options": ["在展出、陈列着", "在休息", "在出售", "在维修"] },
+    { "kind": "scenario", "stem": "\"on purpose\" 的意思是:", "options": ["故意地", "顺便地", "偶然地", "免费地"] },
+    { "kind": "reading", "stem": "Why was the Crystal Palace different from all other buildings?", "options": ["Because it was made of iron and glass", "Because it was painted gold", "Because it floated on the river", "Because it had no doors"], "passage": true },
+    { "kind": "reading", "stem": "What were the profits from the Great Exhibition used for?", "options": ["To build museums and colleges", "To buy more machinery", "To pay the visitors", "To move the palace abroad"], "passage": true },
+    { "kind": "listening", "stem": "How were most visitors from Europe carried across the Channel?", "options": ["By steam boats", "By train", "By airplane", "On foot"], "audio": true },
+    { "kind": "listening", "stem": "What happened to the Crystal Palace in 1936?", "options": ["It was burnt down", "It was sold abroad", "It was rebuilt in stone", "It was made bigger"], "audio": true }
+  ]
+}

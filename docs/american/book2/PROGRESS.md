@@ -359,6 +359,12 @@
 - 词10(journey/field/track/suddenly/clear/quietly/arrive/remember/pass/summer)。美语化 railroad/fall/vacation/downtown;chunks=used to do/would always do/pass the time/go by。
 - 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73-77+L79=264**,L78🚩+L80 待补)。⏭️ L80(🟢低,读源)。
 
+## ✅ U10 L80《The Crystal Palace》(水晶宫)· 🟢全绿 · 🟢低,正常读源
+- 🟢低课:实读源 doc409-412(1851 水晶宫/世博会史实)**未被拦**,正常读源产出。史实记叙,无害。主考(源 doc410 = Key structures)= **KS8/32/56 形容词副词比较级和最高级**:最高级(the most extraordinary / one of the biggest / most famous)+ 比较级(easier than / more…than / different from)+ 同级(not as easy as it is today);辅考 **SD 带 on 的短语**(on display/on foot/on business/on fire/on purpose/on the whole)。全比较结构+介词短语运用题,元语法定义题=0。MC#1 正解(c)材料特殊、#2(b)非常成功。
+- **同级比较 as…as 泄漏修正**:首个 as 挖空必泄(句尾 as 可见 + 括号写 as…as),改为**整条同级结构作选项**(not as easy as / as big as),红灯清、语法点不变。
+- 词10(palace/extraordinary/exhibition/iron/various/machinery/display/steam/profit/college)。美语化 first floor/movie/elevator/fall;Crystal Palace/Hyde Park 伦敦史实专名保留;traveling(非 travelling);chunks=on display/be made of/on arriving/in all。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73-77+L79+L80=308,U10 仅差 L78🚩**)。⏭️ L78 等换情节包;转 U11 起 L81(合集包·介词综合)。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

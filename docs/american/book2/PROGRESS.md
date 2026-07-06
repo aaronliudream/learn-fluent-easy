@@ -216,6 +216,12 @@
 - 美语化:garden→yard、neighbours→neighbors。词10(bark/press/paw/latch/expert/develop/habit/remove + 补 annoyed/neighbor)。关6美英=yard/neighbor(院子/拼写主题)+contrast trash·line。
 - 44题;机器12项🟢(1黄=s5#12 "ran to the station...to catch" 两个 to 不同,人工核合法)。seed→`american_am2_seed_unit08.sql`(**L57-L59=132**)。⏭️ L60。
 
+## ✅ U8 L60《The future》(卜算未来)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc316-317)= **KS36+KS16 表将来的几种方式**:will/be going to、**现在进行时表已安排好的将来**(is arriving tomorrow)、**时间/条件状语从句用一般现在时表将来**(the moment you leave / if it rains / when he returns,主句 will)。Special difficulties **SD 名词作定语/复合名词**(the fair in the village→village fair、a card for Christmas→Christmas card)代替 of 短语。
+- 裁决:gp1 will(2)+ gp2 be going to(2)+ gp3 现在进行表将来(3)+ gp4 状语从句一般现在表将来(5)= KS 主考;gp5 名词作定语(4)+ gp6 the moment/intend to/rush towards(2)= SD+课文辅考。全运用题,元语法定义题=0。
+- 词10(future/fair/fortune-teller/crystal/relation/impatiently + 补 tent/surprise/rush/intend)。关6美英=movie/carnival(集市/娱乐主题)+contrast sweater·mom。
+- 44题;机器12项🟢(初版 s9seq2/3 解释含"状语从句/定语"串味,改写去术语后全绿)。seed→`american_am2_seed_unit08.sql`(**L57-L60=176**)。⏭️ L61。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

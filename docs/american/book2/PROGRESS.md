@@ -658,3 +658,13 @@
 
 ## 单元1 阻塞/升级项
 - (无)
+
+═══════════════════════════════════════
+## L83《The Election Results 选举结果》· U11 · 收官包·方案B换情节 · 时态综合复习(KS74-82)
+- **来源**:收官包(Aaron 2026-07-05 下发,CC 不读源PDF);原课 elections 政治题材→改「校园社团社长选举结果揭晓」中性情节,KS74-82 各时态综合考点原样保留。
+- **考点**:一般现在(holds/leads/takes)/过去进行(were running/was watching/were being counted)/一般过去(gathered/was/arrived)/现在完成 & 现在完成进行(has won/have been waiting/have never felt)/过去完成被动 & 现在进行(had been counted/is announcing/is planning)/词汇辨析(president/winner/principal)= 6 gp × 3 = 18。
+- **词表(10,零遗漏)**:election, president, run, vote, count, gather, announce, winner, principal, event。
+- **关6**:美语对照 principal(校长)/grade(成绩) + 4 词义(election/announce/gather/winner)。contrast: principal↔headmaster / grade↔mark / fall↔autumn / elevator↔lift。chunks: run for president / by the time / win by / all week。
+- **校验**:机器12项 🟢 全绿(计数44=SQL、解释44/44、串味0、泄漏0、三维闸门0)。
+- **落库**:american_am2_seed_unit11.sql(L81+L82+L83 = 132);已勾收官包 checkbox。
+- **待裁决**:无(收官包标准中性情节)。

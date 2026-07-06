@@ -1,0 +1,137 @@
+{
+  "id": "am2_l61",
+  "unit_no": 8,
+  "lesson_no": 61,
+  "title_en": "Trouble with the Hubble",
+  "title_cn": "哈勃望远镜的困境",
+  "grammar_focus": "KS37 表示将来的三种时态(将来进行时 will be doing、将来完成时 will have done、将来完成进行时 will have been doing)(教材 L61 Key structures)主考;时间/条件状语从句用一般现在/现在完成表将来(by the time you read this、the moment he has arrived)+ SD cost/price/value 名词与动词辨析(辅考)",
+  "scene": "哈勃望远镜于1990年4月20日由国家航空航天局发射升空,耗资10多亿美元。从最开始哈勃望远镜就有问题:它传送给我们的图像很令人失望,因为它的主镜子有误差。国家航空航天局准备纠正这一错误,为此不久将把4名宇航员送入太空修复望远镜。“奋进”号航天飞机将把宇航员送上哈勃。“奋进”号上的一只机器手将抓住望远镜并托住它,同时宇航员进行必要的修复工作。当然,哈勃位于地球大气层之外,因此它很快就会给我们传送来我们所见到过的、有关行星和遥远星系的最清晰的照片。哈勃将告诉我们许多有关宇宙的年龄和大小的事情。等到你读到这篇文章时,敏锐的哈勃望远镜已经为我们送来了成千上万张精彩的照片。",
+  "grammar_card": {
+    "title": "表示将来的三种时态",
+    "intro": "KS37 三种将来时态:①将来进行时 will be + 现在分词——表示将来某时正在进行的动作(I will be writing letters all day tomorrow);②将来完成时 will have + 过去分词——表示到将来某时已经完成的动作(Soon the astronauts will have repaired it);③将来完成进行时 will have been + 现在分词——表示到将来某时为止一直持续的动作(By Friday they will have been working on it for seven days)。",
+    "table": {
+      "headers": ["时态", "结构", "例子"],
+      "rows": [
+        ["将来进行时", "will be + doing", "I will be writing letters all day tomorrow."],
+        ["将来完成时", "will have + done", "Soon the astronauts will have repaired the telescope."],
+        ["将来完成进行时", "will have been + doing", "By Friday, they will have been working on it for seven days."],
+        ["将来完成时(时间点)", "will have + done + by...", "He will have arrived by this time tomorrow."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "在 by the time/the moment/as soon as 等引导的时间、条件状语从句中,用一般现在时或现在完成时表示将来,主句用将来时:By the time you read this, the Hubble will have sent us pictures;The moment he has arrived, I will let you know。", "mark": "从句表将来" },
+      { "rule": "SD 易混词 cost/price/value:①作名词——cost 成本/造价(at a cost of),price 价钱(ask the price),value 价值(sentimental value);②作动词——cost 花费多少钱(What does it cost?),price 给…定价/问价(price the goods),value 重视/珍视(I value your advice)。", "mark": "cost/price/value" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is the special importance of a telescope in space?",
+    "options": ["Being above the atmosphere, it sends the clearest pictures of stars and distant galaxies", "It is cheaper to build than one on earth", "It can be repaired only by astronauts", "It can travel to other galaxies"],
+    "answer_index": 0
+  },
+  "passage": "The Hubble telescope was launched into space by NASA on April 20, 1990 at a cost of over a billion dollars. Right from the start there was trouble with the Hubble. The pictures it sent us were very disappointing because its main mirror was faulty! NASA is now going to put the telescope right, so it will soon be sending up four astronauts to repair it. The shuttle Endeavour will be taking the astronauts to the Hubble. A robot-arm from the Endeavour will grab the telescope and hold it while the astronauts make the necessary repairs. Of course, the Hubble is above the earth's atmosphere, so it will soon be sending us the clearest pictures of the stars and distant galaxies that we have ever seen. The Hubble will tell us a great deal about the age and size of the universe. By the time you read this, the Hubble's eagle eye will have sent us thousands and thousands of wonderful pictures.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "The Hubble telescope was launched into space by NASA on April 20, 1990 at a cost of over a billion dollars. Right from the start there was trouble with the Hubble.", "text_cn": "哈勃望远镜于1990年4月20日由国家航空航天局发射升空,耗资10多亿美元。从最开始哈勃望远镜就有问题。" },
+    { "seq": 2, "speaker": null, "text_en": "The pictures it sent us were very disappointing because its main mirror was faulty! NASA is now going to put the telescope right, so it will soon be sending up four astronauts to repair it.", "text_cn": "它传送给我们的图像很令人失望,因为它的主镜子有误差!国家航空航天局准备纠正这一错误,为此不久将把4名宇航员送入太空修复它。" },
+    { "seq": 3, "speaker": null, "text_en": "The shuttle Endeavour will be taking the astronauts to the Hubble. A robot-arm from the Endeavour will grab the telescope and hold it while the astronauts make the necessary repairs.", "text_cn": "“奋进”号航天飞机将把宇航员送上哈勃。“奋进”号上的一只机器手将抓住望远镜并托住它,同时宇航员进行必要的修复工作。" },
+    { "seq": 4, "speaker": null, "text_en": "Of course, the Hubble is above the earth's atmosphere, so it will soon be sending us the clearest pictures of the stars and distant galaxies that we have ever seen.", "text_cn": "当然,哈勃位于地球大气层之外,因此它很快就会给我们传送来我们所见到过的、有关行星和遥远星系的最清晰的照片。" },
+    { "seq": 5, "speaker": null, "text_en": "The Hubble will tell us a great deal about the age and size of the universe. By the time you read this, the Hubble's eagle eye will have sent us thousands and thousands of wonderful pictures.", "text_cn": "哈勃将告诉我们许多有关宇宙的年龄和大小的事情。等到你读到这篇文章时,敏锐的哈勃望远镜已经为我们送来了成千上万张精彩的照片。" }
+  ],
+  "words": [
+    { "word": "Hubble", "ipa": "/ˈhʌbl/", "pos": "n", "meaning_cn": "哈勃(望远镜名)", "example": "the Hubble telescope" },
+    { "word": "telescope", "ipa": "/ˈtelɪskoʊp/", "pos": "n", "meaning_cn": "望远镜", "example": "The Hubble telescope was launched into space." },
+    { "word": "launch", "ipa": "/lɔːntʃ/", "pos": "v", "meaning_cn": "发射,发动", "example": "launched into space by NASA" },
+    { "word": "space", "ipa": "/speɪs/", "pos": "n", "meaning_cn": "空间,太空", "example": "launched into space" },
+    { "word": "NASA", "ipa": "/ˈnæsə/", "pos": "n", "meaning_cn": "(美国)国家航空和航天局", "example": "launched by NASA" },
+    { "word": "billion", "ipa": "/ˈbɪljən/", "pos": "n", "meaning_cn": "十亿", "example": "over a billion dollars" },
+    { "word": "faulty", "ipa": "/ˈfɔːlti/", "pos": "adj", "meaning_cn": "有错误的,有缺陷的", "example": "its main mirror was faulty" },
+    { "word": "astronaut", "ipa": "/ˈæstrənɔːt/", "pos": "n", "meaning_cn": "宇航员", "example": "sending up four astronauts" },
+    { "word": "shuttle", "ipa": "/ˈʃʌtl/", "pos": "n", "meaning_cn": "航天飞机", "example": "The shuttle Endeavour" },
+    { "word": "Endeavour", "ipa": "/ɪnˈdevər/", "pos": "n", "meaning_cn": "“奋进”号(航天飞机名)", "example": "The shuttle Endeavour will be taking the astronauts." },
+    { "word": "robot-arm", "ipa": "/ˈroʊbɑːt ɑːrm/", "pos": "n", "meaning_cn": "机器手", "example": "A robot-arm from the Endeavour will grab the telescope." },
+    { "word": "grab", "ipa": "/ɡræb/", "pos": "v", "meaning_cn": "抓,抓住", "example": "grab the telescope and hold it" },
+    { "word": "atmosphere", "ipa": "/ˈætməsfɪr/", "pos": "n", "meaning_cn": "大气层", "example": "above the earth's atmosphere" },
+    { "word": "distant", "ipa": "/ˈdɪstənt/", "pos": "adj", "meaning_cn": "遥远的", "example": "stars and distant galaxies" },
+    { "word": "galaxy", "ipa": "/ˈɡæləksi/", "pos": "n", "meaning_cn": "星系", "example": "the clearest pictures of distant galaxies" },
+    { "word": "universe", "ipa": "/ˈjuːnɪvɜːrs/", "pos": "n", "meaning_cn": "宇宙", "example": "the age and size of the universe" },
+    { "word": "eagle eye", "ipa": "/ˈiːɡl aɪ/", "pos": "n", "meaning_cn": "鹰眼,敏锐的眼力", "example": "the Hubble's eagle eye" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "将来进行时 will be + 现在分词" },
+    { "gp": "gp2", "name": "将来完成时 will have + 过去分词" },
+    { "gp": "gp3", "name": "将来完成进行时 will have been + 现在分词" },
+    { "gp": "gp4", "name": "时间/条件状语从句用现在时表将来" },
+    { "gp": "gp5", "name": "cost/price/value 名词辨析(SD)" },
+    { "gp": "gp6", "name": "cost/price/value 动词辨析(SD)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"NASA will soon ___ up four astronauts to repair the telescope.\"(将来进行时:不久将在派…)", "stem_cn": "国家航空航天局不久将派4名宇航员去修理它。", "options": ["be sending", "send", "have sent", "sending"] },
+    { "gp": "gp1", "stem": "\"The shuttle Endeavour ___ the astronauts to the Hubble.\"(将来进行时)", "stem_cn": "“奋进”号航天飞机将把宇航员送上哈勃。", "options": ["will be taking", "will take", "will have taken", "is taking"] },
+    { "gp": "gp1", "stem": "\"It will soon ___ us the clearest pictures of the stars.\"(将来进行时)", "stem_cn": "它很快就会给我们传来最清晰的星星照片。", "options": ["be sending", "send", "sent", "have sent"] },
+    { "gp": "gp1", "stem": "\"I ___ letters all day tomorrow.\"(将来进行时:明天一整天都在做)", "stem_cn": "明天我一整天都会在写信。", "options": ["will be writing", "will write", "will have written", "am writing"] },
+    { "gp": "gp2", "stem": "\"Soon the astronauts ___ the telescope.\"(将来完成时:很快就把…修好了)", "stem_cn": "宇航员很快就会把望远镜修好。", "options": ["will have repaired", "will repair", "will be repairing", "have repaired"] },
+    { "gp": "gp2", "stem": "\"By the time you read this, the Hubble's eagle eye ___ us thousands of pictures.\"(将来完成时:到那时已经…)", "stem_cn": "等你读到这里时,哈勃已经给我们送来数千张照片了。", "options": ["will have sent", "will send", "will be sending", "has sent"] },
+    { "gp": "gp2", "stem": "\"He ___ by this time tomorrow.\"(将来完成时:到明天这时候已经…)", "stem_cn": "明天这个时候他已经到了。", "options": ["will have arrived", "will arrive", "will be arriving", "has arrived"] },
+    { "gp": "gp2", "stem": "\"He will phone us later; he ___ his exam results by then.\"(将来完成时:到那时已经收到)", "stem_cn": "他晚点会给我们打电话,那时他已经收到考试成绩了。", "options": ["will have received", "will receive", "will be receiving", "has received"] },
+    { "gp": "gp3", "stem": "\"By Friday midday, they ___ on it for seven days.\"(将来完成进行时:到周五中午已持续做了7天)", "stem_cn": "到星期五中午,他们就在这个工程上干了7天了。", "options": ["will have been working", "will work", "will have worked", "will be working"] },
+    { "gp": "gp3", "stem": "\"By the end of this year, I ___ English for five years.\"(将来完成进行时:到今年年底已经学了5年)", "stem_cn": "到今年年底,我学英语就满5年了。", "options": ["will have been learning", "will learn", "will have learned", "will be learning"] },
+    { "gp": "gp4", "stem": "\"By the time you ___ this, the Hubble will have sent us many pictures.\"(时间状语从句用一般现在时表将来)", "stem_cn": "等你读到这篇文章时……", "options": ["read", "will read", "will have read", "are reading"] },
+    { "gp": "gp4", "stem": "\"The moment he ___, I will let you know.\"(时间状语从句用现在完成时表'一…就…')", "stem_cn": "他一到我就通知你。", "options": ["has arrived", "will arrive", "will have arrived", "is arriving"] },
+    { "gp": "gp4", "stem": "\"As soon as he ___ his exam results, he will phone us.\"(时间状语从句用现在完成时表'一…就…')", "stem_cn": "他一收到考试成绩就会给我们打电话。", "options": ["has received", "will receive", "will have received", "is receiving"] },
+    { "gp": "gp5", "stem": "\"There has been a sharp rise in the ___ of living.\"(名词:'生活费用/成本')", "stem_cn": "生活费用急剧上涨。", "options": ["cost", "price", "value", "expense"] },
+    { "gp": "gp5", "stem": "\"How much is that blouse? Let's ask the ___.\"(名词:问'价钱')", "stem_cn": "那件衬衫多少钱?我们问问价钱。", "options": ["price", "cost", "value", "money"] },
+    { "gp": "gp5", "stem": "\"The stolen items were of sentimental ___, rather than financial.\"(名词:情感'价值')", "stem_cn": "被盗物品更具有情感上的价值,而非经济上的。", "options": ["value", "price", "cost", "number"] },
+    { "gp": "gp6", "stem": "\"What does this blouse ___, please?\"(动词:询问'多少钱')", "stem_cn": "请问,这件衬衫多少钱?", "options": ["cost", "price", "value", "pay"] },
+    { "gp": "gp6", "stem": "\"I ___ your advice a great deal.\"(动词:非常'看重、珍视')", "stem_cn": "我非常尊重你的建议。", "options": ["value", "cost", "price", "spend"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"钞票、纸币\"常说:", "options": ["bill", "note", "paper money", "cash note"] },
+    { "stem": "美语里\"(餐馆结账的)账单\"常说:", "options": ["check", "bill", "note", "list"] },
+    { "stem": "telescope 的意思是:", "options": ["望远镜", "显微镜", "温度计", "万花筒"] },
+    { "stem": "launch 的意思是:", "options": ["发射,发动", "降落", "停止", "修理"] },
+    { "stem": "faulty 的意思是:", "options": ["有错误的,有缺陷的", "完美的", "巨大的", "遥远的"] },
+    { "stem": "galaxy 的意思是:", "options": ["星系", "星星", "月亮", "飞船"] }
+  ],
+  "contrast": [
+    { "us": "bill", "uk": "note", "note_cn": "钞票、纸币;美语 bill(a ten-dollar bill),英式 note" },
+    { "us": "check", "uk": "bill", "note_cn": "(餐馆)账单;美语 check,英式 bill" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" }
+  ],
+  "chunks": [
+    { "us": "right from the start", "ipa": "/raɪt frəm ðə stɑːrt/", "example1": "Right from the start there was trouble with the Hubble.", "example1_cn": "从一开始哈勃就有问题。", "example2": "I knew right from the start it would work.", "example2_cn": "我从一开始就知道它会成功。" },
+    { "us": "at a cost of", "ipa": "/æt ə kɔːst əv/", "example1": "It was launched at a cost of over a billion dollars.", "example1_cn": "它的发射耗资10多亿美元。", "example2": "The bridge was built at a cost of $50 million.", "example2_cn": "这座桥造价5000万美元。" },
+    { "us": "a great deal", "ipa": "/ə ɡreɪt diːl/", "example1": "The Hubble will tell us a great deal about the universe.", "example1_cn": "哈勃将告诉我们许多有关宇宙的事。", "example2": "I learned a great deal from her.", "example2_cn": "我从她那里学到了很多。" },
+    { "us": "put ... right", "ipa": "/pʊt raɪt/", "example1": "NASA is going to put the telescope right.", "example1_cn": "国家航空航天局准备把望远镜纠正好。", "example2": "Don't worry, we'll put it right.", "example2_cn": "别担心,我们会把它修好。" }
+  ],
+  "stage7_cloze": {
+    "context": "NASA will soon ___1___ up four astronauts to repair the Hubble. The shuttle Endeavour ___2___ the astronauts to it. Soon the astronauts ___3___ the telescope. By the time you read this, the Hubble's eagle eye ___4___ us thousands of pictures.",
+    "blanks": [
+      { "blank_no": 1, "options": ["be sending", "send", "sent", "have sent"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["will be taking", "will take", "took", "is taken"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["will have repaired", "repaired", "are repairing", "repair"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["will have sent", "will send", "is sending", "sent"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "When and by whom was the Hubble telescope launched?", "options": ["Into space by NASA on April 20, 1990, at a cost of over a billion dollars", "By four astronauts last week", "By the shuttle Endeavour in 2000", "By a robot-arm from the earth"] },
+    { "stem": "Why were the Hubble's pictures very disappointing at first?", "options": ["Its main mirror was faulty", "It was too far from the stars", "The astronauts damaged it", "It had no power"] },
+    { "stem": "How will the astronauts reach the Hubble to repair it?", "options": ["The shuttle Endeavour will take them, and a robot-arm will hold the telescope", "They will fly there alone in a rocket", "They will use another telescope", "They will not go; it repairs itself"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"到你读到这封信时,我已经给你寄了照片\"(将来完成时:到将来某时已完成):", "options": ["By the time you read this, I will have sent you the photos.", "By the time you will read this, I will send you the photos.", "By the time you read this, I send you the photos.", "By the time you read this, I sending you the photos."] },
+    { "stem": "你想说\"明天这个时候我将正在开会\"(将来进行时:将来某刻正在进行):", "options": ["This time tomorrow I will be having a meeting.", "This time tomorrow I have a meeting.", "This time tomorrow I will had a meeting.", "This time tomorrow I am will have a meeting."] },
+    { "stem": "你想问\"这件衬衫多少钱?\"(用动词 cost 表'花费多少钱'):", "options": ["What does this blouse cost?", "What does this blouse price?", "How much does this blouse value?", "What is this blouse costing money?"] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "telescope 的意思是:", "options": ["望远镜", "显微镜", "温度计", "万花筒"] },
+    { "kind": "vocab", "stem": "universe 的意思是:", "options": ["宇宙", "大学", "联盟", "制服"] },
+    { "kind": "grammar", "stem": "\"By the time you read this, the Hubble ___ us thousands of pictures.\"(将来完成时)", "stem_cn": "等你读到这里时,哈勃已经给我们送来数千张照片了。", "options": ["will have sent", "will send", "is sending", "sent"] },
+    { "kind": "grammar", "stem": "\"This time tomorrow the shuttle ___ the astronauts to the Hubble.\"(将来进行时)", "stem_cn": "明天这个时候航天飞机正把宇航员送往哈勃。", "options": ["will be taking", "will take", "took", "is taken"] },
+    { "kind": "scenario", "stem": "\"will have + 过去分词\"这种形式表示的时间概念是:", "options": ["到将来某时已经完成", "现在正在进行", "过去已经完成", "将来正在进行"] },
+    { "kind": "scenario", "stem": "\"at a cost of\" 的意思是:", "options": ["造价为,耗资", "免费", "打折出售", "用现金支付"] },
+    { "kind": "reading", "stem": "What was wrong with the Hubble right from the start?", "options": ["Its main mirror was faulty, so its pictures were disappointing", "It was launched too late", "Its robot-arm broke", "It ran out of fuel"], "passage": true },
+    { "kind": "reading", "stem": "What will the astronauts from the Endeavour do?", "options": ["Repair the telescope while a robot-arm grabs and holds it", "Bring the Hubble back to earth", "Build a new telescope in space", "Take photos of one another"], "passage": true },
+    { "kind": "listening", "stem": "How much did the Hubble telescope cost to launch?", "options": ["Over a billion dollars", "A few thousand dollars", "Nothing at all", "Exactly one million dollars"], "audio": true },
+    { "kind": "listening", "stem": "Where is the Hubble in relation to the earth's atmosphere?", "options": ["Above it, so it sends the clearest pictures", "Below it", "Inside it", "On the moon"], "audio": true }
+  ]
+}

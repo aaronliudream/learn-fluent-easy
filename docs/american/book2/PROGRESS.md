@@ -222,6 +222,12 @@
 - 词10(future/fair/fortune-teller/crystal/relation/impatiently + 补 tent/surprise/rush/intend)。关6美英=movie/carnival(集市/娱乐主题)+contrast sweater·mom。
 - 44题;机器12项🟢(初版 s9seq2/3 解释含"状语从句/定语"串味,改写去术语后全绿)。seed→`american_am2_seed_unit08.sql`(**L57-L60=176**)。⏭️ L61。
 
+## ✅ U8 L61《Trouble with the Hubble》(哈勃望远镜的困境)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc320)= **KS37 表将来的三种时态**:①将来进行时 will be doing(will be sending/taking、I will be writing letters all day tomorrow)②将来完成时 will have done(will have repaired、by the time you read this…will have sent、KS60c He will have arrived by this time tomorrow)③将来完成进行时 will have been doing(by Friday they will have been working for seven days)。Special difficulties **SD 易混词 cost/price/value**:名词(cost of living/ask the price/sentimental value)+ 动词(What does it cost?/I value your advice)。
+- 裁决:gp1 将来进行(4)+ gp2 将来完成(4)+ gp3 将来完成进行(2)+ gp4 时间从句用现在/现在完成表将来(3,by the time you read/the moment he has arrived/as soon as he has received)= KS37 主考;gp5 cost/price/value 名词(3)+ gp6 动词(2)= SD 辅考。全运用题,元语法定义题=0。
+- **词17全收**(零遗漏:Hubble/telescope/launch/space/NASA/billion/faulty/astronaut/shuttle/Endeavour/robot-arm/grab/atmosphere/distant/galaxy/universe/eagle eye,含3专名)。关6美英=bill/note(钞票)+check/bill(账单,呼应 cost 主题)+elevator·apartment;chunks=right from the start/at a cost of/a great deal/put…right。
+- 44题;机器12项🟢一次过。seed→`american_am2_seed_unit08.sql`(**L57-L61=220**)。⏭️ L62。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

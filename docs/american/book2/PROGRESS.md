@@ -204,6 +204,12 @@
 - 美语化:store(非 shop)/salesclerk(非 shop assistant)/purse(非 handbag),去英式 madam 称呼。词表13词全收。关6美英=store/purse(购物主题)+contrast salesclerk·pants。
 - 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit08.sql`(**L57=44**)。⏭️ L58。
 
+## ✅ U8 L58《A blessing in disguise?》(是因祸得福吗?)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc308-309)= **KS34 被动语态综合**:各时态被动(was planted 过去/is being sent 进行/has been found 完成)+ **be said to / It is said that 转述被动** + **双宾语被动**(I was given a pen)。Special difficulties **易混动词 increase/grow、gain/earn、pick/cut**。
+- 裁决:gp1 一般/过去被动(3)+ gp2 进行/完成被动(3)+ gp3 be said to/It is said that(3)+ gp4 双宾语被动(2)= KS34 主考;gp5 increase·grow/gain·earn/pick·cut(4)+ gp6 have sth done/it 强调句/a blessing in disguise(3)= SD+课文辅考。全运用题,元语法定义题=0。
+- **词表16词全收**(blessing/disguise/tiny/possess/cursed/increase/plant/church/evil/reputation/claim/victim/vicar/source/income/trunk)。关6美英=fall/bill(季节/收入主题)+contrast downtown·vacation。
+- 44题;机器12项🟢(初版 s5#10/11 双宾语被动用了箭头→触发泄漏[a],改成独立被动句去箭头后全绿)。seed→`american_am2_seed_unit08.sql`(**L57+L58=88**)。⏭️ L59。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

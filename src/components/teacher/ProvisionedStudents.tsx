@@ -45,7 +45,7 @@ async function invokeProvision(payload: Record<string, unknown>): Promise<Record
   return (data ?? {}) as Record<string, unknown>;
 }
 
-export function ProvisionedStudents({ classId }: { classId: string }) {
+export function ProvisionedStudents({ classId, readOnly = false }: { classId: string; readOnly?: boolean }) {
   const t = useT();
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(true);
@@ -152,21 +152,25 @@ export function ProvisionedStudents({ classId }: { classId: string }) {
         <h3 className="text-sm font-extrabold"><T>代建学生账号</T></h3>
       </div>
       <p className="mt-1 text-xs text-fuchsia-900/70 dark:text-fuchsia-100/70">
-        <T>没有邮箱的学生：填真实姓名即可创建账号，系统生成登录ID+密码，抄给学生用它登录。密码只显示一次。</T>
+        {readOnly
+          ? <T>此班级已归档，为只读存档。以下代建学生名单仅供查看，无法添加、改名、重置密码或移出。</T>
+          : <T>没有邮箱的学生：填真实姓名即可创建账号，系统生成登录ID+密码，抄给学生用它登录。密码只显示一次。</T>}
       </p>
 
       {/* 添加 */}
-      <div className="mt-3 flex flex-wrap items-end gap-2">
-        <div className="flex-1 min-w-[180px]">
-          <Label htmlFor="rn" className="text-xs"><T>学生真实姓名（可选，仅你可见）</T></Label>
-          <Input id="rn" value={realName} onChange={(e) => setRealName(e.target.value)}
-            placeholder={t("如：张三")} className="mt-1"
-            onKeyDown={(e) => { if (e.key === "Enter" && !creating) addStudent(); }} />
+      {!readOnly && (
+        <div className="mt-3 flex flex-wrap items-end gap-2">
+          <div className="flex-1 min-w-[180px]">
+            <Label htmlFor="rn" className="text-xs"><T>学生真实姓名（可选，仅你可见）</T></Label>
+            <Input id="rn" value={realName} onChange={(e) => setRealName(e.target.value)}
+              placeholder={t("如：张三")} className="mt-1"
+              onKeyDown={(e) => { if (e.key === "Enter" && !creating) addStudent(); }} />
+          </div>
+          <Button onClick={addStudent} disabled={creating} className="bg-gradient-to-r from-fuchsia-500 to-orange-500 text-white">
+            {creating ? <Loader2 className="size-4 animate-spin" /> : <><UserPlus className="mr-1 size-4" /> <T>添加学生</T></>}
+          </Button>
         </div>
-        <Button onClick={addStudent} disabled={creating} className="bg-gradient-to-r from-fuchsia-500 to-orange-500 text-white">
-          {creating ? <Loader2 className="size-4 animate-spin" /> : <><UserPlus className="mr-1 size-4" /> <T>添加学生</T></>}
-        </Button>
-      </div>
+      )}
 
       {/* 名单 */}
       <div className="mt-4">
@@ -193,16 +197,18 @@ export function ProvisionedStudents({ classId }: { classId: string }) {
                     <span><T>创建于</T> {new Date(r.created_at).toLocaleDateString()}</span>
                   </div>
                 </div>
-                <Button variant="ghost" size="sm" onClick={() => openEdit(r)} className="shrink-0">
-                  <Pencil className="mr-1 size-3.5" /> <T>改名</T>
-                </Button>
-                <Button variant="outline" size="sm" onClick={() => resetPassword(r)} disabled={resettingId === r.student_user_id} className="shrink-0">
-                  {resettingId === r.student_user_id ? <Loader2 className="size-3.5 animate-spin" /> : <><KeyRound className="mr-1 size-3.5" /> <T>重置密码</T></>}
-                </Button>
-                <Button variant="ghost" size="sm" onClick={() => setRemoveTarget(r)}
-                  className="shrink-0 text-rose-600 hover:text-rose-700 hover:bg-rose-50 dark:hover:bg-rose-500/10">
-                  <LogOut className="mr-1 size-3.5" /> <T>移出</T>
-                </Button>
+                {!readOnly && <>
+                  <Button variant="ghost" size="sm" onClick={() => openEdit(r)} className="shrink-0">
+                    <Pencil className="mr-1 size-3.5" /> <T>改名</T>
+                  </Button>
+                  <Button variant="outline" size="sm" onClick={() => resetPassword(r)} disabled={resettingId === r.student_user_id} className="shrink-0">
+                    {resettingId === r.student_user_id ? <Loader2 className="size-3.5 animate-spin" /> : <><KeyRound className="mr-1 size-3.5" /> <T>重置密码</T></>}
+                  </Button>
+                  <Button variant="ghost" size="sm" onClick={() => setRemoveTarget(r)}
+                    className="shrink-0 text-rose-600 hover:text-rose-700 hover:bg-rose-50 dark:hover:bg-rose-500/10">
+                    <LogOut className="mr-1 size-3.5" /> <T>移出</T>
+                  </Button>
+                </>}
               </li>
             ))}
           </ul>

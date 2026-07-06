@@ -80,6 +80,7 @@ export default function Teacher() {
 
   /* ── Derived stats for hero ─────────────────────────── */
   const activeClasses = classes.filter((c) => !c.archived_at);
+  const archivedClasses = classes.filter((c) => c.archived_at);
   const totalStudents = activeClasses.reduce((s, c) => s + c.student_count, 0);
   const totalActive   = activeClasses.reduce((s, c) => s + c.active_this_week, 0);
   const totalWeak     = activeClasses.reduce((s, c) => s + c.weak_student_count, 0);
@@ -155,6 +156,8 @@ export default function Teacher() {
               </button>
             </div>
           )}
+
+          {archivedClasses.length > 0 && <ArchivedClasses list={archivedClasses} />}
         </TabsContent>
 
         {/* ───────── CARDS — re-uses the existing TeacherCards page ───────── */}
@@ -236,6 +239,39 @@ function ClassCard({ c }: { c: ClassRow }) {
         </div>
       </div>
     </Link>
+  );
+}
+
+function ArchivedClasses({ list }: { list: ClassRow[] }) {
+  return (
+    <details className="mt-6 rounded-2xl border border-border bg-muted/30">
+      <summary className="cursor-pointer select-none list-none px-4 py-3 text-sm font-bold text-muted-foreground flex items-center gap-2">
+        <span>🗄</span>
+        <span><T>已归档班级</T> · {list.length}</span>
+        <span className="ml-auto text-[11px] font-normal"><T>只读存档</T> ▾</span>
+      </summary>
+      <ul className="px-3 pb-3 space-y-2">
+        {list.map((c) => {
+          const meta = STAGE_META[c.stage];
+          return (
+            <li key={c.id}>
+              <Link
+                to={`/teacher/class/${c.id}`}
+                className="flex items-center gap-3 rounded-xl border border-border bg-card px-3 py-2.5 transition hover:bg-muted/40">
+                <span className="text-lg shrink-0">🗄</span>
+                <div className="min-w-0 flex-1">
+                  <div className="font-bold text-sm truncate"><T>{c.name}</T></div>
+                  <div className="text-[11px] text-muted-foreground">
+                    <T>{meta.label}</T> · <T>归档于</T> {c.archived_at ? relTime(c.archived_at) : "—"} · {c.student_count} <T>名学生</T>
+                  </div>
+                </div>
+                <span className="text-[11px] text-muted-foreground shrink-0"><T>只读</T> →</span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </details>
   );
 }
 

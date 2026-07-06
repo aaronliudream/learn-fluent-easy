@@ -159,6 +159,7 @@ export default function TeacherClass() {
   }
 
   const meta = STAGE_META[cls.stage];
+  const isArchived = !!cls.archived_at;
 
   return (
     <main className="mx-auto min-h-screen max-w-6xl px-4 py-6 md:px-6 md:py-10">
@@ -169,7 +170,14 @@ export default function TeacherClass() {
         className={`relative mt-5 overflow-hidden rounded-3xl p-6 md:p-8 text-white shadow-tile bg-gradient-to-br ${meta.gradient}`}>
         <div className="relative flex flex-wrap items-start justify-between gap-4">
           <div className="min-w-0">
-            <div className="text-[10px] font-bold uppercase tracking-[0.25em] opacity-85"><T>班级详情</T></div>
+            <div className="text-[10px] font-bold uppercase tracking-[0.25em] opacity-85 flex items-center gap-2">
+              <T>班级详情</T>
+              {isArchived && (
+                <span className="rounded-full bg-white/25 px-2 py-0.5 text-[10px] font-bold tracking-normal normal-case">
+                  🗄 <T>已归档 · 只读</T>
+                </span>
+              )}
+            </div>
             <div className="mt-1 text-2xl md:text-3xl font-extrabold leading-tight">🏫 <T>{cls.name}</T></div>
             <div className="mt-2 text-sm opacity-90 flex flex-wrap items-center gap-3">
               <span><b className="tabular-nums">{activeStudents.length}</b> <T>名学生</T></span>
@@ -209,7 +217,7 @@ export default function TeacherClass() {
         {/* ───────── ROSTER ───────── */}
         <TabsContent value="roster" className="mt-5">
           {/* 代建学生账号（没有邮箱的学生，老师代建登录 ID + 密码）*/}
-          <ProvisionedStudents classId={cls.id} />
+          <ProvisionedStudents classId={cls.id} readOnly={isArchived} />
           <div className="rounded-3xl border-2 border-border bg-card shadow-tile overflow-hidden">
             <div className="px-5 py-3 border-b border-border flex flex-wrap items-center justify-between gap-2 bg-muted/40">
               <div className="text-sm font-extrabold"><T>👥 学生名单</T></div>
@@ -321,7 +329,7 @@ export default function TeacherClass() {
 
         {/* ───────── SETTINGS ───────── */}
         <TabsContent value="settings" className="mt-5">
-          <ClassSettings cls={cls} onChange={loadAll} />
+          <ClassSettings cls={cls} onChange={loadAll} readOnly={isArchived} />
         </TabsContent>
       </Tabs>
     </main>
@@ -411,7 +419,7 @@ function StudentRow({ s, classId }: { s: Student; classId: string }) {
   );
 }
 
-function ClassSettings({ cls, onChange }: { cls: ClassRow; onChange: () => void }) {
+function ClassSettings({ cls, onChange, readOnly = false }: { cls: ClassRow; onChange: () => void; readOnly?: boolean }) {
   const t = useT();
   const [name, setName] = useState(cls.name);
   const [savingName, setSavingName] = useState(false);
@@ -457,10 +465,12 @@ function ClassSettings({ cls, onChange }: { cls: ClassRow; onChange: () => void 
           <div>
             <Label><T>班级名称</T></Label>
             <div className="mt-1 flex gap-2">
-              <Input value={name} onChange={(e) => setName(e.target.value)} maxLength={80} />
-              <Button onClick={saveName} disabled={savingName || name.trim() === cls.name}>
-                {savingName ? <Loader2 className="size-4 animate-spin" /> : <T>保存</T>}
-              </Button>
+              <Input value={name} onChange={(e) => setName(e.target.value)} maxLength={80} disabled={readOnly} />
+              {!readOnly && (
+                <Button onClick={saveName} disabled={savingName || name.trim() === cls.name}>
+                  {savingName ? <Loader2 className="size-4 animate-spin" /> : <T>保存</T>}
+                </Button>
+              )}
             </div>
           </div>
           <div>
@@ -476,22 +486,31 @@ function ClassSettings({ cls, onChange }: { cls: ClassRow; onChange: () => void 
         <h3 className="text-base font-extrabold mb-2"><T>🔑 邀请码</T></h3>
         <div className="flex flex-wrap items-center gap-3">
           <code className="rounded-lg bg-muted px-3 py-2 font-mono text-lg tracking-widest">{cls.join_code}</code>
-          <Button variant="outline" onClick={regenerateCode} disabled={regenBusy}>
-            {regenBusy ? <Loader2 className="mr-1 size-4 animate-spin" /> : <RefreshCw className="mr-1 size-4" />}
-            <T>重新生成</T>
-          </Button>
+          {!readOnly && (
+            <Button variant="outline" onClick={regenerateCode} disabled={regenBusy}>
+              {regenBusy ? <Loader2 className="mr-1 size-4 animate-spin" /> : <RefreshCw className="mr-1 size-4" />}
+              <T>重新生成</T>
+            </Button>
+          )}
         </div>
         <p className="mt-2 text-xs text-muted-foreground"><T>重新生成后，旧邀请码立即失效，已加入的学生不受影响。</T></p>
       </div>
 
-      <div className="rounded-3xl border-2 border-rose-200 bg-rose-50/40 p-5 dark:border-rose-500/30 dark:bg-rose-500/10">
-        <h3 className="text-base font-extrabold mb-2 text-rose-700 dark:text-rose-300"><T>🗑 归档班级</T></h3>
-        <p className="text-sm text-muted-foreground"><T>归档后学生仍能继续学习，但你不会在老师中心看到此班级。可以稍后从数据库手动恢复。</T></p>
-        <Button variant="destructive" onClick={archive} disabled={archiving} className="mt-3">
-          {archiving ? <Loader2 className="mr-1 size-4 animate-spin" /> : <Archive className="mr-1 size-4" />}
-          <T>归档此班级</T>
-        </Button>
-      </div>
+      {readOnly ? (
+        <div className="rounded-3xl border-2 border-border bg-muted/30 p-5">
+          <h3 className="text-base font-extrabold mb-2 text-muted-foreground"><T>🗄 已归档班级</T></h3>
+          <p className="text-sm text-muted-foreground"><T>此班级已归档，仅供只读查看。学生仍能继续学习，其学习数据实时可查；如需恢复或修改，请从数据库操作。</T></p>
+        </div>
+      ) : (
+        <div className="rounded-3xl border-2 border-rose-200 bg-rose-50/40 p-5 dark:border-rose-500/30 dark:bg-rose-500/10">
+          <h3 className="text-base font-extrabold mb-2 text-rose-700 dark:text-rose-300"><T>🗑 归档班级</T></h3>
+          <p className="text-sm text-muted-foreground"><T>归档后学生仍能继续学习，但你不会在老师中心看到此班级。可以稍后从数据库手动恢复。</T></p>
+          <Button variant="destructive" onClick={archive} disabled={archiving} className="mt-3">
+            {archiving ? <Loader2 className="mr-1 size-4 animate-spin" /> : <Archive className="mr-1 size-4" />}
+            <T>归档此班级</T>
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

@@ -78,28 +78,9 @@ export default function TeacherClass() {
     if (!id) return;
     setLoading(true);
 
-    // ── 实证日志（临时诊断，定位清楚后可删）─────────────────────────
-    // 与列表页对齐用 getUser（会主动向服务器校验并确保 token），并同时看 getSession。
-    const { data: sessionData } = await supabase.auth.getSession();
-    const { data: userData, error: userErr } = await supabase.auth.getUser();
-    console.log("[TeacherClass] getSession →",
-      { hasSession: !!sessionData?.session,
-        user: sessionData?.session?.user?.id ?? null,
-        hasAccessToken: !!sessionData?.session?.access_token });
-    console.log("[TeacherClass] getUser →",
-      { user: userData?.user?.id ?? null, email: userData?.user?.email ?? null, err: userErr?.message ?? null });
-
-    // 直查 classes（RLS-gated）——保留仅为诊断：打印 data/error/status，
-    // 区分"被 RLS 挡（data=null 无 error）"还是"真的报错（有 error/非 200）"。
-    const clsDirect = await supabase.from("classes").select("*").eq("id", id).maybeSingle();
-    console.log("[TeacherClass] direct from(classes) →",
-      { data: clsDirect.data, error: clsDirect.error, status: (clsDirect as { status?: number }).status });
-
-    // ── 真正取数：走列表页同款 RPC get_my_teacher_classes（SECURITY DEFINER +
-    //    auth.uid()，已证实在列表页可用），从中挑出当前班级 → 彻底绕开直查 classes 的问题。
-    const { data: myClasses, error: rpcErr } = await supabase.rpc("get_my_teacher_classes");
-    console.log("[TeacherClass] get_my_teacher_classes →",
-      { count: Array.isArray(myClasses) ? myClasses.length : null, error: rpcErr?.message ?? null });
+    // 取班级走列表页同款 RPC get_my_teacher_classes（SECURITY DEFINER + auth.uid()），
+    // 从中挑出当前班级 → 与列表页口径完全一致，绕开直查 classes 的会话/RLS 问题。
+    const { data: myClasses } = await supabase.rpc("get_my_teacher_classes");
     const rpcRow = (Array.isArray(myClasses) ? myClasses : []).find(
       (c: { id: string }) => c.id === id,
     ) as (ClassRow & Record<string, unknown>) | undefined;
@@ -109,8 +90,7 @@ export default function TeacherClass() {
       supabase.rpc("get_class_weakness", { _class_id: id, _limit: 10 }),
     ]);
 
-    // 优先用 RPC 结果（映射成 ClassRow；RPC 不返回 description，此处置 null，渲染未用到）；
-    // RPC 若没命中再兜底直查结果。
+    // 映射成 ClassRow（RPC 不返回 description，置 null，渲染未用到）。
     const resolved: ClassRow | null = rpcRow
       ? {
           id: rpcRow.id,
@@ -121,7 +101,7 @@ export default function TeacherClass() {
           archived_at: rpcRow.archived_at,
           created_at: rpcRow.created_at,
         }
-      : (clsDirect.data as ClassRow | null) ?? null;
+      : null;
     setCls(resolved);
     if (!stuR.error) setStudents((stuR.data ?? []) as Student[]);
     if (!wkR.error) setWeakness((wkR.data ?? []) as WeaknessRow[]);

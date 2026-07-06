@@ -1,0 +1,131 @@
+{
+  "id": "am2_l74",
+  "unit_no": 10,
+  "lesson_no": 74,
+  "title_en": "Too Good to Be True",
+  "title_cn": "好得不像真的",
+  "grammar_focus": "KS2/26/50 现在进行时 vs 一般现在时(教材 L74 Key structures,方案B换情节包):此刻正在做用现在进行(are filming/are wearing)、经常或事实用一般现在(makes/wants/tells)、状态动词不用进行时(know/seem/believe/recognize/want);辅以 SD get 短语动词(get out / get into / get on with / get off / get over / get through)",
+  "scene": "一些名演员今天正在公园里拍电影。他们穿着戏服、化了浓妆,所以没人认出他们。导演想让这一幕显得真实,就让他们走进人群。“这化装太逼真了,”一个演员说,“我觉得没人知道我们是谁。”就在这时,一个公园工人过来,让他们从花坛里出去。“你们不能在这儿拍,”他说,“请离开草坪,到别处继续。”演员们化装得太好,那工人完全没认出他们。他们想解释,但他不信——他以为他们只是穿戏服的粉丝。最后导演打通了公园办公室的电话,把事情解决了。大家都笑了:他们化装得太好,差点被赶出自己的电影!",
+  "grammar_card": {
+    "title": "KS2/26/50 现在进行 vs 一般现在 + get 短语",
+    "intro": "本课复习“此刻 vs 经常”的两种现在时:①现在进行时——此刻正在发生(am/is/are + doing),如 They are filming a movie right now;②一般现在时——经常做、普遍事实(do/does),如 This director makes a new movie every year;③状态动词不用进行时——know / like / want / seem / believe / recognize 表状态,不说 am knowing,要说 know。另配 SD get 短语动词:get out(离开)、get into(进入)、get on with(继续/相处)、get off(下来)、get over(克服)、get through(打通/完成)。",
+    "table": {
+      "headers": ["用法", "例子"],
+      "rows": [
+        ["现在进行(此刻)", "They are filming a movie in the park right now."],
+        ["一般现在(经常/事实)", "This director makes a new movie every year."],
+        ["状态动词不用进行", "I know that actor.(✗ am knowing)"],
+        ["get out / get off", "Get out of the flower beds. / Get off the grass."],
+        ["get on with / get through", "Get on with it. / He got through to the office."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语里“电影”说 movie(英式 film)、“市中心”说 downtown(英式 city centre)、“度假”说 on vacation(英式 on holiday);本课已按美语写。", "mark": "movie/downtown" },
+      { "rule": "状态动词(know / like / want / seem / believe / recognize / understand)表示状态,一般不用进行时:说 I know him,不说 I am knowing him。", "mark": "state verbs" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did the park worker not believe the actors?",
+    "options": ["Their disguises were so good that he thought they were just fans in costume", "They spoke a foreign language", "They had no tickets", "They were not really actors at all"],
+    "answer_index": 0
+  },
+  "passage": "Some famous actors are filming a movie in the park today. They are wearing costumes and heavy disguises, so no one recognizes them. The director wants the scene to look real, so he tells them to walk among the crowd. \"This disguise is too perfect,\" one actor says. \"I don't think anyone knows who we are.\" Just then, a park worker comes over and asks them to get out of the flower beds. \"You can't film here,\" he says. \"Please get off the grass and get on with it somewhere else.\" The actors are so well disguised that the worker doesn't recognize them at all. They try to explain, but he doesn't believe them — he thinks they are just fans in costume. Finally the director gets through to the park office and sorts everything out. Everyone laughs: their disguises were so good that they almost got thrown out of their own movie!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Some famous actors are filming a movie in the park today. They are wearing costumes and heavy disguises, so no one recognizes them.", "text_cn": "一些名演员今天正在公园里拍电影。他们穿着戏服、化了浓妆,所以没人认出他们。" },
+    { "seq": 2, "speaker": null, "text_en": "The director wants the scene to look real, so he tells them to walk among the crowd. \"This disguise is too perfect,\" one actor says. \"I don't think anyone knows who we are.\"", "text_cn": "导演想让这一幕显得真实,就让他们走进人群。“这化装太逼真了,”一个演员说,“我觉得没人知道我们是谁。”" },
+    { "seq": 3, "speaker": null, "text_en": "Just then, a park worker comes over and asks them to get out of the flower beds. \"You can't film here,\" he says. \"Please get off the grass and get on with it somewhere else.\"", "text_cn": "就在这时,一个公园工人过来,让他们从花坛里出去。“你们不能在这儿拍,”他说,“请离开草坪,到别处继续。”" },
+    { "seq": 4, "speaker": null, "text_en": "The actors are so well disguised that the worker doesn't recognize them at all. They try to explain, but he doesn't believe them — he thinks they are just fans in costume.", "text_cn": "演员们化装得太好,那工人完全没认出他们。他们想解释,但他不信——他以为他们只是穿戏服的粉丝。" },
+    { "seq": 5, "speaker": null, "text_en": "Finally the director gets through to the park office and sorts everything out. Everyone laughs: their disguises were so good that they almost got thrown out of their own movie!", "text_cn": "最后导演打通了公园办公室的电话,把事情解决了。大家都笑了:他们化装得太好,差点被赶出自己的电影!" }
+  ],
+  "words": [
+    { "word": "limelight", "ipa": "/ˈlaɪmlaɪt/", "pos": "n", "meaning_cn": "公众注意的中心", "example": "out of the limelight" },
+    { "word": "disguise", "ipa": "/dɪsˈɡaɪz/", "pos": "n", "meaning_cn": "伪装,化装", "example": "They are wearing heavy disguises" },
+    { "word": "costume", "ipa": "/ˈkɑːstuːm/", "pos": "n", "meaning_cn": "戏服,服装", "example": "just fans in costume" },
+    { "word": "actor", "ipa": "/ˈæktər/", "pos": "n", "meaning_cn": "演员", "example": "Some famous actors are filming a movie" },
+    { "word": "director", "ipa": "/dəˈrektər/", "pos": "n", "meaning_cn": "导演", "example": "The director wants the scene to look real" },
+    { "word": "scene", "ipa": "/siːn/", "pos": "n", "meaning_cn": "场景,一幕", "example": "The director wants the scene to look real" },
+    { "word": "perfect", "ipa": "/ˈpɜːrfɪkt/", "pos": "adj", "meaning_cn": "完美的", "example": "This disguise is too perfect" },
+    { "word": "recognize", "ipa": "/ˈrekəɡnaɪz/", "pos": "v", "meaning_cn": "认出", "example": "no one recognizes them" },
+    { "word": "crowd", "ipa": "/kraʊd/", "pos": "n", "meaning_cn": "人群", "example": "walk among the crowd" },
+    { "word": "famous", "ipa": "/ˈfeɪməs/", "pos": "adj", "meaning_cn": "著名的", "example": "Some famous actors" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "现在进行时(此刻正在做)" },
+    { "gp": "gp2", "name": "一般现在时(经常/事实)" },
+    { "gp": "gp3", "name": "状态动词不用进行时(know/seem/believe/recognize/want)" },
+    { "gp": "gp4", "name": "SD get 短语① get out / get into / get over" },
+    { "gp": "gp5", "name": "SD get 短语② get on with / get off / get through" },
+    { "gp": "gp6", "name": "词汇与结构 recognize / disguise / so...that" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Look! Some famous actors ___ a movie in the park right now.\"(此刻正在做:现在进行时)", "stem_cn": "看!一些名演员此刻正在公园里拍电影。", "options": ["are filming", "film", "filmed", "have filmed"] },
+    { "gp": "gp1", "stem": "\"They ___ costumes and heavy disguises at the moment.\"(此刻正穿着:现在进行时)", "stem_cn": "他们此刻正穿着戏服、化着浓妆。", "options": ["are wearing", "wear", "wore", "wears"] },
+    { "gp": "gp1", "stem": "\"Be quiet — the director ___ to the actors now.\"(此刻正在说:现在进行时)", "stem_cn": "安静——导演正在跟演员讲话。", "options": ["is talking", "talks", "talked", "talk"] },
+    { "gp": "gp2", "stem": "\"This director ___ a new movie every year.\"(每年都拍,经常:一般现在时)", "stem_cn": "这位导演每年都拍一部新电影。", "options": ["makes", "is making", "made", "make"] },
+    { "gp": "gp2", "stem": "\"The director ___ the scene to look real, so he sends them into the crowd.\"(想要,一般现在)", "stem_cn": "导演想让这一幕显得真实,就把他们送进人群。", "options": ["wants", "is wanting", "wanted", "want"] },
+    { "gp": "gp2", "stem": "\"Every morning the crew ___ at eight and starts work.\"(每天早上,经常:一般现在)", "stem_cn": "每天早上,剧组八点到,然后开工。", "options": ["arrives", "is arriving", "arrived", "arrive"] },
+    { "gp": "gp3", "stem": "\"I ___ that actor — he is very famous.\"(认识=状态,不用进行时)", "stem_cn": "我认识那个演员,他很有名。", "options": ["know", "am knowing", "was knowing", "have been knowing"] },
+    { "gp": "gp3", "stem": "\"The worker doesn't ___ them, even close up.\"(认出=状态,不用进行时)", "stem_cn": "那工人连近看都认不出他们。", "options": ["recognize", "recognizing", "be recognizing", "to recognizing"] },
+    { "gp": "gp3", "stem": "\"She ___ nervous before the scene begins.\"(显得=状态,不用进行时)", "stem_cn": "这一幕开始前,她显得很紧张。", "options": ["seems", "is seeming", "was seeming", "seem"] },
+    { "gp": "gp4", "stem": "\"The worker asked them to get ___ of the flower beds.\"(从…出来、离开)", "stem_cn": "工人让他们从花坛里出去。", "options": ["out", "in", "over", "on"] },
+    { "gp": "gp4", "stem": "\"I've lost my key, so I can't get ___ my trailer.\"(进入)", "stem_cn": "我把钥匙丢了,进不了自己的拖车。", "options": ["into", "out of", "over", "off"] },
+    { "gp": "gp4", "stem": "\"It took the actor a week to get ___ his cold.\"(从…中恢复、克服)", "stem_cn": "那演员花了一周才从感冒中恢复。", "options": ["over", "out", "into", "off"] },
+    { "gp": "gp5", "stem": "\"He's hard to work with; I can't get ___ him.\"(与…相处融洽)", "stem_cn": "他很难合作,我跟他处不来。", "options": ["on with", "off", "into", "out of"] },
+    { "gp": "gp5", "stem": "\"Please get ___ the grass and film somewhere else.\"(从…下来、离开)", "stem_cn": "请从草坪上下来,到别处去拍。", "options": ["off", "on", "over", "into"] },
+    { "gp": "gp5", "stem": "\"Finally the director ___ to the park office on the phone.\"(打通、接通)", "stem_cn": "最后导演终于打通了公园办公室的电话。", "options": ["got through", "got off", "got into", "got over"] },
+    { "gp": "gp6", "stem": "\"The disguise was so good that no one ___ the actors.\"(认出用哪个词)", "stem_cn": "化装太好了,没人认出这些演员。", "options": ["recognized", "remembered", "forgot", "ignored"] },
+    { "gp": "gp6", "stem": "\"They wore heavy makeup and costumes as a ___.\"(伪装用哪个词)", "stem_cn": "他们化浓妆、穿戏服作为伪装。", "options": ["disguise", "reward", "mistake", "vacation"] },
+    { "gp": "gp6", "stem": "\"They were ___ well disguised that the worker didn't know them.\"(如此…以致:程度词)", "stem_cn": "他们化装得如此之好,以致工人都不认识他们。", "options": ["so", "such", "too", "very"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"电影\"常说:", "options": ["movie", "film", "picture-show", "screen-play"] },
+    { "stem": "美语里\"市中心\"常说:", "options": ["downtown", "city centre", "town-middle", "central-city"] },
+    { "stem": "disguise 的意思是:", "options": ["伪装,化装", "奖励", "邀请", "假期"] },
+    { "stem": "recognize 的意思是:", "options": ["认出", "忘记", "拒绝", "隐藏"] },
+    { "stem": "costume 的意思是:", "options": ["戏服,服装", "剧本", "门票", "布景"] },
+    { "stem": "famous 的意思是:", "options": ["著名的", "陌生的", "廉价的", "害羞的"] }
+  ],
+  "contrast": [
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" },
+    { "us": "downtown", "uk": "city centre", "note_cn": "市中心;美语 downtown,英式 city centre" },
+    { "us": "on vacation", "uk": "on holiday", "note_cn": "在度假;美语 on vacation,英式 on holiday" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" }
+  ],
+  "chunks": [
+    { "us": "out of the limelight", "ipa": "/aʊt əv ðə ˈlaɪmlaɪt/", "example1": "The old star now lives out of the limelight.", "example1_cn": "这位老明星如今远离公众视线地生活。", "example2": "After retiring, she stayed out of the limelight.", "example2_cn": "退休后,她一直不再抛头露面。" },
+    { "us": "get on with it", "ipa": "/ɡet ɑːn wɪð ɪt/", "example1": "Please get on with it somewhere else.", "example1_cn": "请到别处继续(做)吧。", "example2": "Stop chatting and get on with your work.", "example2_cn": "别聊了,接着干你的活。" },
+    { "us": "get through to sb", "ipa": "/ɡet θruː tə/", "example1": "The director got through to the park office.", "example1_cn": "导演打通了公园办公室的电话。", "example2": "I tried to call, but I couldn't get through to her.", "example2_cn": "我打了电话,但一直没能接通她。" },
+    { "us": "too good to be true", "ipa": "/tuː ɡʊd tə bi truː/", "example1": "The disguise was too good to be true.", "example1_cn": "这化装好得让人不敢相信。", "example2": "A free trip? That sounds too good to be true.", "example2_cn": "免费旅行?那听起来好得不像真的。" }
+  ],
+  "stage7_cloze": {
+    "context": "Some famous actors ___1___ a movie in the park today. They ___2___ costumes, so no one ___3___ them. When a worker told them to get ___4___ of the flower beds, he didn't even believe they were actors.",
+    "blanks": [
+      { "blank_no": 1, "options": ["are filming", "film", "filmed", "have filmed"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["are wearing", "wear", "wore", "wears"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["recognizes", "is recognizing", "recognized", "recognize"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["out", "in", "over", "off"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What are the famous actors doing in the park?", "options": ["Filming a movie in costume and disguise", "Having a picnic with fans", "Watching a parade", "Selling tickets"] },
+    { "stem": "Why didn't the park worker recognize them?", "options": ["Their disguises were so good that he thought they were fans in costume", "It was too dark to see", "They were standing far away", "They kept their backs to him"] },
+    { "stem": "How was the problem finally solved?", "options": ["The director got through to the park office and sorted it out", "The actors ran away", "The worker called the police", "They gave up and went home"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"看!他们此刻正在公园里拍电影\"(现在进行时,此刻正在做):", "options": ["Look! They are filming a movie in the park right now.", "Look! They film a movie in the park right now.", "Look! They filmed a movie in the park right now.", "Look! They have filmed a movie in the park right now."] },
+    { "stem": "你想说\"我认识那个演员\"(know 是表状态的词,不用进行时):", "options": ["I know that actor.", "I am knowing that actor.", "I was knowing that actor.", "I have been knowing that actor."] },
+    { "stem": "你想说\"请下草坪,到别处继续\"(get off / get on with):", "options": ["Please get off the grass and get on with it somewhere else.", "Please get on the grass and get off it somewhere else.", "Please get out the grass and get over it somewhere else.", "Please get into the grass and get through it somewhere else."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "disguise 的意思是:", "options": ["伪装,化装", "奖励", "邀请", "假期"] },
+    { "kind": "vocab", "stem": "recognize 的意思是:", "options": ["认出", "忘记", "拒绝", "隐藏"] },
+    { "kind": "grammar", "stem": "\"Look! They ___ a movie right now.\"(此刻正在做:现在进行时)", "stem_cn": "看!他们此刻正在拍电影。", "options": ["are filming", "film", "filmed", "have filmed"] },
+    { "kind": "grammar", "stem": "\"I ___ that actor very well.\"(认识=表状态,不用进行时)", "stem_cn": "我很熟悉那个演员。", "options": ["know", "am knowing", "was knowing", "have been knowing"] },
+    { "kind": "scenario", "stem": "\"get through to the office\" 里 get through 的意思是:", "options": ["(打电话)接通、打通", "路过办公室", "走出办公室", "推倒办公室"] },
+    { "kind": "scenario", "stem": "\"out of the limelight\" 的意思是:", "options": ["不再受公众关注、远离聚光灯", "灯坏了", "走出剧院", "关掉了灯"] },
+    { "kind": "reading", "stem": "Why were the actors almost thrown out of the park?", "options": ["Their disguises were so perfect that the worker didn't recognize them and thought they were fans", "They had not paid for tickets", "They damaged the flowers on purpose", "They arrived after closing time"], "passage": true },
+    { "kind": "reading", "stem": "What did the director do to solve the problem?", "options": ["He got through to the park office and sorted everything out", "He argued with the worker for hours", "He canceled the whole movie", "He called the actors' fans for help"], "passage": true },
+    { "kind": "listening", "stem": "What were the actors wearing?", "options": ["Costumes and heavy disguises", "Ordinary street clothes", "Police uniforms", "Nothing unusual"], "audio": true },
+    { "kind": "listening", "stem": "Did anyone recognize the actors?", "options": ["No — not even the park worker", "Yes — a whole crowd of fans", "Yes — the park office manager", "Yes — a newspaper reporter"], "audio": true }
+  ]
+}

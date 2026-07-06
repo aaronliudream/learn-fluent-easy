@@ -319,6 +319,13 @@
 - 词10(官方9:record-holder/truant/unimaginative/shame/hitchhike/meantime/lorry→**truck**/border/evade + 补1 authorities)。美语化:**lorry→truck、biscuit→cookie、cinema→movie theater、film→movie、towards→toward、centre→center、travelled→traveled**;关6美英=truck/lorry + cookie/biscuit + movie theater/cinema + movie/film;chunks=put sb to shame/as far as sb gets/set up a record/dream of doing。
 - 44题;机器12项🟢。seed→**新建 `american_am2_seed_unit10.sql`**(L73=44)。⏭️ L74(🟢低,正常读)。
 
+## ✅ U10 L74《Too Good to Be True》(好得不像真的)· 🟢全绿 · 🔄方案B换情节包
+- **风险再分级**:风险表原标 🟢,我实读源 doc385-388《Out of the limelight》(演员乔装野餐、假 sheriff 驱赶)**未被拦**;但网页版预扫复判为**实际会拦**(触发=课文 sheriff 追赶/驱赶的执法-追捕联想),主动出**换情节包**。按 L69 先例=Aaron 是内容主人,收到换情节包就用包产、不用源。
+- **unit 号纠偏**:包头写“L74 属 U9”,与我方分组(U9=L65-72,**U10=L73-80**)差一位;已核对按 **U10**(unit_no=10)落 `american_am2_seed_unit10.sql`,与 L73 同单元。
+- 换情节=《好得不像真的》:名演员公园拍电影、化装太逼真被工人误当粉丝赶出的喜剧(无害,替换原 sheriff 情节)。考点原样保留:主考 **KS2/26/50 现在进行时 vs 一般现在时**(are filming/are wearing vs makes/wants/arrives)+ **状态动词不用进行时**(know/seem/recognize/want)+ 辅考 **SD get 短语**(get out/into/over / on with/off/through)。全时态运用+语境选词,元语法定义题=0。
+- 词10(包给词表为下限:limelight/disguise/costume/actor/director/scene/perfect/recognize/crowd/famous,原 sheriff/sneer/notice 等强绑词已降级不进课文)。美语化:movie/downtown/on vacation;关6美英=movie/film + downtown/city centre + on vacation/on holiday + fall/autumn;chunks=out of the limelight/get on with it/get through to sb/too good to be true。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73+L74=88**)。⏭️ L75(🔴换情节包待网页版)。
+
 ## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
 - **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
 - **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。

@@ -179,12 +179,13 @@
 - **词表14词全收**(sticky/finger/pie/mix/pastry/annoying/receiver/dismay/recognize/persuade/mess/doorknob/sign/register)。关6美英=mailman/faucet(家/邮件主题)+contrast mail·zip code。
 - 44题;机器12项🟢(1黄=s5#10 "the deaf and the blind" 是 the+形容词并列的教学句式,人工核合法)。seed→`american_am2_seed_unit07.sql`(**L49-L54=264**)。⏭️ L55。
 
-## ⏸️ U7 L55《Not a gold mine》(并非金矿)· **挂起·内容过滤拦截**(2026-07-05)
-- **状态**:CC 生产被内容过滤拦截,Aaron 指示**跳过、由他这边扫源材料出净化版考点清单再回喂**。CC 不再碰 L55,U7 先做 L56+ 往下推,L55 事后补齐。
-- **已知(供 Aaron 净化版参考)**:课名《Not a gold mine》,lesson_no=55,unit_no=7;**主考 KS31 would/used to 表过去习惯**(would 过去反复动作、used to 过去习惯/状态、状态只能 used to);**SD(KS44)used to do / be used to doing / be used to do 三辨析**;**词表19词**(gold/mine/treasure/revealer/invent/detect/bury/cave/seashore/pirate/arm/soil/entrance/finally/worthless/thoroughly/trunk/confident/value);源页 passage=doc295(印256)/KS31=doc296/SD=doc297/MC≈doc298。
-- **触发推测**:课文为寻宝题材(金属探测器 The Revealer 在海边山洞探测海盗埋藏的金子,最终只挖到近乎无价值的小金币+空铁皮箱);疑似 treasure/pirate/buried gold/gold mine 词簇触发。
-- **seed 影响**:unit07 seed 现含 L49-L54 + 后续 L56…,**L55 处留空缺号**,补齐后再并入,COUNT 届时 +44。
-- **更新(2026-07-05)**:Aaron+网页版 Claude 核查 p262,确认**纯误判(false positive)**——课文完全无害(金属探测器寻宝趣味文,语法 would/used to)。L55 净化素材由网页版整理后转 CC,CC**用那份干净素材生产、不再自读该课 PDF**。
+## ✅ U7 L55《Not a gold mine》(并非金矿)· 🟢全绿 · **净化包生产**(2026-07-05)
+- **背景**:原课文 PDF 读取被内容过滤**误判**(纯 false positive,内容无害);Aaron+网页版 Claude 核查 p260-262 后出**净化生产包**,CC 用干净素材生产,**未读源 PDF**。
+- 主考 = **KS31 would/used to 表过去习惯**(would 过去反复动作、used to 过去习惯/状态、状态只能 used to)。SD = **used to do / be used to doing / be used to do 三辨析 + gold vs golden**。
+- 素材=授权改写课文(Danny 爸爸买金属探测器 The Revealer 在后院找海盗埋的金子、挖遍院子一无所获),保全考点(would/used to、be used to detect 被动、All that glitters is not gold、golden memory)。
+- 裁决:gp1 would(3)+ gp2 used to(3)+ gp3 would vs used to(3)= 主考;gp4 used三结构(4)+ gp5 gold/golden(3)+ gp6 dig/bury 过去式(2)= 辅考。全运用题,元语法定义题=0。
+- **词表13词全收**(gold/mine/detect/metal/rock/pirate/treasure/bury/dig/hole/deep/golden/opportunity;网页版原漏 rock/deep/opportunity,CC 补回)。关6美英=backyard/parking lot(后院/挖掘主题)+contrast flashlight·trash can。
+- 44题;机器12项🟢(3黄=s5#14 gold材质题、s7 cloze used to/gold 复现,人工核合法)。seed→`american_am2_seed_unit07.sql`(**U7 补齐 L49-L56=352**)。
 
 ## ✅ U7 L56《Faster than sound!》(比声音还快!)· 🟢全绿 · 教材 Unit 3
 - 主考(实读 Key structures 页 doc300-301)= **KS32 数量词与比较**:as…as / not as…as、**little·few(否定)vs a little·a few(肯定)**、a lot of / a great deal of(不可数)/ a great many(可数)、the same as / different from。Special difficulties **SD 易混词 handsome/beautiful/pretty/good-looking、reach(接地点/速度)/ arrive in·at**。

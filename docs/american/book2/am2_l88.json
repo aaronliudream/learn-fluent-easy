@@ -1,0 +1,130 @@
+{
+  "id": "am2_l88",
+  "unit_no": 11,
+  "lesson_no": 88,
+  "title_en": "Lost and Found",
+  "title_cn": "失物招领",
+  "grammar_focus": "复习 KS16/40/64 条件句 if(方案B换情节包):真实条件(if + 现在时, will/should do)、与现在事实相反的非真实条件(if + 过去式, would do;if I were you)、与过去事实相反的非真实条件(if + had done, would have done),以及 if 条件从句里不用 will、用现在时表将来的规则",
+  "scene": "如果你在学校丢了东西,应该去查一下失物招领箱。上周,要不是我去查了一下,我的背包就永远找不回来了。“如果我是你,”朋友说,“我会把名字写在每样东西上。”要是每个人都给自己的东西贴上标签,那箱子就不会这么满了。“要是你找到我的包,请给我打电话,”我对办公室说。当初我要是再细心点,这事就不会发生了。“它一旦出现,我们就通知你,”办公室的职员说。你只要礼貌地问,大家通常都会帮你。第二天——说来你可能不信——我的包就在我课桌上!以后我要是再丢东西,我就完全知道该怎么办了。",
+  "grammar_card": {
+    "title": "复习 KS16/40/64 条件句 if",
+    "intro": "if 条件句分两大类:①真实条件——可能发生的事,if + 一般现在时,主句用 will / should / 祈使句(If you lose something, you should check the box);②非真实条件(虚拟)——与事实相反的假设。又分两种:与现在相反,if + 过去式,主句 would do,be 一律用 were(If I were you, I would label everything);与过去相反,if + had done,主句 would have done(If I hadn't checked it, I would have lost my bag)。要点:if 条件从句里不用 will,要用一般现在时表将来(If it turns up, we will let you know)。",
+    "table": {
+      "headers": ["类型", "例子"],
+      "rows": [
+        ["真实条件(if + 现在, will/should)", "If you lose it, you should check the box."],
+        ["与现在相反(if + 过去式, would do)", "If I were you, I would label everything."],
+        ["与过去相反(if + had done, would have done)", "If I hadn't checked, I would have lost it."],
+        ["从句用现在表将来", "If it turns up, we will let you know."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语“橡皮擦”说 eraser(英式 rubber);“失物招领处”说 lost-and-found(英式 lost property)。本课已按美语写。", "mark": "eraser / lost-and-found" },
+      { "rule": "与现在相反的假设,be 动词一律用 were(即使主语是 I/he/she);与过去相反用 if + had done → would have done;真实条件的 if 从句里不用 will。", "mark": "if 用法" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What should you do if you lose something at school?",
+    "options": ["Check the lost-and-found box", "Go straight home", "Buy a new one", "Tell no one"],
+    "answer_index": 0
+  },
+  "passage": "If you lose something at school, you should check the lost-and-found box. Last week, if I hadn't checked it, I would have lost my backpack forever. \"If I were you,\" my friend said, \"I would put my name on everything.\" If everyone labeled their things, the box wouldn't be so full. \"If you find my bag,\" I told the office, \"please call me.\" If I had been more careful, this wouldn't have happened. \"If it turns up, we will let you know,\" the secretary said. If you ask politely, people usually help you. The next day, if you can believe it, my bag was on my desk! If I ever lose something again, I will know exactly what to do.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "If you lose something at school, you should check the lost-and-found box. Last week, if I hadn't checked it, I would have lost my backpack forever.", "text_cn": "如果你在学校丢了东西,应该去查一下失物招领箱。上周,要不是我去查了一下,我的背包就永远找不回来了。" },
+    { "seq": 2, "speaker": null, "text_en": "\"If I were you,\" my friend said, \"I would put my name on everything.\" If everyone labeled their things, the box wouldn't be so full.", "text_cn": "“如果我是你,”朋友说,“我会把名字写在每样东西上。”要是每个人都给自己的东西贴上标签,那箱子就不会这么满了。" },
+    { "seq": 3, "speaker": null, "text_en": "\"If you find my bag,\" I told the office, \"please call me.\" If I had been more careful, this wouldn't have happened.", "text_cn": "“要是你找到我的包,请给我打电话,”我对办公室说。当初我要是再细心点,这事就不会发生了。" },
+    { "seq": 4, "speaker": null, "text_en": "\"If it turns up, we will let you know,\" the secretary said. If you ask politely, people usually help you.", "text_cn": "“它一旦出现,我们就通知你,”办公室的职员说。你只要礼貌地问,大家通常都会帮你。" },
+    { "seq": 5, "speaker": null, "text_en": "The next day, if you can believe it, my bag was on my desk! If I ever lose something again, I will know exactly what to do.", "text_cn": "第二天——说来你可能不信——我的包就在我课桌上!以后我要是再丢东西,我就完全知道该怎么办了。" }
+  ],
+  "words": [
+    { "word": "lost-and-found", "ipa": "/lɔːst ənd faʊnd/", "pos": "n", "meaning_cn": "失物招领处", "example": "check the lost-and-found box" },
+    { "word": "backpack", "ipa": "/ˈbækpæk/", "pos": "n", "meaning_cn": "背包,双肩包", "example": "I would have lost my backpack" },
+    { "word": "label", "ipa": "/ˈleɪbl/", "pos": "v", "meaning_cn": "贴标签,标注", "example": "if everyone labeled their things" },
+    { "word": "forever", "ipa": "/fərˈevər/", "pos": "adv", "meaning_cn": "永远", "example": "lost my backpack forever" },
+    { "word": "careful", "ipa": "/ˈkerfl/", "pos": "adj", "meaning_cn": "小心的,细心的", "example": "if I had been more careful" },
+    { "word": "turn up", "ipa": "/tɜːrn ʌp/", "pos": "phr", "meaning_cn": "出现,被找到", "example": "if it turns up, we will let you know" },
+    { "word": "secretary", "ipa": "/ˈsekrəteri/", "pos": "n", "meaning_cn": "秘书,办公室职员", "example": "the secretary said" },
+    { "word": "politely", "ipa": "/pəˈlaɪtli/", "pos": "adv", "meaning_cn": "有礼貌地", "example": "if you ask politely" },
+    { "word": "believe", "ipa": "/bɪˈliːv/", "pos": "v", "meaning_cn": "相信", "example": "if you can believe it" },
+    { "word": "exactly", "ipa": "/ɪɡˈzæktli/", "pos": "adv", "meaning_cn": "确切地,正是", "example": "I will know exactly what to do" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "真实条件(if + 现在时, will/should do)" },
+    { "gp": "gp2", "name": "与现在相反的非真实条件(if + 过去式, would do)" },
+    { "gp": "gp3", "name": "与过去相反的非真实条件(if + had done, would have done)" },
+    { "gp": "gp4", "name": "if 条件从句里用现在时表将来(不用 will)" },
+    { "gp": "gp5", "name": "三类条件句综合辨析" },
+    { "gp": "gp6", "name": "词汇辨析(backpack / label / secretary)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"If you ___ something at school, you should check the lost-and-found box.\"(真实条件:if 从句用现在时)", "stem_cn": "如果你在学校丢了东西,应该去查失物招领箱。", "options": ["lose", "will lose", "lost", "would lose"] },
+    { "gp": "gp1", "stem": "\"If you ask politely, people usually ___ you.\"(真实条件:主句用一般现在)", "stem_cn": "你只要礼貌地问,大家通常都会帮你。", "options": ["help", "helped", "would help", "had helped"] },
+    { "gp": "gp1", "stem": "\"If it turns up, we ___ you know.\"(真实条件:主句用 will)", "stem_cn": "它一旦出现,我们就通知你。", "options": ["will let", "would let", "let", "would have let"] },
+    { "gp": "gp2", "stem": "\"If everyone labeled their things, the box ___ so full.\"(与现在相反:主句用 would)", "stem_cn": "要是每个人都给东西贴标签,箱子就不会这么满。", "options": ["wouldn't be", "won't be", "isn't", "hadn't been"] },
+    { "gp": "gp2", "stem": "\"'If I ___ you, I would put my name on everything,' my friend said.\"(与现在事实相反的假设,be 动词该用哪个形式)", "stem_cn": "“如果我是你,我会把名字写在每样东西上。”", "options": ["were", "am", "was", "will be"] },
+    { "gp": "gp2", "stem": "\"If I had more time, I ___ help you look for it.\"(与现在事实相反的假设,主句该用哪个词)", "stem_cn": "要是我有更多时间,我会帮你找。", "options": ["would", "will", "would have", "am"] },
+    { "gp": "gp3", "stem": "\"Last week, if I hadn't checked it, I ___ my backpack forever.\"(与过去相反:主句 would have done)", "stem_cn": "上周要不是我查了一下,我的背包就永远找不回来了。", "options": ["would have lost", "would lose", "will lose", "lost"] },
+    { "gp": "gp3", "stem": "\"If I ___ more careful, this wouldn't have happened.\"(与过去相反:if 从句用 had done)", "stem_cn": "当初我要是再细心点,这事就不会发生。", "options": ["had been", "was", "were", "am"] },
+    { "gp": "gp3", "stem": "\"If she had labeled her bag, it ___ so easily.\"(与过去相反:主句 wouldn't have done)", "stem_cn": "要是她给包贴了标签,它就不会这么容易弄丢了。", "options": ["wouldn't have been lost", "wouldn't be lost", "won't be lost", "isn't lost"] },
+    { "gp": "gp4", "stem": "\"If it ___ up, we will let you know.\"(条件从句用现在时,不用 will)", "stem_cn": "它一旦出现,我们就通知你。", "options": ["turns", "will turn", "would turn", "turned"] },
+    { "gp": "gp4", "stem": "\"If you ___ politely, people help you.\"(条件从句用一般现在)", "stem_cn": "你只要礼貌地问,大家就会帮你。", "options": ["ask", "will ask", "would ask", "asked"] },
+    { "gp": "gp4", "stem": "\"If I ever ___ something again, I will know what to do.\"(条件从句用现在时表将来)", "stem_cn": "以后我要是再丢东西,就知道该怎么办了。", "options": ["lose", "will lose", "would lose", "lost"] },
+    { "gp": "gp5", "stem": "\"If you find my bag, please ___ me.\"(真实条件里的请求,用祈使)", "stem_cn": "要是你找到我的包,请给我打电话。", "options": ["call", "called", "would call", "will called"] },
+    { "gp": "gp5", "stem": "\"If I had known, I ___ come earlier.\"(与过去相反)", "stem_cn": "要是我早知道,我就早点来了。", "options": ["would have", "would", "will have", "had"] },
+    { "gp": "gp5", "stem": "\"If it rains tomorrow, we ___ stay inside.\"(真实条件·说将来)", "stem_cn": "要是明天下雨,我们就待在室内。", "options": ["will", "would", "would have", "are"] },
+    { "gp": "gp6", "stem": "\"I keep my books in my ___.\"(背包用哪个词)", "stem_cn": "我把书放在背包里。", "options": ["backpack", "kitchen", "garden", "river"] },
+    { "gp": "gp6", "stem": "\"If you ___ your things with your name, you won't lose them.\"(贴标签、标注用哪个词)", "stem_cn": "要是你给东西贴上写着名字的标签,就不会丢了。", "options": ["label", "cook", "sing", "sleep"] },
+    { "gp": "gp6", "stem": "\"'If it turns up, we will call you,' the ___ said.\"(办公室职员用哪个词)", "stem_cn": "“它一旦出现,我们就打电话给你,”办公室职员说。", "options": ["secretary", "farmer", "pilot", "singer"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"橡皮擦\"说:", "options": ["eraser", "rubber", "wiper", "cleaner"] },
+    { "stem": "美语里\"背包、双肩包\"常说:", "options": ["backpack", "rucksack", "satchel", "carry-bag"] },
+    { "stem": "backpack 的意思是:", "options": ["背包", "帽子", "鞋子", "手表"] },
+    { "stem": "forever 的意思是:", "options": ["永远", "从不", "有时", "立刻"] },
+    { "stem": "politely 的意思是:", "options": ["有礼貌地", "大声地", "生气地", "快速地"] },
+    { "stem": "exactly 的意思是:", "options": ["确切地,正是", "大概地", "错误地", "缓慢地"] }
+  ],
+  "contrast": [
+    { "us": "eraser", "uk": "rubber", "note_cn": "橡皮擦;美语 eraser,英式 rubber" },
+    { "us": "backpack", "uk": "rucksack", "note_cn": "背包;美语 backpack,英式 rucksack" },
+    { "us": "lost-and-found", "uk": "lost property", "note_cn": "失物招领处;美语 lost-and-found,英式 lost property" },
+    { "us": "sneakers", "uk": "trainers", "note_cn": "运动鞋;美语 sneakers,英式 trainers" }
+  ],
+  "chunks": [
+    { "us": "lost and found", "ipa": "/lɔːst ənd faʊnd/", "example1": "You should check the lost-and-found box.", "example1_cn": "你应该去查失物招领箱。", "example2": "I found my hat at the lost and found.", "example2_cn": "我在失物招领处找到了我的帽子。" },
+    { "us": "turn up", "ipa": "/tɜːrn ʌp/", "example1": "If it turns up, we will let you know.", "example1_cn": "它一旦出现,我们就通知你。", "example2": "My keys finally turned up under the sofa.", "example2_cn": "我的钥匙终于在沙发底下找到了。" },
+    { "us": "if I were you", "ipa": "/ɪf aɪ wɜːr ju/", "example1": "If I were you, I would label everything.", "example1_cn": "如果我是你,我会给每样东西贴标签。", "example2": "If I were you, I would call first.", "example2_cn": "如果我是你,我会先打个电话。" },
+    { "us": "look for", "ipa": "/lʊk fɔːr/", "example1": "I would help you look for it.", "example1_cn": "我会帮你找它。", "example2": "She is looking for her lost gloves.", "example2_cn": "她正在找丢失的手套。" }
+  ],
+  "stage7_cloze": {
+    "context": "If you ___1___ something at school, check the lost-and-found box. Last week, if I ___2___ checked it, I would have lost my backpack. \"If I ___3___ you, I would label everything,\" my friend said. If it ___4___ up, they will call you.",
+    "blanks": [
+      { "blank_no": 1, "options": ["lose", "will lose", "lost", "would lose"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["hadn't", "didn't", "don't", "wouldn't"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["were", "am", "was", "will be"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["turns", "will turn", "would turn", "turned"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What should you do if you lose something at school?", "options": ["Check the lost-and-found box", "Go straight home", "Buy a new one", "Say nothing"] },
+    { "stem": "What did the friend suggest?", "options": ["Put your name on everything", "Never bring a bag", "Lock everything away", "Ask the teacher"] },
+    { "stem": "Where was the backpack the next day?", "options": ["On the writer's desk", "In a far field", "At home", "In the office"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"如果你在学校丢了东西,就去查失物招领箱\"(真实条件:if + 现在时,主句用祈使):", "options": ["If you lose something at school, check the lost-and-found box.", "If you will lose something at school, check the lost-and-found box.", "If you lost something at school, check the lost-and-found box.", "If you would lose something at school, check the lost-and-found box."] },
+    { "stem": "你想说\"如果我是你,我会把名字写在所有东西上\"(与现在相反:if I were you + would):", "options": ["If I were you, I would put my name on everything.", "If I was you, I will put my name on everything.", "If I am you, I would put my name on everything.", "If I were you, I will put my name on everything."] },
+    { "stem": "你想说\"上周要不是我查了一下,背包就永远找不回来了\"(与过去相反:if had done, would have done):", "options": ["If I hadn't checked it, I would have lost my backpack forever.", "If I didn't check it, I would lose my backpack forever.", "If I hadn't checked it, I would lose my backpack forever.", "If I don't check it, I will lose my backpack forever."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "backpack 的意思是:", "options": ["背包", "帽子", "鞋子", "手表"] },
+    { "kind": "vocab", "stem": "politely 的意思是:", "options": ["有礼貌地", "大声地", "生气地", "快速地"] },
+    { "kind": "grammar", "stem": "\"If you ___ something, you should check the lost-and-found box.\"(真实条件)", "stem_cn": "如果你丢了东西,应该去查失物招领箱。", "options": ["lose", "will lose", "lost", "would lose"] },
+    { "kind": "grammar", "stem": "\"If I ___ you, I would label everything.\"(与现在事实相反的假设,be 动词该用哪个形式)", "stem_cn": "如果我是你,我会给每样东西贴标签。", "options": ["were", "am", "was", "will be"] },
+    { "kind": "scenario", "stem": "\"lost and found\" 的意思是:", "options": ["失物招领处", "又丢又找不到", "迷路以后找到", "找不见的东西"] },
+    { "kind": "scenario", "stem": "\"turn up\" 在这里的意思是:", "options": ["(失物)出现、被找到", "把音量调大", "翻过来", "拒绝"] },
+    { "kind": "reading", "stem": "What would have happened if the writer hadn't checked the box?", "options": ["The backpack would have been lost forever", "Nothing would have changed", "The friend would have helped", "The bag would have been sold"], "passage": true },
+    { "kind": "reading", "stem": "Where was the bag the next day?", "options": ["On the writer's desk", "Still in the box", "In a far field", "At the friend's house"], "passage": true },
+    { "kind": "listening", "stem": "What should you do if you lose something at school?", "options": ["Check the lost-and-found box", "Go home", "Buy a new one", "Tell no one"], "audio": true },
+    { "kind": "listening", "stem": "What did the friend suggest doing?", "options": ["Put your name on everything", "Never bring a bag", "Ask the teacher", "Lock the door"], "audio": true }
+  ]
+}

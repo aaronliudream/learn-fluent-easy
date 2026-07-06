@@ -705,3 +705,14 @@
 - **关6**:美语对照 field(足球场)/movie(电影) + 4 词义(reporter/confident/cheer/prepare)。contrast: field↔pitch / movie↔film / fall↔autumn / vacation↔holiday。chunks: ask about / get ready / the big game / come and cheer。
 - **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit11.sql(L81-87 = 308);已勾合集 checkbox。
 - **待裁决**:无。
+
+═══════════════════════════════════════
+## L88《Lost and Found 失物招领》· U11 · 收官包·方案B换情节 · 条件句 if(KS16/40/64)· ★U11收官
+- **来源**:收官包(Aaron 2026-07-05);原课《Trapped in a mine》矿难被困→改「丢失又找回背包」日常情节,KS16/40/64 条件句考点原样。
+- **考点**:真实条件(if+现在, will/should)/与现在相反(if+过去式, would do; if I were you)/与过去相反(if+had done, would have done)/条件从句用现在表将来/三类综合辨析/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:lost-and-found, backpack, label, forever, careful, turn up, secretary, politely, believe, exactly。
+- **关6**:美语对照 eraser(橡皮擦)/backpack(背包) + 4 词义(backpack/forever/politely/exactly)。contrast: eraser↔rubber / backpack↔rucksack / lost-and-found↔lost property / sneakers↔trainers。chunks: lost and found / turn up / if I were you / look for。
+- **泄漏修复**:首轮 3 处中文提示直含答案词(were/would)被闸门抓红→改为“(与现在事实相反的假设,be 动词该用哪个形式/主句该用哪个词)”,零泄漏过闸。
+- **校验**:机器12项 🟢 全绿。
+- **★ U11 整单元 L81-88 = 8课×44 = 352 齐**,落库 american_am2_seed_unit11.sql(收官)。
+- **待裁决**:无。

@@ -186,23 +186,27 @@ export default function TeacherStudent() {
               </div>
               {!untouched && (
                 <>
-                  <div className="mt-3 grid grid-cols-2 gap-2 text-sm">
+                  {/* american 有真语料总量 → 掌握度 + 完成度 两个指标(含义不同);
+                      primary/junior/senior 无语料总量 → 只留掌握度(避免与"练过里掌握率"重复) */}
+                  <div className={`mt-3 grid gap-2 text-sm ${m.module === "american" ? "grid-cols-2" : "grid-cols-1"}`}>
                     <div>
                       <div className="text-[11px] text-muted-foreground"><T>掌握度</T></div>
                       <div className="text-xl font-extrabold tabular-nums">{m.mastery_pct}%</div>
                       <div className="text-[11px] text-muted-foreground">
-                        <T>掌握</T> {m.mastered_count} · <T>薄弱</T> {m.weak_count}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-[11px] text-muted-foreground"><T>完成度</T></div>
-                      <div className="text-xl font-extrabold tabular-nums">{m.completion_pct}%</div>
-                      <div className="text-[11px] text-muted-foreground">
                         {m.module === "american"
-                          ? <><T>已完成</T> {m.touched}/{m.scope_total} <T>课</T></>
-                          : <>{m.touched}/{m.scope_total}</>}
+                          ? <><T>已掌握</T> {m.mastered_count} · <T>薄弱</T> {m.weak_count}<T>(按已练项)</T></>
+                          : <><T>已掌握</T> {m.mastered_count} / <T>已学</T> {m.scope_total} · <T>薄弱</T> {m.weak_count}</>}
                       </div>
                     </div>
+                    {m.module === "american" && (
+                      <div>
+                        <div className="text-[11px] text-muted-foreground"><T>完成度</T></div>
+                        <div className="text-xl font-extrabold tabular-nums">{m.completion_pct}%</div>
+                        <div className="text-[11px] text-muted-foreground">
+                          <T>已完成</T> {m.touched}/{m.scope_total} <T>课</T>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <div className="mt-2 flex flex-wrap items-center gap-x-3 text-[11px] text-muted-foreground">
                     <span><T>本周</T> {fmtHM(m.minutes_7d)}</span>

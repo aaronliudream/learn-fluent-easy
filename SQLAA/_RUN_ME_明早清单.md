@@ -52,6 +52,17 @@
   - **L24《美》**(it形式主语/that主语从句/非限定which/目的状语to do/形容词短语状语·美的一瞥暗示彼岸更高之境·语言难尽述)——44题🟢。
 - 对账(am4 U1+U2+U3+U4):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1056**(24课×44)。
 
+## 📌 AM4 U5 收官(L25–L30 · `american_am4_seed_unit05.sql` · 264题=44×6,全🟢)· 第四册第5单元
+> NCE4 Unit 5 六篇为科普/随笔/史实(布罗德本特·怀特·桑格斯·医患随笔·拉森·加斯克尔),全程**原创承载法**;真实人物/具名史实(卡莱尔/科克雷尔/罗斯·挑战者号)按 IP 铁律换虚构人物或泛化,通用科学/历史事实 100% 原创复述。逐课主考:
+- 🔴 **需跑** `american_am4_seed_unit05.sql`(全新文件,含 L25–L30 六课·264题)。
+  - **L25《噪声的非听觉效应》**(neither…nor就近/过去分词后置定语/whether从句/表语从句/less…than·噪声是否致精神病需大样本·轶事无凭)——44题🟢·**净化打字员轶事**。
+  - **L26《地球的过去》**(强调句It is…that/whose定从/被动/whether…or/that·which定从·化石保存靠快速掩埋)——44题🟢·**去猛犸具体叙事**。
+  - **L27《瓦萨号》**(过去完成/比较级+than any/with独立结构/there+动词倒装/be intended·order to do·瑞典战舰首航沉没史实)——44题🟢·**沉没净化**。
+  - **L28《病人与医生》**(although让步/unless条件/介词+关系代词/no+比较级+than/不定式被动·迷信一瓶药、医生投其所好)——44题🟢·**Carlyle换原创老学者**。
+  - **L29《气垫船》**(过去完成进行/独立主格/情态推测/过去分词作定语/which定从·靠空气垫悬浮·解决兴波阻力)——44题🟢·**Cockerell换原创工程师**。
+  - **L30《海底探索》**(同位语从句/Not until倒装/after动名词被动/be confined to·regard as/which定从·百年前误以为海底平坦)——44题🟢·**具名史实泛化**。
+- 对账(am4 U1–U5):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1320**(30课×44)。
+
 ## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **★★★全 12 单元 60 课收官 L1–L60**,累计 2640 题·第三册整本完成)
 
 ## 📌 AM3 U12 收官(L56–L60 · `american_am3_seed_unit12.sql` · 220题=44×5,全🟢)· ★★★第三册收官单元

@@ -11,7 +11,12 @@
   - **L5《The Exact Facts 确切数字》**(过去完成时 had done + 其被动 had been done + 否定副词句首倒装 Not only had he… / Never had I… + 冠词 a/the 复习·编辑逼记者要确切数字、记者数台阶时被捕入狱)——44 题🟢全绿。**主考取舍**:官方 Key structures 是冠词复习,但课文实际密集考点是过去完成+被动+倒装(书3级别),故以课文实考点为主考,冠词并入 gp5 复习。
 - **AM3 U1 五课语法进阶**:L1 过去叙事(过去/过去进行)→ L2 现在时(一般现在/现在进行/always+进行)→ L3 一般过去+不规则动词过去式 → L4 现在完成/完成进行 → L5 过去完成+被动+倒装。时态线索完整铺开。
 - 对账:`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **220**(L1–L5,U1 收官)。
-- ⏭️ 下一步:开 **AM3 U2(L6–L10)**。
+
+## 📌 AM3 U2 进行中(L6–L10 · 新文件 `american_am3_seed_unit02.sql`)
+- 🔴 **需跑** `american_am3_seed_unit02.sql`(全新文件)—— 逐课累加,每课 44 题。
+  - **L6《It Was Only a Movie 原来在拍电影》**(一般过去 vs 过去进行 + 否定前缀 un-/im-/in-/dis-/il-/ir- 构词 + with+名词+分词伴随 + 过去完成·拱廊街"抢劫"原来在拍电影)——44 题🟢全绿。**净化**:原题材=珠宝店砸窗抢劫(犯罪),改为剧组拍电影、店主误会狂扔家具的无害喜剧,语法/词表/喜剧内核全保留。
+- 对账(U2 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **264**(U1 的220 + L6 的44)。
+- ⏭️ U2 余 L7–L10。
 
 <!-- 历史(上一版) -->
 ## 📌 本批变化(2026-07-06 session · am3 第三册 · U1 推进到 L3)

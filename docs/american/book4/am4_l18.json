@@ -1,0 +1,134 @@
+{
+  "id": "am4_l18",
+  "unit_no": 3,
+  "lesson_no": 18,
+  "title_en": "Porpoises",
+  "title_cn": "海豚",
+  "grammar_focus": "however + 形容词/副词 + 主语 + may be(无论多么…)、it 形式主语 + to do、no sooner … than …(一…就…,倒装)、with + 名词 + 分词(独立主格伴随)、非限定定语从句 who(NCE4 无 KS 页,考点由课文结构自取;IP:源为拉尔夫·纳丁·希尔《海之窗》,内容为‘海豚好奇顽皮’的动物行为观察,已用 100% 原创行文复述、例子自拟,无人物、无逐句改写;题材=海豚的好奇与嬉戏·无害;美语化 harbor/theater;第四册第18课·第三单元收官)",
+  "scene": "打有记忆起,水手们就彼此传说:海豚会把落水的人往水面上顶,救他一命;或者把他围成一圈,护他不被鲨鱼伤到。研究这些动物的生物学家却更审慎。他们说,海豚无论多聪明,把任何高尚的“救援动机”安到它头上,几乎肯定是弄错了。在那些海豚确曾把一个失去知觉的泳者往岸边拱的罕见日子里,它们这么做,更可能纯粹是出于好奇,或图个好玩——就像它们爱追着过往船只的船头浪嬉戏一样。有一回,人们甚至看见一群海豚把一床湿透的旧床垫往岸上推,只因为它就在那儿。真相是:凡是会动、有生命的东西,都能勾起海豚的好奇。倘若偶尔有一只海豚看似在替人挡开鲨鱼,那也许只是因为好奇把海豚引了过来,而一顿可能到嘴的美餐的气味把鲨鱼引了过来。既然这两者是老对头,有时便会有一场短短的扭斗随之而来:鲨鱼被赶跑——泳者则纯属侥幸,毫发无伤。最叫小海豚开心的,莫过于一只海龟。在大水池里,几乎随便哪个下午,你都能看见一头半大的小海豚把口鼻探到海龟身下、往亮处一举,再像推玩具似的顺着水面把它推着走。另一只会从上方猛地俯冲下来,把海龟撞得失去平衡;那可怜的家伙刚一恢复平衡,第二只海豚又冲上来轻轻一顶。到最后,海龟索性把脚缩回壳里,静静等着,而兴高采烈的海豚们绕着圈子,准备开始下一轮游戏。",
+  "grammar_card": {
+    "title": "however … may be / it 形式主语 / no sooner … than / with 独立主格 / 非限定 who",
+    "intro": "①however + 形容词/副词 + 主语 + may be:‘无论多么…’。②it 作形式主语,真正内容是后面的不定式:It is a mistake to credit it with a motive。③no sooner … than …:‘一…就…’,no sooner 置句首要倒装。④with + 名词 + 分词:with the shark driven off(伴随)。⑤非限定定语从句 who:The biologists, who study these animals, …。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["however 让步", "However + 形容词 + 主语 + may be", "However clever a porpoise may be"],
+        ["it 形式主语", "It is … to do", "It is a mistake to credit it"],
+        ["no sooner … than", "No sooner + 倒装 … than …", "No sooner had it recovered than …"],
+        ["with 独立主格", "with + 名词 + 分词", "with the shark driven off"],
+        ["非限定 who", "名词, who …, …", "The biologists, who study them, …"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "No sooner 置于句首时主句要部分倒装(把助动词提前):No sooner had it recovered than …。", "mark": "No sooner + had + 主语 + 过去分词 … than" },
+      { "rule": "with 独立主格:with + 名词 + 现在分词(主动)/过去分词(被动),作伴随状语。", "mark": "with + 名词 + 分词" },
+      { "rule": "美式拼写:harbor(港口,英式 harbour)、theater(剧场,英式 theatre)。本课已按美语写。", "mark": "harbor / theater" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What would you say is the main characteristic of porpoises?",
+    "options": ["Their endless curiosity and love of play", "Their laziness", "Their fear of open water", "Their dislike of humans"],
+    "answer_index": 0
+  },
+  "passage": "For as long as anyone can remember, mariners have told one another that a porpoise — the small, smiling whale that many people call a dolphin — will save a drowning man by pushing him up to the surface, or guard him from sharks by circling him in a tight ring. The biologists, who spend their days watching these creatures, are more cautious. However clever a porpoise may be, they say, it is almost certainly a mistake to give it any noble motive of rescue. On the rare days when porpoises have nosed an unconscious swimmer toward the beach, they have far more likely done it out of sheer curiosity, or for the fun of the game, much as they love to ride the bow wave of a passing ship. Once a group of them was even seen shoving a soggy old mattress ashore, simply because it was there. The truth is that a porpoise is intrigued by anything that moves or lives. If, now and then, one has seemed to shield a person from a shark, it may only have been because curiosity drew the porpoise near while the scent of a possible meal drew the shark. Since the two are old enemies, a brief scuffle would sometimes ensue, with the shark driven off — and the swimmer left, by pure luck, unharmed. Nothing amuses a young porpoise more than a sea turtle. In the great tank you may watch, on almost any afternoon, a half-grown calf slide his snout beneath a turtle and heave it up toward the light, then shove it along the surface like a toy. Another will swoop down from above and knock the turtle off balance; no sooner does the poor creature recover its equilibrium than a second porpoise darts in for another gentle bump. In the end the turtle simply pulls in its feet and waits, while the delighted porpoises circle round for the next round of the game.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "For as long as anyone can remember, mariners have told one another that a porpoise — the small, smiling whale that many people call a dolphin — will save a drowning man by pushing him up to the surface, or guard him from sharks by circling him in a tight ring. The biologists, who spend their days watching these creatures, are more cautious.", "text_cn": "打有记忆起,水手们就彼此传说:海豚——那种小小的、像在微笑的、许多人称之为 dolphin 的鲸——会把落水的人往水面上顶,救他一命;或者把他围成一圈,护他不被鲨鱼伤到。研究这些动物的生物学家却更审慎。" },
+    { "seq": 2, "speaker": null, "text_en": "However clever a porpoise may be, they say, it is almost certainly a mistake to give it any noble motive of rescue. On the rare days when porpoises have nosed an unconscious swimmer toward the beach, they have far more likely done it out of sheer curiosity, or for the fun of the game, much as they love to ride the bow wave of a passing ship.", "text_cn": "他们说,海豚无论多聪明,把任何高尚的“救援动机”安到它头上,几乎肯定是弄错了。在那些海豚确曾把一个失去知觉的泳者往岸边拱的罕见日子里,它们这么做,更可能纯粹是出于好奇,或图个好玩——就像它们爱追着过往船只的船头浪嬉戏一样。" },
+    { "seq": 3, "speaker": null, "text_en": "Once a group of them was even seen shoving a soggy old mattress ashore, simply because it was there. The truth is that a porpoise is intrigued by anything that moves or lives.", "text_cn": "有一回,人们甚至看见一群海豚把一床湿透的旧床垫往岸上推,只因为它就在那儿。真相是:凡是会动、有生命的东西,都能勾起海豚的好奇。" },
+    { "seq": 4, "speaker": null, "text_en": "If, now and then, one has seemed to shield a person from a shark, it may only have been because curiosity drew the porpoise near while the scent of a possible meal drew the shark. Since the two are old enemies, a brief scuffle would sometimes ensue, with the shark driven off — and the swimmer left, by pure luck, unharmed.", "text_cn": "倘若偶尔有一只海豚看似在替人挡开鲨鱼,那也许只是因为好奇把海豚引了过来,而一顿可能到嘴的美餐的气味把鲨鱼引了过来。既然这两者是老对头,有时便会有一场短短的扭斗随之而来:鲨鱼被赶跑——泳者则纯属侥幸,毫发无伤。" },
+    { "seq": 5, "speaker": null, "text_en": "Nothing amuses a young porpoise more than a sea turtle. In the great tank you may watch, on almost any afternoon, a half-grown calf slide his snout beneath a turtle and heave it up toward the light, then shove it along the surface like a toy. Another will swoop down from above and knock the turtle off balance; no sooner does the poor creature recover its equilibrium than a second porpoise darts in for another gentle bump. In the end the turtle simply pulls in its feet and waits, while the delighted porpoises circle round for the next round of the game.", "text_cn": "最叫小海豚开心的,莫过于一只海龟。在大水池里,几乎随便哪个下午,你都能看见一头半大的小海豚把口鼻探到海龟身下、往亮处一举,再像推玩具似的顺着水面把它推着走。另一只会从上方猛地俯冲下来,把海龟撞得失去平衡;那可怜的家伙刚一恢复平衡,第二只海豚又冲上来轻轻一顶。到最后,海龟索性把脚缩回壳里,静静等着,而兴高采烈的海豚们绕着圈子,准备开始下一轮游戏。" }
+  ],
+  "words": [
+    { "word": "porpoise", "ipa": "/ˈpɔːrpəs/", "pos": "n", "meaning_cn": "鼠海豚,海豚", "example": "a porpoise will save a drowning man" },
+    { "word": "mariner", "ipa": "/ˈmærɪnər/", "pos": "n", "meaning_cn": "水手,海员", "example": "mariners have told one another" },
+    { "word": "dolphin", "ipa": "/ˈdɑːlfɪn/", "pos": "n", "meaning_cn": "海豚", "example": "the whale that many people call a dolphin" },
+    { "word": "unconscious", "ipa": "/ʌnˈkɑːnʃəs/", "pos": "adj", "meaning_cn": "失去知觉的,无意识的", "example": "nosed an unconscious swimmer toward the beach" },
+    { "word": "ashore", "ipa": "/əˈʃɔːr/", "pos": "adv", "meaning_cn": "向岸上,在岸上", "example": "shoving a soggy old mattress ashore" },
+    { "word": "scent", "ipa": "/sent/", "pos": "n", "meaning_cn": "气味,香味", "example": "the scent of a possible meal" },
+    { "word": "ensue", "ipa": "/ɪnˈsuː/", "pos": "v", "meaning_cn": "接着发生,随之而来", "example": "a brief scuffle would sometimes ensue" },
+    { "word": "intrigue", "ipa": "/ɪnˈtriːɡ/", "pos": "v", "meaning_cn": "激起…的兴趣,引发好奇", "example": "a porpoise is intrigued by anything alive" },
+    { "word": "snout", "ipa": "/snaʊt/", "pos": "n", "meaning_cn": "(动物的)口鼻部", "example": "slide his snout beneath a turtle" },
+    { "word": "shove", "ipa": "/ʃʌv/", "pos": "v", "meaning_cn": "推,猛推", "example": "shove it along the surface like a toy" },
+    { "word": "swoop", "ipa": "/swuːp/", "pos": "v", "meaning_cn": "猛扑,俯冲", "example": "another will swoop down from above" },
+    { "word": "equilibrium", "ipa": "/ˌiːkwɪˈlɪbriəm/", "pos": "n", "meaning_cn": "平衡", "example": "recover its equilibrium" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "however + 形容词 + 主语 + may be(无论多么…)" },
+    { "gp": "gp2", "name": "it 形式主语 + to do" },
+    { "gp": "gp3", "name": "no sooner … than …(一…就…,倒装)" },
+    { "gp": "gp4", "name": "with + 名词 + 分词(独立主格伴随)" },
+    { "gp": "gp5", "name": "非限定定语从句 who" },
+    { "gp": "gp6", "name": "词汇辨析(porpoise/snout/scent)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ clever a porpoise may be, it feels no urge to rescue.\"(‘无论多么…’,填让步连词)", "stem_cn": "无论海豚多聪明,它都没有救人的冲动。", "options": ["However", "Whatever", "Whenever", "Wherever"] },
+    { "gp": "gp1", "stem": "\"However intelligent they ___ be, dolphins act from curiosity.\"(however + 形容词 + 主语 + ___ be,填情态词)", "stem_cn": "无论多聪明,海豚都是出于好奇而行动。", "options": ["may", "must", "need", "dare"] },
+    { "gp": "gp1", "stem": "\"However hard the turtle ___, the porpoise keeps playing.\"(however + 副词 + the turtle + 谓语;主语单数,填动词的正确形式)", "stem_cn": "无论乌龟多努力,海豚都照玩不误。", "options": ["tries", "try", "trying", "tried"] },
+    { "gp": "gp2", "stem": "\"___ is a mistake to credit porpoises with a rescue motive.\"(it 作形式主语,填代词)", "stem_cn": "把救人动机安到海豚头上是个错误。", "options": ["It", "That", "This", "There"] },
+    { "gp": "gp2", "stem": "\"It is great fun ___ watch a porpoise play with a turtle.\"(形式主语 It is … 后接不定式,填正确形式)", "stem_cn": "看海豚戏弄乌龟很有趣。", "options": ["to watch", "watch", "watching", "watched"] },
+    { "gp": "gp2", "stem": "\"It is natural ___ a porpoise to ride the bow wave.\"(It is … ___ sb to do 结构,填引出动作者的介词)", "stem_cn": "海豚去追逐船头浪,似乎是天性。", "options": ["for", "of", "to", "with"] },
+    { "gp": "gp3", "stem": "\"The turtle had no ___ recovered than another porpoise hit it.\"(no ___ … than:‘一…就…’,填与 than 呼应的词)", "stem_cn": "乌龟刚站稳,另一只海豚又撞了上来。", "options": ["sooner", "longer", "more", "later"] },
+    { "gp": "gp3", "stem": "\"No sooner does it recover ___ a porpoise bumps it again.\"(no sooner … ___:‘一…就…’,填与 no sooner 呼应的连词)", "stem_cn": "它刚一恢复平衡,海豚又来撞一下。", "options": ["than", "then", "that", "as"] },
+    { "gp": "gp3", "stem": "\"No sooner ___ the turtle stood up than it was knocked flat.\"(No sooner 置句首,句子倒装,填助动词)", "stem_cn": "乌龟刚站起来,就又被撞倒了。", "options": ["had", "has", "have", "was"] },
+    { "gp": "gp4", "stem": "\"The shark swam off, with the porpoise ___ close behind.\"(with + 名词 + 现在分词,主动‘跟着’)", "stem_cn": "鲨鱼游走了,海豚紧跟在后。", "options": ["following", "followed", "follow", "to follow"] },
+    { "gp": "gp4", "stem": "\"A battle ended with the shark ___ away.\"(with + 名词 + 过去分词,被动‘被赶走’;drive 的过去分词)", "stem_cn": "一场打斗以鲨鱼被赶走告终。", "options": ["driven", "driving", "drive", "to drive"] },
+    { "gp": "gp4", "stem": "\"The turtle floated there, with its feet ___ under its shell.\"(with + 名词 + 过去分词,被动‘被缩进’;pull 的过去分词)", "stem_cn": "乌龟浮在那里,脚缩在壳下。", "options": ["pulled", "pulling", "pull", "to pull"] },
+    { "gp": "gp5", "stem": "\"The biologists, ___ study these animals, are more cautious.\"(非限定定语从句,指人,填关系词)", "stem_cn": "研究这些动物的生物学家更为谨慎。", "options": ["who", "which", "that", "what"] },
+    { "gp": "gp5", "stem": "\"The turtles, ___ submit to every prank, seem endlessly patient.\"(非限定定语从句,拟人化指动物,填关系词)", "stem_cn": "任凭捉弄的乌龟,似乎有无穷的耐心。", "options": ["who", "which", "what", "whom"] },
+    { "gp": "gp5", "stem": "\"The young calf, ___ loves the game, never seems to tire.\"(非限定定语从句,拟人化指动物,填关系词)", "stem_cn": "爱玩这游戏的小海豚,似乎永不知疲倦。", "options": ["who", "which", "that", "whom"] },
+    { "gp": "gp6", "stem": "\"A sailor or seaman who works on ships is a ___.\"(“水手、海员”用哪个词)", "stem_cn": "在船上工作的海员。", "options": ["mariner", "farmer", "miner", "tailor"] },
+    { "gp": "gp6", "stem": "\"The long nose of an animal like a porpoise is its ___.\"(“口鼻部”用哪个词)", "stem_cn": "海豚等动物长长的口鼻部。", "options": ["snout", "wing", "fin", "hoof"] },
+    { "gp": "gp6", "stem": "\"The smell given off by food or an animal is its ___.\"(“气味”用哪个词)", "stem_cn": "食物或动物散发出的气味。", "options": ["scent", "sound", "shadow", "weight"] }
+  ],
+  "stage6": [
+    { "stem": "porpoise 的意思是:", "options": ["鼠海豚,海豚", "鲨鱼", "海龟", "海鸥"] },
+    { "stem": "intrigue 的意思是:", "options": ["激起…的兴趣,引发好奇", "使厌烦", "使害怕", "使疲惫"] },
+    { "stem": "swoop 的意思是:", "options": ["猛扑,俯冲", "漂浮", "沉没", "停留"] },
+    { "stem": "equilibrium 的意思是:", "options": ["平衡", "速度", "重量", "颜色"] },
+    { "stem": "scent 的意思是:", "options": ["气味,香味", "声音", "影子", "形状"] },
+    { "stem": "ensue 的意思是:", "options": ["接着发生,随之而来", "结束", "消失", "推迟"] }
+  ],
+  "contrast": [
+    { "us": "harbor", "uk": "harbour", "note_cn": "港口;拼写差异,美语 harbor" },
+    { "us": "theater", "uk": "theatre", "note_cn": "剧场;拼写差异,美语 theater" },
+    { "us": "favorite", "uk": "favourite", "note_cn": "最喜爱的;拼写差异,美语 favorite" },
+    { "us": "somber", "uk": "sombre", "note_cn": "阴沉的;拼写差异,美语 somber" }
+  ],
+  "chunks": [
+    { "us": "out of curiosity", "ipa": "/aʊt əv ˌkjʊriˈɑːsəti/", "example1": "They do it out of curiosity.", "example1_cn": "它们这么做只是出于好奇。", "example2": "He asked out of curiosity.", "example2_cn": "他只是出于好奇才问的。" },
+    { "us": "knock off balance", "ipa": "/nɑːk ɔːf ˈbæləns/", "example1": "The porpoise knocks the turtle off balance.", "example1_cn": "海豚把海龟撞得失去平衡。", "example2": "The wind knocked him off balance.", "example2_cn": "大风把他吹得站不稳。" },
+    { "us": "no sooner ... than", "ipa": "/noʊ ˈsuːnər ðæn/", "example1": "No sooner had it recovered than it was hit again.", "example1_cn": "它刚一恢复,就又挨了一下。", "example2": "No sooner did she sit down than the phone rang.", "example2_cn": "她刚一坐下,电话就响了。" },
+    { "us": "give up", "ipa": "/ɡɪv ʌp/", "example1": "The turtle at last gives up.", "example1_cn": "海龟最后放弃了。", "example2": "Don't give up so easily.", "example2_cn": "别这么轻易放弃。" }
+  ],
+  "stage7_cloze": {
+    "context": "Mariners believe porpoises save drowning men, but biologists are cautious. ___1___ clever a porpoise may be, it feels no urge to rescue. It ___2___ a mistake to credit it with such a motive. It acts ___3___ of curiosity. No sooner does a turtle recover ___4___ another porpoise bumps it.",
+    "blanks": [
+      { "blank_no": 1, "options": ["However", "Whatever", "Whenever", "Wherever"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["is", "are", "be", "being"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["out", "off", "up", "in"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["than", "then", "that", "as"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What would you say is the main characteristic of porpoises?", "options": ["Their endless curiosity and love of play", "Their laziness", "Their fear of turtles", "Their dislike of ships"] },
+    { "stem": "Why do biologists doubt that porpoises save people out of kindness?", "options": ["They more likely act out of curiosity or for sport", "Porpoises hate humans", "Porpoises cannot swim near people", "The stories were never told"] },
+    { "stem": "What does a young porpoise enjoy doing with a sea turtle?", "options": ["Flipping it over and shoving it around like a toy", "Feeding it", "Hiding from it", "Racing it to shore"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"无论海豚多聪明,它都没有救人的冲动\"(however … may be):", "options": ["However clever a porpoise may be, it feels no urge to rescue.", "However clever a porpoise may being, it feels no urge to rescue.", "However clever may a porpoise be, it feels no urge to rescue.", "How clever a porpoise may be, it feels no urge to rescue."] },
+    { "stem": "你想说\"把救人动机安到海豚头上是个错误\"(it 引导的形式结构):", "options": ["It is a mistake to credit the porpoise with a rescue motive.", "Is a mistake to credit the porpoise with a rescue motive.", "It is a mistake crediting the porpoise with a rescue motive to.", "There is a mistake to credit the porpoise with a rescue motive."] },
+    { "stem": "你想说\"乌龟刚恢复平衡,海豚又撞了它一下\"(no sooner … than):", "options": ["No sooner had the turtle recovered its balance than a porpoise bumped it.", "No sooner the turtle had recovered its balance than a porpoise bumped it.", "No sooner had the turtle recovered its balance then a porpoise bumped it.", "No sooner had the turtle recovered its balance as a porpoise bumped it."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "porpoise 的意思是:", "options": ["鼠海豚,海豚", "鲨鱼", "海龟", "海鸥"] },
+    { "kind": "vocab", "stem": "intrigue 的意思是:", "options": ["激起兴趣,引发好奇", "使厌烦", "使害怕", "使疲惫"] },
+    { "kind": "grammar", "stem": "\"___ clever a porpoise may be, it feels no urge to rescue.\"(‘无论多么…’,让步连词)", "stem_cn": "无论海豚多聪明,它都没有救人的冲动。", "options": ["However", "Whatever", "Whenever", "Wherever"] },
+    { "kind": "grammar", "stem": "\"___ is a mistake to credit porpoises with a rescue motive.\"(用 it 起句的形式结构)", "stem_cn": "把救人动机安到海豚头上是个错误。", "options": ["It", "That", "This", "There"] },
+    { "kind": "scenario", "stem": "\"out of curiosity\" 的意思是:", "options": ["出于好奇", "缺乏兴趣", "毫无办法", "违反规定"] },
+    { "kind": "scenario", "stem": "\"no sooner ... than\" 的意思是:", "options": ["一…就…", "除非…否则", "与其…不如", "既不…也不"] },
+    { "kind": "reading", "stem": "According to the passage, why do porpoises sometimes push people toward shore?", "options": ["Out of curiosity or for the fun of the game, not to rescue them", "To feed them", "To frighten sharks away on purpose", "To carry them home"], "passage": true },
+    { "kind": "reading", "stem": "What is a porpoise intrigued by?", "options": ["Anything that moves or lives", "Only food", "Only other porpoises", "Only quiet water"], "passage": true },
+    { "kind": "listening", "stem": "What is the main characteristic of porpoises, according to the speaker?", "options": ["Their curiosity and playfulness", "Their shyness", "Their laziness", "Their cruelty"], "audio": true },
+    { "kind": "listening", "stem": "Why might a shark be driven off when a porpoise is near a swimmer?", "options": ["Porpoises and sharks are natural enemies, so a scuffle may follow", "The shark is afraid of humans", "The water is too cold", "The porpoise feeds the shark"], "audio": true }
+  ]
+}

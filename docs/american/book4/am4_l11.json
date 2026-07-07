@@ -1,0 +1,134 @@
+{
+  "id": "am4_l11",
+  "unit_no": 2,
+  "lesson_no": 11,
+  "title_en": "How to Grow Old",
+  "title_cn": "如何度过晚年",
+  "grammar_focus": "定语从句(who/that,含 the man who…)、what/whatever 引导的名词性从句、since 引导的原因状语从句、if 引导的条件状语从句(含与现在相反的虚拟)、现在分词/形容词作伴随状语(knowing…, glad…)(NCE4 无 KS 页,考点由课文结构自取;IP 最高危:源为伯特兰·罗素极著名散文,其‘个体生命如河流汇入大海’招牌隐喻不复制,已换 100% 原创‘乐曲中一个音符汇入整体和声’隐喻承载同一哲理,只提语法/词表/话题/篇幅;题材=晚年如何看待死亡·平和无害;美语化 realize/honor;第四册第11课)",
+  "scene": "有些老人被对死亡的恐惧压得喘不过气。在年轻人身上,这种恐惧尚有道理:一个有充分理由担心自己会英年早逝的年轻人,可以理直气壮地感到痛苦,因为他被夺去了生活所能给予的最好的东西。但在一个活得长久、尝过深切欢乐与沉重悲伤、又做完了命中注定该做的一切工作的人身上,同样的恐惧在我看来就显得凄惨而卑下了。克服它最稳妥的办法是这样:让你的兴趣一点一点地变得更宽广、更超脱个人,直到自我的高墙渐渐后退,你那渺小的一生被纳入某种远为宏大的东西之中。一个人的一生应当像一支长曲里的一个音符。起初,那音符独自响着,焦灼而热切,热情地只歌唱它自己。可随着乐曲展开,别的音符加入进来;它不再作为一个孤单的声音被听见,而成了宏大和声的一部分,最终毫无痛苦地融入整体,不带一丝失落。凡是到了晚年能这样聆听自己一生的人,就不会被死亡的恐惧所压迫,因为他所珍视的事物会在他身后延续下去。而如果随着生命力衰退,疲惫渐渐加深,休息的念头也就不会不受欢迎。就我而言,我愿工作到最后一刻,知道别人会接着做我再也做不了的事,并欣慰地想到:凡是我力所能及的,都确实已经做成。",
+  "grammar_card": {
+    "title": "定语从句 / what 名词从句 / since 原因 / if 条件 / 分词作伴随状语",
+    "intro": "①定语从句 who(指人)/ that(指物):a man who has known joys;the things that he cares for。②what/whatever 引导名词从句:what I can no longer do。③since 引导原因:…, since the things will continue。④if 引导条件(可含虚拟 If he were young…)。⑤现在分词/形容词作伴随状语:…, knowing that…；…, glad in the thought that…。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["定语从句", "who/that + 从句", "a man who has known joys"],
+        ["what 名词从句", "what + 从句", "what I can no longer do"],
+        ["since 原因", "…, since + 从句", "since the things will continue"],
+        ["if 条件", "if + 从句, 主句", "If weariness increases, rest is welcome"],
+        ["分词伴随状语", "…, doing …", "…, knowing that others will carry on"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "定语从句关系词:指人多用 who,指物用 that/which;作宾语时可省略。", "mark": "who / that" },
+      { "rule": "what 引导名词从句时本身在从句里充当成分,相当于 the thing that;不可与 that 互换。", "mark": "what = the thing that" },
+      { "rule": "美式拼写:realize(意识到,英式 realise)、honor(荣誉,英式 honour)。本课已按美语写。", "mark": "realize / honor" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What, according to the author, is the best way to overcome the fear of death as you get older?",
+    "options": ["Make your interests gradually wider and more impersonal", "Try never to think about death", "Become rich and famous", "Stay indoors and rest"],
+    "answer_index": 0
+  },
+  "passage": "Some old people are worn down by the fear of death. In the young this dread has a real justification: a young man who has good reason to fear he may be killed before his time can justifiably feel bitter, for he has been robbed of the best that life had to offer. But in someone who has lived long, who has known deep joys and heavy sorrows, and who has finished whatever work it was given him to do, the same fear seems to me abject and ignoble. The surest way to overcome it is this: let your interests grow gradually wider and more impersonal, until, little by little, the walls of the ego begin to recede and your own small life is taken up into something far larger. A single human life should be like one note in a long piece of music. At first the note sounds alone, anxious and eager, singing passionately of itself. But as the music goes on, the note is joined by others; it is no longer heard as one lonely sound but as part of a great harmony, and in the end it fades painlessly into the whole without any sense of loss. Whoever, in old age, can hear his own life in this way will not be oppressed by the fear of death, since the things he has cared for will go on after him. And if, as his vitality decays, weariness gradually increases, the thought of rest will not be unwelcome. For my part, I should wish to keep working to the last, knowing that others will carry on what I can no longer do, and glad in the thought that what was possible for me has indeed been done.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Some old people are worn down by the fear of death. In the young this dread has a real justification: a young man who has good reason to fear he may be killed before his time can justifiably feel bitter, for he has been robbed of the best that life had to offer.", "text_cn": "有些老人被对死亡的恐惧压得喘不过气。在年轻人身上,这种恐惧尚有道理:一个有充分理由担心自己会英年早逝的年轻人,可以理直气壮地感到痛苦,因为他被夺去了生活所能给予的最好的东西。" },
+    { "seq": 2, "speaker": null, "text_en": "But in someone who has lived long, who has known deep joys and heavy sorrows, and who has finished whatever work it was given him to do, the same fear seems to me abject and ignoble.", "text_cn": "但在一个活得长久、尝过深切欢乐与沉重悲伤、又做完了命中注定该做的一切工作的人身上,同样的恐惧在我看来就显得凄惨而卑下了。" },
+    { "seq": 3, "speaker": null, "text_en": "The surest way to overcome it is this: let your interests grow gradually wider and more impersonal, until, little by little, the walls of the ego begin to recede and your own small life is taken up into something far larger. A single human life should be like one note in a long piece of music.", "text_cn": "克服它最稳妥的办法是这样:让你的兴趣一点一点地变得更宽广、更超脱个人,直到自我的高墙渐渐后退,你那渺小的一生被纳入某种远为宏大的东西之中。一个人的一生应当像一支长曲里的一个音符。" },
+    { "seq": 4, "speaker": null, "text_en": "At first the note sounds alone, anxious and eager, singing passionately of itself. But as the music goes on, the note is joined by others; it is no longer heard as one lonely sound but as part of a great harmony, and in the end it fades painlessly into the whole without any sense of loss.", "text_cn": "起初,那音符独自响着,焦灼而热切,热情地只歌唱它自己。可随着乐曲展开,别的音符加入进来;它不再作为一个孤单的声音被听见,而成了宏大和声的一部分,最终毫无痛苦地融入整体,不带一丝失落。" },
+    { "seq": 5, "speaker": null, "text_en": "Whoever, in old age, can hear his own life in this way will not be oppressed by the fear of death, since the things he has cared for will go on after him. And if, as his vitality decays, weariness gradually increases, the thought of rest will not be unwelcome. For my part, I should wish to keep working to the last, knowing that others will carry on what I can no longer do, and glad in the thought that what was possible for me has indeed been done.", "text_cn": "凡是到了晚年能这样聆听自己一生的人,就不会被死亡的恐惧所压迫,因为他所珍视的事物会在他身后延续下去。而如果随着生命力衰退,疲惫渐渐加深,休息的念头也就不会不受欢迎。就我而言,我愿工作到最后一刻,知道别人会接着做我再也做不了的事,并欣慰地想到:凡是我力所能及的,都确实已经做成。" }
+  ],
+  "words": [
+    { "word": "oppress", "ipa": "/əˈpres/", "pos": "v", "meaning_cn": "压迫,使烦恼", "example": "will not be oppressed by the fear of death" },
+    { "word": "justification", "ipa": "/ˌdʒʌstɪfɪˈkeɪʃən/", "pos": "n", "meaning_cn": "正当理由,辩护", "example": "this dread has a real justification" },
+    { "word": "justifiably", "ipa": "/ˈdʒʌstɪfaɪəbli/", "pos": "adv", "meaning_cn": "理直气壮地,合理地", "example": "can justifiably feel bitter" },
+    { "word": "abject", "ipa": "/ˈæbdʒekt/", "pos": "adj", "meaning_cn": "凄惨的,卑下的", "example": "the fear seems abject and ignoble" },
+    { "word": "ignoble", "ipa": "/ɪɡˈnoʊbəl/", "pos": "adj", "meaning_cn": "卑劣的,不光彩的", "example": "abject and ignoble" },
+    { "word": "impersonal", "ipa": "/ɪmˈpɜːrsənəl/", "pos": "adj", "meaning_cn": "超脱个人的,客观的", "example": "gradually wider and more impersonal" },
+    { "word": "ego", "ipa": "/ˈiːɡoʊ/", "pos": "n", "meaning_cn": "自我", "example": "the walls of the ego begin to recede" },
+    { "word": "recede", "ipa": "/rɪˈsiːd/", "pos": "v", "meaning_cn": "后退,渐远", "example": "the walls of the ego begin to recede" },
+    { "word": "passionately", "ipa": "/ˈpæʃənətli/", "pos": "adv", "meaning_cn": "热情地,强烈地", "example": "singing passionately of itself" },
+    { "word": "painlessly", "ipa": "/ˈpeɪnləsli/", "pos": "adv", "meaning_cn": "无痛苦地", "example": "it fades painlessly into the whole" },
+    { "word": "vitality", "ipa": "/vaɪˈtæləti/", "pos": "n", "meaning_cn": "活力,生命力", "example": "as his vitality decays" },
+    { "word": "weariness", "ipa": "/ˈwɪrinəs/", "pos": "n", "meaning_cn": "疲惫,厌倦", "example": "weariness gradually increases" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "定语从句(who/that,the man who…)" },
+    { "gp": "gp2", "name": "what/whatever 引导的名词从句" },
+    { "gp": "gp3", "name": "since 引导的原因状语从句" },
+    { "gp": "gp4", "name": "if 引导的条件状语从句(含虚拟)" },
+    { "gp": "gp5", "name": "现在分词/形容词作伴随状语(knowing/glad)" },
+    { "gp": "gp6", "name": "词汇辨析(oppress/abject/vitality)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"A young man ___ fears death in battle may feel bitter.\"(定语从句,指人作主语)", "stem_cn": "害怕死于战场的年轻人可能感到痛苦。", "options": ["who", "which", "whom", "whose"] },
+    { "gp": "gp1", "stem": "\"The things ___ he has cared for will go on.\"(定语从句,指物作宾语)", "stem_cn": "他所珍视的事物将会延续。", "options": ["that", "who", "what", "whom"] },
+    { "gp": "gp1", "stem": "\"An old man ___ has known joys and sorrows sees death calmly.\"(定语从句,指人作主语)", "stem_cn": "一位历经悲欢的老人能平静看待死亡。", "options": ["who", "which", "what", "whose"] },
+    { "gp": "gp2", "stem": "\"He finished ___ work it was given him to do.\"(‘无论什么…’引导名词从句)", "stem_cn": "他做完了交给他的一切工作。", "options": ["whatever", "however", "whenever", "wherever"] },
+    { "gp": "gp2", "stem": "\"Others will carry on ___ I can no longer do.\"(名词从句,‘所…的事’,填关系词)", "stem_cn": "别人会接着做我再也做不了的事。", "options": ["what", "that", "which", "how"] },
+    { "gp": "gp2", "stem": "\"He is glad that ___ was possible has been done.\"(名词从句作主语,‘所…的’)", "stem_cn": "他欣慰于凡是可能做到的都已做成。", "options": ["what", "that", "which", "it"] },
+    { "gp": "gp3", "stem": "\"He will not fear death, ___ his interests will continue.\"(‘既然/因为’,填连词)", "stem_cn": "他不会惧怕死亡,因为他所关心的事会延续。", "options": ["since", "unless", "though", "before"] },
+    { "gp": "gp3", "stem": "\"The old man feels calm, ___ he has done his work.\"(‘因为’,填连词)", "stem_cn": "老人感到安宁,因为他已完成了自己的工作。", "options": ["since", "unless", "whether", "until"] },
+    { "gp": "gp3", "stem": "\"___ others will go on after him, he faces death calmly.\"(句首‘因为’,填连词)", "stem_cn": "因为后人会继续他的事业,他从容面对死亡。", "options": ["Since", "Unless", "Although", "Whether"] },
+    { "gp": "gp4", "stem": "\"___ weariness increases, the thought of rest is welcome.\"(‘如果’,填连词)", "stem_cn": "如果疲惫加深,休息的念头便受欢迎。", "options": ["If", "Since", "Though", "Unless"] },
+    { "gp": "gp4", "stem": "\"The fear fades ___ your interests grow wider.\"(‘如果/只要’,填连词)", "stem_cn": "只要你的兴趣变得更广,恐惧就会消退。", "options": ["if", "unless", "until", "than"] },
+    { "gp": "gp4", "stem": "\"___ he were young, the fear might be justified.\"(与现在相反的虚拟条件,填条件连词)", "stem_cn": "假如他还年轻,这种恐惧或许还情有可原。", "options": ["If", "As", "Since", "When"] },
+    { "gp": "gp5", "stem": "\"He wished to die at work, ___ that others would continue.\"(现在分词作伴随状语,主动‘知道’)", "stem_cn": "他愿意工作到最后,知道别人会继续下去。", "options": ["knowing", "known", "know", "to know"] },
+    { "gp": "gp5", "stem": "\"She faced the end calmly, ___ in the thought of a full life.\"(形容词作伴随状语,‘感到欣慰的’)", "stem_cn": "她平静面对结局,欣慰于自己度过了充实的一生。", "options": ["glad", "gladly", "gladness", "gladden"] },
+    { "gp": "gp5", "stem": "\"The note sang on, ___ passionately of itself.\"(现在分词作伴随状语,主动‘歌唱’)", "stem_cn": "那音符继续唱着,热切地歌唱自己。", "options": ["singing", "sung", "sang", "to sing"] },
+    { "gp": "gp6", "stem": "\"To weigh someone down and trouble them is to ___ them.\"(“压迫、使烦恼”用哪个词)", "stem_cn": "沉重地压着、使某人苦恼。", "options": ["oppress", "delight", "free", "praise"] },
+    { "gp": "gp6", "stem": "\"Feeling low, hopeless and miserable is feeling ___.\"(“凄惨的、卑下的”用哪个词)", "stem_cn": "极其凄惨、低贱的感觉。", "options": ["abject", "proud", "cheerful", "calm"] },
+    { "gp": "gp6", "stem": "\"Energy and liveliness of body and mind is ___.\"(“活力、生命力”用哪个词)", "stem_cn": "身心的活力与生命力。", "options": ["vitality", "weakness", "silence", "boredom"] }
+  ],
+  "stage6": [
+    { "stem": "oppress 的意思是:", "options": ["压迫,使烦恼", "解放", "赞美", "取悦"] },
+    { "stem": "abject 的意思是:", "options": ["凄惨的,卑下的", "高贵的", "快乐的", "勇敢的"] },
+    { "stem": "impersonal 的意思是:", "options": ["客观的,不带个人感情的", "亲切的", "私人的", "激动的"] },
+    { "stem": "recede 的意思是:", "options": ["后退,减弱", "前进", "上升", "爆发"] },
+    { "stem": "vitality 的意思是:", "options": ["活力,生命力", "疲惫", "沉默", "黑暗"] },
+    { "stem": "ignoble 的意思是:", "options": ["卑劣的,不光彩的", "高尚的", "勇敢的", "慷慨的"] }
+  ],
+  "contrast": [
+    { "us": "realize", "uk": "realise", "note_cn": "意识到;拼写差异,美语 -ize" },
+    { "us": "honor", "uk": "honour", "note_cn": "荣誉;拼写差异,美语 honor" },
+    { "us": "toward", "uk": "towards", "note_cn": "朝向;美语常用 toward 不带 s" },
+    { "us": "marvelous", "uk": "marvellous", "note_cn": "奇妙的;拼写差异,美语单 l" }
+  ],
+  "chunks": [
+    { "us": "carry on", "ipa": "/ˈkæri ɑːn/", "example1": "Others will carry on my work.", "example1_cn": "别人会继续我的工作。", "example2": "Please carry on with your reading.", "example2_cn": "请继续读下去。" },
+    { "us": "little by little", "ipa": "/ˈlɪtl baɪ ˈlɪtl/", "example1": "Little by little the walls of the ego recede.", "example1_cn": "自我的高墙一点一点地后退。", "example2": "She recovered little by little.", "example2_cn": "她渐渐康复了。" },
+    { "us": "care for", "ipa": "/ker fɔːr/", "example1": "The things he cares for will continue.", "example1_cn": "他所珍视的事物会延续。", "example2": "He cares deeply for his students.", "example2_cn": "他深切关爱他的学生。" },
+    { "us": "wear down", "ipa": "/wer daʊn/", "example1": "The fear wears him down.", "example1_cn": "这种恐惧把他压垮。", "example2": "Years of worry wore her down.", "example2_cn": "多年的忧虑把她拖垮了。" }
+  ],
+  "stage7_cloze": {
+    "context": "A young man ___1___ fears death in battle may feel bitter. But an old man will not be ___2___ by that fear, ___3___ the things he cares for will go on. Others will carry on ___4___ he can no longer do.",
+    "blanks": [
+      { "blank_no": 1, "options": ["who", "which", "what", "whose"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["oppressed", "oppress", "oppressing", "oppresses"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["since", "unless", "though", "before"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["what", "that", "which", "how"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "According to the speaker, what is the best way to overcome the fear of death in old age?", "options": ["To make your interests gradually wider and more impersonal", "To avoid thinking about it entirely", "To gain great wealth", "To stay physically young"] },
+    { "stem": "What does the speaker compare a single human life to?", "options": ["One note in a long piece of music", "A lonely mountain", "A closed book", "A burning house"] },
+    { "stem": "How does the speaker wish to die?", "options": ["Still at work, knowing others will carry on", "In complete idleness", "Far from everyone", "Fearful and bitter"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"害怕死于战场的年轻人可能感到痛苦\"(who 引导,指人):", "options": ["A young man who fears death in battle may feel bitter.", "A young man which fears death in battle may feel bitter.", "A young man who fear death in battle may feel bitter.", "A young man he fears death in battle may feel bitter."] },
+    { "stem": "你想说\"他不会惧怕死亡,因为他所关心的事会延续\"(since 原因):", "options": ["He will not fear death, since the things he cares for will continue.", "He will not fear death, since the things he cares for will continuing.", "He will not fear death, unless the things he cares for will continue.", "He will not fear death, since the things he care for will continue."] },
+    { "stem": "你想说\"如果疲惫加深,休息的念头便受欢迎\"(if 条件):", "options": ["If weariness increases, the thought of rest is welcome.", "If weariness increase, the thought of rest is welcome.", "Unless weariness increases, the thought of rest is welcome.", "If weariness increases, the thought of rest are welcome."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "oppress 的意思是:", "options": ["压迫,使烦恼", "解放", "赞美", "取悦"] },
+    { "kind": "vocab", "stem": "vitality 的意思是:", "options": ["活力,生命力", "疲惫", "沉默", "黑暗"] },
+    { "kind": "grammar", "stem": "\"A young man ___ fears death may feel bitter.\"(定语从句,指人)", "stem_cn": "害怕死亡的年轻人可能感到痛苦。", "options": ["who", "which", "what", "whose"] },
+    { "kind": "grammar", "stem": "\"Others will carry on ___ he can no longer do.\"(名词从句,‘所…的事’)", "stem_cn": "别人会接着做他再也做不了的事。", "options": ["what", "that", "which", "how"] },
+    { "kind": "scenario", "stem": "\"carry on\" 的意思是:", "options": ["继续(做)", "停止", "携带走", "抱怨"] },
+    { "kind": "scenario", "stem": "\"little by little\" 的意思是:", "options": ["一点一点地、逐渐地", "突然地", "完全地", "很少地"] },
+    { "kind": "reading", "stem": "According to the passage, why is the fear of death abject in an old man?", "options": ["He has already known life's joys and sorrows and done his work", "He has never enjoyed life", "He is still very young", "He fears battle"], "passage": true },
+    { "kind": "reading", "stem": "What does the passage say happens as your interests grow wider and more impersonal?", "options": ["The walls of the ego recede and your life merges into something larger", "You become selfish", "You lose all your friends", "You stop caring about anything"], "passage": true },
+    { "kind": "listening", "stem": "What does the speaker compare a human life to?", "options": ["A single note in a long piece of music", "A stone in a wall", "A candle in the wind", "A ship at sea"], "audio": true },
+    { "kind": "listening", "stem": "How does the speaker feel about others continuing his work?", "options": ["Content, knowing what was possible has been done", "Bitter and resentful", "Completely indifferent", "Frightened"], "audio": true }
+  ]
+}

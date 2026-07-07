@@ -1,0 +1,133 @@
+{
+  "id": "am3_l43",
+  "unit_no": 9,
+  "lesson_no": 43,
+  "title_en": "Fully Insured",
+  "title_cn": "全保险",
+  "grammar_focus": "the + 比较级, the + 比较级(越…越…)、so + 形容词 + that…(如此…以至于)、现在分词短语作状语(Shivering in their wet clothes, …)、have difficulty (in) doing / prove to be(结果证明是)、固定表达 in the event of / needless to say / make a claim for / put into operation(原创承载 NCE3 第三册 L43 考点·无需净化:保险题材幽默故事——小镇为年度集市定制的巨型馅饼盘投保、运河翻沉后打捞;美式化 county fair/tow truck/diner)",
+  "scene": "保险公司一般说来愿意承保几乎一切东西。承办公共或私人财产保险,在世界大部分地方都是正常业务。不过,倘若你要办一场户外聚会,同样可以为万一天气不好而给自己投保。不用说,保险公司承担的风险越大,你付的保险费也就越高。听说航运公司为打捞沉船提出索赔,这不算稀奇;可某个小镇为打捞一只沉下水的馅饼盘提出索赔,那才真是独一份。说真的,这只馅饼盘确实少见——足有十八英尺长、六英尺宽。它是小镇买下的,为的是在一年一度的县集市上烤一只巨大的馅饼。集市委员会认定,运这只盘子最好走运河,于是给这趟运输投了保。盘子刚下水不久,委员会成员就去当地一家小餐馆庆祝。就在这时,一群十几岁的孩子爬上盘子,开起了自己的小派对。跳起舞来,盘子实在承受不住,派对进行中它翻了个个儿,沉入七英尺深的水里。委员会给当地一家修车行老板打了电话,他开着一辆拖车赶来打捞。那些孩子穿着湿衣服冻得发抖,在一旁看着,三个工人一次次潜入水中寻找盘子。他们没费多大力就找到了,可要把它拖出水面却成了大难题。盘子四边太光滑,要在盘沿拴上缆索和链条又不弄坏它,几乎办不到。最后,链条固定在一端,一台大功率绞车开动起来。盘子浮出水面,被轻轻拖向河岸。有那么一个令人揪心的瞬间,盘子摇摇晃晃地悬在岸边,却突然失去平衡,又滑回水里。这一次,工人们用沉重的金属夹子把盘子两侧夹住,以便挂上链条。绞车再次启动,一名工人发动了拖车。几分钟后,盘子被成功地拖出水面。水从盘子两侧成股涌下,来势之猛,在运河里掀起一股大浪。有个危险是:大浪会从对岸弹回,再把盘子拖进水里。工人们以极快的速度抢干,终于赶在大浪返回之前把盘子弄上了岸。",
+  "grammar_card": {
+    "title": "the + 比较级…the + 比较级 / so…that / 现在分词作状语 / have difficulty doing / 固定表达",
+    "intro": "①the + 比较级 + …, the + 比较级 + …:两件事同增同减,“越…越…”:The bigger the risk, the higher the premium。②so + 形容词/副词 + that + 结果:如此…以至于…:so smooth that chains would not hold。③现在分词短语放句首作状语,说明主语的伴随/原因:Shivering in their wet clothes, the teenagers looked on。④have difficulty (in) doing:做某事有困难;prove to be:结果证明是。⑤固定表达:in the event of(万一)、needless to say(不用说)、make a claim for(要求得到)、put into operation(使运转)。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["the + 比较级, the + 比较级", "越…越…", "The bigger …, the higher …"],
+        ["so + 形容词 + that", "如此…以至于", "so smooth that chains slipped"],
+        ["现在分词短语作状语", "伴随/原因", "Shivering …, the teenagers looked on"],
+        ["in the event of / make a claim for", "万一 / 要求得到", "in the event of bad weather"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "the + 比较级结构里,两个 the 都不能省;比较级前面别再加 more（× the more big，√ the bigger）。", "mark": "the bigger … the higher" },
+      { "rule": "so 后接形容词/副词（so smooth），such 后接名词（such a smooth dish）;结果都用 that 引导。", "mark": "so … that / such … that" },
+      { "rule": "美式:county fair(英式 fete)、tow truck(英式 recovery truck)、diner(小餐馆)。本课已按美语写。", "mark": "county fair / tow truck" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Who owned the pie pan and why?",
+    "options": ["A small town, to bake a giant pie for the annual fair", "A shipping company, to carry cargo", "A restaurant, to serve its customers", "A museum, to display it"],
+    "answer_index": 0
+  },
+  "passage": "Insurance companies are normally willing to insure almost anything. Insuring public or private property is standard practice in most parts of the world. If, however, you were holding an outdoor party, you could just as easily insure yourself in the event of bad weather. Needless to say, the bigger the risk an insurance company takes, the higher the premium you will have to pay. It is not unusual to hear that a shipping company has made a claim for the cost of salvaging a sunken ship. But a claim made by a small town to recover the cost of salvaging a sunken pie pan must surely be one of a kind. Admittedly, it was an unusual pie pan, for it was eighteen feet long and six feet wide. It had been purchased by the town so that an enormous pie could be baked for the annual county fair. The fair committee decided that the best way to move the pan would be by canal, so they insured it for the trip. Shortly after it was launched, the committee went off to a local diner to celebrate. Meanwhile, a group of teenagers climbed onto the pan and held a little party of their own. The dancing proved to be more than the pan could bear, for during the party it capsized and sank in seven feet of water. The committee called a local garage owner, who showed up in a tow truck to salvage the pan. Shivering in their wet clothes, the teenagers looked on while three men dove again and again into the water to locate it. They had little difficulty finding it, but hauling it out proved to be a serious problem. The sides of the pan were so smooth that it was almost impossible to attach cables and chains to the rim without denting it. Eventually chains were fixed to one end and a powerful winch was put into operation. The pan rose to the surface and was gently drawn toward the bank. For one agonizing moment it was perched precariously on the edge, but it suddenly overbalanced and slid back into the water. This time the men clamped heavy metal grips to both sides so that they could fasten the chains. The winch was started again, and one of the men fired up the truck. Several minutes later the pan was hauled clear of the surface. Water streamed off its sides in torrents, with such force that it set up a huge wave in the canal. There was a danger that the wave would rebound off the far bank and send the pan plunging in again. Working at tremendous speed, the men managed to get the pan onto dry land before the wave returned.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Insurance companies are normally willing to insure almost anything. Insuring public or private property is standard practice in most parts of the world. If, however, you were holding an outdoor party, you could just as easily insure yourself in the event of bad weather. Needless to say, the bigger the risk an insurance company takes, the higher the premium you will have to pay.", "text_cn": "保险公司一般说来愿意承保几乎一切东西。承办公共或私人财产保险,在世界大部分地方都是正常业务。不过,倘若你要办一场户外聚会,同样可以为万一天气不好而给自己投保。不用说,保险公司承担的风险越大,你付的保险费也就越高。" },
+    { "seq": 2, "speaker": null, "text_en": "It is not unusual to hear that a shipping company has made a claim for the cost of salvaging a sunken ship. But a claim made by a small town to recover the cost of salvaging a sunken pie pan must surely be one of a kind. Admittedly, it was an unusual pie pan, for it was eighteen feet long and six feet wide. It had been purchased by the town so that an enormous pie could be baked for the annual county fair.", "text_cn": "听说航运公司为打捞沉船提出索赔,这不算稀奇;可某个小镇为打捞一只沉下水的馅饼盘提出索赔,那才真是独一份。说真的,这只馅饼盘确实少见——足有十八英尺长、六英尺宽。它是小镇买下的,为的是在一年一度的县集市上烤一只巨大的馅饼。" },
+    { "seq": 3, "speaker": null, "text_en": "The fair committee decided that the best way to move the pan would be by canal, so they insured it for the trip. Shortly after it was launched, the committee went off to a local diner to celebrate. Meanwhile, a group of teenagers climbed onto the pan and held a little party of their own. The dancing proved to be more than the pan could bear, for during the party it capsized and sank in seven feet of water.", "text_cn": "集市委员会认定,运这只盘子最好走运河,于是给这趟运输投了保。盘子刚下水不久,委员会成员就去当地一家小餐馆庆祝。就在这时,一群十几岁的孩子爬上盘子,开起了自己的小派对。跳起舞来,盘子实在承受不住,派对进行中它翻了个个儿,沉入七英尺深的水里。" },
+    { "seq": 4, "speaker": null, "text_en": "The committee called a local garage owner, who showed up in a tow truck to salvage the pan. Shivering in their wet clothes, the teenagers looked on while three men dove again and again into the water to locate it. They had little difficulty finding it, but hauling it out proved to be a serious problem. The sides of the pan were so smooth that it was almost impossible to attach cables and chains to the rim without denting it. Eventually chains were fixed to one end and a powerful winch was put into operation.", "text_cn": "委员会给当地一家修车行老板打了电话,他开着一辆拖车赶来打捞。那些孩子穿着湿衣服冻得发抖,在一旁看着,三个工人一次次潜入水中寻找盘子。他们没费多大力就找到了,可要把它拖出水面却成了大难题。盘子四边太光滑,要在盘沿拴上缆索和链条又不弄坏它,几乎办不到。最后,链条固定在一端,一台大功率绞车开动起来。" },
+    { "seq": 5, "speaker": null, "text_en": "The pan rose to the surface and was gently drawn toward the bank. For one agonizing moment it was perched precariously on the edge, but it suddenly overbalanced and slid back into the water. This time the men clamped heavy metal grips to both sides so that they could fasten the chains. The winch was started again, and one of the men fired up the truck. Several minutes later the pan was hauled clear of the surface. Water streamed off its sides in torrents, with such force that it set up a huge wave in the canal. There was a danger that the wave would rebound off the far bank and send the pan plunging in again. Working at tremendous speed, the men managed to get the pan onto dry land before the wave returned.", "text_cn": "盘子浮出水面,被轻轻拖向河岸。有那么一个令人揪心的瞬间,盘子摇摇晃晃地悬在岸边,却突然失去平衡,又滑回水里。这一次,工人们用沉重的金属夹子把盘子两侧夹住,以便挂上链条。绞车再次启动,一名工人发动了拖车。几分钟后,盘子被成功地拖出水面。水从盘子两侧成股涌下,来势之猛,在运河里掀起一股大浪。有个危险是:大浪会从对岸弹回,再把盘子拖进水里。工人们以极快的速度抢干,终于赶在大浪返回之前把盘子弄上了岸。" }
+  ],
+  "words": [
+    { "word": "insure", "ipa": "/ɪnˈʃʊr/", "pos": "v", "meaning_cn": "给…保险,投保", "example": "willing to insure almost anything" },
+    { "word": "premium", "ipa": "/ˈpriːmiəm/", "pos": "n", "meaning_cn": "保险费", "example": "the higher the premium you pay" },
+    { "word": "recover", "ipa": "/rɪˈkʌvər/", "pos": "v", "meaning_cn": "使…得到补偿,弥补;取回", "example": "to recover the cost of salvaging" },
+    { "word": "annual", "ipa": "/ˈænjuəl/", "pos": "adj", "meaning_cn": "一年一度的", "example": "the annual county fair" },
+    { "word": "purchase", "ipa": "/ˈpɜːrtʃəs/", "pos": "v", "meaning_cn": "购买", "example": "purchased by the town" },
+    { "word": "capsize", "ipa": "/ˈkæpsaɪz/", "pos": "v", "meaning_cn": "(船)倾覆,翻", "example": "it capsized and sank" },
+    { "word": "haul", "ipa": "/hɔːl/", "pos": "v", "meaning_cn": "(用力)拖,拉", "example": "hauling it out proved hard" },
+    { "word": "winch", "ipa": "/wɪntʃ/", "pos": "n", "meaning_cn": "绞车", "example": "a powerful winch" },
+    { "word": "precariously", "ipa": "/prɪˈkeriəsli/", "pos": "adv", "meaning_cn": "危险地,不稳固地", "example": "perched precariously on the edge" },
+    { "word": "overbalance", "ipa": "/ˌoʊvərˈbæləns/", "pos": "v", "meaning_cn": "失去平衡", "example": "it suddenly overbalanced" },
+    { "word": "rebound", "ipa": "/rɪˈbaʊnd/", "pos": "v", "meaning_cn": "弹回", "example": "the wave would rebound off the bank" },
+    { "word": "torrent", "ipa": "/ˈtɔːrənt/", "pos": "n", "meaning_cn": "激流,洪流", "example": "water streamed off in torrents" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "the + 比较级, the + 比较级(越…越…)" },
+    { "gp": "gp2", "name": "so + 形容词 + that…(如此…以至于)" },
+    { "gp": "gp3", "name": "现在分词短语作状语(Shivering in their wet clothes)" },
+    { "gp": "gp4", "name": "have difficulty (in) doing / prove to be" },
+    { "gp": "gp5", "name": "固定表达 in the event of / needless to say / make a claim for" },
+    { "gp": "gp6", "name": "词汇辨析(haul/capsize/premium)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The bigger the risk, the ___ the premium.\"(the + 比较级, the + 比较级:越…越…)", "stem_cn": "风险越大,保险费越高。", "options": ["higher", "high", "highest", "more high"] },
+    { "gp": "gp1", "stem": "\"The ___ you practice, the better you get.\"(前半也用 the + 比较级,填 much 的比较级)", "stem_cn": "练得越多,越进步。", "options": ["more", "most", "much", "many"] },
+    { "gp": "gp1", "stem": "\"The heavier the pan, the ___ it was to lift.\"(后半用 hard 的比较级)", "stem_cn": "盘子越重,越难抬起。", "options": ["harder", "hard", "hardest", "more hard"] },
+    { "gp": "gp2", "stem": "\"The sides were ___ smooth that no chain would hold.\"(“如此…以至于”,程度副词)", "stem_cn": "盘边太光滑,链子挂不住。", "options": ["so", "such", "very", "too"] },
+    { "gp": "gp2", "stem": "\"It was such a heavy pan ___ four men could hardly move it.\"(such a + 名词 + …,填引导结果的那个词)", "stem_cn": "盘子太重,四个人都几乎搬不动。", "options": ["that", "so", "as", "which"] },
+    { "gp": "gp2", "stem": "\"The wave was so strong ___ it nearly pushed the pan back.\"(so + 形容词 + …,填引导结果的那个词)", "stem_cn": "浪太猛,差点把盘子推回水里。", "options": ["that", "as", "than", "so"] },
+    { "gp": "gp3", "stem": "\"___ in their wet clothes, the teenagers looked on.\"(现在分词短语作状语:冻得发抖)", "stem_cn": "那些孩子穿着湿衣服冻得发抖,在一旁看着。", "options": ["Shivering", "Shiver", "Shivered", "To shiver"] },
+    { "gp": "gp3", "stem": "\"___ at tremendous speed, the men saved the pan.\"(现在分词短语作状语:以极快速度干)", "stem_cn": "工人们以极快的速度干,救下了盘子。", "options": ["Working", "Work", "Worked", "To work"] },
+    { "gp": "gp3", "stem": "\"The men dove in, ___ for the sunken pan.\"(现在分词表伴随:一边找)", "stem_cn": "工人们跳进水里,一边寻找沉下的盘子。", "options": ["searching", "searched", "to search", "search"] },
+    { "gp": "gp4", "stem": "\"They had little difficulty ___ the pan.\"(have difficulty (in) doing 后接动名词)", "stem_cn": "他们没费什么力就找到了盘子。", "options": ["finding", "to find", "find", "found"] },
+    { "gp": "gp4", "stem": "\"Hauling it out ___ to be a serious problem.\"(“结果证明是…”,用过去式)", "stem_cn": "把它拖出来结果成了大难题。", "options": ["proved", "proves", "proving", "prove"] },
+    { "gp": "gp4", "stem": "\"The dancing proved ___ more than the pan could bear.\"(prove 后接的不定式形式)", "stem_cn": "跳舞结果超出了盘子能承受的。", "options": ["to be", "being", "be", "been"] },
+    { "gp": "gp5", "stem": "\"You can insure yourself ___ the event of bad weather.\"(固定短语 ___ the event of,“万一、倘若”,填介词)", "stem_cn": "你可以为万一天气不好而投保。", "options": ["in", "on", "at", "for"] },
+    { "gp": "gp5", "stem": "\"___ to say, bigger risks mean higher premiums.\"(“不用说”,___ to say,填形容词)", "stem_cn": "不用说,风险越大保费越高。", "options": ["Needless", "Needing", "Need not", "No need"] },
+    { "gp": "gp5", "stem": "\"The shipping company made a claim ___ the cost of salvage.\"(make a claim ___,“要求得到”,填介词)", "stem_cn": "航运公司要求补偿打捞费用。", "options": ["for", "of", "to", "with"] },
+    { "gp": "gp6", "stem": "\"To pull something heavy with effort is to ___ it.\"(“(用力)拖、拉”用哪个词)", "stem_cn": "用力拖拉某重物。", "options": ["haul", "drop", "throw", "catch"] },
+    { "gp": "gp6", "stem": "\"When a boat turns over in the water, it has ___.\"(“(船)倾覆、翻”用哪个词)", "stem_cn": "船在水里翻了。", "options": ["capsized", "floated", "sailed", "docked"] },
+    { "gp": "gp6", "stem": "\"Money paid regularly for an insurance policy is the ___.\"(“保险费”用哪个词)", "stem_cn": "为保险定期支付的钱。", "options": ["premium", "wage", "tax", "fine"] }
+  ],
+  "stage6": [
+    { "stem": "insure 的意思是:", "options": ["给…保险,投保", "出售", "借出", "丢弃"] },
+    { "stem": "annual 的意思是:", "options": ["一年一度的", "每天的", "临时的", "永久的"] },
+    { "stem": "capsize 的意思是:", "options": ["(船)倾覆,翻", "加速", "停泊", "装载"] },
+    { "stem": "overbalance 的意思是:", "options": ["失去平衡", "称重", "充气", "固定"] },
+    { "stem": "precariously 的意思是:", "options": ["危险地,不稳固地", "安全地", "缓慢地", "整齐地"] },
+    { "stem": "rebound 的意思是:", "options": ["弹回", "下沉", "融化", "燃烧"] }
+  ],
+  "contrast": [
+    { "us": "county fair", "uk": "fete", "note_cn": "游园会、集市;美语 county fair,英式 fete" },
+    { "us": "tow truck", "uk": "recovery truck", "note_cn": "拖车、救援车;美语 tow truck,英式 recovery truck" },
+    { "us": "diner", "uk": "café", "note_cn": "小餐馆;美语常说 diner,英式常说 café" },
+    { "us": "check", "uk": "cheque", "note_cn": "支票(付保费/理赔);拼写差异,美语 check" }
+  ],
+  "chunks": [
+    { "us": "put into operation", "ipa": "/pʊt ˈɪntə ˌɑːpəˈreɪʃən/", "example1": "A powerful winch was put into operation.", "example1_cn": "一台大功率绞车开动起来。", "example2": "The new plan was put into operation last week.", "example2_cn": "新方案上周开始实施。" },
+    { "us": "look on", "ipa": "/lʊk ɑːn/", "example1": "The teenagers looked on while the men worked.", "example1_cn": "工人干活时,那些孩子在一旁看着。", "example2": "A crowd looked on as the fire spread.", "example2_cn": "火蔓延时,一群人在旁观看。" },
+    { "us": "make a claim for", "ipa": "/meɪk ə kleɪm fɔːr/", "example1": "The company made a claim for the cost of salvage.", "example1_cn": "公司要求补偿打捞费用。", "example2": "You can make a claim for the damage.", "example2_cn": "你可以就损失提出索赔。" },
+    { "us": "set up", "ipa": "/set ʌp/", "example1": "The falling water set up a huge wave.", "example1_cn": "落下的水掀起一股大浪。", "example2": "His words set up a wave of excitement.", "example2_cn": "他的话激起一阵兴奋。" }
+  ],
+  "stage7_cloze": {
+    "context": "Insurance companies will insure almost anything. Needless to say, the bigger the risk, the ___1___ the premium you pay. One small town even made a claim ___2___ the cost of salvaging a giant pie pan that had capsized in a canal. The pan's sides were ___3___ smooth that chains would hardly hold. In the end a powerful winch was put ___4___ operation and the pan was hauled out.",
+    "blanks": [
+      { "blank_no": 1, "options": ["higher", "high", "highest", "more high"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["for", "of", "to", "at"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["so", "such", "very", "too"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["into", "in", "on", "to"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Who owned the pie pan?", "options": ["A small town (the local authority)", "A shipping company", "The garage owner", "The teenagers"] },
+    { "stem": "Why did the pan sink?", "options": ["Teenagers danced on it and it capsized", "A storm hit the canal", "It was too heavy to float", "Someone cut a hole in it"] },
+    { "stem": "How was the pan finally lifted out?", "options": ["With chains and a powerful winch", "By hand", "With a helicopter", "It floated up on its own"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"风险越大,保费越高\"(the + 比较级, the + 比较级):", "options": ["The bigger the risk, the higher the premium.", "The bigger risk, the higher premium.", "Bigger the risk, higher the premium.", "The more big the risk, the more high the premium."] },
+    { "stem": "你想说\"盘边太光滑,链子挂不住\"(so + 形容词 + that):", "options": ["The sides were so smooth that the chains would not hold.", "The sides were such smooth that the chains would not hold.", "The sides were so smooth as the chains would not hold.", "The sides were too smooth that the chains would not hold."] },
+    { "stem": "你想说\"你可以为万一天气不好而投保\"(in the event of):", "options": ["You can insure yourself in the event of bad weather.", "You can insure yourself in event of bad weather.", "You can insure yourself in the case bad weather.", "You can insure yourself on the event of bad weather."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "premium 的意思是:", "options": ["保险费", "罚款", "工资", "税款"] },
+    { "kind": "vocab", "stem": "capsize 的意思是:", "options": ["(船)倾覆,翻", "加速", "停泊", "装载"] },
+    { "kind": "grammar", "stem": "\"The bigger the risk, the ___ the premium.\"(the + 比较级, the + 比较级)", "stem_cn": "风险越大,保险费越高。", "options": ["higher", "high", "highest", "more high"] },
+    { "kind": "grammar", "stem": "\"The sides were ___ smooth that no chain would hold.\"(“如此…以至于”,程度副词)", "stem_cn": "盘边太光滑,链子挂不住。", "options": ["so", "such", "very", "too"] },
+    { "kind": "scenario", "stem": "\"put into operation\" 的意思是:", "options": ["使运转、开动起来", "停止使用", "拆卸", "购买"] },
+    { "kind": "scenario", "stem": "\"make a claim for\" 的意思是:", "options": ["要求得到(赔偿)", "放弃权利", "提出批评", "表示感谢"] },
+    { "kind": "reading", "stem": "Why was the pie pan bought by the town?", "options": ["To bake an enormous pie for the annual fair", "To sell it to a museum", "To use it as a boat", "To hold a swimming contest"], "passage": true },
+    { "kind": "reading", "stem": "Why was hauling the pan out so difficult?", "options": ["Its sides were so smooth that chains could hardly grip it", "It was chained to the canal bottom", "It was too light to keep still", "The water was frozen solid"], "passage": true },
+    { "kind": "listening", "stem": "What did the teenagers do while the men worked?", "options": ["They looked on, shivering in their wet clothes", "They helped dive for the pan", "They went home at once", "They drove the tow truck"], "audio": true },
+    { "kind": "listening", "stem": "What happened when the pan was first drawn to the bank?", "options": ["It overbalanced and slid back into the water", "It broke in two", "It floated away downstream", "It was loaded onto a truck at once"], "audio": true }
+  ]
+}

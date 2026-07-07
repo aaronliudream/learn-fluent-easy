@@ -1,14 +1,14 @@
 -- =====================================================================
 -- 教师功能 Phase 2 · P4 追加 — restore_class(_class_id) 恢复归档班为活跃班
 --
--- 老师把已归档班级恢复为活跃(archived_at 置 null)。后端硬保证 5 班上限,
--- 与 create_class 的 (b) 上限口径对称:未归档班级(archived_at is null)< 5。
+-- 老师把已归档班级恢复为活跃(archived_at 置 null)。后端硬保证班级上限,
+-- 与 create_class 的 (b) 上限口径对称:未归档班级(archived_at is null)< max_classes(10)。
 --
 -- 校验链(全部通过才恢复):
 --   1. 已登录(auth.uid() 非空)
 --   2. 该班存在、是本人的班(teacher_id = uid) —— 否则报"班级不存在或无权限"
 --   3. 该班当前确为已归档(archived_at is not null) —— 已是活跃则幂等直接返回
---   4. 恢复后不突破上限:当前未归档班 < 5 —— 满则 raise exception,前端提示先归档一个
+--   4. 恢复后不突破上限:当前未归档班 < max_classes(10) —— 满则 raise exception,前端提示先归档一个
 --
 -- 返回恢复后的 classes 行(与 create_class 一致,便于前端拿到最新状态)。
 -- SECURITY DEFINER:绕过 RLS 前先做 teacher_id 归属校验,安全。
@@ -24,7 +24,7 @@ as $$
 declare
   uid          uuid := auth.uid();
   target       public.classes;
-  max_classes  constant int := 5;   -- 每老师活跃班上限(与 create_class 同口径)
+  max_classes  constant int := 10;  -- 每老师活跃班上限(与 create_class / enforce_class_limit 触发器同口径)
 begin
   if uid is null then
     raise exception 'not authenticated';

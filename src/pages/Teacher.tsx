@@ -37,6 +37,10 @@ type ClassRow = {
   last_activity_at: string | null;
 };
 
+// 每位老师活跃班上限（后端 enforce_class_limit 触发器 + create_class/restore_class RPC 同步为此值）。
+// 前端只做友好提示，硬保证在后端。以后改上限：这里 + 两个 RPC 一起改。
+const MAX_CLASSES = 10;
+
 const STAGE_META: Record<ClassRow["stage"], { label: string; gradient: string }> = {
   primary: { label: "小学 / Primary",  gradient: "from-sky-500 to-cyan-500" },
   junior:  { label: "初中 / Junior",   gradient: "from-violet-500 to-indigo-500" },
@@ -112,7 +116,7 @@ export default function Teacher() {
                 : <T>还没有班级，点击「新建班级」开始</T>}
             </div>
           </div>
-          <CreateClassButton onCreated={(c) => { setCreating(false); reload(); navigate(`/teacher/class/${c.id}`); }} open={creating} onOpenChange={setCreating} />
+          <CreateClassButton count={activeClasses.length} onCreated={(c) => { setCreating(false); reload(); navigate(`/teacher/class/${c.id}`); }} open={creating} onOpenChange={setCreating} />
         </div>
 
         <div className="relative mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -248,12 +252,13 @@ function ClassCard({ c }: { c: ClassRow }) {
 function ArchivedClasses({ list, activeCount, onChange }: { list: ClassRow[]; activeCount: number; onChange: () => void }) {
   const t = useT();
   const [restoringId, setRestoringId] = useState<string | null>(null);
-  const atLimit = activeCount >= 5;
+  const atLimit = activeCount >= MAX_CLASSES;
+  const limitMsg = t(`活跃班已满 ${MAX_CLASSES} 个，请先归档一个再恢复此班`);
 
   async function restore(c: ClassRow) {
-    if (atLimit) { toast.error(t("活跃班已满 5 个，请先归档一个再恢复此班")); return; }
+    if (atLimit) { toast.error(limitMsg); return; }
     setRestoringId(c.id);
-    // 后端 restore_class 会硬校验归属 + 5 班上限，前端拦截只是提前给友好提示
+    // 后端 restore_class 会硬校验归属 + 班级上限，前端拦截只是提前给友好提示
     const { error } = await supabase.rpc("restore_class", { _class_id: c.id });
     setRestoringId(null);
     if (error) toast.error(error.message);
@@ -285,7 +290,7 @@ function ArchivedClasses({ list, activeCount, onChange }: { list: ClassRow[]; ac
                 variant="outline" size="sm" className="shrink-0"
                 onClick={() => restore(c)}
                 disabled={restoringId === c.id || atLimit}
-                title={atLimit ? t("活跃班已满 5 个，请先归档一个再恢复此班") : undefined}>
+                title={atLimit ? limitMsg : undefined}>
                 {restoringId === c.id
                   ? <Loader2 className="size-3.5 animate-spin" />
                   : <><ArchiveRestore className="mr-1 size-3.5" /> <T>恢复</T></>}
@@ -296,7 +301,7 @@ function ArchivedClasses({ list, activeCount, onChange }: { list: ClassRow[]; ac
       </ul>
       {atLimit && (
         <p className="px-4 pb-3 text-[11px] text-amber-600 dark:text-amber-400">
-          ⚠️ <T>活跃班已满 5 个，需先归档一个才能恢复这里的班级。</T>
+          ⚠️ {t(`活跃班已满 ${MAX_CLASSES} 个，需先归档一个才能恢复这里的班级。`)}
         </p>
       )}
     </details>
@@ -329,12 +334,15 @@ function EmptyClasses({ onCreate }: { onCreate: () => void }) {
 
 /* ── Create-class modal ───────────────────────────────── */
 function CreateClassButton({
-  open, onOpenChange, onCreated,
+  open, onOpenChange, onCreated, count,
 }: {
   open: boolean;
   onOpenChange: (v: boolean) => void;
   onCreated: (cls: { id: string }) => void;
+  count: number;
 }) {
+  const t = useT();
+  const atLimit = count >= MAX_CLASSES;
   const [name, setName] = useState("");
   const [stage, setStage] = useState<"primary" | "junior" | "senior" | "mixed">("mixed");
   const [busy, setBusy] = useState(false);
@@ -358,8 +366,12 @@ function CreateClassButton({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>
-        <button className="rounded-full bg-white/95 text-foreground text-sm font-bold px-4 py-2 hover:bg-white inline-flex items-center gap-1.5">
+        <button
+          disabled={atLimit}
+          title={atLimit ? t(`班级数已达上限 ${MAX_CLASSES} 个，请先归档一个再新建`) : undefined}
+          className="rounded-full bg-white/95 text-foreground text-sm font-bold px-4 py-2 hover:bg-white inline-flex items-center gap-1.5 disabled:opacity-60 disabled:hover:bg-white/95">
           <Plus className="size-4" /> <T>新建班级</T>
+          <span className="text-[11px] font-normal opacity-70 tabular-nums">{count} / {MAX_CLASSES}</span>
         </button>
       </DialogTrigger>
       <DialogContent>

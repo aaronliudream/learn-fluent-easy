@@ -4,7 +4,7 @@
 -- create-or-replace 现有 public.create_class(text, text, text)：签名、返回、
 --   原有校验/insert 全部原样保留，仅新增两处：
 --     (a) 身份校验：非老师拒绝（依赖 PHASE1_teacher_role.sql 的 is_teacher()）
---     (b) 数量上限：每老师未归档班级 < MAX_CLASSES（当前 5，日后放宽改这一处）
+--     (b) 数量上限：每老师未归档班级 < MAX_CLASSES（当前 10，与 enforce_class_limit 触发器同步）
 -- 幂等，可重复跑。不 drop、不改表结构。
 --
 -- ⚠ 运行顺序：必须在 PHASE1_teacher_role.sql 之后跑（依赖 public.is_teacher()）。
@@ -23,7 +23,7 @@ as $$
 declare
   uid        uuid := auth.uid();
   new_class  public.classes;
-  max_classes constant int := 5;   -- 每老师班级上限（日后放宽只改这里）
+  max_classes constant int := 10;  -- 每老师班级上限（与 enforce_class_limit 触发器同步；日后放宽改这里+触发器+restore_class）
 begin
   if uid is null then
     raise exception 'not authenticated';

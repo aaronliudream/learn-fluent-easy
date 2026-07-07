@@ -79,7 +79,7 @@ export default function TeacherClass() {
   async function restoreClass() {
     if (!id) return;
     setRestoring(true);
-    // restore_class 后端硬校验归属 + 5 班上限；满则返回中文异常，直接透传给用户。
+    // restore_class 后端硬校验归属 + 班级上限；满则返回中文异常，直接透传给用户。
     const { error } = await supabase.rpc("restore_class", { _class_id: id });
     setRestoring(false);
     if (error) toast.error(error.message);

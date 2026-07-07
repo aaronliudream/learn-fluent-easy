@@ -1,0 +1,134 @@
+{
+  "id": "am4_l22",
+  "unit_no": 4,
+  "lesson_no": 22,
+  "title_en": "Knowledge and Progress",
+  "title_cn": "知识与进步",
+  "grammar_focus": "not only … but also …(+ 被动)、the moment / the instant 引导的时间从句(一…就)、more and more + 形容词 / 比较级 + and + 比较级、be to do(what are we to do…)、what 引导的名词从句(What we call … is …)(NCE4 无 KS 页,考点由课文结构自取;IP:源为 G.N.M.蒂勒尔《人的个性》,内容为‘进步即知识累积、智力与道德无进步’的论述,已用 100% 原创行文复述,无逐句改写、无人物;题材=知识与进步的思辨·无害;美语化 civilization/recognize;第四册第22课)",
+  "scene": "为什么“进步”这个念头在现代人心里显得那么大?一种特定的进步确实正在我们四周发生,而且一年比一年更加显眼。诚然,在智力与道德上,人类几乎毫无长进——今天一个聪明的无赖,并不比三千年前一个聪明的无赖更明智、也不更善良。可在一件事上,即知识的堆积上,人类却进步得无可估量。知识最初开始增长,是在一个人能用言语把自己的想法传给另一个人的那一刻。文字被发明出来时,又迈出了远为巨大的一步,因为知识从此不仅能被传递,还能被储存。书本让学校成为可能,学校反过来又充实了更多书本;于是知识以复利的方式成倍增长,而整个过程又因印刷术的到来而被极大地增强。有很长一段时间,步子一直很慢;可随着科学兴起,节奏骤然加快,知识开始按一套刻意的计划堆积起来。原本的涓涓细流变成溪流,溪流此后又涨成了洪流。更妙的是,任何新知识一旦获得,立刻就被投入实用。因此,我们引以为傲、称之为“现代文明”的东西,并不是人性各方面均衡发展的果实;它不过是被储存起来、投入日常生活的知识罢了。于是一个棘手的问题摆在全人类面前:我们该拿这堆起来的知识怎么办?正如人们常说的,知识是一把双刃剑,同样可用于行善或作恶;今天,它正被不加分别地用于两者。谁也说不准,这股永远在增长的双重力量,最终会把我们抬得更高,还是把我们击得粉碎。",
+  "grammar_card": {
+    "title": "not only … but also / the moment·the instant / more and more / be to do / what 名词从句",
+    "intro": "①not only … but also …(不仅…而且…),可含被动:not only be passed on but also stored。②the moment / the instant 引导时间从句‘一…就…’。③more and more + 形容词;或 比较级 + and + 比较级。④be to do:表将要或‘该…’:what are we to do。⑤what 引导名词从句:What we call 'modern civilization' is stored-up knowledge。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["not only…but also", "not only … but also …", "not only be passed on but also stored"],
+        ["the moment/instant", "the moment/instant + 从句", "the moment one person could speak"],
+        ["more and more", "more and more + 形容词", "more and more manifest"],
+        ["be to do", "主语 + be to + 动词原形", "what are we to do with it"],
+        ["what 名词从句", "What … + 谓语", "What we call civilization is knowledge"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "not only … but also 连接被动时,not only / but also 放在助动词后:could not only be passed on but also (be) stored。", "mark": "not only be done but also done" },
+      { "rule": "be to do 表示按计划将要发生或应该、注定:what are we to do = 我们该怎么办。", "mark": "be to do" },
+      { "rule": "美式拼写:civilization(文明,英式 civilisation)、recognize(认出,英式 recognise)。本课已按美语写。", "mark": "civilization / recognize" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — In what two areas have people made no 'progress' at all?",
+    "options": ["In intelligence and in morality", "In science and in writing", "In trade and in travel", "In printing and in speech"],
+    "answer_index": 0
+  },
+  "passage": "Why does the idea of progress loom so large in the modern mind? Progress of one particular kind is certainly taking place all around us, and it grows more and more manifest with every passing year. In intelligence and in morality, it is true, the human race has hardly improved at all — a clever rogue of today is no wiser and no kinder than a clever rogue of three thousand years ago. Yet in one thing, the piling up of knowledge, mankind has advanced beyond all measure. Knowledge first began to grow the moment one person could communicate his thoughts to another by speech. When writing was invented, a far greater step was taken, for now knowledge could not only be passed on but also stored. Books made schools possible, and schools in their turn filled more books; so knowledge multiplied in the manner of compound interest, and the whole process was enormously enhanced by the coming of printing. For a long while the pace stayed slow; but with the rise of science the tempo was suddenly quickened, and knowledge began to pile up to a deliberate plan. What had been a trickle became a stream, and the stream has since swelled into a torrent. Better still, the instant any new knowledge is gained, it is at once turned to practical use. What we proudly call 'modern civilization' is not, then, the fruit of a balanced growth of every side of human nature; it is simply stored-up knowledge put to work in daily life. And so a hard question now faces all of humanity: what are we to do with the mountain of knowledge we have raised? Knowledge, as people so often remark, is a two-edged weapon, equally fit for good or for evil; today it is being used, indifferently, for both. No one can yet say whether this double power, forever growing, will lift us higher or shatter us in the end.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Why does the idea of progress loom so large in the modern mind? Progress of one particular kind is certainly taking place all around us, and it grows more and more manifest with every passing year. In intelligence and in morality, it is true, the human race has hardly improved at all — a clever rogue of today is no wiser and no kinder than a clever rogue of three thousand years ago.", "text_cn": "为什么“进步”这个念头在现代人心里显得那么大?一种特定的进步确实正在我们四周发生,而且一年比一年更加显眼。诚然,在智力与道德上,人类几乎毫无长进——今天一个聪明的无赖,并不比三千年前一个聪明的无赖更明智、也不更善良。" },
+    { "seq": 2, "speaker": null, "text_en": "Yet in one thing, the piling up of knowledge, mankind has advanced beyond all measure. Knowledge first began to grow the moment one person could communicate his thoughts to another by speech. When writing was invented, a far greater step was taken, for now knowledge could not only be passed on but also stored.", "text_cn": "可在一件事上,即知识的堆积上,人类却进步得无可估量。知识最初开始增长,是在一个人能用言语把自己的想法传给另一个人的那一刻。文字被发明出来时,又迈出了远为巨大的一步,因为知识从此不仅能被传递,还能被储存。" },
+    { "seq": 3, "speaker": null, "text_en": "Books made schools possible, and schools in their turn filled more books; so knowledge multiplied in the manner of compound interest, and the whole process was enormously enhanced by the coming of printing. For a long while the pace stayed slow; but with the rise of science the tempo was suddenly quickened, and knowledge began to pile up to a deliberate plan.", "text_cn": "书本让学校成为可能,学校反过来又充实了更多书本;于是知识以复利的方式成倍增长,而整个过程又因印刷术的到来而被极大地增强。有很长一段时间,步子一直很慢;可随着科学兴起,节奏骤然加快,知识开始按一套刻意的计划堆积起来。" },
+    { "seq": 4, "speaker": null, "text_en": "What had been a trickle became a stream, and the stream has since swelled into a torrent. Better still, the instant any new knowledge is gained, it is at once turned to practical use. What we proudly call 'modern civilization' is not, then, the fruit of a balanced growth of every side of human nature; it is simply stored-up knowledge put to work in daily life.", "text_cn": "原本的涓涓细流变成溪流,溪流此后又涨成了洪流。更妙的是,任何新知识一旦获得,立刻就被投入实用。因此,我们引以为傲、称之为“现代文明”的东西,并不是人性各方面均衡发展的果实;它不过是被储存起来、投入日常生活的知识罢了。" },
+    { "seq": 5, "speaker": null, "text_en": "And so a hard question now faces all of humanity: what are we to do with the mountain of knowledge we have raised? Knowledge, as people so often remark, is a two-edged weapon, equally fit for good or for evil; today it is being used, indifferently, for both. No one can yet say whether this double power, forever growing, will lift us higher or shatter us in the end.", "text_cn": "于是一个棘手的问题摆在全人类面前:我们该拿这堆起来的知识怎么办?正如人们常说的,知识是一把双刃剑,同样可用于行善或作恶;今天,它正被不加分别地用于两者。谁也说不准,这股永远在增长的双重力量,最终会把我们抬得更高,还是把我们击得粉碎。" }
+  ],
+  "words": [
+    { "word": "loom", "ipa": "/luːm/", "pos": "v", "meaning_cn": "(隐约)呈现,逼近", "example": "the idea of progress loom so large" },
+    { "word": "manifest", "ipa": "/ˈmænɪfest/", "pos": "adj", "meaning_cn": "明显的,显然的", "example": "more and more manifest every year" },
+    { "word": "morality", "ipa": "/məˈræləti/", "pos": "n", "meaning_cn": "道德", "example": "in intelligence and in morality" },
+    { "word": "communicate", "ipa": "/kəˈmjuːnɪkeɪt/", "pos": "v", "meaning_cn": "传递,交流", "example": "communicate his thoughts to another" },
+    { "word": "compound", "ipa": "/ˈkɑːmpaʊnd/", "pos": "adj", "meaning_cn": "复合的;复利的", "example": "in the manner of compound interest" },
+    { "word": "enhance", "ipa": "/ɪnˈhæns/", "pos": "v", "meaning_cn": "提高,增强", "example": "enormously enhanced by printing" },
+    { "word": "tempo", "ipa": "/ˈtempoʊ/", "pos": "n", "meaning_cn": "节奏,速度", "example": "the tempo was suddenly quickened" },
+    { "word": "trickle", "ipa": "/ˈtrɪkl/", "pos": "n", "meaning_cn": "涓涓细流", "example": "what had been a trickle became a stream" },
+    { "word": "torrent", "ipa": "/ˈtɔːrənt/", "pos": "n", "meaning_cn": "激流,洪流", "example": "swelled into a torrent" },
+    { "word": "humanity", "ipa": "/hjuːˈmænəti/", "pos": "n", "meaning_cn": "人类;人性", "example": "a hard question faces all of humanity" },
+    { "word": "indifferently", "ipa": "/ɪnˈdɪfrəntli/", "pos": "adv", "meaning_cn": "不加分别地,冷淡地", "example": "used, indifferently, for both" },
+    { "word": "shatter", "ipa": "/ˈʃætər/", "pos": "v", "meaning_cn": "粉碎,击碎", "example": "shatter us in the end" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "not only … but also …(+ 被动)" },
+    { "gp": "gp2", "name": "the moment / the instant 引导的时间从句" },
+    { "gp": "gp3", "name": "比较级 + than / 比较级递进" },
+    { "gp": "gp4", "name": "be to do(what are we to do…)" },
+    { "gp": "gp5", "name": "what 引导的名词从句" },
+    { "gp": "gp6", "name": "词汇辨析(morality/enhance/torrent)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Knowledge could not only be passed on ___ also stored.\"(not only … ___ also:‘不仅…而且…’,填中间的连词)", "stem_cn": "知识不仅能被传递,还能被储存。", "options": ["but", "and", "or", "than"] },
+    { "gp": "gp1", "stem": "\"Writing let knowledge be not only communicated ___ also kept.\"(‘不仅…而且…’,填中间的连词)", "stem_cn": "文字让知识不仅得以传播,还得以保存。", "options": ["but", "and", "or", "so"] },
+    { "gp": "gp1", "stem": "\"Science not ___ raised the tempo but also gave it a plan.\"(not ___ … but also:‘不仅…而且…’,填 not 后那个词)", "stem_cn": "科学不仅加快了节奏,还给了它一套计划。", "options": ["only", "just", "even", "still"] },
+    { "gp": "gp2", "stem": "\"Knowledge grew ___ moment one person could speak to another.\"(‘一…就…’= ___ moment …,填 moment 前的词)", "stem_cn": "一个人一能对另一个人说话,知识就增长起来。", "options": ["the", "a", "this", "that"] },
+    { "gp": "gp2", "stem": "\"The ___ new knowledge is gained, it is put to use.\"(‘一…就…’,填表‘瞬间’的名词作连词)", "stem_cn": "新知识一到手,立刻就被投入使用。", "options": ["instant", "hour", "day", "week"] },
+    { "gp": "gp2", "stem": "\"Everything changed the ___ science appeared.\"(‘一…就…’,填表‘时刻’的名词作连词)", "stem_cn": "科学一出现,一切就变了。", "options": ["moment", "place", "reason", "way"] },
+    { "gp": "gp3", "stem": "\"The stream of knowledge grew ___ than ever before.\"(比较级 + than;big 的比较级)", "stem_cn": "知识之流比以往任何时候都更大。", "options": ["bigger", "big", "biggest", "more big"] },
+    { "gp": "gp3", "stem": "\"Knowledge spreads ___ than it once did.\"(比较级 + than;fast 的比较级)", "stem_cn": "知识传播得比从前更快。", "options": ["faster", "fast", "fastest", "more fast"] },
+    { "gp": "gp3", "stem": "\"This power is ___ dangerous than we admit.\"(比较级;dangerous 是多音节形容词,前面加的词)", "stem_cn": "这股力量比我们承认的更危险。", "options": ["more", "most", "much", "very"] },
+    { "gp": "gp4", "stem": "\"What are we to ___ with all this knowledge?\"(‘我们该拿…怎么办’,be to + 动词原形,填该动词)", "stem_cn": "我们该拿这么多知识怎么办?", "options": ["do", "doing", "done", "did"] },
+    { "gp": "gp4", "stem": "\"This power is to ___ our future, for good or ill.\"(be to + 动词原形:‘将决定…’,填该动词)", "stem_cn": "这股力量将决定我们的未来,是福是祸。", "options": ["decide", "decides", "deciding", "decided"] },
+    { "gp": "gp4", "stem": "\"No one knows what is to be ___ with it.\"(be to be + 过去分词:‘该被…’,填该过去分词)", "stem_cn": "没人知道该拿它怎么办。", "options": ["done", "do", "doing", "did"] },
+    { "gp": "gp5", "stem": "\"___ we call 'modern civilization' is stored-up knowledge.\"(名词从句作主语,‘我们所…的’)", "stem_cn": "我们所谓的“现代文明”,就是储存起来的知识。", "options": ["What", "That", "Which", "Whether"] },
+    { "gp": "gp5", "stem": "\"This is exactly ___ science has given us.\"(名词从句,‘所…的’)", "stem_cn": "这正是科学给予我们的。", "options": ["what", "that", "which", "how"] },
+    { "gp": "gp5", "stem": "\"___ mankind has gained is knowledge, not wisdom.\"(名词从句作主语,‘所…的’)", "stem_cn": "人类所获得的是知识,而非智慧。", "options": ["What", "That", "Which", "Whether"] },
+    { "gp": "gp6", "stem": "\"To make something greater or better is to ___ it.\"(“提高、增强”用哪个词)", "stem_cn": "使某物更大或更好。", "options": ["enhance", "reduce", "hide", "destroy"] },
+    { "gp": "gp6", "stem": "\"A slow, thin flow of liquid is a ___.\"(“涓涓细流”用哪个词)", "stem_cn": "缓慢细小的水流。", "options": ["trickle", "flood", "wave", "storm"] },
+    { "gp": "gp6", "stem": "\"Standards of right and wrong conduct are called ___.\"(“道德”用哪个词)", "stem_cn": "关于是非对错的准则。", "options": ["morality", "geography", "weather", "distance"] }
+  ],
+  "stage6": [
+    { "stem": "morality 的意思是:", "options": ["道德", "距离", "天气", "财富"] },
+    { "stem": "enhance 的意思是:", "options": ["提高,增强", "降低", "隐藏", "摧毁"] },
+    { "stem": "tempo 的意思是:", "options": ["节奏,速度", "重量", "颜色", "高度"] },
+    { "stem": "torrent 的意思是:", "options": ["激流,洪流", "细流", "水滴", "池塘"] },
+    { "stem": "loom 的意思是:", "options": ["(隐约)呈现,逼近", "消失", "沉睡", "漂浮"] },
+    { "stem": "shatter 的意思是:", "options": ["粉碎,击碎", "修复", "建造", "连接"] }
+  ],
+  "contrast": [
+    { "us": "civilization", "uk": "civilisation", "note_cn": "文明;拼写差异,美语 -ization" },
+    { "us": "recognize", "uk": "recognise", "note_cn": "认出;拼写差异,美语 -ize" },
+    { "us": "apologize", "uk": "apologise", "note_cn": "道歉;拼写差异,美语 -ize" },
+    { "us": "dialog", "uk": "dialogue", "note_cn": "对话;美语可作 dialog" }
+  ],
+  "chunks": [
+    { "us": "loom large", "ipa": "/luːm lɑːrdʒ/", "example1": "The idea of progress looms large today.", "example1_cn": "进步的念头如今显得格外突出。", "example2": "Exams loom large in a student's life.", "example2_cn": "考试在学生生活里分量很重。" },
+    { "us": "put to use", "ipa": "/pʊt tə juːs/", "example1": "New knowledge is at once put to use.", "example1_cn": "新知识立刻被投入使用。", "example2": "He put his skills to good use.", "example2_cn": "他很好地发挥了自己的技能。" },
+    { "us": "pile up", "ipa": "/paɪl ʌp/", "example1": "Knowledge began to pile up.", "example1_cn": "知识开始堆积起来。", "example2": "The work piled up during my holiday.", "example2_cn": "假期里工作堆了一大堆。" },
+    { "us": "two-edged weapon", "ipa": "/ˈtuː edʒd ˈwepən/", "example1": "Knowledge is a two-edged weapon.", "example1_cn": "知识是一把双刃剑。", "example2": "Fame can be a two-edged weapon.", "example2_cn": "名声可能是把双刃剑。" }
+  ],
+  "stage7_cloze": {
+    "context": "Progress grows ever ___1___ manifest each year. Knowledge could not only be passed on ___2___ also stored. ___3___ we call civilization is stored-up knowledge. It is a two-edged weapon; what is to be ___4___ with it?",
+    "blanks": [
+      { "blank_no": 1, "options": ["more", "most", "much", "very"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["but", "and", "or", "than"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["What", "That", "Which", "Whether"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["done", "do", "doing", "did"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "In what two areas has mankind made no real progress?", "options": ["In intelligence and in morality", "In science and in writing", "In printing and in books", "In cities and in trade"] },
+    { "stem": "What does the speaker say 'modern civilization' really is?", "options": ["Stored-up knowledge applied to practical life", "A balanced growth of all human nature", "A gift of nature", "An accident of history"] },
+    { "stem": "How is new knowledge treated as soon as it is gained?", "options": ["It is at once turned to practical use", "It is hidden away", "It is forgotten", "It is destroyed"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"知识不仅能被传递,还能被储存\"(not only … but also + 被动):", "options": ["Knowledge could not only be passed on but also stored.", "Knowledge could not only be passed on but also store.", "Knowledge could not only passed on but also stored.", "Knowledge could not only be passed on but also to store."] },
+    { "stem": "你想说\"一个人一能对另一个人说话,知识就增长起来\"(the moment):", "options": ["Knowledge grew the moment one person could speak to another.", "Knowledge grew the moment when one person could speaking to another.", "Knowledge grew the moment one person could speaks to another.", "Knowledge grew a moment one person could speak to another."] },
+    { "stem": "你想说\"我们所谓的'现代文明',就是储存起来的知识\"(what 名词从句):", "options": ["What we call 'modern civilization' is stored-up knowledge.", "That we call 'modern civilization' is stored-up knowledge.", "What we call 'modern civilization' are stored-up knowledge.", "What do we call 'modern civilization' is stored-up knowledge."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "morality 的意思是:", "options": ["道德", "距离", "天气", "财富"] },
+    { "kind": "vocab", "stem": "torrent 的意思是:", "options": ["激流,洪流", "细流", "水滴", "池塘"] },
+    { "kind": "grammar", "stem": "\"Knowledge could not only be passed on ___ also stored.\"(‘不仅…而且…’,填 not only 之后、also 之前的连词)", "stem_cn": "知识不仅能被传递,还能被储存。", "options": ["but", "and", "or", "than"] },
+    { "kind": "grammar", "stem": "\"___ we call civilization is stored-up knowledge.\"(名词从句作全句开头)", "stem_cn": "我们所谓的文明,就是储存起来的知识。", "options": ["What", "That", "Which", "Whether"] },
+    { "kind": "scenario", "stem": "\"loom large\" 的意思是:", "options": ["显得突出、令人瞩目", "消失不见", "微不足道", "缓慢移动"] },
+    { "kind": "scenario", "stem": "\"put to use\" 的意思是:", "options": ["加以利用", "放在一边", "卖掉", "藏起来"] },
+    { "kind": "reading", "stem": "According to the passage, in what two things has mankind NOT improved?", "options": ["In intelligence and in morality", "In knowledge and in printing", "In science and in speech", "In books and in schools"], "passage": true },
+    { "kind": "reading", "stem": "What does the passage say 'modern civilization' is?", "options": ["Accumulated knowledge applied to practical life", "A balanced development of human nature", "The gift of a few great men", "The result of good morality"], "passage": true },
+    { "kind": "listening", "stem": "How did the invention of writing help knowledge?", "options": ["Knowledge could be not only communicated but also stored", "It made knowledge secret", "It slowed knowledge down", "It replaced speech entirely"], "audio": true },
+    { "kind": "listening", "stem": "What is knowledge compared to at the end?", "options": ["A two-edged weapon, usable for good or evil", "A quiet stream", "A locked box", "A burning fire"], "audio": true }
+  ]
+}

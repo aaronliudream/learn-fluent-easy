@@ -1,0 +1,133 @@
+{
+  "id": "am3_l19",
+  "unit_no": 4,
+  "lesson_no": 19,
+  "title_en": "A Very Dear Cat",
+  "title_cn": "一只贵重的宝贝猫",
+  "grammar_focus": "动词形式综合复习(一般过去 / 过去完成 had done / 被动系表 were astounded 等混合运用),外加逗号的五种常见用法:句首状语后加逗号、同位语用逗号隔开、列举时用逗号、插入语 however 用逗号隔开、非限定性从句用逗号标出(原创承载 NCE3 L19 考点·净化:把'绑架勒索赎金'改写为'猫溜进豪华宠物度假村,主人付巨额账单赎回',保留'dear=心爱+昂贵'的双关与'在可靠的人那里'的桥段,去掉绑架勒索)",
+  "scene": "埃莉诺·拉姆齐太太是位很有钱的老太太,多年来一直和她的猫拉斯特斯合住一套公寓。拉斯特斯过着极有规律的日子:每天傍晚出去溜达一小会儿,七点前准回家。可有天傍晚,他没能回来。深爱这只猫的拉姆齐太太急坏了,到处找也找不着。拉斯特斯失踪三天后,邮箱里来了一张精致的卡片,寄自全县最豪华的宠物度假村“胡须庄园”。卡上说:拉斯特斯大概是厌倦了平淡的日子,从花园门溜了进来,住下就当自己是主人;他“在可靠的人那里”,得到悉心照料,拉姆齐太太若想接他回去,只需付清账单。她差点晕过去——那张印在厚厚硬纸板上的账单,足足一千美元。原来这三天里,拉斯特斯天天被梳毛、喂三文鱼,像王室一样被伺候着。拉姆齐太太从银行取出钱,径直开车过去。第二天傍晚,拉斯特斯准时七点晃回了家,吃得圆滚滚、毛发油亮,一副心满意足的样子。她把经过一说,朋友们全惊呆了。她只是笑笑,说拉斯特斯一向是她的心肝宝贝——而想想她付的那笔钱,如今这猫可真是“贵重”得不止一层意思了!",
+  "grammar_card": {
+    "title": "动词形式复习 + 逗号的用法",
+    "intro": "①本课把学过的动词时态放在一起复习:一般过去(took / failed)、过去完成 had done(had shared / had wandered)、被动或系表(were astounded)。读时留意每个动词为什么用这种形式。②逗号(comma)常见五种用法:(a)句首状语后加逗号:Three days later, a card arrived. (b)同位语两边加逗号:Mrs. Ramsay, a wealthy old lady, loved her cat. (c)列举各项之间加逗号:milk, bread, and eggs. (d)插入语 however 两边加逗号:The bill, however, was huge. (e)非限定性从句用逗号标出:The cat, which loved salmon, grew plump.",
+    "table": {
+      "headers": ["逗号用法", "说明", "例子"],
+      "rows": [
+        ["句首状语后", "先说时间/条件,再加逗号", "Three days later, a card arrived."],
+        ["同位语两边", "补充说明用逗号隔开", "Mrs. Ramsay, a wealthy old lady, …"],
+        ["列举各项", "并列的东西之间加逗号", "milk, bread, and eggs"],
+        ["however / which 从句", "插入语、非限定性从句用逗号", "The bill, however, was huge."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "同位语和插入语(如 however)要用一对逗号把它整段隔开:漏掉任何一个逗号都算错。", "mark": "同位语 / however" },
+      { "rule": "非限定性从句(补充信息、可去掉)前后要加逗号;限定性从句(不可去掉)则不加。", "mark": "which 从句" },
+      { "rule": "美语拼写与用词:apartment(英式 flat)、the mail(英式 post)、vacation(英式 holiday)。本课已按美语写。", "mark": "apartment / mail" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why was Rastus 'very dear' in more ways than one?",
+    "options": ["He was both deeply loved and very expensive", "He was the oldest cat in town", "He was a rare and famous breed", "He could do clever tricks"],
+    "answer_index": 0
+  },
+  "passage": "Mrs. Eleanor Ramsay, a very wealthy old lady, had shared her apartment with her cat, Rastus, for a great many years. Rastus led an orderly life. He usually took a short walk in the evenings, and he was always home by seven o'clock. One evening, however, he failed to arrive. Mrs. Ramsay, who loved him dearly, grew very worried. She looked everywhere, but she could not find him. Three days after Rastus's disappearance, a fancy card arrived in the mail. It came from Whisker Manor, the most luxurious pet resort in the county. The note explained that Rastus, tired of his quiet routine, had wandered in through their garden gate and settled down as if he owned the place. He was, the manager wrote, in very safe hands. If Mrs. Ramsay wished to collect him, she had only to pay his bill. At first, she nearly fainted, for the bill, printed neatly on thick cardboard, came to a thousand dollars. The staff, it seemed, had taken considerable pride in brushing him, feeding him salmon, and pampering him like royalty. Mrs. Ramsay withdrew the money from her bank and drove straight over. The next evening, punctually at seven o'clock, Rastus strolled home, looking plump, glossy, and thoroughly pleased with himself. Her friends were astounded when she told them the story. She only smiled and said that Rastus had always been dear to her. Considering the amount she had paid, he was now dear in more ways than one!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Mrs. Eleanor Ramsay, a very wealthy old lady, had shared her apartment with her cat, Rastus, for a great many years. Rastus led an orderly life. He usually took a short walk in the evenings, and he was always home by seven o'clock.", "text_cn": "埃莉诺·拉姆齐太太是位很有钱的老太太,多年来一直和她的猫拉斯特斯合住一套公寓。拉斯特斯过着极有规律的日子:每天傍晚出去溜达一小会儿,七点前准回家。" },
+    { "seq": 2, "speaker": null, "text_en": "One evening, however, he failed to arrive. Mrs. Ramsay, who loved him dearly, grew very worried. She looked everywhere, but she could not find him. Three days after Rastus's disappearance, a fancy card arrived in the mail. It came from Whisker Manor, the most luxurious pet resort in the county.", "text_cn": "可有天傍晚,他没能回来。深爱这只猫的拉姆齐太太急坏了,到处找也找不着。拉斯特斯失踪三天后,邮箱里来了一张精致的卡片,寄自全县最豪华的宠物度假村“胡须庄园”。" },
+    { "seq": 3, "speaker": null, "text_en": "The note explained that Rastus, tired of his quiet routine, had wandered in through their garden gate and settled down as if he owned the place. He was, the manager wrote, in very safe hands. If Mrs. Ramsay wished to collect him, she had only to pay his bill.", "text_cn": "卡上说:拉斯特斯大概是厌倦了平淡的日子,从花园门溜了进来,住下就当自己是主人;他“在可靠的人那里”,得到悉心照料。拉姆齐太太若想接他回去,只需付清账单。" },
+    { "seq": 4, "speaker": null, "text_en": "At first, she nearly fainted, for the bill, printed neatly on thick cardboard, came to a thousand dollars. The staff, it seemed, had taken considerable pride in brushing him, feeding him salmon, and pampering him like royalty.", "text_cn": "她差点晕过去——那张印在厚厚硬纸板上的账单,足足一千美元。原来这三天里,度假村的员工把伺候他当成了极大的乐事:给他梳毛、喂三文鱼,像王室一样宠着他。" },
+    { "seq": 5, "speaker": null, "text_en": "Mrs. Ramsay withdrew the money from her bank and drove straight over. The next evening, punctually at seven o'clock, Rastus strolled home, looking plump, glossy, and thoroughly pleased with himself. Her friends were astounded when she told them the story. She only smiled and said that Rastus had always been dear to her. Considering the amount she had paid, he was now dear in more ways than one!", "text_cn": "拉姆齐太太从银行取出钱,径直开车过去。第二天傍晚,拉斯特斯准时七点晃回了家,吃得圆滚滚、毛发油亮,一副心满意足的样子。她把经过一说,朋友们全惊呆了。她只是笑笑,说拉斯特斯一向是她的心肝宝贝——而想想她付的那笔钱,如今这猫可真是“贵重”得不止一层意思了!" }
+  ],
+  "words": [
+    { "word": "dear", "ipa": "/dɪr/", "pos": "adj", "meaning_cn": "亲爱的;昂贵的(本课双关)", "example": "dear in more ways than one" },
+    { "word": "wealthy", "ipa": "/ˈwelθi/", "pos": "adj", "meaning_cn": "富有的,有钱的", "example": "a very wealthy old lady" },
+    { "word": "orderly", "ipa": "/ˈɔːrdərli/", "pos": "adj", "meaning_cn": "有规律的,井井有条的", "example": "an orderly life" },
+    { "word": "disappearance", "ipa": "/ˌdɪsəˈpɪrəns/", "pos": "n", "meaning_cn": "失踪,消失", "example": "after Rastus's disappearance" },
+    { "word": "considerable", "ipa": "/kənˈsɪdərəbl/", "pos": "adj", "meaning_cn": "相当大的,可观的", "example": "considerable pride" },
+    { "word": "cardboard", "ipa": "/ˈkɑːrdbɔːrd/", "pos": "n", "meaning_cn": "硬纸板", "example": "printed on thick cardboard" },
+    { "word": "withdraw", "ipa": "/wɪðˈdrɔː/", "pos": "v", "meaning_cn": "(从银行)取钱(withdrew/withdrawn)", "example": "withdrew the money from her bank" },
+    { "word": "punctually", "ipa": "/ˈpʌŋktʃuəli/", "pos": "adv", "meaning_cn": "准时地", "example": "punctually at seven o'clock" },
+    { "word": "astound", "ipa": "/əˈstaʊnd/", "pos": "v", "meaning_cn": "使吃惊,使震惊", "example": "her friends were astounded" },
+    { "word": "luxurious", "ipa": "/lʌɡˈʒʊriəs/", "pos": "adj", "meaning_cn": "豪华的", "example": "the most luxurious pet resort" },
+    { "word": "pamper", "ipa": "/ˈpæmpər/", "pos": "v", "meaning_cn": "娇惯,悉心呵护", "example": "pampering him like royalty" },
+    { "word": "resort", "ipa": "/rɪˈzɔːrt/", "pos": "n", "meaning_cn": "度假胜地,度假村", "example": "a luxurious pet resort" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "动词时态复习(一般过去 / 系表)" },
+    { "gp": "gp2", "name": "动词时态复习(过去完成 had done)" },
+    { "gp": "gp3", "name": "逗号:句首状语后 + 列举" },
+    { "gp": "gp4", "name": "逗号:同位语两边" },
+    { "gp": "gp5", "name": "逗号:插入语 however / 非限定性从句" },
+    { "gp": "gp6", "name": "词汇辨析(wealthy/withdraw/punctually)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Every evening Rastus ___ a short walk and came home by seven.\"(一般过去)", "stem_cn": "每天傍晚拉斯特斯都去散会儿步,七点前回家。", "options": ["took", "takes", "has taken", "taking"] },
+    { "gp": "gp1", "stem": "\"One evening, however, he ___ to arrive on time.\"(一般过去)", "stem_cn": "可有天傍晚,他没能按时回来。", "options": ["failed", "fails", "has failed", "failing"] },
+    { "gp": "gp1", "stem": "\"Her friends ___ when she told them the whole story.\"(一般过去:“感到震惊”)", "stem_cn": "她把整件事一说,朋友们都惊呆了。", "options": ["were astounded", "are astounded", "astound", "astounding"] },
+    { "gp": "gp2", "stem": "\"Mrs. Ramsay ___ her apartment with the cat for many years.\"(过去完成:此前一直)", "stem_cn": "拉姆齐太太多年来一直和这只猫合住。", "options": ["had shared", "shares", "is sharing", "share"] },
+    { "gp": "gp2", "stem": "\"The note said Rastus ___ in through the garden gate.\"(过去完成:“早先已溜进”)", "stem_cn": "便条说拉斯特斯早先从花园门溜了进去。", "options": ["had wandered", "wanders", "is wandering", "wander"] },
+    { "gp": "gp2", "stem": "\"Considering the amount she ___, the cat was dear indeed.\"(过去完成:“已付”)", "stem_cn": "想想她付的那笔钱,这猫可真够“贵”的。", "options": ["had paid", "pays", "is paying", "pay"] },
+    { "gp": "gp3", "stem": "下面哪一句在列举东西时,逗号用得正确?", "stem_cn": "列举并列的东西时,各项之间要用逗号分隔。", "options": ["He was brushed, fed, and pampered.", "He was brushed fed and, pampered.", "He was, brushed fed and pampered.", "He, was brushed fed and pampered."] },
+    { "gp": "gp3", "stem": "下面哪一句在句首的时间状语后,正确地加了逗号?", "stem_cn": "先说时间状语,再用逗号与主句隔开。", "options": ["Three days later, a card arrived.", "Three days later a, card arrived.", "Three days, later a card arrived.", "Three, days later a card arrived."] },
+    { "gp": "gp3", "stem": "下面哪一句列举时标点用得正确?", "stem_cn": "并列的名词之间用逗号分隔。", "options": ["I bought milk, bread, and eggs.", "I bought milk bread, and, eggs.", "I bought, milk bread and eggs.", "I, bought milk bread and eggs."] },
+    { "gp": "gp4", "stem": "下面哪一句用逗号正确地隔开了同位语(补充说明)?", "stem_cn": "同位语要用一对逗号前后隔开。", "options": ["Mrs. Ramsay, a wealthy old lady, loved her cat.", "Mrs. Ramsay a wealthy old lady, loved her cat.", "Mrs. Ramsay, a wealthy old lady loved her cat.", "Mrs. Ramsay a wealthy old lady loved her cat."] },
+    { "gp": "gp4", "stem": "下面哪一句用同位语正确地介绍了这家度假村?", "stem_cn": "同位语两边都要有逗号。", "options": ["Whisker Manor, the finest pet resort, took him in.", "Whisker Manor the finest pet resort, took him in.", "Whisker Manor, the finest pet resort took him in.", "Whisker, Manor the finest pet resort took him in."] },
+    { "gp": "gp4", "stem": "下面哪一句同位语的标点用得正确?", "stem_cn": "补充说明“她唯一的伙伴”要用一对逗号隔开。", "options": ["Rastus, her only companion, came home at last.", "Rastus her only companion, came home at last.", "Rastus, her only companion came home at last.", "Rastus her only, companion came home at last."] },
+    { "gp": "gp5", "stem": "下面哪一句用逗号正确地隔开了插入语 however?", "stem_cn": "插入语 however 要用一对逗号前后隔开。", "options": ["There were, however, no cats at home.", "There were however, no cats at home.", "There, were however no cats at home.", "There were however no, cats at home."] },
+    { "gp": "gp5", "stem": "下面哪一句正确地用逗号标出了非限定性(可去掉的补充)从句?", "stem_cn": "补充信息、可去掉的从句前后要加逗号。", "options": ["The cat, which loved salmon, grew plump.", "The cat which loved salmon, grew plump.", "The cat, which loved salmon grew plump.", "The cat which, loved salmon grew plump."] },
+    { "gp": "gp5", "stem": "下面哪一句 however 的标点用得正确?", "stem_cn": "插入语 however 两边都要有逗号。", "options": ["The bill, however, was enormous.", "The bill however, was enormous.", "The, bill however was enormous.", "The bill however was, enormous."] },
+    { "gp": "gp6", "stem": "\"A person who has a lot of money is ___.\"(“富有的”用哪个词)", "stem_cn": "很有钱的人是富有的。", "options": ["wealthy", "hungry", "sleepy", "angry"] },
+    { "gp": "gp6", "stem": "\"To take money out of your bank account is to ___ it.\"(“取(钱)”用哪个词)", "stem_cn": "从银行账户里取钱。", "options": ["withdraw", "borrow", "count", "lose"] },
+    { "gp": "gp6", "stem": "\"Arriving exactly on time is arriving ___.\"(“准时地”用哪个词)", "stem_cn": "恰好按时到达。", "options": ["punctually", "slowly", "quietly", "rarely"] }
+  ],
+  "stage6": [
+    { "stem": "wealthy 的意思是:", "options": ["富有的", "贫穷的", "年轻的", "健康的"] },
+    { "stem": "orderly 的意思是:", "options": ["有规律的,井井有条的", "混乱的", "危险的", "吵闹的"] },
+    { "stem": "disappearance 的意思是:", "options": ["失踪,消失", "到达", "出生", "庆祝"] },
+    { "stem": "withdraw 的意思是:", "options": ["(从银行)取钱", "存入", "借出", "花光"] },
+    { "stem": "punctually 的意思是:", "options": ["准时地", "迟到地", "缓慢地", "偶然地"] },
+    { "stem": "astound 的意思是:", "options": ["使吃惊", "使无聊", "使安心", "使疲倦"] }
+  ],
+  "contrast": [
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "the mail", "uk": "the post", "note_cn": "邮件;美语 the mail,英式 the post" },
+    { "us": "check", "uk": "cheque", "note_cn": "支票;美语 check,英式 cheque" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" }
+  ],
+  "chunks": [
+    { "us": "be in safe hands", "ipa": "/bi ɪn seɪf hændz/", "example1": "Rastus was in safe hands at the resort.", "example1_cn": "拉斯特斯在度假村受到妥善照料。", "example2": "Don't worry, the kids are in safe hands.", "example2_cn": "别担心,孩子们有人好好照看。" },
+    { "us": "change one's mind", "ipa": "/tʃeɪndʒ wʌnz maɪnd/", "example1": "She almost changed her mind about paying.", "example1_cn": "她差点改变主意不付钱了。", "example2": "He changed his mind at the last minute.", "example2_cn": "他在最后一刻改了主意。" },
+    { "us": "in more ways than one", "ipa": "/ɪn mɔːr weɪz ðæn wʌn/", "example1": "The cat was dear in more ways than one.", "example1_cn": "这只猫“贵重”得不止一层意思。", "example2": "This trip helped me in more ways than one.", "example2_cn": "这趟旅行在不止一个方面帮到了我。" },
+    { "us": "pay a bill", "ipa": "/peɪ ə bɪl/", "example1": "She had to pay a huge bill to get him back.", "example1_cn": "她得付一大笔账单才能把它接回来。", "example2": "Remember to pay the electricity bill.", "example2_cn": "记得付电费账单。" }
+  ],
+  "stage7_cloze": {
+    "context": "Mrs. Ramsay ___1___ her apartment with Rastus for years. One evening the cat ___2___ to come home. Three days later she learned that he ___3___ into a luxury pet resort. She ___4___ the money from her bank and happily paid the bill.",
+    "blanks": [
+      { "blank_no": 1, "options": ["had shared", "shares", "is sharing", "share"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["failed", "fails", "has failed", "failing"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["had wandered", "wanders", "is wandering", "wander"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["withdrew", "withdraws", "is withdrawing", "withdraw"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did Mrs. Ramsay grow worried one evening?", "options": ["Rastus did not come home by seven", "It suddenly started to rain", "Her phone kept ringing", "A stranger knocked at the door"] },
+    { "stem": "Where had Rastus actually been for three days?", "options": ["At a luxury pet resort", "Lost in the woods", "Locked in a shed", "At the vet's office"] },
+    { "stem": "Why was the cat 'dear in more ways than one'?", "options": ["He was both loved and very costly", "He was old and slow", "He was rare and famous", "He was heavy and large"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"她多年来一直和这只猫合住\"(过去完成 had shared):", "options": ["She had shared her home with the cat for many years.", "She had share her home with the cat for many years.", "She has shared her home with the cat many years ago.", "She was shared her home with the cat for many years."] },
+    { "stem": "你想说\"拉姆齐太太,一位有钱的老太太,爱她的猫\"(同位语用逗号隔开):", "options": ["Mrs. Ramsay, a wealthy old lady, loved her cat.", "Mrs. Ramsay a wealthy old lady, loved her cat.", "Mrs. Ramsay, a wealthy old lady loved her cat.", "Mrs. Ramsay a wealthy old lady loved her cat."] },
+    { "stem": "你想说\"然而,那张账单大得吓人\"(插入语 however 用逗号隔开):", "options": ["The bill, however, was enormous.", "The bill however, was enormous.", "The bill however was enormous.", "The, bill however was enormous."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "wealthy 的意思是:", "options": ["富有的", "贫穷的", "年轻的", "健康的"] },
+    { "kind": "vocab", "stem": "withdraw 的意思是:", "options": ["(从银行)取钱", "存入", "借出", "花光"] },
+    { "kind": "grammar", "stem": "\"Mrs. Ramsay ___ her apartment with the cat for years.\"(过去完成)", "stem_cn": "拉姆齐太太多年来一直和这只猫合住。", "options": ["had shared", "shares", "is sharing", "share"] },
+    { "kind": "grammar", "stem": "\"Her friends ___ when they heard the story.\"(一般过去:“感到震惊”)", "stem_cn": "朋友们听了这故事都惊呆了。", "options": ["were astounded", "are astounded", "astound", "astounding"] },
+    { "kind": "scenario", "stem": "\"be in safe hands\" 的意思是:", "options": ["在可靠的人那里(得到妥善照料)", "手受了伤", "空手而归", "亲手去做"] },
+    { "kind": "scenario", "stem": "\"in more ways than one\" 的意思是:", "options": ["在不止一个方面", "只有一种办法", "走另一条路", "再也不去了"] },
+    { "kind": "reading", "stem": "How long was Rastus missing?", "options": ["Three days", "One day", "A whole week", "About a month"], "passage": true },
+    { "kind": "reading", "stem": "How did Mrs. Ramsay feel about Rastus?", "options": ["He was very dear to her", "She wanted to give him away", "She was afraid of him", "She had forgotten him"], "passage": true },
+    { "kind": "listening", "stem": "What did the note from the resort say about Rastus?", "options": ["He was in safe hands", "He was very sick", "He had run away again", "He was never there"], "audio": true },
+    { "kind": "listening", "stem": "How did Rastus look when he came home?", "options": ["Plump and pleased with himself", "Thin and frightened", "Wet and cold", "Hurt and limping"], "audio": true }
+  ]
+}

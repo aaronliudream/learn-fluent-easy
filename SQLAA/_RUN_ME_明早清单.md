@@ -6,7 +6,18 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
-## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1–U6 六单元收官 L1–L30**,累计 1320 题)
+## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1–U7 七单元收官 L1–L35**,累计 1540 题)
+
+## 📌 AM3 U7 收官(L31–L35 · `american_am3_seed_unit07.sql` · 220题=44×5,全🟢)
+> NCE3 复习阶段续:一课融合多个已学难点。以下逐课主考:
+- 🔴 **需跑** `american_am3_seed_unit07.sql`(全新文件,含 L31–L35 五课)。
+  - **L31《可爱的怪人》**(介词+动名词 without/instead of/interested in doing + 分词短语作状语 preferring/recognizing + pay attention to·take care of + 间接疑问句语序不倒装 + mind·insist on·imagine + 物主代词 + 动名词·富有怪人用三万枚硬币付账、又花四年伪造画展愚弄评论家)——44 题🟢全绿。无需净化。美式化:store/clerk/color/dollar。
+  - **L32《一艘沉船》**(过去完成进行时 had been searching + 过去完成被动 had been done/must have been 推测 + receive vs take + cloth·clothes·clothing + bring·take·fetch·打捞船找错沉船、靠航海日志拼出身世)——44 题🟢全绿。**净化**:去掉战时被潜艇鱼雷击沉/巡洋舰/护航/国防部/战争博物馆的战争外壳,改为船在风暴中沉没、由海事史学家证实、物件送海事博物馆;打捞侦探内核保留,舍弃 cruiser/convoy/torpedo/submarine/naval/ministry 六个战争词。
+  - **L33《难忘的一天》**(enough 位置 well enough/enough time/hot enough to do + 现在分词表伴随 smashing/sending + discover vs invent + beside vs besides + had to do vs should have done·连环倒霉:蛋糕飞出挡风玻璃引发连锁交通事故)——44 题🟢全绿。**轻净化+美式化**:啤酒瓶→汽水瓶、去掉宝宝划伤细节、故事移到芝加哥郊区;windshield/truck/student driver/soda。
+  - **L34《幸运的发现》**(时间从句用一般现在表将来 the moment he sees it + must be 两义 必须/一定是 + 冠词 a·an·the + notice vs remark + be about to do…when·古董店淘到微型名画的幸运发现)——44 题🟢全绿。**微净化+美式化**:carved dagger→carved figurine 去兵器;$50/neighborhood。
+  - **L35《伸张正义》**(间接引语 say/believe+that·ask+if + the moment/now that + 名词复数 -y 规则 元音+y→s·辅音+y→ies + 过去完成被动 had been done + 过去完成叙事 had done·企图行窃者卡在烟囱里被消防员救出的滑稽报应)——44 题🟢全绿。无实质净化(报应喜剧非暴力·无凶器);美式化 jewelry/fire department/firefighters/story(楼层)。
+- **U7 主线**:人物趣事与叙事综合——L31 动名词/分词 → L32 完成时态+词义辨析 → L33 分词+enough+词义辨析 → L34 冠词+时间从句+must → L35 间接引语+复数规则+过去完成。
+- 对账(U7 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **1540**(U1–U7 各 220)。
 
 ## 📌 AM3 U6 收官(L26–L30 · `american_am3_seed_unit06.sql` · 220题=44×5,全🟢)
 > NCE3 复习阶段续:一课融合多个已学难点。以下逐课主考:

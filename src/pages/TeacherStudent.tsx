@@ -31,11 +31,27 @@ type ModuleRow = {
   current_lesson: string | null;
 };
 type CountRow = { module: string; unresolved_count: number };
+type MistakeItem = {
+  no: number | null;
+  user_answer: string | null;
+  correct_answer?: string | null;
+  options?: Record<string, string | null>;
+  explanation?: string | null;
+};
 type Mistake = {
-  id: string; module: string; question: string;
-  user_answer: string | null; correct_answer: string | null;
-  explanation: string | null; source_label: string | null;
-  snapshot: unknown; wrong_count: number; last_wrong_at: string;
+  id: string;
+  kind: "plain" | "cloze" | "reading";
+  module: string;
+  title: string | null;
+  question: string | null;
+  user_answer: string | null;
+  correct_answer: string | null;
+  explanation: string | null;
+  snapshot: unknown;
+  items: MistakeItem[] | null;
+  wrong_count: number;
+  is_complete: boolean;
+  last_wrong_at: string;
 };
 
 const MODULE_META: Record<string, { label: string; emoji: string; tone: string }> = {
@@ -45,7 +61,13 @@ const MODULE_META: Record<string, { label: string; emoji: string; tone: string }
   american: { label: "新概念", emoji: "📘", tone: "from-fuchsia-500 to-pink-500" },
 };
 const MODULE_ORDER = ["primary", "junior", "senior", "american"];
-const moduleLabel = (m: string) => MODULE_META[m]?.label ?? m;
+// 错题分组标题:完形/阅读用中文,其余用板块名或原 module 值
+const MISTAKE_GROUP_LABEL: Record<string, string> = {
+  cloze: "完形填空", reading: "阅读理解",
+  gaokao_grammar: "语法", card_quiz: "知识卡", listening: "听力",
+  primary_lesson: "课程", primary_chat_quiz: "口语问答", ai_talk_target: "AI 对话",
+};
+const mistakeGroupLabel = (m: string) => MISTAKE_GROUP_LABEL[m] ?? MODULE_META[m]?.label ?? m;
 
 const rpc = supabase.rpc.bind(supabase) as (
   fn: string, args?: Record<string, unknown>,
@@ -300,7 +322,7 @@ export default function TeacherStudent() {
                     onClick={() => toggleModule(c.module)}
                     className="flex w-full items-center gap-2 px-4 py-3 text-left hover:bg-muted/40">
                     {open ? <ChevronDown className="size-4" /> : <ChevronRight className="size-4" />}
-                    <span className="font-bold"><T>{moduleLabel(c.module)}</T></span>
+                    <span className="font-bold"><T>{mistakeGroupLabel(c.module)}</T></span>
                     <span className="ml-1 rounded-full bg-rose-100 px-2 py-0.5 text-[11px] font-bold text-rose-700 dark:bg-rose-500/20 dark:text-rose-300">
                       {c.unresolved_count}
                     </span>
@@ -316,25 +338,66 @@ export default function TeacherStudent() {
                       ) : (
                         <ul className="space-y-3">
                           {rows.map((mk) => (
-                            <li key={mk.id} className="rounded-xl border border-border bg-background p-3">
-                              <div className="text-sm font-semibold">{mk.question}</div>
-                              <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
-                                <span className="text-rose-600 dark:text-rose-400">
-                                  <T>你的答案</T>:{mk.user_answer ?? "—"}
-                                </span>
-                                <span className="text-emerald-600 dark:text-emerald-400">
-                                  <T>正确</T>:{mk.correct_answer ?? "—"}
-                                </span>
-                                {mk.source_label && (
-                                  <span className="rounded bg-muted px-1.5 py-0.5 text-muted-foreground">{mk.source_label}</span>
-                                )}
-                                <span className="text-muted-foreground"><T>错</T> {mk.wrong_count} <T>次</T></span>
-                              </div>
-                              {mk.explanation && (
-                                <details className="mt-1.5">
-                                  <summary className="cursor-pointer text-[11px] text-primary"><T>解析</T></summary>
-                                  <div className="mt-1 text-xs text-muted-foreground">{mk.explanation}</div>
-                                </details>
+                            <li key={`${mk.kind}-${mk.id}`} className="rounded-xl border border-border bg-background p-3">
+                              {mk.kind === "plain" ? (
+                                <>
+                                  <div className="text-sm font-semibold">
+                                    {mk.question || <span className="italic text-muted-foreground"><T>（无题目快照）</T></span>}
+                                  </div>
+                                  <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
+                                    <span className="text-rose-600 dark:text-rose-400"><T>你的答案</T>:{mk.user_answer ?? "—"}</span>
+                                    <span className="text-emerald-600 dark:text-emerald-400"><T>正确</T>:{mk.correct_answer ?? "—"}</span>
+                                    {mk.title && <span className="rounded bg-muted px-1.5 py-0.5 text-muted-foreground">{mk.title}</span>}
+                                    <span className="text-muted-foreground"><T>错</T> {mk.wrong_count} <T>次</T></span>
+                                  </div>
+                                  {mk.explanation && (
+                                    <details className="mt-1.5">
+                                      <summary className="cursor-pointer text-[11px] text-primary"><T>解析</T></summary>
+                                      <div className="mt-1 text-xs text-muted-foreground">{mk.explanation}</div>
+                                    </details>
+                                  )}
+                                </>
+                              ) : (
+                                <>
+                                  {/* 完形/阅读:按篇;内容来自快照,不 join 题库 */}
+                                  <div className="flex flex-wrap items-center gap-2 text-sm font-semibold">
+                                    <span>{mk.title || (mk.kind === "cloze" ? t("完形一篇") : t("阅读一篇"))}</span>
+                                    <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[11px] font-bold text-rose-700 dark:bg-rose-500/20 dark:text-rose-300">
+                                      <T>错</T> {mk.wrong_count} {mk.kind === "cloze" ? <T>空</T> : <T>题</T>}
+                                    </span>
+                                  </div>
+                                  {mk.is_complete && mk.items ? (
+                                    <ul className="mt-2 space-y-2">
+                                      {mk.items.map((it, idx) => (
+                                        <li key={idx} className="rounded-lg bg-muted/40 p-2 text-xs">
+                                          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                                            <span className="font-semibold"><T>第</T> {it.no ?? idx + 1} {mk.kind === "cloze" ? <T>空</T> : <T>题</T>}</span>
+                                            <span className="text-rose-600 dark:text-rose-400">
+                                              <T>你选</T> {it.user_answer ?? "—"}{it.options && it.user_answer && it.options[it.user_answer] ? `. ${it.options[it.user_answer]}` : ""}
+                                            </span>
+                                            {it.correct_answer && (
+                                              <span className="text-emerald-600 dark:text-emerald-400">
+                                                <T>正确</T> {it.correct_answer}{it.options && it.options[it.correct_answer] ? `. ${it.options[it.correct_answer]}` : ""}
+                                              </span>
+                                            )}
+                                          </div>
+                                          {it.explanation && <div className="mt-1 text-muted-foreground">{it.explanation}</div>}
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  ) : (
+                                    <div className="mt-2 text-xs text-muted-foreground">
+                                      {mk.items && mk.items.length > 0 && (
+                                        <div className="flex flex-wrap gap-x-3 gap-y-1">
+                                          {mk.items.map((it, idx) => (
+                                            <span key={idx}><T>第</T> {it.no ?? idx + 1} <T>题</T>:<T>你选</T> {it.user_answer ?? "—"}</span>
+                                          ))}
+                                        </div>
+                                      )}
+                                      <div className="mt-1 italic"><T>（无完整题目快照,整篇原文将在"整篇下钻"支持)</T></div>
+                                    </div>
+                                  )}
+                                </>
                               )}
                             </li>
                           ))}

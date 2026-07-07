@@ -1,0 +1,133 @@
+{
+  "id": "am4_l5",
+  "unit_no": 1,
+  "lesson_no": 5,
+  "title_en": "Youth",
+  "title_cn": "青年",
+  "grammar_focus": "强调句(It is/was … that/who …)、as if/as though + were(与现在相反的虚拟)、would have done(与过去相反的虚拟)+ 被动不定式 to be done、动名词作主语/宾语、祈使句 let us + 方位介词对比(NCE4 无 KS 页,考点由课文结构自取;原创承载·论‘青年问题’实为长辈所造、青年是自由可爱的平等的人的随笔·题材无害;美语化 favorite/realize;第四册第5课)",
+  "scene": "人们总在谈论所谓的“青年问题”。倘若这样的问题真的存在——对此我斗胆表示怀疑——那么制造它的多半是老一辈,而不是年轻人自己。让我们回到根本上来,先承认这一点:年轻人归根结底也是人,和他们的长辈没什么两样。老年人和年轻人之间其实只有一个区别:年轻人前程似锦,而老年人辉煌已成往事——也许症结正在于此。我自己还是少年时,只觉得自己年轻、对一切都没把握;那时若有谁称我是个“问题”,我准会高兴——被看作这么有趣的东西,何乐而不为。说到底,当个“问题”反倒给人一种身份感,而身份正是年轻人一直在苦苦寻找的东西之一。我觉得年轻人很有意思。他们身上有一股自由的气息,不像我们背负着对蝇头小利或安逸生活那种沉闷的执念。他们不是焦虑的钻营者,也不迷恋物质。这一切在我看来把他们和生命、和万物的本源连在了一起;仿佛他们是宇宙的生灵,与我们这些乏味的郊区俗人形成鲜明可爱的对照。年轻人也许自负、无礼、甚至有点傻;可我并不躲进那些关于“敬老”的陈词滥调里去,好像光凭年纪大就该受人尊敬似的。我认定我们是平等的;倘若我认为一个年轻人错了,我会像对平辈那样和他争辩。",
+  "grammar_card": {
+    "title": "强调句 / as if + were / would have done + 被动不定式 / 动名词作主语",
+    "intro": "①强调句 It is/was + 被强调部分 + that/who + 其余;强调人可用 who。②as if/as though + were(be 一律用 were),表与现在相反的虚拟。③与过去相反的虚拟:would + have + 过去分词;被动不定式 to be + 过去分词。④动名词可作主语/宾语:Being a problem gives…;feel no devotion to…。⑤祈使句 Let us + 动词原形。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["强调句", "It is … that/who …", "It is older people who create it"],
+        ["as if + 虚拟", "as if + were / had done", "as if they were cosmic beings"],
+        ["与过去相反虚拟", "would + have + 过去分词", "I would have been pleased"],
+        ["动名词作主语", "Doing … + 谓语", "Being a problem gives identity"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "as if / as though 后表与现在相反的虚拟时,be 一律用 were(即使主语是单数)。", "mark": "as if they were / as if age were" },
+      { "rule": "被动不定式=to be + 过去分词:to be thought interesting、to be regarded as…。", "mark": "to be thought / to be regarded" },
+      { "rule": "美式拼写:favorite(最喜爱的,英式 favourite)、realize(意识到,英式 realise)。本课已按美语写。", "mark": "favorite / realize" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How does the writer like to treat young people?",
+    "options": ["As his equals", "As problems to be fixed", "As children to be guided", "With suspicion"],
+    "answer_index": 0
+  },
+  "passage": "People are forever talking about 'the problem of youth.' If such a problem exists at all — which I take leave to doubt — then it is surely the older generation that has created it, and not the young themselves. Let us get down to fundamentals and agree that the young are, after all, human beings, people very much like their elders. There is really only one difference between an old man and a young one: the young man has a glorious future before him, while the old man has a splendid future behind him — and perhaps that is where the rub lies. When I was a teenager myself, I felt only that I was young and unsure of everything; had anyone called me 'a problem,' I would have been delighted to be thought so interesting. Being a problem, after all, gives a person a certain identity, and identity is one of the things the young are forever searching for. I find young people exciting. They have an air of freedom, and they carry no dreary commitment to mean ambitions or to the love of comfort. They are not anxious social climbers, and they feel no devotion to material things. All this seems to link them with life, and with the very origins of things; it is as if they were cosmic beings, in vivid and lovely contrast with us dull suburban creatures. A young person may be conceited, ill-mannered, even foolish; but I do not turn for shelter to the tired cliches about respect for one's elders, as if age alone were any reason for respect. I take it that we are equals, and if I believe a young man is wrong, I will argue with him as an equal.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "People are forever talking about 'the problem of youth.' If such a problem exists at all — which I take leave to doubt — then it is surely the older generation that has created it, and not the young themselves. Let us get down to fundamentals and agree that the young are, after all, human beings, people very much like their elders.", "text_cn": "人们总在谈论所谓的“青年问题”。倘若这样的问题真的存在——对此我斗胆表示怀疑——那么制造它的多半是老一辈,而不是年轻人自己。让我们回到根本上来,先承认这一点:年轻人归根结底也是人,和他们的长辈没什么两样。" },
+    { "seq": 2, "speaker": null, "text_en": "There is really only one difference between an old man and a young one: the young man has a glorious future before him, while the old man has a splendid future behind him — and perhaps that is where the rub lies. When I was a teenager myself, I felt only that I was young and unsure of everything; had anyone called me 'a problem,' I would have been delighted to be thought so interesting.", "text_cn": "老年人和年轻人之间其实只有一个区别:年轻人前程似锦,而老年人辉煌已成往事——也许症结正在于此。我自己还是少年时,只觉得自己年轻、对一切都没把握;那时若有谁称我是个“问题”,我准会高兴——被看作这么有趣的东西,何乐而不为。" },
+    { "seq": 3, "speaker": null, "text_en": "Being a problem, after all, gives a person a certain identity, and identity is one of the things the young are forever searching for. I find young people exciting. They have an air of freedom, and they carry no dreary commitment to mean ambitions or to the love of comfort.", "text_cn": "说到底,当个“问题”反倒给人一种身份感,而身份正是年轻人一直在苦苦寻找的东西之一。我觉得年轻人很有意思。他们身上有一股自由的气息,不像我们背负着对蝇头小利或安逸生活那种沉闷的执念。" },
+    { "seq": 4, "speaker": null, "text_en": "They are not anxious social climbers, and they feel no devotion to material things. All this seems to link them with life, and with the very origins of things; it is as if they were cosmic beings, in vivid and lovely contrast with us dull suburban creatures.", "text_cn": "他们不是焦虑的钻营者,也不迷恋物质。这一切在我看来把他们和生命、和万物的本源连在了一起;仿佛他们是宇宙的生灵,与我们这些乏味的郊区俗人形成鲜明可爱的对照。" },
+    { "seq": 5, "speaker": null, "text_en": "A young person may be conceited, ill-mannered, even foolish; but I do not turn for shelter to the tired cliches about respect for one's elders, as if age alone were any reason for respect. I take it that we are equals, and if I believe a young man is wrong, I will argue with him as an equal.", "text_cn": "年轻人也许自负、无礼、甚至有点傻;可我并不躲进那些关于“敬老”的陈词滥调里去,好像光凭年纪大就该受人尊敬似的。我认定我们是平等的;倘若我认为一个年轻人错了,我会像对平辈那样和他争辩。" }
+  ],
+  "words": [
+    { "word": "fundamentals", "ipa": "/ˌfʌndəˈmentəlz/", "pos": "n", "meaning_cn": "基本原则,根本", "example": "get down to fundamentals" },
+    { "word": "glorious", "ipa": "/ˈɡlɔːriəs/", "pos": "adj", "meaning_cn": "光辉灿烂的", "example": "a glorious future before him" },
+    { "word": "splendid", "ipa": "/ˈsplendɪd/", "pos": "adj", "meaning_cn": "辉煌的,极好的", "example": "a splendid future behind him" },
+    { "word": "rub", "ipa": "/rʌb/", "pos": "n", "meaning_cn": "症结,难题", "example": "that is where the rub lies" },
+    { "word": "identity", "ipa": "/aɪˈdentəti/", "pos": "n", "meaning_cn": "身份,特性", "example": "gives a person a certain identity" },
+    { "word": "dreary", "ipa": "/ˈdrɪri/", "pos": "adj", "meaning_cn": "沉闷的,乏味的", "example": "no dreary commitment to mean ambitions" },
+    { "word": "commitment", "ipa": "/kəˈmɪtmənt/", "pos": "n", "meaning_cn": "信奉,执念", "example": "no dreary commitment" },
+    { "word": "devotion", "ipa": "/dɪˈvoʊʃən/", "pos": "n", "meaning_cn": "热爱,迷恋", "example": "no devotion to material things" },
+    { "word": "cosmic", "ipa": "/ˈkɑːzmɪk/", "pos": "adj", "meaning_cn": "宇宙的", "example": "as if they were cosmic beings" },
+    { "word": "conceited", "ipa": "/kənˈsiːtɪd/", "pos": "adj", "meaning_cn": "自负的", "example": "a young person may be conceited" },
+    { "word": "cliche", "ipa": "/kliːˈʃeɪ/", "pos": "n", "meaning_cn": "陈词滥调", "example": "the tired cliches about respect" },
+    { "word": "mean", "ipa": "/miːn/", "pos": "adj", "meaning_cn": "卑微的,吝啬的", "example": "mean ambitions" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "强调句(It is/was … that/who …)" },
+    { "gp": "gp2", "name": "as if/as though + were(与现在相反虚拟)" },
+    { "gp": "gp3", "name": "would have done(与过去相反虚拟)+ 被动不定式" },
+    { "gp": "gp4", "name": "动名词作主语/宾语" },
+    { "gp": "gp5", "name": "祈使句 let us + 方位介词对比 / 短语" },
+    { "gp": "gp6", "name": "词汇辨析(dreary/conceited/cliche)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"It is older people ___ create the so-called problem of youth.\"(强调句,被强调的是指人的 people,填相应的关系词)", "stem_cn": "正是长辈制造了所谓的青年问题。", "options": ["who", "which", "what", "whose"] },
+    { "gp": "gp1", "stem": "\"It ___ the older generation that created the problem, not the young.\"(强调句,一般过去,填 be 动词)", "stem_cn": "是老一辈制造了这个问题,而非年轻人。", "options": ["was", "is", "has", "did"] },
+    { "gp": "gp1", "stem": "\"It is identity ___ the young are always searching for.\"(强调句,被强调的是物 identity,填相应的关系词)", "stem_cn": "年轻人一直在寻找的正是身份认同。", "options": ["that", "who", "what", "whose"] },
+    { "gp": "gp2", "stem": "\"It is as if they ___ cosmic beings from another world.\"(as if + 与现在相反虚拟,be 动词用哪种形式)", "stem_cn": "仿佛他们是来自另一个世界的宇宙生灵。", "options": ["were", "was", "are", "be"] },
+    { "gp": "gp2", "stem": "\"He speaks as if age ___ a reason for respect.\"(as if + 虚拟,be 动词的虚拟形式)", "stem_cn": "他说得好像上了年纪就该受人尊敬似的。", "options": ["were", "is", "was", "being"] },
+    { "gp": "gp2", "stem": "\"They act as if they ___ nothing to fear.\"(as if + 虚拟,have 的过去式)", "stem_cn": "他们表现得仿佛无所畏惧。", "options": ["had", "have", "has", "having"] },
+    { "gp": "gp3", "stem": "\"Had anyone called me a problem, I ___ have been pleased.\"(与过去相反虚拟,主句填这个助动词 + have + 过去分词)", "stem_cn": "要是当年有人说我是个问题,我会很高兴。", "options": ["would", "will", "can", "must"] },
+    { "gp": "gp3", "stem": "\"I would have been delighted ___ be thought so interesting.\"(被动不定式(… be + 过去分词):填最前面的不定式符号)", "stem_cn": "被认为那么有趣,我会很高兴。", "options": ["to", "for", "of", "that"] },
+    { "gp": "gp3", "stem": "\"I would have been glad to ___ regarded as a problem.\"(被动不定式:to + ___ + 过去分词,填中间这个词)", "stem_cn": "被当成一个问题,我会很乐意。", "options": ["be", "being", "been", "was"] },
+    { "gp": "gp4", "stem": "\"___ a problem gives a person a certain identity.\"(动名词作主语,主动“成为…”)", "stem_cn": "成为一个问题,反倒给人一种身份。", "options": ["Being", "Been", "Be", "To being"] },
+    { "gp": "gp4", "stem": "\"The young feel no ___ to material things.\"(feel no ___ to sth:对…的迷恋/热爱,填名词)", "stem_cn": "年轻人对物质毫无迷恋。", "options": ["devotion", "devote", "devoted", "devoting"] },
+    { "gp": "gp4", "stem": "\"The young are not interested in ___ comfort above all.\"(介词 in 后用动名词,填 -ing 形式)", "stem_cn": "年轻人无意于把安逸看得高于一切。", "options": ["loving", "love", "loved", "to love"] },
+    { "gp": "gp5", "stem": "\"___ get down to fundamentals and agree on one thing.\"(祈使句“让我们…”,填句首这个动词)", "stem_cn": "让我们回到根本,先达成一点共识。", "options": ["Let", "Make", "Have", "Do"] },
+    { "gp": "gp5", "stem": "\"The young man has a glorious future ___ him, the old one behind him.\"(方位介词对比,填‘在…前面’)", "stem_cn": "年轻人前程似锦,老年人辉煌已成往事。", "options": ["before", "after", "behind", "under"] },
+    { "gp": "gp5", "stem": "\"I take ___ to doubt that such a problem exists at all.\"(take ___ to do:冒昧地做…,填名词)", "stem_cn": "我冒昧地怀疑,这样的问题是否真的存在。", "options": ["leave", "place", "part", "care"] },
+    { "gp": "gp6", "stem": "\"Dull, gloomy and boring means ___.\"(“沉闷的”用哪个词)", "stem_cn": "沉闷、乏味、令人厌倦的。", "options": ["dreary", "cheerful", "exciting", "bright"] },
+    { "gp": "gp6", "stem": "\"Too proud of oneself means ___.\"(“自负的”用哪个词)", "stem_cn": "过于自以为是的。", "options": ["conceited", "modest", "shy", "kind"] },
+    { "gp": "gp6", "stem": "\"An overused, unoriginal phrase is a ___.\"(“陈词滥调”用哪个词)", "stem_cn": "被用滥了、毫无新意的说法。", "options": ["cliche", "poem", "secret", "promise"] }
+  ],
+  "stage6": [
+    { "stem": "fundamentals 的意思是:", "options": ["基本原则,根本", "细节", "例外", "结论"] },
+    { "stem": "glorious 的意思是:", "options": ["光辉灿烂的", "平凡的", "黯淡的", "短暂的"] },
+    { "stem": "splendid 的意思是:", "options": ["辉煌的,极好的", "糟糕的", "普通的", "廉价的"] },
+    { "stem": "identity 的意思是:", "options": ["身份,特性", "秘密", "习惯", "职业"] },
+    { "stem": "commitment 的意思是:", "options": ["信奉,执念", "怀疑", "冷漠", "拒绝"] },
+    { "stem": "cosmic 的意思是:", "options": ["宇宙的", "地方的", "家庭的", "日常的"] }
+  ],
+  "contrast": [
+    { "us": "favorite", "uk": "favourite", "note_cn": "最喜爱的;拼写差异,美语 favorite" },
+    { "us": "neighbor", "uk": "neighbour", "note_cn": "邻居;拼写差异,美语 neighbor" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" },
+    { "us": "realize", "uk": "realise", "note_cn": "意识到;拼写差异,美语 realize" }
+  ],
+  "chunks": [
+    { "us": "get down to", "ipa": "/ɡet daʊn tə/", "example1": "Let us get down to fundamentals.", "example1_cn": "让我们回到根本上来。", "example2": "It's time to get down to business.", "example2_cn": "该认真办正事了。" },
+    { "us": "in contrast with", "ipa": "/ɪn ˈkɑːntræst wɪð/", "example1": "The young are in lovely contrast with us.", "example1_cn": "年轻人与我们形成可爱的对照。", "example2": "Her calm was in contrast with his panic.", "example2_cn": "她的镇定与他的慌乱形成对比。" },
+    { "us": "search for", "ipa": "/sɜːrtʃ fɔːr/", "example1": "Identity is what the young are searching for.", "example1_cn": "身份正是年轻人所追寻的。", "example2": "They searched for a better life.", "example2_cn": "他们追寻更好的生活。" },
+    { "us": "turn to", "ipa": "/tɜːrn tə/", "example1": "I do not turn to tired cliches for shelter.", "example1_cn": "我不躲进陈词滥调里去。", "example2": "She turned to her friend for advice.", "example2_cn": "她向朋友求教。" }
+  ],
+  "stage7_cloze": {
+    "context": "If a 'problem of youth' exists — which I doubt — it is the older people ___1___ create it, not the young. Let us ___2___ down to fundamentals: the young are people too. ___3___ a problem even gives one a new identity. It is as if they ___4___ beings from another world.",
+    "blanks": [
+      { "blank_no": 1, "options": ["who", "which", "what", "whose"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["get", "make", "take", "put"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["Being", "Been", "Be", "To being"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["were", "was", "are", "be"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How does the writer like to treat young people?", "options": ["As his equals, to be argued with if wrong", "As problems to be solved", "As children needing constant guidance", "With suspicion"] },
+    { "stem": "According to the writer, who really creates 'the problem of youth'?", "options": ["Older people, not the young themselves", "The young themselves", "Teachers", "The government"] },
+    { "stem": "Why does the writer find young people exciting?", "options": ["They have an air of freedom and no dreary commitments", "They always obey their elders", "They love comfort and money", "They are quiet and modest"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"正是长辈制造了所谓的青年问题\"(强调句):", "options": ["It is the older people who create the so-called problem of youth.", "It is the older people which create the so-called problem of youth.", "Is the older people who create the so-called problem of youth.", "It is the older people whom create the so-called problem of youth."] },
+    { "stem": "你想说\"仿佛他们是来自另一个世界的宇宙生灵\"(as if + 虚拟):", "options": ["It is as if they were cosmic beings from another world.", "It is as if they was cosmic beings from another world.", "It is as if they are cosmic beings from another world.", "It is as if they be cosmic beings from another world."] },
+    { "stem": "你想说\"要是当年有人说我是个问题,我会很高兴\"(与过去相反虚拟):", "options": ["If anyone had called me a problem, I would have been pleased.", "If anyone had called me a problem, I would be pleased.", "If anyone called me a problem, I would have been pleased.", "If anyone had called me a problem, I will have been pleased."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "identity 的意思是:", "options": ["身份,特性", "秘密", "习惯", "职业"] },
+    { "kind": "vocab", "stem": "dreary 的意思是:", "options": ["沉闷的,乏味的", "快乐的", "明亮的", "短暂的"] },
+    { "kind": "grammar", "stem": "\"It is older people ___ create the problem of youth.\"(强调句,强调指人)", "stem_cn": "正是长辈制造了青年问题。", "options": ["who", "which", "what", "whose"] },
+    { "kind": "grammar", "stem": "\"It is as if they ___ cosmic beings.\"(as if + 与现在相反虚拟)", "stem_cn": "仿佛他们是宇宙的生灵。", "options": ["were", "was", "are", "be"] },
+    { "kind": "scenario", "stem": "\"get down to\" 的意思是:", "options": ["认真着手(做)", "放下", "下车", "减少"] },
+    { "kind": "scenario", "stem": "\"in contrast with\" 的意思是:", "options": ["与…形成对比", "与…一致", "属于", "靠近"] },
+    { "kind": "reading", "stem": "What does the writer say is the only real difference between the old and the young?", "options": ["The young have their future ahead, the old have theirs behind", "The young are wiser", "The old are freer", "There is no difference at all"], "passage": true },
+    { "kind": "reading", "stem": "Why does the writer refuse to demand respect merely for his age?", "options": ["He treats the young as equals and will argue only on merit", "He dislikes young people", "He thinks age deserves no notice at all", "He is not old enough"], "passage": true },
+    { "kind": "listening", "stem": "How does the writer treat a young person he thinks is wrong?", "options": ["He argues with him as an equal", "He ignores him", "He punishes him", "He agrees to avoid conflict"], "audio": true },
+    { "kind": "listening", "stem": "What quality does the writer most admire in the young?", "options": ["Their air of freedom", "Their love of comfort", "Their ambition for money", "Their respect for elders"], "audio": true }
+  ]
+}

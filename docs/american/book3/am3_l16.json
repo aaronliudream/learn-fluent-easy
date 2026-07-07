@@ -1,0 +1,133 @@
+{
+  "id": "am3_l16",
+  "unit_no": 4,
+  "lesson_no": 16,
+  "title_en": "Mary Had a Little Lamb",
+  "title_cn": "玛丽有一头小羔羊",
+  "grammar_focus": "介词/动词 + 动名词(-ing)结构:accuse sb of doing(指控某人做)、deny doing(否认做)、be ashamed of doing(为做…羞愧)、apologize for doing(为做…道歉),对比 begin to rain(部分动词后接 to do),外加 had better (not) + 动词原形 表“最好(别)…”的忠告(原创承载 NCE3 L16 考点·美式改写:白羊被偷,丹错怪邻居后道歉,一场雨把染黑的羊毛冲白,真相大白)",
+  "scene": "玛丽和丈夫丹住在小镇外的一座小农场。玛丽最珍爱的,是丹送她的一只小白羊。白天她把它拴在草地的木桩上,每天傍晚去牵回来。可有天晚上,小羊不见了——拴绳被割断,显然是被偷了。丹从地里回来,玛丽把事情一说,他立刻出门查是谁干的,心想这么小的镇子不难查。四处打听后,他得知邻居厄尔忽然弄来了一只新羊。丹气冲冲地找上门,指控厄尔偷了羊,还警告他最好把羊还回来,否则就报警。厄尔矢口否认,把丹领进后院——他确实刚买了只羊,他说,可他那只是黑的。为错怪了老实人,丹羞愧不已,为自己妄下结论连声道歉。两人正说着,天下起雨来,丹在门廊下躲到雨停。半小时后他走到外面,惊呆了:那只黑羊竟变得几乎全白——原来羊毛是被染黑的,一场雨把它冲干净了!",
+  "grammar_card": {
+    "title": "动词/介词 + 动名词 + had better",
+    "intro": "①有些动词后面直接接 -ing 形式:deny taking(否认拿)、admit breaking(承认打碎)、enjoy doing。②“介词 + 动名词”很常见:accuse sb of stealing(指控偷)、be ashamed of doing(为…羞愧)、apologize for doing(为…道歉)——介词后面一律用 -ing。③注意有的动词后接 to do:begin to rain、want to go,别和上面混。④had better (not) + 动词原形,表示“最好(别)…”的忠告,语气比 should 强:You had better return it(你最好还回去)/ You had better not go(你最好别去)。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["accuse sb of doing", "指控某人做了…", "accused Earl of stealing it"],
+        ["deny doing / admit doing", "否认做 / 承认做", "denied taking it"],
+        ["be ashamed of / apologize for doing", "为做…羞愧 / 道歉", "ashamed of having accused him"],
+        ["had better (not) + 原形", "最好(别)…（忠告）", "You had better return it."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "介词(of / for / about …)后面接动词时,一律用 -ing 形式:apologize for jumping（✓）/ apologize for jump（✗）。", "mark": "介词 + doing" },
+      { "rule": "had better 后接动词原形(不带 to);否定是 had better not + 原形:You had better not go。别写成 had better to / had not better。", "mark": "had better (not) + 原形" },
+      { "rule": "美语里“后院”常说 backyard(英式 back garden),小镇执法者是 sheriff(警长);get 的过去分词美语用 gotten(英式 got)。", "mark": "backyard / sheriff / gotten" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did the black lamb turn white in the rain?",
+    "options": ["Its wool had been dyed black", "It was a magic lamb", "Someone swapped the lambs", "The rain had bleach in it"],
+    "answer_index": 0
+  },
+  "passage": "Mary and her husband Dan lived on a small farm just outside a quiet town. One of Mary's prize possessions was a little white lamb that Dan had given her. She kept it tied to a post in the meadow during the day and went to bring it in every evening. One evening, however, the lamb was gone. The rope had been cut, so it was obvious that the lamb had been stolen. When Dan came in from the fields, Mary told him what had happened. Dan set out at once to find out who had taken it, sure that in such a small town it would not be hard. After asking around, he learned that his neighbor, Earl, had suddenly gotten himself a new lamb. Dan marched over and accused Earl of stealing it, warning him that he had better return it or he would call the sheriff. Earl denied taking anything and led Dan into his backyard. It was true that he had just bought a lamb, he said, but his lamb was black. Ashamed of having accused an innocent man, Dan apologized for jumping to conclusions. While they were talking, it began to rain, and Dan waited under the porch until it stopped. When he stepped outside half an hour later, he was astonished: the little black lamb had turned almost white. Its wool, which had been dyed black, had been washed clean by the rain!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Mary and her husband Dan lived on a small farm just outside a quiet town. One of Mary's prize possessions was a little white lamb that Dan had given her. She kept it tied to a post in the meadow during the day and went to bring it in every evening.", "text_cn": "玛丽和丈夫丹住在小镇外的一座小农场。玛丽最珍爱的,是丹送她的一只小白羊。白天她把它拴在草地的木桩上,每天傍晚去牵回来。" },
+    { "seq": 2, "speaker": null, "text_en": "One evening, however, the lamb was gone. The rope had been cut, so it was obvious that the lamb had been stolen. When Dan came in from the fields, Mary told him what had happened. Dan set out at once to find out who had taken it, sure that in such a small town it would not be hard.", "text_cn": "可有天晚上,小羊不见了——拴绳被割断,显然是被偷了。丹从地里回来,玛丽把事情一说,他立刻出门查是谁干的,心想这么小的镇子不难查。" },
+    { "seq": 3, "speaker": null, "text_en": "After asking around, he learned that his neighbor, Earl, had suddenly gotten himself a new lamb. Dan marched over and accused Earl of stealing it, warning him that he had better return it or he would call the sheriff. Earl denied taking anything and led Dan into his backyard.", "text_cn": "四处打听后,他得知邻居厄尔忽然弄来了一只新羊。丹气冲冲地找上门,指控厄尔偷了羊,还警告他最好把羊还回来,否则就报警。厄尔矢口否认,把丹领进后院。" },
+    { "seq": 4, "speaker": null, "text_en": "It was true that he had just bought a lamb, he said, but his lamb was black. Ashamed of having accused an innocent man, Dan apologized for jumping to conclusions. While they were talking, it began to rain, and Dan waited under the porch until it stopped.", "text_cn": "他确实刚买了只羊,他说,可他那只是黑的。为错怪了老实人,丹羞愧不已,为自己妄下结论连声道歉。两人正说着,天下起雨来,丹在门廊下躲到雨停。" },
+    { "seq": 5, "speaker": null, "text_en": "When he stepped outside half an hour later, he was astonished: the little black lamb had turned almost white. Its wool, which had been dyed black, had been washed clean by the rain!", "text_cn": "半小时后他走到外面,惊呆了:那只黑羊竟变得几乎全白——原来羊毛是被染黑的,一场雨把它冲干净了!" }
+  ],
+  "words": [
+    { "word": "prize", "ipa": "/praɪz/", "pos": "adj", "meaning_cn": "珍贵的,宝贵的", "example": "her prize possession" },
+    { "word": "tie", "ipa": "/taɪ/", "pos": "v", "meaning_cn": "拴,系", "example": "tied to a post" },
+    { "word": "theft", "ipa": "/θeft/", "pos": "n", "meaning_cn": "偷盗行为,偷窃案", "example": "the theft of the lamb" },
+    { "word": "accuse", "ipa": "/əˈkjuːz/", "pos": "v", "meaning_cn": "指控,指责(accuse sb of doing)", "example": "accused Earl of stealing it" },
+    { "word": "deny", "ipa": "/dɪˈnaɪ/", "pos": "v", "meaning_cn": "否认(deny doing)", "example": "denied taking anything" },
+    { "word": "ashamed", "ipa": "/əˈʃeɪmd/", "pos": "adj", "meaning_cn": "感到羞耻的,惭愧的", "example": "ashamed of having accused him" },
+    { "word": "apologize", "ipa": "/əˈpɑːlədʒaɪz/", "pos": "v", "meaning_cn": "道歉(apologize for doing)", "example": "apologized for jumping to conclusions" },
+    { "word": "dye", "ipa": "/daɪ/", "pos": "v", "meaning_cn": "染(色)", "example": "wool that had been dyed black" },
+    { "word": "meadow", "ipa": "/ˈmedoʊ/", "pos": "n", "meaning_cn": "草地,牧场", "example": "tied in the meadow" },
+    { "word": "wool", "ipa": "/wʊl/", "pos": "n", "meaning_cn": "羊毛", "example": "its wool had been dyed" },
+    { "word": "obvious", "ipa": "/ˈɑːbviəs/", "pos": "adj", "meaning_cn": "显而易见的", "example": "it was obvious that…" },
+    { "word": "astonished", "ipa": "/əˈstɑːnɪʃt/", "pos": "adj", "meaning_cn": "十分惊讶的", "example": "he was astonished" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "accuse sb of doing(介词 of + 动名词)" },
+    { "gp": "gp2", "name": "deny/admit/enjoy + 动名词" },
+    { "gp": "gp3", "name": "ashamed of / apologize for + 动名词" },
+    { "gp": "gp4", "name": "had better + 动词原形(忠告)" },
+    { "gp": "gp5", "name": "had better not + 动词原形" },
+    { "gp": "gp6", "name": "词汇辨析(obvious/dye/theft)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Dan accused Earl ___ stealing the lamb.\"(accuse sb 后接哪个介词)", "stem_cn": "丹指控厄尔偷了羊。", "options": ["of", "for", "with", "about"] },
+    { "gp": "gp1", "stem": "\"The police suspected him ___ taking the money.\"(suspect sb 后接哪个介词)", "stem_cn": "警方怀疑他拿了钱。", "options": ["of", "for", "to", "with"] },
+    { "gp": "gp1", "stem": "\"He accused me of ___ his tools without asking.\"(accuse sb of 后接动词哪种形式)", "stem_cn": "他指责我没打招呼就拿了他的工具。", "options": ["borrowing", "borrow", "to borrow", "borrowed"] },
+    { "gp": "gp2", "stem": "\"Earl denied ___ the lamb.\"(deny 后接动词哪种形式)", "stem_cn": "厄尔否认拿过那只羊。", "options": ["taking", "to take", "take", "taken"] },
+    { "gp": "gp2", "stem": "\"The boy admitted ___ the window.\"(admit 后接动词哪种形式)", "stem_cn": "男孩承认打碎了窗户。", "options": ["breaking", "to break", "break", "broke"] },
+    { "gp": "gp2", "stem": "\"Mary enjoys ___ care of her little lamb.\"(enjoy 后接动词哪种形式)", "stem_cn": "玛丽喜欢照看她的小羊。", "options": ["taking", "to take", "take", "took"] },
+    { "gp": "gp3", "stem": "\"Dan was ashamed ___ having accused an innocent man.\"(be ashamed 后接哪个介词)", "stem_cn": "丹为错怪了好人而羞愧。", "options": ["of", "for", "to", "with"] },
+    { "gp": "gp3", "stem": "\"He apologized ___ jumping to conclusions.\"(apologize 后接哪个介词)", "stem_cn": "他为妄下结论而道歉。", "options": ["for", "of", "to", "in"] },
+    { "gp": "gp3", "stem": "\"She apologized for ___ so rude to her neighbor.\"(apologize for 后接动词哪种形式)", "stem_cn": "她为对邻居那么无礼而道歉。", "options": ["being", "to be", "be", "been"] },
+    { "gp": "gp4", "stem": "\"You ___ return the lamb, or I'll call the sheriff.\"(表示“最好…”的忠告)", "stem_cn": "你最好把羊还回来,不然我就报警。", "options": ["had better", "would better", "had to better", "better had"] },
+    { "gp": "gp4", "stem": "\"It's getting late — we ___ leave now.\"(表示“最好…”的忠告)", "stem_cn": "天晚了,我们最好现在走。", "options": ["had better", "would rather better", "had best to", "better to"] },
+    { "gp": "gp4", "stem": "\"You had better ___ the sheriff about the theft.\"(had better 后接动词哪种形式)", "stem_cn": "你最好把偷窃的事告诉警长。", "options": ["tell", "to tell", "telling", "told"] },
+    { "gp": "gp5", "stem": "\"You ___ accuse people without any proof.\"(表示“最好别…”)", "stem_cn": "没有证据,你最好别指控别人。", "options": ["had better not", "had not better", "better not had", "would not better"] },
+    { "gp": "gp5", "stem": "\"We had better not ___ out in this storm.\"(had better not 后接动词哪种形式)", "stem_cn": "这么大的暴风雨,我们最好别出门。", "options": ["go", "to go", "going", "went"] },
+    { "gp": "gp5", "stem": "\"You'd better ___ him now; he's still angry.\"(表示“最好别…”)", "stem_cn": "你最好现在别给他打电话,他还在气头上。", "options": ["not call", "not to call", "don't call", "no call"] },
+    { "gp": "gp6", "stem": "\"Something that is easy to see or understand is ___.\"(“显而易见的”用哪个词)", "stem_cn": "一眼就能看明白的就是显而易见的。", "options": ["obvious", "secret", "invisible", "difficult"] },
+    { "gp": "gp6", "stem": "\"To color cloth or wool a new color is to ___ it.\"(“染色”用哪个词)", "stem_cn": "把布或羊毛染上新颜色就是这个词。", "options": ["dye", "wash", "fold", "tear"] },
+    { "gp": "gp6", "stem": "\"The act of stealing something is called ___.\"(“偷窃行为”用哪个词)", "stem_cn": "偷东西的行为叫作 theft。", "options": ["theft", "gift", "feast", "health"] }
+  ],
+  "stage6": [
+    { "stem": "prize 的意思是:", "options": ["珍贵的,宝贵的", "廉价的", "普通的", "破旧的"] },
+    { "stem": "theft 的意思是:", "options": ["偷盗行为", "礼物", "宴会", "旅行"] },
+    { "stem": "accuse 的意思是:", "options": ["指控,指责", "表扬", "原谅", "邀请"] },
+    { "stem": "deny 的意思是:", "options": ["否认", "承认", "证明", "相信"] },
+    { "stem": "ashamed 的意思是:", "options": ["感到羞耻的", "骄傲的", "高兴的", "放松的"] },
+    { "stem": "dye 的意思是:", "options": ["染(色)", "洗", "剪", "晒"] }
+  ],
+  "contrast": [
+    { "us": "backyard", "uk": "back garden", "note_cn": "后院;美语 backyard,英式 back garden" },
+    { "us": "sheriff", "uk": "police officer", "note_cn": "美国小镇的执法者常是 sheriff(警长);英式一般说 police officer" },
+    { "us": "store", "uk": "shop", "note_cn": "店铺;美语 store,英式 shop" },
+    { "us": "gotten", "uk": "got", "note_cn": "get 的过去分词;美语 gotten,英式 got" }
+  ],
+  "chunks": [
+    { "us": "accuse sb of doing", "ipa": "/əˈkjuːz əv/", "example1": "Dan accused Earl of stealing the lamb.", "example1_cn": "丹指控厄尔偷了羊。", "example2": "Don't accuse me of lying.", "example2_cn": "别指责我撒谎。" },
+    { "us": "had better", "ipa": "/hæd ˈbetər/", "example1": "You had better return it right now.", "example1_cn": "你最好现在就还回去。", "example2": "We'd better hurry, or we'll be late.", "example2_cn": "我们最好快点,不然要迟到了。" },
+    { "us": "apologize for doing", "ipa": "/əˈpɑːlədʒaɪz fɔːr/", "example1": "He apologized for accusing his neighbor.", "example1_cn": "他为错怪邻居而道歉。", "example2": "I apologize for being late.", "example2_cn": "我为迟到道歉。" },
+    { "us": "jump to conclusions", "ipa": "/dʒʌmp tə kənˈkluːʒnz/", "example1": "Dan jumped to conclusions too fast.", "example1_cn": "丹太快就妄下结论了。", "example2": "Don't jump to conclusions before you know the facts.", "example2_cn": "没弄清事实前别急着下结论。" }
+  ],
+  "stage7_cloze": {
+    "context": "When Mary's white lamb went missing, Dan accused his neighbor Earl ___1___ stealing it and said he ___2___ return it at once. But Earl denied ___3___ anything and showed Dan a black lamb. Ashamed of having accused an innocent man, Dan apologized ___4___ jumping to conclusions. Then the rain washed the black dye away, and the lamb turned white!",
+    "blanks": [
+      { "blank_no": 1, "options": ["of", "for", "with", "to"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["had better", "would better", "better had", "had to"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["taking", "to take", "take", "taken"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["for", "of", "to", "about"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How did Dan know the lamb had been stolen?", "options": ["The rope had been cut", "The gate was left open", "He saw the thief run away", "The lamb was calling out"] },
+    { "stem": "Why did Dan apologize to Earl?", "options": ["Earl's lamb was black, not white", "Earl was his oldest friend", "Earl looked very angry", "Earl offered him money"] },
+    { "stem": "What made the black lamb turn white?", "options": ["The rain washed off the dye", "Someone painted it white", "It was a different lamb", "The sun bleached its wool"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"丹指控厄尔偷了羊\"(accuse sb of doing):", "options": ["Dan accused Earl of stealing the lamb.", "Dan accused Earl for stealing the lamb.", "Dan accused Earl of steal the lamb.", "Dan accused Earl to steal the lamb."] },
+    { "stem": "你想说\"你最好把羊还回来\"(had better + 原形):", "options": ["You had better return the lamb.", "You had better to return the lamb.", "You would better return the lamb.", "You had best returning the lamb."] },
+    { "stem": "你想说\"他为错怪邻居而道歉\"(apologize for doing):", "options": ["He apologized for accusing his neighbor.", "He apologized for accuse his neighbor.", "He apologized to accusing his neighbor.", "He apologized of accusing his neighbor."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "accuse 的意思是:", "options": ["指控,指责", "表扬", "原谅", "邀请"] },
+    { "kind": "vocab", "stem": "dye 的意思是:", "options": ["染(色)", "洗", "剪", "晒"] },
+    { "kind": "grammar", "stem": "\"Dan accused Earl ___ stealing the lamb.\"(accuse sb 后接哪个介词)", "stem_cn": "丹指控厄尔偷了羊。", "options": ["of", "for", "with", "to"] },
+    { "kind": "grammar", "stem": "\"You ___ return it, or I'll call the sheriff.\"(表示“最好…”的忠告)", "stem_cn": "你最好还回去,不然我就报警。", "options": ["had better", "would better", "better had", "had to"] },
+    { "kind": "scenario", "stem": "\"accuse sb of doing\" 的意思是:", "options": ["指控某人做了某事", "感谢某人做某事", "请求某人做某事", "允许某人做某事"] },
+    { "kind": "scenario", "stem": "\"jump to conclusions\" 的意思是:", "options": ["匆忙下结论", "跳过难题", "得出正确答案", "提出问题"] },
+    { "kind": "reading", "stem": "Why was Dan sure he could find the thief?", "options": ["The town was very small", "He had seen the thief", "The police helped him", "The lamb left clear tracks"], "passage": true },
+    { "kind": "reading", "stem": "What was strange about the lamb after the rain?", "options": ["It had turned almost white", "It had run away again", "It had grown much bigger", "It had changed owners"], "passage": true },
+    { "kind": "listening", "stem": "What had Earl done to the stolen lamb?", "options": ["He had dyed its wool black", "He had sold it to a farmer", "He had hidden it in a barn", "He had shaved off its wool"], "audio": true },
+    { "kind": "listening", "stem": "Where did Dan wait while it rained?", "options": ["Under Earl's porch", "In the meadow", "At the store", "In his own house"], "audio": true }
+  ]
+}

@@ -6,7 +6,18 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
-## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **U1–U11 十一单元收官 L1–L55**,累计 2420 题)
+## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **★★★全 12 单元 60 课收官 L1–L60**,累计 2640 题·第三册整本完成)
+
+## 📌 AM3 U12 收官(L56–L60 · `american_am3_seed_unit12.sql` · 220题=44×5,全🟢)· ★★★第三册收官单元
+> NCE3 Unit 3 后半:田园/怀旧/生活散文,全部无害正常读、无净化。逐课主考:
+- 🔴 **需跑** `american_am3_seed_unit12.sql`(全新文件,含 L56–L60 五课)。
+  - **L56《河流,我们的邻居》**(虚拟语气综合·与现在相反 without/if+过去式/could + 与过去相反 if+had done/would have done + must have done + 现在分词状语/定语·河边农场四季庆典与洪水木筏救邻居)——44 题🟢。美式化 neighbor/favorite/fall。
+  - **L57《重返故里》**(过去完成时含被动 had been done + had expected/meant to do 过去想做未成 + must have done + as if + 过去完成·返乡寻旧村发现故乡沉入人造水库)——44 题🟢。**丧亲背景淡化为温和思乡**,无暴力。美式化 odometer/gas/tire。
+  - **L58《一点儿小麻烦》**(独立主格 + 现在分词方式状语 + it 形式主语 + 情态完成式 must have/should have done·老太太回家撞见公寓被洗劫报警找楼管)——44 题🟢。**盗窃已成过去、盗贼已逃、无对峙无暴力**,英式冷幽默保留。美式化 apartment/elevator/jewelry/master key。
+  - **L59《收藏》**(定语从句限定/非限定 + 同位语从句 the belief/chances that + 原因/让步状语从句 as/since/whatever + if 虚拟·论收藏杂物与作为爱好的益处)——44 题🟢。健康议论文。美式化 closet/catalog。
+  - **L60《太早和太晚》**(only 置于句首部分倒装 + 状语从句主谓省略 + as…as 同级比较 + 介词加关系代词 with whom/on which + could not have done·论守时与女孩错过只停装邮件的火车)——44 题🟢·**第三册收官课**。美式化 tire/schedule/baggage car。
+- **U12 主线**:河流邻居四季 → 重返故里 → 一点儿小麻烦 → 收藏 → 太早和太晚;考点覆盖虚拟综合/过去完成/独立主格/定语从句/同位语从句/only 倒装/介词+关系代词等收尾高阶结构。
+- 对账(U12 累计=第三册全本):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **2640**(U1–U12 各 220,60课全)。
 
 ## 📌 AM3 U11 收官(L51–L55 · `american_am3_seed_unit11.sql` · 220题=44×5,全🟢)
 > 科普/励志题材;L51 一处英名美化(Leon Bagrit→Leon Barrett),L53 轻软化(ill-treated→treated unfairly),L54/L55 用 Aaron 净化包(不读源PDF)。逐课主考:

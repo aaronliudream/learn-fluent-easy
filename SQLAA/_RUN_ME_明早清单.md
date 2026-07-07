@@ -6,7 +6,18 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
-## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1+U2+U3+U4 四单元收官 L1–L20**,累计 880 题)
+## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1–U5 五单元收官 L1–L25**,累计 1100 题)
+
+## 📌 AM3 U5 收官(L21–L25 · `american_am3_seed_unit05.sql` · 220题=44×5,全🟢)
+> NCE3 第二册(Unit 2,即 L21 起)多为**综合复习课**,一课融合前面多个难点。以下逐课主考:
+- 🔴 **需跑** `american_am3_seed_unit05.sql`(全新文件,含 L21–L25 五课)。
+  - **L21《Daniel Mendoza 丹尼尔·门多萨》**(not...until / rise vs raise / ago vs before / could vs was able to / 被动 by / 形容词+不定式·18世纪拳击宗师传记)——44 题🟢全绿。**适度淡化**:略去赤手拳击"可能致死"的血腥,突出"把蛮打变成讲技巧的运动"+"挥霍致穷"的理财警示;真实历史人物,同 L17/L20 事实传记处理。
+  - **L22《By Heart 熟记台词》**(so/such...that / would·used to / insist·suggest that + (should)原形 / managed to / present sth to sb·剧场趣事:两演员忘词、一张白纸互相救场)——44 题🟢全绿。无需净化(牢房是戏中布景)。美式化:jailer/theater。
+  - **L23《One Man's Meat... 各有所爱》**(条件句 if+过去时→would / since·for·ago / most·the most / as 多义 / 现在完成进行·谈饮食偏好+逃跑的花园蜗牛)——44 题🟢全绿。无需净化。美式化:french fries/eggplant。
+  - **L24《A Skeleton in the Closet 家丑》**(频率副词位置 / few·a few·little·a little / 形容词+介词 / make·let sb do / tell sb to do+引号·侦探小说家客房壁橱里的医学骨架 Sebastian)——44 题🟢全绿。**轻净化**:小说例子"毒死五任丈夫"→"年轻时偷跑去马戏团跳舞"的无害家丑;骨架是学医教具。美式化:a skeleton in the closet(英式 cupboard)。
+  - **L25《The Cutty Sark 卡蒂萨克号帆船》**(be used to do / used to do / be used to doing 三辨 + a great many·a great deal of + on·in 固定搭配 + have sth done + its·it's / too·very / win·beat·1872 运茶帆船竞赛因折舵失利)——44 题🟢全绿。无需净化,事实历史。
+- **U5 特点**:进入 NCE3 复习阶段,每课以一篇趣文/传记/事实文承载 5–8 个已学难点的综合复现。
+- 对账(U5 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **1100**(U1–U5 各 220)。
 
 ## 📌 AM3 U4 收官(L16–L20 · `american_am3_seed_unit04.sql` · 220题=44×5,全🟢)
 - 🔴 **需跑** `american_am3_seed_unit04.sql`(全新文件,含 L16–L20 五课)。

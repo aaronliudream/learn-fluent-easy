@@ -1,0 +1,133 @@
+{
+  "id": "am3_l23",
+  "unit_no": 5,
+  "lesson_no": 23,
+  "title_en": "One Man's Meat Is Another Man's Poison",
+  "title_cn": "各有所爱",
+  "grammar_focus": "条件句(if + 过去时 → 主句 would do,与现在相反;if + 过去完成 → would have done,与过去相反)、since / for / ago 表时间、most(大多数)/ the most(最…)/ most of、as 的多义(因为 / 当…时 / 像…一样)、现在完成进行时 has been doing、happen to(碰巧)(原创承载 NCE3 L23 考点·无需净化·谈饮食偏好因文化而异 + 收集的花园蜗牛在朋友家逃得满走廊都是的趣事)",
+  "scene": "在决定什么能吃、什么不能吃这件事上,人往往很不讲逻辑。比如你若在地中海一带长大,就会把章鱼当成美味,还理解不了别人为什么觉得它恶心;可反过来,一想到用动物油炸土豆,你的胃就要翻腾——尽管在世界许多地方,这早就是再普通不过的做法。朴素的事实是:我们大多数人从小被养成吃某些食物,便一辈子只认这些。世上没有哪种生物比普通的花园蜗牛招来更多褒贬了。用葡萄酒煮过,蜗牛在某些国家是难得的珍馐,也有人从很小起就把它当成食物。我的朋友罗伯特,自我认识他起就爱吃蜗牛。因为他住在大城市的公寓里,没有自家花园,多年来他一直央我从我的花园里替他捉蜗牛。有一天,一场大雨后,我碰巧正在外面散步,忽然看见几十只蜗牛正爬过我心爱的花草。一时冲动,我捉了好几打,装进纸袋,开车送去给罗伯特。他高兴极了。我把袋子放在门厅,两人聊了两个钟头。我早把蜗牛忘得一干二净,直到罗伯特非留我吃晚饭——主菜当然是蜗牛。等我们走回门厅,都愣住了:蜗牛全跑了出来,把整条走廊占得满满当当!打那以后,我再也没法用从前的眼光看蜗牛了。",
+  "grammar_card": {
+    "title": "条件句 / since-for-ago / most / as 多义 / 现在完成进行",
+    "intro": "①条件句:与现在相反,if + 过去时,主句 would do(If I lived here, I would…);与过去相反,if + 过去完成,主句 would have done。②for + 一段时间(for years);since + 起点(since childhood);ago 从现在往前数(three days ago)。③most = 大多数(most people / most of us);the most = 最…(the most delicious)。④as 有多义:because(因为)、when(当…时)、like(像…一样,as ... as)。⑤现在完成进行 has/have been doing 表示“一直做到现在”;happen to do 表示“碰巧”。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["if + 过去时, would do", "与现在相反的假设", "If I lived here, I would love it."],
+        ["for / since / ago", "一段时间 / 起点 / 距今", "for years / since childhood / days ago"],
+        ["most / the most", "大多数 / 最…", "most of us / the most delicious"],
+        ["as = because/when/like", "因为/当…时/像", "As he lives here… / as I walked…"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "for 后接“一段时间”,since 后接“起点”:for three years / since 2010。别混。", "mark": "for / since" },
+      { "rule": "most 直接跟名词表“大多数”(most people);表“我们中的大多数”用 most of us;the most 才是最高级“最…”。", "mark": "most / most of / the most" },
+      { "rule": "美式食物用词:french fries(英式 chips)、eggplant(英式 aubergine)、cookie(英式 biscuit)。本课已按美语写。", "mark": "french fries / eggplant" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What made the writer collect snails for his friend that particular day?",
+    "options": ["A heavy shower brought many snails onto his plants", "Robert paid him to do it", "It was Robert's birthday", "He wanted to eat them himself"],
+    "answer_index": 0
+  },
+  "passage": "People become quite illogical when they try to decide what may be eaten and what may not. If you grew up along the Mediterranean, for example, you would think of octopus as a great delicacy, and you would not be able to understand why others find it repulsive. On the other hand, your stomach might turn at the thought of frying potatoes in animal fat, though that has long been an ordinary practice in many parts of the world. The plain truth is that most of us are raised to eat certain foods, and we stick to them for the rest of our lives. No creature has drawn more praise and more abuse than the ordinary garden snail. Cooked in wine, snails are a great luxury in some countries, and there are people who, ever since their earliest years, have learned to think of them as food. My friend Robert has loved snails for as long as I have known him. As he lives in an apartment in a big city, he has no garden of his own, and for years he has been asking me to gather snails from mine. One day, after a heavy shower, I happened to be walking outside when I noticed dozens of snails crawling over my prize plants. On a sudden impulse, I collected several dozen, dropped them into a paper bag, and drove them over to Robert. He was delighted. I set the bag down in the hall, and we chatted for a couple of hours. I had completely forgotten the snails until Robert insisted I stay for dinner, snails, of course, being the main dish. When we walked back to the hall, we froze: the snails had escaped and taken over the entire hallway. I have never been able to look at a snail the same way since.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "People become quite illogical when they try to decide what may be eaten and what may not. If you grew up along the Mediterranean, for example, you would think of octopus as a great delicacy, and you would not be able to understand why others find it repulsive.", "text_cn": "在决定什么能吃、什么不能吃这件事上,人往往很不讲逻辑。比如你若在地中海一带长大,就会把章鱼当成美味,还理解不了别人为什么觉得它恶心。" },
+    { "seq": 2, "speaker": null, "text_en": "On the other hand, your stomach might turn at the thought of frying potatoes in animal fat, though that has long been an ordinary practice in many parts of the world. The plain truth is that most of us are raised to eat certain foods, and we stick to them for the rest of our lives.", "text_cn": "可反过来,一想到用动物油炸土豆,你的胃就要翻腾——尽管在世界许多地方,这早就是再普通不过的做法。朴素的事实是:我们大多数人从小被养成吃某些食物,便一辈子只认这些。" },
+    { "seq": 3, "speaker": null, "text_en": "No creature has drawn more praise and more abuse than the ordinary garden snail. Cooked in wine, snails are a great luxury in some countries, and there are people who, ever since their earliest years, have learned to think of them as food. My friend Robert has loved snails for as long as I have known him.", "text_cn": "世上没有哪种生物比普通的花园蜗牛招来更多褒贬了。用葡萄酒煮过,蜗牛在某些国家是难得的珍馐,也有人从很小起就把它当成食物。我的朋友罗伯特,自我认识他起就爱吃蜗牛。" },
+    { "seq": 4, "speaker": null, "text_en": "As he lives in an apartment in a big city, he has no garden of his own, and for years he has been asking me to gather snails from mine. One day, after a heavy shower, I happened to be walking outside when I noticed dozens of snails crawling over my prize plants. On a sudden impulse, I collected several dozen, dropped them into a paper bag, and drove them over to Robert.", "text_cn": "因为他住在大城市的公寓里,没有自家花园,多年来他一直央我从我的花园里替他捉蜗牛。有一天,一场大雨后,我碰巧正在外面散步,忽然看见几十只蜗牛正爬过我心爱的花草。一时冲动,我捉了好几打,装进纸袋,开车送去给罗伯特。" },
+    { "seq": 5, "speaker": null, "text_en": "He was delighted. I set the bag down in the hall, and we chatted for a couple of hours. I had completely forgotten the snails until Robert insisted I stay for dinner, snails, of course, being the main dish. When we walked back to the hall, we froze: the snails had escaped and taken over the entire hallway. I have never been able to look at a snail the same way since.", "text_cn": "他高兴极了。我把袋子放在门厅,两人聊了两个钟头。我早把蜗牛忘得一干二净,直到罗伯特非留我吃晚饭——主菜当然是蜗牛。等我们走回门厅,都愣住了:蜗牛全跑了出来,把整条走廊占得满满当当!打那以后,我再也没法用从前的眼光看蜗牛了。" }
+  ],
+  "words": [
+    { "word": "illogical", "ipa": "/ɪˈlɑːdʒɪkl/", "pos": "adj", "meaning_cn": "不合逻辑的", "example": "people become quite illogical" },
+    { "word": "delicacy", "ipa": "/ˈdelɪkəsi/", "pos": "n", "meaning_cn": "美味,佳肴", "example": "a great delicacy" },
+    { "word": "repulsive", "ipa": "/rɪˈpʌlsɪv/", "pos": "adj", "meaning_cn": "令人厌恶的", "example": "find it repulsive" },
+    { "word": "despise", "ipa": "/dɪˈspaɪz/", "pos": "v", "meaning_cn": "鄙视,看不起", "example": "snails are despised" },
+    { "word": "luxury", "ipa": "/ˈlʌkʃəri/", "pos": "n", "meaning_cn": "奢侈品,珍品", "example": "a great luxury" },
+    { "word": "associate", "ipa": "/əˈsoʊʃieɪt/", "pos": "v", "meaning_cn": "联想到,把…联系起来", "example": "associate snails with food" },
+    { "word": "appeal", "ipa": "/əˈpiːl/", "pos": "v", "meaning_cn": "引起兴致,有吸引力", "example": "the idea never appealed to me" },
+    { "word": "impulse", "ipa": "/ˈɪmpʌls/", "pos": "n", "meaning_cn": "冲动", "example": "on a sudden impulse" },
+    { "word": "dozen", "ipa": "/ˈdʌzn/", "pos": "n", "meaning_cn": "一打,十二个", "example": "several dozen snails" },
+    { "word": "fancy", "ipa": "/ˈfænsi/", "pos": "v", "meaning_cn": "喜爱,想要", "example": "I did not fancy the idea" },
+    { "word": "abuse", "ipa": "/əˈbjuːs/", "pos": "n", "meaning_cn": "辱骂,责骂", "example": "praise and abuse" },
+    { "word": "stroll", "ipa": "/stroʊl/", "pos": "n", "meaning_cn": "溜达,散步", "example": "taking a stroll" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "条件句 if + 过去时 → would do(与现在相反)" },
+    { "gp": "gp2", "name": "since / for / ago(时间)" },
+    { "gp": "gp3", "name": "most / the most / most of" },
+    { "gp": "gp4", "name": "as 的多义(因为/当…时/像)" },
+    { "gp": "gp5", "name": "现在完成进行 has been doing / happen to" },
+    { "gp": "gp6", "name": "词汇辨析(delicacy/repulsive/despise)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"If you grew up by the sea, you ___ eat octopus happily.\"(与现在相反的虚拟:if 从句用过去时,主句用哪种形式)", "stem_cn": "你要是在海边长大,就会乐意吃章鱼。", "options": ["would", "will", "would have", "are going to"] },
+    { "gp": "gp1", "stem": "\"If I ___ in the Mediterranean, I would love octopus.\"(与现在相反:if 从句用什么时态)", "stem_cn": "我要是住在地中海一带,就会爱吃章鱼。", "options": ["lived", "live", "had lived", "will live"] },
+    { "gp": "gp1", "stem": "\"If you had grown up there, you ___ octopus a treat.\"(与过去事实相反的虚拟)", "stem_cn": "你要是在那儿长大,当年就会把章鱼当美味。", "options": ["would have considered", "would consider", "considered", "will consider"] },
+    { "gp": "gp2", "stem": "\"Robert has loved snails ___ many years.\"(表“一段时间”用哪个)", "stem_cn": "罗伯特爱吃蜗牛很多年了。", "options": ["for", "since", "ago", "from"] },
+    { "gp": "gp2", "stem": "\"He has enjoyed snails ___ his earliest years.\"(表“从某时起”用哪个)", "stem_cn": "他从很小的时候起就爱吃蜗牛。", "options": ["since", "for", "ago", "until"] },
+    { "gp": "gp2", "stem": "\"I collected those snails a few days ___.\"(距今往前数用哪个)", "stem_cn": "那些蜗牛是我几天前收集的。", "options": ["ago", "since", "for", "before"] },
+    { "gp": "gp3", "stem": "\"___ of us are raised to eat certain foods.\"(表“我们中的大多数”)", "stem_cn": "我们大多数人从小被养成吃某些食物。", "options": ["Most", "The most", "Almost", "Much"] },
+    { "gp": "gp3", "stem": "\"This is ___ delicious dish on the whole menu.\"(最高级“最…”)", "stem_cn": "这是整张菜单上最好吃的一道菜。", "options": ["the most", "most", "more", "a most"] },
+    { "gp": "gp3", "stem": "\"___ people enjoy some foods that others dislike.\"(表“大多数人”,后接名词)", "stem_cn": "大多数人都爱吃一些别人不喜欢的食物。", "options": ["Most", "The most", "Almost", "Much"] },
+    { "gp": "gp4", "stem": "\"___ he lives in an apartment, Robert has no garden.\"(表“因为、由于”的连词)", "stem_cn": "因为住公寓,罗伯特没有自己的花园。", "options": ["As", "While", "Unless", "Although"] },
+    { "gp": "gp4", "stem": "\"I noticed the snails ___ I was walking in the garden.\"(表“当…的时候”的连词)", "stem_cn": "我在花园里走的时候注意到了那些蜗牛。", "options": ["as", "because", "so", "if"] },
+    { "gp": "gp4", "stem": "\"Cooked well, snails can be ___ tasty as fish.\"(“与…一样…”的比较结构,填相同的那个词)", "stem_cn": "做得好的话,蜗牛能像鱼一样美味。", "options": ["as", "so", "too", "very"] },
+    { "gp": "gp5", "stem": "\"For years Robert ___ me to collect snails.\"(现在完成进行:一直在做)", "stem_cn": "多年来罗伯特一直让我收集蜗牛。", "options": ["has been asking", "asks", "asked", "is asking"] },
+    { "gp": "gp5", "stem": "\"I ___ to be walking outside when I saw them.\"(“碰巧正在做某事”,过去)", "stem_cn": "我碰巧正在外面走,就看见了它们。", "options": ["happened", "happen", "happens", "happening"] },
+    { "gp": "gp5", "stem": "\"She ___ studying French for three years now.\"(现在完成进行时:一直…到现在)", "stem_cn": "到现在她已经学了三年法语了。", "options": ["has been", "has", "is", "had been"] },
+    { "gp": "gp6", "stem": "\"A rare and delicious food is a ___.\"(“美味佳肴”用哪个词)", "stem_cn": "稀有又好吃的食物。", "options": ["delicacy", "poison", "medicine", "tool"] },
+    { "gp": "gp6", "stem": "\"Something so unpleasant it makes you feel sick is ___.\"(“令人厌恶的”用哪个词)", "stem_cn": "难闻难看到让人反胃的。", "options": ["repulsive", "delicious", "gentle", "cheap"] },
+    { "gp": "gp6", "stem": "\"To look down on something with strong dislike is to ___ it.\"(“鄙视”用哪个词)", "stem_cn": "强烈厌恶、瞧不起某物。", "options": ["despise", "admire", "enjoy", "collect"] }
+  ],
+  "stage6": [
+    { "stem": "illogical 的意思是:", "options": ["不合逻辑的", "合理的", "礼貌的", "勇敢的"] },
+    { "stem": "delicacy 的意思是:", "options": ["美味,佳肴", "毒药", "工具", "家具"] },
+    { "stem": "repulsive 的意思是:", "options": ["令人厌恶的", "迷人的", "温暖的", "便宜的"] },
+    { "stem": "despise 的意思是:", "options": ["鄙视", "崇拜", "购买", "收集"] },
+    { "stem": "luxury 的意思是:", "options": ["奢侈品,珍品", "必需品", "垃圾", "工具"] },
+    { "stem": "impulse 的意思是:", "options": ["冲动", "计划", "习惯", "规则"] }
+  ],
+  "contrast": [
+    { "us": "french fries", "uk": "chips", "note_cn": "炸薯条;美语 french fries,英式 chips" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "eggplant", "uk": "aubergine", "note_cn": "茄子;美语 eggplant,英式 aubergine" },
+    { "us": "cookie", "uk": "biscuit", "note_cn": "饼干;美语 cookie,英式 biscuit" }
+  ],
+  "chunks": [
+    { "us": "one man's meat is another man's poison", "ipa": "/wʌn mænz miːt/", "example1": "Snails? One man's meat is another man's poison.", "example1_cn": "蜗牛?各人口味不同,萝卜青菜各有所爱。", "example2": "He loves jazz, she hates it — one man's meat is another man's poison.", "example2_cn": "他爱爵士乐,她讨厌——各有所爱罢了。" },
+    { "us": "stick to", "ipa": "/stɪk tə/", "example1": "We stick to the foods we grew up with.", "example1_cn": "我们只认从小吃惯的食物。", "example2": "Let's stick to the plan.", "example2_cn": "我们就按原计划来吧。" },
+    { "us": "on a sudden impulse", "ipa": "/ɑːn ə ˈsʌdn ˈɪmpʌls/", "example1": "On a sudden impulse, I collected the snails.", "example1_cn": "一时冲动,我把蜗牛收集了起来。", "example2": "On a sudden impulse, she bought a ticket.", "example2_cn": "一时冲动,她买了张票。" },
+    { "us": "take possession of", "ipa": "/teɪk pəˈzeʃn əv/", "example1": "The snails took possession of the hall.", "example1_cn": "蜗牛占领了整个门厅。", "example2": "The new owners took possession of the house.", "example2_cn": "新主人接管了这座房子。" }
+  ],
+  "stage7_cloze": {
+    "context": "People are quite illogical about food. If you grew up by the Mediterranean, you ___1___ love octopus. My friend Robert has loved snails ___2___ he was a child. ___3___ he lives in an apartment, he asked me to collect snails from my garden. One day I ___4___ to notice dozens of them after a heavy shower.",
+    "blanks": [
+      { "blank_no": 1, "options": ["would", "will", "would have", "are"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["since", "for", "ago", "until"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["As", "Unless", "Although", "While"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["happened", "happen", "happens", "happening"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "According to the writer, why do people eat the foods they eat?", "options": ["They were raised on them", "They read about them in books", "Doctors chose them", "They are always the cheapest"] },
+    { "stem": "Why can't Robert keep snails himself?", "options": ["He lives in an apartment with no garden", "He dislikes snails", "Snails are illegal there", "He has no money"] },
+    { "stem": "What happened to the snails at Robert's place?", "options": ["They escaped and took over the hall", "They were cooked at once", "They died in the bag", "They were given away"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我要是住在地中海一带,就会爱吃章鱼\"(与现在相反的虚拟):", "options": ["If I lived in the Mediterranean, I would love octopus.", "If I live in the Mediterranean, I would love octopus.", "If I lived in the Mediterranean, I will love octopus.", "If I had lived in the Mediterranean, I would love octopus."] },
+    { "stem": "你想说\"多年来他一直让我收集蜗牛\"(现在完成进行):", "options": ["For years he has been asking me to collect snails.", "For years he is asking me to collect snails.", "For years he has asked me to collect snails ago.", "For years he asking me to collect snails."] },
+    { "stem": "你想说\"因为住公寓,他没有花园\"(用表“因为”的连词开头):", "options": ["As he lives in an apartment, he has no garden.", "As he lives in an apartment, but he has no garden.", "As does he live in an apartment, he has no garden.", "As he lives in an apartment, so he has no garden."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "delicacy 的意思是:", "options": ["美味,佳肴", "毒药", "工具", "家具"] },
+    { "kind": "vocab", "stem": "repulsive 的意思是:", "options": ["令人厌恶的", "迷人的", "温暖的", "便宜的"] },
+    { "kind": "grammar", "stem": "\"If I ___ in the Mediterranean, I would love octopus.\"(与现在相反,if 从句用什么时态)", "stem_cn": "我要是住在地中海一带,就会爱吃章鱼。", "options": ["lived", "live", "had lived", "will live"] },
+    { "kind": "grammar", "stem": "\"Robert has loved snails ___ many years.\"(表一段时间用哪个)", "stem_cn": "罗伯特爱吃蜗牛很多年了。", "options": ["for", "since", "ago", "from"] },
+    { "kind": "scenario", "stem": "\"one man's meat is another man's poison\" 的意思是:", "options": ["各有所爱,萝卜青菜各有所爱", "吃肉会中毒", "大家口味都一样", "有毒的食物不能吃"] },
+    { "kind": "scenario", "stem": "\"on a sudden impulse\" 的意思是:", "options": ["一时冲动之下", "经过深思熟虑", "出于习惯", "按计划地"] },
+    { "kind": "reading", "stem": "How does the writer feel about eating snails himself?", "options": ["He does not fancy the idea", "He loves them", "He eats them daily", "He sells them"], "passage": true },
+    { "kind": "reading", "stem": "What is the main point of the first paragraph?", "options": ["Food likes and dislikes are learned, not logical", "Octopus is the best food", "Frying food is unhealthy", "Snails are dangerous"], "passage": true },
+    { "kind": "listening", "stem": "What was Robert going to serve for dinner?", "options": ["Snails", "Octopus", "Fried potatoes", "Fish"], "audio": true },
+    { "kind": "listening", "stem": "How did the writer react when he saw the escaped snails?", "options": ["He was dismayed", "He laughed happily", "He fainted", "He caught them all at once"], "audio": true }
+  ]
+}

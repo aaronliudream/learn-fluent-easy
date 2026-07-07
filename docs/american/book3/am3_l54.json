@@ -1,0 +1,133 @@
+{
+  "id": "am3_l54",
+  "unit_no": 11,
+  "lesson_no": 54,
+  "title_en": "Instinct or Cleverness?",
+  "title_cn": "是本能还是机智?",
+  "grammar_focus": "不定式作宾语(be determined/manage to do)、动名词作宾语(keep/stop/give up doing)、现在分词短语作状语(Watching …, Feeling …, using …)、过去分词短语作状语(Defeated …, Planted …)、让步 no matter how / though / even though(按 Aaron 净化包生产·措辞放缓·不读源PDF:昆虫自然散文——作者想保护桃树不被聪明的蚂蚁偷吃,无论筑多少屏障都被绕过,斗智失败反而钦佩蚂蚁;把原课“向昆虫开战”等好战措辞放缓成中性描述,幽默反思人对昆虫偏见的内核保留;美式化 yard/flashlight)",
+  "scene": "我们大多数人自幼被教得害怕昆虫,把它们当作宁可避开的害虫。我们拍打苍蝇、绕开蜘蛛、把蚂蚁从食物旁赶走。可是去年夏天,一队小小的蚂蚁却教会了我转而钦佩它们。我的桃树靠着一堵暖和、避风的墙生长,到了八月,已挂满了甘美熟透的果子。我特别为这棵树自豪,下决心要保护它不被那些排着长长的、耐心的队伍、顺树干往上爬的蚂蚁偷吃。看着它们往上爬,我决定在树的根部围一圈水做屏障,自信没有一只蚂蚁能过得来。自以为聪明,我坐下来准备享受胜利。可不到一个小时,蚂蚁们就用一片落叶当桥,渡过了水。我把落叶清走,却只见它们又去试另一片。无论我筑多少道屏障,它们总能设法越过。我甚至半夜打着手电筒出去,看见它们还在我的防线周围忙碌,在黑暗中耐心地干着。第二天一早,我本盼着它们已经放弃,却发现它们找到了一条崭新的路线:它们正顺着房子的外墙往上爬,再直接落到树叶上。我不断发现新的蚁群,也忍不住一直钦佩它们的耐心。被彻底打败、却又满心惊叹,我最终放弃了斗智,让它们分享果子。我至今仍在想:是纯粹的本能在指引它们,还是它们干脆就比我聪明?我懂得了:输给一只蚂蚁,没什么好羞愧的。一个如此渺小却从不放弃的小生灵,身上总有值得钦佩的地方。",
+  "grammar_card": {
+    "title": "不定式作宾语 / 动名词作宾语 / 现在分词作状语 / 过去分词作状语 / 让步 no matter how",
+    "intro": "①有些动词/结构后接不定式作宾语:be determined to do、manage to do、decide to do。②有些动词后接动名词作宾语:keep doing、stop doing、give up doing。③现在分词短语作状语,表主动伴随:Watching them climb, I …;using a leaf as a bridge。④过去分词短语作状语,表被动:Defeated but amazed, I …。⑤让步:no matter how(无论多么)、though / even though(虽然、尽管)。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["be determined / manage to do", "决心/设法做(不定式)", "I was determined to protect it"],
+        ["keep / stop / give up doing", "不断/停止/放弃做(动名词)", "I gave up trying to stop them"],
+        ["现在分词/过去分词作状语", "主动伴随 / 被动", "Watching …; Defeated …"],
+        ["no matter how / though", "无论多么 / 虽然", "No matter how many barriers I built"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "同一个“做某事”,在 be determined/manage/decide 后用不定式(to do),在 keep/stop/give up 后用动名词(doing),不能混。", "mark": "determined to do / give up doing" },
+      { "rule": "分词作状语时,主动/进行用现在分词(-ing),被动/完成用过去分词(-ed);逻辑主语要与主句一致。", "mark": "Watching … / Defeated …" },
+      { "rule": "美式:yard(英式 garden 指院子)、flashlight(英式 torch)。本课已按美语写。", "mark": "yard / flashlight" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Was the writer successful in protecting his peach tree? Why not?",
+    "options": ["No — the ants cleverly found new routes past every barrier he built", "Yes — the water barrier worked perfectly", "Yes — he sprayed the tree", "No — a storm destroyed the tree"],
+    "answer_index": 0
+  },
+  "passage": "Most of us are brought up to fear insects, seeing them as pests we would rather avoid. We swat at flies, step around spiders, and shoo ants away from our food. Yet last summer, a line of tiny ants taught me to admire them instead. My peach tree had grown against a warm, sheltered wall, and by August it was full of ripe, delicious fruit. I was especially proud of that tree, and I was determined to protect it from the ants that came marching up the trunk in a long, patient line. Watching them climb, I decided to build a small barrier of water around the base, certain that no ant could cross it. Feeling clever, I sat back to enjoy my victory. But within an hour, the ants had found a way across, using a fallen leaf as a bridge. I cleared the leaf away, only to watch them try another. No matter how many barriers I built, they always managed to get past. I even went out at midnight with a flashlight and saw them still swarming around my defenses, working patiently in the dark. Early the next morning, hoping to find that they had given up, I instead discovered a brand-new route: they were climbing the wall of the house and dropping straight onto the leaves. I kept finding new columns of ants every hour, and I could not stop admiring their patience. Defeated but amazed, I finally gave up trying to outwit them and let them share the fruit. I still wonder whether it was pure instinct that guided them, or whether they were simply cleverer than I was. Losing to an ant, I have learned, is nothing to be ashamed of. There is something to admire in a creature so small that never gives up.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Most of us are brought up to fear insects, seeing them as pests we would rather avoid. We swat at flies, step around spiders, and shoo ants away from our food. Yet last summer, a line of tiny ants taught me to admire them instead.", "text_cn": "我们大多数人自幼被教得害怕昆虫,把它们当作宁可避开的害虫。我们拍打苍蝇、绕开蜘蛛、把蚂蚁从食物旁赶走。可是去年夏天,一队小小的蚂蚁却教会了我转而钦佩它们。" },
+    { "seq": 2, "speaker": null, "text_en": "My peach tree had grown against a warm, sheltered wall, and by August it was full of ripe, delicious fruit. I was especially proud of that tree, and I was determined to protect it from the ants that came marching up the trunk in a long, patient line. Watching them climb, I decided to build a small barrier of water around the base, certain that no ant could cross it.", "text_cn": "我的桃树靠着一堵暖和、避风的墙生长,到了八月,已挂满了甘美熟透的果子。我特别为这棵树自豪,下决心要保护它不被那些排着长长的、耐心的队伍、顺树干往上爬的蚂蚁偷吃。看着它们往上爬,我决定在树的根部围一圈水做屏障,自信没有一只蚂蚁能过得来。" },
+    { "seq": 3, "speaker": null, "text_en": "Feeling clever, I sat back to enjoy my victory. But within an hour, the ants had found a way across, using a fallen leaf as a bridge. I cleared the leaf away, only to watch them try another. No matter how many barriers I built, they always managed to get past.", "text_cn": "自以为聪明,我坐下来准备享受胜利。可不到一个小时,蚂蚁们就用一片落叶当桥,渡过了水。我把落叶清走,却只见它们又去试另一片。无论我筑多少道屏障,它们总能设法越过。" },
+    { "seq": 4, "speaker": null, "text_en": "I even went out at midnight with a flashlight and saw them still swarming around my defenses, working patiently in the dark. Early the next morning, hoping to find that they had given up, I instead discovered a brand-new route: they were climbing the wall of the house and dropping straight onto the leaves.", "text_cn": "我甚至半夜打着手电筒出去,看见它们还在我的防线周围忙碌,在黑暗中耐心地干着。第二天一早,我本盼着它们已经放弃,却发现它们找到了一条崭新的路线:它们正顺着房子的外墙往上爬,再直接落到树叶上。" },
+    { "seq": 5, "speaker": null, "text_en": "I kept finding new columns of ants every hour, and I could not stop admiring their patience. Defeated but amazed, I finally gave up trying to outwit them and let them share the fruit. I still wonder whether it was pure instinct that guided them, or whether they were simply cleverer than I was. Losing to an ant, I have learned, is nothing to be ashamed of. There is something to admire in a creature so small that never gives up.", "text_cn": "我不断发现新的蚁群,也忍不住一直钦佩它们的耐心。被彻底打败、却又满心惊叹,我最终放弃了斗智,让它们分享果子。我至今仍在想:是纯粹的本能在指引它们,还是它们干脆就比我聪明?我懂得了:输给一只蚂蚁,没什么好羞愧的。一个如此渺小却从不放弃的小生灵,身上总有值得钦佩的地方。" }
+  ],
+  "words": [
+    { "word": "instinct", "ipa": "/ˈɪnstɪŋkt/", "pos": "n", "meaning_cn": "本能", "example": "was it pure instinct that guided them?" },
+    { "word": "cleverness", "ipa": "/ˈklevərnəs/", "pos": "n", "meaning_cn": "聪明,机智", "example": "instinct or cleverness?" },
+    { "word": "insect", "ipa": "/ˈɪnsekt/", "pos": "n", "meaning_cn": "昆虫", "example": "brought up to fear insects" },
+    { "word": "ant", "ipa": "/ænt/", "pos": "n", "meaning_cn": "蚂蚁", "example": "a line of tiny ants" },
+    { "word": "peach", "ipa": "/piːtʃ/", "pos": "n", "meaning_cn": "桃子", "example": "my peach tree" },
+    { "word": "protect", "ipa": "/prəˈtekt/", "pos": "v", "meaning_cn": "保护", "example": "determined to protect it" },
+    { "word": "amazed", "ipa": "/əˈmeɪzd/", "pos": "adj", "meaning_cn": "惊讶的", "example": "defeated but amazed" },
+    { "word": "march", "ipa": "/mɑːrtʃ/", "pos": "v", "meaning_cn": "列队行进", "example": "marching up the trunk" },
+    { "word": "barrier", "ipa": "/ˈbæriər/", "pos": "n", "meaning_cn": "屏障,障碍", "example": "a small barrier of water" },
+    { "word": "patient", "ipa": "/ˈpeɪʃənt/", "pos": "adj", "meaning_cn": "有耐心的", "example": "in a long, patient line" },
+    { "word": "admire", "ipa": "/ədˈmaɪr/", "pos": "v", "meaning_cn": "钦佩,赞赏", "example": "taught me to admire them" },
+    { "word": "defeat", "ipa": "/dɪˈfiːt/", "pos": "v", "meaning_cn": "击败,战胜", "example": "defeated but amazed" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "不定式作宾语(be determined / manage to do)" },
+    { "gp": "gp2", "name": "动名词作宾语(keep / stop / give up doing)" },
+    { "gp": "gp3", "name": "现在分词短语作状语(Watching …, using …)" },
+    { "gp": "gp4", "name": "过去分词短语作状语(Defeated …, Planted …)" },
+    { "gp": "gp5", "name": "让步 no matter how / though / even though" },
+    { "gp": "gp6", "name": "词汇辨析(instinct/barrier/admire)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"We are brought up ___ insects and see them as pests.\"(be brought up ___ do:被教养成…,填不定式)", "stem_cn": "我们自幼被教得害怕昆虫,把它们当害虫。", "options": ["to fear", "fearing", "fear", "feared"] },
+    { "gp": "gp1", "stem": "\"I was determined ___ my peach tree from the ants.\"(be determined ___ do:决心做)", "stem_cn": "我决心保护我的桃树不被蚂蚁侵害。", "options": ["to protect", "protecting", "protect", "protected"] },
+    { "gp": "gp1", "stem": "\"The ants always managed ___ past my barriers.\"(manage ___ do:设法做成)", "stem_cn": "蚂蚁总能设法越过我的屏障。", "options": ["to get", "getting", "get", "got"] },
+    { "gp": "gp2", "stem": "\"I kept ___ new columns of ants every hour.\"(keep ___ doing:不断做,填动名词)", "stem_cn": "我每小时都不断发现新的蚁群。", "options": ["finding", "to find", "find", "found"] },
+    { "gp": "gp2", "stem": "\"I could not stop ___ their patience.\"(can't stop ___ doing:忍不住一直做)", "stem_cn": "我忍不住一直钦佩它们的耐心。", "options": ["admiring", "to admire", "admire", "admired"] },
+    { "gp": "gp2", "stem": "\"I finally gave up ___ to outwit them.\"(give up ___ doing:放弃做)", "stem_cn": "我最终放弃了斗智的努力。", "options": ["trying", "to try", "try", "tried"] },
+    { "gp": "gp3", "stem": "\"___ them march up the trunk, I decided to act.\"(现在分词短语作状语:看着…)", "stem_cn": "看着它们爬上树干,我决定动手。", "options": ["Watching", "Watched", "Watch", "To watch"] },
+    { "gp": "gp3", "stem": "\"___ clever, I sat back to enjoy my victory.\"(现在分词短语作状语:自以为…)", "stem_cn": "自以为聪明,我坐下来享受胜利。", "options": ["Feeling", "Felt", "Feel", "To feel"] },
+    { "gp": "gp3", "stem": "\"The ants crossed the water, ___ a fallen leaf as a bridge.\"(现在分词表方式:用…)", "stem_cn": "蚂蚁用一片落叶当桥渡过了水。", "options": ["using", "used", "use", "to use"] },
+    { "gp": "gp4", "stem": "\"___ but amazed, I finally let them share the fruit.\"(过去分词短语作状语:被打败)", "stem_cn": "被打败却又惊叹,我最终让它们分享果实。", "options": ["Defeated", "Defeating", "Defeat", "To defeat"] },
+    { "gp": "gp4", "stem": "\"___ by their cleverness, I could only admire them.\"(过去分词短语作状语:被…折服)", "stem_cn": "被它们的聪明折服,我只能钦佩。", "options": ["Impressed", "Impressing", "Impress", "To impress"] },
+    { "gp": "gp4", "stem": "\"___ against a warm wall, the peach tree grew well.\"(过去分词短语作状语:被种在…)", "stem_cn": "种在暖墙边,桃树长得很好。", "options": ["Planted", "Planting", "Plant", "To plant"] },
+    { "gp": "gp5", "stem": "\"No matter ___ many barriers I built, the ants got past.\"(no matter ___:无论多少,填疑问词)", "stem_cn": "无论我筑多少屏障,蚂蚁都能过去。", "options": ["how", "what", "which", "that"] },
+    { "gp": "gp5", "stem": "\"___ I tried very hard, I could not stop them.\"(“虽然、尽管”,引导让步)", "stem_cn": "尽管我很努力,还是拦不住它们。", "options": ["Though", "Because", "Unless", "So"] },
+    { "gp": "gp5", "stem": "\"Even ___ the tape was sticky, the ants found a way.\"(even ___:即使,让步)", "stem_cn": "即使胶带很粘,蚂蚁也找到了办法。", "options": ["though", "if only", "so", "as"] },
+    { "gp": "gp6", "stem": "\"A natural feeling or behavior you are born with is ___.\"(“本能”用哪个词)", "stem_cn": "与生俱来的自然反应或行为。", "options": ["instinct", "habit", "plan", "choice"] },
+    { "gp": "gp6", "stem": "\"A wall or obstacle that blocks the way is a ___.\"(“屏障、障碍”用哪个词)", "stem_cn": "挡住去路的墙或障碍。", "options": ["barrier", "bridge", "path", "door"] },
+    { "gp": "gp6", "stem": "\"To respect and think highly of someone is to ___ them.\"(“钦佩”用哪个词)", "stem_cn": "敬重、看重某人。", "options": ["admire", "ignore", "blame", "fear"] }
+  ],
+  "stage6": [
+    { "stem": "instinct 的意思是:", "options": ["本能", "习惯", "计划", "选择"] },
+    { "stem": "cleverness 的意思是:", "options": ["聪明,机智", "愚蠢", "懒惰", "胆怯"] },
+    { "stem": "barrier 的意思是:", "options": ["屏障,障碍", "桥梁", "道路", "入口"] },
+    { "stem": "patient 的意思是:", "options": ["有耐心的", "急躁的", "粗心的", "胆小的"] },
+    { "stem": "admire 的意思是:", "options": ["钦佩,赞赏", "忽视", "责怪", "害怕"] },
+    { "stem": "defeat 的意思是:", "options": ["击败,战胜", "帮助", "邀请", "保护"] }
+  ],
+  "contrast": [
+    { "us": "yard", "uk": "garden", "note_cn": "院子;美语 yard,英式常用 garden" },
+    { "us": "flashlight", "uk": "torch", "note_cn": "手电筒;美语 flashlight,英式 torch" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" }
+  ],
+  "chunks": [
+    { "us": "bring up", "ipa": "/brɪŋ ʌp/", "example1": "We are brought up to fear insects.", "example1_cn": "我们自幼被教得害怕昆虫。", "example2": "She was brought up in the countryside.", "example2_cn": "她是在乡下长大的。" },
+    { "us": "give up", "ipa": "/ɡɪv ʌp/", "example1": "I gave up trying to stop them.", "example1_cn": "我放弃了阻止它们的努力。", "example2": "Don't give up so easily.", "example2_cn": "别这么轻易就放弃。" },
+    { "us": "no matter how", "ipa": "/noʊ ˈmætər haʊ/", "example1": "No matter how hard I tried, they won.", "example1_cn": "无论我多努力,它们都赢了。", "example2": "No matter how late it is, call me.", "example2_cn": "无论多晚,都给我打电话。" },
+    { "us": "be proud of", "ipa": "/bi praʊd əv/", "example1": "I was proud of my peach tree.", "example1_cn": "我为我的桃树感到自豪。", "example2": "She is proud of her work.", "example2_cn": "她为自己的工作感到自豪。" }
+  ],
+  "stage7_cloze": {
+    "context": "Most of us are brought up ___1___ insects and treat them as pests. But last summer, some clever ants taught me ___2___ them instead. I was determined to protect my peach tree, so ___3___ them climb the trunk, I built a barrier of water around it. No matter ___4___ many barriers I made, the ants always found a way past.",
+    "blanks": [
+      { "blank_no": 1, "options": ["to fear", "fearing", "fear", "feared"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["to admire", "admiring", "admire", "admired"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["watching", "watched", "watch", "to watch"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["how", "what", "which", "that"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Was the writer successful in protecting his peach tree?", "options": ["No — the ants outsmarted every barrier and found new routes", "Yes — the water barrier stopped them", "Yes — he sprayed the tree", "No — the tree died first"] },
+    { "stem": "What did the ants use to cross the barrier of water?", "options": ["A fallen leaf as a bridge", "A small stick", "A stone", "Nothing at all"] },
+    { "stem": "How did the writer feel about the ants in the end?", "options": ["Defeated but amazed, still admiring their cleverness", "Angry and disgusted", "Bored and indifferent", "Frightened"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我决心保护我的桃树\"(be determined to do):", "options": ["I was determined to protect my peach tree.", "I was determined protecting my peach tree.", "I was determined protect my peach tree.", "I was determined to protecting my peach tree."] },
+    { "stem": "你想说\"看着它们爬上树干,我决定动手\"(现在分词状语):", "options": ["Watching them climb the trunk, I decided to act.", "Watched them climb the trunk, I decided to act.", "Watch them climb the trunk, I decided to act.", "To watch them climb the trunk, I decided to act."] },
+    { "stem": "你想说\"无论我筑多少屏障,蚂蚁都能过去\"(no matter how):", "options": ["No matter how many barriers I built, the ants got past.", "No matter what many barriers I built, the ants got past.", "No matter how many barriers I built, the ants gets past.", "No matter many barriers how I built, the ants got past."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "instinct 的意思是:", "options": ["本能", "习惯", "计划", "选择"] },
+    { "kind": "vocab", "stem": "admire 的意思是:", "options": ["钦佩,赞赏", "忽视", "责怪", "害怕"] },
+    { "kind": "grammar", "stem": "\"I was determined ___ my peach tree from the ants.\"(be determined ___ do:决心做)", "stem_cn": "我决心保护我的桃树不被蚂蚁侵害。", "options": ["to protect", "protecting", "protect", "protected"] },
+    { "kind": "grammar", "stem": "\"___ them march up the trunk, I decided to act.\"(现在分词短语作状语:看着…)", "stem_cn": "看着它们爬上树干,我决定动手。", "options": ["Watching", "Watched", "Watch", "To watch"] },
+    { "kind": "scenario", "stem": "\"give up\" 的意思是:", "options": ["放弃", "举起", "加入", "分发"] },
+    { "kind": "scenario", "stem": "\"bring up\" 的意思是:", "options": ["养育、教养", "拆开", "忘记", "加速"] },
+    { "kind": "reading", "stem": "Why did the writer build a barrier of water around the peach tree?", "options": ["To stop the ants from reaching the fruit", "To water the tree", "To attract more insects", "To decorate the yard"], "passage": true },
+    { "kind": "reading", "stem": "How did the ants finally reach the leaves after the writer's midnight check?", "options": ["They climbed the wall of the house and dropped onto the leaves", "They dug under the barrier", "They flew over it", "They gave up completely"], "passage": true },
+    { "kind": "listening", "stem": "What did the writer conclude he could not be sure of?", "options": ["Whether it was instinct or cleverness that guided the ants", "Whether the tree would survive", "Whether the ants were dangerous", "How many ants there were"], "audio": true },
+    { "kind": "listening", "stem": "What lesson did the writer say he learned?", "options": ["Losing to an ant is nothing to be ashamed of", "Insects should always be feared", "Peach trees are not worth the trouble", "Water barriers never work"], "audio": true }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "am4_l21",
+  "unit_no": 4,
+  "lesson_no": 21,
+  "title_en": "The Star Who Made the Western",
+  "title_cn": "缔造西部片的明星",
+  "grammar_focus": "助动词 do/did/does 强调动词(myth and fact did meet)、过去分词作定语(a cowboy framed / the disinherited)、find/think it + 形容词 + to do、what 引导的名词从句、定语从句 who + 过去完成时(Men who had struggled…)(NCE4 无 KS 页,考点由课文结构自取;IP:源为卡尔·福尔曼《美德与快枪》,涉真实演员 William S. Hart/Gary Cooper/John Wayne,已按第四册铁律全换原创虚构明星 Wade Corliss、100% 原创行文,并避开原文‘攻击印第安人’等过时对立框架、聚焦好坏参半的局外人英雄与‘个体对抗逼近的文明’主题;无逐句改写;题材=早期西部片文化史·无害;美语化 movie/aluminum;第四册第21课)",
+  "scene": "在他那个年代,韦德·科利斯是早期西部片至高无上的明星——因为在他之后崛起的那些更圆熟、更出名的牛仔什么类型的片子都演,而科利斯只演西部片。整个默片年代,他无人能敌。正是科利斯最先塑造出西部片的基本套路,也正是科利斯设计了他在一部又一部影片里扮演的那个主角:好坏参半的人、无意间沦为逃犯的人、被冤枉陷害的老实牛仔、被恶毒流言弄得形迹可疑的警长——一句话,那个既与自己、又与身边严酷边疆为敌的孤独个体。与当时大多数片厂里的人不同,科利斯确实懂一点旧西部。他小时候就在那儿生活过,正是它已在消逝的那些年月;因此他的英雄牢牢扎根于他自己的记忆里,扎根于那片消失的边疆的历史与神话之中。尽管这个国家的过去,没有哪一段被比它更荒唐地浪漫化过,神话与事实却至少在一处确实相遇了:自由的个体,同一种步步进逼、要把一切规整起来的文明之间的冲突。那些一辈子都在同天气与荒野搏斗的人,被政客与银行家的新秩序弄得不知所措,又被栅栏、被成文的法律、被他们从未同意过的陌生禁忌层层围困。科利斯那好坏参半的人永远是个局外人,是被剥夺了产业的人之一;而如果一路上他偶尔越过了小镇画下的界线,早年的观众也觉得很容易理解、很容易原谅。他们坐在黑暗里想要的,是逃进一个更质朴的时代——而且更是想要一套可以依循的简单准则。我们至今仍想要它。",
+  "grammar_card": {
+    "title": "do/did 强调 / 过去分词作定语 / find it + 形容词 + to do / what 名词从句 / who + 过去完成",
+    "intro": "①助动词 do/did/does + 动词原形,强调该动作‘确实…’:myth and fact did meet。②过去分词作定语:a cowboy framed;the man disinherited。③find/think it + 形容词 + to do:found it easy to forgive。④what 引导名词从句:What they wanted was to escape。⑤定语从句 who + 过去完成:Men who had struggled … were bewildered。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["do/did 强调", "do/did/does + 动词原形", "myth and fact did meet"],
+        ["过去分词作定语", "名词 + 过去分词", "a cowboy wrongly framed"],
+        ["find it + 形 + to do", "find it + 形容词 + to do", "found it easy to forgive"],
+        ["what 名词从句", "What … + 谓语", "What they wanted was to escape"],
+        ["who + 过去完成", "who had + 过去分词", "Men who had struggled …"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "do/did/does 放在动词原形前,可加强语气,表示‘确实、的确’:did meet、do love。", "mark": "do/did + 动词原形" },
+      { "rule": "find/think + it(形式宾语)+ 形容词 + to do:真正的对象是后面的不定式。", "mark": "find it easy to do" },
+      { "rule": "美式拼写/用词:movie(电影,英式 film)、aluminum(铝,英式 aluminium)。本课已按美语写。", "mark": "movie / aluminum" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How did the star's childhood prepare him for his acting role in Western films?",
+    "options": ["He had lived in the old West as a boy, so his hero grew from real memories", "He trained at a famous acting school", "He read countless Western novels", "He grew up far from any frontier"],
+    "answer_index": 0
+  },
+  "passage": "Wade Corliss was, in his day, the supreme star of the early Western — for while the smoother, more famous cowboys who came after him appeared in every kind of picture, Corliss appeared in nothing but Westerns. Through the silent years he stood unchallenged. It was Corliss who first shaped the basic formula of the Western film, and it was Corliss who designed the protagonist he played in picture after picture: the good-bad man, the accidental outlaw, the honest cowboy wrongly framed, the sheriff turned suspect by vicious gossip — in short, the lone individual at war with himself and with the harsh frontier around him. Unlike most of the studio men of his time, Corliss actually knew something of the old West. He had lived in it as a boy, in the very years when it was already fading, and so his hero was rooted firmly in his own memories and in the history and mythology of a vanished frontier. And although no chapter of the national past has been more absurdly romanticized, myth and fact did meet in at least one place: the clash between the free individual and an encroaching, tidy civilization. Men who had spent their lives struggling against the weather and the wilderness were bewildered by the new order of politicians and bankers, and hemmed in by fences, by written laws, by alien taboos they had never agreed to. Corliss's good-bad man was forever an outsider, one of the disinherited; and if, along the way, he sometimes crossed the line the town had drawn, the early audiences found it easy to understand and to forgive. What they wanted, sitting in the dark, was to escape into a plainer time — and, more than that, they wanted a simple code to live by. We want it still.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Wade Corliss was, in his day, the supreme star of the early Western — for while the smoother, more famous cowboys who came after him appeared in every kind of picture, Corliss appeared in nothing but Westerns. Through the silent years he stood unchallenged.", "text_cn": "在他那个年代,韦德·科利斯是早期西部片至高无上的明星——因为在他之后崛起的那些更圆熟、更出名的牛仔什么类型的片子都演,而科利斯只演西部片。整个默片年代,他无人能敌。" },
+    { "seq": 2, "speaker": null, "text_en": "It was Corliss who first shaped the basic formula of the Western film, and it was Corliss who designed the protagonist he played in picture after picture: the good-bad man, the accidental outlaw, the honest cowboy wrongly framed, the sheriff turned suspect by vicious gossip — in short, the lone individual at war with himself and with the harsh frontier around him.", "text_cn": "正是科利斯最先塑造出西部片的基本套路,也正是科利斯设计了他在一部又一部影片里扮演的那个主角:好坏参半的人、无意间沦为逃犯的人、被冤枉陷害的老实牛仔、被恶毒流言弄得形迹可疑的警长——一句话,那个既与自己、又与身边严酷边疆为敌的孤独个体。" },
+    { "seq": 3, "speaker": null, "text_en": "Unlike most of the studio men of his time, Corliss actually knew something of the old West. He had lived in it as a boy, in the very years when it was already fading, and so his hero was rooted firmly in his own memories and in the history and mythology of a vanished frontier.", "text_cn": "与当时大多数片厂里的人不同,科利斯确实懂一点旧西部。他小时候就在那儿生活过,正是它已在消逝的那些年月;因此他的英雄牢牢扎根于他自己的记忆里,扎根于那片消失的边疆的历史与神话之中。" },
+    { "seq": 4, "speaker": null, "text_en": "And although no chapter of the national past has been more absurdly romanticized, myth and fact did meet in at least one place: the clash between the free individual and an encroaching, tidy civilization. Men who had spent their lives struggling against the weather and the wilderness were bewildered by the new order of politicians and bankers, and hemmed in by fences, by written laws, by alien taboos they had never agreed to.", "text_cn": "尽管这个国家的过去,没有哪一段被比它更荒唐地浪漫化过,神话与事实却至少在一处确实相遇了:自由的个体,同一种步步进逼、要把一切规整起来的文明之间的冲突。那些一辈子都在同天气与荒野搏斗的人,被政客与银行家的新秩序弄得不知所措,又被栅栏、被成文的法律、被他们从未同意过的陌生禁忌层层围困。" },
+    { "seq": 5, "speaker": null, "text_en": "Corliss's good-bad man was forever an outsider, one of the disinherited; and if, along the way, he sometimes crossed the line the town had drawn, the early audiences found it easy to understand and to forgive. What they wanted, sitting in the dark, was to escape into a plainer time — and, more than that, they wanted a simple code to live by. We want it still.", "text_cn": "科利斯那好坏参半的人永远是个局外人,是被剥夺了产业的人之一;而如果一路上他偶尔越过了小镇画下的界线,早年的观众也觉得很容易理解、很容易原谅。他们坐在黑暗里想要的,是逃进一个更质朴的时代——而且更是想要一套可以依循的简单准则。我们至今仍想要它。" }
+  ],
+  "words": [
+    { "word": "supreme", "ipa": "/suːˈpriːm/", "pos": "adj", "meaning_cn": "至高的,最高的", "example": "the supreme star of the early Western" },
+    { "word": "protagonist", "ipa": "/proʊˈtæɡənɪst/", "pos": "n", "meaning_cn": "主角,主人公", "example": "the protagonist he played in every film" },
+    { "word": "outlaw", "ipa": "/ˈaʊtlɔː/", "pos": "n", "meaning_cn": "逃犯,亡命之徒", "example": "the accidental outlaw" },
+    { "word": "framed", "ipa": "/freɪmd/", "pos": "adj", "meaning_cn": "被诬陷的,被冤枉的", "example": "the honest cowboy wrongly framed" },
+    { "word": "vicious", "ipa": "/ˈvɪʃəs/", "pos": "adj", "meaning_cn": "恶毒的,凶残的", "example": "made suspect by vicious gossip" },
+    { "word": "mythology", "ipa": "/mɪˈθɑːlədʒi/", "pos": "n", "meaning_cn": "神话(总称)", "example": "the history and mythology of the frontier" },
+    { "word": "vanished", "ipa": "/ˈvænɪʃt/", "pos": "adj", "meaning_cn": "已消失的", "example": "a vanished frontier" },
+    { "word": "absurdly", "ipa": "/əbˈsɜːrdli/", "pos": "adv", "meaning_cn": "荒唐地,可笑地", "example": "more absurdly romanticized" },
+    { "word": "encroaching", "ipa": "/ɪnˈkroʊtʃɪŋ/", "pos": "adj", "meaning_cn": "步步进逼的,侵占的", "example": "an encroaching, tidy civilization" },
+    { "word": "bewilder", "ipa": "/bɪˈwɪldər/", "pos": "v", "meaning_cn": "使迷惑,使不知所措", "example": "were bewildered by the new order" },
+    { "word": "alien", "ipa": "/ˈeɪliən/", "pos": "adj", "meaning_cn": "陌生的,格格不入的", "example": "alien taboos they had never agreed to" },
+    { "word": "taboo", "ipa": "/təˈbuː/", "pos": "n", "meaning_cn": "禁忌,忌讳", "example": "alien taboos" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "助动词 do/did/does 强调动词" },
+    { "gp": "gp2", "name": "过去分词作定语(framed/disinherited/vanished)" },
+    { "gp": "gp3", "name": "find/think it + 形容词 + to do" },
+    { "gp": "gp4", "name": "what 引导的名词从句" },
+    { "gp": "gp5", "name": "定语从句 who + 过去完成时" },
+    { "gp": "gp6", "name": "词汇辨析(protagonist/outlaw/supreme)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Myth and fact ___ meet in the Western hero's story.\"(用助动词强调动词‘确实相遇’,一般过去时,填这个助动词)", "stem_cn": "神话与事实在西部英雄的故事里确实相遇了。", "options": ["did", "was", "has", "done"] },
+    { "gp": "gp1", "stem": "\"He ___ know the old West, having lived there as a boy.\"(用助动词强调动词,一般过去,填助动词)", "stem_cn": "他确实了解旧西部,因为小时候在那儿住过。", "options": ["did", "was", "has", "done"] },
+    { "gp": "gp1", "stem": "\"Audiences ___ love that lonely hero even today.\"(用助动词强调动词,一般现在复数,填助动词)", "stem_cn": "观众如今确实仍爱那个孤独的英雄。", "options": ["do", "does", "did", "done"] },
+    { "gp": "gp2", "stem": "\"The honest cowboy wrongly ___ still won the crowd's heart.\"(过去分词作定语,‘被冤枉陷害的’;frame 的过去分词)", "stem_cn": "被冤枉陷害的老实牛仔仍赢得了观众的心。", "options": ["framed", "framing", "frame", "to frame"] },
+    { "gp": "gp2", "stem": "\"The man ___ from his land became a wanderer.\"(过去分词作定语,‘被剥夺继承权的’;disinherit 的过去分词)", "stem_cn": "被剥夺了土地的人成了流浪者。", "options": ["disinherited", "disinheriting", "disinherit", "to disinherit"] },
+    { "gp": "gp2", "stem": "\"The frontier, long ___, lives on in his films.\"(过去分词作定语,‘已消失的’;vanish 的过去分词)", "stem_cn": "早已消失的边疆,在他的影片里依然存续。", "options": ["vanished", "vanishing", "vanish", "to vanish"] },
+    { "gp": "gp3", "stem": "\"Audiences found ___ easy to forgive the good-bad man.\"(find + ___ + 形容词 + to do:填形式宾语)", "stem_cn": "观众觉得原谅这好坏参半的人很容易。", "options": ["it", "that", "this", "them"] },
+    { "gp": "gp3", "stem": "\"They found it ___ to escape into a simpler time.\"(find it + 形容词 + to do,填形容词)", "stem_cn": "他们觉得逃进一个更单纯的时代很惬意。", "options": ["pleasant", "pleasantly", "pleasure", "please"] },
+    { "gp": "gp3", "stem": "\"We still think it ___ to have a code to live by.\"(think it + 形容词 + to do,填形容词)", "stem_cn": "我们仍认为有一套准则可循很重要。", "options": ["important", "importantly", "importance", "impose"] },
+    { "gp": "gp4", "stem": "\"___ they wanted was to escape into a plainer time.\"(名词从句作主语,‘所…的’)", "stem_cn": "他们想要的,是逃进一个更质朴的时代。", "options": ["What", "That", "Which", "Whether"] },
+    { "gp": "gp4", "stem": "\"That hero was exactly ___ the audience longed for.\"(名词从句,‘所…的’)", "stem_cn": "那个英雄正是观众所渴望的。", "options": ["what", "that", "which", "how"] },
+    { "gp": "gp4", "stem": "\"___ makes the Western last is its simple moral code.\"(名词从句作主语,‘…的东西’)", "stem_cn": "让西部片长盛不衰的,是它简单的道德准则。", "options": ["What", "That", "Which", "Whether"] },
+    { "gp": "gp5", "stem": "\"Men ___ had struggled against the wild were bewildered.\"(定语从句,指人作主语,填关系词)", "stem_cn": "曾与荒野搏斗的人们感到困惑。", "options": ["who", "which", "what", "whose"] },
+    { "gp": "gp5", "stem": "\"The star ___ had lived in the West knew it well.\"(定语从句,指人作主语,填关系词)", "stem_cn": "曾在西部生活过的那位明星深知西部。", "options": ["who", "which", "what", "whom"] },
+    { "gp": "gp5", "stem": "\"People ___ had lost their old world clung to his films.\"(定语从句,指人作主语,填关系词)", "stem_cn": "失去了旧世界的人们紧紧抓住他的影片。", "options": ["who", "which", "what", "whose"] },
+    { "gp": "gp6", "stem": "\"A person who breaks the law and lives outside it is an ___.\"(“逃犯、亡命之徒”用哪个词)", "stem_cn": "触犯法律、逍遥法外的人。", "options": ["outlaw", "officer", "author", "artist"] },
+    { "gp": "gp6", "stem": "\"The main character in a film or story is the ___.\"(“主角、主人公”用哪个词)", "stem_cn": "影片或故事里的主要人物。", "options": ["protagonist", "audience", "author", "critic"] },
+    { "gp": "gp6", "stem": "\"Highest in rank, power, or quality means ___.\"(“至高的、最高的”用哪个词)", "stem_cn": "地位、权力或品质最高的。", "options": ["supreme", "common", "minor", "equal"] }
+  ],
+  "stage6": [
+    { "stem": "protagonist 的意思是:", "options": ["主角,主人公", "反派", "观众", "作者"] },
+    { "stem": "outlaw 的意思是:", "options": ["逃犯,亡命之徒", "警官", "律师", "法官"] },
+    { "stem": "mythology 的意思是:", "options": ["神话(总称)", "历史", "地理", "科学"] },
+    { "stem": "vicious 的意思是:", "options": ["恶毒的,凶残的", "善良的", "温和的", "诚实的"] },
+    { "stem": "bewilder 的意思是:", "options": ["使迷惑,使不知所措", "使高兴", "使平静", "使清醒"] },
+    { "stem": "taboo 的意思是:", "options": ["禁忌,忌讳", "习惯", "礼物", "假期"] }
+  ],
+  "contrast": [
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语常用 movie,英式常用 film" },
+    { "us": "aluminum", "uk": "aluminium", "note_cn": "铝;拼写/读音差异,美语 aluminum" },
+    { "us": "mom", "uk": "mum", "note_cn": "妈妈;美语 mom,英式 mum" },
+    { "us": "checkers", "uk": "draughts", "note_cn": "跳棋;美语 checkers,英式 draughts" }
+  ],
+  "chunks": [
+    { "us": "in conflict with", "ipa": "/ɪn ˈkɑːnflɪkt wɪð/", "example1": "The hero is in conflict with his world.", "example1_cn": "这英雄与他的世界相冲突。", "example2": "Her wishes were in conflict with his.", "example2_cn": "她的愿望与他的相冲突。" },
+    { "us": "rooted in", "ipa": "/ˈruːtɪd ɪn/", "example1": "His hero was rooted in real memories.", "example1_cn": "他的英雄扎根于真实的记忆。", "example2": "The custom is rooted in history.", "example2_cn": "这一习俗根植于历史。" },
+    { "us": "along the way", "ipa": "/əˈlɔːŋ ðə weɪ/", "example1": "He broke a few rules along the way.", "example1_cn": "一路上他打破了几条规矩。", "example2": "We learned a lot along the way.", "example2_cn": "一路走来我们学到很多。" },
+    { "us": "a code to live by", "ipa": "/ə koʊd tə lɪv baɪ/", "example1": "Audiences wanted a code to live by.", "example1_cn": "观众想要一套可以依循的准则。", "example2": "Everyone needs a code to live by.", "example2_cn": "人人都需要一套行为准则。" }
+  ],
+  "stage7_cloze": {
+    "context": "It was Corliss ___1___ created the Western formula. His hero was rooted ___2___ real memories. Men who ___3___ struggled against the wild were bewildered by the new order. ___4___ audiences wanted was a simple code to live by.",
+    "blanks": [
+      { "blank_no": 1, "options": ["who", "which", "what", "whose"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["in", "on", "at", "of"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["had", "have", "has", "was"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["What", "That", "Which", "Whether"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How did Corliss's childhood prepare him for his Western roles?", "options": ["He had lived in the old West as a boy, so his hero was rooted in real memories", "He studied acting in school", "He had read many books", "He grew up in a big city"] },
+    { "stem": "What kind of character did Corliss usually play?", "options": ["The good-bad man, an outsider at war with himself and the frontier", "A wealthy banker", "A cheerful town mayor", "A famous singer"] },
+    { "stem": "Why did early audiences forgive the good-bad man's faults?", "options": ["They found it easy to understand him and longed for a simpler time", "They never noticed his faults", "He was always rich", "He never broke any rule"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"神话与事实确实在他的故事里相遇了\"(do/did 强调):", "options": ["Myth and fact did meet in his story.", "Myth and fact did met in his story.", "Myth and fact does meet in his story.", "Myth and fact did meeting in his story."] },
+    { "stem": "你想说\"他们想要的,是逃进一个更质朴的时代\"(what 名词从句):", "options": ["What they wanted was to escape into a plainer time.", "That they wanted was to escape into a plainer time.", "What they wanted were to escape into a plainer time.", "What did they want was to escape into a plainer time."] },
+    { "stem": "你想说\"曾与荒野搏斗的人们感到困惑\"(who + 过去完成):", "options": ["Men who had struggled against the wild were bewildered.", "Men which had struggled against the wild were bewildered.", "Men who have struggled against the wild were bewildered.", "Men who had struggle against the wild were bewildered."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "protagonist 的意思是:", "options": ["主角,主人公", "反派", "观众", "作者"] },
+    { "kind": "vocab", "stem": "bewilder 的意思是:", "options": ["使迷惑,使不知所措", "使高兴", "使平静", "使清醒"] },
+    { "kind": "grammar", "stem": "\"Myth and fact ___ meet in his story.\"(用助动词强调动词,一般过去)", "stem_cn": "神话与事实确实在他的故事里相遇了。", "options": ["did", "was", "has", "done"] },
+    { "kind": "grammar", "stem": "\"___ they wanted was a simple code.\"(名词从句作全句开头)", "stem_cn": "他们想要的,是一套简单的准则。", "options": ["What", "That", "Which", "Whether"] },
+    { "kind": "scenario", "stem": "\"rooted in\" 的意思是:", "options": ["根植于、源自", "拔起", "漂浮于", "远离"] },
+    { "kind": "scenario", "stem": "\"a code to live by\" 的意思是:", "options": ["可遵循的行为准则", "一段密码", "一本书", "一条法律"] },
+    { "kind": "reading", "stem": "According to the passage, what made Corliss different from later stars?", "options": ["He appeared in nothing but Westerns and had truly known the old West", "He was much richer", "He directed his own films", "He never rode a horse"], "passage": true },
+    { "kind": "reading", "stem": "What was Corliss's good-bad man always?", "options": ["An outsider, one of the disinherited", "A wealthy landowner", "A city banker", "A cheerful farmer"], "passage": true },
+    { "kind": "listening", "stem": "Where was Corliss's screen hero rooted?", "options": ["In his own memories and the mythology of the vanished frontier", "In books he had read", "In the big cities", "In foreign lands"], "audio": true },
+    { "kind": "listening", "stem": "What did early audiences long for, according to the speaker?", "options": ["To escape into a simpler time and to have a code to live by", "To become rich quickly", "To leave the country", "To forget the past"], "audio": true }
+  ]
+}

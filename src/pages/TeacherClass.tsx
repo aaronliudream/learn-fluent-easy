@@ -7,7 +7,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, Copy, Check, AlertTriangle, RefreshCw, Archive } from "lucide-react";
+import { Loader2, Copy, Check, AlertTriangle, RefreshCw, Archive, ArchiveRestore } from "lucide-react";
 import { toast } from "sonner";
 import { ProvisionedStudents } from "@/components/teacher/ProvisionedStudents";
 
@@ -74,6 +74,17 @@ export default function TeacherClass() {
   const [weakness, setWeakness] = useState<WeaknessRow[]>([]);
   const [sort, setSort] = useState<"recent" | "mastery" | "weak">("recent");
   const [query, setQuery] = useState("");
+  const [restoring, setRestoring] = useState(false);
+
+  async function restoreClass() {
+    if (!id) return;
+    setRestoring(true);
+    // restore_class 后端硬校验归属 + 5 班上限；满则返回中文异常，直接透传给用户。
+    const { error } = await supabase.rpc("restore_class", { _class_id: id });
+    setRestoring(false);
+    if (error) toast.error(error.message);
+    else { toast.success(t("已恢复为活跃班")); loadAll(); }
+  }
 
   async function loadAll() {
     if (!id) return;
@@ -170,12 +181,24 @@ export default function TeacherClass() {
         className={`relative mt-5 overflow-hidden rounded-3xl p-6 md:p-8 text-white shadow-tile bg-gradient-to-br ${meta.gradient}`}>
         <div className="relative flex flex-wrap items-start justify-between gap-4">
           <div className="min-w-0">
-            <div className="text-[10px] font-bold uppercase tracking-[0.25em] opacity-85 flex items-center gap-2">
+            <div className="text-[10px] font-bold uppercase tracking-[0.25em] opacity-85 flex flex-wrap items-center gap-2">
               <T>班级详情</T>
               {isArchived && (
-                <span className="rounded-full bg-white/25 px-2 py-0.5 text-[10px] font-bold tracking-normal normal-case">
-                  🗄 <T>已归档 · 只读</T>
-                </span>
+                <>
+                  <span className="rounded-full bg-white/25 px-2 py-0.5 text-[10px] font-bold tracking-normal normal-case">
+                    🗄 <T>已归档 · 只读</T>
+                  </span>
+                  <button
+                    type="button"
+                    onClick={restoreClass}
+                    disabled={restoring}
+                    className="inline-flex items-center gap-1 rounded-full bg-white/90 px-2.5 py-0.5 text-[11px] font-bold tracking-normal normal-case text-fuchsia-700 transition hover:bg-white disabled:opacity-60">
+                    {restoring
+                      ? <Loader2 className="size-3 animate-spin" />
+                      : <ArchiveRestore className="size-3" />}
+                    <T>恢复为活跃班</T>
+                  </button>
+                </>
               )}
             </div>
             <div className="mt-1 text-2xl md:text-3xl font-extrabold leading-tight">🏫 <T>{cls.name}</T></div>

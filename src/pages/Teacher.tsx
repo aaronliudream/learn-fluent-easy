@@ -8,7 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, Plus, Users, AlertTriangle, TrendingUp, GraduationCap, Sparkles } from "lucide-react";
+import { Loader2, Plus, Users, AlertTriangle, TrendingUp, GraduationCap, Sparkles, ArchiveRestore } from "lucide-react";
+import { toast } from "sonner";
 import TeacherCards from "@/pages/TeacherCards";
 
 /**
@@ -157,7 +158,9 @@ export default function Teacher() {
             </div>
           )}
 
-          {archivedClasses.length > 0 && <ArchivedClasses list={archivedClasses} />}
+          {archivedClasses.length > 0 && (
+            <ArchivedClasses list={archivedClasses} activeCount={activeClasses.length} onChange={reload} />
+          )}
         </TabsContent>
 
         {/* ───────── CARDS — re-uses the existing TeacherCards page ───────── */}
@@ -242,22 +245,34 @@ function ClassCard({ c }: { c: ClassRow }) {
   );
 }
 
-function ArchivedClasses({ list }: { list: ClassRow[] }) {
+function ArchivedClasses({ list, activeCount, onChange }: { list: ClassRow[]; activeCount: number; onChange: () => void }) {
+  const t = useT();
+  const [restoringId, setRestoringId] = useState<string | null>(null);
+  const atLimit = activeCount >= 5;
+
+  async function restore(c: ClassRow) {
+    if (atLimit) { toast.error(t("活跃班已满 5 个，请先归档一个再恢复此班")); return; }
+    setRestoringId(c.id);
+    // 后端 restore_class 会硬校验归属 + 5 班上限，前端拦截只是提前给友好提示
+    const { error } = await supabase.rpc("restore_class", { _class_id: c.id });
+    setRestoringId(null);
+    if (error) toast.error(error.message);
+    else { toast.success(t("已恢复为活跃班")); onChange(); }
+  }
+
   return (
     <details className="mt-6 rounded-2xl border border-border bg-muted/30">
       <summary className="cursor-pointer select-none list-none px-4 py-3 text-sm font-bold text-muted-foreground flex items-center gap-2">
         <span>🗄</span>
         <span><T>已归档班级</T> · {list.length}</span>
-        <span className="ml-auto text-[11px] font-normal"><T>只读存档</T> ▾</span>
+        <span className="ml-auto text-[11px] font-normal"><T>只读存档 · 可恢复</T> ▾</span>
       </summary>
       <ul className="px-3 pb-3 space-y-2">
         {list.map((c) => {
           const meta = STAGE_META[c.stage];
           return (
-            <li key={c.id}>
-              <Link
-                to={`/teacher/class/${c.id}`}
-                className="flex items-center gap-3 rounded-xl border border-border bg-card px-3 py-2.5 transition hover:bg-muted/40">
+            <li key={c.id} className="flex items-center gap-2 rounded-xl border border-border bg-card px-3 py-2.5">
+              <Link to={`/teacher/class/${c.id}`} className="flex items-center gap-3 min-w-0 flex-1 transition hover:opacity-80">
                 <span className="text-lg shrink-0">🗄</span>
                 <div className="min-w-0 flex-1">
                   <div className="font-bold text-sm truncate"><T>{c.name}</T></div>
@@ -265,12 +280,25 @@ function ArchivedClasses({ list }: { list: ClassRow[] }) {
                     <T>{meta.label}</T> · <T>归档于</T> {c.archived_at ? relTime(c.archived_at) : "—"} · {c.student_count} <T>名学生</T>
                   </div>
                 </div>
-                <span className="text-[11px] text-muted-foreground shrink-0"><T>只读</T> →</span>
               </Link>
+              <Button
+                variant="outline" size="sm" className="shrink-0"
+                onClick={() => restore(c)}
+                disabled={restoringId === c.id || atLimit}
+                title={atLimit ? t("活跃班已满 5 个，请先归档一个再恢复此班") : undefined}>
+                {restoringId === c.id
+                  ? <Loader2 className="size-3.5 animate-spin" />
+                  : <><ArchiveRestore className="mr-1 size-3.5" /> <T>恢复</T></>}
+              </Button>
             </li>
           );
         })}
       </ul>
+      {atLimit && (
+        <p className="px-4 pb-3 text-[11px] text-amber-600 dark:text-amber-400">
+          ⚠️ <T>活跃班已满 5 个，需先归档一个才能恢复这里的班级。</T>
+        </p>
+      )}
     </details>
   );
 }

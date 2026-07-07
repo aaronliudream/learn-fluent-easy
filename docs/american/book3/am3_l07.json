@@ -1,0 +1,133 @@
+{
+  "id": "am3_l07",
+  "unit_no": 2,
+  "lesson_no": 7,
+  "title_en": "Cooked Cash",
+  "title_cn": "被煮熟的钞票",
+  "grammar_focus": "名词加后缀变形容词的构词法(success→successful、use→useless、care→careful/careless、fool→foolish、energy→energetic、danger→dangerous、luck→lucky),外加一般过去时叙事(承载官方KS)与现在完成的经历疑问(Has it ever happened? Have you ever...?)(原创承载 NCE3 L7 考点·美国残币赔付部门,面包师把三千美元藏微波炉被误烧成灰)",
+  "scene": "这种事碰到过你吗?有没有把一张二十美元的钞票落在牛仔裤兜里,然后一股脑丢进洗衣机?等你把裤子救出来,发现钞票已被洗得又白又软、成了一团糟?在美国犯这种错的人(而且不少)不必绝望。美国印钞局有个专门的部门叫“残币鉴别组”,专门处理那些把钱烧了、泡了、或喂了饿狗的人的索赔——看样子,狗特别爱把钱嚼个稀烂!最近有一桩案子:面包师 Carlos 和未婚妻 Maria 一起经营着一家红火的店。Carlos 有天生意特别好,为了妥善保管,把三千美元塞进了微波炉。后来 Maria 没留神,开微波炉热汤,结果打开炉门,只见钱变成了一小摞没用的灰!Carlos 把烧焦的残余寄给了那个部门。细心的专家把每一小片都查验了一遍,几周后他把钱如数拿了回来。“只要还剩下足够辨认的部分,我们就把钱退给大家,”一位女发言人解释道,“去年我们在成千上万宗索赔上赔付了数百万美元。”",
+  "grammar_card": {
+    "title": "名词变形容词:加后缀 + 讲过去",
+    "intro": "①很多形容词是由名词加后缀变来的:-ful(小心的 careful、有用的 useful)、-less(无用的 useless、粗心的 careless)、-ish(愚蠢的 foolish、孩子气的 childish)、-ic(精力充沛的 energetic、英雄的 heroic)、-ous(危险的 dangerous、出名的 famous)、-y(幸运的 lucky、健康的 healthy)。加哪个后缀多半要一个个记。②讲“发生了什么”用一般过去时(turned、mailed、got)。③问“有没有发生过、有没有做过”这类经历,用现在完成的疑问:Has it ever happened? / Have you ever...?",
+    "table": {
+      "headers": ["名词", "加后缀→形容词", "意思"],
+      "rows": [
+        ["success / care", "successful / careful / careless", "成功的 / 小心的 / 粗心的"],
+        ["use / fool", "useless / foolish", "无用的 / 愚蠢的"],
+        ["energy / danger", "energetic / dangerous", "精力充沛的 / 危险的"],
+        ["luck / fame", "lucky / famous", "幸运的 / 出名的"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "-ful 表示“充满、有”(hopeful),-less 表示“没有”(hopeless);同一名词常能配不同后缀,意思相反:careful 小心的 vs careless 粗心的。", "mark": "-ful / -less" },
+      { "rule": "有些名词变形容词还会改拼写:energy→energetic、fame→famous、luck→lucky、beauty→beautiful。要连拼写一起记。", "mark": "energy→energetic" },
+      { "rule": "美语里“钞票”常说 bill(英式 note);“裤子”说 pants(英式 trousers)。本课已按美语写。", "mark": "bill / pants" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Where did Carlos hide his money?",
+    "options": ["In the microwave oven", "Under his bed", "In his dog's bed", "In a bank vault"],
+    "answer_index": 0
+  },
+  "passage": "Has it ever happened to you? Have you ever left a twenty-dollar bill in your jeans and then tossed them into the washing machine? When you rescued your jeans, did you find the bill washed to a pale, soggy mess? Americans who make mistakes like this — and plenty do — need not despair. The U.S. Bureau of Engraving and Printing has a special office, the Mutilated Currency Division, that handles claims from people who have burned, soaked, or fed their money to a hungry dog. Dogs, it seems, love to chew up cash! One recent case involved a baker named Carlos and his fiancée, Maria, who together run a successful shop. Carlos had a very good day and, for safekeeping, tucked three thousand dollars into the microwave oven. Later, without realizing it, Maria turned on the microwave to heat some soup. Imagine their dismay when they opened the door and found a neat stack of useless ash where the money had been! Carlos mailed the burned remains to the Division. Careful experts examined every scrap, and a few weeks later he got all his money back. 'As long as there is enough left to identify, we return people's money,' a spokeswoman explained. 'Last year we paid out millions of dollars on thousands of claims.'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Has it ever happened to you? Have you ever left a twenty-dollar bill in your jeans and then tossed them into the washing machine? When you rescued your jeans, did you find the bill washed to a pale, soggy mess?", "text_cn": "这种事碰到过你吗?有没有把一张二十美元的钞票落在牛仔裤兜里,然后一股脑丢进洗衣机?等你把裤子救出来,发现钞票已被洗得又白又软、成了一团糟?" },
+    { "seq": 2, "speaker": null, "text_en": "Americans who make mistakes like this — and plenty do — need not despair. The U.S. Bureau of Engraving and Printing has a special office, the Mutilated Currency Division, that handles claims from people who have burned, soaked, or fed their money to a hungry dog. Dogs, it seems, love to chew up cash!", "text_cn": "在美国犯这种错的人(而且不少)不必绝望。美国印钞局有个专门部门叫“残币鉴别组”,专门处理那些把钱烧了、泡了、或喂了饿狗的人的索赔——看样子,狗特别爱把钱嚼个稀烂!" },
+    { "seq": 3, "speaker": null, "text_en": "One recent case involved a baker named Carlos and his fiancée, Maria, who together run a successful shop. Carlos had a very good day and, for safekeeping, tucked three thousand dollars into the microwave oven.", "text_cn": "最近有一桩案子:面包师 Carlos 和未婚妻 Maria 一起经营着一家红火的店。Carlos 有天生意特别好,为了妥善保管,把三千美元塞进了微波炉。" },
+    { "seq": 4, "speaker": null, "text_en": "Later, without realizing it, Maria turned on the microwave to heat some soup. Imagine their dismay when they opened the door and found a neat stack of useless ash where the money had been!", "text_cn": "后来 Maria 没留神,开微波炉热汤,结果打开炉门,只见钱变成了一小摞没用的灰!" },
+    { "seq": 5, "speaker": null, "text_en": "Carlos mailed the burned remains to the Division. Careful experts examined every scrap, and a few weeks later he got all his money back. 'As long as there is enough left to identify, we return people's money,' a spokeswoman explained. 'Last year we paid out millions of dollars on thousands of claims.'", "text_cn": "Carlos 把烧焦的残余寄给了那个部门。细心的专家把每一小片都查验了一遍,几周后他把钱如数拿了回来。“只要还剩下足够辨认的部分,我们就把钱退给大家,”一位女发言人解释道,“去年我们在成千上万宗索赔上赔付了数百万美元。”" }
+  ],
+  "words": [
+    { "word": "mutilate", "ipa": "/ˈmjuːtɪleɪt/", "pos": "v", "meaning_cn": "使残缺不全,损毁", "example": "the Mutilated Currency Division 残币鉴别组" },
+    { "word": "chew", "ipa": "/tʃuː/", "pos": "v", "meaning_cn": "咀嚼,咬", "example": "love to chew up cash" },
+    { "word": "fiancé", "ipa": "/ˌfiːɑːnˈseɪ/", "pos": "n", "meaning_cn": "未婚夫(未婚妻 fiancée)", "example": "his fiancée, Maria" },
+    { "word": "microwave", "ipa": "/ˈmaɪkrəweɪv/", "pos": "n", "meaning_cn": "微波炉", "example": "into the microwave oven" },
+    { "word": "oven", "ipa": "/ˈʌvn/", "pos": "n", "meaning_cn": "炉,烤箱", "example": "the microwave oven" },
+    { "word": "safekeeping", "ipa": "/ˌseɪfˈkiːpɪŋ/", "pos": "n", "meaning_cn": "妥善保管", "example": "for safekeeping" },
+    { "word": "identify", "ipa": "/aɪˈdentɪfaɪ/", "pos": "v", "meaning_cn": "鉴定,辨认", "example": "enough left to identify" },
+    { "word": "spokeswoman", "ipa": "/ˈspoʊkswʊmən/", "pos": "n", "meaning_cn": "女发言人", "example": "a spokeswoman explained" },
+    { "word": "dismay", "ipa": "/dɪsˈmeɪ/", "pos": "n", "meaning_cn": "沮丧,惊愕", "example": "imagine their dismay" },
+    { "word": "remains", "ipa": "/rɪˈmeɪnz/", "pos": "n", "meaning_cn": "残余,剩余物", "example": "the burned remains" },
+    { "word": "despair", "ipa": "/dɪˈsper/", "pos": "v", "meaning_cn": "绝望", "example": "need not despair" },
+    { "word": "examine", "ipa": "/ɪɡˈzæmɪn/", "pos": "v", "meaning_cn": "检查,细查", "example": "experts examined every scrap" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "名词→形容词 -ful/-less(care→careful/careless)" },
+    { "gp": "gp2", "name": "名词→形容词 -ish/-ic(fool→foolish/energetic)" },
+    { "gp": "gp3", "name": "名词→形容词 -ous/-y(danger→dangerous/lucky)" },
+    { "gp": "gp4", "name": "一般过去时叙事(承载官方KS)" },
+    { "gp": "gp5", "name": "现在完成的经历疑问(Have you ever...?)" },
+    { "gp": "gp6", "name": "词汇辨析(chew/identify/spokeswoman)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Carlos runs a very ___ bakery; it makes good money.\"(“成功的”,用哪个形容词)", "stem_cn": "Carlos 经营着一家很成功的面包店,很赚钱。", "options": ["successful", "success", "successless", "succeedic"] },
+    { "gp": "gp1", "stem": "\"The burned money was now just a pile of ___ ash.\"(“无用的”,用哪个形容词)", "stem_cn": "烧掉的钱如今只是一堆没用的灰。", "options": ["useless", "useful", "usely", "useish"] },
+    { "gp": "gp1", "stem": "\"Be ___ with cash near a hot stove — accidents happen fast.\"(“小心的”,用哪个形容词)", "stem_cn": "在热炉旁放现金要小心——出事就在一瞬间。", "options": ["careful", "careless", "carely", "careic"] },
+    { "gp": "gp2", "stem": "\"Hiding money in the microwave was a rather ___ idea.\"(“愚蠢的”,用哪个形容词)", "stem_cn": "把钱藏微波炉里是个相当愚蠢的主意。", "options": ["foolish", "foolful", "foolic", "foolless"] },
+    { "gp": "gp2", "stem": "\"The young bakers are ___, always full of energy.\"(“精力充沛的”,用哪个形容词)", "stem_cn": "那些年轻面包师精力充沛,总是活力满满。", "options": ["energetic", "energyful", "energish", "energyless"] },
+    { "gp": "gp2", "stem": "\"Stop pouting — you're being ___ again like a little kid.\"(“孩子气的、幼稚的”,用哪个形容词)", "stem_cn": "别撅嘴了——你又像个小孩似的耍幼稚。", "options": ["childish", "childful", "childic", "childless"] },
+    { "gp": "gp3", "stem": "\"Leaving money in a hot oven is ___.\"(“危险的”,用哪个形容词)", "stem_cn": "把钱留在热烤箱里很危险。", "options": ["dangerous", "dangerful", "dangery", "dangerish"] },
+    { "gp": "gp3", "stem": "\"After the bakery grew, Carlos became quite ___ in town.\"(“出名的”,用哪个形容词)", "stem_cn": "面包店做大后,Carlos 在镇上相当有名。", "options": ["famous", "fameful", "famish", "famely"] },
+    { "gp": "gp3", "stem": "\"They were very ___ to get all their money back.\"(“幸运的”,用哪个形容词)", "stem_cn": "能把钱如数要回来,他们很幸运。", "options": ["lucky", "luckful", "luckous", "luckish"] },
+    { "gp": "gp4", "stem": "\"Maria ___ on the microwave without realizing the money was inside.\"(讲过去发生:一般过去时)", "stem_cn": "玛丽亚没意识到钱在里面就开了微波炉。", "options": ["turned", "was turning", "turns", "has turned"] },
+    { "gp": "gp4", "stem": "\"Carlos ___ the burned remains to the special office.\"(讲过去发生:一般过去时)", "stem_cn": "Carlos 把烧焦的残余寄给了那个专门部门。", "options": ["mailed", "was mailing", "mails", "has mailed"] },
+    { "gp": "gp4", "stem": "\"A few weeks later, he ___ all of his money back.\"(讲过去发生:get 的过去式)", "stem_cn": "几周后,他把所有的钱都要了回来。", "options": ["got", "was getting", "gets", "has got"] },
+    { "gp": "gp5", "stem": "\"___ it ever happened to you? Money washed by mistake?\"(问“有没有发生过”:现在完成的疑问)", "stem_cn": "这种事发生过在你身上吗?钱被误洗了?", "options": ["Has", "Did", "Was", "Is"] },
+    { "gp": "gp5", "stem": "\"Have you ever ___ money in the wash by accident?\"(现在完成的经历:选过去分词)", "stem_cn": "你有没有不小心把钱洗坏过?", "options": ["ruined", "ruin", "ruins", "ruining"] },
+    { "gp": "gp6", "stem": "\"Dogs seem to love to ___ up money and paper.\"(“咀嚼、咬”,用哪个词)", "stem_cn": "狗似乎特别爱把钱和纸嚼烂。", "options": ["chew", "wash", "paint", "plant"] },
+    { "gp": "gp6", "stem": "\"The bank returns damaged money only if experts can ___ it.\"(“鉴定、辨认”,用哪个词)", "stem_cn": "只有专家能辨认出来,银行才退还残币。", "options": ["identify", "destroy", "borrow", "spend"] },
+    { "gp": "gp6", "stem": "\"A woman who speaks for a company or a bank is a ___.\"(“女发言人”,用哪个词)", "stem_cn": "代表公司或银行讲话的女性是女发言人。", "options": ["spokeswoman", "customer", "neighbor", "stranger"] },
+    { "gp": "gp6", "stem": "\"Carlos put the cash in the microwave for ___.\"(“妥善保管”,用哪个词)", "stem_cn": "Carlos 把现金放进微波炉是为了妥善保管。", "options": ["safekeeping", "cooking", "cleaning", "selling"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"裤子\"常说:", "options": ["pants", "trousers", "leg-wear", "cloth-legs"] },
+    { "stem": "chew 的意思是:", "options": ["咀嚼,咬", "洗涤", "折叠", "撕开"] },
+    { "stem": "identify 的意思是:", "options": ["鉴定,辨认", "隐藏", "出售", "损坏"] },
+    { "stem": "spokeswoman 的意思是:", "options": ["女发言人", "顾客", "邻居", "陌生人"] },
+    { "stem": "\"safekeeping\" 的意思是:", "options": ["妥善保管", "大扫除", "打折", "搬家"] },
+    { "stem": "successful 的意思是:", "options": ["成功的", "失败的", "免费的", "危险的"] }
+  ],
+  "contrast": [
+    { "us": "pants", "uk": "trousers", "note_cn": "裤子;美语 pants,英式 trousers" },
+    { "us": "bill", "uk": "note", "note_cn": "钞票;美语 bill,英式 (bank)note" },
+    { "us": "cookie", "uk": "biscuit", "note_cn": "饼干;美语 cookie,英式 biscuit" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" }
+  ],
+  "chunks": [
+    { "us": "for safekeeping", "ipa": "/fɔːr ˈseɪfkiːpɪŋ/", "example1": "He hid the cash in the oven for safekeeping.", "example1_cn": "他把现金藏在烤箱里以为妥善保管。", "example2": "She left her ring with me for safekeeping.", "example2_cn": "她把戒指交给我保管。" },
+    { "us": "chew up", "ipa": "/tʃuː ʌp/", "example1": "The dog chewed up the money.", "example1_cn": "狗把钱嚼烂了。", "example2": "The puppy chewed up my shoe.", "example2_cn": "小狗把我的鞋咬烂了。" },
+    { "us": "as long as", "ipa": "/æz lɔːŋ æz/", "example1": "As long as it can be identified, they return the money.", "example1_cn": "只要还能辨认,他们就退钱。", "example2": "You can stay as long as you keep quiet.", "example2_cn": "只要你保持安静,就可以待着。" },
+    { "us": "without realizing it", "ipa": "/wɪˈðaʊt ˈriːəlaɪzɪŋ ɪt/", "example1": "She turned on the microwave without realizing it.", "example1_cn": "她没意识到就开了微波炉。", "example2": "He deleted the file without realizing it.", "example2_cn": "他没察觉就把文件删了。" }
+  ],
+  "stage7_cloze": {
+    "context": "Carlos runs a very ___1___ bakery. One day he hid three thousand dollars in the microwave for safekeeping. Later his fiancée ___2___ on the microwave by mistake and burned it all. What a ___3___ place to hide money! Luckily, experts could still ___4___ the ash, so the bank returned every dollar.",
+    "blanks": [
+      { "blank_no": 1, "options": ["successful", "success", "successless", "succeed"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["turns", "turned", "was turning", "has turned"], "answer_index": 1 },
+      { "blank_no": 3, "options": ["foolish", "fool", "foolness", "foolist"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["ignore", "identify", "destroy", "borrow"], "answer_index": 1 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did Carlos hide his money?", "options": ["In the microwave oven", "Under his bed", "In his dog's bed", "In a bank vault"] },
+    { "stem": "What happened to the money?", "options": ["It was burned to ash", "It was stolen", "It was washed away", "A dog ate it"] },
+    { "stem": "Why did Carlos get his money back?", "options": ["Enough was left to identify it", "He knew the bank manager", "He complained loudly", "He had insurance"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"你有没有不小心把钱和衣服一起洗过?\"(现在完成的经历疑问):", "options": ["Have you ever washed money with your clothes by mistake?", "Did you ever have washed money with your clothes?", "Have you ever wash money with your clothes by mistake?", "Are you ever washing money with your clothes?"] },
+    { "stem": "你想说\"他经营着一家成功的面包店\"(名词 success 变形容词 successful):", "options": ["He runs a successful bakery.", "He runs a success bakery.", "He runs a successfully bakery.", "He runs a succeed bakery."] },
+    { "stem": "你想说\"只要还能辨认,银行就退钱\"(as long as + identify):", "options": ["As long as they can identify it, the bank returns the money.", "As long as they can identifies it, the bank return the money.", "So long they can identify it, the bank returns money.", "As long as they identifying it, the bank returns the money."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "identify 的意思是:", "options": ["鉴定,辨认", "隐藏", "出售", "损坏"] },
+    { "kind": "vocab", "stem": "chew 的意思是:", "options": ["咀嚼,咬", "洗涤", "折叠", "撕开"] },
+    { "kind": "grammar", "stem": "\"Maria ___ on the microwave without realizing the money was inside.\"(讲过去发生:一般过去)", "stem_cn": "玛丽亚没意识到钱在里面就开了微波炉。", "options": ["turned", "was turning", "turns", "has turned"] },
+    { "kind": "grammar", "stem": "\"He runs a very ___ bakery.\"(名词 success 变形容词)", "stem_cn": "他经营着一家非常成功的面包店。", "options": ["successful", "success", "successless", "succeed"] },
+    { "kind": "scenario", "stem": "\"for safekeeping\" 的意思是:", "options": ["为了妥善保管", "为了出售", "为了展示", "为了清洗"] },
+    { "kind": "scenario", "stem": "\"chew up\" 的意思是:", "options": ["咬碎,嚼烂", "擦干净", "叠整齐", "包起来"] },
+    { "kind": "reading", "stem": "What does the Mutilated Currency Division do?", "options": ["It reimburses people for badly damaged money", "It prints brand-new money", "It fixes broken ovens", "It trains guard dogs"], "passage": true },
+    { "kind": "reading", "stem": "How did the money get destroyed in this case?", "options": ["It was cooked in the microwave by mistake", "A dog chewed it up", "It was left out in the rain", "It was torn in half"], "passage": true },
+    { "kind": "listening", "stem": "What did Carlos send to the special office?", "options": ["The burned remains of the money", "A photo of the money", "A written complaint", "A brand-new wallet"], "audio": true },
+    { "kind": "listening", "stem": "How much did the office pay out last year?", "options": ["Millions of dollars on thousands of claims", "Nothing at all", "Only ten dollars", "One single claim"], "audio": true }
+  ]
+}

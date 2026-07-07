@@ -1,17 +1,18 @@
 -- =====================================================================
 -- 教师功能 Phase 2 · 整篇下钻(方案 A · 第②层)—— 待 Aaron 跑
 --
--- 老师点开一篇完形错题 → 每个做错的空 + 选项 + 正确答案 + 学生作答 + 解析。
---
--- 本轮范围:仅【完形 cloze】。阅读整篇【本轮不做】——
---   根因:junior_reading 内容经分册 load 文件反复 DELETE+INSERT 重灌(id 走
---   gen_random_uuid 默认,每次换新 uuid),旧 junior_reading_attempts.reading_id 成孤儿、
---   位置型 question_idx 也会错位 → 与内容表 join 会拼出错误整篇。故本 RPC 不碰 junior_reading,
---   阅读走前端"整篇原文暂不可用"静态标注(见 TeacherStudent.tsx),不 join、不编造、不拼错。
+-- 老师点开一篇完形/阅读错题 → 整篇 + 所有题 + 正确答案 + 学生作答 + 解析(IXL 三栏)。
+-- ⚠ 两种源都【只读写入当下的 snapshot,绝不 join 会变的题库表】,天然绕开重灌换 id。
 --
 -- 完形(_source='cloze'):
---   仅从 gaokao_user_mistakes.snapshot 读(每行=一个做错的空:选项/答案/学生作答/解析);
---   ⚠ snapshot 无整篇全文、无做对的空 → limited=true,前端老实标注,不 join legacy 题库、不编造。
+--   从 gaokao_user_mistakes.snapshot 读(每行=一个做错的空:选项/答案/学生作答/解析);
+--   snapshot 无整篇全文、无做对的空 → limited=true,前端老实标注,不 join legacy 题库。
+--
+-- 阅读(_source='reading'):
+--   从 user_mistakes(module='reading', source_key='junior_reading_passage_<reading_id>')的
+--   自包含 snapshot 读(整篇原文 body + 全题 questions:题干/选项/正确答案/学生作答/对错/解析)。
+--   仅【改造上线后新做】的阅读才有此快照;老篇无 → 返回 missing,前端标"整篇不可用(旧数据)"。
+--   _passage_id 传 reading_id。
 --
 -- P0 班级归属校验 + SECURITY DEFINER + REVOKE public/anon。幂等。
 -- =====================================================================
@@ -40,7 +41,39 @@ begin
     return null;
   end if;
 
-  if _source = 'cloze' then
+  if _source = 'reading' then
+    -- 阅读:纯读自包含快照(改造上线后新做的篇才有);不 join 题库
+    select jsonb_build_object(
+      'source', 'reading',
+      'title',  um.snapshot->>'title',
+      'body',   um.snapshot->>'body',
+      'total',  jsonb_array_length(um.snapshot->'questions'),
+      'has_user_answers', true,
+      'wrong_count', coalesce(um.wrong_count, 0),
+      'items', (
+        select jsonb_agg(jsonb_build_object(
+          'no',             (q->>'no')::int,
+          'stem',           q->>'stem',
+          'options',        q->'options',
+          'correct_answer', q->>'correct_answer',
+          'user_answer',    q->>'user_answer',
+          'is_correct',     (q->>'is_correct')::boolean,
+          'wrong',          not coalesce((q->>'is_correct')::boolean, false),
+          'explanation',    q->>'explanation'
+        ) order by (q->>'no')::int)
+        from jsonb_array_elements(um.snapshot->'questions') as q
+      )
+    ) into result
+    from public.user_mistakes um
+    where um.user_id = _student_id and um.module = 'reading' and um.is_resolved = false
+      and um.source_key = 'junior_reading_passage_' || _passage_id::text;
+
+    if result is null then
+      return jsonb_build_object('source', 'reading', 'missing', true);
+    end if;
+    return result;
+
+  elsif _source = 'cloze' then
     -- 仅 snapshot;无整篇全文、无做对的空
     select jsonb_build_object(
       'source', 'cloze',

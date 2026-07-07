@@ -91,7 +91,58 @@ export default function GaokaoReadingPlay() {
     celebratedRef.current = true;
     const correct = questions.filter((q) => picks[q.id] === q.correct_answer).length;
     celebrateScore(Math.round(correct / questions.length * 100));
-  }, [picks, questions]);
+
+    // 错题完整快照(自包含,不依赖题库表):整篇原文 + 全题(题干/选项) + 每题正确答案 + 学生每题作答 + 对错。
+    // 比照初中阅读;高中阅读无提交按钮,故在"全题答完"这次一次性写入。提交这刻 passage+questions+picks 全在手边。
+    // 一篇一条(onConflict 覆盖),wrong_count=错题数(按题不按次)。题库重灌换 id 不影响此快照。
+    // 不动判分/onPick/gaokao_user_attempts/recordUnifiedAttempt,失败仅告警、绝不阻断做题。
+    if (passage) {
+      const wrongCount = questions.filter((q) => picks[q.id] !== q.correct_answer).length;
+      if (wrongCount > 0) {
+        const explOf = (q: Question) => {
+          const m: Record<string, string | null> = {
+            A: q.explanation_a, B: q.explanation_b, C: q.explanation_c, D: q.explanation_d,
+          };
+          return m[q.correct_answer] ?? null;   // 存正确项解析(每选项解析里最有用的一条)
+        };
+        const snapshot = {
+          source: "reading",
+          title: passage.title,
+          body: passage.body,
+          questions: questions.map((q, i) => ({
+            no: i + 1,
+            stem: q.stem,
+            options: { A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d },
+            correct_answer: q.correct_answer,
+            user_answer: picks[q.id] ?? null,
+            is_correct: picks[q.id] === q.correct_answer,
+            explanation: explOf(q),
+          })),
+          wrong_count: wrongCount,
+        };
+        (async () => {
+          try {
+            const { data: { user } } = await supabase.auth.getUser();
+            if (!user) return;   // 游客不写
+            const { error } = await supabase.from("user_mistakes").upsert({
+              user_id: user.id,
+              module: "reading",
+              source_key: `gaokao_reading_passage_${passage.id}`,
+              source_label: passage.title,
+              question: passage.title ?? "",
+              snapshot,
+              wrong_count: wrongCount,
+              is_resolved: false,
+              last_wrong_at: new Date().toISOString(),
+            }, { onConflict: "user_id,module,source_key" });
+            if (error) console.warn("[gaokao reading mistake snapshot] upsert failed", error);
+          } catch (e) {
+            console.warn("[gaokao reading mistake snapshot] error", e);
+          }
+        })();
+      }
+    }
+  }, [picks, questions, passage]);
   const onPick = async (q: Question, letter: string) => {
     if (picks[q.id]) return;
     const ms = Date.now() - (qStartRef.current[q.id] ?? Date.now());

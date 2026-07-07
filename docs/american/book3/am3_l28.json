@@ -1,0 +1,133 @@
+{
+  "id": "am3_l28",
+  "unit_no": 6,
+  "lesson_no": 28,
+  "title_en": "Five Dollars Too Dear",
+  "title_cn": "五美元也太贵",
+  "grammar_focus": "no sooner ... than(一…就…,句首倒装)、as ... as / not as ... as 比较、made in / made by / made of / made from 辨析、it takes sb + 时间 + to do、while / as + 过去进行(被 when 打断)、so far / to this day + 现在完成(原创承载 NCE3 L28 考点·无需净化·美国游客在异国港口跟小贩砍价,五美元'淘'到一支永远写不出字的钢笔)",
+  "scene": "大邮轮刚驶进港口,一艘艘装满货物的小船就飞快靠了过来。船还没抛锚,小贩们已经爬上了甲板,一转眼,甲板上就铺满了色彩斑斓的地毯、丝绸、铜咖啡壶,还有漂亮的手工银器。让人很难不动心。船上不少乘客已经开始和商贩讨价还价,可我打定主意,上岸之前什么都不买。我刚下船,一个男人就冲上来,急着要卖我一枚钻戒。我压根没想买,却又掩饰不住:那些钻石之大,让我吃了一惊——有几颗足有玻璃球那么大。为了证明是真货,他把一颗钻石往店铺橱窗上一按,竟在玻璃上划出一道深痕。我费了半个多小时才把他打发走。下一个凑上来的男人卖的是高档钢笔和手表。我仔细看了看其中一支笔,确实像真的,金笔帽底部还工整地刻着“美国制造”几个字。那人赌咒说这笔值五十美元,不过作为特别优惠,三十美元就卖给我。我摇摇头,竖起五根手指,表示只出五美元。他两臂乱挥,一副我的报价荒唐透顶的样子,可很快就把价钱降到了十美元。我耸耸肩转身要走——没走几步,他追上来,把笔硬塞进我手里,痛痛快快收下了那五美元。我为自己这桩绝妙的便宜货得意极了——直到回到船上。任我怎么使劲,就是没法给这支漂亮的笔灌上墨水;直到今天,它一个字也没写出来过!",
+  "grammar_card": {
+    "title": "no sooner...than / as...as / made in·by·of / it takes sb to do",
+    "intro": "①no sooner … than “一…就…”;no sooner 放句首要倒装:No sooner had I sat down than…。②as + 形容词 + as “与…一样…”;not as … as “不像…那么…”。③made in(产地)/ made by(制作者)/ made of(看得出原料)/ made from(看不出原料)。④it takes sb + 时间 + to do “某人花多少时间做某事”。⑤while / as + 过去进行,常被 when 引导的“突然发生”打断。⑥so far / to this day + 现在完成时,表示“到目前为止”。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["no sooner ... than", "一…就…(句首倒装)", "No sooner had I got off than…"],
+        ["as ... as / not as ... as", "与…一样 / 不像…那么", "as big as marbles"],
+        ["made in / by / of / from", "产地/制作者/原料", "made in the U.S.A."],
+        ["it takes sb 时间 to do / so far", "花时间做… / 到目前为止", "It took me half an hour…"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "no sooner … than 的搭配是 than(不是 then / when);no sooner 放句首时,主句要倒装:No sooner had he… than…。", "mark": "no sooner ... than" },
+      { "rule": "made of 看得出原料(a table made of wood);made from 看不出原料(paper made from wood);made in 是产地;made by 是制作者。", "mark": "made of / from / in / by" },
+      { "rule": "美式用词:store(英式 shop)、dollar(货币,英式常用 pound)、sidewalk(英式 pavement)。本课已按美语写。", "mark": "store / dollar" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why was even five dollars 'too dear' for the pen?",
+    "options": ["The pen could never be made to write", "It was the wrong brand", "He wanted it for free", "It was made of plastic"],
+    "answer_index": 0
+  },
+  "passage": "Small boats loaded with wares sped out to the great cruise ship as she was entering the harbor. Before she had even anchored, the sellers had climbed aboard, and the decks were soon covered with colorful rugs, silks, copper coffee pots, and beautiful handmade silverware. It was hard not to be tempted. Many passengers had already begun bargaining with the traders, but I decided to buy nothing until I had gone ashore. I had no sooner stepped off the ship than a man rushed up, eager to sell me a diamond ring. I had no intention of buying one, yet I could not hide the fact that I was impressed by the size of the diamonds; some were as big as marbles. To prove they were real, the man pressed one against a store window and cut a deep line in the glass. It took me over half an hour to get rid of him. The next man was selling fancy pens and watches. I examined one of the pens closely; it certainly looked genuine, and near the base of the gold cap the words 'Made in the U.S.A.' had been neatly inscribed. The man swore the pen was worth fifty dollars, but as a special favor he would let me have it for thirty. I shook my head and held up five fingers, offering five. Waving his arms wildly, he acted as if my offer were outrageous, yet he soon dropped the price to ten. Shrugging, I began to walk away, and a moment later he ran after me and thrust the pen into my hands, gladly taking my five dollars. I felt very pleased with my wonderful bargain, until I got back to the ship. No matter how hard I tried, it was impossible to fill that beautiful pen with ink, and to this day it has never written a single word!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Small boats loaded with wares sped out to the great cruise ship as she was entering the harbor. Before she had even anchored, the sellers had climbed aboard, and the decks were soon covered with colorful rugs, silks, copper coffee pots, and beautiful handmade silverware. It was hard not to be tempted.", "text_cn": "大邮轮刚驶进港口,一艘艘装满货物的小船就飞快靠了过来。船还没抛锚,小贩们已经爬上了甲板,一转眼,甲板上就铺满了色彩斑斓的地毯、丝绸、铜咖啡壶,还有漂亮的手工银器。让人很难不动心。" },
+    { "seq": 2, "speaker": null, "text_en": "Many passengers had already begun bargaining with the traders, but I decided to buy nothing until I had gone ashore. I had no sooner stepped off the ship than a man rushed up, eager to sell me a diamond ring. I had no intention of buying one, yet I could not hide the fact that I was impressed by the size of the diamonds; some were as big as marbles.", "text_cn": "船上不少乘客已经开始和商贩讨价还价,可我打定主意,上岸之前什么都不买。我刚下船,一个男人就冲上来,急着要卖我一枚钻戒。我压根没想买,却又掩饰不住:那些钻石之大,让我吃了一惊——有几颗足有玻璃球那么大。" },
+    { "seq": 3, "speaker": null, "text_en": "To prove they were real, the man pressed one against a store window and cut a deep line in the glass. It took me over half an hour to get rid of him. The next man was selling fancy pens and watches. I examined one of the pens closely; it certainly looked genuine, and near the base of the gold cap the words 'Made in the U.S.A.' had been neatly inscribed.", "text_cn": "为了证明是真货,他把一颗钻石往店铺橱窗上一按,竟在玻璃上划出一道深痕。我费了半个多小时才把他打发走。下一个凑上来的男人卖的是高档钢笔和手表。我仔细看了看其中一支笔,确实像真的,金笔帽底部还工整地刻着“美国制造”几个字。" },
+    { "seq": 4, "speaker": null, "text_en": "The man swore the pen was worth fifty dollars, but as a special favor he would let me have it for thirty. I shook my head and held up five fingers, offering five. Waving his arms wildly, he acted as if my offer were outrageous, yet he soon dropped the price to ten.", "text_cn": "那人赌咒说这笔值五十美元,不过作为特别优惠,三十美元就卖给我。我摇摇头,竖起五根手指,表示只出五美元。他两臂乱挥,一副我的报价荒唐透顶的样子,可很快就把价钱降到了十美元。" },
+    { "seq": 5, "speaker": null, "text_en": "Shrugging, I began to walk away, and a moment later he ran after me and thrust the pen into my hands, gladly taking my five dollars. I felt very pleased with my wonderful bargain, until I got back to the ship. No matter how hard I tried, it was impossible to fill that beautiful pen with ink, and to this day it has never written a single word!", "text_cn": "我耸耸肩转身要走——没走几步,他追上来,把笔硬塞进我手里,痛痛快快收下了那五美元。我为自己这桩绝妙的便宜货得意极了——直到回到船上。任我怎么使劲,就是没法给这支漂亮的笔灌上墨水;直到今天,它一个字也没写出来过!" }
+  ],
+  "words": [
+    { "word": "wares", "ipa": "/werz/", "pos": "n", "meaning_cn": "货物,商品", "example": "boats loaded with wares" },
+    { "word": "anchor", "ipa": "/ˈæŋkər/", "pos": "v", "meaning_cn": "停航下锚", "example": "before she had anchored" },
+    { "word": "deck", "ipa": "/dek/", "pos": "n", "meaning_cn": "甲板", "example": "the decks were covered" },
+    { "word": "tempt", "ipa": "/tempt/", "pos": "v", "meaning_cn": "吸引,引诱", "example": "hard not to be tempted" },
+    { "word": "bargain", "ipa": "/ˈbɑːrɡɪn/", "pos": "v", "meaning_cn": "讨价还价;(n.)便宜货", "example": "bargaining with the traders" },
+    { "word": "assail", "ipa": "/əˈseɪl/", "pos": "v", "meaning_cn": "纠缠,围攻", "example": "assailed by a seller" },
+    { "word": "inscribe", "ipa": "/ɪnˈskraɪb/", "pos": "v", "meaning_cn": "刻写,雕", "example": "words had been inscribed" },
+    { "word": "gesticulate", "ipa": "/dʒeˈstɪkjuleɪt/", "pos": "v", "meaning_cn": "(讲话时)打手势", "example": "gesticulating wildly" },
+    { "word": "outrageous", "ipa": "/aʊtˈreɪdʒəs/", "pos": "adj", "meaning_cn": "出人预料的;令人不悦的", "example": "my offer was outrageous" },
+    { "word": "thrust", "ipa": "/θrʌst/", "pos": "v", "meaning_cn": "硬塞给", "example": "thrust the pen into my hands" },
+    { "word": "genuine", "ipa": "/ˈdʒenjuɪn/", "pos": "adj", "meaning_cn": "真的,真正的", "example": "it looked genuine" },
+    { "word": "silverware", "ipa": "/ˈsɪlvərwer/", "pos": "n", "meaning_cn": "银器", "example": "handmade silverware" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "no sooner ... than(一…就…,倒装)" },
+    { "gp": "gp2", "name": "as ... as / not as ... as" },
+    { "gp": "gp3", "name": "made in / made by / made of / made from" },
+    { "gp": "gp4", "name": "it takes sb + 时间 + to do" },
+    { "gp": "gp5", "name": "while/as + 过去进行 / so far·to this day" },
+    { "gp": "gp6", "name": "词汇辨析(bargain/genuine/outrageous)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"I had no sooner stepped off the ship ___ a man rushed up.\"(no sooner … 后面配哪个词)", "stem_cn": "我刚下船,一个人就冲了上来。", "options": ["than", "then", "that", "when"] },
+    { "gp": "gp1", "stem": "\"No sooner ___ I sat down than the phone rang.\"(No sooner 放句首,句子要倒装)", "stem_cn": "我刚坐下,电话就响了。", "options": ["had", "have", "did", "was"] },
+    { "gp": "gp1", "stem": "\"He had no sooner finished his speech ___ everyone began to clap.\"(no sooner … 后面配哪个词)", "stem_cn": "他刚讲完,大家就鼓起掌来。", "options": ["than", "then", "that", "as"] },
+    { "gp": "gp2", "stem": "\"Some of the diamonds were ___ big as marbles.\"(“与…一样…”的比较,填第一个词)", "stem_cn": "有些钻石有玻璃球那么大。", "options": ["as", "so", "too", "more"] },
+    { "gp": "gp2", "stem": "\"The fake pen was not ___ good as it looked.\"(“不像…那么…”的比较结构)", "stem_cn": "那支假笔没看上去那么好。", "options": ["as", "so much", "more", "than"] },
+    { "gp": "gp2", "stem": "\"My offer was ___ low as five dollars.\"(“…到…程度”的比较结构)", "stem_cn": "我出的价低到只有五美元。", "options": ["as", "so", "too", "very"] },
+    { "gp": "gp3", "stem": "\"The words 'Made ___ the U.S.A.' were on the cap.\"(表“产地”用哪个介词)", "stem_cn": "笔帽上写着“美国制造”。", "options": ["in", "by", "of", "from"] },
+    { "gp": "gp3", "stem": "\"The silverware was made ___ hand by local craftsmen.\"(表“靠…方式制作”用哪个介词)", "stem_cn": "那些银器是当地工匠手工制作的。", "options": ["by", "in", "of", "from"] },
+    { "gp": "gp3", "stem": "\"The coffee pots were made ___ copper.\"(能看出原料,用哪个介词)", "stem_cn": "那些咖啡壶是铜做的。", "options": ["of", "from", "by", "in"] },
+    { "gp": "gp4", "stem": "\"It ___ me over half an hour to get rid of him.\"(it ___ sb 时间 to do,过去)", "stem_cn": "我花了半个多小时才摆脱他。", "options": ["took", "takes", "taking", "has taken"] },
+    { "gp": "gp4", "stem": "\"It ___ about ten minutes to walk to the harbor.\"(it ___ 时间 to do,一般现在)", "stem_cn": "走到港口大约要十分钟。", "options": ["takes", "took", "taking", "take"] },
+    { "gp": "gp4", "stem": "\"It has ___ me years to learn to bargain well.\"(it has ___ 时间,现在完成)", "stem_cn": "我花了好些年才学会讨价还价。", "options": ["taken", "took", "take", "taking"] },
+    { "gp": "gp5", "stem": "\"___ we were walking past a shop, he cut the glass.\"(引导“当…正在…时”的连词)", "stem_cn": "我们走过一家店时,他划破了玻璃。", "options": ["As", "Because", "So", "If"] },
+    { "gp": "gp5", "stem": "\"I was just going into the shop ___ he grabbed my arm.\"(过去进行被“突然发生”打断,用哪个)", "stem_cn": "我正要进店,他一把抓住我胳膊。", "options": ["when", "while", "as", "since"] },
+    { "gp": "gp5", "stem": "\"The pen has never written a word ___.\"(表“到目前为止”,配合现在完成)", "stem_cn": "到目前为止,这支笔一个字也没写过。", "options": ["so far", "ago", "then", "yet later"] },
+    { "gp": "gp6", "stem": "\"To argue over the price to make it lower is to ___.\"(“讨价还价”用哪个词)", "stem_cn": "为压低价格而争论。", "options": ["bargain", "whisper", "sleep", "paint"] },
+    { "gp": "gp6", "stem": "\"A price or demand that seems shocking and unfair is ___.\"(“出人预料的、令人不悦的”用哪个词)", "stem_cn": "高得离谱、令人不悦的要价。", "options": ["outrageous", "reasonable", "cheap", "fair"] },
+    { "gp": "gp6", "stem": "\"To wave your arms about while talking is to ___.\"(“打手势”用哪个词)", "stem_cn": "说话时挥舞手臂。", "options": ["gesticulate", "whisper", "freeze", "kneel"] }
+  ],
+  "stage6": [
+    { "stem": "wares 的意思是:", "options": ["货物,商品", "工具", "家具", "衣服"] },
+    { "stem": "tempt 的意思是:", "options": ["吸引,引诱", "拒绝", "忘记", "隐藏"] },
+    { "stem": "bargain 的意思是:", "options": ["讨价还价", "唱歌", "睡觉", "奔跑"] },
+    { "stem": "genuine 的意思是:", "options": ["真的,真正的", "假的", "昂贵的", "破旧的"] },
+    { "stem": "thrust 的意思是:", "options": ["硬塞给", "偷走", "清洗", "丢弃"] },
+    { "stem": "outrageous 的意思是:", "options": ["出人预料的,令人不悦的", "合理的", "普通的", "安静的"] }
+  ],
+  "contrast": [
+    { "us": "store", "uk": "shop", "note_cn": "商店;美语 store,英式 shop" },
+    { "us": "dollar", "uk": "pound", "note_cn": "货币单位;美国用 dollar,英国用 pound" },
+    { "us": "sidewalk", "uk": "pavement", "note_cn": "人行道;美语 sidewalk,英式 pavement" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" }
+  ],
+  "chunks": [
+    { "us": "no sooner ... than", "ipa": "/noʊ ˈsuːnər ... ðæn/", "example1": "I had no sooner got off than a man ran up.", "example1_cn": "我刚下船,就有人冲了上来。", "example2": "No sooner had she left than it rained.", "example2_cn": "她刚走,就下起雨来。" },
+    { "us": "get rid of", "ipa": "/ɡet rɪd əv/", "example1": "It took me half an hour to get rid of him.", "example1_cn": "我花了半小时才把他打发走。", "example2": "I want to get rid of this old sofa.", "example2_cn": "我想处理掉这张旧沙发。" },
+    { "us": "to this day", "ipa": "/tə ðɪs deɪ/", "example1": "To this day it has never written a word.", "example1_cn": "直到今天它一个字也没写过。", "example2": "To this day I don't know his name.", "example2_cn": "直到今天我还不知道他的名字。" },
+    { "us": "as big as", "ipa": "/æz bɪɡ æz/", "example1": "Some diamonds were as big as marbles.", "example1_cn": "有些钻石有玻璃球那么大。", "example2": "The dog was as big as a pony.", "example2_cn": "那只狗有小马那么大。" }
+  ],
+  "stage7_cloze": {
+    "context": "I had no sooner stepped off the ship ___1___ a man tried to sell me a ring. Some of his 'diamonds' were ___2___ big as marbles. It ___3___ me half an hour to get rid of him. Later I bought a pen marked 'Made ___4___ the U.S.A.,' but it has never written a word.",
+    "blanks": [
+      { "blank_no": 1, "options": ["than", "then", "that", "when"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["as", "so", "too", "very"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["took", "takes", "taking", "take"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["in", "by", "of", "from"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "When did the sellers begin offering their goods?", "options": ["Before the ship had even anchored", "After everyone had gone ashore", "The next morning", "Only in the town"] },
+    { "stem": "How did the ring seller try to prove his diamonds were real?", "options": ["He cut a line in a store window", "He weighed them on a scale", "He showed a receipt", "He heated them"] },
+    { "stem": "What was wrong with the wonderful pen?", "options": ["It could not be filled with ink and never wrote", "It was far too heavy", "It was the wrong color", "It had no cap"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我刚下船,一个人就冲了上来\"(no sooner...than):", "options": ["I had no sooner got off the ship than a man rushed up.", "I had no sooner got off the ship then a man rushed up.", "I had no sooner got off the ship when a man rushed up.", "I no sooner had got off the ship than a man rushed up."] },
+    { "stem": "你想说\"有些钻石有玻璃球那么大\"(as...as):", "options": ["Some diamonds were as big as marbles.", "Some diamonds were as big than marbles.", "Some diamonds were so big as marbles.", "Some diamonds were big as as marbles."] },
+    { "stem": "你想说\"我花了半小时才摆脱他\"(it takes sb time to do):", "options": ["It took me half an hour to get rid of him.", "It took me half an hour getting rid of him.", "I took half an hour to get rid of him.", "It took to me half an hour to get rid of him."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "bargain 的意思是:", "options": ["讨价还价", "唱歌", "睡觉", "奔跑"] },
+    { "kind": "vocab", "stem": "genuine 的意思是:", "options": ["真的,真正的", "假的", "昂贵的", "破旧的"] },
+    { "kind": "grammar", "stem": "\"I had no sooner got off the ship ___ a man rushed up.\"(no sooner … 后面配哪个词)", "stem_cn": "我刚下船,一个人就冲了上来。", "options": ["than", "then", "that", "when"] },
+    { "kind": "grammar", "stem": "\"It ___ me half an hour to get rid of him.\"(it ___ sb 时间 to do,过去)", "stem_cn": "我花了半小时才摆脱他。", "options": ["took", "takes", "taking", "take"] },
+    { "kind": "scenario", "stem": "\"get rid of\" 的意思是:", "options": ["摆脱,除掉", "骑上", "抓住", "修理"] },
+    { "kind": "scenario", "stem": "\"made in the U.S.A.\" 的意思是:", "options": ["美国制造(产地)", "由美国人拥有", "卖到美国", "用美国的钱买"] },
+    { "kind": "reading", "stem": "Why did the writer decide not to buy anything on the ship?", "options": ["He wanted to wait until he had gone ashore", "He had no money", "He disliked all the goods", "The prices were fixed"], "passage": true },
+    { "kind": "reading", "stem": "How did the writer feel about his pen at first?", "options": ["Very pleased with the bargain", "Angry", "Bored", "Frightened"], "passage": true },
+    { "kind": "listening", "stem": "How much did the writer finally pay for the pen?", "options": ["Five dollars", "Fifty dollars", "Thirty dollars", "Ten dollars"], "audio": true },
+    { "kind": "listening", "stem": "What did the ship's decks get covered with?", "options": ["Rugs, silks, and silverware", "Fish and fruit", "Books and maps", "Flowers"], "audio": true }
+  ]
+}

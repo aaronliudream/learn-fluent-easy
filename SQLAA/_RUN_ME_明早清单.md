@@ -6,7 +6,18 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
-## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **U1–U10 十单元收官 L1–L50**,累计 2200 题)
+## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **U1–U11 十一单元收官 L1–L55**,累计 2420 题)
+
+## 📌 AM3 U11 收官(L51–L55 · `american_am3_seed_unit11.sql` · 220题=44×5,全🟢)
+> 科普/励志题材;L51 一处英名美化(Leon Bagrit→Leon Barrett),L53 轻软化(ill-treated→treated unfairly),L54/L55 用 Aaron 净化包(不读源PDF)。逐课主考:
+- 🔴 **需跑** `american_am3_seed_unit11.sql`(全新文件,含 L51–L55 五课)。
+  - **L51《自动化时代》**(过去将来 would + when 定从、could have done、Nor 倒装、as…as·enough to do + take over·自动化将改变工作)——44 题🟢。英名美化 Leon Bagrit→虚构美国人 Leon Barrett。
+  - **L52《说不出口》**(were to do 虚拟、On + 动名词、cure sb of/keep a straight face/out of stock、consider it…to do、被动不定式/分词状语·尴尬时刻)——44 题🟢。
+  - **L53《为了公众利益》**(suggest that + (should) + 原形 虚拟、be qualified to/be subject to、in writing/on one's behalf/put an end to、后置修饰、so…that/it possible for sb·司法特派员制度)——44 题🟢。轻软化 ill-treated→treated unfairly。
+  - **L54《是本能还是机智?》**(不定式/动名词作宾语 be determined/manage/keep/stop/give up doing、现在/过去分词状语、让步 no matter how/though·斗智护桃树败给蚂蚁反生钦佩)——44 题🟢。**Aaron 净化包**(昆虫散文措辞放缓,不读源PDF)。
+  - **L55《来自地球的问候》**(情态推测 may/might/could + 原形、情态+完成式 may have done、if 真实条件 if+现在/主句will、将来被动 will be done、make it possible to do/depend on·探测遥远行星寻找简单生命bacteria)——44 题🟢。**Aaron 净化包**(天文科普措辞中性化,不读源PDF)。
+- **U11 主线**:自动化时代 → 说不出口的尴尬 → 司法特派员制度 → 斗智护桃树 → 来自地球的问候;考点覆盖过去将来/虚拟(were to·suggest that·if与现在相反)/情态推测/将来被动/倒装/非谓语等。
+- 对账(U11 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **2420**(U1–U11 各 220)。
 
 ## 📌 AM3 U10 收官(L46–L50 · `american_am3_seed_unit10.sql` · 220题=44×5,全🟢)
 > 生活/幽默/科普题材;仅 L49 用净化换情节(酗酒→熬夜看小说),其余正常读。逐课主考:

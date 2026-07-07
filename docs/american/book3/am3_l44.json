@@ -1,0 +1,133 @@
+{
+  "id": "am3_l44",
+  "unit_no": 9,
+  "lesson_no": 44,
+  "title_en": "Speed and Comfort",
+  "title_cn": "又快捷又舒适",
+  "grammar_focus": "nothing can match … for …(没有…比得上;for=就…而论)、部分否定 hardly anyone(几乎没有人)、形式主语 it is + 形容词 + to do sth、prevent/keep sb from doing / take one's mind off、形容词 + enough to do / however + 主谓(原创承载 NCE3 第三册 L44 考点·无需净化:陆海空旅行方式对比说明文——论证飞机又快又舒适;美式化 airplane/highway/vacation/movie)",
+  "scene": "出远门的人常常得决定是走陆路、水路,还是坐飞机。几乎没有人能真正喜欢坐几个小时以上的火车。车厢很快就变得又挤又闷,想摆脱旅途的困扰几乎不可能。看书只能解决一部分问题,因为车轮压在铁轨上那单调的咔哒声很快就把你哄睡了。白天,睡意只是断断续续地袭来。到了夜里,你真想睡时,却往往难以入睡。即便你运气够好订到一张卧铺,也会有半宿盯着车顶那盏小蓝灯,或者在查票时摸索着找车票。到站时,你几乎精疲力尽。长途汽车旅行更不舒服,因为几乎没法看书。在州际公路上,你至少能以相当快的速度安全前行,但旅途大部分时间往往都花在服务区很少、车流拥堵的路上。相比之下,渡船和游轮提供了各式各样文明的享受。你可以在宽敞的甲板上舒展双腿,做游戏,结识有趣的人,享用美食——当然,前提总是海面平静。若海面不平静,你又容易晕船,那就没有哪种旅行方式比这更糟了。即便天气理想,坐船也很费时间,很少有人愿意为了海上旅行的乐趣而牺牲假期。飞机素有危险的名声,连老练的旅客都被它吓到。它还有一个缺点:票价昂贵。可就速度和舒适而论,什么也比不上飞机。在三万英尺的高空、云层之上、以每小时五百多英里的速度飞行,是一种令人兴奋的体验。你不必费心去想办法摆脱旅途的困扰,因为飞机很快就把你送到目的地。有几个小时,你可以靠在舒适的座椅里,尽情享受飞行。有些航班上你甚至能看电影、呷一口冷饮。可即便没有这些精致的享受,也有的是让你有事可做的东西。飞机给你一种不寻常、令人叹为观止的世界景象。你毫不费力地翱翔于高山深谷之上,真真切切看清大地的模样。如果地面被遮住看不见,你还能欣赏那绵延数英里、连成一片的云海奇观,而阳光在晴空中灿烂地照耀。飞行如此平稳,没有什么能妨碍你看书或睡觉。无论你打算怎样打发这段时间,有一点是肯定的:你会精神饱满、衣冠齐整地抵达,不必再花好几天从一段漫长疲惫的旅途中缓过来。",
+  "grammar_card": {
+    "title": "nothing can match…for / 部分否定 hardly / 形式主语 it / prevent…from doing / enough to do",
+    "intro": "①nothing can match … for …:就…而论,没有什么比得上;for 作“就…而论”。②hardly + anyone/any:几乎没有人/几乎没有,本身表否定,后面动词用肯定形式。③it is + 形容词 + to do sth:it 作形式主语,真正主语是后面的不定式:It is impossible to read。④prevent/keep sb from doing:阻止某人做;take one's mind off sth:把注意力从…移开。⑤形容词/副词 + enough to do:足够…以至于能;however + 主谓:无论怎样。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["nothing can match … for …", "就…而论没有能比得上的", "Nothing can match a plane for speed"],
+        ["hardly anyone", "几乎没有人(表否定)", "Hardly anyone enjoys it"],
+        ["it is + 形容词 + to do", "做…是…的(形式主语)", "It is impossible to read"],
+        ["prevent sb from doing", "阻止某人做", "Nothing prevents you from reading"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "hardly 本身已表否定,句中不能再加 not/no/never（× Hardly no one，√ Hardly anyone）。", "mark": "hardly anyone" },
+      { "rule": "prevent/stop/keep sb from doing 都用 from + 动名词;不能写成 prevent sb to do。", "mark": "prevent … from doing" },
+      { "rule": "美式:airplane(英式 aeroplane)、highway/freeway(英式 motorway)、vacation(英式 holiday)、movie(英式 film)。本课已按美语写。", "mark": "airplane / highway" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Which type of transport does the writer prefer, do you think?",
+    "options": ["Air travel — for its speed and comfort", "Train travel", "Car travel", "Sea travel"],
+    "answer_index": 0
+  },
+  "passage": "People traveling long distances often have to decide whether to go by land, sea, or air. Hardly anyone can truly enjoy sitting on a train for more than a few hours. Train compartments soon get cramped and stuffy, and it is almost impossible to take your mind off the journey. Reading is only a partial solution, for the monotonous rhythm of the wheels clicking on the rails soon lulls you to sleep. During the day, sleep comes in snatches. At night, when you really want to sleep, you rarely manage to. If you are lucky enough to get a sleeper, you spend half the night staring at the small blue light on the ceiling, or fumbling for your ticket when the conductor comes through. Inevitably, you arrive at your destination almost exhausted. Long car trips are even less pleasant, for it is quite impossible to read. On the interstate you can at least travel fairly safely at high speeds, but more often than not the greater part of the trip is spent on roads with few rest stops and too much traffic. By comparison, ferry rides and cruises offer a great variety of comforts. You can stretch your legs on the spacious decks, play games, meet interesting people, and enjoy good food — always assuming, of course, that the sea is calm. If it is not, and you happen to get seasick, no form of travel could be worse. Even in ideal weather, sea journeys take a long time, and relatively few people are willing to sacrifice vacation days for the pleasure of traveling by sea. Airplanes have the reputation of being dangerous, and even seasoned travelers are intimidated by them. They also have the disadvantage of being expensive. But nothing can match them for speed and comfort. Traveling at a height of 30,000 feet, far above the clouds, and at over 500 miles an hour, is an exhilarating experience. You do not have to invent ways of taking your mind off the journey, for an airplane gets you to your destination quickly. For a few hours you settle back in a deep seat and enjoy the flight. On some flights you can even watch a movie and sip a cold drink. But even when such refinements are not offered, there is plenty to keep you occupied. An airplane gives you an unusual and breathtaking view of the world. You soar effortlessly over high mountains and deep valleys, and you really see the shape of the land. If the landscape is hidden, you can enjoy the extraordinary sight of unbroken plains of cloud stretching out for miles, while the sun shines brilliantly in a clear sky. The flight is so smooth that nothing prevents you from reading or sleeping. However you decide to spend your time, one thing is certain: you will arrive fresh and unwrinkled, and you will not have to spend the next few days recovering from a long and tiring journey.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "People traveling long distances often have to decide whether to go by land, sea, or air. Hardly anyone can truly enjoy sitting on a train for more than a few hours. Train compartments soon get cramped and stuffy, and it is almost impossible to take your mind off the journey. Reading is only a partial solution, for the monotonous rhythm of the wheels clicking on the rails soon lulls you to sleep.", "text_cn": "出远门的人常常得决定是走陆路、水路,还是坐飞机。几乎没有人能真正喜欢坐几个小时以上的火车。车厢很快就变得又挤又闷,想摆脱旅途的困扰几乎不可能。看书只能解决一部分问题,因为车轮压在铁轨上那单调的咔哒声很快就把你哄睡了。" },
+    { "seq": 2, "speaker": null, "text_en": "During the day, sleep comes in snatches. At night, when you really want to sleep, you rarely manage to. If you are lucky enough to get a sleeper, you spend half the night staring at the small blue light on the ceiling, or fumbling for your ticket when the conductor comes through. Inevitably, you arrive at your destination almost exhausted.", "text_cn": "白天,睡意只是断断续续地袭来。到了夜里,你真想睡时,却往往难以入睡。即便你运气够好订到一张卧铺,也会有半宿盯着车顶那盏小蓝灯,或者在查票时摸索着找车票。到站时,你几乎精疲力尽。" },
+    { "seq": 3, "speaker": null, "text_en": "Long car trips are even less pleasant, for it is quite impossible to read. On the interstate you can at least travel fairly safely at high speeds, but more often than not the greater part of the trip is spent on roads with few rest stops and too much traffic. By comparison, ferry rides and cruises offer a great variety of comforts. You can stretch your legs on the spacious decks, play games, meet interesting people, and enjoy good food — always assuming, of course, that the sea is calm.", "text_cn": "长途汽车旅行更不舒服,因为几乎没法看书。在州际公路上,你至少能以相当快的速度安全前行,但旅途大部分时间往往都花在服务区很少、车流拥堵的路上。相比之下,渡船和游轮提供了各式各样文明的享受。你可以在宽敞的甲板上舒展双腿,做游戏,结识有趣的人,享用美食——当然,前提总是海面平静。" },
+    { "seq": 4, "speaker": null, "text_en": "If it is not, and you happen to get seasick, no form of travel could be worse. Even in ideal weather, sea journeys take a long time, and relatively few people are willing to sacrifice vacation days for the pleasure of traveling by sea. Airplanes have the reputation of being dangerous, and even seasoned travelers are intimidated by them. They also have the disadvantage of being expensive. But nothing can match them for speed and comfort.", "text_cn": "若海面不平静,你又容易晕船,那就没有哪种旅行方式比这更糟了。即便天气理想,坐船也很费时间,很少有人愿意为了海上旅行的乐趣而牺牲假期。飞机素有危险的名声,连老练的旅客都被它吓到。它还有一个缺点:票价昂贵。可就速度和舒适而论,什么也比不上飞机。" },
+    { "seq": 5, "speaker": null, "text_en": "Traveling at a height of 30,000 feet, far above the clouds, and at over 500 miles an hour, is an exhilarating experience. You do not have to invent ways of taking your mind off the journey, for an airplane gets you to your destination quickly. On some flights you can even watch a movie and sip a cold drink, but even when such refinements are not offered, there is plenty to keep you occupied. You soar effortlessly over high mountains and deep valleys, and the flight is so smooth that nothing prevents you from reading or sleeping. However you decide to spend your time, one thing is certain: you will arrive fresh and unwrinkled, and you will not have to spend the next few days recovering from a long and tiring journey.", "text_cn": "在三万英尺的高空、云层之上、以每小时五百多英里的速度飞行,是一种令人兴奋的体验。你不必费心去想办法摆脱旅途的困扰,因为飞机很快就把你送到目的地。有些航班上你甚至能看电影、呷一口冷饮,可即便没有这些精致的享受,也有的是让你有事可做的东西。你毫不费力地翱翔于高山深谷之上,飞行如此平稳,没有什么能妨碍你看书或睡觉。无论你打算怎样打发这段时间,有一点是肯定的:你会精神饱满、衣冠齐整地抵达,不必再花好几天从一段漫长疲惫的旅途中缓过来。" }
+  ],
+  "words": [
+    { "word": "compartment", "ipa": "/kəmˈpɑːrtmənt/", "pos": "n", "meaning_cn": "(列车)分隔间,单间", "example": "train compartments get cramped" },
+    { "word": "cramped", "ipa": "/kræmpt/", "pos": "adj", "meaning_cn": "窄小的,拥挤的", "example": "cramped and stuffy" },
+    { "word": "monotonous", "ipa": "/məˈnɑːtənəs/", "pos": "adj", "meaning_cn": "单调乏味的", "example": "the monotonous rhythm of the wheels" },
+    { "word": "lull", "ipa": "/lʌl/", "pos": "v", "meaning_cn": "催人欲睡,使平静", "example": "lulls you to sleep" },
+    { "word": "destination", "ipa": "/ˌdestɪˈneɪʃən/", "pos": "n", "meaning_cn": "目的地", "example": "arrive at your destination" },
+    { "word": "exhaust", "ipa": "/ɪɡˈzɔːst/", "pos": "v", "meaning_cn": "使精疲力尽", "example": "almost exhausted" },
+    { "word": "spacious", "ipa": "/ˈspeɪʃəs/", "pos": "adj", "meaning_cn": "宽敞的", "example": "the spacious decks" },
+    { "word": "seasick", "ipa": "/ˈsiːsɪk/", "pos": "adj", "meaning_cn": "晕船的", "example": "you happen to get seasick" },
+    { "word": "exhilarating", "ipa": "/ɪɡˈzɪləreɪtɪŋ/", "pos": "adj", "meaning_cn": "使人高兴的,令人兴奋的", "example": "an exhilarating experience" },
+    { "word": "soar", "ipa": "/sɔːr/", "pos": "v", "meaning_cn": "高飞,翱翔", "example": "you soar effortlessly over mountains" },
+    { "word": "breathtaking", "ipa": "/ˈbreθteɪkɪŋ/", "pos": "adj", "meaning_cn": "激动人心的,惊人的", "example": "a breathtaking view of the world" },
+    { "word": "intimidate", "ipa": "/ɪnˈtɪmɪdeɪt/", "pos": "v", "meaning_cn": "恐吓,恫吓", "example": "travelers are intimidated by them" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "nothing can match … for …(没有…比得上;for=就…而论)" },
+    { "gp": "gp2", "name": "部分否定 hardly anyone(几乎没有人)" },
+    { "gp": "gp3", "name": "形式主语 it is + 形容词 + to do sth" },
+    { "gp": "gp4", "name": "prevent/keep sb from doing / take one's mind off" },
+    { "gp": "gp5", "name": "形容词 + enough to do / however + 主谓" },
+    { "gp": "gp6", "name": "词汇辨析(soar/spacious/monotonous)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Nothing can ___ an airplane for speed and comfort.\"(“没有…比得上”,填这个动词)", "stem_cn": "论速度和舒适,没什么比得上飞机。", "options": ["match", "join", "follow", "copy"] },
+    { "gp": "gp1", "stem": "\"Nothing can match a plane ___ speed.\"(“就…而论”,match 后填介词)", "stem_cn": "就速度而论,没什么比得上飞机。", "options": ["for", "to", "with", "at"] },
+    { "gp": "gp1", "stem": "\"For comfort, ___ can match a plane.\"(“没有任何东西能比得上”,填这个词)", "stem_cn": "论舒适,没有任何东西比得上飞机。", "options": ["nothing", "anything", "something", "everything"] },
+    { "gp": "gp2", "stem": "\"___ anyone can enjoy a long train ride.\"(“几乎没有人”)", "stem_cn": "几乎没有人能享受长途火车。", "options": ["Hardly", "Nearly", "Almost", "Quite"] },
+    { "gp": "gp2", "stem": "\"There is ___ any space in a cramped compartment.\"(“几乎没有…”,表否定程度的副词)", "stem_cn": "拥挤的车厢里几乎没有空间。", "options": ["hardly", "nearly", "almost", "mostly"] },
+    { "gp": "gp2", "stem": "\"Hardly anyone ___ enjoys sitting for hours.\"(hardly 已含否定,后面动词用肯定形式)", "stem_cn": "几乎没有人真正喜欢一坐几个钟头。", "options": ["truly", "not", "never", "hardly"] },
+    { "gp": "gp3", "stem": "\"It is almost impossible ___ your mind off the journey.\"(it 作形式主语,后接不定式)", "stem_cn": "要摆脱旅途的困扰几乎不可能。", "options": ["to take", "taking", "take", "took"] },
+    { "gp": "gp3", "stem": "\"It is quite impossible ___ in a moving car.\"(形式主语 it + 形容词 + 不定式)", "stem_cn": "在行驶的车里看书几乎不可能。", "options": ["to read", "reading", "read", "reads"] },
+    { "gp": "gp3", "stem": "\"___ is exhilarating to fly above the clouds.\"(形式主语,填做形式主语的那个词)", "stem_cn": "在云端飞行令人兴奋。", "options": ["It", "That", "This", "There"] },
+    { "gp": "gp4", "stem": "\"The smooth flight lets nothing prevent you ___ reading.\"(prevent sb ___ doing:阻止某人做)", "stem_cn": "平稳的飞行不会妨碍你看书。", "options": ["from", "to", "of", "for"] },
+    { "gp": "gp4", "stem": "\"You cannot take your mind ___ a bumpy train ride.\"(take one's mind ___ sth:把注意力移开)", "stem_cn": "颠簸的火车让你无法转移注意力。", "options": ["off", "on", "in", "up"] },
+    { "gp": "gp4", "stem": "\"There is plenty to keep you ___ on a long flight.\"(keep sb + 过去分词:使…有事可做)", "stem_cn": "长途飞行有很多事让你有事可做。", "options": ["occupied", "occupy", "occupying", "to occupy"] },
+    { "gp": "gp5", "stem": "\"If you are lucky ___ to get a sleeper, you can lie down.\"(形容词 + ___ + to do:足够…以至于能)", "stem_cn": "若你运气够好订到卧铺,就能躺下。", "options": ["enough", "too", "so", "very"] },
+    { "gp": "gp5", "stem": "\"The seat is comfortable ___ to sleep in.\"(comfortable + ___ + to do)", "stem_cn": "这座位舒服得能睡着。", "options": ["enough", "too", "more", "such"] },
+    { "gp": "gp5", "stem": "\"___ you decide to spend the time, you'll arrive fresh.\"(“无论你怎样…”,让步)", "stem_cn": "无论你怎样打发时间,都会精神饱满地到达。", "options": ["However", "Whatever", "Whenever", "Wherever"] },
+    { "gp": "gp6", "stem": "\"To fly or rise high in the air is to ___.\"(“高飞、翱翔”用哪个词)", "stem_cn": "在空中高飞、翱翔。", "options": ["soar", "sink", "crawl", "halt"] },
+    { "gp": "gp6", "stem": "\"A room that is large and roomy is ___.\"(“宽敞的”用哪个词)", "stem_cn": "又大又宽敞的房间。", "options": ["spacious", "cramped", "narrow", "tiny"] },
+    { "gp": "gp6", "stem": "\"Something dull that never changes feels ___.\"(“单调乏味的”用哪个词)", "stem_cn": "一成不变、枯燥乏味的。", "options": ["monotonous", "exciting", "varied", "sudden"] }
+  ],
+  "stage6": [
+    { "stem": "cramped 的意思是:", "options": ["窄小的,拥挤的", "宽敞的", "明亮的", "干净的"] },
+    { "stem": "monotonous 的意思是:", "options": ["单调乏味的", "有趣的", "短暂的", "响亮的"] },
+    { "stem": "exhilarating 的意思是:", "options": ["使人高兴的,令人兴奋的", "令人厌烦的", "使人疲倦的", "令人恐惧的"] },
+    { "stem": "intimidate 的意思是:", "options": ["恐吓,恫吓", "鼓励", "欢迎", "照顾"] },
+    { "stem": "destination 的意思是:", "options": ["目的地", "起点", "路线", "行李"] },
+    { "stem": "breathtaking 的意思是:", "options": ["激动人心的,惊人的", "平淡无奇的", "十分普通的", "缓慢的"] }
+  ],
+  "contrast": [
+    { "us": "airplane", "uk": "aeroplane", "note_cn": "飞机;美语 airplane,英式 aeroplane" },
+    { "us": "highway", "uk": "motorway", "note_cn": "高速公路;美语 highway/freeway,英式 motorway" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" }
+  ],
+  "chunks": [
+    { "us": "take one's mind off", "ipa": "/teɪk wʌnz maɪnd ɔːf/", "example1": "You can't take your mind off a bumpy ride.", "example1_cn": "颠簸的旅途让你无法转移注意力。", "example2": "A good book takes your mind off your worries.", "example2_cn": "一本好书能让你忘掉烦恼。" },
+    { "us": "more often than not", "ipa": "/mɔːr ˈɔːfən ðæn nɑːt/", "example1": "More often than not, the roads are crowded.", "example1_cn": "路上往往很拥挤。", "example2": "More often than not, he arrives late.", "example2_cn": "他经常迟到。" },
+    { "us": "keep sb occupied", "ipa": "/kiːp ˈsʌmbədi ˈɑːkjupaɪd/", "example1": "There is plenty to keep you occupied.", "example1_cn": "有很多事让你有事可做。", "example2": "Toys keep the kids occupied.", "example2_cn": "玩具让孩子们有事可做。" },
+    { "us": "settle back", "ipa": "/ˈsetl bæk/", "example1": "You settle back in a deep seat and relax.", "example1_cn": "你靠在舒适的座椅里放松。", "example2": "He settled back and closed his eyes.", "example2_cn": "他往后一靠,闭上了眼睛。" }
+  ],
+  "stage7_cloze": {
+    "context": "People who travel far must decide whether to go by land, sea, or air. Hardly ___1___ can truly enjoy a long train ride, and it is almost impossible ___2___ your mind off the journey. Sea trips are pleasant but slow. Airplanes are expensive, yet nothing can match them ___3___ speed and comfort. The flight is so smooth that nothing prevents you ___4___ reading or sleeping.",
+    "blanks": [
+      { "blank_no": 1, "options": ["anyone", "someone", "no one", "everyone"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["to take", "taking", "take", "took"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["for", "to", "with", "at"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["from", "to", "of", "for"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Which type of transport does the writer prefer?", "options": ["Air travel (the airplane)", "Train travel", "Car travel", "Sea travel"] },
+    { "stem": "Why does the writer dislike long train journeys?", "options": ["Compartments get cramped and stuffy, and sleep comes only in snatches", "The trains are too fast", "The tickets are too cheap", "There is no scenery"] },
+    { "stem": "What can spoil a sea journey?", "options": ["Getting seasick when the sea is rough", "Arriving too early", "The lack of decks", "Too much reading"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"论速度和舒适,没什么能比得上飞机\"(nothing can match … for …):", "options": ["Nothing can match an airplane for speed and comfort.", "Nothing can match to an airplane for speed and comfort.", "Nothing can match an airplane of speed and comfort.", "Anything can match an airplane for speed and comfort."] },
+    { "stem": "你想说\"几乎没有人喜欢长途火车\"(hardly anyone):", "options": ["Hardly anyone enjoys a long train ride.", "Hardly no one enjoys a long train ride.", "Hardly anyone doesn't enjoy a long train ride.", "Hardly someone enjoys a long train ride."] },
+    { "stem": "你想说\"平稳的飞行不会妨碍你看书\"(prevent sb from doing):", "options": ["A smooth flight does not prevent you from reading.", "A smooth flight does not prevent you to read.", "A smooth flight does not prevent you reading.", "A smooth flight does not prevent you for reading."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "intimidate 的意思是:", "options": ["恐吓,恫吓", "鼓励", "欢迎", "照顾"] },
+    { "kind": "vocab", "stem": "soar 的意思是:", "options": ["高飞,翱翔", "下沉", "爬行", "停止"] },
+    { "kind": "grammar", "stem": "\"Nothing can ___ an airplane for speed and comfort.\"(“没有…比得上”,填这个动词)", "stem_cn": "论速度和舒适,没什么比得上飞机。", "options": ["match", "join", "follow", "copy"] },
+    { "kind": "grammar", "stem": "\"___ anyone can enjoy a long train ride.\"(“几乎没有人”)", "stem_cn": "几乎没有人能享受长途火车。", "options": ["Hardly", "Nearly", "Almost", "Quite"] },
+    { "kind": "scenario", "stem": "\"take one's mind off\" 的意思是:", "options": ["把注意力从…移开", "下定决心", "牢记在心", "改变主意"] },
+    { "kind": "scenario", "stem": "\"more often than not\" 的意思是:", "options": ["往往,经常", "从不", "偶尔一次", "恰好"] },
+    { "kind": "reading", "stem": "According to the writer, why are long car trips unpleasant?", "options": ["You cannot read, and much of the trip is on crowded roads with few rest stops", "Cars are too slow", "Cars have no seats", "You must always drive at night"], "passage": true },
+    { "kind": "reading", "stem": "What does the writer say is the main advantage of airplanes?", "options": ["Nothing can match them for speed and comfort", "They are the cheapest way to travel", "They never crash", "They serve the best food"], "passage": true },
+    { "kind": "listening", "stem": "What does the writer say about sleep on a night train?", "options": ["At night, when you really want to sleep, you rarely manage to", "You sleep deeply all night long", "Trains have no sleepers at all", "You are told not to sleep"], "audio": true },
+    { "kind": "listening", "stem": "What breathtaking view can an airplane offer?", "options": ["Unbroken plains of cloud stretching for miles in a clear sky", "City streets seen close up", "The ocean floor", "Deep underground caves"], "audio": true }
+  ]
+}

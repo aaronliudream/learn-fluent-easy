@@ -400,7 +400,8 @@ export default function TeacherStudent() {
                                 </>
                               ) : mk.kind === "cloze" ? (
                                 <>
-                                  {/* 完形:按篇。点"查看整篇"→ get_teacher_student_passage_review 读 snapshot 错空 */}
+                                  {/* 完形:snapshot 只存做错的空(选项/正确/作答/解析),无整篇原文、无做对的空。
+                                      故诚实标"查看错空"(非整篇);要真整篇需做题时补写正文+全部空(第二步)。 */}
                                   <div className="flex flex-wrap items-center gap-2 text-sm font-semibold">
                                     <span>{mk.title || t("完形一篇")}</span>
                                     <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[11px] font-bold text-rose-700 dark:bg-rose-500/20 dark:text-rose-300">
@@ -410,7 +411,7 @@ export default function TeacherStudent() {
                                       type="button"
                                       onClick={() => togglePassage("cloze", mk.id)}
                                       className="ml-auto inline-flex items-center gap-1 rounded-md border border-border px-2 py-0.5 text-[11px] font-normal text-primary hover:bg-muted/50">
-                                      📖 <T>查看整篇</T> {reviewOpen === `cloze:${mk.id}` ? "▴" : "▾"}
+                                      📖 <T>查看错空</T> {reviewOpen === `cloze:${mk.id}` ? "▴" : "▾"}
                                     </button>
                                   </div>
                                   {reviewOpen === `cloze:${mk.id}` && (
@@ -420,11 +421,11 @@ export default function TeacherStudent() {
                                           <Loader2 className="mr-2 size-4 animate-spin" /> <T>加载中…</T>
                                         </div>
                                       ) : reviews[`cloze:${mk.id}`]?.missing ? (
-                                        <div className="text-xs text-muted-foreground"><T>原题已删除,无法显示整篇。</T></div>
+                                        <div className="text-xs text-muted-foreground"><T>该完形错空快照缺失,无法显示。</T></div>
                                       ) : reviews[`cloze:${mk.id}`] ? (
                                         <PassageReviewPanel rv={reviews[`cloze:${mk.id}`]!} />
                                       ) : (
-                                        <div className="text-xs text-muted-foreground"><T>无法加载整篇。</T></div>
+                                        <div className="text-xs text-muted-foreground"><T>无法加载。</T></div>
                                       )}
                                     </div>
                                   )}

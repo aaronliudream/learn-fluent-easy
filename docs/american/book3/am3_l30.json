@@ -1,0 +1,133 @@
+{
+  "id": "am3_l30",
+  "unit_no": 6,
+  "lesson_no": 30,
+  "title_en": "The Death of a Ghost",
+  "title_cn": "幽灵之死",
+  "grammar_focus": "give 短语(give up / give in / give away)、say 与 tell 的区别、do 与 make 的搭配、be supposed to(应该/据说)、used to do(过去习惯)与过去进行、过去完成时的被动(work had been done)(原创承载 NCE3 L30 考点·净化换情节:去掉'战时开小差/被当局追捕'的外壳,改为埃里克年轻时与家人争吵后出走、被误以为已故,秘密归家隐居;鬼屋悬念与隐士承载原样保留·无违法元素)",
+  "scene": "多年来,村里人一直相信恩德利农场闹鬼。农场归乔和鲍勃·考克斯两兄弟所有,他们雇了几个工人,可谁都不肯久留。每个工人辞工时,讲的都是同一个故事:他们总是一觉醒来,发现活儿一夜之间就干完了。趁大家睡觉的时候,干草已被割好,牛棚也已打扫干净。有个熬了一整夜的工人声称,他看见月光下有个身影在割庄稼。渐渐地,一个说法被大家接受了:考克斯兄弟有一个尽职尽责的幽灵替他们干了大部分的活。谁也没料到,农场上还有一个从没露过面的人。可事实正是如此。不久前,村民们惊讶地得知,恩德利的幽灵去世了。人人都去参加了葬礼,因为那个“幽灵”不是别人,正是埃里克·考克斯——据说早在年轻时就去世的第三个兄弟。葬礼过后,乔和鲍勃说出了一个保守了五十多年的秘密。埃里克本是家中长子。年轻时,他和家人大吵一架,负气出海远走,多年来大家都以为他已经不在人世。其实他早已悄悄回了家,只是太要强、太羞愧,不愿再面对村里人。父亲把他藏了起来,对外只说埃里克已经死了。父亲去世后,乔和鲍勃觉得替他保守秘密是自己的责任。这么多年,埃里克一直像隐士一样生活。他过去总是白天睡觉、夜里干活,浑然不知自己已成了恩德利的幽灵。可当他去世时,两个兄弟发现,这个秘密再也瞒不下去了。",
+  "grammar_card": {
+    "title": "give up / say vs tell / do vs make / be supposed to / used to do",
+    "intro": "①give 短语:give up(放弃)、give in(屈服)、give away(赠送/泄露)。②say 与 tell:tell a lie / tell the time / tell a story;say goodbye / say so。③do 与 make:do the work / do sb a favor / do one's best;make a mistake / make a speech。④be supposed to “(按规矩)应该”或“据说、被认为”。⑤used to do 表示过去的习惯;某时刻“正在做”用过去进行(was/were doing)。⑥过去完成时的被动:had been + 过去分词,如 the work had been done。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["give up / give in / give away", "放弃 / 屈服 / 赠送", "he gave up his job"],
+        ["tell a lie / say goodbye", "撒谎 / 道别", "he told the same story"],
+        ["do a favor / make a mistake", "帮忙 / 犯错", "do most of the work"],
+        ["be supposed to / used to do", "应该·据说 / 过去常", "he used to work at night"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "tell 常接 a lie / a story / the time / the truth;say 常接 goodbye / so / 一句话。别把 say 和 tell 混用。", "mark": "say ≠ tell" },
+      { "rule": "used to do 是过去的习惯(现在不再);was/were doing 是过去某一刻正在进行。两者不同。", "mark": "used to do ≠ was doing" },
+      { "rule": "美式:laborer(英式 labourer,少个 u)、corn(美语常指玉米,英式泛指谷物、玉米叫 maize)。本课已按美语写。", "mark": "laborer / corn" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Who was the ghost of Endley Farm?",
+    "options": ["A third brother who had been hidden for years", "A real spirit", "A visiting actor", "A lost traveler"],
+    "answer_index": 0
+  },
+  "passage": "For years, the people of the village believed that Endley Farm was haunted. The farm was owned by two brothers, Joe and Bob Cox, who hired a few laborers, but no one was willing to stay for long. Every time a worker gave up his job, he told the same story. The farmhands said that they always woke up to find that the work had been done overnight. Hay had been cut and the cowsheds had been cleaned while everyone slept. One worker, who stayed up all night, claimed to have seen a figure cutting corn in the moonlight. In time, it became an accepted fact that the Cox brothers were served by a conscientious ghost that did most of their work for them. No one suspected that there might be someone else on the farm who had never been seen. Yet that was exactly the case. A short time ago, the villagers were astonished to learn that the ghost of Endley had died. Everyone went to the funeral, for the 'ghost' was none other than Eric Cox, a third brother who was supposed to have died as a young man. After the funeral, Joe and Bob revealed a secret that they had kept for over fifty years. Eric had been the eldest son of the family. As a young man he had quarreled bitterly with his relatives and had run off to sea, and for years everyone believed he had been lost. In truth he had come home in secret, too proud and too ashamed to face the village again. His father hid him and told everybody that Eric had died. When their father passed away, Joe and Bob thought it their duty to keep Eric in hiding. All these years, Eric had lived as a recluse. He used to sleep during the day and work at night, quite unaware that he had become the ghost of Endley. When he died, however, his brothers found it impossible to keep the secret any longer.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "For years, the people of the village believed that Endley Farm was haunted. The farm was owned by two brothers, Joe and Bob Cox, who hired a few laborers, but no one was willing to stay for long. Every time a worker gave up his job, he told the same story.", "text_cn": "多年来,村里人一直相信恩德利农场闹鬼。农场归乔和鲍勃·考克斯两兄弟所有,他们雇了几个工人,可谁都不肯久留。每个工人辞工时,讲的都是同一个故事。" },
+    { "seq": 2, "speaker": null, "text_en": "The farmhands said that they always woke up to find that the work had been done overnight. Hay had been cut and the cowsheds had been cleaned while everyone slept. One worker, who stayed up all night, claimed to have seen a figure cutting corn in the moonlight. In time, it became an accepted fact that the Cox brothers were served by a conscientious ghost that did most of their work for them.", "text_cn": "工人们说,他们总是一觉醒来,发现活儿一夜之间就干完了。趁大家睡觉的时候,干草已被割好,牛棚也已打扫干净。有个熬了一整夜的工人声称,他看见月光下有个身影在割庄稼。渐渐地,一个说法被大家接受了:考克斯兄弟有一个尽职尽责的幽灵替他们干了大部分的活。" },
+    { "seq": 3, "speaker": null, "text_en": "No one suspected that there might be someone else on the farm who had never been seen. Yet that was exactly the case. A short time ago, the villagers were astonished to learn that the ghost of Endley had died. Everyone went to the funeral, for the 'ghost' was none other than Eric Cox, a third brother who was supposed to have died as a young man. After the funeral, Joe and Bob revealed a secret that they had kept for over fifty years.", "text_cn": "谁也没料到,农场上还有一个从没露过面的人。可事实正是如此。不久前,村民们惊讶地得知,恩德利的幽灵去世了。人人都去参加了葬礼,因为那个“幽灵”不是别人,正是埃里克·考克斯——据说早在年轻时就去世的第三个兄弟。葬礼过后,乔和鲍勃说出了一个保守了五十多年的秘密。" },
+    { "seq": 4, "speaker": null, "text_en": "Eric had been the eldest son of the family. As a young man he had quarreled bitterly with his relatives and had run off to sea, and for years everyone believed he had been lost. In truth he had come home in secret, too proud and too ashamed to face the village again. His father hid him and told everybody that Eric had died.", "text_cn": "埃里克本是家中长子。年轻时,他和家人大吵一架,负气出海远走,多年来大家都以为他已经不在人世。其实他早已悄悄回了家,只是太要强、太羞愧,不愿再面对村里人。父亲把他藏了起来,对外只说埃里克已经死了。" },
+    { "seq": 5, "speaker": null, "text_en": "When their father passed away, Joe and Bob thought it their duty to keep Eric in hiding. All these years, Eric had lived as a recluse. He used to sleep during the day and work at night, quite unaware that he had become the ghost of Endley. When he died, however, his brothers found it impossible to keep the secret any longer.", "text_cn": "父亲去世后,乔和鲍勃觉得替他保守秘密是自己的责任。这么多年,埃里克一直像隐士一样生活。他过去总是白天睡觉、夜里干活,浑然不知自己已成了恩德利的幽灵。可当他去世时,两个兄弟发现,这个秘密再也瞒不下去了。" }
+  ],
+  "words": [
+    { "word": "laborer", "ipa": "/ˈleɪbərər/", "pos": "n", "meaning_cn": "劳动者,工人", "example": "hired a few laborers" },
+    { "word": "overnight", "ipa": "/ˈoʊvərnaɪt/", "pos": "adv", "meaning_cn": "一夜之间", "example": "the work had been done overnight" },
+    { "word": "hay", "ipa": "/heɪ/", "pos": "n", "meaning_cn": "干草", "example": "hay had been cut" },
+    { "word": "corn", "ipa": "/kɔːrn/", "pos": "n", "meaning_cn": "谷物;(美)玉米", "example": "cutting corn in the moonlight" },
+    { "word": "moonlight", "ipa": "/ˈmuːnlaɪt/", "pos": "n", "meaning_cn": "月光", "example": "a figure in the moonlight" },
+    { "word": "conscientious", "ipa": "/ˌkɑːnʃiˈenʃəs/", "pos": "adj", "meaning_cn": "认真尽责的", "example": "a conscientious ghost" },
+    { "word": "suspect", "ipa": "/səˈspekt/", "pos": "v", "meaning_cn": "怀疑,料想", "example": "no one suspected" },
+    { "word": "recluse", "ipa": "/ˈreklus/", "pos": "n", "meaning_cn": "隐士", "example": "Eric had lived as a recluse" },
+    { "word": "haunted", "ipa": "/ˈhɔːntɪd/", "pos": "adj", "meaning_cn": "闹鬼的", "example": "the farm was haunted" },
+    { "word": "reveal", "ipa": "/rɪˈviːl/", "pos": "v", "meaning_cn": "揭露,透露", "example": "revealed a secret" },
+    { "word": "astonish", "ipa": "/əˈstɑːnɪʃ/", "pos": "v", "meaning_cn": "使惊讶", "example": "villagers were astonished" },
+    { "word": "funeral", "ipa": "/ˈfjuːnərəl/", "pos": "n", "meaning_cn": "葬礼", "example": "everyone went to the funeral" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "give 短语(give up / give in / give away)" },
+    { "gp": "gp2", "name": "say 与 tell 的区别" },
+    { "gp": "gp3", "name": "do 与 make 的搭配" },
+    { "gp": "gp4", "name": "be supposed to(应该 / 据说)" },
+    { "gp": "gp5", "name": "used to do(过去习惯)与过去进行" },
+    { "gp": "gp6", "name": "词汇辨析(conscientious/recluse/reveal)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"No one was willing to stay, so each worker gave ___ his job.\"(\"放弃\"工作用 give ___)", "stem_cn": "每个工人都放弃了工作。", "options": ["up", "in", "away", "out"] },
+    { "gp": "gp1", "stem": "\"The enemy finally gave ___ and surrendered.\"(\"屈服、投降\"用 give ___)", "stem_cn": "敌人最终屈服投降了。", "options": ["in", "up", "away", "off"] },
+    { "gp": "gp1", "stem": "\"He gave ___ all his old books to the library.\"(\"赠送、捐出\"用 give ___)", "stem_cn": "他把旧书都捐给了图书馆。", "options": ["away", "up", "in", "out"] },
+    { "gp": "gp2", "stem": "\"Every worker ___ the same story about the ghost.\"(\"讲(故事)\"用哪个动词)", "stem_cn": "每个工人都讲同样的鬼故事。", "options": ["told", "said", "spoke", "talked"] },
+    { "gp": "gp2", "stem": "\"It's wrong to ___ a lie.\"(\"撒谎\"的固定搭配)", "stem_cn": "撒谎是不对的。", "options": ["tell", "say", "speak", "talk"] },
+    { "gp": "gp2", "stem": "\"He waved and ___ goodbye to his friends.\"(\"道别\"的固定搭配)", "stem_cn": "他挥手和朋友们道别。", "options": ["said", "told", "spoke", "talked"] },
+    { "gp": "gp3", "stem": "\"The ghost ___ most of the work on the farm.\"(\"做(工作)\"用哪个动词)", "stem_cn": "幽灵做了农场大部分的活。", "options": ["did", "made", "took", "gave"] },
+    { "gp": "gp3", "stem": "\"Everyone can ___ a mistake now and then.\"(\"犯错误\"的固定搭配)", "stem_cn": "谁都难免会犯错。", "options": ["make", "do", "take", "give"] },
+    { "gp": "gp3", "stem": "\"Could you ___ me a favor?\"(\"帮个忙\"的固定搭配)", "stem_cn": "你能帮我个忙吗?", "options": ["do", "make", "take", "give"] },
+    { "gp": "gp4", "stem": "\"Eric was ___ to have died as a young man.\"(\"据说、被认为\"用 be ___ to)", "stem_cn": "据说埃里克年轻时就去世了。", "options": ["supposed", "suppose", "supposing", "supposition"] },
+    { "gp": "gp4", "stem": "\"You are ___ to knock before you enter.\"(\"(按规矩)应该\"用 be ___ to)", "stem_cn": "进门前你应该先敲门。", "options": ["supposed", "supposing", "suppose", "supposedly"] },
+    { "gp": "gp4", "stem": "\"The train is ___ to arrive at noon.\"(\"照理应当\"用 be ___ to)", "stem_cn": "火车照理应当中午到。", "options": ["supposed", "suppose", "supposing", "supposal"] },
+    { "gp": "gp5", "stem": "\"Eric ___ sleep during the day and work at night.\"(过去\"习惯性地做\"用 ___ do)", "stem_cn": "埃里克过去白天睡、夜里干活。", "options": ["used to", "was used to", "is used to", "uses to"] },
+    { "gp": "gp5", "stem": "\"He ___ working in the fields when the worker saw him.\"(某时刻\"正在做\"用过去进行)", "stem_cn": "那工人看到他时,他正在田里干活。", "options": ["was", "used to", "is", "has been"] },
+    { "gp": "gp5", "stem": "\"There ___ to be an old barn here years ago.\"(过去\"曾经存在\"用 ___ to be)", "stem_cn": "多年前这里曾有一座旧谷仓。", "options": ["used", "was used", "is used", "uses"] },
+    { "gp": "gp6", "stem": "\"A person who works hard and carefully is ___.\"(\"认真尽责的\"用哪个词)", "stem_cn": "做事认真负责的人。", "options": ["conscientious", "careless", "lazy", "rude"] },
+    { "gp": "gp6", "stem": "\"A person who lives alone and avoids others is a ___.\"(\"隐士\"用哪个词)", "stem_cn": "独居、避世的人。", "options": ["recluse", "leader", "guest", "teacher"] },
+    { "gp": "gp6", "stem": "\"To make a hidden secret known is to ___ it.\"(\"揭露、透露\"用哪个词)", "stem_cn": "把秘密公之于众。", "options": ["reveal", "hide", "forget", "keep"] }
+  ],
+  "stage6": [
+    { "stem": "haunted 的意思是:", "options": ["闹鬼的", "明亮的", "宽敞的", "崭新的"] },
+    { "stem": "conscientious 的意思是:", "options": ["认真尽责的", "懒惰的", "粗心的", "胆小的"] },
+    { "stem": "suspect 的意思是:", "options": ["怀疑,料想", "相信", "证明", "欢迎"] },
+    { "stem": "astonish 的意思是:", "options": ["使惊讶", "使平静", "使疲倦", "使无聊"] },
+    { "stem": "funeral 的意思是:", "options": ["葬礼", "婚礼", "生日", "毕业"] },
+    { "stem": "moonlight 的意思是:", "options": ["月光", "日出", "雷声", "暴雨"] }
+  ],
+  "contrast": [
+    { "us": "corn", "uk": "maize", "note_cn": "玉米;美语 corn 常指玉米,英式 corn 泛指谷物、玉米叫 maize" },
+    { "us": "laborer", "uk": "labourer", "note_cn": "工人;拼写差异,美语无 u" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天(收割季);美语 fall,英式 autumn" },
+    { "us": "flashlight", "uk": "torch", "note_cn": "手电筒;美语 flashlight,英式 torch" }
+  ],
+  "chunks": [
+    { "us": "give up", "ipa": "/ɡɪv ʌp/", "example1": "Every worker gave up his job.", "example1_cn": "每个工人都辞去了工作。", "example2": "Don't give up so easily.", "example2_cn": "别这么轻易放弃。" },
+    { "us": "used to do", "ipa": "/ˈjuːst tə/", "example1": "He used to work at night.", "example1_cn": "他过去总在夜里干活。", "example2": "There used to be a farm here.", "example2_cn": "这里以前有一座农场。" },
+    { "us": "none other than", "ipa": "/nʌn ˈʌðər ðæn/", "example1": "The ghost was none other than Eric.", "example1_cn": "那幽灵不是别人,正是埃里克。", "example2": "The winner was none other than my brother.", "example2_cn": "获胜者不是别人,正是我哥哥。" },
+    { "us": "in hiding", "ipa": "/ɪn ˈhaɪdɪŋ/", "example1": "Eric remained in hiding for years.", "example1_cn": "埃里克藏匿了很多年。", "example2": "The cat stayed in hiding under the bed.", "example2_cn": "那只猫躲在床底下不出来。" }
+  ],
+  "stage7_cloze": {
+    "context": "For years the village believed Endley Farm was haunted. Every time a worker gave ___1___ his job, he said the work had been done overnight. In fact the 'ghost' was ___2___ other than Eric Cox, a brother who was ___3___ to have died young. He ___4___ to sleep by day and work by night, never knowing he had become the ghost of Endley.",
+    "blanks": [
+      { "blank_no": 1, "options": ["up", "in", "away", "out"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["none", "no", "not", "never"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["supposed", "suppose", "supposing", "supposition"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["used", "was used", "uses", "is used"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did the farmhands keep quitting?", "options": ["They woke to find the work already done overnight", "The pay was too low", "The farm was too far away", "They disliked the brothers"] },
+    { "stem": "Who was the 'ghost' of Endley really?", "options": ["Eric Cox, a hidden third brother", "A neighbor from the village", "A traveling stranger", "Joe's young son"] },
+    { "stem": "How did Eric spend his days and nights?", "options": ["He slept by day and worked by night", "He worked by day and slept at night", "He was always away", "He never did any work"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"每个工人都放弃了工作\"(give up):", "options": ["Every worker gave up his job.", "Every worker gave up of his job.", "Every worker give up his job.", "Every worker gave his job away."] },
+    { "stem": "你想说\"据说他年轻时就去世了\"(be supposed to):", "options": ["He is supposed to have died young.", "He is suppose to have died young.", "He is supposed to died young.", "He supposed to have died young."] },
+    { "stem": "你想说\"他过去白天睡、夜里干活\"(used to do):", "options": ["He used to sleep by day and work by night.", "He use to sleep by day and work by night.", "He used sleep by day and work by night.", "He was used to sleep by day and work by night."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "haunted 的意思是:", "options": ["闹鬼的", "明亮的", "宽敞的", "崭新的"] },
+    { "kind": "vocab", "stem": "reveal 的意思是:", "options": ["揭露,透露", "隐藏", "遗忘", "保留"] },
+    { "kind": "grammar", "stem": "\"Every worker gave ___ his job.\"(\"放弃\"用 give ___)", "stem_cn": "每个工人都放弃了工作。", "options": ["up", "in", "away", "out"] },
+    { "kind": "grammar", "stem": "\"Eric was ___ to have died young.\"(\"据说\"用 be ___ to)", "stem_cn": "据说埃里克年轻时就去世了。", "options": ["supposed", "suppose", "supposing", "supposition"] },
+    { "kind": "scenario", "stem": "\"give up\" 在\"gave up his job\"里的意思是:", "options": ["放弃", "赠送", "举起", "屈服"] },
+    { "kind": "scenario", "stem": "\"in hiding\" 的意思是:", "options": ["躲藏着,隐匿", "大声喊叫", "公开露面", "四处旅行"] },
+    { "kind": "reading", "stem": "Why did the farmhands never stay long at Endley Farm?", "options": ["They kept waking to find the work mysteriously done", "The wages were poor", "The farmhouse was cold", "The brothers were cruel to them"], "passage": true },
+    { "kind": "reading", "stem": "What was the real secret behind the 'ghost'?", "options": ["A hidden brother had been living and working on the farm", "The farm had a secret machine", "The brothers had made the whole thing up", "There was no ghost story at all"], "passage": true },
+    { "kind": "listening", "stem": "How did the villagers learn the ghost had 'died'?", "options": ["They were astonished by the news and went to the funeral", "They saw it vanish into the air", "A newspaper reported it", "No one ever found out"], "audio": true },
+    { "kind": "listening", "stem": "What work did the 'ghost' do overnight?", "options": ["Cut hay and cleaned the cowsheds", "Cooked meals for the family", "Painted the farmhouse", "Fed the whole village"], "audio": true }
+  ]
+}

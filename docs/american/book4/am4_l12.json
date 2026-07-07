@@ -1,0 +1,134 @@
+{
+  "id": "am4_l12",
+  "unit_no": 2,
+  "lesson_no": 12,
+  "title_en": "Banks and Their Customers",
+  "title_cn": "银行和顾客",
+  "grammar_focus": "介词 + 关系代词(the repayment of which…)、whether … or … 引导的从句、同位语从句 that(a rule/the fact that…)、情态动词 + have done 对过去的推测(may/must/can't have been)、tell/instruct sb to do + 过去分词作定语(checks drawn by himself)(NCE4 无 KS 页,考点由课文结构自取;IP:源为消费者法著作,内容为通用银行法概念(事实性、不可版权),已用 100% 原创行文复述,无人物;题材=银行与客户的法律关系·无害;美语化 check/favor;第四册第12课·第二册收官课)",
+  "scene": "当一个人在银行开立活期账户,多数人以为自己不过是把钱交去保管。法律上的真相却更古怪:客户其实是在把钱借给银行,于是银行成了债务人——这笔债的偿还,他可以随时要求,或取现金,或开一张支票付给别人。因此,银行与客户之间最根本的关系,是债务人与债权人的关系;至于谁是哪一方,取决于账户是有余额还是透支。不过,除了这个简单的概念,双方还彼此负有一整套义务,其中许多会招来麻烦与纠葛。然而,银行客户不同于——比方说——普通的买货人,他很少能抱怨法律对自己不公。银行必须听从它客户的指示,而不听任何别人的。当一个人头一回开户,他会吩咐银行只为他本人开出的支票扣款,并留下几份签名样本,好让职员比对。有一条极硬的规矩:凡是签名被伪造的支票,银行无权动用客户的钱去兑付。哪怕那伪造也许曾极其高明,也毫无分别:银行仍被要求认得自己客户的笔迹。正因如此,银行如今普遍采用的、把客户姓名印在其支票上的做法,对客户其实并无风险。即便这一习惯当真便利了某次伪造,承担损失的也是银行,而非客户。",
+  "grammar_card": {
+    "title": "介词+关系代词 / whether…or / 同位语从句 / 情态+have done / tell sb to do",
+    "intro": "①介词 + 关系代词:the repayment of which he may demand;the account on which he draws checks。②whether … or …:depends on whether the account is in credit or overdrawn。③同位语从句 that,解释前面抽象名词:a rule that the bank must recognize the signature。④情态词 + have + 过去分词,对过去推测:may have been / must have been / can't have been。⑤tell/instruct sb to do;过去分词作定语:checks drawn by himself。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["介词+关系代词", "介词 + which/whom", "the repayment of which he may demand"],
+        ["whether…or", "whether A or B", "whether it is in credit or overdrawn"],
+        ["同位语从句", "名词 + that + 句子", "a rule that the bank must recognize it"],
+        ["情态+have done", "may/must + have + 过去分词", "the forgery may have been clever"],
+        ["过去分词作定语", "名词 + done", "checks drawn by himself"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "情态词 + have + 过去分词表示对过去的推测:may have(也许曾)、must have(一定曾)、can't have(不可能曾)。", "mark": "may/must/can't + have + done" },
+      { "rule": "同位语从句用 that 引导且 that 不作成分(不可省、不能换 which);定语从句里 that 要在从句中充当成分。", "mark": "同位语 that ≠ 定语 that" },
+      { "rule": "美式拼写:check(支票,英式 cheque)、favor(有利,英式 favour)。本课已按美语写。", "mark": "check / favor" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why is there no risk to the customer when a bank prints the customer's name on his checks?",
+    "options": ["Because the bank, not the customer, must bear any loss from forgery", "Because printed names can never be forged", "Because the customer pays extra insurance", "Because the bank ignores all signatures"],
+    "answer_index": 0
+  },
+  "passage": "When a person opens a current account at a bank, most people imagine they are simply handing their money over for safekeeping. In law the truth is stranger: the customer is actually lending money to the bank, so that the bank becomes a debtor — a debt the repayment of which he may demand at any moment, either in cash or by writing a check in favor of someone else. The basic tie between a bank and its customer is therefore that of debtor and creditor, and who is which depends on whether the account is in credit or is overdrawn. Beyond that simple idea, however, the two owe each other a whole set of obligations, and many of these can lead to problems and complications. Yet a bank customer, unlike, say, an ordinary buyer of goods, can rarely complain that the law is stacked against him. The bank must obey its customer's instructions, and no one else's. When someone first opens an account, he tells the bank to debit it only for checks drawn by himself, and he leaves specimens of his signature so that the staff can compare them. There is a very firm rule that the bank has no right to pay out a customer's money on a check whose signature has been forged. It makes no difference that the forgery may have been an extremely clever one: the bank is still expected to recognize its own customer's hand. For this reason there is really no danger to the customer in the practice, now widely adopted by banks, of printing the customer's name on his checks. Even if that habit should happen to facilitate a forgery, it is the bank, and not the customer, that must bear the loss.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "When a person opens a current account at a bank, most people imagine they are simply handing their money over for safekeeping. In law the truth is stranger: the customer is actually lending money to the bank, so that the bank becomes a debtor — a debt the repayment of which he may demand at any moment, either in cash or by writing a check in favor of someone else.", "text_cn": "当一个人在银行开立活期账户,多数人以为自己不过是把钱交去保管。法律上的真相却更古怪:客户其实是在把钱借给银行,于是银行成了债务人——这笔债的偿还,他可以随时要求,或取现金,或开一张支票付给别人。" },
+    { "seq": 2, "speaker": null, "text_en": "The basic tie between a bank and its customer is therefore that of debtor and creditor, and who is which depends on whether the account is in credit or is overdrawn. Beyond that simple idea, however, the two owe each other a whole set of obligations, and many of these can lead to problems and complications.", "text_cn": "因此,银行与客户之间最根本的关系,是债务人与债权人的关系;至于谁是哪一方,取决于账户是有余额还是透支。不过,除了这个简单的概念,双方还彼此负有一整套义务,其中许多会招来麻烦与纠葛。" },
+    { "seq": 3, "speaker": null, "text_en": "Yet a bank customer, unlike, say, an ordinary buyer of goods, can rarely complain that the law is stacked against him. The bank must obey its customer's instructions, and no one else's. When someone first opens an account, he tells the bank to debit it only for checks drawn by himself, and he leaves specimens of his signature so that the staff can compare them.", "text_cn": "然而,银行客户不同于——比方说——普通的买货人,他很少能抱怨法律对自己不公。银行必须听从它客户的指示,而不听任何别人的。当一个人头一回开户,他会吩咐银行只为他本人开出的支票扣款,并留下几份签名样本,好让职员比对。" },
+    { "seq": 4, "speaker": null, "text_en": "There is a very firm rule that the bank has no right to pay out a customer's money on a check whose signature has been forged. It makes no difference that the forgery may have been an extremely clever one: the bank is still expected to recognize its own customer's hand.", "text_cn": "有一条极硬的规矩:凡是签名被伪造的支票,银行无权动用客户的钱去兑付。哪怕那伪造也许曾极其高明,也毫无分别:银行仍被要求认得自己客户的笔迹。" },
+    { "seq": 5, "speaker": null, "text_en": "For this reason there is really no danger to the customer in the practice, now widely adopted by banks, of printing the customer's name on his checks. Even if that habit should happen to facilitate a forgery, it is the bank, and not the customer, that must bear the loss.", "text_cn": "正因如此,银行如今普遍采用的、把客户姓名印在其支票上的做法,对客户其实并无风险。即便这一习惯当真便利了某次伪造,承担损失的也是银行,而非客户。" }
+  ],
+  "words": [
+    { "word": "current", "ipa": "/ˈkɜːrənt/", "pos": "adj", "meaning_cn": "活期的,现行的", "example": "opens a current account" },
+    { "word": "account", "ipa": "/əˈkaʊnt/", "pos": "n", "meaning_cn": "账户", "example": "a current account at a bank" },
+    { "word": "debtor", "ipa": "/ˈdetər/", "pos": "n", "meaning_cn": "债务人,借方", "example": "the bank becomes a debtor" },
+    { "word": "creditor", "ipa": "/ˈkredɪtər/", "pos": "n", "meaning_cn": "债权人,债主", "example": "the relationship of debtor and creditor" },
+    { "word": "obligation", "ipa": "/ˌɑːblɪˈɡeɪʃən/", "pos": "n", "meaning_cn": "义务,责任", "example": "a whole set of obligations" },
+    { "word": "complication", "ipa": "/ˌkɑːmplɪˈkeɪʃən/", "pos": "n", "meaning_cn": "纠葛,复杂情况", "example": "problems and complications" },
+    { "word": "debit", "ipa": "/ˈdebɪt/", "pos": "v", "meaning_cn": "从(账户)扣款,记入借方", "example": "to debit it only for his own checks" },
+    { "word": "specimen", "ipa": "/ˈspesɪmən/", "pos": "n", "meaning_cn": "样本,样品", "example": "leaves specimens of his signature" },
+    { "word": "forge", "ipa": "/fɔːrdʒ/", "pos": "v", "meaning_cn": "伪造", "example": "a signature that has been forged" },
+    { "word": "forgery", "ipa": "/ˈfɔːrdʒəri/", "pos": "n", "meaning_cn": "伪造,伪造品", "example": "the forgery may have been clever" },
+    { "word": "adopt", "ipa": "/əˈdɑːpt/", "pos": "v", "meaning_cn": "采用,采纳", "example": "a practice now widely adopted by banks" },
+    { "word": "facilitate", "ipa": "/fəˈsɪlɪteɪt/", "pos": "v", "meaning_cn": "使便利,促进", "example": "should happen to facilitate a forgery" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "介词 + 关系代词(the repayment of which)" },
+    { "gp": "gp2", "name": "whether … or … 引导的从句" },
+    { "gp": "gp3", "name": "同位语从句 that(a rule that…)" },
+    { "gp": "gp4", "name": "情态动词 + have done 对过去的推测" },
+    { "gp": "gp5", "name": "tell sb to do + 过去分词作定语(checks drawn…)" },
+    { "gp": "gp6", "name": "词汇辨析(debtor/forge/adopt)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"It is a debt the repayment ___ which he may demand at any time.\"(介词+关系代词,‘其偿还’,填介词)", "stem_cn": "这是一笔他可随时要求偿还的债。", "options": ["of", "on", "at", "for"] },
+    { "gp": "gp1", "stem": "\"The account ___ which he draws checks is a current one.\"(介词+关系代词;开支票所凭的账户,填与 draw 搭配的介词)", "stem_cn": "他开支票所凭的那个账户是活期账户。", "options": ["on", "of", "at", "in"] },
+    { "gp": "gp1", "stem": "\"The rule ___ which the bank acts protects the customer.\"(介词+关系代词;银行依据的规则,填与 act 搭配的介词)", "stem_cn": "银行依据的那条规则保护着客户。", "options": ["on", "of", "at", "for"] },
+    { "gp": "gp2", "stem": "\"Who is which depends on ___ the account is in credit or overdrawn.\"(‘是否/…还是…’,填连词)", "stem_cn": "谁是谁,取决于账户是有余额还是透支。", "options": ["whether", "that", "which", "what"] },
+    { "gp": "gp2", "stem": "\"The bank must check ___ the signature is genuine or forged.\"(‘是否…’,填连词)", "stem_cn": "银行必须核查签名是真是假。", "options": ["whether", "that", "if only", "unless"] },
+    { "gp": "gp2", "stem": "\"It matters little ___ the forgery is clumsy or skilful.\"(‘无论…还是…’,填连词)", "stem_cn": "伪造是拙劣还是高明,都无关紧要。", "options": ["whether", "though", "since", "unless"] },
+    { "gp": "gp3", "stem": "\"There is a firm rule ___ the bank must recognize its customer's signature.\"(同位语从句,解释 rule 的内容,填连词)", "stem_cn": "有一条硬规矩:银行必须认得客户的签名。", "options": ["that", "which", "what", "whether"] },
+    { "gp": "gp3", "stem": "\"The fact ___ the account is overdrawn changes who owes whom.\"(同位语从句,解释 fact,填连词)", "stem_cn": "账户透支这一事实,改变了谁欠谁。", "options": ["that", "which", "what", "it"] },
+    { "gp": "gp3", "stem": "\"He accepts the idea ___ he is lending the bank money.\"(同位语从句,解释 idea,填连词)", "stem_cn": "他接受了这样一个观念:他是在借钱给银行。", "options": ["that", "which", "what", "whether"] },
+    { "gp": "gp4", "stem": "\"The forgery may ___ been a very clever one.\"(may + ___ + 过去分词,对过去的推测,填中间的助动词)", "stem_cn": "那伪造也许曾是非常高明的。", "options": ["have", "has", "had", "having"] },
+    { "gp": "gp4", "stem": "\"The clerk must ___ missed the forged signature.\"(must + ___ + 过去分词,对过去的肯定推测,填中间的助动词)", "stem_cn": "那职员一定是漏看了伪造的签名。", "options": ["have", "has", "had", "be"] },
+    { "gp": "gp4", "stem": "\"He can't ___ signed it, for he was abroad.\"(can't + ___ + 过去分词,对过去的否定推测,填中间的助动词)", "stem_cn": "他不可能签过字,因为他当时在国外。", "options": ["have", "has", "had", "being"] },
+    { "gp": "gp5", "stem": "\"He tells the bank ___ his account only for his own checks.\"(tell sb 后接不定式;‘吩咐银行扣款’,填正确形式)", "stem_cn": "他吩咐银行只为他本人的支票扣款。", "options": ["to debit", "debit", "debiting", "debited"] },
+    { "gp": "gp5", "stem": "\"The bank may pay only checks ___ by the customer himself.\"(过去分词作定语,‘由…开出的’;draw 的过去分词)", "stem_cn": "银行只能支付客户本人开出的支票。", "options": ["drawn", "drawing", "draw", "to draw"] },
+    { "gp": "gp5", "stem": "\"The name ___ on his checks does not put him at risk.\"(过去分词作定语,‘印在…上的’;print 的过去分词)", "stem_cn": "印在支票上的姓名不会使他有风险。", "options": ["printed", "printing", "print", "to print"] },
+    { "gp": "gp6", "stem": "\"A person or bank that owes money is a ___.\"(“债务人、借方”用哪个词)", "stem_cn": "欠着钱的一方。", "options": ["debtor", "creditor", "buyer", "seller"] },
+    { "gp": "gp6", "stem": "\"To copy a signature falsely in order to cheat is to ___ it.\"(“伪造”用哪个词)", "stem_cn": "为行骗而假冒签名。", "options": ["forge", "sign", "print", "keep"] },
+    { "gp": "gp6", "stem": "\"To take up and start using a practice is to ___ it.\"(“采用、采纳”用哪个词)", "stem_cn": "接受并开始采用某种做法。", "options": ["adopt", "refuse", "forget", "hide"] }
+  ],
+  "stage6": [
+    { "stem": "debtor 的意思是:", "options": ["债务人,借方", "债主", "买主", "证人"] },
+    { "stem": "creditor 的意思是:", "options": ["债权人,债主", "债务人", "顾客", "职员"] },
+    { "stem": "obligation 的意思是:", "options": ["义务,责任", "权利", "礼物", "假期"] },
+    { "stem": "forge 的意思是:", "options": ["伪造", "签署", "购买", "储存"] },
+    { "stem": "facilitate 的意思是:", "options": ["使便利,促进", "阻碍", "禁止", "推迟"] },
+    { "stem": "specimen 的意思是:", "options": ["样本,样品", "命令", "收据", "罚款"] }
+  ],
+  "contrast": [
+    { "us": "check", "uk": "cheque", "note_cn": "支票;美式拼 check,英式 cheque" },
+    { "us": "favor", "uk": "favour", "note_cn": "有利/恩惠;拼写差异,美语 favor" },
+    { "us": "license", "uk": "licence", "note_cn": "执照;美语名词动词都用 license" },
+    { "us": "installment", "uk": "instalment", "note_cn": "分期付款;拼写差异,美语双 l" }
+  ],
+  "chunks": [
+    { "us": "in favor of", "ipa": "/ɪn ˈfeɪvər əv/", "example1": "He wrote a check in favor of his landlord.", "example1_cn": "他开了一张支票付给房东。", "example2": "The court ruled in favor of the customer.", "example2_cn": "法院判决对客户有利。" },
+    { "us": "pay out", "ipa": "/peɪ aʊt/", "example1": "The bank may not pay out on a forged check.", "example1_cn": "银行不得凭伪造的支票付款。", "example2": "They paid out the full amount.", "example2_cn": "他们付清了全额。" },
+    { "us": "make no difference", "ipa": "/meɪk noʊ ˈdɪfrəns/", "example1": "It makes no difference that the forgery was clever.", "example1_cn": "伪造再高明也毫无分别。", "example2": "Your excuse makes no difference now.", "example2_cn": "你的借口现在无关紧要。" },
+    { "us": "bear the loss", "ipa": "/ber ðə lɔːs/", "example1": "The bank must bear the loss.", "example1_cn": "银行必须承担损失。", "example2": "Who will bear the cost?", "example2_cn": "谁来承担这笔费用?" }
+  ],
+  "stage7_cloze": {
+    "context": "When you open a current account, you are lending the bank money, the repayment ___1___ which you may demand at any time. Whether you are creditor or debtor depends ___2___ whether your account is in credit. There is a firm rule ___3___ the bank must not pay a forged check. It makes no difference ___4___ the forgery is clever.",
+    "blanks": [
+      { "blank_no": 1, "options": ["of", "on", "at", "for"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["on", "of", "at", "in"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["that", "which", "what", "whether"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["that", "which", "what", "whether"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why is there no risk to the customer when a bank prints his name on his checks?", "options": ["The bank must bear the loss if a forged check is paid", "The customer must pay for any forgery", "Printed names cannot be forged", "The bank never checks signatures"] },
+    { "stem": "What is the basic legal relationship between a bank and its customer?", "options": ["Debtor and creditor", "Landlord and tenant", "Teacher and student", "Buyer and seller"] },
+    { "stem": "Whose instructions must the bank obey?", "options": ["Only its own customer's", "Anyone who asks", "The government's only", "The largest depositor's"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"谁是谁取决于账户是有余额还是透支\"(whether…or):", "options": ["Who is which depends on whether the account is in credit or overdrawn.", "Who is which depends on that the account is in credit or overdrawn.", "Who is which depends on whether the account is in credit or overdrawn or.", "Who is which depends whether the account is in credit or overdrawn."] },
+    { "stem": "你想说\"有一条硬规矩:银行必须认得客户的签名\"(同位语从句 that):", "options": ["There is a firm rule that the bank must recognize its customer's signature.", "There is a firm rule which the bank must recognize its customer's signature.", "There is a firm rule what the bank must recognize its customer's signature.", "There is a firm rule that the bank must recognizes its customer's signature."] },
+    { "stem": "你想说\"那伪造也许曾是非常高明的\"(may have done 对过去推测):", "options": ["The forgery may have been a very clever one.", "The forgery may has been a very clever one.", "The forgery may have be a very clever one.", "The forgery may had been a very clever one."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "debtor 的意思是:", "options": ["债务人,借方", "债主", "买主", "证人"] },
+    { "kind": "vocab", "stem": "forge 的意思是:", "options": ["伪造", "签署", "购买", "储存"] },
+    { "kind": "grammar", "stem": "\"It is a debt the repayment ___ which he may demand at any time.\"(介词+关系代词)", "stem_cn": "这是一笔他可随时要求偿还的债。", "options": ["of", "on", "at", "for"] },
+    { "kind": "grammar", "stem": "\"The forgery may ___ been a very clever one.\"(may + ___ + 过去分词)", "stem_cn": "那伪造也许曾是非常高明的。", "options": ["have", "has", "had", "having"] },
+    { "kind": "scenario", "stem": "\"in favor of\" 的意思是:", "options": ["有利于、支付给", "反对", "除了", "由于"] },
+    { "kind": "scenario", "stem": "\"make no difference\" 的意思是:", "options": ["没有影响、无关紧要", "制造分歧", "找零钱", "犯错误"] },
+    { "kind": "reading", "stem": "According to the passage, what does opening a current account actually mean in law?", "options": ["The customer is lending money to the bank", "The bank is giving the customer a gift", "The customer is buying shares in the bank", "The bank owns the customer's money outright"], "passage": true },
+    { "kind": "reading", "stem": "Why is there no risk to the customer if a bank prints his name on his checks?", "options": ["The bank, not the customer, bears the loss from any forgery", "The printed name cannot be copied", "The customer signs twice", "The law favors the bank"], "passage": true },
+    { "kind": "listening", "stem": "Whose instructions must the bank obey?", "options": ["Only its own customer's", "Anyone who walks in", "The government's", "The biggest account holder's"], "audio": true },
+    { "kind": "listening", "stem": "What must the bank do with a forged signature?", "options": ["Refuse to pay, and bear the loss if it does", "Pay it and charge the customer", "Ignore the rule", "Report the customer"], "audio": true }
+  ]
+}

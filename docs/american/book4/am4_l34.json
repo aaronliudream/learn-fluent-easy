@@ -1,0 +1,134 @@
+{
+  "id": "am4_l34",
+  "unit_no": 6,
+  "lesson_no": 34,
+  "title_en": "Adolescence",
+  "title_cn": "青春期",
+  "grammar_focus": "虚拟条件句(与现在相反:if + 过去式,主句 would + 动词原形)、too … to do(太…以致不能…)、使役动词 let/make sb do(接不带 to 的原形)、by + 动名词(方式状语)、know/believe sth to be …(不定式作宾语补足语)(NCE4 无 KS 页,考点由课文结构自取;IP:源为一篇《Journey Through Adolescence》里论‘青少年尊重肯认错的父母、幻灭不可免’的文章,无具名真实人物;通用心理/家庭观点用 100% 原创行文复述;题材=亲子心理·无害;美语化 behavior/humor;第四册第34课·跳过缺源的L32/L33)",
+  "scene": "青春期,对父母和年轻人都是一段难熬的日子。当孩子夸赞朋友家时,父母往往会受伤,把这话当成对自家饭菜、家务或家具的贬损——而且往往糊涂到让孩子看出自己在生气。他们甚至指责孩子不忠,或对朋友的家人说些刻薄话。这样丢了体面、又跌回孩子气的举止,只会把事情弄得更糟。不久,父母便抱怨孩子变得守口如瓶、什么都不说了;可他们很少意识到,这是自己招来的。对父母生出几分幻灭——无论他们作为父母、作为个人有多好多称职——都在某种程度上不可避免。多数孩子把父母的理想抬得太高,以至于除非父母确实很差劲,这理想几乎经不起现实的评判。父母若知道孩子通常对自己的品格与不会犯错抱有多深的信念、这份信任对孩子意味着什么,想必会大为惊讶、深受触动。父母若对这种青春期反应有所准备,并明白这是孩子在长大、在培养宝贵的观察力与独立判断力的信号,他们就不会那么受伤,也就不会因怨恨这反应而把孩子逼到对立面去。青少年怀着对真诚的热望,总是敬重一个肯承认自己有错、无知、甚至承认自己曾不公不义的父母。孩子无法原谅的,是当他明知那些指责属实时,父母却拒不承认。维多利亚时代的父母以为,躲在一副不讲道理的专制架子后面就能维持威严;其实根本不是那么回事,只不过当时的孩子被吓得太厉害,不敢让他们知道自己真实的感受罢了。如今我们又往另一个极端偏了,但总体而言,这对孩子和父母都是更健康的态度。无论当下多么难受,正视现实,永远都更明智、更稳妥。",
+  "grammar_card": {
+    "title": "虚拟条件句 / too … to do / 使役 let·make sb do / by + 动名词 / know sth to be …",
+    "intro": "①与现在相反的虚拟条件:if + 过去式(be 用 were),主句 would + 动词原形。②too … to do,‘太…以致不能…’。③使役动词 let/make + sb + 动词原形(不加 to)。④by + 动名词,表方式:by retreating。⑤know/believe + sth + to be …(不定式作补足语)。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["虚拟条件句", "if + 过去式, would + 原形", "if parents were prepared, they would not be hurt"],
+        ["too … to do", "too + 形容词 + to do", "too cowed to speak"],
+        ["使役 let/make", "let/make + sb + 原形", "let the youngsters see"],
+        ["by + 动名词", "by + doing", "by retreating behind an attitude"],
+        ["know sth to be", "know/believe + sth + to be", "knows them to be true"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "与现在事实相反的虚拟条件:if 从句 be 一律用 were,主句用 would + 动词原形。", "mark": "if … were, would + 原形" },
+      { "rule": "let/make + sb 后接不带 to 的动词原形;allow/ask/force + sb 则要接 to do。", "mark": "let sb do(不加 to)" },
+      { "rule": "美式拼写:behavior(行为,英式 behaviour)、humor(幽默,英式 humour)。本课已按美语写。", "mark": "behavior / humor" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What do adolescents respect in parents?",
+    "options": ["A parent who admits when he is wrong, ignorant, or unfair", "A parent who is always strict", "A parent who never explains anything", "A parent who gives them money"],
+    "answer_index": 0
+  },
+  "passage": "Adolescence is a difficult season for parents as much as for the young. Parents are often hurt when their children praise the homes of their friends, taking it as a slur on their own cooking, or housekeeping, or furniture — and they are often foolish enough to let the youngsters see that they are annoyed. They may even accuse them of disloyalty, or make some spiteful remark about the friends' families. Such a loss of dignity, and such a descent into childish behavior, only makes things worse. Before long the parents are complaining that the child has grown secretive and tells them nothing; yet they seldom realize that they have brought this on themselves. Some disillusionment with one's parents, however good and adequate they may be, is to some degree inevitable. Most children hold so high an ideal of their parents that, unless the parents have been genuinely unsatisfactory, it can hardly hope to stand up to a realistic evaluation. Parents would be greatly surprised, and deeply touched, if they realized how much belief their children usually place in their character and their infallibility, and how much this faith means to a child. If parents were prepared for this adolescent reaction, and understood that it was a sign that the child was growing up and developing valuable powers of observation and independent judgment, they would not be so hurt, and so would not drive the child into opposition by resenting it. The adolescent, with his passion for sincerity, always respects a parent who admits that he is wrong, or ignorant, or even that he has been unfair or unjust. What the child cannot forgive is the parent's refusal to admit such charges when the child knows them to be true. Victorian parents believed that they kept their dignity by retreating behind an unreasoning, authoritarian attitude; in fact they did nothing of the kind, but their children were then too cowed to let them know how they really felt. Today we tend to go to the other extreme, but on the whole this is a healthier attitude for both the child and the parent. It is always wiser, and safer, to face up to reality, however painful it may be at the moment.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Adolescence is a difficult season for parents as much as for the young. Parents are often hurt when their children praise the homes of their friends, taking it as a slur on their own cooking, or housekeeping, or furniture — and they are often foolish enough to let the youngsters see that they are annoyed. They may even accuse them of disloyalty, or make some spiteful remark about the friends' families.", "text_cn": "青春期,对父母和年轻人都是一段难熬的日子。当孩子夸赞朋友家时,父母往往会受伤,把这话当成对自家饭菜、家务或家具的贬损——而且往往糊涂到让孩子看出自己在生气。他们甚至指责孩子不忠,或对朋友的家人说些刻薄话。" },
+    { "seq": 2, "speaker": null, "text_en": "Such a loss of dignity, and such a descent into childish behavior, only makes things worse. Before long the parents are complaining that the child has grown secretive and tells them nothing; yet they seldom realize that they have brought this on themselves.", "text_cn": "这样丢了体面、又跌回孩子气的举止,只会把事情弄得更糟。不久,父母便抱怨孩子变得守口如瓶、什么都不说了;可他们很少意识到,这是自己招来的。" },
+    { "seq": 3, "speaker": null, "text_en": "Some disillusionment with one's parents, however good and adequate they may be, is to some degree inevitable. Most children hold so high an ideal of their parents that, unless the parents have been genuinely unsatisfactory, it can hardly hope to stand up to a realistic evaluation. Parents would be greatly surprised, and deeply touched, if they realized how much belief their children usually place in their character and their infallibility.", "text_cn": "对父母生出几分幻灭——无论他们作为父母、作为个人有多好多称职——都在某种程度上不可避免。多数孩子把父母的理想抬得太高,以至于除非父母确实很差劲,这理想几乎经不起现实的评判。父母若知道孩子通常对自己的品格与不会犯错抱有多深的信念,想必会大为惊讶、深受触动。" },
+    { "seq": 4, "speaker": null, "text_en": "If parents were prepared for this adolescent reaction, and understood that it was a sign that the child was growing up and developing valuable powers of observation and independent judgment, they would not be so hurt, and so would not drive the child into opposition by resenting it. The adolescent, with his passion for sincerity, always respects a parent who admits that he is wrong, or ignorant, or even that he has been unfair or unjust.", "text_cn": "父母若对这种青春期反应有所准备,并明白这是孩子在长大、在培养宝贵的观察力与独立判断力的信号,他们就不会那么受伤,也就不会因怨恨这反应而把孩子逼到对立面去。青少年怀着对真诚的热望,总是敬重一个肯承认自己有错、无知、甚至承认自己曾不公不义的父母。" },
+    { "seq": 5, "speaker": null, "text_en": "What the child cannot forgive is the parent's refusal to admit such charges when the child knows them to be true. Victorian parents believed that they kept their dignity by retreating behind an unreasoning, authoritarian attitude; in fact they did nothing of the kind, but their children were then too cowed to let them know how they really felt. It is always wiser, and safer, to face up to reality, however painful it may be at the moment.", "text_cn": "孩子无法原谅的,是当他明知那些指责属实时,父母却拒不承认。维多利亚时代的父母以为,躲在一副不讲道理的专制架子后面就能维持威严;其实根本不是那么回事,只不过当时的孩子被吓得太厉害,不敢让他们知道自己真实的感受罢了。无论当下多么难受,正视现实,永远都更明智、更稳妥。" }
+  ],
+  "words": [
+    { "word": "adolescence", "ipa": "/ˌædəˈlesns/", "pos": "n", "meaning_cn": "青春期", "example": "adolescence is a difficult season" },
+    { "word": "slur", "ipa": "/slɜːr/", "pos": "n", "meaning_cn": "诋毁,中伤", "example": "a slur on their own cooking" },
+    { "word": "adolescent", "ipa": "/ˌædəˈlesnt/", "pos": "n", "meaning_cn": "青少年(12-18岁)", "example": "this adolescent reaction" },
+    { "word": "disloyalty", "ipa": "/dɪsˈlɔɪəlti/", "pos": "n", "meaning_cn": "不忠,背叛", "example": "accuse them of disloyalty" },
+    { "word": "spiteful", "ipa": "/ˈspaɪtfl/", "pos": "adj", "meaning_cn": "恶意的,怀恨的", "example": "some spiteful remark" },
+    { "word": "disillusionment", "ipa": "/ˌdɪsɪˈluːʒnmənt/", "pos": "n", "meaning_cn": "幻灭,理想破灭", "example": "some disillusionment with one's parents" },
+    { "word": "evaluation", "ipa": "/ɪˌvæljuˈeɪʃn/", "pos": "n", "meaning_cn": "评价,评估", "example": "a realistic evaluation" },
+    { "word": "infallibility", "ipa": "/ɪnˌfæləˈbɪləti/", "pos": "n", "meaning_cn": "永不犯错,一贯正确", "example": "their character and infallibility" },
+    { "word": "resent", "ipa": "/rɪˈzent/", "pos": "v", "meaning_cn": "憎恨,怨恨", "example": "into opposition by resenting it" },
+    { "word": "sincerity", "ipa": "/sɪnˈserəti/", "pos": "n", "meaning_cn": "真诚,诚挚", "example": "his passion for sincerity" },
+    { "word": "retreat", "ipa": "/rɪˈtriːt/", "pos": "v", "meaning_cn": "退却,躲避", "example": "by retreating behind an attitude" },
+    { "word": "authoritarian", "ipa": "/ɔːˌθɔːrɪˈteriən/", "pos": "adj", "meaning_cn": "专制的,独裁的", "example": "an authoritarian attitude" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "虚拟条件句(if + 过去式, would + 原形)" },
+    { "gp": "gp2", "name": "too … to do(太…以致不能)" },
+    { "gp": "gp3", "name": "使役动词 let/make sb do" },
+    { "gp": "gp4", "name": "by + 动名词(方式)" },
+    { "gp": "gp5", "name": "know/believe sth to be …(不定式作补足语)" },
+    { "gp": "gp6", "name": "词汇辨析(disillusionment/sincerity/slur)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"If parents ___ prepared for this reaction, they would not be so hurt.\"(与现在相反的虚拟条件,if 从句用 be 的虚拟形式)", "stem_cn": "若父母对这种反应有所准备,就不会那么受伤。", "options": ["were", "are", "was", "will be"] },
+    { "gp": "gp1", "stem": "\"If they realized the truth, they ___ be greatly touched.\"(与现在相反的虚拟,主句用‘助动词 + 动词原形’,填那个表‘将会’的情态词)", "stem_cn": "若他们明白真相,会深受感动。", "options": ["would", "will", "can", "may"] },
+    { "gp": "gp1", "stem": "\"The child would talk more if the parents ___ less critical.\"(与现在相反的虚拟,if 从句用 be 的虚拟形式)", "stem_cn": "若父母少些挑剔,孩子会多说些心里话。", "options": ["were", "are", "is", "will be"] },
+    { "gp": "gp2", "stem": "\"The children were ___ cowed to say how they really felt.\"(‘太…以致不能…’,填 cowed 前那个词)", "stem_cn": "孩子们被吓得太厉害,不敢说出真实感受。", "options": ["too", "so", "very", "quite"] },
+    { "gp": "gp2", "stem": "\"The parent was too proud ___ admit he was wrong.\"(too … 后接不定式,填不定式符号)", "stem_cn": "那位家长太要面子,不肯承认自己错了。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp2", "stem": "\"He is too honest ___ hide his real feelings.\"(too … 后接不定式,填不定式符号)", "stem_cn": "他太诚实,藏不住真情实感。", "options": ["to", "for", "at", "in"] },
+    { "gp": "gp3", "stem": "\"Foolish parents ___ the adolescents see that they are annoyed.\"(使役动词,后接 sb + 动词原形(不加 to),‘让…看见’,填表‘让’的那个词)", "stem_cn": "糊涂的父母让青少年看出自己在生气。", "options": ["let", "want", "allow", "force"] },
+    { "gp": "gp3", "stem": "\"Do not ___ the child feel that his friends' homes are better.\"(使役动词,后接 sb + 动词原形(不加 to),‘使…感到’,填表‘使’的那个词)", "stem_cn": "别让孩子觉得朋友家更好。", "options": ["make", "tell", "ask", "force"] },
+    { "gp": "gp3", "stem": "\"A wise parent will ___ the child speak his mind freely.\"(使役动词,后接 sb + 动词原形(不加 to),‘让…说’,填表‘让’的那个词)", "stem_cn": "明智的父母会让孩子畅所欲言。", "options": ["let", "allow", "permit", "get"] },
+    { "gp": "gp4", "stem": "\"Victorian parents kept their dignity ___ retreating behind a strict attitude.\"(‘通过做…’= __ + 动名词,填那个表方式的介词)", "stem_cn": "维多利亚时代的父母靠端起严厉架子来维持威严。", "options": ["by", "with", "in", "for"] },
+    { "gp": "gp4", "stem": "\"You win a child's trust ___ admitting your mistakes.\"(‘通过做…’= __ + 动名词,填那个表方式的介词)", "stem_cn": "靠承认自己的错误,你才能赢得孩子的信任。", "options": ["by", "with", "on", "at"] },
+    { "gp": "gp4", "stem": "\"By ___ up to reality, both sides are better off.\"(表方式的‘通过做…’结构,填‘面对’那个动词的动名词)", "stem_cn": "靠正视现实,双方都更好过。", "options": ["facing", "faced", "face", "to face"] },
+    { "gp": "gp5", "stem": "\"The child knows these charges ___ be true.\"(know + sth + 不定式,‘知道…是…’,填不定式符号)", "stem_cn": "孩子知道这些指责是真的。", "options": ["to", "that", "as", "being"] },
+    { "gp": "gp5", "stem": "\"Parents believe their own judgment ___ be always right.\"(believe + sth + 不定式,填不定式符号)", "stem_cn": "父母以为自己的判断总是对的。", "options": ["to", "that", "as", "being"] },
+    { "gp": "gp5", "stem": "\"We found the ideal ___ be far higher than most parents deserve.\"(find + sth + 不定式,填不定式符号)", "stem_cn": "我们发现那理想被抬得远高于多数父母配得上的。", "options": ["to", "that", "as", "being"] },
+    { "gp": "gp6", "stem": "\"A loss of one's good opinion when reality falls short is ___.\"(“幻灭,理想破灭”用哪个词)", "stem_cn": "当现实不及理想时失去的美好看法。", "options": ["disillusionment", "entertainment", "arrangement", "advertisement"] },
+    { "gp": "gp6", "stem": "\"The quality of being honest and free from pretence is ___.\"(“真诚,诚挚”用哪个词)", "stem_cn": "诚实、不做作的品质。", "options": ["sincerity", "curiosity", "authority", "majority"] },
+    { "gp": "gp6", "stem": "\"A slighting remark that harms someone's reputation is a ___.\"(“诋毁,中伤”用哪个词)", "stem_cn": "损害名声的贬损之词。", "options": ["slur", "cheer", "prize", "gift"] }
+  ],
+  "stage6": [
+    { "stem": "adolescence 的意思是:", "options": ["青春期", "童年", "老年", "中年"] },
+    { "stem": "disloyalty 的意思是:", "options": ["不忠,背叛", "忠诚", "勇敢", "慷慨"] },
+    { "stem": "spiteful 的意思是:", "options": ["恶意的,怀恨的", "友善的", "慷慨的", "耐心的"] },
+    { "stem": "evaluation 的意思是:", "options": ["评价,评估", "命令", "邀请", "庆祝"] },
+    { "stem": "resent 的意思是:", "options": ["憎恨,怨恨", "原谅", "感激", "欣赏"] },
+    { "stem": "authoritarian 的意思是:", "options": ["专制的,独裁的", "民主的", "宽容的", "随和的"] }
+  ],
+  "contrast": [
+    { "us": "behavior", "uk": "behaviour", "note_cn": "行为;美语 behavior,英式 behaviour" },
+    { "us": "recognize", "uk": "recognise", "note_cn": "认出;美语 -ize,英式 -ise" },
+    { "us": "apologize", "uk": "apologise", "note_cn": "道歉;美语 -ize,英式 -ise" },
+    { "us": "humor", "uk": "humour", "note_cn": "幽默;美语 humor,英式 humour" }
+  ],
+  "chunks": [
+    { "us": "stand up to", "ipa": "/stænd ʌp tuː/", "example1": "The ideal cannot stand up to a realistic evaluation.", "example1_cn": "那理想经不起现实的评判。", "example2": "He stood up to the bully.", "example2_cn": "他顶住了那个恶霸。" },
+    { "us": "bring on", "ipa": "/brɪŋ ɑːn/", "example1": "They have brought this trouble on themselves.", "example1_cn": "这麻烦是他们自己招来的。", "example2": "Stress can bring on a headache.", "example2_cn": "压力会引发头痛。" },
+    { "us": "face up to", "ipa": "/feɪs ʌp tuː/", "example1": "It is wiser to face up to reality.", "example1_cn": "正视现实更为明智。", "example2": "He must face up to his mistakes.", "example2_cn": "他必须正视自己的错误。" },
+    { "us": "to some degree", "ipa": "/tuː sʌm dɪˈɡriː/", "example1": "Disillusionment is to some degree inevitable.", "example1_cn": "幻灭在某种程度上不可避免。", "example2": "I agree with you, to some degree.", "example2_cn": "我在某种程度上同意你。" }
+  ],
+  "stage7_cloze": {
+    "context": "If parents ___1___ prepared for this reaction, they would not be so hurt. A wise parent will ___2___ the child speak his mind. The child knows these charges ___3___ be true, and respects a parent who admits them. Both sides are better off ___4___ facing up to reality.",
+    "blanks": [
+      { "blank_no": 1, "options": ["were", "are", "was", "will be"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["let", "force", "tell", "ask"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["to", "that", "as", "being"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["by", "with", "in", "for"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What do adolescents respect in parents?", "options": ["A parent who admits when he is wrong, ignorant, or unfair", "A parent who is always strict", "A parent who never explains anything", "A parent who gives them money"] },
+    { "stem": "Why is some disillusionment with parents inevitable?", "options": ["Children hold so high an ideal of their parents that reality cannot match it", "Parents are always bad people", "Children never loved their parents", "Parents hide everything"] },
+    { "stem": "What did Victorian parents wrongly believe kept their dignity?", "options": ["Retreating behind an unreasoning, authoritarian attitude", "Admitting all their mistakes", "Playing with their children", "Giving in to every demand"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"若父母对这种反应有所准备,就不会那么受伤\"(虚拟条件句):", "options": ["If parents were prepared for this reaction, they would not be so hurt.", "If parents are prepared for this reaction, they would not be so hurt.", "If parents were prepared for this reaction, they will not be so hurt.", "If parents was prepared for this reaction, they would not be so hurt."] },
+    { "stem": "你想说\"孩子们被吓得太厉害,不敢说出真实感受\"(too … to do):", "options": ["The children were too cowed to say how they really felt.", "The children were too cowed that they could not say how they really felt.", "The children were so cowed to say how they really felt.", "The children were too cowed to saying how they really felt."] },
+    { "stem": "你想说\"靠承认自己的错误,你才能赢得孩子的信任\"(by + 动名词):", "options": ["You win a child's trust by admitting your mistakes.", "You win a child's trust by admit your mistakes.", "You win a child's trust with admitting your mistakes.", "You win a child's trust by to admit your mistakes."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "adolescence 的意思是:", "options": ["青春期", "童年", "老年", "中年"] },
+    { "kind": "vocab", "stem": "resent 的意思是:", "options": ["憎恨,怨恨", "原谅", "感激", "欣赏"] },
+    { "kind": "grammar", "stem": "\"If parents ___ prepared for this reaction, they would not be so hurt.\"(与现在相反的虚拟条件,if 从句用 be 的虚拟形式)", "stem_cn": "若父母对这种反应有所准备,就不会那么受伤。", "options": ["were", "are", "was", "will be"] },
+    { "kind": "grammar", "stem": "\"The children were ___ cowed to say how they really felt.\"(‘太…以致不能…’,填 cowed 前那个词)", "stem_cn": "孩子们被吓得太厉害,不敢说出真实感受。", "options": ["too", "so", "very", "quite"] },
+    { "kind": "scenario", "stem": "\"face up to\" 的意思是:", "options": ["勇敢面对,正视", "逃避", "推迟", "忘记"] },
+    { "kind": "scenario", "stem": "\"stand up to\" 的意思是:", "options": ["经得起,顶得住", "坐下", "放弃", "服从"] },
+    { "kind": "reading", "stem": "According to the passage, what kind of parent does the adolescent respect?", "options": ["One who admits when he is wrong, ignorant, or unfair", "One who is always right in his own eyes", "One who never talks to the child", "One who is coldly authoritarian"], "passage": true },
+    { "kind": "reading", "stem": "What can the adolescent not forgive?", "options": ["A parent's refusal to admit charges the child knows to be true", "A parent who says sorry", "A parent who is sometimes tired", "A parent who cooks badly"], "passage": true },
+    { "kind": "listening", "stem": "Why should parents not be hurt by their child's growing criticism?", "options": ["It is a sign the child is developing observation and independent judgment", "It means the child hates them", "It never really happens", "It is a sign of illness"], "audio": true },
+    { "kind": "listening", "stem": "What is always wiser and safer, according to the speaker?", "options": ["To face up to reality, however painful it may be", "To hide behind authority", "To pretend to be perfect", "To avoid the child"], "audio": true }
+  ]
+}

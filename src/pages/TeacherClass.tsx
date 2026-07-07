@@ -7,7 +7,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, Copy, Check, AlertTriangle, RefreshCw, Archive, ArchiveRestore } from "lucide-react";
+import { Loader2, Copy, Check, AlertTriangle, RefreshCw, Archive, ArchiveRestore, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import { ProvisionedStudents } from "@/components/teacher/ProvisionedStudents";
 
@@ -448,6 +448,7 @@ function ClassSettings({ cls, onChange, readOnly = false }: { cls: ClassRow; onC
   const [savingName, setSavingName] = useState(false);
   const [regenBusy, setRegenBusy] = useState(false);
   const [archiving, setArchiving] = useState(false);
+  const [trashing, setTrashing] = useState(false);
 
   async function saveName() {
     if (name.trim() === cls.name || !name.trim()) return;
@@ -476,6 +477,19 @@ function ClassSettings({ cls, onChange, readOnly = false }: { cls: ClassRow; onC
     if (error) toast.error(error.message);
     else {
       toast.success("已归档");
+      window.location.href = "/teacher";
+    }
+  }
+
+  async function trash() {
+    if (!confirm(t("确认把此班级移入回收站？可在老师中心「回收站」里恢复，或输入班名彻底删除。"))) return;
+    setTrashing(true);
+    // trash_class 归属校验 teacher_id=auth.uid();仅软删(置 deleted_at),可恢复
+    const { error } = await supabase.rpc("trash_class", { _class_id: cls.id });
+    setTrashing(false);
+    if (error) toast.error(error.message);
+    else {
+      toast.success(t("已移入回收站"));
       window.location.href = "/teacher";
     }
   }
@@ -534,6 +548,18 @@ function ClassSettings({ cls, onChange, readOnly = false }: { cls: ClassRow; onC
           </Button>
         </div>
       )}
+
+      {/* 删除到回收站(与归档是两条独立的线;活跃/归档班都可删)*/}
+      <div className="rounded-3xl border-2 border-rose-300 bg-rose-50/40 p-5 dark:border-rose-500/40 dark:bg-rose-500/10">
+        <h3 className="text-base font-extrabold mb-2 text-rose-700 dark:text-rose-300"><T>🗑 删除班级</T></h3>
+        <p className="text-sm text-muted-foreground">
+          <T>移入回收站（可恢复）。在老师中心「回收站」里可恢复，或手打班名彻底删除。彻底删除只清除班级与入班关系，学生账号本身不受影响、仍可登录并再加入别的班。</T>
+        </p>
+        <Button variant="destructive" onClick={trash} disabled={trashing} className="mt-3">
+          {trashing ? <Loader2 className="mr-1 size-4 animate-spin" /> : <Trash2 className="mr-1 size-4" />}
+          <T>移入回收站</T>
+        </Button>
+      </div>
     </div>
   );
 }

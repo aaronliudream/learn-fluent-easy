@@ -1,0 +1,133 @@
+{
+  "id": "am4_l6",
+  "unit_no": 1,
+  "lesson_no": 6,
+  "title_en": "The Sporting Spirit",
+  "title_cn": "体育的精神",
+  "grammar_focus": "宾语从句(that / when)、与现在相反的虚拟条件(if only…could / even if…had / would)、状语连词(unless / the moment)+ 被动语态、定语从句(who/that/where,含 Anyone who…)、not…but 并列 + 短语(do one's utmost / work oneself into)(NCE4 无 KS 页,考点由课文结构自取;原创承载·论认真的国际竞技体育实为‘模拟战争’、与民族仇恨相纠缠、并不增进各国友善的评论·题材思辨无害;美语化 soccer/defense;第四册第6课·U1收官)",
+  "scene": "每当听人说体育能增进各国之间的友善——说什么但凡各国的普通百姓能在足球场上会一会,他们就不会有上战场的念头了——我总感到惊讶。哪怕没有具体的例子,单凭常理也能推断出:重大的国际赛事非但不能播撒友谊,反倒往往以恶感的爆发收场。如今几乎每一项运动都竞争激烈。你上场就是为了赢,而除非你拼尽全力去赢,一场比赛就没多大意义。在乡村草坪上,队伍是随意分的,又不牵扯什么乡土荣誉,那时倒完全可以纯为取乐和锻炼而玩;可一旦事关声望——一旦你觉得自己、以及身后某个更大的集体会因输球而蒙羞——最野蛮的好斗本能便被激了起来。凡是哪怕在校园里打过一场比赛的人,都深知这一点。到了国际层面,体育坦白说就是一种模拟战争。然而真正要紧的,并不是球员本身的举止,而是看台上观众的态度——以及观众背后那些把自己搞得怒火中烧的整个国家:它们为这些荒唐的比赛群情激愤,并且至少在短时间里,当真相信跑跳、踢球竟是检验民族德性的试金石。倘若我们真心想促进各民族之间的友善,认真的竞技体育大概会是我们最不该选的手段之一。",
+  "grammar_card": {
+    "title": "宾语从句 / 虚拟条件 / 状语连词 + 被动 / not…but",
+    "intro": "①宾语从句由 that 引导(常可省),或用 when 等:I hear it said that…。②与现在相反的虚拟:if only… + 情态词过去式 could;主句 would/might + 原形;even if… + 过去式。③状语连词 unless(除非)、the moment(一…就…)引导从句;主句/从句常用被动。④定语从句 who/that/where(Anyone who…)。⑤not … but …“不是…而是…”。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["宾语从句", "hear/believe + (that) …", "I hear it said that sport…"],
+        ["虚拟条件", "if only … could, … would", "if only they could meet…"],
+        ["状语连词 + 被动", "the moment …, … are aroused", "the moment prestige arises…"],
+        ["not … but …", "not A but B", "not the players but the spectators"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "the moment / the instant = as soon as,引导时间从句,“一…就…”。", "mark": "the moment prestige arises" },
+      { "rule": "unless = if … not,引导否定条件:a game means little unless you try to win。", "mark": "unless you do your utmost" },
+      { "rule": "美式用词:soccer(足球,英式 football)、defense(防守,英式 defence)。本课已按美语写。", "mark": "soccer / defense" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How does the writer describe sport at the international level?",
+    "options": ["As a kind of mimic warfare", "As pure friendly fun", "As a way to end wars", "As harmless exercise"],
+    "answer_index": 0
+  },
+  "passage": "I am always surprised when I hear it said that sport builds goodwill among nations — that if only ordinary people everywhere could meet one another on the soccer field, they would feel no inclination to meet on the battlefield. Even without concrete examples, one could deduce from general principles that great international contests, far from spreading friendship, tend to end in outbursts of ill feeling. Nearly every sport played today is fiercely competitive. You play to win, and a game means little unless you do your utmost to win it. On a village green, where sides are picked at random and no local patriotism is involved, it is quite possible to play simply for fun and exercise; but the moment the question of prestige arises — the moment you feel that you, and some larger group behind you, will be disgraced if you lose — the most savage, combative instincts are aroused. Anyone who has ever played in even a school match knows this well. At the international level, sport is frankly a kind of mimic warfare. Yet the significant thing is not the behavior of the players themselves but the attitude of the spectators — and, behind the spectators, of whole nations who work themselves into a fury over these absurd contests and half believe, at least for a short while, that running, jumping, and kicking a ball are somehow tests of national virtue. If we truly wanted goodwill between peoples, serious competitive sport would be one of the last means we should choose.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "I am always surprised when I hear it said that sport builds goodwill among nations — that if only ordinary people everywhere could meet one another on the soccer field, they would feel no inclination to meet on the battlefield. Even without concrete examples, one could deduce from general principles that great international contests, far from spreading friendship, tend to end in outbursts of ill feeling.", "text_cn": "每当听人说体育能增进各国之间的友善——说什么但凡各国的普通百姓能在足球场上会一会,他们就不会有上战场的念头了——我总感到惊讶。哪怕没有具体的例子,单凭常理也能推断出:重大的国际赛事非但不能播撒友谊,反倒往往以恶感的爆发收场。" },
+    { "seq": 2, "speaker": null, "text_en": "Nearly every sport played today is fiercely competitive. You play to win, and a game means little unless you do your utmost to win it. On a village green, where sides are picked at random and no local patriotism is involved, it is quite possible to play simply for fun and exercise.", "text_cn": "如今几乎每一项运动都竞争激烈。你上场就是为了赢,而除非你拼尽全力去赢,一场比赛就没多大意义。在乡村草坪上,队伍是随意分的,又不牵扯什么乡土荣誉,那时倒完全可以纯为取乐和锻炼而玩。" },
+    { "seq": 3, "speaker": null, "text_en": "But the moment the question of prestige arises — the moment you feel that you, and some larger group behind you, will be disgraced if you lose — the most savage, combative instincts are aroused. Anyone who has ever played in even a school match knows this well.", "text_cn": "可一旦事关声望——一旦你觉得自己、以及身后某个更大的集体会因输球而蒙羞——最野蛮的好斗本能便被激了起来。凡是哪怕在校园里打过一场比赛的人,都深知这一点。" },
+    { "seq": 4, "speaker": null, "text_en": "At the international level, sport is frankly a kind of mimic warfare. Yet the significant thing is not the behavior of the players themselves but the attitude of the spectators — and, behind the spectators, of whole nations who work themselves into a fury over these absurd contests.", "text_cn": "到了国际层面,体育坦白说就是一种模拟战争。然而真正要紧的,并不是球员本身的举止,而是看台上观众的态度——以及观众背后那些为这些荒唐比赛把自己搞得怒火中烧的整个国家。" },
+    { "seq": 5, "speaker": null, "text_en": "They half believe, at least for a short while, that running, jumping, and kicking a ball are somehow tests of national virtue. If we truly wanted goodwill between peoples, serious competitive sport would be one of the last means we should choose.", "text_cn": "它们至少在短时间里当真相信:跑跳、踢球竟是检验民族德性的试金石。倘若我们真心想促进各民族之间的友善,认真的竞技体育大概会是我们最不该选的手段之一。" }
+  ],
+  "words": [
+    { "word": "goodwill", "ipa": "/ˌɡʊdˈwɪl/", "pos": "n", "meaning_cn": "友善,善意", "example": "sport builds goodwill among nations" },
+    { "word": "inclination", "ipa": "/ˌɪnklɪˈneɪʃən/", "pos": "n", "meaning_cn": "意愿,倾向", "example": "no inclination to meet on the battlefield" },
+    { "word": "contest", "ipa": "/ˈkɑːntest/", "pos": "n", "meaning_cn": "比赛,竞赛", "example": "great international contests" },
+    { "word": "deduce", "ipa": "/dɪˈduːs/", "pos": "v", "meaning_cn": "推断,演绎", "example": "deduce it from general principles" },
+    { "word": "competitive", "ipa": "/kəmˈpetətɪv/", "pos": "adj", "meaning_cn": "竞争的", "example": "fiercely competitive" },
+    { "word": "patriotism", "ipa": "/ˈpeɪtriətɪzəm/", "pos": "n", "meaning_cn": "爱国心,乡土荣誉感", "example": "no local patriotism is involved" },
+    { "word": "prestige", "ipa": "/preˈstiːʒ/", "pos": "n", "meaning_cn": "声望,威望", "example": "the question of prestige arises" },
+    { "word": "disgrace", "ipa": "/dɪsˈɡreɪs/", "pos": "v", "meaning_cn": "使蒙羞", "example": "will be disgraced if you lose" },
+    { "word": "savage", "ipa": "/ˈsævɪdʒ/", "pos": "adj", "meaning_cn": "野蛮的,凶猛的", "example": "the most savage instincts are aroused" },
+    { "word": "combative", "ipa": "/kəmˈbætɪv/", "pos": "adj", "meaning_cn": "好斗的", "example": "savage, combative instincts" },
+    { "word": "spectator", "ipa": "/ˈspekteɪtər/", "pos": "n", "meaning_cn": "观众", "example": "the attitude of the spectators" },
+    { "word": "absurd", "ipa": "/əbˈsɜːrd/", "pos": "adj", "meaning_cn": "荒谬的", "example": "these absurd contests" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "宾语从句(that / when)" },
+    { "gp": "gp2", "name": "与现在相反的虚拟条件(if only…could / would)" },
+    { "gp": "gp3", "name": "状语连词(unless / the moment)+ 被动" },
+    { "gp": "gp4", "name": "定语从句(who/that/where,Anyone who…)" },
+    { "gp": "gp5", "name": "not…but + 短语(do one's utmost / work oneself into)" },
+    { "gp": "gp6", "name": "词汇辨析(goodwill/competitive/absurd)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"I am surprised when I hear it said ___ sport builds goodwill.\"(宾语从句,填连词)", "stem_cn": "听人说体育能增进友善,我很惊讶。", "options": ["that", "which", "what", "whom"] },
+    { "gp": "gp1", "stem": "\"Many believe ___ sport brings nations together.\"(宾语从句,填连词)", "stem_cn": "许多人相信体育能拉近国家间的距离。", "options": ["that", "what", "which", "whose"] },
+    { "gp": "gp1", "stem": "\"I am always amazed ___ I hear such claims.\"(时间状语从句,填‘当…时’)", "stem_cn": "每当听到这类说法,我总很诧异。", "options": ["when", "which", "that", "what"] },
+    { "gp": "gp2", "stem": "\"If only people ___ meet on the field, they might not fight.\"(与现在相反虚拟,情态词 can 的过去式)", "stem_cn": "但愿人们能在赛场上相遇,或许就不会开战。", "options": ["could", "can", "will", "may"] },
+    { "gp": "gp2", "stem": "\"If we truly wanted goodwill, serious sport ___ be a poor choice.\"(与现在相反虚拟,主句填这个助动词 + 原形)", "stem_cn": "若真想促进友善,认真的竞技体育会是糟糕的选择。", "options": ["would", "will", "can", "must"] },
+    { "gp": "gp2", "stem": "\"Even if we ___ no examples, we could deduce it from principle.\"(与现在相反虚拟,if 从句 have 的过去式)", "stem_cn": "即便没有例证,我们也能凭常理推断出来。", "options": ["had", "have", "has", "will have"] },
+    { "gp": "gp3", "stem": "\"A game means little ___ you do your utmost to win.\"(‘除非’,引导条件从句)", "stem_cn": "除非你竭尽全力去赢,否则比赛没多大意义。", "options": ["unless", "because", "although", "since"] },
+    { "gp": "gp3", "stem": "\"The moment prestige is at stake, savage instincts ___ aroused.\"(被动结构,填 be 动词的复数现在式)", "stem_cn": "一旦事关声望,野蛮的斗性就被激起。", "options": ["are", "is", "have", "has"] },
+    { "gp": "gp3", "stem": "\"Sides are ___ at random on the village green.\"(一般现在被动:are + 过去分词,填过去分词)", "stem_cn": "在乡村草坪上,队伍是随意分的。", "options": ["picked", "pick", "picking", "picks"] },
+    { "gp": "gp4", "stem": "\"Anyone ___ has played in a match knows this feeling.\"(定语从句,指人,作主语)", "stem_cn": "凡是打过比赛的人都懂这种感觉。", "options": ["who", "which", "what", "whose"] },
+    { "gp": "gp4", "stem": "\"It is the nations ___ work themselves into a fury.\"(定语从句,指人,作主语)", "stem_cn": "是那些国家把自己搞得怒火中烧。", "options": ["that", "what", "whose", "whom"] },
+    { "gp": "gp4", "stem": "\"On a green ___ no patriotism is involved, sport is fun.\"(定语从句,指地点,填关系副词)", "stem_cn": "在无关乡土荣誉的草坪上,运动只是乐趣。", "options": ["where", "which", "that", "what"] },
+    { "gp": "gp5", "stem": "\"The key is ___ the players' behavior but the spectators' attitude.\"(‘不是…而是…’的并列,填前半的否定词)", "stem_cn": "关键不在球员的行为,而在观众的态度。", "options": ["not", "no", "none", "never"] },
+    { "gp": "gp5", "stem": "\"A game has little meaning unless you do your ___ to win.\"(do one's ___:竭尽全力,填名词)", "stem_cn": "除非竭尽全力去赢,否则比赛没什么意义。", "options": ["utmost", "best", "most", "hardest"] },
+    { "gp": "gp5", "stem": "\"Whole nations work ___ into a fury over these contests.\"(work oneself into:使自己陷入…,填反身代词)", "stem_cn": "整个国家为这些比赛把自己搞得暴怒。", "options": ["themselves", "them", "their", "they"] },
+    { "gp": "gp6", "stem": "\"A feeling of friendliness and helpfulness is ___.\"(“友善、善意”用哪个词)", "stem_cn": "友好、乐于助人的心意。", "options": ["goodwill", "anger", "fear", "greed"] },
+    { "gp": "gp6", "stem": "\"Eager to compete and win means ___.\"(“竞争的”用哪个词)", "stem_cn": "渴望竞争取胜的。", "options": ["competitive", "lazy", "gentle", "calm"] },
+    { "gp": "gp6", "stem": "\"Silly and clearly unreasonable means ___.\"(“荒谬的”用哪个词)", "stem_cn": "愚蠢而明显不合理的。", "options": ["absurd", "wise", "serious", "useful"] }
+  ],
+  "stage6": [
+    { "stem": "goodwill 的意思是:", "options": ["友善,善意", "仇恨", "恐惧", "贪婪"] },
+    { "stem": "inclination 的意思是:", "options": ["意愿,倾向", "厌恶", "命令", "借口"] },
+    { "stem": "contest 的意思是:", "options": ["比赛,竞赛", "和平", "休息", "习惯"] },
+    { "stem": "patriotism 的意思是:", "options": ["爱国心", "自私", "怯懦", "懒惰"] },
+    { "stem": "savage 的意思是:", "options": ["野蛮的,凶猛的", "温柔的", "文明的", "胆小的"] },
+    { "stem": "absurd 的意思是:", "options": ["荒谬的", "合理的", "严肃的", "普通的"] }
+  ],
+  "contrast": [
+    { "us": "soccer", "uk": "football", "note_cn": "足球;用词差异,美语 soccer" },
+    { "us": "defense", "uk": "defence", "note_cn": "防守,防御;拼写差异,美语 defense" },
+    { "us": "practice", "uk": "practise", "note_cn": "训练,练习(动词);拼写差异,美语 practice" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" }
+  ],
+  "chunks": [
+    { "us": "do one's utmost", "ipa": "/duː wʌnz ˈʌtmoʊst/", "example1": "You must do your utmost to win.", "example1_cn": "你必须竭尽全力去赢。", "example2": "She did her utmost to help us.", "example2_cn": "她尽了最大努力帮我们。" },
+    { "us": "work oneself into", "ipa": "/wɜːrk wʌnˈself ˈɪntə/", "example1": "The crowd worked itself into a fury.", "example1_cn": "人群把自己激成了一团怒火。", "example2": "He worked himself into a panic.", "example2_cn": "他把自己搞得惊慌失措。" },
+    { "us": "at random", "ipa": "/ət ˈrændəm/", "example1": "Sides are picked at random.", "example1_cn": "队伍是随意分的。", "example2": "Names were drawn at random.", "example2_cn": "名字是随机抽取的。" },
+    { "us": "far from", "ipa": "/fɑːr frəm/", "example1": "Far from spreading friendship, contests breed hatred.", "example1_cn": "比赛非但不播撒友谊,反而滋生仇恨。", "example2": "The result was far from perfect.", "example2_cn": "结果远谈不上完美。" }
+  ],
+  "stage7_cloze": {
+    "context": "Many say ___1___ sport builds goodwill, but I doubt it. If only nations ___2___ compete peacefully, wars might end — yet serious sport is fiercely competitive. The moment prestige is at stake, savage instincts ___3___ aroused. The key is not the players ___4___ the watching nations.",
+    "blanks": [
+      { "blank_no": 1, "options": ["that", "which", "what", "whom"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["could", "can", "will", "may"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["are", "is", "have", "has"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["but", "and", "or", "so"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How does the writer describe sport at the international level?", "options": ["As a kind of mimic warfare bound up with hatred", "As pure friendly fun", "As a way to end all wars", "As harmless exercise"] },
+    { "stem": "According to the writer, what matters most in international sport?", "options": ["The attitude of the spectators and nations, not the players", "The skill of the players alone", "The size of the stadium", "The weather on the day"] },
+    { "stem": "When can a game be played simply for fun, in the writer's view?", "options": ["On a village green, where no prestige is at stake", "Only in the Olympics", "Only between professionals", "Never"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"但愿人们能在赛场上相遇,或许就不会开战\"(与现在相反虚拟):", "options": ["If only people could meet on the field, they might not fight.", "If only people can meet on the field, they might not fight.", "If only people could meet on the field, they might not to fight.", "If only people could met on the field, they might not fight."] },
+    { "stem": "你想说\"一旦事关声望,野蛮的斗性就被激起\"(被动语态):", "options": ["The moment prestige is at stake, savage instincts are aroused.", "The moment prestige is at stake, savage instincts aroused.", "The moment prestige is at stake, savage instincts are arouse.", "The moment prestige is at stake, savage instincts is aroused."] },
+    { "stem": "你想说\"凡是打过比赛的人都懂这种感觉\"(定语从句):", "options": ["Anyone who has played in a match knows this feeling.", "Anyone which has played in a match knows this feeling.", "Anyone what has played in a match knows this feeling.", "Anyone has played in a match knows this feeling."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "goodwill 的意思是:", "options": ["友善,善意", "仇恨", "恐惧", "贪婪"] },
+    { "kind": "vocab", "stem": "absurd 的意思是:", "options": ["荒谬的", "合理的", "严肃的", "普通的"] },
+    { "kind": "grammar", "stem": "\"Many believe ___ sport brings nations together.\"(宾语从句)", "stem_cn": "许多人相信体育能拉近国家间的距离。", "options": ["that", "what", "which", "whose"] },
+    { "kind": "grammar", "stem": "\"The moment prestige is at stake, savage instincts ___ aroused.\"(被动语态)", "stem_cn": "一旦事关声望,野蛮的斗性就被激起。", "options": ["are", "is", "have", "has"] },
+    { "kind": "scenario", "stem": "\"do one's utmost\" 的意思是:", "options": ["竭尽全力", "尽量少做", "半途而废", "假装努力"] },
+    { "kind": "scenario", "stem": "\"at random\" 的意思是:", "options": ["随意地、随机地", "按顺序", "小心地", "缓慢地"] },
+    { "kind": "reading", "stem": "Why does the writer doubt that sport creates goodwill between nations?", "options": ["Serious international sport is competitive and breeds hatred", "Sport is too expensive", "Few people watch it", "Athletes rarely travel"], "passage": true },
+    { "kind": "reading", "stem": "According to the writer, what turns a friendly game into a savage contest?", "options": ["When prestige and the fear of disgrace become involved", "When the weather is bad", "When money is offered", "When the rules change"], "passage": true },
+    { "kind": "listening", "stem": "What does the writer compare international sport to?", "options": ["Mimic warfare", "A friendly picnic", "A quiet hobby", "A school lesson"], "audio": true },
+    { "kind": "listening", "stem": "Whose attitude does the writer say is the truly significant thing?", "options": ["The spectators' and the nations' behind them", "The referees'", "The coaches'", "The reporters'"], "audio": true }
+  ]
+}

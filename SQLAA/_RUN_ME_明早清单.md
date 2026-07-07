@@ -6,7 +6,7 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
-## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1 整单元收官 L1–L5**)
+## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1+U2+U3 三单元收官 L1–L15**,累计 660 题)
 - 🔴 **需跑(重跑)** `american_am3_seed_unit01.sql` —— 现含 **L1+L2+L3+L4+L5**,共 **220 题(44×5)**,5 课全 🟢 全绿。相对你上次已跑(仅 L1),期望 **净 +176**(L2–L5)。
   - **L5《The Exact Facts 确切数字》**(过去完成时 had done + 其被动 had been done + 否定副词句首倒装 Not only had he… / Never had I… + 冠词 a/the 复习·编辑逼记者要确切数字、记者数台阶时被捕入狱)——44 题🟢全绿。**主考取舍**:官方 Key structures 是冠词复习,但课文实际密集考点是过去完成+被动+倒装(书3级别),故以课文实考点为主考,冠词并入 gp5 复习。
 - **AM3 U1 五课语法进阶**:L1 过去叙事(过去/过去进行)→ L2 现在时(一般现在/现在进行/always+进行)→ L3 一般过去+不规则动词过去式 → L4 现在完成/完成进行 → L5 过去完成+被动+倒装。时态线索完整铺开。
@@ -22,11 +22,15 @@
 - **U2 构词法三部曲**:L6 否定前缀 → L7 名词变形容词后缀 → L10 名词后缀,配合时态复现(过去/被动/完成/虚拟)。
 - 对账(U2 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **440**(U1 220 + U2 220)。
 
-## 📌 AM3 U3 进行中(L11–L15 · 新文件 `american_am3_seed_unit03.sql`)
-- 🔴 **需跑** `american_am3_seed_unit03.sql`(全新文件)—— 逐课累加,每课 44 题。
+## 📌 AM3 U3 收官(L11–L15 · `american_am3_seed_unit03.sql` · 220题=44×5,全🟢)
+- 🔴 **需跑** `american_am3_seed_unit03.sql`(含 L11–L15 五课)。
   - **L11《Not Guilty 无罪》**(间接引语 He said that.../He asked whether.../He asked what... + say vs tell + 大写字母规则·旅客被海关误当走私犯,"香水"其实是自制发胶)——44 题🟢全绿。原属🔴,实读后是无害海关喜剧(旅客本就"无罪"、无真实犯罪),轻度保留,未占梗概额度。
-- 对账(U3 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **484**(U1+U2 的440 + L11 的44)。
-- ⏭️ U3 余 L12–L15。
+  - **L12《Life on a Desert Island 荒岛生活》**(条件句 if 真实/虚拟 + wish/if only 虚拟愿望 + 过去时/过去完成·两人在珊瑚岛上过得有滋有味)——44 题🟢全绿。美式化:beer→soda。
+  - **L13《It's Only Me 是我别害怕》**(must 推测"一定是"/义务/mustn't vs needn't + 形容词+动词不定式 glad to hear·女主人穿鬼装吓跑抄电表的人)——44 题🟢全绿。美式化:fancy-dress→costume party、metre→meter。
+  - **L14《He'd Rather Do It Himself 他宁愿自己动手》**(would rather/would sooner 偏好 + would rather+某人+过去式 + have sth done·凡事亲力亲为的手艺人 Dawson)——44 题🟢全绿。**净化**:NCE3 原课"贵族歹徒勒索保护费"→"宁愿自己动手的传奇手艺人",保留"被全镇敬重、立牌纪念"的反差,去掉一切犯罪暴力;犯罪绑定词(gangster/protection/prince/city-state/Florentine)按净化规则舍去,改承载中性官方词(remarkable/promptly/hire/destroy/dedicate/memory/funeral/band/valiant)。
+  - **L15《Fifty Cents' Worth of Trouble 五十美分的麻烦》**(could 一般能力 vs was able to/managed to 某次成功 vs could not + 短语动词 up:save up/fill up/roll up/wrap up/button up·侄子硬币掉下水道、胳膊卡住、消防队用润滑油救出)——44 题🟢全绿。无需净化(原课即无害喜剧);美式化:pence→cents、sweet shop→candy store、pavement→sidewalk、fire brigade→fire department、pocket money→allowance。
+- **U3 语气/情态主线**:L11 间接引语 → L12 条件句/虚拟 → L13 must 推测/义务 → L14 would rather 偏好 → L15 could/was able to 能力。整单元围绕"表达语气与情态"成体系。
+- 对账(U3 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **660**(U1 220 + U2 220 + U3 220)。
 
 <!-- 历史(上一版) -->
 ## 📌 本批变化(2026-07-06 session · am3 第三册 · U1 推进到 L3)

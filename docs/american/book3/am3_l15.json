@@ -1,0 +1,133 @@
+{
+  "id": "am3_l15",
+  "unit_no": 3,
+  "lesson_no": 15,
+  "title_en": "Fifty Cents' Worth of Trouble",
+  "title_cn": "五十美分的麻烦",
+  "grammar_focus": "could / was able to / managed to 的区别(could 表过去一般能力:he could climb any tree;was able to / managed to 表某一次成功做成:the firefighters were able to free him;could not 表过去做不到),外加“短语动词 + up”(save up / fill up / roll up / wrap up / button up / build up)(原创承载 NCE3 L15 考点·无需净化·美式改写:侄子 George 把硬币掉进下水道,胳膊卡住,消防队用润滑油救出,糖果店老板送他一大盒巧克力)",
+  "scene": "孩子们总是喜欢收到一点零花钱。爸爸妈妈会按时给零用,叔叔阿姨则是额外收入的来源。对有的孩子来说,几个硬币能花很久;对另一些孩子,一下午都撑不到。只有很节俭的孩子才攒得满一个储钱罐,摇起来硬币叮当作响。我侄子 George 也有个储钱罐,却总是空的——我给他的两毛五硬币几乎没一个落进去过。昨天我给了他五十美分,叫他攒起来,他却给自己买了“五十美分的麻烦”:去糖果店的路上,硬币掉在地上,顺着人行道弹了几下,滚进了下水道。George 脱下外套,卷起袖子,把胳膊从下水道盖的缝里伸了进去。硬币没摸着,更糟的是胳膊也抽不出来了。人群围了上来,一位好心女士往他胳膊上抹黄油,可他还是死死卡住。最后消防队来了,忙了将近一个钟头,两名消防员用一点润滑油把他救了出来。George 倒没怎么沮丧——糖果店的老板娘听说了这事,送了他一大盒巧克力。",
+  "grammar_card": {
+    "title": "could / was able to / managed to + 短语动词 up",
+    "intro": "①could 表示“过去的一般能力”(以前一直会/能):When he was little, he could climb any tree。②但表示“某一次终于做成、成功办到”时,不用 could,而用 was/were able to 或 managed to:After an hour, the firefighters were able to free him(= managed to free him)。③could not / couldn't 表示“过去做不到”:He could not pull his arm out。④“短语动词 + up”很常见:save up(攒钱)、fill up(装满)、roll up(卷起)、wrap up(包起)、button up(扣好)、build up(积累)、eat up(吃光)。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["could + 原形", "过去的一般能力", "He could climb any tree."],
+        ["was/were able to / managed to", "某一次成功做成", "They were able to free him. / He managed to escape."],
+        ["could not + 原形", "过去做不到", "He could not pull his arm out."],
+        ["动词 + up", "短语动词", "save up / fill up / roll up / wrap up"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "肯定句里“某一次终于办到”不能用 could,要用 was able to / managed to;could 只用于“过去一般能力”或否定句 could not。", "mark": "was able to / managed to" },
+      { "rule": "could not 是过去“做不到”:He could not find it（找不到）。别写成 could not to。", "mark": "could not" },
+      { "rule": "up 常与动词搭成短语:save up 攒起来、fill up 装满、roll up 卷起、button up 扣好。美语里“零花钱”说 allowance(英式 pocket money),“人行道”说 sidewalk(英式 pavement),“糖果”说 candy(英式 sweets)。", "mark": "save up / sidewalk" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Did George get anything for his fifty cents in the end?",
+    "options": ["Yes, a big box of chocolates", "No, nothing at all", "Yes, his money back", "No, only a scolding"],
+    "answer_index": 0
+  },
+  "passage": "Kids always appreciate small gifts of money. Mom and dad hand out a regular allowance, of course, but uncles and aunts are a welcome source of extra cash. To some kids a few coins go a long way; to others they never last an afternoon. Only very thrifty children manage to fill up a piggy bank, and when they shake it, the coins rattle happily inside. My nephew, George, has a piggy bank, but it is always empty. Almost none of the quarters I have given him ever find their way in. Yesterday I gave him fifty cents and told him to save it up. Instead, he bought himself fifty cents' worth of trouble. On his way to the candy store, George dropped the coin. It bounced along the sidewalk and disappeared down a drain. George could always squeeze his hand into tight spaces, so he took off his jacket, rolled up his sleeves, and pushed his arm through the drain cover. He could not find the coin, and worse, he could not pull his arm back out. A crowd gathered, and a kind woman rubbed his arm with butter, but George was stuck fast. At last the fire department was called, and after nearly an hour two firefighters were able to free him with a little grease. George was not upset for long: the woman who owns the candy store heard about it all and rewarded him with a big box of chocolates.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Kids always appreciate small gifts of money. Mom and dad hand out a regular allowance, of course, but uncles and aunts are a welcome source of extra cash. To some kids a few coins go a long way; to others they never last an afternoon.", "text_cn": "孩子们总喜欢收到一点零花钱。爸爸妈妈当然会按时给零用,叔叔阿姨则是额外收入的来源。对有的孩子来说,几个硬币能花很久;对另一些孩子,一下午都撑不到。" },
+    { "seq": 2, "speaker": null, "text_en": "Only very thrifty children manage to fill up a piggy bank, and when they shake it, the coins rattle happily inside. My nephew, George, has a piggy bank, but it is always empty. Almost none of the quarters I have given him ever find their way in.", "text_cn": "只有很节俭的孩子才攒得满一个储钱罐,摇起来硬币叮当作响。我侄子 George 也有个储钱罐,却总是空的——我给他的两毛五硬币几乎没一个落进去过。" },
+    { "seq": 3, "speaker": null, "text_en": "Yesterday I gave him fifty cents and told him to save it up. Instead, he bought himself fifty cents' worth of trouble. On his way to the candy store, George dropped the coin. It bounced along the sidewalk and disappeared down a drain.", "text_cn": "昨天我给了他五十美分,叫他攒起来,他却给自己买了“五十美分的麻烦”。去糖果店的路上,硬币掉在地上,顺着人行道弹了几下,滚进了下水道。" },
+    { "seq": 4, "speaker": null, "text_en": "George could always squeeze his hand into tight spaces, so he took off his jacket, rolled up his sleeves, and pushed his arm through the drain cover. He could not find the coin, and worse, he could not pull his arm back out.", "text_cn": "George 一向能把手塞进狭小的地方,于是他脱下外套,卷起袖子,把胳膊从下水道盖的缝里伸了进去。硬币没摸着,更糟的是胳膊也抽不出来了。" },
+    { "seq": 5, "speaker": null, "text_en": "A crowd gathered, and a kind woman rubbed his arm with butter, but George was stuck fast. At last the fire department was called, and after nearly an hour two firefighters were able to free him with a little grease. George was not upset for long: the woman who owns the candy store heard about it all and rewarded him with a big box of chocolates.", "text_cn": "人群围了上来,一位好心女士往他胳膊上抹黄油,可他还是死死卡住。最后消防队来了,忙了将近一个钟头,两名消防员用一点润滑油把他救了出来。George 倒没怎么沮丧——糖果店的老板娘听说了这事,送了他一大盒巧克力。" }
+  ],
+  "words": [
+    { "word": "appreciate", "ipa": "/əˈpriːʃieɪt/", "pos": "v", "meaning_cn": "欣赏,感激", "example": "kids appreciate small gifts" },
+    { "word": "allowance", "ipa": "/əˈlaʊəns/", "pos": "n", "meaning_cn": "零花钱,零用钱(美语,英式 pocket money)", "example": "a regular allowance" },
+    { "word": "thrifty", "ipa": "/ˈθrɪfti/", "pos": "adj", "meaning_cn": "节俭的", "example": "very thrifty children" },
+    { "word": "rattle", "ipa": "/ˈrætl/", "pos": "v", "meaning_cn": "格格作响,叮当响", "example": "the coins rattle inside" },
+    { "word": "nephew", "ipa": "/ˈnefjuː/", "pos": "n", "meaning_cn": "侄子,外甥", "example": "my nephew George" },
+    { "word": "bounce", "ipa": "/baʊns/", "pos": "v", "meaning_cn": "弹起,跳起", "example": "it bounced along the sidewalk" },
+    { "word": "sidewalk", "ipa": "/ˈsaɪdwɔːk/", "pos": "n", "meaning_cn": "人行道(美语,英式 pavement)", "example": "along the sidewalk" },
+    { "word": "drain", "ipa": "/dreɪn/", "pos": "n", "meaning_cn": "排水沟,下水道", "example": "down a drain" },
+    { "word": "stick", "ipa": "/stɪk/", "pos": "v", "meaning_cn": "卡住,夹住(stuck/stuck)", "example": "George was stuck fast" },
+    { "word": "grease", "ipa": "/griːs/", "pos": "n", "meaning_cn": "润滑油,油脂", "example": "free him with grease" },
+    { "word": "reward", "ipa": "/rɪˈwɔːrd/", "pos": "v", "meaning_cn": "奖励,酬谢", "example": "rewarded him with chocolates" },
+    { "word": "gather", "ipa": "/ˈɡæðər/", "pos": "v", "meaning_cn": "聚集,围拢", "example": "a crowd gathered" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "could 表过去一般能力" },
+    { "gp": "gp2", "name": "was able to / managed to(某次成功)" },
+    { "gp": "gp3", "name": "could not / couldn't(过去做不到)" },
+    { "gp": "gp4", "name": "短语动词 + up(save up / fill up)" },
+    { "gp": "gp5", "name": "短语动词 + up(roll up / wrap up / button up)" },
+    { "gp": "gp6", "name": "词汇辨析(thrifty/bounce/stick)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"When George was little, he ___ climb any tree in the yard.\"(过去的一般能力,用哪个)", "stem_cn": "乔治小时候能爬院子里任何一棵树。", "options": ["could", "can", "could to", "cans"] },
+    { "gp": "gp1", "stem": "\"My grandma ___ speak three languages when she was young.\"(过去的一般能力)", "stem_cn": "我奶奶年轻时会说三种语言。", "options": ["could", "can", "could to", "was can"] },
+    { "gp": "gp1", "stem": "\"Years ago George ___ hold his breath for a whole minute.\"(过去的一般能力)", "stem_cn": "多年前乔治能憋气整整一分钟。", "options": ["could", "can", "could to", "did could"] },
+    { "gp": "gp2", "stem": "\"After an hour, two firefighters ___ free George from the drain.\"(某一次成功做成,不用 could)", "stem_cn": "一个小时后,两名消防员成功把乔治从下水道里救了出来。", "options": ["were able to", "could", "can", "are able"] },
+    { "gp": "gp2", "stem": "\"George finally ___ pull his arm out with some grease.\"(某一次“设法做成”)", "stem_cn": "乔治最后靠润滑油总算把胳膊抽了出来。", "options": ["managed to", "could", "can", "managed"] },
+    { "gp": "gp2", "stem": "\"The kind woman ___ calm the frightened boy down at last.\"(某一次成功做成)", "stem_cn": "那位好心女士最后总算把受惊的男孩安抚了下来。", "options": ["was able to", "could", "can", "is able"] },
+    { "gp": "gp3", "stem": "\"George ___ find his coin anywhere in the drain.\"(过去“找不到”)", "stem_cn": "乔治在下水道里到处都找不到硬币。", "options": ["could not", "can not now", "could not to", "was not find"] },
+    { "gp": "gp3", "stem": "\"What was worse, he ___ pull his arm back out.\"(过去“拔不出来”)", "stem_cn": "更糟的是,他把胳膊拔不出来了。", "options": ["could not", "can not", "could not to", "was not can"] },
+    { "gp": "gp3", "stem": "\"The thrifty boy ___ understand why his money vanished so fast.\"(过去“弄不明白”)", "stem_cn": "这节俭的男孩弄不明白钱怎么这么快就没了。", "options": ["could not", "can not", "could to not", "was not could"] },
+    { "gp": "gp4", "stem": "\"I told George to ___ his fifty cents for something better.\"(短语动词“攒起来”)", "stem_cn": "我叫乔治把这五十美分攒起来买点更好的。", "options": ["save up", "save on", "save off", "save in"] },
+    { "gp": "gp4", "stem": "\"Only thrifty kids manage to ___ a whole piggy bank.\"(短语动词“装满”)", "stem_cn": "只有节俭的孩子才攒得满整个储钱罐。", "options": ["fill up", "fill in", "fill on", "fill off"] },
+    { "gp": "gp4", "stem": "\"He has ___ a large collection of coins over the years.\"(短语动词“积累起来”)", "stem_cn": "这些年他积攒起了一大堆硬币。", "options": ["built up", "built in", "built on", "built off"] },
+    { "gp": "gp5", "stem": "\"George ___ his sleeves before reaching into the drain.\"(短语动词“卷起”)", "stem_cn": "乔治把袖子卷起来,才把手伸进下水道。", "options": ["rolled up", "rolled in", "rolled on", "rolled off"] },
+    { "gp": "gp5", "stem": "\"Please ___ the gift nicely before the party.\"(短语动词“包起来”)", "stem_cn": "请在聚会前把礼物好好包起来。", "options": ["wrap up", "wrap in", "wrap on", "wrap off"] },
+    { "gp": "gp5", "stem": "\"It's cold, so ___ your coat before you go out.\"(短语动词“扣好”)", "stem_cn": "天冷,出门前把外套扣好。", "options": ["button up", "button in", "button on", "button off"] },
+    { "gp": "gp6", "stem": "\"A person who saves money carefully and spends little is ___.\"(“节俭的”用哪个词)", "stem_cn": "花钱谨慎、省着用的人是节俭的。", "options": ["thrifty", "lazy", "noisy", "cheerful"] },
+    { "gp": "gp6", "stem": "\"When a ball hits the ground and jumps back up, it ___.\"(“弹起”用哪个词)", "stem_cn": "球落地又跳起来就是弹起。", "options": ["bounces", "melts", "sinks", "burns"] },
+    { "gp": "gp6", "stem": "\"When your arm is caught and cannot move, it is ___.\"(“卡住”用哪个词)", "stem_cn": "胳膊被卡住动不了就是这个词。", "options": ["stuck", "washed", "painted", "folded"] }
+  ],
+  "stage6": [
+    { "stem": "appreciate 的意思是:", "options": ["欣赏,感激", "讨厌", "浪费", "忘记"] },
+    { "stem": "thrifty 的意思是:", "options": ["节俭的", "浪费的", "胆小的", "懒惰的"] },
+    { "stem": "rattle 的意思是:", "options": ["格格作响,叮当响", "发光", "融化", "沉默"] },
+    { "stem": "nephew 的意思是:", "options": ["侄子,外甥", "侄女", "祖父", "邻居"] },
+    { "stem": "grease 的意思是:", "options": ["润滑油,油脂", "清水", "沙子", "胶水"] },
+    { "stem": "reward 的意思是:", "options": ["奖励,酬谢", "惩罚", "责备", "忽视"] }
+  ],
+  "contrast": [
+    { "us": "candy", "uk": "sweets", "note_cn": "糖果;美语 candy,英式 sweets" },
+    { "us": "sidewalk", "uk": "pavement", "note_cn": "人行道;美语 sidewalk,英式 pavement" },
+    { "us": "fire department", "uk": "fire brigade", "note_cn": "消防队;美语 fire department,英式 fire brigade" },
+    { "us": "allowance", "uk": "pocket money", "note_cn": "零花钱;美语 allowance,英式 pocket money" }
+  ],
+  "chunks": [
+    { "us": "save up", "ipa": "/seɪv ʌp/", "example1": "I told him to save up his money.", "example1_cn": "我叫他把钱攒起来。", "example2": "She's saving up for a new bike.", "example2_cn": "她正在攒钱买辆新自行车。" },
+    { "us": "fill up", "ipa": "/fɪl ʌp/", "example1": "Only thrifty kids fill up a piggy bank.", "example1_cn": "只有节俭的孩子才装得满储钱罐。", "example2": "Let's fill up the water bottle.", "example2_cn": "我们把水瓶装满吧。" },
+    { "us": "roll up one's sleeves", "ipa": "/roʊl ʌp/", "example1": "George rolled up his sleeves and reached in.", "example1_cn": "乔治卷起袖子伸手进去。", "example2": "Roll up your sleeves and give me a hand.", "example2_cn": "卷起袖子来帮我一把。" },
+    { "us": "go a long way", "ipa": "/ɡoʊ ə lɔːŋ weɪ/", "example1": "A few coins go a long way for some kids.", "example1_cn": "对有的孩子来说几个硬币能花很久。", "example2": "A little kindness goes a long way.", "example2_cn": "一点善意能起大作用。" }
+  ],
+  "stage7_cloze": {
+    "context": "Yesterday I gave George fifty cents and told him to ___1___ it for something nice. On his way to the candy store, the coin bounced along the sidewalk and fell down a drain. George rolled ___2___ his sleeves and reached in, but he ___3___ pull his arm back out. At last two firefighters ___4___ free him with some grease.",
+    "blanks": [
+      { "blank_no": 1, "options": ["save", "saving", "to save", "saved"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["up", "in", "on", "off"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["could not", "can not", "could to", "was not"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["were able to", "could", "can", "are able"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What happened to the fifty cents George's uncle gave him?", "options": ["It fell down a drain", "He saved it in his bank", "He bought a book with it", "He gave it away"] },
+    { "stem": "Why couldn't George get his arm out of the drain?", "options": ["It was stuck fast", "He was too tired", "The coin held it", "His sleeve was caught"] },
+    { "stem": "How did the firefighters free George?", "options": ["They used some grease", "They broke the drain cover", "They called a doctor", "They waited for rain"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"两名消防员成功把他救了出来\"(某一次成功用 were able to):", "options": ["Two firefighters were able to free him.", "Two firefighters could free him.", "Two firefighters were able free him.", "Two firefighters can free him."] },
+    { "stem": "你想说\"他把胳膊拔不出来\"(过去做不到用 could not):", "options": ["He could not pull his arm out.", "He can not pull his arm out.", "He could not to pull his arm out.", "He was not can pull his arm out."] },
+    { "stem": "你想说\"我叫他把钱攒起来\"(短语动词 save up):", "options": ["I told him to save up his money.", "I told him to save on his money.", "I told him to save off his money.", "I told him to save in his money."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "thrifty 的意思是:", "options": ["节俭的", "浪费的", "胆小的", "懒惰的"] },
+    { "kind": "vocab", "stem": "grease 的意思是:", "options": ["润滑油,油脂", "清水", "沙子", "胶水"] },
+    { "kind": "grammar", "stem": "\"After an hour, the firefighters ___ free him.\"(某一次成功做成)", "stem_cn": "一小时后,消防员成功把他救了出来。", "options": ["were able to", "could", "can", "are able"] },
+    { "kind": "grammar", "stem": "\"George ___ find his coin in the drain.\"(过去“找不到”)", "stem_cn": "乔治在下水道里找不到硬币。", "options": ["could not", "can not", "could to", "was not"] },
+    { "kind": "scenario", "stem": "\"save up\" 的意思是:", "options": ["(把钱)攒起来", "花光", "借出", "数一数"] },
+    { "kind": "scenario", "stem": "\"roll up one's sleeves\" 的意思是:", "options": ["卷起袖子(准备动手)", "脱下外套", "洗净双手", "系好鞋带"] },
+    { "kind": "reading", "stem": "Where did George's coin end up?", "options": ["Down a drain in the sidewalk", "In his piggy bank", "In the candy store", "In his jacket pocket"], "passage": true },
+    { "kind": "reading", "stem": "How did the candy-store owner treat George?", "options": ["She rewarded him with chocolates", "She scolded him", "She ignored him", "She charged him for the trouble"], "passage": true },
+    { "kind": "listening", "stem": "Why was George's piggy bank always empty?", "options": ["He never saved his money", "He had no coins at all", "His uncle took it", "It was broken"], "audio": true },
+    { "kind": "listening", "stem": "What did a kind woman rub on George's arm?", "options": ["Butter", "Water", "Paint", "Sand"], "audio": true }
+  ]
+}

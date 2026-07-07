@@ -1,0 +1,134 @@
+{
+  "id": "am4_l31",
+  "unit_no": 6,
+  "lesson_no": 31,
+  "title_en": "The Sculptor Speaks",
+  "title_cn": "雕塑家说",
+  "grammar_focus": "as if / as though + 虚拟语气(as if he were holding it)、现在分词的完成式作状语(Having studied it, …)、现在分词作定语(a child learning to see)、比较级 + than(harder than … / many more … than)、whatever/whichever/however 引导让步(NCE4 无 KS 页,考点由课文结构自取;IP:源为雕塑家亨利·摩尔《The Sculptor Speaks》一文,是署名版权的第一人称艺术随笔——已用 100% 原创行文复述其‘欣赏雕塑须感知三维形体’的观点,无逐句改写、无具名;题材=艺术欣赏·无害;美语化 color/ladybug;第四册第31课·U6开工)",
+  "scene": "要欣赏雕塑,你必须能对三维的形体作出反应。这也许正是它常被称作一切艺术中最难者的原因——肯定比那些只需回应平面形体、二维形状的艺术更难。说实话,‘形盲’的人远比‘色盲’的多。一个初学看东西的孩子,起初只分辨得出二维形状;他还判断不了距离与深浅。后来,为了自身安全与实际需要,他才学会——部分靠触摸——粗略地判断三维的远近。可一旦这些实用需求得到满足,大多数人便不再深究。他们纵然能极准确地感知平面形体,却始终不肯再作那一步智力与情感上的努力,去把握形体在完整空间中的存在。而这,恰恰是雕塑家必须做的。他得不断地、把形体当作它完整的空间整体来思考。他仿佛把那实心的形状抓在自己脑袋里;无论它多大,他都仿佛正将它整个握在掌心。从各个角度端详过之后,他在心里把一个复杂的形体从四面八方立体地想象出来:看着这一面时,他已经知道另一面是什么样;他把自己代入它的重心、它的质量、它的重量;他感受它的体积,就像感受这形状在空气中所占据、所排开的那片空间。而一个敏感的雕塑观赏者,也必须学会做几分相似的事。他必须把形体单纯当作形体来感受,而不是当作对某物的描述或联想。比如,他得能把一枚鸡蛋看成一个纯粹、单一的实体——完全撇开它作为食物的意义,也撇开‘它有朝一日会变成一只鸟’的念头。对一颗坚果、一只梨、一只蝌蚪、一朵蘑菇、一根胡萝卜、一枚花苞,也是如此;从这些简单的实体出发,他便能进而去欣赏远为复杂的形体,乃至几种形体的组合。",
+  "grammar_card": {
+    "title": "as if + 虚拟 / 现在分词完成式作状语 / 现在分词作定语 / 比较级 + than / whatever 让步",
+    "intro": "①as if / as though + 虚拟语气:与现在相反 be 用 were;与过去相反用 had + 过去分词。②现在分词的完成式 having + 过去分词,表动作发生在前:Having studied it, …。③现在分词作定语:a child learning to see。④比较级 + than;many more … than。⑤whatever/whichever/however 引导‘无论…’。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["as if + 虚拟", "as if + were / had done", "as if he were holding it"],
+        ["现在分词完成式状语", "Having + 过去分词, …", "Having studied it, he carved"],
+        ["现在分词作定语", "名词 + 现在分词", "a child learning to see"],
+        ["比较级 + than", "比较级 … than …", "harder than flat art"],
+        ["whatever 让步", "whatever / however + …", "whatever its size"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "as if 从句表‘与事实相反’时用虚拟:现在用 were,过去用 had + 过去分词。", "mark": "as if he were / had done" },
+      { "rule": "however 后接形容词/副词(however hard);whatever/whichever 后接名词(whatever its size)。", "mark": "however + 形容词" },
+      { "rule": "美式拼写:color(颜色,英式 colour)、ladybug(瓢虫,英式 ladybird)。本课已按美语写。", "mark": "color / ladybug" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What do you have to be able to do to appreciate sculpture?",
+    "options": ["Respond to form in three dimensions", "Judge colours accurately", "Read about the artist's life", "Touch every statue"],
+    "answer_index": 0
+  },
+  "passage": "To appreciate sculpture, you must be able to respond to form in three dimensions. That is perhaps why it is often called the most difficult of all the arts — certainly harder than those that ask only for a response to flat form, to shape in two dimensions. Many more people, in truth, are 'form-blind' than colour-blind. A child learning to see distinguishes at first only two-dimensional shape; it cannot yet judge distance or depth. Later, for the sake of its own safety and its practical needs, it learns — partly through touch — to judge three-dimensional distances roughly. But once these practical demands are met, most people go no further. Though they may attain great accuracy in the perception of flat form, they never make the further intellectual and emotional effort needed to comprehend form in its full spatial existence. This is exactly what the sculptor must do. He has to think, continually, of form in its complete spatial wholeness. He grasps the solid shape, as it were, inside his own head; he thinks of it, whatever its size, as if he were holding it entirely enclosed in the hollow of his hand. Having studied it from every side, he visualizes a complex form all round itself: while he looks at one face he already knows what the other is like; he identifies himself with its centre of gravity, its mass, its weight; he feels its volume as the space that the shape displaces in the air. The sensitive observer of sculpture must learn to do something of the same. He must feel shape simply as shape, not as description or reminiscence. He must be able, for instance, to perceive an egg as a pure, single solid — quite apart from its use as food, or from the thought that it may one day become a bird. And so with a nut, a pear, a tadpole, a mushroom, a carrot, a bud: from such simple solids he can go on to appreciate far more complex forms.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "To appreciate sculpture, you must be able to respond to form in three dimensions. That is perhaps why it is often called the most difficult of all the arts — certainly harder than those that ask only for a response to flat form, to shape in two dimensions. Many more people, in truth, are 'form-blind' than colour-blind.", "text_cn": "要欣赏雕塑,你必须能对三维的形体作出反应。这也许正是它常被称作一切艺术中最难者的原因——肯定比那些只需回应平面形体、二维形状的艺术更难。说实话,‘形盲’的人远比‘色盲’的多。" },
+    { "seq": 2, "speaker": null, "text_en": "A child learning to see distinguishes at first only two-dimensional shape; it cannot yet judge distance or depth. Later, for the sake of its own safety and its practical needs, it learns — partly through touch — to judge three-dimensional distances roughly. But once these practical demands are met, most people go no further.", "text_cn": "一个初学看东西的孩子,起初只分辨得出二维形状;他还判断不了距离与深浅。后来,为了自身安全与实际需要,他才学会——部分靠触摸——粗略地判断三维的远近。可一旦这些实用需求得到满足,大多数人便不再深究。" },
+    { "seq": 3, "speaker": null, "text_en": "Though they may attain great accuracy in the perception of flat form, they never make the further intellectual and emotional effort needed to comprehend form in its full spatial existence. This is exactly what the sculptor must do. He has to think, continually, of form in its complete spatial wholeness.", "text_cn": "他们纵然能极准确地感知平面形体,却始终不肯再作那一步智力与情感上的努力,去把握形体在完整空间中的存在。而这,恰恰是雕塑家必须做的。他得不断地、把形体当作它完整的空间整体来思考。" },
+    { "seq": 4, "speaker": null, "text_en": "He grasps the solid shape, as it were, inside his own head; he thinks of it, whatever its size, as if he were holding it entirely enclosed in the hollow of his hand. Having studied it from every side, he visualizes a complex form all round itself: while he looks at one face he already knows what the other is like; he identifies himself with its centre of gravity, its mass, its weight; he feels its volume as the space that the shape displaces in the air.", "text_cn": "他仿佛把那实心的形状抓在自己脑袋里;无论它多大,他都仿佛正将它整个握在掌心。从各个角度端详过之后,他在心里把一个复杂的形体从四面八方立体地想象出来:看着这一面时,他已经知道另一面是什么样;他把自己代入它的重心、它的质量、它的重量;他感受它的体积,就像感受这形状在空气中所排开的那片空间。" },
+    { "seq": 5, "speaker": null, "text_en": "The sensitive observer of sculpture must learn to do something of the same. He must feel shape simply as shape, not as description or reminiscence. He must be able, for instance, to perceive an egg as a pure, single solid — quite apart from its use as food, or from the thought that it may one day become a bird. And so with a nut, a pear, a tadpole, a mushroom, a carrot, a bud: from such simple solids he can go on to appreciate far more complex forms.", "text_cn": "而一个敏感的雕塑观赏者,也必须学会做几分相似的事。他必须把形体单纯当作形体来感受,而不是当作对某物的描述或联想。比如,他得能把一枚鸡蛋看成一个纯粹、单一的实体——完全撇开它作为食物的意义,也撇开‘它有朝一日会变成一只鸟’的念头。对一颗坚果、一只梨、一只蝌蚪、一朵蘑菇、一根胡萝卜、一枚花苞,也是如此;从这些简单的实体出发,他便能进而去欣赏远为复杂的形体。" }
+  ],
+  "words": [
+    { "word": "perception", "ipa": "/pərˈsepʃn/", "pos": "n", "meaning_cn": "感知,知觉", "example": "accuracy in the perception of flat form" },
+    { "word": "comprehend", "ipa": "/ˌkɑːmprɪˈhend/", "pos": "v", "meaning_cn": "理解,领会", "example": "to comprehend form in its full existence" },
+    { "word": "spatial", "ipa": "/ˈspeɪʃl/", "pos": "adj", "meaning_cn": "空间的", "example": "form in its full spatial existence" },
+    { "word": "visualize", "ipa": "/ˈvɪʒuəlaɪz/", "pos": "v", "meaning_cn": "(在脑中)想象,构想", "example": "he visualizes a complex form" },
+    { "word": "reminiscence", "ipa": "/ˌremɪˈnɪsns/", "pos": "n", "meaning_cn": "回忆,追忆", "example": "not as description or reminiscence" },
+    { "word": "sculpture", "ipa": "/ˈskʌlptʃər/", "pos": "n", "meaning_cn": "雕塑,雕刻", "example": "appreciation of sculpture" },
+    { "word": "dimension", "ipa": "/dɪˈmenʃn/", "pos": "n", "meaning_cn": "维,方面,尺寸", "example": "form in three dimensions" },
+    { "word": "volume", "ipa": "/ˈvɑːljuːm/", "pos": "n", "meaning_cn": "体积,容积", "example": "he feels its volume" },
+    { "word": "tadpole", "ipa": "/ˈtædpoʊl/", "pos": "n", "meaning_cn": "蝌蚪", "example": "a nut, a pear, a tadpole" },
+    { "word": "mushroom", "ipa": "/ˈmʌʃrʊm/", "pos": "n", "meaning_cn": "蘑菇", "example": "a mushroom, a carrot, a bud" },
+    { "word": "carrot", "ipa": "/ˈkærət/", "pos": "n", "meaning_cn": "胡萝卜", "example": "a mushroom, a carrot, a bud" },
+    { "word": "bud", "ipa": "/bʌd/", "pos": "n", "meaning_cn": "花苞,芽", "example": "a carrot, a bud" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "as if / as though + 虚拟语气" },
+    { "gp": "gp2", "name": "现在分词的完成式作状语(Having done)" },
+    { "gp": "gp3", "name": "现在分词作定语(learning/looking)" },
+    { "gp": "gp4", "name": "比较级 + than" },
+    { "gp": "gp5", "name": "whatever/whichever/however 引导让步" },
+    { "gp": "gp6", "name": "词汇辨析(perception/visualize/spatial)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He thinks of the form as if he ___ holding it in his hand.\"(as if + 虚拟语气,与现在相反,be 动词用其虚拟形式)", "stem_cn": "他构想那形体,仿佛正把它握在手中。", "options": ["were", "was", "is", "be"] },
+    { "gp": "gp1", "stem": "\"She looked at the statue as if she ___ never seen one before.\"(as if + 虚拟,与过去相反,填与过去分词搭配构成完成体的那个词)", "stem_cn": "她盯着雕像,仿佛从没见过似的。", "options": ["had", "has", "have", "did"] },
+    { "gp": "gp1", "stem": "\"The sculptor treats the stone as if it ___ alive.\"(as if + 虚拟,与现在相反,be 动词用其虚拟形式)", "stem_cn": "雕塑家对待石头,仿佛它是活的。", "options": ["were", "was", "is", "are"] },
+    { "gp": "gp2", "stem": "\"___ satisfied their practical needs, most people go no further.\"(现在分词的完成式作状语,动作在前,填 have 一词的现在分词形式)", "stem_cn": "实用需要一旦满足,大多数人就不再深究。", "options": ["Having", "Had", "Has", "To have"] },
+    { "gp": "gp2", "stem": "\"___ learned to judge distances, the child stops there.\"(现在分词的完成式作状语,填 have 一词的现在分词形式)", "stem_cn": "学会判断距离后,孩子就止步于此。", "options": ["Having", "Had", "Has", "To have"] },
+    { "gp": "gp2", "stem": "\"___ studied the form from all sides, he began to carve.\"(现在分词的完成式作状语,填 have 一词的现在分词形式)", "stem_cn": "从各个角度研究了那形体后,他才动手雕刻。", "options": ["Having", "Had", "Has", "To have"] },
+    { "gp": "gp3", "stem": "\"The child ___ to see first knows only flat shapes.\"(现在分词作定语,主动‘学习’,填‘学’那个动词的现在分词)", "stem_cn": "初学看东西的孩子,起初只识得平面形状。", "options": ["learning", "learned", "learn", "to learn"] },
+    { "gp": "gp3", "stem": "\"A person ___ at a statue should walk all around it.\"(现在分词作定语,主动‘观看’,填‘看’那个动词的现在分词)", "stem_cn": "看雕像的人,应绕着它走一圈。", "options": ["looking", "looked", "look", "to look"] },
+    { "gp": "gp3", "stem": "\"The space ___ around the shape is part of the work.\"(现在分词作定语,主动‘流动/环绕’,填‘流动’那个动词的现在分词)", "stem_cn": "环绕形体流动的空间,也是作品的一部分。", "options": ["flowing", "flowed", "flow", "to flow"] },
+    { "gp": "gp4", "stem": "\"Sculpture is more difficult ___ the arts of flat form.\"(比较级后接的那个连词)", "stem_cn": "雕塑比平面艺术更难。", "options": ["than", "then", "as", "that"] },
+    { "gp": "gp4", "stem": "\"Many ___ people are form-blind than colour-blind.\"(‘多得多的人’,many 前加表程度的比较级词)", "stem_cn": "‘形盲’的人远比‘色盲’的多。", "options": ["more", "most", "much", "very"] },
+    { "gp": "gp4", "stem": "\"To feel form is ___ difficult than to see color.\"(‘更难’,difficult 的比较级)", "stem_cn": "感知形体比看颜色更难。", "options": ["more", "most", "very", "so"] },
+    { "gp": "gp5", "stem": "\"He thinks of the form, ___ its size, as a whole.\"(‘无论其大小’,后接名词,填让步连词)", "stem_cn": "无论那形体多大,他都把它当作一个整体来想。", "options": ["whatever", "however", "whoever", "whichever"] },
+    { "gp": "gp5", "stem": "\"___ side he looks at, he knows what the other is like.\"(‘无论看哪一面’,后接名词,填让步连词)", "stem_cn": "无论他看哪一面,都知道另一面是什么样。", "options": ["Whichever", "Whatever", "However", "Whoever"] },
+    { "gp": "gp5", "stem": "\"___ hard it is, the sculptor must feel shape as shape.\"(‘无论多难’,后接形容词,填让步连词)", "stem_cn": "无论多难,雕塑家都必须把形体当作形体来感受。", "options": ["However", "Whatever", "Whoever", "Whichever"] },
+    { "gp": "gp6", "stem": "\"The act of noticing or understanding through the senses is ___.\"(“感知,知觉”用哪个词)", "stem_cn": "通过感官注意到或理解。", "options": ["perception", "decision", "collection", "invitation"] },
+    { "gp": "gp6", "stem": "\"To form a picture of something in your mind is to ___ it.\"(“在脑中想象”用哪个词)", "stem_cn": "在心里为某物构成一幅图像。", "options": ["visualize", "memorize", "criticize", "organize"] },
+    { "gp": "gp6", "stem": "\"Relating to space and the position of things in it is ___.\"(“空间的”用哪个词)", "stem_cn": "与空间及物体在其中的位置有关的。", "options": ["spatial", "musical", "magical", "formal"] }
+  ],
+  "stage6": [
+    { "stem": "perception 的意思是:", "options": ["感知,知觉", "遗忘", "怀疑", "想象"] },
+    { "stem": "comprehend 的意思是:", "options": ["理解,领会", "忽视", "拒绝", "否认"] },
+    { "stem": "spatial 的意思是:", "options": ["空间的", "时间的", "临时的", "表面的"] },
+    { "stem": "visualize 的意思是:", "options": ["(在脑中)想象,构想", "触摸", "测量", "购买"] },
+    { "stem": "reminiscence 的意思是:", "options": ["回忆,追忆", "预言", "命令", "描述"] },
+    { "stem": "sculpture 的意思是:", "options": ["雕塑,雕刻", "绘画", "摄影", "音乐"] }
+  ],
+  "contrast": [
+    { "us": "color", "uk": "colour", "note_cn": "颜色;美语 color,英式 colour" },
+    { "us": "ladybug", "uk": "ladybird", "note_cn": "瓢虫;美语 ladybug,英式 ladybird" },
+    { "us": "theater", "uk": "theatre", "note_cn": "剧院;美语 theater,英式 theatre" },
+    { "us": "jewelry", "uk": "jewellery", "note_cn": "珠宝;美语 jewelry,英式 jewellery" }
+  ],
+  "chunks": [
+    { "us": "respond to", "ipa": "/rɪˈspɑːnd tuː/", "example1": "You must respond to form in three dimensions.", "example1_cn": "你必须对三维形体作出反应。", "example2": "He didn't respond to my letter.", "example2_cn": "他没回我的信。" },
+    { "us": "go no further", "ipa": "/ɡoʊ noʊ ˈfɜːrðər/", "example1": "Most people go no further than that.", "example1_cn": "大多数人到此为止,不再深究。", "example2": "The talks went no further.", "example2_cn": "谈判没有再进展。" },
+    { "us": "apart from", "ipa": "/əˈpɑːrt frʌm/", "example1": "Perceive the egg apart from its use as food.", "example1_cn": "把鸡蛋撇开其食物用途去感知。", "example2": "Apart from you, no one knows.", "example2_cn": "除了你,没人知道。" },
+    { "us": "identify with", "ipa": "/aɪˈdentɪfaɪ wɪð/", "example1": "He identifies himself with its centre of gravity.", "example1_cn": "他把自己代入它的重心。", "example2": "I can identify with her feelings.", "example2_cn": "我能体会她的感受。" }
+  ],
+  "stage7_cloze": {
+    "context": "To appreciate sculpture you must ___1___ to form in three dimensions. The sculptor visualizes a form as if he ___2___ holding it in his hand. ___3___ learned to judge distances, most people go no further. But the artist thinks of the whole shape, ___4___ its size.",
+    "blanks": [
+      { "blank_no": 1, "options": ["respond", "listen", "belong", "refer"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["were", "was", "is", "be"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["Having", "Had", "Has", "To have"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["whatever", "however", "whoever", "whichever"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What do you have to be able to do to appreciate sculpture?", "options": ["Respond to form in three dimensions", "Judge colours accurately", "Read about the artist's life", "Touch every statue"] },
+    { "stem": "Why does the speaker say sculpture is harder to appreciate than flat art?", "options": ["More people are 'form-blind' than colour-blind, and 3-D form is harder to grasp", "Statues are always very large", "Sculpture is very old", "It uses no colour at all"] },
+    { "stem": "What must the sculptor do in his mind while working?", "options": ["Visualize the whole form from every side, knowing its mass and volume", "Copy a flat drawing exactly", "Forget the back of the shape", "Think only of its use"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"他构想那形体,仿佛正把它握在手中\"(as if + 虚拟):", "options": ["He thinks of the form as if he were holding it in his hand.", "He thinks of the form as if he is holding it in his hand.", "He thinks of the form as if he holding it in his hand.", "He thinks of the form as if he be holding it in his hand."] },
+    { "stem": "你想说\"实用需要一旦满足,大多数人就不再深究\"(现在分词完成式作状语):", "options": ["Having satisfied their practical needs, most people go no further.", "Have satisfied their practical needs, most people go no further.", "Satisfied their practical needs, most people go no further.", "Having satisfy their practical needs, most people go no further."] },
+    { "stem": "你想说\"无论那形体多大,他都把它当作整体来想\"(whatever 让步):", "options": ["Whatever its size, he thinks of the form as a whole.", "However its size, he thinks of the form as a whole.", "Whatever its size is big, he thinks of the form as a whole.", "Whatever size, he thinks of the form as a whole."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "perception 的意思是:", "options": ["感知,知觉", "遗忘", "怀疑", "想象"] },
+    { "kind": "vocab", "stem": "sculpture 的意思是:", "options": ["雕塑,雕刻", "绘画", "摄影", "音乐"] },
+    { "kind": "grammar", "stem": "\"He thinks of the form as if he ___ holding it in his hand.\"(as if + 虚拟,与现在相反,be 动词用其虚拟形式)", "stem_cn": "他构想那形体,仿佛正把它握在手中。", "options": ["were", "was", "is", "be"] },
+    { "kind": "grammar", "stem": "\"___ satisfied their practical needs, most people go no further.\"(现在分词的完成式作状语,动作在前)", "stem_cn": "实用需要一旦满足,大多数人就不再深究。", "options": ["Having", "Had", "Has", "To have"] },
+    { "kind": "scenario", "stem": "\"respond to\" 的意思是:", "options": ["对…作出反应/回应", "忽视…", "破坏…", "逃避…"] },
+    { "kind": "scenario", "stem": "\"apart from\" 的意思是:", "options": ["除…之外;撇开…不谈", "由于…", "为了…", "靠近…"] },
+    { "kind": "reading", "stem": "According to the speaker, what does appreciating sculpture depend on?", "options": ["The ability to respond to form in three dimensions", "A good memory for names", "The colour of the material", "The size of the statue"], "passage": true },
+    { "kind": "reading", "stem": "How does the sculptor think of a form while working?", "options": ["As a whole, visualizing every side and feeling its mass and volume", "Only as a flat picture", "Only from the front", "Only by its usefulness"], "passage": true },
+    { "kind": "listening", "stem": "What must the sensitive observer learn to feel?", "options": ["Shape simply as shape, apart from what the object is used for", "Only the colour of the object", "The price of the sculpture", "The name of the sculptor"], "audio": true },
+    { "kind": "listening", "stem": "Why are many people 'form-blind,' according to the speaker?", "options": ["They never make the effort to grasp form in its full three-dimensional existence", "They cannot see at all", "They dislike all art", "They were never taught to read"], "audio": true }
+  ]
+}

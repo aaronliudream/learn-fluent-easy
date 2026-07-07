@@ -30,6 +30,17 @@
   - **L12《银行和顾客》**(介词+关系代词 of which/whether…or/同位语从句 that/情态+have done 对过去推测/tell sb to do·过去分词定语·银行客户=债务债权关系)——44题🟢·**通用银行法概念·原创复述**。
 - 对账(am4 U1+U2):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **528**(12课×44)。
 
+## 📌 AM4 U3 收官(L13–L18 · `american_am4_seed_unit03.sql` · 264题=44×6,全🟢)· 第四册第3单元
+> NCE4 Unit 3 六篇为科普/论著/生态/趣味散文(加斯克尔·格雷克·贝尔纳·卡雷尔·卡尔德·纳丁希尔),全程**原创承载法**,通用技术/生态/社科事实(不可版权)已 100% 原创复述、无逐句改写、无人物或换虚构人物。逐课主考:
+- 🔴 **需跑** `american_am4_seed_unit03.sql`(全新文件,含 L13–L18 六课·264题)。
+  - **L13《探寻石油》**(最高级+as much as/被动各式/Once从句/介词+关系代词/want sth to do+until·钻油原理与过程)——44题🟢。
+  - **L14《蝴蝶效应》**(suppose虚拟+过去分词定语/现在分词状语/将来完成时/定从/whether从句·混沌理论:微小误差层层放大毁天气预测)——44题🟢。
+  - **L15《工业中的秘密》**(such-that/比较级加强/分词作定语/情态被动/for fear·be likely to·保密削弱工业科研)——44题🟢。
+  - **L16《现代城市》**(现在完成被动/so that目的/过去分词定语/where定从/While让步+that宾从·城市为逐利而建不顾居民身心)——44题🟢。
+  - **L17《人为的疾病》**(By动名词+情态被动/turn out to do/while对比·过去进行/非限定which/过去完成·澳洲野兔黏液瘤病生物防治)——44题🟢·**生态防治题材无害**。
+  - **L18《海豚》**(however…may be/it形式主语/no sooner…than/with独立主格/非限定who·海豚好奇顽皮戏海龟)——44题🟢。
+- 对账(am4 U1+U2+U3):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **792**(18课×44)。
+
 ## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **★★★全 12 单元 60 课收官 L1–L60**,累计 2640 题·第三册整本完成)
 
 ## 📌 AM3 U12 收官(L56–L60 · `american_am3_seed_unit12.sql` · 220题=44×5,全🟢)· ★★★第三册收官单元

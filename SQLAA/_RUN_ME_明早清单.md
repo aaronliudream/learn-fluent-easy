@@ -6,7 +6,18 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
-## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1–U8 八单元收官 L1–L40**,累计 1760 题)
+## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1–U9 九单元收官 L1–L45**,累计 1980 题)
+
+## 📌 AM3 U9 收官(L41–L45 · `american_am3_seed_unit09.sql` · 220题=44×5,全🟢)
+> NCE3 第三册 Unit 3(L41+)起无 KS 页,考点由课文自身结构 + Notes on the text 提示自取;篇幅更长。以下逐课主考:
+- 🔴 **需跑** `american_am3_seed_unit09.sql`(全新文件,含 L41–L45 五课)。
+  - **L41《宁静田园生活的遐想》**(名词/形容词+过去分词合成形容词 city-bred + be under the illusion that 同位语从句 + superior to·compare with + do without·make do with + at the mere mention of·draw to a close·beyond me + extol/dubious/obstinately·反驳"乡村生活更优越"的错觉)——44 题🟢全绿。无需净化。美式化 theater/movie/store/downtown。
+  - **L42《现代洞穴人》**(强调句 It is…that + 虚拟语气+省略 if 的倒装 had not…been + 现在分词短语修饰名词 a waterspout shooting down + 插入语 as it has come to be known + might/must/could have done 对过去推测·洞穴探险科普 Gouffre Berger)——44 题🟢全绿。无需净化(科学探险)。美式化 caving/colors。
+  - **L43《全保险》**(the+比较级 the+比较级 + so…that + 现在分词短语作状语 Shivering… + have difficulty doing·prove to be + in the event of·needless to say·make a claim for·put into operation·小镇为集市巨型馅饼盘投保、运河翻沉后打捞的幽默故事)——44 题🟢全绿。无需净化。美式化 county fair/tow truck/diner。
+  - **L44《又快捷又舒适》**(nothing can match…for + 部分否定 hardly anyone + 形式主语 it is+形容词+to do + prevent/keep sb from doing·take one's mind off + 形容词+enough to do·however+主谓·论证飞机又快又舒适的陆海空对比)——44 题🟢全绿。无需净化。美式化 airplane/highway/vacation/movie。
+  - **L45《新闻报道的威力》**(虚拟语气与过去相反 If had done→would have done + not only…but also 句首倒装 + 同位语从句 the contention that + 现在分词作状语 Acting on… + be to be done·情态被动 can be abused·南达科他一贫困家庭因五胞胎一夜成名沦为商业化牺牲品)——44 题🟢全绿。无需净化(本就美国背景)。美式化 airplane/attorney。
+- **U9 主线**:田园遐想 → 洞穴探险 → 幽默打捞 → 旅行对比 → 新闻威力;考点从合成词/同位语从句 → 强调句/虚拟倒装 → 比较级/分词状语 → 部分否定/形式主语 → 虚拟语气(过去)/not only but also。
+- 对账(U9 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **1980**(U1–U9 各 220)。
 
 ## 📌 AM3 U8 收官(L36–L40 · `american_am3_seed_unit08.sql` · 220题=44×5,全🟢)
 > NCE3 复习阶段续:一课融合多个已学难点。以下逐课主考:

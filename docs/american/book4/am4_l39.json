@@ -1,0 +1,134 @@
+{
+  "id": "am4_l39",
+  "unit_no": 7,
+  "lesson_no": 39,
+  "title_en": "What Every Writer Wants",
+  "title_cn": "作家都想要什么",
+  "grammar_focus": "whom 引导定语从句(指人作宾语)、once 引导时间从句(一旦/一…就…)、might as well do(还不如/不妨)、till/until + 现在完成(will not rest till he has captured it)、be of + 抽象名词(= 形容词:of an indescribable fascination)(NCE4 无 KS 页,考点由课文结构自取;IP:源为约翰·勒卡雷《What Every Writer Wants》一篇论写作过程的第一人称随笔,是署名版权作品——已用 100% 原创行文复述其观点、无具名、克什米尔具体轶事已泛化;题材=写作艺术·无害;美语化 draft/practice;第四册第39课)",
+  "scene": "我认识的作家很少,但我认识、且敬重的那几位,都会立刻坦白:动笔之初,他们几乎不知道自己要写向何方。他们心里有一个人物,也许两个;他们处在那种急切又不安的状态里,那被人当作灵感;而且他们全都承认,一旦旅程开始,目的地会发生根本的改变。据我确知,有一位在一部背景设在某个遥远国度的小说上花了九个月,随后又悄悄把整个故事挪到了另一个地方。我从没听说谁真去搭建我们在学校里学的那种齐整的‘骨架’。在拆了又搭、在推敲时序、在交织穿插、在从头再来的过程中,作家渐渐在自己的素材里辨认出一些动笔时并未有意识地想到的东西。这个有机的过程,常常通向非凡的自我发现,有着难以言说的魅力。一个模糊的影像浮现出来;他添一笔,再添一笔,它却消失了;可那里确曾有过什么,不把它捉住,他便不肯歇息。有时,作家体内那股‘酵母’,比他写成的书活得还久。据说有的作家除了自己的书什么都不读;就像照镜子的青少年,他们始终看不清眼前那幅景象的确切轮廓。出于同样的缘故,作家们没完没了地谈论自己的作品,挑拣出隐藏的含义、又层层叠上新的,向身边每个人乞求回应。这样做的作家会被误解——他还不如去解释一桩罪案,或一段情事——而且顺便说一句,他还是个不可饶恕的讨厌鬼。一位年轻作家曾说过一句中肯的话:才华用在初稿里,艺术用在其后的一稿又一稿里。也正因如此,作家和任何别的艺术家一样,没有歇脚之处,没有可供他寻求慰藉的人群或潮流,没有任何来自外部、能取代内心裁断的评判。他要从自己内心的混沌中理出秩序;他让自己服从于比任何评论家所梦想的都更冷酷的纪律;而当他与名声调情时,他不过是从探寻自己世界最深处那一点的路上,偷得片刻的闲。",
+  "grammar_card": {
+    "title": "whom 定语从句 / once 时间从句 / might as well do / till + 现在完成 / be of + 抽象名词",
+    "intro": "①whom 引导定语从句,指人、在从句里作宾语。②once 引导时间从句,‘一旦/一…就…’。③might as well do,‘还不如/不妨’；might as well A as B,‘做A无异于做B’。④till/until 从句表将来时用现在完成:will not rest till he has captured it。⑤be of + 抽象名词 = 形容词:of an indescribable fascination = fascinating。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["whom 定语从句", "先行词(人)+ whom + …", "those whom I respect"],
+        ["once 时间从句", "Once …, …", "once the journey has begun"],
+        ["might as well do", "might as well + 原形", "might as well try to explain a crime"],
+        ["till + 现在完成", "will not … till + 现在完成", "will not rest till he has captured it"],
+        ["be of + 抽象名词", "be of + 名词(=形容词)", "of an indescribable fascination"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "定语从句中指人、作宾语时用 whom(可省略或用 who 代替);作主语用 who。", "mark": "whom(作宾语)" },
+      { "rule": "till/until、once 等时间从句里,表将来的动作常用现在完成时,不用 will。", "mark": "till he has done" },
+      { "rule": "美式拼写:draft(草稿,英式 draught)、practice(练习,英式动词 practise)。本课已按美语写。", "mark": "draft / practice" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How do professional writers ignore what they were taught at school about writing?",
+    "options": ["They make no 'skeleton' or plan, but discover the shape as they write", "They never revise anything", "They copy other writers", "They write only about school"],
+    "answer_index": 0
+  },
+  "passage": "I have known very few writers, but those I have known — and whom I respect — confess at once that they have little idea where they are going when they first set pen to paper. They have a character in mind, perhaps two; they are in that state of eager discomfort that passes for inspiration; and all of them admit to radical changes of destination once the journey has begun. One, to my certain knowledge, spent nine months on a novel set in one distant country, then quietly moved the whole thing to another. I have never heard of anyone building the neat 'skeleton' we were taught to make at school. In the breaking and remaking, in the timing and interweaving and beginning afresh, the writer comes to discern things in his own material that were not consciously in his mind when he began. This organic process, often leading to moments of extraordinary self-discovery, is of an indescribable fascination. A blurred image appears; he adds a brushstroke, and another, and it is gone; but something was there, and he will not rest till he has captured it. Sometimes the yeast within a writer outlives the book he has written. There are writers, I have heard, who read nothing but their own books; like adolescents before a mirror, they still cannot fathom the exact outline of the vision before them. For the same reason writers talk interminably about their own work, teasing out hidden meanings and laying new ones on top. A writer who does this is misunderstood — he might as well try to explain a crime, or a love affair — and he is, incidentally, an unforgivable bore. A young writer once made the pertinent observation that the talent goes into the first draft, and the art into the drafts that follow. For this reason too the writer, like any other artist, has no resting place, no crowd or movement in which he may take comfort, no judgment from outside that can replace the judgment from within. He makes order out of the anarchy of his own heart; he submits himself to a more ruthless discipline than any critic ever dreamed of; and when he flirts with fame, he is only taking time off from the search for what his world holds at its inmost point.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "I have known very few writers, but those I have known — and whom I respect — confess at once that they have little idea where they are going when they first set pen to paper. They have a character in mind, perhaps two; they are in that state of eager discomfort that passes for inspiration; and all of them admit to radical changes of destination once the journey has begun.", "text_cn": "我认识的作家很少,但我认识、且敬重的那几位,都会立刻坦白:动笔之初,他们几乎不知道自己要写向何方。他们心里有一个人物,也许两个;他们处在那种急切又不安的状态里,那被人当作灵感;而且他们全都承认,一旦旅程开始,目的地会发生根本的改变。" },
+    { "seq": 2, "speaker": null, "text_en": "One, to my certain knowledge, spent nine months on a novel set in one distant country, then quietly moved the whole thing to another. I have never heard of anyone building the neat 'skeleton' we were taught to make at school. In the breaking and remaking, in the timing and interweaving and beginning afresh, the writer comes to discern things in his own material that were not consciously in his mind when he began.", "text_cn": "据我确知,有一位在一部背景设在某个遥远国度的小说上花了九个月,随后又悄悄把整个故事挪到了另一个地方。我从没听说谁真去搭建我们在学校里学的那种齐整的‘骨架’。在拆了又搭、在推敲时序、在交织穿插、在从头再来的过程中,作家渐渐在自己的素材里辨认出一些动笔时并未有意识地想到的东西。" },
+    { "seq": 3, "speaker": null, "text_en": "This organic process, often leading to moments of extraordinary self-discovery, is of an indescribable fascination. A blurred image appears; he adds a brushstroke, and another, and it is gone; but something was there, and he will not rest till he has captured it.", "text_cn": "这个有机的过程,常常通向非凡的自我发现,有着难以言说的魅力。一个模糊的影像浮现出来;他添一笔,再添一笔,它却消失了;可那里确曾有过什么,不把它捉住,他便不肯歇息。" },
+    { "seq": 4, "speaker": null, "text_en": "Sometimes the yeast within a writer outlives the book he has written. There are writers, I have heard, who read nothing but their own books; like adolescents before a mirror, they still cannot fathom the exact outline of the vision before them. For the same reason writers talk interminably about their own work. A writer who does this is misunderstood — he might as well try to explain a crime, or a love affair — and he is, incidentally, an unforgivable bore.", "text_cn": "有时,作家体内那股‘酵母’,比他写成的书活得还久。据说有的作家除了自己的书什么都不读;就像照镜子的青少年,他们始终看不清眼前那幅景象的确切轮廓。出于同样的缘故,作家们没完没了地谈论自己的作品。这样做的作家会被误解——他还不如去解释一桩罪案,或一段情事——而且顺便说一句,他还是个不可饶恕的讨厌鬼。" },
+    { "seq": 5, "speaker": null, "text_en": "A young writer once made the pertinent observation that the talent goes into the first draft, and the art into the drafts that follow. For this reason too the writer, like any other artist, has no resting place, no crowd or movement in which he may take comfort, no judgment from outside that can replace the judgment from within. He makes order out of the anarchy of his own heart; he submits himself to a more ruthless discipline than any critic ever dreamed of; and when he flirts with fame, he is only taking time off from the search for what his world holds at its inmost point.", "text_cn": "一位年轻作家曾说过一句中肯的话:才华用在初稿里,艺术用在其后的一稿又一稿里。也正因如此,作家和任何别的艺术家一样,没有歇脚之处,没有可供他寻求慰藉的人群或潮流,没有任何来自外部、能取代内心裁断的评判。他要从自己内心的混沌中理出秩序;他让自己服从于比任何评论家所梦想的都更冷酷的纪律;而当他与名声调情时,他不过是从探寻自己世界最深处那一点的路上,偷得片刻的闲。" }
+  ],
+  "words": [
+    { "word": "confess", "ipa": "/kənˈfes/", "pos": "v", "meaning_cn": "坦白,承认", "example": "they confess at once that …" },
+    { "word": "inspiration", "ipa": "/ˌɪnspəˈreɪʃn/", "pos": "n", "meaning_cn": "灵感", "example": "that passes for inspiration" },
+    { "word": "interweave", "ipa": "/ˌɪntərˈwiːv/", "pos": "v", "meaning_cn": "交织,编织在一起", "example": "the timing and interweaving" },
+    { "word": "afresh", "ipa": "/əˈfreʃ/", "pos": "adv", "meaning_cn": "重新,再一次", "example": "beginning afresh" },
+    { "word": "discern", "ipa": "/dɪˈsɜːrn/", "pos": "v", "meaning_cn": "看出,辨别", "example": "comes to discern things in his material" },
+    { "word": "indescribable", "ipa": "/ˌɪndɪˈskraɪbəbl/", "pos": "adj", "meaning_cn": "难以形容的", "example": "of an indescribable fascination" },
+    { "word": "blur", "ipa": "/blɜːr/", "pos": "v", "meaning_cn": "(使)模糊", "example": "a blurred image appears" },
+    { "word": "yeast", "ipa": "/jiːst/", "pos": "n", "meaning_cn": "酵母;引发变化之物", "example": "the yeast within a writer" },
+    { "word": "fathom", "ipa": "/ˈfæðəm/", "pos": "v", "meaning_cn": "彻底理解,看透", "example": "cannot fathom the exact outline" },
+    { "word": "interminably", "ipa": "/ɪnˈtɜːrmɪnəbli/", "pos": "adv", "meaning_cn": "没完没了地", "example": "writers talk interminably" },
+    { "word": "pertinent", "ipa": "/ˈpɜːrtnənt/", "pos": "adj", "meaning_cn": "中肯的,相关的", "example": "a pertinent observation" },
+    { "word": "inmost", "ipa": "/ˈɪnmoʊst/", "pos": "adj", "meaning_cn": "最深处的,内心深处的", "example": "at its inmost point" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "whom 引导定语从句(指人作宾语)" },
+    { "gp": "gp2", "name": "once 引导时间从句(一旦)" },
+    { "gp": "gp3", "name": "might as well do" },
+    { "gp": "gp4", "name": "till/until + 现在完成" },
+    { "gp": "gp5", "name": "be of + 抽象名词(= 形容词)" },
+    { "gp": "gp6", "name": "词汇辨析(confess/inspiration/discern)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The writers ___ I respect confess they don't know where they are going.\"(定语从句先行词指人、作宾语,填关系词)", "stem_cn": "我所敬重的那些作家,承认自己不知去向何方。", "options": ["whom", "which", "whose", "what"] },
+    { "gp": "gp1", "stem": "\"He is a writer ___ everyone admires but few understand.\"(定语从句指人、作宾语,填关系词)", "stem_cn": "他是个人人钦佩、却少有人读懂的作家。", "options": ["whom", "which", "whose", "what"] },
+    { "gp": "gp1", "stem": "\"The reader for ___ he writes may never truly know him.\"(介词 + 关系代词,指人作宾语,填关系词)", "stem_cn": "他为之写作的读者,也许永远不会真正了解他。", "options": ["whom", "which", "who", "that"] },
+    { "gp": "gp2", "stem": "\"___ the journey has begun, the destination often changes.\"(‘一旦…就…’,填时间连词)", "stem_cn": "旅程一旦开始,目的地往往就变了。", "options": ["Once", "Unless", "Because", "Although"] },
+    { "gp": "gp2", "stem": "\"A story takes on a life of its own ___ the writer sets pen to paper.\"(‘一…就…’,填时间连词)", "stem_cn": "作家一动笔,故事便有了自己的生命。", "options": ["once", "unless", "because", "so"] },
+    { "gp": "gp2", "stem": "\"___ he has captured the image, he can rest at last.\"(‘一旦…’,填时间连词)", "stem_cn": "一旦捕捉到那个意象,他终于可以歇息。", "options": ["Once", "Unless", "Because", "Whether"] },
+    { "gp": "gp3", "stem": "\"A writer explaining his own book might as ___ try to explain a crime.\"(might as __ do,‘还不如/不妨’,填 as 后那个词)", "stem_cn": "作家解释自己的书,还不如去解释一桩罪案。", "options": ["well", "good", "better", "best"] },
+    { "gp": "gp3", "stem": "\"Since no one is listening, we might as well ___ home.\"(might as well + 动词原形,填原形)", "stem_cn": "既然没人在听,我们不如回家。", "options": ["go", "going", "went", "to go"] },
+    { "gp": "gp3", "stem": "\"You might ___ well ask the wind to stop as ask him to explain his art.\"(‘做A无异于做B’这个结构,填 might 后紧跟的那个词)", "stem_cn": "让他解释自己的艺术,无异于让风停下。", "options": ["as", "so", "too", "very"] },
+    { "gp": "gp4", "stem": "\"The writer will not rest ___ he has captured the image.\"(‘直到…’,填时间连词)", "stem_cn": "不捕捉到那个意象,作家便不肯歇息。", "options": ["till", "unless", "because", "so"] },
+    { "gp": "gp4", "stem": "\"Do not judge the book until you ___ read the final draft.\"(until 从句用现在完成,填助动词)", "stem_cn": "读完终稿之前,别评判这本书。", "options": ["have", "will", "are", "did"] },
+    { "gp": "gp4", "stem": "\"He kept rewriting till the story ___ found its true shape.\"(till 从句用现在完成,填助动词)", "stem_cn": "他不停重写,直到故事找到它真正的形状。", "options": ["had", "will", "is", "does"] },
+    { "gp": "gp5", "stem": "\"This organic process is ___ an indescribable fascination.\"(be __ + 抽象名词,相当于形容词,‘极其迷人’,填那个介词)", "stem_cn": "这一有机的过程,有着难以言说的魅力。", "options": ["of", "in", "at", "for"] },
+    { "gp": "gp5", "stem": "\"His remark was of great ___ to every young writer.\"(be of + 抽象名词,‘很有价值’,填那个名词)", "stem_cn": "他的话对每个年轻作家都极有价值。", "options": ["value", "valuable", "valued", "values"] },
+    { "gp": "gp5", "stem": "\"A first draft is often of little ___ until it is remade.\"(be of + 抽象名词,‘没什么用’,填那个名词)", "stem_cn": "初稿在重写之前往往没什么用。", "options": ["use", "useful", "used", "uses"] },
+    { "gp": "gp6", "stem": "\"To admit something, especially reluctantly, is to ___ it.\"(“坦白,承认”用哪个词)", "stem_cn": "(尤指不情愿地)承认某事。", "options": ["confess", "conceal", "confuse", "connect"] },
+    { "gp": "gp6", "stem": "\"A sudden brilliant idea that drives creative work is ___.\"(“灵感”用哪个词)", "stem_cn": "驱动创作的突发妙想。", "options": ["inspiration", "imitation", "hesitation", "isolation"] },
+    { "gp": "gp6", "stem": "\"To make out or perceive something with difficulty is to ___ it.\"(“看出,辨别”用哪个词)", "stem_cn": "费力地看出或觉察到某物。", "options": ["discern", "dismiss", "disturb", "dissolve"] }
+  ],
+  "stage6": [
+    { "stem": "confess 的意思是:", "options": ["坦白,承认", "隐瞒", "否认", "夸耀"] },
+    { "stem": "inspiration 的意思是:", "options": ["灵感", "模仿", "犹豫", "疲惫"] },
+    { "stem": "discern 的意思是:", "options": ["看出,辨别", "忽视", "隐藏", "破坏"] },
+    { "stem": "indescribable 的意思是:", "options": ["难以形容的", "平凡的", "清晰的", "短暂的"] },
+    { "stem": "fathom 的意思是:", "options": ["彻底理解,看透", "忘记", "误解", "编造"] },
+    { "stem": "pertinent 的意思是:", "options": ["中肯的,相关的", "无关的", "错误的", "多余的"] }
+  ],
+  "contrast": [
+    { "us": "draft", "uk": "draught", "note_cn": "草稿,气流;美语 draft,英式 draught" },
+    { "us": "marvelous", "uk": "marvellous", "note_cn": "极好的;美语 marvelous,英式 marvellous" },
+    { "us": "practice", "uk": "practise", "note_cn": "练习(动词);美语 practice,英式 practise" },
+    { "us": "fulfill", "uk": "fulfil", "note_cn": "实现,履行;美语 fulfill,英式 fulfil" }
+  ],
+  "chunks": [
+    { "us": "set pen to paper", "ipa": "/set pen tuː ˈpeɪpər/", "example1": "As soon as he set pen to paper, ideas came.", "example1_cn": "他一动笔,想法就涌来。", "example2": "I couldn't set pen to paper all day.", "example2_cn": "我一整天都写不出一个字。" },
+    { "us": "come to", "ipa": "/kʌm tuː/", "example1": "The writer comes to discern hidden things.", "example1_cn": "作家渐渐辨认出隐藏的东西。", "example2": "She came to love the quiet city.", "example2_cn": "她渐渐爱上了这座安静的城市。" },
+    { "us": "take comfort in", "ipa": "/teɪk ˈkʌmfərt ɪn/", "example1": "He takes comfort in his own work.", "example1_cn": "他从自己的作品中得到慰藉。", "example2": "We took comfort in her kind words.", "example2_cn": "她温暖的话语给了我们安慰。" },
+    { "us": "make order out of", "ipa": "/meɪk ˈɔːrdər aʊt ʌv/", "example1": "A writer makes order out of the anarchy of his heart.", "example1_cn": "作家从内心的混沌中理出秩序。", "example2": "She made order out of the chaos.", "example2_cn": "她把一团乱理出了头绪。" }
+  ],
+  "stage7_cloze": {
+    "context": "The writers ___1___ I respect confess they hardly know where they are going. ___2___ the journey has begun, the destination often changes. A writer explaining his own book might as ___3___ try to explain a crime. The whole process is ___4___ an indescribable fascination.",
+    "blanks": [
+      { "blank_no": 1, "options": ["whom", "which", "whose", "what"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["Once", "Unless", "Because", "Although"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["well", "good", "better", "best"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["of", "in", "at", "for"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How do professional writers ignore what they were taught at school about writing?", "options": ["They make no 'skeleton' or plan, but discover the shape as they write", "They never revise anything", "They copy other writers", "They write only about school"] },
+    { "stem": "According to the writer, where does the real art of writing go?", "options": ["Into the drafts that follow the first one", "Into the very first draft only", "Into reading one's own books", "Into pleasing the reader"] },
+    { "stem": "Why is a writer who talks endlessly about his own books an 'unforgivable bore'?", "options": ["Explaining his work is as pointless as explaining a crime or a love affair", "He has nothing else to say", "He hates his readers", "He cannot write any more"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"旅程一旦开始,目的地往往就变了\"(once 引导时间从句):", "options": ["Once the journey has begun, the destination often changes.", "Once the journey has begun, but the destination often changes.", "Once the journey will begin, the destination often changes.", "As once the journey has begun, the destination often changes."] },
+    { "stem": "你想说\"作家解释自己的书,还不如去解释一桩罪案\"(might as well):", "options": ["A writer explaining his book might as well try to explain a crime.", "A writer explaining his book might as well trying to explain a crime.", "A writer explaining his book might as good try to explain a crime.", "A writer explaining his book might well as try to explain a crime."] },
+    { "stem": "你想说\"这一有机的过程,有着难以言说的魅力\"(be of + 抽象名词):", "options": ["This organic process is of an indescribable fascination.", "This organic process is an indescribable fascination of.", "This organic process is with an indescribable fascination.", "This organic process of an indescribable fascination is."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "confess 的意思是:", "options": ["坦白,承认", "隐瞒", "否认", "夸耀"] },
+    { "kind": "vocab", "stem": "inspiration 的意思是:", "options": ["灵感", "模仿", "犹豫", "疲惫"] },
+    { "kind": "grammar", "stem": "\"The writers ___ I respect confess they don't know where they are going.\"(定语从句指人、作宾语)", "stem_cn": "我所敬重的作家承认不知去向。", "options": ["whom", "which", "whose", "what"] },
+    { "kind": "grammar", "stem": "\"___ the journey has begun, the destination often changes.\"(‘一旦…就…’,时间连词)", "stem_cn": "旅程一旦开始,目的地往往就变。", "options": ["Once", "Unless", "Because", "Although"] },
+    { "kind": "scenario", "stem": "\"set pen to paper\" 的意思是:", "options": ["动笔,开始写作", "撕掉纸", "收起笔", "朗读"] },
+    { "kind": "scenario", "stem": "\"take comfort in\" 的意思是:", "options": ["从…中得到安慰", "抱怨…", "破坏…", "离开…"] },
+    { "kind": "reading", "stem": "According to the writer, what happens once a writer sets pen to paper?", "options": ["He often makes radical changes of destination as the work grows", "He follows a fixed 'skeleton' to the end", "He copies what he learned at school", "He stops after the first page"], "passage": true },
+    { "kind": "reading", "stem": "Why can the wish to please the reader be a writer's 'undoing'?", "options": ["He starts writing to please others instead of making order out of his own heart", "It makes him famous too fast", "It wastes paper", "Readers dislike being pleased"], "passage": true },
+    { "kind": "listening", "stem": "What did a young writer observe about talent and art?", "options": ["Talent goes into the first draft, and art into the drafts that follow", "Talent and art are the same thing", "Neither matters at all", "Art comes first, then talent"], "audio": true },
+    { "kind": "listening", "stem": "What kind of discipline does a real writer submit himself to?", "options": ["A more ruthless discipline than any critic ever dreamed of", "No discipline at all", "Only the rules taught at school", "The judgment of the crowd"], "audio": true }
+  ]
+}

@@ -8,8 +8,14 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, Plus, Users, AlertTriangle, TrendingUp, GraduationCap, Sparkles, ArchiveRestore } from "lucide-react";
+import { Loader2, Plus, Users, AlertTriangle, TrendingUp, GraduationCap, Sparkles, ArchiveRestore, GripVertical } from "lucide-react";
 import { toast } from "sonner";
+import {
+  DndContext, closestCenter, MouseSensor, TouchSensor, useSensor, useSensors,
+  type DragEndEvent,
+} from "@dnd-kit/core";
+import { SortableContext, rectSortingStrategy, useSortable, arrayMove } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 import TeacherCards from "@/pages/TeacherCards";
 
 /**
@@ -72,6 +78,13 @@ export default function Teacher() {
     })();
   }, []);
 
+  // 拖拽排序传感器：桌面鼠标(移 6px 才拖，轻点仍进班)；手机触摸(长按 200ms 才拖，
+  // 之前滑动照常滚页面)。手柄本身 touch-none，与页面滚动不打架。
+  const sensors = useSensors(
+    useSensor(MouseSensor, { activationConstraint: { distance: 6 } }),
+    useSensor(TouchSensor, { activationConstraint: { delay: 200, tolerance: 8 } }),
+  );
+
   /* ── Auth gate ───────────────────────────────────────── */
   if (authed === false) {
     return (
@@ -92,6 +105,19 @@ export default function Teacher() {
   const avgActive     = totalStudents > 0
     ? Math.round((totalActive / totalStudents) * 100)
     : 0;
+
+  // 拖完：本地乐观重排 → 调 reorder_classes 落库 → 失败则 reload 回滚。
+  async function handleReorder(e: DragEndEvent) {
+    const { active, over } = e;
+    if (!over || active.id === over.id) return;
+    const oldIndex = activeClasses.findIndex((c) => c.id === active.id);
+    const newIndex = activeClasses.findIndex((c) => c.id === over.id);
+    if (oldIndex < 0 || newIndex < 0) return;
+    const newActive = arrayMove(activeClasses, oldIndex, newIndex);
+    setClasses([...newActive, ...archivedClasses]);           // 乐观：活跃区重排，归档区不动
+    const { error } = await supabase.rpc("reorder_classes", { _ids: newActive.map((c) => c.id) });
+    if (error) { toast.error(error.message); reload(); }      // 回滚到服务端真相
+  }
 
   return (
     <main className="mx-auto min-h-screen max-w-6xl px-4 py-6 md:px-6 md:py-10">
@@ -145,21 +171,25 @@ export default function Teacher() {
           ) : activeClasses.length === 0 ? (
             <EmptyClasses onCreate={() => setCreating(true)} />
           ) : (
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {activeClasses.map((c) => <ClassCard key={c.id} c={c} />)}
-              <button
-                type="button"
-                onClick={() => setCreating(true)}
-                className="grid place-items-center gap-2 rounded-3xl border-2 border-dashed border-border bg-card p-6 text-center transition hover:border-primary hover:bg-muted/40">
-                <div className="grid size-12 place-items-center rounded-2xl bg-primary/10">
-                  <Plus className="size-6 text-primary" />
+            <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleReorder}>
+              <SortableContext items={activeClasses.map((c) => c.id)} strategy={rectSortingStrategy}>
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                  {activeClasses.map((c) => <ClassCard key={c.id} c={c} />)}
+                  <button
+                    type="button"
+                    onClick={() => setCreating(true)}
+                    className="grid place-items-center gap-2 rounded-3xl border-2 border-dashed border-border bg-card p-6 text-center transition hover:border-primary hover:bg-muted/40">
+                    <div className="grid size-12 place-items-center rounded-2xl bg-primary/10">
+                      <Plus className="size-6 text-primary" />
+                    </div>
+                    <div className="text-sm font-extrabold"><T>新建班级</T></div>
+                    <div className="text-xs text-muted-foreground">
+                      <T>生成 8 位邀请码，学生输入即可加入</T>
+                    </div>
+                  </button>
                 </div>
-                <div className="text-sm font-extrabold"><T>新建班级</T></div>
-                <div className="text-xs text-muted-foreground">
-                  <T>生成 8 位邀请码，学生输入即可加入</T>
-                </div>
-              </button>
-            </div>
+              </SortableContext>
+            </DndContext>
           )}
 
           {archivedClasses.length > 0 && (
@@ -220,32 +250,52 @@ function HeroStat({ emoji, value, label, tone = "ok" }:
 }
 
 function ClassCard({ c }: { c: ClassRow }) {
+  const t = useT();
   const meta = STAGE_META[c.stage];
   const lastActive = c.last_activity_at ? relTime(c.last_activity_at) : "—";
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: c.id });
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    zIndex: isDragging ? 20 : undefined,
+    opacity: isDragging ? 0.85 : 1,
+  };
   return (
-    <Link
-      to={`/teacher/class/${c.id}`}
-      className="group rounded-3xl border-2 border-border bg-card shadow-tile hover:-translate-y-0.5 transition overflow-hidden">
-      <div className={`h-2 bg-gradient-to-r ${meta.gradient}`} />
-      <div className="p-5">
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="font-extrabold text-base leading-tight"><T>{c.name}</T></h3>
-          <span className="font-mono text-[10px] tabular-nums rounded bg-muted px-1.5 py-0.5 shrink-0">{c.join_code}</span>
-        </div>
-        <div className="mt-1 text-[11px] text-muted-foreground"><T>{meta.label}</T></div>
+    <div ref={setNodeRef} style={style} className={`relative ${isDragging ? "shadow-2xl" : ""}`}>
+      {/* 拖动手柄：只有它带 dnd listeners + touch-none；轻点卡片其余部分仍进班 */}
+      <button
+        type="button"
+        aria-label={t("拖动排序")}
+        {...attributes}
+        {...listeners}
+        onClick={(e) => e.preventDefault()}
+        className="absolute right-2 top-2 z-10 grid size-7 place-items-center rounded-lg bg-muted/80 text-muted-foreground touch-none cursor-grab active:cursor-grabbing hover:bg-muted">
+        <GripVertical className="size-4" />
+      </button>
+      <Link
+        to={`/teacher/class/${c.id}`}
+        className="group block rounded-3xl border-2 border-border bg-card shadow-tile hover:-translate-y-0.5 transition overflow-hidden">
+        <div className={`h-2 bg-gradient-to-r ${meta.gradient}`} />
+        <div className="p-5">
+          <div className="flex items-start justify-between gap-2 pr-8">
+            <h3 className="font-extrabold text-base leading-tight"><T>{c.name}</T></h3>
+            <span className="font-mono text-[10px] tabular-nums rounded bg-muted px-1.5 py-0.5 shrink-0">{c.join_code}</span>
+          </div>
+          <div className="mt-1 text-[11px] text-muted-foreground"><T>{meta.label}</T></div>
 
-        <div className="mt-3 grid grid-cols-3 gap-2 text-center">
-          <Stat n={c.student_count}      label="学生" />
-          <Stat n={c.active_this_week}   label="本周活跃" tone="text-emerald-600 dark:text-emerald-400" />
-          <Stat n={c.weak_student_count} label="需关注"  tone={c.weak_student_count > 0 ? "text-rose-600 dark:text-rose-400" : ""} />
-        </div>
+          <div className="mt-3 grid grid-cols-3 gap-2 text-center">
+            <Stat n={c.student_count}      label="学生" />
+            <Stat n={c.active_this_week}   label="本周活跃" tone="text-emerald-600 dark:text-emerald-400" />
+            <Stat n={c.weak_student_count} label="需关注"  tone={c.weak_student_count > 0 ? "text-rose-600 dark:text-rose-400" : ""} />
+          </div>
 
-        <div className="mt-3 flex items-center justify-between text-[11px]">
-          <span className="text-muted-foreground">⏱ <T>最近活跃</T>: {lastActive}</span>
-          <span className="text-primary font-bold group-hover:translate-x-0.5 transition"><T>进入</T> →</span>
+          <div className="mt-3 flex items-center justify-between text-[11px]">
+            <span className="text-muted-foreground">⏱ <T>最近活跃</T>: {lastActive}</span>
+            <span className="text-primary font-bold group-hover:translate-x-0.5 transition"><T>进入</T> →</span>
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 

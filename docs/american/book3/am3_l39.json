@@ -1,0 +1,133 @@
+{
+  "id": "am3_l39",
+  "unit_no": 8,
+  "lesson_no": 39,
+  "title_en": "Nothing to Worry About",
+  "title_cn": "没什么好担心的",
+  "grammar_focus": "be able to(各时态“能/得以”)、manage to(设法做成·强调克服困难)、could 与 was able to/managed to 的区别(过去某次成功不用 could)、can/could 表一般能力、过去进行做背景+一般过去推进情节(按 Aaron 净化包生产·不读源 PDF:自信司机横穿崎岖平原、设法躲过各种障碍,最后车停不是出事而是没油了·喜剧内核保留,惊险措辞已放缓;美式化 gas/gas tank)",
+  "scene": "我的朋友汤姆是个自信的司机,再崎岖的路也从不慌张。去年夏天,我们开着他那辆旧车,得以横穿一片宽阔多石的平原。“没什么好担心的,”他说;可我还是低估了这段路有多颠。车子一路颠簸,车轮卷起松散的沙子和小石子。汤姆设法绕开了每一块大圆石,车速几乎没怎么减。到了一段松软的地面,他挂上低速挡,还能让车稳稳往前开。有一次为了躲开一道浅沟,他让车轮跨骑在浅沟两侧,径直开了过去。前面还有几处障碍,但汤姆每次都设法找到一条安全的路。“瞧?咱们什么都能应付,”他拍着方向盘笑道。可就在半路上,发动机不祥地咳了一声,车慢慢停了下来。任我们怎么使劲,也没能把它重新发动起来。原来真的没什么好担心的——我们只不过是把油开光了!",
+  "grammar_card": {
+    "title": "be able to / manage to / could vs was able to / can 表能力 / 过去进行做背景",
+    "intro": "①be able to 各时态表“能、得以”:were able to(过去)、was able to、will be able to(将来)。②manage to do=设法做成(强调克服了困难)。③过去某一次“终于做成”用 was able to 或 managed to,不用 could。④can/could 表一般能力:can(现在)、could(过去一贯)。⑤讲故事时,过去进行(was/were doing)做背景,一般过去时推进情节。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["be able to（各时态）", "能/得以", "we were able to cross"],
+        ["manage to do", "设法做成", "he managed to steer around"],
+        ["could vs was able to", "一次成功不用 could", "he was able to start the car"],
+        ["过去进行做背景", "正在…时", "as we were bouncing along"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "过去某一次“终于做成、成功做到”用 was/were able to 或 managed to,不用 could;could 多表“一贯的能力”。", "mark": "was able to ≠ could" },
+      { "rule": "manage to do 强调“克服困难后设法做成”,比单纯 be able to 更有“不容易”的意味。", "mark": "manage to do" },
+      { "rule": "美式:gas(英式 petrol)、gas tank(英式 petrol tank)、hood(英式 bonnet)、trunk(英式 boot)。本课已按美语写。", "mark": "gas / hood / trunk" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was the difference between Tom's behavior and the others'?",
+    "options": ["Tom stayed completely calm and was never worried", "Tom refused to drive at all", "Tom drove painfully slowly", "Tom got out and walked"],
+    "answer_index": 0
+  },
+  "passage": "My friend Tom is a confident driver who is never perturbed by a rough road. Last summer, we were able to cross a wide, rocky plain in his old car. 'There's nothing to worry about,' he said, though I had underestimated just how bumpy the drive would be. As we were bouncing along the track, the wheels scooped up loose sand and small stones. Tom managed to steer around every boulder without slowing down much. When we reached a stretch of soft ground, he shifted into a low gear and was able to keep the car moving. Once, to avoid a shallow rut, he kept the wheels astride it and drove straight on. A few more obstacles lay ahead, but Tom managed to find a safe path each time. 'See? We can handle anything,' he laughed, patting the wheel. Then, halfway across, the engine coughed ominously and the car slowly rolled to a stop. We weren't able to start it again, no matter how hard we tried. It turned out there was nothing to worry about after all — we had simply run out of gas!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "My friend Tom is a confident driver who is never perturbed by a rough road. Last summer, we were able to cross a wide, rocky plain in his old car. 'There's nothing to worry about,' he said, though I had underestimated just how bumpy the drive would be.", "text_cn": "我的朋友汤姆是个自信的司机,再崎岖的路也从不慌张。去年夏天,我们开着他那辆旧车,得以横穿一片宽阔多石的平原。“没什么好担心的,”他说;可我还是低估了这段路有多颠。" },
+    { "seq": 2, "speaker": null, "text_en": "As we were bouncing along the track, the wheels scooped up loose sand and small stones. Tom managed to steer around every boulder without slowing down much. When we reached a stretch of soft ground, he shifted into a low gear and was able to keep the car moving.", "text_cn": "车子一路颠簸,车轮卷起松散的沙子和小石子。汤姆设法绕开了每一块大圆石,车速几乎没怎么减。到了一段松软的地面,他挂上低速挡,还能让车稳稳往前开。" },
+    { "seq": 3, "speaker": null, "text_en": "Once, to avoid a shallow rut, he kept the wheels astride it and drove straight on. A few more obstacles lay ahead, but Tom managed to find a safe path each time. 'See? We can handle anything,' he laughed, patting the wheel.", "text_cn": "有一次为了躲开一道浅沟,他让车轮跨骑在浅沟两侧,径直开了过去。前面还有几处障碍,但汤姆每次都设法找到一条安全的路。“瞧?咱们什么都能应付,”他拍着方向盘笑道。" },
+    { "seq": 4, "speaker": null, "text_en": "Then, halfway across, the engine coughed ominously and the car slowly rolled to a stop. We weren't able to start it again, no matter how hard we tried.", "text_cn": "可就在半路上,发动机不祥地咳了一声,车慢慢停了下来。任我们怎么使劲,也没能把它重新发动起来。" },
+    { "seq": 5, "speaker": null, "text_en": "It turned out there was nothing to worry about after all — we had simply run out of gas!", "text_cn": "原来真的没什么好担心的——我们只不过是把油开光了!" }
+  ],
+  "words": [
+    { "word": "rough", "ipa": "/rʌf/", "pos": "adj", "meaning_cn": "崎岖不平的", "example": "a rough road" },
+    { "word": "boulder", "ipa": "/ˈboʊldər/", "pos": "n", "meaning_cn": "大圆石", "example": "steer around every boulder" },
+    { "word": "perturb", "ipa": "/pərˈtɜːrb/", "pos": "v", "meaning_cn": "使不安", "example": "never perturbed by a rough road" },
+    { "word": "underestimate", "ipa": "/ˌʌndərˈestɪmeɪt/", "pos": "v", "meaning_cn": "低估", "example": "I had underestimated the drive" },
+    { "word": "scoop", "ipa": "/skuːp/", "pos": "v", "meaning_cn": "挖出,卷起", "example": "the wheels scooped up sand" },
+    { "word": "ominously", "ipa": "/ˈɑːmɪnəsli/", "pos": "adv", "meaning_cn": "不祥地", "example": "the engine coughed ominously" },
+    { "word": "obstacle", "ipa": "/ˈɑːbstəkəl/", "pos": "n", "meaning_cn": "障碍", "example": "a few more obstacles lay ahead" },
+    { "word": "astride", "ipa": "/əˈstraɪd/", "pos": "prep", "meaning_cn": "跨骑着", "example": "kept the wheels astride the rut" },
+    { "word": "gear", "ipa": "/ɡɪr/", "pos": "n", "meaning_cn": "(汽车)挡位", "example": "shifted into a low gear" },
+    { "word": "stretch", "ipa": "/stretʃ/", "pos": "n", "meaning_cn": "一段(路程)", "example": "a stretch of soft ground" },
+    { "word": "confident", "ipa": "/ˈkɑːnfɪdənt/", "pos": "adj", "meaning_cn": "自信的", "example": "a confident driver" },
+    { "word": "gas", "ipa": "/ɡæs/", "pos": "n", "meaning_cn": "汽油(美式;英式 petrol)", "example": "we had run out of gas" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "be able to(各时态“能/得以”)" },
+    { "gp": "gp2", "name": "manage to do(设法做成)" },
+    { "gp": "gp3", "name": "could 与 was able to/managed to 的区别" },
+    { "gp": "gp4", "name": "can/could 表一般能力" },
+    { "gp": "gp5", "name": "过去进行做背景 + 一般过去推进情节" },
+    { "gp": "gp6", "name": "词汇辨析(perturb/underestimate/ominously)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"We ___ able to cross the rocky plain last summer.\"(过去\"得以、能够\",填 be 的过去式)", "stem_cn": "去年夏天我们得以横穿那片多石的平原。", "options": ["were", "are", "will be", "being"] },
+    { "gp": "gp1", "stem": "\"In soft ground he ___ able to keep the car moving.\"(过去某次\"能够\",主语单数)", "stem_cn": "在松软的地面上,他还能让车继续前进。", "options": ["was", "were", "is", "being"] },
+    { "gp": "gp1", "stem": "\"With a better car, we ___ able to cross faster next time.\"(将来\"将能够\")", "stem_cn": "换辆好车,下次我们就能更快穿过去。", "options": ["will be", "are", "were", "being"] },
+    { "gp": "gp2", "stem": "\"Tom ___ to steer around every boulder.\"(\"设法做成(克服困难)\"用 ___ to do)", "stem_cn": "汤姆设法绕开了每一块大圆石。", "options": ["managed", "could", "must", "ought"] },
+    { "gp": "gp2", "stem": "\"Despite the sand, he ___ to find a safe path.\"(\"设法找到\"用 ___ to do)", "stem_cn": "尽管有沙子,他还是设法找到了一条安全的路。", "options": ["managed", "wanted", "refused", "promised"] },
+    { "gp": "gp2", "stem": "\"We ___ to reach the village before dark.\"(\"设法赶到\"用 ___ to do)", "stem_cn": "我们设法在天黑前赶到了村子。", "options": ["managed", "hoped", "agreed", "decided"] },
+    { "gp": "gp3", "stem": "\"After many tries, he finally ___ to start the car.\"(某一次终于\"做成\",不用 could)", "stem_cn": "试了很多次,他终于把车发动起来了。", "options": ["was able", "could", "can", "could to"] },
+    { "gp": "gp3", "stem": "\"That day we ___ to cross the plain safely.\"(某一次成功\"做到\",用 ___ to)", "stem_cn": "那天我们平安穿过了平原。", "options": ["managed", "could", "can", "would"] },
+    { "gp": "gp3", "stem": "\"He ___ swim across the river that morning.\"(某一次成功游过去,别用 could,用哪个)", "stem_cn": "那天早上他成功游过了河。", "options": ["was able to", "could", "can", "could have"] },
+    { "gp": "gp4", "stem": "\"Tom is a good driver; he ___ handle any road.\"(表示现在的一般能力)", "stem_cn": "汤姆车技好,什么路都能应付。", "options": ["can", "could", "was able", "managed"] },
+    { "gp": "gp4", "stem": "\"When he was young, he ___ drive for hours without tiring.\"(表示过去的一般能力)", "stem_cn": "他年轻时能连开好几个小时也不累。", "options": ["could", "can", "managed", "was able"] },
+    { "gp": "gp4", "stem": "\"___ you drive a car with a manual gear?\"(问对方\"会不会、能不能\")", "stem_cn": "你会开手动挡的车吗?", "options": ["Can", "Did", "Managed", "Were"] },
+    { "gp": "gp5", "stem": "\"As we ___ along the track, the wheels scooped up sand.\"(表当时\"正在进行\"的背景,用过去进行)", "stem_cn": "我们正沿着车道颠簸时,车轮卷起了沙子。", "options": ["were bouncing", "bounced", "bounce", "have bounced"] },
+    { "gp": "gp5", "stem": "\"While Tom ___ , the engine suddenly coughed.\"(\"正在开车\"时被打断,用过去进行)", "stem_cn": "汤姆正开着车,发动机突然咳了一声。", "options": ["was driving", "drove", "drives", "had driven"] },
+    { "gp": "gp5", "stem": "\"The car ___ to a stop in the middle of the plain.\"(推进情节的动作,用一般过去时)", "stem_cn": "车在平原中央停了下来。", "options": ["rolled", "was rolling", "rolls", "has rolled"] },
+    { "gp": "gp6", "stem": "\"A calm person who is not upset by trouble is not easily ___.\"(\"使不安\"用哪个词)", "stem_cn": "遇事沉着、不慌的人不易被扰乱。", "options": ["perturbed", "pleased", "amused", "tired"] },
+    { "gp": "gp6", "stem": "\"To think something is smaller or easier than it really is is to ___ it.\"(\"低估\"用哪个词)", "stem_cn": "把事情想得太小、太容易就是低估。", "options": ["underestimate", "overpraise", "admire", "ignore"] },
+    { "gp": "gp6", "stem": "\"When the engine coughed ___, we felt something was wrong.\"(\"不祥地\"用哪个词)", "stem_cn": "发动机不祥地咳了一声,我们觉得不妙。", "options": ["ominously", "cheerfully", "quietly", "brightly"] }
+  ],
+  "stage6": [
+    { "stem": "rough 的意思是:", "options": ["崎岖不平的", "平滑的", "柔软的", "明亮的"] },
+    { "stem": "boulder 的意思是:", "options": ["大圆石", "沙子", "树枝", "水坑"] },
+    { "stem": "obstacle 的意思是:", "options": ["障碍", "出口", "礼物", "工具"] },
+    { "stem": "gear 的意思是:", "options": ["(汽车)挡位", "方向盘", "喇叭", "车灯"] },
+    { "stem": "stretch 的意思是:", "options": ["一段(路程)", "尽头", "中心", "角落"] },
+    { "stem": "confident 的意思是:", "options": ["自信的", "害羞的", "疲惫的", "生气的"] }
+  ],
+  "contrast": [
+    { "us": "gas", "uk": "petrol", "note_cn": "汽油;美语 gas,英式 petrol" },
+    { "us": "hood", "uk": "bonnet", "note_cn": "汽车引擎盖;美语 hood,英式 bonnet" },
+    { "us": "trunk", "uk": "boot", "note_cn": "汽车后备箱;美语 trunk,英式 boot" },
+    { "us": "windshield", "uk": "windscreen", "note_cn": "挡风玻璃;美语 windshield,英式 windscreen" }
+  ],
+  "chunks": [
+    { "us": "nothing to worry about", "ipa": "/ˈnʌθɪŋ tə ˈwɜːri əˈbaʊt/", "example1": "There's nothing to worry about.", "example1_cn": "没什么好担心的。", "example2": "Relax — there's nothing to worry about.", "example2_cn": "放轻松,没什么好担心的。" },
+    { "us": "run out of", "ipa": "/rʌn aʊt əv/", "example1": "We had run out of gas.", "example1_cn": "我们把油开光了。", "example2": "They ran out of time.", "example2_cn": "他们没时间了。" },
+    { "us": "in low gear", "ipa": "/ɪn loʊ ɡɪr/", "example1": "He drove in low gear over the sand.", "example1_cn": "他挂低速挡开过沙地。", "example2": "Shift into low gear on the hill.", "example2_cn": "上坡时换到低速挡。" },
+    { "us": "manage to", "ipa": "/ˈmænɪdʒ tə/", "example1": "He managed to avoid the rock.", "example1_cn": "他设法避开了那块石头。", "example2": "She managed to finish on time.", "example2_cn": "她设法按时完成了。" }
+  ],
+  "stage7_cloze": {
+    "context": "My friend Tom is a confident driver who is never ___1___ by a rough road. Last summer we ___2___ able to cross a rocky plain in his old car. He ___3___ to steer around every boulder without slowing down. Halfway across, the engine coughed ___4___ and the car stopped — we had simply run out of gas!",
+    "blanks": [
+      { "blank_no": 1, "options": ["perturbed", "pleased", "amused", "tired"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["were", "are", "will", "being"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["managed", "could", "must", "ought"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["ominously", "cheerfully", "softly", "brightly"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What kind of driver is Tom?", "options": ["A confident one who is never perturbed by rough roads", "A nervous beginner", "A very slow driver", "One who hates cars"] },
+    { "stem": "How did Tom get past the boulders?", "options": ["He managed to steer around each one", "He pushed them aside", "He waited for help", "He turned back"] },
+    { "stem": "Why did the car finally stop?", "options": ["It had simply run out of gas", "The engine exploded", "A tire burst", "It hit a boulder"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"汤姆设法绕开了每一块大圆石\"(manage to):", "options": ["Tom managed to steer around every boulder.", "Tom managed steering around every boulder.", "Tom managed to steered around every boulder.", "Tom was manage to steer around every boulder."] },
+    { "stem": "你想说\"那天我们平安穿过了平原\"(was able to,一次成功):", "options": ["That day we were able to cross the plain safely.", "That day we could cross the plain safely.", "That day we were able cross the plain safely.", "That day we can cross the plain safely."] },
+    { "stem": "你想说\"你会开手动挡的车吗\"(can 表能力):", "options": ["Can you drive a car with a manual gear?", "Do you can drive a car with a manual gear?", "Are you can drive a car with a manual gear?", "Can you to drive a car with a manual gear?"] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "confident 的意思是:", "options": ["自信的", "害羞的", "疲惫的", "生气的"] },
+    { "kind": "vocab", "stem": "obstacle 的意思是:", "options": ["障碍", "出口", "礼物", "工具"] },
+    { "kind": "grammar", "stem": "\"We ___ able to cross the plain last summer.\"(过去\"得以\",填 be 的过去式)", "stem_cn": "去年夏天我们得以横穿平原。", "options": ["were", "are", "will be", "being"] },
+    { "kind": "grammar", "stem": "\"Tom ___ to steer around every boulder.\"(\"设法做成\"用 ___ to do)", "stem_cn": "汤姆设法绕开了每一块大圆石。", "options": ["managed", "could", "must", "ought"] },
+    { "kind": "scenario", "stem": "\"run out of\" 的意思是:", "options": ["用完、耗尽", "跑出去", "追上", "甩开"] },
+    { "kind": "scenario", "stem": "\"nothing to worry about\" 的意思是:", "options": ["没什么好担心的", "无事可做", "无话可说", "无处可去"] },
+    { "kind": "reading", "stem": "Why did the writer say there was 'nothing to worry about' in the end?", "options": ["The car stopped only because it had run out of gas", "The car was completely destroyed", "They were badly hurt", "They got lost forever"], "passage": true },
+    { "kind": "reading", "stem": "How did Tom react to the rough road?", "options": ["He stayed calm and was never perturbed", "He panicked at once", "He refused to drive", "He drove backward"], "passage": true },
+    { "kind": "listening", "stem": "What did the wheels scoop up as the car bounced along?", "options": ["Loose sand and small stones", "Water", "Snow", "Leaves"], "audio": true },
+    { "kind": "listening", "stem": "What did Tom do when they reached soft ground?", "options": ["He shifted into a low gear", "He stopped the car", "He got out and pushed", "He turned around"], "audio": true }
+  ]
+}

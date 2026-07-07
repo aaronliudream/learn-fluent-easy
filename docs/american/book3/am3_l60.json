@@ -1,0 +1,133 @@
+{
+  "id": "am3_l60",
+  "unit_no": 12,
+  "lesson_no": 60,
+  "title_en": "Too Early and Too Late",
+  "title_cn": "太早和太晚",
+  "grammar_focus": "only + 状语置于句首引起的部分倒装、状语从句中主谓的省略(if/when/though + 形容词/分词)、as…as / as much…as 同级比较、介词 + 关系代词(with whom / on which)、could not have done(对过去的否定推测)+ it 形式主语 for sb to do(NCE3 第三册 Unit 3 无 KS 页,考点由课文结构 + Notes on the text 自取;原创承载·论守时 + 女孩提早两小时到站却错过只停装邮件的火车的温情故事·无害;美语化 tire/schedule/baggage car·am3 第三册收官课)",
+  "scene": "准时,是文明社会里一切公共事务都必须养成的习惯。没有它,任何事都无法办成,事事都会陷入混乱。只有在人口稀少的乡村,才可能不讲究守时。在日常生活中,人们对不守时可以有一定程度的容忍。一个正钻研某个深奥问题的知识分子,把手头的事都安排得井井有条,因此赴宴迟到也会被原谅。可有些人被责备不守时,唯一的过错其实是把时间掐得太紧。精力充沛、头脑敏捷的人极不愿浪费时间,于是常常忍不住做完一件事再动身去赴约。若路上不出岔子——比如轮胎被扎、交通改道、突然起雾——他们准能按时到。他们往往比那些从不迟到的人更勤勉、更有用。到得过早的人,和迟到的人一样令人难受。提前半小时到的客人最讨人嫌。我家有几位朋友就有这毛病,唯一的办法就是请他们比别的客人晚半小时来;于是他们正好在我们希望的时候到。赶火车时,从容地早到,总比哪怕晚一丁点儿要好。早到也许意味着浪费一点时间,但这远比误了车、再等上一个钟头下一班要少;而且你还能避免那种正好在火车驶出站台、却挤不上去时的沮丧。更难堪的情形是:你明明及早到了站台,却眼睁睁看着火车不载你就开走。一个小姑娘头一回独自出门,就撞上了这样的事。她在火车预定进站前二十分钟就进了站,因为父母再三叮嘱她:误了这趟车、害得要投奔的朋友白跑两趟来接,是不可原谅的。她把行李交给搬运工,给他看车票。搬运工却说她早到了两个钟头,她听了大吃一惊。她在手袋里摸出一张纸条,上面是父亲写下的行程细节,把它递给搬运工。搬运工承认,纸条上写的那个时刻确有一趟车进站,也确会停——但只为装邮件,不载客。姑娘要求看一看时刻表,她坚信父亲不可能出这样的差错。搬运工去取了一张,还带回了站长;站长把时刻表一挥,指着到站时刻旁边一个极小的“o”——这个小小的“o”表示那趟车只为装邮件而停。正在这时,火车进了站。姑娘泪流满面,央求让她溜进行李车厢。可站长态度坚决:规章不能破。她只得眼看着那趟车朝她要去的方向消失,把她一个人撇在了后头。",
+  "grammar_card": {
+    "title": "only 倒装 / 状语从句省略 / as…as 同级比较 / 介词 + 关系代词 / could not have done",
+    "intro": "①only + 状语(地点/时间/方式)置于句首,句子要部分倒装:Only in… is it possible…。②if/when/though 等引导的从句,若主语与主句相同、谓语含 be,可省去主语和 be:he is forgiven if (he is) late。③as…as / as much…as 表“和…一样”:as much a trial as the unpunctual。④介词 + 关系代词:the friends with whom…, the paper on which…。⑤could not have done:对过去的否定推测“不可能做过”。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["only + 状语倒装", "Only … + 系/助动词 + 主语", "Only in… is it possible"],
+        ["状语从句省略", "if/when/though + 形容词/分词", "if (he is) late"],
+        ["同级比较", "as (much) … as", "as much a trial as the unpunctual"],
+        ["介词 + 关系代词", "with whom / on which", "the friends with whom she stayed"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "only 引导的状语置于句首才倒装;若 only 修饰主语则不倒装。", "mark": "Only then did we know" },
+      { "rule": "介词提前时,指人用 whom(不用 who),指物用 which(不用 that)。", "mark": "with whom / on which" },
+      { "rule": "美式用词:tire(轮胎,英式 tyre)、schedule(时刻表,英式 timetable)、baggage car(行李/邮政车厢,英式 guard's van)。本课已按美语写。", "mark": "tire / schedule / baggage car" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did the young girl miss the train?",
+    "options": ["The train then stopped only for mail, not passengers", "She arrived too late", "She lost her ticket", "She boarded the wrong train"],
+    "answer_index": 0
+  },
+  "passage": "Punctuality is a necessary habit in all public affairs in a civilized society. Without it, nothing could ever be brought to a conclusion; everything would be in a state of chaos. Only in a sparsely populated rural community is it possible to disregard it. In ordinary living there can be some tolerance of unpunctuality. The intellectual, who is working on some abstruse problem, has everything coordinated and organized for the matter in hand; he is therefore forgiven if late for a dinner party. But people are often reproached for unpunctuality when their only fault is cutting things fine. It is hard for energetic, quick-minded people to waste time, so they are often tempted to finish a job before setting out to keep an appointment. If no accidents occur on the way — like punctured tires, diversions of traffic, or a sudden descent of fog — they will be on time. They are often more useful citizens than those who are never late. The over-punctual can be as much a trial to others as the unpunctual. The guest who arrives half an hour too soon is the greatest nuisance. Some friends of my family had this irritating habit, and the only thing to do was to ask them to come half an hour later than the other guests; then they arrived just when we wanted them. If you are catching a train, it is always better to be comfortably early than even a fraction of a minute too late. Being early may mean wasting a little time, but this will be far less than the time lost if you miss the train and have to wait an hour for the next one. An even harder situation is to be on the platform in good time and still see the train go off without you. Such an experience befell a certain young girl the first time she was traveling alone. She entered the station twenty minutes before the train was due, since her parents had impressed upon her that it would be unforgivable to miss it and make the friends with whom she was going to stay travel twice to meet her. She gave her bags to a porter and showed him her ticket. To her horror he said that she was two hours too soon. She felt in her handbag for the piece of paper on which her father had written down all the details of the journey, and gave it to the porter. He agreed that a train did come into the station at the time on the paper, and that it did stop — but only to take on mail, not passengers. The girl asked to see a schedule, feeling sure that her father could not have made such a mistake. The porter went to fetch one and came back with the station master, who produced it with a flourish and pointed out a microscopic 'o' beside the time of the train's arrival; this little 'o' indicated that the train stopped only for mail. Just at that moment the train came into the station. The girl, tears streaming down her face, begged to be allowed to slip into the baggage car. But the station master was adamant: rules could not be broken. And she had to watch that train disappear toward her destination while she was left behind.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Punctuality is a necessary habit in all public affairs in a civilized society. Without it, nothing could ever be brought to a conclusion; everything would be in a state of chaos. Only in a sparsely populated rural community is it possible to disregard it. The intellectual, who is working on some abstruse problem, has everything coordinated for the matter in hand; he is therefore forgiven if late for a dinner party.", "text_cn": "准时,是文明社会里一切公共事务都必须养成的习惯。没有它,任何事都无法办成,事事都会陷入混乱。只有在人口稀少的乡村,才可能不讲究守时。一个正钻研某个深奥问题的知识分子,把手头的事都安排得井井有条,因此赴宴迟到也会被原谅。" },
+    { "seq": 2, "speaker": null, "text_en": "But people are often reproached for unpunctuality when their only fault is cutting things fine. It is hard for energetic, quick-minded people to waste time, so they are often tempted to finish a job before setting out to keep an appointment. If no accidents occur on the way — like punctured tires, diversions of traffic, or a sudden descent of fog — they will be on time. They are often more useful citizens than those who are never late.", "text_cn": "可有些人被责备不守时,唯一的过错其实是把时间掐得太紧。精力充沛、头脑敏捷的人极不愿浪费时间,于是常常忍不住做完一件事再动身去赴约。若路上不出岔子——比如轮胎被扎、交通改道、突然起雾——他们准能按时到。他们往往比那些从不迟到的人更勤勉、更有用。" },
+    { "seq": 3, "speaker": null, "text_en": "The over-punctual can be as much a trial to others as the unpunctual. The guest who arrives half an hour too soon is the greatest nuisance. Some friends of my family had this irritating habit, and the only thing to do was to ask them to come half an hour later than the other guests; then they arrived just when we wanted them.", "text_cn": "到得过早的人,和迟到的人一样令人难受。提前半小时到的客人最讨人嫌。我家有几位朋友就有这毛病,唯一的办法就是请他们比别的客人晚半小时来;于是他们正好在我们希望的时候到。" },
+    { "seq": 4, "speaker": null, "text_en": "If you are catching a train, it is always better to be comfortably early than even a fraction of a minute too late. An even harder situation is to be on the platform in good time and still see the train go off without you. Such an experience befell a certain young girl the first time she was traveling alone. She entered the station twenty minutes before the train was due, since her parents had impressed upon her that it would be unforgivable to miss it and make the friends with whom she was going to stay travel twice to meet her.", "text_cn": "赶火车时,从容地早到,总比哪怕晚一丁点儿要好。更难堪的情形是:你明明及早到了站台,却眼睁睁看着火车不载你就开走。一个小姑娘头一回独自出门,就撞上了这样的事。她在火车预定进站前二十分钟就进了站,因为父母再三叮嘱她:误了这趟车、害得要投奔的朋友白跑两趟来接,是不可原谅的。" },
+    { "seq": 5, "speaker": null, "text_en": "She gave her bags to a porter, who said that she was two hours too soon. She felt in her handbag for the paper on which her father had written the details of the journey. The train at the time on the paper did stop — but only to take on mail, not passengers. Sure that her father could not have made such a mistake, she asked to see a schedule. The station master pointed out a microscopic 'o' beside the arrival time, which meant the train stopped only for mail. He was adamant: rules could not be broken, and she had to watch the train disappear while she was left behind.", "text_cn": "她把行李交给搬运工,搬运工却说她早到了两个钟头。她在手袋里摸出父亲写下行程细节的那张纸。纸上时刻确有一趟车会停——但只为装邮件,不载客。她坚信父亲不可能出这样的差错,便要求看时刻表。站长指着到站时刻旁边一个极小的“o”,那表示那趟车只为装邮件而停。站长态度坚决:规章不能破;她只得眼看着火车消失,把自己撇在后头。" }
+  ],
+  "words": [
+    { "word": "punctuality", "ipa": "/ˌpʌŋktʃuˈæləti/", "pos": "n", "meaning_cn": "准时,守时", "example": "punctuality is a necessary habit" },
+    { "word": "rural", "ipa": "/ˈrʊrəl/", "pos": "adj", "meaning_cn": "农村的", "example": "a sparsely populated rural community" },
+    { "word": "disregard", "ipa": "/ˌdɪsrɪˈɡɑːrd/", "pos": "v", "meaning_cn": "不顾,无视", "example": "it is possible to disregard it" },
+    { "word": "intellectual", "ipa": "/ˌɪntəˈlektʃuəl/", "pos": "n", "meaning_cn": "知识分子", "example": "the intellectual is forgiven if late" },
+    { "word": "reproach", "ipa": "/rɪˈproʊtʃ/", "pos": "v", "meaning_cn": "责备", "example": "reproached for unpunctuality" },
+    { "word": "puncture", "ipa": "/ˈpʌŋktʃər/", "pos": "v", "meaning_cn": "刺破(轮胎)", "example": "punctured tires" },
+    { "word": "diversion", "ipa": "/daɪˈvɜːrʒən/", "pos": "n", "meaning_cn": "改道,绕道", "example": "diversions of traffic" },
+    { "word": "fraction", "ipa": "/ˈfrækʃən/", "pos": "n", "meaning_cn": "很小一点儿", "example": "a fraction of a minute too late" },
+    { "word": "flourish", "ipa": "/ˈflɜːrɪʃ/", "pos": "n", "meaning_cn": "挥舞(打手势)", "example": "produced it with a flourish" },
+    { "word": "microscopic", "ipa": "/ˌmaɪkrəˈskɑːpɪk/", "pos": "adj", "meaning_cn": "微小的", "example": "a microscopic 'o'" },
+    { "word": "adamant", "ipa": "/ˈædəmənt/", "pos": "adj", "meaning_cn": "坚定的,不动摇的", "example": "the station master was adamant" },
+    { "word": "coordinate", "ipa": "/koʊˈɔːrdɪneɪt/", "pos": "v", "meaning_cn": "协调", "example": "has everything coordinated" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "only + 状语置于句首引起的部分倒装" },
+    { "gp": "gp2", "name": "状语从句中主谓的省略(if/when/though + 形容词/分词)" },
+    { "gp": "gp3", "name": "as…as / as much…as 同级比较" },
+    { "gp": "gp4", "name": "介词 + 关系代词(with whom / on which)" },
+    { "gp": "gp5", "name": "could not have done + it 形式主语 for sb to do" },
+    { "gp": "gp6", "name": "词汇辨析(punctuality/disregard/adamant)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Only in a rural community ___ possible to disregard punctuality.\"(only 引导的状语在句首,句子要部分倒装,选倒装语序)", "stem_cn": "只有在乡村,才可能不讲究守时。", "options": ["is it", "it is", "is", "does"] },
+    { "gp": "gp1", "stem": "\"Only then ___ we understand the value of being on time.\"(only + 状语在句首,部分倒装)", "stem_cn": "直到那时我们才懂得守时的价值。", "options": ["did", "we", "we did", "do"] },
+    { "gp": "gp1", "stem": "\"Only after missing the train ___ she realize her mistake.\"(only + 状语在句首,部分倒装,一般过去)", "stem_cn": "直到误了车,她才意识到自己的错。", "options": ["did", "she", "she did", "does"] },
+    { "gp": "gp2", "stem": "\"He is forgiven if ___ for a dinner party.\"(省略:if 后与主句相同的主语和 be 略去,只剩连词 + 形容词,填这个形容词)", "stem_cn": "他要是赴宴迟到,是会被原谅的。", "options": ["late", "lately", "lateness", "later"] },
+    { "gp": "gp2", "stem": "\"Once ___, the rule cannot be changed.\"(省略:once 后的‘it is’略去,只剩过去分词,填这个过去分词)", "stem_cn": "规矩一旦定下,就不能更改。", "options": ["made", "making", "make", "to make"] },
+    { "gp": "gp2", "stem": "\"Though ___, he still felt anxious about the time.\"(省略:though 后与主句相同的主语和 was 略去,只剩形容词,填这个形容词)", "stem_cn": "虽然到得早,他仍为时间感到焦虑。", "options": ["early", "earlier", "earliness", "earliest"] },
+    { "gp": "gp3", "stem": "\"The over-punctual can be ___ much a trial as the unpunctual.\"(‘和…一样’的同级比较,填开头这个词)", "stem_cn": "太早到的人和迟到的人一样令人难受。", "options": ["as", "so", "too", "very"] },
+    { "gp": "gp3", "stem": "\"Being early is far less wasteful ___ missing the train.\"(less … ___:比较级‘比…更少’,填引出比较对象的词)", "stem_cn": "早到远比误车少浪费时间。", "options": ["than", "as", "then", "that"] },
+    { "gp": "gp3", "stem": "\"She was ___ punctual as her careful father.\"(‘和…一样…’的同级比较,填开头这个词)", "stem_cn": "她和细心的父亲一样守时。", "options": ["as", "so", "more", "very"] },
+    { "gp": "gp4", "stem": "\"The friends ___ whom she was going to stay had to be told.\"(介词 + 关系代词,指人)", "stem_cn": "她要去投奔的那些朋友只好被告知。", "options": ["with", "of", "at", "by"] },
+    { "gp": "gp4", "stem": "\"The paper ___ which her father had written the details was in her bag.\"(介词 + 关系代词,指物)", "stem_cn": "父亲把行程细节写在上面的那张纸在她包里。", "options": ["on", "in", "at", "of"] },
+    { "gp": "gp4", "stem": "\"The station ___ which the train only stopped for mail was small.\"(介词 + 关系代词,指地点)", "stem_cn": "那趟车只停装邮件的那个车站很小。", "options": ["at", "on", "of", "to"] },
+    { "gp": "gp5", "stem": "\"Her father ___ not have made such a mistake, she felt sure.\"(对过去的否定推测:不可能做过,填情态词)", "stem_cn": "她确信父亲不可能犯这样的错。", "options": ["could", "would", "need", "dare"] },
+    { "gp": "gp5", "stem": "\"Her father could ___ made such a mistake.\"(could ___ 过去分词:对过去的否定推测,填这个助动词)", "stem_cn": "父亲不可能犯下这种错误。", "options": ["not have", "not", "have not", "no"] },
+    { "gp": "gp5", "stem": "\"It would be unforgivable ___ miss the train and trouble her friends.\"(it 形式主语,真正主语是后面的不定式,填不定式符号)", "stem_cn": "误了车、连累朋友,是不可原谅的。", "options": ["to", "for", "of", "that"] },
+    { "gp": "gp6", "stem": "\"The habit of always being on time is ___.\"(“准时”用哪个词)", "stem_cn": "总是准时的习惯。", "options": ["punctuality", "laziness", "honesty", "patience"] },
+    { "gp": "gp6", "stem": "\"To ignore or pay no attention to a rule is to ___ it.\"(“不顾、无视”用哪个词)", "stem_cn": "不理会、无视某规矩。", "options": ["disregard", "obey", "respect", "enforce"] },
+    { "gp": "gp6", "stem": "\"Someone firm and refusing to change their mind is ___.\"(“坚定不移的”用哪个词)", "stem_cn": "态度坚决、不肯改变的。", "options": ["adamant", "gentle", "timid", "careless"] }
+  ],
+  "stage6": [
+    { "stem": "punctuality 的意思是:", "options": ["准时,守时", "迟到", "礼貌", "耐心"] },
+    { "stem": "rural 的意思是:", "options": ["农村的", "城市的", "工业的", "现代的"] },
+    { "stem": "disregard 的意思是:", "options": ["不顾,无视", "遵守", "尊重", "记住"] },
+    { "stem": "intellectual 的意思是:", "options": ["知识分子", "运动员", "农民", "商人"] },
+    { "stem": "reproach 的意思是:", "options": ["责备", "表扬", "原谅", "邀请"] },
+    { "stem": "adamant 的意思是:", "options": ["坚定不移的", "犹豫的", "温和的", "懒散的"] }
+  ],
+  "contrast": [
+    { "us": "tire", "uk": "tyre", "note_cn": "轮胎;拼写差异,美语 tire" },
+    { "us": "schedule", "uk": "timetable", "note_cn": "时刻表;用词差异,美语 schedule" },
+    { "us": "baggage car", "uk": "guard's van", "note_cn": "行李/邮政车厢;用词差异,美语 baggage car" },
+    { "us": "railroad", "uk": "railway", "note_cn": "铁路;用词差异,美语 railroad" }
+  ],
+  "chunks": [
+    { "us": "set out", "ipa": "/set aʊt/", "example1": "They finish a job before setting out to keep an appointment.", "example1_cn": "他们做完事才动身去赴约。", "example2": "We set out early to avoid traffic.", "example2_cn": "我们早早动身以避开堵车。" },
+    { "us": "cut things fine", "ipa": "/kʌt θɪŋz faɪn/", "example1": "Their only fault is cutting things fine.", "example1_cn": "他们唯一的毛病是把时间掐得太紧。", "example2": "Don't cut it so fine or you'll miss the train.", "example2_cn": "别掐得那么紧,否则会误车。" },
+    { "us": "in good time", "ipa": "/ɪn ɡʊd taɪm/", "example1": "Be on the platform in good time.", "example1_cn": "要及早到站台上。", "example2": "We arrived in good time for the show.", "example2_cn": "我们从容地赶上了演出。" },
+    { "us": "take on", "ipa": "/teɪk ɑːn/", "example1": "The train stopped only to take on mail.", "example1_cn": "火车停下只为装邮件。", "example2": "The ship took on passengers at the port.", "example2_cn": "轮船在港口接载乘客。" }
+  ],
+  "stage7_cloze": {
+    "context": "Punctuality is a necessary habit in civilized society. Only in a rural community ___1___ possible to disregard it. The over-punctual can be ___2___ much a trial as the unpunctual. A girl once arrived two hours early, sure that her father could not ___3___ made a mistake. But the train ___4___ which she waited stopped only for mail, and she was left behind.",
+    "blanks": [
+      { "blank_no": 1, "options": ["is it", "it is", "is", "does"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["as", "so", "too", "very"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["have", "has", "had", "be"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["for", "on", "of", "to"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did the young girl miss the train?", "options": ["The train at that time stopped only for mail, not passengers", "She arrived far too late", "She lost her ticket", "She fell asleep on a bench"] },
+    { "stem": "How early did the porter say she was?", "options": ["Two hours too soon", "Ten minutes too soon", "Half an hour too late", "Right on time"] },
+    { "stem": "How did the station master prove the train did not take passengers?", "options": ["He pointed to a tiny 'o' on the schedule", "He showed her a photograph", "He called the driver", "He read a rulebook aloud"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"只有在乡村,才可能不讲究守时\"(only 倒装):", "options": ["Only in a rural community is it possible to disregard punctuality.", "Only in a rural community it is possible to disregard punctuality.", "Only in a rural community is possible to disregard punctuality.", "Only in a rural community does it possible to disregard punctuality."] },
+    { "stem": "你想说\"她要去投奔的那些朋友只好被告知\"(介词 + 关系代词):", "options": ["The friends with whom she was going to stay had to be told.", "The friends with who she was going to stay had to be told.", "The friends whom with she was going to stay had to be told.", "The friends with which she was going to stay had to be told."] },
+    { "stem": "你想说\"她确信父亲不可能犯这样的错\"(对过去的否定推测):", "options": ["She felt sure her father could not have made such a mistake.", "She felt sure her father could not make such a mistake.", "She felt sure her father could not have make such a mistake.", "She felt sure her father can not have made such a mistake."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "disregard 的意思是:", "options": ["不顾,无视", "遵守", "尊重", "记住"] },
+    { "kind": "vocab", "stem": "adamant 的意思是:", "options": ["坚定不移的", "犹豫的", "温和的", "懒散的"] },
+    { "kind": "grammar", "stem": "\"Only in a rural community ___ possible to disregard punctuality.\"(only 置于句首,句子部分倒装)", "stem_cn": "只有在乡村,才可能不讲究守时。", "options": ["is it", "it is", "is", "does"] },
+    { "kind": "grammar", "stem": "\"Her father could ___ made such a mistake.\"(对过去的否定推测:could ___ 过去分词,填助动词)", "stem_cn": "父亲不可能犯下这种错误。", "options": ["not have", "not", "have not", "no"] },
+    { "kind": "scenario", "stem": "\"set out\" 的意思是:", "options": ["动身、出发", "安顿下来", "放弃", "回来"] },
+    { "kind": "scenario", "stem": "\"in good time\" 的意思是:", "options": ["及早、从容不迫地", "玩得开心", "准时受罚", "很久以前"] },
+    { "kind": "reading", "stem": "Why did the girl arrive at the station so early?", "options": ["Her parents had warned her it would be unforgivable to miss the train", "She simply loved trains", "The porter told her to", "She had nothing else to do"], "passage": true },
+    { "kind": "reading", "stem": "What did the tiny 'o' on the schedule mean?", "options": ["The train stopped there only to take on mail", "The train was cancelled", "The station was closed", "The train was always late"], "passage": true },
+    { "kind": "listening", "stem": "What was the station master's attitude when the girl begged to board?", "options": ["Adamant — rules could not be broken", "Kind and forgiving", "Confused and unsure", "Angry and rude"], "audio": true },
+    { "kind": "listening", "stem": "In the end, what did the girl have to do?", "options": ["Watch the train leave without her", "Climb into the baggage car", "Take a later bus", "Call her parents to complain"], "audio": true }
+  ]
+}

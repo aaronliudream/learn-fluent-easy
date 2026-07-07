@@ -1,0 +1,135 @@
+{
+  "id": "am3_l10",
+  "unit_no": 2,
+  "lesson_no": 10,
+  "title_en": "The Loss of the Titanic",
+  "title_cn": "泰坦尼克号的沉没",
+  "grammar_focus": "名词后缀构词法(动词/形容词 + -er/-ist/-ness/-ion/-ity 变名词:work→worker、violin→violinist、careless→carelessness、explain→explanation、responsible→responsibility),外加过去完成时及其被动(had done / had been done,承载官方KS)与对过去的虚拟条件(If two had flooded, she would have floated)(原创承载 NCE3 L10 考点·泰坦尼克号沉没的史实,克制叙述、落点在安全教训)",
+  "scene": "1912年4月10日,巨轮泰坦尼克号从英国南安普敦启航驶向纽约,船上有两千多名乘客和船员。即便以今天的标准看,它也是一艘庞大的班轮。当时,它不仅是有史以来建造过的最大的船,还被认为“永不沉没”,因为它有十六个不漏水的密封舱——即便其中两个进了水,它照样能浮着。它第一次也是唯一一次航行的故事,从未被人遗忘。启航第四天,泰坦尼克号正穿越北大西洋冰冷的海面时,一名瞭望员突然发现前方有座巨大的冰山。警报响过之后,大船急转弯以避免正面相撞,勉强擦过那堵高耸的冰墙。接着,船下传来一阵轻微的震颤。那声音太微弱,几乎没人以为船受了损。船长匆匆下到底舱,惊恐地发现:十六个密封舱里已有五个进了水!弃船的命令下达了,可救生艇不够所有人用,那一夜许多人丧生,巨轮缓缓沉入冰冷的海浪。这场悲剧震惊了世界;正因如此,后来订立了新法规,确保每艘船都为船上每个人配足救生艇。",
+  "grammar_card": {
+    "title": "名词后缀构词 + 过去完成时",
+    "intro": "①在动词或形容词后面加后缀,常能组成名词:-er/-or(做……的人:worker 工人、sailor 水手)、-ist(……家/者:violinist 小提琴家、physicist 物理学家)、-ness(……性质:carelessness 粗心、kindness 善良)、-ion/-tion(……行为/结果:explanation 解释、collision 相撞)、-ity(……性:responsibility 责任、originality 独创性)。②过去完成时 had + 过去分词,讲“比某个过去更早发生”的事(the largest ship that had ever been built);被动写成 had been + 过去分词(the alarm had been given / five compartments had been flooded)。③对过去的虚拟:If two had flooded, she would have floated(与过去事实相反的假设)。",
+    "table": {
+      "headers": ["后缀", "变成", "例子"],
+      "rows": [
+        ["-er / -or / -ist", "做……的人", "worker / sailor / violinist / physicist"],
+        ["-ness", "……的性质(名词)", "carelessness / kindness / sadness"],
+        ["-ion / -tion", "……的行为或结果", "explanation / collision / action"],
+        ["-ity", "……性(名词)", "responsibility / originality / ability"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "过去完成时讲“过去的过去”:先发生的用 had done,后发生的用一般过去(After the alarm had been given, the ship turned)。被动就是 had been + 过去分词。", "mark": "had done / had been done" },
+      { "rule": "构词加后缀常要改拼写:explain→explanation、responsible→responsibility、able→ability。要连拼写一起记。", "mark": "explain→explanation" },
+      { "rule": "美语里“救生艇”说 lifeboat;远洋大客轮说 (ocean) liner。本课已按美语写。", "mark": "lifeboat / liner" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did people believe the Titanic could not sink?",
+    "options": ["She had sixteen watertight compartments", "She was made of gold", "She had many engines", "She was very small"],
+    "answer_index": 0
+  },
+  "passage": "On April 10th, 1912, the great ship Titanic set sail for New York from Southampton, England. She carried more than two thousand passengers and crew. Even by today's standards, the Titanic was a colossal liner. At the time, she was not only the largest ship that had ever been built, but was also believed to be unsinkable, for she had sixteen watertight compartments. Even if two of them had been flooded, she would still have floated. The story of her first and only voyage has never been forgotten. Four days out, while the Titanic was crossing the icy waters of the North Atlantic, a lookout suddenly spotted a huge iceberg ahead. After the alarm had been given, the great ship turned sharply to avoid a direct collision. She turned just in time, narrowly missing the towering wall of ice. Then came a slight trembling from below. The sound had been so faint that hardly anyone thought the ship had been damaged. The captain hurried below and realized, to his horror, that five of the sixteen compartments had already been flooded. The order to abandon ship was given, but there were not enough lifeboats for everyone, and the great liner slowly plunged beneath the icy waves. Many lives were lost that night. The tragedy shocked the world, and because of it, new laws were passed to make sure every ship would carry enough lifeboats for all aboard.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "On April 10th, 1912, the great ship Titanic set sail for New York from Southampton, England. Even by today's standards, the Titanic was a colossal liner. At the time, she was not only the largest ship that had ever been built, but was also believed to be unsinkable, for she had sixteen watertight compartments.", "text_cn": "1912年4月10日,巨轮泰坦尼克号从英国南安普敦启航驶向纽约。即便以今天的标准看,它也是一艘庞大的班轮。当时,它不仅是有史以来建造过的最大的船,还被认为“永不沉没”,因为它有十六个不漏水的密封舱。" },
+    { "seq": 2, "speaker": null, "text_en": "Even if two of them had been flooded, she would still have floated. The story of her first and only voyage has never been forgotten.", "text_cn": "即便其中两个进了水,它照样能浮着。它第一次也是唯一一次航行的故事,从未被人遗忘。" },
+    { "seq": 3, "speaker": null, "text_en": "Four days out, while the Titanic was crossing the icy waters of the North Atlantic, a lookout suddenly spotted a huge iceberg ahead. After the alarm had been given, the great ship turned sharply to avoid a direct collision. She turned just in time, narrowly missing the towering wall of ice.", "text_cn": "启航第四天,泰坦尼克号正穿越北大西洋冰冷的海面时,一名瞭望员突然发现前方有座巨大的冰山。警报响过之后,大船急转弯以避免正面相撞,勉强擦过那堵高耸的冰墙。" },
+    { "seq": 4, "speaker": null, "text_en": "Then came a slight trembling from below. The sound had been so faint that hardly anyone thought the ship had been damaged. The captain hurried below and realized, to his horror, that five of the sixteen compartments had already been flooded.", "text_cn": "接着,船下传来一阵轻微的震颤。那声音太微弱,几乎没人以为船受了损。船长匆匆下到底舱,惊恐地发现:十六个密封舱里已有五个进了水!" },
+    { "seq": 5, "speaker": null, "text_en": "The order to abandon ship was given, but there were not enough lifeboats for everyone, and the great liner slowly plunged beneath the icy waves. The tragedy shocked the world, and because of it, new laws were passed to make sure every ship would carry enough lifeboats for all aboard.", "text_cn": "弃船的命令下达了,可救生艇不够所有人用,巨轮缓缓沉入冰冷的海浪。这场悲剧震惊了世界;正因如此,后来订立了新法规,确保每艘船都为船上每个人配足救生艇。" }
+  ],
+  "words": [
+    { "word": "colossal", "ipa": "/kəˈlɑːsl/", "pos": "adj", "meaning_cn": "庞大的,巨大的", "example": "a colossal liner" },
+    { "word": "watertight", "ipa": "/ˈwɔːtərtaɪt/", "pos": "adj", "meaning_cn": "不漏水的", "example": "watertight compartments" },
+    { "word": "compartment", "ipa": "/kəmˈpɑːrtmənt/", "pos": "n", "meaning_cn": "(轮船的)密封舱", "example": "sixteen watertight compartments" },
+    { "word": "liner", "ipa": "/ˈlaɪnər/", "pos": "n", "meaning_cn": "班轮,大客轮", "example": "a colossal liner" },
+    { "word": "voyage", "ipa": "/ˈvɔɪɪdʒ/", "pos": "n", "meaning_cn": "(海上)航行,航程", "example": "her first and only voyage" },
+    { "word": "iceberg", "ipa": "/ˈaɪsbɜːrɡ/", "pos": "n", "meaning_cn": "冰山", "example": "a huge iceberg ahead" },
+    { "word": "lookout", "ipa": "/ˈlʊkaʊt/", "pos": "n", "meaning_cn": "瞭望员,监视者", "example": "a lookout suddenly spotted it" },
+    { "word": "collision", "ipa": "/kəˈlɪʒn/", "pos": "n", "meaning_cn": "碰撞,相撞", "example": "avoid a direct collision" },
+    { "word": "narrowly", "ipa": "/ˈnæroʊli/", "pos": "adv", "meaning_cn": "刚刚,勉强地", "example": "narrowly missing the ice" },
+    { "word": "tremble", "ipa": "/ˈtrembl/", "pos": "v", "meaning_cn": "震颤,发抖", "example": "a slight trembling" },
+    { "word": "horror", "ipa": "/ˈhɔːrər/", "pos": "n", "meaning_cn": "恐惧,惊骇", "example": "to his horror" },
+    { "word": "abandon", "ipa": "/əˈbændən/", "pos": "v", "meaning_cn": "抛弃,弃(船)", "example": "the order to abandon ship" },
+    { "word": "plunge", "ipa": "/plʌndʒ/", "pos": "v", "meaning_cn": "投入,坠入", "example": "the liner plunged beneath the waves" },
+    { "word": "lifeboat", "ipa": "/ˈlaɪfboʊt/", "pos": "n", "meaning_cn": "救生艇", "example": "enough lifeboats for everyone" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "名词后缀 -er/-ist(做……的人)" },
+    { "gp": "gp2", "name": "名词后缀 -ness/-ion/-ity(抽象名词)" },
+    { "gp": "gp3", "name": "过去完成时 had done(承载官方KS)" },
+    { "gp": "gp4", "name": "过去完成被动 had been done" },
+    { "gp": "gp5", "name": "对过去的虚拟条件(would have done)" },
+    { "gp": "gp6", "name": "词汇辨析(iceberg/abandon/horror)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Someone who plays the violin is a ___.\"(“拉小提琴的人”,用哪个词)", "stem_cn": "拉小提琴的人是小提琴家。", "options": ["violinist", "violiner", "violinish", "violination"] },
+    { "gp": "gp1", "stem": "\"Someone who works hard is a hard ___.\"(“努力干活的人”,用哪个词)", "stem_cn": "努力干活的人是勤劳的工作者。", "options": ["worker", "workist", "workness", "workion"] },
+    { "gp": "gp1", "stem": "\"A scientist who studies physics is a ___.\"(“研究物理的科学家”,用哪个词)", "stem_cn": "研究物理的科学家是物理学家。", "options": ["physicist", "physicer", "physicness", "physicion"] },
+    { "gp": "gp2", "stem": "\"His ___ caused the accident; he simply wasn't careful.\"(“粗心”这个名词,用哪个词)", "stem_cn": "是他的粗心引发了事故,他就是不够小心。", "options": ["carelessness", "carelesser", "carelession", "careless"] },
+    { "gp": "gp2", "stem": "\"Can you give me an ___ for what happened?\"(“解释”这个名词,用哪个词)", "stem_cn": "你能给我一个解释,说清发生了什么吗?", "options": ["explanation", "explainer", "explainness", "explainity"] },
+    { "gp": "gp2", "stem": "\"A captain carries great ___ for everyone on board.\"(“责任”这个名词,用哪个词)", "stem_cn": "船长对船上每个人都负有重大责任。", "options": ["responsibility", "responsibleness", "responsibler", "responsibion"] },
+    { "gp": "gp3", "stem": "\"By the time the captain came up, the lookout ___ the iceberg.\"(比另一个过去更早:过去完成时)", "stem_cn": "船长上来时,瞭望员早已发现了冰山。", "options": ["had spotted", "spotted", "spots", "has spotted"] },
+    { "gp": "gp3", "stem": "\"The sound was so faint that no one thought the ship ___ any harm.\"(比“想”更早发生:过去完成时)", "stem_cn": "声音太轻,没人以为船受了什么损。", "options": ["had suffered", "suffered", "suffers", "has suffered"] },
+    { "gp": "gp3", "stem": "\"The captain saw that water ___ into five compartments already.\"(“看”之前更早灌入:过去完成时)", "stem_cn": "船长看到已有五个舱进了水。", "options": ["had poured", "poured", "pours", "has poured"] },
+    { "gp": "gp4", "stem": "\"The Titanic was the largest ship that ___ up to that time.\"(“被建造”且比过去更早:过去完成被动)", "stem_cn": "泰坦尼克号是那时为止建造过的最大的船。", "options": ["had ever been built", "built", "was building", "has built"] },
+    { "gp": "gp4", "stem": "\"After the alarm ___, the ship turned sharply.\"(“被拉响”且比转弯更早:过去完成被动)", "stem_cn": "警报响过之后,船急转弯。", "options": ["had been given", "gave", "was giving", "has given"] },
+    { "gp": "gp4", "stem": "\"By then, five compartments ___ with seawater.\"(“被灌满”且比那时更早:过去完成被动)", "stem_cn": "到那时,已有五个舱被海水灌满。", "options": ["had been flooded", "flooded", "were flooding", "have flooded"] },
+    { "gp": "gp5", "stem": "\"If only two compartments had flooded, the ship ___ afloat.\"(与过去事实相反的假设)", "stem_cn": "假如当时只有两个舱进水,船本还能浮着。", "options": ["would have stayed", "stayed", "stays", "will stay"] },
+    { "gp": "gp5", "stem": "\"What ___ if all the passengers had reached the lifeboats in time?\"(对过去的假设疑问:虚拟)", "stem_cn": "假如所有乘客当时都及时上了救生艇,会怎样呢?", "options": ["would have happened", "happened", "happens", "will happen"] },
+    { "gp": "gp6", "stem": "\"A very large passenger ship is called a ___.\"(“班轮、大客轮”用哪个词)", "stem_cn": "很大的客船叫班轮。", "options": ["liner", "bike", "wagon", "raft"] },
+    { "gp": "gp6", "stem": "\"A huge mass of floating ice in the sea is an ___.\"(“冰山”用哪个词)", "stem_cn": "海上漂浮的巨大冰块是冰山。", "options": ["iceberg", "island", "anchor", "harbor"] },
+    { "gp": "gp6", "stem": "\"The lifeboats are used to save people if a ship must be ___.\"(“抛弃、弃(船)”用哪个词)", "stem_cn": "如果不得不弃船,救生艇用来救人。", "options": ["abandoned", "painted", "cleaned", "sold"] },
+    { "gp": "gp6", "stem": "\"The whole world felt ___ when it heard the terrible news.\"(“恐惧、惊骇”用哪个词)", "stem_cn": "听到那可怕的消息,全世界都感到震惊。", "options": ["horror", "joy", "boredom", "pride"] }
+  ],
+  "stage6": [
+    { "stem": "colossal 的意思是:", "options": ["庞大的,巨大的", "微小的", "破旧的", "昂贵的"] },
+    { "stem": "iceberg 的意思是:", "options": ["冰山", "岛屿", "港口", "锚"] },
+    { "stem": "abandon 的意思是:", "options": ["抛弃,弃(船)", "修理", "建造", "购买"] },
+    { "stem": "horror 的意思是:", "options": ["恐惧,惊骇", "喜悦", "无聊", "骄傲"] },
+    { "stem": "\"lookout\" 的意思是:", "options": ["瞭望员,监视者", "乘客", "厨师", "医生"] },
+    { "stem": "voyage 的意思是:", "options": ["(海上)航行,航程", "假期", "会议", "比赛"] }
+  ],
+  "contrast": [
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" },
+    { "us": "line", "uk": "queue", "note_cn": "队伍;美语 line,英式 queue" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" }
+  ],
+  "chunks": [
+    { "us": "set sail for", "ipa": "/set seɪl fɔːr/", "example1": "The Titanic set sail for New York.", "example1_cn": "泰坦尼克号启航驶向纽约。", "example2": "They set sail for the islands at dawn.", "example2_cn": "他们黎明启航前往那些岛屿。" },
+    { "us": "just in time", "ipa": "/dʒʌst ɪn taɪm/", "example1": "The ship turned just in time.", "example1_cn": "船正好及时转了弯。", "example2": "We caught the train just in time.", "example2_cn": "我们正好赶上了火车。" },
+    { "us": "abandon ship", "ipa": "/əˈbændən ʃɪp/", "example1": "The order to abandon ship was given.", "example1_cn": "弃船的命令下达了。", "example2": "The crew had to abandon ship at once.", "example2_cn": "船员们只得立刻弃船。" },
+    { "us": "to one's horror", "ipa": "/tuː wʌnz ˈhɔːrər/", "example1": "To his horror, five compartments were flooded.", "example1_cn": "令他惊恐的是,五个舱都进了水。", "example2": "To her horror, the door was locked.", "example2_cn": "令她惊恐的是,门锁着。" }
+  ],
+  "stage7_cloze": {
+    "context": "In 1912, the Titanic set sail for New York. She was the largest ship that ___1___ up to that time, and people thought she could never sink. One night a lookout spotted an iceberg. After the alarm ___2___, the ship turned, but seawater soon ___3___ into five compartments. The captain understood, to his ___4___, that the great ship was sinking.",
+    "blanks": [
+      { "blank_no": 1, "options": ["had ever been built", "built", "was built", "builds"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["gave", "had been given", "gives", "was giving"], "answer_index": 1 },
+      { "blank_no": 3, "options": ["had poured", "pours", "pouring", "is pouring"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["joy", "horror", "boredom", "comfort"], "answer_index": 1 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did people believe the Titanic could not sink?", "options": ["She had sixteen watertight compartments", "She was made of gold", "She had many engines", "She was very small"] },
+    { "stem": "What did the lookout spot in the North Atlantic?", "options": ["A huge iceberg", "A friendly whale", "Another ship", "A lighthouse"] },
+    { "stem": "Why were so many lives lost?", "options": ["There were not enough lifeboats for everyone", "The sea was calm", "The ship was empty", "No one heard the alarm"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"这是当时建造过的最大的船\"(过去完成被动 had been built):", "options": ["It was the largest ship that had ever been built.", "It was the largest ship that ever built.", "It was the largest ship that has ever been built.", "It was the largest ship that was ever build."] },
+    { "stem": "你想说\"警报响过之后,船急转弯\"(过去完成 + 一般过去):", "options": ["After the alarm had been given, the ship turned sharply.", "After the alarm gave, the ship had turned sharply.", "After the alarm has been given, the ship turns sharply.", "After the alarm was given had, the ship turned sharply."] },
+    { "stem": "你想说\"努力工作的人叫 worker\"(动词加后缀 -er 变名词):", "options": ["A person who works hard is a hard worker.", "A person who works hard is a hard workist.", "A person who works hard is a hard workion.", "A person who works hard is a hard workness."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "iceberg 的意思是:", "options": ["冰山", "岛屿", "港口", "锚"] },
+    { "kind": "vocab", "stem": "abandon 的意思是:", "options": ["抛弃,弃(船)", "修理", "建造", "购买"] },
+    { "kind": "grammar", "stem": "\"By the time the captain came up, the lookout ___ the iceberg.\"(比另一个过去更早:过去完成)", "stem_cn": "船长上来时,瞭望员早已发现了冰山。", "options": ["had spotted", "spotted", "spots", "has spotted"] },
+    { "kind": "grammar", "stem": "\"The captain works hard; he is a hard ___.\"(动词 work 加后缀变“……的人”)", "stem_cn": "船长很拼,是个勤劳的人。", "options": ["worker", "workist", "workness", "workion"] },
+    { "kind": "scenario", "stem": "\"abandon ship\" 的意思是:", "options": ["弃船(离船逃生)", "登船", "修船", "造船"] },
+    { "kind": "scenario", "stem": "\"just in time\" 的意思是:", "options": ["正好及时", "总是迟到", "很久以前", "偶尔"] },
+    { "kind": "reading", "stem": "How did the Titanic try to avoid the iceberg?", "options": ["It turned sharply to one side", "It stopped its engines only", "It sped up to pass it", "It called another ship"], "passage": true },
+    { "kind": "reading", "stem": "What good change came after the disaster?", "options": ["New laws made ships carry enough lifeboats for all", "Ships stopped crossing the ocean", "Icebergs were removed", "No ships were built again"], "passage": true },
+    { "kind": "listening", "stem": "Where did the Titanic set sail from?", "options": ["Southampton, England", "New York", "Tokyo", "Sydney"], "audio": true },
+    { "kind": "listening", "stem": "How many watertight compartments did the ship have?", "options": ["Sixteen", "Two", "Fifty", "None"], "audio": true }
+  ]
+}

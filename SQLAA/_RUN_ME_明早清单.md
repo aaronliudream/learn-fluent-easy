@@ -12,11 +12,16 @@
 - **AM3 U1 五课语法进阶**:L1 过去叙事(过去/过去进行)→ L2 现在时(一般现在/现在进行/always+进行)→ L3 一般过去+不规则动词过去式 → L4 现在完成/完成进行 → L5 过去完成+被动+倒装。时态线索完整铺开。
 - 对账:`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **220**(L1–L5,U1 收官)。
 
-## 📌 AM3 U2 进行中(L6–L10 · 新文件 `american_am3_seed_unit02.sql`)
-- 🔴 **需跑** `american_am3_seed_unit02.sql`(全新文件)—— 逐课累加,每课 44 题。
-  - **L6《It Was Only a Movie 原来在拍电影》**(一般过去 vs 过去进行 + 否定前缀 un-/im-/in-/dis-/il-/ir- 构词 + with+名词+分词伴随 + 过去完成·拱廊街"抢劫"原来在拍电影)——44 题🟢全绿。**净化**:原题材=珠宝店砸窗抢劫(犯罪),改为剧组拍电影、店主误会狂扔家具的无害喜剧,语法/词表/喜剧内核全保留。
-- 对账(U2 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **264**(U1 的220 + L6 的44)。
-- ⏭️ U2 余 L7–L10。
+## 📌 AM3 U2 收官(L6–L10 · `american_am3_seed_unit02.sql` · 220题=44×5,全🟢)
+- 🔴 **需跑** `american_am3_seed_unit02.sql`(全新文件,含 L6–L10 五课)。
+  - **L6《It Was Only a Movie 原来在拍电影》**——一般过去vs过去进行 + 否定前缀 un-/im-/in-/dis-/il-/ir- + with+名词+分词伴随。**净化**:珠宝店砸窗抢劫→剧组拍电影、店主误会狂扔家具的无害喜剧。
+  - **L7《Cooked Cash 被煮熟的钞票》**——名词加后缀变形容词(-ful/-less/-ish/-ic/-ous/-y) + 一般过去 + 经历疑问。美国残币赔付(真机构 Mutilated Currency Division),把钱藏微波炉被误烧。
+  - **L8《The Mountain Monastery 山中修道院》**——被动语态各时态(is/are/was/were/has been done + have to be kept/are allowed) + -ever 复合词(whenever/wherever/whoever/whatever)。落基山口修道院+圣伯纳德救援犬。
+  - **L9《Flying Cats 飞猫》**——so/such/such a(n) 强调结构 + the+比较级the+比较级 + 一般现在真理。城市里猫从高楼坠落却大多幸存。
+  - **L10《The Loss of the Titanic 泰坦尼克号的沉没》**——名词后缀构词(-er/-ist/-ness/-ion/-ity) + 过去完成/被动 + 过去虚拟条件。泰坦尼克**史实克制叙述**(不渲染死亡,落点在"救生艇不足→立法配足"的安全教训)。
+- **U2 构词法三部曲**:L6 否定前缀 → L7 名词变形容词后缀 → L10 名词后缀,配合时态复现(过去/被动/完成/虚拟)。
+- 对账(U2 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **440**(U1 220 + U2 220)。
+- ⏭️ 下一步:开 **AM3 U3(L11–L15)**。L11/L12/L14/L15 原属🔴清单,按新规"读到再判"。
 
 <!-- 历史(上一版) -->
 ## 📌 本批变化(2026-07-06 session · am3 第三册 · U1 推进到 L3)

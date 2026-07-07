@@ -1,0 +1,133 @@
+{
+  "id": "am3_l22",
+  "unit_no": 5,
+  "lesson_no": 22,
+  "title_en": "By Heart",
+  "title_cn": "熟记台词",
+  "grammar_focus": "so + 形容词/副词 + that、such (a) + 名词 + that(如此…以致)、would / used to 表过去反复的动作或习惯、insist / suggest / demand that + (should) + 动词原形(虚拟)、managed to(设法做成,= could not 的反面)、present / hand sth to sb + 形容词 + 动词不定式(anxious to see)(原创承载 NCE3 L22 考点·无需净化·剧场趣事:两名演员在长演不衰的戏里都忘了台词,一张白纸让他们互相救场)",
+  "scene": "有些戏太成功了,一连上演好几年。这对演员其实挺熬人:同样的台词得一晚接一晚地重复。你会以为他们早把角色台词背得滚瓜烂熟、绝不会卡壳,可事实未必如此。一位名演员曾出演一个角色——一个在遥远城堡里被关了二十年的贵族。每到最后一幕,总有个监狱看守拿着一封信上台,把信递给这囚犯。尽管这位演员每场都要念这封信,他却坚持要求信必须完整地写出来。一天晚上,看守决定和同台的演员开个玩笑,想看看演了这么多场后,他是不是终于把信背了下来。大幕拉开,最后一幕开场,贵族独自坐在牢房的铁栏后。看守进来,把信递上——可这回却是一张白纸。看守目不转睛地盯着,急着想看会发生什么。贵族盯着白纸看了几秒,眯起眼说:“光线太暗,你念给我听吧。”说着把纸又递了回去。看守自己也一个字都想不起来,只好回道:“陛下,光线确实太暗,我得去取眼镜。”他匆匆下场,片刻后拿着真信回来,当众念给囚犯听,把全场逗得乐不可支。",
+  "grammar_card": {
+    "title": "so/such...that + would/used to + insist that (should) do",
+    "intro": "①“如此…以致…”:so + 形容词/副词 + that(so successful that…);such + (a) + 名词 + that(such a good play that…)。②would / used to 表示“过去反复发生、过去常常”:A jailer would always come on stage. / He used to rehearse before every show.③insist / suggest / demand / order that 后面的从句用 (should) + 动词原形:He insisted that it (should) be written out.④managed to = 设法做成(和 could not 相反)。⑤present / hand / give sth to sb;pleased/anxious 等形容词后接 to do。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["so … that / such (a) … that", "如此…以致…", "so successful that it ran for years"],
+        ["would / used to", "过去反复 / 过去常常", "The jailer would come on stage."],
+        ["insist/suggest that + (should) do", "坚持/建议…(虚拟)", "insisted that it should be written out"],
+        ["managed to / present sth to sb", "设法做成 / 把…递给", "managed to learn it / presented it to him"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "so 后面直接跟形容词/副词(so good);such 后面跟名词短语(such a good play)。别写成 so a good play。", "mark": "so + adj / such a + n" },
+      { "rule": "insist / suggest / demand / order that 后面用 (should) + 动词原形,不随时态变化:demand that he arrive(不是 arrives)。", "mark": "that + (should) 原形" },
+      { "rule": "美式用词与拼写:jailer(英式 gaoler)、theater(英式 theatre)、intermission(英式 interval)。本课已按美语写。", "mark": "jailer / theater" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Which actor read the letter aloud in the end?",
+    "options": ["The jailer", "The aristocrat", "A third actor", "No one did"],
+    "answer_index": 0
+  },
+  "passage": "Some plays are so successful that they run for years on end. In a way, this is hard on the actors, who must repeat the very same lines night after night. You would think they would know their parts by heart and never stumble. Yet that is not always so. A famous actor was once cast as a nobleman who, in the story, had been locked away in a distant fortress for twenty years. In the final act, a jailer would always come onto the stage carrying a letter, which he handed to the prisoner. Even though the actor was supposed to read the letter at every performance, he always insisted that it should be written out in full. One night, the jailer decided to play a joke on his fellow actor. He wanted to find out whether, after so many shows, the man had finally managed to learn the letter by heart. When the curtain rose on the last act, the nobleman sat alone behind the bars of his cell. In came the jailer and presented the letter, but this time it was only a blank sheet of paper. The jailer watched eagerly, anxious to see what would happen. The nobleman stared at the blank page, then squinted and said, 'The light is dim. Read the letter to me.' He handed the paper right back. The jailer, who could not remember a single word either, replied, 'The light is indeed dim, sir. I must go get my glasses.' He hurried off and returned a moment later with the real letter, which he read aloud to the delight of the whole theater.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Some plays are so successful that they run for years on end. In a way, this is hard on the actors, who must repeat the very same lines night after night. You would think they would know their parts by heart and never stumble. Yet that is not always so.", "text_cn": "有些戏太成功了,一连上演好几年。这对演员其实挺熬人:同样的台词得一晚接一晚地重复。你会以为他们早把角色台词背得滚瓜烂熟、绝不会卡壳,可事实未必如此。" },
+    { "seq": 2, "speaker": null, "text_en": "A famous actor was once cast as a nobleman who, in the story, had been locked away in a distant fortress for twenty years. In the final act, a jailer would always come onto the stage carrying a letter, which he handed to the prisoner. Even though the actor was supposed to read the letter at every performance, he always insisted that it should be written out in full.", "text_cn": "一位名演员曾出演一个角色——一个在遥远城堡里被关了二十年的贵族。每到最后一幕,总有个监狱看守拿着一封信上台,把信递给这囚犯。尽管这位演员每场都要念这封信,他却坚持要求信必须完整地写出来。" },
+    { "seq": 3, "speaker": null, "text_en": "One night, the jailer decided to play a joke on his fellow actor. He wanted to find out whether, after so many shows, the man had finally managed to learn the letter by heart. When the curtain rose on the last act, the nobleman sat alone behind the bars of his cell.", "text_cn": "一天晚上,看守决定和同台的演员开个玩笑,想看看演了这么多场后,他是不是终于把信背了下来。大幕拉开,最后一幕开场,贵族独自坐在牢房的铁栏后。" },
+    { "seq": 4, "speaker": null, "text_en": "In came the jailer and presented the letter, but this time it was only a blank sheet of paper. The jailer watched eagerly, anxious to see what would happen. The nobleman stared at the blank page, then squinted and said, 'The light is dim. Read the letter to me.' He handed the paper right back.", "text_cn": "看守进来,把信递上——可这回却是一张白纸。看守目不转睛地盯着,急着想看会发生什么。贵族盯着白纸看了几秒,眯起眼说:“光线太暗,你念给我听吧。”说着把纸又递了回去。" },
+    { "seq": 5, "speaker": null, "text_en": "The jailer, who could not remember a single word either, replied, 'The light is indeed dim, sir. I must go get my glasses.' He hurried off and returned a moment later with the real letter, which he read aloud to the delight of the whole theater.", "text_cn": "看守自己也一个字都想不起来,只好回道:“陛下,光线确实太暗,我得去取眼镜。”他匆匆下场,片刻后拿着真信回来,当众念给囚犯听,把全场逗得乐不可支。" }
+  ],
+  "words": [
+    { "word": "aristocrat", "ipa": "/əˈrɪstəkræt/", "pos": "n", "meaning_cn": "贵族", "example": "cast as an aristocrat" },
+    { "word": "jailer", "ipa": "/ˈdʒeɪlər/", "pos": "n", "meaning_cn": "监狱看守(美语,英式 gaoler)", "example": "a jailer came on stage" },
+    { "word": "cast", "ipa": "/kæst/", "pos": "v", "meaning_cn": "选派……扮演角色(cast/cast)", "example": "was cast as a nobleman" },
+    { "word": "role", "ipa": "/roʊl/", "pos": "n", "meaning_cn": "角色", "example": "played the role of a prisoner" },
+    { "word": "curtain", "ipa": "/ˈkɜːrtn/", "pos": "n", "meaning_cn": "(舞台上的)幕布", "example": "the curtain rose" },
+    { "word": "cell", "ipa": "/sel/", "pos": "n", "meaning_cn": "单人牢房", "example": "behind the bars of his cell" },
+    { "word": "blank", "ipa": "/blæŋk/", "pos": "adj", "meaning_cn": "空白的", "example": "a blank sheet of paper" },
+    { "word": "squint", "ipa": "/skwɪnt/", "pos": "v", "meaning_cn": "眯着眼看", "example": "he squinted at the page" },
+    { "word": "dim", "ipa": "/dɪm/", "pos": "adj", "meaning_cn": "昏暗的", "example": "the light is dim" },
+    { "word": "colleague", "ipa": "/ˈkɑːliːɡ/", "pos": "n", "meaning_cn": "同事", "example": "a joke on his colleague" },
+    { "word": "falter", "ipa": "/ˈfɔːltər/", "pos": "v", "meaning_cn": "支吾,结巴", "example": "never falter on stage" },
+    { "word": "performance", "ipa": "/pərˈfɔːrməns/", "pos": "n", "meaning_cn": "演出", "example": "at every performance" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "so...that / such (a)...that(如此…以致)" },
+    { "gp": "gp2", "name": "would / used to(过去反复动作)" },
+    { "gp": "gp3", "name": "insist/suggest/demand that + (should) 原形" },
+    { "gp": "gp4", "name": "managed to(设法做成)" },
+    { "gp": "gp5", "name": "present/hand sth to sb / 形容词+不定式" },
+    { "gp": "gp6", "name": "词汇辨析(aristocrat/squint/dim)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The play was ___ successful that it ran for years.\"(形容词前,表“如此…以致”)", "stem_cn": "这出戏太成功了,连演了好几年。", "options": ["so", "such", "such a", "very"] },
+    { "gp": "gp1", "stem": "\"It was ___ successful play that it ran for years.\"(名词短语前,表“如此…的一出…”)", "stem_cn": "这是一出非常成功的戏,连演了好几年。", "options": ["such a", "so", "such", "so a"] },
+    { "gp": "gp1", "stem": "\"The audience laughed ___ loudly that the actors stopped.\"(副词前,表“如此…以致”)", "stem_cn": "观众笑得太响,演员都停了下来。", "options": ["so", "such", "such a", "too"] },
+    { "gp": "gp2", "stem": "\"Every night the jailer ___ come onto the stage with a letter.\"(过去反复的动作:“总会”)", "stem_cn": "每晚监狱看守都会拿着一封信上台。", "options": ["would", "will", "would have", "is going to"] },
+    { "gp": "gp2", "stem": "\"The old actor ___ to rehearse his lines before every show.\"(过去习惯:“过去常常”)", "stem_cn": "这位老演员过去每场演出前都要排练台词。", "options": ["used", "use", "uses", "using"] },
+    { "gp": "gp2", "stem": "\"In those days the play ___ run for months without a break.\"(过去反复:“常会”)", "stem_cn": "那时候这出戏常常连演几个月不停。", "options": ["would", "will", "would have", "is"] },
+    { "gp": "gp3", "stem": "\"The actor insisted that the letter ___ written out in full.\"(insist that + (should) 原形)", "stem_cn": "那位演员坚持要求把信完整地写出来。", "options": ["should be", "is", "was", "will be"] },
+    { "gp": "gp3", "stem": "\"The director suggested that everyone ___ their lines twice.\"(suggest that + (should) 原形)", "stem_cn": "导演建议每个人把台词排两遍。", "options": ["rehearse", "rehearses", "rehearsed", "rehearsing"] },
+    { "gp": "gp3", "stem": "\"The manager demanded that the actor ___ on time.\"(demand that + (should) 原形)", "stem_cn": "经理要求那位演员准时到。", "options": ["arrive", "arrives", "arrived", "arriving"] },
+    { "gp": "gp4", "stem": "\"After many shows, had the jailer ___ to learn the letter by heart?\"(“设法学会”)", "stem_cn": "演了那么多场后,看守是否终于把信背了下来?", "options": ["managed", "manage", "managing", "manages"] },
+    { "gp": "gp4", "stem": "\"Neither actor ___ to remember the lines that night.\"(“设法做到”的过去式)", "stem_cn": "那晚两个演员谁也没能记住台词。", "options": ["managed", "manage", "manages", "managing"] },
+    { "gp": "gp4", "stem": "\"'Managed to' means about the same as ___.\"(managed to 的近义)", "stem_cn": "managed to 的意思接近于哪个?", "options": ["was able to", "could not", "would rather", "had better"] },
+    { "gp": "gp5", "stem": "\"The jailer presented the letter ___ the aristocrat.\"(present sth 后接哪个介词)", "stem_cn": "看守把信递给贵族。", "options": ["to", "for", "at", "with"] },
+    { "gp": "gp5", "stem": "\"He handed the blank sheet ___ his fellow actor.\"(hand sth 后接哪个介词)", "stem_cn": "他把那张白纸递给同台的演员。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp5", "stem": "\"The jailer was anxious ___ what his colleague would do.\"(形容词 anxious 后接不定式)", "stem_cn": "看守急切地想看看同事会怎么做。", "options": ["to see", "seeing", "see", "saw"] },
+    { "gp": "gp6", "stem": "\"A member of the noble class, like a lord or duke, is an ___.\"(“贵族”用哪个词)", "stem_cn": "像勋爵、公爵那样的贵族阶层成员。", "options": ["aristocrat", "athlete", "engineer", "actor"] },
+    { "gp": "gp6", "stem": "\"To look at something with your eyes partly closed is to ___.\"(“眯着眼看”用哪个词)", "stem_cn": "半眯着眼看东西。", "options": ["squint", "shout", "sneeze", "swim"] },
+    { "gp": "gp6", "stem": "\"When a light is faint and not bright, it is ___.\"(“昏暗的”用哪个词)", "stem_cn": "光线微弱不亮。", "options": ["dim", "loud", "sweet", "heavy"] }
+  ],
+  "stage6": [
+    { "stem": "aristocrat 的意思是:", "options": ["贵族", "农民", "士兵", "商人"] },
+    { "stem": "jailer 的意思是:", "options": ["监狱看守", "演员", "医生", "画家"] },
+    { "stem": "cell 的意思是:", "options": ["单人牢房", "舞台", "花园", "厨房"] },
+    { "stem": "squint 的意思是:", "options": ["眯着眼看", "大喊", "奔跑", "微笑"] },
+    { "stem": "dim 的意思是:", "options": ["昏暗的", "明亮的", "吵闹的", "寒冷的"] },
+    { "stem": "falter 的意思是:", "options": ["支吾,结巴", "大笑", "歌唱", "鼓掌"] }
+  ],
+  "contrast": [
+    { "us": "theater", "uk": "theatre", "note_cn": "剧院;美语 theater,英式 theatre" },
+    { "us": "jailer", "uk": "gaoler", "note_cn": "监狱看守;美语 jailer,英式 gaoler" },
+    { "us": "intermission", "uk": "interval", "note_cn": "(演出)幕间休息;美语 intermission,英式 interval" },
+    { "us": "program", "uk": "programme", "note_cn": "节目单,节目;美语 program,英式 programme" }
+  ],
+  "chunks": [
+    { "us": "by heart", "ipa": "/baɪ hɑːrt/", "example1": "He knew his lines by heart.", "example1_cn": "他把台词背得滚瓜烂熟。", "example2": "She learned the poem by heart.", "example2_cn": "她把这首诗背了下来。" },
+    { "us": "play a joke on", "ipa": "/pleɪ ə dʒoʊk ɑːn/", "example1": "The jailer played a joke on his colleague.", "example1_cn": "看守和同事开了个玩笑。", "example2": "They played a joke on their teacher.", "example2_cn": "他们捉弄了老师一下。" },
+    { "us": "so ... that", "ipa": "/soʊ ... ðæt/", "example1": "The play was so long that people left early.", "example1_cn": "这出戏太长了,观众提前走了。", "example2": "It was so cold that the lake froze.", "example2_cn": "天冷得湖都结冰了。" },
+    { "us": "run for years", "ipa": "/rʌn fɔːr jɪrz/", "example1": "The play ran for years on end.", "example1_cn": "这出戏一连上演了好几年。", "example2": "The show ran for a decade.", "example2_cn": "这台演出连演了十年。" }
+  ],
+  "stage7_cloze": {
+    "context": "The play was ___1___ successful that it ran for years. Each night a jailer ___2___ bring a letter onto the stage. One evening the jailer, curious whether the actor had ___3___ to learn the lines, handed him a blank page. The actor squinted and asked the jailer ___4___ read it aloud instead.",
+    "blanks": [
+      { "blank_no": 1, "options": ["so", "such", "such a", "very"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["would", "will", "would have", "is"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["managed", "manage", "manages", "managing"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["to", "for", "that", "of"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why is a long-running play hard on actors?", "options": ["They must repeat the same lines every night", "They earn very little money", "They travel a great deal", "They rarely get to rehearse"] },
+    { "stem": "What trick did the jailer play?", "options": ["He handed over a blank sheet of paper", "He hid the real letter", "He changed the ending", "He forgot to come on stage"] },
+    { "stem": "How did the aristocrat cover up that he had forgotten the lines?", "options": ["He said the light was dim and asked the jailer to read it", "He walked off the stage", "He made up brand-new lines", "He simply stayed silent"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"这出戏太成功了,连演了好几年\"(so...that):", "options": ["The play was so successful that it ran for years.", "The play was such successful that it ran for years.", "The play was so a successful that it ran for years.", "The play was successful so that it ran for years."] },
+    { "stem": "你想说\"每晚看守都会拿着信上台\"(过去反复 would):", "options": ["Every night the jailer would come on stage with a letter.", "Every night the jailer will come on stage with a letter.", "Every night the jailer would came on stage with a letter.", "Every night the jailer would coming on stage with a letter."] },
+    { "stem": "你想说\"他坚持要求把信完整写出来\"(insist that + should + 原形):", "options": ["He insisted that the letter should be written out in full.", "He insisted that the letter is written out in full.", "He insisted that the letter was written out in full.", "He insisted the letter writing out in full."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "aristocrat 的意思是:", "options": ["贵族", "农民", "士兵", "商人"] },
+    { "kind": "vocab", "stem": "dim 的意思是:", "options": ["昏暗的", "明亮的", "吵闹的", "寒冷的"] },
+    { "kind": "grammar", "stem": "\"The play was ___ successful that it ran for years.\"(形容词前,表“如此…以致”)", "stem_cn": "这出戏太成功了,连演了好几年。", "options": ["so", "such", "such a", "very"] },
+    { "kind": "grammar", "stem": "\"Every night the jailer ___ bring a letter on stage.\"(过去反复的动作)", "stem_cn": "每晚看守都会拿封信上台。", "options": ["would", "will", "would have", "is"] },
+    { "kind": "scenario", "stem": "\"by heart\" 的意思是:", "options": ["凭记忆,熟记于心", "真心地", "用力地", "从头开始"] },
+    { "kind": "scenario", "stem": "\"play a joke on\" 的意思是:", "options": ["捉弄某人,开某人玩笑", "和某人玩游戏", "对某人认真", "教某人做游戏"] },
+    { "kind": "reading", "stem": "What role was the famous actor playing?", "options": ["A nobleman imprisoned for twenty years", "A jailer", "A king", "A soldier"], "passage": true },
+    { "kind": "reading", "stem": "What was on the paper the jailer handed over that night?", "options": ["Nothing — it was blank", "The wrong lines", "A secret message", "The ending of the play"], "passage": true },
+    { "kind": "listening", "stem": "What did the jailer go to fetch?", "options": ["His glasses and the real letter", "A new script", "Another actor", "A lamp"], "audio": true },
+    { "kind": "listening", "stem": "How did the whole theater react in the end?", "options": ["They were delighted", "They booed loudly", "They left early", "They fell asleep"], "audio": true }
+  ]
+}

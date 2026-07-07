@@ -1,0 +1,135 @@
+{
+  "id": "am3_l12",
+  "unit_no": 3,
+  "lesson_no": 12,
+  "title_en": "Life on a Desert Island",
+  "title_cn": "荒岛生活",
+  "grammar_focus": "条件句 if(真实条件:if + 一般现在, will do;与现在相反的虚拟:if + 过去时, would do / if I were you;与过去相反的虚拟:if + had done, would have done),外加 wish / if only + 过去时(与现在相反的愿望)/ 过去完成(对过去的懊悔)(原创承载 NCE3 L12 考点·两人在珊瑚岛意外过了五天惬意的荒岛生活)",
+  "scene": "我们大多数人对荒岛生活的想象都很不真实。我们爱把它当成一种乐园:阳光永远灿烂,熟果从树上落下,谁也不必干活。可另一面恰恰相反:孤岛上的日子也可能十分凄惨,一个落难者也许会像鲁滨孙那样慢慢挨饿,苦等一艘永远不来的船。这两幅画面里也许都有一点真实成分,可我们很少有人有机会亲身去验证。最近有两个朋友在一座小珊瑚岛上待了五天,却真希望当时能待得更久。他们本是驾着一条严重受损的小船,从维尔京群岛开往迈阿密去修理,途中船开始进水下沉。他们手脚麻利地往一条橡皮小艇里装了食物、火柴和几罐汽水,划了好几英里,横渡加勒比海,来到一座小珊瑚岛。岛上几乎没有树,也没有淡水,可这并没成为问题:他们用橡皮艇接雨水。因为带了一把捕鱼枪,他们吃得很足——天天捕龙虾和鱼,用其中一人的话说,他们“吃得像国王”。五天后一艘过路油轮救了他们,两人都由衷地舍不得离开。要不是那艘油轮恰好路过,谁知道他们还会再待多久呢!",
+  "grammar_card": {
+    "title": "条件句 if + 虚拟愿望 wish / if only",
+    "intro": "①真实条件:很可能发生,if 从句用一般现在时,主句用将来时——If it rains, we will stay。②与现在事实相反的虚拟:if 从句用过去时,主句 would do;be 动词一律用 were——If I were you, I would go。③与过去事实相反的虚拟:if 从句用过去完成,主句 would have done——If they had not brought a gun, they would have starved。④表示愿望用 wish 或 if only:对现在的愿望用过去时(I wish I knew…),对过去的懊悔用过去完成(They wished they had stayed longer / If only I had known!)。",
+    "table": {
+      "headers": ["类型", "if / wish 后", "主句/例子"],
+      "rows": [
+        ["真实条件", "一般现在时", "If it rains, we will stay home."],
+        ["与现在相反", "过去时(be 用 were)", "If I were you, I would go."],
+        ["与过去相反", "过去完成", "If they had come, they would have seen it."],
+        ["愿望 wish/if only", "过去时(现在)/ 过去完成(过去)", "I wish I knew. / They wished they had stayed."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "虚拟里 be 动词一律用 were,不分人称:If I were you… / I wish he were here。", "mark": "were" },
+      { "rule": "wish/if only 后:想改变现在的状况用过去时(I wish I had a boat 现在没有),后悔过去的事用过去完成(I wish I hadn't said that 过去说了)。", "mark": "wish + 过去/过去完成" },
+      { "rule": "美语里“汽水”常说 soda(英式 fizzy drink);“(易拉)罐”说 can(英式 tin)。本课已按美语写。", "mark": "soda / can" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was exceptional about the two men's stay on the island?",
+    "options": ["They enjoyed it and were sorry to leave", "They hated every minute", "They were badly hurt", "They never found any food"],
+    "answer_index": 0
+  },
+  "passage": "Most of us have a very unrealistic picture of life on a desert island. We like to imagine it as a kind of paradise, where the sun always shines, ripe fruit drops from the trees, and no one ever has to work. The other side of the picture is quite the opposite: life on a lonely island can be wretched, and a castaway may slowly starve, like Robinson Crusoe, waiting for a boat that never comes. There is probably an element of truth in both pictures, but few of us ever get the opportunity to find out. Two friends who recently spent five days on a tiny coral island wished they had stayed even longer. They had been sailing a badly damaged boat from the Virgin Islands to Miami to have it repaired when, halfway across, it began to sink. Working fast, they loaded a small rubber dinghy with food, matches, and cans of soda, and rowed for miles across the Caribbean until they reached a coral island. There were almost no trees and no fresh water, but that did not turn out to be a problem: the men caught rainwater in the dinghy. Because they had packed a spear gun, they had plenty to eat. Every day they caught lobster and fish, and, as one of them said, they 'ate like kings.' When a passing tanker rescued them five days later, both men were genuinely sorry to leave. If that tanker had not come along, who knows how much longer they would have stayed!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Most of us have a very unrealistic picture of life on a desert island. We like to imagine it as a kind of paradise, where the sun always shines, ripe fruit drops from the trees, and no one ever has to work.", "text_cn": "我们大多数人对荒岛生活的想象都很不真实。我们爱把它当成一种乐园:阳光永远灿烂,熟果从树上落下,谁也不必干活。" },
+    { "seq": 2, "speaker": null, "text_en": "The other side of the picture is quite the opposite: life on a lonely island can be wretched, and a castaway may slowly starve, like Robinson Crusoe, waiting for a boat that never comes. There is probably an element of truth in both pictures, but few of us ever get the opportunity to find out.", "text_cn": "可另一面恰恰相反:孤岛上的日子也可能十分凄惨,一个落难者也许会像鲁滨孙那样慢慢挨饿,苦等一艘永远不来的船。这两幅画面里也许都有一点真实成分,可我们很少有人有机会亲身去验证。" },
+    { "seq": 3, "speaker": null, "text_en": "Two friends who recently spent five days on a tiny coral island wished they had stayed even longer. They had been sailing a badly damaged boat from the Virgin Islands to Miami to have it repaired when, halfway across, it began to sink.", "text_cn": "最近有两个朋友在一座小珊瑚岛上待了五天,却真希望当时能待得更久。他们本是驾着一条严重受损的小船,从维尔京群岛开往迈阿密去修理,途中船开始进水下沉。" },
+    { "seq": 4, "speaker": null, "text_en": "Working fast, they loaded a small rubber dinghy with food, matches, and cans of soda, and rowed for miles across the Caribbean until they reached a coral island. There were almost no trees and no fresh water, but that did not turn out to be a problem: the men caught rainwater in the dinghy.", "text_cn": "他们手脚麻利地往一条橡皮小艇里装了食物、火柴和几罐汽水,划了好几英里,横渡加勒比海,来到一座小珊瑚岛。岛上几乎没有树,也没有淡水,可这并没成为问题:他们用橡皮艇接雨水。" },
+    { "seq": 5, "speaker": null, "text_en": "Because they had packed a spear gun, they had plenty to eat. Every day they caught lobster and fish, and, as one of them said, they 'ate like kings.' When a passing tanker rescued them five days later, both men were genuinely sorry to leave.", "text_cn": "因为带了一把捕鱼枪,他们吃得很足——天天捕龙虾和鱼,用其中一人的话说,他们“吃得像国王”。五天后一艘过路油轮救了他们,两人都由衷地舍不得离开。" }
+  ],
+  "words": [
+    { "word": "desert island", "ipa": "/ˈdezərt ˈaɪlənd/", "pos": "n", "meaning_cn": "荒岛,无人岛", "example": "life on a desert island" },
+    { "word": "unrealistic", "ipa": "/ˌʌnriːəˈlɪstɪk/", "pos": "adj", "meaning_cn": "不真实的,不切实际的", "example": "an unrealistic picture" },
+    { "word": "paradise", "ipa": "/ˈpærədaɪs/", "pos": "n", "meaning_cn": "天堂,乐土", "example": "a kind of paradise" },
+    { "word": "wretched", "ipa": "/ˈretʃɪd/", "pos": "adj", "meaning_cn": "可怜的,艰苦的", "example": "life can be wretched" },
+    { "word": "starve", "ipa": "/stɑːrv/", "pos": "v", "meaning_cn": "挨饿,饿死", "example": "may slowly starve" },
+    { "word": "element", "ipa": "/ˈelɪmənt/", "pos": "n", "meaning_cn": "成分,一点", "example": "an element of truth" },
+    { "word": "opportunity", "ipa": "/ˌɑːpərˈtuːnəti/", "pos": "n", "meaning_cn": "机会", "example": "get the opportunity to find out" },
+    { "word": "coral", "ipa": "/ˈkɔːrəl/", "pos": "n", "meaning_cn": "珊瑚", "example": "a tiny coral island" },
+    { "word": "dinghy", "ipa": "/ˈdɪŋɡi/", "pos": "n", "meaning_cn": "救生筏,小艇", "example": "a small rubber dinghy" },
+    { "word": "spear gun", "ipa": "/ˈspɪr ɡʌn/", "pos": "n", "meaning_cn": "捕鱼枪", "example": "had packed a spear gun" },
+    { "word": "lobster", "ipa": "/ˈlɑːbstər/", "pos": "n", "meaning_cn": "龙虾", "example": "caught lobster and fish" },
+    { "word": "tanker", "ipa": "/ˈtæŋkər/", "pos": "n", "meaning_cn": "油轮", "example": "a passing tanker" },
+    { "word": "genuinely", "ipa": "/ˈdʒenjuɪnli/", "pos": "adv", "meaning_cn": "由衷地,真诚地", "example": "genuinely sorry to leave" },
+    { "word": "castaway", "ipa": "/ˈkæstəweɪ/", "pos": "n", "meaning_cn": "(海上)漂流者,落难者", "example": "a castaway may starve" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "真实条件句(if + 一般现在, will do)" },
+    { "gp": "gp2", "name": "与现在相反的虚拟条件(if + 过去时, would do)" },
+    { "gp": "gp3", "name": "与过去相反的虚拟条件(if + had done, would have done)" },
+    { "gp": "gp4", "name": "wish + 过去时(与现在相反的愿望)" },
+    { "gp": "gp5", "name": "wish/if only + 过去完成(对过去的懊悔)" },
+    { "gp": "gp6", "name": "词汇辨析(coral/tanker/starve)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"If it rains tomorrow, we ___ the boat trip.\"(真实条件:if 一般现在,主句将来时)", "stem_cn": "如果明天下雨,我们就取消坐船的行程。", "options": ["will cancel", "cancel", "would cancel", "cancelled"] },
+    { "gp": "gp1", "stem": "\"You ___ hungry if you don't catch any fish.\"(真实条件:主句将来时)", "stem_cn": "如果你钓不到鱼,就会饿。", "options": ["will be", "would be", "are being", "were"] },
+    { "gp": "gp2", "stem": "\"If I ___ you, I would stay on that island longer.\"(与现在相反的虚拟:be 用哪个)", "stem_cn": "如果我是你,我会在那岛上多待些时候。", "options": ["were", "am", "was", "will be"] },
+    { "gp": "gp2", "stem": "\"If they ___ a spear gun now, they could catch fish easily.\"(与现在相反:if 从句用过去时)", "stem_cn": "如果他们现在有一把鱼枪,就能轻松捕鱼。", "options": ["had", "have", "will have", "has"] },
+    { "gp": "gp2", "stem": "\"If the island ___ fresh water, life there would be easier.\"(与现在相反的虚拟)", "stem_cn": "如果岛上有淡水,生活会容易些。", "options": ["had", "has", "will have", "would have"] },
+    { "gp": "gp3", "stem": "\"If the boat had not started to sink, they ___ on it.\"(与过去相反:主句 would have + 过去分词)", "stem_cn": "要是船没开始下沉,他们本会留在船上。", "options": ["would have stayed", "stayed", "will stay", "stay"] },
+    { "gp": "gp3", "stem": "\"If that tanker ___ come along, they might have stayed for weeks.\"(与过去相反:if 从句用过去完成)", "stem_cn": "要是那艘油轮没恰好路过,他们可能还得待上几周。", "options": ["had not", "did not", "does not", "would not"] },
+    { "gp": "gp3", "stem": "\"They ___ if they had not brought the spear gun.\"(与过去相反:主句 might have + 过去分词)", "stem_cn": "要是他们没带鱼枪,可能就挨饿了。", "options": ["might have starved", "starved", "would starve", "starve"] },
+    { "gp": "gp4", "stem": "\"I wish I ___ how to fish like those two men.\"(与现在相反的愿望:wish + 过去时)", "stem_cn": "我真希望自己像那两人一样会捕鱼。", "options": ["knew", "know", "will know", "have known"] },
+    { "gp": "gp4", "stem": "\"The castaways wish the island ___ more trees for shade.\"(与现在相反的愿望:wish + 过去时)", "stem_cn": "落难者们真希望岛上多些树好遮阴。", "options": ["had", "has", "will have", "have"] },
+    { "gp": "gp4", "stem": "\"I wish I ___ a boat right now to sail away.\"(与现在相反的愿望:wish + 过去时)", "stem_cn": "我真希望现在有条船可以开走。", "options": ["had", "have", "will have", "would have"] },
+    { "gp": "gp5", "stem": "\"The two men wished they ___ longer on the island.\"(对过去的愿望:wish + 过去完成)", "stem_cn": "那两人真希望当时在岛上多待些时候。", "options": ["had stayed", "stayed", "stay", "have stayed"] },
+    { "gp": "gp5", "stem": "\"If only they ___ more matches before the boat sank!\"(对过去的懊悔:if only + 过去完成)", "stem_cn": "要是船沉之前他们多带些火柴就好了!", "options": ["had brought", "brought", "bring", "have brought"] },
+    { "gp": "gp5", "stem": "\"I wish I ___ so much money on that trip.\"(对过去的懊悔:wish + hadn't done)", "stem_cn": "我真后悔那趟旅行花了那么多钱。", "options": ["hadn't spent", "didn't spend", "don't spend", "haven't spent"] },
+    { "gp": "gp6", "stem": "\"A small island built up by tiny sea creatures is a ___ island.\"(“珊瑚”用哪个词)", "stem_cn": "由微小海洋生物堆积成的小岛是珊瑚岛。", "options": ["coral", "metal", "paper", "glass"] },
+    { "gp": "gp6", "stem": "\"A person left alone on a lonely island is a ___.\"(“漂流者、落难者”用哪个词)", "stem_cn": "被独自留在孤岛上的人是落难者。", "options": ["castaway", "champion", "customer", "passenger"] },
+    { "gp": "gp6", "stem": "\"A big ship that carries oil is a ___.\"(“油轮”用哪个词)", "stem_cn": "运油的大船是油轮。", "options": ["tanker", "bicycle", "wagon", "kite"] },
+    { "gp": "gp6", "stem": "\"To suffer or die from lack of food is to ___.\"(“挨饿”用哪个词)", "stem_cn": "因缺食物而受苦或饿死就是 starve。", "options": ["starve", "relax", "celebrate", "travel"] }
+  ],
+  "stage6": [
+    { "stem": "paradise 的意思是:", "options": ["天堂,乐土", "地狱", "沙漠", "监狱"] },
+    { "stem": "wretched 的意思是:", "options": ["可怜的,艰苦的", "幸福的", "富裕的", "热闹的"] },
+    { "stem": "starve 的意思是:", "options": ["挨饿", "大笑", "睡觉", "唱歌"] },
+    { "stem": "genuinely 的意思是:", "options": ["由衷地,真诚地", "假装地", "偶尔地", "大声地"] },
+    { "stem": "\"opportunity\" 的意思是:", "options": ["机会", "危险", "麻烦", "秘密"] },
+    { "stem": "dinghy 的意思是:", "options": ["救生筏,小艇", "油轮", "火车", "飞机"] }
+  ],
+  "contrast": [
+    { "us": "soda", "uk": "fizzy drink", "note_cn": "汽水;美语 soda,英式 fizzy drink" },
+    { "us": "can", "uk": "tin", "note_cn": "(易拉)罐;美语 can,英式 tin" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" },
+    { "us": "flashlight", "uk": "torch", "note_cn": "手电筒;美语 flashlight,英式 torch" }
+  ],
+  "chunks": [
+    { "us": "quite the opposite", "ipa": "/kwaɪt ði ˈɑːpəzɪt/", "example1": "The other side is quite the opposite.", "example1_cn": "另一面恰恰相反。", "example2": "I thought it was easy, but it was quite the opposite.", "example2_cn": "我以为很容易,结果恰恰相反。" },
+    { "us": "starve to death", "ipa": "/stɑːrv tuː deθ/", "example1": "A castaway might starve to death.", "example1_cn": "落难者可能会饿死。", "example2": "No one should starve to death in a rich country.", "example2_cn": "在富裕国家不该有人饿死。" },
+    { "us": "eat like a king", "ipa": "/iːt laɪk ə kɪŋ/", "example1": "They ate like kings on the island.", "example1_cn": "他们在岛上吃得像国王一样好。", "example2": "At the festival, we ate like kings.", "example2_cn": "节日里我们吃得极好。" },
+    { "us": "turn out to be", "ipa": "/tɜːrn aʊt tuː biː/", "example1": "It did not turn out to be a problem.", "example1_cn": "结果这并没成为问题。", "example2": "The stranger turned out to be a friend.", "example2_cn": "那个陌生人原来是个朋友。" }
+  ],
+  "stage7_cloze": {
+    "context": "Two men wished they ___1___ longer on the desert island. If they ___2___ brought a spear gun, they would have gone hungry. Luckily, they had one, so they ate well. 'I wish every trip ___3___ this much fun,' one of them joked. If only the rescue ship ___4___ come a little later!",
+    "blanks": [
+      { "blank_no": 1, "options": ["stayed", "had stayed", "stay", "have stayed"], "answer_index": 1 },
+      { "blank_no": 2, "options": ["had not", "did not", "have not", "were not"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["was", "were", "is", "will be"], "answer_index": 1 },
+      { "blank_no": 4, "options": ["had", "has", "have", "did"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How do people usually imagine a desert island?", "options": ["As a paradise where fruit falls and no one works", "As a busy city", "As a frozen land", "As a crowded market"] },
+    { "stem": "How did the two men reach the coral island?", "options": ["They rowed a small rubber dinghy", "They swam all the way", "They flew in a plane", "They walked across ice"] },
+    { "stem": "How did the men feel when they were rescued?", "options": ["Genuinely sorry to leave", "Very frightened", "Extremely bored", "Angry at each other"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我真希望自己会像他们那样捕鱼\"(wish + 过去时,与现在相反):", "options": ["I wish I knew how to fish like them.", "I wish I know how to fish like them.", "I wish I will know how to fish like them.", "I wish I have known how to fish like them."] },
+    { "stem": "你想说\"他们真希望当时在岛上多待些时候\"(wish + 过去完成,对过去):", "options": ["They wished they had stayed longer on the island.", "They wished they stayed longer on the island.", "They wished they have stayed longer on the island.", "They wished they would stay longer on the island."] },
+    { "stem": "你想说\"如果他们没带鱼枪,就会挨饿\"(与过去相反的虚拟条件):", "options": ["If they had not brought a spear gun, they would have starved.", "If they did not bring a spear gun, they would starve.", "If they had not brought a spear gun, they will starve.", "If they not brought a spear gun, they would have starved."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "paradise 的意思是:", "options": ["天堂,乐土", "地狱", "沙漠", "监狱"] },
+    { "kind": "vocab", "stem": "starve 的意思是:", "options": ["挨饿", "大笑", "睡觉", "唱歌"] },
+    { "kind": "grammar", "stem": "\"If I ___ you, I would stay on the island longer.\"(与现在相反:if I ___ you)", "stem_cn": "如果我是你,我会在岛上多待些时候。", "options": ["were", "am", "was", "will be"] },
+    { "kind": "grammar", "stem": "\"The men wished they ___ longer on the island.\"(对过去的愿望:wish + 过去完成)", "stem_cn": "那两个人真希望当时在岛上多待些时候。", "options": ["had stayed", "stayed", "stay", "have stayed"] },
+    { "kind": "scenario", "stem": "\"starve to death\" 的意思是:", "options": ["饿死", "笑死", "累死", "冻死"] },
+    { "kind": "scenario", "stem": "\"quite the opposite\" 的意思是:", "options": ["截然相反", "完全一样", "差不多", "无所谓"] },
+    { "kind": "reading", "stem": "Why was fresh water not a problem on the island?", "options": ["They collected rainwater in the dinghy", "There was a deep well", "It rained soda", "They drank seawater"], "passage": true },
+    { "kind": "reading", "stem": "Why did the men eat so well on the island?", "options": ["They had brought a spear gun to catch fish", "They found a restaurant", "They grew crops fast", "They ordered takeout"], "passage": true },
+    { "kind": "listening", "stem": "Where were the two men sailing to when their boat sank?", "options": ["From the Virgin Islands to Miami", "From Miami to New York", "Across the Pacific", "Around the world"], "audio": true },
+    { "kind": "listening", "stem": "How were the men finally rescued?", "options": ["A passing tanker picked them up", "They built a new boat", "They swam to Miami", "A plane landed on the island"], "audio": true }
+  ]
+}

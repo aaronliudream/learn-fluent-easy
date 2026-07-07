@@ -53,6 +53,28 @@ type Mistake = {
   is_complete: boolean;
   last_wrong_at: string;
 };
+type ReviewItem = {
+  no: number | null;
+  stem?: string | null;
+  options?: Record<string, string | null> | null;
+  correct_answer?: string | null;
+  user_answer?: string | null;
+  is_correct?: boolean | null;
+  wrong?: boolean;
+  explanation?: string | null;
+};
+type PassageReview = {
+  source: "reading" | "cloze";
+  missing?: boolean;
+  limited?: boolean;
+  has_full_passage?: boolean;
+  has_user_answers?: boolean;
+  title?: string | null;
+  body?: string | null;
+  total?: number | null;
+  wrong_count?: number;
+  items?: ReviewItem[] | null;
+};
 
 const MODULE_META: Record<string, { label: string; emoji: string; tone: string }> = {
   primary:  { label: "小学",   emoji: "🎒", tone: "from-sky-500 to-cyan-500" },
@@ -121,6 +143,24 @@ export default function TeacherStudent() {
   const [expanded, setExpanded] = useState<string | null>(null);
   const [details, setDetails] = useState<Record<string, Mistake[]>>({});
   const [detailLoading, setDetailLoading] = useState<string | null>(null);
+  // 整篇下钻(第②层):按 `${source}:${passageId}` 缓存
+  const [reviewOpen, setReviewOpen] = useState<string | null>(null);
+  const [reviews, setReviews] = useState<Record<string, PassageReview | null>>({});
+  const [reviewLoading, setReviewLoading] = useState<string | null>(null);
+
+  async function togglePassage(source: "reading" | "cloze", passageId: string) {
+    const key = `${source}:${passageId}`;
+    if (reviewOpen === key) { setReviewOpen(null); return; }
+    setReviewOpen(key);
+    if (reviews[key] === undefined) {
+      setReviewLoading(key);
+      const { data } = await rpc("get_teacher_student_passage_review", {
+        _student_id: studentId, _source: source, _passage_id: passageId,
+      });
+      setReviews((r) => ({ ...r, [key]: (data ?? null) as PassageReview | null }));
+      setReviewLoading(null);
+    }
+  }
 
   useEffect(() => {
     if (!studentId) return;
@@ -359,42 +399,32 @@ export default function TeacherStudent() {
                                 </>
                               ) : (
                                 <>
-                                  {/* 完形/阅读:按篇;内容来自快照,不 join 题库 */}
+                                  {/* 完形/阅读:按篇。点"查看整篇"→ get_teacher_student_passage_review */}
                                   <div className="flex flex-wrap items-center gap-2 text-sm font-semibold">
                                     <span>{mk.title || (mk.kind === "cloze" ? t("完形一篇") : t("阅读一篇"))}</span>
                                     <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[11px] font-bold text-rose-700 dark:bg-rose-500/20 dark:text-rose-300">
                                       <T>错</T> {mk.wrong_count} {mk.kind === "cloze" ? <T>空</T> : <T>题</T>}
                                     </span>
+                                    <button
+                                      type="button"
+                                      onClick={() => togglePassage(mk.kind as "reading" | "cloze", mk.id)}
+                                      className="ml-auto inline-flex items-center gap-1 rounded-md border border-border px-2 py-0.5 text-[11px] font-normal text-primary hover:bg-muted/50">
+                                      📖 <T>查看整篇</T> {reviewOpen === `${mk.kind}:${mk.id}` ? "▴" : "▾"}
+                                    </button>
                                   </div>
-                                  {mk.is_complete && mk.items ? (
-                                    <ul className="mt-2 space-y-2">
-                                      {mk.items.map((it, idx) => (
-                                        <li key={idx} className="rounded-lg bg-muted/40 p-2 text-xs">
-                                          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                                            <span className="font-semibold"><T>第</T> {it.no ?? idx + 1} {mk.kind === "cloze" ? <T>空</T> : <T>题</T>}</span>
-                                            <span className="text-rose-600 dark:text-rose-400">
-                                              <T>你选</T> {it.user_answer ?? "—"}{it.options && it.user_answer && it.options[it.user_answer] ? `. ${it.options[it.user_answer]}` : ""}
-                                            </span>
-                                            {it.correct_answer && (
-                                              <span className="text-emerald-600 dark:text-emerald-400">
-                                                <T>正确</T> {it.correct_answer}{it.options && it.options[it.correct_answer] ? `. ${it.options[it.correct_answer]}` : ""}
-                                              </span>
-                                            )}
-                                          </div>
-                                          {it.explanation && <div className="mt-1 text-muted-foreground">{it.explanation}</div>}
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  ) : (
-                                    <div className="mt-2 text-xs text-muted-foreground">
-                                      {mk.items && mk.items.length > 0 && (
-                                        <div className="flex flex-wrap gap-x-3 gap-y-1">
-                                          {mk.items.map((it, idx) => (
-                                            <span key={idx}><T>第</T> {it.no ?? idx + 1} <T>题</T>:<T>你选</T> {it.user_answer ?? "—"}</span>
-                                          ))}
+                                  {reviewOpen === `${mk.kind}:${mk.id}` && (
+                                    <div className="mt-2">
+                                      {reviewLoading === `${mk.kind}:${mk.id}` ? (
+                                        <div className="flex items-center py-2 text-xs text-muted-foreground">
+                                          <Loader2 className="mr-2 size-4 animate-spin" /> <T>加载中…</T>
                                         </div>
+                                      ) : reviews[`${mk.kind}:${mk.id}`]?.missing ? (
+                                        <div className="text-xs text-muted-foreground"><T>原题已删除,无法显示整篇。</T></div>
+                                      ) : reviews[`${mk.kind}:${mk.id}`] ? (
+                                        <PassageReviewPanel rv={reviews[`${mk.kind}:${mk.id}`]!} />
+                                      ) : (
+                                        <div className="text-xs text-muted-foreground"><T>无法加载整篇。</T></div>
                                       )}
-                                      <div className="mt-1 italic"><T>（无完整题目快照,整篇原文将在"整篇下钻"支持)</T></div>
                                     </div>
                                   )}
                                 </>
@@ -412,5 +442,74 @@ export default function TeacherStudent() {
         )}
       </section>
     </main>
+  );
+}
+
+// 整篇下钻面板:阅读=全文+全部题+作答标红/正确标绿;完形=错空列表(无全文,老实标注)
+function PassageReviewPanel({ rv }: { rv: PassageReview }) {
+  const unit = rv.source === "cloze" ? "空" : "题";
+  const items = rv.items ?? [];
+  return (
+    <div className="space-y-3">
+      {rv.limited && (
+        <div className="rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-[11px] text-amber-700 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-300">
+          ⚠️ <T>完形仅记录做错的空,没有整篇原文与做对的空的快照(待后续改写入补全)。以下为该生做错的空:</T>
+        </div>
+      )}
+      {rv.body && (
+        <div className="max-h-72 overflow-y-auto whitespace-pre-wrap rounded-lg bg-muted/40 p-3 text-sm leading-relaxed">
+          {rv.body}
+        </div>
+      )}
+      <ol className="space-y-2">
+        {items.map((it, idx) => {
+          const opts = it.options
+            ? Object.entries(it.options).filter(([, v]) => v != null).sort(([a], [b]) => a.localeCompare(b))
+            : [];
+          return (
+            <li key={idx} className="rounded-lg border border-border p-2 text-xs">
+              <div className="flex items-center gap-2 font-semibold">
+                <span><T>第</T> {it.no ?? idx + 1} <T>{unit}</T></span>
+                {it.wrong
+                  ? <span className="text-rose-600 dark:text-rose-400">🔴 <T>错</T></span>
+                  : it.is_correct ? <span className="text-emerald-600 dark:text-emerald-400">✅</span> : null}
+              </div>
+              {it.stem && <div className="mt-1">{it.stem}</div>}
+              {opts.length > 0 && (
+                <ul className="mt-1 space-y-0.5">
+                  {opts.map(([L, txt]) => {
+                    const isCorrect = it.correct_answer === L;
+                    const isPicked = it.user_answer === L;
+                    const cls = isCorrect
+                      ? "text-emerald-700 dark:text-emerald-400 font-semibold"
+                      : (isPicked && it.wrong) ? "text-rose-600 dark:text-rose-400 line-through"
+                      : "text-muted-foreground";
+                    return (
+                      <li key={L} className={cls}>
+                        {L}. {txt}
+                        {isCorrect && <span className="ml-1">✓</span>}
+                        {isPicked && !isCorrect && <span className="ml-1"><T>(学生选)</T></span>}
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+              <div className="mt-1 flex flex-wrap gap-x-3 text-[11px]">
+                <span className="text-emerald-600 dark:text-emerald-400"><T>正确</T>:{it.correct_answer ?? "—"}</span>
+                <span className="text-muted-foreground">
+                  <T>学生作答</T>:{it.user_answer ?? <span className="italic"><T>未记录</T></span>}
+                </span>
+              </div>
+              {it.explanation && (
+                <details className="mt-1">
+                  <summary className="cursor-pointer text-primary"><T>解析</T></summary>
+                  <div className="mt-1 text-muted-foreground">{it.explanation}</div>
+                </details>
+              )}
+            </li>
+          );
+        })}
+      </ol>
+    </div>
   );
 }

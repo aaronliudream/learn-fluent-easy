@@ -4,7 +4,11 @@ import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { T, useT } from "@/i18n/T";
 import { Button } from "@/components/ui/button";
-import { Loader2, Clock, ChevronDown, ChevronRight } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { toast } from "sonner";
+import { Loader2, Clock, ChevronDown, ChevronRight, Pencil } from "lucide-react";
 
 /**
  * 教师端 · 学生详情只读页 /teacher/class/:id/student/:studentId
@@ -65,7 +69,28 @@ export default function TeacherStudent() {
   const t = useT();
   const navigate = useNavigate();
   const loc = useLocation();
-  const passedName = (loc.state as { name?: string } | null)?.name || "";
+  const st = (loc.state as { name?: string; displayName?: string; realName?: string; noteName?: string } | null);
+  const originName = st?.displayName ?? st?.name ?? "";   // 账号原名(灰括号用)
+  const realName = st?.realName ?? "";
+
+  const [noteName, setNoteName] = useState(st?.noteName ?? "");
+  const [noteOpen, setNoteOpen] = useState(false);
+  const [noteVal, setNoteVal] = useState(st?.noteName ?? "");
+  const [savingNote, setSavingNote] = useState(false);
+  // 有效名 = 备注 > 代建真名 > 账号原名
+  const effectiveName = noteName || realName || originName || "学生";
+  const hasAlias = !!originName && effectiveName !== originName;
+
+  async function saveNote() {
+    if (!studentId) return;
+    setSavingNote(true);
+    const { error } = await rpc("set_student_note", { _student_id: studentId, _note_name: noteVal.trim() || null });
+    setSavingNote(false);
+    if (error) { toast.error(String((error as { message?: string })?.message ?? "保存失败")); return; }
+    setNoteName(noteVal.trim());
+    toast.success(noteVal.trim() ? t("备注已保存") : t("已清除备注"));
+    setNoteOpen(false);
+  }
 
   const [loading, setLoading] = useState(true);
   const [modules, setModules] = useState<ModuleRow[]>([]);
@@ -148,9 +173,46 @@ export default function TeacherStudent() {
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-4 py-6 md:px-6 md:py-10">
       <PageHeader
-        title={`👤 ${passedName || "学生"}`}
+        title={`👤 ${effectiveName}`}
         subtitle="学习进度只读视图"
         back={`/teacher/class/${classId}`} />
+
+      {/* 备注名条:有效名(原名) + 铅笔改备注 */}
+      <div className="mt-3 flex items-center gap-2 text-sm">
+        <span className="font-semibold">{effectiveName}</span>
+        {hasAlias && <span className="text-xs text-muted-foreground">({originName})</span>}
+        <button
+          type="button"
+          onClick={() => { setNoteVal(noteName); setNoteOpen(true); }}
+          className="inline-flex items-center gap-1 rounded-md border border-border px-2 py-0.5 text-xs text-muted-foreground hover:text-primary hover:border-primary transition"
+          aria-label={t("备注名")}>
+          <Pencil className="size-3.5" /> <T>{noteName ? "改备注" : "加备注"}</T>
+        </button>
+      </div>
+
+      <Dialog open={noteOpen} onOpenChange={setNoteOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>✏️ <T>备注名</T></DialogTitle>
+          </DialogHeader>
+          <div className="space-y-2">
+            <Label htmlFor="ts-note" className="text-xs"><T>只有你看得到，不改学生账号</T></Label>
+            <Input id="ts-note" value={noteVal} maxLength={40}
+              onChange={(e) => setNoteVal(e.target.value)} placeholder={originName || t("如：李明")} autoFocus
+              onKeyDown={(e) => { if (e.key === "Enter" && !savingNote) saveNote(); }} />
+            <p className="text-[11px] text-muted-foreground">
+              <T>账号原名</T> <span className="font-mono">{originName || "—"}</span>
+              <T>。留空则清除备注，回退原名。</T>
+            </p>
+          </div>
+          <DialogFooter>
+            <Button variant="ghost" onClick={() => setNoteOpen(false)} disabled={savingNote}><T>取消</T></Button>
+            <Button onClick={saveNote} disabled={savingNote}>
+              {savingNote ? <Loader2 className="size-4 animate-spin" /> : <T>保存</T>}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       {/* 顶部时长汇总 */}
       <section className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-2xl border border-border bg-card p-4 text-sm">

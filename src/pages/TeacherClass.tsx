@@ -7,7 +7,8 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, Copy, Check, AlertTriangle, RefreshCw, Archive, ArchiveRestore, Trash2 } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Loader2, Copy, Check, AlertTriangle, RefreshCw, Archive, ArchiveRestore, Trash2, Pencil } from "lucide-react";
 import { toast } from "sonner";
 import { ProvisionedStudents } from "@/components/teacher/ProvisionedStudents";
 
@@ -38,6 +39,8 @@ type ClassRow = {
 type Student = {
   member_id: string;
   display_name: string | null;
+  note_name: string | null;      // 本老师对该生的备注名(优先级最高)
+  real_name: string | null;      // 本老师代建该生时填的真名
   role: "student" | "parent";
   joined_at: string;
   weekly_minutes: number;
@@ -278,7 +281,7 @@ export default function TeacherClass() {
                   </tr>
                 </thead>
                 <tbody>
-                  {filteredSorted.map((s) => <StudentRow key={s.member_id} s={s} classId={cls.id} />)}
+                  {filteredSorted.map((s) => <StudentRow key={s.member_id} s={s} classId={cls.id} onChanged={loadAll} />)}
                 </tbody>
               </table>
             )}
@@ -406,8 +409,20 @@ function Mini({ label, v }: { label: string; v: string }) {
   );
 }
 
-function StudentRow({ s, classId }: { s: Student; classId: string }) {
-  const initial = (s.display_name ?? "").charAt(0) || "?";
+// 有效名 = 备注 > 代建真名 > 账号名;origin = 账号 display_name(用于灰括号原名)
+function effName(s: { note_name: string | null; real_name: string | null; display_name: string | null }) {
+  const origin = s.display_name || "";
+  const effective = s.note_name || s.real_name || s.display_name || "未命名";
+  return { effective, origin, hasAlias: !!origin && effective !== origin };
+}
+
+function StudentRow({ s, classId, onChanged }: { s: Student; classId: string; onChanged: () => void }) {
+  const t = useT();
+  const { effective, origin, hasAlias } = effName(s);
+  const [noteOpen, setNoteOpen] = useState(false);
+  const [noteVal, setNoteVal] = useState(s.note_name ?? "");
+  const [saving, setSaving] = useState(false);
+  const initial = effective.charAt(0) || "?";
   const statusEmoji =
     s.weekly_minutes === 0 && s.unresolved_weak_count >= 5 ? "🔴" :
     s.unresolved_weak_count >= 5                            ? "⚠️" :
@@ -416,6 +431,18 @@ function StudentRow({ s, classId }: { s: Student; classId: string }) {
     s.unresolved_weak_count >= 8 ? "text-rose-600 dark:text-rose-400" :
     s.unresolved_weak_count >= 3 ? "text-amber-600 dark:text-amber-400" :
                                    "text-emerald-600 dark:text-emerald-400";
+
+  async function saveNote() {
+    setSaving(true);
+    // 归属校验在 set_student_note 里(该生须在本人某班);留空则删备注回退原名
+    const { error } = await supabase.rpc("set_student_note", { _student_id: s.member_id, _note_name: noteVal.trim() || null });
+    setSaving(false);
+    if (error) { toast.error(error.message); return; }
+    toast.success(noteVal.trim() ? t("备注已保存") : t("已清除备注"));
+    setNoteOpen(false);
+    onChanged();
+  }
+
   return (
     <tr className="border-t border-border hover:bg-muted/30 transition">
       <td className="py-3 px-4">
@@ -425,12 +452,45 @@ function StudentRow({ s, classId }: { s: Student; classId: string }) {
           </span>
           <Link
             to={`/teacher/class/${classId}/student/${s.member_id}`}
-            state={{ name: s.display_name || "" }}
+            state={{ name: effective, displayName: origin, realName: s.real_name ?? "", noteName: s.note_name ?? "" }}
             className="font-semibold text-primary hover:underline">
-            {s.display_name || "未命名"}
+            {effective}
           </Link>
+          {hasAlias && <span className="text-[11px] text-muted-foreground">({origin})</span>}
           <span>{statusEmoji}</span>
+          <button
+            type="button"
+            onClick={() => { setNoteVal(s.note_name ?? ""); setNoteOpen(true); }}
+            className="text-muted-foreground hover:text-primary transition"
+            aria-label={t("备注名")} title={t("备注名")}>
+            <Pencil className="size-3.5" />
+          </button>
         </div>
+
+        {/* 备注名弹窗(portal 渲染,放在名字单元格内不影响表格列) */}
+        <Dialog open={noteOpen} onOpenChange={setNoteOpen}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>✏️ <T>备注名</T></DialogTitle>
+            </DialogHeader>
+            <div className="space-y-2">
+              <Label htmlFor={`note-${s.member_id}`} className="text-xs"><T>只有你看得到，不改学生账号</T></Label>
+              <Input id={`note-${s.member_id}`} value={noteVal} maxLength={40}
+                onChange={(e) => setNoteVal(e.target.value)} placeholder={origin || t("如：李明")} autoFocus
+                onKeyDown={(e) => { if (e.key === "Enter" && !saving) saveNote(); }} />
+              <p className="text-[11px] text-muted-foreground">
+                <T>账号原名</T> <span className="font-mono">{origin || "—"}</span>
+                <T>。留空则清除备注，回退原名。</T>
+              </p>
+            </div>
+            <DialogFooter>
+              <Button variant="ghost" onClick={() => setNoteOpen(false)} disabled={saving}><T>取消</T></Button>
+              <Button onClick={saveNote} disabled={saving}>
+                {saving ? <Loader2 className="size-4 animate-spin" /> : <T>保存</T>}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </td>
       <td className="text-right tabular-nums">{fmtHM(s.weekly_minutes)}</td>
       <td className="text-right tabular-nums">{s.active_days_last_7} / 7</td>

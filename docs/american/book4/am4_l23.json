@@ -1,0 +1,134 @@
+{
+  "id": "am4_l23",
+  "unit_no": 4,
+  "lesson_no": 23,
+  "title_en": "Bird Flight",
+  "title_cn": "鸟的飞行",
+  "grammar_focus": "nor + 倒装(nor does it boast)、enough to do / 形容词 + enough + to do、such + 名词 + that … / so + 形容词 + that …、介词 + 关系代词(the engines with which…)、现在分词作状语(feeding its young…, slipping…)(NCE4 无 KS 页,考点由课文结构自取;IP:源为威廉·比奇·托马斯《乡下人的信条》,内容为‘鸟类两类飞行方式’的自然观察,已用 100% 原创行文复述,无逐句改写、无人物;题材=鸟的飞行·无害;美语化 airplane/curb;第四册第23课)",
+  "scene": "没有哪两种鸟飞得完全一样,花样多得数不清。可粗略地说,所有会飞的鸟都归入两大类。看一只信天翁跟着一条船横越大洋:它可以整整一个钟头与船并速前行,翅膀却看不出扇动一下。船身自己掀起的、以及沿着航线升起的那些气流,足以给这只翅膀巨大的大鸟提供它所需的一切养分与前进之力。信天翁是滑翔者之王——正是那一类会飞的鸟,把流动的空气驾驭为己所用;可一旦空气与它作对,它就只得让步。在相反的那一派里,鸭子至高无上。它更接近人用来“征服”天空的引擎。鸭子,连同鸽子,天生长着强壮的肌肉,几乎占了鸟身重量的一大部分;这些肌肉以势不可挡的力量扇动那对又短又硬的翅膀,以至于这鸟能笔直地冲过迎面的狂风,飞上好几英里,才终于精疲力竭。同类里更卑微的飞行者,比如鹧鸪,同样有强劲的推进力,却累得快得多;有时你能把一只捡起来——它已彻底累瘫,是被海上的一阵大风驱赶着飞了很远。也许最出色的飞行者要数燕子,它把两派的天赋都集于一身,发挥到极致。它似乎从不知疲倦,也无须硬闯;它索性就属于天空。它的本领是双重的——时而滑翔,时而扑翼——可以往返飞上几千英里,回到北方的巢,一路在空中喂养幼鸟,又那么轻盈地掠过天际,以至于我们几乎察觉不到它飞过。",
+  "grammar_card": {
+    "title": "nor + 倒装 / enough to do / such·so … that / 介词+关系代词 / 现在分词作状语",
+    "intro": "①nor + 部分倒装,‘也不…’:nor does it boast。②enough to do;形容词 + enough + to do:strong enough to carry it。③such + 名词 + that …；so + 形容词 + that …。④介词 + 关系代词:the engines with which man conquered the sky。⑤现在分词作状语:crosses the sea, feeding its young on the wing。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["nor + 倒装", "nor + 助动词 + 主语", "nor does it boast of its power"],
+        ["enough to do", "形容词 + enough + to do", "strong enough to carry it"],
+        ["such/so … that", "such + 名词 / so + 形容词 + that", "such force that it bores through gales"],
+        ["介词+关系代词", "介词 + which", "the engines with which man conquered the sky"],
+        ["现在分词状语", "…, doing …", "crosses the sea, feeding its young"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "nor / neither 置于句首时,后面要部分倒装(助动词提到主语前):nor does it boast。", "mark": "nor + 助动词 + 主语" },
+      { "rule": "so 修饰形容词/副词(so powerful that…);such 修饰名词短语(such force that…)。", "mark": "so + 形容词 / such + 名词" },
+      { "rule": "美式拼写:airplane(飞机,英式 aeroplane)、curb(路缘,英式 kerb)。本课已按美语写。", "mark": "airplane / curb" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What are the two main types of bird flight described by the author?",
+    "options": ["Gliding, like the albatross, and wing-beating, like the duck", "Flying and swimming", "Fast and slow flight", "Day flight and night flight"],
+    "answer_index": 0
+  },
+  "passage": "No two kinds of bird fly in quite the same manner; the varieties are past counting. Yet, roughly, all fliers fall into two great classes. Watch an albatross follow a ship across the ocean: for an hour together it may keep pace with the vessel without a single visible beat of its wings. The currents of air that the ship's own sides throw upward, and those that rise along its path, are enough to give the huge bird, with its immense wings, all the sustenance and forward progress it needs. The albatross is the king of the gliders — that class of fliers which harness the moving air to their own purpose, yet must give way whenever the air turns against them. In the opposite school the duck is supreme. It comes far closer to the engines with which man has 'conquered' the sky. A duck, and the pigeons with it, are endowed with powerful muscles that make up a good part of the bird's whole weight; and these muscles ply the short, stiff wings with such irresistible force that the bird can bore for long miles straight through an opposing gale before exhaustion at last overtakes it. Humbler fliers of the same kind, such as the partridge, have the same strong propulsion but tire far sooner; you may sometimes pick one up in utter exhaustion after a hard wind has driven it out over the sea. The finest flier of all, perhaps, is the swallow, which shares the gifts of both schools in the highest measure. It never seems to tire, nor does it need to force its way; it simply belongs to the air. Twofold in its powers — gliding and beating by turns — it may travel thousands of miles to its northern home and back, feeding its young on the wing and slipping so lightly through the sky that we scarcely notice it pass.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "No two kinds of bird fly in quite the same manner; the varieties are past counting. Yet, roughly, all fliers fall into two great classes. Watch an albatross follow a ship across the ocean: for an hour together it may keep pace with the vessel without a single visible beat of its wings.", "text_cn": "没有哪两种鸟飞得完全一样,花样多得数不清。可粗略地说,所有会飞的鸟都归入两大类。看一只信天翁跟着一条船横越大洋:它可以整整一个钟头与船并速前行,翅膀却看不出扇动一下。" },
+    { "seq": 2, "speaker": null, "text_en": "The currents of air that the ship's own sides throw upward, and those that rise along its path, are enough to give the huge bird, with its immense wings, all the sustenance and forward progress it needs. The albatross is the king of the gliders — that class of fliers which harness the moving air to their own purpose, yet must give way whenever the air turns against them.", "text_cn": "船身自己掀起的、以及沿着航线升起的那些气流,足以给这只翅膀巨大的大鸟提供它所需的一切养分与前进之力。信天翁是滑翔者之王——正是那一类会飞的鸟,把流动的空气驾驭为己所用;可一旦空气与它作对,它就只得让步。" },
+    { "seq": 3, "speaker": null, "text_en": "In the opposite school the duck is supreme. It comes far closer to the engines with which man has 'conquered' the sky. A duck, and the pigeons with it, are endowed with powerful muscles that make up a good part of the bird's whole weight; and these muscles ply the short, stiff wings with such irresistible force that the bird can bore for long miles straight through an opposing gale before exhaustion at last overtakes it.", "text_cn": "在相反的那一派里,鸭子至高无上。它更接近人用来“征服”天空的引擎。鸭子,连同鸽子,天生长着强壮的肌肉,几乎占了鸟身重量的一大部分;这些肌肉以势不可挡的力量扇动那对又短又硬的翅膀,以至于这鸟能笔直地冲过迎面的狂风,飞上好几英里,才终于精疲力竭。" },
+    { "seq": 4, "speaker": null, "text_en": "Humbler fliers of the same kind, such as the partridge, have the same strong propulsion but tire far sooner; you may sometimes pick one up in utter exhaustion after a hard wind has driven it out over the sea.", "text_cn": "同类里更卑微的飞行者,比如鹧鸪,同样有强劲的推进力,却累得快得多;有时你能把一只捡起来——它已彻底累瘫,是被海上的一阵大风驱赶着飞了很远。" },
+    { "seq": 5, "speaker": null, "text_en": "The finest flier of all, perhaps, is the swallow, which shares the gifts of both schools in the highest measure. It never seems to tire, nor does it need to force its way; it simply belongs to the air. Twofold in its powers — gliding and beating by turns — it may travel thousands of miles to its northern home and back, feeding its young on the wing and slipping so lightly through the sky that we scarcely notice it pass.", "text_cn": "也许最出色的飞行者要数燕子,它把两派的天赋都集于一身,发挥到极致。它似乎从不知疲倦,也无须硬闯;它索性就属于天空。它的本领是双重的——时而滑翔,时而扑翼——可以往返飞上几千英里,回到北方的巢,一路在空中喂养幼鸟,又那么轻盈地掠过天际,以至于我们几乎察觉不到它飞过。" }
+  ],
+  "words": [
+    { "word": "albatross", "ipa": "/ˈælbətrɔːs/", "pos": "n", "meaning_cn": "信天翁", "example": "watch an albatross follow a ship" },
+    { "word": "glider", "ipa": "/ˈɡlaɪdər/", "pos": "n", "meaning_cn": "滑翔者,滑翔机", "example": "the king of the gliders" },
+    { "word": "sustenance", "ipa": "/ˈsʌstənəns/", "pos": "n", "meaning_cn": "养分,支撑", "example": "all the sustenance it needs" },
+    { "word": "harness", "ipa": "/ˈhɑːrnɪs/", "pos": "v", "meaning_cn": "驾驭,利用", "example": "fliers which harness the moving air" },
+    { "word": "endow", "ipa": "/ɪnˈdaʊ/", "pos": "v", "meaning_cn": "赋予,天生具有", "example": "endowed with powerful muscles" },
+    { "word": "ply", "ipa": "/plaɪ/", "pos": "v", "meaning_cn": "使劲挥动,不停使用", "example": "these muscles ply the short wings" },
+    { "word": "gale", "ipa": "/ɡeɪl/", "pos": "n", "meaning_cn": "大风,狂风", "example": "through an opposing gale" },
+    { "word": "partridge", "ipa": "/ˈpɑːrtrɪdʒ/", "pos": "n", "meaning_cn": "鹧鸪", "example": "such as the partridge" },
+    { "word": "propulsion", "ipa": "/prəˈpʌlʃən/", "pos": "n", "meaning_cn": "推进,推进力", "example": "the same strong propulsion" },
+    { "word": "utter", "ipa": "/ˈʌtər/", "pos": "adj", "meaning_cn": "完全的,彻底的", "example": "in utter exhaustion" },
+    { "word": "twofold", "ipa": "/ˈtuːfoʊld/", "pos": "adj", "meaning_cn": "双重的,两方面的", "example": "twofold in its powers" },
+    { "word": "exhaustion", "ipa": "/ɪɡˈzɔːstʃən/", "pos": "n", "meaning_cn": "精疲力竭", "example": "before exhaustion overtakes it" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "nor + 倒装(nor does it…)" },
+    { "gp": "gp2", "name": "enough to do / 形容词 + enough + to do" },
+    { "gp": "gp3", "name": "such + 名词 + that / so + 形容词 + that" },
+    { "gp": "gp4", "name": "介词 + 关系代词(with which…)" },
+    { "gp": "gp5", "name": "现在分词作状语(feeding/slipping)" },
+    { "gp": "gp6", "name": "词汇辨析(glider/gale/sustenance)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The swallow never tires, ___ does it boast of its power.\"(‘也不…’,引起倒装的否定连词)", "stem_cn": "燕子从不疲倦,也不炫耀自己的力量。", "options": ["nor", "or", "and", "but"] },
+    { "gp": "gp1", "stem": "\"Nor ___ the albatross beat its wings much as it glides.\"(nor 引起倒装,填助动词)", "stem_cn": "信天翁滑翔时也不怎么扇翅膀。", "options": ["does", "is", "has", "done"] },
+    { "gp": "gp1", "stem": "\"The glider cannot fight the wind, nor ___ it wish to.\"(nor + 倒装,填助动词)", "stem_cn": "滑翔者无法对抗风,也不想去对抗。", "options": ["does", "is", "has", "done"] },
+    { "gp": "gp2", "stem": "\"The rising air is ___ to keep the great bird aloft.\"(‘足以做…’= ___ to do,填与 to 呼应的那个词)", "stem_cn": "上升的气流足以让这大鸟保持在空中。", "options": ["enough", "too", "very", "so"] },
+    { "gp": "gp2", "stem": "\"The currents are strong ___ to carry it for hours.\"(strong … to do:‘强得足以…’,填 strong 后那个副词)", "stem_cn": "气流强得足以带它飞好几个钟头。", "options": ["enough", "too", "very", "so"] },
+    { "gp": "gp2", "stem": "\"Its wings are wide ___ to ride the smallest breeze.\"(wide … to do:‘宽得足以…’,填 wide 后那个副词)", "stem_cn": "它的翅膀宽得足以借最微弱的风飞行。", "options": ["enough", "too", "so", "very"] },
+    { "gp": "gp3", "stem": "\"The muscles ply the wings with ___ force that the bird bores through gales.\"(‘如此大的力量以至于…’,后接名词短语 force 时用的那个词)", "stem_cn": "肌肉以如此大的力量扇动翅膀,以至于鸟能冲过狂风。", "options": ["such", "so", "very", "too"] },
+    { "gp": "gp3", "stem": "\"It flies with ___ ease that no wind can stop it.\"(‘如此轻松以至于…’,后接名词 ease 时用的那个词)", "stem_cn": "它飞得如此轻松,没有风能拦住它。", "options": ["such", "so", "very", "too"] },
+    { "gp": "gp3", "stem": "\"The duck's muscles are ___ powerful that they weigh a lot.\"(‘如此…以至于’,修饰形容词 powerful 时用的那个词)", "stem_cn": "鸭子的肌肉如此强壮,以至于分量很重。", "options": ["so", "such", "very", "too"] },
+    { "gp": "gp4", "stem": "\"The engines ___ which man conquered the sky beat the air.\"(介词+关系代词;人‘用’引擎征服天空,填与 conquer 搭配的介词)", "stem_cn": "人用来征服天空的引擎,拍打着空气。", "options": ["with", "of", "at", "in"] },
+    { "gp": "gp4", "stem": "\"The purpose ___ which the bird harnesses the air is flight.\"(介词+关系代词,‘为了…’,填介词)", "stem_cn": "鸟驾驭气流所为的目的,就是飞行。", "options": ["for", "with", "at", "of"] },
+    { "gp": "gp4", "stem": "\"The current ___ which it floats rises along the ship.\"(介词+关系代词;气流是它所漂浮其上的,填与 float 搭配的介词)", "stem_cn": "它所漂浮其上的气流,沿船身升起。", "options": ["on", "for", "at", "of"] },
+    { "gp": "gp5", "stem": "\"The swallow crosses the sea, ___ its young on the wing.\"(现在分词作状语,主动‘喂养’;feed 的 -ing)", "stem_cn": "燕子飞越大海,一边在空中喂养幼鸟。", "options": ["feeding", "fed", "feed", "to feed"] },
+    { "gp": "gp5", "stem": "\"It slips through the sky, ___ so lightly we hardly see it.\"(现在分词作状语,主动‘滑行’;slip 的 -ing)", "stem_cn": "它掠过天空,滑行得那么轻,我们几乎看不见。", "options": ["slipping", "slipped", "slip", "to slip"] },
+    { "gp": "gp5", "stem": "\"The albatross follows the ship, ___ pace for an hour.\"(现在分词作状语,主动‘保持’;keep 的 -ing)", "stem_cn": "信天翁跟着船,保持同速达一小时。", "options": ["keeping", "kept", "keep", "to keep"] },
+    { "gp": "gp6", "stem": "\"A bird or aircraft that flies without power, using air currents, is a ___.\"(“滑翔者/滑翔机”用哪个词)", "stem_cn": "不靠动力、借气流飞行的鸟或飞行器。", "options": ["glider", "engine", "rocket", "balloon"] },
+    { "gp": "gp6", "stem": "\"A very strong wind is a ___.\"(“大风、狂风”用哪个词)", "stem_cn": "非常强劲的风。", "options": ["gale", "breeze", "cloud", "mist"] },
+    { "gp": "gp6", "stem": "\"The food and support needed to stay alive is ___.\"(“养分、支撑”用哪个词)", "stem_cn": "维持生命所需的养分与支撑。", "options": ["sustenance", "distance", "silence", "balance"] }
+  ],
+  "stage6": [
+    { "stem": "albatross 的意思是:", "options": ["信天翁", "鸭子", "燕子", "鹰"] },
+    { "stem": "glider 的意思是:", "options": ["滑翔者,滑翔机", "潜水员", "跑步者", "游泳者"] },
+    { "stem": "harness 的意思是:", "options": ["驾驭,利用", "释放", "浪费", "破坏"] },
+    { "stem": "propulsion 的意思是:", "options": ["推进,推进力", "阻力", "重力", "摩擦"] },
+    { "stem": "gale 的意思是:", "options": ["大风,狂风", "微风", "薄雾", "细雨"] },
+    { "stem": "utter 的意思是:", "options": ["完全的,彻底的", "部分的", "短暂的", "温和的"] }
+  ],
+  "contrast": [
+    { "us": "airplane", "uk": "aeroplane", "note_cn": "飞机;美语 airplane,英式 aeroplane" },
+    { "us": "story", "uk": "storey", "note_cn": "(楼)层;美语 story,英式 storey" },
+    { "us": "curb", "uk": "kerb", "note_cn": "路缘;美语 curb,英式 kerb" },
+    { "us": "pajamas", "uk": "pyjamas", "note_cn": "睡衣;拼写差异,美语 pajamas" }
+  ],
+  "chunks": [
+    { "us": "keep pace with", "ipa": "/kiːp peɪs wɪð/", "example1": "The albatross keeps pace with the ship.", "example1_cn": "信天翁与船并速前行。", "example2": "I can't keep pace with the changes.", "example2_cn": "我跟不上这些变化。" },
+    { "us": "give way", "ipa": "/ɡɪv weɪ/", "example1": "The glider must give way to the wind.", "example1_cn": "滑翔者只得向风让步。", "example2": "The old bridge gave way.", "example2_cn": "那座旧桥塌了。" },
+    { "us": "bore through", "ipa": "/bɔːr θruː/", "example1": "The duck bores through the gale.", "example1_cn": "鸭子冲过狂风。", "example2": "The drill bores through rock.", "example2_cn": "钻头钻透岩石。" },
+    { "us": "on the wing", "ipa": "/ɑːn ðə wɪŋ/", "example1": "It feeds its young on the wing.", "example1_cn": "它在飞行中喂养幼鸟。", "example2": "The birds were on the wing at dawn.", "example2_cn": "拂晓时鸟儿都在飞。" }
+  ],
+  "stage7_cloze": {
+    "context": "All fliers fall into two classes. The albatross is the king of the ___1___, harnessing the air. The duck is endowed ___2___ powerful muscles that ply its wings with ___3___ force that it bores through a gale. The swallow shares the gifts of both, ___4___ its young on the wing.",
+    "blanks": [
+      { "blank_no": 1, "options": ["gliders", "glider", "gliding", "glide"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["with", "of", "at", "in"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["such", "so", "very", "too"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["feeding", "fed", "feed", "to feed"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What are the two main types of bird flight described?", "options": ["Gliding, like the albatross, and wing-beating, like the duck", "Flying and swimming", "Fast and slow", "High and low"] },
+    { "stem": "How does the albatross stay in the air for so long?", "options": ["It harnesses the currents of air with its immense wings", "It flaps its wings constantly", "It rests on the ship", "It rides on other birds"] },
+    { "stem": "Why do humbler fliers like the partridge tire so quickly?", "options": ["They have strong propulsion but little endurance", "They have no muscles", "They cannot glide at all", "They never leave the ground"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"燕子从不疲倦,也不炫耀自己的力量\"(nor 倒装):", "options": ["The swallow never tires, nor does it boast of its power.", "The swallow never tires, nor it does boast of its power.", "The swallow never tires, nor does it boasts of its power.", "The swallow never tires, or does it boast of its power."] },
+    { "stem": "你想说\"肌肉以如此大的力量扇动翅膀,以至于鸟能冲过狂风\"(such … that):", "options": ["The muscles ply the wings with such force that the bird bores through gales.", "The muscles ply the wings with so force that the bird bores through gales.", "The muscles ply the wings with such force as the bird bores through gales.", "The muscles ply the wings such with force that the bird bores through gales."] },
+    { "stem": "你想说\"燕子飞越大海,一边在空中喂养幼鸟\"(现在分词作状语):", "options": ["The swallow crosses the sea, feeding its young on the wing.", "The swallow crosses the sea, fed its young on the wing.", "The swallow crosses the sea, feed its young on the wing.", "The swallow crosses the sea, to feeding its young on the wing."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "albatross 的意思是:", "options": ["信天翁", "鸭子", "燕子", "鹰"] },
+    { "kind": "vocab", "stem": "gale 的意思是:", "options": ["大风,狂风", "微风", "薄雾", "细雨"] },
+    { "kind": "grammar", "stem": "\"The swallow never tires, ___ does it boast of its power.\"(‘也不…’,引起倒装的否定连词)", "stem_cn": "燕子从不疲倦,也不炫耀力量。", "options": ["nor", "or", "and", "but"] },
+    { "kind": "grammar", "stem": "\"The muscles work with ___ force that the bird bores through gales.\"(‘如此大的力量’,后接名词短语)", "stem_cn": "肌肉以如此大的力量做工,鸟能冲过狂风。", "options": ["such", "so", "very", "too"] },
+    { "kind": "scenario", "stem": "\"keep pace with\" 的意思是:", "options": ["与…并驾齐驱、跟上", "停下", "领先", "落后"] },
+    { "kind": "scenario", "stem": "\"on the wing\" 的意思是:", "options": ["在飞行中", "在地上", "在水里", "在树上"] },
+    { "kind": "reading", "stem": "According to the passage, what is the albatross the king of?", "options": ["The gliders, that harness the air to their purpose", "The wing-beaters", "The swimmers", "The divers"], "passage": true },
+    { "kind": "reading", "stem": "How does the duck differ from the albatross?", "options": ["It beats its wings with powerful muscles instead of gliding", "It cannot fly at all", "It is much smaller", "It never crosses water"], "passage": true },
+    { "kind": "listening", "stem": "Which bird shares the gifts of both flying schools?", "options": ["The swallow", "The partridge", "The pigeon", "The albatross"], "audio": true },
+    { "kind": "listening", "stem": "What powers the duck's flight?", "options": ["Powerful muscles that ply its short wings", "Air currents alone", "A following wind only", "Its light weight"], "audio": true }
+  ]
+}

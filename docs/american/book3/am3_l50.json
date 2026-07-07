@@ -1,0 +1,133 @@
+{
+  "id": "am3_l50",
+  "unit_no": 10,
+  "lesson_no": 50,
+  "title_en": "New Year Resolutions",
+  "title_cn": "新年的决心",
+  "grammar_focus": "不定式(resolve/manage to do;to do 作同位语)、强调句 It was … that …、形容词/现在分词短语作状语(Aware of …, Resisting …, Feeling …)、短语动词 carry out / slip back into / fend off / doze off / apply oneself to、so that(结果)/ if 条件句(原创承载 NCE3 第三册 L50 考点·无需换情节:新年决心题材幽默故事——立志晨练加读书却双双失败;把原文吸烟例子淡化为“根深蒂固的懒人”,美式化 living room/couch/favorite/good-naturedly)",
+  "scene": "新年是下决心的时候,至少在大多数人心里,都能编排出一份令人生畏的“应做什么”和“不应做什么”的单子。同样的老一套年复一年、单调而有规律地重现。我们决心每天早晨早点起、少吃点、多花时间陪孩子、做许许多多家务、对不喜欢的人和气些、开车小心、每天遛狗。以往的经验告诉我们,有些成就是达不到的。如果我们仍是根深蒂固的懒人,那只是因为我们太多次尝到失败带来的挫败感。我们大多数人在自我完善上失败,是因为计划太宏大,又总抽不出时间去实施。我们还犯一个根本性的错误:把决心向所有人宣布,这样一旦滑回老习惯,在别人眼里就更显得可笑。意识到这些陷阱,今年我决定把决心秘而不宣。我只给自己定下两个不高的目标:每天早晨做操,晚上多读点书。新年除夕的一场通宵晚会,给了我一个正当理由,让我在新年第一天没履行这两项决心;可到了第二天,我便全力以赴地投入其中。每天的操只做十一分钟,我打算趁大家还没起床时一早做完。要把自己从被窝里拽出来、比平时早起十一分钟,所需的自制力可不小。尽管如此,我还是设法连着两天悄悄溜进客厅,没被人发现。在地毯上蹦跳、把身体扭成各种别扭的姿势之后,我筋疲力尽地坐到早餐桌旁。正是这一点暴露了我。第二天早晨,全家人成群结队地进来看我表演。这实在让人不安,但我和和气气地挡回了家人的取笑和奚落,大家很快也就习以为常了。然而,我的热情渐渐减退。花在做操上的时间一点点缩短,十一分钟一点一点地掉到了零。到一月十日,我又回到了起点。我辩解说:如果早上少花时间把自己累垮,回家后就能头脑清醒地读书。为抵制电视的催眠效果,我一连几个晚上坐在自己房间里,两眼盯着书。可有一晚,我觉得又冷又孤单,便下楼坐到电视机前,假装看书。这成了我的祸根,因为我很快又滑回对着屏幕打瞌睡的老习惯。我至今还没放弃多读书的决心。事实上,我刚买了一本书,叫《怎样一分钟读一千字》。也许它能解决我的问题——可我就是一直没抽出时间来读!",
+  "grammar_card": {
+    "title": "不定式 / 强调句 It was…that / 形容词·分词短语作状语 / 短语动词 / so that·if 条件",
+    "intro": "①不定式:resolve/attempt/manage to do(决心/设法做);两个目标并列时都用 to do(to do … and to read …)。②强调句:It is/was + 被强调部分 + that/who + 其余:It was this that betrayed me。③形容词或现在分词短语作状语:Aware of these pitfalls, …;Resisting the effect of TV, …;Feeling cold, …。④短语动词:carry out(执行)、slip back into(滑回)、fend off(挡回)、doze off(打瞌睡)、apply oneself to(全力以赴)。⑤so that(结果“以至于”)、if 条件句。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["resolve/manage to do", "决心/设法做", "We resolve to get up earlier"],
+        ["It was … that …", "强调句", "It was this that betrayed me"],
+        ["形容词/分词短语作状语", "…着/…后", "Aware of these pitfalls, I …"],
+        ["carry out / doze off", "执行 / 打瞌睡", "never find time to carry them out"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "强调句 It is/was + 被强调部分 + that …;强调的不是人时用 that,强调人可用 who;去掉 It … that 句子仍完整。", "mark": "It was this that …" },
+      { "rule": "形容词/分词短语作状语时,其逻辑主语要与主句主语一致(Aware of …, I …;Feeling cold, I …)。", "mark": "Aware of …, I …" },
+      { "rule": "美式:living room(英式 sitting room)、couch(英式 sofa)、favorite(英式 favourite)、good-naturedly(英式 good-humouredly)。本课已按美语写。", "mark": "living room / couch" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What marked the end of the writer's New Year resolutions?",
+    "options": ["He dozed off in front of the TV while pretending to read", "He finished all his goals", "He got a new job", "His family joined him"],
+    "answer_index": 0
+  },
+  "passage": "The New Year is a time for resolutions. Mentally, at least, most of us could compile formidable lists of dos and don'ts. The same old favorites recur year in, year out with monotonous regularity. We resolve to get up earlier each morning, eat less, find more time to play with the kids, do a thousand and one jobs around the house, be nice to people we don't like, drive carefully, and take the dog for a walk every day. Past experience has taught us that certain accomplishments are beyond attainment. If we remain inveterate couch potatoes, it is only because we have so often felt the frustration that comes from failure. Most of us fail in our efforts at self-improvement because our schemes are too ambitious and we never find time to carry them out. We also make the basic mistake of announcing our resolutions to everybody, so that we look even more foolish when we slip back into our bad old ways. Aware of these pitfalls, this year I decided to keep my resolutions to myself. I limited myself to two modest ambitions: to do physical exercises every morning and to read more in the evenings. A late-night party on New Year's Eve gave me a good excuse for not carrying out either of my new resolutions on the first day of the year, but on the second, I applied myself assiduously to the task. The daily exercises lasted only eleven minutes, and I planned to do them early in the morning before anyone got up. The self-discipline needed to drag myself out of bed eleven minutes earlier than usual was considerable. Nevertheless, I managed to creep down into the living room for two days before anyone found me out. After jumping around on the carpet and twisting my body into uncomfortable positions, I sat down at the breakfast table exhausted. It was this that betrayed me. The next morning the whole family trooped in to watch the performance. That was really unsettling, but I fended off the taunts and jibes of the family good-naturedly, and soon everybody got used to the idea. However, my enthusiasm waned. The time I spent exercising gradually diminished. Little by little the eleven minutes fell to zero. By January tenth, I was back where I had started. I argued that if I spent less time wearing myself out with exercise in the morning, I would keep my mind fresh for reading when I got home from work. Resisting the hypnotizing effect of television, I sat in my room for a few evenings with my eyes glued to a book. One night, however, feeling cold and lonely, I went downstairs and sat in front of the television, pretending to read. That proved to be my undoing, for I soon slipped back into my old bad habit of dozing off in front of the screen. I still haven't given up my resolution to read more. In fact, I have just bought a book called How to Read a Thousand Words a Minute. Perhaps it will solve my problem — but I just haven't had time to read it!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "The New Year is a time for resolutions. Mentally, at least, most of us could compile formidable lists of dos and don'ts. The same old favorites recur year in, year out with monotonous regularity. We resolve to get up earlier each morning, eat less, find more time to play with the kids, do a thousand and one jobs around the house, be nice to people we don't like, drive carefully, and take the dog for a walk every day.", "text_cn": "新年是下决心的时候,至少在大多数人心里,都能编排出一份令人生畏的“应做什么”和“不应做什么”的单子。同样的老一套年复一年、单调而有规律地重现。我们决心每天早晨早点起、少吃点、多花时间陪孩子、做许许多多家务、对不喜欢的人和气些、开车小心、每天遛狗。" },
+    { "seq": 2, "speaker": null, "text_en": "Past experience has taught us that certain accomplishments are beyond attainment. If we remain inveterate couch potatoes, it is only because we have so often felt the frustration that comes from failure. Most of us fail in our efforts at self-improvement because our schemes are too ambitious and we never find time to carry them out. We also make the basic mistake of announcing our resolutions to everybody, so that we look even more foolish when we slip back into our bad old ways.", "text_cn": "以往的经验告诉我们,有些成就是达不到的。如果我们仍是根深蒂固的懒人,那只是因为我们太多次尝到失败带来的挫败感。我们大多数人在自我完善上失败,是因为计划太宏大,又总抽不出时间去实施。我们还犯一个根本性的错误:把决心向所有人宣布,这样一旦滑回老习惯,在别人眼里就更显得可笑。" },
+    { "seq": 3, "speaker": null, "text_en": "Aware of these pitfalls, this year I decided to keep my resolutions to myself. I limited myself to two modest ambitions: to do physical exercises every morning and to read more in the evenings. A late-night party on New Year's Eve gave me a good excuse for not carrying out either of my new resolutions on the first day of the year, but on the second, I applied myself assiduously to the task.", "text_cn": "意识到这些陷阱,今年我决定把决心秘而不宣。我只给自己定下两个不高的目标:每天早晨做操,晚上多读点书。新年除夕的一场通宵晚会,给了我一个正当理由,让我在新年第一天没履行这两项决心;可到了第二天,我便全力以赴地投入其中。" },
+    { "seq": 4, "speaker": null, "text_en": "The daily exercises lasted only eleven minutes, and I planned to do them early in the morning before anyone got up. The self-discipline needed to drag myself out of bed eleven minutes earlier than usual was considerable. Nevertheless, I managed to creep down into the living room for two days before anyone found me out. After jumping around on the carpet and twisting my body into uncomfortable positions, I sat down at the breakfast table exhausted. It was this that betrayed me.", "text_cn": "每天的操只做十一分钟,我打算趁大家还没起床时一早做完。要把自己从被窝里拽出来、比平时早起十一分钟,所需的自制力可不小。尽管如此,我还是设法连着两天悄悄溜进客厅,没被人发现。在地毯上蹦跳、把身体扭成各种别扭的姿势之后,我筋疲力尽地坐到早餐桌旁。正是这一点暴露了我。" },
+    { "seq": 5, "speaker": null, "text_en": "The next morning the whole family trooped in to watch the performance. That was really unsettling, but I fended off the taunts and jibes of the family good-naturedly, and soon everybody got used to the idea. However, my enthusiasm waned, and the eleven minutes fell to zero. Resisting the hypnotizing effect of television, I sat in my room for a few evenings with my eyes glued to a book. One night, however, feeling cold and lonely, I went downstairs and sat in front of the television, pretending to read. That proved to be my undoing, for I soon slipped back into my old bad habit of dozing off in front of the screen. In fact, I have just bought a book called How to Read a Thousand Words a Minute — but I just haven't had time to read it!", "text_cn": "第二天早晨,全家人成群结队地进来看我表演。这实在让人不安,但我和和气气地挡回了家人的取笑和奚落,大家很快也就习以为常了。然而,我的热情渐渐减退,十一分钟掉到了零。为抵制电视的催眠效果,我一连几个晚上坐在自己房间里,两眼盯着书。可有一晚,我觉得又冷又孤单,便下楼坐到电视机前,假装看书。这成了我的祸根,因为我很快又滑回对着屏幕打瞌睡的老习惯。事实上,我刚买了一本书,叫《怎样一分钟读一千字》——可我就是一直没抽出时间来读!" }
+  ],
+  "words": [
+    { "word": "resolution", "ipa": "/ˌrezəˈluːʃən/", "pos": "n", "meaning_cn": "决心", "example": "the New Year is a time for resolutions" },
+    { "word": "formidable", "ipa": "/ˈfɔːrmɪdəbəl/", "pos": "adj", "meaning_cn": "令人畏惧的", "example": "formidable lists of dos and don'ts" },
+    { "word": "recur", "ipa": "/rɪˈkɜːr/", "pos": "v", "meaning_cn": "再发生,又出现", "example": "the same favorites recur year in, year out" },
+    { "word": "inveterate", "ipa": "/ɪnˈvetərət/", "pos": "adj", "meaning_cn": "根深蒂固的", "example": "inveterate couch potatoes" },
+    { "word": "ambitious", "ipa": "/æmˈbɪʃəs/", "pos": "adj", "meaning_cn": "雄心勃勃的", "example": "our schemes are too ambitious" },
+    { "word": "modest", "ipa": "/ˈmɑːdɪst/", "pos": "adj", "meaning_cn": "要求不过分的,适度的", "example": "two modest ambitions" },
+    { "word": "assiduously", "ipa": "/əˈsɪdʒuəsli/", "pos": "adv", "meaning_cn": "刻苦地", "example": "I applied myself assiduously" },
+    { "word": "betray", "ipa": "/bɪˈtreɪ/", "pos": "v", "meaning_cn": "暴露,显露;背叛", "example": "it was this that betrayed me" },
+    { "word": "unsettle", "ipa": "/ʌnˈsetl/", "pos": "v", "meaning_cn": "使不安", "example": "that was really unsettling" },
+    { "word": "wane", "ipa": "/weɪn/", "pos": "v", "meaning_cn": "逐渐变小,变弱", "example": "my enthusiasm waned" },
+    { "word": "diminish", "ipa": "/dɪˈmɪnɪʃ/", "pos": "v", "meaning_cn": "减少,缩小", "example": "the time gradually diminished" },
+    { "word": "undoing", "ipa": "/ʌnˈduːɪŋ/", "pos": "n", "meaning_cn": "祸根,毁灭的原因", "example": "that proved to be my undoing" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "不定式(resolve/manage to do;to do 作同位语)" },
+    { "gp": "gp2", "name": "强调句 It was … that …" },
+    { "gp": "gp3", "name": "短语动词 carry out / slip back into / fend off / doze off" },
+    { "gp": "gp4", "name": "形容词/现在分词短语作状语(Aware of …, Resisting …)" },
+    { "gp": "gp5", "name": "so that(结果)/ if 条件句" },
+    { "gp": "gp6", "name": "词汇辨析(inveterate/wane/formidable)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"We resolve ___ up earlier every morning.\"(resolve ___ do:决心做,填不定式)", "stem_cn": "我们决心每天早起。", "options": ["to get", "getting", "get", "got"] },
+    { "gp": "gp1", "stem": "\"I limited myself to two ambitions: ___ exercises and to read more.\"(不定式作同位语,与后面并列的那个不定式一致)", "stem_cn": "我给自己定下两个目标:做操和多读书。", "options": ["to do", "doing", "do", "did"] },
+    { "gp": "gp1", "stem": "\"I managed ___ down into the living room quietly.\"(manage ___ do:设法做,填不定式)", "stem_cn": "我设法悄悄溜进客厅。", "options": ["to creep", "creeping", "creep", "crept"] },
+    { "gp": "gp2", "stem": "\"It was this ___ betrayed me.\"(强调句 It was … ___ …,填连接词)", "stem_cn": "正是这一点暴露了我。", "options": ["that", "what", "which it", "and"] },
+    { "gp": "gp2", "stem": "\"It was on January second ___ I began my resolutions.\"(强调时间,It was … ___ …)", "stem_cn": "正是在一月二日,我开始履行决心。", "options": ["that", "when", "which", "what"] },
+    { "gp": "gp2", "stem": "\"___ was my exhaustion that gave me away.\"(强调句句首,填形式词)", "stem_cn": "正是我的疲惫泄露了我。", "options": ["It", "This", "That", "There"] },
+    { "gp": "gp3", "stem": "\"Our schemes are too big, so we never carry them ___.\"(carry ___:实行、执行,填副词)", "stem_cn": "我们的计划太大,总也执行不了。", "options": ["out", "off", "on", "up"] },
+    { "gp": "gp3", "stem": "\"I soon slipped back ___ my old habit of dozing off.\"(slip back ___:滑回到,填介词)", "stem_cn": "我很快又滑回打瞌睡的老习惯。", "options": ["into", "on", "at", "for"] },
+    { "gp": "gp3", "stem": "\"I fended ___ the taunts of my family good-naturedly.\"(fend ___:挡回、避开,填副词)", "stem_cn": "我和气地挡回了家人的取笑。", "options": ["off", "in", "up", "over"] },
+    { "gp": "gp4", "stem": "\"___ of these pitfalls, I kept my resolutions to myself.\"(形容词短语作状语:意识到…)", "stem_cn": "意识到这些陷阱,我把决心秘而不宣。", "options": ["Aware", "Awaring", "Awared", "To aware"] },
+    { "gp": "gp4", "stem": "\"___ the hypnotizing effect of TV, I sat with a book.\"(现在分词短语作状语:抵制…)", "stem_cn": "抵制电视的催眠效果,我捧着书坐着。", "options": ["Resisting", "Resisted", "Resist", "To resist"] },
+    { "gp": "gp4", "stem": "\"___ cold and lonely, I went downstairs.\"(现在分词短语作状语:感到…)", "stem_cn": "感到又冷又孤单,我下了楼。", "options": ["Feeling", "Felt", "Feel", "To feel"] },
+    { "gp": "gp5", "stem": "\"We announce our plans ___ that we look foolish when we fail.\"(结果“以至于”,与 that 搭配的那个词)", "stem_cn": "我们宣布计划,结果失败时更显得可笑。", "options": ["so", "such", "in", "by"] },
+    { "gp": "gp5", "stem": "\"___ I spent less time on exercise, I would read more.\"(条件:如果我…就…)", "stem_cn": "如果我少花时间锻炼,就能多读书。", "options": ["If", "Unless", "So", "Though"] },
+    { "gp": "gp5", "stem": "\"If I had more time, I ___ read the whole book.\"(条件句主句,填情态动词)", "stem_cn": "要是我有更多时间,就会把整本书读完。", "options": ["would", "will", "did", "am"] },
+    { "gp": "gp6", "stem": "\"A habit that is deep-rooted and hard to change is ___.\"(“根深蒂固的”用哪个词)", "stem_cn": "根深蒂固、难以改掉的习惯。", "options": ["inveterate", "brief", "sudden", "mild"] },
+    { "gp": "gp6", "stem": "\"When enthusiasm slowly grows weaker, it ___.\"(“逐渐变小、变弱”用哪个词)", "stem_cn": "热情渐渐减弱。", "options": ["wanes", "grows", "explodes", "freezes"] },
+    { "gp": "gp6", "stem": "\"Something that fills you with fear or awe is ___.\"(“令人生畏的”用哪个词)", "stem_cn": "令人生畏、令人敬畏的。", "options": ["formidable", "cozy", "tiny", "cheap"] }
+  ],
+  "stage6": [
+    { "stem": "resolution 的意思是:", "options": ["决心", "怀疑", "借口", "习惯"] },
+    { "stem": "formidable 的意思是:", "options": ["令人畏惧的", "微小的", "亲切的", "常见的"] },
+    { "stem": "inveterate 的意思是:", "options": ["根深蒂固的", "短暂的", "崭新的", "偶然的"] },
+    { "stem": "betray 的意思是:", "options": ["暴露,显露;背叛", "保护", "隐藏", "赞美"] },
+    { "stem": "wane 的意思是:", "options": ["逐渐变小,变弱", "增强", "爆发", "凝固"] },
+    { "stem": "undoing 的意思是:", "options": ["祸根,毁灭的原因", "成功", "开端", "礼物"] }
+  ],
+  "contrast": [
+    { "us": "living room", "uk": "sitting room", "note_cn": "客厅;美语 living room,英式 sitting room" },
+    { "us": "couch", "uk": "sofa", "note_cn": "沙发;美语 couch,英式 sofa(couch potato=懒人)" },
+    { "us": "favorite", "uk": "favourite", "note_cn": "最喜欢的;拼写差异,美语 favorite" },
+    { "us": "good-naturedly", "uk": "good-humouredly", "note_cn": "和气地;美语 good-naturedly,英式 good-humouredly" }
+  ],
+  "chunks": [
+    { "us": "carry out", "ipa": "/ˈkæri aʊt/", "example1": "Our schemes are too big to carry out.", "example1_cn": "我们的计划太大,难以执行。", "example2": "They carried out the plan on time.", "example2_cn": "他们按时执行了计划。" },
+    { "us": "slip back into", "ipa": "/slɪp bæk ˈɪntə/", "example1": "I slipped back into my old habits.", "example1_cn": "我又滑回了老习惯。", "example2": "He slipped back into his bad ways.", "example2_cn": "他又故态复萌。" },
+    { "us": "doze off", "ipa": "/doʊz ɔːf/", "example1": "I kept dozing off in front of the screen.", "example1_cn": "我对着屏幕直打瞌睡。", "example2": "She dozed off during the movie.", "example2_cn": "她看电影时睡着了。" },
+    { "us": "apply oneself to", "ipa": "/əˈplaɪ wʌnˈself tə/", "example1": "On the second day, I applied myself to the task.", "example1_cn": "第二天,我全力以赴地投入任务。", "example2": "He applied himself to his studies.", "example2_cn": "他专心致志地学习。" }
+  ],
+  "stage7_cloze": {
+    "context": "The New Year is a time for resolutions. Most of us fail at self-improvement because our schemes are too ambitious and we never find time ___1___ them out. This year I decided to keep my resolutions to myself and ___2___ myself to two modest goals. But after a few days my enthusiasm waned. It was my exhaustion ___3___ betrayed me. Soon I slipped back ___4___ my old habits.",
+    "blanks": [
+      { "blank_no": 1, "options": ["to carry", "carrying", "carry", "carried"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["limited", "limiting", "limit", "to limit"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["that", "what", "which", "and"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["into", "on", "at", "for"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What marked the end of the writer's New Year resolutions?", "options": ["He dozed off in front of the television while pretending to read", "He caught a bad cold", "He lost his book", "His family stopped him"] },
+    { "stem": "Why did the writer decide to keep his resolutions to himself?", "options": ["So he wouldn't look foolish if he slipped back into old ways", "Because they were embarrassing", "Because no one cared", "To surprise his family"] },
+    { "stem": "How long did the writer's morning exercises last each day?", "options": ["Only eleven minutes", "A full hour", "Thirty minutes", "All morning"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"正是这一点暴露了我\"(强调句 It was … that …):", "options": ["It was this that betrayed me.", "It was this what betrayed me.", "It was this betrayed me that.", "This was it that betrayed me."] },
+    { "stem": "你想说\"我很快又滑回打瞌睡的老习惯\"(slip back into):", "options": ["I soon slipped back into my old habit of dozing off.", "I soon slipped back to into my old habit of dozing off.", "I soon slipped back my old habit into of dozing off.", "I soon slipped back on my old habit of dozing off."] },
+    { "stem": "你想说\"意识到这些陷阱,我把决心秘而不宣\"(形容词短语作状语):", "options": ["Aware of these pitfalls, I kept my resolutions to myself.", "Awaring of these pitfalls, I kept my resolutions to myself.", "Aware of these pitfalls, I kept my resolutions me.", "To aware of these pitfalls, I kept my resolutions to myself."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "betray 的意思是:", "options": ["暴露,显露;背叛", "保护", "隐藏", "赞美"] },
+    { "kind": "vocab", "stem": "wane 的意思是:", "options": ["逐渐变小,变弱", "增强", "爆发", "凝固"] },
+    { "kind": "grammar", "stem": "\"It was this ___ betrayed me.\"(强调句 It was … ___ …,填连接词)", "stem_cn": "正是这一点暴露了我。", "options": ["that", "what", "which it", "and"] },
+    { "kind": "grammar", "stem": "\"___ of these pitfalls, I kept my resolutions to myself.\"(形容词短语作状语:意识到…)", "stem_cn": "意识到这些陷阱,我把决心秘而不宣。", "options": ["Aware", "Awaring", "Awared", "To aware"] },
+    { "kind": "scenario", "stem": "\"carry out\" 的意思是:", "options": ["实行、执行", "拿出去", "继续", "举起"] },
+    { "kind": "scenario", "stem": "\"doze off\" 的意思是:", "options": ["打瞌睡、睡着", "醒来", "起身", "忙碌"] },
+    { "kind": "reading", "stem": "Why do most people fail at their New Year resolutions, according to the writer?", "options": ["Their schemes are too ambitious and they never find time to carry them out", "They simply forget them", "They are lazy by nature", "They set no goals at all"], "passage": true },
+    { "kind": "reading", "stem": "What were the writer's two modest resolutions?", "options": ["To do morning exercises and to read more in the evenings", "To eat less and sleep more", "To exercise and to save money", "To walk the dog and cook"], "passage": true },
+    { "kind": "listening", "stem": "What finally happened to the writer's morning exercises?", "options": ["The eleven minutes gradually fell to zero", "They grew to a full hour", "They became a family event", "He did them at night instead"], "audio": true },
+    { "kind": "listening", "stem": "What book did the writer just buy?", "options": ["How to Read a Thousand Words a Minute", "A cookbook", "A fitness guide", "A mystery novel"], "audio": true }
+  ]
+}

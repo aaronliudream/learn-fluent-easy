@@ -1,0 +1,134 @@
+{
+  "id": "am4_l41",
+  "unit_no": 7,
+  "lesson_no": 41,
+  "title_en": "Training Elephants",
+  "title_cn": "训练大象",
+  "grammar_focus": "consist of + 动名词(由…构成/在于)、be capable of + 名词/动名词(能够…)、be deprived of(被剥夺…)、every time 引导时间从句(每当/一…就)、it is + 形容词 + for sb to do(for sb 作不定式逻辑主语)(NCE4 该课源无独立 KS 页,考点由课文结构自取;IP:源为 Richard Carrington《Elephants》一段讲驯象两法与人象纽带的说明文,系版权作品——已用 100% 原创行文复述其要点、无引用原句;⚠️净化:原文强硬训练法含‘鞭打/带金属尖头的刺棒/象鼻磨破’等强制细节,已弱化为‘迫使/坚定而耐心的手’并聚焦温和法与情感纽带;题材=动物训练·净化后无害;美语化 behavior/favor;第四册第41课)",
+  "scene": "训练大象主要有两种方法,我们不妨称之为强硬法与温和法。强硬法只不过是让动物去干活,一小时又一小时地迫使它做人所期望的事。且不论其中的残忍,这也是个愚蠢的办法,因为它造就的是一头满怀怨恨的动物,日后很可能变得危险。温和法在早期需要多得多的耐心,却能造就一头快活、脾气好、愿意提供多年忠诚服务的大象。训练大象的首要之务,是给这头动物指派单独一名驯象人,由他全权负责。大象喜欢只有一个主人,就像狗一样,而且它们能表现出相当程度的个人情感。甚至有这样的故事:一些半驯的幼象,在因某种不可避免的变故被夺走自己的驯养员后,竟拒绝一切食物、忧郁而死。这类极端的说法多半得打个折扣看待,但它们确实点明了一条总的原则:大象与驯象人之间的纽带,是成功的关键。捕捉一头大象来训练,最划算的年龄是十五到二十岁之间,因为那时它差不多已能承担重活,可以立刻开始挣自己的口粮。但这个年龄的动物不易变得顺从,早期必须用一只坚定而耐心的手。仍被绳拴在树上的被捕大象,每当有人靠近,就又蹦又叫,头几天多半会因恐惧而拒食一切。有时会在近旁拴一头驯服的大象,给这头野的壮胆;多数情况下,被捕的大象会渐渐安静下来,开始接受喂食。当同时训练好几头大象时,惯例是把新来的一头安置在两头已训练得相当到位、更为安静的大象的栏位之间。随后就让它完全不受打扰,给足食物和水,好让它吸收新家的气氛,并看到同伴身上没有发生任何令它惊恐的事。当它终于能正常进食时,它自己那温和的训练便可以开始,训练者会耐心地去赢得动物的信任,用一句柔和、抚慰的话语来强化每一点小小的成功。",
+  "grammar_card": {
+    "title": "consist of doing / be capable of / be deprived of / every time / it is adj for sb to do",
+    "intro": "①consist of + 动名词,‘由…构成/在于…’。②be capable of + 名词或动名词,‘能够…’。③be deprived of,‘被剥夺/失去…’。④every time 引导时间从句,‘每当/一…就…’。⑤it is + 形容词 + for sb to do,it 是形式主语,for sb 是不定式的逻辑主语。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["consist of doing", "consist of + 动名词", "consists of setting it to work"],
+        ["be capable of", "be capable of + 名词/动名词", "capable of personal affection"],
+        ["be deprived of", "be deprived of + 名词", "deprived of their trainer"],
+        ["every time", "every time + 从句", "plunges every time a man approaches"],
+        ["it is adj for sb to do", "It is + 形容词 + for sb + 不定式", "It is customary for it to be placed…"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "consist of(由…组成)接名词或动名词,不用被动语态;consist in 则表‘在于’。", "mark": "consist of doing" },
+      { "rule": "be capable of、be deprived of、be responsible for 等‘形容词/过去分词 + 介词’搭配要整体记。", "mark": "capable/deprived of" },
+      { "rule": "美式拼写:behavior(行为,英式 behaviour)、favor(偏爱,英式 favour)。本课已按美语写。", "mark": "behavior / favor" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — At what point does the training of a captive wild elephant begin?",
+    "options": ["When it has settled in and is eating normally in its new home", "The moment it is captured", "After it has learned to carry heavy loads", "Only when it is twenty years old"],
+    "answer_index": 0
+  },
+  "passage": "There are two main techniques for training an elephant, which we may call the harsh and the gentle. The harsh technique simply consists of setting the animal to work and forcing it, hour after hour, to do what is expected of it. Apart from the plain cruelty of it, this is a foolish method, for it produces a resentful animal that at a later stage may well become dangerous. The gentle technique asks for far more patience in the early stages, but it produces a cheerful, good-tempered elephant that will give many years of loyal service. The first essential in elephant training is to assign to the animal a single mahout who will be entirely responsible for the job. Elephants like to have one master, just as dogs do, and they are capable of a considerable degree of personal affection. There are even stories of half-trained calves that have refused all food and pined to death when, by some unavoidable circumstance, they were deprived of their own trainer. Such extreme tales must probably be taken with a grain of salt, but they do underline the general principle that the bond between elephant and mahout is the key to success. The most economical age to capture an elephant for training is between fifteen and twenty years, for it is then almost ready to undertake heavy work and can begin to earn its keep straight away. But animals of this age do not easily become subservient, and a firm, patient hand must be used in the early stages. The captive elephant, still roped to a tree, plunges and screams every time a person approaches, and for several days it will probably refuse all food through fear. Sometimes a tame elephant is tethered nearby to give the wild one confidence, and in most cases the captive gradually quietens down and begins to accept its food. When several elephants are being trained at one time, it is customary for the new arrival to be placed between the stalls of two calmer captives whose training is already well advanced. It is then left completely undisturbed, with plenty of food and water, so that it can absorb the atmosphere of its new home and see that nothing alarming is happening to its companions. When it is at last eating normally, its own gentle training can begin, and the trainer works patiently to win the animal's trust, reinforcing every small success with a soft and soothing word.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "There are two main techniques for training an elephant, which we may call the harsh and the gentle. The harsh technique simply consists of setting the animal to work and forcing it, hour after hour, to do what is expected of it. Apart from the plain cruelty of it, this is a foolish method, for it produces a resentful animal that at a later stage may well become dangerous.", "text_cn": "训练大象主要有两种方法,我们不妨称之为强硬法与温和法。强硬法只不过是让动物去干活,一小时又一小时地迫使它做人所期望的事。且不论其中的残忍,这也是个愚蠢的办法,因为它造就的是一头满怀怨恨的动物,日后很可能变得危险。" },
+    { "seq": 2, "speaker": null, "text_en": "The gentle technique asks for far more patience in the early stages, but it produces a cheerful, good-tempered elephant that will give many years of loyal service. The first essential in elephant training is to assign to the animal a single mahout who will be entirely responsible for the job. Elephants like to have one master, just as dogs do, and they are capable of a considerable degree of personal affection.", "text_cn": "温和法在早期需要多得多的耐心,却能造就一头快活、脾气好、愿意提供多年忠诚服务的大象。训练大象的首要之务,是给这头动物指派单独一名驯象人,由他全权负责。大象喜欢只有一个主人,就像狗一样,而且它们能表现出相当程度的个人情感。" },
+    { "seq": 3, "speaker": null, "text_en": "There are even stories of half-trained calves that have refused all food and pined to death when, by some unavoidable circumstance, they were deprived of their own trainer. Such extreme tales must probably be taken with a grain of salt, but they do underline the general principle that the bond between elephant and mahout is the key to success.", "text_cn": "甚至有这样的故事:一些半驯的幼象,在因某种不可避免的变故被夺走自己的驯养员后,竟拒绝一切食物、忧郁而死。这类极端的说法多半得打个折扣看待,但它们确实点明了一条总的原则:大象与驯象人之间的纽带,是成功的关键。" },
+    { "seq": 4, "speaker": null, "text_en": "The most economical age to capture an elephant for training is between fifteen and twenty years, for it is then almost ready to undertake heavy work and can begin to earn its keep straight away. But animals of this age do not easily become subservient, and a firm, patient hand must be used in the early stages. The captive elephant, still roped to a tree, plunges and screams every time a person approaches, and for several days it will probably refuse all food through fear.", "text_cn": "捕捉一头大象来训练,最划算的年龄是十五到二十岁之间,因为那时它差不多已能承担重活,可以立刻开始挣自己的口粮。但这个年龄的动物不易变得顺从,早期必须用一只坚定而耐心的手。仍被绳拴在树上的被捕大象,每当有人靠近,就又蹦又叫,头几天多半会因恐惧而拒食一切。" },
+    { "seq": 5, "speaker": null, "text_en": "Sometimes a tame elephant is tethered nearby to give the wild one confidence, and in most cases the captive gradually quietens down and begins to accept its food. When several elephants are being trained at one time, it is customary for the new arrival to be placed between the stalls of two calmer captives whose training is already well advanced. When it is at last eating normally, its own gentle training can begin, and the trainer works patiently to win the animal's trust, reinforcing every small success with a soft and soothing word.", "text_cn": "有时会在近旁拴一头驯服的大象,给这头野的壮胆;多数情况下,被捕的大象会渐渐安静下来,开始接受喂食。当同时训练好几头大象时,惯例是把新来的一头安置在两头已训练得相当到位、更为安静的大象的栏位之间。当它终于能正常进食时,它自己那温和的训练便可以开始,训练者会耐心地去赢得动物的信任,用一句柔和、抚慰的话语来强化每一点小小的成功。" }
+  ],
+  "words": [
+    { "word": "technique", "ipa": "/tekˈniːk/", "pos": "n", "meaning_cn": "技巧,方法", "example": "two main techniques for training an elephant" },
+    { "word": "resentful", "ipa": "/rɪˈzentfl/", "pos": "adj", "meaning_cn": "愤懑的,充满怨恨的", "example": "it produces a resentful animal" },
+    { "word": "assign", "ipa": "/əˈsaɪn/", "pos": "v", "meaning_cn": "分配,指派", "example": "to assign a single mahout" },
+    { "word": "subservient", "ipa": "/səbˈsɜːrviənt/", "pos": "adj", "meaning_cn": "顺从的,恭顺的", "example": "do not easily become subservient" },
+    { "word": "plunge", "ipa": "/plʌndʒ/", "pos": "v", "meaning_cn": "猛冲,突然剧烈移动", "example": "plunges and screams every time a person approaches" },
+    { "word": "tame", "ipa": "/teɪm/", "pos": "adj", "meaning_cn": "驯服的", "example": "a tame elephant is tethered nearby" },
+    { "word": "tether", "ipa": "/ˈteðər/", "pos": "v", "meaning_cn": "(用绳)拴系", "example": "a tame elephant is tethered nearby" },
+    { "word": "alarming", "ipa": "/əˈlɑːrmɪŋ/", "pos": "adj", "meaning_cn": "令人惊恐的", "example": "nothing alarming is happening" },
+    { "word": "soothe", "ipa": "/suːð/", "pos": "v", "meaning_cn": "抚慰,使平静", "example": "a soft and soothing word" },
+    { "word": "reinforce", "ipa": "/ˌriːɪnˈfɔːrs/", "pos": "v", "meaning_cn": "强化,加强", "example": "reinforcing every small success" },
+    { "word": "calf", "ipa": "/kæf/", "pos": "n", "meaning_cn": "(象、牛等的)幼崽", "example": "stories of half-trained calves" },
+    { "word": "pine", "ipa": "/paɪn/", "pos": "v", "meaning_cn": "(因悲伤而)憔悴,消瘦", "example": "refused all food and pined to death" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "consist of + 动名词" },
+    { "gp": "gp2", "name": "be capable of + 名词/动名词" },
+    { "gp": "gp3", "name": "be deprived of" },
+    { "gp": "gp4", "name": "every time 引导时间从句" },
+    { "gp": "gp5", "name": "it is + 形容词 + for sb to do" },
+    { "gp": "gp6", "name": "词汇辨析(assign/resentful/reinforce)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The tough method simply consists ___ setting the animal to work.\"(consist __ doing,‘由…构成/在于…’,填那个介词)", "stem_cn": "强硬法只不过是让动物去干活。", "options": ["of", "in", "on", "at"] },
+    { "gp": "gp1", "stem": "\"Successful training consists of ___ a good relationship first.\"(consist of + 动名词,填‘建立’那个动词的动名词)", "stem_cn": "成功的训练在于先建立良好的关系。", "options": ["building", "build", "built", "to build"] },
+    { "gp": "gp1", "stem": "\"The gentle method consists of ___ patience in the early stages.\"(consist of + 动名词,填‘表现出’那个动词的动名词)", "stem_cn": "温和法在于早期表现出耐心。", "options": ["showing", "show", "showed", "to show"] },
+    { "gp": "gp2", "stem": "\"Elephants are capable ___ deep and lasting affection.\"(be capable __,‘能够…’,填那个介词)", "stem_cn": "大象能表现出深厚而持久的情感。", "options": ["of", "for", "to", "in"] },
+    { "gp": "gp2", "stem": "\"A well-trained elephant is capable ___ many years' loyal service.\"(be capable __ + 名词,填那个介词)", "stem_cn": "训练有素的大象能提供多年忠诚的服务。", "options": ["of", "for", "to", "with"] },
+    { "gp": "gp2", "stem": "\"These animals are capable of ___ their master's voice.\"(be capable of + 动名词,填‘认出’那个动词的动名词)", "stem_cn": "这些动物能认出主人的声音。", "options": ["recognizing", "recognize", "recognized", "to recognize"] },
+    { "gp": "gp3", "stem": "\"Some calves pined to death when they were deprived ___ their own trainer.\"(be deprived __,‘被剥夺…’,填那个介词)", "stem_cn": "有些小象被夺走自己的驯养员后,竟忧郁而死。", "options": ["of", "from", "with", "to"] },
+    { "gp": "gp3", "stem": "\"A captive must not be deprived ___ food and water for long.\"(be deprived __,填那个介词)", "stem_cn": "被捕的大象不可长时间断绝食水。", "options": ["of", "from", "with", "at"] },
+    { "gp": "gp3", "stem": "\"No elephant should be ___ of the single master it trusts.\"(‘被剥夺…’这个结构,填‘剥夺’那个动词的过去分词)", "stem_cn": "任何大象都不该被夺走它所信赖的唯一主人。", "options": ["deprived", "depriving", "deprive", "to deprive"] },
+    { "gp": "gp4", "stem": "\"The captive plunges and screams ___ a man approaches.\"(‘每当…就…’,填引导时间从句的连词组)", "stem_cn": "每当有人靠近,被捕的大象就又蹦又叫。", "options": ["every time", "in case", "as if", "even though"] },
+    { "gp": "gp4", "stem": "\"___ the mahout appears, the elephant grows calm.\"(‘每当…’,填时间连词组)", "stem_cn": "每当驯象人出现,大象就安静下来。", "options": ["Every time", "In case", "As if", "Even though"] },
+    { "gp": "gp4", "stem": "\"The young elephant refuses food ___ it feels afraid.\"(‘每当…’,填时间连词组)", "stem_cn": "每当害怕,小象就拒绝进食。", "options": ["every time", "in case", "as if", "so that"] },
+    { "gp": "gp5", "stem": "\"It is customary ___ the new arrival to be placed between two calm elephants.\"(it is + 形容词 + __ sb to do,填 sb 前那个介词)", "stem_cn": "惯例是把新来的大象安置在两头安静的大象之间。", "options": ["for", "of", "to", "that"] },
+    { "gp": "gp5", "stem": "\"It is necessary ___ a single mahout to take full charge.\"(__ sb to do 结构,填 sb 前那个介词)", "stem_cn": "必须由单独一名驯象人全权负责。", "options": ["for", "of", "to", "with"] },
+    { "gp": "gp5", "stem": "\"It is important for the trainer ___ win the animal's trust.\"(it is + 形容词 + for sb + 不定式,填不定式记号)", "stem_cn": "训练者赢得动物的信任很重要。", "options": ["to", "for", "that", "of"] },
+    { "gp": "gp6", "stem": "\"To give a task or duty to someone is to ___ it.\"(“分配,指派”用哪个词)", "stem_cn": "把任务或职责交给某人。", "options": ["assign", "resign", "design", "consign"] },
+    { "gp": "gp6", "stem": "\"Feeling bitter and angry at unfair treatment makes one ___.\"(“愤懑的,充满怨恨的”用哪个词)", "stem_cn": "因不公待遇而感到痛苦愤怒。", "options": ["resentful", "respectful", "resourceful", "restful"] },
+    { "gp": "gp6", "stem": "\"To make a feeling or belief stronger is to ___ it.\"(“强化,加强”用哪个词)", "stem_cn": "使某种感受或信念更强烈。", "options": ["reinforce", "reproduce", "replace", "remove"] }
+  ],
+  "stage6": [
+    { "stem": "technique 的意思是:", "options": ["技巧,方法", "错误", "结果", "材料"] },
+    { "stem": "resentful 的意思是:", "options": ["愤懑的,充满怨恨的", "感激的", "满意的", "冷静的"] },
+    { "stem": "assign 的意思是:", "options": ["分配,指派", "取消", "推迟", "拒绝"] },
+    { "stem": "subservient 的意思是:", "options": ["顺从的,恭顺的", "傲慢的", "独立的", "敌对的"] },
+    { "stem": "soothe 的意思是:", "options": ["抚慰,使平静", "激怒", "惊吓", "欺骗"] },
+    { "stem": "reinforce 的意思是:", "options": ["强化,加强", "削弱", "取消", "忽视"] }
+  ],
+  "contrast": [
+    { "us": "behavior", "uk": "behaviour", "note_cn": "行为;美语 behavior,英式 behaviour" },
+    { "us": "favor", "uk": "favour", "note_cn": "偏爱,恩惠;美语 favor,英式 favour" },
+    { "us": "defense", "uk": "defence", "note_cn": "防御;美语 defense,英式 defence" },
+    { "us": "skillful", "uk": "skilful", "note_cn": "熟练的;美语 skillful,英式 skilful" }
+  ],
+  "chunks": [
+    { "us": "set ... to work", "ipa": "/set tuː wɜːrk/", "example1": "They set the young elephant to work too soon.", "example1_cn": "他们过早让小象去干活。", "example2": "She set the class to work on a project.", "example2_cn": "她让全班开始做一个项目。" },
+    { "us": "be responsible for", "ipa": "/bi rɪˈspɑːnsəbl fɔːr/", "example1": "One mahout is entirely responsible for the animal.", "example1_cn": "一名驯象人对这头动物全权负责。", "example2": "Who is responsible for this decision?", "example2_cn": "谁对这个决定负责?" },
+    { "us": "take with a grain of salt", "ipa": "/teɪk wɪð ə ɡreɪn ʌv sɔːlt/", "example1": "Such extreme tales must be taken with a grain of salt.", "example1_cn": "这类极端的说法得打个折扣看待。", "example2": "I take his promises with a grain of salt.", "example2_cn": "他的承诺我只是姑妄听之。" },
+    { "us": "earn its keep", "ipa": "/ɜːrn ɪts kiːp/", "example1": "At fifteen the elephant can begin to earn its keep.", "example1_cn": "到十五岁,大象就能开始挣自己的口粮。", "example2": "Every animal on the farm must earn its keep.", "example2_cn": "农场里每只动物都得自食其力。" }
+  ],
+  "stage7_cloze": {
+    "context": "The harsh method consists ___1___ setting the animal to work, and it often produces a resentful animal. Elephants are capable ___2___ deep affection. Some calves even pine when deprived ___3___ their trainer. The captive plunges and screams ___4___ a person approaches.",
+    "blanks": [
+      { "blank_no": 1, "options": ["of", "in", "on", "at"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["of", "for", "to", "in"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["of", "from", "with", "to"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["every time", "in case", "as if", "even though"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "At what point does the training of a captive wild elephant begin?", "options": ["When it has settled in and is eating normally in its new home", "The moment it is captured", "After it has learned to carry heavy loads", "Only when it is twenty years old"] },
+    { "stem": "Why is a single mahout assigned to each elephant?", "options": ["Because elephants like one master and form a strong personal bond, like dogs", "Because one man is cheaper than several", "Because mahouts dislike working together", "Because the law requires it"] },
+    { "stem": "What is said to be the key to successful elephant training?", "options": ["The relationship between the elephant and its mahout", "The sharpness of the trainer's stick", "The age at which the elephant is captured", "The size of the training establishment"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"温和法在于早期表现出耐心\"(consist of + 动名词):", "options": ["The gentle method consists of showing patience in the early stages.", "The gentle method consists of show patience in the early stages.", "The gentle method consists showing patience in the early stages.", "The gentle method consists of showed patience in the early stages."] },
+    { "stem": "你想说\"有些小象被夺走驯养员后竟忧郁而死\"(be deprived of):", "options": ["Some calves pined to death when they were deprived of their trainer.", "Some calves pined to death when they were deprived from their trainer.", "Some calves pined to death when they deprived of their trainer.", "Some calves pined to death when they were deprive of their trainer."] },
+    { "stem": "你想说\"每当有人靠近,被捕的大象就又蹦又叫\"(every time 引导时间从句):", "options": ["Every time a person approaches, the captive plunges and screams.", "Every time a person approaches, so the captive plunges and screams.", "Every time when a person approaches, the captive plunges and screams.", "The every time a person approaches, the captive plunges and screams."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "technique 的意思是:", "options": ["技巧,方法", "错误", "结果", "材料"] },
+    { "kind": "vocab", "stem": "resentful 的意思是:", "options": ["愤懑的,充满怨恨的", "感激的", "满意的", "冷静的"] },
+    { "kind": "grammar", "stem": "\"The gentle method consists ___ showing patience.\"(consist + 介词 + 动名词)", "stem_cn": "温和法在于表现出耐心。", "options": ["of", "in", "on", "at"] },
+    { "kind": "grammar", "stem": "\"Some calves pined when they were deprived ___ their trainer.\"(be deprived + 介词)", "stem_cn": "有些小象被夺走驯养员后憔悴而死。", "options": ["of", "from", "with", "to"] },
+    { "kind": "scenario", "stem": "\"be responsible for\" 的意思是:", "options": ["对…负责", "反对…", "害怕…", "依赖…"] },
+    { "kind": "scenario", "stem": "\"earn its keep\" 的意思是:", "options": ["挣够自己的开销,自食其力", "保守秘密", "保持安静", "保住工作"] },
+    { "kind": "reading", "stem": "Why is the harsh method of training criticized?", "options": ["It produces a resentful animal that may become dangerous", "It takes far too long", "It requires too many trainers", "It costs too much money"], "passage": true },
+    { "kind": "reading", "stem": "What is the most economical age to capture an elephant for training, and why?", "options": ["Between fifteen and twenty, because it is then almost ready for heavy work", "At birth, because it is easy to move", "Over forty, because it is calmer", "Any age, because age makes no difference"], "passage": true },
+    { "kind": "listening", "stem": "How do trainers help a frightened captive settle in at first?", "options": ["They leave it undisturbed with food and water, sometimes with a tame elephant nearby for confidence", "They force it to work at once", "They keep it completely alone in the dark", "They never feed it until it obeys"], "audio": true },
+    { "kind": "listening", "stem": "According to the passage, how do elephants resemble dogs?", "options": ["They like to have one master and can feel real personal affection", "They enjoy chasing balls", "They cannot be trained at all", "They dislike all human company"], "audio": true }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "am4_l15",
+  "unit_no": 3,
+  "lesson_no": 15,
+  "title_en": "Secrecy in Industry",
+  "title_cn": "工业中的秘密",
+  "grammar_focus": "such … that … / to such an extreme that(结果)、much/far + 比较级 + than(比较级前的加强)、分词作定语(现在分词 depending / 过去分词 taken)、情态动词被动(can be taken out / cannot be mentioned)、for fear (that) … should + be likely to do(NCE4 无 KS 页,考点由课文结构自取;IP:源为 J.D.贝尔纳《科学的社会功能》论著,已用 100% 原创行文复述‘保密削弱工业科研’的通用观点,无人物、无逐句改写;题材=工业保密与专利·无害;美语化 organize/skeptical;第四册第15课)",
+  "scene": "有两样东西,比任何别的都更能削弱私营公司内部科研的成效。一是笼罩在工作之上那沉沉的保密气氛,二是留给单个研究者的那点狭窄自由。只要一项探究被当作秘密来对待,它就把所有从事这项工作的人,同别处的同行断开了任何真正的交流——别国的同行、大学里的同行,还有往往就在同一家公司别的部门里的同行。一家公司保多少密,差别很大。少数几家最大的公司所做的研究,性质是那样宽泛、那样根本,以至于对它们来说,索性不藏反倒是一桩正面的好处。然而,大量依赖这类研究的有用工序,却是在彻底的保密下推进的,一直捂到能申请专利的那一刻;更有许多工序干脆从不申请专利,只当作私密守着。这在化学工业里尤其如此——在那里,一次幸运的、偶然的发现所起的作用,远比在物理或机械行业里大得多。有时候,保密到了这样一种极端:研究的课题本身都不能出声提起。比方说,有些公司发现,竟然很难从公共图书馆借到技术书籍,因为它们不愿让自己的名字被记录为借过某某书——唯恐对手公司的探子会由此查出它们很可能正在从事的那类研究。",
+  "grammar_card": {
+    "title": "such/so … that / 比较级加强 / 分词作定语 / 情态词被动 / for fear",
+    "intro": "①so + 形容词 + that / such + a + 名词 + that / to such an extreme that:‘如此…以至于’。②much/far + 比较级 + than:a far larger part than…。③分词作定语:processes depending on research(主动)、a book taken out(被动)。④情态词被动:a patent can be taken out;the subject cannot be mentioned。⑤for fear (that) … should …;be likely to do。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["so … that", "so + 形容词 + that", "so fundamental that it is an advantage"],
+        ["比较级加强", "far/much + 比较级 + than", "a far larger part than in physics"],
+        ["分词作定语", "现在/过去分词 + 名词", "processes depending on research"],
+        ["情态词被动", "情态词 + be + 过去分词", "a patent can be taken out"],
+        ["for fear", "for fear (that) … should", "for fear rivals should trace it"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "so 修饰形容词/副词(so fundamental);such 修饰名词短语(such a broad study)。", "mark": "so + 形容词 / such + a + 名词" },
+      { "rule": "情态词的被动=情态词 + be + 过去分词:can be taken、must be kept、cannot be mentioned。", "mark": "情态词 + be + 过去分词" },
+      { "rule": "美式拼写:organize(组织,英式 organise)、skeptical(怀疑的,英式 sceptical)。本课已按美语写。", "mark": "organize / skeptical" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why is secrecy particularly important in the chemical industries?",
+    "options": ["Because chance discoveries play a far larger part there than in other industries", "Because chemicals are always dangerous", "Because chemists prefer to work alone", "Because the government demands it"],
+    "answer_index": 0
+  },
+  "passage": "Two things, more than any others, weaken the effectiveness of scientific research when it is carried on inside a private company. The first is the heavy atmosphere of secrecy that hangs over the work; the second is the narrow freedom left to the individual researcher. As long as an inquiry is treated as a secret, it cuts off everyone working on it from any real exchange with fellow scientists — those in other countries, those in the universities, and often enough those in other departments of the very same firm. How much secrecy a company keeps varies a great deal. A few of the largest firms carry out research so broad and so fundamental in nature that it is a positive advantage to them not to hide it at all. Yet a great many useful processes depending on that research are pursued behind complete secrecy right up to the moment when a patent can be taken out, and still more are never patented but simply kept as private secrets. This is especially true of the chemical industries, where a lucky, chance discovery plays a far larger part than it does in the physical or mechanical trades. Now and then the secrecy is carried to such an extreme that the very subject of the research cannot be named out loud. Some firms, for instance, find it surprisingly hard to borrow technical books from a public library, because they are unwilling to let their names be recorded as having taken out this or that volume — for fear that the agents of rival companies should manage to trace the sort of work they are likely to be undertaking.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Two things, more than any others, weaken the effectiveness of scientific research when it is carried on inside a private company. The first is the heavy atmosphere of secrecy that hangs over the work; the second is the narrow freedom left to the individual researcher.", "text_cn": "有两样东西,比任何别的都更能削弱私营公司内部科研的成效。一是笼罩在工作之上那沉沉的保密气氛,二是留给单个研究者的那点狭窄自由。" },
+    { "seq": 2, "speaker": null, "text_en": "As long as an inquiry is treated as a secret, it cuts off everyone working on it from any real exchange with fellow scientists — those in other countries, those in the universities, and often enough those in other departments of the very same firm. How much secrecy a company keeps varies a great deal.", "text_cn": "只要一项探究被当作秘密来对待,它就把所有从事这项工作的人,同别处的同行断开了任何真正的交流——别国的同行、大学里的同行,还有往往就在同一家公司别的部门里的同行。一家公司保多少密,差别很大。" },
+    { "seq": 3, "speaker": null, "text_en": "A few of the largest firms carry out research so broad and so fundamental in nature that it is a positive advantage to them not to hide it at all. Yet a great many useful processes depending on that research are pursued behind complete secrecy right up to the moment when a patent can be taken out, and still more are never patented but simply kept as private secrets.", "text_cn": "少数几家最大的公司所做的研究,性质是那样宽泛、那样根本,以至于对它们来说,索性不藏反倒是一桩正面的好处。然而,大量依赖这类研究的有用工序,却是在彻底的保密下推进的,一直捂到能申请专利的那一刻;更有许多工序干脆从不申请专利,只当作私密守着。" },
+    { "seq": 4, "speaker": null, "text_en": "This is especially true of the chemical industries, where a lucky, chance discovery plays a far larger part than it does in the physical or mechanical trades. Now and then the secrecy is carried to such an extreme that the very subject of the research cannot be named out loud.", "text_cn": "这在化学工业里尤其如此——在那里,一次幸运的、偶然的发现所起的作用,远比在物理或机械行业里大得多。有时候,保密到了这样一种极端:研究的课题本身都不能出声提起。" },
+    { "seq": 5, "speaker": null, "text_en": "Some firms, for instance, find it surprisingly hard to borrow technical books from a public library, because they are unwilling to let their names be recorded as having taken out this or that volume — for fear that the agents of rival companies should manage to trace the sort of work they are likely to be undertaking.", "text_cn": "比方说,有些公司发现,竟然很难从公共图书馆借到技术书籍,因为它们不愿让自己的名字被记录为借过某某书——唯恐对手公司的探子会由此查出它们很可能正在从事的那类研究。" }
+  ],
+  "words": [
+    { "word": "secrecy", "ipa": "/ˈsiːkrəsi/", "pos": "n", "meaning_cn": "保密,秘密状态", "example": "the heavy atmosphere of secrecy" },
+    { "word": "effectiveness", "ipa": "/ɪˈfektɪvnəs/", "pos": "n", "meaning_cn": "效力,成效", "example": "weaken the effectiveness of research" },
+    { "word": "inquiry", "ipa": "/ˈɪnkwəri/", "pos": "n", "meaning_cn": "调查,探究", "example": "as long as an inquiry is treated as a secret" },
+    { "word": "positive", "ipa": "/ˈpɑːzətɪv/", "pos": "adj", "meaning_cn": "正面的,确实的", "example": "a positive advantage to them" },
+    { "word": "process", "ipa": "/ˈprɑːses/", "pos": "n", "meaning_cn": "工序,过程", "example": "useful processes are kept secret" },
+    { "word": "patent", "ipa": "/ˈpætnt/", "pos": "n", "meaning_cn": "专利", "example": "a patent can be taken out" },
+    { "word": "agent", "ipa": "/ˈeɪdʒənt/", "pos": "n", "meaning_cn": "代理人,探子", "example": "the agents of rival companies" },
+    { "word": "fundamental", "ipa": "/ˌfʌndəˈmentl/", "pos": "adj", "meaning_cn": "基础的,根本的", "example": "so broad and so fundamental in nature" },
+    { "word": "discovery", "ipa": "/dɪˈskʌvəri/", "pos": "n", "meaning_cn": "发现", "example": "a lucky, chance discovery" },
+    { "word": "firm", "ipa": "/fɜːrm/", "pos": "n", "meaning_cn": "公司,商行", "example": "the very same firm" },
+    { "word": "trace", "ipa": "/treɪs/", "pos": "v", "meaning_cn": "追踪,查出", "example": "to trace the sort of work they do" },
+    { "word": "undertake", "ipa": "/ˌʌndərˈteɪk/", "pos": "v", "meaning_cn": "从事,着手", "example": "the work they are likely to be undertaking" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "such/so … that … / to such an extreme that" },
+    { "gp": "gp2", "name": "much/far + 比较级 + than(比较级加强)" },
+    { "gp": "gp3", "name": "分词作定语(depending / taken)" },
+    { "gp": "gp4", "name": "情态词被动(can be taken / cannot be mentioned)" },
+    { "gp": "gp5", "name": "for fear (that)…should + be likely to do" },
+    { "gp": "gp6", "name": "词汇辨析(secrecy/patent/trace)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The research is ___ fundamental that hiding it brings no gain.\"(‘如此…以至于’,修饰形容词时用的那个词)", "stem_cn": "这项研究如此基础,以至于藏着它毫无好处。", "options": ["so", "such", "very", "too"] },
+    { "gp": "gp1", "stem": "\"It is ___ a broad study that secrecy is pointless.\"(‘如此一项…以至于’,后接 a + 名词短语时用的那个词)", "stem_cn": "这是一项如此宽泛的研究,保密毫无意义。", "options": ["such", "so", "very", "too"] },
+    { "gp": "gp1", "stem": "\"Secrecy is carried to such an ___ that the subject cannot be named.\"(to such an … that:‘到…地步’,填名词)", "stem_cn": "保密到了连课题都不能提的地步。", "options": ["extreme", "extremely", "extra", "exterior"] },
+    { "gp": "gp2", "stem": "\"Chance discoveries play a ___ larger part in chemistry than in physics.\"(比较级前的加强词,‘大得多’)", "stem_cn": "偶然发现在化学中的作用比在物理中大得多。", "options": ["far", "very", "so", "most"] },
+    { "gp": "gp2", "stem": "\"This process is ___ more secret than the last one.\"(比较级 more 前的加强词)", "stem_cn": "这道工序比上一道保密得多。", "options": ["much", "very", "more", "most"] },
+    { "gp": "gp2", "stem": "\"A lucky find matters ___ more here than careful planning.\"(比较级前的加强词)", "stem_cn": "在这里,一次幸运的发现远比周密计划更重要。", "options": ["far", "very", "so", "too"] },
+    { "gp": "gp3", "stem": "\"Processes ___ on such research are kept secret.\"(现在分词作定语,主动‘依赖…的’)", "stem_cn": "依赖这种研究的工序被保密。", "options": ["depending", "depended", "depend", "to depend"] },
+    { "gp": "gp3", "stem": "\"Everyone ___ on the project is cut off from outsiders.\"(现在分词作定语,主动‘从事…的’)", "stem_cn": "参与这个项目的每个人都与外界隔绝。", "options": ["working", "worked", "work", "to work"] },
+    { "gp": "gp3", "stem": "\"A book ___ out under a firm's name may reveal its research.\"(过去分词作定语,‘被借出的’;take 的过去分词)", "stem_cn": "以某公司名义借出的一本书可能泄露其研究。", "options": ["taken", "taking", "take", "to take"] },
+    { "gp": "gp4", "stem": "\"A useful process can ___ patented before rivals copy it.\"(情态被动 can + ___ + 过去分词,填中间的词)", "stem_cn": "一道有用的工序可以在对手仿造前被申请专利。", "options": ["be", "is", "been", "being"] },
+    { "gp": "gp4", "stem": "\"The subject of the research ___ not even be mentioned.\"(‘甚至不能被提及’,填与 not 连用表‘不能’的情态词)", "stem_cn": "研究的课题甚至不能被提及。", "options": ["can", "is", "has", "does"] },
+    { "gp": "gp4", "stem": "\"Such secrets ___ be kept until a patent is granted.\"(‘必须被保守’,填表‘必须’的情态词)", "stem_cn": "这类秘密必须一直保守到专利获批。", "options": ["must", "is", "has", "does"] },
+    { "gp": "gp5", "stem": "\"They hide the title ___ fear rivals should trace their work.\"(‘唯恐、生怕’= ___ fear,填 fear 前的介词)", "stem_cn": "他们隐去书名,唯恐对手追查到他们的工作。", "options": ["for", "in", "by", "with"] },
+    { "gp": "gp5", "stem": "\"They keep it secret for fear that agents ___ trace the research.\"(for fear that … ___ + 动词原形,‘唯恐会…’,填这个助动词)", "stem_cn": "他们保密,唯恐特工会追查到那研究。", "options": ["should", "must", "need", "dare"] },
+    { "gp": "gp5", "stem": "\"Rivals are ___ to be undertaking similar research.\"(be ___ to do,‘很可能(做)’,填形容词)", "stem_cn": "竞争对手很可能正在做类似的研究。", "options": ["likely", "like", "alike", "liking"] },
+    { "gp": "gp6", "stem": "\"The state of keeping things hidden from others is ___.\"(“保密、秘密状态”用哪个词)", "stem_cn": "把事情对别人隐瞒的状态。", "options": ["secrecy", "openness", "honesty", "fame"] },
+    { "gp": "gp6", "stem": "\"A legal right protecting a new invention is a ___.\"(“专利”用哪个词)", "stem_cn": "保护一项新发明的合法权利。", "options": ["patent", "license", "receipt", "ticket"] },
+    { "gp": "gp6", "stem": "\"To follow clues and find out something's course is to ___ it.\"(“追踪、查出”用哪个词)", "stem_cn": "顺着线索查出某事物的来龙去脉。", "options": ["trace", "hide", "waste", "ignore"] }
+  ],
+  "stage6": [
+    { "stem": "secrecy 的意思是:", "options": ["保密,秘密状态", "公开", "诚实", "名声"] },
+    { "stem": "effectiveness 的意思是:", "options": ["效力,成效", "弱点", "距离", "重量"] },
+    { "stem": "inquiry 的意思是:", "options": ["调查,探究", "命令", "礼物", "假期"] },
+    { "stem": "patent 的意思是:", "options": ["专利", "收据", "执照", "罚款"] },
+    { "stem": "fundamental 的意思是:", "options": ["基础的,根本的", "次要的", "临时的", "多余的"] },
+    { "stem": "undertake 的意思是:", "options": ["从事,着手", "放弃", "拒绝", "忘记"] }
+  ],
+  "contrast": [
+    { "us": "organize", "uk": "organise", "note_cn": "组织;拼写差异,美语 -ize" },
+    { "us": "labeled", "uk": "labelled", "note_cn": "标注(过去式);拼写差异,美语单 l" },
+    { "us": "jewelry", "uk": "jewellery", "note_cn": "珠宝;拼写差异,美语 jewelry" },
+    { "us": "skeptical", "uk": "sceptical", "note_cn": "怀疑的;拼写差异,美语 sk-" }
+  ],
+  "chunks": [
+    { "us": "carry out", "ipa": "/ˈkæri aʊt/", "example1": "The research is carried out in secret.", "example1_cn": "这项研究是秘密进行的。", "example2": "They carried out the plan.", "example2_cn": "他们执行了这个计划。" },
+    { "us": "take out", "ipa": "/teɪk aʊt/", "example1": "A firm can take out a patent.", "example1_cn": "公司可以申请专利。", "example2": "He took out a loan.", "example2_cn": "他办了一笔贷款。" },
+    { "us": "as long as", "ipa": "/æz lɔːŋ æz/", "example1": "As long as it stays secret, no one can share it.", "example1_cn": "只要它还保密,谁也无法分享。", "example2": "You may stay as long as you like.", "example2_cn": "你想待多久都行。" },
+    { "us": "be likely to", "ipa": "/bi ˈlaɪkli tə/", "example1": "Rivals are likely to be doing the same work.", "example1_cn": "对手很可能在做同样的工作。", "example2": "It's likely to rain.", "example2_cn": "很可能要下雨。" }
+  ],
+  "stage7_cloze": {
+    "context": "Two things weaken the ___1___ of research inside a firm. As long as an inquiry stays secret, it cuts workers off from others. Some studies are ___2___ fundamental that hiding them brings no gain. Many processes are kept secret until a patent can ___3___ taken out, ___4___ fear rivals trace the work.",
+    "blanks": [
+      { "blank_no": 1, "options": ["effectiveness", "secrecy", "patent", "agent"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["so", "such", "very", "too"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["be", "is", "been", "being"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["for", "in", "by", "with"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why is secrecy especially important in the chemical industries?", "options": ["Because chance discoveries play a far larger part there than in other industries", "Because chemicals are dangerous", "Because chemists work alone", "Because the law requires it"] },
+    { "stem": "What are the two things that weaken research inside a firm?", "options": ["The atmosphere of secrecy and the lack of freedom for the researcher", "High costs and long hours", "Poor pay and bad tools", "Weather and distance"] },
+    { "stem": "Why do some firms avoid borrowing books from libraries?", "options": ["For fear rivals could trace the research they are undertaking", "Because books are too expensive", "Because they dislike reading", "Because libraries are closed"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"这项研究如此基础,以至于藏着它毫无好处\"(so…that):", "options": ["The research is so fundamental that hiding it brings no gain.", "The research is such fundamental that hiding it brings no gain.", "The research is so fundamental as hiding it brings no gain.", "The research so fundamental is that hiding it brings no gain."] },
+    { "stem": "你想说\"研究的课题甚至不能被提及\"(情态词被动):", "options": ["The subject of the research cannot even be mentioned.", "The subject of the research cannot even be mention.", "The subject of the research cannot even mentioned.", "The subject of the research can not even be mentioning."] },
+    { "stem": "你想说\"竞争对手很可能正在做类似的研究\"(be likely to):", "options": ["Rivals are likely to be undertaking similar research.", "Rivals are likely be undertaking similar research.", "Rivals are likely to being undertaking similar research.", "Rivals are like to be undertaking similar research."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "secrecy 的意思是:", "options": ["保密,秘密状态", "公开", "诚实", "名声"] },
+    { "kind": "vocab", "stem": "patent 的意思是:", "options": ["专利", "收据", "执照", "罚款"] },
+    { "kind": "grammar", "stem": "\"The research is ___ fundamental that hiding it brings no gain.\"(如此…以至于,后接形容词)", "stem_cn": "这项研究如此基础,以至于藏着它毫无好处。", "options": ["so", "such", "very", "too"] },
+    { "kind": "grammar", "stem": "\"A process can ___ patented before rivals copy it.\"(情态被动 can + ___ + 过去分词)", "stem_cn": "一道工序可以在对手仿造前被申请专利。", "options": ["be", "is", "been", "being"] },
+    { "kind": "scenario", "stem": "\"carry out\" 的意思是:", "options": ["进行、执行", "拿出去", "抱怨", "推迟"] },
+    { "kind": "scenario", "stem": "\"be likely to\" 的意思是:", "options": ["很可能(做)", "喜欢做", "拒绝做", "假装做"] },
+    { "kind": "reading", "stem": "Why is secrecy especially important in the chemical industries?", "options": ["Chance discoveries play a far larger part there than elsewhere", "The chemicals are cheap", "The workers are careless", "The government owns them"], "passage": true },
+    { "kind": "reading", "stem": "What does secrecy do to the individual researcher?", "options": ["It cuts them off from effective contact with fellow scientists", "It doubles their pay", "It gives them more freedom", "It makes their work public"], "passage": true },
+    { "kind": "listening", "stem": "What are the two things that weaken industrial research?", "options": ["The atmosphere of secrecy and the lack of freedom", "Money and time", "Heat and noise", "Distance and language"], "audio": true },
+    { "kind": "listening", "stem": "Why won't some firms let their names be entered at a library?", "options": ["For fear rivals could trace the research they are undertaking", "Because they never read", "Because books cost too much", "Because they lost their cards"], "audio": true }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "am3_l51",
+  "unit_no": 11,
+  "lesson_no": 51,
+  "title_en": "Predicting the Future",
+  "title_cn": "预测未来",
+  "grammar_focus": "过去将来时 would(过去看未来)+ when 引导的时间定语从句(a time when …)、could (not) have done(对过去的推测)、否定词 Nor 置句首的倒装、as … as 同级比较 + 形容词 + enough to do、固定搭配 take over / be capable of doing / relieve sb of sth / dismiss the idea that(原创承载 NCE3 第三册 L51 考点·无需净化:计算机发展史科普——工程师预见多种计算机用途,却没能预见国际互联网;把英国工程师 Bagrit 改为虚构美国工程师 Leon Barrett;美式化拼写)",
+  "scene": "众所周知,预测未来是非常困难的。举个例子:在 20 世纪 70 年代中叶,又有谁能想到,到了 20 世纪末,计算机会像电视机一样在家家户户中普及呢?在 70 年代,计算机已经相当普及了,但只用在大公司、政府部门和大机构里,它们被称作主机。这些主机确实很大,常常占据整间装有空调的房间,雇用专职的技师,而且要靠专门编写的软件才能运行。虽然这类大型机器至今仍然存在,但它们的许多功能已经被体积虽小却功能强大、我们常说的“个人电脑”(PC)所接管。1975 年,美国推出了一台被称为“牛郎星”的原始机型。严格说来,它可以算是第一台“家用电脑”,并且指明了未来的方向。70 年代末,继“牛郎星”之后,又出现了一款叫作“苹果”的机型。80 年代初,计算机行业的巨头——美国国际商用机器公司(IBM)——生产出了世界上第一台个人电脑。它运行在一种叫作“磁盘操作系统”(DOS)的操作系统上,而这套系统是由当时规模还很小、名叫微软的公司开发的。IBM 的个人电脑被大量仿制。从那些简陋的开端,我们看到了今天普遍使用的、简便好用的家用电脑和多媒体机器的发展。想想这些发展离今天有多近,就更觉得非同寻常:早在 20 世纪 60 年代,一位名叫莱昂·巴瑞特的美国工程师,就已经能预见我们今天所知道的一些计算机用途了。巴瑞特并不接受“计算机会学会自己‘思考’、会‘统治世界’”这种想法,而这种想法在当时是人们乐于相信的。巴瑞特预见到,有一天计算机会小到能握在手里,会能够提供有关交通拥堵的信息、并建议可供选择的其他路线,会在医院里帮助医生诊断疾病,会使办公人员和会计免除枯燥、重复的文书工作。所有这些用途如今都已司空见惯。当然了,莱昂·巴瑞特根本不可能预见到国际互联网的出现——这个让我们能通过相连的网络、与世界上任何地方的任何人即时通讯的全球系统。他也无法预见,我们竟能利用互联网查找任何已知话题的信息,从而在家里的屏幕上阅读,愿意的话甚至还能打印出来。计算机变得越来越小、越来越强、越来越便宜。这正是巴瑞特的预言如此了不起的地方。要是他,或者像他那样的人今天还在世,或许能告诉我们未来五十年会是什么样子。",
+  "grammar_card": {
+    "title": "过去将来 would / could have done / Nor 倒装 / as…as·enough to do / take over·be capable of",
+    "intro": "①过去看未来用过去将来时 would:He predicted that computers would be small。②when 引导时间定语从句:a time when computers would be small。③could (not) have done:对过去的推测“(不)可能做过”:could not have foreseen。④否定词 Nor 置句首,分句要倒装:Nor could he have foreseen …。⑤as + 形容词 + as:与…一样;形容词 + enough to do:足够…以至于能。⑥固定搭配:take over(接管)、be capable of doing(能够)、relieve sb of sth(使某人免除)、dismiss the idea that …。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["would(过去将来) / a time when …", "过去看未来 / …的时候", "a time when computers would be small"],
+        ["could (not) have done", "对过去的推测", "could not have foreseen the Internet"],
+        ["Nor + 倒装", "也不…(倒装)", "Nor could he have foreseen …"],
+        ["as … as / enough to do", "与…一样 / 足够…能", "as common as TV sets"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "Nor/Neither 等否定词置句首时,分句要把助动词/情态动词提前倒装:Nor could he …(× Nor he could …)。", "mark": "Nor could he …" },
+      { "rule": "could not have + 过去分词表示“过去不可能做过”;have 不能省,过去分词不能写成过去式(foreseen 不是 foresaw)。", "mark": "could not have foreseen" },
+      { "rule": "美式拼写:program(英式 programme)、organization(英式 organisation)、center(英式 centre)。本课已按美语写。", "mark": "program / organization" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was the 'future' electronic development that Leon Barrett wasn't able to foresee?",
+    "options": ["The Internet", "The personal computer", "The mainframe machine", "The pocket calculator"],
+    "answer_index": 0
+  },
+  "passage": "Predicting the future is notoriously difficult. Who could have imagined, back in the mid-1970s, that by the end of the twentieth century computers would be as common in people's homes as TV sets? In the 1970s, computers were common enough, but only in big business, government offices, and large organizations. These were the so-called mainframe machines. Mainframe computers were very large indeed, often filling whole air-conditioned rooms, employing full-time technicians, and running on specially written software. Though these large machines still exist, many of their functions have been taken over by the small, powerful personal computers commonly known as PCs. In 1975, a primitive machine called the Altair was launched in the United States. It can fairly be described as the first 'home computer,' and it pointed the way to the future. This was followed, at the end of the 1970s, by a machine called the Apple. In the early 1980s, the computer giant IBM produced the world's first Personal Computer. It ran on an 'operating system' called DOS, made by a then small company named Microsoft. The IBM Personal Computer was widely copied. From those humble beginnings, we have seen the development of the user-friendly home computers and multimedia machines that are in common use today. Considering how recent these developments are, it is even more remarkable that as long ago as the 1960s an American engineer named Leon Barrett was able to predict some of the uses of computers we know today. Barrett dismissed the idea that computers would learn to 'think' for themselves and would 'rule the world,' which people liked to believe in those days. Barrett foresaw a time when computers would be small enough to hold in the hand, when they would be capable of providing information about traffic jams and suggesting alternative routes, when they would be used in hospitals to help doctors diagnose illnesses, and when they would relieve office workers and accountants of dull, repetitive clerical work. All these uses have become commonplace. Of course, Leon Barrett could not possibly have foreseen the development of the Internet, the worldwide system that lets us communicate instantly with anyone anywhere through linked networks. Nor could he have foreseen how we would use the Internet to find information on every known subject, so that we can read it on a screen at home and even print it out if we want to. Computers have become smaller and smaller, more and more powerful, and cheaper and cheaper. This is what makes Barrett's predictions so remarkable. If he, or someone like him, were alive today, he might be able to tell us what to expect in the next fifty years.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Predicting the future is notoriously difficult. Who could have imagined, back in the mid-1970s, that by the end of the twentieth century computers would be as common in people's homes as TV sets? In the 1970s, computers were common enough, but only in big business, government offices, and large organizations. These were the so-called mainframe machines.", "text_cn": "众所周知,预测未来是非常困难的。谁能想到,在 20 世纪 70 年代中叶,到了 20 世纪末,计算机会像电视机一样在家家户户中普及呢?在 70 年代,计算机已经相当普及了,但只用在大公司、政府部门和大机构里,它们被称作主机。" },
+    { "seq": 2, "speaker": null, "text_en": "Mainframe computers were very large indeed, often filling whole air-conditioned rooms, employing full-time technicians, and running on specially written software. Though these large machines still exist, many of their functions have been taken over by the small, powerful personal computers commonly known as PCs.", "text_cn": "这些主机确实很大,常常占据整间装有空调的房间,雇用专职的技师,而且要靠专门编写的软件才能运行。虽然这类大型机器至今仍然存在,但它们的许多功能已经被体积虽小却功能强大、我们常说的“个人电脑”(PC)所接管。" },
+    { "seq": 3, "speaker": null, "text_en": "In 1975, a primitive machine called the Altair was launched in the United States. It can fairly be described as the first 'home computer,' and it pointed the way to the future. This was followed, at the end of the 1970s, by a machine called the Apple. In the early 1980s, the computer giant IBM produced the world's first Personal Computer. It ran on an 'operating system' called DOS, made by a then small company named Microsoft. The IBM Personal Computer was widely copied. From those humble beginnings, we have seen the development of the user-friendly home computers and multimedia machines that are in common use today.", "text_cn": "1975 年,美国推出了一台被称为“牛郎星”的原始机型。严格说来,它可以算是第一台“家用电脑”,并且指明了未来的方向。70 年代末,继“牛郎星”之后,又出现了一款叫作“苹果”的机型。80 年代初,计算机行业的巨头——美国国际商用机器公司(IBM)——生产出了世界上第一台个人电脑。它运行在一种叫作“磁盘操作系统”(DOS)的操作系统上,而这套系统是由当时规模还很小、名叫微软的公司开发的。IBM 的个人电脑被大量仿制。从那些简陋的开端,我们看到了今天普遍使用的、简便好用的家用电脑和多媒体机器的发展。" },
+    { "seq": 4, "speaker": null, "text_en": "Considering how recent these developments are, it is even more remarkable that as long ago as the 1960s an American engineer named Leon Barrett was able to predict some of the uses of computers we know today. Barrett dismissed the idea that computers would learn to 'think' for themselves and would 'rule the world,' which people liked to believe in those days.", "text_cn": "想想这些发展离今天有多近,就更觉得非同寻常:早在 20 世纪 60 年代,一位名叫莱昂·巴瑞特的美国工程师,就已经能预见我们今天所知道的一些计算机用途了。巴瑞特并不接受“计算机会学会自己‘思考’、会‘统治世界’”这种想法,而这种想法在当时是人们乐于相信的。" },
+    { "seq": 5, "speaker": null, "text_en": "Barrett foresaw a time when computers would be small enough to hold in the hand, when they would be capable of providing information about traffic jams and suggesting alternative routes, when they would be used in hospitals to help doctors diagnose illnesses, and when they would relieve office workers and accountants of dull, repetitive clerical work. Of course, Leon Barrett could not possibly have foreseen the development of the Internet, the worldwide system that lets us communicate instantly with anyone anywhere through linked networks. Nor could he have foreseen how we would use the Internet to find information on every known subject. Computers have become smaller and smaller, more and more powerful, and cheaper and cheaper. If he were alive today, he might be able to tell us what to expect in the next fifty years.", "text_cn": "巴瑞特预见到,有一天计算机会小到能握在手里,会能够提供有关交通拥堵的信息、并建议可供选择的其他路线,会在医院里帮助医生诊断疾病,会使办公人员和会计免除枯燥、重复的文书工作。当然了,莱昂·巴瑞特根本不可能预见到国际互联网的出现——这个让我们能通过相连的网络、与世界上任何地方的任何人即时通讯的全球系统。他也无法预见,我们竟能利用互联网查找任何已知话题的信息。计算机变得越来越小、越来越强、越来越便宜。要是他今天还在世,或许能告诉我们未来五十年会是什么样子。" }
+  ],
+  "words": [
+    { "word": "notoriously", "ipa": "/noʊˈtɔːriəsli/", "pos": "adv", "meaning_cn": "众所周知地(尤指坏事)", "example": "notoriously difficult" },
+    { "word": "mainframe", "ipa": "/ˈmeɪnfreɪm/", "pos": "n", "meaning_cn": "主机,中央处理机", "example": "the so-called mainframe machines" },
+    { "word": "technician", "ipa": "/tekˈnɪʃən/", "pos": "n", "meaning_cn": "技师,技术员", "example": "employing full-time technicians" },
+    { "word": "user-friendly", "ipa": "/ˌjuːzərˈfrendli/", "pos": "adj", "meaning_cn": "容易操作的,好用的", "example": "user-friendly home computers" },
+    { "word": "multimedia", "ipa": "/ˌmʌltiˈmiːdiə/", "pos": "adj", "meaning_cn": "多媒体的", "example": "multimedia machines" },
+    { "word": "alternative", "ipa": "/ɔːlˈtɜːrnətɪv/", "pos": "adj", "meaning_cn": "可供选择的", "example": "suggesting alternative routes" },
+    { "word": "diagnose", "ipa": "/ˈdaɪəɡnoʊs/", "pos": "v", "meaning_cn": "诊断", "example": "help doctors diagnose illnesses" },
+    { "word": "relieve", "ipa": "/rɪˈliːv/", "pos": "v", "meaning_cn": "减轻,免除", "example": "relieve office workers of dull work" },
+    { "word": "accountant", "ipa": "/əˈkaʊntənt/", "pos": "n", "meaning_cn": "会计", "example": "office workers and accountants" },
+    { "word": "repetitive", "ipa": "/rɪˈpetətɪv/", "pos": "adj", "meaning_cn": "重复的", "example": "dull, repetitive clerical work" },
+    { "word": "clerical", "ipa": "/ˈklerɪkəl/", "pos": "adj", "meaning_cn": "办公室工作的,文书的", "example": "repetitive clerical work" },
+    { "word": "network", "ipa": "/ˈnetwɜːrk/", "pos": "n", "meaning_cn": "网络", "example": "through linked networks" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "过去将来 would + when 引导的时间定语从句" },
+    { "gp": "gp2", "name": "could (not) have done(对过去的推测)" },
+    { "gp": "gp3", "name": "否定词 Nor 置句首的倒装" },
+    { "gp": "gp4", "name": "as … as 同级比较 + 形容词 + enough to do" },
+    { "gp": "gp5", "name": "take over / be capable of / relieve sb of / dismiss the idea that" },
+    { "gp": "gp6", "name": "词汇辨析(relieve/repetitive/diagnose)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Barrett foresaw a time ___ computers would be small enough to hold.\"(引导时间的定语从句,填关系副词)", "stem_cn": "巴瑞特预见到有一天计算机会小到能握在手里。", "options": ["when", "which", "that", "where"] },
+    { "gp": "gp1", "stem": "\"He predicted that computers ___ be used in hospitals one day.\"(过去看未来,用过去将来时)", "stem_cn": "他预言计算机有一天会用于医院。", "options": ["would", "will", "are", "have"] },
+    { "gp": "gp1", "stem": "\"Who could have imagined computers ___ be in every home?\"(过去看未来:过去将来时)", "stem_cn": "谁能想到计算机会进入每个家庭?", "options": ["would", "will", "are", "do"] },
+    { "gp": "gp2", "stem": "\"Who ___ have imagined this back in the 1970s?\"(对过去的推测:谁能想到,填情态动词)", "stem_cn": "谁能在70年代想到这些?", "options": ["could", "can", "must", "need"] },
+    { "gp": "gp2", "stem": "\"Barrett could not possibly ___ foreseen the Internet.\"(could not ___ foreseen:不可能预见到,填助动词)", "stem_cn": "巴瑞特根本不可能预见到国际互联网。", "options": ["have", "has", "had", "having"] },
+    { "gp": "gp2", "stem": "\"He could not have ___ how the Internet would change life.\"(could have + 过去分词:预见到)", "stem_cn": "他无法预见互联网会如何改变生活。", "options": ["foreseen", "foresee", "foresaw", "foreseeing"] },
+    { "gp": "gp3", "stem": "\"___ could he have foreseen the rise of the Internet.\"(“也不…”,否定词置句首引起倒装,填这个词)", "stem_cn": "他也无法预见互联网的兴起。", "options": ["Nor", "So", "And", "But"] },
+    { "gp": "gp3", "stem": "\"Nor ___ he imagine computers in every pocket.\"(Nor 置句首,倒装填助动词)", "stem_cn": "他也想象不到计算机会装进每个人的口袋。", "options": ["could", "he could", "did he", "he"] },
+    { "gp": "gp3", "stem": "\"He never saw the Internet, ___ did he foresee smartphones.\"(“也不”,填句首否定词引起倒装)", "stem_cn": "他没预见到互联网,也没预见到智能手机。", "options": ["nor", "so", "and", "but"] },
+    { "gp": "gp4", "stem": "\"Computers are now as common ___ TV sets.\"(“与…一样”同级比较,填第二个比较词)", "stem_cn": "如今计算机像电视机一样普及。", "options": ["as", "than", "like", "so"] },
+    { "gp": "gp4", "stem": "\"Computers became small ___ to hold in the hand.\"(形容词 + ___ + to do:足够…以至于能)", "stem_cn": "计算机变得小到能握在手里。", "options": ["enough", "too", "very", "so"] },
+    { "gp": "gp4", "stem": "\"PCs are not ___ large as the old mainframes.\"(否定同级比较“不如…那么大”,填结尾前的比较词)", "stem_cn": "个人电脑不像旧主机那么大。", "options": ["as", "more", "than", "such"] },
+    { "gp": "gp5", "stem": "\"Small PCs have taken ___ many functions of the mainframe.\"(take ___:接管、接收,填副词)", "stem_cn": "小型个人电脑接管了主机的许多功能。", "options": ["over", "off", "up", "in"] },
+    { "gp": "gp5", "stem": "\"Computers are capable ___ providing traffic information.\"(be capable ___ doing:能够,填介词)", "stem_cn": "计算机能够提供交通信息。", "options": ["of", "to", "for", "in"] },
+    { "gp": "gp5", "stem": "\"Computers relieve office workers ___ repetitive work.\"(relieve sb ___ sth:免除某人…,填介词)", "stem_cn": "计算机使办公人员免除重复劳动。", "options": ["of", "from", "with", "to"] },
+    { "gp": "gp6", "stem": "\"To ease or lessen someone's burden is to ___ them of it.\"(“减轻、免除”用哪个词)", "stem_cn": "减轻、免除某人的负担。", "options": ["relieve", "add", "force", "ignore"] },
+    { "gp": "gp6", "stem": "\"Work that is dull and done over and over is ___.\"(“重复的”用哪个词)", "stem_cn": "枯燥、一遍遍重复的工作。", "options": ["repetitive", "creative", "rare", "exciting"] },
+    { "gp": "gp6", "stem": "\"A doctor who identifies an illness is said to ___ it.\"(“诊断”用哪个词)", "stem_cn": "医生查明、诊断疾病。", "options": ["diagnose", "cure", "cause", "hide"] }
+  ],
+  "stage6": [
+    { "stem": "notoriously 的意思是:", "options": ["众所周知地(尤指坏事)", "秘密地", "偶然地", "正式地"] },
+    { "stem": "mainframe 的意思是:", "options": ["主机,中央处理机", "屏幕", "键盘", "网线"] },
+    { "stem": "relieve 的意思是:", "options": ["减轻,免除", "加重", "制造", "忽视"] },
+    { "stem": "diagnose 的意思是:", "options": ["诊断", "治愈", "传染", "隐瞒"] },
+    { "stem": "repetitive 的意思是:", "options": ["重复的", "新颖的", "短暂的", "复杂的"] },
+    { "stem": "alternative 的意思是:", "options": ["可供选择的", "唯一的", "昂贵的", "危险的"] }
+  ],
+  "contrast": [
+    { "us": "program", "uk": "programme", "note_cn": "程序;计算机程序美英都写 program,一般节目美语 program、英式 programme" },
+    { "us": "organization", "uk": "organisation", "note_cn": "机构、组织;拼写差异,美语 -z-" },
+    { "us": "center", "uk": "centre", "note_cn": "中心;拼写差异,美语 center" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" }
+  ],
+  "chunks": [
+    { "us": "take over", "ipa": "/teɪk ˈoʊvər/", "example1": "PCs have taken over many functions of the mainframe.", "example1_cn": "个人电脑接管了主机的许多功能。", "example2": "A new manager took over the team.", "example2_cn": "一位新经理接管了这个团队。" },
+    { "us": "be capable of", "ipa": "/bi ˈkeɪpəbəl əv/", "example1": "Computers are capable of amazing things.", "example1_cn": "计算机能做出惊人的事。", "example2": "She is capable of great kindness.", "example2_cn": "她能表现出极大的善意。" },
+    { "us": "point the way", "ipa": "/pɔɪnt ðə weɪ/", "example1": "The Altair pointed the way to the future.", "example1_cn": "“牛郎星”指明了未来的方向。", "example2": "His research pointed the way forward.", "example2_cn": "他的研究指明了前进的方向。" },
+    { "us": "relieve sb of", "ipa": "/rɪˈliːv ˈsʌmbədi əv/", "example1": "Computers relieve workers of dull tasks.", "example1_cn": "计算机使工人免除枯燥的活儿。", "example2": "The new tool relieved us of hours of work.", "example2_cn": "这个新工具替我们省下了好几个小时的活儿。" }
+  ],
+  "stage7_cloze": {
+    "context": "Predicting the future is notoriously difficult. Who could ___1___ imagined in the 1970s that computers would one day be as common ___2___ TV sets? Small PCs have taken ___3___ many functions of the old mainframes. Leon Barrett foresaw many computer uses, but he could not possibly have foreseen the Internet — nor ___4___ he have foreseen how we would use it to find information on any subject.",
+    "blanks": [
+      { "blank_no": 1, "options": ["have", "has", "had", "having"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["as", "than", "like", "so"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["over", "off", "up", "in"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["could", "can", "did", "would"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What 'future' electronic development was Leon Barrett unable to foresee?", "options": ["The Internet", "The personal computer", "The mainframe", "The telephone"] },
+    { "stem": "What did Barrett correctly predict about computers?", "options": ["They would be small enough to hold and would help doctors and office workers", "That they would rule the world", "That they would never be affordable", "That they would replace televisions"] },
+    { "stem": "What were the large early computers called?", "options": ["Mainframe machines", "Personal computers", "Multimedia machines", "Home computers"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"巴瑞特根本不可能预见到互联网\"(could not have done):", "options": ["Barrett could not possibly have foreseen the Internet.", "Barrett could not possibly foreseen the Internet.", "Barrett could not possibly have foresaw the Internet.", "Barrett can not possibly have foreseen the Internet."] },
+    { "stem": "你想说\"他也无法预见互联网的兴起\"(Nor 句首倒装):", "options": ["Nor could he have foreseen the rise of the Internet.", "Nor he could have foreseen the rise of the Internet.", "Nor did he could foresee the rise of the Internet.", "Nor have he could foreseen the rise of the Internet."] },
+    { "stem": "你想说\"小型电脑接管了主机的许多功能\"(take over):", "options": ["Small computers have taken over many functions of the mainframe.", "Small computers have taken many functions over of the mainframe.", "Small computers have take over many functions of the mainframe.", "Small computers have taken off many functions of the mainframe."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "relieve 的意思是:", "options": ["减轻,免除", "加重", "制造", "忽视"] },
+    { "kind": "vocab", "stem": "repetitive 的意思是:", "options": ["重复的", "新颖的", "短暂的", "复杂的"] },
+    { "kind": "grammar", "stem": "\"Who ___ have imagined this back in the 1970s?\"(对过去的推测:谁能想到,填情态动词)", "stem_cn": "谁能在70年代想到这些?", "options": ["could", "can", "must", "need"] },
+    { "kind": "grammar", "stem": "\"___ could he have foreseen the rise of the Internet.\"(否定词置句首,后接倒装)", "stem_cn": "他也无法预见互联网的兴起。", "options": ["Nor", "So", "And", "But"] },
+    { "kind": "scenario", "stem": "\"take over\" 的意思是:", "options": ["接管、接收", "拿走", "起飞", "推翻"] },
+    { "kind": "scenario", "stem": "\"be capable of\" 的意思是:", "options": ["有能力做、能够", "害怕", "拒绝", "负责"] },
+    { "kind": "reading", "stem": "How did Leon Barrett's view of computers differ from what people believed in his day?", "options": ["He dismissed the idea that computers would 'think' and 'rule the world'", "He thought computers would never be useful", "He believed computers would stay huge forever", "He predicted computers would disappear"], "passage": true },
+    { "kind": "reading", "stem": "Which of these did Barrett correctly foresee?", "options": ["Computers helping doctors diagnose illnesses and relieving office workers of clerical work", "Computers replacing all human jobs", "The end of all mainframes", "Computers that could feel emotions"], "passage": true },
+    { "kind": "listening", "stem": "According to the passage, what pointed the way to the future in 1975?", "options": ["A primitive home computer called the Altair", "The first Apple", "The IBM PC", "Microsoft DOS"], "audio": true },
+    { "kind": "listening", "stem": "How have computers changed over time, according to the writer?", "options": ["Smaller and smaller, more and more powerful, and cheaper and cheaper", "Larger and more expensive", "Slower but prettier", "Fewer and rarer"], "audio": true }
+  ]
+}

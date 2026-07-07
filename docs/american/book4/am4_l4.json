@@ -1,0 +1,133 @@
+{
+  "id": "am4_l4",
+  "unit_no": 1,
+  "lesson_no": 4,
+  "title_en": "Seeing Hands",
+  "title_cn": "会看东西的手",
+  "grammar_focus": "定语从句(who/which/that,并列关系词 who…but who…)、被动语态各时态(have been reported / was noticed / was given)、现在分词短语作状语(moving…, wearing…)、be able to do + the moment 引导时间从句、疑问词引导的宾语从句(why…, how…, where…)(NCE4 无 KS 页,考点由课文结构自取;原创承载·一名视力正常却能用皮肤感知形状与颜色的少女受科学委员会测试的奇闻·题材科普无害;为 IP 洁净化用原创虚构人物与情节;美语化 color/gray;第四册第4课)",
+  "scene": "近些年,有人报道了几起怪事:某些人似乎能用指尖辨别颜色,甚至能感知藏在一堵实墙后面的物体。其中最不可思议的一例,说的是一个名叫娜迪亚的小姑娘——她视力完全正常,却还能透过手上的皮肤感知形状和颜色。她这份异能最早是被母亲注意到的。一天下午,娜迪亚把手放在一只小保险箱关着的门上,毫不迟疑地说出了锁在里面的硬币,还问为什么那儿存了那么多旧硬币。她这份天赋的消息很快传到一群科学家那里;春天,一个专门的委员会给她做了一长串测试。测试中,她能隔着一块不透明的屏读出印在纸上的字;更奇的是,她把胳膊肘在一叠彩色卡片上缓缓移动,竟一张张准确报出颜色。在另一项测试里,她戴着厚手套,用一根手指描出了藏在地毯下面那幅画的轮廓。科学家发现,她的膝盖和肩膀也有类似的敏感度。整个测试过程中娜迪亚都被蒙着眼;事实上,只要不蒙眼,她似乎就完全失去了这种能力。人们还发现:尽管她能用手指感知,可她的手一沾湿,这能力就立刻停止了。",
+  "grammar_card": {
+    "title": "定语从句 / 被动各时态 / 现在分词作状语 / be able to do·the moment",
+    "intro": "①定语从句 who/which/that 修饰名词;并列时可 who…but who…。②被动语态各时态:have been reported(现在完成)/ was noticed(过去)/ was given(过去)。③现在分词短语作状语,表伴随/方式:Moving her elbow…, she named…。④be able to do=能够做;the moment=“一…就…”,引导时间从句。⑤疑问词 why/how/where 引导宾语从句,用陈述语序。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["定语从句", "名词 + who/which/that", "people who can detect colors"],
+        ["被动各时态", "have been / was + 过去分词", "cases have been reported"],
+        ["现在分词作状语", "doing …, 主句", "Moving her elbow, she named…"],
+        ["the moment 时间从句", "the moment + 句子", "ceased the moment her hands were wet"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "现在完成的被动=have/has + been + 过去分词:cases have been reported。", "mark": "have been reported" },
+      { "rule": "the moment / the instant 相当于 as soon as,引导时间从句,“一…就…”。", "mark": "the moment her hands were wet" },
+      { "rule": "美式拼写:color(颜色,英式 colour)、gray(灰色,英式 grey)。本课已按美语写。", "mark": "color / gray" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How did the girl discover she had this unusual gift?",
+    "options": ["Her mother noticed it when she laid her hand on a closed safe", "She read about it in a newspaper", "A teacher pointed it out", "She saw it in a dream"],
+    "answer_index": 0
+  },
+  "passage": "In recent years several strange cases have been reported of people who seem able to detect colors with their fingertips, or even to sense objects hidden behind a solid wall. One of the most remarkable concerns a young girl named Nadia, who has perfectly normal vision but who can also perceive shapes and colors through the skin of her hands. Her unusual gift was first noticed by her mother. One afternoon Nadia laid her hand on the closed door of a small safe and, without hesitation, described the coins locked inside and asked why so many old ones had been kept there. Word of her talent soon reached a group of scientists, and in the spring she was given a long series of tests by a special commission. During these tests she was able to read a page of print through an opaque screen; and, stranger still, moving her elbow slowly over a set of colored cards, she named each color correctly. In another test, wearing thick gloves, she traced with one finger the outline of a picture that had been hidden beneath a rug. The scientists found that her knees and shoulders showed a similar sensitivity. Throughout every trial Nadia was blindfolded; indeed, unless she was blindfolded she seemed to lose the power altogether. It was also discovered that, although she could perceive things with her fingers, the ability ceased the moment her hands were wet.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "In recent years several strange cases have been reported of people who seem able to detect colors with their fingertips, or even to sense objects hidden behind a solid wall. One of the most remarkable concerns a young girl named Nadia, who has perfectly normal vision but who can also perceive shapes and colors through the skin of her hands.", "text_cn": "近些年,有人报道了几起怪事:某些人似乎能用指尖辨别颜色,甚至能感知藏在一堵实墙后面的物体。其中最不可思议的一例,说的是一个名叫娜迪亚的小姑娘——她视力完全正常,却还能透过手上的皮肤感知形状和颜色。" },
+    { "seq": 2, "speaker": null, "text_en": "Her unusual gift was first noticed by her mother. One afternoon Nadia laid her hand on the closed door of a small safe and, without hesitation, described the coins locked inside and asked why so many old ones had been kept there.", "text_cn": "她这份异能最早是被母亲注意到的。一天下午,娜迪亚把手放在一只小保险箱关着的门上,毫不迟疑地说出了锁在里面的硬币,还问为什么那儿存了那么多旧硬币。" },
+    { "seq": 3, "speaker": null, "text_en": "Word of her talent soon reached a group of scientists, and in the spring she was given a long series of tests by a special commission. During these tests she was able to read a page of print through an opaque screen; and, stranger still, moving her elbow slowly over a set of colored cards, she named each color correctly.", "text_cn": "她这份天赋的消息很快传到一群科学家那里;春天,一个专门的委员会给她做了一长串测试。测试中,她能隔着一块不透明的屏读出印在纸上的字;更奇的是,她把胳膊肘在一叠彩色卡片上缓缓移动,竟一张张准确报出颜色。" },
+    { "seq": 4, "speaker": null, "text_en": "In another test, wearing thick gloves, she traced with one finger the outline of a picture that had been hidden beneath a rug. The scientists found that her knees and shoulders showed a similar sensitivity.", "text_cn": "在另一项测试里,她戴着厚手套,用一根手指描出了藏在地毯下面那幅画的轮廓。科学家发现,她的膝盖和肩膀也有类似的敏感度。" },
+    { "seq": 5, "speaker": null, "text_en": "Throughout every trial Nadia was blindfolded; indeed, unless she was blindfolded she seemed to lose the power altogether. It was also discovered that, although she could perceive things with her fingers, the ability ceased the moment her hands were wet.", "text_cn": "整个测试过程中娜迪亚都被蒙着眼;事实上,只要不蒙眼,她似乎就完全失去了这种能力。人们还发现:尽管她能用手指感知,可她的手一沾湿,这能力就立刻停止了。" }
+  ],
+  "words": [
+    { "word": "perceive", "ipa": "/pərˈsiːv/", "pos": "v", "meaning_cn": "感知,察觉", "example": "perceive shapes and colors through the skin" },
+    { "word": "sensitivity", "ipa": "/ˌsensəˈtɪvəti/", "pos": "n", "meaning_cn": "敏感(性),灵敏度", "example": "her knees showed a similar sensitivity" },
+    { "word": "opaque", "ipa": "/oʊˈpeɪk/", "pos": "adj", "meaning_cn": "不透明的", "example": "read through an opaque screen" },
+    { "word": "solid", "ipa": "/ˈsɑːlɪd/", "pos": "adj", "meaning_cn": "实心的,坚实的", "example": "hidden behind a solid wall" },
+    { "word": "blindfold", "ipa": "/ˈblaɪndfoʊld/", "pos": "adj", "meaning_cn": "被蒙住眼睛的", "example": "Nadia was blindfolded" },
+    { "word": "commission", "ipa": "/kəˈmɪʃən/", "pos": "n", "meaning_cn": "委员会", "example": "tests by a special commission" },
+    { "word": "outline", "ipa": "/ˈaʊtlaɪn/", "pos": "n", "meaning_cn": "轮廓", "example": "traced the outline of a picture" },
+    { "word": "detect", "ipa": "/dɪˈtekt/", "pos": "v", "meaning_cn": "察觉,辨别", "example": "detect colors with their fingertips" },
+    { "word": "cease", "ipa": "/siːs/", "pos": "v", "meaning_cn": "停止", "example": "the ability ceased the moment her hands were wet" },
+    { "word": "vision", "ipa": "/ˈvɪʒən/", "pos": "n", "meaning_cn": "视力,视觉", "example": "she has perfectly normal vision" },
+    { "word": "talent", "ipa": "/ˈtælənt/", "pos": "n", "meaning_cn": "天赋,才能", "example": "word of her talent soon reached scientists" },
+    { "word": "safe", "ipa": "/seɪf/", "pos": "n", "meaning_cn": "保险箱", "example": "the closed door of a small safe" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "定语从句(who/which/that)" },
+    { "gp": "gp2", "name": "被动语态各时态(have been / was + 过去分词)" },
+    { "gp": "gp3", "name": "现在分词短语作状语(moving / wearing)" },
+    { "gp": "gp4", "name": "be able to do + the moment 时间从句" },
+    { "gp": "gp5", "name": "疑问词引导的宾语从句(why/how/where)" },
+    { "gp": "gp6", "name": "词汇辨析(perceive/opaque/cease)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The report concerns people ___ can detect colors with their fingers.\"(定语从句,指人,作主语)", "stem_cn": "报告说的是能用手指辨色的人。", "options": ["who", "which", "what", "whose"] },
+    { "gp": "gp1", "stem": "\"Nadia has normal vision but ___ can also perceive through her skin.\"(定语从句,并列关系词,指人)", "stem_cn": "娜迪亚视力正常,却还能用皮肤感知。", "options": ["who", "which", "what", "whom"] },
+    { "gp": "gp1", "stem": "\"She traced the outline of a picture ___ had been hidden under a rug.\"(定语从句,指物,作主语)", "stem_cn": "她描出了藏在地毯下那幅画的轮廓。", "options": ["that", "who", "what", "whose"] },
+    { "gp": "gp2", "stem": "\"Several strange cases ___ been reported in recent years.\"(现在完成的被动:___ + been + 过去分词,填助动词)", "stem_cn": "近年来报道了几起怪事。", "options": ["have", "has", "was", "are"] },
+    { "gp": "gp2", "stem": "\"Her gift was first ___ by her mother.\"(一般过去被动:was + 过去分词,填过去分词)", "stem_cn": "她的天赋最初是被母亲注意到的。", "options": ["noticed", "notice", "noticing", "notices"] },
+    { "gp": "gp2", "stem": "\"She was ___ a long series of tests by a commission.\"(一般过去被动:was + 过去分词“被给予”)", "stem_cn": "一个委员会给她做了一长串测试。", "options": ["given", "give", "giving", "gave"] },
+    { "gp": "gp3", "stem": "\"___ her elbow over the cards, she named each color.\"(现在分词作状语,主动“移动…”)", "stem_cn": "她把胳膊肘在卡片上移动,叫出每种颜色。", "options": ["Moving", "Moved", "Move", "To move"] },
+    { "gp": "gp3", "stem": "\"___ thick gloves, she traced the hidden outline.\"(现在分词作状语,“戴着…”)", "stem_cn": "戴着厚手套,她描出了隐藏的轮廓。", "options": ["Wearing", "Worn", "Wear", "To wear"] },
+    { "gp": "gp3", "stem": "\"She read the page, ___ her fingers lightly over it.\"(现在分词作伴随状语)", "stem_cn": "她指尖轻拂纸面,读出了那一页。", "options": ["running", "run", "ran", "to run"] },
+    { "gp": "gp4", "stem": "\"During the tests she was ___ to read through an opaque screen.\"(be ___ to do:能够做某事,填这个形容词)", "stem_cn": "测试中她能隔着不透明的屏读字。", "options": ["able", "ability", "ableness", "enable"] },
+    { "gp": "gp4", "stem": "\"The power ceased the ___ her hands got wet.\"(the ___=一…就…:引导时间从句,填名词)", "stem_cn": "她的手一沾湿,那能力就消失了。", "options": ["moment", "time", "while", "since"] },
+    { "gp": "gp4", "stem": "\"She was able ___ describe the coins inside the safe.\"(be able + 不定式:填不定式符号)", "stem_cn": "她能描述保险箱里的硬币。", "options": ["to", "for", "of", "that"] },
+    { "gp": "gp5", "stem": "\"She asked ___ so many old coins had been kept there.\"(疑问词从句,填‘为什么’)", "stem_cn": "她问为什么那里存了那么多旧硬币。", "options": ["why", "which", "that", "so"] },
+    { "gp": "gp5", "stem": "\"The scientists could not explain ___ she did it.\"(疑问词从句,填‘怎样’)", "stem_cn": "科学家无法解释她是怎么做到的。", "options": ["how", "what", "who", "whose"] },
+    { "gp": "gp5", "stem": "\"No one knew ___ her strange gift came from.\"(疑问词从句,填‘从哪里’)", "stem_cn": "没人知道她这奇特天赋从何而来。", "options": ["where", "when", "that", "which"] },
+    { "gp": "gp6", "stem": "\"Not letting light through means ___.\"(“不透明的”用哪个词)", "stem_cn": "不让光透过的。", "options": ["opaque", "clear", "bright", "thin"] },
+    { "gp": "gp6", "stem": "\"To become aware of something through the senses is to ___ it.\"(“感知”用哪个词)", "stem_cn": "通过感官觉察到某物。", "options": ["perceive", "forget", "hide", "break"] },
+    { "gp": "gp6", "stem": "\"To stop happening is to ___.\"(“停止”用哪个词)", "stem_cn": "不再发生、停止。", "options": ["cease", "begin", "grow", "spread"] }
+  ],
+  "stage6": [
+    { "stem": "perceive 的意思是:", "options": ["感知,察觉", "忘记", "破坏", "隐藏"] },
+    { "stem": "sensitivity 的意思是:", "options": ["敏感(性),灵敏度", "麻木", "力量", "速度"] },
+    { "stem": "opaque 的意思是:", "options": ["不透明的", "透明的", "明亮的", "薄的"] },
+    { "stem": "commission 的意思是:", "options": ["委员会", "工厂", "军队", "学校"] },
+    { "stem": "outline 的意思是:", "options": ["轮廓", "颜色", "重量", "气味"] },
+    { "stem": "cease 的意思是:", "options": ["停止", "开始", "生长", "继续"] }
+  ],
+  "contrast": [
+    { "us": "color", "uk": "colour", "note_cn": "颜色;拼写差异,美语 color" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" },
+    { "us": "meter", "uk": "metre", "note_cn": "米(长度单位);拼写差异,美语 meter" },
+    { "us": "favorite", "uk": "favourite", "note_cn": "最喜爱的;拼写差异,美语 favorite" }
+  ],
+  "chunks": [
+    { "us": "make out", "ipa": "/meɪk aʊt/", "example1": "She could make out the outline under the rug.", "example1_cn": "她能辨认出地毯下的轮廓。", "example2": "I could just make out his face in the dark.", "example2_cn": "黑暗中我勉强能看清他的脸。" },
+    { "us": "a series of", "ipa": "/ə ˈsɪriːz əv/", "example1": "She was given a series of tests.", "example1_cn": "她接受了一连串测试。", "example2": "A series of accidents followed.", "example2_cn": "接连发生了一系列事故。" },
+    { "us": "lay one's hand on", "ipa": "/leɪ wʌnz hænd ɑːn/", "example1": "She laid her hand on the safe.", "example1_cn": "她把手放在保险箱上。", "example2": "He laid his hand on my shoulder.", "example2_cn": "他把手搭在我肩上。" },
+    { "us": "come to light", "ipa": "/kʌm tə laɪt/", "example1": "Her strange gift soon came to light.", "example1_cn": "她奇特的天赋很快为人所知。", "example2": "New facts came to light later.", "example2_cn": "后来又有新的事实被发现。" }
+  ],
+  "stage7_cloze": {
+    "context": "Several cases have ___1___ reported of people able to perceive colors with their skin. A girl ___2___ has normal vision can also 'see' with her hands. Moving her elbow over some cards, she was able ___3___ name each color. The power ceased the ___4___ her hands got wet.",
+    "blanks": [
+      { "blank_no": 1, "options": ["been", "be", "being", "was"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["who", "which", "what", "whom"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["to", "for", "of", "that"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["moment", "time", "while", "since"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How was the girl's strange gift first discovered?", "options": ["Her mother noticed it when she laid her hand on a closed safe", "She read about it in a book", "A doctor found it during a checkup", "She discovered it while blindfolded"] },
+    { "stem": "What could the girl do during the scientists' tests?", "options": ["Read print and name colors through an opaque screen", "Move objects with her mind", "See through her closed eyes only", "Predict the future"] },
+    { "stem": "When did the girl's ability stop working?", "options": ["The moment her hands were wet", "When she was blindfolded", "In the dark", "When she was tired"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"她的天赋最初是被母亲注意到的\"(被动语态):", "options": ["Her gift was first noticed by her mother.", "Her gift was first notice by her mother.", "Her gift first noticed by her mother.", "Her gift was first noticing by her mother."] },
+    { "stem": "你想说\"她把胳膊肘在卡片上移动,叫出每种颜色\"(现在分词作状语):", "options": ["Moving her elbow over the cards, she named each color.", "Moved her elbow over the cards, she named each color.", "Move her elbow over the cards, she named each color.", "To move her elbow over the cards, she named each color."] },
+    { "stem": "你想说\"报告说的是能用手指辨色的人\"(定语从句):", "options": ["The report concerns people who can detect colors with their fingers.", "The report concerns people which can detect colors with their fingers.", "The report concerns people what can detect colors with their fingers.", "The report concerns people can detect colors with their fingers."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "perceive 的意思是:", "options": ["感知,察觉", "忘记", "破坏", "隐藏"] },
+    { "kind": "vocab", "stem": "opaque 的意思是:", "options": ["不透明的", "透明的", "明亮的", "薄的"] },
+    { "kind": "grammar", "stem": "\"Several cases have ___ reported.\"(现在完成的被动:have + ___ + 过去分词,填这个词)", "stem_cn": "报道了几起怪事。", "options": ["been", "be", "being", "was"] },
+    { "kind": "grammar", "stem": "\"___ her elbow over the cards, she named each color.\"(现在分词作状语)", "stem_cn": "她把胳膊肘在卡片上移动,叫出每种颜色。", "options": ["Moving", "Moved", "Move", "To move"] },
+    { "kind": "scenario", "stem": "\"make out\" 的意思是:", "options": ["辨认出、看清", "弄丢", "拒绝", "加速"] },
+    { "kind": "scenario", "stem": "\"a series of\" 的意思是:", "options": ["一连串、一系列", "一点点", "一半", "偶尔"] },
+    { "kind": "reading", "stem": "How did the girl first reveal her strange ability?", "options": ["She described coins locked inside a closed safe", "She read a book in the dark", "She drew a picture", "She solved a puzzle"], "passage": true },
+    { "kind": "reading", "stem": "What did the scientists find about her knees and shoulders?", "options": ["They showed a similar sensitivity", "They were completely numb", "They were injured", "They were stronger than normal"], "passage": true },
+    { "kind": "listening", "stem": "What condition made the girl lose her power to perceive?", "options": ["Her hands becoming wet", "Bright light", "Loud noise", "Being watched"], "audio": true },
+    { "kind": "listening", "stem": "Under what condition could she perceive things best?", "options": ["When she was blindfolded", "When her eyes were open", "When she was asleep", "When she wore gloves"], "audio": true }
+  ]
+}

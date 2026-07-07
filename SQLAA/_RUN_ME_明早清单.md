@@ -6,7 +6,18 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
-## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1–U5 五单元收官 L1–L25**,累计 1100 题)
+## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1–U6 六单元收官 L1–L30**,累计 1320 题)
+
+## 📌 AM3 U6 收官(L26–L30 · `american_am3_seed_unit06.sql` · 220题=44×5,全🟢)
+> NCE3 复习阶段续:一课融合多个已学难点。以下逐课主考:
+- 🔴 **需跑** `american_am3_seed_unit06.sql`(全新文件,含 L26–L30 五课)。
+  - **L26《A Cookie Contest 征购大饼干》**(动名词作宾语 avoid/mind/no use doing + go·turn·grow+形容词(go wrong/go bad/turn yellow) + by·in·on the way + send·give·lend sth to sb + one vs a + so...that·so vs such·饼干厂重金征购巨型饼干,冠军 2400 磅)——44 题🟢全绿。无需净化。
+  - **L27《It's Only Me 是我,别怕》**(It is said that 被动转述 + 不可数名词(knowledge/advice/news) + there be 各时态 + 目的状语 so that·in order to·so as not to + 被动不定式 to be paid + prep+whom/which·谈"人人都在卖点什么"的哲思小品)——44 题🟢全绿。轻净化:自由旅人形象,去掉行乞/偷窃暗示。
+  - **L28《Five Dollars Too Dear 五美元也太贵》**(no sooner...than 句首倒装 + as...as / not as...as + made in·by·of·from 辨析 + it takes sb 时间 to do + while/as+过去进行 + so far·to this day·美国游客在异国港口跟小贩砍价,五美元"淘"到一支永远写不出字的钢笔)——44 题🟢全绿。无需净化,幽默轶事。美式化:pounds→dollars、Made in the U.S.A.。
+  - **L29《Funny or Not? 是否可笑》**(动词固定介词 depend on/suffer from/base on + find·think·consider it+形容词+to do + laugh vs laugh at + keep on/off/up with/out + could vs was able to·谈幽默与地域性格+"黑色幽默"实例:病人摔断腿住院,出院派对上又滑倒摔断另一条腿的反讽)——44 题🟢全绿。**轻净化**:把"sick humor"改述为"拿倒霉、疼痛的糗事开玩笑",去掉"暴死/严重事故"的血腥字眼,保留无害的摔腿反讽。美式化:the hospital(加冠词)/movie/sick、New Yorker vs Texans。
+  - **L30《The Death of a Ghost 幽灵之死》**(give up·give in·give away + say vs tell + do vs make + be supposed to + used to do vs 过去进行 + 过去完成被动 work had been done·农场"闹鬼"实为被藏起的第三个兄弟埃里克夜里干活,像隐士活了五十年,去世时秘密才揭开)——44 题🟢全绿。**净化换情节**:去掉原课"战时开小差/被当局追捕"外壳,改为埃里克年轻时与家人争吵后负气出海、被误以为已故、秘密归家隐居;鬼屋悬念与隐士承载原样保留,无违法元素。犯罪/战争词(desert/regiment/action)按净化规则舍去,补入 haunted/reveal/astonish/funeral 承载情节。
+- **U6 主线**:NCE3 复习课续——L26 动名词/变化动词 → L27 被动转述/不可数名词/there be → L28 倒装/比较/made 辨析 → L29 介词搭配/laugh/could vs was able to → L30 give·say·do·make 短语综合。
+- 对账(U6 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **1320**(U1–U6 各 220)。
 
 ## 📌 AM3 U5 收官(L21–L25 · `american_am3_seed_unit05.sql` · 220题=44×5,全🟢)
 > NCE3 第二册(Unit 2,即 L21 起)多为**综合复习课**,一课融合前面多个难点。以下逐课主考:

@@ -1,0 +1,134 @@
+{
+  "id": "am4_l36",
+  "unit_no": 6,
+  "lesson_no": 36,
+  "title_en": "The Cost of Government",
+  "title_cn": "政府的开支",
+  "grammar_focus": "As … , so …(随着…,…也随之…)、trust/rely on sb to do(相信/指望某人做某事)、to the extent that …(在…的程度上/只要)、can/could + be + 过去分词(情态与被动连用)、Where 引导从句(凡…之处)(NCE4 无 KS 页,考点由课文结构自取;IP:源为雷蒙德·弗罗斯特《The Backward Society》一篇论‘信任是降低政府/企业成本关键’的文章,无具名真实人物;通用经济/政治观点用 100% 原创行文复述;题材=治理经济学·无害;美语化 labor/organization;第四册第36课·U6收尾课·L32/L33缺源待补)",
+  "scene": "如果一个国家严重不团结,把它维系在一起的重任就落到政府头上;这既抬高了政府的开支,又相应地减少了本可用于发展国家的经济资源。我们别忘了,在一个贫穷落后的国度里,那点资源是多么微薄。凡是政府开支高的地方,留给发展的资源就相应地少。这个道理,可以拿国家与私营企业作比。企业为了维持经营,不得不承担某些成本;这里我们只关心其中一种——管理和行政这家企业的成本。这类行政管理费,在公司里,好比一个国家的政府开支。它们之所以低,取决于企业里每个人在多大程度上可被信任、能以最有利于公司的方式行事。倘若人人都可被指望在自己的职责范围内担起责任、拿出主动性,那么每个岗位只需一人,管理费便维持在低位。可要是员工没法被这样信任,企业就得雇上成群的管理者、稽核员和工头;随着这些管理费上升,公司在支付了行政成本之后的利润,也随之下降。届时,公司能派作股息、或直接投入自身未来的钱,就更少了。国家也是一模一样。人民在多大程度上可被指望忠诚、负责地行事,政府就在多大程度上无须动用成群的警察与官员去维持秩序。可一旦国家分裂,政府就无法确信人民所为是否合乎国家利益,于是不得不相应地去监视、稽查、管控他们。因此,一个分裂的国家,注定要承担过高的政府开支。",
+  "grammar_card": {
+    "title": "As …, so … / trust·rely on sb to do / to the extent that / can·could be + 过去分词 / Where 引导",
+    "intro": "①As … , so …,‘随着…,…也随之…’。②trust/rely on + sb + to do。③to the extent that …,‘在…的程度上’。④can/could/cannot + be + 过去分词(情态与被动连用):can be trusted;could be used。⑤Where 引导从句,‘凡…之处’。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["As …, so …", "As …, so + 主句", "As overheads rise, so earnings fall"],
+        ["trust sb to do", "trust/rely on + sb + to do", "trust each worker to act"],
+        ["to the extent that", "to the extent that …", "low to the extent that all are trusted"],
+        ["情态 + 被动", "can/could + be + 过去分词", "can be trusted; could be used"],
+        ["Where 引导", "Where …, …", "Where the cost is high, resources are low"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "As … , so … 表‘随着…而…’的比例关系;后半句用 so 呼应句首的 As。", "mark": "As …, so …" },
+      { "rule": "rely 后接介词 on/upon,再接 sb + to do:rely upon the people to behave。", "mark": "rely upon sb to do" },
+      { "rule": "美式拼写:labor(劳动,英式 labour)、organization(组织,英式 organisation)。本课已按美语写。", "mark": "labor / organization" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is the most important factor, both in government and business, for keeping running costs low?",
+    "options": ["Trust — everyone can be relied upon to behave in the common interest", "A large police force", "Strict written rules", "High wages"],
+    "answer_index": 0
+  },
+  "passage": "If a nation is deeply disunited, it falls to the government to hold it together, and this raises the expense of government while reducing, correspondingly, the economic resources that could be used to develop the country. We should not forget how small those resources are in a poor and backward land. Where the cost of government is high, the resources left for development are correspondingly low. The point may be seen by comparing a nation with a private business. An enterprise has to incur certain costs simply in order to stay in business; here we are concerned with only one of them — the cost of managing and administering the firm. Such administrative overheads are, in a company, analogous to the cost of government in a nation. They are low to the extent that everyone in the business can be trusted to act in the way that best serves the firm. If each person can be relied upon to take responsibility and to show initiative within his own sphere, then only one worker is needed for each job, and overheads stay low. But if the workers cannot be trusted in this way, the business will need armies of administrators, checkers, and foremen; and as these administrative overheads rise, so the earnings of the firm, after the cost of administration is met, will fall. The company will then have less money to hand out as dividends or to invest directly in its own future. It is exactly the same with a nation. To the extent that the people can be relied upon to behave in a loyal and responsible manner, the government does not need armies of police and officials to keep them in order. But where a nation is disunited, the government cannot be sure that what the people do will serve the nation's interests, and it must watch, check, and control them accordingly. A disunited nation, therefore, is bound to incur unduly high costs of government.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "If a nation is deeply disunited, it falls to the government to hold it together, and this raises the expense of government while reducing, correspondingly, the economic resources that could be used to develop the country. We should not forget how small those resources are in a poor and backward land. Where the cost of government is high, the resources left for development are correspondingly low.", "text_cn": "如果一个国家严重不团结,把它维系在一起的重任就落到政府头上;这既抬高了政府的开支,又相应地减少了本可用于发展国家的经济资源。我们别忘了,在一个贫穷落后的国度里,那点资源是多么微薄。凡是政府开支高的地方,留给发展的资源就相应地少。" },
+    { "seq": 2, "speaker": null, "text_en": "The point may be seen by comparing a nation with a private business. An enterprise has to incur certain costs simply in order to stay in business; here we are concerned with only one of them — the cost of managing and administering the firm. Such administrative overheads are, in a company, analogous to the cost of government in a nation.", "text_cn": "这个道理,可以拿国家与私营企业作比。企业为了维持经营,不得不承担某些成本;这里我们只关心其中一种——管理和行政这家企业的成本。这类行政管理费,在公司里,好比一个国家的政府开支。" },
+    { "seq": 3, "speaker": null, "text_en": "They are low to the extent that everyone in the business can be trusted to act in the way that best serves the firm. If each person can be relied upon to take responsibility and to show initiative within his own sphere, then only one worker is needed for each job, and overheads stay low.", "text_cn": "它们之所以低,取决于企业里每个人在多大程度上可被信任、能以最有利于公司的方式行事。倘若人人都可被指望在自己的职责范围内担起责任、拿出主动性,那么每个岗位只需一人,管理费便维持在低位。" },
+    { "seq": 4, "speaker": null, "text_en": "But if the workers cannot be trusted in this way, the business will need armies of administrators, checkers, and foremen; and as these administrative overheads rise, so the earnings of the firm, after the cost of administration is met, will fall. The company will then have less money to hand out as dividends or to invest directly in its own future.", "text_cn": "可要是员工没法被这样信任,企业就得雇上成群的管理者、稽核员和工头;随着这些管理费上升,公司在支付了行政成本之后的利润,也随之下降。届时,公司能派作股息、或直接投入自身未来的钱,就更少了。" },
+    { "seq": 5, "speaker": null, "text_en": "It is exactly the same with a nation. To the extent that the people can be relied upon to behave in a loyal and responsible manner, the government does not need armies of police and officials to keep them in order. But where a nation is disunited, the government cannot be sure that what the people do will serve the nation's interests, and it must watch, check, and control them accordingly. A disunited nation, therefore, is bound to incur unduly high costs of government.", "text_cn": "国家也是一模一样。人民在多大程度上可被指望忠诚、负责地行事,政府就在多大程度上无须动用成群的警察与官员去维持秩序。可一旦国家分裂,政府就无法确信人民所为是否合乎国家利益,于是不得不相应地去监视、稽查、管控他们。因此,一个分裂的国家,注定要承担过高的政府开支。" }
+  ],
+  "words": [
+    { "word": "disunited", "ipa": "/ˌdɪsjuˈnaɪtɪd/", "pos": "adj", "meaning_cn": "不团结的,分裂的", "example": "if a nation is deeply disunited" },
+    { "word": "correspondingly", "ipa": "/ˌkɔːrəˈspɑːndɪŋli/", "pos": "adv", "meaning_cn": "相应地", "example": "resources are correspondingly low" },
+    { "word": "backward", "ipa": "/ˈbækwərd/", "pos": "adj", "meaning_cn": "落后的", "example": "a poor and backward land" },
+    { "word": "incur", "ipa": "/ɪnˈkɜːr/", "pos": "v", "meaning_cn": "招致,承担(费用)", "example": "an enterprise has to incur certain costs" },
+    { "word": "administer", "ipa": "/ədˈmɪnɪstər/", "pos": "v", "meaning_cn": "管理,治理", "example": "the cost of administering the firm" },
+    { "word": "administrative", "ipa": "/ədˈmɪnɪstreɪtɪv/", "pos": "adj", "meaning_cn": "行政的,管理的", "example": "such administrative overheads" },
+    { "word": "analogous", "ipa": "/əˈnæləɡəs/", "pos": "adj", "meaning_cn": "类似的,相似的", "example": "analogous to the cost of government" },
+    { "word": "overheads", "ipa": "/ˈoʊvərhedz/", "pos": "n", "meaning_cn": "经常性开支,管理费", "example": "administrative overheads stay low" },
+    { "word": "initiative", "ipa": "/ɪˈnɪʃətɪv/", "pos": "n", "meaning_cn": "主动性,首创精神", "example": "to show initiative within his sphere" },
+    { "word": "foreman", "ipa": "/ˈfɔːrmən/", "pos": "n", "meaning_cn": "工头,领班", "example": "armies of administrators and foremen" },
+    { "word": "dividend", "ipa": "/ˈdɪvɪdend/", "pos": "n", "meaning_cn": "股息,红利", "example": "money to hand out as dividends" },
+    { "word": "unduly", "ipa": "/ʌnˈduːli/", "pos": "adv", "meaning_cn": "过度地,不适当地", "example": "unduly high costs of government" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "As …, so …(随着…,…也…)" },
+    { "gp": "gp2", "name": "trust/rely on sb to do" },
+    { "gp": "gp3", "name": "to the extent that …" },
+    { "gp": "gp4", "name": "can/could + be + 过去分词(情态被动)" },
+    { "gp": "gp5", "name": "Where 引导从句(凡…之处)" },
+    { "gp": "gp6", "name": "词汇辨析(overheads/dividend/initiative)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"As overheads rise, ___ the earnings of the business will fall.\"(‘随着…,…也…’,填与句首 As 呼应的那个词)", "stem_cn": "随着管理费上升,企业的利润也随之下降。", "options": ["so", "as", "then", "also"] },
+    { "gp": "gp1", "stem": "\"As the cost of government rises, ___ the resources for development shrink.\"(‘随着…,…也随之…’的呼应结构,填与句首 As 呼应的那个词)", "stem_cn": "随着政府开支上升,发展所需的资源也随之缩减。", "options": ["so", "as", "then", "and"] },
+    { "gp": "gp1", "stem": "\"As trust grows, ___ the need for checkers falls.\"(‘随着…,…也…’,填与句首 As 呼应的那个词)", "stem_cn": "随着信任增加,对监督者的需求也随之减少。", "options": ["so", "as", "then", "also"] },
+    { "gp": "gp2", "stem": "\"The firm can trust each worker ___ act in its interests.\"(trust sb + 不定式,填不定式符号)", "stem_cn": "公司可以信任每个员工都为公司利益行事。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp2", "stem": "\"A government relies on its people ___ behave loyally.\"(rely on sb + 不定式,填不定式符号)", "stem_cn": "政府指望国民忠诚守法地行事。", "options": ["to", "for", "at", "in"] },
+    { "gp": "gp2", "stem": "\"If people can be trusted ___ take responsibility, fewer checkers are needed.\"(trust sb + 不定式(被动),填不定式符号)", "stem_cn": "若人们可被信任去承担责任,就不需那么多监督者。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp3", "stem": "\"Overheads are low ___ the extent that everyone can be trusted.\"(‘在…的程度上’,与 the extent that 搭配的那个介词)", "stem_cn": "管理费之低,取决于每个人在多大程度上可被信任。", "options": ["to", "in", "on", "at"] },
+    { "gp": "gp3", "stem": "\"To the ___ that people behave loyally, less policing is needed.\"(to the … that,‘程度’,填名词)", "stem_cn": "人们越是忠诚守法,越少需要监管。", "options": ["extent", "contrast", "silence", "absence"] },
+    { "gp": "gp3", "stem": "\"A nation prospers to the extent ___ its people can be relied upon.\"(to the extent + 从句,填连词)", "stem_cn": "一个国家的繁荣,取决于国民在多大程度上可被信赖。", "options": ["that", "which", "what", "whether"] },
+    { "gp": "gp4", "stem": "\"Each worker can be ___ to do his job well.\"(‘能被信任’,can be + 过去分词,填‘信任’那个动词的过去分词)", "stem_cn": "每个工人都能被信任把活儿干好。", "options": ["trusted", "trusting", "trust", "to trust"] },
+    { "gp": "gp4", "stem": "\"Resources that could be ___ for development are wasted on control.\"(‘本可被使用’,could be + 过去分词,填‘使用’那个动词的过去分词)", "stem_cn": "本可用于发展的资源,被耗在了管控上。", "options": ["used", "using", "use", "to use"] },
+    { "gp": "gp4", "stem": "\"The people cannot be ___ upon in a disunited nation.\"(‘不能被指望’,情态词 + be + 过去分词,填‘依赖/指望’那个动词的过去分词)", "stem_cn": "在一个分裂的国家,人民无法被指望。", "options": ["relied", "relying", "rely", "to rely"] },
+    { "gp": "gp5", "stem": "\"___ the cost of government is high, resources for development are low.\"(‘凡…之处/在…的地方’,填引导词)", "stem_cn": "凡政府开支高的地方,发展资源就低。", "options": ["Where", "Which", "What", "When"] },
+    { "gp": "gp5", "stem": "\"___ people can be trusted, fewer officials are needed.\"(‘凡…之处/在…情况下’,填引导词)", "stem_cn": "凡人们可被信任之处,就少需官员。", "options": ["Where", "Which", "What", "Who"] },
+    { "gp": "gp5", "stem": "\"___ there is no trust, overheads rise sharply.\"(‘凡…之处’,填引导词)", "stem_cn": "凡无信任之处,管理费便急剧上升。", "options": ["Where", "Which", "What", "Whom"] },
+    { "gp": "gp6", "stem": "\"The regular running costs of a business, like rent and management, are its ___.\"(“经常性开支,管理费”用哪个词)", "stem_cn": "企业的日常运营开支,如租金与管理。", "options": ["overheads", "profits", "wages", "sales"] },
+    { "gp": "gp6", "stem": "\"A share of a company's profit paid to shareholders is a ___.\"(“股息,红利”用哪个词)", "stem_cn": "公司分给股东的一份利润。", "options": ["dividend", "deposit", "debt", "discount"] },
+    { "gp": "gp6", "stem": "\"The ability to act and decide on your own is ___.\"(“主动性,首创精神”用哪个词)", "stem_cn": "自主行动与决断的能力。", "options": ["initiative", "imitation", "invitation", "isolation"] }
+  ],
+  "stage6": [
+    { "stem": "disunited 的意思是:", "options": ["不团结的,分裂的", "团结的", "独立的", "繁荣的"] },
+    { "stem": "incur 的意思是:", "options": ["招致,承担(费用)", "避免", "减少", "偿还"] },
+    { "stem": "analogous 的意思是:", "options": ["类似的,相似的", "相反的", "无关的", "相等的"] },
+    { "stem": "overheads 的意思是:", "options": ["经常性开支,管理费", "利润", "工资", "税收"] },
+    { "stem": "initiative 的意思是:", "options": ["主动性,首创精神", "懒惰", "服从", "犹豫"] },
+    { "stem": "unduly 的意思是:", "options": ["过度地,不适当地", "适度地", "合理地", "公正地"] }
+  ],
+  "contrast": [
+    { "us": "labor", "uk": "labour", "note_cn": "劳动,劳工;美语 labor,英式 labour" },
+    { "us": "organization", "uk": "organisation", "note_cn": "组织;美语 -ization,英式 -isation" },
+    { "us": "check", "uk": "cheque", "note_cn": "支票;美语 check,英式 cheque" },
+    { "us": "license", "uk": "licence", "note_cn": "执照(名词);美语 license,英式 licence" }
+  ],
+  "chunks": [
+    { "us": "hold together", "ipa": "/hoʊld təˈɡeðər/", "example1": "The government must hold the nation together.", "example1_cn": "政府必须把国家维系在一起。", "example2": "Glue holds the pieces together.", "example2_cn": "胶把碎片粘在一起。" },
+    { "us": "rely upon", "ipa": "/rɪˈlaɪ əˈpɑːn/", "example1": "The firm relies upon its workers to act well.", "example1_cn": "公司指望员工好好干。", "example2": "You can rely upon her in a crisis.", "example2_cn": "危难时你可以指望她。" },
+    { "us": "in order to", "ipa": "/ɪn ˈɔːrdər tuː/", "example1": "A firm must incur costs in order to stay in business.", "example1_cn": "企业为维持经营必须承担成本。", "example2": "They saved in order to buy a house.", "example2_cn": "他们攒钱为了买房。" },
+    { "us": "be concerned with", "ipa": "/biː kənˈsɜːrnd wɪð/", "example1": "Here we are concerned only with one kind of cost.", "example1_cn": "这里我们只关心一种成本。", "example2": "The book is concerned with trust.", "example2_cn": "这本书探讨的是信任。" }
+  ],
+  "stage7_cloze": {
+    "context": "Administrative overheads are low ___1___ the extent that everyone can be trusted to behave well. If workers can each be ___2___ to take responsibility, fewer checkers are needed. ___3___ trust is missing, the firm must hire armies of administrators. As overheads rise, ___4___ the earnings of the business fall.",
+    "blanks": [
+      { "blank_no": 1, "options": ["to", "in", "on", "at"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["trusted", "trusting", "trust", "to trust"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["Where", "Which", "What", "When"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["so", "as", "then", "also"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What keeps administrative costs low, both in government and business?", "options": ["Trust — everyone can be relied upon to behave in the common interest", "A large police force", "Strict written rules", "High wages"] },
+    { "stem": "What happens to a business when workers cannot be trusted?", "options": ["It needs armies of administrators and checkers, so overheads rise and earnings fall", "It simply closes at once", "It becomes more profitable", "Its workers leave"] },
+    { "stem": "Why does a disunited nation have high costs of government?", "options": ["The government must watch, check, and control people it cannot rely on", "Its people are very rich", "It has no police at all", "It spends nothing on development"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"随着管理费上升,企业的利润也随之下降\"(As … , so …):", "options": ["As overheads rise, so the earnings of the business fall.", "As overheads rise, as the earnings of the business fall.", "As overheads rise, then the earnings of the business fall.", "So overheads rise, as the earnings of the business fall."] },
+    { "stem": "你想说\"公司可以信任每个员工都为公司利益行事\"(trust sb to do):", "options": ["The firm can trust each worker to act in its interests.", "The firm can trust each worker act in its interests.", "The firm can trust each worker acting in its interests.", "The firm can trust each worker to acting in its interests."] },
+    { "stem": "你想说\"人们越是忠诚守法,越少需要监管\"(to the extent that):", "options": ["To the extent that people behave loyally, less policing is needed.", "To the extent what people behave loyally, less policing is needed.", "To extent that people behave loyally, less policing is needed.", "To the extent that people behaving loyally, less policing is needed."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "overheads 的意思是:", "options": ["经常性开支,管理费", "利润", "工资", "税收"] },
+    { "kind": "vocab", "stem": "initiative 的意思是:", "options": ["主动性,首创精神", "懒惰", "服从", "犹豫"] },
+    { "kind": "grammar", "stem": "\"As overheads rise, ___ the earnings of the business fall.\"(‘随着…,…也…’,填与句首 As 呼应的那个词)", "stem_cn": "随着管理费上升,企业利润也随之下降。", "options": ["so", "as", "then", "also"] },
+    { "kind": "grammar", "stem": "\"The firm can trust each worker ___ act in its interests.\"(trust sb + 不定式,填不定式符号)", "stem_cn": "公司可信任每个员工为公司利益行事。", "options": ["to", "for", "at", "of"] },
+    { "kind": "scenario", "stem": "\"rely upon\" 的意思是:", "options": ["依靠,指望", "怀疑", "命令", "忽视"] },
+    { "kind": "scenario", "stem": "\"hold together\" 的意思是:", "options": ["使…团结/不散架", "拆开", "举起", "藏起"] },
+    { "kind": "reading", "stem": "According to the passage, what makes a business's administrative overheads low?", "options": ["Everyone can be trusted to act in the firm's interests, so few supervisors are needed", "The business hires many checkers", "The workers are paid very little", "The firm sells cheap goods"], "passage": true },
+    { "kind": "reading", "stem": "Why does a disunited nation incur high costs of government?", "options": ["The government cannot trust the people, so it must watch and control them", "Its people are too loyal", "It has no enemies", "Its resources are unlimited"], "passage": true },
+    { "kind": "listening", "stem": "What is the single most important factor for keeping running costs low?", "options": ["Whether people can be trusted to behave in the common interest", "The size of the police force", "The number of written rules", "The level of wages"], "audio": true },
+    { "kind": "listening", "stem": "As administrative overheads rise, what happens to a firm's earnings?", "options": ["They fall, leaving less to distribute or invest", "They rise sharply", "They stay exactly the same", "They are taxed away"], "audio": true }
+  ]
+}

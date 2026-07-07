@@ -6,11 +6,12 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
-## 📌 本批变化(2026-07-06 session · am3 第三册 · U1 推进到 L4)
-- 🔴 **需跑(重跑)** `american_am3_seed_unit01.sql` —— 现含 **L1+L2+L3+L4**,共 **176 题(44×4)**。相对你上次已跑(仅 L1),期望 **净 +132**(L2+L3+L4)。
-  - **L4《A Suit and a Secret 一件西装,一个秘密》**(现在完成时 vs 现在完成进行时 has done/has been doing + 动词+to sb explain/describe/say + worth 值得·美国人 Danny 瞒妻当垃圾清运工)——44 题🟢全绿,承载 NCE3 L4 考点+词表(manual/sacrifice/privilege/status…)。**美式化**:dustman→garbage collector 入对照表。**注**:L4 原属🔴高危清单,实读后内容完全无害(阶层身份小喜剧),已自决产出,未占用梗概额度。
-- 对账:`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **176**(L1–L4)。
-- ⏭️ 下一步:U1 收官课 **L5**,之后出 U1 整单元批次汇报。
+## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1 整单元收官 L1–L5**)
+- 🔴 **需跑(重跑)** `american_am3_seed_unit01.sql` —— 现含 **L1+L2+L3+L4+L5**,共 **220 题(44×5)**,5 课全 🟢 全绿。相对你上次已跑(仅 L1),期望 **净 +176**(L2–L5)。
+  - **L5《The Exact Facts 确切数字》**(过去完成时 had done + 其被动 had been done + 否定副词句首倒装 Not only had he… / Never had I… + 冠词 a/the 复习·编辑逼记者要确切数字、记者数台阶时被捕入狱)——44 题🟢全绿。**主考取舍**:官方 Key structures 是冠词复习,但课文实际密集考点是过去完成+被动+倒装(书3级别),故以课文实考点为主考,冠词并入 gp5 复习。
+- **AM3 U1 五课语法进阶**:L1 过去叙事(过去/过去进行)→ L2 现在时(一般现在/现在进行/always+进行)→ L3 一般过去+不规则动词过去式 → L4 现在完成/完成进行 → L5 过去完成+被动+倒装。时态线索完整铺开。
+- 对账:`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **220**(L1–L5,U1 收官)。
+- ⏭️ 下一步:开 **AM3 U2(L6–L10)**。
 
 <!-- 历史(上一版) -->
 ## 📌 本批变化(2026-07-06 session · am3 第三册 · U1 推进到 L3)

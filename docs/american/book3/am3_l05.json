@@ -1,0 +1,134 @@
+{
+  "id": "am3_l05",
+  "unit_no": 1,
+  "lesson_no": 5,
+  "title_en": "The Exact Facts",
+  "title_cn": "确切数字",
+  "grammar_focus": "过去完成时(had + 过去分词:表示'过去的过去',比另一个过去动作更早)及其被动(had been + 过去分词),外加否定副词置于句首时的倒装(Not only had he... / Never had I... / Hardly had...);官方 Key structures 的冠词 a(n)/the 用法并入 gp5 作复习(原创承载 NCE3 L5 考点·编辑逼记者要确切数字,记者数台阶时被捕入狱)",
+  "scene": "美国杂志的编辑有时为了给读者确切的事实和数字,会走极端。去年,一家知名杂志派了一名记者出国,写一篇有关某遥远国家总统所住宏伟宫殿的报道。稿子寄到时,编辑读了第一句就拒绝发表。文章开头写道:“数百级台阶通向环绕宫殿的高墙。”编辑立刻给记者发传真,要他查清台阶的确切级数和墙的高度。记者动身去弄这些重要数字,可几周过去了,毫无回音。与此同时,杂志马上就要付印,编辑越来越不耐烦。他又发了三封传真,警告说若再不回,就解雇他。见还是没回音,编辑最终照原样发表了那篇文章。一周后,一封传真终于来了。这个可怜的记者不但被捕,还被投进了监狱。他只获准发出一条消息:他是在数那通向十五英尺高墙的1,084级台阶时被捕的。",
+  "grammar_card": {
+    "title": "“过去的过去”:过去完成时 & 它的被动 + 否定词倒装",
+    "intro": "①过去完成时 had + 过去分词——讲“比某个过去动作更早发生”的事,也叫“过去的过去”(When the article arrived 是过去;the magazine had sent a journalist 更早)。②被动就写成 had been + 过去分词(the poor man had been arrested 被捕;had been sent to prison 被关进监狱)。③否定副词/词组放句首(Not only、Never、Hardly、Seldom),后面要倒装——把 had/have/did 提到前面,像问句那样的语序(Not only had he been arrested… / Never had I seen…)。④本课官方还复习冠词:a(n) 泛指、the 特指。",
+    "table": {
+      "headers": ["结构", "用来讲", "例子"],
+      "rows": [
+        ["过去完成时 had done", "比另一个过去动作更早发生", "The magazine had sent a reporter before the article arrived."],
+        ["过去完成被动 had been done", "更早发生、且是“被……”", "The man had been arrested and sent to prison."],
+        ["否定词句首 + 倒装", "Not only / Never / Hardly 放句首", "Not only had he been arrested, but also thrown into prison."],
+        ["冠词 a(n) / the", "泛指 / 特指", "an article about the palace"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "两个过去动作,先发生的那个用过去完成时 had done,后发生的用一般过去时(After he had counted the steps, he wrote down the number)。", "mark": "had done vs did" },
+      { "rule": "Not only / Never / Hardly / Seldom 放句首,后面必须倒装:把 had/have/does/did 提到主语前面,像问句语序(Never had I seen…),这样用来加强语气。", "mark": "Not only had…" },
+      { "rule": "美语里“传真”说 fax;“解雇”口语常说 fire(sb)。本课已按美语写。", "mark": "fax / fire" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did the editor first refuse to publish the article?",
+    "options": ["It gave no exact numbers or facts", "It was far too short", "It had no photos", "It praised the president too much"],
+    "answer_index": 0
+  },
+  "passage": "Editors of American magazines sometimes go to extremes to give their readers exact facts and statistics. Last year, a well-known magazine had sent one of its journalists abroad to write an article about the grand palace where a distant country's president lived. When the article arrived, the editor read the very first line and refused to publish it. The article began: 'Hundreds of steps lead up to the high wall that surrounds the palace.' At once the editor faxed the journalist and told him to find the exact number of steps and the height of the wall. The journalist set out to obtain these important facts, but weeks passed and no reply came. Meanwhile, the magazine was about to go to press, and the editor grew more and more impatient. He sent three more faxes, warning that the journalist would be fired if he did not answer soon. When no answer came, the editor finally published the article just as it had originally been written. A week later, a fax at last arrived. Not only had the poor journalist been arrested, but he had also been thrown into prison. He had been allowed to send only one message: he had been arrested while he was counting the 1,084 steps that led up to the fifteen-foot wall around the palace.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Editors of American magazines sometimes go to extremes to give their readers exact facts and statistics. Last year, a well-known magazine had sent one of its journalists abroad to write an article about the grand palace where a distant country's president lived.", "text_cn": "美国杂志的编辑有时为了给读者确切的事实和数字,会走极端。去年,一家知名杂志派了一名记者出国,写一篇有关某遥远国家总统所住宏伟宫殿的报道。" },
+    { "seq": 2, "speaker": null, "text_en": "When the article arrived, the editor read the very first line and refused to publish it. The article began: 'Hundreds of steps lead up to the high wall that surrounds the palace.' At once the editor faxed the journalist and told him to find the exact number of steps and the height of the wall.", "text_cn": "稿子寄到时,编辑读了第一句就拒绝发表。文章开头写道:“数百级台阶通向环绕宫殿的高墙。”编辑立刻给记者发传真,要他查清台阶的确切级数和墙的高度。" },
+    { "seq": 3, "speaker": null, "text_en": "The journalist set out to obtain these important facts, but weeks passed and no reply came. Meanwhile, the magazine was about to go to press, and the editor grew more and more impatient.", "text_cn": "记者动身去弄这些重要数字,可几周过去了,毫无回音。与此同时,杂志马上就要付印,编辑越来越不耐烦。" },
+    { "seq": 4, "speaker": null, "text_en": "He sent three more faxes, warning that the journalist would be fired if he did not answer soon. When no answer came, the editor finally published the article just as it had originally been written.", "text_cn": "他又发了三封传真,警告说若再不回就解雇他。见还是没回音,编辑最终照原样发表了那篇文章。" },
+    { "seq": 5, "speaker": null, "text_en": "A week later, a fax at last arrived. Not only had the poor journalist been arrested, but he had also been thrown into prison. He had been arrested while he was counting the 1,084 steps that led up to the fifteen-foot wall around the palace.", "text_cn": "一周后,一封传真终于来了。这个可怜的记者不但被捕,还被投进了监狱。他是在数那通向十五英尺高墙的1,084级台阶时被捕的。" }
+  ],
+  "words": [
+    { "word": "editor", "ipa": "/ˈedɪtər/", "pos": "n", "meaning_cn": "编辑", "example": "editors of magazines" },
+    { "word": "extreme", "ipa": "/ɪkˈstriːm/", "pos": "n", "meaning_cn": "极端(go to extremes 走极端)", "example": "go to extremes" },
+    { "word": "statistics", "ipa": "/stəˈtɪstɪks/", "pos": "n", "meaning_cn": "统计数字", "example": "exact facts and statistics" },
+    { "word": "journalist", "ipa": "/ˈdʒɜːrnəlɪst/", "pos": "n", "meaning_cn": "新闻记者", "example": "one of its journalists" },
+    { "word": "president", "ipa": "/ˈprezɪdənt/", "pos": "n", "meaning_cn": "总统", "example": "the country's president" },
+    { "word": "palace", "ipa": "/ˈpæləs/", "pos": "n", "meaning_cn": "宫殿;宏伟的住宅", "example": "the grand palace" },
+    { "word": "publish", "ipa": "/ˈpʌblɪʃ/", "pos": "v", "meaning_cn": "出版,发表", "example": "refused to publish it" },
+    { "word": "fax", "ipa": "/fæks/", "pos": "n/v", "meaning_cn": "传真;发传真", "example": "the editor faxed the journalist" },
+    { "word": "impatient", "ipa": "/ɪmˈpeɪʃnt/", "pos": "adj", "meaning_cn": "不耐烦的", "example": "grew more and more impatient" },
+    { "word": "fire", "ipa": "/ˈfaɪər/", "pos": "v", "meaning_cn": "解雇,开除", "example": "would be fired" },
+    { "word": "originally", "ipa": "/əˈrɪdʒənəli/", "pos": "adv", "meaning_cn": "起初,原先", "example": "as it had originally been written" },
+    { "word": "obtain", "ipa": "/əbˈteɪn/", "pos": "v", "meaning_cn": "获得,取得", "example": "set out to obtain the facts" },
+    { "word": "arrest", "ipa": "/əˈrest/", "pos": "v", "meaning_cn": "逮捕", "example": "had been arrested" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "过去完成时(过去的过去,had done)" },
+    { "gp": "gp2", "name": "过去完成被动(had been done)" },
+    { "gp": "gp3", "name": "否定副词句首倒装(Not only/Never/Hardly)" },
+    { "gp": "gp4", "name": "过去完成 vs 一般过去(谁先发生)" },
+    { "gp": "gp5", "name": "冠词 a(n)/the 复习(官方KS)" },
+    { "gp": "gp6", "name": "词汇辨析(journalist/impatient/originally)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The magazine ___ a journalist abroad long before the article arrived.\"(比过去更早发生:过去完成时)", "stem_cn": "早在稿子寄到之前,杂志就已派了一名记者出国。", "options": ["had sent", "sent", "has sent", "sends"] },
+    { "gp": "gp1", "stem": "\"When the editor read the first line, he knew the journalist ___ the wrong kind of article.\"(读之前就已写好,更早:过去完成时)", "stem_cn": "编辑读第一句就知道记者写错了方向。", "options": ["had written", "wrote", "writes", "has written"] },
+    { "gp": "gp1", "stem": "\"He explained that he ___ the palace steps before the police stopped him.\"(被拦之前先在数,更早:过去完成时)", "stem_cn": "他解释说,警察拦住他之前,他正数着宫殿的台阶。", "options": ["had counted", "counted", "counts", "has counted"] },
+    { "gp": "gp1", "stem": "\"By June the editor still had not heard from the man, who ___ abroad back in April.\"(四月出国更早:过去完成时)", "stem_cn": "到六月编辑还没收到那人的消息,他四月就出国了。", "options": ["had gone", "went", "goes", "has gone"] },
+    { "gp": "gp2", "stem": "\"The editor finally published the article just as it ___ at first.\"(更早发生、且是“被写成”:过去完成被动)", "stem_cn": "编辑最终照它起初被写成的原样发表了。", "options": ["had been written", "was written", "has been written", "wrote"] },
+    { "gp": "gp2", "stem": "\"A week later they learned that the reporter ___ by the local police.\"(“被逮捕”、且更早:过去完成被动)", "stem_cn": "一周后他们得知,记者已被当地警察逮捕。", "options": ["had been arrested", "arrested", "was arresting", "has arrested"] },
+    { "gp": "gp2", "stem": "\"The poor man ___ into prison before he could send any news.\"(“被投入监狱”、且更早:过去完成被动)", "stem_cn": "还没来得及送出消息,这可怜人就已被投进监狱。", "options": ["had been thrown", "threw", "was throwing", "has thrown"] },
+    { "gp": "gp3", "stem": "\"Not only ___ the poor journalist been arrested, but also thrown into prison.\"(Not only 放句首,引起倒装)", "stem_cn": "这可怜的记者不但被捕,还被投进了监狱。", "options": ["had", "did", "was", "has"] },
+    { "gp": "gp3", "stem": "\"Never ___ I seen such a strange excuse until that day.\"(Never 放句首,引起倒装)", "stem_cn": "直到那天,我才见过这么奇怪的借口。", "options": ["had", "have", "was", "did"] },
+    { "gp": "gp3", "stem": "\"Hardly ___ the editor published the article when the fax finally arrived.\"(Hardly 放句首,引起倒装)", "stem_cn": "编辑刚发表文章,传真就终于到了。", "options": ["had", "he had", "did", "was"] },
+    { "gp": "gp4", "stem": "\"The journalist ___ before the editor even arrived at the office.\"(先离开,发生更早:过去完成时)", "stem_cn": "编辑还没到办公室,记者就已经走了。", "options": ["had left", "left", "leaves", "has left"] },
+    { "gp": "gp4", "stem": "\"After he ___ all the steps, he wrote down the exact number.\"(先数完,再写下:数用过去完成)", "stem_cn": "他把所有台阶数完之后,写下了确切的数字。", "options": ["had counted", "counts", "counting", "was counted"] },
+    { "gp": "gp4", "stem": "\"The editor grew impatient and finally ___ the article himself.\"(叙事主线、后发生:一般过去)", "stem_cn": "编辑不耐烦起来,最后自己把文章发表了。", "options": ["published", "had published", "publishes", "was publishing"] },
+    { "gp": "gp5", "stem": "\"The editor wanted to know ___ exact number of steps.\"(特指“那个唯一确定的数字”,用哪个冠词)", "stem_cn": "编辑想知道那个确切的台阶数。", "options": ["the", "a", "an", "不填"] },
+    { "gp": "gp5", "stem": "\"The journalist was writing ___ article about a famous palace.\"(泛指、单数可数、后面词以元音开头,用哪个冠词)", "stem_cn": "记者正写一篇有关著名宫殿的报道。", "options": ["an", "a", "the", "不填"] },
+    { "gp": "gp6", "stem": "\"A person who writes news reports for a magazine is a ___.\"(“记者”用哪个词)", "stem_cn": "为杂志写新闻报道的人是记者。", "options": ["journalist", "farmer", "dentist", "pilot"] },
+    { "gp": "gp6", "stem": "\"The editor grew ___ because the journalist would not reply.\"(“不耐烦的”用哪个词)", "stem_cn": "记者迟迟不回,编辑变得不耐烦。", "options": ["impatient", "grateful", "cheerful", "generous"] },
+    { "gp": "gp6", "stem": "\"The magazine printed the article just as it was ___ written.\"(“起初、原先”用哪个词)", "stem_cn": "杂志照文章起初被写成的样子发表了。", "options": ["originally", "luckily", "hardly", "rarely"] }
+  ],
+  "stage6": [
+    { "stem": "statistics 的意思是:", "options": ["统计数字", "政治", "语法", "距离"] },
+    { "stem": "impatient 的意思是:", "options": ["不耐烦的", "很耐心的", "高兴的", "害怕的"] },
+    { "stem": "fire(此处动词)的意思是:", "options": ["解雇,开除", "雇用", "表扬", "培训"] },
+    { "stem": "originally 的意思是:", "options": ["起初,原先", "突然", "幸运地", "故意地"] },
+    { "stem": "\"go to extremes\" 的意思是:", "options": ["走极端", "去远方", "准时到", "放弃努力"] },
+    { "stem": "editor 的意思是:", "options": ["编辑", "记者", "读者", "作者"] }
+  ],
+  "contrast": [
+    { "us": "mailman", "uk": "postman", "note_cn": "邮递员;美语 mailman,英式 postman" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" },
+    { "us": "cell phone", "uk": "mobile phone", "note_cn": "手机;美语 cell phone,英式 mobile phone" }
+  ],
+  "chunks": [
+    { "us": "go to extremes", "ipa": "/ɡoʊ tuː ɪkˈstriːmz/", "example1": "Editors sometimes go to extremes for exact facts.", "example1_cn": "编辑有时为了确切的事实会走极端。", "example2": "Don't go to extremes over a small mistake.", "example2_cn": "别为一个小错走极端。" },
+    { "us": "set out to do", "ipa": "/set aʊt tuː duː/", "example1": "He set out to obtain the important facts.", "example1_cn": "他动身去弄那些重要数字。", "example2": "They set out to build a new school.", "example2_cn": "他们着手建一所新学校。" },
+    { "us": "go to press", "ipa": "/ɡoʊ tuː pres/", "example1": "The magazine was about to go to press.", "example1_cn": "杂志马上就要付印了。", "example2": "The paper goes to press at midnight.", "example2_cn": "报纸午夜付印。" },
+    { "us": "not only ... but also", "ipa": "/nɑːt ˈoʊnli bʌt ˈɔːlsoʊ/", "example1": "He was not only arrested but also jailed.", "example1_cn": "他不但被捕,还被关了起来。", "example2": "She is not only smart but also kind.", "example2_cn": "她不但聪明,而且善良。" }
+  ],
+  "stage7_cloze": {
+    "context": "When the editor read the first line, he knew the journalist ___1___ the wrong kind of article. The magazine finally published it just as it ___2___ at first. A week later they learned that the reporter ___3___ by the police. Not only ___4___ he been arrested, but also thrown into prison.",
+    "blanks": [
+      { "blank_no": 1, "options": ["wrote", "had written", "writes", "has written"], "answer_index": 1 },
+      { "blank_no": 2, "options": ["had been written", "was written", "is written", "wrote"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["arrested", "had been arrested", "is arrested", "arrests"], "answer_index": 1 },
+      { "blank_no": 4, "options": ["had", "did", "was", "has"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did the editor refuse to publish the first article?", "options": ["It gave no exact facts or numbers", "It was far too long", "It had no title", "It praised the president"] },
+    { "stem": "Why did the editor grow impatient?", "options": ["The journalist would not reply and the magazine had to go to press", "He had lost the article", "His fax machine had broken", "The president had called him"] },
+    { "stem": "What had happened to the journalist?", "options": ["He had been arrested and sent to prison", "He had quit his job", "He had gone on vacation", "He had lost the palace address"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我到的时候他已经离开了\"(过去完成:更早发生):", "options": ["When I arrived, he had already left.", "When I arrived, he already leaves.", "When I arrived, he was already leaving away.", "When I had arrived, he already left."] },
+    { "stem": "你想说\"我从没见过这么奇怪的借口\"(Never 放句首,倒装):", "options": ["Never had I seen such a strange excuse.", "Never I had seen such a strange excuse.", "Never did I saw such a strange excuse.", "Never have I saw such a strange excuse."] },
+    { "stem": "你想说\"那篇文章按原样发表了\"(过去完成被动):", "options": ["The article was published just as it had been written.", "The article published just as it had written.", "The article was publish just as it had been wrote.", "The article had been publish just as it wrote."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "journalist 的意思是:", "options": ["新闻记者", "编辑", "读者", "作家"] },
+    { "kind": "vocab", "stem": "impatient 的意思是:", "options": ["不耐烦的", "很耐心的", "高兴的", "害怕的"] },
+    { "kind": "grammar", "stem": "\"The editor published the piece just as the writer ___ it at first.\"(先写、后发表:过去完成)", "stem_cn": "编辑照作者起初写的原样发表了文章。", "options": ["had written", "wrote", "writes", "was writing"] },
+    { "kind": "grammar", "stem": "\"Not only ___ he been arrested, but also thrown into prison.\"(Not only 放句首,倒装)", "stem_cn": "他不但被捕,还被投进了监狱。", "options": ["had", "did", "was", "has"] },
+    { "kind": "scenario", "stem": "\"go to extremes\" 的意思是:", "options": ["走极端", "去远方", "准时到", "放弃努力"] },
+    { "kind": "scenario", "stem": "\"set out to do\" 的意思是:", "options": ["着手去做…", "拒绝做…", "假装做…", "忘记做…"] },
+    { "kind": "reading", "stem": "Why did the editor send the journalist a fax?", "options": ["To ask for the exact number of steps and the wall's height", "To fire him at once", "To praise his article", "To cancel the story"], "passage": true },
+    { "kind": "reading", "stem": "What was the journalist doing when he was arrested?", "options": ["Counting the 1,084 steps up to the wall", "Taking photos of the president", "Selling the magazine", "Painting the palace wall"], "passage": true },
+    { "kind": "listening", "stem": "What did the editor finally do with the article?", "options": ["He published it just as it was first written", "He threw it away", "He rewrote it himself", "He gave it to another magazine"], "audio": true },
+    { "kind": "listening", "stem": "Where was the journalist when he sent his last message?", "options": ["In prison", "At the palace gate", "In the editor's office", "On a plane home"], "audio": true }
+  ]
+}

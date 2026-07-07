@@ -21,7 +21,12 @@
   - **L10《The Loss of the Titanic 泰坦尼克号的沉没》**——名词后缀构词(-er/-ist/-ness/-ion/-ity) + 过去完成/被动 + 过去虚拟条件。泰坦尼克**史实克制叙述**(不渲染死亡,落点在"救生艇不足→立法配足"的安全教训)。
 - **U2 构词法三部曲**:L6 否定前缀 → L7 名词变形容词后缀 → L10 名词后缀,配合时态复现(过去/被动/完成/虚拟)。
 - 对账(U2 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **440**(U1 220 + U2 220)。
-- ⏭️ 下一步:开 **AM3 U3(L11–L15)**。L11/L12/L14/L15 原属🔴清单,按新规"读到再判"。
+
+## 📌 AM3 U3 进行中(L11–L15 · 新文件 `american_am3_seed_unit03.sql`)
+- 🔴 **需跑** `american_am3_seed_unit03.sql`(全新文件)—— 逐课累加,每课 44 题。
+  - **L11《Not Guilty 无罪》**(间接引语 He said that.../He asked whether.../He asked what... + say vs tell + 大写字母规则·旅客被海关误当走私犯,"香水"其实是自制发胶)——44 题🟢全绿。原属🔴,实读后是无害海关喜剧(旅客本就"无罪"、无真实犯罪),轻度保留,未占梗概额度。
+- 对账(U3 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **484**(U1+U2 的440 + L11 的44)。
+- ⏭️ U3 余 L12–L15。
 
 <!-- 历史(上一版) -->
 ## 📌 本批变化(2026-07-06 session · am3 第三册 · U1 推进到 L3)

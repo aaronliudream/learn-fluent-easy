@@ -1,0 +1,135 @@
+{
+  "id": "am3_l11",
+  "unit_no": 3,
+  "lesson_no": 11,
+  "title_en": "Not Guilty",
+  "title_cn": "无罪",
+  "grammar_focus": "间接引语(转述别人的话:He said that.../He told me.../He asked whether.../He asked what...,转述时时态后移、人称与语序相应变化),外加 say vs tell 的区别与大写字母规则(专有名词/国家国籍/星期月份/句首首字母大写)(原创承载 NCE3 L11 考点·旅客被海关官员误当走私犯,'香水'其实是自制发胶)",
+  "scene": "如今海关官员大多挺宽容,但你走“无需申报”通道、其实什么也没带时,他们照样能拦下你,连老实人都会被弄得心里发虚。而老练的职业走私犯就算箱子里藏了五百块金表,也从不心慌。上个月我出国回来,一个特别爱管闲事的年轻海关官员,一看就认定我在搞名堂。“有什么要申报的吗?”他盯着我的眼睛问。“没有,”我自信地答。“介意打开这个箱子吗?”“一点也不,”我告诉他。他把箱子翻了个底朝天,我精心码好的东西转眼乱成一团。忽然他眼睛一亮——他在箱底发现一个小瓶,一把抓了过去。“香水吧?”他讽刺地问,“这个你本该申报的。香水可不免进口税。”“这不是香水,”我笑着说,“是自制发胶——我自己配的一点混合物。”不出所料,他不信。“你闻闻,”我怂恿道。他拧开盖子,把瓶子凑到鼻孔前,一股难闻的气味立刻让他确信我说的是实话。几分钟后,一名官员用粉笔在我行李上做了记号,我便清清白白地匆匆离开了。",
+  "grammar_card": {
+    "title": "间接引语(转述别人的话) + 大写字母",
+    "intro": "①把别人说的话转述出来,叫间接引语。转述时:say/tell 后的内容,时态通常“后移”一步(is→was, have→had, make→made, will→would);人称也随之改变。②转述一般疑问句(Yes/No 问句)用 whether 或 if:He asked whether I had anything to declare。③转述特殊疑问句要保留疑问词、并把语序还原成陈述:He asked what was in the bottle / where I had bought it。④say 后面一般不直接接“人”;tell 后面要接“人”:He said that... / He told me that...。⑤大写字母:句首、人名地名、国家/国籍、星期、月份、书名等首字母要大写。",
+    "table": {
+      "headers": ["转述类型", "怎么变", "例子"],
+      "rows": [
+        ["陈述句", "say/tell that + 时态后移", "'It is gel.' → He said that it was gel."],
+        ["一般疑问句", "ask + whether/if", "'Do you...?' → He asked whether I..."],
+        ["特殊疑问句", "ask + 疑问词 + 陈述语序", "'What is it?' → He asked what it was."],
+        ["say vs tell", "tell 后接人,say 不接人", "He said that... / He told me that..."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "转述时态后移一步:一般现在→一般过去(is→was, make→made),现在完成/一般过去→过去完成(have→had, did→had done),will→would, can→could。", "mark": "时态后移" },
+      { "rule": "转述疑问句时,问句语序要还原成“陈述语序”:不是 what is it,而是 what it was;不是 did you buy,而是 you had bought。", "mark": "语序还原" },
+      { "rule": "大写字母:句首、人名(Tom)、地名/国家(Canada)、国籍语言(English)、星期(Monday)、月份(July)、书名首字母都要大写。", "mark": "Capital letters" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was the customs officer looking for?",
+    "options": ["Smuggled or undeclared goods", "A lost passport", "A missing child", "A parking spot"],
+    "answer_index": 0
+  },
+  "passage": "These days, customs officers are usually quite tolerant, but they can still stop you in the 'Nothing to Declare' lane and make even honest travelers feel guilty. A hardened, professional smuggler, of course, stays perfectly calm, even with a suitcase full of hidden watches. When I flew home from a trip abroad last month, one very officious young officer clearly decided that I was up to something. 'Do you have anything to declare?' he asked, looking me straight in the eye. 'No,' I answered confidently. 'Would you mind opening your suitcase?' he said. 'Not at all,' I told him. He went through my case with great care, and everything I had packed so neatly was soon in a dreadful mess. Suddenly his eyes lit up: he had spotted a small bottle at the bottom and pounced on it. 'Perfume, isn't it?' he asked sarcastically. 'You should have declared this. Perfume is not exempt from import duty.' 'It isn't perfume,' I said with a smile. 'It's homemade hair gel, a little mixture I make myself.' As I expected, he did not believe me. 'Try it!' I said. He unscrewed the cap and lifted the bottle to his nostrils. The smell was so dreadful that he was instantly convinced I was telling the truth. A few minutes later, an officer marked my baggage with chalk, and I hurried away, innocent after all.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "These days, customs officers are usually quite tolerant, but they can still stop you in the 'Nothing to Declare' lane and make even honest travelers feel guilty. A hardened, professional smuggler, of course, stays perfectly calm, even with a suitcase full of hidden watches.", "text_cn": "如今海关官员大多挺宽容,但你走“无需申报”通道、其实什么也没带时,他们照样能拦下你,连老实人都会被弄得心里发虚。而老练的职业走私犯就算箱子里藏了五百块金表,也从不心慌。" },
+    { "seq": 2, "speaker": null, "text_en": "When I flew home from a trip abroad last month, one very officious young officer clearly decided that I was up to something. 'Do you have anything to declare?' he asked, looking me straight in the eye. 'No,' I answered confidently.", "text_cn": "上个月我出国回来,一个特别爱管闲事的年轻海关官员,一看就认定我在搞名堂。“有什么要申报的吗?”他盯着我的眼睛问。“没有,”我自信地答。" },
+    { "seq": 3, "speaker": null, "text_en": "'Would you mind opening your suitcase?' he said. 'Not at all,' I told him. He went through my case with great care, and everything I had packed so neatly was soon in a dreadful mess.", "text_cn": "“介意打开这个箱子吗?”“一点也不,”我告诉他。他把箱子翻了个底朝天,我精心码好的东西转眼乱成一团。" },
+    { "seq": 4, "speaker": null, "text_en": "Suddenly his eyes lit up: he had spotted a small bottle at the bottom and pounced on it. 'Perfume, isn't it?' he asked sarcastically. 'You should have declared this. Perfume is not exempt from import duty.'", "text_cn": "忽然他眼睛一亮——他在箱底发现一个小瓶,一把抓了过去。“香水吧?”他讽刺地问,“这个你本该申报的。香水可不免进口税。”" },
+    { "seq": 5, "speaker": null, "text_en": "'It isn't perfume,' I said with a smile. 'It's homemade hair gel, a little mixture I make myself.' He unscrewed the cap and lifted the bottle to his nostrils. The smell was so dreadful that he was convinced I was telling the truth, and I hurried away, innocent after all.", "text_cn": "“这不是香水,”我笑着说,“是自制发胶——我自己配的一点混合物。”他拧开盖子,把瓶子凑到鼻孔前,一股难闻的气味立刻让他确信我说的是实话,我便清清白白地匆匆离开了。" }
+  ],
+  "words": [
+    { "word": "guilty", "ipa": "/ˈɡɪlti/", "pos": "adj", "meaning_cn": "犯罪的,内疚的", "example": "make honest travelers feel guilty" },
+    { "word": "tolerant", "ipa": "/ˈtɑːlərənt/", "pos": "adj", "meaning_cn": "宽容的", "example": "customs officers are quite tolerant" },
+    { "word": "declare", "ipa": "/dɪˈkler/", "pos": "v", "meaning_cn": "(向海关)申报", "example": "anything to declare" },
+    { "word": "smuggler", "ipa": "/ˈsmʌɡlər/", "pos": "n", "meaning_cn": "走私者", "example": "a professional smuggler" },
+    { "word": "officious", "ipa": "/əˈfɪʃəs/", "pos": "adj", "meaning_cn": "爱管闲事的,爱指手画脚的", "example": "an officious young officer" },
+    { "word": "confidently", "ipa": "/ˈkɑːnfɪdəntli/", "pos": "adv", "meaning_cn": "自信地", "example": "I answered confidently" },
+    { "word": "dreadful", "ipa": "/ˈdredfl/", "pos": "adj", "meaning_cn": "可怕的,一团糟的", "example": "a dreadful mess" },
+    { "word": "pounce", "ipa": "/paʊns/", "pos": "v", "meaning_cn": "猛抓,扑住", "example": "pounced on it" },
+    { "word": "perfume", "ipa": "/ˈpɜːrfjuːm/", "pos": "n", "meaning_cn": "香水", "example": "Perfume, isn't it?" },
+    { "word": "exempt", "ipa": "/ɪɡˈzempt/", "pos": "adj", "meaning_cn": "被免除的,豁免的", "example": "not exempt from import duty" },
+    { "word": "duty", "ipa": "/ˈduːti/", "pos": "n", "meaning_cn": "税,关税", "example": "import duty" },
+    { "word": "mixture", "ipa": "/ˈmɪkstʃər/", "pos": "n", "meaning_cn": "混合物", "example": "a little mixture I make myself" },
+    { "word": "unscrew", "ipa": "/ˌʌnˈskruː/", "pos": "v", "meaning_cn": "拧开,旋松", "example": "unscrewed the cap" },
+    { "word": "baggage", "ipa": "/ˈbæɡɪdʒ/", "pos": "n", "meaning_cn": "行李", "example": "marked my baggage with chalk" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "间接引语:陈述句(时态后移)" },
+    { "gp": "gp2", "name": "间接引语:一般疑问句(whether/if)" },
+    { "gp": "gp3", "name": "间接引语:特殊疑问句(保留疑问词)" },
+    { "gp": "gp4", "name": "say vs tell 辨析" },
+    { "gp": "gp5", "name": "大写字母规则" },
+    { "gp": "gp6", "name": "词汇辨析(smuggler/officious/duty)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "转述句:把 'I have nothing to declare' 转述成 He said that he ___ nothing to declare.(时态后移)", "stem_cn": "他说他没有什么要申报的。", "options": ["had", "has", "have", "is having"] },
+    { "gp": "gp1", "stem": "转述句:把 'It is hair gel' 转述成 I told him that it ___ hair gel.(时态后移)", "stem_cn": "我告诉他那是发胶。", "options": ["was", "is", "are", "has been"] },
+    { "gp": "gp1", "stem": "转述句:把 'I make it myself' 转述成 I said that I ___ it myself.(时态后移)", "stem_cn": "我说那是我自己配的。", "options": ["made", "make", "makes", "making"] },
+    { "gp": "gp2", "stem": "转述句:把 'Do you have anything to declare?' 转述成 He asked ___ I had anything to declare.(转述'是否'的一般疑问,用哪个连词)", "stem_cn": "他问我是否有东西要申报。", "options": ["whether", "that", "what", "who"] },
+    { "gp": "gp2", "stem": "转述句:把 'Is this perfume?' 转述成 He asked ___ that was perfume.(转述'是否',用哪个连词)", "stem_cn": "他问那是不是香水。", "options": ["if", "that", "what", "which"] },
+    { "gp": "gp2", "stem": "转述句:把 'Will you open it?' 转述成 He asked ___ I would open it.(转述'是否',用哪个连词)", "stem_cn": "他问我愿不愿意打开它。", "options": ["whether", "that", "what", "how"] },
+    { "gp": "gp3", "stem": "转述句:把 'What is in the bottle?' 转述成 He asked ___ was in the bottle.(保留疑问词)", "stem_cn": "他问瓶子里是什么。", "options": ["what", "that", "if", "whether"] },
+    { "gp": "gp3", "stem": "转述句:把 'Why are you so calm?' 转述成 He asked ___ I was so calm.(保留疑问词)", "stem_cn": "他问我为什么这么镇定。", "options": ["why", "that", "if", "what"] },
+    { "gp": "gp3", "stem": "转述句:把 'Where did you buy it?' 转述成 He asked ___ I had bought it.(保留疑问词、语序还原)", "stem_cn": "他问我是在哪儿买的。", "options": ["where", "that", "if", "whether"] },
+    { "gp": "gp4", "stem": "\"He ___ that the bottle was perfume.\"(后面不直接接人时,用哪个词的过去式)", "stem_cn": "他说那瓶子里是香水。", "options": ["said", "told", "spoke", "talked"] },
+    { "gp": "gp4", "stem": "\"I ___ him that it was only hair gel.\"(后面接人 him 时,用哪个词的过去式)", "stem_cn": "我告诉他那只是发胶。", "options": ["told", "said", "spoke", "talked"] },
+    { "gp": "gp5", "stem": "下面哪句大小写正确?(星期几首字母要大写)", "options": ["We arrived on Monday.", "We arrived on monday.", "we arrived on Monday.", "We Arrived On Monday."] },
+    { "gp": "gp5", "stem": "下面哪句大小写正确?(国家、国籍首字母要大写)", "options": ["He is from Canada and speaks English.", "He is from canada and speaks english.", "he is from Canada and speaks English.", "He Is From Canada And English."] },
+    { "gp": "gp5", "stem": "下面哪句大小写正确?(月份首字母要大写)", "options": ["My trip was in July.", "My trip was in july.", "my trip was in July.", "My Trip Was In July."] },
+    { "gp": "gp6", "stem": "\"A person who brings goods into a country illegally is a ___.\"(“走私者”用哪个词)", "stem_cn": "非法把货物带进国家的人是走私者。", "options": ["smuggler", "teacher", "farmer", "doctor"] },
+    { "gp": "gp6", "stem": "\"To tell the customs what you are bringing in is to ___ it.\"(“申报”用哪个词)", "stem_cn": "把带进来的东西告诉海关就是申报。", "options": ["declare", "hide", "destroy", "lose"] },
+    { "gp": "gp6", "stem": "\"An officer who loves to interfere in a bossy way is ___.\"(“爱管闲事的”用哪个词)", "stem_cn": "爱指手画脚、多管闲事的官员是 officious。", "options": ["officious", "generous", "gentle", "lazy"] },
+    { "gp": "gp6", "stem": "\"Tax you pay on goods brought into a country is import ___.\"(“税”用哪个词)", "stem_cn": "带货物进国家要交的税是进口税。", "options": ["duty", "gift", "prize", "menu"] }
+  ],
+  "stage6": [
+    { "stem": "smuggler 的意思是:", "options": ["走私者", "海关官员", "游客", "司机"] },
+    { "stem": "declare 的意思是:", "options": ["(向海关)申报", "隐藏", "丢弃", "打碎"] },
+    { "stem": "officious 的意思是:", "options": ["爱管闲事的", "慷慨的", "害羞的", "诚实的"] },
+    { "stem": "dreadful 的意思是:", "options": ["可怕的,一团糟的", "美好的", "便宜的", "安静的"] },
+    { "stem": "\"exempt\" 的意思是:", "options": ["被免除的,豁免的", "必须的", "昂贵的", "危险的"] },
+    { "stem": "unscrew 的意思是:", "options": ["拧开,旋松", "拧紧", "打碎", "粘牢"] }
+  ],
+  "contrast": [
+    { "us": "baggage", "uk": "luggage", "note_cn": "行李;美语 baggage,英式 luggage" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" },
+    { "us": "line", "uk": "queue", "note_cn": "队伍;美语 line,英式 queue" },
+    { "us": "restroom", "uk": "toilet", "note_cn": "洗手间;美语 restroom,英式 toilet" }
+  ],
+  "chunks": [
+    { "us": "have nothing to declare", "ipa": "/hæv ˈnʌθɪŋ tuː dɪˈkler/", "example1": "I have nothing to declare.", "example1_cn": "我没有需要申报的东西。", "example2": "Travelers with nothing to declare use the green lane.", "example2_cn": "没有需申报物品的旅客走绿色通道。" },
+    { "us": "would you mind doing", "ipa": "/wʊd juː maɪnd ˈduːɪŋ/", "example1": "Would you mind opening your suitcase?", "example1_cn": "你介意打开箱子吗?", "example2": "Would you mind closing the window?", "example2_cn": "你介意关一下窗吗?" },
+    { "us": "should have done", "ipa": "/ʃʊd hæv dʌn/", "example1": "You should have declared this.", "example1_cn": "这个你本该申报的(却没申报)。", "example2": "I should have called you earlier.", "example2_cn": "我本该早点给你打电话的。" },
+    { "us": "as I expected", "ipa": "/æz aɪ ɪkˈspektɪd/", "example1": "As I expected, he did not believe me.", "example1_cn": "不出所料,他不信我。", "example2": "As I expected, the store was closed.", "example2_cn": "不出所料,店关门了。" }
+  ],
+  "stage7_cloze": {
+    "context": "The customs officer asked me ___1___ I had anything to declare. I told him that I ___2___ nothing to hide. He then asked ___3___ was in the small bottle. I said it ___4___ only homemade hair gel, and after one smell, he let me go.",
+    "blanks": [
+      { "blank_no": 1, "options": ["that", "whether", "what", "why"], "answer_index": 1 },
+      { "blank_no": 2, "options": ["had", "have", "has", "having"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["what", "that", "if", "whether"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["is", "was", "are", "being"], "answer_index": 1 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did the young officer stop the traveler?", "options": ["He suspected the traveler was a smuggler", "The traveler had no ticket", "The traveler was famous", "The plane was late"] },
+    { "stem": "What did the officer think was in the small bottle?", "options": ["Undeclared perfume", "Gold watches", "A pile of money", "Medicine"] },
+    { "stem": "What was really in the bottle?", "options": ["Homemade hair gel", "Expensive perfume", "Cold soup", "Nothing at all"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"他问我是否有东西要申报\"(ask + whether/if):", "options": ["He asked whether I had anything to declare.", "He asked do I have anything to declare.", "He asked that I had anything to declare.", "He asked me whether do I have anything to declare."] },
+    { "stem": "你想说\"我告诉他那是发胶\"(tell sb that):", "options": ["I told him that it was hair gel.", "I said him that it was hair gel.", "I told to him that it was hair gel.", "I told him that it is hair gel."] },
+    { "stem": "你想说\"他问我东西是在哪儿买的\"(ask + where,语序还原):", "options": ["He asked where I had bought it.", "He asked where did I buy it.", "He asked where had I bought it.", "He asked me where do I buy it."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "smuggler 的意思是:", "options": ["走私者", "海关官员", "游客", "司机"] },
+    { "kind": "vocab", "stem": "exempt 的意思是:", "options": ["被免除的,豁免的", "必须的", "昂贵的", "危险的"] },
+    { "kind": "grammar", "stem": "\"He said that the bottle ___ hair gel.\"(转述陈述,is 后移)", "stem_cn": "他说那瓶子里是发胶。", "options": ["was", "is", "are", "been"] },
+    { "kind": "grammar", "stem": "\"He asked ___ I had anything to declare.\"(转述一般疑问,用“是否”)", "stem_cn": "他问我是否有东西要申报。", "options": ["whether", "that", "what", "why"] },
+    { "kind": "scenario", "stem": "\"have nothing to declare\" 的意思是:", "options": ["没有需要申报的东西", "没钱付款", "没时间排队", "没带行李"] },
+    { "kind": "scenario", "stem": "\"should have declared\" 的意思是:", "options": ["本该申报却没申报", "将要申报", "禁止申报", "正在申报"] },
+    { "kind": "reading", "stem": "How did the traveler prove the bottle was not perfume?", "options": ["He let the officer smell it", "He showed a receipt", "He drank it", "He poured it out"], "passage": true },
+    { "kind": "reading", "stem": "How did the story end?", "options": ["The traveler was allowed to go, innocent", "The traveler was arrested", "The bottle was taken away", "The officer bought the gel"], "passage": true },
+    { "kind": "listening", "stem": "What did the customs officer suspect the traveler of?", "options": ["Smuggling or hiding goods", "Losing a passport", "Missing a flight", "Being a tourist"], "audio": true },
+    { "kind": "listening", "stem": "How did the officer react to the smell?", "options": ["He was convinced the traveler told the truth", "He fainted at once", "He loved the smell", "He bought a bottle"], "audio": true }
+  ]
+}

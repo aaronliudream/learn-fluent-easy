@@ -1,0 +1,133 @@
+{
+  "id": "am3_l46",
+  "unit_no": 10,
+  "lesson_no": 46,
+  "title_en": "Do It Yourself",
+  "title_cn": "自己动手",
+  "grammar_focus": "So + 形容词 + be + 主语, that …(表语提前引起的倒装,强调)、过去分词短语作状语(Armed with …, Buried in the grass …)、短语动词 embark on / cater for / get round to / go so far as to、be supposed to / be faced with / be proved wrong(be + 过去分词固定搭配)、部分否定 not all …(并非人人都…)(原创承载 NCE3 第三册 L46 考点·无需净化:DIY 自己动手题材幽默故事——叙述者拆了自家割草机却装不回去;美式化 yard/store/repairman/labor)",
+  "scene": "如今我们自己动手做事的热情如此高涨,以至于越来越少依赖专业工人了。由于出版了数不清的教人自己动手的书和视频,没有人再能推说自己对某事一无所知。备好合适的工具和材料,新婚夫妇便兴高采烈地开始装点自己的新居。特别是男人,常利用空闲时间安装自家的灯具、布置自家的花园、搭建棚屋、打造家具。有些真正热心的爱好者甚至自己组装电脑。商店为了迎合这股自己动手的热潮,不仅为新手开设专门的咨询台,还向顾客出售可以拿回家自己组装的零件。这些东西为人们积压的创造力提供了一个绝妙的宣泄口,可惜的是,并非人人都是天生的巧匠。有些妻子往往认为自己的丈夫无比足智多谋、什么都能修。就连那些连一枚钉子都钉不直的男人,也被当成了天生的电工、木匠、水管工和机械师。每当保险丝烧断、家具松动摇晃、管道堵塞,或者洗碗机罢工,有些妻子总认为丈夫总能把事情摆平。自己动手这游戏最糟糕的一点是:有时连男人自己都活在一种错觉里,以为自己什么都行,哪怕已经一再被证明是错的。这多半是个面子问题。今年春天,妻子建议我请个修理工来看看我们家的割草机。那台机器去年夏天就坏了,尽管我答应过要修,却一直没抽出时间。我不愿听她的建议,说我自己会修。一个星期六的下午,我把机器拖到院子里,仔细看了一番。在我看来,它只需稍作调整:这儿拧拧螺丝,那儿紧一紧,再滴几滴油,就会像新的一样。可修理这活儿,不出所料,并没那么简单。割草机死活不肯割草,于是我决定把它拆开。院子里很快铺满了曾经组成一台割草机的金属块。但我对自己相当满意,因为我查出了毛病的根源:驱动轮子的链条上,有一节链环断了。买来新链条后,我却面对一项难以完成的任务——把这堆让人晕头转向的拼图重新拼回去。重新组装完毕后,机器仍旧罢工,我一点也不意外,原因很简单:我手里还剩下好几块形状古怪的金属,似乎哪儿都装不上。我绝望地放弃了。几周过去,草越长越高。妻子唠叨我该想想办法时,我告诉她:要么买台新割草机,要么就让草长着。不用说,我家现在四周成了一片丛林。深草丛中某处,埋着一台生了锈的割草机,我曾答应有朝一日把它修好。",
+  "grammar_card": {
+    "title": "So + 形容词 + 倒装 / 过去分词作状语 / 短语动词 / be + 过去分词搭配 / 部分否定 not all",
+    "intro": "①为强调形容词,把 so + 形容词提到句首,主语与 be 动词要倒装:So great is our passion … that …。②过去分词短语作状语,表被动/完成:Armed with the right tools, …;Buried in the grass, the mower rusts。③短语动词:embark on(着手)、cater for(迎合)、get round to(抽空做)、go so far as to do(竟到…程度)。④be supposed to(理应/被认为)、be faced with(面对)、be proved wrong(被证明错)。⑤not all …:部分否定,“并非所有/人人都…”。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["So + 形容词 + be + 主语, that", "如此…以至于(倒装强调)", "So great is our passion that …"],
+        ["过去分词短语作状语", "被…/…后", "Armed with tools, they …"],
+        ["embark on / get round to", "着手 / 抽空做", "never got round to it"],
+        ["not all …", "并非人人/所有都…", "not all of us are handymen"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "So + 形容词提前时,后面主谓要倒装:So great is our passion（× So great our passion is）;that 引导结果。", "mark": "So great is …" },
+      { "rule": "not all 是部分否定(并非全部),不是全否定;后面动词按名词单复数决定(not all of us are …)。", "mark": "not all …" },
+      { "rule": "美式:yard(英式 garden 指院子)、store(英式 shop)、repairman、labor(英式 labour)。本课已按美语写。", "mark": "yard / store / labor" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Did the writer repair his lawn mower in the end? Why/Why not?",
+    "options": ["No — he dismantled it but couldn't put it back together, out of pride", "Yes — he fixed it easily", "Yes — with a repairman's help", "He never even tried"],
+    "answer_index": 0
+  },
+  "passage": "So great is our passion for doing things ourselves that we are becoming less and less dependent on skilled labor. No one can plead ignorance of a subject any longer, for there are countless do-it-yourself books and videos. Armed with the right tools and materials, newlyweds gaily embark on the task of decorating their own homes. Men, in particular, spend hours of their leisure time installing their own light fixtures, laying out their own gardens, building sheds, and making furniture. Some really keen enthusiasts go so far as to build their own computers. Stores cater for the do-it-yourself craze not only by running special advice desks for novices, but by offering customers parts they can assemble at home. Such things provide an excellent outlet for pent-up creative energy, but unfortunately not all of us are born handymen. Some wives tend to believe that their husbands are endlessly resourceful and can fix anything. Even men who can hardly drive a nail in straight are supposed to be born electricians, carpenters, plumbers, and mechanics. When a fuse blows, furniture gets rickety, pipes get clogged, or the dishwasher fails to run, some women assume that their husbands will somehow put things right. The worst thing about the do-it-yourself game is that sometimes even men live under the delusion that they can do anything, even when they have repeatedly been proved wrong. It is a matter of pride as much as anything else. Last spring my wife suggested that I call in a repairman to look at our lawn mower. It had broken down the previous summer, and though I had promised to fix it, I had never gotten round to it. I would not hear of the suggestion and said that I would fix it myself. One Saturday afternoon I hauled the machine into the yard and took a close look at it. As far as I could see, it needed only a minor adjustment: a turn of a screw here, a little tightening there, a drop of oil, and it would be as good as new. Inevitably the repair job was not quite so simple. The mower firmly refused to mow, so I decided to take it apart. The yard was soon littered with chunks of metal that had once made up a lawn mower. But I was extremely pleased with myself, for I had traced the cause of the trouble. One of the links in the chain that drove the wheels had snapped. After buying a new chain, I was faced with the insurmountable task of putting the confusing jigsaw puzzle back together. I was not surprised to find that the machine still refused to work after I had reassembled it, for the simple reason that I was left with several oddly shaped bits of metal that did not seem to fit anywhere. I gave up in despair. The weeks passed and the grass grew. When my wife nagged me to do something about it, I told her that I would either have to buy a new mower or let the grass grow. Needless to say, our house is now surrounded by a jungle. Buried somewhere in the deep grass is a rusting lawn mower that I have promised to fix one day.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "So great is our passion for doing things ourselves that we are becoming less and less dependent on skilled labor. No one can plead ignorance of a subject any longer, for there are countless do-it-yourself books and videos. Armed with the right tools and materials, newlyweds gaily embark on the task of decorating their own homes.", "text_cn": "如今我们自己动手做事的热情如此高涨,以至于越来越少依赖专业工人了。由于出版了数不清的教人自己动手的书和视频,没有人再能推说自己对某事一无所知。备好合适的工具和材料,新婚夫妇便兴高采烈地开始装点自己的新居。" },
+    { "seq": 2, "speaker": null, "text_en": "Men, in particular, spend hours of their leisure time installing their own light fixtures, laying out their own gardens, building sheds, and making furniture. Some really keen enthusiasts go so far as to build their own computers. Stores cater for the do-it-yourself craze not only by running special advice desks for novices, but by offering customers parts they can assemble at home. Such things provide an excellent outlet for pent-up creative energy, but unfortunately not all of us are born handymen.", "text_cn": "特别是男人,常利用空闲时间安装自家的灯具、布置自家的花园、搭建棚屋、打造家具。有些真正热心的爱好者甚至自己组装电脑。商店为了迎合这股自己动手的热潮,不仅为新手开设专门的咨询台,还向顾客出售可以拿回家自己组装的零件。这些东西为人们积压的创造力提供了一个绝妙的宣泄口,可惜的是,并非人人都是天生的巧匠。" },
+    { "seq": 3, "speaker": null, "text_en": "Some wives tend to believe that their husbands are endlessly resourceful and can fix anything. Even men who can hardly drive a nail in straight are supposed to be born electricians, carpenters, plumbers, and mechanics. When a fuse blows, furniture gets rickety, pipes get clogged, or the dishwasher fails to run, some women assume that their husbands will somehow put things right. The worst thing about the do-it-yourself game is that sometimes even men live under the delusion that they can do anything, even when they have repeatedly been proved wrong.", "text_cn": "有些妻子往往认为自己的丈夫无比足智多谋、什么都能修。就连那些连一枚钉子都钉不直的男人,也被当成了天生的电工、木匠、水管工和机械师。每当保险丝烧断、家具松动摇晃、管道堵塞,或者洗碗机罢工,有些妻子总认为丈夫总能把事情摆平。自己动手这游戏最糟糕的一点是:有时连男人自己都活在一种错觉里,以为自己什么都行,哪怕已经一再被证明是错的。" },
+    { "seq": 4, "speaker": null, "text_en": "Last spring my wife suggested that I call in a repairman to look at our lawn mower. It had broken down the previous summer, and though I had promised to fix it, I had never gotten round to it. I would not hear of the suggestion and said that I would fix it myself. One Saturday afternoon I hauled the machine into the yard and took a close look at it. As far as I could see, it needed only a minor adjustment: a turn of a screw here, a little tightening there, a drop of oil, and it would be as good as new.", "text_cn": "今年春天,妻子建议我请个修理工来看看我们家的割草机。那台机器去年夏天就坏了,尽管我答应过要修,却一直没抽出时间。我不愿听她的建议,说我自己会修。一个星期六的下午,我把机器拖到院子里,仔细看了一番。在我看来,它只需稍作调整:这儿拧拧螺丝,那儿紧一紧,再滴几滴油,就会像新的一样。" },
+    { "seq": 5, "speaker": null, "text_en": "The mower firmly refused to mow, so I decided to take it apart. The yard was soon littered with chunks of metal that had once made up a lawn mower. One of the links in the chain that drove the wheels had snapped. After buying a new chain, I was faced with the insurmountable task of putting the confusing jigsaw puzzle back together, but the machine still refused to work, for I was left with several oddly shaped bits of metal that did not seem to fit anywhere. I gave up in despair. When my wife nagged me, I told her that I would either buy a new mower or let the grass grow. Needless to say, our house is now surrounded by a jungle, and buried somewhere in the deep grass is a rusting lawn mower that I have promised to fix one day.", "text_cn": "割草机死活不肯割草,于是我决定把它拆开。院子里很快铺满了曾经组成一台割草机的金属块。驱动轮子的链条上,有一节链环断了。买来新链条后,我却面对一项难以完成的任务——把这堆让人晕头转向的拼图重新拼回去,可机器仍旧罢工,因为我手里还剩下好几块形状古怪的金属,似乎哪儿都装不上。我绝望地放弃了。妻子唠叨我时,我告诉她:要么买台新割草机,要么就让草长着。不用说,我家现在四周成了一片丛林,深草丛中某处,埋着一台生了锈的割草机,我曾答应有朝一日把它修好。" }
+  ],
+  "words": [
+    { "word": "plead", "ipa": "/pliːd/", "pos": "v", "meaning_cn": "找(借口),辩解", "example": "plead ignorance of a subject" },
+    { "word": "ignorance", "ipa": "/ˈɪɡnərəns/", "pos": "n", "meaning_cn": "无知,不懂", "example": "plead ignorance" },
+    { "word": "newlyweds", "ipa": "/ˈnuːliwedz/", "pos": "n", "meaning_cn": "新婚夫妇", "example": "newlyweds decorate their homes" },
+    { "word": "leisure", "ipa": "/ˈliːʒər/", "pos": "n", "meaning_cn": "空闲,闲暇", "example": "hours of their leisure time" },
+    { "word": "novice", "ipa": "/ˈnɑːvɪs/", "pos": "n", "meaning_cn": "新手", "example": "advice desks for novices" },
+    { "word": "assemble", "ipa": "/əˈsembəl/", "pos": "v", "meaning_cn": "装配,组装", "example": "parts they can assemble at home" },
+    { "word": "resourceful", "ipa": "/rɪˈsɔːrsfəl/", "pos": "adj", "meaning_cn": "足智多谋的", "example": "endlessly resourceful" },
+    { "word": "dismantle", "ipa": "/dɪsˈmæntəl/", "pos": "v", "meaning_cn": "拆卸", "example": "I decided to dismantle it" },
+    { "word": "rickety", "ipa": "/ˈrɪkɪti/", "pos": "adj", "meaning_cn": "要散架的,摇晃的", "example": "furniture gets rickety" },
+    { "word": "insurmountable", "ipa": "/ˌɪnsərˈmaʊntəbəl/", "pos": "adj", "meaning_cn": "不能克服的,难以对付的", "example": "the insurmountable task" },
+    { "word": "nag", "ipa": "/næɡ/", "pos": "v", "meaning_cn": "唠叨不休", "example": "my wife nagged me" },
+    { "word": "delusion", "ipa": "/dɪˈluːʒən/", "pos": "n", "meaning_cn": "错觉", "example": "live under the delusion that they can do anything" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "So + 形容词 + be + 主语, that …(倒装强调)" },
+    { "gp": "gp2", "name": "过去分词短语作状语(Armed with …)" },
+    { "gp": "gp3", "name": "短语动词 embark on / get round to / go so far as to" },
+    { "gp": "gp4", "name": "be supposed to / be faced with / be proved wrong" },
+    { "gp": "gp5", "name": "部分否定 not all …(并非人人都…)" },
+    { "gp": "gp6", "name": "词汇辨析(dismantle/rickety/resourceful)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"So great ___ our passion for doing things ourselves that we rely less on experts.\"(So + 形容词提前,主语与 be 倒装,填 be 动词)", "stem_cn": "我们自己动手的热情如此高涨,以至于越来越少依赖专家。", "options": ["is", "does", "has", "it is"] },
+    { "gp": "gp1", "stem": "\"So keen ___ the enthusiasts that they build their own computers.\"(So + 形容词提前引起倒装,填 be 动词)", "stem_cn": "爱好者们如此热心,竟自己组装电脑。", "options": ["are", "do", "have", "they are"] },
+    { "gp": "gp1", "stem": "\"___ great is his pride that he refused all help.\"(程度词提前引起倒装,句首填哪个词)", "stem_cn": "他自尊心太强,拒绝了一切帮助。", "options": ["So", "Such", "Very", "Too"] },
+    { "gp": "gp2", "stem": "\"___ with the right tools, newlyweds decorate their homes.\"(过去分词短语作状语:装备好…)", "stem_cn": "备好合适的工具,新婚夫妇装点新居。", "options": ["Armed", "Arming", "Arm", "To arm"] },
+    { "gp": "gp2", "stem": "\"___ somewhere in the deep grass, the old mower slowly rusts.\"(过去分词短语作状语:被埋在…)", "stem_cn": "埋在深草丛某处,那台旧割草机慢慢生锈。", "options": ["Buried", "Burying", "Bury", "To bury"] },
+    { "gp": "gp2", "stem": "\"___ from the shed, the tools were covered in dust.\"(过去分词短语作状语:被取出)", "stem_cn": "从棚里取出时,工具落满灰尘。", "options": ["Taken", "Taking", "Take", "To take"] },
+    { "gp": "gp3", "stem": "\"Newlyweds gaily embark ___ the task of decorating.\"(“着手、开始干”:embark ___)", "stem_cn": "新婚夫妇兴高采烈地开始装修。", "options": ["on", "in", "at", "of"] },
+    { "gp": "gp3", "stem": "\"Some enthusiasts go so far ___ to build their own computers.\"(“竟到了…的程度”:go so far ___ to do)", "stem_cn": "有些爱好者竟自己组装电脑。", "options": ["as", "than", "that", "to"] },
+    { "gp": "gp3", "stem": "\"I promised to fix it but never got ___ to it.\"(“抽出时间去做”:get ___ to sth 的固定副词)", "stem_cn": "我答应修,却一直没抽出时间。", "options": ["round", "over", "off", "up"] },
+    { "gp": "gp4", "stem": "\"Even clumsy men are ___ to be born handymen.\"(be ___ to be:被认为是、理应是)", "stem_cn": "连笨手笨脚的男人都被认为天生是能工巧匠。", "options": ["supposed", "suppose", "supposing", "supposition"] },
+    { "gp": "gp4", "stem": "\"After buying a chain, I was ___ with a huge task.\"(be ___ with:面对、面临)", "stem_cn": "买了新链条后,我面对一项艰巨任务。", "options": ["faced", "facing", "face", "faces"] },
+    { "gp": "gp4", "stem": "\"Even when they have been ___ wrong, some men still boast.\"(be ___ wrong:被证明是错的,填过去分词)", "stem_cn": "即便一再被证明错了,有些男人仍吹嘘。", "options": ["proved", "proving", "prove", "proof"] },
+    { "gp": "gp5", "stem": "\"Unfortunately, ___ all of us are born handymen.\"(部分否定:并非人人都…)", "stem_cn": "可惜并非人人都是天生的巧匠。", "options": ["not", "no", "none", "never"] },
+    { "gp": "gp5", "stem": "\"Not ___ husband can really fix things.\"(部分否定:并非每个…)", "stem_cn": "并非每个丈夫都真能修东西。", "options": ["every", "no", "none", "any"] },
+    { "gp": "gp5", "stem": "\"Not all the parts ___ back into place.\"(部分否定,主句动词用复数)", "stem_cn": "并非所有零件都能装回原位。", "options": ["fit", "fits", "fitting", "to fit"] },
+    { "gp": "gp6", "stem": "\"To take a machine apart into pieces is to ___ it.\"(“拆卸”用哪个词)", "stem_cn": "把机器拆成零件。", "options": ["dismantle", "assemble", "polish", "paint"] },
+    { "gp": "gp6", "stem": "\"A chair that is shaky and likely to fall apart is ___.\"(“摇晃的、要散架的”用哪个词)", "stem_cn": "摇摇晃晃、快散架的椅子。", "options": ["rickety", "sturdy", "brand-new", "heavy"] },
+    { "gp": "gp6", "stem": "\"Someone clever at finding ways to solve problems is ___.\"(“足智多谋的”用哪个词)", "stem_cn": "善于想办法解决问题的人。", "options": ["resourceful", "lazy", "careless", "timid"] }
+  ],
+  "stage6": [
+    { "stem": "plead 的意思是:", "options": ["找(借口),辩解", "命令", "赞美", "购买"] },
+    { "stem": "novice 的意思是:", "options": ["新手", "专家", "顾客", "工人"] },
+    { "stem": "assemble 的意思是:", "options": ["装配,组装", "拆开", "丢弃", "出售"] },
+    { "stem": "dismantle 的意思是:", "options": ["拆卸", "组装", "擦亮", "搬运"] },
+    { "stem": "resourceful 的意思是:", "options": ["足智多谋的", "懒惰的", "粗心的", "胆小的"] },
+    { "stem": "insurmountable 的意思是:", "options": ["不能克服的,难以对付的", "容易的", "短暂的", "常见的"] }
+  ],
+  "contrast": [
+    { "us": "yard", "uk": "garden", "note_cn": "院子;美语 yard,英式常用 garden 指屋旁院子" },
+    { "us": "store", "uk": "shop", "note_cn": "商店;美语 store,英式 shop" },
+    { "us": "labor", "uk": "labour", "note_cn": "劳动、工人;拼写差异,美语 labor" },
+    { "us": "light fixture", "uk": "light fitting", "note_cn": "灯具;美语 light fixture,英式 light fitting" }
+  ],
+  "chunks": [
+    { "us": "embark on", "ipa": "/ɪmˈbɑːrk ɑːn/", "example1": "Newlyweds embark on decorating their homes.", "example1_cn": "新婚夫妇着手装点新居。", "example2": "She embarked on a new career.", "example2_cn": "她开始了一份新事业。" },
+    { "us": "go so far as to", "ipa": "/ɡoʊ soʊ fɑːr æz tə/", "example1": "Some go so far as to build their own computers.", "example1_cn": "有些人竟自己组装电脑。", "example2": "He went so far as to call me a liar.", "example2_cn": "他竟然说我是骗子。" },
+    { "us": "get round to", "ipa": "/ɡet raʊnd tə/", "example1": "I never got round to fixing it.", "example1_cn": "我一直没抽出时间去修它。", "example2": "I'll get round to it tomorrow.", "example2_cn": "我明天会抽空做。" },
+    { "us": "put things right", "ipa": "/pʊt θɪŋz raɪt/", "example1": "Husbands are supposed to put things right.", "example1_cn": "丈夫理应把事情摆平。", "example2": "He tried to put things right after the mistake.", "example2_cn": "出错后他设法弥补。" }
+  ],
+  "stage7_cloze": {
+    "context": "So great ___1___ our passion for doing things ourselves that we depend less on skilled labor. Armed ___2___ the right tools, people happily decorate their own homes. But not ___3___ of us are born handymen. Last spring I decided to fix my own lawn mower. I took it apart but was then faced ___4___ the impossible task of putting it back together, and I gave up in despair.",
+    "blanks": [
+      { "blank_no": 1, "options": ["is", "does", "has", "it is"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["with", "by", "of", "for"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["all", "none", "any", "some"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["with", "to", "of", "for"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Did the writer repair his lawn mower in the end?", "options": ["No — he took it apart but could not reassemble it", "Yes — it worked perfectly", "Yes — a repairman fixed it", "He bought a brand-new one instead"] },
+    { "stem": "Why do some wives think their husbands can fix anything?", "options": ["They believe their husbands are endlessly resourceful", "Their husbands are trained mechanics", "They read it in a book", "Their husbands never fail"] },
+    { "stem": "What happened to the writer's yard in the end?", "options": ["The grass grew into a jungle around the house", "It was perfectly mowed", "It was paved over", "A gardener took care of it"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我们自己动手的热情如此高涨\"(So + 形容词 + 倒装):", "options": ["So great is our passion for doing things ourselves.", "So great our passion is for doing things ourselves.", "So great does our passion for doing things ourselves.", "So great is our passion for doing things ourselves are."] },
+    { "stem": "你想说\"有些人竟自己组装电脑\"(go so far as to do):", "options": ["Some go so far as to build their own computers.", "Some go so far to build their own computers.", "Some go so far as build their own computers.", "Some go as so far as to build their own computers."] },
+    { "stem": "你想说\"并非人人都是天生的巧匠\"(not all 部分否定):", "options": ["Not all of us are born handymen.", "Not all of us is born handymen.", "All of us are not born handyman.", "No all of us are born handymen."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "dismantle 的意思是:", "options": ["拆卸", "组装", "擦亮", "搬运"] },
+    { "kind": "vocab", "stem": "resourceful 的意思是:", "options": ["足智多谋的", "懒惰的", "粗心的", "胆小的"] },
+    { "kind": "grammar", "stem": "\"So great ___ our passion that we depend less on experts.\"(So + 形容词提前,主语与 be 倒装)", "stem_cn": "我们自己动手的热情如此高涨,以至于越来越少依赖专家。", "options": ["is", "does", "has", "it is"] },
+    { "kind": "grammar", "stem": "\"___ with the right tools, newlyweds decorate their homes.\"(过去分词短语作状语)", "stem_cn": "备好合适的工具,新婚夫妇装点新居。", "options": ["Armed", "Arming", "Arm", "To arm"] },
+    { "kind": "scenario", "stem": "\"get round to\" 的意思是:", "options": ["抽出时间去做", "绕道走", "拒绝", "反复做"] },
+    { "kind": "scenario", "stem": "\"embark on\" 的意思是:", "options": ["开始(做某事)", "结束", "放弃", "推迟"] },
+    { "kind": "reading", "stem": "Why did the writer refuse to call a repairman?", "options": ["It was a matter of pride; he insisted on fixing the mower himself", "He could not afford one", "No repairman was available", "His wife forbade it"], "passage": true },
+    { "kind": "reading", "stem": "What was the real cause of the mower's trouble?", "options": ["A snapped link in the chain that drove the wheels", "A dead battery", "A missing wheel", "Rusty blades"], "passage": true },
+    { "kind": "listening", "stem": "What did the writer find after reassembling the mower?", "options": ["He was left with several odd bits of metal that fit nowhere", "The mower ran better than new", "He had lost the new chain", "The blades were sharp again"], "audio": true },
+    { "kind": "listening", "stem": "What did the writer finally tell his wife?", "options": ["He would either buy a new mower or let the grass grow", "He would call an expert at once", "He had fixed it perfectly", "He would sell the house"], "audio": true }
+  ]
+}

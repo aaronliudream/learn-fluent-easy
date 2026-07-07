@@ -41,6 +41,17 @@
   - **L18《海豚》**(however…may be/it形式主语/no sooner…than/with独立主格/非限定who·海豚好奇顽皮戏海龟)——44题🟢。
 - 对账(am4 U1+U2+U3):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **792**(18课×44)。
 
+## 📌 AM4 U4 收官(L19–L24 · `american_am4_seed_unit04.sql` · 264题=44×6,全🟢)· 第四册第4单元
+> NCE4 Unit 4 六篇为传记/科普/文学/影评/自然/美学随笔(莫罗亚·佛蒙特·罗素·迪门特·哈特·比奇托马斯·乔德),全程**原创承载法**,通用语法/自然/美学事实(不可版权)已 100% 原创复述、无逐句改写、真实人物换虚构人物。逐课主考:
+- 🔴 **需跑** `american_am4_seed_unit04.sql`(全新文件,含 L19–L24 六课·264题)。
+  - **L19《睡眠的奥秘》**(whether…or not/倒装Only when/情态推测must be/过去分词定语/不定式作定语·人为何需要睡眠与做梦)——44题🟢。
+  - **L20《马戏》**(定从who/强调do·did/despite让步/使役make sb do/现在完成进行·马戏班家庭的漂泊与坚守)——44题🟢。
+  - **L21《缔造西部片的明星》**(do·did强调/过去分词作定语/find it+形容词+to do/what名词从句/who定从+过去完成·虚构演员科利斯与西部片准则)——44题🟢·**避开原文攻击原住民框架**。
+  - **L22《知识与进步》**(not only…but also/the moment·the instant/比较级+than/be to do/what名词从句·知识累积与文明双刃剑)——44题🟢。
+  - **L23《鸟的飞行》**(nor倒装/enough to do/such·so…that/介词+关系代词/现在分词状语·滑翔[信天翁]与扑翼[鸭]两类飞行)——44题🟢。
+  - **L24《美》**(it形式主语/that主语从句/非限定which/目的状语to do/形容词短语状语·美的一瞥暗示彼岸更高之境·语言难尽述)——44题🟢。
+- 对账(am4 U1+U2+U3+U4):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1056**(24课×44)。
+
 ## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **★★★全 12 单元 60 课收官 L1–L60**,累计 2640 题·第三册整本完成)
 
 ## 📌 AM3 U12 收官(L56–L60 · `american_am3_seed_unit12.sql` · 220题=44×5,全🟢)· ★★★第三册收官单元

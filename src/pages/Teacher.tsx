@@ -8,7 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, Plus, Users, AlertTriangle, TrendingUp, GraduationCap, Sparkles } from "lucide-react";
+import { Loader2, Plus, Users, AlertTriangle, TrendingUp, GraduationCap, Sparkles, ArchiveRestore } from "lucide-react";
+import { toast } from "sonner";
 import TeacherCards from "@/pages/TeacherCards";
 
 /**
@@ -35,6 +36,10 @@ type ClassRow = {
   weak_student_count: number;
   last_activity_at: string | null;
 };
+
+// 每位老师活跃班上限（后端 enforce_class_limit 触发器 + create_class/restore_class RPC 同步为此值）。
+// 前端只做友好提示，硬保证在后端。以后改上限：这里 + 两个 RPC 一起改。
+const MAX_CLASSES = 10;
 
 const STAGE_META: Record<ClassRow["stage"], { label: string; gradient: string }> = {
   primary: { label: "小学 / Primary",  gradient: "from-sky-500 to-cyan-500" },
@@ -80,6 +85,7 @@ export default function Teacher() {
 
   /* ── Derived stats for hero ─────────────────────────── */
   const activeClasses = classes.filter((c) => !c.archived_at);
+  const archivedClasses = classes.filter((c) => c.archived_at);
   const totalStudents = activeClasses.reduce((s, c) => s + c.student_count, 0);
   const totalActive   = activeClasses.reduce((s, c) => s + c.active_this_week, 0);
   const totalWeak     = activeClasses.reduce((s, c) => s + c.weak_student_count, 0);
@@ -110,7 +116,7 @@ export default function Teacher() {
                 : <T>还没有班级，点击「新建班级」开始</T>}
             </div>
           </div>
-          <CreateClassButton onCreated={(c) => { setCreating(false); reload(); navigate(`/teacher/class/${c.id}`); }} open={creating} onOpenChange={setCreating} />
+          <CreateClassButton count={activeClasses.length} onCreated={(c) => { setCreating(false); reload(); navigate(`/teacher/class/${c.id}`); }} open={creating} onOpenChange={setCreating} />
         </div>
 
         <div className="relative mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -154,6 +160,10 @@ export default function Teacher() {
                 </div>
               </button>
             </div>
+          )}
+
+          {archivedClasses.length > 0 && (
+            <ArchivedClasses list={archivedClasses} activeCount={activeClasses.length} onChange={reload} />
           )}
         </TabsContent>
 
@@ -239,6 +249,65 @@ function ClassCard({ c }: { c: ClassRow }) {
   );
 }
 
+function ArchivedClasses({ list, activeCount, onChange }: { list: ClassRow[]; activeCount: number; onChange: () => void }) {
+  const t = useT();
+  const [restoringId, setRestoringId] = useState<string | null>(null);
+  const atLimit = activeCount >= MAX_CLASSES;
+  const limitMsg = t(`活跃班已满 ${MAX_CLASSES} 个，请先归档一个再恢复此班`);
+
+  async function restore(c: ClassRow) {
+    if (atLimit) { toast.error(limitMsg); return; }
+    setRestoringId(c.id);
+    // 后端 restore_class 会硬校验归属 + 班级上限，前端拦截只是提前给友好提示
+    const { error } = await supabase.rpc("restore_class", { _class_id: c.id });
+    setRestoringId(null);
+    if (error) toast.error(error.message);
+    else { toast.success(t("已恢复为活跃班")); onChange(); }
+  }
+
+  return (
+    <details className="mt-6 rounded-2xl border border-border bg-muted/30">
+      <summary className="cursor-pointer select-none list-none px-4 py-3 text-sm font-bold text-muted-foreground flex items-center gap-2">
+        <span>🗄</span>
+        <span><T>已归档班级</T> · {list.length}</span>
+        <span className="ml-auto text-[11px] font-normal"><T>只读存档 · 可恢复</T> ▾</span>
+      </summary>
+      <ul className="px-3 pb-3 space-y-2">
+        {list.map((c) => {
+          const meta = STAGE_META[c.stage];
+          return (
+            <li key={c.id} className="flex items-center gap-2 rounded-xl border border-border bg-card px-3 py-2.5">
+              <Link to={`/teacher/class/${c.id}`} className="flex items-center gap-3 min-w-0 flex-1 transition hover:opacity-80">
+                <span className="text-lg shrink-0">🗄</span>
+                <div className="min-w-0 flex-1">
+                  <div className="font-bold text-sm truncate"><T>{c.name}</T></div>
+                  <div className="text-[11px] text-muted-foreground">
+                    <T>{meta.label}</T> · <T>归档于</T> {c.archived_at ? relTime(c.archived_at) : "—"} · {c.student_count} <T>名学生</T>
+                  </div>
+                </div>
+              </Link>
+              <Button
+                variant="outline" size="sm" className="shrink-0"
+                onClick={() => restore(c)}
+                disabled={restoringId === c.id || atLimit}
+                title={atLimit ? limitMsg : undefined}>
+                {restoringId === c.id
+                  ? <Loader2 className="size-3.5 animate-spin" />
+                  : <><ArchiveRestore className="mr-1 size-3.5" /> <T>恢复</T></>}
+              </Button>
+            </li>
+          );
+        })}
+      </ul>
+      {atLimit && (
+        <p className="px-4 pb-3 text-[11px] text-amber-600 dark:text-amber-400">
+          ⚠️ {t(`活跃班已满 ${MAX_CLASSES} 个，需先归档一个才能恢复这里的班级。`)}
+        </p>
+      )}
+    </details>
+  );
+}
+
 function Stat({ n, label, tone = "" }: { n: number; label: string; tone?: string }) {
   return (
     <div>
@@ -265,12 +334,15 @@ function EmptyClasses({ onCreate }: { onCreate: () => void }) {
 
 /* ── Create-class modal ───────────────────────────────── */
 function CreateClassButton({
-  open, onOpenChange, onCreated,
+  open, onOpenChange, onCreated, count,
 }: {
   open: boolean;
   onOpenChange: (v: boolean) => void;
   onCreated: (cls: { id: string }) => void;
+  count: number;
 }) {
+  const t = useT();
+  const atLimit = count >= MAX_CLASSES;
   const [name, setName] = useState("");
   const [stage, setStage] = useState<"primary" | "junior" | "senior" | "mixed">("mixed");
   const [busy, setBusy] = useState(false);
@@ -294,8 +366,12 @@ function CreateClassButton({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>
-        <button className="rounded-full bg-white/95 text-foreground text-sm font-bold px-4 py-2 hover:bg-white inline-flex items-center gap-1.5">
+        <button
+          disabled={atLimit}
+          title={atLimit ? t(`班级数已达上限 ${MAX_CLASSES} 个，请先归档一个再新建`) : undefined}
+          className="rounded-full bg-white/95 text-foreground text-sm font-bold px-4 py-2 hover:bg-white inline-flex items-center gap-1.5 disabled:opacity-60 disabled:hover:bg-white/95">
           <Plus className="size-4" /> <T>新建班级</T>
+          <span className="text-[11px] font-normal opacity-70 tabular-nums">{count} / {MAX_CLASSES}</span>
         </button>
       </DialogTrigger>
       <DialogContent>

@@ -6,7 +6,18 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
-## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1–U7 七单元收官 L1–L35**,累计 1540 题)
+## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1–U8 八单元收官 L1–L40**,累计 1760 题)
+
+## 📌 AM3 U8 收官(L36–L40 · `american_am3_seed_unit08.sql` · 220题=44×5,全🟢)
+> NCE3 复习阶段续:一课融合多个已学难点。以下逐课主考:
+- 🔴 **需跑** `american_am3_seed_unit08.sql`(全新文件,含 L36–L40 五课)。
+  - **L36《百万分之一的机遇》**(used to/would + accept vs agree + 所有格撇号 's/s'/不规则复数 + After having been + 过去分词 + was thought/presumed to have done·失散兄弟因巧合团聚)——44 题🟢全绿。**净化换情节**:去掉战时阵亡/负伤/医院被炸/空袭外壳,改为兄弟当年在大洪水中失散、被冲到远方幸存、以为家人罹难而定居他乡;美式化人名 Frank/Henry Bassett。
+  - **L37《开往威斯特海温的快车》**(too…to/enough to + can't help·can't stand·don't mind + 动名词 + 否定词句首倒装 Nor/Never/Hardly + passed vs past + refuse vs deny + borrow vs lend·号称快车却站站慢吞吞,时刻表小星号脚注写着"已停运")——44 题🟢全绿。无需净化。美式化 railroad/schedule/stationmaster。
+  - **L38《最早的日历》**(现在完成被动 have been done + 一般过去被动 was/were done + 动词+with/for 搭配 faced with/account for + between vs among + seem·prove to do·史前刻在骨头象牙上的圆点其实是原始历法)——44 题🟢全绿。无需净化(科学说明文)。
+  - **L39《没什么好担心的》**(be able to 各时态 + manage to + could vs was able to + can 表能力 + 过去进行做背景·自信司机横穿崎岖平原设法躲过障碍,最后车停只是没油了)——44 题🟢全绿。**按 Aaron 净化包生产**(不读源 PDF):惊险驾驶措辞放缓、去触发词,能力表达考点全保留;美式化 gas/gas tank。该课仍触发过滤,已用净化包解决。
+  - **L40《真假难辨》**(put 短语 out/off/up with + except·apart from + dress vs dress up + watch vs follow + lose one's temper·in the mood·学生恶作剧让警察和工人互相误会成假扮的学生)——44 题🟢全绿。**轻净化**:恶作剧误会喜剧内核保留,把"强行夺钻/激烈扭打"措辞放缓;美式化 jackhammer/fire department/police officer。
+- **U8 主线**:巧合、幽默与科普综合——L36 时态+所有格 → L37 倒装+词义辨析 → L38 被动语态+介词 → L39 能力表达 → L40 短语动词+情绪表达。
+- 对账(U8 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **1760**(U1–U8 各 220)。
 
 ## 📌 AM3 U7 收官(L31–L35 · `american_am3_seed_unit07.sql` · 220题=44×5,全🟢)
 > NCE3 复习阶段续:一课融合多个已学难点。以下逐课主考:

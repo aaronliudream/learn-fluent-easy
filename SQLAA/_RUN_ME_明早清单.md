@@ -6,7 +6,18 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
-## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1–U9 九单元收官 L1–L45**,累计 1980 题)
+## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **U1–U10 十单元收官 L1–L50**,累计 2200 题)
+
+## 📌 AM3 U10 收官(L46–L50 · `american_am3_seed_unit10.sql` · 220题=44×5,全🟢)
+> 生活/幽默/科普题材;仅 L49 用净化换情节(酗酒→熬夜看小说),其余正常读。逐课主考:
+- 🔴 **需跑** `american_am3_seed_unit10.sql`(全新文件,含 L46–L50 五课)。
+  - **L46《自己动手》**(So + 形容词倒装 So great is our passion that… + 过去分词短语作状语 Armed with… + 短语动词 embark on/get round to/go so far as to + be supposed to/be faced with/be proved wrong + 部分否定 not all·DIY 拆割草机却装不回去)——44 题🟢。无需净化。美式化 yard/store/labor。
+  - **L47《代价太高?》**(the choice of A or B + 现在分词修饰名词 dogs barking + 最高级/even more 比较级 + 被动多形式 be found to do/It was revealed that/be kept awake by + whatever 让步·污染与噪音科普,最古老噪音源竟是打鼾)——44 题🟢。**Aaron 预警的“污染”课**:实为轻松科普/幽默,无暴力,正常试读通过,无需放缓措辞。美式化 garbage/cell phone/neighbor。
+  - **L48《沉默的村庄》**(独立主格 the only sign of life being a goat + 现在分词状语 Taking/Looking up/Turning back + which/who 关系从句 + not only…but even + 形容词/分词后置修饰·夫妇误入偏僻沉默戒备的山村而折返)——44 题🟢。**轻软化措辞不换情节**:把原文“敌意/怒视/警告”放缓为“戒备/注视/暗示”,氛围悬念内核保留,无暴力。美式化 traveled/gray/can。
+  - **L49《理想的仆人》**(虚拟语气与现在相反 If were…would + 让步 no matter how/while + preside over/refer to…as/persist in + Not only 句首倒装 + in that/free from·姑妈的“完美仆人”有隐秘弱点酿晚宴闹剧被解雇)——44 题🟢。**净化换情节**:把 Bessie 的“小小弱点”从偷喝酒改为“夜里熬夜偷看悬疑小说→睡眠不足笨手笨脚→衣橱藏满小说”,理想仆人+隐秘弱点+晚宴闹剧+秘密藏货内核全保留,去酗酒表皮。美式化 hardwood floor/closet/favorite。
+  - **L50《新年的决心》**(不定式 resolve/manage to do、to do 作同位语 + 强调句 It was this that betrayed me + 形容词/现在分词状语 Aware of…/Resisting…/Feeling… + 短语动词 carry out/slip back into/fend off/doze off + so that/if 条件·立志晨练加读书却双双失败)——44 题🟢。无需换情节,把原文吸烟例子淡化为“根深蒂固的懒人”。美式化 living room/couch/good-naturedly。
+- **U10 主线**:DIY 自嘲 → 噪音科普 → 沉默山村悬念 → 完美仆人闹剧 → 新年决心失败;考点覆盖倒装/独立主格/被动多形式/虚拟(现在)/强调句/不定式/分词状语等高阶结构。
+- 对账(U10 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **2200**(U1–U10 各 220)。
 
 ## 📌 AM3 U9 收官(L41–L45 · `american_am3_seed_unit09.sql` · 220题=44×5,全🟢)
 > NCE3 第三册 Unit 3(L41+)起无 KS 页,考点由课文自身结构 + Notes on the text 提示自取;篇幅更长。以下逐课主考:

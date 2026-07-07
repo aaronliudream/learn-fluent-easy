@@ -1,0 +1,133 @@
+{
+  "id": "am3_l40",
+  "unit_no": 8,
+  "lesson_no": 40,
+  "title_en": "Who's Who",
+  "title_cn": "真假难辨",
+  "grammar_focus": "put 短语(put out/put off/put up with)、except·except for·apart from、dress 与 dress up 的区别、watch 与 follow 的区别、lose one's temper·in the mood for(情绪表达)(原创承载 NCE3 L40 考点·轻净化:恶作剧误会喜剧内核保留,把'强行夺钻/激烈扭打'措辞放缓成'争执/试图拿走';美式化 jackhammer/fire department/police officer)",
+  "scene": "大学生为什么似乎比谁都爱搞恶作剧,这一直没人说得清。学生们尤其擅长一种恶作剧:骗局。请消防队来扑灭一场根本不存在的火,是一种拙劣的欺骗,任何一个自重的学生都不屑去做。学生们常常制造一些除了受害者、人人都觉得好笑的场面。前不久,一个学生看见两名工人在校门外用风镐刨路,他立刻打电话报警,说有两个学生假扮成工人在破坏马路。刚一挂断电话,他就走到工人跟前,告诉他们:要是有警察来叫他们走开,千万别当真——因为有个学生扮成了警察,正到处捉弄人。警察和工人都很感激这个学生提前透了风。那学生躲进附近一座拱形门楼,能看清、听清这里发生的一切。果然,一位警察赶到现场,礼貌地请工人离开。当他从一名工人那里得到一句很粗鲁的回话时,便警告说要强制他们停工。工人叫他随便,警察只好打电话求援。不一会儿,又来了四名警察,对工人们规劝告诫。见工人拒不停工,警察便想把风镐拿走。工人们激烈争执起来,其中一个发起了脾气,威胁说要报警。这时,警察讽刺地指出:这大可不必,因为这几个人早已被逮捕了。一名工人装出一本正经的样子,问在被带去警局之前能不能打个电话。警察准了,还陪他去了一部公用电话。直到看见那人真的在给警察打电话,那名警察才恍然大悟:原来他们全都上了这场恶作剧的当。",
+  "grammar_card": {
+    "title": "put 短语 / except·apart from / dress vs dress up / watch vs follow / lose one's temper·in the mood",
+    "intro": "①put 短语:put out(扑灭)、put off(推迟)、put up with(忍受)、put up(搭起/留宿)。②except / except for “除…之外(不包括)”;apart from 常用于句首。③dress=给…穿衣(dress the baby);dress up=乔装、盛装打扮(dress up as)。④watch=观看、注视;follow=跟随、看懂(思路)。⑤lose one's temper=发脾气;in the mood (for)=有心情(做…);in a good/bad mood=心情好/坏。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["put out / put off / put up with", "扑灭/推迟/忍受", "put out a nonexistent fire"],
+        ["except / apart from", "除…之外", "funny to everyone except the victims"],
+        ["dress / dress up;watch / follow", "穿衣/乔装;观看/跟随", "dressed up as workmen"],
+        ["lose one's temper / in the mood", "发脾气/有心情", "one of them lost his temper"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "dress the baby=给宝宝穿衣;dress up as=乔装/打扮成。dress 是及物的“给…穿衣”,dress up 才是“乔装、盛装”。", "mark": "dress ≠ dress up" },
+      { "rule": "watch 是“观看、注视”;follow 是“跟随”或“看懂、听懂(思路、情节)”:I can't follow the plot。", "mark": "watch ≠ follow" },
+      { "rule": "美式:jackhammer(英式 pneumatic drill)、fire department(英式 fire brigade)、police officer(英式 policeman)、sidewalk(英式 pavement)。本课已按美语写。", "mark": "jackhammer / fire department" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How did the police officer discover that the whole thing was a joke?",
+    "options": ["He saw the workman actually phoning the real police", "A student told him directly", "He read about it later", "He never found out"],
+    "answer_index": 0
+  },
+  "passage": "It has never been explained why college students seem to enjoy practical jokes more than anyone else. Students specialize in a particular type of practical joke: the hoax. Inviting the fire department to put out a nonexistent fire is a crude form of deception that no self-respecting student would ever indulge in. Students often create amusing situations that are funny to everyone except the victims. When a student recently saw two workmen using a jackhammer outside his college, he immediately telephoned the police and informed them that two students dressed up as workmen were tearing up the road. As soon as he had hung up, he went over to the workmen and told them that if a police officer ordered them to leave, they were not to take him seriously. He added that a student had dressed up as a police officer and was playing all sorts of silly jokes on people. Both the police and the workmen were grateful to the student for this piece of advance information. The student hid in an archway nearby where he could watch and hear everything that went on. Sure enough, a police officer arrived on the scene and politely asked the workmen to leave. When he received a very rude reply from one of the workmen, he warned that he would make them stop. The workmen told him to do as he pleased, and the officer telephoned for help. Shortly afterward, four more officers arrived and remonstrated with the workmen. As the men refused to stop working, the police tried to take away the jackhammer. The workmen argued fiercely, and one of them lost his temper. He threatened to call the police. At this, the officers pointed out ironically that this would hardly be necessary, as the men were already under arrest. Pretending to speak seriously, one of the workmen asked if he might make a telephone call before being taken to the station. Permission was granted, and an officer accompanied him to a pay phone. Only when he saw that the man was actually telephoning the police did the officer realize that they had all been the victims of a hoax.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "It has never been explained why college students seem to enjoy practical jokes more than anyone else. Students specialize in a particular type of practical joke: the hoax. Inviting the fire department to put out a nonexistent fire is a crude form of deception that no self-respecting student would ever indulge in. Students often create amusing situations that are funny to everyone except the victims.", "text_cn": "大学生为什么似乎比谁都爱搞恶作剧,这一直没人说得清。学生们尤其擅长一种恶作剧:骗局。请消防队来扑灭一场根本不存在的火,是一种拙劣的欺骗,任何一个自重的学生都不屑去做。学生们常常制造一些除了受害者、人人都觉得好笑的场面。" },
+    { "seq": 2, "speaker": null, "text_en": "When a student recently saw two workmen using a jackhammer outside his college, he immediately telephoned the police and informed them that two students dressed up as workmen were tearing up the road. As soon as he had hung up, he went over to the workmen and told them that if a police officer ordered them to leave, they were not to take him seriously. He added that a student had dressed up as a police officer and was playing all sorts of silly jokes on people.", "text_cn": "前不久,一个学生看见两名工人在校门外用风镐刨路,他立刻打电话报警,说有两个学生假扮成工人在破坏马路。刚一挂断电话,他就走到工人跟前,告诉他们:要是有警察来叫他们走开,千万别当真——因为有个学生扮成了警察,正到处捉弄人。" },
+    { "seq": 3, "speaker": null, "text_en": "Both the police and the workmen were grateful to the student for this piece of advance information. The student hid in an archway nearby where he could watch and hear everything that went on. Sure enough, a police officer arrived on the scene and politely asked the workmen to leave. When he received a very rude reply from one of the workmen, he warned that he would make them stop.", "text_cn": "警察和工人都很感激这个学生提前透了风。那学生躲进附近一座拱形门楼,能看清、听清这里发生的一切。果然,一位警察赶到现场,礼貌地请工人离开。当他从一名工人那里得到一句很粗鲁的回话时,便警告说要强制他们停工。" },
+    { "seq": 4, "speaker": null, "text_en": "The workmen told him to do as he pleased, and the officer telephoned for help. Shortly afterward, four more officers arrived and remonstrated with the workmen. As the men refused to stop working, the police tried to take away the jackhammer. The workmen argued fiercely, and one of them lost his temper. He threatened to call the police.", "text_cn": "工人叫他随便,警察只好打电话求援。不一会儿,又来了四名警察,对工人们规劝告诫。见工人拒不停工,警察便想把风镐拿走。工人们激烈争执起来,其中一个发起了脾气,威胁说要报警。" },
+    { "seq": 5, "speaker": null, "text_en": "At this, the officers pointed out ironically that this would hardly be necessary, as the men were already under arrest. Pretending to speak seriously, one of the workmen asked if he might make a telephone call before being taken to the station. Permission was granted, and an officer accompanied him to a pay phone. Only when he saw that the man was actually telephoning the police did the officer realize that they had all been the victims of a hoax.", "text_cn": "这时,警察讽刺地指出:这大可不必,因为这几个人早已被逮捕了。一名工人装出一本正经的样子,问在被带去警局之前能不能打个电话。警察准了,还陪他去了一部公用电话。直到看见那人真的在给警察打电话,那名警察才恍然大悟:原来他们全都上了这场恶作剧的当。" }
+  ],
+  "words": [
+    { "word": "hoax", "ipa": "/hoʊks/", "pos": "n", "meaning_cn": "骗局,戏弄", "example": "the victims of a hoax" },
+    { "word": "deception", "ipa": "/dɪˈsepʃən/", "pos": "n", "meaning_cn": "欺骗", "example": "a crude form of deception" },
+    { "word": "self-respecting", "ipa": "/ˌself rɪˈspektɪŋ/", "pos": "adj", "meaning_cn": "自重的", "example": "no self-respecting student" },
+    { "word": "indulge", "ipa": "/ɪnˈdʌldʒ/", "pos": "v", "meaning_cn": "沉迷,纵情做", "example": "would ever indulge in" },
+    { "word": "silly", "ipa": "/ˈsɪli/", "pos": "adj", "meaning_cn": "无意义的,无聊的", "example": "all sorts of silly jokes" },
+    { "word": "advance", "ipa": "/ədˈvæns/", "pos": "adj", "meaning_cn": "预先的,事先获得的", "example": "this piece of advance information" },
+    { "word": "archway", "ipa": "/ˈɑːrtʃweɪ/", "pos": "n", "meaning_cn": "拱形门楼", "example": "hid in an archway" },
+    { "word": "remonstrate", "ipa": "/ˈremənstreɪt/", "pos": "v", "meaning_cn": "规劝,告诫", "example": "remonstrated with the workmen" },
+    { "word": "ironically", "ipa": "/aɪˈrɑːnɪkli/", "pos": "adv", "meaning_cn": "讽刺地", "example": "pointed out ironically" },
+    { "word": "permission", "ipa": "/pərˈmɪʃən/", "pos": "n", "meaning_cn": "许可", "example": "permission was granted" },
+    { "word": "grant", "ipa": "/ɡrænt/", "pos": "v", "meaning_cn": "同意,准予", "example": "permission was granted" },
+    { "word": "seize", "ipa": "/siːz/", "pos": "v", "meaning_cn": "抓住,夺取", "example": "tried to seize the tool" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "put 短语(put out/put off/put up with)" },
+    { "gp": "gp2", "name": "except / except for / apart from" },
+    { "gp": "gp3", "name": "dress 与 dress up 的区别" },
+    { "gp": "gp4", "name": "watch 与 follow 的区别" },
+    { "gp": "gp5", "name": "lose one's temper / in the mood(情绪表达)" },
+    { "gp": "gp6", "name": "词汇辨析(hoax/deception/remonstrate)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The fire department came to put ___ the fire.\"(\"扑灭(火)\"用 put ___)", "stem_cn": "消防队来把火扑灭。", "options": ["out", "up", "off", "on"] },
+    { "gp": "gp1", "stem": "\"They had to put ___ the meeting until next week.\"(\"推迟\"用 put ___)", "stem_cn": "他们只好把会议推迟到下周。", "options": ["off", "out", "up", "in"] },
+    { "gp": "gp1", "stem": "\"I can't put ___ with all this noise.\"(\"忍受\"用 put ___ with)", "stem_cn": "我受不了这么吵。", "options": ["up", "out", "off", "away"] },
+    { "gp": "gp2", "stem": "\"The joke was funny to everyone ___ the victims.\"(\"除…之外(不包括)\",后接名词/代词)", "stem_cn": "除了受害者,这玩笑人人都觉得好笑。", "options": ["except", "besides", "beside", "without"] },
+    { "gp": "gp2", "stem": "\"The road was empty ___ for a single truck.\"(句中用\"除…之外\"常加 for)", "stem_cn": "路上空荡荡的,只有一辆卡车。", "options": ["except", "beside", "apart", "without"] },
+    { "gp": "gp2", "stem": "\"___ from the noise, the town was pleasant.\"(句首\"除…之外\"用哪个)", "stem_cn": "除了吵,这个镇还挺不错。", "options": ["Apart", "Except", "Beside", "Without"] },
+    { "gp": "gp3", "stem": "\"Two students ___ up as workmen to fool the police.\"(\"乔装打扮成\"用哪个)", "stem_cn": "两个学生乔装成工人来骗警察。", "options": ["dressed", "wore", "put", "took"] },
+    { "gp": "gp3", "stem": "\"She ___ the baby before breakfast.\"(\"给…穿衣服\"用哪个)", "stem_cn": "她早饭前给宝宝穿好衣服。", "options": ["dressed", "dressed up", "wore", "put on"] },
+    { "gp": "gp3", "stem": "\"The children love to ___ up for parties.\"(\"盛装打扮/乔装\"用哪个)", "stem_cn": "孩子们喜欢为聚会盛装打扮。", "options": ["dress", "wear", "put", "take"] },
+    { "gp": "gp4", "stem": "\"He hid in an archway where he could ___ everything.\"(\"观看、注视\"用哪个)", "stem_cn": "他躲在门楼里,能看清发生的一切。", "options": ["watch", "follow", "look", "see through"] },
+    { "gp": "gp4", "stem": "\"The dog ___ its owner down the street.\"(\"跟随、跟着\"用哪个)", "stem_cn": "狗跟着主人沿街走。", "options": ["followed", "watched", "saw", "looked"] },
+    { "gp": "gp4", "stem": "\"I couldn't ___ the plot of the movie.\"(\"看懂、理解(情节)\"用哪个)", "stem_cn": "我看不懂这部电影的情节。", "options": ["follow", "watch", "see", "look"] },
+    { "gp": "gp5", "stem": "\"One of the workmen lost his ___.\"(\"发脾气\":lose one's ___)", "stem_cn": "有个工人发起了脾气。", "options": ["temper", "mood", "mind", "head"] },
+    { "gp": "gp5", "stem": "\"I'm not in the ___ for jokes today.\"(\"没心情(做…)\":in the ___ for)", "stem_cn": "我今天没心情开玩笑。", "options": ["mood", "temper", "way", "sense"] },
+    { "gp": "gp5", "stem": "\"He calmed down and was soon in a better ___.\"(\"心情\":in a good/better ___)", "stem_cn": "他冷静下来,很快心情就好些了。", "options": ["mood", "temper", "mind", "way"] },
+    { "gp": "gp6", "stem": "\"A trick that fools people into believing something false is a ___.\"(\"骗局、戏弄\"用哪个词)", "stem_cn": "让人信以为真的恶作剧骗局。", "options": ["hoax", "gift", "promise", "contest"] },
+    { "gp": "gp6", "stem": "\"To argue and protest in order to warn someone is to ___.\"(\"规劝、告诫\"用哪个词)", "stem_cn": "提出抗议、告诫某人。", "options": ["remonstrate", "agree", "applaud", "whisper"] },
+    { "gp": "gp6", "stem": "\"Saying the opposite of what you mean, often mockingly, is speaking ___.\"(\"讽刺地\"用哪个词)", "stem_cn": "说反话、带讽刺意味地说。", "options": ["ironically", "honestly", "loudly", "kindly"] }
+  ],
+  "stage6": [
+    { "stem": "hoax 的意思是:", "options": ["骗局,戏弄", "礼物", "约定", "比赛"] },
+    { "stem": "deception 的意思是:", "options": ["欺骗", "诚实", "帮助", "惊喜"] },
+    { "stem": "indulge 的意思是:", "options": ["沉迷,纵情做", "拒绝", "忘记", "害怕"] },
+    { "stem": "advance(adj.) 的意思是:", "options": ["预先的,事先的", "迟到的", "免费的", "危险的"] },
+    { "stem": "permission 的意思是:", "options": ["许可", "命令", "惩罚", "秘密"] },
+    { "stem": "grant 的意思是:", "options": ["同意,准予", "拒绝", "借用", "隐藏"] }
+  ],
+  "contrast": [
+    { "us": "jackhammer", "uk": "pneumatic drill", "note_cn": "风镐;美语 jackhammer,英式 pneumatic drill" },
+    { "us": "fire department", "uk": "fire brigade", "note_cn": "消防队;美语 fire department,英式 fire brigade" },
+    { "us": "sidewalk", "uk": "pavement", "note_cn": "人行道;美语 sidewalk,英式 pavement" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" }
+  ],
+  "chunks": [
+    { "us": "put out (a fire)", "ipa": "/pʊt aʊt/", "example1": "The firefighters put out the fire.", "example1_cn": "消防员把火扑灭了。", "example2": "Put out that candle.", "example2_cn": "把那支蜡烛熄了。" },
+    { "us": "dress up as", "ipa": "/dres ʌp æz/", "example1": "He dressed up as a police officer.", "example1_cn": "他乔装成一名警察。", "example2": "The kids dressed up as pirates.", "example2_cn": "孩子们打扮成海盗。" },
+    { "us": "lose one's temper", "ipa": "/luːz wʌnz ˈtempər/", "example1": "One of them lost his temper.", "example1_cn": "他们中有人发了脾气。", "example2": "Try not to lose your temper.", "example2_cn": "尽量别发脾气。" },
+    { "us": "do as one pleases", "ipa": "/duː æz wʌn ˈpliːzɪz/", "example1": "The workmen told him to do as he pleased.", "example1_cn": "工人叫他随便怎么办。", "example2": "You may do as you please.", "example2_cn": "你想怎样都行。" }
+  ],
+  "stage7_cloze": {
+    "context": "College students love a good hoax. One student told the police that two others, ___1___ up as workmen, were tearing up the road. He hid in an archway where he could ___2___ everything. The joke was funny to everyone ___3___ the police and the workmen. In the end, one workman lost his ___4___ and the trick was uncovered.",
+    "blanks": [
+      { "blank_no": 1, "options": ["dressed", "wore", "put", "took"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["watch", "follow", "look", "see through"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["except", "besides", "beside", "without"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["temper", "mood", "mind", "way"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What kind of joke do students specialize in, according to the passage?", "options": ["The hoax", "Telling riddles", "Hiding books", "Singing loudly"] },
+    { "stem": "What did the student tell the police?", "options": ["That two students dressed as workmen were tearing up the road", "That there was a fire", "That his bike was stolen", "That class was canceled"] },
+    { "stem": "When did the police officer realize it was a hoax?", "options": ["When he saw the workman actually telephoning the police", "When he read the newspaper", "When a student confessed", "He never did"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"除了受害者,这玩笑人人都觉得好笑\"(except):", "options": ["The joke was funny to everyone except the victims.", "The joke was funny to everyone beside the victims.", "The joke was funny to everyone without the victims.", "The joke was funny to everyone except of the victims."] },
+    { "stem": "你想说\"两个学生乔装成工人\"(dress up as):", "options": ["Two students dressed up as workmen.", "Two students dressed as up workmen.", "Two students wore up as workmen.", "Two students dressed up like as workmen."] },
+    { "stem": "你想说\"有个工人发起了脾气\"(lose one's temper):", "options": ["One of the workmen lost his temper.", "One of the workmen lost his mood.", "One of the workmen lost the temper of him.", "One of the workmen lose his temper."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "hoax 的意思是:", "options": ["骗局,戏弄", "礼物", "约定", "比赛"] },
+    { "kind": "vocab", "stem": "grant 的意思是:", "options": ["同意,准予", "拒绝", "借用", "隐藏"] },
+    { "kind": "grammar", "stem": "\"The fire department came to put ___ the fire.\"(\"扑灭(火)\"用 put ___)", "stem_cn": "消防队来把火扑灭。", "options": ["out", "up", "off", "on"] },
+    { "kind": "grammar", "stem": "\"The joke was funny to everyone ___ the victims.\"(\"除…之外\"后接名词)", "stem_cn": "除了受害者,这玩笑人人都觉得好笑。", "options": ["except", "besides", "beside", "without"] },
+    { "kind": "scenario", "stem": "\"lose one's temper\" 的意思是:", "options": ["发脾气,发火", "丢东西", "输掉比赛", "保持冷静"] },
+    { "kind": "scenario", "stem": "\"dress up as\" 的意思是:", "options": ["装扮成、乔装成", "脱下衣服", "站起来", "打扮得体"] },
+    { "kind": "reading", "stem": "Why did both the police and the workmen thank the student at first?", "options": ["They thought he had given them useful advance information", "He offered them money", "He fixed the road", "He knew the mayor"], "passage": true },
+    { "kind": "reading", "stem": "What made the whole situation a hoax?", "options": ["The student had tricked each side into distrusting the other", "There was a real fire", "The workmen were truly students", "The police were actors"], "passage": true },
+    { "kind": "listening", "stem": "Where did the student hide to watch?", "options": ["In an archway nearby", "Behind a truck", "On a rooftop", "In a store"], "audio": true },
+    { "kind": "listening", "stem": "What did the workman ask to do before being taken to the station?", "options": ["Make a telephone call", "Finish the road", "Eat lunch", "Change clothes"], "audio": true }
+  ]
+}

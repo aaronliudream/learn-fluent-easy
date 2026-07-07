@@ -63,6 +63,15 @@
   - **L30《海底探索》**(同位语从句/Not until倒装/after动名词被动/be confined to·regard as/which定从·百年前误以为海底平坦)——44题🟢·**具名史实泛化**。
 - 对账(am4 U1–U5):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1320**(30课×44)。
 
+## 📌 AM4 U6(L31/34/35/36 · `american_am4_seed_unit06.sql` · 176题=44×4,全🟢)· ⚠️缺 L32/L33(源PDF无此两课·Aaron定跳过·待补源回填)
+> mobi 源缺 L32《A lost ship》/L33《Education》两课(全书从 L31 直接跳 L34),Aaron 已定**先跳过**,待日后补源。故 U6 暂只 4 课。四篇为艺术/心理/科普/经济随笔(亨利·摩尔·青春期·太空·治理),原创承载法;克拉克等具名已泛化,亨利·摩尔名家散文100%原创复述观点。逐课主考:
+- 🔴 **需跑** `american_am4_seed_unit06.sql`(全新文件,含 L31/34/35/36 四课·176题)。
+  - **L31《雕塑家说》**(as if虚拟/现在分词完成式状语/现在分词作定语/比较级+than/whatever让步·欣赏雕塑须感知三维形体)——44题🟢·**亨利·摩尔散文100%原创复述**。
+  - **L34《青春期》**(虚拟条件句/too…to/使役let·make sb do/by+动名词/know sth to be·青少年尊重肯认错的父母)——44题🟢。
+  - **L35《太空漫游》**(be likely·able to do/倍数表达/it takes…to do/比较级less·more…than/目的状语·月球成工业枢纽·移民火星)——44题🟢·**Clarke泛化**。
+  - **L36《政府的开支》**(As…so/trust·rely on sb to do/to the extent that/情态被动/Where引导·信任是降本关键)——44题🟢。
+- 对账(am4 已做课,不含缺源L32/L33):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1496**(34课×44)。
+
 ## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **★★★全 12 单元 60 课收官 L1–L60**,累计 2640 题·第三册整本完成)
 
 ## 📌 AM3 U12 收官(L56–L60 · `american_am3_seed_unit12.sql` · 220题=44×5,全🟢)· ★★★第三册收官单元

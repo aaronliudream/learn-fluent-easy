@@ -1,0 +1,134 @@
+{
+  "id": "am4_l13",
+  "unit_no": 3,
+  "lesson_no": 13,
+  "title_en": "The Search for Oil",
+  "title_cn": "探寻石油",
+  "grammar_focus": "最高级(the deepest…of all)+ as much as、被动语态各式(is raised / are lowered / is rotated / must be kept)、Once 引导的时间状语从句、介词 + 关系代词(from which / by means of which)、want sb/sth to do + until 从句(NCE4 无 KS 页,考点由课文结构自取;IP:源为 T.F.加斯克尔科普著作,内容为通用钻油技术事实(不可版权),已用 100% 原创行文复述,无人物;题材=钻探石油的原理与过程·无害;美语化 meter/endeavor;第四册第13课·第三单元开工)",
+  "scene": "在矿工往地下钻的所有孔洞里,为找石油而打的那些是最深的;有的深达两万五千英尺。可是,与为煤或别的矿藏挖的竖井不同,这些孔从来不是要把人送下地底的。它们只是窄窄的钻孔,直径不到一英尺;正是这场找油的追逐,把深钻的技艺推得比任何别的采矿都远。地质学家一旦决定在哪里钻,一座高高的钢塔——井架——便被竖立在那地点之上。它必须立得高,因为它像一套巨大的滑轮组:一根根长长的钻管从它上面被放入地下,过后又被拽出来。钻管由顶端一台大功率发动机带动旋转,底部装着一枚硬硬的钻头,咬进岩石。因为钻井队必须确切知道钻头钻到了哪些岩层,他们时不时用一枚特制的取芯钻头取一块样本;它切出一段干净的岩柱,从这段岩芯里,可以清楚地读出钻头一路穿过的地层。钻头一旦钻进油层,油往往会自己涌向地面,因为它下方的水或天然气以巨大的压力把它顶着。那压力必须被牢牢控制住;控制的办法,是让沉重的泥浆在钻管里循环流下。今天谁也不想要那种老式而浪漫的井喷——把油高高喷向空中——因为那样一柱冲天只会白白浪费油和气。工程师们希望油乖乖待在井里,直到能以他们所选定的方式,安安静静、稳稳当当地把它引出来。",
+  "grammar_card": {
+    "title": "最高级 + as much as / 被动语态 / Once 从句 / 介词+关系代词 / want sth to do",
+    "intro": "①最高级 the deepest … of all;as much as 25,000 feet(多达)。②被动语态:a derrick is raised;pipe is rotated;pressure must be kept under control。③Once 引导时间从句‘一…就’:Once the bit breaks into the oil, …。④介词 + 关系代词:a cylinder from which the strata can be read;the mud by means of which they control it。⑤want sb/sth to do + until 从句:want the oil to stay down until it can be led off。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["最高级", "the + 最高级 + of all", "the deepest holes of all"],
+        ["被动语态", "be + 过去分词", "the pipe is rotated by an engine"],
+        ["Once 从句", "Once + 从句, 主句", "Once the bit breaks in, oil rushes up"],
+        ["介词+关系代词", "介词 + which", "a cylinder from which the strata can be read"],
+        ["want sth to do", "want sb/sth to do", "want the oil to stay down the hole"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "as much as + 数量 表示‘多达、达…之多’,强调数量之大。", "mark": "as much as 25,000 feet" },
+      { "rule": "情态动词的被动:must be kept、can be led off = 情态词 + be + 过去分词。", "mark": "must be kept / can be led off" },
+      { "rule": "美式拼写:meter(米,英式 metre)、endeavor(努力,英式 endeavour)。本课已按美语写。", "mark": "meter / endeavor" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What do oilmen want to achieve as soon as they strike oil?",
+    "options": ["To keep the oil under control and prevent a wasteful gusher", "To let the oil spout as high as possible", "To sell the well immediately", "To fill the hole with water"],
+    "answer_index": 0
+  },
+  "passage": "Of all the holes that miners drill into the earth, those sunk in the search for oil are the deepest of all; some reach down as much as twenty-five thousand feet. Yet, unlike the shafts cut for coal or other mineral deposits, these holes are never meant to carry men underground. They are only narrow borings, less than a foot across, and it is largely the hunt for oil that has pushed the art of deep drilling further than any other kind of mining. Once the geologists have decided where to drill, a tall steel tower, the derrick, is raised above the spot. It has to stand high because it works like a giant block and tackle: from it, great lengths of pipe are lowered into the ground and later hauled out again. The pipe is rotated by a powerful engine at the top and is fitted at the bottom with a hard cutting bit that bites into the rock. Because the crew must know exactly which layers the drill has reached, a sample is now and then taken with a special coring bit, which cuts a clean cylinder of stone, from which the strata that the drill has been passing through can be clearly read. Once the bit breaks into the oil, the oil tends to rush up to the surface on its own, for it is driven by the great pressure of water or gas beneath it. That pressure must be kept firmly under control, and it is controlled by means of the heavy mud which the crew circulate down the pipe. Nobody today wants the old, romantic gusher that throws oil high into the air, since such a fountain only wastes oil and gas. The engineers want the oil to stay down the hole until it can be led off, quietly and safely, in a manner they choose.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Of all the holes that miners drill into the earth, those sunk in the search for oil are the deepest of all; some reach down as much as twenty-five thousand feet. Yet, unlike the shafts cut for coal or other mineral deposits, these holes are never meant to carry men underground.", "text_cn": "在矿工往地下钻的所有孔洞里,为找石油而打的那些是最深的;有的深达两万五千英尺。可是,与为煤或别的矿藏挖的竖井不同,这些孔从来不是要把人送下地底的。" },
+    { "seq": 2, "speaker": null, "text_en": "They are only narrow borings, less than a foot across, and it is largely the hunt for oil that has pushed the art of deep drilling further than any other kind of mining. Once the geologists have decided where to drill, a tall steel tower, the derrick, is raised above the spot.", "text_cn": "它们只是窄窄的钻孔,直径不到一英尺;正是这场找油的追逐,把深钻的技艺推得比任何别的采矿都远。地质学家一旦决定在哪里钻,一座高高的钢塔——井架——便被竖立在那地点之上。" },
+    { "seq": 3, "speaker": null, "text_en": "It has to stand high because it works like a giant block and tackle: from it, great lengths of pipe are lowered into the ground and later hauled out again. The pipe is rotated by a powerful engine at the top and is fitted at the bottom with a hard cutting bit that bites into the rock.", "text_cn": "它必须立得高,因为它像一套巨大的滑轮组:一根根长长的钻管从它上面被放入地下,过后又被拽出来。钻管由顶端一台大功率发动机带动旋转,底部装着一枚硬硬的钻头,咬进岩石。" },
+    { "seq": 4, "speaker": null, "text_en": "Because the crew must know exactly which layers the drill has reached, a sample is now and then taken with a special coring bit, which cuts a clean cylinder of stone, from which the strata that the drill has been passing through can be clearly read.", "text_cn": "因为钻井队必须确切知道钻头钻到了哪些岩层,他们时不时用一枚特制的取芯钻头取一块样本;它切出一段干净的岩柱,从这段岩芯里,可以清楚地读出钻头一路穿过的地层。" },
+    { "seq": 5, "speaker": null, "text_en": "Once the bit breaks into the oil, the oil tends to rush up to the surface on its own, for it is driven by the great pressure of water or gas beneath it. That pressure must be kept firmly under control, and it is controlled by means of the heavy mud which the crew circulate down the pipe. Nobody today wants the old, romantic gusher that throws oil high into the air, since such a fountain only wastes oil and gas. The engineers want the oil to stay down the hole until it can be led off, quietly and safely, in a manner they choose.", "text_cn": "钻头一旦钻进油层,油往往会自己涌向地面,因为它下方的水或天然气以巨大的压力把它顶着。那压力必须被牢牢控制住;控制的办法,是让沉重的泥浆在钻管里循环流下。今天谁也不想要那种老式而浪漫的井喷——把油高高喷向空中——因为那样一柱冲天只会白白浪费油和气。工程师们希望油乖乖待在井里,直到能以他们所选定的方式,安安静静、稳稳当当地把它引出来。" }
+  ],
+  "words": [
+    { "word": "mineral", "ipa": "/ˈmɪnərəl/", "pos": "n", "meaning_cn": "矿物,矿藏", "example": "coal or other mineral deposits" },
+    { "word": "boring", "ipa": "/ˈbɔːrɪŋ/", "pos": "n", "meaning_cn": "钻孔", "example": "only narrow borings, less than a foot across" },
+    { "word": "derrick", "ipa": "/ˈderɪk/", "pos": "n", "meaning_cn": "井架,油井架", "example": "a tall steel tower, the derrick, is raised" },
+    { "word": "haul", "ipa": "/hɔːl/", "pos": "v", "meaning_cn": "拖,拽", "example": "hauled out of the ground again" },
+    { "word": "rotate", "ipa": "/ˈroʊteɪt/", "pos": "v", "meaning_cn": "(使)旋转", "example": "the pipe is rotated by an engine" },
+    { "word": "geologist", "ipa": "/dʒiˈɑːlədʒɪst/", "pos": "n", "meaning_cn": "地质学家", "example": "once the geologists have decided where to drill" },
+    { "word": "coring", "ipa": "/ˈkɔːrɪŋ/", "pos": "n", "meaning_cn": "取芯,岩芯钻取", "example": "a special coring bit" },
+    { "word": "cylinder", "ipa": "/ˈsɪlɪndər/", "pos": "n", "meaning_cn": "圆柱,柱状体", "example": "cuts a clean cylinder of stone" },
+    { "word": "strata", "ipa": "/ˈstrætə/", "pos": "n", "meaning_cn": "地层,岩层(stratum 的复数)", "example": "the strata the drill has been passing through" },
+    { "word": "circulate", "ipa": "/ˈsɜːrkjəleɪt/", "pos": "v", "meaning_cn": "(使)循环,流通", "example": "the mud which the crew circulate down the pipe" },
+    { "word": "gusher", "ipa": "/ˈɡʌʃər/", "pos": "n", "meaning_cn": "井喷,喷油井", "example": "the old, romantic gusher" },
+    { "word": "bit", "ipa": "/bɪt/", "pos": "n", "meaning_cn": "钻头", "example": "a hard cutting bit that bites into the rock" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "最高级(the deepest…of all)+ as much as" },
+    { "gp": "gp2", "name": "被动语态各式(is raised/are lowered/is rotated)" },
+    { "gp": "gp3", "name": "Once 引导的时间状语从句" },
+    { "gp": "gp4", "name": "介词 + 关系代词(from which/by means of which)" },
+    { "gp": "gp5", "name": "want sb/sth to do + until 从句" },
+    { "gp": "gp6", "name": "词汇辨析(derrick/strata/gusher)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Oil wells are the ___ holes of all that miners drill.\"(最高级,‘最深的’;deep 的最高级)", "stem_cn": "油井是矿工所钻的所有孔中最深的。", "options": ["deepest", "deeper", "deep", "more deep"] },
+    { "gp": "gp1", "stem": "\"Some reach down as ___ as 25,000 feet.\"(‘多达…之多’as … as 结构,填中间的词)", "stem_cn": "有的深达两万五千英尺。", "options": ["much", "many", "more", "most"] },
+    { "gp": "gp1", "stem": "\"The search for oil improved deep drilling ___ than any other mining.\"(比较级,‘胜过任何其他’,填表示程度的比较级词)", "stem_cn": "探油对深钻的改进胜过任何其他采矿。", "options": ["more", "most", "much", "very"] },
+    { "gp": "gp2", "stem": "\"A tall derrick ___ raised above the drilling spot.\"(一般现在被动,填 be 动词)", "stem_cn": "一座高高的井架被竖立在钻探地点上方。", "options": ["is", "are", "being", "been"] },
+    { "gp": "gp2", "stem": "\"Great lengths of pipe ___ lowered into the ground.\"(一般现在被动,主语复数,填 be 动词)", "stem_cn": "一根根长长的钻管被放入地下。", "options": ["are", "is", "was", "being"] },
+    { "gp": "gp2", "stem": "\"The pipe is ___ by a powerful engine at the top.\"(被动,‘被旋转’;rotate 的过去分词)", "stem_cn": "钻管由顶部一台大功率发动机带动旋转。", "options": ["rotated", "rotating", "rotate", "to rotate"] },
+    { "gp": "gp3", "stem": "\"___ the geologists have decided where to drill, work begins.\"(‘一旦/一…就’,填连词)", "stem_cn": "地质学家一决定在哪钻,工作就开始。", "options": ["Once", "Unless", "Although", "Whether"] },
+    { "gp": "gp3", "stem": "\"___ the bit breaks into the oil, it rushes to the surface.\"(‘一…就’,填连词)", "stem_cn": "钻头一钻到油层,油就涌向地面。", "options": ["Once", "Since", "Though", "Before"] },
+    { "gp": "gp3", "stem": "\"The oil flows up ___ the drill reaches it.\"(‘一…就/当…时’,填连词)", "stem_cn": "钻头一触到油,油便涌出。", "options": ["once", "unless", "although", "whereas"] },
+    { "gp": "gp4", "stem": "\"The core cuts a cylinder ___ which the strata can be read.\"(介词+关系代词,‘从其中’,填介词)", "stem_cn": "取芯钻头切出一段岩柱,从中可读出地层。", "options": ["from", "on", "at", "for"] },
+    { "gp": "gp4", "stem": "\"The mud ___ which they control the pressure is heavy.\"(介词+关系代词,‘借以…’means-of 结构,填开头的介词)", "stem_cn": "他们借以控制压力的泥浆很重。", "options": ["by", "from", "at", "of"] },
+    { "gp": "gp4", "stem": "\"The controlled manner ___ which the oil is led off is safe.\"(介词+关系代词,‘以…方式’,填介词)", "stem_cn": "油被引出所采用的那种可控方式很安全。", "options": ["in", "from", "at", "of"] },
+    { "gp": "gp5", "stem": "\"Engineers want the oil ___ down the hole until led off safely.\"(want sb/sth 后接不定式,填正确形式)", "stem_cn": "工程师希望油留在井里,直到安全引出。", "options": ["to stay", "stay", "staying", "stayed"] },
+    { "gp": "gp5", "stem": "\"They keep it down ___ they can lead it off safely.\"(‘直到…才’,填连词)", "stem_cn": "他们把油封在下面,直到能安全引出。", "options": ["until", "since", "although", "whether"] },
+    { "gp": "gp5", "stem": "\"Nobody wants the gusher ___ oil into the air.\"(want sth 后接不定式,‘喷出’,填正确形式)", "stem_cn": "没人想要那种把油喷向空中的井喷。", "options": ["to throw", "throw", "throwing", "thrown"] },
+    { "gp": "gp6", "stem": "\"A tall tower built over an oil well is a ___.\"(“井架”用哪个词)", "stem_cn": "立在油井上方的高塔。", "options": ["derrick", "ladder", "bridge", "fence"] },
+    { "gp": "gp6", "stem": "\"Layers of rock laid down over ages are ___.\"(“地层、岩层”复数用哪个词)", "stem_cn": "历经岁月沉积成的一层层岩石。", "options": ["strata", "rivers", "clouds", "roots"] },
+    { "gp": "gp6", "stem": "\"A well that lets oil spout wildly into the air is a ___.\"(“井喷、喷油井”用哪个词)", "stem_cn": "让油狂喷向空中的井。", "options": ["gusher", "puddle", "fountain", "drain"] }
+  ],
+  "stage6": [
+    { "stem": "derrick 的意思是:", "options": ["井架,油井架", "梯子", "桥", "栅栏"] },
+    { "stem": "strata 的意思是:", "options": ["地层,岩层", "河流", "云", "根"] },
+    { "stem": "geologist 的意思是:", "options": ["地质学家", "生物学家", "工程师", "画家"] },
+    { "stem": "gusher 的意思是:", "options": ["井喷,喷油井", "水坑", "水管", "排水沟"] },
+    { "stem": "haul 的意思是:", "options": ["拖,拽", "抛", "藏", "买"] },
+    { "stem": "circulate 的意思是:", "options": ["使循环,流通", "停止", "冻结", "蒸发"] }
+  ],
+  "contrast": [
+    { "us": "meter", "uk": "metre", "note_cn": "米;拼写差异,美语 meter" },
+    { "us": "liter", "uk": "litre", "note_cn": "升;拼写差异,美语 liter" },
+    { "us": "endeavor", "uk": "endeavour", "note_cn": "努力;拼写差异,美语 endeavor" },
+    { "us": "mold", "uk": "mould", "note_cn": "模子/铸造;拼写差异,美语 mold" }
+  ],
+  "chunks": [
+    { "us": "as much as", "ipa": "/æz mʌtʃ æz/", "example1": "It goes down as much as 25,000 feet.", "example1_cn": "它深达两万五千英尺。", "example2": "He earns as much as I do.", "example2_cn": "他挣得和我一样多。" },
+    { "us": "by means of", "ipa": "/baɪ miːnz əv/", "example1": "They control it by means of heavy mud.", "example1_cn": "他们靠沉重的泥浆来控制它。", "example2": "We travel by means of trains.", "example2_cn": "我们靠火车出行。" },
+    { "us": "lead off", "ipa": "/liːd ɔːf/", "example1": "The oil is led off safely.", "example1_cn": "石油被安全地引走。", "example2": "A path leads off to the woods.", "example2_cn": "一条小路岔向树林。" },
+    { "us": "break into", "ipa": "/breɪk ˈɪntə/", "example1": "Once the bit breaks into the oil, it flows up.", "example1_cn": "钻头一钻进油层,油就涌上来。", "example2": "Thieves broke into the shop.", "example2_cn": "窃贼闯入了那家店。" }
+  ],
+  "stage7_cloze": {
+    "context": "Oil wells are the ___1___ holes of all. Once the geologists decide where to drill, a derrick ___2___ raised. A coring bit cuts a cylinder ___3___ which the strata can be read. We want the oil to stay down ___4___ it can be led off safely.",
+    "blanks": [
+      { "blank_no": 1, "options": ["deepest", "deeper", "deep", "most deep"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["is", "are", "being", "been"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["from", "on", "at", "for"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["until", "since", "although", "whether"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What do the engineers want to happen as soon as they strike oil?", "options": ["To keep it under control and prevent a wasteful gusher", "To let it spout as high as possible", "To burn it off at once", "To leave the well and move on"] },
+    { "stem": "Why must an oil derrick be so tall?", "options": ["Because it works like a giant block and tackle for the pipe", "Because workers live inside it", "Because it stores the oil", "Because it hides the well"] },
+    { "stem": "How is a sample of the rock obtained?", "options": ["With a coring bit that cuts a clean cylinder of stone", "By sending men down the hole", "By melting the rock", "By washing it out with water"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"一座高高的井架被竖立在钻探地点上方\"(被动语态):", "options": ["A tall derrick is raised above the drilling spot.", "A tall derrick is raise above the drilling spot.", "A tall derrick raised above the drilling spot.", "A tall derrick is being raise above the drilling spot."] },
+    { "stem": "你想说\"地质学家一决定在哪钻,工作就开始\"(Once 从句):", "options": ["Once the geologists have decided where to drill, work begins.", "Once the geologists have decided where to drill, work begin.", "Once the geologists has decided where to drill, work begins.", "Once the geologists have decide where to drill, work begins."] },
+    { "stem": "你想说\"工程师希望油留在井里,直到能安全引出\"(want sth to do + until):", "options": ["Engineers want the oil to stay down the hole until it can be led off.", "Engineers want the oil stay down the hole until it can be led off.", "Engineers want the oil staying down the hole until it can be led off.", "Engineers want the oil to stays down the hole until it can be led off."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "derrick 的意思是:", "options": ["井架,油井架", "梯子", "桥", "栅栏"] },
+    { "kind": "vocab", "stem": "gusher 的意思是:", "options": ["井喷,喷油井", "水坑", "水管", "排水沟"] },
+    { "kind": "grammar", "stem": "\"A tall derrick ___ raised above the spot.\"(一般现在被动)", "stem_cn": "一座高高的井架被竖立在那地点之上。", "options": ["is", "are", "being", "been"] },
+    { "kind": "grammar", "stem": "\"___ the bit breaks into the oil, it rushes up.\"(‘一…就’,时间连词)", "stem_cn": "钻头一钻进油层,油就涌上来。", "options": ["Once", "Since", "Though", "Before"] },
+    { "kind": "scenario", "stem": "\"by means of\" 的意思是:", "options": ["借助、用…方法", "尽管", "除非", "为了"] },
+    { "kind": "scenario", "stem": "\"break into\" 的意思是:", "options": ["钻入、闯入", "分开", "修好", "卖掉"] },
+    { "kind": "reading", "stem": "Why are oil holes never meant to carry men underground?", "options": ["They are only narrow borings, less than a foot across", "They are too short", "They are full of water", "They are made of glass"], "passage": true },
+    { "kind": "reading", "stem": "Why does nobody today want a gusher?", "options": ["It wastes oil and gas by throwing them into the air", "It is too quiet", "It is too cheap", "It cannot reach the oil"], "passage": true },
+    { "kind": "listening", "stem": "What do the engineers want the oil to do when they strike it?", "options": ["Stay down the hole until it can be led off safely", "Spray as high as it can", "Catch fire quickly", "Flow into the sea"], "audio": true },
+    { "kind": "listening", "stem": "What is a coring bit used for?", "options": ["To cut a clean cylinder of rock as a sample", "To pump the oil out", "To light the derrick", "To carry men down"], "audio": true }
+  ]
+}

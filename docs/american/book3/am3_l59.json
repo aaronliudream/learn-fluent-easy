@@ -1,0 +1,133 @@
+{
+  "id": "am3_l59",
+  "unit_no": 12,
+  "lesson_no": 59,
+  "title_en": "Collecting",
+  "title_cn": "收藏",
+  "grammar_focus": "限定性定语从句(who/which/that)、非限定性定语从句(, which / … of which)、同位语从句(the belief/chances + that + 完整句、to such an extent that)、原因/让步状语从句(as/since 原因;whatever 让步)、if 虚拟条件(would…if + 过去式)+ 短语动词(NCE3 第三册 Unit 3 无 KS 页,考点由课文结构 + Notes on the text 自取;原创承载·论人为何收藏杂物、收藏作为爱好的种种益处的议论文·题材健康无害;美语化 closet/catalog)",
+  "scene": "人们往往会积攒东西,有时甚至没意识到自己在这么做。的确,当他们从自己的收藏里翻出一件有用、却不知自己竟拥有的东西时,会有一种惊喜。那些从不必搬家的人,成了各种杂物的收藏者——那些东西只能被称作一堆废物。他们把不用的东西一放好几年,搁在抽屉、壁橱、阁楼里,相信总有一天正好用得上。人上了年纪,还会出于另两个原因积攒物件:一是精力不济,而精力对清理杂物必不可少;二是感情。放久了的东西满是与往昔的联系,于是渐渐获得了超出其本身的价值。有些东西是有意收藏起来以免浪费的。我要举的例子就有细绳和牛皮纸,节俭的人每拆一个包裹就把这两样必备品留下,省得日后再买。收集小玩意儿很容易上瘾。我认识一个人,她总爱从报纸上剪下想买却买不起的衣服图样。她并不富裕,买得起的可能性微乎其微;可她意志又不够坚定,停不下这个习惯。这习惯无害,只是把书桌弄得乱到——每次一打开,纸片就四处飞落。把收藏当作正经爱好则完全是另一回事,好处多多。它为闲暇提供休息,因为端详自己的珍品本身就是一种乐趣。人不必出门去找消遣,因为收藏就在家中。不管收藏的是什么——邮票、唱片、初版书、瓷器、模型汽车,还是玩具动物——总有事可做:从给新入手的藏品找个合适的位置,到在参考书里核对事实。这爱好不仅让人在所选的专题上受教育,也让人在与之有关的一般事物上长进。此外还有别的好处。收藏者想结识志趣相投的人,好求教、交流心得、交换藏品、炫耀最新的收获,于是朋友圈越来越大。很快这爱好还会带来旅行:也许去别的城市开个碰头会,也许为寻一件稀罕标本而出趟远门,因为收藏者并不局限于某一个国家。多年下来,人很可能成了这门爱好的行家,还会被请去做非正式的讲谈——先对小圈子,若讲得好,再对更大的听众。自信就这样滋长起来:先来自精通一门学问,再来自能把它讲出来。收藏,以如此有益的方式占据了闲暇,让人心满意足,再无烦闷的余地。",
+  "grammar_card": {
+    "title": "定语从句(限定/非限定) / 同位语从句 / 原因·让步从句 / if 虚拟",
+    "intro": "①限定性定语从句 who/which/that 修饰前面的名词:something which they did not know they owned。②非限定性定语从句用逗号隔开,which 可指整件事:energy, which is essential…。③同位语从句由 that 引导,对抽象名词作解释:the belief that…, the chances that…, to such an extent that…。④原因从句 as/since=因为;让步 whatever=不管…。⑤if 虚拟(与现在相反):if + 过去式,主句 would + 原形。",
+    "table": {
+      "headers": ["用法", "引导词", "例子"],
+      "rows": [
+        ["限定性定语从句", "who/which/that", "matters which have a bearing on it"],
+        ["非限定性定语从句", ", which / … of which", "energy, which is essential"],
+        ["同位语从句", "抽象名词 + that", "the belief that they may need them"],
+        ["原因/让步从句", "as/since / whatever", "since the collection is at home"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "同位语从句里的 that 是纯连词、不作句子成分、不可省去指代含义;定语从句里的 which/that 要在从句中充当成分。", "mark": "the belief that…(同位语) / things that I own(定语)" },
+      { "rule": "非限定性从句只能用 which(不用 that);which 可回指前面整件事:…, which made him proud。", "mark": ", which made him proud" },
+      { "rule": "美式用词:closet(壁橱,英式 cupboard)、catalog(目录,英式 catalogue)。本课已按美语写。", "mark": "closet / catalog" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What in particular does a person gain when he or she becomes a serious collector?",
+    "options": ["Growing self-confidence", "A great deal of money", "A bigger house", "More free time"],
+    "answer_index": 0
+  },
+  "passage": "People tend to amass possessions, sometimes without even being aware of doing so. Indeed, they can have a delightful surprise when they find something useful which they did not know they owned. Those who never have to move house become indiscriminate collectors of what can only be described as clutter. They leave unwanted objects in drawers, closets and attics for years, in the belief that they may one day need just those very things. As people grow older, they accumulate belongings for two other reasons: a lack of energy, which is essential for clearing things out, and sentiment. Things owned for a long time are full of associations with the past, and so they gradually acquire a value beyond their true worth. Some things are collected deliberately in an attempt to avoid waste. Among these I would list string and brown paper, kept by thrifty people whenever a parcel is opened, to save buying these two requisites. Collecting small items can easily become a mania. I know someone who always cuts sketches out of newspapers of clothes that she would like to buy if she had the money. As she is not rich, the chances that she will ever afford such purchases are remote; but she is never strong-minded enough to stop the practice. It is a harmless habit, yet it litters up her desk to such an extent that every time she opens it, loose bits of paper fall out in every direction. Collecting as a serious hobby is quite different, and has many advantages. It provides relaxation for leisure hours, as just looking at one's treasures is always a joy. One does not have to go out for amusement, since the collection is housed at home. Whatever it consists of — stamps, records, first editions, china, model cars, or toy animals — there is always something to do, from finding the right place for the latest addition to verifying facts in reference books. The hobby educates a person not only in the chosen subject but also in general matters which have some bearing on it. There are other benefits too. A collector wants to meet like-minded people, to get advice, to compare notes, and to show off the latest find, and so one's circle of friends grows. Soon the hobby leads to travel, possibly a trip abroad in search of a rare specimen, for collectors are not confined to any one country. Over the years one may well become an authority on the subject, and may be asked to give informal talks, first to small gatherings and then, if successful, to larger audiences. In this way self-confidence grows, first from mastering a subject and then from being able to talk about it. Collecting, by occupying spare time so constructively, makes a person contented, with no room for boredom.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "People tend to amass possessions, sometimes without even being aware of doing so. Indeed, they can have a delightful surprise when they find something useful which they did not know they owned. Those who never have to move house become indiscriminate collectors of what can only be described as clutter. They leave unwanted objects in drawers, closets and attics for years, in the belief that they may one day need just those very things.", "text_cn": "人们往往会积攒东西,有时甚至没意识到自己在这么做。的确,当他们翻出一件有用、却不知自己竟拥有的东西时,会有一种惊喜。那些从不必搬家的人,成了各种杂物的收藏者——那些东西只能被称作一堆废物。他们把不用的东西一放好几年,搁在抽屉、壁橱、阁楼里,相信总有一天正好用得上。" },
+    { "seq": 2, "speaker": null, "text_en": "As people grow older, they accumulate belongings for two other reasons: a lack of energy, which is essential for clearing things out, and sentiment. Things owned for a long time are full of associations with the past, and so they gradually acquire a value beyond their true worth. Some things are collected deliberately in an attempt to avoid waste, such as string and brown paper, kept by thrifty people whenever a parcel is opened.", "text_cn": "人上了年纪,还会出于另两个原因积攒物件:一是精力不济,而精力对清理杂物必不可少;二是感情。放久了的东西满是与往昔的联系,于是渐渐获得了超出其本身的价值。有些东西是有意收藏起来以免浪费的,比如细绳和牛皮纸——节俭的人每拆一个包裹就把它们留下。" },
+    { "seq": 3, "speaker": null, "text_en": "Collecting small items can easily become a mania. I know someone who always cuts sketches out of newspapers of clothes that she would like to buy if she had the money. As she is not rich, the chances that she will ever afford such purchases are remote; but she is never strong-minded enough to stop the practice. It is a harmless habit, yet it litters up her desk to such an extent that every time she opens it, loose bits of paper fall out in every direction.", "text_cn": "收集小玩意儿很容易上瘾。我认识一个人,她总爱从报纸上剪下想买却买不起的衣服图样。她并不富裕,买得起的可能性微乎其微;可她意志又不够坚定,停不下这个习惯。这习惯无害,只是把书桌弄得乱到——每次一打开,纸片就四处飞落。" },
+    { "seq": 4, "speaker": null, "text_en": "Collecting as a serious hobby is quite different, and has many advantages. It provides relaxation for leisure hours, as just looking at one's treasures is always a joy. One does not have to go out for amusement, since the collection is housed at home. Whatever it consists of — stamps, records, model cars, or toy animals — there is always something to do, from finding the right place for the latest addition to verifying facts in reference books.", "text_cn": "把收藏当作正经爱好则完全是另一回事,好处多多。它为闲暇提供休息,因为端详自己的珍品本身就是一种乐趣。人不必出门去找消遣,因为收藏就在家中。不管收藏的是什么——邮票、唱片、模型汽车,还是玩具动物——总有事可做:从给新藏品找合适的位置,到在参考书里核对事实。" },
+    { "seq": 5, "speaker": null, "text_en": "A collector wants to meet like-minded people, to compare notes, and to show off the latest find, and so one's circle of friends grows. Soon the hobby leads to travel, possibly a trip abroad in search of a rare specimen, for collectors are not confined to any one country. In this way self-confidence grows, first from mastering a subject and then from being able to talk about it. Collecting, by occupying spare time so constructively, makes a person contented, with no room for boredom.", "text_cn": "收藏者想结识志趣相投的人,好交流心得、炫耀最新的收获,于是朋友圈越来越大。很快这爱好还会带来旅行:也许为寻一件稀罕标本而出趟远门,因为收藏者并不局限于某一个国家。自信就这样滋长:先来自精通一门学问,再来自能把它讲出来。收藏,以如此有益的方式占据了闲暇,让人心满意足,再无烦闷的余地。" }
+  ],
+  "words": [
+    { "word": "amass", "ipa": "/əˈmæs/", "pos": "v", "meaning_cn": "积聚,大量收集", "example": "people tend to amass possessions" },
+    { "word": "indiscriminate", "ipa": "/ˌɪndɪˈskrɪmɪnət/", "pos": "adj", "meaning_cn": "不加选择的", "example": "indiscriminate collectors of clutter" },
+    { "word": "clutter", "ipa": "/ˈklʌtər/", "pos": "n", "meaning_cn": "一堆杂物", "example": "what can only be described as clutter" },
+    { "word": "mania", "ipa": "/ˈmeɪniə/", "pos": "n", "meaning_cn": "癖好,狂热", "example": "collecting can become a mania" },
+    { "word": "remote", "ipa": "/rɪˈmoʊt/", "pos": "adj", "meaning_cn": "(可能性)微小的,遥远的", "example": "the chances are remote" },
+    { "word": "relaxation", "ipa": "/ˌriːlækˈseɪʃən/", "pos": "n", "meaning_cn": "休息,消遣", "example": "it provides relaxation for leisure hours" },
+    { "word": "verify", "ipa": "/ˈverɪfaɪ/", "pos": "v", "meaning_cn": "查证,核实", "example": "verifying facts in reference books" },
+    { "word": "like-minded", "ipa": "/ˌlaɪkˈmaɪndɪd/", "pos": "adj", "meaning_cn": "志趣相投的", "example": "meet like-minded people" },
+    { "word": "specimen", "ipa": "/ˈspesɪmən/", "pos": "n", "meaning_cn": "标本,样本", "example": "in search of a rare specimen" },
+    { "word": "constructively", "ipa": "/kənˈstrʌktɪvli/", "pos": "adv", "meaning_cn": "有益地,积极地", "example": "occupying spare time so constructively" },
+    { "word": "contented", "ipa": "/kənˈtentɪd/", "pos": "adj", "meaning_cn": "心满意足的", "example": "makes a person contented" },
+    { "word": "boredom", "ipa": "/ˈbɔːrdəm/", "pos": "n", "meaning_cn": "烦闷,无聊", "example": "with no room for boredom" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "限定性定语从句(who/which/that)" },
+    { "gp": "gp2", "name": "非限定性定语从句(, which / … of which)" },
+    { "gp": "gp3", "name": "同位语从句(抽象名词 + that)" },
+    { "gp": "gp4", "name": "原因/让步状语从句(as/since / whatever)" },
+    { "gp": "gp5", "name": "if 虚拟条件 + 短语动词(show off)" },
+    { "gp": "gp6", "name": "词汇辨析(amass/mania/contented)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"They found something useful ___ they did not know they owned.\"(限定性定从,指物,作宾语)", "stem_cn": "他们找到了自己都不知道拥有的有用之物。", "options": ["which", "who", "what", "whose"] },
+    { "gp": "gp1", "stem": "\"Those ___ never have to move house become collectors of clutter.\"(限定性定从,指人,作主语)", "stem_cn": "那些从不必搬家的人成了杂物收藏者。", "options": ["who", "which", "whom", "what"] },
+    { "gp": "gp1", "stem": "\"The hobby educates one in matters ___ have some bearing on it.\"(限定性定从,指物,作主语)", "stem_cn": "这一爱好还让人在与之有关的事上长进。", "options": ["which", "who", "whose", "what"] },
+    { "gp": "gp2", "stem": "\"People lack energy, ___ is essential for clearing things out.\"(非限定性定从,指前面整件事,填关系词)", "stem_cn": "人们缺乏精力,而精力对清理杂物至关重要。", "options": ["which", "that", "what", "it"] },
+    { "gp": "gp2", "stem": "\"They collect for two reasons, ___ of which are hard to resist.\"(非限定性从句:___ of which 表‘两者都’,填这个词)", "stem_cn": "他们出于两个原因收藏,这两个原因都难以抗拒。", "options": ["both", "all", "either", "none"] },
+    { "gp": "gp2", "stem": "\"He gave talks to larger audiences, ___ made him more confident.\"(非限定性定从,指整件事)", "stem_cn": "他对更多听众演讲,这让他更自信。", "options": ["which", "that", "what", "and"] },
+    { "gp": "gp3", "stem": "\"They keep things in the ___ that they may one day need them.\"(名词 + that 同位语从句:‘…的想法’,填这个名词)", "stem_cn": "他们留着东西,以为总有一天用得上。", "options": ["belief", "place", "way", "reason"] },
+    { "gp": "gp3", "stem": "\"The chances ___ she will ever afford it are remote.\"(the chances + ___ 同位语从句:引导对 chances 的解释,填连词)", "stem_cn": "她买得起的可能性微乎其微。", "options": ["that", "which", "what", "whose"] },
+    { "gp": "gp3", "stem": "\"It litters her desk to such an extent ___ paper falls out everywhere.\"(to such an extent + ___:引导结果/同位语,填连词)", "stem_cn": "它把书桌弄得乱到纸片四处掉落。", "options": ["that", "which", "as", "what"] },
+    { "gp": "gp4", "stem": "\"One need not go out for fun, ___ the collection is at home.\"(引导原因‘因为’,填连词)", "stem_cn": "不必出门找乐子,因为收藏就在家里。", "options": ["since", "though", "unless", "whether"] },
+    { "gp": "gp4", "stem": "\"___ it consists of, there is always something to do with a collection.\"(‘不管…是什么’,填引导让步的词)", "stem_cn": "不管收藏的是什么,总有事可做。", "options": ["Whatever", "However", "Whenever", "Wherever"] },
+    { "gp": "gp4", "stem": "\"Collecting is a joy, ___ looking at one's treasures pleases the eye.\"(表原因‘因为’,填这个连词)", "stem_cn": "收藏是种乐趣,因为端详自己的珍品赏心悦目。", "options": ["as", "but", "or", "that"] },
+    { "gp": "gp5", "stem": "\"She cuts out clothes she would buy if she ___ the money.\"(与现在相反虚拟,if 从句用过去式)", "stem_cn": "她剪下若有钱就会买的衣服图样。", "options": ["had", "has", "will have", "having"] },
+    { "gp": "gp5", "stem": "\"She would like to buy them if she ___ rich.\"(与现在相反虚拟,be 动词用哪种形式)", "stem_cn": "她要是有钱就想买下它们。", "options": ["were", "is", "will be", "be"] },
+    { "gp": "gp5", "stem": "\"Collectors love to show ___ their latest find.\"(show ___:炫耀、展示,填副词)", "stem_cn": "收藏者爱炫耀自己最新的收藏。", "options": ["off", "in", "up", "out"] },
+    { "gp": "gp6", "stem": "\"To gather a large amount over time is to ___.\"(“积聚”用哪个词)", "stem_cn": "日积月累地聚拢大量东西。", "options": ["amass", "waste", "lose", "spend"] },
+    { "gp": "gp6", "stem": "\"A great enthusiasm that becomes almost an obsession is a ___.\"(“癖好、狂热”用哪个词)", "stem_cn": "近乎着迷的强烈爱好。", "options": ["mania", "duty", "fear", "rule"] },
+    { "gp": "gp6", "stem": "\"A state of being happy and satisfied is being ___.\"(“心满意足的”用哪个词)", "stem_cn": "幸福而满足的状态。", "options": ["contented", "bored", "anxious", "angry"] }
+  ],
+  "stage6": [
+    { "stem": "amass 的意思是:", "options": ["积聚,大量收集", "丢弃", "浪费", "借出"] },
+    { "stem": "indiscriminate 的意思是:", "options": ["不加选择的", "精挑细选的", "短暂的", "昂贵的"] },
+    { "stem": "clutter 的意思是:", "options": ["一堆杂物", "珍宝", "工具", "家具"] },
+    { "stem": "mania 的意思是:", "options": ["癖好,狂热", "厌恶", "恐惧", "责任"] },
+    { "stem": "specimen 的意思是:", "options": ["标本,样本", "复制品", "废品", "礼物"] },
+    { "stem": "boredom 的意思是:", "options": ["烦闷,无聊", "快乐", "惊讶", "骄傲"] }
+  ],
+  "contrast": [
+    { "us": "closet", "uk": "cupboard", "note_cn": "壁橱;用词差异,美语 closet" },
+    { "us": "catalog", "uk": "catalogue", "note_cn": "目录;拼写差异,美语 catalog" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" },
+    { "us": "check", "uk": "cheque", "note_cn": "支票;拼写差异,美语 check" }
+  ],
+  "chunks": [
+    { "us": "turn out", "ipa": "/tɜːrn aʊt/", "example1": "It takes energy to turn out old closets.", "example1_cn": "清理旧壁橱很费力气。", "example2": "We turned out the attic last weekend.", "example2_cn": "上周末我们把阁楼清理了一遍。" },
+    { "us": "cut out", "ipa": "/kʌt aʊt/", "example1": "She cuts out sketches from newspapers.", "example1_cn": "她从报纸上剪下图样。", "example2": "He cut out the coupon from the flyer.", "example2_cn": "他从传单上剪下优惠券。" },
+    { "us": "show off", "ipa": "/ʃoʊ ɔːf/", "example1": "Collectors love to show off their latest find.", "example1_cn": "收藏者爱炫耀最新的收获。", "example2": "He likes to show off his new car.", "example2_cn": "他喜欢炫耀他的新车。" },
+    { "us": "be confined to", "ipa": "/bi kənˈfaɪnd tə/", "example1": "Collectors are not confined to any one country.", "example1_cn": "收藏者并不局限于某一个国家。", "example2": "The illness confined her to bed for a week.", "example2_cn": "这病使她卧床一周。" }
+  ],
+  "stage7_cloze": {
+    "context": "People ___1___ possessions without being aware of it. They keep old things in the belief ___2___ they may one day need them. Collecting as a serious hobby provides relaxation, ___3___ looking at one's treasures is a joy. ___4___ a collection consists of, there is always something to do.",
+    "blanks": [
+      { "blank_no": 1, "options": ["amass", "waste", "lose", "hide"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["that", "which", "what", "whose"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["as", "so", "if", "or"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["Whatever", "However", "Whenever", "Wherever"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What in particular does a person gain from becoming a serious collector?", "options": ["Growing self-confidence", "A lot of money", "A bigger house", "More free time"] },
+    { "stem": "Why do people who never move house tend to accumulate clutter?", "options": ["They keep things believing they may need them one day", "They enjoy shopping", "They are very wealthy", "They dislike cleaning"] },
+    { "stem": "According to the passage, how does serious collecting affect one's circle of friends?", "options": ["It grows, as collectors meet like-minded people", "It shrinks over time", "It stays exactly the same", "It disappears completely"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"人们缺乏精力,而精力对清理杂物至关重要\"(非限定性从句):", "options": ["People lack energy, which is essential for clearing things out.", "People lack energy, what is essential for clearing things out.", "People lack energy, that is essential for clearing things out.", "People lack energy which essential for clearing things out."] },
+    { "stem": "你想说\"他们留着东西,以为总有一天用得上\"(同位语从句 the belief that):", "options": ["They keep things in the belief that they may one day need them.", "They keep things in the belief which they may one day need them.", "They keep things in the belief what they may one day need them.", "They keep things in belief that they may one day need them."] },
+    { "stem": "你想说\"她要是有钱就想买下它们\"(与现在相反虚拟):", "options": ["She would like to buy them if she had the money.", "She would like to buy them if she has the money.", "She will like to buy them if she had the money.", "She would like to buy them if she have the money."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "amass 的意思是:", "options": ["积聚,大量收集", "丢弃", "浪费", "借出"] },
+    { "kind": "vocab", "stem": "boredom 的意思是:", "options": ["烦闷,无聊", "快乐", "惊讶", "骄傲"] },
+    { "kind": "grammar", "stem": "\"Those ___ never have to move house become collectors of clutter.\"(限定性定从,指人)", "stem_cn": "那些从不必搬家的人成了杂物收藏者。", "options": ["who", "which", "whom", "what"] },
+    { "kind": "grammar", "stem": "\"___ a collection consists of, there is always something to do.\"(‘不管…是什么’,填引导让步的词)", "stem_cn": "不管收藏的是什么,总有事可做。", "options": ["Whatever", "However", "Whenever", "Wherever"] },
+    { "kind": "scenario", "stem": "\"show off\" 的意思是:", "options": ["炫耀、展示", "关掉", "推迟", "躲开"] },
+    { "kind": "scenario", "stem": "\"be confined to\" 的意思是:", "options": ["局限于、限于", "属于", "来自", "超过"] },
+    { "kind": "reading", "stem": "Why do older people tend to keep more belongings?", "options": ["They lack the energy to clear things out, and grow attached to them", "They are required to by law", "They all have larger homes", "They plan to sell them"], "passage": true },
+    { "kind": "reading", "stem": "How does a serious hobby help build self-confidence?", "options": ["First from mastering a subject, then from being able to talk about it", "By making a lot of money", "By avoiding other people", "By moving house often"], "passage": true },
+    { "kind": "listening", "stem": "What does the writer say a serious collector eventually gains?", "options": ["Self-confidence and contentment", "Fame and fortune", "A quiet life alone", "A much larger house"], "audio": true },
+    { "kind": "listening", "stem": "Where might a serious collector's hobby eventually lead them?", "options": ["To travel, even a trip abroad for a rare specimen", "To give up all other hobbies", "To stop meeting people", "To move overseas permanently"], "audio": true }
+  ]
+}

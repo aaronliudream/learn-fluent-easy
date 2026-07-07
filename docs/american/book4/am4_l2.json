@@ -1,0 +1,133 @@
+{
+  "id": "am4_l2",
+  "unit_no": 1,
+  "lesson_no": 2,
+  "title_en": "Spare That Spider",
+  "title_cn": "别伤害蜘蛛",
+  "grammar_focus": "与现在相反的虚拟条件(if it were not for / but for + would)、the more…the more 递进比较、it 作形式主语 + 被动(it has been estimated that)/不定式、定语从句(who/that / 介词+关系代词)、nor 引起的否定倒装 + neither…nor / 短语(NCE4 无 KS 页,考点由课文结构自取;原创承载·论蜘蛛因大量捕食昆虫而为人类之友·科普无害;美语化 baseball diamond/fiber;第四册第2课)",
+  "scene": "你也许会问:我们为什么该把蜘蛛当朋友?答案很简单——它吞食昆虫,而昆虫是人类最危险的敌人之一。要不是有那些以昆虫为食的动物,昆虫很快就会让地球上的生活难以为继:它们会吃光田里的每一茬庄稼,毁掉我们赖以为生的畜群。鸟和别的野兽帮我们吃掉昆虫,可它们全部加起来,消灭的数目也不过是蜘蛛所灭的一个零头。更妙的是,与另一些猎手不同,蜘蛛对我们毫无害处,也从不动我们的东西。蜘蛛并不是昆虫——尽管许多人误以为如此——它甚至和昆虫算不上近亲。几乎一眼就能看出区别:蜘蛛永远有八条腿,而昆虫从不超过六条。到底有多少蜘蛛在为我们效力?一位科学家在乡下一块田里仔细做了一次统计,估算出一英亩地里有两百多万只——大约相当于一个棒球内场那么大的一片地上就有六千只。蜘蛛一年中至少有一半时间在忙着捕杀昆虫。它们是贪吃的家伙,从不满足于一天三餐;据估计,它们一年里消灭的所有昆虫的总重量,会超过全国人口的总重量。我们越了解蜘蛛,就越应当对它心怀感激。",
+  "grammar_card": {
+    "title": "虚拟条件 if it were not for / the more…the more / it 形式主语被动 / nor 倒装",
+    "intro": "①与现在相反的虚拟:if + 过去式(be 用 were),主句 would + 原形;if it were not for / but for=‘要不是有…’。②the more … the more …,‘越…越…’,两半都用比较级。③it 作形式主语 + 被动:it has been estimated that…;或 + 不定式:it is impossible to do。④定语从句 who/that;介词 + 关系代词 on which。⑤nor + 部分倒装,承接前面的否定:…, nor is it related to one。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["虚拟条件", "if it were not for …, would …", "If it were not for spiders, insects would…"],
+        ["递进比较", "the more … the more …", "The more we learn, the more grateful"],
+        ["it 形式主语被动", "It has been estimated that …", "It has been estimated that…"],
+        ["nor 倒装", "…, nor + 助/系动词 + 主语", "nor is it related to one"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "if it were not for = but for = without,引导与现在相反的虚拟条件;be 一律用 were。", "mark": "If it were not for / But for" },
+      { "rule": "nor / neither 置于句首承接否定时,后面要部分倒装(助/系动词提到主语前)。", "mark": "nor is it related" },
+      { "rule": "美式用词:baseball diamond(棒球内场,英式常举 football pitch)、fiber(纤维,英式 fibre)。本课已按美语写。", "mark": "baseball diamond / fiber" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How much of each year do spiders spend killing insects?",
+    "options": ["At least half the year", "Only a few days", "The entire year", "Only during summer"],
+    "answer_index": 0
+  },
+  "passage": "Why, you might ask, should we think of the spider as a friend? The answer is simple: it devours insects, and insects are among the most dangerous enemies of the human race. If it were not for the creatures that feed on them, insects would soon make life on Earth impossible; they would devour every crop in the fields and destroy the herds on which we depend. Birds and other beasts help us by eating insects, but all of them put together kill only a small fraction of the number that spiders destroy. What is more, unlike some of these other hunters, the spider does us no harm at all and leaves our belongings untouched. A spider is not an insect, as many people wrongly suppose, nor is it even closely related to one. You can tell the difference almost at a glance, for a spider always has eight legs, while an insect never has more than six. How many spiders are busy on our behalf? One scientist who made a careful census of the spiders in a single country field estimated that there were more than two million in a single acre — something like six thousand on a patch of ground the size of a baseball diamond. Spiders work at killing insects for at least half the year. They are hungry creatures, never content with only three meals a day, and it has been estimated that the weight of all the insects they destroy in one year would be greater than the total weight of all the people in the country. The more we learn about the spider, the more grateful to it we ought to be.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Why, you might ask, should we think of the spider as a friend? The answer is simple: it devours insects, and insects are among the most dangerous enemies of the human race. If it were not for the creatures that feed on them, insects would soon make life on Earth impossible; they would devour every crop in the fields and destroy the herds on which we depend.", "text_cn": "你也许会问:我们为什么该把蜘蛛当朋友?答案很简单——它吞食昆虫,而昆虫是人类最危险的敌人之一。要不是有那些以昆虫为食的动物,昆虫很快就会让地球上的生活难以为继:它们会吃光田里的每一茬庄稼,毁掉我们赖以为生的畜群。" },
+    { "seq": 2, "speaker": null, "text_en": "Birds and other beasts help us by eating insects, but all of them put together kill only a small fraction of the number that spiders destroy. What is more, unlike some of these other hunters, the spider does us no harm at all and leaves our belongings untouched.", "text_cn": "鸟和别的野兽帮我们吃掉昆虫,可它们全部加起来,消灭的数目也不过是蜘蛛所灭的一个零头。更妙的是,与另一些猎手不同,蜘蛛对我们毫无害处,也从不动我们的东西。" },
+    { "seq": 3, "speaker": null, "text_en": "A spider is not an insect, as many people wrongly suppose, nor is it even closely related to one. You can tell the difference almost at a glance, for a spider always has eight legs, while an insect never has more than six.", "text_cn": "蜘蛛并不是昆虫——尽管许多人误以为如此——它甚至和昆虫算不上近亲。几乎一眼就能看出区别:蜘蛛永远有八条腿,而昆虫从不超过六条。" },
+    { "seq": 4, "speaker": null, "text_en": "How many spiders are busy on our behalf? One scientist who made a careful census of the spiders in a single country field estimated that there were more than two million in a single acre — something like six thousand on a patch of ground the size of a baseball diamond. Spiders work at killing insects for at least half the year.", "text_cn": "到底有多少蜘蛛在为我们效力?一位科学家在乡下一块田里仔细做了一次统计,估算出一英亩地里有两百多万只——大约相当于一个棒球内场那么大的一片地上就有六千只。蜘蛛一年中至少有一半时间在忙着捕杀昆虫。" },
+    { "seq": 5, "speaker": null, "text_en": "They are hungry creatures, never content with only three meals a day, and it has been estimated that the weight of all the insects they destroy in one year would be greater than the total weight of all the people in the country. The more we learn about the spider, the more grateful to it we ought to be.", "text_cn": "它们是贪吃的家伙,从不满足于一天三餐;据估计,它们一年里消灭的所有昆虫的总重量,会超过全国人口的总重量。我们越了解蜘蛛,就越应当对它心怀感激。" }
+  ],
+  "words": [
+    { "word": "spider", "ipa": "/ˈspaɪdər/", "pos": "n", "meaning_cn": "蜘蛛", "example": "think of the spider as a friend" },
+    { "word": "beast", "ipa": "/biːst/", "pos": "n", "meaning_cn": "兽,野兽", "example": "birds and other beasts" },
+    { "word": "census", "ipa": "/ˈsensəs/", "pos": "n", "meaning_cn": "(人口/数量)统计,普查", "example": "made a careful census of the spiders" },
+    { "word": "acre", "ipa": "/ˈeɪkər/", "pos": "n", "meaning_cn": "英亩", "example": "more than two million in a single acre" },
+    { "word": "content", "ipa": "/kənˈtent/", "pos": "adj", "meaning_cn": "满足的", "example": "never content with only three meals a day" },
+    { "word": "insect", "ipa": "/ˈɪnsekt/", "pos": "n", "meaning_cn": "昆虫", "example": "it devours insects" },
+    { "word": "devour", "ipa": "/dɪˈvaʊər/", "pos": "v", "meaning_cn": "吞食,狼吞虎咽", "example": "they would devour every crop" },
+    { "word": "crop", "ipa": "/krɑːp/", "pos": "n", "meaning_cn": "庄稼,作物", "example": "devour every crop in the fields" },
+    { "word": "harm", "ipa": "/hɑːrm/", "pos": "n", "meaning_cn": "伤害,损害", "example": "does us no harm at all" },
+    { "word": "glance", "ipa": "/ɡlæns/", "pos": "n", "meaning_cn": "一瞥,一看", "example": "tell the difference almost at a glance" },
+    { "word": "estimate", "ipa": "/ˈestɪmeɪt/", "pos": "v", "meaning_cn": "估计,估算", "example": "estimated that there were more than two million" },
+    { "word": "creature", "ipa": "/ˈkriːtʃər/", "pos": "n", "meaning_cn": "生物,动物", "example": "they are hungry creatures" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "与现在相反的虚拟条件(if it were not for / but for)" },
+    { "gp": "gp2", "name": "the more…the more 递进比较 / 比较级" },
+    { "gp": "gp3", "name": "it 作形式主语 + 被动 / 不定式" },
+    { "gp": "gp4", "name": "定语从句(who/that / 介词+关系代词)" },
+    { "gp": "gp5", "name": "nor 否定倒装 + 短语(at a glance / be content with)" },
+    { "gp": "gp6", "name": "词汇辨析(beast/census/devour)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"If it ___ not for spiders, insects would overrun the world.\"(与现在相反虚拟,‘要不是有…’,填 be 动词的虚拟形式)", "stem_cn": "要不是有蜘蛛,昆虫早就泛滥成灾。", "options": ["were", "was", "is", "are"] },
+    { "gp": "gp1", "stem": "\"But for insect-eaters, insects ___ devour every crop.\"(与现在相反虚拟,主句填这个助动词 + 原形)", "stem_cn": "若没有食虫动物,昆虫会吃光每一茬庄稼。", "options": ["would", "will", "can", "must"] },
+    { "gp": "gp1", "stem": "\"If spiders ___ not exist, our harvests would suffer.\"(与现在相反虚拟,if 从句里 do 的过去式)", "stem_cn": "如果蜘蛛不存在,我们的收成会受损。", "options": ["did", "do", "will", "had"] },
+    { "gp": "gp2", "stem": "\"The more we learn about spiders, the ___ grateful we should be.\"(‘越…越…’的递进句型,填 the 后这个比较级)", "stem_cn": "我们越了解蜘蛛,就越该感激它。", "options": ["more", "most", "much", "very"] },
+    { "gp": "gp2", "stem": "\"The weight of the insects destroyed would be ___ than that of all the people.\"(比较级,与 than 呼应,填 great 的比较级)", "stem_cn": "被消灭的昆虫的总重会超过全国人口的总重。", "options": ["greater", "great", "greatest", "more great"] },
+    { "gp": "gp2", "stem": "\"The ___ insects a spider eats, the more useful it is.\"(‘越多…越…’句型,the 后填 many 的比较级)", "stem_cn": "蜘蛛吃掉的昆虫越多,就越有用。", "options": ["more", "most", "much", "many"] },
+    { "gp": "gp3", "stem": "\"___ has been estimated that spiders destroy countless insects.\"(形式主语 + 被动‘据估计…’,填这个代词)", "stem_cn": "据估计,蜘蛛消灭了数不清的昆虫。", "options": ["It", "That", "This", "There"] },
+    { "gp": "gp3", "stem": "\"It is impossible ___ count every spider in a field.\"(it 形式主语,真正主语是后面的不定式,填不定式符号)", "stem_cn": "要数清一片田里的每只蜘蛛是不可能的。", "options": ["to", "for", "of", "that"] },
+    { "gp": "gp3", "stem": "\"It has been ___ that there are millions of spiders in one acre.\"(it has been + 过去分词:被动‘据估计’,填过去分词)", "stem_cn": "据估计,一英亩地里有数百万只蜘蛛。", "options": ["estimated", "estimate", "estimating", "estimates"] },
+    { "gp": "gp4", "stem": "\"Birds are among the creatures ___ feed on insects.\"(定语从句,指动物,作主语)", "stem_cn": "鸟是以昆虫为食的动物之一。", "options": ["that", "who", "what", "whose"] },
+    { "gp": "gp4", "stem": "\"The scientist ___ made the census counted the spiders.\"(定语从句,指人,作主语)", "stem_cn": "做那次统计的科学家数了蜘蛛。", "options": ["who", "which", "whom", "what"] },
+    { "gp": "gp4", "stem": "\"The crops ___ which we depend are threatened by insects.\"(介词 + 关系代词,指物)", "stem_cn": "我们赖以为生的庄稼受昆虫威胁。", "options": ["on", "in", "at", "of"] },
+    { "gp": "gp5", "stem": "\"A spider is not an insect, ___ is it closely related to one.\"(否定句后接‘也不…’引起倒装,填这个连词)", "stem_cn": "蜘蛛不是昆虫,也和昆虫没什么近亲关系。", "options": ["nor", "or", "and", "but"] },
+    { "gp": "gp5", "stem": "\"You can tell the difference almost at a ___.\"(at a ___:一眼(就),填名词)", "stem_cn": "几乎一眼就能看出区别。", "options": ["glance", "look", "sight", "view"] },
+    { "gp": "gp5", "stem": "\"Spiders are never ___ with only three meals a day.\"(be ___ with:满足于,填形容词)", "stem_cn": "蜘蛛从不满足于一天只吃三顿。", "options": ["content", "contenting", "contently", "contents"] },
+    { "gp": "gp6", "stem": "\"A large four-legged animal is a ___.\"(“兽、野兽”用哪个词)", "stem_cn": "四条腿的大型动物。", "options": ["beast", "bird", "fish", "plant"] },
+    { "gp": "gp6", "stem": "\"An official count of a population is a ___.\"(“统计、普查”用哪个词)", "stem_cn": "对总数进行的官方清点。", "options": ["census", "contest", "custom", "career"] },
+    { "gp": "gp6", "stem": "\"To eat something up hungrily is to ___ it.\"(“吞食”用哪个词)", "stem_cn": "狼吞虎咽地把某物吃光。", "options": ["devour", "plant", "ignore", "keep"] }
+  ],
+  "stage6": [
+    { "stem": "beast 的意思是:", "options": ["兽,野兽", "鸟", "鱼", "花"] },
+    { "stem": "census 的意思是:", "options": ["(人口/数量)统计", "比赛", "习俗", "职业"] },
+    { "stem": "acre 的意思是:", "options": ["英亩", "英里", "公斤", "小时"] },
+    { "stem": "content 的意思是:", "options": ["满足的", "愤怒的", "疲惫的", "好奇的"] },
+    { "stem": "devour 的意思是:", "options": ["吞食,狼吞虎咽", "种植", "储存", "丢弃"] },
+    { "stem": "estimate 的意思是:", "options": ["估计,估算", "忘记", "隐藏", "证明"] }
+  ],
+  "contrast": [
+    { "us": "fiber", "uk": "fibre", "note_cn": "纤维;拼写差异,美语 fiber" },
+    { "us": "plow", "uk": "plough", "note_cn": "犁;拼写差异,美语 plow" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" },
+    { "us": "meter", "uk": "metre", "note_cn": "米(长度单位);拼写差异,美语 meter" }
+  ],
+  "chunks": [
+    { "us": "feed on", "ipa": "/fiːd ɑːn/", "example1": "Spiders feed on insects.", "example1_cn": "蜘蛛以昆虫为食。", "example2": "Owls feed on mice.", "example2_cn": "猫头鹰以老鼠为食。" },
+    { "us": "at a glance", "ipa": "/ət ə ɡlæns/", "example1": "You can tell them apart at a glance.", "example1_cn": "你一眼就能把它们区分开。", "example2": "She saw the mistake at a glance.", "example2_cn": "她一眼就看出了错误。" },
+    { "us": "put together", "ipa": "/pʊt təˈɡeðər/", "example1": "All the birds put together kill fewer insects than spiders.", "example1_cn": "所有的鸟加起来杀灭的昆虫也比蜘蛛少。", "example2": "The two teams put together still lost.", "example2_cn": "两队合起来还是输了。" },
+    { "us": "be content with", "ipa": "/bi kənˈtent wɪð/", "example1": "Spiders are never content with three meals a day.", "example1_cn": "蜘蛛从不满足于一天三餐。", "example2": "He is content with a simple life.", "example2_cn": "他满足于简单的生活。" }
+  ],
+  "stage7_cloze": {
+    "context": "A spider is not an insect, ___1___ is it closely related to one. If it ___2___ not for spiders, insects would overrun the world. It has been ___3___ that millions of them live in a single acre. The more we learn about them, the ___4___ grateful we should be.",
+    "blanks": [
+      { "blank_no": 1, "options": ["nor", "or", "and", "but"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["were", "was", "is", "are"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["estimated", "estimate", "estimating", "estimates"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["more", "most", "much", "very"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How much of each year do spiders spend killing insects?", "options": ["At least half the year", "A few days", "The whole year", "Only in summer"] },
+    { "stem": "Why does the writer call the spider a friend?", "options": ["It devours huge numbers of harmful insects", "It spins beautiful webs", "It keeps houses clean", "It is gentle to touch"] },
+    { "stem": "How can you tell a spider from an insect at a glance?", "options": ["A spider has eight legs; an insect never more than six", "A spider has wings", "A spider is always larger", "A spider has no eyes"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"要不是有蜘蛛,昆虫早就泛滥成灾\"(与现在相反虚拟):", "options": ["If it were not for spiders, insects would overrun the world.", "If it was not for spiders, insects would overrun the world.", "If it were not for spiders, insects will overrun the world.", "If it were not for spiders, insects would overran the world."] },
+    { "stem": "你想说\"做那次统计的科学家数了蜘蛛\"(定语从句):", "options": ["The scientist who made the census counted the spiders.", "The scientist which made the census counted the spiders.", "The scientist what made the census counted the spiders.", "The scientist made the census counted the spiders."] },
+    { "stem": "你想说\"蜘蛛不是昆虫,也和昆虫没什么近亲关系\"(否定后倒装):", "options": ["A spider is not an insect, nor is it closely related to one.", "A spider is not an insect, nor it is closely related to one.", "A spider is not an insect, nor is it closely relate to one.", "A spider is not an insect, or is it closely related to one."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "census 的意思是:", "options": ["(人口/数量)统计", "比赛", "习俗", "职业"] },
+    { "kind": "vocab", "stem": "devour 的意思是:", "options": ["吞食,狼吞虎咽", "种植", "储存", "丢弃"] },
+    { "kind": "grammar", "stem": "\"If it ___ not for spiders, insects would overrun the world.\"(与现在相反虚拟,be 动词虚拟形式)", "stem_cn": "要不是有蜘蛛,昆虫早就泛滥成灾。", "options": ["were", "was", "is", "are"] },
+    { "kind": "grammar", "stem": "\"A spider is not an insect, ___ is it related to one.\"(否定后倒装)", "stem_cn": "蜘蛛不是昆虫,也和昆虫没什么近亲关系。", "options": ["nor", "or", "and", "but"] },
+    { "kind": "scenario", "stem": "\"feed on\" 的意思是:", "options": ["以…为食", "喂养孩子", "厌倦", "生长"] },
+    { "kind": "scenario", "stem": "\"at a glance\" 的意思是:", "options": ["一眼就(看出)", "慢慢地", "大声地", "偶尔"] },
+    { "kind": "reading", "stem": "According to the passage, what would happen without insect-eaters like spiders?", "options": ["Insects would devour our crops and herds", "Nothing would change", "Spiders would multiply", "The weather would worsen"], "passage": true },
+    { "kind": "reading", "stem": "How many spiders did the scientist estimate lived in a single acre?", "options": ["More than two million", "About a thousand", "Exactly six", "Too few to count"], "passage": true },
+    { "kind": "listening", "stem": "For roughly how long each year are spiders busy killing insects?", "options": ["At least half the year", "One week", "All twelve months", "Only at night"], "audio": true },
+    { "kind": "listening", "stem": "How does the spider compare with birds and beasts at killing insects?", "options": ["Spiders kill far more than all of them put together", "Spiders kill the fewest", "They kill exactly the same number", "Spiders kill none at all"], "audio": true }
+  ]
+}

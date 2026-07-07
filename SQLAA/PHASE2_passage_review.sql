@@ -1,12 +1,14 @@
 -- =====================================================================
 -- 教师功能 Phase 2 · 整篇下钻(方案 A · 第②层)—— 待 Aaron 跑
 --
--- 老师点开一篇阅读/完形错题 → 整篇原文 + 所有题 + 正确答案 + 该生错题 + 可得作答。
+-- 老师点开一篇完形错题 → 每个做错的空 + 选项 + 正确答案 + 学生作答 + 解析。
 --
--- 阅读(_source='reading'):
---   原文/所有题/正确答案 ← 内容表 junior_reading(body + questions jsonb);
---   学生每题作答/对错     ← junior_reading_attempts(每题最新一次);
---   INNER 读 junior_reading:原题已删 → 返回 {missing:true},绝不显示脏数据。
+-- 本轮范围:仅【完形 cloze】。阅读整篇【本轮不做】——
+--   根因:junior_reading 内容经分册 load 文件反复 DELETE+INSERT 重灌(id 走
+--   gen_random_uuid 默认,每次换新 uuid),旧 junior_reading_attempts.reading_id 成孤儿、
+--   位置型 question_idx 也会错位 → 与内容表 join 会拼出错误整篇。故本 RPC 不碰 junior_reading,
+--   阅读走前端"整篇原文暂不可用"静态标注(见 TeacherStudent.tsx),不 join、不编造、不拼错。
+--
 -- 完形(_source='cloze'):
 --   仅从 gaokao_user_mistakes.snapshot 读(每行=一个做错的空:选项/答案/学生作答/解析);
 --   ⚠ snapshot 无整篇全文、无做对的空 → limited=true,前端老实标注,不 join legacy 题库、不编造。
@@ -38,56 +40,7 @@ begin
     return null;
   end if;
 
-  if _source = 'reading' then
-    -- 内容表(当前活表)读整篇;INNER:没有=原题已删
-    select title, body, questions into jr
-      from public.junior_reading where id = _passage_id;
-    if not found then
-      return jsonb_build_object('source', 'reading', 'missing', true);
-    end if;
-
-    select jsonb_build_object(
-      'source', 'reading',
-      'title',  jr.title,
-      'body',   jr.body,
-      'total',  jsonb_array_length(jr.questions),
-      'has_user_answers', true,
-      'wrong_count', (
-        select count(*) from (
-          select distinct on (jra.question_idx) jra.is_correct
-            from public.junior_reading_attempts jra
-           where jra.user_id = _student_id and jra.reading_id = _passage_id
-           order by jra.question_idx, jra.created_at desc
-        ) x where x.is_correct = false
-      ),
-      'items', (
-        select jsonb_agg(jsonb_build_object(
-          'no',             q.ord,
-          'stem',           q.val->>'q',
-          'options',        (select jsonb_object_agg(chr(64 + o.ord::int), o.val)
-                               from jsonb_array_elements_text(q.val->'options')
-                                    with ordinality as o(val, ord)),
-          'correct_answer', q.val->>'answer',
-          'user_answer',    a.user_answer,
-          'is_correct',     a.is_correct,
-          'wrong',          (a.is_correct is not null and a.is_correct = false),
-          'explanation',    q.val->>'explanation'
-        ) order by q.ord)
-        from jsonb_array_elements(jr.questions) with ordinality as q(val, ord)
-        left join lateral (
-          select jra.user_answer, jra.is_correct
-            from public.junior_reading_attempts jra
-           where jra.user_id = _student_id
-             and jra.reading_id = _passage_id
-             and jra.question_idx = q.ord - 1
-           order by jra.created_at desc
-           limit 1
-        ) a on true
-      )
-    ) into result;
-    return result;
-
-  elsif _source = 'cloze' then
+  if _source = 'cloze' then
     -- 仅 snapshot;无整篇全文、无做对的空
     select jsonb_build_object(
       'source', 'cloze',

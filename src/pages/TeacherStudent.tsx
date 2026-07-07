@@ -148,7 +148,8 @@ export default function TeacherStudent() {
   const [reviews, setReviews] = useState<Record<string, PassageReview | null>>({});
   const [reviewLoading, setReviewLoading] = useState<string | null>(null);
 
-  async function togglePassage(source: "reading" | "cloze", passageId: string) {
+  // 仅完形:阅读整篇本轮不做(内容重灌换 id → 无可靠整篇),不调本 RPC
+  async function togglePassage(source: "cloze", passageId: string) {
     const key = `${source}:${passageId}`;
     if (reviewOpen === key) { setReviewOpen(null); return; }
     setReviewOpen(key);
@@ -397,36 +398,65 @@ export default function TeacherStudent() {
                                     </details>
                                   )}
                                 </>
-                              ) : (
+                              ) : mk.kind === "cloze" ? (
                                 <>
-                                  {/* 完形/阅读:按篇。点"查看整篇"→ get_teacher_student_passage_review */}
+                                  {/* 完形:按篇。点"查看整篇"→ get_teacher_student_passage_review 读 snapshot 错空 */}
                                   <div className="flex flex-wrap items-center gap-2 text-sm font-semibold">
-                                    <span>{mk.title || (mk.kind === "cloze" ? t("完形一篇") : t("阅读一篇"))}</span>
+                                    <span>{mk.title || t("完形一篇")}</span>
                                     <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[11px] font-bold text-rose-700 dark:bg-rose-500/20 dark:text-rose-300">
-                                      <T>错</T> {mk.wrong_count} {mk.kind === "cloze" ? <T>空</T> : <T>题</T>}
+                                      <T>错</T> {mk.wrong_count} <T>空</T>
                                     </span>
                                     <button
                                       type="button"
-                                      onClick={() => togglePassage(mk.kind as "reading" | "cloze", mk.id)}
+                                      onClick={() => togglePassage("cloze", mk.id)}
                                       className="ml-auto inline-flex items-center gap-1 rounded-md border border-border px-2 py-0.5 text-[11px] font-normal text-primary hover:bg-muted/50">
-                                      📖 <T>查看整篇</T> {reviewOpen === `${mk.kind}:${mk.id}` ? "▴" : "▾"}
+                                      📖 <T>查看整篇</T> {reviewOpen === `cloze:${mk.id}` ? "▴" : "▾"}
                                     </button>
                                   </div>
-                                  {reviewOpen === `${mk.kind}:${mk.id}` && (
+                                  {reviewOpen === `cloze:${mk.id}` && (
                                     <div className="mt-2">
-                                      {reviewLoading === `${mk.kind}:${mk.id}` ? (
+                                      {reviewLoading === `cloze:${mk.id}` ? (
                                         <div className="flex items-center py-2 text-xs text-muted-foreground">
                                           <Loader2 className="mr-2 size-4 animate-spin" /> <T>加载中…</T>
                                         </div>
-                                      ) : reviews[`${mk.kind}:${mk.id}`]?.missing ? (
+                                      ) : reviews[`cloze:${mk.id}`]?.missing ? (
                                         <div className="text-xs text-muted-foreground"><T>原题已删除,无法显示整篇。</T></div>
-                                      ) : reviews[`${mk.kind}:${mk.id}`] ? (
-                                        <PassageReviewPanel rv={reviews[`${mk.kind}:${mk.id}`]!} />
+                                      ) : reviews[`cloze:${mk.id}`] ? (
+                                        <PassageReviewPanel rv={reviews[`cloze:${mk.id}`]!} />
                                       ) : (
                                         <div className="text-xs text-muted-foreground"><T>无法加载整篇。</T></div>
                                       )}
                                     </div>
                                   )}
+                                </>
+                              ) : (
+                                <>
+                                  {/* 阅读:整篇快照与内容表对不上(内容重灌换 id / 题序错位),不 join、不拼错。
+                                      仅保留第①层按篇聚合 + 可得的学生作答,整篇老实标注"暂不可用"。 */}
+                                  <div className="flex flex-wrap items-center gap-2 text-sm font-semibold">
+                                    <span>{mk.title || t("阅读一篇")}</span>
+                                    <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[11px] font-bold text-rose-700 dark:bg-rose-500/20 dark:text-rose-300">
+                                      <T>错</T> {mk.wrong_count} <T>题</T>
+                                    </span>
+                                  </div>
+                                  {mk.items && mk.items.length > 0 && (
+                                    <ul className="mt-2 space-y-1 text-xs">
+                                      {mk.items.map((it, idx) => (
+                                        <li key={idx} className="flex flex-wrap items-center gap-x-3 rounded-lg border border-border px-2 py-1">
+                                          <span className="font-semibold"><T>第</T> {it.no ?? idx + 1} <T>题</T></span>
+                                          <span className="text-rose-600 dark:text-rose-400">
+                                            <T>学生作答</T>:{it.user_answer ?? <span className="italic"><T>未记录</T></span>}
+                                          </span>
+                                          {it.correct_answer != null && (
+                                            <span className="text-emerald-600 dark:text-emerald-400"><T>正确</T>:{it.correct_answer}</span>
+                                          )}
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  )}
+                                  <div className="mt-2 rounded-lg border border-dashed border-border bg-muted/30 px-3 py-2 text-[11px] italic text-muted-foreground">
+                                    📖 <T>整篇原文暂不可用(该题型完整快照待补)</T>
+                                  </div>
                                 </>
                               )}
                             </li>

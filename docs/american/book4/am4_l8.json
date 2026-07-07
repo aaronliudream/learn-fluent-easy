@@ -1,0 +1,133 @@
+{
+  "id": "am4_l8",
+  "unit_no": 2,
+  "lesson_no": 8,
+  "title_en": "Trading Standards",
+  "title_cn": "贸易标准",
+  "grammar_focus": "强调句(It is … that/who …)、现在完成进行时(have been doing)、情态动词被动(must be done / can be done)+ before 从句、定语从句(that/which,含非限定 which)、complex enough that / simple enough to do + 现在分词作定语(covering)(NCE4 无 KS 页,考点由课文结构自取;原创承载·论富国间贸易摩擦主要源于各国法规与安全标准差异而非关税、两大贸易集团设法避免重复检测的时评·例证自拟·题材无害;美语化 labor/catalog;第四册第8课)",
+  "scene": "如今,给富国之间的贸易“使绊子”的,主要是各国法规和安全标准的差异,而远非关税。一件符合某个市场标准的器械,在另一市场出售前,仍须经当地检测机构批准;可一台在某国被判定完全安全的机器,极不可能一越过边境就变得危险。于是,两边的企业都会问一个合情合理的问题:既然一次检测就够,何必花钱做两次?多年来,两大贸易集团一直在设法达成一份能免去同一产品重复检测的协议。谈判者态度乐观,可细节复杂到那种程度——一份完整协议或许仍遥遥无期。真正的难处,也是这场争执的根源,在于这些协定该怎么搭建。一方乐意为每个行业单独签一份协定——一份涵盖医疗设备,另一份涵盖电子产品,再一份涵盖玩具——每份都各自敲定。另一方则秉持自己的传统,更愿就宽泛的原则达成一份总协议,那样便可推及许多种商品,日后或许还能延伸到别的国家。在双方就协议的形态谈拢之前,普通制造商只得继续为证明同一件简单的事而付两回钱。",
+  "grammar_card": {
+    "title": "强调句 / 现在完成进行时 / 情态被动 + before / 定语从句",
+    "intro": "①强调句 It is/was + 被强调部分 + that/who + 其余:It is differences that block trade。②现在完成进行时 have/has + been + doing,强调动作从过去持续到现在:have been trying。③情态动词的被动:must be approved / can be sold;before 引导时间从句。④定语从句 that/which;非限定 which 可指前面整件内容。⑤complex enough that…；simple enough to do；现在分词 covering 作定语。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["强调句", "It is … that/who …", "It is differences that block trade"],
+        ["现在完成进行", "have been + doing", "have been trying to reach a deal"],
+        ["情态被动", "must/can + be + 过去分词", "must be approved before it can be sold"],
+        ["现在分词作定语", "名词 + doing", "a pact covering medical devices"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "现在完成进行时=have/has + been + 现在分词,强调“一直在做”;主语单数用 has been。", "mark": "have/has been doing" },
+      { "rule": "情态动词后接被动=情态词 + be + 过去分词:must be approved、can be sold。", "mark": "must be approved / can be sold" },
+      { "rule": "美式拼写:labor(劳动,英式 labour)、catalog(目录,英式 catalogue)。本课已按美语写。", "mark": "labor / catalog" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What makes trading between rich countries difficult?",
+    "options": ["Differences in national regulations and standards", "A shortage of goods", "High transport costs", "Language differences"],
+    "answer_index": 0
+  },
+  "passage": "These days it is differences in national regulations and safety standards, far more than tariffs, that throw sand in the wheels of trade between wealthy countries. A medical device that meets the standards of one market must still be approved by local testers before it can be sold in another; a machine judged perfectly safe in one country is very unlikely to become dangerous the moment it crosses a border. So businesses on both sides ask a reasonable question: why pay for two sets of tests where a single one would do? For years now the two great trading blocs have been trying to reach an agreement that would eliminate the need to test the same product twice. Their negotiators are optimistic, yet the details are complex enough that a full deal may still be a long way off. The chief difficulty — and the real source of the dispute — lies in how the accords should be built. One side would happily sign a separate pact for each industry — one accord covering medical equipment, another covering electronics, a third covering toys — each hammered out on its own. The other side, true to its traditions, prefers a single agreement on broad principles, which could then be applied to many kinds of goods and perhaps extended to other countries later. Until they agree on the shape of the deal, ordinary manufacturers must go on paying twice to prove the same simple thing.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "These days it is differences in national regulations and safety standards, far more than tariffs, that throw sand in the wheels of trade between wealthy countries. A medical device that meets the standards of one market must still be approved by local testers before it can be sold in another; a machine judged perfectly safe in one country is very unlikely to become dangerous the moment it crosses a border.", "text_cn": "如今,给富国之间的贸易“使绊子”的,主要是各国法规和安全标准的差异,而远非关税。一件符合某个市场标准的器械,在另一市场出售前,仍须经当地检测机构批准;可一台在某国被判定完全安全的机器,极不可能一越过边境就变得危险。" },
+    { "seq": 2, "speaker": null, "text_en": "So businesses on both sides ask a reasonable question: why pay for two sets of tests where a single one would do? For years now the two great trading blocs have been trying to reach an agreement that would eliminate the need to test the same product twice.", "text_cn": "于是,两边的企业都会问一个合情合理的问题:既然一次检测就够,何必花钱做两次?多年来,两大贸易集团一直在设法达成一份能免去同一产品重复检测的协议。" },
+    { "seq": 3, "speaker": null, "text_en": "Their negotiators are optimistic, yet the details are complex enough that a full deal may still be a long way off. The chief difficulty — and the real source of the dispute — lies in how the accords should be built.", "text_cn": "谈判者态度乐观,可细节复杂到那种程度——一份完整协议或许仍遥遥无期。真正的难处,也是这场争执的根源,在于这些协定该怎么搭建。" },
+    { "seq": 4, "speaker": null, "text_en": "One side would happily sign a separate pact for each industry — one accord covering medical equipment, another covering electronics, a third covering toys — each hammered out on its own.", "text_cn": "一方乐意为每个行业单独签一份协定——一份涵盖医疗设备,另一份涵盖电子产品,再一份涵盖玩具——每份都各自敲定。" },
+    { "seq": 5, "speaker": null, "text_en": "The other side, true to its traditions, prefers a single agreement on broad principles, which could then be applied to many kinds of goods and perhaps extended to other countries later. Until they agree on the shape of the deal, ordinary manufacturers must go on paying twice to prove the same simple thing.", "text_cn": "另一方则秉持自己的传统,更愿就宽泛的原则达成一份总协议,那样便可推及许多种商品,日后或许还能延伸到别的国家。在双方就协议的形态谈拢之前,普通制造商只得继续为证明同一件简单的事而付两回钱。" }
+  ],
+  "words": [
+    { "word": "tariff", "ipa": "/ˈtærɪf/", "pos": "n", "meaning_cn": "关税", "example": "far more than tariffs" },
+    { "word": "standard", "ipa": "/ˈstændərd/", "pos": "n", "meaning_cn": "标准", "example": "the standards of one market" },
+    { "word": "eliminate", "ipa": "/ɪˈlɪmɪneɪt/", "pos": "v", "meaning_cn": "消除,排除", "example": "eliminate the need to test twice" },
+    { "word": "accord", "ipa": "/əˈkɔːrd/", "pos": "n", "meaning_cn": "协议,一致", "example": "one accord covering medical equipment" },
+    { "word": "device", "ipa": "/dɪˈvaɪs/", "pos": "n", "meaning_cn": "装置,器械", "example": "a medical device that meets the standards" },
+    { "word": "pact", "ipa": "/pækt/", "pos": "n", "meaning_cn": "协定,条约", "example": "a separate pact for each industry" },
+    { "word": "negotiator", "ipa": "/nɪˈɡoʊʃieɪtər/", "pos": "n", "meaning_cn": "谈判者", "example": "their negotiators are optimistic" },
+    { "word": "optimistic", "ipa": "/ˌɑːptɪˈmɪstɪk/", "pos": "adj", "meaning_cn": "乐观的", "example": "negotiators are optimistic" },
+    { "word": "regulation", "ipa": "/ˌreɡjəˈleɪʃən/", "pos": "n", "meaning_cn": "规章,法规", "example": "differences in national regulations" },
+    { "word": "principle", "ipa": "/ˈprɪnsəpəl/", "pos": "n", "meaning_cn": "原则", "example": "an agreement on broad principles" },
+    { "word": "approve", "ipa": "/əˈpruːv/", "pos": "v", "meaning_cn": "批准,通过", "example": "must be approved by local testers" },
+    { "word": "dispute", "ipa": "/dɪˈspjuːt/", "pos": "n", "meaning_cn": "争执,争端", "example": "the real source of the dispute" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "强调句(It is … that/who …)" },
+    { "gp": "gp2", "name": "现在完成进行时(have been doing)" },
+    { "gp": "gp3", "name": "情态动词被动(must/can be done)+ before 从句" },
+    { "gp": "gp4", "name": "定语从句(that/which,含非限定 which)" },
+    { "gp": "gp5", "name": "complex enough that / 现在分词作定语(covering)" },
+    { "gp": "gp6", "name": "词汇辨析(tariff/eliminate/pact)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"It is differences in regulations, not tariffs, ___ block trade today.\"(强调句,填连词)", "stem_cn": "阻碍贸易的正是法规差异,而非关税。", "options": ["that", "what", "who", "which"] },
+    { "gp": "gp1", "stem": "\"It ___ national rules, far more than tariffs, that hinder trade.\"(强调句,一般现在,填 be 动词)", "stem_cn": "妨碍贸易的是各国的规章,远甚于关税。", "options": ["is", "are", "was", "has"] },
+    { "gp": "gp1", "stem": "\"It is the negotiators ___ must settle every point.\"(强调句,强调指人,填连词)", "stem_cn": "必须敲定每一点的正是谈判者。", "options": ["who", "which", "what", "whose"] },
+    { "gp": "gp2", "stem": "\"The two blocs have ___ trying to reach a deal for years.\"(现在完成进行 have ___ doing:填中间的词)", "stem_cn": "两大贸易集团多年来一直在设法达成协议。", "options": ["been", "be", "being", "was"] },
+    { "gp": "gp2", "stem": "\"Negotiators have been ___ to eliminate double tests.\"(现在完成进行,填 -ing 形式)", "stem_cn": "谈判者一直在努力取消重复检测。", "options": ["working", "work", "worked", "works"] },
+    { "gp": "gp2", "stem": "\"For years now they ___ been arguing over standards.\"(现在完成进行,填助动词)", "stem_cn": "多年来他们一直在为标准争论不休。", "options": ["have", "has", "are", "were"] },
+    { "gp": "gp3", "stem": "\"A device must ___ approved before sale abroad.\"(情态被动 must + ___ + 过去分词,填中间的词)", "stem_cn": "一件器械须先获批才能销往国外。", "options": ["be", "is", "been", "being"] },
+    { "gp": "gp3", "stem": "\"It cannot ___ sold until local testers approve it.\"(情态被动 cannot + ___ + 过去分词,填中间的词)", "stem_cn": "在当地检测机构批准前,它不能出售。", "options": ["be", "is", "been", "being"] },
+    { "gp": "gp3", "stem": "\"The product must be tested ___ it reaches the market.\"(‘在…之前’,填连词)", "stem_cn": "产品在上市前必须经过检测。", "options": ["before", "after", "unless", "while"] },
+    { "gp": "gp4", "stem": "\"An agreement ___ would end double-testing is hard to reach.\"(定语从句,指物,作主语)", "stem_cn": "一份能终结重复检测的协议很难达成。", "options": ["that", "who", "what", "whose"] },
+    { "gp": "gp4", "stem": "\"They prefer principles, ___ could be applied to many goods.\"(非限定定语从句,指前面内容,填关系词)", "stem_cn": "他们更喜欢通用原则,那可以适用于许多商品。", "options": ["which", "that", "what", "it"] },
+    { "gp": "gp4", "stem": "\"A machine ___ is safe at home stays safe abroad.\"(定语从句,指物,作主语)", "stem_cn": "在本国安全的机器,在国外也一样安全。", "options": ["that", "who", "what", "whose"] },
+    { "gp": "gp5", "stem": "\"The details are complex ___ that a deal may be far off.\"(complex … that:‘复杂到…’,填 complex 后这个副词)", "stem_cn": "细节复杂到协议可能遥遥无期。", "options": ["enough", "too", "very", "so"] },
+    { "gp": "gp5", "stem": "\"One pact, ___ medical devices, was signed first.\"(现在分词作定语,‘涵盖…的’)", "stem_cn": "一份涵盖医疗器械的协议率先签署。", "options": ["covering", "covered", "cover", "to cover"] },
+    { "gp": "gp5", "stem": "\"The rules are simple ___ to follow without help.\"(simple … to do:‘简单得足以…’,填 simple 后这个副词)", "stem_cn": "这些规则简单得无需帮助就能遵守。", "options": ["enough", "too", "so", "very"] },
+    { "gp": "gp6", "stem": "\"A tax on imported goods is a ___.\"(“关税”用哪个词)", "stem_cn": "对进口货物征收的税。", "options": ["tariff", "salary", "fine", "wage"] },
+    { "gp": "gp6", "stem": "\"To get rid of something completely is to ___ it.\"(“消除”用哪个词)", "stem_cn": "把某物彻底去掉。", "options": ["eliminate", "create", "keep", "hide"] },
+    { "gp": "gp6", "stem": "\"A formal agreement between parties is a ___.\"(“协定”用哪个词)", "stem_cn": "各方之间的正式协议。", "options": ["pact", "quarrel", "doubt", "rumor"] }
+  ],
+  "stage6": [
+    { "stem": "tariff 的意思是:", "options": ["关税", "工资", "罚款", "礼物"] },
+    { "stem": "standard 的意思是:", "options": ["标准", "故事", "机器", "工厂"] },
+    { "stem": "eliminate 的意思是:", "options": ["消除,排除", "制造", "增加", "隐藏"] },
+    { "stem": "accord 的意思是:", "options": ["协议,一致", "争吵", "怀疑", "命令"] },
+    { "stem": "device 的意思是:", "options": ["装置,器械", "建筑", "食物", "衣物"] },
+    { "stem": "optimistic 的意思是:", "options": ["乐观的", "悲观的", "愤怒的", "疲惫的"] }
+  ],
+  "contrast": [
+    { "us": "labor", "uk": "labour", "note_cn": "劳动,劳工;拼写差异,美语 labor" },
+    { "us": "check", "uk": "cheque", "note_cn": "支票;拼写差异,美语 check" },
+    { "us": "catalog", "uk": "catalogue", "note_cn": "目录;拼写差异,美语 catalog" },
+    { "us": "center", "uk": "centre", "note_cn": "中心;拼写差异,美语 center" }
+  ],
+  "chunks": [
+    { "us": "hammer out", "ipa": "/ˈhæmər aʊt/", "example1": "The two sides hammered out a pact.", "example1_cn": "双方费力敲定了一份协定。", "example2": "They hammered out a compromise.", "example2_cn": "他们谈拢了一个折中方案。" },
+    { "us": "reach a deal", "ipa": "/riːtʃ ə diːl/", "example1": "They hope to reach a deal soon.", "example1_cn": "他们希望尽快达成协议。", "example2": "The two nations reached a deal.", "example2_cn": "两国达成了协议。" },
+    { "us": "go on doing", "ipa": "/ɡoʊ ɑːn ˈduːɪŋ/", "example1": "Manufacturers must go on paying twice.", "example1_cn": "制造商只得继续付两回钱。", "example2": "She went on working late.", "example2_cn": "她继续加班到很晚。" },
+    { "us": "apply to", "ipa": "/əˈplaɪ tə/", "example1": "The principles could be applied to many goods.", "example1_cn": "这些原则可适用于许多商品。", "example2": "This rule applies to everyone.", "example2_cn": "这条规则适用于每个人。" }
+  ],
+  "stage7_cloze": {
+    "context": "It is differences in regulations, not tariffs, ___1___ now block trade. For years the two blocs have ___2___ trying to reach a deal. A device must ___3___ approved before it can be sold abroad. They want an accord ___4___ would end double-testing.",
+    "blanks": [
+      { "blank_no": 1, "options": ["that", "what", "who", "which"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["been", "be", "being", "was"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["be", "is", "been", "being"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["that", "who", "what", "whose"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What makes trading between rich countries difficult?", "options": ["Differences in national regulations and safety standards", "High tariffs alone", "A shortage of goods", "Poor transport"] },
+    { "stem": "What are the two trading blocs trying to achieve?", "options": ["A deal that would eliminate the need to test products twice", "Higher tariffs", "Fewer factories", "A shared currency"] },
+    { "stem": "How do the two sides differ in their approach?", "options": ["One wants a separate pact per industry, the other a single deal on principles", "One wants war, the other peace", "One wants no deal at all", "They agree completely"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"阻碍贸易的正是法规差异,而非关税\"(强调句):", "options": ["It is differences in regulations, not tariffs, that block trade.", "It is differences in regulations, not tariffs, which block trade it.", "Is differences in regulations, not tariffs, that block trade.", "It is differences in regulations, not tariffs, what block trade."] },
+    { "stem": "你想说\"两大贸易集团多年来一直在设法达成协议\"(现在完成进行):", "options": ["The two blocs have been trying to reach a deal for years.", "The two blocs have being trying to reach a deal for years.", "The two blocs has been trying to reach a deal for years.", "The two blocs have been try to reach a deal for years."] },
+    { "stem": "你想说\"一件器械须先获批才能销往国外\"(情态被动 + before):", "options": ["A device must be approved before it can be sold abroad.", "A device must approved before it can be sold abroad.", "A device must be approve before it can be sold abroad.", "A device must be approved before it can sold abroad."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "tariff 的意思是:", "options": ["关税", "工资", "罚款", "礼物"] },
+    { "kind": "vocab", "stem": "eliminate 的意思是:", "options": ["消除,排除", "制造", "增加", "隐藏"] },
+    { "kind": "grammar", "stem": "\"It is differences in rules, not tariffs, ___ block trade.\"(强调句)", "stem_cn": "阻碍贸易的是规则差异,而非关税。", "options": ["that", "what", "who", "which"] },
+    { "kind": "grammar", "stem": "\"The two blocs have ___ trying to reach a deal.\"(现在完成进行 have ___ doing,填中间的词)", "stem_cn": "两大集团一直在设法达成协议。", "options": ["been", "be", "being", "was"] },
+    { "kind": "scenario", "stem": "\"hammer out\" 的意思是:", "options": ["(经努力)达成、敲定", "打碎", "逃走", "忽视"] },
+    { "kind": "scenario", "stem": "\"reach a deal\" 的意思是:", "options": ["达成协议", "取消交易", "拒绝谈判", "提高价格"] },
+    { "kind": "reading", "stem": "According to the passage, what mainly blocks trade between rich countries today?", "options": ["Differing national regulations, not tariffs", "Very high tariffs", "A lack of ships", "Language barriers"], "passage": true },
+    { "kind": "reading", "stem": "How does one side prefer to build the agreement?", "options": ["A separate pact for each industry", "One broad deal on general principles", "No agreement at all", "A deal only on tariffs"], "passage": true },
+    { "kind": "listening", "stem": "Why must some products be tested twice?", "options": ["Each market requires its own approval", "The tests are cheap", "The makers enjoy it", "The law demands three tests"], "audio": true },
+    { "kind": "listening", "stem": "How do the negotiators feel about reaching a deal?", "options": ["Optimistic, though the details are complex", "Certain it will fail", "Completely indifferent", "Angry at each other"], "audio": true }
+  ]
+}

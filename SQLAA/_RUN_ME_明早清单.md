@@ -6,15 +6,16 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
-## 📌 本批变化(2026-07-06 session · am3 第三册 · U1 推进到 L2)
+## 📌 本批变化(2026-07-06 session · am3 第三册 · U1 推进到 L3)
 - ✅ **L1 已确认**:Aaron 已跑 unit01(仅 L1)并真机确认「unit 01 is good」。原创承载法首课样板通过。
-- 🔴 **需跑(重跑)** `american_am3_seed_unit01.sql` —— 现含 **L1+L2**:
-  - **L1《The Mountain Lion 美洲狮》**(过去叙事时态:一般过去 vs 过去进行 + when/while)——已跑过,本次因新增 L2 使选项重排(内容不变、answer_index 已重同步),幂等 UPSERT 覆盖,不产生重复。
-  - **L2《Thirteen Is Close Enough 十三也差不多》**(**原创承载法**·两种现在时:一般现在 vs 现在进行 + always+进行时"老是……" + in 短语·美国小镇老钟半夜敲十三下,手电光下认出深夜修钟人)——44 题机器12项🟢全绿,承载 NCE3 L2 考点+官方词表(equal/vicar/raise/torchlight/recognize)+话题方向。
-  - 该文件现共 **88 题(44×2)**。相对你上次已跑的状态,期望 **净 +44**(L1 覆盖不增,L2 新增 44)。
+- 🔴 **需跑(重跑)** `american_am3_seed_unit01.sql` —— 现含 **L1+L2+L3**:
+  - **L1《The Mountain Lion 美洲狮》**(过去叙事时态:一般过去 vs 过去进行 + when/while)——已跑过;因后续新增课使选项重排(内容不变、answer_index 已重同步),幂等 UPSERT 覆盖,不产生重复。
+  - **L2《Thirteen Is Close Enough 十三也差不多》**(两种现在时:一般现在 vs 现在进行 + always+进行时"老是……" + in 短语·小镇老钟半夜敲十三下)——44 题🟢全绿,承载 NCE3 L2 考点+官方词表(equal/vicar/raise/torchlight/recognize)。
+  - **L3《The Unknown Goddess 无名女神》**(一般过去时+**不规则动词过去式** find→found/dig→dug/begin→began/come→came/feel→felt/wear→wore + happen(to be)碰巧 + story楼层美式/worship↔warship 易混·美国考古队复原古女神像)——44 题🟢全绿,承载 NCE3 L3 考点+词表。**美式化**:"楼层"课文写 story(非英式 storey),并入对照表+gp5。
+  - 该文件现共 **132 题(44×3)**。相对你上次已跑的状态(仅 L1),期望 **净 +88**(L2+L3;L1 覆盖不增)。
 - **第三册数据驱动自动点亮**:hub `fetchBooks` 扫到 `am3_l%` 有课即把第三册标为可进,无需改前端。
-- 对账:`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **88**(L1+L2)。
-- ⏭️ 下一步:U1 余 L3/L4/L5(L4 为🔴高危课,攒到 U1 末一次性找 Aaron 要梗概)。
+- 对账:`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **132**(L1+L2+L3)。
+- ⏭️ 下一步:U1 余 L4/L5(L4 为🔴高危课,攒到 U1 末一次性找 Aaron 要梗概)。
 
 ## 📌 本批变化(2026-07-06 session · L78 净化包 → 第二册 96/96 收官)
 - 🔴 **需跑** `american_am2_seed_unit10.sql` —— 补上 **L78《The Last Game 最后一局》**(净化包·冠词 a/an/the 与零冠词·戒手机游戏),**U10 → 8课齐(352)**,机器12项🟢全绿。

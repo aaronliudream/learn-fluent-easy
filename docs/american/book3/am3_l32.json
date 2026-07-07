@@ -1,0 +1,133 @@
+{
+  "id": "am3_l32",
+  "unit_no": 7,
+  "lesson_no": 32,
+  "title_en": "A Lost Ship",
+  "title_cn": "一艘沉船",
+  "grammar_focus": "过去完成进行时(had been searching / carrying)、过去完成时的被动(had been received / sunk)与 must have been(对过去的推测)、receive 与 take 的区别、cloth·clothes·clothing 辨析、bring·take·fetch 辨析(原创承载 NCE3 L32 考点·净化:去掉'战时被潜艇鱼雷击沉/巡洋舰/护航/国防部/战争博物馆'的战争外壳,改为沉船在风暴中沉没、由海事史学家证实、物件送海事博物馆·打捞悬疑与靠航海日志拼出真相的侦探内核原样保留)",
+  "scene": "这次打捞行动彻底失败了。小船埃尔科号在巴伦支海搜寻了好几个星期,如今正踏上归途。船长收到了一条从陆地发来的无线电讯息,让他放弃搜寻。船长心里明白,日后还会再来一次,因为他要找的那艘沉船曾载着一批珍贵的黄金货物。尽管收到了讯息,埃尔科号的船长还是决定再试一次。他们用大网彻底搜刮海床,当一个箱子从海底被吊起时,船上一片欢腾。起初船员们以为找到了那艘失踪的船,可箱子里的东西证明他们错了。他们实际上找到的,是一艘许多年前就沉没的船。箱子里装着一名水手艾伦·菲尔丁的私人物品:有书、衣物和照片,还有这名水手当年收到的妻子的来信。船长命令手下尽量从残骸中打捞。虽然没找到值钱的东西,但被捞上水面的许多物件却很有意思。从吊起的一口沉重的铜钟,船长断定这船一定曾是一艘旧远洋客轮。在另一个箱子里,装着一位船上高级船员的物品,还有一封几十年前写下、没有写完的信。船长从信中得知,那艘失踪的船名叫卡伦号。最珍贵的发现,是这艘船的航海日志,其中有些部分还能看清。船长据此把所有浮现出来的线索拼凑到了一起:卡伦号当年正横渡大海运送货物,途中遭遇一场猛烈的风暴而沉没。这一点后来在埃尔科号返航之后,得到了一位海事史学家的证实。所有找到的物件,都被送进了一座海事博物馆。",
+  "grammar_card": {
+    "title": "过去完成进行时 / had been done + must have been / receive vs take / cloth·clothes·clothing / bring·take·fetch",
+    "intro": "①过去完成进行时 had been + doing,表示到过去某一刻“一直在做”:had been searching。②过去完成时的被动 had been + 过去分词:had been received / had been sunk;对过去的推测用 must have been(“一定曾是”)。③receive 是“收到(别人给的)”,take 是“拿走、带去”。④cloth 是“布料”(可数/一块布),clothes 是“衣服”(复数),clothing 是“衣物”(不可数总称)。⑤bring 拿到说话人这边,take 从这里拿走,fetch 去取来再回来。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["had been doing", "到过去某刻一直在做", "had been searching for weeks"],
+        ["had been done / must have been", "被…了 / 一定曾是", "must have been an old liner"],
+        ["receive / take", "收到 / 拿走", "letters he had received"],
+        ["cloth·clothes·clothing / bring·take·fetch", "布/衣服/衣物;拿来·拿走·取来", "brought to the surface"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "cloth=布料(a cloth 一块布);clothes=衣服(永远复数,无单数);clothing=衣物(不可数总称,前不加 a、不加 s)。", "mark": "cloth / clothes / clothing" },
+      { "rule": "bring 是“拿到(朝说话人)这边”,take 是“(从这里)拿走”,fetch 是“去取来再回来”。方向不同别混用。", "mark": "bring / take / fetch" },
+      { "rule": "美式:harbor(英式 harbour)、gray(英式 grey)、mail(英式 post)。本课已按美语写。", "mark": "harbor / gray / mail" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Did the crew of the Elkor find the ship they were looking for?",
+    "options": ["No, they found a different old wreck instead", "Yes, with all its gold", "Yes, but it was empty", "No, they found nothing at all"],
+    "answer_index": 0
+  },
+  "passage": "The salvage operation had been a complete failure. The small ship Elkor, which had been searching the Barents Sea for weeks, was on its way home. A radio message from the mainland had been received by the ship's captain instructing him to give up the search. The captain knew that another attempt would be made later, for the sunken ship he was trying to find had been carrying a precious cargo of gold bullion. Despite the message, the captain of the Elkor decided to try once more. The sea bed was scoured with powerful nets, and there was tremendous excitement on board when a chest was raised from the bottom. Though the crew were at first under the impression that the lost ship had been found, the contents of the chest proved them wrong. What they had in fact found was a ship that had been sunk many years before. The chest contained the personal belongings of a sailor, Alan Fielding. There were books, clothing, and photographs, together with letters that the sailor had once received from his wife. The captain ordered his men to salvage as much as possible from the wreck. Nothing of great value was found, but the many items that were brought to the surface proved to be of great interest. From a heavy bronze bell that was raised, the captain realized that the ship must have been an old ocean liner. In another chest, which held the belongings of a ship's officer, there was an unfinished letter that had been written decades earlier. The captain learned from the letter that the name of the lost ship was the Karen. The most valuable find of all was the ship's logbook, parts of which it was still possible to read. From this the captain was able to piece together all the information that had come to light. The Karen had been sailing across the sea to deliver her cargo when she was caught in a violent storm and went down. This was later confirmed by a maritime historian after the Elkor had returned home. All the items that were found were sent to a maritime museum.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "The salvage operation had been a complete failure. The small ship Elkor, which had been searching the Barents Sea for weeks, was on its way home. A radio message from the mainland had been received by the ship's captain instructing him to give up the search. The captain knew that another attempt would be made later, for the sunken ship he was trying to find had been carrying a precious cargo of gold bullion.", "text_cn": "这次打捞行动彻底失败了。小船埃尔科号在巴伦支海搜寻了好几个星期,如今正踏上归途。船长收到了一条从陆地发来的无线电讯息,让他放弃搜寻。船长心里明白,日后还会再来一次,因为他要找的那艘沉船曾载着一批珍贵的黄金货物。" },
+    { "seq": 2, "speaker": null, "text_en": "Despite the message, the captain of the Elkor decided to try once more. The sea bed was scoured with powerful nets, and there was tremendous excitement on board when a chest was raised from the bottom. Though the crew were at first under the impression that the lost ship had been found, the contents of the chest proved them wrong. What they had in fact found was a ship that had been sunk many years before.", "text_cn": "尽管收到了讯息,埃尔科号的船长还是决定再试一次。他们用大网彻底搜刮海床,当一个箱子从海底被吊起时,船上一片欢腾。起初船员们以为找到了那艘失踪的船,可箱子里的东西证明他们错了。他们实际上找到的,是一艘许多年前就沉没的船。" },
+    { "seq": 3, "speaker": null, "text_en": "The chest contained the personal belongings of a sailor, Alan Fielding. There were books, clothing, and photographs, together with letters that the sailor had once received from his wife. The captain ordered his men to salvage as much as possible from the wreck. Nothing of great value was found, but the many items that were brought to the surface proved to be of great interest.", "text_cn": "箱子里装着一名水手艾伦·菲尔丁的私人物品:有书、衣物和照片,还有这名水手当年收到的妻子的来信。船长命令手下尽量从残骸中打捞。虽然没找到值钱的东西,但被捞上水面的许多物件却很有意思。" },
+    { "seq": 4, "speaker": null, "text_en": "From a heavy bronze bell that was raised, the captain realized that the ship must have been an old ocean liner. In another chest, which held the belongings of a ship's officer, there was an unfinished letter that had been written decades earlier. The captain learned from the letter that the name of the lost ship was the Karen.", "text_cn": "从吊起的一口沉重的铜钟,船长断定这船一定曾是一艘旧远洋客轮。在另一个箱子里,装着一位船上高级船员的物品,还有一封几十年前写下、没有写完的信。船长从信中得知,那艘失踪的船名叫卡伦号。" },
+    { "seq": 5, "speaker": null, "text_en": "The most valuable find of all was the ship's logbook, parts of which it was still possible to read. From this the captain was able to piece together all the information that had come to light. The Karen had been sailing across the sea to deliver her cargo when she was caught in a violent storm and went down. This was later confirmed by a maritime historian after the Elkor had returned home. All the items that were found were sent to a maritime museum.", "text_cn": "最珍贵的发现,是这艘船的航海日志,其中有些部分还能看清。船长据此把所有浮现出来的线索拼凑到了一起:卡伦号当年正横渡大海运送货物,途中遭遇一场猛烈的风暴而沉没。这一点后来在埃尔科号返航之后,得到了一位海事史学家的证实。所有找到的物件,都被送进了一座海事博物馆。" }
+  ],
+  "words": [
+    { "word": "salvage", "ipa": "/ˈsælvɪdʒ/", "pos": "v", "meaning_cn": "打捞,营救", "example": "salvage as much as possible" },
+    { "word": "sunken", "ipa": "/ˈsʌŋkən/", "pos": "adj", "meaning_cn": "沉没的", "example": "the sunken ship" },
+    { "word": "cargo", "ipa": "/ˈkɑːrɡoʊ/", "pos": "n", "meaning_cn": "货物", "example": "a cargo of gold bullion" },
+    { "word": "bullion", "ipa": "/ˈbʊljən/", "pos": "n", "meaning_cn": "金条,金银块", "example": "gold bullion" },
+    { "word": "scour", "ipa": "/ˈskaʊər/", "pos": "v", "meaning_cn": "彻底搜索", "example": "the sea bed was scoured" },
+    { "word": "chest", "ipa": "/tʃest/", "pos": "n", "meaning_cn": "大箱子", "example": "a chest was raised" },
+    { "word": "contents", "ipa": "/ˈkɑːntents/", "pos": "n", "meaning_cn": "所装的东西", "example": "the contents of the chest" },
+    { "word": "belongings", "ipa": "/bɪˈlɔːŋɪŋz/", "pos": "n", "meaning_cn": "所有物,财物", "example": "personal belongings" },
+    { "word": "item", "ipa": "/ˈaɪtəm/", "pos": "n", "meaning_cn": "物件", "example": "the items were of great interest" },
+    { "word": "logbook", "ipa": "/ˈlɔːɡbʊk/", "pos": "n", "meaning_cn": "航海日志", "example": "the ship's logbook" },
+    { "word": "piece", "ipa": "/piːs/", "pos": "v", "meaning_cn": "拼合,拼凑", "example": "piece together the information" },
+    { "word": "wreck", "ipa": "/rek/", "pos": "n", "meaning_cn": "沉船残骸", "example": "salvage from the wreck" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "过去完成进行时(had been doing)" },
+    { "gp": "gp2", "name": "过去完成被动 had been done + must have been(对过去的推测)" },
+    { "gp": "gp3", "name": "receive 与 take 的区别" },
+    { "gp": "gp4", "name": "cloth / clothes / clothing 辨析" },
+    { "gp": "gp5", "name": "bring / take / fetch 辨析" },
+    { "gp": "gp6", "name": "词汇辨析(salvage/scour/bullion)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The Elkor had been ___ the Barents Sea for weeks.\"(过去完成进行时 had been + -ing)", "stem_cn": "埃尔科号已在巴伦支海搜寻了数周。", "options": ["searching", "searched", "search", "to search"] },
+    { "gp": "gp1", "stem": "\"By noon the crew ___ working for six hours.\"(表\"到过去某刻一直在做\",填助动词部分)", "stem_cn": "到中午时,船员们已连续工作了六小时。", "options": ["had been", "have been", "has been", "were"] },
+    { "gp": "gp1", "stem": "\"The ship ___ carrying gold when it sank.\"(表\"沉没前一直载着\",填助动词部分)", "stem_cn": "那船沉没时一直载着黄金。", "options": ["had been", "has been", "was been", "had"] },
+    { "gp": "gp2", "stem": "\"A radio message had been ___ by the captain.\"(过去完成被动 had been + 过去分词)", "stem_cn": "船长收到了一条无线电讯息。", "options": ["received", "receiving", "receive", "receives"] },
+    { "gp": "gp2", "stem": "\"The ship had been ___ many years before they found it.\"(过去完成被动 had been + 过去分词)", "stem_cn": "他们找到时,那船已沉没多年。", "options": ["sunk", "sank", "sinking", "sink"] },
+    { "gp": "gp2", "stem": "\"From the heavy bell, the captain realized the ship ___ an old liner.\"(对过去的推测\"一定曾是\")", "stem_cn": "从那口大钟看,船长断定它一定曾是艘旧客轮。", "options": ["must have been", "must be", "must have", "can be"] },
+    { "gp": "gp3", "stem": "\"The sailor had ___ many letters from his wife.\"(\"收到\"别人寄来的东西用哪个动词)", "stem_cn": "那水手收到过妻子许多来信。", "options": ["received", "taken", "brought", "fetched"] },
+    { "gp": "gp3", "stem": "\"Please ___ this box to the captain's cabin.\"(\"把…拿去\"用哪个动词)", "stem_cn": "请把这箱子拿到船长舱去。", "options": ["take", "receive", "accept", "get received"] },
+    { "gp": "gp3", "stem": "\"She was glad to ___ a gift on her birthday.\"(\"得到、收到\"礼物用哪个动词)", "stem_cn": "她很高兴在生日收到礼物。", "options": ["receive", "take", "bring", "fetch"] },
+    { "gp": "gp4", "stem": "\"The table was covered with a clean white ___.\"(\"一块布料\"用哪个词)", "stem_cn": "桌上铺着一块干净的白布。", "options": ["cloth", "clothes", "clothing", "cloths only"] },
+    { "gp": "gp4", "stem": "\"He put on warm ___ before going out.\"(\"衣服(复数)\"日常用哪个词)", "stem_cn": "出门前他穿上暖和的衣服。", "options": ["clothes", "cloth", "clothing", "a clothes"] },
+    { "gp": "gp4", "stem": "\"The store sells food, shoes, and ___.\"(\"衣物\"的不可数总称用哪个词)", "stem_cn": "那家店卖食品、鞋子和衣物。", "options": ["clothing", "cloth", "clothe", "a clothes"] },
+    { "gp": "gp5", "stem": "\"The items were ___ to the surface for everyone to see.\"(\"拿到(朝说话人这边)\"用哪个)", "stem_cn": "那些物件被拿到水面上给大家看。", "options": ["brought", "taken", "sent away", "fetched back"] },
+    { "gp": "gp5", "stem": "\"Please ___ these boxes away from here.\"(\"(从这里)拿走\"用哪个)", "stem_cn": "请把这些箱子从这儿拿走。", "options": ["take", "bring", "fetch", "receive"] },
+    { "gp": "gp5", "stem": "\"Could you ___ me a glass of water?\"(\"去把…取来(再回来)\"用哪个)", "stem_cn": "你能去给我取杯水来吗?", "options": ["fetch", "take", "receive", "send"] },
+    { "gp": "gp6", "stem": "\"To bring a sunken ship or its goods up from the sea is to ___.\"(\"打捞\"用哪个词)", "stem_cn": "把沉船或其货物捞起。", "options": ["salvage", "sink", "sail", "float"] },
+    { "gp": "gp6", "stem": "\"To search a place thoroughly is to ___ it.\"(\"彻底搜索\"用哪个词)", "stem_cn": "彻底搜遍某处。", "options": ["scour", "ignore", "decorate", "close"] },
+    { "gp": "gp6", "stem": "\"Bars of gold or silver are called ___.\"(\"金条、金银块\"用哪个词)", "stem_cn": "成条的金银。", "options": ["bullion", "cargo", "cloth", "chest"] }
+  ],
+  "stage6": [
+    { "stem": "salvage 的意思是:", "options": ["打捞,营救", "建造", "驾驶", "出售"] },
+    { "stem": "sunken 的意思是:", "options": ["沉没的", "漂浮的", "崭新的", "巨大的"] },
+    { "stem": "cargo 的意思是:", "options": ["货物", "船员", "港口", "风暴"] },
+    { "stem": "belongings 的意思是:", "options": ["所有物,财物", "债务", "命令", "传言"] },
+    { "stem": "wreck 的意思是:", "options": ["沉船残骸", "灯塔", "码头", "救生艇"] },
+    { "stem": "piece(v.) 的意思是:", "options": ["拼合,拼凑", "撕碎", "丢弃", "隐藏"] }
+  ],
+  "contrast": [
+    { "us": "harbor", "uk": "harbour", "note_cn": "港口;拼写差异,美语无 u" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" },
+    { "us": "mail", "uk": "post", "note_cn": "邮件;美语 mail,英式 post" },
+    { "us": "flashlight", "uk": "torch", "note_cn": "手电筒;美语 flashlight,英式 torch" }
+  ],
+  "chunks": [
+    { "us": "piece together", "ipa": "/piːs təˈɡeðər/", "example1": "The captain pieced together the whole story.", "example1_cn": "船长把整个故事拼凑了出来。", "example2": "Detectives pieced together the clues.", "example2_cn": "侦探们把线索拼凑起来。" },
+    { "us": "come to light", "ipa": "/kʌm tə laɪt/", "example1": "New information came to light.", "example1_cn": "新的信息浮出水面。", "example2": "The truth finally came to light.", "example2_cn": "真相终于大白。" },
+    { "us": "under the impression", "ipa": "/ˈʌndər ði ɪmˈpreʃən/", "example1": "The crew were under the impression that the lost ship had been found.", "example1_cn": "船员们以为找到了那艘失踪的船。", "example2": "I was under the impression that you had left.", "example2_cn": "我还以为你已经走了。" },
+    { "us": "give up", "ipa": "/ɡɪv ʌp/", "example1": "He was told to give up the search.", "example1_cn": "有人叫他放弃搜寻。", "example2": "Never give up your dreams.", "example2_cn": "永远别放弃你的梦想。" }
+  ],
+  "stage7_cloze": {
+    "context": "The Elkor had been ___1___ the Barents Sea for weeks. A message had been ___2___ telling the captain to stop, but he tried once more. A chest was raised, yet the crew were wrong to think the lost ship ___3___ been found. From an old bell, the captain realized the wreck ___4___ have been an ocean liner.",
+    "blanks": [
+      { "blank_no": 1, "options": ["searching", "searched", "search", "searches"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["received", "receiving", "receive", "receives"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["had", "has", "was", "have"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["must", "can", "need", "dare"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What was the Elkor searching for?", "options": ["A sunken ship carrying gold bullion", "A lost island", "A living whale", "A hidden harbor"] },
+    { "stem": "What did the crew actually find?", "options": ["A different ship that had sunk years before", "The gold they wanted", "An empty stretch of sea", "A brand-new boat"] },
+    { "stem": "How did the Karen sink?", "options": ["It was caught in a violent storm", "It hit an iceberg", "It ran out of fuel", "It was never explained"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"埃尔科号已经搜寻了数周\"(过去完成进行时):", "options": ["The Elkor had been searching for weeks.", "The Elkor has been searching for weeks.", "The Elkor had been search for weeks.", "The Elkor was been searching for weeks."] },
+    { "stem": "你想说\"那船一定曾是艘旧客轮\"(对过去的推测):", "options": ["The ship must have been an old liner.", "The ship must be an old liner.", "The ship must had been an old liner.", "The ship must have be an old liner."] },
+    { "stem": "你想说\"你能去给我取杯水来吗\"(fetch):", "options": ["Could you fetch me a glass of water?", "Could you take me a glass of water?", "Could you receive me a glass of water?", "Could you bring away me a glass of water?"] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "salvage 的意思是:", "options": ["打捞,营救", "建造", "驾驶", "出售"] },
+    { "kind": "vocab", "stem": "wreck 的意思是:", "options": ["沉船残骸", "灯塔", "码头", "救生艇"] },
+    { "kind": "grammar", "stem": "\"The Elkor had been ___ the sea for weeks.\"(过去完成进行时 had been + -ing)", "stem_cn": "埃尔科号已在海上搜寻了数周。", "options": ["searching", "searched", "search", "to search"] },
+    { "kind": "grammar", "stem": "\"The ship ___ have been an old liner.\"(对过去的推测\"一定曾是\")", "stem_cn": "那船一定曾是一艘旧客轮。", "options": ["must", "can", "need", "would"] },
+    { "kind": "scenario", "stem": "\"piece together\" 的意思是:", "options": ["拼凑、还原(信息)", "撕成碎片", "卖个好价", "藏起来"] },
+    { "kind": "scenario", "stem": "\"come to light\" 的意思是:", "options": ["(真相)显露出来", "打开电灯", "变轻", "天亮了"] },
+    { "kind": "reading", "stem": "Why was the captain told to give up the search?", "options": ["The salvage operation had been a complete failure so far", "He had already found the gold", "A storm was coming", "The crew were tired"], "passage": true },
+    { "kind": "reading", "stem": "How did the captain finally learn the lost ship's story?", "options": ["By piecing together clues from the ship's logbook", "By asking the sailors", "By reading a newspaper", "By simply guessing"], "passage": true },
+    { "kind": "listening", "stem": "Whose belongings were in the first chest?", "options": ["A sailor named Alan Fielding", "The captain of the Elkor", "A famous artist", "No one's"], "audio": true },
+    { "kind": "listening", "stem": "Where were the found items finally sent?", "options": ["To a maritime museum", "Back into the sea", "To the crew's homes", "To a bank"], "audio": true }
+  ]
+}

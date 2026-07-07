@@ -1,0 +1,133 @@
+{
+  "id": "am4_l7",
+  "unit_no": 2,
+  "lesson_no": 7,
+  "title_en": "Bats",
+  "title_cn": "蝙蝠",
+  "grammar_focus": "部分否定(not all / not every)、so + 倒装(So was born…)/ so…that、by + 动名词(方式)+ 被动语态、定语从句中的介词 + 关系代词(on which / of which / in which)、not only…but + 现在分词作状语(NCE4 无 KS 页,考点由课文结构自取;原创承载·论蝙蝠的回声定位与船用回声测深仪、雷达原理相通的科普·题材无害;美语化 meter/analyze;第四册第7课·U2开工)",
+  "scene": "动物发出的声音并非都用作某种语言;有些声音有着纯粹实用、功利的用途。要充分领会这一点,不妨先看一项人类的发明。谁都知道,你在悬崖或高墙附近一喊,回声就会传回来。墙越远,回声传回前流逝的时间就越长。从船上向水下发出的声音会从海底反弹回来;通过测量声音发出到回声返回之间那极短的时间间隔,就能算出该处海水的深度。回声测深仪就这样诞生了,如今大多数船上都装了它。每一个实心物体都会反射声音,回声随物体的大小和性质而变。因此,从测定海底到探明鱼群,不过是一小步;凭借经验和更精良的设备,如今不仅能给鱼群定位,还能仅凭回声的模式,判断出那是鲱鱼、鳕鱼还是别的什么鱼。蝙蝠所做的事,竟惊人地相似。人们发现,许多蝙蝠飞行时会发出一连串高频的吱吱声;通过接收弹回的回声,它们能在黑暗中避开一切障碍,并找到赖以为食的飞虫。蝙蝠的这种回声定位常被拿来与雷达相比,二者原理十分相近:一个信号发出去,撞上障碍物再返回,生物便凭返回的回声,在看不见的世界里勾勒出一幅图景。",
+  "grammar_card": {
+    "title": "部分否定 / so 倒装 / by + 动名词 + 被动 / 介词 + 关系代词",
+    "intro": "①部分否定:not all / not every=“并非所有/每一…都…”。②so + 助/系动词 + 主语(倒装):So was born…;so…that=“如此…以至于”。③by + 动名词表方式,句子常用被动:by measuring…, the depth can be calculated。④定语从句里介词提前:the insects on which they feed;radar, the principle of which…。⑤not only…but(also)+ 现在分词作状语。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["部分否定", "not all / not every", "Not all sounds are language"],
+        ["so 倒装", "So + be/助动词 + 主语", "So was born the apparatus"],
+        ["by + 动名词 + 被动", "By doing…, … can be done", "By measuring…, the depth can be calculated"],
+        ["介词 + 关系代词", "on which / of which", "insects on which they feed"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "not all / not every 是部分否定,“并非都”,不是“全不”;全否定要用 none / no。", "mark": "Not all … (并非都)" },
+      { "rule": "定语从句里介词提前时,指物用 which(不用 that);the principle of which=其原理。", "mark": "on which / of which" },
+      { "rule": "美式拼写:meter(米,英式 metre)、analyze(分析,英式 analyse)。本课已按美语写。", "mark": "meter / analyze" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — In what way does echo-location in bats play a utilitarian role?",
+    "options": ["It helps them avoid obstacles and find food in the dark", "It is used only for communication", "It warns of bad weather", "It has no real purpose"],
+    "answer_index": 0
+  },
+  "passage": "Not all the sounds made by animals serve as a kind of language; some have a strictly practical, utilitarian purpose. To gain a full appreciation of this, it helps to look first at a human invention. Everyone knows that if you shout near a cliff or a high wall, an echo comes back to you. The further off the wall, the longer the time that must elapse before the echo returns. A sound sent down through the water from a ship will bounce off the sea bottom, and by measuring the tiny interval between the sound and the returning echo, the depth of the sea at that point can be calculated. So was born the echo-sounding apparatus that is now fitted to most ships. Every solid object reflects sound, the echo varying according to the size and nature of the object. It is therefore only a short step from finding the sea bottom to finding a shoal of fish; with practice and better equipment, it is now possible not only to locate a shoal but also to tell whether it is herring, cod, or some other kind, simply by the pattern of its echo. Bats do something remarkably similar. It has been found that many bats emit a stream of high squeaks as they fly, and by catching the echoes that bounce back, they can steer clear of any obstruction in the dark and locate the flying insects on which they feed. This echolocation in bats is often compared with radar, the principle of which is much the same: a signal goes out, strikes an obstacle, and returns, and from the returning echo the creature builds a picture of the world it cannot see.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Not all the sounds made by animals serve as a kind of language; some have a strictly practical, utilitarian purpose. To gain a full appreciation of this, it helps to look first at a human invention. Everyone knows that if you shout near a cliff or a high wall, an echo comes back to you. The further off the wall, the longer the time that must elapse before the echo returns.", "text_cn": "动物发出的声音并非都用作某种语言;有些声音有着纯粹实用、功利的用途。要充分领会这一点,不妨先看一项人类的发明。谁都知道,你在悬崖或高墙附近一喊,回声就会传回来。墙越远,回声传回前流逝的时间就越长。" },
+    { "seq": 2, "speaker": null, "text_en": "A sound sent down through the water from a ship will bounce off the sea bottom, and by measuring the tiny interval between the sound and the returning echo, the depth of the sea at that point can be calculated. So was born the echo-sounding apparatus that is now fitted to most ships. Every solid object reflects sound, the echo varying according to the size and nature of the object.", "text_cn": "从船上向水下发出的声音会从海底反弹回来;通过测量声音发出到回声返回之间那极短的时间间隔,就能算出该处海水的深度。回声测深仪就这样诞生了,如今大多数船上都装了它。每一个实心物体都会反射声音,回声随物体的大小和性质而变。" },
+    { "seq": 3, "speaker": null, "text_en": "It is therefore only a short step from finding the sea bottom to finding a shoal of fish; with practice and better equipment, it is now possible not only to locate a shoal but also to tell whether it is herring, cod, or some other kind, simply by the pattern of its echo.", "text_cn": "因此,从测定海底到探明鱼群,不过是一小步;凭借经验和更精良的设备,如今不仅能给鱼群定位,还能仅凭回声的模式,判断出那是鲱鱼、鳕鱼还是别的什么鱼。" },
+    { "seq": 4, "speaker": null, "text_en": "Bats do something remarkably similar. It has been found that many bats emit a stream of high squeaks as they fly, and by catching the echoes that bounce back, they can steer clear of any obstruction in the dark and locate the flying insects on which they feed.", "text_cn": "蝙蝠所做的事,竟惊人地相似。人们发现,许多蝙蝠飞行时会发出一连串高频的吱吱声;通过接收弹回的回声,它们能在黑暗中避开一切障碍,并找到赖以为食的飞虫。" },
+    { "seq": 5, "speaker": null, "text_en": "This echolocation in bats is often compared with radar, the principle of which is much the same: a signal goes out, strikes an obstacle, and returns, and from the returning echo the creature builds a picture of the world it cannot see.", "text_cn": "蝙蝠的这种回声定位常被拿来与雷达相比,二者原理十分相近:一个信号发出去,撞上障碍物再返回,生物便凭返回的回声,在看不见的世界里勾勒出一幅图景。" }
+  ],
+  "words": [
+    { "word": "bat", "ipa": "/bæt/", "pos": "n", "meaning_cn": "蝙蝠", "example": "many bats emit high squeaks" },
+    { "word": "utilitarian", "ipa": "/juːˌtɪləˈteriən/", "pos": "adj", "meaning_cn": "实用的,功利的", "example": "a strictly utilitarian purpose" },
+    { "word": "appreciation", "ipa": "/əˌpriːʃiˈeɪʃən/", "pos": "n", "meaning_cn": "理解,领会", "example": "to gain a full appreciation of this" },
+    { "word": "elapse", "ipa": "/ɪˈlæps/", "pos": "v", "meaning_cn": "(时间)流逝,过去", "example": "the time that must elapse before the echo returns" },
+    { "word": "obstruction", "ipa": "/əbˈstrʌkʃən/", "pos": "n", "meaning_cn": "障碍(物)", "example": "steer clear of any obstruction" },
+    { "word": "interval", "ipa": "/ˈɪntərvəl/", "pos": "n", "meaning_cn": "间隔,间歇", "example": "the tiny interval between the sound and the echo" },
+    { "word": "apparatus", "ipa": "/ˌæpəˈrætəs/", "pos": "n", "meaning_cn": "仪器,设备", "example": "the echo-sounding apparatus" },
+    { "word": "shoal", "ipa": "/ʃoʊl/", "pos": "n", "meaning_cn": "鱼群", "example": "a shoal of fish" },
+    { "word": "emit", "ipa": "/iˈmɪt/", "pos": "v", "meaning_cn": "发出,发射", "example": "bats emit a stream of high squeaks" },
+    { "word": "obstacle", "ipa": "/ˈɑːbstəkəl/", "pos": "n", "meaning_cn": "障碍", "example": "a signal strikes an obstacle" },
+    { "word": "steer", "ipa": "/stɪr/", "pos": "v", "meaning_cn": "驾驶,掌舵,引导", "example": "steer clear of any obstruction" },
+    { "word": "radar", "ipa": "/ˈreɪdɑːr/", "pos": "n", "meaning_cn": "雷达", "example": "often compared with radar" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "部分否定(not all / not every)" },
+    { "gp": "gp2", "name": "so + 倒装 / so…that" },
+    { "gp": "gp3", "name": "by + 动名词(方式)+ 被动语态" },
+    { "gp": "gp4", "name": "定语从句中的介词 + 关系代词(on which / of which)" },
+    { "gp": "gp5", "name": "not only…but + 现在分词作状语" },
+    { "gp": "gp6", "name": "词汇辨析(obstacle/shoal/emit)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ all sounds made by animals serve as language.\"(部分否定‘并非所有…都…’,填否定词)", "stem_cn": "并非动物发出的所有声音都用作语言。", "options": ["Not", "No", "None", "Never"] },
+    { "gp": "gp1", "stem": "\"Not ___ bat uses echolocation in the same way.\"(部分否定‘并非每一…都…’,填‘每一’这个词)", "stem_cn": "并非每只蝙蝠都以同样方式回声定位。", "options": ["every", "all", "some", "any"] },
+    { "gp": "gp1", "stem": "\"Not all fish ___ detected by their echo alone.\"(部分否定 + 被动,填 be 动词)", "stem_cn": "并非所有鱼都能仅凭回声辨认。", "options": ["are", "is", "was", "has"] },
+    { "gp": "gp2", "stem": "\"So ___ born the echo-sounding apparatus now used on ships.\"(so + 倒装,一般过去,填 be 动词)", "stem_cn": "回声测深仪就这样诞生了。", "options": ["was", "is", "has", "did"] },
+    { "gp": "gp2", "stem": "\"So loud was the squeak ___ it echoed off the wall.\"(so … ___:‘如此…以至于’,填引导结果的连词)", "stem_cn": "那声尖叫如此响亮,以至在墙上回响。", "options": ["that", "as", "which", "than"] },
+    { "gp": "gp2", "stem": "\"So ___ does the bat fly that the eye can hardly follow it.\"(so + 副词 + 倒装:‘飞得如此快’,填这个副词)", "stem_cn": "蝙蝠飞得如此之快,眼睛几乎跟不上。", "options": ["fast", "faster", "fastest", "more fast"] },
+    { "gp": "gp3", "stem": "\"___ measuring the interval, the depth can be calculated.\"(通过做某事:填引出方式的介词)", "stem_cn": "通过测量时间间隔,就能算出深度。", "options": ["By", "With", "On", "In"] },
+    { "gp": "gp3", "stem": "\"By tapping the hull, the sea bottom can ___ located.\"(情态被动 can + ___ + 过去分词:填中间的词)", "stem_cn": "敲击船体,就能测定海底。", "options": ["be", "is", "been", "being"] },
+    { "gp": "gp3", "stem": "\"The depth is ___ from the time interval.\"(一般现在被动:is + 过去分词,填过去分词)", "stem_cn": "深度是根据时间间隔算出的。", "options": ["calculated", "calculate", "calculating", "calculates"] },
+    { "gp": "gp4", "stem": "\"Bats locate the insects ___ which they feed.\"(介词 + 关系代词,指物)", "stem_cn": "蝙蝠找到它们赖以为食的昆虫。", "options": ["on", "in", "at", "of"] },
+    { "gp": "gp4", "stem": "\"Echolocation is like radar, the principle ___ which is the same.\"(介词 + 关系代词,‘其原理’)", "stem_cn": "回声定位像雷达,其原理相同。", "options": ["of", "on", "at", "in"] },
+    { "gp": "gp4", "stem": "\"This is a case ___ which the voice plays a practical role.\"(介词 + 关系代词,‘在其中’)", "stem_cn": "这是声音发挥实用作用的一个例子。", "options": ["in", "on", "at", "of"] },
+    { "gp": "gp5", "stem": "\"It is possible ___ only to locate a shoal but to name the fish.\"(‘不仅…而且…’的前半,填这个否定词)", "stem_cn": "不仅能定位鱼群,还能说出是什么鱼。", "options": ["not", "no", "never", "none"] },
+    { "gp": "gp5", "stem": "\"Every solid object reflects sound, the echo ___ with its size.\"(现在分词作状语,‘随…而变’)", "stem_cn": "每个实体都反射声音,回声随其大小而变。", "options": ["varying", "varied", "vary", "to vary"] },
+    { "gp": "gp5", "stem": "\"Not only ___ bats emit squeaks, but they also hear the echoes.\"(not only 置于句首引起倒装,填助动词)", "stem_cn": "蝙蝠不仅发出尖叫,还能听到回声。", "options": ["do", "are", "have", "did"] },
+    { "gp": "gp6", "stem": "\"Something blocking the way is an ___.\"(“障碍物”用哪个词)", "stem_cn": "挡住去路的东西。", "options": ["obstruction", "opening", "entrance", "path"] },
+    { "gp": "gp6", "stem": "\"A large group of fish swimming together is a ___.\"(“鱼群”用哪个词)", "stem_cn": "一大群一起游的鱼。", "options": ["shoal", "flock", "herd", "swarm"] },
+    { "gp": "gp6", "stem": "\"To send out a sound or signal is to ___ it.\"(“发出”用哪个词)", "stem_cn": "把声音或信号发送出去。", "options": ["emit", "absorb", "hide", "store"] }
+  ],
+  "stage6": [
+    { "stem": "utilitarian 的意思是:", "options": ["实用的,功利的", "无用的", "昂贵的", "危险的"] },
+    { "stem": "appreciation 的意思是:", "options": ["理解,领会", "忽视", "怀疑", "厌恶"] },
+    { "stem": "elapse 的意思是:", "options": ["(时间)流逝,过去", "停止", "加快", "倒退"] },
+    { "stem": "apparatus 的意思是:", "options": ["仪器,设备", "玩具", "家具", "衣物"] },
+    { "stem": "obstacle 的意思是:", "options": ["障碍", "通道", "桥梁", "入口"] },
+    { "stem": "radar 的意思是:", "options": ["雷达", "望远镜", "显微镜", "温度计"] }
+  ],
+  "contrast": [
+    { "us": "meter", "uk": "metre", "note_cn": "米(长度单位);拼写差异,美语 meter" },
+    { "us": "analyze", "uk": "analyse", "note_cn": "分析;拼写差异,美语 analyze" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" },
+    { "us": "center", "uk": "centre", "note_cn": "中心;拼写差异,美语 center" }
+  ],
+  "chunks": [
+    { "us": "turn to", "ipa": "/tɜːrn tə/", "example1": "We turn to bats for an example.", "example1_cn": "我们以蝙蝠为例。", "example2": "She turned to science for answers.", "example2_cn": "她求助于科学寻找答案。" },
+    { "us": "steer clear of", "ipa": "/stɪr klɪr əv/", "example1": "Bats steer clear of obstacles in the dark.", "example1_cn": "蝙蝠在黑暗中避开障碍。", "example2": "Steer clear of trouble.", "example2_cn": "避开麻烦。" },
+    { "us": "bounce off", "ipa": "/baʊns ɔːf/", "example1": "The sound bounces off the sea bottom.", "example1_cn": "声音从海底反弹回来。", "example2": "The ball bounced off the wall.", "example2_cn": "球从墙上弹了回来。" },
+    { "us": "compare with", "ipa": "/kəmˈper wɪð/", "example1": "Echolocation is compared with radar.", "example1_cn": "回声定位被拿来与雷达相比。", "example2": "Compare this plan with the old one.", "example2_cn": "把这个方案与旧的比一比。" }
+  ],
+  "stage7_cloze": {
+    "context": "___1___ all animal sounds are language; some are strictly utilitarian. By measuring the interval before an echo, the depth of the sea ___2___ be calculated. So ___3___ born the echo-sounding apparatus. Bats emit squeaks and steer clear of the obstacles ___4___ which they might crash.",
+    "blanks": [
+      { "blank_no": 1, "options": ["Not", "No", "None", "Never"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["can", "is", "has", "does"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["was", "is", "has", "did"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["into", "on", "at", "of"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "In what way does echo-location in bats play a utilitarian role?", "options": ["It lets them avoid obstacles and find food in the dark", "It is used only for singing", "It warns other bats of danger", "It has no real use"] },
+    { "stem": "How does an echo-sounding apparatus measure the depth of the sea?", "options": ["By timing how long an echo takes to return from the bottom", "By looking at the water's color", "By dropping a weighted line", "By using sunlight"] },
+    { "stem": "What everyday device is bat echolocation most often compared with?", "options": ["Radar", "A camera", "A clock", "A telephone"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"并非动物发出的所有声音都用作语言\"(部分否定):", "options": ["Not all sounds made by animals serve as language.", "All sounds made by animals not serve as language.", "No all sounds made by animals serve as language.", "Not all sounds made by animals serves as language."] },
+    { "stem": "你想说\"通过测量时间间隔,就能算出深度\"(by + 动名词 + 被动):", "options": ["By measuring the interval, the depth can be calculated.", "By measure the interval, the depth can be calculated.", "By measuring the interval, the depth can calculated.", "With measuring the interval, the depth can be calculated."] },
+    { "stem": "你想说\"蝙蝠找到它们赖以为食的昆虫\"(介词 + 关系代词):", "options": ["Bats locate the insects on which they feed.", "Bats locate the insects on which they feed on.", "Bats locate the insects in which they feed.", "Bats locate the insects which they feed."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "apparatus 的意思是:", "options": ["仪器,设备", "玩具", "家具", "衣物"] },
+    { "kind": "vocab", "stem": "obstacle 的意思是:", "options": ["障碍", "通道", "桥梁", "入口"] },
+    { "kind": "grammar", "stem": "\"___ all animal sounds serve as language.\"(部分否定‘并非所有…都…’)", "stem_cn": "并非所有动物的声音都用作语言。", "options": ["Not", "No", "None", "Never"] },
+    { "kind": "grammar", "stem": "\"By measuring the interval, the depth can ___ calculated.\"(情态被动 can + ___ + 过去分词,填中间的词)", "stem_cn": "通过测量间隔,深度就能被算出。", "options": ["be", "is", "been", "being"] },
+    { "kind": "scenario", "stem": "\"steer clear of\" 的意思是:", "options": ["避开、绕开", "撞上", "靠近", "抓住"] },
+    { "kind": "scenario", "stem": "\"bounce off\" 的意思是:", "options": ["从…弹回", "沉入", "穿过", "融化"] },
+    { "kind": "reading", "stem": "How were echo-sounding devices first used on ships?", "options": ["To measure the depth of the sea by timing echoes", "To send radio messages", "To power the engines", "To clean the hull"], "passage": true },
+    { "kind": "reading", "stem": "What can modern echo devices do besides finding the sea bottom?", "options": ["Tell what kind of fish a shoal is by its echo", "Predict the weather", "Steer the ship automatically", "Count the crew"], "passage": true },
+    { "kind": "listening", "stem": "What do bats send out to find their way in the dark?", "options": ["High-pitched squeaks", "Bright light", "Radio waves", "Puffs of air"], "audio": true },
+    { "kind": "listening", "stem": "What do bats do with the echoes that bounce back?", "options": ["Locate obstacles and flying insects", "Sing to other bats", "Store them as food", "Ignore them"], "audio": true }
+  ]
+}

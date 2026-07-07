@@ -1,0 +1,134 @@
+{
+  "id": "am4_l14",
+  "unit_no": 3,
+  "lesson_no": 14,
+  "title_en": "The Butterfly Effect",
+  "title_cn": "蝴蝶效应",
+  "grammar_focus": "suppose + 虚拟(could be covered)+ 过去分词作定语(sensors placed one foot apart)、现在分词作状语(cascading upward)、将来完成时(will have created / will have spread)、定语从句(fluctuations that…)、whether/疑问词引导的从句(tell whether…/predict what…)(NCE4 无 KS 页,考点由课文结构自取;IP:源为詹姆斯·格雷克《混沌》名家科普,已用 100% 原创行文复述‘微小误差层层放大’的混沌概念,无逐句改写、无人物;题材=混沌理论与天气预测·无害;美语化 vapor/analyze;第四册第14课)",
+  "scene": "不管我们的仪器造得多好,天气永远跑在它前头。过了两三天,再精良的预报也变成臆测;过了一周,便与瞎猜相差无几。原因有个响亮的名字——蝴蝶效应。在任何一段流动的空气里,我们数字中最微小的误差都不会一直保持微小。它一点一点地把预测拖坏;那些小小的不确定性成倍增长,层层向上贯穿一整架躁动、湍急的运动,从在街角打转的小小涡流,一直升到宽如一个大陆的风暴系统。今天的天气模型建立在一张相隔数十英里的测量点网格之上;即便如此,大量起始数据仍只能靠猜,因为再密的观测站网也看不到每一寸天空。可是,假设整个星球能被每隔一英尺安放的传感器覆盖,以一英尺为步长一直排到大气层顶;假设每个传感器都报出完美的温度、气压和湿度读数——即便如此,一台功率无限的计算机也无法确切告诉你,某座城镇一个月后是晴还是雨。麻烦在于:传感器之间的缝隙仍会藏起无数波动——那是任何仪器都没能捕捉到的、对平均值的细微偏离。几分钟内,这些藏着的抖动便早已在一英尺开外孕育出小小的误差;再过一会儿,误差就会扩散到十英尺的尺度;错误就这样一步一步往上爬,直到把整个地球吞没。",
+  "grammar_card": {
+    "title": "suppose+虚拟 / 现在分词状语 / 将来完成时 / 定语从句 / whether 从句",
+    "intro": "①suppose + 虚拟(could be covered);过去分词作定语:sensors placed one foot apart。②现在分词作状语:Errors multiply, cascading upward。③将来完成时 will have + 过去分词,表‘到将来某时之前早已…’:will have created。④定语从句:fluctuations that no instrument can catch。⑤whether/疑问词引导从句:cannot tell whether…；predict what will happen。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["suppose+虚拟", "suppose … could be done", "suppose the earth could be covered"],
+        ["现在分词状语", "…, doing …", "Errors multiply, cascading upward"],
+        ["将来完成时", "will have + 过去分词", "will have created small errors"],
+        ["定语从句", "名词 + that + 从句", "fluctuations that no instrument can catch"],
+        ["whether 从句", "tell/predict whether/what …", "cannot tell whether it will rain"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "将来完成时 will have + 过去分词,表示到将来某个时间点之前动作已完成:By 12:01 … will already have created。", "mark": "will have done" },
+      { "rule": "suppose(假设)引导设想时,常配 could/would 等表示与现实拉开距离;过去分词作定语表被动:sensors placed apart。", "mark": "suppose … could be done" },
+      { "rule": "美式拼写:vapor(蒸汽,英式 vapour)、analyze(分析,英式 analyse)。本课已按美语写。", "mark": "vapor / analyze" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why do small errors make it impossible to predict the weather system with a high degree of accuracy?",
+    "options": ["Because they multiply and cascade upward until they reach the size of the globe", "Because computers are too slow", "Because the weather never changes", "Because sensors are banned"],
+    "answer_index": 0
+  },
+  "passage": "No matter how good our instruments become, the weather will always outrun them. Past two or three days, even the finest forecast turns speculative; past a week, it is little better than a guess. The reason has a famous name — the butterfly effect. In any stretch of moving air, the smallest error in our numbers does not stay small. It deteriorates the prediction bit by bit; the little uncertainties multiply, cascading upward through a whole ladder of restless, turbulent motions, from the tiny eddies that spin at a street corner all the way up to storm systems as wide as a continent. Today's weather models rest on a grid of measuring points spread dozens of miles apart, and even so a great deal of the starting data has to be guessed, since no network of stations can watch every acre of sky. But suppose the whole planet could be covered with sensors placed just one foot apart, reaching in one-foot steps clear to the top of the atmosphere. Suppose each sensor reported perfect readings of temperature, pressure, and humidity. Even then, a computer of unlimited power could not tell you for certain whether a given town would see sun or rain a month from now. The trouble is that the gaps between the sensors would still hide countless fluctuations — tiny deviations from the average that no instrument had caught. Within minutes those hidden wobbles will already have bred small errors a foot away; a little later the errors will have spread to the ten-foot scale, and so the mistake climbs, step by step, until it has swallowed the entire globe.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "No matter how good our instruments become, the weather will always outrun them. Past two or three days, even the finest forecast turns speculative; past a week, it is little better than a guess. The reason has a famous name — the butterfly effect.", "text_cn": "不管我们的仪器造得多好,天气永远跑在它前头。过了两三天,再精良的预报也变成臆测;过了一周,便与瞎猜相差无几。原因有个响亮的名字——蝴蝶效应。" },
+    { "seq": 2, "speaker": null, "text_en": "In any stretch of moving air, the smallest error in our numbers does not stay small. It deteriorates the prediction bit by bit; the little uncertainties multiply, cascading upward through a whole ladder of restless, turbulent motions, from the tiny eddies that spin at a street corner all the way up to storm systems as wide as a continent.", "text_cn": "在任何一段流动的空气里,我们数字中最微小的误差都不会一直保持微小。它一点一点地把预测拖坏;那些小小的不确定性成倍增长,层层向上贯穿一整架躁动、湍急的运动,从在街角打转的小小涡流,一直升到宽如一个大陆的风暴系统。" },
+    { "seq": 3, "speaker": null, "text_en": "Today's weather models rest on a grid of measuring points spread dozens of miles apart, and even so a great deal of the starting data has to be guessed, since no network of stations can watch every acre of sky.", "text_cn": "今天的天气模型建立在一张相隔数十英里的测量点网格之上;即便如此,大量起始数据仍只能靠猜,因为再密的观测站网也看不到每一寸天空。" },
+    { "seq": 4, "speaker": null, "text_en": "But suppose the whole planet could be covered with sensors placed just one foot apart, reaching in one-foot steps clear to the top of the atmosphere. Suppose each sensor reported perfect readings of temperature, pressure, and humidity. Even then, a computer of unlimited power could not tell you for certain whether a given town would see sun or rain a month from now.", "text_cn": "可是,假设整个星球能被每隔一英尺安放的传感器覆盖,以一英尺为步长一直排到大气层顶;假设每个传感器都报出完美的温度、气压和湿度读数——即便如此,一台功率无限的计算机也无法确切告诉你,某座城镇一个月后是晴还是雨。" },
+    { "seq": 5, "speaker": null, "text_en": "The trouble is that the gaps between the sensors would still hide countless fluctuations — tiny deviations from the average that no instrument had caught. Within minutes those hidden wobbles will already have bred small errors a foot away; a little later the errors will have spread to the ten-foot scale, and so the mistake climbs, step by step, until it has swallowed the entire globe.", "text_cn": "麻烦在于:传感器之间的缝隙仍会藏起无数波动——那是任何仪器都没能捕捉到的、对平均值的细微偏离。几分钟内,这些藏着的抖动便早已在一英尺开外孕育出小小的误差;再过一会儿,误差就会扩散到十英尺的尺度;错误就这样一步一步往上爬,直到把整个地球吞没。" }
+  ],
+  "words": [
+    { "word": "forecast", "ipa": "/ˈfɔːrkæst/", "pos": "n", "meaning_cn": "预报,预测", "example": "even the finest forecast turns speculative" },
+    { "word": "speculative", "ipa": "/ˈspekjələtɪv/", "pos": "adj", "meaning_cn": "推测的,臆测的", "example": "the forecast turns speculative" },
+    { "word": "deteriorate", "ipa": "/dɪˈtɪriəreɪt/", "pos": "v", "meaning_cn": "恶化,变差", "example": "it deteriorates the prediction bit by bit" },
+    { "word": "multiply", "ipa": "/ˈmʌltɪplaɪ/", "pos": "v", "meaning_cn": "倍增,繁殖", "example": "the little uncertainties multiply" },
+    { "word": "cascade", "ipa": "/kæˈskeɪd/", "pos": "v", "meaning_cn": "层层递升,倾泻", "example": "cascading upward through a ladder of motions" },
+    { "word": "turbulent", "ipa": "/ˈtɜːrbjələnt/", "pos": "adj", "meaning_cn": "湍急的,动荡的", "example": "restless, turbulent motions" },
+    { "word": "eddy", "ipa": "/ˈedi/", "pos": "n", "meaning_cn": "涡流,旋涡", "example": "the tiny eddies that spin at a street corner" },
+    { "word": "grid", "ipa": "/ɡrɪd/", "pos": "n", "meaning_cn": "网格,格网", "example": "a grid of measuring points" },
+    { "word": "sensor", "ipa": "/ˈsensər/", "pos": "n", "meaning_cn": "传感器,感应器", "example": "covered with sensors one foot apart" },
+    { "word": "humidity", "ipa": "/hjuːˈmɪdəti/", "pos": "n", "meaning_cn": "湿度", "example": "readings of temperature, pressure, and humidity" },
+    { "word": "fluctuation", "ipa": "/ˌflʌktʃuˈeɪʃən/", "pos": "n", "meaning_cn": "波动,起伏", "example": "the gaps would hide countless fluctuations" },
+    { "word": "deviation", "ipa": "/ˌdiːviˈeɪʃən/", "pos": "n", "meaning_cn": "偏差,偏离", "example": "tiny deviations from the average" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "suppose + 虚拟(could be done)+ 过去分词作定语" },
+    { "gp": "gp2", "name": "现在分词作状语(cascading upward)" },
+    { "gp": "gp3", "name": "将来完成时(will have done)" },
+    { "gp": "gp4", "name": "定语从句(fluctuations that…)" },
+    { "gp": "gp5", "name": "whether/疑问词引导的从句(tell whether/what…)" },
+    { "gp": "gp6", "name": "词汇辨析(forecast/deteriorate/humidity)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Suppose the earth ___ be covered with sensors one foot apart.\"(虚拟设想,‘能够’的过去式,填情态词)", "stem_cn": "假设地球能布满每隔一英尺的传感器。", "options": ["could", "can", "will", "shall"] },
+    { "gp": "gp1", "stem": "\"Suppose the planet could be ___ with tiny sensors.\"(被动 could be + 过去分词;cover 的过去分词)", "stem_cn": "假设这颗行星能被细小的传感器覆盖。", "options": ["covered", "covering", "cover", "to cover"] },
+    { "gp": "gp1", "stem": "\"Sensors ___ one foot apart would still miss the gaps.\"(过去分词作定语,‘被安放的’;place 的过去分词)", "stem_cn": "每隔一英尺安放的传感器仍会漏掉缝隙。", "options": ["placed", "placing", "place", "to place"] },
+    { "gp": "gp2", "stem": "\"Small errors multiply, ___ upward through the whole system.\"(现在分词作状语,主动‘层层递升’)", "stem_cn": "小误差成倍增长,层层向上贯穿整个系统。", "options": ["cascading", "cascaded", "cascade", "to cascade"] },
+    { "gp": "gp2", "stem": "\"The sensors rise in one-foot steps, ___ to the top of the sky.\"(现在分词作状语,主动‘一直延伸’)", "stem_cn": "传感器每隔一英尺升高,一直延伸到天顶。", "options": ["reaching", "reached", "reach", "to reach"] },
+    { "gp": "gp2", "stem": "\"Storms grow, ___ from tiny eddies into vast systems.\"(现在分词作状语,主动‘发展成’)", "stem_cn": "风暴不断壮大,由小小的涡流发展成庞大的天气系统。", "options": ["spreading", "spread", "spreads", "to spread"] },
+    { "gp": "gp3", "stem": "\"By 12:01, the wobbles ___ already have created small errors.\"(将来完成时:到某时刻之前‘早已…’,填该结构的第一个助动词)", "stem_cn": "到12点01分,那些扰动早已造出小误差。", "options": ["will", "would", "are", "have"] },
+    { "gp": "gp3", "stem": "\"Soon the errors will ___ multiplied to the ten-foot scale.\"(将来完成时 will ___ + 过去分词,填中间的助动词)", "stem_cn": "很快误差就会成倍扩大到十英尺尺度。", "options": ["have", "has", "had", "be"] },
+    { "gp": "gp3", "stem": "\"In an hour the mistake ___ have spread across the region.\"(将来完成时,填第一个助动词)", "stem_cn": "一小时内,这个错误就会蔓延整个地区。", "options": ["will", "would", "is", "has"] },
+    { "gp": "gp4", "stem": "\"The gaps hide fluctuations ___ no instrument can catch.\"(定语从句,指物作宾语)", "stem_cn": "那些缝隙藏着任何仪器都捕捉不到的波动。", "options": ["that", "who", "what", "whose"] },
+    { "gp": "gp4", "stem": "\"The eddies ___ spin at a street corner are very small.\"(定语从句,指物作主语)", "stem_cn": "在街角旋转的那些涡流很小。", "options": ["that", "who", "what", "whom"] },
+    { "gp": "gp4", "stem": "\"Deviations ___ the computer never sees still change the result.\"(定语从句,指物作宾语)", "stem_cn": "计算机从未察觉的偏差仍会改变结果。", "options": ["that", "who", "what", "whose"] },
+    { "gp": "gp5", "stem": "\"The computer cannot tell ___ a town will have sun or rain.\"(从句,‘是否’,填连词)", "stem_cn": "计算机无法判断一座城镇是晴还是雨。", "options": ["whether", "that", "which", "what"] },
+    { "gp": "gp5", "stem": "\"No one can predict ___ will happen a month from now.\"(从句,‘什么’作主语,填连词)", "stem_cn": "没人能预测一个月后会发生什么。", "options": ["what", "that", "whether", "how"] },
+    { "gp": "gp5", "stem": "\"Scientists study ___ small errors grow so fast.\"(从句,‘为什么’,填连词)", "stem_cn": "科学家研究小误差为何长得这么快。", "options": ["why", "that", "whether", "if"] },
+    { "gp": "gp6", "stem": "\"Based on guessing, not solid fact, a claim is ___.\"(“推测的、臆测的”用哪个词)", "stem_cn": "基于猜测而非确凿事实的。", "options": ["speculative", "certain", "proven", "exact"] },
+    { "gp": "gp6", "stem": "\"To grow worse in quality little by little is to ___.\"(“恶化、变差”用哪个词)", "stem_cn": "质量一点点变糟。", "options": ["deteriorate", "improve", "freeze", "shine"] },
+    { "gp": "gp6", "stem": "\"The amount of water vapor in the air is ___.\"(“湿度”用哪个词)", "stem_cn": "空气中水汽的多少。", "options": ["humidity", "gravity", "distance", "weight"] }
+  ],
+  "stage6": [
+    { "stem": "forecast 的意思是:", "options": ["预报,预测", "回忆", "命令", "道歉"] },
+    { "stem": "turbulent 的意思是:", "options": ["湍急的,动荡的", "平静的", "温暖的", "干燥的"] },
+    { "stem": "multiply 的意思是:", "options": ["倍增,繁殖", "减少", "停止", "隐藏"] },
+    { "stem": "eddy 的意思是:", "options": ["涡流,旋涡", "山峰", "沙漠", "桥梁"] },
+    { "stem": "deviation 的意思是:", "options": ["偏差,偏离", "中心", "总和", "平均"] },
+    { "stem": "sensor 的意思是:", "options": ["传感器,感应器", "屏幕", "电池", "开关"] }
+  ],
+  "contrast": [
+    { "us": "vapor", "uk": "vapour", "note_cn": "蒸汽/水汽;拼写差异,美语 vapor" },
+    { "us": "centimeter", "uk": "centimetre", "note_cn": "厘米;拼写差异,美语 -meter" },
+    { "us": "modeling", "uk": "modelling", "note_cn": "建模;拼写差异,美语单 l" },
+    { "us": "analyze", "uk": "analyse", "note_cn": "分析;拼写差异,美语 -yze" }
+  ],
+  "chunks": [
+    { "us": "and so on", "ipa": "/ænd soʊ ɑːn/", "example1": "The errors spread to ten feet, and so on up to the globe.", "example1_cn": "误差扩散到十英尺,如此一路直到全球。", "example2": "We need pens, paper, and so on.", "example2_cn": "我们需要笔、纸等等。" },
+    { "us": "no matter how", "ipa": "/noʊ ˈmætər haʊ/", "example1": "No matter how good the instruments are, the weather outruns them.", "example1_cn": "无论仪器多好,天气都跑在前头。", "example2": "No matter how hard he tried, he failed.", "example2_cn": "无论他多努力,还是失败了。" },
+    { "us": "a month from now", "ipa": "/ə mʌnθ frəm naʊ/", "example1": "It cannot predict the weather a month from now.", "example1_cn": "它预测不出一个月后的天气。", "example2": "I'll graduate a year from now.", "example2_cn": "我一年后毕业。" },
+    { "us": "rest on", "ipa": "/rest ɑːn/", "example1": "The models rest on a grid of points.", "example1_cn": "这些模型建立在一张点的网格上。", "example2": "The theory rests on one assumption.", "example2_cn": "这一理论基于一个假设。" }
+  ],
+  "stage7_cloze": {
+    "context": "Beyond a few days, the best forecast turns ___1___. Small errors multiply, ___2___ upward through the whole system. Suppose the earth ___3___ be covered with perfect sensors; even then no computer could predict ___4___ a town will have sun or rain.",
+    "blanks": [
+      { "blank_no": 1, "options": ["speculative", "certain", "proven", "exact"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["cascading", "cascaded", "cascade", "to cascade"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["could", "can", "will", "shall"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["whether", "that", "which", "how"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why do small errors make accurate weather prediction impossible?", "options": ["They multiply and cascade upward until they reach the size of the globe", "They freeze the computer", "They are easy to remove", "They only affect one town"] },
+    { "stem": "What would still defeat a perfect network of sensors one foot apart?", "options": ["The fluctuations hidden in the gaps between them", "A power cut", "Too much sunshine", "The size of the computer"] },
+    { "stem": "Beyond how long does the best forecast become worthless?", "options": ["Beyond about six or seven days", "Beyond one hour", "Beyond one year", "It never does"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"假设地球能布满每隔一英尺的传感器\"(suppose + 被动虚拟):", "options": ["Suppose the earth could be covered with sensors one foot apart.", "Suppose the earth could covered with sensors one foot apart.", "Suppose the earth could be covering with sensors one foot apart.", "Suppose the earth could be cover with sensors one foot apart."] },
+    { "stem": "你想说\"到12点01分,那些扰动早已造出小误差\"(将来完成时):", "options": ["By 12:01, those wobbles will already have created small errors.", "By 12:01, those wobbles will already created small errors.", "By 12:01, those wobbles already have created small errors.", "By 12:01, those wobbles will already have create small errors."] },
+    { "stem": "你想说\"计算机无法判断一座城镇是晴还是雨\"(whether‘是否’引导的从句):", "options": ["The computer cannot tell whether a town will have sun or rain.", "The computer cannot tell that a town will have sun or rain.", "The computer cannot tell whether will a town have sun or rain.", "The computer cannot tell whether a town will has sun or rain."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "forecast 的意思是:", "options": ["预报,预测", "回忆", "命令", "道歉"] },
+    { "kind": "vocab", "stem": "deviation 的意思是:", "options": ["偏差,偏离", "中心", "总和", "平均"] },
+    { "kind": "grammar", "stem": "\"Suppose the earth ___ be covered with sensors.\"(虚拟设想,‘能够’的过去式)", "stem_cn": "假设地球能被传感器覆盖。", "options": ["could", "can", "will", "shall"] },
+    { "kind": "grammar", "stem": "\"Small errors multiply, ___ upward through the system.\"(现在分词作状语)", "stem_cn": "小误差成倍增长,层层向上贯穿系统。", "options": ["cascading", "cascaded", "cascade", "to cascade"] },
+    { "kind": "scenario", "stem": "\"and so on\" 的意思是:", "options": ["等等、诸如此类", "从此以后", "立刻", "完全地"] },
+    { "kind": "scenario", "stem": "\"no matter how\" 的意思是:", "options": ["无论多么…", "因为", "除非", "只要"] },
+    { "kind": "reading", "stem": "According to the passage, what happens to a tiny error in the numbers?", "options": ["It multiplies and climbs step by step up to the size of the globe", "It disappears within minutes", "It stays exactly the same size", "It only cools the air"], "passage": true },
+    { "kind": "reading", "stem": "Why can't even perfect sensors one foot apart give a sure month-ahead forecast?", "options": ["The gaps between them still hide countless fluctuations", "The sensors are too expensive", "The computer is too slow", "The air is too still"], "passage": true },
+    { "kind": "listening", "stem": "What is the famous name for the reason small errors ruin forecasts?", "options": ["The butterfly effect", "The domino rule", "The snowball law", "The ripple test"], "audio": true },
+    { "kind": "listening", "stem": "Beyond how many days does the best forecast become little better than a guess?", "options": ["Beyond about a week", "Beyond a month", "Beyond an hour", "Beyond a year"], "audio": true }
+  ]
+}

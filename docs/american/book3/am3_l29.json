@@ -1,0 +1,133 @@
+{
+  "id": "am3_l29",
+  "unit_no": 6,
+  "lesson_no": 29,
+  "title_en": "Funny or Not?",
+  "title_cn": "是否可笑?",
+  "grammar_focus": "动词固定介词搭配(depend on / suffer from / base on)、find·think·consider + it + 形容词 + to do(先行的 it)、laugh 与 laugh at 的区别、keep on / keep off / keep up with / keep out、could(泛指能力)与 was able to(某一次终于做到)的区别(原创承载 NCE3 L29 考点·轻净化:把'sick humor'改述为'拿倒霉、疼痛的糗事开玩笑',保留摔断腿的经典反讽·无血腥)",
+  "scene": "我们觉得一个笑话好不好笑,很大程度上取决于我们在哪里长大。幽默感神秘地和当地人的性格绑在一起。比方说,一个纽约人可能很难对一个让满屋子得克萨斯人哄堂大笑的笑话发笑,反过来也一样。不过,大多数好笑的故事都建立在滑稽的情景之上,其中有些还具有普遍的吸引力。无论你住在哪里,都很难不被卓别林的早期电影逗笑。可是近来,一种主要来自美国的新式幽默流行起来,人们管它叫“黑色幽默”。喜剧演员把笑话建立在倒霉、疼痛的糗事之上,很多人觉得这种笑话让人反感。下面这个例子留给你自己去评判。一个摔断了右腿的人在圣诞节前几周被送进了医院。从他到那儿的第一刻起,他就不停地缠着医生,要医生告诉他什么时候能回家,因为他害怕在病床上过节。他恢复得很慢,圣诞节那天,他的腿还打着石膏。他难受地躺了一整天,想着自己错过的种种乐子。可第二天早上,医生带来好消息安慰他:他很可能赶得上过新年出院。这人重新振作起来,果不其然,除夕那晚他终于能一瘸一拐地去参加聚会。为了弥补住院的糟糕经历,他喝得比该喝的稍微多了点,尽情地乐了一场,还不停地跟每个人讲他有多讨厌医院。聚会快结束时,他嘴里还在含糊地念叨着医院,一脚踩在一块冰上滑倒,摔断了左腿。",
+  "grammar_card": {
+    "title": "depend on / find it + adj + to do / laugh vs laugh at / keep on / could vs was able to",
+    "intro": "①许多动词有固定介词:depend on(取决于)、suffer from(受…之苦)、base sth on sth(把…建立在…上)。②find / think / consider + it + 形容词 + to do:先说一个 it,真正的内容是后面的 to do,如 find it hard to laugh。③laugh 是(开心地)笑,laugh at 是嘲笑、取笑某人。④keep on doing 继续做;keep off 远离;keep up with 跟上;keep out 不许入内。⑤could 表泛指的、一贯的能力;某一次“终于设法做到了”要用 was/were able to。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["depend on / suffer from", "取决于 / 受…之苦", "It depends on where you grew up."],
+        ["find it + 形容词 + to do", "觉得(做某事)…", "find it hard to laugh"],
+        ["laugh / laugh at", "笑 / 嘲笑", "Don't laugh at him."],
+        ["could / was able to", "有能力 / 某次终于做到", "he was able to hobble along"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "肯定句里表示“某一次终于做成了某事”,用 was/were able to,不用 could;could 更多表示“一贯有能力”。", "mark": "was able to ≠ could" },
+      { "rule": "find / think / consider 后先放一个先行的 it,把真正的内容(to do)放到句尾:find it hard to laugh。", "mark": "find it + adj + to do" },
+      { "rule": "美式:in the hospital(英式 in hospital 不加冠词)、movie(英式 film)、sick(英式 ill)。本课已按美语写。", "mark": "in the hospital / movie / sick" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is 'sick humor' based on?",
+    "options": ["Jokes about unlucky or painful situations", "Jokes about food", "Jokes about the weather", "Jokes only children tell"],
+    "answer_index": 0
+  },
+  "passage": "Whether we find a joke funny or not depends a great deal on where we grew up. A sense of humor is mysteriously tied to local character. A New Yorker, for instance, might find it hard to laugh at a joke that has a room full of Texans roaring, and the reverse is just as true. Still, most funny stories rely on comic situations, and some of these have a universal appeal. No matter where you live, it is difficult not to laugh at Charlie Chaplin's early movies. Lately, though, a new kind of humor that comes largely from the U.S. has come into fashion. People call it 'sick humor.' Comedians build their jokes around unlucky mishaps and painful moments, and many folks find this sort of joke distasteful. The following example will let you judge for yourself. A man who had broken his right leg was taken to the hospital a few weeks before Christmas. From the moment he arrived, he kept on pestering his doctor to tell him when he could go home, for he dreaded spending the holiday in a hospital bed. His recovery was slow, and on Christmas Day his leg was still in plaster. He spent a miserable day thinking of all the fun he was missing. The next morning, however, the doctor consoled him with good news: he would probably be out in time for the New Year. The man took heart, and sure enough, on New Year's Eve he was able to hobble along to a party. To make up for his unpleasant stay, he drank a little more than was good for him, enjoyed himself thoroughly, and kept telling everybody how much he hated hospitals. He was still mumbling about them at the end of the night when he slipped on a patch of ice and broke his left leg.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Whether we find a joke funny or not depends a great deal on where we grew up. A sense of humor is mysteriously tied to local character. A New Yorker, for instance, might find it hard to laugh at a joke that has a room full of Texans roaring, and the reverse is just as true.", "text_cn": "我们觉得一个笑话好不好笑,很大程度上取决于我们在哪里长大。幽默感神秘地和当地人的性格绑在一起。比方说,一个纽约人可能很难对一个让满屋子得克萨斯人哄堂大笑的笑话发笑,反过来也一样。" },
+    { "seq": 2, "speaker": null, "text_en": "Still, most funny stories rely on comic situations, and some of these have a universal appeal. No matter where you live, it is difficult not to laugh at Charlie Chaplin's early movies. Lately, though, a new kind of humor that comes largely from the U.S. has come into fashion. People call it 'sick humor.'", "text_cn": "不过,大多数好笑的故事都建立在滑稽的情景之上,其中有些还具有普遍的吸引力。无论你住在哪里,都很难不被卓别林的早期电影逗笑。可是近来,一种主要来自美国的新式幽默流行起来,人们管它叫“黑色幽默”。" },
+    { "seq": 3, "speaker": null, "text_en": "Comedians build their jokes around unlucky mishaps and painful moments, and many folks find this sort of joke distasteful. A man who had broken his right leg was taken to the hospital a few weeks before Christmas. From the moment he arrived, he kept on pestering his doctor to tell him when he could go home, for he dreaded spending the holiday in a hospital bed.", "text_cn": "喜剧演员把笑话建立在倒霉、疼痛的糗事之上,很多人觉得这种笑话让人反感。一个摔断了右腿的人在圣诞节前几周被送进了医院。从他到那儿的第一刻起,他就不停地缠着医生,要医生告诉他什么时候能回家,因为他害怕在病床上过节。" },
+    { "seq": 4, "speaker": null, "text_en": "His recovery was slow, and on Christmas Day his leg was still in plaster. He spent a miserable day thinking of all the fun he was missing. The next morning, however, the doctor consoled him with good news: he would probably be out in time for the New Year. The man took heart, and sure enough, on New Year's Eve he was able to hobble along to a party.", "text_cn": "他恢复得很慢,圣诞节那天,他的腿还打着石膏。他难受地躺了一整天,想着自己错过的种种乐子。可第二天早上,医生带来好消息安慰他:他很可能赶得上过新年出院。这人重新振作起来,果不其然,除夕那晚他终于能一瘸一拐地去参加聚会。" },
+    { "seq": 5, "speaker": null, "text_en": "To make up for his unpleasant stay, he drank a little more than was good for him, enjoyed himself thoroughly, and kept telling everybody how much he hated hospitals. He was still mumbling about them at the end of the night when he slipped on a patch of ice and broke his left leg.", "text_cn": "为了弥补住院的糟糕经历,他喝得比该喝的稍微多了点,尽情地乐了一场,还不停地跟每个人讲他有多讨厌医院。聚会快结束时,他嘴里还在含糊地念叨着医院,一脚踩在一块冰上滑倒,摔断了左腿。" }
+  ],
+  "words": [
+    { "word": "largely", "ipa": "/ˈlɑːrdʒli/", "pos": "adv", "meaning_cn": "在很大程度上", "example": "humor that comes largely from the U.S." },
+    { "word": "comic", "ipa": "/ˈkɑːmɪk/", "pos": "adj", "meaning_cn": "喜剧的,可笑的", "example": "based on comic situations" },
+    { "word": "universal", "ipa": "/ˌjuːnɪˈvɜːrsəl/", "pos": "adj", "meaning_cn": "普遍的", "example": "a universal appeal" },
+    { "word": "comedian", "ipa": "/kəˈmiːdiən/", "pos": "n", "meaning_cn": "喜剧演员", "example": "comedians build their jokes" },
+    { "word": "distasteful", "ipa": "/dɪsˈteɪstfəl/", "pos": "adj", "meaning_cn": "令人反感的", "example": "find this joke distasteful" },
+    { "word": "pester", "ipa": "/ˈpestər/", "pos": "v", "meaning_cn": "一再要求,纠缠", "example": "kept on pestering his doctor" },
+    { "word": "dread", "ipa": "/dred/", "pos": "v", "meaning_cn": "惧怕", "example": "he dreaded spending the holiday there" },
+    { "word": "recovery", "ipa": "/rɪˈkʌvəri/", "pos": "n", "meaning_cn": "康复,恢复", "example": "his recovery was slow" },
+    { "word": "plaster", "ipa": "/ˈplæstər/", "pos": "n", "meaning_cn": "石膏", "example": "his leg was still in plaster" },
+    { "word": "console", "ipa": "/kənˈsoʊl/", "pos": "v", "meaning_cn": "安慰,慰问", "example": "the doctor consoled him" },
+    { "word": "hobble", "ipa": "/ˈhɑːbəl/", "pos": "v", "meaning_cn": "一瘸一拐地走", "example": "able to hobble along to a party" },
+    { "word": "mumble", "ipa": "/ˈmʌmbəl/", "pos": "v", "meaning_cn": "咕哝,含糊地说", "example": "still mumbling about hospitals" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "动词固定介词搭配(depend on / suffer from)" },
+    { "gp": "gp2", "name": "find·think·consider + it + 形容词 + to do" },
+    { "gp": "gp3", "name": "laugh 与 laugh at 的区别" },
+    { "gp": "gp4", "name": "keep on / keep off / keep up with / keep out" },
+    { "gp": "gp5", "name": "could 与 was able to 的区别" },
+    { "gp": "gp6", "name": "词汇辨析(distasteful/console/hobble)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Whether a joke is funny depends ___ where you grew up.\"(depend ___ 搭配哪个介词)", "stem_cn": "笑话好不好笑取决于你在哪里长大。", "options": ["on", "of", "at", "to"] },
+    { "gp": "gp1", "stem": "\"Comedians base their jokes ___ painful moments.\"(base sth ___ sth,搭配哪个介词)", "stem_cn": "喜剧演员把笑话建立在疼痛的糗事上。", "options": ["on", "of", "in", "to"] },
+    { "gp": "gp1", "stem": "\"Many people ___ a poor sense of humor.\"(suffer ___,表\"受…之苦\")", "stem_cn": "很多人苦于缺乏幽默感。", "options": ["suffer from", "suffer of", "suffer at", "suffer to"] },
+    { "gp": "gp2", "stem": "\"A New Yorker might find ___ hard to laugh at the joke.\"(find + 先行词 + 形容词 + to do)", "stem_cn": "纽约人可能觉得很难对这个笑话发笑。", "options": ["it", "that", "this", "one"] },
+    { "gp": "gp2", "stem": "\"He thought it ___ to spend Christmas in bed.\"(think it + ___ + to do,该填哪类词)", "stem_cn": "他觉得在床上过圣诞很难受。", "options": ["miserable", "misery", "miserably", "miserableness"] },
+    { "gp": "gp2", "stem": "\"We consider ___ important to laugh every day.\"(consider + 先行词 + 形容词 + to do)", "stem_cn": "我们认为每天笑一笑很重要。", "options": ["it", "that", "this", "so"] },
+    { "gp": "gp3", "stem": "\"It's rude to ___ someone's accent.\"(\"嘲笑\"某人,动词后要加介词)", "stem_cn": "嘲笑别人的口音是不礼貌的。", "options": ["laugh at", "laugh", "laugh to", "laugh of"] },
+    { "gp": "gp3", "stem": "\"The whole room began to ___ when he told the joke.\"(\"(开心地)笑\"不加介词)", "stem_cn": "他讲笑话时全场都笑了起来。", "options": ["laugh", "laugh at", "laugh on", "laugh of"] },
+    { "gp": "gp3", "stem": "\"Don't ___ me; I'm serious.\"(\"取笑、嘲笑\"我)", "stem_cn": "别取笑我,我是认真的。", "options": ["laugh at", "laugh", "laugh with joy", "laugh to"] },
+    { "gp": "gp4", "stem": "\"He kept ___ pestering the doctor with questions.\"(\"继续、不停地做\"用 keep ___ doing)", "stem_cn": "他不停地追问医生。", "options": ["on", "off", "up", "out"] },
+    { "gp": "gp4", "stem": "\"Please keep ___ the grass.\"(\"别踏上、远离\"用 keep ___)", "stem_cn": "请勿践踏草坪。", "options": ["off", "on", "up", "in"] },
+    { "gp": "gp4", "stem": "\"It's hard to keep ___ with the latest jokes.\"(\"跟上…的步伐\"用 keep ___ with)", "stem_cn": "很难跟上最新的段子。", "options": ["up", "on", "off", "out"] },
+    { "gp": "gp5", "stem": "\"On New Year's Eve he ___ to hobble to a party.\"(某一次\"终于做到了\"用 was ___ to)", "stem_cn": "除夕那晚他终于一瘸一拐地去了派对。", "options": ["able", "could", "can", "ability"] },
+    { "gp": "gp5", "stem": "\"When he was young, he ___ tell jokes for hours.\"(泛指过去\"一贯有能力\"用哪个)", "stem_cn": "他年轻时能一连讲好几小时的笑话。", "options": ["could", "was able", "did able", "can"] },
+    { "gp": "gp5", "stem": "\"After weeks in plaster, he finally ___ to walk again.\"(某一次终于\"做到某事\",用 be able to 的过去式)", "stem_cn": "打了几周石膏,他终于又能走路了。", "options": ["was able", "could", "could to", "can able"] },
+    { "gp": "gp6", "stem": "\"A joke people find unpleasant and offensive is ___.\"(\"令人反感的\"用哪个词)", "stem_cn": "让人反感的笑话。", "options": ["distasteful", "delightful", "ordinary", "gentle"] },
+    { "gp": "gp6", "stem": "\"To comfort someone who is sad is to ___ them.\"(\"安慰\"用哪个词)", "stem_cn": "安慰伤心的人。", "options": ["console", "annoy", "ignore", "blame"] },
+    { "gp": "gp6", "stem": "\"To walk awkwardly because of a hurt leg is to ___.\"(\"一瘸一拐地走\"用哪个词)", "stem_cn": "因腿伤而蹒跚地走。", "options": ["hobble", "sprint", "march", "glide"] }
+  ],
+  "stage6": [
+    { "stem": "comic 的意思是:", "options": ["喜剧的,可笑的", "悲伤的", "严肃的", "真实的"] },
+    { "stem": "universal 的意思是:", "options": ["普遍的", "稀少的", "私人的", "临时的"] },
+    { "stem": "comedian 的意思是:", "options": ["喜剧演员", "医生", "司机", "农民"] },
+    { "stem": "dread 的意思是:", "options": ["惧怕", "期待", "忘记", "喜爱"] },
+    { "stem": "recovery 的意思是:", "options": ["康复,恢复", "出发", "失败", "离开"] },
+    { "stem": "mumble 的意思是:", "options": ["咕哝,含糊地说", "大喊", "歌唱", "沉默"] }
+  ],
+  "contrast": [
+    { "us": "in the hospital", "uk": "in hospital", "note_cn": "住院;美语加冠词 the,英式不加" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" },
+    { "us": "sick", "uk": "ill", "note_cn": "生病的;美语常用 sick,英式常用 ill" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" }
+  ],
+  "chunks": [
+    { "us": "keep on doing", "ipa": "/kiːp ɑːn/", "example1": "He kept on pestering the doctor.", "example1_cn": "他不停地缠着医生。", "example2": "She kept on laughing.", "example2_cn": "她笑个不停。" },
+    { "us": "depend on", "ipa": "/dɪˈpend ɑːn/", "example1": "Whether it's funny depends on where you grew up.", "example1_cn": "好不好笑取决于你在哪里长大。", "example2": "Everything depends on the weather.", "example2_cn": "一切都取决于天气。" },
+    { "us": "take heart", "ipa": "/teɪk hɑːrt/", "example1": "The man took heart at the good news.", "example1_cn": "听到好消息,那人振作了起来。", "example2": "Take heart — things will get better.", "example2_cn": "振作点,情况会好起来的。" },
+    { "us": "laugh at", "ipa": "/læf æt/", "example1": "Don't laugh at other people.", "example1_cn": "别嘲笑别人。", "example2": "They laughed at his silly hat.", "example2_cn": "他们取笑他那顶滑稽的帽子。" }
+  ],
+  "stage7_cloze": {
+    "context": "Whether a joke is funny depends ___1___ where you grew up. Even so, some comic situations have a ___2___ appeal. A new kind of humor from the U.S. is called 'sick humor,' and many people find it ___3___. In one story, a man kept ___4___ pestering his doctor because he dreaded spending Christmas in the hospital.",
+    "blanks": [
+      { "blank_no": 1, "options": ["on", "of", "at", "in"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["universal", "useless", "private", "silent"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["distasteful", "delightful", "ordinary", "cheap"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["on", "off", "up", "out"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What does whether we find a joke funny mainly depend on?", "options": ["Where we were brought up", "How old we are", "How rich we are", "What time it is"] },
+    { "stem": "Why did the man keep pestering his doctor?", "options": ["He dreaded spending Christmas in the hospital", "He wanted more medicine", "He disliked the food", "He had lost his phone"] },
+    { "stem": "What happened at the end of the party?", "options": ["He slipped on ice and broke his other leg", "He went home happy", "He fell asleep", "He won a prize"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"这取决于你在哪里长大\"(depend on):", "options": ["It depends on where you grew up.", "It depends of where you grew up.", "It depends to where you grew up.", "It depends at where you grew up."] },
+    { "stem": "你想说\"别嘲笑他\"(laugh at):", "options": ["Don't laugh at him.", "Don't laugh him.", "Don't laugh on him.", "Don't laugh to him."] },
+    { "stem": "你想说\"除夕那晚他终于一瘸一拐地去了派对\"(was able to):", "options": ["On New Year's Eve he was able to hobble to a party.", "On New Year's Eve he could hobble to a party.", "On New Year's Eve he was able hobble to a party.", "On New Year's Eve he was can to hobble to a party."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "comic 的意思是:", "options": ["喜剧的,可笑的", "悲伤的", "严肃的", "真实的"] },
+    { "kind": "vocab", "stem": "console 的意思是:", "options": ["安慰", "激怒", "忽视", "责备"] },
+    { "kind": "grammar", "stem": "\"Whether a joke is funny depends ___ where you grew up.\"(depend ___ 搭配哪个介词)", "stem_cn": "笑话好不好笑取决于你在哪里长大。", "options": ["on", "of", "at", "to"] },
+    { "kind": "grammar", "stem": "\"He kept ___ pestering the doctor.\"(\"不停地做\"用 keep ___ doing)", "stem_cn": "他不停地追问医生。", "options": ["on", "off", "up", "out"] },
+    { "kind": "scenario", "stem": "\"laugh at\" 的意思是:", "options": ["嘲笑,取笑", "开心大笑", "微笑", "大哭"] },
+    { "kind": "scenario", "stem": "\"take heart\" 的意思是:", "options": ["振作起来,鼓起勇气", "心跳加速", "拿走某物", "感到害怕"] },
+    { "kind": "reading", "stem": "According to the passage, why do national differences matter for humor?", "options": ["A joke funny in one place may not be funny in another", "Everyone finds the same jokes funny", "Humor never changes anywhere", "Only Americans have a sense of humor"], "passage": true },
+    { "kind": "reading", "stem": "How did the story end?", "options": ["He broke his other leg on a patch of ice", "He recovered fully and went home", "He stayed in the hospital for months", "He never made it to the party"], "passage": true },
+    { "kind": "listening", "stem": "When was the man taken to the hospital?", "options": ["A few weeks before Christmas", "On New Year's Day", "In the middle of summer", "Right after the party"], "audio": true },
+    { "kind": "listening", "stem": "How did the man feel on Christmas Day?", "options": ["Miserable, thinking of the fun he was missing", "Cheerful and excited", "Sleepy and calm", "Angry at his friends"], "audio": true }
+  ]
+}

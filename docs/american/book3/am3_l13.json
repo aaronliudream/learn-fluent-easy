@@ -1,0 +1,133 @@
+{
+  "id": "am3_l13",
+  "unit_no": 3,
+  "lesson_no": 13,
+  "title_en": "It's Only Me",
+  "title_cn": "是我,别害怕",
+  "grammar_focus": "must 的用法(表推测'一定是':It must be the baker;表义务'必须':you must go;以及 mustn't 表禁止 vs needn't 表'不必'),外加'形容词 + 动词不定式'结构(glad to hear / eager to try / comfortable to wear / anxious to leave)(原创承载 NCE3 L13 考点·女主人穿鬼装吓跑了抄电表的人)",
+  "scene": "丈夫上班走后,Porter 太太把孩子们送去学校,匆匆上了楼。那天上午她兴奋得根本干不下家务,因为当晚她要和丈夫去参加化装舞会。她打算扮成幽灵,由于头天晚上就把行头做好了,这会儿急着想试穿。那套“戏服”不过是一条旧白床单,却出奇地有效果。穿好后,她下楼想看看穿着舒不舒服。刚走到餐厅,前门就传来敲门声。“一定是面包师,”她想。她早告诉过他:只要她没去开门,就直接进来,把面包放厨房桌上。她不想吓着这可怜人,便赶紧躲进楼梯下那间小储藏室。她听见前门打开、走廊里响起沉重的脚步。忽然储藏室的门被推开,一个人走了进来。“一定是电力公司来抄电表的,”她意识到。“是我,别害怕,”她轻声想解释——可已经晚了。那人大叫一声,往后蹦了好几步;她一朝他走去,他撒腿就逃,砰地把门带上。",
+  "grammar_card": {
+    "title": "must 的用法 + 形容词 + 动词不定式",
+    "intro": "①must 表“一定是、想必”的推测,对现在很有把握的判断:There's a knock — it must be the baker(一定是面包师)。②must 表“必须、一定要”的义务:You must finish it first。③注意 mustn't 是“千万不要、禁止”,needn't 是“不必、无需”,两者意思不同:You mustn't open it(不许开)/ You needn't bring food(不必带)。④“形容词 + 动词不定式”:很多表示情绪、态度的形容词后面直接跟 to + 动词——glad to hear(高兴听到)、eager to try(急着试)、pleased to see(乐见)、anxious to leave(急着走)、comfortable to wear(穿着舒服)。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["must + 动词原形(推测)", "一定是、想必", "It must be the baker."],
+        ["must + 动词原形(义务)", "必须、一定要", "You must finish the costume."],
+        ["mustn't / needn't", "禁止 / 不必", "You mustn't open it. / You needn't come."],
+        ["形容词 + to + 动词", "对某事的情绪/态度", "glad to hear / eager to try / comfortable to wear"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "must 表推测时后面接动词原形,对现在有把握:it must be…;否定推测'不可能是'用 can't be,不用 mustn't be。", "mark": "must be / can't be" },
+      { "rule": "mustn't ≠ needn't:mustn't 是'绝不许',needn't 是'用不着';回答 'Must I…?' 若否定,常说 'No, you needn't.'", "mark": "mustn't / needn't" },
+      { "rule": "美语里“化装舞会”说 costume party(英式 fancy-dress party);“电表”说 (electricity) meter。本课已按美语写。", "mark": "costume party / meter" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What did the man expect to find under the stairs?",
+    "options": ["Just a storeroom, not a ghost", "A treasure chest", "Another door", "A sleeping dog"],
+    "answer_index": 0
+  },
+  "passage": "After her husband had left for work, Mrs. Porter sent the kids off to school and hurried upstairs. She was far too excited to do any housework that morning, because that evening she and her husband would be going to a costume party. She had decided to dress up as a ghost, and since she had made her costume the night before, she was eager to try it on. The costume consisted of nothing but an old white sheet, yet it was surprisingly effective. Once she had it on, Mrs. Porter went downstairs to see whether it would be comfortable to wear. Just as she reached the dining room, there was a knock at the front door. 'It must be the baker,' she thought. She had told him to come right in whenever she failed to answer, and to leave the bread on the kitchen table. Not wanting to frighten the poor man, she quickly slipped into the little storeroom under the stairs. She heard the door open and heavy footsteps in the hall. Suddenly the storeroom door swung open and a man stepped in. 'He must be the meter reader from the electricity company,' she realized. 'It's only me,' she said gently, trying to explain, but it was too late. The man let out a cry, jumped back several paces, and when she moved toward him, he fled, slamming the door behind him.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "After her husband had left for work, Mrs. Porter sent the kids off to school and hurried upstairs. She was far too excited to do any housework that morning, because that evening she and her husband would be going to a costume party.", "text_cn": "丈夫上班走后,Porter 太太把孩子们送去学校,匆匆上了楼。那天上午她兴奋得根本干不下家务,因为当晚她要和丈夫去参加化装舞会。" },
+    { "seq": 2, "speaker": null, "text_en": "She had decided to dress up as a ghost, and since she had made her costume the night before, she was eager to try it on. The costume consisted of nothing but an old white sheet, yet it was surprisingly effective. Once she had it on, Mrs. Porter went downstairs to see whether it would be comfortable to wear.", "text_cn": "她打算扮成幽灵,由于头天晚上就把行头做好了,这会儿急着想试穿。那套戏服不过是一条旧白床单,却出奇地有效果。穿好后,她下楼想看看穿着舒不舒服。" },
+    { "seq": 3, "speaker": null, "text_en": "Just as she reached the dining room, there was a knock at the front door. 'It must be the baker,' she thought. She had told him to come right in whenever she failed to answer, and to leave the bread on the kitchen table.", "text_cn": "刚走到餐厅,前门就传来敲门声。“一定是面包师,”她想。她早告诉过他:只要她没去开门,就直接进来,把面包放厨房桌上。" },
+    { "seq": 4, "speaker": null, "text_en": "Not wanting to frighten the poor man, she quickly slipped into the little storeroom under the stairs. She heard the door open and heavy footsteps in the hall. Suddenly the storeroom door swung open and a man stepped in. 'He must be the meter reader from the electricity company,' she realized.", "text_cn": "她不想吓着这可怜人,便赶紧躲进楼梯下那间小储藏室。她听见前门打开、走廊里响起沉重的脚步。忽然储藏室的门被推开,一个人走了进来。“一定是电力公司来抄电表的,”她意识到。" },
+    { "seq": 5, "speaker": null, "text_en": "'It's only me,' she said gently, trying to explain, but it was too late. The man let out a cry, jumped back several paces, and when she moved toward him, he fled, slamming the door behind him.", "text_cn": "“是我,别害怕,”她轻声想解释——可已经晚了。那人大叫一声,往后蹦了好几步;她一朝他走去,他撒腿就逃,砰地把门带上。" }
+  ],
+  "words": [
+    { "word": "costume", "ipa": "/ˈkɑːstuːm/", "pos": "n", "meaning_cn": "化装服,戏服", "example": "dress up as a ghost / her costume" },
+    { "word": "consist", "ipa": "/kənˈsɪst/", "pos": "v", "meaning_cn": "由……组成(consist of)", "example": "consisted of nothing but a sheet" },
+    { "word": "sheet", "ipa": "/ʃiːt/", "pos": "n", "meaning_cn": "被单,床单", "example": "an old white sheet" },
+    { "word": "effective", "ipa": "/ɪˈfektɪv/", "pos": "adj", "meaning_cn": "有明显效果的,有作用的", "example": "surprisingly effective" },
+    { "word": "comfortable", "ipa": "/ˈkʌmftəbl/", "pos": "adj", "meaning_cn": "舒适的", "example": "comfortable to wear" },
+    { "word": "storeroom", "ipa": "/ˈstɔːrruːm/", "pos": "n", "meaning_cn": "储藏室", "example": "the storeroom under the stairs" },
+    { "word": "electricity", "ipa": "/ɪˌlekˈtrɪsəti/", "pos": "n", "meaning_cn": "电", "example": "the electricity company" },
+    { "word": "meter", "ipa": "/ˈmiːtər/", "pos": "n", "meaning_cn": "电表,计量表(美语拼 meter)", "example": "the meter reader" },
+    { "word": "pace", "ipa": "/peɪs/", "pos": "n", "meaning_cn": "一步", "example": "jumped back several paces" },
+    { "word": "flee", "ipa": "/fliː/", "pos": "v", "meaning_cn": "逃走(fled/fled)", "example": "he fled" },
+    { "word": "slam", "ipa": "/slæm/", "pos": "v", "meaning_cn": "砰地关上", "example": "slamming the door" },
+    { "word": "eager", "ipa": "/ˈiːɡər/", "pos": "adj", "meaning_cn": "渴望的,急切的", "example": "eager to try it on" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "must 表推测(一定是)" },
+    { "gp": "gp2", "name": "must 表义务(必须)" },
+    { "gp": "gp3", "name": "mustn't(禁止) vs needn't(不必)" },
+    { "gp": "gp4", "name": "形容词 + 动词不定式(glad to hear)" },
+    { "gp": "gp5", "name": "形容词 + 动词不定式(too...to / comfortable to)" },
+    { "gp": "gp6", "name": "词汇辨析(storeroom/flee/slam)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"There's a knock at the door — it ___ be the baker.\"(表推测“一定是”,用哪个词)", "stem_cn": "有人敲门——一定是面包师。", "options": ["must", "can", "may not", "needn't"] },
+    { "gp": "gp1", "stem": "\"Those are heavy footsteps — that ___ be a big man.\"(表推测“一定是”,用哪个词)", "stem_cn": "那脚步这么重——一定是个大块头。", "options": ["must", "can't", "needn't", "may not"] },
+    { "gp": "gp1", "stem": "\"She's wearing a white sheet, so she ___ be dressed as a ghost.\"(表推测“一定是”,用哪个词)", "stem_cn": "她披着白床单,一定是扮成了幽灵。", "options": ["must", "mustn't", "needn't", "can"] },
+    { "gp": "gp2", "stem": "\"If you want to go to the party, you ___ finish the costume first.\"(表示“必须”,用哪个词)", "stem_cn": "想去舞会,你就得先把戏服做好。", "options": ["must", "needn't", "mustn't", "could"] },
+    { "gp": "gp2", "stem": "\"Guests ___ arrive before eight, or the doors will be locked.\"(表示“必须”,用哪个词)", "stem_cn": "客人必须八点前到,否则门就锁了。", "options": ["must", "needn't", "may not", "could"] },
+    { "gp": "gp3", "stem": "\"You ___ open that door — there's a surprise behind it!\"(表示“禁止、不许”,用哪个词)", "stem_cn": "你不许打开那扇门——后面有惊喜!", "options": ["mustn't", "needn't", "must", "may"] },
+    { "gp": "gp3", "stem": "\"You ___ bring any food; everything is already prepared.\"(表示“不必、无需”,用哪个词)", "stem_cn": "你不用带吃的,一切都备好了。", "options": ["needn't", "mustn't", "must", "should"] },
+    { "gp": "gp3", "stem": "\"We ___ make noise here; the baby is sleeping.\"(表示“禁止、不许”,用哪个词)", "stem_cn": "这里不许吵,宝宝在睡觉。", "options": ["mustn't", "needn't", "may", "can"] },
+    { "gp": "gp4", "stem": "\"I was glad ___ that you feel better now.\"(形容词后接动词不定式)", "stem_cn": "听到你现在好些了,我很高兴。", "options": ["to hear", "hearing", "hear", "heard"] },
+    { "gp": "gp4", "stem": "\"The children were delighted ___ the funny costume.\"(形容词后接动词不定式)", "stem_cn": "孩子们见到那滑稽的戏服都乐坏了。", "options": ["to see", "seeing", "see", "saw"] },
+    { "gp": "gp4", "stem": "\"He was anxious ___ the party early because of the storm.\"(形容词后接动词不定式)", "stem_cn": "因为暴风雨,他急着早点离开舞会。", "options": ["to leave", "leaving", "leave", "left"] },
+    { "gp": "gp5", "stem": "\"Mrs. Porter was too excited ___ any housework that morning.\"(“太……以致不能……”后接不定式)", "stem_cn": "那天上午 Porter 太太兴奋得干不下家务。", "options": ["to do", "doing", "do", "did"] },
+    { "gp": "gp5", "stem": "\"The ghost costume was not very comfortable ___.\"(形容词 comfortable 后接动词不定式)", "stem_cn": "那套幽灵戏服穿着不太舒服。", "options": ["to wear", "wearing", "wear", "worn"] },
+    { "gp": "gp5", "stem": "\"She was proud ___ the whole costume by herself.\"(形容词 proud 后接动词不定式)", "stem_cn": "她为自己独力做出整套戏服而自豪。", "options": ["to make", "making", "make", "made"] },
+    { "gp": "gp6", "stem": "\"A small room used for storing things is a ___.\"(“储藏室”用哪个词)", "stem_cn": "用来放东西的小房间是储藏室。", "options": ["storeroom", "bathroom", "classroom", "bedroom"] },
+    { "gp": "gp6", "stem": "\"To run away in fear is to ___.\"(“逃走”用哪个词)", "stem_cn": "因害怕而跑开就是逃走。", "options": ["flee", "dance", "cook", "sing"] },
+    { "gp": "gp6", "stem": "\"To shut a door hard and loudly is to ___ it.\"(“砰地关上”用哪个词)", "stem_cn": "使劲砰地关门就是 slam。", "options": ["slam", "paint", "lock", "wash"] },
+    { "gp": "gp6", "stem": "\"The clothes you wear to look like someone else at a party is a ___.\"(“化装服”用哪个词)", "stem_cn": "舞会上为扮成别人而穿的衣服是化装服。", "options": ["costume", "ticket", "mirror", "basket"] }
+  ],
+  "stage6": [
+    { "stem": "costume 的意思是:", "options": ["化装服,戏服", "制服", "睡衣", "泳衣"] },
+    { "stem": "effective 的意思是:", "options": ["有明显效果的,有作用的", "无用的", "昂贵的", "破旧的"] },
+    { "stem": "flee 的意思是:", "options": ["逃走", "大笑", "睡觉", "唱歌"] },
+    { "stem": "comfortable 的意思是:", "options": ["舒适的", "危险的", "吵闹的", "昂贵的"] },
+    { "stem": "\"storeroom\" 的意思是:", "options": ["储藏室", "卧室", "厨房", "阳台"] },
+    { "stem": "consist 的意思是:", "options": ["由……组成", "拒绝", "隐藏", "打碎"] }
+  ],
+  "contrast": [
+    { "us": "costume party", "uk": "fancy-dress party", "note_cn": "化装舞会;美语 costume party,英式 fancy-dress party" },
+    { "us": "closet", "uk": "wardrobe", "note_cn": "壁橱,储物柜;美语 closet,英式 wardrobe" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" }
+  ],
+  "chunks": [
+    { "us": "dress up as", "ipa": "/dres ʌp æz/", "example1": "She decided to dress up as a ghost.", "example1_cn": "她决定扮成幽灵。", "example2": "The kids dressed up as pirates.", "example2_cn": "孩子们扮成了海盗。" },
+    { "us": "try on", "ipa": "/traɪ ɑːn/", "example1": "She was eager to try on her costume.", "example1_cn": "她急着试穿戏服。", "example2": "May I try on these shoes?", "example2_cn": "我可以试穿这双鞋吗?" },
+    { "us": "It's only me", "ipa": "/ɪts ˈoʊnli miː/", "example1": "'It's only me,' she said gently.", "example1_cn": "“是我,别害怕,”她轻声说。", "example2": "Don't worry — it's only me.", "example2_cn": "别担心——是我啦。" },
+    { "us": "let out a cry", "ipa": "/let aʊt ə kraɪ/", "example1": "The man let out a cry and jumped back.", "example1_cn": "那人大叫一声,往后一跳。", "example2": "She let out a cry of surprise.", "example2_cn": "她惊讶地叫了一声。" }
+  ],
+  "stage7_cloze": {
+    "context": "Mrs. Porter was eager ___1___ on her ghost costume. When someone knocked, she thought, 'It ___2___ be the baker.' She hid in the storeroom. Then the door opened, and she realized it ___3___ be the meter reader. 'It's only me,' she said, glad ___4___ him, but the frightened man fled.",
+    "blanks": [
+      { "blank_no": 1, "options": ["trying", "to try", "try", "tried"], "answer_index": 1 },
+      { "blank_no": 2, "options": ["can", "must", "should", "need"], "answer_index": 1 },
+      { "blank_no": 3, "options": ["must", "mustn't", "needn't", "may not"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["to see", "seeing", "see", "saw"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why was Mrs. Porter so excited that morning?", "options": ["She was going to a costume party that evening", "She had won a prize", "Her children were home", "It was her birthday"] },
+    { "stem": "What was her ghost costume made of?", "options": ["An old white sheet", "A cardboard box", "A raincoat", "A blanket and a hat"] },
+    { "stem": "Why did the meter reader run away?", "options": ["He thought the costume was a real ghost", "He forgot his tools", "He was late for work", "He disliked the house"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"敲门的一定是面包师\"(must 表推测):", "options": ["It must be the baker at the door.", "It can be the baker at the door.", "It needn't be the baker at the door.", "It must to be the baker at the door."] },
+    { "stem": "你想说\"我很高兴听到你好些了\"(形容词 + 动词不定式):", "options": ["I am glad to hear that you feel better.", "I am glad hearing that you feel better.", "I am glad hear that you feel better.", "I am glad that to hear you feel better."] },
+    { "stem": "你想说\"你不许打开那扇门\"(mustn't 表禁止):", "options": ["You mustn't open that door.", "You needn't open that door.", "You don't must open that door.", "You mustn't to open that door."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "costume 的意思是:", "options": ["化装服,戏服", "制服", "睡衣", "泳衣"] },
+    { "kind": "vocab", "stem": "flee 的意思是:", "options": ["逃走", "大笑", "睡觉", "唱歌"] },
+    { "kind": "grammar", "stem": "\"There's a knock — it ___ be the baker.\"(表推测“一定是”)", "stem_cn": "有人敲门——一定是面包师。", "options": ["must", "can", "needn't", "may not"] },
+    { "kind": "grammar", "stem": "\"I was glad ___ that you feel better.\"(形容词后接动词不定式)", "stem_cn": "听到你好些了,我很高兴。", "options": ["to hear", "hearing", "hear", "heard"] },
+    { "kind": "scenario", "stem": "\"dress up as\" 的意思是:", "options": ["化装成…", "脱下…", "洗净…", "叠好…"] },
+    { "kind": "scenario", "stem": "\"let out a cry\" 的意思是:", "options": ["发出一声叫喊", "保持安静", "轻声哼唱", "小声说话"] },
+    { "kind": "reading", "stem": "Why did Mrs. Porter hide in the storeroom?", "options": ["She did not want to frighten the baker", "She was playing hide-and-seek", "She heard a thief", "She was cold"], "passage": true },
+    { "kind": "reading", "stem": "What did Mrs. Porter say to the man in the storeroom?", "options": ["'It's only me'", "'Get out!'", "'Help me!'", "Nothing at all"], "passage": true },
+    { "kind": "listening", "stem": "What did the man expect to find when he opened the storeroom?", "options": ["Just a storeroom, not a ghost", "A treasure chest", "Another exit", "A sleeping dog"], "audio": true },
+    { "kind": "listening", "stem": "What did the man do after seeing the 'ghost'?", "options": ["He fled, slamming the door", "He laughed loudly", "He fainted", "He took a photo"], "audio": true }
+  ]
+}

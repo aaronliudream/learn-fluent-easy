@@ -6,7 +6,17 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
-## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1+U2+U3 三单元收官 L1–L15**,累计 660 题)
+## 📌 本批变化(2026-07-06 session · am3 第三册 · **U1+U2+U3+U4 四单元收官 L1–L20**,累计 880 题)
+
+## 📌 AM3 U4 收官(L16–L20 · `american_am3_seed_unit04.sql` · 220题=44×5,全🟢)
+- 🔴 **需跑** `american_am3_seed_unit04.sql`(全新文件,含 L16–L20 五课)。
+  - **L16《Mary Had a Little Lamb 玛丽有一头小羔羊》**(accuse sb of doing / deny doing / be ashamed of / apologize for + 动名词,外加 had better 忠告·白羊被偷、错怪邻居后道歉、一场雨把染黑的羊毛冲白)——44 题🟢全绿。轻度处理:仅乡村小偷小摸+喜剧反转(染羊被雨冲白),无暴力,同 L11 尺度保留;美式化:后院 backyard、警长 sheriff、gotten。
+  - **L17《The Longest Suspension Bridge 世界上最长的吊桥》**(被动语态各时态 is built/was designed/has been estimated/had to be taken + consider/think sth to be 把 that 从句改不定式·纽约韦拉扎诺-纳罗斯大桥)——44 题🟢全绿。**无需净化**:本就是美国地标、事实说明文。
+  - **L18《Electric Currents in Modern Art 现代艺术中的电流》**(介词固定搭配 interest in/on display/suspended from/attached to/familiar to/in response to + 名词/动词以 -y 结尾变 -ies/-s 拼写规则·会动、带电的现代雕塑展)——44 题🟢全绿。无需净化。
+  - **L19《A Very Dear Cat 一只贵重的宝贝猫》**(动词形式综合复习 + 逗号五种用法:句首状语后/同位语/列举/插入语 however/非限定性从句·dear 一词双关"心爱+昂贵")——44 题🟢全绿。**净化**:原课"绑架勒索赎金"→"猫溜进豪华宠物度假村 Whisker Manor,主人付千元账单赎回",保留双关与"在可靠的人那里"桥段,去掉绑架勒索;犯罪词(kidnapper/ransom/anonymous)按净化规则舍去。
+  - **L20《Pioneer Pilots 飞行员的先驱》**(**综合复习课** SD1-17:happen to/否定词句首倒装 Not only had.../否定前缀 im-ir-dis-/be supposed to/would rather sb+过去式/had better/save up/find sb to be·1909 年飞越英吉利海峡竞赛:拉塔姆两次落海,布莱里奥37分钟成功)——44 题🟢全绿。无需净化,史实叙述。
+- **U4 主线**:说明文与叙事综合——L16 动名词固定搭配 → L17 被动语态 → L18 介词/拼写 → L19 动词形式+标点 → L20 前四单元难点综合复习。
+- 对账(U4 累计):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am3_l%';` = **880**(U1 220 + U2 220 + U3 220 + U4 220)。
 - 🔴 **需跑(重跑)** `american_am3_seed_unit01.sql` —— 现含 **L1+L2+L3+L4+L5**,共 **220 题(44×5)**,5 课全 🟢 全绿。相对你上次已跑(仅 L1),期望 **净 +176**(L2–L5)。
   - **L5《The Exact Facts 确切数字》**(过去完成时 had done + 其被动 had been done + 否定副词句首倒装 Not only had he… / Never had I… + 冠词 a/the 复习·编辑逼记者要确切数字、记者数台阶时被捕入狱)——44 题🟢全绿。**主考取舍**:官方 Key structures 是冠词复习,但课文实际密集考点是过去完成+被动+倒装(书3级别),故以课文实考点为主考,冠词并入 gp5 复习。
 - **AM3 U1 五课语法进阶**:L1 过去叙事(过去/过去进行)→ L2 现在时(一般现在/现在进行/always+进行)→ L3 一般过去+不规则动词过去式 → L4 现在完成/完成进行 → L5 过去完成+被动+倒装。时态线索完整铺开。

@@ -1,0 +1,133 @@
+{
+  "id": "am3_l49",
+  "unit_no": 10,
+  "lesson_no": 49,
+  "title_en": "The Ideal Servant",
+  "title_cn": "理想的仆人",
+  "grammar_focus": "虚拟语气(与现在相反 If + were/过去式, would + 动词原形)、让步状语 no matter how / while(虽然)/ even though、固定搭配 persist in doing·be attached to·preside over·refer to … as·air one's views on、Not only 置句首的倒装、in that(因为)·free from(免于)·so … that(原创承载 NCE3 第三册 L49 考点·净化换情节:把仆人 Bessie 的“小小弱点”从偷喝酒改为“夜里熬夜偷看悬疑小说→睡眠不足→笨手笨脚打翻布丁→衣橱藏满小说”,理想仆人+隐秘弱点+晚宴闹剧+秘密藏货的趣味内核全保留,去掉酗酒表皮;美式化 hardwood floor/closet/favorite)",
+  "scene": "我的姑妈哈丽特好多年前就去世了,这倒是件好事。如果她活到今天,就没法就她最爱的话题——“佣人”——发表高见了。哈丽特姑妈生活在一个悠闲的年代,家务事都雇佣人来做。她在乡下有一幢又大又杂乱的房子,叫作“山墙庄园”。她对这幢房子在感情上难舍难分,因为尽管房子实在太大,超出了她的需要,丈夫去世多年后,她仍执意长住在那儿。年轻时,哈丽特姑妈常大摆宴席、招待宾客。我小时候常去“山墙庄园”作客。不管来多少客人,大房子总是收拾得一尘不染。硬木地板洁如明镜;擦得锃亮的银器在玻璃柜里闪着光;连姑父的大量藏书也奇迹般地一尘不染。哈丽特姑妈统辖着一支看不见的佣人大军,他们不停地擦洗、打扫、抛光。她把这些佣人称作“流动人口”,因为他们来去太勤,我甚至都没机会记住他们的名字。姑妈奉行的在当时算得上开明的政策——因为她从不让佣人每天工作超过八小时——但她极其难以取悦。她一面总批评人性的反复无常,一面又坚持不懈地寻找理想的仆人,直到去世,即使在被贝西狠狠伤了心之后也没停下。贝西在哈丽特姑妈家干了三年。这期间,她深得姑妈信任,以至于当上了大管家。哈丽特姑妈简直找不出词来夸贝西的勤奋和高效。除了各种本领,贝西还是一位烹饪高手。她把理想仆人的角色扮演了整整三年,姑妈才发现她“小小的弱点”。有一次,姑妈离开“山墙庄园”一个星期,一天下午带着一群客人出其不意地回来了,吩咐贝西准备晚饭。结果,不仅饭菜远不如平时,贝西走起路来还东倒西歪。她撞到家具,嘴里不停含糊地念叨着客人。当她端着最后一道菜——一大盘布丁——走进屋时,在地毯上绊了一跤,布丁腾空飞起,险险擦过姑妈,重重砸在餐桌上。这引起客人们一片欢笑,哈丽特姑妈却吓坏了。她不情愿地断定:贝西只是累坏了。客人们当然从贝西给他们开门那一刻就猜到了,早在这场大乱子之前,就一直强忍着才没笑出声来。可怜的姑娘当即被解雇了。她走后,哈丽特姑妈发现,曾经是贝西衣橱的地方,整整齐齐地码着一摞摞翻旧了的悬疑小说,大小不一。原来,一夜又一夜,贝西不去睡觉,而是就着烛光熬夜,不读到最后那惊心动魄的一页就放不下手!",
+  "grammar_card": {
+    "title": "虚拟语气(与现在相反) / 让步 no matter·while / preside over·refer to as / Not only 倒装 / in that·free from",
+    "intro": "①与现在事实相反的虚拟语气:If + 主语 + 过去式(be 一律用 were), 主语 + would/could/might + 动词原形:If she were alive, she would complain。②让步状语:no matter how …(无论多么)、while / even though(虽然、尽管)。③固定搭配:persist in doing(坚持)、be attached to(依恋)、preside over(统辖、主持)、refer to … as …(把…称作)、air one's views on(就…发表意见)。④Not only 置句首时,其分句要倒装:Not only was the meal poor, but …。⑤in that(因为、既然,书面语)、be free from(没有、免于)、so … that(如此…以至于)。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["If + were/过去式, would + 原形", "与现在相反的虚拟", "If she were alive, she would …"],
+        ["no matter how / while", "无论 / 虽然", "No matter how many guests …"],
+        ["preside over / refer to … as", "统辖 / 称作", "referred to them as …"],
+        ["Not only + 倒装", "不但…(倒装)", "Not only was the meal poor, but …"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "与现在相反的虚拟条件,if 从句 be 动词无论主语单复数一律用 were;主句用 would/could/might + 动词原形。", "mark": "If she were …, she would …" },
+      { "rule": "Not only 位于句首时,其所在分句要把助动词/be 动词提前倒装:Not only was …；后半用 but (also)。", "mark": "Not only was …" },
+      { "rule": "美式:hardwood floor(英式 parquet)、closet(英式 wardrobe)、favorite(英式 favourite)。本课已按美语写。", "mark": "hardwood floor / closet" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was Bessie's 'little weakness'?",
+    "options": ["Secretly staying up all night reading mystery novels", "Talking too loudly", "Forgetting people's names", "Cooking very badly"],
+    "answer_index": 0
+  },
+  "passage": "It is a good thing my Aunt Harriet passed away years ago. If she were alive today, she would not be able to air her views on her favorite topic of conversation: household help. Aunt Harriet lived in that leisurely age when servants were hired to do the housework. She had a huge, rambling country house called 'The Gables.' She was sentimentally attached to this house, for even though it was far too big for her needs, she persisted in living there long after her husband's death. Before she grew old, Aunt Harriet used to entertain lavishly. I often visited The Gables when I was a boy. No matter how many guests were present, the great house was always immaculate. The hardwood floors shone like mirrors; highly polished silver gleamed in glass cabinets; even my uncle's huge collection of books was kept miraculously free from dust. Aunt Harriet presided over an invisible army of servants who continuously scrubbed, cleaned, and polished. She always referred to them as 'the shifting population,' for they came and went so often that I never even got a chance to learn their names. Though my aunt pursued what was, in those days, an enlightened policy, in that she never allowed her staff to work more than eight hours a day, she was extremely hard to please. While she always criticized the fickleness of human nature, she carried on an unrelenting search for the ideal servant to the end of her days, even after she had been sadly disillusioned by Bessie. Bessie worked for Aunt Harriet for three years. During that time she so gained my aunt's confidence that she was put in charge of the staff. Aunt Harriet could not find words to praise Bessie's industriousness and efficiency. In addition to all her other qualifications, Bessie was an expert cook. She played the part of the perfect servant for three years before Aunt Harriet discovered her 'little weakness.' After being away from The Gables for a week, my aunt returned unexpectedly one afternoon with a party of guests and told Bessie to prepare dinner. Not only was the meal well below the usual standard, but Bessie seemed unable to walk steadily. She bumped into the furniture and kept mumbling about the guests. When she came in with the last course — a huge pudding — she tripped on the carpet, and the pudding went flying through the air, narrowly missed my aunt, and landed on the dining table with considerable force. Though this caused great mirth among the guests, Aunt Harriet was horrified. She reluctantly came to the conclusion that Bessie was simply exhausted. The guests had, of course, guessed as much from the moment Bessie opened the door for them, and long before the final catastrophe, had had a hard time trying to hide their amusement. The poor girl was dismissed at once. After she left, Aunt Harriet discovered piles of well-thumbed mystery novels of all shapes and sizes neatly stacked in what had once been Bessie's closet. Night after night, instead of sleeping, Bessie had been staying up by candlelight, unable to put them down until she reached the last thrilling page!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "It is a good thing my Aunt Harriet passed away years ago. If she were alive today, she would not be able to air her views on her favorite topic of conversation: household help. Aunt Harriet lived in that leisurely age when servants were hired to do the housework. She had a huge, rambling country house called 'The Gables.' She was sentimentally attached to this house, for even though it was far too big for her needs, she persisted in living there long after her husband's death.", "text_cn": "我的姑妈哈丽特好多年前就去世了,这倒是件好事。如果她活到今天,就没法就她最爱的话题——“佣人”——发表高见了。哈丽特姑妈生活在一个悠闲的年代,家务事都雇佣人来做。她在乡下有一幢又大又杂乱的房子,叫作“山墙庄园”。她对这幢房子在感情上难舍难分,因为尽管房子实在太大,超出了她的需要,丈夫去世多年后,她仍执意长住在那儿。" },
+    { "seq": 2, "speaker": null, "text_en": "Before she grew old, Aunt Harriet used to entertain lavishly. I often visited The Gables when I was a boy. No matter how many guests were present, the great house was always immaculate. The hardwood floors shone like mirrors; highly polished silver gleamed in glass cabinets; even my uncle's huge collection of books was kept miraculously free from dust. Aunt Harriet presided over an invisible army of servants who continuously scrubbed, cleaned, and polished. She always referred to them as 'the shifting population,' for they came and went so often that I never even got a chance to learn their names.", "text_cn": "年轻时,哈丽特姑妈常大摆宴席、招待宾客。我小时候常去“山墙庄园”作客。不管来多少客人,大房子总是收拾得一尘不染。硬木地板洁如明镜;擦得锃亮的银器在玻璃柜里闪着光;连姑父的大量藏书也奇迹般地一尘不染。哈丽特姑妈统辖着一支看不见的佣人大军,他们不停地擦洗、打扫、抛光。她把这些佣人称作“流动人口”,因为他们来去太勤,我甚至都没机会记住他们的名字。" },
+    { "seq": 3, "speaker": null, "text_en": "Though my aunt pursued what was, in those days, an enlightened policy, in that she never allowed her staff to work more than eight hours a day, she was extremely hard to please. While she always criticized the fickleness of human nature, she carried on an unrelenting search for the ideal servant to the end of her days, even after she had been sadly disillusioned by Bessie.", "text_cn": "姑妈奉行的在当时算得上开明的政策——因为她从不让佣人每天工作超过八小时——但她极其难以取悦。她一面总批评人性的反复无常,一面又坚持不懈地寻找理想的仆人,直到去世,即使在被贝西狠狠伤了心之后也没停下。" },
+    { "seq": 4, "speaker": null, "text_en": "Bessie worked for Aunt Harriet for three years. During that time she so gained my aunt's confidence that she was put in charge of the staff. Aunt Harriet could not find words to praise Bessie's industriousness and efficiency. In addition to all her other qualifications, Bessie was an expert cook. She played the part of the perfect servant for three years before Aunt Harriet discovered her 'little weakness.' After being away from The Gables for a week, my aunt returned unexpectedly one afternoon with a party of guests and told Bessie to prepare dinner.", "text_cn": "贝西在哈丽特姑妈家干了三年。这期间,她深得姑妈信任,以至于当上了大管家。哈丽特姑妈简直找不出词来夸贝西的勤奋和高效。除了各种本领,贝西还是一位烹饪高手。她把理想仆人的角色扮演了整整三年,姑妈才发现她“小小的弱点”。有一次,姑妈离开“山墙庄园”一个星期,一天下午带着一群客人出其不意地回来了,吩咐贝西准备晚饭。" },
+    { "seq": 5, "speaker": null, "text_en": "Not only was the meal well below the usual standard, but Bessie seemed unable to walk steadily. She bumped into the furniture and kept mumbling about the guests. When she came in with the last course — a huge pudding — she tripped on the carpet, and the pudding went flying through the air, narrowly missed my aunt, and landed on the dining table with considerable force. Though this caused great mirth among the guests, Aunt Harriet reluctantly concluded that Bessie was simply exhausted, and the poor girl was dismissed at once. After she left, Aunt Harriet discovered piles of well-thumbed mystery novels neatly stacked in what had once been Bessie's closet. Night after night, instead of sleeping, Bessie had been staying up by candlelight, unable to put them down until she reached the last thrilling page!", "text_cn": "结果,不仅饭菜远不如平时,贝西走起路来还东倒西歪。她撞到家具,嘴里不停含糊地念叨着客人。当她端着最后一道菜——一大盘布丁——走进屋时,在地毯上绊了一跤,布丁腾空飞起,险险擦过姑妈,重重砸在餐桌上。这引起客人们一片欢笑,哈丽特姑妈却不情愿地断定:贝西只是累坏了,可怜的姑娘当即被解雇了。她走后,哈丽特姑妈发现,曾经是贝西衣橱的地方,整整齐齐地码着一摞摞翻旧了的悬疑小说。原来,一夜又一夜,贝西不去睡觉,而是就着烛光熬夜,不读到最后那惊心动魄的一页就放不下手!" }
+  ],
+  "words": [
+    { "word": "rambling", "ipa": "/ˈræmblɪŋ/", "pos": "adj", "meaning_cn": "杂乱无章的,布局散乱的", "example": "a huge, rambling country house" },
+    { "word": "immaculate", "ipa": "/ɪˈmækjələt/", "pos": "adj", "meaning_cn": "清洁的,无污点的", "example": "the house was always immaculate" },
+    { "word": "preside", "ipa": "/prɪˈzaɪd/", "pos": "v", "meaning_cn": "指挥,统辖,主持", "example": "presided over an army of servants" },
+    { "word": "invisible", "ipa": "/ɪnˈvɪzəbəl/", "pos": "adj", "meaning_cn": "看不见的,无形的", "example": "an invisible army of servants" },
+    { "word": "scrub", "ipa": "/skrʌb/", "pos": "v", "meaning_cn": "擦拭,刷洗", "example": "they scrubbed and cleaned" },
+    { "word": "enlightened", "ipa": "/ɪnˈlaɪtənd/", "pos": "adj", "meaning_cn": "开明的", "example": "an enlightened policy" },
+    { "word": "unrelenting", "ipa": "/ˌʌnrɪˈlentɪŋ/", "pos": "adj", "meaning_cn": "不屈不挠的,不松懈的", "example": "an unrelenting search" },
+    { "word": "disillusion", "ipa": "/ˌdɪsɪˈluːʒən/", "pos": "v", "meaning_cn": "使幻想破灭", "example": "sadly disillusioned by Bessie" },
+    { "word": "qualification", "ipa": "/ˌkwɑːlɪfɪˈkeɪʃən/", "pos": "n", "meaning_cn": "资格,能力", "example": "all her other qualifications" },
+    { "word": "mirth", "ipa": "/mɜːrθ/", "pos": "n", "meaning_cn": "欢笑,高兴", "example": "great mirth among the guests" },
+    { "word": "lavishly", "ipa": "/ˈlævɪʃli/", "pos": "adv", "meaning_cn": "慷慨地,大方地", "example": "used to entertain lavishly" },
+    { "word": "industriousness", "ipa": "/ɪnˈdʌstriəsnəs/", "pos": "n", "meaning_cn": "勤奋", "example": "praise her industriousness" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "虚拟语气(与现在相反 If + were/过去式, would + 原形)" },
+    { "gp": "gp2", "name": "让步状语 no matter how / while(虽然)/ even though" },
+    { "gp": "gp3", "name": "固定搭配 persist in / be attached to / preside over / refer to … as" },
+    { "gp": "gp4", "name": "Not only 置句首的倒装" },
+    { "gp": "gp5", "name": "in that(因为)/ free from / so … that" },
+    { "gp": "gp6", "name": "词汇辨析(rambling/unrelenting/mirth)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"If Aunt Harriet ___ alive today, she would complain about servants.\"(与现在相反,if 从句里 be 动词的形式)", "stem_cn": "如果哈丽特姑妈今天还在世,她会抱怨佣人。", "options": ["were", "is", "was", "be"] },
+    { "gp": "gp1", "stem": "\"If she were alive, she ___ air her views on the topic.\"(与现在相反:主句用哪个助动词 + 动词原形)", "stem_cn": "如果她还在世,她会就这话题发表意见。", "options": ["would", "will", "would have", "can"] },
+    { "gp": "gp1", "stem": "\"If I ___ her, I would keep such a huge house too.\"(与现在相反,if 从句里 be 动词的形式)", "stem_cn": "如果我是她,我也会守着这么大的房子。", "options": ["were", "am", "be", "have been"] },
+    { "gp": "gp2", "stem": "\"___ how many guests were present, the house was immaculate.\"(“无论多少…”,让步)", "stem_cn": "无论来多少客人,房子总是一尘不染。", "options": ["No matter", "Even", "So", "Such"] },
+    { "gp": "gp2", "stem": "\"___ she always criticized others, she kept looking for the ideal servant.\"(“虽然”,引导让步,填这个连词)", "stem_cn": "虽然她总批评别人,却仍在寻找理想的仆人。", "options": ["While", "Because", "Unless", "So"] },
+    { "gp": "gp2", "stem": "\"Even ___ the house was too big, she went on living there.\"(even ___:即使,让步)", "stem_cn": "尽管房子太大,她仍住在那儿。", "options": ["though", "if only", "so", "as"] },
+    { "gp": "gp3", "stem": "\"She persisted ___ living there for years.\"(persist ___ doing:坚持做,填介词)", "stem_cn": "她多年来坚持住在那儿。", "options": ["in", "on", "at", "for"] },
+    { "gp": "gp3", "stem": "\"Aunt Harriet presided ___ an army of servants.\"(preside ___:统辖、指挥,填介词)", "stem_cn": "哈丽特姑妈统辖着一大群佣人。", "options": ["over", "on", "in", "at"] },
+    { "gp": "gp3", "stem": "\"She referred to them ___ 'the shifting population.'\"(refer to … ___ …:把…称作,填介词)", "stem_cn": "她把他们称作“流动人口”。", "options": ["as", "to", "for", "with"] },
+    { "gp": "gp4", "stem": "\"Not only ___ the meal poor, but Bessie could not walk steadily.\"(Not only 置句首,后接倒装,填 be 动词)", "stem_cn": "不但饭菜差,贝西还走不稳。", "options": ["was", "it was", "did", "had"] },
+    { "gp": "gp4", "stem": "\"Not only ___ she cook well, but she also managed the staff.\"(Not only + 助动词倒装:她不但…)", "stem_cn": "她不但饭做得好,还管理着佣人。", "options": ["did", "was", "does", "had"] },
+    { "gp": "gp4", "stem": "\"Not only was the pudding ruined, ___ it nearly hit my aunt.\"(Not only …, ___ …:不但…而且)", "stem_cn": "布丁不但毁了,还差点砸中我姑妈。", "options": ["but", "and", "so", "or"] },
+    { "gp": "gp5", "stem": "\"Her policy was enlightened ___ that she limited working hours.\"(“因为、既然”,书面用语,填介词)", "stem_cn": "她的政策很开明,因为她限制了工时。", "options": ["in", "on", "for", "by"] },
+    { "gp": "gp5", "stem": "\"The books were kept miraculously free ___ dust.\"(free ___:没有、免于,填介词)", "stem_cn": "那些书奇迹般地一尘不染。", "options": ["from", "of", "with", "to"] },
+    { "gp": "gp5", "stem": "\"She so gained my aunt's confidence ___ she was put in charge.\"(so … ___ …:如此…以至于)", "stem_cn": "她深得姑妈信任,以至于当上了大管家。", "options": ["that", "as", "than", "so"] },
+    { "gp": "gp6", "stem": "\"A house that is spread out with no clear plan is ___.\"(“杂乱无章的”用哪个词)", "stem_cn": "布局散乱、杂乱无章的房子。", "options": ["rambling", "tidy", "tiny", "modern"] },
+    { "gp": "gp6", "stem": "\"A search that never stops or eases is ___.\"(“不屈不挠、不松懈的”用哪个词)", "stem_cn": "从不停歇、绝不松懈的。", "options": ["unrelenting", "brief", "gentle", "lazy"] },
+    { "gp": "gp6", "stem": "\"Loud laughter and merry amusement is ___.\"(“欢笑、高兴”用哪个词)", "stem_cn": "欢笑、欢乐。", "options": ["mirth", "silence", "anger", "boredom"] }
+  ],
+  "stage6": [
+    { "stem": "rambling 的意思是:", "options": ["杂乱无章的,布局散乱的", "整齐的", "崭新的", "狭小的"] },
+    { "stem": "immaculate 的意思是:", "options": ["清洁的,无污点的", "肮脏的", "破旧的", "昏暗的"] },
+    { "stem": "preside 的意思是:", "options": ["指挥,统辖,主持", "服从", "逃避", "模仿"] },
+    { "stem": "unrelenting 的意思是:", "options": ["不屈不挠的,不松懈的", "松懈的", "短暂的", "温和的"] },
+    { "stem": "disillusion 的意思是:", "options": ["使幻想破灭", "使高兴", "使安心", "使兴奋"] },
+    { "stem": "mirth 的意思是:", "options": ["欢笑,高兴", "悲伤", "愤怒", "恐惧"] }
+  ],
+  "contrast": [
+    { "us": "closet", "uk": "wardrobe", "note_cn": "衣橱;美语 closet,英式 wardrobe" },
+    { "us": "favorite", "uk": "favourite", "note_cn": "最喜欢的;拼写差异,美语 favorite" },
+    { "us": "hired help", "uk": "domestic servant", "note_cn": "佣人;美语常说 hired help,英式 domestic servant" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" }
+  ],
+  "chunks": [
+    { "us": "be attached to", "ipa": "/bi əˈtætʃt tə/", "example1": "She was sentimentally attached to the house.", "example1_cn": "她对这房子在感情上难舍难分。", "example2": "He is attached to his old car.", "example2_cn": "他很依恋他那辆旧车。" },
+    { "us": "persist in", "ipa": "/pərˈsɪst ɪn/", "example1": "She persisted in living there alone.", "example1_cn": "她坚持一个人住在那儿。", "example2": "He persisted in asking questions.", "example2_cn": "他不停地追问。" },
+    { "us": "preside over", "ipa": "/prɪˈzaɪd ˈoʊvər/", "example1": "Aunt Harriet presided over an army of servants.", "example1_cn": "哈丽特姑妈统辖着一大群佣人。", "example2": "The judge presided over the trial.", "example2_cn": "法官主持了审判。" },
+    { "us": "in charge of", "ipa": "/ɪn tʃɑːrdʒ əv/", "example1": "Bessie was put in charge of the staff.", "example1_cn": "贝西被安排管理佣人。", "example2": "Who is in charge of the project?", "example2_cn": "谁负责这个项目?" }
+  ],
+  "stage7_cloze": {
+    "context": "If my Aunt Harriet ___1___ alive today, she would still be searching for the ideal servant. She presided ___2___ an army of servants and referred to them ___3___ 'the shifting population.' Bessie seemed perfect for three years — not only ___4___ she an expert cook, but she also ran the whole staff — until her 'little weakness' was discovered.",
+    "blanks": [
+      { "blank_no": 1, "options": ["were", "is", "was", "will be"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["over", "on", "in", "at"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["as", "to", "for", "with"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["was", "did", "is", "had"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What was Bessie's 'little weakness'?", "options": ["She secretly stayed up all night reading mystery novels", "She was often late", "She could not cook", "She talked too much"] },
+    { "stem": "Why did Aunt Harriet keep searching for the ideal servant?", "options": ["She was extremely difficult to please", "No one ever applied", "She had too much money", "Her house was too small"] },
+    { "stem": "What did Aunt Harriet find in Bessie's closet after she left?", "options": ["Piles of well-thumbed mystery novels", "A pile of dirty dishes", "Stolen silver", "Old love letters"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"如果姑妈还在世,她会就佣人发表意见\"(与现在相反的虚拟):", "options": ["If my aunt were alive, she would air her views on servants.", "If my aunt was alive, she will air her views on servants.", "If my aunt is alive, she would air her views on servants.", "If my aunt were alive, she will air her views on servants."] },
+    { "stem": "你想说\"她把佣人称作‘流动人口’\"(refer to … as …):", "options": ["She referred to the servants as 'the shifting population.'", "She referred the servants as 'the shifting population.'", "She referred to the servants to 'the shifting population.'", "She referred to the servants for 'the shifting population.'"] },
+    { "stem": "你想说\"不但饭菜差,贝西还走不稳\"(Not only 句首倒装):", "options": ["Not only was the meal poor, but Bessie could not walk steadily.", "Not only the meal was poor, but Bessie could not walk steadily.", "Not only was the meal poor, but Bessie could walk not steadily.", "Not only meal was poor, but Bessie could not walk steadily."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "immaculate 的意思是:", "options": ["清洁的,无污点的", "肮脏的", "破旧的", "昏暗的"] },
+    { "kind": "vocab", "stem": "mirth 的意思是:", "options": ["欢笑,高兴", "悲伤", "愤怒", "恐惧"] },
+    { "kind": "grammar", "stem": "\"If Aunt Harriet ___ alive today, she would complain about servants.\"(与现在相反:if 从句里 be 动词的形式)", "stem_cn": "如果哈丽特姑妈今天还在世,她会抱怨佣人。", "options": ["were", "is", "was", "be"] },
+    { "kind": "grammar", "stem": "\"Not only ___ the meal poor, but Bessie could not walk steadily.\"(Not only 置句首,后接倒装,填 be 动词)", "stem_cn": "不但饭菜差,贝西还走不稳。", "options": ["was", "it was", "did", "had"] },
+    { "kind": "scenario", "stem": "\"be attached to\" 的意思是:", "options": ["喜爱、依恋", "讨厌", "出售", "修理"] },
+    { "kind": "scenario", "stem": "\"preside over\" 的意思是:", "options": ["统辖、主持", "服从", "逃避", "参观"] },
+    { "kind": "reading", "stem": "Why does the writer say it is 'a good thing' Aunt Harriet died years ago?", "options": ["If she were alive, she could no longer find the servants she loved to talk about", "She would be very poor", "Her house would be sold", "She disliked the writer"], "passage": true },
+    { "kind": "reading", "stem": "What made Aunt Harriet finally dismiss Bessie?", "options": ["A disastrous dinner where Bessie stumbled and dropped a pudding", "Bessie stole the silver", "Bessie quit on her own", "Bessie was a poor cook"], "passage": true },
+    { "kind": "listening", "stem": "How long did Bessie work as the 'ideal servant' before her weakness was discovered?", "options": ["Three years", "One week", "Ten years", "A single day"], "audio": true },
+    { "kind": "listening", "stem": "How did the guests react when the pudding went flying?", "options": ["It caused great mirth among them", "They were frightened", "They left at once", "They helped clean up"], "audio": true }
+  ]
+}

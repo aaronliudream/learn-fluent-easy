@@ -1,0 +1,134 @@
+{
+  "id": "am4_l30",
+  "unit_no": 5,
+  "lesson_no": 30,
+  "title_en": "Exploring the Sea-floor",
+  "title_cn": "海底探索",
+  "grammar_focus": "同位语从句(the observation that many parts were miles deep)、Not until … 置于句首的倒装(Not until deep soundings were taken did people …)、after/before + 动名词的被动式(after being eroded)、be confined to / regard … as …(固定搭配)、which 引导定语从句指物(NCE4 无 KS 页,考点由课文结构自取;IP:源为 T.F. 加斯克尔《Science Survey》‘海底探索’一文,内含具名史实人物/考察队(罗斯、‘挑战者号’)——已泛化为‘早期探险者/著名海洋考察队/科学家’,海底地貌科学事实用 100% 原创行文复述;题材=海洋地理科普·无害;美语化 fiber/meager;第四册第30课·U5收官课)",
+  "scene": "一百年前,我们对海洋的认识,仅局限于海面这一二维形状,以及近岸浅水里那些暗藏的航行险情。广阔的外海深邃而神秘;凡是对海底稍加思量的人,多半都想当然地以为海床是平的。这个想当然,大错特错。直到有人在开阔的大西洋测得深海水深、又从海底捞起最初的样本,人们才开始了解真相。不久,一支著名的海洋考察队,把海底研究确立为一门配得上最优秀物理学家与地质学家的学问。随着海底电缆铺设而兴起的一阵热潮,证实了这样一个观察:大洋许多海域深达两三英里,浪涛之下还存在着规模巨大的水下地貌。如今,已有足够的水深数据可以绘出一张大西洋的地势图,我们也对海床地形的千姿百态略知一二。既然海洋覆盖了地球表面的大部分,把海底看作地壳的基本形态、而大陆、岛屿及其他地貌不过是叠加其上,便相当合理。大陆本身构成崎岖的高地,高出外海海底将近三英里。从岸边起,向外延伸——距离可从几英里到几百英里不等——是平缓的大陆架,它在地质上属于大陆的一部分。陆地与海洋真正的分界,在一道更陡的下坡之脚,那就是大陆坡。大陆坡通常始于约一百英寻处,绵延几百英里后,抵达二千五到三千五百英寻深的真正洋底。它平均约以三十分之一的坡度下降,却也有陡峭的峭壁与平缓的、覆着沉积物的阶地;在它较低处,还有一段长长的渐缓收尾——那几乎可以肯定是从陆地被侵蚀下来、又被带往深水的物质堆成的。",
+  "grammar_card": {
+    "title": "同位语从句 / Not until 倒装 / after + 动名词被动 / be confined to·regard as / which 定语从句",
+    "intro": "①同位语从句 that,补充说明前面名词的内容:the observation that many parts were deep。②Not until … 置于句首,主句部分倒装:Not until … did people learn。③after/before + 动名词的被动:after being eroded。④固定搭配 be confined to;regard … as …。⑤which 引导定语从句、指物。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["同位语从句", "名词 + that + 完整句", "the observation that parts were deep"],
+        ["Not until 倒装", "Not until … + did/was + 其余", "Not until … did people learn"],
+        ["after + 动名词被动", "after being + 过去分词", "after being eroded from the land"],
+        ["be confined to", "be confined to …", "knowledge was confined to the surface"],
+        ["regard … as …", "regard A as B", "regard the sea floor as the basic form"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "同位语从句里 that 只起引导作用、句子成分完整;定语从句里的 that 要在从句里充当成分。", "mark": "同位语 that ≠ 定语 that" },
+      { "rule": "Not until 置于句首时,后面的主句要倒装(did/was 提前);until 从句本身不倒装。", "mark": "Not until … did …" },
+      { "rule": "美式拼写:fiber(纤维,英式 fibre)、meager(贫乏的,英式 meagre)。本课已按美语写。", "mark": "fiber / meager" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How did people probably imagine the sea-floor before it was investigated?",
+    "options": ["They assumed it was flat", "They knew it was full of mountains", "They thought it did not exist", "They believed it was made of ice"],
+    "answer_index": 0
+  },
+  "passage": "A hundred years ago our knowledge of the oceans was confined to the two-dimensional shape of the sea surface and the hazards to navigation hidden in the shallow water near land. The open sea was deep and mysterious, and anyone who gave more than a passing thought to its floor probably assumed that the sea bed was flat. That assumption was quite wrong. Not until deep soundings were taken in the open Atlantic, and the first samples were dredged up from the bottom, did people begin to learn the truth. Soon a famous ocean expedition established the study of the sea-floor as a subject worthy of the finest physicists and geologists. A burst of activity connected with the laying of submarine cables confirmed the observation that many parts of the ocean were two to three miles deep, and that underwater features of great magnitude existed far below the waves. Today enough soundings are available for a relief map of the Atlantic to be drawn, and we know something of the great variety of the sea bed's topography. Since the sea covers the greater part of the earth's surface, it is quite reasonable to regard the sea floor as the basic form of the earth's crust, with the continents, islands, and other features raised upon it. The continents themselves form rugged tablelands that stand nearly three miles above the floor of the open ocean. From the shore runs the gentle continental shelf, which geologically forms part of the continents. The real dividing line between land and ocean lies at the foot of a steeper drop — the continental slope. This slope usually begins near the hundred-fathom mark and, over a few hundred miles, reaches the true ocean floor at 2,500 to 3,500 fathoms. It holds steep cliffs and gentle, sediment-covered terraces; and near its lower reaches lies a long tailing-off, almost certainly made of material carried out to deep water after being eroded from the land.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "A hundred years ago our knowledge of the oceans was confined to the two-dimensional shape of the sea surface and the hazards to navigation hidden in the shallow water near land. The open sea was deep and mysterious, and anyone who gave more than a passing thought to its floor probably assumed that the sea bed was flat.", "text_cn": "一百年前,我们对海洋的认识,仅局限于海面这一二维形状,以及近岸浅水里那些暗藏的航行险情。广阔的外海深邃而神秘;凡是对海底稍加思量的人,多半都想当然地以为海床是平的。" },
+    { "seq": 2, "speaker": null, "text_en": "That assumption was quite wrong. Not until deep soundings were taken in the open Atlantic, and the first samples were dredged up from the bottom, did people begin to learn the truth. Soon a famous ocean expedition established the study of the sea-floor as a subject worthy of the finest physicists and geologists.", "text_cn": "这个想当然,大错特错。直到有人在开阔的大西洋测得深海水深、又从海底捞起最初的样本,人们才开始了解真相。不久,一支著名的海洋考察队,把海底研究确立为一门配得上最优秀物理学家与地质学家的学问。" },
+    { "seq": 3, "speaker": null, "text_en": "A burst of activity connected with the laying of submarine cables confirmed the observation that many parts of the ocean were two to three miles deep, and that underwater features of great magnitude existed far below the waves. Today enough soundings are available for a relief map of the Atlantic to be drawn, and we know something of the great variety of the sea bed's topography.", "text_cn": "随着海底电缆铺设而兴起的一阵热潮,证实了这样一个观察:大洋许多海域深达两三英里,浪涛之下还存在着规模巨大的水下地貌。如今,已有足够的水深数据可以绘出一张大西洋的地势图,我们也对海床地形的千姿百态略知一二。" },
+    { "seq": 4, "speaker": null, "text_en": "Since the sea covers the greater part of the earth's surface, it is quite reasonable to regard the sea floor as the basic form of the earth's crust, with the continents, islands, and other features raised upon it. The continents themselves form rugged tablelands that stand nearly three miles above the floor of the open ocean. From the shore runs the gentle continental shelf, which geologically forms part of the continents.", "text_cn": "既然海洋覆盖了地球表面的大部分,把海底看作地壳的基本形态、而大陆、岛屿及其他地貌不过是叠加其上,便相当合理。大陆本身构成崎岖的高地,高出外海海底将近三英里。从岸边向外延伸的,是平缓的大陆架,它在地质上属于大陆的一部分。" },
+    { "seq": 5, "speaker": null, "text_en": "The real dividing line between land and ocean lies at the foot of a steeper drop — the continental slope. This slope usually begins near the hundred-fathom mark and, over a few hundred miles, reaches the true ocean floor at 2,500 to 3,500 fathoms. It holds steep cliffs and gentle, sediment-covered terraces; and near its lower reaches lies a long tailing-off, almost certainly made of material carried out to deep water after being eroded from the land.", "text_cn": "陆地与海洋真正的分界,在一道更陡的下坡之脚,那就是大陆坡。大陆坡通常始于约一百英寻处,绵延几百英里后,抵达二千五到三千五百英寻深的真正洋底。它有陡峭的峭壁与平缓的、覆着沉积物的阶地;在它较低处,还有一段长长的渐缓收尾——那几乎可以肯定是从陆地被侵蚀下来、又被带往深水的物质堆成的。" }
+  ],
+  "words": [
+    { "word": "navigation", "ipa": "/ˌnævɪˈɡeɪʃn/", "pos": "n", "meaning_cn": "航行,导航", "example": "the hazards to navigation" },
+    { "word": "sounding", "ipa": "/ˈsaʊndɪŋ/", "pos": "n", "meaning_cn": "(水深)测量,测深", "example": "deep soundings were taken" },
+    { "word": "fathom", "ipa": "/ˈfæðəm/", "pos": "n", "meaning_cn": "英寻(约1.8米)", "example": "the true ocean floor at 3,000 fathoms" },
+    { "word": "dredge", "ipa": "/dredʒ/", "pos": "v", "meaning_cn": "疏浚,打捞", "example": "samples were dredged up from the bottom" },
+    { "word": "expedition", "ipa": "/ˌekspəˈdɪʃn/", "pos": "n", "meaning_cn": "考察,远征", "example": "a famous ocean expedition" },
+    { "word": "physicist", "ipa": "/ˈfɪzɪsɪst/", "pos": "n", "meaning_cn": "物理学家", "example": "worthy of the finest physicists" },
+    { "word": "magnitude", "ipa": "/ˈmæɡnɪtuːd/", "pos": "n", "meaning_cn": "巨大,重要性", "example": "features of great magnitude" },
+    { "word": "topography", "ipa": "/təˈpɑːɡrəfi/", "pos": "n", "meaning_cn": "地形,地貌", "example": "the sea bed's topography" },
+    { "word": "crust", "ipa": "/krʌst/", "pos": "n", "meaning_cn": "地壳,外壳", "example": "the basic form of the earth's crust" },
+    { "word": "rugged", "ipa": "/ˈrʌɡɪd/", "pos": "adj", "meaning_cn": "崎岖的,高低不平的", "example": "rugged tablelands" },
+    { "word": "slope", "ipa": "/sloʊp/", "pos": "n", "meaning_cn": "斜坡,坡度", "example": "the continental slope" },
+    { "word": "sediment", "ipa": "/ˈsedɪmənt/", "pos": "n", "meaning_cn": "沉积物", "example": "sediment-covered terraces" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "同位语从句(the N that …)" },
+    { "gp": "gp2", "name": "Not until 置于句首的倒装" },
+    { "gp": "gp3", "name": "after/before + 动名词的被动式" },
+    { "gp": "gp4", "name": "be confined to / regard … as …" },
+    { "gp": "gp5", "name": "which 引导定语从句(指物)" },
+    { "gp": "gp6", "name": "词汇辨析(sounding/topography/crust)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The observation ___ many parts were miles deep changed everything.\"(同位语从句,解释 observation 的内容,填连词)", "stem_cn": "‘许多海域深达数英里’这一观察,改变了一切。", "options": ["that", "which", "what", "whether"] },
+    { "gp": "gp1", "stem": "\"Scientists reached the conclusion ___ the sea bed was far from flat.\"(同位语从句,解释 conclusion 的内容,填连词)", "stem_cn": "科学家得出结论:海床远非平坦。", "options": ["that", "which", "what", "how"] },
+    { "gp": "gp1", "stem": "\"The idea ___ the sea floor is flat was soon proved wrong.\"(同位语从句,解释 idea 的内容,填连词)", "stem_cn": "‘海底是平的’这一看法很快被证明错了。", "options": ["that", "which", "what", "whether"] },
+    { "gp": "gp2", "stem": "\"Not until deep soundings were taken ___ people learn the truth.\"(Not until 置于句首引起倒装,填助动词)", "stem_cn": "直到测得深海水深,人们才知道真相。", "options": ["did", "do", "had", "were"] },
+    { "gp": "gp2", "stem": "\"Not until the cables were laid ___ the depth confirmed.\"(Not until 倒装,一般过去被动,填 be 动词)", "stem_cn": "直到电缆铺设,深度才得到确认。", "options": ["was", "did", "had", "is"] },
+    { "gp": "gp2", "stem": "\"Not until the expedition returned ___ we understand the sea floor.\"(Not until 倒装,填助动词)", "stem_cn": "直到考察队归来,我们才理解海底。", "options": ["did", "do", "had", "were"] },
+    { "gp": "gp3", "stem": "\"The sediment was carried out to deep water after ___ eroded from the land.\"(after + 动名词的被动 __ + 过去分词,‘在被侵蚀之后’,填 be 动词的 -ing 形式)", "stem_cn": "泥沙被从陆地侵蚀下来后,又被带往深水。", "options": ["being", "been", "be", "was"] },
+    { "gp": "gp3", "stem": "\"Samples were studied after ___ dredged from the bottom.\"(after + 动名词的被动,‘在被捞起之后’,填 be 动词的 -ing 形式)", "stem_cn": "样本从海底捞起后被拿去研究。", "options": ["being", "been", "be", "was"] },
+    { "gp": "gp3", "stem": "\"The map was drawn only after ___ checked many times.\"(after + 动名词的被动,填 be 动词的 -ing 形式)", "stem_cn": "那张图反复核对之后才绘成。", "options": ["being", "been", "be", "was"] },
+    { "gp": "gp4", "stem": "\"Our early knowledge was ___ to the shape of the sea surface.\"(be + 过去分词 + to,‘局限于’,填‘限制’那个动词的过去分词)", "stem_cn": "我们早期的认识仅局限于海面的形状。", "options": ["confined", "confining", "confine", "to confine"] },
+    { "gp": "gp4", "stem": "\"It is reasonable to regard the sea floor ___ the basic form of the crust.\"(‘把…看作…’,填 regard 后与之搭配的那个介词)", "stem_cn": "把海底看作地壳的基本形态是合理的。", "options": ["as", "for", "to", "like"] },
+    { "gp": "gp4", "stem": "\"The continental shelf is regarded ___ part of the continents.\"(‘被看作…’,填 regard 后与之搭配的那个介词)", "stem_cn": "大陆架被看作大陆的一部分。", "options": ["as", "for", "to", "of"] },
+    { "gp": "gp5", "stem": "\"The continents form tablelands ___ stand miles above the sea floor.\"(定语从句,指物,在从句里作主语,填关系词)", "stem_cn": "大陆构成高地,高出海底数英里。", "options": ["which", "who", "whose", "whom"] },
+    { "gp": "gp5", "stem": "\"There is a long slope ___ reaches the true ocean floor.\"(定语从句,指物,在从句里作主语,填关系词)", "stem_cn": "有一道长长的斜坡,一直伸到真正的洋底。", "options": ["which", "who", "whose", "whom"] },
+    { "gp": "gp5", "stem": "\"The sediment, ___ came from the land, covers the terraces.\"(非限定定语从句,指物,填关系词)", "stem_cn": "那些来自陆地的沉积物,覆盖着阶地。", "options": ["which", "that", "who", "whom"] },
+    { "gp": "gp6", "stem": "\"The measurement of the depth of water is a ___.\"(“(水深)测量,测深”用哪个词)", "stem_cn": "测量水的深度。", "options": ["sounding", "painting", "meeting", "warning"] },
+    { "gp": "gp6", "stem": "\"The surface features and shape of a piece of land is its ___.\"(“地形,地貌”用哪个词)", "stem_cn": "一片土地表面的形态与起伏。", "options": ["topography", "photograph", "telegraph", "paragraph"] },
+    { "gp": "gp6", "stem": "\"The hard outer layer of the earth is the ___.\"(“地壳”用哪个词)", "stem_cn": "地球坚硬的最外层。", "options": ["crust", "core", "cloud", "cave"] }
+  ],
+  "stage6": [
+    { "stem": "navigation 的意思是:", "options": ["航行,导航", "灌溉", "发电", "采矿"] },
+    { "stem": "sounding 的意思是:", "options": ["(水深)测量,测深", "绘画", "歌唱", "警告"] },
+    { "stem": "expedition 的意思是:", "options": ["考察,远征", "假期", "婚礼", "葬礼"] },
+    { "stem": "magnitude 的意思是:", "options": ["巨大,重要性", "微小", "速度", "温度"] },
+    { "stem": "topography 的意思是:", "options": ["地形,地貌", "传记", "摄影", "语法"] },
+    { "stem": "rugged 的意思是:", "options": ["崎岖的,高低不平的", "平坦的", "光滑的", "柔软的"] }
+  ],
+  "contrast": [
+    { "us": "fiber", "uk": "fibre", "note_cn": "纤维;美语 fiber,英式 fibre" },
+    { "us": "meager", "uk": "meagre", "note_cn": "贫乏的,不足的;美语 meager,英式 meagre" },
+    { "us": "luster", "uk": "lustre", "note_cn": "光泽;美语 luster,英式 lustre" },
+    { "us": "catalog", "uk": "catalogue", "note_cn": "目录;美语 catalog,英式 catalogue" }
+  ],
+  "chunks": [
+    { "us": "confined to", "ipa": "/kənˈfaɪnd tuː/", "example1": "Our knowledge was confined to the sea surface.", "example1_cn": "我们的认识仅局限于海面。", "example2": "He was confined to bed for a week.", "example2_cn": "他卧床了一个星期。" },
+    { "us": "regard as", "ipa": "/rɪˈɡɑːrd æz/", "example1": "We regard the sea floor as the basic form of the crust.", "example1_cn": "我们把海底看作地壳的基本形态。", "example2": "They regard him as a hero.", "example2_cn": "他们把他视为英雄。" },
+    { "us": "far from", "ipa": "/fɑːr frʌm/", "example1": "The sea bed was far from flat.", "example1_cn": "海床远非平坦。", "example2": "The work is far from done.", "example2_cn": "这活儿还远远没做完。" },
+    { "us": "associated with", "ipa": "/əˈsoʊʃieɪtɪd wɪð/", "example1": "The activity associated with laying cables confirmed it.", "example1_cn": "与铺设电缆相关的活动证实了这一点。", "example2": "the risks associated with the plan", "example2_cn": "与这个计划相关的风险" }
+  ],
+  "stage7_cloze": {
+    "context": "A hundred years ago people assumed ___1___ the sea bed was flat. Not until deep soundings were taken ___2___ they learn the truth. Our knowledge had been ___3___ to the sea surface. Today we regard the sea floor ___4___ the basic form of the earth's crust.",
+    "blanks": [
+      { "blank_no": 1, "options": ["that", "which", "what", "whether"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["did", "do", "had", "were"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["confined", "confining", "confine", "to confine"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["as", "for", "to", "like"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How did people probably imagine the sea-floor before it was studied?", "options": ["They assumed it was flat", "They knew it was full of mountains", "They thought it did not exist", "They believed it was made of ice"] },
+    { "stem": "What finally showed that the sea bed was not flat?", "options": ["Deep soundings and samples dredged from the bottom", "A single photograph", "A guess by sailors", "The colour of the water"] },
+    { "stem": "Why is it reasonable to regard the sea floor as the basic form of the earth's crust?", "options": ["Because the sea covers the greater part of the earth's surface", "Because the land is unimportant", "Because the sea is shallow", "Because the crust is made of water"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"‘许多海域深达数英里’这一观察改变了一切\"(同位语从句):", "options": ["The observation that many parts were miles deep changed everything.", "The observation which many parts were miles deep changed everything.", "The observation what many parts were miles deep changed everything.", "The observation that many parts were miles deep changing everything."] },
+    { "stem": "你想说\"直到测得深海水深,人们才知道真相\"(Not until 倒装):", "options": ["Not until deep soundings were taken did people learn the truth.", "Not until deep soundings were taken people learned the truth.", "Not until deep soundings were taken did people learned the truth.", "Not until deep soundings were taken people did learn the truth."] },
+    { "stem": "你想说\"把海底看作地壳的基本形态是合理的\"(regard … as …):", "options": ["It is reasonable to regard the sea floor as the basic form of the crust.", "It is reasonable to regard the sea floor for the basic form of the crust.", "It is reasonable to regard the sea floor to the basic form of the crust.", "It is reasonable to regard the sea floor as the basic form of the crust to be."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "expedition 的意思是:", "options": ["考察,远征", "假期", "婚礼", "葬礼"] },
+    { "kind": "vocab", "stem": "crust 的意思是:", "options": ["地壳,外壳", "地核", "云层", "洞穴"] },
+    { "kind": "grammar", "stem": "\"The observation ___ many parts were miles deep changed everything.\"(同位语从句,解释 observation 的内容)", "stem_cn": "‘许多海域深达数英里’这一观察改变了一切。", "options": ["that", "which", "what", "whether"] },
+    { "kind": "grammar", "stem": "\"Not until deep soundings were taken ___ people learn the truth.\"(Not until 置于句首引起倒装,填助动词)", "stem_cn": "直到测得深海水深,人们才知道真相。", "options": ["did", "do", "had", "were"] },
+    { "kind": "scenario", "stem": "\"confined to\" 的意思是:", "options": ["局限于,限于", "扩展到", "等同于", "起源于"] },
+    { "kind": "scenario", "stem": "\"regard as\" 的意思是:", "options": ["把…看作,视为", "忽略", "拒绝", "归还"] },
+    { "kind": "reading", "stem": "What did people a hundred years ago assume about the sea bed?", "options": ["That it was flat, since their knowledge was confined to the surface", "That it was full of tall mountains", "That it was dry land", "That it was very shallow everywhere"], "passage": true },
+    { "kind": "reading", "stem": "According to the passage, what does the continental slope lead down to?", "options": ["The true ocean floor, at about 2,500 to 3,500 fathoms", "A flat sandy beach", "The top of the continents", "A shallow coral reef"], "passage": true },
+    { "kind": "listening", "stem": "What confirmed that many parts of the ocean were two to three miles deep?", "options": ["A burst of activity linked to the laying of submarine cables", "A story told by fishermen", "The colour of the deep water", "A single lucky guess"], "audio": true },
+    { "kind": "listening", "stem": "Why can a relief map of the Atlantic now be drawn?", "options": ["Enough soundings of the depth are now available", "The sea has been drained", "The floor is perfectly flat", "Satellites photograph the sea bed directly"], "audio": true }
+  ]
+}

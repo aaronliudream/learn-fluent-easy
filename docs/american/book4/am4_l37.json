@@ -1,0 +1,134 @@
+{
+  "id": "am4_l37",
+  "unit_no": 7,
+  "lesson_no": 37,
+  "title_en": "The Process of Aging",
+  "title_cn": "衰老的过程",
+  "grammar_focus": "最高级(at its most vigorous / the likelihood is least)、have yet to do(尚未…)、though 引导让步(though imperceptible at first, …)、if + 过去分词(省略,if given the chance)、worth + 动名词(not worth mending)(NCE4 无 KS 页,考点由课文结构自取;IP:源为亚历克斯·康福特《The Process of Ageing》一篇论‘12岁身体最强健、此后活力渐衰’的科普文,无具名真实人物;通用生理事实用 100% 原创行文复述;题材=衰老生理·无害;美语化 aging/vigor;第四册第37课·U7开工)",
+  "scene": "十二岁时,人的身体最为强健。它还没长到最大、最壮,主人的智力也还没发育到极致;可正是在这个年纪,死亡的可能性降到最低。更早的时候,我们还是婴儿和幼童,要脆弱得多;再往后,我们将经历活力与抵抗力缓慢而持续的丧失——这种丧失起初难以察觉,最终却陡峭到我们再也活不下去,无论我们怎样善待自己,无论社会和医生怎样照料我们。这种随时间推移而来的活力衰退,就叫衰老,它是我们任何人所能发现的、最令人不快的事情之一。我们迟早都会明白:我们注定要这样衰退;倘若躲过战争、意外和疾病,我们终将‘老死’;而且这一过程发生的速度因人而异极小,以至于我们多半会在六十五到八十岁之间死去。少数人会死得更早,少数人会活到九十、一百岁——但概率对此不利;无论我们多么幸运、多么强健,我们能指望活多久,都有一个几乎确定的上限。人们往往会忘记这个过程,除非、也直到被提醒。多年来,许多人想当然地以为,活力的稳步流失是不言自明的,就像热水壶变凉、鞋子磨破;以为一切动物、也许还有树木之类的别的生物,按事物的本性都必然会‘磨损殆尽’。诚然,多数动物只要有机会活得够久,衰老的方式与我们大同小异;上了发条的钟表、乃至太阳本身,也确实会耗尽能量。可这些与人衰老时发生的事,并不真正类似。一只走停了的表仍是一只表,还能重新上弦;而一只又旧又磨损的表,则会变得太不可靠,终至不值得修理。然而表永远无法自我修复,因为它没有活的部件——只有金属,靠摩擦慢慢磨去。而我们,曾经能够自我修复,至少足以战胜除最猝然致命者以外的一切疾病;我们在十二岁到八十岁之间逐渐失去的,正是这种能力。",
+  "grammar_card": {
+    "title": "最高级 / have yet to do / though 引导让步 / if + 过去分词(省略) / worth + 动名词",
+    "intro": "①最高级:at its most vigorous;the likelihood is least。②have yet to do,‘尚未…’。③though 引导让步,可插在两逗号之间:which, though imperceptible, …。④if + 过去分词(省略主语和 be):if given the chance。⑤worth + 动名词:not worth mending。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["最高级", "at its most / … est", "at its most vigorous"],
+        ["have yet to do", "have yet + to do", "has yet to reach full strength"],
+        ["though 让步", ", though + 形容词, …", "though imperceptible at first"],
+        ["if + 过去分词(省略)", "if + 过去分词", "if given the chance"],
+        ["worth + 动名词", "worth + doing", "not worth mending"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "if/when/though 从句里,若主语与主句一致且含 be,常省略‘主语 + be’:if (it is) given the chance → if given the chance。", "mark": "if given …" },
+      { "rule": "worth 后接动名词(worth mending),不接不定式(不写 worth to mend)。", "mark": "worth + doing" },
+      { "rule": "美式拼写:aging(衰老,英式 ageing)、vigor(活力,英式 vigour)。本课已按美语写。", "mark": "aging / vigor" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is one of the most unpleasant discoveries we make about ourselves as we get older?",
+    "options": ["That we must gradually decline and eventually die of old age", "That we will live for ever", "That we grow stronger with age", "That age has no limit at all"],
+    "answer_index": 0
+  },
+  "passage": "At the age of twelve, the human body is at its most vigorous. It has yet to reach its full size and strength, and its owner has yet to reach full intelligence; but at this age the likelihood of death is at its lowest. Earlier, as infants and small children, we were far more vulnerable; later, we shall undergo a slow, progressive loss of vigor and resistance which, though imperceptible at first, will in the end grow so steep that we can live no longer — however well we look after ourselves, and however well society and our doctors look after us. This decline in vigor with the passing of time is called aging, and it is one of the most unwelcome discoveries any of us ever makes. We all learn, sooner or later, that we must decline in this way; that if we escape wars, accidents, and disease we shall in the end 'die of old age'; and that this happens at a rate which varies little from person to person, so that the odds are heavy in favor of our dying between the ages of sixty-five and eighty. A few will die sooner, and a few will live on into a ninth or tenth decade — but the chances are against it, and there is a virtual limit on how long we can hope to remain alive, however lucky and robust we are. People tend to forget this process unless and until they are reminded of it. For years, many assumed that the steady loss of vigor was self-evident, like the cooling of a hot kettle or the wearing-out of a pair of shoes; that all animals, and perhaps other organisms such as trees, must in the nature of things wear out. It is true that most animals age much as we do, if given the chance to live long enough, and that machines like a wound watch, or the sun itself, do run out of energy. But these are not really analogous to what happens when a person ages. A run-down watch is still a watch and can be rewound; an old, worn watch, by contrast, becomes so unreliable that it is finally not worth mending. Yet a watch could never repair itself, for it has no living parts — only metal, which slowly wears away by friction. We, once, could repair ourselves, well enough at least to overcome all but the most instantly fatal illnesses; and it is precisely this power that we gradually lose between the ages of twelve and eighty.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "At the age of twelve, the human body is at its most vigorous. It has yet to reach its full size and strength, and its owner has yet to reach full intelligence; but at this age the likelihood of death is at its lowest. Earlier, as infants and small children, we were far more vulnerable.", "text_cn": "十二岁时,人的身体最为强健。它还没长到最大、最壮,主人的智力也还没发育到极致;可正是在这个年纪,死亡的可能性降到最低。更早的时候,我们还是婴儿和幼童,要脆弱得多。" },
+    { "seq": 2, "speaker": null, "text_en": "Later, we shall undergo a slow, progressive loss of vigor and resistance which, though imperceptible at first, will in the end grow so steep that we can live no longer — however well we look after ourselves, and however well society and our doctors look after us. This decline in vigor with the passing of time is called aging, and it is one of the most unwelcome discoveries any of us ever makes.", "text_cn": "再往后,我们将经历活力与抵抗力缓慢而持续的丧失——这种丧失起初难以察觉,最终却陡峭到我们再也活不下去,无论我们怎样善待自己,无论社会和医生怎样照料我们。这种随时间推移而来的活力衰退,就叫衰老,它是我们任何人所能发现的、最令人不快的事情之一。" },
+    { "seq": 3, "speaker": null, "text_en": "We all learn, sooner or later, that we must decline in this way; that if we escape wars, accidents, and disease we shall in the end 'die of old age'; and that this happens at a rate which varies little from person to person, so that the odds are heavy in favor of our dying between the ages of sixty-five and eighty. A few will die sooner, and a few will live on into a ninth or tenth decade — but the chances are against it, and there is a virtual limit on how long we can hope to remain alive, however lucky and robust we are.", "text_cn": "我们迟早都会明白:我们注定要这样衰退;倘若躲过战争、意外和疾病,我们终将‘老死’;而且这一过程发生的速度因人而异极小,以至于我们多半会在六十五到八十岁之间死去。少数人会死得更早,少数人会活到九十、一百岁——但概率对此不利;无论我们多么幸运、多么强健,我们能指望活多久,都有一个几乎确定的上限。" },
+    { "seq": 4, "speaker": null, "text_en": "People tend to forget this process unless and until they are reminded of it. For years, many assumed that the steady loss of vigor was self-evident, like the cooling of a hot kettle or the wearing-out of a pair of shoes; that all animals, and perhaps other organisms such as trees, must in the nature of things wear out. It is true that most animals age much as we do, if given the chance to live long enough, and that machines like a wound watch, or the sun itself, do run out of energy.", "text_cn": "人们往往会忘记这个过程,除非、也直到被提醒。多年来,许多人想当然地以为,活力的稳步流失是不言自明的,就像热水壶变凉、鞋子磨破;以为一切动物、也许还有树木之类的别的生物,按事物的本性都必然会‘磨损殆尽’。诚然,多数动物只要有机会活得够久,衰老的方式与我们大同小异;上了发条的钟表、乃至太阳本身,也确实会耗尽能量。" },
+    { "seq": 5, "speaker": null, "text_en": "But these are not really analogous to what happens when a person ages. A run-down watch is still a watch and can be rewound; an old, worn watch, by contrast, becomes so unreliable that it is finally not worth mending. Yet a watch could never repair itself, for it has no living parts — only metal, which slowly wears away by friction. We, once, could repair ourselves, well enough at least to overcome all but the most instantly fatal illnesses; and it is precisely this power that we gradually lose between the ages of twelve and eighty.", "text_cn": "可这些与人衰老时发生的事,并不真正类似。一只走停了的表仍是一只表,还能重新上弦;而一只又旧又磨损的表,则会变得太不可靠,终至不值得修理。然而表永远无法自我修复,因为它没有活的部件——只有金属,靠摩擦慢慢磨去。而我们,曾经能够自我修复,至少足以战胜除最猝然致命者以外的一切疾病;我们在十二岁到八十岁之间逐渐失去的,正是这种能力。" }
+  ],
+  "words": [
+    { "word": "likelihood", "ipa": "/ˈlaɪklihʊd/", "pos": "n", "meaning_cn": "可能性", "example": "the likelihood of death is least" },
+    { "word": "infant", "ipa": "/ˈɪnfənt/", "pos": "n", "meaning_cn": "婴儿", "example": "as infants and small children" },
+    { "word": "vulnerable", "ipa": "/ˈvʌlnərəbl/", "pos": "adj", "meaning_cn": "脆弱的,易受伤的", "example": "we were far more vulnerable" },
+    { "word": "imperceptible", "ipa": "/ˌɪmpərˈseptəbl/", "pos": "adj", "meaning_cn": "察觉不到的,细微的", "example": "though imperceptible at first" },
+    { "word": "steep", "ipa": "/stiːp/", "pos": "adj", "meaning_cn": "陡峭的,急剧的", "example": "grow so steep that we can live no longer" },
+    { "word": "odds", "ipa": "/ɑːdz/", "pos": "n", "meaning_cn": "可能性,几率", "example": "the odds are heavy in favor of it" },
+    { "word": "virtual", "ipa": "/ˈvɜːrtʃuəl/", "pos": "adj", "meaning_cn": "几乎确定的,实际上的", "example": "a virtual limit on how long we live" },
+    { "word": "robust", "ipa": "/roʊˈbʌst/", "pos": "adj", "meaning_cn": "强健的,结实的", "example": "however lucky and robust we are" },
+    { "word": "organism", "ipa": "/ˈɔːrɡənɪzəm/", "pos": "n", "meaning_cn": "生物,有机体", "example": "other organisms such as trees" },
+    { "word": "friction", "ipa": "/ˈfrɪkʃn/", "pos": "n", "meaning_cn": "摩擦", "example": "wears away by friction" },
+    { "word": "vigor", "ipa": "/ˈvɪɡər/", "pos": "n", "meaning_cn": "活力,精力", "example": "a progressive loss of vigor" },
+    { "word": "decline", "ipa": "/dɪˈklaɪn/", "pos": "n", "meaning_cn": "衰退,下降", "example": "this decline in vigor is called aging" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "最高级(at its most / …est)" },
+    { "gp": "gp2", "name": "have yet to do(尚未…)" },
+    { "gp": "gp3", "name": "though 引导让步" },
+    { "gp": "gp4", "name": "if + 过去分词(省略)" },
+    { "gp": "gp5", "name": "worth + 动名词" },
+    { "gp": "gp6", "name": "词汇辨析(likelihood/vulnerable/imperceptible)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"At twelve the human body is at ___ most vigorous.\"(‘最…’= at __ most + 形容词,填那个形容词性物主代词)", "stem_cn": "十二岁时人体最为强健。", "options": ["its", "it", "it's", "their"] },
+    { "gp": "gp1", "stem": "\"At this age the likelihood of death is ___.\"(‘最小’,little 的最高级)", "stem_cn": "在这个年纪,死亡的可能性最小。", "options": ["least", "less", "little", "lesser"] },
+    { "gp": "gp1", "stem": "\"Aging is one of the ___ unpleasant discoveries we make.\"(‘最…之一’,one of the + 最高级,填 unpleasant 前那个词)", "stem_cn": "衰老是我们所发现的最令人不快的事情之一。", "options": ["most", "more", "very", "much"] },
+    { "gp": "gp2", "stem": "\"At twelve the body has ___ to reach its full strength.\"(‘尚未…’= have __ to do,填那个表‘还没’的副词)", "stem_cn": "十二岁时,身体尚未长到最强壮。", "options": ["yet", "still", "ever", "already"] },
+    { "gp": "gp2", "stem": "\"Science has ___ to find a way to stop aging.\"(‘尚未…’的固定说法 have __ to do,填那个副词)", "stem_cn": "科学尚未找到阻止衰老的办法。", "options": ["yet", "still", "ever", "soon"] },
+    { "gp": "gp2", "stem": "\"The full cause of aging has yet ___ be discovered.\"(have yet + 不定式,填不定式符号)", "stem_cn": "衰老的全部成因尚待发现。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp3", "stem": "\"The loss of vigor, ___ imperceptible at first, becomes steep.\"(‘虽然’,让步连词,插在两逗号间)", "stem_cn": "活力的丧失,虽起初难以察觉,最终却变得陡峭。", "options": ["though", "because", "unless", "since"] },
+    { "gp": "gp3", "stem": "\"___ lucky and robust, no one can live for ever.\"(‘虽然/尽管’,让步连词置于句首)", "stem_cn": "纵然幸运又强健,也没人能永生。", "options": ["Though", "Because", "Unless", "So"] },
+    { "gp": "gp3", "stem": "\"An old watch, ___ still a watch, is worn and unreliable.\"(‘虽然’,让步连词)", "stem_cn": "一只旧表虽然仍是表,却已磨损、不可靠。", "options": ["though", "because", "unless", "if"] },
+    { "gp": "gp4", "stem": "\"Most animals age too, if ___ the chance to live long enough.\"(if + 过去分词(省略),‘如果被给予’,填‘给’那个动词的过去分词)", "stem_cn": "多数动物只要有机会活得够久,也会衰老。", "options": ["given", "giving", "gave", "to give"] },
+    { "gp": "gp4", "stem": "\"The body declines, if ___ to constant strain.\"(if + 过去分词(省略),被动‘如果被暴露于’,填‘使暴露/使接触’那个动词的过去分词)", "stem_cn": "身体若长期受压,便会衰退。", "options": ["exposed", "exposing", "expose", "to expose"] },
+    { "gp": "gp4", "stem": "\"The illness, if ___ early, can often be overcome.\"(if + 过去分词(省略),‘如果被治疗’,填‘治疗’那个动词的过去分词)", "stem_cn": "那病若及早治疗,往往可以战胜。", "options": ["treated", "treating", "treat", "to treat"] },
+    { "gp": "gp5", "stem": "\"An old watch becomes so worn that it is not worth ___.\"(worth + 动名词,‘值得修’,填‘修理’那个动词的动名词)", "stem_cn": "旧表磨损太甚,已不值得修理。", "options": ["mending", "mended", "mend", "to mend"] },
+    { "gp": "gp5", "stem": "\"The topic is well worth ___ in more detail.\"(worth + 动名词,‘值得研究’,填‘研究’那个动词的动名词)", "stem_cn": "这个话题很值得更细致地探讨。", "options": ["studying", "studied", "study", "to study"] },
+    { "gp": "gp5", "stem": "\"Good health is worth ___ at any age.\"(worth + 动名词,‘值得拥有’,填‘拥有’那个动词的动名词)", "stem_cn": "健康在任何年纪都值得拥有。", "options": ["having", "had", "have", "to have"] },
+    { "gp": "gp6", "stem": "\"The chance or probability of something happening is the ___.\"(“可能性”用哪个词)", "stem_cn": "某事发生的机会或概率。", "options": ["likelihood", "neighborhood", "childhood", "brotherhood"] },
+    { "gp": "gp6", "stem": "\"Easily hurt, harmed, or attacked means ___.\"(“脆弱的,易受伤的”用哪个词)", "stem_cn": "容易受伤害或攻击的。", "options": ["vulnerable", "valuable", "variable", "veritable"] },
+    { "gp": "gp6", "stem": "\"So small or gradual that it cannot be noticed is ___.\"(“察觉不到的,细微的”用哪个词)", "stem_cn": "小或慢到无法察觉的。", "options": ["imperceptible", "impossible", "impatient", "imperfect"] }
+  ],
+  "stage6": [
+    { "stem": "likelihood 的意思是:", "options": ["可能性", "必然性", "偶然性", "重要性"] },
+    { "stem": "vulnerable 的意思是:", "options": ["脆弱的,易受伤的", "强壮的", "安全的", "独立的"] },
+    { "stem": "imperceptible 的意思是:", "options": ["察觉不到的,细微的", "明显的", "巨大的", "迅速的"] },
+    { "stem": "robust 的意思是:", "options": ["强健的,结实的", "虚弱的", "苗条的", "苍白的"] },
+    { "stem": "odds 的意思是:", "options": ["可能性,几率", "债务", "差异", "秩序"] },
+    { "stem": "organism 的意思是:", "options": ["生物,有机体", "器官", "机器", "矿物"] }
+  ],
+  "contrast": [
+    { "us": "aging", "uk": "ageing", "note_cn": "衰老;美语 aging,英式 ageing" },
+    { "us": "vigor", "uk": "vigour", "note_cn": "活力;美语 vigor,英式 vigour" },
+    { "us": "favor", "uk": "favour", "note_cn": "偏向,好处;美语 favor,英式 favour" },
+    { "us": "odor", "uk": "odour", "note_cn": "气味;美语 odor,英式 odour" }
+  ],
+  "chunks": [
+    { "us": "look after", "ipa": "/lʊk ˈæftər/", "example1": "However well we look after ourselves, we age.", "example1_cn": "无论怎样善待自己,我们都会衰老。", "example2": "She looks after the children.", "example2_cn": "她照看孩子们。" },
+    { "us": "run out of", "ipa": "/rʌn aʊt ʌv/", "example1": "A wound watch runs out of energy.", "example1_cn": "上了发条的表会耗尽能量。", "example2": "We ran out of time.", "example2_cn": "我们的时间用完了。" },
+    { "us": "in favor of", "ipa": "/ɪn ˈfeɪvər ʌv/", "example1": "The odds are in favor of dying between 65 and 80.", "example1_cn": "概率偏向于在65至80岁之间死去。", "example2": "He argued in favor of the plan.", "example2_cn": "他赞成这个计划。" },
+    { "us": "die of", "ipa": "/daɪ ʌv/", "example1": "Many of us will die of old age.", "example1_cn": "我们许多人会老死。", "example2": "He died of a fever.", "example2_cn": "他死于高烧。" }
+  ],
+  "stage7_cloze": {
+    "context": "At twelve the human body is at ___1___ most vigorous, and the likelihood of death is least. The body has ___2___ to reach full strength, but already stands near the peak. The loss of vigor, ___3___ imperceptible at first, grows steep. An old body is not worth ___4___ once the living parts wear out.",
+    "blanks": [
+      { "blank_no": 1, "options": ["its", "it", "it's", "their"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["yet", "still", "ever", "already"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["though", "because", "unless", "since"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["mending", "mended", "mend", "to mend"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What is one of the most unpleasant discoveries we make as we get older?", "options": ["That we must gradually decline and eventually die of old age", "That we will live for ever", "That we grow stronger with age", "That age has no limit"] },
+    { "stem": "At what age is the human body at its most vigorous, with the least likelihood of death?", "options": ["At about twelve years old", "At birth", "At sixty-five", "At eighty"] },
+    { "stem": "Why is human aging NOT like a run-down watch?", "options": ["A watch can be rewound or mended, but a worn-out body cannot repair itself", "A watch never stops", "A body has no moving parts", "A watch is alive"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"十二岁时人体最为强健\"(最高级 at its most):", "options": ["At twelve the human body is at its most vigorous.", "At twelve the human body is at it most vigorous.", "At twelve the human body is at its more vigorous.", "At twelve the human body is at the most vigorous of it."] },
+    { "stem": "你想说\"科学尚未找到阻止衰老的办法\"(have yet to do):", "options": ["Science has yet to find a way to stop aging.", "Science has yet find a way to stop aging.", "Science yet has to find a way to stop aging.", "Science has yet to finding a way to stop aging."] },
+    { "stem": "你想说\"旧表磨损太甚,已不值得修理\"(worth + 动名词):", "options": ["The old watch is so worn that it is not worth mending.", "The old watch is so worn that it is not worth to mend.", "The old watch is so worn that it is not worth mend.", "The old watch is so worn that it is not worth mended."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "likelihood 的意思是:", "options": ["可能性", "必然性", "偶然性", "重要性"] },
+    { "kind": "vocab", "stem": "robust 的意思是:", "options": ["强健的,结实的", "虚弱的", "苗条的", "苍白的"] },
+    { "kind": "grammar", "stem": "\"At twelve the human body is at ___ most vigorous.\"(‘最…’= at __ most + 形容词,填形容词性物主代词)", "stem_cn": "十二岁时人体最为强健。", "options": ["its", "it", "it's", "their"] },
+    { "kind": "grammar", "stem": "\"Science has ___ to find a way to stop aging.\"(‘尚未…’的固定说法,填那个副词)", "stem_cn": "科学尚未找到阻止衰老的办法。", "options": ["yet", "still", "ever", "soon"] },
+    { "kind": "scenario", "stem": "\"run out of\" 的意思是:", "options": ["用完,耗尽", "装满", "储存", "借来"] },
+    { "kind": "scenario", "stem": "\"look after\" 的意思是:", "options": ["照顾,照看", "抛弃", "寻找", "跟随"] },
+    { "kind": "reading", "stem": "According to the passage, what is aging?", "options": ["The progressive loss of vigor and resistance with the passing of time", "A sudden illness", "A choice people make", "Something only animals do"], "passage": true },
+    { "kind": "reading", "stem": "Why can a worn-out human body not be 'mended' like a machine?", "options": ["It consists of living parts that can no longer repair themselves", "It is made of metal", "It has no moving parts", "Machines are alive too"], "passage": true },
+    { "kind": "listening", "stem": "Between roughly which ages are the odds heaviest that we will die of old age?", "options": ["Between about sixty-five and eighty", "Between twelve and twenty", "Between one and ten", "After a hundred"], "audio": true },
+    { "kind": "listening", "stem": "What can a young body do that an old body gradually loses the power to do?", "options": ["Repair itself well enough to overcome all but the most fatal illnesses", "Stop the passing of time", "Live for ever", "Grow a whole new body"], "audio": true }
+  ]
+}

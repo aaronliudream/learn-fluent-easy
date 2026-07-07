@@ -1,0 +1,133 @@
+{
+  "id": "am3_l35",
+  "unit_no": 7,
+  "lesson_no": 35,
+  "title_en": "Justice Was Done",
+  "title_cn": "伸张正义",
+  "grammar_focus": "间接引语(say/believe + that;ask/want to know + if)、the moment / now that 引导的从句、名词复数 -y 的变化规则(元音+y→s;辅音+y→ies)、过去完成时的被动 had been done、过去完成时在叙事中(had done)(原创承载 NCE3 L35 考点·无实质净化:'正义'两义的思辨随文保留,例证为一名企图行窃者卡在烟囱里被消防员救出的滑稽报应喜剧,非暴力·无凶器;美式化 jewelry/fire department/firefighters)",
+  "scene": "“正义”这个词通常和法院联系在一起。当一个人的清白或罪责被毫无疑问地证实时,我们会说正义得到了伸张。正义是复杂法律机器的一部分。追寻它的人踏上的是一段艰苦的旅程,而且永远无法确定自己能不能找到它。法官无论多么睿智、多么杰出,终究是人,也会犯错。但在极少数情况下,正义几乎不再是个抽象的概念。奖赏或惩罚被派定下来,完全不需要人为的干涉。这种时候,正义就像一股活生生的力量。当我们说出“他活该”这样一句话时,我们其实在某种程度上承认:某一系列情形让正义自行发挥了作用。一天早晨,一个企图行窃的人被逮在了一家大珠宝店的房子里,店员们大概怎么也忍不住要说一句“他活该”。这家店是一座老式改建的房子,有许多又大又废弃不用的壁炉,还有又高又窄的烟囱。快到中午时,一个姑娘听见一堵墙后传来一阵闷闷的叫喊声。喊声反复响了好几次,她连忙跑去告诉经理,经理立刻拨通了消防队。喊声肯定是从其中一个烟囱里传出来的,可烟囱那么多,消防员一时也拿不准是哪一个。他们靠敲墙、听那人喊叫,终于找准了那个烟囱。凿穿了一堵十八英寸厚的墙后,他们发现有个人被困在了烟囱里。烟囱极窄,那人动弹不得,消防员最后在墙上凿了个大洞才把他救了出来。那个灰头土脸、狼狈不堪的身影一钻出来,就立刻承认自己夜里想溜进店里,却卡在了烟囱里,已经在里面待了将近十个小时。甚至在这人被交给警察之前,正义就已经得到了伸张。",
+  "grammar_card": {
+    "title": "间接引语 / the moment · now that / 名词复数 -y 规则 / had been done / had done",
+    "intro": "①间接引语:陈述用 say/believe + that;一般疑问用 ask/want to know + if。主句是过去时,从句往往用过去或过去完成。②the moment=一…就…;now that=既然、现在既已…。③名词复数:元音字母+y 直接加 s(chimney→chimneys);辅音字母+y 把 y 变 i 再加 es(baby→babies)。④过去完成时的被动:had been + 过去分词(had been trapped)。⑤叙事里,比过去更早发生的事用 had + 过去分词(had tried, had gotten stuck)。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["say/believe + that;ask + if", "间接引语", "admitted that he had tried"],
+        ["the moment / now that", "一…就 / 既然", "the moment he heard the cry"],
+        ["元音+y→s;辅音+y→ies", "名词复数", "chimneys / babies"],
+        ["had been done / had done", "被…了 / 更早做过", "a man had been trapped"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "名词复数看 y 前面:元音字母(a e i o u)+y 直接加 s(day→days, chimney→chimneys);辅音字母+y 把 y 变 i 再加 es(baby→babies, victory→victories)。", "mark": "-y 复数规则" },
+      { "rule": "叙事中,比过去某事更早发生的动作用过去完成时 had + 过去分词;被动则用 had been + 过去分词。", "mark": "had done / had been done" },
+      { "rule": "美式:jewelry(英式 jewellery)、fire department(英式 fire brigade)、firefighter、story(楼层,英式 storey)。本课已按美语写。", "mark": "jewelry / fire department" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How was 'justice done' before the police arrived?",
+    "options": ["The would-be thief got trapped in the chimney he climbed into", "A judge ruled on the case very quickly", "The thief confessed to a friend", "The store simply gave him a fine"],
+    "answer_index": 0
+  },
+  "passage": "The word justice is usually associated with courts of law. We might say that justice has been done when a person's innocence or guilt has been proved beyond doubt. Justice is part of the complex machinery of the law. Those who seek it undertake an arduous journey and can never be sure that they will find it. Judges, however wise or eminent, are human and can make mistakes. There are rare instances when justice almost ceases to be an abstract concept. Reward or punishment is dealt out quite independent of human interference. At such times, justice acts like a living force. When we use a phrase like 'it serves him right', we are, in part, admitting that a certain set of circumstances has enabled justice to act of its own accord. When a would-be thief was caught on the premises of a large jewelry store one morning, the clerks must have found it impossible to resist the temptation to say 'it serves him right'. The shop was an old converted house with many large, disused fireplaces and tall, narrow chimneys. Toward midday, a girl heard a muffled cry coming from behind one of the walls. As the cry was repeated several times, she ran to tell the manager, who promptly called the fire department. The cry had certainly come from one of the chimneys, but as there were so many of them, the firefighters could not be certain which one it was. They located the right chimney by tapping at the walls and listening for the man's cries. After chipping through a wall that was eighteen inches thick, they found that a man had been trapped in the chimney. As it was extremely narrow, the man was unable to move, but the firefighters were eventually able to free him by cutting a large hole in the wall. The sorry-looking, blackened figure that emerged admitted at once that he had tried to sneak into the shop during the night but had gotten stuck in the chimney. He had been there for nearly ten hours. Justice had been done even before the man was handed over to the police.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "The word justice is usually associated with courts of law. We might say that justice has been done when a person's innocence or guilt has been proved beyond doubt. Justice is part of the complex machinery of the law. Those who seek it undertake an arduous journey and can never be sure that they will find it. Judges, however wise or eminent, are human and can make mistakes.", "text_cn": "“正义”这个词通常和法院联系在一起。当一个人的清白或罪责被毫无疑问地证实时,我们会说正义得到了伸张。正义是复杂法律机器的一部分。追寻它的人踏上的是一段艰苦的旅程,而且永远无法确定自己能不能找到它。法官无论多么睿智、多么杰出,终究是人,也会犯错。" },
+    { "seq": 2, "speaker": null, "text_en": "There are rare instances when justice almost ceases to be an abstract concept. Reward or punishment is dealt out quite independent of human interference. At such times, justice acts like a living force. When we use a phrase like 'it serves him right', we are, in part, admitting that a certain set of circumstances has enabled justice to act of its own accord.", "text_cn": "但在极少数情况下,正义几乎不再是个抽象的概念。奖赏或惩罚被派定下来,完全不需要人为的干涉。这种时候,正义就像一股活生生的力量。当我们说出“他活该”这样一句话时,我们其实在某种程度上承认:某一系列情形让正义自行发挥了作用。" },
+    { "seq": 3, "speaker": null, "text_en": "When a would-be thief was caught on the premises of a large jewelry store one morning, the clerks must have found it impossible to resist the temptation to say 'it serves him right'. The shop was an old converted house with many large, disused fireplaces and tall, narrow chimneys. Toward midday, a girl heard a muffled cry coming from behind one of the walls.", "text_cn": "一天早晨,一个企图行窃的人被逮在了一家大珠宝店的房子里,店员们大概怎么也忍不住要说一句“他活该”。这家店是一座老式改建的房子,有许多又大又废弃不用的壁炉,还有又高又窄的烟囱。快到中午时,一个姑娘听见一堵墙后传来一阵闷闷的叫喊声。" },
+    { "seq": 4, "speaker": null, "text_en": "As the cry was repeated several times, she ran to tell the manager, who promptly called the fire department. The cry had certainly come from one of the chimneys, but as there were so many of them, the firefighters could not be certain which one it was. They located the right chimney by tapping at the walls and listening for the man's cries. After chipping through a wall that was eighteen inches thick, they found that a man had been trapped in the chimney.", "text_cn": "喊声反复响了好几次,她连忙跑去告诉经理,经理立刻拨通了消防队。喊声肯定是从其中一个烟囱里传出来的,可烟囱那么多,消防员一时也拿不准是哪一个。他们靠敲墙、听那人喊叫,终于找准了那个烟囱。凿穿了一堵十八英寸厚的墙后,他们发现有个人被困在了烟囱里。" },
+    { "seq": 5, "speaker": null, "text_en": "As it was extremely narrow, the man was unable to move, but the firefighters were eventually able to free him by cutting a large hole in the wall. The sorry-looking, blackened figure that emerged admitted at once that he had tried to sneak into the shop during the night but had gotten stuck in the chimney. He had been there for nearly ten hours. Justice had been done even before the man was handed over to the police.", "text_cn": "烟囱极窄,那人动弹不得,消防员最后在墙上凿了个大洞才把他救了出来。那个灰头土脸、狼狈不堪的身影一钻出来,就立刻承认自己夜里想溜进店里,却卡在了烟囱里,已经在里面待了将近十个小时。甚至在这人被交给警察之前,正义就已经得到了伸张。" }
+  ],
+  "words": [
+    { "word": "justice", "ipa": "/ˈdʒʌstɪs/", "pos": "n", "meaning_cn": "正义,公正", "example": "justice has been done" },
+    { "word": "innocence", "ipa": "/ˈɪnəsəns/", "pos": "n", "meaning_cn": "无辜,清白", "example": "a person's innocence or guilt" },
+    { "word": "undertake", "ipa": "/ˌʌndərˈteɪk/", "pos": "v", "meaning_cn": "承担;着手做", "example": "undertake an arduous journey" },
+    { "word": "arduous", "ipa": "/ˈɑːrdʒuəs/", "pos": "adj", "meaning_cn": "艰苦的,艰难的", "example": "an arduous journey" },
+    { "word": "abstract", "ipa": "/ˈæbstrækt/", "pos": "adj", "meaning_cn": "抽象的", "example": "an abstract concept" },
+    { "word": "concept", "ipa": "/ˈkɑːnsept/", "pos": "n", "meaning_cn": "概念,观念", "example": "an abstract concept" },
+    { "word": "interference", "ipa": "/ˌɪntərˈfɪrəns/", "pos": "n", "meaning_cn": "干涉", "example": "independent of human interference" },
+    { "word": "premises", "ipa": "/ˈpremɪsɪz/", "pos": "n", "meaning_cn": "房屋,场所", "example": "on the premises of the store" },
+    { "word": "disused", "ipa": "/dɪsˈjuːzd/", "pos": "adj", "meaning_cn": "不再用的,废弃的", "example": "disused fireplaces" },
+    { "word": "muffle", "ipa": "/ˈmʌfəl/", "pos": "v", "meaning_cn": "捂住,压抑(声音)", "example": "a muffled cry" },
+    { "word": "chip", "ipa": "/tʃɪp/", "pos": "v", "meaning_cn": "砍,削,凿", "example": "chipping through a wall" },
+    { "word": "emerge", "ipa": "/ɪˈmɜːrdʒ/", "pos": "v", "meaning_cn": "(从某处)出现", "example": "the figure that emerged" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "间接引语(say/believe + that;ask + if)" },
+    { "gp": "gp2", "name": "the moment / now that 引导的从句" },
+    { "gp": "gp3", "name": "名词复数 -y 的变化规则" },
+    { "gp": "gp4", "name": "过去完成时的被动 had been done" },
+    { "gp": "gp5", "name": "过去完成时在叙事中(had done)" },
+    { "gp": "gp6", "name": "词汇辨析(arduous/muffle/emerge)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He said that justice ___ been done.\"(间接引语,主句是过去时,从句该用哪个助动词)", "stem_cn": "他说正义已经得到了伸张。", "options": ["had", "has", "have", "is"] },
+    { "gp": "gp1", "stem": "\"He wants to know ___ the man was caught.\"(间接一般疑问用哪个词引导)", "stem_cn": "他想知道那人是否被抓住了。", "options": ["if", "that", "what", "does"] },
+    { "gp": "gp1", "stem": "\"She believes ___ the thief got what he deserved.\"(间接陈述用哪个词引导)", "stem_cn": "她认为那贼是罪有应得。", "options": ["that", "if", "whether", "what"] },
+    { "gp": "gp2", "stem": "\"___ the fire fighters arrived, they began tapping the walls.\"(\"一…就…\"用哪个)", "stem_cn": "消防员一到,就开始敲墙。", "options": ["The moment", "While", "Although", "Unless"] },
+    { "gp": "gp2", "stem": "\"___ you have finished, you may go home.\"(\"既然、现在既已…\"用哪个)", "stem_cn": "既然你做完了,可以回家了。", "options": ["Now that", "In case", "So that", "As if"] },
+    { "gp": "gp2", "stem": "\"___ he heard the cry, he ran to tell the manager.\"(\"一听到…就…\"用哪个)", "stem_cn": "他一听到喊声,就跑去告诉经理。", "options": ["The moment", "Because of", "In order", "Despite"] },
+    { "gp": "gp3", "stem": "\"The house had many tall, narrow ___.\"(元音字母+y 结尾,复数直接加 s)", "stem_cn": "那房子有许多又高又窄的烟囱。", "options": ["chimneys", "chimnies", "chimney", "chimneies"] },
+    { "gp": "gp3", "stem": "\"The two ___ played in the yard.\"(辅音字母+y 结尾,复数 y 变 i 再加 es)", "stem_cn": "两个婴儿在院子里玩。", "options": ["babies", "babys", "babyes", "baby"] },
+    { "gp": "gp3", "stem": "\"They won several ___ that year.\"(辅音字母+y 结尾,复数 y 变 i 再加 es)", "stem_cn": "那一年他们赢了好几场胜利。", "options": ["victories", "victorys", "victoryes", "victory"] },
+    { "gp": "gp4", "stem": "\"The fire fighters found that a man ___ trapped in the chimney.\"(过去完成时的被动,填助动词部分)", "stem_cn": "消防员发现有个人被困在了烟囱里。", "options": ["had been", "had", "was been", "has been"] },
+    { "gp": "gp4", "stem": "\"Justice ___ done even before he was handed to the police.\"(过去完成时的被动,填助动词部分)", "stem_cn": "甚至在他被交给警察之前,正义就已伸张。", "options": ["had been", "has been", "was being", "had"] },
+    { "gp": "gp4", "stem": "\"The wall ___ chipped through by the fire fighters.\"(过去完成时的被动,填助动词部分)", "stem_cn": "那堵墙已被消防员凿穿。", "options": ["had been", "had", "was been", "has"] },
+    { "gp": "gp5", "stem": "\"He admitted that he ___ tried to sneak in during the night.\"(叙述比过去更早发生的事,填助动词)", "stem_cn": "他承认自己夜里曾试图溜进去。", "options": ["had", "has", "was", "did"] },
+    { "gp": "gp5", "stem": "\"By the time help came, he ___ been stuck for ten hours.\"(\"到那时之前已经…\",填助动词)", "stem_cn": "等救援赶到,他已被卡了十个小时。", "options": ["had", "has", "was", "would"] },
+    { "gp": "gp5", "stem": "\"The figure admitted he ___ gotten stuck in the chimney.\"(叙述比过去更早的事,填助动词)", "stem_cn": "那身影承认自己卡在了烟囱里。", "options": ["had", "has", "was", "is"] },
+    { "gp": "gp6", "stem": "\"A long and very difficult journey is an ___ one.\"(\"艰苦的、艰难的\"用哪个词)", "stem_cn": "又长又难的旅程。", "options": ["arduous", "easy", "short", "pleasant"] },
+    { "gp": "gp6", "stem": "\"To wrap something so its sound is deadened is to ___ it.\"(\"捂住、压抑(声音)\"用哪个词)", "stem_cn": "把声音捂住、压低。", "options": ["muffle", "amplify", "ring", "break"] },
+    { "gp": "gp6", "stem": "\"When a blackened figure came out of the chimney, it ___.\"(\"(从某处)出现\"用哪个词)", "stem_cn": "一个黑乎乎的身影从烟囱里现了出来。", "options": ["emerged", "vanished", "slept", "fell"] }
+  ],
+  "stage6": [
+    { "stem": "justice 的意思是:", "options": ["正义,公正", "混乱", "秘密", "幸运"] },
+    { "stem": "innocence 的意思是:", "options": ["无辜,清白", "罪行", "勇气", "财富"] },
+    { "stem": "abstract 的意思是:", "options": ["抽象的", "具体的", "廉价的", "危险的"] },
+    { "stem": "concept 的意思是:", "options": ["概念,观念", "事故", "礼物", "命令"] },
+    { "stem": "premises 的意思是:", "options": ["房屋,场所", "承诺", "礼物", "困难"] },
+    { "stem": "emerge 的意思是:", "options": ["(从某处)出现", "消失", "入睡", "坠落"] }
+  ],
+  "contrast": [
+    { "us": "jewelry", "uk": "jewellery", "note_cn": "珠宝;拼写差异,美语 jewelry" },
+    { "us": "fire department", "uk": "fire brigade", "note_cn": "消防队;美语 fire department,英式 fire brigade" },
+    { "us": "store", "uk": "shop", "note_cn": "商店;美语 store,英式 shop" },
+    { "us": "story", "uk": "storey", "note_cn": "楼层;美语 story,英式 storey" }
+  ],
+  "chunks": [
+    { "us": "it serves him right", "ipa": "/ɪt sɜːrvz hɪm raɪt/", "example1": "He got stuck? It serves him right!", "example1_cn": "他卡住了?活该!", "example2": "It serves you right for cheating.", "example2_cn": "你作弊,活该。" },
+    { "us": "of its own accord", "ipa": "/əv ɪts oʊn əˈkɔːrd/", "example1": "Justice acted of its own accord.", "example1_cn": "正义自行发挥了作用。", "example2": "The door opened of its own accord.", "example2_cn": "门自己开了。" },
+    { "us": "hand over", "ipa": "/hænd ˈoʊvər/", "example1": "The man was handed over to the police.", "example1_cn": "那人被交给了警察。", "example2": "Please hand over your ticket.", "example2_cn": "请交出你的票。" },
+    { "us": "beyond doubt", "ipa": "/bɪˈjɑːnd daʊt/", "example1": "His guilt was proved beyond doubt.", "example1_cn": "他的罪责被毫无疑问地证实了。", "example2": "The result is true beyond doubt.", "example2_cn": "这结果确凿无疑。" }
+  ],
+  "stage7_cloze": {
+    "context": "The word justice is usually linked with courts of law. Sometimes, though, justice seems to act ___1___ its own accord. One morning a would-be thief was caught on the ___2___ of a jewelry store. A girl heard a muffled cry; the fire fighters found that a man ___3___ been trapped in a chimney. He admitted he ___4___ tried to sneak in during the night. Justice had been done.",
+    "blanks": [
+      { "blank_no": 1, "options": ["of", "in", "by", "for"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["premises", "chimneys", "judges", "concepts"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["had", "has", "was", "is"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["had", "has", "was", "does"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where was the would-be thief found?", "options": ["Trapped in a chimney of the store", "In a locked room", "On the roof", "In a police car"] },
+    { "stem": "How did the fire fighters locate the right chimney?", "options": ["By tapping the walls and listening for his cries", "By using a map", "By asking the thief", "By counting all the chimneys"] },
+    { "stem": "How long had the man been stuck?", "options": ["Nearly ten hours", "A few minutes", "About two days", "Just one hour"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"她认为那贼是罪有应得\"(间接陈述 that):", "options": ["She believes that the thief got what he deserved.", "She believes if the thief got what he deserved.", "She believes what the thief got what he deserved.", "She believes the thief that got what he deserved."] },
+    { "stem": "你想说\"既然你做完了,可以回家了\"(now that):", "options": ["Now that you have finished, you may go home.", "Now if you have finished, you may go home.", "Now which you have finished, you may go home.", "Now that you are finish, you may go home."] },
+    { "stem": "你想说\"他承认自己夜里曾试图溜进去\"(过去完成 had done):", "options": ["He admitted that he had tried to sneak in during the night.", "He admitted that he has tried to sneak in during the night.", "He admitted that he tried had to sneak in during the night.", "He admitted that he was tried to sneak in during the night."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "justice 的意思是:", "options": ["正义,公正", "混乱", "秘密", "幸运"] },
+    { "kind": "vocab", "stem": "emerge 的意思是:", "options": ["(从某处)出现", "消失", "入睡", "坠落"] },
+    { "kind": "grammar", "stem": "\"The fire fighters found that a man ___ trapped in the chimney.\"(过去完成时的被动,填助动词部分)", "stem_cn": "消防员发现有个人被困在了烟囱里。", "options": ["had been", "had", "was been", "has been"] },
+    { "kind": "grammar", "stem": "\"___ you have finished, you may go.\"(\"既然\"用哪个)", "stem_cn": "既然你做完了,可以走了。", "options": ["Now that", "In case", "So that", "As if"] },
+    { "kind": "scenario", "stem": "\"it serves him right\" 的意思是:", "options": ["他是活该、罪有应得", "这对他有好处", "他做得对", "请为他服务"] },
+    { "kind": "scenario", "stem": "\"hand over\" 的意思是:", "options": ["交出,移交", "举手", "挥手", "亲手做"] },
+    { "kind": "reading", "stem": "According to the passage, when does justice seem to act 'of its own accord'?", "options": ["When circumstances punish a wrongdoer without human interference", "When a judge makes a mistake", "When a thief is set free", "When the courts are closed"], "passage": true },
+    { "kind": "reading", "stem": "Why did the shop have so many chimneys?", "options": ["It was an old converted house with many disused fireplaces", "It was a large factory", "It had just been built", "It was a fire station"], "passage": true },
+    { "kind": "listening", "stem": "Who first heard the muffled cry?", "options": ["A girl in the shop", "The manager", "A police officer", "The thief's friend"], "audio": true },
+    { "kind": "listening", "stem": "What did the manager do after hearing about the cry?", "options": ["He promptly called the fire department", "He called the thief's family", "He ignored it completely", "He closed the shop"], "audio": true }
+  ]
+}

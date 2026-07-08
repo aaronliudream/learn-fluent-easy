@@ -290,7 +290,7 @@ export default function GaokaoReading() {
         <ArrowLeft className="size-4" /> <T>返回高考英语</T>
       </BackLink>
 
-      <PageHeader hideReviewBanner title="阅读理解训练" subtitle="按你的水平推荐文章 · 答题 → 评分 → 精读复盘" />
+      <PageHeader hideReviewBanner title="阅读理解训练" subtitle="按你的水平推荐文章 · 答题 → 评分 → 精读复盘" back />
 
       {gradeNum &&
       <ModuleStageTests segment="gaokao" grade={gradeNum} module="reading" />

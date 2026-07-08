@@ -1,0 +1,134 @@
+{
+  "id": "am4_l45",
+  "unit_no": 8,
+  "lesson_no": 45,
+  "title_en": "Of Men and Galaxies",
+  "title_cn": "人与星系",
+  "grammar_focus": "not so much A as B(与其说A不如说B)、与过去事实相反的虚拟(would have done)、must have done(对过去的肯定推测)、such … that(如此…以致)、过去分词作后置定语(the process envisioned / pages handed)(NCE4 该课源无独立 KS 页,考点由课文结构自取;IP:源为 Fred Hoyle《Of Men and Galaxies》一段论‘观念比武器更能塑造人的环境’的科普随笔,系版权作品——已用 100% 原创行文复述其观点、无引用原句;⚠️净化:原文‘焚烧异端’改为‘噤声压制’、‘核弹造法’淡化为‘一种危险技术举例’、殖民框架中性化;题材=思想史/科普·净化后无害;美语化 analyze/organize;第四册第45课)",
+  "scene": "在人类的早年,他与别的生物之间的竞争一定曾是生死攸关的。可我们发展的那个阶段早已结束。的确,如今我们全然没了应付原始环境的历练;若没有现代工具,我十分确信,自己去和一头熊争夺一个山洞的归属,会表现得非常糟糕——而且我想,这一点上我并不孤单。最后一个认真与人相争的生物是蚊子;而就连蚊子,也已因排水的整治与化学喷剂而大体被制服。然而,我们彼此之间的竞争——人对人、群体对群体——依旧存在,而且和从前一样激烈。可人与人之间的竞争,并不是生物学里所设想的那种简单过程。它不是为一份由物质世界所固定的、定量食物而进行的单纯争夺,因为如今塑造我们发展的环境,已不再本质上是物质性的。我们的环境,主要由我们所相信的东西所决定。摩洛哥与加利福尼亚是地球上纬度十分相近的两块地方,都在大陆的西海岸,气候相似,天然资源大概也相当接近;然而二者如今的发展却截然不同——与其说是因为土地有何差异,不如说是因为住在那里的人心中所想有别。我们环境中最重要的因素,是我们自己心智的状态。众所周知,当一种文化遇上另一种文化时,最具破坏力的影响,往往不是来自武器,而是来自观念。观念可能是危险的。早年间一个强大的权威深知这一点:它惧怕某些信念,便把持有这些信念的人打成异端,竭尽全力去将其噤声。的确,言论自由这一概念之所以能在一个社会里生长,正是因为当你身处一个群体之内时,你被它的种种成规塑造到如此程度,以致你很难构想出任何真正具有破坏力的东西。往往是一个从外面旁观的人,才能注入那危险的念头。我毫不怀疑,把某些观念引入现代世界、足以将它彻底改造,是完全可能的。也许只需想一想一种危险的技术,比如核弹:一份几页长的资料,若在1925年前后交到任何一个主要大国手里,很可能就足以改变整个世界历史的走向。这是个奇怪的念头,但我相信它是对的:二三十页的观念,就能把当今的世界搅个天翻地覆,甚至将其摧毁。在我们大脑被塑造成的那些特定模式之外,我们只能想出极其有限的一点点——而且惟有当我们极富原创性时才能做到。",
+  "grammar_card": {
+    "title": "not so much A as B / 与过去相反的虚拟 would have done / must have done / such … that / 过去分词作后置定语",
+    "intro": "①not so much A as B:‘与其说A不如说B’。②与过去事实相反的虚拟:主句用 would/could/might + have + 过去分词。③must have done:对过去的肯定推测,‘一定曾…’。④such + (a) + 名词 + that:‘如此…以致…’。⑤过去分词作后置定语:名词 + 过去分词短语,表被动完成(the process envisioned in biology)。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["not so much A as B", "not so much A as B", "not so much land as minds"],
+        ["与过去相反的虚拟", "would/could + have + 过去分词", "would have changed history"],
+        ["must have done", "must + have + 过去分词", "competition must have been critical"],
+        ["such … that", "such + (a) + 名词 + that", "such a degree that …"],
+        ["过去分词作后置定语", "名词 + 过去分词短语", "the process envisioned in biology"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "对过去的推测:must have done(肯定)/ may(might) have done(可能)/ can't have done(否定)。", "mark": "must have done" },
+      { "rule": "such 后接名词(such a degree、such power);so 后接形容词/副词(so great)。二者都可接 that 从句。", "mark": "such + 名词 + that" },
+      { "rule": "美式拼写:analyze(分析,英式 analyse)、organize(组织,英式 organise)。本课已按美语写。", "mark": "analyze / organize" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is the most influential factor in any human society?",
+    "options": ["The state of our own minds — the things we believe", "The amount of food available", "The climate and natural resources", "The weapons a society owns"],
+    "answer_index": 0
+  },
+  "passage": "In man's early days, his competition with other creatures must have been a matter of life and death. But that phase of our development is long over. Indeed, we now lack all practice in dealing with primitive conditions; without modern tools, I am quite sure I would make a very poor show of disputing the ownership of a cave with a bear, and in this I do not think I stand alone. The last creature to compete seriously with man was the mosquito — and even the mosquito has been largely subdued by attention to drainage and by chemical sprays. Competition among ourselves, person against person and community against community, still persists, however, and it is as fierce as it ever was. Yet the competition of man against man is not the simple process envisioned in biology. It is not a plain struggle for a fixed amount of food fixed by the physical world, because the environment that now shapes our development is no longer essentially physical. Our environment is chiefly conditioned by the things we believe. Morocco and California are patches of the Earth at very similar latitudes, both on the west coasts of continents, with similar climates and probably rather similar natural resources; yet their present development is wholly different — not so much because of any difference in the land as because of a difference in the minds of the people who live there. The most important factor in our environment is the state of our own minds. It is well known that where one culture has met another, the most destructive effects have often come not from physical weapons but from ideas. Ideas can be dangerous. A powerful authority of earlier ages understood this well: fearing certain beliefs, it branded those who held them heretics and did all it could to silence them. Indeed, the very concept of free speech can flourish in a society only because, when you are inside a community, you are conditioned by its conventions to such a degree that it is very difficult to conceive of anything truly destructive. It is usually someone looking on from outside who can inject the dangerous thought. I do not doubt that it would be possible to introduce into the modern world ideas that could utterly transform it. Perhaps it will suffice to think of a single dangerous technology, such as the nuclear bomb: a few pages of information, handed to any of the major world powers around the year 1925, might well have been enough to change the whole course of world history. It is a strange thought, but I believe a correct one, that twenty or thirty pages of ideas could turn the present-day world upside down, or even destroy it. Outside the particular patterns to which our brains are conditioned, we can think only a very little way — and then only if we are very original.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "In man's early days, his competition with other creatures must have been a matter of life and death. But that phase of our development is long over. Indeed, we now lack all practice in dealing with primitive conditions; without modern tools, I am quite sure I would make a very poor show of disputing the ownership of a cave with a bear, and in this I do not think I stand alone. The last creature to compete seriously with man was the mosquito — and even the mosquito has been largely subdued by attention to drainage and by chemical sprays.", "text_cn": "在人类的早年,他与别的生物之间的竞争一定曾是生死攸关的。可我们发展的那个阶段早已结束。的确,如今我们全然没了应付原始环境的历练;若没有现代工具,我十分确信,自己去和一头熊争夺一个山洞的归属,会表现得非常糟糕——而且我想,这一点上我并不孤单。最后一个认真与人相争的生物是蚊子;而就连蚊子,也已因排水的整治与化学喷剂而大体被制服。" },
+    { "seq": 2, "speaker": null, "text_en": "Competition among ourselves, person against person and community against community, still persists, however, and it is as fierce as it ever was. Yet the competition of man against man is not the simple process envisioned in biology. It is not a plain struggle for a fixed amount of food fixed by the physical world, because the environment that now shapes our development is no longer essentially physical. Our environment is chiefly conditioned by the things we believe.", "text_cn": "然而,我们彼此之间的竞争——人对人、群体对群体——依旧存在,而且和从前一样激烈。可人与人之间的竞争,并不是生物学里所设想的那种简单过程。它不是为一份由物质世界所固定的、定量食物而进行的单纯争夺,因为如今塑造我们发展的环境,已不再本质上是物质性的。我们的环境,主要由我们所相信的东西所决定。" },
+    { "seq": 3, "speaker": null, "text_en": "Morocco and California are patches of the Earth at very similar latitudes, both on the west coasts of continents, with similar climates and probably rather similar natural resources; yet their present development is wholly different — not so much because of any difference in the land as because of a difference in the minds of the people who live there. The most important factor in our environment is the state of our own minds.", "text_cn": "摩洛哥与加利福尼亚是地球上纬度十分相近的两块地方,都在大陆的西海岸,气候相似,天然资源大概也相当接近;然而二者如今的发展却截然不同——与其说是因为土地有何差异,不如说是因为住在那里的人心中所想有别。我们环境中最重要的因素,是我们自己心智的状态。" },
+    { "seq": 4, "speaker": null, "text_en": "It is well known that where one culture has met another, the most destructive effects have often come not from physical weapons but from ideas. Ideas can be dangerous. A powerful authority of earlier ages understood this well: fearing certain beliefs, it branded those who held them heretics and did all it could to silence them. Indeed, the very concept of free speech can flourish in a society only because, when you are inside a community, you are conditioned by its conventions to such a degree that it is very difficult to conceive of anything truly destructive.", "text_cn": "众所周知,当一种文化遇上另一种文化时,最具破坏力的影响,往往不是来自武器,而是来自观念。观念可能是危险的。早年间一个强大的权威深知这一点:它惧怕某些信念,便把持有这些信念的人打成异端,竭尽全力去将其噤声。的确,言论自由这一概念之所以能在一个社会里生长,正是因为当你身处一个群体之内时,你被它的种种成规塑造到如此程度,以致你很难构想出任何真正具有破坏力的东西。" },
+    { "seq": 5, "speaker": null, "text_en": "It is usually someone looking on from outside who can inject the dangerous thought. I do not doubt that it would be possible to introduce into the modern world ideas that could utterly transform it. A few pages of information, handed to any of the major world powers around the year 1925, might well have been enough to change the whole course of world history. Outside the particular patterns to which our brains are conditioned, we can think only a very little way — and then only if we are very original.", "text_cn": "往往是一个从外面旁观的人,才能注入那危险的念头。我毫不怀疑,把某些观念引入现代世界、足以将它彻底改造,是完全可能的。一份几页长的资料,若在1925年前后交到任何一个主要大国手里,很可能就足以改变整个世界历史的走向。在我们大脑被塑造成的那些特定模式之外,我们只能想出极其有限的一点点——而且惟有当我们极富原创性时才能做到。" }
+  ],
+  "words": [
+    { "word": "dispute", "ipa": "/dɪˈspjuːt/", "pos": "v", "meaning_cn": "争论,质疑", "example": "disputing the ownership of a cave" },
+    { "word": "mosquito", "ipa": "/məˈskiːtoʊ/", "pos": "n", "meaning_cn": "蚊子", "example": "the last creature to compete was the mosquito" },
+    { "word": "subdue", "ipa": "/səbˈduː/", "pos": "v", "meaning_cn": "制服,压制", "example": "the mosquito has been largely subdued" },
+    { "word": "drainage", "ipa": "/ˈdreɪnɪdʒ/", "pos": "n", "meaning_cn": "排水,排水设施", "example": "subdued by attention to drainage" },
+    { "word": "envision", "ipa": "/ɪnˈvɪʒn/", "pos": "v", "meaning_cn": "展望,设想", "example": "the simple process envisioned in biology" },
+    { "word": "Morocco", "ipa": "/məˈrɑːkoʊ/", "pos": "n", "meaning_cn": "摩洛哥", "example": "Morocco and California are at similar latitudes" },
+    { "word": "latitude", "ipa": "/ˈlætɪtuːd/", "pos": "n", "meaning_cn": "纬度", "example": "patches of the Earth at similar latitudes" },
+    { "word": "heretic", "ipa": "/ˈherətɪk/", "pos": "n", "meaning_cn": "异端者,持异见者", "example": "it branded those who held them heretics" },
+    { "word": "conceive", "ipa": "/kənˈsiːv/", "pos": "v", "meaning_cn": "构想,想象", "example": "difficult to conceive of anything destructive" },
+    { "word": "suffice", "ipa": "/səˈfaɪs/", "pos": "v", "meaning_cn": "足够,足以", "example": "it will suffice to think of one technology" },
+    { "word": "nuclear", "ipa": "/ˈnuːkliər/", "pos": "adj", "meaning_cn": "核的,原子能的", "example": "a single dangerous technology, the nuclear bomb" },
+    { "word": "original", "ipa": "/əˈrɪdʒənl/", "pos": "adj", "meaning_cn": "独创的,新颖的", "example": "only if we are very original" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "not so much A as B" },
+    { "gp": "gp2", "name": "与过去事实相反的虚拟(would have done)" },
+    { "gp": "gp3", "name": "must have done(对过去肯定推测)" },
+    { "gp": "gp4", "name": "such … that" },
+    { "gp": "gp5", "name": "过去分词作后置定语" },
+    { "gp": "gp6", "name": "词汇辨析(dispute/subdue/conceive)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Their development differs not so much because of resources ___ because of belief.\"(‘与其说…不如说…’= not so much A __ B,填连接 B 的那个词)", "stem_cn": "它们的差异,与其说源于资源,不如说源于信念。", "options": ["as", "than", "but", "so"] },
+    { "gp": "gp1", "stem": "\"The danger lies not so much in weapons ___ in ideas.\"(‘与其说A不如说B’,填连接 B 的那个词)", "stem_cn": "危险与其说在于武器,不如说在于观念。", "options": ["as", "than", "but", "or"] },
+    { "gp": "gp1", "stem": "\"Man's struggle is now not so ___ against nature as against himself.\"(‘与其说…不如说…’结构,填 not so 与 as 之间的那个词)", "stem_cn": "人如今的斗争,与其说是对抗自然,不如说是对抗自己。", "options": ["much", "many", "far", "long"] },
+    { "gp": "gp2", "stem": "\"A few pages of information ___ have been enough to change history in 1925.\"(与过去事实相反的虚拟,主句是‘情态动词 + have + 过去分词’,填那个情态动词)", "stem_cn": "1925年,几页资料本足以改变历史。", "options": ["would", "will", "shall", "do"] },
+    { "gp": "gp2", "stem": "\"If they had known the secret, they ___ have built the device.\"(if 从句用过去完成,主句用‘情态动词 + have + 过去分词’,填那个情态动词)", "stem_cn": "倘若他们知道那个秘密,本会造出那装置。", "options": ["would", "will", "must", "can"] },
+    { "gp": "gp2", "stem": "\"Handed such ideas, any great power would ___ turned the world upside down.\"(与过去相反的虚拟主句 would ___ done,填 would 与过去分词之间的那个词)", "stem_cn": "一旦得到这样的想法,任何大国本会把世界搅个天翻地覆。", "options": ["have", "has", "having", "had"] },
+    { "gp": "gp3", "stem": "\"In early times, competition with other creatures ___ have been critical.\"(对过去的肯定推测‘一定曾…’,填情态动词)", "stem_cn": "在远古,与别的生物竞争一定曾是生死攸关的。", "options": ["must", "would", "shall", "does"] },
+    { "gp": "gp3", "stem": "\"The last rival creature ___ have been the mosquito, now largely subdued.\"(‘一定曾是…’对过去肯定推测,填情态动词)", "stem_cn": "最后一个与人相争的生物一定曾是蚊子,如今已大体被制服。", "options": ["must", "will", "shall", "does"] },
+    { "gp": "gp3", "stem": "\"Ideas must have ___ more harm than weapons throughout history.\"(must + have + 过去分词,填‘引起’那个动词的过去分词)", "stem_cn": "纵观历史,观念造成的伤害一定比武器更多。", "options": ["caused", "cause", "causing", "to cause"] },
+    { "gp": "gp4", "stem": "\"A community conditions you to ___ a degree that destructive thoughts seem impossible.\"(to __ a degree that,‘到如此程度以致’,填 degree 前那个词)", "stem_cn": "群体对你的塑造达到如此程度,以致破坏性的念头都显得不可能。", "options": ["such", "so", "very", "too"] },
+    { "gp": "gp4", "stem": "\"It was ___ a dangerous idea that no one dared to speak it aloud.\"(‘如此(一个)…以致…’,填 a 前那个词)", "stem_cn": "那是个如此危险的念头,以致无人敢大声说出。", "options": ["such", "so", "very", "too"] },
+    { "gp": "gp4", "stem": "\"They had ___ power over minds that free speech could hardly exist.\"(‘如此…以致…’,填名词前那个词)", "stem_cn": "他们对人心有如此大的支配力,以致言论自由几乎无法存在。", "options": ["such", "so", "very", "too"] },
+    { "gp": "gp5", "stem": "\"The competition ___ in biology is a simple struggle for food.\"(过去分词作后置定语,填‘设想/预见’那个动词的过去分词)", "stem_cn": "生物学里所设想的那种竞争,是对食物的简单争夺。", "options": ["envisioned", "envisioning", "envision", "to envision"] },
+    { "gp": "gp5", "stem": "\"A few pages ___ to a great power could rewrite history.\"(过去分词作后置定语,填‘递交/交给’那个动词的过去分词)", "stem_cn": "交到一个大国手里的几页纸,足以改写历史。", "options": ["handed", "handing", "hand", "to hand"] },
+    { "gp": "gp5", "stem": "\"The effects ___ by ideas were far worse than those of any weapon.\"(过去分词作后置定语,填‘造成’那个动词的过去分词)", "stem_cn": "由观念所造成的后果,远比任何武器都严重。", "options": ["caused", "causing", "cause", "to cause"] },
+    { "gp": "gp6", "stem": "\"To argue about or question the truth of something is to ___ it.\"(“争论,质疑”用哪个词)", "stem_cn": "就某事争辩或质疑其真伪。", "options": ["dispute", "distribute", "disturb", "dissolve"] },
+    { "gp": "gp6", "stem": "\"To bring under control by force or persuasion is to ___.\"(“制服,压制”用哪个词)", "stem_cn": "用武力或劝说使之服从。", "options": ["subdue", "subscribe", "submit", "substitute"] },
+    { "gp": "gp6", "stem": "\"To imagine or form an idea of something is to ___ it.\"(“构想,想象”用哪个词)", "stem_cn": "构想或形成对某物的想法。", "options": ["conceive", "receive", "deceive", "perceive"] }
+  ],
+  "stage6": [
+    { "stem": "dispute 的意思是:", "options": ["争论,质疑", "同意", "证实", "忽视"] },
+    { "stem": "subdue 的意思是:", "options": ["制服,压制", "释放", "激励", "服从"] },
+    { "stem": "envision 的意思是:", "options": ["展望,设想", "遗忘", "摧毁", "怀疑"] },
+    { "stem": "conceive 的意思是:", "options": ["构想,想象", "拒绝", "证明", "复制"] },
+    { "stem": "suffice 的意思是:", "options": ["足够,足以", "缺乏", "超过", "浪费"] },
+    { "stem": "original 的意思是:", "options": ["独创的,新颖的", "陈旧的", "普通的", "虚假的"] }
+  ],
+  "contrast": [
+    { "us": "analyze", "uk": "analyse", "note_cn": "分析;美语 analyze,英式 analyse" },
+    { "us": "organize", "uk": "organise", "note_cn": "组织;美语 organize,英式 organise" },
+    { "us": "offense", "uk": "offence", "note_cn": "冒犯,进攻;美语 offense,英式 offence" },
+    { "us": "plow", "uk": "plough", "note_cn": "犁,耕;美语 plow,英式 plough" }
+  ],
+  "chunks": [
+    { "us": "make a poor show of", "ipa": "/meɪk ə pʊr ʃoʊ ʌv/", "example1": "I would make a poor show of disputing a cave with a bear.", "example1_cn": "我去和熊争山洞会表现得很糟。", "example2": "He made a poor show of hiding his fear.", "example2_cn": "他掩饰恐惧的样子很拙劣。" },
+    { "us": "look on", "ipa": "/lʊk ɑːn/", "example1": "Someone looking on from outside can inject a new thought.", "example1_cn": "从外面旁观的人能注入新念头。", "example2": "The crowd looked on in silence.", "example2_cn": "人群默默地旁观着。" },
+    { "us": "turn upside down", "ipa": "/tɜːrn ˈʌpsaɪd daʊn/", "example1": "A few pages of ideas could turn the world upside down.", "example1_cn": "几页观念就能把世界搅个天翻地覆。", "example2": "The news turned his life upside down.", "example2_cn": "那消息把他的生活彻底搅乱了。" },
+    { "us": "no longer", "ipa": "/noʊ ˈlɔːŋɡər/", "example1": "The environment is no longer essentially physical.", "example1_cn": "环境已不再本质上是物质性的。", "example2": "He no longer works here.", "example2_cn": "他不再在这里工作了。" }
+  ],
+  "stage7_cloze": {
+    "context": "Their difference lies not so much in resources ___1___ in belief. In early days, competition ___2___ have been fierce, but that age is over. A few pages of secrets ___3___ have changed history in 1925. Ideas condition us to ___4___ a degree that we can scarcely think outside them.",
+    "blanks": [
+      { "blank_no": 1, "options": ["as", "than", "but", "so"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["must", "will", "shall", "does"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["would", "will", "shall", "does"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["such", "so", "very", "too"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "According to the writer, what is the most important factor in our environment?", "options": ["The state of our own minds — the things we believe", "The amount of food available", "The climate and natural resources", "The weapons a society owns"] },
+    { "stem": "Why does the writer say that ideas can be more dangerous than physical weapons?", "options": ["Because, introduced from outside, a few pages of ideas could change or even destroy a whole society", "Because ideas are heavier than weapons", "Because ideas cost more money", "Because weapons never do any harm"] },
+    { "stem": "Why are Morocco and California, though similar in climate and latitude, so different today?", "options": ["Because their development is shaped mainly by what their peoples believe, not by physical conditions", "Because one has more mosquitoes", "Because they are on different continents' east coasts", "Because their natural resources are completely different"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"它们的差异,与其说源于资源,不如说源于信念\"(not so much A as B):", "options": ["Their difference lies not so much in resources as in belief.", "Their difference lies not so much in resources than in belief.", "Their difference lies not so much in resources but in belief.", "Their difference lies so much not in resources as in belief."] },
+    { "stem": "你想说\"倘若他们知道那个秘密,本会造出那装置\"(与过去相反的虚拟 would have done):", "options": ["If they had known the secret, they would have built the device.", "If they knew the secret, they would have built the device.", "If they had known the secret, they would build the device.", "If they had known the secret, they will have built the device."] },
+    { "stem": "你想说\"在远古,与别的生物竞争一定曾是生死攸关的\"(must have done 对过去肯定推测):", "options": ["In early times, competition with other creatures must have been critical.", "In early times, competition with other creatures must be critical.", "In early times, competition with other creatures must have been critically.", "In early times, competition with other creatures had to be critical."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "dispute 的意思是:", "options": ["争论,质疑", "同意", "证实", "忽视"] },
+    { "kind": "vocab", "stem": "subdue 的意思是:", "options": ["制服,压制", "释放", "激励", "服从"] },
+    { "kind": "grammar", "stem": "\"Their difference lies not so much in resources ___ in belief.\"(not so much A __ B)", "stem_cn": "它们的差异与其说在资源,不如说在信念。", "options": ["as", "than", "but", "so"] },
+    { "kind": "grammar", "stem": "\"In early days, competition ___ have been fierce.\"(对过去的肯定推测)", "stem_cn": "早年间竞争一定曾很激烈。", "options": ["must", "will", "shall", "does"] },
+    { "kind": "scenario", "stem": "\"look on\" 的意思是:", "options": ["旁观,观望", "照顾…", "寻找…", "依靠…"] },
+    { "kind": "scenario", "stem": "\"turn upside down\" 的意思是:", "options": ["彻底颠覆,搅乱", "修好…", "藏起…", "复制…"] },
+    { "kind": "reading", "stem": "Why is the competition of man against man no longer a simple struggle for food?", "options": ["Because the environment that shapes us is no longer mainly physical but is conditioned by what we believe", "Because there is now unlimited food", "Because people no longer compete at all", "Because food no longer matters to anyone"], "passage": true },
+    { "kind": "reading", "stem": "What example does the writer use to show how a small amount of information could change history?", "options": ["A few pages of ideas handed to a world power in 1925 could have altered the course of events", "A single new weapon given to every nation", "A map of hidden treasure", "A list of the world's mosquitoes"], "passage": true },
+    { "kind": "listening", "stem": "What finally subdued the mosquito, the last creature to compete with man?", "options": ["Attention to drainage and the use of chemical sprays", "Modern weapons", "A change in climate", "The building of cities"], "audio": true },
+    { "kind": "listening", "stem": "According to the writer, how far can our minds think beyond the patterns we are conditioned to?", "options": ["Only a very little way, and then only if we are very original", "As far as we like, with no limits", "Not at all, ever", "Only when we use weapons"], "audio": true }
+  ]
+}

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Loader2, Sparkles, Volume2, Play, Star, Check, Trash2, Search,
-  BookOpen, AlertCircle, Filter, Trophy, MessageCircleQuestion, Wand2, X } from
+  BookOpen, AlertCircle, Filter, Trophy, MessageCircleQuestion, Wand2, X, RotateCw } from
 "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { T } from "@/i18n/T";
@@ -43,6 +43,32 @@ const MODULE_META: Record<string, {label: string;emoji: string;color: string;}> 
 const moduleMeta = (m: string) =>
 MODULE_META[m] || { label: m, emoji: "📌", color: "from-slate-400 to-slate-600" };
 
+// 从错题 snapshot 取「全部选项」(A/B/C/D):语法单题 = snapshot.options{A..D}。
+// 返回按字母序、过滤空项的 [字母, 文本] 列表;无则空数组。静态展示与重做弹窗共用。
+type OptionPair = [string, string];
+function optionPairs(m: Mistake): OptionPair[] {
+  const opts = m.snapshot?.options;
+  if (!opts || typeof opts !== "object") return [];
+  return (Object.entries(opts) as [string, unknown][]).
+  filter(([, v]) => v != null && String(v).trim() !== "").
+  map(([k, v]) => [k, String(v)] as OptionPair).
+  sort(([a], [b]) => a.localeCompare(b));
+}
+
+// 冻结的正确答案(顶层优先,兼容 snapshot.correct_answer)。
+function frozenCorrect(m: Mistake): string {
+  return String(m.correct_answer ?? m.snapshot?.correct_answer ?? "").trim();
+}
+
+// v1「就地重做」仅支持:有 ≥2 个确定选项、且正确答案命中某选项字母的语法选择题。
+// 开放/AI 批改题(无唯一字母答案)、薄行(词汇/听力,无 options)自动排除 → 置灰不显示重做。
+function isRedoable(m: Mistake): boolean {
+  const pairs = optionPairs(m);
+  if (pairs.length < 2) return false;
+  const ca = frozenCorrect(m);
+  return pairs.some(([L]) => L === ca);
+}
+
 const MistakesPage = () => {
   const [loading, setLoading] = useState(true);
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
@@ -52,6 +78,7 @@ const MistakesPage = () => {
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [tutorFor, setTutorFor] = useState<Mistake | null>(null);
   const [aiFor, setAiFor] = useState<Mistake | null>(null);
+  const [redoFor, setRedoFor] = useState<Mistake | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -225,7 +252,8 @@ const MistakesPage = () => {
             onResolve={() => markResolved(m)}
             onRemove={() => removeOne(m)}
             onAskTutor={() => setTutorFor(m)}
-            onAskAI={() => setAiFor(m)} />
+            onAskAI={() => setAiFor(m)}
+            onRedo={isRedoable(m) ? () => setRedoFor(m) : undefined} />
 
           )}
             </ul>
@@ -251,6 +279,12 @@ const MistakesPage = () => {
 
       }
       {aiFor && <SimilarQuestionsModal mistake={aiFor} onClose={() => setAiFor(null)} />}
+      {redoFor &&
+      <RedoQuestionModal
+        mistake={redoFor}
+        onResolved={() => {markResolved(redoFor);}}
+        onClose={() => setRedoFor(null)} />
+      }
     </main>);
 
 };
@@ -286,7 +320,7 @@ function EmptyState({ tab }: {tab: ModuleKey;}) {
 }
 
 function MistakeCard({
-  m, playing, onPlay, onStar, onResolve, onRemove, onAskTutor, onAskAI
+  m, playing, onPlay, onStar, onResolve, onRemove, onAskTutor, onAskAI, onRedo
 
 
 
@@ -296,9 +330,13 @@ function MistakeCard({
 
 
 
-}: {m: Mistake;playing: boolean;onPlay: () => void;onStar: () => void;onResolve: () => void;onRemove: () => void;onAskTutor: () => void;onAskAI: () => void;}) {
+}: {m: Mistake;playing: boolean;onPlay: () => void;onStar: () => void;onResolve: () => void;onRemove: () => void;onAskTutor: () => void;onAskAI: () => void;onRedo?: () => void;}) {
   const [revealed, setRevealed] = useState(false);
   const meta = moduleMeta(m.module);
+  // 静态查看区「全部选项」展示(有 options 快照才有;正确标绿✓、当时错选标红划掉)。
+  const revealedOptions = useMemo(() => optionPairs(m), [m]);
+  const revealedCorrect = frozenCorrect(m);
+  const revealedUser = String(m.user_answer ?? "").trim();
   const dueIn = useMemo(() => {
     const ms = new Date(m.next_review_at).getTime() - Date.now();
     if (ms <= 0) return { text: "待复习", urgent: true };
@@ -382,6 +420,22 @@ function MistakeCard({
           </button> :
 
         <div className="mt-3 space-y-2">
+            {revealedOptions.length > 0 &&
+          <ul className="space-y-1 rounded-xl border border-border bg-background/60 p-3">
+                {revealedOptions.map(([L, txt]) => {
+              const isCorrect = L === revealedCorrect;
+              const isWrongPick = L === revealedUser && L !== revealedCorrect;
+              return (
+                <li key={L} className="flex items-baseline gap-1.5 text-sm">
+                      <span className={`font-bold ${isCorrect ? "text-emerald-700 dark:text-emerald-300" : isWrongPick ? "text-rose-600 dark:text-rose-400" : "text-muted-foreground"}`}>{L}.</span>
+                      <span className={isCorrect ? "font-semibold text-emerald-700 dark:text-emerald-300" : isWrongPick ? "text-rose-600 line-through dark:text-rose-400" : "text-foreground/80"}>{txt}</span>
+                      {isCorrect && <span className="text-emerald-600 dark:text-emerald-400">✓</span>}
+                      {isWrongPick && <span className="text-[11px] text-rose-500"><T>(你选的)</T></span>}
+                    </li>);
+
+            })}
+              </ul>
+          }
             {m.correct_answer &&
           <div className="rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-3 text-sm text-emerald-900 dark:bg-emerald-500/10 dark:text-emerald-300">
                 <span className="text-[10px] font-bold uppercase tracking-wider opacity-70">✓ <T>正确答案</T></span>
@@ -408,10 +462,18 @@ function MistakeCard({
             <T>错过</T> <span className="font-bold text-foreground">{m.wrong_count}</span> <T>次</T>
           </span>
           <div className="flex gap-2">
+            {onRedo &&
+            <button
+              onClick={onRedo}
+              className="inline-flex items-center gap-1 rounded-full bg-sky-100 px-3 py-1 font-semibold text-sky-700 hover:bg-sky-200 dark:bg-sky-500/20 dark:text-sky-300">
+
+              <RotateCw className="size-3" /> <T>重做</T>
+            </button>
+            }
             <button
               onClick={onAskAI}
               className="inline-flex items-center gap-1 rounded-full bg-violet-100 px-3 py-1 font-semibold text-violet-700 hover:bg-violet-200 dark:bg-violet-500/20 dark:text-violet-300">
-              
+
               <Wand2 className="size-3" /> <T>AI 出 5 题</T>
             </button>
             <button
@@ -434,6 +496,105 @@ function MistakeCard({
 }
 
 export default MistakesPage;
+
+// ── 就地重做弹窗(v1:语法选择题)────────────────────────────────────────────
+// 纯新增·独立于原做题判分:用 snapshot 冻结的 correct_answer 做极简选择比对。
+// 做对 → onResolved()(父组件 markResolved 移出);做错 → 亮正确项+解析、可重试。
+function RedoQuestionModal({
+  mistake, onResolved, onClose
+}: {mistake: Mistake;onResolved: () => void;onClose: () => void;}) {
+  const pairs = optionPairs(mistake);
+  const correct = frozenCorrect(mistake);
+  const stem = String(mistake.snapshot?.stem || mistake.question || "").replace(/\\n/g, "\n");
+  const explanation = mistake.explanation || mistake.snapshot?.explanation || "";
+  const [picked, setPicked] = useState<string | null>(null);
+  const [resolved, setResolved] = useState(false);
+  const solved = picked === correct;
+  const wrongPicked = picked !== null && picked !== correct;
+
+  const pick = (L: string) => {
+    if (solved) return; // 已答对,锁定
+    setPicked(L);
+    if (L === correct && !resolved) {
+      setResolved(true);
+      onResolved(); // 做对 → 移出错题本(父组件 markResolved)
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-0 sm:items-center sm:p-4" onClick={onClose}>
+      <div className="w-full max-w-lg rounded-t-3xl bg-card p-5 shadow-xl sm:rounded-3xl" onClick={(e) => e.stopPropagation()}>
+        <div className="mb-3 flex items-center justify-between">
+          <div className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-700 dark:text-sky-300">
+            <RotateCw className="size-4" /> <T>重做这道题</T>
+          </div>
+          <button onClick={onClose} className="grid size-8 place-items-center rounded-full text-muted-foreground hover:bg-secondary" aria-label="关闭">
+            <X className="size-4" />
+          </button>
+        </div>
+
+        <div className="mb-4 whitespace-pre-wrap text-base font-semibold leading-relaxed text-foreground">{stem}</div>
+
+        <ul className="space-y-2">
+          {pairs.map(([L, txt]) => {
+            const isCorrect = L === correct;
+            const isPicked = picked === L;
+            const state =
+            solved && isCorrect ? "correct" :
+            isPicked && !isCorrect ? "wrong" :
+            wrongPicked && isCorrect ? "revealed" : "idle";
+            const cls =
+            state === "correct" ? "border-emerald-400 bg-emerald-50 dark:bg-emerald-500/10" :
+            state === "wrong" ? "border-rose-300 bg-rose-50 opacity-80 dark:bg-rose-500/10" :
+            state === "revealed" ? "border-emerald-300 bg-emerald-50/70 dark:bg-emerald-500/5" :
+            "border-border bg-background hover:border-sky-300";
+            return (
+              <li key={L}>
+                <button
+                  onClick={() => pick(L)}
+                  disabled={solved}
+                  className={`flex w-full items-baseline gap-2.5 rounded-2xl border-2 px-4 py-3 text-left text-sm transition ${cls}`}>
+                  <span className={`grid size-6 flex-shrink-0 place-items-center rounded-lg text-xs font-extrabold ${
+                  state === "correct" || state === "revealed" ? "bg-emerald-400 text-white" :
+                  state === "wrong" ? "bg-rose-400 text-white" : "bg-secondary text-foreground"}`}>
+                    {state === "correct" || state === "revealed" ? "✓" : state === "wrong" ? "✕" : L}
+                  </span>
+                  <span className={state === "wrong" ? "line-through" : ""}>{txt}</span>
+                </button>
+              </li>);
+
+          })}
+        </ul>
+
+        {solved &&
+        <div className="mt-4 rounded-2xl border border-emerald-300 bg-emerald-50 p-3 text-sm font-semibold text-emerald-800 dark:bg-emerald-500/10 dark:text-emerald-300">
+            🎉 <T>答对了!已移出错题本。</T>
+          </div>
+        }
+        {wrongPicked && explanation &&
+        <div className="mt-4 rounded-2xl bg-secondary/60 p-3 text-sm leading-relaxed text-foreground/80">
+            💡 {explanation}
+          </div>
+        }
+
+        <div className="mt-4 flex justify-end gap-2">
+          {wrongPicked && !solved &&
+          <button
+            onClick={() => setPicked(null)}
+            className="inline-flex items-center gap-1 rounded-full bg-sky-100 px-4 py-1.5 text-sm font-semibold text-sky-700 hover:bg-sky-200 dark:bg-sky-500/20 dark:text-sky-300">
+              <RotateCw className="size-3.5" /> <T>再试一次</T>
+            </button>
+          }
+          <button
+            onClick={onClose}
+            className="rounded-full bg-secondary px-4 py-1.5 text-sm font-semibold text-foreground hover:bg-primary/15">
+            <T>{solved ? "完成" : "关闭"}</T>
+          </button>
+        </div>
+      </div>
+    </div>);
+
+}
 
 function TopicGroups({ items, onPick }: {items: Mistake[];onPick: (moduleKey: string) => void;}) {
   const groups = useMemo(() => {

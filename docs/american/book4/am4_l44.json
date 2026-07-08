@@ -1,0 +1,134 @@
+{
+  "id": "am4_l44",
+  "unit_no": 8,
+  "lesson_no": 44,
+  "title_en": "Patterns of Culture",
+  "title_cn": "文化模式",
+  "grammar_focus": "no matter how(无论多么…)、by the time(到…时候)、require/demand that + (should) 动词原形(虚拟语气)、as long as(只要)、see/feel/want + 名词 + done/to be(感官认知动词的复合结构)(NCE4 该课源无独立 KS 页,考点由课文结构自取;IP:源为 Ruth Benedict《Patterns of Culture》一段论习俗对人塑造的人类学随笔,系版权作品——已用 100% 原创行文复述其观点、无引用原句;具名 John Dewey 已泛化为‘一位知名哲学家’;题材=人类学·无害;美语化 color/neighbor;第四册第44课)",
+  "scene": "习俗通常不被看作一个重要的话题。我们觉得自己头脑内部的运作独一无二地值得研究,而习俗,我们往往以为,不过是行为中最平常的那一类。事实上恰恰相反。放眼全世界,传统习俗是一大堆细致入微的行为,比任何一个人凭一己之力所能发明的、无论多么离经叛道的东西,都更令人惊叹。可这只是这件事微不足道的一面。真正头等重要的,是习俗在我们的经验与信念中所占的主导地位,以及它可能呈现的极大的多样性。没有人是用全然崭新的眼睛去看世界的。他所看到的世界,早已被一整套固定的习俗、制度和思维方式剪裁过了。哪怕在他最深的追问里,他也无法绕到这些成见的背后;他关于真与假的观念本身,仍旧要回溯到他自己那一套传统。一位知名的哲学家曾一本正经地说过:习俗在塑造一个人时所起的作用,相比他本人所能给这套习俗添上的东西,就像他母语的全部词汇相比他自己婴儿牙牙学语时、恰好被家人拾起的那几个词。从出生的那一刻起,一个孩子所生入的习俗,就在塑造他的经验和行为。到他会说话时,他已是自己文化的小小造物;到他长大、能参与文化的种种活动时,文化的习惯已成了他的习惯,文化的信念已成了他的信念。每个生入某个群体的孩子都会渐渐分享这些,而生在地球另一端的孩子,连其千分之一都无从达到。没有哪个社会问题比理解习俗的这一作用更是我们义不容辞该弄懂的。然而,对习俗的研究,只有在若干预备性的命题被接受之后才可能有成效——而其中有些命题曾遭到激烈的反对。任何科学研究都要求:在它所考察的各个项目之间,不能有偏向性的加权。在争议较少的领域里,方法不过是把一切相关材料收集起来,记下每一种可能的变体形式;正是这样,我们才懂得了天文学、懂得了群居昆虫的种种。只要‘我们’与野蛮人、‘我们’与异教徒之间那些旧的区分还左右着人们的头脑,人类学按其定义本身就是不可能的。必须首先走到这一步:我们不再拿自己的信仰去对抗邻人的迷信,并且认清所有这类制度都必须被放在一起、连同我们自己的一并加以考察。",
+  "grammar_card": {
+    "title": "no matter how / by the time / require that + 原形 / as long as / see·feel + 名词 + done·to be",
+    "intro": "①no matter how + 形容词/副词:‘无论多么…’。②by the time:‘到…时候’,主句常用完成时。③require/demand/suggest that + (should) + 动词原形:虚拟语气。④as long as:‘只要…(就)’,引导条件。⑤see/feel/want + 名词 + 过去分词/to be:感官或认知动词的复合结构。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["no matter how", "no matter how + 形/副", "no matter how aberrant"],
+        ["by the time", "By the time + 从句, 主句完成时", "By the time he can talk, …"],
+        ["require that + 原形", "require that + (should) 原形", "requires that there be no weighting"],
+        ["as long as", "as long as + 从句", "as long as prejudices held sway"],
+        ["see + 名词 + done", "see/feel/want + 名词 + 过去分词", "he sees it edited by custom"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "require/demand/insist/suggest/order 等后接 that 从句,谓语用‘(should) + 动词原形’,不随主句变化。", "mark": "require that + 原形" },
+      { "rule": "by the time 引导的时间从句,主句常用完成时:现在完成(现在)或过去完成(过去)。", "mark": "By the time …, had done" },
+      { "rule": "美式拼写:color(颜色,英式 colour)、neighbor(邻居,英式 neighbour)。本课已按美语写。", "mark": "color / neighbor" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What influences us from the moment of birth?",
+    "options": ["The customs of the community into which we are born", "The stars we were born under", "The books we later choose to read", "Our own private inventions"],
+    "answer_index": 0
+  },
+  "passage": "Custom has not usually been thought of as a subject of great importance. The inner workings of our own minds we feel to be uniquely worthy of study, while custom, we tend to think, is behavior at its most commonplace. As a matter of fact, it is the other way around. Traditional custom, taken the world over, is a mass of detailed behavior more astonishing than anything a single person could ever invent on his own, no matter how aberrant. Yet that is only a trivial side of the matter. What is of first-rate importance is the predominant part that custom plays in our experience and belief, and the great variety of forms it may manifest. No one ever looks at the world with wholly pristine eyes. He sees it already edited by a definite set of customs, institutions and ways of thinking. Even in his deepest questioning he cannot get behind these stereotypes; his very notions of the true and the false still refer back to his own particular tradition. A well-known philosopher once said, in all seriousness, that the part played by custom in shaping a person, as against anything he himself can add to that custom, is like the proportion of the whole vocabulary of his mother tongue against the few words of his own baby talk that his family happens to take up. From the moment of his birth, the customs into which a child is born shape his experience and his behavior. By the time he can talk, he is the little creature of his culture; and by the time he is grown and able to take part in its activities, its habits have become his habits, its beliefs his beliefs. Every child born into a given group will come to share them, while no child born on the far side of the globe could ever achieve so much as the thousandth part. There is no social problem it is more incumbent upon us to understand than this role of custom. The study of custom, however, can be profitable only after a few preliminary propositions have been accepted — and some of them have been violently opposed. Any scientific study requires that there be no preferential weighting of one item or another among those it examines. In less controversial fields, the method is simply to gather all the relevant material and to note every possible variant form; it is in this way that we have learned what we know of astronomy or of the social insects. Anthropology was, by its very definition, impossible as long as the old distinctions between ourselves and the barbarian, ourselves and the pagan, held sway over people's minds. It was necessary first to reach the point where we no longer set our own belief against a neighbor's superstition, and to recognize that all such institutions must be considered together, our own among the rest.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Custom has not usually been thought of as a subject of great importance. The inner workings of our own minds we feel to be uniquely worthy of study, while custom, we tend to think, is behavior at its most commonplace. As a matter of fact, it is the other way around. Traditional custom, taken the world over, is a mass of detailed behavior more astonishing than anything a single person could ever invent on his own, no matter how aberrant.", "text_cn": "习俗通常不被看作一个重要的话题。我们觉得自己头脑内部的运作独一无二地值得研究,而习俗,我们往往以为,不过是行为中最平常的那一类。事实上恰恰相反。放眼全世界,传统习俗是一大堆细致入微的行为,比任何一个人凭一己之力所能发明的、无论多么离经叛道的东西,都更令人惊叹。" },
+    { "seq": 2, "speaker": null, "text_en": "Yet that is only a trivial side of the matter. What is of first-rate importance is the predominant part that custom plays in our experience and belief, and the great variety of forms it may manifest. No one ever looks at the world with wholly pristine eyes. He sees it already edited by a definite set of customs, institutions and ways of thinking.", "text_cn": "可这只是这件事微不足道的一面。真正头等重要的,是习俗在我们的经验与信念中所占的主导地位,以及它可能呈现的极大的多样性。没有人是用全然崭新的眼睛去看世界的。他所看到的世界,早已被一整套固定的习俗、制度和思维方式剪裁过了。" },
+    { "seq": 3, "speaker": null, "text_en": "Even in his deepest questioning he cannot get behind these stereotypes; his very notions of the true and the false still refer back to his own particular tradition. A well-known philosopher once said, in all seriousness, that the part played by custom in shaping a person, as against anything he himself can add to that custom, is like the proportion of the whole vocabulary of his mother tongue against the few words of his own baby talk that his family happens to take up.", "text_cn": "哪怕在他最深的追问里,他也无法绕到这些成见的背后;他关于真与假的观念本身,仍旧要回溯到他自己那一套传统。一位知名的哲学家曾一本正经地说过:习俗在塑造一个人时所起的作用,相比他本人所能给这套习俗添上的东西,就像他母语的全部词汇相比他自己婴儿牙牙学语时、恰好被家人拾起的那几个词。" },
+    { "seq": 4, "speaker": null, "text_en": "From the moment of his birth, the customs into which a child is born shape his experience and his behavior. By the time he can talk, he is the little creature of his culture; and by the time he is grown and able to take part in its activities, its habits have become his habits, its beliefs his beliefs. Every child born into a given group will come to share them, while no child born on the far side of the globe could ever achieve so much as the thousandth part.", "text_cn": "从出生的那一刻起,一个孩子所生入的习俗,就在塑造他的经验和行为。到他会说话时,他已是自己文化的小小造物;到他长大、能参与文化的种种活动时,文化的习惯已成了他的习惯,文化的信念已成了他的信念。每个生入某个群体的孩子都会渐渐分享这些,而生在地球另一端的孩子,连其千分之一都无从达到。" },
+    { "seq": 5, "speaker": null, "text_en": "The study of custom can be profitable only after a few preliminary propositions have been accepted — and some of them have been violently opposed. Any scientific study requires that there be no preferential weighting of one item or another among those it examines. Anthropology was, by its very definition, impossible as long as the old distinctions between ourselves and the barbarian, ourselves and the pagan, held sway over people's minds. It was necessary to recognize that all such institutions must be considered together, our own among the rest.", "text_cn": "然而,对习俗的研究,只有在若干预备性的命题被接受之后才可能有成效——而其中有些命题曾遭到激烈的反对。任何科学研究都要求:在它所考察的各个项目之间,不能有偏向性的加权。只要‘我们’与野蛮人、‘我们’与异教徒之间那些旧的区分还左右着人们的头脑,人类学按其定义本身就是不可能的。必须认清:所有这类制度都必须被放在一起、连同我们自己的一并加以考察。" }
+  ],
+  "words": [
+    { "word": "commonplace", "ipa": "/ˈkɑːmənpleɪs/", "pos": "adj", "meaning_cn": "平凡的,普通的", "example": "behavior at its most commonplace" },
+    { "word": "aberrant", "ipa": "/əˈberənt/", "pos": "adj", "meaning_cn": "反常的,越轨的", "example": "no matter how aberrant" },
+    { "word": "trivial", "ipa": "/ˈtrɪviəl/", "pos": "adj", "meaning_cn": "琐碎的,微不足道的", "example": "only a trivial side of the matter" },
+    { "word": "predominant", "ipa": "/prɪˈdɑːmɪnənt/", "pos": "adj", "meaning_cn": "占主导地位的,显著的", "example": "the predominant part that custom plays" },
+    { "word": "manifest", "ipa": "/ˈmænɪfest/", "pos": "v", "meaning_cn": "表明,显示", "example": "the variety of forms it may manifest" },
+    { "word": "pristine", "ipa": "/ˈprɪstiːn/", "pos": "adj", "meaning_cn": "崭新的,未受污染的", "example": "with wholly pristine eyes" },
+    { "word": "stereotype", "ipa": "/ˈsteriətaɪp/", "pos": "n", "meaning_cn": "成见,刻板印象", "example": "he cannot get behind these stereotypes" },
+    { "word": "incumbent", "ipa": "/ɪnˈkʌmbənt/", "pos": "adj", "meaning_cn": "义不容辞的,有责任的", "example": "more incumbent upon us to understand" },
+    { "word": "preliminary", "ipa": "/prɪˈlɪmɪneri/", "pos": "adj", "meaning_cn": "预备的,初步的", "example": "a few preliminary propositions" },
+    { "word": "proposition", "ipa": "/ˌprɑːpəˈzɪʃn/", "pos": "n", "meaning_cn": "主张,命题", "example": "preliminary propositions have been accepted" },
+    { "word": "controversial", "ipa": "/ˌkɑːntrəˈvɜːrʃl/", "pos": "adj", "meaning_cn": "有争议的", "example": "in less controversial fields" },
+    { "word": "variant", "ipa": "/ˈveriənt/", "pos": "n", "meaning_cn": "变体,变种", "example": "note every possible variant form" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "no matter how(无论多么…)" },
+    { "gp": "gp2", "name": "by the time(到…时候)" },
+    { "gp": "gp3", "name": "require that + (should) 动词原形" },
+    { "gp": "gp4", "name": "as long as(只要)" },
+    { "gp": "gp5", "name": "see/feel/want + 名词 + done/to be" },
+    { "gp": "gp6", "name": "词汇辨析(commonplace/trivial/manifest)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Custom shapes us, ___ how strange an individual's own actions may be.\"(‘无论多么…’,填引导让步的词组)", "stem_cn": "无论个人自己的行为多么古怪,习俗都在塑造着我们。", "options": ["no matter", "even if", "as if", "in case"] },
+    { "gp": "gp1", "stem": "\"___ how carefully he probes, he cannot escape his own stereotypes.\"(‘无论多么…’,填让步词组)", "stem_cn": "无论他探究得多么仔细,都摆脱不了自己的成见。", "options": ["No matter", "Even if", "As if", "In case"] },
+    { "gp": "gp1", "stem": "\"The child absorbs its culture, no matter ___ far away it was born.\"(no matter ___ 结构,填表‘多么’的那个词)", "stem_cn": "无论孩子生在多远的地方,都会吸收自己的文化。", "options": ["how", "what", "which", "that"] },
+    { "gp": "gp2", "stem": "\"___ the time a child can talk, he is the creature of his culture.\"(‘到…时候’,填引导时间从句的词)", "stem_cn": "到孩子会说话时,他已是自己文化的产物。", "options": ["By", "At", "In", "On"] },
+    { "gp": "gp2", "stem": "\"By the time he is grown, its beliefs ___ become his own.\"(by the time + 主句常用完成时,填助动词)", "stem_cn": "到他长大时,那些信仰已成了他自己的。", "options": ["have", "are", "will", "do"] },
+    { "gp": "gp2", "stem": "\"By the time we noticed, the custom ___ already shaped our thinking.\"(by the time + 过去,主句用过去完成,填助动词)", "stem_cn": "等我们察觉时,习俗早已塑造了我们的思维。", "options": ["had", "has", "will", "does"] },
+    { "gp": "gp3", "stem": "\"Any scientific study requires that there ___ no preferential weighting of the items.\"(require that 后从句用动词原形,填 there ___ 里那个原形)", "stem_cn": "任何科学研究都要求各项目之间没有偏向性的加权。", "options": ["be", "is", "was", "are"] },
+    { "gp": "gp3", "stem": "\"The method demands that each variant form ___ noted.\"(demand that 后从句用原形;被动‘___ noted’,填最前那个原形)", "stem_cn": "这方法要求每一种变体形式都被记录下来。", "options": ["be", "is", "was", "being"] },
+    { "gp": "gp3", "stem": "\"He suggested that the researcher ___ set his own belief above others.\"(suggest that + (should) 原形,填‘应当不’里那个否定词)", "stem_cn": "他建议研究者不要把自己的信仰凌驾于他人之上。", "options": ["not", "does not", "did not", "is not"] },
+    { "gp": "gp4", "stem": "\"Anthropology was impossible ___ these prejudices held sway over people's minds.\"(‘只要…’,填引导条件的词组)", "stem_cn": "只要这些偏见还左右着人们的头脑,人类学就不可能存在。", "options": ["as long as", "as soon as", "as well as", "as far as"] },
+    { "gp": "gp4", "stem": "\"We can understand other peoples ___ we stop judging them by our own customs.\"(‘只要…就…’,填条件词组)", "stem_cn": "只要我们不再用自己的习俗去评判别人,就能理解他们。", "options": ["as long as", "as soon as", "as well as", "as if"] },
+    { "gp": "gp4", "stem": "\"Custom will rule us ___ we remain ignorant of its laws.\"(‘只要…’,填条件词组)", "stem_cn": "只要我们对习俗的规律一无所知,它就会支配我们。", "options": ["as long as", "as though", "as many as", "as much as"] },
+    { "gp": "gp5", "stem": "\"No one looks at the world freshly; he sees it ___ by his customs.\"(see + 名词 + 过去分词,填‘剪裁/编辑’那个动词的过去分词)", "stem_cn": "没有人以全新的眼光看世界;他看到的世界已被自己的习俗剪裁过。", "options": ["edited", "editing", "edit", "to edit"] },
+    { "gp": "gp5", "stem": "\"We feel the workings of our own minds ___ be worthy of study.\"(feel + 名词 + 不定式,填不定式最前面的记号)", "stem_cn": "我们觉得自己头脑的运作值得研究。", "options": ["to", "/", "that", "of"] },
+    { "gp": "gp5", "stem": "\"Every community wants its beliefs ___ by the young.\"(want + 名词 + 过去分词,填‘尊重’那个动词的过去分词)", "stem_cn": "每个族群都希望自己的信仰被年轻人所尊重。", "options": ["respected", "respecting", "respect", "to respect"] },
+    { "gp": "gp6", "stem": "\"Something ordinary and not at all remarkable is ___.\"(“平凡的,普通的”用哪个词)", "stem_cn": "平常、毫不起眼的。", "options": ["commonplace", "commonwealth", "commonsense", "commonly"] },
+    { "gp": "gp6", "stem": "\"Something of very little importance or value is ___.\"(“琐碎的,微不足道的”用哪个词)", "stem_cn": "极不重要或没什么价值的。", "options": ["trivial", "crucial", "radical", "initial"] },
+    { "gp": "gp6", "stem": "\"To show or display something clearly is to ___ it.\"(“表明,显示”用哪个词)", "stem_cn": "清楚地展示或表现某物。", "options": ["manifest", "minimize", "memorize", "magnify"] }
+  ],
+  "stage6": [
+    { "stem": "commonplace 的意思是:", "options": ["平凡的,普通的", "罕见的", "复杂的", "珍贵的"] },
+    { "stem": "aberrant 的意思是:", "options": ["反常的,越轨的", "正常的", "温和的", "普通的"] },
+    { "stem": "trivial 的意思是:", "options": ["琐碎的,微不足道的", "重要的", "巨大的", "严重的"] },
+    { "stem": "predominant 的意思是:", "options": ["占主导地位的,显著的", "次要的", "隐藏的", "微弱的"] },
+    { "stem": "pristine 的意思是:", "options": ["崭新的,未受污染的", "陈旧的", "肮脏的", "受损的"] },
+    { "stem": "stereotype 的意思是:", "options": ["成见,刻板印象", "事实", "证据", "例外"] }
+  ],
+  "contrast": [
+    { "us": "color", "uk": "colour", "note_cn": "颜色;美语 color,英式 colour" },
+    { "us": "honor", "uk": "honour", "note_cn": "荣誉,尊敬;美语 honor,英式 honour" },
+    { "us": "neighbor", "uk": "neighbour", "note_cn": "邻居;美语 neighbor,英式 neighbour" },
+    { "us": "realize", "uk": "realise", "note_cn": "意识到,实现;美语 realize,英式 realise" }
+  ],
+  "chunks": [
+    { "us": "take part in", "ipa": "/teɪk pɑːrt ɪn/", "example1": "By the time he is grown, he can take part in its activities.", "example1_cn": "到他长大时,他就能参与文化的种种活动。", "example2": "She took part in the debate.", "example2_cn": "她参加了那场辩论。" },
+    { "us": "hold sway over", "ipa": "/hoʊld sweɪ ˈoʊvər/", "example1": "Old distinctions held sway over people's minds.", "example1_cn": "旧的区分左右着人们的头脑。", "example2": "Fashion holds sway over the young.", "example2_cn": "时尚左右着年轻人。" },
+    { "us": "the other way around", "ipa": "/ðə ˈʌðər weɪ əˈraʊnd/", "example1": "As a matter of fact, it is the other way around.", "example1_cn": "事实上,恰恰相反。", "example2": "I thought he was older, but it's the other way around.", "example2_cn": "我以为他更大,其实正好反过来。" },
+    { "us": "as a matter of fact", "ipa": "/æz ə ˈmætər ʌv fækt/", "example1": "As a matter of fact, custom is not commonplace at all.", "example1_cn": "事实上,习俗根本不是什么平常的东西。", "example2": "As a matter of fact, I agree with you.", "example2_cn": "事实上,我同意你。" }
+  ],
+  "stage7_cloze": {
+    "context": "No matter ___1___ strange his neighbor's ways may seem, custom shapes us all. ___2___ the time a child can talk, he belongs to his culture. Science demands that no item ___3___ given special weight. Prejudice ruled us ___4___ we kept judging others by our own customs.",
+    "blanks": [
+      { "blank_no": 1, "options": ["how", "what", "which", "that"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["By", "At", "In", "On"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["be", "is", "was", "are"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["as long as", "as soon as", "as well as", "as far as"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What shapes a person's experience and behavior from the very moment of birth?", "options": ["The customs of the community into which he is born", "His own private inventions", "The stars he was born under", "The books he later reads"] },
+    { "stem": "Why does the writer say no one looks at the world with 'pristine eyes'?", "options": ["Because we always see it already edited by our customs, institutions and ways of thinking", "Because our eyesight is weak", "Because the world is too complex", "Because we are born blind to custom"] },
+    { "stem": "What did the study of man wrongly do for a long time, according to the passage?", "options": ["It treated one local variation — Western civilization — as if it were the whole story", "It ignored Western civilization completely", "It studied only cacti and termites", "It refused to group any material"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"无论个人的行为多么古怪,习俗都在塑造我们\"(no matter how):", "options": ["No matter how aberrant an individual's actions are, custom shapes us.", "No matter how aberrant an individual's actions are, but custom shapes us.", "No matter what aberrant an individual's actions are, custom shapes us.", "How aberrant an individual's actions are, no matter custom shapes us."] },
+    { "stem": "你想说\"到孩子会说话时,他已是自己文化的产物\"(by the time):", "options": ["By the time a child can talk, he is the creature of his culture.", "By the time a child can talk, he was the creature of his culture.", "Until the time a child can talk, he is the creature of his culture.", "By a child can talk, he is the creature of his culture."] },
+    { "stem": "你想说\"只要这些偏见还左右着人们的头脑,人类学就不可能存在\"(as long as):", "options": ["As long as these prejudices held sway over people's minds, anthropology was impossible.", "As soon as these prejudices held sway over people's minds, anthropology was impossible.", "As long as these prejudices held sway over people's minds, but anthropology was impossible.", "As far as these prejudices held sway over people's minds, anthropology was impossible."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "commonplace 的意思是:", "options": ["平凡的,普通的", "罕见的", "复杂的", "珍贵的"] },
+    { "kind": "vocab", "stem": "trivial 的意思是:", "options": ["琐碎的,微不足道的", "重要的", "巨大的", "严重的"] },
+    { "kind": "grammar", "stem": "\"___ the time a child can talk, he belongs to his culture.\"(‘到…时候’引导时间从句)", "stem_cn": "到孩子会说话时,他已属于自己的文化。", "options": ["By", "At", "In", "On"] },
+    { "kind": "grammar", "stem": "\"Science requires that each item ___ treated equally.\"(require that + 从句用动词原形)", "stem_cn": "科学要求每一项都被平等对待。", "options": ["be", "is", "was", "are"] },
+    { "kind": "scenario", "stem": "\"take part in\" 的意思是:", "options": ["参加,参与", "分开…", "拿走…", "反对…"] },
+    { "kind": "scenario", "stem": "\"hold sway over\" 的意思是:", "options": ["支配,左右", "远离…", "依赖…", "忽视…"] },
+    { "kind": "reading", "stem": "According to the writer, how important is the role of custom in human life?", "options": ["It plays a predominant role in our experience and belief, far greater than most people assume", "It plays almost no part at all", "It matters only to anthropologists", "It affects only primitive peoples"], "passage": true },
+    { "kind": "reading", "stem": "What must we accept before the study of custom can be profitable?", "options": ["That no one people's customs — including our own — should be given special weight over others", "That Western civilization is the model for all", "That only our own customs are worth studying", "That custom cannot be studied scientifically"], "passage": true },
+    { "kind": "listening", "stem": "By the time a child is grown, whose habits and beliefs does he hold?", "options": ["Those of his own culture, which have become entirely his own", "Habits he invented by himself", "The habits of a distant foreign people", "No habits or beliefs at all"], "audio": true },
+    { "kind": "listening", "stem": "What made anthropology possible at last?", "options": ["Recognizing that our own institutions must be studied together with all others, on the same terms", "Proving Western customs were best", "Abandoning the study of custom", "Setting our beliefs against others' superstitions"], "audio": true }
+  ]
+}

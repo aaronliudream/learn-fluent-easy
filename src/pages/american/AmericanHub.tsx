@@ -1,6 +1,8 @@
 /**
- * 美语课程 · 某册单元总览(/american/book/:bookNo)—— 该册 12 单元。
- * 已上线单元(american_lessons 有数据)可进;其余显示"敬请期待"。
+ * 美语课程 · 某册单元总览(/american/book/:bookNo)—— 单元数据驱动。
+ * 单元格子按该册实际存在的 distinct unit_no 渲染(渲染到最大 unit_no):
+ * 第二册96课=12单元、第三册60课=12单元、第四册48课=8单元,各按自己真实单元数,不硬编。
+ * 已上线单元(american_lessons 有数据)可进;内部空缺单元显示"敬请期待"。
  * bookNo 缺省 1(第一册),渲染与改版前 /american 一致(回归点)。
  */
 import { useEffect, useState } from "react";
@@ -10,7 +12,6 @@ import { T } from "@/i18n/T";
 import { fetchUnits, fetchReviewCount, fetchUnitCompletion, type AmericanUnit } from "@/lib/american/data";
 import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_SUBTITLE, AMERICAN_COURSE_SCALE, AMERICAN_COURSE_COVERAGE } from "@/lib/american/brand";
 
-const TOTAL_UNITS = 12;
 const BOOK_LABEL: Record<number, string> = { 1: "第一册", 2: "第二册", 3: "第三册", 4: "第四册" };
 
 // 课本 PDF 公开直链(Supabase 公开桶 textbooks,anon 可读;?download 强制附件下载)。
@@ -42,6 +43,9 @@ export default function AmericanHub() {
   }, [bookNo]);
 
   const available = new Map(units.map((u) => [u.unit_no, u]));
+  // 单元格子数 = 该册实际存在的最大 unit_no(数据驱动,不硬编 12)。
+  // 单元号连续时即等于真实单元数(第四册=8、第二/三册=12);内部若有空缺则该格显示"敬请期待"。
+  const totalUnits = units.length ? Math.max(...units.map((u) => u.unit_no)) : 0;
 
   return (
     <main className="min-h-dvh bg-slate-50">
@@ -97,7 +101,7 @@ export default function AmericanHub() {
           <p className="py-10 text-center text-sm text-slate-400"><T>加载中…</T></p>
         ) : (
           <div className="grid grid-cols-2 gap-3">
-            {Array.from({ length: TOTAL_UNITS }, (_, k) => k + 1).map((n) => {
+            {Array.from({ length: totalUnits }, (_, k) => k + 1).map((n) => {
               const u = available.get(n);
               const open = !!u;
               return (

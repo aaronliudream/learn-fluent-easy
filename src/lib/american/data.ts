@@ -257,7 +257,7 @@ export async function fetchCompletedCounts(lessonIds: string[]): Promise<Record<
 /**
  * 单元完成度(hub 单元卡用)。
  * 口径:单课完成度=已通关卡数/10;单元完成度=该单元各课均值,四舍五入取整 N%。
- * 未登录 → loggedIn=false(不显示百分比,不显示 0%)。全 12 单元一次查询。
+ * 未登录 → loggedIn=false(不显示百分比,不显示 0%)。按传入的实际单元一次查询(数据驱动,不假设单元数)。
  */
 export async function fetchUnitCompletion(units: AmericanUnit[]): Promise<{ loggedIn: boolean; pct: Record<number, number> }> {
   const pct: Record<number, number> = {};

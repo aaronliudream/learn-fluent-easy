@@ -471,6 +471,22 @@ export default function GaokaoGrammarQuiz() {
                     is_resolved: false,
                   }, { onConflict: "user_id,module,item_id" });
                   if (gMistakeErr) console.error("gaokao_user_mistakes upsert failed:", gMistakeErr);
+                } else {
+                  // 重做做对 → 移出该题错题(两张表)。比照词汇经 edge 的自动移出。
+                  // 只动自己该题、is_resolved=false;失败仅 warn,不阻断做题。
+                  const { error: umErr } = await supabase.from("user_mistakes")
+                    .update({ is_resolved: true, updated_at: new Date().toISOString() })
+                    .eq("user_id", user.id)
+                    .eq("source_key", `grammar:${kpId}:${q.id}`)
+                    .eq("is_resolved", false);
+                  if (umErr) console.warn("[gaokao grammar resolve user_mistakes]", umErr);
+                  const { error: gumErr } = await supabase.from("gaokao_user_mistakes")
+                    .update({ is_resolved: true, updated_at: new Date().toISOString() })
+                    .eq("user_id", user.id)
+                    .eq("module", "grammar")
+                    .eq("item_id", q.id)
+                    .eq("is_resolved", false);
+                  if (gumErr) console.warn("[gaokao grammar resolve gaokao_user_mistakes]", gumErr);
                 }
 
                 // 3. classify-mistake-cause (fire-and-forget) on wrong

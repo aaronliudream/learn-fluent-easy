@@ -6,6 +6,14 @@
 >
 > **时间戳=真相信号(2026-07-05 起)**:`gen-book2-seed.mjs` 现在**写前比对内容,只有真变的 unit 文件才重写、才刷新时间戳**;未变的文件原地不动。所以你**只需跑"时间戳是本批新的 / 下方标🔴需跑"的文件**,时间戳没动的可放心跳过。生成器结尾也会打印「✍️需跑 / ⏭️无需重跑」小结。
 
+## 📤 非 SQL 待办:三册课本 PDF 待上传(2026-07-07)
+> 与 SQL 无关,但请顺手做:`scripts/american/pdf/out/` 下已生成 3 个课本 PDF,**上传到 Supabase `textbooks` 公开桶**(文件名保持一致),hub 下载卡片即自动生效(前端已接好)。
+> - `american-book2-v1.pdf`(96课 · 12.8 MB)
+> - `american-book3-v1.pdf`(60课 · 10.7 MB)
+> - `american-book4-v1.pdf`(48课 · 9.1 MB)
+>
+> 数据源=本地净化 JSON,与线上题库同源。将来内容改动可重跑 `export-data.mjs`+`build-book.mjs` 出 v2 换掉(详见 docs/american/DECISIONS.md 2026-07-07 条)。
+
 ## 📌 本批变化(2026-07-06/07 session · am3 第三册全收官 **+ am4 第四册开工·U1 全 6 课齐 L1–L6**,am4 累计 264 题)
 
 ## 📌 AM4 U1 收官(L1–L6 · `american_am4_seed_unit01.sql` · 264题=44×6,全🟢)· 第四册开工

@@ -33,3 +33,12 @@
 - **选项**:①全收 27 词(遵 CONSTITUTION 第3章"词表零遗漏")vs ②取现代可教子集。
 - **依据**:CONSTITUTION 第0章(最高原则,一切之上)"教现代美语,不教过时用法;英式/古旧用法要么不出"。教 sedulously/vivify/caprice 这类词违背立课之本,且对当代美国口语无迁移价值;第0章 > 第3章。
 - **决定**:取 **12 个现代可教词**(gifted/psychologist/futile/illumination/improvise/aggravate/trifling/gratify/boredom/appetite/absorbing/banish),舍弃古旧文学词。语法考点(the+比较级/it is no use doing/those who/情态被动/不定式目的状语)全部覆盖,机器12项🟢。此为"现代美语优先"通则,后续遇同类古旧长词表沿用。
+
+---
+## 2026-07-07 · 三册可下载课本 PDF 收官(book2/3/4)
+
+**成品**:`american-book2-v1.pdf`(96课/12.8MB)、`american-book3-v1.pdf`(60课/10.7MB)、`american-book4-v1.pdf`(48课/9.1MB),生成于 `scripts/american/pdf/out/`。**待 Aaron 上传 Supabase `textbooks` 公开桶**(文件名保持一致),上传后 hub 下载卡片自动生效(卡片已四册通用,`bookNo` 驱动,零需再改代码)。fitz 已验:合法 PDF、页数完整(398/290/247)、book4 含 L32/L33 净化版内容(Galileo/伽利略/Education)。
+
+- **① 数据源 = 本地净化 JSON**(`docs/american/book<N>/am<N>_l*.json`),**与线上题库同源**。理由(Aaron 定 A):本地是过了机器12项校验的净化后健康全本,不受 SQL 是否跑齐影响;选项打散口径(mulberry32+placeQuota,options[0]=正确项)与 `gen-book<N>-seed.mjs` 完全一致,PDF 与线上逐题对得上。**不读 DB、不碰 service key**(Aaron 定 B:CC 出成品、Aaron 手动上传)。
+- **② 上传方式**:CC 生成 → Aaron 手传。禁用 service key(最高权限,泄露=整库可改)。同第一册当初口径。
+- **③ 脚本已参数化,可重导出新版本**:`node scripts/american/pdf/export-data.mjs <2|3|4> [unit|all]`(支持 book_no 过滤 + 按册真实单元数,不硬编 12)→ `node scripts/american/pdf/build-book.mjs <2|3|4>` 出 HTML → Chrome headless `--print-to-pdf` 出 PDF。**以后哪课改了,重跑这条链出新 PDF,升版本号(v2)上传换掉即可**,旧缓存不被覆盖(文件名带版本号)。生成物 `data/`、`out/` 是产物,按惯例不入库。

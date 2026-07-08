@@ -231,7 +231,7 @@ const Account = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-10 md:px-8 md:py-14">
-      <PageHeader title={t("账户与隐私")} subtitle={t("管理你的账户、数据与隐私设置")} back="/" />
+      <PageHeader title={t("账户与隐私")} subtitle={t("管理你的账户、数据与隐私设置")} back />
 
       {/* Account info */}
       <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">

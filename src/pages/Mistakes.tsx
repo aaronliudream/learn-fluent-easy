@@ -36,7 +36,8 @@ const MODULE_META: Record<string, {label: string;emoji: string;color: string;}> 
   ai_talk: { label: "对话错题", emoji: "💬", color: "from-sky-400 to-blue-500" },
   vocab: { label: "词汇错题", emoji: "📚", color: "from-violet-400 to-purple-500" },
   reading: { label: "阅读错题", emoji: "📖", color: "from-emerald-400 to-green-500" },
-  grammar: { label: "语法错题", emoji: "🔤", color: "from-rose-400 to-pink-500" }
+  grammar: { label: "语法错题", emoji: "🔤", color: "from-rose-400 to-pink-500" },
+  senior_grammar: { label: "语法错题", emoji: "🔤", color: "from-rose-400 to-pink-500" }
 };
 
 const moduleMeta = (m: string) =>

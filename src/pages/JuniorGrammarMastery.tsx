@@ -11,6 +11,7 @@ import {
   type AnswerResult,
 } from "@/components/grammar/GrammarQuestionCard";
 import { recordJuniorGrammarAttempt, type JuniorGrammarErrorReason } from "@/lib/juniorGrammarFsrs";
+import { recordSeniorGrammarMistake } from "@/lib/seniorGrammarMistake";
 import { awardForCorrect, notifyWrong } from "@/lib/coins";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { T } from "@/i18n/T";
@@ -189,6 +190,8 @@ export default function JuniorGrammarMastery() {
     const idx = activeIdx;
     const isOk = result.kind === "correct" || result.kind === "acceptable";
     void recordSkillAttemptsForQuestion(activeQ.id, isOk);
+    // 错题写入(错→存全选项快照;对→按 source_key 自动移出)。纯新增,失败只 warn,不阻断做题。
+    void recordSeniorGrammarMistake({ question: activeQ, result, isCorrect: isOk, sourceLabel: pt?.title });
 
     // ── 含「本次作答」的即时结果,全用本地变量算,绝不 setState 后立刻读 state ──
     const isFirst = !(idx in firstResult);

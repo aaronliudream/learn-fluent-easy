@@ -1,0 +1,134 @@
+{
+  "id": "am4_l46",
+  "unit_no": 8,
+  "lesson_no": 46,
+  "title_en": "Hobbies",
+  "title_cn": "业余爱好",
+  "grammar_focus": "the + 比较级, the + 比较级(越…越…)、it is no use doing(做…没有用)、those who 定语从句、情态动词的被动(must be done)、不定式作目的状语(To do…, 主句)(NCE4 该课源无独立 KS 页,考点由课文结构自取;IP:源为 Winston Churchill《Painting as a Pastime》一段论‘培养爱好以缓解精神紧张’的随笔,系版权作品——已用 100% 原创行文复述其观点、无引用原句;词表按 CONSTITUTION 第0章取现代可教的12词,舍弃古旧文学词 sedulously/vivify/caprice/satiation/clatter 等,详见 DECISIONS;题材=心理调适/生活随笔·无害;美语化 favor/favored/laborer;第四册第46课)",
+  "scene": "一位有天赋的心理学家曾说,烦恼是心灵的一阵痉挛:头脑抓住某样东西,怎么也不肯松手。跟处于这种状态的头脑争论是徒劳的——的确,意志越强,这份努力越是徒劳。你没法命令烦恼离开,只能把别的东西轻轻地引进它紧攥的手里。若这别的东西选得得当,若它真带来另一片兴趣天地的启迪,那么渐渐地——往往还相当快地——那旧有的、过分的紧张便松开了,休整与修复的过程就此开始。所以,对任何肩上担着责任的人来说,培养一种爱好、培养新的兴趣,是头等重要的策略。可这不是一下午就能临时凑成、也不是单凭意志一声令下就能唤起的事。别样兴趣的生长很慢。种子须精心挑选,须落在好土上,须耐心照料,好让富有生机的果实在需要时正好在手边。要想真正幸福、真正稳当,一个人应当有两三种爱好,而且每一种都得是真的。到了晚年才宣布‘从今以后我要对这个或那个感兴趣’,是没有用的;这种努力只会加剧它本想缓解的那份紧张。一个人可以对与日常工作无关的题目积累渊博的知识,却几乎从中得不到宽慰。干你喜欢的事没有用;你得学会喜欢你所干的事。大而言之,人可以分为三类:被累死的人、被愁死的人、被闷死的人。对于流汗苦干了一周的体力劳动者,周六下午一场足球或棒球是真正的释放;可是,让为大事操劳忧虑了六天的政界人士或商人,周末再去为琐事操心,却是没有用的。至于那些能满足每一个心血来潮、几乎能对一切所欲之物随手取得的幸运少数,一种新的乐趣不过是又朝厌烦迈进了一步。他们徒劳地从一处奔到另一处,指望单凭奔忙就甩掉紧随脚后的沉闷。讲道理、有用处的人分作两类:一类把工作与消遣严格分开,一类的工作与消遣合而为一。前一类人居多,他们有其补偿——长时间的劳作带来的不仅是生计,还有对最简单乐趣的强烈胃口。然而,命运的宠儿属于第二类。对他们来说,工作的时辰永远不够长;每一天都是假日,而假日本身反倒像是对一桩引人入胜的事业的一种打断。可即便如此,这两类人都需要时不时地把当天的工作从头脑中驱走,让气氛的一换来使自己恢复精神。",
+  "grammar_card": {
+    "title": "the + 比较级, the + 比较级 / it is no use doing / those who 定语从句 / 情态动词被动 must be done / 不定式作目的状语",
+    "intro": "①the + 比较级…, the + 比较级…:‘越…越…’,两个分句都以 the 开头,形容词/副词都用比较级。②It is no use + 动名词:‘做…没有用’,use 后必须接 -ing,不接 to do。③those who + 从句:‘…的那些人’,who 指人作主语;whose 表所属。④情态动词的被动:情态动词 + be + 过去分词(the seeds must be chosen)。⑤不定式作目的状语:To do…, 主句(‘为了…而…’),常置于句首。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["the+比较级,the+比较级", "the 比较级…, the 比较级…", "the stronger the will, the more futile the effort"],
+        ["it is no use doing", "it is no use + 动名词", "it is no use arguing with the mind"],
+        ["those who 定从", "those who + 谓语", "those who are worried to death"],
+        ["情态动词被动", "情态动词 + be + 过去分词", "the seeds must be chosen with care"],
+        ["不定式作目的状语", "To do …, 主句", "To be really happy, one ought to have hobbies"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "the + 比较级 结构里,形容词/副词一律用比较级(more futile、greater),不能用原级或最高级;两个分句都以 the 开头。", "mark": "the + 比较级, the + 比较级" },
+      { "rule": "it is no use 后一律接动名词(doing),不接不定式(to do)。同义说法:there is no use doing。", "mark": "it is no use doing" },
+      { "rule": "美式拼写:favor / favored(英式 favour / favoured)、laborer(英式 labourer)。本课已按美语写。", "mark": "favor / laborer" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Who, according to the writer, are 'Fortune's favored children'?",
+    "options": ["People for whom work is itself a pleasure, so their working hours are never long enough", "People who never have to work at all", "People who have the most expensive hobbies", "People who worry about nothing"],
+    "answer_index": 0
+  },
+  "passage": "A gifted psychologist once remarked that worry is a kind of spasm of the mind: the mind seizes on something and simply will not let it go. Arguing with a mind in that state is futile — indeed, the stronger the will, the more futile the effort. You cannot order the worry out; you can only coax something else gently into its grip. And if that something else is well chosen, if it truly carries the illumination of a fresh field of interest, then little by little the old, excessive tension loosens, and the work of recovery begins. For anyone whose days are crowded with responsibility, the cultivation of a hobby and of new interests is therefore a policy of the first importance. But it is not a thing that can be improvised in an afternoon, or summoned up by a mere command of the will. The growth of alternative interests is slow. The seeds must be chosen with care; they must be planted in good ground; they must be tended patiently, if the living fruit is to be ready when it is wanted. To be really happy and really steady, a person ought to have two or three hobbies, and every one of them must be real. It is no use waiting until late in life to announce, 'From now on I will take an interest in this or that.' Such an effort only aggravates the very strain it was meant to relieve. A man may gather great knowledge of subjects far from his daily work and still draw almost no comfort from it. It is no use doing what you like; you have to learn to like what you do. Broadly speaking, people may be divided into three classes: those who are worked to death, those who are worried to death, and those who are bored to death. For the laborer who has sweated through a hard week, an afternoon game of football or baseball is a real release. But it is no use asking the politician or the businessman, who has been worrying over grave matters for six days, to spend the weekend worrying over trifling ones instead. As for the fortunate few who can gratify every whim and lay their hands on almost anything they desire, a new pleasure is only one more step toward boredom. In vain they rush from place to place, hoping that sheer motion will outrun the dullness at their heels. Reasonable, useful people fall into two classes: those who keep work and play strictly apart, and those for whom the two are one. The first class is the larger, and it has its compensations — the long hours bring not only a living but a keen appetite for the simplest pleasures. Yet Fortune's favored children belong to the second class. For them the working hours are never long enough; each day is a holiday, and holidays themselves feel like an interruption of an absorbing pursuit. And yet both classes need, at intervals, to banish the day's work from their minds and let a change of atmosphere refresh them.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "A gifted psychologist once remarked that worry is a kind of spasm of the mind: the mind seizes on something and simply will not let it go. Arguing with a mind in that state is futile — indeed, the stronger the will, the more futile the effort. You cannot order the worry out; you can only coax something else gently into its grip. And if that something else is well chosen, if it truly carries the illumination of a fresh field of interest, then little by little the old, excessive tension loosens, and the work of recovery begins.", "text_cn": "一位有天赋的心理学家曾说,烦恼是心灵的一阵痉挛:头脑抓住某样东西,怎么也不肯松手。跟处于这种状态的头脑争论是徒劳的——的确,意志越强,这份努力越是徒劳。你没法命令烦恼离开,只能把别的东西轻轻地引进它紧攥的手里。若这别的东西选得得当,若它真带来另一片兴趣天地的启迪,那么渐渐地,那旧有的、过分的紧张便松开了,休整与修复的过程就此开始。" },
+    { "seq": 2, "speaker": null, "text_en": "For anyone whose days are crowded with responsibility, the cultivation of a hobby and of new interests is therefore a policy of the first importance. But it is not a thing that can be improvised in an afternoon, or summoned up by a mere command of the will. The growth of alternative interests is slow. The seeds must be chosen with care; they must be planted in good ground; they must be tended patiently, if the living fruit is to be ready when it is wanted.", "text_cn": "所以,对任何肩上担着责任的人来说,培养一种爱好、培养新的兴趣,是头等重要的策略。可这不是一下午就能临时凑成、也不是单凭意志一声令下就能唤起的事。别样兴趣的生长很慢。种子须精心挑选,须落在好土上,须耐心照料,好让富有生机的果实在需要时正好在手边。" },
+    { "seq": 3, "speaker": null, "text_en": "To be really happy and really steady, a person ought to have two or three hobbies, and every one of them must be real. It is no use waiting until late in life to announce, 'From now on I will take an interest in this or that.' Such an effort only aggravates the very strain it was meant to relieve. It is no use doing what you like; you have to learn to like what you do.", "text_cn": "要想真正幸福、真正稳当,一个人应当有两三种爱好,而且每一种都得是真的。到了晚年才宣布‘从今以后我要对这个或那个感兴趣’,是没有用的;这种努力只会加剧它本想缓解的那份紧张。干你喜欢的事没有用;你得学会喜欢你所干的事。" },
+    { "seq": 4, "speaker": null, "text_en": "Broadly speaking, people may be divided into three classes: those who are worked to death, those who are worried to death, and those who are bored to death. For the laborer who has sweated through a hard week, an afternoon game of football or baseball is a real release. But it is no use asking the politician or the businessman, who has been worrying over grave matters for six days, to spend the weekend worrying over trifling ones instead.", "text_cn": "大而言之,人可以分为三类:被累死的人、被愁死的人、被闷死的人。对于流汗苦干了一周的体力劳动者,周六下午一场足球或棒球是真正的释放;可是,让为大事操劳忧虑了六天的政界人士或商人,周末再去为琐事操心,却是没有用的。" },
+    { "seq": 5, "speaker": null, "text_en": "As for the fortunate few who can gratify every whim, a new pleasure is only one more step toward boredom. Reasonable, useful people fall into two classes: those who keep work and play strictly apart, and those for whom the two are one. Yet Fortune's favored children belong to the second class. For them the working hours are never long enough; each day is a holiday. And yet both classes need, at intervals, to banish the day's work from their minds and let a change of atmosphere refresh them.", "text_cn": "至于那些能满足每一个心血来潮的幸运少数,一种新的乐趣不过是又朝厌烦迈进了一步。讲道理、有用处的人分作两类:一类把工作与消遣严格分开,一类的工作与消遣合而为一。然而,命运的宠儿属于第二类。对他们来说,工作的时辰永远不够长,每一天都是假日。可即便如此,这两类人都需要时不时地把当天的工作从头脑中驱走,让气氛的一换来使自己恢复精神。" }
+  ],
+  "words": [
+    { "word": "gifted", "ipa": "/ˈɡɪftɪd/", "pos": "adj", "meaning_cn": "有天赋的,有才华的", "example": "a gifted psychologist once remarked" },
+    { "word": "psychologist", "ipa": "/saɪˈkɑːlədʒɪst/", "pos": "n", "meaning_cn": "心理学家", "example": "a gifted psychologist once remarked" },
+    { "word": "futile", "ipa": "/ˈfjuːtl/", "pos": "adj", "meaning_cn": "徒劳的,无效的", "example": "the stronger the will, the more futile the effort" },
+    { "word": "illumination", "ipa": "/ɪˌluːmɪˈneɪʃn/", "pos": "n", "meaning_cn": "启迪,启发", "example": "the illumination of a fresh field of interest" },
+    { "word": "improvise", "ipa": "/ˈɪmprəvaɪz/", "pos": "v", "meaning_cn": "即兴而作,临时凑成", "example": "it cannot be improvised in an afternoon" },
+    { "word": "aggravate", "ipa": "/ˈæɡrəveɪt/", "pos": "v", "meaning_cn": "加剧,使恶化", "example": "such an effort only aggravates the strain" },
+    { "word": "trifling", "ipa": "/ˈtraɪflɪŋ/", "pos": "adj", "meaning_cn": "微不足道的,琐碎的", "example": "worrying over trifling ones instead" },
+    { "word": "gratify", "ipa": "/ˈɡrætɪfaɪ/", "pos": "v", "meaning_cn": "使满足,使高兴", "example": "the few who can gratify every whim" },
+    { "word": "boredom", "ipa": "/ˈbɔːrdəm/", "pos": "n", "meaning_cn": "厌烦,无聊", "example": "one more step toward boredom" },
+    { "word": "appetite", "ipa": "/ˈæpɪtaɪt/", "pos": "n", "meaning_cn": "欲望,胃口", "example": "a keen appetite for the simplest pleasures" },
+    { "word": "absorbing", "ipa": "/əbˈsɔːrbɪŋ/", "pos": "adj", "meaning_cn": "引人入胜的", "example": "an interruption of an absorbing pursuit" },
+    { "word": "banish", "ipa": "/ˈbænɪʃ/", "pos": "v", "meaning_cn": "驱除,消除", "example": "to banish the day's work from their minds" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "the + 比较级, the + 比较级(越…越…)" },
+    { "gp": "gp2", "name": "it is no use doing(做…没有用)" },
+    { "gp": "gp3", "name": "those who 定语从句" },
+    { "gp": "gp4", "name": "情态动词的被动(must be done)" },
+    { "gp": "gp5", "name": "不定式作目的状语" },
+    { "gp": "gp6", "name": "词汇辨析(futile/aggravate/banish)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The ___ the will, the more futile the struggle against a worry.\"(‘越…越…’句式,第一分句填 strong 的比较级)", "stem_cn": "意志越强,与烦恼的搏斗越是徒劳。", "options": ["stronger", "strong", "strongest", "strongly"] },
+    { "gp": "gp1", "stem": "\"The ___ absorbing the hobby, the sooner the mind lets go.\"(‘越…越…’,填第一个 the 之后表示比较的词)", "stem_cn": "爱好越是引人入胜,头脑越快松开。", "options": ["more", "most", "very", "much"] },
+    { "gp": "gp1", "stem": "\"The longer he worried, the ___ his tension grew.\"(‘越…越…’,第二分句 the 后用形容词的比较级)", "stem_cn": "他忧虑得越久,紧张就越发严重。", "options": ["greater", "great", "greatest", "greatly"] },
+    { "gp": "gp2", "stem": "\"It is no ___ arguing with a mind in this state.\"(‘做…没有用’的固定句式,填 no 之后、动名词之前的那个名词)", "stem_cn": "跟处于这种状态的头脑争论是没有用的。", "options": ["use", "used", "using", "useful"] },
+    { "gp": "gp2", "stem": "\"It is no use ___ what you like; you must like what you do.\"(‘做…没用’,use 后接动名词,填 do 的 -ing 形式)", "stem_cn": "干你喜欢的事没有用;你必须喜欢你所干的事。", "options": ["doing", "to do", "do", "done"] },
+    { "gp": "gp2", "stem": "\"It is no use ___ until late in life to start a hobby.\"(‘…没有用’,use 后接动名词,填 wait 的 -ing 形式)", "stem_cn": "等到晚年才开始培养爱好是没有用的。", "options": ["waiting", "to wait", "wait", "waited"] },
+    { "gp": "gp3", "stem": "\"People fall into three classes: ___ who are worked to death, and others.\"(‘…的那些人’,填 who 前面表示‘那些人’的先行词)", "stem_cn": "人分为三类:被累死的那些人,以及其他人。", "options": ["those", "which", "whom", "what"] },
+    { "gp": "gp3", "stem": "\"Fortune's favored children are those ___ love their work.\"(定语从句,先行词 those 指人作主语,填关系词)", "stem_cn": "命运的宠儿是那些热爱自己工作的人。", "options": ["who", "which", "whom", "whose"] },
+    { "gp": "gp3", "stem": "\"They are the people ___ hobbies are all real.\"(定语从句,表‘他们的爱好’的所属关系,填关系词)", "stem_cn": "他们是那些爱好全都真实的人。", "options": ["whose", "who", "which", "whom"] },
+    { "gp": "gp4", "stem": "\"The seeds of a new interest must ___ chosen with care.\"(情态动词的被动:情态动词 + ___ + 过去分词,填 must 与过去分词之间那个词)", "stem_cn": "新兴趣的种子必须精心挑选。", "options": ["be", "been", "being", "to be"] },
+    { "gp": "gp4", "stem": "\"A worry cannot be ___ by force of will alone.\"(情态动词的被动 be + 过去分词,填 banish 的过去分词)", "stem_cn": "单靠意志无法驱除一桩烦恼。", "options": ["banished", "banish", "banishing", "to banish"] },
+    { "gp": "gp4", "stem": "\"People may be ___ into three classes.\"(情态动词的被动 be + 过去分词,填 divide 的过去分词)", "stem_cn": "人可以被分为三类。", "options": ["divided", "divide", "dividing", "to divide"] },
+    { "gp": "gp5", "stem": "\"___ really happy and steady, one ought to have a few real hobbies.\"(不定式作目的状语置于句首,填‘为了…’的不定式形式)", "stem_cn": "要想真正幸福、稳当,一个人应当有几种真正的爱好。", "options": ["To be", "Being", "Be", "For be"] },
+    { "gp": "gp5", "stem": "\"He took up painting ___ escape the strain of office life.\"(不定式作目的状语,填‘为了’那个词)", "stem_cn": "他开始画画,为的是逃离办公室生活的紧张。", "options": ["to", "for", "that", "so"] },
+    { "gp": "gp5", "stem": "\"She reads novels at night ___ banish the worries of the day.\"(不定式作目的状语,填‘为了’那个词)", "stem_cn": "她夜里读小说,为的是驱走白天的烦恼。", "options": ["to", "for", "of", "with"] },
+    { "gp": "gp6", "stem": "\"Something that has no effect and leads nowhere is ___.\"(“徒劳的,无效的”用哪个词)", "stem_cn": "毫无效果、毫无结果的。", "options": ["futile", "fertile", "fatal", "final"] },
+    { "gp": "gp6", "stem": "\"To make a bad situation worse is to ___ it.\"(“加剧,使恶化”用哪个词)", "stem_cn": "使糟糕的局面变得更糟。", "options": ["aggravate", "appreciate", "aggregate", "agitate"] },
+    { "gp": "gp6", "stem": "\"To drive an unwanted thought out of your mind is to ___ it.\"(“驱除,消除”用哪个词)", "stem_cn": "把不想要的念头赶出脑海。", "options": ["banish", "vanish", "punish", "polish"] }
+  ],
+  "stage6": [
+    { "stem": "futile 的意思是:", "options": ["徒劳的,无效的", "成功的", "必要的", "容易的"] },
+    { "stem": "aggravate 的意思是:", "options": ["加剧,使恶化", "缓解,减轻", "忽视,无视", "治愈,修复"] },
+    { "stem": "gratify 的意思是:", "options": ["使满足,使高兴", "激怒,惹恼", "拒绝,回绝", "欺骗,蒙蔽"] },
+    { "stem": "boredom 的意思是:", "options": ["厌烦,无聊", "兴奋,激动", "恐惧,害怕", "满足,充实"] },
+    { "stem": "absorbing 的意思是:", "options": ["引人入胜的", "令人厌烦的", "可怕的", "简单的"] },
+    { "stem": "banish 的意思是:", "options": ["驱除,消除", "欢迎,接纳", "保留,留存", "加强,巩固"] }
+  ],
+  "contrast": [
+    { "us": "favor", "uk": "favour", "note_cn": "恩惠,偏爱;美语 favor,英式 favour" },
+    { "us": "favored", "uk": "favoured", "note_cn": "受宠的,偏爱的;美语 favored,英式 favoured" },
+    { "us": "laborer", "uk": "labourer", "note_cn": "体力劳动者;美语 laborer,英式 labourer" },
+    { "us": "fulfill", "uk": "fulfil", "note_cn": "实现,履行;美语 fulfill,英式 fulfil" }
+  ],
+  "chunks": [
+    { "us": "it is no use doing", "ipa": "/ɪt ɪz noʊ juːs ˈduːɪŋ/", "example1": "It is no use arguing with a worried mind.", "example1_cn": "跟烦恼的头脑争论是没有用的。", "example2": "It is no use crying over a lost chance.", "example2_cn": "为失去的机会哭泣是没有用的。" },
+    { "us": "be divided into", "ipa": "/bi dɪˈvaɪdɪd ˈɪntə/", "example1": "People may be divided into three classes.", "example1_cn": "人可以分为三类。", "example2": "The book is divided into five parts.", "example2_cn": "这本书分为五个部分。" },
+    { "us": "at intervals", "ipa": "/æt ˈɪntərvəlz/", "example1": "Both classes need, at intervals, to rest the mind.", "example1_cn": "两类人都需要时不时地让头脑休息。", "example2": "Trees were planted at intervals along the road.", "example2_cn": "沿路每隔一段就种着树。" },
+    { "us": "let go of", "ipa": "/let ɡoʊ ʌv/", "example1": "The worried mind will not let go of its object.", "example1_cn": "烦恼的头脑不肯放开它抓住的东西。", "example2": "You have to let go of the past.", "example2_cn": "你得放下过去。" }
+  ],
+  "stage7_cloze": {
+    "context": "A worried mind will not let go, and the stronger the will, ___1___ more futile the struggle. It is no ___2___ ordering the worry out; a fresh interest must ___3___ chosen instead. To stay steady, a person ought ___4___ keep two or three real hobbies.",
+    "blanks": [
+      { "blank_no": 1, "options": ["the", "a", "so", "much"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["use", "used", "using", "useful"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["be", "been", "being", "to be"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["to", "for", "that", "of"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Who, according to the writer, are 'Fortune's favored children'?", "options": ["People for whom work is itself a pleasure, so their working hours are never long enough", "People who never have to work at all", "People who can buy any hobby they like", "People who have no worries of any kind"] },
+    { "stem": "Why does the writer say it is no use simply telling a worried person to relax?", "options": ["Because the stronger the will, the more futile the effort; the mind can only be coaxed onto something else", "Because worried people never listen to advice", "Because relaxing is against the law", "Because a hobby can be improvised in a single afternoon"] },
+    { "stem": "Into which three classes does the writer say people may be divided?", "options": ["Those worked to death, those worried to death, and those bored to death", "The rich, the poor, and the middle class", "Workers, students, and retirees", "The happy, the sad, and the angry"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"越是硬逼自己别担心,越是徒劳\"(the + 比较级, the + 比较级):", "options": ["The harder you try to stop worrying, the more futile it is.", "The hard you try to stop worrying, the more futile it is.", "The harder you try to stop worrying, more futile it is.", "Harder you try to stop worrying, the more futile it is."] },
+    { "stem": "你想说\"跟处于这种状态的头脑争论是没有用的\"(it is no use doing):", "options": ["It is no use arguing with a mind in this state.", "It is no use to argue with a mind in this state.", "It is no use argue with a mind in this state.", "It has no use arguing with a mind in this state."] },
+    { "stem": "你想说\"要想真正幸福,一个人应该有两三种真正的爱好\"(不定式作目的状语):", "options": ["To be really happy, one ought to have two or three real hobbies.", "For being really happy, one ought to have two or three real hobbies.", "To be really happy, one ought have two or three real hobbies.", "Be really happy, one ought to have two or three real hobbies."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "futile 的意思是:", "options": ["徒劳的,无效的", "有效的,管用的", "必要的", "短暂的"] },
+    { "kind": "vocab", "stem": "gratify 的意思是:", "options": ["使满足,使高兴", "使失望", "使疲惫", "使困惑"] },
+    { "kind": "grammar", "stem": "\"The seeds of interest must ___ chosen with care.\"(情态动词的被动)", "stem_cn": "兴趣的种子必须精心挑选。", "options": ["be", "been", "being", "to be"] },
+    { "kind": "grammar", "stem": "\"It is no ___ doing what you like; you must like what you do.\"(‘做…没有用’)", "stem_cn": "做你喜欢的事没有用;你必须喜欢你所做的事。", "options": ["use", "used", "using", "useful"] },
+    { "kind": "scenario", "stem": "\"it is no use doing\" 的意思是:", "options": ["做…是没有用的", "做…很值得", "做…很危险", "做…很容易"] },
+    { "kind": "scenario", "stem": "\"banish ... from one's mind\" 的意思是:", "options": ["把…从脑中驱走", "把…牢记在心", "把…写下来", "把…大声说出"] },
+    { "kind": "reading", "stem": "According to the writer, why can a hobby not be improvised in a single afternoon?", "options": ["Because the growth of alternative interests is slow; the seeds must be chosen, planted, and tended patiently", "Because hobbies are always expensive", "Because no one has any free afternoons", "Because only children are allowed hobbies"], "passage": true },
+    { "kind": "reading", "stem": "Why is it no use asking an overworked politician to spend the weekend on trifling worries?", "options": ["Because he has already been worrying over grave matters all week and needs a real change, not more worry", "Because politicians are not allowed hobbies", "Because trifling worries are illegal", "Because he prefers to keep working all weekend"], "passage": true },
+    { "kind": "listening", "stem": "What does the writer say a worried mind is like?", "options": ["A spasm in which the mind seizes on something and will not let it go", "A calm lake on a still morning", "A machine that never breaks down", "An empty room with nothing in it"], "audio": true },
+    { "kind": "listening", "stem": "Why do the fortunate few, who can gratify every whim, still rush from place to place?", "options": ["Because for them each new pleasure only brings them one step nearer to boredom", "Because they are looking for work", "Because they enjoy driving very much", "Because they are afraid of hobbies"], "audio": true }
+  ]
+}

@@ -83,13 +83,21 @@
   - **L42《记录地震》**(It was…that强调句/neither…nor/be to do/by+动名词/so…that·地震仪靠悬重物保持不动)——44题🟢·斯温纳顿科普。
 - 对账(am4 U1–U5+U6四课+U7):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1760**(40课×44)。
 
-## 📌 AM4 U8 进行中(L43–L45 已做 · `american_am4_seed_unit08.sql` · 132题=44×3,全🟢)· 第四册最后一单元(⏳未收官,待补 L46–L48)
-> 三篇为地外文明/文化人类学/思想史科普随笔,原创承载法;Bracehell·Ruth Benedict·Fred Hoyle 等名家散文100%原创复述、无引用原句;具名(John Dewey等)已泛化;L45焚异端软化为噤声、核弹作危险技术举例淡化。逐课主考:
-- 🔴 **需跑** `american_am4_seed_unit08.sql`(全新文件,当前含 L43–L45 三课·132题;⚠️该文件下轮补完 L46–L48 后会再长,幂等重跑整包无害)。
+## ⛔ AM4 待 Aaron 补源:L32 / L33(源缺口·全书唯一未产的两课)
+> 那份 NCE4 mobi 是**残本**:全书课头逐页扫描确认,从 **L31(p71)直接跳到 L34(p74)**,p72–73 仍是 L31 正文/词表/译文,**整本无 Lesson 32、33**。属 CONSTITUTION 硬停①(源找不到→严禁编造),**不是被过滤跳过**。
+> - 标准 canon:**L33《Education》**;**L32 canon 为《Galileo Reborn》,但仓库旧笔记记成《A lost ship》——冲突,残本无从证实,请 Aaron 确认真名。**
+> - 需 Aaron 出**净化包(含 L32/L33 课文文本或梗概)**;拿到后 CC 抽考点→100% 原创承载→44题→机器12项→回填 `american_am4_seed_unit06.sql`(unit_no=6),am4 → 48/48 真收官。
+
+## 📌 AM4 U8 收官(L43–L48 · `american_am4_seed_unit08.sql` · 264题=44×6,全🟢)· ★★★第四册最后一单元完成
+> 六篇为地外文明/文化人类学/思想史/生活随笔/旅行/理财,原创承载法;Bracehell·Ruth Benedict·Fred Hoyle·Churchill·Buxton 等名家散文100%原创复述、无引用原句;具名(John Dewey等)已泛化;L45焚异端软化为噤声、核弹作危险技术举例淡化。逐课主考:
+- 🔴 **需跑** `american_am4_seed_unit08.sql`(全新文件,现含 L43–L48 六课·264题;幂等重跑整包无害)。
   - **L43《太空中有陌生人吗》**(be bound to do/may have done对过去推测/so+形容词倒装/let alone/it was not long before·地外文明与21厘米氢波长射电通讯)——44题🟢·具名泛化。
   - **L44《文化模式》**(no matter how/by the time/require that+原形虚拟/as long as/see·feel+名词+done·习俗从出生塑造人)——44题🟢·**Ruth Benedict论著100%原创复述**·John Dewey泛化。
   - **L45《人与星系》**(not so much A as B/过去虚拟would have done/must have done/such…that/过去分词后置定语·观念比武器更能塑造环境)——44题🟢·**Fred Hoyle**·净化焚异端+核弹淡化。
-- 对账(am4 U1–U5+U6四课+U7+U8三课):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1892**(43课×44)。
+  - **L46《业余爱好》**(the+比较级the+比较级/it is no use doing/those who定从/情态被动must be done/不定式作目的状语·培养爱好以缓解精神紧张·命运的宠儿=以工作为乐者)——44题🟢·**Churchill《Painting as a Pastime》100%原创复述**·词表取现代12词(舍 sedulously/vivify/caprice 等古旧词,见 DECISIONS)。
+  - **L47《大逃亡》**(Not only倒装/whether主语从句/find oneself doing/far from doing·far less than/现在分词后置定语·露营的动机与营地的国际化)——44题🟢·**Buxton 报刊随笔100%原创复述**·词表取现代12词。
+  - **L48《规划股份投资》**(真实条件句if/even if让步/be likely to do/there is no shortage of+动名词/不定式作定语·年长者保本求收入vs年轻者可冒险·黄金法则=分散风险)——44题🟢·《Investor's Chronicle》理财随笔100%原创复述·词表取现代12理财词。
+- 对账(am4 U1–U5+U6四课+U7+U8六课,不含缺源L32/L33):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **2024**(46课×44)。
 
 ## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **★★★全 12 单元 60 课收官 L1–L60**,累计 2640 题·第三册整本完成)
 

@@ -1,0 +1,134 @@
+{
+  "id": "am4_l48",
+  "unit_no": 8,
+  "lesson_no": 48,
+  "title_en": "Planning a Share Portfolio",
+  "title_cn": "规划股份投资",
+  "grammar_focus": "真实条件句 if(if + 一般现在时, 主句一般现在/将来)、even if 让步状语从句、be likely to do(很可能…)、there is no shortage of + 名词/动名词(不乏…)、不定式作定语(money to fritter / time to recover)(NCE4 该课源无独立 KS 页,考点由课文结构自取;IP:源为《Investor's Chronicle》一段谈‘如何规划投资组合’的理财随笔,系版权作品——已用 100% 原创行文复述其观点、无引用原句;词表按 CONSTITUTION 第0章取现代可教的12个理财词,舍弃 tipster/gilt/convertible/sanguine/heady/pedestrian 等生僻词、并补足课文动词 boost/preserve/generate/spread;题材=个人理财·无害;美语化 check/favor/organize;★第四册第48课·全书最后一课)",
+  "scene": "不乏有人向你许诺一夜暴富。但如果你是个认真的私人投资者,就把那种赌场心态留给有闲钱可挥霍的人吧。认真的投资者需要一份像样的投资组合——一套精心规划、结构分明、目标清晰的投资安排。可是,一个股市新手究竟该怎样着手去建立它呢?其实,你若去问五位有声望的经纪人该拿积蓄怎么办,很可能会得到五个不同的答案——哪怕你把年龄、家庭、财务状况以及你想让钱达成什么,统统如实相告。这说明什么?没有唯一‘正确’的方法来构建投资组合;然而,错误的方法却有的是,而且可以肯定,那五位顾问中没有一个人会劝你把每一块钱都砸进一家小公司。那么你该怎么做?我们假定你已把基础都理顺了——一笔你负担得起的按揭、一份养老金、保险,以及留有足够的现金储备。接着,你要确立自己的目标。这些目标一半取决于你的处境,一半取决于你的性情。比如说,你若年纪大些,从重大亏损中恢复的时间就少一些,你很可能想提高退休后的收入。这种情形下,保住本金、稳稳地生出一份额外收入,就成了你的首要任务;于是你会搭一个稳健的组合——挑稳妥的股票而非高风险的,再配上安全的债券和现金存款。你若年轻些、财务根基又扎实,或许会选一种更大胆的路子——但前提是你有那份胆量,不会为当天的股价而彻夜难眠。到那时,也只有到那时,你才可以在稳当的持仓之外,搭上几只快速成长的股票。即便市场回落,你也还有往后的岁月把损失赚回来。一旦目标定下,你就能决定把钱投向何处。这里的黄金法则很简单:分散你的风险。你若把一切都倒进一家公司——不管它今天看起来多有前途——你就把自己变成了任凭命运摆布的人质。分散投资,盯住目标,让投资组合、而不是那些荐股的人,去替你做功。",
+  "grammar_card": {
+    "title": "真实条件句 if / even if 让步状语从句 / be likely to do / there is no shortage of + 动名词 / 不定式作定语",
+    "intro": "①真实条件句:if 从句用一般现在时,主句用一般现在时(表真理/习惯)或一般将来时(will)。②even if:‘即使…(也)’,引导让步,所设情况往往是假设的。③be likely to do:‘很可能…’,likely 后接不定式。④there is no shortage of + 名词/动名词:‘不乏…,有的是…’。⑤不定式作定语:名词 + to do,表‘用来…的、该…的’(money to fritter、time to recover)。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["真实条件句 if", "if + 一般现在时, 一般现在/将来", "If you are older, you have less time"],
+        ["even if 让步", "even if + 从句", "Even if prices fall, you can wait"],
+        ["be likely to do", "be likely + to do", "you are likely to get five answers"],
+        ["there is no shortage of", "there is no shortage of + 名词/动名词", "There is no shortage of tipsters offering tips"],
+        ["不定式作定语", "名词 + to do", "money to fritter; time to recover"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "真实条件句里,if 从句不用 will:If you are older(不是 If you will be older);表将来的 will 放在主句。", "mark": "if + 一般现在时" },
+      { "rule": "even if(即使,多为假设)不同于 even though(尽管,是事实):设想尚未发生的情况用 even if。", "mark": "even if / even though" },
+      { "rule": "美式拼写:check(支票)/ favor / organize(英式 cheque / favour / organise)。本课已按美语写。", "mark": "check / organize" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How does the older investor's approach to investment differ from the younger investor's?",
+    "options": ["The older investor preserves capital and seeks income, having less time to recover, while the younger one can afford a bolder, riskier approach", "The older investor takes far more risks than the younger one", "Both invest in exactly the same way", "Neither of them plans a portfolio at all"],
+    "answer_index": 0
+  },
+  "passage": "There is no shortage of tipsters offering to make you rich overnight. But if you are a serious private investor, leave that casino spirit to people with money to fritter away. The serious investor needs a proper portfolio — a carefully planned set of investments, with a definite structure and a clear aim. Yet how exactly does a newcomer to the stock market set about building one? Well, if you ask five reputable brokers what you ought to do with your savings, you are likely to get five different answers — even if you give them every relevant fact about your age, your family, your finances, and what you want your money to do. The moral? There is no single right way to build a portfolio. There are, however, plenty of wrong ways, and you can be sure that none of those five advisers would have told you to sink every dollar into one small company. So what should you do? We will assume you have already sorted out the basics — a mortgage you can manage, a pension, insurance, and enough cash held in reserve. You should then set your own aims. These depend partly on your circumstances and partly on your temperament. If you are older, for instance, you have less time to recover from any serious loss, and you may well want to boost your retirement income. In that case, preserving your capital and generating a steady extra income become your first priorities, and you would build a cautious portfolio — sound shares rather than risky ones, together with safe bonds and cash deposits. If you are younger, and on solid financial ground, you may choose a bolder approach — but only if you have the nerve for it and will not lie awake over the day's share prices. Then, and only then, you might place a few fast-growing stocks alongside your steadier holdings. Even if the market dips, you have the years ahead to make the loss back. Once your aims are settled, you can decide where to put your money. The golden rule here is simple: spread your risk. If you pour everything into a single company, however promising it looks today, you are setting yourself up as a hostage to fortune. Diversify, keep your aim in view, and let the portfolio — not the tipster — do the work.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "There is no shortage of tipsters offering to make you rich overnight. But if you are a serious private investor, leave that casino spirit to people with money to fritter away. The serious investor needs a proper portfolio — a carefully planned set of investments, with a definite structure and a clear aim. Yet how exactly does a newcomer to the stock market set about building one?", "text_cn": "不乏有人向你许诺一夜暴富。但如果你是个认真的私人投资者,就把那种赌场心态留给有闲钱可挥霍的人吧。认真的投资者需要一份像样的投资组合——一套精心规划、结构分明、目标清晰的投资安排。可是,一个股市新手究竟该怎样着手去建立它呢?" },
+    { "seq": 2, "speaker": null, "text_en": "Well, if you ask five reputable brokers what you ought to do with your savings, you are likely to get five different answers — even if you give them every relevant fact about your age, your family, your finances, and what you want your money to do. The moral? There is no single right way to build a portfolio. There are, however, plenty of wrong ways, and you can be sure that none of those five advisers would have told you to sink every dollar into one small company.", "text_cn": "其实,你若去问五位有声望的经纪人该拿积蓄怎么办,很可能会得到五个不同的答案——哪怕你把年龄、家庭、财务状况以及你想让钱达成什么,统统如实相告。这说明什么?没有唯一‘正确’的方法来构建投资组合;然而,错误的方法却有的是,而且可以肯定,那五位顾问中没有一个人会劝你把每一块钱都砸进一家小公司。" },
+    { "seq": 3, "speaker": null, "text_en": "So what should you do? We will assume you have already sorted out the basics — a mortgage you can manage, a pension, insurance, and enough cash held in reserve. You should then set your own aims. These depend partly on your circumstances and partly on your temperament.", "text_cn": "那么你该怎么做?我们假定你已把基础都理顺了——一笔你负担得起的按揭、一份养老金、保险,以及留有足够的现金储备。接着,你要确立自己的目标。这些目标一半取决于你的处境,一半取决于你的性情。" },
+    { "seq": 4, "speaker": null, "text_en": "If you are older, for instance, you have less time to recover from any serious loss, and you may well want to boost your retirement income. In that case, preserving your capital and generating a steady extra income become your first priorities, and you would build a cautious portfolio — sound shares rather than risky ones, together with safe bonds and cash deposits.", "text_cn": "比如说,你若年纪大些,从重大亏损中恢复的时间就少一些,你很可能想提高退休后的收入。这种情形下,保住本金、稳稳地生出一份额外收入,就成了你的首要任务;于是你会搭一个稳健的组合——挑稳妥的股票而非高风险的,再配上安全的债券和现金存款。" },
+    { "seq": 5, "speaker": null, "text_en": "If you are younger, and on solid financial ground, you may choose a bolder approach — but only if you have the nerve for it and will not lie awake over the day's share prices. Even if the market dips, you have the years ahead to make the loss back. Once your aims are settled, the golden rule is simple: spread your risk. If you pour everything into a single company, however promising it looks today, you are setting yourself up as a hostage to fortune.", "text_cn": "你若年轻些、财务根基又扎实,或许会选一种更大胆的路子——但前提是你有那份胆量,不会为当天的股价而彻夜难眠。即便市场回落,你也还有往后的岁月把损失赚回来。一旦目标定下,黄金法则很简单:分散你的风险。你若把一切都倒进一家公司——不管它今天看起来多有前途——你就把自己变成了任凭命运摆布的人质。" }
+  ],
+  "words": [
+    { "word": "portfolio", "ipa": "/pɔːrtˈfoʊlioʊ/", "pos": "n", "meaning_cn": "投资组合", "example": "the serious investor needs a proper portfolio" },
+    { "word": "broker", "ipa": "/ˈbroʊkər/", "pos": "n", "meaning_cn": "经纪人,中间商", "example": "if you ask five reputable brokers" },
+    { "word": "mortgage", "ipa": "/ˈmɔːrɡɪdʒ/", "pos": "n", "meaning_cn": "抵押贷款,按揭", "example": "a mortgage you can manage" },
+    { "word": "pension", "ipa": "/ˈpenʃn/", "pos": "n", "meaning_cn": "养老金", "example": "a pension, insurance, and cash reserves" },
+    { "word": "finance", "ipa": "/ˈfaɪnæns/", "pos": "n", "meaning_cn": "财务,资金", "example": "every fact about your finances" },
+    { "word": "priority", "ipa": "/praɪˈɔːrəti/", "pos": "n", "meaning_cn": "首要任务,优先事项", "example": "your first priorities" },
+    { "word": "reputable", "ipa": "/ˈrepjətəbl/", "pos": "adj", "meaning_cn": "有声望的,信誉好的", "example": "five reputable brokers" },
+    { "word": "fritter", "ipa": "/ˈfrɪtər/", "pos": "v", "meaning_cn": "挥霍,一点点浪费", "example": "people with money to fritter away" },
+    { "word": "boost", "ipa": "/buːst/", "pos": "v", "meaning_cn": "提高,增加", "example": "want to boost your retirement income" },
+    { "word": "preserve", "ipa": "/prɪˈzɜːrv/", "pos": "v", "meaning_cn": "保护,保全", "example": "preserving your capital" },
+    { "word": "generate", "ipa": "/ˈdʒenəreɪt/", "pos": "v", "meaning_cn": "产生,带来", "example": "generating a steady extra income" },
+    { "word": "spread", "ipa": "/spred/", "pos": "v", "meaning_cn": "分散,分摊", "example": "the golden rule is simple: spread your risk" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "真实条件句 if" },
+    { "gp": "gp2", "name": "even if 让步状语从句" },
+    { "gp": "gp3", "name": "be likely to do" },
+    { "gp": "gp4", "name": "there is no shortage of + 动名词" },
+    { "gp": "gp5", "name": "不定式作定语" },
+    { "gp": "gp6", "name": "词汇辨析(portfolio/preserve/fritter)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"If you ___ older, you have less time to recover from a loss.\"(真实条件句,if 从句用一般现在时,填 be 动词的现在式)", "stem_cn": "如果你年纪大些,你恢复损失的时间就少一些。", "options": ["are", "were", "will be", "would be"] },
+    { "gp": "gp1", "stem": "\"If the market dips next year, you ___ still have time to recover.\"(真实条件句,主句表将来,填将来时的助动词)", "stem_cn": "如果市场明年回落,你仍会有时间恢复。", "options": ["will", "would", "are", "did"] },
+    { "gp": "gp1", "stem": "\"If you ___ your risk, you protect yourself against a single failure.\"(真实条件句,if 从句一般现在时,主语 you,填动词原形)", "stem_cn": "如果你分散风险,就能保护自己免受单笔失败之害。", "options": ["spread", "spreads", "will spread", "spreading"] },
+    { "gp": "gp2", "stem": "\"___ if you give every fact, you may still get five different answers.\"(‘即使…’引导让步,填与 if 连用表‘即使’的那个词)", "stem_cn": "即使你提供每一个事实,仍可能得到五个不同的答案。", "options": ["Even", "As", "So", "Only"] },
+    { "gp": "gp2", "stem": "\"Even ___ the market dips next year, a young investor can wait.\"(表‘即使’的让步结构,填 even 之后那个词)", "stem_cn": "即使市场明年回落,年轻的投资者也等得起。", "options": ["if", "though", "for", "so"] },
+    { "gp": "gp2", "stem": "\"Even ___ share prices fall tomorrow, you have years ahead.\"(表‘即使’、所设情况尚未发生,填 even 之后那个词)", "stem_cn": "即使股价明天下跌,你还有往后的岁月。", "options": ["if", "though", "when", "that"] },
+    { "gp": "gp3", "stem": "\"Ask five brokers and you are ___ to get five different answers.\"(‘很可能…’的固定说法 be ___ to do,填 be 与 to 之间那个形容词)", "stem_cn": "问五个经纪人,你很可能得到五个不同的答案。", "options": ["likely", "like", "alike", "likable"] },
+    { "gp": "gp3", "stem": "\"A cautious investor is likely ___ preserve his capital first.\"(be likely + 不定式,填不定式符号)", "stem_cn": "谨慎的投资者很可能会先保住本金。", "options": ["to", "for", "of", "that"] },
+    { "gp": "gp3", "stem": "\"Without a plan, you are likely to ___ your money away.\"(be likely to + 动词原形,填‘挥霍’那个动词原形)", "stem_cn": "没有计划,你很可能把钱一点点挥霍掉。", "options": ["fritter", "frittered", "frittering", "to fritter"] },
+    { "gp": "gp4", "stem": "\"There is no ___ of tipsters offering quick riches.\"(‘不乏…,有的是…’的固定说法 there is no ___ of,填 no 与 of 之间那个名词)", "stem_cn": "不乏许诺快速致富的荐股人。", "options": ["shortage", "short", "shorten", "shortness"] },
+    { "gp": "gp4", "stem": "\"There is no shortage of advisers ___ you get-rich-quick tips.\"(there is no shortage of + 名词 + 现在分词,填 offer 的 -ing 形式)", "stem_cn": "不乏向你抛出快速致富建议的顾问。", "options": ["offering", "offer", "offered", "to offer"] },
+    { "gp": "gp4", "stem": "\"There ___ no shortage of wrong ways to build a portfolio.\"(there be 句型,shortage 为单数主语,填 be 动词)", "stem_cn": "构建投资组合的错误方法有的是。", "options": ["is", "are", "be", "being"] },
+    { "gp": "gp5", "stem": "\"Leave that casino spirit to people with money ___ fritter away.\"(不定式作定语修饰 money,填不定式符号)", "stem_cn": "把那种赌场心态留给有闲钱可挥霍的人。", "options": ["to", "for", "of", "with"] },
+    { "gp": "gp5", "stem": "\"He kept some cash ___ when prices fell.\"(不定式作定语‘可用来投资的现金’,填 invest 的正确形式)", "stem_cn": "他留了些现金,以便在价格下跌时投入。", "options": ["to invest", "investing", "invested", "invest"] },
+    { "gp": "gp5", "stem": "\"There was little money ___ on luxuries.\"(不定式作定语‘可花在…的钱’,填 spend 的不定式形式)", "stem_cn": "没有多少钱可花在奢侈品上。", "options": ["to spend", "spending", "spent", "spend"] },
+    { "gp": "gp6", "stem": "\"A carefully planned set of investments is called a ___.\"(“投资组合”用哪个词)", "stem_cn": "一套精心规划的投资安排。", "options": ["portfolio", "platform", "platoon", "porcelain"] },
+    { "gp": "gp6", "stem": "\"To keep something safe and unchanged is to ___ it.\"(“保护,保全”用哪个词)", "stem_cn": "使某物安全、不受损失。", "options": ["preserve", "preview", "presume", "prescribe"] },
+    { "gp": "gp6", "stem": "\"To waste money little by little on trifles is to ___ it away.\"(“挥霍,浪费”用哪个词)", "stem_cn": "把钱一点点浪费在琐碎小事上。", "options": ["fritter", "flatter", "flutter", "filter"] }
+  ],
+  "stage6": [
+    { "stem": "portfolio 的意思是:", "options": ["投资组合", "单一股票", "交易佣金", "银行罚息"] },
+    { "stem": "broker 的意思是:", "options": ["经纪人,中间商", "银行家", "会计师", "债务人"] },
+    { "stem": "mortgage 的意思是:", "options": ["抵押贷款,按揭", "养老金", "保险单", "红利"] },
+    { "stem": "pension 的意思是:", "options": ["养老金", "罚款", "佣金", "押金"] },
+    { "stem": "preserve 的意思是:", "options": ["保护,保全", "挥霍,浪费", "分散,分开", "抵押,担保"] },
+    { "stem": "generate 的意思是:", "options": ["产生,带来", "消耗,花掉", "冻结,锁定", "偿还,归还"] }
+  ],
+  "contrast": [
+    { "us": "check", "uk": "cheque", "note_cn": "支票;美语 check,英式 cheque" },
+    { "us": "favor", "uk": "favour", "note_cn": "偏好,青睐;美语 favor,英式 favour" },
+    { "us": "organize", "uk": "organise", "note_cn": "组织,安排;美语 organize,英式 organise" },
+    { "us": "fulfill", "uk": "fulfil", "note_cn": "实现,达成;美语 fulfill,英式 fulfil" }
+  ],
+  "chunks": [
+    { "us": "set about", "ipa": "/set əˈbaʊt/", "example1": "How does a newcomer set about building a portfolio?", "example1_cn": "新手该怎样着手构建投资组合?", "example2": "She set about cleaning the whole house.", "example2_cn": "她开始动手打扫整所房子。" },
+    { "us": "spread your risk", "ipa": "/spred jʊr rɪsk/", "example1": "The golden rule is simple: spread your risk.", "example1_cn": "黄金法则很简单:分散你的风险。", "example2": "Buy several stocks to spread your risk.", "example2_cn": "买几只股票来分散你的风险。" },
+    { "us": "a hostage to fortune", "ipa": "/ə ˈhɑːstɪdʒ tə ˈfɔːrtʃən/", "example1": "Put all in one firm and you are a hostage to fortune.", "example1_cn": "全押一家公司,你就任凭命运摆布。", "example2": "Such a rash promise made him a hostage to fortune.", "example2_cn": "如此草率的承诺让他陷入听天由命的境地。" },
+    { "us": "lie awake", "ipa": "/laɪ əˈweɪk/", "example1": "A bold investor will not lie awake over share prices.", "example1_cn": "大胆的投资者不会为股价彻夜难眠。", "example2": "He lay awake worrying about the exam.", "example2_cn": "他躺着睡不着,为考试发愁。" }
+  ],
+  "stage7_cloze": {
+    "context": "There is no ___1___ of tipsters promising quick riches, but a serious investor needs a real plan. If you ___2___ older, you have less time to recover, so you protect your capital. If you are young, you can take more risk — even ___3___ prices fall, you have years ahead. Ask five brokers and you are ___4___ to get five answers.",
+    "blanks": [
+      { "blank_no": 1, "options": ["shortage", "short", "shorten", "shortness"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["are", "were", "will be", "would be"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["if", "though", "when", "that"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["likely", "like", "alike", "likable"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How does the older investor's approach differ from the younger investor's?", "options": ["The older investor preserves capital and seeks income, since he has less time to recover; the younger one can afford a bolder, riskier approach", "The older investor always takes the bigger risks", "They both refuse to plan at all", "The younger investor only ever buys safe bonds"] },
+    { "stem": "What is the 'golden rule' the writer gives for deciding where to put your money?", "options": ["Spread your risk — never pour everything into a single company", "Always follow the first tipster you meet", "Put all your money into the most promising company", "Keep every dollar in cash and never invest"] },
+    { "stem": "Why are you likely to get five different answers if you ask five brokers?", "options": ["Because there is no single right way to build a portfolio, though there are plenty of wrong ways", "Because brokers are not allowed to agree", "Because there is only one correct answer they all hide", "Because they never listen to your circumstances"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"如果你年纪大些,你恢复损失的时间就少一些\"(真实条件句 if):", "options": ["If you are older, you have less time to recover from a loss.", "If you will be older, you have less time to recover from a loss.", "If you were older, you have less time to recover from a loss.", "If you are older, you had less time to recover from a loss."] },
+    { "stem": "你想说\"即使你提供了每一个事实,你仍可能得到五个不同的答案\"(even if 让步):", "options": ["Even if you give every fact, you may still get five different answers.", "Even though you give every fact, you may still get five different answers.", "Even you give every fact, you may still get five different answers.", "If even you give every fact, you may still get five different answers."] },
+    { "stem": "你想说\"问五个经纪人,你很可能得到五个不同的答案\"(be likely to do):", "options": ["Ask five brokers, and you are likely to get five different answers.", "Ask five brokers, and you are likely get five different answers.", "Ask five brokers, and you are like to get five different answers.", "Ask five brokers, and you likely to get five different answers."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "preserve 的意思是:", "options": ["保护,保全", "挥霍,浪费", "借入,借出", "出售,变卖"] },
+    { "kind": "vocab", "stem": "portfolio 的意思是:", "options": ["投资组合", "单一股票", "交易佣金", "银行罚息"] },
+    { "kind": "grammar", "stem": "\"If you ___ older, you have less time to recover from a loss.\"(真实条件句,if 从句用一般现在时)", "stem_cn": "如果你年纪大些,你恢复损失的时间就少一些。", "options": ["are", "were", "will be", "would be"] },
+    { "kind": "grammar", "stem": "\"___ if you give every fact, you may still get five answers.\"(‘即使…’引导让步)", "stem_cn": "即使你提供每一个事实,仍可能得到五个答案。", "options": ["Even", "As", "So", "Only"] },
+    { "kind": "scenario", "stem": "\"spread your risk\" 的意思是:", "options": ["分散投资以降低风险", "增加投资金额", "隐瞒你的损失", "放弃全部投资"] },
+    { "kind": "scenario", "stem": "\"a hostage to fortune\" 的意思是:", "options": ["把命运押在运气上、听天由命的处境", "一笔巨大的财富", "一位可靠的顾问", "一份稳妥的保险"] },
+    { "kind": "reading", "stem": "Why does the writer say an older investor should preserve capital and seek income?", "options": ["Because he has less time to recover from a serious loss and may want to boost his retirement income", "Because older people are not allowed to buy shares", "Because income is illegal for younger investors", "Because he enjoys taking big risks"], "passage": true },
+    { "kind": "reading", "stem": "Under what condition does the writer say a younger investor may take a bolder approach?", "options": ["Only if he has the nerve for it and will not lie awake worrying over the day's share prices", "Only if he borrows money from five brokers", "Only if he puts everything into one company", "Only after he has retired"], "passage": true },
+    { "kind": "listening", "stem": "What is the single 'golden rule' the writer gives about where to put your money?", "options": ["Spread your risk, and never pour everything into one company", "Trust the first tipster you meet", "Buy only one company's shares", "Keep all your money under the bed"], "audio": true },
+    { "kind": "listening", "stem": "According to the writer, why will you get five different answers from five reputable brokers?", "options": ["Because there is no single right way to build a portfolio, even if you give them every relevant fact", "Because brokers never tell the truth", "Because only one of them knows anything", "Because they refuse to hear your details"], "audio": true }
+  ]
+}

@@ -4,6 +4,7 @@ import { shuffleArray, useGaokaoHub } from "@/lib/gaokaoHub/context";
 import { getUnitState, savePersist } from "@/lib/gaokaoHub/storage";
 import { hubSpeak } from "@/lib/primaryHub/speech";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/gaokaoHub/types";
+import { recordHubMistake } from "@/lib/recordHubMistake";
 import { Link } from "react-router-dom";
 
 type Props = {
@@ -283,7 +284,7 @@ function ListenMcStage({
   questions: Array<{ audio: string; opts: string[]; answer: number; point?: string }>;
   onFinish: () => void;
   onCorrect: () => void;
-  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string }) => void;
+  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string; picked?: number }) => void;
 }) {
   const [idx, setIdx] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
@@ -304,7 +305,7 @@ function ListenMcStage({
       onCorrect();
       setFeedback(<div className="feedback-box success">✨ {title.includes("句") ? "听力真棒！" : "听对了！"}</div>);
     } else {
-      onWrong(q);
+      onWrong({ ...q, picked: optIdx });
       setFeedback(
         <div className="feedback-box warning">
           💡 正确答案：<strong>{q.opts[q.answer]}</strong>
@@ -667,7 +668,7 @@ function FinalQuizStage({
       onCorrect();
       setFeedback(<div className="feedback-box success">✨ 答对了！</div>);
     } else {
-      onWrong({ ...q, unitId, unitTitle });
+      onWrong({ ...q, unitId, unitTitle, picked: optIdx });
       setFeedback(
         <div className="feedback-box warning">
           💡 正确答案：<strong>{q.opts[q.answer]}</strong>
@@ -913,7 +914,7 @@ export default function GaokaoHubStagePlay({ unitId, stageIdx, onComplete, onBac
           <ReadingStage
             unit={unit}
             onFinish={handleFinish}
-            onWrong={(q) =>
+            onWrong={(q) => {
               addMistake({
                 q: q.q,
                 opts: q.opts,
@@ -921,8 +922,12 @@ export default function GaokaoHubStagePlay({ unitId, stageIdx, onComplete, onBac
                 point: q.point ?? "阅读",
                 unitId,
                 unitTitle: unit.title,
-              })
-            }
+              });
+              void recordHubMistake({
+                grade, module: "hub_reading", unitId, unitTitle: unit.title,
+                stem: q.q, opts: q.opts, answerIdx: q.answer, pickedIdx: q.picked, explanation: q.explanation,
+              });
+            }}
           />
         );
       case "listening":
@@ -933,7 +938,7 @@ export default function GaokaoHubStagePlay({ unitId, stageIdx, onComplete, onBac
             questions={listenSentQuestions as ListeningQuestion[]}
             onFinish={handleFinish}
             onCorrect={addStar}
-            onWrong={(q) =>
+            onWrong={(q) => {
               addMistake({
                 q: `听力：${q.audio}`,
                 opts: q.opts,
@@ -942,8 +947,12 @@ export default function GaokaoHubStagePlay({ unitId, stageIdx, onComplete, onBac
                 audio: q.audio,
                 unitId,
                 unitTitle: unit.title,
-              })
-            }
+              });
+              void recordHubMistake({
+                grade, module: "hub_listening", unitId, unitTitle: unit.title,
+                stem: `听力：${q.audio}`, opts: q.opts, answerIdx: q.answer, pickedIdx: q.picked,
+              });
+            }}
           />
         );
       case "writing":

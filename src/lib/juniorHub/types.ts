@@ -19,12 +19,16 @@ export type QuizQuestion = {
   unitTitle?: string;
   id?: number;
   explanation?: string;
+  /** 学生本次所选项下标(仅错题写入用,做题/判分不依赖)。 */
+  picked?: number;
 };
 
 export type ListeningQuestion = {
   audio: string;
   opts: string[];
   answer: number;
+  /** 学生本次所选项下标(仅错题写入用,做题/判分不依赖)。 */
+  picked?: number;
 };
 
 export type ReadingBlock = {

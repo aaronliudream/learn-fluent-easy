@@ -72,6 +72,17 @@
   - **L36《政府的开支》**(As…so/trust·rely on sb to do/to the extent that/情态被动/Where引导·信任是降本关键)——44题🟢。
 - 对账(am4 已做课,不含缺源L32/L33):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1496**(34课×44)。
 
+## 📌 AM4 U7 收官(L37–L42 · `american_am4_seed_unit07.sql` · 264题=44×6,全🟢)· 第四册第7单元
+> 六篇为衰老生理/写作论/海浪物理/驯象/地震仪科普随笔,原创承载法;勒卡雷·斯温纳顿等名家散文100%原创复述、无引用原句;L41驯象强制细节已净化。逐课主考:
+- 🔴 **需跑** `american_am4_seed_unit07.sql`(全新文件,含 L37–L42 六课·264题)。
+  - **L37《衰老的过程》**(最高级/have yet to do/though让步/if+过去分词省略/worth+动名词·12岁最强健此后渐衰)——44题🟢·具名泛化。
+  - **L38《水与旅行者》**(be due to/Even if让步/as…as/祈使句/介词+关系代词·旅途保饮水安全)——44题🟢。
+  - **L39《作家都想要什么》**(whom定从/once时间从句/might as well do/till+现在完成/be of+抽象名词·写作是有机的自我发现)——44题🟢·**勒卡雷散文100%原创复述**。
+  - **L40《海浪》**(虚拟条件would/cause sb to do/现在分词状语/it takes sth time to do/现在完成被动·浪穿水而行水几乎不动)——44题🟢·PDF内误标Lesson39。
+  - **L41《训练大象》**(consist of doing/be capable of/be deprived of/every time/it is adj for sb to do·温和法与人象纽带)——44题🟢·**强制细节净化**。
+  - **L42《记录地震》**(It was…that强调句/neither…nor/be to do/by+动名词/so…that·地震仪靠悬重物保持不动)——44题🟢·斯温纳顿科普。
+- 对账(am4 U1–U5+U6四课+U7):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1760**(40课×44)。
+
 ## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **★★★全 12 单元 60 课收官 L1–L60**,累计 2640 题·第三册整本完成)
 
 ## 📌 AM3 U12 收官(L56–L60 · `american_am3_seed_unit12.sql` · 220题=44×5,全🟢)· ★★★第三册收官单元

@@ -11,6 +11,7 @@ import { speak as speakTTS, stopSpeaking } from "@/lib/speak";
 import { getAlexVoice } from "@/lib/alexVoice";
 import { toast } from "sonner";
 import TutorChat from "@/components/tutor/TutorChat";
+import { PassageReviewPanel, type PassageReview } from "@/components/mistakes/PassageReviewPanel";
 
 type Mistake = {
   id: string;
@@ -27,6 +28,17 @@ type Mistake = {
   is_starred: boolean;
   last_wrong_at: string;
   next_review_at: string;
+};
+
+// 整篇快照里每题/空的形状(user_mistakes.snapshot.questions 的元素)
+type SnapQ = {
+  no?: number | null;
+  stem?: string | null;
+  options?: Record<string, string | null> | null;
+  correct_answer?: string | null;
+  user_answer?: string | null;
+  is_correct?: boolean | null;
+  explanation?: string | null;
 };
 
 type ModuleKey = "all" | "due" | "starred" | "topics" | "ai_talk_target" | "ai_talk";
@@ -297,7 +309,36 @@ function MistakeCard({
 
 }: {m: Mistake;playing: boolean;onPlay: () => void;onStar: () => void;onResolve: () => void;onRemove: () => void;onAskTutor: () => void;onAskAI: () => void;}) {
   const [revealed, setRevealed] = useState(false);
+  const [showPassage, setShowPassage] = useState(false);
   const meta = moduleMeta(m.module);
+
+  // 整篇型错题(阅读/初中完形):写入当下存了自包含 snapshot.questions → 复用整篇下钻面板。
+  // 学生只看自己:此 snapshot 是 /mistakes 的 user_mistakes 行(受 RLS "user_id=auth.uid()" 保护)
+  // 手边已有的数据,不发任何跨用户查询。
+  const passageQuestions: SnapQ[] | null =
+    m.snapshot && Array.isArray(m.snapshot.questions) ? (m.snapshot.questions as SnapQ[]) : null;
+  const isPassageType = !!passageQuestions;
+  // 阅读/完形类但无整篇快照(改造前旧错题)→ 老实标"整篇不可用(旧数据)",不拼错
+  const isOldPassageRow = !isPassageType && (m.module === "reading" || m.module === "junior_cloze");
+  const rv: PassageReview | null = passageQuestions
+    ? {
+        source: m.snapshot?.source === "cloze" ? "cloze" : "reading",
+        title: m.snapshot?.title ?? null,
+        body: m.snapshot?.body ?? null,
+        total: passageQuestions.length,
+        wrong_count: m.snapshot?.wrong_count,
+        items: passageQuestions.map((q) => ({
+          no: q?.no ?? null,
+          stem: q?.stem ?? null,
+          options: q?.options ?? null,
+          correct_answer: q?.correct_answer ?? null,
+          user_answer: q?.user_answer ?? null,
+          is_correct: q?.is_correct ?? null,
+          wrong: q?.is_correct === false,
+          explanation: q?.explanation ?? null,
+        })),
+      }
+    : null;
   const dueIn = useMemo(() => {
     const ms = new Date(m.next_review_at).getTime() - Date.now();
     if (ms <= 0) return { text: "待复习", urgent: true };
@@ -371,14 +412,35 @@ function MistakeCard({
           </div>
         </div>
 
-        {/* Reveal answer */}
-        {!revealed ?
-        <button
-          onClick={() => setRevealed(true)}
-          className="mt-3 w-full rounded-xl border border-dashed border-primary/40 bg-primary/5 py-2 text-sm font-semibold text-primary transition hover:bg-primary/10">
-          
-            👆 <T>点击查看答案与解析</T>
-          </button> :
+        {/* 整篇型(阅读/初中完形):用"查看整篇"下钻代替单题答案展开;单题类保持原有展开不动 */}
+        {isPassageType ?
+        <div className="mt-3">
+            <button
+            onClick={() => setShowPassage((v) => !v)}
+            className="w-full rounded-xl border border-dashed border-primary/40 bg-primary/5 py-2 text-sm font-semibold text-primary transition hover:bg-primary/10">
+              📖 <T>查看整篇</T> {showPassage ? "▴" : "▾"}
+            </button>
+            {showPassage && rv &&
+          <div className="mt-2">
+                <PassageReviewPanel rv={rv} />
+              </div>
+          }
+          </div> :
+
+        !revealed ?
+        <>
+            <button
+            onClick={() => setRevealed(true)}
+            className="mt-3 w-full rounded-xl border border-dashed border-primary/40 bg-primary/5 py-2 text-sm font-semibold text-primary transition hover:bg-primary/10">
+
+              👆 <T>点击查看答案与解析</T>
+            </button>
+            {isOldPassageRow &&
+          <div className="mt-2 rounded-xl border border-dashed border-border bg-muted/30 px-3 py-2 text-[11px] italic text-muted-foreground">
+                📖 <T>整篇原文不可用(旧数据)</T>
+              </div>
+          }
+          </> :
 
         <div className="mt-3 space-y-2">
             {m.correct_answer &&
@@ -396,6 +458,11 @@ function MistakeCard({
             {m.explanation &&
           <div className="rounded-xl bg-secondary/60 p-3 text-sm leading-relaxed text-foreground/80">
                 💡 {m.explanation}
+              </div>
+          }
+            {isOldPassageRow &&
+          <div className="rounded-xl border border-dashed border-border bg-muted/30 px-3 py-2 text-[11px] italic text-muted-foreground">
+                📖 <T>整篇原文不可用(旧数据)</T>
               </div>
           }
           </div>

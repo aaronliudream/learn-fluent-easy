@@ -63,14 +63,16 @@
   - **L30《海底探索》**(同位语从句/Not until倒装/after动名词被动/be confined to·regard as/which定从·百年前误以为海底平坦)——44题🟢·**具名史实泛化**。
 - 对账(am4 U1–U5):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1320**(30课×44)。
 
-## 📌 AM4 U6(L31/34/35/36 · `american_am4_seed_unit06.sql` · 176题=44×4,全🟢)· ⚠️缺 L32/L33(源PDF无此两课·Aaron定跳过·待补源回填)
-> mobi 源缺 L32《A lost ship》/L33《Education》两课(全书从 L31 直接跳 L34),Aaron 已定**先跳过**,待日后补源。故 U6 暂只 4 课。四篇为艺术/心理/科普/经济随笔(亨利·摩尔·青春期·太空·治理),原创承载法;克拉克等具名已泛化,亨利·摩尔名家散文100%原创复述观点。逐课主考:
-- 🔴 **需跑** `american_am4_seed_unit06.sql`(全新文件,含 L31/34/35/36 四课·176题)。
+## 📌 AM4 U6 收官(L31–L36 · `american_am4_seed_unit06.sql` · 264题=44×6,全🟢)· ✅ L32/L33 已补(原创承载)·第四册第6单元完成
+> 六篇为艺术/科学思想史/教育/心理/科普/经济随笔,原创承载法;亨利·摩尔散文100%原创复述、Clarke等具名泛化。**L32/L33 原为残本缺源两课,已按 Aaron(网页版)原创承载包补齐**(见下"✅ 已解决"块)。逐课主考:
+- 🔴 **需跑** `american_am4_seed_unit06.sql`(全新文件,现含 L31–L36 六课·264题;幂等重跑整包无害)。
   - **L31《雕塑家说》**(as if虚拟/现在分词完成式状语/现在分词作定语/比较级+than/whatever让步·欣赏雕塑须感知三维形体)——44题🟢·**亨利·摩尔散文100%原创复述**。
+  - **L32《伽利略的复生》**(被动各时态/定语从句 with which·whose/分词状语·定语/名词性从句 that·what/完成时综合·日心说生前被定罪身后思想复生)——44题🟢·**原创承载·网页版承载包·伽利略思想重估**。
+  - **L33《教育》**(名词性从句 what·that/定语从句 in which·whose/虚拟 important that+原形/分词与动名词/not so much A as B·It is…that·教育在育独立思考非灌输)——44题🟢·**原创承载·网页版承载包·罗素论教育内核**。
   - **L34《青春期》**(虚拟条件句/too…to/使役let·make sb do/by+动名词/know sth to be·青少年尊重肯认错的父母)——44题🟢。
   - **L35《太空漫游》**(be likely·able to do/倍数表达/it takes…to do/比较级less·more…than/目的状语·月球成工业枢纽·移民火星)——44题🟢·**Clarke泛化**。
   - **L36《政府的开支》**(As…so/trust·rely on sb to do/to the extent that/情态被动/Where引导·信任是降本关键)——44题🟢。
-- 对账(am4 已做课,不含缺源L32/L33):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1496**(34课×44)。
+- 对账(am4 U1–U6):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1584**(36课×44)。
 
 ## 📌 AM4 U7 收官(L37–L42 · `american_am4_seed_unit07.sql` · 264题=44×6,全🟢)· 第四册第7单元
 > 六篇为衰老生理/写作论/海浪物理/驯象/地震仪科普随笔,原创承载法;勒卡雷·斯温纳顿等名家散文100%原创复述、无引用原句;L41驯象强制细节已净化。逐课主考:
@@ -83,11 +85,12 @@
   - **L42《记录地震》**(It was…that强调句/neither…nor/be to do/by+动名词/so…that·地震仪靠悬重物保持不动)——44题🟢·斯温纳顿科普。
 - 对账(am4 U1–U5+U6四课+U7):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1760**(40课×44)。
 
-## ⛔ 待 Aaron(网页版)补:AM4 L32 / L33 原创承载包(全书唯一未产的两课)
-> 两处**均无可用 NCE4 原文**:①仓库 mobi 课本是残本(从 L31 p71 直跳 L34 p74,整本无 L32/33);②`新概念英语第4册语法同步互动真题集.pdf` 有这两课的**语法专题(动名词族)**但**不复现课文**;③网页版手上的第四册 PDF 课号偏移+中文乱码,无法可靠定位原文。**属源缺,不是被过滤跳过。**
-> - **课名(Aaron 确认,NCE4 canon):L32《Galileo Reborn》(伽利略再生)、L33《Education》(教育)**。旧笔记"A lost ship"系笔误,已更正。
-> - **方案(Aaron 定 2026-07-07):走原创承载**(第四册本是思辨散文、无情节可贴,原创承载不违和)。**网页版**基于两篇公认主题——**L32=伽利略科学思想被重新评价、L33=罗素论教育**——原创两篇健康议论/说明文,承载第四册难度语法(复杂句式/分词/从句/被动等,含语法书标定的动名词族考点),交 CC 照 10 步流水线生产。
-> - CC 收到承载包后:抽考点→机器12项→回填 `american_am4_seed_unit06.sql`(unit_no=6=ceil(lesson/6))→ **am4 达 48/48 真收官**。当前 am4=46/48(L1–31/34–48 全绿已落库)。
+## ✅ 已解决:AM4 L32 / L33 原创承载补齐(2026-07-07)· 第四册 48/48 真收官
+> 两课原为残本缺源(mobi 从 L31 直跳 L34;语法同步真题集只有动名词专题不复现课文;网页版第四册 PDF 课号偏移+乱码)。Aaron 定**走原创承载**,网页版出承载包(**L32=伽利略科学思想重估、L33=罗素论教育**),CC 照 10 步流水线生产,机器12项全绿,已回填 `american_am4_seed_unit06.sql`(unit_no=6)。
+> - **L32《伽利略的复生》**:被动各时态/定语从句 with which·whose/分词状语·定语/名词性从句 that·what/完成时综合——44题🟢。
+> - **L33《教育》**:名词性从句 what·that/定语从句 in which·whose/虚拟 important that+原形/分词与动名词/not so much A as B·It is…that——44题🟢。
+> - **课名确认(NCE4 canon):L32《Galileo Reborn》、L33《Education》**。旧笔记"A lost ship"系笔误,已更正。
+> - **结果:am4 = 48/48**(L1–L48 全绿已落库,U6 补成 6 课 L31–L36)。跑 `american_am4_seed_unit06.sql` 即可(幂等,现含 L31–L36 六课·264题)。
 
 ## 📌 AM4 U8 收官(L43–L48 · `american_am4_seed_unit08.sql` · 264题=44×6,全🟢)· ★★★第四册最后一单元完成
 > 六篇为地外文明/文化人类学/思想史/生活随笔/旅行/理财,原创承载法;Bracehell·Ruth Benedict·Fred Hoyle·Churchill·Buxton 等名家散文100%原创复述、无引用原句;具名(John Dewey等)已泛化;L45焚异端软化为噤声、核弹作危险技术举例淡化。逐课主考:
@@ -98,7 +101,7 @@
   - **L46《业余爱好》**(the+比较级the+比较级/it is no use doing/those who定从/情态被动must be done/不定式作目的状语·培养爱好以缓解精神紧张·命运的宠儿=以工作为乐者)——44题🟢·**Churchill《Painting as a Pastime》100%原创复述**·词表取现代12词(舍 sedulously/vivify/caprice 等古旧词,见 DECISIONS)。
   - **L47《大逃亡》**(Not only倒装/whether主语从句/find oneself doing/far from doing·far less than/现在分词后置定语·露营的动机与营地的国际化)——44题🟢·**Buxton 报刊随笔100%原创复述**·词表取现代12词。
   - **L48《规划股份投资》**(真实条件句if/even if让步/be likely to do/there is no shortage of+动名词/不定式作定语·年长者保本求收入vs年轻者可冒险·黄金法则=分散风险)——44题🟢·《Investor's Chronicle》理财随笔100%原创复述·词表取现代12理财词。
-- 对账(am4 U1–U5+U6四课+U7+U8六课,不含缺源L32/L33):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **2024**(46课×44)。
+- 对账(am4 全 8 单元 48 课齐,含已补 L32/L33):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **2112**(48课×44)。★第四册真收官。
 
 ## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **★★★全 12 单元 60 课收官 L1–L60**,累计 2640 题·第三册整本完成)
 

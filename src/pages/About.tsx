@@ -10,7 +10,7 @@ const About = () => {
   const brand = lang === "zh" ? "大月亮英语" : "Big Moon English";
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
-      <PageHeader title={t("关于我们")} subtitle={brand} back="/" />
+      <PageHeader title={t("关于我们")} subtitle={brand} back />
 
       <article className="prose prose-sm max-w-none rounded-2xl bg-card p-6 shadow-card md:p-8 dark:prose-invert">
         <h2><T>我们的使命</T></h2>

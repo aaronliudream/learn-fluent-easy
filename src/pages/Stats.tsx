@@ -55,7 +55,7 @@ const Stats = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-5 py-10 md:px-8 md:py-14">
-      <PageHeader title={t("我的学习数据")} subtitle={t("追踪你的学习成果")} back="/" />
+      <PageHeader title={t("我的学习数据")} subtitle={t("追踪你的学习成果")} back />
 
       <div className="mb-6">
         <Button asChild variant="outline" className="gap-2">

@@ -96,7 +96,7 @@ export default function GaokaoDiagnostic() {
 
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
-        <PageHeader title="诊断报告" hideReviewBanner />
+        <PageHeader title="诊断报告" hideReviewBanner back />
         <section className="mb-6 rounded-2xl border bg-card p-6 text-center">
           <Activity className="mx-auto size-10 text-emerald-500" />
           <div className="mt-3 text-3xl font-extrabold">{correctTotal} / {questions.length}</div>
@@ -130,7 +130,7 @@ export default function GaokaoDiagnostic() {
       <BackLink to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> <T>返回</T>
       </BackLink>
-      <PageHeader hideReviewBanner title="水平诊断" subtitle={`第 ${idx + 1} / ${questions.length} 题`} />
+      <PageHeader hideReviewBanner title="水平诊断" subtitle={`第 ${idx + 1} / ${questions.length} 题`} back />
 
       <section className="rounded-2xl border bg-card p-5">
         <p className="mb-4 font-medium">{q.stem}</p>

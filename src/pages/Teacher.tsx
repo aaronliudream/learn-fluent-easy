@@ -106,7 +106,7 @@ export default function Teacher() {
   if (authed === false) {
     return (
       <main className="mx-auto min-h-screen max-w-5xl px-4 py-10 text-center">
-        <PageHeader title="👨‍🏫 老师中心" subtitle="管理班级与学生" back="/" />
+        <PageHeader title="👨‍🏫 老师中心" subtitle="管理班级与学生" back />
         <p className="mt-6 text-sm text-muted-foreground"><T>登录后查看你的班级</T></p>
         <Button className="mt-4" onClick={() => navigate("/auth?redirect=/teacher")}><T>登录</T></Button>
       </main>
@@ -138,7 +138,7 @@ export default function Teacher() {
 
   return (
     <main className="mx-auto min-h-screen max-w-6xl px-4 py-6 md:px-6 md:py-10">
-      <PageHeader title="👨‍🏫 老师中心" subtitle="管理班级、关注学生、推送讲解" back="/" />
+      <PageHeader title="👨‍🏫 老师中心" subtitle="管理班级、关注学生、推送讲解" back />
 
       {/* ── HERO — class-portfolio overview ─────────────── */}
       <section

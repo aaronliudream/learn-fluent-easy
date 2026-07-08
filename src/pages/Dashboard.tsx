@@ -390,7 +390,7 @@ export default function Dashboard() {
   if (!signedIn && !loading) {
     return (
       <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 text-center">
-        <PageHeader title="📊 学习中心" subtitle="一目了然知道掌握了什么、下一步学什么" back="/" />
+        <PageHeader title="📊 学习中心" subtitle="一目了然知道掌握了什么、下一步学什么" back />
         <p className="mt-6 text-sm text-muted-foreground"><T>登录后查看你的学习数据</T></p>
         <Link to="/auth" className="mt-4 inline-block rounded-full border border-border px-4 py-2 text-sm font-medium"><T>登录</T></Link>
       </main>
@@ -404,7 +404,7 @@ export default function Dashboard() {
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-8 md:px-8 md:py-12">
-      <PageHeader title="📊 学习中心" subtitle="一目了然知道掌握了什么、下一步学什么" back="/" />
+      <PageHeader title="📊 学习中心" subtitle="一目了然知道掌握了什么、下一步学什么" back />
 
       {/* Cross-link to parent view (same account, parent-friendly layout) */}
       <div className="mt-3 flex justify-end">

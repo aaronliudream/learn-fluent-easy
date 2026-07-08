@@ -98,7 +98,7 @@ const WeeklyReport = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-5 py-10 md:px-8 md:py-14">
-      <PageHeader title={t("学习报告")} subtitle={server?.weekRange || t("本周进度")} back="/" />
+      <PageHeader title={t("学习报告")} subtitle={server?.weekRange || t("本周进度")} back />
 
       <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Stat icon={<BookCheck className="size-6" />} value={lessonsCompleted} label={t("完成课程")} color="bg-emerald-500/15 text-emerald-600" />

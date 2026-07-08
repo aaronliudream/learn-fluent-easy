@@ -140,6 +140,24 @@ export default function GaokaoReadingPlay() {
             console.warn("[gaokao reading mistake snapshot] error", e);
           }
         })();
+      } else {
+        // 重做本篇全对 → 该篇错题快照标已解决(移出学生错题本 + 老师端)。比照初中阅读。
+        // 只动自己该篇那条、is_resolved=false;失败仅告警,不阻断做题。
+        (async () => {
+          try {
+            const { data: { user } } = await supabase.auth.getUser();
+            if (!user) return;
+            const { error } = await supabase.from("user_mistakes")
+              .update({ is_resolved: true, updated_at: new Date().toISOString() })
+              .eq("user_id", user.id)
+              .eq("module", "reading")
+              .eq("source_key", `gaokao_reading_passage_${passage.id}`)
+              .eq("is_resolved", false);
+            if (error) console.warn("[gaokao reading resolve] update failed", error);
+          } catch (e) {
+            console.warn("[gaokao reading resolve] error", e);
+          }
+        })();
       }
     }
   }, [picks, questions, passage]);

@@ -12,6 +12,7 @@ import {
   recordGrammarAttempt,
   type GrammarErrorReason,
 } from "@/lib/grammarFsrs";
+import { recordSeniorGrammarMistake } from "@/lib/seniorGrammarMistake";
 import { awardForCorrect, notifyWrong } from "@/lib/coins";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { T } from "@/i18n/T";
@@ -168,6 +169,8 @@ export default function GaokaoGrammarMastery() {
     if (answered || activeQuestionIdx === null || !activeQ || !pt) return;
     setAnswered(true);
     const isOk = result.kind === "correct" || result.kind === "acceptable";
+    // 错题写入(错→存全选项快照;对→按 source_key 自动移出)。纯新增,失败只 warn,不阻断做题。
+    void recordSeniorGrammarMistake({ question: activeQ, result, isCorrect: isOk, sourceLabel: pt.title });
 
     setState((s) => {
       const prev = s[currentLevel];

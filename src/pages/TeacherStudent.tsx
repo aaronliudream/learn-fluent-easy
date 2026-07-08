@@ -85,7 +85,7 @@ const MODULE_META: Record<string, { label: string; emoji: string; tone: string }
 const MODULE_ORDER = ["primary", "junior", "senior", "american"];
 // 错题分组标题:完形/阅读用中文,其余用板块名或原 module 值
 const MISTAKE_GROUP_LABEL: Record<string, string> = {
-  cloze: "完形填空", reading: "阅读理解",
+  cloze: "完形填空", reading: "阅读理解", junior_cloze: "完形填空",
   gaokao_grammar: "语法", card_quiz: "知识卡", listening: "听力",
   primary_lesson: "课程", primary_chat_quiz: "口语问答", ai_talk_target: "AI 对话",
 };
@@ -432,11 +432,12 @@ export default function TeacherStudent() {
                                 </>
                               ) : mk.is_complete ? (
                                 <>
-                                  {/* 阅读·新快照(改造上线后做的):自包含,点"查看整篇"→ IXL 三栏整篇 */}
+                                  {/* 阅读/初中完形·新快照:自包含,点"查看整篇"→ IXL 三栏整篇(复用同一壳)。
+                                      初中完形(module=junior_cloze)单位显示"空",阅读显示"题"。 */}
                                   <div className="flex flex-wrap items-center gap-2 text-sm font-semibold">
-                                    <span>{mk.title || t("阅读一篇")}</span>
+                                    <span>{mk.title || (mk.module === "junior_cloze" ? t("完形一篇") : t("阅读一篇"))}</span>
                                     <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[11px] font-bold text-rose-700 dark:bg-rose-500/20 dark:text-rose-300">
-                                      <T>错</T> {mk.wrong_count} <T>题</T>
+                                      <T>错</T> {mk.wrong_count} {mk.module === "junior_cloze" ? <T>空</T> : <T>题</T>}
                                     </span>
                                     <button
                                       type="button"

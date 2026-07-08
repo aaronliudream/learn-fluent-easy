@@ -45,7 +45,7 @@ async function invokeProvision(payload: Record<string, unknown>): Promise<Record
   return (data ?? {}) as Record<string, unknown>;
 }
 
-export function ProvisionedStudents({ classId, readOnly = false }: { classId: string; readOnly?: boolean }) {
+export function ProvisionedStudents({ classId, readOnly = false, onChanged }: { classId: string; readOnly?: boolean; onChanged?: () => void }) {
   const t = useT();
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(true);
@@ -62,13 +62,19 @@ export function ProvisionedStudents({ classId, readOnly = false }: { classId: st
   const reload = useCallback(async () => {
     setLoading(true);
     // RLS ps_teacher_all(created_by = auth.uid()) 已保证只返回本人代建的；再按 class 过滤。
-    const { data, error } = await supabase
-      .from("provisioned_students")
-      .select("student_user_id, login_id, real_name, created_at")
-      .eq("class_id", classId)
-      .order("created_at", { ascending: false });
-    if (error) { console.warn("provisioned load error", error.message); setRows([]); }
-    else setRows((data ?? []) as Row[]);
+    // ⚠ 移出学生是软删 class_members(removed_at),不动 provisioned_students.class_id，
+    //   故必须再按"在册成员"过滤，否则移出的学生会一直残留在此列表(需 F5 才走)。
+    const [membersR, provR] = await Promise.all([
+      supabase.from("class_members").select("member_id").eq("class_id", classId).is("removed_at", null),
+      supabase
+        .from("provisioned_students")
+        .select("student_user_id, login_id, real_name, created_at")
+        .eq("class_id", classId)
+        .order("created_at", { ascending: false }),
+    ]);
+    if (provR.error) { console.warn("provisioned load error", provR.error.message); setRows([]); setLoading(false); return; }
+    const activeIds = new Set((membersR.data ?? []).map((m) => m.member_id as string));
+    setRows(((provR.data ?? []) as Row[]).filter((r) => activeIds.has(r.student_user_id)));
     setLoading(false);
   }, [classId]);
 
@@ -81,6 +87,7 @@ export function ProvisionedStudents({ classId, readOnly = false }: { classId: st
       setRealName("");
       setCred({ title: "学生账号已创建", loginId: String(r.login_id ?? ""), password: String(r.initial_password ?? "") });
       reload();
+      onChanged?.();  // 新建学生 → 学生名单一并刷新
     } catch (e) {
       toast.error((e as Error).message);
     } finally {
@@ -129,7 +136,8 @@ export function ProvisionedStudents({ classId, readOnly = false }: { classId: st
     try {
       await invokeProvision({ action: "remove_student", student_user_id: removeTarget.student_user_id });
       toast.success(`已移出「${removeTarget.real_name || removeTarget.login_id}」`);
-      reload();
+      reload();       // 已代建列表:排除刚移出的
+      onChanged?.();  // 学生名单(父组件 roster)一并刷新
     } catch (e) {
       toast.error((e as Error).message);
     }

@@ -171,7 +171,7 @@ const MistakesPage = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-4 py-8 md:px-8 md:py-12">
-      <PageHeader title="📒 错题本" subtitle="所有错题按记忆曲线安排复习" />
+      <PageHeader title="📒 错题本" subtitle="所有错题按记忆曲线安排复习" back />
 
       {loading &&
       <div className="mt-12 flex items-center justify-center gap-2 text-sm text-muted-foreground">

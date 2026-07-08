@@ -156,6 +156,11 @@ validate 对 seed 内**全部课**跑,不只当轮新课。
 5. **两种硬停**:①源PDF找不到(严禁编造教材内容顶上)②改schema/碰禁区/跨板块。
    其余全部自决 + 记 docs/american/DECISIONS.md。
 6. **PROGRESS.md 断点**:每课一行(状态/校验/挂起),支持压缩后续接。
+7. **Git 边界(Aaron 2026-07-07 定)**:功能分支(如 `feat-american-course`)的
+   `git add/commit/push` **全自主**——每批收官或每天收工随手 `git push origin <功能分支>`
+   备份到远端,不用等批准(避免再积压几十上百 commit 只在本地)。
+   **以下四样永远要 Aaron 明确批准,一律不自作主张**:
+   ① `git push --force`(任何分支)② 合并进 main ③ 开 PR(`gh pr create`)④ 部署。
 
 ---
 

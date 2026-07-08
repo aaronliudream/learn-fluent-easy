@@ -83,6 +83,14 @@
   - **L42《记录地震》**(It was…that强调句/neither…nor/be to do/by+动名词/so…that·地震仪靠悬重物保持不动)——44题🟢·斯温纳顿科普。
 - 对账(am4 U1–U5+U6四课+U7):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1760**(40课×44)。
 
+## 📌 AM4 U8 进行中(L43–L45 已做 · `american_am4_seed_unit08.sql` · 132题=44×3,全🟢)· 第四册最后一单元(⏳未收官,待补 L46–L48)
+> 三篇为地外文明/文化人类学/思想史科普随笔,原创承载法;Bracehell·Ruth Benedict·Fred Hoyle 等名家散文100%原创复述、无引用原句;具名(John Dewey等)已泛化;L45焚异端软化为噤声、核弹作危险技术举例淡化。逐课主考:
+- 🔴 **需跑** `american_am4_seed_unit08.sql`(全新文件,当前含 L43–L45 三课·132题;⚠️该文件下轮补完 L46–L48 后会再长,幂等重跑整包无害)。
+  - **L43《太空中有陌生人吗》**(be bound to do/may have done对过去推测/so+形容词倒装/let alone/it was not long before·地外文明与21厘米氢波长射电通讯)——44题🟢·具名泛化。
+  - **L44《文化模式》**(no matter how/by the time/require that+原形虚拟/as long as/see·feel+名词+done·习俗从出生塑造人)——44题🟢·**Ruth Benedict论著100%原创复述**·John Dewey泛化。
+  - **L45《人与星系》**(not so much A as B/过去虚拟would have done/must have done/such…that/过去分词后置定语·观念比武器更能塑造环境)——44题🟢·**Fred Hoyle**·净化焚异端+核弹淡化。
+- 对账(am4 U1–U5+U6四课+U7+U8三课):`SELECT count(*) FROM american_questions WHERE lesson_id LIKE 'am4_l%';` = **1892**(43课×44)。
+
 ## 📌 本批变化(2026-07-06/07 session · am3 第三册 · **★★★全 12 单元 60 课收官 L1–L60**,累计 2640 题·第三册整本完成)
 
 ## 📌 AM3 U12 收官(L56–L60 · `american_am3_seed_unit12.sql` · 220题=44×5,全🟢)· ★★★第三册收官单元

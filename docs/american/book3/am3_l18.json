@@ -1,0 +1,133 @@
+{
+  "id": "am3_l18",
+  "unit_no": 4,
+  "lesson_no": 18,
+  "title_en": "Electric Currents in Modern Art",
+  "title_cn": "现代艺术中的电流",
+  "grammar_focus": "介词固定搭配(take interest in / on display / suspended from / attached to / familiar to / in response to / emit from),外加“辅音字母+y → -ies、元音字母+y → -s”的名词复数与动词第三人称单数拼写规则(baby→babies、try→tries、donkey→donkeys、pay→pays)(原创承载 NCE3 L18 考点·无需净化·参观一场会动、带电的现代雕塑展)",
+  "scene": "如今现代雕塑几乎不再让人吃惊了。“现代艺术只能在博物馆里看”这种说法是错的。就连对艺术毫无兴趣的人,也不可能没注意到公园里、商店外那些造型古怪的现代雕塑;有些所谓“现代”的作品,已经在公共场所立了将近八十年,我们早就见怪不怪。即便如此,最近市中心的一场雕塑展还是让我吃了一惊。走进美术馆,我看到的第一样东西是墙上贴着的告示:“请勿触摸展品,有些很危险!”展出的都是会动的雕塑。造型古怪、从天花板上垂下、随一阵风摆动的东西,大家早就熟悉。可这些展品不一样:靠着一面墙,排着一根根细长金属丝,末端连着金属球。球被磁化过,整天互相吸引、又互相排斥。大厅正中立着几座高大的结构,里面装满彩灯,像发了疯的交通信号灯一样不停闪烁。小黑盒子里迸出火花,红灯气呼呼地忽明忽暗。整个展厅活像一场史前电子设备展。这些稀奇古怪的造型,似乎不光要在情感上震撼你,还要真的电你一下!",
+  "grammar_card": {
+    "title": "介词固定搭配 + -y 变 -ies/-s 拼写",
+    "intro": "①很多短语的介词是固定的,要整体记:take (an) interest in（对…感兴趣）、on display（展出中）、suspended from（从…垂下）、attached to（连在…上）、familiar to sb（为某人所熟悉）、in response to（响应…）、emit … from（从…发出）。②名词变复数、动词变第三人称单数时,以 -y 结尾要看前一个字母:辅音字母 + y → 去 y 加 -ies（baby→babies、city→cities、try→tries）;元音字母 + y → 直接加 -s（donkey→donkeys、day→days、pay→pays）。",
+    "table": {
+      "headers": ["搭配 / 规则", "意思", "例子"],
+      "rows": [
+        ["interest in / attached to", "对…感兴趣 / 连在…上", "no interest in art / attached to the wall"],
+        ["on display / suspended from", "展出中 / 从…垂下", "on display / suspended from the ceiling"],
+        ["familiar to / in response to", "为…所熟悉 / 响应…", "familiar to everybody / in response to the wind"],
+        ["辅音+y→ies · 元音+y→s", "复数/三单拼写", "baby→babies · donkey→donkeys"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "固定搭配的介词不能随意换:be attached to（✓ 连在…上）不用 attached on;familiar to sb（为某人所熟悉)别和 familiar with sth（熟悉某事)混。", "mark": "attached to / familiar to" },
+      { "rule": "辅音字母 + y → 去 y 加 -ies:city→cities、try→tries;元音字母(a/e/o/u) + y → 直接加 -s:day→days、pay→pays。", "mark": "-ies / -s" },
+      { "rule": "美语拼写:colored(英式 coloured);“店铺”store(英式 shop)、“市中心”downtown(英式 city centre)。本课已按美语写。", "mark": "colored / store" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How might some of the exhibits have been dangerous?",
+    "options": ["They could give visitors an electric shock", "They could fall from the ceiling", "They were made of broken glass", "They gave off poison gas"],
+    "answer_index": 0
+  },
+  "passage": "These days modern sculpture hardly surprises anyone. The idea that modern art can only be seen in museums is mistaken. Even people who take no interest in art cannot help noticing strange shapes on display in the parks and squares of many cities. We have all gotten used to them; some so-called 'modern' pieces have stood in public for nearly eighty years. Even so, I was surprised by a recent exhibition downtown. The first thing I saw when I walked into the gallery was a notice attached to the wall: 'Do not touch the exhibits. Some of them are dangerous!' The objects on display were pieces of moving sculpture. Oddly shaped forms suspended from the ceiling, which sway in response to a gust of wind, are familiar to everybody. These exhibits, however, were different. Lined up along one wall were long thin wires attached to metal spheres. The spheres had been magnetized, so they attracted or repelled one another all day long. In the center of the hall stood tall structures full of colored lights that flickered like traffic signals gone mad. Sparks were emitted from little black boxes, and red lamps flashed on and off angrily. The whole room felt like a display of prehistoric electronic gadgets. These peculiar forms seemed designed not only to shock people emotionally, but to give them a real electric shock as well!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "These days modern sculpture hardly surprises anyone. The idea that modern art can only be seen in museums is mistaken. Even people who take no interest in art cannot help noticing strange shapes on display in the parks and squares of many cities.", "text_cn": "如今现代雕塑几乎不再让人吃惊了。“现代艺术只能在博物馆里看”这种说法是错的。就连对艺术毫无兴趣的人,也不可能没注意到许多城市公园和广场上展出的古怪造型。" },
+    { "seq": 2, "speaker": null, "text_en": "We have all gotten used to them; some so-called 'modern' pieces have stood in public for nearly eighty years. Even so, I was surprised by a recent exhibition downtown. The first thing I saw when I walked into the gallery was a notice attached to the wall: 'Do not touch the exhibits. Some of them are dangerous!'", "text_cn": "我们早就见怪不怪;有些所谓“现代”的作品已在公共场所立了将近八十年。即便如此,最近市中心的一场展览还是让我吃了一惊。走进美术馆,我看到的第一样东西是墙上贴着的告示:“请勿触摸展品,有些很危险!”" },
+    { "seq": 3, "speaker": null, "text_en": "The objects on display were pieces of moving sculpture. Oddly shaped forms suspended from the ceiling, which sway in response to a gust of wind, are familiar to everybody. These exhibits, however, were different.", "text_cn": "展出的都是会动的雕塑。造型古怪、从天花板上垂下、随一阵风摆动的东西,大家早就熟悉。可这些展品不一样。" },
+    { "seq": 4, "speaker": null, "text_en": "Lined up along one wall were long thin wires attached to metal spheres. The spheres had been magnetized, so they attracted or repelled one another all day long. In the center of the hall stood tall structures full of colored lights that flickered like traffic signals gone mad.", "text_cn": "靠着一面墙,排着一根根细长金属丝,末端连着金属球。球被磁化过,整天互相吸引、又互相排斥。大厅正中立着几座高大的结构,里面装满彩灯,像发了疯的交通信号灯一样闪烁。" },
+    { "seq": 5, "speaker": null, "text_en": "Sparks were emitted from little black boxes, and red lamps flashed on and off angrily. The whole room felt like a display of prehistoric electronic gadgets. These peculiar forms seemed designed not only to shock people emotionally, but to give them a real electric shock as well!", "text_cn": "小黑盒子里迸出火花,红灯气呼呼地忽明忽暗。整个展厅活像一场史前电子设备展。这些稀奇古怪的造型,似乎不光要在情感上震撼你,还要真的电你一下!" }
+  ],
+  "words": [
+    { "word": "sculpture", "ipa": "/ˈskʌlptʃər/", "pos": "n", "meaning_cn": "雕塑", "example": "modern sculpture" },
+    { "word": "mistaken", "ipa": "/mɪˈsteɪkən/", "pos": "adj", "meaning_cn": "错误的", "example": "the idea is mistaken" },
+    { "word": "gallery", "ipa": "/ˈɡæləri/", "pos": "n", "meaning_cn": "美术馆,画廊", "example": "walked into the gallery" },
+    { "word": "exhibit", "ipa": "/ɪɡˈzɪbɪt/", "pos": "n", "meaning_cn": "展品,陈列品", "example": "do not touch the exhibits" },
+    { "word": "attach", "ipa": "/əˈtætʃ/", "pos": "v", "meaning_cn": "连接,系(attach to)", "example": "attached to metal spheres" },
+    { "word": "sphere", "ipa": "/sfɪr/", "pos": "n", "meaning_cn": "球体", "example": "metal spheres" },
+    { "word": "magnetize", "ipa": "/ˈmæɡnɪtaɪz/", "pos": "v", "meaning_cn": "使磁化", "example": "the spheres had been magnetized" },
+    { "word": "repel", "ipa": "/rɪˈpel/", "pos": "v", "meaning_cn": "排斥", "example": "attracted or repelled one another" },
+    { "word": "flicker", "ipa": "/ˈflɪkər/", "pos": "v", "meaning_cn": "闪烁", "example": "lights that flickered" },
+    { "word": "emit", "ipa": "/ɪˈmɪt/", "pos": "v", "meaning_cn": "放射,发出", "example": "sparks were emitted" },
+    { "word": "peculiar", "ipa": "/pɪˈkjuːliər/", "pos": "adj", "meaning_cn": "奇异的", "example": "these peculiar forms" },
+    { "word": "prehistoric", "ipa": "/ˌpriːhɪˈstɔːrɪk/", "pos": "adj", "meaning_cn": "史前的", "example": "prehistoric electronic gadgets" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "interest in / attached to(固定搭配介词)" },
+    { "gp": "gp2", "name": "on display / suspended from / in response to" },
+    { "gp": "gp3", "name": "familiar to / used to / emit from" },
+    { "gp": "gp4", "name": "辅音字母+y → -ies(baby→babies)" },
+    { "gp": "gp5", "name": "元音字母+y → -s(donkey→donkeys)" },
+    { "gp": "gp6", "name": "词汇辨析(sculpture/repel/peculiar)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Even people who take no interest ___ art notice these shapes.\"(interest 后接哪个介词)", "stem_cn": "连对艺术不感兴趣的人也会注意到这些形状。", "options": ["in", "on", "for", "of"] },
+    { "gp": "gp1", "stem": "\"There were long thin wires attached ___ metal spheres.\"(attach 后接哪个介词)", "stem_cn": "有细长的金属丝连着金属球。", "options": ["to", "in", "on", "of"] },
+    { "gp": "gp1", "stem": "\"A notice was attached ___ the wall near the door.\"(attach 后接哪个介词)", "stem_cn": "门边墙上贴着一张告示。", "options": ["to", "with", "at", "from"] },
+    { "gp": "gp2", "stem": "\"Strange forms are ___ display in parks and outside stores.\"(“在展出”用哪个介词)", "stem_cn": "奇怪的造型在公园里、商店外展出。", "options": ["on", "in", "at", "to"] },
+    { "gp": "gp2", "stem": "\"Oddly shaped forms are suspended ___ the ceiling.\"(suspend 后接哪个介词)", "stem_cn": "造型古怪的东西从天花板上垂下来。", "options": ["from", "on", "in", "at"] },
+    { "gp": "gp2", "stem": "\"The shapes move in response ___ a gust of wind.\"(in response 后接哪个介词)", "stem_cn": "这些造型随一阵风摆动。", "options": ["to", "of", "for", "with"] },
+    { "gp": "gp3", "stem": "\"Such swinging shapes are familiar ___ everybody.\"(familiar 后接哪个介词)", "stem_cn": "这种摆动的造型人人都熟悉。", "options": ["to", "with", "for", "of"] },
+    { "gp": "gp3", "stem": "\"We have gotten used ___ seeing modern art in public.\"(be/get used 后接哪个介词)", "stem_cn": "我们已经习惯在公共场所看到现代艺术。", "options": ["to", "with", "of", "for"] },
+    { "gp": "gp3", "stem": "\"Sparks were emitted ___ small black boxes.\"(emit 后接哪个介词)", "stem_cn": "火花从小黑盒子里迸出。", "options": ["from", "to", "in", "of"] },
+    { "gp": "gp4", "stem": "\"one baby, two ___.\"(辅音字母+y 变复数)", "stem_cn": "一个婴儿,两个婴儿。", "options": ["babies", "babys", "babyes", "babis"] },
+    { "gp": "gp4", "stem": "\"one city, many ___.\"(辅音字母+y 变复数)", "stem_cn": "一个城市,许多城市。", "options": ["cities", "citys", "cityes", "cies"] },
+    { "gp": "gp4", "stem": "\"He never ___ very hard.\"(try 的第三人称单数)", "stem_cn": "他从不很努力地尝试。", "options": ["tries", "trys", "try", "trees"] },
+    { "gp": "gp5", "stem": "\"one donkey, two ___.\"(元音字母+y 直接加 -s)", "stem_cn": "一头驴,两头驴。", "options": ["donkeys", "donkies", "donkeyes", "donkis"] },
+    { "gp": "gp5", "stem": "\"one day, seven ___.\"(元音字母+y 直接加 -s)", "stem_cn": "一天,七天。", "options": ["days", "dais", "dayes", "daies"] },
+    { "gp": "gp5", "stem": "\"She always ___ the bills on time.\"(pay 的第三人称单数)", "stem_cn": "她总是按时付账单。", "options": ["pays", "paies", "payes", "paics"] },
+    { "gp": "gp6", "stem": "\"A shape made of stone, metal, or clay for people to look at is a ___.\"(“雕塑”用哪个词)", "stem_cn": "用石、金属或黏土做成供人观赏的造型。", "options": ["sculpture", "painting", "poem", "song"] },
+    { "gp": "gp6", "stem": "\"When two magnets push each other away, they ___ each other.\"(“排斥”用哪个词)", "stem_cn": "两块磁铁互相推开就是排斥。", "options": ["repel", "attract", "melt", "break"] },
+    { "gp": "gp6", "stem": "\"Strange and unusual in a way that is hard to explain is ___.\"(“奇异的”用哪个词)", "stem_cn": "奇怪得难以解释的。", "options": ["peculiar", "ordinary", "gentle", "cheap"] }
+  ],
+  "stage6": [
+    { "stem": "sculpture 的意思是:", "options": ["雕塑", "绘画", "照片", "地图"] },
+    { "stem": "mistaken 的意思是:", "options": ["错误的", "正确的", "昂贵的", "巨大的"] },
+    { "stem": "exhibit 的意思是:", "options": ["展品,陈列品", "顾客", "画家", "门票"] },
+    { "stem": "sphere 的意思是:", "options": ["球体", "立方体", "三角形", "直线"] },
+    { "stem": "repel 的意思是:", "options": ["排斥", "吸引", "融化", "连接"] },
+    { "stem": "peculiar 的意思是:", "options": ["奇异的", "普通的", "安静的", "明亮的"] }
+  ],
+  "contrast": [
+    { "us": "store", "uk": "shop", "note_cn": "店铺;美语 store,英式 shop" },
+    { "us": "downtown", "uk": "city centre", "note_cn": "市中心;美语 downtown,英式 city centre" },
+    { "us": "colored", "uk": "coloured", "note_cn": "有色的;美语 colored,英式 coloured" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" }
+  ],
+  "chunks": [
+    { "us": "take interest in", "ipa": "/teɪk ˈɪntrəst ɪn/", "example1": "People who take no interest in art still notice them.", "example1_cn": "对艺术不感兴趣的人也会注意到它们。", "example2": "She takes great interest in science.", "example2_cn": "她对科学很感兴趣。" },
+    { "us": "on display", "ipa": "/ɑːn dɪˈspleɪ/", "example1": "The sculptures were on display in the park.", "example1_cn": "那些雕塑在公园里展出。", "example2": "New phones are on display in the store.", "example2_cn": "新手机在店里陈列着。" },
+    { "us": "attached to", "ipa": "/əˈtætʃt tə/", "example1": "Wires were attached to the metal spheres.", "example1_cn": "金属丝连在金属球上。", "example2": "A note was attached to the door.", "example2_cn": "门上贴着一张便条。" },
+    { "us": "in response to", "ipa": "/ɪn rɪˈspɑːns tə/", "example1": "The forms move in response to the wind.", "example1_cn": "这些造型随风摆动。", "example2": "He acted in response to their request.", "example2_cn": "他应他们的要求行动。" }
+  ],
+  "stage7_cloze": {
+    "context": "Even people who take no interest ___1___ art notice modern sculpture on display in public. At a recent show, I saw a notice attached ___2___ the wall: 'Do not touch!' Oddly shaped forms were suspended ___3___ the ceiling, and metal spheres moved ___4___ response to hidden magnets.",
+    "blanks": [
+      { "blank_no": 1, "options": ["in", "on", "for", "of"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["to", "in", "on", "of"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["from", "on", "in", "at"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["in", "on", "at", "of"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What did the notice at the gallery warn visitors?", "options": ["Not to touch the exhibits", "To stay very quiet", "To pay an extra fee", "To take no photos"] },
+    { "stem": "What had been done to the metal spheres?", "options": ["They had been magnetized", "They had been painted", "They had been broken", "They had been hidden"] },
+    { "stem": "What came out of the small black boxes?", "options": ["Sparks", "Water", "Smoke rings", "Music"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"他对现代艺术不感兴趣\"(interest in):", "options": ["He takes no interest in modern art.", "He takes no interest on modern art.", "He takes no interest of modern art.", "He takes no interest for modern art."] },
+    { "stem": "你想说\"墙上贴着一张告示\"(attached to):", "options": ["A notice was attached to the wall.", "A notice was attached on the wall.", "A notice was attached in the wall.", "A notice was attached of the wall."] },
+    { "stem": "你想说\"这些造型随风摆动\"(in response to):", "options": ["The forms move in response to the wind.", "The forms move in response of the wind.", "The forms move in response for the wind.", "The forms move on response to the wind."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "sculpture 的意思是:", "options": ["雕塑", "绘画", "照片", "地图"] },
+    { "kind": "vocab", "stem": "peculiar 的意思是:", "options": ["奇异的", "普通的", "安静的", "明亮的"] },
+    { "kind": "grammar", "stem": "\"People who take no interest ___ art still notice them.\"(interest 后接介词)", "stem_cn": "对艺术不感兴趣的人也会注意到它们。", "options": ["in", "on", "for", "of"] },
+    { "kind": "grammar", "stem": "\"one city, many ___.\"(辅音字母+y 变复数)", "stem_cn": "一个城市,许多城市。", "options": ["cities", "citys", "cityes", "cies"] },
+    { "kind": "scenario", "stem": "\"on display\" 的意思是:", "options": ["在展出,在陈列", "已售完", "在维修", "被收藏起来"] },
+    { "kind": "scenario", "stem": "\"attached to\" 的意思是:", "options": ["连接在…上", "从…上取下", "远离…", "隐藏于…后"] },
+    { "kind": "reading", "stem": "Where can modern sculpture be seen, according to the writer?", "options": ["In public places, not only museums", "Only inside museums", "Only in private homes", "Nowhere anymore"], "passage": true },
+    { "kind": "reading", "stem": "Why were these exhibits called dangerous?", "options": ["They could give an electric shock", "They were extremely heavy", "They had sharp edges", "They might fall over"], "passage": true },
+    { "kind": "listening", "stem": "What did the colored lights look like?", "options": ["Traffic signals gone mad", "A calm sunset", "A single candle", "A steady rainbow"], "audio": true },
+    { "kind": "listening", "stem": "How did the writer feel about the exhibition?", "options": ["Surprised", "Bored", "Completely uninterested", "Frightened away at the door"], "audio": true }
+  ]
+}

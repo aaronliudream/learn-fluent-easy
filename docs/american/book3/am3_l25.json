@@ -1,0 +1,133 @@
+{
+  "id": "am3_l25",
+  "unit_no": 5,
+  "lesson_no": 25,
+  "title_en": "The Cutty Sark",
+  "title_cn": "“卡蒂萨克”号帆船",
+  "grammar_focus": "be used to do sth(被用来做)/ used to do(过去常常)/ be used to doing(习惯于)三者的区别、a lot of / a great many(可数)/ a great deal of(不可数)、on/in 的固定搭配(on fire / on foot / on purpose / in tears / in a hurry)、have sth done(请人把某事做好)、its 与 it's、too 与 very、win 与 beat(原创承载 NCE3 L25 考点·无需净化·19世纪名帆船卡蒂萨克号 1872 年从上海到英国的运茶竞赛,因风暴折舵与对手擦肩而过)",
+  "scene": "卡蒂萨克号是19世纪最著名的帆船之一,如今仍陈列在英国格林威治,停在干船坞上,每年吸引成千上万游客,是往昔巨帆时代一个令人肃然起敬的见证。在蒸汽船取代帆船之前,卡蒂萨克号这样的大帆船曾被用来从中国运茶、从澳大利亚运羊毛。它是有史以来最快的帆船之一,唯一能与之匹敌的是塞莫皮莱号。1872年6月,两船从上海启航,展开一场激动人心的返英竞赛。这场比赛整整持续了四个月,也是同类竞赛的最后一次——它标志着巨帆时代的终结、新纪元的开端。赛程中,塞莫皮莱号最先抵达爪哇,可到了印度洋,卡蒂萨克号反超领先。眼看它就要第一个到家,途中却接连倒霉:八月里一场猛烈风暴把它的舵撕走了,船身左右摇晃,无法掌舵。船员用备用木板在船上临时做了一个舵,费尽力气才装上;这大大拖慢了船速,因为一旦跑得太快,临时舵也会被扯掉。过赤道后,船长在一个港口停靠,请人换了新舵,可这时塞莫皮莱号已领先五百多英里。卡蒂萨克号仅比对手晚一周抵达英国——考虑到途中那么多耽搁,已属难得。毫无疑问,要不是折了舵,它本可轻松赢下这场比赛。",
+  "grammar_card": {
+    "title": "used to 三种 / a great deal of / on·in 搭配 / have sth done",
+    "intro": "①三个容易混:be used to do sth = 被用来做某事(被动,were used to carry tea);used to do = 过去常常(过去的习惯);be used to doing = 习惯于做。②数量词:a lot of 通用;a great many + 可数名词(a great many ships);a great deal of + 不可数名词(a great deal of luck)。③on/in 的固定搭配:on fire(着火)、on foot(步行)、on purpose(故意)、in tears(流泪)、in a hurry(匆忙)。④have sth done = 请/让别人把某事做好(have a rudder fitted)。⑤its(它的)≠ it's(it is);too(太…以致不好)≠ very;win a race / beat sb。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["be used to do / used to do / be used to doing", "被用来做 / 过去常常 / 习惯于", "were used to carry / used to sing / used to sailing"],
+        ["a great many / a great deal of", "许多(可数)/ 大量(不可数)", "a great many ships / a great deal of luck"],
+        ["on/in 固定搭配", "on fire / on foot / in a hurry", "reached it on foot"],
+        ["have sth done", "请人把某事做好", "had a new rudder fitted"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "be used to 后接动词原形(被用来做)还是接 -ing(习惯于),意思完全不同:This tool is used to open cans(被用来开)/ I am used to opening cans(我习惯开)。", "mark": "used to do / used to doing" },
+      { "rule": "a great many 修饰可数名词(ships),a great deal of 修饰不可数名词(luck);别搭反。", "mark": "a great many / a great deal of" },
+      { "rule": "美式拼写:harbor(英式 harbour)、traveled(英式 travelled)、meter(英式 metre)、catalog(英式 catalogue)。本课已按美语写。", "mark": "harbor / traveled" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What piece of bad luck prevented the Cutty Sark from winning the race?",
+    "options": ["A storm tore away her rudder", "Her sails were burned", "She ran aground", "Her captain fell ill"],
+    "answer_index": 0
+  },
+  "passage": "One of the most famous sailing ships of the 1800s, the Cutty Sark, can still be seen today in Greenwich, England. She sits on dry land, and thousands of visitors come to see her every year. She stands as an impressive reminder of the great ships of the past. Before steamships took over, sailing vessels like the Cutty Sark were used to carry tea from China and wool from Australia. The Cutty Sark was one of the fastest sailing ships ever built, and the only vessel that could match her was the Thermopylae. In June 1872, both ships set off from Shanghai in an exciting race back to England. The race lasted exactly four months and turned out to be the last of its kind, for it marked the end of the age of sail and the start of a new era. The Thermopylae reached Java first, but out on the Indian Ocean the Cutty Sark took the lead. It seemed certain that she would be the first ship home. During the race, however, she had a great deal of bad luck. In August a fierce storm tore away her rudder, and without it the ship rolled from side to side and could not be steered. The crew built a temporary rudder on board from spare planks and fitted it with great difficulty. This slowed the ship down, for if she went too fast, the makeshift rudder might be torn away as well. After crossing the Equator, the captain stopped at a port to have a new rudder fitted, but by then the Thermopylae was over five hundred miles ahead. The Cutty Sark reached England only a week later, remarkable considering her many delays. There is no doubt that if she had not lost her rudder, she would have won the race easily.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "One of the most famous sailing ships of the 1800s, the Cutty Sark, can still be seen today in Greenwich, England. She sits on dry land, and thousands of visitors come to see her every year. She stands as an impressive reminder of the great ships of the past.", "text_cn": "卡蒂萨克号是19世纪最著名的帆船之一,如今仍陈列在英国格林威治,停在干船坞上,每年吸引成千上万游客,是往昔巨帆时代一个令人肃然起敬的见证。" },
+    { "seq": 2, "speaker": null, "text_en": "Before steamships took over, sailing vessels like the Cutty Sark were used to carry tea from China and wool from Australia. The Cutty Sark was one of the fastest sailing ships ever built, and the only vessel that could match her was the Thermopylae.", "text_cn": "在蒸汽船取代帆船之前,卡蒂萨克号这样的大帆船曾被用来从中国运茶、从澳大利亚运羊毛。它是有史以来最快的帆船之一,唯一能与之匹敌的是塞莫皮莱号。" },
+    { "seq": 3, "speaker": null, "text_en": "In June 1872, both ships set off from Shanghai in an exciting race back to England. The race lasted exactly four months and turned out to be the last of its kind, for it marked the end of the age of sail and the start of a new era. The Thermopylae reached Java first, but out on the Indian Ocean the Cutty Sark took the lead. It seemed certain that she would be the first ship home.", "text_cn": "1872年6月,两船从上海启航,展开一场激动人心的返英竞赛。这场比赛整整持续了四个月,也是同类竞赛的最后一次——它标志着巨帆时代的终结、新纪元的开端。塞莫皮莱号最先抵达爪哇,可到了印度洋,卡蒂萨克号反超领先。眼看它就要第一个到家。" },
+    { "seq": 4, "speaker": null, "text_en": "During the race, however, she had a great deal of bad luck. In August a fierce storm tore away her rudder, and without it the ship rolled from side to side and could not be steered. The crew built a temporary rudder on board from spare planks and fitted it with great difficulty.", "text_cn": "赛程中,它却接连倒霉:八月里一场猛烈风暴把它的舵撕走了,船身左右摇晃,无法掌舵。船员用备用木板在船上临时做了一个舵,费尽力气才装上。" },
+    { "seq": 5, "speaker": null, "text_en": "This slowed the ship down, for if she went too fast, the makeshift rudder might be torn away as well. After crossing the Equator, the captain stopped at a port to have a new rudder fitted, but by then the Thermopylae was over five hundred miles ahead. The Cutty Sark reached England only a week later, remarkable considering her many delays. There is no doubt that if she had not lost her rudder, she would have won the race easily.", "text_cn": "这大大拖慢了船速,因为一旦跑得太快,临时舵也会被扯掉。过赤道后,船长在一个港口停靠,请人换了新舵,可这时塞莫皮莱号已领先五百多英里。卡蒂萨克号仅比对手晚一周抵达英国——考虑到途中那么多耽搁,已属难得。毫无疑问,要不是折了舵,它本可轻松赢下这场比赛。" }
+  ],
+  "words": [
+    { "word": "impressive", "ipa": "/ɪmˈpresɪv/", "pos": "adj", "meaning_cn": "给人深刻印象的", "example": "an impressive reminder" },
+    { "word": "vessel", "ipa": "/ˈvesl/", "pos": "n", "meaning_cn": "轮船,大木船", "example": "sailing vessels" },
+    { "word": "era", "ipa": "/ˈɪrə/", "pos": "n", "meaning_cn": "时期,时代", "example": "a new era" },
+    { "word": "rudder", "ipa": "/ˈrʌdər/", "pos": "n", "meaning_cn": "舵", "example": "her rudder was torn away" },
+    { "word": "roll", "ipa": "/roʊl/", "pos": "v", "meaning_cn": "颠簸,摇摆", "example": "the ship rolled from side to side" },
+    { "word": "steer", "ipa": "/stɪr/", "pos": "v", "meaning_cn": "掌握方向,驾驶", "example": "could not be steered" },
+    { "word": "temporary", "ipa": "/ˈtempəreri/", "pos": "adj", "meaning_cn": "临时的", "example": "a temporary rudder" },
+    { "word": "plank", "ipa": "/plæŋk/", "pos": "n", "meaning_cn": "大块木板", "example": "spare planks" },
+    { "word": "fit", "ipa": "/fɪt/", "pos": "v", "meaning_cn": "安装", "example": "fitted with great difficulty" },
+    { "word": "Equator", "ipa": "/ɪˈkweɪtər/", "pos": "n", "meaning_cn": "赤道", "example": "after crossing the Equator" },
+    { "word": "delay", "ipa": "/dɪˈleɪ/", "pos": "n", "meaning_cn": "耽误,延误", "example": "her many delays" },
+    { "word": "steamship", "ipa": "/ˈstiːmʃɪp/", "pos": "n", "meaning_cn": "蒸汽轮船", "example": "before steamships took over" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "be used to do / used to do / be used to doing" },
+    { "gp": "gp2", "name": "a lot of / a great many / a great deal of" },
+    { "gp": "gp3", "name": "on/in 固定搭配(on fire/on foot/in a hurry)" },
+    { "gp": "gp4", "name": "have sth done(请人做)" },
+    { "gp": "gp5", "name": "its vs it's / too vs very / win vs beat" },
+    { "gp": "gp6", "name": "词汇辨析(rudder/vessel/temporary)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Sailing vessels were used to ___ tea from China.\"(be used to do sth = 被用来做)", "stem_cn": "帆船曾被用来从中国运茶。", "options": ["carry", "carrying", "carried", "carries"] },
+    { "gp": "gp1", "stem": "\"Long ago, sailors ___ sing while they worked.\"(表“过去常常做某事”)", "stem_cn": "很久以前,水手们干活时常常唱歌。", "options": ["used to", "are used to", "were used to", "use to"] },
+    { "gp": "gp1", "stem": "\"An old sailor is used to ___ in rough seas.\"(be used to doing = 习惯于做)", "stem_cn": "老水手习惯了在风浪中航行。", "options": ["sailing", "sail", "sailed", "sails"] },
+    { "gp": "gp2", "stem": "\"During the race she had a great ___ of bad luck.\"(修饰不可数名词 luck)", "stem_cn": "比赛中她遇到很多倒霉事。", "options": ["deal", "many", "number", "few"] },
+    { "gp": "gp2", "stem": "\"A great ___ ships were replaced by steamships.\"(修饰可数名词 ships)", "stem_cn": "许许多多帆船被蒸汽船取代了。", "options": ["many", "deal", "deal of", "amount"] },
+    { "gp": "gp2", "stem": "\"The Cutty Sark carried a lot ___ tea and wool.\"(a lot ___ + 名词)", "stem_cn": "卡蒂萨克号运载了大量茶叶和羊毛。", "options": ["of", "in", "with", "for"] },
+    { "gp": "gp3", "stem": "\"During the storm the ship was almost ___ fire from a lightning strike.\"(“着火”固定搭配)", "stem_cn": "暴风雨中,闪电差点让船着起火来。", "options": ["on", "in", "at", "with"] },
+    { "gp": "gp3", "stem": "\"The sailors reached the port ___ foot to find help.\"(“步行”固定搭配)", "stem_cn": "水手们步行到港口去求援。", "options": ["on", "in", "by", "at"] },
+    { "gp": "gp3", "stem": "\"The captain was ___ a hurry to fix the rudder.\"(“匆忙”固定搭配)", "stem_cn": "船长急着修舵。", "options": ["in", "on", "at", "with"] },
+    { "gp": "gp4", "stem": "\"The captain stopped at a port to have a new rudder ___.\"(have sth done,用过去分词)", "stem_cn": "船长在一个港口停下,请人装了新舵。", "options": ["fitted", "fit", "fitting", "to fit"] },
+    { "gp": "gp4", "stem": "\"They had the broken mast ___ before setting off again.\"(have sth done)", "stem_cn": "再次起航前,他们把断了的桅杆修好了。", "options": ["repaired", "repair", "repairing", "to repair"] },
+    { "gp": "gp4", "stem": "\"You should have your compass ___ before a long voyage.\"(have sth done)", "stem_cn": "长途航行前你该请人检查一下罗盘。", "options": ["checked", "check", "checking", "to check"] },
+    { "gp": "gp5", "stem": "\"The race was the last of ___ kind.\"(表“它的”,所属)", "stem_cn": "这场比赛是同类中的最后一场。", "options": ["its", "it's", "its'", "it is"] },
+    { "gp": "gp5", "stem": "\"If the ship went ___ fast, the rudder might break.\"(“太…以致不好”用哪个)", "stem_cn": "船要是开得太快,舵可能会断。", "options": ["too", "very", "so", "much"] },
+    { "gp": "gp5", "stem": "\"The Thermopylae managed to ___ the Cutty Sark by a week.\"(“击败对手”用哪个)", "stem_cn": "塞莫皮莱号以一周之差赢了卡蒂萨克号。", "options": ["beat", "win", "won", "defeat to"] },
+    { "gp": "gp6", "stem": "\"The flat blade at the back of a ship used to steer it is the ___.\"(“舵”用哪个词)", "stem_cn": "船尾用来控制方向的扁板。", "options": ["rudder", "anchor", "sail", "deck"] },
+    { "gp": "gp6", "stem": "\"A large boat or ship is also called a ___.\"(“船,大木船”用哪个词)", "stem_cn": "大船也可以叫作 vessel。", "options": ["vessel", "wagon", "carriage", "sled"] },
+    { "gp": "gp6", "stem": "\"Something meant to last only a short time is ___.\"(“临时的”用哪个词)", "stem_cn": "只用一小段时间的。", "options": ["temporary", "permanent", "ancient", "golden"] }
+  ],
+  "stage6": [
+    { "stem": "impressive 的意思是:", "options": ["给人深刻印象的", "无聊的", "普通的", "廉价的"] },
+    { "stem": "vessel 的意思是:", "options": ["轮船,大木船", "马车", "自行车", "雪橇"] },
+    { "stem": "rudder 的意思是:", "options": ["舵", "帆", "锚", "桨"] },
+    { "stem": "steer 的意思是:", "options": ["掌握方向,驾驶", "沉没", "停靠", "装载"] },
+    { "stem": "temporary 的意思是:", "options": ["临时的", "永久的", "古老的", "危险的"] },
+    { "stem": "delay 的意思是:", "options": ["耽误,延误", "到达", "庆祝", "出发"] }
+  ],
+  "contrast": [
+    { "us": "harbor", "uk": "harbour", "note_cn": "港口;美语 harbor,英式 harbour" },
+    { "us": "traveled", "uk": "travelled", "note_cn": "travel 的过去式;美语 traveled(单 l),英式 travelled(双 l)" },
+    { "us": "meter", "uk": "metre", "note_cn": "米(长度);美语 meter,英式 metre" },
+    { "us": "catalog", "uk": "catalogue", "note_cn": "目录;美语 catalog,英式 catalogue" }
+  ],
+  "chunks": [
+    { "us": "be used to do sth", "ipa": "/biː juːzd tə/", "example1": "Sailing ships were used to carry tea.", "example1_cn": "帆船曾被用来运茶。", "example2": "This tool is used to open cans.", "example2_cn": "这个工具是用来开罐头的。" },
+    { "us": "set off", "ipa": "/set ɔːf/", "example1": "Both ships set off from Shanghai.", "example1_cn": "两船从上海启航。", "example2": "We set off at dawn.", "example2_cn": "我们黎明时出发。" },
+    { "us": "take the lead", "ipa": "/teɪk ðə liːd/", "example1": "The Cutty Sark took the lead.", "example1_cn": "卡蒂萨克号领先了。", "example2": "She took the lead in the last lap.", "example2_cn": "她在最后一圈领先了。" },
+    { "us": "have sth done", "ipa": "/hæv ˈsʌmθɪŋ dʌn/", "example1": "He had a new rudder fitted.", "example1_cn": "他请人装了个新舵。", "example2": "I had my bike repaired.", "example2_cn": "我把自行车送去修了。" }
+  ],
+  "stage7_cloze": {
+    "context": "Before steamships came, ships like the Cutty Sark ___1___ used to carry tea. In 1872 she ___2___ off from Shanghai in a famous race. She had a great ___3___ of bad luck when a storm tore away her rudder. The captain later stopped to have a new one ___4___.",
+    "blanks": [
+      { "blank_no": 1, "options": ["were", "are", "used", "had"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["set", "sets", "setting", "was set"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["deal", "many", "number", "few"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["fitted", "fit", "fitting", "to fit"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where can the Cutty Sark be seen today?", "options": ["On dry land in Greenwich", "At sea near China", "In a museum in Australia", "At the bottom of the ocean"] },
+    { "stem": "What did sailing ships like the Cutty Sark carry?", "options": ["Tea and wool", "Coal and iron", "Cars and oil", "Books and paper"] },
+    { "stem": "What piece of bad luck cost the Cutty Sark the race?", "options": ["A storm tore away her rudder", "Her sails caught fire", "She hit an iceberg", "Her crew fell ill"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"帆船曾被用来运茶\"(be used to do = 被用来做):", "options": ["Sailing ships were used to carry tea.", "Sailing ships used to carrying tea.", "Sailing ships were used to carrying tea.", "Sailing ships are used to carry tea."] },
+    { "stem": "你想说\"她遇到很多倒霉事\"(a great deal of + 不可数):", "options": ["She had a great deal of bad luck.", "She had a great many bad luck.", "She had a great deal of bad lucks.", "She had great deal of bad luck."] },
+    { "stem": "你想说\"船长请人装了新舵\"(have sth done):", "options": ["The captain had a new rudder fitted.", "The captain had a new rudder fit.", "The captain had fitted a new rudder by others.", "The captain had a new rudder fitting."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "rudder 的意思是:", "options": ["舵", "帆", "锚", "桨"] },
+    { "kind": "vocab", "stem": "temporary 的意思是:", "options": ["临时的", "永久的", "古老的", "危险的"] },
+    { "kind": "grammar", "stem": "\"Sailing vessels were used to ___ tea.\"(be used to do = 被用来做)", "stem_cn": "帆船曾被用来运茶。", "options": ["carry", "carrying", "carried", "carries"] },
+    { "kind": "grammar", "stem": "\"She had a great ___ of bad luck.\"(修饰不可数名词)", "stem_cn": "她遇到很多倒霉事。", "options": ["deal", "many", "number", "few"] },
+    { "kind": "scenario", "stem": "\"set off\" 的意思是:", "options": ["出发,启程", "安装", "取消", "熄灭"] },
+    { "kind": "scenario", "stem": "\"take the lead\" 的意思是:", "options": ["领先,处于领先", "让路", "借钱", "迷路"] },
+    { "kind": "reading", "stem": "Why is the Cutty Sark famous?", "options": ["She was one of the last and fastest great sailing ships", "She won every race she entered", "She was the biggest ship ever built", "She sank in a famous disaster"], "passage": true },
+    { "kind": "reading", "stem": "What would have happened if the Cutty Sark had not lost her rudder?", "options": ["She would have won the race easily", "She would still have lost", "She would have sunk", "Nothing would have changed"], "passage": true },
+    { "kind": "listening", "stem": "How did the crew keep the ship moving after losing the rudder?", "options": ["They made a temporary rudder from spare planks", "They rowed with oars", "They waited for rescue", "They raised more sails"], "audio": true },
+    { "kind": "listening", "stem": "How much later than the Thermopylae did the Cutty Sark reach England?", "options": ["About a week", "A single day", "A month", "They arrived together"], "audio": true }
+  ]
+}

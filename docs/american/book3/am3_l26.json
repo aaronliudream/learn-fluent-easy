@@ -1,0 +1,133 @@
+{
+  "id": "am3_l26",
+  "unit_no": 6,
+  "lesson_no": 26,
+  "title_en": "Wanted: A Giant Cookie",
+  "title_cn": "征购大饼干",
+  "grammar_focus": "动名词作宾语(avoid / enjoy / mind + doing;It's no use / not worth + doing)、go / turn / grow + 形容词(变得…)、in the way / on the way / by the way 三个短语的意思、send / lend / give sth to sb、one 与 a 的区别、so + 形容词 + that / such (a) + 名词 + that(原创承载 NCE3 L26 考点·无需净化·广告如何影响人 + 电台'谁烤的饼干最大'比赛:大学生烤出2400磅巨饼夺魁)",
+  "scene": "谁都躲不开广告的影响。尽管我们自诩品味不俗,却早已不能完全自由地选择想要的东西了,因为广告对我们有一种微妙的作用。为了劝我们买这买那,广告商仔细研究了人性,把我们所有的小弱点都归了类。广告商很早就发现:我们人人都喜欢“不劳而获”。一则以“免费”二字开头的广告几乎从不失手。如今,商家不光送免费样品,还送免费汽车、免费房子、免费环球旅行;他们设计出成百上千种比赛,让我们有机会赢得大笔奖金。广播和电视让广告商得以借此抓住千百万人的注意力。有一次电台节目里,一家饼干厂请听众自己烤饼干寄到厂里,并承诺按每磅十美元收购听众烤出的最大饼干。反响热烈极了。没过多久,各种形状大小的饼干纷纷寄到。一位女士用独轮车把她的饼干推了进来,足足有近五百磅。稍后又来了个男人,他的饼干塞满了整个汽车后备箱。每块饼干都被仔细称重。当时最大的是713磅,看来十拿九稳能得奖。可就在比赛截止前,一辆卡车开进厂里,车上是一块重达2400磅的超级大饼干——出自一个大学生之手,他用了一千多磅面粉、八百磅糖、还有几百磅别的配料。饼干太重,只好动用起重机才把它从卡车上吊下来。厂家最后付的钱远超预料:他们花两万四千美元买下了这块饼干。",
+  "grammar_card": {
+    "title": "动名词作宾语 / go·turn·grow+形容词 / send sth to sb / so...that",
+    "intro": "①有些词后面要接动名词 -ing:avoid doing、enjoy doing、mind doing;It's no use doing、It's not worth doing。②go / turn / grow + 形容词表示“变得…”:go wrong(出错)、go bad(变坏)、turn yellow(变黄)、grow quiet(变安静)。③三个短语意思不同:in the way(挡道)、on the way(在途中)、by the way(顺便说)。④send / lend / give + 某物 + to + 某人。⑤one 强调“一个(数量、具体某个)”,a 泛指“一个”。⑥so + 形容词 + that;such + (a) + 名词 + that。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["avoid/mind doing · It's no use doing", "后接动名词", "avoid being influenced"],
+        ["go / turn / grow + 形容词", "变得…", "go wrong / turn yellow"],
+        ["in / on / by the way", "挡道 / 途中 / 顺便说", "by the way, …"],
+        ["send/give sth to sb · so...that", "把…给… / 如此…以致", "send them to the factory / so heavy that…"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "avoid / mind / enjoy 后面接 -ing,不接 to do:avoid being influenced(✓)avoid to be(✗)。", "mark": "avoid/mind + doing" },
+      { "rule": "go / turn / grow 表“变得…”时后面接形容词(不接 to);go bad / turn cold。", "mark": "go/turn/grow + 形容词" },
+      { "rule": "美式用词:cookie(英式 biscuit)、trunk(汽车后备箱,英式 boot)、truck(英式 lorry)。本课已按美语写。", "mark": "cookie / trunk / truck" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Who won the prize for the biggest cookie?",
+    "options": ["A college student", "A woman with a wheelbarrow", "A man with a big car", "The radio host"],
+    "answer_index": 0
+  },
+  "passage": "No one can avoid being influenced by advertisements. Much as we may pride ourselves on our good taste, we are no longer free to choose exactly what we want, for advertising has a subtle effect on us. In their efforts to persuade us to buy this or that product, advertisers have made a careful study of human nature and have classified all our little weaknesses. Advertisers discovered long ago that all of us love to get something for nothing. An ad that begins with the magic word FREE can rarely go wrong. These days, companies offer not only free samples but free cars, free houses, and free trips around the world. They dream up hundreds of contests that promise us the chance to win huge sums of money. Radio and television have made it possible to capture the attention of millions of people this way. During a radio show, a company of cookie makers once asked listeners to bake cookies and send them to the factory. They offered ten dollars a pound for the biggest cookie a listener could bake. The response was tremendous. Before long, cookies of every shape and size began arriving. One woman wheeled hers in on a wheelbarrow; it weighed nearly 500 pounds. A little later, a man showed up with a cookie that filled the entire trunk of his car. Every cookie was carefully weighed. The largest so far was 713 pounds, and it seemed certain to win. But just before the contest closed, a truck pulled up with a truly colossal cookie weighing 2,400 pounds. It had been baked by a college student who had used over a thousand pounds of flour, 800 pounds of sugar, and hundreds of pounds of other ingredients. It was so heavy that a crane had to be used to lift it off the truck. The company ended up paying far more than they had anticipated: they bought that cookie for $24,000.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "No one can avoid being influenced by advertisements. Much as we may pride ourselves on our good taste, we are no longer free to choose exactly what we want, for advertising has a subtle effect on us. In their efforts to persuade us to buy this or that product, advertisers have made a careful study of human nature and have classified all our little weaknesses.", "text_cn": "谁都躲不开广告的影响。尽管我们自诩品味不俗,却早已不能完全自由地选择想要的东西了,因为广告对我们有一种微妙的作用。为了劝我们买这买那,广告商仔细研究了人性,把我们所有的小弱点都归了类。" },
+    { "seq": 2, "speaker": null, "text_en": "Advertisers discovered long ago that all of us love to get something for nothing. An ad that begins with the magic word FREE can rarely go wrong. These days, companies offer not only free samples but free cars, free houses, and free trips around the world. They dream up hundreds of contests that promise us the chance to win huge sums of money. Radio and television have made it possible to capture the attention of millions of people this way.", "text_cn": "广告商很早就发现:我们人人都喜欢“不劳而获”。一则以“免费”二字开头的广告几乎从不失手。如今,商家不光送免费样品,还送免费汽车、房子、环球旅行;他们设计出成百上千种比赛,让我们有机会赢得大笔奖金。广播和电视让广告商得以借此抓住千百万人的注意力。" },
+    { "seq": 3, "speaker": null, "text_en": "During a radio show, a company of cookie makers once asked listeners to bake cookies and send them to the factory. They offered ten dollars a pound for the biggest cookie a listener could bake. The response was tremendous. Before long, cookies of every shape and size began arriving.", "text_cn": "有一次电台节目里,一家饼干厂请听众自己烤饼干寄到厂里,并承诺按每磅十美元收购听众烤出的最大饼干。反响热烈极了。没过多久,各种形状大小的饼干纷纷寄到。" },
+    { "seq": 4, "speaker": null, "text_en": "One woman wheeled hers in on a wheelbarrow; it weighed nearly 500 pounds. A little later, a man showed up with a cookie that filled the entire trunk of his car. Every cookie was carefully weighed. The largest so far was 713 pounds, and it seemed certain to win.", "text_cn": "一位女士用独轮车把她的饼干推了进来,足足有近五百磅。稍后又来了个男人,他的饼干塞满了整个汽车后备箱。每块饼干都被仔细称重。当时最大的是713磅,看来十拿九稳能得奖。" },
+    { "seq": 5, "speaker": null, "text_en": "But just before the contest closed, a truck pulled up with a truly colossal cookie weighing 2,400 pounds. It had been baked by a college student who had used over a thousand pounds of flour, 800 pounds of sugar, and hundreds of pounds of other ingredients. It was so heavy that a crane had to be used to lift it off the truck. The company ended up paying far more than they had anticipated: they bought that cookie for $24,000.", "text_cn": "可就在比赛截止前,一辆卡车开进厂里,车上是一块重达2400磅的超级大饼干——出自一个大学生之手,他用了一千多磅面粉、八百磅糖、还有几百磅别的配料。饼干太重,只好动用起重机才把它从卡车上吊下来。厂家最后付的钱远超预料:他们花两万四千美元买下了这块饼干。" }
+  ],
+  "words": [
+    { "word": "influence", "ipa": "/ˈɪnfluəns/", "pos": "v", "meaning_cn": "影响", "example": "influenced by advertisements" },
+    { "word": "subtle", "ipa": "/ˈsʌtl/", "pos": "adj", "meaning_cn": "微妙的,难以捉摸的", "example": "a subtle effect" },
+    { "word": "classify", "ipa": "/ˈklæsɪfaɪ/", "pos": "v", "meaning_cn": "分类", "example": "classified our weaknesses" },
+    { "word": "advertiser", "ipa": "/ˈædvərtaɪzər/", "pos": "n", "meaning_cn": "做广告的人,广告商", "example": "advertisers study human nature" },
+    { "word": "sample", "ipa": "/ˈsæmpl/", "pos": "n", "meaning_cn": "样品", "example": "free samples" },
+    { "word": "manufacturer", "ipa": "/ˌmænjəˈfæktʃərər/", "pos": "n", "meaning_cn": "生产厂家,制造商", "example": "a company of cookie makers" },
+    { "word": "wheelbarrow", "ipa": "/ˈwiːlbæroʊ/", "pos": "n", "meaning_cn": "独轮手推车", "example": "on a wheelbarrow" },
+    { "word": "ingredient", "ipa": "/ɪnˈɡriːdiənt/", "pos": "n", "meaning_cn": "配料,原料", "example": "other ingredients" },
+    { "word": "crane", "ipa": "/kreɪn/", "pos": "n", "meaning_cn": "起重机", "example": "a crane had to be used" },
+    { "word": "anticipate", "ipa": "/ænˈtɪsɪpeɪt/", "pos": "v", "meaning_cn": "预期,预料", "example": "more than they had anticipated" },
+    { "word": "colossal", "ipa": "/kəˈlɑːsl/", "pos": "adj", "meaning_cn": "巨大的", "example": "a colossal cookie" },
+    { "word": "magic", "ipa": "/ˈmædʒɪk/", "pos": "adj", "meaning_cn": "有奇妙作用的", "example": "the magic word FREE" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "动名词作宾语(avoid/mind doing;it's no use doing)" },
+    { "gp": "gp2", "name": "go / turn / grow + 形容词(变得…)" },
+    { "gp": "gp3", "name": "in the way / on the way / by the way" },
+    { "gp": "gp4", "name": "send / lend / give sth to sb" },
+    { "gp": "gp5", "name": "one vs a / so...that" },
+    { "gp": "gp6", "name": "词汇辨析(subtle/manufacturer/crane)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"No one can avoid ___ influenced by advertisements.\"(avoid 后接动名词)", "stem_cn": "没人能避免受广告影响。", "options": ["being", "to be", "be", "been"] },
+    { "gp": "gp1", "stem": "\"It's no use ___ about the weather.\"(It's no use 后接动名词)", "stem_cn": "抱怨天气没有用。", "options": ["complaining", "to complain", "complain", "complained"] },
+    { "gp": "gp1", "stem": "\"Would you mind ___ your cookie on the scale?\"(would you mind 后接动名词)", "stem_cn": "你介意把饼干放到秤上吗?", "options": ["putting", "to put", "put", "puts"] },
+    { "gp": "gp2", "stem": "\"An ad that starts with 'FREE' can rarely ___ wrong.\"(与“出错”搭配、表“变得”的动词)", "stem_cn": "以'免费'开头的广告很少会出错。", "options": ["go", "be", "turn", "do"] },
+    { "gp": "gp2", "stem": "\"If you leave milk out, it will soon ___ bad.\"(与“变坏”搭配、表“变得”的动词)", "stem_cn": "牛奶放外面很快会变质。", "options": ["go", "become to", "turn to", "make"] },
+    { "gp": "gp2", "stem": "\"In autumn the leaves ___ yellow.\"(与“变黄”搭配、表“变得”的动词)", "stem_cn": "秋天树叶变黄。", "options": ["turn", "go to", "become of", "make"] },
+    { "gp": "gp3", "stem": "\"___ the way, did anyone win the cookie contest?\"(“顺便问一下”)", "stem_cn": "顺便问一下,有人赢了饼干比赛吗?", "options": ["By", "In", "On", "At"] },
+    { "gp": "gp3", "stem": "\"Please move the box; it's ___ the way.\"(“挡道、碍事”)", "stem_cn": "请把箱子挪开,它挡道了。", "options": ["in", "on", "by", "at"] },
+    { "gp": "gp3", "stem": "\"We stopped for lunch ___ the way to the factory.\"(“在去…的途中”)", "stem_cn": "去工厂的路上我们停下来吃了午饭。", "options": ["on", "in", "by", "at"] },
+    { "gp": "gp4", "stem": "\"Listeners were asked to bake cookies and send them ___ the factory.\"(send sth 后接哪个介词)", "stem_cn": "听众被请去烤饼干,寄到工厂。", "options": ["to", "for", "at", "with"] },
+    { "gp": "gp4", "stem": "\"The company gave a big prize ___ the winner.\"(give sth 后接哪个介词)", "stem_cn": "公司把大奖发给了获胜者。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp4", "stem": "\"Can you lend your scale ___ me for a minute?\"(lend sth 后接哪个介词)", "stem_cn": "你能把秤借我用一下吗?", "options": ["to", "for", "at", "with"] },
+    { "gp": "gp5", "stem": "\"In the whole contest, only ___ student baked the giant winning cookie.\"(强调“仅一个”,数量)", "stem_cn": "整场比赛只有一个学生烤出了那块获胜的巨饼。", "options": ["one", "a", "an", "the"] },
+    { "gp": "gp5", "stem": "\"The cookie was ___ heavy that a crane was needed.\"(“如此…以致”,形容词前填哪个)", "stem_cn": "那块饼干太重了,得动用起重机。", "options": ["so", "such", "such a", "very"] },
+    { "gp": "gp5", "stem": "\"It was ___ a big cookie that no one could lift it.\"(“那么…的一个…”,名词短语前填哪个)", "stem_cn": "那是块那么大的饼干,谁也搬不动。", "options": ["such", "so", "so a", "very"] },
+    { "gp": "gp6", "stem": "\"A slight, hard-to-notice effect is a ___ one.\"(“微妙的”用哪个词)", "stem_cn": "轻微、不易察觉的影响。", "options": ["subtle", "loud", "bright", "heavy"] },
+    { "gp": "gp6", "stem": "\"A company that makes products is a ___.\"(“制造商”用哪个词)", "stem_cn": "生产产品的公司。", "options": ["manufacturer", "customer", "reporter", "driver"] },
+    { "gp": "gp6", "stem": "\"A machine that lifts very heavy things is a ___.\"(“起重机”用哪个词)", "stem_cn": "吊起很重东西的机器。", "options": ["crane", "ladder", "basket", "wheel"] }
+  ],
+  "stage6": [
+    { "stem": "influence 的意思是:", "options": ["影响", "忽视", "购买", "隐藏"] },
+    { "stem": "subtle 的意思是:", "options": ["微妙的,难以捉摸的", "明显的", "巨大的", "廉价的"] },
+    { "stem": "classify 的意思是:", "options": ["分类", "丢弃", "购买", "损坏"] },
+    { "stem": "manufacturer 的意思是:", "options": ["制造商", "顾客", "记者", "游客"] },
+    { "stem": "anticipate 的意思是:", "options": ["预期,预料", "忘记", "怀疑", "庆祝"] },
+    { "stem": "colossal 的意思是:", "options": ["巨大的", "微小的", "普通的", "昂贵的"] }
+  ],
+  "contrast": [
+    { "us": "cookie", "uk": "biscuit", "note_cn": "(甜)饼干;美语 cookie,英式 biscuit" },
+    { "us": "trunk", "uk": "boot", "note_cn": "汽车后备箱;美语 trunk,英式 boot" },
+    { "us": "truck", "uk": "lorry", "note_cn": "卡车;美语 truck,英式 lorry" },
+    { "us": "gas", "uk": "petrol", "note_cn": "汽油;美语 gas(gasoline),英式 petrol" }
+  ],
+  "chunks": [
+    { "us": "something for nothing", "ipa": "/ˈsʌmθɪŋ fɔːr ˈnʌθɪŋ/", "example1": "We all love to get something for nothing.", "example1_cn": "我们都喜欢不劳而获。", "example2": "There's no such thing as something for nothing.", "example2_cn": "天下没有免费的午餐。" },
+    { "us": "go wrong", "ipa": "/ɡoʊ rɔːŋ/", "example1": "An ad with FREE can rarely go wrong.", "example1_cn": "带'免费'的广告很少失手。", "example2": "Something went wrong with the plan.", "example2_cn": "计划出了岔子。" },
+    { "us": "before long", "ipa": "/bɪˈfɔːr lɔːŋ/", "example1": "Before long, cookies began arriving.", "example1_cn": "没过多久,饼干就纷纷寄到。", "example2": "We'll be there before long.", "example2_cn": "我们不久就到。" },
+    { "us": "pride oneself on", "ipa": "/praɪd wʌnˈself ɑːn/", "example1": "We pride ourselves on our good taste.", "example1_cn": "我们自诩品味不俗。", "example2": "She prides herself on her cooking.", "example2_cn": "她为自己的厨艺自豪。" }
+  ],
+  "stage7_cloze": {
+    "context": "No one can avoid ___1___ influenced by ads. Advertisers know we all love to get something for nothing, so an ad with 'FREE' can rarely ___2___ wrong. In one radio contest, a company asked listeners to send giant cookies ___3___ their factory. The winning cookie was ___4___ heavy that a crane had to lift it.",
+    "blanks": [
+      { "blank_no": 1, "options": ["being", "to be", "be", "been"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["go", "be", "turn", "do"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["to", "for", "at", "with"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["so", "such", "such a", "very"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why can advertisers influence us so easily?", "options": ["They have studied human nature and our weaknesses", "They give us direct orders", "They hide their products", "They lower all prices"] },
+    { "stem": "What word makes an advertisement rarely go wrong?", "options": ["FREE", "BUY", "NEW", "SALE"] },
+    { "stem": "How was the winning cookie brought to the factory?", "options": ["On a truck, needing a crane to unload", "On a wheelbarrow", "In a car trunk", "By regular mail"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"没人能避免受广告影响\"(avoid + 动名词):", "options": ["No one can avoid being influenced by ads.", "No one can avoid to be influenced by ads.", "No one can avoid be influenced by ads.", "No one can avoid influenced by ads."] },
+    { "stem": "你想说\"那块饼干太重了,得用起重机\"(so...that):", "options": ["The cookie was so heavy that a crane was needed.", "The cookie was such heavy that a crane was needed.", "The cookie was so a heavy that a crane was needed.", "The cookie was heavy so that a crane was needed."] },
+    { "stem": "你想说\"请把饼干寄到工厂\"(send sth to somewhere):", "options": ["Please send the cookies to the factory.", "Please send the cookies at the factory.", "Please send the cookies the factory to.", "Please send the cookies for the factory."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "subtle 的意思是:", "options": ["微妙的,难以捉摸的", "明显的", "巨大的", "廉价的"] },
+    { "kind": "vocab", "stem": "colossal 的意思是:", "options": ["巨大的", "微小的", "普通的", "昂贵的"] },
+    { "kind": "grammar", "stem": "\"No one can avoid ___ influenced by ads.\"(avoid + 动名词)", "stem_cn": "没人能避免受广告影响。", "options": ["being", "to be", "be", "been"] },
+    { "kind": "grammar", "stem": "\"The cookie was ___ heavy that a crane was needed.\"(“如此…以致”结构,形容词前)", "stem_cn": "那块饼干太重了,得用起重机。", "options": ["so", "such", "such a", "very"] },
+    { "kind": "scenario", "stem": "\"something for nothing\" 的意思是:", "options": ["不劳而获,免费得来的东西", "一无所有", "徒劳无功", "无关紧要的事"] },
+    { "kind": "scenario", "stem": "\"by the way\" 的意思是:", "options": ["顺便说一句", "挡在路上", "在半路上", "用这种方法"] },
+    { "kind": "reading", "stem": "How did the college student win the contest?", "options": ["He baked a 2,400-pound cookie", "He guessed the right answer", "He paid the company", "He was the first to enter"], "passage": true },
+    { "kind": "reading", "stem": "How much did the company pay for the winning cookie?", "options": ["$24,000", "$10", "$713", "$2,400"], "passage": true },
+    { "kind": "listening", "stem": "What did the radio company make?", "options": ["Cookies", "Cars", "Soap", "Radios"], "audio": true },
+    { "kind": "listening", "stem": "What did the company think about how much they would pay?", "options": ["It was more than they had anticipated", "It was exactly as planned", "It was less than expected", "They paid nothing at all"], "audio": true }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "am4_l3",
+  "unit_no": 1,
+  "lesson_no": 3,
+  "title_en": "Matterhorn Man",
+  "title_cn": "马特霍恩山的人",
+  "grammar_focus": "it 作形式主语 + for sb + to do / how 从句(it is hard for us to realize how…)、must have done(对过去的推测)、过去分词作定语(cut off / accustomed to / washed down)、定语从句(that/which / such…as)、被动语态各时态(is admired / had never been attained / was attained)(NCE4 无 KS 页,考点由课文结构自取;原创承载·论早期登山先驱以登顶为唯一目标、不像今人求难度,及阿尔卑斯山村的贫寒·题材无害;美语化 backpack/vacation;第四册第3课)",
+  "scene": "如今的登山者专挑最难的路线,而且越难就越受推崇。可在早年间,情形完全不是这样。先驱者寻的是登顶最容易的路,因为顶峰本身才是他们想要的奖赏——尤其是那种从未被人征服过的顶峰。长久无人能上的马特霍恩峰,便是其中最大的奖赏。诚然,那些早期登山者在远征途中常遇到极其凶险的危难,身上的装备简陋得会让今天的登山家不寒而栗;可他们并不刻意去招惹这种风险。他们只有一个目标、唯一的一个目标——登顶。今天的我们很难体会,那些先驱当年的处境有多艰难。除了策马特和夏蒙尼这样一两处迅速热闹起来的地方,阿尔卑斯的村庄都是贫穷、偏远的聚落,被高峰隔绝于世界之外。仅有的那几家客栈往往肮脏不堪;吃的不过是本地奶酪和面包,常常就着劣酒咽下。一条山谷里常常连一家客栈也没有,登山者只得随处找地方过夜——有时投宿村里的神父家(神父往往和他的教民一样穷),有时借宿牧人处。到处的底色都一样:肮脏、贫困、生活艰苦。对于住惯了舒适家宅的人,搬到这些一贫如洗的山谷,那份落差一定让人极难适应。可他们还是年复一年地来,因为一座无人登临过的顶峰,值得忍受任何不适。",
+  "grammar_card": {
+    "title": "it 形式主语 + how 从句 / must have done / 过去分词作定语 / 被动各时态",
+    "intro": "①it 作形式主语,真正主语是不定式,执行者用 for sb 引出:It is hard for us to realize how…;后可接 how 从句。②must + have + 过去分词,对过去作推测“一定…了”。③过去分词作定语=被动/完成:cut off from the world; men accustomed to comfort。④定语从句 that/which;such…as“…这样的”。⑤被动语态各时态:is admired(现在)/ was attained(过去)/ had been attained(过去完成)。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["it 形式主语", "It is + 形容词 + for sb + to do", "It is hard for us to realize…"],
+        ["对过去的推测", "must + have + 过去分词", "the change must have been hard"],
+        ["过去分词作定语", "名词 + done", "villages cut off from the world"],
+        ["被动各时态", "is/was/had been + 过去分词", "had never been attained"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "it 形式主语句里,动作的执行者用 for sb 引出(不用 of sb):It is hard for us to do。", "mark": "hard for us to do" },
+      { "rule": "过去完成的被动=had + been + 过去分词:had never been attained before。", "mark": "had never been attained" },
+      { "rule": "美式用词:backpack(背包,英式 rucksack)、vacation(假期,英式 holiday)。本课已按美语写。", "mark": "backpack / vacation" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was the main objective of early mountain climbers?",
+    "options": ["To reach the summit, especially one never climbed before", "To find the most difficult route", "To enjoy good sport", "To tour the Alpine villages"],
+    "answer_index": 0
+  },
+  "passage": "Modern climbers seek out mountains by the hardest route they can find, and the more difficult the climb, the more highly it is admired. In the early days it was not like this at all. The pioneers looked for the easiest way to the top, because the summit itself was the prize they wanted, especially if it had never been attained before. The Matterhorn, unclimbed for so long, was the greatest prize of all. It is true that on their expeditions those early climbers often met dangers of the most perilous kind, equipped in a way that would make a modern alpinist shudder; but they did not go out of their way to court such risks. They had a single aim, one solitary objective — the top. It is hard for us today to realize how difficult things were for those pioneers. Except for one or two places, such as Zermatt and Chamonix, that had quickly grown popular, the Alpine villages were poor, remote settlements, cut off from the world by the high peaks. Such inns as there were tended to be dirty; the food was little more than local cheese and bread, often washed down with rough wine. Often a valley boasted no inn at all, and climbers took shelter wherever they could — sometimes with the village priest, who was usually as poor as his neighbors. Everywhere the background was the same: dirt, poverty, and hard living. For men accustomed to comfortable homes, the change to these impoverished valleys must have been hard indeed. Yet they came, year after year, because a summit that no one had yet reached was worth any discomfort.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Modern climbers seek out mountains by the hardest route they can find, and the more difficult the climb, the more highly it is admired. In the early days it was not like this at all. The pioneers looked for the easiest way to the top, because the summit itself was the prize they wanted, especially if it had never been attained before. The Matterhorn, unclimbed for so long, was the greatest prize of all.", "text_cn": "如今的登山者专挑最难的路线,而且越难就越受推崇。可在早年间,情形完全不是这样。先驱者寻的是登顶最容易的路,因为顶峰本身才是他们想要的奖赏——尤其是那种从未被人征服过的顶峰。长久无人能上的马特霍恩峰,便是其中最大的奖赏。" },
+    { "seq": 2, "speaker": null, "text_en": "It is true that on their expeditions those early climbers often met dangers of the most perilous kind, equipped in a way that would make a modern alpinist shudder; but they did not go out of their way to court such risks. They had a single aim, one solitary objective — the top.", "text_cn": "诚然,那些早期登山者在远征途中常遇到极其凶险的危难,身上的装备简陋得会让今天的登山家不寒而栗;可他们并不刻意去招惹这种风险。他们只有一个目标、唯一的一个目标——登顶。" },
+    { "seq": 3, "speaker": null, "text_en": "It is hard for us today to realize how difficult things were for those pioneers. Except for one or two places, such as Zermatt and Chamonix, that had quickly grown popular, the Alpine villages were poor, remote settlements, cut off from the world by the high peaks.", "text_cn": "今天的我们很难体会,那些先驱当年的处境有多艰难。除了策马特和夏蒙尼这样一两处迅速热闹起来的地方,阿尔卑斯的村庄都是贫穷、偏远的聚落,被高峰隔绝于世界之外。" },
+    { "seq": 4, "speaker": null, "text_en": "Such inns as there were tended to be dirty; the food was little more than local cheese and bread, often washed down with rough wine. Often a valley boasted no inn at all, and climbers took shelter wherever they could — sometimes with the village priest, who was usually as poor as his neighbors.", "text_cn": "仅有的那几家客栈往往肮脏不堪;吃的不过是本地奶酪和面包,常常就着劣酒咽下。一条山谷里常常连一家客栈也没有,登山者只得随处找地方过夜——有时投宿村里的神父家(神父往往和他的教民一样穷)。" },
+    { "seq": 5, "speaker": null, "text_en": "Everywhere the background was the same: dirt, poverty, and hard living. For men accustomed to comfortable homes, the change to these impoverished valleys must have been hard indeed. Yet they came, year after year, because a summit that no one had yet reached was worth any discomfort.", "text_cn": "到处的底色都一样:肮脏、贫困、生活艰苦。对于住惯了舒适家宅的人,搬到这些一贫如洗的山谷,那份落差一定让人极难适应。可他们还是年复一年地来,因为一座无人登临过的顶峰,值得忍受任何不适。" }
+  ],
+  "words": [
+    { "word": "Matterhorn", "ipa": "/ˈmætərhɔːrn/", "pos": "n", "meaning_cn": "马特霍恩峰(阿尔卑斯山著名险峰)", "example": "the Matterhorn, unclimbed for so long" },
+    { "word": "alpinist", "ipa": "/ˈælpɪnɪst/", "pos": "n", "meaning_cn": "登山运动员", "example": "would make a modern alpinist shudder" },
+    { "word": "pioneer", "ipa": "/ˌpaɪəˈnɪr/", "pos": "n", "meaning_cn": "先驱,开拓者", "example": "difficult things were for those pioneers" },
+    { "word": "summit", "ipa": "/ˈsʌmɪt/", "pos": "n", "meaning_cn": "顶峰", "example": "the summit itself was the prize" },
+    { "word": "attain", "ipa": "/əˈteɪn/", "pos": "v", "meaning_cn": "达到,登上", "example": "if it had never been attained before" },
+    { "word": "perilous", "ipa": "/ˈperələs/", "pos": "adj", "meaning_cn": "危险的", "example": "dangers of the most perilous kind" },
+    { "word": "shudder", "ipa": "/ˈʃʌdər/", "pos": "v", "meaning_cn": "发抖,战栗", "example": "would make a modern alpinist shudder" },
+    { "word": "court", "ipa": "/kɔːrt/", "pos": "v", "meaning_cn": "招致,自找", "example": "did not go out of their way to court such risks" },
+    { "word": "solitary", "ipa": "/ˈsɑːləteri/", "pos": "adj", "meaning_cn": "单独的,唯一的", "example": "one solitary objective — the top" },
+    { "word": "impoverish", "ipa": "/ɪmˈpɑːvərɪʃ/", "pos": "v", "meaning_cn": "使贫穷", "example": "these impoverished valleys" },
+    { "word": "Alpine", "ipa": "/ˈælpaɪn/", "pos": "adj", "meaning_cn": "阿尔卑斯山的", "example": "the Alpine villages were poor" },
+    { "word": "objective", "ipa": "/əbˈdʒektɪv/", "pos": "n", "meaning_cn": "目标", "example": "one solitary objective" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "it 作形式主语 + for sb + to do / how 从句" },
+    { "gp": "gp2", "name": "must have done(对过去的推测)" },
+    { "gp": "gp3", "name": "过去分词作定语(cut off / accustomed to)" },
+    { "gp": "gp4", "name": "定语从句(that/which / such…as)" },
+    { "gp": "gp5", "name": "被动语态各时态(is/was/had been done)" },
+    { "gp": "gp6", "name": "词汇辨析(summit/perilous/pioneer)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ is hard for us to realize how tough their life was.\"(it 形式主语,填代词)", "stem_cn": "我们很难体会他们的生活多么艰苦。", "options": ["It", "That", "This", "There"] },
+    { "gp": "gp1", "stem": "\"It is hard for us ___ realize how difficult it was for them.\"(it 形式主语,真正主语是后面的不定式,填不定式符号)", "stem_cn": "我们很难体会那对他们有多难。", "options": ["to", "for", "of", "that"] },
+    { "gp": "gp1", "stem": "\"It was hard ___ the pioneers to find a decent inn.\"(it 形式主语句:动作的执行者用哪个介词引出)", "stem_cn": "对先驱者来说,找一家像样的客栈很难。", "options": ["for", "of", "to", "with"] },
+    { "gp": "gp2", "stem": "\"The change to those poor valleys ___ have been hard for them.\"(对过去的推测“一定…”,填情态词)", "stem_cn": "搬到那些贫穷的山谷,对他们来说一定很难熬。", "options": ["must", "can", "would", "need"] },
+    { "gp": "gp2", "stem": "\"The first climbers ___ have suffered greatly on the way up.\"(对过去的推测,填表推测的词)", "stem_cn": "最早的登山者上山途中一定吃了不少苦。", "options": ["must", "shall", "ought", "dare"] },
+    { "gp": "gp2", "stem": "\"Reaching the summit must ___ felt like a triumph.\"(must ___ 过去分词:对过去的推测,填这个助动词)", "stem_cn": "登上顶峰一定感觉像大获全胜。", "options": ["have", "has", "had", "having"] },
+    { "gp": "gp3", "stem": "\"The villages were poor settlements, ___ off from the world.\"(过去分词作定语,被动“被隔绝”)", "stem_cn": "那些村子是与世隔绝的贫穷聚落。", "options": ["cut", "cutting", "cuts", "to cut"] },
+    { "gp": "gp3", "stem": "\"Men ___ to comfortable homes found the valleys hard.\"(过去分词作定语,“习惯于…的”)", "stem_cn": "住惯了舒适家宅的人觉得山谷难挨。", "options": ["accustomed", "accustoming", "accustom", "to accustom"] },
+    { "gp": "gp3", "stem": "\"The bread was ___ down with rough wine.\"(过去分词,被动“被…送下”)", "stem_cn": "面包就着劣酒咽下。", "options": ["washed", "washing", "wash", "to wash"] },
+    { "gp": "gp4", "stem": "\"The summit was the prize ___ the climbers wanted most.\"(定语从句,指物,作宾语)", "stem_cn": "顶峰是登山者最想要的奖赏。", "options": ["that", "who", "what", "whose"] },
+    { "gp": "gp4", "stem": "\"They faced dangers ___ would make us shudder.\"(定语从句,指物,作主语)", "stem_cn": "他们面对的危险会让我们不寒而栗。", "options": ["that", "who", "what", "whose"] },
+    { "gp": "gp4", "stem": "\"Such inns ___ there were tended to be dirty.\"(such … ___ 结构:‘…这样的’,填与 such 呼应的词)", "stem_cn": "仅有的那些客栈往往很脏。", "options": ["as", "that", "which", "than"] },
+    { "gp": "gp5", "stem": "\"The harder the route, the more it ___ admired today.\"(一般现在时的被动,填 be 动词单数)", "stem_cn": "路线越难,如今就越受推崇。", "options": ["is", "was", "has", "had"] },
+    { "gp": "gp5", "stem": "\"The peak had never ___ attained before their climb.\"(过去完成的被动:had never + ___ + 过去分词,填中间的词)", "stem_cn": "在他们登顶前,那座峰从未被征服过。", "options": ["been", "be", "being", "was"] },
+    { "gp": "gp5", "stem": "\"The Matterhorn was finally ___ in 1865.\"(一般过去时的被动:was + 过去分词,填过去分词)", "stem_cn": "马特霍恩峰终于在1865年被征服。", "options": ["attained", "attain", "attaining", "attains"] },
+    { "gp": "gp6", "stem": "\"The highest point of a mountain is its ___.\"(“顶峰”用哪个词)", "stem_cn": "一座山的最高点。", "options": ["summit", "base", "slope", "valley"] },
+    { "gp": "gp6", "stem": "\"Full of danger and risk means ___.\"(“危险的”用哪个词)", "stem_cn": "充满危险与风险的。", "options": ["perilous", "peaceful", "gentle", "ordinary"] },
+    { "gp": "gp6", "stem": "\"A person who is among the first to do something is a ___.\"(“先驱”用哪个词)", "stem_cn": "最早做某事的人之一。", "options": ["pioneer", "follower", "stranger", "servant"] }
+  ],
+  "stage6": [
+    { "stem": "summit 的意思是:", "options": ["顶峰", "山脚", "山坡", "山谷"] },
+    { "stem": "attain 的意思是:", "options": ["达到,获得", "失去", "避免", "忘记"] },
+    { "stem": "perilous 的意思是:", "options": ["危险的", "平静的", "温和的", "普通的"] },
+    { "stem": "shudder 的意思是:", "options": ["发抖,战栗", "微笑", "大笑", "歌唱"] },
+    { "stem": "solitary 的意思是:", "options": ["单独的,唯一的", "众多的", "热闹的", "常见的"] },
+    { "stem": "impoverish 的意思是:", "options": ["使贫穷", "使富有", "使强壮", "使快乐"] }
+  ],
+  "contrast": [
+    { "us": "backpack", "uk": "rucksack", "note_cn": "背包;用词差异,美语 backpack" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;用词差异,美语 vacation" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" },
+    { "us": "cozy", "uk": "cosy", "note_cn": "舒适温馨的;拼写差异,美语 cozy" }
+  ],
+  "chunks": [
+    { "us": "cut off from", "ipa": "/kʌt ɔːf frəm/", "example1": "The villages were cut off from the world.", "example1_cn": "那些村子与世隔绝。", "example2": "The storm cut us off from town.", "example2_cn": "暴风雪使我们与城镇断了联系。" },
+    { "us": "go out of one's way", "ipa": "/ɡoʊ aʊt əv wʌnz weɪ/", "example1": "They did not go out of their way to court danger.", "example1_cn": "他们并不刻意去招惹危险。", "example2": "She went out of her way to help me.", "example2_cn": "她特地费心来帮我。" },
+    { "us": "take shelter", "ipa": "/teɪk ˈʃeltər/", "example1": "Climbers took shelter with a shepherd.", "example1_cn": "登山者在牧人处避身。", "example2": "We took shelter from the rain.", "example2_cn": "我们避了雨。" },
+    { "us": "little more than", "ipa": "/ˈlɪtəl mɔːr ðæn/", "example1": "The food was little more than cheese and bread.", "example1_cn": "吃的不过是奶酪和面包而已。", "example2": "It was little more than a hut.", "example2_cn": "那不过是间小棚屋罢了。" }
+  ],
+  "stage7_cloze": {
+    "context": "Modern climbers seek the hardest route, and the harder it is, the more it ___1___ admired. The pioneers, however, wanted only the summit, especially one that had never ___2___ attained. It is hard for us ___3___ realize how tough their life was. The change to those poor valleys must ___4___ been hard.",
+    "blanks": [
+      { "blank_no": 1, "options": ["is", "was", "has", "are"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["been", "be", "being", "was"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["to", "for", "of", "that"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["have", "has", "had", "be"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What was the main objective of early mountain climbers?", "options": ["To reach the summit, especially one never climbed before", "To find the most difficult route", "To enjoy good sport", "To explore Alpine villages"] },
+    { "stem": "How did the early climbers differ from modern alpinists?", "options": ["They wanted the easiest way up, not the hardest", "They climbed only in summer", "They used modern equipment", "They avoided all danger"] },
+    { "stem": "What were the Alpine villages like in the pioneering days?", "options": ["Poor and cut off from the world", "Rich and crowded", "Full of fine hotels", "Modern and clean"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我们很难体会那对他们有多难\"(it 形式主语):", "options": ["It is hard for us to realize how difficult it was for them.", "It is hard for us realize how difficult it was for them.", "Is hard for us to realize how difficult it was for them.", "It is hard of us to realize how difficult it was for them."] },
+    { "stem": "你想说\"搬到那些贫穷的山谷,对他们来说一定很难熬\"(对过去的推测):", "options": ["The change to those poor valleys must have been hard for them.", "The change to those poor valleys must be hard for them.", "The change to those poor valleys must to have been hard for them.", "The change to those poor valleys must have be hard for them."] },
+    { "stem": "你想说\"那些村子是与世隔绝的贫穷聚落\"(过去分词作定语):", "options": ["The villages were poor settlements cut off from the world.", "The villages were poor settlements cutting off from the world.", "The villages were poor settlements which cut off from the world.", "The villages were poor settlements to cut off from the world."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "summit 的意思是:", "options": ["顶峰", "山脚", "山坡", "山谷"] },
+    { "kind": "vocab", "stem": "perilous 的意思是:", "options": ["危险的", "平静的", "温和的", "普通的"] },
+    { "kind": "grammar", "stem": "\"___ is hard for us to realize how tough their life was.\"(it 形式主语)", "stem_cn": "我们很难体会他们的生活多么艰苦。", "options": ["It", "That", "This", "There"] },
+    { "kind": "grammar", "stem": "\"The change must ___ been hard for them.\"(对过去的推测:must ___ 过去分词,填助动词)", "stem_cn": "那份落差对他们来说一定很难熬。", "options": ["have", "has", "had", "be"] },
+    { "kind": "scenario", "stem": "\"cut off from\" 的意思是:", "options": ["与…隔绝", "连接到", "靠近", "属于"] },
+    { "kind": "scenario", "stem": "\"take shelter\" 的意思是:", "options": ["躲避、找地方避身", "分享食物", "起程", "迷路"] },
+    { "kind": "reading", "stem": "Why did the early climbers choose the easiest route to the top?", "options": ["The summit itself, not the difficulty, was the prize they sought", "They were afraid of heights", "They had no equipment", "The hard routes were closed"], "passage": true },
+    { "kind": "reading", "stem": "What was the food usually like at Alpine inns in those days?", "options": ["Little more than local cheese and bread with rough wine", "Rich seven-course dinners", "Fresh fruit and meat", "Nothing at all"], "passage": true },
+    { "kind": "listening", "stem": "What single goal did the pioneering climbers have?", "options": ["Reaching the top", "Finding good sport", "Meeting other climbers", "Studying the villages"], "audio": true },
+    { "kind": "listening", "stem": "How would a modern alpinist react to the pioneers' equipment?", "options": ["It would make them shudder", "They would admire it", "They would copy it", "They would not notice"], "audio": true }
+  ]
+}

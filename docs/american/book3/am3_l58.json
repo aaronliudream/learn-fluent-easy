@@ -1,0 +1,133 @@
+{
+  "id": "am3_l58",
+  "unit_no": 12,
+  "lesson_no": 58,
+  "title_en": "A Spot of Bother",
+  "title_cn": "一点儿小麻烦",
+  "grammar_focus": "独立主格结构(名词 + 分词/形容词作状语)、现在分词短语作方式/伴随状语、it 作形式主语 + 不定式、情态动词 + 完成式(must have done 对过去推测 / should have done 本该做而未做)、with 复合结构/either…or/短语动词(NCE3 第三册 Unit 3 无 KS 页,考点由课文结构 + Notes on the text 自取;原创承载·老太太回家发现公寓被窃贼翻箱倒柜洗劫、报警找楼管的冷幽默悬疑·窃贼已逃无对峙无暴力;美语化 apartment/elevator/jewelry/master key)",
+  "scene": "老太太回到自己居住的公寓楼,心里很高兴。去店里买东西把她累坏了,回家路上每走一步,手里的袋子就更沉一点。在电梯里,她一心想着午饭和好好歇一歇;可当她在自家那层走出电梯,这两件事全被忘到脑后——她突然发现自家大门开着。她本想着第二天上午一定要好好说说那个钟点工,竟这么粗心大意;转念却记起,自己是钟点工走后才去买东西的,而且两把锁都是她亲手拧上的。她慢慢走进门厅,一眼就看见所有房门都敞着——可按照惯例,她出门前明明把它们都关好了。朝起居室望去,她看见写字台那边一片狼藉。事情十分清楚:她不在时,有窃贼闯了进来。她的第一反应是挨个房间去找那入侵者,但又觉得以自己这年纪,有人陪着也许更稳妥,于是下楼去地下室把楼管请了上来。这时她两腿已开始发抖,便坐下喝了一杯很浓的茶,楼管则给警察打了电话。镇定重新恢复后,她准备好和楼管一起动身,去搜查公寓里可能还潜藏着的人。他俩逐屋查看,小心翼翼不碰任何东西,生怕妨碍警察寻找指纹。屋里的混乱几乎叫人难以想象。她在这套公寓里住了三十年,又特别爱收藏东西;看上去她所有的家当都被翻了出来,里里外外倒腾了个遍。至少,她想,那些几年前就该扔掉的东西,如今倒省事了。随后一位巡官带着一名警员赶到,她讲了自己如何发现被洗劫的公寓。巡官开始找指纹,警员则查看大门锁并未被撬——由此证明,窃贼要么用了万能钥匙,要么是翻阳台进来的。指纹一无所获,巡官却发现一个脏兮兮的红布包,里头装着珠宝,老太太说那不是她的。看来这套公寓并不是窃贼当天下手的第一家,他一定是被惊扰了。巡官劝她这几夜别独自住,老太太觉得他大惊小怪,但既然楼管也附和,她便打电话给女儿求援,说自己碰上了一点儿小麻烦。",
+  "grammar_card": {
+    "title": "独立主格 / 现在分词作状语 / it 形式主语 / 情态 + 完成式",
+    "intro": "①独立主格:名词(代词)+ 分词/形容词,作状语,有自己的逻辑主语:Her composure regained, she was ready…。②现在分词短语作方式/伴随状语,逻辑主语与主句一致:Looking into the room, she saw…;being careful to touch nothing。③it 作形式主语,真正主语是后面的不定式:It might be more prudent to have someone with her。④情态 + have + 过去分词:must have done(对过去推测“一定…了”)/ should have done(过去本该做而没做)。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["独立主格", "名词 + 分词/形容词", "Her composure regained, she…"],
+        ["现在分词作状语", "doing …, 主句", "Looking into the room, she saw…"],
+        ["it 形式主语", "It is/might be … to do", "It might be prudent to have help"],
+        ["情态 + 完成式", "must/should + have + 过去分词", "must have been disturbed"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "独立主格有自己的逻辑主语(Her composure regained),不同于普通分词状语(逻辑主语=主句主语)。", "mark": "Her composure regained, she…" },
+      { "rule": "must have done=对过去的肯定推测;should have done=过去本该做却没做,含责备/惋惜。", "mark": "must have done / should have done" },
+      { "rule": "美式用词:apartment(公寓,英式 flat)、elevator(电梯,英式 lift)、jewelry(珠宝,英式 jewellery)。本课已按美语写。", "mark": "apartment / elevator / jewelry" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What did the old lady find when she got home?",
+    "options": ["Her apartment had been broken into", "A surprise party", "A water leak", "Nothing unusual"],
+    "answer_index": 0
+  },
+  "passage": "The old lady was glad to be back at the apartment building where she lived. Her shopping had tired her, and her bag had grown heavier with every step of the way home. In the elevator her thoughts were on lunch and a good rest; but when she stepped out at her own floor, both were forgotten in her sudden discovery that her front door stood open. She was thinking that she must reprimand her cleaning lady the next morning for such a careless piece of negligence, when she remembered that she had gone shopping after the cleaning lady had left, and she knew that she had turned both keys in their locks herself. She walked slowly into the hall and at once noticed that all the room doors were open, yet, following her regular habit, she had shut them before going out. Looking into the living room, she saw a scene of confusion over by her writing desk. It was as clear as daylight then that a burglar had forced an entry while she was away. Her first impulse was to go from room to room in search of the intruder, but she decided that, at her age, it might be more prudent to have someone with her. So she went down to fetch the building manager from the basement. By this time her legs were beginning to tremble, so she sat down and accepted a cup of very strong tea while he called the police. Then, her composure regained, she was ready to set off with the manager's help to look for anyone who might still be lurking in her apartment. They went through the rooms, being careful to touch nothing, as they did not want to hinder the police in their search for fingerprints. The chaos was almost inconceivable. She had lived in the apartment for thirty years and loved to collect and keep things; and it seemed as though everything she owned had been pulled out and turned over and over. At least, she thought, sorting out the things she should have discarded years ago was now being made easier for her. Then a police inspector arrived with an officer, and she told them how she had found the ransacked apartment. The inspector began to look for fingerprints, while the officer checked that the front-door locks had not been forced, thereby proving that the burglar had either used a master key or climbed in over the balcony. There was no trace of fingerprints, but the inspector found a dirty red bundle that contained jewelry the old lady said was not hers. So this apartment was apparently not the burglar's first stop that day, and he must have been disturbed. The inspector advised her not to stay alone for a few nights. The old lady thought he was a fussy creature, but since the manager agreed with him, she called her daughter and asked for her help with what she called a little spot of bother.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "The old lady was glad to be back at the apartment building where she lived. Her shopping had tired her, and her bag had grown heavier with every step of the way home. In the elevator her thoughts were on lunch and a good rest; but when she stepped out at her own floor, both were forgotten in her sudden discovery that her front door stood open.", "text_cn": "老太太回到自己居住的公寓楼,心里很高兴。去店里买东西把她累坏了,回家路上每走一步,手里的袋子就更沉一点。在电梯里,她一心想着午饭和好好歇一歇;可当她在自家那层走出电梯,这两件事全被忘到脑后——她突然发现自家大门开着。" },
+    { "seq": 2, "speaker": null, "text_en": "She was thinking that she must reprimand her cleaning lady the next morning for such a careless piece of negligence, when she remembered that she had gone shopping after the cleaning lady had left, and she knew that she had turned both keys in their locks herself. She walked slowly into the hall and at once noticed that all the room doors were open, yet, following her regular habit, she had shut them before going out.", "text_cn": "她本想着第二天上午一定要好好说说那个钟点工,竟这么粗心大意;转念却记起,自己是钟点工走后才去买东西的,而且两把锁都是她亲手拧上的。她慢慢走进门厅,一眼就看见所有房门都敞着——可按照惯例,她出门前明明把它们都关好了。" },
+    { "seq": 3, "speaker": null, "text_en": "Looking into the living room, she saw a scene of confusion over by her writing desk. It was as clear as daylight then that a burglar had forced an entry while she was away. Her first impulse was to go from room to room in search of the intruder, but she decided that, at her age, it might be more prudent to have someone with her. So she went down to fetch the building manager from the basement.", "text_cn": "朝起居室望去,她看见写字台那边一片狼藉。事情十分清楚:她不在时,有窃贼闯了进来。她的第一反应是挨个房间去找那入侵者,但又觉得以自己这年纪,有人陪着也许更稳妥,于是下楼去把楼管请了上来。" },
+    { "seq": 4, "speaker": null, "text_en": "By this time her legs were beginning to tremble, so she sat down and accepted a cup of very strong tea while he called the police. Then, her composure regained, she was ready to set off with the manager's help to look for anyone who might still be lurking in her apartment. They went through the rooms, being careful to touch nothing, as they did not want to hinder the police in their search for fingerprints. The chaos was almost inconceivable.", "text_cn": "这时她两腿已开始发抖,便坐下喝了一杯很浓的茶,楼管则给警察打了电话。镇定重新恢复后,她准备好和楼管一起动身,去搜查公寓里可能还潜藏着的人。他俩逐屋查看,小心翼翼不碰任何东西,生怕妨碍警察寻找指纹。屋里的混乱几乎叫人难以想象。" },
+    { "seq": 5, "speaker": null, "text_en": "At least, she thought, sorting out the things she should have discarded years ago was now being made easier for her. Then a police inspector arrived and checked the front-door locks, which had not been forced, proving that the burglar had either used a master key or climbed in over the balcony. The inspector found a red bundle of jewelry that was not hers, so this apartment was apparently not the burglar's first stop, and he must have been disturbed. The old lady called her daughter and asked for her help with what she called a little spot of bother.", "text_cn": "至少,她想,那些几年前就该扔掉的东西,如今倒省事了。随后巡官赶到,查看大门锁并未被撬——由此证明窃贼要么用了万能钥匙,要么翻阳台进来。巡官发现一个装着珠宝的红布包,老太太说那不是她的;看来这套公寓并不是窃贼下手的第一家,他一定是被惊扰了。老太太便打电话给女儿求援,说自己碰上了一点儿小麻烦。" }
+  ],
+  "words": [
+    { "word": "negligence", "ipa": "/ˈneɡlɪdʒəns/", "pos": "n", "meaning_cn": "粗心大意,疏忽", "example": "such a careless piece of negligence" },
+    { "word": "prudent", "ipa": "/ˈpruːdənt/", "pos": "adj", "meaning_cn": "谨慎的", "example": "it might be more prudent to have someone with her" },
+    { "word": "composure", "ipa": "/kəmˈpoʊʒər/", "pos": "n", "meaning_cn": "镇静,沉着", "example": "her composure regained" },
+    { "word": "intruder", "ipa": "/ɪnˈtruːdər/", "pos": "n", "meaning_cn": "入侵者", "example": "in search of the intruder" },
+    { "word": "lurk", "ipa": "/lɜːrk/", "pos": "v", "meaning_cn": "潜藏", "example": "anyone who might still be lurking" },
+    { "word": "hinder", "ipa": "/ˈhɪndər/", "pos": "v", "meaning_cn": "妨碍", "example": "did not want to hinder the police" },
+    { "word": "chaos", "ipa": "/ˈkeɪɑːs/", "pos": "n", "meaning_cn": "混乱,无秩序", "example": "the chaos was almost inconceivable" },
+    { "word": "inconceivable", "ipa": "/ˌɪnkənˈsiːvəbəl/", "pos": "adj", "meaning_cn": "不可思议的,难以想象的", "example": "the chaos was almost inconceivable" },
+    { "word": "discard", "ipa": "/dɪsˈkɑːrd/", "pos": "v", "meaning_cn": "丢弃", "example": "things she should have discarded years ago" },
+    { "word": "ransack", "ipa": "/ˈrænsæk/", "pos": "v", "meaning_cn": "洗劫,翻找", "example": "the ransacked apartment" },
+    { "word": "balcony", "ipa": "/ˈbælkəni/", "pos": "n", "meaning_cn": "阳台", "example": "climbed in over the balcony" },
+    { "word": "fussy", "ipa": "/ˈfʌsi/", "pos": "adj", "meaning_cn": "大惊小怪的,小题大作的", "example": "a fussy creature" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "独立主格结构(名词 + 分词/形容词作状语)" },
+    { "gp": "gp2", "name": "现在分词短语作方式/伴随状语" },
+    { "gp": "gp3", "name": "it 作形式主语 + 不定式" },
+    { "gp": "gp4", "name": "情态动词 + 完成式(must have done / should have done)" },
+    { "gp": "gp5", "name": "with 复合结构 / either…or / 短语动词" },
+    { "gp": "gp6", "name": "词汇辨析(negligence/ransack/lurk)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Her composure ___, she was ready to search the apartment.\"(独立主格:名词 + 过去分词,作状语)", "stem_cn": "镇定重新恢复后,她准备好去搜查公寓。", "options": ["regained", "regaining", "regain", "to regain"] },
+    { "gp": "gp1", "stem": "\"Her legs ___ to tremble, the old lady sat down for tea.\"(独立主格:名词 + 现在分词)", "stem_cn": "双腿开始发抖,老太太便坐下喝茶。", "options": ["beginning", "begun", "began", "begin"] },
+    { "gp": "gp1", "stem": "\"The tea ___, she felt calm enough to begin.\"(独立主格:名词 + 过去分词,作时间状语)", "stem_cn": "茶喝完后,她觉得镇定得可以开始了。", "options": ["finished", "finishing", "finish", "to finish"] },
+    { "gp": "gp2", "stem": "\"___ into the living room, she saw a scene of confusion.\"(现在分词短语作状语,主动“朝…看”)", "stem_cn": "朝起居室望去,她看见一片狼藉。", "options": ["Looking", "Looked", "Look", "To look"] },
+    { "gp": "gp2", "stem": "\"They went through the rooms, ___ careful to touch nothing.\"(现在分词短语作方式状语)", "stem_cn": "他们逐屋查看,小心翼翼不碰任何东西。", "options": ["being", "been", "be", "to be"] },
+    { "gp": "gp2", "stem": "\"___ her regular habit, she had shut all the doors before going out.\"(现在分词短语作状语,“按照…”)", "stem_cn": "按照惯例,她出门前已把所有门关上。", "options": ["Following", "Followed", "Follow", "To follow"] },
+    { "gp": "gp3", "stem": "\"At her age, ___ might be more prudent to have someone with her.\"(形式主语,填代词)", "stem_cn": "以她的年纪,有人陪着也许更稳妥。", "options": ["it", "that", "this", "there"] },
+    { "gp": "gp3", "stem": "\"It might be more prudent ___ have someone with her.\"(形式主语句:真正主语是后面的不定式,填不定式符号)", "stem_cn": "有人陪着她也许更稳妥。", "options": ["to", "for", "of", "with"] },
+    { "gp": "gp3", "stem": "\"It seemed almost impossible ___ find a single fingerprint.\"(it 形式主语 + 不定式)", "stem_cn": "似乎几乎不可能找到一枚指纹。", "options": ["to", "that", "for", "in"] },
+    { "gp": "gp4", "stem": "\"The burglar ___ have been disturbed, for he left the jewelry behind.\"(对过去的推测“一定…了”)", "stem_cn": "窃贼一定是被惊扰了,所以丢下了珠宝。", "options": ["must", "can", "would", "need"] },
+    { "gp": "gp4", "stem": "\"She ___ have discarded those old things years ago.\"(过去本该做而没做:用情态词 + have + 过去分词,填这个情态词)", "stem_cn": "那些旧东西她几年前就该扔掉。", "options": ["should", "must", "can", "would"] },
+    { "gp": "gp4", "stem": "\"The burglar must ___ used a master key to get in.\"(must ___ 过去分词:对过去的推测,填这个助动词)", "stem_cn": "窃贼一定是用万能钥匙进来的。", "options": ["have", "has", "had", "having"] },
+    { "gp": "gp5", "stem": "\"Her bag grew heavier ___ every step of the way home.\"(随…而变化:填引出伴随状语的介词)", "stem_cn": "回家路上每走一步,她的包就更沉一点。", "options": ["with", "by", "on", "of"] },
+    { "gp": "gp5", "stem": "\"The burglar had ___ used a master key or climbed over the balcony.\"(要么…要么…:填与 or 搭配的前一个词)", "stem_cn": "窃贼要么用了万能钥匙,要么翻阳台进来。", "options": ["either", "both", "neither", "whether"] },
+    { "gp": "gp5", "stem": "\"She was ready to set ___ with the manager to search the flat.\"(set ___:动身、出发,填副词)", "stem_cn": "她准备好动身,和经理一起去搜查。", "options": ["off", "in", "up", "down"] },
+    { "gp": "gp6", "stem": "\"A careless failure to take proper care is ___.\"(“粗心大意”用哪个词)", "stem_cn": "因疏忽而未尽应有的小心。", "options": ["negligence", "patience", "courage", "wisdom"] },
+    { "gp": "gp6", "stem": "\"To rob a place, leaving it in wild disorder, is to ___ it.\"(“洗劫”用哪个词)", "stem_cn": "把一处地方翻箱倒柜洗劫一空。", "options": ["ransack", "decorate", "repair", "guard"] },
+    { "gp": "gp6", "stem": "\"To hide and wait, ready to do harm, is to ___.\"(“潜藏”用哪个词)", "stem_cn": "潜伏等待、伺机作案。", "options": ["lurk", "sing", "rest", "travel"] }
+  ],
+  "stage6": [
+    { "stem": "negligence 的意思是:", "options": ["粗心大意,疏忽", "勇气", "耐心", "智慧"] },
+    { "stem": "prudent 的意思是:", "options": ["谨慎的", "鲁莽的", "懒惰的", "慷慨的"] },
+    { "stem": "composure 的意思是:", "options": ["镇静,沉着", "惊慌", "愤怒", "疲惫"] },
+    { "stem": "intruder 的意思是:", "options": ["入侵者", "房主", "客人", "邻居"] },
+    { "stem": "chaos 的意思是:", "options": ["混乱,无秩序", "秩序", "宁静", "整洁"] },
+    { "stem": "ransack 的意思是:", "options": ["洗劫,翻找", "打扫", "修理", "装饰"] }
+  ],
+  "contrast": [
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;用词差异,美语 apartment" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;用词差异,美语 elevator" },
+    { "us": "jewelry", "uk": "jewellery", "note_cn": "珠宝首饰;拼写差异,美语 jewelry" },
+    { "us": "living room", "uk": "drawing room", "note_cn": "客厅;用词差异,美语 living room" }
+  ],
+  "chunks": [
+    { "us": "set off", "ipa": "/set ɔːf/", "example1": "She was ready to set off to search the apartment.", "example1_cn": "她准备好动身去搜查公寓。", "example2": "We set off at dawn.", "example2_cn": "我们黎明时动身。" },
+    { "us": "sort out", "ipa": "/sɔːrt aʊt/", "example1": "Sorting out the old things was made easier for her.", "example1_cn": "整理那些旧东西对她来说省事多了。", "example2": "He sorted out the papers on his desk.", "example2_cn": "他整理了桌上的文件。" },
+    { "us": "go through", "ipa": "/ɡoʊ θruː/", "example1": "They went through the rooms carefully.", "example1_cn": "他们仔细查看了每个房间。", "example2": "The police went through her statement again.", "example2_cn": "警察又核了一遍她的陈述。" },
+    { "us": "as clear as daylight", "ipa": "/əz klɪr əz ˈdeɪlaɪt/", "example1": "It was as clear as daylight that a burglar had broken in.", "example1_cn": "有窃贼闯入这一点十分清楚。", "example2": "Her meaning was as clear as daylight.", "example2_cn": "她的意思一清二楚。" }
+  ],
+  "stage7_cloze": {
+    "context": "The old lady found her front door open. ___1___ into the living room, she saw a scene of confusion. It was as clear as daylight that a burglar ___2___ forced an entry. At her age, it might be more prudent ___3___ have someone with her. The burglar ___4___ have been disturbed, for he left the jewelry behind.",
+    "blanks": [
+      { "blank_no": 1, "options": ["Looking", "Looked", "Look", "To look"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["had", "has", "was", "would"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["to", "for", "of", "with"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["must", "can", "would", "need"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What did the old lady find when she got home?", "options": ["Her apartment had been broken into and ransacked", "Her keys were missing", "A party in progress", "A leak in the ceiling"] },
+    { "stem": "Why did she fetch the building manager before searching?", "options": ["She thought it more prudent, at her age, to have company", "He had the only spare key", "He was a retired police officer", "She could not open the door"] },
+    { "stem": "What strange thing did the inspector find?", "options": ["A red bundle of jewelry that was not hers", "Muddy footprints on the balcony", "A broken window", "A note from the burglar"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"朝起居室望去,她看见一片狼藉\"(现在分词作状语):", "options": ["Looking into the living room, she saw a scene of confusion.", "Looked into the living room, she saw a scene of confusion.", "Look into the living room, she saw a scene of confusion.", "To look into the living room, she saw a scene of confusion."] },
+    { "stem": "你想说\"窃贼一定是被惊扰了\"(对过去的推测):", "options": ["The burglar must have been disturbed.", "The burglar must was disturbed.", "The burglar must to have been disturbed.", "The burglar must have been disturb."] },
+    { "stem": "你想说\"镇定重新恢复后,她准备好去搜查公寓\"(独立主格):", "options": ["Her composure regained, she was ready to search the apartment.", "Her composure regaining, she was ready to search the apartment.", "Her composure was regained, she was ready to search the apartment.", "Her composure regain, she was ready to search the apartment."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "prudent 的意思是:", "options": ["谨慎的", "鲁莽的", "懒惰的", "慷慨的"] },
+    { "kind": "vocab", "stem": "composure 的意思是:", "options": ["镇静,沉着", "惊慌", "愤怒", "疲惫"] },
+    { "kind": "grammar", "stem": "\"___ into the living room, she saw a scene of confusion.\"(现在分词短语作状语,主动)", "stem_cn": "朝起居室望去,她看见一片狼藉。", "options": ["Looking", "Looked", "Look", "To look"] },
+    { "kind": "grammar", "stem": "\"The burglar ___ have been disturbed, for he left the jewelry behind.\"(对过去的推测“一定…了”)", "stem_cn": "窃贼一定是被惊扰了。", "options": ["must", "can", "would", "need"] },
+    { "kind": "scenario", "stem": "\"set off\" 的意思是:", "options": ["动身、出发", "取消", "修理", "归还"] },
+    { "kind": "scenario", "stem": "\"sort out\" 的意思是:", "options": ["整理、清理", "弄丢", "弄脏", "藏起来"] },
+    { "kind": "reading", "stem": "How did the old lady know she herself had not left the doors open?", "options": ["She had turned both keys in the locks after the cleaning lady left", "The manager told her so", "She never used those doors", "The police confirmed it"], "passage": true },
+    { "kind": "reading", "stem": "Why did the police think the burglar had used a master key or the balcony?", "options": ["The front-door locks had not been forced", "A key was found on the floor", "The balcony door was broken", "A neighbor saw him climb"], "passage": true },
+    { "kind": "listening", "stem": "Who did the old lady finally call for help?", "options": ["Her daughter", "Her doctor", "A locksmith", "A taxi"], "audio": true },
+    { "kind": "listening", "stem": "What did the old lady understatedly call the whole event?", "options": ["A little spot of bother", "A total disaster", "A great adventure", "A stroke of luck"], "audio": true }
+  ]
+}

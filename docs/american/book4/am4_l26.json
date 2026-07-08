@@ -1,0 +1,134 @@
+{
+  "id": "am4_l26",
+  "unit_no": 5,
+  "lesson_no": 26,
+  "title_en": "The Past Life of the Earth",
+  "title_cn": "地球的过去",
+  "grammar_focus": "强调句 It is/was + 被强调部分 + that/which、whose 引导定语从句(animals whose remains …)、被动语态(are preserved / be covered)、whether … or …(‘无论…还是…’让步)、that/which 引导定语从句指物(NCE4 无 KS 页,考点由课文结构自取;IP:源为埃罗尔·怀特《Discovery》‘地球的过去’一文,内容为‘生物遗骸如何被保存·快速掩埋’的科普事实,已用 100% 原创行文复述,去掉贝雷索夫卡猛犸的具体叙事细节,仅保留通用现象;题材=古生物科普·无害;美语化 saber/mold;第四册第26课)",
+  "scene": "地球是怎样为曾经生活在它上面的生物留下记录的呢?答案是:遗骸只有在特殊条件下才能被保存,而其中最重要的一个保存条件,就是快速掩埋。一具暴露在外的尸体很快就开始腐烂,不久便被风吹雨打毁掉,或被某种食腐动物吃掉。只有在泥浆和淤泥不断沉积的地方——海底、河床、有时是湖底——尸体才能被足够快地盖住,从而留存下来。正因如此,最有可能保存下遗骸的,是那些生活在水中或近水处的动植物。即便在那里,也只有极小一部分死去的生物,能赶在腐烂或食腐者动手之前被保存。每一种生物,无论是植物还是动物,都靠吃别的东西活着,一具尸体能逃过这命运,纯属偶然。陆生生物的遗骸更难保存,因为干燥的陆地上很少有东西能盖住它们。想想人们看到四处飞的无数鸟儿,更不用说那些几乎注意不到的小动物,如老鼠和田鼠:除了公路上,人们极少碰到一具尸体。陆生动物的痕迹一旦真的留存下来,几乎总是因为某种非常特殊的机缘。一只动物可能掉进难以到达的洞穴,或滑进冰川裂隙——正如西伯利亚的猛犸象那样——整只动物就像放进冰箱一样被保存了下来。在别处,动物会陷进天然的沥青坑,比如洛杉矶附近那些:较大的野兽为了喝水,冒险踏上看似坚实的表面,转眼就被沥青粘住;前来取食的食肉动物,也落得同样下场。对研究地球过去生命的人来说,这类地方简直是宝库。",
+  "grammar_card": {
+    "title": "强调句 It is … that / whose 定语从句 / 被动语态 / whether … or / that·which 定语从句",
+    "intro": "①强调句:It is/was + 被强调部分 + that/which + 其余,被强调的可以是名词或状语。②whose 引导定语从句,表‘…的’所属:animals whose remains are buried。③被动语态 be + 过去分词:are preserved / is destroyed。④whether … or …,‘无论…还是…’。⑤that/which 引导定语从句、指物:the creatures that die。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["强调句", "It is … that …", "It is quick burial that preserves a body"],
+        ["whose 定语从句", "名词 + whose + …", "animals whose remains are buried"],
+        ["被动语态", "be + 过去分词", "a body is destroyed by the weather"],
+        ["whether … or", "whether A or B", "whether plant or animal"],
+        ["that/which 定语从句", "名词 + that/which + …", "the creatures that die in water"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "强调句强调地点、时间、方式等状语时,连接词仍用 that(不用 where/when/how)。", "mark": "强调状语也用 that" },
+      { "rule": "whether … or … 表‘无论…还是…’的让步,后半必须用 or(不用 nor/and);别与 either…or 混。", "mark": "whether … or" },
+      { "rule": "美式拼写:saber(军刀,saber-toothed 剑齿的,英式 sabre)、mold(霉,英式 mould)。本课已按美语写。", "mark": "saber / mold" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is the main condition for the preservation of the remains of any living creature?",
+    "options": ["Quick burial, usually under water in mud or silt", "Living on dry land", "Being a large animal", "Dying in the open air"],
+    "answer_index": 0
+  },
+  "passage": "How does the earth keep any record of the creatures that once lived on it? The answer is that remains are preserved only under special conditions, and the most important condition of preservation is quick burial. A dead body left in the open soon begins to decompose, and before long it is destroyed by the weather or eaten by some scavenger. It is only where mud and silt are steadily laid down — on the beds of seas, rivers, and sometimes lakes — that a body can be covered over quickly enough to survive. For this reason it is animals and plants that lived in or near water whose remains are most likely to be kept. Even there, only a tiny fraction of the creatures that die are preserved before decay or scavengers do their work. Every living thing, whether it be plant or animal, lives by feeding on something else, and it is only by chance that a body escapes this fate. The remains of land creatures are far more rarely preserved, for on dry land there is seldom anything to cover them. Think of the countless birds one sees flying about, not to mention the small animals such as mice and voles that one hardly notices: it is very rare to come across a dead one, except on the roads. When traces of land animals do survive, it is almost always because of some very special circumstance. A creature may fall into an inaccessible cave, or slip into an ice crevasse, as the Siberian mammoths did, so that the whole animal is preserved as if in a freezer. Elsewhere, animals were trapped in natural tar pits, like those near Los Angeles: the larger beasts ventured onto the firm-looking surface to drink and were promptly bogged down, and the carnivores that came to feed on them met the same fate.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "How does the earth keep any record of the creatures that once lived on it? The answer is that remains are preserved only under special conditions, and the most important condition of preservation is quick burial.", "text_cn": "地球是怎样为曾经生活在它上面的生物留下记录的呢?答案是:遗骸只有在特殊条件下才能被保存,而其中最重要的一个保存条件,就是快速掩埋。" },
+    { "seq": 2, "speaker": null, "text_en": "A dead body left in the open soon begins to decompose, and before long it is destroyed by the weather or eaten by some scavenger. It is only where mud and silt are steadily laid down — on the beds of seas, rivers, and sometimes lakes — that a body can be covered over quickly enough to survive.", "text_cn": "一具暴露在外的尸体很快就开始腐烂,不久便被风吹雨打毁掉,或被某种食腐动物吃掉。只有在泥浆和淤泥不断沉积的地方——海底、河床、有时是湖底——尸体才能被足够快地盖住,从而留存下来。" },
+    { "seq": 3, "speaker": null, "text_en": "For this reason it is animals and plants that lived in or near water whose remains are most likely to be kept. Even there, only a tiny fraction of the creatures that die are preserved before decay or scavengers do their work.", "text_cn": "正因如此,最有可能保存下遗骸的,是那些生活在水中或近水处的动植物。即便在那里,也只有极小一部分死去的生物,能赶在腐烂或食腐者动手之前被保存。" },
+    { "seq": 4, "speaker": null, "text_en": "Every living thing, whether it be plant or animal, lives by feeding on something else, and it is only by chance that a body escapes this fate. The remains of land creatures are far more rarely preserved, for on dry land there is seldom anything to cover them. Think of the countless birds one sees flying about, not to mention the small animals such as mice and voles that one hardly notices.", "text_cn": "每一种生物,无论是植物还是动物,都靠吃别的东西活着,一具尸体能逃过这命运,纯属偶然。陆生生物的遗骸更难保存,因为干燥的陆地上很少有东西能盖住它们。想想人们看到四处飞的无数鸟儿,更不用说那些几乎注意不到的小动物,如老鼠和田鼠。" },
+    { "seq": 5, "speaker": null, "text_en": "When traces of land animals do survive, it is almost always because of some very special circumstance. A creature may fall into an inaccessible cave, or slip into an ice crevasse, as the Siberian mammoths did, so that the whole animal is preserved as if in a freezer. Elsewhere, animals were trapped in natural tar pits: the larger beasts ventured onto the firm-looking surface to drink and were promptly bogged down.", "text_cn": "陆生动物的痕迹一旦真的留存下来,几乎总是因为某种非常特殊的机缘。一只动物可能掉进难以到达的洞穴,或滑进冰川裂隙——正如西伯利亚的猛犸象那样——整只动物就像放进冰箱一样被保存了下来。在别处,动物会陷进天然的沥青坑:较大的野兽为了喝水,冒险踏上看似坚实的表面,转眼就被沥青粘住。" }
+  ],
+  "words": [
+    { "word": "preservation", "ipa": "/ˌprezərˈveɪʃn/", "pos": "n", "meaning_cn": "保存,保护", "example": "the most important condition of preservation" },
+    { "word": "burial", "ipa": "/ˈberiəl/", "pos": "n", "meaning_cn": "掩埋,埋葬", "example": "quick burial preserves a body" },
+    { "word": "decompose", "ipa": "/ˌdiːkəmˈpoʊz/", "pos": "v", "meaning_cn": "腐烂,分解", "example": "a dead body begins to decompose" },
+    { "word": "scavenger", "ipa": "/ˈskævɪndʒər/", "pos": "n", "meaning_cn": "食腐动物", "example": "eaten by some scavenger" },
+    { "word": "silt", "ipa": "/sɪlt/", "pos": "n", "meaning_cn": "淤泥,泥沙", "example": "where mud and silt are laid down" },
+    { "word": "remains", "ipa": "/rɪˈmeɪnz/", "pos": "n", "meaning_cn": "遗骸,残余", "example": "whose remains are most likely to be kept" },
+    { "word": "fraction", "ipa": "/ˈfrækʃn/", "pos": "n", "meaning_cn": "小部分,分数", "example": "only a tiny fraction of the creatures" },
+    { "word": "venture", "ipa": "/ˈventʃər/", "pos": "v", "meaning_cn": "冒险前往,敢于", "example": "ventured onto the firm-looking surface" },
+    { "word": "inaccessible", "ipa": "/ˌɪnəkˈsesəbl/", "pos": "adj", "meaning_cn": "难以到达的", "example": "fall into an inaccessible cave" },
+    { "word": "crevasse", "ipa": "/krɪˈvæs/", "pos": "n", "meaning_cn": "(冰川)裂隙", "example": "slip into an ice crevasse" },
+    { "word": "vole", "ipa": "/voʊl/", "pos": "n", "meaning_cn": "田鼠", "example": "small animals such as mice and voles" },
+    { "word": "carnivore", "ipa": "/ˈkɑːrnɪvɔːr/", "pos": "n", "meaning_cn": "食肉动物", "example": "the carnivores that came to feed" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "强调句 It is … that …" },
+    { "gp": "gp2", "name": "whose 引导定语从句(所属)" },
+    { "gp": "gp3", "name": "被动语态(be + 过去分词)" },
+    { "gp": "gp4", "name": "whether … or …(无论…还是…)" },
+    { "gp": "gp5", "name": "that/which 引导定语从句(指物)" },
+    { "gp": "gp6", "name": "词汇辨析(scavenger/crevasse/silt)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ is quick burial that most helps to preserve a body.\"(强调结构 __ is … that …,填句首那个形式词)", "stem_cn": "最有助于保存尸体的,是快速掩埋。", "options": ["It", "That", "This", "There"] },
+    { "gp": "gp1", "stem": "\"It is only in water ___ mud can cover a body quickly.\"(强调句,被强调的是地点,连接词仍用它)", "stem_cn": "只有在水里,泥浆才能迅速盖住尸体。", "options": ["that", "which", "where", "what"] },
+    { "gp": "gp1", "stem": "\"It was by chance ___ the mammoth was preserved.\"(强调句,被强调的是方式,连接词仍用它)", "stem_cn": "那头猛犸象得以保存,纯属偶然。", "options": ["that", "which", "when", "what"] },
+    { "gp": "gp2", "stem": "\"Animals ___ remains are buried in mud may survive.\"(定语从句,表‘它们的’所属关系,填关系词)", "stem_cn": "遗骸被埋在泥里的动物,可能得以保存。", "options": ["whose", "which", "who", "that"] },
+    { "gp": "gp2", "stem": "\"The lake, ___ bed collected silt, preserved many shells.\"(定语从句,表‘它的’所属,填关系词)", "stem_cn": "湖床沉积了淤泥,那湖保存了许多贝壳。", "options": ["whose", "which", "who", "that"] },
+    { "gp": "gp2", "stem": "\"Creatures ___ bodies decay quickly leave no trace.\"(定语从句,表‘它们的’所属,填关系词)", "stem_cn": "身体腐烂得快的生物,不会留下痕迹。", "options": ["whose", "which", "who", "that"] },
+    { "gp": "gp3", "stem": "\"Only a few bodies ___ preserved before decay sets in.\"(一般现在时被动,复数‘被保存’,填 be 动词)", "stem_cn": "只有少数尸体在腐烂前被保存下来。", "options": ["are", "is", "have", "being"] },
+    { "gp": "gp3", "stem": "\"A dead body is soon ___ by the weather.\"(被动语态,‘被毁掉’,填‘毁掉’那个动词的过去分词)", "stem_cn": "尸体很快就被风吹雨打毁掉。", "options": ["destroyed", "destroying", "destroys", "destroy"] },
+    { "gp": "gp3", "stem": "\"The mammoth was ___ in the ice for thousands of years.\"(被动语态,‘被保存’,填‘保存’那个动词的过去分词)", "stem_cn": "那头猛犸象在冰中保存了数千年。", "options": ["preserved", "preserving", "preserves", "preserve"] },
+    { "gp": "gp4", "stem": "\"Every creature, ___ plant or animal, feeds on something else.\"(‘无论…还是…’,填让步连词)", "stem_cn": "每一种生物,无论是植物还是动物,都以别的东西为食。", "options": ["whether", "either", "neither", "though"] },
+    { "gp": "gp4", "stem": "\"Whether dead ___ alive, a body may be eaten by scavengers.\"(‘无论…还是…’,与 whether 呼应,填后一半)", "stem_cn": "无论死活,尸体都可能被食腐动物吃掉。", "options": ["or", "nor", "and", "but"] },
+    { "gp": "gp4", "stem": "\"The remains, ___ of fish or of birds, are rarely found.\"(‘无论…还是…’,填让步连词)", "stem_cn": "无论是鱼还是鸟的遗骸,都很少被发现。", "options": ["whether", "either", "neither", "if"] },
+    { "gp": "gp5", "stem": "\"The creatures ___ die in water are more often preserved.\"(定语从句,指物,在从句里作主语,填关系词)", "stem_cn": "在水里死去的生物更常被保存。", "options": ["that", "who", "whose", "whom"] },
+    { "gp": "gp5", "stem": "\"Think of the birds ___ one sees flying about.\"(定语从句,指物,在从句里作宾语,填关系词)", "stem_cn": "想想人们看到四处飞的那些鸟。", "options": ["that", "who", "whose", "whom"] },
+    { "gp": "gp5", "stem": "\"The mud ___ covers a body must be laid down fast.\"(定语从句,指物,在从句里作主语,填关系词)", "stem_cn": "盖住尸体的泥浆,必须迅速沉积下来。", "options": ["that", "who", "whose", "whom"] },
+    { "gp": "gp6", "stem": "\"An animal that feeds on dead bodies is a ___.\"(“食腐动物”用哪个词)", "stem_cn": "以尸体为食的动物。", "options": ["scavenger", "gardener", "traveler", "teacher"] },
+    { "gp": "gp6", "stem": "\"A deep open crack in ice or rock is a ___.\"(“(冰/岩)裂隙”用哪个词)", "stem_cn": "冰面或岩石上又深又险的裂缝。", "options": ["crevasse", "meadow", "harbor", "ceiling"] },
+    { "gp": "gp6", "stem": "\"Fine sand and earth carried by water is ___.\"(“淤泥”用哪个词)", "stem_cn": "由水携带的细沙与泥土。", "options": ["silt", "steam", "smoke", "stone"] }
+  ],
+  "stage6": [
+    { "stem": "preservation 的意思是:", "options": ["保存,保护", "破坏", "腐烂", "污染"] },
+    { "stem": "scavenger 的意思是:", "options": ["食腐动物", "食草动物", "捕食者", "寄生虫"] },
+    { "stem": "decompose 的意思是:", "options": ["腐烂,分解", "生长", "冻结", "燃烧"] },
+    { "stem": "inaccessible 的意思是:", "options": ["难以到达的", "显而易见的", "常见的", "宽敞的"] },
+    { "stem": "crevasse 的意思是:", "options": ["(冰川)裂隙", "山峰", "平原", "河口"] },
+    { "stem": "venture 的意思是:", "options": ["冒险前往,敢于", "躲避", "停留", "返回"] }
+  ],
+  "contrast": [
+    { "us": "saber", "uk": "sabre", "note_cn": "军刀;saber-toothed 剑齿的,英式 sabre" },
+    { "us": "mold", "uk": "mould", "note_cn": "霉,霉菌;美语 mold,英式 mould" },
+    { "us": "plow", "uk": "plough", "note_cn": "犁;美语 plow,英式 plough" },
+    { "us": "skeptic", "uk": "sceptic", "note_cn": "怀疑者;美语 skeptic,英式 sceptic" }
+  ],
+  "chunks": [
+    { "us": "set in", "ipa": "/set ɪn/", "example1": "Decay soon sets in after death.", "example1_cn": "死亡后腐烂很快开始。", "example2": "Winter has set in early this year.", "example2_cn": "今年冬天来得早。" },
+    { "us": "come across", "ipa": "/kʌm əˈkrɔːs/", "example1": "You rarely come across a fossil.", "example1_cn": "你很少偶然碰到化石。", "example2": "I came across an old photo yesterday.", "example2_cn": "我昨天偶然翻到一张旧照片。" },
+    { "us": "not to mention", "ipa": "/nɑːt tuː ˈmenʃn/", "example1": "The birds, not to mention the insects, are gone.", "example1_cn": "鸟没了,更不用说昆虫了。", "example2": "He speaks French, not to mention Spanish.", "example2_cn": "他会法语,更别说西班牙语了。" },
+    { "us": "feed on", "ipa": "/fiːd ɑːn/", "example1": "Scavengers feed on dead bodies.", "example1_cn": "食腐动物以尸体为食。", "example2": "Owls feed on mice and voles.", "example2_cn": "猫头鹰以老鼠和田鼠为食。" }
+  ],
+  "stage7_cloze": {
+    "context": "Remains are preserved only by quick burial. It is in seas and lakes ___1___ mud and silt cover a body fast. Animals ___2___ remains lie in the mud may survive, but only a small ___3___ of all creatures are kept, ___4___ they be plant or animal.",
+    "blanks": [
+      { "blank_no": 1, "options": ["that", "which", "where", "what"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["whose", "which", "who", "that"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["fraction", "distance", "motion", "station"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["whether", "either", "neither", "though"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What is the main condition for the preservation of a creature's remains?", "options": ["Quick burial, usually under water in mud or silt", "Living on dry land", "Being a large animal", "Dying in the open air"] },
+    { "stem": "Why are the remains of land animals so rarely preserved?", "options": ["On dry land there is seldom anything to cover them before they decay", "Land animals never die", "They are too small to see", "They are always eaten by birds"] },
+    { "stem": "How were the Siberian mammoths preserved so completely?", "options": ["They fell into ice crevasses and were kept as if in a freezer", "They were buried by people", "They lived in the sea", "They were made of stone"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"最有助于保存尸体的,是快速掩埋\"(强调句 It is … that):", "options": ["It is quick burial that best preserves a body.", "Is quick burial that best preserves a body.", "It is quick burial what best preserves a body.", "It quick burial is that best preserves a body."] },
+    { "stem": "你想说\"尸体很快就被风雨毁掉\"(被动语态):", "options": ["A dead body is soon destroyed by the weather.", "A dead body is soon destroy by the weather.", "A dead body soon destroys by the weather.", "A dead body is soon destroying by the weather."] },
+    { "stem": "你想说\"每种生物,无论是植物还是动物,都以别物为食\"(whether … or …):", "options": ["Every creature, whether plant or animal, feeds on something else.", "Every creature, whether plant nor animal, feeds on something else.", "Every creature, whatever plant or animal, feeds on something else.", "Every creature, whether plant and animal, feeds on something else."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "scavenger 的意思是:", "options": ["食腐动物", "食草动物", "捕食者", "寄生虫"] },
+    { "kind": "vocab", "stem": "crevasse 的意思是:", "options": ["(冰川)裂隙", "山峰", "平原", "河口"] },
+    { "kind": "grammar", "stem": "\"___ is quick burial that most helps to preserve a body.\"(强调结构 __ is … that,填句首的形式词)", "stem_cn": "最有助于保存尸体的,是快速掩埋。", "options": ["It", "That", "This", "There"] },
+    { "kind": "grammar", "stem": "\"Every creature, ___ plant or animal, feeds on something else.\"(‘无论…还是…’,填让步连词)", "stem_cn": "每种生物,无论植物还是动物,都以别物为食。", "options": ["whether", "either", "neither", "though"] },
+    { "kind": "scenario", "stem": "\"set in\" 的意思是:", "options": ["(天气/坏情况)开始并持续", "坐下", "放弃", "出发"] },
+    { "kind": "scenario", "stem": "\"come across\" 的意思是:", "options": ["偶然遇到/发现", "故意寻找", "完全避开", "反复练习"] },
+    { "kind": "reading", "stem": "According to the passage, where are remains most likely to be preserved?", "options": ["In seas, rivers, and lakes, where mud is quickly deposited", "High in the mountains", "In dry open fields", "On busy roads"], "passage": true },
+    { "kind": "reading", "stem": "Why do the remains of land animals so seldom survive?", "options": ["On land there is rarely anything to bury them before they decay", "Land animals do not really die", "They are all eaten by mammoths", "The weather protects them"], "passage": true },
+    { "kind": "listening", "stem": "How were whole Siberian mammoths preserved?", "options": ["They fell into ice crevasses and were frozen as if in a refrigerator", "They were dried in the sun", "They turned to tar", "They were buried by early people"], "audio": true },
+    { "kind": "listening", "stem": "What is the single most important condition for preservation?", "options": ["Quick burial before decay or scavengers act", "Living near a city", "Having strong bones", "Being a plant"], "audio": true }
+  ]
+}

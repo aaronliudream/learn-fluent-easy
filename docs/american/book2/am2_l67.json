@@ -1,0 +1,131 @@
+{
+  "id": "am2_l67",
+  "unit_no": 9,
+  "lesson_no": 67,
+  "title_en": "Volcanoes",
+  "title_cn": "火山",
+  "grammar_focus": "KS43 can/could 表能力、be able to 与 manage to 表'设法做成一件具体的难事'(过去成功 was able to / managed to;没能做成 couldn't = wasn't able to = didn't manage to)(教材 L67 Key structures)主考;SD 带 say 与 tell 的短语辨析(say so/said his prayers/say a good word vs tell the time/tell lies/tell the difference)(辅考)",
+  "scene": "波兰科学家哈罗恩·塔捷耶夫花了毕生的精力来研究世界各地的活火山和深洞。1948年他去了刚果的基伍湖,对一座后来被他命名为基图罗的新火山进行观察。当火山正在猛烈地喷发时,塔捷耶夫有办法把帐篷搭在离它非常近的地方。尽管他设法拍了一些十分精彩的照片,但他却不能在火山附近停留太长的时间。他发现有一股岩浆正向他流过来,眼看就要将他团团围住,但塔捷耶夫还是设法及时逃离了。他等到火山平静下来,两天以后又返回去。这次他设法爬进了基图罗火山口,以便能拍摄照片和测试温度。塔捷耶夫经常冒这样的生命危险。他能告诉我们的有关活火山的情况比任何在世的人都要多。",
+  "grammar_card": {
+    "title": "can / be able to / manage to",
+    "intro": "KS43 表能力与'做成':①can/could = 一般的能力(As a boy he could swim well);②was able to / managed to = 过去'设法做成了一件具体的、有难度的事'(He managed to set up his camp = He was able to set up his camp);③没能做成 = couldn't = wasn't able to = didn't manage to。managed to 尤其强调'费了劲、终于成功'。",
+    "table": {
+      "headers": ["意思", "用法", "例子"],
+      "rows": [
+        ["一般能力", "can / could", "As a boy he could swim well."],
+        ["成功做成(过去)", "was able to / managed to", "He managed to escape just in time."],
+        ["没能做成", "couldn't / wasn't able to / didn't manage to", "I didn't manage to get into town."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "managed to 可代替 was able to 表示'成功地完成了动作';反过来,could not 也可用 didn't manage to 表达'没能做成'。", "mark": "manage to = be able to" },
+      { "rule": "SD 带 say 的短语:say so、say nothing、say a good word for、said his prayers、say goodbye、say no more;带 tell 的短语:tell the time、tell lies、tell the truth、tell a story、tell a secret、tell the difference。", "mark": "say / tell 短语" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why does Tazieff risk his life like this?",
+    "options": ["So he can study active volcanoes up close and tell us more about them than anyone alive", "Because he is paid a lot of money", "Because he enjoys the danger", "Because he is trying to stop the volcanoes"],
+    "answer_index": 0
+  },
+  "passage": "Haroun Tazieff, the Polish scientist, has spent his lifetime studying active volcanoes and deep caves in all parts of the world. In 1948, he went to Lake Kivu in the Congo to observe a new volcano which he later named Kituro. Tazieff was able to set up his camp very close to the volcano while it was erupting violently. Though he managed to take a number of brilliant photographs, he could not stay near the volcano for very long. He noticed that a river of liquid rock was coming towards him. It threatened to surround him completely, but Tazieff managed to escape just in time. He waited until the volcano became quiet and he was able to return two days later. This time, he managed to climb into the mouth of Kituro so that he could take photographs and measure temperatures. Tazieff has often risked his life in this way. He has been able to tell us more about active volcanoes than any man alive.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Haroun Tazieff, the Polish scientist, has spent his lifetime studying active volcanoes and deep caves in all parts of the world. In 1948, he went to Lake Kivu in the Congo to observe a new volcano which he later named Kituro.", "text_cn": "波兰科学家哈罗恩·塔捷耶夫花了毕生的精力来研究世界各地的活火山和深洞。1948年他去了刚果的基伍湖,对一座后来被他命名为基图罗的新火山进行观察。" },
+    { "seq": 2, "speaker": null, "text_en": "Tazieff was able to set up his camp very close to the volcano while it was erupting violently. Though he managed to take a number of brilliant photographs, he could not stay near the volcano for very long.", "text_cn": "当火山正在猛烈地喷发时,塔捷耶夫有办法把帐篷搭在离它非常近的地方。尽管他设法拍了一些十分精彩的照片,但他却不能在火山附近停留太长的时间。" },
+    { "seq": 3, "speaker": null, "text_en": "He noticed that a river of liquid rock was coming towards him. It threatened to surround him completely, but Tazieff managed to escape just in time.", "text_cn": "他发现有一股岩浆正向他流过来,眼看就要将他团团围住,但塔捷耶夫还是设法及时逃离了。" },
+    { "seq": 4, "speaker": null, "text_en": "He waited until the volcano became quiet and he was able to return two days later. This time, he managed to climb into the mouth of Kituro so that he could take photographs and measure temperatures.", "text_cn": "他等到火山平静下来,两天以后又返回去。这次他设法爬进了基图罗火山口,以便能拍摄照片和测试温度。" },
+    { "seq": 5, "speaker": null, "text_en": "Tazieff has often risked his life in this way. He has been able to tell us more about active volcanoes than any man alive.", "text_cn": "塔捷耶夫经常冒这样的生命危险。他能告诉我们的有关活火山的情况比任何在世的人都要多。" }
+  ],
+  "words": [
+    { "word": "volcano", "ipa": "/vɑːlˈkeɪnoʊ/", "pos": "n", "meaning_cn": "火山", "example": "active volcanoes" },
+    { "word": "active", "ipa": "/ˈæktɪv/", "pos": "adj", "meaning_cn": "活动的,活跃的", "example": "an active volcano" },
+    { "word": "Kivu", "ipa": "/ˈkiːvuː/", "pos": "n", "meaning_cn": "基伍(湖)", "example": "Lake Kivu in the Congo" },
+    { "word": "Congo", "ipa": "/ˈkɑːŋɡoʊ/", "pos": "n", "meaning_cn": "刚果", "example": "in the Congo" },
+    { "word": "Kituro", "ipa": "/kɪˈtuːroʊ/", "pos": "n", "meaning_cn": "基图罗(火山名)", "example": "a new volcano he named Kituro" },
+    { "word": "erupt", "ipa": "/ɪˈrʌpt/", "pos": "v", "meaning_cn": "(火山)喷发", "example": "while it was erupting violently" },
+    { "word": "violently", "ipa": "/ˈvaɪələntli/", "pos": "adv", "meaning_cn": "猛烈地,剧烈地", "example": "erupting violently" },
+    { "word": "manage", "ipa": "/ˈmænɪdʒ/", "pos": "v", "meaning_cn": "设法(做成)", "example": "he managed to escape just in time" },
+    { "word": "brilliant", "ipa": "/ˈbrɪljənt/", "pos": "adj", "meaning_cn": "精彩的,极好的", "example": "a number of brilliant photographs" },
+    { "word": "liquid", "ipa": "/ˈlɪkwɪd/", "pos": "adj", "meaning_cn": "液态的", "example": "a river of liquid rock" },
+    { "word": "escape", "ipa": "/ɪˈskeɪp/", "pos": "v", "meaning_cn": "逃脱,逃离", "example": "managed to escape just in time" },
+    { "word": "alive", "ipa": "/əˈlaɪv/", "pos": "adj", "meaning_cn": "活着的,在世的", "example": "more than any man alive" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "can / could 表一般能力" },
+    { "gp": "gp2", "name": "was able to / managed to(过去成功做成)" },
+    { "gp": "gp3", "name": "没能做成 couldn't = wasn't able to = didn't manage to" },
+    { "gp": "gp4", "name": "带 say 的短语(SD)" },
+    { "gp": "gp5", "name": "带 tell 的短语(SD)" },
+    { "gp": "gp6", "name": "say vs tell 辨析(SD)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"As a boy, he ___ swim very well.\"(过去的一般能力)", "stem_cn": "他小时候游泳游得很好。", "options": ["could", "managed to", "was able", "did"] },
+    { "gp": "gp1", "stem": "\"I ___ understand him; he spoke too fast.\"(过去做不到——否定能力)", "stem_cn": "我听不懂他,他说得太快了。", "options": ["couldn't", "didn't could", "wasn't able", "don't could"] },
+    { "gp": "gp2", "stem": "\"The volcano was erupting, but Tazieff ___ set up his camp close to it.\"(过去成功做成一件难事)", "stem_cn": "火山在喷发,但塔捷耶夫设法把营地扎在了附近。", "options": ["managed to", "could", "must", "may"] },
+    { "gp": "gp2", "stem": "\"He ___ take a number of brilliant photographs.\"(过去成功拍到了照片)", "stem_cn": "他设法拍了一些精彩的照片。", "options": ["was able to", "could to", "managed", "can"] },
+    { "gp": "gp2", "stem": "\"He didn't agree at first, but I ___ persuade him.\"(过去成功说服了他)", "stem_cn": "他起初不同意,但我设法说服了他。", "options": ["managed to", "could", "must", "would"] },
+    { "gp": "gp2", "stem": "\"The volcano became quiet and he ___ return two days later.\"(过去成功返回)", "stem_cn": "火山平静下来,两天后他得以返回。", "options": ["was able to", "could to", "can", "managed"] },
+    { "gp": "gp3", "stem": "\"I ___ get into town this morning.\"(= I could not;'没能'进城)", "stem_cn": "今天上午我没能进城。", "options": ["didn't manage to", "didn't managed to", "don't manage to", "not managed to"] },
+    { "gp": "gp3", "stem": "\"They ___ find the boy who had run away.\"('没能'找到)", "stem_cn": "他们没能找到那个跑掉的男孩。", "options": ["weren't able to", "wasn't able to", "couldn't to", "didn't able to"] },
+    { "gp": "gp3", "stem": "\"He ___ find a new job.\"('没能'找到新工作)", "stem_cn": "他没能找到新工作。", "options": ["didn't manage to", "didn't managed to", "couldn't to", "not manage to"] },
+    { "gp": "gp4", "stem": "\"Did he ___ anything to you about it?\"(选词:'对某人说起某事')", "stem_cn": "他有没有跟你说过这事?", "options": ["say", "tell", "speak", "talk"] },
+    { "gp": "gp4", "stem": "\"He knelt down and ___ his prayers.\"(选词:'做祷告'的固定说法)", "stem_cn": "他跪下来做祷告。", "options": ["said", "told", "spoke", "talked"] },
+    { "gp": "gp4", "stem": "\"If you want more cake, please ___ so.\"(选词:'(这么)说一声')", "stem_cn": "想再要蛋糕就说一声。", "options": ["say", "tell", "speak", "talk"] },
+    { "gp": "gp5", "stem": "\"Can you ___ the time in English?\"(选词:'报时、说出几点')", "stem_cn": "你能用英语报时吗?", "options": ["tell", "say", "speak", "talk"] },
+    { "gp": "gp5", "stem": "\"He often ___ lies.\"(选词:'说谎'的固定说法)", "stem_cn": "他经常说谎。", "options": ["tells", "says", "speaks", "talks"] },
+    { "gp": "gp5", "stem": "\"Can't you ___ the difference between them?\"(选词:'区分、分辨')", "stem_cn": "你分不出它们的区别吗?", "options": ["tell", "say", "speak", "know"] },
+    { "gp": "gp6", "stem": "\"He is only five, but he can already ___ the time.\"(报时用哪个词)", "stem_cn": "他才5岁,但已经会看钟点了。", "options": ["tell", "say", "speak", "talk"] },
+    { "gp": "gp6", "stem": "\"They asked the prisoner several questions, but he ___ nothing.\"(什么也没说用哪个词)", "stem_cn": "他们问了犯人几个问题,但他什么也没说。", "options": ["said", "told", "spoke", "talked"] },
+    { "gp": "gp6", "stem": "\"I want you to ___ me the truth.\"(告诉我实话用哪个词)", "stem_cn": "我要你跟我说实话。", "options": ["tell", "say", "speak", "talk"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"中心、中央\"拼作:", "options": ["center", "centre", "sentre", "centr"] },
+    { "stem": "美语里\"米、公尺\"拼作:", "options": ["meter", "metre", "metter", "metr"] },
+    { "stem": "volcano 的意思是:", "options": ["火山", "地震", "海啸", "冰川"] },
+    { "stem": "erupt 的意思是:", "options": ["(火山)喷发", "熄灭", "冻结", "干涸"] },
+    { "stem": "escape 的意思是:", "options": ["逃脱,逃离", "到达", "停留", "返回"] },
+    { "stem": "brilliant 的意思是:", "options": ["精彩的,极好的", "平凡的", "糟糕的", "昂贵的"] }
+  ],
+  "contrast": [
+    { "us": "center", "uk": "centre", "note_cn": "中心;美语 center,英式 centre(-er vs -re)" },
+    { "us": "meter", "uk": "metre", "note_cn": "米、公尺;美语 meter,英式 metre" },
+    { "us": "liter", "uk": "litre", "note_cn": "升;美语 liter,英式 litre" },
+    { "us": "theater", "uk": "theatre", "note_cn": "剧院;美语 theater,英式 theatre" }
+  ],
+  "chunks": [
+    { "us": "set up (a camp)", "ipa": "/set ʌp/", "example1": "He managed to set up his camp near the volcano.", "example1_cn": "他设法在火山附近扎了营。", "example2": "They set up a tent by the river.", "example2_cn": "他们在河边搭起了帐篷。" },
+    { "us": "just in time", "ipa": "/dʒʌst ɪn taɪm/", "example1": "He managed to escape just in time.", "example1_cn": "他设法及时逃离了。", "example2": "We got there just in time.", "example2_cn": "我们及时赶到了。" },
+    { "us": "spend one's lifetime doing", "ipa": "/spend ˈlaɪftaɪm ˈduːɪŋ/", "example1": "He has spent his lifetime studying volcanoes.", "example1_cn": "他毕生研究火山。", "example2": "She spent her lifetime helping others.", "example2_cn": "她一生都在帮助他人。" },
+    { "us": "risk one's life", "ipa": "/rɪsk wʌnz laɪf/", "example1": "Tazieff has often risked his life.", "example1_cn": "塔捷耶夫经常冒生命危险。", "example2": "Firefighters risk their lives every day.", "example2_cn": "消防员每天都冒着生命危险。" }
+  ],
+  "stage7_cloze": {
+    "context": "Tazieff ___1___ set up his camp close to the volcano while it was erupting. Though he took brilliant photographs, he ___2___ stay near it for very long. He escaped just in time, and later he ___3___ return. This time he ___4___ climb into the mouth of Kituro.",
+    "blanks": [
+      { "blank_no": 1, "options": ["managed to", "could", "must", "may"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["couldn't", "managed to", "was able to", "could to"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["was able to", "could to", "can", "managed"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["managed to", "could to", "can", "must"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What has Haroun Tazieff spent his lifetime doing?", "options": ["Studying active volcanoes and deep caves all over the world", "Painting pictures of mountains", "Sailing across the oceans", "Teaching at a university"] },
+    { "stem": "What happened while Tazieff was near the erupting volcano in 1948?", "options": ["A river of liquid rock came towards him, but he managed to escape just in time", "He was trapped for two days", "His camera was destroyed", "He fell into the volcano"] },
+    { "stem": "Why can Tazieff tell us more about active volcanoes than any man alive?", "options": ["Because he has often risked his life to study them up close", "Because he reads many books", "Because he has special machines", "Because he lives on a volcano"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"火山在喷发,但他设法把营地扎在了附近\"(成功做成一件难事用 manage to):", "options": ["The volcano was erupting, but he managed to set up his camp nearby.", "The volcano was erupting, but he could set up his camp nearby.", "The volcano was erupting, but he managed set up his camp nearby.", "The volcano was erupting, but he was able set up his camp nearby."] },
+    { "stem": "你想说\"今天上午我没能进城\"(= I could not,用 didn't manage to):", "options": ["I didn't manage to get into town this morning.", "I didn't managed to get into town this morning.", "I don't manage to get into town this morning.", "I couldn't to get into town this morning."] },
+    { "stem": "你想说\"请给我们讲个故事\"(用 tell):", "options": ["Please tell us a story.", "Please say us a story.", "Please speak us a story.", "Please talk us a story."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "volcano 的意思是:", "options": ["火山", "地震", "海啸", "冰川"] },
+    { "kind": "vocab", "stem": "escape 的意思是:", "options": ["逃脱,逃离", "到达", "停留", "返回"] },
+    { "kind": "grammar", "stem": "\"The volcano was erupting, but Tazieff ___ set up his camp close to it.\"(过去成功做成)", "stem_cn": "火山在喷发,但塔捷耶夫设法把营地扎在了附近。", "options": ["managed to", "could", "must", "may"] },
+    { "kind": "grammar", "stem": "\"He often ___ lies.\"(说谎用哪个词)", "stem_cn": "他经常说谎。", "options": ["tells", "says", "speaks", "talks"] },
+    { "kind": "scenario", "stem": "\"managed to do\" 表示的意思是:", "options": ["设法做成了(成功完成一件难事)", "打算去做", "拒绝去做", "忘记去做"] },
+    { "kind": "scenario", "stem": "\"risk one's life\" 的意思是:", "options": ["冒生命危险", "挽救生命", "珍惜生命", "浪费生命"] },
+    { "kind": "reading", "stem": "Why couldn't Tazieff stay near the volcano for very long the first time?", "options": ["A river of liquid rock was coming towards him and threatened to surround him", "It was getting dark", "He ran out of film", "The volcano stopped erupting"], "passage": true },
+    { "kind": "reading", "stem": "What did Tazieff manage to do when he returned two days later?", "options": ["He climbed into the mouth of Kituro to take photos and measure temperatures", "He filled in the volcano", "He built a house there", "He gave up his research"], "passage": true },
+    { "kind": "listening", "stem": "Where did Tazieff go in 1948?", "options": ["To Lake Kivu in the Congo, to observe a new volcano he named Kituro", "To the North Pole", "To a desert in Africa", "To a cave in Poland"], "audio": true },
+    { "kind": "listening", "stem": "How does the passage describe Tazieff's knowledge of active volcanoes?", "options": ["He can tell us more about them than any man alive", "He knows nothing about them", "He only studies dead volcanoes", "He has never seen one"], "audio": true }
+  ]
+}

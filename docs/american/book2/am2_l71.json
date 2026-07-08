@@ -1,0 +1,132 @@
+{
+  "id": "am2_l71",
+  "unit_no": 9,
+  "lesson_no": 71,
+  "title_en": "A famous clock",
+  "title_cn": "一个著名的大钟",
+  "grammar_focus": "Review KS60-69 综合复习(教材 L71 Key structures):与过去事实相反的虚拟条件句(had not been burned → would never have been erected)、各时态被动(can be heard / were being built / are connected)、have sth done(have the clock checked)、现在完成/过去完成进行/将来完成的复习;SD 易混词 official/employee/salesclerk(美语 clerk)、hang→hung(悬挂)",
+  "scene": "当你游览伦敦时,首先看到的东西之一就是“大本”钟,即那座从英国广播公司的广播中全世界都可以听到它声音的著名大钟。如果不是国会大厦在1834年被焚毁的话,这座大钟永远也不会建造。“大本”钟得名于本杰明·霍尔爵士,因为当建造新的国会大厦时,他负责建造大钟。此钟不仅外型巨大,而且走时也非常准确。格林尼治天文台的官员们每天两次派人矫正此钟。当大钟打点的时候,你可以从英国广播公司的广播中听到,因为钟塔上接了麦克风。“大本”钟很少出差错。然而有一次,它却把时间报错了。在钟塔上干活的一位油漆工把一只油漆桶挂在了一根指针上,把钟弄慢了!",
+  "grammar_card": {
+    "title": "Review KS60-69 综合复习",
+    "intro": "本课复习前十课重点:①与过去事实相反的虚拟条件句——if 从句用 had (not) been done,主句用 would have (been) done(If Parliament had not been burned down, the clock would never have been erected);②各时态被动 be + 过去分词(can be heard / were being built / are connected);③have sth done 请别人做(have the clock checked);④现在完成(has gone wrong)、过去完成进行(had been working)、将来完成(will have worked)。",
+    "table": {
+      "headers": ["复习点", "例子"],
+      "rows": [
+        ["与过去相反虚拟", "If it had not been burned, it would never have been erected."],
+        ["各时态被动", "can be heard / were being built"],
+        ["have sth done", "have the clock checked twice a day"],
+        ["现在完成", "Big Ben has rarely gone wrong."],
+        ["过去完成进行", "A painter had been working on the tower."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "SD 易混词:official=(政府/机构的)官员;employee=雇员、职工;shop assistant(店员)美语说 salesclerk / clerk。", "mark": "official/employee/clerk" },
+      { "rule": "SD hang 两套变化:表'悬挂(物品)'时 hang-hung-hung(She hung the washing);表旧时'绞死(人)'时 hang-hanged-hanged(仅认读,不作重点)。", "mark": "hang/hung" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Has Big Ben ever gone wrong?",
+    "options": ["Yes, once — a painter hung a pot of paint on a hand and slowed it down", "No, it has never gone wrong", "Yes, it goes wrong every day", "Yes, it stopped for a whole year"],
+    "answer_index": 0
+  },
+  "passage": "When you visit London, one of the first things you will see is Big Ben, the famous clock which can be heard all over the world on the B.B.C. If the Houses of Parliament had not been burned down in 1834, the great clock would never have been erected. Big Ben takes its name from Sir Benjamin Hall, who was responsible for the making of the clock when the new Houses of Parliament were being built. It is not only of immense size, but is extremely accurate as well. Officials from Greenwich Observatory have the clock checked twice a day. On the B.B.C. you can hear the clock when it is actually striking, because microphones are connected to the clock tower. Big Ben has rarely gone wrong. Once, however, it failed to give the correct time. A painter who had been working on the tower hung a pot of paint on one of the hands and slowed it down!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "When you visit London, one of the first things you will see is Big Ben, the famous clock which can be heard all over the world on the B.B.C. If the Houses of Parliament had not been burned down in 1834, the great clock would never have been erected.", "text_cn": "当你游览伦敦时,首先看到的东西之一就是“大本”钟,即那座声音能通过英国广播公司传遍全世界的著名大钟。如果不是国会大厦在1834年被焚毁的话,这座大钟永远也不会建造。" },
+    { "seq": 2, "speaker": null, "text_en": "Big Ben takes its name from Sir Benjamin Hall, who was responsible for the making of the clock when the new Houses of Parliament were being built. It is not only of immense size, but is extremely accurate as well.", "text_cn": "“大本”钟得名于本杰明·霍尔爵士,因为当建造新的国会大厦时,他负责建造大钟。此钟不仅外型巨大,而且走时也非常准确。" },
+    { "seq": 3, "speaker": null, "text_en": "Officials from Greenwich Observatory have the clock checked twice a day. On the B.B.C. you can hear the clock when it is actually striking, because microphones are connected to the clock tower.", "text_cn": "格林尼治天文台的官员们每天两次派人矫正此钟。当大钟打点的时候,你可以从英国广播公司的广播中听到,因为钟塔上接了麦克风。" },
+    { "seq": 4, "speaker": null, "text_en": "Big Ben has rarely gone wrong. Once, however, it failed to give the correct time.", "text_cn": "“大本”钟很少出差错。然而有一次,它却把时间报错了。" },
+    { "seq": 5, "speaker": null, "text_en": "A painter who had been working on the tower hung a pot of paint on one of the hands and slowed it down!", "text_cn": "在钟塔上干活的一位油漆工把一只油漆桶挂在了一根指针上,把钟弄慢了!" }
+  ],
+  "words": [
+    { "word": "parliament", "ipa": "/ˈpɑːrləmənt/", "pos": "n", "meaning_cn": "议会,国会", "example": "the Houses of Parliament" },
+    { "word": "erect", "ipa": "/ɪˈrekt/", "pos": "v", "meaning_cn": "建造,竖立", "example": "the great clock would never have been erected" },
+    { "word": "accurate", "ipa": "/ˈækjərət/", "pos": "adj", "meaning_cn": "准确的", "example": "extremely accurate" },
+    { "word": "official", "ipa": "/əˈfɪʃəl/", "pos": "n", "meaning_cn": "官员,行政人员", "example": "Officials from Greenwich Observatory" },
+    { "word": "Greenwich", "ipa": "/ˈɡrenɪtʃ/", "pos": "n", "meaning_cn": "格林尼治", "example": "Greenwich Observatory" },
+    { "word": "observatory", "ipa": "/əbˈzɜːrvətɔːri/", "pos": "n", "meaning_cn": "天文台", "example": "Officials from Greenwich Observatory" },
+    { "word": "check", "ipa": "/tʃek/", "pos": "v", "meaning_cn": "检查,核对", "example": "have the clock checked twice a day" },
+    { "word": "microphone", "ipa": "/ˈmaɪkrəfoʊn/", "pos": "n", "meaning_cn": "麦克风,扩音器", "example": "microphones are connected to the clock tower" },
+    { "word": "tower", "ipa": "/ˈtaʊər/", "pos": "n", "meaning_cn": "塔", "example": "the clock tower" },
+    { "word": "immense", "ipa": "/ɪˈmens/", "pos": "adj", "meaning_cn": "巨大的", "example": "of immense size" },
+    { "word": "strike", "ipa": "/straɪk/", "pos": "v", "meaning_cn": "(钟)敲响报时", "example": "when it is actually striking" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "与过去相反的虚拟条件句(had been done → would have been done)" },
+    { "gp": "gp2", "name": "各时态被动(can be heard / were being built / are connected)" },
+    { "gp": "gp3", "name": "have sth done(请别人做)" },
+    { "gp": "gp4", "name": "复习:现在完成 / 过去完成进行 / 将来完成" },
+    { "gp": "gp5", "name": "SD official / employee / salesclerk 辨析" },
+    { "gp": "gp6", "name": "SD hang → hung(悬挂)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"If the Houses of Parliament ___ down in 1834, the clock would never have been erected.\"(与过去相反:if 从句用 had (not) been done)", "stem_cn": "如果国会大厦1834年没被烧毁,大钟就永远不会建起来。", "options": ["had not been burned", "were not burned", "had not burned", "would not burn"] },
+    { "gp": "gp1", "stem": "\"If Parliament had not been burned down, the great clock ___ erected.\"(与过去相反:主句用 would have been done)", "stem_cn": "如果国会大厦没被烧毁,大钟永远不会被建起来。", "options": ["would never have been", "would never be", "will never be", "had never been"] },
+    { "gp": "gp1", "stem": "\"If they had checked it earlier, the fault ___ found.\"(与过去相反:主句用完成体的虚拟被动形式)", "stem_cn": "要是他们早点检查,故障早就被发现了。", "options": ["would have been", "would be", "will be", "had been"] },
+    { "gp": "gp2", "stem": "\"Big Ben is the famous clock which ___ all over the world on the B.B.C.\"(情态被动:能被听到)", "stem_cn": "大本钟是那座声音能传遍全世界的著名大钟。", "options": ["can be heard", "can hear", "can be hearing", "can heard"] },
+    { "gp": "gp2", "stem": "\"Big Ben got its name when the new Houses of Parliament ___.\"(过去进行被动:正在建造)", "stem_cn": "新国会大厦正在建造时,大本钟得了名。", "options": ["were being built", "were building", "was being built", "had built"] },
+    { "gp": "gp2", "stem": "\"Microphones ___ to the clock tower.\"(一般现在被动:被连接)", "stem_cn": "麦克风连接在钟塔上。", "options": ["are connected", "connect", "are connecting", "have connect"] },
+    { "gp": "gp3", "stem": "\"Officials from Greenwich Observatory have the clock ___ twice a day.\"(请别人做:每天让人校对两次)", "stem_cn": "格林尼治天文台的官员每天两次让人校对此钟。", "options": ["checked", "check", "checking", "to check"] },
+    { "gp": "gp3", "stem": "\"You should have your watch ___ if it keeps stopping.\"(请别人做:让人修表)", "stem_cn": "表老停的话,你该拿去修。", "options": ["repaired", "repair", "repairing", "to repair"] },
+    { "gp": "gp4", "stem": "\"Big Ben has rarely ___ wrong.\"(现在完成:很少出过差错)", "stem_cn": "大本钟很少出过差错。", "options": ["gone", "went", "going", "been going"] },
+    { "gp": "gp4", "stem": "\"A painter who ___ on the tower hung a pot of paint on one of the hands.\"(过去完成进行:一直在干活)", "stem_cn": "一位一直在塔上干活的油漆工把油漆桶挂在了指针上。", "options": ["had been working", "worked", "has worked", "was work"] },
+    { "gp": "gp4", "stem": "\"By December I ___ on this novel for ten months.\"(将来完成进行:到12月已工作了10个月)", "stem_cn": "到12月,我这部小说就写了10个月了。", "options": ["will have been working", "will work", "have worked", "worked"] },
+    { "gp": "gp5", "stem": "\"___ from Greenwich Observatory check the clock.\"(天文台的'官员')", "stem_cn": "格林尼治天文台的官员们校对此钟。", "options": ["Officials", "Employees", "Clerks", "Customers"] },
+    { "gp": "gp5", "stem": "\"Over a thousand factory ___ work here.\"(工厂的'雇员、职工')", "stem_cn": "一千多名工厂雇员在这儿上班。", "options": ["employees", "officials", "clerks", "guests"] },
+    { "gp": "gp5", "stem": "\"She works as a ___ in a clothing store.\"(在服装店'当店员';美语说法)", "stem_cn": "她在一家服装店当店员。", "options": ["salesclerk", "shop assistant", "official", "employer"] },
+    { "gp": "gp6", "stem": "\"When the sun came out, she ___ the washing on the line.\"(悬挂衣物:hang 的过去式)", "stem_cn": "太阳出来时,她把洗好的衣服晾在绳子上。", "options": ["hung", "hanged", "hang", "hangs"] },
+    { "gp": "gp6", "stem": "\"He ___ a pot of paint on one of the clock's hands.\"(把…挂上:hang 的过去式)", "stem_cn": "他把一桶油漆挂在了钟的一根指针上。", "options": ["hung", "hanged", "hang", "hanging"] },
+    { "gp": "gp6", "stem": "\"I ___ my coat in the hall.\"(把外套挂起来:hang 的过去式)", "stem_cn": "我把外套挂在门厅里。", "options": ["hung", "hanged", "hang", "hangs"] },
+    { "gp": "gp6", "stem": "\"They ___ a big picture on the wall yesterday.\"(把画挂上:hang 的过去式)", "stem_cn": "昨天他们在墙上挂了一幅大画。", "options": ["hung", "hanged", "hang", "hanging"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"店员\"常说:", "options": ["salesclerk", "shop assistant", "shop worker", "store boy"] },
+    { "stem": "美语里\"电梯\"常说:", "options": ["elevator", "lift", "up-stairs box", "rising room"] },
+    { "stem": "parliament 的意思是:", "options": ["议会,国会", "法院", "学校", "医院"] },
+    { "stem": "erect 的意思是:", "options": ["建造,竖立", "拆除", "修理", "参观"] },
+    { "stem": "accurate 的意思是:", "options": ["准确的", "模糊的", "昂贵的", "古老的"] },
+    { "stem": "immense 的意思是:", "options": ["巨大的", "微小的", "普通的", "破旧的"] }
+  ],
+  "contrast": [
+    { "us": "salesclerk", "uk": "shop assistant", "note_cn": "店员;美语 salesclerk/clerk,英式 shop assistant" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "first floor", "uk": "ground floor", "note_cn": "一楼;美语 first floor,英式 ground floor" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" }
+  ],
+  "chunks": [
+    { "us": "take one's name from", "ipa": "/teɪk neɪm frɒm/", "example1": "Big Ben takes its name from Sir Benjamin Hall.", "example1_cn": "大本钟得名于本杰明·霍尔爵士。", "example2": "The town takes its name from the river.", "example2_cn": "这座城镇得名于那条河。" },
+    { "us": "be responsible for", "ipa": "/bi rɪˈspɑːnsəbl fɔːr/", "example1": "He was responsible for the making of the clock.", "example1_cn": "他负责大钟的建造。", "example2": "She is responsible for the whole team.", "example2_cn": "她对整个团队负责。" },
+    { "us": "all over the world", "ipa": "/ɔːl ˈoʊvər ðə wɜːrld/", "example1": "It can be heard all over the world.", "example1_cn": "全世界都能听到它。", "example2": "People know this song all over the world.", "example2_cn": "全世界的人都知道这首歌。" },
+    { "us": "have sth checked", "ipa": "/hæv ˈtʃekt/", "example1": "They have the clock checked twice a day.", "example1_cn": "他们每天让人校对此钟两次。", "example2": "Have your eyes checked once a year.", "example2_cn": "每年让人检查一次眼睛。" }
+  ],
+  "stage7_cloze": {
+    "context": "If the Houses of Parliament ___1___ down in 1834, the great clock would never have been erected. Big Ben got its name when the new Houses of Parliament ___2___. Officials have the clock ___3___ twice a day. Big Ben has rarely ___4___ wrong.",
+    "blanks": [
+      { "blank_no": 1, "options": ["had not been burned", "were not burned", "had not burned", "would not burn"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["were being built", "were building", "was being built", "had built"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["checked", "check", "checking", "to check"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["gone", "went", "going", "been going"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What is Big Ben?", "options": ["The famous London clock that can be heard all over the world on the B.B.C.", "A tall office building", "A radio station", "A history museum"] },
+    { "stem": "Why would the great clock never have been built?", "options": ["If the Houses of Parliament had not been burned down in 1834", "If London had not grown so large", "If radio had never been invented", "If Sir Benjamin Hall had not been born"] },
+    { "stem": "How is Big Ben kept so accurate?", "options": ["Officials from Greenwich Observatory have the clock checked twice a day", "It is never touched at all", "It checks itself automatically", "A computer runs it"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"如果国会大厦没被烧毁,大钟就永远不会被建起来\"(与过去相反虚拟,被动):", "options": ["If Parliament had not been burned down, the clock would never have been erected.", "If Parliament had not been burned down, the clock would never be erected.", "If Parliament had not been burned down, the clock will never have been erected.", "If Parliament had not been burned down, the clock had never been erected."] },
+    { "stem": "你想说\"官员们每天让人把钟校对两次\"(have sth done):", "options": ["The officials have the clock checked twice a day.", "The officials have the clock check twice a day.", "The officials have checking the clock twice a day.", "The officials have the clock to check twice a day."] },
+    { "stem": "你想说\"太阳出来时,她把洗好的衣服晾了起来\"(悬挂,hang 的过去式):", "options": ["When the sun came out, she hung the washing on the line.", "When the sun came out, she hanged the washing on the line.", "When the sun came out, she hang the washing on the line.", "When the sun came out, she hangs the washing on the line."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "parliament 的意思是:", "options": ["议会,国会", "法院", "学校", "医院"] },
+    { "kind": "vocab", "stem": "accurate 的意思是:", "options": ["准确的", "模糊的", "昂贵的", "古老的"] },
+    { "kind": "grammar", "stem": "\"Big Ben got its name when the new Houses of Parliament ___.\"(过去进行被动)", "stem_cn": "新国会大厦正在建造时,大本钟得了名。", "options": ["were being built", "were building", "was being built", "had built"] },
+    { "kind": "grammar", "stem": "\"Officials have the clock ___ twice a day.\"(have sth done 请别人做)", "stem_cn": "官员们每天让人把钟校对两次。", "options": ["checked", "check", "checking", "to check"] },
+    { "kind": "scenario", "stem": "\"have + 物 + 过去分词\" 表示的意思是:", "options": ["请/让别人做某事", "自己亲手做某事", "已经做完某事", "将要亲自去做"] },
+    { "kind": "scenario", "stem": "hang 表示\"悬挂(物品)\"时,它的过去式是:", "options": ["hung", "hanged", "hanging", "hangs"] },
+    { "kind": "reading", "stem": "Why has Big Ben rarely gone wrong?", "options": ["It is checked twice a day and is extremely accurate despite its size", "It is never actually used", "It is very small and simple", "It runs on batteries"], "passage": true },
+    { "kind": "reading", "stem": "What happened the one time Big Ben failed to give the correct time?", "options": ["A painter hung a pot of paint on one of the hands and slowed it down", "It was struck by lightning", "The power went out", "Someone stole one of the hands"], "passage": true },
+    { "kind": "listening", "stem": "Where can you hear Big Ben striking?", "options": ["On the B.B.C., because microphones are connected to the clock tower", "Only inside Parliament", "Nowhere anymore", "On television only"], "audio": true },
+    { "kind": "listening", "stem": "Has Big Ben ever gone wrong?", "options": ["Yes, once, when a painter slowed it down", "No, never", "Yes, every single day", "Yes, it stopped for a whole year"], "audio": true }
+  ]
+}

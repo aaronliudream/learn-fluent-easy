@@ -1,0 +1,134 @@
+{
+  "id": "am4_l10",
+  "unit_no": 2,
+  "lesson_no": 10,
+  "title_en": "Silicon Valley",
+  "title_cn": "硅谷",
+  "grammar_focus": "情态动词表推测/可能(may/can)、there be + 定语从句 + enable/let sb do、without + 动名词(含被动 being done)、As 引导‘随着…’的从句、现在分词作结果/伴随状语(spawning/giving/forging)(NCE4 无 KS 页,考点由课文结构自取;IP:源为《美国新闻与世界报道》署名报道且含真实人物公司,已换原创虚构人物 Dr. Elena Ross、100% 原创行文,只承载语法/词表/话题/篇幅;题材=硅谷创新文化·无害;美语化 customize/analog;第四册第10课)",
+  "scene": "一些密切关注技术走向的人相信,下一波浪潮也许会把硅谷带回它躁动的起点。埃莱娜·罗斯博士——早年芯片实验室的老兵、如今的计算机科学教授——指出,如今已有工作站,可让一名工程师坐在自己桌前独自设计、测试并定制一枚芯片,就像写作者在笔记本电脑上排一份简讯那样。随着造一枚芯片所需的时间和金钱降到区区几天、几百美元,工程师们或许很快就能放开手脚,让想象力天马行空,而不必为每一次昂贵的失败受罚。罗斯预言,发明者将能在一个周末里完善一款大胆的新设计,催生新一代车库创业公司,并让这个国家在抢占市场的竞赛中对海外对手取得实实在在的领先。“我们仍有大把大把塞满聪明人的车库,”她说,“这个行业一向靠一种愉快的无政府状态蓬勃发展。”新来者同样重要。来自世界各地的工程师如今已占硅谷员工的很大一部分,其中许多人能借助家乡的习俗和语言,与遥远的市场缔结更牢的纽带。一位在本地大学受训的年轻创新者,已在海外办起一家小厂,去挑战某老牌巨头在存储芯片市场上的把持。在真正安顿成一座宁静的“退休村”之前,硅谷或许还会证明自己是一所培养全球化企业的学校。",
+  "grammar_card": {
+    "title": "情态推测 / there be + 定语从句 / without + 动名词 / As 随着 / 现在分词作结果状语",
+    "intro": "①情态词 may/can 表推测、可能:may carry、can draw。②there be + 定语从句(that…)+ enable/let sb (to) do:there are workstations that let engineers design chips。③without + 动名词,被动用 being done:without being penalized。④As 引导‘随着…’:As the cost falls, …。⑤现在分词作结果/伴随状语:…, spawning start-ups and giving the country a lead。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["情态推测", "may/can + 动词原形", "the wave may carry the Valley back"],
+        ["there be + 定从", "there be … that …", "workstations that let engineers design"],
+        ["without + 动名词", "without (being) doing", "without being penalized"],
+        ["As 随着", "As + 从句, 主句", "As the cost falls, they grow bolder"],
+        ["现在分词作结果", "…, doing …", "spawning start-ups, giving a lead"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "情态词 may/can 后接动词原形,不加 to、不加 s;may 侧重‘可能/也许’,can 侧重‘能够’。", "mark": "may/can + do" },
+      { "rule": "without 是介词,后接动名词;若表被动用 without being + 过去分词。", "mark": "without being done" },
+      { "rule": "美式拼写:customize(定制,英式 customise)、analog(模拟,英式 analogue)。本课已按美语写。", "mark": "customize / analog" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What does the computer industry thrive on apart from anarchy?",
+    "options": ["Clever people working in countless garages", "Strict government planning", "Cheap imported chips", "A single giant company"],
+    "answer_index": 0
+  },
+  "passage": "Some who watch the technology closely believe that the next wave may carry Silicon Valley back toward its restless beginnings. Dr. Elena Ross, a veteran of the early chip labs and now a professor of computer science, points out that there are now workstations that let a single engineer design, test, and customize a chip right at her own desk, much the way a writer lays out a newsletter on a laptop. As the time and money needed to make a chip fall to a few days and a few hundred dollars, engineers may soon be free to let their imaginations run wild without being penalized for every costly failure. Ross predicts that inventors will be able to perfect a bold new design over a single weekend, spawning a fresh generation of garage start-ups and giving the country a real jump on its foreign rivals in the race to market. \"We've still got plenty of garages full of clever people,\" she says. \"This industry has always thrived on a kind of cheerful anarchy.\" Newcomers matter, too. Engineers born all over the world now make up a large share of the Valley's staff, and many can draw on the customs and languages of their home regions to forge stronger links with distant markets. One young innovator, trained at a local university, has already set up a small factory abroad to challenge an old giant's grip on the memory-chip business. Before it ever settles into a quiet retirement, Silicon Valley may yet prove a classroom for building companies that reach around the globe.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Some who watch the technology closely believe that the next wave may carry Silicon Valley back toward its restless beginnings. Dr. Elena Ross, a veteran of the early chip labs and now a professor of computer science, points out that there are now workstations that let a single engineer design, test, and customize a chip right at her own desk, much the way a writer lays out a newsletter on a laptop.", "text_cn": "一些密切关注技术走向的人相信,下一波浪潮也许会把硅谷带回它躁动的起点。埃莱娜·罗斯博士——早年芯片实验室的老兵、如今的计算机科学教授——指出,如今已有工作站,可让一名工程师坐在自己桌前独自设计、测试并定制一枚芯片,就像写作者在笔记本电脑上排一份简讯那样。" },
+    { "seq": 2, "speaker": null, "text_en": "As the time and money needed to make a chip fall to a few days and a few hundred dollars, engineers may soon be free to let their imaginations run wild without being penalized for every costly failure.", "text_cn": "随着造一枚芯片所需的时间和金钱降到区区几天、几百美元,工程师们或许很快就能放开手脚,让想象力天马行空,而不必为每一次昂贵的失败受罚。" },
+    { "seq": 3, "speaker": null, "text_en": "Ross predicts that inventors will be able to perfect a bold new design over a single weekend, spawning a fresh generation of garage start-ups and giving the country a real jump on its foreign rivals in the race to market.", "text_cn": "罗斯预言,发明者将能在一个周末里完善一款大胆的新设计,催生新一代车库创业公司,并让这个国家在抢占市场的竞赛中对海外对手取得实实在在的领先。" },
+    { "seq": 4, "speaker": null, "text_en": "\"We've still got plenty of garages full of clever people,\" she says. \"This industry has always thrived on a kind of cheerful anarchy.\" Newcomers matter, too. Engineers born all over the world now make up a large share of the Valley's staff, and many can draw on the customs and languages of their home regions to forge stronger links with distant markets.", "text_cn": "“我们仍有大把大把塞满聪明人的车库,”她说,“这个行业一向靠一种愉快的无政府状态蓬勃发展。”新来者同样重要。来自世界各地的工程师如今已占硅谷员工的很大一部分,其中许多人能借助家乡的习俗和语言,与遥远的市场缔结更牢的纽带。" },
+    { "seq": 5, "speaker": null, "text_en": "One young innovator, trained at a local university, has already set up a small factory abroad to challenge an old giant's grip on the memory-chip business. Before it ever settles into a quiet retirement, Silicon Valley may yet prove a classroom for building companies that reach around the globe.", "text_cn": "一位在本地大学受训的年轻创新者,已在海外办起一家小厂,去挑战某老牌巨头在存储芯片市场上的把持。在真正安顿成一座宁静的“退休村”之前,硅谷或许还会证明自己是一所培养全球化企业的学校。" }
+  ],
+  "words": [
+    { "word": "silicon", "ipa": "/ˈsɪlɪkən/", "pos": "n", "meaning_cn": "硅", "example": "Silicon Valley" },
+    { "word": "workstation", "ipa": "/ˈwɜːrksteɪʃən/", "pos": "n", "meaning_cn": "工作站", "example": "workstations that let an engineer design a chip" },
+    { "word": "chip", "ipa": "/tʃɪp/", "pos": "n", "meaning_cn": "芯片,集成电路块", "example": "to make a chip in a few days" },
+    { "word": "newsletter", "ipa": "/ˈnuːzletər/", "pos": "n", "meaning_cn": "简讯,通讯", "example": "lays out a newsletter on a laptop" },
+    { "word": "penalize", "ipa": "/ˈpiːnəlaɪz/", "pos": "v", "meaning_cn": "处罚,使不利", "example": "without being penalized for failure" },
+    { "word": "spawn", "ipa": "/spɔːn/", "pos": "v", "meaning_cn": "引发,催生", "example": "spawning a fresh generation of start-ups" },
+    { "word": "thrive", "ipa": "/θraɪv/", "pos": "v", "meaning_cn": "兴旺,蓬勃发展", "example": "thrived on a kind of cheerful anarchy" },
+    { "word": "anarchy", "ipa": "/ˈænərki/", "pos": "n", "meaning_cn": "无政府状态,混乱", "example": "a kind of cheerful anarchy" },
+    { "word": "innovator", "ipa": "/ˈɪnəveɪtər/", "pos": "n", "meaning_cn": "革新者,创新者", "example": "one young innovator set up a factory" },
+    { "word": "forge", "ipa": "/fɔːrdʒ/", "pos": "v", "meaning_cn": "打造,缔结", "example": "to forge stronger links with markets" },
+    { "word": "memory-chip", "ipa": "/ˈmeməri tʃɪp/", "pos": "n", "meaning_cn": "存储芯片", "example": "the memory-chip business" },
+    { "word": "customize", "ipa": "/ˈkʌstəmaɪz/", "pos": "v", "meaning_cn": "定制,按需制作", "example": "design, test, and customize a chip" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "情态动词表推测/可能(may/can)" },
+    { "gp": "gp2", "name": "there be + 定语从句 + enable/let sb do" },
+    { "gp": "gp3", "name": "without + 动名词(含被动 being done)" },
+    { "gp": "gp4", "name": "As 引导‘随着…’的从句" },
+    { "gp": "gp5", "name": "现在分词作结果/伴随状语(spawning/giving)" },
+    { "gp": "gp6", "name": "词汇辨析(chip/thrive/anarchy)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The next wave ___ carry the Valley back to its roots.\"(表‘可能、也许’的情态词)", "stem_cn": "下一波浪潮可能把硅谷带回它的根源。", "options": ["may", "must", "need", "dare"] },
+    { "gp": "gp1", "stem": "\"Many engineers ___ draw on their home languages.\"(表‘能够’的情态词)", "stem_cn": "许多工程师能借助家乡的语言。", "options": ["can", "must", "should", "ought"] },
+    { "gp": "gp1", "stem": "\"Silicon Valley ___ yet prove a great classroom.\"(表‘可能仍会’,填情态词)", "stem_cn": "硅谷或许还会证明自己是一所了不起的学校。", "options": ["may", "need", "dare", "used"] },
+    { "gp": "gp2", "stem": "\"There are workstations ___ let engineers make chips at their desks.\"(定语从句,指物作主语)", "stem_cn": "如今有工作站可让工程师在自己桌上造芯片。", "options": ["that", "who", "what", "whose"] },
+    { "gp": "gp2", "stem": "\"The new tools ___ engineers to test a chip in days.\"(‘使某人能够做…’,填这个使役动词)", "stem_cn": "新工具使工程师能在几天内测试一枚芯片。", "options": ["enable", "prevent", "forbid", "refuse"] },
+    { "gp": "gp2", "stem": "\"A workstation lets one engineer ___ a chip alone.\"(let sb do,填动词原形)", "stem_cn": "工作站让一名工程师独自设计芯片。", "options": ["design", "designs", "designing", "to design"] },
+    { "gp": "gp3", "stem": "\"Engineers can experiment without ___ penalized for failure.\"(without + ___ + 过去分词表被动,填中间的词)", "stem_cn": "工程师可以放手试验而不因失败受罚。", "options": ["being", "be", "been", "to be"] },
+    { "gp": "gp3", "stem": "\"He left without ___ a word to anyone.\"(without + 动名词,填 -ing 形式)", "stem_cn": "他一句话没说就走了。", "options": ["saying", "said", "say", "to say"] },
+    { "gp": "gp3", "stem": "\"The chip was improved without ___ much money.\"(without + 动名词,填 -ing 形式)", "stem_cn": "这枚芯片没花多少钱就得到了改进。", "options": ["costing", "cost", "costs", "to cost"] },
+    { "gp": "gp4", "stem": "\"___ the cost of a chip falls, engineers grow bolder.\"(‘随着…’,填连词)", "stem_cn": "随着芯片成本下降,工程师变得更大胆。", "options": ["As", "If", "Unless", "Though"] },
+    { "gp": "gp4", "stem": "\"___ time goes on, the Valley keeps reinventing itself.\"(‘随着时间推移’,填连词)", "stem_cn": "随着时间推移,硅谷不断自我重塑。", "options": ["As", "Because", "Before", "Whether"] },
+    { "gp": "gp4", "stem": "\"Costs drop ___ the technology improves.\"(‘随着…’,填连词)", "stem_cn": "随着技术进步,成本随之下降。", "options": ["as", "until", "unless", "although"] },
+    { "gp": "gp5", "stem": "\"Inventors perfect chips fast, ___ a wave of start-ups.\"(现在分词作结果状语,主动‘催生’)", "stem_cn": "发明者迅速完善芯片,催生了一波创业潮。", "options": ["spawning", "spawned", "spawn", "to spawn"] },
+    { "gp": "gp5", "stem": "\"The new speed helps them, ___ the country a real lead.\"(现在分词作结果状语,主动‘给予’)", "stem_cn": "新的速度帮了他们,给了这个国家实实在在的领先。", "options": ["giving", "given", "give", "to give"] },
+    { "gp": "gp5", "stem": "\"They share their skills, ___ links with distant markets.\"(现在分词作结果状语,主动‘建立’)", "stem_cn": "他们分享技能,与遥远的市场建立起联系。", "options": ["forging", "forged", "forge", "to forge"] },
+    { "gp": "gp6", "stem": "\"A small piece of silicon holding a circuit is a ___.\"(“芯片”用哪个词)", "stem_cn": "承载电路的一小片硅。", "options": ["chip", "brick", "coin", "leaf"] },
+    { "gp": "gp6", "stem": "\"When a business grows well and succeeds, it ___.\"(“兴旺、蓬勃发展”用哪个词)", "stem_cn": "生意红火、蓬勃发展。", "options": ["thrives", "fails", "closes", "shrinks"] },
+    { "gp": "gp6", "stem": "\"A state with no government or order is in ___.\"(“无政府、混乱”用哪个词)", "stem_cn": "没有政府或秩序的状态。", "options": ["anarchy", "harmony", "order", "peace"] }
+  ],
+  "stage6": [
+    { "stem": "silicon 的意思是:", "options": ["硅", "铁", "金", "铜"] },
+    { "stem": "thrive 的意思是:", "options": ["兴旺,繁荣", "衰败", "停止", "隐藏"] },
+    { "stem": "anarchy 的意思是:", "options": ["无政府状态,混乱", "秩序", "和平", "法律"] },
+    { "stem": "innovator 的意思是:", "options": ["革新者,创新者", "追随者", "破坏者", "旁观者"] },
+    { "stem": "forge 的意思是:", "options": ["打造,建立", "摧毁", "丢失", "隐藏"] },
+    { "stem": "spawn 的意思是:", "options": ["引发,催生", "结束", "减少", "推迟"] }
+  ],
+  "contrast": [
+    { "us": "customize", "uk": "customise", "note_cn": "定制;拼写差异,美语 -ize" },
+    { "us": "analog", "uk": "analogue", "note_cn": "模拟(信号);拼写差异,美语 analog" },
+    { "us": "program", "uk": "programme", "note_cn": "程序/节目;美语一律 program" },
+    { "us": "fiber", "uk": "fibre", "note_cn": "纤维;拼写差异,美语 fiber" }
+  ],
+  "chunks": [
+    { "us": "draw on", "ipa": "/drɔː ɑːn/", "example1": "Engineers draw on their home languages.", "example1_cn": "工程师借助家乡的语言。", "example2": "She drew on years of experience.", "example2_cn": "她凭借多年的经验。" },
+    { "us": "make up", "ipa": "/meɪk ʌp/", "example1": "Immigrant engineers make up a large share of the staff.", "example1_cn": "移民工程师占员工的很大一部分。", "example2": "Women make up half the class.", "example2_cn": "女生占全班的一半。" },
+    { "us": "thrive on", "ipa": "/θraɪv ɑːn/", "example1": "The industry thrives on anarchy.", "example1_cn": "这个行业靠无政府状态蓬勃发展。", "example2": "She thrives on a challenge.", "example2_cn": "她越有挑战越来劲。" },
+    { "us": "set up", "ipa": "/set ʌp/", "example1": "She set up a small factory abroad.", "example1_cn": "她在海外办起一家小厂。", "example2": "They set up a new company.", "example2_cn": "他们创办了一家新公司。" }
+  ],
+  "stage7_cloze": {
+    "context": "There are workstations ___1___ let engineers make chips at their desks. ___2___ the cost falls, they grow bolder and can experiment without ___3___ penalized. Inventors perfect designs fast, ___4___ many new start-ups.",
+    "blanks": [
+      { "blank_no": 1, "options": ["that", "who", "what", "whose"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["As", "If", "Unless", "Though"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["being", "be", "been", "to be"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["spawning", "spawned", "spawn", "to spawn"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "According to the talk, what does the computer industry thrive on?", "options": ["A kind of cheerful anarchy and clever people in garages", "Strict rules and central planning", "Cheap foreign labor only", "Government control"] },
+    { "stem": "What do the new workstations let a single engineer do?", "options": ["Design, test, and produce a chip at her own desk", "Only send email", "Manage a whole factory by hand", "Replace all software"] },
+    { "stem": "Why may engineers soon feel free to experiment?", "options": ["Making a chip will cost little time and money", "The government will pay them", "Failure will be forbidden", "Chips will no longer be needed"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"下一波浪潮可能把硅谷带回它的根源\"(情态词表可能):", "options": ["The next wave may carry the Valley back to its roots.", "The next wave may carries the Valley back to its roots.", "The next wave may to carry the Valley back to its roots.", "The next wave carry may the Valley back to its roots."] },
+    { "stem": "你想说\"工程师可以放手试验而不因失败受罚\"(without + 动名词被动):", "options": ["Engineers can experiment without being penalized for failure.", "Engineers can experiment without be penalized for failure.", "Engineers can experiment without penalized for failure.", "Engineers can experiment without being penalize for failure."] },
+    { "stem": "你想说\"随着芯片成本下降,工程师变得更大胆\"(As 随着):", "options": ["As the cost of a chip falls, engineers grow bolder.", "As the cost of a chip fall, engineers grow bolder.", "While the cost of a chip falls, engineers grows bolder.", "As the cost of a chip falls, engineers growing bolder."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "silicon 的意思是:", "options": ["硅", "铁", "金", "铜"] },
+    { "kind": "vocab", "stem": "anarchy 的意思是:", "options": ["无政府状态,混乱", "秩序", "和平", "法律"] },
+    { "kind": "grammar", "stem": "\"The next wave ___ carry the Valley back to its roots.\"(情态词表‘可能’)", "stem_cn": "下一波浪潮可能把硅谷带回它的根源。", "options": ["may", "need", "dare", "used"] },
+    { "kind": "grammar", "stem": "\"Engineers can experiment without ___ penalized.\"(without + ___ + 过去分词)", "stem_cn": "工程师可以放手试验而不受罚。", "options": ["being", "be", "been", "to be"] },
+    { "kind": "scenario", "stem": "\"thrive on\" 的意思是:", "options": ["靠…蓬勃发展、以…为动力", "讨厌", "逃离", "忽视"] },
+    { "kind": "scenario", "stem": "\"draw on\" 的意思是:", "options": ["利用、借助", "丢弃", "拒绝", "睡着"] },
+    { "kind": "reading", "stem": "What do the new workstations allow a single engineer to do?", "options": ["Design, test, and customize a chip at one desk", "Only print newsletters", "Run the entire company alone", "Replace every other worker"], "passage": true },
+    { "kind": "reading", "stem": "Why might inventors soon experiment more boldly?", "options": ["Making a chip will take little time and money", "The government will fund every idea", "Failures will be banned by law", "Chips will become unnecessary"], "passage": true },
+    { "kind": "listening", "stem": "What does the industry thrive on, in Dr. Ross's view?", "options": ["A cheerful sort of anarchy", "Strict central control", "Foreign tariffs", "Slow careful planning"], "audio": true },
+    { "kind": "listening", "stem": "What advantage do globally born engineers bring?", "options": ["They forge links with distant markets through their languages and customs", "They work for free", "They avoid all new technology", "They dislike start-ups"], "audio": true }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "am2_l51",
+  "unit_no": 7,
+  "lesson_no": 51,
+  "title_en": "Reward for virtue",
+  "title_cn": "对美德的奖赏",
+  "grammar_focus": "KS27 一般过去时表示过去发生的动作(不规则过去式 got/began/wrote/paid/rang/led/hid + 过去被动 was sent/was burnt)(教材 L51 Key structures)主考;SD27 易混动词 raise/rise、lay/lie、beat/win + so…that 结果、go on a diet、as…as ever(辅考·课文)",
+  "scene": "我的朋友休一直很胖,但是近来情况变得越发糟糕,以致他决定节食。他是一星期前开始节食的。首先,他开列了一张长长的单子,上面列了所有禁吃的食物。这张单子上的大多数食物都是休喜欢吃的:黄油、土豆、米饭、啤酒、牛奶、巧克力和糖果。昨天我去看望了他。我按响了门铃,当看到休仍和往常一样胖时,我并不感到惊奇。他把我领进屋,慌忙把一个大包藏到了桌子下面。显然他感到很尴尬。当我问他正干什么时,他内疚地笑了,然后把那个大包拿到了桌上。他解释说,他的饮食控制得太严格了,以致不得不偶尔奖赏自己一下。接着他给我看了包里的东西。里面装了 5 大块巧克力和 3 袋糖果!",
+  "grammar_card": {
+    "title": "一般过去时 · 表示过去发生的动作",
+    "intro": "KS27:表示过去发生的动作用一般过去时(What happened?)。要熟练掌握不规则动词的过去式(get→got、begin→began、write→wrote、pay→paid、ring→rang、lead→led、hide→hid…)。过去发生的被动用 was/were + 过去分词(was sent、was burnt)。",
+    "table": {
+      "headers": ["动词(原形→过去)", "例子"],
+      "rows": [
+        ["get → got(变得)", "Things got so bad."],
+        ["begin → began(开始)", "He began his diet a week ago."],
+        ["pay → paid(付/给)", "Yesterday I paid him a visit."],
+        ["ring → rang(按铃)", "I rang the bell."],
+        ["过去被动 was + 过去分词", "The magazine was sent to the wrong address."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "SD27 易混动词:raise(vt 举起/提高,raised)↔ rise(vi 上升/起床,rose/risen);lay(vt 放置,laid)↔ lie(vi 躺,lay/lain);beat(战胜某人/队)↔ win(赢得比赛/奖)。", "mark": "SD27 易混动词" },
+      { "rule": "so + 形容词 + that 从句表'如此…以致…':His diet was so strict that he had to reward himself.", "mark": "so...that 结果" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did Hugh's diet not work?",
+    "options": ["Because it was so strict that he rewarded himself with chocolate and candy", "Because he was ill", "Because he had no time to cook", "Because his friend gave him food"],
+    "answer_index": 0
+  },
+  "passage": "My friend, Hugh, has always been fat, but things got so bad recently that he decided to go on a diet. He began his diet a week ago. First of all, he wrote out a long list of all the foods which were forbidden. The list included most of the things Hugh loves: butter, potatoes, rice, beer, milk, chocolate, and candy. Yesterday I paid him a visit. I rang the bell and was not surprised to see that Hugh was still as fat as ever. He led me into his room and hurriedly hid a large parcel under his desk. It was obvious that he was very embarrassed. When I asked him what he was doing, he smiled guiltily and then put the parcel on the desk. He explained that his diet was so strict that he had to reward himself occasionally. Then he showed me the contents of the parcel. It contained five large bars of chocolate and three bags of candy!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "My friend, Hugh, has always been fat, but things got so bad recently that he decided to go on a diet.", "text_cn": "我的朋友休一直很胖,但近来情况变得越发糟糕,以致他决定节食。" },
+    { "seq": 2, "speaker": null, "text_en": "He began his diet a week ago. First of all, he wrote out a long list of all the foods which were forbidden.", "text_cn": "他一星期前开始节食。首先,他开列了一张长单子,上面列了所有禁吃的食物。" },
+    { "seq": 3, "speaker": null, "text_en": "The list included most of the things Hugh loves: butter, potatoes, rice, beer, milk, chocolate, and candy.", "text_cn": "这张单子上的大多数食物都是休喜欢吃的:黄油、土豆、米饭、啤酒、牛奶、巧克力和糖果。" },
+    { "seq": 4, "speaker": null, "text_en": "Yesterday I paid him a visit. I rang the bell and was not surprised to see that Hugh was still as fat as ever.", "text_cn": "昨天我去看望了他。我按响门铃,看到休仍和往常一样胖,并不感到惊奇。" },
+    { "seq": 5, "speaker": null, "text_en": "He led me into his room and hurriedly hid a large parcel under his desk. It was obvious that he was very embarrassed.", "text_cn": "他把我领进屋,慌忙把一个大包藏到桌子下面。显然他感到很尴尬。" },
+    { "seq": 6, "speaker": null, "text_en": "When I asked him what he was doing, he smiled guiltily and then put the parcel on the desk.", "text_cn": "当我问他正干什么时,他内疚地笑了,然后把那个大包拿到桌上。" },
+    { "seq": 7, "speaker": null, "text_en": "He explained that his diet was so strict that he had to reward himself occasionally.", "text_cn": "他解释说,他的饮食控制得太严格,以致不得不偶尔奖赏自己一下。" },
+    { "seq": 8, "speaker": null, "text_en": "Then he showed me the contents of the parcel. It contained five large bars of chocolate and three bags of candy!", "text_cn": "接着他给我看了包里的东西。里面装了 5 大块巧克力和 3 袋糖果!" }
+  ],
+  "words": [
+    { "word": "reward", "ipa": "/rɪˈwɔːrd/", "pos": "n/v", "meaning_cn": "报偿;给奖赏", "example": "reward himself occasionally" },
+    { "word": "virtue", "ipa": "/ˈvɜːrtʃuː/", "pos": "n", "meaning_cn": "美德,优点", "example": "Reward for virtue" },
+    { "word": "diet", "ipa": "/ˈdaɪət/", "pos": "n", "meaning_cn": "节食;日常饮食", "example": "go on a diet" },
+    { "word": "forbid", "ipa": "/fərˈbɪd/", "pos": "v", "meaning_cn": "禁止(forbade, forbidden)", "example": "the foods which were forbidden" },
+    { "word": "hurriedly", "ipa": "/ˈhɜːridli/", "pos": "adv", "meaning_cn": "匆忙地", "example": "hurriedly hid a large parcel" },
+    { "word": "embarrass", "ipa": "/ɪmˈbærəs/", "pos": "v", "meaning_cn": "使尴尬", "example": "he was very embarrassed" },
+    { "word": "guiltily", "ipa": "/ˈɡɪltɪli/", "pos": "adv", "meaning_cn": "内疚地", "example": "he smiled guiltily" },
+    { "word": "strict", "ipa": "/strɪkt/", "pos": "adj", "meaning_cn": "严格的", "example": "his diet was so strict" },
+    { "word": "occasionally", "ipa": "/əˈkeɪʒənəli/", "pos": "adv", "meaning_cn": "偶尔地", "example": "reward himself occasionally" },
+    { "word": "parcel", "ipa": "/ˈpɑːrsl/", "pos": "n", "meaning_cn": "包裹", "example": "hid a large parcel" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般过去时(不规则过去式)" },
+    { "gp": "gp2", "name": "过去被动(was/were + 过去分词)" },
+    { "gp": "gp3", "name": "raise / rise 辨析(SD27)" },
+    { "gp": "gp4", "name": "lay / lie 辨析(SD27)" },
+    { "gp": "gp5", "name": "beat / win 辨析(SD27)" },
+    { "gp": "gp6", "name": "so…that 结果 / go on a diet(辅考·课文)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Things ___ so bad that he decided to go on a diet.\"(get 的过去式)", "stem_cn": "情况变得如此糟糕,以致他决定节食。", "options": ["got", "get", "gets", "getting"] },
+    { "gp": "gp1", "stem": "\"He ___ his diet a week ago.\"(begin 的过去式)", "stem_cn": "他一星期前开始节食。", "options": ["began", "begins", "begin", "beginned"] },
+    { "gp": "gp1", "stem": "\"He ___ out a long list of forbidden foods.\"(write 的过去式)", "stem_cn": "他列出一张禁吃食物的长单子。", "options": ["wrote", "writed", "writes", "written"] },
+    { "gp": "gp1", "stem": "\"Yesterday I ___ him a visit.\"(pay 的过去式)", "stem_cn": "昨天我去拜访了他。", "options": ["paid", "payed", "pay", "pays"] },
+    { "gp": "gp1", "stem": "\"I ___ the bell and waited.\"(ring 的过去式)", "stem_cn": "我按了门铃等着。", "options": ["rang", "ringed", "rings", "rung"] },
+    { "gp": "gp1", "stem": "\"He ___ me into his room.\"(lead 的过去式)", "stem_cn": "他把我领进他的房间。", "options": ["led", "leaded", "leads", "lead"] },
+    { "gp": "gp2", "stem": "\"The magazine I ordered ___ to the wrong address.\"(过去被动:was + 过去分词)", "stem_cn": "我订的杂志被送错了地址。", "options": ["was sent", "sent", "was send", "is sent"] },
+    { "gp": "gp2", "stem": "\"A large factory ___ to the ground last year.\"(过去被动:被烧毁)", "stem_cn": "去年一家大工厂被烧毁了。", "options": ["was burnt", "burnt", "was burn", "is burnt"] },
+    { "gp": "gp3", "stem": "\"That boy always ___ his hand when I ask a question.\"(及物动词'举起、抬起')", "stem_cn": "我提问时,那个男孩总举手。", "options": ["raises", "rises", "raise", "rose"] },
+    { "gp": "gp3", "stem": "\"The sun ___ in the east.\"(不及物动词'升起')", "stem_cn": "太阳从东方升起。", "options": ["rises", "raises", "rose", "raise"] },
+    { "gp": "gp3", "stem": "\"I always ___ at six o'clock.\"(不及物动词'起床')", "stem_cn": "我总是六点钟起床。", "options": ["rise", "raise", "rose", "raised"] },
+    { "gp": "gp4", "stem": "\"Please ___ those parcels on the floor.\"(及物动词'放置、搁'某物)", "stem_cn": "请把那些包裹放在地板上。", "options": ["lay", "lie", "lies", "lied"] },
+    { "gp": "gp4", "stem": "\"It's nicer to ___ in bed on a cold morning.\"(不及物动词'躺')", "stem_cn": "冷天早上躺在床上更舒服。", "options": ["lie", "lay", "lays", "laid"] },
+    { "gp": "gp4", "stem": "\"Where's my book? I ___ it on the shelf a moment ago.\"(刚才把某物'放好',用'放置'的过去式)", "stem_cn": "我的书呢?我刚把它放在架子上了。", "options": ["laid", "lay", "lied", "lain"] },
+    { "gp": "gp5", "stem": "\"Arsenal ___ Manchester United last Saturday.\"(战胜某人/某队,后接对手)", "stem_cn": "上周六阿森纳队战胜了曼联队。", "options": ["beat", "won", "win", "beated"] },
+    { "gp": "gp5", "stem": "\"Arsenal ___ the game.\"(赢得比赛/奖品,后接比赛或奖)", "stem_cn": "阿森纳队赢了这场比赛。", "options": ["won", "beat", "win", "winned"] },
+    { "gp": "gp6", "stem": "\"Things got ___ bad that he decided to go on a diet.\"(如此…以致…)", "stem_cn": "情况变得如此糟糕,以致他决定节食。", "options": ["so", "such", "very", "too"] },
+    { "gp": "gp6", "stem": "\"He decided to go ___ a diet.\"(实行节食的固定搭配)", "stem_cn": "他决定实行节食。", "options": ["on", "in", "at", "for"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"糖果\"常说:", "options": ["candy", "sweets", "lollies", "confection"] },
+    { "stem": "美语里\"(甜)饼干\"常说:", "options": ["cookie", "biscuit", "cracker cake", "tea biscuit"] },
+    { "stem": "virtue 的意思是:", "options": ["美德,优点", "恶习", "习惯", "礼貌"] },
+    { "stem": "diet 的意思是:", "options": ["节食;日常饮食", "锻炼", "睡眠", "药物"] },
+    { "stem": "strict 的意思是:", "options": ["严格的", "宽松的", "礼貌的", "懒惰的"] },
+    { "stem": "occasionally 的意思是:", "options": ["偶尔地", "从不", "经常地", "立刻"] }
+  ],
+  "contrast": [
+    { "us": "candy", "uk": "sweets", "note_cn": "糖果;美语 candy,英式 sweets" },
+    { "us": "cookie", "uk": "biscuit", "note_cn": "(甜)饼干;美语 cookie,英式 biscuit" },
+    { "us": "potato chips", "uk": "crisps", "note_cn": "薯片;美语 potato chips,英式 crisps(英式 chips=薯条)" },
+    { "us": "dessert", "uk": "pudding", "note_cn": "餐后甜点;美语 dessert,英式常说 pudding" }
+  ],
+  "chunks": [
+    { "us": "go on a diet", "ipa": "/ɡoʊ ɑːn ə ˈdaɪət/", "example1": "He decided to go on a diet.", "example1_cn": "他决定节食。", "example2": "I've been on a diet for a week.", "example2_cn": "我节食一周了。" },
+    { "us": "as ... as ever", "ipa": "/æz ... æz ˈevər/", "example1": "Hugh was still as fat as ever.", "example1_cn": "休还是像往常一样胖。", "example2": "She looks as young as ever.", "example2_cn": "她看起来还是那么年轻。" },
+    { "us": "so ... that", "ipa": "/soʊ ... ðæt/", "example1": "His diet was so strict that he cheated.", "example1_cn": "他的节食太严格,以致偷吃。", "example2": "It was so cold that the lake froze.", "example2_cn": "天太冷,湖都结冰了。" },
+    { "us": "pay sb a visit", "ipa": "/peɪ ... ə ˈvɪzɪt/", "example1": "Yesterday I paid him a visit.", "example1_cn": "昨天我拜访了他。", "example2": "We'll pay you a visit soon.", "example2_cn": "我们很快去看你。" }
+  ],
+  "stage7_cloze": {
+    "context": "My friend Hugh got so fat that he decided to go on a diet. Yesterday I ___1___ him a visit. I ___2___ the bell. Hugh ___3___ me into his room and ___4___ a large parcel under his desk.",
+    "blanks": [
+      { "blank_no": 1, "options": ["paid", "payed", "pay", "pays"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["rang", "ringed", "rung", "rings"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["led", "leaded", "lead", "leads"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["hid", "hided", "hide", "hidden"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did Hugh decide to go on a diet?", "options": ["He had always been fat and things got so bad", "His doctor ordered it", "He wanted to save money", "His friend told him to"] },
+    { "stem": "What did Hugh hide under his desk?", "options": ["A large parcel of chocolate and candy", "His diet list", "A magazine", "His homework"] },
+    { "stem": "Why did Hugh say he had to reward himself occasionally?", "options": ["His diet was so strict", "He had lost a lot of weight", "It was his birthday", "He had done a lot of work"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"昨天我去拜访了他\"(过去发生的动作用一般过去时):", "options": ["Yesterday I paid him a visit.", "Yesterday I pay him a visit.", "Yesterday I am paying him a visit.", "Yesterday I will pay him a visit."] },
+    { "stem": "你想说\"他的节食太严格了,以致他得偶尔奖赏自己\"(如此…以致…用 so...that):", "options": ["His diet was so strict that he had to reward himself.", "His diet was such strict that he had to reward himself.", "His diet was too strict that he had to reward himself.", "His diet was very strict that he had to reward himself."] },
+    { "stem": "你想说\"我提问时那个男孩总举手\"(举手用及物动词 raise):", "options": ["That boy always raises his hand when I ask a question.", "That boy always rises his hand when I ask a question.", "That boy always raise his hand when I ask a question.", "That boy always is raising his hand when I ask a question."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "virtue 的意思是:", "options": ["美德,优点", "恶习", "习惯", "礼貌"] },
+    { "kind": "vocab", "stem": "diet 的意思是:", "options": ["节食;日常饮食", "锻炼", "睡眠", "药物"] },
+    { "kind": "grammar", "stem": "\"Things ___ so bad that he decided to go on a diet.\"(get 的过去式)", "stem_cn": "情况变得如此糟糕,以致他决定节食。", "options": ["got", "get", "gets", "getting"] },
+    { "kind": "grammar", "stem": "\"The magazine I ordered ___ to the wrong address.\"(过去被动)", "stem_cn": "我订的杂志被送错了地址。", "options": ["was sent", "sent", "was send", "is sent"] },
+    { "kind": "scenario", "stem": "\"as fat as ever\" 这个短语的意思是:", "options": ["像以往一样胖", "比以前更胖了", "不再胖了", "从来不胖"] },
+    { "kind": "scenario", "stem": "\"go on a diet\" 这个短语的意思是:", "options": ["实行节食", "去度假", "去锻炼", "去看医生"] },
+    { "kind": "reading", "stem": "What foods were on Hugh's forbidden list?", "options": ["Most of the things he loves — butter, potatoes, rice, beer, milk, chocolate, candy", "Only vegetables", "Fast food only", "Nothing at all"], "passage": true },
+    { "kind": "reading", "stem": "Was Hugh thinner when the writer visited?", "options": ["No, he was still as fat as ever", "Yes, much thinner", "Yes, a little thinner", "The text doesn't say"], "passage": true },
+    { "kind": "listening", "stem": "What was in the parcel Hugh hid?", "options": ["Five bars of chocolate and three bags of candy", "Diet books", "New clothes", "A birthday cake"], "audio": true },
+    { "kind": "listening", "stem": "How did Hugh look when the writer caught him?", "options": ["Embarrassed, and he smiled guiltily", "Angry", "Proud", "Relaxed"], "audio": true }
+  ]
+}

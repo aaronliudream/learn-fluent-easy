@@ -1,0 +1,134 @@
+{
+  "id": "am4_l19",
+  "unit_no": 4,
+  "lesson_no": 19,
+  "title_en": "The Stuff of Dreams",
+  "title_cn": "梦之物质",
+  "grammar_focus": "whether … or not、although 引导的让步状语从句、过去分词短语作状语(People woken during…, said…)、过去完成进行时(had been dreaming)、what 引导的名词从句(what mattered was…)(NCE4 无 KS 页,考点由课文结构自取;IP:源为克里斯托弗·埃文斯《倾听者》文章,内容为‘睡眠功能·REM快速眼动·做梦’的科学事实,已用 100% 原创行文复述,真实人物 William Dement 已换泛称‘一位精神科医生’,无逐句改写;题材=睡眠与梦的科学·无害;美语化 behavior/color;第四册第19课·第四单元开工)",
+  "scene": "相当清楚的是,睡眠一定为我们做着什么;而既然我们一生有那么多时间在睡,这个“什么”多半很重要。人们已经就它究竟为何而存在思索了几千年,可有一项古怪的发现始终让这问题悬而不决:睡眠似乎并不单单是让身体休息的一种方式。那种能松弛肌肉的休息,只要安静地躺一会儿、甚至坐一会儿,一样能得到。身体自身的组织无论我们睡不睡都在自我修复、自我更新,而且事实上,它们在多多少少持续活动时状态最好;睡眠中甚至还会有一定量的活动,恰恰是为了不让肌肉变僵。如果睡眠不是为了让身体休息,那也许需要休息的是大脑?这听上去像个貌似合理的假设,却有两个事实挡在前头。第一,大脑的电活动可以通过把小电极贴到头皮上来记录;记录显示,睡眠中那活动的模式虽有变化,总量却并不下降。第二——这一点更有意思——若干年前,一位精神科医生描述了一件怪事:寻常的一夜睡眠里,会被一阵阵突如其来的眼球运动打断,有的缓慢飘移,有的急促跳动。在这样一阵眼动中被唤醒的人,几乎总说自己刚才在做梦;在别的时刻被唤醒,则说什么梦也没有。实验又更进一步。一组志愿者一连数晚,每当眼球开始转动就被打扰;另一组被打扰得同样频繁,却只在安静无眼动的睡眠里被打扰——结果第一组很快开始显出古怪的情绪与性格失调,第二组却几乎毫无影响。其中的含意十分惊人:要紧的并不是睡眠本身的丧失,而是做梦的丧失。",
+  "grammar_card": {
+    "title": "whether…or not / although 让步 / 过去分词作状语 / 过去完成进行时 / what 名词从句",
+    "intro": "①whether … or not:‘无论…与否’。②although 引导让步:Although the pattern changes, the total does not fall。③过去分词短语作状语:People woken during that phase said …。④过去完成进行时 had + been + doing:they had been dreaming。⑤what 引导名词从句:What mattered was not the sleep but the dreaming。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["whether…or not", "whether … or not", "whether we sleep or not"],
+        ["although 让步", "Although + 从句, 主句", "Although the pattern changes, …"],
+        ["过去分词状语", "过去分词短语, 主句", "Woken in that phase, they said …"],
+        ["过去完成进行", "had been + doing", "they had been dreaming"],
+        ["what 名词从句", "What … + 谓语", "What mattered was the dreaming"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "过去完成进行时 had + been + 现在分词,强调动作在过去某时之前一直进行。", "mark": "had been doing" },
+      { "rule": "although 引导让步从句时,主句前不再加 but(汉语‘虽然…但是…’,英语两者只用其一)。", "mark": "Although …, 主句(无 but)" },
+      { "rule": "美式拼写:behavior(行为,英式 behaviour)、color(颜色,英式 colour)。本课已按美语写。", "mark": "behavior / color" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is going on when a person experiences rapid eye-movements during sleep?",
+    "options": ["The person is dreaming", "The person is waking up", "The person is resting the muscles", "The person has stopped breathing"],
+    "answer_index": 0
+  },
+  "passage": "It is fairly clear that sleep must do something for us, and since we spend so much of our lives asleep, that something is probably important. There has been speculation for thousands of years about what it is for, yet one odd finding keeps the whole question alive: sleep does not seem to be simply a way of giving the body a rest. The kind of rest that loosens the muscles can be had just as well by lying, or even sitting, quietly for a while. The body's own tissues repair and renew themselves whether we sleep or not, and in fact they work best when they are kept more or less constantly in motion; a certain amount of movement even goes on during sleep, precisely to stop the muscles from growing stiff. If sleep is not there to rest the body, then perhaps it is the brain that needs the rest. This sounds like a plausible hypothesis, but two facts stand in its way. First, the electrical activity of the brain can be traced by fixing small electrodes to the scalp, and the record shows that, although the pattern of that activity changes during sleep, its total amount does not fall. Second — and this is the more interesting point — a psychiatrist some years ago described a strange thing: the ordinary night's sleep is punctuated by sudden bursts of eye movement, some of them slow and drifting, others quick and jerky. People woken during one of these bursts nearly always said they had been dreaming; woken at other moments, they reported nothing. When one group of volunteers was disturbed, night after night, every time their eyes began to move, while a second group was disturbed just as often but only during quiet, movement-free sleep, the first group soon began to show odd disorders of mood and personality, and the second seemed hardly affected at all. The implication was striking: what mattered was not the loss of sleep itself, but the loss of dreaming.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "It is fairly clear that sleep must do something for us, and since we spend so much of our lives asleep, that something is probably important. There has been speculation for thousands of years about what it is for, yet one odd finding keeps the whole question alive: sleep does not seem to be simply a way of giving the body a rest.", "text_cn": "相当清楚的是,睡眠一定为我们做着什么;而既然我们一生有那么多时间在睡,这个“什么”多半很重要。人们已经就它究竟为何而存在思索了几千年,可有一项古怪的发现始终让这问题悬而不决:睡眠似乎并不单单是让身体休息的一种方式。" },
+    { "seq": 2, "speaker": null, "text_en": "The kind of rest that loosens the muscles can be had just as well by lying, or even sitting, quietly for a while. The body's own tissues repair and renew themselves whether we sleep or not, and in fact they work best when they are kept more or less constantly in motion; a certain amount of movement even goes on during sleep, precisely to stop the muscles from growing stiff.", "text_cn": "那种能松弛肌肉的休息,只要安静地躺一会儿、甚至坐一会儿,一样能得到。身体自身的组织无论我们睡不睡都在自我修复、自我更新,而且事实上,它们在多多少少持续活动时状态最好;睡眠中甚至还会有一定量的活动,恰恰是为了不让肌肉变僵。" },
+    { "seq": 3, "speaker": null, "text_en": "If sleep is not there to rest the body, then perhaps it is the brain that needs the rest. This sounds like a plausible hypothesis, but two facts stand in its way. First, the electrical activity of the brain can be traced by fixing small electrodes to the scalp, and the record shows that, although the pattern of that activity changes during sleep, its total amount does not fall.", "text_cn": "如果睡眠不是为了让身体休息,那也许需要休息的是大脑?这听上去像个貌似合理的假设,却有两个事实挡在前头。第一,大脑的电活动可以通过把小电极贴到头皮上来记录;记录显示,睡眠中那活动的模式虽有变化,总量却并不下降。" },
+    { "seq": 4, "speaker": null, "text_en": "Second — and this is the more interesting point — a psychiatrist some years ago described a strange thing: the ordinary night's sleep is punctuated by sudden bursts of eye movement, some of them slow and drifting, others quick and jerky. People woken during one of these bursts nearly always said they had been dreaming; woken at other moments, they reported nothing.", "text_cn": "第二——这一点更有意思——若干年前,一位精神科医生描述了一件怪事:寻常的一夜睡眠里,会被一阵阵突如其来的眼球运动打断,有的缓慢飘移,有的急促跳动。在这样一阵眼动中被唤醒的人,几乎总说自己刚才在做梦;在别的时刻被唤醒,则说什么梦也没有。" },
+    { "seq": 5, "speaker": null, "text_en": "When one group of volunteers was disturbed, night after night, every time their eyes began to move, while a second group was disturbed just as often but only during quiet, movement-free sleep, the first group soon began to show odd disorders of mood and personality, and the second seemed hardly affected at all. The implication was striking: what mattered was not the loss of sleep itself, but the loss of dreaming.", "text_cn": "一组志愿者一连数晚,每当眼球开始转动就被打扰;另一组被打扰得同样频繁,却只在安静无眼动的睡眠里被打扰——结果第一组很快开始显出古怪的情绪与性格失调,第二组却几乎毫无影响。其中的含意十分惊人:要紧的并不是睡眠本身的丧失,而是做梦的丧失。" }
+  ],
+  "words": [
+    { "word": "speculation", "ipa": "/ˌspekjəˈleɪʃən/", "pos": "n", "meaning_cn": "思索,推测", "example": "there has been speculation for thousands of years" },
+    { "word": "odd", "ipa": "/ɑːd/", "pos": "adj", "meaning_cn": "古怪的,奇特的", "example": "one odd finding keeps the question alive" },
+    { "word": "tissue", "ipa": "/ˈtɪʃuː/", "pos": "n", "meaning_cn": "(生物)组织", "example": "the body's own tissues repair themselves" },
+    { "word": "plausible", "ipa": "/ˈplɔːzəbl/", "pos": "adj", "meaning_cn": "貌似合理的,可信的", "example": "a plausible hypothesis" },
+    { "word": "hypothesis", "ipa": "/haɪˈpɑːθəsɪs/", "pos": "n", "meaning_cn": "假设,假说", "example": "this sounds like a plausible hypothesis" },
+    { "word": "electrode", "ipa": "/ɪˈlektroʊd/", "pos": "n", "meaning_cn": "电极", "example": "by fixing small electrodes to the scalp" },
+    { "word": "scalp", "ipa": "/skælp/", "pos": "n", "meaning_cn": "头皮", "example": "fixing electrodes to the scalp" },
+    { "word": "psychiatrist", "ipa": "/saɪˈkaɪətrɪst/", "pos": "n", "meaning_cn": "精神科医生", "example": "a psychiatrist described a strange thing" },
+    { "word": "punctuate", "ipa": "/ˈpʌŋktʃueɪt/", "pos": "v", "meaning_cn": "不时打断,穿插", "example": "sleep is punctuated by bursts of eye movement" },
+    { "word": "jerky", "ipa": "/ˈdʒɜːrki/", "pos": "adj", "meaning_cn": "急动的,颠簸的", "example": "others quick and jerky" },
+    { "word": "disorder", "ipa": "/dɪsˈɔːrdər/", "pos": "n", "meaning_cn": "失调,紊乱", "example": "odd disorders of mood and personality" },
+    { "word": "implication", "ipa": "/ˌɪmplɪˈkeɪʃən/", "pos": "n", "meaning_cn": "含意,暗示", "example": "the implication was striking" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "whether … or not" },
+    { "gp": "gp2", "name": "although 引导的让步状语从句" },
+    { "gp": "gp3", "name": "过去分词短语作状语(Woken…, they said…)" },
+    { "gp": "gp4", "name": "过去完成进行时(had been doing)" },
+    { "gp": "gp5", "name": "what 引导的名词从句" },
+    { "gp": "gp6", "name": "词汇辨析(hypothesis/plausible/disorder)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The body repairs itself ___ we sleep or not.\"(‘无论…与否’,填连词)", "stem_cn": "无论我们睡不睡,身体都会自我修复。", "options": ["whether", "that", "if only", "unless"] },
+    { "gp": "gp1", "stem": "\"Sleep has a function ___ we understand it or not.\"(‘无论…与否’,填连词)", "stem_cn": "无论我们是否理解,睡眠都有其功能。", "options": ["whether", "though", "since", "because"] },
+    { "gp": "gp1", "stem": "\"They dreamed ___ or not they remembered it.\"(‘无论…与否’,与 or not 呼应的连词)", "stem_cn": "无论他们记不记得,他们都做了梦。", "options": ["whether", "that", "if", "unless"] },
+    { "gp": "gp2", "stem": "\"___ the pattern changes, the total activity does not fall.\"(‘尽管’,填让步连词)", "stem_cn": "尽管活动的模式变了,总量却没减少。", "options": ["Although", "Because", "Once", "Unless"] },
+    { "gp": "gp2", "stem": "\"The brain stays busy ___ the body lies still.\"(‘尽管、虽然’,填连词)", "stem_cn": "尽管身体躺着不动,大脑却依旧忙碌。", "options": ["although", "because", "once", "whether"] },
+    { "gp": "gp2", "stem": "\"___ sleep looks like rest, the brain is far from idle.\"(‘虽然’,填让步连词)", "stem_cn": "睡眠看着像休息,大脑却远非闲着。", "options": ["Although", "Since", "Unless", "Before"] },
+    { "gp": "gp3", "stem": "\"___ during eye-movement sleep, people usually reported dreams.\"(过去分词作状语,‘被唤醒时’;wake 的过去分词)", "stem_cn": "在眼动睡眠中被唤醒时,人们通常报告做了梦。", "options": ["Woken", "Waking", "Wake", "To wake"] },
+    { "gp": "gp3", "stem": "\"___ by a sudden noise, the sleeper lost the dream.\"(过去分词作状语,‘被…惊醒’;startle 的过去分词)", "stem_cn": "被一声突响惊醒,睡者忘了那个梦。", "options": ["Startled", "Startling", "Startle", "To startle"] },
+    { "gp": "gp3", "stem": "\"___ of dreaming for nights, the first group grew disturbed.\"(过去分词作状语,‘被剥夺…’;deprive 的过去分词)", "stem_cn": "一连数晚被剥夺做梦后,第一组变得烦乱。", "options": ["Deprived", "Depriving", "Deprive", "To deprive"] },
+    { "gp": "gp4", "stem": "\"People woken in that phase said they ___ been dreaming.\"(过去完成进行时:他们‘一直在做梦’,填第一个助动词)", "stem_cn": "在那个阶段被唤醒的人说他们刚才一直在做梦。", "options": ["had", "have", "has", "were"] },
+    { "gp": "gp4", "stem": "\"By the time we woke him, he ___ been dreaming for a while.\"(过去完成进行时,填第一个助动词)", "stem_cn": "我们叫醒他时,他已经做了好一会儿梦。", "options": ["had", "have", "has", "was"] },
+    { "gp": "gp4", "stem": "\"She realized she ___ been sleeping deeply until the alarm rang.\"(过去完成进行时,填第一个助动词)", "stem_cn": "她意识到闹钟响之前自己一直睡得很沉。", "options": ["had", "have", "has", "was"] },
+    { "gp": "gp5", "stem": "\"___ mattered was not the sleep but the dreaming.\"(名词从句作主语,‘所…的’)", "stem_cn": "要紧的不是睡眠,而是做梦。", "options": ["What", "That", "Which", "Whether"] },
+    { "gp": "gp5", "stem": "\"Scientists still debate ___ sleep is really for.\"(名词从句作宾语,‘…什么’)", "stem_cn": "科学家仍在争论睡眠究竟为了什么。", "options": ["what", "that", "which", "how"] },
+    { "gp": "gp5", "stem": "\"___ the brain does during dreams remains a puzzle.\"(名词从句作主语,‘…的事’)", "stem_cn": "大脑在做梦时究竟在干什么,仍是个谜。", "options": ["What", "That", "Which", "Whether"] },
+    { "gp": "gp6", "stem": "\"A careful guess offered to explain facts is a ___.\"(“假设、假说”用哪个词)", "stem_cn": "为解释事实而提出的谨慎猜测。", "options": ["hypothesis", "promise", "order", "receipt"] },
+    { "gp": "gp6", "stem": "\"A doctor who treats disorders of the mind is a ___.\"(“精神科医生”用哪个词)", "stem_cn": "治疗精神/心理疾病的医生。", "options": ["psychiatrist", "dentist", "farmer", "pilot"] },
+    { "gp": "gp6", "stem": "\"Reasonable and likely to be true is being ___.\"(“貌似合理的、可信的”用哪个词)", "stem_cn": "看起来合情合理、可信的。", "options": ["plausible", "false", "silent", "empty"] }
+  ],
+  "stage6": [
+    { "stem": "hypothesis 的意思是:", "options": ["假设,假说", "结论", "证据", "事实"] },
+    { "stem": "tissue 的意思是:", "options": ["(生物)组织", "骨骼", "血液", "皮肤"] },
+    { "stem": "plausible 的意思是:", "options": ["貌似合理的,可信的", "荒谬的", "沉默的", "空的"] },
+    { "stem": "disorder 的意思是:", "options": ["失调,紊乱", "秩序", "健康", "平静"] },
+    { "stem": "jerky 的意思是:", "options": ["急动的,颠簸的", "平稳的", "缓慢的", "柔软的"] },
+    { "stem": "implication 的意思是:", "options": ["含意,暗示", "命令", "礼物", "假期"] }
+  ],
+  "contrast": [
+    { "us": "behavior", "uk": "behaviour", "note_cn": "行为;拼写差异,美语 behavior" },
+    { "us": "color", "uk": "colour", "note_cn": "颜色;拼写差异,美语 color" },
+    { "us": "anesthetic", "uk": "anaesthetic", "note_cn": "麻醉剂;拼写差异,美语 anesthetic" },
+    { "us": "pediatric", "uk": "paediatric", "note_cn": "儿科的;拼写差异,美语 pediatric" }
+  ],
+  "chunks": [
+    { "us": "go on", "ipa": "/ɡoʊ ɑːn/", "example1": "Speculation about sleep has been going on for ages.", "example1_cn": "关于睡眠的思索已持续了很久。", "example2": "The noise went on all night.", "example2_cn": "那噪声响了一整夜。" },
+    { "us": "stand in the way", "ipa": "/stænd ɪn ðə weɪ/", "example1": "Two facts stand in its way.", "example1_cn": "有两个事实挡在前头。", "example2": "Nothing stands in the way of success.", "example2_cn": "没有什么能阻挡成功。" },
+    { "us": "night after night", "ipa": "/naɪt ˈæftər naɪt/", "example1": "They were disturbed night after night.", "example1_cn": "他们一夜又一夜地被打扰。", "example2": "He worked late night after night.", "example2_cn": "他夜复一夜地加班到很晚。" },
+    { "us": "not ... but", "ipa": "/nɑːt bʌt/", "example1": "What mattered was not the sleep but the dreaming.", "example1_cn": "要紧的不是睡眠,而是做梦。", "example2": "It was not luck but skill.", "example2_cn": "那不是运气,而是本事。" }
+  ],
+  "stage7_cloze": {
+    "context": "Sleep must have a function, ___1___ we understand it or not. ___2___ the brain's pattern changes in sleep, its total activity does not fall. People ___3___ during eye-movement sleep said they had been dreaming. ___4___ mattered was not the sleep but the dreaming.",
+    "blanks": [
+      { "blank_no": 1, "options": ["whether", "that", "if only", "unless"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["Although", "Because", "Once", "Unless"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["woken", "waking", "wake", "to wake"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["What", "That", "Which", "Whether"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What is going on when a person shows rapid eye-movements during sleep?", "options": ["The person is dreaming", "The person is waking up", "The person is in a coma", "The person is resting the muscles"] },
+    { "stem": "Why is sleep probably not just a way of resting the body?", "options": ["The body's tissues repair themselves whether we sleep or not", "The body never moves in sleep", "Sleep makes muscles weaker", "Rest is impossible while sitting"] },
+    { "stem": "What happened to volunteers who were kept from dreaming for several nights?", "options": ["They began to show disorders of mood and personality", "They felt completely fine", "They slept more deeply", "They stopped needing sleep"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"无论我们睡不睡,身体都会自我修复\"(whether … or not):", "options": ["The body repairs itself whether we sleep or not.", "The body repairs itself that we sleep or not.", "The body repairs itself whether we sleep or no.", "The body repairs itself if we sleep or not."] },
+    { "stem": "你想说\"尽管活动的模式变了,总量却没减少\"(although 让步):", "options": ["Although the pattern changes, the total activity does not fall.", "Although the pattern changes, but the total activity does not fall.", "Although the pattern change, the total activity does not fall.", "Despite the pattern changes, the total activity does not fall."] },
+    { "stem": "你想说\"被唤醒的人说他们刚才一直在做梦\"(过去完成进行时):", "options": ["The woken people said they had been dreaming.", "The woken people said they have been dreaming.", "The woken people said they had been dream.", "The woken people said they had being dreaming."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "hypothesis 的意思是:", "options": ["假设,假说", "结论", "证据", "事实"] },
+    { "kind": "vocab", "stem": "disorder 的意思是:", "options": ["失调,紊乱", "秩序", "健康", "平静"] },
+    { "kind": "grammar", "stem": "\"The body repairs itself ___ we sleep or not.\"(‘无论…与否’)", "stem_cn": "无论我们睡不睡,身体都会自我修复。", "options": ["whether", "that", "if only", "unless"] },
+    { "kind": "grammar", "stem": "\"___ the pattern changes, the total activity does not fall.\"(‘尽管’,让步连词)", "stem_cn": "尽管模式变了,总量却没减少。", "options": ["Although", "Because", "Once", "Unless"] },
+    { "kind": "scenario", "stem": "\"stand in the way\" 的意思是:", "options": ["阻碍、成为障碍", "让路", "排队", "站岗"] },
+    { "kind": "scenario", "stem": "\"night after night\" 的意思是:", "options": ["一夜又一夜、夜复一夜", "昨晚", "半夜", "通宵"] },
+    { "kind": "reading", "stem": "According to the passage, why isn't sleep simply about resting the body?", "options": ["The body's tissues repair themselves and work best when active", "The body needs no rest at all", "Sleep tires the body more", "Rest cannot be had by sitting"], "passage": true },
+    { "kind": "reading", "stem": "What did the experiment finally suggest was important?", "options": ["The dreaming, not the loss of sleep itself", "The total hours of sleep", "The comfort of the bed", "The time of night"], "passage": true },
+    { "kind": "listening", "stem": "What is a person usually doing during rapid eye-movement sleep?", "options": ["Dreaming", "Waking up", "Resting the muscles", "Talking aloud"], "audio": true },
+    { "kind": "listening", "stem": "How was the brain's electrical activity recorded?", "options": ["By fixing small electrodes to the scalp", "By taking blood samples", "By timing the breathing", "By measuring the heartbeat"], "audio": true }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "id": "am4_l33",
+  "unit_no": 6,
+  "lesson_no": 33,
+  "title_en": "Education",
+  "title_cn": "教育",
+  "grammar_focus": "名词性从句(what 主语从句 / that 同位语·宾语从句)、定语从句(in which / whose)、虚拟语气(important/suggest/insist that + 动词原形)、分词与动名词(Encouraged / about filling)、比较与强调(not so much A as B / It is … that)(NCE4 该课源在仓库残本 mobi 缺失、语法同步真题集只有动名词专题不复现课文;IP:L33《Education》按 Aaron 网页版原创承载包生产——主题=教育的真正目的在培养独立思考与好奇心而非灌输记忆(罗素论教育思想内核),100% 原创思辨议论文,无引用原句;题材=教育理念·健康无害;美语化 memorize/recognize/favor;第四册第33课·原创承载·回填 unit06)",
+  "scene": "真正的教育意味着什么,常被那些把它和死记硬背混为一谈的人所误解。以为单凭知识就能使人明智,是一个延续了数百年的错误。真正的教育与其说是往头脑里塞满事实,不如说是教会它思考。驱动真正学习的,是好奇心,而不是对考试不及格的恐惧。好的学校,是一所鼓励孩子自由提问、成为独立思考者的学校。一旦被鼓励去自己推理,学生培养出的便是智慧,而不仅仅是信息。这并不意味着纪律毫无位置;那种稳步而耐心的用功所体现的自律,本身就是教育所给予的一部分。重要的是,每个孩子都应被给予探索思想的自由,以及把这些思想追究到底的引导。一位以理解为真正目标的老师,在意的不是分数而是成长,他衡量成就,靠的不只是分数,而是一颗好奇心的被唤醒。教学真正的目的,不是填满头脑,而是打开它们。归根结底,我们记住了什么,远不及我们学会了怎样思考来得重要。",
+  "grammar_card": {
+    "title": "名词性从句(what·that) / 定语从句(in which·whose) / 虚拟语气(important that + 动词原形) / 分词与动名词 / 比较与强调(not so much A as B·It is…that)",
+    "intro": "①名词性从句:what 引导并在从句里作成分(What education means…);that 引导陈述,作主语/宾语/同位语(the belief that…)。②定语从句:‘介词 + 关系词’如 in which、of which;whose 表所属。③虚拟语气:在 important/essential/suggest/insist that 从句里,谓语用动词原形(be/do),表建议或要求。④非谓语:过去分词作状语(Encouraged…),动名词作介词宾语(about filling…)。⑤not so much A as B:‘与其说A不如说B’;It is … that … 强调句。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["名词性从句", "what / that 引导", "What education means; the belief that…"],
+        ["定语从句", "介词+关系词;whose", "a school in which…; a teacher whose goal…"],
+        ["虚拟语气", "important that + 动词原形(be/do)", "important that every child be encouraged"],
+        ["分词与动名词", "过去分词状语;动名词作宾语", "Encouraged to reason; about filling the mind"],
+        ["比较与强调", "not so much A as B;It is … that", "not so much facts as curiosity"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "important/essential/suggest/insist that 从句里,谓语用动词原形(be given、be encouraged),不随主语变化,也不用将来时。", "mark": "important that + 动词原形" },
+      { "rule": "not so much A as B 里连接 B 用 as,不用 than、but;A、B 结构要对称。", "mark": "not so much A as B" },
+      { "rule": "美式拼写:memorize / recognize / favor(英式 memorise / recognise / favour)。本课已按美语写。", "mark": "memorize / favor" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — According to the writer, what is real education mainly about?",
+    "options": ["Not so much filling the mind with facts as teaching it to think", "Memorizing as many facts as possible", "Passing every exam with top marks", "Obeying the teacher without question"],
+    "answer_index": 0
+  },
+  "passage": "What true education means is often misunderstood by those who confuse it with memorizing facts. The belief that knowledge alone makes a person wise is a mistake that has lasted for centuries. Real education is not so much about filling the mind as about teaching it to think. It is curiosity that drives genuine learning, not the fear of failing an exam. A good school is one in which children are encouraged to ask questions freely and to become independent thinkers. Encouraged to reason for themselves, students develop wisdom rather than just information. This does not mean that discipline has no place; the discipline of steady, patient work is itself part of what education gives. It is important that every child be given the freedom to explore ideas, and the guidance to follow them through. A teacher whose true goal is understanding cares less about grades than about growth, and measures achievement not by marks alone but by the awakening of a curious mind. The real purpose of teaching is not to fill minds, but to open them. In the end, what we remember matters far less than how we have learned to think.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "What true education means is often misunderstood by those who confuse it with memorizing facts. The belief that knowledge alone makes a person wise is a mistake that has lasted for centuries.", "text_cn": "真正的教育意味着什么,常被那些把它和死记硬背混为一谈的人所误解。以为单凭知识就能使人明智,是一个延续了数百年的错误。" },
+    { "seq": 2, "speaker": null, "text_en": "Real education is not so much about filling the mind as about teaching it to think. It is curiosity that drives genuine learning, not the fear of failing an exam.", "text_cn": "真正的教育与其说是往头脑里塞满事实,不如说是教会它思考。驱动真正学习的,是好奇心,而不是对考试不及格的恐惧。" },
+    { "seq": 3, "speaker": null, "text_en": "A good school is one in which children are encouraged to ask questions freely and to become independent thinkers. Encouraged to reason for themselves, students develop wisdom rather than just information.", "text_cn": "好的学校,是一所鼓励孩子自由提问、成为独立思考者的学校。一旦被鼓励去自己推理,学生培养出的便是智慧,而不仅仅是信息。" },
+    { "seq": 4, "speaker": null, "text_en": "This does not mean that discipline has no place; the discipline of steady, patient work is itself part of what education gives. It is important that every child be given the freedom to explore ideas, and the guidance to follow them through. A teacher whose true goal is understanding cares less about grades than about growth, and measures achievement not by marks alone but by the awakening of a curious mind.", "text_cn": "这并不意味着纪律毫无位置;那种稳步而耐心的用功所体现的自律,本身就是教育所给予的一部分。重要的是,每个孩子都应被给予探索思想的自由,以及把这些思想追究到底的引导。一位以理解为真正目标的老师,在意的不是分数而是成长,他衡量成就,靠的不只是分数,而是一颗好奇心的被唤醒。" },
+    { "seq": 5, "speaker": null, "text_en": "The real purpose of teaching is not to fill minds, but to open them. In the end, what we remember matters far less than how we have learned to think.", "text_cn": "教学真正的目的,不是填满头脑,而是打开它们。归根结底,我们记住了什么,远不及我们学会了怎样思考来得重要。" }
+  ],
+  "words": [
+    { "word": "education", "ipa": "/ˌedʒuˈkeɪʃn/", "pos": "n", "meaning_cn": "教育", "example": "what true education means is often misunderstood" },
+    { "word": "knowledge", "ipa": "/ˈnɑːlɪdʒ/", "pos": "n", "meaning_cn": "知识", "example": "the belief that knowledge alone makes us wise" },
+    { "word": "curiosity", "ipa": "/ˌkjʊriˈɑːsəti/", "pos": "n", "meaning_cn": "好奇心", "example": "it is curiosity that drives genuine learning" },
+    { "word": "encourage", "ipa": "/ɪnˈkɜːrɪdʒ/", "pos": "v", "meaning_cn": "鼓励", "example": "children are encouraged to ask questions freely" },
+    { "word": "independent", "ipa": "/ˌɪndɪˈpendənt/", "pos": "adj", "meaning_cn": "独立的", "example": "to become independent thinkers" },
+    { "word": "memorize", "ipa": "/ˈmeməraɪz/", "pos": "v", "meaning_cn": "记忆,背诵", "example": "confuse education with memorizing facts" },
+    { "word": "purpose", "ipa": "/ˈpɜːrpəs/", "pos": "n", "meaning_cn": "目的", "example": "the real purpose of teaching" },
+    { "word": "wisdom", "ipa": "/ˈwɪzdəm/", "pos": "n", "meaning_cn": "智慧", "example": "students develop wisdom rather than just information" },
+    { "word": "develop", "ipa": "/dɪˈveləp/", "pos": "v", "meaning_cn": "培养,发展", "example": "students develop wisdom" },
+    { "word": "genuine", "ipa": "/ˈdʒenjuɪn/", "pos": "adj", "meaning_cn": "真正的,真诚的", "example": "curiosity drives genuine learning" },
+    { "word": "discipline", "ipa": "/ˈdɪsəplɪn/", "pos": "n", "meaning_cn": "纪律;自律", "example": "the discipline of steady, patient work" },
+    { "word": "reason", "ipa": "/ˈriːzn/", "pos": "v", "meaning_cn": "推理,思考", "example": "encouraged to reason for themselves" },
+    { "word": "achievement", "ipa": "/əˈtʃiːvmənt/", "pos": "n", "meaning_cn": "成就", "example": "measures achievement not by marks alone" },
+    { "word": "mind", "ipa": "/maɪnd/", "pos": "n", "meaning_cn": "头脑,心智", "example": "the awakening of a curious mind" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "名词性从句(what·that)" },
+    { "gp": "gp2", "name": "定语从句(in which·whose)" },
+    { "gp": "gp3", "name": "虚拟语气(important that + 动词原形)" },
+    { "gp": "gp4", "name": "分词与动名词" },
+    { "gp": "gp5", "name": "比较与强调(not so much A as B·It is…that)" },
+    { "gp": "gp6", "name": "词汇辨析(curiosity/memorize/wisdom)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ true education means is often misunderstood.\"(名词性从句作主语,从句里缺宾语‘意味着什么’,填引导词)", "stem_cn": "真正的教育意味着什么,常被误解。", "options": ["What", "That", "Which", "Whether"] },
+    { "gp": "gp1", "stem": "\"The belief ___ knowledge alone makes us wise is a mistake.\"(同位语从句,补充说明 belief 的内容,填引导词)", "stem_cn": "认为单凭知识就能使人明智,是一种错误的看法。", "options": ["that", "which", "what", "whose"] },
+    { "gp": "gp1", "stem": "\"This does not mean ___ discipline has no place in learning.\"(宾语从句,作 mean 的宾语,填引导词)", "stem_cn": "这并不意味着纪律在学习中毫无位置。", "options": ["that", "what", "which", "whether"] },
+    { "gp": "gp2", "stem": "\"A good school is one ___ which children ask questions freely.\"(‘介词 + 关系词’,‘在其中’,填 which 前那个介词)", "stem_cn": "好学校是一所孩子们能自由提问的学校。", "options": ["in", "on", "at", "of"] },
+    { "gp": "gp2", "stem": "\"A teacher ___ true goal is understanding cares about growth.\"(定语从句,表‘其目标’的所属,填关系词)", "stem_cn": "一位以理解为真正目标的老师看重成长。", "options": ["whose", "who", "which", "that"] },
+    { "gp": "gp2", "stem": "\"It is a mistake ___ has lasted for centuries.\"(限定性定语从句,先行词指物、在从句里作主语,填关系词)", "stem_cn": "这是一个延续了数百年的错误。", "options": ["that", "who", "whom", "what"] },
+    { "gp": "gp3", "stem": "\"It is important that every child ___ given the freedom to explore.\"(important that 从句谓语用动词原形,这里是被动,填原形)", "stem_cn": "重要的是,每个孩子都应被给予探索的自由。", "options": ["be", "is", "was", "being"] },
+    { "gp": "gp3", "stem": "\"The teacher insisted that each student ___ for himself.\"(insist that 之后从句用动词原形,填‘思考’那个动词的原形)", "stem_cn": "老师坚持要求每个学生自己思考。", "options": ["think", "thinks", "thought", "thinking"] },
+    { "gp": "gp3", "stem": "\"It is essential that a young mind ___ encouraged, not crushed.\"(essential that 从句谓语用动词原形,这里是被动,填原形)", "stem_cn": "至关重要的是,一颗年轻的心智应受到鼓励,而非压制。", "options": ["be", "is", "was", "to be"] },
+    { "gp": "gp4", "stem": "\"___ to reason for themselves, students develop real wisdom.\"(过去分词作状语,表被动‘被鼓励’,填 encourage 的过去分词)", "stem_cn": "一旦被鼓励去自己推理,学生就培养出真正的智慧。", "options": ["Encouraged", "Encouraging", "Encourage", "To encourage"] },
+    { "gp": "gp4", "stem": "\"Real education is not about ___ the mind with facts.\"(介词 about 后接动名词,填 fill 的 -ing 形式)", "stem_cn": "真正的教育不在于往头脑里塞满事实。", "options": ["filling", "fill", "filled", "to fill"] },
+    { "gp": "gp4", "stem": "\"The purpose of ___ is to open minds, not to fill them.\"(介词 of 后接动名词作宾语,填 teach 的 -ing 形式)", "stem_cn": "教学的目的是打开头脑,而不是填满它们。", "options": ["teaching", "teach", "taught", "to teach"] },
+    { "gp": "gp5", "stem": "\"Education is not so much about facts ___ about curiosity.\"(‘与其说A不如说B’,填连接 B 的那个词)", "stem_cn": "教育与其说关乎事实,不如说关乎好奇心。", "options": ["as", "than", "but", "so"] },
+    { "gp": "gp5", "stem": "\"It is only through curiosity ___ real learning happens.\"(强调句 It is … ___ …,强调状语,填连接词)", "stem_cn": "正是通过好奇心,真正的学习才得以发生。", "options": ["that", "which", "what", "when"] },
+    { "gp": "gp5", "stem": "\"A good teacher cares less about grades ___ about growth.\"(‘less … ___ …’比较结构,填与 less 搭配的那个词)", "stem_cn": "好老师在意的不是分数,而是成长。", "options": ["than", "as", "then", "that"] },
+    { "gp": "gp6", "stem": "\"The natural desire to learn and know more is ___.\"(“好奇心”用哪个词)", "stem_cn": "想要学习、想要了解更多的天生渴望。", "options": ["curiosity", "currency", "courage", "courtesy"] },
+    { "gp": "gp6", "stem": "\"To learn something by heart, word for word, is to ___ it.\"(“记忆,背诵”用哪个词)", "stem_cn": "把某物一字不差地记在心里。", "options": ["memorize", "summarize", "recognize", "organize"] },
+    { "gp": "gp6", "stem": "\"The good judgment that comes from knowledge and experience is ___.\"(“智慧”用哪个词)", "stem_cn": "由知识和经验得来的良好判断力。", "options": ["wisdom", "freedom", "kingdom", "boredom"] }
+  ],
+  "stage6": [
+    { "stem": "education 的意思是:", "options": ["教育", "娱乐", "竞争", "惩罚"] },
+    { "stem": "knowledge 的意思是:", "options": ["知识", "无知", "猜测", "秘密"] },
+    { "stem": "curiosity 的意思是:", "options": ["好奇心", "冷漠", "恐惧", "懒惰"] },
+    { "stem": "encourage 的意思是:", "options": ["鼓励", "阻止", "强迫", "忽视"] },
+    { "stem": "wisdom 的意思是:", "options": ["智慧", "财富", "力量", "速度"] },
+    { "stem": "genuine 的意思是:", "options": ["真正的,真诚的", "虚假的", "昂贵的", "普通的"] }
+  ],
+  "contrast": [
+    { "us": "memorize", "uk": "memorise", "note_cn": "记忆,背诵;美语 memorize,英式 memorise" },
+    { "us": "recognize", "uk": "recognise", "note_cn": "承认,认出;美语 recognize,英式 recognise" },
+    { "us": "favor", "uk": "favour", "note_cn": "偏爱,赞成;美语 favor,英式 favour" },
+    { "us": "center", "uk": "centre", "note_cn": "中心;美语 center,英式 centre" }
+  ],
+  "chunks": [
+    { "us": "not so much A as B", "ipa": "/nɑːt soʊ mʌtʃ eɪ æz biː/", "example1": "Education is not so much about facts as about thinking.", "example1_cn": "教育与其说关乎事实,不如说关乎思考。", "example2": "He is not so much a teacher as a guide.", "example2_cn": "与其说他是老师,不如说他是引路人。" },
+    { "us": "learn by heart", "ipa": "/lɜːrn baɪ hɑːrt/", "example1": "Memorizing facts means learning them by heart.", "example1_cn": "死记硬背就是把事实一字不差地记住。", "example2": "She learned the whole poem by heart.", "example2_cn": "她把整首诗都背了下来。" },
+    { "us": "for oneself", "ipa": "/fər wʌnˈself/", "example1": "Students should learn to reason for themselves.", "example1_cn": "学生应学会自己去推理。", "example2": "You must decide this for yourself.", "example2_cn": "这件事你必须自己拿主意。" },
+    { "us": "in the end", "ipa": "/ɪn ðə end/", "example1": "In the end, how we think matters most.", "example1_cn": "归根结底,我们怎样思考最重要。", "example2": "In the end, they reached an agreement.", "example2_cn": "最后,他们达成了一致。" }
+  ],
+  "stage7_cloze": {
+    "context": "___1___ true education means is often misunderstood. It is not so much about filling the mind ___2___ about teaching it to think. A good school is one ___3___ which children are encouraged to ask questions. It is important that every child ___4___ given the freedom to explore ideas.",
+    "blanks": [
+      { "blank_no": 1, "options": ["What", "That", "Which", "Whether"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["as", "than", "but", "so"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["in", "on", "at", "of"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["be", "is", "was", "being"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "According to the writer, what is real education mainly about?", "options": ["Not so much about filling the mind with facts as about teaching it to think", "Memorizing as many facts as possible", "Passing every exam with the highest marks", "Copying exactly what the teacher says"] },
+    { "stem": "What does the writer say drives genuine learning?", "options": ["Curiosity, not the fear of failing an exam", "The fear of punishment", "The promise of a prize", "The wish to beat other students"] },
+    { "stem": "How does the writer say a good teacher measures a student's achievement?", "options": ["Not by grades alone, but by the awakening of a curious mind", "Only by the marks on an exam", "By how many facts the student can memorize", "By how quietly the student sits in class"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"真正的教育与其说是灌输知识,不如说是教人思考\"(not so much A as B):", "options": ["Real education is not so much about facts as about teaching people to think.", "Real education is not so much about facts than about teaching people to think.", "Real education is not so much about facts but about teaching people to think.", "Real education is so much not about facts as about teaching people to think."] },
+    { "stem": "你想说\"重要的是每个孩子都受到鼓励去提问\"(important that + 动词原形):", "options": ["It is important that every child be encouraged to ask questions.", "It is important that every child is encouraged to ask questions.", "It is important that every child was encouraged to ask questions.", "It is important that every child being encouraged to ask questions."] },
+    { "stem": "你想说\"正是好奇心驱动真正的学习\"(It is … that 强调句):", "options": ["It is curiosity that drives genuine learning.", "It is curiosity what drives genuine learning.", "It is curiosity drives genuine learning.", "There is curiosity that drives genuine learning."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "curiosity 的意思是:", "options": ["好奇心", "冷漠", "恐惧", "财富"] },
+    { "kind": "vocab", "stem": "wisdom 的意思是:", "options": ["智慧", "力量", "速度", "财富"] },
+    { "kind": "grammar", "stem": "\"___ true education means is often misunderstood.\"(名词性从句作主语)", "stem_cn": "真正的教育意味着什么,常被误解。", "options": ["What", "That", "Which", "Whether"] },
+    { "kind": "grammar", "stem": "\"Education is not so much about facts ___ about curiosity.\"(not so much A __ B)", "stem_cn": "教育与其说关乎事实,不如说关乎好奇心。", "options": ["as", "than", "but", "so"] },
+    { "kind": "scenario", "stem": "\"not so much A as B\" 的意思是:", "options": ["与其说A不如说B", "既不是A也不是B", "要么A要么B", "先A然后B"] },
+    { "kind": "scenario", "stem": "\"learn by heart\" 的意思是:", "options": ["熟记,背诵", "用心去学", "半途放弃", "随便应付"] },
+    { "kind": "reading", "stem": "Why does the writer say the belief that knowledge alone makes us wise is a mistake?", "options": ["Because real education is about teaching the mind to think, not merely filling it with facts", "Because knowledge is useless in every case", "Because wise people never study at all", "Because exams are the only true test of wisdom"], "passage": true },
+    { "kind": "reading", "stem": "According to the writer, what is the real purpose of teaching?", "options": ["Not to fill minds, but to open them", "To make students memorize as much as possible", "To help students score the highest marks", "To keep students quiet and obedient"], "passage": true },
+    { "kind": "listening", "stem": "What does the writer say a good school encourages children to do?", "options": ["To ask questions freely and become independent thinkers", "To memorize the textbook word for word", "To compete for the highest grades", "To avoid asking any questions"], "audio": true },
+    { "kind": "listening", "stem": "In the end, what does the writer say matters more than what we remember?", "options": ["How we have learned to think", "How many facts we can list", "How fast we can answer", "How many exams we have passed"], "audio": true }
+  ]
+}

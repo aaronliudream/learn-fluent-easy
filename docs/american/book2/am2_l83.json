@@ -1,0 +1,131 @@
+{
+  "id": "am2_l83",
+  "unit_no": 11,
+  "lesson_no": 83,
+  "title_en": "The Election Results",
+  "title_cn": "选举结果",
+  "grammar_focus": "复习 KS74-82 各时态综合(教材 L83 Key structures,方案B换情节包):一般现在(holds)、过去进行(were running/was watching)、一般过去(gathered/was)、过去完成被动(had been counted)、现在完成进行(have been waiting)、现在进行(is announcing/is planning)、现在完成(has won/have never felt)的综合运用辨析",
+  "scene": "每年,我们学校都会举办一次社长选举。今年,有三名学生参加竞选,全校都在关注。上周五,大家聚在礼堂里等着听结果。等我到的时候,选票已经清点完了。“同学们为这一刻等了整整一周,”老师说。此刻,校长正在宣布获胜者。米娅仅以五票之差赢了!她惊讶得一时说不出话来。“我从没这么高兴过,”她终于说道。现在,她正在筹划社团今年要办的所有趣味活动。",
+  "grammar_card": {
+    "title": "复习 KS74-82 各时态综合",
+    "intro": "本课把学过的各种时态放在一个故事里综合辨析:①一般现在——每年都做的事(our school holds an election);②过去进行——过去某时正在做(three students were running / the school was watching);③一般过去——过去发生的事(everyone gathered);④过去完成(被动)——“过去的过去”(the votes had already been counted);⑤现在完成进行——一直做到现在(students have been waiting all week);⑥现在进行——此刻正在做(the principal is announcing / she is planning);⑦现在完成——影响到现在(Mia has won / I have never felt this happy)。",
+    "table": {
+      "headers": ["时态", "例子"],
+      "rows": [
+        ["一般现在", "Every year our school holds an election."],
+        ["过去进行", "Three students were running; the school was watching."],
+        ["一般过去 / 过去完成被动", "Everyone gathered. / The votes had been counted."],
+        ["现在完成进行", "The students have been waiting all week."],
+        ["现在进行 / 现在完成", "The principal is announcing… / Mia has won!"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语里“校长”说 principal(英式 headmaster/head teacher)、“成绩、分数”说 grade(英式 mark);本课已按美语写。", "mark": "principal / grade" },
+      { "rule": "同一个故事里各时态各司其职:每年惯例用一般现在,当时背景用过去进行,已完成影响现在用现在完成,此刻正做用现在进行。看时间标志选时态。", "mark": "时态辨析" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Who won the club election, and by how much?",
+    "options": ["Mia won, by just five votes", "Mia won, by fifty votes", "The teacher won", "No one won — it was a tie"],
+    "answer_index": 0
+  },
+  "passage": "Every year, our school holds an election for club president. This year, three students were running, and the whole school was watching. Last Friday, everyone gathered in the hall to hear the results. By the time I arrived, the votes had already been counted. \"The students have been waiting all week for this,\" the teacher said. Right now, the principal is announcing the winner. Mia has won by just five votes! She was so surprised that she couldn't speak for a moment. \"I have never felt this happy,\" she finally said. Now she is planning all the fun events the club will hold this year.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Every year, our school holds an election for club president. This year, three students were running, and the whole school was watching.", "text_cn": "每年,我们学校都会举办一次社长选举。今年,有三名学生参加竞选,全校都在关注。" },
+    { "seq": 2, "speaker": null, "text_en": "Last Friday, everyone gathered in the hall to hear the results. By the time I arrived, the votes had already been counted.", "text_cn": "上周五,大家聚在礼堂里等着听结果。等我到的时候,选票已经清点完了。" },
+    { "seq": 3, "speaker": null, "text_en": "\"The students have been waiting all week for this,\" the teacher said. Right now, the principal is announcing the winner.", "text_cn": "“同学们为这一刻等了整整一周,”老师说。此刻,校长正在宣布获胜者。" },
+    { "seq": 4, "speaker": null, "text_en": "Mia has won by just five votes! She was so surprised that she couldn't speak for a moment.", "text_cn": "米娅仅以五票之差赢了!她惊讶得一时说不出话来。" },
+    { "seq": 5, "speaker": null, "text_en": "\"I have never felt this happy,\" she finally said. Now she is planning all the fun events the club will hold this year.", "text_cn": "“我从没这么高兴过,”她终于说道。现在,她正在筹划社团今年要办的所有趣味活动。" }
+  ],
+  "words": [
+    { "word": "election", "ipa": "/ɪˈlekʃn/", "pos": "n", "meaning_cn": "选举", "example": "an election for club president" },
+    { "word": "president", "ipa": "/ˈprezɪdənt/", "pos": "n", "meaning_cn": "社长,主席", "example": "an election for club president" },
+    { "word": "run", "ipa": "/rʌn/", "pos": "v", "meaning_cn": "参加竞选", "example": "three students were running" },
+    { "word": "vote", "ipa": "/voʊt/", "pos": "n", "meaning_cn": "选票,投票", "example": "won by just five votes" },
+    { "word": "count", "ipa": "/kaʊnt/", "pos": "v", "meaning_cn": "清点,计数", "example": "the votes had already been counted" },
+    { "word": "gather", "ipa": "/ˈɡæðər/", "pos": "v", "meaning_cn": "聚集", "example": "everyone gathered in the hall" },
+    { "word": "announce", "ipa": "/əˈnaʊns/", "pos": "v", "meaning_cn": "宣布", "example": "the principal is announcing the winner" },
+    { "word": "winner", "ipa": "/ˈwɪnər/", "pos": "n", "meaning_cn": "获胜者", "example": "announcing the winner" },
+    { "word": "principal", "ipa": "/ˈprɪnsəpl/", "pos": "n", "meaning_cn": "校长", "example": "the principal is announcing" },
+    { "word": "event", "ipa": "/ɪˈvent/", "pos": "n", "meaning_cn": "活动,事件", "example": "all the fun events the club will hold" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般现在时(每年惯例:holds / takes place)" },
+    { "gp": "gp2", "name": "过去进行时(were running / was watching)" },
+    { "gp": "gp3", "name": "一般过去时(gathered / arrived / was)" },
+    { "gp": "gp4", "name": "现在完成 / 现在完成进行(has won / have been waiting)" },
+    { "gp": "gp5", "name": "过去完成被动 / 现在进行(had been counted / is announcing)" },
+    { "gp": "gp6", "name": "词汇辨析(president / winner / principal)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Every year, our school ___ an election for club president.\"(每年惯例:一般现在)", "stem_cn": "每年,我们学校都举办社长选举。", "options": ["holds", "is holding", "held", "has held"] },
+    { "gp": "gp1", "stem": "\"The winner usually ___ the club for one year.\"(通常做的事:一般现在)", "stem_cn": "获胜者通常领导社团一年。", "options": ["leads", "is leading", "led", "has led"] },
+    { "gp": "gp1", "stem": "\"The election ___ place in the hall each spring.\"(每年春天惯例:一般现在)", "stem_cn": "选举每年春天在礼堂举行。", "options": ["takes", "is taking", "took", "has taken"] },
+    { "gp": "gp2", "stem": "\"This year, three students ___ for president.\"(当时正在竞选:过去进行)", "stem_cn": "今年,有三名学生在竞选社长。", "options": ["were running", "ran", "run", "have run"] },
+    { "gp": "gp2", "stem": "\"The whole school ___ the election closely.\"(当时正密切关注:过去进行)", "stem_cn": "全校都在密切关注这次选举。", "options": ["was watching", "watched", "watches", "has watched"] },
+    { "gp": "gp2", "stem": "\"While the votes ___ counted, everyone waited nervously.\"(当时正被清点:过去进行被动)", "stem_cn": "选票正在清点时,大家紧张地等着。", "options": ["were being", "were", "are being", "had been"] },
+    { "gp": "gp3", "stem": "\"Last Friday, everyone ___ in the hall to hear the results.\"(gather 的过去式)", "stem_cn": "上周五,大家聚在礼堂听结果。", "options": ["gathered", "gathers", "is gathering", "has gathered"] },
+    { "gp": "gp3", "stem": "\"Mia ___ so surprised that she couldn't speak.\"(be 的过去式)", "stem_cn": "米娅惊讶得一时说不出话。", "options": ["was", "is", "has been", "had been"] },
+    { "gp": "gp3", "stem": "\"By the time I ___, the results were already in.\"(arrive 的过去式)", "stem_cn": "我到的时候,结果已经出来了。", "options": ["arrived", "arrive", "have arrived", "was arriving"] },
+    { "gp": "gp4", "stem": "\"Mia ___ by just five votes!\"(刚刚赢了、影响到现在:现在完成)", "stem_cn": "米娅仅以五票之差赢了!", "options": ["has won", "won", "is winning", "had won"] },
+    { "gp": "gp4", "stem": "\"The students ___ all week for this result.\"(一直在等:现在完成进行)", "stem_cn": "学生们为这个结果等了整整一周。", "options": ["have been waiting", "waited", "wait", "are waiting"] },
+    { "gp": "gp4", "stem": "\"'I ___ this happy before,' Mia said.\"(从未这么高兴过:现在完成)", "stem_cn": "“我从没这么高兴过,”米娅说。", "options": ["have never felt", "never felt", "am never feeling", "had never felt"] },
+    { "gp": "gp5", "stem": "\"By the time I arrived, the votes had already ___.\"(此前已被清点完:过去完成被动)", "stem_cn": "我到时,选票已经清点完了。", "options": ["been counted", "counted", "being counted", "count"] },
+    { "gp": "gp5", "stem": "\"Right now, the principal ___ the winner.\"(此刻正在宣布:现在进行)", "stem_cn": "此刻,校长正在宣布获胜者。", "options": ["is announcing", "announces", "announced", "has announced"] },
+    { "gp": "gp5", "stem": "\"Now Mia ___ all the fun events for this year.\"(现在正在筹划:现在进行)", "stem_cn": "现在,米娅正在筹划今年所有的趣味活动。", "options": ["is planning", "plans", "planned", "has planned"] },
+    { "gp": "gp6", "stem": "\"Three students are running for club ___.\"(社长、主席用哪个词)", "stem_cn": "三名学生在竞选社长。", "options": ["president", "teacher", "guest", "driver"] },
+    { "gp": "gp6", "stem": "\"After the votes were counted, the ___ was announced.\"(获胜者用哪个词)", "stem_cn": "选票清点后,宣布了获胜者。", "options": ["winner", "loser", "judge", "singer"] },
+    { "gp": "gp6", "stem": "\"The ___ announced the results to the whole school.\"(校长用哪个词)", "stem_cn": "校长向全校宣布了结果。", "options": ["principal", "student", "cook", "guard"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"校长\"常说:", "options": ["principal", "headmaster", "school-boss", "top-teacher"] },
+    { "stem": "美语里\"成绩、分数\"常说:", "options": ["grade", "mark", "score-point", "class-number"] },
+    { "stem": "election 的意思是:", "options": ["选举", "考试", "假期", "比赛"] },
+    { "stem": "announce 的意思是:", "options": ["宣布", "隐瞒", "询问", "取消"] },
+    { "stem": "gather 的意思是:", "options": ["聚集", "离开", "睡觉", "奔跑"] },
+    { "stem": "winner 的意思是:", "options": ["获胜者", "失败者", "裁判", "观众"] }
+  ],
+  "contrast": [
+    { "us": "principal", "uk": "headmaster", "note_cn": "校长;美语 principal,英式 headmaster/head teacher" },
+    { "us": "grade", "uk": "mark", "note_cn": "成绩、分数;美语 grade,英式 mark" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" }
+  ],
+  "chunks": [
+    { "us": "run for president", "ipa": "/rʌn fɔːr ˈprezɪdənt/", "example1": "Three students were running for president.", "example1_cn": "三名学生在竞选社长。", "example2": "She decided to run for class leader.", "example2_cn": "她决定竞选班长。" },
+    { "us": "by the time", "ipa": "/baɪ ðə taɪm/", "example1": "By the time I arrived, the votes had been counted.", "example1_cn": "我到的时候,选票已经清点完了。", "example2": "By the time she called, I had already left.", "example2_cn": "她打电话时,我已经走了。" },
+    { "us": "win by (five votes)", "ipa": "/wɪn baɪ/", "example1": "Mia won by just five votes.", "example1_cn": "米娅仅以五票之差获胜。", "example2": "Our team won by two points.", "example2_cn": "我们队以两分之差获胜。" },
+    { "us": "all week", "ipa": "/ɔːl wiːk/", "example1": "The students have been waiting all week.", "example1_cn": "学生们等了整整一周。", "example2": "It has been raining all week.", "example2_cn": "已经下了一整周的雨。" }
+  ],
+  "stage7_cloze": {
+    "context": "Every year our school ___1___ an election. This year three students ___2___ for president. By the time I arrived, the votes had already ___3___. Now Mia, the winner, ___4___ the club's events.",
+    "blanks": [
+      { "blank_no": 1, "options": ["holds", "is holding", "held", "has held"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["were running", "ran", "run", "have run"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["been counted", "counted", "being counted", "count"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["is planning", "plans", "planned", "has planned"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What does the school do every year?", "options": ["Holds an election for club president", "Holds a sports day", "Puts on a play", "Takes a trip"] },
+    { "stem": "Who won the election this year?", "options": ["Mia, by just five votes", "The teacher", "Nobody", "A student named Leo"] },
+    { "stem": "What is Mia doing now?", "options": ["Planning all the fun events for the club this year", "Counting the votes again", "Leaving the school", "Watching the results"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"今年有三名学生在竞选社长\"(过去进行,当时正在做):", "options": ["This year, three students were running for president.", "This year, three students ran for president once.", "This year, three students run for president.", "This year, three students have run for president."] },
+    { "stem": "你想说\"我到的时候,选票已经清点完了\"(过去完成被动,过去的过去):", "options": ["By the time I arrived, the votes had already been counted.", "By the time I arrived, the votes have already been counted.", "By the time I arrived, the votes already counted.", "By the time I arrived, the votes were counting."] },
+    { "stem": "你想说\"此刻校长正在宣布获胜者\"(现在进行):", "options": ["Right now, the principal is announcing the winner.", "Right now, the principal announces the winner.", "Right now, the principal has announced the winner.", "Right now, the principal announced the winner."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "election 的意思是:", "options": ["选举", "考试", "假期", "比赛"] },
+    { "kind": "vocab", "stem": "winner 的意思是:", "options": ["获胜者", "失败者", "裁判", "观众"] },
+    { "kind": "grammar", "stem": "\"Every year our school ___ an election.\"(每年惯例:一般现在)", "stem_cn": "每年我们学校都举办选举。", "options": ["holds", "is holding", "held", "has held"] },
+    { "kind": "grammar", "stem": "\"By the time I arrived, the votes had already ___.\"(过去完成被动)", "stem_cn": "我到时,选票已经清点完了。", "options": ["been counted", "counted", "being counted", "count"] },
+    { "kind": "scenario", "stem": "\"run for president\" 的意思是:", "options": ["竞选社长/主席", "跑去找主席", "赶去开会", "为主席跑腿"] },
+    { "kind": "scenario", "stem": "\"by the time\" 的意思是:", "options": ["到…的时候(为止)", "按时地", "偶尔地", "花时间"] },
+    { "kind": "reading", "stem": "Why couldn't Mia speak for a moment?", "options": ["She was so surprised at winning", "She had lost her voice", "She was very tired", "She was reading a speech"], "passage": true },
+    { "kind": "reading", "stem": "How close was the election?", "options": ["Mia won by just five votes", "Mia won by a hundred votes", "It ended in a tie", "Mia lost by five votes"], "passage": true },
+    { "kind": "listening", "stem": "How long had the students been waiting for the result?", "options": ["All week", "For an hour", "For a month", "Since morning"], "audio": true },
+    { "kind": "listening", "stem": "How did Mia feel when she won?", "options": ["Happier than she had ever felt", "Bored and tired", "Angry and upset", "Nervous and afraid"], "audio": true }
+  ]
+}

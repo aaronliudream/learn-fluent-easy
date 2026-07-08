@@ -1,0 +1,133 @@
+{
+  "id": "am3_l27",
+  "unit_no": 6,
+  "lesson_no": 27,
+  "title_en": "Nothing to Sell and Nothing to Buy",
+  "title_cn": "不卖也不买",
+  "grammar_focus": "It is said that… / sb is said to do…(据说)、不可数名词(knowledge / information / news / advice / work,不加 s、不用 a)、there be 的各种时态(there are / there was / there has been)、目的状语 so that / in order to / so as not to、被动不定式 have to be paid for、介词 + whom / which(原创承载 NCE3 L27 考点·轻净化:去掉原文'偷窃/乞讨'字样,把'流浪汉'改为选择简朴自由的'自在旅人',保留'人人都在出售什么、唯独他无所求'的思辨内核)",
+  "scene": "有人说,人人都靠卖点什么为生。这样看来,老师卖的是知识,医生卖的是健康,牧师卖的是慰藉。物品的价值虽可用钱衡量,可别人为我们提供的服务,其真正价值却极难估量。有时候,为了保命我们情愿倾其所有,可事后又会舍不得给做手术的外科大夫一笔高额费用——尽管他给的正是这项服务。社会就是这样安排的:技能也得像商店里的商品一样,花钱去买。看来,人人都有东西可卖。唯有那位自在旅人,似乎是个例外。他和乞丐不同——乞丐某种意义上是把自己的不幸卖出去,换取路人的怜悯;而真正的旅人无物可卖,也不向别人索求什么。他追求独立,却不因此丢掉尊严。他可能向你讨几个钱,却绝不会求你可怜他。他是有意选择了这样的生活,也完全清楚由此带来的后果。他从不确定下一顿饭在哪里,却摆脱了折磨着我们其余人的千万种焦虑。他家当不多,能轻松地四处迁徙;因为睡在露天,他比我们大多数人都更贴近大自然。偶尔在真正需要时,他会做一点活儿,但他绝不会拿自由去交换。我们常带着蔑视谈起这类人,可扪心自问:我们当中,又有几个从没对他们那简单的生活、那份无忧无虑,生出过一丝羡慕呢?",
+  "grammar_card": {
+    "title": "It is said that / 不可数名词 / there be / 目的状语 / 被动不定式",
+    "intro": "①“据说”:It is said that… / He is said to do…(被动报道)。②不可数名词(knowledge, information, news, advice, work, luggage)不加 s、前面不加 a,作主语时动词用单数(The news is good)。③there be 有各种时态:there are / there was / there will be / there has been。④目的状语:so that + 从句(以便);in order to + 动词(为了);so as not to + 动词(以免)。⑤被动不定式 to be done:skills have to be paid for(技能得花钱买)。⑥介词 + whom(指人)/ which(指物):the friend with whom he travels。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["It is said that / sb is said to", "据说…", "It is said that everyone sells something."],
+        ["不可数名词", "不加 s、不用 a", "knowledge / news / advice"],
+        ["there be 各时态", "有…", "there are times / there has been…"],
+        ["so that / in order to / to be paid for", "以便 / 为了 / 被支付", "so that he can move / have to be paid for"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "knowledge, information, news, advice, work 都是不可数名词:不能说 an advice / two informations;news 作主语时动词用单数(The news is…)。", "mark": "不可数名词" },
+      { "rule": "目的:so that 后接一个从句(有主语和动词);in order to / so as (not) to 后接动词原形。", "mark": "so that / in order to" },
+      { "rule": "美式用词:store(英式 shop)、sidewalk(英式 pavement)、downtown(英式 city centre)。本课已按美语写。", "mark": "store / sidewalk" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is the most important thing for the free wanderer?",
+    "options": ["His freedom", "His money", "His house", "His job"],
+    "answer_index": 0
+  },
+  "passage": "It has been said that everyone lives by selling something. Seen in this light, teachers live by selling knowledge, doctors by selling health, and priests by selling comfort. Though the value of material goods can be measured in money, it is extremely difficult to estimate the true worth of the services people perform for us. There are times when we would gladly give everything we own to save our lives, and yet we might resent paying a surgeon a large fee for offering us exactly that service. Society is arranged so that skills have to be paid for in the same way that goods have to be paid for in a store. Everyone, it seems, has something to sell. The free-spirited wanderer seems to be the one exception to this rule. Unlike a beggar, who in a sense sells his own misfortune for the pity of passers-by, the true wanderer has nothing to sell and asks nothing of others. In seeking his independence, he does not give up his dignity. He may ask you for a few dollars, but he will never ask you to feel sorry for him. He has deliberately chosen the life he leads and is fully aware of its consequences. He can never be sure where his next meal is coming from, yet he is free from the thousands of anxieties that afflict the rest of us. With few possessions, he can move from place to place with ease, and by sleeping under the open sky he comes far closer to nature than most of us ever do. Now and then, in times of real need, he will do a little work, but he will never trade away his freedom. We often speak of such people with contempt, yet how many of us have never felt just a little envious of their simple life and their freedom from care?",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "It has been said that everyone lives by selling something. Seen in this light, teachers live by selling knowledge, doctors by selling health, and priests by selling comfort. Though the value of material goods can be measured in money, it is extremely difficult to estimate the true worth of the services people perform for us.", "text_cn": "有人说,人人都靠卖点什么为生。这样看来,老师卖的是知识,医生卖的是健康,牧师卖的是慰藉。物品的价值虽可用钱衡量,可别人为我们提供的服务,其真正价值却极难估量。" },
+    { "seq": 2, "speaker": null, "text_en": "There are times when we would gladly give everything we own to save our lives, and yet we might resent paying a surgeon a large fee for offering us exactly that service. Society is arranged so that skills have to be paid for in the same way that goods have to be paid for in a store. Everyone, it seems, has something to sell.", "text_cn": "有时候,为了保命我们情愿倾其所有,可事后又会舍不得给做手术的外科大夫一笔高额费用——尽管他给的正是这项服务。社会就是这样安排的:技能也得像商店里的商品一样,花钱去买。看来,人人都有东西可卖。" },
+    { "seq": 3, "speaker": null, "text_en": "The free-spirited wanderer seems to be the one exception to this rule. Unlike a beggar, who in a sense sells his own misfortune for the pity of passers-by, the true wanderer has nothing to sell and asks nothing of others. In seeking his independence, he does not give up his dignity. He may ask you for a few dollars, but he will never ask you to feel sorry for him.", "text_cn": "唯有那位自在旅人,似乎是个例外。他和乞丐不同——乞丐某种意义上是把自己的不幸卖出去,换取路人的怜悯;而真正的旅人无物可卖,也不向别人索求什么。他追求独立,却不因此丢掉尊严。他可能向你讨几个钱,却绝不会求你可怜他。" },
+    { "seq": 4, "speaker": null, "text_en": "He has deliberately chosen the life he leads and is fully aware of its consequences. He can never be sure where his next meal is coming from, yet he is free from the thousands of anxieties that afflict the rest of us. With few possessions, he can move from place to place with ease, and by sleeping under the open sky he comes far closer to nature than most of us ever do.", "text_cn": "他是有意选择了这样的生活,也完全清楚由此带来的后果。他从不确定下一顿饭在哪里,却摆脱了折磨着我们其余人的千万种焦虑。他家当不多,能轻松地四处迁徙;因为睡在露天,他比我们大多数人都更贴近大自然。" },
+    { "seq": 5, "speaker": null, "text_en": "Now and then, in times of real need, he will do a little work, but he will never trade away his freedom. We often speak of such people with contempt, yet how many of us have never felt just a little envious of their simple life and their freedom from care?", "text_cn": "偶尔在真正需要时,他会做一点活儿,但他绝不会拿自由去交换。我们常带着蔑视谈起这类人,可扪心自问:我们当中,又有几个从没对他们那简单的生活、那份无忧无虑,生出过一丝羡慕呢?" }
+  ],
+  "words": [
+    { "word": "philosopher", "ipa": "/fɪˈlɑːsəfər/", "pos": "n", "meaning_cn": "哲学家", "example": "a philosopher sells wisdom" },
+    { "word": "priest", "ipa": "/priːst/", "pos": "n", "meaning_cn": "牧师", "example": "priests sell comfort" },
+    { "word": "grudge", "ipa": "/ɡrʌdʒ/", "pos": "v", "meaning_cn": "不愿给,舍不得给", "example": "grudge paying a fee" },
+    { "word": "surgeon", "ipa": "/ˈsɜːrdʒən/", "pos": "n", "meaning_cn": "外科大夫", "example": "paying a surgeon" },
+    { "word": "dignity", "ipa": "/ˈdɪɡnəti/", "pos": "n", "meaning_cn": "尊严", "example": "he does not give up his dignity" },
+    { "word": "deliberately", "ipa": "/dɪˈlɪbərətli/", "pos": "adv", "meaning_cn": "故意地,有意地", "example": "he has deliberately chosen" },
+    { "word": "consequence", "ipa": "/ˈkɑːnsɪkwəns/", "pos": "n", "meaning_cn": "后果,结果", "example": "aware of its consequences" },
+    { "word": "afflict", "ipa": "/əˈflɪkt/", "pos": "v", "meaning_cn": "使苦恼,折磨", "example": "anxieties that afflict us" },
+    { "word": "ease", "ipa": "/iːz/", "pos": "n", "meaning_cn": "容易,轻松", "example": "move with ease" },
+    { "word": "contempt", "ipa": "/kənˈtempt/", "pos": "n", "meaning_cn": "蔑视", "example": "speak with contempt" },
+    { "word": "envious", "ipa": "/ˈenviəs/", "pos": "adj", "meaning_cn": "嫉妒的,羡慕的", "example": "felt a little envious" },
+    { "word": "wisdom", "ipa": "/ˈwɪzdəm/", "pos": "n", "meaning_cn": "智慧", "example": "selling wisdom" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "It is said that / sb is said to(据说)" },
+    { "gp": "gp2", "name": "不可数名词(knowledge/information/news/advice)" },
+    { "gp": "gp3", "name": "there be 各时态(there are/was/has been)" },
+    { "gp": "gp4", "name": "目的状语 so that / in order to / so as not to" },
+    { "gp": "gp5", "name": "被动不定式 have to be done / 介词+whom·which" },
+    { "gp": "gp6", "name": "词汇辨析(philosopher/dignity/contempt)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"It is ___ that everyone lives by selling something.\"(被动“据说”)", "stem_cn": "据说人人都靠卖点什么为生。", "options": ["said", "saying", "say", "to say"] },
+    { "gp": "gp1", "stem": "\"The wanderer ___ said to enjoy total freedom.\"(“据说某人…”,用 be 的哪种形式)", "stem_cn": "据说那旅人享有彻底的自由。", "options": ["is", "has", "does", "being"] },
+    { "gp": "gp1", "stem": "\"He is said ___ a very simple life.\"(sb is said + 不定式)", "stem_cn": "据说他过着极简单的生活。", "options": ["to lead", "leading", "lead", "led"] },
+    { "gp": "gp2", "stem": "\"Teachers sell ___; it cannot be counted one by one.\"(不可数名词,不加 s)", "stem_cn": "老师卖的是知识,不可数。", "options": ["knowledge", "knowledges", "a knowledge", "knowledge's"] },
+    { "gp": "gp2", "stem": "\"He gave me some useful ___ about traveling light.\"(不可数名词“建议”)", "stem_cn": "关于轻装出行他给了我一些有用的建议。", "options": ["advice", "advices", "an advice", "advice's"] },
+    { "gp": "gp2", "stem": "\"The news ___ good, so everyone smiled.\"(news 不可数,用单数动词)", "stem_cn": "消息不错,大家都笑了。", "options": ["was", "were", "are", "have been"] },
+    { "gp": "gp3", "stem": "\"There ___ times when we would give everything to survive.\"(there be,一般现在,后接复数)", "stem_cn": "有时候我们愿付出一切求生。", "options": ["are", "is", "has", "have"] },
+    { "gp": "gp3", "stem": "\"Long ago there ___ no stores to buy such things.\"(there be,一般过去,后接复数)", "stem_cn": "很久以前没有商店能买到这类东西。", "options": ["were", "was", "are", "has been"] },
+    { "gp": "gp3", "stem": "\"There ___ been a great change in his life.\"(there be,现在完成,后接单数)", "stem_cn": "他的生活发生了很大变化。", "options": ["has", "have", "is", "was"] },
+    { "gp": "gp4", "stem": "\"He does a little work now and then ___ he can buy food.\"(目的“以便”,后接一个从句)", "stem_cn": "他偶尔干点活,以便能买吃的。", "options": ["so that", "so as", "in order", "because"] },
+    { "gp": "gp4", "stem": "\"He travels light ___ move from place to place easily.\"(目的“为了”,后接动词原形)", "stem_cn": "他轻装出行,为的是方便四处走动。", "options": ["in order to", "so that", "for to", "because of"] },
+    { "gp": "gp4", "stem": "\"He walks quietly ___ wake the sleeping town.\"(目的否定“以免”)", "stem_cn": "他轻手轻脚地走,以免吵醒沉睡的小镇。", "options": ["so as not to", "so as to not", "for not to", "not to so as"] },
+    { "gp": "gp5", "stem": "\"In our society, skills have ___ for like goods.\"(被动不定式“被支付”)", "stem_cn": "在我们的社会里,技能也得像商品一样花钱买。", "options": ["to be paid", "to pay", "paying", "paid"] },
+    { "gp": "gp5", "stem": "\"This is the kind of freedom ___ few people ever taste.\"(关系代词,指物)", "stem_cn": "这是一种很少有人尝到的自由。", "options": ["which", "who", "whose", "when"] },
+    { "gp": "gp5", "stem": "\"The friend with ___ he travels shares his simple life.\"(介词 + 关系代词,指人)", "stem_cn": "与他同行的朋友也过着这种简单生活。", "options": ["whom", "which", "who", "whose"] },
+    { "gp": "gp6", "stem": "\"A person who studies deep questions about life is a ___.\"(“哲学家”用哪个词)", "stem_cn": "研究人生深层问题的人。", "options": ["philosopher", "farmer", "soldier", "banker"] },
+    { "gp": "gp6", "stem": "\"A strong feeling that someone is worthless is ___.\"(“蔑视”用哪个词)", "stem_cn": "认为某人一文不值的强烈感觉。", "options": ["contempt", "respect", "gratitude", "joy"] },
+    { "gp": "gp6", "stem": "\"Wanting what someone else has is being ___.\"(“嫉妒的”用哪个词)", "stem_cn": "想要别人拥有的东西。", "options": ["envious", "generous", "honest", "calm"] }
+  ],
+  "stage6": [
+    { "stem": "philosopher 的意思是:", "options": ["哲学家", "农民", "士兵", "银行家"] },
+    { "stem": "priest 的意思是:", "options": ["牧师", "医生", "教师", "演员"] },
+    { "stem": "dignity 的意思是:", "options": ["尊严", "财富", "恐惧", "懒惰"] },
+    { "stem": "deliberately 的意思是:", "options": ["故意地", "偶然地", "缓慢地", "安静地"] },
+    { "stem": "contempt 的意思是:", "options": ["蔑视", "敬佩", "感激", "喜爱"] },
+    { "stem": "envious 的意思是:", "options": ["嫉妒的,羡慕的", "慷慨的", "勇敢的", "诚实的"] }
+  ],
+  "contrast": [
+    { "us": "store", "uk": "shop", "note_cn": "商店;美语 store,英式 shop" },
+    { "us": "sidewalk", "uk": "pavement", "note_cn": "人行道;美语 sidewalk,英式 pavement" },
+    { "us": "downtown", "uk": "city centre", "note_cn": "市中心;美语 downtown,英式 city centre" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" }
+  ],
+  "chunks": [
+    { "us": "live by selling", "ipa": "/lɪv baɪ ˈselɪŋ/", "example1": "Everyone lives by selling something.", "example1_cn": "人人都靠卖点什么为生。", "example2": "She lives by selling her paintings.", "example2_cn": "她靠卖画为生。" },
+    { "us": "free from care", "ipa": "/friː frəm ker/", "example1": "He enjoys freedom from care.", "example1_cn": "他享受着无忧无虑。", "example2": "For once I felt free from care.", "example2_cn": "我难得地感到无忧无虑。" },
+    { "us": "with ease", "ipa": "/wɪð iːz/", "example1": "He moves from place to place with ease.", "example1_cn": "他轻松地四处迁徙。", "example2": "She passed the test with ease.", "example2_cn": "她轻松通过了考试。" },
+    { "us": "feel sorry for", "ipa": "/fiːl ˈsɑːri fɔːr/", "example1": "He will never ask you to feel sorry for him.", "example1_cn": "他绝不会求你可怜他。", "example2": "Don't feel sorry for me.", "example2_cn": "别为我难过。" }
+  ],
+  "stage7_cloze": {
+    "context": "It ___1___ said that everyone lives by selling something. Even ___2___, which cannot be counted, is sold by teachers as knowledge. There ___3___ times, though, when a person wants nothing to sell. The free wanderer travels light ___4___ he can move with ease.",
+    "blanks": [
+      { "blank_no": 1, "options": ["is", "has", "are", "being"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["information", "informations", "an information", "information's"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["are", "is", "was", "has"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["so that", "so as", "for to", "because"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "According to the writer, how does society treat skills?", "options": ["They must be paid for, like goods", "They are always given for free", "They cannot be valued at all", "They belong to no one"] },
+    { "stem": "How is the free wanderer different from a beggar?", "options": ["He asks for nothing and keeps his dignity", "He is much richer", "He works every single day", "He owns a large home"] },
+    { "stem": "What does the wanderer value most?", "options": ["His freedom", "His money", "His reputation", "His possessions"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"据说人人都靠卖点什么为生\"(It is said that):", "options": ["It is said that everyone lives by selling something.", "It is say that everyone lives by selling something.", "It says that everyone lives by selling something.", "It is said everyone lives by selling something that."] },
+    { "stem": "你想说\"有时候我们愿付出一切\"(There are times when):", "options": ["There are times when we would give everything.", "There is times when we would give everything.", "There have times when we would give everything.", "It are times when we would give everything."] },
+    { "stem": "你想说\"他轻装出行,以便四处走动\"(so that):", "options": ["He travels light so that he can move easily.", "He travels light so as he can move easily.", "He travels light for that he can move easily.", "He travels light so that to move easily."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "philosopher 的意思是:", "options": ["哲学家", "农民", "士兵", "银行家"] },
+    { "kind": "vocab", "stem": "envious 的意思是:", "options": ["嫉妒的,羡慕的", "慷慨的", "勇敢的", "诚实的"] },
+    { "kind": "grammar", "stem": "\"It is ___ that everyone lives by selling something.\"(被动“据说”)", "stem_cn": "据说人人都靠卖点什么为生。", "options": ["said", "saying", "say", "to say"] },
+    { "kind": "grammar", "stem": "\"There ___ times when we would give everything.\"(there be,后接复数)", "stem_cn": "有时候我们愿付出一切。", "options": ["are", "is", "was", "has"] },
+    { "kind": "scenario", "stem": "\"free from care\" 的意思是:", "options": ["无忧无虑", "免费护理", "不小心", "不在乎钱"] },
+    { "kind": "scenario", "stem": "\"with ease\" 的意思是:", "options": ["轻松地,不费力", "带着东方风情", "面带愁容", "慢慢地"] },
+    { "kind": "reading", "stem": "Why is it hard to value the services people perform?", "options": ["Their true worth cannot be measured in money", "No one ever performs them", "They are all illegal", "They are always free"], "passage": true },
+    { "kind": "reading", "stem": "Why might we secretly envy the free wanderer?", "options": ["For his simple life and freedom from care", "For his great wealth", "For his worldwide fame", "For his big house"], "passage": true },
+    { "kind": "listening", "stem": "Whom does the writer compare a beggar with?", "options": ["The free wanderer", "A teacher", "A surgeon", "A philosopher"], "audio": true },
+    { "kind": "listening", "stem": "Where does the wanderer often sleep?", "options": ["Under the open sky", "In fancy hotels", "In a big house", "On a train"], "audio": true }
+  ]
+}

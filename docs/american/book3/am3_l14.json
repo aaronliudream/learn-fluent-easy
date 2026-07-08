@@ -1,0 +1,133 @@
+{
+  "id": "am3_l14",
+  "unit_no": 3,
+  "lesson_no": 14,
+  "title_en": "He'd Rather Do It Himself",
+  "title_cn": "他宁愿自己动手",
+  "grammar_focus": "would rather / would sooner 表“宁愿、偏好”(would rather do / would sooner do / would rather ... than ... / would rather + 某人 + 过去式:I'd rather you watched),外加 have sth done“(请人)把某事做好”与 have + 动作名词(have a look)(原创承载 NCE3 L14 考点·净化:把“贵族歹徒勒索保护费”改写为“宁愿凡事亲力亲为的传奇手艺人 Dawson”,保留“被全镇敬重、立牌纪念”的反差,去掉一切犯罪暴力)",
+  "scene": "小镇上人人都认识老 Dawson——一个了不起的手艺人。他宁愿自己动手修理一切,也不愿请别人代劳。一场冬天的暴风雨毁掉了他家一段篱笆,邻居们提出替他从城里雇一队工人,他只是笑笑:“我宁愿自己亲手来。”一周之内,整段篱笆又立了起来。镇上大多数人都请公司来修屋顶、修车、翻院子,唯独 Dawson 不肯。他宁愿在漏水的水龙头下待整整一个下午,也不愿打电话叫水管工;宁愿步行五英里,也不愿让人开车送他。每天清早他都爱把工具挨个看一遍,宁愿打着手电干到深夜,也绝不把活儿干一半就撂下。若有小伙子想帮忙,他会和气地说:“我更愿意你在一旁看着学。”谁要不打招呼就拿走他心爱的扳手,他会说:“我希望你别这样。”他做事又快又利落,却分文不取。等他终于老得爬不动梯子,全镇人聚到一起;他去世后,大家在镇政府旁立了一块小铜牌,纪念这位“谁也想不起还有更顽强”的手艺人。乐队奏起乐来,人人都说:宁愿认识一个 Dawson,也胜过认识一百个名人。",
+  "grammar_card": {
+    "title": "would rather / would sooner 偏好 + have sth done",
+    "intro": "①would rather / would sooner + 动词原形,表示“宁愿做某事”:I would rather stay(我宁愿留下)。②“宁愿做 A 不愿做 B”用 would rather A than B:He would rather walk than wait(他宁愿走也不愿等)。③否定用 would rather not + 原形:I would rather not go。④若“希望别人怎么做”,用 would rather + 某人 + 过去式动词:I'd rather you watched and learned(我更愿意你看着学)/ I'd rather you didn't touch it(我希望你别碰)。⑤have sth done 表示“(请/让别人)把某事做好”:have the roof repaired(请人修屋顶);have + 动作名词表示“做一次”:have a look(看一看)、have a rest(歇一歇)。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["would rather / would sooner + 原形", "宁愿做……", "I'd rather stay. / I'd sooner walk."],
+        ["would rather A than B", "宁愿 A 不愿 B", "He would rather fix it than pay someone."],
+        ["would rather + 某人 + 过去式", "希望某人怎样(现在/将来)", "I'd rather you watched. / I'd rather you didn't."],
+        ["have sth done / have a look", "请人把某事做好 / 做一次", "have the roof repaired / have a look"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "would rather / would sooner 后面接动词原形(不带 to):I'd rather go(✓)/ I'd rather to go(✗)。", "mark": "would rather + 原形" },
+      { "rule": "“希望别人”时用 would rather + 某人 + 过去式:I'd rather you came early;否定 I'd rather you didn't。这里的过去式不表示过去,而表示委婉的愿望。", "mark": "I'd rather you came" },
+      { "rule": "have sth done = 请/让别人做:have your car fixed(让人修车)≠ 自己修;宾位放在 have 和过去分词之间。美语里“水龙头”说 faucet(英式 tap),“手电筒”说 flashlight(英式 torch)。", "mark": "have sth done / faucet" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why wouldn't Old Mr. Dawson let others repair his fence?",
+    "options": ["He would rather do everything himself", "He had no fence", "He was too busy that week", "He lived far from town"],
+    "answer_index": 0
+  },
+  "passage": "Everyone in our little town knew Old Mr. Dawson, a remarkable handyman who would rather fix a thing himself than have it done by anyone else. When a winter storm destroyed part of his fence, his neighbors offered to hire a crew from the city, but Dawson only smiled. 'I'd sooner do it with my own two hands,' he said, and he had the whole fence standing again within a week. Most people in town would have their roofs repaired, their cars fixed, and their yards dug by companies. Not Dawson. He would rather spend a whole afternoon under a leaking faucet than call a plumber, and he would sooner walk five miles than have someone drive him. Each morning he liked to have a good look at his tools, and he'd rather work late by flashlight than leave a job half done. If a young man offered to help, Dawson would say kindly, 'I'd rather you watched and learned.' And if anyone picked up his favorite wrench without asking, he'd say, 'I'd rather you didn't.' He fixed everything promptly and never charged a cent. When at last he grew too old to climb ladders, the whole town came together, and after his funeral they dedicated a small brass plaque by the town hall to the memory of the most valiant handyman anyone could remember. A band played, and everyone agreed that they would rather have known one Mr. Dawson than a hundred famous men.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Everyone in our little town knew Old Mr. Dawson, a remarkable handyman who would rather fix a thing himself than have it done by anyone else. When a winter storm destroyed part of his fence, his neighbors offered to hire a crew from the city, but Dawson only smiled.", "text_cn": "小镇上人人都认识老 Dawson——一个了不起的手艺人,他宁愿自己动手修理一切,也不愿请别人代劳。一场冬天的暴风雨毁掉了他家一段篱笆,邻居们提出替他从城里雇一队工人,他只是笑笑。" },
+    { "seq": 2, "speaker": null, "text_en": "'I'd sooner do it with my own two hands,' he said, and he had the whole fence standing again within a week. Most people in town would have their roofs repaired, their cars fixed, and their yards dug by companies. Not Dawson.", "text_cn": "“我宁愿自己亲手来,”他说。一周之内,整段篱笆又立了起来。镇上大多数人都请公司来修屋顶、修车、翻院子,唯独 Dawson 不肯。" },
+    { "seq": 3, "speaker": null, "text_en": "He would rather spend a whole afternoon under a leaking faucet than call a plumber, and he would sooner walk five miles than have someone drive him. Each morning he liked to have a good look at his tools, and he'd rather work late by flashlight than leave a job half done.", "text_cn": "他宁愿在漏水的水龙头下待整整一个下午,也不愿打电话叫水管工;宁愿步行五英里,也不愿让人开车送他。每天清早他都爱把工具挨个看一遍,宁愿打着手电干到深夜,也绝不把活儿干一半就撂下。" },
+    { "seq": 4, "speaker": null, "text_en": "If a young man offered to help, Dawson would say kindly, 'I'd rather you watched and learned.' And if anyone picked up his favorite wrench without asking, he'd say, 'I'd rather you didn't.' He fixed everything promptly and never charged a cent.", "text_cn": "若有小伙子想帮忙,他会和气地说:“我更愿意你在一旁看着学。”谁要不打招呼就拿走他心爱的扳手,他会说:“我希望你别这样。”他做事又快又利落,却分文不取。" },
+    { "seq": 5, "speaker": null, "text_en": "When at last he grew too old to climb ladders, the whole town came together, and after his funeral they dedicated a small brass plaque by the town hall to the memory of the most valiant handyman anyone could remember. A band played, and everyone agreed that they would rather have known one Mr. Dawson than a hundred famous men.", "text_cn": "等他终于老得爬不动梯子,全镇人聚到一起;他去世后,大家在镇政府旁立了一块小铜牌,纪念这位“谁也想不起还有更顽强”的手艺人。乐队奏起乐来,人人都说:宁愿认识一个 Dawson,也胜过认识一百个名人。" }
+  ],
+  "words": [
+    { "word": "remarkable", "ipa": "/rɪˈmɑːrkəbl/", "pos": "adj", "meaning_cn": "非凡的,了不起的", "example": "a remarkable handyman" },
+    { "word": "handyman", "ipa": "/ˈhændimæn/", "pos": "n", "meaning_cn": "杂修工,手巧的人", "example": "the most valiant handyman" },
+    { "word": "destroy", "ipa": "/dɪˈstrɔɪ/", "pos": "v", "meaning_cn": "毁坏,摧毁", "example": "a storm destroyed the fence" },
+    { "word": "hire", "ipa": "/ˈhaɪər/", "pos": "v", "meaning_cn": "雇用", "example": "offered to hire a crew" },
+    { "word": "crew", "ipa": "/kruː/", "pos": "n", "meaning_cn": "一队(工人),班组", "example": "a crew from the city" },
+    { "word": "faucet", "ipa": "/ˈfɔːsɪt/", "pos": "n", "meaning_cn": "水龙头(美语,英式 tap)", "example": "a leaking faucet" },
+    { "word": "plumber", "ipa": "/ˈplʌmər/", "pos": "n", "meaning_cn": "管道工,水管工", "example": "call a plumber" },
+    { "word": "wrench", "ipa": "/rentʃ/", "pos": "n", "meaning_cn": "扳手(美语,英式 spanner)", "example": "his favorite wrench" },
+    { "word": "promptly", "ipa": "/ˈprɑːmptli/", "pos": "adv", "meaning_cn": "迅速地,及时地", "example": "fixed everything promptly" },
+    { "word": "funeral", "ipa": "/ˈfjuːnərəl/", "pos": "n", "meaning_cn": "葬礼", "example": "after his funeral" },
+    { "word": "dedicate", "ipa": "/ˈdedɪkeɪt/", "pos": "v", "meaning_cn": "献给,题献,为……立(碑/牌)", "example": "dedicated a plaque to his memory" },
+    { "word": "valiant", "ipa": "/ˈvæliənt/", "pos": "adj", "meaning_cn": "英勇的,顽强的", "example": "the most valiant handyman" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "would rather + 动词原形(宁愿做)" },
+    { "gp": "gp2", "name": "would rather A than B / would rather not" },
+    { "gp": "gp3", "name": "would sooner(= would rather)" },
+    { "gp": "gp4", "name": "would rather + 某人 + 过去式(委婉愿望)" },
+    { "gp": "gp5", "name": "have sth done / have a look" },
+    { "gp": "gp6", "name": "词汇辨析(handyman/destroy/faucet)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He would rather ___ the fence himself than pay a crew.\"(would rather 后接动词原形)", "stem_cn": "他宁愿自己修篱笆,也不愿雇人。", "options": ["fix", "to fix", "fixing", "fixed"] },
+    { "gp": "gp1", "stem": "\"I'd rather ___ it with my own two hands.\"(would rather 后接动词原形)", "stem_cn": "我宁愿自己亲手来做。", "options": ["do", "to do", "doing", "did"] },
+    { "gp": "gp1", "stem": "\"She would rather ___ at home than go to the party.\"(would rather 后接动词原形)", "stem_cn": "她宁愿待在家里,也不去参加聚会。", "options": ["stay", "to stay", "staying", "stayed"] },
+    { "gp": "gp2", "stem": "\"Tonight I would rather ___ go out at all.\"(表示“宁愿不……”)", "stem_cn": "今晚我宁愿根本不出门。", "options": ["not", "don't", "not to", "no"] },
+    { "gp": "gp2", "stem": "\"He would rather walk five miles ___ take the bus.\"(“宁愿 A 不愿 B”)", "stem_cn": "他宁愿走五英里,也不愿坐公交。", "options": ["than", "then", "that", "to"] },
+    { "gp": "gp2", "stem": "\"Dawson would rather work all day than ___ someone else do it.\"(than 后接动词原形)", "stem_cn": "Dawson 宁愿干一整天,也不愿让别人来做。", "options": ["have", "to have", "having", "has"] },
+    { "gp": "gp3", "stem": "\"I'd ___ do it myself.\"(与 would rather 同义的“宁愿”)", "stem_cn": "我宁愿自己做。", "options": ["sooner", "soon", "sooner than", "more soon"] },
+    { "gp": "gp3", "stem": "\"He would sooner walk ___ wait for a ride.\"(“宁愿 A 不愿 B”)", "stem_cn": "他宁愿走路,也不愿等人来接。", "options": ["than", "then", "that", "as"] },
+    { "gp": "gp3", "stem": "\"She would sooner ___ late than leave a job half done.\"(would sooner 后接动词原形)", "stem_cn": "她宁愿加班到很晚,也不愿把活儿干一半。", "options": ["work", "to work", "working", "worked"] },
+    { "gp": "gp4", "stem": "\"Dawson would rather you ___ his tools alone.\"(would rather + 某人 + 过去式)", "stem_cn": "Dawson 希望你别动他的工具。", "options": ["left", "leave", "to leave", "leaving"] },
+    { "gp": "gp4", "stem": "\"'I'd rather you ___ and learned,' he said.\"(would rather + 某人 + 过去式)", "stem_cn": "“我更愿意你在旁边看着学,”他说。", "options": ["watched", "watch", "to watch", "watching"] },
+    { "gp": "gp4", "stem": "\"I'd rather you ___ that wrench without asking.\"(would rather + 某人,否定用过去式)", "stem_cn": "我希望你别不打招呼就动那把扳手。", "options": ["didn't touch", "don't touch", "not touch", "weren't touch"] },
+    { "gp": "gp5", "stem": "\"Most people have their roofs ___ by a company.\"(have sth done,用过去分词)", "stem_cn": "大多数人请公司来修屋顶。", "options": ["repaired", "repair", "repairing", "to repair"] },
+    { "gp": "gp5", "stem": "\"They had their cars ___ at the city garage.\"(have sth done,用过去分词)", "stem_cn": "他们把车送到城里的修车行去修。", "options": ["fixed", "fix", "fixing", "to fix"] },
+    { "gp": "gp5", "stem": "\"Each morning he liked to have a ___ at his tools.\"(have a ___ = 看一看)", "stem_cn": "每天早上他都爱看看他的工具。", "options": ["look", "seeing", "watching", "sight"] },
+    { "gp": "gp6", "stem": "\"A person who is good at fixing many small things around a house is a ___.\"(“杂修工”用哪个词)", "stem_cn": "擅长修理家里各种小东西的人。", "options": ["handyman", "dancer", "singer", "driver"] },
+    { "gp": "gp6", "stem": "\"To break something completely is to ___ it.\"(“毁坏”用哪个词)", "stem_cn": "把某物彻底破坏就是这个词。", "options": ["destroy", "wash", "paint", "borrow"] },
+    { "gp": "gp6", "stem": "\"The fixture that controls water at a sink is a ___.\"(美语“水龙头”用哪个词)", "stem_cn": "水槽上控制水流的装置(美语)。", "options": ["faucet", "ladder", "basket", "mirror"] }
+  ],
+  "stage6": [
+    { "stem": "remarkable 的意思是:", "options": ["非凡的,了不起的", "普通的", "害怕的", "便宜的"] },
+    { "stem": "hire 的意思是:", "options": ["雇用", "解雇", "购买", "借给"] },
+    { "stem": "promptly 的意思是:", "options": ["迅速地,及时地", "缓慢地", "偶然地", "大声地"] },
+    { "stem": "valiant 的意思是:", "options": ["英勇的,顽强的", "胆小的", "懒惰的", "富有的"] },
+    { "stem": "dedicate 的意思是:", "options": ["献给,题献", "拆除", "隐藏", "出售"] },
+    { "stem": "plumber 的意思是:", "options": ["管道工,水管工", "医生", "教师", "厨师"] }
+  ],
+  "contrast": [
+    { "us": "faucet", "uk": "tap", "note_cn": "水龙头;美语 faucet,英式 tap" },
+    { "us": "wrench", "uk": "spanner", "note_cn": "扳手;美语 wrench,英式 spanner" },
+    { "us": "flashlight", "uk": "torch", "note_cn": "手电筒;美语 flashlight,英式 torch" },
+    { "us": "hardware store", "uk": "ironmonger's", "note_cn": "五金店;美语 hardware store,英式 ironmonger's" }
+  ],
+  "chunks": [
+    { "us": "would rather ... than ...", "ipa": "/wʊd ˈræðər ... ðæn/", "example1": "He would rather fix it himself than pay someone.", "example1_cn": "他宁愿自己修,也不愿花钱雇人。", "example2": "I'd rather stay in than go out tonight.", "example2_cn": "今晚我宁愿待在家里,也不想出门。" },
+    { "us": "would sooner", "ipa": "/wʊd ˈsuːnər/", "example1": "I'd sooner walk than wait for a ride.", "example1_cn": "我宁愿走路,也不愿等人来接。", "example2": "She'd sooner do it herself.", "example2_cn": "她宁愿自己来做。" },
+    { "us": "have sth done", "ipa": "/hæv ˈsʌmθɪŋ dʌn/", "example1": "They have their roof repaired every spring.", "example1_cn": "他们每年春天都请人修屋顶。", "example2": "I had my car fixed yesterday.", "example2_cn": "我昨天把车送去修了。" },
+    { "us": "with one's own two hands", "ipa": "/wɪð wʌnz oʊn tuː hændz/", "example1": "He built the fence with his own two hands.", "example1_cn": "他亲手把篱笆搭了起来。", "example2": "I made this with my own two hands.", "example2_cn": "这是我亲手做的。" }
+  ],
+  "stage7_cloze": {
+    "context": "Old Mr. Dawson would rather ___1___ everything himself. When a storm destroyed his fence, he would sooner rebuild it ___2___ hire a crew. Unlike his neighbors, who had their roofs ___3___ by companies, Dawson worked with his own hands. 'I'd rather you ___4___ my tools alone,' he'd tell the young helpers with a smile.",
+    "blanks": [
+      { "blank_no": 1, "options": ["fix", "to fix", "fixing", "fixed"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["than", "then", "that", "as"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["repaired", "repair", "repairing", "to repair"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["left", "leave", "to leave", "leaving"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did Dawson refuse his neighbors' offer to hire a crew?", "options": ["He would rather fix the fence himself", "He had no money", "He was out of town", "He disliked his neighbors"] },
+    { "stem": "What did most townspeople do that Dawson never did?", "options": ["They had their roofs and cars fixed by companies", "They built their own houses", "They moved away to the city", "They sold their old tools"] },
+    { "stem": "How did the town honor Dawson in the end?", "options": ["They dedicated a plaque to his memory", "They gave him a large sum of money", "They built him a new house", "They named a river after him"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我宁愿自己动手,也不愿雇人\"(would rather ... than):", "options": ["I'd rather do it myself than hire someone.", "I'd rather do it myself than to hire someone.", "I'd rather doing it myself than hire someone.", "I'd rather did it myself than hire someone."] },
+    { "stem": "你想说\"我希望你别动我的工具\"(would rather + 某人 + 过去式):", "options": ["I'd rather you didn't touch my tools.", "I'd rather you don't touch my tools.", "I'd rather you not touch my tools.", "I'd rather you won't touch my tools."] },
+    { "stem": "你想说\"他们请公司来修屋顶\"(have sth done):", "options": ["They had their roof repaired by a company.", "They had their roof repair by a company.", "They had repaired their roof by a company.", "They had their roof repairing by a company."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "remarkable 的意思是:", "options": ["非凡的,了不起的", "普通的", "害怕的", "便宜的"] },
+    { "kind": "vocab", "stem": "valiant 的意思是:", "options": ["英勇的,顽强的", "胆小的", "懒惰的", "富有的"] },
+    { "kind": "grammar", "stem": "\"He would rather ___ it himself than pay a crew.\"(would rather 后接动词原形)", "stem_cn": "他宁愿自己做,也不愿花钱雇人。", "options": ["do", "to do", "doing", "did"] },
+    { "kind": "grammar", "stem": "\"I'd rather you ___ my tools alone.\"(would rather + 某人 + 过去式)", "stem_cn": "我希望你别动我的工具。", "options": ["left", "leave", "to leave", "leaving"] },
+    { "kind": "scenario", "stem": "\"would rather ... than ...\" 的意思是:", "options": ["宁愿……也不愿……", "越……越……", "既……又……", "要么……要么……"] },
+    { "kind": "scenario", "stem": "\"have sth done\" 的意思是:", "options": ["(请人)把某事做好", "亲自做某事", "忘记做某事", "拒绝做某事"] },
+    { "kind": "reading", "stem": "Why did Dawson rebuild the fence himself?", "options": ["He would rather not have it done by others", "He could not afford a crew", "The crew never came", "The storm was still going on"], "passage": true },
+    { "kind": "reading", "stem": "What did the town do after his funeral?", "options": ["They dedicated a plaque to his memory", "They sold all his tools", "They forgot about him", "They closed the town hall"], "passage": true },
+    { "kind": "listening", "stem": "What did Dawson say when a young man offered to help?", "options": ["'I'd rather you watched and learned'", "'Please do it for me'", "'Go home now'", "'I'll pay you well'"], "audio": true },
+    { "kind": "listening", "stem": "How did Dawson prefer to travel short distances?", "options": ["He would sooner walk than have someone drive him", "He always took the bus", "He rode a horse", "He asked a neighbor to drive"], "audio": true }
+  ]
+}

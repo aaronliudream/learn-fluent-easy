@@ -1,0 +1,131 @@
+{
+  "id": "am2_l96",
+  "unit_no": 12,
+  "lesson_no": 96,
+  "title_en": "What's It Really About?",
+  "title_cn": "它到底讲的是什么?",
+  "grammar_focus": "复习 KS22/46/70 形容词/副词 + 介词的固定搭配综合(收官包·方案B换情节):interested in、good at、surprised at、fond of、proud of、afraid of、full of、famous for、grateful to…for、curious about、bored with、pleased with、excited about、keen on、worth doing 等固定搭配的辨析",
+  "scene": "我姐姐特别喜欢看悬疑小说,也很擅长猜结局。她因为能一天读完一整本书而出名。“我喜欢那种充满意外的故事,”她说。她为自己在最后一页之前就解开谜题而自豪。“别害怕厚厚的书,”她对我说,“要对它们保持好奇。”她读得那么快,我很吃惊。“我很感激作者构思了这么巧妙的情节,”她说。她读书从不厌倦——每一类故事她都喜欢。“一本好书值得读两遍,”她这样认为。现在,我也迫不及待想开始读那本让她爱不释手的书了。",
+  "grammar_card": {
+    "title": "复习 KS22/46/70 形容词/副词 + 介词的固定搭配",
+    "intro": "很多形容词、副词后面要跟固定的介词,搭配是记住的,不能随便换。本课集中复习:①+ in / at——interested in(对……感兴趣)、good at(擅长)、surprised at(对……感到惊讶);②+ of——fond of(喜爱)、proud of(为……自豪)、afraid of(害怕)、full of(充满);③+ for / to——famous for(因……出名)、grateful to sb for sth(因某事感激某人);④+ about / with / on——curious about(对……好奇)、bored with(厌倦)、pleased with(对……满意)、excited about(对……兴奋)、keen on(热衷于);⑤worth + doing(值得做)。",
+    "table": {
+      "headers": ["搭配", "例子"],
+      "rows": [
+        ["+ in / at", "interested in books / good at guessing / surprised at how fast"],
+        ["+ of", "fond of stories / proud of herself / afraid of / full of"],
+        ["+ for / to", "famous for reading fast / grateful to the author for the plot"],
+        ["+ about / with / on", "curious about / bored with / pleased with / keen on"],
+        ["worth + doing", "A good book is worth reading twice."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语“数学”说 math(英式 maths);“假期”说 vacation(英式 holiday)。本课已按美语写。", "mark": "math / vacation" },
+      { "rule": "形容词后的介词是固定搭配:interested in、good at、fond of、famous for、grateful to…for、keen on、curious about、pleased with;worth 后接动名词(worth reading)。", "mark": "固定搭配" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is the sister interested in?",
+    "options": ["Mystery novels", "Cooking shows", "Sports games", "Old maps"],
+    "answer_index": 0
+  },
+  "passage": "My sister is really interested in mystery novels and good at guessing the ending. She is famous for finishing a whole book in one day. \"I'm fond of stories that are full of surprises,\" she says. She was proud of herself for solving the puzzle before the last page. \"Don't be afraid of long books,\" she tells me. \"Be curious about them.\" I was surprised at how quickly she read. \"I'm grateful to the author for such a clever plot,\" she said. She is never bored with reading — she is keen on every kind of story. \"A good book is worth reading twice,\" she believes. Now I'm excited about starting the one she is so pleased with.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "My sister is really interested in mystery novels and good at guessing the ending. She is famous for finishing a whole book in one day.", "text_cn": "我姐姐特别喜欢看悬疑小说,也很擅长猜结局。她因为能一天读完一整本书而出名。" },
+    { "seq": 2, "speaker": null, "text_en": "\"I'm fond of stories that are full of surprises,\" she says. She was proud of herself for solving the puzzle before the last page.", "text_cn": "“我喜欢那种充满意外的故事,”她说。她为自己在最后一页之前就解开谜题而自豪。" },
+    { "seq": 3, "speaker": null, "text_en": "\"Don't be afraid of long books,\" she tells me. \"Be curious about them.\" I was surprised at how quickly she read.", "text_cn": "“别害怕厚厚的书,”她对我说,“要对它们保持好奇。”她读得那么快,我很吃惊。" },
+    { "seq": 4, "speaker": null, "text_en": "\"I'm grateful to the author for such a clever plot,\" she said. She is never bored with reading — she is keen on every kind of story.", "text_cn": "“我很感激作者构思了这么巧妙的情节,”她说。她读书从不厌倦——每一类故事她都喜欢。" },
+    { "seq": 5, "speaker": null, "text_en": "\"A good book is worth reading twice,\" she believes. Now I'm excited about starting the one she is so pleased with.", "text_cn": "“一本好书值得读两遍,”她这样认为。现在,我也迫不及待想开始读那本让她爱不释手的书了。" }
+  ],
+  "words": [
+    { "word": "interested in", "ipa": "/ˈɪntrəstɪd ɪn/", "pos": "phr", "meaning_cn": "对……感兴趣", "example": "interested in mystery novels" },
+    { "word": "mystery", "ipa": "/ˈmɪstəri/", "pos": "n", "meaning_cn": "悬疑,谜", "example": "mystery novels" },
+    { "word": "guess", "ipa": "/ɡes/", "pos": "v", "meaning_cn": "猜测", "example": "good at guessing the ending" },
+    { "word": "ending", "ipa": "/ˈendɪŋ/", "pos": "n", "meaning_cn": "结局,结尾", "example": "guessing the ending" },
+    { "word": "fond of", "ipa": "/fɑːnd əv/", "pos": "phr", "meaning_cn": "喜爱", "example": "fond of stories full of surprises" },
+    { "word": "surprise", "ipa": "/sərˈpraɪz/", "pos": "n", "meaning_cn": "惊喜,意外", "example": "stories that are full of surprises" },
+    { "word": "proud of", "ipa": "/praʊd əv/", "pos": "phr", "meaning_cn": "为……自豪", "example": "proud of herself" },
+    { "word": "puzzle", "ipa": "/ˈpʌzl/", "pos": "n", "meaning_cn": "谜题,难题", "example": "solving the puzzle" },
+    { "word": "curious", "ipa": "/ˈkjʊriəs/", "pos": "adj", "meaning_cn": "好奇的", "example": "Be curious about them." },
+    { "word": "keen on", "ipa": "/kiːn ɑːn/", "pos": "phr", "meaning_cn": "热衷于,喜爱", "example": "keen on every kind of story" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "+ in / at(interested in / good at / surprised at)" },
+    { "gp": "gp2", "name": "+ of(fond of / proud of / afraid of)" },
+    { "gp": "gp3", "name": "+ for / to(famous for / grateful to…for)" },
+    { "gp": "gp4", "name": "+ about / with(curious about / bored with / excited about)" },
+    { "gp": "gp5", "name": "keen on / pleased with / worth doing 等综合" },
+    { "gp": "gp6", "name": "词汇辨析(mystery / puzzle / plot)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"My sister is really interested ___ mystery novels.\"(固定搭配:对……感兴趣)", "stem_cn": "我姐姐对悬疑小说很感兴趣。", "options": ["in", "on", "for", "of"] },
+    { "gp": "gp1", "stem": "\"She is good ___ guessing the ending.\"(固定搭配:擅长)", "stem_cn": "她擅长猜结局。", "options": ["at", "in", "for", "with"] },
+    { "gp": "gp1", "stem": "\"I was surprised ___ how quickly she read.\"(固定搭配:对……感到惊讶)", "stem_cn": "她读得那么快,我很吃惊。", "options": ["at", "of", "for", "in"] },
+    { "gp": "gp2", "stem": "\"'I'm fond ___ stories full of surprises,' she says.\"(固定搭配:喜爱)", "stem_cn": "“我喜欢充满意外的故事,”她说。", "options": ["of", "in", "at", "for"] },
+    { "gp": "gp2", "stem": "\"She was proud ___ herself for solving the puzzle.\"(固定搭配:为……自豪)", "stem_cn": "她为自己解开谜题而自豪。", "options": ["of", "at", "with", "for"] },
+    { "gp": "gp2", "stem": "\"'Don't be afraid ___ long books,' she tells me.\"(固定搭配:害怕)", "stem_cn": "“别害怕厚厚的书,”她对我说。", "options": ["of", "at", "for", "with"] },
+    { "gp": "gp3", "stem": "\"She is famous ___ finishing a whole book in one day.\"(固定搭配:因……出名)", "stem_cn": "她因为能一天读完一整本书而出名。", "options": ["for", "of", "in", "at"] },
+    { "gp": "gp3", "stem": "\"'I'm grateful ___ the author for such a clever plot,' she said.\"(固定搭配:感激某人)", "stem_cn": "“我很感激作者,”她说。", "options": ["to", "for", "of", "with"] },
+    { "gp": "gp3", "stem": "\"I'm grateful to the author ___ such a clever plot.\"(固定搭配:因某事而感激)", "stem_cn": "我因这么巧妙的情节而感激作者。", "options": ["for", "to", "of", "at"] },
+    { "gp": "gp4", "stem": "\"'Be curious ___ long books,' she says.\"(固定搭配:对……好奇)", "stem_cn": "“要对厚厚的书保持好奇,”她说。", "options": ["about", "of", "at", "for"] },
+    { "gp": "gp4", "stem": "\"She is never bored ___ reading.\"(固定搭配:对……厌倦)", "stem_cn": "她读书从不厌倦。", "options": ["with", "of", "at", "for"] },
+    { "gp": "gp4", "stem": "\"Now I'm excited ___ starting a new book.\"(固定搭配:对……兴奋)", "stem_cn": "现在我很兴奋要开始读一本新书。", "options": ["about", "of", "at", "in"] },
+    { "gp": "gp5", "stem": "\"She is keen ___ every kind of story.\"(固定搭配:热衷于)", "stem_cn": "每一类故事她都喜欢。", "options": ["on", "at", "of", "for"] },
+    { "gp": "gp5", "stem": "\"She is very pleased ___ her new book.\"(固定搭配:对……满意)", "stem_cn": "她对自己的新书很满意。", "options": ["with", "of", "at", "for"] },
+    { "gp": "gp5", "stem": "\"A story full ___ surprises is fun to read.\"(固定搭配:充满)", "stem_cn": "充满意外的故事读起来很有意思。", "options": ["of", "with", "in", "at"] },
+    { "gp": "gp6", "stem": "\"She loves reading ___ stories with hidden clues.\"(悬疑、推理用哪个词)", "stem_cn": "她喜欢读带有隐藏线索的悬疑故事。", "options": ["mystery", "cooking", "sports", "travel"] },
+    { "gp": "gp6", "stem": "\"She solved the ___ before the last page.\"(谜题用哪个词)", "stem_cn": "她在最后一页之前就解开了谜题。", "options": ["puzzle", "dinner", "ticket", "garden"] },
+    { "gp": "gp6", "stem": "\"The clever ___ of the story surprised everyone.\"(情节用哪个词)", "stem_cn": "故事巧妙的情节让所有人都惊讶。", "options": ["plot", "weather", "price", "weight"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"数学\"说:", "options": ["math", "maths", "sums", "number-work"] },
+    { "stem": "美语里\"假期\"说:", "options": ["vacation", "holiday", "days-off", "break"] },
+    { "stem": "mystery 的意思是:", "options": ["悬疑,谜", "喜剧", "历史", "诗歌"] },
+    { "stem": "curious 的意思是:", "options": ["好奇的", "厌倦的", "害怕的", "生气的"] },
+    { "stem": "ending 的意思是:", "options": ["结局,结尾", "开头", "封面", "目录"] },
+    { "stem": "guess 的意思是:", "options": ["猜测", "忘记", "出售", "打碎"] }
+  ],
+  "contrast": [
+    { "us": "math", "uk": "maths", "note_cn": "数学;美语 math,英式 maths" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" }
+  ],
+  "chunks": [
+    { "us": "interested in", "ipa": "/ˈɪntrəstɪd ɪn/", "example1": "My sister is interested in mystery novels.", "example1_cn": "我姐姐对悬疑小说很感兴趣。", "example2": "He is interested in science.", "example2_cn": "他对科学感兴趣。" },
+    { "us": "good at", "ipa": "/ɡʊd æt/", "example1": "She is good at guessing the ending.", "example1_cn": "她擅长猜结局。", "example2": "I'm not very good at math.", "example2_cn": "我数学不太好。" },
+    { "us": "famous for", "ipa": "/ˈfeɪməs fɔːr/", "example1": "She is famous for reading fast.", "example1_cn": "她因读得快而出名。", "example2": "The town is famous for its old bridge.", "example2_cn": "这个镇因它的老桥而闻名。" },
+    { "us": "worth reading", "ipa": "/wɜːrθ ˈriːdɪŋ/", "example1": "A good book is worth reading twice.", "example1_cn": "一本好书值得读两遍。", "example2": "This article is worth reading.", "example2_cn": "这篇文章值得一读。" }
+  ],
+  "stage7_cloze": {
+    "context": "My sister is interested ___1___ mystery novels and good ___2___ guessing the ending. She is famous ___3___ reading fast. \"Don't be afraid ___4___ long books,\" she says.",
+    "blanks": [
+      { "blank_no": 1, "options": ["in", "on", "for", "of"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["at", "in", "for", "with"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["for", "of", "in", "at"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["of", "at", "for", "with"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What is the sister interested in?", "options": ["Mystery novels", "Cooking shows", "Sports", "Old maps"] },
+    { "stem": "What is she famous for?", "options": ["Finishing a whole book in one day", "Winning races", "Painting well", "Cooking pies"] },
+    { "stem": "What does she say about long books?", "options": ["Don't be afraid of them; be curious", "Never read them", "They are boring", "They are too hard"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我姐姐对悬疑小说很感兴趣\"(固定搭配 interested in):", "options": ["My sister is really interested in mystery novels.", "My sister is really interested on mystery novels.", "My sister is really interested of mystery novels.", "My sister is really interested for mystery novels."] },
+    { "stem": "你想说\"她擅长猜结局\"(固定搭配 good at):", "options": ["She is good at guessing the ending.", "She is good in guessing the ending.", "She is good on guessing the ending.", "She is good for guessing the ending."] },
+    { "stem": "你想说\"一本好书值得读两遍\"(固定搭配 worth + 动名词):", "options": ["A good book is worth reading twice.", "A good book is worth to read twice.", "A good book is worth read twice.", "A good book is worth for reading twice."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "mystery 的意思是:", "options": ["悬疑,谜", "喜剧", "历史", "诗歌"] },
+    { "kind": "vocab", "stem": "puzzle 的意思是:", "options": ["谜题,难题", "礼物", "工具", "地图"] },
+    { "kind": "grammar", "stem": "\"My sister is interested ___ mystery novels.\"(固定搭配)", "stem_cn": "我姐姐对悬疑小说很感兴趣。", "options": ["in", "on", "for", "of"] },
+    { "kind": "grammar", "stem": "\"She is good ___ guessing the ending.\"(固定搭配)", "stem_cn": "她擅长猜结局。", "options": ["at", "in", "for", "with"] },
+    { "kind": "scenario", "stem": "\"worth reading\" 的意思是:", "options": ["值得一读", "读得起", "正在读", "读过了"] },
+    { "kind": "scenario", "stem": "\"keen on\" 的意思是:", "options": ["热衷于,喜爱", "靠近", "依赖", "反对"] },
+    { "kind": "reading", "stem": "What is the sister good at?", "options": ["Guessing the ending", "Writing books", "Drawing maps", "Cooking"], "passage": true },
+    { "kind": "reading", "stem": "What is the sister famous for?", "options": ["Finishing a whole book in one day", "Solving math problems", "Winning contests", "Telling jokes"], "passage": true },
+    { "kind": "listening", "stem": "What kind of novels is the sister interested in?", "options": ["Mystery novels", "History books", "Poetry", "Comics"], "audio": true },
+    { "kind": "listening", "stem": "What does she say about a good book?", "options": ["It's worth reading twice", "It's too long", "It's boring", "It's easy"], "audio": true }
+  ]
+}

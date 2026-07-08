@@ -1,0 +1,135 @@
+{
+  "id": "am2_l77",
+  "unit_no": 10,
+  "lesson_no": 77,
+  "title_en": "The Oldest Bridge in Town",
+  "title_cn": "镇上最老的桥",
+  "grammar_focus": "KS5/29/53 一般过去时 / 现在完成时 / 现在完成进行时 三时态对比(教材 L77 Key structures,方案B换情节包):过去某时完成用一般过去(was built/appeared/discovered)、影响持续到现在用现在完成(has stood/have crossed/has remained/has been repaired)、持续动作强调过程用现在完成进行(have been examining/have been working);辅以时间状语 for(时段)/ since(时间点)/ ago(时段+ago)",
+  "scene": "专家们已经对镇上最老的桥考察了六个月。这座桥建于1850年,170多年前。从那时起它就横跨在河上,成千上万的人从上面走过。最近,古老的石头上出现了裂缝,于是市里决定仔细研究它。专家们发现,最初的桥有一部分是木制的。“我们从去年春天起一直在研究它,”一位专家说,“我们已经了解了很多关于它当初是怎么建造的。”木制部分很久以前就被换成了石头,但设计几个世纪以来一直没变。这座桥修过很多次,但它看起来几乎和1850年时一样。如今它仍是镇上最古老的建筑之一——好几代人都喜爱它。",
+  "grammar_card": {
+    "title": "KS5/29/53 一般过去 / 现在完成 / 现在完成进行 + for/since/ago",
+    "intro": "本课对比三种时态:①一般过去时——过去某个时间点完成的事(The bridge was built in 1850);②现在完成时——过去发生、影响或状态延续到现在(It has stood here since 1850);③现在完成进行时——从过去一直做到现在、强调过程(Experts have been examining it for six months)。时间词:for + 一段时间(for six months);since + 时间点(since 1850);一段时间 + ago(170 years ago)。",
+    "table": {
+      "headers": ["时态/时间词", "例子"],
+      "rows": [
+        ["一般过去(过去某点)", "The bridge was built in 1850."],
+        ["现在完成(延续到今)", "It has stood over the river since 1850."],
+        ["现在完成进行(强调过程)", "Experts have been examining it for six months."],
+        ["for + 时段 / since + 时间点", "for centuries / since last spring"],
+        ["时段 + ago", "It was built 170 years ago."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语里“人行道”说 sidewalk(英式 pavement)、“市中心”说 downtown(英式 city centre);本课已按美语写。", "mark": "sidewalk/downtown" },
+      { "rule": "for 接“一段时间”(for six months);since 接“时间点/起点”(since 1850);“一段时间 + ago”表示“多久以前”(170 years ago)。三者别混。", "mark": "for/since/ago" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How long have experts been examining the bridge?",
+    "options": ["For six months", "For six years", "For six weeks", "For sixty years"],
+    "answer_index": 0
+  },
+  "passage": "Experts have been examining the oldest bridge in our town for six months. The bridge was built in 1850, more than 170 years ago. It has stood over the river since then, and thousands of people have crossed it. Recently, cracks appeared in the old stone, so the city decided to study it carefully. The experts discovered that the original bridge was partly wooden. \"We have been working on this since last spring,\" one expert said. \"We have learned a lot about how it was made.\" The wooden parts were replaced with stone long ago, but the design has remained the same for centuries. The bridge has been repaired many times, yet it still looks almost the same as it did in 1850. Today it remains one of the oldest structures in town — and people have loved it for generations.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Experts have been examining the oldest bridge in our town for six months. The bridge was built in 1850, more than 170 years ago.", "text_cn": "专家们已经对镇上最老的桥考察了六个月。这座桥建于1850年,170多年前。" },
+    { "seq": 2, "speaker": null, "text_en": "It has stood over the river since then, and thousands of people have crossed it. Recently, cracks appeared in the old stone, so the city decided to study it carefully.", "text_cn": "从那时起它就横跨在河上,成千上万的人从上面走过。最近,古老的石头上出现了裂缝,于是市里决定仔细研究它。" },
+    { "seq": 3, "speaker": null, "text_en": "The experts discovered that the original bridge was partly wooden. \"We have been working on this since last spring,\" one expert said. \"We have learned a lot about how it was made.\"", "text_cn": "专家们发现,最初的桥有一部分是木制的。“我们从去年春天起一直在研究它,”一位专家说,“我们已经了解了很多关于它当初是怎么建造的。”" },
+    { "seq": 4, "speaker": null, "text_en": "The wooden parts were replaced with stone long ago, but the design has remained the same for centuries.", "text_cn": "木制部分很久以前就被换成了石头,但设计几个世纪以来一直没变。" },
+    { "seq": 5, "speaker": null, "text_en": "The bridge has been repaired many times, yet it still looks almost the same as it did in 1850. Today it remains one of the oldest structures in town — and people have loved it for generations.", "text_cn": "这座桥修过很多次,但它看起来几乎和1850年时一样。如今它仍是镇上最古老的建筑之一——好几代人都喜爱它。" }
+  ],
+  "words": [
+    { "word": "examine", "ipa": "/ɪɡˈzæmɪn/", "pos": "v", "meaning_cn": "检查,考察", "example": "Experts have been examining the bridge" },
+    { "word": "discover", "ipa": "/dɪsˈkʌvər/", "pos": "v", "meaning_cn": "发现", "example": "The experts discovered that the bridge was partly wooden" },
+    { "word": "expert", "ipa": "/ˈekspɜːrt/", "pos": "n", "meaning_cn": "专家", "example": "one expert said" },
+    { "word": "original", "ipa": "/əˈrɪdʒənl/", "pos": "adj", "meaning_cn": "最初的,原来的", "example": "the original bridge was partly wooden" },
+    { "word": "stone", "ipa": "/stoʊn/", "pos": "n", "meaning_cn": "石头", "example": "cracks appeared in the old stone" },
+    { "word": "repair", "ipa": "/rɪˈper/", "pos": "v", "meaning_cn": "修理", "example": "The bridge has been repaired many times" },
+    { "word": "condition", "ipa": "/kənˈdɪʃn/", "pos": "n", "meaning_cn": "状况", "example": "the bridge is now in good condition" },
+    { "word": "century", "ipa": "/ˈsentʃəri/", "pos": "n", "meaning_cn": "世纪", "example": "the design has remained the same for centuries" },
+    { "word": "recently", "ipa": "/ˈriːsntli/", "pos": "adv", "meaning_cn": "最近", "example": "Recently, cracks appeared in the old stone" },
+    { "word": "wooden", "ipa": "/ˈwʊdn/", "pos": "adj", "meaning_cn": "木制的", "example": "the original bridge was partly wooden" },
+    { "word": "replace", "ipa": "/rɪˈpleɪs/", "pos": "v", "meaning_cn": "替换,取代", "example": "The wooden parts were replaced with stone" },
+    { "word": "remain", "ipa": "/rɪˈmeɪn/", "pos": "v", "meaning_cn": "保持,仍然是", "example": "the design has remained the same" },
+    { "word": "ancient", "ipa": "/ˈeɪnʃənt/", "pos": "adj", "meaning_cn": "古老的", "example": "one of the ancient structures in town" },
+    { "word": "structure", "ipa": "/ˈstrʌktʃər/", "pos": "n", "meaning_cn": "结构,建筑物", "example": "one of the oldest structures in town" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般过去时(过去某时完成)" },
+    { "gp": "gp2", "name": "现在完成时(延续/影响到今)" },
+    { "gp": "gp3", "name": "现在完成进行时(强调过程)" },
+    { "gp": "gp4", "name": "for(时段) vs since(时间点)" },
+    { "gp": "gp5", "name": "ago 与时态被动对比(ago / were replaced / has been repaired)" },
+    { "gp": "gp6", "name": "词汇辨析 condition / original / structure" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The bridge ___ in 1850.\"(过去某年建成:一般过去被动)", "stem_cn": "这座桥建于1850年。", "options": ["was built", "has been built", "is built", "was building"] },
+    { "gp": "gp1", "stem": "\"Recently, cracks ___ in the old stone.\"(出现了:一般过去)", "stem_cn": "最近,古老的石头上出现了裂缝。", "options": ["appeared", "have appeared", "were appearing", "appear"] },
+    { "gp": "gp1", "stem": "\"The experts ___ that the original bridge was partly wooden.\"(发现:一般过去)", "stem_cn": "专家们发现,最初的桥有一部分是木制的。", "options": ["discovered", "have discovered", "were discovering", "discover"] },
+    { "gp": "gp2", "stem": "\"The bridge ___ over the river since 1850.\"(一直矗立、延续至今:现在完成)", "stem_cn": "自1850年以来,这座桥一直横跨在河上。", "options": ["has stood", "stood", "is standing", "had stood"] },
+    { "gp": "gp2", "stem": "\"Thousands of people ___ it over the years.\"(走过、经历延续至今:现在完成)", "stem_cn": "这些年来,成千上万的人从桥上走过。", "options": ["have crossed", "crossed", "are crossing", "had crossed"] },
+    { "gp": "gp2", "stem": "\"The design ___ the same for centuries.\"(一直保持不变:现在完成)", "stem_cn": "几个世纪以来,设计一直没变。", "options": ["has remained", "remained", "is remaining", "had remained"] },
+    { "gp": "gp3", "stem": "\"Experts ___ the old bridge for six months.\"(一直在考察、强调过程:现在完成进行)", "stem_cn": "专家们已经对这座老桥考察了六个月。", "options": ["have been examining", "examined", "are examining", "have examined"] },
+    { "gp": "gp3", "stem": "\"'We ___ on this since last spring,' one expert said.\"(一直在研究:现在完成进行)", "stem_cn": "“我们从去年春天起一直在研究它,”一位专家说。", "options": ["have been working", "worked", "are working", "have worked"] },
+    { "gp": "gp3", "stem": "\"The city ___ ways to protect the bridge lately.\"(最近一直在寻找:现在完成进行)", "stem_cn": "最近,市里一直在想办法保护这座桥。", "options": ["has been looking for", "looked for", "is looking for", "has looked for"] },
+    { "gp": "gp4", "stem": "\"Experts have examined the bridge ___ six months.\"(接一段时间用哪个词)", "stem_cn": "专家考察这座桥有六个月了。", "options": ["for", "since", "ago", "at"] },
+    { "gp": "gp4", "stem": "\"The bridge has stood here ___ 1850.\"(接时间点用哪个词)", "stem_cn": "这座桥自1850年起就矗立在这里。", "options": ["since", "for", "ago", "from"] },
+    { "gp": "gp4", "stem": "\"'We have been working on it ___ last spring,' he said.\"(接时间起点用哪个词)", "stem_cn": "“我们从去年春天起就一直在研究它。”", "options": ["since", "for", "ago", "in"] },
+    { "gp": "gp5", "stem": "\"The bridge was built more than 170 years ___.\"(“多久以前”用哪个词)", "stem_cn": "这座桥建于170多年前。", "options": ["ago", "before", "since", "for"] },
+    { "gp": "gp5", "stem": "\"The wooden parts ___ with stone long ago.\"(很久前被替换:一般过去被动)", "stem_cn": "木制部分很久以前就被换成了石头。", "options": ["were replaced", "have been replaced", "are replaced", "were replacing"] },
+    { "gp": "gp5", "stem": "\"The bridge ___ many times, yet it still looks the same.\"(修过很多次、延续至今:现在完成被动)", "stem_cn": "这座桥修过很多次,但看起来还是老样子。", "options": ["has been repaired", "was repairing", "is repairing", "had repaired"] },
+    { "gp": "gp6", "stem": "\"After the repairs, the old bridge is now in good ___.\"(状况用哪个词)", "stem_cn": "修好后,这座老桥现在状况良好。", "options": ["condition", "century", "structure", "section"] },
+    { "gp": "gp6", "stem": "\"The experts studied the ___ design of the bridge.\"(最初的用哪个词)", "stem_cn": "专家研究了这座桥最初的设计。", "options": ["original", "final", "fake", "modern"] },
+    { "gp": "gp6", "stem": "\"It remains one of the oldest ___ in town.\"(建筑物用哪个词)", "stem_cn": "它仍是镇上最古老的建筑之一。", "options": ["structures", "experts", "stones", "centuries"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"人行道\"常说:", "options": ["sidewalk", "pavement", "walk-road", "foot-path"] },
+    { "stem": "美语里\"市中心\"常说:", "options": ["downtown", "city centre", "town-middle", "central-city"] },
+    { "stem": "examine 的意思是:", "options": ["检查,考察", "建造", "拆除", "出售"] },
+    { "stem": "ancient 的意思是:", "options": ["古老的", "崭新的", "巨大的", "廉价的"] },
+    { "stem": "replace 的意思是:", "options": ["替换,取代", "保留", "丢弃", "修理"] },
+    { "stem": "structure 的意思是:", "options": ["结构,建筑物", "河流", "道路", "广场"] }
+  ],
+  "contrast": [
+    { "us": "sidewalk", "uk": "pavement", "note_cn": "人行道;美语 sidewalk,英式 pavement" },
+    { "us": "downtown", "uk": "city centre", "note_cn": "市中心;美语 downtown,英式 city centre" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" }
+  ],
+  "chunks": [
+    { "us": "have been doing (for/since)", "ipa": "/hæv bɪn ˈduːɪŋ/", "example1": "Experts have been examining the bridge for six months.", "example1_cn": "专家们对这座桥考察了六个月。", "example2": "She has been studying English since 2020.", "example2_cn": "她从2020年起一直在学英语。" },
+    { "us": "stand over the river", "ipa": "/stænd ˈoʊvər ðə ˈrɪvər/", "example1": "The bridge has stood over the river since 1850.", "example1_cn": "这座桥自1850年起就横跨在河上。", "example2": "A tall tower stands over the harbor.", "example2_cn": "一座高塔矗立在港口上方。" },
+    { "us": "be replaced with", "ipa": "/bi rɪˈpleɪst wɪð/", "example1": "The wooden parts were replaced with stone.", "example1_cn": "木制部分被换成了石头。", "example2": "The old pipes were replaced with new ones.", "example2_cn": "旧管子换成了新的。" },
+    { "us": "remain the same", "ipa": "/rɪˈmeɪn ðə seɪm/", "example1": "The design has remained the same for centuries.", "example1_cn": "几个世纪以来设计一直没变。", "example2": "His opinion remained the same after the talk.", "example2_cn": "谈完之后他的看法依旧没变。" }
+  ],
+  "stage7_cloze": {
+    "context": "The old bridge ___1___ in 1850, more than 170 years ago. It ___2___ over the river ever since. Experts ___3___ studying it very carefully. They say its design has remained the same ___4___ centuries.",
+    "blanks": [
+      { "blank_no": 1, "options": ["was built", "has built", "is built", "was building"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["has stood", "stood", "is standing", "had stood"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["have been", "were", "are", "had been"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["for", "since", "ago", "at"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What have the experts been examining?", "options": ["The oldest bridge in town", "A new office tower", "An old library", "A river dam"] },
+    { "stem": "When was the bridge built?", "options": ["In 1850, more than 170 years ago", "Last spring", "In 1950", "Only six months ago"] },
+    { "stem": "What did the experts discover about the original bridge?", "options": ["It was partly made of wood", "It was never finished", "It was built by a king", "It had no stone at all"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"专家们已经对这座桥考察了六个月\"(现在完成进行时,强调持续过程):", "options": ["Experts have been examining the bridge for six months.", "Experts examined the bridge for six months.", "Experts are examining the bridge for six months.", "Experts have examined the bridge six months ago."] },
+    { "stem": "你想说\"这座桥自1850年起就矗立在这里\"(现在完成 + since 时间点):", "options": ["The bridge has stood here since 1850.", "The bridge stood here since 1850.", "The bridge has stood here for 1850.", "The bridge is standing here since 1850."] },
+    { "stem": "你想说\"这座桥建于170多年前\"(时段 + ago):", "options": ["The bridge was built more than 170 years ago.", "The bridge was built more than 170 years since.", "The bridge was built more than 170 years for.", "The bridge has been built more than 170 years ago."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "examine 的意思是:", "options": ["检查,考察", "建造", "拆除", "出售"] },
+    { "kind": "vocab", "stem": "structure 的意思是:", "options": ["结构,建筑物", "河流", "道路", "广场"] },
+    { "kind": "grammar", "stem": "\"The bridge ___ in 1850.\"(过去某年建成:一般过去被动)", "stem_cn": "这座桥建于1850年。", "options": ["was built", "has been built", "is built", "was building"] },
+    { "kind": "grammar", "stem": "\"Experts ___ the bridge for six months.\"(强调持续过程:现在完成进行)", "stem_cn": "专家们对这座桥考察了六个月。", "options": ["have been examining", "examined", "are examining", "have examined"] },
+    { "kind": "scenario", "stem": "\"The bridge has stood here ___ 1850.\" 空里应填:", "options": ["since", "for", "ago", "at"] },
+    { "kind": "scenario", "stem": "\"remain the same\" 的意思是:", "options": ["保持不变", "变得更好", "彻底改变", "被拆掉"] },
+    { "kind": "reading", "stem": "Why did the city decide to study the bridge carefully?", "options": ["Because cracks recently appeared in the old stone", "Because it was going to be torn down", "Because a new bridge was needed", "Because it had been sold"], "passage": true },
+    { "kind": "reading", "stem": "What was surprising about the original bridge?", "options": ["Part of it was originally made of wood, later replaced with stone", "It was built in a single day", "It was made entirely of glass", "It had never been repaired"], "passage": true },
+    { "kind": "listening", "stem": "How long have experts been examining the bridge?", "options": ["For six months", "For six years", "For six days", "For sixty years"], "audio": true },
+    { "kind": "listening", "stem": "Is the bridge still standing today?", "options": ["Yes — it remains one of the oldest structures in town", "No — it collapsed last year", "No — it was torn down", "Yes — but only half of it"], "audio": true }
+  ]
+}

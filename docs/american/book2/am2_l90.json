@@ -1,0 +1,131 @@
+{
+  "id": "am2_l90",
+  "unit_no": 12,
+  "lesson_no": 90,
+  "title_en": "What's for Dinner?",
+  "title_cn": "晚饭吃什么?",
+  "grammar_focus": "复习 KS17/41/65 情态表达(方案B换情节包):must(必须;对现在的肯定推测)、have to / had to(客观上必须)、needn't 与 don't have to(不必)、should(应该、建议)的用法,以及 must 与 have to 的区别",
+  "scene": "“我们该动手做饭了,”妈妈说,“爸爸六点到家。”“我们得先去买东西吗?”我问。“不用,该有的都有了。”“帮忙前你必须先洗手,”妈妈提醒我。“我来切菜吗?”我问。“好,不过用刀要小心。”“我们不用赶——晚饭六点半好就行。”“这汤闻着真香,一定特别好喝,”弟弟说。“做好了你尝尝,”妈妈笑道。“我们真该多一起做饭——太有意思了!”",
+  "grammar_card": {
+    "title": "复习 KS17/41/65 情态表达",
+    "intro": "本课在做晚饭的场景里复习几个常用的情态说法:①must——“必须、务必”(You must wash your hands),也可表对现在的肯定推测“一定”(This soup must taste amazing);②have to / had to——客观上“不得不、必须”(Do we have to go shopping?);③needn't 和 don't have to——“不必、无需”(We needn't / We don't have to hurry);④should——“应该、建议”(We should start cooking soon);⑤must 与 have to 的区别:must 常表说话人主观的看法或强烈建议,have to 常表外在的客观要求。",
+    "table": {
+      "headers": ["表达", "例子"],
+      "rows": [
+        ["must / 推测", "You must wash your hands. / This soup must taste amazing."],
+        ["have to / had to", "Do we have to go shopping first?"],
+        ["needn't / don't have to", "We needn't hurry. / We don't have to hurry."],
+        ["should", "We should start cooking soon."],
+        ["must vs have to", "must = 主观看法/建议;have to = 客观要求。"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语“炉灶”说 stove(英式 cooker);“水龙头”说 faucet(英式 tap)。本课已按美语写。", "mark": "stove / faucet" },
+      { "rule": "needn't / don't have to = 不必;must 也可表“一定(推测)”;must 多表说话人主观强烈的看法或建议,have to 多表外在客观的要求。", "mark": "情态辨析" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — When will Dad be home for dinner?",
+    "options": ["At six", "At five", "At seven", "At eight"],
+    "answer_index": 0
+  },
+  "passage": "\"We should start cooking soon,\" Mom said. \"Dad will be home at six.\" \"Do we have to go shopping first?\" I asked. \"No, we needn't. We have everything we need.\" \"You must wash your hands before you help,\" Mom reminded me. \"Should I chop the vegetables?\" I asked. \"Yes, but you must be careful with the knife.\" \"We don't have to hurry — dinner needn't be ready until six-thirty.\" \"This soup must taste amazing,\" said my brother. \"It smells great!\" \"You should try it when it's done,\" Mom laughed. \"We must cook together more often — it's fun!\"",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "\"We should start cooking soon,\" Mom said. \"Dad will be home at six.\" \"Do we have to go shopping first?\" I asked.", "text_cn": "“我们该动手做饭了,”妈妈说,“爸爸六点到家。”“我们得先去买东西吗?”我问。" },
+    { "seq": 2, "speaker": null, "text_en": "\"No, we needn't. We have everything we need.\" \"You must wash your hands before you help,\" Mom reminded me.", "text_cn": "“不用,该有的都有了。”“帮忙前你必须先洗手,”妈妈提醒我。" },
+    { "seq": 3, "speaker": null, "text_en": "\"Should I chop the vegetables?\" I asked. \"Yes, but you must be careful with the knife.\"", "text_cn": "“我来切菜吗?”我问。“好,不过用刀要小心。”" },
+    { "seq": 4, "speaker": null, "text_en": "\"We don't have to hurry — dinner needn't be ready until six-thirty.\" \"This soup must taste amazing,\" said my brother. \"It smells great!\"", "text_cn": "“我们不用赶——晚饭六点半好就行。”“这汤闻着真香,一定特别好喝,”弟弟说。" },
+    { "seq": 5, "speaker": null, "text_en": "\"You should try it when it's done,\" Mom laughed. \"We must cook together more often — it's fun!\"", "text_cn": "“做好了你尝尝,”妈妈笑道。“我们真该多一起做饭——太有意思了!”" }
+  ],
+  "words": [
+    { "word": "dinner", "ipa": "/ˈdɪnər/", "pos": "n", "meaning_cn": "晚饭,正餐", "example": "What's for dinner?" },
+    { "word": "cook", "ipa": "/kʊk/", "pos": "v", "meaning_cn": "做饭,烹饪", "example": "start cooking soon" },
+    { "word": "shopping", "ipa": "/ˈʃɑːpɪŋ/", "pos": "n", "meaning_cn": "购物", "example": "Do we have to go shopping first?" },
+    { "word": "chop", "ipa": "/tʃɑːp/", "pos": "v", "meaning_cn": "切,剁", "example": "chop the vegetables" },
+    { "word": "vegetable", "ipa": "/ˈvedʒtəbl/", "pos": "n", "meaning_cn": "蔬菜", "example": "chop the vegetables" },
+    { "word": "knife", "ipa": "/naɪf/", "pos": "n", "meaning_cn": "刀", "example": "be careful with the knife" },
+    { "word": "soup", "ipa": "/suːp/", "pos": "n", "meaning_cn": "汤", "example": "This soup must taste amazing" },
+    { "word": "taste", "ipa": "/teɪst/", "pos": "v", "meaning_cn": "尝;有……的味道", "example": "This soup must taste amazing" },
+    { "word": "smell", "ipa": "/smel/", "pos": "v", "meaning_cn": "闻起来;闻", "example": "It smells great!" },
+    { "word": "remind", "ipa": "/rɪˈmaɪnd/", "pos": "v", "meaning_cn": "提醒", "example": "Mom reminded me" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "must(必须)与对现在的肯定推测(一定)" },
+    { "gp": "gp2", "name": "have to / had to(客观上必须)" },
+    { "gp": "gp3", "name": "needn't 与 don't have to(不必)" },
+    { "gp": "gp4", "name": "should(应该、建议)" },
+    { "gp": "gp5", "name": "must 与 have to 的区别(主观 vs 客观)" },
+    { "gp": "gp6", "name": "词汇辨析(chop / knife / taste)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"'You ___ wash your hands before you help,' Mom said.\"(必须、务必)", "stem_cn": "“帮忙前你必须先洗手,”妈妈说。", "options": ["must", "can", "may", "would"] },
+    { "gp": "gp1", "stem": "\"'This soup ___ taste amazing — it smells great!' my brother said.\"(对现在的肯定推测:一定)", "stem_cn": "“这汤闻着真香,一定特别好喝!”弟弟说。", "options": ["must", "can", "need", "would"] },
+    { "gp": "gp1", "stem": "\"'You ___ be careful with the knife,' Mom warned.\"(务必、一定要)", "stem_cn": "“用刀一定要小心,”妈妈提醒道。", "options": ["must", "could", "might", "would"] },
+    { "gp": "gp2", "stem": "\"'Do we ___ go shopping first?' I asked.\"(客观上是否必须)", "stem_cn": "“我们得先去买东西吗?”我问。", "options": ["have to", "must", "must to", "having to"] },
+    { "gp": "gp2", "stem": "\"On busy days, Mom ___ cook for the whole family.\"(客观上必须)", "stem_cn": "忙的时候,妈妈得给全家做饭。", "options": ["has to", "must to", "have to", "are to"] },
+    { "gp": "gp2", "stem": "\"Yesterday we ___ buy more rice for dinner.\"(过去客观上不得不)", "stem_cn": "昨天我们不得不多买些米做晚饭。", "options": ["had to", "must", "has to", "will have to"] },
+    { "gp": "gp3", "stem": "\"'No, we ___. We have everything we need,' Mom said.\"(不必)", "stem_cn": "“不用,该有的都有了,”妈妈说。", "options": ["needn't", "mustn't", "must", "should"] },
+    { "gp": "gp3", "stem": "\"'We ___ hurry — dinner isn't until six-thirty,' Mom said.\"(不必)", "stem_cn": "“我们不用赶——晚饭六点半才吃,”妈妈说。", "options": ["don't have to", "must not", "have to", "need"] },
+    { "gp": "gp3", "stem": "\"'Dinner ___ be ready until six-thirty,' she added.\"(不必、无需)", "stem_cn": "“晚饭不必六点半前做好,”她补充道。", "options": ["needn't", "mustn't", "must", "has to"] },
+    { "gp": "gp4", "stem": "\"'We ___ start cooking soon,' Mom said.\"(应该、建议)", "stem_cn": "“我们该动手做饭了,”妈妈说。", "options": ["should", "must have", "need", "would"] },
+    { "gp": "gp4", "stem": "\"'___ I chop the vegetables?' I asked.\"(征求意见:该……吗)", "stem_cn": "“我来切菜吗?”我问。", "options": ["Should", "Must", "Do", "Would"] },
+    { "gp": "gp4", "stem": "\"'You ___ try it when it's done,' Mom laughed.\"(应该、建议)", "stem_cn": "“做好了你尝尝,”妈妈笑道。", "options": ["should", "must have", "need", "would have"] },
+    { "gp": "gp5", "stem": "\"'We ___ cook together more often — it's fun!'\"(说话人自己强烈的感受、建议)", "stem_cn": "“我们真该多一起做饭——太有意思了!”", "options": ["must", "have to", "had to", "are to"] },
+    { "gp": "gp5", "stem": "\"The recipe says we ___ add salt, though I don't think we need it.\"(菜谱这一外在要求)", "stem_cn": "菜谱说要加盐,不过我觉得不用。", "options": ["have to", "must to", "has to", "are having to"] },
+    { "gp": "gp5", "stem": "\"'You ___ wash your hands — that's the kitchen rule.'\"(外在客观的规定)", "stem_cn": "“你得洗手——这是厨房规矩。”", "options": ["have to", "must to", "has to", "are to"] },
+    { "gp": "gp6", "stem": "\"Please ___ the vegetables into small pieces.\"(切、剁用哪个词)", "stem_cn": "请把蔬菜切成小块。", "options": ["chop", "drink", "sleep", "sing"] },
+    { "gp": "gp6", "stem": "\"Be careful with the sharp ___.\"(刀用哪个词)", "stem_cn": "小心那把锋利的刀。", "options": ["knife", "spoon", "cup", "plate"] },
+    { "gp": "gp6", "stem": "\"This ___ smells great and tastes amazing.\"(汤用哪个词)", "stem_cn": "这汤闻着香、喝着也好。", "options": ["soup", "chair", "book", "shoe"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"炉灶\"说:", "options": ["stove", "cooker", "heater", "oven-box"] },
+    { "stem": "美语里\"水龙头\"说:", "options": ["faucet", "tap", "spout", "valve"] },
+    { "stem": "chop 的意思是:", "options": ["切,剁", "喝", "洗", "烤"] },
+    { "stem": "knife 的意思是:", "options": ["刀", "勺子", "杯子", "盘子"] },
+    { "stem": "taste 的意思是:", "options": ["尝;有……的味道", "闻", "看", "听"] },
+    { "stem": "remind 的意思是:", "options": ["提醒", "忘记", "责备", "表扬"] }
+  ],
+  "contrast": [
+    { "us": "stove", "uk": "cooker", "note_cn": "炉灶;美语 stove,英式 cooker" },
+    { "us": "faucet", "uk": "tap", "note_cn": "水龙头;美语 faucet,英式 tap" },
+    { "us": "cookie", "uk": "biscuit", "note_cn": "饼干;美语 cookie,英式 biscuit" },
+    { "us": "candy", "uk": "sweets", "note_cn": "糖果;美语 candy,英式 sweets" }
+  ],
+  "chunks": [
+    { "us": "what's for dinner", "ipa": "/wʌts fɔːr ˈdɪnər/", "example1": "\"What's for dinner?\" I asked Mom.", "example1_cn": "“晚饭吃什么?”我问妈妈。", "example2": "What's for dinner tonight — soup or noodles?", "example2_cn": "今晚吃什么——汤还是面?" },
+    { "us": "go shopping", "ipa": "/ɡoʊ ˈʃɑːpɪŋ/", "example1": "Do we have to go shopping first?", "example1_cn": "我们得先去购物吗?", "example2": "We go shopping every Saturday morning.", "example2_cn": "我们每周六上午去购物。" },
+    { "us": "be careful with", "ipa": "/bi ˈkerfl wɪð/", "example1": "You must be careful with the knife.", "example1_cn": "用刀你必须小心。", "example2": "Be careful with the hot pot.", "example2_cn": "小心那个热锅。" },
+    { "us": "cook together", "ipa": "/kʊk təˈɡeðər/", "example1": "We must cook together more often.", "example1_cn": "我们真该多一起做饭。", "example2": "The whole family likes to cook together.", "example2_cn": "全家人都喜欢一起做饭。" }
+  ],
+  "stage7_cloze": {
+    "context": "\"We ___1___ start cooking soon,\" Mom said. \"Do we ___2___ go shopping first?\" I asked. \"No, we ___3___,\" she said. \"You ___4___ wash your hands before you help.\"",
+    "blanks": [
+      { "blank_no": 1, "options": ["should", "must have", "need", "would"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["have to", "must", "must to", "having to"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["needn't", "mustn't", "must", "should"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["must", "can", "may", "would"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "When will Dad be home for dinner?", "options": ["At six", "At five", "At seven", "At eight"] },
+    { "stem": "Did they have to go shopping first?", "options": ["No, they had everything they needed", "Yes, they were out of food", "Yes, they needed rice", "No, the store was closed"] },
+    { "stem": "What must the child do before helping?", "options": ["Wash their hands", "Set the table", "Call Dad", "Turn on the oven"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我们得先去购物吗?\"(客观上是否必须,用 do...have to):", "options": ["Do we have to go shopping first?", "Must we to go shopping first?", "Do we must go shopping first?", "Have we to going shopping first?"] },
+    { "stem": "你想说\"不,我们不必。需要的都有了\"(不必,用 needn't):", "options": ["No, we needn't. We have everything we need.", "No, we mustn't. We have everything we need.", "No, we don't must. We have everything we need.", "No, we haven't to. We have everything we need."] },
+    { "stem": "你想说\"帮忙前你必须洗手\"(必须,用 must):", "options": ["You must wash your hands before you help.", "You have to washing your hands before you help.", "You must to wash your hands before you help.", "You should washed your hands before you help."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "chop 的意思是:", "options": ["切,剁", "喝", "洗", "烤"] },
+    { "kind": "vocab", "stem": "soup 的意思是:", "options": ["汤", "椅子", "书", "鞋"] },
+    { "kind": "grammar", "stem": "\"'Do we ___ go shopping first?' I asked.\"(客观上是否必须)", "stem_cn": "“我们得先去买东西吗?”我问。", "options": ["have to", "must", "must to", "having to"] },
+    { "kind": "grammar", "stem": "\"'No, we ___. We have everything we need.'\"(不必)", "stem_cn": "“不用,该有的都有了。”", "options": ["needn't", "mustn't", "must", "should"] },
+    { "kind": "scenario", "stem": "\"what's for dinner\" 的意思是:", "options": ["晚饭吃什么", "为了晚饭", "晚饭之前", "谁做晚饭"] },
+    { "kind": "scenario", "stem": "\"be careful with\" 的意思是:", "options": ["小心对待、当心", "关心某人", "充满……", "忙于……"] },
+    { "kind": "reading", "stem": "What did Mom remind the child to do?", "options": ["Wash their hands", "Call Dad", "Buy more rice", "Set the table"], "passage": true },
+    { "kind": "reading", "stem": "When does dinner need to be ready?", "options": ["By six-thirty", "By five o'clock", "By noon", "Right away"], "passage": true },
+    { "kind": "listening", "stem": "When will Dad be home?", "options": ["At six", "At five", "At seven", "At eight"], "audio": true },
+    { "kind": "listening", "stem": "What must the child be careful with?", "options": ["The knife", "The door", "The window", "The phone"], "audio": true }
+  ]
+}

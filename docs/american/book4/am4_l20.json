@@ -1,0 +1,134 @@
+{
+  "id": "am4_l20",
+  "unit_no": 4,
+  "lesson_no": 20,
+  "title_en": "Snake Poison",
+  "title_cn": "蛇毒",
+  "grammar_focus": "疑问词引导的名词从句作主语(How snakes came to make venom is a mystery)、情态动词 + have done 对过去的推测(can hardly / must / can't have done)、It is said/believed that …(被动 + that 从句)、though 让步 + whenever、as … as(同级比较)(NCE4 无 KS 页,考点由课文结构自取;IP:源为约翰·克朗普顿《蛇》,内容为‘蛇毒起源·神经毒与血液毒’的生物学事实,已用 100% 原创行文复述,无逐句改写、无人物;题材=蛇毒生物学·无害;美语化 sulfur/mustache;第四册第20课)",
+  "scene": "蛇究竟怎么会造出毒液,是个真正的谜。经过无数岁月,它们的唾液——一种普普通通、温和的消化液,和我们自己的差不多——不知怎么就变成了一种毒,复杂到至今仍让人无从分析。生存竞争几乎不可能曾迫使它们这样改变,因为成千上万种无毒的蛇,不用一滴毒液,照样能捕到并吞下猎物。对一条蛇来说,毒其实是种奢侈:它让这动物几乎不费吹灰之力就赢得一顿饭——不过咬一口的功夫。可为什么偏偏是蛇?人们会想,一只猫也一样用得上这份礼物;它就能省去许多场同大老鼠的凶猛搏斗。说真的,毒液对几乎任何食肉动物都是助力,尽管每当两个这样的猎手打起来,它也会成为一把双刃剑。然而,在所有脊椎动物里,变幻莫测的大自然偏偏把这件武器交给了蛇——还奇怪地交给了唯一一种蜥蜴——此外谁也没有。蛇毒以两种截然不同的方式发挥它致命的作用。有些蛇,比如眼镜蛇,带的是攻击神经的毒;另一些,比如蝰蛇,带的是攻击血液的毒。这两者彼此不同,不同到不能再不同,各有各的威力。人们常说,神经毒是更古老、更原始的一种,而血液毒是改良配方后更新近的产物。无论这话真假,蛇发展出毒液,根本不是为了对付人,而是为了对付老鼠、耗子之类的小猎物——对这些小小的猎物,毒几乎立刻见效。",
+  "grammar_card": {
+    "title": "how 从句作主语 / 情态+have done / It is said that / though·whenever / as…as",
+    "intro": "①疑问词从句作主语:How snakes came to make venom is a mystery(全句谓语用 is)。②情态词 + have + 过去分词,对过去推测:can hardly have forced / must have developed。③It is said/believed that …(被动 + that 从句)。④though 让步;whenever‘每当’。⑤as + 形容词/副词 + as(同级比较)。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["how 从句作主语", "How … + is/was …", "How snakes came to make venom is a mystery"],
+        ["情态+have done", "情态词 + have + 过去分词", "can hardly have forced the change"],
+        ["It is said that", "It is said/believed that …", "It is said that the nerve poison is older"],
+        ["though / whenever", "though + 从句 / whenever + 从句", "though it may harm its own kind"],
+        ["as … as", "as + 形容词/副词 + as", "as deadly as the other"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "疑问词(how/why/what…)引导的名词从句作句首成分时,后面全句谓语用单数(is);从句内用陈述语序。", "mark": "How … is a mystery" },
+      { "rule": "情态词 + have + 过去分词表对过去的推测:can hardly have done(不大可能曾)、must have done(一定曾)、can't have done(不可能曾)。", "mark": "情态词 + have + 过去分词" },
+      { "rule": "美式拼写:sulfur(硫,英式 sulphur)、mustache(胡子,英式 moustache)。本课已按美语写。", "mark": "sulfur / mustache" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What are the two different ways in which snake poison acts?",
+    "options": ["One acts on the nerves, the other on the blood", "One burns, the other freezes", "One is real, the other is fake", "One is fast, the other is slow to appear"],
+    "answer_index": 0
+  },
+  "passage": "How snakes ever came to make venom is a real mystery. Over countless ages their saliva — an ordinary, mild digestive juice much like our own — was somehow turned into a poison so complex that it defies analysis even now. Survival can hardly have forced the change upon them, for thousands of harmless snakes still catch and swallow their prey perfectly well without a drop of venom. To a snake, poison is really a luxury: it lets the animal win its dinner with almost no effort — no more than a single bite. And why snakes alone? A cat, one would think, could use the gift just as much; it would be spared many a fierce struggle with a large rat. In truth venom would be a help to almost any carnivore, though it might prove a two-edged weapon whenever two such hunters fell to fighting. Yet, of all the vertebrates, unpredictable Nature handed this weapon to the snakes — and, oddly, to a single lizard — and to no one else. Snake venom does its deadly work in two quite different ways. Some snakes, among them the cobras, carry a poison that strikes at the nerves; others, such as the vipers, carry one that attacks the blood. The two are as unlike each other as two poisons can be, and each has its own potency. It is often said that the nerve poison is the older, more primitive kind, and the blood poison a newer product of an improved recipe. Whatever the truth of that, snakes did not develop their venom to use against people at all, but against small prey such as rats and mice — and on these little victims the poison acts almost at once.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "How snakes ever came to make venom is a real mystery. Over countless ages their saliva — an ordinary, mild digestive juice much like our own — was somehow turned into a poison so complex that it defies analysis even now.", "text_cn": "蛇究竟怎么会造出毒液,是个真正的谜。经过无数岁月,它们的唾液——一种普普通通、温和的消化液,和我们自己的差不多——不知怎么就变成了一种毒,复杂到至今仍让人无从分析。" },
+    { "seq": 2, "speaker": null, "text_en": "Survival can hardly have forced the change upon them, for thousands of harmless snakes still catch and swallow their prey perfectly well without a drop of venom. To a snake, poison is really a luxury: it lets the animal win its dinner with almost no effort — no more than a single bite.", "text_cn": "生存竞争几乎不可能曾迫使它们这样改变,因为成千上万种无毒的蛇,不用一滴毒液,照样能捕到并吞下猎物。对一条蛇来说,毒其实是种奢侈:它让这动物几乎不费吹灰之力就赢得一顿饭——不过咬一口的功夫。" },
+    { "seq": 3, "speaker": null, "text_en": "And why snakes alone? A cat, one would think, could use the gift just as much; it would be spared many a fierce struggle with a large rat. In truth venom would be a help to almost any carnivore, though it might prove a two-edged weapon whenever two such hunters fell to fighting.", "text_cn": "可为什么偏偏是蛇?人们会想,一只猫也一样用得上这份礼物;它就能省去许多场同大老鼠的凶猛搏斗。说真的,毒液对几乎任何食肉动物都是助力,尽管每当两个这样的猎手打起来,它也会成为一把双刃剑。" },
+    { "seq": 4, "speaker": null, "text_en": "Yet, of all the vertebrates, unpredictable Nature handed this weapon to the snakes — and, oddly, to a single lizard — and to no one else. Snake venom does its deadly work in two quite different ways. Some snakes, among them the cobras, carry a poison that strikes at the nerves; others, such as the vipers, carry one that attacks the blood.", "text_cn": "然而,在所有脊椎动物里,变幻莫测的大自然偏偏把这件武器交给了蛇——还奇怪地交给了唯一一种蜥蜴——此外谁也没有。蛇毒以两种截然不同的方式发挥它致命的作用。有些蛇,比如眼镜蛇,带的是攻击神经的毒;另一些,比如蝰蛇,带的是攻击血液的毒。" },
+    { "seq": 5, "speaker": null, "text_en": "The two are as unlike each other as two poisons can be, and each has its own potency. It is often said that the nerve poison is the older, more primitive kind, and the blood poison a newer product of an improved recipe. Whatever the truth of that, snakes did not develop their venom to use against people at all, but against small prey such as rats and mice — and on these little victims the poison acts almost at once.", "text_cn": "这两者彼此不同,不同到不能再不同,各有各的威力。人们常说,神经毒是更古老、更原始的一种,而血液毒是改良配方后更新近的产物。无论这话真假,蛇发展出毒液,根本不是为了对付人,而是为了对付老鼠、耗子之类的小猎物——对这些小小的猎物,毒几乎立刻见效。" }
+  ],
+  "words": [
+    { "word": "saliva", "ipa": "/səˈlaɪvə/", "pos": "n", "meaning_cn": "唾液", "example": "their saliva was turned into a poison" },
+    { "word": "digestive", "ipa": "/daɪˈdʒestɪv/", "pos": "adj", "meaning_cn": "消化的,助消化的", "example": "a mild digestive juice" },
+    { "word": "defy", "ipa": "/dɪˈfaɪ/", "pos": "v", "meaning_cn": "使难以…,公然违抗", "example": "a poison that defies analysis" },
+    { "word": "analysis", "ipa": "/əˈnæləsɪs/", "pos": "n", "meaning_cn": "分析,化验", "example": "it defies analysis even now" },
+    { "word": "prey", "ipa": "/preɪ/", "pos": "n", "meaning_cn": "猎物", "example": "catch and swallow their prey" },
+    { "word": "carnivore", "ipa": "/ˈkɑːrnɪvɔːr/", "pos": "n", "meaning_cn": "食肉动物", "example": "a help to almost any carnivore" },
+    { "word": "vertebrate", "ipa": "/ˈvɜːrtɪbrət/", "pos": "n", "meaning_cn": "脊椎动物", "example": "of all the vertebrates" },
+    { "word": "lizard", "ipa": "/ˈlɪzərd/", "pos": "n", "meaning_cn": "蜥蜴", "example": "to a single lizard" },
+    { "word": "venom", "ipa": "/ˈvenəm/", "pos": "n", "meaning_cn": "毒液,毒", "example": "how snakes came to make venom" },
+    { "word": "cobra", "ipa": "/ˈkoʊbrə/", "pos": "n", "meaning_cn": "眼镜蛇", "example": "among them the cobras" },
+    { "word": "viper", "ipa": "/ˈvaɪpər/", "pos": "n", "meaning_cn": "蝰蛇,毒蛇", "example": "such as the vipers" },
+    { "word": "potency", "ipa": "/ˈpoʊtnsi/", "pos": "n", "meaning_cn": "效力,威力", "example": "each has its own potency" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "疑问词引导的名词从句作主语(How … is a mystery)" },
+    { "gp": "gp2", "name": "情态动词 + have done(对过去的推测)" },
+    { "gp": "gp3", "name": "It is said/believed that …(被动 + that 从句)" },
+    { "gp": "gp4", "name": "though 让步 + whenever" },
+    { "gp": "gp5", "name": "as … as(同级比较)" },
+    { "gp": "gp6", "name": "词汇辨析(venom/prey/carnivore)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ snakes came to make venom is still a mystery.\"(疑问词引导主语从句,‘…是如何’,填连词)", "stem_cn": "蛇是如何造出毒液的,至今仍是个谜。", "options": ["How", "That", "Which", "What"] },
+    { "gp": "gp1", "stem": "\"___ makes the venom so deadly is not fully known.\"(名词从句作主语,‘什么…’,填连词)", "stem_cn": "是什么让毒液如此致命,尚不完全清楚。", "options": ["What", "That", "Which", "Whether"] },
+    { "gp": "gp1", "stem": "\"___ Nature chose only snakes remains unexplained.\"(疑问词主语从句,‘为什么’,填连词)", "stem_cn": "大自然为何只选中了蛇,仍无解释。", "options": ["Why", "That", "Which", "How"] },
+    { "gp": "gp2", "stem": "\"Survival ___ hardly have forced the change on them.\"(‘不大可能曾…’,与 hardly have done 连用的情态词)", "stem_cn": "生存竞争不大可能曾迫使它们发生这种改变。", "options": ["can", "must", "need", "dare"] },
+    { "gp": "gp2", "stem": "\"The snakes must ___ developed the poison very slowly.\"(must + ___ + 过去分词,对过去的肯定推测,填中间的助动词)", "stem_cn": "蛇一定是极缓慢地才发展出这种毒的。", "options": ["have", "has", "had", "be"] },
+    { "gp": "gp2", "stem": "\"Poison ___ not have appeared overnight; it took ages.\"(‘不可能曾…’,填与 not have 连用的情态词)", "stem_cn": "毒不可能一夜之间就出现,那用了千百万年。", "options": ["could", "would", "should", "may"] },
+    { "gp": "gp3", "stem": "\"It is often ___ that the nerve poison is more primitive.\"(‘据说、有人说’被动;say 的过去分词)", "stem_cn": "人们常说,神经毒是更原始的一种。", "options": ["said", "saying", "say", "to say"] },
+    { "gp": "gp3", "stem": "\"It ___ said that the blood poison came later.\"(It ___ said that…:‘据说’,填 be 动词)", "stem_cn": "据说血液毒是更新近的产物。", "options": ["is", "are", "has", "does"] },
+    { "gp": "gp3", "stem": "\"It is believed ___ venom evolved from ordinary saliva.\"(‘人们相信…’,填引出内容的连词)", "stem_cn": "人们相信,毒液是由普通唾液演化而来。", "options": ["that", "what", "which", "whether"] },
+    { "gp": "gp4", "stem": "\"Venom helps a hunter, ___ it may harm its own kind.\"(‘尽管、虽然’,填让步连词)", "stem_cn": "毒液帮了捕食者,尽管它也可能伤到同类。", "options": ["though", "because", "once", "unless"] },
+    { "gp": "gp4", "stem": "\"___ two venomous hunters fight, the poison cuts both ways.\"(‘每当、无论何时’,填连词)", "stem_cn": "每当两个带毒的猎手打斗,毒都是双刃的。", "options": ["Whenever", "Because", "Unless", "Although"] },
+    { "gp": "gp4", "stem": "\"The poison is deadly, ___ it evolved for hunting, not for defense.\"(‘尽管、虽然’,填让步连词)", "stem_cn": "这毒很致命,尽管它是为捕猎而非自卫演化来的。", "options": ["though", "because", "once", "unless"] },
+    { "gp": "gp5", "stem": "\"One venom is as ___ as the other, each in its way.\"(as + 形容词 + as,填形容词)", "stem_cn": "两种毒各有其道,一样致命。", "options": ["deadly", "deadlier", "deadliest", "death"] },
+    { "gp": "gp5", "stem": "\"A cobra strikes as ___ as any viper does.\"(as + 副词 + as,填副词)", "stem_cn": "眼镜蛇下口和任何蝰蛇一样快。", "options": ["quickly", "quick", "quicker", "quickest"] },
+    { "gp": "gp5", "stem": "\"The bite works as ___ on a rat as on a mouse.\"(as + 副词 + as,填副词)", "stem_cn": "这一咬,对老鼠和对耗子一样快见效。", "options": ["fast", "faster", "fastest", "more fast"] },
+    { "gp": "gp6", "stem": "\"The watery liquid in the mouth that begins digestion is ___.\"(“唾液”用哪个词)", "stem_cn": "口中开始消化的水样液体。", "options": ["saliva", "blood", "sweat", "oil"] },
+    { "gp": "gp6", "stem": "\"An animal hunted and eaten by another is its ___.\"(“猎物”用哪个词)", "stem_cn": "被别的动物捕食的动物。", "options": ["prey", "hunter", "pet", "guide"] },
+    { "gp": "gp6", "stem": "\"An animal that eats the flesh of others is a ___.\"(“食肉动物”用哪个词)", "stem_cn": "以别的动物的肉为食的动物。", "options": ["carnivore", "herbivore", "plant", "insect"] }
+  ],
+  "stage6": [
+    { "stem": "venom 的意思是:", "options": ["毒液,毒", "蜜", "唾液", "血"] },
+    { "stem": "prey 的意思是:", "options": ["猎物", "捕食者", "宠物", "向导"] },
+    { "stem": "defy 的意思是:", "options": ["使难以…,公然违抗", "服从", "帮助", "欢迎"] },
+    { "stem": "carnivore 的意思是:", "options": ["食肉动物", "食草动物", "昆虫", "植物"] },
+    { "stem": "saliva 的意思是:", "options": ["唾液", "汗水", "泪水", "油脂"] },
+    { "stem": "potency 的意思是:", "options": ["效力,威力", "弱点", "距离", "重量"] }
+  ],
+  "contrast": [
+    { "us": "sulfur", "uk": "sulphur", "note_cn": "硫;拼写差异,美语 sulfur" },
+    { "us": "mustache", "uk": "moustache", "note_cn": "(嘴上的)胡子;拼写差异,美语 mustache" },
+    { "us": "esophagus", "uk": "oesophagus", "note_cn": "食道;拼写差异,美语 esophagus" },
+    { "us": "cozy", "uk": "cosy", "note_cn": "舒适的;拼写差异,美语 cozy" }
+  ],
+  "chunks": [
+    { "us": "come about", "ipa": "/kʌm əˈbaʊt/", "example1": "How it came about is a mystery.", "example1_cn": "这是怎么发生的,是个谜。", "example2": "How did the accident come about?", "example2_cn": "这场事故是怎么发生的?" },
+    { "us": "live on", "ipa": "/lɪv ɑːn/", "example1": "Snakes live on rats and mice.", "example1_cn": "蛇以老鼠为食。", "example2": "Pandas live on bamboo.", "example2_cn": "熊猫以竹子为食。" },
+    { "us": "act on", "ipa": "/ækt ɑːn/", "example1": "One poison acts on the nerves.", "example1_cn": "一种毒作用于神经。", "example2": "The medicine acts on the stomach.", "example2_cn": "这药作用于胃部。" },
+    { "us": "cut both ways", "ipa": "/kʌt boʊθ weɪz/", "example1": "Venom can cut both ways.", "example1_cn": "毒液可能是双刃的。", "example2": "This rule cuts both ways.", "example2_cn": "这条规则是把双刃剑。" }
+  ],
+  "stage7_cloze": {
+    "context": "___1___ snakes came to make venom is a mystery. Their saliva was turned into a poison that ___2___ analysis. It is ___3___ that the nerve poison is older. The bite works fast, ___4___ the prey is a rat or a mouse.",
+    "blanks": [
+      { "blank_no": 1, "options": ["How", "That", "Which", "What"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["defies", "defy", "defying", "defied"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["said", "saying", "say", "to say"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["whether", "though", "since", "because"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What are the two different ways in which snake poison acts?", "options": ["One acts on the nerves, the other on the blood", "One burns, the other freezes", "One is fast, the other is fake", "One helps, the other heals"] },
+    { "stem": "Why does the passage call poison a 'luxury' for a snake?", "options": ["It lets the snake win its food with almost no effort", "It makes the snake beautiful", "It is very expensive", "It is rarely used"] },
+    { "stem": "Which vertebrates did Nature give venom to?", "options": ["Only snakes and a single lizard", "All carnivores", "Cats and snakes", "Every reptile"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"蛇是如何造出毒液的,至今仍是个谜\"(how 引导、作全句开头的名词从句):", "options": ["How snakes came to make venom is still a mystery.", "That snakes came to make venom is still a mystery.", "How did snakes come to make venom is still a mystery.", "How snakes came to make venom are still a mystery."] },
+    { "stem": "你想说\"据说神经毒是更原始的一种\"(It is said that):", "options": ["It is said that the nerve poison is the more primitive kind.", "It is say that the nerve poison is the more primitive kind.", "It said that the nerve poison is the more primitive kind.", "It is said the nerve poison is the more primitive kind that."] },
+    { "stem": "你想说\"毒液帮了捕食者,尽管它也可能伤到同类\"(though 让步):", "options": ["Venom helps a hunter, though it may harm its own kind.", "Venom helps a hunter, though but it may harm its own kind.", "Venom helps a hunter, though it may harms its own kind.", "Venom helps a hunter, despite it may harm its own kind."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "venom 的意思是:", "options": ["毒液,毒", "蜜", "唾液", "血"] },
+    { "kind": "vocab", "stem": "prey 的意思是:", "options": ["猎物", "捕食者", "宠物", "向导"] },
+    { "kind": "grammar", "stem": "\"___ snakes came to make venom is a mystery.\"(疑问词从句作全句开头)", "stem_cn": "蛇是如何造出毒液的,是个谜。", "options": ["How", "That", "Which", "What"] },
+    { "kind": "grammar", "stem": "\"It is ___ that the nerve poison is older.\"(‘据说’,say 的过去分词)", "stem_cn": "据说神经毒更古老。", "options": ["said", "saying", "say", "to say"] },
+    { "kind": "scenario", "stem": "\"come about\" 的意思是:", "options": ["发生、产生", "到来", "回来", "转身"] },
+    { "kind": "scenario", "stem": "\"act on\" 的意思是:", "options": ["作用于、对…起作用", "表演", "关闭", "拒绝"] },
+    { "kind": "reading", "stem": "According to the passage, why is snake poison a 'luxury' rather than a necessity?", "options": ["Non-poisonous snakes catch prey perfectly well without it", "No snake can live without it", "Only poison can kill rats", "All animals need poison"], "passage": true },
+    { "kind": "reading", "stem": "Which animals make the nerve poison and which make the blood poison?", "options": ["Cobras make the nerve poison; vipers make the blood poison", "Both are made by cats", "Only lizards make either", "Vipers make both"], "passage": true },
+    { "kind": "listening", "stem": "For use against what did snakes acquire their poison?", "options": ["Small prey such as rats and mice", "Human beings", "Large cats", "Other snakes only"], "audio": true },
+    { "kind": "listening", "stem": "How quickly does viper poison act on small prey?", "options": ["Almost at once", "After several days", "Never", "Only in winter"], "audio": true }
+  ]
+}

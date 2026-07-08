@@ -1,0 +1,136 @@
+{
+  "id": "am4_l32",
+  "unit_no": 6,
+  "lesson_no": 32,
+  "title_en": "Galileo Reborn",
+  "title_cn": "伽利略的复生",
+  "grammar_focus": "被动语态各时态(was condemned / has been honored / had been forbidden)、定语从句(限定/非限定 + 介词+关系词 with which / whose)、分词作状语·定语(Looking / Silenced / coming)、名词性从句(that 同位语/主语从句 · what 从句)、完成时综合(过去完成 had done / 现在完成被动 has been done)(NCE4 该课源在仓库残本 mobi 缺失、语法同步真题集只有动名词专题不复现课文;IP:L32《Galileo Reborn》按 Aaron 网页版原创承载包生产——主题=伽利略日心说生前被教会定罪、身后思想被重新评价与‘复生’,100% 原创思辨说明文,无引用原句;题材=科学思想史·健康无害;美语化 honor/recognize/center;第四册第32课·原创承载·回填 unit06)",
+  "scene": "很少有科学家像伽利略·伽利雷那样,在自己的时代被如此深地误解——如今每个孩子都知道这位天文学家的名字。十七世纪初,他造了一架望远镜,用它研究月亮和遥远的星辰。夜复一夜地透过镜筒观望,他看到了地球绕太阳运行的证据。这是一种教会曾严令禁止的学说,而伽利略因传授它,被定罪为信仰的危险分子。在当局的噤声之下,他在软禁中度过了余生,声誉尽毁,著作遭禁。然而,他所捍卫的那些思想,并没有随他一同消亡。他的发现——地球不过是众多行星中一颗小小的星球——太重要了,无法被永远埋没。数百年间,他所主张的一切慢慢被证明为真,由许多在他之后很久才出现的天文学家所证实。尽管生前遭受惩罚,他此后却被尊崇为现代科学的奠基者之一。如今人们承认,是他的勇气改变了人类理解宇宙的方式。那位曾被噤声的天才,在极真切的意义上,已经复生。今天,他的名字所代表的不是耻辱,而是真理;他所造的那架望远镜,已成为质疑之自由的象征。",
+  "grammar_card": {
+    "title": "被动语态各时态 / 定语从句(介词+关系词·whose) / 分词作状语·定语 / 名词性从句(that·what) / 完成时综合(had done·has been done)",
+    "intro": "①被动语态在各时态里都是‘be + 过去分词’,时态靠 be 动词体现:一般过去 was condemned;现在完成 has been honored;过去完成 had been forbidden。②定语从句由 that/which/who/whose 引导;‘介词 + 关系词’如 with which、in which;whose 表所属。③分词作状语/定语:现在分词表主动(Looking through…),过去分词表被动(Silenced by…)。④名词性从句:that 引导陈述(evidence that…),what 引导并在从句里作成分(what he claimed)。⑤完成时:过去完成 had done 表‘更早之前’;现在完成被动 has been done。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["被动各时态", "各时态 be + 过去分词", "was condemned; has been honored"],
+        ["定语从句", "先行词 + that/which/whose;介词+关系词", "the telescope with which he studied"],
+        ["分词作状语/定语", "现在分词(主动)/过去分词(被动)", "Looking through it; Silenced by them"],
+        ["名词性从句", "that / what 引导", "evidence that…; what he claimed"],
+        ["完成时综合", "had done / has been done", "had forbidden; has been proven"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "被动语态的时态全靠 be 动词体现:is/was/has been/had been + 过去分词;过去分词形式不变。", "mark": "be + 过去分词" },
+      { "rule": "‘介词 + 关系词’中,关系词指物用 which、指人用 whom,不能用 that(with which 对,with that 错)。", "mark": "介词 + which/whom" },
+      { "rule": "美式拼写:honor / recognize / center(英式 honour / recognise / centre)。本课已按美语写。", "mark": "honor / recognize" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — In what sense does the writer say Galileo has been 'reborn'?",
+    "options": ["The genius once condemned and silenced is now honored, his name standing for truth", "He was literally brought back to life by science", "A new scientist took his exact name", "His telescope was rebuilt after his death"],
+    "answer_index": 0
+  },
+  "passage": "Few scientists have been as misunderstood in their own time as Galileo Galilei, the astronomer whose name is now known to every child. In the early seventeenth century, he built a telescope with which he studied the moon and the distant stars. Looking through it night after night, he saw evidence that the Earth moved around the sun. This was a theory that the Church had strictly forbidden, and for teaching it Galileo was condemned as a danger to the faith. Silenced by the authorities, he spent his final years under house arrest, his reputation ruined and his books banned. Yet the ideas that he had defended did not die with him. His discovery — that the Earth is only one small planet among many — was too important to be buried forever. Over the centuries, what he had claimed has slowly been proven true, confirmed by astronomers who came long after him. Though he was punished in his lifetime, he has since been honored as one of the founders of modern science. It is now recognized that his courage changed how humanity understands the universe. The genius who was once silenced has, in a very real sense, been reborn. Today his name stands not for shame but for truth, and the telescope he made has become a symbol of the freedom to question.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Few scientists have been as misunderstood in their own time as Galileo Galilei, the astronomer whose name is now known to every child. In the early seventeenth century, he built a telescope with which he studied the moon and the distant stars.", "text_cn": "很少有科学家像伽利略·伽利雷那样,在自己的时代被如此深地误解——如今每个孩子都知道这位天文学家的名字。十七世纪初,他造了一架望远镜,用它研究月亮和遥远的星辰。" },
+    { "seq": 2, "speaker": null, "text_en": "Looking through it night after night, he saw evidence that the Earth moved around the sun. This was a theory that the Church had strictly forbidden, and for teaching it Galileo was condemned as a danger to the faith.", "text_cn": "夜复一夜地透过镜筒观望,他看到了地球绕太阳运行的证据。这是一种教会曾严令禁止的学说,而伽利略因传授它,被定罪为信仰的危险分子。" },
+    { "seq": 3, "speaker": null, "text_en": "Silenced by the authorities, he spent his final years under house arrest, his reputation ruined and his books banned. Yet the ideas that he had defended did not die with him. His discovery — that the Earth is only one small planet among many — was too important to be buried forever.", "text_cn": "在当局的噤声之下,他在软禁中度过了余生,声誉尽毁,著作遭禁。然而,他所捍卫的那些思想,并没有随他一同消亡。他的发现——地球不过是众多行星中一颗小小的星球——太重要了,无法被永远埋没。" },
+    { "seq": 4, "speaker": null, "text_en": "Over the centuries, what he had claimed has slowly been proven true, confirmed by astronomers who came long after him. Though he was punished in his lifetime, he has since been honored as one of the founders of modern science.", "text_cn": "数百年间,他所主张的一切慢慢被证明为真,由许多在他之后很久才出现的天文学家所证实。尽管生前遭受惩罚,他此后却被尊崇为现代科学的奠基者之一。" },
+    { "seq": 5, "speaker": null, "text_en": "It is now recognized that his courage changed how humanity understands the universe. The genius who was once silenced has, in a very real sense, been reborn. Today his name stands not for shame but for truth, and the telescope he made has become a symbol of the freedom to question.", "text_cn": "如今人们承认,是他的勇气改变了人类理解宇宙的方式。那位曾被噤声的天才,在极真切的意义上,已经复生。今天,他的名字所代表的不是耻辱,而是真理;他所造的那架望远镜,已成为质疑之自由的象征。" }
+  ],
+  "words": [
+    { "word": "reborn", "ipa": "/ˌriːˈbɔːrn/", "pos": "adj", "meaning_cn": "复生的,重生的", "example": "the genius has, in a real sense, been reborn" },
+    { "word": "astronomer", "ipa": "/əˈstrɑːnəmər/", "pos": "n", "meaning_cn": "天文学家", "example": "the astronomer whose name is known to every child" },
+    { "word": "telescope", "ipa": "/ˈtelɪskoʊp/", "pos": "n", "meaning_cn": "望远镜", "example": "a telescope with which he studied the stars" },
+    { "word": "theory", "ipa": "/ˈθiːəri/", "pos": "n", "meaning_cn": "理论,学说", "example": "a theory that the Church had forbidden" },
+    { "word": "condemn", "ipa": "/kənˈdem/", "pos": "v", "meaning_cn": "谴责,定罪", "example": "Galileo was condemned as a danger to the faith" },
+    { "word": "forbid", "ipa": "/fərˈbɪd/", "pos": "v", "meaning_cn": "禁止", "example": "a theory that the Church had forbidden" },
+    { "word": "evidence", "ipa": "/ˈevɪdəns/", "pos": "n", "meaning_cn": "证据", "example": "he saw evidence that the Earth moved" },
+    { "word": "recognize", "ipa": "/ˈrekəɡnaɪz/", "pos": "v", "meaning_cn": "承认,认可", "example": "it is now recognized that his courage changed science" },
+    { "word": "honor", "ipa": "/ˈɑːnər/", "pos": "v", "meaning_cn": "尊崇;荣誉", "example": "he has since been honored as a founder of science" },
+    { "word": "reputation", "ipa": "/ˌrepjuˈteɪʃn/", "pos": "n", "meaning_cn": "声誉,名声", "example": "his reputation ruined and his books banned" },
+    { "word": "discovery", "ipa": "/dɪˈskʌvəri/", "pos": "n", "meaning_cn": "发现", "example": "his discovery was too important to be buried" },
+    { "word": "universe", "ipa": "/ˈjuːnɪvɜːrs/", "pos": "n", "meaning_cn": "宇宙", "example": "how humanity understands the universe" },
+    { "word": "genius", "ipa": "/ˈdʒiːniəs/", "pos": "n", "meaning_cn": "天才", "example": "the genius who was once silenced" },
+    { "word": "truth", "ipa": "/truːθ/", "pos": "n", "meaning_cn": "真理,真相", "example": "his name stands for truth" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "被动语态各时态(was/has been/had been done)" },
+    { "gp": "gp2", "name": "定语从句(介词+关系词·that·whose)" },
+    { "gp": "gp3", "name": "分词作状语·定语" },
+    { "gp": "gp4", "name": "名词性从句(that·what)" },
+    { "gp": "gp5", "name": "完成时综合(had done·has been done)" },
+    { "gp": "gp6", "name": "词汇辨析(condemn/forbid/reputation)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"For teaching the forbidden theory, Galileo ___ condemned by the Church.\"(一般过去的被动 be + 过去分词,填那个 be 动词的过去式)", "stem_cn": "因传授那个被禁的学说,伽利略被教会定罪。", "options": ["was", "is", "has", "did"] },
+    { "gp": "gp1", "stem": "\"Today Galileo ___ been honored as a founder of modern science.\"(现在完成的被动,填 been 前那个助动词)", "stem_cn": "如今伽利略被尊崇为现代科学的奠基者之一。", "options": ["has", "was", "is", "had"] },
+    { "gp": "gp1", "stem": "\"What he claimed has now ___ proven true.\"(现在完成的被动 has + ___ + 过去分词,填 has 与过去分词之间那个词)", "stem_cn": "他所主张的东西如今已被证明为真。", "options": ["been", "being", "be", "was"] },
+    { "gp": "gp2", "stem": "\"He built a telescope ___ which he studied the distant stars.\"(‘介词 + 关系词’,‘用它’,填 which 前那个介词)", "stem_cn": "他造了一架望远镜,用它研究遥远的星辰。", "options": ["with", "for", "in", "of"] },
+    { "gp": "gp2", "stem": "\"It was a theory ___ the Church had forbidden.\"(限定性定语从句,先行词指物、在从句里作宾语,填关系词)", "stem_cn": "这是一种教会曾禁止的学说。", "options": ["that", "who", "whom", "what"] },
+    { "gp": "gp2", "stem": "\"Galileo, ___ name is known to every child, was once condemned.\"(非限定定语从句,表‘他的名字’,填关系词)", "stem_cn": "伽利略——他的名字每个孩子都知道——曾被定罪。", "options": ["whose", "who", "which", "that"] },
+    { "gp": "gp3", "stem": "\"___ through his telescope, Galileo saw that the Earth moved.\"(现在分词作状语,表主动,填 look 的 -ing 形式)", "stem_cn": "透过望远镜观望,伽利略看到了地球在运动。", "options": ["Looking", "Looked", "Look", "To look"] },
+    { "gp": "gp3", "stem": "\"___ by the authorities, he spent his last years under arrest.\"(过去分词作状语,表被动‘被压制’,填 silence 的过去分词)", "stem_cn": "在当局的噤声之下,他在软禁中度过余生。", "options": ["Silenced", "Silencing", "Silence", "To silence"] },
+    { "gp": "gp3", "stem": "\"His claim was confirmed by astronomers ___ centuries later.\"(现在分词作定语‘随后到来的’,填 come 的 -ing 形式)", "stem_cn": "他的主张由几个世纪后到来的天文学家所证实。", "options": ["coming", "came", "come", "to come"] },
+    { "gp": "gp4", "stem": "\"He saw evidence ___ the Earth moved around the sun.\"(同位语从句,补充说明 evidence 的内容,填引导词)", "stem_cn": "他看到了地球绕太阳运行的证据。", "options": ["that", "which", "what", "whether"] },
+    { "gp": "gp4", "stem": "\"___ he had claimed has now been proven true.\"(名词性从句作主语,从句里缺宾语‘所主张的东西’,填引导词)", "stem_cn": "他所主张的东西如今已被证明为真。", "options": ["What", "That", "Which", "Whose"] },
+    { "gp": "gp4", "stem": "\"It is now recognized ___ his courage changed science.\"(主语从句,补充说明被承认的事实,填引导词)", "stem_cn": "如今人们承认,是他的勇气改变了科学。", "options": ["that", "what", "which", "whether"] },
+    { "gp": "gp5", "stem": "\"It was a theory the Church ___ forbidden years before.\"(过去完成时,表‘更早之前早已禁止’,填助动词)", "stem_cn": "这是教会多年前早已禁止的一种学说。", "options": ["had", "has", "was", "did"] },
+    { "gp": "gp5", "stem": "\"Over the centuries, what he claimed ___ been proven true.\"(现在完成的被动 ___ been + 过去分词,填助动词)", "stem_cn": "数百年间,他所主张的一切已被证明为真。", "options": ["has", "had", "was", "is"] },
+    { "gp": "gp5", "stem": "\"The ideas that he had ___ did not die with him.\"(过去完成 had + 过去分词,填 defend 的过去分词)", "stem_cn": "他曾捍卫的那些思想没有随他一同消亡。", "options": ["defended", "defend", "defending", "to defend"] },
+    { "gp": "gp6", "stem": "\"To declare someone guilty and deserving of punishment is to ___ them.\"(“谴责,定罪”用哪个词)", "stem_cn": "宣布某人有罪、该受惩罚。", "options": ["condemn", "command", "commend", "condense"] },
+    { "gp": "gp6", "stem": "\"To officially refuse to allow something is to ___ it.\"(“禁止”用哪个词)", "stem_cn": "正式地不允许某事。", "options": ["forbid", "afford", "forecast", "forge"] },
+    { "gp": "gp6", "stem": "\"The general opinion that people hold about someone is that person's ___.\"(“声誉,名声”用哪个词)", "stem_cn": "人们对某人普遍持有的看法。", "options": ["reputation", "recreation", "reservation", "registration"] }
+  ],
+  "stage6": [
+    { "stem": "astronomer 的意思是:", "options": ["天文学家", "占星师", "地质学家", "考古学家"] },
+    { "stem": "telescope 的意思是:", "options": ["望远镜", "显微镜", "万花筒", "温度计"] },
+    { "stem": "condemn 的意思是:", "options": ["谴责,定罪", "赞扬,称赞", "原谅,宽恕", "忽视,无视"] },
+    { "stem": "evidence 的意思是:", "options": ["证据", "观点", "谣言", "秘密"] },
+    { "stem": "recognize 的意思是:", "options": ["承认,认可", "否认,拒绝", "怀疑,质疑", "忘记,遗忘"] },
+    { "stem": "universe 的意思是:", "options": ["宇宙", "地球", "国家", "城市"] }
+  ],
+  "contrast": [
+    { "us": "honor", "uk": "honour", "note_cn": "尊崇,荣誉;美语 honor,英式 honour" },
+    { "us": "recognize", "uk": "recognise", "note_cn": "承认,认出;美语 recognize,英式 recognise" },
+    { "us": "center", "uk": "centre", "note_cn": "中心;美语 center,英式 centre" },
+    { "us": "defense", "uk": "defence", "note_cn": "防御,辩护;美语 defense,英式 defence" }
+  ],
+  "chunks": [
+    { "us": "look through", "ipa": "/lʊk θruː/", "example1": "Looking through his telescope, he saw the moon clearly.", "example1_cn": "透过望远镜,他清楚地看到了月亮。", "example2": "She looked through the window at the rain.", "example2_cn": "她透过窗户望着雨。" },
+    { "us": "die with", "ipa": "/daɪ wɪð/", "example1": "The ideas he defended did not die with him.", "example1_cn": "他捍卫的思想没有随他一同消亡。", "example2": "The old customs died with the last villagers.", "example2_cn": "那些旧习俗随最后的村民一同消失了。" },
+    { "us": "prove true", "ipa": "/pruːv truː/", "example1": "What he claimed has slowly been proven true.", "example1_cn": "他所主张的一切慢慢被证明为真。", "example2": "In time, her warning proved true.", "example2_cn": "过了一段时间,她的警告被证明是对的。" },
+    { "us": "be honored as", "ipa": "/bi ˈɑːnərd æz/", "example1": "He has since been honored as a founder of science.", "example1_cn": "他此后被尊崇为科学的奠基者之一。", "example2": "She is honored as a hero in her hometown.", "example2_cn": "在家乡她被尊崇为英雄。" }
+  ],
+  "stage7_cloze": {
+    "context": "Galileo built a telescope ___1___ which he studied the stars. He saw evidence ___2___ the Earth moved around the sun. For teaching this he ___3___ condemned by the Church. Yet what he had claimed has since ___4___ proven true, and today he is honored as a founder of science.",
+    "blanks": [
+      { "blank_no": 1, "options": ["with", "for", "in", "of"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["that", "which", "what", "whether"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["was", "has", "is", "had"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["been", "being", "be", "was"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why was Galileo condemned by the Church in his own lifetime?", "options": ["Because he taught the forbidden theory that the Earth moves around the sun", "Because he refused to build a telescope", "Because he could not find any stars", "Because he agreed with everything the Church said"] },
+    { "stem": "According to the passage, what happened to Galileo's ideas after his death?", "options": ["They did not die with him; over the centuries what he claimed has been proven true", "They were completely forgotten forever", "They were proven false by later astronomers", "They were burned along with his books"] },
+    { "stem": "In what sense does the writer say Galileo has been 'reborn'?", "options": ["The genius once silenced is now honored, his name standing for truth and the freedom to question", "He was literally brought back to life", "His son took over his exact work", "His house arrest was finally ended while he lived"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"伽利略因传授那个被禁止的学说而被定罪\"(被动语态):", "options": ["Galileo was condemned for teaching the forbidden theory.", "Galileo was condemn for teaching the forbidden theory.", "Galileo condemned for teaching the forbidden theory.", "Galileo was condemning for teaching the forbidden theory."] },
+    { "stem": "你想说\"他造了一架用来研究星空的望远镜\"(介词 + 关系词 的定语从句):", "options": ["He built a telescope with which he studied the stars.", "He built a telescope which with he studied the stars.", "He built a telescope with that he studied the stars.", "He built a telescope with which he studied the stars with."] },
+    { "stem": "你想说\"他所主张的东西如今已被证明是真的\"(名词性从句作主语 + 完成时被动):", "options": ["What he had claimed has now been proven true.", "That he had claimed has now been proven true.", "What he had claimed has now been proven truly.", "What he had claimed have now been proven true."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "condemn 的意思是:", "options": ["谴责,定罪", "赞扬,称赞", "原谅,宽恕", "忽视,无视"] },
+    { "kind": "vocab", "stem": "universe 的意思是:", "options": ["宇宙", "地球", "海洋", "国家"] },
+    { "kind": "grammar", "stem": "\"For teaching the forbidden theory, Galileo ___ condemned.\"(一般过去的被动)", "stem_cn": "因传授那个被禁的学说,伽利略被定罪。", "options": ["was", "is", "has", "did"] },
+    { "kind": "grammar", "stem": "\"He built a telescope ___ which he studied the stars.\"(介词 + 关系词)", "stem_cn": "他造了一架用来研究星空的望远镜。", "options": ["with", "for", "in", "of"] },
+    { "kind": "scenario", "stem": "\"be honored as\" 的意思是:", "options": ["被尊崇为…", "被指责为…", "被误认为…", "被雇用为…"] },
+    { "kind": "scenario", "stem": "\"die with someone\" 的意思是:", "options": ["随某人一同消亡", "与某人同住", "为某人而死", "埋葬某人"] },
+    { "kind": "reading", "stem": "What did Galileo see when he looked through his telescope?", "options": ["Evidence that the Earth moved around the sun", "That the sun moved around the Earth", "That the stars were only a few miles away", "Nothing at all worth recording"], "passage": true },
+    { "kind": "reading", "stem": "How does the writer say the world now regards Galileo, compared with his own time?", "options": ["Once condemned and silenced, he is now honored as one of the founders of modern science", "He is still condemned today just as he was then", "He is completely forgotten by modern science", "He is remembered only as a maker of telescopes"], "passage": true },
+    { "kind": "listening", "stem": "What had the Church done to the theory that the Earth moves before Galileo taught it?", "options": ["It had strictly forbidden the theory", "It had proven the theory true", "It had asked Galileo to teach it", "It had never heard of the theory"], "audio": true },
+    { "kind": "listening", "stem": "According to the passage, what has slowly happened to what Galileo claimed?", "options": ["Over the centuries it has been proven true", "It has been shown to be completely wrong", "It has been forgotten by everyone", "It has been kept secret to this day"], "audio": true }
+  ]
+}

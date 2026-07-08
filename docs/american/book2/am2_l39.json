@@ -1,0 +1,136 @@
+{
+  "id": "am2_l39",
+  "unit_no": 5,
+  "lesson_no": 39,
+  "title_en": "Am I all right?",
+  "title_cn": "我是否痊愈?",
+  "grammar_focus": "间接引语(直接引语转间接,KS15)主考——ask if / whether(一般疑问)、ask + 疑问词 when/why(特殊疑问,用陈述语序)、say/tell + that(陈述句)+ 时态后移(will→would / have→had)+ ask sb to do / refuse to do / be allowed to do(辅考·课文①类)",
+  "scene": "约翰·吉尔伯特住院时,他问医生手术是否成功,但医生拒绝告诉他。第二天,这位病人要了一部床头电话。趁房里只剩他一人时,他挂通医院的电话交换台,要求与米灵顿医生讲话。当医生接过电话,吉尔伯特先生说他想打听一位名叫约翰·吉尔伯特的病人的情况;他问吉尔伯特先生的手术是否成功,医生说很成功。然后他又问吉尔伯特先生什么时候可以回家,医生说他还得在医院再住两个星期。之后,米灵顿医生问打电话的人是否是病人的亲属。“不是,”病人回答说,“我就是约翰·吉尔伯特先生。”",
+  "grammar_card": {
+    "title": "间接引语:把别人的话转述出来",
+    "intro": "把直接引语(引号里的话)转述出来:陈述句用 say/tell + that;一般疑问用 ask if/whether;特殊疑问用 ask + 疑问词。转述时时态往后退(will→would,have→had),语序变成陈述语序。全用本课和 Key structures 的句子举例。",
+    "table": {
+      "headers": ["原话", "转述"],
+      "rows": [
+        ["'I am tired.' 陈述句", "He said that he was tired."],
+        ["'Are you tired?' 一般疑问", "She asked if you were tired."],
+        ["'When will Jack arrive?' 特殊疑问", "Tom asked when Jack would arrive."],
+        ["'Have you been abroad?'", "She asked if you had been abroad."],
+        ["时态后移 will→would / have→had", "he would go home / it had been successful"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "转述疑问句要用陈述语序(动词跟在主语后),不再倒装:asked when Jack would arrive(不是 would Jack)。", "mark": "疑问转述用陈述语序" },
+      { "rule": "ask sb to do 请某人做;refuse to do 拒绝做;be allowed to do 被允许做。", "mark": "ask sb to do / be allowed to" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did Mr. Gilbert telephone Dr. Millington?",
+    "options": ["To find out if his own operation had been successful", "To complain about the hospital", "To ask for a different doctor", "To speak to a nurse"],
+    "answer_index": 0
+  },
+  "passage": "While John Gilbert was in the hospital, he asked his doctor to tell him whether his operation had been successful, but the doctor refused to do so. The following day, the patient asked for a bedside telephone. When he was alone, he telephoned the hospital exchange and asked for Doctor Millington. When the doctor answered the phone, Mr. Gilbert said he was inquiring about a certain patient, a Mr. John Gilbert. He asked if Mr. Gilbert's operation had been successful, and the doctor told him that it had been. He then asked when Mr. Gilbert would be allowed to go home, and the doctor told him that he would have to stay in the hospital for another two weeks. Then Dr. Millington asked the caller if he was a relative of the patient. 'No,' the patient answered, 'I am Mr. John Gilbert.'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "While John Gilbert was in the hospital, he asked his doctor to tell him whether his operation had been successful, but the doctor refused to do so.", "text_cn": "约翰·吉尔伯特住院时,他请医生告诉他手术是否成功,但医生拒绝这样做。" },
+    { "seq": 2, "speaker": null, "text_en": "The following day, the patient asked for a bedside telephone.", "text_cn": "第二天,这位病人要了一部床头电话。" },
+    { "seq": 3, "speaker": null, "text_en": "When he was alone, he telephoned the hospital exchange and asked for Doctor Millington.", "text_cn": "趁房里只剩他一个人时,他挂通医院的电话交换台,要求与米灵顿医生讲话。" },
+    { "seq": 4, "speaker": null, "text_en": "When the doctor answered the phone, Mr. Gilbert said he was inquiring about a certain patient, a Mr. John Gilbert.", "text_cn": "当医生接过电话时,吉尔伯特先生说他想打听一位名叫约翰·吉尔伯特的病人的情况。" },
+    { "seq": 5, "speaker": null, "text_en": "He asked if Mr. Gilbert's operation had been successful, and the doctor told him that it had been.", "text_cn": "他问吉尔伯特先生的手术是否成功,医生告诉他手术很成功。" },
+    { "seq": 6, "speaker": null, "text_en": "He then asked when Mr. Gilbert would be allowed to go home, and the doctor told him that he would have to stay in the hospital for another two weeks.", "text_cn": "然后他又问吉尔伯特先生什么时候可以回家,医生告诉他还得在医院再住两个星期。" },
+    { "seq": 7, "speaker": null, "text_en": "Then Dr. Millington asked the caller if he was a relative of the patient.", "text_cn": "之后,米灵顿医生问打电话的人是否是病人的亲属。" },
+    { "seq": 8, "speaker": null, "text_en": "'No,' the patient answered, 'I am Mr. John Gilbert.'", "text_cn": "“不是,”病人回答说,“我就是约翰·吉尔伯特先生。”" }
+  ],
+  "words": [
+    { "word": "operation", "ipa": "/ˌɑːpəˈreɪʃən/", "pos": "n", "meaning_cn": "手术", "example": "his operation had been successful" },
+    { "word": "successful", "ipa": "/səkˈsesfəl/", "pos": "adj", "meaning_cn": "成功的", "example": "had been successful" },
+    { "word": "following", "ipa": "/ˈfɑːloʊɪŋ/", "pos": "adj", "meaning_cn": "下一个,接着的", "example": "the following day" },
+    { "word": "patient", "ipa": "/ˈpeɪʃənt/", "pos": "n", "meaning_cn": "病人", "example": "a certain patient" },
+    { "word": "alone", "ipa": "/əˈloʊn/", "pos": "adj", "meaning_cn": "独自的", "example": "When he was alone" },
+    { "word": "exchange", "ipa": "/ɪksˈtʃeɪndʒ/", "pos": "n", "meaning_cn": "(电话的)交换台", "example": "the hospital exchange" },
+    { "word": "inquire", "ipa": "/ɪnˈkwaɪr/", "pos": "v", "meaning_cn": "询问,打听", "example": "inquiring about a certain patient" },
+    { "word": "certain", "ipa": "/ˈsɜːrtn/", "pos": "adj", "meaning_cn": "某个", "example": "a certain patient" },
+    { "word": "caller", "ipa": "/ˈkɔːlər/", "pos": "n", "meaning_cn": "打电话的人", "example": "asked the caller" },
+    { "word": "relative", "ipa": "/ˈrelətɪv/", "pos": "n", "meaning_cn": "亲戚", "example": "a relative of the patient" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "ask if / whether(一般疑问转述)" },
+    { "gp": "gp2", "name": "ask + 疑问词 when/why(特殊疑问转述)" },
+    { "gp": "gp3", "name": "时态后移 will → would" },
+    { "gp": "gp4", "name": "时态后移 have → had(更早)" },
+    { "gp": "gp5", "name": "say / tell + that(陈述句转述)" },
+    { "gp": "gp6", "name": "疑问转述用陈述语序" },
+    { "gp": "gp7", "name": "ask sb to do / refuse to do(辅考)" },
+    { "gp": "gp8", "name": "be allowed to do(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He asked ___ the operation had been successful.\"(一般疑问转述:是否)", "stem_cn": "他问手术是否成功。", "options": ["if", "that", "what", "how"] },
+    { "gp": "gp1", "stem": "\"She asked ___ you were tired.\"(一般疑问转述:是否)", "stem_cn": "她问你是否累了。", "options": ["if", "that", "what", "when"] },
+    { "gp": "gp1", "stem": "\"Tom asked ___ Jack would arrive the next day.\"(一般疑问转述:是否,另一种说法)", "stem_cn": "汤姆问杰克第二天是否能到。", "options": ["whether", "that", "what", "how"] },
+    { "gp": "gp2", "stem": "\"Tom asked ___ Jack would arrive.\"(特殊疑问转述:何时)", "stem_cn": "汤姆问杰克什么时候到。", "options": ["when", "if", "that", "whether"] },
+    { "gp": "gp2", "stem": "\"Jane asked ___ I hadn't written to her.\"(特殊疑问转述:为什么)", "stem_cn": "简问我为什么不给她写信。", "options": ["why", "if", "that", "whether"] },
+    { "gp": "gp3", "stem": "\"Tom asked if Jack ___ come the next day.\"(转述时时态往后退一步)", "stem_cn": "汤姆问杰克第二天是否会来。", "options": ["would", "will", "is", "has"] },
+    { "gp": "gp3", "stem": "\"He asked when Mr. Gilbert ___ be allowed to go home.\"(转述时时态往后退一步)", "stem_cn": "他问吉尔伯特先生何时可以回家。", "options": ["would", "will", "is", "has"] },
+    { "gp": "gp4", "stem": "\"Catherine asked if you ___ ever been abroad.\"(转述:have 往后退)", "stem_cn": "凯瑟琳问你是否出过国。", "options": ["had", "have", "has", "did"] },
+    { "gp": "gp4", "stem": "\"The doctor told him that the operation ___ been successful.\"(表更早已完成)", "stem_cn": "医生告诉他手术已经成功了。", "options": ["had", "has", "was", "did"] },
+    { "gp": "gp5", "stem": "\"He ___ me that he was inquiring about a patient.\"(告诉某人用 tell)", "stem_cn": "他告诉我他在打听一位病人。", "options": ["told", "said", "spoke", "talked"] },
+    { "gp": "gp5", "stem": "\"He ___ that he was inquiring about a certain patient.\"(不带宾语用 say)", "stem_cn": "他说他在打听某位病人。", "options": ["said", "told", "spoke", "talked"] },
+    { "gp": "gp5", "stem": "\"He said ___ he was inquiring about a patient.\"(陈述句转述,say 后接的连词)", "stem_cn": "他说他在打听一位病人。", "options": ["that", "if", "what", "whether"] },
+    { "gp": "gp6", "stem": "\"Tom asked when Jack ___.\"(转述后动词跟在主语后,不倒装)", "stem_cn": "汤姆问杰克什么时候到。", "options": ["would arrive", "would he arrive", "will arrive", "did arrive"] },
+    { "gp": "gp6", "stem": "\"She asked where I ___.\"(转述后动词跟在主语后,不倒装)", "stem_cn": "她问我住在哪儿。", "options": ["lived", "did I live", "do I live", "live"] },
+    { "gp": "gp7", "stem": "\"He asked his doctor ___ tell him the truth.\"(请某人做某事的结构)", "stem_cn": "他请医生告诉他实情。", "options": ["to", "that", "if", "for"] },
+    { "gp": "gp7", "stem": "\"The doctor refused ___ answer the question.\"(拒绝做某事)", "stem_cn": "医生拒绝回答这个问题。", "options": ["to", "that", "if", "for"] },
+    { "gp": "gp8", "stem": "\"He asked when he would be allowed ___ go home.\"(被允许做某事)", "stem_cn": "他问何时可以回家。", "options": ["to", "for", "that", "of"] },
+    { "gp": "gp8", "stem": "\"Patients are not allowed ___ use phones here.\"(被允许做某事)", "stem_cn": "病人不许在这里用电话。", "options": ["to", "for", "that", "of"] }
+  ],
+  "stage6": [
+    { "stem": "美语说\"住院\"常说(带 the):", "options": ["in the hospital", "in hospital", "on hospital", "at hospital"] },
+    { "stem": "美语里\"给某人打电话\"常说:", "options": ["call someone", "ring someone", "phone up someone", "dial to someone"] },
+    { "stem": "operation 的意思是:", "options": ["手术", "操作说明", "运营", "军演"] },
+    { "stem": "successful 的意思是:", "options": ["成功的", "失败的", "昂贵的", "困难的"] },
+    { "stem": "inquire 的意思是:", "options": ["询问,打听", "回答", "抱怨", "命令"] },
+    { "stem": "relative 的意思是:", "options": ["亲戚", "朋友", "邻居", "陌生人"] }
+  ],
+  "contrast": [
+    { "us": "in the hospital", "uk": "in hospital", "note_cn": "住院;美语带 the 说 in the hospital,英式 in hospital(课文 in the hospital)" },
+    { "us": "call", "uk": "ring", "note_cn": "打电话;美语 call someone,英式 ring someone up(课文 telephoned / called)" },
+    { "us": "busy", "uk": "engaged", "note_cn": "(电话)占线;美语 the line is busy,英式 the line is engaged" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift(医院常用词)" }
+  ],
+  "chunks": [
+    { "us": "ask if / whether", "ipa": "/æsk ɪf/", "example1": "He asked if the operation had been successful.", "example1_cn": "他问手术是否成功。", "example2": "She asked whether I was tired.", "example2_cn": "她问我是否累了。" },
+    { "us": "ask for", "ipa": "/æsk fɔːr/", "example1": "The patient asked for a bedside telephone.", "example1_cn": "病人要了一部床头电话。", "example2": "He asked for help.", "example2_cn": "他请求帮助。" },
+    { "us": "be allowed to do", "ipa": "/bi əˈlaʊd tuː duː/", "example1": "He asked when he would be allowed to go home.", "example1_cn": "他问何时可以回家。", "example2": "You are not allowed to smoke here.", "example2_cn": "这里不许吸烟。" },
+    { "us": "inquire about", "ipa": "/ɪnˈkwaɪr əˈbaʊt/", "example1": "He said he was inquiring about a certain patient.", "example1_cn": "他说他在打听一位病人的情况。", "example2": "I want to inquire about the tickets.", "example2_cn": "我想打听一下票的事。" }
+  ],
+  "stage7_cloze": {
+    "context": "John Gilbert asked his doctor ___1___ his operation had been successful. Later he phoned and asked ___2___ Mr. Gilbert's operation had been successful. He asked ___3___ Mr. Gilbert would be allowed to go home. The doctor told him that he ___4___ have to stay two more weeks.",
+    "blanks": [
+      { "blank_no": 1, "options": ["whether", "that", "what", "how"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["if", "that", "what", "how"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["when", "if", "that", "what"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["would", "will", "is", "has"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did Mr. Gilbert telephone Dr. Millington?", "options": ["To find out if his own operation had been successful", "To complain about the food", "To ask for a new doctor", "To thank the nurses"] },
+    { "stem": "What did Mr. Gilbert pretend to be?", "options": ["Someone inquiring about a patient named John Gilbert", "A doctor at the hospital", "A newspaper reporter", "A hospital nurse"] },
+    { "stem": "How long would 'the patient' have to stay in the hospital?", "options": ["Another two weeks", "One more day", "He could go home at once", "A whole month"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想转述\"你累吗?\"(一般疑问用 ask if/whether):", "options": ["She asked if you were tired.", "She asked that you were tired.", "She asked are you tired.", "She asked if were you tired."] },
+    { "stem": "你想转述\"杰克什么时候到?\"(特殊疑问用 ask + 疑问词 + 陈述语序):", "options": ["Tom asked when Jack would arrive.", "Tom asked when would Jack arrive.", "Tom asked when Jack will arrive.", "Tom asked that when Jack would arrive."] },
+    { "stem": "你想转述\"我非常累\"(陈述句用 say/tell + that + 时态后移):", "options": ["He said that he was very tired.", "He said that he is very tired.", "He said me that he was very tired.", "He told that he was very tired."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "operation 的意思是:", "options": ["手术", "休息", "检查", "药物"] },
+    { "kind": "vocab", "stem": "relative 的意思是:", "options": ["亲戚", "医生", "护士", "病人"] },
+    { "kind": "grammar", "stem": "\"He asked ___ the operation had been successful.\"(一般疑问转述:是否)", "stem_cn": "他问手术是否成功。", "options": ["if", "that", "what", "how"] },
+    { "kind": "grammar", "stem": "\"He asked ___ he would be allowed to go home.\"(特殊疑问转述:何时)", "stem_cn": "他问何时可以回家。", "options": ["when", "if", "that", "what"] },
+    { "kind": "scenario", "stem": "\"He asked if Mr. Gilbert's operation had been successful.\" 这句话的意思是:", "options": ["他问吉尔伯特先生的手术是否成功。", "他说手术成功了。", "他做了一个手术。", "他取消了手术。"] },
+    { "kind": "scenario", "stem": "\"He would have to stay in the hospital for another two weeks.\" 这句话的意思是:", "options": ["他还得在医院再住两个星期。", "他明天就能出院。", "他不用住院。", "他住了两年院。"] },
+    { "kind": "reading", "stem": "Why did John Gilbert phone the hospital pretending to inquire about a patient?", "options": ["His own doctor refused to tell him if his operation had been successful", "He wanted to change hospitals", "He was bored in bed", "He wanted to speak to a nurse"], "passage": true },
+    { "kind": "reading", "stem": "What was funny about the phone call?", "options": ["Mr. Gilbert was secretly asking about his own operation", "The doctor gave the wrong answer", "The phone did not work", "The patient had already gone home"], "passage": true },
+    { "kind": "listening", "stem": "Why did Mr. Gilbert telephone Dr. Millington?", "options": ["To secretly find out if his own operation had succeeded", "To order dinner", "To ask for more medicine", "To call his family"], "audio": true },
+    { "kind": "listening", "stem": "What did the caller finally admit?", "options": ["'I am Mr. John Gilbert.'", "'I am a doctor.'", "'I am a relative.'", "'I am a reporter.'"], "audio": true }
+  ]
+}

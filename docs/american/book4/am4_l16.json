@@ -1,0 +1,134 @@
+{
+  "id": "am4_l16",
+  "unit_no": 3,
+  "lesson_no": 16,
+  "title_en": "The Modern City",
+  "title_cn": "现代城市",
+  "grammar_focus": "现在完成被动(have/has been done:cities have been raised / it has not been planned)、so that … may …(目的)+ as … as possible、过去分词作定语(life imposed by the factory / streets choked with fumes)、where 引导的定语从句(towers where people are packed)、While 引导的让步 + that 宾语从句(NCE4 无 KS 页,考点由课文结构自取;IP:源为阿列克西·卡雷尔《人之奥秘》论著,已用 100% 原创行文复述‘现代城市为逐利而建、不顾居民身心’的批判,无人物、无逐句改写;题材=城市与工业化反思·无害;美语化 gasoline/truck/apartment;第四册第16课)",
+  "scene": "当我们组织工业生活时,几乎完全忘了工厂对在其中劳作的男男女女的身体与心灵所起的作用。现代工业建立在一个念头之上:以尽可能低的成本换取尽可能大的产量,好让一家公司或一个人尽量多赚钱。它一路膨胀,却全然不顾照看机器的那些人究竟是怎样的存在,也丝毫不曾考虑工厂强加的那种人为生活,会给这些工人及其后代带来什么。我们的大城市几乎毫不顾及我们便拔地而起。一座摩天大楼的高度与尺寸,完全由这样的心思决定:从每一平方英尺土地上榨出最大的租金,并给租户提供能吸引他们的那种办公室与公寓。就这样,一座座庞大而狰狞的高塔被竖了起来,塔里塞进了太多太多的人。文明人似乎很喜欢这样一种生活方式。他们一边享受着房间里的舒适与廉价的奢华,一边却从没察觉,自己已被剥夺了生活真正的必需品。归根结底,现代城市不过是一堆巨大的楼房和阴暗狭窄的街道,被无数引擎的毒气所窒塞,被汽车和公交没完没了的轰鸣所震动,从早到晚被躁动的人群挤满。显然,它并不是为住在其中的人的福祉而规划的。",
+  "grammar_card": {
+    "title": "现在完成被动 / so that 目的 / 过去分词作定语 / where 定语从句 / While 让步",
+    "intro": "①现在完成被动 have/has + been + 过去分词:cities have been raised;it has not been planned。②so that … may …(目的);as … as possible。③过去分词作定语:the life imposed by the factory;streets choked with fumes。④where 引导定语从句(先行词是地点):towers where people are packed。⑤While(虽然)引导让步;realize that …(宾语从句)。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["现在完成被动", "have/has been + 过去分词", "the cities have been raised"],
+        ["so that 目的", "so that … may …", "so that a person may make money"],
+        ["过去分词作定语", "名词 + 过去分词", "the life imposed by the factory"],
+        ["where 定语从句", "地点 + where + 从句", "towers where people are packed"],
+        ["While 让步", "While + 从句, 主句", "While they enjoy it, they miss much"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "现在完成被动=have/has + been + 过去分词,主语单数用 has been,复数用 have been。", "mark": "have/has been done" },
+      { "rule": "where 引导定语从句时先行词是表地点的名词(place, city, tower…),在从句中作状语。", "mark": "地点 + where + 从句" },
+      { "rule": "美式拼写/用词:gasoline(汽油,英式 petrol)、truck(卡车,英式 lorry)、apartment(公寓,英式 flat)。本课已按美语写。", "mark": "gasoline / truck / apartment" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is the author's main argument about the modern city?",
+    "options": ["It is built for profit, with no regard for the good of its inhabitants", "It is the healthiest place to live", "It was carefully planned around nature", "It has too few tall buildings"],
+    "answer_index": 0
+  },
+  "passage": "When we organize our industrial life, we almost entirely forget the effect that the factory has on the body and mind of the men and women who work in it. Modern industry rests on a single idea: the greatest possible output at the lowest possible cost, so that a company or a person may make as much money as it can. It has grown without any real thought for the human beings who tend the machines, and without the slightest consideration for what the artificial life imposed by the factory does to those workers and to their descendants. Our great cities have been raised with almost no regard for us. The height and dimensions of a skyscraper are decided entirely by the wish to squeeze the maximum rent out of every square foot of ground, and to offer tenants the kind of offices and apartments that will attract them. In this way enormous, monstrous towers have been thrown up, towers where far too many people are packed together. Civilized men seem to enjoy such a way of living. While they take pleasure in the comfort and the cheap luxury of their rooms, they never notice that they have been deprived of the true necessities of life. The modern city, in the end, is little more than a mass of huge buildings and dark, narrow streets, choked with the toxic fumes of countless engines, shaken by the endless roar of cars and buses, and thronged from morning to night by restless crowds. Plainly, it has not been planned for the good of the people who must live in it.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "When we organize our industrial life, we almost entirely forget the effect that the factory has on the body and mind of the men and women who work in it. Modern industry rests on a single idea: the greatest possible output at the lowest possible cost, so that a company or a person may make as much money as it can.", "text_cn": "当我们组织工业生活时,几乎完全忘了工厂对在其中劳作的男男女女的身体与心灵所起的作用。现代工业建立在一个念头之上:以尽可能低的成本换取尽可能大的产量,好让一家公司或一个人尽量多赚钱。" },
+    { "seq": 2, "speaker": null, "text_en": "It has grown without any real thought for the human beings who tend the machines, and without the slightest consideration for what the artificial life imposed by the factory does to those workers and to their descendants.", "text_cn": "它一路膨胀,却全然不顾照看机器的那些人究竟是怎样的存在,也丝毫不曾考虑工厂强加的那种人为生活,会给这些工人及其后代带来什么。" },
+    { "seq": 3, "speaker": null, "text_en": "Our great cities have been raised with almost no regard for us. The height and dimensions of a skyscraper are decided entirely by the wish to squeeze the maximum rent out of every square foot of ground, and to offer tenants the kind of offices and apartments that will attract them.", "text_cn": "我们的大城市几乎毫不顾及我们便拔地而起。一座摩天大楼的高度与尺寸,完全由这样的心思决定:从每一平方英尺土地上榨出最大的租金,并给租户提供能吸引他们的那种办公室与公寓。" },
+    { "seq": 4, "speaker": null, "text_en": "In this way enormous, monstrous towers have been thrown up, towers where far too many people are packed together. Civilized men seem to enjoy such a way of living. While they take pleasure in the comfort and the cheap luxury of their rooms, they never notice that they have been deprived of the true necessities of life.", "text_cn": "就这样,一座座庞大而狰狞的高塔被竖了起来,塔里塞进了太多太多的人。文明人似乎很喜欢这样一种生活方式。他们一边享受着房间里的舒适与廉价的奢华,一边却从没察觉,自己已被剥夺了生活真正的必需品。" },
+    { "seq": 5, "speaker": null, "text_en": "The modern city, in the end, is little more than a mass of huge buildings and dark, narrow streets, choked with the toxic fumes of countless engines, shaken by the endless roar of cars and buses, and thronged from morning to night by restless crowds. Plainly, it has not been planned for the good of the people who must live in it.", "text_cn": "归根结底,现代城市不过是一堆巨大的楼房和阴暗狭窄的街道,被无数引擎的毒气所窒塞,被汽车和公交没完没了的轰鸣所震动,从早到晚被躁动的人群挤满。显然,它并不是为住在其中的人的福祉而规划的。" }
+  ],
+  "words": [
+    { "word": "maximum", "ipa": "/ˈmæksɪməm/", "pos": "adj", "meaning_cn": "最大的,最大限度的", "example": "the maximum rent out of every square foot" },
+    { "word": "consideration", "ipa": "/kənˌsɪdəˈreɪʃən/", "pos": "n", "meaning_cn": "考虑,体谅", "example": "without the slightest consideration" },
+    { "word": "descendant", "ipa": "/dɪˈsendənt/", "pos": "n", "meaning_cn": "后代,子孙", "example": "to those workers and to their descendants" },
+    { "word": "artificial", "ipa": "/ˌɑːrtɪˈfɪʃəl/", "pos": "adj", "meaning_cn": "人为的,人造的", "example": "the artificial life imposed by the factory" },
+    { "word": "impose", "ipa": "/ɪmˈpoʊz/", "pos": "v", "meaning_cn": "强加,施加", "example": "the life imposed by the factory" },
+    { "word": "skyscraper", "ipa": "/ˈskaɪskreɪpər/", "pos": "n", "meaning_cn": "摩天大楼", "example": "the dimensions of a skyscraper" },
+    { "word": "tenant", "ipa": "/ˈtenənt/", "pos": "n", "meaning_cn": "租户,房客", "example": "to offer tenants offices and apartments" },
+    { "word": "civilized", "ipa": "/ˈsɪvəlaɪzd/", "pos": "adj", "meaning_cn": "文明的,开化的", "example": "civilized men seem to enjoy it" },
+    { "word": "luxury", "ipa": "/ˈlʌkʃəri/", "pos": "n", "meaning_cn": "奢华,奢侈", "example": "the cheap luxury of their rooms" },
+    { "word": "deprive", "ipa": "/dɪˈpraɪv/", "pos": "v", "meaning_cn": "剥夺,使丧失", "example": "they have been deprived of the necessities" },
+    { "word": "monstrous", "ipa": "/ˈmɑːnstrəs/", "pos": "adj", "meaning_cn": "巨大的,狰狞可怕的", "example": "enormous, monstrous towers" },
+    { "word": "toxic", "ipa": "/ˈtɑːksɪk/", "pos": "adj", "meaning_cn": "有毒的", "example": "the toxic fumes of countless engines" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "现在完成被动(have/has been done)" },
+    { "gp": "gp2", "name": "so that … may …(目的)+ as … as possible" },
+    { "gp": "gp3", "name": "过去分词作定语(imposed/choked/produced)" },
+    { "gp": "gp4", "name": "where 引导的定语从句(towers where…)" },
+    { "gp": "gp5", "name": "While 让步 + that 宾语从句" },
+    { "gp": "gp6", "name": "词汇辨析(skyscraper/tenant/toxic)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The great cities ___ been raised with no regard for us.\"(现在完成被动 ___ + been + 过去分词,填第一个助动词)", "stem_cn": "那些大城市的建造根本不顾我们。", "options": ["have", "has", "are", "did"] },
+    { "gp": "gp1", "stem": "\"The city has not ___ planned for its people.\"(现在完成被动 has not + ___ + 过去分词,填中间的词)", "stem_cn": "这座城市的规划并不为它的居民着想。", "options": ["been", "be", "being", "was"] },
+    { "gp": "gp1", "stem": "\"Workers have been ___ of the necessities of life.\"(现在完成被动 have been + 过去分词;deprive 的过去分词)", "stem_cn": "工人被剥夺了生活的必需品。", "options": ["deprived", "depriving", "deprive", "to deprive"] },
+    { "gp": "gp2", "stem": "\"Factories cut costs so ___ owners may earn more.\"(‘以便、为了’的目的连词 so ___,填第二个词)", "stem_cn": "工厂压低成本,以便老板多赚。", "options": ["that", "as", "for", "which"] },
+    { "gp": "gp2", "stem": "\"They aim at the ___ output at the lowest cost.\"(‘最大的’,填形容词)", "stem_cn": "他们追求成本最低下的最大产量。", "options": ["maximum", "minimum", "least", "small"] },
+    { "gp": "gp2", "stem": "\"Each person wants to earn as much money as ___.\"(as much … as ___:‘尽可能多’,填这个词)", "stem_cn": "每个人都想尽可能多赚钱。", "options": ["possible", "can", "much", "more"] },
+    { "gp": "gp3", "stem": "\"The artificial life ___ by the factory harms the workers.\"(过去分词作定语,‘被强加的’;impose 的过去分词)", "stem_cn": "工厂强加的人为生活损害着工人。", "options": ["imposed", "imposing", "impose", "to impose"] },
+    { "gp": "gp3", "stem": "\"Streets ___ with toxic fumes fill the modern city.\"(过去分词作定语,‘被…堵塞的’;choke 的过去分词)", "stem_cn": "被毒气堵塞的街道充斥着现代城市。", "options": ["choked", "choking", "choke", "to choke"] },
+    { "gp": "gp3", "stem": "\"The effects ___ on their descendants are ignored.\"(过去分词作定语,‘施加于…的’;produce 的过去分词)", "stem_cn": "对其后代造成的影响被忽视了。", "options": ["produced", "producing", "produce", "to produce"] },
+    { "gp": "gp4", "stem": "\"They build towers ___ too many people are packed together.\"(定语从句,指地点,填关系副词)", "stem_cn": "他们盖起挤满太多人的高楼。", "options": ["where", "which", "that", "when"] },
+    { "gp": "gp4", "stem": "\"The factory is a place ___ workers lose their health.\"(定语从句,指地点,填关系副词)", "stem_cn": "工厂是工人失去健康的地方。", "options": ["where", "which", "who", "what"] },
+    { "gp": "gp4", "stem": "\"This is a city ___ nobody thinks of the inhabitants.\"(定语从句,指地点,填关系副词)", "stem_cn": "这是一座没人想着居民的城市。", "options": ["where", "which", "that", "whom"] },
+    { "gp": "gp5", "stem": "\"___ they enjoy the luxury, they miss the real necessities.\"(‘虽然、尽管’,填连词)", "stem_cn": "虽然他们享受着奢华,却错失了真正的必需品。", "options": ["While", "Because", "Unless", "Since"] },
+    { "gp": "gp5", "stem": "\"They do not realize ___ they have been deprived of much.\"(宾语从句,‘…这件事’,填连词)", "stem_cn": "他们没意识到自己已被剥夺了许多。", "options": ["that", "what", "which", "whether"] },
+    { "gp": "gp5", "stem": "\"___ the city looks grand, it is not built for people.\"(‘尽管’,填让步连词)", "stem_cn": "尽管这城市看着宏伟,却不是为人而建。", "options": ["While", "Because", "Once", "Unless"] },
+    { "gp": "gp6", "stem": "\"A very tall city building of many floors is a ___.\"(“摩天大楼”用哪个词)", "stem_cn": "一座许多层的高高的城市大楼。", "options": ["skyscraper", "cottage", "barn", "tent"] },
+    { "gp": "gp6", "stem": "\"A person who rents and lives in a place is a ___.\"(“租户、房客”用哪个词)", "stem_cn": "租住某处的人。", "options": ["tenant", "owner", "guest", "judge"] },
+    { "gp": "gp6", "stem": "\"Poisonous and harmful to living things means ___.\"(“有毒的”用哪个词)", "stem_cn": "对生物有毒有害的。", "options": ["toxic", "pure", "sweet", "fresh"] }
+  ],
+  "stage6": [
+    { "stem": "maximum 的意思是:", "options": ["最大的,最大限度的", "最小的", "平均的", "临时的"] },
+    { "stem": "artificial 的意思是:", "options": ["人为的,人造的", "天然的", "古老的", "免费的"] },
+    { "stem": "skyscraper 的意思是:", "options": ["摩天大楼", "山洞", "隧道", "农舍"] },
+    { "stem": "deprive 的意思是:", "options": ["剥夺,使丧失", "给予", "购买", "储存"] },
+    { "stem": "monstrous 的意思是:", "options": ["巨大的,骇人的", "微小的", "温柔的", "明亮的"] },
+    { "stem": "consideration 的意思是:", "options": ["考虑,体谅", "忽视", "惩罚", "命令"] }
+  ],
+  "contrast": [
+    { "us": "gasoline", "uk": "petrol", "note_cn": "汽油;美语 gasoline(gas),英式 petrol" },
+    { "us": "truck", "uk": "lorry", "note_cn": "卡车;美语 truck,英式 lorry" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" }
+  ],
+  "chunks": [
+    { "us": "little more than", "ipa": "/ˈlɪtl mɔːr ðæn/", "example1": "The city is little more than a mass of buildings.", "example1_cn": "这座城市不过是一堆楼房而已。", "example2": "It was little more than a shed.", "example2_cn": "那不过是个棚子罢了。" },
+    { "us": "take pleasure in", "ipa": "/teɪk ˈpleʒər ɪn/", "example1": "They take pleasure in cheap luxury.", "example1_cn": "他们乐于享受廉价的奢华。", "example2": "She takes pleasure in helping others.", "example2_cn": "她乐于助人。" },
+    { "us": "with no regard for", "ipa": "/wɪð noʊ rɪˈɡɑːrd fɔːr/", "example1": "The cities were built with no regard for us.", "example1_cn": "这些城市的建造毫不顾及我们。", "example2": "He drove with no regard for safety.", "example2_cn": "他开车全然不顾安全。" },
+    { "us": "pack together", "ipa": "/pæk təˈɡeðər/", "example1": "Too many people are packed together in the tower.", "example1_cn": "塔里塞进了太多人。", "example2": "The books were packed together on one shelf.", "example2_cn": "书都挤在一个书架上。" }
+  ],
+  "stage7_cloze": {
+    "context": "Modern industry cares only for the ___1___ output at the lowest cost. Cities ___2___ been raised with no regard for us. The artificial life ___3___ by the factory harms the workers. ___4___ people enjoy the luxury, they miss the real necessities.",
+    "blanks": [
+      { "blank_no": 1, "options": ["maximum", "minimum", "least", "small"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["have", "has", "are", "did"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["imposed", "imposing", "impose", "to impose"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["While", "Because", "Unless", "Since"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What is the speaker's main argument about the modern city?", "options": ["It is built for maximum profit, not for the good of the people who live in it", "It is the healthiest place to live", "It was planned around nature", "It has too few buildings"] },
+    { "stem": "What decides the shape and height of a skyscraper?", "options": ["The wish to squeeze the maximum rent from every square foot", "The comfort of the workers", "The beauty of the skyline", "The health of the city"] },
+    { "stem": "What do civilized people fail to notice about their comfortable rooms?", "options": ["That they have been deprived of the true necessities of life", "That the rent is too low", "That the rooms are too large", "That nature is nearby"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"那些大城市的建造根本不顾我们\"(现在完成被动):", "options": ["The great cities have been raised with no regard for us.", "The great cities have raised with no regard for us.", "The great cities has been raised with no regard for us.", "The great cities have been raise with no regard for us."] },
+    { "stem": "你想说\"他们盖起挤满太多人的高楼\"(where 引导、指地点的从句):", "options": ["They build towers where too many people are packed together.", "They build towers which too many people are packed together.", "They build towers where too many people are packing together.", "They build towers where too many people is packed together."] },
+    { "stem": "你想说\"虽然他们享受着奢华,却错失了真正的必需品\"(While 让步):", "options": ["While they enjoy the luxury, they miss the real necessities.", "While they enjoy the luxury, but they miss the real necessities.", "While they enjoying the luxury, they miss the real necessities.", "While they enjoy the luxury, they misses the real necessities."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "maximum 的意思是:", "options": ["最大的,最大限度的", "最小的", "平均的", "临时的"] },
+    { "kind": "vocab", "stem": "deprive 的意思是:", "options": ["剥夺,使丧失", "给予", "购买", "储存"] },
+    { "kind": "grammar", "stem": "\"The great cities ___ been raised with no regard for us.\"(现在完成被动)", "stem_cn": "那些大城市的建造根本不顾我们。", "options": ["have", "has", "are", "did"] },
+    { "kind": "grammar", "stem": "\"They build towers ___ too many people are packed together.\"(定语从句,指地点)", "stem_cn": "他们盖起挤满太多人的高楼。", "options": ["where", "which", "that", "when"] },
+    { "kind": "scenario", "stem": "\"little more than\" 的意思是:", "options": ["只不过是、几乎就是", "远远超过", "一点也不", "越来越多"] },
+    { "kind": "scenario", "stem": "\"take pleasure in\" 的意思是:", "options": ["以…为乐、乐于", "讨厌", "忘记", "害怕"] },
+    { "kind": "reading", "stem": "According to the passage, what is modern industry based on?", "options": ["The greatest output at the lowest cost, so as to make the most money", "The health of its workers", "The beauty of the city", "The welfare of descendants"], "passage": true },
+    { "kind": "reading", "stem": "What has the modern city been built with no regard for?", "options": ["The good of the people who must live in it", "The profit of the owners", "The rent per square foot", "The comfort of tenants"], "passage": true },
+    { "kind": "listening", "stem": "According to the speaker, for whose good has the modern city NOT been planned?", "options": ["The inhabitants who live in it", "The factory owners", "The city planners", "The tenants"], "audio": true },
+    { "kind": "listening", "stem": "What fills the streets of the modern city, according to the speaker?", "options": ["Toxic fumes and the endless roar of traffic", "Fresh air and quiet", "Trees and gardens", "Wide open spaces"], "audio": true }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "am2_l93",
+  "unit_no": 12,
+  "lesson_no": 93,
+  "title_en": "A Generous Gift",
+  "title_cn": "一份慷慨的礼物",
+  "grammar_focus": "复习 KS21/45/69 被动语态各时态综合(收官包·换道具照搬结构):一般现在/一般过去被动(is admired / was given)、现在完成被动(has been kept)、将来被动(will be moved)、现在进行被动(is being built)、情态被动(can be enjoyed / should be treasured),以及被动句中用 by 引出动作的发出者",
+  "scene": "很久以前,一位著名的艺术家把一座漂亮的老钟赠给了我们镇。这座钟完全是手工制作的,人人见了都赞叹不已。多年来,它一直摆在市政厅的正门口。每天早上,看管人都会细心地给它上发条。最近,城里来的一位专家为它做了修复。“这座钟被一代又一代人珍爱着,”市长说。不久,它就会被搬到新图书馆,让更多人能欣赏到它。一个特制的展柜正在打造中,用来保护它。它将被陈列在孩子们能了解它历史的地方。这样一份礼物理应被珍藏——而它也一定会被珍藏下去。",
+  "grammar_card": {
+    "title": "复习 KS21/45/69 被动语态各时态",
+    "intro": "被动语态由 be + 过去分词构成,表示“被……”。本课把各时态的被动放在一起复习:①一般现在/一般过去被动——is admired / was given;②现在完成被动——has been kept(一直被……);③将来被动——will be moved;④现在进行被动——is being built(正在被……);⑤情态被动——can be enjoyed / should be treasured。被动句里若要说“由谁做的”,用 by 引出(was repaired by an expert)。",
+    "table": {
+      "headers": ["时态(被动)", "例子"],
+      "rows": [
+        ["一般现在 / 一般过去", "It is admired by everyone. / It was given long ago."],
+        ["现在完成", "It has been kept in the town hall for years."],
+        ["将来", "Soon it will be moved to the new library."],
+        ["现在进行", "A special case is being built to protect it."],
+        ["情态 / by 短语", "It should be treasured. / It was repaired by an expert."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语“电梯”说 elevator(英式 lift);“一楼”说 first floor(英式 ground floor)。本课已按美语写。", "mark": "elevator / first floor" },
+      { "rule": "被动 = be 的相应时态 + 过去分词;现在进行被动是 is/are being + 过去分词;情态被动是 can/should + be + 过去分词;“由谁做”用 by 引出。", "mark": "被动构成" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How was the old clock made?",
+    "options": ["Entirely by hand", "By a big machine", "In a modern factory", "From cheap plastic"],
+    "answer_index": 0
+  },
+  "passage": "A beautiful old clock was given to our town by a famous artist long ago. It was made entirely by hand and is admired by everyone who sees it. For years it has been kept in the town hall's main entrance. Every morning it is wound carefully by the caretaker. Recently it was repaired by an expert from the city. \"This clock has been loved for generations,\" the mayor said. Soon it will be moved to the new library so more people can enjoy it. A special case is being built to protect it. It will be displayed where children can learn its history. Such a gift should be treasured, and it always will be.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "A beautiful old clock was given to our town by a famous artist long ago. It was made entirely by hand and is admired by everyone who sees it.", "text_cn": "很久以前,一位著名的艺术家把一座漂亮的老钟赠给了我们镇。这座钟完全是手工制作的,人人见了都赞叹不已。" },
+    { "seq": 2, "speaker": null, "text_en": "For years it has been kept in the town hall's main entrance. Every morning it is wound carefully by the caretaker.", "text_cn": "多年来,它一直摆在市政厅的正门口。每天早上,看管人都会细心地给它上发条。" },
+    { "seq": 3, "speaker": null, "text_en": "Recently it was repaired by an expert from the city. \"This clock has been loved for generations,\" the mayor said.", "text_cn": "最近,城里来的一位专家为它做了修复。“这座钟被一代又一代人珍爱着,”市长说。" },
+    { "seq": 4, "speaker": null, "text_en": "Soon it will be moved to the new library so more people can enjoy it. A special case is being built to protect it.", "text_cn": "不久,它就会被搬到新图书馆,让更多人能欣赏到它。一个特制的展柜正在打造中,用来保护它。" },
+    { "seq": 5, "speaker": null, "text_en": "It will be displayed where children can learn its history. Such a gift should be treasured, and it always will be.", "text_cn": "它将被陈列在孩子们能了解它历史的地方。这样一份礼物理应被珍藏——而它也一定会被珍藏下去。" }
+  ],
+  "words": [
+    { "word": "generous", "ipa": "/ˈdʒenərəs/", "pos": "adj", "meaning_cn": "慷慨的,大方的", "example": "a generous gift from an artist" },
+    { "word": "gift", "ipa": "/ɡɪft/", "pos": "n", "meaning_cn": "礼物", "example": "Such a gift should be treasured." },
+    { "word": "entirely", "ipa": "/ɪnˈtaɪərli/", "pos": "adv", "meaning_cn": "完全地", "example": "made entirely by hand" },
+    { "word": "by hand", "ipa": "/baɪ hænd/", "pos": "phr", "meaning_cn": "手工地", "example": "It was made entirely by hand." },
+    { "word": "admire", "ipa": "/ədˈmaɪr/", "pos": "v", "meaning_cn": "赞赏,钦佩", "example": "is admired by everyone who sees it" },
+    { "word": "town hall", "ipa": "/taʊn hɔːl/", "pos": "n", "meaning_cn": "市政厅", "example": "kept in the town hall's entrance" },
+    { "word": "wind", "ipa": "/waɪnd/", "pos": "v", "meaning_cn": "给(钟表)上发条", "example": "it is wound carefully by the caretaker" },
+    { "word": "caretaker", "ipa": "/ˈkerteɪkər/", "pos": "n", "meaning_cn": "看管人,管理员", "example": "wound by the caretaker" },
+    { "word": "mayor", "ipa": "/ˈmeɪər/", "pos": "n", "meaning_cn": "市长", "example": "the mayor said" },
+    { "word": "treasure", "ipa": "/ˈtreʒər/", "pos": "v", "meaning_cn": "珍惜,珍藏", "example": "should be treasured" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般现在 / 一般过去被动(is admired / was given)" },
+    { "gp": "gp2", "name": "现在完成被动(has been kept / loved)" },
+    { "gp": "gp3", "name": "将来被动(will be moved / displayed)" },
+    { "gp": "gp4", "name": "现在进行被动(is being built)" },
+    { "gp": "gp5", "name": "情态被动与 by 短语(should be treasured / by an expert)" },
+    { "gp": "gp6", "name": "词汇辨析(generous / caretaker / mayor)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"A beautiful old clock ___ to our town long ago.\"(一般过去被动:被赠予)", "stem_cn": "很久以前,一座漂亮的老钟被赠给了我们镇。", "options": ["was given", "gave", "is given", "has given"] },
+    { "gp": "gp1", "stem": "\"It ___ by everyone who sees it.\"(一般现在被动:被赞赏)", "stem_cn": "人人见了它都赞叹不已。", "options": ["is admired", "admires", "was admired", "is admiring"] },
+    { "gp": "gp1", "stem": "\"It ___ entirely by hand.\"(一般过去被动:被制作)", "stem_cn": "它完全是手工制作的。", "options": ["was made", "made", "is made", "is making"] },
+    { "gp": "gp2", "stem": "\"For years it ___ in the town hall's entrance.\"(现在完成被动:一直被保存)", "stem_cn": "多年来它一直摆在市政厅的门口。", "options": ["has been kept", "has kept", "is kept", "was keeping"] },
+    { "gp": "gp2", "stem": "\"'This clock ___ for generations,' the mayor said.\"(现在完成被动:一直被珍爱)", "stem_cn": "“这座钟被一代又一代人珍爱着,”市长说。", "options": ["has been loved", "has loved", "is loved", "was loving"] },
+    { "gp": "gp2", "stem": "\"It ___ by more than a hundred visitors this month.\"(现在完成被动:已被看过)", "stem_cn": "这个月它已被一百多名参观者看过。", "options": ["has been seen", "has seen", "is seeing", "saw"] },
+    { "gp": "gp3", "stem": "\"Soon it ___ to the new library.\"(将来被动:将被搬)", "stem_cn": "不久它就会被搬到新图书馆。", "options": ["will be moved", "will move", "is moved", "has moved"] },
+    { "gp": "gp3", "stem": "\"It ___ where children can learn its history.\"(将来被动:将被陈列)", "stem_cn": "它将被陈列在孩子们能了解它历史的地方。", "options": ["will be displayed", "will display", "is displaying", "displayed"] },
+    { "gp": "gp3", "stem": "\"Next week the clock ___ to a safe place.\"(将来被动:将被送)", "stem_cn": "下周这座钟将被送到一个安全的地方。", "options": ["will be taken", "will take", "is taking", "took"] },
+    { "gp": "gp4", "stem": "\"A special case ___ to protect it.\"(现在进行被动:正在被建造)", "stem_cn": "一个特制的展柜正在打造中,用来保护它。", "options": ["is being built", "is building", "builds", "has built"] },
+    { "gp": "gp4", "stem": "\"Right now, the old clock ___ by an expert.\"(现在进行被动:正在被检查)", "stem_cn": "此刻,这座老钟正被一位专家检查。", "options": ["is being examined", "is examining", "examines", "examined"] },
+    { "gp": "gp4", "stem": "\"The hall ___ for the ceremony at the moment.\"(现在进行被动:正在被布置)", "stem_cn": "此刻大厅正为典礼做布置。", "options": ["is being decorated", "is decorating", "decorates", "decorated"] },
+    { "gp": "gp5", "stem": "\"Such a gift ___.\"(情态被动:理应被珍藏)", "stem_cn": "这样一份礼物理应被珍藏。", "options": ["should be treasured", "should treasure", "treasures", "is treasuring"] },
+    { "gp": "gp5", "stem": "\"The clock will be placed where it ___ by all.\"(情态被动:能被欣赏)", "stem_cn": "这座钟将被摆放在人人都能欣赏到它的地方。", "options": ["can be enjoyed", "can enjoy", "enjoys", "is enjoying"] },
+    { "gp": "gp5", "stem": "\"The clock was repaired ___ an expert from the city.\"(被动句里引出“由谁做”)", "stem_cn": "这座钟由城里来的一位专家修复。", "options": ["by", "with", "for", "of"] },
+    { "gp": "gp6", "stem": "\"The clock was a ___ gift from a kind artist.\"(慷慨的用哪个词)", "stem_cn": "这座钟是一位好心艺术家慷慨的馈赠。", "options": ["generous", "angry", "lazy", "tiny"] },
+    { "gp": "gp6", "stem": "\"Every morning the ___ winds the clock carefully.\"(看管人用哪个词)", "stem_cn": "每天早上,看管人都细心地给钟上发条。", "options": ["caretaker", "singer", "pilot", "farmer"] },
+    { "gp": "gp6", "stem": "\"The ___ of the town gave a speech about the clock.\"(市长用哪个词)", "stem_cn": "镇长为这座钟发表了讲话。", "options": ["mayor", "cook", "driver", "guard"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"电梯\"说:", "options": ["elevator", "lift", "mover", "riser"] },
+    { "stem": "美语里\"一楼\"说:", "options": ["first floor", "ground floor", "level-one", "base-floor"] },
+    { "stem": "generous 的意思是:", "options": ["慷慨的", "吝啬的", "害怕的", "疲惫的"] },
+    { "stem": "admire 的意思是:", "options": ["赞赏,钦佩", "讨厌", "忽视", "破坏"] },
+    { "stem": "treasure 的意思是:", "options": ["珍惜,珍藏", "丢弃", "出售", "遗忘"] },
+    { "stem": "entirely 的意思是:", "options": ["完全地", "部分地", "偶尔地", "几乎不"] }
+  ],
+  "contrast": [
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "first floor", "uk": "ground floor", "note_cn": "一楼;美语 first floor,英式 ground floor" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" }
+  ],
+  "chunks": [
+    { "us": "by hand", "ipa": "/baɪ hænd/", "example1": "The clock was made entirely by hand.", "example1_cn": "这座钟完全是手工制作的。", "example2": "She sews all her clothes by hand.", "example2_cn": "她所有衣服都是手工缝的。" },
+    { "us": "town hall", "ipa": "/taʊn hɔːl/", "example1": "It has been kept in the town hall for years.", "example1_cn": "它多年来一直放在市政厅。", "example2": "The meeting was held at the town hall.", "example2_cn": "会议在市政厅召开。" },
+    { "us": "for generations", "ipa": "/fɔːr ˌdʒenəˈreɪʃnz/", "example1": "This clock has been loved for generations.", "example1_cn": "这座钟被一代又一代人珍爱着。", "example2": "The story has been told for generations.", "example2_cn": "这个故事世代相传。" },
+    { "us": "on display", "ipa": "/ɑːn dɪˈspleɪ/", "example1": "The clock will be on display in the library.", "example1_cn": "这座钟将在图书馆里展出。", "example2": "The paintings are on display this week.", "example2_cn": "这些画本周展出。" }
+  ],
+  "stage7_cloze": {
+    "context": "A beautiful old clock ___1___ to our town long ago. For years it ___2___ in the town hall. Now a special case ___3___ to protect it. Soon it ___4___ to the new library.",
+    "blanks": [
+      { "blank_no": 1, "options": ["was given", "gave", "is given", "has given"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["has been kept", "has kept", "is kept", "kept"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["is being built", "is building", "builds", "built"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["will be moved", "will move", "is moved", "moved"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How was the old clock made?", "options": ["Entirely by hand", "By a machine", "In a factory", "From plastic"] },
+    { "stem": "Where has the clock been kept for years?", "options": ["In the town hall's main entrance", "In a private home", "In a school", "In a garden"] },
+    { "stem": "Where will the clock be moved soon?", "options": ["To the new library", "To another town", "To a museum abroad", "Back to the artist"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"这只钟很久以前被一位著名艺术家赠给了我们镇\"(一般过去被动):", "options": ["A beautiful old clock was given to our town by a famous artist.", "A beautiful old clock gave to our town by a famous artist.", "A beautiful old clock is given to our town by a famous artist.", "A beautiful old clock has given to our town by a famous artist."] },
+    { "stem": "你想说\"多年来它一直被保存在市政厅\"(现在完成被动):", "options": ["For years it has been kept in the town hall.", "For years it has kept in the town hall.", "For years it is kept in the town hall.", "For years it was keeping in the town hall."] },
+    { "stem": "你想说\"一个特制的展柜正在被打造来保护它\"(现在进行被动):", "options": ["A special case is being built to protect it.", "A special case is building to protect it.", "A special case builds to protect it.", "A special case has built to protect it."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "generous 的意思是:", "options": ["慷慨的", "吝啬的", "害怕的", "疲惫的"] },
+    { "kind": "vocab", "stem": "mayor 的意思是:", "options": ["市长", "厨师", "司机", "门卫"] },
+    { "kind": "grammar", "stem": "\"It ___ by everyone who sees it.\"(一般现在被动)", "stem_cn": "人人见了它都赞叹。", "options": ["is admired", "admires", "was admired", "is admiring"] },
+    { "kind": "grammar", "stem": "\"Soon it ___ to the new library.\"(将来被动)", "stem_cn": "不久它就会被搬到新图书馆。", "options": ["will be moved", "will move", "is moved", "has moved"] },
+    { "kind": "scenario", "stem": "\"by hand\" 的意思是:", "options": ["手工地", "用手指着", "亲手交给", "在手边"] },
+    { "kind": "scenario", "stem": "\"for generations\" 的意思是:", "options": ["世世代代地", "为了发电", "一代人的时间", "过了几年"] },
+    { "kind": "reading", "stem": "How was the clock made?", "options": ["Entirely by hand", "By a machine", "In a hurry", "From gold"], "passage": true },
+    { "kind": "reading", "stem": "What will happen to the clock soon?", "options": ["It will be moved to the new library", "It will be sold", "It will be thrown away", "It will be hidden"], "passage": true },
+    { "kind": "listening", "stem": "Who repaired the clock recently?", "options": ["An expert from the city", "The mayor", "A schoolchild", "The artist"], "audio": true },
+    { "kind": "listening", "stem": "Where has the clock been kept for years?", "options": ["In the town hall", "In a garden", "In a museum", "In a school"], "audio": true }
+  ]
+}

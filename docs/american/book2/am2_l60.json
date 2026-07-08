@@ -1,0 +1,133 @@
+{
+  "id": "am2_l60",
+  "unit_no": 8,
+  "lesson_no": 60,
+  "title_en": "The future",
+  "title_cn": "卜算未来",
+  "grammar_focus": "KS36+KS16 表示将来的几种方式(will/be going to、现在进行表已安排的将来 is arriving tomorrow、时间/条件状语从句用一般现在表将来 if it rains/the moment he arrives)(教材 L60 Key structures)主考;SD 名词作定语(village fair/Christmas card 代替 of 短语)+ 课文 the moment、intend to、rush towards(辅考)",
+  "scene": "在一个乡村集市上,我决定去拜访一位称作别林斯基夫人的算命人。我走进她的帐篷,她叫我坐下。我给了她一些钱后,她便查看着一个水晶球说道:“您的一个亲戚就要来看您了。她将于今天傍晚到达,并准备住上几天。您一走出这个帐篷,就会大吃一惊。一位您很熟悉的女人将向您冲来。她会对您说点什么,然后带您离开这个地方。就是这些。”我一走出帐篷,就把别林斯基夫人给我算卦的事忘得一干二净了,因为我的妻子正匆匆向我跑来。“你躲到哪儿去了?”她不耐烦地问,“再有不到一个小时你姐姐就要到这儿了,我们得去车站接她。现在就已经晚了。”当她走开时,我也跟着她出了集市。",
+  "grammar_card": {
+    "title": "表示将来的几种方式",
+    "intro": "KS36+KS16 表将来:①will/shall + 原形;②be going to + 原形(打算、迹象预测);③现在进行时表已安排好的将来(is arriving tomorrow);④在 if/when/as soon as/the moment/until/before/after 引导的时间、条件状语从句中,用一般现在时表将来(主句用 will)。",
+    "table": {
+      "headers": ["用法", "例子"],
+      "rows": [
+        ["will/shall", "You will get a surprise."],
+        ["be going to", "I am going to travel by air."],
+        ["现在进行表将来", "She is arriving this evening."],
+        ["条件从句用一般现在", "If it rains, we shall stay home."],
+        ["时间从句用一般现在", "The moment he arrives, I'll call."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "SD 名词作定语:常用名词直接修饰名词(复合名词)代替 of/介词短语:the fair in the village → the village fair;a card for Christmas → a Christmas card。", "mark": "名词作定语" },
+      { "rule": "the moment 作连词='一…就…';intend to do=打算做;rush towards=向…冲去。", "mark": "课文搭配" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Does what Madam Bellinsky said come true?",
+    "options": ["It seems to — his wife (a woman he knows well) rushes towards him and leads him away", "No, nothing she said happened", "Yes, he wins a fortune", "No, a stranger attacks him"],
+    "answer_index": 0
+  },
+  "passage": "At a village fair, I decided to visit a fortune-teller called Madam Bellinsky. I went into her tent and she told me to sit down. After I had given her some money, she looked into a crystal ball and said: 'A relation of yours is coming to see you. She will be arriving this evening and intends to stay for a few days. The moment you leave this tent, you will get a big surprise. A woman you know well will rush towards you. She will speak to you and then she will lead you away from this place. That is all.' As soon as I went outside, I forgot all about Madam Bellinsky because my wife hurried towards me. 'Where have you been hiding?' she asked impatiently. 'Your sister will be here in less than an hour and we must be at the station to meet her. We are late already.' As she walked away, I followed her out of the fair.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "At a village fair, I decided to visit a fortune-teller called Madam Bellinsky. I went into her tent and she told me to sit down.", "text_cn": "在一个乡村集市上,我决定去拜访一位称作别林斯基夫人的算命人。我走进她的帐篷,她叫我坐下。" },
+    { "seq": 2, "speaker": null, "text_en": "After I had given her some money, she looked into a crystal ball and said: 'A relation of yours is coming to see you.", "text_cn": "我给了她一些钱后,她便查看着一个水晶球说道:“您的一个亲戚就要来看您了。" },
+    { "seq": 3, "speaker": null, "text_en": "She will be arriving this evening and intends to stay for a few days. The moment you leave this tent, you will get a big surprise.", "text_cn": "她将于今天傍晚到达,并准备住上几天。您一走出这个帐篷,就会大吃一惊。" },
+    { "seq": 4, "speaker": null, "text_en": "A woman you know well will rush towards you. She will speak to you and then she will lead you away from this place. That is all.'", "text_cn": "一位您很熟悉的女人将向您冲来。她会对您说点什么,然后带您离开这个地方。就是这些。”" },
+    { "seq": 5, "speaker": null, "text_en": "As soon as I went outside, I forgot all about Madam Bellinsky because my wife hurried towards me.", "text_cn": "我一走出帐篷,就把别林斯基夫人给我算卦的事忘得一干二净了,因为我的妻子正匆匆向我跑来。" },
+    { "seq": 6, "speaker": null, "text_en": "'Where have you been hiding?' she asked impatiently. 'Your sister will be here in less than an hour and we must be at the station to meet her.", "text_cn": "“你躲到哪儿去了?”她不耐烦地问,“再有不到一个小时你姐姐就要到这儿了,我们得去车站接她。" },
+    { "seq": 7, "speaker": null, "text_en": "We are late already.' As she walked away, I followed her out of the fair.", "text_cn": "现在就已经晚了。”当她走开时,我也跟着她出了集市。" }
+  ],
+  "words": [
+    { "word": "future", "ipa": "/ˈfjuːtʃər/", "pos": "n", "meaning_cn": "未来,前途", "example": "The future" },
+    { "word": "fair", "ipa": "/fer/", "pos": "n", "meaning_cn": "集市,游乐会", "example": "at a village fair" },
+    { "word": "fortune-teller", "ipa": "/ˈfɔːrtʃən telər/", "pos": "n", "meaning_cn": "算命人", "example": "a fortune-teller called Madam Bellinsky" },
+    { "word": "crystal", "ipa": "/ˈkrɪstl/", "pos": "n", "meaning_cn": "水晶", "example": "a crystal ball" },
+    { "word": "relation", "ipa": "/rɪˈleɪʃən/", "pos": "n", "meaning_cn": "亲属,亲戚", "example": "A relation of yours" },
+    { "word": "impatiently", "ipa": "/ɪmˈpeɪʃəntli/", "pos": "adv", "meaning_cn": "不耐烦地", "example": "she asked impatiently" },
+    { "word": "tent", "ipa": "/tent/", "pos": "n", "meaning_cn": "帐篷", "example": "I went into her tent" },
+    { "word": "surprise", "ipa": "/sərˈpraɪz/", "pos": "n", "meaning_cn": "惊奇,意外", "example": "you will get a big surprise" },
+    { "word": "rush", "ipa": "/rʌʃ/", "pos": "v", "meaning_cn": "冲,奔", "example": "will rush towards you" },
+    { "word": "intend", "ipa": "/ɪnˈtend/", "pos": "v", "meaning_cn": "打算,意图", "example": "intends to stay for a few days" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "will / shall 表将来" },
+    { "gp": "gp2", "name": "be going to(打算/预测)" },
+    { "gp": "gp3", "name": "现在进行时表已安排的将来" },
+    { "gp": "gp4", "name": "时间/条件状语从句用一般现在表将来" },
+    { "gp": "gp5", "name": "名词作定语/复合名词(SD)" },
+    { "gp": "gp6", "name": "the moment / intend to / rush towards(辅考·课文)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"A relation of yours ___ come to see you.\"(表将来'将要',助动词)", "stem_cn": "您的一个亲戚就要来看您了。", "options": ["will", "is", "has", "did"] },
+    { "gp": "gp1", "stem": "\"You ___ get a big surprise.\"(表将来'会',助动词)", "stem_cn": "您会大吃一惊。", "options": ["will", "are", "have", "did"] },
+    { "gp": "gp2", "stem": "\"I ___ to travel by air.\"(表打算、计划做某事)", "stem_cn": "我打算乘飞机旅游。", "options": ["am going", "will going", "go", "am go"] },
+    { "gp": "gp2", "stem": "\"Look at the clouds! It ___ to rain.\"(根据迹象预测'就要…了')", "stem_cn": "看那些云!要下雨了。", "options": ["is going", "will going", "goes", "is go"] },
+    { "gp": "gp3", "stem": "\"She ___ this evening and intends to stay for a few days.\"(已安排好的将来,用现在进行时)", "stem_cn": "她今晚到达,打算住几天。", "options": ["is arriving", "arrives", "arrived", "will arriving"] },
+    { "gp": "gp3", "stem": "\"He ___ at four o'clock.\"(已安排好的将来:四点来)", "stem_cn": "他四点钟来。", "options": ["is coming", "comes", "came", "will coming"] },
+    { "gp": "gp3", "stem": "\"She ___ in two days' time.\"(已安排好的将来:两天后离开)", "stem_cn": "她两天后动身。", "options": ["is leaving", "leaves", "left", "will leaving"] },
+    { "gp": "gp4", "stem": "\"The moment you ___ this tent, you will get a big surprise.\"(时间状语从句里用一般现在时表将来)", "stem_cn": "您一走出这帐篷,就会大吃一惊。", "options": ["leave", "will leave", "left", "are leaving"] },
+    { "gp": "gp4", "stem": "\"If it ___ tomorrow, we shall stay at home.\"(条件状语从句里用一般现在时表将来)", "stem_cn": "如果明天下雨,我们就待在家里。", "options": ["rains", "will rain", "rained", "is raining"] },
+    { "gp": "gp4", "stem": "\"I shall let you know the moment he ___.\"(时间状语从句里用一般现在时表将来)", "stem_cn": "他一到我就通知你。", "options": ["arrives", "will arrive", "arrived", "is arriving"] },
+    { "gp": "gp4", "stem": "\"As soon as the rain ___, we shall go out.\"(时间状语从句里用一般现在时表将来)", "stem_cn": "雨一停我们就出去。", "options": ["stops", "will stop", "stopped", "is stopping"] },
+    { "gp": "gp4", "stem": "\"I'll give him the message when he ___.\"(时间状语从句里用一般现在时表将来)", "stem_cn": "他回来时我就把口信给他。", "options": ["returns", "will return", "returned", "is returning"] },
+    { "gp": "gp5", "stem": "\"We went to the fair in the village. = We went to the ___.\"(用名词直接修饰,'乡村的集市'紧凑说法)", "stem_cn": "我们去了乡村集市。", "options": ["village fair", "fair village", "village's fair", "fair of village"] },
+    { "gp": "gp5", "stem": "\"He told us a story about ghosts. = He told us a ___.\"(用名词直接修饰,'关于鬼的故事'紧凑说法)", "stem_cn": "他给我们讲了个鬼故事。", "options": ["ghost story", "story ghost", "ghosts story", "story of ghost"] },
+    { "gp": "gp5", "stem": "\"She gave me a present for my birthday. = a ___.\"(用名词直接修饰,'生日的礼物'紧凑说法)", "stem_cn": "她送了我一件生日礼物。", "options": ["birthday present", "present birthday", "birthday's present", "present of birthday"] },
+    { "gp": "gp5", "stem": "\"He sent me a card for Christmas. = a ___.\"(用名词直接修饰,'圣诞的贺卡'紧凑说法)", "stem_cn": "他给我寄了张圣诞卡。", "options": ["Christmas card", "card Christmas", "Christmas's card", "card of Christmas"] },
+    { "gp": "gp6", "stem": "\"She will be arriving this evening and ___ to stay for a few days.\"(打算、意图做某事)", "stem_cn": "她今晚到达,打算住几天。", "options": ["intends", "intend", "intending", "intended"] },
+    { "gp": "gp6", "stem": "\"A woman will rush ___ you and speak to you.\"(朝某人'冲过来'的方向介词)", "stem_cn": "一个女人会向您冲来跟您说话。", "options": ["towards", "against", "away", "off"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"电影\"常说:", "options": ["movie", "film", "picture show", "cinema film"] },
+    { "stem": "美语里\"(流动)游乐场、嘉年华\"常说:", "options": ["carnival", "funfair", "fun park", "play ground"] },
+    { "stem": "future 的意思是:", "options": ["未来,前途", "过去", "现在", "习惯"] },
+    { "stem": "relation 的意思是:", "options": ["亲属,亲戚", "朋友", "邻居", "陌生人"] },
+    { "stem": "impatiently 的意思是:", "options": ["不耐烦地", "耐心地", "高兴地", "小心地"] },
+    { "stem": "rush 的意思是:", "options": ["冲,奔", "散步", "停下", "等待"] }
+  ],
+  "contrast": [
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" },
+    { "us": "carnival", "uk": "funfair", "note_cn": "(流动)游乐场;美语 carnival,英式 funfair" },
+    { "us": "sweater", "uk": "jumper", "note_cn": "毛衣;美语 sweater,英式 jumper" },
+    { "us": "mom", "uk": "mum", "note_cn": "妈妈;美语 mom,英式 mum" }
+  ],
+  "chunks": [
+    { "us": "the moment (一…就)", "ipa": "/ðə ˈmoʊmənt/", "example1": "The moment you leave, you'll get a surprise.", "example1_cn": "你一离开就会大吃一惊。", "example2": "The moment he arrives, I'll call you.", "example2_cn": "他一到我就打给你。" },
+    { "us": "be going to", "ipa": "/biː ˈɡoʊɪŋ tuː/", "example1": "I am going to travel by air.", "example1_cn": "我打算坐飞机旅行。", "example2": "It's going to rain.", "example2_cn": "要下雨了。" },
+    { "us": "rush towards", "ipa": "/rʌʃ təˈwɔːrdz/", "example1": "A woman rushed towards me.", "example1_cn": "一个女人向我冲来。", "example2": "The kids rushed towards the door.", "example2_cn": "孩子们冲向门口。" },
+    { "us": "come true", "ipa": "/kʌm truː/", "example1": "Did what she said come true?", "example1_cn": "她说的应验了吗?", "example2": "His dream came true.", "example2_cn": "他的梦想实现了。" }
+  ],
+  "stage7_cloze": {
+    "context": "A relation of yours ___1___ this evening. The moment you ___2___ this tent, you ___3___ a big surprise. A woman you know well ___4___ towards you.",
+    "blanks": [
+      { "blank_no": 1, "options": ["is arriving", "arrived", "arrives", "was arriving"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["leave", "will leave", "left", "are leaving"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["will get", "get", "got", "are getting"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["will rush", "rushes", "rushed", "is rush"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Who did the writer visit at the village fair?", "options": ["A fortune-teller called Madam Bellinsky", "His sister", "A doctor", "A shopkeeper"] },
+    { "stem": "What did the fortune-teller predict?", "options": ["A relation would come, and a woman he knows well would rush towards him", "He would win money", "He would travel abroad", "He would get sick"] },
+    { "stem": "Who actually rushed towards him outside the tent?", "options": ["His wife", "His sister", "A stranger", "The fortune-teller"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"她今晚到达\"(已安排好的将来用现在进行时):", "options": ["She is arriving this evening.", "She arrives this evening will.", "She will arriving this evening.", "She arrive this evening."] },
+    { "stem": "你想说\"如果明天下雨,我们就待在家里\"(条件从句用一般现在表将来):", "options": ["If it rains tomorrow, we will stay at home.", "If it will rain tomorrow, we will stay at home.", "If it rained tomorrow, we will stay at home.", "If it is raining tomorrow, we will stay at home."] },
+    { "stem": "你想说\"他给我寄了张圣诞卡\"(用名词作定语 Christmas card):", "options": ["He sent me a Christmas card.", "He sent me a card of Christmas.", "He sent me a Christmas's card.", "He sent me a card Christmas."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "future 的意思是:", "options": ["未来,前途", "过去", "现在", "习惯"] },
+    { "kind": "vocab", "stem": "relation 的意思是:", "options": ["亲属,亲戚", "朋友", "邻居", "陌生人"] },
+    { "kind": "grammar", "stem": "\"The moment you ___ this tent, you will get a surprise.\"(时间从句用一般现在表将来)", "stem_cn": "您一走出这帐篷,就会大吃一惊。", "options": ["leave", "will leave", "left", "are leaving"] },
+    { "kind": "grammar", "stem": "\"She ___ this evening and intends to stay.\"(现在进行表已安排的将来)", "stem_cn": "她今晚到达,打算住几天。", "options": ["is arriving", "arrives", "arrived", "will arriving"] },
+    { "kind": "scenario", "stem": "\"the moment (you leave)\" 作连词的意思是:", "options": ["一…就…", "过一会儿", "同时", "很久以前"] },
+    { "kind": "scenario", "stem": "\"come true\" 的意思是:", "options": ["实现,应验", "说真话", "变旧", "赶来"] },
+    { "kind": "reading", "stem": "What surprise happened as the writer left the tent?", "options": ["His wife rushed towards him, matching the prediction", "He found money", "A storm began", "Nothing happened"], "passage": true },
+    { "kind": "reading", "stem": "How did the fortune-teller's words match what happened?", "options": ["A woman he knew well (his wife) rushed towards him and led him away, as predicted", "Nothing she said happened", "He got rich as predicted", "A stranger attacked him"], "passage": true },
+    { "kind": "listening", "stem": "What did the wife say they had to do?", "options": ["Go to the station to meet his sister", "Go home right away", "Buy tickets", "Find the fortune-teller"], "audio": true },
+    { "kind": "listening", "stem": "How did the wife speak to him?", "options": ["Impatiently", "Cheerfully", "Softly", "Fearfully"], "audio": true }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "am4_l1",
+  "unit_no": 1,
+  "lesson_no": 1,
+  "title_en": "Finding Fossil Man",
+  "title_cn": "发现化石人",
+  "grammar_focus": "定语从句(that/who/where 关系词)、过去分词作定语(handed down / buried in rock)、疑问词引导的宾语从句(where…came from / what they did)、may have done(对过去的推测)+ 现在完成时对比、比较级(easier…than)/ neither…nor(NCE4 无 KS 页,考点由课文结构自取;原创承载·论如何从口传萨迦与石器认识没有文字的史前民族·题材科普无害;美语化 artifact/gray;第四册开篇课)",
+  "scene": "我们怎样了解那些远在文字出现之前就生活过的人?世界上只有少数地方在几千年前就开始书写,那里发生的事我们今天还能读到。可在许多地方,当时没人留下任何文字,一个民族保存历史的唯一办法,就是把它当作萨迦口口相传——那是代代相传的漫长传说。这类传说很有用,因为它们能告诉我们一些关于古代民族迁徙的情况,而那些民族并没有留下任何文字记录。有些人类学家想弄清:如今生活在太平洋岛屿上的波利尼西亚人,其遥远的祖先究竟来自何处;他们在这些口头传说里找到了部分答案——传说表明,其中一些人早在许多世纪前就从印度尼西亚渡海而来。可是那些最早的、与我们十分相像的人,已被遗忘了;他们的萨迦——如果曾经有过的话——也已失传。于是考古学家既无历史、也无传说可循,难以查明最早的人类来自哪里。偶尔会有一根骨头以化石的形式保存在岩石里,但这样的发现十分罕见。所幸,那些远古的人用石头、尤其是燧石打制工具,因为燧石比多数别的石头更容易加工;他们也许还用过木头和兽皮,只是这些早已腐烂殆尽。石头不会腐坏,所以那些很久以前打制的工具留存了下来,尽管打制它们的男男女女连骨头都已消失得无影无踪。仅凭一把加工过的燧石,考古学家就能讲出一段任何传说都不曾保留的故事。",
+  "grammar_card": {
+    "title": "定语从句 / 过去分词作定语 / 疑问词宾语从句 / may have done",
+    "intro": "①定语从句由 that/who/which/where 引导,修饰前面的名词:things that happened; people who lived long ago。②过去分词作定语,表被动/完成:legends handed down; a bone buried in rock。③疑问词(where/what/how)引导宾语从句,用陈述语序:wondered where they came from。④may + have + 过去分词,对过去作推测:they may have used wood。⑤比较级 easier…than;neither…nor“既不…也不…”。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["定语从句", "名词 + that/who/where", "things that happened long ago"],
+        ["过去分词作定语", "名词 + done", "legends handed down"],
+        ["疑问词宾语从句", "wonder + where/what + 陈述语序", "wondered where they came from"],
+        ["对过去的推测", "may + have + 过去分词", "they may have used wood"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "疑问词引导宾语从句时用陈述语序(主语在前),不倒装、不加问号:wondered where the ancestors came from。", "mark": "where they came from(不是 where did they come)" },
+      { "rule": "过去分词作定语=被动/完成(handed down 被传下、buried 被埋);现在分词作定语=主动/进行。", "mark": "handed down / buried in rock" },
+      { "rule": "美式拼写:artifact(器物,英式 artefact)、gray(灰色,英式 grey)。本课已按美语写。", "mark": "artifact / gray" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why are legends handed down by storytellers useful?",
+    "options": ["They tell us about the migrations of peoples who left no written record", "They are always perfectly accurate", "They make writing unnecessary", "They are simply entertaining"],
+    "answer_index": 0
+  },
+  "passage": "How do we learn about people who lived long before anyone could write? In a few parts of the world writing began thousands of years ago, and we can read of things that happened in those distant times. Yet in many places no one wrote anything down, and the only way that a people could keep its history was to recount it aloud, as sagas — long legends handed down from one generation to the next. Such legends are useful, because they can tell us something about the migrations of peoples who lived long ago but left no written record. Anthropologists who wondered where the distant ancestors of the Polynesian islanders came from found part of the answer in these spoken tales, which suggest that some of them sailed from Indonesia many centuries ago. But the very first people, who were much like ourselves, are forgotten, and their sagas, if they ever had any, are lost. So archaeologists have neither history nor legend to help them find out where the earliest humans came from. Now and then a bone survives as a fossil, buried in rock, but such finds are rare. Fortunately, those early people made tools of stone, especially flint, which is easier to shape than most other kinds; they may also have used wood and animal skins, but these have long since rotted away. Stone does not decay, and so the tools that were made so long ago have remained, even though the bones of the men and women who made them have disappeared without a trace. From a handful of worked flints an archaeologist can recount a story that no legend preserved.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "How do we learn about people who lived long before anyone could write? In a few parts of the world writing began thousands of years ago, and we can read of things that happened in those distant times. Yet in many places no one wrote anything down, and the only way that a people could keep its history was to recount it aloud, as sagas — long legends handed down from one generation to the next.", "text_cn": "我们怎样了解那些远在文字出现之前就生活过的人?世界上只有少数地方在几千年前就开始书写,那里发生的事我们今天还能读到。可在许多地方,当时没人留下任何文字,一个民族保存历史的唯一办法,就是把它当作萨迦口口相传——那是代代相传的漫长传说。" },
+    { "seq": 2, "speaker": null, "text_en": "Such legends are useful, because they can tell us something about the migrations of peoples who lived long ago but left no written record. Anthropologists who wondered where the distant ancestors of the Polynesian islanders came from found part of the answer in these spoken tales, which suggest that some of them sailed from Indonesia many centuries ago.", "text_cn": "这类传说很有用,因为它们能告诉我们一些关于古代民族迁徙的情况,而那些民族并没有留下任何文字记录。有些人类学家想弄清:太平洋岛上的波利尼西亚人,其遥远的祖先究竟来自何处;他们在这些口头传说里找到了部分答案——传说表明,其中一些人早在许多世纪前就从印度尼西亚渡海而来。" },
+    { "seq": 3, "speaker": null, "text_en": "But the very first people, who were much like ourselves, are forgotten, and their sagas, if they ever had any, are lost. So archaeologists have neither history nor legend to help them find out where the earliest humans came from. Now and then a bone survives as a fossil, buried in rock, but such finds are rare.", "text_cn": "可是那些最早的、与我们十分相像的人,已被遗忘了;他们的萨迦——如果曾经有过的话——也已失传。于是考古学家既无历史、也无传说可循,难以查明最早的人类来自哪里。偶尔会有一根骨头以化石的形式保存在岩石里,但这样的发现十分罕见。" },
+    { "seq": 4, "speaker": null, "text_en": "Fortunately, those early people made tools of stone, especially flint, which is easier to shape than most other kinds; they may also have used wood and animal skins, but these have long since rotted away. Stone does not decay, and so the tools that were made so long ago have remained, even though the bones of the men and women who made them have disappeared without a trace. From a handful of worked flints an archaeologist can recount a story that no legend preserved.", "text_cn": "所幸,那些远古的人用石头、尤其是燧石打制工具,因为燧石比多数别的石头更容易加工;他们也许还用过木头和兽皮,只是这些早已腐烂殆尽。石头不会腐坏,所以那些很久以前打制的工具留存了下来,尽管打制它们的男男女女连骨头都已消失得无影无踪。仅凭一把加工过的燧石,考古学家就能讲出一段任何传说都不曾保留的故事。" }
+  ],
+  "words": [
+    { "word": "fossil", "ipa": "/ˈfɑːsəl/", "pos": "n", "meaning_cn": "化石", "example": "a bone survives as a fossil" },
+    { "word": "recount", "ipa": "/rɪˈkaʊnt/", "pos": "v", "meaning_cn": "叙述,讲述", "example": "recount it aloud as sagas" },
+    { "word": "saga", "ipa": "/ˈsɑːɡə/", "pos": "n", "meaning_cn": "萨迦,英雄传说", "example": "handed down as sagas" },
+    { "word": "legend", "ipa": "/ˈledʒənd/", "pos": "n", "meaning_cn": "传说", "example": "legends handed down" },
+    { "word": "migration", "ipa": "/maɪˈɡreɪʃən/", "pos": "n", "meaning_cn": "迁徙,迁移", "example": "the migrations of peoples" },
+    { "word": "anthropologist", "ipa": "/ˌænθrəˈpɑːlədʒɪst/", "pos": "n", "meaning_cn": "人类学家", "example": "anthropologists who wondered" },
+    { "word": "archaeologist", "ipa": "/ˌɑːrkiˈɑːlədʒɪst/", "pos": "n", "meaning_cn": "考古学家", "example": "archaeologists have neither history nor legend" },
+    { "word": "ancestor", "ipa": "/ˈænsestər/", "pos": "n", "meaning_cn": "祖先", "example": "the distant ancestors" },
+    { "word": "Polynesian", "ipa": "/ˌpɑːləˈniːʒən/", "pos": "adj", "meaning_cn": "波利尼西亚(人)的", "example": "the Polynesian islanders" },
+    { "word": "Indonesia", "ipa": "/ˌɪndəˈniːʒə/", "pos": "n", "meaning_cn": "印度尼西亚", "example": "sailed from Indonesia" },
+    { "word": "flint", "ipa": "/flɪnt/", "pos": "n", "meaning_cn": "燧石", "example": "tools of stone, especially flint" },
+    { "word": "rot", "ipa": "/rɑːt/", "pos": "v", "meaning_cn": "腐烂", "example": "these have long since rotted away" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "定语从句(that/who/where)" },
+    { "gp": "gp2", "name": "过去分词作定语(handed down / buried)" },
+    { "gp": "gp3", "name": "疑问词引导的宾语从句(where…came from)" },
+    { "gp": "gp4", "name": "may have done + 现在完成时" },
+    { "gp": "gp5", "name": "比较级(easier…than)/ neither…nor" },
+    { "gp": "gp6", "name": "词汇辨析(fossil/archaeologist/recount)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"We can read of things ___ happened thousands of years ago.\"(定语从句,指物,作主语)", "stem_cn": "我们能读到几千年前发生的事。", "options": ["that", "who", "what", "whose"] },
+    { "gp": "gp1", "stem": "\"Anthropologists ___ wondered about our ancestors studied old legends.\"(定语从句,指人,作主语)", "stem_cn": "那些琢磨我们祖先来历的人类学家研究古老传说。", "options": ["who", "which", "whom", "what"] },
+    { "gp": "gp1", "stem": "\"The only way ___ they could keep history was to recount it.\"(定语从句,指方式,关系词)", "stem_cn": "他们保存历史的唯一办法就是口口相传。", "options": ["that", "what", "who", "whose"] },
+    { "gp": "gp2", "stem": "\"Sagas are legends ___ down from one generation to the next.\"(过去分词作定语,被动“被传下”)", "stem_cn": "萨迦是代代相传的传说。", "options": ["handed", "handing", "hand", "to hand"] },
+    { "gp": "gp2", "stem": "\"A bone ___ in rock may survive for millions of years.\"(过去分词作定语,被动“被埋”)", "stem_cn": "埋在岩石里的骨头可存续数百万年。", "options": ["buried", "burying", "bury", "to bury"] },
+    { "gp": "gp2", "stem": "\"From a few ___ flints, much can be learned.\"(过去分词作定语,“加工过的”)", "stem_cn": "从几片加工过的燧石就能了解很多。", "options": ["worked", "working", "work", "to work"] },
+    { "gp": "gp3", "stem": "\"Anthropologists wondered ___ the ancestors came from.\"(宾语从句,填疑问副词“从哪里”)", "stem_cn": "人类学家想知道祖先从何而来。", "options": ["where", "which", "that", "what"] },
+    { "gp": "gp3", "stem": "\"Archaeologists try to find out ___ the earliest humans lived.\"(疑问词从句,填‘哪里’)", "stem_cn": "考古学家设法查明最早的人类住在哪里。", "options": ["where", "whose", "that", "so"] },
+    { "gp": "gp3", "stem": "\"No one could write down ___ those people did.\"(宾语从句,填‘什么’)", "stem_cn": "没人能记下那些人做过什么。", "options": ["what", "which", "whom", "whose"] },
+    { "gp": "gp4", "stem": "\"Early people ___ have used wood and skins, though none survive.\"(对过去的推测“可能…过”,填情态词)", "stem_cn": "早期的人也许用过木头和兽皮,尽管都没留存。", "options": ["may", "will", "shall", "need"] },
+    { "gp": "gp4", "stem": "\"The wooden tools ___ rotted away long ago.\"(现在完成时,填助动词)", "stem_cn": "那些木器早已腐烂殆尽。", "options": ["have", "has", "had", "having"] },
+    { "gp": "gp4", "stem": "\"The stone tools ___ remained while the bones disappeared.\"(现在完成时,与 bones 对比,填助动词)", "stem_cn": "石器留存下来,骨头却消失了。", "options": ["have", "has", "was", "were"] },
+    { "gp": "gp5", "stem": "\"Flint is ___ to shape than most other kinds of stone.\"(比较级“更容易”,填形容词比较级)", "stem_cn": "燧石比多数别的石头更容易加工。", "options": ["easier", "easy", "easiest", "more easy"] },
+    { "gp": "gp5", "stem": "\"Archaeologists have ___ history nor legend to guide them.\"(‘既不…也不…’,填与 nor 搭配的前一个词)", "stem_cn": "考古学家既无历史也无传说可循。", "options": ["neither", "either", "both", "not"] },
+    { "gp": "gp5", "stem": "\"Stone lasts ___ than wood or skin.\"(比较级“更久”,填 long 的比较级)", "stem_cn": "石头比木头或兽皮存留得更久。", "options": ["longer", "long", "longest", "more long"] },
+    { "gp": "gp6", "stem": "\"The hardened remains of an ancient living thing preserved in rock is a ___.\"(“化石”用哪个词)", "stem_cn": "古生物在岩石中保存下来的硬化遗骸。", "options": ["fossil", "statue", "coin", "shell"] },
+    { "gp": "gp6", "stem": "\"A person who studies ancient peoples through their remains is an ___.\"(“考古学家”用哪个词)", "stem_cn": "通过遗物研究古代民族的人。", "options": ["archaeologist", "engineer", "lawyer", "farmer"] },
+    { "gp": "gp6", "stem": "\"To tell a story in detail is to ___ it.\"(“讲述、叙述”用哪个词)", "stem_cn": "详细地讲述一个故事。", "options": ["recount", "forget", "hide", "invent"] }
+  ],
+  "stage6": [
+    { "stem": "fossil 的意思是:", "options": ["化石", "雕像", "硬币", "贝壳"] },
+    { "stem": "saga 的意思是:", "options": ["萨迦,英雄传说", "谜语", "歌曲", "笑话"] },
+    { "stem": "migration 的意思是:", "options": ["迁徙,迁移", "定居", "隐藏", "繁荣"] },
+    { "stem": "ancestor 的意思是:", "options": ["祖先", "后代", "邻居", "陌生人"] },
+    { "stem": "flint 的意思是:", "options": ["燧石", "黏土", "沙子", "木炭"] },
+    { "stem": "rot 的意思是:", "options": ["腐烂", "生长", "闪光", "漂浮"] }
+  ],
+  "contrast": [
+    { "us": "artifact", "uk": "artefact", "note_cn": "(人工)器物;拼写差异,美语 artifact" },
+    { "us": "meter", "uk": "metre", "note_cn": "米(长度单位);拼写差异,美语 meter" },
+    { "us": "mold", "uk": "mould", "note_cn": "霉,霉菌;拼写差异,美语 mold" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" }
+  ],
+  "chunks": [
+    { "us": "hand down", "ipa": "/hænd daʊn/", "example1": "Legends are handed down from parents to children.", "example1_cn": "传说由父母传给孩子。", "example2": "The watch was handed down through the family.", "example2_cn": "这块表在家族里代代相传。" },
+    { "us": "find out", "ipa": "/faɪnd aʊt/", "example1": "Archaeologists try to find out where people came from.", "example1_cn": "考古学家设法查明人们的来历。", "example2": "We found out the truth later.", "example2_cn": "后来我们查明了真相。" },
+    { "us": "rot away", "ipa": "/rɑːt əˈweɪ/", "example1": "Wooden tools have rotted away over time.", "example1_cn": "木器随岁月腐烂殆尽。", "example2": "The old fence slowly rotted away.", "example2_cn": "旧栅栏慢慢烂掉了。" },
+    { "us": "without a trace", "ipa": "/wɪˈðaʊt ə treɪs/", "example1": "The bones disappeared without a trace.", "example1_cn": "那些骨头消失得无影无踪。", "example2": "The ship vanished without a trace.", "example2_cn": "那艘船消失得无影无踪。" }
+  ],
+  "stage7_cloze": {
+    "context": "We can read of things ___1___ happened long ago in a few early lands. Elsewhere, legends handed ___2___ by storytellers are our only record. Anthropologists wondered ___3___ the Polynesians came from. Early people ___4___ have used wood, but it has rotted away.",
+    "blanks": [
+      { "blank_no": 1, "options": ["that", "who", "what", "whose"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["down", "up", "in", "off"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["where", "which", "that", "what"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["may", "will", "shall", "do"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why are legends handed down by storytellers useful?", "options": ["They tell us about migrations of peoples who left no written record", "They are always completely accurate", "They replace the need for archaeology", "They are easy to memorize"] },
+    { "stem": "Why do stone tools survive when wooden ones do not?", "options": ["Stone does not decay, while wood rots away", "Stone is more valuable", "Wood was rarely used", "Stone was buried deeper"] },
+    { "stem": "Where do the sagas say some Polynesian peoples originally came from?", "options": ["Indonesia", "The Near East", "North America", "Australia"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我们能读到几千年前发生的事\"(定语从句):", "options": ["We can read of things that happened thousands of years ago.", "We can read of things what happened thousands of years ago.", "We can read of things they happened thousands of years ago.", "We can read of things happened thousands of years ago."] },
+    { "stem": "你想说\"人类学家想知道祖先从何而来\"(疑问词宾语从句):", "options": ["Anthropologists wondered where the ancestors came from.", "Anthropologists wondered where did the ancestors come from.", "Anthropologists wondered from where came the ancestors.", "Anthropologists wondered where the ancestors come from."] },
+    { "stem": "你想说\"早期的人也许用过木头和兽皮\"(对过去的推测):", "options": ["Early people may have used wood and skins.", "Early people may used wood and skins.", "Early people may have use wood and skins.", "Early people may to have used wood and skins."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "saga 的意思是:", "options": ["萨迦,英雄传说", "谜语", "歌曲", "笑话"] },
+    { "kind": "vocab", "stem": "flint 的意思是:", "options": ["燧石", "黏土", "沙子", "木炭"] },
+    { "kind": "grammar", "stem": "\"We can read of things ___ happened long ago.\"(定语从句,指物作主语)", "stem_cn": "我们能读到很久以前发生的事。", "options": ["that", "who", "what", "whose"] },
+    { "kind": "grammar", "stem": "\"Early people ___ have used wood and skins.\"(对过去的推测“可能…过”)", "stem_cn": "早期的人也许用过木头和兽皮。", "options": ["may", "will", "shall", "need"] },
+    { "kind": "scenario", "stem": "\"hand down\" 的意思是:", "options": ["代代相传", "举手", "交出", "放下"] },
+    { "kind": "scenario", "stem": "\"without a trace\" 的意思是:", "options": ["不留一丝痕迹", "沿着小路", "毫不费力", "立刻"] },
+    { "kind": "reading", "stem": "According to the passage, how did peoples without writing preserve their history?", "options": ["By reciting it aloud as sagas passed down the generations", "By carving it on stone walls", "By drawing pictures", "They could not preserve it at all"], "passage": true },
+    { "kind": "reading", "stem": "Why do archaeologists rely on stone tools to study the earliest humans?", "options": ["Those humans left neither writing nor legends, and stone survives", "Stone tools are beautiful", "Bones are easier to find", "Wood lasts the longest"], "passage": true },
+    { "kind": "listening", "stem": "What material makes the best-surviving ancient tools?", "options": ["Flint and other stone", "Wood", "Animal skin", "Woven grass"], "audio": true },
+    { "kind": "listening", "stem": "What happened to the bones of the people who made the oldest tools?", "options": ["They disappeared without a trace", "They turned to flint", "They were written about", "They were kept in museums"], "audio": true }
+  ]
+}

@@ -21,8 +21,8 @@ run 是重读闭音节、末尾单个辅音字母 n,变现在分词要双写 n �
 ### s5 seq7 | ans: having
 have 以不发音的 e 结尾,变现在分词先去掉 e 再加 -ing → having。✓ I'm having breakfast. 不能写成 haveing。
 
-### s5 seq8 | ans: 我近期打算/安排来看你
-现在进行时除了"此刻正在做",还能表示近期已安排好的事。I'm coming over tonight = 今晚我打算/安排过来,不是此刻正在路上。
+### s5 seq8 | ans: I'm coming over to see you tonight.
+现在进行时除了"此刻正在做",还能表示已经安排好的将来。想说"我打算今晚过来看你",用 be coming:I'm coming over to see you tonight(今晚过来,已定好)。✗ I come over:一般现在时,不表这次安排;✗ I came over:过去时;✗ I will coming:will 后不接 -ing。
 
 ### s5 seq9 | ans: I'm having breakfast right now.
 "此刻正在做的事"要用现在进行时(be+V-ing)。只有 I'm having breakfast right now 是进行时;其它几句(get up on Sundays / reads every morning / earth moves)都是一般现在时,说的是习惯或事实。

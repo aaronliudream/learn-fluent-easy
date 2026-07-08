@@ -1,0 +1,136 @@
+{
+  "id": "am2_l48",
+  "unit_no": 6,
+  "lesson_no": 48,
+  "title_en": "Did you want to tell me something?",
+  "title_cn": "你想对我说什么吗?",
+  "grammar_focus": "间接引语疑问句(ask whether/if、ask how/what + 陈述语序)+ 易混词辨析(Words often confused,复习 SD26-45)主考——too vs very、steal vs rob、which vs who、continuously vs continually、past vs passed、deny vs refuse;pull out、for a while、in answer to(辅考·课文①类)",
+  "scene": "牙科医生们总是在你无法作出回答的时候向你提问。我的牙科医生刚刚给我拔掉了一颗牙,叫我休息一会儿。我想说点什么,但嘴里塞满了药棉。他知道我收集火柴盒,于是问我收藏是否在增加;接着又问我兄弟近来如何,问我是否喜欢伦敦的新工作。作为对这些问题的回答,我不是点头,就是发出奇怪的声音。与此同时,我的舌头正忙着寻找刚拔掉的那颗牙的伤口。我突然非常着急起来,但却什么也说不出来。当那位牙医最后将药棉从我嘴中取出时,我总算有可能告诉他,他拔错了牙。",
+  "grammar_card": {
+    "title": "间接引语疑问句 + 易混词辨析",
+    "intro": "把别人的疑问转述出来:一般疑问用 ask whether/if,特殊疑问用 ask + 疑问词(how/what),都用陈述语序(动词跟在主语后)。本课还复习一批容易混的词:too/very、steal/rob、which/who、past/passed 等。全用本课句子举例。",
+    "table": {
+      "headers": ["用法/易混词", "例子"],
+      "rows": [
+        ["ask whether / if(一般疑问)", "He asked whether my collection was growing."],
+        ["ask how / what(特殊疑问)", "He asked how my brother was.(陈述语序)"],
+        ["too vs very", "too ill to work(太…不能)/ very ill(很)"],
+        ["steal vs rob", "steal a thing(偷物)/ rob a bank(抢地方/人)"],
+        ["past vs passed", "flew past my window(经过)/ three hours passed(过去了)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "转述疑问句要用陈述语序:asked how my brother was(不是 how was my brother)。", "mark": "疑问转述用陈述语序" },
+      { "rule": "steal 后接被偷的东西(steal money);rob 后接被抢的地方或人(rob a bank / rob him)。", "mark": "steal 物 / rob 人或地" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did the writer become very worried?",
+    "options": ["His tongue told him the dentist had pulled out the wrong tooth", "He had a lot of pain", "He had lost his job", "The dentist was rude"],
+    "answer_index": 0
+  },
+  "passage": "Dentists always ask questions when it is impossible for you to answer. My dentist had just pulled out one of my teeth and had told me to rest for a while. I tried to say something, but my mouth was full of cotton wool. He knew I collected match boxes and asked me whether my collection was growing. He then asked me how my brother was and whether I liked my new job in London. In answer to these questions I either nodded or made strange noises. Meanwhile, my tongue was busy searching out the hole where the tooth had been. I suddenly felt very worried, but could not say anything. When the dentist at last removed the cotton wool from my mouth, I was able to tell him that he had pulled out the wrong tooth.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Dentists always ask questions when it is impossible for you to answer.", "text_cn": "牙科医生们总是在你无法作出回答的时候向你提问。" },
+    { "seq": 2, "speaker": null, "text_en": "My dentist had just pulled out one of my teeth and had told me to rest for a while.", "text_cn": "我的牙医刚刚给我拔掉了一颗牙,叫我休息一会儿。" },
+    { "seq": 3, "speaker": null, "text_en": "I tried to say something, but my mouth was full of cotton wool.", "text_cn": "我想说点什么,但嘴里塞满了药棉。" },
+    { "seq": 4, "speaker": null, "text_en": "He knew I collected match boxes and asked me whether my collection was growing.", "text_cn": "他知道我收集火柴盒,于是问我收藏是否在增加。" },
+    { "seq": 5, "speaker": null, "text_en": "He then asked me how my brother was and whether I liked my new job in London.", "text_cn": "接着又问我兄弟近来如何,问我是否喜欢伦敦的新工作。" },
+    { "seq": 6, "speaker": null, "text_en": "In answer to these questions I either nodded or made strange noises.", "text_cn": "作为对这些问题的回答,我不是点头,就是发出奇怪的声音。" },
+    { "seq": 7, "speaker": null, "text_en": "Meanwhile, my tongue was busy searching out the hole where the tooth had been.", "text_cn": "与此同时,我的舌头正忙着寻找刚拔掉的那颗牙的伤口。" },
+    { "seq": 8, "speaker": null, "text_en": "When the dentist at last removed the cotton wool from my mouth, I was able to tell him that he had pulled out the wrong tooth.", "text_cn": "当那位牙医最后将药棉从我嘴中取出时,我总算能告诉他,他拔错了牙。" }
+  ],
+  "words": [
+    { "word": "pull", "ipa": "/pʊl/", "pos": "v", "meaning_cn": "拔,拉", "example": "pulled out one of my teeth" },
+    { "word": "collect", "ipa": "/kəˈlekt/", "pos": "v", "meaning_cn": "收集,搜集", "example": "I collected match boxes" },
+    { "word": "collection", "ipa": "/kəˈlekʃən/", "pos": "n", "meaning_cn": "收藏品,收集品", "example": "my collection was growing" },
+    { "word": "nod", "ipa": "/nɑːd/", "pos": "v", "meaning_cn": "点头", "example": "I either nodded or made noises" },
+    { "word": "meanwhile", "ipa": "/ˈmiːnwaɪl/", "pos": "adv", "meaning_cn": "同时,与此同时", "example": "Meanwhile, my tongue was busy" },
+    { "word": "dentist", "ipa": "/ˈdentɪst/", "pos": "n", "meaning_cn": "牙医", "example": "My dentist had just pulled out a tooth" },
+    { "word": "tooth", "ipa": "/tuːθ/", "pos": "n", "meaning_cn": "牙齿", "example": "pulled out the wrong tooth" },
+    { "word": "tongue", "ipa": "/tʌŋ/", "pos": "n", "meaning_cn": "舌头", "example": "my tongue was busy searching" },
+    { "word": "worried", "ipa": "/ˈwɜːrid/", "pos": "adj", "meaning_cn": "着急的,担心的", "example": "I suddenly felt very worried" },
+    { "word": "hole", "ipa": "/hoʊl/", "pos": "n", "meaning_cn": "洞,伤口", "example": "the hole where the tooth had been" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "间接引语 ask whether/if" },
+    { "gp": "gp2", "name": "间接引语 ask how/what + 陈述语序" },
+    { "gp": "gp3", "name": "too vs very(易混词)" },
+    { "gp": "gp4", "name": "steal vs rob(易混词)" },
+    { "gp": "gp5", "name": "which vs who(易混词)" },
+    { "gp": "gp6", "name": "continuously vs continually(易混词)" },
+    { "gp": "gp7", "name": "past vs passed(易混词)" },
+    { "gp": "gp8", "name": "deny vs refuse(易混词)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He asked me ___ my collection was growing.\"(间接引语一般疑问:是否)", "stem_cn": "他问我收藏是否在增加。", "options": ["whether", "that", "what", "how"] },
+    { "gp": "gp1", "stem": "\"He asked ___ I liked my new job in London.\"(间接引语一般疑问:是否)", "stem_cn": "他问我是否喜欢伦敦的新工作。", "options": ["whether", "that", "what", "when"] },
+    { "gp": "gp1", "stem": "\"She asked ___ I had ever been to a dentist.\"(间接引语一般疑问:是否)", "stem_cn": "她问我是否看过牙医。", "options": ["if", "that", "what", "how"] },
+    { "gp": "gp1", "stem": "\"I wondered ___ the dentist had pulled the right tooth.\"(间接引语一般疑问:是否)", "stem_cn": "我在想牙医是否拔对了牙。", "options": ["whether", "that", "what", "which"] },
+    { "gp": "gp2", "stem": "\"He asked me ___ my brother was.\"(间接引语特殊疑问:怎么样)", "stem_cn": "他问我兄弟近来如何。", "options": ["how", "whether", "that", "if"] },
+    { "gp": "gp2", "stem": "\"He asked me how my brother ___.\"(转述后动词跟在主语后,不倒装)", "stem_cn": "他问我兄弟近来如何。", "options": ["was", "was he", "is", "did he"] },
+    { "gp": "gp3", "stem": "\"He is ___ ill to do any work.\"(太…以致不能做某事)", "stem_cn": "他病得太重,干不了活。", "options": ["too", "very", "so", "much"] },
+    { "gp": "gp3", "stem": "\"The soup is ___ hot, and I like it that way.\"(仅表'很',中性)", "stem_cn": "这汤很烫,我就喜欢这样。", "options": ["very", "too", "so that", "much"] },
+    { "gp": "gp4", "stem": "\"The bank ___ last night.\"(抢劫银行/某人)", "stem_cn": "银行昨晚被抢劫了。", "options": ["was robbed", "was stolen", "robbed", "stole"] },
+    { "gp": "gp4", "stem": "\"My wallet ___ on the bus.\"(偷走某物)", "stem_cn": "我的钱包在公交车上被偷了。", "options": ["was stolen", "was robbed", "stole", "robbed"] },
+    { "gp": "gp5", "stem": "\"The new school, ___ has just been completed, is fine.\"(先行词指物时)", "stem_cn": "刚建成的新学校很不错。", "options": ["which", "who", "whom", "what"] },
+    { "gp": "gp5", "stem": "\"The dentist ___ pulled my tooth was very kind.\"(先行词指人时)", "stem_cn": "给我拔牙的牙医很和善。", "options": ["who", "which", "whom", "what"] },
+    { "gp": "gp6", "stem": "\"The ship sailed ___ across the sea for three days.\"(连续不间断地)", "stem_cn": "船连续不断地航行了三天。", "options": ["continuously", "continually", "suddenly", "carefully"] },
+    { "gp": "gp6", "stem": "\"He ___ interrupts me when I speak.\"(反复地、时断时续地)", "stem_cn": "我说话时他不断打断我。", "options": ["continually", "continuously", "quietly", "slowly"] },
+    { "gp": "gp7", "stem": "\"A bird flew ___ my window.\"(从…旁边经过,表方位)", "stem_cn": "一只鸟从我窗前飞过。", "options": ["past", "passed", "passing", "pass"] },
+    { "gp": "gp7", "stem": "\"Three hours ___ before he came back.\"(时间'过去了',用动词)", "stem_cn": "过了三个小时他才回来。", "options": ["passed", "past", "passing", "pass"] },
+    { "gp": "gp8", "stem": "\"He ___ that he had taken it.\"(否认做过某事)", "stem_cn": "他否认拿过它。", "options": ["denied", "refused", "rejected", "accepted"] },
+    { "gp": "gp8", "stem": "\"He ___ to answer the question.\"(拒绝做某事)", "stem_cn": "他拒绝回答问题。", "options": ["refused", "denied", "rejected", "accepted"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"药棉/棉球\"常说:", "options": ["cotton balls", "cotton wool", "wool balls", "medical cotton"] },
+    { "stem": "美语里\"糖果\"常说:", "options": ["candy", "sweets", "sugars", "lollies"] },
+    { "stem": "collect 的意思是:", "options": ["收集,搜集", "丢弃", "出售", "破坏"] },
+    { "stem": "nod 的意思是:", "options": ["点头", "摇头", "眨眼", "招手"] },
+    { "stem": "meanwhile 的意思是:", "options": ["同时,与此同时", "之后", "很久以前", "从不"] },
+    { "stem": "pull 的意思是:", "options": ["拔,拉", "推", "举", "扔"] }
+  ],
+  "contrast": [
+    { "us": "cotton balls", "uk": "cotton wool", "note_cn": "药棉/棉球;美语 cotton balls,英式 cotton wool(课文 cotton wool)" },
+    { "us": "candy", "uk": "sweets", "note_cn": "糖果;美语 candy,英式 sweets(蛀牙/牙医主题)" },
+    { "us": "drugstore", "uk": "chemist's", "note_cn": "药店;美语 drugstore,英式 chemist's(买药棉的地方)" },
+    { "us": "dentist's office", "uk": "dental surgery", "note_cn": "牙医诊所;美语 dentist's office,英式 dental surgery" }
+  ],
+  "chunks": [
+    { "us": "ask whether / how", "ipa": "/æsk ˈweðər/", "example1": "He asked whether my collection was growing.", "example1_cn": "他问我收藏是否在增加。", "example2": "He asked how my brother was.", "example2_cn": "他问我兄弟近来如何。" },
+    { "us": "pull out (a tooth)", "ipa": "/pʊl aʊt/", "example1": "The dentist had pulled out one of my teeth.", "example1_cn": "牙医拔掉了我一颗牙。", "example2": "He pulled out the wrong tooth.", "example2_cn": "他拔错了牙。" },
+    { "us": "for a while", "ipa": "/fɔːr ə waɪl/", "example1": "He told me to rest for a while.", "example1_cn": "他叫我休息一会儿。", "example2": "Let's wait for a while.", "example2_cn": "我们等一会儿吧。" },
+    { "us": "in answer to", "ipa": "/ɪn ˈænsər tuː/", "example1": "In answer to these questions, I nodded.", "example1_cn": "作为对这些问题的回答,我点点头。", "example2": "She smiled in answer to my question.", "example2_cn": "她笑着回答我的问题。" }
+  ],
+  "stage7_cloze": {
+    "context": "The dentist asked me ___1___ my collection was growing, and ___2___ my brother was. My mouth was full of cotton wool, so I only nodded. When he removed it, I was able to tell him he had pulled out the ___3___ tooth — I felt ___4___ worried.",
+    "blanks": [
+      { "blank_no": 1, "options": ["whether", "that", "what", "how"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["how", "whether", "that", "if"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["wrong", "wrongly", "false", "bad"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["very", "too", "so that", "much"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What had the dentist just done at the start of the story?", "options": ["Pulled out one of the writer's teeth", "Cleaned his teeth", "Given him medicine", "Taken an X-ray"] },
+    { "stem": "Why couldn't the writer answer the dentist's questions?", "options": ["His mouth was full of cotton wool", "He was asleep", "He didn't hear them", "He didn't speak English"] },
+    { "stem": "What did the writer realize while his tongue searched the hole?", "options": ["The dentist had pulled out the wrong tooth", "The tooth was fine", "He needed another filling", "He had swallowed the tooth"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想转述\"你的收藏在增加吗?\"(一般疑问用 ask whether/if):", "options": ["He asked whether my collection was growing.", "He asked that my collection was growing.", "He asked is my collection growing.", "He asked whether was my collection growing."] },
+    { "stem": "你想转述\"你兄弟近来如何?\"(特殊疑问用 ask how + 陈述语序):", "options": ["He asked how my brother was.", "He asked how was my brother.", "He asked how my brother is.", "He asked that how my brother was."] },
+    { "stem": "你想说\"他病得太重,干不了活\"(too...to 太…而不能):", "options": ["He is too ill to do any work.", "He is very ill to do any work.", "He is too ill to doing any work.", "He is so ill to do any work."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "collect 的意思是:", "options": ["收集,搜集", "丢弃", "破坏", "出售"] },
+    { "kind": "vocab", "stem": "nod 的意思是:", "options": ["点头", "摇头", "眨眼", "跺脚"] },
+    { "kind": "grammar", "stem": "\"He asked ___ my collection was growing.\"(间接引语一般疑问:是否)", "stem_cn": "他问我收藏是否在增加。", "options": ["whether", "that", "what", "how"] },
+    { "kind": "grammar", "stem": "\"He asked me ___ my brother was.\"(间接引语特殊疑问:怎么样)", "stem_cn": "他问我兄弟近来如何。", "options": ["how", "whether", "that", "if"] },
+    { "kind": "scenario", "stem": "\"He had pulled out the wrong tooth.\" 这句话的意思是:", "options": ["他拔错了牙。", "他拔掉了一颗坏牙。", "他没拔牙。", "他拔了两颗牙。"] },
+    { "kind": "scenario", "stem": "\"Dentists always ask questions when it is impossible for you to answer.\" 这句话的意思是:", "options": ["牙医总是在你无法回答的时候提问。", "牙医从不提问。", "牙医只在你能回答时提问。", "病人总在提问。"] },
+    { "kind": "reading", "stem": "Why did the writer only nod or make strange noises?", "options": ["His mouth was full of cotton wool so he couldn't speak", "He was too shy", "He didn't understand the questions", "He was angry at the dentist"], "passage": true },
+    { "kind": "reading", "stem": "Why did the writer suddenly feel very worried?", "options": ["His tongue found that the wrong tooth had been pulled out", "The dentist looked angry", "He had lost his match box collection", "The pain was terrible"], "passage": true },
+    { "kind": "listening", "stem": "What does the writer collect?", "options": ["Match boxes", "Old coins", "Stamps", "Toy cars"], "audio": true },
+    { "kind": "listening", "stem": "When was the writer finally able to speak?", "options": ["When the dentist removed the cotton wool from his mouth", "As soon as he sat down", "Before the tooth was pulled", "He never spoke"], "audio": true }
+  ]
+}

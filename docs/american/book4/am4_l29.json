@@ -1,0 +1,134 @@
+{
+  "id": "am4_l29",
+  "unit_no": 5,
+  "lesson_no": 29,
+  "title_en": "The Hovercraft",
+  "title_cn": "气垫船",
+  "grammar_focus": "过去完成进行时(had been working for years)、独立主格(the strangest of them being the hovercraft)、情态动词表推测/可能(could span the Atlantic / may well be)、过去分词作定语(ringed with a curtain / ring-shaped)、which 引导定语从句指物(NCE4 无 KS 页,考点由课文结构自取;IP:源为埃贡·拉森《The Pegasus Book of Inventors》‘气垫船’一文,内含真实发明者克里斯托弗·科克雷尔——按 IP 铁律已换成原创虚构工程师;气垫船技术事实(空气垫/兴波阻力/海峡试航)为公开科技史实,用 100% 原创行文复述;题材=交通发明·无害;美语化 tire/aluminum;第四册第29课)",
+  "scene": "我们这个世纪造出了许多奇特的新型交通工具,其中最奇特的,也许要数气垫船。1953年,一位五十多岁、原是电子工程师、后来在一片静水上改行造船的人,把一个他琢磨了多年的想法,提交给了政府和工业界。那想法就是:用一层低压空气的‘垫’——即气垫——把船托起来,四周再围上一圈高压空气帘。从那以后,人们一直难以断定:该把这机器算作船、算作飞机,还是算作陆上车辆——因为它介于船与飞行器之间。作为造船人,这位发明者一直在跟兴波阻力较劲;兴波阻力会白白耗掉水面船只很大一部分动力,还限制它的速度。他的答案,是靠固定在船底的大量环形气流,把船体整个托离水面。所以它会‘飞’,却飞不高:它的运作,依赖于它所掠过的那层表面——水面或地面。最初的几次试验引起轰动。气垫船先在水上行驶,继而冲上海滩、爬过沙丘,又安安静静地停在一条公路上。后来它横渡英吉利海峡,在浪上平稳滑行,那些浪根本不成问题。从那以后,各式各样的气垫船相继问世,投入了定期营运。这机器在通讯不便的辽阔地区尤其有用,比如非洲或澳大利亚的一些地方;它能把香蕉从种植园运到港口,而巨型气垫班船也许有一天能横渡大西洋。未来的铁路,很可能就是‘气垫火车’——它托在气垫上,在一条它从不接触的单轨上方高速飞驰。种种可能,似乎没有尽头。",
+  "grammar_card": {
+    "title": "过去完成进行时 / 独立主格 / 情态推测(could·may well) / 过去分词作定语 / which 定语从句",
+    "intro": "①过去完成进行时 had been + 现在分词,表‘在过去某点之前一直在做’:had been working for years。②独立主格 名词 + 现在分词:the strangest of them being the hovercraft。③情态动词表推测/可能:could span the Atlantic;may well be。④过去分词作定语:ringed with a curtain;ring-shaped jets。⑤which 引导定语从句、指物。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["过去完成进行时", "had been + 现在分词", "had been working for years"],
+        ["独立主格", "名词 + 现在分词", "the strangest of them being …"],
+        ["情态推测", "could / may well + 动词原形", "liners could span the Atlantic"],
+        ["过去分词作定语", "名词 + 过去分词", "a pad ringed with a curtain"],
+        ["which 定语从句", "名词 + which + …", "resistance which wastes power"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "独立主格里,名词与后面的分词是逻辑上的主谓关系,主动用现在分词(being/roaring)。", "mark": "名词 + 现在分词" },
+      { "rule": "may/might well + 动词原形 表‘很可能’;could + 动词原形 表‘也许能/有可能’。", "mark": "may well / could" },
+      { "rule": "美式拼写:tire(轮胎,英式 tyre)、aluminum(铝,英式 aluminium)。本课已按美语写。", "mark": "tire / aluminum" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is a hovercraft riding on when it is in motion?",
+    "options": ["A cushion of low-pressure air, ringed with higher-pressure air", "A set of steel rails", "A cushion of water", "Large rubber wheels"],
+    "answer_index": 0
+  },
+  "passage": "Many strange new means of transport have come out of our century, the strangest of them being perhaps the hovercraft. In 1953 a former electronics engineer in his fifties, a man who had taken up boat-building on a quiet stretch of English water, put before the government and industry an idea he had been turning over for years. It was the idea of holding a craft up on a 'pad,' or cushion, of low-pressure air, ringed with a curtain of higher-pressure air. Ever since, people have found it hard to decide whether the machine should be counted among ships, planes, or land vehicles — for it is something in between a boat and an aircraft. As a shipbuilder, the inventor had been struggling with the problem of wave resistance, which wastes a great deal of a surface ship's power and limits its speed. His answer was to lift the vessel clear of the water on a great number of ring-shaped air jets fixed to its bottom. The craft therefore 'flies,' but it cannot fly high: its action depends on the surface — water or ground — over which it rides. The first tests caused a sensation. The hovercraft travelled first over the water, then mounted the beach, climbed the dunes, and sat down quietly on a road. Later it crossed the Channel, riding smoothly over the waves, which presented no problem at all. Since then, various kinds of hovercraft have appeared and taken up regular service. The machine is especially useful in large regions with poor communications, such as parts of Africa or Australia; it can carry bananas from the plantations to the ports, and giant hovercraft liners could one day span the Atlantic. The railway of the future may well be the 'hovertrain,' riding on its air cushion above a single rail, which it never touches, at great speed. The possibilities seem unlimited.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Many strange new means of transport have come out of our century, the strangest of them being perhaps the hovercraft. In 1953 a former electronics engineer in his fifties, a man who had taken up boat-building on a quiet stretch of English water, put before the government and industry an idea he had been turning over for years.", "text_cn": "我们这个世纪造出了许多奇特的新型交通工具,其中最奇特的,也许要数气垫船。1953年,一位五十多岁、原是电子工程师、后来在一片静水上改行造船的人,把一个他琢磨了多年的想法,提交给了政府和工业界。" },
+    { "seq": 2, "speaker": null, "text_en": "It was the idea of holding a craft up on a 'pad,' or cushion, of low-pressure air, ringed with a curtain of higher-pressure air. Ever since, people have found it hard to decide whether the machine should be counted among ships, planes, or land vehicles — for it is something in between a boat and an aircraft.", "text_cn": "那想法就是:用一层低压空气的‘垫’——即气垫——把船托起来,四周再围上一圈高压空气帘。从那以后,人们一直难以断定:该把这机器算作船、算作飞机,还是算作陆上车辆——因为它介于船与飞行器之间。" },
+    { "seq": 3, "speaker": null, "text_en": "As a shipbuilder, the inventor had been struggling with the problem of wave resistance, which wastes a great deal of a surface ship's power and limits its speed. His answer was to lift the vessel clear of the water on a great number of ring-shaped air jets fixed to its bottom.", "text_cn": "作为造船人,这位发明者一直在跟兴波阻力较劲;兴波阻力会白白耗掉水面船只很大一部分动力,还限制它的速度。他的答案,是靠固定在船底的大量环形气流,把船体整个托离水面。" },
+    { "seq": 4, "speaker": null, "text_en": "The craft therefore 'flies,' but it cannot fly high: its action depends on the surface — water or ground — over which it rides. The first tests caused a sensation. The hovercraft travelled first over the water, then mounted the beach, climbed the dunes, and sat down quietly on a road.", "text_cn": "所以它会‘飞’,却飞不高:它的运作,依赖于它所掠过的那层表面——水面或地面。最初的几次试验引起轰动。气垫船先在水上行驶,继而冲上海滩、爬过沙丘,又安安静静地停在一条公路上。" },
+    { "seq": 5, "speaker": null, "text_en": "Later it crossed the Channel, riding smoothly over the waves, which presented no problem at all. The machine is especially useful in large regions with poor communications; it can carry bananas from the plantations to the ports, and giant hovercraft liners could one day span the Atlantic. The railway of the future may well be the 'hovertrain,' riding on its air cushion above a single rail, which it never touches. The possibilities seem unlimited.", "text_cn": "后来它横渡英吉利海峡,在浪上平稳滑行,那些浪根本不成问题。这机器在通讯不便的辽阔地区尤其有用;它能把香蕉从种植园运到港口,而巨型气垫班船也许有一天能横渡大西洋。未来的铁路,很可能就是‘气垫火车’——它托在气垫上,在一条它从不接触的单轨上方飞驰。种种可能,似乎没有尽头。" }
+  ],
+  "words": [
+    { "word": "hovercraft", "ipa": "/ˈhʌvərkræft/", "pos": "n", "meaning_cn": "气垫船", "example": "the strangest of them is the hovercraft" },
+    { "word": "cushion", "ipa": "/ˈkʊʃn/", "pos": "n", "meaning_cn": "垫子,气垫", "example": "a cushion of low-pressure air" },
+    { "word": "sensation", "ipa": "/senˈseɪʃn/", "pos": "n", "meaning_cn": "轰动,引起轰动的事", "example": "the first tests caused a sensation" },
+    { "word": "dune", "ipa": "/duːn/", "pos": "n", "meaning_cn": "沙丘", "example": "climbed the dunes" },
+    { "word": "plantation", "ipa": "/plænˈteɪʃn/", "pos": "n", "meaning_cn": "种植园", "example": "bananas from the plantations" },
+    { "word": "hovertrain", "ipa": "/ˈhʌvərtreɪn/", "pos": "n", "meaning_cn": "气垫火车", "example": "the railway of the future may be the hovertrain" },
+    { "word": "resistance", "ipa": "/rɪˈzɪstəns/", "pos": "n", "meaning_cn": "阻力,抵抗", "example": "the problem of wave resistance" },
+    { "word": "vessel", "ipa": "/ˈvesl/", "pos": "n", "meaning_cn": "船只,容器", "example": "to lift the vessel clear of the water" },
+    { "word": "span", "ipa": "/spæn/", "pos": "v", "meaning_cn": "横跨,跨越", "example": "liners could span the Atlantic" },
+    { "word": "curtain", "ipa": "/ˈkɜːrtn/", "pos": "n", "meaning_cn": "帘,幕", "example": "a curtain of higher-pressure air" },
+    { "word": "ring", "ipa": "/rɪŋ/", "pos": "v", "meaning_cn": "环绕,围绕", "example": "ringed with a curtain of air" },
+    { "word": "unlimited", "ipa": "/ʌnˈlɪmɪtɪd/", "pos": "adj", "meaning_cn": "无限的,无穷的", "example": "the possibilities seem unlimited" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "过去完成进行时(had been doing)" },
+    { "gp": "gp2", "name": "独立主格(名词 + 现在分词)" },
+    { "gp": "gp3", "name": "情态动词表推测/可能(could·may well)" },
+    { "gp": "gp4", "name": "过去分词作定语(ringed/ring-shaped)" },
+    { "gp": "gp5", "name": "which 引导定语从句(指物)" },
+    { "gp": "gp6", "name": "词汇辨析(cushion/dune/plantation)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"By 1953 the engineer ___ been working on the idea for years.\"(过去完成进行时 __ been + 现在分词,填最前面那个助动词)", "stem_cn": "到1953年,那位工程师已在这构想上钻研多年。", "options": ["had", "has", "have", "was"] },
+    { "gp": "gp1", "stem": "\"He suggested an idea on which he ___ been working for a long time.\"(过去完成进行时,填助动词)", "stem_cn": "他提出一个自己已研究许久的构想。", "options": ["had", "has", "have", "did"] },
+    { "gp": "gp1", "stem": "\"Before the first test, the team ___ been building the craft for months.\"(过去完成进行时,填助动词)", "stem_cn": "首次试验前,团队已造这船好几个月了。", "options": ["had", "has", "have", "was"] },
+    { "gp": "gp2", "stem": "\"Many new machines appeared, the strangest of them ___ the hovercraft.\"(独立主格,名词 + 现在分词,表‘是…’,填‘是’那个词的现在分词)", "stem_cn": "许多新机器出现了,其中最奇特的要数气垫船。", "options": ["being", "is", "was", "be"] },
+    { "gp": "gp2", "stem": "\"The craft rose from the water, air jets ___ beneath its hull.\"(独立主格,主动‘轰鸣’,填‘轰鸣’那个动词的现在分词)", "stem_cn": "船从水面升起,气流在船体下喷吹轰鸣。", "options": ["roaring", "roared", "roar", "to roar"] },
+    { "gp": "gp2", "stem": "\"The hovercraft crossed the Channel, the waves ___ no problem at all.\"(独立主格,主动‘造成/形成’,填‘造成’那个动词的现在分词)", "stem_cn": "气垫船横渡海峡,海浪根本不成问题。", "options": ["presenting", "presented", "present", "to present"] },
+    { "gp": "gp3", "stem": "\"Giant hovercraft liners ___ one day span the Atlantic.\"(情态词表可能,‘也许能’)", "stem_cn": "巨型气垫班船也许有一天能横渡大西洋。", "options": ["could", "must", "should", "need"] },
+    { "gp": "gp3", "stem": "\"The railway of the future ___ well be the hovertrain.\"(‘很可能是’,填与 well 连用表推测的情态词)", "stem_cn": "未来的铁路很可能就是气垫火车。", "options": ["may", "need", "dare", "would"] },
+    { "gp": "gp3", "stem": "\"A hovercraft ___ carry bananas from the plantations to the ports.\"(情态词表‘能够’)", "stem_cn": "气垫船能把香蕉从种植园运到港口。", "options": ["can", "must", "shall", "ought"] },
+    { "gp": "gp4", "stem": "\"The craft rides on a pad of air ___ with a curtain of higher pressure.\"(过去分词作定语,被动‘被环绕’,填‘环绕’那个动词的过去分词)", "stem_cn": "船靠一层空气垫托起,四周环着一圈高压气帘。", "options": ["ringed", "ringing", "ring", "to ring"] },
+    { "gp": "gp4", "stem": "\"A great number of ring-___ air jets lift the vessel.\"(过去分词作定语,‘呈…形状的’,填‘塑形/成形’那个动词的过去分词)", "stem_cn": "大量环形气流把船体托起。", "options": ["shaped", "shaping", "shape", "to shape"] },
+    { "gp": "gp4", "stem": "\"The idea, ___ on years of work, was at last accepted.\"(过去分词作定语,被动‘以…为基础’,填‘以…为基础’那个动词的过去分词)", "stem_cn": "这个基于多年心血的构想终获采纳。", "options": ["based", "basing", "base", "to base"] },
+    { "gp": "gp5", "stem": "\"The wave resistance ___ wastes a ship's power was the real problem.\"(定语从句,指物,在从句里作主语,填关系词)", "stem_cn": "浪费船只动力的兴波阻力,才是真正的难题。", "options": ["which", "who", "whose", "whom"] },
+    { "gp": "gp5", "stem": "\"The waves, ___ presented no problem, were crossed smoothly.\"(非限定定语从句,指物,填关系词)", "stem_cn": "那些浪根本不成问题,气垫船平稳驶过。", "options": ["which", "that", "who", "whom"] },
+    { "gp": "gp5", "stem": "\"The single rail, ___ the hovertrain never touches, guides it along.\"(非限定定语从句,指物,填关系词)", "stem_cn": "那条单轨,气垫火车从不接触,却引着它前行。", "options": ["which", "that", "who", "whom"] },
+    { "gp": "gp6", "stem": "\"A soft pad that supports weight, here a layer of air, is a ___.\"(“垫子,气垫”用哪个词)", "stem_cn": "承托重量的软垫,这里指一层空气。", "options": ["cushion", "ladder", "mirror", "basket"] },
+    { "gp": "gp6", "stem": "\"A ridge or hill of sand near the sea is a ___.\"(“沙丘”用哪个词)", "stem_cn": "海边由沙堆成的丘。", "options": ["dune", "cliff", "valley", "cave"] },
+    { "gp": "gp6", "stem": "\"A large estate where crops like bananas are grown is a ___.\"(“种植园”用哪个词)", "stem_cn": "种植香蕉等作物的大庄园。", "options": ["plantation", "factory", "harbor", "market"] }
+  ],
+  "stage6": [
+    { "stem": "hovercraft 的意思是:", "options": ["气垫船", "潜艇", "帆船", "游艇"] },
+    { "stem": "cushion 的意思是:", "options": ["垫子,气垫", "引擎", "车轮", "桅杆"] },
+    { "stem": "sensation 的意思是:", "options": ["轰动,引起轰动的事", "失败", "秘密", "传统"] },
+    { "stem": "dune 的意思是:", "options": ["沙丘", "悬崖", "山谷", "洞穴"] },
+    { "stem": "plantation 的意思是:", "options": ["种植园", "工厂", "仓库", "市场"] },
+    { "stem": "resistance 的意思是:", "options": ["阻力,抵抗", "动力", "引力", "速度"] }
+  ],
+  "contrast": [
+    { "us": "tire", "uk": "tyre", "note_cn": "轮胎;美语 tire,英式 tyre" },
+    { "us": "aluminum", "uk": "aluminium", "note_cn": "铝;美语 aluminum,英式 aluminium" },
+    { "us": "kilometer", "uk": "kilometre", "note_cn": "千米;美语 -meter,英式 -metre" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;美语 gray,英式 grey" }
+  ],
+  "chunks": [
+    { "us": "take up", "ipa": "/teɪk ʌp/", "example1": "Various hovercraft took up regular service.", "example1_cn": "各式气垫船投入了定期营运。", "example2": "She took up a new job in spring.", "example2_cn": "她春天开始了一份新工作。" },
+    { "us": "depend on", "ipa": "/dɪˈpend ɑːn/", "example1": "The hovercraft depends on the surface below it.", "example1_cn": "气垫船依赖它下方的那层表面。", "example2": "Success depends on effort.", "example2_cn": "成功取决于努力。" },
+    { "us": "in between", "ipa": "/ɪn bɪˈtwiːn/", "example1": "It is something in between a boat and an aircraft.", "example1_cn": "它介于船与飞行器之间。", "example2": "He sat in between the two of them.", "example2_cn": "他坐在他们俩中间。" },
+    { "us": "ever since", "ipa": "/ˈevər sɪns/", "example1": "Ever since, people have argued about it.", "example1_cn": "从那以后,人们一直为它争论。", "example2": "We have been friends ever since.", "example2_cn": "从那以后我们一直是朋友。" }
+  ],
+  "stage7_cloze": {
+    "context": "The hovercraft rides on a ___1___ of low-pressure air, ringed with higher pressure. Its inventor ___2___ been working on the idea for years. Giant liners ___3___ one day span the Atlantic. The waves, ___4___ presented no problem, were crossed with ease.",
+    "blanks": [
+      { "blank_no": 1, "options": ["cushion", "ladder", "mirror", "basket"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["had", "has", "have", "was"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["could", "must", "should", "need"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["which", "that", "who", "whom"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What is a hovercraft riding on when it is in motion?", "options": ["A cushion of low-pressure air, ringed with higher-pressure air", "A set of steel rails", "A cushion of water", "Large rubber wheels"] },
+    { "stem": "What problem was the inventor trying to solve?", "options": ["The wave resistance that wastes a surface ship's power and limits its speed", "The high cost of steel", "The shortage of sailors", "The noise of engines"] },
+    { "stem": "Why can a hovercraft cross both water and land?", "options": ["Its action depends only on the surface it rides over, whatever that surface is", "It has both wheels and sails", "It can swim and fly like a bird", "It floats on the sea only"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"到1953年,那位工程师已在这构想上钻研多年\"(过去完成进行时):", "options": ["By 1953 the engineer had been working on the idea for years.", "By 1953 the engineer has been working on the idea for years.", "By 1953 the engineer had been work on the idea for years.", "By 1953 the engineer had working been on the idea for years."] },
+    { "stem": "你想说\"许多新机器出现了,其中最奇特的要数气垫船\"(独立主格):", "options": ["Many new machines appeared, the strangest of them being the hovercraft.", "Many new machines appeared, the strangest of them be the hovercraft.", "Many new machines appeared, the strangest of them been the hovercraft.", "Many new machines appeared, the strangest of them is the hovercraft."] },
+    { "stem": "你想说\"巨型气垫班船也许有一天能横渡大西洋\"(情态词表推测):", "options": ["Giant hovercraft liners could one day span the Atlantic.", "Giant hovercraft liners could one day spans the Atlantic.", "Giant hovercraft liners could to one day span the Atlantic.", "Giant hovercraft liners can could one day span the Atlantic."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "hovercraft 的意思是:", "options": ["气垫船", "潜艇", "帆船", "游艇"] },
+    { "kind": "vocab", "stem": "dune 的意思是:", "options": ["沙丘", "悬崖", "山谷", "洞穴"] },
+    { "kind": "grammar", "stem": "\"By 1953 the engineer ___ been working on the idea for years.\"(过去完成进行时,填最前面那个助动词)", "stem_cn": "到1953年,那位工程师已钻研多年。", "options": ["had", "has", "have", "was"] },
+    { "kind": "grammar", "stem": "\"Many new machines appeared, the strangest of them ___ the hovercraft.\"(独立主格,填‘是’那个词的现在分词)", "stem_cn": "许多新机器出现,最奇特的要数气垫船。", "options": ["being", "is", "was", "be"] },
+    { "kind": "scenario", "stem": "\"depend on\" 的意思是:", "options": ["依赖,取决于", "拒绝", "忽视", "离开"] },
+    { "kind": "scenario", "stem": "\"ever since\" 的意思是:", "options": ["从那以后一直", "在那之前", "偶尔", "从不"] },
+    { "kind": "reading", "stem": "How does a hovercraft support itself?", "options": ["On a cushion of low-pressure air held in by a curtain of higher-pressure air", "On a bed of steel springs", "On floating logs", "On a magnetic field"], "passage": true },
+    { "kind": "reading", "stem": "Why is the hovercraft hard to classify as ship, plane, or land vehicle?", "options": ["It is something in between a boat and an aircraft", "It is faster than all of them", "It cannot move at all", "It has no engine"], "passage": true },
+    { "kind": "listening", "stem": "What did the first tests lead the hovercraft to do?", "options": ["Travel over water, then mount the beach and cross land", "Sink beneath the waves", "Fly high into the air", "Stay in the harbor"], "audio": true },
+    { "kind": "listening", "stem": "Where is the hovercraft especially useful?", "options": ["In large areas with poor communications, such as parts of Africa or Australia", "Only in crowded cities", "Only on railways", "Only in deserts"], "audio": true }
+  ]
+}

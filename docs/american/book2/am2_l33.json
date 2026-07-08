@@ -1,0 +1,138 @@
+{
+  "id": "am2_l33",
+  "unit_no": 5,
+  "lesson_no": 33,
+  "title_en": "Out of the darkness",
+  "title_cn": "冲出黑暗",
+  "grammar_focus": "方向 / 位置介词短语(回答 Where / Which direction:to/from、into/out of、for、towards、at,KS9 扩展)主考 + on + 动名词(= as soon as '一…就…')/ that 引导定语从句(可省略)辅考·课文①类",
+  "scene": "几乎过了一个星期,那姑娘才能讲述自己的遭遇。一天下午,她乘小船从海岸出发,遇上了暴风雨;天将黑时小船撞上一块礁石,姑娘跳进海里,在水里泡了整整一夜才游到岸边——那段时间她游了8英里。第二天凌晨,她看到前方有灯光,知道自己已接近岸边(灯光高悬在峭壁上)。一到岸边,她就朝灯光挣扎着爬上峭壁。她记得的就是这些。第二天醒来,她发现自己躺在医院里。",
+  "grammar_card": {
+    "title": "方向与位置的介词短语",
+    "intro": "回答 Where / Which direction 的问题,常用介词短语:to / from(去向/来源)、into / out of(进入/出来)、for(前往)、towards(朝…方向)、at(对着一点)。全用本课和 Key structures 的句子举例。",
+    "table": {
+      "headers": ["介词", "例子"],
+      "rows": [
+        ["to / from → 去向 / 来源", "He flew to Washington from Chicago."],
+        ["into / out of → 进入 / 出来", "She jumped into the sea. / out of the window."],
+        ["for → 前往", "We set out for the village."],
+        ["towards → 朝…方向", "She swam towards the shore."],
+        ["at → 对着一点", "The boy threw a stone at a dog."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "on + 动名词 = as soon as 引导的时间状语,'一…就…':On arriving at the shore, she struggled up.", "mark": "on + doing" },
+      { "rule": "that 引导定语从句修饰前面的名词,作宾语时常省略:That was all (that) she remembered.", "mark": "that 定从(可省)" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why was the girl in the hospital?",
+    "options": ["She was caught in a storm at sea and swam to shore, exhausted", "She had fallen off a cliff", "She had a car accident", "She was simply seasick"],
+    "answer_index": 0
+  },
+  "passage": "Nearly a week passed before the girl was able to explain what had happened to her. One afternoon she set out from the coast in a small boat and was caught in a storm. Toward evening, the boat struck a rock and the girl jumped into the sea. Then she swam to shore after spending the whole night in the water. During that time she covered a distance of eight miles. Early next morning, she saw a light ahead. She knew she was near the shore because the light was high up on the cliffs. On arriving at the shore, the girl struggled up the cliff toward the light she had seen. That was all she remembered. When she woke up a day later, she found herself in the hospital.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Nearly a week passed before the girl was able to explain what had happened to her.", "text_cn": "几乎过了一个星期,那姑娘才能讲述发生在她身上的事。" },
+    { "seq": 2, "speaker": null, "text_en": "One afternoon she set out from the coast in a small boat and was caught in a storm.", "text_cn": "一天下午,她乘一条小船从海岸出发,遇上了暴风雨。" },
+    { "seq": 3, "speaker": null, "text_en": "Toward evening, the boat struck a rock and the girl jumped into the sea.", "text_cn": "傍晚时分,小船撞上一块礁石,姑娘跳进了海里。" },
+    { "seq": 4, "speaker": null, "text_en": "Then she swam to shore after spending the whole night in the water.", "text_cn": "然后她在水里泡了整整一夜,才游到岸边。" },
+    { "seq": 5, "speaker": null, "text_en": "During that time she covered a distance of eight miles.", "text_cn": "在那段时间里,她游了8英里。" },
+    { "seq": 6, "speaker": null, "text_en": "Early next morning, she saw a light ahead.", "text_cn": "第二天凌晨,她看到前方有一盏灯。" },
+    { "seq": 7, "speaker": null, "text_en": "She knew she was near the shore because the light was high up on the cliffs.", "text_cn": "她知道自己已接近岸边,因为那灯光高悬在峭壁上。" },
+    { "seq": 8, "speaker": null, "text_en": "On arriving at the shore, the girl struggled up the cliff toward the light she had seen.", "text_cn": "一到岸边,姑娘就朝着她看到的灯光挣扎着爬上峭壁。" },
+    { "seq": 9, "speaker": null, "text_en": "That was all she remembered.", "text_cn": "她所记得的就是这些。" },
+    { "seq": 10, "speaker": null, "text_en": "When she woke up a day later, she found herself in the hospital.", "text_cn": "第二天她醒来时,发现自己躺在医院里。" }
+  ],
+  "words": [
+    { "word": "darkness", "ipa": "/ˈdɑːrknəs/", "pos": "n", "meaning_cn": "黑暗", "example": "Out of the darkness" },
+    { "word": "explain", "ipa": "/ɪkˈspleɪn/", "pos": "v", "meaning_cn": "解释,叙述", "example": "able to explain what had happened" },
+    { "word": "coast", "ipa": "/koʊst/", "pos": "n", "meaning_cn": "海岸", "example": "set out from the coast" },
+    { "word": "storm", "ipa": "/stɔːrm/", "pos": "n", "meaning_cn": "暴风雨", "example": "was caught in a storm" },
+    { "word": "rock", "ipa": "/rɑːk/", "pos": "n", "meaning_cn": "岩石,礁石", "example": "the boat struck a rock" },
+    { "word": "shore", "ipa": "/ʃɔːr/", "pos": "n", "meaning_cn": "海岸,岸边", "example": "she swam to shore" },
+    { "word": "ahead", "ipa": "/əˈhed/", "pos": "adv", "meaning_cn": "在前面", "example": "she saw a light ahead" },
+    { "word": "cliff", "ipa": "/klɪf/", "pos": "n", "meaning_cn": "峭壁,悬崖", "example": "high up on the cliffs" },
+    { "word": "struggle", "ipa": "/ˈstrʌɡəl/", "pos": "v", "meaning_cn": "挣扎", "example": "struggled up the cliff" },
+    { "word": "hospital", "ipa": "/ˈhɑːspɪtəl/", "pos": "n", "meaning_cn": "医院", "example": "found herself in the hospital" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "to / from 短语(去向 / 来源)" },
+    { "gp": "gp2", "name": "into / out of 短语(进入 / 出来)" },
+    { "gp": "gp3", "name": "for 短语(前往某地:set out for)" },
+    { "gp": "gp4", "name": "towards 短语(朝…方向)" },
+    { "gp": "gp5", "name": "at 短语(对着一点)" },
+    { "gp": "gp6", "name": "用介词短语回答 Where / Which direction" },
+    { "gp": "gp7", "name": "on + 动名词 = '一…就…'(辅考)" },
+    { "gp": "gp8", "name": "that 引导定语从句(可省略,辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He flew ___ Washington last night.\"(表示去往某地)", "stem_cn": "昨晚他飞往华盛顿。", "options": ["to", "from", "at", "of"] },
+    { "gp": "gp1", "stem": "\"She set out ___ the coast in a small boat.\"(表示从某处出发)", "stem_cn": "她乘小船从海岸出发。", "options": ["from", "to", "at", "into"] },
+    { "gp": "gp1", "stem": "\"He will be flying from Washington ___ Chicago.\"(from … 搭配,表示到某地)", "stem_cn": "他将从华盛顿飞往芝加哥。", "options": ["to", "from", "at", "of"] },
+    { "gp": "gp2", "stem": "\"The girl jumped ___ the sea.\"(表示跳进…里面)", "stem_cn": "姑娘跳进了海里。", "options": ["into", "out of", "for", "at"] },
+    { "gp": "gp2", "stem": "\"I threw the paper ___ the window.\"(表示扔到…外面)", "stem_cn": "我把纸扔到了窗外。", "options": ["out of", "into", "for", "at"] },
+    { "gp": "gp3", "stem": "\"We set out ___ the village at six o'clock.\"(表示前往某地)", "stem_cn": "6点我们出发去那个村子。", "options": ["for", "at", "of", "into"] },
+    { "gp": "gp3", "stem": "\"George has left ___ Scotland.\"(表示动身去某地)", "stem_cn": "乔治已动身去苏格兰。", "options": ["for", "at", "of", "out of"] },
+    { "gp": "gp4", "stem": "\"She swam ___ the shore.\"(表示朝…方向)", "stem_cn": "她朝岸边游去。", "options": ["towards", "at", "of", "from"] },
+    { "gp": "gp4", "stem": "\"The car came ___ me.\"(表示朝…方向)", "stem_cn": "汽车朝我开来。", "options": ["towards", "at", "of", "out of"] },
+    { "gp": "gp5", "stem": "\"The boy threw a stone ___ a dog.\"(表示对着一个目标点)", "stem_cn": "男孩用石头打狗。", "options": ["at", "to", "for", "into"] },
+    { "gp": "gp5", "stem": "\"It is rude to point ___ people.\"(表示对着某人)", "stem_cn": "用手指着别人不礼貌。", "options": ["at", "to", "for", "of"] },
+    { "gp": "gp6", "stem": "\"Where did he go? He went ___ the cinema.\"(回答'去哪儿',表示去往)", "stem_cn": "他去哪儿了?他去了电影院。", "options": ["to", "at", "of", "from"] },
+    { "gp": "gp6", "stem": "\"Where is Carol? She has just gone ___ the kitchen.\"(回答'在哪儿',表示进入)", "stem_cn": "卡罗尔在哪儿?她刚进厨房去了。", "options": ["into", "for", "at", "out of"] },
+    { "gp": "gp6", "stem": "\"Which direction did she swim? She swam ___ the shore.\"(回答'朝哪个方向')", "stem_cn": "她朝哪个方向游?她朝岸边游去。", "options": ["towards", "at", "of", "from"] },
+    { "gp": "gp7", "stem": "\"___ arriving at the shore, she struggled up the cliff.\"(一到岸边就…,后接动名词)", "stem_cn": "一到岸边,她就挣扎着爬上峭壁。", "options": ["On", "In", "At", "For"] },
+    { "gp": "gp7", "stem": "\"On ___ home, he called his mother at once.\"(一…就…,介词后接动名词)", "stem_cn": "一到家,他就给母亲打了电话。", "options": ["getting", "get", "got", "to get"] },
+    { "gp": "gp8", "stem": "\"That was all ___ she remembered.\"(引导定语从句修饰 all,可省略)", "stem_cn": "她所记得的就是这些。", "options": ["that", "what", "which one", "who"] },
+    { "gp": "gp8", "stem": "\"She climbed toward the light ___ she had seen.\"(引导定语从句修饰 the light)", "stem_cn": "她朝她看到的那盏灯爬去。", "options": ["that", "what", "who", "whose"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"朝、向\"常写作(不带 s)的形式是:", "options": ["toward", "towards", "forward", "onward"] },
+    { "stem": "美语说\"住院\"常说(带 the):", "options": ["in the hospital", "in hospital", "on hospital", "at hospital house"] },
+    { "stem": "coast 的意思是:", "options": ["海岸", "山顶", "森林", "沙漠"] },
+    { "stem": "struggle 的意思是:", "options": ["挣扎", "休息", "微笑", "睡觉"] },
+    { "stem": "cliff 的意思是:", "options": ["峭壁,悬崖", "山谷", "沙滩", "小河"] },
+    { "stem": "explain 的意思是:", "options": ["解释,叙述", "隐瞒", "询问", "命令"] }
+  ],
+  "contrast": [
+    { "us": "toward", "uk": "towards", "note_cn": "朝,向;美语常用 toward(不带 s),英式 towards(课文 toward evening / toward the light)" },
+    { "us": "in the hospital", "uk": "in hospital", "note_cn": "住院 / 在医院;美语带 the 说 in the hospital,英式 in hospital" },
+    { "us": "flashlight", "uk": "torch", "note_cn": "手电筒;美语 flashlight,英式 torch(高频美语点)" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn(高频美语点)" }
+  ],
+  "chunks": [
+    { "us": "set out", "ipa": "/set aʊt/", "example1": "She set out from the coast in a small boat.", "example1_cn": "她乘小船从海岸出发。", "example2": "We set out early in the morning.", "example2_cn": "我们一早就出发了。" },
+    { "us": "be caught in a storm", "ipa": "/bi kɔːt ɪn ə stɔːrm/", "example1": "The boat was caught in a storm.", "example1_cn": "小船遇上了暴风雨。", "example2": "We were caught in the rain.", "example2_cn": "我们淋了雨。" },
+    { "us": "struggle up", "ipa": "/ˈstrʌɡəl ʌp/", "example1": "The girl struggled up the cliff.", "example1_cn": "姑娘挣扎着爬上峭壁。", "example2": "He struggled up the stairs.", "example2_cn": "他挣扎着爬上楼梯。" },
+    { "us": "a distance of ... miles", "ipa": "/ə ˈdɪstəns əv/", "example1": "She covered a distance of eight miles.", "example1_cn": "她游了8英里的距离。", "example2": "a distance of two miles", "example2_cn": "两英里的距离" }
+  ],
+  "stage7_cloze": {
+    "context": "One afternoon the girl set out ___1___ the coast and was caught in a storm. The boat struck a rock and she jumped ___2___ the sea. She swam ___3___ the shore all night. ___4___ arriving at the shore, she struggled up the cliff.",
+    "blanks": [
+      { "blank_no": 1, "options": ["from", "to", "at", "of"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["into", "out of", "for", "at"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["to", "from", "at", "of"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["On", "In", "At", "For"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What happened to the girl's boat?", "options": ["It struck a rock in a storm", "It ran out of fuel", "It was very fast", "It reached the shore safely"] },
+    { "stem": "How far did the girl swim that night?", "options": ["A distance of eight miles", "About one mile", "Twenty miles", "She did not swim at all"] },
+    { "stem": "Where did the girl find herself a day later?", "options": ["In the hospital", "Back on her boat", "On a lonely island", "At a coast guard station"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"她向岸边游去\"(朝…方向用 toward):", "options": ["She swam toward the shore.", "She swam at the shore.", "She swam of the shore.", "She swam from the shore."] },
+    { "stem": "你想说\"我把纸扔到窗外了\"(向外用 out of):", "options": ["I threw it out of the window.", "I threw it into the window.", "I threw it at the window.", "I threw it for the window."] },
+    { "stem": "你想说\"她一到岸边就爬上峭壁\"(一…就用 on + 动名词):", "options": ["On arriving at the shore, she climbed the cliff.", "On arrive at the shore, she climbed the cliff.", "On to arrive at the shore, she climbed the cliff.", "On arrived at the shore, she climbed the cliff."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "coast 的意思是:", "options": ["海岸", "山顶", "森林", "沙漠"] },
+    { "kind": "vocab", "stem": "struggle 的意思是:", "options": ["挣扎", "休息", "微笑", "睡觉"] },
+    { "kind": "grammar", "stem": "\"The girl jumped ___ the sea.\"(表示跳进…里面)", "stem_cn": "姑娘跳进了海里。", "options": ["into", "out of", "for", "at"] },
+    { "kind": "grammar", "stem": "\"He flew ___ Washington last night.\"(表示去往某地)", "stem_cn": "昨晚他飞往华盛顿。", "options": ["to", "from", "at", "of"] },
+    { "kind": "scenario", "stem": "\"She swam toward the shore.\" 这句话的意思是:", "options": ["她向岸边游去。", "她从岸边游走。", "她在岸边停下。", "她游过了岸边。"] },
+    { "kind": "scenario", "stem": "\"On arriving at the shore, she struggled up the cliff.\" 这句话的意思是:", "options": ["她一到岸边就挣扎着爬上峭壁。", "她到岸边前就爬上了峭壁。", "她没能到达岸边。", "她在岸边睡着了。"] },
+    { "kind": "reading", "stem": "Why was the girl in the hospital?", "options": ["She had been caught in a storm at sea and swam to shore exhausted", "She had fallen off a cliff while climbing", "She was ill with a fever", "She had been in a car accident"], "passage": true },
+    { "kind": "reading", "stem": "How did the girl know she was near the shore?", "options": ["She saw a light high up on the cliffs", "She heard people calling", "She felt the sand under her feet", "Her boat had reached land"], "passage": true },
+    { "kind": "listening", "stem": "Why was the girl in the hospital?", "options": ["She was caught in a storm and swam eight miles to shore", "She crashed her boat on purpose", "She was attacked at the coast", "She fell asleep on the beach"], "audio": true },
+    { "kind": "listening", "stem": "What did the girl see early next morning?", "options": ["A light ahead, high up on the cliffs", "A passing ship", "Her family on the shore", "Another small boat"], "audio": true }
+  ]
+}

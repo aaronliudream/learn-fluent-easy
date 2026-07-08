@@ -1,0 +1,133 @@
+{
+  "id": "am3_l20",
+  "unit_no": 4,
+  "lesson_no": 20,
+  "title_en": "Pioneer Pilots",
+  "title_cn": "飞行员的先驱",
+  "grammar_focus": "综合复习课:把前面学过的难点放在一起复习——happen to / it happened that(碰巧)、否定词句首倒装(Not only had he… / Never had…)、否定前缀(im-/ir-/dis-/un-/in-/il-)、be supposed to(本应)、would rather + 某人 + 过去式、had better、save up、find sb to be(原创承载 NCE3 L20 复习课·无需净化·1909年飞越英吉利海峡的竞赛:拉塔姆两次落海,布莱里奥37分钟成功横渡)",
+  "scene": "1908年,一位富有的报业主悬赏一千英镑,奖给第一个飞越英吉利海峡的飞行员——那是横在英法之间的一道狭窄海面。一年多过去,才有人敢试。1909年7月19日清早,法国人于贝尔·拉塔姆驾着他的飞机“安托瓦内特”号从法国海岸起飞。他只飞了七英里,发动机突然熄火,被迫降落在海面上。飞机静静浮着,直到一艘过路的船把他救起。拉塔姆不肯轻易罢休。几天后,对手路易·布莱里奥也带着自己的小飞机来到海岸附近。布莱里奥从1905年起就一直在造飞机,这是他最新的一架。两人本应在7月25日一同起飞,看上去会有一场精彩的比赛。可那天早上,拉塔姆偏偏没能早早醒来。布莱里奥在黎明前做了一次短暂试飞,随后出发。他那次著名的飞行只用了三十七分钟。降落在多佛附近时,第一个迎接他的,是一名一脸惊讶的当地警察。布莱里奥不但赢得了奖金,还创造了历史——成为第一个驾机飞越海峡的人。",
+  "grammar_card": {
+    "title": "综合复习:倒装 / 否定前缀 / be supposed to / had better",
+    "intro": "本课把前面几单元的难点串起来复习:①happen to do / It happened that…（碰巧）。②否定词(Not only / Never / Not until)放句首,主句要倒装,把 had / did 提到主语前面:Not only had he won…。③加否定前缀构成反义词:im-（impolite）、ir-（irregular）、dis-（disagree）、un-（unlocked）、in-（inaccurate）、il-（illegible）。④be supposed to（本应、理应）。⑤would rather + 某人 + 过去式(委婉愿望)。⑥had better（最好)、save up（攒钱)、find sb to be（发现某人是…）。",
+    "table": {
+      "headers": ["复习点", "意思", "例子"],
+      "rows": [
+        ["happen to / it happened that", "碰巧", "Latham happened to be over the sea."],
+        ["Not only + had + 主语…", "否定词句首倒装", "Not only had he won the prize…"],
+        ["im-/ir-/dis-/un- 等前缀", "构成反义词", "polite→impolite, regular→irregular"],
+        ["be supposed to / had better", "本应 / 最好", "were supposed to fly / had better check"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "否定词(Not only / Never / Not until)放句首时,主句要倒装:把 had 或 did 提到主语前面(Not only had he… / Not until noon did he…)。", "mark": "否定词句首 → 倒装" },
+      { "rule": "不同的词用不同的否定前缀,要一个个记:im-（p/m 前)、ir-（r 前)、il-（l 前)、in-、un-、dis-。", "mark": "im-/ir-/il-/in-/un-/dis-" },
+      { "rule": "美式用词:airplane(英式 aeroplane)、gasoline/gas(英式 petrol)。本课已按美语写。", "mark": "airplane / gasoline" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was the name of the first plane to fly across the English Channel?",
+    "options": ["Blériot's 'No. XI'", "The 'Antoinette'", "The 'Dover'", "The 'Calais'"],
+    "answer_index": 0
+  },
+  "passage": "In 1908, a wealthy newspaper owner offered a prize of a thousand pounds to the first pilot who would fly across the English Channel, the narrow stretch of sea between England and France. More than a year passed before anyone dared to try. Early on the morning of July 19th, 1909, a Frenchman named Hubert Latham took off from the French coast in his plane, the 'Antoinette.' He had flown only seven miles when his engine suddenly failed, and he was forced to land on the water. The plane floated calmly until a passing ship picked him up. Latham did not give up easily. A few days later a rival, Louis Blériot, arrived near the coast with a small plane of his own. Blériot had been building airplanes since 1905, and this was his newest model. Both men were supposed to take off on July 25th, and it looked as if there would be an exciting race. That morning, however, Latham failed to wake up early enough. Blériot made a short test flight before dawn, then set off. His famous flight lasted only thirty-seven minutes. When he landed near Dover, the first person to greet him was a surprised local policeman. Not only had Blériot won the prize, but he had also made history as the first pilot ever to fly a plane across the Channel.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "In 1908, a wealthy newspaper owner offered a prize of a thousand pounds to the first pilot who would fly across the English Channel, the narrow stretch of sea between England and France. More than a year passed before anyone dared to try.", "text_cn": "1908年,一位富有的报业主悬赏一千英镑,奖给第一个飞越英吉利海峡的飞行员——那是横在英法之间的一道狭窄海面。一年多过去,才有人敢试。" },
+    { "seq": 2, "speaker": null, "text_en": "Early on the morning of July 19th, 1909, a Frenchman named Hubert Latham took off from the French coast in his plane, the 'Antoinette.' He had flown only seven miles when his engine suddenly failed, and he was forced to land on the water. The plane floated calmly until a passing ship picked him up.", "text_cn": "1909年7月19日清早,法国人于贝尔·拉塔姆驾着他的飞机“安托瓦内特”号从法国海岸起飞。他只飞了七英里,发动机突然熄火,被迫降落在海面上。飞机静静浮着,直到一艘过路的船把他救起。" },
+    { "seq": 3, "speaker": null, "text_en": "Latham did not give up easily. A few days later a rival, Louis Blériot, arrived near the coast with a small plane of his own. Blériot had been building airplanes since 1905, and this was his newest model.", "text_cn": "拉塔姆不肯轻易罢休。几天后,对手路易·布莱里奥也带着自己的小飞机来到海岸附近。布莱里奥从1905年起就一直在造飞机,这是他最新的一架。" },
+    { "seq": 4, "speaker": null, "text_en": "Both men were supposed to take off on July 25th, and it looked as if there would be an exciting race. That morning, however, Latham failed to wake up early enough. Blériot made a short test flight before dawn, then set off.", "text_cn": "两人本应在7月25日一同起飞,看上去会有一场精彩的比赛。可那天早上,拉塔姆偏偏没能早早醒来。布莱里奥在黎明前做了一次短暂试飞,随后出发。" },
+    { "seq": 5, "speaker": null, "text_en": "His famous flight lasted only thirty-seven minutes. When he landed near Dover, the first person to greet him was a surprised local policeman. Not only had Blériot won the prize, but he had also made history as the first pilot ever to fly a plane across the Channel.", "text_cn": "他那次著名的飞行只用了三十七分钟。降落在多佛附近时,第一个迎接他的,是一名一脸惊讶的当地警察。布莱里奥不但赢得了奖金,还创造了历史——成为第一个驾机飞越海峡的人。" }
+  ],
+  "words": [
+    { "word": "pioneer", "ipa": "/ˌpaɪəˈnɪr/", "pos": "n", "meaning_cn": "先驱,开拓者", "example": "pioneer pilots" },
+    { "word": "attempt", "ipa": "/əˈtempt/", "pos": "n", "meaning_cn": "尝试,试图", "example": "the first attempt was made" },
+    { "word": "coast", "ipa": "/koʊst/", "pos": "n", "meaning_cn": "海岸", "example": "took off from the French coast" },
+    { "word": "engine", "ipa": "/ˈendʒɪn/", "pos": "n", "meaning_cn": "发动机,引擎", "example": "his engine suddenly failed" },
+    { "word": "rival", "ipa": "/ˈraɪvl/", "pos": "n", "meaning_cn": "竞争对手", "example": "a rival, Louis Blériot" },
+    { "word": "overland", "ipa": "/ˈoʊvərlænd/", "pos": "adj", "meaning_cn": "陆上的", "example": "an overland flight" },
+    { "word": "float", "ipa": "/floʊt/", "pos": "v", "meaning_cn": "漂浮", "example": "the plane floated calmly" },
+    { "word": "greet", "ipa": "/ɡriːt/", "pos": "v", "meaning_cn": "迎接,问候", "example": "the first person to greet him" },
+    { "word": "dawn", "ipa": "/dɔːn/", "pos": "n", "meaning_cn": "黎明", "example": "a test flight before dawn" },
+    { "word": "prize", "ipa": "/praɪz/", "pos": "n", "meaning_cn": "奖金,奖品", "example": "offered a prize of a thousand pounds" },
+    { "word": "stretch", "ipa": "/stretʃ/", "pos": "n", "meaning_cn": "一段(距离),延伸段", "example": "the narrow stretch of sea" },
+    { "word": "forced", "ipa": "/fɔːrst/", "pos": "adj", "meaning_cn": "被迫的", "example": "he was forced to land" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "复习:happen to / it happened that(碰巧)" },
+    { "gp": "gp2", "name": "复习:否定词句首倒装(Not only had…)" },
+    { "gp": "gp3", "name": "复习:否定前缀反义词(im-/ir-/dis-)" },
+    { "gp": "gp4", "name": "复习:be supposed to / would rather sb + 过去式" },
+    { "gp": "gp5", "name": "复习:had better / save up / find sb to be" },
+    { "gp": "gp6", "name": "词汇辨析(pioneer/overland/greet)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Latham ___ to be flying over the sea when his engine failed.\"(“碰巧正在”)", "stem_cn": "拉塔姆发动机出故障时,碰巧正飞在海面上。", "options": ["happened", "happen", "happens", "happening"] },
+    { "gp": "gp1", "stem": "\"It ___ that both pilots reached the coast on the same day.\"(It ___ that… “碰巧”)", "stem_cn": "碰巧两位飞行员同一天到了海岸。", "options": ["happened", "happen", "happens", "happening"] },
+    { "gp": "gp1", "stem": "\"If you ___ to see Blériot's plane, you'd find it very small.\"(与 if 连用,表“万一/碰巧”,用原形)", "stem_cn": "你要是碰巧见到布莱里奥的飞机,会发现它很小。", "options": ["happen", "happened", "happens", "happening"] },
+    { "gp": "gp2", "stem": "\"Not only ___ Blériot won the prize, but he also made history.\"(否定词句首,主句倒装)", "stem_cn": "布莱里奥不但赢了奖,还创造了历史。", "options": ["had", "has", "he had", "did had"] },
+    { "gp": "gp2", "stem": "\"Never ___ a plane crossed the Channel before that day.\"(Never 句首,倒装)", "stem_cn": "那天之前,从没有飞机飞越过海峡。", "options": ["had", "has", "it had", "did has"] },
+    { "gp": "gp2", "stem": "\"Not until noon ___ Latham realize he had overslept.\"(Not until 句首,倒装)", "stem_cn": "直到中午,拉塔姆才意识到自己睡过了头。", "options": ["did", "was", "he did", "had"] },
+    { "gp": "gp3", "stem": "\"The opposite of 'polite' is ___.\"(用哪个否定前缀)", "stem_cn": "polite 的反义词。", "options": ["impolite", "unpolite", "dispolite", "inpolite"] },
+    { "gp": "gp3", "stem": "\"The opposite of 'regular' is ___.\"(用哪个否定前缀)", "stem_cn": "regular 的反义词。", "options": ["irregular", "unregular", "disregular", "imregular"] },
+    { "gp": "gp3", "stem": "\"The opposite of 'agree' is ___.\"(用哪个否定前缀)", "stem_cn": "agree 的反义词。", "options": ["disagree", "unagree", "inagree", "imagree"] },
+    { "gp": "gp4", "stem": "\"Both pilots ___ to take off on July 25th.\"(be supposed to:“本应”)", "stem_cn": "两位飞行员本应在7月25日起飞。", "options": ["were supposed", "are supposed", "supposed", "was supposed"] },
+    { "gp": "gp4", "stem": "\"You are ___ to arrive before dawn, not after.\"(表“本应、理应”的固定说法)", "stem_cn": "你本应在黎明前到,而不是之后。", "options": ["supposed", "suppose", "supposing", "supposes"] },
+    { "gp": "gp4", "stem": "\"The judge would rather Latham ___ up earlier that morning.\"(would rather + 某人 + 过去式)", "stem_cn": "裁判宁愿拉塔姆那天早上早点醒。", "options": ["woke", "wakes", "wake", "to wake"] },
+    { "gp": "gp5", "stem": "\"You ___ check the engine before you take off.\"(“最好”忠告)", "stem_cn": "起飞前你最好检查一下发动机。", "options": ["had better", "would better", "better had", "had to better"] },
+    { "gp": "gp5", "stem": "\"If Blériot could ___ enough money, he would build a better plane.\"(短语动词“攒钱”)", "stem_cn": "布莱里奥要是能攒够钱,就会造更好的飞机。", "options": ["save up", "save on", "save off", "save in"] },
+    { "gp": "gp5", "stem": "\"Reporters found Blériot ___ a modest, quiet man.\"(find sb 后接不定式)", "stem_cn": "记者们发现布莱里奥是个谦逊安静的人。", "options": ["to be", "being", "is", "be"] },
+    { "gp": "gp6", "stem": "\"A person who is among the first to do something new is a ___.\"(“先驱”用哪个词)", "stem_cn": "最早去做某件新事的人是先驱。", "options": ["pioneer", "passenger", "prisoner", "painter"] },
+    { "gp": "gp6", "stem": "\"Traveling across land, not over water or air, is ___ travel.\"(“陆上的”用哪个词)", "stem_cn": "走陆路而非水路或空路的旅行。", "options": ["overland", "underwater", "overhead", "overnight"] },
+    { "gp": "gp6", "stem": "\"To welcome someone when they arrive is to ___ them.\"(“迎接”用哪个词)", "stem_cn": "有人到达时去欢迎他。", "options": ["greet", "ignore", "chase", "scold"] }
+  ],
+  "stage6": [
+    { "stem": "pioneer 的意思是:", "options": ["先驱,开拓者", "乘客", "囚犯", "画家"] },
+    { "stem": "attempt 的意思是:", "options": ["尝试", "放弃", "成功", "休息"] },
+    { "stem": "engine 的意思是:", "options": ["发动机,引擎", "机翼", "轮子", "座位"] },
+    { "stem": "rival 的意思是:", "options": ["竞争对手", "伙伴", "教练", "观众"] },
+    { "stem": "greet 的意思是:", "options": ["迎接,问候", "忽视", "追赶", "责备"] },
+    { "stem": "overland 的意思是:", "options": ["陆上的", "水下的", "头顶的", "夜间的"] }
+  ],
+  "contrast": [
+    { "us": "airplane", "uk": "aeroplane", "note_cn": "飞机;美语 airplane,英式 aeroplane" },
+    { "us": "gasoline", "uk": "petrol", "note_cn": "汽油;美语 gasoline(gas),英式 petrol" },
+    { "us": "schedule", "uk": "timetable", "note_cn": "时刻表,日程;美语 schedule,英式 timetable" },
+    { "us": "truck", "uk": "lorry", "note_cn": "卡车;美语 truck,英式 lorry" }
+  ],
+  "chunks": [
+    { "us": "take off", "ipa": "/teɪk ɔːf/", "example1": "The plane took off from the French coast.", "example1_cn": "飞机从法国海岸起飞。", "example2": "What time does your flight take off?", "example2_cn": "你的航班几点起飞?" },
+    { "us": "give up", "ipa": "/ɡɪv ʌp/", "example1": "Latham did not give up easily.", "example1_cn": "拉塔姆不肯轻易罢休。", "example2": "Never give up on your dream.", "example2_cn": "永远别放弃你的梦想。" },
+    { "us": "be supposed to", "ipa": "/bi səˈpoʊzd tə/", "example1": "Both pilots were supposed to fly on the 25th.", "example1_cn": "两位飞行员本应在25号起飞。", "example2": "You're supposed to be here by noon.", "example2_cn": "你本应中午前到这儿。" },
+    { "us": "not only ... but also", "ipa": "/nɑːt ˈoʊnli/", "example1": "Not only had he won, but he had also made history.", "example1_cn": "他不但赢了,还创造了历史。", "example2": "She not only sings but also dances.", "example2_cn": "她不但会唱,还会跳。" }
+  ],
+  "stage7_cloze": {
+    "context": "Both pilots ___1___ supposed to take off on July 25th. That morning, however, Latham failed to wake up. Blériot flew across in only thirty-seven minutes. ___2___ only had he won the prize, but he had also made history. Reporters found him ___3___ be a modest man. If a young pilot wants to fly the Channel today, he ___4___ better prepare well first.",
+    "blanks": [
+      { "blank_no": 1, "options": ["were", "are", "was", "being"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["Not", "No", "Never", "None"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["to", "being", "is", "be"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["had", "would", "has", "have"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What prize was offered to the first pilot to fly across the Channel?", "options": ["A thousand pounds", "A gold medal", "A brand-new plane", "A house in Dover"] },
+    { "stem": "Why did Latham fail on July 25th?", "options": ["He did not wake up early enough", "His plane caught fire", "He lost his way", "He ran out of fuel"] },
+    { "stem": "Who was the first to greet Blériot when he landed?", "options": ["A local policeman", "His wife", "A newspaper reporter", "The mayor of Dover"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"两位飞行员本应在25号起飞\"(be supposed to):", "options": ["Both pilots were supposed to take off on the 25th.", "Both pilots were suppose to take off on the 25th.", "Both pilots are supposed to take off on the 25th.", "Both pilots supposed to take off on the 25th."] },
+    { "stem": "你想说\"他不但赢了奖,还创造了历史\"(否定词句首倒装):", "options": ["Not only had he won the prize, but he had also made history.", "Not only he had won the prize, but he had also made history.", "Not only won he the prize, but he had also made history.", "Not only he won the prize, but also made history."] },
+    { "stem": "你想说\"起飞前你最好检查一下发动机\"(had better):", "options": ["You had better check the engine before takeoff.", "You had better to check the engine before takeoff.", "You would better check the engine before takeoff.", "You had best checking the engine before takeoff."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "pioneer 的意思是:", "options": ["先驱,开拓者", "乘客", "囚犯", "画家"] },
+    { "kind": "vocab", "stem": "greet 的意思是:", "options": ["迎接,问候", "忽视", "追赶", "责备"] },
+    { "kind": "grammar", "stem": "\"Both pilots ___ supposed to take off on the 25th.\"(be supposed to)", "stem_cn": "两位飞行员本应在25号起飞。", "options": ["were", "are", "was", "being"] },
+    { "kind": "grammar", "stem": "\"Not only ___ he won the prize, but he also made history.\"(否定词句首倒装)", "stem_cn": "他不但赢了奖,还创造了历史。", "options": ["had", "has", "he had", "did had"] },
+    { "kind": "scenario", "stem": "\"give up\" 的意思是:", "options": ["放弃", "举起", "追上", "分发"] },
+    { "kind": "scenario", "stem": "\"take off\"(飞机)的意思是:", "options": ["起飞", "降落", "加速", "转弯"] },
+    { "kind": "reading", "stem": "Who finally flew across the Channel first?", "options": ["Louis Blériot", "Hubert Latham", "The newspaper owner", "A policeman"], "passage": true },
+    { "kind": "reading", "stem": "What happened to Latham on his first attempt?", "options": ["His engine failed and he landed on the sea", "He reached Dover safely", "He never took off", "He won the prize"], "passage": true },
+    { "kind": "listening", "stem": "How long did Blériot's famous flight last?", "options": ["Thirty-seven minutes", "Two hours", "Seven minutes", "A whole day"], "audio": true },
+    { "kind": "listening", "stem": "How did Latham react to his first failure?", "options": ["He did not give up easily", "He gave up flying for good", "He moved to England", "He sold his plane"], "audio": true }
+  ]
+}

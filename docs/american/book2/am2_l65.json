@@ -1,0 +1,132 @@
+{
+  "id": "am2_l65",
+  "unit_no": 9,
+  "lesson_no": 65,
+  "title_en": "Jumbo versus the police",
+  "title_cn": "小象对警察",
+  "grammar_focus": "KS17 情态动词 must/have to(义务·不得不)、should/ought to(应该·责任·建议),以及 should have done / ought to have done(过去本应做而没做)(教材 L65 Key structures)主考;SD 三组:短语动词 let off/down/in/out、agree to do vs accept sth、dress up as vs dress(辅考)",
+  "scene": "去年圣诞节,马戏团老板吉米·盖茨决定送些礼物给儿童医院。他打扮成圣诞老人,在由6个漂亮姑娘组成的“仪仗队”的陪同下,骑上一头名叫江伯的小象,沿着城里的主要街道出发了。他本该知道警察绝不会允许这类事情发生。一个警察走过来告诉吉米,他应该走一条小路,因为江伯阻碍了交通。虽然吉米同意马上就走,但江伯却拒绝移动。15个警察不得不用很大的力气把它推离主要街道。警察虽然吃了苦头,但他们还是感到很有趣。“江伯一定有好几吨重,”一个警察事后这样说,“值得庆幸的是它没让我们抬它走。当然,我们应该逮捕它,但由于它一贯表现很好,这次我们饶了它。”",
+  "grammar_card": {
+    "title": "must / have to / should / ought to",
+    "intro": "KS17 表义务与建议:①must / have to = 必须、不得不(现在);过去的义务用 had to(must 没有过去式)。②should / ought to = 应该、理应(现在的建议、责任)。③过去本该做而没做:should have done / ought to have done(I should have taken a taxi 我本该打车的)。",
+    "table": {
+      "headers": ["用法", "例子"],
+      "rows": [
+        ["must / have to(现在义务)", "I must write some letters tonight."],
+        ["had to(过去义务)", "I missed the train, so I had to take a taxi."],
+        ["should / ought to(建议)", "You ought to ask for permission."],
+        ["should/ought to have done(过去本应做)", "I should have taken a taxi."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "SD 短语动词 let 各义不同:let sb off=饶恕/放过;let sb down=使失望;let sb in=让…进来;let sth out=放出去。", "mark": "let off/down/in/out" },
+      { "rule": "SD 易混词:agree to do=同意做某事;accept sth=接受某物。dress up (as)=(盛装)打扮成;dress=(一般地)穿衣。", "mark": "agree/accept·dress up/dress" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did the police have to push Jumbo off the main street?",
+    "options": ["Jumbo was holding up the traffic and refused to move", "Jumbo had attacked the crowd", "Jumbo was badly hurt", "Jumbo had run away from the circus"],
+    "answer_index": 0
+  },
+  "passage": "Last Christmas, the circus owner, Jimmy Gates, decided to take some presents to a children's hospital. Dressed up as Santa Claus and accompanied by a 'guard of honor' of six pretty girls, he set off down the main street of the city riding a baby elephant called Jumbo. He should have known that the police would never allow this sort of thing. A policeman approached Jimmy and told him he ought to have gone along a side street as Jumbo was holding up the traffic. Though Jimmy agreed to go at once, Jumbo refused to move. Fifteen policemen had to push very hard to get him off the main street. The police had a difficult time, but they were most amused. 'Jumbo must weigh a few tons,' said a policeman afterwards, 'so it was fortunate that we didn't have to carry him. Of course, we should arrest him, but as he has a good record, we shall let him off this time.'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Last Christmas, the circus owner, Jimmy Gates, decided to take some presents to a children's hospital. Dressed up as Santa Claus and accompanied by a 'guard of honor' of six pretty girls, he set off down the main street of the city riding a baby elephant called Jumbo.", "text_cn": "去年圣诞节,马戏团老板吉米·盖茨决定送些礼物给儿童医院。他打扮成圣诞老人,在由6个漂亮姑娘组成的“仪仗队”的陪同下,骑上一头名叫江伯的小象,沿着城里的主要街道出发了。" },
+    { "seq": 2, "speaker": null, "text_en": "He should have known that the police would never allow this sort of thing. A policeman approached Jimmy and told him he ought to have gone along a side street as Jumbo was holding up the traffic.", "text_cn": "他本该知道警察绝不会允许这类事情发生。一个警察走过来告诉吉米,他应该走一条小路,因为江伯阻碍了交通。" },
+    { "seq": 3, "speaker": null, "text_en": "Though Jimmy agreed to go at once, Jumbo refused to move. Fifteen policemen had to push very hard to get him off the main street. The police had a difficult time, but they were most amused.", "text_cn": "虽然吉米同意马上就走,但江伯却拒绝移动。15个警察不得不用很大的力气把它推离主要街道。警察虽然吃了苦头,但他们还是感到很有趣。" },
+    { "seq": 4, "speaker": null, "text_en": "'Jumbo must weigh a few tons,' said a policeman afterwards, 'so it was fortunate that we didn't have to carry him.", "text_cn": "“江伯一定有好几吨重,”一个警察事后这样说,“值得庆幸的是它没让我们抬它走。" },
+    { "seq": 5, "speaker": null, "text_en": "Of course, we should arrest him, but as he has a good record, we shall let him off this time.'", "text_cn": "当然,我们应该逮捕它,但由于它一贯表现很好,这次我们饶了它。”" }
+  ],
+  "words": [
+    { "word": "versus", "ipa": "/ˈvɜːrsəs/", "pos": "prep", "meaning_cn": "对,对抗", "example": "Jumbo versus the police" },
+    { "word": "Christmas", "ipa": "/ˈkrɪsməs/", "pos": "n", "meaning_cn": "圣诞节", "example": "Last Christmas" },
+    { "word": "circus", "ipa": "/ˈsɜːrkəs/", "pos": "n", "meaning_cn": "马戏团", "example": "the circus owner" },
+    { "word": "present", "ipa": "/ˈprezənt/", "pos": "n", "meaning_cn": "礼物", "example": "take some presents to a hospital" },
+    { "word": "accompany", "ipa": "/əˈkʌmpəni/", "pos": "v", "meaning_cn": "陪伴,随行", "example": "accompanied by six pretty girls" },
+    { "word": "approach", "ipa": "/əˈproʊtʃ/", "pos": "v", "meaning_cn": "走近,靠近", "example": "A policeman approached Jimmy." },
+    { "word": "ought", "ipa": "/ɔːt/", "pos": "modal", "meaning_cn": "应该", "example": "he ought to have gone along a side street" },
+    { "word": "weigh", "ipa": "/weɪ/", "pos": "v", "meaning_cn": "重,称…的重量", "example": "Jumbo must weigh a few tons." },
+    { "word": "fortunate", "ipa": "/ˈfɔːrtʃənət/", "pos": "adj", "meaning_cn": "幸运的", "example": "it was fortunate that we didn't have to carry him" },
+    { "word": "elephant", "ipa": "/ˈelɪfənt/", "pos": "n", "meaning_cn": "大象", "example": "a baby elephant called Jumbo" },
+    { "word": "arrest", "ipa": "/əˈrest/", "pos": "v", "meaning_cn": "逮捕", "example": "we should arrest him" },
+    { "word": "traffic", "ipa": "/ˈtræfɪk/", "pos": "n", "meaning_cn": "交通", "example": "Jumbo was holding up the traffic" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "must / have to / had to(义务·不得不)" },
+    { "gp": "gp2", "name": "should / ought to(应该·责任·建议)" },
+    { "gp": "gp3", "name": "should/ought to have done(过去本应做而没做)" },
+    { "gp": "gp4", "name": "短语动词 let off/down/in/out(SD)" },
+    { "gp": "gp5", "name": "agree to do vs accept sth(SD)" },
+    { "gp": "gp6", "name": "dress up as vs dress(SD)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"I can't go to the cinema tonight; I ___ write some letters.\"(表'必须'——现在的义务)", "stem_cn": "今晚我不能去看电影,我必须写信。", "options": ["must", "may", "might", "could"] },
+    { "gp": "gp1", "stem": "\"I missed the train, so I ___ take a taxi.\"(表过去的'不得不'——过去义务)", "stem_cn": "我误了火车,所以不得不打车。", "options": ["had to", "must", "have to", "ought"] },
+    { "gp": "gp1", "stem": "\"Fifteen policemen ___ push very hard to move Jumbo.\"(过去的'不得不'——过去义务)", "stem_cn": "15个警察不得不使很大劲才把江伯推走。", "options": ["had to", "must", "must to", "have"] },
+    { "gp": "gp2", "stem": "\"He ___ come at 4 o'clock if the plane arrives on time.\"(表'应该'——现在的预期/建议)", "stem_cn": "如果飞机准点,他应该4点到。", "options": ["should", "must", "will", "can"] },
+    { "gp": "gp2", "stem": "\"You ___ ask for permission before leaving the table.\"(表'应该'——责任)", "stem_cn": "离开饭桌前你应该先请求许可。", "options": ["ought to", "must to", "should to", "have"] },
+    { "gp": "gp3", "stem": "\"I'm sorry I'm late. I ___ taken a taxi.\"(过去本应做而没做:本该打车)", "stem_cn": "抱歉我迟到了,我本应该打车的。", "options": ["should have", "should", "must have", "had to"] },
+    { "gp": "gp3", "stem": "\"He ___ known that the police would never allow this.\"(过去本该做/本该知道)", "stem_cn": "他本应知道警察绝不会允许这种事。", "options": ["should have", "should", "must", "ought"] },
+    { "gp": "gp3", "stem": "\"The policeman told him he ___ gone along a side street.\"(过去本应做而没做:本该走小路)", "stem_cn": "警察告诉他本应该走一条小路。", "options": ["ought to have", "ought to", "should", "must have"] },
+    { "gp": "gp3", "stem": "\"She ___ come to see me yesterday, but she forgot.\"(过去本应做而没做)", "stem_cn": "她昨天本应来看我,但她忘了。", "options": ["should have", "should", "must have", "had to"] },
+    { "gp": "gp4", "stem": "\"As he has a good record, we shall ___ this time.\"(短语动词:'饶恕、放过'他)", "stem_cn": "由于他一贯表现好,这次我们就饶了他。", "options": ["let him off", "let him down", "let him in", "let him out"] },
+    { "gp": "gp4", "stem": "\"I expected him to help me, but he ___.\"(短语动词:'使我失望')", "stem_cn": "我指望他帮我,但他使我失望了。", "options": ["let me down", "let me off", "let me in", "let me out"] },
+    { "gp": "gp4", "stem": "\"If anyone knocks when I'm out, don't ___.\"(短语动词:'让他进来')", "stem_cn": "我不在时如果有人敲门,别让他进来。", "options": ["let him in", "let him off", "let him down", "let him out"] },
+    { "gp": "gp5", "stem": "\"Though Jimmy ___ to go at once, Jumbo refused to move.\"(同意做某事用哪个词)", "stem_cn": "虽然吉米同意马上走,但江伯拒绝挪动。", "options": ["agreed", "accepted", "allowed", "admitted"] },
+    { "gp": "gp5", "stem": "\"We are not allowed to ___ presents from customers.\"(接受某物用哪个词)", "stem_cn": "不允许我们接受顾客的礼物。", "options": ["accept", "agree", "agree to", "admit"] },
+    { "gp": "gp5", "stem": "\"She ___ to lend me her car.\"(同意做某事)", "stem_cn": "她同意把车借给我。", "options": ["agreed", "accepted", "received", "admitted"] },
+    { "gp": "gp6", "stem": "\"Jimmy ___ as Santa Claus.\"(打扮成、装扮成)", "stem_cn": "吉米打扮成圣诞老人。", "options": ["dressed up", "dressed", "put on", "wore"] },
+    { "gp": "gp6", "stem": "\"I got up at 6, washed, and ___ quickly.\"(一般地'穿好衣服')", "stem_cn": "我6点起床,洗漱,很快穿好衣服。", "options": ["dressed", "dressed up", "wore", "put"] },
+    { "gp": "gp6", "stem": "\"The children ___ as ghosts for the party.\"(为聚会盛装'打扮成')", "stem_cn": "孩子们为聚会打扮成鬼的样子。", "options": ["dressed up", "dressed", "wore up", "put up"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"圣诞老人\"常说:", "options": ["Santa Claus", "Father Christmas", "Christmas Man", "Old Christmas"] },
+    { "stem": "美语里\"荣誉\"拼作:", "options": ["honor", "honour", "onor", "honer"] },
+    { "stem": "circus 的意思是:", "options": ["马戏团", "剧院", "动物园", "乐队"] },
+    { "stem": "approach 的意思是:", "options": ["走近,靠近", "离开", "停下", "转身"] },
+    { "stem": "weigh 的意思是:", "options": ["重,称…的重量", "测量长度", "计算钱数", "观察"] },
+    { "stem": "fortunate 的意思是:", "options": ["幸运的", "富有的", "勇敢的", "著名的"] }
+  ],
+  "contrast": [
+    { "us": "Santa Claus", "uk": "Father Christmas", "note_cn": "圣诞老人;美语 Santa Claus,英式 Father Christmas" },
+    { "us": "honor", "uk": "honour", "note_cn": "荣誉;美语 honor,英式 honour(-or vs -our)" },
+    { "us": "candy", "uk": "sweets", "note_cn": "糖果;美语 candy,英式 sweets" },
+    { "us": "cookie", "uk": "biscuit", "note_cn": "饼干;美语 cookie,英式 biscuit" }
+  ],
+  "chunks": [
+    { "us": "set off", "ipa": "/set ɔːf/", "example1": "He set off down the main street.", "example1_cn": "他沿着主要街道出发了。", "example2": "We set off early in the morning.", "example2_cn": "我们一大早就出发了。" },
+    { "us": "hold up the traffic", "ipa": "/hoʊld ʌp ðə ˈtræfɪk/", "example1": "Jumbo was holding up the traffic.", "example1_cn": "江伯阻碍了交通。", "example2": "The accident held up the traffic for hours.", "example2_cn": "那起事故堵了几个小时的车。" },
+    { "us": "let ... off", "ipa": "/let ɔːf/", "example1": "We shall let him off this time.", "example1_cn": "这次我们就饶了他。", "example2": "The judge let the young man off with a warning.", "example2_cn": "法官只是警告一下就放过了那个年轻人。" },
+    { "us": "dress up as", "ipa": "/dres ʌp æz/", "example1": "He dressed up as Santa Claus.", "example1_cn": "他打扮成圣诞老人。", "example2": "The kids dressed up as pirates.", "example2_cn": "孩子们打扮成海盗。" }
+  ],
+  "stage7_cloze": {
+    "context": "Jimmy ___1___ have known that the police would never allow this. A policeman told him he ___2___ have gone along a side street. Fifteen policemen ___3___ push very hard to move Jumbo. As he has a good record, we shall ___4___ this time.",
+    "blanks": [
+      { "blank_no": 1, "options": ["should", "must", "will", "can"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["ought to", "should to", "must to", "will"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["had to", "must", "have to", "must to"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["let him off", "let him down", "let him in", "let him out"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What did the circus owner Jimmy Gates decide to do last Christmas?", "options": ["Take some presents to a children's hospital, dressed up as Santa Claus riding a baby elephant", "Arrest a policeman", "Open a new circus", "Sell his elephant Jumbo"] },
+    { "stem": "Why did the police have to push Jumbo off the main street?", "options": ["Jumbo was holding up the traffic and refused to move", "Jumbo had attacked the crowd", "Jumbo was ill", "Jumbo had escaped from the zoo"] },
+    { "stem": "Why did the police let Jimmy off this time?", "options": ["Because Jumbo has a good record", "Because Jimmy paid a large fine", "Because it was Christmas Day", "Because they were afraid of Jumbo"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我本应该打车的(可我没打)\"(过去本应做而没做):", "options": ["I should have taken a taxi.", "I should take a taxi.", "I must have taken a taxi.", "I had to take a taxi."] },
+    { "stem": "你想说\"他同意马上就走\"(同意做某事用 agree to do):", "options": ["He agreed to go at once.", "He accepted to go at once.", "He agreed going at once.", "He agreed go at once."] },
+    { "stem": "你想说\"由于他表现好,这次我们放过他\"(饶恕、放过某人用 let sb off):", "options": ["As he has a good record, we will let him off this time.", "As he has a good record, we will let him down this time.", "As he has a good record, we will let off him this time.", "As he has a good record, we will let him out this time."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "circus 的意思是:", "options": ["马戏团", "剧院", "动物园", "乐队"] },
+    { "kind": "vocab", "stem": "fortunate 的意思是:", "options": ["幸运的", "富有的", "勇敢的", "著名的"] },
+    { "kind": "grammar", "stem": "\"He ___ have known that the police would never allow this.\"(过去本该做/本该知道)", "stem_cn": "他本应知道警察绝不会允许这种事。", "options": ["should", "must", "will", "can"] },
+    { "kind": "grammar", "stem": "\"I missed the train, so I ___ take a taxi.\"(过去不得不)", "stem_cn": "我误了火车,所以不得不打车。", "options": ["had to", "must", "have to", "ought"] },
+    { "kind": "scenario", "stem": "\"should have + 过去分词\" 表示的意思是:", "options": ["过去本应该做却没做", "过去一定做了", "将来会做", "现在正在做"] },
+    { "kind": "scenario", "stem": "\"let sb off\" 的意思是:", "options": ["饶恕,放过某人", "使某人失望", "让某人进来", "送某人出去"] },
+    { "kind": "reading", "stem": "Why did a policeman say Jimmy ought to have gone along a side street?", "options": ["Because Jumbo was holding up the traffic on the main street", "Because side streets were prettier", "Because the hospital was on a side street", "Because Santa always uses side streets"], "passage": true },
+    { "kind": "reading", "stem": "How did the police feel, and what did they finally decide?", "options": ["They were amused and let Jimmy off because Jumbo had a good record", "They were angry and arrested Jimmy", "They were frightened and ran away", "They fined Jimmy a lot of money"], "passage": true },
+    { "kind": "listening", "stem": "What was Jimmy riding down the main street?", "options": ["A baby elephant called Jumbo", "A white horse", "A circus car", "A bicycle"], "audio": true },
+    { "kind": "listening", "stem": "Why did the policeman say it was fortunate they didn't have to carry Jumbo?", "options": ["Because Jumbo must weigh a few tons", "Because it was raining", "Because they were very tired", "Because Jumbo was asleep"], "audio": true }
+  ]
+}

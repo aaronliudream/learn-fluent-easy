@@ -1,0 +1,134 @@
+{
+  "id": "am4_l47",
+  "unit_no": 8,
+  "lesson_no": 47,
+  "title_en": "The Great Escape",
+  "title_cn": "大逃亡",
+  "grammar_focus": "Not only 置句首的部分倒装、whether 引导主语从句、find oneself doing(发现自己正在…)、far from doing / far less than(远非… / 远比…)、现在分词作后置定语(NCE4 该课源无独立 KS 页,考点由课文结构自取;IP:源为 Nigel Buxton《The Great Escape》一段论‘露营的动机与国际化’的报刊随笔,系版权作品——已用 100% 原创行文复述其观点、无引用原句;词表按 CONSTITUTION 第0章取现代可教的12词,舍弃 myriad/preponderance/itinerant/sauerkraut/boo/maitre d'hotel 等古旧/生僻词;题材=旅行生活·无害;美语化 traveler/maneuver/gray;第四册第47课)",
+  "scene": "省钱是露营的一个有力理由。一旦你付清了装备的钱、或安排好租借,总花费就可能远远少于一连串的旅馆账单。可是,与一般的看法相反,省钱远不是唯一的、甚至也不是最主要的理由。那位漫不经心地把车驶进欧洲无数常年营地之一、占下一小块付费空位的旅行者,很可能发现自己正停在一辆锃亮的高级轿车旁边;更常见的是,一辆朴素的两厢车与某辆气派得多的车门挨着门。现代露营的装备一年比一年讲究,这对愤世嫉俗者来说是个有趣的悖论,对那些发誓要彻底摆脱一切的满怀希望的旅行者,则是更光明的允诺。它还提供——某个社会学专业的学生说不定能就这一现象写出一篇论文——另一种形式的逃离。现代旅行者往往讨厌高级旅馆,并不是因为付不起它的舒适、也不是想回避它,而是因为他有点怕它。他也许很富有,却压根拿不准该给门童或女服务员多少小费;在自家他是主人,可几乎不知道什么时候该去向领班抱怨。露营把他从所有这些担忧里解放出来。露营本身确实存在一种以装备和技巧论高下的势利风气;但那是一种他一旦遇上便能轻易看懂、也能应付的势利。这里没有高人一等的‘他们’,没有管理层、没有旅馆的等级制度来给他的假日蒙上阴影。除这些动机之外,还得再加一个。当今对汽车的崇拜,不小程度上正可用所有权所带来的那种独立感来解释;而露营给这份快乐添了一层精致的意味。从自家门口到山间或沙滩、再回到家,一切都近在手边。到达度假天堂的手段不但完全在自己的掌握之中,而且,一旦假期变了味——海滩太挤、天色太阴沉——逃离的手段就停在帐篷外面,或者本身就是帐篷的一部分。理想主义者反对说,露营者和跟团游客一样,使自己失去了了解所游国家的机会。然而这一指责,在一处热闹的欧陆营地面前站不住脚。度假旅馆往往只迎合一个国籍的客人,有时甚至只此一家;露营地却恰恰相反,是高度国际化的。禁止在露天晾衣服、或邀请‘我们的露营朋友’去跳舞的告示,同样用法语、德语和英语印出。有组织的露营蓬勃发展,是否意味着那种更自由、更独立的露营的慢慢消亡,还很难说。到头来,这将取决于露营者自己——取决于他们引起多少场野火、留下多少垃圾,以及他们是否把乡间的人彻底得罪。",
+  "grammar_card": {
+    "title": "Not only 置句首的部分倒装 / whether 引导主语从句 / find oneself doing / far from doing·far less than / 现在分词作后置定语",
+    "intro": "①Not only 置于句首,主句要部分倒装(把助动词/be 提到主语前):Not only is the car…, but also…。②whether 引导主语从句(‘是否…’),可置于句首作主语,say/know 后也可接;if 不能引导主语从句。③find oneself doing:‘发现自己正在…’,find + 反身代词 + 现在分词。④far from + 动名词:‘远非…’;far + 比较级 + than:‘远比…’。⑤现在分词作后置定语,表主动/正在:notices forbidding…(= that forbid…)。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["Not only 倒装", "Not only + 助动词/be + 主语…, but…", "Not only is the car a means of arriving, but also of escape"],
+        ["whether 主语从句", "Whether … is hard to say", "Whether it will happen is hard to say"],
+        ["find oneself doing", "find + 反身代词 + 现在分词", "he may find himself sharing a site"],
+        ["far from / far less than", "far from + 动名词;far + 比较级 + than", "far from being the only reason; far less than the cost"],
+        ["现在分词作后置定语", "名词 + 现在分词短语", "notices forbidding the drying of clothes"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "Not only 置于句首时,后面的主句必须部分倒装(Not only is he…, 不是 Not only he is…)。", "mark": "Not only 倒装" },
+      { "rule": "whether 与 if 都表‘是否’,但引导主语从句、跟在介词后、或后接 or not 时,只能用 whether,不用 if。", "mark": "whether / if" },
+      { "rule": "美式拼写:traveler / maneuver / gray(英式 traveller / manoeuvre / grey)。本课已按美语写。", "mark": "traveler / gray" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Where nationality is concerned, how do campsites differ from holiday hotels?",
+    "options": ["Campsites are strongly cosmopolitan, while hotels tend to cater to one nationality", "Campsites only admit local citizens", "Hotels welcome every nationality, but campsites admit only one", "There is no difference between them at all"],
+    "answer_index": 0
+  },
+  "passage": "Saving money is one powerful reason for camping. Once you have paid for your gear, or arranged to rent it, the total cost can be far less than a run of hotel bills. But, contrary to a common assumption, thrift is far from being the only reason, or even the greatest. The traveler who steers carelessly into his small paid square at one of Europe's countless permanent sites may well find himself parked beside a gleaming sedan; more often a modest hatchback stands door to door with something far grander. That the gear of modern camping grows more elaborate every year is an amusing paradox for the cynic, and a brighter promise for the hopeful traveler who has sworn to get away from it all. It also offers — and some student of sociology might build a thesis on the fact — an escape of a different kind. The modern traveler is often a man who dislikes the grand hotel, not because he cannot afford its comforts or wishes to shun them, but because he is a little afraid of it. Affluent he may be, yet he is by no means sure what to tip the doorman or the maid. Master in his own house, he has small idea of when to complain to a headwaiter. From all such fears camping sets him free. A snobbery of camping does exist, based on gear and technique; but it is a kind that, should he meet it, he can readily understand and handle. There is no superior 'they', no management and no hotel hierarchy, to darken his holiday. To these motives another must be added. The modern worship of the car is explained, not least, by the sense of independence that ownership entails. To this pleasure, camping gives a fine refinement. From one's own front door to the hills or the sands and home again, everything is at hand. Not only are the means of reaching the holiday paradise within one's own keeping, but the means of escaping a holiday that has soured — a beach too crowded, a sky too gray — are parked outside the tent, or are part of it. Idealists object that the camper, like the package tourist, denies himself the chance of getting to know the country he visits. Yet the charge does not survive a visit to a busy Continental site. Holiday hotels tend to cater to one nationality, sometimes to one alone; campsites, by contrast, are strongly cosmopolitan. Notices forbidding the drying of clothes in the open, or inviting 'our camping friends' to a dance, are printed in French, German, and English alike. Whether the remarkable growth of organized camping means the slow death of the freer, more independent kind is hard to say. In the end it will depend on the campers themselves — on how many fires they start, how much litter they leave, and whether they wholly alienate the people of the countryside.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Saving money is one powerful reason for camping. Once you have paid for your gear, or arranged to rent it, the total cost can be far less than a run of hotel bills. But, contrary to a common assumption, thrift is far from being the only reason, or even the greatest. The traveler who steers carelessly into his small paid square at one of Europe's countless permanent sites may well find himself parked beside a gleaming sedan; more often a modest hatchback stands door to door with something far grander.", "text_cn": "省钱是露营的一个有力理由。一旦你付清了装备的钱、或安排好租借,总花费就可能远远少于一连串的旅馆账单。可是,与一般的看法相反,省钱远不是唯一的、甚至也不是最主要的理由。那位漫不经心地把车驶进欧洲无数常年营地之一、占下一小块付费空位的旅行者,很可能发现自己正停在一辆锃亮的高级轿车旁边;更常见的是,一辆朴素的两厢车与某辆气派得多的车门挨着门。" },
+    { "seq": 2, "speaker": null, "text_en": "That the gear of modern camping grows more elaborate every year is an amusing paradox for the cynic, and a brighter promise for the hopeful traveler who has sworn to get away from it all. It also offers — and some student of sociology might build a thesis on the fact — an escape of a different kind. The modern traveler is often a man who dislikes the grand hotel, not because he cannot afford its comforts or wishes to shun them, but because he is a little afraid of it. Affluent he may be, yet he is by no means sure what to tip the doorman or the maid.", "text_cn": "现代露营的装备一年比一年讲究,这对愤世嫉俗者来说是个有趣的悖论,对那些发誓要彻底摆脱一切的满怀希望的旅行者,则是更光明的允诺。它还提供——某个社会学专业的学生说不定能就这一现象写出一篇论文——另一种形式的逃离。现代旅行者往往讨厌高级旅馆,并不是因为付不起它的舒适、也不是想回避它,而是因为他有点怕它。他也许很富有,却压根拿不准该给门童或女服务员多少小费。" },
+    { "seq": 3, "speaker": null, "text_en": "From all such fears camping sets him free. A snobbery of camping does exist, based on gear and technique; but it is a kind that, should he meet it, he can readily understand and handle. There is no superior 'they', no management and no hotel hierarchy, to darken his holiday. To these motives another must be added. The modern worship of the car is explained, not least, by the sense of independence that ownership entails.", "text_cn": "露营把他从所有这些担忧里解放出来。露营本身确实存在一种以装备和技巧论高下的势利风气;但那是一种他一旦遇上便能轻易看懂、也能应付的势利。这里没有高人一等的‘他们’,没有管理层、没有旅馆的等级制度来给他的假日蒙上阴影。除这些动机之外,还得再加一个。当今对汽车的崇拜,不小程度上正可用所有权所带来的那种独立感来解释。" },
+    { "seq": 4, "speaker": null, "text_en": "From one's own front door to the hills or the sands and home again, everything is at hand. Not only are the means of reaching the holiday paradise within one's own keeping, but the means of escaping a holiday that has soured — a beach too crowded, a sky too gray — are parked outside the tent, or are part of it. Idealists object that the camper, like the package tourist, denies himself the chance of getting to know the country he visits. Yet the charge does not survive a visit to a busy Continental site.", "text_cn": "从自家门口到山间或沙滩、再回到家,一切都近在手边。到达度假天堂的手段不但完全在自己的掌握之中,而且,一旦假期变了味——海滩太挤、天色太阴沉——逃离的手段就停在帐篷外面,或者本身就是帐篷的一部分。理想主义者反对说,露营者和跟团游客一样,使自己失去了了解所游国家的机会。然而这一指责,在一处热闹的欧陆营地面前站不住脚。" },
+    { "seq": 5, "speaker": null, "text_en": "Holiday hotels tend to cater to one nationality, sometimes to one alone; campsites, by contrast, are strongly cosmopolitan. Notices forbidding the drying of clothes in the open, or inviting 'our camping friends' to a dance, are printed in French, German, and English alike. Whether the remarkable growth of organized camping means the slow death of the freer, more independent kind is hard to say. In the end it will depend on the campers themselves — on how many fires they start, how much litter they leave, and whether they wholly alienate the people of the countryside.", "text_cn": "度假旅馆往往只迎合一个国籍的客人,有时甚至只此一家;露营地却恰恰相反,是高度国际化的。禁止在露天晾衣服、或邀请‘我们的露营朋友’去跳舞的告示,同样用法语、德语和英语印出。有组织的露营蓬勃发展,是否意味着那种更自由、更独立的露营的慢慢消亡,还很难说。到头来,这将取决于露营者自己——取决于他们引起多少场野火、留下多少垃圾,以及他们是否把乡间的人彻底得罪。" }
+  ],
+  "words": [
+    { "word": "assumption", "ipa": "/əˈsʌmpʃn/", "pos": "n", "meaning_cn": "假定,假设", "example": "contrary to a common assumption" },
+    { "word": "paradox", "ipa": "/ˈpærədɑːks/", "pos": "n", "meaning_cn": "悖论,自相矛盾的事", "example": "an amusing paradox for the cynic" },
+    { "word": "cynic", "ipa": "/ˈsɪnɪk/", "pos": "n", "meaning_cn": "愤世嫉俗者", "example": "an amusing paradox for the cynic" },
+    { "word": "sociology", "ipa": "/ˌsoʊsiˈɑːlədʒi/", "pos": "n", "meaning_cn": "社会学", "example": "some student of sociology might build a thesis" },
+    { "word": "shun", "ipa": "/ʃʌn/", "pos": "v", "meaning_cn": "避开,回避", "example": "or wishes to shun them" },
+    { "word": "affluent", "ipa": "/ˈæfluənt/", "pos": "adj", "meaning_cn": "富裕的", "example": "affluent he may be" },
+    { "word": "snobbery", "ipa": "/ˈsnɑːbəri/", "pos": "n", "meaning_cn": "势利,自命不凡", "example": "a snobbery of camping does exist" },
+    { "word": "hierarchy", "ipa": "/ˈhaɪərɑːrki/", "pos": "n", "meaning_cn": "等级制度", "example": "no hotel hierarchy to darken his holiday" },
+    { "word": "entail", "ipa": "/ɪnˈteɪl/", "pos": "v", "meaning_cn": "使成为必需,牵涉", "example": "the independence that ownership entails" },
+    { "word": "cater", "ipa": "/ˈkeɪtər/", "pos": "v", "meaning_cn": "迎合,满足需求", "example": "hotels tend to cater to one nationality" },
+    { "word": "cosmopolitan", "ipa": "/ˌkɑːzməˈpɑːlɪtən/", "pos": "adj", "meaning_cn": "世界性的,国际化的", "example": "campsites are strongly cosmopolitan" },
+    { "word": "alienate", "ipa": "/ˈeɪliəneɪt/", "pos": "v", "meaning_cn": "使疏远,离间", "example": "whether they wholly alienate the countryside" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "Not only 置句首的部分倒装" },
+    { "gp": "gp2", "name": "whether 引导主语从句" },
+    { "gp": "gp3", "name": "find oneself doing" },
+    { "gp": "gp4", "name": "far from doing / far less than" },
+    { "gp": "gp5", "name": "现在分词作后置定语" },
+    { "gp": "gp6", "name": "词汇辨析(assumption/shun/alienate)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ only are the means of arriving within one's keeping, but escape is easy too.\"(‘不但…而且…’置于句首、后接部分倒装,填句首那个否定副词)", "stem_cn": "到达的手段不但在自己掌握之中,逃离也很容易。", "options": ["Not", "No", "Nor", "None"] },
+    { "gp": "gp1", "stem": "\"Not only ___ the car a means of arrival, but also a means of escape.\"(Not only 置于句首,主句部分倒装,把 be 动词提到主语前,填提前的那个 be 动词)", "stem_cn": "汽车不但是到达的工具,也是逃离的工具。", "options": ["is", "it is", "does", "being"] },
+    { "gp": "gp1", "stem": "\"The site drew not only Germans ___ also the Dutch and the French.\"(not only … ___ also …,填与 not only 呼应的那个词)", "stem_cn": "这处营地不但吸引德国人,也吸引荷兰人和法国人。", "options": ["but", "and", "or", "so"] },
+    { "gp": "gp2", "stem": "\"___ organized camping will kill the freer kind is hard to say.\"(‘是否…’引导主语从句置于句首,填那个引导词)", "stem_cn": "有组织的露营是否会杀死更自由的那种,很难说。", "options": ["Whether", "If", "That", "What"] },
+    { "gp": "gp2", "stem": "\"___ the beach is too crowded or not, the car is ready to leave.\"(‘无论…是否…’,与 or not 搭配的引导词)", "stem_cn": "无论海滩挤不挤,汽车都随时可以开走。", "options": ["Whether", "If", "That", "Which"] },
+    { "gp": "gp2", "stem": "\"It is hard to say ___ the growth is a good thing or a bad one.\"(动词 say 后接‘是…还是…’,与 or 搭配的引导词)", "stem_cn": "很难说这种发展是好事还是坏事。", "options": ["whether", "that", "what", "how"] },
+    { "gp": "gp3", "stem": "\"Steering in carelessly, he may find ___ parked beside a luxury car.\"(find + 反身代词 + 分词,填与主语 he 一致的反身代词)", "stem_cn": "漫不经心地开进去,他可能发现自己正停在一辆豪车旁边。", "options": ["himself", "him", "his", "he"] },
+    { "gp": "gp3", "stem": "\"You may find yourself ___ door to door with a stranger's tent.\"(find oneself + 现在分词,填 stand 的 -ing 形式)", "stem_cn": "你可能发现自己与陌生人的帐篷门挨着门。", "options": ["standing", "stand", "stood", "to stand"] },
+    { "gp": "gp3", "stem": "\"They found themselves ___ a site with campers from six countries.\"(find oneself + 现在分词,填 share 的 -ing 形式)", "stem_cn": "他们发现自己与来自六个国家的露营者共用一处营地。", "options": ["sharing", "share", "shared", "to share"] },
+    { "gp": "gp4", "stem": "\"Thrift is far ___ being the only motive for camping.\"(‘远非…’的固定说法 far ___ + 动名词,填 far 与动名词之间那个介词)", "stem_cn": "省钱远不是露营唯一的动机。", "options": ["from", "of", "than", "off"] },
+    { "gp": "gp4", "stem": "\"The total cost can be far ___ than a run of hotel bills.\"(‘远比…少’= far + 比较级 + than,填 little 的比较级)", "stem_cn": "总花费可能远远少于一连串的旅馆账单。", "options": ["less", "little", "least", "lesser"] },
+    { "gp": "gp4", "stem": "\"Camping is far from ___ as dull as its critics claim.\"(‘远非…’= far from + 动名词;形容词短语前要加 be 的动名词形式,填该词)", "stem_cn": "露营远不像批评者所说的那样乏味。", "options": ["being", "be", "been", "to be"] },
+    { "gp": "gp5", "stem": "\"Notices ___ the drying of clothes are printed in three languages.\"(现在分词作后置定语,表主动‘禁止…的告示’,填 forbid 的 -ing 形式)", "stem_cn": "禁止晾晒衣服的告示用三种语言印出。", "options": ["forbidding", "forbidden", "forbid", "to forbid"] },
+    { "gp": "gp5", "stem": "\"Signs ___ campers to a dance hang by the gate.\"(现在分词作后置定语‘邀请…的告示’,填 invite 的 -ing 形式)", "stem_cn": "邀请露营者去跳舞的告示挂在门边。", "options": ["inviting", "invited", "invite", "to invite"] },
+    { "gp": "gp5", "stem": "\"A traveler ___ to get away from it all chooses a tent.\"(现在分词作后置定语修饰 traveler,填 hope 的 -ing 形式)", "stem_cn": "一个渴望彻底摆脱一切的旅行者选择了帐篷。", "options": ["hoping", "hoped", "hope", "to hope"] },
+    { "gp": "gp6", "stem": "\"A widely held belief that is taken for granted is an ___.\"(“假定,假设”用哪个词)", "stem_cn": "一种被想当然接受的普遍看法。", "options": ["assumption", "assignment", "assortment", "assessment"] },
+    { "gp": "gp6", "stem": "\"A person who deliberately keeps away from something is said to ___ it.\"(“避开,回避”用哪个词)", "stem_cn": "故意远离某物。", "options": ["shun", "shine", "shift", "shrink"] },
+    { "gp": "gp6", "stem": "\"To make people feel distant and unfriendly toward you is to ___ them.\"(“使疏远,离间”用哪个词)", "stem_cn": "使人对你感到疏远和不友好。", "options": ["alienate", "alleviate", "allocate", "alternate"] }
+  ],
+  "stage6": [
+    { "stem": "assumption 的意思是:", "options": ["假定,假设", "证据", "结论", "事实"] },
+    { "stem": "paradox 的意思是:", "options": ["悖论,自相矛盾的事", "显而易见的真理", "简单的问题", "常见的错误"] },
+    { "stem": "cynic 的意思是:", "options": ["愤世嫉俗者", "乐观主义者", "梦想家", "专家"] },
+    { "stem": "affluent 的意思是:", "options": ["富裕的", "贫穷的", "慷慨的", "吝啬的"] },
+    { "stem": "cater 的意思是:", "options": ["迎合,满足需求", "拒绝,回绝", "忽视,无视", "批评,指责"] },
+    { "stem": "cosmopolitan 的意思是:", "options": ["世界性的,国际化的", "本地的,地方性的", "古老的,过时的", "私人的,隐秘的"] }
+  ],
+  "contrast": [
+    { "us": "traveler", "uk": "traveller", "note_cn": "旅行者;美语 traveler,英式 traveller" },
+    { "us": "maneuver", "uk": "manoeuvre", "note_cn": "移动,操纵;美语 maneuver,英式 manoeuvre" },
+    { "us": "odor", "uk": "odour", "note_cn": "气味;美语 odor,英式 odour" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色的;美语 gray,英式 grey" }
+  ],
+  "chunks": [
+    { "us": "get away from it all", "ipa": "/ɡet əˈweɪ frʌm ɪt ɔːl/", "example1": "The traveler had sworn to get away from it all.", "example1_cn": "那旅行者发誓要彻底摆脱一切。", "example2": "We went to the mountains to get away from it all.", "example2_cn": "我们去山里,为的是彻底放空自己。" },
+    { "us": "at hand", "ipa": "/æt hænd/", "example1": "From door to hills and back, everything is at hand.", "example1_cn": "从门口到山间再回来,一切都近在手边。", "example2": "Help was at hand when we needed it.", "example2_cn": "我们需要时,帮助就在近旁。" },
+    { "us": "door to door", "ipa": "/dɔːr tə dɔːr/", "example1": "A small car stands door to door with a grander one.", "example1_cn": "一辆小车与一辆更气派的车门挨着门。", "example2": "They carried the boxes door to door.", "example2_cn": "他们挨家挨户地搬运箱子。" },
+    { "us": "not least", "ipa": "/nɑːt liːst/", "example1": "Car worship is explained, not least, by a sense of freedom.", "example1_cn": "对汽车的崇拜,尤其可用一种自由感来解释。", "example2": "Many people came, not least the neighbors.", "example2_cn": "许多人来了,尤其是邻居们。" }
+  ],
+  "stage7_cloze": {
+    "context": "Thrift is far ___1___ being the only reason for camping. The car matters too: not only ___2___ it a way of arriving, but also a way of escape. Notices ___3___ the drying of clothes are printed in many languages, for the sites are strongly ___4___.",
+    "blanks": [
+      { "blank_no": 1, "options": ["from", "of", "than", "off"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["is", "it is", "does", "being"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["forbidding", "forbidden", "forbid", "to forbid"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["cosmopolitan", "private", "empty", "local"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What does the writer say about the cost of camping compared with hotels?", "options": ["Once the gear is paid for or rented, the total cost can be far less than a run of hotel bills", "Camping always costs more than a good hotel", "Camping and hotels cost exactly the same", "The cost of camping cannot be worked out at all"] },
+    { "stem": "According to the writer, why does the modern traveler often dislike the grand hotel?", "options": ["Not because he cannot afford it, but because he is a little afraid of it — unsure what to tip or when to complain", "Because the food there is always bad", "Because hotels are never near the sea", "Because he is not allowed to bring a car"] },
+    { "stem": "Where nationality is concerned, how do campsites differ from holiday hotels?", "options": ["Campsites are strongly cosmopolitan, while hotels tend to cater to one nationality", "Campsites admit only one nationality at a time", "Hotels are more international than campsites", "There is no difference at all between them"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"省钱远不是露营唯一的原因\"(far from doing):", "options": ["Saving money is far from being the only reason for camping.", "Saving money is far being the only reason for camping.", "Saving money is far from be the only reason for camping.", "Saving money is far away being the only reason for camping."] },
+    { "stem": "你想说\"不但汽车是到达的工具,它也是逃离的工具\"(Not only 置句首的部分倒装):", "options": ["Not only is the car a means of arriving, but it is also a means of escape.", "Not only the car is a means of arriving, but it is also a means of escape.", "Not only is the car a means of arriving, but also it is a means of escape.", "Not only the car a means of arriving, but it is also a means of escape."] },
+    { "stem": "你想说\"有组织的露营是否会杀死更自由的那种,很难说\"(whether 引导主语从句):", "options": ["Whether organized camping will kill the freer kind is hard to say.", "If organized camping will kill the freer kind is hard to say.", "Whether organized camping will kill the freer kind are hard to say.", "That organized camping will kill the freer kind is hard to say whether."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "affluent 的意思是:", "options": ["富裕的", "贫穷的", "慷慨的", "孤独的"] },
+    { "kind": "vocab", "stem": "shun 的意思是:", "options": ["避开,回避", "追求,寻求", "接受,认可", "面对,直面"] },
+    { "kind": "grammar", "stem": "\"Not only ___ the car a means of arrival, but also a means of escape.\"(Not only 置句首的部分倒装)", "stem_cn": "汽车不但是到达的工具,也是逃离的工具。", "options": ["is", "it is", "does", "being"] },
+    { "kind": "grammar", "stem": "\"Thrift is far ___ being the only motive for camping.\"(‘远非…’,far 之后接介词)", "stem_cn": "省钱远不是露营唯一的动机。", "options": ["from", "of", "than", "off"] },
+    { "kind": "scenario", "stem": "\"get away from it all\" 的意思是:", "options": ["彻底摆脱日常烦扰", "把一切都搬走", "放弃所有计划", "把东西分给大家"] },
+    { "kind": "scenario", "stem": "\"cater to\" 的意思是:", "options": ["迎合,满足(某类人的)需求", "拒绝招待", "收取费用", "打扫卫生"] },
+    { "kind": "reading", "stem": "According to the writer, why does camping set the modern traveler free from certain fears?", "options": ["Because there is no management or hotel hierarchy, and no superior 'they', to darken his holiday", "Because camping is always cheaper than a hotel", "Because campsites forbid all foreigners", "Because tents are more comfortable than rooms"], "passage": true },
+    { "kind": "reading", "stem": "What does a busy Continental campsite show about the idealists' objection to camping?", "options": ["The charge that campers never meet the locals does not survive such a visit, for the sites are strongly cosmopolitan", "That campers really do stay among their own nationality", "That campsites are always empty in summer", "That hotels are friendlier than campsites"], "passage": true },
+    { "kind": "listening", "stem": "In the end, on what will the survival of freer, independent camping mainly depend?", "options": ["On the campers themselves — how many fires they start, how much litter they leave, and whether they alienate the countryside", "On the price of gasoline each year", "On the number of hotels that close down", "On the weather in the mountains"], "audio": true },
+    { "kind": "listening", "stem": "Why does the writer call the growing sophistication of camping gear a paradox for the cynic?", "options": ["Because people take up camping to get away from it all, yet their equipment grows more elaborate every year", "Because camping gear keeps getting cheaper", "Because no one buys camping gear anymore", "Because cynics never go camping at all"], "audio": true }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "am2_l82",
+  "unit_no": 11,
+  "lesson_no": 82,
+  "title_en": "The Thing in the Attic",
+  "title_cn": "阁楼里的东西",
+  "grammar_focus": "KS10/34/58 被动语态各时态(教材 L82 Key structures,方案B换情节包):一般过去被动(was found/was covered/was cleaned)、现在进行被动(is being examined)、现在完成被动(have been seen)、过去完成被动(had been forgotten)、一般现在被动(is kept/is checked)、将来被动(will be shown);辅以易混词 laugh vs laugh at、wash vs wash up",
+  "scene": "上周,在一座老房子的阁楼里发现了一件古怪的旧物。它落满灰尘,已被遗忘了一百多年。起初,一家人还嘲笑它,以为是废物。可当把它清理干净后,底下露出一个奇特的图案。如今,这件物品正由城里博物馆的专家们鉴定。“这样的东西以前只被见过几次,”一位专家说。“得先仔细研究,才能说清它是什么。”每一件珍贵的物品都被保存在一个专门的房间里,每天都有人检查。下个月,这件神秘的物品将第一次向公众展出。那家曾经嘲笑它的人,如今为它将在博物馆展出而感到自豪。",
+  "grammar_card": {
+    "title": "KS10/34/58 被动语态各时态",
+    "intro": "被动语态 = be + 过去分词,“被…”的意思;时态的变化体现在 be 上:①一般过去 was/were done(was found 被发现);②现在进行 is/are being done(is being examined 正在被鉴定);③现在完成 have/has been done(have been seen 被见过);④过去完成 had been done(had been forgotten 曾被遗忘);⑤一般现在 is/are done(is kept 被保存);⑥将来 will be done(will be shown 将被展出)。SD:laugh(笑)vs laugh at(嘲笑);wash(洗)vs wash up(洗餐具/冲上岸)。",
+    "table": {
+      "headers": ["时态", "被动形式与例子"],
+      "rows": [
+        ["一般过去", "was found / was cleaned"],
+        ["现在进行", "is being examined"],
+        ["现在完成 / 过去完成", "have been seen / had been forgotten"],
+        ["一般现在 / 将来", "is kept / will be shown"],
+        ["易混词", "laugh at(嘲笑) / wash up(洗餐具)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语里“垃圾”说 trash(英式 rubbish)、“手电筒”说 flashlight(英式 torch)、“公寓”说 apartment(英式 flat);本课已按美语写。", "mark": "trash/flashlight" },
+      { "rule": "被动语态时态变化都在 be 上,过去分词不变:was done / is being done / has been done / will be done。laugh at = 嘲笑(取笑某人某事),laugh = 单纯地笑。", "mark": "be + 过去分词" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Where was the strange object found?",
+    "options": ["In the attic of an old house", "At the bottom of the sea", "In a busy market", "On a mountain top"],
+    "answer_index": 0
+  },
+  "passage": "Last week, a strange old object was found in the attic of an old house. It was covered in dust and had been forgotten for over a hundred years. At first the family laughed at it, thinking it was junk. But when it was cleaned, a curious pattern was discovered underneath. Now the object is being examined by experts at the city museum. \"Things like this have been seen only a few times before,\" one expert said. \"It is carefully studied before anyone can say what it is.\" Every valuable piece is kept in a special room and is checked daily. Next month, the mysterious object will be shown to the public for the first time. The family who once laughed at it are now proud that it will be displayed in a museum.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Last week, a strange old object was found in the attic of an old house. It was covered in dust and had been forgotten for over a hundred years.", "text_cn": "上周,在一座老房子的阁楼里发现了一件古怪的旧物。它落满灰尘,已被遗忘了一百多年。" },
+    { "seq": 2, "speaker": null, "text_en": "At first the family laughed at it, thinking it was junk. But when it was cleaned, a curious pattern was discovered underneath.", "text_cn": "起初,一家人还嘲笑它,以为是废物。可当把它清理干净后,底下露出一个奇特的图案。" },
+    { "seq": 3, "speaker": null, "text_en": "Now the object is being examined by experts at the city museum. \"Things like this have been seen only a few times before,\" one expert said.", "text_cn": "如今,这件物品正由城里博物馆的专家们鉴定。“这样的东西以前只被见过几次,”一位专家说。" },
+    { "seq": 4, "speaker": null, "text_en": "\"It is carefully studied before anyone can say what it is.\" Every valuable piece is kept in a special room and is checked daily.", "text_cn": "“得先仔细研究,才能说清它是什么。”每一件珍贵的物品都被保存在一个专门的房间里,每天都有人检查。" },
+    { "seq": 5, "speaker": null, "text_en": "Next month, the mysterious object will be shown to the public for the first time. The family who once laughed at it are now proud that it will be displayed in a museum.", "text_cn": "下个月,这件神秘的物品将第一次向公众展出。那家曾经嘲笑它的人,如今为它将在博物馆展出而感到自豪。" }
+  ],
+  "words": [
+    { "word": "attic", "ipa": "/ˈætɪk/", "pos": "n", "meaning_cn": "阁楼", "example": "found in the attic of an old house" },
+    { "word": "examine", "ipa": "/ɪɡˈzæmɪn/", "pos": "v", "meaning_cn": "检查,鉴定", "example": "the object is being examined by experts" },
+    { "word": "expert", "ipa": "/ˈekspɜːrt/", "pos": "n", "meaning_cn": "专家", "example": "examined by experts at the museum" },
+    { "word": "rare", "ipa": "/rer/", "pos": "adj", "meaning_cn": "稀有的", "example": "a rare and curious object" },
+    { "word": "object", "ipa": "/ˈɑːbdʒɪkt/", "pos": "n", "meaning_cn": "物件,东西", "example": "a strange old object" },
+    { "word": "display", "ipa": "/dɪˈspleɪ/", "pos": "v", "meaning_cn": "展示,陈列", "example": "it will be displayed in a museum" },
+    { "word": "discover", "ipa": "/dɪsˈkʌvər/", "pos": "v", "meaning_cn": "发现", "example": "a curious pattern was discovered" },
+    { "word": "dust", "ipa": "/dʌst/", "pos": "n", "meaning_cn": "灰尘", "example": "It was covered in dust" },
+    { "word": "valuable", "ipa": "/ˈvæljuəbl/", "pos": "adj", "meaning_cn": "珍贵的", "example": "Every valuable piece is kept in a special room" },
+    { "word": "curious", "ipa": "/ˈkjʊriəs/", "pos": "adj", "meaning_cn": "好奇的;奇特的", "example": "a curious pattern was discovered" },
+    { "word": "museum", "ipa": "/mjuˈziːəm/", "pos": "n", "meaning_cn": "博物馆", "example": "experts at the city museum" },
+    { "word": "shelf", "ipa": "/ʃelf/", "pos": "n", "meaning_cn": "架子", "example": "the old shelf in the attic" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般过去被动(was found / was cleaned)" },
+    { "gp": "gp2", "name": "现在进行被动(is being examined)" },
+    { "gp": "gp3", "name": "现在完成 / 过去完成被动(have been seen / had been forgotten)" },
+    { "gp": "gp4", "name": "一般现在 / 将来被动(is kept / will be shown)" },
+    { "gp": "gp5", "name": "SD 易混词(laugh / laugh at / wash up)" },
+    { "gp": "gp6", "name": "词汇辨析(attic / expert / valuable)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Last week, a strange old object ___ in the attic.\"(被发现:一般过去被动)", "stem_cn": "上周,在阁楼里发现了一件古怪的旧物。", "options": ["was found", "found", "was finding", "has found"] },
+    { "gp": "gp1", "stem": "\"It ___ in dust and looked like junk.\"(被覆盖:一般过去被动)", "stem_cn": "它落满灰尘,看着像废物。", "options": ["was covered", "covered", "was covering", "has covered"] },
+    { "gp": "gp1", "stem": "\"When it ___, a curious pattern appeared.\"(被清理:一般过去被动)", "stem_cn": "把它清理干净后,出现了一个奇特的图案。", "options": ["was cleaned", "cleaned", "was cleaning", "has cleaned"] },
+    { "gp": "gp2", "stem": "\"Now the object ___ by experts at the museum.\"(正在被鉴定:现在进行被动)", "stem_cn": "现在这件物品正由博物馆的专家们鉴定。", "options": ["is being examined", "is examined", "is examining", "examines"] },
+    { "gp": "gp2", "stem": "\"Right now a full report ___ written about it.\"(正在被写:现在进行被动)", "stem_cn": "此刻正在写一份关于它的完整报告。", "options": ["is being", "is", "has been", "was"] },
+    { "gp": "gp2", "stem": "\"Look — the old shelf ___ repaired at the moment.\"(正在被修:现在进行被动)", "stem_cn": "看——那个旧架子此刻正在维修。", "options": ["is being", "is", "has been", "will be"] },
+    { "gp": "gp3", "stem": "\"Things like this ___ only a few times before.\"(很少被见过:现在完成被动)", "stem_cn": "这样的东西以前只被见过几次。", "options": ["have been seen", "saw", "are seeing", "have seen"] },
+    { "gp": "gp3", "stem": "\"The object ___ for over a hundred years before it was found.\"(曾被遗忘:过去完成被动)", "stem_cn": "这件物品被发现前,已被遗忘了一百多年。", "options": ["had been forgotten", "forgot", "was forgetting", "has forgotten"] },
+    { "gp": "gp3", "stem": "\"It ___ to the museum already.\"(已被送到:现在完成被动)", "stem_cn": "它已经被送到博物馆了。", "options": ["has been sent", "sent", "is sending", "sends"] },
+    { "gp": "gp4", "stem": "\"Every valuable piece ___ in a special room.\"(被保存:一般现在被动)", "stem_cn": "每件珍贵的物品都被保存在一个专门的房间里。", "options": ["is kept", "keeps", "is keeping", "has kept"] },
+    { "gp": "gp4", "stem": "\"Each object ___ daily by the staff.\"(被检查:一般现在被动)", "stem_cn": "每件物品每天都由工作人员检查。", "options": ["is checked", "checks", "is checking", "checked"] },
+    { "gp": "gp4", "stem": "\"Next month, the object ___ to the public.\"(将被展出:将来被动)", "stem_cn": "下个月,这件物品将向公众展出。", "options": ["will be shown", "will show", "is showing", "shows"] },
+    { "gp": "gp5", "stem": "\"At first the family ___ it, thinking it was junk.\"(嘲笑、取笑用哪个词组)", "stem_cn": "起初,一家人还嘲笑它,以为是废物。", "options": ["laughed at", "laughed", "washed", "washed up"] },
+    { "gp": "gp5", "stem": "\"Everybody ___ when the clown appeared.\"(单纯地“笑”用哪个词)", "stem_cn": "小丑出场时,大家都笑了。", "options": ["laughed", "laughed at", "washed", "washed up"] },
+    { "gp": "gp5", "stem": "\"What a lot of dirty dishes! Who is going to ___?\"(洗餐具用哪个词组)", "stem_cn": "这么多脏盘子!谁来洗?", "options": ["wash up", "laugh at", "wash down", "laugh"] },
+    { "gp": "gp6", "stem": "\"The old object was kept in a dusty ___ under the roof.\"(阁楼用哪个词)", "stem_cn": "这件旧物一直放在屋顶下积满灰尘的阁楼里。", "options": ["attic", "garden", "kitchen", "garage"] },
+    { "gp": "gp6", "stem": "\"The object is now studied by ___ at the museum.\"(专家用哪个词)", "stem_cn": "这件物品现在由博物馆的专家们研究。", "options": ["experts", "tourists", "students", "children"] },
+    { "gp": "gp6", "stem": "\"It turned out to be very old and ___.\"(珍贵的用哪个词)", "stem_cn": "结果发现它非常古老而珍贵。", "options": ["valuable", "worthless", "ordinary", "empty"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"垃圾\"常说:", "options": ["trash", "rubbish", "waste-stuff", "throw-things"] },
+    { "stem": "美语里\"手电筒\"常说:", "options": ["flashlight", "torch", "hand-lamp", "light-stick"] },
+    { "stem": "attic 的意思是:", "options": ["阁楼", "地下室", "厨房", "车库"] },
+    { "stem": "examine 的意思是:", "options": ["检查,鉴定", "出售", "丢弃", "隐藏"] },
+    { "stem": "valuable 的意思是:", "options": ["珍贵的", "廉价的", "普通的", "破旧的"] },
+    { "stem": "curious 的意思是:", "options": ["好奇的;奇特的", "无聊的", "愤怒的", "疲惫的"] }
+  ],
+  "contrast": [
+    { "us": "trash", "uk": "rubbish", "note_cn": "垃圾;美语 trash,英式 rubbish" },
+    { "us": "flashlight", "uk": "torch", "note_cn": "手电筒;美语 flashlight,英式 torch" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" }
+  ],
+  "chunks": [
+    { "us": "be covered in dust", "ipa": "/bi ˈkʌvərd ɪn dʌst/", "example1": "It was covered in dust.", "example1_cn": "它落满了灰尘。", "example2": "The old books were covered in dust.", "example2_cn": "那些旧书上积满了灰尘。" },
+    { "us": "laugh at", "ipa": "/læf æt/", "example1": "At first the family laughed at it.", "example1_cn": "起初一家人还嘲笑它。", "example2": "Don't laugh at other people's mistakes.", "example2_cn": "别嘲笑别人的错误。" },
+    { "us": "go on display", "ipa": "/ɡoʊ ɑːn dɪˈspleɪ/", "example1": "The object will go on display next month.", "example1_cn": "这件物品下个月将展出。", "example2": "The paintings go on display tomorrow.", "example2_cn": "这些画明天开始展出。" },
+    { "us": "for the first time", "ipa": "/fɔːr ðə fɜːrst taɪm/", "example1": "It will be shown for the first time.", "example1_cn": "它将第一次被展出。", "example2": "She saw the sea for the first time.", "example2_cn": "她第一次看到大海。" }
+  ],
+  "stage7_cloze": {
+    "context": "Last week a strange object ___1___ in the attic. It ___2___ in dust for years. Now it ___3___ examined by experts, and next month it ___4___ shown to the public.",
+    "blanks": [
+      { "blank_no": 1, "options": ["was found", "found", "is found", "was finding"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["was covered", "covered", "is covering", "covers"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["is being", "is", "has been", "was"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["will be", "will", "is", "was"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where was the strange object found?", "options": ["In the attic of an old house", "In the city museum", "In a garden", "On a beach"] },
+    { "stem": "What is happening to the object now?", "options": ["It is being examined by experts at the museum", "It has been thrown away", "It is being sold", "It is being repainted"] },
+    { "stem": "What will happen next month?", "options": ["It will be shown to the public for the first time", "It will be returned to the attic", "It will be destroyed", "It will be sold abroad"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"上周在阁楼里发现了一件旧物\"(一般过去被动):", "options": ["Last week an old object was found in the attic.", "Last week an old object found in the attic.", "Last week an old object was finding in the attic.", "Last week an old object has found in the attic."] },
+    { "stem": "你想说\"这件物品正由专家鉴定\"(现在进行被动):", "options": ["The object is being examined by experts.", "The object is examined by experts now.", "The object is examining by experts.", "The object has examined by experts."] },
+    { "stem": "你想说\"下个月它将向公众展出\"(将来被动):", "options": ["Next month it will be shown to the public.", "Next month it will show to the public.", "Next month it is shown to the public.", "Next month it was shown to the public."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "attic 的意思是:", "options": ["阁楼", "地下室", "厨房", "车库"] },
+    { "kind": "vocab", "stem": "valuable 的意思是:", "options": ["珍贵的", "廉价的", "普通的", "破旧的"] },
+    { "kind": "grammar", "stem": "\"A strange object ___ in the attic.\"(一般过去被动)", "stem_cn": "在阁楼里发现了一件古怪的旧物。", "options": ["was found", "found", "is found", "was finding"] },
+    { "kind": "grammar", "stem": "\"The object ___ by experts right now.\"(现在进行被动)", "stem_cn": "这件物品此刻正由专家鉴定。", "options": ["is being examined", "is examined", "is examining", "examines"] },
+    { "kind": "scenario", "stem": "\"laugh at\" 的意思是:", "options": ["嘲笑、取笑", "开怀大笑", "洗餐具", "冲上岸"] },
+    { "kind": "scenario", "stem": "\"go on display\" 的意思是:", "options": ["(被)展出、陈列", "被丢弃", "被出售", "被隐藏"] },
+    { "kind": "reading", "stem": "Why did the family laugh at the object at first?", "options": ["They thought it was junk", "It made a funny noise", "It looked like a toy", "It was very small"], "passage": true },
+    { "kind": "reading", "stem": "What was discovered when the object was cleaned?", "options": ["A curious pattern underneath", "A hidden key", "A name and a date", "Nothing at all"], "passage": true },
+    { "kind": "listening", "stem": "How long had the object been forgotten?", "options": ["For over a hundred years", "For a few days", "For ten years", "For a whole century exactly"], "audio": true },
+    { "kind": "listening", "stem": "How does the family feel now?", "options": ["Proud that it will be displayed in a museum", "Angry that it was taken away", "Sad that it was junk", "Worried about losing it"], "audio": true }
+  ]
+}

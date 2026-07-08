@@ -3,7 +3,7 @@
 // 打散口径与 am1(gen-unit1-seed.mjs)完全一致:mulberry32 + assignAnswerPositions + placeQuota(答案位置配额 ≤⌊N/2⌋、无相邻重复)。
 // 幂等:全部 ON CONFLICT。按 unit_no 分单元写文件,增课后重跑累积。
 // 用法: node scripts/american/gen-book2-seed.mjs
-import { readFileSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from "node:fs";
 import path from "node:path";
 
 const ROOT = process.cwd();
@@ -175,6 +175,9 @@ for (const L of lessons) {
 mkdirSync(path.join(ROOT, "SQLAA"), { recursive: true });
 const units = [...new Set(lessons.map((L) => L.unit_no))].sort((a, b) => a - b);
 const p2 = (n) => String(n).padStart(2, "0");
+// 写前比对:内容不变则不动文件、不刷时间戳 —— 这样 Aaron 看时间戳即可判断"哪几个 unit 真变了要跑"。
+// 生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流):末尾加课不改前面单元输出,故未改单元逐字节相同。
+const written = []; const unchanged = [];
 for (const U of units) {
   const lines = rows.filter((r) => r.unit === U).map((r) => r.sql);
   const ls = lessons.filter((L) => L.unit_no === U);
@@ -184,7 +187,11 @@ for (const U of units) {
     `-- 本单元课:${ls.map((L) => L.id).join(", ")}`,
     "BEGIN;",
   ];
-  writeFileSync(path.join(ROOT, "SQLAA", `american_am2_seed_unit${p2(U)}.sql`), hdr.concat(lines, ["COMMIT;", ""]).join("\n"), "utf8");
+  const fp = path.join(ROOT, "SQLAA", `american_am2_seed_unit${p2(U)}.sql`);
+  const next = hdr.concat(lines, ["COMMIT;", ""]).join("\n");
+  const prev = existsSync(fp) ? readFileSync(fp, "utf8") : null;
+  if (prev === next) { unchanged.push(U); }
+  else { writeFileSync(fp, next, "utf8"); written.push(U); }
 }
 
 // ---------- 对账 + 自检回显 ----------
@@ -196,4 +203,7 @@ for (const L of lessons) {
 }
 console.log("\n答案自检回显(逐题打散后正确项,核对用):");
 console.log(verify.join("\n"));
-for (const U of units) console.log(`\n写出 SQLAA/american_am2_seed_unit${p2(U)}.sql`);
+console.log("\n========== 本次写文件判定(时间戳只在真变时才刷)==========");
+if (written.length) for (const U of written) console.log(`  ✍️  需跑  american_am2_seed_unit${p2(U)}.sql(内容有变,已重写)`);
+if (unchanged.length) for (const U of unchanged) console.log(`  ⏭️  无需重跑  american_am2_seed_unit${p2(U)}.sql(内容不变,未动文件)`);
+console.log(`小结:本次改写 ${written.length} 个单元 [${written.map(p2).join(", ") || "无"}];未变 ${unchanged.length} 个 [${unchanged.map(p2).join(", ") || "无"}]。`);

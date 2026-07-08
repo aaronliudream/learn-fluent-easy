@@ -1,0 +1,136 @@
+{
+  "id": "am2_l42",
+  "unit_no": 6,
+  "lesson_no": 42,
+  "title_en": "Not very musical",
+  "title_cn": "并非很懂音乐",
+  "grammar_focus": "have 的用法(KS18)主考——have / have got 表'拥有'(own/possess 的替换)、have + 名词代替普通动词(have a look / a good time / a drink / a talk);pick up(拿起/学会/接人)、pick out(挑选)、tell the difference between(辨别)、as soon as(一…就…)(辅考·课文/难点①类)。美语差:散步/洗澡/休息/看一看 美语多用 take a walk / bath / rest / look(见关6对照)",
+  "scene": "在旧德里的集市里走了很长一段路后,我们在一个广场上停下来休息。过了一会儿,注意到广场另一边有个带着两个大筐的耍蛇人,便走过去看。他一见我们,就拿起一根缠满硬币的长管,掀开一个筐。他吹起一支曲子,我们才第一次看到那条蛇。蛇从筐里探出身子,随着管子的摆动而扭动。当耍蛇人突然吹起爵士乐和现代流行乐时,我们非常惊奇——那蛇却还是慢慢地“舞动”着。显然,它分辨不出印度音乐和爵士乐!",
+  "grammar_card": {
+    "title": "have 的用法:拥有 & have + 名词 = 做某事",
+    "intro": "have / have got 可表'拥有'(替换 own / possess);还能 have + 名词来代替一个普通动词:have a look = 看一看,have a good time = 玩得开心,have a drink = 喝一杯。全用本课句子举例。",
+    "table": {
+      "headers": ["普通说法", "have 说法"],
+      "rows": [
+        ["He owns a new house.", "He has (got) a new house.(拥有)"],
+        ["Look at this.", "Have a look at this.(看一看)"],
+        ["I enjoyed myself at the party.", "I had a good time at the party.(玩得开心)"],
+        ["He wanted to drink a glass of water.", "He wanted to have a drink of water.(喝一杯)"],
+        ["We will talk about it tomorrow.", "We will have a talk about it tomorrow.(谈一谈)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "have got = have,都表'拥有',口语里 have got 更常见:He has got a new car.", "mark": "have got = 拥有" },
+      { "rule": "美语差:散步/洗澡/休息/看一看,美语多用 take(take a walk / take a bath / take a rest / take a look);英式多用 have。", "mark": "美语常用 take a walk/bath" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What happened when the snake charmer began to play jazz?",
+    "options": ["The snake kept 'dancing' slowly, unable to tell it from Indian music", "The snake danced much faster", "The snake stopped and hid", "The snake bit the charmer"],
+    "answer_index": 0
+  },
+  "passage": "As we had had a long walk through one of the markets of Old Delhi, we stopped at a square to have a rest. After a time, we noticed a snake charmer with two large baskets at the other side of the square, so we went to have a look at him. As soon as he saw us, he picked up a long pipe which was covered with coins and opened one of the baskets. When he began to play a tune, we had our first glimpse of the snake. It rose out of the basket and began to follow the movements of the pipe. We were very much surprised when the snake charmer suddenly began to play jazz and modern pop songs. The snake, however, continued to 'dance' slowly. It obviously could not tell the difference between Indian music and jazz!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "As we had had a long walk through one of the markets of Old Delhi, we stopped at a square to have a rest.", "text_cn": "在旧德里的一个集市里走了很长一段路后,我们在一个广场上停下来休息。" },
+    { "seq": 2, "speaker": null, "text_en": "After a time, we noticed a snake charmer with two large baskets at the other side of the square, so we went to have a look at him.", "text_cn": "过了一会儿,我们注意到广场另一边有个带着两个大筐的耍蛇人,便走过去看。" },
+    { "seq": 3, "speaker": null, "text_en": "As soon as he saw us, he picked up a long pipe which was covered with coins and opened one of the baskets.", "text_cn": "他一看见我们,就拿起一根缠满硬币的长管,掀开一个筐。" },
+    { "seq": 4, "speaker": null, "text_en": "When he began to play a tune, we had our first glimpse of the snake.", "text_cn": "当他吹起一支曲子时,我们才第一次看到那条蛇。" },
+    { "seq": 5, "speaker": null, "text_en": "It rose out of the basket and began to follow the movements of the pipe.", "text_cn": "蛇从筐里探出身子,随着管子的摆动而扭动。" },
+    { "seq": 6, "speaker": null, "text_en": "We were very much surprised when the snake charmer suddenly began to play jazz and modern pop songs.", "text_cn": "当耍蛇人突然吹起爵士乐和现代流行乐时,我们感到非常惊奇。" },
+    { "seq": 7, "speaker": null, "text_en": "The snake, however, continued to 'dance' slowly.", "text_cn": "然而那蛇却还是慢慢地“舞动”着。" },
+    { "seq": 8, "speaker": null, "text_en": "It obviously could not tell the difference between Indian music and jazz!", "text_cn": "显然,它分辨不出印度音乐和爵士乐!" }
+  ],
+  "words": [
+    { "word": "musical", "ipa": "/ˈmjuːzɪkəl/", "pos": "adj", "meaning_cn": "精通音乐的;音乐的", "example": "Not very musical" },
+    { "word": "market", "ipa": "/ˈmɑːrkɪt/", "pos": "n", "meaning_cn": "市场,集市", "example": "the markets of Old Delhi" },
+    { "word": "pipe", "ipa": "/paɪp/", "pos": "n", "meaning_cn": "(吹奏的)管乐器", "example": "he picked up a long pipe" },
+    { "word": "tune", "ipa": "/tuːn/", "pos": "n", "meaning_cn": "曲调", "example": "he began to play a tune" },
+    { "word": "glimpse", "ipa": "/ɡlɪmps/", "pos": "n", "meaning_cn": "一瞥,一看", "example": "our first glimpse of the snake" },
+    { "word": "snake", "ipa": "/sneɪk/", "pos": "n", "meaning_cn": "蛇", "example": "the snake charmer" },
+    { "word": "movement", "ipa": "/ˈmuːvmənt/", "pos": "n", "meaning_cn": "动作,移动", "example": "the movements of the pipe" },
+    { "word": "continue", "ipa": "/kənˈtɪnjuː/", "pos": "v", "meaning_cn": "继续", "example": "continued to 'dance' slowly" },
+    { "word": "obviously", "ipa": "/ˈɑːbviəsli/", "pos": "adv", "meaning_cn": "显然地", "example": "It obviously could not tell" },
+    { "word": "difference", "ipa": "/ˈdɪfərəns/", "pos": "n", "meaning_cn": "差别,不同", "example": "tell the difference between" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "have / has 表'拥有'(own/possess)" },
+    { "gp": "gp2", "name": "have got = 拥有(口语)" },
+    { "gp": "gp3", "name": "have + 名词(look / good time / drink / talk)" },
+    { "gp": "gp4", "name": "have + 名词(lunch / breakfast / party)" },
+    { "gp": "gp5", "name": "pick up(拿起 / 学会 / 接人·辅考)" },
+    { "gp": "gp6", "name": "pick out(挑选·辅考)" },
+    { "gp": "gp7", "name": "tell the difference between(辨别·辅考)" },
+    { "gp": "gp8", "name": "as soon as(一…就…·辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"He owns a new house. = He ___ a new house.\"(表'拥有')", "stem_cn": "他有一座新房子。", "options": ["has", "is", "does", "gets"] },
+    { "gp": "gp1", "stem": "\"He possesses a lot of money. = He ___ a lot of money.\"(表'拥有')", "stem_cn": "他有很多钱。", "options": ["has", "is", "does", "makes"] },
+    { "gp": "gp2", "stem": "\"He ___ got a new car.\"(表'拥有'的口语说法)", "stem_cn": "他有一辆新车。", "options": ["has", "is", "does", "was"] },
+    { "gp": "gp2", "stem": "\"I ___ got two large baskets.\"(表'拥有'的口语说法)", "stem_cn": "我有两个大筐。", "options": ["have", "am", "do", "was"] },
+    { "gp": "gp3", "stem": "\"We went to ___ a look at the snake charmer.\"(看一看)", "stem_cn": "我们去看一看那个耍蛇人。", "options": ["have", "do", "make", "give"] },
+    { "gp": "gp3", "stem": "\"We ___ a good time at the party.\"(玩得开心)", "stem_cn": "我们在聚会上玩得很开心。", "options": ["had", "did", "made", "gave"] },
+    { "gp": "gp3", "stem": "\"He wanted to ___ a drink of water.\"(喝点水)", "stem_cn": "他想喝点水。", "options": ["have", "do", "make", "give"] },
+    { "gp": "gp3", "stem": "\"Let's ___ a talk about it tomorrow.\"(谈一谈)", "stem_cn": "我们明天谈一谈这件事。", "options": ["have", "do", "make", "say"] },
+    { "gp": "gp4", "stem": "\"We ___ lunch at a small restaurant.\"(吃午饭)", "stem_cn": "我们在一家小餐馆吃了午饭。", "options": ["had", "did", "made", "gave"] },
+    { "gp": "gp4", "stem": "\"They ___ a party last night.\"(办聚会)", "stem_cn": "他们昨晚办了个聚会。", "options": ["had", "did", "made", "gave"] },
+    { "gp": "gp4", "stem": "\"Did you ___ breakfast this morning?\"(吃早饭)", "stem_cn": "你今天早上吃早饭了吗?", "options": ["have", "do", "make", "give"] },
+    { "gp": "gp5", "stem": "\"He ___ a long pipe covered with coins.\"(拿起)", "stem_cn": "他拿起一根缠满硬币的长管。", "options": ["picked up", "picked out", "put up", "took off"] },
+    { "gp": "gp5", "stem": "\"I ___ a lot of English while I was in England.\"(学会,在语言环境里习得)", "stem_cn": "在英国时我学会了不少英语。", "options": ["picked up", "picked out", "put up", "gave up"] },
+    { "gp": "gp6", "stem": "\"There are so many cards; I can't ___ the ones I like.\"(挑选、选出)", "stem_cn": "卡片太多,我挑不出喜欢的。", "options": ["pick out", "pick up", "put out", "take out"] },
+    { "gp": "gp7", "stem": "\"The snake could not ___ between Indian music and jazz.\"(辨别…之间的不同)", "stem_cn": "那蛇分辨不出印度音乐和爵士乐。", "options": ["tell the difference", "make the difference", "take the difference", "do the difference"] },
+    { "gp": "gp7", "stem": "\"Can you ___ between the two colors?\"(辨别…之间的不同)", "stem_cn": "你能分辨这两种颜色吗?", "options": ["tell the difference", "make the difference", "take the difference", "say the difference"] },
+    { "gp": "gp8", "stem": "\"___ he saw us, he opened one of the baskets.\"(一…就…)", "stem_cn": "他一看见我们,就打开了一个筐。", "options": ["As soon as", "As long as", "So that", "Even if"] },
+    { "gp": "gp8", "stem": "\"I'll call you ___ I arrive.\"(一…就…)", "stem_cn": "我一到就给你打电话。", "options": ["as soon as", "as long as", "so that", "even if"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"散步\"更常说:", "options": ["take a walk", "have a walk", "make a walk", "do a walk"] },
+    { "stem": "美语里\"洗澡\"更常说:", "options": ["take a bath", "have a bath", "make a bath", "do a bath"] },
+    { "stem": "musical 的意思是:", "options": ["精通音乐的;音乐的", "安静的", "吵闹的", "古老的"] },
+    { "stem": "glimpse 的意思是:", "options": ["一瞥,一看", "长时间凝视", "声音", "气味"] },
+    { "stem": "obviously 的意思是:", "options": ["显然地", "偶然地", "秘密地", "缓慢地"] },
+    { "stem": "continue 的意思是:", "options": ["继续", "停止", "开始", "结束"] }
+  ],
+  "contrast": [
+    { "us": "take a walk", "uk": "have a walk", "note_cn": "散步;美语 take a walk,英式 have a walk(课文 had a long walk)" },
+    { "us": "take a bath", "uk": "have a bath", "note_cn": "洗澡;美语 take a bath,英式 have a bath" },
+    { "us": "take a rest", "uk": "have a rest", "note_cn": "休息;美语 take a rest / take a break,英式 have a rest(课文 have a rest)" },
+    { "us": "take a look", "uk": "have a look", "note_cn": "看一看;美语 take a look 更常见,英式 have a look(课文 have a look)" }
+  ],
+  "chunks": [
+    { "us": "have / have got", "ipa": "/hæv ɡɑːt/", "example1": "He has got a new house.", "example1_cn": "他有一座新房子。", "example2": "I have got two large baskets.", "example2_cn": "我有两个大筐。" },
+    { "us": "have + 名词 = 做某事", "ipa": "/hæv/", "example1": "We had a good time at the party.", "example1_cn": "我们在聚会上玩得很开心。", "example2": "He wanted to have a drink of water.", "example2_cn": "他想喝点水。" },
+    { "us": "pick up", "ipa": "/pɪk ʌp/", "example1": "He picked up a long pipe.", "example1_cn": "他拿起一根长管。", "example2": "I picked up a lot of English in England.", "example2_cn": "我在英国学了不少英语。" },
+    { "us": "tell the difference between", "ipa": "/tel ðə ˈdɪfərəns/", "example1": "It could not tell the difference between Indian music and jazz.", "example1_cn": "它分辨不出印度音乐和爵士乐。", "example2": "Can you tell the difference between them?", "example2_cn": "你能分辨它们吗?" }
+  ],
+  "stage7_cloze": {
+    "context": "In a market of Old Delhi, we saw a snake charmer. We went to ___1___ a look at him. He ___2___ got two large baskets and a long pipe. We ___3___ a good time watching the snake. But it could not ___4___ the difference between Indian music and jazz.",
+    "blanks": [
+      { "blank_no": 1, "options": ["have", "do", "make", "give"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["has", "is", "does", "was"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["had", "did", "made", "took"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["tell", "make", "take", "do"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did the travelers stop to rest?", "options": ["At a square in a market of Old Delhi", "On a train", "In a music hall", "At a hotel"] },
+    { "stem": "What did the snake charmer do when he saw the travelers?", "options": ["He picked up a pipe and opened a basket", "He ran away", "He asked for money first", "He put the snake back"] },
+    { "stem": "What surprised the travelers?", "options": ["The charmer suddenly played jazz and pop songs", "The snake bit someone", "The basket was empty", "The pipe was broken"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我们停下来看一看\"(用 have + 名词表'看一看'):", "options": ["We stopped to have a look.", "We stopped to have a see.", "We stopped to make a look.", "We stopped to do a look."] },
+    { "stem": "你想说\"他有一辆新车\"(口语'拥有'用 have got):", "options": ["He has got a new car.", "He has get a new car.", "He is got a new car.", "He have got a new car."] },
+    { "stem": "你想说\"它分辨不出两者的不同\"(辨别用 tell the difference):", "options": ["It could not tell the difference between them.", "It could not make the difference between them.", "It could not say the difference between them.", "It could not take the difference between them."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "glimpse 的意思是:", "options": ["一瞥,一看", "长久凝视", "气味", "声音"] },
+    { "kind": "vocab", "stem": "obviously 的意思是:", "options": ["显然地", "偶然地", "缓慢地", "秘密地"] },
+    { "kind": "grammar", "stem": "\"We went to ___ a look at the snake charmer.\"(看一看,填代替动词的那个词)", "stem_cn": "我们去看一看那个耍蛇人。", "options": ["have", "do", "make", "give"] },
+    { "kind": "grammar", "stem": "\"He ___ got two large baskets.\"(口语'拥有')", "stem_cn": "他有两个大筐。", "options": ["has", "is", "does", "was"] },
+    { "kind": "scenario", "stem": "\"It obviously could not tell the difference between Indian music and jazz.\" 这句话的意思是:", "options": ["显然,它分辨不出印度音乐和爵士乐。", "它显然更喜欢爵士乐。", "它会随着音乐跳舞。", "它听不见任何音乐。"] },
+    { "kind": "scenario", "stem": "\"As soon as he saw us, he opened one of the baskets.\" 这句话的意思是:", "options": ["他一看见我们,就打开了一个筐。", "他看见我们后很久才打开筐。", "他没看见我们就走了。", "他请我们打开筐。"] },
+    { "kind": "reading", "stem": "Why did the travelers go over to the snake charmer?", "options": ["They noticed him and wanted to have a look", "They wanted to buy a snake", "He called them over", "They were lost"], "passage": true },
+    { "kind": "reading", "stem": "How did the snake react to the jazz music?", "options": ["It continued to 'dance' slowly, as before", "It stopped dancing at once", "It danced much faster", "It went back into the basket"], "passage": true },
+    { "kind": "listening", "stem": "What did the snake charmer play at first?", "options": ["A tune on his pipe", "Jazz music", "A pop song", "A drum"], "audio": true },
+    { "kind": "listening", "stem": "What does the title 'Not very musical' refer to?", "options": ["The snake could not really tell one kind of music from another", "The charmer sang badly", "The pipe was out of tune", "The travelers hated music"], "audio": true }
+  ]
+}

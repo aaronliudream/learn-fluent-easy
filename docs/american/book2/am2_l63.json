@@ -1,0 +1,131 @@
+{
+  "id": "am2_l63",
+  "unit_no": 8,
+  "lesson_no": 63,
+  "title_en": "She was not amused",
+  "title_cn": "她并不觉得好笑",
+  "grammar_focus": "KS15+KS39 间接引语(陈述句 said that + 时态后移、祈使句 ask/tell sb (not) to do、insist/suggest that…should、疑问句转述)(教材 L63 Key structures)主考;间接疑问句用 if/whether/wh- + 陈述语序(I wonder if/when/why…)+ 间接引语中人称与时间地点指示词的相应变化(辅考)",
+  "scene": "杰里米·汉普登交际甚广,是各种聚会上深受大家欢迎的人。人人都钦佩他那绝妙的幽默感——人人,就是说,除他6岁的女儿珍妮之外的每一个人。最近,杰里米的一个最亲密的朋友请他在一个婚礼上致祝词。这正是杰里米喜欢做的事情。他认真准备了讲稿,带着珍妮一道去参加了婚礼。他的祝词里面加进了大量逗人的故事,自然大获成功。他刚一讲完,珍妮就对他说要回家。这不免使杰里米有点扫兴,但他还是按照女儿的要求做了。在回家的路上,他问珍妮是否喜欢他的祝词。使他吃惊的是,她说她不喜欢。杰里米问她为何不喜欢,她说她不愿意看到那么多的人嘲笑他!",
+  "grammar_card": {
+    "title": "间接引语(转述别人的话)",
+    "intro": "KS15+KS39 把直接引语转成间接引语:①陈述句用 said (that) + 从句,动词时态后移(want→wanted、have→had);②祈使句/请求用 ask/tell sb (not) to do(‘Open the door’→asked me to open it;‘Don’t shout’→told them not to shout);③insist/suggest 后用 that…(should) do;④疑问句转述用陈述语序:一般疑问用 if/whether,特殊疑问保留 wh-(Did you…?→asked if I had…;Why…?→asked why I had…)。",
+    "table": {
+      "headers": ["直接引语", "间接引语"],
+      "rows": [
+        ["‘Open the door,’ she said.", "She asked me to open the door."],
+        ["‘Don’t shout,’ she said.", "She told them not to shout."],
+        ["‘Stay to lunch,’ he insisted.", "He insisted that I should stay to lunch."],
+        ["‘Did you enjoy it?’ he asked.", "He asked if I had enjoyed it."],
+        ["‘Why did you go?’ he asked.", "He asked why I had gone."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "间接疑问句一律用陈述语序(主语在动词前),不用疑问语序、不用助动词 do/did:Where is he? → I wonder where he is;Will it rain? → I wonder if it will rain。", "mark": "间接疑问陈述语序" },
+      { "rule": "转述时人称、时间、地点指示词相应变化:I→he/she、you→me、now→then、today→that day、here→there、this→that、come→go。", "mark": "指示词变化" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did Jenny want to leave the wedding reception?",
+    "options": ["She did not like to see so many people laughing at her father", "She was hungry", "She was bored by the music", "She had to do her homework"],
+    "answer_index": 0
+  },
+  "passage": "Jeremy Hampden has a large circle of friends and is very popular at parties. Everybody admires him for his great sense of humor — everybody, that is, except his six-year-old daughter, Jenny. Recently, one of Jeremy's closest friends asked him to make a speech at a wedding reception. This is the sort of thing that Jeremy loves. He prepared the speech carefully and went to the wedding with Jenny. He had included a large number of funny stories in the speech and, of course, it was a great success. As soon as he had finished, Jenny told him she wanted to go home. Jeremy was a little disappointed by this but he did as his daughter asked. On the way home, he asked Jenny if she had enjoyed the speech. To his surprise, she said she hadn't. Jeremy asked her why this was so and she told him that she did not like to see so many people laughing at him!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Jeremy Hampden has a large circle of friends and is very popular at parties. Everybody admires him for his great sense of humor — everybody, that is, except his six-year-old daughter, Jenny.", "text_cn": "杰里米·汉普登交际甚广,是各种聚会上深受大家欢迎的人。人人都钦佩他那绝妙的幽默感——人人,就是说,除他6岁的女儿珍妮之外的每一个人。" },
+    { "seq": 2, "speaker": null, "text_en": "Recently, one of Jeremy's closest friends asked him to make a speech at a wedding reception. This is the sort of thing that Jeremy loves. He prepared the speech carefully and went to the wedding with Jenny.", "text_cn": "最近,杰里米的一个最亲密的朋友请他在一个婚礼上致祝词。这正是杰里米喜欢做的事情。他认真准备了讲稿,带着珍妮一道去参加了婚礼。" },
+    { "seq": 3, "speaker": null, "text_en": "He had included a large number of funny stories in the speech and, of course, it was a great success. As soon as he had finished, Jenny told him she wanted to go home.", "text_cn": "他的祝词里面加进了大量逗人的故事,自然大获成功。他刚一讲完,珍妮就对他说要回家。" },
+    { "seq": 4, "speaker": null, "text_en": "Jeremy was a little disappointed by this but he did as his daughter asked. On the way home, he asked Jenny if she had enjoyed the speech. To his surprise, she said she hadn't.", "text_cn": "这不免使杰里米有点扫兴,但他还是按照女儿的要求做了。在回家的路上,他问珍妮是否喜欢他的祝词。使他吃惊的是,她说她不喜欢。" },
+    { "seq": 5, "speaker": null, "text_en": "Jeremy asked her why this was so and she told him that she did not like to see so many people laughing at him!", "text_cn": "杰里米问她为何不喜欢,她说她不愿意看到那么多的人嘲笑他!" }
+  ],
+  "words": [
+    { "word": "circle", "ipa": "/ˈsɜːrkl/", "pos": "n", "meaning_cn": "圈子,一圈人", "example": "a large circle of friends" },
+    { "word": "admire", "ipa": "/ədˈmaɪr/", "pos": "v", "meaning_cn": "赞美,钦佩", "example": "Everybody admires him." },
+    { "word": "close", "ipa": "/kloʊs/", "pos": "adj", "meaning_cn": "亲密的", "example": "one of Jeremy's closest friends" },
+    { "word": "wedding", "ipa": "/ˈwedɪŋ/", "pos": "n", "meaning_cn": "婚礼", "example": "a wedding reception" },
+    { "word": "reception", "ipa": "/rɪˈsepʃən/", "pos": "n", "meaning_cn": "招待会,接待", "example": "make a speech at a wedding reception" },
+    { "word": "sort", "ipa": "/sɔːrt/", "pos": "n", "meaning_cn": "种类", "example": "the sort of thing that Jeremy loves" },
+    { "word": "humor", "ipa": "/ˈhjuːmər/", "pos": "n", "meaning_cn": "幽默,幽默感", "example": "his great sense of humor" },
+    { "word": "speech", "ipa": "/spiːtʃ/", "pos": "n", "meaning_cn": "演讲,致词", "example": "make a speech" },
+    { "word": "popular", "ipa": "/ˈpɑːpjələr/", "pos": "adj", "meaning_cn": "受欢迎的", "example": "very popular at parties" },
+    { "word": "amuse", "ipa": "/əˈmjuːz/", "pos": "v", "meaning_cn": "使发笑,使觉得好笑", "example": "She was not amused." }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "祈使句/请求转间接(ask/tell sb (not) to do)" },
+    { "gp": "gp2", "name": "陈述句转间接(said that + 时态后移)" },
+    { "gp": "gp3", "name": "insist / suggest that … should" },
+    { "gp": "gp4", "name": "间接一般疑问(if/whether + 陈述语序)" },
+    { "gp": "gp5", "name": "间接特殊疑问(wh- + 陈述语序)" },
+    { "gp": "gp6", "name": "间接引语中人称/时间地点指示词的变化" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "转述别人的请求 'Open the door for me, please':She ___ me to open the door for her.(请求某人做事,间接引语)", "stem_cn": "转述“请给我开门”这个请求。", "options": ["asked", "said", "suggested", "insisted"] },
+    { "gp": "gp1", "stem": "转述 'Don't make so much noise':She ___ the children not to make so much noise.(告诉某人别做某事,间接引语)", "stem_cn": "转述“别弄出这么大的噪音”。", "options": ["told", "said", "spoke", "talked"] },
+    { "gp": "gp1", "stem": "转述 'Come with me':He asked me ___ with him.(间接引语,注意说话人视角)", "stem_cn": "转述“跟我来”。", "options": ["to go", "to come", "going", "go"] },
+    { "gp": "gp1", "stem": "转述 'Please wait here':He asked me ___ there.(请求某人做事,间接引语)", "stem_cn": "转述“请在这儿等”。", "options": ["to wait", "wait", "waiting", "waited"] },
+    { "gp": "gp2", "stem": "转述 Jenny 说的 'I want to go home':Jenny told him she ___ to go home.(间接引语,时态相应变化)", "stem_cn": "转述珍妮说“我想回家”。", "options": ["wanted", "wants", "want", "has wanted"] },
+    { "gp": "gp2", "stem": "转述 'I don't like it':She said she ___ like it.(间接引语,时态相应变化)", "stem_cn": "转述“我不喜欢”。", "options": ["didn't", "doesn't", "hadn't", "won't"] },
+    { "gp": "gp2", "stem": "转述 'I have finished':He said he ___ finished.(间接引语,时态相应变化)", "stem_cn": "转述“我讲完了”。", "options": ["had", "has", "have", "was"] },
+    { "gp": "gp3", "stem": "转述 'Stay to lunch',他坚持:He insisted that I ___ stay to lunch.(insist 后的从句)", "stem_cn": "转述“留下来吃午饭”,他坚持。", "options": ["should", "will", "must have", "would have"] },
+    { "gp": "gp3", "stem": "转述 'Come with me',他建议:He suggested that I ___ go with him.(suggest 后的从句)", "stem_cn": "转述“跟我来”,他建议。", "options": ["should", "will", "am", "would"] },
+    { "gp": "gp4", "stem": "转述问句 'Did you enjoy the speech?':He asked her ___ she had enjoyed the speech.(能用 yes/no 回答的问句转间接)", "stem_cn": "转述“你喜欢这祝词吗?”", "options": ["if", "that", "did", "what"] },
+    { "gp": "gp4", "stem": "转述问句 'Will it rain tomorrow?':I wonder ___ it will rain tomorrow.(能用 yes/no 回答的问句转间接)", "stem_cn": "转述“明天会下雨吗?”", "options": ["if", "that", "will", "does"] },
+    { "gp": "gp4", "stem": "转述问句 'Can he wait a few minutes?':I wonder if he ___ wait a few minutes.(间接问句用陈述语序)", "stem_cn": "转述“他能再等几分钟吗?”", "options": ["can", "can he", "could he", "does"] },
+    { "gp": "gp5", "stem": "转述问句 'Why didn't you enjoy it?':He asked her why she ___ enjoyed it.(带疑问词的问句转间接,时态相应变化)", "stem_cn": "转述“你为什么不喜欢?”", "options": ["hadn't", "didn't", "doesn't", "hasn't"] },
+    { "gp": "gp5", "stem": "转述问句 'When will he arrive?':I wonder when he ___.(带疑问词的问句转间接,陈述语序)", "stem_cn": "转述“他什么时候到?”", "options": ["will arrive", "will he arrive", "does arrive", "arrive will"] },
+    { "gp": "gp5", "stem": "转述问句 'Where does he live?':I wonder where he ___.(带疑问词的问句转间接,陈述语序)", "stem_cn": "转述“他住哪儿?”", "options": ["lives", "does he live", "does live", "live he"] },
+    { "gp": "gp6", "stem": "转述 'I saw you yesterday'(说话对象是我):He said he had seen ___ the day before.(间接引语人称相应变化)", "stem_cn": "转述“我昨天见过你”。", "options": ["me", "you", "him", "us"] },
+    { "gp": "gp6", "stem": "转述 'I'll do it now':She said she would do it ___.(间接引语时间词相应变化)", "stem_cn": "转述“我现在就做”。", "options": ["then", "now", "today", "soon"] },
+    { "gp": "gp6", "stem": "转述 'Come here':He asked me to go ___.(间接引语地点词相应变化)", "stem_cn": "转述“到这儿来”。", "options": ["there", "here", "home", "back"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"幽默、幽默感\"拼作:", "options": ["humor", "humour", "humer", "hymor"] },
+    { "stem": "美语里\"最喜欢的、特别喜爱的\"拼作:", "options": ["favorite", "favourite", "favrite", "favorit"] },
+    { "stem": "admire 的意思是:", "options": ["赞美,钦佩", "讨厌", "忽视", "怀疑"] },
+    { "stem": "wedding 的意思是:", "options": ["婚礼", "葬礼", "生日", "毕业典礼"] },
+    { "stem": "reception 的意思是:", "options": ["招待会,接待", "拒绝", "演讲", "比赛"] },
+    { "stem": "sort 的意思是:", "options": ["种类", "数量", "价格", "顺序"] }
+  ],
+  "contrast": [
+    { "us": "humor", "uk": "humour", "note_cn": "幽默;美语 humor,英式 humour(-or vs -our)" },
+    { "us": "favorite", "uk": "favourite", "note_cn": "最喜欢的;美语 favorite,英式 favourite" },
+    { "us": "color", "uk": "colour", "note_cn": "颜色;美语 color,英式 colour" },
+    { "us": "neighbor", "uk": "neighbour", "note_cn": "邻居;美语 neighbor,英式 neighbour" }
+  ],
+  "chunks": [
+    { "us": "a sense of humor", "ipa": "/ə sens əv ˈhjuːmər/", "example1": "He has a great sense of humor.", "example1_cn": "他很有幽默感。", "example2": "She admired his sense of humor.", "example2_cn": "她欣赏他的幽默感。" },
+    { "us": "make a speech", "ipa": "/meɪk ə spiːtʃ/", "example1": "He was asked to make a speech.", "example1_cn": "有人请他致辞。", "example2": "I have to make a speech tomorrow.", "example2_cn": "我明天得发表讲话。" },
+    { "us": "to one's surprise", "ipa": "/tə wʌnz sərˈpraɪz/", "example1": "To his surprise, she said she hadn't.", "example1_cn": "使他吃惊的是,她说她不喜欢。", "example2": "To my surprise, he agreed.", "example2_cn": "让我吃惊的是,他同意了。" },
+    { "us": "a circle of friends", "ipa": "/ə ˈsɜːrkl əv frendz/", "example1": "He has a large circle of friends.", "example1_cn": "他交际很广。", "example2": "She joined our circle of friends.", "example2_cn": "她加入了我们的朋友圈。" }
+  ],
+  "stage7_cloze": {
+    "context": "As soon as he had finished, Jenny told him she ___1___ to go home. On the way home, he asked Jenny ___2___ she had enjoyed the speech. To his surprise, she said she ___3___. Jeremy asked her why this ___4___ so.",
+    "blanks": [
+      { "blank_no": 1, "options": ["wanted", "wants", "want", "has wanted"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["if", "that", "did", "what"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["hadn't", "didn't", "doesn't", "isn't"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["was", "is", "has been", "will be"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why is Jeremy Hampden very popular at parties?", "options": ["Because of his great sense of humor", "Because he is very rich", "Because he sings well", "Because he always tells the truth"] },
+    { "stem": "What did one of Jeremy's closest friends ask him to do?", "options": ["Make a speech at a wedding reception", "Sing a song at a party", "Drive them home", "Write a funny book"] },
+    { "stem": "Why did Jenny want to go home after the speech?", "options": ["She did not like to see so many people laughing at her father", "She was tired", "She was hungry", "She had homework to do"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "把 \"'Open the door,' she said to me.\" 变成间接引语(请求做某事用 ask sb to do):", "options": ["She asked me to open the door.", "She said me to open the door.", "She asked me open the door.", "She asked to me open the door."] },
+    { "stem": "把 \"'Did you enjoy it?' he asked.\" 变成间接引语(一般疑问用 if + 陈述语序):", "options": ["He asked if I had enjoyed it.", "He asked did I enjoy it.", "He asked that I had enjoyed it.", "He asked if had I enjoyed it."] },
+    { "stem": "把 \"'Where is he?'\" 变成间接问句(陈述语序):", "options": ["I wonder where he is.", "I wonder where is he.", "I wonder where he be.", "I wonder is where he."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "admire 的意思是:", "options": ["赞美,钦佩", "讨厌", "忽视", "怀疑"] },
+    { "kind": "vocab", "stem": "reception 的意思是:", "options": ["招待会,接待", "拒绝", "演讲", "比赛"] },
+    { "kind": "grammar", "stem": "转述 Jenny 说的 'I want to go home':Jenny told him she ___ to go home.(间接引语,时态相应变化)", "stem_cn": "转述“我想回家”。", "options": ["wanted", "wants", "want", "has wanted"] },
+    { "kind": "grammar", "stem": "转述问句 'Did you enjoy it?':He asked her ___ she had enjoyed it.(能用 yes/no 回答的问句转间接)", "stem_cn": "转述“你喜欢吗?”", "options": ["if", "that", "did", "what"] },
+    { "kind": "scenario", "stem": "把直接引语里的\"请求\"转成间接引语时,ask sb 后面接:", "options": ["to + 动词原形", "that 从句", "动词-ing", "疑问语序"] },
+    { "kind": "scenario", "stem": "\"to his surprise\" 的意思是:", "options": ["使他吃惊的是", "对他很熟悉", "给他一个惊喜", "令他失望"] },
+    { "kind": "reading", "stem": "Why was Jeremy a little disappointed after his speech?", "options": ["As soon as he had finished, Jenny told him she wanted to go home", "No one laughed at his stories", "He forgot part of his speech", "The food at the reception was bad"], "passage": true },
+    { "kind": "reading", "stem": "Why hadn't Jenny enjoyed the speech?", "options": ["She did not like to see so many people laughing at her father", "It was far too long", "She could not hear it", "She had heard it before"], "passage": true },
+    { "kind": "listening", "stem": "What did Jeremy ask Jenny on the way home?", "options": ["Whether she had enjoyed the speech", "If she was hungry", "Where she wanted to go", "Who she liked best"], "audio": true },
+    { "kind": "listening", "stem": "How did Jenny feel about the speech?", "options": ["She was not amused and said she hadn't enjoyed it", "She loved it", "She fell asleep during it", "She laughed the whole time"], "audio": true }
+  ]
+}

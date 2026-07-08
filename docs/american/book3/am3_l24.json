@@ -1,0 +1,133 @@
+{
+  "id": "am3_l24",
+  "unit_no": 5,
+  "lesson_no": 24,
+  "title_en": "A Skeleton in the Closet",
+  "title_cn": "家丑",
+  "grammar_focus": "频率副词(often/always/rarely/never)的位置、few / a few / little / a little 的区别、形容词 + 固定介词(proud of / afraid of / aware of / familiar with)、使役动词 make / let + 某人/某物 + 动词原形、tell / want / allow sb to do 与直接引语的引号用法(原创承载 NCE3 L24 考点·轻净化:把小说例子里'毒死五任丈夫'改成'年轻时偷偷跑去马戏团跳舞'的无害家丑·侦探小说家客房壁橱里挂着他学医时的骨架 Sebastian)",
+  "scene": "我们常在小说里读到:一个看似体面的人或家庭,藏着一个瞒了外人多年的可怕秘密。英语里有个生动的说法来形容这种事——这秘密叫“壁橱里的骷髅”(家丑)。到了故事某个戏剧性的时刻,秘密曝光,名声就此毁掉。读者读到最后一页会毛骨悚然:原来那位一向和蔼可亲的女主人公——一位人人称道的老太太——年轻时竟偷偷跑去马戏团跳过舞。这种事发生在小说里当然无妨。多多少少,我们都有些不愿让密友知道的秘密,可真有“家丑”骨架的人却极少。我认识的唯一一个,是乔治·卡尔顿,而他还为此得意得很。乔治年轻时学医,后来没当医生,却成了写侦探小说的高手。有一次我在他家过了个终生难忘的周末。乔治把我领到客房,说这屋子很少用,让我把东西取出来就下楼吃饭。我把衬衫叠进抽屉后,想把一套西装挂进壁橱。一开门,我僵住了,吓呆了:一具骷髅就吊在眼前!门一动,它晃了起来,仿佛要朝我扑过来。我扔下西装,冲下楼去。乔治却毫不同情,笑着说,像在谈一位老朋友:“哦,那个啊。那是塞巴斯蒂安。你忘了我当年学过医啦。”",
+  "grammar_card": {
+    "title": "频率副词位置 / few·little / 形容词+介词 / make·let sb do",
+    "intro": "①频率副词(often, always, usually, rarely, never)一般放在实义动词前、be 动词或第一个助动词之后:We often read… / She had always been kind.②few / a few 修饰可数名词(few = 很少、几乎没有;a few = 一些);little / a little 修饰不可数名词。③许多形容词有固定介词:proud of、afraid of、aware of、familiar with、different from。④使役动词 make / let + 某人/某物 + 动词原形(不带 to):made it sway / let me go。⑤tell / want / allow sb to do 用带 to 的不定式;直接引语要用引号。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["频率副词位置", "实义动词前 / be 后", "We often read… / had always been…"],
+        ["few / a few · little / a little", "很少/一些(可数·不可数)", "few of us / a little light"],
+        ["形容词 + 介词", "固定搭配", "proud of / afraid of / familiar with"],
+        ["make/let sb do · tell sb to do", "使…做 / 让…做 / 叫…做", "made it sway / told me to unpack"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "make / let 后面接动词原形(不带 to):made it sway(✓)made it to sway(✗);但 tell / want / allow sb 后面用带 to 的不定式:told me to go。", "mark": "make sb do / tell sb to do" },
+      { "rule": "few / little 表“几乎没有”(偏否定);a few / a little 表“一些”(偏肯定)。可数用 few / a few,不可数用 little / a little。", "mark": "few / a few / little / a little" },
+      { "rule": "美式习语与用词:a skeleton in the closet(英式 cupboard);closet 壁橱(英式 cupboard/wardrobe)。本课已按美语写。", "mark": "closet / skeleton in the closet" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Who was Sebastian?",
+    "options": ["George's old medical-school skeleton", "George's brother", "A famous detective", "The writer's friend"],
+    "answer_index": 0
+  },
+  "passage": "We often read in novels how a seemingly respectable person or family hides some terrible secret that has been kept from strangers for years. English has a vivid phrase for this kind of thing: the secret is called 'a skeleton in the closet.' At some dramatic moment in the story, the secret comes out and a reputation is ruined. The reader's hair stands on end when he learns, on the final page, that the heroine, a dear old lady who had always been so kind to everyone, had, in her youth, secretly run away to dance in a traveling circus. It is all very well for such things to happen in fiction. To varying degrees, we all keep secrets we would rather our closest friends never learn, but few of us have an actual skeleton in the closet. The only person I know who does is George Carlton, and he is very proud of the fact. George studied medicine when he was young. Instead of becoming a doctor, however, he became a successful writer of detective stories. I once spent a weekend at his house that I shall never forget. George showed me to the guestroom, which, he said, was rarely used, and told me to unpack and come down to dinner. After I had stacked my shirts in a drawer, I went to hang a suit in the closet. I opened the door and froze, petrified: a skeleton was dangling right in front of me! The movement of the door made it sway, as if it were about to leap out at me. I dropped my suit and dashed downstairs. George was not at all sympathetic. 'Oh, that,' he said with a smile, as if speaking of an old friend. 'That's Sebastian. You forget I was once a medical student.'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "We often read in novels how a seemingly respectable person or family hides some terrible secret that has been kept from strangers for years. English has a vivid phrase for this kind of thing: the secret is called 'a skeleton in the closet.'", "text_cn": "我们常在小说里读到:一个看似体面的人或家庭,藏着一个瞒了外人多年的可怕秘密。英语里有个生动的说法来形容这种事——这秘密叫“壁橱里的骷髅”(家丑)。" },
+    { "seq": 2, "speaker": null, "text_en": "At some dramatic moment in the story, the secret comes out and a reputation is ruined. The reader's hair stands on end when he learns, on the final page, that the heroine, a dear old lady who had always been so kind to everyone, had, in her youth, secretly run away to dance in a traveling circus.", "text_cn": "到了故事某个戏剧性的时刻,秘密曝光,名声就此毁掉。读者读到最后一页会毛骨悚然:原来那位一向和蔼可亲的女主人公——一位人人称道的老太太——年轻时竟偷偷跑去马戏团跳过舞。" },
+    { "seq": 3, "speaker": null, "text_en": "It is all very well for such things to happen in fiction. To varying degrees, we all keep secrets we would rather our closest friends never learn, but few of us have an actual skeleton in the closet. The only person I know who does is George Carlton, and he is very proud of the fact.", "text_cn": "这种事发生在小说里当然无妨。多多少少,我们都有些不愿让密友知道的秘密,可真有“家丑”骨架的人却极少。我认识的唯一一个,是乔治·卡尔顿,而他还为此得意得很。" },
+    { "seq": 4, "speaker": null, "text_en": "George studied medicine when he was young. Instead of becoming a doctor, however, he became a successful writer of detective stories. I once spent a weekend at his house that I shall never forget. George showed me to the guestroom, which, he said, was rarely used, and told me to unpack and come down to dinner.", "text_cn": "乔治年轻时学医,后来没当医生,却成了写侦探小说的高手。有一次我在他家过了个终生难忘的周末。乔治把我领到客房,说这屋子很少用,让我把东西取出来就下楼吃饭。" },
+    { "seq": 5, "speaker": null, "text_en": "After I had stacked my shirts in a drawer, I went to hang a suit in the closet. I opened the door and froze, petrified: a skeleton was dangling right in front of me! The movement of the door made it sway, as if it were about to leap out at me. I dropped my suit and dashed downstairs. George was not at all sympathetic. 'Oh, that,' he said with a smile. 'That's Sebastian. You forget I was once a medical student.'", "text_cn": "我把衬衫叠进抽屉后,想把一套西装挂进壁橱。一开门,我僵住了,吓呆了:一具骷髅就吊在眼前!门一动,它晃了起来,仿佛要朝我扑过来。我扔下西装,冲下楼去。乔治却毫不同情,笑着说:“哦,那个啊。那是塞巴斯蒂安。你忘了我当年学过医啦。”" }
+  ],
+  "words": [
+    { "word": "skeleton", "ipa": "/ˈskelɪtn/", "pos": "n", "meaning_cn": "骷髅,骨架", "example": "a skeleton in the closet" },
+    { "word": "respectable", "ipa": "/rɪˈspektəbl/", "pos": "adj", "meaning_cn": "体面的,雅观的", "example": "a respectable family" },
+    { "word": "conceal", "ipa": "/kənˈsiːl/", "pos": "v", "meaning_cn": "隐藏,隐瞒", "example": "a secret concealed for years" },
+    { "word": "vivid", "ipa": "/ˈvɪvɪd/", "pos": "adj", "meaning_cn": "生动的", "example": "a vivid phrase" },
+    { "word": "dramatic", "ipa": "/drəˈmætɪk/", "pos": "adj", "meaning_cn": "戏剧性的,扣人心弦的", "example": "a dramatic moment" },
+    { "word": "ruin", "ipa": "/ˈruːɪn/", "pos": "v", "meaning_cn": "毁坏,毁掉", "example": "a reputation is ruined" },
+    { "word": "heroine", "ipa": "/ˈheroʊɪn/", "pos": "n", "meaning_cn": "女主人公", "example": "the heroine of the novel" },
+    { "word": "petrify", "ipa": "/ˈpetrɪfaɪ/", "pos": "v", "meaning_cn": "使惊呆", "example": "I stood there petrified" },
+    { "word": "dangle", "ipa": "/ˈdæŋɡl/", "pos": "v", "meaning_cn": "悬挂,晃荡", "example": "a skeleton was dangling" },
+    { "word": "sway", "ipa": "/sweɪ/", "pos": "v", "meaning_cn": "摇摆", "example": "made it sway" },
+    { "word": "unsympathetic", "ipa": "/ˌʌnsɪmpəˈθetɪk/", "pos": "adj", "meaning_cn": "不表同情的", "example": "George was unsympathetic" },
+    { "word": "guestroom", "ipa": "/ˈɡestruːm/", "pos": "n", "meaning_cn": "客房", "example": "showed me to the guestroom" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "频率副词位置(often/always/rarely)" },
+    { "gp": "gp2", "name": "few / a few / little / a little" },
+    { "gp": "gp3", "name": "形容词 + 介词(proud of / afraid of)" },
+    { "gp": "gp4", "name": "make / let sb do(使役,接原形)" },
+    { "gp": "gp5", "name": "tell/allow sb to do / 直接引语引号" },
+    { "gp": "gp6", "name": "词汇辨析(skeleton/conceal/petrify)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "下面哪一句 'always' 的位置正确?", "stem_cn": "频率副词一般放在 be 动词或第一个助动词之后。", "options": ["She had always been kind to everyone.", "She had been always kind to everyone.", "Always she had been kind to everyone she.", "She had kind always been to everyone."] },
+    { "gp": "gp1", "stem": "下面哪一句 'often' 的位置正确?", "stem_cn": "频率副词一般放在实义动词之前。", "options": ["We often read about family secrets.", "We read about family often secrets.", "We often about read family secrets.", "Often read we about family secrets."] },
+    { "gp": "gp1", "stem": "下面哪一句 'rarely' 的位置正确?", "stem_cn": "频率副词一般放在 be 动词之后。", "options": ["The guestroom was rarely used.", "The guestroom used rarely was.", "Rarely the guestroom used was.", "The rarely guestroom was used."] },
+    { "gp": "gp2", "stem": "\"___ of us have a real skeleton in the closet.\"(表“很少,几乎没有”,接可数)", "stem_cn": "我们当中很少有人真有“家丑”。", "options": ["Few", "A few", "Little", "A little"] },
+    { "gp": "gp2", "stem": "\"George gave me ___ good tips about writing.\"(表“一些”,接可数)", "stem_cn": "乔治给了我一些关于写作的好建议。", "options": ["a few", "few", "little", "a little"] },
+    { "gp": "gp2", "stem": "\"There was ___ light in the guestroom, so I could hardly see.\"(表“几乎没有”,接不可数)", "stem_cn": "客房里几乎没有光,我几乎看不见。", "options": ["little", "a little", "few", "a few"] },
+    { "gp": "gp3", "stem": "\"George is very proud ___ his strange skeleton.\"(proud 后接哪个介词)", "stem_cn": "乔治为他那具怪骷髅感到很自豪。", "options": ["of", "with", "for", "to"] },
+    { "gp": "gp3", "stem": "\"At first I was afraid ___ the thing in the closet.\"(afraid 后接哪个介词)", "stem_cn": "起初我很怕壁橱里那东西。", "options": ["of", "with", "from", "to"] },
+    { "gp": "gp3", "stem": "\"I was not familiar ___ the layout of his house.\"(familiar 后接哪个介词)", "stem_cn": "我不熟悉他家的布局。", "options": ["with", "of", "to", "for"] },
+    { "gp": "gp4", "stem": "\"The movement of the door made the skeleton ___.\"(make sb/sth + 动词原形)", "stem_cn": "门一动,骷髅就晃了起来。", "options": ["sway", "to sway", "swaying", "swayed"] },
+    { "gp": "gp4", "stem": "\"George would not let me ___ before I heard the whole story.\"(let sb + 动词原形)", "stem_cn": "没听完整个故事,乔治不让我走。", "options": ["leave", "to leave", "leaving", "left"] },
+    { "gp": "gp4", "stem": "\"The scare made me ___ downstairs at once.\"(make sb + 动词原形)", "stem_cn": "一惊之下我立刻冲下了楼。", "options": ["dash", "to dash", "dashing", "dashed"] },
+    { "gp": "gp5", "stem": "\"George told me ___ my things and come down.\"(tell sb + 不定式)", "stem_cn": "乔治叫我把东西取出来,然后下楼。", "options": ["to unpack", "unpack", "unpacking", "unpacked"] },
+    { "gp": "gp5", "stem": "\"He did not allow the maid ___ the guestroom often.\"(allow sb + 不定式)", "stem_cn": "他不让女佣常打扫客房。", "options": ["to clean", "clean", "cleaning", "cleaned"] },
+    { "gp": "gp5", "stem": "下面哪一句直接引语的引号用得正确?", "stem_cn": "直接引语要用引号把说的话括起来。", "options": ["'That's Sebastian,' he said.", "That's Sebastian, 'he said.'", "'That's Sebastian he said.'", "That's 'Sebastian,' he said."] },
+    { "gp": "gp6", "stem": "\"The bony frame inside a body is a ___.\"(“骷髅,骨架”用哪个词)", "stem_cn": "身体里的骨头架子。", "options": ["skeleton", "muscle", "shadow", "statue"] },
+    { "gp": "gp6", "stem": "\"To hide something so no one finds it is to ___ it.\"(“隐藏”用哪个词)", "stem_cn": "把某物藏起来不让人发现。", "options": ["conceal", "reveal", "announce", "sell"] },
+    { "gp": "gp6", "stem": "\"To be so shocked that you cannot move is to be ___.\"(“惊呆”用哪个词)", "stem_cn": "吓得动弹不得。", "options": ["petrified", "delighted", "relaxed", "amused"] }
+  ],
+  "stage6": [
+    { "stem": "skeleton 的意思是:", "options": ["骷髅,骨架", "肌肉", "影子", "雕像"] },
+    { "stem": "conceal 的意思是:", "options": ["隐藏,隐瞒", "展示", "宣布", "丢弃"] },
+    { "stem": "respectable 的意思是:", "options": ["体面的,雅观的", "可疑的", "贫穷的", "危险的"] },
+    { "stem": "petrify 的意思是:", "options": ["使惊呆", "使高兴", "使放松", "使入睡"] },
+    { "stem": "dangle 的意思是:", "options": ["悬挂,晃荡", "躺下", "奔跑", "漂浮"] },
+    { "stem": "unsympathetic 的意思是:", "options": ["不表同情的", "热心的", "慷慨的", "诚实的"] }
+  ],
+  "contrast": [
+    { "us": "a skeleton in the closet", "uk": "a skeleton in the cupboard", "note_cn": "家丑,不可告人的秘密;美语 in the closet,英式 in the cupboard" },
+    { "us": "closet", "uk": "cupboard/wardrobe", "note_cn": "壁橱;美语 closet,英式 cupboard/wardrobe" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" }
+  ],
+  "chunks": [
+    { "us": "a skeleton in the closet", "ipa": "/ˈskelɪtn ɪn ðə ˈklɑːzɪt/", "example1": "Every family has a skeleton in the closet.", "example1_cn": "家家都有本难念的经(都有家丑)。", "example2": "He kept that skeleton in the closet for years.", "example2_cn": "那桩家丑他藏了好多年。" },
+    { "us": "one's hair stands on end", "ipa": "/her stændz ɑːn end/", "example1": "The ending made my hair stand on end.", "example1_cn": "那个结局让我毛骨悚然。", "example2": "It was so scary my hair stood on end.", "example2_cn": "太吓人了,我汗毛都竖起来了。" },
+    { "us": "be proud of", "ipa": "/praʊd əv/", "example1": "George is proud of his skeleton.", "example1_cn": "乔治为他的骨架感到自豪。", "example2": "She is proud of her work.", "example2_cn": "她为自己的工作感到自豪。" },
+    { "us": "make sth do", "ipa": "/meɪk ˈsʌmθɪŋ duː/", "example1": "The door made the skeleton sway.", "example1_cn": "门一动,骷髅就晃了起来。", "example2": "The joke made everyone laugh.", "example2_cn": "那笑话把大家都逗笑了。" }
+  ],
+  "stage7_cloze": {
+    "context": "English has a vivid phrase for a shameful secret: 'a skeleton in the closet.' ___1___ of us really have one, but George does, and he is proud ___2___ it. When I opened his guestroom closet, a real skeleton made me ___3___ with fear. George only smiled and told me ___4___ worry, since it was just his old medical skeleton.",
+    "blanks": [
+      { "blank_no": 1, "options": ["Few", "A few", "Little", "A little"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["of", "with", "for", "to"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["freeze", "to freeze", "freezing", "froze"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["not to", "to not", "don't", "not"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What does 'a skeleton in the closet' mean?", "options": ["A shameful secret kept hidden", "A real human skeleton", "A Halloween decoration", "A medical model"] },
+    { "stem": "Why did George have a real skeleton?", "options": ["He had studied medicine", "He collected old bones", "He was a working doctor", "He found it in the house"] },
+    { "stem": "How did the writer feel when he opened the closet?", "options": ["Petrified", "Delighted", "Bored", "Merely curious"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我们当中很少有人真有'家丑'\"(few 表“很少”):", "options": ["Few of us have a real skeleton in the closet.", "A few of us have a real skeleton in the closet.", "Little of us have a real skeleton in the closet.", "Few of us has a real skeleton in the closet."] },
+    { "stem": "你想说\"门一动,骷髅就晃了起来\"(make sth do):", "options": ["The movement of the door made the skeleton sway.", "The movement of the door made the skeleton to sway.", "The movement of the door made the skeleton swaying.", "The movement of the door let the skeleton swayed."] },
+    { "stem": "你想说\"乔治为他的骷髅感到自豪\"(proud of):", "options": ["George is proud of his skeleton.", "George is proud with his skeleton.", "George is proud for his skeleton.", "George is proud to his skeleton."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "skeleton 的意思是:", "options": ["骷髅,骨架", "肌肉", "影子", "雕像"] },
+    { "kind": "vocab", "stem": "conceal 的意思是:", "options": ["隐藏,隐瞒", "展示", "宣布", "丢弃"] },
+    { "kind": "grammar", "stem": "\"The movement of the door made the skeleton ___.\"(make sth + 动词原形)", "stem_cn": "门一动,骷髅就晃了起来。", "options": ["sway", "to sway", "swaying", "swayed"] },
+    { "kind": "grammar", "stem": "\"___ of us have a real skeleton in the closet.\"(表“很少”,接可数)", "stem_cn": "我们当中很少有人真有“家丑”。", "options": ["Few", "A few", "Little", "A little"] },
+    { "kind": "scenario", "stem": "\"a skeleton in the closet\" 的意思是:", "options": ["不可告人的家丑/秘密", "家里的装饰", "一副真骨架", "医学模型"] },
+    { "kind": "scenario", "stem": "\"one's hair stands on end\" 的意思是:", "options": ["吓得毛骨悚然", "头发乱了", "理了新发型", "兴奋得跳起来"] },
+    { "kind": "reading", "stem": "How did George react to the writer's fright?", "options": ["He was unsympathetic and amused", "He apologized at once", "He was frightened too", "He called a doctor"], "passage": true },
+    { "kind": "reading", "stem": "What did George become instead of a doctor?", "options": ["A writer of detective stories", "A surgeon", "A teacher", "A painter"], "passage": true },
+    { "kind": "listening", "stem": "Who or what was 'Sebastian'?", "options": ["George's medical skeleton", "George's brother", "A pet dog", "A ghost"], "audio": true },
+    { "kind": "listening", "stem": "What did George tell the writer to do when he first arrived?", "options": ["Unpack and come down to dinner", "Leave at once", "Clean the room", "Lock the closet"], "audio": true }
+  ]
+}

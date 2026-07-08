@@ -1,0 +1,133 @@
+{
+  "id": "am3_l04",
+  "unit_no": 1,
+  "lesson_no": 4,
+  "title_en": "A Suit and a Secret",
+  "title_cn": "一件西装,一个秘密",
+  "grammar_focus": "现在完成时(have/has + 过去分词:结果、经历、刚完成;just/ever/never/yet)vs 现在完成进行时(have/has been + doing:动作从过去持续到现在;for/since/up till now),外加动词 + sth + to sb(explain/describe/say/suggest sth to sb)与 worth + 名词/doing(值得)(原创承载 NCE3 L4 考点·美国人 Danny 瞒着妻子当垃圾清运工)",
+  "scene": "如今,干体力活的人往往比坐办公室的人挣得多得多。可即便如此,很多人还是向往一份“白领”工作,情愿牺牲高薪,只为享受穿衬衫、打领带上班这份体面。这种奇怪的念头会闹出笑话。就说我邻居 Danny。他给一家大公司当垃圾清运工,已经干了两年,挣得很不错。只有一个问题:他从没跟妻子说过实话。结婚那天,他不好意思把真正的工作解释给她听,只说自己“在公司上班”。那两年他每天的套路都一样:早上穿件干净衬衫出门,拐个弯换上工作服,在垃圾车上干八个小时;回家前冲个澡,再把衬衫换回来。工友们直到现在都替他保守着秘密,妻子也一次都没发现。可情况刚刚变了:Danny 终于找到一份市中心的办公室工作。他只能挣一半的钱,却觉得地位的提升很值这份损失。从今往后,人们会叫他“Reyes 先生”,而不是“Danny”。",
+  "grammar_card": {
+    "title": "两种“到现在”的时态:现在完成时 & 现在完成进行时",
+    "intro": "①现在完成时 have/has + 过去分词——强调到现在为止的结果、经历、刚刚完成(His wife has never found out. / Danny has just taken a new job.),常配 just、ever、never、yet、already。②现在完成进行时 have/has been + doing——强调一个动作从过去一直持续到现在(He has been working here for two years.),常配 for、since、up till now、all day。再记两个难点:③explain / describe / say / suggest 这类词,说“(把某事)对某人……”时要加 to(explain the job to her,不能说 explain her the job);④worth + 名词 / worth + doing = 值得(worth the loss / worth seeing)。",
+    "table": {
+      "headers": ["时态/结构", "强调什么", "例子"],
+      "rows": [
+        ["现在完成时 have/has done", "到现在的结果、经历、刚完成", "She has never found out. / He has just left."],
+        ["现在完成进行时 have/has been doing", "动作从过去持续到现在", "He has been working here for two years."],
+        ["动词 + sth + to sb", "explain/describe/say/suggest 对某人", "He explained the job to her."],
+        ["worth + 名词 / doing", "值得", "It is well worth the loss. / worth seeing"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "现在完成进行时更看重“一直在做”的过程(常配 for/since);现在完成时更看重“已经做完/做过”的结果或经历(常配 just/ever/never/yet)。", "mark": "for/since vs just/ever" },
+      { "rule": "explain / describe / say / suggest 后面说“对某人”要加 to(explain the plan to me),不能像 give 那样直接说 explain me the plan。", "mark": "explain … to sb" },
+      { "rule": "美语里“垃圾清运工”常说 garbage collector(英式 dustman);“白领”white-collar 指坐办公室的脑力劳动者,“蓝领”blue-collar 指体力劳动者。", "mark": "garbage collector / dustman" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is Danny's real job?",
+    "options": ["A garbage collector for a corporation", "A bank manager", "A school teacher", "A truck salesman"],
+    "answer_index": 0
+  },
+  "passage": "These days, people who do manual work often earn far more than people who sit in offices. Even so, many workers still dream of a 'white-collar' job, and they will gladly sacrifice higher pay just for the privilege of wearing a shirt and tie to work. This strange idea can lead to some funny situations. Take my neighbor Danny. He has been working as a garbage collector for a large corporation for two years now, and he earns very good money. There is only one problem: he has never told his wife the truth. On their wedding day, he was too embarrassed to explain his real job to her, so he simply said that he worked 'for the Corporation.' For two years his routine was always the same. Every morning he left home in a clean shirt, changed into his overalls around the corner, and spent eight hours on the trucks. Before coming home, he took a quick shower and put the shirt back on. His fellow workers have kept his secret up till now, and his wife has never once found out. But things have just changed. Danny has finally taken an office job downtown. He will earn only half as much, yet he feels the rise in status is well worth the loss. From now on, people will call him 'Mr. Reyes,' not 'Danny.'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "These days, people who do manual work often earn far more than people who sit in offices. Even so, many workers still dream of a 'white-collar' job, and they will gladly sacrifice higher pay just for the privilege of wearing a shirt and tie to work.", "text_cn": "如今,干体力活的人往往比坐办公室的人挣得多得多。即便如此,很多人还是向往一份“白领”工作,情愿牺牲高薪,只为享受穿衬衫、打领带上班这份体面。" },
+    { "seq": 2, "speaker": null, "text_en": "Take my neighbor Danny. He has been working as a garbage collector for a large corporation for two years now, and he earns very good money. There is only one problem: he has never told his wife the truth.", "text_cn": "就说我邻居 Danny。他给一家大公司当垃圾清运工,已经干了两年,挣得很不错。只有一个问题:他从没跟妻子说过实话。" },
+    { "seq": 3, "speaker": null, "text_en": "On their wedding day, he was too embarrassed to explain his real job to her, so he simply said that he worked 'for the Corporation.' For two years his routine was always the same.", "text_cn": "结婚那天,他不好意思把真正的工作解释给她听,只说自己“在公司上班”。那两年,他每天的套路都一样。" },
+    { "seq": 4, "speaker": null, "text_en": "Every morning he left home in a clean shirt, changed into his overalls around the corner, and spent eight hours on the trucks. Before coming home, he took a quick shower and put the shirt back on. His fellow workers have kept his secret up till now, and his wife has never once found out.", "text_cn": "早上他穿件干净衬衫出门,拐个弯换上工作服,在垃圾车上干八个小时;回家前冲个澡,再把衬衫换回来。工友们直到现在都替他保密,妻子也一次都没发现。" },
+    { "seq": 5, "speaker": null, "text_en": "But things have just changed. Danny has finally taken an office job downtown. He will earn only half as much, yet he feels the rise in status is well worth the loss. From now on, people will call him 'Mr. Reyes,' not 'Danny.'", "text_cn": "可情况刚刚变了:Danny 终于找到一份市中心的办公室工作。他只能挣一半的钱,却觉得地位的提升很值这份损失。从今往后,人们会叫他“Reyes 先生”,而不是“Danny”。" }
+  ],
+  "words": [
+    { "word": "manual", "ipa": "/ˈmænjuəl/", "pos": "adj", "meaning_cn": "体力的,手工的", "example": "people who do manual work" },
+    { "word": "collar", "ipa": "/ˈkɑːlər/", "pos": "n", "meaning_cn": "衣领(white-collar 白领)", "example": "a white-collar job" },
+    { "word": "sacrifice", "ipa": "/ˈsækrɪfaɪs/", "pos": "v", "meaning_cn": "牺牲,舍弃", "example": "sacrifice higher pay" },
+    { "word": "privilege", "ipa": "/ˈprɪvəlɪdʒ/", "pos": "n", "meaning_cn": "特别的好处,荣幸", "example": "the privilege of wearing a tie" },
+    { "word": "corporation", "ipa": "/ˌkɔːrpəˈreɪʃn/", "pos": "n", "meaning_cn": "公司,大企业", "example": "a large corporation" },
+    { "word": "overalls", "ipa": "/ˈoʊvərɔːlz/", "pos": "n", "meaning_cn": "工作服,工装裤", "example": "changed into his overalls" },
+    { "word": "shower", "ipa": "/ˈʃaʊər/", "pos": "n", "meaning_cn": "淋浴", "example": "took a quick shower" },
+    { "word": "secret", "ipa": "/ˈsiːkrət/", "pos": "n", "meaning_cn": "秘密", "example": "kept his secret" },
+    { "word": "status", "ipa": "/ˈsteɪtəs/", "pos": "n", "meaning_cn": "地位,身份", "example": "the rise in status" },
+    { "word": "embarrassed", "ipa": "/ɪmˈbærəst/", "pos": "adj", "meaning_cn": "尴尬的,难为情的", "example": "too embarrassed to explain" },
+    { "word": "routine", "ipa": "/ruːˈtiːn/", "pos": "n", "meaning_cn": "日常惯例", "example": "his routine was always the same" },
+    { "word": "garbage collector", "ipa": "/ˈɡɑːrbɪdʒ kəˈlektər/", "pos": "n", "meaning_cn": "垃圾清运工(美语;英式 dustman)", "example": "a garbage collector for a corporation" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "现在完成时(结果/经历/刚完成)" },
+    { "gp": "gp2", "name": "现在完成进行时(动作持续到现在)" },
+    { "gp": "gp3", "name": "现在完成时 vs 现在完成进行时 辨析" },
+    { "gp": "gp4", "name": "动词 + sth + to sb(explain/describe/say)" },
+    { "gp": "gp5", "name": "worth + 名词 / doing(值得)" },
+    { "gp": "gp6", "name": "词汇辨析(manual / privilege / status)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"His wife ___ never found out his secret.\"(现在完成时:选助动词,主语第三人称单数)", "stem_cn": "他妻子从没发现过他的秘密。", "options": ["has", "is", "was", "does"] },
+    { "gp": "gp1", "stem": "\"Danny ___ just taken a new office job.\"(刚刚做完:现在完成,主语单数选助动词)", "stem_cn": "Danny 刚刚找了一份新的办公室工作。", "options": ["has", "is", "was", "will"] },
+    { "gp": "gp1", "stem": "\"His fellow workers ___ kept his secret up till now.\"(到现在为止:现在完成,主语复数选助动词)", "stem_cn": "工友们到现在都替他保守着秘密。", "options": ["have", "has", "are", "were"] },
+    { "gp": "gp1", "stem": "\"I have never ___ such a strange story before.\"(经历“从没……过”:现在完成,选过去分词)", "stem_cn": "我以前从没听过这么奇怪的故事。", "options": ["heard", "hear", "hearing", "hears"] },
+    { "gp": "gp2", "stem": "\"Danny ___ as a garbage collector for two years now.\"(动作从过去持续到现在:现在完成进行时)", "stem_cn": "Danny 当垃圾清运工已经干了两年了。", "options": ["has been working", "works", "worked", "is working"] },
+    { "gp": "gp2", "stem": "\"It ___ all morning, so the streets are still wet.\"(雨一直下到现在:现在完成进行时)", "stem_cn": "雨下了一上午,所以街道还是湿的。", "options": ["has been raining", "rains", "rained", "is rain"] },
+    { "gp": "gp2", "stem": "\"They ___ for two hours, and they are still not finished.\"(等了很久还没完:现在完成进行时)", "stem_cn": "他们已经等了两个小时,还是没轮到。", "options": ["have been waiting", "wait", "waited", "are wait"] },
+    { "gp": "gp3", "stem": "\"Look, the workers ___ three streets so far this morning.\"(强调完成的数量/结果:现在完成时)", "stem_cn": "看,今早工人们已经清扫了三条街了。", "options": ["have cleaned", "have been cleaning", "clean", "cleaned"] },
+    { "gp": "gp3", "stem": "\"The workers are hot and dirty because they ___ since dawn.\"(强调一直在进行的过程:现在完成进行时)", "stem_cn": "工人们又热又脏,因为他们从天亮就一直在干。", "options": ["have been working", "have worked", "work", "worked"] },
+    { "gp": "gp3", "stem": "\"I ___ this book three times; I know it very well.\"(强调次数/结果:现在完成时)", "stem_cn": "这本书我读过三遍,很熟。", "options": ["have read", "have been reading", "read", "am reading"] },
+    { "gp": "gp4", "stem": "\"On his wedding day, Danny could not explain his real job ___ his wife.\"(动词后接“对某人”时要用的介词)", "stem_cn": "结婚那天,Danny 没法把真正的工作解释给妻子听。", "options": ["to", "for", "with", "at"] },
+    { "gp": "gp4", "stem": "\"Please describe the accident ___ the police officer.\"(动词后接“对某人”时要用的介词)", "stem_cn": "请把事故经过描述给警官听。", "options": ["to", "for", "with", "of"] },
+    { "gp": "gp4", "stem": "\"She never says anything ___ me about her past.\"(动词后接“对某人”时要用的介词)", "stem_cn": "关于她的过去,她从不对我说什么。", "options": ["to", "for", "at", "with"] },
+    { "gp": "gp5", "stem": "\"He feels the higher status is well ___ the loss of money.\"(表示“值得”,用哪个词)", "stem_cn": "他觉得更高的地位很值这份金钱损失。", "options": ["worth", "cost", "spend", "pay"] },
+    { "gp": "gp5", "stem": "\"That old movie is not ___ watching twice.\"(表示“值得做某事”,用哪个词)", "stem_cn": "那部老电影不值得看第二遍。", "options": ["worth", "cost", "afford", "pay"] },
+    { "gp": "gp6", "stem": "\"People who work mainly with their hands do ___ work.\"(“体力的”用哪个词)", "stem_cn": "主要靠双手劳动的人做的是体力工作。", "options": ["manual", "mental", "royal", "equal"] },
+    { "gp": "gp6", "stem": "\"He gave up higher pay for the ___ of wearing a suit to work.\"(“特别的好处、荣幸”用哪个词)", "stem_cn": "他放弃了高薪,只为穿西装上班这份体面。", "options": ["privilege", "trouble", "danger", "mistake"] },
+    { "gp": "gp6", "stem": "\"His new office job raised his ___ among his friends.\"(“地位、身份”用哪个词)", "stem_cn": "新的办公室工作提高了他在朋友中的地位。", "options": ["status", "weather", "furniture", "distance"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"垃圾清运工\"常说:", "options": ["garbage collector", "dustman", "street-man", "clean-worker"] },
+    { "stem": "manual(work)的意思是:", "options": ["体力的", "脑力的", "免费的", "危险的"] },
+    { "stem": "sacrifice 的意思是:", "options": ["牺牲,舍弃", "庆祝", "购买", "隐藏"] },
+    { "stem": "privilege 的意思是:", "options": ["特别的好处,荣幸", "惩罚", "债务", "借口"] },
+    { "stem": "status 的意思是:", "options": ["地位,身份", "天气", "家具", "距离"] },
+    { "stem": "\"white-collar worker\" 指:", "options": ["坐办公室的脑力劳动者", "干体力活的工人", "路上的清洁工", "种地的农民"] }
+  ],
+  "contrast": [
+    { "us": "garbage collector", "uk": "dustman", "note_cn": "垃圾清运工;美语 garbage collector,英式 dustman" },
+    { "us": "downtown", "uk": "town centre", "note_cn": "市中心;美语 downtown,英式 town centre" },
+    { "us": "résumé", "uk": "CV", "note_cn": "简历;美语 résumé,英式 CV" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" }
+  ],
+  "chunks": [
+    { "us": "be too embarrassed to do", "ipa": "/biː tuː ɪmˈbærəst tuː duː/", "example1": "He was too embarrassed to tell the truth.", "example1_cn": "他不好意思说出实话。", "example2": "She was too embarrassed to ask for help.", "example2_cn": "她不好意思开口求助。" },
+    { "us": "up till now", "ipa": "/ʌp tɪl naʊ/", "example1": "His workers have kept the secret up till now.", "example1_cn": "工友们直到现在都替他保密。", "example2": "Up till now, no one has complained.", "example2_cn": "到现在为止,没人抱怨过。" },
+    { "us": "be worth doing", "ipa": "/biː wɜːrθ ˈduːɪŋ/", "example1": "The rise in status is worth the loss.", "example1_cn": "地位的提升值这份损失。", "example2": "This museum is worth visiting.", "example2_cn": "这座博物馆值得一看。" },
+    { "us": "change into", "ipa": "/tʃeɪndʒ ˈɪntuː/", "example1": "He changed into his overalls around the corner.", "example1_cn": "他拐个弯换上了工作服。", "example2": "Please change into dry clothes.", "example2_cn": "请换上干衣服。" }
+  ],
+  "stage7_cloze": {
+    "context": "Danny ___1___ as a garbage collector for two years. His wife ___2___ never found out, because he ___3___ his secret from her all this time. But things ___4___ just changed: he has finally taken an office job.",
+    "blanks": [
+      { "blank_no": 1, "options": ["has been working", "works", "worked", "is working"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["is", "has", "was", "does"], "answer_index": 1 },
+      { "blank_no": 3, "options": ["has been keeping", "keeps", "kept", "is keeping"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["has", "have", "are", "were"], "answer_index": 1 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What is Danny's real job?", "options": ["A garbage collector for a corporation", "A bank manager", "A school teacher", "A truck salesman"] },
+    { "stem": "Why did Danny hide his job from his wife?", "options": ["He was too embarrassed about it", "He forgot to tell her", "She never asked him", "His boss ordered him to"] },
+    { "stem": "What has Danny just done?", "options": ["He has taken an office job for higher status", "He has quit all work", "He has told the whole town on TV", "He has moved to another country"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"他们已经连续工作两个小时了(还在干)\"(现在完成进行,强调持续):", "options": ["They have been working for two hours.", "They have worked for two hours ago.", "They are working for two hours.", "They work for two hours now."] },
+    { "stem": "你想说\"我从没把这个秘密告诉过任何人\"(现在完成 tell):", "options": ["I have never told anyone this secret.", "I have never telled anyone this secret.", "I am never telling anyone this secret.", "I have never tell anyone this secret."] },
+    { "stem": "你想说\"请把这件事解释给经理听\"(explain 后要加 to):", "options": ["Please explain this matter to the manager.", "Please explain the manager this matter.", "Please explain this matter the manager.", "Please explain for the manager this matter."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "status 的意思是:", "options": ["地位,身份", "天气", "家具", "距离"] },
+    { "kind": "vocab", "stem": "sacrifice 的意思是:", "options": ["牺牲,舍弃", "庆祝", "购买", "隐藏"] },
+    { "kind": "grammar", "stem": "\"They ___ since early morning and are still busy.\"(强调持续:现在完成进行时)", "stem_cn": "他们从一大早就一直在干,现在还忙着。", "options": ["have been working", "have worked", "work", "worked"] },
+    { "kind": "grammar", "stem": "\"His wife ___ never found out the truth.\"(现在完成时:选助动词)", "stem_cn": "他妻子从没发现过真相。", "options": ["has", "is", "was", "does"] },
+    { "kind": "scenario", "stem": "\"be worth doing\" 的意思是:", "options": ["值得做…", "不许做…", "忘记做…", "害怕做…"] },
+    { "kind": "scenario", "stem": "\"up till now\" 的意思是:", "options": ["直到现在为止", "很久以前", "从明天起", "偶尔"] },
+    { "kind": "reading", "stem": "Why did Danny hide his job from his wife?", "options": ["He was too embarrassed to tell her the truth", "He worked in another city", "He did not have any job", "She hated garbage trucks"], "passage": true },
+    { "kind": "reading", "stem": "Why is Danny happy to earn less money now?", "options": ["He feels the higher status is worth it", "He hates having money", "He wants to retire soon", "He plans to move away"], "passage": true },
+    { "kind": "listening", "stem": "What did Danny change into every morning?", "options": ["His work overalls", "A police uniform", "A doctor's coat", "A school uniform"], "audio": true },
+    { "kind": "listening", "stem": "Who kept Danny's secret?", "options": ["His fellow workers", "His wife's family", "The local newspaper", "His children"], "audio": true }
+  ]
+}

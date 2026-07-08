@@ -1,0 +1,133 @@
+{
+  "id": "am3_l21",
+  "unit_no": 5,
+  "lesson_no": 21,
+  "title_en": "Daniel Mendoza",
+  "title_cn": "丹尼尔·门多萨",
+  "grammar_focus": "综合复习难点:not ... until(直到…才)、rise(rose,不接名词)与 raise(raised,后接一个东西)的区别、ago(相对现在)与 before(相对过去)、could(过去的一般能力/可能)与 was able to(某一次成功做成)、被动语态施动者 by、形容词 + 动词不定式(pleased to / sorry to)(原创承载 NCE3 L21 考点·真实历史人物传记·适度淡化:把'赤手拳击可能致死'的血腥略去,突出门多萨'把蛮打变成讲技巧的运动'与'挥霍致穷'的理财警示)",
+  "scene": "两百年前,拳击是英格兰最受欢迎的运动之一,但那时的拳击和今天大不一样:拳手不戴手套,几乎没有规则。直到1860年,一位贵族才拟出第一套正规规则,拳套也才被引入。不过早在那之前,就有一位拳手开始把粗野的打斗变成一门真正的技艺,他叫丹尼尔·门多萨,生于1764年。门多萨很年轻就成了名。他身手敏捷、头脑聪明、步法轻盈,给拳台带来一种“科学”,主张脑子和力气一样重要。在他那个年代,他红极一时,受到贫富一致的爱戴。当时英格兰最杰出的拳手理查德·汉弗莱斯提出要训练他,可这徒弟学得太快,两人很快成了对手。门多萨两次败给汉弗莱斯,直到1790年才终于赢下,被封为英格兰冠军。此后门多萨开了一所著名的拳击学校,连拜伦勋爵都来学艺;他一场比赛就能挣一大笔钱。可惜他太爱挥霍,总也攒不下钱。渐渐地他债台高筑;在被一位更年轻的拳手击败后,人群把他忘了。他在贫困中度过晚年——这提醒人们:光有天赋,弥补不了花钱的大手大脚。",
+  "grammar_card": {
+    "title": "not...until / rise vs raise / ago vs before / could vs was able to",
+    "intro": "①not ... until“直到…才”:强调句 It was not until 1790 that he won。②rise(rose, risen)表“上升、成名”,后面不接一个东西;raise(raised)表“举起、抬高”,后面要接一个东西:The sun rises. / He raised his hand.③ago 从“现在”往前数(two hundred years ago);before 从“过去某点”往前数(years before he met her)。④could 表“过去的一般能力/可能”;某一次“终于做成”用 was able to。⑤被动语态里动作的发出者用 by 引出;pleased/sorry 等形容词后接 to do。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["not ... until", "直到…才", "Gloves were not used until 1860."],
+        ["rise(rose) / raise(raised)", "上升,成名 / 举起", "He rose to fame. / He raised his fists."],
+        ["ago / before", "(距今)…前 / (在过去某点)…前", "two hundred years ago / years before"],
+        ["could / was able to", "过去的能力 / 某次成功", "could get hurt / was able to win"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "rise 后面不接一个东西(rise to fame, the sun rises);raise 后面一定要接一个东西(raise your hand, raise money)。别混。", "mark": "rise / raise" },
+      { "rule": "肯定句里“某一次终于办到”用 was able to,不用 could;could 用于“过去的一般能力/可能”。", "mark": "could / was able to" },
+      { "rule": "美式拼写:defense(英式 defence)、favorite(英式 favourite)、honor(英式 honour)、practice 作动词(英式 practise)。", "mark": "defense / favorite" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How many times did Mendoza lose to Humphries before finally winning?",
+    "options": ["Twice", "Once", "Three times", "He never lost"],
+    "answer_index": 0
+  },
+  "passage": "Two hundred years ago, boxing was one of the most popular sports in England, though it looked nothing like the sport we know today. Fighters used no gloves, and there were almost no rules. Gloves were not introduced until 1860, when a nobleman drew up the first proper set of regulations. One boxer, however, had already begun to turn rough fighting into a real skill long before then. His name was Daniel Mendoza, and he was born in 1764. Mendoza rose to fame very young. He was quick, clever, and light on his feet, and he brought a kind of 'science' to the ring, teaching that brains mattered as much as strength. In his day he was enormously popular; he was admired by rich and poor alike. Richard Humphries, then the most eminent boxer in England, offered to train him, but the pupil learned so fast that the two soon became rivals. Mendoza lost to Humphries twice before he was finally able to beat him in 1790 and be crowned Champion of England. Mendoza then opened a famous academy, where even Lord Byron came to learn, and he earned huge sums for a single match. Sadly, he was so extravagant that he could never hold on to his money. Little by little he fell into debt, and after he was defeated by a younger fighter, the crowds forgot him. He spent his last years in poverty, a reminder that talent alone cannot make up for careless spending.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Two hundred years ago, boxing was one of the most popular sports in England, though it looked nothing like the sport we know today. Fighters used no gloves, and there were almost no rules. Gloves were not introduced until 1860, when a nobleman drew up the first proper set of regulations.", "text_cn": "两百年前,拳击是英格兰最受欢迎的运动之一,但那时的拳击和今天大不一样:拳手不戴手套,几乎没有规则。直到1860年,一位贵族才拟出第一套正规规则,拳套也才被引入。" },
+    { "seq": 2, "speaker": null, "text_en": "One boxer, however, had already begun to turn rough fighting into a real skill long before then. His name was Daniel Mendoza, and he was born in 1764. Mendoza rose to fame very young. He was quick, clever, and light on his feet, and he brought a kind of 'science' to the ring, teaching that brains mattered as much as strength.", "text_cn": "不过早在那之前,就有一位拳手开始把粗野的打斗变成一门真正的技艺,他叫丹尼尔·门多萨,生于1764年。门多萨很年轻就成了名。他身手敏捷、头脑聪明、步法轻盈,给拳台带来一种“科学”,主张脑子和力气一样重要。" },
+    { "seq": 3, "speaker": null, "text_en": "In his day he was enormously popular; he was admired by rich and poor alike. Richard Humphries, then the most eminent boxer in England, offered to train him, but the pupil learned so fast that the two soon became rivals. Mendoza lost to Humphries twice before he was finally able to beat him in 1790 and be crowned Champion of England.", "text_cn": "在他那个年代,他红极一时,受到贫富一致的爱戴。当时英格兰最杰出的拳手理查德·汉弗莱斯提出要训练他,可这徒弟学得太快,两人很快成了对手。门多萨两次败给汉弗莱斯,直到1790年才终于赢下,被封为英格兰冠军。" },
+    { "seq": 4, "speaker": null, "text_en": "Mendoza then opened a famous academy, where even Lord Byron came to learn, and he earned huge sums for a single match. Sadly, he was so extravagant that he could never hold on to his money.", "text_cn": "此后门多萨开了一所著名的拳击学校,连拜伦勋爵都来学艺;他一场比赛就能挣一大笔钱。可惜他太爱挥霍,总也攒不下钱。" },
+    { "seq": 5, "speaker": null, "text_en": "Little by little he fell into debt, and after he was defeated by a younger fighter, the crowds forgot him. He spent his last years in poverty, a reminder that talent alone cannot make up for careless spending.", "text_cn": "渐渐地他债台高筑;在被一位更年轻的拳手击败后,人群把他忘了。他在贫困中度过晚年——这提醒人们:光有天赋,弥补不了花钱的大手大脚。" }
+  ],
+  "words": [
+    { "word": "boxing", "ipa": "/ˈbɑːksɪŋ/", "pos": "n", "meaning_cn": "拳击", "example": "boxing was very popular" },
+    { "word": "prizefighter", "ipa": "/ˈpraɪzfaɪtər/", "pos": "n", "meaning_cn": "职业拳击手(旧指赤手拳手)", "example": "known as prizefighters" },
+    { "word": "crude", "ipa": "/kruːd/", "pos": "adj", "meaning_cn": "粗野的,粗糙的", "example": "crude fighting" },
+    { "word": "eminent", "ipa": "/ˈemɪnənt/", "pos": "adj", "meaning_cn": "著名的,杰出的", "example": "the most eminent boxer" },
+    { "word": "popularity", "ipa": "/ˌpɑːpjəˈlærəti/", "pos": "n", "meaning_cn": "名望,受欢迎", "example": "enjoyed tremendous popularity" },
+    { "word": "adore", "ipa": "/əˈdɔːr/", "pos": "v", "meaning_cn": "崇拜,爱戴", "example": "adored by rich and poor" },
+    { "word": "fame", "ipa": "/feɪm/", "pos": "n", "meaning_cn": "名声", "example": "rose to fame very young" },
+    { "word": "extravagant", "ipa": "/ɪkˈstrævəɡənt/", "pos": "adj", "meaning_cn": "奢侈的,浪费的", "example": "so extravagant that…" },
+    { "word": "poverty", "ipa": "/ˈpɑːvərti/", "pos": "n", "meaning_cn": "贫困", "example": "spent his last years in poverty" },
+    { "word": "academy", "ipa": "/əˈkædəmi/", "pos": "n", "meaning_cn": "专业学校,学院", "example": "opened a famous academy" },
+    { "word": "rival", "ipa": "/ˈraɪvl/", "pos": "n", "meaning_cn": "竞争对手", "example": "the two became rivals" },
+    { "word": "skill", "ipa": "/skɪl/", "pos": "n", "meaning_cn": "技艺,技巧", "example": "turn fighting into a real skill" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "not ... until(直到…才)" },
+    { "gp": "gp2", "name": "rise(rose) vs raise(raised)" },
+    { "gp": "gp3", "name": "ago(相对现在) vs before(相对过去)" },
+    { "gp": "gp4", "name": "could vs was able to(某次成功)" },
+    { "gp": "gp5", "name": "被动 by / 形容词 + 不定式(pleased to)" },
+    { "gp": "gp6", "name": "词汇辨析(eminent/extravagant/poverty)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Gloves ___ introduced until 1860.\"(“直到…才”:not ... until)", "stem_cn": "直到1860年才用上拳套。", "options": ["were not", "were", "are not", "had"] },
+    { "gp": "gp1", "stem": "\"It was ___ 1790 that Mendoza finally won the title.\"(not ... until 强调结构)", "stem_cn": "直到1790年门多萨才终于夺冠。", "options": ["not until", "until not", "not till until", "no until"] },
+    { "gp": "gp1", "stem": "\"He did not become champion ___ his third try.\"(“直到…才”)", "stem_cn": "直到第三次尝试他才当上冠军。", "options": ["until", "since", "before", "from"] },
+    { "gp": "gp2", "stem": "\"Mendoza ___ to fame while still a teenager.\"(“成名、上升”用哪个)", "stem_cn": "门多萨十几岁就成了名。", "options": ["rose", "raised", "rise", "raise"] },
+    { "gp": "gp2", "stem": "\"The champion ___ his fists and the crowd cheered.\"(“举起”后接一个东西,用哪个)", "stem_cn": "冠军举起拳头,人群欢呼。", "options": ["raised", "rose", "rise", "raise"] },
+    { "gp": "gp2", "stem": "\"The sun ___ early on the morning of the big match.\"(“升起”用哪个)", "stem_cn": "大赛那天早上太阳升得早。", "options": ["rose", "raised", "raise", "rises"] },
+    { "gp": "gp3", "stem": "\"Boxing was popular in England two hundred years ___.\"(从现在往前数,用哪个)", "stem_cn": "两百年前拳击在英格兰很流行。", "options": ["ago", "before", "since", "past"] },
+    { "gp": "gp3", "stem": "\"Gloves were unknown; they had not been used ___.\"(从过去某点往前数,用哪个)", "stem_cn": "那之前从没用过拳套。", "options": ["before", "ago", "then", "later"] },
+    { "gp": "gp3", "stem": "\"Mendoza had learned to box years ___ he met Humphries.\"(引导“在…之前”用哪个)", "stem_cn": "门多萨在遇到汉弗莱斯多年前就学会了拳击。", "options": ["before", "ago", "since", "until"] },
+    { "gp": "gp4", "stem": "\"In those rough days, a fighter ___ get badly hurt.\"(过去“一般可能”用哪个)", "stem_cn": "在那种粗野的年代,拳手可能受重伤。", "options": ["could", "was able to", "can", "is able to"] },
+    { "gp": "gp4", "stem": "\"After two losses, Mendoza ___ beat Humphries in 1790.\"(某一次成功做成,不用 could)", "stem_cn": "两度落败后,门多萨在1790年终于赢了汉弗莱斯。", "options": ["was able to", "could", "can", "is able to"] },
+    { "gp": "gp4", "stem": "\"As a boy he ___ run faster than anyone on his street.\"(过去“一般能力”用哪个)", "stem_cn": "小时候他跑得比街上任何人都快。", "options": ["could", "was able to", "can", "be able"] },
+    { "gp": "gp5", "stem": "\"Mendoza was admired ___ rich and poor alike.\"(被动的发出者用哪个介词)", "stem_cn": "门多萨受到贫富一致的爱戴。", "options": ["by", "with", "from", "of"] },
+    { "gp": "gp5", "stem": "\"The young pupil was pleased ___ so much from a champion.\"(形容词 pleased 后接不定式)", "stem_cn": "这个年轻徒弟很高兴能从冠军那儿学到那么多。", "options": ["to learn", "learning", "learn", "learned"] },
+    { "gp": "gp5", "stem": "\"In the end he was sorry ___ his money so carelessly.\"(形容词 sorry 后接不定式)", "stem_cn": "到头来他后悔把钱花得那么随意。", "options": ["to have spent", "spending", "spend", "spent"] },
+    { "gp": "gp6", "stem": "\"A person who is famous and respected in their field is ___.\"(“杰出的、著名的”用哪个词)", "stem_cn": "在自己领域里很有名、受敬重的人。", "options": ["eminent", "ordinary", "unknown", "shy"] },
+    { "gp": "gp6", "stem": "\"Someone who spends money wastefully is ___.\"(“奢侈浪费的”用哪个词)", "stem_cn": "花钱大手大脚、浪费的人。", "options": ["extravagant", "thrifty", "careful", "honest"] },
+    { "gp": "gp6", "stem": "\"The state of being very poor is ___.\"(“贫困”用哪个词)", "stem_cn": "非常穷的状态。", "options": ["poverty", "wealth", "comfort", "luxury"] }
+  ],
+  "stage6": [
+    { "stem": "boxing 的意思是:", "options": ["拳击", "游泳", "赛跑", "摔跤"] },
+    { "stem": "prizefighter 的意思是:", "options": ["职业拳击手", "观众", "裁判", "教练"] },
+    { "stem": "eminent 的意思是:", "options": ["著名的,杰出的", "普通的", "年轻的", "害羞的"] },
+    { "stem": "adore 的意思是:", "options": ["崇拜,爱戴", "讨厌", "忽视", "害怕"] },
+    { "stem": "extravagant 的意思是:", "options": ["奢侈的,浪费的", "节俭的", "贫穷的", "诚实的"] },
+    { "stem": "poverty 的意思是:", "options": ["贫困", "财富", "舒适", "名声"] }
+  ],
+  "contrast": [
+    { "us": "defense", "uk": "defence", "note_cn": "防守;美语 defense,英式 defence" },
+    { "us": "favorite", "uk": "favourite", "note_cn": "最喜欢的;美语 favorite,英式 favourite" },
+    { "us": "honor", "uk": "honour", "note_cn": "荣誉;美语 honor,英式 honour" },
+    { "us": "practice(动词)", "uk": "practise", "note_cn": "练习;美语动词也拼 practice,英式动词拼 practise" }
+  ],
+  "chunks": [
+    { "us": "rise to fame", "ipa": "/raɪz tə feɪm/", "example1": "Mendoza rose to fame very young.", "example1_cn": "门多萨很年轻就成了名。", "example2": "The band rose to fame overnight.", "example2_cn": "这支乐队一夜成名。" },
+    { "us": "not ... until", "ipa": "/nɑːt ənˈtɪl/", "example1": "Gloves were not used until 1860.", "example1_cn": "直到1860年才用上手套。", "example2": "I didn't know until yesterday.", "example2_cn": "我直到昨天才知道。" },
+    { "us": "be adored by", "ipa": "/bi əˈdɔːrd baɪ/", "example1": "He was adored by rich and poor alike.", "example1_cn": "他受到贫富一致的爱戴。", "example2": "The teacher was adored by her students.", "example2_cn": "这位老师深受学生爱戴。" },
+    { "us": "fall into debt", "ipa": "/fɔːl ˈɪntə det/", "example1": "Little by little he fell into debt.", "example1_cn": "他渐渐债台高筑。", "example2": "Many people fall into debt after big purchases.", "example2_cn": "很多人大额消费后就负债了。" }
+  ],
+  "stage7_cloze": {
+    "context": "Two hundred years ___1___, boxing had few rules. Gloves were ___2___ introduced until 1860. Daniel Mendoza ___3___ to fame as a teenager and was admired ___4___ rich and poor alike, but his extravagance later ruined him.",
+    "blanks": [
+      { "blank_no": 1, "options": ["ago", "before", "since", "past"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["not", "no", "never", "none"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["rose", "raised", "rise", "raise"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["by", "with", "from", "of"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What was boxing like two hundred years ago?", "options": ["It had almost no rules", "It was played with gloves", "It was completely banned", "It was only for the rich"] },
+    { "stem": "How did Mendoza change boxing?", "options": ["He brought skill and 'science' to it", "He made it far more violent", "He invented the boxing ring", "He wrote its very first rules"] },
+    { "stem": "Why was Mendoza forgotten at the end of his life?", "options": ["He lost his money and his title", "He moved to another country", "He stopped fighting while young", "He became a schoolteacher"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"直到1790年他才夺冠\"(not...until):", "options": ["It was not until 1790 that he won the title.", "It was until 1790 not that he won the title.", "It was not 1790 until that he won the title.", "It was until not 1790 that he won the title."] },
+    { "stem": "你想说\"门多萨十几岁就成名了\"(rise to fame):", "options": ["Mendoza rose to fame as a teenager.", "Mendoza raised to fame as a teenager.", "Mendoza rose to fame raised a teenager.", "Mendoza was risen to fame as a teenager."] },
+    { "stem": "你想说\"他受到贫富一致的爱戴\"(被动 by):", "options": ["He was adored by rich and poor alike.", "He was adored with rich and poor alike.", "He adored by rich and poor alike.", "He was adore by rich and poor alike."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "eminent 的意思是:", "options": ["著名的,杰出的", "普通的", "年轻的", "害羞的"] },
+    { "kind": "vocab", "stem": "poverty 的意思是:", "options": ["贫困", "财富", "舒适", "名声"] },
+    { "kind": "grammar", "stem": "\"Gloves were ___ introduced until 1860.\"(“直到…才”)", "stem_cn": "直到1860年才用上手套。", "options": ["not", "no", "never", "none"] },
+    { "kind": "grammar", "stem": "\"Mendoza ___ to fame as a teenager.\"(“成名”用哪个)", "stem_cn": "门多萨十几岁就成名了。", "options": ["rose", "raised", "rise", "raise"] },
+    { "kind": "scenario", "stem": "\"rise to fame\" 的意思是:", "options": ["成名,声名鹊起", "抬高价格", "举起手臂", "早早起床"] },
+    { "kind": "scenario", "stem": "\"fall into debt\" 的意思是:", "options": ["负债,陷入债务", "摔进坑里", "存下钱来", "生意兴隆"] },
+    { "kind": "reading", "stem": "Who trained Mendoza at first?", "options": ["Richard Humphries", "Lord Byron", "A nobleman", "Gentleman Jackson"], "passage": true },
+    { "kind": "reading", "stem": "Why did Mendoza end his life in poverty?", "options": ["He was too extravagant with money", "He gave all his money away", "He was robbed of everything", "He never earned much at all"], "passage": true },
+    { "kind": "listening", "stem": "In what year did Mendoza become Champion of England?", "options": ["1790", "1764", "1860", "1836"], "audio": true },
+    { "kind": "listening", "stem": "Who was one of Mendoza's famous pupils?", "options": ["Lord Byron", "Richard Humphries", "A younger fighter", "The nobleman"], "audio": true }
+  ]
+}

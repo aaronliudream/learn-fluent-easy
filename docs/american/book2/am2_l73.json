@@ -1,0 +1,131 @@
+{
+  "id": "am2_l73",
+  "unit_no": 10,
+  "lesson_no": 73,
+  "title_en": "The record-holder",
+  "title_cn": "纪录保持者",
+  "grammar_focus": "KS1/25/49 简单句·并列句·复合句复习(教材 L73 Key structures):用连词把句子连成简单句/并列句/复合句——who·whose(定语)、when·as、after+分词、although·in spite of the fact that、not only...but...as well、such...that、before;辅以课文被动语态复习(was given / was picked up / wasn't noticed by anyone)与词汇辨析 evade/ashamed/imagination",
+  "scene": "逃学的孩子们都缺乏想象力。他们通常能做到的,至多也就是安静地钓上一天鱼,或在电影院里连着看上8个小时同一部电影。而有那么一个小男孩,他在逃学期间旅行了1600英里,使上述所有逃学的孩子都相形见绌。他搭便车到了多佛,天快黑时钻进了一条船,想找个地方睡觉。第二天早上他醒来时,发现船在这段时间已经到了加莱。当男孩从船里爬出来时,谁也没有发现他。从那里他又搭卡车到了巴黎。司机给了他几块饼干和一杯咖啡,就把他丢在了城外。男孩截住的下一辆车,没有像他希望的那样把他带到巴黎市中心,而是把他带到了法国和西班牙边界上的佩皮尼昂。他在那儿被一个警察抓住了,之后被当局送回了英国。他无疑为成千上万梦想逃避上学的孩子们创造了一项纪录。",
+  "grammar_card": {
+    "title": "KS1/25/49 简单句·并列句·复合句复习",
+    "intro": "本课复习“用连词把几句话连成一句”:①who/whose——把“人”和对他的描述连起来(a boy who traveled 1,600 miles;the man whose book was published);②when/as——“当…时”(When he woke up… / as he crept off);③after + 分词——“被…之后”(After being picked up…);④although / in spite of the fact that——“尽管”;⑤not only…but…as well——“不仅…而且”;⑥such…that——“如此…以致”;⑦before——“在…之前”。另配课文被动复习:was given / was picked up / wasn't noticed by anyone。",
+    "table": {
+      "headers": ["连词", "作用与例子"],
+      "rows": [
+        ["who / whose", "连接人与描述:a boy who traveled 1,600 miles"],
+        ["when / as", "表时间:When he woke up… / as he crept off"],
+        ["although / in spite of the fact that", "表尽管:Although the police searched everywhere…"],
+        ["not only…but…as well", "表递进:not only reached the top but spent the night as well"],
+        ["such…that / before", "such a fright that… / before help arrived"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语里“卡车”说 truck(英式 lorry)、“饼干”说 cookie(英式 biscuit)、“电影院”说 movie theater(英式 cinema)、“电影”说 movie(英式 film);本课已按美语改写课文。", "mark": "truck/cookie/movie" },
+      { "rule": "词汇辨析:evade=逃避、逃离(=escape);ashamed=感到羞愧(shameful=可耻的,修饰事);imagination=想象力(名词)。", "mark": "evade/ashamed" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Did the boy go where he wanted to?",
+    "options": ["No — he wanted the center of Paris but ended up at Perpignan on the border", "Yes — he reached the center of Paris", "Yes — he went straight home", "No — he never left England"],
+    "answer_index": 0
+  },
+  "passage": "Children who play truant from school are unimaginative. A quiet day's fishing, or eight hours in a movie theater seeing the same movie over and over again, is usually as far as they get. They have all been put to shame by a boy who, while playing truant, traveled 1,600 miles. He hitchhiked to Dover and, toward evening, went into a boat to find somewhere to sleep. When he woke up next morning, he discovered that the boat had, in the meantime, traveled to Calais. No one noticed the boy as he crept off. From there, he hitchhiked to Paris in a truck. The driver gave him a few cookies and a cup of coffee and left him just outside the city. The next car the boy stopped did not take him into the center of Paris as he hoped it would, but to Perpignan on the French-Spanish border. There he was picked up by a policeman and sent back to England by the local authorities. He has surely set up a record for the thousands of children who dream of evading school.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Children who play truant from school are unimaginative. A quiet day's fishing, or eight hours in a movie theater seeing the same movie over and over again, is usually as far as they get.", "text_cn": "逃学的孩子们都缺乏想象力。他们通常能做到的,至多也就是安静地钓上一天鱼,或在电影院里连着看上8个小时同一部电影。" },
+    { "seq": 2, "speaker": null, "text_en": "They have all been put to shame by a boy who, while playing truant, traveled 1,600 miles. He hitchhiked to Dover and, toward evening, went into a boat to find somewhere to sleep.", "text_cn": "而有那么一个小男孩,他在逃学期间旅行了1600英里,使上述所有逃学的孩子都相形见绌。他搭便车到了多佛,天快黑时钻进了一条船,想找个地方睡觉。" },
+    { "seq": 3, "speaker": null, "text_en": "When he woke up next morning, he discovered that the boat had, in the meantime, traveled to Calais. No one noticed the boy as he crept off. From there, he hitchhiked to Paris in a truck.", "text_cn": "第二天早上他醒来时,发现船在这段时间已经到了加莱。当男孩从船里爬出来时,谁也没有发现他。从那里他又搭卡车到了巴黎。" },
+    { "seq": 4, "speaker": null, "text_en": "The driver gave him a few cookies and a cup of coffee and left him just outside the city. The next car the boy stopped did not take him into the center of Paris as he hoped it would, but to Perpignan on the French-Spanish border.", "text_cn": "司机给了他几块饼干和一杯咖啡,就把他丢在了城外。男孩截住的下一辆车,没有像他希望的那样把他带到巴黎市中心,而是把他带到了法国和西班牙边界上的佩皮尼昂。" },
+    { "seq": 5, "speaker": null, "text_en": "There he was picked up by a policeman and sent back to England by the local authorities. He has surely set up a record for the thousands of children who dream of evading school.", "text_cn": "他在那儿被一个警察抓住了,之后被当局送回了英国。他无疑为成千上万梦想逃避上学的孩子们创造了一项纪录。" }
+  ],
+  "words": [
+    { "word": "record-holder", "ipa": "/ˈrekərd ˌhoʊldər/", "pos": "n", "meaning_cn": "纪录保持者", "example": "The record-holder" },
+    { "word": "truant", "ipa": "/ˈtruːənt/", "pos": "n", "meaning_cn": "逃学的孩子", "example": "Children who play truant from school" },
+    { "word": "unimaginative", "ipa": "/ˌʌnɪˈmædʒɪnətɪv/", "pos": "adj", "meaning_cn": "缺乏想象力的", "example": "Children who play truant are unimaginative" },
+    { "word": "shame", "ipa": "/ʃeɪm/", "pos": "n", "meaning_cn": "惭愧,羞耻", "example": "put to shame by a boy" },
+    { "word": "hitchhike", "ipa": "/ˈhɪtʃhaɪk/", "pos": "v", "meaning_cn": "搭便车旅行", "example": "He hitchhiked to Dover" },
+    { "word": "meantime", "ipa": "/ˈmiːntaɪm/", "pos": "n", "meaning_cn": "其间,同时", "example": "in the meantime" },
+    { "word": "truck", "ipa": "/trʌk/", "pos": "n", "meaning_cn": "卡车", "example": "he hitchhiked to Paris in a truck" },
+    { "word": "border", "ipa": "/ˈbɔːrdər/", "pos": "n", "meaning_cn": "边界", "example": "on the French-Spanish border" },
+    { "word": "evade", "ipa": "/ɪˈveɪd/", "pos": "v", "meaning_cn": "逃避,逃离", "example": "children who dream of evading school" },
+    { "word": "authorities", "ipa": "/əˈθɔːrətiz/", "pos": "n", "meaning_cn": "当局,官方", "example": "sent back to England by the local authorities" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "定语连词 who / whose" },
+    { "gp": "gp2", "name": "时间/伴随 when / as / after+分词" },
+    { "gp": "gp3", "name": "让步 although / in spite of the fact that / though" },
+    { "gp": "gp4", "name": "并列与结果 not only...but...as well / such...that / before" },
+    { "gp": "gp5", "name": "课文被动复习(was given / was picked up / wasn't noticed by anyone)" },
+    { "gp": "gp6", "name": "词汇辨析 evade / ashamed / imagination" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Children ___ play truant from school are unimaginative.\"(用连词把“孩子”和“逃学”连起来,指人作主语)", "stem_cn": "逃学的孩子缺乏想象力。", "options": ["who", "which", "whose", "whom"] },
+    { "gp": "gp1", "stem": "\"They were put to shame by a boy ___ traveled 1,600 miles.\"(指人作主语的连词)", "stem_cn": "他们都被一个走了1600英里的男孩比得相形见绌。", "options": ["who", "which", "whose", "where"] },
+    { "gp": "gp1", "stem": "\"James Sullivan, ___ book was published recently, will give a lecture.\"(表“他的书”的所属连词)", "stem_cn": "詹姆斯·沙利文将做讲座,他的书最近刚出版。", "options": ["whose", "who", "which", "who is"] },
+    { "gp": "gp2", "stem": "\"___ he woke up next morning, he discovered the boat had traveled to Calais.\"(“当…时”的时间连词)", "stem_cn": "第二天早上他醒来时,发现船已开到了加莱。", "options": ["When", "Which", "What", "Who"] },
+    { "gp": "gp2", "stem": "\"No one noticed the boy ___ he crept off the boat.\"(“正当…时”的连词)", "stem_cn": "男孩溜下船时,没人注意到他。", "options": ["as", "so", "or", "for"] },
+    { "gp": "gp2", "stem": "\"___ picked up by a policeman, he was sent back to England.\"(用“被…之后”的分词短语开头)", "stem_cn": "被警察带走后,他被送回了英国。", "options": ["After being", "After he picked up", "After picking up", "After been"] },
+    { "gp": "gp3", "stem": "\"___ the police searched everywhere, the missing boy could not be found.\"(“尽管”的让步连词)", "stem_cn": "尽管警察到处搜寻,还是找不到那个失踪的男孩。", "options": ["Although", "Because", "So", "Unless"] },
+    { "gp": "gp3", "stem": "\"In spite of the fact ___ fares have increased, the company is still losing money.\"(引出后面的说明内容)", "stem_cn": "尽管票价上涨,公司仍在亏损。", "options": ["that", "which", "what", "why"] },
+    { "gp": "gp3", "stem": "\"___ very tired, he kept on walking.\"(“尽管…”的让步连词,后接形容词)", "stem_cn": "尽管很累,他还是继续往前走。", "options": ["Though", "Because", "So", "Unless"] },
+    { "gp": "gp4", "stem": "\"The climbers ___ reached the top but spent the night there as well.\"(“不仅…而且”的前半)", "stem_cn": "登山者不仅登了顶,还在那里过了夜。", "options": ["not only", "only", "either", "neither"] },
+    { "gp": "gp4", "stem": "\"He gave me ___ a fright that I knocked the teapot over.\"(“如此…以致”:接名词短语用哪个词)", "stem_cn": "他把我吓了一大跳,我把茶壶都碰翻了。", "options": ["such", "so", "very", "too"] },
+    { "gp": "gp4", "stem": "\"He fought the wolves off for three hours ___ help arrived.\"(“在…之前”的时间连词)", "stem_cn": "在救援到来之前,他与狼搏斗了三个小时。", "options": ["before", "after", "since", "until"] },
+    { "gp": "gp5", "stem": "\"The boy ___ a few cookies by the driver.\"(被动:被给了几块饼干)", "stem_cn": "男孩被司机给了几块饼干。", "options": ["was given", "gave", "was giving", "has given"] },
+    { "gp": "gp5", "stem": "\"There he ___ by a policeman and sent back to England.\"(一般过去被动:被带走)", "stem_cn": "在那儿他被一名警察带走,并被送回了英国。", "options": ["was picked up", "picked up", "was picking up", "has picked up"] },
+    { "gp": "gp5", "stem": "\"He crept off the boat and ___ by anyone.\"(否定被动:没被任何人注意到)", "stem_cn": "他溜下了船,没被任何人注意到。", "options": ["wasn't noticed", "didn't notice", "wasn't noticing", "hasn't noticed"] },
+    { "gp": "gp6", "stem": "\"Thousands of children dream of ___ school.\"(逃避、逃学用哪个词)", "stem_cn": "成千上万的孩子梦想逃学。", "options": ["evading", "preventing", "refusing", "denying"] },
+    { "gp": "gp6", "stem": "\"They have been put to shame; they should feel ___.\"(感到羞愧用哪个词)", "stem_cn": "他们被比得很难堪,应该感到羞愧。", "options": ["ashamed", "shameful", "shame", "shyness"] },
+    { "gp": "gp6", "stem": "\"They haven't much ___; that's why they are unimaginative.\"(缺乏“想象力”这个名词)", "stem_cn": "他们缺乏想象力,所以做事没新意。", "options": ["imagination", "imaginary", "imaginative", "image"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"卡车\"常说:", "options": ["truck", "lorry", "big-car", "load-car"] },
+    { "stem": "美语里\"饼干\"常说:", "options": ["cookie", "biscuit", "bread-cake", "sweet-bread"] },
+    { "stem": "truant 的意思是:", "options": ["逃学的孩子", "优等生", "老师", "校长"] },
+    { "stem": "hitchhike 的意思是:", "options": ["搭便车旅行", "徒步登山", "骑车比赛", "乘船出海"] },
+    { "stem": "evade 的意思是:", "options": ["逃避,逃离", "面对", "参加", "完成"] },
+    { "stem": "shame 的意思是:", "options": ["惭愧,羞耻", "骄傲", "快乐", "愤怒"] }
+  ],
+  "contrast": [
+    { "us": "truck", "uk": "lorry", "note_cn": "卡车;美语 truck,英式 lorry" },
+    { "us": "cookie", "uk": "biscuit", "note_cn": "饼干;美语 cookie,英式 biscuit" },
+    { "us": "movie theater", "uk": "cinema", "note_cn": "电影院;美语 movie theater,英式 cinema" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" }
+  ],
+  "chunks": [
+    { "us": "put sb to shame", "ipa": "/pʊt tə ʃeɪm/", "example1": "They were all put to shame by a boy who traveled 1,600 miles.", "example1_cn": "他们都被一个走了1600英里的男孩比得相形见绌。", "example2": "Her hard work put the rest of us to shame.", "example2_cn": "她的勤奋让我们其余人都自愧不如。" },
+    { "us": "as far as sb gets", "ipa": "/æz fɑːr æz ɡets/", "example1": "A quiet day's fishing is usually as far as they get.", "example1_cn": "安静地钓一天鱼,至多也就到这个程度了。", "example2": "A short walk is as far as he gets these days.", "example2_cn": "如今他至多也就散散步。" },
+    { "us": "set up a record", "ipa": "/set ʌp ə ˈrekərd/", "example1": "He has surely set up a record.", "example1_cn": "他无疑创造了一项纪录。", "example2": "The young runner set up a new record.", "example2_cn": "这位年轻跑者创造了一项新纪录。" },
+    { "us": "dream of doing", "ipa": "/driːm əv ˈduːɪŋ/", "example1": "Thousands of children dream of evading school.", "example1_cn": "成千上万的孩子梦想逃学。", "example2": "She dreams of traveling around the world.", "example2_cn": "她梦想环游世界。" }
+  ],
+  "stage7_cloze": {
+    "context": "Children ___1___ play truant are unimaginative. One boy, however, traveled 1,600 miles. ___2___ he woke up on the boat, he found it had crossed to Calais. He hitchhiked to Paris in a truck, and later ___3___ picked up by a policeman. He has surely ___4___ up a record.",
+    "blanks": [
+      { "blank_no": 1, "options": ["who", "which", "whose", "where"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["When", "Which", "What", "Who"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["was", "were", "is", "has"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["set", "sat", "put", "made"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What do children who play truant usually do, according to the passage?", "options": ["Go fishing or sit in a movie theater watching the same movie", "Travel to other countries", "Read books at the library", "Help their parents at work"] },
+    { "stem": "How far did this one boy travel while playing truant?", "options": ["About 1,600 miles", "About 16 miles", "About 160 miles", "About 6,000 miles"] },
+    { "stem": "Where was the boy finally picked up, and by whom?", "options": ["At Perpignan, by a policeman", "In Dover, by his father", "In Calais, by a sailor", "In Paris, by a driver"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"逃学的孩子缺乏想象力\"(用 who 把两句话连成一句):", "options": ["Children who play truant are unimaginative.", "Children which play truant are unimaginative.", "Children whose play truant are unimaginative.", "Children where play truant are unimaginative."] },
+    { "stem": "你想说\"被警察带走后,他被送回了英国\"(过去被动):", "options": ["After being picked up by a policeman, he was sent back to England.", "After being picked up by a policeman, he sent back to England.", "After picked up by a policeman, he was sent back to England.", "After being pick up by a policeman, he was sent back to England."] },
+    { "stem": "你想说\"尽管警察到处搜寻,还是没找到那个男孩\"(用 although 表尽管):", "options": ["Although the police searched everywhere, the boy could not be found.", "Because the police searched everywhere, the boy could not be found.", "Although the police searched everywhere, but the boy could not be found.", "So the police searched everywhere, the boy could not be found."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "evade 的意思是:", "options": ["逃避,逃离", "面对", "参加", "完成"] },
+    { "kind": "vocab", "stem": "truant 的意思是:", "options": ["逃学的孩子", "优等生", "老师", "校长"] },
+    { "kind": "grammar", "stem": "\"Children ___ play truant are unimaginative.\"(指人、把两句连起来)", "stem_cn": "逃学的孩子缺乏想象力。", "options": ["who", "which", "whose", "where"] },
+    { "kind": "grammar", "stem": "\"There he ___ by a policeman and sent back to England.\"(一般过去被动)", "stem_cn": "在那儿他被一名警察带走。", "options": ["was picked up", "picked up", "was picking up", "has picked up"] },
+    { "kind": "scenario", "stem": "\"put sb to shame\" 的意思是:", "options": ["使某人相形见绌、自愧不如", "当众批评某人", "向某人道歉", "羞辱并伤害某人"] },
+    { "kind": "scenario", "stem": "although 这个词表示的意思是:", "options": ["尽管、虽然", "因为", "所以", "如果"] },
+    { "kind": "reading", "stem": "How did the boy get from Dover across the water to Calais?", "options": ["He fell asleep in a boat that crossed over during the night", "He swam across the sea", "He flew in a small plane", "He walked over a bridge"], "passage": true },
+    { "kind": "reading", "stem": "Why is the boy called a record-holder?", "options": ["He traveled 1,600 miles while playing truant, farther than any other truant", "He won a school race", "He read the most books in his class", "He built the fastest car"], "passage": true },
+    { "kind": "listening", "stem": "How far did the boy travel?", "options": ["About 1,600 miles", "About 16 miles", "About 600 miles", "About 60 miles"], "audio": true },
+    { "kind": "listening", "stem": "Who picked the boy up in the end?", "options": ["A policeman at Perpignan", "His father at Dover", "A truck driver in Paris", "A sailor on the boat"], "audio": true }
+  ]
+}

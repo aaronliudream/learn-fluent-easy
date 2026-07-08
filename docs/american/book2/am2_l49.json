@@ -1,0 +1,136 @@
+{
+  "id": "am2_l49",
+  "unit_no": 7,
+  "lesson_no": 49,
+  "title_en": "The end of a dream",
+  "title_cn": "美梦告终",
+  "grammar_focus": "复合句/从属连词(教材 Unit 3 主考:用 when/as/while/because/although/until/after 把简单句连成复合句)——because 原因、when 时间、although 让步、not…until 直到才、after 先后;be tired of、save up、blow up、send sth doing(辅考·课文①类)",
+  "scene": "德黑兰的一个年轻人厌倦了睡地板,攒了多年的钱买了一张真正的床。他平生第一次自豪地拥有了一张既有弹簧又带床垫的床。由于天气很热,他把床搬到了屋顶上。头两晚他睡得非常好,但第三天夜里刮起了风暴。一阵大风把床从屋顶上刮了下来,把它摔碎在下面的院子里。年轻人直到床撞到地上才醒了过来。尽管床摔得粉碎,他却奇迹般地毫发无伤——醒来时还在床垫上。他望着四周的木片和金属碎片,伤心地捡起床垫搬回屋里;把床垫放到地板上后,又立刻睡着了。",
+  "grammar_card": {
+    "title": "复合句:用从属连词连接两个句子",
+    "intro": "从这一单元起,学习用从属连词把两个简单句连成一个复合句:because(因为)、when(当…时)、although(虽然)、until(直到)、after(在…之后)。连词引导的部分叫从句,可放主句前面或后面。全用本课句子举例。",
+    "table": {
+      "headers": ["连词", "例子"],
+      "rows": [
+        ["because(因为)", "Because the weather was hot, he carried the bed onto the roof."],
+        ["when(当…时)", "When he woke up, he was still on the mattress."],
+        ["although(虽然)", "Although the bed was smashed, the man was unhurt."],
+        ["not…until(直到…才)", "He did not wake up until the bed had struck the ground."],
+        ["after(在…之后)", "After he had put it on the floor, he went to sleep."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "not…until 表'直到…才…':He did not wake up until the bed had struck the ground(直到床落地他才醒)。", "mark": "not…until = 直到才" },
+      { "rule": "although(虽然)不能和 but 连用:Although…, the man was unhurt(不能写成 Although…, but…)。", "mark": "although 不配 but" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How did the dream end?",
+    "options": ["A storm swept the new bed off the roof and smashed it to pieces", "He slept peacefully on it for years", "He gave the bed away", "The bed was stolen"],
+    "answer_index": 0
+  },
+  "passage": "Tired of sleeping on the floor, a young man in Tehran saved up for years to buy a real bed. For the first time in his life, he became the proud owner of a bed which had springs and a mattress. Because the weather was very hot, he carried the bed onto the roof of his house. He slept very well for the first two nights, but on the third night, a storm blew up. A gust of wind swept the bed off the roof and sent it crashing into the courtyard below. The young man did not wake up until the bed had struck the ground. Although the bed was smashed to pieces, the man was miraculously unhurt. When he woke up, he was still on the mattress. Glancing at the bits of wood and metal that lay around him, the man sadly picked up the mattress and carried it into his house. After he had put it on the floor, he promptly went to sleep again.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Tired of sleeping on the floor, a young man in Tehran saved up for years to buy a real bed.", "text_cn": "厌倦了睡地板,德黑兰的一个年轻人攒了多年的钱买了一张真正的床。" },
+    { "seq": 2, "speaker": null, "text_en": "For the first time in his life, he became the proud owner of a bed which had springs and a mattress.", "text_cn": "他平生第一次自豪地拥有了一张既有弹簧又带床垫的床。" },
+    { "seq": 3, "speaker": null, "text_en": "Because the weather was very hot, he carried the bed onto the roof of his house.", "text_cn": "由于天气很热,他把床搬到了屋顶上。" },
+    { "seq": 4, "speaker": null, "text_en": "He slept very well for the first two nights, but on the third night, a storm blew up.", "text_cn": "头两晚他睡得非常好,但第三天夜里刮起了风暴。" },
+    { "seq": 5, "speaker": null, "text_en": "A gust of wind swept the bed off the roof and sent it crashing into the courtyard below.", "text_cn": "一阵大风把床从屋顶上刮了下来,把它摔碎在下面的院子里。" },
+    { "seq": 6, "speaker": null, "text_en": "The young man did not wake up until the bed had struck the ground.", "text_cn": "年轻人直到床撞到地上才醒了过来。" },
+    { "seq": 7, "speaker": null, "text_en": "Although the bed was smashed to pieces, the man was miraculously unhurt. When he woke up, he was still on the mattress.", "text_cn": "尽管床摔得粉碎,他却奇迹般地毫发无伤;醒来时还在床垫上。" },
+    { "seq": 8, "speaker": null, "text_en": "Glancing at the bits of wood and metal that lay around him, the man sadly picked up the mattress and carried it into his house. After he had put it on the floor, he promptly went to sleep again.", "text_cn": "他望着四周的木片和金属碎片,伤心地捡起床垫搬回屋里;放到地板上后,又立刻睡着了。" }
+  ],
+  "words": [
+    { "word": "tired", "ipa": "/taɪrd/", "pos": "adj", "meaning_cn": "厌倦的;疲倦的", "example": "Tired of sleeping on the floor" },
+    { "word": "owner", "ipa": "/ˈoʊnər/", "pos": "n", "meaning_cn": "主人,拥有者", "example": "the proud owner of a bed" },
+    { "word": "mattress", "ipa": "/ˈmætrəs/", "pos": "n", "meaning_cn": "床垫", "example": "a bed which had springs and a mattress" },
+    { "word": "gust", "ipa": "/ɡʌst/", "pos": "n", "meaning_cn": "一阵风", "example": "A gust of wind" },
+    { "word": "sweep", "ipa": "/swiːp/", "pos": "v", "meaning_cn": "扫,刮", "example": "swept the bed off the roof" },
+    { "word": "courtyard", "ipa": "/ˈkɔːrtjɑːrd/", "pos": "n", "meaning_cn": "院子", "example": "into the courtyard below" },
+    { "word": "smash", "ipa": "/smæʃ/", "pos": "v", "meaning_cn": "碰碎,摔碎", "example": "the bed was smashed to pieces" },
+    { "word": "miraculously", "ipa": "/mɪˈrækjələsli/", "pos": "adv", "meaning_cn": "奇迹般地", "example": "miraculously unhurt" },
+    { "word": "unhurt", "ipa": "/ʌnˈhɜːrt/", "pos": "adj", "meaning_cn": "没有受伤的", "example": "the man was miraculously unhurt" },
+    { "word": "promptly", "ipa": "/ˈprɑːmptli/", "pos": "adv", "meaning_cn": "迅速地,立即", "example": "he promptly went to sleep again" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "because(原因状语从句)" },
+    { "gp": "gp2", "name": "when(时间状语从句)" },
+    { "gp": "gp3", "name": "although(让步状语从句)" },
+    { "gp": "gp4", "name": "not…until(直到…才)" },
+    { "gp": "gp5", "name": "after(时间先后)" },
+    { "gp": "gp6", "name": "be tired of(辅考)" },
+    { "gp": "gp7", "name": "save up / blow up(辅考)" },
+    { "gp": "gp8", "name": "send sth doing(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ the weather was very hot, he carried the bed onto the roof.\"(原因:因为)", "stem_cn": "因为天很热,他把床搬到了屋顶。", "options": ["Because", "Although", "When", "Until"] },
+    { "gp": "gp1", "stem": "\"He slept on the roof ___ his room was too hot.\"(原因:因为)", "stem_cn": "他睡在屋顶,因为房间太热。", "options": ["because", "although", "until", "before"] },
+    { "gp": "gp1", "stem": "\"___ he was tired of the floor, he saved up for a bed.\"(原因:因为)", "stem_cn": "因为厌倦了睡地板,他攒钱买床。", "options": ["Because", "Although", "Until", "After"] },
+    { "gp": "gp2", "stem": "\"___ he woke up, he was still on the mattress.\"(时间:当…时)", "stem_cn": "当他醒来时,还在床垫上。", "options": ["When", "Because", "Although", "Until"] },
+    { "gp": "gp2", "stem": "\"He was fast asleep ___ the storm blew up.\"(时间:当…时)", "stem_cn": "暴风雨刮起时他正熟睡着。", "options": ["when", "because", "although", "unless"] },
+    { "gp": "gp3", "stem": "\"___ the bed was smashed to pieces, the man was unhurt.\"(让步:虽然)", "stem_cn": "虽然床摔碎了,那人却没受伤。", "options": ["Although", "Because", "When", "Until"] },
+    { "gp": "gp3", "stem": "\"___ it was very late, he went to sleep again.\"(让步:虽然)", "stem_cn": "虽然很晚了,他又睡着了。", "options": ["Although", "Because", "Until", "So"] },
+    { "gp": "gp3", "stem": "\"The man was unhurt ___ the bed was completely destroyed.\"(让步:尽管)", "stem_cn": "尽管床彻底毁了,那人却没受伤。", "options": ["although", "because", "until", "so"] },
+    { "gp": "gp4", "stem": "\"He did not wake up ___ the bed had struck the ground.\"(直到…才)", "stem_cn": "直到床落地他才醒。", "options": ["until", "when", "because", "although"] },
+    { "gp": "gp4", "stem": "\"The man did ___ wake up until the bed hit the ground.\"(直到…才…,前半句用否定词)", "stem_cn": "直到床落地那人才醒。", "options": ["not", "never", "hardly", "seldom"] },
+    { "gp": "gp4", "stem": "\"I will not leave ___ you come back.\"(直到…才)", "stem_cn": "你不回来我就不走。", "options": ["until", "when", "because", "although"] },
+    { "gp": "gp5", "stem": "\"___ he had put the mattress on the floor, he went to sleep.\"(在…之后)", "stem_cn": "把床垫放到地上之后,他睡着了。", "options": ["After", "Because", "Although", "Until"] },
+    { "gp": "gp5", "stem": "\"He carried the mattress inside ___ the storm had passed.\"(在…之后)", "stem_cn": "暴风雨过后他把床垫搬进屋。", "options": ["after", "because", "although", "unless"] },
+    { "gp": "gp6", "stem": "\"The young man was tired ___ sleeping on the floor.\"(对…感到厌倦的固定搭配)", "stem_cn": "这年轻人厌倦了睡地板。", "options": ["of", "with", "at", "for"] },
+    { "gp": "gp6", "stem": "\"She is tired ___ waiting for the bus.\"(对…感到厌倦的固定搭配)", "stem_cn": "她等公交等烦了。", "options": ["of", "with", "at", "for"] },
+    { "gp": "gp7", "stem": "\"He ___ for years to buy a real bed.\"(攒钱、积攒)", "stem_cn": "他攒了好几年钱买张真正的床。", "options": ["saved up", "saved out", "saved off", "saved in"] },
+    { "gp": "gp7", "stem": "\"On the third night, a storm ___.\"(暴风雨刮起、加剧)", "stem_cn": "第三天夜里刮起了暴风雨。", "options": ["blew up", "blew out", "blew off", "blew in"] },
+    { "gp": "gp8", "stem": "\"The wind swept the bed off the roof and sent it ___ into the courtyard.\"(使某物一路…下去,后接 -ing)", "stem_cn": "风把床从屋顶刮下,使它摔进院子。", "options": ["crashing", "to crash", "crash", "crashed"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"(房子的)院子\"常说:", "options": ["yard", "courtyard", "garden", "court"] },
+    { "stem": "美语里\"一楼(地面层)\"常说:", "options": ["first floor", "ground floor", "floor one", "base floor"] },
+    { "stem": "tired 的意思是:", "options": ["厌倦的;疲倦的", "兴奋的", "饥饿的", "害怕的"] },
+    { "stem": "smash 的意思是:", "options": ["碰碎,摔碎", "修理", "搬运", "购买"] },
+    { "stem": "glance 的意思是:", "options": ["扫视,一瞥", "凝视", "闭眼", "眨眼"] },
+    { "stem": "promptly 的意思是:", "options": ["迅速地,立即", "缓慢地", "偶尔地", "小心地"] }
+  ],
+  "contrast": [
+    { "us": "yard", "uk": "garden", "note_cn": "院子;美语 yard,英式 garden(课文 courtyard 院子)" },
+    { "us": "first floor", "uk": "ground floor", "note_cn": "一楼;美语 first floor=地面层,英式 ground floor(英式 first floor=二楼)" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat(住房场景)" },
+    { "us": "closet", "uk": "wardrobe", "note_cn": "壁橱;美语 closet,英式 wardrobe(卧室家具)" }
+  ],
+  "chunks": [
+    { "us": "be tired of", "ipa": "/bi taɪrd ʌv/", "example1": "He was tired of sleeping on the floor.", "example1_cn": "他厌倦了睡地板。", "example2": "I'm tired of waiting.", "example2_cn": "我等烦了。" },
+    { "us": "not ... until", "ipa": "/nɑːt ... ənˈtɪl/", "example1": "He did not wake up until the bed struck the ground.", "example1_cn": "直到床落地他才醒。", "example2": "I won't go until you come.", "example2_cn": "你不来我就不走。" },
+    { "us": "save up", "ipa": "/seɪv ʌp/", "example1": "He saved up for years to buy a bed.", "example1_cn": "他攒了好几年钱买床。", "example2": "She is saving up for a trip.", "example2_cn": "她在攒钱旅行。" },
+    { "us": "send sth crashing", "ipa": "/send ... ˈkræʃɪŋ/", "example1": "The wind sent the bed crashing into the courtyard.", "example1_cn": "风把床刮得摔进院子。", "example2": "He sent the vase crashing to the floor.", "example2_cn": "他把花瓶碰得摔到地上。" }
+  ],
+  "stage7_cloze": {
+    "context": "A young man saved up for years ___1___ he was tired of sleeping on the floor. ___2___ the weather was hot, he carried the bed onto the roof. ___3___ a storm smashed the bed, he was miraculously unhurt. He did not wake up ___4___ the bed hit the ground.",
+    "blanks": [
+      { "blank_no": 1, "options": ["because", "although", "until", "when"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["Because", "Although", "Until", "After"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["Although", "Because", "Until", "When"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["until", "when", "because", "although"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did the young man buy a real bed?", "options": ["He was tired of sleeping on the floor", "His old bed broke", "It was a gift", "He wanted to sell it"] },
+    { "stem": "Why did he carry the bed onto the roof?", "options": ["Because the weather was very hot", "To hide it from thieves", "To dry it in the sun", "There was no room inside"] },
+    { "stem": "What happened on the third night?", "options": ["A storm swept the bed off the roof", "He slept peacefully", "The bed broke by itself", "He moved back inside"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"因为天很热,他把床搬到屋顶\"(原因用 because):", "options": ["Because the weather was hot, he carried the bed onto the roof.", "Although the weather was hot, he carried the bed onto the roof.", "When the weather was hot, he carried the bed onto the roof.", "Until the weather was hot, he carried the bed onto the roof."] },
+    { "stem": "你想说\"虽然床摔碎了,他却没受伤\"(让步用 although,不配 but):", "options": ["Although the bed was smashed, he was unhurt.", "Although the bed was smashed, but he was unhurt.", "Because the bed was smashed, he was unhurt.", "Until the bed was smashed, he was unhurt."] },
+    { "stem": "你想说\"直到床落地他才醒\"(直到…才用 not...until):", "options": ["He did not wake up until the bed hit the ground.", "He woke up until the bed hit the ground.", "He did not wake up when the bed hit the ground.", "He did wake up until the bed hit the ground."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "smash 的意思是:", "options": ["碰碎,摔碎", "修理", "搬运", "购买"] },
+    { "kind": "vocab", "stem": "promptly 的意思是:", "options": ["迅速地,立即", "缓慢地", "偶尔地", "勉强地"] },
+    { "kind": "grammar", "stem": "\"___ the bed was smashed, the man was unhurt.\"(让步:虽然)", "stem_cn": "虽然床摔碎了,那人却没受伤。", "options": ["Although", "Because", "When", "Until"] },
+    { "kind": "grammar", "stem": "\"He did not wake up ___ the bed had struck the ground.\"(直到…才)", "stem_cn": "直到床落地他才醒。", "options": ["until", "when", "because", "although"] },
+    { "kind": "scenario", "stem": "\"The man was miraculously unhurt.\" 这句话的意思是:", "options": ["那人奇迹般地没有受伤。", "那人受了重伤。", "那人吓坏了。", "那人不见了。"] },
+    { "kind": "scenario", "stem": "\"Tired of sleeping on the floor, he saved up for a real bed.\" 这句话的意思是:", "options": ["因为厌倦了睡地板,他攒钱买了张真正的床。", "他喜欢睡地板。", "他卖掉了自己的床。", "他睡在真正的床上很累。"] },
+    { "kind": "reading", "stem": "Why did the young man not wake up when the bed fell?", "options": ["He was fast asleep and only woke when it hit the ground", "He was not on the bed", "The fall was very gentle", "He was already awake"], "passage": true },
+    { "kind": "reading", "stem": "What did the man do after the bed was destroyed?", "options": ["He picked up the mattress, took it inside, and went to sleep again", "He bought a new bed at once", "He called for help", "He slept on the roof again"], "passage": true },
+    { "kind": "listening", "stem": "How did the dream end?", "options": ["A storm swept the bed off the roof and smashed it", "He sold the bed for a profit", "He slept happily ever after on the roof", "Thieves stole the bed"], "audio": true },
+    { "kind": "listening", "stem": "Was the man hurt when the bed crashed down?", "options": ["No — he was miraculously unhurt, still on the mattress", "Yes — he broke his arm", "Yes — badly", "He was never on the bed"], "audio": true }
+  ]
+}

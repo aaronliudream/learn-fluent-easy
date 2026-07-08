@@ -1,6 +1,8 @@
 /**
- * 美语课程 · 某册单元总览(/american/book/:bookNo)—— 该册 12 单元。
- * 已上线单元(american_lessons 有数据)可进;其余显示"敬请期待"。
+ * 美语课程 · 某册单元总览(/american/book/:bookNo)—— 单元数据驱动。
+ * 单元格子按该册实际存在的 distinct unit_no 渲染(渲染到最大 unit_no):
+ * 第二册96课=12单元、第三册60课=12单元、第四册48课=8单元,各按自己真实单元数,不硬编。
+ * 已上线单元(american_lessons 有数据)可进;内部空缺单元显示"敬请期待"。
  * bookNo 缺省 1(第一册),渲染与改版前 /american 一致(回归点)。
  */
 import { useEffect, useState } from "react";
@@ -10,13 +12,20 @@ import { T } from "@/i18n/T";
 import { fetchUnits, fetchReviewCount, fetchUnitCompletion, type AmericanUnit } from "@/lib/american/data";
 import { AMERICAN_COURSE_NAME, AMERICAN_COURSE_SUBTITLE, AMERICAN_COURSE_SCALE, AMERICAN_COURSE_COVERAGE } from "@/lib/american/brand";
 
-const TOTAL_UNITS = 12;
 const BOOK_LABEL: Record<number, string> = { 1: "第一册", 2: "第二册", 3: "第三册", 4: "第四册" };
 
 // 课本 PDF 公开直链(Supabase 公开桶 textbooks,anon 可读;?download 强制附件下载)。
 // 文件名带版本号,更新出 v2 不覆盖旧缓存。册名与书封面一致(brand 去 1-4册 后缀)。
-const BOOK1_PDF_URL = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/textbooks/american-book1-v1.pdf?download`;
-const BOOK1_TITLE = `${AMERICAN_COURSE_NAME.replace(/1-4册$/, "")} · 第一册`;
+// lessons/mb 与本地全本一致(book1=72课/book2=96/book3=60/book4=48;MB 为实测文件大小)。
+const BOOK_TITLE_BASE = AMERICAN_COURSE_NAME.replace(/1-4册$/, "");
+const BOOK_PDF: Record<number, { file: string; lessons: number; mb: string }> = {
+  1: { file: "american-book1-v1.pdf", lessons: 72, mb: "11" },
+  2: { file: "american-book2-v1.pdf", lessons: 96, mb: "12.8" },
+  3: { file: "american-book3-v1.pdf", lessons: 60, mb: "10.7" },
+  4: { file: "american-book4-v1.pdf", lessons: 48, mb: "9.1" },
+};
+const pdfUrl = (file: string) =>
+  `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/textbooks/${file}?download`;
 
 export default function AmericanHub() {
   const nav = useNavigate();
@@ -42,6 +51,9 @@ export default function AmericanHub() {
   }, [bookNo]);
 
   const available = new Map(units.map((u) => [u.unit_no, u]));
+  // 单元格子数 = 该册实际存在的最大 unit_no(数据驱动,不硬编 12)。
+  // 单元号连续时即等于真实单元数(第四册=8、第二/三册=12);内部若有空缺则该格显示"敬请期待"。
+  const totalUnits = units.length ? Math.max(...units.map((u) => u.unit_no)) : 0;
 
   return (
     <main className="min-h-dvh bg-slate-50">
@@ -57,7 +69,7 @@ export default function AmericanHub() {
           <h1 className="mt-3 text-2xl font-bold">{AMERICAN_COURSE_NAME}</h1>
           <p className="mt-1 text-sm text-white/85">{AMERICAN_COURSE_SUBTITLE}</p>
           <p className="mt-1 text-xs text-white/70"><T>{AMERICAN_COURSE_COVERAGE}</T></p>
-          <span className="mt-3 inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-semibold"><T>{BOOK_LABEL[bookNo] ?? `第${bookNo}册`}</T> · {AMERICAN_COURSE_SCALE}</span>
+          <span className="mt-3 inline-block rounded-full bg-white/15 px-3.5 py-1.5"><span className="text-base font-extrabold"><T>{BOOK_LABEL[bookNo] ?? `第${bookNo}册`}</T></span> <span className="text-xs font-semibold text-white/85">· {AMERICAN_COURSE_SCALE}</span></span>
         </header>
 
         {reviewCount > 0 && (
@@ -74,9 +86,9 @@ export default function AmericanHub() {
           </Link>
         )}
 
-        {bookNo === 1 && (
+        {BOOK_PDF[bookNo] && (
           <a
-            href={BOOK1_PDF_URL}
+            href={pdfUrl(BOOK_PDF[bookNo].file)}
             download
             target="_blank"
             rel="noopener noreferrer"
@@ -85,8 +97,8 @@ export default function AmericanHub() {
               <BookOpen className="size-5" />
             </span>
             <div className="flex-1">
-              <p className="text-sm font-bold text-slate-800">📖 {BOOK1_TITLE}</p>
-              <p className="text-xs text-slate-500"><T>72课完整课本 · 免费下载</T> · <T>约</T> 11 MB</p>
+              <p className="text-sm font-bold text-slate-800">📖 {BOOK_TITLE_BASE} · {BOOK_LABEL[bookNo]}</p>
+              <p className="text-xs text-slate-500">{BOOK_PDF[bookNo].lessons}<T>课完整课本 · 免费下载</T> · <T>约</T> {BOOK_PDF[bookNo].mb} MB</p>
             </div>
             <Download className="size-5 text-sky-400" />
           </a>
@@ -97,7 +109,7 @@ export default function AmericanHub() {
           <p className="py-10 text-center text-sm text-slate-400"><T>加载中…</T></p>
         ) : (
           <div className="grid grid-cols-2 gap-3">
-            {Array.from({ length: TOTAL_UNITS }, (_, k) => k + 1).map((n) => {
+            {Array.from({ length: totalUnits }, (_, k) => k + 1).map((n) => {
               const u = available.get(n);
               const open = !!u;
               return (

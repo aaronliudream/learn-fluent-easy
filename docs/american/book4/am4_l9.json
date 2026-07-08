@@ -1,0 +1,133 @@
+{
+  "id": "am4_l9",
+  "unit_no": 2,
+  "lesson_no": 9,
+  "title_en": "Royal Espionage",
+  "title_cn": "王室谍报",
+  "grammar_focus": "过去完成时(had done,背景先于过去动作)、过去分词短语作状语(Dressed as…/Faced with…/compared with…)、现在分词短语作状语(Living…/harrying…)、before/while/until 引导的时间状语从句、make/keep/find + 名词 + 形容词(a season of comfort had made them soft)(NCE4 无 KS 页,考点由课文结构自取;IP:源为伯纳德·纽曼署名版权散文,已换原创虚构国王 Aldric 与袭掠者、100% 原创行文,只承载语法/词表/话题/篇幅;题材=古代君王亲自扮吟游诗人潜入敌营侦察·无害;美语化 traveled/neighbor;第四册第9课)",
+  "scene": "阿尔德里克王决定亲自当自己的间谍。他装扮成一名流浪的吟游诗人,大摇大摆地走进侵占了他海岸的袭掠者营地——那年头,四处卖唱的歌手到哪儿都受欢迎;这种人不是兵,他们的歌就是通行证。阿尔德里克少年时学过几十首古老的民谣,还能靠几手杂耍和一点简单的戏法,把任何一个夜晚点亮。趁自己那支小军队还在沼泽地里集结,国王悄悄潜入敌人过冬营地的中心。他一眼就看出纪律已经松弛。袭掠者带着从未打过败仗的征服者那种轻松自信,岗哨也守得马马虎虎。他们已在寒冬里安顿下来,靠从周围村庄抢来的一切过着好日子,一季的安逸把他们养软了。阿尔德里克在他们中间待了一周才回到沼泽地。他在那儿集结的兵力,和敌军相比小得可怜,可他已探得一件无价的情报:袭掠者再也经不起一场持久的战役,他们的补给毫无章法,只靠零散劫掠。于是,面对敌人缓慢的推进,阿尔德里克没有去冒险打一场大仗。他让部下始终在移动,不停骚扰敌人、切断他们的觅食小队,直到饥饿替他把活儿干完。不出一个月,那些被拖垮、饿慌了的入侵者投降了——整桩事称得上一部小小的王室谍报史诗。",
+  "grammar_card": {
+    "title": "过去完成时 / 分词作状语 / 时间状语从句 / make+名词+形容词",
+    "intro": "①过去完成时 had + 过去分词,表“过去的过去”(背景):discipline had grown slack。②过去分词短语作状语,表被动/完成:Dressed as a minstrel…；Faced with the advance…；compared with the host。③现在分词短语作状语,表主动/伴随:Living well on stolen food…；harrying the enemy…。④时间连词 before/while/until 引导从句。⑤make/keep/find + 名词 + 形容词:had made them soft。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["过去完成", "had + 过去分词", "discipline had grown slack"],
+        ["过去分词状语", "done…, 主句", "Dressed as a minstrel, he entered"],
+        ["现在分词状语", "doing…, 主句", "harrying the enemy, he moved on"],
+        ["make + 名 + 形", "make sb + 形容词", "had made them soft"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "过去完成时=had + 过去分词,主语不分单复数都用 had;表示比另一个过去动作更早发生。", "mark": "had done" },
+      { "rule": "过去分词短语作状语=被动或已完成(Dressed as…=被装扮成);现在分词短语作状语=主动或正在进行(Living…=正过着)。", "mark": "done… / doing…" },
+      { "rule": "美式拼写:traveled(旅行,英式 travelled)、neighbor(邻居,英式 neighbour)。本课已按美语写。", "mark": "traveled / neighbor" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What important thing did King Aldric learn when he entered the enemy camp?",
+    "options": ["That the raiders' discipline was slack and they could not fight a long war", "That the raiders had more soldiers", "That the raiders wanted to make peace", "That the raiders had already left"],
+    "answer_index": 0
+  },
+  "passage": "King Aldric chose to act as his own spy. Dressed as a wandering minstrel, he walked freely into the camps of the raiders who had overrun his coast, for in those days a traveling minstrel was welcomed everywhere; such men were not soldiers, and their songs were their passport. Aldric had learned dozens of old ballads in his boyhood, and he could brighten any evening with a few acrobatic tricks and a little simple conjuring. While his own small army was still gathering in the marshes, the king slipped into the heart of the enemy's winter camp. He noticed at once that discipline had grown slack. The raiders had the easy confidence of conquerors who had never been beaten, and their guards kept watch carelessly. They had settled in for the cold months, living well on all that they had seized from the villages around, and a season of comfort had made them soft. Aldric stayed among them for a week before he returned to his marshes. The force he had gathered there was tiny compared with the enemy host, yet he had deduced something priceless: the raiders were no longer fit for a prolonged campaign, and their supplies had no real order but depended on scattered plunder. So, faced with the enemy's slow advance, Aldric did not risk one great battle. Instead he kept his men always on the move, harrying the enemy and cutting off their foraging parties until hunger did his work for him. Within a single month the invaders, worn down and starving, had surrendered — and the whole episode could fairly be called a small epic of royal espionage.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "King Aldric chose to act as his own spy. Dressed as a wandering minstrel, he walked freely into the camps of the raiders who had overrun his coast, for in those days a traveling minstrel was welcomed everywhere; such men were not soldiers, and their songs were their passport.", "text_cn": "阿尔德里克王决定亲自当自己的间谍。他装扮成一名流浪的吟游诗人,大摇大摆地走进侵占了他海岸的袭掠者营地——那年头,四处卖唱的歌手到哪儿都受欢迎;这种人不是兵,他们的歌就是通行证。" },
+    { "seq": 2, "speaker": null, "text_en": "Aldric had learned dozens of old ballads in his boyhood, and he could brighten any evening with a few acrobatic tricks and a little simple conjuring. While his own small army was still gathering in the marshes, the king slipped into the heart of the enemy's winter camp.", "text_cn": "阿尔德里克少年时学过几十首古老的民谣,还能靠几手杂耍和一点简单的戏法,把任何一个夜晚点亮。趁自己那支小军队还在沼泽地里集结,国王悄悄潜入敌人过冬营地的中心。" },
+    { "seq": 3, "speaker": null, "text_en": "He noticed at once that discipline had grown slack. The raiders had the easy confidence of conquerors who had never been beaten, and their guards kept watch carelessly. They had settled in for the cold months, living well on all that they had seized from the villages around, and a season of comfort had made them soft.", "text_cn": "他一眼就看出纪律已经松弛。袭掠者带着从未打过败仗的征服者那种轻松自信,岗哨也守得马马虎虎。他们已在寒冬里安顿下来,靠从周围村庄抢来的一切过着好日子,一季的安逸把他们养软了。" },
+    { "seq": 4, "speaker": null, "text_en": "Aldric stayed among them for a week before he returned to his marshes. The force he had gathered there was tiny compared with the enemy host, yet he had deduced something priceless: the raiders were no longer fit for a prolonged campaign, and their supplies had no real order but depended on scattered plunder.", "text_cn": "阿尔德里克在他们中间待了一周才回到沼泽地。他在那儿集结的兵力,和敌军相比小得可怜,可他已探得一件无价的情报:袭掠者再也经不起一场持久的战役,他们的补给毫无章法,只靠零散劫掠。" },
+    { "seq": 5, "speaker": null, "text_en": "So, faced with the enemy's slow advance, Aldric did not risk one great battle. Instead he kept his men always on the move, harrying the enemy and cutting off their foraging parties until hunger did his work for him. Within a single month the invaders, worn down and starving, had surrendered — and the whole episode could fairly be called a small epic of royal espionage.", "text_cn": "于是,面对敌人缓慢的推进,阿尔德里克没有去冒险打一场大仗。他让部下始终在移动,不停骚扰敌人、切断他们的觅食小队,直到饥饿替他把活儿干完。不出一个月,那些被拖垮、饿慌了的入侵者投降了——整桩事称得上一部小小的王室谍报史诗。" }
+  ],
+  "words": [
+    { "word": "espionage", "ipa": "/ˈespiənɑːʒ/", "pos": "n", "meaning_cn": "间谍活动,谍报", "example": "a small epic of royal espionage" },
+    { "word": "minstrel", "ipa": "/ˈmɪnstrəl/", "pos": "n", "meaning_cn": "吟游诗人,流浪歌手", "example": "dressed as a wandering minstrel" },
+    { "word": "wandering", "ipa": "/ˈwɑːndərɪŋ/", "pos": "adj", "meaning_cn": "流浪的,漫游的", "example": "a wandering minstrel" },
+    { "word": "ballad", "ipa": "/ˈbæləd/", "pos": "n", "meaning_cn": "民谣,叙事歌", "example": "dozens of old ballads" },
+    { "word": "acrobatic", "ipa": "/ˌækrəˈbætɪk/", "pos": "adj", "meaning_cn": "杂技的", "example": "a few acrobatic tricks" },
+    { "word": "conjuring", "ipa": "/ˈkʌndʒərɪŋ/", "pos": "n", "meaning_cn": "变戏法,魔术", "example": "a little simple conjuring" },
+    { "word": "slack", "ipa": "/slæk/", "pos": "adj", "meaning_cn": "松弛的,懈怠的", "example": "discipline had grown slack" },
+    { "word": "conqueror", "ipa": "/ˈkɑːŋkərər/", "pos": "n", "meaning_cn": "征服者", "example": "the easy confidence of conquerors" },
+    { "word": "prolonged", "ipa": "/prəˈlɔːŋd/", "pos": "adj", "meaning_cn": "持久的,长时间的", "example": "no longer fit for a prolonged campaign" },
+    { "word": "episode", "ipa": "/ˈepɪsoʊd/", "pos": "n", "meaning_cn": "(一段)经历,事件", "example": "the whole episode could be called an epic" },
+    { "word": "epic", "ipa": "/ˈepɪk/", "pos": "n", "meaning_cn": "史诗", "example": "a small epic of royal espionage" },
+    { "word": "harry", "ipa": "/ˈhæri/", "pos": "v", "meaning_cn": "骚扰,侵扰", "example": "harrying the enemy day and night" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "过去完成时(had done,背景先于过去)" },
+    { "gp": "gp2", "name": "过去分词短语作状语(Dressed as/Faced with/compared with)" },
+    { "gp": "gp3", "name": "现在分词短语作状语(Living/harrying)" },
+    { "gp": "gp4", "name": "时间连词 before/while/until 引导的从句" },
+    { "gp": "gp5", "name": "make/keep/find + 名词 + 形容词" },
+    { "gp": "gp6", "name": "词汇辨析(minstrel/espionage/prolonged)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The raiders ___ overrun his coast before he came.\"(过去完成时,填助动词)", "stem_cn": "在他来之前,袭掠者已侵占了他的海岸。", "options": ["had", "have", "has", "was"] },
+    { "gp": "gp1", "stem": "\"By spring the invaders ___ already surrendered.\"(过去完成时,填助动词)", "stem_cn": "到春天,入侵者已经投降了。", "options": ["had", "have", "did", "were"] },
+    { "gp": "gp1", "stem": "\"Discipline had ___ slack over the winter.\"(过去完成 had + 过去分词;grow 的过去分词)", "stem_cn": "一冬下来纪律已变得松弛。", "options": ["grown", "grew", "grow", "growing"] },
+    { "gp": "gp2", "stem": "\"___ as a wandering minstrel, the king entered the camp.\"(过去分词作状语,‘打扮成…’;dress 的过去分词)", "stem_cn": "装扮成流浪歌手,国王走进了营地。", "options": ["Dressed", "Dressing", "Dress", "To dress"] },
+    { "gp": "gp2", "stem": "\"___ with the enemy's advance, he chose not to fight.\"(过去分词作状语,‘面对…’;face 的过去分词)", "stem_cn": "面对敌人的推进,他选择不正面交战。", "options": ["Faced", "Facing", "Face", "To face"] },
+    { "gp": "gp2", "stem": "\"His force was tiny ___ with the enemy host.\"(过去分词短语,‘与…相比’)", "stem_cn": "与敌军相比,他的部队小得可怜。", "options": ["compared", "comparing", "compare", "compares"] },
+    { "gp": "gp3", "stem": "\"___ well on stolen food, the raiders grew careless.\"(现在分词作状语,主动‘靠…生活’;live 的 -ing)", "stem_cn": "靠抢来的粮食过着好日子,袭掠者变得松懈。", "options": ["Living", "Lived", "Live", "To live"] },
+    { "gp": "gp3", "stem": "\"He kept his men moving, ___ the enemy day and night.\"(现在分词作状语,主动‘骚扰’)", "stem_cn": "他让部下不停移动,日夜骚扰敌人。", "options": ["harrying", "harried", "harry", "to harry"] },
+    { "gp": "gp3", "stem": "\"The king slipped in, ___ every weakness of the camp.\"(现在分词作状语,主动‘注意到’)", "stem_cn": "国王潜入,留意着营地的每一处弱点。", "options": ["noting", "noted", "note", "to note"] },
+    { "gp": "gp4", "stem": "\"He stayed a week ___ he returned to the marshes.\"(‘在…之前’,填时间连词)", "stem_cn": "他待了一周才回到沼泽地。", "options": ["before", "since", "unless", "though"] },
+    { "gp": "gp4", "stem": "\"___ his army was gathering, the king went spying.\"(‘当…的时候’,填时间连词)", "stem_cn": "当他的军队集结时,国王去做间谍。", "options": ["While", "Before", "Unless", "Although"] },
+    { "gp": "gp4", "stem": "\"He did not attack ___ his men were ready.\"(‘直到…才’,填时间连词)", "stem_cn": "不到部下准备就绪,他不发动进攻。", "options": ["until", "since", "although", "whether"] },
+    { "gp": "gp5", "stem": "\"A season of comfort had made them ___.\"(make + 名词 + 形容词;填形容词)", "stem_cn": "一季的安逸把他们养软了。", "options": ["soft", "softly", "softness", "soften"] },
+    { "gp": "gp5", "stem": "\"The king found the camp poorly ___.\"(find + 名词 + 过去分词‘被…’;guard 的过去分词)", "stem_cn": "国王发现营地守卫松懈。", "options": ["guarded", "guarding", "guard", "guards"] },
+    { "gp": "gp5", "stem": "\"Constant raids kept the enemy ___ and tired.\"(keep + 名词 + 形容词;填形容词)", "stem_cn": "不断的袭扰使敌人又饿又疲。", "options": ["hungry", "hunger", "hungrily", "hungered"] },
+    { "gp": "gp6", "stem": "\"A person who wanders singing from place to place is a ___.\"(“流浪歌手/吟游诗人”用哪个词)", "stem_cn": "四处流浪卖唱的人。", "options": ["minstrel", "soldier", "farmer", "judge"] },
+    { "gp": "gp6", "stem": "\"Secret watching to gather an enemy's plans is ___.\"(“谍报/间谍活动”用哪个词)", "stem_cn": "暗中刺探敌方计划。", "options": ["espionage", "farming", "cooking", "trading"] },
+    { "gp": "gp6", "stem": "\"A war or effort that lasts a long time is ___.\"(“持久的、长时间的”用哪个词)", "stem_cn": "持续很久的。", "options": ["prolonged", "brief", "sudden", "tiny"] }
+  ],
+  "stage6": [
+    { "stem": "espionage 的意思是:", "options": ["间谍活动,谍报", "农业", "烹饪", "贸易"] },
+    { "stem": "minstrel 的意思是:", "options": ["吟游诗人,流浪歌手", "士兵", "农夫", "法官"] },
+    { "stem": "slack 的意思是:", "options": ["松弛的,懈怠的", "紧张的", "勤奋的", "沉重的"] },
+    { "stem": "prolonged 的意思是:", "options": ["持久的,长时间的", "简短的", "突然的", "微小的"] },
+    { "stem": "conjuring 的意思是:", "options": ["变戏法,魔术", "唱歌", "绘画", "舞蹈"] },
+    { "stem": "episode 的意思是:", "options": ["(一段)经历,事件", "计划", "命令", "习惯"] }
+  ],
+  "contrast": [
+    { "us": "traveled", "uk": "travelled", "note_cn": "旅行(过去式);拼写差异,美语 traveled 单 l" },
+    { "us": "neighbor", "uk": "neighbour", "note_cn": "邻居;拼写差异,美语 neighbor" },
+    { "us": "defense", "uk": "defence", "note_cn": "防御;拼写差异,美语 defense" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" }
+  ],
+  "chunks": [
+    { "us": "act as", "ipa": "/ækt æz/", "example1": "The king acted as his own spy.", "example1_cn": "国王亲自充当自己的间谍。", "example2": "She acts as our guide.", "example2_cn": "她担任我们的向导。" },
+    { "us": "on the move", "ipa": "/ɑːn ðə muːv/", "example1": "He kept his men always on the move.", "example1_cn": "他让部下始终在移动。", "example2": "The army was constantly on the move.", "example2_cn": "军队不停地转移。" },
+    { "us": "no longer", "ipa": "/noʊ ˈlɔːŋɡər/", "example1": "The raiders were no longer fit for battle.", "example1_cn": "袭掠者再也经不起打仗。", "example2": "He is no longer young.", "example2_cn": "他不再年轻了。" },
+    { "us": "cut off", "ipa": "/kʌt ɔːf/", "example1": "They cut off the enemy's supplies.", "example1_cn": "他们切断了敌人的补给。", "example2": "The flood cut off the village.", "example2_cn": "洪水使村庄与外界隔绝。" }
+  ],
+  "stage7_cloze": {
+    "context": "King Aldric had ___1___ many ballads in his youth. Dressed ___2___ a minstrel, he entered the camp. He saw that discipline had grown ___3___. ___4___ his army gathered, he spied on the enemy.",
+    "blanks": [
+      { "blank_no": 1, "options": ["learned", "learn", "learning", "learns"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["as", "like", "for", "with"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["slack", "slackly", "slackness", "slacken"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["While", "Before", "Unless", "Although"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What important thing did King Aldric learn inside the enemy camp?", "options": ["That the raiders' discipline was slack and they could not fight a long war", "That the raiders had more food than he did", "That the raiders wanted peace", "That the raiders had left"] },
+    { "stem": "How did the king disguise himself?", "options": ["As a wandering minstrel", "As a merchant", "As a soldier", "As a priest"] },
+    { "stem": "How did Aldric finally defeat the raiders?", "options": ["By harrying them and cutting off supplies until they starved", "By one great pitched battle", "By paying them to leave", "By burning their ships"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"在他到来之前,袭掠者已侵占了海岸\"(过去完成):", "options": ["Before he came, the raiders had overrun the coast.", "Before he came, the raiders have overrun the coast.", "Before he came, the raiders had overran the coast.", "Before he comes, the raiders had overrun the coast."] },
+    { "stem": "你想说\"装扮成流浪歌手,国王走进了营地\"(过去分词作状语):", "options": ["Dressed as a wandering minstrel, the king entered the camp.", "Dressing as a wandering minstrel, the king entered the camp.", "Dress as a wandering minstrel, the king entered the camp.", "Was dressed as a wandering minstrel, the king entered the camp."] },
+    { "stem": "你想说\"他待了一周才回到沼泽地\"(before 时间说法):", "options": ["He stayed a week before he returned to the marshes.", "He stayed a week before he returns to the marshes.", "He stayed a week after he returned to the marshes.", "He stayed a week until before he returned to the marshes."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "espionage 的意思是:", "options": ["间谍活动,谍报", "农业", "烹饪", "贸易"] },
+    { "kind": "vocab", "stem": "prolonged 的意思是:", "options": ["持久的,长时间的", "简短的", "突然的", "微小的"] },
+    { "kind": "grammar", "stem": "\"The raiders ___ overrun his coast before he came.\"(过去完成时)", "stem_cn": "在他来之前,袭掠者已侵占了海岸。", "options": ["had", "have", "has", "was"] },
+    { "kind": "grammar", "stem": "\"___ as a minstrel, the king entered the camp.\"(过去分词作状语)", "stem_cn": "装扮成歌手,国王走进营地。", "options": ["Dressed", "Dressing", "Dress", "To dress"] },
+    { "kind": "scenario", "stem": "\"act as\" 的意思是:", "options": ["充当、担任", "拒绝", "忘记", "出发"] },
+    { "kind": "scenario", "stem": "\"on the move\" 的意思是:", "options": ["在行进中、不停移动", "静止不动", "在睡觉", "在开会"] },
+    { "kind": "reading", "stem": "Why was Aldric able to enter the enemy camps freely?", "options": ["Wandering minstrels were welcomed everywhere", "He bribed the guards", "He came with an army", "He was invited by the enemy king"], "passage": true },
+    { "kind": "reading", "stem": "What did Aldric conclude about the raiders?", "options": ["They were no longer fit for a prolonged campaign", "They were the strongest army in the world", "They wished to make a lasting pact", "They had plenty of supplies"], "passage": true },
+    { "kind": "listening", "stem": "What did the king notice about the raiders' discipline?", "options": ["It had grown slack", "It was very strict", "It improved daily", "It was unknown"], "audio": true },
+    { "kind": "listening", "stem": "How did hunger help Aldric?", "options": ["It wore the raiders down until they surrendered", "It made his own men flee", "It had no effect", "It forced a great battle"], "audio": true }
+  ]
+}

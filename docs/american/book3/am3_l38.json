@@ -1,0 +1,133 @@
+{
+  "id": "am3_l38",
+  "unit_no": 8,
+  "lesson_no": 38,
+  "title_en": "The First Calendar",
+  "title_cn": "最早的日历",
+  "grammar_focus": "现在完成时的被动 have been done、一般过去时的被动 was/were done、动词 + with/for 固定搭配(faced with/connected with/account for)、between 与 among 的区别、seem·appear·prove + to do(原创承载 NCE3 L38 考点·无需净化:说明文——史前刻在骨头和象牙上的圆点、线条其实是一种原始历法,比人们想象的早两万年·科学思辨文)",
+  "scene": "未来的历史学家在记录我们这个时代的历史时,将处在一个独特的位置。他们几乎难以从不断积累的大量证据中挑选出该记录哪些事实。更何况,他们不必再只靠文字。电影、录像、光盘和只读光盘,不过是他们将拥有的那令人眼花缭乱的信息中的一小部分。可以说,他们能亲眼看到、亲耳听到我们的一举一动。但试图重建遥远过去的历史学家,面对的却总是一项艰巨的任务。他只能从少得可怜的线索里尽力推断。哪怕看似微不足道的遗存,也能为早期人类的历史投下有趣的一束光。到目前为止,历史学家一直假定:历法是随着农业的出现才产生的,因为那时人类才真正需要了解季节。可最近的科学证据似乎表明,这个假设并不正确。长期以来,历史学家一直被那些刻在洞壁、骨头以及猛犸象牙上的圆点、线条和符号弄得百思不解。留下这些记号的游牧人,生活在上一个冰河时代,靠打猎和捕鱼为生;那个时代大约始于公元前三万五千年,止于公元前一万年。历史学家通过比对世界各地留下的记号,终于读懂了这套难解的密码。他们发现,这些记号与日子的流逝和月亮的盈亏有关。事实上,它是一种原始的历法。人们早就知道,画在洞壁上的那些场景并不只是一种艺术表达。它们有确切的含义,因为那已是早期人类最接近文字的东西了。这些壁画与有时伴随它们出现的记号之间,很可能存在某种确切的联系。看来,人类为了解季节所付出的真切努力,比人们过去设想的早了整整两万年。",
+  "grammar_card": {
+    "title": "现在完成被动 / 一般过去被动 / 动词+with·for / between vs among / seem·prove to do",
+    "intro": "①现在完成时的被动:have/has been + 过去分词(have been engraved)。②一般过去时的被动:was/were + 过去分词(these markings were made)。③许多动词有固定介词:be faced with、be connected with、account for、apologize for。④between 用于“两者之间”,among 用于“三者以上之中”。⑤seem / appear / prove + to do:“似乎、看来、原来是”。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["have been done", "现在完成被动", "have been engraved on bones"],
+        ["was/were done", "一般过去被动", "these markings were made"],
+        ["faced with / account for", "动词+介词", "faced with a difficult task"],
+        ["between / among;seem to do", "两者/三者;似乎", "a relation between A and B"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "between 用于“两者(A 和 B)之间”;among 用于“三者或更多之中”。a relation between the paintings and the markings。", "mark": "between ≠ among" },
+      { "rule": "seem / appear / prove 后接不定式 to do:seems to indicate;proved to be a calendar;appears to be wrong。", "mark": "seem to do" },
+      { "rule": "美式拼写:color(英式 colour)、gray(英式 grey)、center(英式 centre)、catalog(英式 catalogue)。本课已按美语写。", "mark": "color / center" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is the importance of the dots and symbols engraved on stone, bones, and ivory?",
+    "options": ["They form a primitive calendar tracking days and the moon", "They were only decoration", "They recorded money that was owed", "They were children's drawings"],
+    "answer_index": 0
+  },
+  "passage": "Future historians will be in a unique position when they come to record the history of our own times. They will hardly know which facts to select from the great mass of evidence that steadily accumulates. What is more, they will not have to rely solely on the written word. Films, videos, CDs, and CD-ROMs are just some of the bewildering amount of information they will have. They will be able, as it were, to see and hear us in action. But the historian who tries to reconstruct the distant past is always faced with a difficult task. He must deduce what he can from the few scanty clues available. Even seemingly insignificant remains can shed light on the history of early man. Up to now, historians have assumed that calendars came into being with the advent of agriculture, for man was then faced with a real need to understand something about the seasons. Recent scientific evidence seems to indicate that this assumption is incorrect. Historians have long been puzzled by dots, lines, and symbols that have been engraved on walls, bones, and the ivory tusks of mammoths. The nomads who made these markings lived by hunting and fishing during the last Ice Age, which began about 35,000 B.C. and ended about 10,000 B.C. By correlating markings made in various parts of the world, historians have been able to read this difficult code. They have found that it is connected with the passage of days and the phases of the moon. It is, in fact, a primitive kind of calendar. It has long been known that the scenes painted on cave walls were not simply a form of artistic expression. They had a definite meaning, for they were as near as early man could get to writing. It is possible that there is a definite relation between these paintings and the markings that sometimes accompany them. It seems that man was making a real effort to understand the seasons 20,000 years earlier than has been supposed.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Future historians will be in a unique position when they come to record the history of our own times. They will hardly know which facts to select from the great mass of evidence that steadily accumulates. What is more, they will not have to rely solely on the written word. Films, videos, CDs, and CD-ROMs are just some of the bewildering amount of information they will have. They will be able, as it were, to see and hear us in action.", "text_cn": "未来的历史学家在记录我们这个时代的历史时,将处在一个独特的位置。他们几乎难以从不断积累的大量证据中挑选出该记录哪些事实。更何况,他们不必再只靠文字。电影、录像、光盘和只读光盘,不过是他们将拥有的那令人眼花缭乱的信息中的一小部分。可以说,他们能亲眼看到、亲耳听到我们的一举一动。" },
+    { "seq": 2, "speaker": null, "text_en": "But the historian who tries to reconstruct the distant past is always faced with a difficult task. He must deduce what he can from the few scanty clues available. Even seemingly insignificant remains can shed light on the history of early man. Up to now, historians have assumed that calendars came into being with the advent of agriculture, for man was then faced with a real need to understand something about the seasons.", "text_cn": "但试图重建遥远过去的历史学家,面对的却总是一项艰巨的任务。他只能从少得可怜的线索里尽力推断。哪怕看似微不足道的遗存,也能为早期人类的历史投下有趣的一束光。到目前为止,历史学家一直假定:历法是随着农业的出现才产生的,因为那时人类才真正需要了解季节。" },
+    { "seq": 3, "speaker": null, "text_en": "Recent scientific evidence seems to indicate that this assumption is incorrect. Historians have long been puzzled by dots, lines, and symbols that have been engraved on walls, bones, and the ivory tusks of mammoths. The nomads who made these markings lived by hunting and fishing during the last Ice Age, which began about 35,000 B.C. and ended about 10,000 B.C.", "text_cn": "可最近的科学证据似乎表明,这个假设并不正确。长期以来,历史学家一直被那些刻在洞壁、骨头以及猛犸象牙上的圆点、线条和符号弄得百思不解。留下这些记号的游牧人,生活在上一个冰河时代,靠打猎和捕鱼为生;那个时代大约始于公元前三万五千年,止于公元前一万年。" },
+    { "seq": 4, "speaker": null, "text_en": "By correlating markings made in various parts of the world, historians have been able to read this difficult code. They have found that it is connected with the passage of days and the phases of the moon. It is, in fact, a primitive kind of calendar. It has long been known that the scenes painted on cave walls were not simply a form of artistic expression.", "text_cn": "历史学家通过比对世界各地留下的记号,终于读懂了这套难解的密码。他们发现,这些记号与日子的流逝和月亮的盈亏有关。事实上,它是一种原始的历法。人们早就知道,画在洞壁上的那些场景并不只是一种艺术表达。" },
+    { "seq": 5, "speaker": null, "text_en": "They had a definite meaning, for they were as near as early man could get to writing. It is possible that there is a definite relation between these paintings and the markings that sometimes accompany them. It seems that man was making a real effort to understand the seasons 20,000 years earlier than has been supposed.", "text_cn": "它们有确切的含义,因为那已是早期人类最接近文字的东西了。这些壁画与有时伴随它们出现的记号之间,很可能存在某种确切的联系。看来,人类为了解季节所付出的真切努力,比人们过去设想的早了整整两万年。" }
+  ],
+  "words": [
+    { "word": "calendar", "ipa": "/ˈkæləndər/", "pos": "n", "meaning_cn": "历法,日历", "example": "a primitive kind of calendar" },
+    { "word": "historian", "ipa": "/hɪˈstɔːriən/", "pos": "n", "meaning_cn": "历史学家", "example": "future historians" },
+    { "word": "unique", "ipa": "/juˈniːk/", "pos": "adj", "meaning_cn": "独特的,无与伦比的", "example": "in a unique position" },
+    { "word": "steadily", "ipa": "/ˈstedɪli/", "pos": "adv", "meaning_cn": "不断地,稳定地", "example": "evidence that steadily accumulates" },
+    { "word": "bewilder", "ipa": "/bɪˈwɪldər/", "pos": "v", "meaning_cn": "使迷惑", "example": "a bewildering amount of information" },
+    { "word": "deduce", "ipa": "/dɪˈduːs/", "pos": "v", "meaning_cn": "推断,推理", "example": "deduce what he can from clues" },
+    { "word": "scanty", "ipa": "/ˈskænti/", "pos": "adj", "meaning_cn": "不足的,贫乏的", "example": "a few scanty clues" },
+    { "word": "insignificant", "ipa": "/ˌɪnsɪɡˈnɪfɪkənt/", "pos": "adj", "meaning_cn": "不重要的", "example": "seemingly insignificant remains" },
+    { "word": "advent", "ipa": "/ˈædvent/", "pos": "n", "meaning_cn": "出现,到来", "example": "the advent of agriculture" },
+    { "word": "assumption", "ipa": "/əˈsʌmpʃən/", "pos": "n", "meaning_cn": "假定,设想", "example": "this assumption is incorrect" },
+    { "word": "engrave", "ipa": "/ɪnˈɡreɪv/", "pos": "v", "meaning_cn": "雕刻", "example": "symbols engraved on bones" },
+    { "word": "ivory", "ipa": "/ˈaɪvəri/", "pos": "n", "meaning_cn": "象牙(制品)", "example": "the ivory tusks of mammoths" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "现在完成时的被动 have been done" },
+    { "gp": "gp2", "name": "一般过去时的被动 was/were done" },
+    { "gp": "gp3", "name": "动词 + with / for 固定搭配" },
+    { "gp": "gp4", "name": "between 与 among 的区别" },
+    { "gp": "gp5", "name": "seem / appear / prove + to do" },
+    { "gp": "gp6", "name": "词汇辨析(deduce/scanty/insignificant)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The dots have ___ engraved on bones and ivory.\"(现在完成时的被动,填 have 和过去分词中间的那个词)", "stem_cn": "这些小圆点被刻在骨头和象牙上。", "options": ["been", "being", "be", "was"] },
+    { "gp": "gp1", "stem": "\"Historians have long been ___ by these strange markings.\"(have been + 过去分词\"一直被…\")", "stem_cn": "历史学家长期被这些奇怪的记号搞糊涂。", "options": ["puzzled", "puzzling", "puzzle", "to puzzle"] },
+    { "gp": "gp1", "stem": "\"It has long been ___ that the cave paintings had a meaning.\"(It has long been + 过去分词\"早已被…\")", "stem_cn": "人们早就知道那些洞穴壁画是有含义的。", "options": ["known", "knowing", "know", "to know"] },
+    { "gp": "gp2", "stem": "\"Early man ___ faced with a real need to understand the seasons.\"(一般过去时的被动,主语单数,填助动词)", "stem_cn": "早期人类当时面临真正需要了解季节的问题。", "options": ["was", "is", "has been", "being"] },
+    { "gp": "gp2", "stem": "\"These markings ___ made during the last Ice Age.\"(一般过去被动,主语是复数)", "stem_cn": "这些记号是在上一个冰河时代做的。", "options": ["were", "was", "are", "being"] },
+    { "gp": "gp2", "stem": "\"The code ___ finally read by correlating markings worldwide.\"(一般过去时的被动,主语单数,填助动词)", "stem_cn": "这套密码最终通过比对世界各地的记号被解读了。", "options": ["was", "is", "has", "being"] },
+    { "gp": "gp3", "stem": "\"The historian is faced ___ a very difficult task.\"(be faced ___ 用哪个介词)", "stem_cn": "历史学家面对着一项极难的任务。", "options": ["with", "for", "of", "to"] },
+    { "gp": "gp3", "stem": "\"The markings are connected ___ the phases of the moon.\"(be connected ___ 用哪个介词)", "stem_cn": "这些记号与月相有关。", "options": ["with", "for", "about", "off"] },
+    { "gp": "gp3", "stem": "\"These clues can account ___ the strange dots.\"(account ___,\"解释\"用哪个介词)", "stem_cn": "这些线索能解释那些奇怪的圆点。", "options": ["for", "with", "of", "at"] },
+    { "gp": "gp4", "stem": "\"There is a relation ___ the paintings and the markings.\"(两者之间用哪个)", "stem_cn": "壁画与记号之间存在某种联系。", "options": ["between", "among", "within", "beside"] },
+    { "gp": "gp4", "stem": "\"The markings were found ___ many ancient tribes.\"(三者以上之中用哪个)", "stem_cn": "这些记号在许多古代部落中都有发现。", "options": ["among", "between", "beside", "within"] },
+    { "gp": "gp4", "stem": "\"Share the food ___ the two of you.\"(两个人之间\"分\"用哪个)", "stem_cn": "这些食物你们俩分了吧。", "options": ["between", "among", "along", "across"] },
+    { "gp": "gp5", "stem": "\"The evidence seems ___ indicate that the assumption is wrong.\"(seem + 不定式)", "stem_cn": "证据似乎表明这个假设是错的。", "options": ["to", "that", "for", "of"] },
+    { "gp": "gp5", "stem": "\"The markings ___ to be a primitive calendar.\"(\"原来是、证明是\"用 prove ___)", "stem_cn": "这些记号原来是一种原始的历法。", "options": ["proved", "seemed that", "appeared as", "looked"] },
+    { "gp": "gp5", "stem": "\"The old theory ___ to be incorrect.\"(\"看来、显得…\",后接 to be)", "stem_cn": "那个旧理论看来是错的。", "options": ["appears", "appears that", "seems as", "looks as"] },
+    { "gp": "gp6", "stem": "\"To work something out by reasoning from clues is to ___ it.\"(\"推断、推理\"用哪个词)", "stem_cn": "靠线索推理得出结论。", "options": ["deduce", "ignore", "forget", "copy"] },
+    { "gp": "gp6", "stem": "\"When there are only a few clues available, they are ___.\"(\"不足的、贫乏的\"用哪个词)", "stem_cn": "只有很少几条线索,很贫乏。", "options": ["scanty", "plentiful", "heavy", "bright"] },
+    { "gp": "gp6", "stem": "\"Something small and unimportant is ___.\"(\"不重要的\"用哪个词)", "stem_cn": "微不足道、不重要的东西。", "options": ["insignificant", "precious", "huge", "urgent"] }
+  ],
+  "stage6": [
+    { "stem": "calendar 的意思是:", "options": ["历法,日历", "地图", "字典", "账单"] },
+    { "stem": "historian 的意思是:", "options": ["历史学家", "画家", "医生", "农民"] },
+    { "stem": "unique 的意思是:", "options": ["独特的,无与伦比的", "普通的", "常见的", "廉价的"] },
+    { "stem": "bewilder 的意思是:", "options": ["使迷惑", "使高兴", "使疲倦", "使平静"] },
+    { "stem": "advent 的意思是:", "options": ["出现,到来", "消失", "结束", "失败"] },
+    { "stem": "ivory 的意思是:", "options": ["象牙(制品)", "木头", "石头", "黄金"] }
+  ],
+  "contrast": [
+    { "us": "color", "uk": "colour", "note_cn": "颜色;拼写差异,美语无 u" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" },
+    { "us": "center", "uk": "centre", "note_cn": "中心;拼写差异,美语 -er" },
+    { "us": "catalog", "uk": "catalogue", "note_cn": "目录;美语 catalog,英式 catalogue" }
+  ],
+  "chunks": [
+    { "us": "come into being", "ipa": "/kʌm ˈɪntə ˈbiːɪŋ/", "example1": "Calendars came into being long ago.", "example1_cn": "历法很久以前就出现了。", "example2": "A new nation came into being.", "example2_cn": "一个新的国家诞生了。" },
+    { "us": "rely on", "ipa": "/rɪˈlaɪ ɑːn/", "example1": "They will not rely solely on the written word.", "example1_cn": "他们不会只依赖文字。", "example2": "You can rely on me.", "example2_cn": "你可以信赖我。" },
+    { "us": "shed light on", "ipa": "/ʃed laɪt ɑːn/", "example1": "These remains shed light on early man.", "example1_cn": "这些遗存让我们更了解早期人类。", "example2": "The study sheds light on the problem.", "example2_cn": "这项研究有助于弄清这个问题。" },
+    { "us": "up to now", "ipa": "/ʌp tə naʊ/", "example1": "Up to now, historians have assumed this.", "example1_cn": "到目前为止,历史学家一直这么假定。", "example2": "Up to now, no one has complained.", "example2_cn": "到目前为止,没人抱怨过。" }
+  ],
+  "stage7_cloze": {
+    "context": "Historians have long been ___1___ by dots and lines engraved on bones and ivory. These markings have ___2___ found all over the world. Recent evidence seems ___3___ show that they form a primitive calendar. There may be a definite relation ___4___ ancient cave paintings and these markings.",
+    "blanks": [
+      { "blank_no": 1, "options": ["puzzled", "puzzling", "puzzle", "to puzzle"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["been", "being", "be", "was"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["to", "that", "for", "of"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["between", "among", "within", "beside"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What had historians long assumed about calendars?", "options": ["That they began with the advent of agriculture", "That they were invented last century", "That nomads never used them", "That they came from the moon"] },
+    { "stem": "What were the mysterious markings finally found to be?", "options": ["A primitive kind of calendar", "A children's game", "A map of rivers", "A form of money"] },
+    { "stem": "How did historians manage to read the code?", "options": ["By correlating markings made around the world", "By asking modern nomads", "By reading old books", "By simply guessing"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"历史学家面对着一项极难的任务\"(be faced with):", "options": ["The historian is faced with a very difficult task.", "The historian is faced for a very difficult task.", "The historian is faced of a very difficult task.", "The historian is faced to a very difficult task."] },
+    { "stem": "你想说\"壁画与记号之间存在某种联系\"(between):", "options": ["There is a relation between the paintings and the markings.", "There is a relation among the paintings and the markings.", "There is a relation within the paintings and the markings.", "There is a relation beside the paintings and the markings."] },
+    { "stem": "你想说\"证据似乎表明这个假设是错的\"(seem to do):", "options": ["The evidence seems to indicate that the assumption is wrong.", "The evidence seems indicating that the assumption is wrong.", "The evidence seems that indicate the assumption is wrong.", "The evidence seems to indicated that the assumption is wrong."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "calendar 的意思是:", "options": ["历法,日历", "地图", "字典", "账单"] },
+    { "kind": "vocab", "stem": "deduce 的意思是:", "options": ["推断,推理", "忘记", "复制", "忽视"] },
+    { "kind": "grammar", "stem": "\"The dots have ___ engraved on bones and ivory.\"(现在完成时的被动,填 have 和过去分词中间的那个词)", "stem_cn": "这些小圆点被刻在骨头和象牙上。", "options": ["been", "being", "be", "was"] },
+    { "kind": "grammar", "stem": "\"There is a relation ___ the paintings and the markings.\"(两者之间用哪个)", "stem_cn": "壁画与记号之间存在某种联系。", "options": ["between", "among", "within", "beside"] },
+    { "kind": "scenario", "stem": "\"come into being\" 的意思是:", "options": ["产生、形成", "走进屋子", "变得无聊", "成为现实"] },
+    { "kind": "scenario", "stem": "\"shed light on\" 的意思是:", "options": ["使…更清楚、有助于了解", "点亮灯光", "减轻重量", "洒下阳光"] },
+    { "kind": "reading", "stem": "Why will future historians be in a unique position?", "options": ["They will have films, videos, and other rich records of our times", "They will have no evidence at all", "They will only read books", "They will guess everything"], "passage": true },
+    { "kind": "reading", "stem": "What do the ancient markings show about early man?", "options": ["He was trying to understand the seasons far earlier than supposed", "He could already write fluently", "He never hunted", "He ignored the moon"], "passage": true },
+    { "kind": "listening", "stem": "Who made the mysterious markings?", "options": ["Nomads who lived by hunting and fishing in the Ice Age", "Modern scientists", "Farmers of today", "Sailors"], "audio": true },
+    { "kind": "listening", "stem": "What were the markings connected with?", "options": ["The passage of days and the phases of the moon", "The price of food", "The size of tribes", "The weather only"], "audio": true }
+  ]
+}

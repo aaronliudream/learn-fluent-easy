@@ -1,0 +1,135 @@
+{
+  "id": "am3_l03",
+  "unit_no": 1,
+  "lesson_no": 3,
+  "title_en": "The Unknown Goddess",
+  "title_cn": "无名女神",
+  "grammar_focus": "一般过去时讲“发生了什么”,重点在不规则动词的过去式(find→found、dig→dug、stand→stood、begin→began、come→came、feel→felt、wear→wore、sweep→swept…),外加易混词 happen(to be)碰巧、美式 story(楼层,与'故事'同形;英式 storey)、worship(崇拜)↔warship(军舰)(原创承载 NCE3 L3 考点·美国考古队复原古代女神像)",
+  "scene": "几年前,一支美国考古队在海边一处岩石岬角上勘探一座古城遗址。那座古城当年一定很繁荣,因为它曾有很高的文明水平。考古学家发现了宽阔的街道,街道下面挖出了旧排水系统的陶管。常有三层高的石屋沿路而立。在一座残破神殿最神圣的房间里,工人们找到了许多小雕像的碎片。每尊都是一位女神,当年都上过彩。考古队把碎片带回实验室,开始慢慢拼合。有一尊格外费解:身体来自很古老的遗物,头却碰巧来自晚得多的古典时代——想必古代有人捡到这颗头,认出它的价值,小心保存了下来。等到终于复原,考古队惊讶地发现:这位女神看上去像个非常现代的女子。她约三英尺高,双手叉在臀部,穿一条拖地长裙。尽管年代久远,她却真的很优雅。可到目前为止,谁也查不出她的身份。",
+  "grammar_card": {
+    "title": "讲“发生了什么”:一般过去时 & 不规则动词过去式",
+    "intro": "讲过去发生、已经完成的事,用一般过去时。规则动词直接加 -ed(explore→explored、enjoy→enjoyed);但很多常用动词是不规则的,必须一个个记牢:find→found、dig→dug、stand→stood、begin→began、come→came、feel→felt、wear→wore、sweep→swept、keep→kept。另外记三组易混:①happen to be = 碰巧是(By chance);②美语里“楼层”拼 story(复数 stories),和“故事”同形,英式才拼 storey;③worship(崇拜、礼拜)别和 warship(军舰)搞混。",
+    "table": {
+      "headers": ["动词原形", "过去式(不规则)", "例子"],
+      "rows": [
+        ["find / dig / stand", "found / dug / stood", "they found the fragments; they dug up pipes"],
+        ["begin / come", "began / came", "the work began; the head came from later remains"],
+        ["feel / wear / sweep", "felt / wore / swept", "they felt amazed; she wore a long skirt"],
+        ["happen (to be)", "happened (to be)", "the head happened to be much older"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "不规则动词过去式没有规律,只能背:begin→began(不是 beginned)、come→came(不是 comed)、feel→felt(不是 feeled)。注意别把过去分词当过去式:begun/worn 是过去分词。", "mark": "begin→began / feel→felt" },
+      { "rule": "美语里“楼层”和“故事”都拼 story(a three-story house / an old story);英式把“楼层”拼作 storey 以区分。本课已按美语写 stories。", "mark": "story / storey" },
+      { "rule": "worship /ˈwɜːrʃɪp/ 崇拜、礼拜;warship /ˈwɔːrʃɪp/ 军舰。拼写、意思都不同,别弄混。", "mark": "worship / warship" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What did the American team find in the sacred room?",
+    "options": ["Fragments of many goddess statues", "A chest of gold coins", "A living animal", "A pile of old books"],
+    "answer_index": 0
+  },
+  "passage": "A few years ago, an American team explored an ancient site on a rocky promontory high above the sea. The old city there must have been prosperous, for it once enjoyed a high level of civilization. The archaeologists found wide streets, and beneath them they dug up clay pipes from an old drainage system. Houses, often three stories high, stood along the road. In the most sacred room of a ruined temple, once a busy place of worship, the workers found the fragments of many small statues. Each one showed a goddess, and each had once been painted in bright colors. The team carried the pieces back to the lab and began the slow work of putting them together. One statue puzzled everyone. Its body came from very old remains, but its head happened to be from a much later, classical time. Someone in ancient days must have found the head, recognized its value, and kept it with great care. When the archaeologists finally reconstructed the figure, they felt amazed. The goddess looked like a very modern woman. She stood about three feet high, her hands rested on her hips, and she wore a full-length skirt that swept the floor. Despite her great age, she was truly graceful. So far, however, no one has been able to discover her identity.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "A few years ago, an American team explored an ancient site on a rocky promontory high above the sea. The old city there must have been prosperous, for it once enjoyed a high level of civilization.", "text_cn": "几年前,一支美国考古队在海边一处岩石岬角上勘探一座古城遗址。那座古城当年一定很繁荣,因为它曾有很高的文明水平。" },
+    { "seq": 2, "speaker": null, "text_en": "The archaeologists found wide streets, and beneath them they dug up clay pipes from an old drainage system. Houses, often three stories high, stood along the road.", "text_cn": "考古学家发现了宽阔的街道,街道下面挖出了旧排水系统的陶管。常有三层高的石屋沿路而立。" },
+    { "seq": 3, "speaker": null, "text_en": "In the most sacred room of a ruined temple, once a busy place of worship, the workers found the fragments of many small statues. Each one showed a goddess, and each had once been painted in bright colors.", "text_cn": "在一座残破神殿——从前热闹的礼拜之地——最神圣的房间里,工人们找到了许多小雕像的碎片。每尊都是一位女神,当年都上过彩。" },
+    { "seq": 4, "speaker": null, "text_en": "One statue puzzled everyone. Its body came from very old remains, but its head happened to be from a much later, classical time. Someone in ancient days must have found the head and kept it with great care.", "text_cn": "有一尊格外费解:身体来自很古老的遗物,头却碰巧来自晚得多的古典时代。想必古代有人捡到这颗头,小心保存了下来。" },
+    { "seq": 5, "speaker": null, "text_en": "When the archaeologists finally reconstructed the figure, they felt amazed. The goddess looked like a very modern woman. She wore a full-length skirt that swept the floor, and she was truly graceful. So far, no one has been able to discover her identity.", "text_cn": "等到终于复原,考古队惊讶地发现:这位女神看上去像个非常现代的女子。她穿一条拖地长裙,真的很优雅。可到目前为止,谁也查不出她的身份。" }
+  ],
+  "words": [
+    { "word": "goddess", "ipa": "/ˈɡɑːdəs/", "pos": "n", "meaning_cn": "女神", "example": "each one showed a goddess" },
+    { "word": "archaeologist", "ipa": "/ˌɑːrkiˈɑːlədʒɪst/", "pos": "n", "meaning_cn": "考古学家", "example": "the archaeologists found wide streets" },
+    { "word": "explore", "ipa": "/ɪkˈsplɔːr/", "pos": "v", "meaning_cn": "考察,勘探", "example": "explored an ancient site" },
+    { "word": "promontory", "ipa": "/ˈprɑːməntɔːri/", "pos": "n", "meaning_cn": "海角,岬", "example": "on a rocky promontory" },
+    { "word": "prosperous", "ipa": "/ˈprɑːspərəs/", "pos": "adj", "meaning_cn": "(经济上)繁荣的,昌盛的", "example": "must have been prosperous" },
+    { "word": "civilization", "ipa": "/ˌsɪvələˈzeɪʃn/", "pos": "n", "meaning_cn": "文明", "example": "a high level of civilization" },
+    { "word": "drainage", "ipa": "/ˈdreɪnɪdʒ/", "pos": "n", "meaning_cn": "排水(系统)", "example": "an old drainage system" },
+    { "word": "sacred", "ipa": "/ˈseɪkrɪd/", "pos": "adj", "meaning_cn": "神圣的,宗教的", "example": "the most sacred room" },
+    { "word": "fragment", "ipa": "/ˈfræɡmənt/", "pos": "n", "meaning_cn": "碎片", "example": "the fragments of many statues" },
+    { "word": "remains", "ipa": "/rɪˈmeɪnz/", "pos": "n", "meaning_cn": "遗物,遗迹,残骸", "example": "from very old remains" },
+    { "word": "reconstruct", "ipa": "/ˌriːkənˈstrʌkt/", "pos": "v", "meaning_cn": "修复,重建", "example": "reconstructed the figure" },
+    { "word": "worship", "ipa": "/ˈwɜːrʃɪp/", "pos": "n", "meaning_cn": "崇拜,礼拜(别与 warship 军舰混)", "example": "a place of worship" },
+    { "word": "graceful", "ipa": "/ˈɡreɪsfl/", "pos": "adj", "meaning_cn": "优雅的", "example": "she was truly graceful" },
+    { "word": "identity", "ipa": "/aɪˈdentəti/", "pos": "n", "meaning_cn": "身份", "example": "discover her identity" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般过去时叙述(讲发生了什么)" },
+    { "gp": "gp2", "name": "不规则动词过去式 A(find/dig/stand/begin)" },
+    { "gp": "gp3", "name": "不规则动词过去式 B(come/feel/wear/sweep)" },
+    { "gp": "gp4", "name": "happen (to be) 碰巧" },
+    { "gp": "gp5", "name": "易混词 story(楼层·美式) / worship↔warship" },
+    { "gp": "gp6", "name": "词汇辨析(fragment / reconstruct / identity)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"A few years ago, an American team ___ an ancient site by the sea.\"(过去发生:一般过去时)", "stem_cn": "几年前,一支美国考古队勘探了海边一处古城遗址。", "options": ["explored", "explores", "is exploring", "has explored"] },
+    { "gp": "gp1", "stem": "\"The old city once ___ a high level of civilization.\"(过去:enjoy 的过去式)", "stem_cn": "那座古城曾有很高的文明水平。", "options": ["enjoyed", "enjoys", "is enjoying", "has enjoyed"] },
+    { "gp": "gp1", "stem": "\"Each little statue ___ a goddess.\"(过去:show 的过去式)", "stem_cn": "每一尊小雕像都是一位女神。", "options": ["showed", "shows", "is showing", "has shown"] },
+    { "gp": "gp2", "stem": "\"Beneath the streets, the workers ___ up old clay pipes.\"(dig 的过去式)", "stem_cn": "在街道下面,工人们挖出了旧陶管。", "options": ["dug", "digged", "digs", "dig"] },
+    { "gp": "gp2", "stem": "\"In the sacred room they ___ many broken pieces.\"(find 的过去式)", "stem_cn": "在那神圣的房间里,他们发现了许多碎片。", "options": ["found", "finded", "finds", "find"] },
+    { "gp": "gp2", "stem": "\"Tall stone houses ___ along the narrow road.\"(stand 的过去式)", "stem_cn": "高高的石屋沿着狭窄的路排列。", "options": ["stood", "standed", "stands", "stand"] },
+    { "gp": "gp2", "stem": "\"The team ___ the slow work of putting the pieces together.\"(begin 的过去式,别用过去分词)", "stem_cn": "考古队开始了把碎片拼合的缓慢工作。", "options": ["began", "begun", "begins", "beginned"] },
+    { "gp": "gp3", "stem": "\"The body ___ from very old remains.\"(come 的过去式)", "stem_cn": "这身体来自很古老的遗物。", "options": ["came", "comed", "comes", "come"] },
+    { "gp": "gp3", "stem": "\"When they saw the result, they ___ amazed.\"(feel 的过去式)", "stem_cn": "他们一看到结果就感到惊讶。", "options": ["felt", "feeled", "feels", "feel"] },
+    { "gp": "gp3", "stem": "\"She ___ a full-length skirt that swept the floor.\"(wear 的过去式,别用过去分词)", "stem_cn": "她穿着一条拖到地面的长裙。", "options": ["wore", "worn", "wears", "weared"] },
+    { "gp": "gp4", "stem": "\"Its head ___ to be from a much later time.\"(碰巧是:happen to be,过去)", "stem_cn": "它的头碰巧来自晚得多的时代。", "options": ["happened", "happens", "is happening", "has happened"] },
+    { "gp": "gp4", "stem": "\"It ___ that the head was far more precious than the body.\"(碰巧发生:固定句式 It ... that…,过去时)", "stem_cn": "碰巧,那颗头比身体珍贵得多。", "options": ["happened", "happens", "was happening", "has happened"] },
+    { "gp": "gp5", "stem": "美语里,\"楼层\"和\"故事\"拼法相同,都拼作:", "options": ["story", "storey", "stall", "stair"] },
+    { "gp": "gp5", "stem": "worship 的意思是:", "options": ["崇拜,礼拜", "军舰", "楼层", "碎片"] },
+    { "gp": "gp5", "stem": "warship 的意思是:", "options": ["军舰", "崇拜", "海角", "女神"] },
+    { "gp": "gp6", "stem": "\"The broken pieces of the statues are called ___.\"(碎片用哪个词)", "stem_cn": "雕像的碎块叫做 fragments(碎片)。", "options": ["fragments", "streets", "pipes", "skirts"] },
+    { "gp": "gp6", "stem": "\"To put the broken pieces back together is to ___ the statue.\"(修复、重建用哪个词)", "stem_cn": "把碎片拼合起来就是复原这尊雕像。", "options": ["reconstruct", "destroy", "paint", "bury"] },
+    { "gp": "gp6", "stem": "\"No one knows who she is; they cannot discover her ___.\"(身份用哪个词)", "stem_cn": "谁也不知道她是谁,查不出她的身份。", "options": ["identity", "drainage", "promontory", "civilization"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"楼层\"拼作(和\"故事\"同形):", "options": ["story", "storey", "stair", "level"] },
+    { "stem": "goddess 的意思是:", "options": ["女神", "军舰", "海角", "碎片"] },
+    { "stem": "archaeologist 的意思是:", "options": ["考古学家", "建筑师", "探险家", "历史老师"] },
+    { "stem": "sacred 的意思是:", "options": ["神圣的", "破旧的", "昂贵的", "现代的"] },
+    { "stem": "graceful 的意思是:", "options": ["优雅的", "笨拙的", "生气的", "古老的"] },
+    { "stem": "\"happen to be\" 的意思是:", "options": ["碰巧是", "必须是", "假装是", "拒绝是"] }
+  ],
+  "contrast": [
+    { "us": "story", "uk": "storey", "note_cn": "楼层;美语 story(复数 stories,与'故事'同形),英式 storey" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "downtown", "uk": "town centre", "note_cn": "市中心;美语 downtown,英式 town centre" }
+  ],
+  "chunks": [
+    { "us": "happen to be", "ipa": "/ˈhæpən tuː biː/", "example1": "Its head happened to be from a later time.", "example1_cn": "那颗头碰巧来自较晚的时代。", "example2": "I happen to know the answer.", "example2_cn": "我碰巧知道答案。" },
+    { "us": "put together", "ipa": "/pʊt təˈɡeðər/", "example1": "They put the broken pieces together.", "example1_cn": "他们把碎片拼合起来。", "example2": "It took hours to put the model together.", "example2_cn": "拼好这个模型花了好几个小时。" },
+    { "us": "a high level of", "ipa": "/ə haɪ ˈlevl əv/", "example1": "The city enjoyed a high level of civilization.", "example1_cn": "这座城市曾有很高的文明水平。", "example2": "The team showed a high level of skill.", "example2_cn": "这支队伍展现了很高的水平。" },
+    { "us": "so far", "ipa": "/soʊ fɑːr/", "example1": "So far, no one has discovered her identity.", "example1_cn": "到目前为止,没人查出她的身份。", "example2": "So far, everything is going well.", "example2_cn": "到目前为止,一切都很顺利。" }
+  ],
+  "stage7_cloze": {
+    "context": "A few years ago, an American team ___1___ an ancient temple by the sea. In the sacred room they ___2___ the fragments of many small statues. One head ___3___ to be from a much later time. When the team finally put the pieces together, they ___4___ amazed to see a very modern-looking goddess.",
+    "blanks": [
+      { "blank_no": 1, "options": ["explored", "explores", "was exploring", "has explored"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["find", "found", "are finding", "have found"], "answer_index": 1 },
+      { "blank_no": 3, "options": ["happens", "happened", "is happening", "has happened"], "answer_index": 1 },
+      { "blank_no": 4, "options": ["felt", "feel", "are feeling", "have felt"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did the American team make their discovery?", "options": ["At an ancient site on a promontory by the sea", "In a modern city downtown", "Deep inside a cave", "On a small farm"] },
+    { "stem": "What did the archaeologists find in the sacred room?", "options": ["Fragments of many small goddess statues", "A chest of gold coins", "A living animal", "A pile of old books"] },
+    { "stem": "What surprised the team about the reconstructed goddess?", "options": ["She looked like a very modern woman", "She was made of pure gold", "She was extremely tiny", "She had no head at all"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"昨天我把这些照片拼在了一起\"(一般过去 + put 的过去式仍是 put):", "options": ["Yesterday I put these photos together.", "Yesterday I putted these photos together.", "Yesterday I am putting these photos together.", "Yesterday I have put these photos together."] },
+    { "stem": "你想说\"我碰巧认识那位考古学家\"(happen to do):", "options": ["I happen to know that archaeologist.", "I happen knowing that archaeologist.", "I am happen to know that archaeologist.", "I happened to knowing that archaeologist."] },
+    { "stem": "你想说\"他们惊讶地发现她看起来很现代\"(feel 的过去式 felt):", "options": ["They felt amazed to find that she looked modern.", "They feeled amazed to find that she looked modern.", "They felt amazed to found that she looked modern.", "They were felt amazed to find that she looked modern."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "identity 的意思是:", "options": ["身份", "军舰", "楼层", "排水"] },
+    { "kind": "vocab", "stem": "reconstruct 的意思是:", "options": ["修复,重建", "摧毁", "埋葬", "出售"] },
+    { "kind": "grammar", "stem": "\"Yesterday the workers ___ up old pipes under the street.\"(dig 的过去式)", "stem_cn": "昨天工人们在街道下面挖出了旧管道。", "options": ["dug", "digged", "digs", "dig"] },
+    { "kind": "grammar", "stem": "\"When they saw it, they ___ amazed.\"(feel 的过去式)", "stem_cn": "他们一看见就感到惊讶。", "options": ["felt", "feeled", "feels", "feel"] },
+    { "kind": "scenario", "stem": "\"happen to be\" 的意思是:", "options": ["碰巧是", "必须是", "假装是", "拒绝是"] },
+    { "kind": "scenario", "stem": "\"so far\" 的意思是:", "options": ["到目前为止", "很远地", "从此以后", "一开始"] },
+    { "kind": "reading", "stem": "Why does the team think the old city was prosperous?", "options": ["It had a high level of civilization, with stone houses and drainage", "It had tall glass towers", "It was full of gold statues", "It had a busy airport"], "passage": true },
+    { "kind": "reading", "stem": "What is strange about the reconstructed goddess?", "options": ["She looks like a very modern woman", "She has three heads", "She is taller than a house", "She is made of ice"], "passage": true },
+    { "kind": "listening", "stem": "What did the archaeologists find in the sacred room?", "options": ["Fragments of small goddess statues", "A pile of modern coins", "A hidden staircase", "Nothing at all"], "audio": true },
+    { "kind": "listening", "stem": "Have the archaeologists discovered the goddess's identity?", "options": ["No, her identity is still unknown", "Yes, she was a famous queen", "Yes, she was a local farmer", "Yes, from a signed letter"], "audio": true }
+  ]
+}

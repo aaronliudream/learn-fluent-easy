@@ -1,0 +1,131 @@
+{
+  "id": "am2_l72",
+  "unit_no": 9,
+  "lesson_no": 72,
+  "title_en": "A car called Bluebird",
+  "title_cn": "“蓝鸟”汽车",
+  "grammar_focus": "Review SD50-71 复习难点(教材 L72 Special difficulties):经常容易混淆的词——lose/miss、expect/wait、raise/rise、lie/lay、beat/win、value/cost/price、accept/agree、say/tell、dress up、hung(悬挂)、hard/hardly、near/nearly;辅以课文语法过去完成被动(had been specially built / a mistake had been made)与现在完成(have reached)",
+  "scene": "杰出的赛车手马尔科姆·坎贝尔爵士是第一个以每小时超过300英里的速度驾车的人。他于1935年9月在犹他州的邦纳维尔盐滩创造了一项新的世界纪录。他驾驶的“蓝鸟”牌汽车是专门为他制造的。车身长30多英尺,装有一台2500马力的发动机。尽管坎贝尔达到了每小时超过304英里的速度,但因为开始那圈爆了一只轮胎,他很难控制住汽车。比赛结束后,坎贝尔失望地得知他的平均时速是299英里。然而几天之后,有人告诉他弄错了,他的平均时速实际是301英里。从那以后,赛车手已达到每小时600多英里的速度。很多年后,马尔科姆爵士的儿子唐纳德踏着父亲的足迹,也创造了一项世界纪录。同父亲一样,他驾驶的也是一辆叫“蓝鸟”的汽车。",
+  "grammar_card": {
+    "title": "Review SD50-71 易混词复习",
+    "intro": "本课复习前面若干课的“经常容易混淆的词”:①lose(丢失)vs miss(错过、没赶上);②expect(预计会…)vs wait(等待);③raise(抬高、举起,后面接宾语)vs rise(升起,自己升);④lie(躺,lying)vs lay(放置,laying);⑤beat sb(击败某人)vs win(赢得比赛/奖);⑥value(看重)/cost(花费多少钱)/price(定价、价格);⑦accept(接受)vs agree(同意);⑧say sth(说某话)vs tell sb(告诉某人);⑨dress up(装扮成);⑩hang→hung(悬挂物品);⑪hard(努力地)vs hardly(几乎不);⑫near(靠近)vs nearly(几乎)。另配课文语法:过去完成被动 had been done、现在完成 have done。",
+    "table": {
+      "headers": ["易混词", "怎么选"],
+      "rows": [
+        ["miss / lose", "miss=错过没赶上(miss the train);lose=丢失(lose your keys)"],
+        ["expect / wait", "expect=预计会…(expecting a letter);wait=在等(waiting for a bus)"],
+        ["raise / rise", "raise=抬高、举起后接宾语;rise=自己升起不接宾语"],
+        ["cost / price / value", "cost=花费多少钱;price=价格、定价;value=看重"],
+        ["hard / hardly", "hard=努力地(work hard);hardly=几乎不(hardly ever)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语里“练习”名词动词都拼 practice(英式动词才拼 practise);本课只教 practice 一种拼法。", "mark": "practice" },
+      { "rule": "hang 两套变化:表“悬挂(物品)”hang-hung-hung(She hung the washing);旧时“绞死(人)”才用 hanged(仅认读,不作重点)。", "mark": "hang/hung" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What mistake was made?",
+    "options": ["His average speed was first declared 299 mph, but it was really 301 mph", "His car was too heavy to drive", "He started the race on the wrong day", "He drove the wrong car"],
+    "answer_index": 0
+  },
+  "passage": "The great racing driver, Sir Malcolm Campbell, was the first man to drive at over 300 miles per hour. He set up a new world record in September 1935 at Bonneville Salt Flats, Utah. Bluebird, the car he was driving, had been specially built for him. It was over 30 feet in length and had a 2,500-horsepower engine. Although Campbell reached a speed of over 304 miles per hour, he had great difficulty in controlling the car because a tire burst during the first run. After his attempt, Campbell was disappointed to learn that his average speed had been 299 miles per hour. However, a few days later, he was told that a mistake had been made. His average speed had been 301 miles per hour. Since that time, racing drivers have reached speeds over 600 miles an hour. Following in his father's footsteps many years later, Sir Malcolm's son, Donald, also set up a world record. Like his father, he was driving a car called Bluebird.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "The great racing driver, Sir Malcolm Campbell, was the first man to drive at over 300 miles per hour. He set up a new world record in September 1935 at Bonneville Salt Flats, Utah.", "text_cn": "杰出的赛车手马尔科姆·坎贝尔爵士是第一个以每小时超过300英里的速度驾车的人。他于1935年9月在犹他州的邦纳维尔盐滩创造了一项新的世界纪录。" },
+    { "seq": 2, "speaker": null, "text_en": "Bluebird, the car he was driving, had been specially built for him. It was over 30 feet in length and had a 2,500-horsepower engine.", "text_cn": "他驾驶的“蓝鸟”牌汽车是专门为他制造的。车身长30多英尺,装有一台2500马力的发动机。" },
+    { "seq": 3, "speaker": null, "text_en": "Although Campbell reached a speed of over 304 miles per hour, he had great difficulty in controlling the car because a tire burst during the first run.", "text_cn": "尽管坎贝尔达到了每小时超过304英里的速度,但因为开始那圈爆了一只轮胎,他很难控制住汽车。" },
+    { "seq": 4, "speaker": null, "text_en": "After his attempt, Campbell was disappointed to learn that his average speed had been 299 miles per hour. However, a few days later, he was told that a mistake had been made. His average speed had been 301 miles per hour.", "text_cn": "比赛结束后,坎贝尔失望地得知他的平均时速是299英里。然而几天之后,有人告诉他弄错了,他的平均时速实际是301英里。" },
+    { "seq": 5, "speaker": null, "text_en": "Since that time, racing drivers have reached speeds over 600 miles an hour. Following in his father's footsteps many years later, Sir Malcolm's son, Donald, also set up a world record. Like his father, he was driving a car called Bluebird.", "text_cn": "从那以后,赛车手已达到每小时600多英里的速度。很多年后,马尔科姆爵士的儿子唐纳德踏着父亲的足迹,也创造了一项世界纪录。同父亲一样,他驾驶的也是一辆叫“蓝鸟”的汽车。" }
+  ],
+  "words": [
+    { "word": "racing", "ipa": "/ˈreɪsɪŋ/", "pos": "n", "meaning_cn": "竞赛,赛车", "example": "The great racing driver" },
+    { "word": "per", "ipa": "/pɜːr/", "pos": "prep", "meaning_cn": "每", "example": "over 300 miles per hour" },
+    { "word": "Utah", "ipa": "/ˈjuːtɑː/", "pos": "n", "meaning_cn": "犹他(美国州名)", "example": "at Bonneville Salt Flats, Utah" },
+    { "word": "horsepower", "ipa": "/ˈhɔːrspaʊər/", "pos": "n", "meaning_cn": "马力", "example": "a 2,500-horsepower engine" },
+    { "word": "burst", "ipa": "/bɜːrst/", "pos": "v", "meaning_cn": "爆裂", "example": "a tire burst during the first run" },
+    { "word": "average", "ipa": "/ˈævərɪdʒ/", "pos": "adj", "meaning_cn": "平均的", "example": "his average speed had been 299 miles per hour" },
+    { "word": "footstep", "ipa": "/ˈfʊtstep/", "pos": "n", "meaning_cn": "足迹,脚步", "example": "Following in his father's footsteps" },
+    { "word": "record", "ipa": "/ˈrekərd/", "pos": "n", "meaning_cn": "纪录", "example": "He set up a new world record" },
+    { "word": "specially", "ipa": "/ˈspeʃəli/", "pos": "adv", "meaning_cn": "专门地", "example": "had been specially built for him" },
+    { "word": "disappointed", "ipa": "/ˌdɪsəˈpɔɪntɪd/", "pos": "adj", "meaning_cn": "失望的", "example": "Campbell was disappointed to learn" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "SD50 lose/miss、expect/wait 辨析" },
+    { "gp": "gp2", "name": "SD51 raise/rise、lie/lay、beat/win 辨析" },
+    { "gp": "gp3", "name": "SD61 value/cost/price 辨析" },
+    { "gp": "gp4", "name": "SD65/67 accept/agree、say/tell、dress up 辨析" },
+    { "gp": "gp5", "name": "SD52/71 hung(悬挂)、hard/hardly、near/nearly 辨析" },
+    { "gp": "gp6", "name": "课文语法:完成体的被动与主动(had been built / have reached)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Hurry up or you will ___ the train.\"(错过、没赶上用哪个词)", "stem_cn": "快点,不然你会错过这趟火车。", "options": ["miss", "lose", "loose", "drop"] },
+    { "gp": "gp1", "stem": "\"I'm ___ to receive a letter from her soon.\"(预计不久会收到)", "stem_cn": "我预计不久会收到她的一封信。", "options": ["expecting", "waiting", "waiting for", "hoped"] },
+    { "gp": "gp1", "stem": "\"Be careful not to ___ your keys again.\"(丢失用哪个词)", "stem_cn": "小心别再把钥匙弄丢了。", "options": ["lose", "miss", "loose", "drop off"] },
+    { "gp": "gp2", "stem": "\"You should ___ that picture a few inches.\"(把画往上抬高,后面接宾语)", "stem_cn": "你应该把那幅画往上抬高几英寸。", "options": ["raise", "rise", "arise", "raise up high"] },
+    { "gp": "gp2", "stem": "\"I love ___ in bed on Sunday morning.\"(躺着用哪个形)", "stem_cn": "我喜欢周日早晨躺在床上。", "options": ["lying", "laying", "lieing", "laid"] },
+    { "gp": "gp2", "stem": "\"He always ___ me at chess.\"(击败某人用哪个词)", "stem_cn": "下国际象棋他总是赢我。", "options": ["beats", "wins", "gains", "earns"] },
+    { "gp": "gp3", "stem": "\"Whenever I buy anything new, my father asks me the ___.\"(问多少钱、价格)", "stem_cn": "每次我买新东西,爸爸都问我价格。", "options": ["price", "cost", "value", "worth"] },
+    { "gp": "gp3", "stem": "\"That house ___ a fortune to build.\"(花费了一大笔钱用哪个词)", "stem_cn": "那栋房子造起来花了一大笔钱。", "options": ["cost", "valued", "priced", "spent"] },
+    { "gp": "gp3", "stem": "\"I ___ your advice a great deal.\"(非常看重、重视)", "stem_cn": "我非常看重你的建议。", "options": ["value", "cost", "price", "pay"] },
+    { "gp": "gp4", "stem": "\"I could not ___ his offer.\"(接受提议用哪个词)", "stem_cn": "我无法接受他的提议。", "options": ["accept", "agree", "admit", "receive to"] },
+    { "gp": "gp4", "stem": "\"I can ___ no more. He told me a secret.\"(说某话用哪个词)", "stem_cn": "我不能再多说了,他告诉了我一个秘密。", "options": ["say", "tell", "speak", "talk"] },
+    { "gp": "gp4", "stem": "\"Who is going to ___ as Santa Claus this year?\"(装扮成…用哪个词组)", "stem_cn": "今年谁来装扮成圣诞老人?", "options": ["dress up", "dress", "wear", "put on"] },
+    { "gp": "gp5", "stem": "\"When the sun came out, she ___ the washing on the line.\"(把衣物挂起来:hang 的过去式)", "stem_cn": "太阳出来时,她把洗好的衣服晾在绳子上。", "options": ["hung", "hanged", "hang", "hangs"] },
+    { "gp": "gp5", "stem": "\"He has been working too ___ lately.\"(努力地用哪个词)", "stem_cn": "他最近一直工作得太拼命了。", "options": ["hard", "hardly", "hardness", "harder"] },
+    { "gp": "gp5", "stem": "\"He was ___ run over by a car.\"(差点、几乎用哪个词)", "stem_cn": "他差点被一辆车撞了。", "options": ["nearly", "near", "nearby", "nearer"] },
+    { "gp": "gp6", "stem": "\"Bluebird, the car he was driving, ___ specially built for him.\"(专门为他制造:过去完成被动)", "stem_cn": "他驾驶的蓝鸟车是专门为他制造的。", "options": ["had been", "was being", "has been", "had"] },
+    { "gp": "gp6", "stem": "\"A few days later, he was told that a mistake ___ made.\"(出了个差错:过去完成被动)", "stem_cn": "几天后,有人告诉他弄错了。", "options": ["had been", "was being", "has been", "had"] },
+    { "gp": "gp6", "stem": "\"Since that time, racing drivers ___ speeds over 600 miles an hour.\"(至今已达到:现在完成)", "stem_cn": "从那时起,赛车手已达到每小时600多英里的速度。", "options": ["have reached", "reached", "had reached", "are reaching"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"汽车后备箱\"常说:", "options": ["trunk", "boot", "back-box", "rear-case"] },
+    { "stem": "美语里\"发动机罩(引擎盖)\"常说:", "options": ["hood", "bonnet", "engine-lid", "motor-cover"] },
+    { "stem": "burst 的意思是:", "options": ["爆裂", "关闭", "加速", "修理"] },
+    { "stem": "average 的意思是:", "options": ["平均的", "最高的", "危险的", "缓慢的"] },
+    { "stem": "horsepower 的意思是:", "options": ["马力", "车速", "里程", "油耗"] },
+    { "stem": "footstep 的意思是:", "options": ["足迹,脚步", "楼梯", "门槛", "车轮"] }
+  ],
+  "contrast": [
+    { "us": "trunk", "uk": "boot", "note_cn": "汽车后备箱;美语 trunk,英式 boot" },
+    { "us": "hood", "uk": "bonnet", "note_cn": "发动机罩、引擎盖;美语 hood,英式 bonnet" },
+    { "us": "gas", "uk": "petrol", "note_cn": "汽油;美语 gas(gasoline),英式 petrol" },
+    { "us": "windshield", "uk": "windscreen", "note_cn": "挡风玻璃;美语 windshield,英式 windscreen" }
+  ],
+  "chunks": [
+    { "us": "set up a record", "ipa": "/set ʌp ə ˈrekərd/", "example1": "He set up a new world record in 1935.", "example1_cn": "他在1935年创造了一项新的世界纪录。", "example2": "The young swimmer set up a national record.", "example2_cn": "这名年轻游泳选手创造了一项全国纪录。" },
+    { "us": "have great difficulty in doing", "ipa": "/hæv ɡreɪt ˈdɪfɪkəlti ɪn/", "example1": "He had great difficulty in controlling the car.", "example1_cn": "他很难控制住那辆车。", "example2": "I had great difficulty in finding the address.", "example2_cn": "我费了好大劲才找到那个地址。" },
+    { "us": "follow in one's footsteps", "ipa": "/ˈfɑːloʊ ɪn ˈfʊtsteps/", "example1": "He followed in his father's footsteps.", "example1_cn": "他踏着父亲的足迹(继承父业)。", "example2": "She followed in her mother's footsteps and became a doctor.", "example2_cn": "她效仿母亲,也当了医生。" },
+    { "us": "be disappointed to learn", "ipa": "/bi ˌdɪsəˈpɔɪntɪd tə lɜːrn/", "example1": "Campbell was disappointed to learn that his speed had been 299 mph.", "example1_cn": "坎贝尔失望地得知他的时速是299英里。", "example2": "We were disappointed to learn that the show was cancelled.", "example2_cn": "我们失望地得知演出取消了。" }
+  ],
+  "stage7_cloze": {
+    "context": "Bluebird ___1___ specially built for Campbell. Although he reached over 304 mph, a tire ___2___ during the first run. He was disappointed to ___3___ that his average was only 299 mph, but a few days later a mistake ___4___ been made — it was really 301.",
+    "blanks": [
+      { "blank_no": 1, "options": ["had been", "was being", "has been", "had"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["burst", "bursted", "was burst", "bursting"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["learn", "teach", "study", "read"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["had", "was", "has", "would"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What was Sir Malcolm Campbell the first man to do?", "options": ["Drive at over 300 miles per hour", "Fly across the ocean", "Build a museum of cars", "Win a chess match"] },
+    { "stem": "Why did he have great difficulty controlling the car?", "options": ["Because a tire burst during the first run", "Because it began to rain", "Because the engine was too small", "Because the road was blocked"] },
+    { "stem": "What was his real average speed?", "options": ["301 miles per hour, after a mistake had been corrected", "299 miles per hour exactly", "600 miles per hour", "250 miles per hour"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"他驾驶的车是专门为他制造的\"(过去完成被动):", "options": ["The car he was driving had been specially built for him.", "The car he was driving was specially building for him.", "The car he was driving has specially built for him.", "The car he was driving had specially built for him."] },
+    { "stem": "你想说\"快点,不然你会错过火车\"(错过没赶上,不是丢失):", "options": ["Hurry up or you will miss the train.", "Hurry up or you will lose the train.", "Hurry up or you will loose the train.", "Hurry up or you will drop the train."] },
+    { "stem": "你想说\"他踏着父亲的足迹,也创造了纪录\"(固定说法):", "options": ["Following in his father's footsteps, he also set up a record.", "Following on his father's footsteps, he also set up a record.", "Following in his father's foot, he also set up a record.", "Following after his father's step, he also set up a record."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "burst 的意思是:", "options": ["爆裂", "关闭", "加速", "修理"] },
+    { "kind": "vocab", "stem": "footstep 的意思是:", "options": ["足迹,脚步", "楼梯", "门槛", "车轮"] },
+    { "kind": "grammar", "stem": "\"The car he was driving ___ specially built for him.\"(过去完成被动)", "stem_cn": "他驾驶的车是专门为他制造的。", "options": ["had been", "was being", "has been", "had"] },
+    { "kind": "grammar", "stem": "\"A few days later, he was told that a mistake ___ made.\"(过去完成被动)", "stem_cn": "几天后,有人告诉他弄错了。", "options": ["had been", "was being", "has been", "had"] },
+    { "kind": "scenario", "stem": "\"miss the train\" 里 miss 的意思是:", "options": ["错过、没赶上", "丢失", "击中", "躲避"] },
+    { "kind": "scenario", "stem": "\"follow in one's footsteps\" 的意思是:", "options": ["效仿某人、走同样的路", "跟在某人后面散步", "数某人的脚印", "踩到某人的脚"] },
+    { "kind": "reading", "stem": "One of these statements is true. Which one?", "options": ["There was some doubt whether Sir Malcolm had maintained an average speed of 301 miles per hour", "Sir Malcolm set up a world record recently", "Sir Malcolm's average speed was 299 miles per hour", "Sir Malcolm's car had a 250-horsepower engine"], "passage": true },
+    { "kind": "reading", "stem": "Whose footsteps did Donald follow in, and what was his car called?", "options": ["His father Sir Malcolm's; his car was also called Bluebird", "A stranger's; his car was called Redbird", "His brother's; his car had no name", "Nobody's; he never raced"], "passage": true },
+    { "kind": "listening", "stem": "What burst during the first run?", "options": ["A tire", "The engine", "A window", "A fuel tank"], "audio": true },
+    { "kind": "listening", "stem": "How fast did Campbell actually average?", "options": ["301 miles per hour", "299 miles per hour", "304 miles per hour", "600 miles per hour"], "audio": true }
+  ]
+}

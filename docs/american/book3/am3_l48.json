@@ -1,0 +1,133 @@
+{
+  "id": "am3_l48",
+  "unit_no": 10,
+  "lesson_no": 48,
+  "title_en": "The Silent Village",
+  "title_cn": "沉默的村庄",
+  "grammar_focus": "独立主格结构(名词 + being/分词,作状语:the only sign of life being a goat)、现在分词短语作状语(Taking a path …, Looking up …, Turning back …)、关系词 which/who 引导的修饰性从句、not only … but even … / be cut off from / be inaccessible to、形容词或分词后置修饰名词(a boatman fast asleep;houses built of mud bricks)(原创承载 NCE3 第三册 L48 考点·轻度软化措辞不换情节:旅行氛围叙事——夫妇周游巴尔干,误入一个沉默、戒备外人的偏僻山村,感到不受欢迎而折返;无暴力,把原文“敌意/怒视/警告”放缓为“戒备/注视/暗示”;美式化 traveled/gray/can)",
+  "scene": "在这个游客往来频繁的世界上,仍有成千上万个地方游客难以到达。人们总以为偏僻地方的村民热情好客。可那些不但与外国游客隔绝、甚至与本国同胞也隔绝的人,有可能对陌生人心存戒备。到真正偏僻的村庄去,很少是件轻松的事——我和妻子在一次周游巴尔干半岛时对此深有体会。我们在一座小镇上逗留了几天,参观了附近许多古老的教堂。这些教堂吸引了大量游客,不仅因为建筑风格奇特,还因为保存着大量完好的壁画。我们离开小镇的前一天,几辆满载游客的公共汽车涌进了镇子。这实在让我们受不了,于是我们决定用最后一天去乡间走走。走上一条出镇的小路,我们穿过几块农田,来到一片茂密的树林。原以为小路会突然到头,没想到它蜿蜒着穿过树林。我们在林中徒步走了两个多小时,来到一条深溪边。我们看得出小路在对岸继续延伸,却不知如何过溪。忽然,妻子发现岸边泊着一条小船,船上有个熟睡的船夫。我们轻轻把他唤醒,请他把我们摆渡过溪。他起初不大情愿,但经我们劝说,终于同意了。小路通向一个座落在陡峭山坡上的小村庄。那儿有一条散乱的、未经修筑的土路,两旁排列着一些矮小的农舍。即便在晴朗的蓝天下,村子也显得让人望而生畏,因为所有房子都用灰色土坯砌成。村子似乎无人居住,唯一的生命迹象,是拴在附近田里一棵树上的一只黑山羊。我们在田边一堵歪歪斜斜的木栅栏上坐下,打开几听沙丁鱼罐头,吃起了野外午餐。忽然,我注意到妻子神色不安。抬头一看,我发现我们已被一群衣衫褴褛的孩子围住,他们默默地看着我们吃东西。我们把食物递给他们,又和气地跟他们说话,他们却一动不动。我断定他们只是怕生。后来,我们沿村里的大街往下走时,身后跟着一队沉默的孩子。那个原本似乎空无一人的村子,忽然活了起来。一张张脸出现在窗口。穿着衬衫的男人站在自家门外注视着我们。裹着深色披巾的老妇人从门道里凝视我们。最奇怪的是,一点声音都听不见。毫无疑问,我们是不受欢迎的来客。我们不需要更多的暗示了。转身沿大街往回走,我们加快脚步,匆匆朝溪边赶去,盼着船夫还在那儿等着。",
+  "grammar_card": {
+    "title": "独立主格结构 / 现在分词作状语 / which·who 关系从句 / not only…but even / 后置修饰",
+    "intro": "①独立主格结构:名词 + 分词(being/done/doing),作状语,补充说明主句:the only sign of life being a black goat。②现在分词短语放句首作状语:Taking a path …, Looking up …, Turning back …。③关系词 which(指物)/ who(指人)引导从句修饰前面的名词:a path which led …;children who were watching。④not only … but even …:不但…甚至…;be cut off from(与…隔绝)、be inaccessible to(难以到达)。⑤形容词或分词可放名词后修饰它:a boatman fast asleep;houses built of mud bricks;children in rags。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["名词 + being/分词(独立主格)", "补充说明,作状语", "the only sign of life being a goat"],
+        ["现在分词短语作状语", "…着/…时", "Looking up, I saw …"],
+        ["not only … but even …", "不但…甚至…", "cut off not only from A but even from B"],
+        ["形容词/分词后置修饰名词", "…的…", "a boatman fast asleep"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "独立主格里名词与分词是主动就用 -ing(sign … being),被动/完成就用过去分词(the meal finished）;它有自己的逻辑主语,与主句主语不同。", "mark": "the only sign … being …" },
+      { "rule": "现在分词短语作状语时,其逻辑主语必须与主句主语一致（Looking up, I saw …,是 I 抬头）。", "mark": "Looking up, I …" },
+      { "rule": "美式:traveled(英式 travelled)、gray(英式 grey)、can(英式 tin,指罐头)。本课已按美语写。", "mark": "traveled / gray / can" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why was the village silent?",
+    "options": ["The villagers were wary of strangers and quietly watched the unwelcome visitors", "Everyone was taking an afternoon nap", "A holiday had emptied the streets", "The village had been abandoned long ago"],
+    "answer_index": 0
+  },
+  "passage": "In this much-traveled world, there are still thousands of places that are inaccessible to tourists. We always assume that villagers in remote places are friendly and hospitable. But people who are cut off not only from foreign tourists, but even from their own countrymen, can be wary of strangers. Visits to really remote villages are seldom relaxing — as my wife and I discovered during a trip through the Balkans. We had spent several days in a small town and visited a number of old churches nearby. These attracted many visitors, for they were not only of great architectural interest but also contained a large number of beautifully preserved frescoes. On the day before we left, several busloads of tourists descended on the town. This was more than we could bear, so we decided to spend our last day exploring the countryside. Taking a path that led out of the town, we crossed a few fields until we came to a dense wood. We expected the path to end abruptly, but we found that it wound its way through the trees. We tramped through the wood for over two hours until we arrived at a deep stream. We could see that the path continued on the other side, but we had no idea how to get across. Suddenly my wife spotted a boat moored to the bank. In it there was a boatman fast asleep. We gently woke him up and asked him to ferry us to the other side. Though he was reluctant to do so at first, we eventually persuaded him to take us. The path led to a tiny village perched on the steep sides of a mountain. The place consisted of a straggling dirt road lined on either side by small houses. Even under a clear blue sky, the village looked unwelcoming, for all the houses were built of gray mud bricks. The village seemed deserted, the only sign of life being a black goat tied to a tree in a field nearby. Sitting down on a dilapidated wooden fence near the field, we opened a couple of cans of sardines and had a picnic lunch. All at once, I noticed that my wife seemed uneasy. Looking up, I saw that we were surrounded by children in rags who were watching us silently as we ate. We offered them food and spoke to them kindly, but they remained motionless. I concluded that they were simply shy of strangers. When we later walked down the main street of the village, we were followed by a silent procession of children. The village, which had seemed deserted, immediately came to life. Faces appeared at windows. Men in shirtsleeves stood outside their houses and stared at us. Old women in dark shawls peered at us from doorways. The strangest thing of all was that not a sound could be heard. There was no doubt that we were unwelcome visitors. We needed no further hint. Turning back down the main street, we quickened our pace and made our way rapidly toward the stream, where we hoped the boatman was still waiting.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "In this much-traveled world, there are still thousands of places that are inaccessible to tourists. We always assume that villagers in remote places are friendly and hospitable. But people who are cut off not only from foreign tourists, but even from their own countrymen, can be wary of strangers. Visits to really remote villages are seldom relaxing — as my wife and I discovered during a trip through the Balkans.", "text_cn": "在这个游客往来频繁的世界上,仍有成千上万个地方游客难以到达。人们总以为偏僻地方的村民热情好客。可那些不但与外国游客隔绝、甚至与本国同胞也隔绝的人,有可能对陌生人心存戒备。到真正偏僻的村庄去,很少是件轻松的事——我和妻子在一次周游巴尔干半岛时对此深有体会。" },
+    { "seq": 2, "speaker": null, "text_en": "We had spent several days in a small town and visited a number of old churches nearby. These attracted many visitors, for they were not only of great architectural interest but also contained a large number of beautifully preserved frescoes. On the day before we left, several busloads of tourists descended on the town. This was more than we could bear, so we decided to spend our last day exploring the countryside.", "text_cn": "我们在一座小镇上逗留了几天,参观了附近许多古老的教堂。这些教堂吸引了大量游客,不仅因为建筑风格奇特,还因为保存着大量完好的壁画。我们离开小镇的前一天,几辆满载游客的公共汽车涌进了镇子。这实在让我们受不了,于是我们决定用最后一天去乡间走走。" },
+    { "seq": 3, "speaker": null, "text_en": "Taking a path that led out of the town, we crossed a few fields until we came to a dense wood. We expected the path to end abruptly, but we found that it wound its way through the trees. We tramped through the wood for over two hours until we arrived at a deep stream. We could see that the path continued on the other side, but we had no idea how to get across. Suddenly my wife spotted a boat moored to the bank. In it there was a boatman fast asleep. We gently woke him up and asked him to ferry us to the other side. Though he was reluctant to do so at first, we eventually persuaded him to take us.", "text_cn": "走上一条出镇的小路,我们穿过几块农田,来到一片茂密的树林。原以为小路会突然到头,没想到它蜿蜒着穿过树林。我们在林中徒步走了两个多小时,来到一条深溪边。我们看得出小路在对岸继续延伸,却不知如何过溪。忽然,妻子发现岸边泊着一条小船,船上有个熟睡的船夫。我们轻轻把他唤醒,请他把我们摆渡过溪。他起初不大情愿,但经我们劝说,终于同意了。" },
+    { "seq": 4, "speaker": null, "text_en": "The path led to a tiny village perched on the steep sides of a mountain. The place consisted of a straggling dirt road lined on either side by small houses. Even under a clear blue sky, the village looked unwelcoming, for all the houses were built of gray mud bricks. The village seemed deserted, the only sign of life being a black goat tied to a tree in a field nearby. Sitting down on a dilapidated wooden fence near the field, we opened a couple of cans of sardines and had a picnic lunch.", "text_cn": "小路通向一个座落在陡峭山坡上的小村庄。那儿有一条散乱的、未经修筑的土路,两旁排列着一些矮小的农舍。即便在晴朗的蓝天下,村子也显得让人望而生畏,因为所有房子都用灰色土坯砌成。村子似乎无人居住,唯一的生命迹象,是拴在附近田里一棵树上的一只黑山羊。我们在田边一堵歪歪斜斜的木栅栏上坐下,打开几听沙丁鱼罐头,吃起了野外午餐。" },
+    { "seq": 5, "speaker": null, "text_en": "All at once, I noticed that my wife seemed uneasy. Looking up, I saw that we were surrounded by children in rags who were watching us silently as we ate. We offered them food and spoke to them kindly, but they remained motionless. When we later walked down the main street of the village, we were followed by a silent procession of children. The village, which had seemed deserted, immediately came to life. Men in shirtsleeves stared at us, and old women in dark shawls peered at us from doorways. There was no doubt that we were unwelcome visitors, so, turning back down the main street, we quickened our pace and made our way rapidly toward the stream, where we hoped the boatman was still waiting.", "text_cn": "忽然,我注意到妻子神色不安。抬头一看,我发现我们已被一群衣衫褴褛的孩子围住,他们默默地看着我们吃东西。我们把食物递给他们,又和气地跟他们说话,他们却一动不动。后来,我们沿村里的大街往下走时,身后跟着一队沉默的孩子。那个原本似乎空无一人的村子,忽然活了起来。穿着衬衫的男人注视着我们,裹着深色披巾的老妇人从门道里凝视我们。毫无疑问,我们是不受欢迎的来客,于是我们转身沿大街往回走,加快脚步,匆匆朝溪边赶去,盼着船夫还在那儿等着。" }
+  ],
+  "words": [
+    { "word": "inaccessible", "ipa": "/ˌɪnəkˈsesəbəl/", "pos": "adj", "meaning_cn": "难接近的,达不到的", "example": "places inaccessible to tourists" },
+    { "word": "hospitable", "ipa": "/hɑːˈspɪtəbəl/", "pos": "adj", "meaning_cn": "好客的", "example": "friendly and hospitable" },
+    { "word": "hostile", "ipa": "/ˈhɑːstl/", "pos": "adj", "meaning_cn": "不友好的,有敌意的", "example": "hostile to travelers" },
+    { "word": "vicinity", "ipa": "/vəˈsɪnəti/", "pos": "n", "meaning_cn": "周围,近邻", "example": "churches in the vicinity" },
+    { "word": "abruptly", "ipa": "/əˈbrʌptli/", "pos": "adv", "meaning_cn": "突然地,意外地", "example": "the path ends abruptly" },
+    { "word": "dilapidated", "ipa": "/dɪˈlæpɪdeɪtɪd/", "pos": "adj", "meaning_cn": "陈旧破烂的,倒塌的", "example": "a dilapidated wooden fence" },
+    { "word": "motionless", "ipa": "/ˈmoʊʃənləs/", "pos": "adj", "meaning_cn": "不动的", "example": "they remained motionless" },
+    { "word": "procession", "ipa": "/prəˈseʃən/", "pos": "n", "meaning_cn": "行列,成队的人群", "example": "a silent procession of children" },
+    { "word": "peer", "ipa": "/pɪr/", "pos": "v", "meaning_cn": "凝视,盯着", "example": "old women peered at us" },
+    { "word": "quicken", "ipa": "/ˈkwɪkən/", "pos": "v", "meaning_cn": "加快", "example": "we quickened our pace" },
+    { "word": "tramp", "ipa": "/træmp/", "pos": "v", "meaning_cn": "徒步行进", "example": "we tramped through the wood" },
+    { "word": "straggle", "ipa": "/ˈstræɡəl/", "pos": "v", "meaning_cn": "蔓延,散乱分布", "example": "a straggling dirt road" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "独立主格结构(名词 + being/分词,作状语)" },
+    { "gp": "gp2", "name": "现在分词短语作状语(Taking …, Looking up …)" },
+    { "gp": "gp3", "name": "which/who 引导的修饰性从句" },
+    { "gp": "gp4", "name": "not only … but even … / be cut off from / be inaccessible to" },
+    { "gp": "gp5", "name": "形容词或分词后置修饰名词" },
+    { "gp": "gp6", "name": "词汇辨析(dilapidated/motionless/peer)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The village seemed deserted, the only sign of life ___ a black goat.\"(独立主格:名词 + ___ + 名词,填 be 动词的 -ing 形式)", "stem_cn": "村子似乎无人居住,唯一的生命迹象是一只黑山羊。", "options": ["being", "was", "is", "been"] },
+    { "gp": "gp1", "stem": "\"The meal ___, we walked on toward the stream.\"(独立主格:名词 + 过去分词,表完成“…结束后”)", "stem_cn": "饭吃完后,我们朝溪边走去。", "options": ["finished", "finishing", "finish", "finishes"] },
+    { "gp": "gp1", "stem": "\"The children watched us, their eyes ___ on our food.\"(独立主格:名词 + 过去分词,“盯在…上”)", "stem_cn": "孩子们看着我们,目光盯在我们的食物上。", "options": ["fixed", "fixing", "fix", "to fix"] },
+    { "gp": "gp2", "stem": "\"___ a path that led out of town, we crossed a few fields.\"(现在分词短语作状语:走上一条…)", "stem_cn": "走上一条出镇的小路,我们穿过几块农田。", "options": ["Taking", "Taken", "Take", "To take"] },
+    { "gp": "gp2", "stem": "\"___ up, I saw children surrounding us.\"(现在分词短语作状语:抬头一看)", "stem_cn": "抬头一看,我发现孩子们围住了我们。", "options": ["Looking", "Looked", "Look", "To look"] },
+    { "gp": "gp2", "stem": "\"___ back down the street, we quickened our pace.\"(现在分词短语作状语:转身往回走)", "stem_cn": "转身沿街往回走,我们加快了脚步。", "options": ["Turning", "Turned", "Turn", "To turn"] },
+    { "gp": "gp3", "stem": "\"We took a path ___ led out of the town.\"(定语从句,先行词是物,在从句中作主要成分)", "stem_cn": "我们走上一条通向镇外的小路。", "options": ["which", "who", "whom", "what"] },
+    { "gp": "gp3", "stem": "\"We were watched by children ___ were dressed in rags.\"(定语从句,先行词是人,在从句中作主要成分)", "stem_cn": "我们被一群穿着破衣的孩子注视着。", "options": ["who", "which", "whom", "what"] },
+    { "gp": "gp3", "stem": "\"The village, ___ had seemed deserted, suddenly came to life.\"(非限定定语从句,先行词是物)", "stem_cn": "那个原本似乎空无一人的村子,忽然活了起来。", "options": ["which", "that", "who", "what"] },
+    { "gp": "gp4", "stem": "\"They were cut off not only from tourists ___ even from their own countrymen.\"(not only … ___ even …:不但…甚至…)", "stem_cn": "他们不但与游客隔绝,甚至与本国同胞隔绝。", "options": ["but", "and", "or", "nor"] },
+    { "gp": "gp4", "stem": "\"Thousands of places are still inaccessible ___ tourists.\"(be inaccessible ___:难以到达,填介词)", "stem_cn": "仍有成千上万的地方游客难以到达。", "options": ["to", "for", "of", "with"] },
+    { "gp": "gp4", "stem": "\"The village was completely cut off ___ the outside world.\"(be cut off ___:与…隔绝,填介词)", "stem_cn": "那村子与外界完全隔绝。", "options": ["from", "of", "to", "with"] },
+    { "gp": "gp5", "stem": "\"In the boat there was a boatman fast ___.\"(形容词短语后置修饰 boatman:熟睡的)", "stem_cn": "船上有个熟睡的船夫。", "options": ["asleep", "sleep", "sleeps", "to sleep"] },
+    { "gp": "gp5", "stem": "\"The houses ___ of gray mud bricks looked forbidding.\"(过去分词后置修饰 houses:用…建成的)", "stem_cn": "用灰色土坯建成的房子看着让人发怵。", "options": ["built", "building", "build", "to build"] },
+    { "gp": "gp5", "stem": "\"We were surrounded by children ___ in rags.\"(过去分词后置修饰 children:穿着破衣的)", "stem_cn": "我们被一群衣衫褴褛的孩子围住。", "options": ["dressed", "dressing", "dress", "to dress"] },
+    { "gp": "gp6", "stem": "\"A building that is old, broken and falling apart is ___.\"(“陈旧破烂的、倒塌的”用哪个词)", "stem_cn": "又旧又破、快要坍塌的建筑。", "options": ["dilapidated", "brand-new", "modern", "sturdy"] },
+    { "gp": "gp6", "stem": "\"Someone standing completely still, not moving at all, is ___.\"(“不动的”用哪个词)", "stem_cn": "一动不动地站着的。", "options": ["motionless", "restless", "cheerful", "busy"] },
+    { "gp": "gp6", "stem": "\"To stare hard at something to see it better is to ___.\"(“凝视、盯着”用哪个词)", "stem_cn": "眯眼凝视、盯着看。", "options": ["peer", "shout", "wave", "ignore"] }
+  ],
+  "stage6": [
+    { "stem": "inaccessible 的意思是:", "options": ["难接近的,达不到的", "好客的", "宽敞的", "古老的"] },
+    { "stem": "hostile 的意思是:", "options": ["不友好的,有敌意的", "热情好客的", "害羞的", "慷慨的"] },
+    { "stem": "dilapidated 的意思是:", "options": ["陈旧破烂的,倒塌的", "崭新的", "宽敞的", "明亮的"] },
+    { "stem": "motionless 的意思是:", "options": ["不动的", "快速的", "吵闹的", "柔软的"] },
+    { "stem": "procession 的意思是:", "options": ["行列,成队的人群", "空地", "寂静", "山谷"] },
+    { "stem": "peer 的意思是:", "options": ["凝视,盯着", "微笑", "低语", "挥手"] }
+  ],
+  "contrast": [
+    { "us": "traveled", "uk": "travelled", "note_cn": "旅行(过去式/分词);拼写差异,美语单 l" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" },
+    { "us": "can", "uk": "tin", "note_cn": "罐头;美语 can,英式 tin(a can/tin of sardines)" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期、度假;美语 vacation,英式 holiday" }
+  ],
+  "chunks": [
+    { "us": "cut off from", "ipa": "/kʌt ɔːf frəm/", "example1": "The village was cut off from the world.", "example1_cn": "那村子与世隔绝。", "example2": "We were cut off from all news.", "example2_cn": "我们与一切消息隔绝。" },
+    { "us": "descend on", "ipa": "/dɪˈsend ɑːn/", "example1": "Busloads of tourists descended on the town.", "example1_cn": "一车车游客涌进了小镇。", "example2": "Reporters descended on the movie star.", "example2_cn": "记者们蜂拥到那位影星身边。" },
+    { "us": "come to life", "ipa": "/kʌm tə laɪf/", "example1": "The silent village suddenly came to life.", "example1_cn": "沉默的村子忽然活了起来。", "example2": "The party came to life after midnight.", "example2_cn": "派对午夜后热闹起来。" },
+    { "us": "quicken one's pace", "ipa": "/ˈkwɪkən wʌnz peɪs/", "example1": "We quickened our pace toward the stream.", "example1_cn": "我们加快脚步朝溪边走去。", "example2": "She quickened her pace as it grew dark.", "example2_cn": "天渐渐黑了,她加快了脚步。" }
+  ],
+  "stage7_cloze": {
+    "context": "In this much-traveled world, there are still places that are inaccessible ___1___ tourists. People who are cut off ___2___ the outside world can be wary of strangers. Taking a path ___3___ led out of the town, my wife and I reached a silent village. The place seemed deserted, the only sign of life ___4___ a black goat tied to a tree.",
+    "blanks": [
+      { "blank_no": 1, "options": ["to", "for", "of", "with"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["from", "of", "to", "with"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["which", "who", "what", "whose"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["being", "was", "is", "been"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why was the village silent?", "options": ["The villagers were wary of strangers and did not welcome the visitors", "Everyone was fast asleep", "A festival had emptied the streets", "The village had been abandoned"] },
+    { "stem": "How did the couple cross the deep stream?", "options": ["A boatman ferried them across in his boat", "They swam across", "They built a raft", "They walked around it"] },
+    { "stem": "What did the couple do when they realized they were unwelcome?", "options": ["They quickened their pace and hurried back toward the stream", "They knocked on a door for help", "They shouted at the villagers", "They set up camp for the night"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"村子似乎无人居住,唯一的生命迹象是一只黑山羊\"(独立主格):", "options": ["The village seemed deserted, the only sign of life being a black goat.", "The village seemed deserted, the only sign of life was a black goat being.", "The village seemed deserted, the only sign of life be a black goat.", "The village seemed deserted, the only sign of life been a black goat."] },
+    { "stem": "你想说\"抬头一看,我发现孩子们围住了我们\"(现在分词状语):", "options": ["Looking up, I saw that we were surrounded by children.", "Looked up, I saw that we were surrounded by children.", "Look up, I saw that we were surrounded by children.", "To look up, I saw that we were surrounded by children."] },
+    { "stem": "你想说\"他们不但与游客隔绝,甚至与本国同胞隔绝\"(not only … but even …):", "options": ["They were cut off not only from tourists but even from their own countrymen.", "They were cut off not only from tourists and even from their own countrymen.", "They were cut off not only from tourists but even their own countrymen from.", "They were cut off not only tourists but even from their own countrymen."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "hostile 的意思是:", "options": ["不友好的,有敌意的", "热情好客的", "害羞的", "慷慨的"] },
+    { "kind": "vocab", "stem": "dilapidated 的意思是:", "options": ["陈旧破烂的,倒塌的", "崭新的", "宽敞的", "明亮的"] },
+    { "kind": "grammar", "stem": "\"The village seemed deserted, the only sign of life ___ a black goat.\"(独立主格:名词 + ___ + 名词)", "stem_cn": "村子似乎无人居住,唯一的生命迹象是一只黑山羊。", "options": ["being", "was", "is", "been"] },
+    { "kind": "grammar", "stem": "\"___ a path that led out of town, we crossed a few fields.\"(现在分词短语作状语)", "stem_cn": "走上一条出镇的小路,我们穿过几块农田。", "options": ["Taking", "Taken", "Take", "To take"] },
+    { "kind": "scenario", "stem": "\"cut off from\" 的意思是:", "options": ["与…隔绝", "靠近…", "加入…", "依赖…"] },
+    { "kind": "scenario", "stem": "\"come to life\" 的意思是:", "options": ["苏醒过来、活跃起来", "突然消失", "保持安静", "陷入沉睡"] },
+    { "kind": "reading", "stem": "Why did the couple decide to explore the countryside on their last day?", "options": ["Busloads of tourists had descended on the town", "The churches were all closed", "Their hotel was full", "They had lost their way"], "passage": true },
+    { "kind": "reading", "stem": "How did the village change when the couple walked down the main street?", "options": ["The deserted-looking village suddenly came to life, with faces at windows", "It stayed completely empty", "The villagers cheered and welcomed them", "It began to rain heavily"], "passage": true },
+    { "kind": "listening", "stem": "What was the only sign of life when they first reached the village?", "options": ["A black goat tied to a tree", "A barking dog", "Smoke from a chimney", "A ringing bell"], "audio": true },
+    { "kind": "listening", "stem": "How did the villagers look at the couple?", "options": ["Silently and without moving, watching their every step", "With warm, welcoming smiles", "With complete indifference", "They offered them food and drink"], "audio": true }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "am2_l91",
+  "unit_no": 12,
+  "lesson_no": 91,
+  "title_en": "Three People in a Hot-Air Balloon",
+  "title_cn": "热气球上的三个人",
+  "grammar_focus": "复习 KS19/43/67 表示“能够/做成”的说法(收官包·干净课美语化):can / could(能力)、be able to(各时态的能力,尤其 was/were able to 表某次成功做到)、manage to(费劲设法做成)、can't / couldn't(不能),以及三者的辨析(某次成功做到用 was able to / managed to,不用 could)",
+  "scene": "去年夏天,三个朋友有幸坐上了一次热气球。“你们都挤得进吊篮吗?”飞行员问。“我们试试看!”他们说。不一会儿,他们就能俯瞰脚下整片山谷。可风很大,飞行员没法轻松掌舵。“别担心——我能应付,”他镇定地说。紧张了一分钟后,他设法让气球掉了头。他们谁都不曾从空中看过自己的镇子。“真不敢相信有这么美!”其中一个人说。最后,飞行员把气球安全地降落在一片田野里。他们经历了一生难忘的冒险——而且没有一个人受伤。",
+  "grammar_card": {
+    "title": "复习 KS19/43/67 “能够/做成”的说法",
+    "intro": "本课复习几种表示“能够、做到”的说法:①can / could——表能力(They could see the whole valley);②be able to——同样表能力,但可用于各种时态,尤其 was/were able to 表“某一次成功做到”(The pilot was able to land safely);③manage to——“费了一番劲、设法做成”(He managed to turn the balloon around);④can't / couldn't——“不能、无法”(The pilot couldn't steer easily)。辨析要点:表“某一次具体成功做到了”,用 was able to 或 managed to,而不用 could;could 多用于“过去一贯具备的能力”。",
+    "table": {
+      "headers": ["说法", "例子"],
+      "rows": [
+        ["can / could(能力)", "They could see the whole valley."],
+        ["be able to(某次做到)", "The pilot was able to land safely."],
+        ["manage to(设法做成)", "He managed to turn the balloon around."],
+        ["can't / couldn't(不能)", "The pilot couldn't steer easily."],
+        ["辨析", "某次成功做到 → was able to / managed to,不用 could。"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语“度假”说 vacation(英式 holiday);“秋天”说 fall(英式 autumn)。本课已按美语写。", "mark": "vacation / fall" },
+      { "rule": "表“过去某一次费劲成功做到”,用 was able to 或 managed to,不用 could;could 用于“过去一贯的能力”。", "mark": "could vs managed to" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What did the three friends do last summer?",
+    "options": ["Joined a hot-air balloon ride", "Sailed across a lake", "Climbed a tall mountain", "Rode horses in a field"],
+    "answer_index": 0
+  },
+  "passage": "Last summer, three friends were able to join a hot-air balloon ride. \"Can you all fit in the basket?\" the pilot asked. \"We can try!\" they said. Soon they could see the whole valley below them. But the wind was strong, and the pilot couldn't steer easily. \"Don't worry — I can handle it,\" he said calmly. After a tense minute, he managed to turn the balloon around. None of them had ever been able to see their town from the sky before. \"I can't believe how beautiful it is!\" one of them said. Finally, the pilot was able to land the balloon safely in a field. They managed to have the adventure of a lifetime — and no one got hurt.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Last summer, three friends were able to join a hot-air balloon ride. \"Can you all fit in the basket?\" the pilot asked. \"We can try!\" they said.", "text_cn": "去年夏天,三个朋友有幸坐上了一次热气球。“你们都挤得进吊篮吗?”飞行员问。“我们试试看!”他们说。" },
+    { "seq": 2, "speaker": null, "text_en": "Soon they could see the whole valley below them. But the wind was strong, and the pilot couldn't steer easily.", "text_cn": "不一会儿,他们就能俯瞰脚下整片山谷。可风很大,飞行员没法轻松掌舵。" },
+    { "seq": 3, "speaker": null, "text_en": "\"Don't worry — I can handle it,\" he said calmly. After a tense minute, he managed to turn the balloon around.", "text_cn": "“别担心——我能应付,”他镇定地说。紧张了一分钟后,他设法让气球掉了头。" },
+    { "seq": 4, "speaker": null, "text_en": "None of them had ever been able to see their town from the sky before. \"I can't believe how beautiful it is!\" one of them said.", "text_cn": "他们谁都不曾从空中看过自己的镇子。“真不敢相信有这么美!”其中一个人说。" },
+    { "seq": 5, "speaker": null, "text_en": "Finally, the pilot was able to land the balloon safely in a field. They managed to have the adventure of a lifetime — and no one got hurt.", "text_cn": "最后,飞行员把气球安全地降落在一片田野里。他们经历了一生难忘的冒险——而且没有一个人受伤。" }
+  ],
+  "words": [
+    { "word": "hot-air balloon", "ipa": "/hɑːt er bəˈluːn/", "pos": "n", "meaning_cn": "热气球", "example": "a hot-air balloon ride" },
+    { "word": "basket", "ipa": "/ˈbæskɪt/", "pos": "n", "meaning_cn": "篮子;(气球的)吊篮", "example": "fit in the basket" },
+    { "word": "pilot", "ipa": "/ˈpaɪlət/", "pos": "n", "meaning_cn": "飞行员,驾驶员", "example": "the pilot asked" },
+    { "word": "fit", "ipa": "/fɪt/", "pos": "v", "meaning_cn": "容纳,装得下", "example": "Can you all fit in the basket?" },
+    { "word": "valley", "ipa": "/ˈvæli/", "pos": "n", "meaning_cn": "山谷", "example": "see the whole valley below them" },
+    { "word": "steer", "ipa": "/stɪr/", "pos": "v", "meaning_cn": "驾驶,掌舵,操纵方向", "example": "the pilot couldn't steer easily" },
+    { "word": "handle", "ipa": "/ˈhændl/", "pos": "v", "meaning_cn": "应付,处理", "example": "I can handle it" },
+    { "word": "tense", "ipa": "/tens/", "pos": "adj", "meaning_cn": "紧张的", "example": "after a tense minute" },
+    { "word": "land", "ipa": "/lænd/", "pos": "v", "meaning_cn": "降落,着陆", "example": "land the balloon safely" },
+    { "word": "adventure", "ipa": "/ədˈventʃər/", "pos": "n", "meaning_cn": "冒险,历险", "example": "the adventure of a lifetime" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "can / could(表能力)" },
+    { "gp": "gp2", "name": "be able to(各时态的能力,尤某次做到)" },
+    { "gp": "gp3", "name": "manage to(费劲设法做成)" },
+    { "gp": "gp4", "name": "can't / couldn't(不能、无法)" },
+    { "gp": "gp5", "name": "三者辨析(某次做到不用 could)" },
+    { "gp": "gp6", "name": "词汇辨析(basket / pilot / valley)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Soon they ___ see the whole valley below them.\"(过去的能力:能够)", "stem_cn": "不一会儿,他们就能俯瞰整片山谷。", "options": ["could", "can", "manage to", "are able"] },
+    { "gp": "gp1", "stem": "\"'___ you all fit in the basket?' the pilot asked.\"(问现在的能力:……吗)", "stem_cn": "“你们都挤得进吊篮吗?”飞行员问。", "options": ["Can", "Could", "Manage", "Are"] },
+    { "gp": "gp1", "stem": "\"'Don't worry — I ___ handle it,' he said calmly.\"(现在的能力:能)", "stem_cn": "“别担心——我能应付,”他镇定地说。", "options": ["can", "could", "managed", "am able"] },
+    { "gp": "gp2", "stem": "\"Last summer, three friends ___ join a balloon ride.\"(去年那段时间能够做到)", "stem_cn": "去年夏天,三个朋友坐上了一次热气球。", "options": ["were able to", "can", "could to", "are able to"] },
+    { "gp": "gp2", "stem": "\"Finally, the pilot ___ land the balloon safely.\"(过去某一次成功做到了)", "stem_cn": "最后,飞行员把气球安全地降落。", "options": ["was able to", "can", "could to", "is able to"] },
+    { "gp": "gp2", "stem": "\"None of them ___ see their town from the sky before.\"(在那之前一直未能做到——过去完成的能力形式)", "stem_cn": "他们谁都不曾从空中看过自己的镇子。", "options": ["had been able to", "could", "can", "were able"] },
+    { "gp": "gp3", "stem": "\"After a tense minute, he ___ turn the balloon around.\"(费了一番劲设法做成)", "stem_cn": "紧张了一分钟后,他设法让气球掉了头。", "options": ["managed to", "could", "can", "was able"] },
+    { "gp": "gp3", "stem": "\"They ___ have the adventure of a lifetime.\"(设法做成、得以实现)", "stem_cn": "他们得以经历一生难忘的冒险。", "options": ["managed to", "could", "can", "would"] },
+    { "gp": "gp3", "stem": "\"In the strong wind, the pilot ___ keep the balloon steady.\"(费劲设法做到)", "stem_cn": "在大风里,飞行员设法让气球稳住了。", "options": ["managed to", "could", "can", "will"] },
+    { "gp": "gp4", "stem": "\"But the wind was strong, and the pilot ___ steer easily.\"(过去不能)", "stem_cn": "可风很大,飞行员没法轻松掌舵。", "options": ["couldn't", "can't", "didn't able", "wasn't able"] },
+    { "gp": "gp4", "stem": "\"'I ___ believe how beautiful it is!' one of them said.\"(现在不能:不敢相信)", "stem_cn": "“真不敢相信有这么美!”其中一个人说。", "options": ["can't", "couldn't", "don't able", "am not able"] },
+    { "gp": "gp4", "stem": "\"At first they ___ see anything through the clouds.\"(过去不能)", "stem_cn": "起初他们透过云层什么也看不见。", "options": ["couldn't", "can't", "aren't able", "don't can"] },
+    { "gp": "gp5", "stem": "\"The wind was strong, but he ___ turn the balloon around at last.\"(费劲后成功做到这一次)", "stem_cn": "风很大,但他最终还是让气球掉了头。", "options": ["managed to", "could", "can", "could to"] },
+    { "gp": "gp5", "stem": "\"She ___ swim when she was five.\"(小时候一贯具备的能力)", "stem_cn": "她五岁时就会游泳了。", "options": ["could", "managed to", "was able to manage", "did can"] },
+    { "gp": "gp5", "stem": "\"'We ___ try!' they said when asked to fit in the basket.\"(表示“能、愿意试试”)", "stem_cn": "被问能不能挤进吊篮时,他们说“我们试试看!”", "options": ["can", "could", "managed to", "were able"] },
+    { "gp": "gp6", "stem": "\"The three friends rode in the ___ of the balloon.\"(吊篮用哪个词)", "stem_cn": "三个朋友坐在气球的吊篮里。", "options": ["basket", "kitchen", "pocket", "garden"] },
+    { "gp": "gp6", "stem": "\"The ___ steered the balloon carefully.\"(飞行员、驾驶员用哪个词)", "stem_cn": "飞行员小心地操纵着气球。", "options": ["pilot", "farmer", "teacher", "cook"] },
+    { "gp": "gp6", "stem": "\"From above, they saw the green ___ below.\"(山谷用哪个词)", "stem_cn": "从空中,他们看见下方绿色的山谷。", "options": ["valley", "ceiling", "pocket", "window"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"度假\"说:", "options": ["vacation", "holiday", "day-off", "break-time"] },
+    { "stem": "美语里\"秋天\"说:", "options": ["fall", "autumn", "harvest-time", "cool-season"] },
+    { "stem": "basket 的意思是:", "options": ["篮子,吊篮", "帽子", "桌子", "钟"] },
+    { "stem": "steer 的意思是:", "options": ["驾驶,掌舵", "睡觉", "唱歌", "购买"] },
+    { "stem": "adventure 的意思是:", "options": ["冒险,历险", "作业", "会议", "疾病"] },
+    { "stem": "tense 的意思是:", "options": ["紧张的", "轻松的", "无聊的", "快乐的"] }
+  ],
+  "contrast": [
+    { "us": "vacation", "uk": "holiday", "note_cn": "度假、假期;美语 vacation,英式 holiday" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" }
+  ],
+  "chunks": [
+    { "us": "be able to", "ipa": "/bi ˈeɪbl tu/", "example1": "The pilot was able to land safely.", "example1_cn": "飞行员成功地安全降落了。", "example2": "After years of study, she was able to read French.", "example2_cn": "学了多年后,她能读法语了。" },
+    { "us": "manage to", "ipa": "/ˈmænɪdʒ tu/", "example1": "He managed to turn the balloon around.", "example1_cn": "他设法让气球掉了头。", "example2": "We managed to finish the work on time.", "example2_cn": "我们设法按时完成了工作。" },
+    { "us": "hot-air balloon", "ipa": "/hɑːt er bəˈluːn/", "example1": "They joined a hot-air balloon ride.", "example1_cn": "他们坐了一次热气球。", "example2": "A hot-air balloon floated over the valley.", "example2_cn": "一只热气球飘过山谷。" },
+    { "us": "of a lifetime", "ipa": "/əv ə ˈlaɪftaɪm/", "example1": "They had the adventure of a lifetime.", "example1_cn": "他们经历了一生难忘的冒险。", "example2": "It was the trip of a lifetime.", "example2_cn": "那是一生难忘的一次旅行。" }
+  ],
+  "stage7_cloze": {
+    "context": "Last summer, three friends ___1___ join a balloon ride. Soon they ___2___ see the whole valley. The wind was strong, but the pilot ___3___ turn the balloon around. Finally, he ___4___ land it safely.",
+    "blanks": [
+      { "blank_no": 1, "options": ["were able to", "can", "could to", "are able to"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["could", "can", "manage to", "are able"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["managed to", "could", "can", "would"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["was able to", "can", "could to", "is able to"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What did the three friends do last summer?", "options": ["Joined a hot-air balloon ride", "Climbed a mountain", "Sailed a boat", "Rode horses"] },
+    { "stem": "What made steering the balloon hard?", "options": ["The strong wind", "The heavy rain", "The dark clouds", "The cold air"] },
+    { "stem": "How did the ride end?", "options": ["The pilot landed safely in a field", "The balloon crashed", "They got lost", "It started to rain"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"最后飞行员安全地把气球降落在田野里\"(过去某一次成功做到,用 was able to):", "options": ["Finally, the pilot was able to land the balloon safely in a field.", "Finally, the pilot could land the balloon safely in a field.", "Finally, the pilot can land the balloon safely in a field.", "Finally, the pilot could to land the balloon safely in a field."] },
+    { "stem": "你想说\"费了一番劲,他设法让气球掉了头\"(设法做成,用 managed to):", "options": ["After a tense minute, he managed to turn the balloon around.", "After a tense minute, he could turn the balloon around.", "After a tense minute, he can turn the balloon around.", "After a tense minute, he was manage to turn the balloon around."] },
+    { "stem": "你想说\"他们谁都不曾从空中看过自己的镇子\"(过去完成的能力形式):", "options": ["None of them had ever been able to see their town from the sky before.", "None of them could ever see their town from the sky before.", "None of them can ever see their town from the sky before.", "None of them had ever can see their town from the sky before."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "basket 的意思是:", "options": ["篮子,吊篮", "帽子", "桌子", "钟"] },
+    { "kind": "vocab", "stem": "valley 的意思是:", "options": ["山谷", "天花板", "口袋", "窗户"] },
+    { "kind": "grammar", "stem": "\"Finally, the pilot ___ land it safely.\"(过去某一次成功做到)", "stem_cn": "最后,飞行员把气球安全降落。", "options": ["was able to", "can", "could to", "is able to"] },
+    { "kind": "grammar", "stem": "\"After a tense minute, he ___ turn it around.\"(费劲设法做成)", "stem_cn": "紧张了一分钟后,他设法让它掉了头。", "options": ["managed to", "could", "can", "would"] },
+    { "kind": "scenario", "stem": "\"manage to\" 的意思是:", "options": ["设法做到、费劲做成", "管理某人", "安排时间", "打算做"] },
+    { "kind": "scenario", "stem": "\"be able to\" 的意思是:", "options": ["能够、有能力做", "愿意做", "喜欢做", "被允许做"] },
+    { "kind": "reading", "stem": "What could the friends see from the balloon?", "options": ["The whole valley below them", "The sea", "A big city", "Nothing at all"], "passage": true },
+    { "kind": "reading", "stem": "How did the balloon ride end?", "options": ["They landed safely and no one got hurt", "The balloon was lost", "Someone was hurt", "They landed in a lake"], "passage": true },
+    { "kind": "listening", "stem": "What did the three friends join last summer?", "options": ["A hot-air balloon ride", "A boat trip", "A horse race", "A mountain climb"], "audio": true },
+    { "kind": "listening", "stem": "What made steering hard?", "options": ["The strong wind", "The heavy rain", "The thick fog", "The cold"], "audio": true }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "am2_l40",
+  "unit_no": 5,
+  "lesson_no": 40,
+  "title_en": "Food and talk",
+  "title_cn": "进餐与交谈",
+  "grammar_focus": "虚拟条件句/非真实条件(if + 过去式, would + 动词原形;be 用 were,KS16)主考——想象、跟事实相反的情况;真实条件(if + 现在时, will / 祈使句)对比;将来进行时 will be + V-ing 委婉问将来、be busy doing、ask sb to do、in despair(辅考·课文①类)",
+  "scene": "上星期的一次宴会上,女主人安排我坐在兰伯尔德夫人身旁。兰伯尔德夫人是位身材高大、表情严肃的女人,穿一件紧身黑衣裙。我坐到她身旁时,她连头都没抬一下,眼睛盯着自己的盘子,不一会儿就忙着吃起来。我想找个话题跟她聊聊。“环球剧场就要上演一出新戏了,”我说,“您去看吗?”“不,”她回答。“您今年去国外度假吗?”我又问。“不,”她回答。“您就呆在英国吗?”我问。“不,”她回答。失望之中我问她饭菜是否合口味。“年轻人,”她回答说,“如果你多吃点、少说点,我们两个都会吃得开心的!”",
+  "grammar_card": {
+    "title": "虚拟条件句:如果…就会…(说想象的情况)",
+    "intro": "谈想象、跟事实相反的情况:if 从句用过去式,主句用 would + 动词原形;be 一律用 were。跟真实条件(if + 现在时,主句用 will 或祈使句)区分开。全用本课和 Key structures 的句子举例。",
+    "table": {
+      "headers": ["条件句", "含义"],
+      "rows": [
+        ["If you ate more and talked less, we would both enjoy our dinner.", "多吃少说,我们都会吃得开心(想象)"],
+        ["If you went to the exhibition, you would enjoy it.", "假如你去看展览,你会喜欢的(想象)"],
+        ["If I were you, I would talk less.", "我要是你,就会少说话(be 用 were)"],
+        ["真实:If I have time, I'll write to him.", "有空我就给他写信(现在时→will)"],
+        ["真实:Please don't disturb him if he is busy.", "他忙就别打扰(现在时→祈使句)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "想象、非真实的情况:if 从句用过去式,主句用 would + 动词原形。过去式在这里不表过去,只表'非真实'。", "mark": "if 过去式 + would 原形" },
+      { "rule": "非真实条件里 be 一律用 were,连 I / he / she 也用 were:If I were you… / If he were here…", "mark": "be 一律用 were" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Was Mrs. Rumbold a good companion at dinner?",
+    "options": ["No — she only said 'No' and told him to talk less", "Yes — she chatted happily all evening", "Yes — she loved discussing the theater", "No — she left the party early"],
+    "answer_index": 0
+  },
+  "passage": "Last week at a dinner party, the hostess asked me to sit next to Mrs. Rumbold. Mrs. Rumbold was a large, unsmiling lady in a tight black dress. She did not even look up when I took my seat beside her. Her eyes were fixed on her plate and in a short time, she was busy eating. I tried to make conversation. 'A new play is coming to \"The Globe\" soon,' I said. 'Will you be seeing it?' 'No,' she answered. 'Will you be spending your holidays abroad this year?' I asked. 'No,' she answered. 'Will you be staying in England?' I asked. 'No,' she answered. In despair, I asked her whether she was enjoying her dinner. 'Young man,' she answered, 'if you ate more and talked less, we would both enjoy our dinner!'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Last week at a dinner party, the hostess asked me to sit next to Mrs. Rumbold.", "text_cn": "上星期的一次宴会上,女主人安排我坐在兰伯尔德夫人身旁。" },
+    { "seq": 2, "speaker": null, "text_en": "Mrs. Rumbold was a large, unsmiling lady in a tight black dress.", "text_cn": "兰伯尔德夫人是位身材高大、表情严肃的女人,穿一件紧身黑衣裙。" },
+    { "seq": 3, "speaker": null, "text_en": "She did not even look up when I took my seat beside her.", "text_cn": "我坐到她身旁时,她连头都没抬一下。" },
+    { "seq": 4, "speaker": null, "text_en": "Her eyes were fixed on her plate and in a short time, she was busy eating.", "text_cn": "她的眼睛盯着自己的盘子,不一会儿就忙着吃起来。" },
+    { "seq": 5, "speaker": null, "text_en": "I tried to make conversation. 'A new play is coming to \"The Globe\" soon,' I said. 'Will you be seeing it?'", "text_cn": "我想找个话题聊聊。“环球剧场就要上演一出新戏了,”我说,“您去看吗?”" },
+    { "seq": 6, "speaker": null, "text_en": "'No,' she answered. 'Will you be spending your holidays abroad this year?' I asked.", "text_cn": "“不,”她回答。“您今年去国外度假吗?”我又问。" },
+    { "seq": 7, "speaker": null, "text_en": "'Will you be staying in England?' I asked. 'No,' she answered.", "text_cn": "“您就呆在英国吗?”我问。“不,”她回答。" },
+    { "seq": 8, "speaker": null, "text_en": "In despair, I asked her whether she was enjoying her dinner.", "text_cn": "失望之中,我问她饭菜是否合口味。" },
+    { "seq": 9, "speaker": null, "text_en": "'Young man,' she answered, 'if you ate more and talked less, we would both enjoy our dinner!'", "text_cn": "“年轻人,”她回答说,“如果你多吃点、少说点,我们两个都会吃得开心的!”" }
+  ],
+  "words": [
+    { "word": "hostess", "ipa": "/ˈhoʊstɪs/", "pos": "n", "meaning_cn": "女主人", "example": "the hostess asked me to sit" },
+    { "word": "unsmiling", "ipa": "/ʌnˈsmaɪlɪŋ/", "pos": "adj", "meaning_cn": "不笑的,严肃的", "example": "a large, unsmiling lady" },
+    { "word": "tight", "ipa": "/taɪt/", "pos": "adj", "meaning_cn": "紧身的", "example": "a tight black dress" },
+    { "word": "fix", "ipa": "/fɪks/", "pos": "v", "meaning_cn": "凝视", "example": "Her eyes were fixed on her plate" },
+    { "word": "globe", "ipa": "/ɡloʊb/", "pos": "n", "meaning_cn": "地球", "example": "'The Globe' theater" },
+    { "word": "despair", "ipa": "/dɪˈsper/", "pos": "n", "meaning_cn": "绝望", "example": "In despair, I asked her" },
+    { "word": "companion", "ipa": "/kəmˈpænjən/", "pos": "n", "meaning_cn": "同伴", "example": "a good companion at dinner" },
+    { "word": "conversation", "ipa": "/ˌkɑːnvərˈseɪʃən/", "pos": "n", "meaning_cn": "交谈", "example": "I tried to make conversation" },
+    { "word": "abroad", "ipa": "/əˈbrɔːd/", "pos": "adv", "meaning_cn": "在国外", "example": "spending your holidays abroad" },
+    { "word": "plate", "ipa": "/pleɪt/", "pos": "n", "meaning_cn": "盘子", "example": "Her eyes were fixed on her plate" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "虚拟:if 从句用过去式" },
+    { "gp": "gp2", "name": "虚拟:主句 would + 动词原形" },
+    { "gp": "gp3", "name": "虚拟:be 一律用 were" },
+    { "gp": "gp4", "name": "真实条件 if + 现在时 → will" },
+    { "gp": "gp5", "name": "真实条件 if + 现在时 → 祈使句" },
+    { "gp": "gp6", "name": "将来进行时 will be + V-ing(委婉·辅考)" },
+    { "gp": "gp7", "name": "ask sb to do(辅考)" },
+    { "gp": "gp8", "name": "be busy doing sth(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"If you ___ more and talked less, we would both enjoy our dinner.\"(虚拟:if 从句用过去式)", "stem_cn": "你多吃点少说点,我们都会吃得开心。", "options": ["ate", "eat", "have eaten", "will eat"] },
+    { "gp": "gp1", "stem": "\"If you ___ to the exhibition, you would enjoy it.\"(虚拟:if 从句用过去式)", "stem_cn": "假如你去看展览,你会喜欢的。", "options": ["went", "go", "have gone", "will go"] },
+    { "gp": "gp1", "stem": "\"If he ___ harder, he would pass the exam.\"(虚拟:if 从句用过去式)", "stem_cn": "他要是更努力,就能通过考试。", "options": ["worked", "works", "work", "will work"] },
+    { "gp": "gp2", "stem": "\"If you ate more, we ___ both enjoy our dinner.\"(虚拟:主句表'就会…')", "stem_cn": "你多吃点,我们都会吃得开心。", "options": ["would", "will", "are", "do"] },
+    { "gp": "gp2", "stem": "\"If you went to the exhibition, you ___ enjoy it.\"(虚拟:主句表'就会…')", "stem_cn": "假如你去看展览,你会喜欢的。", "options": ["would", "will", "are", "do"] },
+    { "gp": "gp2", "stem": "\"If I had more time, I ___ read more books.\"(虚拟:主句表'就会…')", "stem_cn": "我要是有更多时间,就会多读书。", "options": ["would", "will", "am", "do"] },
+    { "gp": "gp3", "stem": "\"If I ___ you, I would talk less.\"(虚拟:be 一律用这个特殊形式)", "stem_cn": "我要是你,就会少说话。", "options": ["were", "was", "am", "be"] },
+    { "gp": "gp3", "stem": "\"If he ___ here, he would help us.\"(虚拟:be 一律用这个特殊形式)", "stem_cn": "他要是在这儿,就会帮我们。", "options": ["were", "was", "is", "be"] },
+    { "gp": "gp4", "stem": "\"If I ___ time, I'll write to him tomorrow.\"(真实条件:if 从句用现在时)", "stem_cn": "有空我明天就给他写信。", "options": ["have", "had", "will have", "would have"] },
+    { "gp": "gp4", "stem": "\"You'll miss the train if you ___ hurry.\"(真实条件:if 从句用现在时)", "stem_cn": "你不快点就赶不上火车。", "options": ["don't", "didn't", "won't", "wouldn't"] },
+    { "gp": "gp5", "stem": "\"Please don't disturb him if he ___ busy.\"(真实条件:if 从句用现在时)", "stem_cn": "他忙的话就别打扰他。", "options": ["is", "were", "was", "be"] },
+    { "gp": "gp5", "stem": "\"If it ___ raining, take an umbrella.\"(真实条件:if 从句用现在时)", "stem_cn": "如果在下雨,就带把伞。", "options": ["is", "were", "was", "be"] },
+    { "gp": "gp6", "stem": "\"___ you be seeing the new play soon?\"(委婉问将来,用将来进行时)", "stem_cn": "你近期会去看那出新戏吗?", "options": ["Will", "Do", "Are", "Would"] },
+    { "gp": "gp6", "stem": "\"Will you ___ your holidays abroad this year?\"(将来进行时,委婉问'会不会…')", "stem_cn": "你今年会去国外度假吗?", "options": ["be spending", "spend", "spent", "spends"] },
+    { "gp": "gp7", "stem": "\"The hostess asked me ___ next to Mrs. Rumbold.\"(请某人做某事)", "stem_cn": "女主人请我坐在兰伯尔德夫人旁边。", "options": ["to sit", "sit", "sitting", "sat"] },
+    { "gp": "gp7", "stem": "\"She asked the young man ___ less.\"(请某人做某事)", "stem_cn": "她请那个年轻人少说话。", "options": ["to talk", "talk", "talking", "talked"] },
+    { "gp": "gp8", "stem": "\"In a short time she was busy ___.\"(忙于做某事)", "stem_cn": "不一会儿她就忙着吃起来。", "options": ["eating", "to eat", "eat", "eaten"] },
+    { "gp": "gp8", "stem": "\"He was busy ___ conversation with her.\"(忙于做某事)", "stem_cn": "他忙着跟她搭话。", "options": ["making", "to make", "make", "made"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"假期\"常说:", "options": ["vacation", "holiday", "festival", "break time"] },
+    { "stem": "美语里\"剧院\"的拼写是:", "options": ["theater", "theatre", "theator", "teatre"] },
+    { "stem": "hostess 的意思是:", "options": ["女主人", "女服务员", "女演员", "女护士"] },
+    { "stem": "unsmiling 的意思是:", "options": ["不笑的,严肃的", "微笑的", "友好的", "害羞的"] },
+    { "stem": "despair 的意思是:", "options": ["绝望", "希望", "惊喜", "平静"] },
+    { "stem": "tight 的意思是:", "options": ["紧身的", "宽松的", "昂贵的", "破旧的"] }
+  ],
+  "contrast": [
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday(课文 spending your holidays)" },
+    { "us": "theater", "uk": "theatre", "note_cn": "剧院;美语拼 theater,英式拼 theatre(课文 The Globe 剧场)" },
+    { "us": "check", "uk": "bill", "note_cn": "(餐厅)账单;美语 the check,英式 the bill(晚宴/餐厅场景)" },
+    { "us": "napkin", "uk": "serviette", "note_cn": "餐巾;美语 napkin,英式 serviette(用餐场景)" }
+  ],
+  "chunks": [
+    { "us": "if + 过去式 ... would ...", "ipa": "/ɪf ... wʊd/", "example1": "If you ate more and talked less, we would both enjoy our dinner.", "example1_cn": "多吃少说,我们都会吃得开心。", "example2": "If I were you, I would talk less.", "example2_cn": "我要是你,就会少说话。" },
+    { "us": "be busy doing sth", "ipa": "/bi ˈbɪzi ˈduːɪŋ/", "example1": "In a short time she was busy eating.", "example1_cn": "不一会儿她就忙着吃起来。", "example2": "He is busy writing letters.", "example2_cn": "他忙着写信。" },
+    { "us": "ask sb to do sth", "ipa": "/æsk ˈsʌmbədi tuː duː/", "example1": "The hostess asked me to sit next to her.", "example1_cn": "女主人请我坐在她旁边。", "example2": "She asked me to talk less.", "example2_cn": "她请我少说话。" },
+    { "us": "in despair", "ipa": "/ɪn dɪˈsper/", "example1": "In despair, I asked her whether she was enjoying her dinner.", "example1_cn": "绝望之中,我问她是否吃得满意。", "example2": "He shook his head in despair.", "example2_cn": "他绝望地摇了摇头。" }
+  ],
+  "stage7_cloze": {
+    "context": "At the dinner party, Mrs. Rumbold refused to talk. At last she said, 'If you ___1___ more and talked less, we ___2___ both enjoy our dinner.' In other words, if the young man ___3___ quieter, they ___4___ have a better time.",
+    "blanks": [
+      { "blank_no": 1, "options": ["ate", "eat", "have eaten", "will eat"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["would", "will", "are", "do"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["were", "was", "is", "will be"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["would", "will", "are", "do"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did the hostess ask the writer to sit?", "options": ["Next to Mrs. Rumbold", "At the head of the table", "By the window", "Near the door"] },
+    { "stem": "How did Mrs. Rumbold answer every question?", "options": ["She just said 'No.'", "She smiled and chatted", "She asked questions back", "She talked about the play"] },
+    { "stem": "What did Mrs. Rumbold finally tell the young man?", "options": ["If he ate more and talked less, they would both enjoy dinner", "That she loved the theater", "That she was going abroad", "That the food was terrible"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我要是你,就会少说话\"(虚拟:if 过去式 + would):", "options": ["If I were you, I would talk less.", "If I am you, I will talk less.", "If I was you, I talk less.", "If I were you, I will talk less."] },
+    { "stem": "你想婉转问\"你近期会去看那出新戏吗?\"(用将来进行时更委婉):", "options": ["Will you be seeing the new play soon?", "Will you being see the new play soon?", "Do you be seeing the new play soon?", "Are you be seeing the new play soon?"] },
+    { "stem": "你想说\"多吃点少说点,我们都会吃得开心\"(虚拟条件):", "options": ["If you ate more and talked less, we would both enjoy our dinner.", "If you eat more and talk less, we will both enjoy our dinner.", "If you ate more and talked less, we will both enjoy our dinner.", "If you eat more and talk less, we would both enjoy our dinner."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "hostess 的意思是:", "options": ["女主人", "客人", "厨师", "服务员"] },
+    { "kind": "vocab", "stem": "despair 的意思是:", "options": ["绝望", "高兴", "惊讶", "放松"] },
+    { "kind": "grammar", "stem": "\"If you ___ more and talked less, we would enjoy our dinner.\"(虚拟:if 从句用过去式)", "stem_cn": "你多吃少说,我们会吃得开心。", "options": ["ate", "eat", "have eaten", "will eat"] },
+    { "kind": "grammar", "stem": "\"If I ___ you, I would talk less.\"(虚拟:be 用这个特殊形式)", "stem_cn": "我要是你,就会少说话。", "options": ["were", "was", "am", "be"] },
+    { "kind": "scenario", "stem": "\"If you ate more and talked less, we would both enjoy our dinner.\" 这句话的意思是:", "options": ["你要是多吃点少说点,我们俩都会吃得开心。", "我们已经吃得很开心了。", "你吃得太多说得太少。", "晚饭做得不好吃。"] },
+    { "kind": "scenario", "stem": "\"In despair, I asked her whether she was enjoying her dinner.\" 这句话的意思是:", "options": ["绝望之中,我问她是否吃得满意。", "我高兴地问她饭菜如何。", "她问我是否吃得满意。", "我拒绝和她说话。"] },
+    { "kind": "reading", "stem": "Why did the writer keep asking Mrs. Rumbold questions?", "options": ["He was trying to make conversation with her", "He wanted to annoy her", "He was a newspaper reporter", "He wanted her seat"], "passage": true },
+    { "kind": "reading", "stem": "What was Mrs. Rumbold really interested in at the party?", "options": ["Eating her dinner", "The new play", "Traveling abroad", "Talking to the writer"], "passage": true },
+    { "kind": "listening", "stem": "How did Mrs. Rumbold answer the writer's first three questions?", "options": ["She simply said 'No.'", "She answered in long sentences", "She asked him questions", "She said nothing at all"], "audio": true },
+    { "kind": "listening", "stem": "What did Mrs. Rumbold suggest the young man should do?", "options": ["Eat more and talk less", "Leave the party", "Order more food", "Change his seat"], "audio": true }
+  ]
+}

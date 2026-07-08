@@ -1,0 +1,134 @@
+{
+  "id": "am4_l24",
+  "unit_no": 4,
+  "lesson_no": 24,
+  "title_en": "Beauty",
+  "title_cn": "美",
+  "grammar_focus": "it 作形式主语(It is difficult for us to do / It is unwise to do)、that 引导主语从句(That all great art has this power is undeniable)、非限定性定语从句(words, which were invented …, cannot…)、不定式作目的状语(invented to convey)、形容词/分词短语作状语(Unable to …, he concludes)(NCE4 无 KS 页,考点由课文结构自取;IP:源为 C.E.M. 乔德《Pieces of Mind》‘美’一文,内容为‘美的一瞥暗示更高之境、语言难以尽述’的美学随想,已用 100% 原创行文复述,无逐句改写、无人物;题材=审美体验·无害;美语化 color/favorite;第四册第24课)",
+  "scene": "设想一个年轻人望着夕阳西沉。他既说不清、也道不出那落日在心里激起的强烈情感,便断定这夕阳一定是通往我们世界之外某个天地的门。在强烈的审美体验里——面对一幅伟大的画、一段音乐、或一片夏日的天空——我们谁都很难抗拒同一种暗示:我们仿佛正瞥见一道光,从另一个存在之境照下来,一个不知怎地比此世更高的境界。一切伟大的艺术都有这种力量,这是不可否认的。在某些心境里,大自然也分享着它。六月的天空再蓝,也总指向一片更蓝;夕阳再美,也总唤起对一种更伟大之美的憧憬——那憧憬还没看清就已消逝,只留下一种说不清的怅惘。然而语言无法轻易承载这样的意义。词是为传达这个世界的事实而造的,难以套用到另一个世界上。我们似乎瞥见的那份宁静与光辉,大于我们所曾知道的,也大于我们所能描述的。也许这些‘身后、彼岸之物’的暗示根本无法解释。倘若美真有所指,我们也不该急着去解那意思。倘若我们瞥见了那不可言说之物,勉强去说它是不明智的,也不该给我们无法把握的东西强加意义。一颗庸俗的心也许会笑这些感受愚蠢,但更明智的做法,不过是领受这份美,任它如其所是。以我们平常那套人间意义去衡量,美,归根结底,是无意义的。",
+  "passage": "Imagine a young man who watches the sun go down. Unable to understand or express the intense emotion it rouses in him, he concludes that the sunset must be a gateway to some world beyond our own. In moments of strong aesthetic experience — before a great painting, a piece of music, or a summer sky — it is difficult for any of us to resist the same suggestion: that we are catching a glimpse of a light shining down from a different realm of existence, a realm somehow higher than this one. That all great art has this power is undeniable. In certain moods, nature shares it too. There is no sky in June so blue that it does not point forward to a deeper blue, no sunset so beautiful that it does not waken the vision of a greater beauty — a vision that fades before it is fully seen, leaving behind an indefinable longing. Yet words, which were invented to convey the facts of this world, cannot readily be fitted to the uses of another. The serenity and radiance we seem to glimpse are greater than we have ever known, and greater, too, than we can describe. Perhaps these intimations of something behind and beyond are not to be explained at all. If beauty truly means something, we must not rush to interpret that meaning. If we glimpse the unutterable, it is unwise to try to speak it, nor should we invest with false significance what we cannot grasp. A vulgar mind may call such feelings foolish, but the wiser course is simply to receive the beauty and let it be. Beauty measured in terms of our ordinary human meanings is, in the end, meaningless.",
+  "grammar_card": {
+    "title": "it 形式主语 / that 主语从句 / 非限定定语从句 / 目的状语 to do / 形容词短语作状语",
+    "intro": "①it is + 形容词 +(for sb)+ to do:It is difficult for us to resist …。②that 引导从句置于句首作全句话题:That all great art has this power is undeniable。③非限定定语从句:words, which were invented …, cannot …。④不定式作目的状语:invented to convey the facts。⑤形容词/分词短语置于句首作状语:Unable to express the emotion, he concludes …。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["it 形式主语", "It is + 形容词 + to do", "It is difficult for us to resist it"],
+        ["that 引导从句作话题", "That … + is/are …", "That great art has this power is undeniable"],
+        ["非限定定语从句", ", which …,", "words, which were invented …, cannot …"],
+        ["目的状语", "to + 动词原形", "invented to convey the facts"],
+        ["形容词短语作状语", "Unable to do, …", "Unable to express it, he fell silent"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "非限定性定语从句(前有逗号)指物时只能用 which,不能用 that。", "mark": ", which(≠ that)" },
+      { "rule": "that 引导从句置于句首时本身无词义、不作成分;what 则要在从句里充当成分(the thing that)。", "mark": "that ≠ what" },
+      { "rule": "美式拼写:color(颜色,英式 colour)、favorite(最爱,英式 favourite)。本课已按美语写。", "mark": "color / favorite" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What do glimpses of beauty, either in nature or art, often suggest to the human mind?",
+    "options": ["That there is a world beyond, somehow higher than our own", "That beauty can be exactly measured", "That art and nature are dangerous", "That emotion should be avoided"],
+    "answer_index": 0
+  },
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Imagine a young man who watches the sun go down. Unable to understand or express the intense emotion it rouses in him, he concludes that the sunset must be a gateway to some world beyond our own.", "text_cn": "设想一个年轻人望着夕阳西沉。他既说不清、也道不出那落日在心里激起的强烈情感,便断定这夕阳一定是通往我们世界之外某个天地的门。" },
+    { "seq": 2, "speaker": null, "text_en": "In moments of strong aesthetic experience — before a great painting, a piece of music, or a summer sky — it is difficult for any of us to resist the same suggestion: that we are catching a glimpse of a light shining down from a different realm of existence, a realm somehow higher than this one.", "text_cn": "在强烈的审美体验里——面对一幅伟大的画、一段音乐、或一片夏日的天空——我们谁都很难抗拒同一种暗示:我们仿佛正瞥见一道光,从另一个存在之境照下来,一个不知怎地比此世更高的境界。" },
+    { "seq": 3, "speaker": null, "text_en": "That all great art has this power is undeniable. In certain moods, nature shares it too. There is no sky in June so blue that it does not point forward to a deeper blue, no sunset so beautiful that it does not waken the vision of a greater beauty — a vision that fades before it is fully seen, leaving behind an indefinable longing.", "text_cn": "一切伟大的艺术都有这种力量,这是不可否认的。在某些心境里,大自然也分享着它。六月的天空再蓝,也总指向一片更蓝;夕阳再美,也总唤起对一种更伟大之美的憧憬——那憧憬还没看清就已消逝,只留下一种说不清的怅惘。" },
+    { "seq": 4, "speaker": null, "text_en": "Yet words, which were invented to convey the facts of this world, cannot readily be fitted to the uses of another. The serenity and radiance we seem to glimpse are greater than we have ever known, and greater, too, than we can describe.", "text_cn": "然而语言无法轻易承载这样的意义。词是为传达这个世界的事实而造的,难以套用到另一个世界上。我们似乎瞥见的那份宁静与光辉,大于我们所曾知道的,也大于我们所能描述的。" },
+    { "seq": 5, "speaker": null, "text_en": "Perhaps these intimations of something behind and beyond are not to be explained at all. If beauty truly means something, we must not rush to interpret that meaning. If we glimpse the unutterable, it is unwise to try to speak it, nor should we invest with false significance what we cannot grasp. Beauty measured in terms of our ordinary human meanings is, in the end, meaningless.", "text_cn": "也许这些‘身后、彼岸之物’的暗示根本无法解释。倘若美真有所指,我们也不该急着去解那意思。倘若我们瞥见了那不可言说之物,勉强去说它是不明智的,也不该给我们无法把握的东西强加意义。以我们平常那套人间意义去衡量,美,归根结底,是无意义的。" }
+  ],
+  "words": [
+    { "word": "intense", "ipa": "/ɪnˈtens/", "pos": "adj", "meaning_cn": "强烈的,剧烈的", "example": "the intense emotion it rouses" },
+    { "word": "aesthetic", "ipa": "/esˈθetɪk/", "pos": "adj", "meaning_cn": "审美的,美学的", "example": "strong aesthetic experience" },
+    { "word": "realm", "ipa": "/relm/", "pos": "n", "meaning_cn": "王国,领域,境界", "example": "a different realm of existence" },
+    { "word": "serenity", "ipa": "/səˈrenəti/", "pos": "n", "meaning_cn": "宁静,安详", "example": "the serenity and radiance we glimpse" },
+    { "word": "undeniable", "ipa": "/ˌʌndɪˈnaɪəbl/", "pos": "adj", "meaning_cn": "不可否认的", "example": "this power is undeniable" },
+    { "word": "indefinable", "ipa": "/ˌɪndɪˈfaɪnəbl/", "pos": "adj", "meaning_cn": "难以言明的,说不清的", "example": "an indefinable longing" },
+    { "word": "vulgar", "ipa": "/ˈvʌlɡər/", "pos": "adj", "meaning_cn": "庸俗的,粗俗的", "example": "a vulgar mind may call it foolish" },
+    { "word": "radiance", "ipa": "/ˈreɪdiəns/", "pos": "n", "meaning_cn": "光辉,光芒", "example": "the serenity and radiance" },
+    { "word": "intimation", "ipa": "/ˌɪntɪˈmeɪʃn/", "pos": "n", "meaning_cn": "暗示,提示", "example": "these intimations of something beyond" },
+    { "word": "unutterable", "ipa": "/ʌnˈʌtərəbl/", "pos": "adj", "meaning_cn": "无法言说的", "example": "if we glimpse the unutterable" },
+    { "word": "invest", "ipa": "/ɪnˈvest/", "pos": "v", "meaning_cn": "赋予,注入(意义)", "example": "invest it with significance" },
+    { "word": "glimpse", "ipa": "/ɡlɪmps/", "pos": "n", "meaning_cn": "一瞥,一睹", "example": "catching a glimpse of a light" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "it 作形式主语(It is + 形容词 + to do)" },
+    { "gp": "gp2", "name": "that 引导从句作全句话题(That … is …)" },
+    { "gp": "gp3", "name": "非限定性定语从句(, which …)" },
+    { "gp": "gp4", "name": "不定式作目的状语(to do)" },
+    { "gp": "gp5", "name": "形容词/分词短语作状语(Unable to …)" },
+    { "gp": "gp6", "name": "词汇辨析(serenity/realm/undeniable)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ is difficult for us to resist the suggestion of a higher world.\"(形式先行词占位,真正的内容是后面的不定式,填那个占位的代词)", "stem_cn": "我们很难抗拒‘有一个更高世界’的暗示。", "options": ["It", "That", "This", "There"] },
+    { "gp": "gp1", "stem": "\"It is unwise ___ speak of what cannot be grasped.\"(形式先行词后接不定式,填不定式符号)", "stem_cn": "去言说那无法把握的东西是不明智的。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp1", "stem": "\"It is hard ___ a young man to express such emotion.\"(‘对某人来说’,填介词)", "stem_cn": "对一个年轻人来说,表达这种情感很难。", "options": ["for", "to", "of", "with"] },
+    { "gp": "gp2", "stem": "\"___ all great art has this power is undeniable.\"(引导从句置于句首、本身无词义的那个连词)", "stem_cn": "一切伟大艺术都有这种力量,这是不可否认的。", "options": ["That", "What", "Which", "Whether"] },
+    { "gp": "gp2", "stem": "\"___ beauty points to a world beyond is felt by many.\"(引导从句置于句首的连词,本身不作成分)", "stem_cn": "美指向一个彼岸世界——许多人都感受到这一点。", "options": ["That", "What", "Which", "How"] },
+    { "gp": "gp2", "stem": "\"It is undeniable ___ art suggests a greater beauty.\"(先行词占位、真正内容是后面从句,填引导该从句的连词)", "stem_cn": "艺术暗示一种更伟大的美,这不可否认。", "options": ["that", "what", "which", "whether"] },
+    { "gp": "gp3", "stem": "\"Words, ___ were invented for this world, cannot describe another.\"(前有逗号的非限定定语从句,指物,填关系词)", "stem_cn": "词是为这个世界而造的,无法描述另一个世界。", "options": ["which", "that", "what", "whose"] },
+    { "gp": "gp3", "stem": "\"The sunset, ___ rouses deep emotion, seems a gateway.\"(前有逗号的非限定定语从句,指物,填关系词)", "stem_cn": "落日唤起深深的情感,仿佛一道门。", "options": ["which", "that", "who", "what"] },
+    { "gp": "gp3", "stem": "\"He glimpsed a light, ___ passed before it was fully seen.\"(前有逗号的非限定定语从句,指物,填关系词)", "stem_cn": "他瞥见一道光,还没看清就消逝了。", "options": ["which", "that", "who", "whose"] },
+    { "gp": "gp4", "stem": "\"Language was invented ___ convey the meanings of this world.\"(不定式作目的状语,‘为了传达’,填不定式符号)", "stem_cn": "语言的发明是为了传达这个世界的意义。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp4", "stem": "\"We should not seek ___ invest with meaning what we cannot grasp.\"(动词 seek 后面接的不定式,填其符号)", "stem_cn": "我们不该去给无法把握的东西强加意义。", "options": ["to", "for", "at", "in"] },
+    { "gp": "gp4", "stem": "\"He looked up ___ catch a glimpse of the fading light.\"(不定式作目的状语,‘为了瞥见’,填不定式符号)", "stem_cn": "他抬头,想瞥一眼渐暗的光。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp5", "stem": "\"___ to express the emotion, the young man fell silent.\"(形容词短语作状语,‘无法…做某事’,填表‘不能够’的形容词)", "stem_cn": "无法表达这种情感,年轻人沉默了。", "options": ["Unable", "Unfit", "Unkind", "Unclear"] },
+    { "gp": "gp5", "stem": "\"___ by the sudden radiance, she stood still.\"(过去分词短语作状语,被动‘被照得目眩’,填‘使目眩’那个词的过去分词)", "stem_cn": "被那突如其来的光辉照得目眩,她一动不动。", "options": ["Dazzled", "Dazzle", "Dazzling", "To dazzle"] },
+    { "gp": "gp5", "stem": "\"___ a light from another realm, he felt a strange longing.\"(现在分词短语作状语,主动,填‘瞥见’那个词的现在分词)", "stem_cn": "瞥见一道来自另一世界的光,他生出一种奇异的渴望。", "options": ["Glimpsing", "Glimpsed", "Glimpse", "To glimpse"] },
+    { "gp": "gp6", "stem": "\"A feeling of calm and peace is ___.\"(“宁静、安详”用哪个词)", "stem_cn": "平和安宁之感。", "options": ["serenity", "cruelty", "poverty", "quantity"] },
+    { "gp": "gp6", "stem": "\"Something that cannot be denied is ___.\"(“不可否认的”用哪个词)", "stem_cn": "无法否认的。", "options": ["undeniable", "invisible", "unusual", "unequal"] },
+    { "gp": "gp6", "stem": "\"A kingdom, or an area of activity or thought, is a ___.\"(“王国、领域”用哪个词)", "stem_cn": "王国,或某一活动/思想的领域。", "options": ["realm", "rumor", "ruler", "ritual"] }
+  ],
+  "stage6": [
+    { "stem": "aesthetic 的意思是:", "options": ["审美的,美学的", "经济的", "政治的", "机械的"] },
+    { "stem": "realm 的意思是:", "options": ["王国,领域", "时刻", "距离", "数量"] },
+    { "stem": "serenity 的意思是:", "options": ["宁静,安详", "混乱", "愤怒", "恐惧"] },
+    { "stem": "vulgar 的意思是:", "options": ["庸俗的,粗俗的", "高雅的", "珍贵的", "神圣的"] },
+    { "stem": "radiance 的意思是:", "options": ["光辉,光芒", "阴影", "黑暗", "雾气"] },
+    { "stem": "intimation 的意思是:", "options": ["暗示,提示", "命令", "证据", "结论"] }
+  ],
+  "contrast": [
+    { "us": "color", "uk": "colour", "note_cn": "颜色;美语 color,英式 colour" },
+    { "us": "favorite", "uk": "favourite", "note_cn": "最喜爱的;美语 favorite,英式 favourite" },
+    { "us": "realize", "uk": "realise", "note_cn": "意识到;美语 -ize,英式 -ise" },
+    { "us": "splendor", "uk": "splendour", "note_cn": "光彩,壮丽;美语 splendor,英式 splendour" }
+  ],
+  "chunks": [
+    { "us": "catch a glimpse of", "ipa": "/kætʃ ə ɡlɪmps ʌv/", "example1": "We catch a glimpse of a distant light.", "example1_cn": "我们瞥见一道远方的光。", "example2": "I caught a glimpse of her in the crowd.", "example2_cn": "我在人群中瞥见了她。" },
+    { "us": "point forward to", "ipa": "/pɔɪnt ˈfɔːrwərd tuː/", "example1": "No sky is so blue that it does not point forward to a bluer.", "example1_cn": "天空再蓝也总指向一片更蓝。", "example2": "Every hint points forward to something greater.", "example2_cn": "每个暗示都指向更伟大之物。" },
+    { "us": "in terms of", "ipa": "/ɪn tɜːrmz ʌv/", "example1": "Beauty in terms of human meaning is meaningless.", "example1_cn": "以人间意义衡量,美是无意义的。", "example2": "Success in terms of money alone is empty.", "example2_cn": "只以金钱衡量的成功是空洞的。" },
+    { "us": "invest with", "ipa": "/ɪnˈvest wɪð/", "example1": "We should not invest it with false significance.", "example1_cn": "我们不该给它强加虚假的意义。", "example2": "They invested the day with great meaning.", "example2_cn": "他们赋予那一天重大的意义。" }
+  ],
+  "stage7_cloze": {
+    "context": "A glimpse of beauty in nature or art suggests to the mind a world beyond. ___1___ all great art has this power is undeniable. Language, ___2___ was invented for this world, cannot describe another. ___3___ is difficult for us to express the feeling, yet ___4___ catch a glimpse of it is a kind of joy.",
+    "blanks": [
+      { "blank_no": 1, "options": ["That", "What", "Which", "Whether"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["which", "that", "who", "what"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["It", "That", "This", "There"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["to", "for", "at", "of"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What do glimpses of beauty often suggest to the human mind?", "options": ["A world beyond, higher than our own", "That art is useless", "That nature is dangerous", "That beauty can be measured"] },
+    { "stem": "Why can language not fully describe this beauty?", "options": ["It was invented to convey the meanings of this world, not another", "It has too few words", "People speak too quickly", "Beauty makes people silent"] },
+    { "stem": "According to the speaker, what is unwise?", "options": ["To try to utter what we cannot grasp", "To look at a sunset", "To enjoy great art", "To feel deep emotion"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我们很难抗拒那种暗示\"(用 it 作先行占位、真正内容后置):", "options": ["It is difficult for us to resist the suggestion.", "Is difficult for us to resist the suggestion.", "It is difficult for us resisting the suggestion.", "It is difficult of us to resist the suggestion."] },
+    { "stem": "你想说\"一切伟大艺术都有这种力量,这是不可否认的\"(that 引导从句置于句首作全句话题):", "options": ["That all great art has this power is undeniable.", "What all great art has this power is undeniable.", "That all great art has this power are undeniable.", "Which all great art has this power is undeniable."] },
+    { "stem": "你想说\"无法表达那种情感,年轻人沉默了\"(形容词短语作状语):", "options": ["Unable to express the emotion, the young man fell silent.", "Unable express the emotion, the young man fell silent.", "Unable to expressing the emotion, the young man fell silent.", "Unable to express the emotion, the young man fell silently."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "realm 的意思是:", "options": ["王国,领域", "时刻", "距离", "数量"] },
+    { "kind": "vocab", "stem": "serenity 的意思是:", "options": ["宁静,安详", "混乱", "愤怒", "恐惧"] },
+    { "kind": "grammar", "stem": "\"___ all great art has this power is undeniable.\"(引导从句置于句首、本身无词义的连词)", "stem_cn": "一切伟大艺术都有这种力量,这不可否认。", "options": ["That", "What", "Which", "Whether"] },
+    { "kind": "grammar", "stem": "\"Language, ___ was invented for this world, cannot describe another.\"(前有逗号的非限定定语从句,指物)", "stem_cn": "语言是为这个世界而造的,无法描述另一个世界。", "options": ["which", "that", "who", "what"] },
+    { "kind": "scenario", "stem": "\"catch a glimpse of\" 的意思是:", "options": ["瞥见", "紧盯", "忽视", "记住"] },
+    { "kind": "scenario", "stem": "\"in terms of\" 的意思是:", "options": ["就…而言,从…角度", "反对", "除了", "为了"] },
+    { "kind": "reading", "stem": "What does a glimpse of beauty suggest to the young man?", "options": ["That the sunset is a gateway to a world beyond", "That the sunset is ordinary", "That emotion is dangerous", "That art has no value"], "passage": true },
+    { "kind": "reading", "stem": "Why does the author say language cannot describe this beauty?", "options": ["Language was made for this world, not for another", "People are not clever enough", "The beauty is too small", "No one has tried"], "passage": true },
+    { "kind": "listening", "stem": "What is unwise, according to the speaker?", "options": ["To try to utter what we cannot grasp", "To watch a sunset", "To read poetry", "To feel moved by music"], "audio": true },
+    { "kind": "listening", "stem": "Where can glimpses of beauty be found?", "options": ["In both nature and art", "Only in museums", "Only in books", "Nowhere at all"], "audio": true }
+  ]
+}

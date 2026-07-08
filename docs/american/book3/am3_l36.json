@@ -1,0 +1,133 @@
+{
+  "id": "am3_l36",
+  "unit_no": 8,
+  "lesson_no": 36,
+  "title_en": "A Chance in a Million",
+  "title_cn": "百万分之一的机遇",
+  "grammar_focus": "used to do 与 would(过去习惯)、accept 与 agree 的区别、所有格撇号('s / s' / 不规则复数 's / 时间·价值 s')、After having been + 过去分词(完成被动分词)、was thought/presumed to have done(被认为已…)(原创承载 NCE3 L36 考点·净化换情节:去掉'战时阵亡/负伤/医院被炸/空袭'的战争外壳,改为兄弟当年在大洪水中失散、被冲到远方幸存、以为家人罹难而定居他乡;失散兄弟因巧合团聚的温情内核原样保留;美式化人名 Frank/Henry Bassett)",
+  "scene": "我们不像从前那么轻信了。在十九世纪,小说家常常靠给读者抛出一连串巧合来收尾——大多数巧合都离奇得不着边际。读者会心满意足地接受:一个不起眼的女仆其实是主人公的母亲;一个被认定已死的失散兄弟,其实一直好好活着,还心怀鬼胎地谋划着主人公的垮台。如今的读者会觉得这种幼稚的收场完全无法接受。可在现实里,种种情形有时偏偏凑到一起,促成一些除了十九世纪小说家、谁都会觉得难以置信的巧合。我小时候,祖父给我讲过:一位美国出租车司机弗兰克·巴塞特,找到了一个二十年前被认为已在一场大洪水中丧生的兄弟。一次,弗兰克和妻子徒步旅行,停下来跟一个干活的工人搭话。两人走开后,巴塞特太太说那工人和自己丈夫长得太像了,甚至猜他会不会就是弗兰克的兄弟。弗兰克对这个想法嗤之以鼻,说自己的兄弟早在那场洪水里没了。巴塞特太太虽然对这段往事了如指掌,却觉得自己说中的可能哪怕只有百万分之一。几天后,她派了个男孩去问那工人,他是不是叫亨利·巴塞特。不用说,那人正叫亨利·巴塞特,他真的就是弗兰克失散多年的兄弟。兄弟俩重逢时,亨利讲清了自己是怎么活下来的。当年被洪水远远冲到下游后,他被带到了一座遥远的小镇,在那里慢慢养好了身子,和所有熟人都断了联系。他徒步往家走,回到家却发现家里的房子早被洪水冲毁,街坊里也没人知道原来的住户去了哪儿。亨利以为家人都在洪水中淹死了,便在五十英里外的一个村子安顿下来,从此一直住在那里。",
+  "grammar_card": {
+    "title": "used to / would / accept vs agree / 所有格撇号 / After having been + p.p. / was thought to have done",
+    "intro": "①used to do 表过去的习惯或状态(现在不再);would 也可表过去反复的动作(但不表状态)。②accept 是“接受(事实、东西、礼物)”,agree(with sb / to do)是“同意(看法、做法)”。③所有格:单数名词加 's(hero's);不规则复数加 's(children's);以 s 结尾的复数加 '(soldiers');时间/价值也用 's(in six hours' time)。④After having been + 过去分词=“在被…之后”。⑤was thought/presumed/believed to have done=“被认为已经做过…”。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["used to do / would", "过去习惯", "less credulous than we used to be"],
+        ["accept / agree", "接受 / 同意", "readers accepted the fact"],
+        ["'s / s' / 不规则复数 's", "所有格", "the hero's mother / children's"],
+        ["After having been p.p. / was thought to have", "被…之后 / 被认为已…", "was thought to have died"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "所有格:单数 + 's(a woman's bag);复数以 s 结尾只加 '(the soldiers' uniforms);不规则复数 + 's(the children's clothes);时间价值 + 's(in six hours' time / a dollar's worth)。", "mark": "'s / s'" },
+      { "rule": "After having been + 过去分词,表示“在被…之后”(完成被动分词):After having been wounded, he…。", "mark": "After having been p.p." },
+      { "rule": "美式:neighborhood(英式 neighbourhood)、apartment(英式 flat)、vacation(英式 holiday)。本课已按美语写。", "mark": "neighborhood / apartment" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was the chance in a million?",
+    "options": ["That a workman turned out to be a long-lost brother", "That Frank won a lottery", "That the flood would come back", "That the taxi would break down"],
+    "answer_index": 0
+  },
+  "passage": "We are less credulous than we used to be. In the nineteenth century, a novelist would bring his story to a conclusion by presenting his readers with a series of coincidences, most of them wildly improbable. Readers happily accepted the fact that an obscure servant girl was really the hero's mother, or that a long-lost brother, presumed dead, was really alive all the time and wickedly plotting the hero's downfall. Modern readers would find such naive solutions totally unacceptable. Yet, in real life, circumstances do sometimes conspire to bring about coincidences that anyone but a nineteenth-century novelist would find incredible. When I was a boy, my grandfather told me how an American taxi driver, Frank Bassett, found a brother who was thought to have died in a great flood twenty years before. While on a walking tour with his wife, Frank stopped to talk to a workman. After they had gone on, Mrs. Bassett commented on the workman's close resemblance to her husband and even suggested that he might be his brother. Frank poured scorn on the idea, pointing out that his brother had been lost in the flood long ago. Though Mrs. Bassett knew the story well, she thought that there was a chance in a million that she might be right. A few days later, she sent a boy to the workman to ask him whether his name was Henry Bassett. Needless to say, the man's name was Henry Bassett, and he really was Frank's long-lost brother. When the brothers were reunited, Henry explained how it was that he was still alive. After having been swept far downstream by the floodwaters, he had been carried to a distant town and had slowly recovered there, cut off from everyone he knew. He had made his way home on foot, only to find that the family house had been washed away and that no one in the neighborhood knew what had become of the residents. Assuming that his family had drowned in the flood, Henry had settled down in a village fifty miles away, where he had remained ever since.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "We are less credulous than we used to be. In the nineteenth century, a novelist would bring his story to a conclusion by presenting his readers with a series of coincidences, most of them wildly improbable. Readers happily accepted the fact that an obscure servant girl was really the hero's mother, or that a long-lost brother, presumed dead, was really alive all the time and wickedly plotting the hero's downfall.", "text_cn": "我们不像从前那么轻信了。在十九世纪,小说家常常靠给读者抛出一连串巧合来收尾——大多数巧合都离奇得不着边际。读者会心满意足地接受:一个不起眼的女仆其实是主人公的母亲;一个被认定已死的失散兄弟,其实一直好好活着,还心怀鬼胎地谋划着主人公的垮台。" },
+    { "seq": 2, "speaker": null, "text_en": "Modern readers would find such naive solutions totally unacceptable. Yet, in real life, circumstances do sometimes conspire to bring about coincidences that anyone but a nineteenth-century novelist would find incredible. When I was a boy, my grandfather told me how an American taxi driver, Frank Bassett, found a brother who was thought to have died in a great flood twenty years before.", "text_cn": "如今的读者会觉得这种幼稚的收场完全无法接受。可在现实里,种种情形有时偏偏凑到一起,促成一些除了十九世纪小说家、谁都会觉得难以置信的巧合。我小时候,祖父给我讲过:一位美国出租车司机弗兰克·巴塞特,找到了一个二十年前被认为已在一场大洪水中丧生的兄弟。" },
+    { "seq": 3, "speaker": null, "text_en": "While on a walking tour with his wife, Frank stopped to talk to a workman. After they had gone on, Mrs. Bassett commented on the workman's close resemblance to her husband and even suggested that he might be his brother. Frank poured scorn on the idea, pointing out that his brother had been lost in the flood long ago.", "text_cn": "一次,弗兰克和妻子徒步旅行,停下来跟一个干活的工人搭话。两人走开后,巴塞特太太说那工人和自己丈夫长得太像了,甚至猜他会不会就是弗兰克的兄弟。弗兰克对这个想法嗤之以鼻,说自己的兄弟早在那场洪水里没了。" },
+    { "seq": 4, "speaker": null, "text_en": "Though Mrs. Bassett knew the story well, she thought that there was a chance in a million that she might be right. A few days later, she sent a boy to the workman to ask him whether his name was Henry Bassett. Needless to say, the man's name was Henry Bassett, and he really was Frank's long-lost brother. When the brothers were reunited, Henry explained how it was that he was still alive.", "text_cn": "巴塞特太太虽然对这段往事了如指掌,却觉得自己说中的可能哪怕只有百万分之一。几天后,她派了个男孩去问那工人,他是不是叫亨利·巴塞特。不用说,那人正叫亨利·巴塞特,他真的就是弗兰克失散多年的兄弟。兄弟俩重逢时,亨利讲清了自己是怎么活下来的。" },
+    { "seq": 5, "speaker": null, "text_en": "After having been swept far downstream by the floodwaters, he had been carried to a distant town and had slowly recovered there, cut off from everyone he knew. He had made his way home on foot, only to find that the family house had been washed away and that no one in the neighborhood knew what had become of the residents. Assuming that his family had drowned in the flood, Henry had settled down in a village fifty miles away, where he had remained ever since.", "text_cn": "当年被洪水远远冲到下游后,他被带到了一座遥远的小镇,在那里慢慢养好了身子,和所有熟人都断了联系。他徒步往家走,回到家却发现家里的房子早被洪水冲毁,街坊里也没人知道原来的住户去了哪儿。亨利以为家人都在洪水中淹死了,便在五十英里外的一个村子安顿下来,从此一直住在那里。" }
+  ],
+  "words": [
+    { "word": "credulous", "ipa": "/ˈkredʒələs/", "pos": "adj", "meaning_cn": "轻信的", "example": "less credulous than we used to be" },
+    { "word": "improbable", "ipa": "/ɪmˈprɑːbəbəl/", "pos": "adj", "meaning_cn": "不大可能的", "example": "wildly improbable coincidences" },
+    { "word": "obscure", "ipa": "/əbˈskjʊr/", "pos": "adj", "meaning_cn": "不起眼的,无名的", "example": "an obscure servant girl" },
+    { "word": "presume", "ipa": "/prɪˈzuːm/", "pos": "v", "meaning_cn": "假定,认为", "example": "a brother presumed dead" },
+    { "word": "downfall", "ipa": "/ˈdaʊnfɔːl/", "pos": "n", "meaning_cn": "倒台,垮台", "example": "plotting the hero's downfall" },
+    { "word": "naive", "ipa": "/naɪˈiːv/", "pos": "adj", "meaning_cn": "天真的,幼稚的", "example": "such naive solutions" },
+    { "word": "conspire", "ipa": "/kənˈspaɪr/", "pos": "v", "meaning_cn": "(事件)巧合促成;共谋", "example": "circumstances conspire to bring about" },
+    { "word": "incredible", "ipa": "/ɪnˈkredəbəl/", "pos": "adj", "meaning_cn": "难以置信的", "example": "coincidences one would find incredible" },
+    { "word": "resemblance", "ipa": "/rɪˈzembləns/", "pos": "n", "meaning_cn": "相似", "example": "his close resemblance to her husband" },
+    { "word": "scorn", "ipa": "/skɔːrn/", "pos": "n", "meaning_cn": "嘲弄,挖苦", "example": "poured scorn on the idea" },
+    { "word": "reunite", "ipa": "/ˌriːjuːˈnaɪt/", "pos": "v", "meaning_cn": "使团聚", "example": "when the brothers were reunited" },
+    { "word": "assume", "ipa": "/əˈsuːm/", "pos": "v", "meaning_cn": "假定,认为", "example": "assuming that his family had drowned" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "used to do 与 would(过去习惯)" },
+    { "gp": "gp2", "name": "accept 与 agree 的区别" },
+    { "gp": "gp3", "name": "所有格撇号('s / s')" },
+    { "gp": "gp4", "name": "After having been + 过去分词" },
+    { "gp": "gp5", "name": "was thought/presumed to have done" },
+    { "gp": "gp6", "name": "词汇辨析(credulous/obscure/resemblance)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"We are less credulous than we ___ to be.\"(过去\"曾经是\"用 ___ to be)", "stem_cn": "我们不像从前那么轻信了。", "options": ["used", "would", "use", "using"] },
+    { "gp": "gp1", "stem": "\"A nineteenth-century novelist ___ end his story with wild coincidences.\"(过去反复发生的习惯动作)", "stem_cn": "十九世纪的小说家总爱用离奇巧合收尾。", "options": ["would", "will", "is going to", "does"] },
+    { "gp": "gp1", "stem": "\"There ___ to be a river running past the village.\"(过去\"曾经存在\"用 ___ to be)", "stem_cn": "从前有条河从村边流过。", "options": ["used", "would", "is used", "uses"] },
+    { "gp": "gp2", "stem": "\"Readers happily ___ the fact that the servant was the hero's mother.\"(\"接受(事实/东西)\"用哪个)", "stem_cn": "读者欣然接受了女仆是主人公母亲这一事实。", "options": ["accepted", "agreed", "refused", "denied"] },
+    { "gp": "gp2", "stem": "\"I ___ with you that the story is unbelievable.\"(\"同意(某人的看法)\"用哪个)", "stem_cn": "我同意你的看法:这故事难以置信。", "options": ["agree", "accept", "receive", "allow"] },
+    { "gp": "gp2", "stem": "\"She ___ his gift with a smile.\"(\"收下、接受(礼物)\"用哪个)", "stem_cn": "她微笑着收下了他的礼物。", "options": ["accepted", "agreed", "thought", "spoke"] },
+    { "gp": "gp3", "stem": "\"That was the ___ mother.\"(\"主人公的母亲\":单数名词加 's)", "stem_cn": "那是主人公的母亲。", "options": ["hero's", "heros'", "heros", "hero"] },
+    { "gp": "gp3", "stem": "\"The ___ clothes were left in the hall.\"(不规则复数的所有格,直接加 's)", "stem_cn": "孩子们的衣服落在了门厅里。", "options": ["children's", "childrens'", "childrens", "children"] },
+    { "gp": "gp3", "stem": "\"We start in six ___ time.\"(以 s 结尾的复数时间名词加 ')", "stem_cn": "我们六小时后出发。", "options": ["hours'", "hour's", "hours", "hourss"] },
+    { "gp": "gp4", "stem": "\"After having ___ swept downstream, he was carried far away.\"(After having ___ + 过去分词,完成被动)", "stem_cn": "被洪水冲到下游后,他被带到了很远的地方。", "options": ["been", "be", "being", "was"] },
+    { "gp": "gp4", "stem": "\"After having ___ warned, he still went out in the storm.\"(After having ___ + 过去分词)", "stem_cn": "被警告过之后,他还是冒着暴风雨出了门。", "options": ["been", "be", "being", "is"] },
+    { "gp": "gp4", "stem": "\"After having ___ repaired, the car ran smoothly.\"(After having ___ + 过去分词)", "stem_cn": "修好之后,那辆车跑得很顺。", "options": ["been", "be", "being", "was"] },
+    { "gp": "gp5", "stem": "\"He was thought ___ died in the flood.\"(be thought + 完成不定式\"据认为已…\")", "stem_cn": "人们以为他已在洪水中丧生。", "options": ["to have", "to have been", "having", "to"] },
+    { "gp": "gp5", "stem": "\"The brother was presumed ___ dead for twenty years.\"(be presumed + 不定式,\"被认为是…\")", "stem_cn": "二十年来,人们一直以为那兄弟已不在人世。", "options": ["to be", "being", "to have", "be"] },
+    { "gp": "gp5", "stem": "\"The house was believed ___ been washed away.\"(be believed + 完成不定式\"据信已…\")", "stem_cn": "人们以为那房子已被冲毁。", "options": ["to have", "to be", "having", "to"] },
+    { "gp": "gp6", "stem": "\"Someone who believes things too easily is ___.\"(\"轻信的\"用哪个词)", "stem_cn": "太容易相信别人的人。", "options": ["credulous", "careful", "honest", "clever"] },
+    { "gp": "gp6", "stem": "\"An ordinary, little-known servant girl is ___.\"(\"不起眼的、无名的\"用哪个词)", "stem_cn": "不起眼、无名的女仆。", "options": ["obscure", "famous", "rich", "proud"] },
+    { "gp": "gp6", "stem": "\"A close likeness between two people is a ___.\"(\"相似之处\"用哪个词)", "stem_cn": "两人之间明显的相像。", "options": ["resemblance", "difference", "quarrel", "distance"] }
+  ],
+  "stage6": [
+    { "stem": "improbable 的意思是:", "options": ["不大可能的", "确定的", "普通的", "免费的"] },
+    { "stem": "presume 的意思是:", "options": ["假定,认为", "证明", "否认", "忘记"] },
+    { "stem": "downfall 的意思是:", "options": ["倒台,垮台", "崛起", "婚礼", "胜利"] },
+    { "stem": "naive 的意思是:", "options": ["天真的", "狡猾的", "严厉的", "富有的"] },
+    { "stem": "incredible 的意思是:", "options": ["难以置信的", "平常的", "无聊的", "廉价的"] },
+    { "stem": "scorn 的意思是:", "options": ["嘲弄,挖苦", "赞美", "感谢", "邀请"] }
+  ],
+  "contrast": [
+    { "us": "neighborhood", "uk": "neighbourhood", "note_cn": "街区,附近;拼写差异,美语无 u" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" }
+  ],
+  "chunks": [
+    { "us": "a chance in a million", "ipa": "/ə tʃæns ɪn ə ˈmɪljən/", "example1": "There was a chance in a million she was right.", "example1_cn": "她说中的可能只有百万分之一。", "example2": "Winning twice is a chance in a million.", "example2_cn": "连中两次是极小概率的事。" },
+    { "us": "pour scorn on", "ipa": "/pɔːr skɔːrn ɑːn/", "example1": "Frank poured scorn on the idea.", "example1_cn": "弗兰克对这个想法嗤之以鼻。", "example2": "They poured scorn on his plan.", "example2_cn": "他们对他的计划冷嘲热讽。" },
+    { "us": "needless to say", "ipa": "/ˈniːdləs tə seɪ/", "example1": "Needless to say, the man was his brother.", "example1_cn": "不用说,那人就是他兄弟。", "example2": "Needless to say, we were thrilled.", "example2_cn": "不用说,我们兴奋极了。" },
+    { "us": "make one's way", "ipa": "/meɪk wʌnz weɪ/", "example1": "He made his way home on foot.", "example1_cn": "他徒步往家走。", "example2": "She made her way through the crowd.", "example2_cn": "她从人群中挤了过去。" }
+  ],
+  "stage7_cloze": {
+    "context": "We are less credulous than we ___1___ to be. Long-lost relatives reunited by chance seem like fiction, yet such coincidences do happen. A taxi driver named Frank found a brother who was thought ___2___ have died in a flood. After having ___3___ swept downstream, the brother had survived far away. ___4___ to say, the family was overjoyed to be reunited.",
+    "blanks": [
+      { "blank_no": 1, "options": ["used", "would", "use", "using"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["to", "having", "been", "of"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["been", "being", "be", "was"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["Needless", "Needing", "Need", "Needed"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How did Mrs. Bassett first suspect the workman was Frank's brother?", "options": ["She noticed his close resemblance to her husband", "She recognized his voice", "She saw his ID card", "She had met him before"] },
+    { "stem": "Why did Frank at first pour scorn on the idea?", "options": ["He believed his brother had been lost in the flood", "He disliked the workman", "He was in a hurry", "He had no brother at all"] },
+    { "stem": "Why had Henry assumed his family was gone?", "options": ["Their house had been washed away in the flood", "They had moved abroad", "They never wrote to him", "He had forgotten them"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我同意你的看法:这故事难以置信\"(agree):", "options": ["I agree with you that the story is unbelievable.", "I accept with you that the story is unbelievable.", "I agree you that the story is unbelievable.", "I agree with you what the story is unbelievable."] },
+    { "stem": "你想说\"被洪水冲到下游后,他被带到了远方\"(After having been + 过去分词):", "options": ["After having been swept downstream, he was carried far away.", "After having being swept downstream, he was carried far away.", "After have been swept downstream, he was carried far away.", "After having been sweep downstream, he was carried far away."] },
+    { "stem": "你想说\"人们以为他已在洪水中丧生\"(was thought to have done):", "options": ["He was thought to have died in the flood.", "He was thought to died in the flood.", "He was thought having died in the flood.", "He was thought to have die in the flood."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "improbable 的意思是:", "options": ["不大可能的", "确定的", "普通的", "免费的"] },
+    { "kind": "vocab", "stem": "scorn 的意思是:", "options": ["嘲弄,挖苦", "赞美", "感谢", "邀请"] },
+    { "kind": "grammar", "stem": "\"We are less credulous than we ___ to be.\"(过去\"曾经是\"用 ___ to be)", "stem_cn": "我们不像从前那么轻信了。", "options": ["used", "would", "use", "using"] },
+    { "kind": "grammar", "stem": "\"After having ___ swept downstream, he survived.\"(After having ___ + 过去分词)", "stem_cn": "被洪水冲到下游后,他活了下来。", "options": ["been", "be", "being", "was"] },
+    { "kind": "scenario", "stem": "\"a chance in a million\" 的意思是:", "options": ["微乎其微的机会", "一百万美元", "每天都有的事", "确定无疑"] },
+    { "kind": "scenario", "stem": "\"needless to say\" 的意思是:", "options": ["不用说,自然", "需要说明", "无话可说", "拒绝回答"] },
+    { "kind": "reading", "stem": "Why do modern readers dislike nineteenth-century coincidences in novels?", "options": ["They find such naive solutions totally unacceptable", "They prefer much longer books", "They cannot read old English", "They dislike happy endings"], "passage": true },
+    { "kind": "reading", "stem": "How were the two brothers finally reunited?", "options": ["Mrs. Bassett sent a boy to ask the workman his name", "Frank recognized him at once", "They met at a family party", "A letter arrived from Henry"], "passage": true },
+    { "kind": "listening", "stem": "What was the 'chance in a million'?", "options": ["That the workman really was Frank's long-lost brother", "That Frank would win money", "That the flood would return", "That the boy would get lost"], "audio": true },
+    { "kind": "listening", "stem": "Where did Henry settle after the flood?", "options": ["In a village fifty miles away", "In the same town as before", "In another country", "On the coast"], "audio": true }
+  ]
+}

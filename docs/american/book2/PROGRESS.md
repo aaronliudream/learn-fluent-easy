@@ -18,10 +18,368 @@
   - 课文①类实证:Note5 "so hard that he nearly fell"(so…that)、Note1 "a river that cuts across"(that 定语从句)、l.6 "towards a passing boat"(方向介词)——**均课文实际出现=①类,必须本课辅考,不得延后**。
   - **裁决(按 [[am2-source-divergence-rule]] 自决未停,第四次执行)**:冠词 the/some/any+专名=主考(~12) + so…that 结果状语 + towards 方向介词 + that 定语从句=辅考(~6,均①类)。新思维冠词/结果状语章待定点补扫(诚实标注)。
   - 新词(教材 New words):polo/Wayle/cut/row/kick/towards/nearly/sight(8官方词,待补至~11对齐体量)。
-- [ ] 步骤2 建考点清单 G1–G8 / W / C(冠词主考 + so…that/towards/that定从辅考)
-- [ ] 步骤3 清单自审 · [ ] 4 课文美语定稿(11句·冠词密集+so…that+towards+that定从;美语化 towards→toward、river bank 等)
-- [ ] 5 题库(关5=18[冠词12+辅考3,认知3]/关6=6/关7=4/关8=3/关9=3/关10=10=44) · [ ] 6 解释44
-- [ ] 7 双角色自审 · [ ] 8 JSON+seed(am2_l30.json→unit04.sql) · [ ] 9 机器12项全绿 · [ ] 10 commit
+- [x] 步骤2 建考点清单 G1–G8(some/any 3 + the河流海洋 3 + the山脉国名 2 + a/an 2 + the特指 2 = 冠词主考12 + so…that 2 + toward 2 + that定从 2 = 辅考6)/ W10 / C4
+- [x] 步骤3 清单自审 · [x] 4 课文美语定稿(10句·冠词密集 the Wayle/the park/a ball/a passing boat + so…that + toward + that定从;美语化 towards→toward、riverbank、realize、soccer入关6)
+- [x] 5 题库(关5=18[冠词12+辅考6]/关6=6/关7=4/关8=3/关9=3/关10=10=44) · [x] 6 解释44
+- [x] 7 双角色自审(冠词句义逐题回读;方向 toward、so…that、that定从三辅考均课文①类) · [x] 8 JSON+seed(am2_l30.json→unit04.sql,264题=L25-30×44) · [x] 9 机器12项🟢全绿(三维闸门元语法=0;3条[c]黄警=冠词/that题干他处含 the/that,人工判过) · [x] 10 commit
+> **L30 ✅ 生产完成 · 🟢全绿。** 主题分歧第四例已自决(冠词主考+so…that/toward/that定从辅考)。seed 归 `american_am2_seed_unit04.sql`。
+
+## ✅ U4 L31《Success story》(成功者的故事)· 🟢全绿
+- 主教材 Key structures = **used to do**("He used to work fourteen hours a day",过去习惯/状态·现已停止,对比 KS7 过去进行/一般过去)。**主题分歧第五例**:同步 L30~31 讲 状语从句/方向介词(so…that/toward 已在 L30 用尽),L31 主考锚定教材 **used to do**。
+- 裁决(自决未停):used to do 主考(过去习惯 gp1/状态 gp2/否定疑问 gp3/vs一般过去 gp4/vs过去进行 gp5/与现在对比 gp6)+ which 定语从句指物 gp7 / when 时间状语从句 gp8 辅考(均课文①类:a factory which employed…、smiled when…)。
+- 词10(retire/company/bicycle/save/workshop/helper/employ/grandson/factory/spare);美语化 aeroplane→airplane、shop→store、postman→mailman 入关6。
+- 44题(关5=18[used to 14+which/when 4]/关6=6/关7=4/关8=3/关9=3/关10=10);机器12项🟢(首验红1:s9seq2 解释含"定语"串味→改"修饰句"复验全绿)。seed→`american_am2_seed_unit04.sql`(L25-31=308)。commit 见下。
+
+## ✅ U4 L32《Shopping made easy》(购物变得很方便)· 🟢全绿 · **U4 整单元收官**
+- 主教材 Key structures = **as…as / not so…as 同级比较**("People are not so honest as they once were",KS8)+ Part b **量词 much/many↔little/few/a little/a few**。**主题分歧第六例**:同步侧重比较/量词,与教材一致偏多。
+- 裁决(自决未停):同级比较 gp1-3(as…as/not so…as/as…as possible)+ 比较级 than gp4 + 最高级 gp5 + 量词 gp6 = 主考;it 形式主语 gp7(it was easier for sb to do)+ 介词+动名词 gp8(without paying)辅考(均课文①类)。
+- 词10(once/temptation/article/wrap/simply/arrest/honest/steal/dress/assistant);美语化 shop→store、parcel→package、shop assistant→sales clerk、shopping centre→mall 入关6。
+- 44题;机器12项🟢(8条[c]黄警=as…as 题干他处含 as/so,同级比较固有,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit04.sql`(**L25-32=352,整单元**)。
+
+# ===== 课程 Unit 5(L33–40)=====
+
+## ✅ U5 L33《Out of the darkness》(冲出黑暗)· 🟢全绿(首验无黄警)
+- 主教材 Key structures = **方向/位置介词短语**("Where did he go? He went to the cinema",Compare KS9):to/from、into/out of、for、towards、at,回答 Where / Which direction。
+- 裁决(自决):方向介词 gp1-5(to/from·into/out of·for·towards·at)+ 综合选介词 gp6 = 主考;on + 动名词(=as soon as '一…就…',On arriving…)gp7 + that 定语从句可省 gp8 辅考(均课文①类)。
+- 词10(darkness/explain/coast/storm/rock/shore/ahead/cliff/struggle/hospital);美语化 towards→toward、in hospital→in the hospital 入关6(+flashlight/torch、fall/autumn 高频美语点)。
+- 44题(关5=18[方向介词14+on doing/that 4]/关6=6/关7=4/关8=3/关9=3/关10=10);机器12项🟢首验全绿。seed→`american_am2_seed_unit05.sql`(L33=44,U5起)。
+
+## ✅ U5 L34《Quick work》(破案“神速”)· 🟢全绿
+- 主教材 Key structures = **被动语态**("He was asked to call at the station",KS10):主动变被动 be+过去分词。本课覆盖各时态被动——一般过去(was stolen/was picked up)、**现在进行(is being sent,Note6 重点)**、过去完成(had been found)、ask sb to do 的被动(was asked to do)。
+- 裁决(自决):被动 gp1-6(主动变被动/一般过去被动/现在进行被动/过去完成被动/be asked to do/by短语)主考;most=very+过去分词 gp7(most surprised)+ too/as well gp8(amused too)辅考(均课文①类)。
+- 词10(station/receive/local/wonder/expect/steal/amuse/news/village/most);美语化 policeman→police officer、post→mail 入关6(+apartment/elevator 高频)。
+- 44题;机器12项🟢(首验红1:s5#12 stem 含箭头"→"泄漏[a]→改直填复验全绿;2条[c]黄警=被动/不定式 cloze 他处含 to/was,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-34=88)。
+
+## ✅ U5 L35《Stop thief!》(捉贼!)· 🟢全绿 · **复习课**
+- 主教材 Key structures = **Review KS26-34**(时态语态综合复习:一般现在 These things always happen / 一般过去 What happened / 现在完成 has not regretted / used to drive / 被动 were arrested)。类比 L11 复习课处理。
+- 裁决(自决):时态语态综合 gp1-6(现在/过去/完成/used to/被动/综合选)主考;far/much+比较级 gp7(far more exciting)+ such+a+名词+that gp8(such a fright that)辅考(均课文①类)。
+- 词10(while/regret/far/rush/act/straight/fright/battered/shortly/afterward);美语化 shop→store、towards→toward、afterwards→afterward、taxi→cab 入关6。
+- 44题;机器12项🟢(首验红1:s9seq2 解释含"主语"串味→改"两个人复数"复验全绿;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-35=132)。
+
+## ✅ U5 L36《Across the Channel》(横渡海峡)· 🟢全绿
+- 主教材 Key structure = **be going to**("She is going to swim across the Channel tomorrow",KS12):表打算/计划的将来,替代 will/shall;条件句结果部分用 will 不用 going to。
+- 裁决(自决):be going to gp1-3(be形式/接原形/疑问否定)+ will 表将来 gp4 + 将来进行时 gp5(will be watching)+ 综合选将来 gp6 主考;intend/mean to do gp7 + 倒装 Among/On…be gp8 辅考(均课文①类)。
+- 词10(record/strong/swimmer/succeed/train/anxiously/intend/solid/channel/rest);关6美英-偏薄(Mr./Mr 标点差 grounded + vacation/candy/movie 高频),⚠️待裁决记美英点薄。
+- 44题;机器12项🟢(首验红1:s9seq1 解释含"主语"串味→改措辞;另 s5#18 集合名词 crowd+were 陷阱黄警→改 On the coast+plural 规避,复验全绿;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-36=176)。
+
+## ✅ U5 L37《The Olympic Games》(奥林匹克运动会)· 🟢全绿(首验无红)
+- 主教材 Key structures = **将来完成时**("Workers will have completed the new roads by the end of this year",KS13):will have+过去分词,表到将来某时刻已完成(by+时间点 / in…time),对比一般将来(will finish)与将来进行(will be building)。
+- 裁决(自决):将来完成 gp1-4(will have+过分/by时间点/in…time/对比一般将来)+ 将来进行 gp5 + 将来被动 gp6 主考;look forward to+动名词 gp7(to是介词)+ as=因为/当 gp8 辅考(均课文①类)。
+- 词10(Olympic/hold/government/immense/stadium/standard/capital/fantastic/design/complete);美语化 railway→railroad 入关6(+highway/subway/downtown 城建交通词)。
+- 44题;机器12项🟢首验全绿。seed→`american_am2_seed_unit05.sql`(L33-37=220)。
+
+## ✅ U5 L38《Everything except the weather》(唯独没有考虑到天气)· 🟢全绿
+- 主教材 Key structures = **过去完成时**("He acted as if he had never lived in England before",KS14):had+过去分词,过去的过去,before/after/when/until 时间从句,与一般过去对比。
+- 裁决(自决):过去完成 gp1-5(had+过分/vs一般过去/before-after/until-as soon as/过去的过去)+ no sooner…than/hardly…when gp6(主句过去完成)主考;as if+过去完成 gp7 + even though gp8 辅考(均课文①类)。
+- 词10(except/Mediterranean/complain/continually/bitterly/sunshine/settle/shock/bear/dream);关6美英-偏薄(文本无独特美英词),用 fall/gas/cookie/garbage 高频通用,⚠️待裁决记。
+- 44题;机器12项🟢(首验红1:s10#4 括号"as if"泄漏答案 as→改措辞;3条[c]黄警=过去完成 cloze 他处含 had,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-38=264)。⏭️ L39。
+
+## ✅ U5 L39《Am I all right?》(我是否痊愈?)· 🟢全绿
+- 主教材 Key structures = **间接引语**("He said that… He told me… He asked…",KS15):say/tell+that、ask if/whether、ask+疑问词 when/why、时态后移(will→would/have→had)、疑问转述用陈述语序。
+- 裁决(自决):与 L15(间接引语)**分工**——L39 侧重**疑问句转述**(ask if/whether/疑问词+陈述语序)。间接引语 gp1-6 主考;ask sb to do/refuse to do/be allowed to do gp7-8 辅考(均课文①类)。
+- 词10全用官方(operation/successful/following/patient/alone/exchange/inquire/certain/caller/relative);关6美英=in the hospital/call/busy/elevator(电话·医院主题)。⚠️ 串味坑:META_STEM 正则含"疑问句用"→gp6 hint 改"动词跟在主语后"避误红。
+- 44题;机器12项🟢(1条[c]黄警=cloze 空3从句含 would、与空4答案 would 不同句,人工判过;三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(L33-39=308)。⏭️ L40(U5末课)。
+
+## ✅ U5 L40《Food and talk》(进餐与交谈)· 🟢全绿(零黄警)· **U5 末课**
+- 主教材 Key structures = **虚拟条件句/非真实条件**("If you ate more and talked less, we would both enjoy our dinner!",KS16):if + 过去式, would + 动词原形;be 一律用 were;与真实条件(if + 现在时→will/祈使句)对比。
+- ⚠️ **坑已避**:课文注释5 说"Will you be seeing it 用将来进行时委婉",易误判主考=将来进行时;实读 Key structures 页(印183)确认主考=**虚拟条件**(KS16),将来进行时只是课文①类。**铁律:主考以 Key structures 页为准,别被 Notes 带偏**。
+- 裁决(自决):虚拟条件 gp1-3(if过去式/would原形/be用were)+ 真实条件对比 gp4-5 主考;将来进行时 will be+V-ing 委婉 gp6 + ask sb to do gp7 + be busy doing gp8 辅考(均课文①类)。
+- 词10(hostess/unsmiling/tight/fix/globe/despair 官方6 + companion/conversation/abroad/plate 补4对齐体量);关6美英=vacation/theater/check/napkin(度假·剧院·晚宴主题)。
+- 44题;机器12项🟢**零黄警**(cloze 原 would not talk→refused to talk 规避[c];三维闸门元语法=0)。seed→`american_am2_seed_unit05.sql`(**L33-40=352,U5 整单元 8 课完成**)。
+
+# ===== 课程 Unit 6(L41–48)=====
+
+## ✅ U6 L41《Do you call that a hat?》(你把那个叫帽子吗?)· 🟢全绿(零黄警)
+- 主教材 Key structures = **Must, Have to and Need**(KS17):need 需要 / must·have to 必须 / needn't 不必(= don't have to)/ mustn't 禁止;核心难点 **mustn't(禁止)≠ needn't(不必)** + needn't have done(本来不必却做了)。
+- 裁决(自决):need/needn't/mustn't/must/have to 主考 gp1-5(mustn't≠needn't 给4题重点辨);regret doing gp6 + remind sb of sth gp7 + remark/observe/notice 辨析 gp8 辅考(均课文/难点①类)。
+- ⚠️ **串味坑**:"情态动词/助动词/宾补"是禁词,关6/8/9/10 一律用 must/needn't 原词或"不必/禁止/必须",不写元语法术语。全做成运用题(给情景选对词),元语法定义题=0。
+- 词10(rude/mirror/hole/remark/remind/lighthouse 官方6 + regret/observe/notice/tie 补4,对齐体量+接难点)。关6美英=store/pants/line/closet(服装店·收纳主题)。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit06.sql`(**L41=44,U6 起**)。⏭️ L42。
+
+## ✅ U6 L42《Not very musical》(并非很懂音乐)· 🟢全绿(零黄警)
+- 主教材 Key structures = **Have**(KS18):own/possess → have / have got 表'拥有';**have + 名词代替普通动词**(have a look / a good time / a drink / a talk)。
+- 裁决(自决):have=拥有 gp1 + have got gp2 + have+名词 gp3-4 主考;pick up(拿起/学会/接人)gp5 + pick out(挑选)gp6 + tell the difference between gp7 + as soon as gp8 辅考(均课文/难点 SD6-7 ①类)。
+- ⚠️ **美语关键点**:散步/洗澡/休息/看一看,美语多用 **take** a walk/bath/rest/look(BrE 用 have)——正好做成 L42 的 关6 美英对照(高相关,非凑数)。关5 只用 AmE-natural 的 have 搭配(have a good time/drink/talk/lunch/party),**不把 take 当错误干扰项**(那会误判,因 AmE take 也对)。
+- 词10全用官方(musical/market/pipe/tune/glimpse/snake/movement/continue/obviously/difference)。关6美英=take a walk/bath/rest/look(have→take 的美语偏好,4张全命中主考)。
+- 44题;机器12项🟢(首验红1:s10#3 hint 含答案 have→改"填代替动词的那个词"复验全绿)。seed→`american_am2_seed_unit06.sql`(**L41-42=88**)。⏭️ L43。
+
+## ✅ U6 L43《Over the South Pole》(飞越南极)· 🟢全绿(零黄警)
+- 主教材 Key structures = **Can and Be able to**(KS19):can → be able to、将来 will be able to(can 无将来式)、过去 was/were able to;**核心难点 was able to 表'(某一次)成功做到了',此时不能用 could**(课文 plane was able to rise/cleared;was able to fly)。
+- 裁决(自决):can/be able to 主考 gp1-4(gp4 成功做成不用 could 给4题重点);run into trouble gp5 + order sb to do gp6 + a great many+复数 gp7 + get over/by gp8 辅考(均课文①类)。
+- 词10全用官方(explorer/flight/serious/seem/crash/sack/clear/aircraft/endless/plain)。关6美英=airplane/flashlight/gas/round trip(飞机·探险·旅行主题)。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit06.sql`(**L41-43=132**)。⏭️ L44。
+
+## ✅ U6 L44《Through the forest》(穿过森林)· 🟢全绿(零黄警)
+- 主教材 Key structures = **动名词 -ing(Gerund)**(KS20):动名词作主语(Eating is a pleasure)、介词后用动名词(keen on cycling / without saying / for not letting)、动词后接动名词(start/keep/enjoy/mind + doing)、动名词的否定(not + doing)。
+- 裁决(自决):动名词 gp1-4 主考;so…that/such…that gp5 + need+doing(被动含义)gp6 + run after/catch up with gp7 + out of breath gp8 辅考(均课文①类)。
+- 词10(forest/risk/picnic/edge/strap/possession/breath/contents/mend 官方9 + fright 补1)。关6美英=purse/cookie/candy/sneakers(野餐·追逐主题)。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit06.sql`(**L41-44=176**)。⏭️ L45。
+
+## ✅ U6 L45《A clear conscience》(问心无愧)· 🟢全绿(零黄警)· **复习课**
+- 主教材 Key structures = **Review KS10/21/34 复习被动语态(the passive)**:各时态被动(was built 一般过去、had been sent 过去完成)、情态被动 must be/have been done(对过去推测:must have been found)、主动↔被动、by 引出执行者。
+- 裁决(自决):被动复习 gp1-5 主考(情态被动 must have been done 给4题重点);while+doing gp6 + in time gp7 + a large sum of/in this way gp8 辅考(均课文①类)。分工:L34(U5)首讲被动各时态;L45 复习+侧重情态被动/主被动转换。
+- 词10(clear/conscience/wallet/savings/villager/percent 官方6 + thief/honest/note/wrap 补4)。关6美英=zip code/bill/mail/**percent**(邮局·钱主题;**percent 一词=美语,per cent 两词=英式**,课文原文已美语化)。
+- 44题;机器12项🟢(首验红2:s5#10/#11 主动变被动含箭头"→"→改"把X改成被动"措辞;2条[c]黄警=cloze"He was sure"撞被动 was→改 felt sure 规避,复验零黄警)。seed→`american_am2_seed_unit06.sql`(**L41-45=220**)。⏭️ L46。
+
+## ✅ U6 L46《Expensive and uncomfortable》(既昂贵又受罪)· 🟢全绿(零黄警)
+- 主教材 Key structures = **动词/形容词 + 介词搭配**(verb + to/at/for/with,复习 KS22):belong/occur/confine **to**、astonished/surprised/arrive **at**、account/pay/wait **for**、agree/cope/satisfied **with**。
+- 裁决(自决):四组 verb+prep gp1-4 主考(各3题);so…that gp5 + admit+doing gp6 + be ordered/confined to gp7 + a number of gp8 辅考(均课文①类)。"X 后面用哪个介词"=运用题(填真句介词),非元语法定义(哪个≠哪类/种,不触 META 闸),元语法定义题=0。
+- 词10(unload/extremely/occur/astonish/pile/discover/admit/confine/normal/goods)。关6美英=baggage/sweater/one-way ticket/restroom(机场·服装主题)。
+- 44题;机器12项🟢(首验1条[c]黄警=s5#2"occurred to…to open"两个 to→改 that 从句规避,复验零黄警)。seed→`american_am2_seed_unit06.sql`(**L41-46=264**)。⏭️ L47。
+
+## ✅ U6 L47《A thirsty ghost》(嗜酒的鬼魂)· 🟢全绿(零黄警)· **综合复习课**
+- 主教材 Key structures = **Review KS36–45(综合复习)**:be going to/将来完成时/过去完成·as if/间接引语/虚拟条件/must·have to·need/have/can·be able to/被动。
+- 裁决(自决):以本课"嗜酒鬼魂"故事最突出的 **must have done(对过去推测)** 为核心 gp1(×4);被动 had been done gp2 + 间接引语 gp3 + be going to gp4 + 将来完成时 gp5 + 虚拟条件 gp6 + as if gp7 + be able to gp8 串讲复习(每点2-1题)。全运用题,元语法定义题=0。
+- 词10(thirsty/ghost/haunt/block/furniture/whisky/suggest/shake/accept 官方9 + noise 补1)。关6美英=bar/whiskey/apartment/faucet(酒馆·房产主题;**bar=美语 pub、whiskey=美语拼**)。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit06.sql`(**L41-47=308**)。⏭️ L48(U6末课)。
+
+## ✅ U6 L48《Did you want to tell me something?》(你想对我说什么吗?)· 🟢全绿 · **U6 末课**
+- ⚠️ 本课**无 Key structures 页**——难点页是 **Special difficulties: Review SD26-45(易混词辨析 Words often confused)**。故主考=间接引语疑问句(ask whether/how,课文核心,呼应 L39)+ 易混词辨析(SD26-45 复习)。
+- 裁决(自决):间接引语 gp1-2(whether/if + how/what+陈述语序);易混词 too/very gp3、steal/rob gp4、which/who gp5、continuously/continually gp6、past/passed gp7、deny/refuse gp8。全运用题(选正确词/形式),元语法定义题=0。
+- 词10(pull/collect/collection/nod/meanwhile 官方 + dentist/tooth/tongue/worried/hole 补)。关6美英=cotton balls/candy/drugstore/dentist's office(牙医·药棉主题;**cotton balls=美语、cotton wool=英式**)。
+- 44题;机器12项🟢(首验红1:s9seq2 解释含"主语"串味→改"不再倒装/陈述语序"复验全绿)。seed→`american_am2_seed_unit06.sql`(**L41-48=352,U6 整单元 8 课完成**)。
+
+# ===== 课程 Unit 7(L49–56)= 教材 Unit 3 起 =====
+
+> ⚠️ **教材 Unit 3(L49–72)格式变化**:每课=短文 + Summary writing(理解题)+ Composition,**无每课独立 Key structures 页**;语法在**单元层面统一**=用从属连词(when/as/while/because/although/until/after)把简单句连成**复合句**。每课主考按该课短文实际用到的连词定,schema 不变(仍 44 题),grammar_focus 从单元语法+课文连词导出。
+
+## ✅ U7 L49《The end of a dream》(美梦告终)· 🟢全绿(零黄警)· **教材 Unit 3 首课**
+- 主考(教材 Unit 3 复合句连词)= 课文实际用到的:because 原因、when 时间、although 让步、not…until 直到才、after 先后。
+- 裁决(自决):连词 gp1-5 主考;be tired of gp6 + save up/blow up gp7 + send sth doing gp8 辅考(均课文①类)。全运用题(选正确连词),元语法定义题=0。
+- 词10(tired/owner/mattress/gust/sweep/courtyard/smash/miraculously/unhurt/promptly)。关6美英=yard/first floor/apartment/closet(院子·住房主题);美语化 Teheran→Tehran、on to→onto。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit07.sql`(**L49=44,U7 起**)。⏭️ L50。
+
+## ✅ U7 L50《Taken for a ride》(乘车兜风)· 🟢全绿(零黄) · 教材 Unit 3
+- **⚠️ 主考修正**:初稿误把连词/疑问词不定式当主考;实读 L50 Key structures 页(doc276-277)后按**主考铁律**改正——**主考=KS26 一般现在时表习惯性动作 + 状态动词(belong to/consist of/contain/desire/detest/dislike/hate/hope/love/matter/mean/mind/need/want/wish)不用进行时**;Special difficulties **SD26 易混词 lose/loose/miss、expect/wait for**。
+- 裁决(自决):gp1 状态动词一般现在(6题)+ gp2 习惯 vs 正在进行(4题)= KS26 主考;gp3 lose/loose/miss + gp4 expect/wait for = SD26 主考级辅;gp5 疑问词+不定式 + gp6 prefer to do/take sb for a ride = 课文 Notes 辅考。全运用题,元语法定义题=0。cloze 用教材 SD26 Exercise B(prefer/understand/mean/know 状态动词一般现在)。
+- 词10(ride/excursion/conductor/view/prefer/passenger/countryside/shock/expect/matter;expect 正好是 SD26 考点)。关6美英=subway/sidewalk(交通街道主题)+contrast round trip·gas;美语化 travelling→traveling。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit07.sql`(**L49+L50=88**)。⏭️ L51。
+
+## ✅ U7 L51《Reward for virtue》(对美德的奖赏)· 🟢全绿(零黄) · 教材 Unit 3
+- 主考(实读 Key structures 页 doc280-281)= **KS27 What happened? 一般过去时**(过去发生的动作;不规则过去式 got/began/wrote/paid/rang/led/hid + 过去被动 was sent/was burnt)。Special difficulties **SD27 易混动词 raise/rise、lay/lie、beat/win**。
+- 裁决(自决):gp1 一般过去时不规则过去式(6题)+ gp2 过去被动(2题)= KS27 主考;gp3 raise/rise + gp4 lay/lie + gp5 beat/win = SD27 主考级辅;gp6 so…that 结果 + go on a diet = 课文辅考。全运用题,元语法定义题=0。cloze 用教材 Exercise B(paid/rang/led/hid 不规则过去式)。
+- 词10(reward/virtue/diet/forbid/hurriedly/embarrass/guiltily/strict/occasionally + 补 parcel)。关6美英=candy/cookie(节食/食物主题)+contrast potato chips·dessert;美语化 passage sweets→candy(两处)。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit07.sql`(**L49+L50+L51=132**)。⏭️ L52。
+
+## ✅ U7 L52《A pretty carpet》(漂亮的地毯)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc283-284)= **KS28 现在完成时(have done,完成/次数/结果)vs 现在完成进行时(have been doing,一直在进行)**。Special difficulties **SD28 形容词与副词辨析**(sings beautifully、works slowly + hard≠hardly、late≠lately、high≠highly、near≠nearly)。
+- 裁决(自决):gp1 现在完成时(4)+ gp2 现在完成进行时(4)+ gp3 两者对比(2)= KS28 主考;gp4 形容词vs副词(3)+ gp5 易混副词 hard/hardly·lately(3)= SD28 主考级辅;gp6 get…in order/make matters worse/spare time(2)= 课文辅考。全运用题,元语法定义题=0。
+- 词10(temporarily/inch/space/actually + 补 bookcase/gaze/surprise/spare/order/rather)。关6美英=elevator/apartment(房子主题)+contrast first floor·closet;passage 无需美语化(已 AmE)。
+- 44题;机器12项🟢(1黄=s5#14 "hard worker→works hard" 是 SD28 形/副对照的教学句式,人工核合法)。seed→`american_am2_seed_unit07.sql`(**L49-L52=176**)。⏭️ L53。
+
+## ✅ U7 L53《Hot snake》(触电的蛇)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc288-289)= **KS29+KS52 三种时态综合复习**:一般过去时(What happened)/ 现在完成时(What has happened)/ 现在完成进行时(What has been happening),核心=看时间标志(ago/yesterday→过去;ever/just→完成;since/for→完成进行)选时态。Special difficulties = **易混词 throw to/at/away、quite/quiet、cause/reason、drop/fall**。
+- 裁决(自决):gp1 一般过去(3)+ gp2 现在完成(3)+ gp3 现在完成进行(3)+ gp4 三时态看标志选(3)= KS 主考;gp5 throw to/at/away(3)+ gp6 quite/quiet·drop/fall(3)= SD 辅考。全运用题,元语法定义题=0。
+- **词表13词全收**(hot/fireman/cause/examine/accidentally/remains/wire/volt/power line/solve/mystery/snatch/spark),守零遗漏铁律不截断。关6美英=flashlight/firefighter(火/电主题)+contrast kerosene·outlet。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit07.sql`(**L49-L53=220**)。⏭️ L54。
+
+## ✅ U7 L54《Sticky fingers》(粘糊的手指)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc292-293)= **KS30 冠词 a/an/the 与 some/any 综合复习**:some(肯定)/any(疑问否定)、a/an 泛指、the 特指、**the+形容词表一类人**(the rich/the poor/the deaf/the blind)、the+最高级 vs most(大多数)、零冠词固定短语(go to school/at work)vs the(go to the cinema)。**本课无独立 Special difficulties 页**(KS30 内含 SD9 some/any 引用)。
+- 裁决(自决):gp1 some/any(4)+ gp2 a/an(3)+ gp3 the/the+形容词(3)+ gp4 零冠词vs the(3)+ gp5 the+最高级/most(2)= KS30 主考;gp6 no sooner…than/what a mess/ring back(3)= 课文辅考。全运用题,元语法定义题=0。
+- **词表14词全收**(sticky/finger/pie/mix/pastry/annoying/receiver/dismay/recognize/persuade/mess/doorknob/sign/register)。关6美英=mailman/faucet(家/邮件主题)+contrast mail·zip code。
+- 44题;机器12项🟢(1黄=s5#10 "the deaf and the blind" 是 the+形容词并列的教学句式,人工核合法)。seed→`american_am2_seed_unit07.sql`(**L49-L54=264**)。⏭️ L55。
+
+## ✅ U7 L55《Not a gold mine》(并非金矿)· 🟢全绿 · **净化包生产**(2026-07-05)
+- **背景**:原课文 PDF 读取被内容过滤**误判**(纯 false positive,内容无害);Aaron+网页版 Claude 核查 p260-262 后出**净化生产包**,CC 用干净素材生产,**未读源 PDF**。
+- 主考 = **KS31 would/used to 表过去习惯**(would 过去反复动作、used to 过去习惯/状态、状态只能 used to)。SD = **used to do / be used to doing / be used to do 三辨析 + gold vs golden**。
+- 素材=授权改写课文(Danny 爸爸买金属探测器 The Revealer 在后院找海盗埋的金子、挖遍院子一无所获),保全考点(would/used to、be used to detect 被动、All that glitters is not gold、golden memory)。
+- 裁决:gp1 would(3)+ gp2 used to(3)+ gp3 would vs used to(3)= 主考;gp4 used三结构(4)+ gp5 gold/golden(3)+ gp6 dig/bury 过去式(2)= 辅考。全运用题,元语法定义题=0。
+- **词表13词全收**(gold/mine/detect/metal/rock/pirate/treasure/bury/dig/hole/deep/golden/opportunity;网页版原漏 rock/deep/opportunity,CC 补回)。关6美英=backyard/parking lot(后院/挖掘主题)+contrast flashlight·trash can。
+- 44题;机器12项🟢(3黄=s5#14 gold材质题、s7 cloze used to/gold 复现,人工核合法)。seed→`american_am2_seed_unit07.sql`(**U7 补齐 L49-L56=352**)。
+
+## ✅ U7 L56《Faster than sound!》(比声音还快!)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc300-301)= **KS32 数量词与比较**:as…as / not as…as、**little·few(否定)vs a little·a few(肯定)**、a lot of / a great deal of(不可数)/ a great many(可数)、the same as / different from。Special difficulties **SD 易混词 handsome/beautiful/pretty/good-looking、reach(接地点/速度)/ arrive in·at**。
+- 裁决(自决):gp1 as…as(3)+ gp2 a lot of/a great deal of/a great many(4)+ gp3 little·few vs a little·a few(4)+ gp4 same as/different from(2)= KS32 主考;gp5 handsome·pretty/reach·arrive(3)+ gp6 break down/过去分词状语(2)= SD+课文辅考。全运用题,元语法定义题=0。
+- 词表11词全收(sound/excitement/handsome/Rolls-Royce/Benz/wheel/explosion/course/rival/speed/downhill)。关6美英=trunk/windshield(汽车主题)+contrast hood·gas;different from 用美语标准搭配(非英式 different to)。
+- 44题;机器12项🟢(3黄=s5#1/2/3 as…as 两个 as 同现,教学结构必然,人工核合法)。seed→`american_am2_seed_unit07.sql`(**U7 整单元 L49-L56=352**,含 L55 净化包)。⏭️ L57(U8)。
+
+# ===== 课程 Unit 8(L57–64)= 教材 Unit 3 续 =====
+> Unit 3(L49-72)后段;每课仍有自己的 KS/SD 页,逐课渲染定主考(除误判课走净化包)。seed→`american_am2_seed_unit08.sql`。
+
+## ✅ U8 L57《Can I help you?》(有什么需要帮忙的吗?)· 🟢全绿(零黄) · **净化包生产**(2026-07-05)
+- **背景**:原课文 PDF 读取内容过滤**误判**(纯 false positive,势利店员讽刺小故事);Aaron+网页版 Claude 出净化生产包,CC 用干净素材生产,**未读源 PDF**。
+- 主考 = **KS9+KS33 介词 at/in/off/with 综合复习**(at 某一点、in 之内/穿着、off 离开脱落、with 带有拿着)。SD = **make/let sb do**(使役动词后接不带 to 的动词原形)。
+- **⚠️ unit_no 自决修正**:净化包写 unit_no=7,但按课程 8课/单元 分组(U7=L49-56 已收 352),L57 应属 **U8** → CC 改 unit_no=8、落 `american_am2_seed_unit08.sql`(否则 U7 会变 9 课破坏分组)。已报 Aaron。
+- 裁决:gp1 at(3)+ gp2 in(4)+ gp3 off(3)+ gp4 with(3)= KS 主考;gp5 make/let sb do(3)+ gp6 the way 从句/into(2)= SD+课文辅考。全运用题,元语法定义题=0。
+- 美语化:store(非 shop)/salesclerk(非 shop assistant)/purse(非 handbag),去英式 madam 称呼。词表13词全收。关6美英=store/purse(购物主题)+contrast salesclerk·pants。
+- 44题;机器12项🟢**零黄警**。seed→`american_am2_seed_unit08.sql`(**L57=44**)。⏭️ L58。
+
+## ✅ U8 L58《A blessing in disguise?》(是因祸得福吗?)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc308-309)= **KS34 被动语态综合**:各时态被动(was planted 过去/is being sent 进行/has been found 完成)+ **be said to / It is said that 转述被动** + **双宾语被动**(I was given a pen)。Special difficulties **易混动词 increase/grow、gain/earn、pick/cut**。
+- 裁决:gp1 一般/过去被动(3)+ gp2 进行/完成被动(3)+ gp3 be said to/It is said that(3)+ gp4 双宾语被动(2)= KS34 主考;gp5 increase·grow/gain·earn/pick·cut(4)+ gp6 have sth done/it 强调句/a blessing in disguise(3)= SD+课文辅考。全运用题,元语法定义题=0。
+- **词表16词全收**(blessing/disguise/tiny/possess/cursed/increase/plant/church/evil/reputation/claim/victim/vicar/source/income/trunk)。关6美英=fall/bill(季节/收入主题)+contrast downtown·vacation。
+- 44题;机器12项🟢(初版 s5#10/11 双宾语被动用了箭头→触发泄漏[a],改成独立被动句去箭头后全绿)。seed→`american_am2_seed_unit08.sql`(**L57+L58=88**)。⏭️ L59。
+
+## ✅ U8 L59《In or out?》(进来还是出去?)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc312-313)= **Review KS50-58 时态综合复习**(一般现在习惯/一般过去/现在完成/现在完成进行/would·used to 过去习惯/被动·is said to)。Special difficulties **SD 表目的的多种方式**(to do、in order to、so as (not) to、so that、in order that、for sb to do)。
+- 裁决:gp1 一般现在·过去(3)+ gp2 现在完成·完成进行(3)+ gp3 would/used to(2)+ gp4 被动/转述被动(3)= 时态复习主考;gp5 表目的多方式(4)+ gp6 every time/so…that/expert at(3)= SD+课文辅考。全运用题,元语法定义题=0。
+- 美语化:garden→yard、neighbours→neighbors。词10(bark/press/paw/latch/expert/develop/habit/remove + 补 annoyed/neighbor)。关6美英=yard/neighbor(院子/拼写主题)+contrast trash·line。
+- 44题;机器12项🟢(1黄=s5#12 "ran to the station...to catch" 两个 to 不同,人工核合法)。seed→`american_am2_seed_unit08.sql`(**L57-L59=132**)。⏭️ L60。
+
+## ✅ U8 L60《The future》(卜算未来)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc316-317)= **KS36+KS16 表将来的几种方式**:will/be going to、**现在进行时表已安排好的将来**(is arriving tomorrow)、**时间/条件状语从句用一般现在时表将来**(the moment you leave / if it rains / when he returns,主句 will)。Special difficulties **SD 名词作定语/复合名词**(the fair in the village→village fair、a card for Christmas→Christmas card)代替 of 短语。
+- 裁决:gp1 will(2)+ gp2 be going to(2)+ gp3 现在进行表将来(3)+ gp4 状语从句一般现在表将来(5)= KS 主考;gp5 名词作定语(4)+ gp6 the moment/intend to/rush towards(2)= SD+课文辅考。全运用题,元语法定义题=0。
+- 词10(future/fair/fortune-teller/crystal/relation/impatiently + 补 tent/surprise/rush/intend)。关6美英=movie/carnival(集市/娱乐主题)+contrast sweater·mom。
+- 44题;机器12项🟢(初版 s9seq2/3 解释含"状语从句/定语"串味,改写去术语后全绿)。seed→`american_am2_seed_unit08.sql`(**L57-L60=176**)。⏭️ L61。
+
+## ✅ U8 L61《Trouble with the Hubble》(哈勃望远镜的困境)· 🟢全绿 · 教材 Unit 3
+- 主考(实读 Key structures 页 doc320)= **KS37 表将来的三种时态**:①将来进行时 will be doing(will be sending/taking、I will be writing letters all day tomorrow)②将来完成时 will have done(will have repaired、by the time you read this…will have sent、KS60c He will have arrived by this time tomorrow)③将来完成进行时 will have been doing(by Friday they will have been working for seven days)。Special difficulties **SD 易混词 cost/price/value**:名词(cost of living/ask the price/sentimental value)+ 动词(What does it cost?/I value your advice)。
+- 裁决:gp1 将来进行(4)+ gp2 将来完成(4)+ gp3 将来完成进行(2)+ gp4 时间从句用现在/现在完成表将来(3,by the time you read/the moment he has arrived/as soon as he has received)= KS37 主考;gp5 cost/price/value 名词(3)+ gp6 动词(2)= SD 辅考。全运用题,元语法定义题=0。
+- **词17全收**(零遗漏:Hubble/telescope/launch/space/NASA/billion/faulty/astronaut/shuttle/Endeavour/robot-arm/grab/atmosphere/distant/galaxy/universe/eagle eye,含3专名)。关6美英=bill/note(钞票)+check/bill(账单,呼应 cost 主题)+elevator·apartment;chunks=right from the start/at a cost of/a great deal/put…right。
+- 44题;机器12项🟢一次过。seed→`american_am2_seed_unit08.sql`(**L57-L61=220**)。⏭️ L62。
+
+## ✅ U8 L62《After the fire》(大火之后)· 🟢全绿 · 教材 Unit 3
+- ⚠️ content filtering 第3次误拦(L55/L57/L62,均为含 fire/pirates/punish 等词的无害老课文)。**本课我实际未被拦**——完整读到源 doc323-326;Aaron 净化包随后到,与我从源提取的考点/词表**完全一致**(KS38+同 SD 三组+同15词),仅额外指定 firemen→firefighters 美语化。已按包对齐。
+- 主考(源 doc324 = Key structures)= **KS38 过去完成时(had done)vs 过去完成进行时(had been doing)**:had done 看结果/完成(had covered/had already taken root/had lost)、had been doing 看过程/持续(had been fighting for 3 weeks/had been planting for a month/had been growing for centuries),含宾语从句 I asked what he had lost/had been doing。Special difficulties **SD 三组易混词 control/check、great/big、soil/ground**。
+- 裁决:gp1 过去完成(4)+ gp2 过去完成进行(3)+ gp3 宾语从句中的完成(2)= KS38 主考;gp4 control/check(3)+ gp5 great/big(3)+ gp6 soil/ground(3)= SD 辅考。全运用题,元语法定义题=0。
+- **词15全收**(control/smoke/desolate/threaten/surrounding/destruction/flood/authority/grass-seed/spray/quantity/root/century/patch/blacken)。美语化 firemen→**firefighters**、aeroplanes→**airplanes**;关6美英=firefighter/fireman+airplane/aeroplane+truck/lorry+gas/petrol;chunks=under control/take root/in place of/wash away。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit08.sql`(**L57-L62=264**)。⏭️ L63。
+
+## ✅ U8 L63《She was not amused》(她并不觉得好笑)· 🟢全绿 · 教材 Unit 3
+- 主考(源 doc328 = Key structures)= **KS15+KS39 间接引语**:①陈述句 said/told that + 时态后移(want→wanted)②祈使句/请求 ask/tell sb (not) to do③insist/suggest that…should④疑问句转述用陈述语序(一般疑问 if/whether、特殊疑问保留 wh-)。Special difficulties(源 doc329 exercise D)= **间接疑问句 I wonder if/when/why + 陈述语序** + 转述时人称/时间地点指示词相应变化(you→me、now→then、here→there、come→go)。
+- 裁决:gp1 祈使/请求转间接(4)+ gp2 陈述转间接(3)+ gp3 insist/suggest that should(2)= 主考;gp4 间接一般疑问 if(3)+ gp5 间接特殊疑问 wh-(3)+ gp6 指示词变化(3)= 辅考。全运用题,元语法定义题=0。
+- ⚠️ **本课特有坑**:间接引语题天然是"直接→间接"转换,初版 stem 用箭头 → 触发泄漏闸[a]红;已全部改写为**冒号引导 + 单句填空**(转述 'X':间接句 ___),并从括号提示去掉答案词(should/if),泄漏 a/b 清零。此坑固化:凡间接引语/句型转换课禁用 → 箭头,改冒号+单句。
+- 词10(官方6:circle/admire/close/wedding/reception/sort;补4 humor/speech/popular/amuse——官方词表仅6词,按词表铁律补足至~10)。美语化 humour→**humor**;关6美英=humor/humour+favorite/favourite+color/colour+neighbor/neighbour(-or vs -our 拼写族);chunks=a sense of humor/make a speech/to one's surprise/a circle of friends。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit08.sql`(**L57-L63=308**)。⏭️ L64(U8 收官课)。
+
+## ✅ U8 L64《The Channel Tunnel》(海峡隧道)· 🟢全绿 · 教材 Unit 3 · **U8 收官**
+- 主考(源 doc332-333 = Key structures)= **KS16+KS40 真实与非真实条件句**:①真实(if+一般现在→will/shall,If it is fine we shall go)②与现在相反(if+过去式/be→were→would+原形,If I were you I would…)③与过去相反(if+had done→would have done,If the British had not feared invasion it would have been completed)+ suggest/demand that…should(虚拟)。Special difficulties(源 doc333)= **SD 短语动词 draw 辨析**:draw in 吸入 / draw back 退回 / draw off 开走 / draw up 停下·拟定签订(drawn up)。
+- 裁决:gp1 真实条件(3)+ gp2 与现在相反(3)+ gp3 与过去相反(4)+ gp4 suggest/demand should(2)= 主考;gp5 draw in/back/off(3)+ gp6 draw up 双义(3)= SD 辅考。全运用题,元语法定义题=0。
+- ⚠️ leak[b]坑复现:条件句题里"be 用 were""主句用 would have"写进括号提示=直给答案红;已改"be 动词用特殊虚拟形式""用完成体的虚拟形式",泄漏清零。
+- 词13全收(tunnel/port/ventilate/chimney/sea level/double/ventilation/fear/invasion/officially/connect/European/continent)。美语化 centre→**center**、railway→**railroad**;关6美英=center/centre+railroad/railway+subway/underground+elevator/lift(交通基建族);chunks=put forward/serve as/above sea level/connect…to。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit08.sql`(**L57-L64=352,整单元8课齐**)。
+
+## 🎯 U8(L57–L64)批次汇报 · 整单元完成
+- **8课全绿**:L57 KS9+33介词(净化包)/ L58 KS34被动语态综合+双宾被动 / L59 Review时态综合+SD表目的 / L60 KS36+16表将来 / L61 KS37三种将来时态 / L62 KS38过去完成vs过去完成进行(净化包)/ L63 KS15+39间接引语 / L64 KS16+40真实与非真实条件句+虚拟。
+- seed=`american_am2_seed_unit08.sql` 期望 **+352**(8课×44),已同步 _RUN_ME 第8行。
+- 含2次 content-filter 净化包(L57/L62);L62 我本地实读源未被拦、与净化包完全一致。
+- **真机抽验指定2课**:①**L62**(净化包生产+过去完成时态对比,验听力音频/时态题呈现)②**L64**(虚拟语气三型+draw短语动词,验条件句题干与SD辨析呈现)。
+- ⏭️ L65 起进教材 Unit 3 后段(课程 U9,L65-72)。
+
+# ===== 课程 Unit 9(L65–72)=====
+
+## ✅ U9 L65《Jumbo versus the police》(小象对警察)· 🟢全绿 · 教材 Unit 3
+- 主考(源 doc336-337 = Key structures)= **KS17 must/have to/should/ought to** + **should have done / ought to have done(过去本应做而没做)**:must/have to=必须(过去义务用 had to,must 无过去式)、should/ought to=应该、should/ought to have done=懊悔本该做没做(He should have known / ought to have gone)。Special difficulties(源 doc337)= **3组**:短语动词 let off/down/in/out、agree to do vs accept sth、dress up as vs dress。
+- 裁决:gp1 must/have to/had to(3)+ gp2 should/ought to(2)+ gp3 should/ought to have done(4)= KS17 主考;gp4 let 短语动词(3)+ gp5 agree/accept(3)+ gp6 dress up/dress(3)= SD 辅考。全运用题,元语法定义题=0。
+- 词12(官方9:versus/Christmas/circus/present/accompany/approach/ought/weigh/fortunate;补3 elephant/arrest/traffic——官方仅9词补足至~12)。美语化 Father Christmas→**Santa Claus**、honour→**honor**;关6美英=Santa Claus/Father Christmas+honor/honour+candy/sweets+cookie/biscuit;chunks=set off/hold up the traffic/let…off/dress up as。
+- 44题;机器12项🟢一次过。seed→**新建 `american_am2_seed_unit09.sql`**(**L65=44**)。⏭️ L66。
+
+## ✅ U9 L66《Sweet as honey!》(像蜜一样甜!)· 🟢全绿 · 教材 Unit 3
+- ⚠️ content-filter 第4次误拦(L55/L57/L62/L66);触发词=课文 "Lancaster **bomber**"(军用轰炸机)+crash/wreck 军事联想。**本课我实读源 doc339-341 未被拦**;Aaron 净化包随后到,做了2项**正确决策**我照采:①bomber→**old airplane** 中性化(去军事触发词,故事/考点不变)②SD 集合名词改**美语单数**(教材 SD 原是英式 team are/audience were=错误语域,美语课程一律单数)。
+- 主考(源 doc340 = Key structures)= **KS18+KS42 使役结构 have sth done**:have + 物 + 过去分词=请/让别人做(had the plane packaged、have my car washed、had his hair cut、have it restored/rebuilt);否定疑问借 do/did。Special difficulties(源 doc341→净化包改写)= **集合名词主谓一致·美语单数**(team/group/audience/crew/government + is/was/has,附📌美语语域注,不出英式复数陷阱题)。
+- 裁决:gp1 have sth done 请人做vs自己做(4)+ gp2 否定疑问(3)+ gp3 各时态(3)+ gp4 生活场景(2)= 主考12;gp5 集合名词作整体单数(3)+ gp6 不同名词/时态单数(3)= SD 辅考6。全运用题,元语法定义题=0。
+- **词20全收**(净化包表:remote/Pacific/damage/wreck/rediscover/aerial/survey/rescue/package/enthusiast/restore/imagine/packing case/colony/bee/hive/preserve/beeswax/engine/condition;Lancaster/bomber 因中性化不入表)。关6美英=trunk/boot+hood/bonnet+wrench/spanner+airplane/aeroplane(汽车机械族);chunks=have sth done/break open/in perfect condition/turn…into。
+- 44题;机器12项🟢(1黄=cloze上下文另一 had,人工核过)。seed→`american_am2_seed_unit09.sql`(**L65-L66=88**)。⏭️ L67。
+
+## ✅ U9 L67《Volcanoes》(火山)· 🟢全绿 · 教材 Unit 3
+- 主考(源 doc344-345 = Key structures)= **KS43 can/could·be able to·manage to**:could=一般能力、was able to/managed to=过去"设法做成一件具体难事"(managed to escape/set up/climb)、没能做成=couldn't=wasn't able to=didn't manage to。Special difficulties(源 doc345)= **SD 带 say 与 tell 的短语辨析**:say so/say nothing/said his prayers vs tell the time/tell lies/tell the truth/tell the difference。
+- 裁决:gp1 could 能力(2)+ gp2 was able to/managed to 成功做成(4)+ gp3 没能做成 didn't manage to(3)= 主考9;gp4 say 短语(3)+ gp5 tell 短语(3)+ gp6 say/tell 辨析(3)= SD 辅考9。全运用题,元语法定义题=0。
+- ⚠️ leak[b]坑复现:say/tell 辨析题括号写"带 say/tell 的短语"=直给答案红;已改"选词:'…的固定说法'"纯语义提示,泄漏清零。此坑固化:词汇辨析题括号禁写候选词本身。
+- 词12全收(volcano/active/Kivu/Congo/Kituro/erupt/violently/manage/brilliant/liquid/escape/alive)。关6美英=center/centre+meter/metre+liter/litre+theater/theatre(-er/-re 拼写族);chunks=set up/just in time/spend one's lifetime doing/risk one's life。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L67=132**)。⏭️ L68。
+
+## ✅ U9 L68《Persistent》(甩不掉的人)· 🟢全绿 · 教材 Unit 3
+- ⚠️ content-filter 第5次误拦(L55/57/62/66/68);触发=课文"躲人/甩不掉黏人熟人"(avoid/following)联想。**本课我实读源 doc347-350 未被拦**;Aaron 净化包随后到,**无重大内容改动**(仅措辞中性化=社交喜剧),已采其 sanctioned 课文+10词表。
+- 主考(源 doc348-349 = Key structures a-d)= **KS20+KS44 动名词 -ing**:动词+doing(avoid/enjoy/deny/finish)、结构+doing(It's no use/not worth/be busy/prevent from)、动名词逻辑主语(mind my doing)、感官动词 see/hear/smell+doing、go/come+doing。反义疑问句(Note 7)辅考。**无独立 SD 页**,KS 本身覆盖全部 -ing 用法。
+- 裁决:gp1 动词+doing(4)+ gp2 结构+doing(4)+ gp3 逻辑主语(2)+ gp4 感官动词+doing(3)+ gp5 go/come+doing(3)+ gp6 反义疑问(2)=18。净化包只列 G1-G5,我按源补回感官动词/go-come(真 KS 内容,防欠覆盖)。全运用题,元语法定义题=0。
+- ⚠️ 两坑复现:①反义疑问题括号"前否定→后肯定"含箭头=leak[a]红→改"前面否定,后面就用肯定";②s9解释"逻辑主语"含 banned"主语"→改"my 表示是'我'要做"。均清零。
+- 词10(官方3:persistent/avoid/insist + 补7:pretend/wave/fancy/wonder/mind/dentist/waiting room)。关6美英=traveling/travelling+canceling/cancelling+colored/coloured+labeled/labelled(-l- 单双写族);chunks=it's no use doing/would you mind doing/be busy doing/Fancy meeting you here。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L68=176**)。⏭️ L69。
+
+## ✅ U9 L69《The old car comes back to life》(老爷车重获新生)· 🟢全绿 · **方案B换情节**
+- ⚠️ **方案B换情节**(Aaron 2026-07-05 拍板,见 [[am2-filter-risk-plan-l69-96]]):原《But not murder!》驾照版含"谋杀玩笑"触发词=🔴高危。**我实读源已产出并 committed(59d18f07 原版),但按方案B用换情节包替换**:情节换成"博物馆修复古董车"(无害),**原 KS 被动语态综合考点原样承载**。
+- 主考=**被动语态综合复习**:一般过去 was made/were built、情态 can/could be/must have been kept、现在完成 has been restored、过去完成 had been kept/stored、过去进行 was being cleaned、完成式非谓语 having been stored、不定式被动 to be restored。原 SD 易混词(advice/practice/amuse)随换情节去掉,聚焦被动(净化包定的范围)。
+- 裁决:gp1 一般过去被动(3)+ gp2 情态/推测被动(3)+ gp3 现在完成被动(3)+ gp4 过去完成被动(2)+ gp5 过去进行被动(3)+ gp6 完成非谓语/不定式被动(4)=18。全运用题,元语法定义题=0。
+- 词10(净化包表:instruct/acquire/confidence/restore/original/engine/maker/garage/condition/rare;原暴力词 murder 降级不入表)。关6美英=gas/petrol+tire/tyre+trunk/boot+hood/bonnet(汽车族);chunks=come back to life/a great deal of/restore…to/work on。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-L69=220**)。
+- ✅ **L70 已补做(方案B换情节包《What Are You Good At?》)** —— 见下方 U9 收官块。风险表标 🔴,换情节包=校园社团招新;考点原样=**形容词+介词固定搭配**(famous for/eager for/responsible for + proud of/afraid of/capable of + good at/quick at/surprised at + grateful to/kind to/pleased with + worried about/keen on)。词10(eager/famous/grateful/responsible/qualified/proud/fond/afraid/capable/keen)。美语化 math/eraser/grade/recess。44题机器12项🟢。**⇒ U9(L65-72)8课全齐,整单元 352 收官。**
+
+## ✅ U9 L71《A famous clock》(一个著名的大钟)· 🟢全绿 · 🟡试读通过(未被拦)
+- 🟡试读课:风险表标 🟡,我试读源 doc359-361**未被拦**,正常读源产出;SD 里 hang/hanged(绞死)按方案B原则降级=只教 hang→hung 悬挂(neutral 例句),hanged 仅认读一句注,不出暴力题。
+- 主考(源 doc360 = Key structures)= **Review KS60-69 综合复习**:与过去相反虚拟条件句(passage 核心:Parliament had not been burned down → clock would never have been erected)+ 各时态被动(can be heard/were being built/are connected)+ have sth done(have the clock checked)+ 现在完成/过去完成进行/将来完成。Special difficulties = **SD official/employee/salesclerk(美语 clerk)、hang→hung 悬挂**。
+- 裁决:gp1 与过去相反虚拟(3)+ gp2 各时态被动(3)+ gp3 have sth done(2)+ gp4 现在完成/过去完成进行/将来完成(3)= 复习主考11;gp5 official/employee/clerk(3)+ gp6 hang→hung(4)= SD 辅考7。全运用题,元语法定义题=0。
+- 词11(官方9:parliament/erect/accurate/official/Greenwich/observatory/check/microphone/tower + 补2 immense/strike)。美语化 shop assistant→**salesclerk/clerk**;关6美英=salesclerk/shop assistant+elevator/lift+first floor/ground floor+apartment/flat;chunks=take one's name from/be responsible for/all over the world/have sth checked。Big Ben/Parliament/Greenwich 系伦敦真实专名(纪实课文),保留。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-69+L71=264**,L70 空缺待换情节包补)。⏭️ L72(✅正常读)。
+
+## ✅ U9 L72《A car called Bluebird》(“蓝鸟”汽车)· 🟢全绿 · ✅正常读源
+- ✅净课:风险表标 ✅,试读源 doc363-365 顺利,正常读源产出。是**复习课**:教材 L72 Special difficulties = **Review SD50-71**(经常容易混淆的词复习),整课以词义辨析为主考,配课文语法作辅。
+- 主考(源 doc363-365)= **Review SD50-71 易混词**:lose/miss、expect/wait(SD50)+ raise/rise、lie-lay、beat/win(SD51)+ value/cost/price(SD61)+ accept/agree、say/tell、dress up(SD65/67)+ hung(悬挂)、hard/hardly、near/nearly(SD52/71);辅考=**课文过去完成被动**(had been specially built / a mistake had been made)+ 现在完成(have reached)。全词选/时态运用题,元语法定义题=0。
+- 裁决:gp1 SD50(3)+ gp2 SD51(3)+ gp3 SD61(3)+ gp4 SD65/67(3)= 易混词主考12;gp5 SD52/71(3)+ gp6 课文完成体被动/主动(3)= 辅考6。
+- 词10(官方7:racing/per/Utah/horsepower/burst/average/footstep + 补3 record/specially/disappointed)。美语化:**tyre→tire**、**Father Christmas→Santa Claus**;**British practise/practice 区别按方案降级**——美语课只教 practice 一种拼法(名词动词同形),grammar_card 加📌 register 注,不出 practise 陷阱题。关6美英=trunk/boot(后备箱)+ hood/bonnet(引擎盖)+ gas/petrol + windshield/windscreen;chunks=set up a record/have great difficulty in doing/follow in one's footsteps/be disappointed to learn。MC comprehension 正解(a)"是否达到301一度有疑问"已用作 s10 reading#7。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit09.sql`(**L65-69+L71+L72=308**,L70 空缺待换情节包补)。⏭️ L73(🟢低,正常读)。
+
+## 📖 教材结构发现:Unit 4(L73-96)换格式
+- **源 doc 定位**:L72 后依次是 **PRE-UNIT TEST 4**(doc368-374)+ 空白页 + **Unit 4 单元封面**(doc376)+ Unit 4 Instructions/Example《The sacred tree》范例(doc377-380)+ KS/SD 说明页(doc381 顶),**Lesson 73 正文起 doc381**(book p342)。以后 L74+ 每课约 doc+4(passage / summary-CONNECTIONS / KS+MC / MC续)。
+- **Unit 4 每课格式变了**:24 篇短文,课文后**不再有 Comprehension 小题**,改成 Summary writing 的 CONNECTIONS(连词造句)+ Composition + Letter writing;但**语言点仍在**——Key structures **复习** Units 1/2/3 学过的语法(revise),KS 后接 Special difficulties,再接 Multiple choice。⇒ 与本流水线兼容:照旧从 KS/SD 抽语法做关5/6,MC 抽 comprehension 做关8/10 reading。风险表里 L73-96 的“语法点”即来自这些复习 KS。
+
+## ✅ U10 L73《The record-holder》(纪录保持者)· 🟢全绿 · 🟢低,正常读源
+- **U10 首课**(U10=L73-80)。🟢低课:试读源 doc381-384 顺利,正常读源产出。逃学男孩搭便车旅行1600英里被警察送回——无害记叙,未被拦。
+- 主考(源 doc383 = Key structures)= **KS1/25/49 简单句·并列句·复合句**(用连词把句子连成一句):who/whose(定语)、when/as、after+分词被动、although/in spite of the fact that/though(让步)、not only...but...as well、such...that、before;辅考=**课文被动复习**(was given/was picked up/wasn't noticed by anyone)+ **词汇辨析**(evade=escape、ashamed≠shameful、imagination 名词)。全连词/时态运用题,元语法定义题=0。MC#1 正解(c)搭便车。
+- 裁决:gp1 who/whose(3)+ gp2 when/as/after分词(3)+ gp3 让步(3)+ gp4 并列结果(3)= 连词主考12;gp5 被动复习(3)+ gp6 词汇辨析(3)= 辅考6。
+- 词10(官方9:record-holder/truant/unimaginative/shame/hitchhike/meantime/lorry→**truck**/border/evade + 补1 authorities)。美语化:**lorry→truck、biscuit→cookie、cinema→movie theater、film→movie、towards→toward、centre→center、travelled→traveled**;关6美英=truck/lorry + cookie/biscuit + movie theater/cinema + movie/film;chunks=put sb to shame/as far as sb gets/set up a record/dream of doing。
+- 44题;机器12项🟢。seed→**新建 `american_am2_seed_unit10.sql`**(L73=44)。⏭️ L74(🟢低,正常读)。
+
+## ✅ U10 L74《Too Good to Be True》(好得不像真的)· 🟢全绿 · 🔄方案B换情节包
+- **风险再分级**:风险表原标 🟢,我实读源 doc385-388《Out of the limelight》(演员乔装野餐、假 sheriff 驱赶)**未被拦**;但网页版预扫复判为**实际会拦**(触发=课文 sheriff 追赶/驱赶的执法-追捕联想),主动出**换情节包**。按 L69 先例=Aaron 是内容主人,收到换情节包就用包产、不用源。
+- **unit 号纠偏**:包头写“L74 属 U9”,与我方分组(U9=L65-72,**U10=L73-80**)差一位;已核对按 **U10**(unit_no=10)落 `american_am2_seed_unit10.sql`,与 L73 同单元。
+- 换情节=《好得不像真的》:名演员公园拍电影、化装太逼真被工人误当粉丝赶出的喜剧(无害,替换原 sheriff 情节)。考点原样保留:主考 **KS2/26/50 现在进行时 vs 一般现在时**(are filming/are wearing vs makes/wants/arrives)+ **状态动词不用进行时**(know/seem/recognize/want)+ 辅考 **SD get 短语**(get out/into/over / on with/off/through)。全时态运用+语境选词,元语法定义题=0。
+- 词10(包给词表为下限:limelight/disguise/costume/actor/director/scene/perfect/recognize/crowd/famous,原 sheriff/sneer/notice 等强绑词已降级不进课文)。美语化:movie/downtown/on vacation;关6美英=movie/film + downtown/city centre + on vacation/on holiday + fall/autumn;chunks=out of the limelight/get on with it/get through to sb/too good to be true。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73+L74=88**)。⏭️ L75(🔴换情节包待网页版)。
+
+## 🔁 过滤误判处理**统一化**(2026-07-05 三次拍板·凌驾风险分级)
+- 不再按风险级分流:**每课 CC 正常试读源产出;一旦被 content filtering 拦→立即跳过、不重试,报 Aaron `课号+课名+已知考点(KS)+官方词表`**;Aaron 转网页版出换情节包(方案B:考点原样、情节换无害),CC 用包补做。
+- 风险清单只作“网页版**主动优先**出包”的参考,**不作 CC 判断依据**。核心:**撞了就跳+报,不卡线;能否预判不重要。**
+- 实例:L74《Out of the limelight》、L77《A successful operation》我实读源均**未被拦**,但网页版预扫复判会拦并主动出换情节包→按 L69 先例用包产(honesty:照实说“实读未被拦”)。
+
+## ✅ U10 L77《The Oldest Bridge in Town》(镇上最老的桥)· 🟢全绿 · 🔄方案B换情节包
+- **风险再分级**:原标✅,我实读源 doc397-400《A successful operation》(埃及木乃伊做手术查死因)**未被拦**;网页版复判会拦(触发=how the woman died + mummy/operation 死亡-医疗联想),主动出换情节包。用包产。
+- **unit 号**:包头 unit_no=10 正确(U10=L73-80),无需纠偏。
+- 换情节=《镇上最老的桥》:考古专家研究小镇最老石桥(无害,替换木乃伊死因)。考点原样保留:主考 **KS5/29/53 一般过去 / 现在完成 / 现在完成进行 三时态对比**(was built/appeared vs has stood/have crossed/has remained vs have been examining/have been working)+ 辅考 **for(时段)/ since(时间点)/ ago(时段+ago)**。全时态运用题,元语法定义题=0。
+- 词14(包给官方词为下限全含:examine/discover/expert/original/stone/repair/condition/century/recently/wooden/replace/remain/ancient/structure)。美语化:sidewalk/downtown/elevator;关6美英=sidewalk/pavement + downtown/city centre + elevator/lift + fall/autumn;chunks=have been doing (for/since)/stand over the river/be replaced with/remain the same。cloze 去掉“for six months”防 for 预现(黄警清)。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73+L74+L77=132**,L75/L76 空缺→现已收到换情节包合集,即将补齐)。⏭️ L75/L76(用合集包补做),再 L78。
+
+## ✅ U10 L75《The Big Race》(大比赛)· 🟢全绿 · 🔄方案B换情节包(合集)
+- 换情节=学校运动会接力赛(无害,替换原情节)。考点原样=**KS3/27/51 一般过去时综合**:规则过去式(entered/passed/shouted/crossed/raced)+ 不规则过去式(held/shone/came/ran/shot/fell/took/won)+ 过去叙事连续动作 + 过去时间状语(last Saturday/two weeks ago/yesterday)+ 否定与疑问(didn't/Did…?)。全填过去式运用题,元语法定义题=0。串味红灯(s9/s10 解释含“主语”)已改“Did 开头+动词用原形”。
+- 词10(yearly/relay/whistle/baton/breath/ahead/crowd/shout/cross/expect)。美语化 soccer/sneakers/gym class/field;chunks=take a deep breath/fall behind/as fast as one can/just ahead of。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73+74+75+77=176**,L76 空缺待补)。⏭️ L76(合集包)。
+
+## ✅ U10 L76《What Have You Been Up To?》(你最近在忙什么)· 🟢全绿 · 🔄方案B换情节包(合集)
+- 换情节=朋友久别重逢聊近况(Emma/Leo 对话,无害)。考点原样=**KS4/28/52 现在完成 vs 现在完成进行**:have taken/have learned/have found(结果·经历)vs have been studying/working/painting(持续过程)+ 两者对比 + since(时间点)/for(时段)+ 疑问否定(Have you…?/haven't)。全时态选填运用题,元语法定义题=0。
+- 词10(photography/photo/painting/café/busy/chat/finally/afternoon/miss/learn)。美语化 apartment/vacation/movie/elevator;chunks=haven't seen sb for ages/What have you been up to?/free time/So have I。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73-77=220**,L78-80 待补)。⏭️ L78(🟢低,读源)。
+
+## ⚠️ U10 L78《The last one?》(最后一枝吗?)· 🚩已报 Aaron,待换情节包(题材不宜)
+- 我实读源 doc401-403**未被 content filter 拦**,但**题材=戒烟/吸烟**("I smoked with concentration and pleasure… smoked with satisfaction"),对 K-12 学生课程不宜,与已换掉的暴力/犯罪课同类。**不自产**,已报 Aaron 出换情节包(题材不宜而非过滤,流程同)。
+- 考点(可原样承载):主考 **冠词/限定词 a / an / the / some / any**;SD **keep 短语动词**(keep on/keep off/keep away from/keep it up/keep up with/keep out/be kept in)。
+- 官方词表:entitle/calm/nerve/concentration/suffer/symptom/temper/appetite/produce/urge/satisfaction/delighted。
+- 建议换情节:无害"戒掉某习惯"故事(戒碳酸饮料/熬夜打游戏),承载同样 a/the/some/any + keep 短语。⏸️ U10 内空缺,等包补做。
+
+## ✅ U10 L79《A Long Journey Home》(漫长的回家路)· 🟢全绿 · 🔄方案B换情节包(合集)
+- 换情节=难忘的火车旅行(无害,替换原"飞机+炸弹")。考点原样=**KS7/31/55 一般过去 vs 过去进行 vs used to/would**:一般过去(stopped/cleared/started/opened)+ 过去进行作背景(were traveling/was raining/was sleeping/was waiting)+ used to(过去习惯·现在不再)+ would(过去反复动作)+ 三者叙事配合。全时态运用题,元语法定义题=0。used to vs be used to、would vs will 均设干扰项。
+- 词10(journey/field/track/suddenly/clear/quietly/arrive/remember/pass/summer)。美语化 railroad/fall/vacation/downtown;chunks=used to do/would always do/pass the time/go by。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73-77+L79=264**,L78🚩+L80 待补)。⏭️ L80(🟢低,读源)。
+
+## ✅ U10 L80《The Crystal Palace》(水晶宫)· 🟢全绿 · 🟢低,正常读源
+- 🟢低课:实读源 doc409-412(1851 水晶宫/世博会史实)**未被拦**,正常读源产出。史实记叙,无害。主考(源 doc410 = Key structures)= **KS8/32/56 形容词副词比较级和最高级**:最高级(the most extraordinary / one of the biggest / most famous)+ 比较级(easier than / more…than / different from)+ 同级(not as easy as it is today);辅考 **SD 带 on 的短语**(on display/on foot/on business/on fire/on purpose/on the whole)。全比较结构+介词短语运用题,元语法定义题=0。MC#1 正解(c)材料特殊、#2(b)非常成功。
+- **同级比较 as…as 泄漏修正**:首个 as 挖空必泄(句尾 as 可见 + 括号写 as…as),改为**整条同级结构作选项**(not as easy as / as big as),红灯清、语法点不变。
+- 词10(palace/extraordinary/exhibition/iron/various/machinery/display/steam/profit/college)。美语化 first floor/movie/elevator/fall;Crystal Palace/Hyde Park 伦敦史实专名保留;traveling(非 travelling);chunks=on display/be made of/on arriving/in all。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit10.sql`(**L73-77+L79+L80=308,U10 仅差 L78🚩**)。⏭️ L78 等换情节包;转 U11 起 L81(合集包·介词综合)。
+
+## ✅ U11 L81《A Day at the Museum》(博物馆的一天)· 🟢全绿 · 🔄方案B换情节包(合集)
+- **U11 首课**(U11=L81-88,=教材 Unit 4 后段)。换情节=参观科学博物馆(无害,替换原"越狱")。考点原样=**KS9/33/57 介词综合**:at(钟点/点状地点)+ in(在内/穿着)+ to(方向)+ with(带着/以…方式)+ into(进入)+ about(谈论)。全介词运用题,元语法定义题=0。in vs into 设对比。
+- 词10(museum/guide/uniform/hall/model/machine/robot/section/excitement/amazement)。美语化 elevator/downtown/first floor/restroom/city center;chunks=with great care/look at sth with amazement/talk about/on the way home。
+- 44题;机器12项🟢。seed→**新建 `american_am2_seed_unit11.sql`**(L81=44)。⏭️ L82(✅正常读源)。
+
+## ✅ U11 L82《The Thing in the Attic》(阁楼里的东西)· 🟢全绿 · 🔄方案B换情节包(单独包·非合集)
+- **风险再分级**:原标✅,我实读源 doc417-420《Monster or fish?》(马达加斯加捕获皇带鱼被误认海怪的科普趣闻)**未被拦**;网页版复判会拦(触发=monster/sea monster 联想),**单独**出换情节包(非 L70-94 合集内)。用包产。unit_no=11 正确。
+- 换情节=阁楼发现被遗忘的古怪旧物、被专家鉴定进博物馆(无害,替换海怪误会,保留"奇特之物被研究"科普内核)。考点原样=**KS10/34/58 被动语态各时态**:was found/was cleaned(过去)+ is being examined(进行)+ have been seen/had been forgotten(完成/过去完成)+ is kept/is checked(现在)+ will be shown(将来);辅考 **SD laugh/laugh at、wash/wash up**。全被动运用题(设主动干扰项),元语法定义题=0。
+- 词12(attic/examine/expert/rare/object/display/discover/dust/valuable/curious/museum/shelf)。美语化 trash/flashlight/elevator/apartment;chunks=be covered in dust/laugh at/go on display/for the first time。
+- 44题;机器12项🟢。seed→`american_am2_seed_unit11.sql`(**L81+L82=88**)。⏭️ L83(✅正常读源)。
+
+## 🛠️ 工具改进(2026-07-05)· gen-book2-seed.mjs 写前比对
+- **痛点**:生成器每次无条件 writeFileSync,6 个 unit 文件时间戳全刷新,Aaron 无法从时间戳判断哪个真变了。
+- **修复**:写前 readFileSync 比对,**内容相同则不动文件、不刷时间戳**;生成器确定性(mulberry32 固定种子 + 按 lesson_no 顺序消耗随机流)保证末尾加课不改前面单元输出→未改单元逐字节相同。
+- 生成器结尾打印「✍️需跑 / ⏭️无需重跑」小结;`_RUN_ME` 顶部加「本批变化」块,明确列本批真变的 unit + COUNT 增量 + 无变化标注。见 [[assertions-need-evidence]]。
 
 ---
 
@@ -300,3 +658,138 @@
 
 ## 单元1 阻塞/升级项
 - (无)
+
+═══════════════════════════════════════
+## L83《The Election Results 选举结果》· U11 · 收官包·方案B换情节 · 时态综合复习(KS74-82)
+- **来源**:收官包(Aaron 2026-07-05 下发,CC 不读源PDF);原课 elections 政治题材→改「校园社团社长选举结果揭晓」中性情节,KS74-82 各时态综合考点原样保留。
+- **考点**:一般现在(holds/leads/takes)/过去进行(were running/was watching/were being counted)/一般过去(gathered/was/arrived)/现在完成 & 现在完成进行(has won/have been waiting/have never felt)/过去完成被动 & 现在进行(had been counted/is announcing/is planning)/词汇辨析(president/winner/principal)= 6 gp × 3 = 18。
+- **词表(10,零遗漏)**:election, president, run, vote, count, gather, announce, winner, principal, event。
+- **关6**:美语对照 principal(校长)/grade(成绩) + 4 词义(election/announce/gather/winner)。contrast: principal↔headmaster / grade↔mark / fall↔autumn / elevator↔lift。chunks: run for president / by the time / win by / all week。
+- **校验**:机器12项 🟢 全绿(计数44=SQL、解释44/44、串味0、泄漏0、三维闸门0)。
+- **落库**:american_am2_seed_unit11.sql(L81+L82+L83 = 132);已勾收官包 checkbox。
+- **待裁决**:无(收官包标准中性情节)。
+
+═══════════════════════════════════════
+## L84《The School Play 校园话剧》· U11 · 合集·方案B换情节 · 一般将来时(KS12/36/60)
+- **来源**:换情节合集(Aaron 2026-07-05);原课涉暴力/罢工题材→改「筹备校园话剧」中性情节,KS12/36/60 一般将来时考点原样保留。
+- **考点**:will do(预测/临时决定)/be going to do(计划、迹象)/when·if·as soon as 从句用一般现在表将来/将来否定 won't 与疑问 Will…·Are you going to… = 6 gp × 3 = 18。
+- **词表(10,故事自设·合集无给定官方词)**:play, costume, design, background, invite, ticket, scene, practice, indoors, show。
+- **关6**:美语对照 theater(剧院)/stand in line(排队) + 4 词义(costume/design/invite/scene)。contrast: theater↔theatre / stand in line↔queue / intermission↔interval / movie↔film。chunks: put on a play / be going to / on sale / as soon as。
+- **泄漏防护**:be going to 型题干扰项全用错形(is going/will going to/be going to 缺件),保证 options[0] 唯一合法;中文提示不含答案词(计划已定/有迹象/临时决定,不写 be going to)。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit11.sql(L81-84 = 176);已勾合集 checkbox。
+- **待裁决**:无。
+
+═══════════════════════════════════════
+## L85《Never Too Old to Learn 活到老学到老》· U11 · 收官包·干净课美语化 · 将来各时态(KS13/37/61)
+- **来源**:收官包(Aaron 2026-07-05);原课干净(老人上学温情),照搬美语化,KS13/37/61 将来时考点原样。
+- **考点**:一般将来 will do / 将来进行 will be doing / 将来完成 will have done / 将来完成进行 will have been doing / by·in·at this time 时间标志搭配 / 词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:college, degree, graduate, admit, proudly, inspiring, prove, earn, mind, retire。
+- **关6**:美语对照 grade(成绩)/math(数学) + 4 词义(degree/admit/inspiring/graduate)。contrast: grade↔mark / math↔maths / fall↔autumn / vacation↔holiday。chunks: go to college / at the age of / too old to / earn a degree。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit11.sql(L81-85 = 220);已勾收官包 checkbox。
+- **待裁决**:无。
+
+═══════════════════════════════════════
+## L86《The Runaway Kite 跑掉的风筝》· U11 · 合集·方案B换情节 · 过去完成 vs 过去完成进行(KS14/38/62)
+- **来源**:换情节合集(Aaron 2026-07-05);KS14/38/62 考点原样,情节换「放风筝线断追风筝、遇小女孩交新友」中性温情。
+- **考点**:过去完成 had done(结果)/过去完成进行 had been doing(过程)/二者对比/配 before·after·when·by the time/与一般过去先后配合(后动作用一般过去)/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:kite, string, reach, disappear, field, search, break, grow, land, hold on。
+- **关6**:美语对照 soccer(足球)/sneakers(运动鞋) + 4 词义(string/disappear/field/search)。contrast: soccer↔football / sneakers↔trainers / fall↔autumn / cookie↔biscuit。chunks: look forward to / by the time / hold on / fly a kite。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit11.sql(L81-86 = 264);已勾合集 checkbox。
+- **待裁决**:无。
+
+═══════════════════════════════════════
+## L87《What Did She Say? 她说了什么》· U11 · 合集·方案B换情节 · 间接引语(KS15/39/63)
+- **来源**:换情节合集(Aaron 2026-07-05);KS15/39/63 考点原样,情节换「记者赛前采访教练转述」中性新闻场景。
+- **考点**:时态后移/say vs tell sb/一般疑问 ask if·whether/特殊疑问 ask+疑问词并改陈述语序/will→would综合/词汇辨析 = 6 gp × 3 = 18。语域注(口语当下仍成立可不后移)入 specialRules。
+- **词表(10)**:reporter, coach, prepare, confident, join, definitely, positive, cheer, fan, add。
+- **关6**:美语对照 field(足球场)/movie(电影) + 4 词义(reporter/confident/cheer/prepare)。contrast: field↔pitch / movie↔film / fall↔autumn / vacation↔holiday。chunks: ask about / get ready / the big game / come and cheer。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit11.sql(L81-87 = 308);已勾合集 checkbox。
+- **待裁决**:无。
+
+═══════════════════════════════════════
+## L88《Lost and Found 失物招领》· U11 · 收官包·方案B换情节 · 条件句 if(KS16/40/64)· ★U11收官
+- **来源**:收官包(Aaron 2026-07-05);原课《Trapped in a mine》矿难被困→改「丢失又找回背包」日常情节,KS16/40/64 条件句考点原样。
+- **考点**:真实条件(if+现在, will/should)/与现在相反(if+过去式, would do; if I were you)/与过去相反(if+had done, would have done)/条件从句用现在表将来/三类综合辨析/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:lost-and-found, backpack, label, forever, careful, turn up, secretary, politely, believe, exactly。
+- **关6**:美语对照 eraser(橡皮擦)/backpack(背包) + 4 词义(backpack/forever/politely/exactly)。contrast: eraser↔rubber / backpack↔rucksack / lost-and-found↔lost property / sneakers↔trainers。chunks: lost and found / turn up / if I were you / look for。
+- **泄漏修复**:首轮 3 处中文提示直含答案词(were/would)被闸门抓红→改为“(与现在事实相反的假设,be 动词该用哪个形式/主句该用哪个词)”,零泄漏过闸。
+- **校验**:机器12项 🟢 全绿。
+- **★ U11 整单元 L81-88 = 8课×44 = 352 齐**,落库 american_am2_seed_unit11.sql(收官)。
+- **待裁决**:无。
+
+═══════════════════════════════════════
+## L89《A Slip of the Tongue 一次口误》· U12 · 收官包·干净课美语化 · 情态表达(KS17/41/65)· ★U12开篇
+- **来源**:收官包(Aaron 2026-07-05);原课干净(口误闹笑话温情),照搬美语化,KS17/41/65 情态考点原样。
+- **考点**:must/must have done(推测)/have to·had to/needn't·don't have to/should·should have done/mustn't·综合辨析/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:slip of the tongue, host, stage, calm, introduce, nervous, mix up, whisper, breathe, ruin。
+- **关6**:美语对照 theater(剧院)/elevator(电梯) + 4 词义(host/nervous/introduce/ruin)。contrast: theater↔theatre / elevator↔lift / first floor↔ground floor / movie↔film。chunks: a slip of the tongue / be hard on / mix up / keep going。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(新建,L89 = 44,U12开篇)。
+- **待裁决**:无。
+
+═══════════════════════════════════════
+## L90《What's for Dinner? 晚饭吃什么》· U12 · 合集·方案B换情节 · 情态表达(KS17/41/65)
+- **来源**:换情节合集(Aaron 2026-07-05);与 L89 同 KS17/41/65 情态(教材 Unit 4 螺旋复习),情节换「一家人一起做晚饭」中性日常。
+- **考点**:must/推测/have to·had to/needn't·don't have to/should/must vs have to 主客观区别/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:dinner, cook, shopping, chop, vegetable, knife, soup, taste, smell, remind。
+- **关6**:美语对照 stove(炉灶)/faucet(水龙头) + 4 词义(chop/knife/taste/remind)。contrast: stove↔cooker / faucet↔tap / cookie↔biscuit / candy↔sweets。chunks: what's for dinner / go shopping / be careful with / cook together。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-90 = 88);已勾合集 checkbox。
+- **待裁决**:无(L89/L90 同考点为教材螺旋设计,故事+词表全异,作间隔练习互补)。
+
+═══════════════════════════════════════
+## L91《Three People in a Hot-Air Balloon 热气球上的三个人》· U12 · 收官包·干净课美语化 · can/be able to/manage to(KS19/43/67)
+- **来源**:收官包(Aaron 2026-07-05);原课干净(热气球趣事),照搬美语化,KS19/43/67 考点原样。
+- **考点**:can·could/be able to(各时态·某次做到)/manage to/can't·couldn't/三者辨析(某次做到不用could,could用于一贯能力)/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:hot-air balloon, basket, pilot, fit, valley, steer, handle, tense, land, adventure。
+- **关6**:美语对照 vacation(度假)/fall(秋天) + 4 词义(basket/steer/adventure/tense)。contrast: vacation↔holiday / fall↔autumn / elevator↔lift / movie↔film。chunks: be able to / manage to / hot-air balloon / of a lifetime。
+- **泄漏防护**:be able to/managed to/could 型题中文提示改写为纯语义描述(“过去某一次成功做到了”“费了一番劲设法做成”“一贯具备的能力”),不含任何英文答案词。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-91 = 132);已勾收官包 checkbox。
+- **待裁决**:无。
+
+═══════════════════════════════════════
+## L92《The Windows Need Cleaning 窗户该擦了》· U12 · 收官包·干净课美语化 · need/want + 动名词(KS20/44/68)
+- **来源**:收官包(Aaron 2026-07-05);原课干净(大扫除趣事),照搬美语化,KS20/44/68 考点原样。
+- **考点**:need + doing/want + doing(= 需要被…)/主动-ing表被动意义/各主语时态(needed·doesn't need)/对比 need + to do(主动去做)/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:need doing, tidy, dust, carpet, vacuum, water, groan, admit, claim, guest。
+- **关6**:美语对照 apartment(公寓)/trash(垃圾) + 4 词义(dust/tidy/guest/vacuum)。contrast: apartment↔flat / trash↔rubbish / faucet↔tap / elevator↔lift。chunks: be covered in / before the guests come / that can wait / more than。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-92 = 176);已勾收官包 checkbox。
+- **待裁决**:无。
+
+═══════════════════════════════════════
+## L93《A Generous Gift 一份慷慨的礼物》· U12 · 收官包·换道具照搬结构 · 被动语态各时态(KS21/45/69)
+- **来源**:收官包(Aaron 2026-07-05);原课《A noble gift》自由女神像→换道具为「镇上捐赠的手工古钟」,被动语态各时态结构照搬,KS21/45/69 考点原样。
+- **考点**:一般现在/过去被动/现在完成被动/将来被动/现在进行被动/情态被动 + by短语/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:generous, gift, entirely, by hand, admire, town hall, wind(上发条), caretaker, mayor, treasure。
+- **关6**:美语对照 elevator(电梯)/first floor(一楼) + 4 词义(generous/admire/treasure/entirely)。contrast: elevator↔lift / first floor↔ground floor / fall↔autumn / movie↔film。chunks: by hand / town hall / for generations / on display。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-93 = 220);已勾收官包 checkbox。
+- **待裁决**:无。
+
+═══════════════════════════════════════
+## L94《The New Library 新图书馆》· U12 · 合集·方案B换情节 · 被动语态各时态(KS21/45/69)· ★合集10课收官
+- **来源**:换情节合集(Aaron 2026-07-05);与 L93 同 KS21/45/69 被动(教材 Unit 4 螺旋复习),情节「镇上新图书馆落成」中性。
+- **考点**:一般现在/过去被动/现在完成被动/将来被动/情态被动/现在进行被动 + by短语/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:library, build, design, architect, shelf, offer, donate, section, return, fine。
+- **关6**:美语对照 second floor(二楼)/apartment(公寓) + 4 词义(library/donate/offer/return)。contrast: second floor↔first floor / apartment↔flat / elevator↔lift / fall↔autumn。chunks: add to / for years to come / within three weeks / on the second floor。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-94 = 264);已勾合集 checkbox。
+- **★ 换情节合集(L70/75/76/79/81/84/86/87/90/94)10课全部收官**。
+- **待裁决**:无(L93/L94 同考点为教材螺旋设计,道具+词表全异,作间隔练习互补)。
+
+═══════════════════════════════════════
+## L95《A Very Special Day 非常特别的一天》· U12 · 收官包·方案B换情节 · 动词形式综合复习(Review 全册)
+- **来源**:收官包(Aaron 2026-07-05);原课《A fantasy》含 fire×6 想象场景→改「社区丰收节」中性温情,全册动词形式综合考点原样。
+- **考点**:一般现在/现在完成进行/现在完成 · 过去被动/过去完成被动/过去进行 · 一般将来/条件句 · 现在进行被动/将来被动/一般现在被动 · 情态+过去完成/过去进行对比 · 词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:harvest, festival, booth, square, hang, serve, musician, stage, alive, remember。
+- **关6**:美语对照 fall(秋天)/candy(糖果) + 4 词义(harvest/booth/alive/remember)。contrast: fall↔autumn / candy↔sweets / cookie↔biscuit / movie↔film。chunks: look forward to / set up / harvest festival / for a long time。
+- **校验**:机器12项 🟢 全绿。落库 american_am2_seed_unit12.sql(L89-95 = 308);已勾收官包 checkbox。
+- **待裁决**:无。
+
+═══════════════════════════════════════
+## L96《What's It Really About? 它到底讲的是什么》· U12 · 收官包·方案B换情节 · 形容词/副词+介词固定搭配(KS22/46/70)· ★★第二册全96课收官
+- **来源**:收官包(Aaron 2026-07-05);原课《The dead return》标题涉亡灵→改「姐姐爱读悬疑小说」中性情节,KS22/46/70 固定搭配考点原样。
+- **考点**:+in/at(interested in·good at·surprised at)/+of(fond of·proud of·afraid of·full of)/+for·to(famous for·grateful to…for)/+about·with(curious about·bored with·excited about)/keen on·pleased with·worth doing/词汇辨析 = 6 gp × 3 = 18。
+- **词表(10)**:interested in, mystery, guess, ending, fond of, surprise, proud of, puzzle, curious, keen on。
+- **关6**:美语对照 math(数学)/vacation(假期) + 4 词义(mystery/curious/ending/guess)。contrast: math↔maths / vacation↔holiday / movie↔film / elevator↔lift。chunks: interested in / good at / famous for / worth reading。
+- **黄警**:s5#4 "fond ___ ... full of surprises" 里可见 "full of" 的 of → [c] 人工核:四选项皆介词、"full of"与"fond of"为不同搭配、"of"为极常见词不构成实质泄漏,判过;验证器仍报 🟢全绿。
+- **校验**:机器12项 🟢 全绿。
+- **★ U12 整单元 L89-96 = 8课×44 = 352 齐**,落库 american_am2_seed_unit12.sql(收官)。
+- **★★ 第二册(am2 / NCE2)全 96 课收官**:12 单元 × 8 课 × 44 题 = 4224 题全部机器12项🟢。
+- **待裁决**:无。

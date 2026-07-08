@@ -1,0 +1,131 @@
+{
+  "id": "am2_l81",
+  "unit_no": 11,
+  "lesson_no": 81,
+  "title_en": "A Day at the Museum",
+  "title_cn": "博物馆的一天",
+  "grammar_focus": "KS9/33/57 介词综合(教材 L81 Key structures,方案B换情节包):at(时间点/地点一点:at ten o'clock / at the door / at noon)、in(在…里面/穿着:in the city center / in a uniform / in the afternoon)、to(方向:go to / return to)、with(伴随/工具/方式:with our tickets / with great care / with surprising speed)、into(进入:led us into / walked into)",
+  "scene": "周六,我们去了市中心的科学博物馆。我们十点到达,拿着票在门口等候。一位穿蓝色制服的讲解员把我们带进了第一个大厅。她非常小心地给我们展示了各种旧机器的模型。在一个房间里,一个机器人以惊人的速度移动着。我们站在前面,惊讶地看着它。中午,我们坐在咖啡馆里,聊着看到的东西。下午,我们兴奋地走进了太空展区。我们在博物馆一直待到五点闭馆。在回家的路上,我们商量着要和朋友们再来一次。",
+  "grammar_card": {
+    "title": "KS9/33/57 介词综合 at / in / to / with / into",
+    "intro": "常用介词各有分工:①at——具体时间点或一个“点”状的地点(at ten o'clock / at the door / at noon);②in——在某个空间“里面”或“穿着”(in the city center / in a blue uniform / in the afternoon);③to——朝某处“去、到”的方向(go to / return to);④with——“带着、用、以某种方式”(with our tickets / with great care / with surprising speed);⑤into——从外“进入”里面(led us into the hall / walked into the section)。",
+    "table": {
+      "headers": ["介词", "用法与例子"],
+      "rows": [
+        ["at", "at ten o'clock / at the door / at noon"],
+        ["in", "in the city center / in a uniform / in the afternoon"],
+        ["to", "went to the museum / returned to the entrance"],
+        ["with", "with our tickets / with great care / with speed"],
+        ["into", "led us into the hall / walked into the section"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语里“电梯”说 elevator(英式 lift)、“市中心”说 downtown(英式 city centre)、“洗手间”说 restroom(英式 toilet);本课已按美语写。", "mark": "elevator/downtown" },
+      { "rule": "in 表“在里面/静止的位置”,into 表“从外到里的动作”:be in the hall(在大厅里)vs walk into the hall(走进大厅)。别混。", "mark": "in vs into" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Where did they go on Saturday?",
+    "options": ["To the science museum in the city center", "To a soccer game", "To the beach", "To a movie theater"],
+    "answer_index": 0
+  },
+  "passage": "On Saturday we went to the science museum in the city center. We arrived at ten o'clock and waited at the door with our tickets. A guide in a blue uniform led us into the first hall. With great care, she showed us models of old machines. In one room, a robot moved with surprising speed. We stood at the front and looked at it with amazement. At noon we sat in the café and talked about what we had seen. In the afternoon we walked into the space section with excitement. We stayed at the museum until it closed at five. On the way home, we talked about coming back with our friends.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "On Saturday we went to the science museum in the city center. We arrived at ten o'clock and waited at the door with our tickets.", "text_cn": "周六,我们去了市中心的科学博物馆。我们十点到达,拿着票在门口等候。" },
+    { "seq": 2, "speaker": null, "text_en": "A guide in a blue uniform led us into the first hall. With great care, she showed us models of old machines.", "text_cn": "一位穿蓝色制服的讲解员把我们带进了第一个大厅。她非常小心地给我们展示了各种旧机器的模型。" },
+    { "seq": 3, "speaker": null, "text_en": "In one room, a robot moved with surprising speed. We stood at the front and looked at it with amazement.", "text_cn": "在一个房间里,一个机器人以惊人的速度移动着。我们站在前面,惊讶地看着它。" },
+    { "seq": 4, "speaker": null, "text_en": "At noon we sat in the café and talked about what we had seen. In the afternoon we walked into the space section with excitement.", "text_cn": "中午,我们坐在咖啡馆里,聊着看到的东西。下午,我们兴奋地走进了太空展区。" },
+    { "seq": 5, "speaker": null, "text_en": "We stayed at the museum until it closed at five. On the way home, we talked about coming back with our friends.", "text_cn": "我们在博物馆一直待到五点闭馆。在回家的路上,我们商量着要和朋友们再来一次。" }
+  ],
+  "words": [
+    { "word": "museum", "ipa": "/mjuˈziːəm/", "pos": "n", "meaning_cn": "博物馆", "example": "the science museum" },
+    { "word": "guide", "ipa": "/ɡaɪd/", "pos": "n", "meaning_cn": "讲解员,导游", "example": "A guide in a blue uniform" },
+    { "word": "uniform", "ipa": "/ˈjuːnɪfɔːrm/", "pos": "n", "meaning_cn": "制服", "example": "a blue uniform" },
+    { "word": "hall", "ipa": "/hɔːl/", "pos": "n", "meaning_cn": "大厅", "example": "led us into the first hall" },
+    { "word": "model", "ipa": "/ˈmɑːdl/", "pos": "n", "meaning_cn": "模型", "example": "models of old machines" },
+    { "word": "machine", "ipa": "/məˈʃiːn/", "pos": "n", "meaning_cn": "机器", "example": "models of old machines" },
+    { "word": "robot", "ipa": "/ˈroʊbɑːt/", "pos": "n", "meaning_cn": "机器人", "example": "a robot moved with surprising speed" },
+    { "word": "section", "ipa": "/ˈsekʃn/", "pos": "n", "meaning_cn": "展区,部分", "example": "the space section" },
+    { "word": "excitement", "ipa": "/ɪkˈsaɪtmənt/", "pos": "n", "meaning_cn": "兴奋,激动", "example": "walked into the space section with excitement" },
+    { "word": "amazement", "ipa": "/əˈmeɪzmənt/", "pos": "n", "meaning_cn": "惊讶,惊奇", "example": "looked at it with amazement" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "介词 at(时间点 / 地点一点)" },
+    { "gp": "gp2", "name": "介词 in(在…里面 / 穿着)" },
+    { "gp": "gp3", "name": "介词 to(方向:去、到)" },
+    { "gp": "gp4", "name": "介词 with(带着 / 用 / 以某方式)" },
+    { "gp": "gp5", "name": "介词 into / about(进入 / 谈论)" },
+    { "gp": "gp6", "name": "词汇辨析(guide / section / amazement)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"We arrived ___ ten o'clock.\"(在几点钟,用哪个介词)", "stem_cn": "我们十点到达。", "options": ["at", "in", "on", "to"] },
+    { "gp": "gp1", "stem": "\"We waited ___ the door with our tickets.\"(在门口这个“点”,用哪个介词)", "stem_cn": "我们拿着票在门口等候。", "options": ["at", "in", "into", "to"] },
+    { "gp": "gp1", "stem": "\"___ noon we sat in the café.\"(在中午,用哪个介词)", "stem_cn": "中午我们坐在咖啡馆里。", "options": ["At", "In", "On", "To"] },
+    { "gp": "gp2", "stem": "\"We went to the science museum ___ the city center.\"(在市中心里面,用哪个介词)", "stem_cn": "我们去了市中心的科学博物馆。", "options": ["in", "at", "on", "to"] },
+    { "gp": "gp2", "stem": "\"A guide ___ a blue uniform showed us around.\"(表“穿着”,用哪个介词)", "stem_cn": "一位穿蓝色制服的讲解员带我们参观。", "options": ["in", "on", "with", "at"] },
+    { "gp": "gp2", "stem": "\"___ the afternoon we visited the space section.\"(在下午,用哪个介词)", "stem_cn": "下午我们参观了太空展区。", "options": ["In", "At", "On", "To"] },
+    { "gp": "gp3", "stem": "\"On Saturday we went ___ the science museum.\"(去某地、表方向,用哪个介词)", "stem_cn": "周六我们去了科学博物馆。", "options": ["to", "at", "in", "into"] },
+    { "gp": "gp3", "stem": "\"We took the elevator ___ the top floor.\"(到某层,用哪个介词)", "stem_cn": "我们坐电梯到顶楼。", "options": ["to", "at", "in", "into"] },
+    { "gp": "gp3", "stem": "\"After lunch we returned ___ the entrance.\"(回到某处,用哪个介词)", "stem_cn": "午饭后我们回到了入口。", "options": ["to", "at", "in", "into"] },
+    { "gp": "gp4", "stem": "\"We waited at the door ___ our tickets.\"(表“带着”,用哪个介词)", "stem_cn": "我们拿着票在门口等候。", "options": ["with", "by", "at", "in"] },
+    { "gp": "gp4", "stem": "\"She showed us the models ___ great care.\"(表“以…方式、非常小心地”,用哪个介词)", "stem_cn": "她非常小心地给我们看模型。", "options": ["with", "in", "by", "at"] },
+    { "gp": "gp4", "stem": "\"A robot moved ___ surprising speed.\"(以某种速度,用哪个介词)", "stem_cn": "一个机器人以惊人的速度移动。", "options": ["with", "in", "by", "at"] },
+    { "gp": "gp5", "stem": "\"A guide led us ___ the first hall.\"(表“进入(某空间)”,用哪个介词)", "stem_cn": "一位讲解员把我们带进了第一个大厅。", "options": ["into", "at", "on", "of"] },
+    { "gp": "gp5", "stem": "\"In the afternoon we walked ___ the space section.\"(表“走进(某区域)”,用哪个介词)", "stem_cn": "下午我们走进了太空展区。", "options": ["into", "at", "on", "to"] },
+    { "gp": "gp5", "stem": "\"We sat in the café and talked ___ what we had seen.\"(表“谈论(某事)”,用哪个介词)", "stem_cn": "我们坐在咖啡馆里,聊着看到的东西。", "options": ["about", "at", "into", "with"] },
+    { "gp": "gp6", "stem": "\"A ___ in a blue uniform showed us around.\"(讲解员、导游用哪个词)", "stem_cn": "一位穿蓝制服的讲解员带我们参观。", "options": ["guide", "guest", "driver", "doctor"] },
+    { "gp": "gp6", "stem": "\"In the afternoon we walked into the space ___.\"(展区、部分用哪个词)", "stem_cn": "下午我们走进了太空展区。", "options": ["section", "ticket", "uniform", "model"] },
+    { "gp": "gp6", "stem": "\"We looked at the robot with ___.\"(惊讶用哪个词)", "stem_cn": "我们惊讶地看着那个机器人。", "options": ["amazement", "boredom", "anger", "fear"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"电梯\"常说:", "options": ["elevator", "lift", "up-box", "rising-room"] },
+    { "stem": "美语里\"市中心\"常说:", "options": ["downtown", "city centre", "town-middle", "central-city"] },
+    { "stem": "museum 的意思是:", "options": ["博物馆", "图书馆", "剧院", "车站"] },
+    { "stem": "guide 的意思是:", "options": ["讲解员,导游", "司机", "医生", "老师"] },
+    { "stem": "uniform 的意思是:", "options": ["制服", "帽子", "手套", "鞋子"] },
+    { "stem": "amazement 的意思是:", "options": ["惊讶,惊奇", "无聊", "愤怒", "疲惫"] }
+  ],
+  "contrast": [
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift" },
+    { "us": "downtown", "uk": "city centre", "note_cn": "市中心;美语 downtown,英式 city centre" },
+    { "us": "first floor", "uk": "ground floor", "note_cn": "一楼;美语 first floor,英式 ground floor" },
+    { "us": "restroom", "uk": "toilet", "note_cn": "洗手间;美语 restroom,英式 toilet" }
+  ],
+  "chunks": [
+    { "us": "with great care", "ipa": "/wɪð ɡreɪt ker/", "example1": "She showed us the models with great care.", "example1_cn": "她非常小心地给我们看模型。", "example2": "Handle the old book with great care.", "example2_cn": "非常小心地拿那本旧书。" },
+    { "us": "look at sth with amazement", "ipa": "/lʊk æt wɪð əˈmeɪzmənt/", "example1": "We looked at the robot with amazement.", "example1_cn": "我们惊讶地看着那个机器人。", "example2": "The children looked at the fireworks with amazement.", "example2_cn": "孩子们惊讶地看着烟花。" },
+    { "us": "talk about", "ipa": "/tɔːk əˈbaʊt/", "example1": "We talked about what we had seen.", "example1_cn": "我们聊着看到的东西。", "example2": "Let's talk about the plan tomorrow.", "example2_cn": "咱们明天再谈这个计划。" },
+    { "us": "on the way home", "ipa": "/ɑːn ðə weɪ hoʊm/", "example1": "On the way home, we talked about coming back.", "example1_cn": "回家的路上,我们商量着再来一次。", "example2": "I bought some fruit on the way home.", "example2_cn": "回家路上我买了些水果。" }
+  ],
+  "stage7_cloze": {
+    "context": "On Saturday we went ___1___ the science museum ___2___ the city center. A guide ___3___ a blue uniform led us into the first hall. We looked at the robots ___4___ great amazement.",
+    "blanks": [
+      { "blank_no": 1, "options": ["to", "at", "in", "into"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["in", "at", "to", "on"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["in", "with", "at", "on"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["with", "by", "at", "in"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where did they go on Saturday?", "options": ["To the science museum in the city center", "To the beach", "To a concert", "To a soccer field"] },
+    { "stem": "Who led them into the first hall?", "options": ["A guide in a blue uniform", "A police officer", "The museum director", "A robot"] },
+    { "stem": "How long did they stay at the museum?", "options": ["Until it closed at five", "For only ten minutes", "Until noon", "All night"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我们十点在门口等着\"(at 表钟点和“点”状地点):", "options": ["We waited at the door at ten o'clock.", "We waited in the door in ten o'clock.", "We waited on the door on ten o'clock.", "We waited to the door to ten o'clock."] },
+    { "stem": "你想说\"一位讲解员把我们带进了大厅\"(into 表“从外进入里面”):", "options": ["A guide led us into the hall.", "A guide led us at the hall.", "A guide led us on the hall.", "A guide led us with the hall."] },
+    { "stem": "你想说\"我们惊讶地看着那个机器人\"(with amazement 表方式):", "options": ["We looked at the robot with amazement.", "We looked at the robot in amazement by.", "We looked at the robot at amazement.", "We looked at the robot of amazement."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "museum 的意思是:", "options": ["博物馆", "图书馆", "剧院", "车站"] },
+    { "kind": "vocab", "stem": "amazement 的意思是:", "options": ["惊讶,惊奇", "无聊", "愤怒", "疲惫"] },
+    { "kind": "grammar", "stem": "\"We arrived ___ ten o'clock.\"(在几点钟,用哪个介词)", "stem_cn": "我们十点到达。", "options": ["at", "in", "on", "to"] },
+    { "kind": "grammar", "stem": "\"A guide led us ___ the hall.\"(表“进入里面”,用哪个介词)", "stem_cn": "一位讲解员把我们带进了大厅。", "options": ["into", "at", "on", "of"] },
+    { "kind": "scenario", "stem": "\"with great care\" 的意思是:", "options": ["非常小心地", "毫不在意地", "很快地", "很大声地"] },
+    { "kind": "scenario", "stem": "\"talk about\" 的意思是:", "options": ["谈论、议论", "走开", "沉默不语", "大声争吵"] },
+    { "kind": "reading", "stem": "What did they do at noon?", "options": ["They sat in the café and talked about what they had seen", "They went home", "They watched a movie", "They took a nap on a bench"], "passage": true },
+    { "kind": "reading", "stem": "How did the robot move?", "options": ["With surprising speed", "Very slowly", "It did not move at all", "It moved backward only"], "passage": true },
+    { "kind": "listening", "stem": "What was the guide wearing?", "options": ["A blue uniform", "A red hat", "A white coat", "Ordinary clothes"], "audio": true },
+    { "kind": "listening", "stem": "What did they plan on the way home?", "options": ["To come back with their friends", "To never return", "To move to the city", "To buy a robot"], "audio": true }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "am3_l56",
+  "unit_no": 12,
+  "lesson_no": 56,
+  "title_en": "Our Neighbor, the River",
+  "title_cn": "河流,我们的邻居",
+  "grammar_focus": "虚拟语气综合(without/if 引导的非真实条件·与现在相反 if+过去式/主句 could·与过去相反 if+had done/主句 would have done)、must have done(对过去的推测)、现在分词作状语(crowning/holding/giving)、现在分词作定语修饰名词(a raft carrying…)(NCE3 第三册 Unit 3 无 KS 页,考点由课文结构 + Notes on the text 自取;原创承载·河边农场四季庆典与洪水中木筏救邻居,题材温情无害·无需净化;美语化 neighbor/favorite/fall)",
+  "scene": "形成我们农场东部边界的那条河,一直在我们的生活里扮演着重要角色。没有它,我们就无法谋生——泉水只够供应屋子,别的用水都得从河里抽。这些年来,河几乎成了家里的一员,我们把所有的秘密都告诉它。我们本能地懂得,就像养蜂人懂得他的蜜蜂那样:要是我们把生活中的大事瞒着它,不幸也许就会突然降临。夏天,我们在河边办特别的生日聚会。有时溯流而上,去一处僻静的回水河汊;有时就聚在老船坞里——那是农场的一位前辈盖在草场上、紧挨最深水潭的。我们在水边迎接每一个季节:春天给最小的孩子戴上花冠,夏天在最长的那个夜晚办节庆,秋天为丰收致谢,冬天把一只绿花环抛进水流。久雨之后,河水会漫过堤岸。这在我们这儿是罕见的事,因为只有地势较低的田受影响,那只占农场很小的比例。别的农场没这么走运,洪水有时会给主人带来灾难。有一年严冬,我们眼看着河水漫上低处的草场。牲口早已赶到高地,我们几乎不会有什么损失,却为最近的邻居担心——他们是新来的,地势又低。洪水弄断了电话,我们只能从阁楼的窗口轮流盯着两家田地相接的那一点。就在最紧急的关头,一只木筏出现了,载着他们全家、几只母鸡、狗,还有篮子里的一只猫。他们一定是被上涨的洪水吓过了头,因为他们那座地基牢固的房子,即便几乎被淹,也会稳稳地立着。我们家的男人们拿着长杆蹚进被淹的草场,想钩住木筏的一角,把它拖向我们这边的岸。直到今天,我们仍觉得他们能成功,是个小小的奇迹。",
+  "grammar_card": {
+    "title": "虚拟语气(与现在/过去相反) / must have done / 现在分词作状语·定语",
+    "intro": "①与现在相反的假设:if + 过去式,主句 would/could/might + 动词原形;without/but for 也可引导:Without it, we could not make a living。②与过去相反的假设:if + had + 过去分词,主句 would/could/might + have + 过去分词:would have stood even if it had been submerged。③must + have + 过去分词,表对过去的肯定推测:They must have become frightened。④现在分词短语作状语(表伴随/方式):crowning the youngest child…;作定语修饰名词(表主动/正在):a raft carrying the family。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["与现在相反", "if + 过去式, 主句 would/could + 原形", "If the river rose, it would flood"],
+        ["与过去相反", "if + had done, 主句 would have done", "would have stood if it had been submerged"],
+        ["对过去的推测", "must + have + 过去分词", "They must have become frightened"],
+        ["现在分词作定语", "名词 + doing", "a raft carrying the family"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "without/but for 相当于 if 的否定条件,可引导虚拟句:Without it(=If it were not for it), we could not make a living。", "mark": "Without it, we could not …" },
+      { "rule": "与过去相反的推测/假设都用 have + 过去分词:must have become / would have stood。", "mark": "must have done / would have done" },
+      { "rule": "美式拼写:neighbor(英式 neighbour)、favorite(英式 favourite)、fall(秋天,英式 autumn)。本课已按美语写。", "mark": "neighbor / favorite / fall" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why had the neighbours left their farm?",
+    "options": ["Their low-lying farm was flooding", "They had sold the farm", "They wanted to live in town", "Their well had run dry"],
+    "answer_index": 0
+  },
+  "passage": "The river that forms the eastern boundary of our farm has always played an important part in our lives. Without it, we could not make a living, for there is only enough spring water to supply the house, and we must pump from the river for everything else. Over the years the river has become almost a member of the family, and we tell it all our secrets. We know, just as beekeepers know with their bees, that misfortune might overtake us if we kept the great events of our lives from it. In summer we hold special river parties. Sometimes we row upstream to a quiet backwater; sometimes we gather at the old boathouse that a predecessor of ours built in the meadow, close by the deepest pool. We welcome each season by the water — crowning the youngest child with flowers in spring, holding a festival on the longest evening of summer, giving thanks for the harvest in fall, and throwing a green wreath into the current in winter. After a long spell of rain the river may rise above its banks. This is a rare occurrence here, for only our lower fields, a small proportion of the farm, are ever affected. Other farms are less lucky, and flooding can spell disaster for their owners. One hard winter we watched the water creep up the lower meadows. Our cattle had already been moved to higher ground, so we stood to lose little, but we were worried about our nearest neighbors, newcomers whose land lay low. The flood had put the phone out of order, and from an attic window we took turns watching the point where their land met ours. At the most critical juncture, a raft appeared, carrying the whole family, a few hens, the dog, and a cat in a basket. They must have become unduly frightened by the rising water, for their house, which had sound foundations, would have stood stoutly even if it had been almost submerged. The men of our family waded out with long poles, hoping to grapple a corner of the raft and pull it toward our bank. We still think it a small miracle that they managed to do so.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "The river that forms the eastern boundary of our farm has always played an important part in our lives. Without it, we could not make a living, for there is only enough spring water to supply the house, and we must pump from the river for everything else. We tell the river all our secrets, and we know, just as beekeepers know with their bees, that misfortune might overtake us if we kept the great events of our lives from it.", "text_cn": "形成我们农场东部边界的那条河,一直在我们的生活里扮演着重要角色。没有它,我们就无法谋生——泉水只够供应屋子,别的用水都得从河里抽。我们把所有的秘密都告诉这条河;我们本能地懂得,就像养蜂人懂得他的蜜蜂那样:要是把生活中的大事瞒着它,不幸也许就会突然降临。" },
+    { "seq": 2, "speaker": null, "text_en": "In summer we hold special river parties. Sometimes we row upstream to a quiet backwater; sometimes we gather at the old boathouse that a predecessor of ours built in the meadow, close by the deepest pool. We welcome each season by the water — crowning the youngest child with flowers in spring, holding a festival on the longest evening of summer, giving thanks for the harvest in fall, and throwing a green wreath into the current in winter.", "text_cn": "夏天,我们在河边办特别的生日聚会。有时溯流而上,去一处僻静的回水河汊;有时就聚在老船坞里——那是农场的一位前辈盖在草场上、紧挨最深水潭的。我们在水边迎接每一个季节:春天给最小的孩子戴上花冠,夏天在最长的那个夜晚办节庆,秋天为丰收致谢,冬天把一只绿花环抛进水流。" },
+    { "seq": 3, "speaker": null, "text_en": "After a long spell of rain the river may rise above its banks. This is a rare occurrence here, for only our lower fields, a small proportion of the farm, are ever affected. Other farms are less lucky, and flooding can spell disaster for their owners. One hard winter we watched the water creep up the lower meadows. Our cattle had already been moved to higher ground, so we stood to lose little, but we were worried about our nearest neighbors, newcomers whose land lay low.", "text_cn": "久雨之后,河水会漫过堤岸。这在我们这儿是罕见的事,因为只有地势较低的田受影响,那只占农场很小的比例。别的农场没这么走运,洪水有时会给主人带来灾难。有一年严冬,我们眼看着河水漫上低处的草场。牲口早已赶到高地,我们几乎不会有损失,却为最近的邻居担心——他们是新来的,地势又低。" },
+    { "seq": 4, "speaker": null, "text_en": "The flood had put the phone out of order, and from an attic window we took turns watching the point where their land met ours. At the most critical juncture, a raft appeared, carrying the whole family, a few hens, the dog, and a cat in a basket. They must have become unduly frightened by the rising water, for their house, which had sound foundations, would have stood stoutly even if it had been almost submerged.", "text_cn": "洪水弄断了电话,我们只能从阁楼的窗口轮流盯着两家田地相接的那一点。就在最紧急的关头,一只木筏出现了,载着他们全家、几只母鸡、狗,还有篮子里的一只猫。他们一定是被上涨的洪水吓过了头,因为他们那座地基牢固的房子,即便几乎被淹,也会稳稳地立着。" },
+    { "seq": 5, "speaker": null, "text_en": "The men of our family waded out with long poles, hoping to grapple a corner of the raft and pull it toward our bank. We still think it a small miracle that they managed to do so.", "text_cn": "我们家的男人们拿着长杆蹚进被淹的草场,想钩住木筏的一角,把它拖向我们这边的岸。直到今天,我们仍觉得他们能成功,是个小小的奇迹。" }
+  ],
+  "words": [
+    { "word": "boundary", "ipa": "/ˈbaʊndəri/", "pos": "n", "meaning_cn": "边界,界线", "example": "the eastern boundary of our farm" },
+    { "word": "overtake", "ipa": "/ˌoʊvərˈteɪk/", "pos": "v", "meaning_cn": "突然降临,赶上", "example": "misfortune might overtake us" },
+    { "word": "meadow", "ipa": "/ˈmedoʊ/", "pos": "n", "meaning_cn": "草地,草场", "example": "built in the meadow" },
+    { "word": "predecessor", "ipa": "/ˈpredəsesər/", "pos": "n", "meaning_cn": "前任,前辈", "example": "a predecessor of ours" },
+    { "word": "occurrence", "ipa": "/əˈkɜːrəns/", "pos": "n", "meaning_cn": "发生的事,事件", "example": "a rare occurrence" },
+    { "word": "proportion", "ipa": "/prəˈpɔːrʃən/", "pos": "n", "meaning_cn": "部分,比例", "example": "a small proportion of the farm" },
+    { "word": "critical", "ipa": "/ˈkrɪtɪkəl/", "pos": "adj", "meaning_cn": "危急的,关键的", "example": "the most critical juncture" },
+    { "word": "juncture", "ipa": "/ˈdʒʌŋktʃər/", "pos": "n", "meaning_cn": "时刻,关头", "example": "at the most critical juncture" },
+    { "word": "raft", "ipa": "/ræft/", "pos": "n", "meaning_cn": "木筏", "example": "a raft appeared" },
+    { "word": "submerge", "ipa": "/səbˈmɜːrdʒ/", "pos": "v", "meaning_cn": "淹没,浸没", "example": "even if it had been almost submerged" },
+    { "word": "grapple", "ipa": "/ˈɡræpəl/", "pos": "v", "meaning_cn": "抓住,钩住", "example": "grapple a corner of the raft" },
+    { "word": "foundations", "ipa": "/faʊnˈdeɪʃənz/", "pos": "n", "meaning_cn": "地基", "example": "a house with sound foundations" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "虚拟语气与现在相反(without/if + 过去式, 主句 would/could + 原形)" },
+    { "gp": "gp2", "name": "虚拟语气与过去相反(if + had done, 主句 would have done)" },
+    { "gp": "gp3", "name": "must have done(对过去的推测)" },
+    { "gp": "gp4", "name": "现在分词作状语(伴随/方式)" },
+    { "gp": "gp5", "name": "现在分词作定语修饰名词" },
+    { "gp": "gp6", "name": "词汇辨析(boundary/raft/foundations)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"If we kept our secrets from the river, misfortune might ___ us.\"(与现在相反虚拟,主句 might + 原形)", "stem_cn": "若我们对河隐瞒秘密,不幸也许会突然降临。", "options": ["overtake", "overtakes", "overtook", "to overtake"] },
+    { "gp": "gp1", "stem": "\"Without the river, we ___ not make a living here.\"(没有…就不能:without 引导虚拟,主句用情态词过去式)", "stem_cn": "没有这条河,我们无法在此谋生。", "options": ["could", "can", "will", "may"] },
+    { "gp": "gp1", "stem": "\"If the river ___ higher, the whole meadow would flood.\"(与现在相反虚拟,if 从句用过去式)", "stem_cn": "如果河再涨高些,整片草场都会被淹。", "options": ["rose", "rises", "has risen", "will rise"] },
+    { "gp": "gp2", "stem": "\"Their house had sound foundations; it would have ___ even if it had been submerged.\"(与过去相反,主句 would have + 过去分词)", "stem_cn": "他们的房子地基牢固,即便被淹也会屹立不倒。", "options": ["stood", "stand", "stood up", "standing"] },
+    { "gp": "gp2", "stem": "\"The house would have stood even if it ___ almost submerged.\"(与过去相反,if 从句用过去完成式)", "stem_cn": "即便房子几乎被淹,它也会挺住。", "options": ["had been", "was", "were", "has been"] },
+    { "gp": "gp2", "stem": "\"If they had trusted the foundations, they ___ have panicked.\"(与过去相反,主句 would/might + have + 过去分词)", "stem_cn": "若他们信任地基,就不会惊慌。", "options": ["might not", "may not", "will not", "do not"] },
+    { "gp": "gp3", "stem": "\"They ___ have become frightened by the flood, judging by their haste.\"(对过去的推测“一定…了”,填表肯定推测的词)", "stem_cn": "从他们的慌乱看,他们一定是被洪水吓着了。", "options": ["must", "can", "would", "need"] },
+    { "gp": "gp3", "stem": "\"The river ___ have risen very fast that night.\"(对过去的肯定推测,填表推测的词)", "stem_cn": "那天夜里河水一定涨得极快。", "options": ["must", "shall", "ought", "dare"] },
+    { "gp": "gp3", "stem": "\"A predecessor of ours must ___ built this boathouse long ago.\"(must ___ 过去分词:对过去的推测,填这个助动词)", "stem_cn": "我们的一位前辈一定在很久前造了这座船坞。", "options": ["have", "has", "had", "having"] },
+    { "gp": "gp4", "stem": "\"We welcome spring by the water, ___ the youngest child with flowers.\"(现在分词作伴随状语,主动)", "stem_cn": "我们在水边迎接春天,给最小的孩子戴上花冠。", "options": ["crowning", "crowned", "crown", "to crown"] },
+    { "gp": "gp4", "stem": "\"We end the year by the river, ___ a green wreath into the current.\"(现在分词作伴随状语)", "stem_cn": "我们在河边辞旧岁,把一只绿花环抛入水流。", "options": ["throwing", "thrown", "throw", "to throw"] },
+    { "gp": "gp4", "stem": "\"___ thanks for the harvest, we gather by the river each fall.\"(现在分词短语置于句首作状语)", "stem_cn": "为丰收致谢,我们每年秋天都聚在河边。", "options": ["Giving", "Given", "Give", "To giving"] },
+    { "gp": "gp5", "stem": "\"At last a raft appeared, ___ the whole family to safety.\"(现在分词修饰 raft,表主动“正…着”)", "stem_cn": "终于一只木筏出现,载着全家逃向安全处。", "options": ["carrying", "carried", "carry", "to carry"] },
+    { "gp": "gp5", "stem": "\"We saw a horse ___ bravely across the flooded field.\"(现在分词修饰 horse,表主动“正在…”)", "stem_cn": "我们看见一匹马勇敢地凫水横过被淹的田野。", "options": ["swimming", "swum", "swim", "to swim"] },
+    { "gp": "gp5", "stem": "\"From the attic we watched the water ___ up the meadow.\"(现在分词表正在进行的动作)", "stem_cn": "我们从阁楼看着河水漫上草场。", "options": ["creeping", "crept", "creep", "to creep"] },
+    { "gp": "gp6", "stem": "\"A line that marks the edge of land is a ___.\"(“边界”用哪个词)", "stem_cn": "标示土地边缘的线。", "options": ["boundary", "center", "corner", "path"] },
+    { "gp": "gp6", "stem": "\"A flat structure of logs used to float on water is a ___.\"(“木筏”用哪个词)", "stem_cn": "用圆木扎成、浮于水面的平台。", "options": ["raft", "bridge", "wall", "roof"] },
+    { "gp": "gp6", "stem": "\"The base on which a building stands are its ___.\"(“地基”用哪个词)", "stem_cn": "建筑赖以矗立的底座。", "options": ["foundations", "windows", "chimneys", "gardens"] }
+  ],
+  "stage6": [
+    { "stem": "boundary 的意思是:", "options": ["边界,界线", "中心", "角落", "小路"] },
+    { "stem": "overtake 的意思是:", "options": ["突然降临,赶上", "逃离", "隐藏", "拒绝"] },
+    { "stem": "meadow 的意思是:", "options": ["草地,草场", "沙漠", "山峰", "港口"] },
+    { "stem": "occurrence 的意思是:", "options": ["发生的事,事件", "承诺", "命令", "借口"] },
+    { "stem": "juncture 的意思是:", "options": ["时刻,关头", "距离", "重量", "角度"] },
+    { "stem": "submerge 的意思是:", "options": ["淹没,浸没", "晒干", "点燃", "举起"] }
+  ],
+  "contrast": [
+    { "us": "neighbor", "uk": "neighbour", "note_cn": "邻居;拼写差异,美语 neighbor" },
+    { "us": "favorite", "uk": "favourite", "note_cn": "最喜爱的;拼写差异,美语 favorite" },
+    { "us": "favorable", "uk": "favourable", "note_cn": "有利的;拼写差异,美语 favorable" },
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;用词差异,美语常说 fall" }
+  ],
+  "chunks": [
+    { "us": "make a living", "ipa": "/meɪk ə ˈlɪvɪŋ/", "example1": "We could not make a living without the river.", "example1_cn": "没有这条河我们就无法谋生。", "example2": "He makes a living as a carpenter.", "example2_cn": "他靠做木匠维持生计。" },
+    { "us": "out of order", "ipa": "/aʊt əv ˈɔːrdər/", "example1": "The flood put the phone out of order.", "example1_cn": "洪水使电话出了故障。", "example2": "The elevator is out of order today.", "example2_cn": "电梯今天坏了。" },
+    { "us": "take turns", "ipa": "/teɪk tɜːrnz/", "example1": "We took turns watching the river from the attic.", "example1_cn": "我们轮流从阁楼盯着河。", "example2": "The children took turns on the swing.", "example2_cn": "孩子们轮流荡秋千。" },
+    { "us": "stand to lose", "ipa": "/stænd tə luːz/", "example1": "With the cattle safe, we stood to lose little.", "example1_cn": "牲口安全了,我们几乎不会有损失。", "example2": "They stood to lose everything in the storm.", "example2_cn": "他们在风暴中可能失去一切。" }
+  ],
+  "stage7_cloze": {
+    "context": "The river ___1___ forms the eastern boundary of our farm has always mattered to us. Without it, we ___2___ not make a living. One winter the water rose, and a raft appeared, ___3___ our neighbors to safety. They ___4___ have been frightened, for their house had sound foundations.",
+    "blanks": [
+      { "blank_no": 1, "options": ["that", "what", "whom", "whose"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["could", "can", "will", "must"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["carrying", "carried", "carry", "to carry"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["must", "can", "would", "need"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why had the neighbors left their farm?", "options": ["Their low-lying land was flooding and they fled by raft", "They sold it for a profit", "They moved to the city for work", "Their house had burned down"] },
+    { "stem": "How did the neighboring family finally reach safety?", "options": ["On a raft that the narrator's family pulled to the bank", "By swimming across the river", "By a rescue helicopter", "They stayed in the attic until the water fell"] },
+    { "stem": "Why did the narrator's family stand to lose little in the flood?", "options": ["Their cattle had already been moved to higher ground", "Their farm was on a mountain", "They had flood insurance", "The river never reached their land"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"没有这条河,我们就无法谋生\"(与现在相反虚拟):", "options": ["Without the river, we could not make a living.", "Without the river, we can not make a living.", "Without the river, we will not make a living.", "Without the river, we could not to make a living."] },
+    { "stem": "你想说\"即便房子几乎被淹,它也会屹立不倒\"(与过去相反虚拟):", "options": ["The house would have stood even if it had been almost submerged.", "The house would stand even if it had been almost submerged.", "The house would have stood even if it was almost submerged.", "The house will have stood even if it had been almost submerged."] },
+    { "stem": "你想说\"他们一定是被上涨的洪水吓着了\"(对过去的推测):", "options": ["They must have become frightened by the rising flood.", "They must became frightened by the rising flood.", "They must to have become frightened by the rising flood.", "They must be becoming frightened by the rising flood."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "overtake 的意思是:", "options": ["突然降临,赶上", "逃离", "隐藏", "拒绝"] },
+    { "kind": "vocab", "stem": "juncture 的意思是:", "options": ["时刻,关头", "距离", "重量", "角度"] },
+    { "kind": "grammar", "stem": "\"Without the river, we ___ not make a living.\"(与现在相反虚拟,主句用情态词过去式)", "stem_cn": "没有这条河,我们无法谋生。", "options": ["could", "can", "will", "must"] },
+    { "kind": "grammar", "stem": "\"They ___ have become frightened by the flood.\"(对过去的推测“一定…了”)", "stem_cn": "他们一定是被洪水吓着了。", "options": ["must", "can", "would", "need"] },
+    { "kind": "scenario", "stem": "\"make a living\" 的意思是:", "options": ["谋生、维持生计", "搬家", "旅行", "退休"] },
+    { "kind": "scenario", "stem": "\"out of order\" 的意思是:", "options": ["出故障、坏了", "井然有序", "卖光了", "免费的"] },
+    { "kind": "reading", "stem": "What did the narrator's family do to welcome each season?", "options": ["Held celebrations by the river", "Traveled abroad", "Repainted the house", "Planted new crops"], "passage": true },
+    { "kind": "reading", "stem": "Why couldn't the narrator's family check on their neighbors at first?", "options": ["The flood had put the phone out of order", "The neighbors had moved away", "A bridge had collapsed", "They were all asleep"], "passage": true },
+    { "kind": "listening", "stem": "What appeared on the river carrying the whole neighboring family?", "options": ["A raft", "A fishing boat", "A wooden bridge", "A truck"], "audio": true },
+    { "kind": "listening", "stem": "What did the narrator call their family's rescue of the neighbors?", "options": ["A miracle", "A mistake", "A routine", "A disaster"], "audio": true }
+  ]
+}

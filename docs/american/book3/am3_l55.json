@@ -1,0 +1,133 @@
+{
+  "id": "am3_l55",
+  "unit_no": 11,
+  "lesson_no": 55,
+  "title_en": "From the Earth: Greetings",
+  "title_cn": "来自地球的问候",
+  "grammar_focus": "情态动词表推测(may/might/could + 动词原形)、情态 + 完成式(may/might have done,对过去的推测)、if 真实条件句(if + 一般现在, 主句 will)、将来被动(will be done)、make it possible to do / depend on(按 Aaron 净化包生产·措辞中性化·不读源PDF:天文科普——探测遥远星系的行星、思考其上可能演化出的生命形式(最可能是细菌而非“小绿人”);纯科普无敏感内容;美国语境 NASA/Hubble 自然出现)",
+  "scene": "天文学方面的最新进展,使我们能够探测到遥远星系中的行星。这是一项重大成就,因为这样的行星非常小,自身又不发光,所以极难看见。找到它们已经很难,而要知道它们上面可能存在什么,就更难了。科学家常常发问:一颗遥远的行星上可能演化出什么样的生命,这样的行星究竟能否维持生命?生命存在的可能性,取决于许多条件。如果一颗行星上有液态水和稳定的大气层,简单的生命形式也许早在很久以前就已出现。在我们自己的太阳系里,只有地球提供了理想的条件,而即便在这里,生命的演化也用了几十亿年。“我们也许永远无法造访这些遥远的世界,”一位科学家说,“但我们仍能远远地研究它们。”目前,地球上还没有一台望远镜强大到足以直接探测生命的存在,而建造这样一台望远镜,将是本世纪最伟大的工程之一。有了更强大的望远镜,每年都会发现新的行星,总有一天,它们的大气层会被分析,以寻找生物所产生的气体。如果我们哪天找到确凿的生命证据——哪怕是最简单的细菌——它都将彻底改变我们看待宇宙、看待自身的方式。别的行星上的生命,也许与地球上的生命毫不相像——它未必是科幻小说里的“小绿人”,而可能是微小、不起眼的生物。在那之前,我们会继续寻找,并向太空送出一句简单的问候:来自地球,你们好。",
+  "grammar_card": {
+    "title": "情态推测 may/might/could / 情态+完成式 / if 真实条件 / 将来被动 / make it possible to do",
+    "intro": "①情态动词 may/might/could + 动词原形,表对现在或将来的推测(可能):Life might be very different。②情态 + have + 过去分词,表对过去的推测:simple life forms may have appeared。③if 真实条件句:if + 一般现在时,主句用 will + 动词原形:If we find evidence, it will change everything。④将来被动:will be + 过去分词:new planets will be discovered。⑤make it possible to do(使…成为可能)、depend on(取决于)。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["may/might/could + 原形", "对现在/将来的推测", "Life might be different"],
+        ["may/might + have + 过去分词", "对过去的推测", "life may have appeared"],
+        ["if + 现在, 主句 will", "真实条件", "If we find evidence, it will change …"],
+        ["will be + 过去分词", "将来被动", "planets will be discovered"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "if 真实条件句从句用一般现在时表将来(if we find …),不用 will;will 只放主句。", "mark": "If we find …, it will …" },
+      { "rule": "对过去的推测用情态 + have + 过去分词(may have appeared);对现在/将来的推测用情态 + 动词原形。", "mark": "may have appeared / might be" },
+      { "rule": "美式拼写:analyze(英式 analyse)、center(英式 centre)、meter(英式 metre)。本课已按美语写。", "mark": "analyze / center" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Which life forms are most likely to develop on a distant planet?",
+    "options": ["Simple organisms such as bacteria", "Intelligent little green men", "Large land animals", "Trees and flowers"],
+    "answer_index": 0
+  },
+  "passage": "Recent developments in astronomy have made it possible to detect planets in distant galaxies. This is a major achievement, because such planets are very small and do not give off light of their own, so they are extremely hard to see. Finding them is difficult, but knowing what might exist on them is even harder. Scientists often ask what kind of life could develop on a faraway planet, and whether such a planet could ever support living things at all. The possibility of life depends on many conditions. If a planet has liquid water and a stable atmosphere, simple life forms may have appeared there long ago. In our own solar system, only the Earth offers ideal conditions, and even here it has taken billions of years for life to develop. 'We might never visit these distant worlds,' one scientist said, 'but we can still study them from afar.' At present, no telescope on Earth is powerful enough to detect the presence of life directly, and building one will be one of the great projects of this century. With more powerful telescopes, new planets will be discovered every year, and one day their atmospheres will be analyzed for the gases that living things produce. If we ever find clear evidence of life, even the simplest bacteria, it will completely change how we see the universe and ourselves. Life on another planet might look nothing like life on Earth — it may not be the 'little green men' of science fiction at all, but tiny, humble organisms. Until then, we go on searching, and we send a simple message out into space: from the Earth, greetings.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Recent developments in astronomy have made it possible to detect planets in distant galaxies. This is a major achievement, because such planets are very small and do not give off light of their own, so they are extremely hard to see. Finding them is difficult, but knowing what might exist on them is even harder.", "text_cn": "天文学方面的最新进展,使我们能够探测到遥远星系中的行星。这是一项重大成就,因为这样的行星非常小,自身又不发光,所以极难看见。找到它们已经很难,而要知道它们上面可能存在什么,就更难了。" },
+    { "seq": 2, "speaker": null, "text_en": "Scientists often ask what kind of life could develop on a faraway planet, and whether such a planet could ever support living things at all. The possibility of life depends on many conditions. If a planet has liquid water and a stable atmosphere, simple life forms may have appeared there long ago.", "text_cn": "科学家常常发问:一颗遥远的行星上可能演化出什么样的生命,这样的行星究竟能否维持生命?生命存在的可能性,取决于许多条件。如果一颗行星上有液态水和稳定的大气层,简单的生命形式也许早在很久以前就已出现。" },
+    { "seq": 3, "speaker": null, "text_en": "In our own solar system, only the Earth offers ideal conditions, and even here it has taken billions of years for life to develop. 'We might never visit these distant worlds,' one scientist said, 'but we can still study them from afar.' At present, no telescope on Earth is powerful enough to detect the presence of life directly, and building one will be one of the great projects of this century.", "text_cn": "在我们自己的太阳系里,只有地球提供了理想的条件,而即便在这里,生命的演化也用了几十亿年。“我们也许永远无法造访这些遥远的世界,”一位科学家说,“但我们仍能远远地研究它们。”目前,地球上还没有一台望远镜强大到足以直接探测生命的存在,而建造这样一台望远镜,将是本世纪最伟大的工程之一。" },
+    { "seq": 4, "speaker": null, "text_en": "With more powerful telescopes, new planets will be discovered every year, and one day their atmospheres will be analyzed for the gases that living things produce. If we ever find clear evidence of life, even the simplest bacteria, it will completely change how we see the universe and ourselves.", "text_cn": "有了更强大的望远镜,每年都会发现新的行星,总有一天,它们的大气层会被分析,以寻找生物所产生的气体。如果我们哪天找到确凿的生命证据——哪怕是最简单的细菌——它都将彻底改变我们看待宇宙、看待自身的方式。" },
+    { "seq": 5, "speaker": null, "text_en": "Life on another planet might look nothing like life on Earth — it may not be the 'little green men' of science fiction at all, but tiny, humble organisms. Until then, we go on searching, and we send a simple message out into space: from the Earth, greetings.", "text_cn": "别的行星上的生命,也许与地球上的生命毫不相像——它未必是科幻小说里的“小绿人”,而可能是微小、不起眼的生物。在那之前,我们会继续寻找,并向太空送出一句简单的问候:来自地球,你们好。" }
+  ],
+  "words": [
+    { "word": "astronomy", "ipa": "/əˈstrɑːnəmi/", "pos": "n", "meaning_cn": "天文学", "example": "developments in astronomy" },
+    { "word": "develop", "ipa": "/dɪˈveləp/", "pos": "v", "meaning_cn": "发展,演化", "example": "what kind of life could develop" },
+    { "word": "distant", "ipa": "/ˈdɪstənt/", "pos": "adj", "meaning_cn": "遥远的", "example": "planets in distant galaxies" },
+    { "word": "galaxy", "ipa": "/ˈɡæləksi/", "pos": "n", "meaning_cn": "星系", "example": "distant galaxies" },
+    { "word": "planet", "ipa": "/ˈplænɪt/", "pos": "n", "meaning_cn": "行星", "example": "detect planets" },
+    { "word": "detect", "ipa": "/dɪˈtekt/", "pos": "v", "meaning_cn": "探测,发现", "example": "detect the presence of life" },
+    { "word": "achievement", "ipa": "/əˈtʃiːvmənt/", "pos": "n", "meaning_cn": "成就", "example": "a major achievement" },
+    { "word": "atmosphere", "ipa": "/ˈætməsfɪr/", "pos": "n", "meaning_cn": "大气层", "example": "a stable atmosphere" },
+    { "word": "evidence", "ipa": "/ˈevɪdəns/", "pos": "n", "meaning_cn": "证据", "example": "clear evidence of life" },
+    { "word": "possibility", "ipa": "/ˌpɑːsəˈbɪləti/", "pos": "n", "meaning_cn": "可能性", "example": "the possibility of life" },
+    { "word": "telescope", "ipa": "/ˈtelɪskoʊp/", "pos": "n", "meaning_cn": "望远镜", "example": "with more powerful telescopes" },
+    { "word": "universe", "ipa": "/ˈjuːnɪvɜːrs/", "pos": "n", "meaning_cn": "宇宙", "example": "how we see the universe" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "情态动词表推测(may/might/could + 动词原形)" },
+    { "gp": "gp2", "name": "情态 + 完成式(may/might have done)" },
+    { "gp": "gp3", "name": "if 真实条件句(if + 一般现在, 主句 will)" },
+    { "gp": "gp4", "name": "将来被动(will be done)" },
+    { "gp": "gp5", "name": "make it possible to do / depend on" },
+    { "gp": "gp6", "name": "词汇辨析(astronomy/detect/evidence)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Life on a distant planet ___ be very different from ours.\"(情态推测“可能”,填情态动词 + 原形)", "stem_cn": "遥远行星上的生命可能与我们大不相同。", "options": ["might", "must to", "can to", "would to"] },
+    { "gp": "gp1", "stem": "\"Scientists ask what kind of life ___ develop on a faraway planet.\"(情态推测“可能会”)", "stem_cn": "科学家问,遥远行星上可能演化出什么样的生命。", "options": ["could", "must", "need", "dare"] },
+    { "gp": "gp1", "stem": "\"We ___ never visit these worlds, but we can study them.\"(情态推测“也许永远不会”)", "stem_cn": "我们也许永远无法造访这些世界,但仍能研究它们。", "options": ["might", "must", "shall", "ought"] },
+    { "gp": "gp2", "stem": "\"If a planet has water, simple life forms ___ appeared long ago.\"(对过去的推测“可能已经…”:may ___ 过去分词,填助动词)", "stem_cn": "如果行星上有水,简单的生命形式也许早已出现。", "options": ["have", "has", "had", "having"] },
+    { "gp": "gp2", "stem": "\"Bacteria might ___ developed there billions of years ago.\"(might ___ 过去分词:也许已经…,填助动词)", "stem_cn": "细菌也许早在几十亿年前就在那里出现了。", "options": ["have", "has", "had", "be"] },
+    { "gp": "gp2", "stem": "\"Such life forms may have ___ without our ever knowing.\"(may + have + 过去分词:可能已经存在,填过去分词)", "stem_cn": "这类生命也许早已存在,而我们浑然不知。", "options": ["existed", "exist", "existing", "exists"] },
+    { "gp": "gp3", "stem": "\"If a planet ___ liquid water, life may appear.\"(if 真实条件,从句用一般现在时)", "stem_cn": "如果行星上有液态水,生命就可能出现。", "options": ["has", "will have", "had", "having"] },
+    { "gp": "gp3", "stem": "\"If we find clear evidence, it ___ change our view of the universe.\"(if 真实条件,主句用将来时,填这个助动词)", "stem_cn": "如果找到确凿证据,它将改变我们对宇宙的看法。", "options": ["will", "would", "might have", "is"] },
+    { "gp": "gp3", "stem": "\"If we ___ life on another planet, it will be big news.\"(if 从句用一般现在时)", "stem_cn": "如果我们在别的行星上发现生命,那将是大新闻。", "options": ["discover", "will discover", "discovered", "discovering"] },
+    { "gp": "gp4", "stem": "\"With better telescopes, new planets ___ discovered every year.\"(将来被动“将被发现”,填助动词加系动词原形)", "stem_cn": "有了更好的望远镜,每年都会发现新的行星。", "options": ["will be", "will", "are", "have been"] },
+    { "gp": "gp4", "stem": "\"The atmospheres of these planets ___ analyzed for signs of life.\"(将来被动“将被分析”,填助动词加系动词原形)", "stem_cn": "这些行星的大气层将被分析,以寻找生命迹象。", "options": ["will be", "will", "are being", "have"] },
+    { "gp": "gp4", "stem": "\"Such a telescope will be ___ in this century.\"(will be + 过去分词“将被建造”,填过去分词)", "stem_cn": "这样的望远镜将在本世纪被建造出来。", "options": ["built", "build", "building", "to build"] },
+    { "gp": "gp5", "stem": "\"New developments have made ___ possible to detect distant planets.\"(make ___ possible to do:形式词)", "stem_cn": "新的进展使探测遥远行星成为可能。", "options": ["it", "that", "this", "them"] },
+    { "gp": "gp5", "stem": "\"Whether a planet can support life depends ___ its conditions.\"(depend ___:取决于,填介词)", "stem_cn": "一颗行星能否维持生命取决于它的条件。", "options": ["on", "of", "to", "in"] },
+    { "gp": "gp5", "stem": "\"It is now ___ to detect planets in other galaxies.\"(it is + 形容词 + to do:形式主语,填形容词)", "stem_cn": "如今探测其他星系的行星已成为可能。", "options": ["possible", "possibly", "possibility", "possibleness"] },
+    { "gp": "gp6", "stem": "\"The scientific study of stars and planets is ___.\"(“天文学”用哪个词)", "stem_cn": "研究恒星和行星的科学。", "options": ["astronomy", "geography", "biology", "history"] },
+    { "gp": "gp6", "stem": "\"To discover or notice something hard to see is to ___ it.\"(“探测、发现”用哪个词)", "stem_cn": "察觉、探测到难以看见的东西。", "options": ["detect", "hide", "create", "ignore"] },
+    { "gp": "gp6", "stem": "\"Facts or signs that prove something is ___.\"(“证据”用哪个词)", "stem_cn": "能证明某事的事实或迹象。", "options": ["evidence", "opinion", "rumor", "guess"] }
+  ],
+  "stage6": [
+    { "stem": "astronomy 的意思是:", "options": ["天文学", "地理学", "生物学", "历史学"] },
+    { "stem": "detect 的意思是:", "options": ["探测,发现", "隐藏", "破坏", "忽视"] },
+    { "stem": "galaxy 的意思是:", "options": ["星系", "行星", "卫星", "流星"] },
+    { "stem": "atmosphere 的意思是:", "options": ["大气层", "海洋", "地壳", "引力"] },
+    { "stem": "evidence 的意思是:", "options": ["证据", "猜测", "谣言", "意见"] },
+    { "stem": "universe 的意思是:", "options": ["宇宙", "城市", "国家", "村庄"] }
+  ],
+  "contrast": [
+    { "us": "analyze", "uk": "analyse", "note_cn": "分析;拼写差异,美语 analyze" },
+    { "us": "center", "uk": "centre", "note_cn": "中心;拼写差异,美语 center" },
+    { "us": "meter", "uk": "metre", "note_cn": "米(长度单位);拼写差异,美语 meter" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" }
+  ],
+  "chunks": [
+    { "us": "depend on", "ipa": "/dɪˈpend ɑːn/", "example1": "Whether life exists depends on many conditions.", "example1_cn": "是否存在生命取决于许多条件。", "example2": "Success depends on hard work.", "example2_cn": "成功取决于努力。" },
+    { "us": "make it possible", "ipa": "/meɪk ɪt ˈpɑːsəbəl/", "example1": "New telescopes make it possible to see farther.", "example1_cn": "新望远镜让我们能看得更远。", "example2": "The grant made it possible to finish the project.", "example2_cn": "这笔资助使项目得以完成。" },
+    { "us": "look for", "ipa": "/lʊk fɔːr/", "example1": "Scientists look for signs of life.", "example1_cn": "科学家寻找生命的迹象。", "example2": "We looked for clues everywhere.", "example2_cn": "我们到处寻找线索。" },
+    { "us": "give off", "ipa": "/ɡɪv ɔːf/", "example1": "Planets do not give off light of their own.", "example1_cn": "行星自身不发光。", "example2": "The fire gave off a lot of heat.", "example2_cn": "火发出大量的热。" }
+  ],
+  "stage7_cloze": {
+    "context": "Recent developments in astronomy have made ___1___ possible to detect planets in distant galaxies. Whether a planet can support life depends ___2___ its conditions. If a planet ___3___ water and a stable atmosphere, simple life forms may have appeared. With better telescopes, new planets ___4___ discovered every year.",
+    "blanks": [
+      { "blank_no": 1, "options": ["it", "that", "this", "them"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["on", "of", "to", "in"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["has", "will have", "had", "having"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["will be", "will", "are", "have"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Which life forms are most likely to develop on a distant planet?", "options": ["Simple organisms such as bacteria", "Intelligent 'little green men'", "Large animals", "Plants like those on Earth"] },
+    { "stem": "Why is it hard to detect distant planets?", "options": ["They are very small and give off no light of their own", "They move too fast", "They are hidden by the sun", "They are far too bright"] },
+    { "stem": "What does the writer say would change if we found life elsewhere?", "options": ["How we see the universe and ourselves", "The size of the Earth", "The number of stars", "The speed of light"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"遥远行星上的生命可能与我们大不相同\"(情态推测 might):", "options": ["Life on a distant planet might be very different from ours.", "Life on a distant planet might to be very different from ours.", "Life on a distant planet might is very different from ours.", "Life on a distant planet might been very different from ours."] },
+    { "stem": "你想说\"如果我们找到确凿证据,它将改变我们对宇宙的看法\"(if 真实条件):", "options": ["If we find clear evidence, it will change our view of the universe.", "If we will find clear evidence, it will change our view of the universe.", "If we find clear evidence, it changes will our view of the universe.", "If we found clear evidence, it will change our view of the universe."] },
+    { "stem": "你想说\"有了更好的望远镜,每年都会发现新的行星\"(将来被动):", "options": ["With better telescopes, new planets will be discovered every year.", "With better telescopes, new planets will discover every year.", "With better telescopes, new planets will be discover every year.", "With better telescopes, new planets are discovered will every year."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "detect 的意思是:", "options": ["探测,发现", "隐藏", "破坏", "忽视"] },
+    { "kind": "vocab", "stem": "evidence 的意思是:", "options": ["证据", "猜测", "谣言", "意见"] },
+    { "kind": "grammar", "stem": "\"Life on a distant planet ___ be very different from ours.\"(情态推测“可能”,填情态动词)", "stem_cn": "遥远行星上的生命可能与我们大不相同。", "options": ["might", "must to", "can to", "would to"] },
+    { "kind": "grammar", "stem": "\"With better telescopes, new planets ___ discovered every year.\"(将来被动“将被…”,填助动词加系动词原形)", "stem_cn": "有了更好的望远镜,每年都会发现新的行星。", "options": ["will be", "will", "are", "have"] },
+    { "kind": "scenario", "stem": "\"depend on\" 的意思是:", "options": ["取决于、依靠", "反对", "忽视", "离开"] },
+    { "kind": "scenario", "stem": "\"make it possible\" 的意思是:", "options": ["使…成为可能", "使…困难", "拒绝", "推迟"] },
+    { "kind": "reading", "stem": "According to the writer, what must a planet have to support life?", "options": ["Liquid water and a stable atmosphere", "A large moon", "Bright city lights", "Strong winds"], "passage": true },
+    { "kind": "reading", "stem": "Why can't earth-based telescopes easily detect life on other planets?", "options": ["The Earth's warm atmosphere and heat make small objects hard to see", "Telescopes are too cheap", "There are too few stars", "Planets are too close"], "passage": true },
+    { "kind": "listening", "stem": "What is the simplest kind of life the writer imagines we might find?", "options": ["Bacteria", "Little green men", "Large animals", "Fish"], "audio": true },
+    { "kind": "listening", "stem": "What simple message does the writer imagine sending into space?", "options": ["From the Earth, greetings", "A warning to stay away", "A map of the Earth", "A list of names"], "audio": true }
+  ]
+}

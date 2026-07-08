@@ -1,0 +1,135 @@
+{
+  "id": "am2_l47",
+  "unit_no": 6,
+  "lesson_no": 47,
+  "title_en": "A thirsty ghost",
+  "title_cn": "嗜酒的鬼魂",
+  "grammar_focus": "综合复习(Review KS36–45)主考——must have done(对过去推测,课文核心)、被动 had been done(KS45)、间接引语 tell/say that(KS39)、be going to(KS36)、将来完成时 will have done(KS37)、虚拟条件(KS40)、as if + 过去完成(KS38)、be able to(KS43)——以本课'嗜酒鬼魂'故事里出现的结构为重点串讲",
+  "scene": "伊恩·汤普森先生最近买下的一家小酒馆又要出售了,因为那里闹鬼。他告诉我,有天夜里怎么也睡不着,因为听到酒吧里传来一阵奇怪的响声。第二天早上,他发现门被椅子堵上了,家具也被挪动过;虽然睡前把灯关了,早晨灯却都亮着。他还说发现了5个空威士忌瓶,这肯定是鬼魂头天晚上喝的。当我暗示说一定是村里有人来喝免费酒时,汤普森先生摇了摇头。村里人已经告诉他,即使他把酒馆白送人,他们也不要。",
+  "grammar_card": {
+    "title": "综合复习:对过去推测 must have done + 各时态回顾",
+    "intro": "本课把 L36–45 学过的结构串起来复习,重点是'对过去的推测'——用 must have + 过去分词,表示'过去一定发生了某事'。顺带回顾被动(had been done)、间接引语(tell/say that)、be going to、将来完成时、虚拟条件等。全用本课句子举例。",
+    "table": {
+      "headers": ["结构", "例子"],
+      "rows": [
+        ["对过去推测 must have done", "The ghost must have drunk the whisky.(一定喝了)"],
+        ["过去完成被动 had been done", "The doors had been blocked by chairs.(被堵住)"],
+        ["间接引语 tell/say that", "He told me that he could not sleep.(告诉我)"],
+        ["be going to", "He is going to sell the pub.(打算卖)"],
+        ["将来完成时 will have done", "Workers will have completed the roads.(将已完成)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "对过去的推测用 must have + 过去分词:The ghost must have drunk(鬼魂一定喝了)、villagers must have come in(村民一定进来过)。", "mark": "must have done = 过去一定…" },
+      { "rule": "过去某次'终于做成'用 was/were able to,不用 could:he was able to sleep again(终于又能睡了)。", "mark": "成功做成用 was able to" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What evidence is there of a ghost?",
+    "options": ["Strange noises, blocked doors, moved furniture, and empty whisky bottles", "A photograph of the ghost", "The ghost's footprints", "A recorded voice"],
+    "answer_index": 0
+  },
+  "passage": "A public house which was recently bought by Mr. Ian Thompson is up for sale. Mr. Thompson is going to sell it because it is haunted. He told me that he could not go to sleep one night because he heard a strange noise coming from the bar. The next morning, he found that the doors had been blocked by chairs and the furniture had been moved. Though Mr. Thompson had turned the lights off before he went to bed, they were on in the morning. He also said that he had found five empty whisky bottles which the ghost must have drunk the night before. When I suggested that some villagers must have come in for a free drink, Mr. Thompson shook his head. The villagers have told him that they will not accept the pub even if he gives it away.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "A public house which was recently bought by Mr. Ian Thompson is up for sale. Mr. Thompson is going to sell it because it is haunted.", "text_cn": "伊恩·汤普森先生最近买下的一家小酒馆又要出售了,因为那里闹鬼。" },
+    { "seq": 2, "speaker": null, "text_en": "He told me that he could not go to sleep one night because he heard a strange noise coming from the bar.", "text_cn": "他告诉我,有天夜里怎么也睡不着,因为听到酒吧里传来一阵奇怪的响声。" },
+    { "seq": 3, "speaker": null, "text_en": "The next morning, he found that the doors had been blocked by chairs and the furniture had been moved.", "text_cn": "第二天早上,他发现门被椅子堵上了,家具也被挪动过。" },
+    { "seq": 4, "speaker": null, "text_en": "Though Mr. Thompson had turned the lights off before he went to bed, they were on in the morning.", "text_cn": "虽然汤普森睡前把灯关了,早晨灯却都亮着。" },
+    { "seq": 5, "speaker": null, "text_en": "He also said that he had found five empty whisky bottles which the ghost must have drunk the night before.", "text_cn": "他还说发现了5个空威士忌瓶,这肯定是鬼魂头天晚上喝的。" },
+    { "seq": 6, "speaker": null, "text_en": "When I suggested that some villagers must have come in for a free drink, Mr. Thompson shook his head.", "text_cn": "当我暗示说一定是村里有人来喝免费酒时,汤普森先生摇了摇头。" },
+    { "seq": 7, "speaker": null, "text_en": "The villagers have told him that they will not accept the pub even if he gives it away.", "text_cn": "村里人已经告诉他,即使他把酒馆白送人,他们也不要。" }
+  ],
+  "words": [
+    { "word": "thirsty", "ipa": "/ˈθɜːrsti/", "pos": "adj", "meaning_cn": "口渴的;贪杯的", "example": "A thirsty ghost" },
+    { "word": "ghost", "ipa": "/ɡoʊst/", "pos": "n", "meaning_cn": "鬼魂", "example": "the ghost must have drunk" },
+    { "word": "haunt", "ipa": "/hɔːnt/", "pos": "v", "meaning_cn": "(鬼)来访,闹鬼", "example": "it is haunted" },
+    { "word": "block", "ipa": "/blɑːk/", "pos": "v", "meaning_cn": "堵,阻塞", "example": "the doors had been blocked" },
+    { "word": "furniture", "ipa": "/ˈfɜːrnɪtʃər/", "pos": "n", "meaning_cn": "家具", "example": "the furniture had been moved" },
+    { "word": "whisky", "ipa": "/ˈwɪski/", "pos": "n", "meaning_cn": "威士忌酒", "example": "five empty whisky bottles" },
+    { "word": "suggest", "ipa": "/səˈdʒest/", "pos": "v", "meaning_cn": "暗示,建议", "example": "When I suggested that…" },
+    { "word": "shake", "ipa": "/ʃeɪk/", "pos": "v", "meaning_cn": "摇动", "example": "shook his head" },
+    { "word": "accept", "ipa": "/əkˈsept/", "pos": "v", "meaning_cn": "接受", "example": "will not accept the pub" },
+    { "word": "noise", "ipa": "/nɔɪz/", "pos": "n", "meaning_cn": "响声,噪音", "example": "a strange noise coming from the bar" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "must have done(对过去推测)" },
+    { "gp": "gp2", "name": "被动 had been done(KS45)" },
+    { "gp": "gp3", "name": "间接引语 tell/say that(KS39)" },
+    { "gp": "gp4", "name": "be going to(KS36)" },
+    { "gp": "gp5", "name": "将来完成时 will have done(KS37)" },
+    { "gp": "gp6", "name": "虚拟条件(KS40)" },
+    { "gp": "gp7", "name": "as if + 过去完成(KS38)" },
+    { "gp": "gp8", "name": "be able to(KS43)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The ghost ___ the whisky — five bottles are empty!\"(对过去的推测:一定喝了)", "stem_cn": "鬼魂一定把威士忌喝了——五个瓶子都空了!", "options": ["must have drunk", "must drink", "must drinking", "drank"] },
+    { "gp": "gp1", "stem": "\"Some villagers ___ in for a free drink last night.\"(对过去的推测:一定进来过)", "stem_cn": "一定是有村民昨晚进来蹭酒喝了。", "options": ["must have come", "must come", "must came", "come"] },
+    { "gp": "gp1", "stem": "\"The lights are on; someone ___ them on.\"(对过去的推测:一定开了)", "stem_cn": "灯亮着,一定是有人开的。", "options": ["must have turned", "must turn", "must turning", "turned"] },
+    { "gp": "gp1", "stem": "\"He looks exhausted; he ___ hard all night.\"(对过去的推测:一定干了)", "stem_cn": "他看起来累坏了,一定是干了一整夜。", "options": ["must have worked", "must work", "must working", "worked"] },
+    { "gp": "gp2", "stem": "\"The next morning, the doors ___ by chairs.\"(过去完成被动:被堵住)", "stem_cn": "第二天早上,门被椅子堵住了。", "options": ["had been blocked", "had blocked", "blocked", "were blocking"] },
+    { "gp": "gp2", "stem": "\"The furniture ___ during the night.\"(过去完成被动:被挪动)", "stem_cn": "家具在夜里被挪动过。", "options": ["had been moved", "had moved", "moved", "was moving"] },
+    { "gp": "gp2", "stem": "\"The pub ___ by Mr. Thompson recently.\"(一般过去被动:被买下)", "stem_cn": "这家酒馆最近被汤普森先生买下。", "options": ["was bought", "bought", "buys", "had buying"] },
+    { "gp": "gp3", "stem": "\"He ___ me that he could not sleep.\"(告诉某人,后面带宾语)", "stem_cn": "他告诉我他睡不着。", "options": ["told", "said", "spoke", "talked"] },
+    { "gp": "gp3", "stem": "\"He also ___ that he had found five empty bottles.\"(不带宾语,直接接从句)", "stem_cn": "他还说他发现了五个空瓶。", "options": ["said", "told", "spoke", "talked"] },
+    { "gp": "gp3", "stem": "\"He said that the doors ___ blocked by chairs.\"(间接引语 + 时态后移的被动)", "stem_cn": "他说门被椅子堵住了。", "options": ["had been", "have been", "are", "were being"] },
+    { "gp": "gp4", "stem": "\"Mr. Thompson ___ sell the pub because it is haunted.\"(表将来的打算、计划)", "stem_cn": "汤普森打算卖掉酒馆,因为它闹鬼。", "options": ["is going to", "goes to", "went to", "is go to"] },
+    { "gp": "gp4", "stem": "\"She ___ swim across the Channel tomorrow.\"(表将来的打算、计划)", "stem_cn": "她打算明天横渡海峡。", "options": ["is going to", "goes to", "went to", "is go to"] },
+    { "gp": "gp5", "stem": "\"Workers ___ the new roads by the end of this year.\"(将来完成时:到…时已完成)", "stem_cn": "到今年底工人们将已修完新路。", "options": ["will have completed", "will completing", "have completed", "complete"] },
+    { "gp": "gp5", "stem": "\"By next June, I ___ from college.\"(将来完成时:到…时已完成)", "stem_cn": "到明年6月,我将已大学毕业。", "options": ["will have graduated", "will graduating", "have graduated", "graduate"] },
+    { "gp": "gp6", "stem": "\"If the pub ___ cheaper, someone would buy it.\"(虚拟:if 从句用过去式)", "stem_cn": "酒馆要是便宜些,就有人买了。", "options": ["were", "is", "was", "will be"] },
+    { "gp": "gp6", "stem": "\"If I ___ you, I wouldn't sell it.\"(虚拟:be 一律用这个特殊形式)", "stem_cn": "我要是你,就不会卖它。", "options": ["were", "was", "am", "be"] },
+    { "gp": "gp7", "stem": "\"He talked ___ he had seen a ghost.\"(表'好像…似的',后接过去完成)", "stem_cn": "他说得好像见过鬼似的。", "options": ["as if", "like", "so", "than"] },
+    { "gp": "gp8", "stem": "\"After the ghost left, he ___ sleep again.\"(过去某次'终于做到了',强调成功结果)", "stem_cn": "鬼魂走后,他终于又能睡了。", "options": ["was able to", "could", "can", "will"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"酒馆\"常说:", "options": ["bar", "pub", "tavern house", "drink house"] },
+    { "stem": "美语里\"威士忌\"的拼写常是:", "options": ["whiskey", "whisky", "wiskey", "whicky"] },
+    { "stem": "thirsty 的意思是:", "options": ["口渴的;贪杯的", "饥饿的", "疲惫的", "害怕的"] },
+    { "stem": "haunt 的意思是:", "options": ["(鬼)来访,闹鬼", "打扫", "装修", "出售"] },
+    { "stem": "accept 的意思是:", "options": ["接受", "拒绝", "购买", "归还"] },
+    { "stem": "furniture 的意思是:", "options": ["家具", "衣服", "餐具", "工具"] }
+  ],
+  "contrast": [
+    { "us": "bar", "uk": "pub", "note_cn": "酒馆;美语 bar,英式 pub(public house)(课文 public house)" },
+    { "us": "whiskey", "uk": "whisky", "note_cn": "威士忌;美语拼 whiskey,英式/苏格兰拼 whisky(课文原文 whisky)" },
+    { "us": "apartment", "uk": "flat", "note_cn": "公寓;美语 apartment,英式 flat(房产/出售场景)" },
+    { "us": "faucet", "uk": "tap", "note_cn": "水龙头;美语 faucet,英式 tap(吧台/酒馆设施)" }
+  ],
+  "chunks": [
+    { "us": "must have + 过去分词", "ipa": "/mʌst həv/", "example1": "The ghost must have drunk the whisky.", "example1_cn": "鬼魂一定把威士忌喝了。", "example2": "Some villagers must have come in.", "example2_cn": "一定是有村民进来过。" },
+    { "us": "be going to", "ipa": "/bi ˈɡoʊɪŋ tuː/", "example1": "He is going to sell the pub.", "example1_cn": "他打算卖掉酒馆。", "example2": "It is going to rain.", "example2_cn": "要下雨了。" },
+    { "us": "up for sale", "ipa": "/ʌp fɔːr seɪl/", "example1": "The pub is up for sale.", "example1_cn": "这家酒馆正在出售。", "example2": "Their house is up for sale.", "example2_cn": "他们的房子正在出售。" },
+    { "us": "shake one's head", "ipa": "/ʃeɪk ... hed/", "example1": "Mr. Thompson shook his head.", "example1_cn": "汤普森摇了摇头。", "example2": "She shook her head and said no.", "example2_cn": "她摇头说不。" }
+  ],
+  "stage7_cloze": {
+    "context": "Mr. Thompson ___1___ sell his pub because it is haunted. One morning he found the doors ___2___ by chairs. He said the ghost ___3___ five bottles of whisky. When I suggested villagers had done it, he shook his head — they ___4___ never accept the pub.",
+    "blanks": [
+      { "blank_no": 1, "options": ["is going to", "goes to", "went to", "is go to"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["had been blocked", "had blocked", "blocked", "were blocking"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["must have drunk", "must drink", "must drank", "drinks"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["would", "will", "are", "did"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why is Mr. Thompson going to sell the pub?", "options": ["Because it is haunted", "Because it is too small", "Because he needs money", "Because it is far away"] },
+    { "stem": "What did Mr. Thompson find the next morning?", "options": ["The doors blocked by chairs and the furniture moved", "A broken window", "The pub on fire", "Nothing unusual"] },
+    { "stem": "What did the five empty whisky bottles suggest to Mr. Thompson?", "options": ["The ghost must have drunk them", "He had drunk them himself", "They were always empty", "The villagers had bought them"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"鬼魂一定把威士忌喝了\"(对过去推测用 must have + 过去分词):", "options": ["The ghost must have drunk the whisky.", "The ghost must drink the whisky.", "The ghost must drank the whisky.", "The ghost must have drink the whisky."] },
+    { "stem": "你想说\"门被椅子堵住了\"(过去完成被动:had been + 过去分词):", "options": ["The doors had been blocked by chairs.", "The doors had blocked by chairs.", "The doors had been block by chairs.", "The doors have blocked by chairs."] },
+    { "stem": "你想说\"他打算卖掉酒馆\"(be going to 表打算):", "options": ["He is going to sell the pub.", "He is go to sell the pub.", "He going to sell the pub.", "He is going sell the pub."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "haunt 的意思是:", "options": ["(鬼)来访,闹鬼", "打扫", "装修", "出售"] },
+    { "kind": "vocab", "stem": "accept 的意思是:", "options": ["接受", "拒绝", "购买", "归还"] },
+    { "kind": "grammar", "stem": "\"The ghost ___ the whisky — five bottles are empty!\"(对过去推测:一定喝了)", "stem_cn": "鬼魂一定把威士忌喝了。", "options": ["must have drunk", "must drink", "must drank", "drinks"] },
+    { "kind": "grammar", "stem": "\"The doors ___ by chairs the next morning.\"(过去完成被动)", "stem_cn": "第二天早上门被椅子堵住了。", "options": ["had been blocked", "had blocked", "blocked", "were blocking"] },
+    { "kind": "scenario", "stem": "\"The ghost must have drunk the whisky the night before.\" 这句话的意思是:", "options": ["鬼魂前一晚一定把威士忌喝了。", "鬼魂想喝威士忌。", "鬼魂不喝威士忌。", "威士忌是给鬼魂买的。"] },
+    { "kind": "scenario", "stem": "\"They will not accept the pub even if he gives it away.\" 这句话的意思是:", "options": ["即使他白送,他们也不要这家酒馆。", "他们想买下这家酒馆。", "他把酒馆送给了他们。", "他们接受了这家酒馆。"] },
+    { "kind": "reading", "stem": "What evidence made Mr. Thompson believe the pub was haunted?", "options": ["Strange noises, blocked doors, moved furniture, lights back on, and empty whisky bottles", "A ghost he saw with his own eyes", "A letter from the ghost", "The villagers' warnings only"], "passage": true },
+    { "kind": "reading", "stem": "How did Mr. Thompson react when the writer suggested villagers had come in for a free drink?", "options": ["He shook his head, disagreeing", "He agreed at once", "He laughed", "He called the police"], "passage": true },
+    { "kind": "listening", "stem": "What did Mr. Thompson hear the night he couldn't sleep?", "options": ["A strange noise coming from the bar", "A knock at the door", "Someone singing", "Nothing at all"], "audio": true },
+    { "kind": "listening", "stem": "Will the villagers take the pub if it is given away free?", "options": ["No — they won't accept it even for free", "Yes — they'd love it", "Only if it's repaired", "Only one of them will"], "audio": true }
+  ]
+}

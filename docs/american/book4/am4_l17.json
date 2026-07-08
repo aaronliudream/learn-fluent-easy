@@ -1,0 +1,134 @@
+{
+  "id": "am4_l17",
+  "unit_no": 3,
+  "lesson_no": 17,
+  "title_en": "A Man-Made Disease",
+  "title_cn": "人为的疾病",
+  "grammar_focus": "By + 动名词(方式)+ 情态动词被动(epidemics could be started)、turn out to do / prove to do、while 引导的对比 + 过去进行时、非限定定语从句 which(Europe, which had…, received…)、过去完成时(had overrun / had handed / had let loose)(NCE4 无 KS 页,考点由课文结构自取;IP:源为里奇·卡尔德《科学的意义》,内容为‘澳洲野兔泛滥·用黏液瘤病毒防治’的生态历史事实(不可版权),已用 100% 原创行文复述,无人物、无逐句改写;题材=生态入侵与生物防治·无害;美语化 plow/gray;第四册第17课)",
+  "scene": "在移居初期,一些爱冒险的澳大利亚新移民做了个倒霉的选择:他们放出了几只欧洲野兔。在新家园里,兔子遇不到天敌,便以其同类出了名的那股肆无忌惮的劲头繁殖起来;不出几十年,它们几乎侵占了整块大陆。它们走到哪儿就把毁坏带到哪儿,在田地下打洞,又把本该养活千百万头牛羊的草料啃个精光。后来科学家发现了一件有用的事:唯独这种兔子——似乎再没别的动物——极易感染一种致命的病毒。只要感染几只兔子、再把它们放进洞穴,就能引发局部的疫情。更妙的是,某种蚊子居然充当了传播者,把病毒从一只兔子带到另一只。于是,当世界其他地方正忙着扑灭这类昆虫时,澳大利亚却特意去鼓励这一种。这病横扫全国,把兔子的数量急剧压了下去。可是过了些时候,幸存者开始显出越来越强的抵抗力,兔子不大可能被彻底消灭;但人们仍有实实在在的希望——这害虫至少能被控制在可控范围内。最奇的转折还在后头。曾把兔子当害虫送给澳大利亚的欧洲,如今反倒收回了这种人造的疾病。法国一位医生想清除自家地里的野兔,引进了这病毒——它却不肯乖乖待在他的庄园里。它扩散到整个法国——在那里,兔子被当作打猎与食物而受珍视——又传进英国:那里野兔是祸害,可同样易感的驯养家兔,却是一门赚钱毛皮生意的根基。归根结底,真正的问题成了:人还能不能控制住自己放出来的这种病。",
+  "grammar_card": {
+    "title": "By+动名词+情态被动 / turn out to do / while 对比 / 非限定 which / 过去完成时",
+    "intro": "①By + 动名词表方式;情态词被动:By infecting rabbits, epidemics could be started。②turn out to do / prove to do:a mosquito turned out to be the carrier。③while 引导对比,常配过去进行:While the world was killing mosquitoes, Australia bred them。④非限定定语从句 which:Europe, which had given the rabbit away, …。⑤过去完成时 had + 过去分词:they had overrun the continent。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["By+动名词", "By + doing", "By infecting rabbits, …"],
+        ["情态词被动", "情态词 + be + 过去分词", "epidemics could be started"],
+        ["turn out to do", "turn out to be …", "the mosquito turned out to be the carrier"],
+        ["while 对比", "While … was doing, 主句", "While the world was killing them, …"],
+        ["过去完成", "had + 过去分词", "the rabbits had overrun the land"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "By + 动名词表示‘通过做某事’的方式;若主句是被动,用情态词 + be + 过去分词。", "mark": "By doing …, … could be done" },
+      { "rule": "过去完成时 had + 过去分词,表示比另一个过去动作更早发生(过去的过去)。", "mark": "had done" },
+      { "rule": "美式拼写:plow(犁/耕,英式 plough)、gray(灰色,英式 grey)。本课已按美语写。", "mark": "plow / gray" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What factor helped to spread the disease of myxomatosis?",
+    "options": ["A type of mosquito that acted as a carrier", "A sudden change in the weather", "The settlers' farming methods", "The sheep and cattle"],
+    "answer_index": 0
+  },
+  "passage": "In the early years of settlement, some enterprising settlers in Australia made an unlucky choice: they turned loose a few European rabbits. In their new home the rabbits met no natural enemies, so they bred with the reckless abandon for which their kind is famous, and within a few decades they had overrun almost the whole continent. They spread devastation wherever they went, burrowing under the fields and devouring the grass that should have fed millions of sheep and cattle. Then scientists discovered something useful: this particular rabbit — and, it seemed, no other animal — was highly susceptible to a deadly virus. By infecting a few rabbits and releasing them into the burrows, small local epidemics could be started. Better still, a certain kind of mosquito turned out to act as a carrier, passing the virus from one rabbit to the next. So, while the rest of the world was busy trying to wipe such insects out, Australia went out of its way to encourage this one. The disease swept across the country and cut the rabbit numbers down dramatically. In time, though, the survivors began to show a growing resistance, so that the rabbits were unlikely ever to be completely exterminated; still, there was real hope that the pest could at last be kept within bounds. The strangest twist came later. Europe, which had once handed the rabbit on to Australia as a pest, now received the man-made disease in return. A doctor in France, wanting to clear the wild rabbits from his own land, brought in the virus — and it refused to stay on his estate. It spread across France, where rabbits are prized as sport and food, and on into Britain, where wild rabbits are a nuisance but tame, domesticated ones, just as susceptible, are the basis of a profitable fur trade. The real question, in the end, was whether people could still control the disease they themselves had let loose.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "In the early years of settlement, some enterprising settlers in Australia made an unlucky choice: they turned loose a few European rabbits. In their new home the rabbits met no natural enemies, so they bred with the reckless abandon for which their kind is famous, and within a few decades they had overrun almost the whole continent.", "text_cn": "在移居初期,一些爱冒险的澳大利亚新移民做了个倒霉的选择:他们放出了几只欧洲野兔。在新家园里,兔子遇不到天敌,便以其同类出了名的那股肆无忌惮的劲头繁殖起来;不出几十年,它们几乎侵占了整块大陆。" },
+    { "seq": 2, "speaker": null, "text_en": "They spread devastation wherever they went, burrowing under the fields and devouring the grass that should have fed millions of sheep and cattle. Then scientists discovered something useful: this particular rabbit — and, it seemed, no other animal — was highly susceptible to a deadly virus.", "text_cn": "它们走到哪儿就把毁坏带到哪儿,在田地下打洞,又把本该养活千百万头牛羊的草料啃个精光。后来科学家发现了一件有用的事:唯独这种兔子——似乎再没别的动物——极易感染一种致命的病毒。" },
+    { "seq": 3, "speaker": null, "text_en": "By infecting a few rabbits and releasing them into the burrows, small local epidemics could be started. Better still, a certain kind of mosquito turned out to act as a carrier, passing the virus from one rabbit to the next. So, while the rest of the world was busy trying to wipe such insects out, Australia went out of its way to encourage this one.", "text_cn": "只要感染几只兔子、再把它们放进洞穴,就能引发局部的疫情。更妙的是,某种蚊子居然充当了传播者,把病毒从一只兔子带到另一只。于是,当世界其他地方正忙着扑灭这类昆虫时,澳大利亚却特意去鼓励这一种。" },
+    { "seq": 4, "speaker": null, "text_en": "The disease swept across the country and cut the rabbit numbers down dramatically. In time, though, the survivors began to show a growing resistance, so that the rabbits were unlikely ever to be completely exterminated; still, there was real hope that the pest could at last be kept within bounds.", "text_cn": "这病横扫全国,把兔子的数量急剧压了下去。可是过了些时候,幸存者开始显出越来越强的抵抗力,兔子不大可能被彻底消灭;但人们仍有实实在在的希望——这害虫至少能被控制在可控范围内。" },
+    { "seq": 5, "speaker": null, "text_en": "Europe, which had once handed the rabbit on to Australia as a pest, now received the man-made disease in return. A doctor in France, wanting to clear the wild rabbits from his own land, brought in the virus — and it refused to stay on his estate. It spread across France, where rabbits are prized as sport and food, and on into Britain, where wild rabbits are a nuisance but tame, domesticated ones, just as susceptible, are the basis of a profitable fur trade. The real question, in the end, was whether people could still control the disease they themselves had let loose.", "text_cn": "曾把兔子当害虫送给澳大利亚的欧洲,如今反倒收回了这种人造的疾病。法国一位医生想清除自家地里的野兔,引进了这病毒——它却不肯乖乖待在他的庄园里。它扩散到整个法国——在那里,兔子被当作打猎与食物而受珍视——又传进英国:那里野兔是祸害,可同样易感的驯养家兔,却是一门赚钱毛皮生意的根基。归根结底,真正的问题成了:人还能不能控制住自己放出来的这种病。" }
+  ],
+  "words": [
+    { "word": "settler", "ipa": "/ˈsetlər/", "pos": "n", "meaning_cn": "移民,定居者", "example": "some enterprising settlers in Australia" },
+    { "word": "enterprising", "ipa": "/ˈentərpraɪzɪŋ/", "pos": "adj", "meaning_cn": "有魄力的,爱冒险的", "example": "some enterprising settlers" },
+    { "word": "overrun", "ipa": "/ˌoʊvərˈrʌn/", "pos": "v", "meaning_cn": "泛滥,侵占", "example": "they had overrun almost the whole continent" },
+    { "word": "devastation", "ipa": "/ˌdevəˈsteɪʃən/", "pos": "n", "meaning_cn": "毁坏,荒废", "example": "they spread devastation wherever they went" },
+    { "word": "burrow", "ipa": "/ˈbɜːroʊ/", "pos": "v", "meaning_cn": "挖洞,打地洞", "example": "burrowing under the fields" },
+    { "word": "susceptible", "ipa": "/səˈseptəbl/", "pos": "adj", "meaning_cn": "易受影响的,易感染的", "example": "highly susceptible to a deadly virus" },
+    { "word": "virus", "ipa": "/ˈvaɪrəs/", "pos": "n", "meaning_cn": "病毒", "example": "susceptible to a deadly virus" },
+    { "word": "epidemic", "ipa": "/ˌepɪˈdemɪk/", "pos": "n", "meaning_cn": "流行病,疫情", "example": "small local epidemics could be started" },
+    { "word": "carrier", "ipa": "/ˈkæriər/", "pos": "n", "meaning_cn": "携带者,传播媒介", "example": "a mosquito turned out to act as a carrier" },
+    { "word": "exterminate", "ipa": "/ɪkˈstɜːrmɪneɪt/", "pos": "v", "meaning_cn": "灭绝,根除", "example": "unlikely ever to be completely exterminated" },
+    { "word": "pest", "ipa": "/pest/", "pos": "n", "meaning_cn": "害虫,有害生物", "example": "the pest could be kept within bounds" },
+    { "word": "domesticate", "ipa": "/dəˈmestɪkeɪt/", "pos": "v", "meaning_cn": "驯化,驯养", "example": "tame, domesticated ones" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "By + 动名词(方式)+ 情态词被动" },
+    { "gp": "gp2", "name": "turn out to do / prove to do" },
+    { "gp": "gp3", "name": "while 引导的对比(过去进行时)" },
+    { "gp": "gp4", "name": "非限定定语从句 which" },
+    { "gp": "gp5", "name": "过去完成时(had done)" },
+    { "gp": "gp6", "name": "词汇辨析(pest/susceptible/exterminate)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ infecting a few rabbits, local epidemics could be started.\"(‘通过做…’,填介词)", "stem_cn": "通过感染几只兔子,就能引发局部疫情。", "options": ["By", "With", "On", "In"] },
+    { "gp": "gp1", "stem": "\"The disease could ___ spread by releasing sick rabbits.\"(情态被动 could + ___ + 过去分词,填中间的词)", "stem_cn": "靠放出病兔,这病就能被传播开。", "options": ["be", "is", "been", "being"] },
+    { "gp": "gp1", "stem": "\"By ___ them into the burrows, the virus reached others.\"(By + 动名词,‘放…进去’;release 的 -ing)", "stem_cn": "把它们放进洞里,病毒就传给了别的兔子。", "options": ["releasing", "released", "release", "to release"] },
+    { "gp": "gp2", "stem": "\"A certain mosquito ___ out to act as the carrier.\"(‘结果成了…’表意外结果,一般过去时,填动词)", "stem_cn": "某种蚊子结果成了这病的传播者。", "options": ["turned", "turns", "turning", "turn"] },
+    { "gp": "gp2", "stem": "\"The rabbits were unlikely ever ___ completely exterminated.\"(be unlikely 后接不定式,‘不大可能被…’,填正确形式)", "stem_cn": "这些兔子不大可能被彻底消灭。", "options": ["to be", "be", "being", "been"] },
+    { "gp": "gp2", "stem": "\"It ___ out that only this rabbit was susceptible.\"(‘结果发现’表意外发现,一般过去时,填动词)", "stem_cn": "结果发现只有这种兔子易感。", "options": ["turned", "turns", "turning", "turn"] },
+    { "gp": "gp3", "stem": "\"___ the world was killing mosquitoes, Australia bred them.\"(‘当…时/然而’对比,填连词)", "stem_cn": "当全世界在灭蚊时,澳大利亚却在养蚊。", "options": ["While", "Because", "Unless", "Since"] },
+    { "gp": "gp3", "stem": "\"The rabbits multiplied ___ the settlers were watching helplessly.\"(‘正当…时’,填连词)", "stem_cn": "正当移民们无助地看着时,兔子却在繁殖。", "options": ["while", "unless", "although", "whether"] },
+    { "gp": "gp3", "stem": "\"While the rest of the world ___ getting rid of the pest, they encouraged it.\"(过去进行时 ___ + doing,填 be 动词的过去式单数)", "stem_cn": "当世界其他地方正设法除掉这害虫时,他们却在鼓励它。", "options": ["was", "is", "been", "being"] },
+    { "gp": "gp4", "stem": "\"Europe, ___ had given the rabbit to Australia, got the disease back.\"(非限定定语从句,指前面的 Europe,填关系词)", "stem_cn": "把兔子送给澳大利亚的欧洲,反倒把这病收了回去。", "options": ["which", "that", "what", "who"] },
+    { "gp": "gp4", "stem": "\"The virus, ___ spread far beyond one estate, reached Britain.\"(非限定定语从句,指物,填关系词)", "stem_cn": "那病毒扩散到一个庄园之外,一直传到了英国。", "options": ["which", "that", "what", "whose"] },
+    { "gp": "gp4", "stem": "\"The rabbits, ___ had no natural enemies, overran the land.\"(非限定定语从句,指物,填关系词)", "stem_cn": "那些没有天敌的兔子侵占了这片土地。", "options": ["which", "that", "what", "whom"] },
+    { "gp": "gp5", "stem": "\"By then the rabbits ___ overrun the whole continent.\"(过去完成时,填第一个助动词)", "stem_cn": "到那时,兔子已侵占了整个大陆。", "options": ["had", "have", "has", "were"] },
+    { "gp": "gp5", "stem": "\"Europe ___ once handed the rabbit on as a pest.\"(过去完成时,填助动词)", "stem_cn": "欧洲曾把兔子当害虫送了出去。", "options": ["had", "have", "did", "was"] },
+    { "gp": "gp5", "stem": "\"They wondered if they could control the disease they ___ let loose.\"(过去完成时,‘早先放出的’,填助动词)", "stem_cn": "他们纳闷能否控制住自己早先放出的病。", "options": ["had", "have", "has", "were"] },
+    { "gp": "gp6", "stem": "\"An animal or plant that harms crops and is unwanted is a ___.\"(“害虫、有害生物”用哪个词)", "stem_cn": "损害庄稼、令人厌恶的动植物。", "options": ["pest", "pet", "guest", "guide"] },
+    { "gp": "gp6", "stem": "\"Easily harmed or infected by something is being ___ to it.\"(“易受影响/易感染的”用哪个词)", "stem_cn": "容易被某物伤害或感染的。", "options": ["susceptible", "immune", "blind", "equal"] },
+    { "gp": "gp6", "stem": "\"To wipe out a species or group completely is to ___ it.\"(“灭绝、根除”用哪个词)", "stem_cn": "把某个物种彻底消灭。", "options": ["exterminate", "protect", "feed", "raise"] }
+  ],
+  "stage6": [
+    { "stem": "overrun 的意思是:", "options": ["泛滥,侵占", "修复", "清洁", "照亮"] },
+    { "stem": "devastation 的意思是:", "options": ["毁坏,荒废", "建设", "繁荣", "安宁"] },
+    { "stem": "susceptible 的意思是:", "options": ["易受影响的,易感染的", "免疫的", "坚固的", "平等的"] },
+    { "stem": "epidemic 的意思是:", "options": ["流行病,疫情", "假期", "命令", "礼物"] },
+    { "stem": "exterminate 的意思是:", "options": ["灭绝,根除", "保护", "繁殖", "喂养"] },
+    { "stem": "domesticate 的意思是:", "options": ["驯化,驯养", "释放", "丢弃", "猎杀"] }
+  ],
+  "contrast": [
+    { "us": "plow", "uk": "plough", "note_cn": "犁/耕;拼写差异,美语 plow" },
+    { "us": "tire", "uk": "tyre", "note_cn": "轮胎;拼写差异,美语 tire" },
+    { "us": "fulfill", "uk": "fulfil", "note_cn": "实现;拼写差异,美语双 l" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;拼写差异,美语 gray" }
+  ],
+  "chunks": [
+    { "us": "get rid of", "ipa": "/ɡet rɪd əv/", "example1": "The world tried to get rid of mosquitoes.", "example1_cn": "全世界都想除掉蚊子。", "example2": "I want to get rid of this old sofa.", "example2_cn": "我想扔掉这张旧沙发。" },
+    { "us": "turn out", "ipa": "/tɜːrn aʊt/", "example1": "The mosquito turned out to be the carrier.", "example1_cn": "那蚊子原来是传播者。", "example2": "Things turned out well.", "example2_cn": "事情结果很顺利。" },
+    { "us": "let loose", "ipa": "/let luːs/", "example1": "They let the disease loose by mistake.", "example1_cn": "他们无意间放出了这种病。", "example2": "He let the dog loose in the yard.", "example2_cn": "他把狗放到院子里跑。" },
+    { "us": "keep within bounds", "ipa": "/kiːp wɪˈðɪn baʊndz/", "example1": "The pest could be kept within bounds.", "example1_cn": "这害虫能被控制在可控范围内。", "example2": "Keep your spending within bounds.", "example2_cn": "把开销控制在限度之内。" }
+  ],
+  "stage7_cloze": {
+    "context": "Settlers ___1___ loose a few rabbits that soon overran Australia. ___2___ infecting them with a virus, epidemics could be started. A mosquito turned ___3___ to be the carrier. Europe, ___4___ had given the rabbit away, got the disease back.",
+    "blanks": [
+      { "blank_no": 1, "options": ["let", "letting", "lets", "to let"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["By", "With", "On", "In"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["out", "off", "up", "in"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["which", "that", "what", "who"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What factor helped to spread the disease among the rabbits?", "options": ["A type of mosquito that acted as a carrier", "Heavy rain", "The settlers' ships", "The sheep and cattle"] },
+    { "stem": "Why did the rabbits multiply so fast in Australia?", "options": ["They had no natural enemies there", "The weather was cold", "Farmers fed them", "They were protected by law"] },
+    { "stem": "Why were the rabbits unlikely to be completely wiped out?", "options": ["The survivors developed a growing resistance to the disease", "They hid underground forever", "The mosquitoes died out", "The virus was too weak"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"通过感染几只兔子,就能引发局部疫情\"(By + 动名词 + 情态被动):", "options": ["By infecting a few rabbits, local epidemics could be started.", "By infect a few rabbits, local epidemics could be started.", "By infecting a few rabbits, local epidemics could be start.", "By infecting a few rabbits, local epidemics could started."] },
+    { "stem": "你想说\"当全世界在灭蚊时,澳大利亚却在养蚊\"(while 对比):", "options": ["While the world was killing mosquitoes, Australia was breeding them.", "While the world killing mosquitoes, Australia was breeding them.", "While the world was killing mosquitoes, Australia breeding them.", "While the world was kill mosquitoes, Australia was breeding them."] },
+    { "stem": "你想说\"到那时,兔子已侵占了整个大陆\"(过去完成时):", "options": ["By then the rabbits had overrun the whole continent.", "By then the rabbits have overrun the whole continent.", "By then the rabbits had overran the whole continent.", "By then the rabbits was overrun the whole continent."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "overrun 的意思是:", "options": ["泛滥,侵占", "修复", "清洁", "照亮"] },
+    { "kind": "vocab", "stem": "exterminate 的意思是:", "options": ["灭绝,根除", "保护", "繁殖", "喂养"] },
+    { "kind": "grammar", "stem": "\"___ infecting a few rabbits, epidemics could be started.\"(‘通过做…’,填介词)", "stem_cn": "通过感染几只兔子,就能引发疫情。", "options": ["By", "With", "On", "In"] },
+    { "kind": "grammar", "stem": "\"By then the rabbits ___ overrun the whole continent.\"(过去完成时)", "stem_cn": "到那时,兔子已侵占了整个大陆。", "options": ["had", "have", "has", "were"] },
+    { "kind": "scenario", "stem": "\"get rid of\" 的意思是:", "options": ["除掉、摆脱", "得到", "靠近", "修好"] },
+    { "kind": "scenario", "stem": "\"let loose\" 的意思是:", "options": ["放出、释放", "系紧", "隐藏", "忘记"] },
+    { "kind": "reading", "stem": "Why did the European rabbit multiply so fast in Australia?", "options": ["It had no natural enemies there", "The winters were mild", "Farmers bred it on purpose", "It ate only grass"], "passage": true },
+    { "kind": "reading", "stem": "What was the ironic twist at the end of the passage?", "options": ["Europe, which had given Australia the rabbit, received the man-made disease in return", "The rabbits helped the sheep", "The mosquitoes vanished", "Britain banned all rabbits"], "passage": true },
+    { "kind": "listening", "stem": "What acted as the carrier of the disease among the rabbits?", "options": ["A certain kind of mosquito", "The wind", "The settlers", "The sheep"], "audio": true },
+    { "kind": "listening", "stem": "What did the surviving rabbits eventually develop?", "options": ["A growing resistance to the disease", "Longer ears", "A taste for meat", "Bigger burrows"], "audio": true }
+  ]
+}

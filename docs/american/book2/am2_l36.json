@@ -1,0 +1,138 @@
+{
+  "id": "am2_l36",
+  "unit_no": 5,
+  "lesson_no": 36,
+  "title_en": "Across the Channel",
+  "title_cn": "横渡海峡",
+  "grammar_focus": "be going to + 动词原形(表打算/计划的将来,可替代 will/shall,KS12)主考——is/are/am going to、疑问否定、条件句结果部分用 will 不用 going to + will 表将来 / 将来进行时 will be doing(he will be watching)+ intend to do / 倒装 Among them will be…(辅考·课文①类)",
+  "scene": "黛比·哈特准备明天横渡英吉利海峡。她打算早上5点从法国海岸出发。黛比只有11岁,希望创一项新的世界纪录。她是个游泳能手,很多人认为她一定能成功。黛比的父亲将乘一条小船同她一道出发;哈特先生训练女儿已经多年,明天他将焦急地注视着女儿游过这段漫长的距离到达英国。黛比计划每两小时休息一下,只喝饮料、不吃固体食物。黛比的大部分同学将在英国海岸等候她;他们当中还会有黛比的母亲——她本人还是个姑娘时,也曾横渡过英吉利海峡!",
+  "grammar_card": {
+    "title": "be going to:打算做的将来",
+    "intro": "be going to + 动词原形,表示打算、计划要做的事,常可替代 will / shall。be 随主语变:I am / he·she·it is / you·we·they are going to。全用本课和 Key structure 的句子举例。",
+    "table": {
+      "headers": ["表达", "例子"],
+      "rows": [
+        ["I am going to …", "I am going to travel by air."],
+        ["he/she is going to …", "She is going to swim across the Channel."],
+        ["they are going to …", "They are going to move to a new house."],
+        ["will 表将来(预测 / 自然会)", "She will have something to drink."],
+        ["将来进行时 will be + doing", "He will be watching her anxiously."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "条件句结果部分用 will,不用 going to:You will enjoy yourself if you travel by sea.", "mark": "条件句用 will" },
+      { "rule": "intend to do / mean to do = 打算做(≈ be going to);倒装:Among them will be Debbie's mother = Debbie's mother will be among them.", "mark": "intend / 倒装" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is Debbie going to try to do?",
+    "options": ["Swim across the English Channel", "Sail a boat across the sea", "Break a running record", "Learn to swim"],
+    "answer_index": 0
+  },
+  "passage": "Debbie Hart is going to swim across the English Channel tomorrow. She is going to set out from the French coast at five o'clock in the morning. Debbie is only eleven years old, and she hopes to set up a new world record. She is a strong swimmer, and many people feel that she is sure to succeed. Debbie's father will set out with her in a small boat. Mr. Hart has trained his daughter for years, and tomorrow he will be watching her anxiously as she swims the long distance to England. Debbie intends to take short rests every two hours. She will have something to drink, but she will not eat any solid food. Most of Debbie's school friends will be waiting for her on the English coast. Among them will be Debbie's mother, who swam the Channel herself when she was a girl.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Debbie Hart is going to swim across the English Channel tomorrow.", "text_cn": "黛比·哈特打算明天横渡英吉利海峡。" },
+    { "seq": 2, "speaker": null, "text_en": "She is going to set out from the French coast at five o'clock in the morning.", "text_cn": "她打算早上5点从法国海岸出发。" },
+    { "seq": 3, "speaker": null, "text_en": "Debbie is only eleven years old, and she hopes to set up a new world record.", "text_cn": "黛比只有11岁,她希望创一项新的世界纪录。" },
+    { "seq": 4, "speaker": null, "text_en": "She is a strong swimmer, and many people feel that she is sure to succeed.", "text_cn": "她是个游泳能手,很多人认为她一定能成功。" },
+    { "seq": 5, "speaker": null, "text_en": "Debbie's father will set out with her in a small boat.", "text_cn": "黛比的父亲将乘一条小船同她一道出发。" },
+    { "seq": 6, "speaker": null, "text_en": "Mr. Hart has trained his daughter for years, and tomorrow he will be watching her anxiously as she swims the long distance to England.", "text_cn": "哈特先生训练女儿已经多年,明天他将焦急地注视着女儿游过这段漫长的距离到达英国。" },
+    { "seq": 7, "speaker": null, "text_en": "Debbie intends to take short rests every two hours.", "text_cn": "黛比打算每两小时休息一下。" },
+    { "seq": 8, "speaker": null, "text_en": "She will have something to drink, but she will not eat any solid food.", "text_cn": "她将喝些饮料,但不吃任何固体食物。" },
+    { "seq": 9, "speaker": null, "text_en": "Most of Debbie's school friends will be waiting for her on the English coast.", "text_cn": "黛比的大部分同学将在英国海岸等候她。" },
+    { "seq": 10, "speaker": null, "text_en": "Among them will be Debbie's mother, who swam the Channel herself when she was a girl.", "text_cn": "他们当中还会有黛比的母亲——她本人还是个姑娘时,也曾横渡过英吉利海峡。" }
+  ],
+  "words": [
+    { "word": "record", "ipa": "/ˈrekərd/", "pos": "n", "meaning_cn": "纪录", "example": "a new world record" },
+    { "word": "strong", "ipa": "/strɔːŋ/", "pos": "adj", "meaning_cn": "强壮的", "example": "a strong swimmer" },
+    { "word": "swimmer", "ipa": "/ˈswɪmər/", "pos": "n", "meaning_cn": "游泳运动员", "example": "a strong swimmer" },
+    { "word": "succeed", "ipa": "/səkˈsiːd/", "pos": "v", "meaning_cn": "成功", "example": "she is sure to succeed" },
+    { "word": "train", "ipa": "/treɪn/", "pos": "v", "meaning_cn": "训练", "example": "has trained his daughter" },
+    { "word": "anxiously", "ipa": "/ˈæŋkʃəsli/", "pos": "adv", "meaning_cn": "焦急地", "example": "watching her anxiously" },
+    { "word": "intend", "ipa": "/ɪnˈtend/", "pos": "v", "meaning_cn": "打算", "example": "intends to take short rests" },
+    { "word": "solid", "ipa": "/ˈsɑːlɪd/", "pos": "adj", "meaning_cn": "固体的,硬的", "example": "any solid food" },
+    { "word": "channel", "ipa": "/ˈtʃænəl/", "pos": "n", "meaning_cn": "海峡", "example": "across the English Channel" },
+    { "word": "rest", "ipa": "/rest/", "pos": "n", "meaning_cn": "休息", "example": "take short rests" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "be going to 的 be(is/are/am)" },
+    { "gp": "gp2", "name": "be going to 后接动词原形" },
+    { "gp": "gp3", "name": "be going to 的疑问 / 否定" },
+    { "gp": "gp4", "name": "will 表将来(预测 / 自然会)" },
+    { "gp": "gp5", "name": "将来进行时 will be + doing" },
+    { "gp": "gp6", "name": "看情景综合选将来形式" },
+    { "gp": "gp7", "name": "intend / mean to do(打算,辅考)" },
+    { "gp": "gp8", "name": "倒装 Among/On … + be(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Debbie ___ going to swim across the Channel.\"(表打算,be 随主语变)", "stem_cn": "黛比打算横渡海峡。", "options": ["is", "are", "am", "be"] },
+    { "gp": "gp1", "stem": "\"They ___ going to move to a new house.\"(表打算,复数)", "stem_cn": "他们打算搬新家。", "options": ["are", "is", "am", "be"] },
+    { "gp": "gp1", "stem": "\"I ___ going to write to him.\"(表打算,第一人称)", "stem_cn": "我打算给他写信。", "options": ["am", "is", "are", "be"] },
+    { "gp": "gp2", "stem": "\"She is going to ___ across the Channel.\"(be going to 后接动词原形)", "stem_cn": "她打算横渡海峡。", "options": ["swim", "swims", "swimming", "swam"] },
+    { "gp": "gp2", "stem": "\"They are going to ___ to a new house.\"(be going to 后接动词原形)", "stem_cn": "他们打算搬去新房子。", "options": ["move", "moves", "moving", "moved"] },
+    { "gp": "gp3", "stem": "\"___ she going to set out at five?\"(be going to 一般疑问)", "stem_cn": "她打算5点出发吗?", "options": ["Is", "Does", "Will", "Are"] },
+    { "gp": "gp3", "stem": "\"Debbie is ___ going to eat any solid food.\"(be going to 否定)", "stem_cn": "黛比不打算吃固体食物。", "options": ["not", "don't", "won't", "no"] },
+    { "gp": "gp4", "stem": "\"Her father ___ set out with her in a boat.\"(表将来的预测)", "stem_cn": "她父亲将乘小船同她出发。", "options": ["will", "is", "was", "has"] },
+    { "gp": "gp4", "stem": "\"Most of her friends ___ wait on the coast.\"(表将来)", "stem_cn": "她大部分朋友将在海岸等候。", "options": ["will", "are", "were", "have"] },
+    { "gp": "gp5", "stem": "\"Tomorrow he ___ be watching her anxiously.\"(将来某时正在进行)", "stem_cn": "明天他将焦急地看着她。", "options": ["will", "is", "was", "has"] },
+    { "gp": "gp5", "stem": "\"This time tomorrow she ___ be swimming the Channel.\"(将来某刻正在进行)", "stem_cn": "明天此时她将在横渡海峡。", "options": ["will", "is", "was", "has"] },
+    { "gp": "gp5", "stem": "\"He will ___ watching her all day tomorrow.\"(将来进行,will 后接的词)", "stem_cn": "明天他将一整天看着她。", "options": ["be", "been", "is", "being"] },
+    { "gp": "gp6", "stem": "\"Look at the clouds — it ___ going to rain.\"(眼前迹象,be going to)", "stem_cn": "看那乌云,要下雨了。", "options": ["is", "will", "was", "does"] },
+    { "gp": "gp6", "stem": "\"Don't worry, you ___ enjoy the trip.\"(预测 / 安慰,用将来)", "stem_cn": "别担心,你会喜欢这次旅行的。", "options": ["will", "are going", "were", "have"] },
+    { "gp": "gp7", "stem": "\"Debbie intends ___ take short rests every two hours.\"(intend 后接动词不定式)", "stem_cn": "黛比打算每两小时休息一下。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp7", "stem": "\"She means ___ ask for an explanation.\"(mean 后接动词不定式)", "stem_cn": "她打算要求一个解释。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp8", "stem": "\"Among them ___ be Debbie's mother, who swam the Channel.\"(倒装,表将来)", "stem_cn": "他们当中将有黛比的母亲。", "options": ["will", "is", "are", "was"] },
+    { "gp": "gp8", "stem": "\"On the coast ___ many of her school friends, waiting for her.\"(倒装,主体是复数 friends)", "stem_cn": "海岸上是等着她的许多同学。", "options": ["were", "was", "is", "being"] }
+  ],
+  "stage6": [
+    { "stem": "美语里称呼缩写(先生、博士)后常加点,写作:", "options": ["Mr. / Dr.", "Mr / Dr", "M. / D.", "Mr: / Dr:"] },
+    { "stem": "美语里\"假期\"常说:", "options": ["vacation", "holiday", "rest day", "free time"] },
+    { "stem": "record(a new world record)的意思是:", "options": ["纪录", "唱片机", "回忆", "比赛"] },
+    { "stem": "succeed 的意思是:", "options": ["成功", "失败", "尝试", "放弃"] },
+    { "stem": "intend 的意思是:", "options": ["打算,想要", "拒绝", "忘记", "怀疑"] },
+    { "stem": "anxiously 的意思是:", "options": ["焦急地", "高兴地", "缓慢地", "大声地"] }
+  ],
+  "contrast": [
+    { "us": "Mr.", "uk": "Mr", "note_cn": "称呼缩写;美语带点 Mr. / Dr.,英式常不带点 Mr / Dr(课文 Mr. Hart)" },
+    { "us": "vacation", "uk": "holiday", "note_cn": "假期;美语 vacation,英式 holiday(高频美语点)" },
+    { "us": "candy", "uk": "sweets", "note_cn": "糖果;美语 candy,英式 sweets(高频美语点)" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film(高频美语点)" }
+  ],
+  "chunks": [
+    { "us": "be going to do", "ipa": "/bi ˈɡoʊɪŋ tuː duː/", "example1": "Debbie is going to swim across the Channel.", "example1_cn": "黛比打算横渡海峡。", "example2": "I am going to travel by air.", "example2_cn": "我打算坐飞机去。" },
+    { "us": "set up a record", "ipa": "/set ʌp ə ˈrekərd/", "example1": "She hopes to set up a new world record.", "example1_cn": "她希望创一项新的世界纪录。", "example2": "He set up a new company.", "example2_cn": "他创办了一家新公司。" },
+    { "us": "be sure to do", "ipa": "/bi ʃʊr tuː duː/", "example1": "Many people feel she is sure to succeed.", "example1_cn": "许多人认为她一定能成功。", "example2": "He is sure to come.", "example2_cn": "他一定会来。" },
+    { "us": "intend to do", "ipa": "/ɪnˈtend tuː duː/", "example1": "Debbie intends to take short rests.", "example1_cn": "黛比打算休息一下。", "example2": "I intend to stay here.", "example2_cn": "我打算留在这儿。" }
+  ],
+  "stage7_cloze": {
+    "context": "Debbie ___1___ going to swim across the Channel tomorrow. Her father ___2___ set out with her in a boat. He ___3___ be watching her anxiously. Among the friends on the coast ___4___ be Debbie's mother.",
+    "blanks": [
+      { "blank_no": 1, "options": ["is", "are", "am", "be"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["will", "is", "was", "has"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["will", "is", "was", "has"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["will", "is", "are", "was"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What is Debbie going to try to do tomorrow?", "options": ["Swim across the English Channel", "Sail a boat to France", "Set a running record", "Train other swimmers"] },
+    { "stem": "How often does Debbie intend to rest?", "options": ["Every two hours", "Every ten minutes", "Only once", "She will not rest at all"] },
+    { "stem": "Who swam the Channel herself as a girl?", "options": ["Debbie's mother", "Debbie's teacher", "Debbie's older sister", "A school friend"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我打算坐飞机去\"(打算用 be going to):", "options": ["I am going to travel by air.", "I going to travel by air.", "I am go to travel by air.", "I will going to travel by air."] },
+    { "stem": "你想说\"他明天会一直焦急地看着她\"(将来进行时 will be + doing):", "options": ["He will be watching her anxiously.", "He will watching her anxiously.", "He is watching her anxiously.", "He will be watch her anxiously."] },
+    { "stem": "你想说\"她一定能成功\"(be sure to do):", "options": ["She is sure to succeed.", "She is sure succeed.", "She is sure to succeeding.", "She sure to succeed."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "succeed 的意思是:", "options": ["成功", "失败", "休息", "出发"] },
+    { "kind": "vocab", "stem": "intend 的意思是:", "options": ["打算,想要", "拒绝", "害怕", "完成"] },
+    { "kind": "grammar", "stem": "\"Debbie ___ going to swim across the Channel.\"(打算,be going to)", "stem_cn": "黛比打算横渡海峡。", "options": ["is", "are", "am", "be"] },
+    { "kind": "grammar", "stem": "\"Her father ___ set out with her tomorrow.\"(表将来的预测)", "stem_cn": "她父亲明天将同她一起出发。", "options": ["will", "is", "was", "has"] },
+    { "kind": "scenario", "stem": "\"She hopes to set up a new world record.\" 这句话的意思是:", "options": ["她希望创一项新的世界纪录。", "她打破了世界纪录。", "她放弃了比赛。", "她观看了比赛。"] },
+    { "kind": "scenario", "stem": "\"She will not eat any solid food.\" 这句话的意思是:", "options": ["她不会吃任何固体食物。", "她只吃固体食物。", "她会吃很多东西。", "她整天不喝水。"] },
+    { "kind": "reading", "stem": "Why is Debbie's swim special?", "options": ["She is only eleven and hopes to set a new world record", "She will swim without resting", "She has never swum before", "She will swim at night"], "passage": true },
+    { "kind": "reading", "stem": "What will Debbie do during the swim?", "options": ["Take short rests every two hours and drink but not eat solid food", "Eat a big meal halfway", "Stop every ten minutes", "Sleep on the boat"], "passage": true },
+    { "kind": "listening", "stem": "What is Debbie going to try to do?", "options": ["Swim across the English Channel", "Win a running race", "Sail a boat alone", "Train for the Olympics"], "audio": true },
+    { "kind": "listening", "stem": "Who will be waiting on the English coast?", "options": ["Most of Debbie's school friends and her mother", "Only her father", "No one at all", "A team of doctors"], "audio": true }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "am2_l37",
+  "unit_no": 5,
+  "lesson_no": 37,
+  "title_en": "The Olympic Games",
+  "title_cn": "奥林匹克运动会",
+  "grammar_focus": "将来完成时(will have + 过去分词,表到将来某时刻已完成:by the end of this year / in a year's time,KS13)主考——对比一般将来(will finish)与将来进行(will be building)+ 将来被动(will be held)+ look forward to + 动名词(to 是介词)/ as = 因为·当(状语从句连词)(辅考·课文①类)",
+  "scene": "4年以后,奥林匹克运动会将在我们国家举行。由于将有大批人到来,政府将建造一些新饭店、一座大型体育场和一个新的奥运会标准游泳池,还要修一些新道路和一条铁路专线。奥运会将在首都郊外举行,整个地区将被称为'奥林匹克城'。工人们将在今年年底前把新路修好;到明年年底,他们将把新体育场建成。这些巨大的现代化建筑是由库尔特·冈特设计的。大家都将急切地注视着新建筑一点点建起来。我们都非常激动,盼望着奥运会的到来,因为在这个国家里还从未举办过奥运会。",
+  "grammar_card": {
+    "title": "将来完成时:到将来某时已完成",
+    "intro": "将来完成时用 will have + 过去分词,表示到将来某一时刻(by + 时间点 / in … time)已经完成的动作。跟一般将来时(will do)、将来进行时(will be doing)不同。全用本课和 Key structures 的句子举例。",
+    "table": {
+      "headers": ["时态", "例子"],
+      "rows": [
+        ["将来完成 → will have + 过去分词", "Workers will have completed the roads by the end of this year."],
+        ["一般将来 → will + 原形", "They will finish it next year."],
+        ["将来进行 → will be + doing", "The government will be building new hotels."],
+        ["将来被动 → will be + 过去分词", "The Games will be held here."],
+        ["by / in … time 时间标志", "by the end of next year / in a year's time"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "look forward to 的 to 是介词,后面接名词或动名词:looking forward to the Games / to seeing you。", "mark": "look forward to + -ing" },
+      { "rule": "as 作连词可表'因为'(As many people will visit…)或'当/正值'(as the buildings go up)。", "mark": "as = 因为 / 当" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — When was the last time this country hosted the Olympic Games?",
+    "options": ["Never — they have never been held here before", "Four years ago", "Last year", "Twenty years ago"],
+    "answer_index": 0
+  },
+  "passage": "The Olympic Games will be held in our country in four years' time. As a great many people will be visiting the country, the government will be building new hotels, an immense stadium, and a new Olympic-standard swimming pool. They will also be building new roads and a special railroad line. The Games will be held just outside the capital, and the whole area will be called 'Olympic City'. Workers will have completed the new roads by the end of this year. By the end of next year, they will have finished work on the new stadium. The fantastic modern buildings have been designed by Kurt Gunter. Everybody will be watching anxiously as the new buildings go up. We are all very excited and are looking forward to the Olympic Games, because they have never been held before in this country.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "The Olympic Games will be held in our country in four years' time.", "text_cn": "4年以后,奥林匹克运动会将在我们国家举行。" },
+    { "seq": 2, "speaker": null, "text_en": "As a great many people will be visiting the country, the government will be building new hotels, an immense stadium, and a new Olympic-standard swimming pool.", "text_cn": "由于将有大批人到来,政府将建造一些新饭店、一座大型体育场和一个新的奥运会标准游泳池。" },
+    { "seq": 3, "speaker": null, "text_en": "They will also be building new roads and a special railroad line.", "text_cn": "他们还将修一些新道路和一条铁路专线。" },
+    { "seq": 4, "speaker": null, "text_en": "The Games will be held just outside the capital, and the whole area will be called 'Olympic City'.", "text_cn": "奥运会将在首都郊外举行,整个地区将被称为'奥林匹克城'。" },
+    { "seq": 5, "speaker": null, "text_en": "Workers will have completed the new roads by the end of this year.", "text_cn": "工人们将在今年年底前把新路修好。" },
+    { "seq": 6, "speaker": null, "text_en": "By the end of next year, they will have finished work on the new stadium.", "text_cn": "到明年年底,他们将把新体育场建成。" },
+    { "seq": 7, "speaker": null, "text_en": "The fantastic modern buildings have been designed by Kurt Gunter.", "text_cn": "这些巨大的现代化建筑是由库尔特·冈特设计的。" },
+    { "seq": 8, "speaker": null, "text_en": "Everybody will be watching anxiously as the new buildings go up.", "text_cn": "大家都将急切地注视着新建筑一点点建起来。" },
+    { "seq": 9, "speaker": null, "text_en": "We are all very excited and are looking forward to the Olympic Games, because they have never been held before in this country.", "text_cn": "我们都非常激动,盼望着奥运会的到来,因为在这个国家里还从未举办过奥运会。" }
+  ],
+  "words": [
+    { "word": "Olympic", "ipa": "/əˈlɪmpɪk/", "pos": "adj", "meaning_cn": "奥林匹克的", "example": "the Olympic Games" },
+    { "word": "hold", "ipa": "/hoʊld/", "pos": "v", "meaning_cn": "召开,举行(held)", "example": "will be held in our country" },
+    { "word": "government", "ipa": "/ˈɡʌvərnmənt/", "pos": "n", "meaning_cn": "政府", "example": "the government will be building" },
+    { "word": "immense", "ipa": "/ɪˈmens/", "pos": "adj", "meaning_cn": "巨大的", "example": "an immense stadium" },
+    { "word": "stadium", "ipa": "/ˈsteɪdiəm/", "pos": "n", "meaning_cn": "露天体育场", "example": "an immense stadium" },
+    { "word": "standard", "ipa": "/ˈstændərd/", "pos": "n", "meaning_cn": "标准", "example": "Olympic-standard swimming pool" },
+    { "word": "capital", "ipa": "/ˈkæpɪtəl/", "pos": "n", "meaning_cn": "首都", "example": "just outside the capital" },
+    { "word": "fantastic", "ipa": "/fænˈtæstɪk/", "pos": "adj", "meaning_cn": "巨大的;极好的", "example": "the fantastic modern buildings" },
+    { "word": "design", "ipa": "/dɪˈzaɪn/", "pos": "v", "meaning_cn": "设计", "example": "designed by Kurt Gunter" },
+    { "word": "complete", "ipa": "/kəmˈpliːt/", "pos": "v", "meaning_cn": "完成", "example": "will have completed the new roads" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "将来完成时 will have + 过去分词" },
+    { "gp": "gp2", "name": "by + 将来时间点(到…之前)" },
+    { "gp": "gp3", "name": "in … time(…之后)" },
+    { "gp": "gp4", "name": "对比:一般将来 vs 将来完成" },
+    { "gp": "gp5", "name": "将来进行时 will be + doing" },
+    { "gp": "gp6", "name": "将来被动 will be + 过去分词" },
+    { "gp": "gp7", "name": "look forward to + 动名词(辅考)" },
+    { "gp": "gp8", "name": "as = 因为 / 当(状语从句连词,辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Workers ___ have completed the roads by the end of this year.\"(到将来某时已完成)", "stem_cn": "到今年年底工人们将把路修好。", "options": ["will", "are", "were", "have"] },
+    { "gp": "gp1", "stem": "\"By next year, they ___ have finished the stadium.\"(到将来某时已完成)", "stem_cn": "到明年他们将把体育场建成。", "options": ["will", "are", "were", "have"] },
+    { "gp": "gp1", "stem": "\"They will ___ finished the bridge in a year's time.\"(将来完成,will 后接的词)", "stem_cn": "一年后他们将把桥建成。", "options": ["have", "has", "had", "having"] },
+    { "gp": "gp2", "stem": "\"The work will be done ___ the end of this year.\"(到…的时候之前)", "stem_cn": "这项工作将在今年年底前完成。", "options": ["by", "in", "at", "for"] },
+    { "gp": "gp2", "stem": "\"They will have left ___ the time you arrive.\"(到…的时候)", "stem_cn": "你到时他们将已经离开。", "options": ["by", "in", "at", "for"] },
+    { "gp": "gp3", "stem": "\"They will have finished this bridge ___ a year's time.\"(表'…之后')", "stem_cn": "一年后他们将把桥建成。", "options": ["in", "by", "at", "for"] },
+    { "gp": "gp3", "stem": "\"The Games will be held ___ four years' time.\"(表'…之后')", "stem_cn": "奥运会将在4年后举行。", "options": ["in", "by", "at", "on"] },
+    { "gp": "gp4", "stem": "\"'When will they finish it?' 'They ___ it next year.'\"(问将来、答将来,一般将来)", "stem_cn": "“他们何时建成?”“明年建成。”", "options": ["will finish", "will have finished", "finished", "finish"] },
+    { "gp": "gp4", "stem": "\"'When will they have finished?' 'They ___ it in a year.'\"(强调到某时已完成)", "stem_cn": "“到何时完成?”“一年内完成。”", "options": ["will have finished", "will finish", "finished", "finish"] },
+    { "gp": "gp4", "stem": "\"By the end of the year, workers ___ the roads.\"(到某时已完成)", "stem_cn": "到年底工人将把路修好。", "options": ["will have completed", "will complete", "completed", "complete"] },
+    { "gp": "gp5", "stem": "\"The government ___ be building new hotels.\"(将来进行时)", "stem_cn": "政府将建造新旅馆。", "options": ["will", "is", "was", "has"] },
+    { "gp": "gp5", "stem": "\"A great many people ___ be visiting the country.\"(将来进行时)", "stem_cn": "将有大批人来这个国家。", "options": ["will", "are", "were", "have"] },
+    { "gp": "gp6", "stem": "\"The Olympic Games ___ be held in our country.\"(将来被动)", "stem_cn": "奥运会将在我国举行。", "options": ["will", "are", "were", "have"] },
+    { "gp": "gp6", "stem": "\"The buildings ___ be finished next year.\"(将来被动)", "stem_cn": "这些大楼明年将建成。", "options": ["will", "are", "were", "has"] },
+    { "gp": "gp7", "stem": "\"We are looking forward ___ the Olympic Games.\"(盼望;look forward 后接的介词)", "stem_cn": "我们盼望着奥运会。", "options": ["to", "for", "at", "of"] },
+    { "gp": "gp7", "stem": "\"I look forward to ___ you soon.\"(look forward to 后接动名词)", "stem_cn": "我期待很快见到你。", "options": ["seeing", "see", "saw", "to see"] },
+    { "gp": "gp8", "stem": "\"___ a great many people will visit, the government is building hotels.\"(表'因为')", "stem_cn": "由于将有大批人来访,政府在建旅馆。", "options": ["As", "If", "Unless", "Though"] },
+    { "gp": "gp8", "stem": "\"Everybody will watch ___ the new buildings go up.\"(表'当…时')", "stem_cn": "大楼建起来时大家都看着。", "options": ["as", "if", "unless", "though"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"铁路\"常说:", "options": ["railroad", "railway", "train road", "iron way"] },
+    { "stem": "美语里\"公路、高速路\"常说:", "options": ["highway", "motorway", "big road", "car way"] },
+    { "stem": "government 的意思是:", "options": ["政府", "公司", "军队", "议会"] },
+    { "stem": "immense 的意思是:", "options": ["巨大的", "微小的", "普通的", "昂贵的"] },
+    { "stem": "fantastic 的意思是:", "options": ["巨大的;极好的", "糟糕的", "普通的", "破旧的"] },
+    { "stem": "design 的意思是:", "options": ["设计", "建造", "拆除", "购买"] }
+  ],
+  "contrast": [
+    { "us": "railroad", "uk": "railway", "note_cn": "铁路;美语 railroad,英式 railway(课文 a special railroad line)" },
+    { "us": "highway", "uk": "motorway", "note_cn": "公路,高速路;美语 highway,英式 motorway(呼应课文 new roads)" },
+    { "us": "subway", "uk": "underground", "note_cn": "地铁;美语 subway,英式 underground / tube(高频交通词)" },
+    { "us": "downtown", "uk": "city centre", "note_cn": "市中心;美语 downtown,英式 city centre(呼应 capital / city)" }
+  ],
+  "chunks": [
+    { "us": "will have + 过去分词", "ipa": "/wɪl hæv/", "example1": "Workers will have completed the roads by the end of this year.", "example1_cn": "到今年年底工人们将把路修好。", "example2": "I will have finished by then.", "example2_cn": "到那时我将已完成。" },
+    { "us": "look forward to", "ipa": "/lʊk ˈfɔːrwərd tuː/", "example1": "We are looking forward to the Olympic Games.", "example1_cn": "我们盼望着奥运会。", "example2": "I look forward to seeing you.", "example2_cn": "我期待见到你。" },
+    { "us": "in four years' time", "ipa": "/ɪn fɔːr jɪrz taɪm/", "example1": "The Games will be held in four years' time.", "example1_cn": "奥运会将在4年后举行。", "example2": "in a year's time", "example2_cn": "一年之后" },
+    { "us": "go up", "ipa": "/ɡoʊ ʌp/", "example1": "Everybody will watch as the buildings go up.", "example1_cn": "大家会看着大楼建起来。", "example2": "New houses are going up fast.", "example2_cn": "新房子建得很快。" }
+  ],
+  "stage7_cloze": {
+    "context": "The Olympic Games ___1___ be held in our country in four years. The government ___2___ be building new hotels. Workers ___3___ have completed the roads by the end of this year. We are looking forward ___4___ the Games.",
+    "blanks": [
+      { "blank_no": 1, "options": ["will", "are", "were", "have"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["will", "is", "was", "has"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["will", "are", "were", "have"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["to", "for", "at", "of"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "When will the Olympic Games be held in this country?", "options": ["In four years' time", "Next month", "This year", "They have already been held"] },
+    { "stem": "What will the government build for the Games?", "options": ["New hotels, a stadium, a swimming pool, roads and a railroad line", "Only a stadium", "A new airport", "Just a swimming pool"] },
+    { "stem": "Has this country hosted the Olympic Games before?", "options": ["No, never before", "Yes, many times", "Yes, once", "Only last year"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"到今年年底他们将把路修好\"(将来完成时 will have + 过去分词):", "options": ["They will have finished the roads by the end of this year.", "They will has finished the roads by the end of this year.", "They will have finish the roads by the end of this year.", "They will finishing the roads by the end of this year."] },
+    { "stem": "你想说\"我们盼望着奥运会\"(look forward to,to 是介词):", "options": ["We are looking forward to the Olympic Games.", "We are looking forward the Olympic Games.", "We are look forward to the Olympic Games.", "We are looking forward to see the Olympic Games."] },
+    { "stem": "你想说\"新大楼建起来时大家都焦急地看着\"(as = 当…时):", "options": ["Everybody will be watching as the buildings go up.", "Everybody will be watching because the buildings go up.", "Everybody will be watching if the buildings go up.", "Everybody will be watching so the buildings go up."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "government 的意思是:", "options": ["政府", "公司", "学校", "医院"] },
+    { "kind": "vocab", "stem": "immense 的意思是:", "options": ["巨大的", "微小的", "便宜的", "安静的"] },
+    { "kind": "grammar", "stem": "\"Workers ___ have completed the roads by the end of this year.\"(将来完成时)", "stem_cn": "到今年年底工人们将把路修好。", "options": ["will", "are", "were", "have"] },
+    { "kind": "grammar", "stem": "\"The government ___ be building new hotels.\"(将来进行时)", "stem_cn": "政府将建造新旅馆。", "options": ["will", "is", "was", "has"] },
+    { "kind": "scenario", "stem": "\"The Games will be held in four years' time.\" 这句话的意思是:", "options": ["奥运会将在4年后举行。", "奥运会4年前举行过。", "奥运会正在举行。", "奥运会永远不办。"] },
+    { "kind": "scenario", "stem": "\"We are looking forward to the Olympic Games.\" 这句话的意思是:", "options": ["我们盼望着奥运会。", "我们错过了奥运会。", "我们不喜欢奥运会。", "我们忘记了奥运会。"] },
+    { "kind": "reading", "stem": "Why is the government building so much?", "options": ["A great many people will visit the country for the Games", "The old buildings fell down", "They want to sell the buildings", "The capital is too small"], "passage": true },
+    { "kind": "reading", "stem": "When will the workers have finished the new stadium?", "options": ["By the end of next year", "By the end of this year", "In four years", "They have already finished it"], "passage": true },
+    { "kind": "listening", "stem": "When was the last time this country hosted the Olympic Games?", "options": ["Never — they have never been held here before", "Four years ago", "Last year", "Ten years ago"], "audio": true },
+    { "kind": "listening", "stem": "What will the whole Olympic area be called?", "options": ["Olympic City", "The Capital", "Kurt Gunter Park", "The New Stadium"], "audio": true }
+  ]
+}

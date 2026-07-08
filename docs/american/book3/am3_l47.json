@@ -1,0 +1,133 @@
+{
+  "id": "am3_l47",
+  "unit_no": 10,
+  "lesson_no": 47,
+  "title_en": "Too High a Price?",
+  "title_cn": "代价太高?",
+  "grammar_focus": "the choice of A or B / 省略关系词的定语从句(things you can do)、现在分词修饰名词(dogs barking incessantly)、最高级 the highest / even more + 比较级、被动多形式(be found to do / It was revealed that / be kept awake by)、whatever 引导让步 + pay for / against these figures(原创承载 NCE3 第三册 L47 考点·无需净化:污染题材科普——垃圾、食品与噪音污染,幽默揭出最古老的噪音源竟是打鼾;本课为轻松科普/幽默,无暴力,正常试读;美式化 garbage/cell phone/neighbor)",
+  "scene": "污染,就是我们为这个人口过密、过度工业化的星球付出的代价。当你静下来想一想,处理垃圾其实只有四种办法:倾倒、焚烧、变成可再利用的东西,或者设法少产生一些。这四种办法我们一直都在试,可全世界产生的垃圾,单是那庞大的数量就有把我们淹没的危险。然而,垃圾只是污染这个星球的一部分问题。对越来越多廉价食物的需求,导致了另一种污染。工业化的农作方式生产出廉价的肉类,而大量使用杀虫剂和化肥又生产出廉价的谷物和蔬菜。我们为廉价食物付出的代价,也许已经太高了。就算你打算戒掉肉类、改吃素,也只能二选一:要么选价格昂贵的有机蔬菜,要么每次以为自己在吃新鲜色拉时,其实都在不停地摄入杀虫剂。不过,还有一种更为隐蔽的污染,尤其侵扰城市、闯入我们的日常生活,那就是噪音。半夜响起的汽车警报,除了惹恼邻居别无用处。警笛和风镐在街上朝我们尖叫,是极度烦躁的来源。一项关于噪音影响的调查显示——也许出人意料——夜里不停吠叫的狗,在一到七的评分上被列为最严重的噪音污染。调查还列出了一长串人们真正讨厌的声音:夏日午后嗡嗡作响的割草机、公寓楼里的深夜派对、吵闹的邻居、轰隆隆穿过安静小镇的大集装箱卡车、头顶飞过的飞机和直升机,还有公共场所里开到最大音量的音乐。新技术也为噪音添了一份“贡献”。很多人反感手机,尤其是在餐馆或公共交通上使用时——大声的通话闯进我们的思绪,打断了和朋友安静聊天的乐趣。这项调查还揭示了一个相当出人意料、甚至有点好笑的老式噪音源。原来是打鼾!人们发现,男人是最厉害的“冒犯者”:据披露,三十五岁上下的男人有百分之二十打鼾,到了六十多岁,这个数字更是飙升到令人惊愕的百分之六十。与这些数字相比,只有百分之五的女性经常打鼾,其余的则不断被身边吹号般的伴侣吵醒、或搅得无法入睡。无论噪音来自何处,有一点是肯定的:寂静,似乎已成了一段珍贵的回忆。",
+  "grammar_card": {
+    "title": "the choice of A or B / 现在分词修饰名词 / 最高级·even more / 被动多形式 / whatever 让步",
+    "intro": "①the choice of A or B:在 A 和 B 之间选择;things (that) you can do 里关系词作宾语可省略。②现在分词短语放名词后修饰它,表主动:dogs barking incessantly。③the + 最高级表“最…”;even/still + more + 形容词表“更加…”。④被动多形式:be found to do(被发现…)、It was revealed that …(据披露…)、be kept awake by …(被…吵得睡不着)。⑤whatever + 名词引导让步:Whatever the source of noise, …;pay for(为…付出代价)、against these figures(与这些数字相比)。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["the choice of A or B", "在 A、B 间选择", "the choice of organic food or cheap food"],
+        ["现在分词修饰名词", "…着的…", "dogs barking incessantly"],
+        ["even more + 形容词 / the 最高级", "更加… / 最…", "an even more insidious kind"],
+        ["be found to do / It was revealed that", "被发现… / 据披露…", "Men were found to be the worst"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "the choice of A or B 用 or 连接两项,不用 nor;of 不能换成 for。", "mark": "choice of A or B" },
+      { "rule": "whatever + 名词作让步状语(Whatever the source, …),不同于 however(接形容词/副词)、whenever(无论何时)。", "mark": "Whatever the source" },
+      { "rule": "美式:garbage/trash(英式 rubbish)、cell phone(英式 mobile)、neighbor(英式 neighbour)。本课已按美语写。", "mark": "garbage / cell phone" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What does the writer describe as an 'amusing old-fashioned source of noise'?",
+    "options": ["Snoring", "Church bells", "Steam engines", "Street singers"],
+    "answer_index": 0
+  },
+  "passage": "Pollution is the price we pay for an overpopulated, over-industrialized planet. When you stop to think about it, there are only four things you can do with garbage: dump it, burn it, turn it into something you can use again, or try to produce less of it. We keep trying all four methods, but the sheer volume of garbage we produce worldwide threatens to overwhelm us. Garbage, however, is only part of the problem of polluting our planet. The need to produce ever-larger quantities of cheap food leads to a different kind of pollution. Industrialized farming methods produce cheap meat, and the heavy use of pesticides and fertilizers produces cheap grain and vegetables. The price we pay for cheap food may already be too high. And if you think you will give up meat and become a vegetarian, you have the choice of either very expensive organically-grown vegetables or a steady diet of pesticides every time you eat what looks like a fresh salad. However, there is an even more insidious kind of pollution that especially affects urban areas and invades our daily lives, and that is noise. Car alarms going off in the middle of the night serve only to annoy the neighbors. Sirens and jackhammers scream at us in the street and are a source of profound irritation. A recent survey of the effects of noise revealed, perhaps surprisingly, that dogs barking incessantly at night rated the highest form of noise pollution on a scale ranging from one to seven. The survey turned up a long list of sounds that people really dislike: lawn mowers whining on a summer afternoon, late-night parties in apartment buildings, noisy neighbors, big container trucks thundering through quiet towns, planes and helicopters flying overhead, and loud music played at maximum volume in public places. New technology has made its own contribution to noise, too. Many people object to cell phones, especially when they are used in restaurants or on public transportation, where loud conversations invade our thoughts and interrupt the pleasure of a quiet chat with friends. The survey also revealed a rather surprising and possibly amusing old-fashioned source of noise. It turned out to be snoring! Men were found to be the worst offenders. It was revealed that twenty percent of men in their mid-thirties snore, and that this figure rises to a staggering sixty percent of men in their sixties. Against these figures, it was found that only five percent of women snore regularly, while the rest are constantly woken or kept awake by their trumpeting partners. Whatever the source of noise, one thing is certain: silence, it seems, has become a golden memory.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Pollution is the price we pay for an overpopulated, over-industrialized planet. When you stop to think about it, there are only four things you can do with garbage: dump it, burn it, turn it into something you can use again, or try to produce less of it. We keep trying all four methods, but the sheer volume of garbage we produce worldwide threatens to overwhelm us.", "text_cn": "污染,就是我们为这个人口过密、过度工业化的星球付出的代价。当你静下来想一想,处理垃圾其实只有四种办法:倾倒、焚烧、变成可再利用的东西,或者设法少产生一些。这四种办法我们一直都在试,可全世界产生的垃圾,单是那庞大的数量就有把我们淹没的危险。" },
+    { "seq": 2, "speaker": null, "text_en": "Garbage, however, is only part of the problem of polluting our planet. The need to produce ever-larger quantities of cheap food leads to a different kind of pollution. Industrialized farming methods produce cheap meat, and the heavy use of pesticides and fertilizers produces cheap grain and vegetables. The price we pay for cheap food may already be too high. And if you think you will give up meat and become a vegetarian, you have the choice of either very expensive organically-grown vegetables or a steady diet of pesticides every time you eat what looks like a fresh salad.", "text_cn": "然而,垃圾只是污染这个星球的一部分问题。对越来越多廉价食物的需求,导致了另一种污染。工业化的农作方式生产出廉价的肉类,而大量使用杀虫剂和化肥又生产出廉价的谷物和蔬菜。我们为廉价食物付出的代价,也许已经太高了。就算你打算戒掉肉类、改吃素,也只能二选一:要么选价格昂贵的有机蔬菜,要么每次以为自己在吃新鲜色拉时,其实都在不停地摄入杀虫剂。" },
+    { "seq": 3, "speaker": null, "text_en": "However, there is an even more insidious kind of pollution that especially affects urban areas and invades our daily lives, and that is noise. Car alarms going off in the middle of the night serve only to annoy the neighbors. Sirens and jackhammers scream at us in the street and are a source of profound irritation. A recent survey of the effects of noise revealed, perhaps surprisingly, that dogs barking incessantly at night rated the highest form of noise pollution on a scale ranging from one to seven.", "text_cn": "不过,还有一种更为隐蔽的污染,尤其侵扰城市、闯入我们的日常生活,那就是噪音。半夜响起的汽车警报,除了惹恼邻居别无用处。警笛和风镐在街上朝我们尖叫,是极度烦躁的来源。一项关于噪音影响的调查显示——也许出人意料——夜里不停吠叫的狗,在一到七的评分上被列为最严重的噪音污染。" },
+    { "seq": 4, "speaker": null, "text_en": "The survey turned up a long list of sounds that people really dislike: lawn mowers whining on a summer afternoon, late-night parties in apartment buildings, noisy neighbors, big container trucks thundering through quiet towns, planes and helicopters flying overhead, and loud music played at maximum volume in public places. New technology has made its own contribution to noise, too. Many people object to cell phones, especially when they are used in restaurants or on public transportation, where loud conversations invade our thoughts and interrupt the pleasure of a quiet chat with friends.", "text_cn": "调查还列出了一长串人们真正讨厌的声音:夏日午后嗡嗡作响的割草机、公寓楼里的深夜派对、吵闹的邻居、轰隆隆穿过安静小镇的大集装箱卡车、头顶飞过的飞机和直升机,还有公共场所里开到最大音量的音乐。新技术也为噪音添了一份贡献。很多人反感手机,尤其是在餐馆或公共交通上使用时——大声的通话闯进我们的思绪,打断了和朋友安静聊天的乐趣。" },
+    { "seq": 5, "speaker": null, "text_en": "The survey also revealed a rather surprising and possibly amusing old-fashioned source of noise. It turned out to be snoring! Men were found to be the worst offenders. It was revealed that twenty percent of men in their mid-thirties snore, and that this figure rises to a staggering sixty percent of men in their sixties. Against these figures, it was found that only five percent of women snore regularly, while the rest are constantly woken or kept awake by their trumpeting partners. Whatever the source of noise, one thing is certain: silence, it seems, has become a golden memory.", "text_cn": "这项调查还揭示了一个相当出人意料、甚至有点好笑的老式噪音源。原来是打鼾!人们发现,男人是最厉害的“冒犯者”:据披露,三十五岁上下的男人有百分之二十打鼾,到了六十多岁,这个数字更是飙升到令人惊愕的百分之六十。与这些数字相比,只有百分之五的女性经常打鼾,其余的则不断被身边吹号般的伴侣吵醒、或搅得无法入睡。无论噪音来自何处,有一点是肯定的:寂静,似乎已成了一段珍贵的回忆。" }
+  ],
+  "words": [
+    { "word": "pollution", "ipa": "/pəˈluːʃən/", "pos": "n", "meaning_cn": "污染", "example": "the problem of pollution" },
+    { "word": "overwhelm", "ipa": "/ˌoʊvərˈwelm/", "pos": "v", "meaning_cn": "制服,使不知所措", "example": "threatens to overwhelm us" },
+    { "word": "pesticide", "ipa": "/ˈpestɪsaɪd/", "pos": "n", "meaning_cn": "杀虫剂", "example": "the use of pesticides" },
+    { "word": "fertilizer", "ipa": "/ˈfɜːrtəlaɪzər/", "pos": "n", "meaning_cn": "肥料,化肥", "example": "pesticides and fertilizers" },
+    { "word": "insidious", "ipa": "/ɪnˈsɪdiəs/", "pos": "adj", "meaning_cn": "暗中为害的", "example": "an even more insidious kind of pollution" },
+    { "word": "urban", "ipa": "/ˈɜːrbən/", "pos": "adj", "meaning_cn": "城市的", "example": "affects urban areas" },
+    { "word": "incessantly", "ipa": "/ɪnˈsesəntli/", "pos": "adv", "meaning_cn": "连续不断地", "example": "dogs barking incessantly" },
+    { "word": "whine", "ipa": "/waɪn/", "pos": "v", "meaning_cn": "发嗡嗡声,发牢骚", "example": "lawn mowers whining" },
+    { "word": "profound", "ipa": "/prəˈfaʊnd/", "pos": "adj", "meaning_cn": "极度的,深刻的", "example": "a source of profound irritation" },
+    { "word": "snore", "ipa": "/snɔːr/", "pos": "v", "meaning_cn": "打鼾", "example": "twenty percent of men snore" },
+    { "word": "staggering", "ipa": "/ˈstæɡərɪŋ/", "pos": "adj", "meaning_cn": "令人惊愕的", "example": "a staggering sixty percent" },
+    { "word": "offender", "ipa": "/əˈfendər/", "pos": "n", "meaning_cn": "冒犯者,违规者", "example": "the worst offenders" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "the choice of A or B / 省略关系词的定语从句" },
+    { "gp": "gp2", "name": "现在分词修饰名词(dogs barking incessantly)" },
+    { "gp": "gp3", "name": "最高级 the highest / even more + 比较级" },
+    { "gp": "gp4", "name": "被动多形式(be found to do / It was revealed that / be kept awake by)" },
+    { "gp": "gp5", "name": "whatever 引导让步 / pay for / against these figures" },
+    { "gp": "gp6", "name": "词汇辨析(insidious/overwhelm/staggering)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"You have the choice ___ expensive organic food or cheap processed food.\"(the choice ___ A or B:在…之间选择,填介词)", "stem_cn": "你可以在昂贵有机食品和廉价加工食品之间选择。", "options": ["of", "for", "to", "with"] },
+    { "gp": "gp1", "stem": "\"There are four things you can do ___ garbage.\"(处理某物 do sth ___,填介词)", "stem_cn": "处理垃圾只有四种办法。", "options": ["with", "of", "in", "at"] },
+    { "gp": "gp1", "stem": "\"You can either recycle garbage ___ produce less of it.\"(either … ___ …:或者…或者)", "stem_cn": "你要么回收垃圾,要么少产生垃圾。", "options": ["or", "nor", "and", "but"] },
+    { "gp": "gp2", "stem": "\"Dogs ___ incessantly at night are the worst noise.\"(现在分词修饰 dogs:不停吠叫的)", "stem_cn": "夜里不停吠叫的狗是最糟的噪音。", "options": ["barking", "barked", "to bark", "bark"] },
+    { "gp": "gp2", "stem": "\"Car alarms ___ off at night annoy the neighbors.\"(现在分词修饰 alarms:响起的)", "stem_cn": "半夜响起的汽车警报吵到邻居。", "options": ["going", "gone", "to go", "go"] },
+    { "gp": "gp2", "stem": "\"Lawn mowers ___ on a summer afternoon disturb everyone.\"(现在分词修饰 mowers:嗡嗡作响的)", "stem_cn": "夏日午后嗡嗡作响的割草机搅得人人不安。", "options": ["whining", "whined", "to whine", "whine"] },
+    { "gp": "gp3", "stem": "\"Noise is an even ___ insidious kind of pollution than garbage.\"(even + 比较级:更加…)", "stem_cn": "噪音是比垃圾更隐蔽的一种污染。", "options": ["more", "most", "very", "much"] },
+    { "gp": "gp3", "stem": "\"Barking dogs rated the ___ form of noise pollution.\"(the + 最高级:最…的)", "stem_cn": "吠叫的狗被评为最严重的噪音污染。", "options": ["highest", "higher", "high", "most high"] },
+    { "gp": "gp3", "stem": "\"Men are the ___ offenders when it comes to snoring.\"(the + 最高级:最坏的)", "stem_cn": "说到打鼾,男人是最厉害的“冒犯者”。", "options": ["worst", "worse", "bad", "most bad"] },
+    { "gp": "gp4", "stem": "\"Men were ___ to be the worst offenders.\"(be ___ to be…,“被发现是”,填过去分词)", "stem_cn": "人们发现男人是最厉害的打鼾者。", "options": ["found", "find", "finding", "founded"] },
+    { "gp": "gp4", "stem": "\"It ___ revealed that 20% of men snore.\"(被动 It ___ revealed that,据披露,填 be 动词过去式)", "stem_cn": "据披露,百分之二十的男人打鼾。", "options": ["was", "is", "were", "has"] },
+    { "gp": "gp4", "stem": "\"Many women are kept awake ___ their snoring partners.\"(被动 + 施动者,填介词)", "stem_cn": "许多女人被打鼾的伴侣吵得睡不着。", "options": ["by", "of", "to", "with"] },
+    { "gp": "gp5", "stem": "\"___ the source of noise, silence is now rare.\"(“无论噪音来自何处”,让步)", "stem_cn": "无论噪音来自哪里,寂静如今都很难得。", "options": ["Whatever", "However", "Whenever", "Wherever"] },
+    { "gp": "gp5", "stem": "\"Pollution is the price we pay ___ an industrialized world.\"(pay ___:为…付出代价,填介词)", "stem_cn": "污染是我们为工业化世界付出的代价。", "options": ["for", "to", "at", "of"] },
+    { "gp": "gp5", "stem": "\"___ these figures, only 5% of women snore.\"(“与这些数字相比”:___ these figures)", "stem_cn": "与这些数字相比,只有百分之五的女性经常打鼾。", "options": ["Against", "For", "By", "On"] },
+    { "gp": "gp6", "stem": "\"Something harmful in a hidden, gradual way is ___.\"(“暗中为害的”用哪个词)", "stem_cn": "暗中逐渐为害的。", "options": ["insidious", "obvious", "harmless", "gentle"] },
+    { "gp": "gp6", "stem": "\"To defeat or bury someone completely is to ___ them.\"(“制服、使不知所措”用哪个词)", "stem_cn": "彻底压倒、使人不知所措。", "options": ["overwhelm", "protect", "relax", "greet"] },
+    { "gp": "gp6", "stem": "\"A number so large it shocks you is ___.\"(“令人惊愕的”用哪个词)", "stem_cn": "大得令人惊愕的数字。", "options": ["staggering", "tiny", "ordinary", "exact"] }
+  ],
+  "stage6": [
+    { "stem": "pollution 的意思是:", "options": ["污染", "治理", "回收", "预报"] },
+    { "stem": "overwhelm 的意思是:", "options": ["制服,使不知所措", "欢迎", "忽视", "照亮"] },
+    { "stem": "insidious 的意思是:", "options": ["暗中为害的", "明显的", "无害的", "短暂的"] },
+    { "stem": "incessantly 的意思是:", "options": ["连续不断地", "偶尔地", "安静地", "迅速地"] },
+    { "stem": "staggering 的意思是:", "options": ["令人惊愕的", "微不足道的", "十分普通的", "缓慢的"] },
+    { "stem": "offender 的意思是:", "options": ["冒犯者,违规者", "受害者", "保护者", "旁观者"] }
+  ],
+  "contrast": [
+    { "us": "garbage", "uk": "rubbish", "note_cn": "垃圾;美语 garbage/trash,英式 rubbish" },
+    { "us": "cell phone", "uk": "mobile phone", "note_cn": "手机;美语 cell phone,英式 mobile" },
+    { "us": "public transportation", "uk": "public transport", "note_cn": "公共交通;美语 transportation,英式 transport" },
+    { "us": "neighbor", "uk": "neighbour", "note_cn": "邻居;拼写差异,美语 neighbor" }
+  ],
+  "chunks": [
+    { "us": "pay for", "ipa": "/peɪ fɔːr/", "example1": "Pollution is the price we pay for progress.", "example1_cn": "污染是我们为进步付出的代价。", "example2": "You'll pay for this mistake.", "example2_cn": "你会为这个错误付出代价。" },
+    { "us": "go off", "ipa": "/ɡoʊ ɔːf/", "example1": "Car alarms go off in the middle of the night.", "example1_cn": "汽车警报半夜响起。", "example2": "The smoke detector went off suddenly.", "example2_cn": "烟雾报警器突然响了。" },
+    { "us": "object to", "ipa": "/əbˈdʒekt tə/", "example1": "People object to cell phones in restaurants.", "example1_cn": "人们反感在餐馆里用手机。", "example2": "She objected to the noise next door.", "example2_cn": "她对隔壁的噪音表示反对。" },
+    { "us": "keep awake", "ipa": "/kiːp əˈweɪk/", "example1": "The snoring kept her awake all night.", "example1_cn": "打鼾声让她整夜没睡。", "example2": "Coffee keeps me awake at night.", "example2_cn": "咖啡让我晚上睡不着。" }
+  ],
+  "stage7_cloze": {
+    "context": "Pollution is the price we ___1___ for an overpopulated, over-industrialized planet. Garbage is only part of the problem. There is an even ___2___ insidious kind of pollution: noise. A survey found that dogs ___3___ incessantly at night rated the highest. Surprisingly, snoring was on the list too: men ___4___ found to be the worst offenders.",
+    "blanks": [
+      { "blank_no": 1, "options": ["pay", "cost", "spend", "buy"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["more", "most", "very", "much"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["barking", "barked", "to bark", "bark"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["were", "was", "are", "is"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What amusing old-fashioned source of noise did the survey reveal?", "options": ["Snoring", "Church bells", "Steam trains", "Street musicians"] },
+    { "stem": "Which sound rated the highest form of noise pollution?", "options": ["Dogs barking incessantly at night", "Car alarms", "Cell phones", "Lawn mowers"] },
+    { "stem": "According to the survey, who are the worst snorers?", "options": ["Men, especially older men", "Young women", "Small children", "Teenagers"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"你可以在昂贵有机食品和廉价食品之间选择\"(the choice of A or B):", "options": ["You have the choice of expensive organic food or cheap food.", "You have the choice for expensive organic food or cheap food.", "You have the choice of expensive organic food nor cheap food.", "You have choice of expensive organic food or cheap food."] },
+    { "stem": "你想说\"许多女人被打鼾的伴侣吵得睡不着\"(被动 + by):", "options": ["Many women are kept awake by their snoring partners.", "Many women are kept awake with their snoring partners.", "Many women keep awake by their snoring partners.", "Many women are kept awake of their snoring partners."] },
+    { "stem": "你想说\"无论噪音来自何处,寂静都已难得\"(whatever 让步):", "options": ["Whatever the source of noise, silence is now rare.", "However the source of noise, silence is now rare.", "Whenever the source of noise, silence is now rare.", "What the source of noise, silence is now rare."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "insidious 的意思是:", "options": ["暗中为害的", "明显的", "无害的", "短暂的"] },
+    { "kind": "vocab", "stem": "staggering 的意思是:", "options": ["令人惊愕的", "微不足道的", "十分普通的", "缓慢的"] },
+    { "kind": "grammar", "stem": "\"You have the choice ___ organic food or cheap food.\"(the choice ___ A or B:在…之间选择)", "stem_cn": "你可以在有机食品和廉价食品之间选择。", "options": ["of", "for", "to", "with"] },
+    { "kind": "grammar", "stem": "\"Men were ___ to be the worst offenders.\"(be ___ to be…,“被发现是”,填过去分词)", "stem_cn": "人们发现男人是最厉害的打鼾者。", "options": ["found", "find", "finding", "founded"] },
+    { "kind": "scenario", "stem": "\"go off\" 的意思是:", "options": ["(警报等)突然响起", "熄灭、关掉", "出发离开", "变质"] },
+    { "kind": "scenario", "stem": "\"object to\" 的意思是:", "options": ["反对、不喜欢", "赞成", "提出", "描述"] },
+    { "kind": "reading", "stem": "According to the writer, what are the four ways to deal with garbage?", "options": ["Dump it, burn it, recycle it, or produce less of it", "Bury it, sell it, hide it, or ignore it", "Export it, freeze it, crush it, or paint it", "Wash it, dry it, fold it, or store it"], "passage": true },
+    { "kind": "reading", "stem": "Why does the writer say the price of cheap food may be too high?", "options": ["Cheap food comes with pesticides, and cheap meat brings disease risks", "Cheap food simply tastes bad", "Cheap food is hard to find", "Cheap food is always imported"], "passage": true },
+    { "kind": "listening", "stem": "How does the percentage of snoring men change with age?", "options": ["It rises from about 20% in their mid-thirties to about 60% in their sixties", "It falls steadily as men get older", "It stays the same all through life", "Only 5% of men ever snore"], "audio": true },
+    { "kind": "listening", "stem": "What has silence become, according to the writer?", "options": ["A golden memory", "A daily habit", "A new law", "A kind of pollution"], "audio": true }
+  ]
+}

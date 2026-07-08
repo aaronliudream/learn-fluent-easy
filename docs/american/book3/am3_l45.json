@@ -1,0 +1,133 @@
+{
+  "id": "am3_l45",
+  "unit_no": 9,
+  "lesson_no": 45,
+  "title_en": "The Power of the Press",
+  "title_cn": "新闻报道的威力",
+  "grammar_focus": "虚拟语气(与过去相反 If + had done, would have done)、not only … but (also) …(不但…而且,句首倒装)、同位语从句(the contention/fact + that)、现在分词短语作状语(Acting on …)、be to be done(注定将被…;情态被动 can be abused)(原创承载 NCE3 第三册 L45 考点·无需净化:新闻自由题材——南达科他一贫困家庭因五胞胎一夜成名、沦为商业化牺牲品;本就美国背景,美式化 airplane/attorney)",
+  "scene": "在民主国家里,任何限制新闻自由的企图都理所当然地受到谴责。然而,这种自由很容易被滥用。关于普通人的报道,往往比政治事件更能吸引公众注意。我们都爱看别人生活的故事,可若是看关于自己的报道,就很难说也一样爱看了。记者秉持事实至上的论点,靠公开别人的私生活细节,能给当事人带来说不尽的痛苦。报纸的影响力如此巨大,以至于它们不但能给普通人的生活带来重大变化,甚至能帮着推翻一个政府。下面这户穷人家一夜之间名利双收的故事,戏剧性地说明了新闻报道的威力。这家人住在南达科他州一个两万三千人的小镇上。父母已有五个孩子,生活是同贫困的一场无休止的搏斗。他们正等着第六个孩子出世,面临着更为严峻的经济难题。若他们只是再添一个孩子,这件事本来根本不会引人注意——他们会继续同厄运搏斗,默默无闻地过下去。可他们却突然成了五胞胎的父母——四女一男——这件事彻底改变了他们的生活。五个孩子出生的第二天,一架飞机飞抵小镇,带来了六十名记者和摄影师。成名快得惊人。电视摄像机和报纸把消息传遍全国。报纸杂志出高价向这家人购买刊登文字和图片的独家权。礼物纷纷涌来,不只来自素不相识的人,还来自想借此为产品打广告的婴儿食品厂和肥皂厂。这家人住的旧农舍,将被一座价值五十万美元的新居所取代。记者不停地要求采访,于是不得不雇律师充当发言人,在记者招待会上代言。五个婴儿还静静地睡在医院育婴室的氧气帐里时,他们的父母已经在为名声付出代价。他们再也不可能过正常的日子了。他们成了商业化的牺牲品,因为他们的名字有了市场价值。这几个孩子不再是家里五个新成员,而是转眼间成了商品。",
+  "grammar_card": {
+    "title": "虚拟语气(与过去相反) / not only…but also / 同位语从句 that / 现在分词作状语 / be to be done",
+    "intro": "①与过去事实相反的虚拟语气:If + 主语 + had + 过去分词, 主语 + would/could/might + have + 过去分词:If they had had one more child, the fact would have passed unnoticed。②not only … but (also) …:不但…而且;not only 放句首时,其后要部分倒装:Not only did they …, but they also …。③同位语从句:抽象名词(contention/fact/belief)后接 that + 完整句,说明其内容。④现在分词短语作状语:Acting on the contention …, reporters …。⑤be to be done:注定/按计划将被…;can be abused:情态动词后接被动。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["If had done, would have done", "与过去相反的虚拟", "If they had had …, it would have passed"],
+        ["not only … but (also)", "不但…而且", "not only change lives but overthrow …"],
+        ["the + 抽象名词 + that 从句", "同位语从句", "the contention that facts are sacred"],
+        ["be to be done / can be done", "注定被… / 能被…", "was to be replaced; can be abused"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "与过去相反的虚拟:if 从句必须用 had + 过去分词,主句必须用 would/could/might + have + 过去分词,两半不能都用 would。", "mark": "had done … would have done" },
+      { "rule": "not only 位于句首时其所在分句要部分倒装(把助动词提前):Not only did they become famous, but …。", "mark": "Not only did …" },
+      { "rule": "美式:airplane(英式 aeroplane)、attorney/lawyer(英式 solicitor)。本课本就美国背景(南达科他州)。", "mark": "airplane / attorney" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Does the writer think the parents were lucky or unlucky to gain prosperity this way? Why?",
+    "options": ["Unlucky — they became victims of commercialization and lost their normal lives", "Lucky — they got rich with no downside", "Lucky — they enjoyed being famous", "The writer gives no opinion"],
+    "answer_index": 0
+  },
+  "passage": "In democratic countries, any attempt to restrict the freedom of the press is rightly condemned. However, this freedom can easily be abused. Stories about people often attract far more public attention than political events. Though we may enjoy reading about the lives of others, it is extremely doubtful whether we would enjoy reading about ourselves. Acting on the contention that facts are sacred, reporters can cause untold suffering to individuals by publishing details about their private lives. Newspapers exert such tremendous influence that they can not only bring about major changes in the lives of ordinary people but can even help overthrow a government. The story of a poor family that acquired fame and fortune overnight dramatically illustrates the power of the press. The family lived in a small town of twenty-three thousand people in South Dakota. As the parents already had five children, life was a perpetual struggle against poverty. They were expecting their sixth child and faced even more pressing money problems. If they had only had one more child, the fact would have passed unnoticed. They would have gone on struggling against economic odds and would have lived in obscurity. But they suddenly became the parents of quintuplets — four girls and a boy — an event that radically changed their lives. The day after the birth of the five children, an airplane arrived in town carrying sixty reporters and photographers. The rise to fame was swift. Television cameras and newspapers carried the news to everyone in the country. Newspapers and magazines offered the family huge sums for the exclusive rights to publish stories and photographs. Gifts poured in, not only from strangers but from baby-food and soap companies that wanted to advertise their products. The old farmhouse the family lived in was to be replaced by a new five-hundred-thousand-dollar home. Reporters kept pressing for interviews, so lawyers had to be hired to act as spokesmen at press conferences. While the five babies were still sleeping quietly in oxygen tents in a hospital nursery, their parents were already paying the price of fame. It would never again be possible for them to lead normal lives. They had become the victims of commercialization, for their names had acquired a market value. Instead of being five new members of a family, these children had instantly become a commodity.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "In democratic countries, any attempt to restrict the freedom of the press is rightly condemned. However, this freedom can easily be abused. Stories about people often attract far more public attention than political events. Though we may enjoy reading about the lives of others, it is extremely doubtful whether we would enjoy reading about ourselves.", "text_cn": "在民主国家里,任何限制新闻自由的企图都理所当然地受到谴责。然而,这种自由很容易被滥用。关于普通人的报道,往往比政治事件更能吸引公众注意。我们都爱看别人生活的故事,可若是看关于自己的报道,就很难说也一样爱看了。" },
+    { "seq": 2, "speaker": null, "text_en": "Acting on the contention that facts are sacred, reporters can cause untold suffering to individuals by publishing details about their private lives. Newspapers exert such tremendous influence that they can not only bring about major changes in the lives of ordinary people but can even help overthrow a government. The story of a poor family that acquired fame and fortune overnight dramatically illustrates the power of the press.", "text_cn": "记者秉持事实至上的论点,靠公开别人的私生活细节,能给当事人带来说不尽的痛苦。报纸的影响力如此巨大,以至于它们不但能给普通人的生活带来重大变化,甚至能帮着推翻一个政府。下面这户穷人家一夜之间名利双收的故事,戏剧性地说明了新闻报道的威力。" },
+    { "seq": 3, "speaker": null, "text_en": "The family lived in a small town of twenty-three thousand people in South Dakota. As the parents already had five children, life was a perpetual struggle against poverty. They were expecting their sixth child and faced even more pressing money problems. If they had only had one more child, the fact would have passed unnoticed. They would have gone on struggling against economic odds and would have lived in obscurity.", "text_cn": "这家人住在南达科他州一个两万三千人的小镇上。父母已有五个孩子,生活是同贫困的一场无休止的搏斗。他们正等着第六个孩子出世,面临着更为严峻的经济难题。若他们只是再添一个孩子,这件事本来根本不会引人注意——他们会继续同厄运搏斗,默默无闻地过下去。" },
+    { "seq": 4, "speaker": null, "text_en": "But they suddenly became the parents of quintuplets — four girls and a boy — an event that radically changed their lives. The day after the birth of the five children, an airplane arrived in town carrying sixty reporters and photographers. The rise to fame was swift. Television cameras and newspapers carried the news to everyone in the country. Newspapers and magazines offered the family huge sums for the exclusive rights to publish stories and photographs.", "text_cn": "可他们却突然成了五胞胎的父母——四女一男——这件事彻底改变了他们的生活。五个孩子出生的第二天,一架飞机飞抵小镇,带来了六十名记者和摄影师。成名快得惊人。电视摄像机和报纸把消息传遍全国。报纸杂志出高价向这家人购买刊登文字和图片的独家权。" },
+    { "seq": 5, "speaker": null, "text_en": "Gifts poured in, not only from strangers but from baby-food and soap companies that wanted to advertise their products. The old farmhouse the family lived in was to be replaced by a new five-hundred-thousand-dollar home. Reporters kept pressing for interviews, so lawyers had to be hired to act as spokesmen at press conferences. While the five babies were still sleeping quietly in oxygen tents in a hospital nursery, their parents were already paying the price of fame. They had become the victims of commercialization, for their names had acquired a market value. Instead of being five new members of a family, these children had instantly become a commodity.", "text_cn": "礼物纷纷涌来,不只来自素不相识的人,还来自想借此为产品打广告的婴儿食品厂和肥皂厂。这家人住的旧农舍,将被一座价值五十万美元的新居所取代。记者不停地要求采访,于是不得不雇律师充当发言人,在记者招待会上代言。五个婴儿还静静地睡在医院育婴室的氧气帐里时,他们的父母已经在为名声付出代价。他们成了商业化的牺牲品,因为他们的名字有了市场价值。这几个孩子不再是家里五个新成员,而是转眼间成了商品。" }
+  ],
+  "words": [
+    { "word": "democratic", "ipa": "/ˌdeməˈkrætɪk/", "pos": "adj", "meaning_cn": "民主的", "example": "in democratic countries" },
+    { "word": "restrict", "ipa": "/rɪˈstrɪkt/", "pos": "v", "meaning_cn": "限制", "example": "restrict the freedom of the press" },
+    { "word": "abuse", "ipa": "/əˈbjuːz/", "pos": "v", "meaning_cn": "滥用", "example": "this freedom can be abused" },
+    { "word": "contention", "ipa": "/kənˈtenʃən/", "pos": "n", "meaning_cn": "论点,看法", "example": "the contention that facts are sacred" },
+    { "word": "perpetual", "ipa": "/pərˈpetʃuəl/", "pos": "adj", "meaning_cn": "永久的,无休止的", "example": "a perpetual struggle against poverty" },
+    { "word": "obscurity", "ipa": "/əbˈskjʊrəti/", "pos": "n", "meaning_cn": "默默无闻", "example": "they would have lived in obscurity" },
+    { "word": "radically", "ipa": "/ˈrædɪkli/", "pos": "adv", "meaning_cn": "彻底地,完全地", "example": "radically changed their lives" },
+    { "word": "exclusive", "ipa": "/ɪkˈskluːsɪv/", "pos": "adj", "meaning_cn": "独占的,独家的", "example": "the exclusive rights to publish" },
+    { "word": "quintuplet", "ipa": "/kwɪnˈtʌplət/", "pos": "n", "meaning_cn": "五胞胎之一", "example": "they became the parents of quintuplets" },
+    { "word": "commercialization", "ipa": "/kəˌmɜːrʃələˈzeɪʃən/", "pos": "n", "meaning_cn": "商品化,商业化", "example": "the victims of commercialization" },
+    { "word": "commodity", "ipa": "/kəˈmɑːdəti/", "pos": "n", "meaning_cn": "商品", "example": "the children became a commodity" },
+    { "word": "untold", "ipa": "/ʌnˈtoʊld/", "pos": "adj", "meaning_cn": "数不尽的,无限的", "example": "untold suffering" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "虚拟语气(与过去相反 If + had done, would have done)" },
+    { "gp": "gp2", "name": "not only … but (also) …(不但…而且,句首倒装)" },
+    { "gp": "gp3", "name": "同位语从句(the contention/fact + that)" },
+    { "gp": "gp4", "name": "现在分词短语作状语(Acting on …)" },
+    { "gp": "gp5", "name": "be to be done / 情态被动(can be abused)" },
+    { "gp": "gp6", "name": "词汇辨析(restrict/abuse/perpetual)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"If they had had one more child, the fact ___ passed unnoticed.\"(与过去相反:主句用 ___ + 过去分词)", "stem_cn": "若他们只添一个孩子,这事本来不会引人注意。", "options": ["would have", "would", "will have", "had"] },
+    { "gp": "gp1", "stem": "\"If the parents had had a sixth child, no one ___ have noticed.\"(与过去相反,主句缺的那个助动词)", "stem_cn": "若父母只生第六个孩子,没人会注意。", "options": ["would", "will", "does", "had"] },
+    { "gp": "gp1", "stem": "\"They would have lived in obscurity if fame ___ come.\"(与过去相反,if 从句用过去完成的否定)", "stem_cn": "若名声没有降临,他们本会默默无闻地生活。", "options": ["had not", "did not", "would not", "has not"] },
+    { "gp": "gp2", "stem": "\"Newspapers can not only change lives ___ even overthrow a government.\"(not only … ___ …:不但…而且)", "stem_cn": "报纸不但能改变生活,甚至能推翻政府。", "options": ["but", "and", "or", "nor"] },
+    { "gp": "gp2", "stem": "\"The press not only informs us ___ also shapes our views.\"(not only … ___ also …)", "stem_cn": "新闻界不但告知我们,还塑造我们的观点。", "options": ["but", "so", "for", "yet"] },
+    { "gp": "gp2", "stem": "\"Not only ___ the parents become famous, but they also grew rich.\"(Not only 置句首,后半部分倒装,填助动词)", "stem_cn": "父母不但出了名,还发了财。", "options": ["did", "were", "do", "had"] },
+    { "gp": "gp3", "stem": "\"Reporters act on the contention ___ facts are sacred.\"(同位语从句,说明 contention 内容)", "stem_cn": "记者按事实至上的论点行事。", "options": ["that", "which", "what", "whether"] },
+    { "gp": "gp3", "stem": "\"The fact ___ they had five children was well known.\"(同位语从句,说明 fact)", "stem_cn": "他们有五个孩子这一事实众所周知。", "options": ["that", "which", "what", "it"] },
+    { "gp": "gp3", "stem": "\"News spread of the belief ___ the babies were a miracle.\"(同位语从句,说明 belief)", "stem_cn": "婴儿是奇迹这一说法传开了。", "options": ["that", "which", "what", "whether"] },
+    { "gp": "gp4", "stem": "\"___ on the contention that facts are sacred, reporters print anything.\"(现在分词短语作状语:依据…)", "stem_cn": "记者以事实至上为依据,什么都敢登。", "options": ["Acting", "Act", "Acted", "To act"] },
+    { "gp": "gp4", "stem": "\"Gifts poured in, ___ from unknown people.\"(现在分词表伴随:来自…)", "stem_cn": "礼物涌来,来自陌生人。", "options": ["coming", "come", "came", "to come"] },
+    { "gp": "gp4", "stem": "\"The plane landed, ___ sixty reporters to the town.\"(现在分词表伴随:带来)", "stem_cn": "飞机降落,带来六十名记者。", "options": ["bringing", "brought", "bring", "to bring"] },
+    { "gp": "gp5", "stem": "\"The old farmhouse ___ to be replaced by a new home.\"(be to be done:注定将被…,填 be 动词的过去式)", "stem_cn": "那座旧农舍将被一座新居所取代。", "options": ["was", "is", "has", "did"] },
+    { "gp": "gp5", "stem": "\"Lawyers had to ___ hired to speak for the family.\"(had to 后面接被动语态,不得不被雇)", "stem_cn": "不得不雇律师为这家人代言。", "options": ["be", "been", "being", "was"] },
+    { "gp": "gp5", "stem": "\"This freedom can easily ___ abused.\"(can 后接被动语态,“能被滥用”)", "stem_cn": "这种自由很容易被滥用。", "options": ["be", "been", "being", "is"] },
+    { "gp": "gp6", "stem": "\"To limit or keep something within bounds is to ___ it.\"(“限制”用哪个词)", "stem_cn": "把某物限制在范围内。", "options": ["restrict", "expand", "allow", "ignore"] },
+    { "gp": "gp6", "stem": "\"Something that never ends or is constant is ___.\"(“永久的、无休止的”用哪个词)", "stem_cn": "永不停止、持续不断的。", "options": ["perpetual", "brief", "sudden", "rare"] },
+    { "gp": "gp6", "stem": "\"To use a right wrongly or misuse it is to ___ it.\"(“滥用”用哪个词)", "stem_cn": "错误地使用、滥用某种权利。", "options": ["abuse", "protect", "obey", "praise"] }
+  ],
+  "stage6": [
+    { "stem": "restrict 的意思是:", "options": ["限制", "扩大", "允许", "忽视"] },
+    { "stem": "abuse 的意思是:", "options": ["滥用", "保护", "赞美", "遵守"] },
+    { "stem": "perpetual 的意思是:", "options": ["永久的,无休止的", "短暂的", "偶然的", "临时的"] },
+    { "stem": "obscurity 的意思是:", "options": ["默默无闻", "名声", "财富", "权力"] },
+    { "stem": "exclusive 的意思是:", "options": ["独占的,独家的", "公开的", "共享的", "免费的"] },
+    { "stem": "commodity 的意思是:", "options": ["商品", "礼物", "服务", "工厂"] }
+  ],
+  "contrast": [
+    { "us": "airplane", "uk": "aeroplane", "note_cn": "飞机;美语 airplane,英式 aeroplane" },
+    { "us": "attorney", "uk": "solicitor", "note_cn": "律师;美语常说 attorney/lawyer,英式说 solicitor" },
+    { "us": "TV", "uk": "telly", "note_cn": "电视;美语口语 TV,英式口语 telly" },
+    { "us": "mom", "uk": "mum", "note_cn": "妈妈;美语 mom,英式 mum" }
+  ],
+  "chunks": [
+    { "us": "bring about", "ipa": "/brɪŋ əˈbaʊt/", "example1": "Newspapers can bring about major changes.", "example1_cn": "报纸能带来重大变化。", "example2": "The reform brought about big improvements.", "example2_cn": "这项改革带来了很大改善。" },
+    { "us": "act on", "ipa": "/ækt ɑːn/", "example1": "Reporters act on the contention that facts are sacred.", "example1_cn": "记者按事实至上的论点行事。", "example2": "The police acted on a tip.", "example2_cn": "警方根据一条线报采取了行动。" },
+    { "us": "pour in", "ipa": "/pɔːr ɪn/", "example1": "Gifts poured in from strangers.", "example1_cn": "礼物从陌生人那里纷纷涌来。", "example2": "Letters poured in after the show.", "example2_cn": "节目播出后信件大量涌来。" },
+    { "us": "press for", "ipa": "/pres fɔːr/", "example1": "Reporters kept pressing for interviews.", "example1_cn": "记者不停地要求采访。", "example2": "The workers pressed for higher pay.", "example2_cn": "工人们迫切要求加薪。" }
+  ],
+  "stage7_cloze": {
+    "context": "In democratic countries, any attempt to restrict the freedom of the press is rightly condemned, yet this freedom can easily ___1___ abused. One poor family in South Dakota became famous overnight when quintuplets were born. If they had only had one more child, the fact ___2___ have passed unnoticed. Instead, newspapers not only reported the story ___3___ paid huge sums for exclusive rights. Acting ___4___ the contention that facts are sacred, reporters printed every detail.",
+    "blanks": [
+      { "blank_no": 1, "options": ["be", "been", "being", "is"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["would", "will", "does", "had"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["but", "and", "or", "so"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["on", "in", "at", "of"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Does the writer think the parents were lucky to gain wealth this way?", "options": ["No — they became victims of commercialization", "Yes — they were very fortunate", "Yes — they enjoyed the fame", "The writer does not say"] },
+    { "stem": "How did the family suddenly become famous?", "options": ["They became the parents of quintuplets", "They won a lottery", "They found gold", "They wrote a best-selling book"] },
+    { "stem": "Why were lawyers hired for the family?", "options": ["To act as spokesmen at press conferences", "To adopt the babies", "To buy a new house", "To sue the newspapers"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"若他们只添一个孩子,这事本来不会引人注意\"(虚拟与过去相反):", "options": ["If they had had one more child, the fact would have passed unnoticed.", "If they had one more child, the fact would have passed unnoticed.", "If they had had one more child, the fact would passed unnoticed.", "If they have had one more child, the fact would have passed unnoticed."] },
+    { "stem": "你想说\"报纸不但能改变生活,甚至能推翻政府\"(not only … but …):", "options": ["Newspapers can not only change lives but even overthrow a government.", "Newspapers can not only change lives and even overthrow a government.", "Newspapers not only can change lives but even can overthrows a government.", "Newspapers can not only change lives but even overthrows a government."] },
+    { "stem": "你想说\"记者按事实至上的论点行事\"(同位语从句 the contention that):", "options": ["Reporters act on the contention that facts are sacred.", "Reporters act on the contention which facts are sacred.", "Reporters act on the contention what facts are sacred.", "Reporters act on the contention that facts sacred."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "restrict 的意思是:", "options": ["限制", "扩大", "允许", "忽视"] },
+    { "kind": "vocab", "stem": "commodity 的意思是:", "options": ["商品", "礼物", "服务", "工厂"] },
+    { "kind": "grammar", "stem": "\"If they had had one more child, the fact ___ passed unnoticed.\"(与过去相反:主句用 ___ + 过去分词)", "stem_cn": "若他们只添一个孩子,这事本来不会引人注意。", "options": ["would have", "would", "will have", "had"] },
+    { "kind": "grammar", "stem": "\"Newspapers can not only change lives ___ even overthrow a government.\"(not only … ___ …)", "stem_cn": "报纸不但能改变生活,甚至能推翻政府。", "options": ["but", "and", "or", "nor"] },
+    { "kind": "scenario", "stem": "\"bring about\" 的意思是:", "options": ["带来、导致", "拿走", "推迟", "拒绝"] },
+    { "kind": "scenario", "stem": "\"pour in\" 的意思是:", "options": ["大量涌入、源源而来", "慢慢流出", "停止", "倒空"] },
+    { "kind": "reading", "stem": "Why does the writer say the family became 'victims of commercialization'?", "options": ["Their names had acquired a market value and the children became a commodity", "They lost all their money", "They were attacked by reporters", "They were forced to move away"], "passage": true },
+    { "kind": "reading", "stem": "What would have happened if the parents had had only one more child?", "options": ["The fact would have passed unnoticed and they would have lived in obscurity", "They would have become even more famous", "They would have moved to a big city", "They would have received even more gifts"], "passage": true },
+    { "kind": "listening", "stem": "How soon after the birth did reporters arrive?", "options": ["The day after the birth, sixty of them came by airplane", "A full year later", "They never came", "Only one reporter came"], "audio": true },
+    { "kind": "listening", "stem": "Where were the five babies while their parents dealt with the press?", "options": ["Sleeping in oxygen tents in a hospital nursery", "At home with relatives", "On a television set", "In a new mansion"], "audio": true }
+  ]
+}

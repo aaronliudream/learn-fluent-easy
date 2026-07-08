@@ -1,21 +1,25 @@
-// 课本 PDF 渲染器(样章)。用法: node scripts/american/pdf/build-book.mjs <unit_no>
-// 读 data/unitNN.json → 输出 out/book-unitNN.html(自带 print CSS)。
-// 再用 Chrome headless --print-to-pdf 出 PDF。零改库、忠实渲染。
+// 课本 PDF 渲染器。用法: node scripts/american/pdf/build-book.mjs <book> [unit|all]   例: node ... 2 all
+// 读 data/book<N>/unitNN.json → 输出 out/book<N>-full.html(自带 print CSS)。
+// 再用 Chrome headless --print-to-pdf 出 PDF。零改库、忠实渲染。单元数按该册实际 data 文件动态,不硬编。
 import fs from "node:fs";
 import path from "node:path";
 
 const ROOT = process.cwd();
-const arg = process.argv[2] || "1";
+const book = Number(process.argv[2] || "0");
+if (![2, 3, 4].includes(book)) { console.error("用法: build-book.mjs <2|3|4> [unit|all]"); process.exit(1); }
+const arg = process.argv[3] || "all";
 const isAll = arg === "all";
-const DATADIR = path.join(ROOT, "scripts/american/pdf/data");
+const DATADIR = path.join(ROOT, `scripts/american/pdf/data/book${book}`);
 const OUT = path.join(ROOT, "scripts/american/pdf/out");
 fs.mkdirSync(OUT, { recursive: true });
-const unitNos = isAll ? Array.from({ length: 12 }, (_, i) => i + 1) : [Number(arg)];
+// 单元数据驱动:all 模式读该册 data 目录下实际存在的 unitNN.json(第二/三册=12、第四册=8),不硬编 12。
+const availUnits = fs.readdirSync(DATADIR).filter((f) => /^unit\d+\.json$/.test(f)).map((f) => Number(f.match(/\d+/)[0])).sort((a, b) => a - b);
+const unitNos = isAll ? availUnits : [Number(arg)];
 const UNITS = unitNos.map((n) => JSON.parse(fs.readFileSync(path.join(DATADIR, `unit${String(n).padStart(2, "0")}.json`), "utf8")));
 
 const CN_UNIT = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"];
 const COURSE = "现代版美语新概念英语";
-const VOL = "第一册";
+const VOL = ["", "第一册", "第二册", "第三册", "第四册"][book] || `第${book}册`;
 
 // ---------- 工具 ----------
 // Noto SC 无国旗字形(🇺🇸/🇬🇧 会掉回 US/GB 字母),统一剥除;美/英标签已用中文文字。
@@ -323,7 +327,7 @@ ${isAll ? bookToc : ""}
 ${body}
 </body></html>`;
 
-const base = isAll ? "book-full" : `book-unit${String(UNITS[0].unit_no).padStart(2, "0")}`;
+const base = isAll ? `book${book}-full` : `book${book}-unit${String(UNITS[0].unit_no).padStart(2, "0")}`;
 const htmlPath = path.join(OUT, `${base}.html`);
 fs.writeFileSync(htmlPath, html, "utf8");
 const totalLessons = UNITS.reduce((s, u) => s + u.lessons.length, 0);

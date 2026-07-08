@@ -1,0 +1,134 @@
+{
+  "id": "am4_l25",
+  "unit_no": 5,
+  "lesson_no": 25,
+  "title_en": "Non-auditory Effects of Noise",
+  "title_cn": "噪声的非听觉效应",
+  "grammar_focus": "neither … nor …(连接并列成分,动词就近一致)、过去分词作后置定语(an allegation often made)、whether 引导‘是否’的从句(discover whether …)、that 引导的表语从句(The snag is that …)、less … than / 比较级 + than(NCE4 无 KS 页,考点由课文结构自取;IP:源为 D.E. 布罗德本特《Science Survey》‘噪声的非听觉效应’一文,内容为‘噪声是否致精神病需大样本研究、轶事无凭’的科普论证事实,已用 100% 原创行文复述,无逐句改写;净化:打字员轶事改中性、删去‘孤儿院即健康危害’的污名措辞;题材=科学论证·无害;美语化 neighbor/analyze;第四册第25课·U5开工)",
+  "scene": "人们常争论噪声的作用,而这些作用并非全是听觉方面的——也就是说,并不都关乎听力本身。一种常被提出的指控是:噪声会引发精神疾病。某杂志曾登过一张令人揪心的照片:一个神情痛苦的女子,配着一行说明——‘又一个被折磨得心力交瘁的受害者’。翻到正文,读者才知道那女子是个打字员,她觉得办公室机器的咔嗒声越来越让人心烦,最后只好去看心理门诊。可这类轶事的毛病显而易见:我们怎么知道,真正的原因是噪声,而不是别的什么?一则故事再触目惊心,作为证据也是不充分的;一个审慎的读者,会对从中得出的任何确定结论持怀疑、不予采信。这个问题真正需要的,是对大量生活在噪声环境中的人做一番研究,看看他们是否比别人更常生病。若干年前,某国海军考察了大批在航空母舰上工作的人——他们与一个又一个喷气机中队共用甲板,那想必是地球上最吵的工作场所之一。然而,无论是精神科访谈还是客观测试,都无法显示噪声对这些水兵的心理有任何影响。如果噪声真会损害心理健康,那影响也必定小到现有的诊断手段都查不出来。这并不能证明影响不存在;但它确实提示:‘还世界一份安静’的呼吁,应当建立在诚实的证据上,而不是靠吓人的图片。降噪本是一桩好事,若被薄弱的论证拖累而失信,实在可惜。噪声很可能不如现代生活中许多别的压力那么危险;明智的做法,是在下结论之前,先把它的作用仔细量一量。",
+  "grammar_card": {
+    "title": "neither … nor / 过去分词作后置定语 / whether 从句 / 表语从句 / less … than",
+    "intro": "①neither A nor B,动词与靠近的 B 一致(就近原则):Neither the doctors nor the machine was able to …。②过去分词置于名词后作定语,表被动/完成:an allegation often made。③whether 引导‘是否’的从句:discover whether they are ill。④that 引导的从句放在 be 后作表语:The snag is that it proves nothing。⑤less … than / 比较级 + than。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["neither … nor", "Neither A nor B + 就近动词", "Neither interviews nor tests were able to …"],
+        ["过去分词作定语", "名词 + 过去分词", "an allegation often made"],
+        ["whether 从句", "discover whether …", "discover whether they are ill"],
+        ["表语从句", "be + that 从句", "The snag is that it proves nothing"],
+        ["less … than", "less + 形容词 + than", "less dangerous than other strains"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "neither A nor B 作句子开头时,动词与更靠近的 B 保持一致(就近原则)。", "mark": "就近一致" },
+      { "rule": "非限定/后置的过去分词表被动或已完成(made / known / conducted);现在分词(working)表主动进行,别混。", "mark": "made ≠ making" },
+      { "rule": "美式拼写:neighbor(邻居,英式 neighbour)、analyze(分析,英式 analyse)。本课已按美语写。", "mark": "neighbor / analyze" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What conclusion does the author draw about noise and mental health?",
+    "options": ["If noise affects mental health at all, the effect is too small for present methods to detect", "Noise clearly causes madness", "Noise has no effect on hearing", "Noise is the greatest health hazard of our time"],
+    "answer_index": 0
+  },
+  "passage": "People often argue about the effects of noise, and not all of those effects are auditory — that is, not all of them concern hearing itself. One allegation frequently made is that noise produces mental illness. A magazine once ran a dramatic picture of a distressed woman under the caption, 'Another victim, worn down to a nervous state.' Turning to the text, the reader learned that the woman was a typist who found the clatter of office machines more and more upsetting, until at last she sought help at a psychiatric clinic. The snag in this kind of anecdote is that we cannot be sure the noise, rather than something else, was the real cause. A single story, however striking, is inadequate as proof, and a careful reader will discredit any firm conclusion drawn from it. What the question really needs is a study of large numbers of people living under noisy conditions, to discover whether they fall ill more often than others do. Some years ago a navy examined a great many men who worked on aircraft carriers, sharing the deck with squadron after squadron of jet aircraft — surely one of the noisiest workplaces on earth. Yet neither psychiatric interviews nor objective tests could show any mental effect of the noise upon these sailors. If noise harms mental health at all, the effect must be so small that present methods of diagnosis cannot find it. This does not prove that no effect exists; but it does suggest that the plea for a quieter world should rest on honest evidence, not on frightening pictures. Noise abatement is a good cause, and it is a pity to see it discredited by weak arguments. Noise may well be less dangerous than many other strains of modern life; the sensible course is to measure its effects carefully before we decide.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "People often argue about the effects of noise, and not all of those effects are auditory — that is, not all of them concern hearing itself. One allegation frequently made is that noise produces mental illness.", "text_cn": "人们常争论噪声的作用,而这些作用并非全是听觉方面的——也就是说,并不都关乎听力本身。一种常被提出的指控是:噪声会引发精神疾病。" },
+    { "seq": 2, "speaker": null, "text_en": "A magazine once ran a dramatic picture of a distressed woman under the caption, 'Another victim, worn down to a nervous state.' Turning to the text, the reader learned that the woman was a typist who found the clatter of office machines more and more upsetting, until at last she sought help at a psychiatric clinic.", "text_cn": "某杂志曾登过一张令人揪心的照片:一个神情痛苦的女子,配着一行说明——‘又一个被折磨得心力交瘁的受害者’。翻到正文,读者才知道那女子是个打字员,她觉得办公室机器的咔嗒声越来越让人心烦,最后只好去看心理门诊。" },
+    { "seq": 3, "speaker": null, "text_en": "The snag in this kind of anecdote is that we cannot be sure the noise, rather than something else, was the real cause. A single story, however striking, is inadequate as proof, and a careful reader will discredit any firm conclusion drawn from it.", "text_cn": "可这类轶事的毛病显而易见:我们怎么知道,真正的原因是噪声,而不是别的什么?一则故事再触目惊心,作为证据也是不充分的;一个审慎的读者,会对从中得出的任何确定结论持怀疑、不予采信。" },
+    { "seq": 4, "speaker": null, "text_en": "What the question really needs is a study of large numbers of people living under noisy conditions, to discover whether they fall ill more often than others do. Some years ago a navy examined a great many men who worked on aircraft carriers, sharing the deck with squadron after squadron of jet aircraft — surely one of the noisiest workplaces on earth.", "text_cn": "这个问题真正需要的,是对大量生活在噪声环境中的人做一番研究,看看他们是否比别人更常生病。若干年前,某国海军考察了大批在航空母舰上工作的人——他们与一个又一个喷气机中队共用甲板,那想必是地球上最吵的工作场所之一。" },
+    { "seq": 5, "speaker": null, "text_en": "Yet neither psychiatric interviews nor objective tests could show any mental effect of the noise upon these sailors. If noise harms mental health at all, the effect must be so small that present methods of diagnosis cannot find it. Noise abatement is a good cause, and it is a pity to see it discredited by weak arguments. Noise may well be less dangerous than many other strains of modern life.", "text_cn": "然而,无论是精神科访谈还是客观测试,都无法显示噪声对这些水兵的心理有任何影响。如果噪声真会损害心理健康,那影响也必定小到现有的诊断手段都查不出来。降噪本是一桩好事,若被薄弱的论证拖累而失信,实在可惜。噪声很可能不如现代生活中许多别的压力那么危险。" }
+  ],
+  "words": [
+    { "word": "auditory", "ipa": "/ˈɔːdətɔːri/", "pos": "adj", "meaning_cn": "听觉的", "example": "not all of those effects are auditory" },
+    { "word": "allegation", "ipa": "/ˌæləˈɡeɪʃn/", "pos": "n", "meaning_cn": "指控,(无证据的)断言", "example": "one allegation frequently made" },
+    { "word": "caption", "ipa": "/ˈkæpʃn/", "pos": "n", "meaning_cn": "(图片下的)说明文字", "example": "a picture under the caption" },
+    { "word": "psychiatric", "ipa": "/ˌsaɪkiˈætrɪk/", "pos": "adj", "meaning_cn": "精神病学的,精神科的", "example": "sought help at a psychiatric clinic" },
+    { "word": "snag", "ipa": "/snæɡ/", "pos": "n", "meaning_cn": "(隐藏的)障碍,毛病", "example": "the snag in this kind of anecdote" },
+    { "word": "anecdote", "ipa": "/ˈænɪkdoʊt/", "pos": "n", "meaning_cn": "轶事,趣闻", "example": "this kind of anecdote proves nothing" },
+    { "word": "inadequate", "ipa": "/ɪnˈædɪkwət/", "pos": "adj", "meaning_cn": "不充分的,不足的", "example": "is inadequate as proof" },
+    { "word": "discredit", "ipa": "/dɪsˈkredɪt/", "pos": "v", "meaning_cn": "使不可信,不予采信", "example": "discredit any firm conclusion" },
+    { "word": "squadron", "ipa": "/ˈskwɑːdrən/", "pos": "n", "meaning_cn": "(飞机)中队,舰队", "example": "squadron after squadron of jet aircraft" },
+    { "word": "diagnosis", "ipa": "/ˌdaɪəɡˈnoʊsɪs/", "pos": "n", "meaning_cn": "诊断", "example": "present methods of diagnosis" },
+    { "word": "plea", "ipa": "/pliː/", "pos": "n", "meaning_cn": "恳求,呼吁", "example": "the plea for a quieter world" },
+    { "word": "abatement", "ipa": "/əˈbeɪtmənt/", "pos": "n", "meaning_cn": "减少,减轻", "example": "noise abatement is a good cause" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "neither … nor …(就近一致)" },
+    { "gp": "gp2", "name": "过去分词作后置定语(often made)" },
+    { "gp": "gp3", "name": "whether 引导‘是否’的从句" },
+    { "gp": "gp4", "name": "that 引导的表语从句(… is that …)" },
+    { "gp": "gp5", "name": "less … than / 比较级 + than" },
+    { "gp": "gp6", "name": "词汇辨析(allegation/diagnosis/caption)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ psychiatric interviews nor objective tests found any effect.\"(‘既不…也不…’结构的前一半,与后面的 nor 呼应)", "stem_cn": "精神科访谈和客观测试都没发现任何影响。", "options": ["Neither", "Either", "Both", "Not"] },
+    { "gp": "gp1", "stem": "\"Neither the noise ___ the long hours harmed the sailors.\"(‘既不…也不…’结构的后一半,与前面呼应的那个词)", "stem_cn": "噪声和长时间工作都没伤害到水兵。", "options": ["nor", "or", "and", "but"] },
+    { "gp": "gp1", "stem": "\"Neither the doctors nor the machine ___ able to show harm.\"(neither…nor 连接,动词与靠近的 machine 一致,用单数)", "stem_cn": "医生和仪器都无法证明有害。", "options": ["was", "were", "are", "being"] },
+    { "gp": "gp2", "stem": "\"The study ___ as Project Anehin examined naval crews.\"(过去分词作后置定语,‘被称为…’,填‘称为’那个动词的过去分词)", "stem_cn": "那项名为‘阿内欣计划’的研究考察了海军人员。", "options": ["known", "knowing", "knew", "to know"] },
+    { "gp": "gp2", "stem": "\"An allegation often ___ is that noise causes illness.\"(过去分词作后置定语,被动‘被提出的’,填‘提出/做出’那个动词的过去分词)", "stem_cn": "一种常被提出的指控是:噪声会致病。", "options": ["made", "making", "makes", "to make"] },
+    { "gp": "gp2", "stem": "\"Tests ___ under noisy conditions showed no effect.\"(过去分词作后置定语,被动‘被进行的’,填‘进行’那个动词的过去分词)", "stem_cn": "在噪声环境下进行的测试没显示任何影响。", "options": ["conducted", "conducting", "conducts", "to conduct"] },
+    { "gp": "gp3", "stem": "\"We must discover ___ they are mentally ill more often.\"(discover 后‘是否’的从句,填连词)", "stem_cn": "我们必须查明他们是否更常患精神疾病。", "options": ["whether", "that", "what", "which"] },
+    { "gp": "gp3", "stem": "\"Scientists asked ___ noise really affects the mind.\"(ask 后‘是否’的从句,填连词)", "stem_cn": "科学家们发问:噪声是否真的影响心智。", "options": ["whether", "that", "what", "how"] },
+    { "gp": "gp3", "stem": "\"No one could say ___ the typist's fear came from noise.\"(say 后‘是否’的从句,填连词)", "stem_cn": "没人能说清那打字员的恐惧是否源自噪声。", "options": ["whether", "that", "what", "which"] },
+    { "gp": "gp4", "stem": "\"The snag in the anecdote is ___ it proves nothing.\"(is 后的从句作表语,只起引导作用,填连词)", "stem_cn": "这则轶事的毛病在于:它什么也证明不了。", "options": ["that", "what", "which", "whether"] },
+    { "gp": "gp4", "stem": "\"One allegation is ___ noise produces mental illness.\"(is 后的从句作表语,填连词)", "stem_cn": "一种指控是:噪声会引发精神疾病。", "options": ["that", "what", "which", "how"] },
+    { "gp": "gp4", "stem": "\"The truth is ___ we need to study large numbers of people.\"(is 后的从句作表语,填连词)", "stem_cn": "事实是:我们需要研究大量的人。", "options": ["that", "what", "which", "whether"] },
+    { "gp": "gp5", "stem": "\"Noise may be ___ dangerous than a stressful childhood.\"(‘不如…那么危险’,填表‘更少’的那个词)", "stem_cn": "噪声也许不如艰难的童年那么危险。", "options": ["less", "least", "little", "few"] },
+    { "gp": "gp5", "stem": "\"Sailors near jets suffer ___ noise than any of us.\"(‘更多的噪声’,much 的比较级)", "stem_cn": "喷气机旁的水兵承受的噪声比我们谁都多。", "options": ["more", "most", "many", "much"] },
+    { "gp": "gp5", "stem": "\"For typing, a ___ office is better than a noisy one.\"(‘更安静的’,填 quiet 一词的比较级形式)", "stem_cn": "打字时,安静的办公室比嘈杂的更好。", "options": ["quieter", "quietest", "quiet", "more quiet"] },
+    { "gp": "gp6", "stem": "\"A statement made without proof, accusing someone, is an ___.\"(“指控、断言”用哪个词)", "stem_cn": "未经证实、指控他人的说法。", "options": ["allegation", "invitation", "education", "operation"] },
+    { "gp": "gp6", "stem": "\"The identification of an illness by a doctor is a ___.\"(“诊断”用哪个词)", "stem_cn": "医生对疾病的判定。", "options": ["diagnosis", "disguise", "distance", "display"] },
+    { "gp": "gp6", "stem": "\"The words printed under a picture are the ___.\"(“图片说明文字”用哪个词)", "stem_cn": "印在图片下方的文字。", "options": ["caption", "chapter", "capital", "carpet"] }
+  ],
+  "stage6": [
+    { "stem": "auditory 的意思是:", "options": ["听觉的", "视觉的", "嗅觉的", "触觉的"] },
+    { "stem": "inadequate 的意思是:", "options": ["不充分的,不足的", "充足的", "精确的", "明显的"] },
+    { "stem": "allegation 的意思是:", "options": ["指控,断言", "证据", "结论", "赞扬"] },
+    { "stem": "anecdote 的意思是:", "options": ["轶事,趣闻", "数据", "定理", "公式"] },
+    { "stem": "abatement 的意思是:", "options": ["减少,减轻", "增加", "持续", "爆发"] },
+    { "stem": "discredit 的意思是:", "options": ["使不可信,不予采信", "证实", "赞美", "信任"] }
+  ],
+  "contrast": [
+    { "us": "neighbor", "uk": "neighbour", "note_cn": "邻居;美语 neighbor,英式 neighbour" },
+    { "us": "traveled", "uk": "travelled", "note_cn": "旅行(过去式);美语单写 l,英式双写 ll" },
+    { "us": "defense", "uk": "defence", "note_cn": "防御;美语 defense,英式 defence" },
+    { "us": "analyze", "uk": "analyse", "note_cn": "分析;美语 -yze,英式 -yse" }
+  ],
+  "chunks": [
+    { "us": "reduce ... to", "ipa": "/rɪˈduːs tuː/", "example1": "Constant stress reduced her to tears.", "example1_cn": "持续的压力让她落泪。", "example2": "The fire reduced the house to ashes.", "example2_cn": "大火把房子烧成了灰烬。" },
+    { "us": "be cautious about", "ipa": "/biː ˈkɔːʃəs əˈbaʊt/", "example1": "We should be cautious about such claims.", "example1_cn": "我们对这类说法应持谨慎态度。", "example2": "Be cautious about believing rumors.", "example2_cn": "别轻信谣言。" },
+    { "us": "in case of", "ipa": "/ɪn keɪs ʌv/", "example1": "In case of noise, a large study is needed.", "example1_cn": "碰到噪声问题,需要做大样本研究。", "example2": "In case of fire, use the stairs.", "example2_cn": "万一失火,请走楼梯。" },
+    { "us": "turn to", "ipa": "/tɜːrn tuː/", "example1": "On turning to the text, the reader learns the truth.", "example1_cn": "翻到正文,读者才知道真相。", "example2": "She turned to the next chapter.", "example2_cn": "她翻到了下一章。" }
+  ],
+  "stage7_cloze": {
+    "context": "Many people say noise causes mental illness, but such an ___1___ is hard to prove. ___2___ psychiatric interviews nor objective tests found any effect on the sailors. What we need is to discover ___3___ noisy conditions really make people ill. The truth is ___4___ only a large study can settle the question.",
+    "blanks": [
+      { "blank_no": 1, "options": ["allegation", "invitation", "operation", "education"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["Neither", "Either", "Both", "Not"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["whether", "that", "what", "which"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["that", "what", "which", "whether"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What conclusion does the author draw about noise and mental health?", "options": ["Any effect is so small that current methods cannot detect it", "Noise clearly causes madness", "Noise has no effect on hearing", "Noise is the greatest health hazard"] },
+    { "stem": "Why are anecdotes, like the story of the typist, not good evidence?", "options": ["A single case cannot prove that noise, not something else, caused the illness", "They are always invented", "They are too long to read", "They come from newspapers"] },
+    { "stem": "What did the study of aircraft-carrier crews find?", "options": ["Neither interviews nor tests could show any mental effect from the noise", "The men all became ill", "Noise improved their health", "The study was never finished"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"精神科访谈和客观测试都没发现任何影响\"(neither … nor …):", "options": ["Neither the interviews nor the tests found any effect.", "Neither the interviews or the tests found any effect.", "Neither the interviews nor the tests founds any effect.", "Either the interviews nor the tests found any effect."] },
+    { "stem": "你想说\"我们必须查明他们是否更常患病\"(用 whether 引导‘是否’的从句):", "options": ["We must discover whether they are ill more often.", "We must discover that they are ill more often.", "We must discover whether are they ill more often.", "We must discover if or not they are ill more often."] },
+    { "stem": "你想说\"噪声也许不如艰难的童年那么危险\"(less … than):", "options": ["Noise may be less dangerous than a hard childhood.", "Noise may be lesser dangerous than a hard childhood.", "Noise may be less danger than a hard childhood.", "Noise may be less dangerous as a hard childhood."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "allegation 的意思是:", "options": ["指控,断言", "证据", "结论", "赞扬"] },
+    { "kind": "vocab", "stem": "auditory 的意思是:", "options": ["听觉的", "视觉的", "嗅觉的", "触觉的"] },
+    { "kind": "grammar", "stem": "\"___ psychiatric interviews nor objective tests found any effect.\"(‘既不…也不…’的前一半,与 nor 呼应)", "stem_cn": "精神科访谈和客观测试都没发现任何影响。", "options": ["Neither", "Either", "Both", "Not"] },
+    { "kind": "grammar", "stem": "\"We must discover ___ noise really affects the mind.\"(discover 后‘是否’的从句)", "stem_cn": "我们必须查明噪声是否真的影响心智。", "options": ["whether", "that", "what", "which"] },
+    { "kind": "scenario", "stem": "\"in case of\" 的意思是:", "options": ["在…情况下,万一", "除…之外", "为了", "由于"] },
+    { "kind": "scenario", "stem": "\"be cautious about\" 的意思是:", "options": ["对…持谨慎态度", "对…热衷", "对…厌恶", "对…好奇"] },
+    { "kind": "reading", "stem": "According to the passage, what kind of study does the noise question really need?", "options": ["A study of large numbers of people living in noisy conditions", "A single dramatic anecdote", "One newspaper article", "One patient's complaint"], "passage": true },
+    { "kind": "reading", "stem": "What does the author conclude from the naval study?", "options": ["If noise affects mental health at all, the effect is too small to measure", "Noise certainly drives sailors mad", "Noise makes sailors healthier", "Sailors never hear the jets"], "passage": true },
+    { "kind": "listening", "stem": "Why is the story of the distressed typist weak as evidence?", "options": ["One case cannot prove noise, rather than something else, caused it", "It was made up by the lady", "Typists never work in offices", "The newspaper lied"], "audio": true },
+    { "kind": "listening", "stem": "What did neither the interviews nor the tests manage to show?", "options": ["Any mental effect of the noise on the sailors", "The names of the ships", "The size of the squadrons", "The cost of the study"], "audio": true }
+  ]
+}

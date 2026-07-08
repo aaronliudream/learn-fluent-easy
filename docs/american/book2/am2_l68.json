@@ -1,0 +1,131 @@
+{
+  "id": "am2_l68",
+  "unit_no": 9,
+  "lesson_no": 68,
+  "title_en": "Persistent",
+  "title_cn": "甩不掉的人",
+  "grammar_focus": "KS20+KS44 动名词 -ing 作动词宾语(avoid/enjoy/deny/finish/mind + doing;It's no use/not worth doing、be busy doing、prevent sb from doing)(教材 L68 Key structures)主考;动名词的逻辑主语(mind my doing)、感官动词 see/hear/smell + doing、go/come + doing、反义疑问句(辅考)",
+  "scene": "我穿过马路想躲开他,可他看见我,挥了挥手。装作没看见他也没用,于是我也挥手回应。我从来不喜欢碰见奈杰尔·戴克斯——他总是闲得没事干。不管你多忙,他总是坚持要跟着一起。我得想个办法,别让他跟着我逛一上午。“真巧在这儿碰到你!”他说,“你没忙什么吧?”“你介意我跟你一起去吗?”我还没说完他就问。我得赶紧想辙。“完全不介意,”我说,“不过我要去看牙医。”我以为这能让他打退堂鼓,可我错了。“那我也去,”他说,“候诊室里总有一堆东西可以读!”",
+  "grammar_card": {
+    "title": "动名词 -ing 作动词宾语",
+    "intro": "KS20+KS44 有些动词/结构后面只能接动名词(-ing),不接不定式:①动词 avoid/enjoy/deny/finish/mind/keep + doing;②结构 It's no use doing(做…没用)、It's not worth doing(不值得做)、be busy doing(忙于做)、prevent sb from doing(阻止某人做)。另:动名词可带逻辑主语(mind my coming);感官动词 see/hear/smell + 人/物 + doing;go/come + doing(go dancing)。",
+    "table": {
+      "headers": ["结构", "例子"],
+      "rows": [
+        ["动词 + doing", "I avoid meeting him. / He enjoys playing football."],
+        ["It's no use / not worth doing", "It's no use crying about it."],
+        ["prevent sb from doing", "I prevented him from following me."],
+        ["mind + 逻辑主语 + doing", "Would you mind my coming?"],
+        ["see/hear/smell + doing", "I saw him coming. / go dancing"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "动名词可带逻辑主语,用物主代词:Would you mind opening…?(泛指)转成 Would you mind my opening…?(强调是“我”开);Fancy her writing a letter like that!", "mark": "动名词逻辑主语" },
+      { "rule": "反义疑问句前后相反:陈述肯定→疑问否定;陈述否定→疑问肯定。You're not busy, are you?(前否后肯)/ He insists on coming, doesn't he?(前肯后否)。", "mark": "反义疑问句" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did Elizabeth tell Nigel that she was going to the dentist?",
+    "options": ["To stop Nigel from following her around all morning", "Because she really had a toothache", "Because Nigel worked at the dentist's", "Because she wanted him to come with her"],
+    "answer_index": 0
+  },
+  "passage": "I crossed the street to avoid meeting him, but he saw me and waved. It was no use pretending I hadn't seen him, so I waved back. I never enjoy meeting Nigel Dykes — he never has anything to do. No matter how busy you are, he always insists on coming along. I had to think of a way of preventing him from following me around all morning. 'Fancy meeting you here!' he said. 'You're not busy doing anything, are you?' 'Would you mind my coming with you?' he asked before I could finish. I had to think fast. 'Not at all,' I said, 'but I'm going to the dentist.' I thought that would stop him, but I was wrong. 'Then I'll come too,' he said. 'There's always plenty to read in the waiting room!'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "I crossed the street to avoid meeting him, but he saw me and waved. It was no use pretending I hadn't seen him, so I waved back.", "text_cn": "我穿过马路想躲开他,可他看见我,挥了挥手。装作没看见他也没用,于是我也挥手回应。" },
+    { "seq": 2, "speaker": null, "text_en": "I never enjoy meeting Nigel Dykes — he never has anything to do. No matter how busy you are, he always insists on coming along.", "text_cn": "我从来不喜欢碰见奈杰尔·戴克斯——他总是闲得没事干。不管你多忙,他总是坚持要跟着一起。" },
+    { "seq": 3, "speaker": null, "text_en": "I had to think of a way of preventing him from following me around all morning. 'Fancy meeting you here!' he said. 'You're not busy doing anything, are you?'", "text_cn": "我得想个办法,别让他跟着我逛一上午。“真巧在这儿碰到你!”他说,“你没忙什么吧?”" },
+    { "seq": 4, "speaker": null, "text_en": "'Would you mind my coming with you?' he asked before I could finish. I had to think fast. 'Not at all,' I said, 'but I'm going to the dentist.'", "text_cn": "“你介意我跟你一起去吗?”我还没说完他就问。我得赶紧想辙。“完全不介意,”我说,“不过我要去看牙医。”" },
+    { "seq": 5, "speaker": null, "text_en": "I thought that would stop him, but I was wrong. 'Then I'll come too,' he said. 'There's always plenty to read in the waiting room!'", "text_cn": "我以为这能让他打退堂鼓,可我错了。“那我也去,”他说,“候诊室里总有一堆东西可以读!”" }
+  ],
+  "words": [
+    { "word": "persistent", "ipa": "/pərˈsɪstənt/", "pos": "adj", "meaning_cn": "坚持不懈的;纠缠不休的", "example": "a persistent person you can't get rid of" },
+    { "word": "avoid", "ipa": "/əˈvɔɪd/", "pos": "v", "meaning_cn": "避免,躲开(+ doing)", "example": "I crossed the street to avoid meeting him." },
+    { "word": "insist", "ipa": "/ɪnˈsɪst/", "pos": "v", "meaning_cn": "坚持(insist on doing)", "example": "he always insists on coming along" },
+    { "word": "pretend", "ipa": "/prɪˈtend/", "pos": "v", "meaning_cn": "假装", "example": "It was no use pretending I hadn't seen him." },
+    { "word": "wave", "ipa": "/weɪv/", "pos": "v", "meaning_cn": "挥手", "example": "he saw me and waved" },
+    { "word": "fancy", "ipa": "/ˈfænsi/", "pos": "v", "meaning_cn": "想不到,竟然(表惊讶)", "example": "Fancy meeting you here!" },
+    { "word": "wonder", "ipa": "/ˈwʌndər/", "pos": "v", "meaning_cn": "想知道,琢磨", "example": "I was wondering how to spend the morning" },
+    { "word": "mind", "ipa": "/maɪnd/", "pos": "v", "meaning_cn": "介意(+ doing)", "example": "Would you mind my coming with you?" },
+    { "word": "dentist", "ipa": "/ˈdentɪst/", "pos": "n", "meaning_cn": "牙医", "example": "I'm going to the dentist" },
+    { "word": "waiting room", "ipa": "/ˈweɪtɪŋ ruːm/", "pos": "n", "meaning_cn": "候诊室,等候室", "example": "plenty to read in the waiting room" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "动词 + 动名词(avoid/enjoy/deny/finish + doing)" },
+    { "gp": "gp2", "name": "固定结构 + 动名词(no use/not worth/busy/prevent from doing)" },
+    { "gp": "gp3", "name": "动名词的逻辑主语(mind my doing)" },
+    { "gp": "gp4", "name": "感官动词 see/hear/smell + doing" },
+    { "gp": "gp5", "name": "go / come + doing" },
+    { "gp": "gp6", "name": "反义疑问句" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"I crossed the street to avoid ___ him.\"(avoid 后接动名词)", "stem_cn": "我穿过马路以躲开碰到他。", "options": ["meeting", "to meet", "meet", "met"] },
+    { "gp": "gp1", "stem": "\"He enjoys ___ football.\"(enjoy 后接动名词)", "stem_cn": "他喜欢踢足球。", "options": ["playing", "to play", "play", "played"] },
+    { "gp": "gp1", "stem": "\"He completely denies ___ it.\"(deny 后接动名词)", "stem_cn": "他完全否认拿了它。", "options": ["taking", "to take", "take", "took"] },
+    { "gp": "gp1", "stem": "\"Have you finished ___ the letter?\"(finish 后接动名词)", "stem_cn": "你写完那封信了吗?", "options": ["writing", "to write", "write", "wrote"] },
+    { "gp": "gp2", "stem": "\"It's no use ___ about it.\"(It's no use 后接动名词)", "stem_cn": "为它哭是没用的。", "options": ["crying", "to cry", "cry", "cried"] },
+    { "gp": "gp2", "stem": "\"It's not worth ___ about.\"(be worth 后接动名词)", "stem_cn": "这不值得忧虑。", "options": ["worrying", "to worry", "worry", "worried"] },
+    { "gp": "gp2", "stem": "\"I had to think of a way of preventing him from ___ me around.\"(prevent sb from 后接动名词)", "stem_cn": "我得想办法别让他老跟着我。", "options": ["following", "to follow", "follow", "followed"] },
+    { "gp": "gp2", "stem": "\"Can't you see I'm busy ___?\"(be busy 后接动名词)", "stem_cn": "你没看见我正忙着写东西吗?", "options": ["writing", "to write", "write", "wrote"] },
+    { "gp": "gp3", "stem": "\"Would you mind ___ opening the window?\"(动名词的逻辑主语,'我'开窗你介意吗)", "stem_cn": "我开窗你介意吗?", "options": ["my", "I", "me to", "for me"] },
+    { "gp": "gp3", "stem": "\"Fancy ___ writing a letter like that!\"(动名词的逻辑主语,'她'竟写了那样的信)", "stem_cn": "真想不到她写了那样一封信!", "options": ["her", "she", "her to", "that she"] },
+    { "gp": "gp4", "stem": "\"I saw him ___ towards me.\"(感官动词 see + 人 + 动名词,表正在进行)", "stem_cn": "我看见他向我走来。", "options": ["coming", "to come", "come", "came"] },
+    { "gp": "gp4", "stem": "\"He heard me ___ the door.\"(感官动词 hear + 人 + 动名词)", "stem_cn": "他听见我开门。", "options": ["opening", "to open", "open", "opened"] },
+    { "gp": "gp4", "stem": "\"I can smell something ___.\"(感官动词 smell + 物 + 动名词)", "stem_cn": "我闻到什么东西烧焦了。", "options": ["burning", "to burn", "burn", "burnt"] },
+    { "gp": "gp5", "stem": "\"Let's go ___ tonight.\"(go + 动名词,表'去做某项活动')", "stem_cn": "咱们今晚去跳舞吧。", "options": ["dancing", "to dance", "dance", "danced"] },
+    { "gp": "gp5", "stem": "\"I went ___ this morning.\"(go + 动名词:去买东西)", "stem_cn": "今天上午我去买东西了。", "options": ["shopping", "to shop", "shop", "shopped"] },
+    { "gp": "gp5", "stem": "\"Come ___ with me tomorrow.\"(come + 动名词:一起去游泳)", "stem_cn": "明天和我一起去游泳吧。", "options": ["swimming", "to swim", "swim", "swam"] },
+    { "gp": "gp6", "stem": "\"You're not busy doing anything, ___?\"(反义疑问句:前面否定,后面就用肯定)", "stem_cn": "你不忙,是吧?", "options": ["are you", "aren't you", "do you", "don't you"] },
+    { "gp": "gp6", "stem": "\"He always insists on coming with you, ___?\"(反义疑问句:前面肯定,后面就用否定)", "stem_cn": "他总是坚持要跟你去,是不是?", "options": ["doesn't he", "does he", "isn't he", "don't he"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"旅行(动名词)\"拼作:", "options": ["traveling", "travelling", "traveuing", "travling"] },
+    { "stem": "美语里\"取消(动名词)\"拼作:", "options": ["canceling", "cancelling", "canceing", "cancling"] },
+    { "stem": "persistent 的意思是:", "options": ["坚持的,纠缠不休的", "懒惰的", "害羞的", "慷慨的"] },
+    { "stem": "avoid 的意思是:", "options": ["避开,回避", "遇见", "邀请", "跟随"] },
+    { "stem": "insist 的意思是:", "options": ["坚持,坚持要", "拒绝", "忘记", "怀疑"] },
+    { "stem": "pretend 的意思是:", "options": ["假装", "承认", "证明", "后悔"] }
+  ],
+  "contrast": [
+    { "us": "traveling", "uk": "travelling", "note_cn": "旅行(-ing);美语单写 traveling,英式双写 travelling" },
+    { "us": "canceling", "uk": "cancelling", "note_cn": "取消(-ing);美语 canceling,英式 cancelling" },
+    { "us": "colored", "uk": "coloured", "note_cn": "有色的;美语 colored,英式 coloured" },
+    { "us": "labeled", "uk": "labelled", "note_cn": "贴标签的;美语 labeled,英式 labelled" }
+  ],
+  "chunks": [
+    { "us": "it's no use doing", "ipa": "/ɪts noʊ juːs ˈduːɪŋ/", "example1": "It's no use pretending I hadn't seen him.", "example1_cn": "装作没看见他也没用。", "example2": "It's no use arguing with him.", "example2_cn": "跟他争没有用。" },
+    { "us": "would you mind doing", "ipa": "/wʊd juː maɪnd ˈduːɪŋ/", "example1": "Would you mind my coming with you?", "example1_cn": "你介意我跟你一起去吗?", "example2": "Would you mind opening the window?", "example2_cn": "麻烦你把窗户打开好吗?" },
+    { "us": "be busy doing", "ipa": "/biː ˈbɪzi ˈduːɪŋ/", "example1": "Can't you see I'm busy writing?", "example1_cn": "你没看见我忙着写东西吗?", "example2": "She's busy cooking dinner.", "example2_cn": "她正忙着做晚饭。" },
+    { "us": "Fancy meeting you here!", "ipa": "/ˈfænsi ˈmiːtɪŋ juː hɪr/", "example1": "Fancy meeting you here!", "example1_cn": "真没想到在这儿见到你!", "example2": "Fancy seeing you at the airport!", "example2_cn": "真巧在机场碰到你!" }
+  ],
+  "stage7_cloze": {
+    "context": "I crossed the street to avoid ___1___ him, but he saw me. It was no use ___2___ that I hadn't seen him. He always insists on ___3___ with you. I had to think of a way of preventing him from ___4___ me around.",
+    "blanks": [
+      { "blank_no": 1, "options": ["meeting", "to meet", "meet", "met"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["pretending", "to pretend", "pretend", "pretended"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["coming", "to come", "come", "came"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["following", "to follow", "follow", "followed"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did Elizabeth cross the street?", "options": ["To avoid meeting Nigel Dykes", "To buy something", "To catch a bus", "To meet the dentist"] },
+    { "stem": "What does Nigel Dykes always insist on doing?", "options": ["Coming with you, no matter how busy you are", "Paying for everything", "Telling long stories", "Leaving early"] },
+    { "stem": "Why did Elizabeth say she was going to the dentist?", "options": ["To stop Nigel from following her around all morning", "Because she had a bad toothache", "Because Nigel asked her to", "Because she liked her dentist"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我过马路以躲开碰到他\"(avoid 后接动名词):", "options": ["I crossed the street to avoid meeting him.", "I crossed the street to avoid to meet him.", "I crossed the street to avoid meet him.", "I crossed the street for avoid meeting him."] },
+    { "stem": "你想客气地问\"我跟你一起去你介意吗?\"(mind + 逻辑主语 + 动名词):", "options": ["Would you mind my coming with you?", "Would you mind I come with you?", "Would you mind me to come with you?", "Would you mind come with you?"] },
+    { "stem": "你想说\"咱们去跳舞吧\"(go + 动名词):", "options": ["Let's go dancing.", "Let's go to dance.", "Let's go dance.", "Let's going dancing."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "persistent 的意思是:", "options": ["坚持的,纠缠不休的", "懒惰的", "害羞的", "慷慨的"] },
+    { "kind": "vocab", "stem": "avoid 的意思是:", "options": ["避开,回避", "遇见", "邀请", "跟随"] },
+    { "kind": "grammar", "stem": "\"He enjoys ___ football.\"(enjoy 后接动名词)", "stem_cn": "他喜欢踢足球。", "options": ["playing", "to play", "play", "played"] },
+    { "kind": "grammar", "stem": "\"I saw him ___ towards me.\"(感官动词 see + 人 + 动名词)", "stem_cn": "我看见他向我走来。", "options": ["coming", "to come", "come", "came"] },
+    { "kind": "scenario", "stem": "像 avoid/enjoy/mind/finish 这样的动词后面接:", "options": ["动词的 -ing 形式", "动词原形", "to + 动词原形", "动词过去式"] },
+    { "kind": "scenario", "stem": "\"Fancy meeting you here!\" 表达的意思是:", "options": ["真没想到在这儿见到你(表惊讶)", "很高兴见到你", "我不想见你", "我们约好在这儿见"] },
+    { "kind": "reading", "stem": "How did Nigel end up going with Elizabeth even though she tried to avoid him?", "options": ["He offered to come with her before she finished speaking, and said he'd wait at the dentist too", "He followed her secretly", "She invited him along", "He was already going to the dentist"], "passage": true },
+    { "kind": "reading", "stem": "Why was going to the dentist not enough to get rid of Nigel?", "options": ["He said there's always plenty to read in the waiting room, so he'd come anyway", "He was afraid of dentists", "He had his own appointment", "He went home instead"], "passage": true },
+    { "kind": "listening", "stem": "What is Nigel Dykes like?", "options": ["He never has anything to do and always insists on coming with you", "He is always very busy", "He hates company", "He is a dentist"], "audio": true },
+    { "kind": "listening", "stem": "What did Elizabeth do when she first saw Nigel?", "options": ["She crossed the street to avoid him, but he saw her, so she waved", "She ran away", "She invited him for coffee", "She pretended to be someone else"], "audio": true }
+  ]
+}

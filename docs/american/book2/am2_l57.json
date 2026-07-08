@@ -1,0 +1,136 @@
+{
+  "id": "am2_l57",
+  "unit_no": 8,
+  "lesson_no": 57,
+  "title_en": "Can I help you?",
+  "title_cn": "有什么需要帮忙的吗?",
+  "grammar_focus": "KS9+KS33 介词 at/in/off/with 综合复习(at 某一点、in 之内/穿着、off 离开脱落、with 带有拿着)(教材 L57 Key structures)主考;SD make/let sb do(不带 to 不定式)+ 课文 the way + 从句、into、be eager to do(辅考)。素材=Aaron 净化生产包(2026-07-05,原课文过滤误判已核无害);unit_no=8(课程 U8 首课,L57-64)",
+  "scene": "一个穿牛仔裤的女人站在一家高档商店的橱窗前,看着一条连衣裙。她犹豫了一下,然后走进去要求看看。店员不喜欢她的穿着,轻蔑地瞥了她一眼,说那条裙子卖掉了。女人气冲冲地走了,决定第二天惩罚他。第二天早上她穿着皮草大衣回来,一手拿着钱包,一手拿着长伞。这次店员没认出她,急切地想为她服务。他爬进橱窗,把裙子从展台上取下来。她一看见就说不喜欢。她让店员把橱窗里几乎所有东西一件接一件都拿来。然后,她微笑着,最终买下了她第一次要看的那条裙子。",
+  "grammar_card": {
+    "title": "介词 at / in / off / with",
+    "intro": "KS9+KS33 综合复习介词:at 表'在某一点'(at the window、at the door、glance at);in 表'在…之内'或'穿着'(in jeans、in a fur coat、in the store);off 表'离开、脱落'(walk off、take off、off the shelf);with 表'带有、拿着'(with a purse、with a smile)。",
+    "table": {
+      "headers": ["介词", "例子"],
+      "rows": [
+        ["at 某一点", "at the window / glanced at her"],
+        ["in 之内/穿着", "a woman in jeans / in a fur coat"],
+        ["off 离开/脱落", "walked off / take the dress off"],
+        ["with 带有/拿着", "with a purse in one hand"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "SD Make and Let:make sb do、let sb do 后接不带 to 的动词原形(made the clerk bring、let her try)。", "mark": "make/let sb do" },
+      { "rule": "the way + 从句表'…的方式'(the way she was dressed = 她穿着打扮的样子);介词 into 表'进入…里面'(climbed into the window)。", "mark": "the way / into" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Did the woman get what she wanted?",
+    "options": ["Yes — after teasing the clerk, she bought the very dress she first asked for", "No, the dress was really sold", "No, she left with nothing", "She bought a fur coat instead"],
+    "answer_index": 0
+  },
+  "passage": "A woman in jeans stood at the window of an expensive store, looking at a dress. She hesitated for a moment, then walked in and asked to see it. The salesclerk didn't like the way she was dressed. Glancing at her scornfully, he said the dress was sold. The woman walked off angrily and decided to punish him the next day. The next morning she came back in a fur coat, with a purse in one hand and a long umbrella in the other. This time the clerk didn't recognize her and was eager to serve her. He climbed into the window to take the dress off the display. As soon as she saw it, she said she didn't like it. She made the clerk bring almost everything in the window, one thing after another. Then, with a smile, she finally bought the very dress she had asked for the first time.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "A woman in jeans stood at the window of an expensive store, looking at a dress.", "text_cn": "一个穿牛仔裤的女人站在一家高档商店的橱窗前,看着一条连衣裙。" },
+    { "seq": 2, "speaker": null, "text_en": "She hesitated for a moment, then walked in and asked to see it.", "text_cn": "她犹豫了一下,然后走进去要求看看。" },
+    { "seq": 3, "speaker": null, "text_en": "The salesclerk didn't like the way she was dressed. Glancing at her scornfully, he said the dress was sold.", "text_cn": "店员不喜欢她的穿着,轻蔑地瞥了她一眼,说那条裙子卖掉了。" },
+    { "seq": 4, "speaker": null, "text_en": "The woman walked off angrily and decided to punish him the next day.", "text_cn": "女人气冲冲地走了,决定第二天惩罚他。" },
+    { "seq": 5, "speaker": null, "text_en": "The next morning she came back in a fur coat, with a purse in one hand and a long umbrella in the other.", "text_cn": "第二天早上她穿着皮草大衣回来,一手拿着钱包,一手拿着长伞。" },
+    { "seq": 6, "speaker": null, "text_en": "This time the clerk didn't recognize her and was eager to serve her.", "text_cn": "这次店员没认出她,急切地想为她服务。" },
+    { "seq": 7, "speaker": null, "text_en": "He climbed into the window to take the dress off the display. As soon as she saw it, she said she didn't like it.", "text_cn": "他爬进橱窗,把裙子从展台上取下来。她一看见就说不喜欢。" },
+    { "seq": 8, "speaker": null, "text_en": "She made the clerk bring almost everything in the window, one thing after another. Then, with a smile, she finally bought the very dress she had asked for the first time.", "text_cn": "她让店员把橱窗里几乎所有东西一件接一件都拿来。然后,她微笑着,最终买下了她第一次要看的那条裙子。" }
+  ],
+  "words": [
+    { "word": "jeans", "ipa": "/dʒiːnz/", "pos": "n", "meaning_cn": "牛仔裤", "example": "a woman in jeans" },
+    { "word": "hesitate", "ipa": "/ˈhezɪteɪt/", "pos": "v", "meaning_cn": "犹豫,迟疑", "example": "She hesitated for a moment" },
+    { "word": "serve", "ipa": "/sɜːrv/", "pos": "v", "meaning_cn": "服务,招待(顾客)", "example": "was eager to serve her" },
+    { "word": "scornfully", "ipa": "/ˈskɔːrnfəli/", "pos": "adv", "meaning_cn": "轻蔑地", "example": "Glancing at her scornfully" },
+    { "word": "punish", "ipa": "/ˈpʌnɪʃ/", "pos": "v", "meaning_cn": "惩罚", "example": "decided to punish him" },
+    { "word": "fur", "ipa": "/fɜːr/", "pos": "n", "meaning_cn": "毛皮,裘皮", "example": "came back in a fur coat" },
+    { "word": "eager", "ipa": "/ˈiːɡər/", "pos": "adj", "meaning_cn": "急切的,渴望的", "example": "was eager to serve her" },
+    { "word": "salesclerk", "ipa": "/ˈseɪlzklɜːrk/", "pos": "n", "meaning_cn": "店员,售货员", "example": "The salesclerk didn't like the way she was dressed" },
+    { "word": "purse", "ipa": "/pɜːrs/", "pos": "n", "meaning_cn": "(女式)手提包,钱包", "example": "with a purse in one hand" },
+    { "word": "store", "ipa": "/stɔːr/", "pos": "n", "meaning_cn": "商店", "example": "an expensive store" },
+    { "word": "umbrella", "ipa": "/ʌmˈbrelə/", "pos": "n", "meaning_cn": "伞", "example": "a long umbrella in the other" },
+    { "word": "dress", "ipa": "/dres/", "pos": "n", "meaning_cn": "连衣裙", "example": "asked to see a dress" },
+    { "word": "coat", "ipa": "/koʊt/", "pos": "n", "meaning_cn": "外套,大衣", "example": "came back in a fur coat" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "at 的用法(某一点)" },
+    { "gp": "gp2", "name": "in 的用法(之内/穿着)" },
+    { "gp": "gp3", "name": "off 的用法(离开/脱落)" },
+    { "gp": "gp4", "name": "with 的用法(带有/拿着)" },
+    { "gp": "gp5", "name": "make/let sb do(SD·不带 to 不定式)" },
+    { "gp": "gp6", "name": "the way 从句 / into(辅考·课文)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"She stood ___ the window of an expensive store.\"(在橱窗'前'·某一点)", "stem_cn": "她站在一家高档商店的橱窗前。", "options": ["at", "in", "off", "with"] },
+    { "gp": "gp1", "stem": "\"He glanced ___ her scornfully.\"(朝某人'看'·某一点)", "stem_cn": "他轻蔑地瞥了她一眼。", "options": ["at", "in", "off", "with"] },
+    { "gp": "gp1", "stem": "\"Someone is knocking ___ the door.\"(在门口·某一点)", "stem_cn": "有人在敲门。", "options": ["at", "in", "off", "with"] },
+    { "gp": "gp2", "stem": "\"A woman ___ jeans stood at the window.\"(表'穿着'牛仔裤)", "stem_cn": "一个穿牛仔裤的女人站在橱窗前。", "options": ["in", "at", "off", "with"] },
+    { "gp": "gp2", "stem": "\"The next morning she came back ___ a fur coat.\"(表'穿着'皮草大衣)", "stem_cn": "第二天早上她穿着皮草大衣回来。", "options": ["in", "at", "off", "on"] },
+    { "gp": "gp2", "stem": "\"There were a lot of people ___ the store.\"(在商店'里'·之内)", "stem_cn": "店里有很多人。", "options": ["in", "at", "off", "with"] },
+    { "gp": "gp2", "stem": "\"Can you see that woman ___ the blue coat?\"(表'穿着'蓝外套)", "stem_cn": "你能看见那个穿蓝外套的女士吗?", "options": ["in", "at", "with", "off"] },
+    { "gp": "gp3", "stem": "\"The woman walked ___ angrily.\"(生气地'走开、离去')", "stem_cn": "女人气冲冲地走开了。", "options": ["off", "in", "at", "with"] },
+    { "gp": "gp3", "stem": "\"He took the dress ___ the display.\"(从展台上'取下来')", "stem_cn": "他把裙子从展台上取下来。", "options": ["off", "in", "at", "with"] },
+    { "gp": "gp3", "stem": "\"Take your coat ___.\"(把外套'脱下来')", "stem_cn": "把你的外套脱下来。", "options": ["off", "in", "at", "out"] },
+    { "gp": "gp4", "stem": "\"She came back ___ a purse in one hand and an umbrella in the other.\"(表'带着、拿着'钱包)", "stem_cn": "她一手拿着钱包,一手拿着伞回来了。", "options": ["with", "in", "at", "off"] },
+    { "gp": "gp4", "stem": "\"The police are looking for a man ___ a scar on his face.\"(表'带有'脸上伤疤这个特征)", "stem_cn": "警察在找一个脸上有疤的男人。", "options": ["with", "in", "at", "off"] },
+    { "gp": "gp4", "stem": "\"Then, ___ a smile, she bought the dress.\"(表'带着'微笑)", "stem_cn": "然后她微笑着买下了那条裙子。", "options": ["with", "in", "at", "off"] },
+    { "gp": "gp5", "stem": "\"She made the clerk ___ almost everything in the window.\"(make 后接不带 to 的动词原形)", "stem_cn": "她让店员把橱窗里几乎所有东西都拿来。", "options": ["bring", "to bring", "bringing", "brought"] },
+    { "gp": "gp5", "stem": "\"You can't make me ___ my mind.\"(make 后接不带 to 的动词原形)", "stem_cn": "你没法让我改变主意。", "options": ["change", "to change", "changing", "changed"] },
+    { "gp": "gp5", "stem": "\"He wouldn't let her ___ on the dress.\"(let 后接不带 to 的动词原形)", "stem_cn": "他不肯让她试穿那条裙子。", "options": ["try", "to try", "trying", "tried"] },
+    { "gp": "gp6", "stem": "\"The salesclerk didn't like the way she ___ dressed.\"(她'当时'被打扮成…的样子,用过去的 be 动词)", "stem_cn": "店员不喜欢她的穿着打扮。", "options": ["was", "is", "has", "being"] },
+    { "gp": "gp6", "stem": "\"He climbed ___ the window to get the dress.\"(爬'进…里面'的介词)", "stem_cn": "他爬进橱窗去取裙子。", "options": ["into", "at", "off", "for"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"商店\"常说:", "options": ["store", "shop", "market place", "sale house"] },
+    { "stem": "美语里\"(女式)手提包\"常说:", "options": ["purse", "handbag", "hand sack", "carry bag"] },
+    { "stem": "hesitate 的意思是:", "options": ["犹豫,迟疑", "决定", "匆忙", "答应"] },
+    { "stem": "scornfully 的意思是:", "options": ["轻蔑地", "热情地", "礼貌地", "小心地"] },
+    { "stem": "eager 的意思是:", "options": ["急切的,渴望的", "冷淡的", "疲倦的", "害怕的"] },
+    { "stem": "punish 的意思是:", "options": ["惩罚", "奖励", "原谅", "邀请"] }
+  ],
+  "contrast": [
+    { "us": "store", "uk": "shop", "note_cn": "商店;美语 store,英式 shop" },
+    { "us": "purse", "uk": "handbag", "note_cn": "(女式)手提包;美语 purse,英式 handbag" },
+    { "us": "salesclerk", "uk": "shop assistant", "note_cn": "店员;美语 salesclerk / store clerk,英式 shop assistant" },
+    { "us": "pants", "uk": "trousers", "note_cn": "裤子;美语 pants,英式 trousers" }
+  ],
+  "chunks": [
+    { "us": "make sb do", "ipa": "/meɪk ... duː/", "example1": "She made the clerk bring everything.", "example1_cn": "她让店员把东西全拿来。", "example2": "You can't make me change my mind.", "example2_cn": "你没法让我改主意。" },
+    { "us": "the way (she was dressed)", "ipa": "/ðə weɪ/", "example1": "He didn't like the way she was dressed.", "example1_cn": "他不喜欢她的穿着打扮。", "example2": "I like the way you sing.", "example2_cn": "我喜欢你唱歌的样子。" },
+    { "us": "be eager to do", "ipa": "/ˈiːɡər tuː duː/", "example1": "He was eager to serve her.", "example1_cn": "他急切地想为她服务。", "example2": "She's eager to learn.", "example2_cn": "她渴望学习。" },
+    { "us": "try on", "ipa": "/traɪ ɑːn/", "example1": "She wanted to try on the dress.", "example1_cn": "她想试穿那条裙子。", "example2": "Can I try these pants on?", "example2_cn": "我能试穿这条裤子吗?" }
+  ],
+  "stage7_cloze": {
+    "context": "A woman ___1___ jeans stood ___2___ the window of an expensive store. The salesclerk glanced ___3___ her scornfully and said the dress was sold. The next day she came back ___4___ a fur coat to punish him.",
+    "blanks": [
+      { "blank_no": 1, "options": ["in", "at", "off", "with"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["at", "in", "off", "with"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["at", "in", "off", "with"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["in", "at", "off", "with"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did the salesclerk say the dress was sold?", "options": ["He looked down on the woman because she was dressed in jeans", "It really was sold", "The store was closing", "She had no money"] },
+    { "stem": "How did the woman look when she returned the next day?", "options": ["In a fur coat, with a purse and a long umbrella", "In the same jeans", "In a school uniform", "In a raincoat"] },
+    { "stem": "What did the woman finally buy?", "options": ["The very dress she had first asked to see", "A fur coat", "An umbrella", "Nothing at all"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"你没法让我改变主意\"(make sb do,后接不带 to 的动词):", "options": ["You can't make me change my mind.", "You can't make me to change my mind.", "You can't make me changing my mind.", "You can't make me changed my mind."] },
+    { "stem": "你想说\"你能看见那个穿蓝外套的女士吗?\"(表'穿着'用 in):", "options": ["Can you see that woman in the blue coat?", "Can you see that woman with the blue coat?", "Can you see that woman at the blue coat?", "Can you see that woman on the blue coat?"] },
+    { "stem": "你想说\"她一手拿着钱包回来了\"(表'带着、拿着'用 with):", "options": ["She came back with a purse in one hand.", "She came back in a purse in one hand.", "She came back at a purse in one hand.", "She came back off a purse in one hand."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "hesitate 的意思是:", "options": ["犹豫,迟疑", "决定", "匆忙", "答应"] },
+    { "kind": "vocab", "stem": "eager 的意思是:", "options": ["急切的,渴望的", "冷淡的", "疲倦的", "害怕的"] },
+    { "kind": "grammar", "stem": "\"She glanced ___ him scornfully.\"(某一点用哪个介词)", "stem_cn": "她轻蔑地瞥了他一眼。", "options": ["at", "in", "off", "with"] },
+    { "kind": "grammar", "stem": "\"She made the clerk ___ everything.\"(make sb 后接的动词形式)", "stem_cn": "她让店员把东西全拿来。", "options": ["bring", "to bring", "bringing", "brought"] },
+    { "kind": "scenario", "stem": "\"walk off angrily\" 的意思是:", "options": ["生气地走开", "慢慢地散步", "开心地跑开", "站着不动"] },
+    { "kind": "scenario", "stem": "\"make sb do\" 结构的意思是:", "options": ["让/使某人做某事", "为某人做某事", "帮某人做某事", "看某人做某事"] },
+    { "kind": "reading", "stem": "Why did the woman come back in a fur coat the next day?", "options": ["To punish the salesclerk who had looked down on her", "Because it was cold", "To attend a party", "To return the coat"], "passage": true },
+    { "kind": "reading", "stem": "What did she make the salesclerk do?", "options": ["Bring almost everything in the window, one thing after another", "Apologize to her", "Call the manager", "Gift-wrap the dress"], "passage": true },
+    { "kind": "listening", "stem": "What was the woman wearing the first time?", "options": ["Jeans", "A fur coat", "A blue coat", "A uniform"], "audio": true },
+    { "kind": "listening", "stem": "Why was the clerk eager to serve her the second time?", "options": ["He didn't recognize her", "She offered him a tip", "The manager told him to", "She was a famous actress"], "audio": true }
+  ]
+}

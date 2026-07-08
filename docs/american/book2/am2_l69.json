@@ -1,0 +1,132 @@
+{
+  "id": "am2_l69",
+  "unit_no": 9,
+  "lesson_no": 69,
+  "title_en": "The old car comes back to life",
+  "title_cn": "老爷车重获新生",
+  "grammar_focus": "被动语态综合复习(方案B换情节·原 L69 KS10/21/34/45 考点原样承载):一般过去被动 was/were made、情态被动 can/could/must be done、现在完成被动 has been done、过去完成被动 had been kept、过去进行被动 was being cleaned、完成式非谓语被动 having been stored",
+  "scene": "上个月,一辆稀有的老爷车被送到了我们博物馆——博物馆最近才收购了它。它1925年在德国制造,一共只造过十辆。多年来它一直被存放在一个旧车库里,几乎被人遗忘。送来时,引擎几乎发动不了。“它能修好,”我们的首席技师说,并指示他的团队检查每一个零件。在清理这辆车时,座位下面发现了制造商的名字。由于被存放了这么久,这辆车需要大量的修理。每个零件都被仔细检查,坏的都被更换。随着信心不断增强,团队一直干下去,几个月后这辆车已被完全修复到它最初的状态。如今它受到每一位参观博物馆的人的赞赏。",
+  "grammar_card": {
+    "title": "被动语态综合复习",
+    "intro": "各种时态的被动都是 be + 过去分词,时态变在 be 上:一般过去 was made、情态 can/could/must be done、过去进行 was being cleaned、过去完成 had been kept、现在完成 has been restored。介词或连词后用动名词被动,完成式为 having been done(Having been stored for years…)。对过去的推测(被动)用 must have been + 过去分词。",
+    "table": {
+      "headers": ["时态/形式", "被动"],
+      "rows": [
+        ["一般过去", "was made / were built"],
+        ["情态/推测", "can be repaired / must have been kept"],
+        ["过去进行", "was being cleaned"],
+        ["过去完成", "had been kept / had been stored"],
+        ["现在完成", "has been restored"],
+        ["完成式非谓语", "having been stored"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "完成式的非谓语被动用 having been + 过去分词,作状语说明原因或先发生:Having been stored for so long, the car needed a lot of work。", "mark": "having been done" },
+      { "rule": "对过去情况的推测(被动)用 must have been + 过去分词:It must have been kept in a dry garage(它一定是被放在干燥的车库里)。", "mark": "must have been done" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What happened to the old car at the museum?",
+    "options": ["It was fully restored to its original condition after months of work", "It was sold to a private collector", "It was scrapped for parts", "It was left in the garage"],
+    "answer_index": 0
+  },
+  "passage": "Last month, a rare old car was brought to our museum, which had recently acquired it. It was made in Germany in 1925, and only ten of them were ever built. For years it had been kept in an old garage and almost forgotten. When it arrived, the engine could hardly be started. 'It can be repaired,' our chief mechanic said, and he instructed his team to check every part. While the car was being cleaned, the maker's name was found under the seat. Having been stored for so long, the car needed a great deal of work. Every part was carefully checked, and the broken ones were replaced. With growing confidence, the team worked on, and after months the car has been fully restored to its original condition. Now it is admired by everyone who visits the museum.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Last month, a rare old car was brought to our museum, which had recently acquired it. It was made in Germany in 1925, and only ten of them were ever built.", "text_cn": "上个月,一辆稀有的老爷车被送到了我们博物馆——博物馆最近才收购了它。它1925年在德国制造,一共只造过十辆。" },
+    { "seq": 2, "speaker": null, "text_en": "For years it had been kept in an old garage and almost forgotten. When it arrived, the engine could hardly be started.", "text_cn": "多年来它一直被存放在一个旧车库里,几乎被人遗忘。送来时,引擎几乎发动不了。" },
+    { "seq": 3, "speaker": null, "text_en": "'It can be repaired,' our chief mechanic said, and he instructed his team to check every part. While the car was being cleaned, the maker's name was found under the seat.", "text_cn": "“它能修好,”我们的首席技师说,并指示他的团队检查每一个零件。在清理这辆车时,座位下面发现了制造商的名字。" },
+    { "seq": 4, "speaker": null, "text_en": "Having been stored for so long, the car needed a great deal of work. Every part was carefully checked, and the broken ones were replaced.", "text_cn": "由于被存放了这么久,这辆车需要大量的修理。每个零件都被仔细检查,坏的都被更换。" },
+    { "seq": 5, "speaker": null, "text_en": "With growing confidence, the team worked on, and after months the car has been fully restored to its original condition. Now it is admired by everyone who visits the museum.", "text_cn": "随着信心不断增强,团队一直干下去,几个月后这辆车已被完全修复到它最初的状态。如今它受到每一位参观博物馆的人的赞赏。" }
+  ],
+  "words": [
+    { "word": "instruct", "ipa": "/ɪnˈstrʌkt/", "pos": "v", "meaning_cn": "指示,命令", "example": "he instructed his team to check every part" },
+    { "word": "acquire", "ipa": "/əˈkwaɪr/", "pos": "v", "meaning_cn": "取得,获得", "example": "the museum had recently acquired it" },
+    { "word": "confidence", "ipa": "/ˈkɑːnfɪdəns/", "pos": "n", "meaning_cn": "信心", "example": "With growing confidence, the team worked on." },
+    { "word": "restore", "ipa": "/rɪˈstɔːr/", "pos": "v", "meaning_cn": "修复,复原", "example": "the car has been fully restored" },
+    { "word": "original", "ipa": "/əˈrɪdʒənl/", "pos": "adj", "meaning_cn": "最初的,原来的", "example": "restored to its original condition" },
+    { "word": "engine", "ipa": "/ˈendʒɪn/", "pos": "n", "meaning_cn": "引擎,发动机", "example": "the engine could hardly be started" },
+    { "word": "maker", "ipa": "/ˈmeɪkər/", "pos": "n", "meaning_cn": "制造者,厂商", "example": "the maker's name was found under the seat" },
+    { "word": "garage", "ipa": "/ɡəˈrɑːʒ/", "pos": "n", "meaning_cn": "车库", "example": "kept in an old garage" },
+    { "word": "condition", "ipa": "/kənˈdɪʃən/", "pos": "n", "meaning_cn": "状况,状态", "example": "its original condition" },
+    { "word": "rare", "ipa": "/rer/", "pos": "adj", "meaning_cn": "稀有的,罕见的", "example": "a rare old car" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般过去被动 was/were done" },
+    { "gp": "gp2", "name": "情态被动 can/could/must be done" },
+    { "gp": "gp3", "name": "现在完成被动 has been done" },
+    { "gp": "gp4", "name": "过去完成被动 had been done" },
+    { "gp": "gp5", "name": "过去进行被动 was being done" },
+    { "gp": "gp6", "name": "完成式非谓语被动 having been done / 不定式被动" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"This car ___ in Germany in 1925.\"(一般过去被动)", "stem_cn": "这辆车1925年在德国制造。", "options": ["was made", "made", "was making", "has made"] },
+    { "gp": "gp1", "stem": "\"Only ten of them ___ ever built.\"(一般过去被动,主语复数)", "stem_cn": "这种车一共只造过十辆。", "options": ["were", "was", "have", "are"] },
+    { "gp": "gp1", "stem": "\"The maker's name ___ under the seat.\"(一般过去被动:被发现)", "stem_cn": "制造商的名字在座位下被发现了。", "options": ["was found", "found", "was finding", "has found"] },
+    { "gp": "gp2", "stem": "\"When it arrived, the engine could hardly ___.\"(情态被动:几乎发动不了)", "stem_cn": "送来时,引擎几乎发动不了。", "options": ["be started", "start", "started", "been started"] },
+    { "gp": "gp2", "stem": "\"'It ___,' said the mechanic.\"(情态被动:它能被修好)", "stem_cn": "“它能修好,”技师说。", "options": ["can be repaired", "can repair", "can be repair", "can repaired"] },
+    { "gp": "gp2", "stem": "\"It ___ in a dry garage — it looks so clean.\"(对过去的推测·被动:一定是被放在…)", "stem_cn": "它一定是被放在干燥的车库里——看起来这么干净。", "options": ["must have been kept", "must keep", "must be keeping", "must kept"] },
+    { "gp": "gp3", "stem": "\"After months of work, the car ___ fully restored.\"(现在完成被动)", "stem_cn": "几个月的修理后,这辆车已被完全修复。", "options": ["has been", "was being", "is", "had"] },
+    { "gp": "gp3", "stem": "\"The museum ___ several rare cars this year.\"(现在完成主动对照:已收购)", "stem_cn": "博物馆今年已收购了几辆稀有的车。", "options": ["has acquired", "has been acquired", "was acquired", "acquiring"] },
+    { "gp": "gp3", "stem": "\"All the broken parts ___ replaced.\"(现在完成被动,主语复数)", "stem_cn": "所有坏零件都已被更换。", "options": ["have been", "has been", "was", "were being"] },
+    { "gp": "gp4", "stem": "\"For years it ___ in an old garage.\"(过去完成被动:一直被存放)", "stem_cn": "多年来它一直被存放在一个旧车库里。", "options": ["had been kept", "kept", "was keeping", "has kept"] },
+    { "gp": "gp4", "stem": "\"The car ___ for so long that it needed a lot of work.\"(过去完成被动:被存放)", "stem_cn": "这辆车被存放了这么久,需要大量修理。", "options": ["had been stored", "had stored", "was storing", "stored"] },
+    { "gp": "gp5", "stem": "\"While the car ___ cleaned, the name was found.\"(过去进行被动)", "stem_cn": "在清理这辆车时,发现了名字。", "options": ["was being", "was", "is being", "had been"] },
+    { "gp": "gp5", "stem": "\"When I visited, the engine ___ repaired by two mechanics.\"(过去进行被动)", "stem_cn": "我参观时,引擎正被两名技师修理。", "options": ["was being", "was", "is being", "has been"] },
+    { "gp": "gp5", "stem": "\"Every part ___ checked when the manager arrived.\"(过去进行被动)", "stem_cn": "经理到时,每个零件正被检查。", "options": ["was being", "was", "is being", "had been"] },
+    { "gp": "gp6", "stem": "\"___ stored for so long, the car needed a great deal of work.\"(完成式非谓语被动,作状语)", "stem_cn": "由于被存放了这么久,这辆车需要大量修理。", "options": ["Having been", "Being", "Have been", "Been"] },
+    { "gp": "gp6", "stem": "\"___ kept in a dry place, the engine was still in good condition.\"(完成式非谓语被动)", "stem_cn": "由于被放在干燥处,引擎仍然状况良好。", "options": ["Having been", "Being", "Has been", "Been"] },
+    { "gp": "gp6", "stem": "\"We expected the maker's name ___ somewhere on the car.\"(不定式被动)", "stem_cn": "我们估计制造商的名字会印在车上某处。", "options": ["to be found", "to find", "to be find", "found"] },
+    { "gp": "gp6", "stem": "\"The owner wanted the car ___ to its original condition.\"(不定式被动:想让车被修复)", "stem_cn": "车主想让这辆车被修复到原来的状态。", "options": ["to be restored", "to restore", "to be restore", "restoring"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"汽油\"常说:", "options": ["gas", "petrol", "oil fuel", "car juice"] },
+    { "stem": "美语里\"轮胎\"拼作:", "options": ["tire", "tyre", "tier", "tyer"] },
+    { "stem": "restore 的意思是:", "options": ["修复,复原", "拆毁", "出售", "隐藏"] },
+    { "stem": "rare 的意思是:", "options": ["稀有的,罕见的", "普通的", "廉价的", "巨大的"] },
+    { "stem": "acquire 的意思是:", "options": ["获得,取得", "丢弃", "借出", "归还"] },
+    { "stem": "original 的意思是:", "options": ["最初的,原来的", "最后的", "假的", "现代的"] }
+  ],
+  "contrast": [
+    { "us": "gas", "uk": "petrol", "note_cn": "汽油;美语 gas(gasoline),英式 petrol" },
+    { "us": "tire", "uk": "tyre", "note_cn": "轮胎;美语 tire,英式 tyre" },
+    { "us": "trunk", "uk": "boot", "note_cn": "(汽车)后备箱;美语 trunk,英式 boot" },
+    { "us": "hood", "uk": "bonnet", "note_cn": "(汽车)引擎盖;美语 hood,英式 bonnet" }
+  ],
+  "chunks": [
+    { "us": "come back to life", "ipa": "/kʌm bæk tə laɪf/", "example1": "The old car came back to life.", "example1_cn": "这辆老爷车重获新生。", "example2": "The town comes back to life in summer.", "example2_cn": "小镇一到夏天就热闹起来。" },
+    { "us": "a great deal of", "ipa": "/ə ɡreɪt diːl əv/", "example1": "The car needed a great deal of work.", "example1_cn": "这辆车需要大量修理。", "example2": "It took a great deal of time.", "example2_cn": "这花了大量时间。" },
+    { "us": "restore ... to", "ipa": "/rɪˈstɔːr tuː/", "example1": "It has been restored to its original condition.", "example1_cn": "它已被修复到原来的状态。", "example2": "They restored the house to its former glory.", "example2_cn": "他们把房子修复到往日的辉煌。" },
+    { "us": "work on", "ipa": "/wɜːrk ɑːn/", "example1": "The team worked on the car for months.", "example1_cn": "团队修了这辆车好几个月。", "example2": "She is working on a new project.", "example2_cn": "她在做一个新项目。" }
+  ],
+  "stage7_cloze": {
+    "context": "The car ___1___ in Germany in 1925. For years it ___2___ in an old garage. While it ___3___ cleaned, the maker's name was found. After months of work, it ___4___ fully restored to its original condition.",
+    "blanks": [
+      { "blank_no": 1, "options": ["was made", "made", "was making", "has made"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["had been kept", "kept", "was keeping", "has kept"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["was being", "is being", "was", "had been"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["has been", "was being", "is", "had"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What kind of car was brought to the museum?", "options": ["A rare old car made in Germany in 1925, one of only ten ever built", "A brand-new sports car", "A common family car", "A racing car from the 1960s"] },
+    { "stem": "What was found while the car was being cleaned?", "options": ["The maker's name, under the seat", "A box of money", "An old map", "The original keys"] },
+    { "stem": "What condition is the car in now?", "options": ["It has been fully restored to its original condition and is admired by visitors", "It is still broken and unusable", "It was sold to a collector", "It was scrapped for parts"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"这辆车1925年在德国制造\"(一般过去被动 be + 过去分词):", "options": ["This car was made in Germany in 1925.", "This car made in Germany in 1925.", "This car was make in Germany in 1925.", "This car is made in Germany in 1925."] },
+    { "stem": "你想说\"这辆车已被完全修复\"(现在完成被动 has been + 过去分词):", "options": ["The car has been fully restored.", "The car has fully restored.", "The car is fully restore.", "The car had been fully restoring."] },
+    { "stem": "你想说\"清理这辆车时,我们发现了制造商的名字\"(过去进行被动 was being done):", "options": ["While the car was being cleaned, we found the maker's name.", "While the car was cleaning, we found the maker's name.", "While the car cleaned, we found the maker's name.", "While the car has been cleaned, we found the maker's name."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "restore 的意思是:", "options": ["修复,复原", "拆毁", "出售", "隐藏"] },
+    { "kind": "vocab", "stem": "rare 的意思是:", "options": ["稀有的,罕见的", "普通的", "廉价的", "巨大的"] },
+    { "kind": "grammar", "stem": "\"This car ___ in Germany in 1925.\"(一般过去被动)", "stem_cn": "这辆车1925年在德国制造。", "options": ["was made", "made", "was making", "has made"] },
+    { "kind": "grammar", "stem": "\"After months of work, the car ___ fully restored.\"(现在完成被动)", "stem_cn": "几个月后,这辆车已被完全修复。", "options": ["has been", "was being", "is", "had"] },
+    { "kind": "scenario", "stem": "被动语态的基本结构是:", "options": ["be + 过去分词", "be + 现在分词", "have + 过去分词", "will + 动词原形"] },
+    { "kind": "scenario", "stem": "\"come back to life\" 的意思是:", "options": ["重获新生,恢复活力", "突然死去", "回到家里", "醒过来吃饭"] },
+    { "kind": "reading", "stem": "Why did the old car need a great deal of work?", "options": ["It had been stored for years and was in poor condition", "It had crashed on the road", "It was brand new", "It was too modern to run"], "passage": true },
+    { "kind": "reading", "stem": "How was the maker's name discovered?", "options": ["It was found under the seat while the car was being cleaned", "It was printed on the door", "The former owner told them", "It was in an old newspaper"], "passage": true },
+    { "kind": "listening", "stem": "Where had the car been kept for years?", "options": ["In an old garage, almost forgotten", "In a museum", "In a showroom", "On a race track"], "audio": true },
+    { "kind": "listening", "stem": "How do visitors feel about the restored car now?", "options": ["They admire it", "They ignore it", "They dislike it", "They are afraid of it"], "audio": true }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "am4_l28",
+  "unit_no": 5,
+  "lesson_no": 28,
+  "title_en": "Patients and Doctors",
+  "title_cn": "病人与医生",
+  "grammar_focus": "although/though 引导让步(Although our faith has weakened, …)、unless 引导条件(‘除非’)、介词 + 关系代词(the things in which our forefathers believed)、no + 比较级 … than(no quicker way than …)、不定式的被动式 to be + 过去分词(to be cured)(NCE4 无 KS 页,考点由课文结构自取;IP:源为一篇论‘病人迷信一瓶药、医生投其所好’的英文随笔,内含真实人物托马斯·卡莱尔的轶事——按 IP 铁律已换成原创虚构‘老学者’,通用观点用 100% 原创行文复述;题材=医患心理·无害;美语化 skeptical/liter;第四册第28课)",
+  "scene": "我们身处一个多疑的时代。尽管我们对祖先所热忱信奉的种种东西已不再深信,可我们对一瓶药疗效的信心,却和他们当年一样坚定。这种现代信仰的证据显而易见:医疗系统每年的药费账单,正朝着天文数字节节攀升,眼下毫无止升的迹象。大多数来医院门诊的病人都觉得:除非能带一样看得见摸得着的药回家——一瓶药水、一盒药片,或一小罐药膏——否则就等于没得到像样的诊治。医生若不塞点东西到他们手里打发走,他们便怀疑医生什么也没为自己做;而医生这一方,也巴不得顺水推舟。应付病人没有比给他们想要的东西更快的法子了;再加上大多数医生本就疲于奔命,没工夫去做那件费时又不讨好的事——劝人吃得健康些、戒掉坏习惯——于是那瓶、那盒、那罐,几乎总是照发不误。对一瓶药如此迷信的,并不只是无知的人。有这么个故事:一位老学者——在其他一切方面都学识渊博——在大衣口袋里翻出了半瓶药,那是从前给他妻子一点小恙开的。他既不知瓶里装的是什么,也不知住在城另一头的朋友究竟害的什么病;可他一转念:一种药既然在一种病上如此见效,用在另一种病上想必也管用。想到自己在做好事,他心里一暖,便匆匆赶去,硬要把药塞给朋友。说到底,吃药最大的好处,就是它对服药者别无所求,只要忍受片刻难吃的味道罢了——而这,恰恰正是病人对医生的要求:毫不费事地把自己治好。",
+  "grammar_card": {
+    "title": "although 让步 / unless 条件 / 介词+关系代词 / no + 比较级 … than / 不定式的被动式",
+    "intro": "①although/though 引导让步,‘尽管…’:Although our faith has weakened, our confidence remains。②unless 引导条件,‘除非…’:unless they carry home a remedy。③介词 + 关系代词:the things in which our forefathers believed。④no + 比较级 … than:no quicker way than giving them pills。⑤不定式的被动式 to be + 过去分词:to be cured。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["although 让步", "Although …, …", "Although faith has weakened, confidence remains"],
+        ["unless 条件", "… unless …", "unless they carry home a remedy"],
+        ["介词+关系代词", "介词 + which", "the things in which they believed"],
+        ["no + 比较级 … than", "no + 比较级 … than", "no quicker way than giving pills"],
+        ["不定式的被动式", "to be + 过去分词", "want to be cured"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "although 已引导让步,句中不能再用 but(汉语‘虽然…但是…’在英语里只留一个)。", "mark": "although 不配 but" },
+      { "rule": "unless 从句用一般现在时表将来(不用 will);且不能用 without + 从句替代。", "mark": "unless + 一般现在时" },
+      { "rule": "美式拼写:skeptical(怀疑的,英式 sceptical)、liter(升,英式 litre)。本课已按美语写。", "mark": "skeptical / liter" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What are patients looking for when they visit the doctor?",
+    "options": ["A tangible remedy to carry home, such as a bottle of medicine, pills, or ointment", "A long talk about their diet", "A referral to a specialist", "Nothing at all"],
+    "answer_index": 0
+  },
+  "passage": "Ours is a skeptical age. Although our faith in the things in which our forefathers fervently believed has weakened, our confidence in the curative power of a bottle of medicine remains as strong as ever theirs was. The proof of this modern faith is plain: the yearly drug bill of the health services keeps mounting toward astronomical figures and shows no sign of leveling off. Most patients who attend the clinics of our hospitals feel that they have not been given adequate treatment unless they can carry home some tangible remedy — a bottle of medicine, a box of pills, or a small jar of ointment. Unless the doctor sends them away with something in their hands, they suspect that nothing has been done for them, and the doctor, for his part, is only too ready to oblige. There is no quicker way of dealing with patients than by giving them exactly what they ask for; and since most doctors are overworked and have little time for the slow, thankless business of urging people to eat better and give up their bad habits, the bottle, the box, and the jar are nearly always handed over. It is not only the ignorant who put such faith in the bottle of medicine. There is a story of an old scholar — a learned man in every other respect — who found in his coat pocket what remained of a medicine once prescribed for a slight indisposition of his wife's. He had no idea what the bottle contained, nor what illness his friend across town was suffering from; but he reasoned that a medicine which had worked so well in one case must surely help in another. Comforted by the thought of the good he was doing, he hurried off to press it upon his friend. The great advantage of taking medicine, after all, is that it asks nothing of the taker beyond putting up for a moment with an unpleasant taste — and that is exactly what patients want of their doctors: to be cured at no inconvenience to themselves.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Ours is a skeptical age. Although our faith in the things in which our forefathers fervently believed has weakened, our confidence in the curative power of a bottle of medicine remains as strong as ever theirs was.", "text_cn": "我们身处一个多疑的时代。尽管我们对祖先所热忱信奉的种种东西已不再深信,可我们对一瓶药疗效的信心,却和他们当年一样坚定。" },
+    { "seq": 2, "speaker": null, "text_en": "The proof of this modern faith is plain: the yearly drug bill of the health services keeps mounting toward astronomical figures and shows no sign of leveling off. Most patients who attend the clinics of our hospitals feel that they have not been given adequate treatment unless they can carry home some tangible remedy — a bottle of medicine, a box of pills, or a small jar of ointment.", "text_cn": "这种现代信仰的证据显而易见:医疗系统每年的药费账单,正朝着天文数字节节攀升,眼下毫无止升的迹象。大多数来医院门诊的病人都觉得:除非能带一样看得见摸得着的药回家——一瓶药水、一盒药片,或一小罐药膏——否则就等于没得到像样的诊治。" },
+    { "seq": 3, "speaker": null, "text_en": "Unless the doctor sends them away with something in their hands, they suspect that nothing has been done for them, and the doctor, for his part, is only too ready to oblige. There is no quicker way of dealing with patients than by giving them exactly what they ask for.", "text_cn": "医生若不塞点东西到他们手里打发走,他们便怀疑医生什么也没为自己做;而医生这一方,也巴不得顺水推舟。应付病人没有比给他们想要的东西更快的法子了。" },
+    { "seq": 4, "speaker": null, "text_en": "Since most doctors are overworked and have little time for the slow, thankless business of urging people to eat better and give up their bad habits, the bottle, the box, and the jar are nearly always handed over. It is not only the ignorant who put such faith in the bottle of medicine.", "text_cn": "再加上大多数医生本就疲于奔命,没工夫去做那件费时又不讨好的事——劝人吃得健康些、戒掉坏习惯——于是那瓶、那盒、那罐,几乎总是照发不误。对一瓶药如此迷信的,并不只是无知的人。" },
+    { "seq": 5, "speaker": null, "text_en": "There is a story of an old scholar who found in his coat pocket what remained of a medicine once prescribed for a slight indisposition of his wife's. He reasoned that a medicine which had worked so well in one case must surely help in another, and hurried off to press it upon a sick friend. The great advantage of taking medicine, after all, is that it asks nothing of the taker beyond an unpleasant taste — and that is exactly what patients want of their doctors: to be cured at no inconvenience to themselves.", "text_cn": "有这么个故事:一位老学者在大衣口袋里翻出了半瓶药,那是从前给他妻子一点小恙开的。他一转念:一种药既然在一种病上如此见效,用在另一种病上想必也管用,便匆匆赶去,硬要把药塞给一位生病的朋友。说到底,吃药最大的好处,就是它对服药者别无所求,只要忍受难吃的味道罢了——而这,恰恰正是病人对医生的要求:毫不费事地把自己治好。" }
+  ],
+  "words": [
+    { "word": "skeptical", "ipa": "/ˈskeptɪkl/", "pos": "adj", "meaning_cn": "怀疑的,多疑的", "example": "ours is a skeptical age" },
+    { "word": "forefathers", "ipa": "/ˈfɔːrfɑːðərz/", "pos": "n", "meaning_cn": "祖先,先辈", "example": "what our forefathers believed" },
+    { "word": "fervently", "ipa": "/ˈfɜːrvəntli/", "pos": "adv", "meaning_cn": "热忱地,强烈地", "example": "fervently believed" },
+    { "word": "curative", "ipa": "/ˈkjʊrətɪv/", "pos": "adj", "meaning_cn": "有疗效的,治病的", "example": "the curative power of medicine" },
+    { "word": "astronomical", "ipa": "/ˌæstrəˈnɑːmɪkl/", "pos": "adj", "meaning_cn": "(数字)极大的,天文数字的", "example": "mounting toward astronomical figures" },
+    { "word": "adequate", "ipa": "/ˈædɪkwət/", "pos": "adj", "meaning_cn": "足够的,适当的", "example": "adequate treatment" },
+    { "word": "tangible", "ipa": "/ˈtændʒəbl/", "pos": "adj", "meaning_cn": "有形的,实实在在的", "example": "some tangible remedy" },
+    { "word": "remedy", "ipa": "/ˈremədi/", "pos": "n", "meaning_cn": "药物,疗法,补救", "example": "a tangible remedy to carry home" },
+    { "word": "ointment", "ipa": "/ˈɔɪntmənt/", "pos": "n", "meaning_cn": "药膏,油膏", "example": "a small jar of ointment" },
+    { "word": "prescribe", "ipa": "/prɪˈskraɪb/", "pos": "v", "meaning_cn": "开(药),开处方", "example": "a medicine once prescribed" },
+    { "word": "indisposition", "ipa": "/ˌɪndɪspəˈzɪʃn/", "pos": "n", "meaning_cn": "小病,不适", "example": "a slight indisposition of his wife's" },
+    { "word": "inconvenience", "ipa": "/ˌɪnkənˈviːniəns/", "pos": "n", "meaning_cn": "不便,麻烦", "example": "cured at no inconvenience" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "although/though 引导让步" },
+    { "gp": "gp2", "name": "unless 引导条件(除非)" },
+    { "gp": "gp3", "name": "介词 + 关系代词(in which)" },
+    { "gp": "gp4", "name": "no + 比较级 … than" },
+    { "gp": "gp5", "name": "不定式的被动式(to be + 过去分词)" },
+    { "gp": "gp6", "name": "词汇辨析(remedy/tangible/prescribe)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ our faith in old beliefs has weakened, our trust in medicine has not.\"(‘尽管…’,让步连词,填句首那个词)", "stem_cn": "尽管我们对旧信仰的信心已减弱,对药物的信任却未减。", "options": ["Although", "Because", "Unless", "Since"] },
+    { "gp": "gp1", "stem": "\"___ the doctor knows the pills may not help, he still prescribes them.\"(‘虽然’,让步连词)", "stem_cn": "虽然医生知道这些药丸也许没用,他还是开了。", "options": ["Although", "Because", "If", "So"] },
+    { "gp": "gp1", "stem": "\"The patient felt cured, ___ the medicine was harmless water.\"(‘虽然/尽管’,填让步连词)", "stem_cn": "病人觉得自己好了,尽管那药不过是无害的清水。", "options": ["although", "because", "unless", "so"] },
+    { "gp": "gp2", "stem": "\"Patients feel neglected ___ they carry home a bottle of medicine.\"(‘除非’,条件连词)", "stem_cn": "病人若不带一瓶药回家,就觉得被冷落了。", "options": ["unless", "because", "although", "since"] },
+    { "gp": "gp2", "stem": "\"___ the doctor gives them something, they think nothing was done.\"(‘除非’,句首条件连词)", "stem_cn": "除非医生给点什么,他们就觉得什么也没做。", "options": ["Unless", "Because", "Although", "So"] },
+    { "gp": "gp2", "stem": "\"The illness will not improve ___ the patient changes his habits.\"(‘除非’,条件连词)", "stem_cn": "除非病人改变习惯,否则病情不会好转。", "options": ["unless", "because", "although", "while"] },
+    { "gp": "gp3", "stem": "\"The things ___ which our forefathers believed have lost their hold.\"(介词+关系代词;‘相信某物’的动词后跟的那个介词)", "stem_cn": "我们祖先所信的那些东西,已失去影响力。", "options": ["in", "of", "at", "on"] },
+    { "gp": "gp3", "stem": "\"The illness ___ which his friend suffered was unknown to him.\"(介词+关系代词;‘患(病)’的动词后跟的那个介词)", "stem_cn": "他并不知道朋友所患的是什么病。", "options": ["from", "in", "at", "of"] },
+    { "gp": "gp3", "stem": "\"The bottle ___ which the pills were kept had no label.\"(介词+关系代词,‘在其中’;‘把…存放在’后跟的那个介词)", "stem_cn": "装着药丸的那只瓶子没有标签。", "options": ["in", "from", "at", "of"] },
+    { "gp": "gp4", "stem": "\"There is no ___ way of pleasing patients than giving them pills.\"(‘没有比…更快的办法’,填‘快’的比较级形式)", "stem_cn": "没有比给药丸更快讨好病人的办法了。", "options": ["quicker", "quickest", "quick", "more quick"] },
+    { "gp": "gp4", "stem": "\"A remedy is ___ welcome than time-consuming advice.\"(‘更受欢迎’,welcome 的比较级)", "stem_cn": "一剂药方比费时的劝告更受欢迎。", "options": ["more", "most", "very", "much"] },
+    { "gp": "gp4", "stem": "\"Nothing comforts a patient more ___ a bottle to carry home.\"(‘比…更’,比较级后接的那个连词)", "stem_cn": "没有什么比一瓶带回家的药更能安慰病人了。", "options": ["than", "then", "as", "that"] },
+    { "gp": "gp5", "stem": "\"What patients want is to be ___ quickly.\"(不定式的被动 to be + 过去分词,‘被治好’,填‘治好’那个动词的过去分词)", "stem_cn": "病人想要的是被迅速治好。", "options": ["cured", "curing", "cure", "cures"] },
+    { "gp": "gp5", "stem": "\"The medicine is meant to be ___ after meals.\"(不定式的被动 to be + 过去分词,‘被服用’,填‘服用’那个动词的过去分词)", "stem_cn": "这药应在饭后服用。", "options": ["taken", "taking", "take", "took"] },
+    { "gp": "gp5", "stem": "\"The advice deserves to be ___ more seriously.\"(不定式的被动 to be + 过去分词,‘被认真对待’,填‘重视/听取’那个动词的过去分词)", "stem_cn": "这忠告值得被更认真地对待。", "options": ["heeded", "heeding", "heed", "to heed"] },
+    { "gp": "gp6", "stem": "\"Something you take or do to cure an illness is a ___.\"(“药物,疗法”用哪个词)", "stem_cn": "为治病而服用或采取的东西。", "options": ["remedy", "illness", "symptom", "cause"] },
+    { "gp": "gp6", "stem": "\"Something you can touch or clearly see is ___.\"(“有形的,实实在在的”用哪个词)", "stem_cn": "能触摸到或看得清的。", "options": ["tangible", "invisible", "doubtful", "sudden"] },
+    { "gp": "gp6", "stem": "\"When a doctor tells you which medicine to take, he ___ it.\"(“开(药)”用哪个词)", "stem_cn": "医生告诉你该服什么药,即‘开’药。", "options": ["prescribes", "swallows", "buys", "forbids"] }
+  ],
+  "stage6": [
+    { "stem": "skeptical 的意思是:", "options": ["怀疑的,多疑的", "轻信的", "热情的", "确定的"] },
+    { "stem": "curative 的意思是:", "options": ["有疗效的,治病的", "有害的", "预防的", "装饰的"] },
+    { "stem": "tangible 的意思是:", "options": ["有形的,实实在在的", "无形的", "虚假的", "短暂的"] },
+    { "stem": "remedy 的意思是:", "options": ["药物,疗法,补救", "疾病", "症状", "病因"] },
+    { "stem": "astronomical 的意思是:", "options": ["(数字)极大的,天文数字的", "微小的", "普通的", "精确的"] },
+    { "stem": "prescribe 的意思是:", "options": ["开(药),开处方", "服用", "购买", "禁止"] }
+  ],
+  "contrast": [
+    { "us": "skeptical", "uk": "sceptical", "note_cn": "怀疑的;美语 skeptical,英式 sceptical" },
+    { "us": "anemia", "uk": "anaemia", "note_cn": "贫血;美语 anemia,英式 anaemia" },
+    { "us": "pediatric", "uk": "paediatric", "note_cn": "儿科的;美语 pediatric,英式 paediatric" },
+    { "us": "liter", "uk": "litre", "note_cn": "升;美语 liter,英式 litre" }
+  ],
+  "chunks": [
+    { "us": "put up with", "ipa": "/pʊt ʌp wɪð/", "example1": "You must put up with the bitter taste.", "example1_cn": "你得忍受这苦味。", "example2": "I can't put up with the noise any longer.", "example2_cn": "我再也受不了这噪音了。" },
+    { "us": "carry home", "ipa": "/ˈkæri hoʊm/", "example1": "Patients like to carry home a bottle of medicine.", "example1_cn": "病人喜欢带一瓶药回家。", "example2": "She carried home a bag of books.", "example2_cn": "她把一袋书带回了家。" },
+    { "us": "ask for", "ipa": "/æsk fɔːr/", "example1": "Patients ask for pills, not advice.", "example1_cn": "病人要的是药片,不是劝告。", "example2": "He asked for more time to finish.", "example2_cn": "他要求多给点时间完成。" },
+    { "us": "only too ready to", "ipa": "/ˈoʊnli tuː ˈredi tuː/", "example1": "The doctor is only too ready to oblige.", "example1_cn": "医生巴不得顺水推舟。", "example2": "I'm only too ready to help.", "example2_cn": "我非常乐意帮忙。" }
+  ],
+  "stage7_cloze": {
+    "context": "___1___ our faith in old beliefs has weakened, our trust in medicine has not. Patients feel neglected ___2___ they carry home a bottle. There is no ___3___ way to please them than to give them pills. All they really want is to be ___4___ at no trouble to themselves.",
+    "blanks": [
+      { "blank_no": 1, "options": ["Although", "Because", "Unless", "Since"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["unless", "because", "although", "since"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["quicker", "quickest", "quick", "more quick"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["cured", "curing", "cure", "cures"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What are most patients looking for when they visit the doctor?", "options": ["A tangible remedy to carry home, such as a bottle of medicine or pills", "A long conversation about their diet", "A referral to a hospital", "Nothing at all"] },
+    { "stem": "Why do doctors so often give patients what they ask for?", "options": ["They are overworked and have little time for slow, unwelcome advice", "They believe pills always cure illness", "They are paid for each bottle", "Patients refuse to leave"] },
+    { "stem": "According to the speaker, what do patients really demand of their doctors?", "options": ["To be cured at no inconvenience to themselves", "To be given the longest possible treatment", "To be told the whole truth", "To pay as little as possible"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"尽管我们对旧信仰的信心减弱了,对药物的信任却没有\"(although 让步):", "options": ["Although our faith in old beliefs has weakened, our trust in medicine has not.", "Although our faith in old beliefs has weakened, but our trust in medicine has not.", "Despite our faith in old beliefs has weakened, our trust in medicine has not.", "Although our faith in old beliefs weakened has, our trust in medicine has not."] },
+    { "stem": "你想说\"病人若不带一瓶药回家,就觉得被冷落了\"(unless 条件):", "options": ["Patients feel neglected unless they carry home a bottle of medicine.", "Patients feel neglected unless they will carry home a bottle of medicine.", "Patients feel neglected without they carry home a bottle of medicine.", "Patients feel neglected unless they carrying home a bottle of medicine."] },
+    { "stem": "你想说\"没有比给药丸更快讨好病人的办法了\"(no + 比较级 … than):", "options": ["There is no quicker way to please patients than giving them pills.", "There is no quicker way to please patients as giving them pills.", "There is no quickest way to please patients than giving them pills.", "There is no more quick way to please patients than giving them pills."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "remedy 的意思是:", "options": ["药物,疗法,补救", "疾病", "症状", "病因"] },
+    { "kind": "vocab", "stem": "tangible 的意思是:", "options": ["有形的,实实在在的", "无形的", "虚假的", "短暂的"] },
+    { "kind": "grammar", "stem": "\"___ our faith in old beliefs has weakened, our trust in medicine has not.\"(‘尽管’,让步连词)", "stem_cn": "尽管对旧信仰的信心减弱,对药物的信任却没有。", "options": ["Although", "Because", "Unless", "Since"] },
+    { "kind": "grammar", "stem": "\"Patients feel neglected ___ they carry home a bottle of medicine.\"(‘除非’,条件连词)", "stem_cn": "病人若不带瓶药回家,就觉得被冷落。", "options": ["unless", "because", "although", "since"] },
+    { "kind": "scenario", "stem": "\"put up with\" 的意思是:", "options": ["忍受,容忍", "举起", "建立", "放弃"] },
+    { "kind": "scenario", "stem": "\"ask for\" 的意思是:", "options": ["要求,索取", "回答", "拒绝", "忘记"] },
+    { "kind": "reading", "stem": "According to the passage, why do patients feel untreated without a bottle of medicine?", "options": ["They trust a tangible remedy they can carry home more than advice", "Medicine is the only real cure", "Doctors force pills on them", "The bottle is free"], "passage": true },
+    { "kind": "reading", "stem": "Why do overworked doctors give patients what they ask for?", "options": ["It is the quickest way to deal with them, and advice takes time few can spare", "They enjoy prescribing pills", "They are told to by the government", "Patients pay extra for it"], "passage": true },
+    { "kind": "listening", "stem": "What do patients really want from their doctors, according to the speaker?", "options": ["To be cured with no inconvenience to themselves", "To be given the strongest possible drugs", "To spend a long time being examined", "To learn about healthy living"], "audio": true },
+    { "kind": "listening", "stem": "What is the great advantage of taking medicine, the speaker says?", "options": ["It asks nothing of you but putting up with a bad taste for a moment", "It always works instantly", "It costs very little", "It replaces the need for doctors"], "audio": true }
+  ]
+}

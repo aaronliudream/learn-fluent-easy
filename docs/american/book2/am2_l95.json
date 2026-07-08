@@ -1,0 +1,131 @@
+{
+  "id": "am2_l95",
+  "unit_no": 12,
+  "lesson_no": 95,
+  "title_en": "A Very Special Day",
+  "title_cn": "非常特别的一天",
+  "grammar_focus": "复习全册动词形式综合(收官包·方案B换情节):各时态(一般现在/现在完成进行/过去/过去完成/过去进行/一般将来)、被动(一般现在被动/现在进行被动/过去完成被动/将来被动)、条件句、情态等在一个故事里的综合运用辨析",
+  "scene": "每年秋天,我们镇都会办一场人人翘首以盼的丰收节。今年,我已经帮着筹备了两个月。广场附近搭起了一个个摊位,一串串彩灯早已挂满了广场上空。“要是下雨,整场活动就挪到室内。”“你一定要尝尝苹果派,”朋友说,“现在正端上来呢。”孩子们笑作一团,台上的乐手们奏着欢快的曲子。到了傍晚,已经来了好几百人,还有更多人正陆续赶来。“我从没见过镇子这么热闹,”奶奶说。大家都说,明年的丰收节会办得更大。这真是让人久久难忘的一天。",
+  "grammar_card": {
+    "title": "复习全册动词形式综合",
+    "intro": "本课把学过的各种动词形式放进一个丰收节的故事里综合辨析:①一般现在——每年惯例(our town holds a festival);②现在完成进行——一直做到现在(I have been helping for two months);③过去/过去完成(被动)——搭好的摊位、早已挂好的灯(booths were set up / lights had been hung);④过去进行——当时正在做(children were laughing);⑤条件 + 将来被动——(If it rains, the event will be moved indoors);⑥现在进行被动——此刻正被做(the pie is being served);⑦现在完成——影响到现在(I have never seen it so alive);⑧一般将来 / 将来被动——(next year's festival will be bigger / it will be remembered)。看时间标志和语义选形式。",
+    "table": {
+      "headers": ["形式", "例子"],
+      "rows": [
+        ["一般现在 / 现在完成进行", "Our town holds a festival. / I have been helping for two months."],
+        ["过去 / 过去完成被动", "Booths were set up. / Lights had been hung."],
+        ["过去进行", "Children were laughing while musicians were playing."],
+        ["条件 + 将来被动", "If it rains, the event will be moved indoors."],
+        ["现在进行被动 / 将来被动", "The pie is being served. / It will be remembered."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语“秋天”说 fall(英式 autumn);“糖果”说 candy(英式 sweets)。本课已按美语写。", "mark": "fall / candy" },
+      { "rule": "综合题看时间标志和语义选形式:每年惯例用一般现在,当时正在做用过去进行,条件从句用一般现在表将来,此刻正被做用现在进行被动。", "mark": "综合辨析" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How often does the town hold the harvest festival?",
+    "options": ["Every fall", "Every week", "Once every ten years", "Only this year"],
+    "answer_index": 0
+  },
+  "passage": "Every fall, our town holds a harvest festival that everyone looks forward to. This year, I have been helping to plan it for two months. Booths were set up near the square, and lights had been hung across it. \"If it rains, the whole event will be moved indoors.\" \"You must try the apple pie,\" my friend said. \"It is being served now.\" Children were laughing while musicians were playing on the stage. By evening, hundreds of people had come, and more were arriving. \"I have never seen the town so alive,\" Grandma said. Next year's festival will be even bigger, everyone agrees. It was a day that will be remembered for a long time.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Every fall, our town holds a harvest festival that everyone looks forward to. This year, I have been helping to plan it for two months.", "text_cn": "每年秋天,我们镇都会办一场人人翘首以盼的丰收节。今年,我已经帮着筹备了两个月。" },
+    { "seq": 2, "speaker": null, "text_en": "Booths were set up near the square, and lights had been hung across it. \"If it rains, the whole event will be moved indoors.\"", "text_cn": "广场附近搭起了一个个摊位,一串串彩灯早已挂满了广场上空。“要是下雨,整场活动就挪到室内。”" },
+    { "seq": 3, "speaker": null, "text_en": "\"You must try the apple pie,\" my friend said. \"It is being served now.\" Children were laughing while musicians were playing on the stage.", "text_cn": "“你一定要尝尝苹果派,”朋友说,“现在正端上来呢。”孩子们笑作一团,台上的乐手们奏着欢快的曲子。" },
+    { "seq": 4, "speaker": null, "text_en": "By evening, hundreds of people had come, and more were arriving. \"I have never seen the town so alive,\" Grandma said.", "text_cn": "到了傍晚,已经来了好几百人,还有更多人正陆续赶来。“我从没见过镇子这么热闹,”奶奶说。" },
+    { "seq": 5, "speaker": null, "text_en": "Next year's festival will be even bigger, everyone agrees. It was a day that will be remembered for a long time.", "text_cn": "大家都说,明年的丰收节会办得更大。这真是让人久久难忘的一天。" }
+  ],
+  "words": [
+    { "word": "harvest", "ipa": "/ˈhɑːrvɪst/", "pos": "n", "meaning_cn": "收获,丰收", "example": "a harvest festival" },
+    { "word": "festival", "ipa": "/ˈfestɪvl/", "pos": "n", "meaning_cn": "节日,庆典", "example": "everyone looks forward to the festival" },
+    { "word": "booth", "ipa": "/buːθ/", "pos": "n", "meaning_cn": "摊位,小亭", "example": "Booths were set up near the square." },
+    { "word": "square", "ipa": "/skwer/", "pos": "n", "meaning_cn": "广场", "example": "lights had been hung across the square" },
+    { "word": "hang", "ipa": "/hæŋ/", "pos": "v", "meaning_cn": "悬挂", "example": "lights had been hung across it" },
+    { "word": "serve", "ipa": "/sɜːrv/", "pos": "v", "meaning_cn": "供应,端上", "example": "the apple pie is being served now" },
+    { "word": "musician", "ipa": "/mjuˈzɪʃn/", "pos": "n", "meaning_cn": "音乐家,乐手", "example": "musicians were playing on the stage" },
+    { "word": "stage", "ipa": "/steɪdʒ/", "pos": "n", "meaning_cn": "舞台", "example": "playing on the stage" },
+    { "word": "alive", "ipa": "/əˈlaɪv/", "pos": "adj", "meaning_cn": "有生气的,热闹的;活着的", "example": "I have never seen the town so alive" },
+    { "word": "remember", "ipa": "/rɪˈmembər/", "pos": "v", "meaning_cn": "记得,铭记", "example": "a day that will be remembered" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般现在 / 现在完成进行 / 现在完成" },
+    { "gp": "gp2", "name": "过去时态(过去被动 / 过去完成被动 / 过去进行)" },
+    { "gp": "gp3", "name": "一般将来与条件句(if + 现在时表将来)" },
+    { "gp": "gp4", "name": "被动语态(现在进行被动 / 将来被动 / 一般现在被动)" },
+    { "gp": "gp5", "name": "情态与过去完成、过去进行的综合对比" },
+    { "gp": "gp6", "name": "词汇辨析(festival / musician / alive)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Every fall, our town ___ a harvest festival.\"(每年惯例:一般现在)", "stem_cn": "每年秋天,我们镇都举办丰收节。", "options": ["holds", "is holding", "held", "has held"] },
+    { "gp": "gp1", "stem": "\"This year, I ___ to plan it for two months.\"(一直帮忙到现在:现在完成进行)", "stem_cn": "今年,我已经帮着筹备两个月了。", "options": ["have been helping", "helped", "help", "am helping"] },
+    { "gp": "gp1", "stem": "\"'I ___ the town so alive,' Grandma said.\"(从未见过:现在完成)", "stem_cn": "“我从没见过镇子这么热闹,”奶奶说。", "options": ["have never seen", "never saw", "am never seeing", "had never seen"] },
+    { "gp": "gp2", "stem": "\"Booths ___ near the square for the festival.\"(过去被动:被搭起)", "stem_cn": "广场附近为丰收节搭起了摊位。", "options": ["were set up", "set up", "are set up", "have set up"] },
+    { "gp": "gp2", "stem": "\"Lights ___ across the square before the crowd arrived.\"(过去完成被动:此前已被挂上)", "stem_cn": "人群到之前,彩灯早已挂满了广场上空。", "options": ["had been hung", "hung", "are hung", "have hung"] },
+    { "gp": "gp2", "stem": "\"Children ___ while musicians were playing on the stage.\"(当时正在:过去进行)", "stem_cn": "台上乐手演奏时,孩子们笑作一团。", "options": ["were laughing", "laughed", "laugh", "have laughed"] },
+    { "gp": "gp3", "stem": "\"If it ___, the whole event will be moved indoors.\"(条件从句用一般现在表将来)", "stem_cn": "要是下雨,整场活动就挪到室内。", "options": ["rains", "will rain", "is raining", "rained"] },
+    { "gp": "gp3", "stem": "\"Next year's festival ___ even bigger.\"(一般将来)", "stem_cn": "明年的丰收节会办得更大。", "options": ["will be", "is", "was", "has been"] },
+    { "gp": "gp3", "stem": "\"If it rains, the event ___ indoors.\"(条件主句:将来被动)", "stem_cn": "要是下雨,活动就会被挪到室内。", "options": ["will be moved", "will move", "is moved", "moved"] },
+    { "gp": "gp4", "stem": "\"'You must try the apple pie. It ___ now,' my friend said.\"(现在进行被动:正在被供应)", "stem_cn": "“你一定要尝尝苹果派,现在正端上来呢。”", "options": ["is being served", "is serving", "serves", "served"] },
+    { "gp": "gp4", "stem": "\"It was a day that ___ for a long time.\"(将来被动:将被铭记)", "stem_cn": "这真是让人久久难忘的一天。", "options": ["will be remembered", "will remember", "is remembering", "remembered"] },
+    { "gp": "gp4", "stem": "\"The square ___ with colorful flags every year.\"(一般现在被动:被装饰)", "stem_cn": "广场每年都用彩旗装饰。", "options": ["is decorated", "decorates", "is decorating", "decorate"] },
+    { "gp": "gp5", "stem": "\"'You ___ try the apple pie,' my friend said.\"(强烈建议:一定要)", "stem_cn": "“你一定要尝尝苹果派,”朋友说。", "options": ["must", "can", "may", "would"] },
+    { "gp": "gp5", "stem": "\"By evening, hundreds of people ___, and more were arriving.\"(此前已经来了:过去完成)", "stem_cn": "到傍晚,已经来了好几百人,还有更多人正赶来。", "options": ["had come", "come", "are coming", "will come"] },
+    { "gp": "gp5", "stem": "\"By evening, hundreds had come, and more ___.\"(当时正陆续赶来:过去进行)", "stem_cn": "到傍晚,已经来了好几百人,还有更多人正陆续赶来。", "options": ["were arriving", "arrived", "arrive", "have arrived"] },
+    { "gp": "gp6", "stem": "\"Every fall the town holds a harvest ___.\"(节日、庆典用哪个词)", "stem_cn": "每年秋天镇上都办丰收节。", "options": ["festival", "hospital", "mistake", "meeting"] },
+    { "gp": "gp6", "stem": "\"The ___ played happy music on the stage.\"(乐手、音乐家用哪个词)", "stem_cn": "乐手们在台上演奏欢快的音乐。", "options": ["musicians", "farmers", "doctors", "drivers"] },
+    { "gp": "gp6", "stem": "\"'I have never seen the town so ___,' Grandma said.\"(热闹的、有生气的用哪个词)", "stem_cn": "“我从没见过镇子这么热闹,”奶奶说。", "options": ["alive", "empty", "quiet", "asleep"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"秋天\"说:", "options": ["fall", "autumn", "harvest-time", "cool-fall"] },
+    { "stem": "美语里\"糖果\"说:", "options": ["candy", "sweets", "sugar-drops", "sweeties"] },
+    { "stem": "harvest 的意思是:", "options": ["收获,丰收", "播种", "干旱", "洪水"] },
+    { "stem": "booth 的意思是:", "options": ["摊位,小亭", "桥梁", "隧道", "屋顶"] },
+    { "stem": "alive 的意思是:", "options": ["有生气的,热闹的", "空荡荡的", "安静的", "睡着的"] },
+    { "stem": "remember 的意思是:", "options": ["记得,铭记", "忘记", "隐藏", "打碎"] }
+  ],
+  "contrast": [
+    { "us": "fall", "uk": "autumn", "note_cn": "秋天;美语 fall,英式 autumn" },
+    { "us": "candy", "uk": "sweets", "note_cn": "糖果;美语 candy,英式 sweets" },
+    { "us": "cookie", "uk": "biscuit", "note_cn": "饼干;美语 cookie,英式 biscuit" },
+    { "us": "movie", "uk": "film", "note_cn": "电影;美语 movie,英式 film" }
+  ],
+  "chunks": [
+    { "us": "look forward to", "ipa": "/lʊk ˈfɔːrwərd tu/", "example1": "Everyone looks forward to the harvest festival.", "example1_cn": "人人都期待着丰收节。", "example2": "I look forward to seeing you there.", "example2_cn": "我期待在那儿见到你。" },
+    { "us": "set up", "ipa": "/set ʌp/", "example1": "Booths were set up near the square.", "example1_cn": "广场附近搭起了摊位。", "example2": "They set up a stage for the show.", "example2_cn": "他们为演出搭了个舞台。" },
+    { "us": "harvest festival", "ipa": "/ˈhɑːrvɪst ˈfestɪvl/", "example1": "Our town holds a harvest festival every fall.", "example1_cn": "我们镇每年秋天办丰收节。", "example2": "The harvest festival lasts a whole weekend.", "example2_cn": "丰收节持续整个周末。" },
+    { "us": "for a long time", "ipa": "/fɔːr ə lɔːŋ taɪm/", "example1": "It will be remembered for a long time.", "example1_cn": "它将被人们久久铭记。", "example2": "We waited for a long time.", "example2_cn": "我们等了很久。" }
+  ],
+  "stage7_cloze": {
+    "context": "Every fall, our town ___1___ a harvest festival. This year, I ___2___ to plan it for two months. If it rains, the event ___3___ indoors. \"You must try the pie — it ___4___ now.\"",
+    "blanks": [
+      { "blank_no": 1, "options": ["holds", "is holding", "held", "has held"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["have been helping", "helped", "help", "am helping"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["will be moved", "will move", "is moved", "moved"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["is being served", "is serving", "serves", "served"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How often does the town hold the harvest festival?", "options": ["Every fall", "Every week", "Once a decade", "Only this year"] },
+    { "stem": "What will happen if it rains?", "options": ["The event will be moved indoors", "The event will be canceled", "Nothing will change", "It will start earlier"] },
+    { "stem": "What did Grandma say about the town?", "options": ["She had never seen it so alive", "It was too quiet", "It looked empty", "It was smaller than before"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"今年我已经帮着筹备两个月了\"(现在完成进行):", "options": ["This year, I have been helping to plan it for two months.", "This year, I helped to plan it for two months.", "This year, I am helping to plan it for two months.", "This year, I help to plan it for two months."] },
+    { "stem": "你想说\"如果下雨,整个活动就会挪到室内\"(条件从句用现在时 + 主句将来被动):", "options": ["If it rains, the whole event will be moved indoors.", "If it will rain, the whole event will move indoors.", "If it rains, the whole event will move indoors.", "If it rained, the whole event will be moved indoors."] },
+    { "stem": "你想说\"苹果派现在正在供应\"(现在进行被动):", "options": ["The apple pie is being served now.", "The apple pie is serving now.", "The apple pie serves now.", "The apple pie has served now."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "festival 的意思是:", "options": ["节日,庆典", "医院", "错误", "会议"] },
+    { "kind": "vocab", "stem": "alive 的意思是:", "options": ["有生气的,热闹的", "空荡荡的", "安静的", "睡着的"] },
+    { "kind": "grammar", "stem": "\"Every fall, our town ___ a harvest festival.\"(每年惯例:一般现在)", "stem_cn": "每年秋天镇上都办丰收节。", "options": ["holds", "is holding", "held", "has held"] },
+    { "kind": "grammar", "stem": "\"If it rains, the event ___ indoors.\"(条件主句:将来被动)", "stem_cn": "要是下雨,活动就会被挪到室内。", "options": ["will be moved", "will move", "is moved", "moved"] },
+    { "kind": "scenario", "stem": "\"look forward to\" 的意思是:", "options": ["期待,盼望", "向前看", "回头看", "往下看"] },
+    { "kind": "scenario", "stem": "\"harvest festival\" 的意思是:", "options": ["丰收节", "收获机器", "夏令营", "音乐会"] },
+    { "kind": "reading", "stem": "How long has the writer been helping to plan the festival?", "options": ["Two months", "Two days", "Two years", "One week"], "passage": true },
+    { "kind": "reading", "stem": "What did Grandma say about the town that day?", "options": ["She had never seen it so alive", "It was very quiet", "It looked empty", "It felt cold"], "passage": true },
+    { "kind": "listening", "stem": "How often is the festival held?", "options": ["Every fall", "Every month", "Every ten years", "Only once"], "audio": true },
+    { "kind": "listening", "stem": "What did the friend say you must try?", "options": ["The apple pie", "The soup", "The bread", "The cake"], "audio": true }
+  ]
+}

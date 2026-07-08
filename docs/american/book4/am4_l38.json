@@ -1,0 +1,134 @@
+{
+  "id": "am4_l38",
+  "unit_no": 7,
+  "lesson_no": 38,
+  "title_en": "Water and the Traveler",
+  "title_cn": "水与旅行者",
+  "grammar_focus": "be due to + 名词(由于/归因于)、Even if 引导让步(即使)、as … as(同级比较)、祈使句(Make sure … / Refuse … / Beware of …)、介词 + 关系代词(the water from which it is made)(NCE4 无 KS 页,考点由课文结构自取;IP:源为理查德·达伍德《Travellers' Health》一篇教旅行者如何确保饮水安全的实用指南,无具名真实人物;通用公共卫生事实用 100% 原创行文复述;酒精仅作化学消毒剂/杀菌剂(科学语境),非饮用;题材=旅行健康·无害;美语化 traveler/sulfur;第四册第38课)",
+  "scene": "水源的污染,通常源于水源附近卫生条件差、污水渗入水源本身、配水系统内部污水渗漏,或工农业废物的污染。即便管道供水在起点是安全的,到达水龙头时也未必安全;而那种断断续续、时有时无的供水,更该被当作格外可疑。做短途旅行、前往水质不明之地的旅行者,应避免饮用自来水或任何来源的未处理水。最好只喝热饮,或知名品牌的瓶装、罐装饮料,因为灌装厂通常遵循国际水处理标准。碳酸饮料略带酸性,因而稍微安全些。务必确保每只瓶子都当着你的面打开,瓶口干净而干燥。烧开始终是处理水的好办法。有些旅馆应客人要求会供应开水,可用来饮用或刷牙。一只能烧开少量水的便携加热棒,只要有合适的电压就很有用。婉拒任何来源不明的冷饮,并记住:冰只和造它的水一样安全;除非确知那水是安全的,否则绝不要往饮料里加冰。给饮料降温,把容器放在冰上,远比往里面加冰要好。酒精可以充当消毒剂,但不应指望用它来给饮用水灭菌。作为一种杀菌剂,乙醇在约百分之五十到七十的浓度下效果最好;低于百分之二十,其作用微乎其微。尤其要当心工业变性酒精,它毒性极强,绝不可加进供饮用的水里。若实在找不到别的安全水源,烫得无法触碰的自来水,不妨就让它放凉,通常便可安全饮用。凡打算去偏远地区旅行、或准备在清洁饮水难得之处生活的人,都应学会各种让水变安全的方法。",
+  "grammar_card": {
+    "title": "be due to + 名词 / Even if 让步 / as … as / 祈使句 / 介词 + 关系代词",
+    "intro": "①be due to + 名词,‘由于/归因于’。②Even if …,‘即使…’。③as … as,‘和…一样…’;not so … as,‘不像…那么…’。④祈使句用动词原形开头:Make sure …；Refuse …；Beware of …。⑤介词 + 关系代词:the water from which it is made。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["be due to", "be due to + 名词", "contamination is due to poor sanitation"],
+        ["Even if 让步", "Even if …, …", "Even if it is safe at the source, …"],
+        ["as … as", "as + 原级 + as", "as safe as the water"],
+        ["祈使句", "动词原形开头", "Make sure the bottle is clean"],
+        ["介词 + 关系代词", "介词 + which", "the water from which it is made"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "due to 后接名词(be due to poor sanitation),整个 be due to 表‘由于’。", "mark": "be due to + 名词" },
+      { "rule": "肯定同级比较用 as … as;否定可用 not as … as 或 not so … as。", "mark": "as … as / not so … as" },
+      { "rule": "美式拼写:traveler(旅行者,英式 traveller)、sulfur(硫,英式 sulphur)。本课已按美语写。", "mark": "traveler / sulfur" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What does this text describe?",
+    "options": ["How travelers can keep their drinking water safe", "How to build a water pipeline", "The history of bottled drinks", "How rivers become polluted over time"],
+    "answer_index": 0
+  },
+  "passage": "Contamination of a water supply is usually due to poor sanitation near the water source, to sewage seeping into the source itself, to leakage of sewage within the distribution system, or to pollution by industrial and farm waste. Even if a piped supply is safe where it begins, it is not always safe by the time it reaches the tap; and an intermittent, on-and-off supply should be treated as especially suspect. Travelers on short trips to places where the water is of uncertain quality should avoid drinking tap-water, or any untreated water from another source. It is best to keep to hot drinks, or to bottled or canned drinks of well-known brands, since international standards of treatment are usually followed at the bottling plants. Carbonated drinks are slightly acidic, and therefore a little safer. Make sure that every bottle is opened in your presence, and that its rim is clean and dry. Boiling is always a good way of treating water. Some hotels will supply boiled water on request, and this can be used for drinking or for brushing the teeth. A portable heating element that can boil a small quantity of water is useful wherever the right voltage of electricity is available. Refuse politely any cold drink from an unknown source, and remember that ice is only as safe as the water from which it is made; ice should never be put in a drink unless the water is known to be safe. A drink is far better cooled by standing the container on ice than by dropping ice into it. Alcohol may serve as a disinfectant, but it should not be relied upon to sterilize drinking water. As a bactericidal agent, ethanol works best at a concentration of about fifty to seventy per cent; below twenty per cent its action is negligible. Beware, above all, of methylated alcohol, which is highly poisonous and must never be added to water meant for drinking.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Contamination of a water supply is usually due to poor sanitation near the water source, to sewage seeping into the source itself, to leakage of sewage within the distribution system, or to pollution by industrial and farm waste. Even if a piped supply is safe where it begins, it is not always safe by the time it reaches the tap; and an intermittent, on-and-off supply should be treated as especially suspect.", "text_cn": "水源的污染,通常源于水源附近卫生条件差、污水渗入水源本身、配水系统内部污水渗漏,或工农业废物的污染。即便管道供水在起点是安全的,到达水龙头时也未必安全;而那种断断续续、时有时无的供水,更该被当作格外可疑。" },
+    { "seq": 2, "speaker": null, "text_en": "Travelers on short trips to places where the water is of uncertain quality should avoid drinking tap-water, or any untreated water from another source. It is best to keep to hot drinks, or to bottled or canned drinks of well-known brands, since international standards of treatment are usually followed at the bottling plants. Carbonated drinks are slightly acidic, and therefore a little safer.", "text_cn": "做短途旅行、前往水质不明之地的旅行者,应避免饮用自来水或任何来源的未处理水。最好只喝热饮,或知名品牌的瓶装、罐装饮料,因为灌装厂通常遵循国际水处理标准。碳酸饮料略带酸性,因而稍微安全些。" },
+    { "seq": 3, "speaker": null, "text_en": "Make sure that every bottle is opened in your presence, and that its rim is clean and dry. Boiling is always a good way of treating water. Some hotels will supply boiled water on request, and this can be used for drinking or for brushing the teeth. A portable heating element that can boil a small quantity of water is useful wherever the right voltage of electricity is available.", "text_cn": "务必确保每只瓶子都当着你的面打开,瓶口干净而干燥。烧开始终是处理水的好办法。有些旅馆应客人要求会供应开水,可用来饮用或刷牙。一只能烧开少量水的便携加热棒,只要有合适的电压就很有用。" },
+    { "seq": 4, "speaker": null, "text_en": "Refuse politely any cold drink from an unknown source, and remember that ice is only as safe as the water from which it is made; ice should never be put in a drink unless the water is known to be safe. A drink is far better cooled by standing the container on ice than by dropping ice into it.", "text_cn": "婉拒任何来源不明的冷饮,并记住:冰只和造它的水一样安全;除非确知那水是安全的,否则绝不要往饮料里加冰。给饮料降温,把容器放在冰上,远比往里面加冰要好。" },
+    { "seq": 5, "speaker": null, "text_en": "Alcohol may serve as a disinfectant, but it should not be relied upon to sterilize drinking water. As a bactericidal agent, ethanol works best at a concentration of about fifty to seventy per cent; below twenty per cent its action is negligible. Beware, above all, of methylated alcohol, which is highly poisonous and must never be added to water meant for drinking.", "text_cn": "酒精可以充当消毒剂,但不应指望用它来给饮用水灭菌。作为一种杀菌剂,乙醇在约百分之五十到七十的浓度下效果最好;低于百分之二十,其作用微乎其微。尤其要当心工业变性酒精,它毒性极强,绝不可加进供饮用的水里。" }
+  ],
+  "words": [
+    { "word": "contamination", "ipa": "/kənˌtæmɪˈneɪʃn/", "pos": "n", "meaning_cn": "污染", "example": "contamination of a water supply" },
+    { "word": "sanitation", "ipa": "/ˌsænɪˈteɪʃn/", "pos": "n", "meaning_cn": "卫生设施,环境卫生", "example": "due to poor sanitation" },
+    { "word": "sewage", "ipa": "/ˈsuːɪdʒ/", "pos": "n", "meaning_cn": "污水,下水道污物", "example": "sewage seeping into the source" },
+    { "word": "leakage", "ipa": "/ˈliːkɪdʒ/", "pos": "n", "meaning_cn": "渗漏,泄漏", "example": "leakage of sewage in the system" },
+    { "word": "intermittent", "ipa": "/ˌɪntərˈmɪtnt/", "pos": "adj", "meaning_cn": "间歇的,断断续续的", "example": "an intermittent supply is suspect" },
+    { "word": "carbonated", "ipa": "/ˈkɑːrbəneɪtɪd/", "pos": "adj", "meaning_cn": "含碳酸气的", "example": "carbonated drinks are acidic" },
+    { "word": "acidic", "ipa": "/əˈsɪdɪk/", "pos": "adj", "meaning_cn": "酸性的", "example": "carbonated drinks are slightly acidic" },
+    { "word": "alcohol", "ipa": "/ˈælkəhɔːl/", "pos": "n", "meaning_cn": "酒精,乙醇", "example": "alcohol may serve as a disinfectant" },
+    { "word": "disinfectant", "ipa": "/ˌdɪsɪnˈfektənt/", "pos": "n", "meaning_cn": "消毒剂", "example": "alcohol may serve as a disinfectant" },
+    { "word": "sterilize", "ipa": "/ˈsterəlaɪz/", "pos": "v", "meaning_cn": "消毒,灭菌", "example": "should not be relied upon to sterilize water" },
+    { "word": "ethanol", "ipa": "/ˈeθənɔːl/", "pos": "n", "meaning_cn": "乙醇", "example": "ethanol works best at 50-70 per cent" },
+    { "word": "bactericidal", "ipa": "/bækˌtɪrɪˈsaɪdl/", "pos": "adj", "meaning_cn": "杀菌的", "example": "as a bactericidal agent" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "be due to + 名词(由于/归因于)" },
+    { "gp": "gp2", "name": "Even if 引导让步(即使)" },
+    { "gp": "gp3", "name": "as … as(同级比较)" },
+    { "gp": "gp4", "name": "祈使句(动词原形开头)" },
+    { "gp": "gp5", "name": "介词 + 关系代词(from which)" },
+    { "gp": "gp6", "name": "词汇辨析(contamination/disinfectant/sterilize)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Contamination of water is usually ___ to poor sanitation.\"(‘由于/归因于’= be __ to,填那个形容词)", "stem_cn": "水污染通常是由差劲的卫生条件造成的。", "options": ["due", "owed", "thanks", "because"] },
+    { "gp": "gp1", "stem": "\"The outbreak was ___ to sewage leaking into the wells.\"(‘…所致’= be __ to,填那个形容词)", "stem_cn": "这场疫情是污水渗入水井所致。", "options": ["due", "because", "since", "thanks"] },
+    { "gp": "gp1", "stem": "\"Many illnesses are due ___ unsafe drinking water.\"(be due __,‘由于’,填 due 后那个介词)", "stem_cn": "许多疾病是不安全的饮用水引起的。", "options": ["to", "of", "for", "with"] },
+    { "gp": "gp2", "stem": "\"___ a piped supply is safe at its source, it may be unsafe at the tap.\"(‘即使’,让步连词)", "stem_cn": "即使管道水在水源处安全,到水龙头时也可能不安全。", "options": ["Even if", "Because", "Unless", "So that"] },
+    { "gp": "gp2", "stem": "\"___ the water looks clean, it may still be contaminated.\"(‘即使’,让步连词)", "stem_cn": "即使水看起来干净,也可能已被污染。", "options": ["Even if", "Because", "So", "Unless"] },
+    { "gp": "gp2", "stem": "\"Boil the water even ___ you are in a hurry.\"(‘即使’,even __ 结构,填 even 后那个词)", "stem_cn": "即使你赶时间,也要把水烧开。", "options": ["if", "though", "that", "so"] },
+    { "gp": "gp3", "stem": "\"Ice is only ___ safe as the water from which it is made.\"(‘和…一样…’的同级比较,填这个结构开头的那个词)", "stem_cn": "冰只和造它的水一样安全。", "options": ["as", "so", "than", "more"] },
+    { "gp": "gp3", "stem": "\"Bottled water is not ___ risky as untreated tap-water.\"(‘不像…那么…’= not __ … as,填与后面 as 呼应的那个词)", "stem_cn": "瓶装水不像未处理的自来水那么有风险。", "options": ["so", "as", "more", "than"] },
+    { "gp": "gp3", "stem": "\"Boiled water is just as ___ as fresh spring water.\"(as + 形容词 + as,填形容词)", "stem_cn": "烧开的水和新鲜泉水一样安全。", "options": ["safe", "safer", "safest", "safely"] },
+    { "gp": "gp4", "stem": "\"___ sure that all bottles are opened in your presence.\"(祈使句,‘务必确保’,填动词原形)", "stem_cn": "务必确保所有瓶子当着你的面打开。", "options": ["Make", "Making", "Made", "To make"] },
+    { "gp": "gp4", "stem": "\"___ politely any cold drink from an unknown source.\"(祈使句,‘婉拒’,填动词原形)", "stem_cn": "婉拒任何来源不明的冷饮。", "options": ["Refuse", "Refusing", "Refused", "To refuse"] },
+    { "gp": "gp4", "stem": "\"___ of methylated alcohol, which is very poisonous.\"(祈使句,‘当心’,填动词原形)", "stem_cn": "当心工业变性酒精,它毒性很强。", "options": ["Beware", "Bewaring", "Bewared", "To beware"] },
+    { "gp": "gp5", "stem": "\"The water ___ which the ice is made must be safe.\"(介词+关系代词;‘用…制成’,填与 make 搭配表‘用…’的那个介词)", "stem_cn": "用来制冰的水必须是安全的。", "options": ["from", "of", "at", "by"] },
+    { "gp": "gp5", "stem": "\"The source ___ which the disease spread was the well.\"(介词+关系代词;‘从…扩散’,填与 spread 搭配的那个介词)", "stem_cn": "疾病扩散的源头是那口井。", "options": ["from", "of", "at", "in"] },
+    { "gp": "gp5", "stem": "\"The bottle ___ which you drink should be clean.\"(介词+关系代词;‘从其中饮用’,填与 drink 搭配的那个介词)", "stem_cn": "你所饮用的那只瓶子应当是干净的。", "options": ["from", "of", "at", "on"] },
+    { "gp": "gp6", "stem": "\"The presence of harmful or dirty substances in water is ___.\"(“污染”用哪个词)", "stem_cn": "水中存在有害或肮脏物质。", "options": ["contamination", "celebration", "cooperation", "conversation"] },
+    { "gp": "gp6", "stem": "\"A substance used to destroy harmful germs is a ___.\"(“消毒剂”用哪个词)", "stem_cn": "用来杀灭有害病菌的物质。", "options": ["disinfectant", "ingredient", "instrument", "apartment"] },
+    { "gp": "gp6", "stem": "\"To make something free from germs is to ___ it.\"(“消毒,灭菌”用哪个词)", "stem_cn": "使某物无菌。", "options": ["sterilize", "memorize", "apologize", "organize"] }
+  ],
+  "stage6": [
+    { "stem": "contamination 的意思是:", "options": ["污染", "净化", "蒸发", "凝结"] },
+    { "stem": "sanitation 的意思是:", "options": ["卫生设施,环境卫生", "娱乐", "教育", "交通"] },
+    { "stem": "sewage 的意思是:", "options": ["污水,下水道污物", "泉水", "雨水", "海水"] },
+    { "stem": "intermittent 的意思是:", "options": ["间歇的,断断续续的", "持续的", "永久的", "迅速的"] },
+    { "stem": "sterilize 的意思是:", "options": ["消毒,灭菌", "污染", "加热", "冷冻"] },
+    { "stem": "acidic 的意思是:", "options": ["酸性的", "碱性的", "中性的", "甜的"] }
+  ],
+  "contrast": [
+    { "us": "traveler", "uk": "traveller", "note_cn": "旅行者;美语 traveler,英式 traveller" },
+    { "us": "sulfur", "uk": "sulphur", "note_cn": "硫;美语 sulfur,英式 sulphur" },
+    { "us": "gray", "uk": "grey", "note_cn": "灰色;美语 gray,英式 grey" },
+    { "us": "dialog", "uk": "dialogue", "note_cn": "对话;美语 dialog,英式 dialogue" }
+  ],
+  "chunks": [
+    { "us": "make sure", "ipa": "/meɪk ʃʊr/", "example1": "Make sure the bottle is clean and dry.", "example1_cn": "务必确保瓶子干净干燥。", "example2": "Make sure you boil the water.", "example2_cn": "一定要把水烧开。" },
+    { "us": "rely on", "ipa": "/rɪˈlaɪ ɑːn/", "example1": "Do not rely on alcohol to sterilize water.", "example1_cn": "别指望用酒精给水灭菌。", "example2": "You can rely on boiled water.", "example2_cn": "你可以放心用烧开的水。" },
+    { "us": "beware of", "ipa": "/bɪˈwer ʌv/", "example1": "Beware of untreated tap-water.", "example1_cn": "当心未处理的自来水。", "example2": "Beware of the dog.", "example2_cn": "当心恶犬。" },
+    { "us": "on request", "ipa": "/ɑːn rɪˈkwest/", "example1": "Some hotels supply boiled water on request.", "example1_cn": "有些旅馆应客人要求供应开水。", "example2": "Copies are available on request.", "example2_cn": "如有需要可索取副本。" }
+  ],
+  "stage7_cloze": {
+    "context": "Contamination of water is usually ___1___ to poor sanitation. ___2___ a piped supply is safe at its source, it may be unsafe at the tap. Ice is only ___3___ safe as the water from which it is made. ___4___ sure that every bottle is opened in your presence.",
+    "blanks": [
+      { "blank_no": 1, "options": ["due", "because", "since", "thanks"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["Even if", "Because", "Unless", "So"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["as", "so", "than", "more"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["Make", "Making", "Made", "To make"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What does this text mainly describe?", "options": ["How travelers can keep their drinking water safe", "How to build a water pipeline", "The history of bottled drinks", "How rivers become polluted over time"] },
+    { "stem": "Why may piped water be unsafe even if it is safe at its source?", "options": ["It can be contaminated on the way to the tap, by leaking sewage or waste", "The pipes add minerals", "It is always boiled first", "Source water is never safe"] },
+    { "stem": "What is always a good way of treating water, according to the text?", "options": ["Boiling it", "Adding alcohol to it", "Freezing it", "Shaking it hard"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"水污染通常是由差劲的卫生条件造成的\"(be due to):", "options": ["Contamination of water is usually due to poor sanitation.", "Contamination of water is usually due poor sanitation.", "Contamination of water is usually due of poor sanitation.", "Contamination of water is usually owing poor sanitation."] },
+    { "stem": "你想说\"即使管道水在水源处是安全的,到水龙头时也可能不安全\"(Even if 让步):", "options": ["Even if a piped supply is safe at its source, it may be unsafe at the tap.", "Even a piped supply is safe at its source, it may be unsafe at the tap.", "Even if a piped supply is safe at its source, but it may be unsafe at the tap.", "Even though if a piped supply is safe at its source, it may be unsafe at the tap."] },
+    { "stem": "你想说\"冰只和造它的水一样安全\"(as … as):", "options": ["Ice is only as safe as the water from which it is made.", "Ice is only as safe than the water from which it is made.", "Ice is only so safe as the water from which it is made.", "Ice is only as safe as the water from which it is make."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "contamination 的意思是:", "options": ["污染", "净化", "蒸发", "凝结"] },
+    { "kind": "vocab", "stem": "sterilize 的意思是:", "options": ["消毒,灭菌", "污染", "加热", "冷冻"] },
+    { "kind": "grammar", "stem": "\"Contamination of water is usually ___ to poor sanitation.\"(‘由于/归因于’= be __ to,填那个词)", "stem_cn": "水污染通常由差劲的卫生条件造成。", "options": ["due", "because", "since", "thanks"] },
+    { "kind": "grammar", "stem": "\"___ a piped supply is safe at its source, it may be unsafe at the tap.\"(‘即使’,让步连词)", "stem_cn": "即使管道水在水源处安全,到水龙头时也可能不安全。", "options": ["Even if", "Because", "Unless", "So"] },
+    { "kind": "scenario", "stem": "\"make sure\" 的意思是:", "options": ["确保,查明", "忘记", "怀疑", "拒绝"] },
+    { "kind": "scenario", "stem": "\"beware of\" 的意思是:", "options": ["当心,提防", "喜爱", "忽视", "接受"] },
+    { "kind": "reading", "stem": "According to the text, why should intermittent tap-water supplies be treated as especially suspect?", "options": ["The on-and-off flow makes contamination more likely", "They taste bad", "They are always cold", "They cost more"], "passage": true },
+    { "kind": "reading", "stem": "What does the text advise travelers to drink in areas with unsafe water?", "options": ["Hot drinks, or bottled or canned drinks of well-known brands", "Any cold drink offered to them", "Untreated tap-water", "Water straight from a river"], "passage": true },
+    { "kind": "listening", "stem": "Why is ice a possible danger?", "options": ["It is only as safe as the water it is made from", "It is always dirty", "It cools drinks too much", "It is made of sewage"], "audio": true },
+    { "kind": "listening", "stem": "According to the text, how safe is alcohol for sterilizing drinking water?", "options": ["It should not be relied upon to sterilize water", "It is the best sterilizer", "It always makes water safe", "It is completely harmless in any form"], "audio": true }
+  ]
+}

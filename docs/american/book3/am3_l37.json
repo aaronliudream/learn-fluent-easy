@@ -1,0 +1,133 @@
+{
+  "id": "am3_l37",
+  "unit_no": 8,
+  "lesson_no": 37,
+  "title_en": "The Westhaven Express",
+  "title_cn": "开往威斯特海温的快车",
+  "grammar_focus": "too … to / … enough to do、can't help·can't stand·don't mind + 动名词、否定词句首倒装(Nor/Never/Hardly + 倒装)、passed 与 past 的区别、refuse 与 deny 的区别、borrow 与 lend 的区别(原创承载 NCE3 L37 考点·无需净化:一位乘客上了号称'快车'的火车,却站站慢吞吞,到站找站长投诉,才发现时刻表上一个小星号的脚注写着'此趟已停运'·温情自嘲喜剧;美式化 railroad/schedule/stationmaster)",
+  "scene": "我们早已习惯认定火车总是准点的。经过多年的耳濡目染,大多数人对铁路时刻表怀有一种不可动摇的信任。轮船可能因风暴而误点,航班可能因恶劣天气而取消,可火车必须准时。只有一场格外大的暴雪,才可能暂时打乱铁路运行。一出岔子,人们总是太容易去责怪铁路公司。事实上,出错的多半是我们自己,而不是他们。查过铁路时刻表后,我满意地发现有一趟开往威斯特海温的快车。它从我家附近的车站直达,全程只要一小时十七分钟。上车时,我忍不住注意到有许多本地人也上了车。当时,我并不觉得这有什么奇怪。我想,除了我以外,大概还有很多人想搭这趟出色的班车。火车在几英里外的小站威德利停下时,我也没觉得意外——再威风的快车也可能被信号灯拦住。可当火车站站都慢吞吞地停时,我开始纳闷了。我这才猛然醒悟:这趟快车根本没有以每小时九十英里的速度飞驰,而是勉强以三十英里的速度哐当哐当地爬。一小时十七分钟过去了,我们连一半路程都没走完。我问一位乘客,这是不是开往威斯特海温的快车,他却压根没听说过这趟车。我下定决心一到站就去投诉。两个小时后,我在威斯特海温站气冲冲地跟站长理论。他矢口否认有这趟车,我便借来他那本时刻表。当我告诉他白纸黑字明明写着时,声音里带着几分得意。他草草扫了一眼,让我再看仔细点。一个小小的星号把我引到页脚的一条注释,上面写着:“此趟班车已停运。”",
+  "grammar_card": {
+    "title": "too…to / enough to / can't help doing / 否定倒装 / passed vs past / refuse vs deny / borrow vs lend",
+    "intro": "①too + 形容词 + to do=“太…以致不能”;… enough to do=“足够…能”。②can't help / can't stand / don't mind 后接动名词:can't help noticing。③否定词(Never / Hardly / Nor / Little)放句首,句子要倒装(助动词提前)。④passed 是动词 pass 的过去式(时间过去了);past 是介词/形容词/名词(经过、过去的)。⑤refuse to do=拒绝做;deny=否认(某事、否认做过,后接动名词)。⑥borrow=(从别人那)借入;lend=把…借给别人。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["too…to / enough to", "太…不能 / 足够能", "too easy to blame"],
+        ["can't help + 动名词", "忍不住做", "could not help noticing"],
+        ["否定词句首倒装", "Nor / Never + 倒装", "Nor was I surprised"],
+        ["passed/past · refuse/deny · borrow/lend", "过去/经过·拒绝/否认·借入/借出", "he denied the train's existence"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "passed 是动词(时间过去了:an hour passed);past 是介词/形容词/名词(rushed past;in times past)。别混。", "mark": "passed ≠ past" },
+      { "rule": "borrow 是“借进来(向别人借)”:borrow sth from sb;lend 是“借出去(借给别人)”:lend sth to sb。方向相反。", "mark": "borrow ≠ lend" },
+      { "rule": "美式:railroad(英式 railway)、schedule(英式 timetable)、stationmaster、conductor(英式 ticket collector)。本课已按美语写。", "mark": "railroad / schedule" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What mistake did the writer make?",
+    "options": ["He overlooked a footnote saying the service was suspended", "He boarded the wrong train", "He forgot his ticket at home", "He got off one stop too early"],
+    "answer_index": 0
+  },
+  "passage": "We have learned to expect that trains will be punctual. After years of conditioning, most of us have developed an unshakable faith in railroad schedules. Ships may be delayed by storms; flights may be canceled because of bad weather; but trains must be on time. Only an exceptionally heavy snowfall might temporarily dislocate rail service. It is all too easy to blame the railroad company when something goes wrong. The truth is that when mistakes occur, they are more likely to be ours than theirs. After consulting my railroad schedule, I noted with satisfaction that there was an express train to Westhaven. It went direct from my local station, and the journey lasted a mere hour and seventeen minutes. When I boarded the train, I could not help noticing that a great many local people got on as well. At the time, this did not strike me as odd. I reflected that there must be many people besides myself who wished to take advantage of this excellent service. Nor was I surprised when the train stopped at Widley, a tiny station a few miles down the line. Even a mighty express can be held up by signals. But when the train dawdled at station after station, I began to wonder. It suddenly dawned on me that this express was not roaring down the line at ninety miles an hour, but barely chugging along at thirty. One hour and seventeen minutes passed, and we had not even covered half the distance. I asked a passenger whether this was the Westhaven Express, but he had never even heard of it. I resolved to lodge a complaint as soon as we arrived. Two hours later, I was talking angrily to the stationmaster at Westhaven. When he denied the train's existence, I borrowed his copy of the schedule. There was a note of triumph in my voice when I told him that it was there in black and white. Glancing at it briefly, he told me to look again. A tiny asterisk led me to a footnote at the bottom of the page. It said: 'This service has been suspended.'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "We have learned to expect that trains will be punctual. After years of conditioning, most of us have developed an unshakable faith in railroad schedules. Ships may be delayed by storms; flights may be canceled because of bad weather; but trains must be on time. Only an exceptionally heavy snowfall might temporarily dislocate rail service.", "text_cn": "我们早已习惯认定火车总是准点的。经过多年的耳濡目染,大多数人对铁路时刻表怀有一种不可动摇的信任。轮船可能因风暴而误点,航班可能因恶劣天气而取消,可火车必须准时。只有一场格外大的暴雪,才可能暂时打乱铁路运行。" },
+    { "seq": 2, "speaker": null, "text_en": "It is all too easy to blame the railroad company when something goes wrong. The truth is that when mistakes occur, they are more likely to be ours than theirs. After consulting my railroad schedule, I noted with satisfaction that there was an express train to Westhaven. It went direct from my local station, and the journey lasted a mere hour and seventeen minutes.", "text_cn": "一出岔子,人们总是太容易去责怪铁路公司。事实上,出错的多半是我们自己,而不是他们。查过铁路时刻表后,我满意地发现有一趟开往威斯特海温的快车。它从我家附近的车站直达,全程只要一小时十七分钟。" },
+    { "seq": 3, "speaker": null, "text_en": "When I boarded the train, I could not help noticing that a great many local people got on as well. At the time, this did not strike me as odd. I reflected that there must be many people besides myself who wished to take advantage of this excellent service. Nor was I surprised when the train stopped at Widley, a tiny station a few miles down the line. Even a mighty express can be held up by signals.", "text_cn": "上车时,我忍不住注意到有许多本地人也上了车。当时,我并不觉得这有什么奇怪。我想,除了我以外,大概还有很多人想搭这趟出色的班车。火车在几英里外的小站威德利停下时,我也没觉得意外——再威风的快车也可能被信号灯拦住。" },
+    { "seq": 4, "speaker": null, "text_en": "But when the train dawdled at station after station, I began to wonder. It suddenly dawned on me that this express was not roaring down the line at ninety miles an hour, but barely chugging along at thirty. One hour and seventeen minutes passed, and we had not even covered half the distance. I asked a passenger whether this was the Westhaven Express, but he had never even heard of it. I resolved to lodge a complaint as soon as we arrived.", "text_cn": "可当火车站站都慢吞吞地停时,我开始纳闷了。我这才猛然醒悟:这趟快车根本没有以每小时九十英里的速度飞驰,而是勉强以三十英里的速度哐当哐当地爬。一小时十七分钟过去了,我们连一半路程都没走完。我问一位乘客,这是不是开往威斯特海温的快车,他却压根没听说过这趟车。我下定决心一到站就去投诉。" },
+    { "seq": 5, "speaker": null, "text_en": "Two hours later, I was talking angrily to the stationmaster at Westhaven. When he denied the train's existence, I borrowed his copy of the schedule. There was a note of triumph in my voice when I told him that it was there in black and white. Glancing at it briefly, he told me to look again. A tiny asterisk led me to a footnote at the bottom of the page. It said: 'This service has been suspended.'", "text_cn": "两个小时后,我在威斯特海温站气冲冲地跟站长理论。他矢口否认有这趟车,我便借来他那本时刻表。当我告诉他白纸黑字明明写着时,声音里带着几分得意。他草草扫了一眼,让我再看仔细点。一个小小的星号把我引到页脚的一条注释,上面写着:“此趟班车已停运。”" }
+  ],
+  "words": [
+    { "word": "express", "ipa": "/ɪkˈspres/", "pos": "n", "meaning_cn": "快车", "example": "an express train to Westhaven" },
+    { "word": "punctual", "ipa": "/ˈpʌŋktʃuəl/", "pos": "adj", "meaning_cn": "准时的", "example": "trains will be punctual" },
+    { "word": "unshakable", "ipa": "/ʌnˈʃeɪkəbəl/", "pos": "adj", "meaning_cn": "不可动摇的", "example": "an unshakable faith" },
+    { "word": "faith", "ipa": "/feɪθ/", "pos": "n", "meaning_cn": "信任", "example": "faith in railroad schedules" },
+    { "word": "cancel", "ipa": "/ˈkænsəl/", "pos": "v", "meaning_cn": "取消", "example": "flights may be canceled" },
+    { "word": "dislocate", "ipa": "/ˈdɪsloʊkeɪt/", "pos": "v", "meaning_cn": "打乱", "example": "dislocate rail service" },
+    { "word": "blame", "ipa": "/bleɪm/", "pos": "v", "meaning_cn": "责怪", "example": "blame the railroad company" },
+    { "word": "consult", "ipa": "/kənˈsʌlt/", "pos": "v", "meaning_cn": "请教,查阅", "example": "after consulting my schedule" },
+    { "word": "dawdle", "ipa": "/ˈdɔːdəl/", "pos": "v", "meaning_cn": "慢吞吞地行动", "example": "the train dawdled at station after station" },
+    { "word": "lodge", "ipa": "/lɑːdʒ/", "pos": "v", "meaning_cn": "提出(抗议等)", "example": "lodge a complaint" },
+    { "word": "complaint", "ipa": "/kəmˈpleɪnt/", "pos": "n", "meaning_cn": "抱怨,投诉", "example": "lodge a complaint" },
+    { "word": "asterisk", "ipa": "/ˈæstərɪsk/", "pos": "n", "meaning_cn": "星号(*)", "example": "a tiny asterisk" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "too … to / … enough to do" },
+    { "gp": "gp2", "name": "can't help·can't stand·don't mind + 动名词" },
+    { "gp": "gp3", "name": "否定词句首倒装(Nor/Never/Hardly)" },
+    { "gp": "gp4", "name": "passed 与 past 的区别" },
+    { "gp": "gp5", "name": "refuse 与 deny 的区别" },
+    { "gp": "gp6", "name": "borrow 与 lend 的区别" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"It is all too easy ___ blame the railroad when a train is late.\"(too + 形容词 + ___ do)", "stem_cn": "火车一晚点,人们太容易责怪铁路公司了。", "options": ["to", "for", "that", "and"] },
+    { "gp": "gp1", "stem": "\"The wall is too high ___ climb.\"(too + 形容词 + ___ + 动词,表\"太…而不能\")", "stem_cn": "这墙太高,爬不上去。", "options": ["to", "for to", "that", "so"] },
+    { "gp": "gp1", "stem": "\"The step was low ___ for me to climb.\"(\"足够…以至能\",该填哪个词)", "stem_cn": "台阶够低,我能迈上去。", "options": ["enough", "too", "so", "very"] },
+    { "gp": "gp2", "stem": "\"I could not help ___ that many locals got on the train.\"(can't help + 动名词\"忍不住做\")", "stem_cn": "我忍不住注意到许多本地人也上了车。", "options": ["noticing", "to notice", "notice", "noticed"] },
+    { "gp": "gp2", "stem": "\"I can't stand ___ for a delayed train.\"(can't stand + 动名词\"受不了做\")", "stem_cn": "我受不了等一趟晚点的火车。", "options": ["waiting", "to wait", "wait", "waited"] },
+    { "gp": "gp2", "stem": "\"I don't mind ___ a little longer.\"(don't mind + 动名词\"不介意做\")", "stem_cn": "我不介意再多等一会儿。", "options": ["waiting", "to wait", "wait", "waited"] },
+    { "gp": "gp3", "stem": "\"Nor ___ I surprised when the train stopped again.\"(否定词 nor 句首,要倒装)", "stem_cn": "火车又停时,我也不感到意外。", "options": ["was", "I was", "did", "were"] },
+    { "gp": "gp3", "stem": "\"Never ___ I seen such a slow express.\"(Never 句首,倒装用助动词提前)", "stem_cn": "我从没见过这么慢的快车。", "options": ["had", "I had", "did have", "was"] },
+    { "gp": "gp3", "stem": "\"Hardly ___ we left the station when it stopped again.\"(Hardly 句首,倒装)", "stem_cn": "我们刚离站,车又停了。", "options": ["had", "we had", "did", "were"] },
+    { "gp": "gp4", "stem": "\"One hour ___ and we had not gone far.\"(\"(时间)过去了\"用动词哪个形式)", "stem_cn": "一个小时过去了,我们没走多远。", "options": ["passed", "past", "passes", "passing"] },
+    { "gp": "gp4", "stem": "\"The train rushed ___ the tiny station without stopping.\"(\"经过\"用介词/副词哪个)", "stem_cn": "火车没停,从那小站呼啸而过。", "options": ["past", "passed", "passing", "pass"] },
+    { "gp": "gp4", "stem": "\"We talked about times ___.\"(\"过去的(时光)\"用哪个)", "stem_cn": "我们聊起过去的时光。", "options": ["past", "passed", "passing", "pass"] },
+    { "gp": "gp5", "stem": "\"The stationmaster ___ that the train existed.\"(\"否认(某事是真的)\"用哪个)", "stem_cn": "站长否认有这趟车。", "options": ["denied", "refused", "rejected", "declined"] },
+    { "gp": "gp5", "stem": "\"He ___ to help me with my complaint.\"(\"拒绝(做某事)\"用 ___ to do)", "stem_cn": "他拒绝帮我处理投诉。", "options": ["refused", "denied", "agreed", "accepted"] },
+    { "gp": "gp5", "stem": "\"She ___ taking the money.\"(\"否认做过某事\"用 ___ + 动名词)", "stem_cn": "她否认拿过那笔钱。", "options": ["denied", "refused", "wanted", "promised"] },
+    { "gp": "gp6", "stem": "\"I ___ his copy of the schedule to check the time.\"(\"(从别人那)借入\"用哪个)", "stem_cn": "我借来他那本时刻表查时间。", "options": ["borrowed", "lent", "gave", "kept"] },
+    { "gp": "gp6", "stem": "\"Could you ___ me your pen for a moment?\"(\"把…借给别人\"用哪个)", "stem_cn": "你能把笔借给我用一下吗?", "options": ["lend", "borrow", "take", "get"] },
+    { "gp": "gp6", "stem": "\"He ___ some money from a friend.\"(\"(向别人)借入\"用哪个)", "stem_cn": "他向朋友借了些钱。", "options": ["borrowed", "lent", "paid", "owed"] }
+  ],
+  "stage6": [
+    { "stem": "punctual 的意思是:", "options": ["准时的", "迟到的", "懒惰的", "礼貌的"] },
+    { "stem": "unshakable 的意思是:", "options": ["不可动摇的", "脆弱的", "短暂的", "廉价的"] },
+    { "stem": "cancel 的意思是:", "options": ["取消", "举办", "推迟", "延长"] },
+    { "stem": "dawdle 的意思是:", "options": ["慢吞吞地行动", "飞奔", "跳跃", "攀登"] },
+    { "stem": "complaint 的意思是:", "options": ["抱怨,投诉", "赞美", "命令", "邀请"] },
+    { "stem": "asterisk 的意思是:", "options": ["星号(*)", "句号", "问号", "横线"] }
+  ],
+  "contrast": [
+    { "us": "railroad", "uk": "railway", "note_cn": "铁路;美语 railroad,英式 railway" },
+    { "us": "schedule", "uk": "timetable", "note_cn": "时刻表;美语 schedule,英式 timetable" },
+    { "us": "conductor", "uk": "ticket collector", "note_cn": "列车员;美语 conductor,英式 ticket collector" },
+    { "us": "round-trip ticket", "uk": "return ticket", "note_cn": "往返票;美语 round-trip,英式 return" }
+  ],
+  "chunks": [
+    { "us": "take advantage of", "ipa": "/teɪk ədˈvæntɪdʒ əv/", "example1": "I wanted to take advantage of the fast service.", "example1_cn": "我想搭这趟快车图个方便。", "example2": "Take advantage of the sunny weather.", "example2_cn": "趁着好天气好好利用一下。" },
+    { "us": "dawn on", "ipa": "/dɔːn ɑːn/", "example1": "It suddenly dawned on me that the train was slow.", "example1_cn": "我忽然醒悟这车很慢。", "example2": "It dawned on her that she was lost.", "example2_cn": "她这才意识到自己迷路了。" },
+    { "us": "in black and white", "ipa": "/ɪn blæk ənd waɪt/", "example1": "It was there in black and white.", "example1_cn": "白纸黑字明明写着。", "example2": "I want the rules in black and white.", "example2_cn": "我要把规则白纸黑字写下来。" },
+    { "us": "hold up", "ipa": "/hoʊld ʌp/", "example1": "The express was held up by signals.", "example1_cn": "快车被信号灯拦住了。", "example2": "The traffic held us up for an hour.", "example2_cn": "堵车耽误了我们一个小时。" }
+  ],
+  "stage7_cloze": {
+    "context": "Most of us have an unshakable faith that trains are punctual. After consulting my schedule, I boarded what I thought was an express. I could not help ___1___ that many locals got on too. It was all too easy ___2___ trust the timetable. Nor ___3___ I worried at first. But the 'express' dawdled along, and later the stationmaster ___4___ that such a train existed.",
+    "blanks": [
+      { "blank_no": 1, "options": ["noticing", "to notice", "notice", "noticed"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["to", "for", "that", "and"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["was", "I was", "did", "were"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["denied", "refused", "agreed", "borrowed"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What faith do most people have, according to the writer?", "options": ["That trains are always punctual", "That ships never sink", "That flights are always cheap", "That buses are the fastest"] },
+    { "stem": "When did the writer begin to suspect something was wrong?", "options": ["When the express dawdled at station after station", "When it left exactly on time", "When it reached Westhaven early", "When the seats were all empty"] },
+    { "stem": "What did the tiny asterisk lead to?", "options": ["A footnote saying the service had been suspended", "A map of the whole line", "A ticket price", "A written apology"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"火车一晚点,人们太容易责怪铁路公司了\"(too...to):", "options": ["It is all too easy to blame the railroad when a train is late.", "It is all too easy blaming the railroad when a train is late.", "It is all too easy for blame the railroad when a train is late.", "It is all too easy to blamed the railroad when a train is late."] },
+    { "stem": "你想说\"站长否认有这趟车\"(deny):", "options": ["The stationmaster denied that the train existed.", "The stationmaster refused that the train existed.", "The stationmaster denied to exist the train.", "The stationmaster denied the train to exist."] },
+    { "stem": "你想说\"我借来他那本时刻表\"(borrow):", "options": ["I borrowed his copy of the schedule.", "I lent his copy of the schedule.", "I borrowed him his copy of the schedule.", "I borrowed his copy of the schedule to him."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "punctual 的意思是:", "options": ["准时的", "迟到的", "懒惰的", "礼貌的"] },
+    { "kind": "vocab", "stem": "complaint 的意思是:", "options": ["抱怨,投诉", "赞美", "命令", "邀请"] },
+    { "kind": "grammar", "stem": "\"It is all too easy ___ blame the railroad.\"(too + 形容词 + ___ do)", "stem_cn": "太容易责怪铁路公司了。", "options": ["to", "for", "that", "and"] },
+    { "kind": "grammar", "stem": "\"The stationmaster ___ that the train existed.\"(\"否认(某事)\"用哪个)", "stem_cn": "站长否认有这趟车。", "options": ["denied", "refused", "agreed", "borrowed"] },
+    { "kind": "scenario", "stem": "\"in black and white\" 的意思是:", "options": ["白纸黑字、写得清清楚楚", "黑白照片", "是非分明", "沉默不语"] },
+    { "kind": "scenario", "stem": "\"it dawned on me\" 的意思是:", "options": ["我忽然明白过来", "天亮了", "我睡着了", "我很失望"] },
+    { "kind": "reading", "stem": "Why did the writer at first think nothing was wrong?", "options": ["He assumed many people wanted to use the excellent express", "He had fallen asleep", "He already knew the train was slow", "He had no schedule with him"], "passage": true },
+    { "kind": "reading", "stem": "What was the writer's real mistake?", "options": ["He had missed a tiny asterisk showing the service was suspended", "He got on the wrong platform", "He lost his ticket", "He forgot the departure time"], "passage": true },
+    { "kind": "listening", "stem": "How fast was the 'express' really going?", "options": ["About thirty miles an hour", "Ninety miles an hour", "It never moved at all", "Over a hundred miles an hour"], "audio": true },
+    { "kind": "listening", "stem": "What did the writer decide to do when the train dawdled?", "options": ["Lodge a complaint as soon as he arrived", "Get off at once", "Fall asleep", "Buy a new ticket"], "audio": true }
+  ]
+}

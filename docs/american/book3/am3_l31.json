@@ -1,0 +1,133 @@
+{
+  "id": "am3_l31",
+  "unit_no": 7,
+  "lesson_no": 31,
+  "title_en": "A Lovable Eccentric",
+  "title_cn": "可爱的怪人",
+  "grammar_focus": "介词 + 动名词(without/instead of/interested in doing)、分词短语作状语(preferring / recognizing)、pay attention to·care about·take care of、间接疑问句的语序(不倒装)、mind·insist on·imagine + 物主代词 + 动名词(原创承载 NCE3 L31 考点·无需净化:富有怪人迪基淋雨后衣衫不整走进名店,店员拒绝招待,他用三万枚硬币付账,又花四年伪造现代画展愚弄评论家·温情喜剧)",
+  "scene": "真正的怪人从不刻意引人注目。他们无视社会习俗,却意识不到自己在做什么出格的事。这几乎总能赢得别人的喜爱与尊敬,因为他们给平淡的日常生活添了几分色彩。直到去世前,理查德·科尔森一直是我们镇上最引人注目的人物之一。他是个精明而富有的生意人,可镇上大多数人几乎不了解他的这一面。在我们所有人眼里,他就是迪基,他的古怪早在去世前很久就成了传奇。迪基极其讨厌势利眼。他虽然有一辆大轿车,却几乎从不用,总爱步行。哪怕下着倾盆大雨,他也拒绝带伞。有一天,他淋了一场大雨之后,走进一家名贵的店,想给妻子买一块三百美元的手表。可他浑身湿淋淋、一副狼狈相,店员竟拒绝招待他。迪基二话不说走了,又拎着一个大布袋回来。布袋沉甸甸的,他把它往柜台上一放。店员请他离开,迪基却毫不理会,要求见经理。经理认出这位顾客是谁后,连声道歉,把店员狠狠训斥了一顿。等迪基拿到手表,他把那个布袋递给店员——里面装着三百美元的硬币,总共三万枚!他坚持要店员在他离开前把每一枚都点清。还有一次,他邀请了一批重要的评论家来看他私人收藏的现代画。这场画展在报界引起了很大关注,因为那些画本以为是名家之作,其实全都出自迪基本人之手。他花了整整四年,精心策划这个玩笑,只为证明评论家并不总是懂他们所谈的东西。",
+  "grammar_card": {
+    "title": "介词+动名词 / 分词短语 / pay attention to / 间接疑问句语序 / insist on his doing",
+    "intro": "①介词后接动名词:without being / instead of using / interested in collecting。②分词短语作状语,表原因或时间:Preferring to walk, he…；Recognizing who it was, he…。③pay attention to(注意)、care about(在乎)、take care of(照顾)。④间接疑问句用陈述句的正常语序(不倒装、不用 do):knew who the customer was;asked if it was expensive。⑤mind / insist on / imagine + 物主代词 + 动名词:mind my opening;insist on the clerk's counting。",
+    "table": {
+      "headers": ["用法", "意思", "例子"],
+      "rows": [
+        ["介词 + 动名词", "without / instead of + -ing", "without being conscious"],
+        ["分词短语作状语", "表原因/时间", "Recognizing who it was, he…"],
+        ["pay attention to / take care of", "注意 / 照顾", "paid no attention to him"],
+        ["间接疑问句语序 / insist on his doing", "不倒装 / 物主+动名词", "knew who the customer was"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "间接疑问句(嵌在句子里的问句)要用陈述句的正常语序,不倒装、不加 do:knew who the customer was(不是 who was the customer)。", "mark": "embedded question" },
+      { "rule": "mind / insist on / imagine 后面的动名词,前面的人用物主代词:mind my opening the window;insist on the clerk's counting。", "mark": "物主代词 + 动名词" },
+      { "rule": "美式:store(英式 shop)、clerk(英式 shop assistant)、color(英式 colour)、dollar(英式 pound)。本课已按美语写。", "mark": "store / clerk / color" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — Why did the clerk at first refuse to serve Dickie?",
+    "options": ["Because Dickie looked wet and bedraggled", "Because the store was closed", "Because Dickie was rude", "Because Dickie had no money"],
+    "answer_index": 0
+  },
+  "passage": "True eccentrics never deliberately set out to draw attention to themselves. They disregard social conventions without being conscious that they are doing anything out of the ordinary. This invariably wins them the affection and respect of others, for they add color to the dull routine of everyday life. Up to the time of his death, Richard Colson was one of the most notable figures in our town. He was a shrewd and wealthy businessman, but most people hardly knew anything about that side of his life. To all of us he was simply Dickie, and his eccentricity had become legendary long before he died. Dickie disliked snobs intensely. Though he owned a large car, he hardly ever used it, preferring always to go on foot. Even when it was pouring, he refused to carry an umbrella. One day, after being caught in a heavy shower, he walked into an expensive store to buy a $300 watch for his wife. He was in such a bedraggled condition that a clerk refused to serve him. Dickie left without a word and came back carrying a large cloth bag. Since it was extremely heavy, he dumped it on the counter. The clerk asked him to leave, but Dickie paid no attention and asked to see the manager. Recognizing who the customer was, the manager was most apologetic and reprimanded the clerk severely. When Dickie was handed the watch, he presented the clerk with the cloth bag. It contained $300 in pennies, thirty thousand pennies in all! He insisted on the clerk's counting every coin before he left. On another occasion, he invited a number of important critics to view his private collection of modern paintings. The exhibition received a great deal of attention in the press, for though the pictures were supposed to be the work of famous artists, they had in fact all been painted by Dickie himself. It had taken him four years to stage this elaborate joke, simply to prove that critics do not always know what they are talking about.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "True eccentrics never deliberately set out to draw attention to themselves. They disregard social conventions without being conscious that they are doing anything out of the ordinary. This invariably wins them the affection and respect of others, for they add color to the dull routine of everyday life.", "text_cn": "真正的怪人从不刻意引人注目。他们无视社会习俗,却意识不到自己在做什么出格的事。这几乎总能赢得别人的喜爱与尊敬,因为他们给平淡的日常生活添了几分色彩。" },
+    { "seq": 2, "speaker": null, "text_en": "Up to the time of his death, Richard Colson was one of the most notable figures in our town. He was a shrewd and wealthy businessman, but most people hardly knew anything about that side of his life. To all of us he was simply Dickie, and his eccentricity had become legendary long before he died.", "text_cn": "直到去世前,理查德·科尔森一直是我们镇上最引人注目的人物之一。他是个精明而富有的生意人,可镇上大多数人几乎不了解他的这一面。在我们所有人眼里,他就是迪基,他的古怪早在去世前很久就成了传奇。" },
+    { "seq": 3, "speaker": null, "text_en": "Dickie disliked snobs intensely. Though he owned a large car, he hardly ever used it, preferring always to go on foot. Even when it was pouring, he refused to carry an umbrella. One day, after being caught in a heavy shower, he walked into an expensive store to buy a $300 watch for his wife. He was in such a bedraggled condition that a clerk refused to serve him.", "text_cn": "迪基极其讨厌势利眼。他虽然有一辆大轿车,却几乎从不用,总爱步行。哪怕下着倾盆大雨,他也拒绝带伞。有一天,他淋了一场大雨之后,走进一家名贵的店,想给妻子买一块三百美元的手表。可他浑身湿淋淋、一副狼狈相,店员竟拒绝招待他。" },
+    { "seq": 4, "speaker": null, "text_en": "Dickie left without a word and came back carrying a large cloth bag. Since it was extremely heavy, he dumped it on the counter. The clerk asked him to leave, but Dickie paid no attention and asked to see the manager. Recognizing who the customer was, the manager was most apologetic and reprimanded the clerk severely.", "text_cn": "迪基二话不说走了,又拎着一个大布袋回来。布袋沉甸甸的,他把它往柜台上一放。店员请他离开,迪基却毫不理会,要求见经理。经理认出这位顾客是谁后,连声道歉,把店员狠狠训斥了一顿。" },
+    { "seq": 5, "speaker": null, "text_en": "When Dickie was handed the watch, he presented the clerk with the cloth bag. It contained $300 in pennies, thirty thousand pennies in all! He insisted on the clerk's counting every coin before he left. On another occasion, he invited a number of important critics to view his private collection of modern paintings, for though the pictures were supposed to be the work of famous artists, they had in fact all been painted by Dickie himself. It had taken him four years to stage this elaborate joke, simply to prove that critics do not always know what they are talking about.", "text_cn": "等迪基拿到手表,他把那个布袋递给店员——里面装着三百美元的硬币,总共三万枚!他坚持要店员在他离开前把每一枚都点清。还有一次,他邀请了一批重要的评论家来看他私人收藏的现代画,因为那些画本以为是名家之作,其实全都出自迪基本人之手。他花了整整四年,精心策划这个玩笑,只为证明评论家并不总是懂他们所谈的东西。" }
+  ],
+  "words": [
+    { "word": "lovable", "ipa": "/ˈlʌvəbəl/", "pos": "adj", "meaning_cn": "可爱的", "example": "a lovable eccentric" },
+    { "word": "eccentric", "ipa": "/ɪkˈsentrɪk/", "pos": "n/adj", "meaning_cn": "(行为)古怪的人;古怪的", "example": "true eccentrics" },
+    { "word": "disregard", "ipa": "/ˌdɪsrɪˈɡɑːrd/", "pos": "v", "meaning_cn": "不顾,漠视", "example": "disregard social conventions" },
+    { "word": "convention", "ipa": "/kənˈvenʃən/", "pos": "n", "meaning_cn": "习俗,风俗", "example": "social conventions" },
+    { "word": "conscious", "ipa": "/ˈkɑːnʃəs/", "pos": "adj", "meaning_cn": "意识到的", "example": "without being conscious of it" },
+    { "word": "invariably", "ipa": "/ɪnˈveriəbli/", "pos": "adv", "meaning_cn": "总是,始终", "example": "this invariably wins them respect" },
+    { "word": "shrewd", "ipa": "/ʃruːd/", "pos": "adj", "meaning_cn": "精明的", "example": "a shrewd businessman" },
+    { "word": "legendary", "ipa": "/ˈledʒənderi/", "pos": "adj", "meaning_cn": "传奇般的", "example": "his eccentricity was legendary" },
+    { "word": "snob", "ipa": "/snɑːb/", "pos": "n", "meaning_cn": "势利小人", "example": "Dickie disliked snobs" },
+    { "word": "bedraggled", "ipa": "/bɪˈdræɡəld/", "pos": "adj", "meaning_cn": "湿淋淋的,狼狈的", "example": "in a bedraggled condition" },
+    { "word": "reprimand", "ipa": "/ˈreprɪmænd/", "pos": "v", "meaning_cn": "训斥,斥责", "example": "reprimanded the clerk severely" },
+    { "word": "elaborate", "ipa": "/ɪˈlæbərət/", "pos": "adj", "meaning_cn": "精心构思的", "example": "an elaborate joke" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "介词 + 动名词(without/instead of/interested in doing)" },
+    { "gp": "gp2", "name": "分词短语作状语(preferring / recognizing)" },
+    { "gp": "gp3", "name": "pay attention to / care about / take care of" },
+    { "gp": "gp4", "name": "间接疑问句的语序(不倒装)" },
+    { "gp": "gp5", "name": "mind·insist on·imagine + 物主代词 + 动名词" },
+    { "gp": "gp6", "name": "词汇辨析(eccentric/shrewd/reprimand)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"They disregard conventions without ___ conscious of it.\"(介词 without 后接动名词 -ing)", "stem_cn": "他们打破习俗却意识不到。", "options": ["being", "be", "to be", "been"] },
+    { "gp": "gp1", "stem": "\"Instead of ___ the car, he preferred to walk.\"(介词 instead of 后接 -ing)", "stem_cn": "他不开车,宁愿走路。", "options": ["using", "use", "to use", "used"] },
+    { "gp": "gp1", "stem": "\"He was interested in ___ modern paintings.\"(介词 in 后接 -ing)", "stem_cn": "他热衷于收藏现代画。", "options": ["collecting", "collect", "to collect", "collected"] },
+    { "gp": "gp2", "stem": "\"___ always to go on foot, he rarely used his car.\"(用分词短语表\"因为偏爱…\")", "stem_cn": "因为总爱步行,他很少开车。", "options": ["Preferring", "Prefer", "Preferred to", "He preferred"] },
+    { "gp": "gp2", "stem": "\"___ who the customer was, the manager apologized.\"(用分词短语表\"认出…后\")", "stem_cn": "认出顾客是谁后,经理连忙道歉。", "options": ["Recognizing", "Recognize", "He recognized", "Recognized by"] },
+    { "gp": "gp2", "stem": "\"___ caught in a heavy shower, he walked into a store.\"(表\"被…之后\",用分词的完成被动形式)", "stem_cn": "淋了一场大雨之后,他走进一家店。", "options": ["After being", "After be", "After been", "For being"] },
+    { "gp": "gp3", "stem": "\"Dickie paid no ___ to the clerk and asked for the manager.\"(pay ___ to sb,\"注意\")", "stem_cn": "迪基没理会店员,要见经理。", "options": ["attention", "care", "respect", "price"] },
+    { "gp": "gp3", "stem": "\"Please take ___ of yourself when you travel.\"(take ___ of sb,\"照顾\")", "stem_cn": "旅行时请照顾好自己。", "options": ["care", "attention", "notice", "part"] },
+    { "gp": "gp3", "stem": "\"He doesn't ___ about what snobs think of him.\"(\"在乎、介意\"用哪个动词)", "stem_cn": "他不在乎势利者怎么看他。", "options": ["care", "pay", "take", "attend"] },
+    { "gp": "gp4", "stem": "\"The manager knew ___.\"(间接疑问,用陈述句的正常语序)", "stem_cn": "经理知道这位顾客是谁。", "options": ["who the customer was", "who was the customer", "who the customer is he", "was who the customer"] },
+    { "gp": "gp4", "stem": "\"I don't know ___.\"(间接疑问,不倒装、不加 do)", "stem_cn": "我不知道他为什么这么做。", "options": ["why he did it", "why did he do it", "why he did do it", "did why he do it"] },
+    { "gp": "gp4", "stem": "\"She asked ___.\"(间接的一般疑问,语序不倒装)", "stem_cn": "她问那块表贵不贵。", "options": ["if the watch was expensive", "was the watch expensive", "if was the watch expensive", "the watch if expensive"] },
+    { "gp": "gp5", "stem": "\"He insisted on ___ counting the money.\"(insist on + 物主代词 + 动名词)", "stem_cn": "他坚持要店员点清钱数。", "options": ["the clerk's", "the clerk to", "to the clerk", "that the clerk"] },
+    { "gp": "gp5", "stem": "\"Would you mind ___ opening the window?\"(mind + 物主代词 + 动名词)", "stem_cn": "你介意我开下窗吗?", "options": ["my", "I", "me to", "that I"] },
+    { "gp": "gp5", "stem": "\"Imagine ___ paying for a watch with 30,000 pennies!\"(imagine + 物主代词 + 动名词)", "stem_cn": "想象一下他用三万枚硬币买表!", "options": ["his", "he", "him to", "that he"] },
+    { "gp": "gp6", "stem": "\"A person who behaves in an odd but harmless way is ___.\"(\"古怪的人\"用哪个词)", "stem_cn": "行为古怪却无害的人。", "options": ["eccentric", "ordinary", "famous", "polite"] },
+    { "gp": "gp6", "stem": "\"A sharp, clever businessman is ___.\"(\"精明的\"用哪个词)", "stem_cn": "精明的生意人。", "options": ["shrewd", "lazy", "shy", "weak"] },
+    { "gp": "gp6", "stem": "\"To scold someone officially for a fault is to ___ them.\"(\"训斥、斥责\"用哪个词)", "stem_cn": "因过错正式责备某人。", "options": ["reprimand", "praise", "thank", "invite"] }
+  ],
+  "stage6": [
+    { "stem": "lovable 的意思是:", "options": ["可爱的", "可怕的", "无聊的", "危险的"] },
+    { "stem": "eccentric 的意思是:", "options": ["(行为)古怪的", "普通的", "礼貌的", "勤奋的"] },
+    { "stem": "disregard 的意思是:", "options": ["不顾,漠视", "遵守", "喜爱", "记住"] },
+    { "stem": "shrewd 的意思是:", "options": ["精明的", "愚蠢的", "害羞的", "懒惰的"] },
+    { "stem": "legendary 的意思是:", "options": ["传奇般的", "短暂的", "真实的", "普通的"] },
+    { "stem": "bedraggled 的意思是:", "options": ["湿淋淋、狼狈的", "整洁的", "崭新的", "干燥的"] }
+  ],
+  "contrast": [
+    { "us": "store", "uk": "shop", "note_cn": "商店;美语 store,英式 shop" },
+    { "us": "clerk", "uk": "shop assistant", "note_cn": "售货员;美语 clerk,英式 shop assistant" },
+    { "us": "color", "uk": "colour", "note_cn": "颜色;拼写差异,美语无 u" },
+    { "us": "dollar", "uk": "pound", "note_cn": "货币;美国 dollar,英国 pound" }
+  ],
+  "chunks": [
+    { "us": "pay attention to", "ipa": "/peɪ əˈtenʃən tə/", "example1": "Dickie paid no attention to the clerk.", "example1_cn": "迪基没理会那个店员。", "example2": "Please pay attention to the road.", "example2_cn": "请注意路况。" },
+    { "us": "on foot", "ipa": "/ɑːn fʊt/", "example1": "He preferred to go on foot.", "example1_cn": "他宁愿步行。", "example2": "We came here on foot.", "example2_cn": "我们是走着来的。" },
+    { "us": "draw attention to", "ipa": "/drɔː əˈtenʃən tə/", "example1": "True eccentrics never draw attention to themselves.", "example1_cn": "真正的怪人从不刻意引人注目。", "example2": "Don't draw attention to your mistakes.", "example2_cn": "别把注意力引到你的错误上。" },
+    { "us": "in all", "ipa": "/ɪn ɔːl/", "example1": "Thirty thousand pennies in all!", "example1_cn": "总共三万枚硬币!", "example2": "There were fifty guests in all.", "example2_cn": "客人总共有五十位。" }
+  ],
+  "stage7_cloze": {
+    "context": "True eccentrics disregard social conventions without ___1___ conscious of it. Dickie, a shrewd businessman, was caught in the rain and walked ___2___ an expensive store. A clerk refused to serve him, but Dickie paid no ___3___ and asked for the manager. He later paid for the watch with 30,000 pennies ___4___ all.",
+    "blanks": [
+      { "blank_no": 1, "options": ["being", "be", "to be", "been"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["into", "at", "of", "off"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["attention", "care", "mind", "price"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["in", "on", "at", "by"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Why did the clerk refuse to serve Dickie?", "options": ["He looked bedraggled after the rain", "He had no money", "He was rude to the clerk", "He was a snob"] },
+    { "stem": "How did Dickie pay for the $300 watch?", "options": ["With 30,000 pennies in a cloth bag", "With a credit card", "With a check", "With a single gold coin"] },
+    { "stem": "Who had really painted the 'famous' modern pictures?", "options": ["Dickie himself", "Famous artists", "The critics", "His wife"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"他没理会那个店员\"(pay attention):", "options": ["He paid no attention to the clerk.", "He paid no attention on the clerk.", "He paid no attention the clerk.", "He paid not attention to the clerk."] },
+    { "stem": "你想说\"经理知道这位顾客是谁\"(间接疑问):", "options": ["The manager knew who the customer was.", "The manager knew who was the customer.", "The manager knew who the customer is he.", "The manager knew was who the customer."] },
+    { "stem": "你想说\"他坚持要店员点清钱数\"(insist on + 物主代词 + 动名词):", "options": ["He insisted on the clerk's counting the money.", "He insisted the clerk to count the money.", "He insisted on the clerk to count the money.", "He insisted on the clerk count the money."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "eccentric 的意思是:", "options": ["(行为)古怪的", "普通的", "礼貌的", "勤奋的"] },
+    { "kind": "vocab", "stem": "reprimand 的意思是:", "options": ["训斥,斥责", "表扬", "感谢", "邀请"] },
+    { "kind": "grammar", "stem": "\"They disregard conventions without ___ conscious of it.\"(without 后接动名词)", "stem_cn": "他们打破习俗却意识不到。", "options": ["being", "be", "to be", "been"] },
+    { "kind": "grammar", "stem": "\"Dickie paid no ___ to the clerk.\"(pay ___ to sb)", "stem_cn": "迪基没理会那个店员。", "options": ["attention", "care", "mind", "price"] },
+    { "kind": "scenario", "stem": "\"on foot\" 的意思是:", "options": ["步行", "立刻", "大声地", "秘密地"] },
+    { "kind": "scenario", "stem": "\"draw attention to oneself\" 的意思是:", "options": ["引起别人对自己的注意", "画一幅自画像", "独自离开", "保持安静"] },
+    { "kind": "reading", "stem": "Why do people love true eccentrics, according to the passage?", "options": ["They add color to the dull routine of everyday life", "They are very rich", "They follow every social rule", "They give away their money"], "passage": true },
+    { "kind": "reading", "stem": "Why did Dickie forge the modern paintings?", "options": ["To prove critics don't always know what they're talking about", "To sell them for money", "To decorate his home", "To help famous artists"], "passage": true },
+    { "kind": "listening", "stem": "What did Dickie want to buy for his wife?", "options": ["A $300 watch", "A large car", "A cloth bag", "A modern painting"], "audio": true },
+    { "kind": "listening", "stem": "How long did the elaborate painting joke take to stage?", "options": ["Four years", "Four days", "Four months", "Four weeks"], "audio": true }
+  ]
+}

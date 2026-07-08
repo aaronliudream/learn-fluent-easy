@@ -1,0 +1,131 @@
+{
+  "id": "am2_l70",
+  "unit_no": 9,
+  "lesson_no": 70,
+  "title_en": "What Are You Good At?",
+  "title_cn": "你擅长什么?",
+  "grammar_focus": "形容词 + 介词固定搭配(教材 L70 考点,方案B换情节包):形容词+for(famous for/eager for/responsible for/ready for/sorry for)、形容词+of(proud of/afraid of/capable of/fond of/full of)、形容词+at(good at/quick at/surprised at)、形容词+to/with/about/on(grateful to/kind to/pleased with/worried about/keen on)",
+  "scene": "我们学校因社团众多而出名,人人都渴望在社团里有个名额。米娅画画很擅长,也喜欢画卡通。她哥哥为她感到自豪,可他自己却害怕当众讲话。“你应该负责美术社,”老师说,“你有能力领导它。”米娅对这个提议感到惊讶,也很感激老师。“我有点担心工作量,”她说,“不过我准备好迎接挑战了。”老师对她的回答很满意,对每个加入的人都很友善。很快,美术社就挤满了热爱艺术的学生。米娅为那些没能进来的人感到惋惜,但活动室只能容纳二十个人。到年底时,她因为办了全校最棒的一场画展而出了名。",
+  "grammar_card": {
+    "title": "形容词 + 介词固定搭配",
+    "intro": "很多形容词后面跟固定的介词,要成组记:①+for——famous for(因…出名)、eager for(渴望)、responsible for(对…负责)、ready for(为…做好准备)、sorry for(为…惋惜);②+of——proud of(为…自豪)、afraid of(害怕)、capable of(有能力)、fond of(喜爱)、full of(充满);③+at——good at(擅长)、quick at(在…上反应快)、surprised at(对…惊讶);④+其他——grateful to(感激)、kind to(对…友善)、pleased with(对…满意)、worried about(担心)、keen on(热衷于)。",
+    "table": {
+      "headers": ["搭配", "例子"],
+      "rows": [
+        ["famous for / eager for", "Our school is famous for its clubs."],
+        ["proud of / afraid of / capable of", "He is afraid of speaking in public."],
+        ["good at / surprised at", "Mia is good at painting."],
+        ["grateful to / kind to", "Mia was grateful to her teacher."],
+        ["pleased with / worried about / keen on", "The teacher was pleased with her answer."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "美语里“数学”说 math(英式 maths)、“橡皮”说 eraser(英式 rubber)、“成绩”说 grade(英式 mark);本课已按美语写。", "mark": "math/eraser/grade" },
+      { "rule": "形容词后的介词是固定的,靠成组记忆:good AT、afraid OF、famous FOR、grateful TO、pleased WITH、worried ABOUT、keen ON。不能随意替换。", "mark": "adj + prep" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What is the school famous for?",
+    "options": ["Its many clubs", "Its sports teams", "Its old library", "Its science labs"],
+    "answer_index": 0
+  },
+  "passage": "Our school is famous for its many clubs, and everyone is eager for a place in one. Mia is really good at painting and fond of drawing cartoons. Her brother is proud of her, but he's afraid of speaking in public himself. \"You should be responsible for the art club,\" the teacher said. \"You're capable of leading it.\" Mia was surprised at the offer and grateful to her teacher. \"I'm a little worried about the work,\" she said, \"but I'm ready for a challenge.\" The teacher was pleased with her answer and kind to everyone who joined. Soon the club was full of students keen on art. Mia was sorry for the ones who couldn't get in, but the room was capable of holding only twenty. By the end of the year, she was famous for the best art show the school had ever seen.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Our school is famous for its many clubs, and everyone is eager for a place in one. Mia is really good at painting and fond of drawing cartoons.", "text_cn": "我们学校因社团众多而出名,人人都渴望在社团里有个名额。米娅画画很擅长,也喜欢画卡通。" },
+    { "seq": 2, "speaker": null, "text_en": "Her brother is proud of her, but he's afraid of speaking in public himself. \"You should be responsible for the art club,\" the teacher said. \"You're capable of leading it.\"", "text_cn": "她哥哥为她感到自豪,可他自己却害怕当众讲话。“你应该负责美术社,”老师说,“你有能力领导它。”" },
+    { "seq": 3, "speaker": null, "text_en": "Mia was surprised at the offer and grateful to her teacher. \"I'm a little worried about the work,\" she said, \"but I'm ready for a challenge.\"", "text_cn": "米娅对这个提议感到惊讶,也很感激老师。“我有点担心工作量,”她说,“不过我准备好迎接挑战了。”" },
+    { "seq": 4, "speaker": null, "text_en": "The teacher was pleased with her answer and kind to everyone who joined. Soon the club was full of students keen on art.", "text_cn": "老师对她的回答很满意,对每个加入的人都很友善。很快,美术社就挤满了热爱艺术的学生。" },
+    { "seq": 5, "speaker": null, "text_en": "Mia was sorry for the ones who couldn't get in, but the room was capable of holding only twenty. By the end of the year, she was famous for the best art show the school had ever seen.", "text_cn": "米娅为那些没能进来的人感到惋惜,但活动室只能容纳二十个人。到年底时,她因为办了全校最棒的一场画展而出了名。" }
+  ],
+  "words": [
+    { "word": "eager", "ipa": "/ˈiːɡər/", "pos": "adj", "meaning_cn": "渴望的,热切的", "example": "everyone is eager for a place" },
+    { "word": "famous", "ipa": "/ˈfeɪməs/", "pos": "adj", "meaning_cn": "著名的", "example": "famous for its many clubs" },
+    { "word": "grateful", "ipa": "/ˈɡreɪtfl/", "pos": "adj", "meaning_cn": "感激的", "example": "grateful to her teacher" },
+    { "word": "responsible", "ipa": "/rɪˈspɑːnsəbl/", "pos": "adj", "meaning_cn": "负责的", "example": "responsible for the art club" },
+    { "word": "qualified", "ipa": "/ˈkwɑːlɪfaɪd/", "pos": "adj", "meaning_cn": "合格的,有资格的", "example": "qualified for the job" },
+    { "word": "proud", "ipa": "/praʊd/", "pos": "adj", "meaning_cn": "自豪的", "example": "Her brother is proud of her" },
+    { "word": "fond", "ipa": "/fɑːnd/", "pos": "adj", "meaning_cn": "喜爱的", "example": "fond of drawing cartoons" },
+    { "word": "afraid", "ipa": "/əˈfreɪd/", "pos": "adj", "meaning_cn": "害怕的", "example": "afraid of speaking in public" },
+    { "word": "capable", "ipa": "/ˈkeɪpəbl/", "pos": "adj", "meaning_cn": "有能力的", "example": "capable of leading it" },
+    { "word": "keen", "ipa": "/kiːn/", "pos": "adj", "meaning_cn": "热衷的,热心的", "example": "students keen on art" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "形容词 + for(famous for / eager for / responsible for)" },
+    { "gp": "gp2", "name": "形容词 + of(proud of / afraid of / capable of)" },
+    { "gp": "gp3", "name": "形容词 + at(good at / quick at / surprised at)" },
+    { "gp": "gp4", "name": "形容词 + to / with(grateful to / kind to / pleased with)" },
+    { "gp": "gp5", "name": "形容词 + about / on(worried about / keen on / sorry about)" },
+    { "gp": "gp6", "name": "搭配义辨析(responsible for / fond of / capable of)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Our school is famous ___ its many clubs.\"(“因…而出名”配哪个介词)", "stem_cn": "我们学校因社团众多而出名。", "options": ["for", "of", "at", "to"] },
+    { "gp": "gp1", "stem": "\"Everyone is eager ___ a place in a club.\"(“渴望得到”配哪个介词)", "stem_cn": "人人都渴望在社团里有个名额。", "options": ["for", "of", "at", "with"] },
+    { "gp": "gp1", "stem": "\"Mia is now responsible ___ the art club.\"(“对…负责”配哪个介词)", "stem_cn": "米娅现在负责美术社。", "options": ["for", "of", "to", "at"] },
+    { "gp": "gp2", "stem": "\"Her brother is proud ___ her.\"(“为…自豪”配哪个介词)", "stem_cn": "她哥哥为她感到自豪。", "options": ["of", "for", "at", "with"] },
+    { "gp": "gp2", "stem": "\"He is afraid ___ speaking in public.\"(“害怕”配哪个介词)", "stem_cn": "他害怕当众讲话。", "options": ["of", "for", "at", "to"] },
+    { "gp": "gp2", "stem": "\"Mia is capable ___ leading the club.\"(“有能力做”配哪个介词)", "stem_cn": "米娅有能力领导这个社团。", "options": ["of", "for", "to", "at"] },
+    { "gp": "gp3", "stem": "\"Mia is really good ___ painting.\"(“擅长”配哪个介词)", "stem_cn": "米娅画画很擅长。", "options": ["at", "in", "of", "for"] },
+    { "gp": "gp3", "stem": "\"Her friend is quick ___ learning new things.\"(“在…上反应快”配哪个介词)", "stem_cn": "她朋友学新东西很快。", "options": ["at", "in", "of", "to"] },
+    { "gp": "gp3", "stem": "\"Everyone was surprised ___ the news.\"(“对…感到惊讶”配哪个介词)", "stem_cn": "大家对这个消息感到惊讶。", "options": ["at", "of", "for", "with"] },
+    { "gp": "gp4", "stem": "\"Mia was grateful ___ her teacher.\"(“感激”配哪个介词)", "stem_cn": "米娅很感激她的老师。", "options": ["to", "for", "of", "at"] },
+    { "gp": "gp4", "stem": "\"The teacher is kind ___ everyone who joins.\"(“对…友善”配哪个介词)", "stem_cn": "老师对每个加入的人都很友善。", "options": ["to", "for", "of", "with"] },
+    { "gp": "gp4", "stem": "\"The teacher was pleased ___ her answer.\"(“对…满意”配哪个介词)", "stem_cn": "老师对她的回答很满意。", "options": ["with", "to", "of", "at"] },
+    { "gp": "gp5", "stem": "\"Mia is a little worried ___ the work.\"(“担心”配哪个介词)", "stem_cn": "米娅有点担心工作量。", "options": ["about", "for", "of", "at"] },
+    { "gp": "gp5", "stem": "\"The students are keen ___ art.\"(“热衷于”配哪个介词)", "stem_cn": "学生们热衷于艺术。", "options": ["on", "at", "of", "for"] },
+    { "gp": "gp5", "stem": "\"I'm sorry ___ the mistake I made.\"(“为(某事)抱歉”配哪个介词)", "stem_cn": "我为我犯的错误感到抱歉。", "options": ["about", "at", "of", "to"] },
+    { "gp": "gp6", "stem": "be responsible for something 的意思是:", "options": ["对…负责", "对…好奇", "对…厌倦", "对…陌生"] },
+    { "gp": "gp6", "stem": "be fond of something 的意思是:", "options": ["喜爱…", "害怕…", "擅长…", "厌恶…"] },
+    { "gp": "gp6", "stem": "be capable of doing 的意思是:", "options": ["有能力做…", "没兴趣做…", "忘记做…", "拒绝做…"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"数学\"常说:", "options": ["math", "maths", "number-class", "count-study"] },
+    { "stem": "美语里\"橡皮\"常说:", "options": ["eraser", "rubber", "wipe-stick", "clean-block"] },
+    { "stem": "eager 的意思是:", "options": ["渴望的,热切的", "疲惫的", "害怕的", "骄傲的"] },
+    { "stem": "famous 的意思是:", "options": ["著名的", "陌生的", "普通的", "廉价的"] },
+    { "stem": "grateful 的意思是:", "options": ["感激的", "生气的", "失望的", "骄傲的"] },
+    { "stem": "capable 的意思是:", "options": ["有能力的", "无助的", "好奇的", "谨慎的"] }
+  ],
+  "contrast": [
+    { "us": "math", "uk": "maths", "note_cn": "数学;美语 math,英式 maths" },
+    { "us": "eraser", "uk": "rubber", "note_cn": "橡皮;美语 eraser,英式 rubber" },
+    { "us": "grade", "uk": "mark", "note_cn": "成绩、分数;美语 grade,英式 mark" },
+    { "us": "recess", "uk": "break", "note_cn": "课间休息;美语 recess,英式 break" }
+  ],
+  "chunks": [
+    { "us": "be good at", "ipa": "/bi ɡʊd æt/", "example1": "Mia is really good at painting.", "example1_cn": "米娅画画很擅长。", "example2": "He is good at solving problems.", "example2_cn": "他很擅长解决问题。" },
+    { "us": "be responsible for", "ipa": "/bi rɪˈspɑːnsəbl fɔːr/", "example1": "She is responsible for the art club.", "example1_cn": "她负责美术社。", "example2": "The captain is responsible for the whole team.", "example2_cn": "队长对整个队伍负责。" },
+    { "us": "be proud of", "ipa": "/bi praʊd əv/", "example1": "Her brother is proud of her.", "example1_cn": "她哥哥为她感到自豪。", "example2": "We are proud of our school.", "example2_cn": "我们为自己的学校感到自豪。" },
+    { "us": "be keen on", "ipa": "/bi kiːn ɑːn/", "example1": "The students are keen on art.", "example1_cn": "学生们热衷于艺术。", "example2": "She is keen on playing tennis.", "example2_cn": "她热衷于打网球。" }
+  ],
+  "stage7_cloze": {
+    "context": "Our school is famous ___1___ its clubs. Mia is good ___2___ painting and fond ___3___ drawing. The teacher said she was capable ___4___ leading the art club.",
+    "blanks": [
+      { "blank_no": 1, "options": ["for", "of", "at", "to"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["at", "in", "of", "for"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["of", "for", "at", "to"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["of", "for", "to", "at"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What is the school famous for?", "options": ["Its many clubs", "Its swimming pool", "Its garden", "Its old bell"] },
+    { "stem": "What is Mia good at?", "options": ["Painting, and she is fond of drawing cartoons", "Singing and dancing", "Running and jumping", "Cooking and baking"] },
+    { "stem": "What did the teacher ask Mia to be responsible for?", "options": ["The art club", "The whole school", "The library", "The sports day"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我们学校因社团众多而出名\"(be famous for):", "options": ["Our school is famous for its many clubs.", "Our school is famous of its many clubs.", "Our school is famous at its many clubs.", "Our school is famous to its many clubs."] },
+    { "stem": "你想说\"他害怕当众讲话\"(be afraid of):", "options": ["He is afraid of speaking in public.", "He is afraid for speaking in public.", "He is afraid at speaking in public.", "He is afraid to speaking in public."] },
+    { "stem": "你想说\"米娅很感激她的老师\"(be grateful to):", "options": ["Mia was grateful to her teacher.", "Mia was grateful for her teacher.", "Mia was grateful of her teacher.", "Mia was grateful at her teacher."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "eager 的意思是:", "options": ["渴望的,热切的", "疲惫的", "害怕的", "骄傲的"] },
+    { "kind": "vocab", "stem": "grateful 的意思是:", "options": ["感激的", "生气的", "失望的", "骄傲的"] },
+    { "kind": "grammar", "stem": "\"Our school is famous ___ its clubs.\"(“因…而出名”配哪个介词)", "stem_cn": "我们学校因社团众多而出名。", "options": ["for", "of", "at", "to"] },
+    { "kind": "grammar", "stem": "\"He is afraid ___ speaking in public.\"(“害怕”配哪个介词)", "stem_cn": "他害怕当众讲话。", "options": ["of", "for", "at", "to"] },
+    { "kind": "scenario", "stem": "\"be responsible for\" 的意思是:", "options": ["对…负责", "对…好奇", "对…满意", "对…陌生"] },
+    { "kind": "scenario", "stem": "\"be good at\" 的意思是:", "options": ["擅长…", "害怕…", "厌倦…", "负责…"] },
+    { "kind": "reading", "stem": "Why was Mia chosen to lead the art club?", "options": ["Because she is good at painting and the teacher thought she was capable of leading it", "Because she was the oldest student", "Because no one else wanted to", "Because her brother asked the teacher"], "passage": true },
+    { "kind": "reading", "stem": "How did Mia feel about the teacher's offer?", "options": ["Surprised at it and grateful to her teacher", "Angry and disappointed", "Bored and tired", "Afraid and unwilling"], "passage": true },
+    { "kind": "listening", "stem": "What is Mia fond of?", "options": ["Drawing cartoons", "Playing soccer", "Reading novels", "Baking cakes"], "audio": true },
+    { "kind": "listening", "stem": "How many students could the art club room hold?", "options": ["Only twenty", "About a hundred", "Only five", "Fifty"], "audio": true }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "am2_l55",
+  "unit_no": 7,
+  "lesson_no": 55,
+  "title_en": "Not a gold mine",
+  "title_cn": "并非金矿",
+  "grammar_focus": "KS31 would / used to 表过去习惯性动作(would 过去反复动作、used to 过去习惯/状态、状态只能 used to)主考;SD used to do / be used to doing / be used to do 三结构辨析 + gold vs golden + 课文 dig/bury 过去式、give up、All that glitters is not gold(辅考)。素材=Aaron 净化生产包(2026-07-05,原课文内容过滤误判已核无害)",
+  "scene": "我小时候,我朋友 Danny 的爸爸坚信他家后院埋着黄金。他过去常跟我们说,很久以前海盗把宝藏藏在了那儿。有一天他买了台叫“探宝者”的金属探测器,它是用来探测黄金和其他金属的。每个周末他都会拿着它在院子里走来走去,听有没有“嘀”声。每次它一响,他就会抓起铲子开始挖。他挖了那么多洞,后院看起来像月球表面。可他找到的全是些旧钉子、瓶盖,还有一把生锈的勺子。“闪光的未必是金子,”我爸爸总会笑着说。Danny 的爸爸从没找到宝藏,但他也从没放弃。现在回想,那个后院从来就不是金矿——但那些周末是金子般的回忆。",
+  "grammar_card": {
+    "title": "would / used to 表过去习惯",
+    "intro": "KS31:would + 动词原形表示'过去常常(反复)做某动作';used to + 动词原形表示'过去的习惯或状态(现在不再)'。要点:表示过去的'状态'(如 live、be、have)只能用 used to,不能用 would。另注意 used 三结构:used to do(过去常做)/ be used to doing(习惯于做)/ be used to do(被用来做)。",
+    "table": {
+      "headers": ["用法", "例子"],
+      "rows": [
+        ["would 过去反复动作", "Every weekend he would dig."],
+        ["used to 过去习惯", "He used to tell us stories."],
+        ["used to 过去状态", "There used to be a tree here."],
+        ["be used to doing 习惯于", "I'm used to getting up early."],
+        ["be used to do 被用来做", "It is used to detect gold."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "过去的'状态'(live/be/have 等)只能用 used to,不能用 would;would 只表反复的'动作'。", "mark": "状态只能 used to" },
+      { "rule": "gold(名词/材质:a gold watch)≠ golden(形容词/比喻:a golden opportunity、a golden memory);谚语 All that glitters is not gold。", "mark": "gold vs golden" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What did the team (Danny's dad) find?",
+    "options": ["Only old nails, bottle caps, and a rusty spoon — no gold", "A chest of gold coins", "A pirate's diary", "An underground river"],
+    "answer_index": 0
+  },
+  "passage": "When I was a kid, my friend Danny's dad was sure there was gold buried in their backyard. He used to tell us that pirates had hidden their treasure there long ago. One day he bought a metal detector called 'The Revealer.' It has been used to detect gold and other metals. Every weekend he would walk around the yard with it, listening for a beep. Whenever it beeped, he would grab a shovel and start digging. He dug so many holes that the backyard looked like the surface of the moon. But all he ever found were old nails, bottle caps, and a rusty spoon. 'All that glitters is not gold,' my dad would say with a grin. Danny's dad never found any treasure, but he never gave up either. Looking back, I think the backyard was never a gold mine — but those weekends were a golden memory.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "When I was a kid, my friend Danny's dad was sure there was gold buried in their backyard.", "text_cn": "我小时候,我朋友 Danny 的爸爸坚信他家后院埋着黄金。" },
+    { "seq": 2, "speaker": null, "text_en": "He used to tell us that pirates had hidden their treasure there long ago.", "text_cn": "他过去常跟我们说,很久以前海盗把宝藏藏在了那儿。" },
+    { "seq": 3, "speaker": null, "text_en": "One day he bought a metal detector called 'The Revealer.' It has been used to detect gold and other metals.", "text_cn": "有一天他买了台叫“探宝者”的金属探测器。它是用来探测黄金和其他金属的。" },
+    { "seq": 4, "speaker": null, "text_en": "Every weekend he would walk around the yard with it, listening for a beep.", "text_cn": "每个周末他都会拿着它在院子里走来走去,听有没有“嘀”声。" },
+    { "seq": 5, "speaker": null, "text_en": "Whenever it beeped, he would grab a shovel and start digging.", "text_cn": "每次它一响,他就会抓起铲子开始挖。" },
+    { "seq": 6, "speaker": null, "text_en": "He dug so many holes that the backyard looked like the surface of the moon.", "text_cn": "他挖了那么多洞,后院看起来像月球表面。" },
+    { "seq": 7, "speaker": null, "text_en": "But all he ever found were old nails, bottle caps, and a rusty spoon. 'All that glitters is not gold,' my dad would say with a grin.", "text_cn": "可他找到的全是些旧钉子、瓶盖,还有一把生锈的勺子。“闪光的未必是金子,”我爸爸总会笑着说。" },
+    { "seq": 8, "speaker": null, "text_en": "Danny's dad never found any treasure, but he never gave up either. Looking back, the backyard was never a gold mine — but those weekends were a golden memory.", "text_cn": "Danny 的爸爸从没找到宝藏,但他也从没放弃。现在回想,那个后院从来就不是金矿——但那些周末是金子般的回忆。" }
+  ],
+  "words": [
+    { "word": "gold", "ipa": "/ɡoʊld/", "pos": "n", "meaning_cn": "黄金,金子", "example": "gold buried in the backyard" },
+    { "word": "mine", "ipa": "/maɪn/", "pos": "n", "meaning_cn": "矿(gold mine 金矿)", "example": "never a gold mine" },
+    { "word": "detect", "ipa": "/dɪˈtekt/", "pos": "v", "meaning_cn": "探测,察觉", "example": "used to detect gold and metals" },
+    { "word": "metal", "ipa": "/ˈmetl/", "pos": "n", "meaning_cn": "金属", "example": "a metal detector" },
+    { "word": "rock", "ipa": "/rɑːk/", "pos": "n", "meaning_cn": "岩石", "example": "gold hidden under the rocks" },
+    { "word": "pirate", "ipa": "/ˈpaɪrət/", "pos": "n", "meaning_cn": "海盗", "example": "pirates had hidden their treasure" },
+    { "word": "treasure", "ipa": "/ˈtreʒər/", "pos": "n", "meaning_cn": "财宝,宝藏", "example": "hidden their treasure there" },
+    { "word": "bury", "ipa": "/ˈberi/", "pos": "v", "meaning_cn": "埋藏(过去式 buried)", "example": "gold buried in their backyard" },
+    { "word": "dig", "ipa": "/dɪɡ/", "pos": "v", "meaning_cn": "挖,掘(过去式 dug)", "example": "grab a shovel and start digging" },
+    { "word": "hole", "ipa": "/hoʊl/", "pos": "n", "meaning_cn": "洞,坑", "example": "He dug so many holes" },
+    { "word": "deep", "ipa": "/diːp/", "pos": "adj", "meaning_cn": "深的", "example": "a deep hole in the yard" },
+    { "word": "golden", "ipa": "/ˈɡoʊldən/", "pos": "adj", "meaning_cn": "金色的;绝好的(比喻)", "example": "a golden memory" },
+    { "word": "opportunity", "ipa": "/ˌɑːpərˈtuːnəti/", "pos": "n", "meaning_cn": "机会", "example": "a golden opportunity" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "would 表过去反复动作" },
+    { "gp": "gp2", "name": "used to 表过去习惯/状态" },
+    { "gp": "gp3", "name": "would vs used to(状态只能 used to)" },
+    { "gp": "gp4", "name": "used to do / be used to doing / be used to do 三辨析" },
+    { "gp": "gp5", "name": "gold vs golden" },
+    { "gp": "gp6", "name": "dig/bury 过去式、give up(辅考·课文)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Every weekend he ___ walk around the yard with the detector.\"(过去反复、常常做某动作)", "stem_cn": "每个周末他都会拿着探测器在院子里走。", "options": ["would", "will", "is", "has"] },
+    { "gp": "gp1", "stem": "\"Whenever it beeped, he ___ grab a shovel and start digging.\"(过去每次都做某动作)", "stem_cn": "每次它一响,他就会抓起铲子开始挖。", "options": ["would", "will", "is", "was"] },
+    { "gp": "gp1", "stem": "\"'All that glitters is not gold,' my dad ___ say with a grin.\"(过去常常做的动作)", "stem_cn": "'闪光的未必是金子,'我爸爸总会笑着说。", "options": ["would", "will", "is", "has"] },
+    { "gp": "gp2", "stem": "\"He ___ tell us that pirates had hidden treasure there.\"(过去常做、现在不做了)", "stem_cn": "他过去常跟我们说海盗把宝藏藏在那儿。", "options": ["used to", "use to", "is used to", "would be"] },
+    { "gp": "gp2", "stem": "\"There ___ be an old well in that backyard.\"(过去存在的一种状态)", "stem_cn": "那个后院过去有一口老井。", "options": ["used to", "would", "uses to", "is used to"] },
+    { "gp": "gp2", "stem": "\"Danny's dad ___ believe in buried treasure.\"(过去一直有的习惯性想法)", "stem_cn": "Danny 的爸爸过去一直相信有埋藏的宝藏。", "options": ["used to", "would", "use to", "is used to"] },
+    { "gp": "gp3", "stem": "\"That backyard ___ be much bigger, but now half of it is a parking lot.\"(过去的'状态'不能用 would)", "stem_cn": "那个后院过去大得多,现在一半成了停车场。", "options": ["used to", "would", "will", "would have"] },
+    { "gp": "gp3", "stem": "\"There ___ be a big tree here; it was cut down years ago.\"(过去'存在'的状态,不能用 would)", "stem_cn": "这儿过去有棵大树,几年前被砍了。", "options": ["used to", "would", "will", "would be"] },
+    { "gp": "gp3", "stem": "\"When he was young, Danny's dad ___ live near the sea.\"(过去'居住'的状态,不能用 would)", "stem_cn": "Danny 的爸爸年轻时住在海边。", "options": ["used to", "would", "will", "would have"] },
+    { "gp": "gp4", "stem": "\"The metal detector ___ used to detect gold and other metals.\"(被用来做…探测,后接动词原形)", "stem_cn": "这台金属探测器是用来探测黄金和其他金属的。", "options": ["is", "used", "would", "has"] },
+    { "gp": "gp4", "stem": "\"I am used to ___ up early; it doesn't bother me.\"(习惯于做某事,to 后接 -ing)", "stem_cn": "我习惯了早起,这对我没影响。", "options": ["getting", "get", "got", "get to"] },
+    { "gp": "gp4", "stem": "\"He ___ smoke, but he gave it up last year.\"(过去常做某事、现在不做了)", "stem_cn": "他过去抽烟,去年戒了。", "options": ["used to", "is used to", "uses to", "would be"] },
+    { "gp": "gp4", "stem": "\"She didn't like the noise at first, but she is used to ___ now.\"(习惯于…,be used to 后接名词/-ing)", "stem_cn": "她起初不喜欢那噪音,但现在习惯了。", "options": ["it", "do it", "for it", "it to"] },
+    { "gp": "gp5", "stem": "\"He gave her a ___ watch made of real gold.\"(表'金的、真金做的'材质)", "stem_cn": "他给了她一块真金做的金表。", "options": ["gold", "golden", "goldy", "golded"] },
+    { "gp": "gp5", "stem": "\"Don't miss this ___ opportunity to study abroad.\"(比喻'绝好的、极佳的')", "stem_cn": "别错过这个出国学习的绝好机会。", "options": ["golden", "gold", "goldish", "golding"] },
+    { "gp": "gp5", "stem": "\"The backyard was never a gold mine, but those days were a ___ memory.\"(比喻'珍贵美好的、金子般的')", "stem_cn": "后院从不是金矿,但那些日子是金子般的回忆。", "options": ["golden", "gold", "goldy", "golder"] },
+    { "gp": "gp6", "stem": "\"He ___ so many holes that the yard looked like the moon.\"(dig 的过去式:挖了)", "stem_cn": "他挖了那么多洞,院子看起来像月球。", "options": ["dug", "digged", "dig", "digging"] },
+    { "gp": "gp6", "stem": "\"Pirates had ___ their treasure there long ago.\"(bury 的过去分词:埋藏)", "stem_cn": "很久以前海盗把宝藏埋在了那儿。", "options": ["buried", "buryed", "bury", "burying"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"后院\"常说:", "options": ["backyard", "back garden", "rear yard", "yard back"] },
+    { "stem": "美语里\"停车场\"常说:", "options": ["parking lot", "car park", "park place", "stop yard"] },
+    { "stem": "detect 的意思是:", "options": ["探测,察觉", "埋藏", "挖掘", "隐藏"] },
+    { "stem": "treasure 的意思是:", "options": ["财宝,宝藏", "金属", "岩石", "机会"] },
+    { "stem": "bury 的意思是:", "options": ["埋藏", "发现", "丢弃", "出售"] },
+    { "stem": "opportunity 的意思是:", "options": ["机会", "困难", "礼物", "秘密"] }
+  ],
+  "contrast": [
+    { "us": "backyard", "uk": "back garden", "note_cn": "后院;美语 backyard,英式 back garden" },
+    { "us": "parking lot", "uk": "car park", "note_cn": "停车场;美语 parking lot,英式 car park" },
+    { "us": "flashlight", "uk": "torch", "note_cn": "手电筒;美语 flashlight,英式 torch" },
+    { "us": "trash can", "uk": "dustbin", "note_cn": "垃圾桶;美语 trash can,英式 dustbin" }
+  ],
+  "chunks": [
+    { "us": "used to (do)", "ipa": "/ˈjuːst tuː/", "example1": "He used to tell us about pirates.", "example1_cn": "他过去常跟我们讲海盗。", "example2": "I used to smoke, but I quit.", "example2_cn": "我过去抽烟,后来戒了。" },
+    { "us": "be used to (doing)", "ipa": "/biː ˈjuːst tuː/", "example1": "I'm used to getting up early.", "example1_cn": "我习惯早起。", "example2": "She is used to the noise now.", "example2_cn": "她现在习惯了噪音。" },
+    { "us": "give up", "ipa": "/ɡɪv ʌp/", "example1": "He never gave up looking for gold.", "example1_cn": "他找金子从没放弃。", "example2": "Don't give up so easily.", "example2_cn": "别那么容易放弃。" },
+    { "us": "All that glitters is not gold", "ipa": "/ˈɡlɪtərz/", "example1": "All that glitters is not gold.", "example1_cn": "闪光的未必是金子。", "example2": "Remember, all that glitters is not gold.", "example2_cn": "记住,闪光的未必都是金子。" }
+  ],
+  "stage7_cloze": {
+    "context": "When I was a kid, Danny's dad ___1___ tell us pirates had buried gold in the backyard. He bought a metal detector, and every weekend he ___2___ walk around with it. The detector ___3___ used to detect metal. He dug many holes, but the backyard was never a ___4___ mine.",
+    "blanks": [
+      { "blank_no": 1, "options": ["used to", "use to", "is used to", "would be"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["would", "will", "is", "has"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["is", "has", "would", "did"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["gold", "golden", "goldy", "golded"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What did Danny's dad believe?", "options": ["That pirates had buried gold in their backyard", "That the house was haunted", "That he would win the lottery", "That the yard was too small"] },
+    { "stem": "What did he use to search for the gold?", "options": ["A metal detector called 'The Revealer'", "A treasure map", "Only his hands", "A trained dog"] },
+    { "stem": "What did he actually find?", "options": ["Only old nails, bottle caps, and a rusty spoon", "A chest of gold coins", "Nothing at all", "A pirate's diary"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"每个周末他都会拿着探测器在院子里走\"(过去反复动作用 would):", "options": ["Every weekend he would walk around the yard with it.", "Every weekend he will walk around the yard with it.", "Every weekend he is walking around the yard with it.", "Every weekend he would walking around the yard with it."] },
+    { "stem": "你想说\"这儿过去有一棵大树\"(过去'存在'的状态只能用 used to,不能用 would):", "options": ["There used to be a big tree here.", "There would be a big tree here.", "There use to be a big tree here.", "There is used to be a big tree here."] },
+    { "stem": "你想说\"别错过这个绝好的机会\"(比喻'绝好的'用 golden):", "options": ["Don't miss this golden opportunity.", "Don't miss this gold opportunity.", "Don't miss this golded opportunity.", "Don't miss this goldy opportunity."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "detect 的意思是:", "options": ["探测,察觉", "埋藏", "挖掘", "隐藏"] },
+    { "kind": "vocab", "stem": "treasure 的意思是:", "options": ["财宝,宝藏", "金属", "岩石", "机会"] },
+    { "kind": "grammar", "stem": "\"Every weekend he ___ walk around the yard.\"(过去反复动作)", "stem_cn": "每个周末他都会在院子里走。", "options": ["would", "will", "is", "has"] },
+    { "kind": "grammar", "stem": "\"The detector ___ used to detect metal.\"(被用来做…·被动)", "stem_cn": "这台探测器是用来探测金属的。", "options": ["is", "has", "would", "did"] },
+    { "kind": "scenario", "stem": "\"give up\" 这个短语的意思是:", "options": ["放弃", "抓住", "拿起", "赠送"] },
+    { "kind": "scenario", "stem": "谚语 \"All that glitters is not gold\" 的意思是:", "options": ["闪光的未必是金子(表面好未必真好)", "金子总会发光", "沉默是金", "越努力越幸运"] },
+    { "kind": "reading", "stem": "Why did Danny's dad dig so many holes?", "options": ["The metal detector kept beeping and he hoped to find gold", "He was planting trees", "He was building a pool", "He was looking for water"], "passage": true },
+    { "kind": "reading", "stem": "Was the backyard really a gold mine?", "options": ["No — he never found any treasure", "Yes, full of gold", "Yes, a small amount", "The text doesn't say"], "passage": true },
+    { "kind": "listening", "stem": "How did the narrator's dad react to the digging?", "options": ["He grinned and said 'All that glitters is not gold'", "He got angry", "He helped dig", "He called the police"], "audio": true },
+    { "kind": "listening", "stem": "Looking back, how does the narrator feel about those weekends?", "options": ["They were a golden memory", "They were a waste of time", "They were frightening", "He doesn't remember them"], "audio": true }
+  ]
+}

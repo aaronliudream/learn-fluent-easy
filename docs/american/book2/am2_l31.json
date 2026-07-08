@@ -1,0 +1,138 @@
+{
+  "id": "am2_l31",
+  "unit_no": 4,
+  "lesson_no": 31,
+  "title_en": "Success story",
+  "title_cn": "成功者的故事",
+  "grammar_focus": "used to do 表过去的习惯/状态(现已停止、不再重复:used to work / used to be)· 与一般过去时(一次性动作)、过去进行时(当时正在做)对比(主考)+ which 引导定语从句(指物)/ when 引导时间状语从句(辅考·课文①类)",
+  "scene": "昨天下午弗兰克·霍金斯向'我'讲他年轻时的经历。退休前他是一家大公司的负责人,但小时候他曾在一家小店做工,专修自行车,一天要干14个小时。他积蓄多年,1958年买下自己的一间小车间;二十几岁时给飞机做零配件,雇了两个帮手。几年后小车间变成了一家雇有728人的大工厂。他回想早年的艰辛,微笑着——正笑着,门开了,妻子进来要他去修孙子的自行车!",
+  "grammar_card": {
+    "title": "used to do:过去的习惯与状态",
+    "intro": "used to + 动词原形,表示过去经常做、或过去的状态,而现在已经停止、不再这样。跟'一次性动作(一般过去时)'和'当时正在做(过去进行时)'不同。全用本课和 Key structures 的句子举例。",
+    "table": {
+      "headers": ["表达", "例子"],
+      "rows": [
+        ["过去经常做(现已停止)", "He used to work fourteen hours a day."],
+        ["过去的状态(现已改变)", "He used to be a mailman. He's a taxi driver now."],
+        ["否定 / 疑问", "He didn't use to smoke. Did you use to collect stamps?"],
+        ["对比:一次性动作 → 一般过去", "In 1958 he bought a workshop."],
+        ["对比:当时正在做 → 过去进行", "When I was watering the garden, it began to rain."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "which 引导定语从句指物:a factory which employed 728 people 一家雇了728人的工厂", "mark": "which 定从" },
+      { "rule": "when 引导时间状语从句'当…时':He was still smiling when the door opened.", "mark": "when 状从" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was Frank's first job?",
+    "options": ["He used to repair bicycles in a small store", "He made airplanes in a factory", "He was a taxi driver", "He was a mailman"],
+    "answer_index": 0
+  },
+  "passage": "Yesterday afternoon Frank Hawkins was telling me about his experiences as a young man. Before he retired, Frank was the head of a very large business company, but as a boy he used to work in a small store. It was his job to repair bicycles, and at that time he used to work fourteen hours a day. He saved money for years, and in 1958 he bought a small workshop of his own. In his twenties, Frank used to make spare parts for airplanes. At that time he had two helpers. In a few years the small workshop had become a large factory which employed seven hundred and twenty-eight people. Frank smiled when he remembered his hard early years and the long road to success. He was still smiling when the door opened and his wife came in. She wanted him to repair their grandson's bicycle!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Yesterday afternoon Frank Hawkins was telling me about his experiences as a young man.", "text_cn": "昨天下午,弗兰克·霍金斯向我讲述了他年轻时的经历。" },
+    { "seq": 2, "speaker": null, "text_en": "Before he retired, Frank was the head of a very large business company, but as a boy he used to work in a small store.", "text_cn": "退休前,弗兰克是一家非常大的商业公司的负责人,但小时候他曾在一家小店做工。" },
+    { "seq": 3, "speaker": null, "text_en": "It was his job to repair bicycles, and at that time he used to work fourteen hours a day.", "text_cn": "他那时的工作是修理自行车,而且经常一天工作14个小时。" },
+    { "seq": 4, "speaker": null, "text_en": "He saved money for years, and in 1958 he bought a small workshop of his own.", "text_cn": "他积蓄多年,于1958年买下了自己的一间小车间。" },
+    { "seq": 5, "speaker": null, "text_en": "In his twenties, Frank used to make spare parts for airplanes.", "text_cn": "二十几岁时,弗兰克常给飞机制造零配件。" },
+    { "seq": 6, "speaker": null, "text_en": "At that time he had two helpers.", "text_cn": "那时他有两个帮手。" },
+    { "seq": 7, "speaker": null, "text_en": "In a few years the small workshop had become a large factory which employed seven hundred and twenty-eight people.", "text_cn": "几年之后,那间小车间已发展成一家雇有728人的大工厂。" },
+    { "seq": 8, "speaker": null, "text_en": "Frank smiled when he remembered his hard early years and the long road to success.", "text_cn": "弗兰克回想起早年的艰辛和漫长的成功之路,笑了。" },
+    { "seq": 9, "speaker": null, "text_en": "He was still smiling when the door opened and his wife came in.", "text_cn": "他正笑着,门开了,他的妻子走了进来。" },
+    { "seq": 10, "speaker": null, "text_en": "She wanted him to repair their grandson's bicycle!", "text_cn": "她要他去修孙子的自行车!" }
+  ],
+  "words": [
+    { "word": "retire", "ipa": "/rɪˈtaɪr/", "pos": "v", "meaning_cn": "退休", "example": "Before he retired" },
+    { "word": "company", "ipa": "/ˈkʌmpəni/", "pos": "n", "meaning_cn": "公司", "example": "a large business company" },
+    { "word": "bicycle", "ipa": "/ˈbaɪsɪkəl/", "pos": "n", "meaning_cn": "自行车", "example": "repair bicycles" },
+    { "word": "save", "ipa": "/seɪv/", "pos": "v", "meaning_cn": "积蓄,储蓄", "example": "He saved money for years" },
+    { "word": "workshop", "ipa": "/ˈwɜːrkʃɑːp/", "pos": "n", "meaning_cn": "车间;工场", "example": "a small workshop of his own" },
+    { "word": "helper", "ipa": "/ˈhelpər/", "pos": "n", "meaning_cn": "帮手,助手", "example": "he had two helpers" },
+    { "word": "employ", "ipa": "/ɪmˈplɔɪ/", "pos": "v", "meaning_cn": "雇用", "example": "a factory which employed 728 people" },
+    { "word": "grandson", "ipa": "/ˈɡrænsʌn/", "pos": "n", "meaning_cn": "孙子", "example": "their grandson's bicycle" },
+    { "word": "factory", "ipa": "/ˈfæktəri/", "pos": "n", "meaning_cn": "工厂", "example": "a large factory" },
+    { "word": "spare", "ipa": "/sper/", "pos": "adj", "meaning_cn": "备用的,多余的", "example": "spare parts for airplanes" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "used to do:过去经常做某事(现已停止)" },
+    { "gp": "gp2", "name": "used to be:过去的状态(现已改变)" },
+    { "gp": "gp3", "name": "used to 的否定 / 疑问(didn't use to / Did…use to)" },
+    { "gp": "gp4", "name": "对比:一次性动作用一般过去时" },
+    { "gp": "gp5", "name": "对比:当时正在做用过去进行时" },
+    { "gp": "gp6", "name": "used to … 与现在对比(过去…现在…)" },
+    { "gp": "gp7", "name": "which 引导定语从句(指物,辅考)" },
+    { "gp": "gp8", "name": "when 引导时间状语从句(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"As a boy, Frank ___ work in a small store.\"(过去经常做、现已停止)", "stem_cn": "弗兰克小时候常在一家小店做工。", "options": ["used to", "use to", "is used to", "was used to"] },
+    { "gp": "gp1", "stem": "\"He ___ work fourteen hours a day.\"(过去经常做、现已停止)", "stem_cn": "他过去一天工作14个小时。", "options": ["used to", "use to", "uses to", "is used to"] },
+    { "gp": "gp1", "stem": "\"I ___ go to work by bus. Now I go by car.\"(过去经常,现在变了)", "stem_cn": "我过去常坐公交上班,现在开车去。", "options": ["used to", "use to", "am used to", "was used to"] },
+    { "gp": "gp2", "stem": "\"He ___ be a mailman a long time ago.\"(过去的状态,现已改变)", "stem_cn": "很久以前他曾是个邮递员。", "options": ["used to", "use to", "is used to", "uses to"] },
+    { "gp": "gp2", "stem": "\"My uncle ___ live in New Zealand, but he lives in Australia now.\"(过去的状态,现已改变)", "stem_cn": "我叔叔过去住新西兰,现在住澳大利亚。", "options": ["used to", "use to", "is used to", "was used to"] },
+    { "gp": "gp3", "stem": "\"Frank ___ use to work in an office.\"(过去习惯的否定)", "stem_cn": "弗兰克过去不在办公室工作。", "options": ["didn't", "doesn't", "isn't", "wasn't"] },
+    { "gp": "gp3", "stem": "\"___ you use to collect stamps as a boy?\"(过去习惯的一般疑问)", "stem_cn": "你小时候常集邮吗?", "options": ["Did", "Do", "Are", "Were"] },
+    { "gp": "gp4", "stem": "\"In 1958 he ___ a small workshop of his own.\"(1958 一次性动作,用一般过去)", "stem_cn": "1958年他买下了自己的一间小车间。", "options": ["bought", "used to buy", "buys", "was buying"] },
+    { "gp": "gp4", "stem": "\"Yesterday afternoon Frank ___ me about his experiences.\"(yesterday 一次性,用一般过去)", "stem_cn": "昨天下午弗兰克跟我讲了他的经历。", "options": ["told", "used to tell", "tells", "is telling"] },
+    { "gp": "gp4", "stem": "\"In a few years the workshop ___ a large factory.\"(一次性结果,用一般过去)", "stem_cn": "几年后那间车间变成了一家大工厂。", "options": ["became", "used to become", "becomes", "was becoming"] },
+    { "gp": "gp5", "stem": "\"When I ___ the garden, it began to rain.\"(当时正在进行,用过去进行)", "stem_cn": "我正在浇花园时,天开始下雨。", "options": ["was watering", "used to water", "watered", "water"] },
+    { "gp": "gp5", "stem": "\"As I ___ on the bus, I slipped and hurt my foot.\"(正上车那一刻,用过去进行)", "stem_cn": "我正上公交车时,滑了一下伤了脚。", "options": ["was getting", "used to get", "got", "get"] },
+    { "gp": "gp6", "stem": "\"Frank ___ to work in a shop, but now he is retired.\"(过去经常,与现在对比)", "stem_cn": "弗兰克过去在店里做工,现在退休了。", "options": ["used", "use", "uses", "is used"] },
+    { "gp": "gp6", "stem": "\"I ___ to collect stamps, but I don't anymore.\"(过去经常,现在不做了)", "stem_cn": "我过去集邮,现在不集了。", "options": ["used", "use", "am used", "was used"] },
+    { "gp": "gp7", "stem": "\"It became a large factory ___ employed 728 people.\"(指物,引导定语从句)", "stem_cn": "它变成了一家雇了728人的大工厂。", "options": ["which", "who", "whom", "whose"] },
+    { "gp": "gp7", "stem": "\"He repaired the bicycle ___ his grandson rode.\"(指物,引导定语从句)", "stem_cn": "他修好了孙子骑的那辆自行车。", "options": ["which", "who", "whom", "where"] },
+    { "gp": "gp8", "stem": "\"Frank smiled ___ he remembered his early years.\"(表示'当…的时候')", "stem_cn": "弗兰克回想起早年时笑了。", "options": ["when", "which", "that", "what"] },
+    { "gp": "gp8", "stem": "\"He was still smiling ___ the door opened.\"(表示'当…的时候')", "stem_cn": "门开的时候他还在微笑。", "options": ["when", "which", "what", "who"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"飞机\"常说:", "options": ["airplane", "aeroplane", "air machine", "sky car"] },
+    { "stem": "美语里\"邮递员\"常说:", "options": ["mailman", "postman", "letter man", "post boy"] },
+    { "stem": "retire 的意思是:", "options": ["退休", "雇用", "修理", "积蓄"] },
+    { "stem": "employ 的意思是:", "options": ["雇用", "解雇", "退休", "出售"] },
+    { "stem": "save(save money)的意思是:", "options": ["积蓄,储蓄", "花费", "借出", "丢失"] },
+    { "stem": "helper 的意思是:", "options": ["帮手,助手", "老板", "顾客", "对手"] }
+  ],
+  "contrast": [
+    { "us": "airplane", "uk": "aeroplane", "note_cn": "飞机;美语 airplane,英式 aeroplane(课文 spare parts for airplanes)" },
+    { "us": "mailman", "uk": "postman", "note_cn": "邮递员;美语 mailman / mail carrier,英式 postman" },
+    { "us": "store", "uk": "shop", "note_cn": "商店;美语零售店常说 store,英式 shop(修理工场仍叫 workshop)" },
+    { "us": "elevator", "uk": "lift", "note_cn": "电梯;美语 elevator,英式 lift(高频美语点)" }
+  ],
+  "chunks": [
+    { "us": "used to do", "ipa": "/juːst tuː duː/", "example1": "He used to work fourteen hours a day.", "example1_cn": "他过去一天工作14个小时。", "example2": "I used to go to work by bus.", "example2_cn": "我过去常坐公交上班。" },
+    { "us": "spare parts", "ipa": "/sper pɑːrts/", "example1": "He used to make spare parts for airplanes.", "example1_cn": "他过去给飞机做零配件。", "example2": "We need spare parts for the car.", "example2_cn": "我们需要汽车的零配件。" },
+    { "us": "the head of", "ipa": "/ðə hed əv/", "example1": "Frank was the head of a large company.", "example1_cn": "弗兰克曾是一家大公司的负责人。", "example2": "She is the head of the school.", "example2_cn": "她是学校的负责人。" },
+    { "us": "in his twenties", "ipa": "/ɪn hɪz ˈtwentiz/", "example1": "In his twenties, Frank made spare parts.", "example1_cn": "二十几岁时,弗兰克做零配件。", "example2": "She got married in her twenties.", "example2_cn": "她二十几岁时结了婚。" }
+  ],
+  "stage7_cloze": {
+    "context": "As a boy, Frank ___1___ to work in a small store. In 1958 he ___2___ a workshop of his own. It became a large factory ___3___ employed many people. He smiled ___4___ he remembered those years.",
+    "blanks": [
+      { "blank_no": 1, "options": ["used", "use", "uses", "is used"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["bought", "used to buy", "buys", "was buying"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["which", "who", "whom", "whose"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["when", "which", "what", "that"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What was Frank's first job as a boy?", "options": ["Repairing bicycles in a small store", "Making airplanes in a factory", "Driving a taxi", "Delivering mail"] },
+    { "stem": "What did Frank use to make in his twenties?", "options": ["Spare parts for airplanes", "Bicycles for children", "Furniture for shops", "Clothes for a company"] },
+    { "stem": "What did his wife want him to repair?", "options": ["Their grandson's bicycle", "The factory machines", "His old workshop", "A neighbor's car"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我过去常坐公交上班\"(过去经常用 used to):", "options": ["I used to go to work by bus.", "I use to go to work by bus.", "I am used to go to work by bus.", "I was used to go to work by bus."] },
+    { "stem": "你想说\"那是一家雇了728人的工厂\"(指物用 which 引导):", "options": ["a factory which employed 728 people", "a factory who employed 728 people", "a factory where employed 728 people", "a factory what employed 728 people"] },
+    { "stem": "你想说\"门开时他还在微笑\"(表'当…时'用 when):", "options": ["He was still smiling when the door opened.", "He was still smiling which the door opened.", "He was still smiling what the door opened.", "He was still smiling where the door opened."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "retire 的意思是:", "options": ["退休", "上班", "雇用", "积蓄"] },
+    { "kind": "vocab", "stem": "employ 的意思是:", "options": ["雇用", "解雇", "退休", "修理"] },
+    { "kind": "grammar", "stem": "\"As a boy, Frank ___ work in a small store.\"(过去经常做、现已停止)", "stem_cn": "弗兰克小时候常在一家小店做工。", "options": ["used to", "use to", "is used to", "was used to"] },
+    { "kind": "grammar", "stem": "\"It became a factory ___ employed 728 people.\"(指物,引导定语从句)", "stem_cn": "它变成了一家雇了728人的工厂。", "options": ["which", "who", "whom", "whose"] },
+    { "kind": "scenario", "stem": "\"He used to work fourteen hours a day.\" 这句话的意思是:", "options": ["他过去一天工作14个小时。", "他现在一天工作14个小时。", "他明天要工作14个小时。", "他从不工作14个小时。"] },
+    { "kind": "scenario", "stem": "\"She wanted him to repair their grandson's bicycle.\" 这句话的意思是:", "options": ["她要他修孙子的自行车。", "她要他买一辆自行车。", "她要他卖掉自行车。", "她要他骑自行车。"] },
+    { "kind": "reading", "stem": "What was Frank before he retired?", "options": ["The head of a very large business company", "A bicycle repairman", "A mailman", "A factory worker"], "passage": true },
+    { "kind": "reading", "stem": "How did the small workshop change over a few years?", "options": ["It became a large factory employing 728 people", "It closed down completely", "It stayed a small shop", "It became a bicycle store"], "passage": true },
+    { "kind": "listening", "stem": "What was Frank's first job?", "options": ["Repairing bicycles in a small store", "Making airplanes", "Running a factory", "Driving a bus"], "audio": true },
+    { "kind": "listening", "stem": "Who came into the room while Frank was smiling?", "options": ["His wife", "His grandson", "His helper", "His old boss"], "audio": true }
+  ]
+}

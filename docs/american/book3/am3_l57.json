@@ -1,0 +1,133 @@
+{
+  "id": "am3_l57",
+  "unit_no": 12,
+  "lesson_no": 57,
+  "title_en": "Back in the Old Country",
+  "title_cn": "重返故里",
+  "grammar_focus": "过去完成时(在另一过去动作之前发生·含被动 had been done)、had expected/meant/thought to do(过去想做/原以为而未成的事)、must have done(对过去的推测)、as if/as though + 过去完成(与过去相反的比拟)、be absorbed in/on one's own/not that…but that(NCE3 第三册 Unit 3 无 KS 页,考点由课文结构 + Notes on the text 自取;原创承载·返乡寻旧村发现故乡已沉入人造水库的怀旧故事·丧亲背景淡化为温和思乡·无暴力;美语化 odometer/gas/tire)",
+  "scene": "我停下车,让发动机冷却一下,同时看看地图。我本以为这时已接近目的地,可周围一切对我仍很陌生。我五岁那年父亲就带我出了国,那是十八年前的事了。他当年决定移居国外,是想为我们俩开创更好的生活;到了新的国度,他一心扑在工作和计划上。他总打算有朝一日回去,但只为探望,绝不久留——他和我一样,根早已深深扎在了新的土地里。可他仍渴望再见见家乡的老人,再走一走他出生的那个村子。我们原定一同回去,可动身前几个月他病倒了;当他知道自己去不成时,便要我答应独自走这一趟。我下飞机后第二天就租了一辆车,还买了一本详尽的地图册。它在跨越乡野的旅途上很管用,但我原以为最后一段路用不着它——倒不是我真记得什么,而是父亲曾一遍遍给我讲过,离最近的小镇之后,每一个路标处该看到些什么,因此我确信自己会认出那片熟悉的土地。唉,我错了,我现在迷路了。我看看地图,又看看里程表。离开小镇我已走了十英里,照父亲的说法,这时我眼前应是山谷里的农场和村舍,远处还有村里教堂的尖顶。可我看不见山谷,看不见农场村舍,也看不见尖顶——只有一片湖。我断定自己一定在什么地方拐错了弯,便掉头沿原路返回,一路频频看地图,结果又回到了同一个拐角。奇怪的是,那片湖在地图上根本没有标出。我觉得自己仿佛闯进了一个梦境之国,一切都不在它该在的地方。正当我坐着琢磨下一步怎么办,一个骑马的人出现在地平线上,朝我这边骑来。我等他走近,便问他去老家村子的路。他温和地告诉我:那个村子已经没有了。我以为他误解了我,又说了一遍村名。这一次,他只是指了指那片湖。他说,村子不复存在了,因为整个山谷都被淹没了;那片湖不是天然的,而是一座人工修建的水库——在它平静的水面之下某处,躺着父亲一辈子都念念不忘的家。",
+  "grammar_card": {
+    "title": "过去完成时 / had expected to do / must have done / as if + 过去完成",
+    "intro": "①过去完成时(had + 过去分词)表在另一过去动作之前已完成,常用于叙事回溯:the village had disappeared before I came。②had expected/meant/thought/planned to do,表过去原打算/原以为而未实现的事:I had expected to be near my objective。③must + have + 过去分词,对过去作肯定推测:I must have taken a wrong turning。④as if/as though + 过去完成,表与过去相反的比拟:I felt as if I had stumbled into a dream。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["过去完成时", "had + 过去分词", "the village had disappeared"],
+        ["过去想做未成", "had expected/meant to do", "I had expected to be near"],
+        ["对过去的推测", "must + have + 过去分词", "I must have taken a wrong turning"],
+        ["as if + 过去完成", "as if + had done", "as if I had stumbled into a dream"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "叙事已在过去,更早发生的事用过去完成时 had done;被动则 had been done(the valley had been submerged)。", "mark": "had done / had been done" },
+      { "rule": "as if/as though 后接过去完成,表示与过去事实相反的比拟,并非真的发生过。", "mark": "as if I had stumbled" },
+      { "rule": "美式用词:odometer(里程表,英式 milometer)、gas(汽油,英式 petrol)、tire(轮胎,英式 tyre)。本课已按美语写。", "mark": "odometer / gas / tire" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What had happened to the narrator's old village?",
+    "options": ["It had been submerged under a reservoir", "It had grown into a city", "It had been rebuilt", "It had never existed"],
+    "answer_index": 0
+  },
+  "passage": "I stopped to let the car cool off and to study the map. I had expected to be near my objective by now, but everything still seemed alien to me. I was only five when my father had taken me abroad, and that was eighteen years ago. He had decided to emigrate to build a better life for the two of us, and in the new land he became absorbed in his work and his plans. He always meant to go back one day, but only for a visit, never to stay — his roots and mine had become too firmly embedded in the new soil. Still, he longed to see the old folk again and to walk once more through the village where he was born. He fell ill a few months before we had planned to travel together, and when he knew he could not go, he made me promise to make the journey on my own. I hired a car the day after landing and bought a comprehensive book of maps, which I found most helpful on the cross-country journey, but which I had thought I would not need on the last stage. It was not that I actually remembered anything, but that my father had described, over and over, what I should see at every milestone after leaving the nearest town, so that I was positive I would recognize the place as familiar territory. Well, I had been wrong, for I was now lost. I looked at the map and then at the odometer. I had come ten miles since leaving the town, and at this point, according to my father, I should have been looking at farms and cottages in a valley, with the spire of the village church showing in the far distance. I could see no valley, no farms, no cottages and no spire — only a lake. I decided that I must have taken a wrong turning somewhere, so I drove back and began to retrace my route, taking frequent glances at the map. I landed up at the same corner. The strange thing was that the lake was not marked on the map at all. I felt as if I had stumbled into a dream country, where nothing was where it should be. As I sat wondering what to do, a man on horseback appeared on the horizon, riding in my direction. I waited until he came near and asked him the way to our old village. He told me, gently, that there was no longer any village. I thought he must have misunderstood me, so I repeated its name. This time he simply pointed to the lake. The village no longer existed, he said, because the whole valley had been submerged. The lake was not a natural one, but a man-made reservoir, and somewhere beneath its calm surface lay the home my father had never stopped dreaming of.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "I stopped to let the car cool off and to study the map. I had expected to be near my objective by now, but everything still seemed alien to me. I was only five when my father had taken me abroad, and that was eighteen years ago. He had decided to emigrate to build a better life for the two of us, and in the new land he became absorbed in his work and his plans.", "text_cn": "我停下车,让发动机冷却一下,同时看看地图。我本以为这时已接近目的地,可周围一切对我仍很陌生。我五岁那年父亲就带我出了国,那是十八年前的事了。他当年决定移居国外,是想为我们俩开创更好的生活;到了新的国度,他一心扑在工作和计划上。" },
+    { "seq": 2, "speaker": null, "text_en": "He always meant to go back one day, but only for a visit, never to stay — his roots and mine had become too firmly embedded in the new soil. Still, he longed to see the old folk again and to walk once more through the village where he was born. He fell ill a few months before we had planned to travel together, and when he knew he could not go, he made me promise to make the journey on my own.", "text_cn": "他总打算有朝一日回去,但只为探望,绝不久留——他和我一样,根早已深深扎在了新的土地里。可他仍渴望再见见家乡的老人,再走一走他出生的那个村子。我们原定一同回去,可动身前几个月他病倒了;当他知道自己去不成时,便要我答应独自走这一趟。" },
+    { "seq": 3, "speaker": null, "text_en": "I hired a car the day after landing and bought a comprehensive book of maps, which I found most helpful on the cross-country journey, but which I had thought I would not need on the last stage. It was not that I actually remembered anything, but that my father had described, over and over, what I should see at every milestone after leaving the nearest town, so that I was positive I would recognize the place as familiar territory. Well, I had been wrong, for I was now lost.", "text_cn": "我下飞机后第二天就租了一辆车,还买了一本详尽的地图册。它在跨越乡野的旅途上很管用,但我原以为最后一段路用不着它——倒不是我真记得什么,而是父亲曾一遍遍给我讲过,离最近的小镇之后,每一个路标处该看到些什么,因此我确信自己会认出那片熟悉的土地。唉,我错了,我现在迷路了。" },
+    { "seq": 4, "speaker": null, "text_en": "I looked at the map and then at the odometer. I had come ten miles since leaving the town, and at this point, according to my father, I should have been looking at farms and cottages in a valley, with the spire of the village church in the far distance. I could see no valley, no farms, no cottages and no spire — only a lake. I decided that I must have taken a wrong turning somewhere, so I drove back and began to retrace my route. I landed up at the same corner. The strange thing was that the lake was not marked on the map at all. I felt as if I had stumbled into a dream country.", "text_cn": "我看看地图,又看看里程表。离开小镇我已走了十英里,照父亲的说法,这时我眼前应是山谷里的农场和村舍,远处还有村里教堂的尖顶。可我看不见山谷,看不见农场村舍,也看不见尖顶——只有一片湖。我断定自己一定在什么地方拐错了弯,便掉头沿原路返回,结果又回到了同一个拐角。奇怪的是,那片湖在地图上根本没有标出。我觉得自己仿佛闯进了一个梦境之国。" },
+    { "seq": 5, "speaker": null, "text_en": "As I sat wondering what to do, a man on horseback appeared on the horizon, riding in my direction. I asked him the way to our old village. He told me, gently, that there was no longer any village. I thought he must have misunderstood me, so I repeated its name. This time he simply pointed to the lake. The village no longer existed, because the whole valley had been submerged. The lake was not a natural one, but a man-made reservoir, and somewhere beneath its calm surface lay the home my father had never stopped dreaming of.", "text_cn": "正当我坐着琢磨怎么办,一个骑马的人出现在地平线上,朝我这边骑来。我问他去老家村子的路。他温和地告诉我:那个村子已经没有了。我以为他误解了我,又说了一遍村名。这一次,他只是指了指那片湖。村子不复存在了,因为整个山谷都被淹没了;那片湖不是天然的,而是一座人工水库——在它平静的水面之下某处,躺着父亲一辈子都念念不忘的家。" }
+  ],
+  "words": [
+    { "word": "alien", "ipa": "/ˈeɪliən/", "pos": "adj", "meaning_cn": "异国的,陌生的", "example": "everything still seemed alien to me" },
+    { "word": "emigrate", "ipa": "/ˈemɪɡreɪt/", "pos": "v", "meaning_cn": "移居国外", "example": "he decided to emigrate" },
+    { "word": "absorb", "ipa": "/əbˈzɔːrb/", "pos": "v", "meaning_cn": "使全神贯注,吸收", "example": "he became absorbed in his work" },
+    { "word": "embedded", "ipa": "/ɪmˈbedɪd/", "pos": "adj", "meaning_cn": "扎牢的,嵌入的", "example": "too firmly embedded in the new soil" },
+    { "word": "comprehensive", "ipa": "/ˌkɑːmprɪˈhensɪv/", "pos": "adj", "meaning_cn": "全面的,详尽的", "example": "a comprehensive book of maps" },
+    { "word": "milestone", "ipa": "/ˈmaɪlstoʊn/", "pos": "n", "meaning_cn": "里程碑,路标石", "example": "at every milestone" },
+    { "word": "territory", "ipa": "/ˈterətɔːri/", "pos": "n", "meaning_cn": "地区,领地", "example": "familiar territory" },
+    { "word": "spire", "ipa": "/ˈspaɪər/", "pos": "n", "meaning_cn": "(教堂的)塔尖", "example": "the spire of the village church" },
+    { "word": "retrace", "ipa": "/rɪˈtreɪs/", "pos": "v", "meaning_cn": "返回,重走", "example": "retrace my route" },
+    { "word": "stumble", "ipa": "/ˈstʌmbəl/", "pos": "v", "meaning_cn": "跌跌撞撞地走,偶然闯入", "example": "as if I had stumbled into a dream country" },
+    { "word": "horizon", "ipa": "/həˈraɪzən/", "pos": "n", "meaning_cn": "地平线", "example": "appeared on the horizon" },
+    { "word": "reservoir", "ipa": "/ˈrezərvwɑːr/", "pos": "n", "meaning_cn": "水库", "example": "a man-made reservoir" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "过去完成时(在另一过去动作之前发生)" },
+    { "gp": "gp2", "name": "had expected/meant to do(过去想做/原以为而未成)" },
+    { "gp": "gp3", "name": "must have done(对过去的推测)" },
+    { "gp": "gp4", "name": "as if/as though + 过去完成" },
+    { "gp": "gp5", "name": "be absorbed in / on one's own / not that…but that" },
+    { "gp": "gp6", "name": "词汇辨析(alien/reservoir/retrace)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"When I returned, the village ___ already disappeared under the lake.\"(过去完成时,填助动词)", "stem_cn": "我回来时,村子早已消失在湖底。", "options": ["had", "has", "was", "would"] },
+    { "gp": "gp1", "stem": "\"The valley ___ been submerged long before I came back.\"(过去完成时的被动:早已被淹,填助动词)", "stem_cn": "早在我回来前很久,山谷就已被淹没。", "options": ["had", "has", "was", "were"] },
+    { "gp": "gp1", "stem": "\"I was lost, though my father ___ described every milestone to me.\"(过去完成时,表更早发生)", "stem_cn": "我迷了路,尽管父亲早把每个路标都对我描述过。", "options": ["had", "has", "was", "would have"] },
+    { "gp": "gp2", "stem": "\"I ___ expected to be near my objective by now, but I was lost.\"(过去想做/原以为而未成:用过去完成时 + expect,填助动词)", "stem_cn": "我本以为这时已接近目的地,却迷了路。", "options": ["had", "have", "was", "would"] },
+    { "gp": "gp2", "stem": "\"I bought maps I ___ thought I would not need on the last stage.\"(过去完成时表“原以为”)", "stem_cn": "我买了些原以为最后一段用不上的地图。", "options": ["had", "have", "was", "did"] },
+    { "gp": "gp2", "stem": "\"My father always ___ to go back one day, but only for a visit.\"(过去的打算“总打算做…”,填动词过去式)", "stem_cn": "父亲总打算有朝一日回去,但只为探望。", "options": ["meant", "means", "meaning", "mean"] },
+    { "gp": "gp3", "stem": "\"I ___ have taken a wrong turning somewhere, for I was lost.\"(对过去的推测“一定…了”)", "stem_cn": "我一定是在什么地方拐错了弯,所以迷了路。", "options": ["must", "can", "would", "need"] },
+    { "gp": "gp3", "stem": "\"The stranger ___ have misunderstood me, I thought, so I repeated the name.\"(对过去的推测,填表推测的词)", "stem_cn": "我想这个陌生人一定误解了我,于是又说了一遍名字。", "options": ["must", "shall", "ought", "dare"] },
+    { "gp": "gp3", "stem": "\"Someone ___ have built this reservoir while I was away.\"(must ___ 过去分词:对过去的推测,填这个助动词)", "stem_cn": "我离开期间一定有人建了这座水库。", "options": ["must have", "must", "had", "would"] },
+    { "gp": "gp4", "stem": "\"I felt as if I ___ stumbled into a dream country.\"(as if + 过去完成,表与过去相反)", "stem_cn": "我觉得自己仿佛闯进了一个梦境之国。", "options": ["had", "have", "was", "would"] },
+    { "gp": "gp4", "stem": "\"Everything looked as though it ___ been rearranged overnight.\"(as though + 过去完成)", "stem_cn": "一切看起来仿佛一夜之间被重新摆放过。", "options": ["had", "has", "was", "were"] },
+    { "gp": "gp4", "stem": "\"He spoke as if he ___ known the valley all his life.\"(as if + 过去完成,表与过去相反)", "stem_cn": "他说起话来,仿佛一辈子都熟悉那座山谷。", "options": ["had", "has", "was", "would"] },
+    { "gp": "gp5", "stem": "\"In the new land my father became ___ in his work and his plans.\"(be ___ in sth:全神贯注于,填过去分词)", "stem_cn": "在新的国度,父亲一心扑在工作和计划上。", "options": ["absorbed", "absorbing", "absorb", "absorbs"] },
+    { "gp": "gp5", "stem": "\"He asked me to make the journey on my ___.\"(on one's ___:独自、靠自己,填这个词)", "stem_cn": "他让我独自完成这趟旅程。", "options": ["own", "self", "alone", "single"] },
+    { "gp": "gp5", "stem": "\"It was not that I remembered the road, ___ that my father had described it.\"(not that… ___ that…:不是因为…而是因为,填中间的连词)", "stem_cn": "并非我记得这条路,而是父亲曾描述过它。", "options": ["but", "and", "so", "or"] },
+    { "gp": "gp6", "stem": "\"Something foreign and unfamiliar feels ___.\"(“异国的、陌生的”用哪个词)", "stem_cn": "陌生而不熟悉的感觉。", "options": ["alien", "native", "common", "modern"] },
+    { "gp": "gp6", "stem": "\"A large man-made lake for storing water is a ___.\"(“水库”用哪个词)", "stem_cn": "人工修建、用于蓄水的大湖。", "options": ["reservoir", "river", "well", "harbor"] },
+    { "gp": "gp6", "stem": "\"To go back over the same route is to ___ it.\"(“返回、重走”用哪个词)", "stem_cn": "沿原路返回、重走。", "options": ["retrace", "forget", "cross", "mark"] }
+  ],
+  "stage6": [
+    { "stem": "alien 的意思是:", "options": ["异国的,陌生的", "本地的", "常见的", "现代的"] },
+    { "stem": "emigrate 的意思是:", "options": ["移居国外", "到达", "停留", "返回"] },
+    { "stem": "embedded 的意思是:", "options": ["扎牢的,嵌入的", "漂浮的", "松动的", "临时的"] },
+    { "stem": "comprehensive 的意思是:", "options": ["全面的,详尽的", "简短的", "模糊的", "错误的"] },
+    { "stem": "horizon 的意思是:", "options": ["地平线", "山谷", "森林", "港口"] },
+    { "stem": "reservoir 的意思是:", "options": ["水库", "喷泉", "瀑布", "岛屿"] }
+  ],
+  "contrast": [
+    { "us": "odometer", "uk": "milometer", "note_cn": "里程表;用词差异,美语 odometer" },
+    { "us": "gas", "uk": "petrol", "note_cn": "汽油;用词差异,美语 gas" },
+    { "us": "tire", "uk": "tyre", "note_cn": "轮胎;拼写差异,美语 tire" },
+    { "us": "trunk", "uk": "boot", "note_cn": "汽车后备箱;用词差异,美语 trunk" }
+  ],
+  "chunks": [
+    { "us": "cool off", "ipa": "/kuːl ɔːf/", "example1": "I stopped to let the car cool off.", "example1_cn": "我停下车让它冷却一下。", "example2": "Give the engine a moment to cool off.", "example2_cn": "让发动机凉一会儿。" },
+    { "us": "be absorbed in", "ipa": "/bi əbˈzɔːrbd ɪn/", "example1": "My father was absorbed in his new life.", "example1_cn": "父亲全身心投入新生活。", "example2": "She was absorbed in her painting.", "example2_cn": "她专心地画画。" },
+    { "us": "land up", "ipa": "/lænd ʌp/", "example1": "I landed up at the same corner again.", "example1_cn": "我又回到了同一个拐角。", "example2": "They landed up in the wrong town.", "example2_cn": "他们最后到了错的镇子。" },
+    { "us": "on one's own", "ipa": "/ɑːn wʌnz oʊn/", "example1": "He made me promise to go on my own.", "example1_cn": "他要我答应独自去。", "example2": "She finished the project on her own.", "example2_cn": "她独力完成了项目。" }
+  ],
+  "stage7_cloze": {
+    "context": "I ___1___ expected to be near my objective, but everything still seemed alien. I looked at the odometer: I ___2___ come ten miles, yet there was only a lake where the village should be. I decided I must ___3___ taken a wrong turning, and I began to retrace my route. I felt as if I ___4___ stumbled into a dream country.",
+    "blanks": [
+      { "blank_no": 1, "options": ["had", "have", "was", "did"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["had", "have", "was", "am"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["have", "has", "had", "be"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["had", "have", "was", "would"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What had happened to the narrator's old village?", "options": ["It had been submerged under a man-made reservoir", "It had grown into a big city", "It had burned down", "It had simply been abandoned"] },
+    { "stem": "Why was the narrator so sure he would recognize the way?", "options": ["His father had described every milestone to him", "He had a perfect memory of the place", "He had visited it recently", "A friend was guiding him"] },
+    { "stem": "Who finally told the narrator the truth about the village?", "options": ["A man on horseback", "A police officer", "A shopkeeper", "His father"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我回来时,村子早已消失在湖底\"(过去完成时):", "options": ["When I returned, the village had already disappeared under the lake.", "When I returned, the village has already disappeared under the lake.", "When I returned, the village already disappeared under the lake.", "When I returned, the village had already disappear under the lake."] },
+    { "stem": "你想说\"我一定是在什么地方拐错了弯\"(对过去的推测):", "options": ["I must have taken a wrong turning somewhere.", "I must took a wrong turning somewhere.", "I must to have taken a wrong turning somewhere.", "I must have took a wrong turning somewhere."] },
+    { "stem": "你想说\"我觉得自己仿佛闯进了一个梦境之国\"(as if + 过去完成):", "options": ["I felt as if I had stumbled into a dream country.", "I felt as if I have stumbled into a dream country.", "I felt as if I stumbled into a dream country.", "I felt as if I had stumble into a dream country."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "emigrate 的意思是:", "options": ["移居国外", "到达", "停留", "返回"] },
+    { "kind": "vocab", "stem": "horizon 的意思是:", "options": ["地平线", "山谷", "森林", "港口"] },
+    { "kind": "grammar", "stem": "\"When I returned, the village ___ already disappeared under the lake.\"(过去完成时,填助动词)", "stem_cn": "我回来时,村子早已消失在湖底。", "options": ["had", "has", "was", "would"] },
+    { "kind": "grammar", "stem": "\"I felt as if I ___ stumbled into a dream country.\"(as if + 过去完成)", "stem_cn": "我觉得自己仿佛闯进了一个梦境之国。", "options": ["had", "have", "was", "would"] },
+    { "kind": "scenario", "stem": "\"cool off\" 的意思是:", "options": ["冷却、降温", "加热", "加速", "熄火"] },
+    { "kind": "scenario", "stem": "\"on one's own\" 的意思是:", "options": ["独自、靠自己", "按时", "大声地", "顺便"] },
+    { "kind": "reading", "stem": "Why did the narrator think he would not need the maps on the last stage?", "options": ["His father had described the route in detail", "He had traveled it many times", "The road was clearly marked", "A guide was with him"], "passage": true },
+    { "kind": "reading", "stem": "What was strange about the lake?", "options": ["It was not marked on the map at all", "It was frozen even in summer", "It had no water in it", "It was full of boats"], "passage": true },
+    { "kind": "listening", "stem": "What had covered the old valley and village?", "options": ["A man-made reservoir", "A thick forest", "A new highway", "A desert"], "audio": true },
+    { "kind": "listening", "stem": "How did the man on horseback show the narrator what had happened?", "options": ["He pointed to the lake", "He drew a map", "He gave him a letter", "He led him to the town"], "audio": true }
+  ]
+}

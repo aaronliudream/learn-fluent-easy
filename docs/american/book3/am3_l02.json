@@ -1,0 +1,133 @@
+{
+  "id": "am3_l02",
+  "unit_no": 1,
+  "lesson_no": 2,
+  "title_en": "Thirteen Is Close Enough",
+  "title_cn": "十三也差不多",
+  "grammar_focus": "两种现在时:一般现在时(习惯、反复、客观事实/规律) vs 现在进行时(此刻正在发生、这一阵临时在做),以及 always + 现在进行时(老是……,带抱怨/情绪)与一批 in 固定短语(in surprise / in a hurry / in the end / in trouble / in bed / in the dark)(原创承载 NCE3 L2 考点·美国小镇的老钟半夜敲十三下)",
+  "scene": "在我们镇上,市政厅上那座老钟老是惹麻烦。它日夜报时,大家都熟悉它那沉沉的钟声,镇上一直想筹钱把它修好,可钱总不够。奇怪的是:凌晨一点,这钟会敲十三下——其实就是一点,所以对这钟来说,十三等于一。多数夜里我躺在床上,惊讶地数着钟响。这一阵有件新鲜事:每晚钟楼里都有一点小灯在移动,有人半夜在上面忙活。今晚我终于抓起手电,穿过空荡荡的广场。借着手电光,我认出是照看隔壁小教堂、常给牧师帮忙的老戴尔先生。“这么晚你在上面干嘛?”我问。“我在修这口钟,”他轻声说,“这一阵我几乎每晚都上来。我不忍心看着全镇为一口老钟犯难。”戴尔先生年纪不小了,老是在鼓捣点什么,却从不放弃。到现在,钟还是敲十三下——可全镇学会了一笑,把它当成一点。",
+  "grammar_card": {
+    "title": "两种现在时:一般现在时 & 现在进行时",
+    "intro": "①一般现在时——讲习惯、反复发生的事、客观事实/规律(The clock strikes the hours. / Water boils at 100°.);②现在进行时(am/is/are + doing)——讲此刻正在发生、或这一阵临时在做的事(A light is moving now. / These days it is happening.)。特别注意:always/constantly + 现在进行时,表示“老是……”,往往带点抱怨或情绪(That clock is always causing trouble!)。再记一批要整体背的 in 短语:in surprise(惊讶地)、in a hurry(匆忙)、in the end(最后)、in trouble(有麻烦)、in bed(在床上)、in the dark(在黑暗中)。",
+    "table": {
+      "headers": ["用法", "什么时候用", "例子"],
+      "rows": [
+        ["一般现在时", "习惯、反复、客观事实/规律", "The clock strikes the hours. / Water boils at 100°."],
+        ["现在进行时", "此刻正在发生 / 这一阵临时在做", "A light is moving now. / These days it is happening."],
+        ["always + 现在进行时", "老是……(带抱怨/情绪)", "That clock is always causing trouble!"],
+        ["in 短语(固定搭配)", "一批要整体记的介词短语", "in surprise / in a hurry / in the end / in trouble"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "看到 now, right now, at the moment, these days, Listen!, Look! 多用现在进行时;看到 every day, usually, often, always(讲习惯) 多用一般现在时。", "mark": "now / every day" },
+      { "rule": "always + 现在进行时 不是单纯讲习惯,而是“老是……”,带抱怨或情绪色彩(He is always losing his keys! 他老是丢钥匙!)。", "mark": "always + doing" },
+      { "rule": "手电筒美语常说 flashlight(英式 torch);torchlight 指“手电筒的光”。本课已按美语写。", "mark": "flashlight / torch" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How many times does the clock strike at one o'clock?",
+    "options": ["Thirteen times", "Once", "Twelve times", "It does not strike at all"],
+    "answer_index": 0
+  },
+  "passage": "In our town, the old clock on the town hall is always causing trouble. It stands high above Main Street and strikes the hours day and night. Everyone knows its slow, heavy sound, and the town keeps trying to raise money to fix it. The strange thing is this: at one o'clock the clock strikes thirteen times. It is really one o'clock, but for our clock, thirteen equals one. Most nights I lie in bed and count the strokes in surprise. These days something new is happening. Every night a small light is moving inside the tower, and someone is working up there in the dark. Tonight I finally grab a flashlight and cross the empty square. By the torchlight I recognize old Mr. Dale, who looks after the little church next door and often helps the vicar there. 'What are you doing up here so late?' I ask. 'I am trying to fix the bell,' he says quietly. 'I come up here almost every night now. I hate to see the whole town in trouble over one old clock.' Mr. Dale is not a young man, and he is always working on something, but he never gives up. So far the clock still strikes thirteen, and the town just smiles and calls it one.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "In our town, the old clock on the town hall is always causing trouble. It stands high above Main Street and strikes the hours day and night.", "text_cn": "在我们镇上,市政厅上那座老钟老是惹麻烦。它高高立在大街上方,日夜报时。" },
+    { "seq": 2, "speaker": null, "text_en": "Everyone knows its slow, heavy sound, and the town keeps trying to raise money to fix it. The strange thing is this: at one o'clock the clock strikes thirteen times.", "text_cn": "大家都熟悉它那沉沉的、缓慢的钟声,镇上一直想筹钱把它修好。奇怪的是:凌晨一点,这钟会敲十三下。" },
+    { "seq": 3, "speaker": null, "text_en": "It is really one o'clock, but for our clock, thirteen equals one. Most nights I lie in bed and count the strokes in surprise.", "text_cn": "其实就是一点,可对我们这钟来说,十三等于一。多数夜里,我躺在床上,惊讶地数着钟响。" },
+    { "seq": 4, "speaker": null, "text_en": "These days something new is happening. Every night a small light is moving inside the tower, and someone is working up there in the dark. Tonight I finally grab a flashlight and cross the empty square.", "text_cn": "这一阵有件新鲜事:每晚钟楼里都有一点小灯在移动,有人半夜在上面忙活。今晚我终于抓起手电,穿过空荡荡的广场。" },
+    { "seq": 5, "speaker": null, "text_en": "By the torchlight I recognize old Mr. Dale, who looks after the little church next door. 'I am trying to fix the bell,' he says quietly. Mr. Dale is always working on something, but he never gives up.", "text_cn": "借着手电光,我认出是照看隔壁小教堂的老戴尔先生。“我在修这口钟,”他轻声说。戴尔先生老是在鼓捣点什么,却从不放弃。" }
+  ],
+  "words": [
+    { "word": "equal", "ipa": "/ˈiːkwəl/", "pos": "v", "meaning_cn": "等于;equals(第三人称单数)", "example": "thirteen equals one" },
+    { "word": "vicar", "ipa": "/ˈvɪkər/", "pos": "n", "meaning_cn": "(尤指英国国教的)教区牧师(美语常说 pastor / minister)", "example": "often helps the vicar there" },
+    { "word": "raise", "ipa": "/reɪz/", "pos": "v", "meaning_cn": "募集,筹(款)", "example": "raise money to fix it" },
+    { "word": "torchlight", "ipa": "/ˈtɔːrtʃlaɪt/", "pos": "n", "meaning_cn": "手电筒光(手电筒美语说 flashlight)", "example": "by the torchlight" },
+    { "word": "recognize", "ipa": "/ˈrekəɡnaɪz/", "pos": "v", "meaning_cn": "认出,辨认出", "example": "I recognize old Mr. Dale" },
+    { "word": "strike", "ipa": "/straɪk/", "pos": "v", "meaning_cn": "(钟)敲响,报时(struck)", "example": "strikes the hours day and night" },
+    { "word": "tower", "ipa": "/ˈtaʊər/", "pos": "n", "meaning_cn": "塔;钟楼", "example": "inside the tower" },
+    { "word": "stroke", "ipa": "/stroʊk/", "pos": "n", "meaning_cn": "(钟的)一响,一击", "example": "count the strokes" },
+    { "word": "square", "ipa": "/skwer/", "pos": "n", "meaning_cn": "广场", "example": "cross the empty square" },
+    { "word": "bell", "ipa": "/bel/", "pos": "n", "meaning_cn": "钟;铃", "example": "fix the bell" },
+    { "word": "quietly", "ipa": "/ˈkwaɪətli/", "pos": "adv", "meaning_cn": "轻声地,安静地", "example": "he says quietly" },
+    { "word": "cross", "ipa": "/krɔːs/", "pos": "v", "meaning_cn": "穿过,越过", "example": "cross the empty square" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "一般现在时(习惯、反复、客观事实)" },
+    { "gp": "gp2", "name": "现在进行时(此刻正在发生/这一阵临时)" },
+    { "gp": "gp3", "name": "always + 现在进行时(老是……,带情绪)" },
+    { "gp": "gp4", "name": "一般现在 vs 现在进行 综合辨析" },
+    { "gp": "gp5", "name": "phrases with in(固定短语)" },
+    { "gp": "gp6", "name": "词汇辨析(equal / raise / recognize)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"The old clock ___ the hours day and night.\"(客观事实、反复发生)", "stem_cn": "那座老钟日夜报时。", "options": ["strikes", "is striking", "struck", "has struck"] },
+    { "gp": "gp1", "stem": "\"Everyone in town ___ its slow, heavy sound.\"(大家都知道:客观事实)", "stem_cn": "镇上每个人都熟悉它那沉沉的钟声。", "options": ["knows", "is knowing", "knew", "has known"] },
+    { "gp": "gp1", "stem": "\"The town ___ money for the clock every spring.\"(每年春天:反复的习惯)", "stem_cn": "镇上每年春天都为这钟筹钱。", "options": ["raises", "is raising", "raised", "has raised"] },
+    { "gp": "gp1", "stem": "\"Mr. Dale ___ up to the tower almost every night.\"(almost every night:习惯)", "stem_cn": "戴尔先生几乎每晚都上钟楼。", "options": ["comes", "is coming", "came", "has come"] },
+    { "gp": "gp2", "stem": "\"Look — a small light ___ inside the tower right now!\"(right now:此刻正在进行)", "stem_cn": "看——此刻钟楼里有一点小灯在动!", "options": ["is moving", "moves", "moved", "has moved"] },
+    { "gp": "gp2", "stem": "\"Someone ___ up there in the dark at this moment.\"(at this moment:此刻)", "stem_cn": "此刻有人在上面的黑暗里忙活。", "options": ["is working", "works", "worked", "has worked"] },
+    { "gp": "gp2", "stem": "\"'Why ___ you working up here so late?' I ask.\"(此刻正在做:现在进行的疑问)", "stem_cn": "“你这么晚在上面忙什么?”我问。", "options": ["are", "do", "did", "have"] },
+    { "gp": "gp2", "stem": "\"These days something new ___ in our quiet town.\"(these days:这一阵临时在发生)", "stem_cn": "这一阵,我们安静的小镇上有件新鲜事在发生。", "options": ["is happening", "happens", "happened", "has happened"] },
+    { "gp": "gp3", "stem": "\"My little brother ___ my things without asking — it's so annoying!\"(老是……,带抱怨:always + 现在进行)", "stem_cn": "我弟弟老是不打招呼就拿我的东西——真烦人!", "options": ["is always taking", "is always take", "always taking", "always is taking"] },
+    { "gp": "gp3", "stem": "\"Grandpa ___ on something in the garage; he can never sit still.\"(老是在鼓捣:always + 现在进行)", "stem_cn": "爷爷老是在车库里鼓捣点什么,他一刻也闲不住。", "options": ["is always working", "is always work", "always working", "work always is"] },
+    { "gp": "gp4", "stem": "\"I usually walk to work, but today I ___ the bus because it's raining.\"(today、下雨:临时情况用现在进行)", "stem_cn": "我平时走路上班,但今天下雨,我改坐公交。", "options": ["am taking", "take", "took", "have taken"] },
+    { "gp": "gp4", "stem": "\"Water ___ at 100 degrees — that's a simple fact.\"(客观规律:一般现在)", "stem_cn": "水在100度沸腾——这是个简单的事实。", "options": ["boils", "is boiling", "boiled", "has boiled"] },
+    { "gp": "gp4", "stem": "\"Be quiet! The baby ___ right now.\"(right now:此刻正在进行)", "stem_cn": "小声点!宝宝正在睡觉。", "options": ["is sleeping", "sleeps", "slept", "has slept"] },
+    { "gp": "gp5", "stem": "\"She counted the strange strokes ___ surprise.\"(表示“惊讶地”,用哪个介词)", "stem_cn": "她惊讶地数着那奇怪的钟响。", "options": ["in", "with", "on", "at"] },
+    { "gp": "gp5", "stem": "\"Don't worry — everything will be fine ___ the end.\"(表示“最后、终于”,用哪个介词)", "stem_cn": "别担心,最后一切都会好起来。", "options": ["in", "at", "on", "by"] },
+    { "gp": "gp6", "stem": "\"For our clock, thirteen ___ one.\"(“等于”用哪个词)", "stem_cn": "对我们这钟来说,十三等于一。", "options": ["equals", "breaks", "divides", "loses"] },
+    { "gp": "gp6", "stem": "\"The town is trying to ___ money to fix the clock.\"(“募集、筹款”用哪个词)", "stem_cn": "镇上正想筹钱把钟修好。", "options": ["raise", "spend", "waste", "borrow"] },
+    { "gp": "gp6", "stem": "\"I always ___ his voice the moment he speaks.\"(“认出”用哪个词)", "stem_cn": "他一开口我总能认出他的声音。", "options": ["recognize", "forget", "invite", "sell"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"手电筒\"常说:", "options": ["flashlight", "torch", "hand-lamp", "night-light"] },
+    { "stem": "equal(动词)的意思是:", "options": ["等于", "分开", "打破", "减少"] },
+    { "stem": "raise 的意思是:", "options": ["募集,筹(款)", "花光", "借入", "浪费"] },
+    { "stem": "recognize 的意思是:", "options": ["认出", "忘记", "邀请", "允许"] },
+    { "stem": "strike(指钟)的意思是:", "options": ["敲响,报时", "熄灭", "停下", "上锁"] },
+    { "stem": "\"in surprise\" 的意思是:", "options": ["惊讶地", "高兴地", "生气地", "小心地"] }
+  ],
+  "contrast": [
+    { "us": "flashlight", "uk": "torch", "note_cn": "手电筒;美语 flashlight,英式 torch" },
+    { "us": "sidewalk", "uk": "pavement", "note_cn": "人行道;美语 sidewalk,英式 pavement" },
+    { "us": "downtown", "uk": "town centre", "note_cn": "市中心;美语 downtown,英式 town centre" },
+    { "us": "mailbox", "uk": "postbox", "note_cn": "邮筒/信箱;美语 mailbox,英式 postbox" }
+  ],
+  "chunks": [
+    { "us": "wake up with a start", "ipa": "/weɪk ʌp wɪð ə stɑːrt/", "example1": "I wake up with a start when the clock strikes.", "example1_cn": "钟一响,我惊醒过来。", "example2": "She woke up with a start at the loud noise.", "example2_cn": "一声巨响,她惊醒了。" },
+    { "us": "in surprise", "ipa": "/ɪn sərˈpraɪz/", "example1": "I count the strokes in surprise.", "example1_cn": "我惊讶地数着钟响。", "example2": "He looked at me in surprise.", "example2_cn": "他惊讶地看着我。" },
+    { "us": "in the end", "ipa": "/ɪn ðə end/", "example1": "In the end, the town just smiles about the clock.", "example1_cn": "最后,全镇对这钟一笑了之。", "example2": "In the end, we decided to stay home.", "example2_cn": "最后,我们决定待在家里。" },
+    { "us": "look after", "ipa": "/lʊk ˈæftər/", "example1": "Mr. Dale looks after the little church.", "example1_cn": "戴尔先生照看那座小教堂。", "example2": "Can you look after my dog this weekend?", "example2_cn": "这周末你能帮我照看狗吗?" }
+  ],
+  "stage7_cloze": {
+    "context": "Our town clock is famous for one strange habit. Every night at one o'clock it ___1___ thirteen times. Right now a small light ___2___ inside the tower, because someone ___3___ to fix the old bell. Most people just smile and say that, for this clock, thirteen ___4___ one.",
+    "blanks": [
+      { "blank_no": 1, "options": ["is striking", "strikes", "struck", "has struck"], "answer_index": 1 },
+      { "blank_no": 2, "options": ["is moving", "moves", "moved", "has moved"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["tries", "is trying", "tried", "has tried"], "answer_index": 1 },
+      { "blank_no": 4, "options": ["equals", "is equaling", "equaled", "has equaled"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What does the town clock do at one o'clock?", "options": ["It strikes thirteen times", "It stops completely", "It plays music", "It rings once softly"] },
+    { "stem": "Who is fixing the bell at night?", "options": ["Old Mr. Dale", "A young tourist", "The town mayor", "A police officer"] },
+    { "stem": "How does the town feel about the clock in the end?", "options": ["They smile and accept it", "They tear it down", "They are furious", "They ignore Mr. Dale"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我平时喝茶,但今天在喝咖啡\"(习惯 vs 此刻正在进行):", "options": ["I usually drink tea, but today I am drinking coffee.", "I usually am drinking tea, but today I drink coffee.", "I usually drinking tea, but today I am drink coffee.", "I am usually drink tea, but today I drinking coffee."] },
+    { "stem": "你想说\"他老是丢钥匙\"(带抱怨:always + 现在进行):", "options": ["He is always losing his keys.", "He always is losing his keys.", "He is always lose his keys.", "He always losing his keys."] },
+    { "stem": "你想说\"她惊讶地看着那只钟\"(固定搭配 in surprise):", "options": ["She looks at the clock in surprise.", "She looks at the clock on surprise.", "She looks at the clock at surprise.", "She looks at the clock by surprise."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "recognize 的意思是:", "options": ["认出,辨认出", "忘记", "邀请", "出售"] },
+    { "kind": "vocab", "stem": "raise(此处)的意思是:", "options": ["募集,筹(款)", "花掉", "借入", "浪费"] },
+    { "kind": "grammar", "stem": "\"Listen! The baby ___ right now.\"(此刻正在进行)", "stem_cn": "听!宝宝正在哭。", "options": ["is crying", "cries", "cried", "has cried"] },
+    { "kind": "grammar", "stem": "\"The clock ___ the hours every single day.\"(客观事实、反复)", "stem_cn": "这钟每天都报时。", "options": ["strikes", "is striking", "struck", "has struck"] },
+    { "kind": "scenario", "stem": "\"in a hurry\" 的意思是:", "options": ["匆忙", "很悠闲", "在休息", "在睡觉"] },
+    { "kind": "scenario", "stem": "\"in the end\" 的意思是:", "options": ["最后,终于", "一开始", "在中间", "偶尔"] },
+    { "kind": "reading", "stem": "What is strange about the town clock?", "options": ["At one o'clock it strikes thirteen times", "It never makes any sound", "It has completely disappeared", "It shows the wrong date"], "passage": true },
+    { "kind": "reading", "stem": "Who does the narrator recognize in the tower?", "options": ["Old Mr. Dale", "The town mayor", "A stranger from the city", "A young girl"], "passage": true },
+    { "kind": "listening", "stem": "Why does Mr. Dale go up to the tower?", "options": ["To fix the old bell", "To ring the bell for fun", "To hide from the town", "To sleep up there"], "audio": true },
+    { "kind": "listening", "stem": "What does the town finally do about the clock?", "options": ["They accept it and smile", "They fix it perfectly", "They remove it", "They sell it to a museum"], "audio": true }
+  ]
+}

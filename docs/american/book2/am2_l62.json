@@ -1,0 +1,135 @@
+{
+  "id": "am2_l62",
+  "unit_no": 8,
+  "lesson_no": 62,
+  "title_en": "After the fire",
+  "title_cn": "大火之后",
+  "grammar_focus": "KS38 过去完成时(had done)与过去完成进行时(had been doing)的区别(教材 L62 Key structures)主考;宾语从句中主句过去→从句用过去完成 + SD 易混词 control/check、great/big、soil/ground(辅考)",
+  "scene": "消防队员们同那场森林大火搏斗了将近3个星期才最后把火势控制住。就在不久之前,参天大树还覆盖着方圆数英里的土地。而现在,发热的地面上仍然升腾着烟雾,弥漫在荒凉的山丘上。冬季即将来临,这些山丘对周围的村庄具有毁灭性的威胁,因为大雨不仅会冲走土壤,而且还会引起严重的水灾。在大火最后被扑灭后,森林管理当局订购了好几吨一种生长迅速的特殊类型的草籽。飞机把这种草籽大量地撒播在地上。飞机撒播近一个月后,开始下起雨来。然而到那时,很多地方的草已经生了根。一片片的绿草开始出现在这片烧焦的土地上,代替了那多少世纪以来一直生长在那里的参天大树。",
+  "grammar_card": {
+    "title": "过去完成时 vs 过去完成进行时",
+    "intro": "KS38 两种时态都表示“过去的过去”,区别在于:①过去完成时 had + 过去分词——表示到过去某时已经完成的动作,常与 before/already/by then 连用(He had already finished work before I arrived);②过去完成进行时 had been + 现在分词——强调到过去某时为止一直持续的过程,常与 for + 时段连用(He had been working in a factory for years before he got this job)。",
+    "table": {
+      "headers": ["时态", "结构", "例子"],
+      "rows": [
+        ["过去完成时", "had + done", "He had already finished work before I arrived."],
+        ["过去完成进行时", "had been + doing", "He had been working here for years before he got this job."],
+        ["宾语从句(完成)", "…what he had done", "I asked him what he had lost."],
+        ["宾语从句(进行)", "…what he had been doing", "I asked him what he had been doing all afternoon."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "在 before/after/when 等连接的两个过去动作中,先发生的用过去完成时,后发生的用一般过去时:When the fire had been put out, the authorities ordered grass-seed。", "mark": "过去的过去" },
+      { "rule": "SD 易混词:control=掌管/控制(controls a company) vs check=检查/查验(checked my car engine);great=伟大/重要的(a great composer) vs big=(体积)大的(big buildings);soil=土壤(grow in poor soil) vs ground=地面(fell to the ground)。", "mark": "control/check·great/big·soil/ground" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What was the danger to the villages after the fire?",
+    "options": ["Heavy rain would wash away the soil and cause serious floods", "The fire would start again", "Wild animals would attack them", "The smoke would poison the air"],
+    "answer_index": 0
+  },
+  "passage": "Firefighters had been fighting the forest fire for nearly three weeks before they could get it under control. A short time before, great trees had covered the countryside for miles around. Now, smoke still rose up from the warm ground over the desolate hills. Winter was coming on and the hills threatened the surrounding villages with destruction, for heavy rain would not only wash away the soil but would cause serious floods as well. When the fire had at last been put out, the forest authorities ordered several tons of a special type of grass-seed which would grow quickly. The seed was sprayed over the ground in huge quantities by airplanes. The planes had been planting seed for nearly a month when it began to rain. By then, however, in many places the grass had already taken root. In place of the great trees which had been growing there for centuries, patches of green had begun to appear in the blackened soil.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Firefighters had been fighting the forest fire for nearly three weeks before they could get it under control. A short time before, great trees had covered the countryside for miles around.", "text_cn": "消防队员们同那场森林大火搏斗了将近3个星期才最后把火势控制住。就在不久之前,参天大树还覆盖着方圆数英里的土地。" },
+    { "seq": 2, "speaker": null, "text_en": "Now, smoke still rose up from the warm ground over the desolate hills. Winter was coming on and the hills threatened the surrounding villages with destruction,", "text_cn": "而现在,发热的地面上仍然升腾着烟雾,弥漫在荒凉的山丘上。冬季即将来临,这些山丘对周围的村庄具有毁灭性的威胁," },
+    { "seq": 3, "speaker": null, "text_en": "for heavy rain would not only wash away the soil but would cause serious floods as well. When the fire had at last been put out, the forest authorities ordered several tons of a special type of grass-seed which would grow quickly.", "text_cn": "因为大雨不仅会冲走土壤,而且还会引起严重的水灾。在大火最后被扑灭后,森林管理当局订购了好几吨一种生长迅速的特殊类型的草籽。" },
+    { "seq": 4, "speaker": null, "text_en": "The seed was sprayed over the ground in huge quantities by airplanes. The planes had been planting seed for nearly a month when it began to rain.", "text_cn": "飞机把这种草籽大量地撒播在地上。飞机撒播近一个月后,开始下起雨来。" },
+    { "seq": 5, "speaker": null, "text_en": "By then, however, in many places the grass had already taken root. In place of the great trees which had been growing there for centuries, patches of green had begun to appear in the blackened soil.", "text_cn": "然而到那时,很多地方的草已经生了根。一片片的绿草开始出现在这片烧焦的土地上,代替了那多少世纪以来一直生长在那里的参天大树。" }
+  ],
+  "words": [
+    { "word": "control", "ipa": "/kənˈtroʊl/", "pos": "n", "meaning_cn": "控制", "example": "get it under control" },
+    { "word": "smoke", "ipa": "/smoʊk/", "pos": "n", "meaning_cn": "烟", "example": "smoke still rose up from the ground" },
+    { "word": "desolate", "ipa": "/ˈdesələt/", "pos": "adj", "meaning_cn": "荒凉的", "example": "over the desolate hills" },
+    { "word": "threaten", "ipa": "/ˈθretn/", "pos": "v", "meaning_cn": "威胁", "example": "the hills threatened the surrounding villages" },
+    { "word": "surrounding", "ipa": "/səˈraʊndɪŋ/", "pos": "adj", "meaning_cn": "周围的", "example": "the surrounding villages" },
+    { "word": "destruction", "ipa": "/dɪˈstrʌkʃən/", "pos": "n", "meaning_cn": "破坏,毁灭", "example": "threatened the villages with destruction" },
+    { "word": "flood", "ipa": "/flʌd/", "pos": "n", "meaning_cn": "洪水,水灾", "example": "would cause serious floods" },
+    { "word": "authority", "ipa": "/əˈθɔːrəti/", "pos": "n", "meaning_cn": "(常用复数)当局", "example": "the forest authorities ordered grass-seed" },
+    { "word": "grass-seed", "ipa": "/ˈɡræs siːd/", "pos": "n", "meaning_cn": "草籽", "example": "several tons of grass-seed" },
+    { "word": "spray", "ipa": "/spreɪ/", "pos": "v", "meaning_cn": "喷撒", "example": "The seed was sprayed over the ground." },
+    { "word": "quantity", "ipa": "/ˈkwɑːntəti/", "pos": "n", "meaning_cn": "量,数量", "example": "in huge quantities" },
+    { "word": "root", "ipa": "/ruːt/", "pos": "n", "meaning_cn": "根", "example": "the grass had already taken root" },
+    { "word": "century", "ipa": "/ˈsentʃəri/", "pos": "n", "meaning_cn": "世纪", "example": "growing there for centuries" },
+    { "word": "patch", "ipa": "/pætʃ/", "pos": "n", "meaning_cn": "小片,小块", "example": "patches of green" },
+    { "word": "blacken", "ipa": "/ˈblækən/", "pos": "v", "meaning_cn": "变黑,烧焦", "example": "in the blackened soil" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "过去完成时 had + 过去分词" },
+    { "gp": "gp2", "name": "过去完成进行时 had been + 现在分词" },
+    { "gp": "gp3", "name": "宾语从句中的过去完成(had done / had been doing)" },
+    { "gp": "gp4", "name": "control / check 辨析(SD)" },
+    { "gp": "gp5", "name": "great / big 辨析(SD)" },
+    { "gp": "gp6", "name": "soil / ground 辨析(SD)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"A short time before, great trees ___ the countryside for miles around.\"(过去完成时:过去的过去)", "stem_cn": "就在不久之前,参天大树还覆盖着方圆数英里的土地。", "options": ["had covered", "covered", "have covered", "were covering"] },
+    { "gp": "gp1", "stem": "\"He ___ already finished work before I arrived.\"(过去完成时,before + 一般过去)", "stem_cn": "我到达之前他已经完成了工作。", "options": ["had", "has", "was", "did"] },
+    { "gp": "gp1", "stem": "\"By then, in many places the grass ___ already taken root.\"(过去完成时,by then)", "stem_cn": "到那时,很多地方的草已经生了根。", "options": ["had", "has", "was", "would"] },
+    { "gp": "gp1", "stem": "\"He ___ in Scotland for fifteen years before he came to England.\"(过去完成时,before + 过去)", "stem_cn": "他来英格兰之前在苏格兰住了15年。", "options": ["had lived", "lived", "has lived", "was living"] },
+    { "gp": "gp2", "stem": "\"Firefighters ___ the forest fire for nearly three weeks before they could get it under control.\"(过去完成进行时:强调持续过程)", "stem_cn": "消防员同大火搏斗了将近3个星期才控制住。", "options": ["had been fighting", "fought", "have been fighting", "were fighting"] },
+    { "gp": "gp2", "stem": "\"The planes ___ seed for nearly a month when it began to rain.\"(过去完成进行时)", "stem_cn": "飞机撒播了近一个月草籽,这时开始下起雨来。", "options": ["had been planting", "planted", "have been planting", "were planting"] },
+    { "gp": "gp2", "stem": "\"In place of the great trees which ___ there for centuries, patches of green appeared.\"(过去完成进行时,for centuries)", "stem_cn": "代替了那多少世纪以来一直生长在那里的参天大树。", "options": ["had been growing", "grew", "have been growing", "were growing"] },
+    { "gp": "gp3", "stem": "\"I asked him what he ___.\"(宾语从句:主句过去,'丢了什么'用过去完成时)", "stem_cn": "我问他丢了什么。", "options": ["had lost", "lost", "has lost", "was losing"] },
+    { "gp": "gp3", "stem": "\"I asked him what he ___ all afternoon.\"(宾语从句:'整个下午一直在做什么'用过去完成进行时)", "stem_cn": "我问他整个下午在干什么。", "options": ["had been doing", "did", "has been doing", "was doing"] },
+    { "gp": "gp4", "stem": "\"The inspector ___ my ticket.\"(易混词:检票员'查验'我的票)", "stem_cn": "检票员查验了我的票。", "options": ["checked", "controlled", "ordered", "sprayed"] },
+    { "gp": "gp4", "stem": "\"He ___ a large business company.\"(易混词:'掌管、控制'一家公司)", "stem_cn": "他掌管着一家很大的商业公司。", "options": ["controls", "checks", "sprays", "floods"] },
+    { "gp": "gp4", "stem": "\"Have you ___ those figures?\"(易混词:'核对'那些数字)", "stem_cn": "你核对过那些数字了吗?", "options": ["checked", "controlled", "planted", "blackened"] },
+    { "gp": "gp5", "stem": "\"Beethoven was a ___ composer.\"(易混词:'伟大的'作曲家)", "stem_cn": "贝多芬是一位伟大的作曲家。", "options": ["great", "big", "tall", "wide"] },
+    { "gp": "gp5", "stem": "\"Skyscrapers are ___ buildings.\"(易混词:'高大的'楼房,指体积)", "stem_cn": "摩天大楼是高大的楼房。", "options": ["big", "great", "important", "famous"] },
+    { "gp": "gp5", "stem": "\"The Parthenon is a ___ building — an important one.\"(易混词:'重要/伟大的'建筑)", "stem_cn": "巴台农神殿是一座重要的建筑。", "options": ["great", "big", "high", "long"] },
+    { "gp": "gp6", "stem": "\"Olive trees can grow in poor ___.\"(易混词:'土壤'——供植物生长的养分层)", "stem_cn": "橄榄树能在贫瘠的土壤里生长。", "options": ["soil", "ground", "floor", "land"] },
+    { "gp": "gp6", "stem": "\"The ball fell to the ___.\"(易混词:'地面')", "stem_cn": "球落到地面上。", "options": ["ground", "soil", "sky", "wall"] },
+    { "gp": "gp6", "stem": "\"Nothing can grow in this poor ___.\"(易混词:'土壤')", "stem_cn": "这贫瘠的土壤里什么也长不出来。", "options": ["soil", "ground", "stone", "air"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"消防员\"常说:", "options": ["firefighter", "fireman", "fire soldier", "fire worker"] },
+    { "stem": "美语里\"飞机\"常说:", "options": ["airplane", "aeroplane", "flying machine", "air boat"] },
+    { "stem": "desolate 的意思是:", "options": ["荒凉的", "繁华的", "潮湿的", "陡峭的"] },
+    { "stem": "threaten 的意思是:", "options": ["威胁", "保护", "感谢", "邀请"] },
+    { "stem": "flood 的意思是:", "options": ["洪水,水灾", "干旱", "大火", "地震"] },
+    { "stem": "century 的意思是:", "options": ["世纪", "年代", "星期", "季节"] }
+  ],
+  "contrast": [
+    { "us": "firefighter", "uk": "fireman", "note_cn": "消防员;美语 firefighter(不分性别),英式旧说 fireman" },
+    { "us": "airplane", "uk": "aeroplane", "note_cn": "飞机;美语 airplane(或 plane),英式 aeroplane" },
+    { "us": "truck", "uk": "lorry", "note_cn": "卡车、货车;美语 truck,英式 lorry" },
+    { "us": "gas", "uk": "petrol", "note_cn": "汽油;美语 gas(gasoline),英式 petrol" }
+  ],
+  "chunks": [
+    { "us": "under control", "ipa": "/ˈʌndər kənˈtroʊl/", "example1": "They got the fire under control.", "example1_cn": "他们控制住了火势。", "example2": "Everything is under control now.", "example2_cn": "现在一切都在掌控之中。" },
+    { "us": "take root", "ipa": "/teɪk ruːt/", "example1": "The grass had already taken root.", "example1_cn": "草已经生了根。", "example2": "The idea took root in his mind.", "example2_cn": "这个想法在他脑中扎了根。" },
+    { "us": "in place of", "ipa": "/ɪn ˈpleɪs əv/", "example1": "In place of the great trees, patches of green appeared.", "example1_cn": "代替参天大树的是一片片绿草。", "example2": "Use honey in place of sugar.", "example2_cn": "用蜂蜜代替糖。" },
+    { "us": "wash away", "ipa": "/wɑːʃ əˈweɪ/", "example1": "Heavy rain would wash away the soil.", "example1_cn": "大雨会冲走土壤。", "example2": "The flood washed away the bridge.", "example2_cn": "洪水冲垮了桥。" }
+  ],
+  "stage7_cloze": {
+    "context": "Firefighters ___1___ the forest fire for nearly three weeks before they could get it under control. When the fire ___2___ at last put out, the authorities ordered grass-seed. The planes ___3___ seed for nearly a month when it began to rain. By then, in many places the grass ___4___ root.",
+    "blanks": [
+      { "blank_no": 1, "options": ["had been fighting", "fought", "have been fighting", "were fighting"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["had been", "was", "has been", "is being"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["had been planting", "planted", "have been planting", "were planting"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["had already taken", "took", "has taken", "was taking"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "How long had the firemen been fighting the fire before they got it under control?", "options": ["For nearly three weeks", "For a few days", "For a month", "For a whole year"] },
+    { "stem": "Why did the forest authorities order grass-seed?", "options": ["So the grass would hold the soil and prevent floods after heavy rain", "To feed the animals", "To sell it for money", "To make the hills look green for tourists"] },
+    { "stem": "What had begun to appear in the blackened soil by the end?", "options": ["Patches of green grass", "New great trees", "More smoke", "Snow"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"我到达之前他已经完成了工作\"(过去完成时:过去的过去):", "options": ["He had already finished work before I arrived.", "He has already finished work before I arrived.", "He already finished work before I had arrived.", "He was already finishing work before I arrived."] },
+    { "stem": "你想说\"在得到这份工作前,他已经在一家工厂干了多年\"(过去完成进行时:强调持续):", "options": ["He had been working in a factory for years before he got this job.", "He has been working in a factory for years before he got this job.", "He is working in a factory for years before he got this job.", "He had been work in a factory for years before he got this job."] },
+    { "stem": "你想说\"检票员查验了我的票\"(用 check 表'查验'):", "options": ["The inspector checked my ticket.", "The inspector controlled my ticket.", "The inspector sprayed my ticket.", "The inspector rooted my ticket."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "flood 的意思是:", "options": ["洪水,水灾", "干旱", "大火", "地震"] },
+    { "kind": "vocab", "stem": "century 的意思是:", "options": ["世纪", "年代", "星期", "季节"] },
+    { "kind": "grammar", "stem": "\"Firefighters ___ the fire for nearly three weeks before they got it under control.\"(过去完成进行时)", "stem_cn": "消防员同大火搏斗了将近3个星期才控制住。", "options": ["had been fighting", "fought", "have been fighting", "were fighting"] },
+    { "kind": "grammar", "stem": "\"By then, in many places the grass ___ already taken root.\"(过去完成时)", "stem_cn": "到那时,很多地方的草已经生了根。", "options": ["had", "has", "was", "would"] },
+    { "kind": "scenario", "stem": "\"had been + 现在分词\"这种形式表示的时间概念是:", "options": ["过去某时之前一直在进行", "现在正在进行", "将来会进行", "一次性的过去动作"] },
+    { "kind": "scenario", "stem": "\"take root\" 的意思是:", "options": ["生根", "拔掉", "开花", "枯萎"] },
+    { "kind": "reading", "stem": "Why did the hills threaten the surrounding villages after the fire?", "options": ["Heavy rain would wash away the soil and cause serious floods", "The fire was still burning there", "Smoke covered the villages", "The trees fell on them"], "passage": true },
+    { "kind": "reading", "stem": "How was the grass-seed spread over the ground?", "options": ["It was sprayed in huge quantities by airplanes", "It was planted by hand by the firemen", "It was dropped by trucks", "It was blown there by the wind"], "passage": true },
+    { "kind": "listening", "stem": "What was the danger to the villages after the fire?", "options": ["Heavy rain could cause serious floods", "Wild animals", "Another fire", "Falling trees"], "audio": true },
+    { "kind": "listening", "stem": "What began to grow after the planes planted the seed?", "options": ["Patches of green grass in the blackened soil", "New tall trees", "Nothing at all", "More smoke"], "audio": true }
+  ]
+}

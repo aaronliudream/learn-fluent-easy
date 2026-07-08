@@ -1,0 +1,136 @@
+{
+  "id": "am2_l44",
+  "unit_no": 6,
+  "lesson_no": 44,
+  "title_en": "Through the forest",
+  "title_cn": "穿过森林",
+  "grammar_focus": "动名词 -ing 的用法(KS20)主考——动名词作主语(Eating is a pleasure)、介词后用动名词(keen on cycling / without saying / for not letting)、动词后接动名词(start/keep/enjoy/mind + doing)、动名词的否定(not + doing);so…that / such…that、need + doing(表'需要被…',被动含义)、run after / catch up with、out of breath(辅考·课文①类)",
+  "scene": "安·斯特林夫人和孩子们正在森林边野餐时,两个男人冲到她跟前,企图抢走她的手提包。争抢中带子扯断了,包落入两人手里,他们拔腿跑进树林。斯特林夫人非常气愤,不顾风险追了上去。她很快就上气不接下气了,但仍继续追赶。当她追上他们时,发现两人已坐下来,正翻看包里的东西,于是她直冲过去。两个男人吓了一大跳,扔下提包就逃跑了。“这提包带子需要修理,”斯特林夫人事后说道,“不过他们什么也没偷走。”",
+  "grammar_card": {
+    "title": "动名词 -ing:动词当名词用",
+    "intro": "动词加 -ing 变成动名词,可以像名词一样用:作句子开头(Eating is a pleasure)、放在介词后面(keen on cycling / without saying)、放在某些动词后面(start / keep / enjoy / mind + doing);否定就在前面加 not(not letting)。全用本课和 Key structures 的句子举例。",
+    "table": {
+      "headers": ["用法", "例子"],
+      "rows": [
+        ["作句子开头", "Eating is always a pleasure.(吃是一种享受)"],
+        ["介词后", "I am keen on cycling.(热衷骑车)"],
+        ["介词后", "He sat there without saying anything.(一言不发)"],
+        ["动词后", "Both men started running.(开始奔跑)"],
+        ["否定 not + doing", "I apologize for not letting you know.(没让你知道)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "enjoy / keep / mind / finish 等动词后面只能接动名词(-ing),不能接 to do:enjoy running(不是 enjoy to run)。", "mark": "enjoy/keep/mind + doing" },
+      { "rule": "need + doing 表示'需要被…'(被动含义):The strap needs mending = 背带需要(被)修理。", "mark": "need + doing = 需要被…" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — How did Mrs. Sterling get her bag back?",
+    "options": ["She chased the thieves and ran straight at them until they dropped it", "She called the police", "She paid them money", "Her children caught them"],
+    "answer_index": 0
+  },
+  "passage": "Mrs. Anne Sterling did not think of the risk she was taking when she ran through a forest after two men. They had rushed up to her while she was having a picnic at the edge of a forest with her children and tried to steal her handbag. In the struggle, the strap broke and, with the bag in their possession, both men started running through the trees. Mrs. Sterling got so angry that she ran after them. She was soon out of breath, but she continued to run. When she caught up with them, she saw that they had sat down and were going through the contents of the bag, so she ran straight at them. The men got such a fright that they dropped the bag and ran away. 'The strap needs mending,' said Mrs. Sterling later, 'but they did not steal anything.'",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "Mrs. Anne Sterling did not think of the risk she was taking when she ran through a forest after two men.", "text_cn": "安·斯特林夫人穿过森林追赶两个男人时,并没有考虑到自己所冒的风险。" },
+    { "seq": 2, "speaker": null, "text_en": "They had rushed up to her while she was having a picnic at the edge of a forest with her children and tried to steal her handbag.", "text_cn": "刚才她和孩子们正在森林边野餐时,这两个人冲到她跟前,企图抢走她的手提包。" },
+    { "seq": 3, "speaker": null, "text_en": "In the struggle, the strap broke and, with the bag in their possession, both men started running through the trees.", "text_cn": "争抢中带子扯断了,包落入两人手里,他们拔腿跑进树林。" },
+    { "seq": 4, "speaker": null, "text_en": "Mrs. Sterling got so angry that she ran after them.", "text_cn": "斯特林夫人非常气愤,追了上去。" },
+    { "seq": 5, "speaker": null, "text_en": "She was soon out of breath, but she continued to run.", "text_cn": "她很快就上气不接下气了,但仍继续追赶。" },
+    { "seq": 6, "speaker": null, "text_en": "When she caught up with them, she saw that they had sat down and were going through the contents of the bag, so she ran straight at them.", "text_cn": "当她追上他们时,发现两人已坐下正翻看包里的东西,于是直冲过去。" },
+    { "seq": 7, "speaker": null, "text_en": "The men got such a fright that they dropped the bag and ran away.", "text_cn": "两个男人吓了一大跳,扔下提包就逃跑了。" },
+    { "seq": 8, "speaker": null, "text_en": "'The strap needs mending,' said Mrs. Sterling later, 'but they did not steal anything.'", "text_cn": "“这提包带子需要修理,”斯特林夫人事后说道,“不过他们什么也没偷走。”" }
+  ],
+  "words": [
+    { "word": "forest", "ipa": "/ˈfɔːrəst/", "pos": "n", "meaning_cn": "森林", "example": "ran through a forest" },
+    { "word": "risk", "ipa": "/rɪsk/", "pos": "n", "meaning_cn": "危险,冒险", "example": "the risk she was taking" },
+    { "word": "picnic", "ipa": "/ˈpɪknɪk/", "pos": "n", "meaning_cn": "野餐", "example": "having a picnic" },
+    { "word": "edge", "ipa": "/edʒ/", "pos": "n", "meaning_cn": "边缘", "example": "at the edge of a forest" },
+    { "word": "strap", "ipa": "/stræp/", "pos": "n", "meaning_cn": "带,皮带", "example": "the strap broke" },
+    { "word": "possession", "ipa": "/pəˈzeʃən/", "pos": "n", "meaning_cn": "所有", "example": "with the bag in their possession" },
+    { "word": "breath", "ipa": "/breθ/", "pos": "n", "meaning_cn": "呼吸", "example": "out of breath" },
+    { "word": "contents", "ipa": "/ˈkɑːntents/", "pos": "n", "meaning_cn": "(常用复数)内有的物品", "example": "the contents of the bag" },
+    { "word": "mend", "ipa": "/mend/", "pos": "v", "meaning_cn": "修理", "example": "The strap needs mending" },
+    { "word": "fright", "ipa": "/fraɪt/", "pos": "n", "meaning_cn": "惊吓", "example": "got such a fright" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "动名词作句子开头(Eating is…)" },
+    { "gp": "gp2", "name": "介词后用动名词(on/without/for + doing)" },
+    { "gp": "gp3", "name": "动词后接动名词(start/keep/enjoy/mind)" },
+    { "gp": "gp4", "name": "动名词的否定(not + doing)" },
+    { "gp": "gp5", "name": "so…that / such…that(辅考)" },
+    { "gp": "gp6", "name": "need + doing(需要被…·辅考)" },
+    { "gp": "gp7", "name": "run after / catch up with(辅考)" },
+    { "gp": "gp8", "name": "out of breath(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"___ is always a pleasure.\"(动词开头用 -ing)", "stem_cn": "吃东西总是一种享受。", "options": ["Eating", "Eat", "Ate", "Eats"] },
+    { "gp": "gp1", "stem": "\"___ through the forest was dangerous.\"(动词开头用 -ing)", "stem_cn": "穿过森林奔跑很危险。", "options": ["Running", "Run", "Ran", "Runs"] },
+    { "gp": "gp2", "stem": "\"I am very keen on ___.\"(介词 on 后用动名词)", "stem_cn": "我很热衷骑自行车。", "options": ["cycling", "cycle", "to cycle", "cycled"] },
+    { "gp": "gp2", "stem": "\"He sat there without ___ anything.\"(介词 without 后用动名词)", "stem_cn": "他坐在那儿一言不发。", "options": ["saying", "say", "to say", "said"] },
+    { "gp": "gp2", "stem": "\"I must apologize for ___ you know earlier.\"(介词 for 后用动名词)", "stem_cn": "没早点告诉你,我得道歉。", "options": ["not letting", "not let", "not to let", "didn't let"] },
+    { "gp": "gp2", "stem": "\"She is good at ___ pictures.\"(介词 at 后用动名词)", "stem_cn": "她擅长画画。", "options": ["drawing", "draw", "to draw", "drew"] },
+    { "gp": "gp3", "stem": "\"They enjoy ___ in the forest.\"(enjoy 后只能接动名词)", "stem_cn": "他们喜欢在森林里野餐。", "options": ["having picnics", "have picnics", "to have picnics", "had picnics"] },
+    { "gp": "gp3", "stem": "\"She kept ___ even when out of breath.\"(keep 后接动名词)", "stem_cn": "即使喘不上气她仍不停地跑。", "options": ["running", "run", "to run", "ran"] },
+    { "gp": "gp3", "stem": "\"Would you mind ___ the window?\"(mind 后只能接动名词)", "stem_cn": "你介意关一下窗户吗?", "options": ["closing", "close", "to close", "closed"] },
+    { "gp": "gp4", "stem": "\"Thank you for ___ me wait long.\"(动名词否定:没…)", "stem_cn": "谢谢你没让我久等。", "options": ["not keeping", "not keep", "not to keep", "not kept"] },
+    { "gp": "gp4", "stem": "\"She apologized for ___ the letter.\"(动名词否定:没…)", "stem_cn": "她为没回信道歉。", "options": ["not answering", "not answer", "not to answer", "not answered"] },
+    { "gp": "gp5", "stem": "\"Mrs. Sterling got ___ angry that she ran after them.\"(…得…以至于,后接形容词)", "stem_cn": "斯特林夫人气得追了上去。", "options": ["so", "such", "very", "too"] },
+    { "gp": "gp5", "stem": "\"The men got ___ a fright that they dropped the bag.\"(…得…以至于,后接 a+名词)", "stem_cn": "两个男人吓得扔下包就跑。", "options": ["such", "so", "very", "too"] },
+    { "gp": "gp6", "stem": "\"The strap needs ___.\"(need + 动名词,表'需要被…')", "stem_cn": "背带需要修理。", "options": ["mending", "to mend", "mend", "mended"] },
+    { "gp": "gp6", "stem": "\"Your shoes need ___.\"(need + 动名词,表'需要被…')", "stem_cn": "你的鞋需要擦了。", "options": ["cleaning", "to clean", "clean", "cleaned"] },
+    { "gp": "gp7", "stem": "\"She ran ___ the two men who took her bag.\"(追赶)", "stem_cn": "她追赶那两个抢包的男人。", "options": ["after", "for", "into", "over"] },
+    { "gp": "gp7", "stem": "\"When she caught ___ with them, they had sat down.\"(赶上,追上)", "stem_cn": "当她追上他们时,他们已坐下。", "options": ["up", "on", "off", "out"] },
+    { "gp": "gp8", "stem": "\"She was soon ___ of breath but kept running.\"(喘不上气)", "stem_cn": "她很快喘不上气,却仍不停地跑。", "options": ["out", "without", "short", "lack"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"(女式)手提包\"常说:", "options": ["purse", "handbag", "hand sack", "carry bag"] },
+    { "stem": "美语里\"饼干\"常说:", "options": ["cookie", "biscuit", "cracker cake", "sweet cake"] },
+    { "stem": "forest 的意思是:", "options": ["森林", "沙漠", "草原", "山谷"] },
+    { "stem": "risk 的意思是:", "options": ["危险,冒险", "安全", "机会", "幸运"] },
+    { "stem": "breath 的意思是:", "options": ["呼吸", "气味", "声音", "风"] },
+    { "stem": "mend 的意思是:", "options": ["修理", "弄坏", "丢弃", "购买"] }
+  ],
+  "contrast": [
+    { "us": "purse", "uk": "handbag", "note_cn": "手提包;美语 purse,英式 handbag(课文 handbag;注意英式 purse=钱包)" },
+    { "us": "cookie", "uk": "biscuit", "note_cn": "饼干;美语 cookie,英式 biscuit(野餐食物)" },
+    { "us": "candy", "uk": "sweets", "note_cn": "糖果;美语 candy,英式 sweets(野餐零食)" },
+    { "us": "sneakers", "uk": "trainers", "note_cn": "运动鞋;美语 sneakers,英式 trainers(追赶奔跑)" }
+  ],
+  "chunks": [
+    { "us": "start / keep + doing", "ipa": "/stɑːrt ˈduːɪŋ/", "example1": "Both men started running through the trees.", "example1_cn": "两个男人开始在树林里奔跑。", "example2": "She kept running even when out of breath.", "example2_cn": "即使喘不上气她也不停地跑。" },
+    { "us": "so ... that", "ipa": "/soʊ ... ðæt/", "example1": "She got so angry that she ran after them.", "example1_cn": "她气得追了上去。", "example2": "The men got such a fright that they dropped the bag.", "example2_cn": "两个男人吓得扔下包。" },
+    { "us": "run after / catch up with", "ipa": "/rʌn ˈæftər/", "example1": "She ran after the two men.", "example1_cn": "她追赶那两个男人。", "example2": "When she caught up with them, they had sat down.", "example2_cn": "她追上他们时,他们已坐下。" },
+    { "us": "need + doing", "ipa": "/niːd ˈduːɪŋ/", "example1": "The strap needs mending.", "example1_cn": "背带需要修理。", "example2": "Your shoes need cleaning.", "example2_cn": "你的鞋需要擦了。" }
+  ],
+  "stage7_cloze": {
+    "context": "While Mrs. Sterling was ___1___ a picnic, two men stole her bag and started ___2___ away. She was soon out of breath, but she kept ___3___. ___4___ after thieves through a forest was a real risk!",
+    "blanks": [
+      { "blank_no": 1, "options": ["having", "have", "to have", "had"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["running", "run", "to run", "ran"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["going", "go", "to go", "went"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["Running", "Run", "To run", "Ran"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What were Mrs. Sterling and her children doing at the edge of the forest?", "options": ["Having a picnic", "Camping overnight", "Picking flowers", "Riding bikes"] },
+    { "stem": "What did the two men try to steal?", "options": ["Her handbag", "Her car", "Her camera", "Her food basket"] },
+    { "stem": "How did the men react when Mrs. Sterling ran straight at them?", "options": ["They got such a fright that they dropped the bag and ran away", "They gave the bag back politely", "They pushed her over", "They called the police"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"吃东西总是一种享受\"(动名词作句子开头用 -ing):", "options": ["Eating is always a pleasure.", "Eat is always a pleasure.", "To eating is always a pleasure.", "Eaten is always a pleasure."] },
+    { "stem": "你想说\"背带需要修理\"(need + 动名词表'需要被…'):", "options": ["The strap needs mending.", "The strap needs mend.", "The strap needs to mending.", "The strap need mending."] },
+    { "stem": "你想说\"她气得追了上去\"(so + 形容词 + that):", "options": ["She got so angry that she ran after them.", "She got such angry that she ran after them.", "She got so angry that she ran after they.", "She got angry so that she ran after them."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "forest 的意思是:", "options": ["森林", "沙漠", "海洋", "城市"] },
+    { "kind": "vocab", "stem": "mend 的意思是:", "options": ["修理", "弄坏", "购买", "丢弃"] },
+    { "kind": "grammar", "stem": "\"Both men started ___ through the trees.\"(动词后接动名词)", "stem_cn": "两个男人开始在树林里奔跑。", "options": ["running", "run", "to run", "ran"] },
+    { "kind": "grammar", "stem": "\"The strap needs ___.\"(need + 动名词,表'需要被…')", "stem_cn": "背带需要修理。", "options": ["mending", "to mend", "mend", "mended"] },
+    { "kind": "scenario", "stem": "\"Mrs. Sterling got so angry that she ran after them.\" 这句话的意思是:", "options": ["斯特林夫人气得追了上去。", "斯特林夫人生气地走开了。", "斯特林夫人不敢追他们。", "斯特林夫人请他们停下。"] },
+    { "kind": "scenario", "stem": "\"The men got such a fright that they dropped the bag.\" 这句话的意思是:", "options": ["两个男人吓得扔下包(就跑)。", "两个男人抢到了包。", "两个男人把包还了回来。", "两个男人藏起了包。"] },
+    { "kind": "reading", "stem": "Why did Mrs. Sterling run after the two men?", "options": ["They had grabbed her handbag and run off with it", "She wanted to give them food", "They were her children", "She was lost in the forest"], "passage": true },
+    { "kind": "reading", "stem": "What were the men doing when Mrs. Sterling caught up with them?", "options": ["Sitting down and going through the contents of the bag", "Eating a picnic", "Climbing a tree", "Fixing the strap"], "passage": true },
+    { "kind": "listening", "stem": "Did the men manage to steal anything in the end?", "options": ["No — they dropped the bag and ran away", "Yes — they took all her money", "Yes — they kept the handbag", "No — the police caught them"], "audio": true },
+    { "kind": "listening", "stem": "What did Mrs. Sterling say afterward about the strap?", "options": ["It needed mending, but nothing was stolen", "It was brand new", "The men had fixed it", "It was made of leather"], "audio": true }
+  ]
+}

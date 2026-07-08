@@ -1,0 +1,137 @@
+{
+  "id": "am2_l41",
+  "unit_no": 6,
+  "lesson_no": 41,
+  "title_en": "Do you call that a hat?",
+  "title_cn": "你把那个叫帽子吗?",
+  "grammar_focus": "must / have to / need / needn't / mustn't 的用法(KS17)主考——need 需要、must/have to 必须、needn't 不必(=don't have to)、mustn't 禁止;needn't 与 mustn't 对比、needn't have done(本来不必却做了);regret doing、remind sb of sth、remark/observe/notice 辨析(辅考·课文/难点①类)",
+  "scene": "帽店里,妻子对着镜子试帽子试了半个小时。丈夫坐在满是网眼的新式椅子上等得不耐烦,突然说“我们不应该买我们不需要的东西”,话一出口就后悔了。妻子回敬说“你没必要这么说”,还提醒他别忘了昨天买的那条难看透了的领带。丈夫说“我觉得它好看,男人有多少领带也不嫌多”,妻子答“女人有多少帽子也不嫌多”。10 分钟后,两人一道走出商店,妻子戴着一顶像灯塔一样的帽子。",
+  "grammar_card": {
+    "title": "must / have to / need / needn't / mustn't:需要、必须、不必、不许",
+    "intro": "need 表'需要'(I need a hat);must / have to 表'必须、不得不'(I must go);needn't 表'不必'(= don't have to);mustn't 表'不许、禁止'。最容易混的是 mustn't(禁止)和 needn't(不必)——一个是不许做,一个是可做可不做。全用本课句子举例。",
+    "table": {
+      "headers": ["说法", "意思"],
+      "rows": [
+        ["I need a new hat.", "我需要一顶新帽子(need = 需要)"],
+        ["I must buy one. / I have to buy one.", "我必须买一顶(must / have to = 必须)"],
+        ["You needn't wait for me. = You don't have to wait.", "你不必等我(needn't = 不必)"],
+        ["You mustn't smoke here. It is forbidden.", "这儿不许抽烟(mustn't = 禁止)"],
+        ["You needn't have said that.", "你本来用不着说那话(却说了)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "mustn't = 不许、禁止(No!);needn't = 不必、没必要(可做可不做)。别混:You mustn't smoke(禁止)≠ You needn't smoke(不必)。", "mark": "mustn't 禁止 ≠ needn't 不必" },
+      { "rule": "needn't have done 表示'本来用不着做,却已经做了':You needn't have waited for me(你本来不必等,却等了)。", "mark": "needn't have done" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What kind of shopping does the writer enjoy, do you think?",
+    "options": ["He doesn't seem to enjoy shopping for hats with his wife", "He loves buying hats", "He enjoys long shopping trips", "He likes buying ties for his wife"],
+    "answer_index": 0
+  },
+  "passage": "'Do you call that a hat?' I said to my wife. 'You needn't be so rude about it,' my wife answered as she looked at herself in the mirror. I sat down on one of those modern chairs with holes in it and waited. We had been in the hat shop for half an hour and my wife was still in front of the mirror. 'We mustn't buy things we don't need,' I remarked suddenly. I regretted saying it almost at once. 'You needn't have said that,' my wife answered. 'I needn't remind you of that terrible tie you bought yesterday.' 'I find it beautiful,' I said. 'A man can never have too many ties.' 'And a woman can't have too many hats,' she answered. Ten minutes later we walked out of the shop together. My wife was wearing a hat that looked like a lighthouse!",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "'Do you call that a hat?' I said to my wife.", "text_cn": "“你把那个叫帽子吗?”我对妻子说。" },
+    { "seq": 2, "speaker": null, "text_en": "'You needn't be so rude about it,' my wife answered as she looked at herself in the mirror.", "text_cn": "“你说话没必要这样不客气,”妻子边照镜子边回答。" },
+    { "seq": 3, "speaker": null, "text_en": "I sat down on one of those modern chairs with holes in it and waited.", "text_cn": "我坐在一把满是网眼的新式椅子上等着。" },
+    { "seq": 4, "speaker": null, "text_en": "We had been in the hat shop for half an hour and my wife was still in front of the mirror.", "text_cn": "我们在这家帽店已经呆了半个小时,妻子仍站在镜子前。" },
+    { "seq": 5, "speaker": null, "text_en": "'We mustn't buy things we don't need,' I remarked suddenly. I regretted saying it almost at once.", "text_cn": "“我们不该买不需要的东西,”我突然评论道,话一出口几乎立刻就后悔了。" },
+    { "seq": 6, "speaker": null, "text_en": "'You needn't have said that,' my wife answered. 'I needn't remind you of that terrible tie you bought yesterday.'", "text_cn": "“你本来用不着这么说,”妻子回答,“我也不必提醒你昨天买的那条难看透了的领带。”" },
+    { "seq": 7, "speaker": null, "text_en": "'I find it beautiful,' I said. 'A man can never have too many ties.'", "text_cn": "“我觉得它好看,”我说,“男人有多少领带也不嫌多。”" },
+    { "seq": 8, "speaker": null, "text_en": "'And a woman can't have too many hats,' she answered.", "text_cn": "“女人有多少帽子也不嫌多。”她回答。" },
+    { "seq": 9, "speaker": null, "text_en": "Ten minutes later we walked out of the shop together. My wife was wearing a hat that looked like a lighthouse!", "text_cn": "10 分钟后我们一道走出商店,妻子戴着一顶像灯塔一样的帽子!" }
+  ],
+  "words": [
+    { "word": "rude", "ipa": "/ruːd/", "pos": "adj", "meaning_cn": "无礼的,粗鲁的", "example": "You needn't be so rude" },
+    { "word": "mirror", "ipa": "/ˈmɪrər/", "pos": "n", "meaning_cn": "镜子", "example": "she looked at herself in the mirror" },
+    { "word": "hole", "ipa": "/hoʊl/", "pos": "n", "meaning_cn": "孔,洞", "example": "chairs with holes in it" },
+    { "word": "remark", "ipa": "/rɪˈmɑːrk/", "pos": "v", "meaning_cn": "评论,说", "example": "I remarked suddenly" },
+    { "word": "remind", "ipa": "/rɪˈmaɪnd/", "pos": "v", "meaning_cn": "提醒", "example": "I needn't remind you of that tie" },
+    { "word": "lighthouse", "ipa": "/ˈlaɪthaʊs/", "pos": "n", "meaning_cn": "灯塔", "example": "a hat that looked like a lighthouse" },
+    { "word": "regret", "ipa": "/rɪˈɡret/", "pos": "v", "meaning_cn": "后悔", "example": "I regretted saying it" },
+    { "word": "observe", "ipa": "/əbˈzɜːrv/", "pos": "v", "meaning_cn": "评论;注视", "example": "He observed me carefully" },
+    { "word": "notice", "ipa": "/ˈnoʊtɪs/", "pos": "v", "meaning_cn": "注意到", "example": "Did you notice how she was dressed?" },
+    { "word": "tie", "ipa": "/taɪ/", "pos": "n", "meaning_cn": "领带", "example": "that terrible tie you bought" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "need 需要 / don't need 不需要" },
+    { "gp": "gp2", "name": "mustn't 禁止 ≠ needn't 不必" },
+    { "gp": "gp3", "name": "needn't = don't have to" },
+    { "gp": "gp4", "name": "needn't have done(本来不必却做了)" },
+    { "gp": "gp5", "name": "must / have to 必须" },
+    { "gp": "gp6", "name": "regret doing(辅考)" },
+    { "gp": "gp7", "name": "remind sb of sth(辅考)" },
+    { "gp": "gp8", "name": "remark / observe / notice 辨析(辅考)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"I ___ a new hat, so I must buy one.\"(表'需要'的那个动词)", "stem_cn": "我需要一顶新帽子,所以得买一顶。", "options": ["need", "needn't", "must", "have"] },
+    { "gp": "gp1", "stem": "\"I won't buy that. I don't ___ it.\"(不需要)", "stem_cn": "我不会买那个,我不需要它。", "options": ["need", "needn't", "must", "have"] },
+    { "gp": "gp2", "stem": "\"You ___ leave your car here. Can't you see the 'No Parking' sign?\"(禁止、不许)", "stem_cn": "你不许把车停这儿,没看见'禁止停车'的牌子吗?", "options": ["mustn't", "needn't", "don't", "aren't"] },
+    { "gp": "gp2", "stem": "\"You ___ drive so quickly; we have plenty of time.\"(没必要,可做可不做)", "stem_cn": "你不必开这么快,我们时间还多。", "options": ["needn't", "mustn't", "don't", "aren't"] },
+    { "gp": "gp2", "stem": "\"You ___ smoke in the theater. It is forbidden.\"(禁止、被明令不许)", "stem_cn": "剧院里不许抽烟,这是禁止的。", "options": ["mustn't", "needn't", "don't", "won't"] },
+    { "gp": "gp2", "stem": "\"You ___ come with us if you don't want to.\"(没必要)", "stem_cn": "你要是不想来,不必和我们一起去。", "options": ["needn't", "mustn't", "can't", "don't"] },
+    { "gp": "gp3", "stem": "\"You needn't wait for me. = You ___ wait for me.\"(同义替换:不必)", "stem_cn": "你不必等我。", "options": ["don't have to", "must not", "have to", "haven't"] },
+    { "gp": "gp3", "stem": "\"You don't have to come. = You ___ come.\"(同义替换:不必)", "stem_cn": "你不必来。", "options": ["needn't", "mustn't", "must", "have to"] },
+    { "gp": "gp4", "stem": "\"You ___ said that — now she's upset.\"(本来用不着做,却做了)", "stem_cn": "你本来用不着说那句话——现在她生气了。", "options": ["needn't have", "needn't", "don't have to", "mustn't"] },
+    { "gp": "gp4", "stem": "\"You needn't ___ waited for me; I was fine on my own.\"(本来不必等,却等了)", "stem_cn": "你本来不必等我的,我自己没问题。", "options": ["have", "has", "had", "having"] },
+    { "gp": "gp5", "stem": "\"I ___ leave now, or I'll miss the train.\"(必须)", "stem_cn": "我必须走了,不然会赶不上火车。", "options": ["must", "needn't", "mustn't", "don't"] },
+    { "gp": "gp5", "stem": "\"It's a rule here: you ___ wear a seatbelt.\"(规定、不得不)", "stem_cn": "这里有规定:你必须系安全带。", "options": ["have to", "needn't", "haven't", "don't"] },
+    { "gp": "gp6", "stem": "\"I remarked it, but I regretted ___ it almost at once.\"(对做过的事后悔,后接动名词)", "stem_cn": "我说了那话,但几乎立刻就后悔说了。", "options": ["saying", "to say", "say", "said"] },
+    { "gp": "gp6", "stem": "\"She regretted ___ so many hats.\"(对做过的事后悔,后接动名词)", "stem_cn": "她后悔买了那么多帽子。", "options": ["buying", "to buy", "buy", "bought"] },
+    { "gp": "gp7", "stem": "\"I needn't remind you ___ that terrible tie.\"(提醒某人想起某事的固定搭配)", "stem_cn": "我不必提醒你想起那条难看的领带。", "options": ["of", "for", "at", "in"] },
+    { "gp": "gp7", "stem": "\"This photo reminds me ___ my childhood.\"(提醒某人想起某事的固定搭配)", "stem_cn": "这张照片让我想起童年。", "options": ["of", "for", "at", "in"] },
+    { "gp": "gp8", "stem": "\"Did you ___ how she was dressed?\"(注意到)", "stem_cn": "你注意到她的穿着了吗?", "options": ["notice", "remark", "remind", "regret"] },
+    { "gp": "gp8", "stem": "\"'We mustn't buy things we don't need,' I ___.\"(评论、说道)", "stem_cn": "'我们不该买不需要的东西,'我评论道。", "options": ["remarked", "reminded", "noticed", "regretted"] }
+  ],
+  "stage6": [
+    { "stem": "美语里\"商店\"常说:", "options": ["store", "shop", "market", "stall"] },
+    { "stem": "美语里\"裤子\"常说:", "options": ["pants", "trousers", "slacks", "shorts"] },
+    { "stem": "rude 的意思是:", "options": ["无礼的,粗鲁的", "友好的", "害羞的", "诚实的"] },
+    { "stem": "mirror 的意思是:", "options": ["镜子", "窗户", "画框", "门"] },
+    { "stem": "remind 的意思是:", "options": ["提醒", "忘记", "评论", "注意"] },
+    { "stem": "lighthouse 的意思是:", "options": ["灯塔", "仓库", "城堡", "农舍"] }
+  ],
+  "contrast": [
+    { "us": "store", "uk": "shop", "note_cn": "商店;美语 store,英式 shop(课文 hat shop)" },
+    { "us": "pants", "uk": "trousers", "note_cn": "裤子;美语 pants,英式 trousers(服装店场景)" },
+    { "us": "stand in line", "uk": "queue", "note_cn": "排队;美语 stand in line,英式 queue(店里排队)" },
+    { "us": "closet", "uk": "wardrobe", "note_cn": "衣柜;美语 closet,英式 wardrobe(too many hats 收纳)" }
+  ],
+  "chunks": [
+    { "us": "needn't have done", "ipa": "/ˈniːdnt həv duːn/", "example1": "You needn't have said that.", "example1_cn": "你本来用不着说那话。", "example2": "You needn't have waited for me.", "example2_cn": "你本来不必等我的。" },
+    { "us": "mustn't do sth", "ipa": "/ˈmʌsnt duː/", "example1": "We mustn't buy things we don't need.", "example1_cn": "我们不该买不需要的东西。", "example2": "You mustn't smoke here.", "example2_cn": "这儿不许抽烟。" },
+    { "us": "remind sb of sth", "ipa": "/rɪˈmaɪnd ... ʌv/", "example1": "I needn't remind you of that terrible tie.", "example1_cn": "我不必提醒你想起那条难看的领带。", "example2": "This photo reminds me of my childhood.", "example2_cn": "这张照片让我想起童年。" },
+    { "us": "regret doing sth", "ipa": "/rɪˈɡret ˈduːɪŋ/", "example1": "I regretted saying it almost at once.", "example1_cn": "我几乎立刻就后悔说了那话。", "example2": "She regretted buying so many hats.", "example2_cn": "她后悔买了那么多帽子。" }
+  ],
+  "stage7_cloze": {
+    "context": "In the hat shop, the wife tried on hats for half an hour. 'We ___1___ buy things we don't ___2___,' the husband remarked. 'You ___3___ have said that,' she answered. 'I ___4___ buy at least one hat.'",
+    "blanks": [
+      { "blank_no": 1, "options": ["mustn't", "needn't", "don't", "haven't"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["need", "needn't", "must", "have"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["needn't", "mustn't", "don't", "haven't"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["must", "needn't", "mustn't", "don't"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "Where were the writer and his wife?", "options": ["In a hat shop", "At a restaurant", "In a theater", "At home"] },
+    { "stem": "What did the writer say they shouldn't do?", "options": ["Buy things they don't need", "Leave the shop", "Talk to the salesgirl", "Try on hats"] },
+    { "stem": "What did the wife's hat look like in the end?", "options": ["A lighthouse", "A flower", "A bird", "A boat"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"这儿不许抽烟,是禁止的\"(禁止用 mustn't):", "options": ["You mustn't smoke here; it's forbidden.", "You needn't smoke here; it's forbidden.", "You don't smoke here; it's forbidden.", "You mustn't to smoke here; it's forbidden."] },
+    { "stem": "你想说\"你不必等我,我没关系\"(不必用 needn't):", "options": ["You needn't wait for me; I'm fine.", "You mustn't wait for me; I'm fine.", "You needn't to wait for me; I'm fine.", "You don't need wait for me; I'm fine."] },
+    { "stem": "你想说\"你本来用不着说那句话\"(本来不必却做了):", "options": ["You needn't have said that.", "You mustn't say that.", "You needn't say that.", "You didn't need say that."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "rude 的意思是:", "options": ["无礼的,粗鲁的", "友好的", "勇敢的", "聪明的"] },
+    { "kind": "vocab", "stem": "lighthouse 的意思是:", "options": ["灯塔", "城堡", "仓库", "农舍"] },
+    { "kind": "grammar", "stem": "\"You ___ smoke here — it's forbidden.\"(禁止,不许)", "stem_cn": "这儿不许抽烟——是禁止的。", "options": ["mustn't", "needn't", "don't", "won't"] },
+    { "kind": "grammar", "stem": "\"You ___ wait for me; I'm fine on my own.\"(不必,没必要)", "stem_cn": "你不必等我,我自己没问题。", "options": ["needn't", "mustn't", "aren't", "haven't"] },
+    { "kind": "scenario", "stem": "\"You needn't have said that.\" 这句话的意思是:", "options": ["你本来用不着说那句话(却说了)。", "你现在别说那句话。", "你必须说那句话。", "你没说那句话。"] },
+    { "kind": "scenario", "stem": "\"A man can never have too many ties.\" 这句话的意思是:", "options": ["男人有多少领带也不嫌多。", "男人不该有太多领带。", "男人从不打领带。", "男人只需要一条领带。"] },
+    { "kind": "reading", "stem": "Why did the writer say 'We mustn't buy things we don't need'?", "options": ["He thought his wife was spending too long buying a hat", "He wanted to buy a hat himself", "He liked the modern chairs", "He was hungry"], "passage": true },
+    { "kind": "reading", "stem": "How did the wife reply to his complaint?", "options": ["She reminded him of the terrible tie he had bought", "She agreed with him at once", "She put the hat back", "She left the shop alone"], "passage": true },
+    { "kind": "listening", "stem": "How long had they been in the hat shop?", "options": ["Half an hour", "Five minutes", "Two hours", "All morning"], "audio": true },
+    { "kind": "listening", "stem": "In the end, did the wife buy a hat?", "options": ["Yes — one that looked like a lighthouse", "No — they left with nothing", "Yes — a plain black one", "No — the shop was closed"], "audio": true }
+  ]
+}

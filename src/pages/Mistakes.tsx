@@ -73,7 +73,7 @@ const MistakesPage = () => {
   const [loading, setLoading] = useState(true);
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
   const [items, setItems] = useState<Mistake[]>([]);
-  const [tab, setTab] = useState<ModuleKey>("due");
+  const [tab, setTab] = useState<ModuleKey>("all");
   const [search, setSearch] = useState("");
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [tutorFor, setTutorFor] = useState<Mistake | null>(null);
@@ -171,7 +171,7 @@ const MistakesPage = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-4 py-8 md:px-8 md:py-12">
-      <PageHeader title="📒 错题本" subtitle="所有错题按记忆曲线安排复习" />
+      <PageHeader title="📒 错题本" subtitle="所有错题按记忆曲线安排复习" back />
 
       {loading &&
       <div className="mt-12 flex items-center justify-center gap-2 text-sm text-muted-foreground">
@@ -203,9 +203,9 @@ const MistakesPage = () => {
           {/* Tabs */}
           <div className="mb-4 flex flex-wrap items-center gap-2">
             {[
+          { k: "all" as const, label: "全部", n: counts.all },
           { k: "due" as const, label: "今日复习", n: counts.due },
           { k: "topics" as const, label: "📂 专题分组", n: counts.all },
-          { k: "all" as const, label: "全部", n: counts.all },
           { k: "starred" as const, label: "⭐ 收藏", n: counts.starred }].
           map(({ k, label, n }) =>
           <button

@@ -95,6 +95,7 @@ const Review = () => {
       <PageHeader
         title={`✨ 复习时间`}
         subtitle="每天 5 分钟,复习这阵子学到的地道表达"
+        back
       />
 
       {loading && (
@@ -128,14 +129,6 @@ const Review = () => {
           </div>
           <div className="mt-1 text-sm text-muted-foreground">
             <T>去学几节新课,系统会自动帮你把重点表达加进复习队列。</T>
-          </div>
-          <div className="mt-5 flex flex-wrap justify-center gap-2">
-            <Link
-              to="/american"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground transition hover:opacity-90"
-            >
-              <T>去学美语课程</T>
-            </Link>
           </div>
         </div>
       )}

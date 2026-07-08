@@ -1,0 +1,134 @@
+{
+  "id": "am4_l43",
+  "unit_no": 8,
+  "lesson_no": 43,
+  "title_en": "Are There Strangers in Space?",
+  "title_cn": "太空中有陌生人吗?",
+  "grammar_focus": "be bound to do(必定/注定要)、may/might have done(对过去的推测)、so + 形容词 + 倒装(so vast is the number that…)、let alone(更不用说)、it was not long before(不久就…)(NCE4 该课源无独立 KS 页,考点由课文结构自取;IP:源为 Anthony Michaelis《Are There Strangers in Space?》from The Weekend Telegraph 一篇论地外文明与射电通讯的科普文,系版权作品——已用 100% 原创行文复述其事实、无引用原句;具名 Bracewell 教授、Walter Sullivan 及其书均泛化为‘一位射电天文学家/一位科普作家的名著’;题材=天文·无害;美语化 kilometer/fiber;第四册第43课·U8开工)",
+  "scene": "从研究生命起源的人的工作中,我们必然得出结论:只要有一颗大致像我们这样的行星,生命几乎必定会开始。在我们的太阳系所有行星中,如今我们相当确定,地球是唯一能有生命存活的一颗。火星太干、氧气太少,金星和水星又太热,而外围的行星则接近绝对零度,裹在充满氢气的敌对大气里。但别的‘太阳’——天文学家这样称呼恒星——必定也有像我们这样的行星;而由于恒星的数目如此之多,这个单纯的可能性便几乎成了确定无疑。仅在我们自己的星系里就有一千亿颗恒星,而整个宇宙里的总数如今被估计为约三亿亿颗。尽管在某处开始的生命,或许只有百分之一会发展成复杂、有智慧的形态,可行星的数目如此之多,以致智慧生命必然是宇宙中自然的一部分。既然我们如此确信别的心智存在,那为什么至今没有来自外太空的访客?首先,他们也许在数千、甚至数百万年前就来过这颗行星,却发现我们当时的状态太过原始,对他们先进的知识毫无吸引力。一个高等文明,在对我们太阳系的一次短暂造访中,很可能已经留下了一个自动信使,以等待一个更先进的族群可能的觉醒。然而在这里,我们撞上了所有障碍中最难的一个:把我们隔开的天文距离。平均而言,我们的邻居也许在一百光年之外——而一光年,就是光以每秒十八万六千英里的速度在一年里走过的距离。我们如今的化学火箭,虽足以把人送入轨道,却根本没机会抵达哪怕最近的另一颗恒星——它在四光年之外——更别提几十、几百光年的距离了。所幸,正如一位科普作家在一本名著里所说,我们有一种独一无二、合乎理性的方式,可以向别的智慧生命发出信号。它取决于一个精确的射电频率:21厘米波长,也就是每秒1420兆周,是漂浮在太空中的氢原子自然发出的。这一发射最早于1951年在地球上被探测到;它必定为宇宙中任何地方的射电天文学家所知。一旦这个波长被发现,不久就有人提议把它用作星际讯息那唯一清晰可辨的频率。若没有这类东西,在别的世界上搜寻心智,就像在一座巨大的城市里、没有约定的会合地点去见一位朋友,只能永远在街头游荡,指望一次偶然的相遇。",
+  "grammar_card": {
+    "title": "be bound to do / may have done / so + 形容词 + 倒装 / let alone / it was not long before",
+    "intro": "①be bound to do:‘必定/注定要…’。②may/might + have + 过去分词:对过去的推测,‘可能已经…’。③so + 形容词 + 倒装:so vast is the number that …(把 so + 形容词提前引起主谓倒装)。④let alone:‘更不用说…’,前句多为否定。⑤it was not long before …:‘不久就…’。",
+    "table": {
+      "headers": ["用法", "结构", "例子"],
+      "rows": [
+        ["be bound to do", "be bound + to do", "are bound to have planets"],
+        ["may have done", "may/might + have + 过去分词", "may have come long ago"],
+        ["so + 形容词 + 倒装", "So + 形容词 + be + 主语 + that", "So vast is the number that …"],
+        ["let alone", "…, let alone + 名词/原形", "cannot reach the star, let alone galaxies"],
+        ["it was not long before", "It was not long before + 从句", "It was not long before … was suggested"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "so + 形容词/副词 放句首时,主句要部分倒装:So vast is the number …(be/助动词提到主语前)。", "mark": "So + 形容词 + 倒装" },
+      { "rule": "may/might have done 表对‘过去’的推测;must have done 表肯定推测,can't have done 表否定推测。", "mark": "may have done" },
+      { "rule": "美式拼写:kilometer(千米,英式 kilometre)、fiber(纤维,英式 fibre)。本课已按美语写。", "mark": "kilometer / fiber" }
+    ]
+  },
+  "prelisten": {
+    "q": "Listen and answer — What does the 'uniquely rational way' for us to communicate with other intelligent beings in space depend on?",
+    "options": ["A precise natural radio frequency — the 21-cm hydrogen wavelength — that any radio astronomer would know", "Sending chemical rockets to every star", "Building giant telescopes on Mars", "Waiting for aliens to land on Earth"],
+    "answer_index": 0
+  },
+  "passage": "From the work of those who have studied the origin of life, we must conclude that, given a planet only roughly like our own, life is almost certain to begin. Of all the planets in our solar system, we are now fairly sure that the Earth is the only one on which life can survive. Mars is too dry and poor in oxygen, Venus and Mercury are far too hot, and the outer planets lie near absolute zero, wrapped in hostile atmospheres of hydrogen. But other suns, as astronomers call the stars, are bound to have planets like our own, and since the number of stars is so vast, this mere possibility becomes a virtual certainty. There are a hundred thousand million stars in our own galaxy alone, and the total in the universe is now put at some three hundred million million. Although perhaps only one per cent of the life that begins somewhere will ever develop into complex, intelligent patterns, so vast is the number of planets that intelligent life is bound to be a natural part of the universe. If, then, we are so certain that other minds exist, why have we had no visitors from outer space? First, they may have come to this planet thousands, or even millions, of years ago, and found our prevailing state so primitive that it held no interest for their advanced knowledge. A superior civilization, on a brief visit to our solar system, may well have left an automatic messenger behind, to await the possible awakening of a more advanced people. Here, however, we come up against the most difficult of all obstacles: the astronomical distances that separate us. On average, our neighbors might be a hundred light years away — and a light year is the distance light travels in a year, at a hundred and eighty-six thousand miles a second. Our present chemical rockets, good enough to carry people into orbit, have no chance of reaching even the nearest other star, four light years away, let alone distances of tens or hundreds of light years. Fortunately, as one science writer has put it in a well-known book, there is a uniquely rational way for us to signal to other intelligent beings. It depends on one exact radio frequency: the 21-cm wavelength, or 1420 megacycles a second, naturally given off by the hydrogen atoms that drift through space. This emission was first detected here in 1951, and it must be known to any radio astronomer anywhere in the universe. Once the wavelength had been found, it was not long before someone proposed using it as the one clearly recognizable frequency for interstellar messages. Without something of this kind, searching for minds on other worlds would be like trying to meet a friend in a huge city with no agreed rendezvous, wandering the streets forever in the hope of a chance encounter.",
+  "sentences": [
+    { "seq": 1, "speaker": null, "text_en": "From the work of those who have studied the origin of life, we must conclude that, given a planet only roughly like our own, life is almost certain to begin. Of all the planets in our solar system, we are now fairly sure that the Earth is the only one on which life can survive. Mars is too dry and poor in oxygen, Venus and Mercury are far too hot, and the outer planets lie near absolute zero, wrapped in hostile atmospheres of hydrogen.", "text_cn": "从研究生命起源的人的工作中,我们必然得出结论:只要有一颗大致像我们这样的行星,生命几乎必定会开始。在我们的太阳系所有行星中,如今我们相当确定,地球是唯一能有生命存活的一颗。火星太干、氧气太少,金星和水星又太热,而外围的行星则接近绝对零度,裹在充满氢气的敌对大气里。" },
+    { "seq": 2, "speaker": null, "text_en": "But other suns, as astronomers call the stars, are bound to have planets like our own, and since the number of stars is so vast, this mere possibility becomes a virtual certainty. There are a hundred thousand million stars in our own galaxy alone, and the total in the universe is now put at some three hundred million million.", "text_cn": "但别的‘太阳’——天文学家这样称呼恒星——必定也有像我们这样的行星;而由于恒星的数目如此之多,这个单纯的可能性便几乎成了确定无疑。仅在我们自己的星系里就有一千亿颗恒星,而整个宇宙里的总数如今被估计为约三亿亿颗。" },
+    { "seq": 3, "speaker": null, "text_en": "Although perhaps only one per cent of the life that begins somewhere will ever develop into complex, intelligent patterns, so vast is the number of planets that intelligent life is bound to be a natural part of the universe. If, then, we are so certain that other minds exist, why have we had no visitors from outer space?", "text_cn": "尽管在某处开始的生命,或许只有百分之一会发展成复杂、有智慧的形态,可行星的数目如此之多,以致智慧生命必然是宇宙中自然的一部分。既然我们如此确信别的心智存在,那为什么至今没有来自外太空的访客?" },
+    { "seq": 4, "speaker": null, "text_en": "First, they may have come to this planet thousands, or even millions, of years ago, and found our prevailing state so primitive that it held no interest for their advanced knowledge. A superior civilization, on a brief visit to our solar system, may well have left an automatic messenger behind, to await the possible awakening of a more advanced people. Here, however, we come up against the most difficult of all obstacles: the astronomical distances that separate us.", "text_cn": "首先,他们也许在数千、甚至数百万年前就来过这颗行星,却发现我们当时的状态太过原始,对他们先进的知识毫无吸引力。一个高等文明,在对我们太阳系的一次短暂造访中,很可能已经留下了一个自动信使,以等待一个更先进的族群可能的觉醒。然而在这里,我们撞上了所有障碍中最难的一个:把我们隔开的天文距离。" },
+    { "seq": 5, "speaker": null, "text_en": "Fortunately, as one science writer has put it in a well-known book, there is a uniquely rational way for us to signal to other intelligent beings. It depends on one exact radio frequency: the 21-cm wavelength, or 1420 megacycles a second, naturally given off by the hydrogen atoms that drift through space. Once the wavelength had been found, it was not long before someone proposed using it as the one clearly recognizable frequency for interstellar messages. Without something of this kind, searching for minds on other worlds would be like trying to meet a friend in a huge city with no agreed rendezvous.", "text_cn": "所幸,正如一位科普作家在一本名著里所说,我们有一种独一无二、合乎理性的方式,可以向别的智慧生命发出信号。它取决于一个精确的射电频率:21厘米波长,也就是每秒1420兆周,是漂浮在太空中的氢原子自然发出的。一旦这个波长被发现,不久就有人提议把它用作星际讯息那唯一清晰可辨的频率。若没有这类东西,在别的世界上搜寻心智,就像在一座巨大的城市里、没有约定的会合地点去见一位朋友。" }
+  ],
+  "words": [
+    { "word": "Mercury", "ipa": "/ˈmɜːrkjəri/", "pos": "n", "meaning_cn": "水星", "example": "Venus and Mercury are far too hot" },
+    { "word": "hydrogen", "ipa": "/ˈhaɪdrədʒən/", "pos": "n", "meaning_cn": "氢", "example": "hostile atmospheres of hydrogen" },
+    { "word": "prevailing", "ipa": "/prɪˈveɪlɪŋ/", "pos": "adj", "meaning_cn": "盛行的,当时的", "example": "found our prevailing state so primitive" },
+    { "word": "astronomer", "ipa": "/əˈstrɑːnəmər/", "pos": "n", "meaning_cn": "天文学家", "example": "as astronomers call the stars" },
+    { "word": "uniquely", "ipa": "/juˈniːkli/", "pos": "adv", "meaning_cn": "独特地,唯一地", "example": "a uniquely rational way to signal" },
+    { "word": "rational", "ipa": "/ˈræʃnəl/", "pos": "adj", "meaning_cn": "理性的,合理的", "example": "a uniquely rational way" },
+    { "word": "frequency", "ipa": "/ˈfriːkwənsi/", "pos": "n", "meaning_cn": "频率", "example": "one exact radio frequency" },
+    { "word": "cm", "ipa": "/ˌsentɪˈmiːtər/", "pos": "n", "meaning_cn": "厘米(centimetre)", "example": "the 21-cm wavelength" },
+    { "word": "megacycle", "ipa": "/ˈmeɡəsaɪkl/", "pos": "n", "meaning_cn": "兆周,兆赫", "example": "1420 megacycles a second" },
+    { "word": "emission", "ipa": "/iˈmɪʃn/", "pos": "n", "meaning_cn": "发射,散发", "example": "this emission was first detected in 1951" },
+    { "word": "interstellar", "ipa": "/ˌɪntərˈstelər/", "pos": "adj", "meaning_cn": "星际的", "example": "a frequency for interstellar messages" },
+    { "word": "rendezvous", "ipa": "/ˈrɑːndeɪvuː/", "pos": "n", "meaning_cn": "会合(地点),约会", "example": "with no agreed rendezvous" }
+  ],
+  "grammar_points": [
+    { "gp": "gp1", "name": "be bound to do" },
+    { "gp": "gp2", "name": "may/might have done(对过去推测)" },
+    { "gp": "gp3", "name": "so + 形容词 + 倒装" },
+    { "gp": "gp4", "name": "let alone" },
+    { "gp": "gp5", "name": "it was not long before" },
+    { "gp": "gp6", "name": "词汇辨析(uniquely/rational/emission)" }
+  ],
+  "stage5": [
+    { "gp": "gp1", "stem": "\"Other stars are ___ to have planets like our own.\"(be ___ to do 表‘必定/注定要’,填那个过去分词)", "stem_cn": "别的恒星必定也有像我们这样的行星。", "options": ["bound", "bounded", "binding", "bind"] },
+    { "gp": "gp1", "stem": "\"Given so many planets, intelligent life is ___ to arise somewhere.\"(‘必定/注定要…’这个结构,填那个过去分词)", "stem_cn": "有这么多行星,智慧生命必定会在某处出现。", "options": ["bound", "bounded", "binding", "bind"] },
+    { "gp": "gp1", "stem": "\"Such a signal is bound ___ be known to any radio astronomer.\"(be bound + 不定式,填不定式记号)", "stem_cn": "这样的信号必定为任何射电天文学家所知。", "options": ["to", "/", "that", "for"] },
+    { "gp": "gp2", "stem": "\"Visitors ___ have come to Earth millions of years ago.\"(对过去的推测‘可能已经做过…’,填那个情态动词)", "stem_cn": "访客可能在数百万年前就来过地球。", "options": ["may", "will", "shall", "does"] },
+    { "gp": "gp2", "stem": "\"A superior civilization ___ have left a messenger behind.\"(‘可能已经…’对过去推测,填情态动词)", "stem_cn": "某个高等文明可能已留下一个信使。", "options": ["might", "will", "shall", "does"] },
+    { "gp": "gp2", "stem": "\"They may have ___ our primitive state uninteresting.\"(may have + 过去分词,填‘发现’那个动词的过去分词)", "stem_cn": "他们可能已觉得我们的原始状态毫无趣味。", "options": ["found", "find", "finds", "finding"] },
+    { "gp": "gp3", "stem": "\"So ___ is the number of planets that intelligent life must exist.\"(so + 形容词 + 倒装,填那个形容词)", "stem_cn": "行星的数目如此之多,以致智慧生命必然存在。", "options": ["vast", "vastly", "vaster", "vastest"] },
+    { "gp": "gp3", "stem": "\"So ___ are the distances that radio waves take centuries to cross.\"(so + 形容词 + 倒装,填那个形容词)", "stem_cn": "距离如此之大,以致无线电波要几个世纪才能穿越。", "options": ["great", "greatly", "greater", "greatest"] },
+    { "gp": "gp3", "stem": "\"So vast ___ the universe that countless worlds may hold life.\"(so + 形容词 + 倒装,填倒装后提前的 be 动词)", "stem_cn": "宇宙如此浩瀚,以致无数世界都可能孕育生命。", "options": ["is", "does", "has", "being"] },
+    { "gp": "gp4", "stem": "\"Our rockets cannot reach the nearest star, ___ galaxies far beyond.\"(‘更不用说…’,填那个词组)", "stem_cn": "我们的火箭连最近的恒星都到不了,更别提遥远的星系。", "options": ["let alone", "as well as", "rather than", "along with"] },
+    { "gp": "gp4", "stem": "\"He has never left his own town, ___ traveled to another planet.\"(‘更不用说…’,填那个词组)", "stem_cn": "他连自己的镇都没离开过,更别说去别的星球。", "options": ["let alone", "as well as", "rather than", "together with"] },
+    { "gp": "gp4", "stem": "\"We can barely orbit our own world, ___ cross the stars.\"(‘更不用说…’,填那个词组)", "stem_cn": "我们勉强能绕自己的星球飞行,更别说穿越群星。", "options": ["let alone", "as well as", "instead of", "apart from"] },
+    { "gp": "gp5", "stem": "\"___ was not long before its use for interstellar signals was suggested.\"(‘不久就…’,填句首作形式主语的那个词)", "stem_cn": "不久,人们就提议用它来做星际通讯。", "options": ["It", "There", "That", "This"] },
+    { "gp": "gp5", "stem": "\"It was not long ___ scientists suggested using this frequency.\"(‘过了不久就…’,填 not long 后那个连词)", "stem_cn": "没过多久,科学家就提议使用这一频率。", "options": ["before", "after", "until", "since"] },
+    { "gp": "gp5", "stem": "\"Once the wavelength had been found, it was not long before the whole world ___ about it.\"(it was not long before + 从句,填‘得知’那个动词的过去式)", "stem_cn": "一旦发现这个波长,不久全世界就都知道了它。", "options": ["knew", "know", "known", "knowing"] },
+    { "gp": "gp6", "stem": "\"In a way that is the only one of its kind is ___.\"(“独特地,唯一地”用哪个词)", "stem_cn": "以某种独一无二的方式。", "options": ["uniquely", "roughly", "barely", "rarely"] },
+    { "gp": "gp6", "stem": "\"Based on reason rather than emotion, an argument is ___.\"(“理性的,合理的”用哪个词)", "stem_cn": "基于理性而非情感的。", "options": ["rational", "national", "radical", "regional"] },
+    { "gp": "gp6", "stem": "\"The sending out of light, heat, or radio waves is ___.\"(“发射,散发”用哪个词)", "stem_cn": "光、热或无线电波的发出。", "options": ["emission", "permission", "admission", "commission"] }
+  ],
+  "stage6": [
+    { "stem": "uniquely 的意思是:", "options": ["独特地,唯一地", "普遍地", "勉强地", "偶然地"] },
+    { "stem": "rational 的意思是:", "options": ["理性的,合理的", "情绪化的", "激进的", "地方的"] },
+    { "stem": "prevailing 的意思是:", "options": ["盛行的,当时的", "罕见的", "短暂的", "隐藏的"] },
+    { "stem": "emission 的意思是:", "options": ["发射,散发", "吸收", "反射", "储存"] },
+    { "stem": "interstellar 的意思是:", "options": ["星际的", "地下的", "水下的", "大气的"] },
+    { "stem": "rendezvous 的意思是:", "options": ["会合(地点),约会", "争吵", "离别", "障碍"] }
+  ],
+  "contrast": [
+    { "us": "kilometer", "uk": "kilometre", "note_cn": "千米,公里;美语 kilometer,英式 kilometre" },
+    { "us": "fiber", "uk": "fibre", "note_cn": "纤维;美语 fiber,英式 fibre" },
+    { "us": "maneuver", "uk": "manoeuvre", "note_cn": "机动,策略;美语 maneuver,英式 manoeuvre" },
+    { "us": "somber", "uk": "sombre", "note_cn": "阴郁的,昏暗的;美语 somber,英式 sombre" }
+  ],
+  "chunks": [
+    { "us": "come up against", "ipa": "/kʌm ʌp əˈɡenst/", "example1": "Here we come up against the hardest obstacle.", "example1_cn": "在这里我们撞上了最难的障碍。", "example2": "They came up against fierce opposition.", "example2_cn": "他们遭遇了激烈的反对。" },
+    { "us": "give off", "ipa": "/ɡɪv ɔːf/", "example1": "The frequency is naturally given off by hydrogen atoms.", "example1_cn": "这一频率是氢原子自然发出的。", "example2": "The flowers give off a sweet scent.", "example2_cn": "这些花散发出甜甜的香气。" },
+    { "us": "on average", "ipa": "/ɑːn ˈævərɪdʒ/", "example1": "On average, our neighbors might be a hundred light years away.", "example1_cn": "平均而言,我们的邻居也许在一百光年之外。", "example2": "He reads two books a month on average.", "example2_cn": "他平均每月读两本书。" },
+    { "us": "in the hope of", "ipa": "/ɪn ðə hoʊp ʌv/", "example1": "Wandering the streets in the hope of a chance encounter.", "example1_cn": "在街头游荡,指望一次偶然的相遇。", "example2": "She wrote again in the hope of a reply.", "example2_cn": "她再次去信,盼着有个回音。" }
+  ],
+  "stage7_cloze": {
+    "context": "Given so many worlds, other stars are ___1___ to have planets like ours. Visitors ___2___ have come here long ago. Our rockets cannot reach the nearest star, ___3___ distant galaxies. ___4___ was not long before radio offered a way to call across space.",
+    "blanks": [
+      { "blank_no": 1, "options": ["bound", "bounded", "binding", "bind"], "answer_index": 0 },
+      { "blank_no": 2, "options": ["may", "will", "shall", "does"], "answer_index": 0 },
+      { "blank_no": 3, "options": ["let alone", "as well as", "rather than", "along with"], "answer_index": 0 },
+      { "blank_no": 4, "options": ["It", "There", "That", "This"], "answer_index": 0 }
+    ]
+  },
+  "stage8_listening": [
+    { "stem": "What does the 'uniquely rational way' to communicate across space depend on?", "options": ["A precise natural radio frequency — the 21-cm hydrogen wavelength — that any radio astronomer would know", "Sending chemical rockets to every star", "Building giant telescopes on Mars", "Waiting for aliens to land on Earth"] },
+    { "stem": "Why have we probably had no visitors from outer space yet, according to the passage?", "options": ["The astronomical distances are so vast that even radio waves and rockets cannot easily bridge them", "Because intelligent life does not exist elsewhere", "Because Earth is hidden from view", "Because visitors are forbidden to land"] },
+    { "stem": "Why is Earth thought to be the only planet in our solar system where life can survive?", "options": ["The other planets are too dry, too hot, or far too cold with hostile atmospheres", "Because Earth is the largest planet", "Because Earth is closest to the sun", "Because the other planets have no moons"] }
+  ],
+  "stage9_scenario": [
+    { "stem": "你想说\"别的恒星必定也有像我们这样的行星\"(be bound to do):", "options": ["Other stars are bound to have planets like our own.", "Other stars are bound having planets like our own.", "Other stars are bound to having planets like our own.", "Other stars bound to have planets like our own."] },
+    { "stem": "你想说\"访客可能在数百万年前就来过地球\"(may have done 对过去推测):", "options": ["Visitors may have come to Earth millions of years ago.", "Visitors may came to Earth millions of years ago.", "Visitors may have came to Earth millions of years ago.", "Visitors may coming to Earth millions of years ago."] },
+    { "stem": "你想说\"我们的火箭连最近的恒星都到不了,更别提遥远的星系\"(let alone):", "options": ["Our rockets cannot reach the nearest star, let alone distant galaxies.", "Our rockets cannot reach the nearest star, let alone to distant galaxies.", "Our rockets cannot reach the nearest star, let alone reaching distant galaxies.", "Our rockets cannot reach the nearest star, as well as distant galaxies."] }
+  ],
+  "stage10": [
+    { "kind": "vocab", "stem": "uniquely 的意思是:", "options": ["独特地,唯一地", "普遍地", "勉强地", "偶然地"] },
+    { "kind": "vocab", "stem": "rational 的意思是:", "options": ["理性的,合理的", "情绪化的", "激进的", "地方的"] },
+    { "kind": "grammar", "stem": "\"Other stars are ___ to have planets like ours.\"(be __ to do 表‘必定’)", "stem_cn": "别的恒星必定有像我们这样的行星。", "options": ["bound", "bounded", "binding", "bind"] },
+    { "kind": "grammar", "stem": "\"Visitors ___ have come here millions of years ago.\"(对过去的推测)", "stem_cn": "访客可能在数百万年前来过。", "options": ["may", "will", "shall", "does"] },
+    { "kind": "scenario", "stem": "\"come up against\" 的意思是:", "options": ["遇到,碰到(困难)", "支持…", "放弃…", "制造…"] },
+    { "kind": "scenario", "stem": "\"on average\" 的意思是:", "options": ["平均而言", "完全地", "从不", "立刻"] },
+    { "kind": "reading", "stem": "Why does the writer think intelligent life is bound to exist elsewhere in the universe?", "options": ["The number of planets is so vast that even a tiny fraction developing life makes it a natural part of the universe", "Because scientists have already met aliens", "Because Earth is unique", "Because life is easy to create"], "passage": true },
+    { "kind": "reading", "stem": "What is the greatest obstacle to actually contacting other civilizations?", "options": ["The immense astronomical distances that separate the stars", "The lack of any common language", "The danger of the journey", "The cost of radios"], "passage": true },
+    { "kind": "listening", "stem": "What natural radio frequency could serve as a common 'call sign' across space?", "options": ["The 21-cm wavelength emitted by hydrogen atoms, known to every radio astronomer", "A frequency invented on Earth in the 1920s", "The sound of the sun", "A signal only humans can detect"], "audio": true },
+    { "kind": "listening", "stem": "Without an agreed frequency, what would searching for other intelligences be like?", "options": ["Trying to meet a friend in a big city with no arranged place, wandering the streets by chance", "Reading a clear map", "Following a straight road", "Calling a known phone number"], "audio": true }
+  ]
+}

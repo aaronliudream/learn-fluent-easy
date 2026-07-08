@@ -243,7 +243,7 @@ export default function TeacherClass() {
         {/* ───────── ROSTER ───────── */}
         <TabsContent value="roster" className="mt-5">
           {/* 代建学生账号（没有邮箱的学生，老师代建登录 ID + 密码）*/}
-          <ProvisionedStudents classId={cls.id} readOnly={isArchived} />
+          <ProvisionedStudents classId={cls.id} readOnly={isArchived} onChanged={loadAll} />
           <div className="rounded-3xl border-2 border-border bg-card shadow-tile overflow-hidden">
             <div className="px-5 py-3 border-b border-border flex flex-wrap items-center justify-between gap-2 bg-muted/40">
               <div className="text-sm font-extrabold"><T>👥 学生名单</T></div>

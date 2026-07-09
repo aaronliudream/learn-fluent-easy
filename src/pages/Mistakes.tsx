@@ -87,23 +87,30 @@ const MistakesPage = () => {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (cancelled) return;
-      if (!user) {setSignedIn(false);setLoading(false);return;}
-      setSignedIn(true);
-      const { data, error } = await supabase.
-      from("user_mistakes").
-      // 隐藏 edge 写的薄记录(听力/高中完形):它们只有"选了啥/正确啥",
-      // 已被 hub_listening / senior_cloze 的完整快照取代。旧薄数据无展示价值,不再显示。
-      not("module", "in", "(listening,cloze)").
-      select("*").
-      eq("is_resolved", false).
-      order("next_review_at", { ascending: true }).
-      limit(500);
-      if (cancelled) return;
-      if (error) toast.error(error.message);
-      setItems(data as Mistake[] || []);
-      setLoading(false);
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (cancelled) return;
+        if (!user) { setSignedIn(false); return; }
+        setSignedIn(true);
+        // ⚠️ 顺序铁律:.select() 必须在过滤器(.not/.eq/...)之前——.not 在 FilterBuilder 上,
+        // 放到 .from() 后、.select() 前会运行时报错(from() 返回的 QueryBuilder 无 .not),
+        // 且本段若抛错会卡住 loading。故 select 先行 + 整段 try/catch/finally 兜底。
+        const { data, error } = await supabase.
+        from("user_mistakes").
+        select("*").
+        eq("is_resolved", false).
+        // 隐藏 edge 写的薄记录(听力/高中完形):已被 hub_listening / senior_cloze 完整快照取代。
+        not("module", "in", "(listening,cloze)").
+        order("next_review_at", { ascending: true }).
+        limit(500);
+        if (cancelled) return;
+        if (error) toast.error(error.message);
+        setItems(data as Mistake[] || []);
+      } catch (e) {
+        if (!cancelled) console.warn("[mistakes] load failed", e);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
     })();
     return () => {cancelled = true;stopSpeaking();};
   }, []);

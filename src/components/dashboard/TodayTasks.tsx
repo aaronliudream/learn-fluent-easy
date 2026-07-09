@@ -38,7 +38,7 @@ export function TodayTasks(props: {
       <div className="space-y-2.5">
         {dueCount > 0 && (
           <TaskItem
-            to="/review/today"
+            to="/mistakes"
             tone="warm"
             icon="⏰"
             title="复习今天的错题"

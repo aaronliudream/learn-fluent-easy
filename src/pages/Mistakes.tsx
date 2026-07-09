@@ -87,23 +87,30 @@ const MistakesPage = () => {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (cancelled) return;
-      if (!user) {setSignedIn(false);setLoading(false);return;}
-      setSignedIn(true);
-      const { data, error } = await supabase.
-      from("user_mistakes").
-      // 隐藏 edge 写的薄记录(听力/高中完形):它们只有"选了啥/正确啥",
-      // 已被 hub_listening / senior_cloze 的完整快照取代。旧薄数据无展示价值,不再显示。
-      not("module", "in", "(listening,cloze)").
-      select("*").
-      eq("is_resolved", false).
-      order("next_review_at", { ascending: true }).
-      limit(500);
-      if (cancelled) return;
-      if (error) toast.error(error.message);
-      setItems(data as Mistake[] || []);
-      setLoading(false);
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (cancelled) return;
+        if (!user) { setSignedIn(false); return; }
+        setSignedIn(true);
+        // ⚠️ 顺序铁律:.select() 必须在过滤器(.not/.eq/...)之前——.not 在 FilterBuilder 上,
+        // 放到 .from() 后、.select() 前会运行时报错(from() 返回的 QueryBuilder 无 .not),
+        // 且本段若抛错会卡住 loading。故 select 先行 + 整段 try/catch/finally 兜底。
+        const { data, error } = await supabase.
+        from("user_mistakes").
+        select("*").
+        eq("is_resolved", false).
+        // 隐藏 edge 写的薄记录(听力/高中完形):已被 hub_listening / senior_cloze 完整快照取代。
+        not("module", "in", "(listening,cloze)").
+        order("next_review_at", { ascending: true }).
+        limit(500);
+        if (cancelled) return;
+        if (error) toast.error(error.message);
+        setItems(data as Mistake[] || []);
+      } catch (e) {
+        if (!cancelled) console.warn("[mistakes] load failed", e);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
     })();
     return () => {cancelled = true;stopSpeaking();};
   }, []);
@@ -432,6 +439,49 @@ function MistakeCard({
           </button> :
 
         <div className="mt-3 space-y-2">
+            {/* 阅读/整篇型错题:snapshot.questions[] 存逐题(题干+全选项+正确+作答),照老师端画。
+                普通单题无 questions 数组 → 跳过,走下方 revealedOptions。 */}
+            {Array.isArray(m.snapshot?.questions) && m.snapshot.questions.length > 0 &&
+          <div className="space-y-2 rounded-xl border border-border bg-background/60 p-3">
+                {m.snapshot?.body &&
+            <details className="mb-1">
+                    <summary className="cursor-pointer text-xs font-semibold text-primary">📖 <T>原文</T></summary>
+                    <p className="mt-1 whitespace-pre-wrap text-xs leading-relaxed text-foreground/80">{m.snapshot.body}</p>
+                  </details>
+            }
+                {m.snapshot.questions.map((q: {no?: number;stem?: string;options?: Record<string, unknown>;correct_answer?: string;user_answer?: string;explanation?: string;}, qi: number) => {
+              const qOpts = q?.options && typeof q.options === "object" ?
+              Object.entries(q.options).
+              filter(([, v]) => v != null && String(v).trim() !== "").
+              sort(([a], [b]) => a.localeCompare(b)) : [];
+              const qCorrect = String(q?.correct_answer ?? "").trim();
+              const qPicked = String(q?.user_answer ?? "").trim();
+              return (
+                <div key={qi} className="border-t border-border/60 pt-2 first:border-t-0 first:pt-0">
+                      <div className="text-sm font-semibold text-foreground">{q?.no ? `${q.no}. ` : ""}{q?.stem}</div>
+                      {qOpts.length > 0 &&
+                  <ul className="mt-1 space-y-1">
+                          {qOpts.map(([L, txt]) => {
+                    const isC = L === qCorrect;const isW = L === qPicked && L !== qCorrect;
+                    return (
+                      <li key={L} className="flex items-baseline gap-1.5 text-sm">
+                                <span className={`font-bold ${isC ? "text-emerald-700 dark:text-emerald-300" : isW ? "text-rose-600 dark:text-rose-400" : "text-muted-foreground"}`}>{L}.</span>
+                                <span className={isC ? "font-semibold text-emerald-700 dark:text-emerald-300" : isW ? "text-rose-600 line-through dark:text-rose-400" : "text-foreground/80"}>{String(txt)}</span>
+                                {isC && <span className="text-emerald-600 dark:text-emerald-400">✓</span>}
+                                {isW && <span className="text-[11px] text-rose-500"><T>(你选的)</T></span>}
+                              </li>);
+
+                  })}
+                        </ul>
+                  }
+                      {q?.explanation &&
+                  <div className="mt-1 rounded-lg bg-secondary/60 p-2 text-xs leading-relaxed text-foreground/75">💡 {q.explanation}</div>
+                  }
+                    </div>);
+
+            })}
+              </div>
+          }
             {revealedOptions.length > 0 &&
           <ul className="space-y-1 rounded-xl border border-border bg-background/60 p-3">
                 {revealedOptions.map(([L, txt]) => {

@@ -5,7 +5,7 @@ import type { User } from "@supabase/supabase-js";
 import { PageHeader } from "@/components/PageHeader";
 import {
   BarChart3, Heart, Settings,
-  LogIn, LogOut, Sparkles, ClipboardList, Target, GraduationCap } from
+  LogIn, LogOut, Sparkles, ClipboardList, GraduationCap } from
 "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fetchWeakKnowledgePoints } from "@/lib/knowledgePointMastery";
@@ -18,8 +18,7 @@ type Tile = {to: string;label: string;sub: string;icon: React.ComponentType<{cla
 // 升级会员(/pricing)四个入口按需求隐藏(页面/路由保留,以后可能再启用)。
 const TILES: Tile[] = [
 { to: "/dashboard", label: "学习中心", sub: "总进度 · 各模块掌握度", icon: BarChart3, tone: "from-emerald-500 to-teal-500" },
-{ to: "/review", label: "复习与错题", sub: "FSRS 智能安排今日复习", icon: Target, tone: "from-orange-500 to-rose-500" },
-{ to: "/mistakes", label: "我的错题本", sub: "回看做错的题", icon: ClipboardList, tone: "from-amber-500 to-orange-500" },
+{ to: "/mistakes", label: "我的错题本", sub: "回看做错的题 · 重做掌握", icon: ClipboardList, tone: "from-amber-500 to-orange-500" },
 { to: "/account", label: "账号设置", sub: "邮箱、隐私、数据导出", icon: Settings, tone: "from-slate-600 to-slate-800" }];
 
 

@@ -94,6 +94,16 @@ const MISTAKE_GROUP_LABEL: Record<string, string> = {
 };
 const mistakeGroupLabel = (m: string) => MISTAKE_GROUP_LABEL[m] ?? MODULE_META[m]?.label ?? m;
 
+// 做错时间:UTC → 固定北京时间(UTC+8),不随浏览器时区(湾区测试号与中国老师看到一致);格式 YYYY-MM-DD HH:mm。
+function fmtBeijing(iso: string | null | undefined): string {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+  const b = new Date(d.getTime() + 8 * 3600 * 1000);
+  const p = (n: number) => String(n).padStart(2, "0");
+  return `${b.getUTCFullYear()}-${p(b.getUTCMonth() + 1)}-${p(b.getUTCDate())} ${p(b.getUTCHours())}:${p(b.getUTCMinutes())}`;
+}
+
 const rpc = supabase.rpc.bind(supabase) as (
   fn: string, args?: Record<string, unknown>,
 ) => Promise<{ data: unknown; error: unknown }>;
@@ -383,6 +393,11 @@ export default function TeacherStudent() {
                         <ul className="space-y-3">
                           {rows.map((mk) => (
                             <li key={`${mk.kind}-${mk.id}`} className="rounded-xl border border-border bg-background p-3">
+                              {fmtBeijing(mk.last_wrong_at) && (
+                                <div className="mb-1.5 text-[11px] text-muted-foreground">
+                                  🕒 <T>做错时间</T> {fmtBeijing(mk.last_wrong_at)}
+                                </div>
+                              )}
                               {mk.kind === "plain" ? (
                                 <>
                                   <div className="flex items-start gap-2 text-sm font-semibold">

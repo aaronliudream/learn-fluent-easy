@@ -58,6 +58,21 @@
 ## D10 · 样板选型:初中,1 篇自编分级读物 + 4 题(选择/判断) — ✅ 已定(Aaron 同意)
 **决定**:样板选**初中**学段(素材多、闭环快),`content_type='graded_reader'`,`grade_band='junior'`,自编 1 篇 + 4 道题(MC/TF)。闭环:`/reading` → 进篇 → 答题 → 错题写 `user_mistakes` → 错题本可见 → tsc/build/test 绿。**内容先回 Aaron → web Claude 审核通过再落库。**
 
+## D11 · 样板落地记录(P0 代码已建,内容待审 + 待 Aaron 跑 SQL)— 🟡 待验收
+**已完成(代码,纯技术可直接推)**:
+- 表方案:落地 **D1**(新建 `reading_library` 同构表)+ **D2**(承接 `{q,options,answer,explanation?}` 瘦 schema)。DDL 见 `SQLAA/reading-center-ddl.sql`。
+- 数据层:`src/lib/reading/source.ts`(`listReadings`/`getReading`,`supabase as any` 访问新表,照 `american/data.ts` 先例)。
+- 掌握度:`src/lib/reading/mastery.ts` 薄封装 `recordMastery`/`loadMastery`,module=`reading_center`(**D4**)。
+- 页面:`src/pages/Reading.tsx`(`/reading` 列表,学段 chip 筛)+ `src/pages/ReadingPlay.tsx`(`/reading/:id` 播放)。复用成功:`ExamPaper` 全套原语零改、`StarRating`、`NoCopyGuard`、`useRegisterAssistant`、`celebrateScore`。
+- 路由:`src/App.tsx` 新增 `/reading`、`/reading/:id`(包 `ChineseOnlyRoute`,**未碰任何禁区文件**)。
+- 错题(**D3**):**单一链路**——每题 `recordUnifiedAttempt({module:"reading", item_id:"reading_center:<id>:<qi>", context:{question:题干,explanation}})`,答错入 `user_mistakes`(source_label=篇名→错题本📖 + 教师端 `get_class_weakness` 自动归集),答对自动置 `is_resolved`。**刻意不照抄 junior 的"整篇快照"二次写**:junior 同时写逐题行 + 整篇快照,会在错题本产生重复/空标题卡;D3 只钦定 `recordUnifiedAttempt`,故本实现只走这一条,每道错题=一张可读卡(headline=题干)。
+- `tsc --noEmit` ✅ 通过;`vite build` ✅ 通过(见提交说明)。
+**未做/待办**:
+- 内容审核门:样板篇《The Lost Kitten》+ 4 题为**自编原创**,审稿件 `docs/reading/SAMPLE_REVIEW.md`(镜像 `REVIEWAA/阅读中心样板/`),**须 Aaron/网页版 Claude 审过再落库**。
+- 落库 SQL:`SQLAA/reading-center-ddl.sql`(建表,可先跑)+ `SQLAA/reading-center-seed-sample.sql`(内容,审过再跑)。
+- **闭环真机验证**待 Aaron 跑 SQL 后:`/reading`→进篇→故意答错→错题本可见。CC 侧因新表未落库无法本地跑通全链路,已用 tsc/build 兜底静态验证。
+- D5 的 `reading_attempts`/`reading_completions` 样板阶段**未建**(最小闭环只需 D3+D4),留 P1。
+
 ---
 
 ### 后续 TODO(样板验收后再做,先记账不做)

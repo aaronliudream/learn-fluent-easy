@@ -88,6 +88,7 @@ const MISTAKE_GROUP_LABEL: Record<string, string> = {
   cloze: "完形填空", reading: "阅读理解", junior_cloze: "完形填空",
   gaokao_grammar: "语法", card_quiz: "知识卡", listening: "听力",
   primary_lesson: "课程", primary_chat_quiz: "口语问答", ai_talk_target: "AI 对话",
+  hub_reading: "闯关阅读", hub_listening: "闯关听力",
 };
 const mistakeGroupLabel = (m: string) => MISTAKE_GROUP_LABEL[m] ?? MODULE_META[m]?.label ?? m;
 

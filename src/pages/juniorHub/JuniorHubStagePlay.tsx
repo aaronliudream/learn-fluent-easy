@@ -24,6 +24,7 @@ import { recordJuniorGrammarAttempt } from "@/lib/juniorGrammarFsrs";
 import { awardCoins } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
+import { recordHubMistake } from "@/lib/recordHubMistake";
 import { celebrateScore } from "@/lib/feedback";
 import { toast } from "sonner";
 
@@ -526,7 +527,7 @@ function ListenMcStage({
   grade: number;
   onFinish: () => void;
   onCorrect: (q?: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; optsCn?: (string | null | undefined)[]; optsPhrase?: (string | null | undefined)[]; example?: { en: string; cn: string }; wordId?: string }) => void;
-  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; optsCn?: (string | null | undefined)[]; optsPhrase?: (string | null | undefined)[]; example?: { en: string; cn: string }; wordId?: string }) => void;
+  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; optsCn?: (string | null | undefined)[]; optsPhrase?: (string | null | undefined)[]; example?: { en: string; cn: string }; wordId?: string; picked?: number }) => void;
 }) {
   const [idx, setIdx] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
@@ -578,7 +579,7 @@ function ListenMcStage({
         </div>,
       );
     } else {
-      onWrong(q);
+      onWrong({ ...q, picked: optIdx });
       setFeedback(
         <div className="feedback-box warning">
           💡 正确答案：<strong>{q.opts[q.answer]}</strong>
@@ -1050,7 +1051,7 @@ function FinalQuizStage({
         </div>,
       );
     } else {
-      onWrong({ ...q, unitTitle });
+      onWrong({ ...q, unitTitle, picked: optIdx });
       setFeedback(
         <div className="feedback-box warning">
           💡 正确答案：<strong>{q.opts[q.answer]}</strong>
@@ -2177,7 +2178,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
             publisher={publisher}
             markComplete={() => completeStage(unitId, stageIdx)}
             onFinish={handleFinish}
-            onWrong={(q) =>
+            onWrong={(q) => {
               addMistake({
                 q: q.q,
                 opts: q.opts,
@@ -2185,8 +2186,12 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
                 point: q.point ?? "阅读",
                 unitId,
                 unitTitle: unit.title,
-              })
-            }
+              });
+              void recordHubMistake({
+                grade, module: "hub_reading", unitId, unitTitle: unit.title,
+                stem: q.q, opts: q.opts, answerIdx: q.answer, pickedIdx: q.picked, explanation: q.explanation,
+              });
+            }}
           />
         );
       case "cloze":
@@ -2213,7 +2218,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
             markComplete={() => completeStage(unitId, stageIdx)}
             onFinish={handleFinish}
             onCorrect={addStar}
-            onWrong={(q) =>
+            onWrong={(q) => {
               addMistake({
                 q: `听力：${q.audio}`,
                 opts: q.opts,
@@ -2222,8 +2227,12 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
                 audio: q.audio,
                 unitId,
                 unitTitle: unit.title,
-              })
-            }
+              });
+              void recordHubMistake({
+                grade, module: "hub_listening", unitId, unitTitle: unit.title,
+                stem: `听力：${q.audio}`, opts: q.opts, answerIdx: q.answer, pickedIdx: q.picked,
+              });
+            }}
           />
         );
       case "writing":

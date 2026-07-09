@@ -105,7 +105,18 @@ const MistakesPage = () => {
         limit(500);
         if (cancelled) return;
         if (error) toast.error(error.message);
-        setItems(data as Mistake[] || []);
+        // 阅读:同一篇会同时产生两类行——① pick() 每错一题经 edge 写的「薄行」
+        // (module=reading、无 snapshot、source_label=篇名,题干/选项全空);② handleSubmit
+        // 直写的「整篇完整快照行」(source_key ..._reading_passage_...,snapshot.questions[] 全)。
+        // 薄行会让一篇冒出一堆题干/选项空白、只剩"正确答案/你选的"的重复卡片。此处按内容过滤,
+        // 只保留有 snapshot.questions 的整篇行——与老师端 get_student_mistakes 源3A 同口径
+        // (source_key like '%_reading_passage_%')。非阅读模块不受影响。
+        const rows = (data as Mistake[] || []).filter((m) =>
+        m.module === "reading" ?
+        Array.isArray(m.snapshot?.questions) && m.snapshot.questions.length > 0 :
+        true
+        );
+        setItems(rows);
       } catch (e) {
         if (!cancelled) console.warn("[mistakes] load failed", e);
       } finally {

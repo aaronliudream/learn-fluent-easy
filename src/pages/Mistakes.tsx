@@ -7,7 +7,7 @@ import {
 import { PageHeader } from "@/components/PageHeader";
 import { T } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
-import { speak as speakTTS, stopSpeaking } from "@/lib/speak";
+import { speak as speakTTS, speakFromUrl, stopSpeaking } from "@/lib/speak";
 import { getAlexVoice } from "@/lib/alexVoice";
 import { toast } from "sonner";
 import TutorChat from "@/components/tutor/TutorChat";
@@ -39,7 +39,9 @@ const MODULE_META: Record<string, {label: string;emoji: string;color: string;}> 
   grammar: { label: "语法错题", emoji: "🔤", color: "from-rose-400 to-pink-500" },
   senior_grammar: { label: "语法错题", emoji: "🔤", color: "from-rose-400 to-pink-500" },
   hub_reading: { label: "闯关阅读", emoji: "📖", color: "from-emerald-400 to-green-500" },
-  hub_listening: { label: "闯关听力", emoji: "🎧", color: "from-sky-400 to-blue-500" }
+  hub_listening: { label: "听力错题", emoji: "🎧", color: "from-sky-400 to-blue-500" },
+  senior_cloze: { label: "完形错题", emoji: "🧩", color: "from-amber-400 to-orange-500" },
+  junior_cloze: { label: "完形错题", emoji: "🧩", color: "from-amber-400 to-orange-500" }
 };
 
 const moduleMeta = (m: string) =>
@@ -91,6 +93,9 @@ const MistakesPage = () => {
       setSignedIn(true);
       const { data, error } = await supabase.
       from("user_mistakes").
+      // 隐藏 edge 写的薄记录(听力/高中完形):它们只有"选了啥/正确啥",
+      // 已被 hub_listening / senior_cloze 的完整快照取代。旧薄数据无展示价值,不再显示。
+      not("module", "in", "(listening,cloze)").
       select("*").
       eq("is_resolved", false).
       order("next_review_at", { ascending: true }).
@@ -162,12 +167,17 @@ const MistakesPage = () => {
   const playPhrase = async (m: Mistake) => {
     // For target words: play the example sentence with Alex voice.
     // For other mistakes: play the correct_answer (English) if it looks like English.
+    // 听力优先播真音频文件(snapshot.audio_url,如初中听力);无则朗读文本(TTS 现场合成)。
+    const audioUrl = m.snapshot?.audio_url as string | undefined;
     const text = m.module === "ai_talk_target" ?
     m.snapshot?.alex_used_sentence || m.snapshot?.example_en || m.snapshot?.phrase || "" :
     m.snapshot?.audio || m.snapshot?.source_sentence || m.snapshot?.phrase || "";
-    if (!text) {toast.info("没有可朗读的内容");return;}
+    if (!audioUrl && !text) {toast.info("没有可朗读的内容");return;}
     setPlayingId(m.id);
-    try {await speakTTS(text, { voiceId: getAlexVoice() });} catch {/* noop */}
+    try {
+      if (audioUrl) await speakFromUrl(audioUrl);
+      else await speakTTS(text, { voiceId: getAlexVoice() });
+    } catch {/* noop */}
     setPlayingId((cur) => cur === m.id ? null : cur);
   };
 
@@ -510,6 +520,7 @@ function RedoQuestionModal({
   const stem = String(mistake.snapshot?.stem || mistake.question || "").replace(/\\n/g, "\n");
   const explanation = mistake.explanation || mistake.snapshot?.explanation || "";
   const audio = mistake.snapshot?.audio ? String(mistake.snapshot.audio) : "";
+  const audioUrl = mistake.snapshot?.audio_url ? String(mistake.snapshot.audio_url) : "";
   const [picked, setPicked] = useState<string | null>(null);
   const [resolved, setResolved] = useState(false);
   const solved = picked === correct;
@@ -538,10 +549,10 @@ function RedoQuestionModal({
 
         <div className="mb-4 whitespace-pre-wrap text-base font-semibold leading-relaxed text-foreground">{stem}</div>
 
-        {audio &&
+        {(audioUrl || audio) &&
         <button
           type="button"
-          onClick={() => void speakTTS(audio, { voiceId: getAlexVoice() })}
+          onClick={() => void (audioUrl ? speakFromUrl(audioUrl) : speakTTS(audio, { voiceId: getAlexVoice() }))}
           className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-sky-100 px-4 py-2 text-sm font-semibold text-sky-700 hover:bg-sky-200 dark:bg-sky-500/20 dark:text-sky-300">
           <Volume2 className="size-4" /> <T>🔊 重听录音</T>
         </button>

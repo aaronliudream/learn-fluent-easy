@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { toast } from "sonner";
 import { Loader2, Clock, ChevronDown, ChevronRight, Pencil, Volume2 } from "lucide-react";
-import { speak as speakTTS } from "@/lib/speak";
+import { speak as speakTTS, speakFromUrl } from "@/lib/speak";
 import { getAlexVoice } from "@/lib/alexVoice";
 
 /**
@@ -87,10 +87,10 @@ const MODULE_META: Record<string, { label: string; emoji: string; tone: string }
 const MODULE_ORDER = ["primary", "junior", "senior", "american"];
 // 错题分组标题:完形/阅读用中文,其余用板块名或原 module 值
 const MISTAKE_GROUP_LABEL: Record<string, string> = {
-  cloze: "完形填空", reading: "阅读理解", junior_cloze: "完形填空",
+  cloze: "完形填空", reading: "阅读理解", junior_cloze: "完形填空", senior_cloze: "完形填空",
   gaokao_grammar: "语法", card_quiz: "知识卡", listening: "听力",
   primary_lesson: "课程", primary_chat_quiz: "口语问答", ai_talk_target: "AI 对话",
-  hub_reading: "闯关阅读", hub_listening: "闯关听力",
+  hub_reading: "闯关阅读", hub_listening: "听力",
 };
 const mistakeGroupLabel = (m: string) => MISTAKE_GROUP_LABEL[m] ?? MODULE_META[m]?.label ?? m;
 
@@ -389,15 +389,19 @@ export default function TeacherStudent() {
                                     <span className="min-w-0 flex-1">
                                       {mk.question || <span className="italic text-muted-foreground"><T>（无题目快照）</T></span>}
                                     </span>
-                                    {(mk.snapshot as { audio?: string } | null)?.audio && (
-                                      <button
-                                        type="button"
-                                        onClick={() => void speakTTS(String((mk.snapshot as { audio?: string }).audio), { voiceId: getAlexVoice() })}
-                                        className="grid size-7 flex-shrink-0 place-items-center rounded-full bg-sky-100 text-sky-700 hover:bg-sky-200 dark:bg-sky-500/20 dark:text-sky-300"
-                                        aria-label="重听录音">
-                                        <Volume2 className="size-3.5" />
-                                      </button>
-                                    )}
+                                    {(() => {
+                                      const snap = mk.snapshot as { audio?: string; audio_url?: string } | null;
+                                      if (!snap?.audio && !snap?.audio_url) return null;
+                                      return (
+                                        <button
+                                          type="button"
+                                          onClick={() => void (snap.audio_url ? speakFromUrl(snap.audio_url) : speakTTS(String(snap.audio), { voiceId: getAlexVoice() }))}
+                                          className="grid size-7 flex-shrink-0 place-items-center rounded-full bg-sky-100 text-sky-700 hover:bg-sky-200 dark:bg-sky-500/20 dark:text-sky-300"
+                                          aria-label="重听录音">
+                                          <Volume2 className="size-3.5" />
+                                        </button>
+                                      );
+                                    })()}
                                   </div>
                                   <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
                                     <span className="text-rose-600 dark:text-rose-400"><T>你的答案</T>:{mk.user_answer ?? "—"}</span>

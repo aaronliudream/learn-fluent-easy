@@ -10,6 +10,7 @@ import { bumpPetSkill } from "@/lib/petSkills";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
+import { recordZoneMistake, answerToIdx } from "@/lib/recordZoneMistake";
 import { getListeningExerciseById, type GaokaoListeningExercise, type GaokaoListeningQuestion } from "@/lib/gaokaoContent";
 
 export default function GaokaoListeningPlay() {
@@ -94,6 +95,22 @@ export default function GaokaoListeningPlay() {
       correct_answer: String(e.questions[idx].answer),
       context: { exercise_id: id, question_idx: idx, explanation: e.questions[idx].explanation },
     }).catch(() => {});
+    // 额外:完整快照写统一错题本(题干+全选项+音频+作答),做对自动移出。纯新增,失败只 warn。
+    {
+      const q = e.questions[idx];
+      void recordZoneMistake({
+        module: "hub_listening",
+        sourceKeyBase: `${id}:${idx}`,
+        isCorrect: ok,
+        stem: q.q,
+        options: q.options,
+        correctIdx: answerToIdx(q.answer, q.options),
+        pickedIdx: answerToIdx(letter, q.options),
+        audio: e.transcript,
+        explanation: q.explanation,
+        sourceLabel: e.title,
+      });
+    }
     if (Object.keys(picks).length + 1 >= e.questions.length) {
       const updated = { ...picks, [idx]: letter };
       const correct = e.questions.filter((q, i) => updated[i] && checkAnswer(q, updated[i])).length;

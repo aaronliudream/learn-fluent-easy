@@ -164,7 +164,7 @@ const MistakesPage = () => {
     // For other mistakes: play the correct_answer (English) if it looks like English.
     const text = m.module === "ai_talk_target" ?
     m.snapshot?.alex_used_sentence || m.snapshot?.example_en || m.snapshot?.phrase || "" :
-    m.snapshot?.source_sentence || m.snapshot?.phrase || "";
+    m.snapshot?.audio || m.snapshot?.source_sentence || m.snapshot?.phrase || "";
     if (!text) {toast.info("没有可朗读的内容");return;}
     setPlayingId(m.id);
     try {await speakTTS(text, { voiceId: getAlexVoice() });} catch {/* noop */}
@@ -509,6 +509,7 @@ function RedoQuestionModal({
   const correct = frozenCorrect(mistake);
   const stem = String(mistake.snapshot?.stem || mistake.question || "").replace(/\\n/g, "\n");
   const explanation = mistake.explanation || mistake.snapshot?.explanation || "";
+  const audio = mistake.snapshot?.audio ? String(mistake.snapshot.audio) : "";
   const [picked, setPicked] = useState<string | null>(null);
   const [resolved, setResolved] = useState(false);
   const solved = picked === correct;
@@ -536,6 +537,15 @@ function RedoQuestionModal({
         </div>
 
         <div className="mb-4 whitespace-pre-wrap text-base font-semibold leading-relaxed text-foreground">{stem}</div>
+
+        {audio &&
+        <button
+          type="button"
+          onClick={() => void speakTTS(audio, { voiceId: getAlexVoice() })}
+          className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-sky-100 px-4 py-2 text-sm font-semibold text-sky-700 hover:bg-sky-200 dark:bg-sky-500/20 dark:text-sky-300">
+          <Volume2 className="size-4" /> <T>🔊 重听录音</T>
+        </button>
+        }
 
         <ul className="space-y-2">
           {pairs.map(([L, txt]) => {

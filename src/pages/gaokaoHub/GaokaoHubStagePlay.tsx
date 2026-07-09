@@ -950,7 +950,7 @@ export default function GaokaoHubStagePlay({ unitId, stageIdx, onComplete, onBac
               });
               void recordHubMistake({
                 grade, module: "hub_listening", unitId, unitTitle: unit.title,
-                stem: `听力：${q.audio}`, opts: q.opts, answerIdx: q.answer, pickedIdx: q.picked,
+                stem: q.audio, opts: q.opts, answerIdx: q.answer, pickedIdx: q.picked, audio: q.audio,
               });
             }}
           />

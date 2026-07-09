@@ -8,7 +8,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { toast } from "sonner";
-import { Loader2, Clock, ChevronDown, ChevronRight, Pencil } from "lucide-react";
+import { Loader2, Clock, ChevronDown, ChevronRight, Pencil, Volume2 } from "lucide-react";
+import { speak as speakTTS } from "@/lib/speak";
+import { getAlexVoice } from "@/lib/alexVoice";
 
 /**
  * 教师端 · 学生详情只读页 /teacher/class/:id/student/:studentId
@@ -383,8 +385,19 @@ export default function TeacherStudent() {
                             <li key={`${mk.kind}-${mk.id}`} className="rounded-xl border border-border bg-background p-3">
                               {mk.kind === "plain" ? (
                                 <>
-                                  <div className="text-sm font-semibold">
-                                    {mk.question || <span className="italic text-muted-foreground"><T>（无题目快照）</T></span>}
+                                  <div className="flex items-start gap-2 text-sm font-semibold">
+                                    <span className="min-w-0 flex-1">
+                                      {mk.question || <span className="italic text-muted-foreground"><T>（无题目快照）</T></span>}
+                                    </span>
+                                    {(mk.snapshot as { audio?: string } | null)?.audio && (
+                                      <button
+                                        type="button"
+                                        onClick={() => void speakTTS(String((mk.snapshot as { audio?: string }).audio), { voiceId: getAlexVoice() })}
+                                        className="grid size-7 flex-shrink-0 place-items-center rounded-full bg-sky-100 text-sky-700 hover:bg-sky-200 dark:bg-sky-500/20 dark:text-sky-300"
+                                        aria-label="重听录音">
+                                        <Volume2 className="size-3.5" />
+                                      </button>
+                                    )}
                                   </div>
                                   <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
                                     <span className="text-rose-600 dark:text-rose-400"><T>你的答案</T>:{mk.user_answer ?? "—"}</span>

@@ -13,6 +13,7 @@ import {
 } from "@/lib/juniorGrammarQuestionMastery";
 import { recordJuniorGrammarAttempt, type JuniorGrammarErrorReason } from "@/lib/juniorGrammarFsrs";
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
+import { recordSeniorGrammarMistake } from "@/lib/seniorGrammarMistake";
 import { awardForCorrect, notifyWrong } from "@/lib/coins";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { T } from "@/i18n/T";
@@ -75,6 +76,8 @@ export default function UnitGrammarGroupWalk({
     if (answered || !activeQ) return;
     setAnswered(true);
     const isOk = res.kind === "correct" || res.kind === "acceptable";
+    // 块②:补写统一错题本(新式单元走本组件,此前漏写)。做对自动移出。
+    void recordSeniorGrammarMistake({ question: activeQ, result: res, isCorrect: isOk, sourceLabel: group.title });
     void recordGrammarQuestionMastery(activeQ.id, isOk);
     void recordJuniorGrammarAttempt({
       pointId: group.pointId,

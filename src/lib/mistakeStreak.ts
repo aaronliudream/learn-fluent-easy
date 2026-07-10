@@ -42,3 +42,13 @@ export async function bumpMistakeCorrect(
 export function bjToday(): string {
   return new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Shanghai" });
 }
+
+/** ISO 时间 → 北京时间(UTC+8)`YYYY-MM-DD HH:mm`。用于错题卡显示做错时间。 */
+export function bjDateTime(iso: string | null | undefined): string {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+  const date = d.toLocaleDateString("en-CA", { timeZone: "Asia/Shanghai" });
+  const time = d.toLocaleTimeString("en-GB", { timeZone: "Asia/Shanghai", hour: "2-digit", minute: "2-digit" });
+  return `${date} ${time}`;
+}

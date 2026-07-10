@@ -42,6 +42,7 @@ export function QuizRunner({
   items,
   onAnswer,
   onComplete,
+  onRecordMistake,
   speakStem = false,
   header,
   suppressFinish = false,
@@ -49,6 +50,8 @@ export function QuizRunner({
   items: QuizItem[];
   onAnswer: (id: string, isCorrect: boolean) => void;
   onComplete: (scorePct: number, wrongIds: string[]) => void;
+  /** 错题本记录(独立于 onAnswer/SRS):做错入册、做对走连对移出。纯新增,不传则不记。 */
+  onRecordMistake?: (item: QuizItem, picked: number | null, isCorrect: boolean) => void;
   /** choice 题干朗读(听力关用);reveal 参考答案总是可朗读。 */
   speakStem?: boolean;
   header?: React.ReactNode;
@@ -111,7 +114,8 @@ export function QuizRunner({
     if (ok) setCorrectCount((c) => c + 1);
     else wrongIdsRef.current.push(item.id);
     onAnswer(item.id, ok);
-  }, [item, answered, idx, maxIdx, onAnswer]);
+    onRecordMistake?.(item, i, ok); // 错题本(独立于 SRS;⑤-B 再补 reveal 自评钩子)
+  }, [item, answered, idx, maxIdx, onAnswer, onRecordMistake]);
 
   const selfGrade = useCallback((ok: boolean) => {
     if (item.kind !== "reveal") return;

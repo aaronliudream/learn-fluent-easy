@@ -7,6 +7,7 @@ import { T } from "@/i18n/T";
 import { QuizRunner, questionsToItems } from "@/components/american/QuizRunner";
 import { speakUS, stopSpeaking, unlockAmericanAudio } from "@/lib/american/audio";
 import { markStageComplete, recordMastery, type LessonBundle } from "@/lib/american/data";
+import { recordAmericanMistake, americanLessonLabel } from "@/lib/american/americanMistake";
 
 export function AmericanListeningStage({ bundle, onDone }: { bundle: LessonBundle; onDone?: () => void }) {
   const qs = useMemo(() => bundle.questions.filter((q) => q.stage === 8), [bundle]);
@@ -55,5 +56,7 @@ export function AmericanListeningStage({ bundle, onDone }: { bundle: LessonBundl
     </div>
   );
 
-  return <QuizRunner items={items} onAnswer={onAnswer} onComplete={onComplete} speakStem header={header} />;
+  const label = americanLessonLabel(bundle.lesson);
+  return <QuizRunner items={items} onAnswer={onAnswer} onComplete={onComplete}
+    onRecordMistake={(it, picked, ok) => recordAmericanMistake(it, picked, ok, label)} speakStem header={header} />;
 }

@@ -77,6 +77,8 @@ export async function recordHubMistake(p: {
           ...(p.audio ? { audio: p.audio } : {}),
         },
         is_resolved: false,
+        correct_streak: 0,
+        last_correct_date: null,
         last_wrong_at: new Date().toISOString(),
       },
       { onConflict: "user_id,module,source_key" },

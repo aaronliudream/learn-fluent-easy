@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  Loader2, Sparkles, Volume2, Play, Star, Check, Trash2, Search,
+  Loader2, Sparkles, Volume2, Play, Star, Search,
   BookOpen, AlertCircle, Filter, Trophy, MessageCircleQuestion, Wand2, X, RotateCw } from
 "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
@@ -9,6 +9,7 @@ import { T } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
 import { speak as speakTTS, speakFromUrl, stopSpeaking } from "@/lib/speak";
 import { getAlexVoice } from "@/lib/alexVoice";
+import { bumpMistakeCorrect, bjToday, type StreakResult } from "@/lib/mistakeStreak";
 import { toast } from "sonner";
 import TutorChat from "@/components/tutor/TutorChat";
 
@@ -25,6 +26,8 @@ type Mistake = {
   wrong_count: number;
   is_resolved: boolean;
   is_starred: boolean;
+  correct_streak?: number;
+  last_correct_date?: string | null;
   last_wrong_at: string;
   next_review_at: string;
 };
@@ -159,27 +162,28 @@ const MistakesPage = () => {
     await supabase.from("user_mistakes").update({ is_starred: next }).eq("id", m.id);
   };
 
-  const markResolved = async (m: Mistake) => {
-    const wasLast = items.length <= 1;
-    setItems((prev) => prev.filter((x) => x.id !== m.id));
-    await supabase.from("user_mistakes").update({ is_resolved: true }).eq("id", m.id);
-    // 攻克错题最有价值——给 3 星币 + 宠物开心反应
-    try {
-      const c = await import("@/lib/coins");
-      await c.awardCoins(3, "mistake_resolved");
-      c.petReact("happy", { coins: 3 });
-    } catch {/* noop */}
-    if (wasLast) {
-      toast.success("🎉 错题本清空！", { description: "全部攻克，复习队列已清零！" });
+  // 重做做对 → 跨3天连对累计(全站唯一移出途径)。streak>=3 才移出;返回结果供弹窗显示。
+  const handleRedoCorrect = async (m: Mistake): Promise<StreakResult | null> => {
+    const res = await bumpMistakeCorrect(m.module, m.source_key);
+    if (!res) return null;
+    if (res.is_resolved) {
+      const wasLast = items.length <= 1;
+      setItems((prev) => prev.filter((x) => x.id !== m.id));
+      // 彻底攻克(跨3天连对)——给 3 星币 + 宠物开心反应 + 撒花
+      try {
+        const c = await import("@/lib/coins");
+        await c.awardCoins(3, "mistake_resolved");
+        c.petReact("happy", { coins: 3 });
+      } catch {/* noop */}
       import("@/lib/feedback").then((f) => f.fireEmojiConfetti({ count: 60, vibrate: true }));
-    } else {
-      toast.success("已掌握 ✨", { description: "从复习队列移除" });
+      if (wasLast) toast.success("🎉 错题本清空！", { description: "跨 3 天连对，全部攻克！" });
+    } else if (!res.already_today) {
+      // 连对 +1(未满 3)→ 更新卡片进度
+      setItems((prev) => prev.map((x) => x.id === m.id
+        ? { ...x, correct_streak: res.correct_streak, last_correct_date: bjToday() }
+        : x));
     }
-  };
-
-  const removeOne = async (m: Mistake) => {
-    setItems((prev) => prev.filter((x) => x.id !== m.id));
-    await supabase.from("user_mistakes").delete().eq("id", m.id);
+    return res;
   };
 
   const playPhrase = async (m: Mistake) => {
@@ -279,8 +283,6 @@ const MistakesPage = () => {
             playing={playingId === m.id}
             onPlay={() => playPhrase(m)}
             onStar={() => toggleStar(m)}
-            onResolve={() => markResolved(m)}
-            onRemove={() => removeOne(m)}
             onAskTutor={() => setTutorFor(m)}
             onAskAI={() => setAiFor(m)}
             onRedo={isRedoable(m) ? () => setRedoFor(m) : undefined} />
@@ -312,7 +314,7 @@ const MistakesPage = () => {
       {redoFor &&
       <RedoQuestionModal
         mistake={redoFor}
-        onResolved={() => {markResolved(redoFor);}}
+        onResolved={() => handleRedoCorrect(redoFor)}
         onClose={() => setRedoFor(null)} />
       }
     </main>);
@@ -350,23 +352,12 @@ function EmptyState({ tab }: {tab: ModuleKey;}) {
 }
 
 function MistakeCard({
-  m, playing, onPlay, onStar, onResolve, onRemove, onAskTutor, onAskAI, onRedo
-
-
-
-
-
-
-
-
-
-}: {m: Mistake;playing: boolean;onPlay: () => void;onStar: () => void;onResolve: () => void;onRemove: () => void;onAskTutor: () => void;onAskAI: () => void;onRedo?: () => void;}) {
-  const [revealed, setRevealed] = useState(false);
+  m, playing, onPlay, onStar, onAskTutor, onAskAI, onRedo
+}: {m: Mistake;playing: boolean;onPlay: () => void;onStar: () => void;onAskTutor: () => void;onAskAI: () => void;onRedo?: () => void;}) {
   const meta = moduleMeta(m.module);
-  // 静态查看区「全部选项」展示(有 options 快照才有;正确标绿✓、当时错选标红划掉)。
-  const revealedOptions = useMemo(() => optionPairs(m), [m]);
-  const revealedCorrect = frozenCorrect(m);
-  const revealedUser = String(m.user_answer ?? "").trim();
+  // 错题本永远藏答案:未掌握(还在册)只显示题干 + 纯选项,不含任何正确/你选标记/解析。
+  // 答案仅在「重做答对」那一刻由 RedoQuestionModal 揭晓;卡片刷新/下次再看又藏回去。
+  const plainOptions = useMemo(() => optionPairs(m), [m]);
   const dueIn = useMemo(() => {
     const ms = new Date(m.next_review_at).getTime() - Date.now();
     if (ms <= 0) return { text: "待复习", urgent: true };
@@ -384,12 +375,6 @@ function MistakeCard({
   m.module === "ai_talk_target" ?
   m.correct_answer :
   m.snapshot?.question_cn || null;
-
-  const sourceSentence =
-  m.snapshot?.alex_used_sentence ||
-  m.snapshot?.example_en ||
-  m.snapshot?.source_sentence ||
-  null;
 
   // 🔊 只在真有可朗读内容时显示——镜像 playPhrase 实际会播的来源(真音频/TTS文本/例句/短语)。
   // 语法错题等无 audio 的条目不再画按钮(此前无差别显示,点了报「没有可朗读的内容」)。
@@ -416,14 +401,11 @@ function MistakeCard({
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0 flex-1">
             <div className="text-xl font-extrabold leading-snug text-foreground">{headline}</div>
-            {subline && !revealed &&
+            {/* subline:仅显示题目本身的中文提问;target-word 的 subline=正确释义(答案)→ 藏。 */}
+            {subline && m.module !== "ai_talk_target" &&
             <div className="mt-1 text-sm text-muted-foreground">{subline}</div>
             }
-            {sourceSentence &&
-            <div className="mt-2 rounded-xl bg-secondary/60 px-3 py-2 text-sm italic leading-snug text-foreground/85">
-                "{sourceSentence}"
-              </div>
-            }
+            {/* 例句/原文对应句会泄漏答案 → 藏(🔊 仍可听,听力/朗读本就是重做检验的一部分)。 */}
           </div>
           <div className="flex flex-col items-end gap-2">
             {playable &&
@@ -451,99 +433,58 @@ function MistakeCard({
           </div>
         </div>
 
-        {/* Reveal answer */}
-        {!revealed ?
-        <button
-          onClick={() => setRevealed(true)}
-          className="mt-3 w-full rounded-xl border border-dashed border-primary/40 bg-primary/5 py-2 text-sm font-semibold text-primary transition hover:bg-primary/10">
-          
-            👆 <T>点击查看答案与解析</T>
-          </button> :
-
+        {/* 未掌握错题:永远只显示题干 + 纯选项(无正确/你选标记、无解析、无原文)。
+            答案只在「重做答对」瞬间由 RedoQuestionModal 揭晓;卡片平时/刷新后始终是藏答案态,
+            防止学生看过答案后照抄绕过「跨 3 天连对」。老师端不受影响(照旧显示完整快照)。 */}
         <div className="mt-3 space-y-2">
-            {/* 阅读/整篇型错题:snapshot.questions[] 存逐题(题干+全选项+正确+作答),照老师端画。
-                普通单题无 questions 数组 → 跳过,走下方 revealedOptions。 */}
-            {Array.isArray(m.snapshot?.questions) && m.snapshot.questions.length > 0 &&
+          {/* 整篇型(阅读/完形):逐题只显示题干 + 纯选项 */}
+          {Array.isArray(m.snapshot?.questions) && m.snapshot.questions.length > 0 &&
           <div className="space-y-2 rounded-xl border border-border bg-background/60 p-3">
-                {m.snapshot?.body &&
-            <details className="mb-1">
-                    <summary className="cursor-pointer text-xs font-semibold text-primary">📖 <T>原文</T></summary>
-                    <p className="mt-1 whitespace-pre-wrap text-xs leading-relaxed text-foreground/80">{m.snapshot.body}</p>
-                  </details>
-            }
-                {m.snapshot.questions.map((q: {no?: number;stem?: string;options?: Record<string, unknown>;correct_answer?: string;user_answer?: string;explanation?: string;}, qi: number) => {
+              {m.snapshot.questions.map((q: {no?: number;stem?: string;options?: Record<string, unknown>;}, qi: number) => {
               const qOpts = q?.options && typeof q.options === "object" ?
               Object.entries(q.options).
               filter(([, v]) => v != null && String(v).trim() !== "").
               sort(([a], [b]) => a.localeCompare(b)) : [];
-              const qCorrect = String(q?.correct_answer ?? "").trim();
-              const qPicked = String(q?.user_answer ?? "").trim();
               return (
                 <div key={qi} className="border-t border-border/60 pt-2 first:border-t-0 first:pt-0">
-                      <div className="text-sm font-semibold text-foreground">{q?.no ? `${q.no}. ` : ""}{q?.stem}</div>
-                      {qOpts.length > 0 &&
-                  <ul className="mt-1 space-y-1">
-                          {qOpts.map(([L, txt]) => {
-                    const isC = L === qCorrect;const isW = L === qPicked && L !== qCorrect;
-                    return (
-                      <li key={L} className="flex items-baseline gap-1.5 text-sm">
-                                <span className={`font-bold ${isC ? "text-emerald-700 dark:text-emerald-300" : isW ? "text-rose-600 dark:text-rose-400" : "text-muted-foreground"}`}>{L}.</span>
-                                <span className={isC ? "font-semibold text-emerald-700 dark:text-emerald-300" : isW ? "text-rose-600 line-through dark:text-rose-400" : "text-foreground/80"}>{String(txt)}</span>
-                                {isC && <span className="text-emerald-600 dark:text-emerald-400">✓</span>}
-                                {isW && <span className="text-[11px] text-rose-500"><T>(你选的)</T></span>}
-                              </li>);
-
-                  })}
-                        </ul>
-                  }
-                      {q?.explanation &&
-                  <div className="mt-1 rounded-lg bg-secondary/60 p-2 text-xs leading-relaxed text-foreground/75">💡 {q.explanation}</div>
-                  }
-                    </div>);
+                    <div className="text-sm font-semibold text-foreground">{q?.no ? `${q.no}. ` : ""}{q?.stem}</div>
+                    {qOpts.length > 0 &&
+                <ul className="mt-1 space-y-1">
+                        {qOpts.map(([L, txt]) =>
+                  <li key={L} className="flex items-baseline gap-1.5 text-sm text-foreground/80">
+                            <span className="font-bold text-muted-foreground">{L}.</span>
+                            <span>{String(txt)}</span>
+                          </li>
+                  )}
+                      </ul>
+                }
+                  </div>);
 
             })}
-              </div>
+            </div>
           }
-            {revealedOptions.length > 0 &&
+          {/* 普通单题:纯选项 */}
+          {plainOptions.length > 0 &&
           <ul className="space-y-1 rounded-xl border border-border bg-background/60 p-3">
-                {revealedOptions.map(([L, txt]) => {
-              const isCorrect = L === revealedCorrect;
-              const isWrongPick = L === revealedUser && L !== revealedCorrect;
-              return (
-                <li key={L} className="flex items-baseline gap-1.5 text-sm">
-                      <span className={`font-bold ${isCorrect ? "text-emerald-700 dark:text-emerald-300" : isWrongPick ? "text-rose-600 dark:text-rose-400" : "text-muted-foreground"}`}>{L}.</span>
-                      <span className={isCorrect ? "font-semibold text-emerald-700 dark:text-emerald-300" : isWrongPick ? "text-rose-600 line-through dark:text-rose-400" : "text-foreground/80"}>{txt}</span>
-                      {isCorrect && <span className="text-emerald-600 dark:text-emerald-400">✓</span>}
-                      {isWrongPick && <span className="text-[11px] text-rose-500"><T>(你选的)</T></span>}
-                    </li>);
-
-            })}
-              </ul>
+              {plainOptions.map(([L, txt]) =>
+            <li key={L} className="flex items-baseline gap-1.5 text-sm text-foreground/80">
+                  <span className="font-bold text-muted-foreground">{L}.</span>
+                  <span>{txt}</span>
+                </li>
+            )}
+            </ul>
           }
-            {m.correct_answer &&
-          <div className="rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-3 text-sm text-emerald-900 dark:bg-emerald-500/10 dark:text-emerald-300">
-                <span className="text-[10px] font-bold uppercase tracking-wider opacity-70">✓ <T>正确答案</T></span>
-                <div className="mt-1 font-semibold">{m.correct_answer}</div>
-              </div>
-          }
-            {m.user_answer &&
-          <div className="rounded-xl border-l-4 border-rose-500 bg-rose-50 p-3 text-sm text-rose-900 dark:bg-rose-500/10 dark:text-rose-300">
-                <span className="text-[10px] font-bold uppercase tracking-wider opacity-70">✕ <T>你当时选的</T></span>
-                <div className="mt-1">{m.user_answer}</div>
-              </div>
-          }
-            {m.explanation &&
-          <div className="rounded-xl bg-secondary/60 p-3 text-sm leading-relaxed text-foreground/80">
-                💡 {m.explanation}
-              </div>
-          }
-          </div>
-        }
+        </div>
 
         {/* Footer actions */}
         <div className="mt-3 flex items-center justify-between gap-2 border-t border-border/60 pt-3 text-xs">
-          <span className="text-muted-foreground">
-            <T>错过</T> <span className="font-bold text-foreground">{m.wrong_count}</span> <T>次</T>
+          <span className="flex items-center gap-2 text-muted-foreground">
+            <span><T>错过</T> <span className="font-bold text-foreground">{m.wrong_count}</span> <T>次</T></span>
+            <span className="text-emerald-600 dark:text-emerald-400">
+              · <T>巩固</T> <span className="font-bold">{m.correct_streak ?? 0}</span>/3
+              {(m.last_correct_date && m.last_correct_date === bjToday()) &&
+                <span className="ml-1 text-emerald-500">· <T>今天已完成</T></span>}
+            </span>
           </span>
           <div className="flex gap-2">
             {onRedo &&
@@ -562,18 +503,6 @@ function MistakeCard({
               <Wand2 className="size-3" /> <T>AI 出 5 题</T>
             </button>
             }
-            <button
-              onClick={onResolve}
-              className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-3 py-1 font-semibold text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-500/20 dark:text-emerald-300">
-              
-              <Check className="size-3" /> <T>已掌握</T>
-            </button>
-            <button
-              onClick={onRemove}
-              className="inline-flex items-center gap-1 rounded-full bg-secondary px-3 py-1 font-semibold text-muted-foreground hover:bg-rose-100 hover:text-rose-600">
-              
-              <Trash2 className="size-3" />
-            </button>
           </div>
         </div>
       </div>
@@ -585,10 +514,11 @@ export default MistakesPage;
 
 // ── 就地重做弹窗(v1:语法选择题)────────────────────────────────────────────
 // 纯新增·独立于原做题判分:用 snapshot 冻结的 correct_answer 做极简选择比对。
-// 做对 → onResolved()(父组件 markResolved 移出);做错 → 亮正确项+解析、可重试。
+// 做对 → onResolved() 走跨3天连对累计(父组件),返回本次 streak 结果供弹窗显示;
+// 做错 → 亮正确项+解析、可重试。
 function RedoQuestionModal({
   mistake, onResolved, onClose
-}: {mistake: Mistake;onResolved: () => void;onClose: () => void;}) {
+}: {mistake: Mistake;onResolved: () => Promise<StreakResult | null>;onClose: () => void;}) {
   const pairs = optionPairs(mistake);
   const correct = frozenCorrect(mistake);
   const stem = String(mistake.snapshot?.stem || mistake.question || "").replace(/\\n/g, "\n");
@@ -597,15 +527,17 @@ function RedoQuestionModal({
   const audioUrl = mistake.snapshot?.audio_url ? String(mistake.snapshot.audio_url) : "";
   const [picked, setPicked] = useState<string | null>(null);
   const [resolved, setResolved] = useState(false);
+  const [streakRes, setStreakRes] = useState<StreakResult | null>(null);
   const solved = picked === correct;
   const wrongPicked = picked !== null && picked !== correct;
 
-  const pick = (L: string) => {
+  const pick = async (L: string) => {
     if (solved) return; // 已答对,锁定
     setPicked(L);
     if (L === correct && !resolved) {
       setResolved(true);
-      onResolved(); // 做对 → 移出错题本(父组件 markResolved)
+      const r = await onResolved(); // 做对 → 跨3天连对累计
+      setStreakRes(r);
     }
   };
 
@@ -665,7 +597,13 @@ function RedoQuestionModal({
 
         {solved &&
         <div className="mt-4 rounded-2xl border border-emerald-300 bg-emerald-50 p-3 text-sm font-semibold text-emerald-800 dark:bg-emerald-500/10 dark:text-emerald-300">
-            🎉 <T>答对了!已移出错题本。</T>
+            {streakRes?.is_resolved ?
+              <span>🎉 <T>跨 3 天连对达成,已彻底掌握,移出错题本!</T></span> :
+            streakRes?.already_today ?
+              <span>✅ <T>答对了!今天已巩固过,明天再来一次 +1。</T></span> :
+            streakRes ?
+              <span>✅ 答对了!巩固 {streakRes.correct_streak}/3 · 跨 3 天各做对 1 次即彻底掌握</span> :
+              <span>✅ <T>答对了!</T></span>}
           </div>
         }
         {wrongPicked && explanation &&

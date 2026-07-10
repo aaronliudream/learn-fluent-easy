@@ -7151,11 +7151,13 @@ export type Database = {
       user_mistakes: {
         Row: {
           correct_answer: string | null
+          correct_streak: number
           created_at: string
           explanation: string | null
           id: string
           is_resolved: boolean
           is_starred: boolean
+          last_correct_date: string | null
           last_wrong_at: string
           module: string
           next_review_at: string
@@ -7170,11 +7172,13 @@ export type Database = {
         }
         Insert: {
           correct_answer?: string | null
+          correct_streak?: number
           created_at?: string
           explanation?: string | null
           id?: string
           is_resolved?: boolean
           is_starred?: boolean
+          last_correct_date?: string | null
           last_wrong_at?: string
           module: string
           next_review_at?: string
@@ -7189,11 +7193,13 @@ export type Database = {
         }
         Update: {
           correct_answer?: string | null
+          correct_streak?: number
           created_at?: string
           explanation?: string | null
           id?: string
           is_resolved?: boolean
           is_starred?: boolean
+          last_correct_date?: string | null
           last_wrong_at?: string
           module?: string
           next_review_at?: string
@@ -7931,6 +7937,14 @@ export type Database = {
       add_pending_seed: {
         Args: { _amount: number; _source: string }
         Returns: number
+      }
+      bump_mistake_correct: {
+        Args: { _module: string; _source_key: string }
+        Returns: {
+          already_today: boolean
+          correct_streak: number
+          is_resolved: boolean
+        }[]
       }
       adopt_pet: {
         Args: { _nickname: string; _species_id: string }

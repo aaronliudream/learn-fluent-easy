@@ -165,16 +165,17 @@ Deno.serve(async (req) => {
       correct_answer: payload.correct_answer ?? null,
       explanation: (ctx.explanation as string) ?? null,
       is_resolved: false,
+      correct_streak: 0,        // 做错 → 连对清零
+      last_correct_date: null,
       last_wrong_at: new Date().toISOString(),
       next_review_at: dueAt,
     }, { onConflict: "user_id,module,source_key" });
   } else {
-    // 做对 → 把该题从错题本/最近常错移除(若在册)
-    await supa.from("user_mistakes")
-      .update({ is_resolved: true, updated_at: new Date().toISOString() })
-      .eq("user_id", user.id)
-      .eq("source_key", mistakeKey)
-      .eq("is_resolved", false);
+    // 做对 → 跨3天连对累计(唯一移出途径)。supa 带用户 JWT → RPC 的 auth.uid() 有效。
+    await supa.rpc("bump_mistake_correct", {
+      _module: payload.module,
+      _source_key: mistakeKey,
+    });
   }
 
   // smart cache invalidation for ai_diagnostics

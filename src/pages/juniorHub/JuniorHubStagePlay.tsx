@@ -2292,6 +2292,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
                 answerIdx: q.answer,
                 pickedIdx: q.picked ?? null,
                 audio: q.audio ?? null,
+                audioUrl: q.audioUrl ?? null,
                 explanation: q.explanation ?? null,
                 idSuffix: q.questionId ?? q.q,
               });

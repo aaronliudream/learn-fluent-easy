@@ -554,12 +554,14 @@ function MistakeCard({
               <RotateCw className="size-3" /> <T>重做</T>
             </button>
             }
+            {m.module === "senior_grammar" &&
             <button
               onClick={onAskAI}
               className="inline-flex items-center gap-1 rounded-full bg-violet-100 px-3 py-1 font-semibold text-violet-700 hover:bg-violet-200 dark:bg-violet-500/20 dark:text-violet-300">
 
               <Wand2 className="size-3" /> <T>AI 出 5 题</T>
             </button>
+            }
             <button
               onClick={onResolve}
               className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-3 py-1 font-semibold text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-500/20 dark:text-emerald-300">

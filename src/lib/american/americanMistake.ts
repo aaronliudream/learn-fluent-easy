@@ -35,8 +35,11 @@ export function recordAmericanMistake(
   picked: number | null,
   isCorrect: boolean,
   sourceLabel?: string | null,
+  /** 单一用途关的覆盖:关8 听力题单题无 payload.audio(共享对话)→ 自动路由会误判成
+   *  senior_grammar;由关传 forceModule:"hub_listening" 纠正,并用 audio 存对话文本供错题本重听。 */
+  opts?: { forceModule?: string; audio?: string | null },
 ): void {
-  const module = moduleFor(item);
+  const module = opts?.forceModule ?? moduleFor(item);
 
   if (item.kind === "reveal") {
     // 开放题(句型转换/情景应答):存参考答案 + 学生自评,做对按 source_key 走连对移出。
@@ -70,7 +73,7 @@ export function recordAmericanMistake(
     options: sortedOpts,
     correctIdx,
     pickedIdx,
-    audio: item.audio ?? null,
+    audio: opts?.audio ?? item.audio ?? null,
     explanation: item.explanation ?? null,
     sourceLabel: sourceLabel ?? null,
   });

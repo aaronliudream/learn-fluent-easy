@@ -25,6 +25,7 @@ import { awardCoins } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { recordHubMistake } from "@/lib/recordHubMistake";
+import { recordFinalQuizMistake } from "@/lib/finalQuizMistake";
 import { celebrateScore } from "@/lib/feedback";
 import { toast } from "sonner";
 
@@ -2272,7 +2273,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
                 }).catch(() => {});
               }
             }}
-            onWrong={(q) =>
+            onWrong={(q) => {
               addMistake({
                 q: q.q,
                 opts: q.opts,
@@ -2280,8 +2281,21 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
                 point: q.point ?? "综合",
                 unitId,
                 unitTitle: unit.title,
-              })
-            }
+              });
+              // 块②:finalQuiz 做错额外写统一错题本(按 kind 分流;vocab 跳过)。
+              void recordFinalQuizMistake({
+                dim: q.kind ?? q.dim,
+                unitId,
+                unitTitle: unit.title,
+                stem: q.q,
+                opts: q.opts,
+                answerIdx: q.answer,
+                pickedIdx: q.picked ?? null,
+                audio: q.audio ?? null,
+                explanation: q.explanation ?? null,
+                idSuffix: q.questionId ?? q.q,
+              });
+            }}
           />
         );
       }

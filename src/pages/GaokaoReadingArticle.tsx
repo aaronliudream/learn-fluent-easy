@@ -472,6 +472,51 @@ export default function GaokaoReadingArticle() {
           }).catch(() => {})
           ));
         } catch {}
+
+        // 块③-A:错题本「整篇完整快照」——高中智能诊断阅读此前只经 recordUnifiedAttempt 写薄行
+        // (无 snapshot、题干空,被 /mistakes 的阅读薄行过滤隐藏)。这里照 GaokaoReadingPlay 那套
+        // 额外直写一条自包含整篇行(题干+全选项+每题对错+原文),让阅读错题在错题本整篇下钻。
+        // 纯新增,不碰上面 recordUnifiedAttempt/诊断表/掌握度;失败仅告警,绝不阻断。source_key 一篇一条覆盖。
+        try {
+          const wrongCount = questions.filter((q) => answers[q.id] !== q.correct_answer).length;
+          if (wrongCount > 0) {
+            const explOf = (q: Question) => {
+              const m: Record<string, string | null> = {
+                A: q.explanation_a, B: q.explanation_b, C: q.explanation_c, D: q.explanation_d,
+              };
+              return m[q.correct_answer] ?? q.general_explanation ?? null;
+            };
+            const snapshot = {
+              source: "reading",
+              title: article.title,
+              body: cleanArticleBody(article.body),
+              questions: questions.map((q, i) => ({
+                no: i + 1,
+                stem: q.stem,
+                options: { A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d },
+                correct_answer: q.correct_answer,
+                user_answer: answers[q.id] ?? null,
+                is_correct: answers[q.id] === q.correct_answer,
+                explanation: explOf(q),
+              })),
+              wrong_count: wrongCount,
+            };
+            const { error: snapErr } = await supabase.from("user_mistakes").upsert({
+              user_id: user.id,
+              module: "reading",
+              source_key: `gaokao_reading_passage_${article.id}`,
+              source_label: article.title,
+              question: article.title ?? "",
+              snapshot,
+              wrong_count: wrongCount,
+              is_resolved: false,
+              last_wrong_at: new Date().toISOString(),
+            }, { onConflict: "user_id,module,source_key" });
+            if (snapErr) console.warn("[gaokao article reading mistake snapshot] upsert failed", snapErr);
+          }
+        } catch (e) {
+          console.warn("[gaokao article reading mistake snapshot] error", e);
+        }
       }
     } catch (err) {
       console.error("save session error", err);

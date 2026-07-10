@@ -98,7 +98,7 @@ export function AmericanListenWordStage({ bundle, onDone }: { bundle: LessonBund
           }
           return (
             <button key={o.id} type="button" disabled={!!picked} onClick={() => pick(o.id)}
-              className={`flex flex-col rounded-xl border px-4 py-3 text-left text-[15px] font-medium transition ${cls}`}>
+              className={`flex flex-col rounded-xl border px-4 py-3 text-left text-base font-medium transition ${cls}`}>
               <span className="flex w-full items-center justify-between">
                 <span>{o.word}</span>
                 {picked && isAns && <Check className="size-4 text-emerald-600" />}

@@ -155,7 +155,7 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
           }
           return (
             <button key={i} type="button" disabled={picked !== null} onClick={() => pick(i)}
-              className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-[15px] transition ${cls}`}>
+              className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-base transition ${cls}`}>
               <span>{opt}</span>
               <span className="flex items-center gap-2">
                 {picked !== null && isAns && (

@@ -126,7 +126,7 @@ function QuizOpts({
     <div className="flex flex-col gap-2">
       {opts.map((opt, j) => {
         let cls =
-          "quiz-opt flex w-full items-center gap-3 rounded-xl border-2 border-[#EEEAE0] bg-white p-3 text-left text-sm font-medium transition disabled:cursor-not-allowed";
+          "quiz-opt flex w-full items-center gap-3 rounded-xl border-2 border-[#EEEAE0] bg-white p-3 text-left text-base font-medium transition disabled:cursor-not-allowed";
         if (answered) {
           if (j === answer) cls += " correct";
           else if (j === picked && picked !== answer) cls += " wrong";

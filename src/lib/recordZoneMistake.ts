@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import { bumpMistakeCorrect } from "@/lib/mistakeStreak";
 
 /**
  * 全学段专区/闯关错题 → 统一错题本 user_mistakes,每题一条**完整自包含快照**。
@@ -61,15 +62,9 @@ export async function recordZoneMistake(p: {
     // ══ 开放题(无选项):存参考答案 + 学生自评,判定来源标 self ══
     if (p.openEnded) {
       const sourceKey = `${p.module}_${p.sourceKeyBase}_${djb2(p.stem)}`;
-      // 学生自评为"对"(或调用方判对)→ 移出。
+      // 学生自评为"对"(或调用方判对)→ 跨3天连对累计(唯一移出途径)。
       if (p.isCorrect || p.selfGrade === "correct") {
-        await supabase
-          .from("user_mistakes")
-          .update({ is_resolved: true, updated_at: new Date().toISOString() })
-          .eq("user_id", user.id)
-          .eq("module", p.module)
-          .eq("source_key", sourceKey)
-          .eq("is_resolved", false);
+        await bumpMistakeCorrect(p.module, sourceKey);
         return;
       }
       const { error } = await supabase.from("user_mistakes").upsert(
@@ -94,6 +89,8 @@ export async function recordZoneMistake(p: {
             ...(p.audioUrl ? { audio_url: p.audioUrl } : {}),
           },
           is_resolved: false,
+          correct_streak: 0,
+          last_correct_date: null,
           last_wrong_at: new Date().toISOString(),
         },
         { onConflict: "user_id,module,source_key" },
@@ -107,13 +104,7 @@ export async function recordZoneMistake(p: {
     const sourceKey = `${p.module}_${p.sourceKeyBase}_${djb2(p.stem + "|" + p.options.join("|"))}`;
 
     if (p.isCorrect) {
-      await supabase
-        .from("user_mistakes")
-        .update({ is_resolved: true, updated_at: new Date().toISOString() })
-        .eq("user_id", user.id)
-        .eq("module", p.module)
-        .eq("source_key", sourceKey)
-        .eq("is_resolved", false);
+      await bumpMistakeCorrect(p.module, sourceKey);
       return;
     }
 
@@ -152,6 +143,8 @@ export async function recordZoneMistake(p: {
           ...(p.audioUrl ? { audio_url: p.audioUrl } : {}),
         },
         is_resolved: false,
+        correct_streak: 0,
+        last_correct_date: null,
         last_wrong_at: new Date().toISOString(),
       },
       { onConflict: "user_id,module,source_key" },

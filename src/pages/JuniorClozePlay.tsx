@@ -6,6 +6,7 @@ import { ArrowLeft, RotateCcw, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { recordMastery, loadMastery, MasteryRow, PASS_PCT } from "@/lib/masteryProgress";
+import { bumpMistakeCorrect } from "@/lib/mistakeStreak";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
@@ -105,12 +106,14 @@ export default function JuniorClozePlay() {
           snapshot,
           wrong_count: wrongCount,
           is_resolved: false,
+          correct_streak: 0,
+          last_correct_date: null,
           last_wrong_at: new Date().toISOString(),
         }, { onConflict: "user_id,module,source_key" });
         if (snapErr) console.warn("[junior cloze mistake snapshot] upsert failed", snapErr);
       } else {
-        await supabase.from("user_mistakes").update({ is_resolved: true, updated_at: new Date().toISOString() }).
-        eq("user_id", userId).eq("module", "junior_cloze").eq("source_key", `junior_cloze_passage_${c.id}`).eq("is_resolved", false);
+        // 本次全对 → 跨3天连对累计(唯一移出途径)
+        await bumpMistakeCorrect("junior_cloze", `junior_cloze_passage_${c.id}`);
       }
     }
     celebrateScore(pct);

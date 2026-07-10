@@ -37,6 +37,8 @@ export type FinalQuizKind = "grammar" | "listening" | "vocab" | "reading";
 export type FinalQuizItem = QuizQuestion & {
   kind?: FinalQuizKind;
   explanation?: string;
+  audioUrl?: string | null; // 听力题:junior_listening_items.audio_url(真 MP3,做题/专区实际播放的来源)
+
   questionId?: string; // 语法题:junior_grammar_questions.id(记录用)
   pointId?: string; // 语法题归属 point(记录用)
   kpId?: string | null; // 语法题归属 kp(记录用)
@@ -253,6 +255,7 @@ type ListeningRow = {
   difficulty: number;
   kind: string;
   audio_text: string;
+  audio_url: string | null;
   question: string;
   options: unknown;
   answer: string;
@@ -269,6 +272,7 @@ function dbListeningItem(r: ListeningRow): FinalQuizItem {
     opts,
     answer: idx >= 0 && idx < opts.length ? idx : 0,
     audio: r.audio_text,
+    audioUrl: r.audio_url, // 真 MP3 一并带上(专区/做题播放用它;错题本据此放原声)
     explanation: r.explanation || undefined,
     point: "听力",
     dim: "listening",
@@ -282,7 +286,7 @@ function dbListeningItem(r: ListeningRow): FinalQuizItem {
 async function loadListeningItems(grade: number, volume: string, unit: string): Promise<FinalQuizItem[]> {
   const { data } = await supabase
     .from("junior_listening_items")
-    .select("difficulty,kind,audio_text,question,options,answer,explanation")
+    .select("difficulty,kind,audio_text,audio_url,question,options,answer,explanation")
     .eq("grade", grade)
     .eq("volume", volume)
     .eq("unit", unit);

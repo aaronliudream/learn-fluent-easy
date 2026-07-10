@@ -32,7 +32,8 @@ export async function recordFinalQuizMistake(p: {
   opts: string[];
   answerIdx: number;
   pickedIdx?: number | null;
-  audio?: string | null; // 听力题朗读文本(TTS,现场合成)
+  audio?: string | null; // 听力题朗读文本(TTS,现场合成兜底)
+  audioUrl?: string | null; // 听力题真 MP3(junior_listening_items.audio_url,做题实际播放来源,优先)
   explanation?: string | null;
   /** 稳定标识后缀:语法题有 questionId 时传它,否则留空(内部按题干+选项哈希兜底)。 */
   idSuffix?: string | null;
@@ -47,8 +48,9 @@ export async function recordFinalQuizMistake(p: {
     options: p.opts,
     correctIdx: p.answerIdx,
     pickedIdx: p.pickedIdx ?? null,
-    // 听力题才带朗读文本;其余 module 无音频。
+    // 听力题才带音频;真 MP3(audioUrl)优先,TTS 文本(audio)兜底;其余 module 无音频。
     audio: p.dim === "listening" ? p.audio ?? null : null,
+    audioUrl: p.dim === "listening" ? p.audioUrl ?? null : null,
     explanation: p.explanation ?? null,
     sourceLabel: p.unitTitle ?? null,
   });

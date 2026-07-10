@@ -391,6 +391,15 @@ function MistakeCard({
   m.snapshot?.source_sentence ||
   null;
 
+  // 🔊 只在真有可朗读内容时显示——镜像 playPhrase 实际会播的来源(真音频/TTS文本/例句/短语)。
+  // 语法错题等无 audio 的条目不再画按钮(此前无差别显示,点了报「没有可朗读的内容」)。
+  const playable = Boolean(
+    m.snapshot?.audio_url ||
+    m.snapshot?.audio ||
+    m.snapshot?.source_sentence ||
+    m.snapshot?.phrase,
+  );
+
   return (
     <li className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:shadow-md">
       {/* Module strip */}
@@ -417,6 +426,7 @@ function MistakeCard({
             }
           </div>
           <div className="flex flex-col items-end gap-2">
+            {playable &&
             <button
               onClick={onPlay}
               className={`grid size-10 place-items-center rounded-full shadow transition ${
@@ -425,9 +435,10 @@ function MistakeCard({
               "bg-secondary text-foreground hover:bg-primary/15"}`
               }
               aria-label="朗读">
-              
+
               {playing ? <Volume2 className="size-4 animate-pulse" /> : <Play className="size-4" />}
             </button>
+            }
             <button
               onClick={onStar}
               className={`grid size-10 place-items-center rounded-full transition ${

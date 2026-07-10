@@ -294,7 +294,7 @@ export function GrammarQuestionCard({
         )}
       </div>
 
-      <div className={cn("relative font-bold whitespace-pre-wrap leading-relaxed mb-4 text-foreground", large ? "text-lg sm:text-xl" : "text-sm")}>
+      <div className={cn("relative font-bold whitespace-pre-wrap leading-relaxed mb-4 text-foreground", large ? "text-lg sm:text-xl" : "text-base")}>
         {q.stem?.replace(/\\n/g, "\n")}
       </div>
 
@@ -333,7 +333,7 @@ export function GrammarQuestionCard({
                 >
                   {showCorrect || showRevealed ? "✓" : showWrong ? "✗" : CHOICE_LETTERS[i]}
                 </span>
-                <span className={cn("leading-snug", large ? "text-lg" : "text-sm")}>{c.text}</span>
+                <span className={cn("leading-snug", large ? "text-lg" : "text-base")}>{c.text}</span>
               </button>
             );
           })}

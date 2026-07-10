@@ -797,6 +797,13 @@ All colors MUST be HSL.
   border-color: hsl(var(--exam-accent));
 }
 
+/* 手机端把题干/选项字体大一档(桌面排版不变)—— 学生读题核心,窄屏原 15-16px 偏小 */
+@media (max-width: 640px) {
+  .exam-stem { font-size: 17.5px; }
+  .exam-option { font-size: 16.5px; }
+  .exam-option-letter { font-size: 17px; }
+}
+
 /* ───────── Buttons ───────── */
 .exam-btn {
   font-family: var(--exam-ui);

@@ -200,7 +200,7 @@ export function QuizRunner({
               }
               return (
                 <button key={i} type="button" disabled={picked !== null} onClick={() => answerChoice(i)}
-                  className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-[15px] transition ${cls}`}>
+                  className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-base transition ${cls}`}>
                   <span>{opt}</span>
                   {picked !== null && isAns && <Check className="size-4 shrink-0 text-emerald-600" />}
                   {picked !== null && isPicked && !isAns && <X className="size-4 shrink-0 text-rose-500" />}
@@ -227,7 +227,7 @@ export function QuizRunner({
           ) : (
             <>
               <div className="flex items-center justify-between rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3">
-                <span className="text-[15px] font-semibold text-emerald-800">{item.answer}</span>
+                <span className="text-base font-semibold text-emerald-800">{item.answer}</span>
                 <button type="button" aria-label="朗读答案"
                   onClick={() => { unlockAmericanAudio(); void speakUS(item.answer); }}
                   className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">

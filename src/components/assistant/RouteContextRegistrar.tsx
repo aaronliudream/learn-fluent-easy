@@ -108,7 +108,6 @@ function deriveContext(pathname: string, params: Record<string, string | undefin
     if (pathname.match(/\/gaokao\/cloze/)) return mk("gaokao-cloze", "高考英语完形填空", "💬 小月 · 完形辅导", STARTERS_CLOZE);
     if (pathname.match(/\/gaokao\/mistakes/)) return mk("gaokao-mistakes", "高考英语错题本", "💬 小月 · 错题讲解", STARTERS_MISTAKES);
     if (pathname.match(/\/gaokao\/exam/)) return mk("gaokao-exam", "高考英语真题", "💬 小月 · 真题辅导", STARTERS_HOME);
-    if (pathname.match(/\/gaokao\/diagnostic/)) return mk("gaokao-diagnostic", "高考英语诊断", "💬 小月 · 诊断报告解读", STARTERS_HOME);
     if (pathname.match(/\/gaokao\/grade/)) return mk("gaokao-grade", `高考英语 · 第 ${grade ?? ""} 册`, "💬 小月 · 高考辅导", STARTERS_HOME);
     return mk("gaokao-home", "高考英语学习", "💬 小月 · 高考英语助手", STARTERS_HOME);
   }

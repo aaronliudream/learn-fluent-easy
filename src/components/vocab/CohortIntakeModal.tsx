@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useQueryClient } from "@tanstack/react-query";
-import { X, Check, Loader2, Stethoscope } from "lucide-react";
+import { X, Check, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { T } from "@/i18n/T";
 import { useToast } from "@/hooks/use-toast";
@@ -181,19 +181,6 @@ export default function CohortIntakeModal({
           <T>勾你已经熟悉的词，可以跳过认词阶段直奔练习</T>
         </p>
 
-        {!loading && quizFor === null && (
-          <button
-            type="button"
-            onClick={() => {
-              onClose();
-              window.location.href = "/gaokao/diagnostic";
-            }}
-            className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-amber-300 bg-amber-50 px-2.5 py-1 text-[11px] font-bold text-amber-700 hover:bg-amber-100 dark:bg-amber-950/30 dark:border-amber-700/40 dark:text-amber-400"
-          >
-            <Stethoscope className="size-3" />
-            <T>不想自评？让 AI 诊断帮你定位</T>
-          </button>
-        )}
 
         {loading ? (
           <div className="my-10 flex justify-center">

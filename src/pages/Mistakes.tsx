@@ -160,7 +160,10 @@ const MistakesPage = () => {
       includes(q)
       );
     }
-    return list;
+    // 显示层排序:未攻克(correct_streak=0,含无 streak 的开放题)浮顶、巩固中(≥1)沉底;
+    // 同档内维持现有次序(last_wrong_at 新→旧)——JS sort 稳定,只按"是否≥1"分两档。
+    const bucket = (m: Mistake) => ((m.correct_streak ?? 0) >= 1 ? 1 : 0);
+    return [...list].sort((a, b) => bucket(a) - bucket(b));
   }, [items, tab, search]);
 
   const toggleStar = async (m: Mistake) => {

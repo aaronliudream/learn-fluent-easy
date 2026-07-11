@@ -42,7 +42,8 @@ export function recordAmericanMistake(
   const module = opts?.forceModule ?? moduleFor(item);
 
   if (item.kind === "reveal") {
-    // 开放题(句型转换/情景应答):存参考答案 + 学生自评,做对按 source_key 走连对移出。
+    // 开放题(句型转换/情景应答):存参考答案 + 学生自评。移出走 1 次「我会了」直接 is_resolved
+    // (recordZoneMistake 的 openEnded 分支;与 MCQ 的跨3天连对分开,⑤-B 拍板)。
     void recordZoneMistake({
       module,
       sourceKeyBase: item.id,

@@ -410,11 +410,8 @@ export default function LandingPage() {
             </div>
 
             <div className="flex shrink-0 items-center gap-2 md:gap-3">
-              <Link
-                to="/auth"
-                className="hidden text-sm font-semibold text-white/90 hover:text-white sm:inline">
-                <T>登录</T>
-              </Link>
+              {/* 登录入口统一由 UserAvatarMenu 承担(未登录→「登录」胶囊、已登录→头像);
+                  原先这里另有一个独立「登录」文字链接、且不随登录态隐藏 → 去掉,避免重复/矛盾。 */}
               <div className="hidden sm:block">
                 <LangToggleEnZh />
               </div>
@@ -446,9 +443,7 @@ export default function LandingPage() {
                     onNavigate={() => setMobileOpen(false)}
                   />
                 ))}
-                <Link to="/auth" className="text-sm font-semibold" onClick={() => setMobileOpen(false)}>
-                  <T>登录</T>
-                </Link>
+                {/* 登录入口统一在顶栏 UserAvatarMenu(未登录→胶囊/已登录→头像),此处不再重复放「登录」。 */}
               </div>
             </div>
           )}

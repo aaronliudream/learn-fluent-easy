@@ -44,7 +44,8 @@ const MODULE_META: Record<string, {label: string;emoji: string;color: string;}> 
   hub_reading: { label: "闯关阅读", emoji: "📖", color: "from-emerald-400 to-green-500" },
   hub_listening: { label: "听力错题", emoji: "🎧", color: "from-sky-400 to-blue-500" },
   senior_cloze: { label: "完形错题", emoji: "🧩", color: "from-amber-400 to-orange-500" },
-  junior_cloze: { label: "完形错题", emoji: "🧩", color: "from-amber-400 to-orange-500" }
+  junior_cloze: { label: "完形错题", emoji: "🧩", color: "from-amber-400 to-orange-500" },
+  american_scenario: { label: "情景应答", emoji: "💬", color: "from-teal-400 to-cyan-500" }
 };
 
 const moduleMeta = (m: string) =>
@@ -74,6 +75,12 @@ function isRedoable(m: Mistake): boolean {
   if (pairs.length < 2) return false;
   const ca = frozenCorrect(m);
   return pairs.some(([L]) => L === ca);
+}
+
+// 开放题(美语情景应答/句型转换):snapshot.question_type==="open" —— 无选项、靠自评,
+// 重做 = 看参考答案后自评「我会了」1 次即移出(豁免跨3天连对)。
+function isOpen(m: Mistake): boolean {
+  return m.snapshot?.question_type === "open";
 }
 
 const MistakesPage = () => {
@@ -153,7 +160,10 @@ const MistakesPage = () => {
       includes(q)
       );
     }
-    return list;
+    // 显示层排序:未攻克(correct_streak=0,含无 streak 的开放题)浮顶、巩固中(≥1)沉底;
+    // 同档内维持现有次序(last_wrong_at 新→旧)——JS sort 稳定,只按"是否≥1"分两档。
+    const bucket = (m: Mistake) => ((m.correct_streak ?? 0) >= 1 ? 1 : 0);
+    return [...list].sort((a, b) => bucket(a) - bucket(b));
   }, [items, tab, search]);
 
   const toggleStar = async (m: Mistake) => {
@@ -162,7 +172,8 @@ const MistakesPage = () => {
     await supabase.from("user_mistakes").update({ is_starred: next }).eq("id", m.id);
   };
 
-  // 重做做对 → 跨3天连对累计(全站唯一移出途径)。streak>=3 才移出;返回结果供弹窗显示。
+  // MCQ 重做做对 → 跨3天连对累计。streak>=3 才移出;返回结果供弹窗显示。
+  // (开放题走 handleOpenResolve:自评「我会了」1 次直接移出,豁免 streak。)
   const handleRedoCorrect = async (m: Mistake): Promise<StreakResult | null> => {
     const res = await bumpMistakeCorrect(m.module, m.source_key);
     if (!res) return null;
@@ -184,6 +195,22 @@ const MistakesPage = () => {
         : x));
     }
     return res;
+  };
+
+  // 开放题重做「我会了」→ 1 次直接移出(is_resolved=true,不走 streak)。
+  const handleOpenResolve = async (m: Mistake) => {
+    const wasLast = items.length <= 1;
+    setItems((prev) => prev.filter((x) => x.id !== m.id));
+    await supabase.from("user_mistakes")
+      .update({ is_resolved: true, updated_at: new Date().toISOString() }).eq("id", m.id);
+    try {
+      const c = await import("@/lib/coins");
+      await c.awardCoins(3, "mistake_resolved");
+      c.petReact("happy", { coins: 3 });
+    } catch {/* noop */}
+    import("@/lib/feedback").then((f) => f.fireEmojiConfetti({ count: 60, vibrate: true }));
+    if (wasLast) toast.success("🎉 错题本清空！", { description: "已全部攻克!" });
+    else toast.success("已掌握 ✨", { description: "情景应答攻克,移出错题本" });
   };
 
   const playPhrase = async (m: Mistake) => {
@@ -285,7 +312,7 @@ const MistakesPage = () => {
             onStar={() => toggleStar(m)}
             onAskTutor={() => setTutorFor(m)}
             onAskAI={() => setAiFor(m)}
-            onRedo={isRedoable(m) ? () => setRedoFor(m) : undefined} />
+            onRedo={(isRedoable(m) || isOpen(m)) ? () => setRedoFor(m) : undefined} />
 
           )}
             </ul>
@@ -311,11 +338,15 @@ const MistakesPage = () => {
 
       }
       {aiFor && <SimilarQuestionsModal mistake={aiFor} onClose={() => setAiFor(null)} />}
-      {redoFor &&
+      {redoFor && (isOpen(redoFor) ?
+      <RedoOpenModal
+        mistake={redoFor}
+        onOpenResolved={() => { void handleOpenResolve(redoFor); stopSpeaking(); setRedoFor(null); }}
+        onClose={() => { stopSpeaking(); setRedoFor(null); }} /> :
       <RedoQuestionModal
         mistake={redoFor}
         onResolved={() => handleRedoCorrect(redoFor)}
-        onClose={() => { stopSpeaking(); setRedoFor(null); }} />
+        onClose={() => { stopSpeaking(); setRedoFor(null); }} />)
       }
     </main>);
 
@@ -476,8 +507,8 @@ function MistakeCard({
           }
         </div>
 
-        {/* 来源:单元名 · 做错时间(北京时间 UTC+8) */}
-        <div className="mt-3 text-[11px] text-muted-foreground">
+        {/* 来源:单元名 · 做错时间(北京时间 UTC+8);字号大一档 + 颜色加深,一眼看清 */}
+        <div className="mt-3 text-[13px] text-foreground/70">
           {m.source_label ? <span>{m.source_label} · </span> : null}
           <span className="tabular-nums">{bjDateTime(m.last_wrong_at)}</span>
         </div>
@@ -486,11 +517,13 @@ function MistakeCard({
         <div className="mt-3 flex items-center justify-between gap-2 border-t border-border/60 pt-3 text-xs">
           <span className="flex items-center gap-2 text-muted-foreground">
             <span><T>错过</T> <span className="font-bold text-foreground">{m.wrong_count}</span> <T>次</T></span>
+            {isOpen(m) ?
+            <span className="text-teal-600 dark:text-teal-400">· <T>自评题 · 会了即移出</T></span> :
             <span className="text-emerald-600 dark:text-emerald-400">
               · <T>巩固</T> <span className="font-bold">{m.correct_streak ?? 0}</span>/3
               {(m.last_correct_date && m.last_correct_date === bjToday()) &&
                 <span className="ml-1 text-emerald-500">· <T>今天已完成</T></span>}
-            </span>
+            </span>}
           </span>
           <div className="flex gap-2">
             {onRedo &&
@@ -632,6 +665,89 @@ function RedoQuestionModal({
             className="rounded-full bg-secondary px-4 py-1.5 text-sm font-semibold text-foreground hover:bg-primary/15">
             <T>{solved ? "完成" : "关闭"}</T>
           </button>
+        </div>
+      </div>
+    </div>);
+
+}
+
+// ── 开放题重做弹窗(美语情景应答/句型转换)──────────────────────────────────
+// 藏答案一致:未揭晓前只显题干;点「看参考答案」才揭晓参考答案(带 TTS 朗读,美语口语)。
+// 自评「我会了」→ onOpenResolved()(父组件 1 次 is_resolved=true 移出,豁免跨3天连对);
+// 「还不会」→ 关闭、留在错题本。
+function RedoOpenModal({
+  mistake, onOpenResolved, onClose
+}: {mistake: Mistake;onOpenResolved?: () => void;onClose: () => void;}) {
+  const stem = String(mistake.snapshot?.stem || mistake.question || "").replace(/\\n/g, "\n");
+  const reference = String(mistake.snapshot?.reference_answer ?? mistake.correct_answer ?? "").trim();
+  const explanation = mistake.explanation || mistake.snapshot?.explanation || "";
+  const [revealed, setRevealed] = useState(false);
+
+  const reveal = () => {
+    setRevealed(true);
+    if (reference) void speakTTS(reference, { voiceId: getAlexVoice() }); // 参考答案 TTS 朗读
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-0 sm:items-center sm:p-4" onClick={() => { stopSpeaking(); onClose(); }}>
+      <div className="w-full max-w-lg rounded-t-3xl bg-card p-5 shadow-xl sm:rounded-3xl" onClick={(e) => e.stopPropagation()}>
+        <div className="mb-3 flex items-center justify-between">
+          <div className="inline-flex items-center gap-1.5 text-sm font-bold text-teal-700 dark:text-teal-300">
+            <MessageCircleQuestion className="size-4" /> <T>情景应答 · 自评重做</T>
+          </div>
+          <button onClick={() => { stopSpeaking(); onClose(); }} className="grid size-8 place-items-center rounded-full text-muted-foreground hover:bg-secondary" aria-label="关闭">
+            <X className="size-4" />
+          </button>
+        </div>
+
+        <div className="mb-4 whitespace-pre-wrap text-base font-semibold leading-relaxed text-foreground">{stem}</div>
+
+        {!revealed &&
+        <div className="mb-2 rounded-2xl bg-secondary/50 p-3 text-sm leading-relaxed text-muted-foreground">
+          <T>先自己想一想怎么回应,再看参考答案。</T>
+        </div>
+        }
+
+        {revealed &&
+        <div className="mb-2 rounded-2xl border border-teal-300 bg-teal-50 p-3 dark:border-teal-500/40 dark:bg-teal-500/10">
+          <div className="mb-1 flex items-center justify-between">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-300"><T>参考答案</T></div>
+            {reference &&
+            <button
+              type="button"
+              onClick={() => void speakTTS(reference, { voiceId: getAlexVoice() })}
+              className="inline-flex items-center gap-1 rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-700 hover:bg-teal-200 dark:bg-teal-500/20 dark:text-teal-200">
+              <Volume2 className="size-3.5" /> <T>朗读</T>
+            </button>
+            }
+          </div>
+          <div className="whitespace-pre-wrap text-sm font-medium leading-relaxed text-foreground">{reference || "（无参考答案)"}</div>
+          {explanation &&
+          <div className="mt-2 border-t border-teal-200 pt-2 text-xs leading-relaxed text-foreground/70 dark:border-teal-500/30">💡 {explanation}</div>
+          }
+        </div>
+        }
+
+        <div className="mt-4 flex justify-end gap-2">
+          {!revealed ?
+          <button
+            onClick={reveal}
+            className="inline-flex items-center gap-1.5 rounded-full bg-teal-500 px-5 py-2 text-sm font-bold text-white hover:bg-teal-600">
+            <Volume2 className="size-4" /> <T>看参考答案</T>
+          </button> :
+          <>
+            <button
+              onClick={() => { stopSpeaking(); onClose(); }}
+              className="rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-foreground hover:bg-primary/15">
+              <T>还不会</T>
+            </button>
+            <button
+              onClick={() => { stopSpeaking(); onOpenResolved?.(); }}
+              className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500 px-5 py-2 text-sm font-bold text-white hover:bg-emerald-600">
+              <T>我会了 ✨</T>
+            </button>
+          </>
+          }
         </div>
       </div>
     </div>);

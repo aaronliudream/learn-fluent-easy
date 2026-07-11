@@ -62,9 +62,16 @@ export async function recordZoneMistake(p: {
     // ══ 开放题(无选项):存参考答案 + 学生自评,判定来源标 self ══
     if (p.openEnded) {
       const sourceKey = `${p.module}_${p.sourceKeyBase}_${djb2(p.stem)}`;
-      // 学生自评为"对"(或调用方判对)→ 跨3天连对累计(唯一移出途径)。
+      // 开放题(美语情景/转换):自评"我会了"→ **1 次直接移出**(豁免跨3天连对——开放题靠
+      // 自评、跨天防不住刷,搬 streak 无意义;与 MCQ 分开:MCQ 走 bumpMistakeCorrect 3 次)。
       if (p.isCorrect || p.selfGrade === "correct") {
-        await bumpMistakeCorrect(p.module, sourceKey);
+        await supabase
+          .from("user_mistakes")
+          .update({ is_resolved: true, updated_at: new Date().toISOString() })
+          .eq("user_id", user.id)
+          .eq("module", p.module)
+          .eq("source_key", sourceKey)
+          .eq("is_resolved", false);
         return;
       }
       const { error } = await supabase.from("user_mistakes").upsert(

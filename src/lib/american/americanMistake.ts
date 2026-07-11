@@ -16,10 +16,12 @@ import type { QuizItem } from "@/components/american/QuizRunner";
  *
  * ▶ source_key = american_questions.id(uuid 稳定)→ 去重/跨3天连对移出天然可靠。
  */
-/** 错题来源标签:`L{课号}·{中文/英文标题}`,供错题本/老师端显示是哪一课。 */
-export function americanLessonLabel(lesson: { lesson_no?: number | null; title_cn?: string | null; title_en?: string | null }): string {
+/** 错题来源标签:`第{单元}单元·L{课号}·{中文/英文标题}`,供错题本/老师端显示是哪单元哪课。
+ *  unit_no 取自 bundle.lesson.unit_no(现成);无 unit_no 则退回旧格式 `L{课号}·标题`。 */
+export function americanLessonLabel(lesson: { unit_no?: number | null; lesson_no?: number | null; title_cn?: string | null; title_en?: string | null }): string {
   const t = (lesson.title_cn || lesson.title_en || "").trim();
-  return lesson.lesson_no != null ? `L${lesson.lesson_no}${t ? "·" + t : ""}` : t;
+  const lessonPart = lesson.lesson_no != null ? `L${lesson.lesson_no}${t ? "·" + t : ""}` : t;
+  return lesson.unit_no != null ? `第${lesson.unit_no}单元·${lessonPart}` : lessonPart;
 }
 
 function moduleFor(item: QuizItem): string {
@@ -42,7 +44,8 @@ export function recordAmericanMistake(
   const module = opts?.forceModule ?? moduleFor(item);
 
   if (item.kind === "reveal") {
-    // 开放题(句型转换/情景应答):存参考答案 + 学生自评,做对按 source_key 走连对移出。
+    // 开放题(句型转换/情景应答):存参考答案 + 学生自评。移出走 1 次「我会了」直接 is_resolved
+    // (recordZoneMistake 的 openEnded 分支;与 MCQ 的跨3天连对分开,⑤-B 拍板)。
     void recordZoneMistake({
       module,
       sourceKeyBase: item.id,

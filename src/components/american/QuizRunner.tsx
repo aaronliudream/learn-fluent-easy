@@ -123,8 +123,9 @@ export function QuizRunner({
     setRecords((r) => ({ ...r, [idx]: { selfOk: ok } }));
     if (ok) setCorrectCount((c) => c + 1);
     else wrongIdsRef.current.push(item.id);
+    onRecordMistake?.(item, null, ok); // 错题本:开放题自评错→入册、自评对→1次移出(独立于SRS)
     next();
-  }, [item, answered, idx, maxIdx, next]);
+  }, [item, answered, idx, maxIdx, next, onRecordMistake]);
 
   const pct = useMemo(() => (total ? Math.round((correctCount / total) * 100) : 0), [correctCount, total]);
 

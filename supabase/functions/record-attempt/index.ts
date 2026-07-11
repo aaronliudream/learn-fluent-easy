@@ -150,32 +150,37 @@ Deno.serve(async (req) => {
     });
   }
 
-  // mistakes book: 做错入册(再次做错则重新激活);做对自动移除
-  const mistakeKey = `${payload.stage}_${payload.module}_${payload.item_id}`;
-  if (!payload.is_correct) {
-    const ctx = (payload.context ?? {}) as Record<string, unknown>;
-    // upsert(非 insert):同题再次做错时刷新复习时间并重新置为未解决,避免唯一键冲突静默失败
-    await supa.from("user_mistakes").upsert({
-      user_id: user.id,
-      module: payload.module,
-      source_key: mistakeKey,
-      source_label: payload.item_label ?? null,
-      question: (ctx.question as string) ?? "",
-      user_answer: payload.user_answer ?? null,
-      correct_answer: payload.correct_answer ?? null,
-      explanation: (ctx.explanation as string) ?? null,
-      is_resolved: false,
-      correct_streak: 0,        // 做错 → 连对清零
-      last_correct_date: null,
-      last_wrong_at: new Date().toISOString(),
-      next_review_at: dueAt,
-    }, { onConflict: "user_id,module,source_key" });
-  } else {
-    // 做对 → 跨3天连对累计(唯一移出途径)。supa 带用户 JWT → RPC 的 auth.uid() 有效。
-    await supa.rpc("bump_mistake_correct", {
-      _module: payload.module,
-      _source_key: mistakeKey,
-    });
+  // mistakes book: 做错入册(再次做错则重新激活);做对自动移除。
+  // ④ 铁律:小学错题不进统一错题本(stage==='primary' 整段跳过)+ 词汇任何学段不进(module==='vocab')。
+  //   这两类只写薄行(无 snapshot)污染错题本、虚高老师端"薄弱"数;掌握度 unified_mastery 上面已照写、不受影响。
+  const skipMistake = payload.stage === "primary" || payload.module === "vocab";
+  if (!skipMistake) {
+    const mistakeKey = `${payload.stage}_${payload.module}_${payload.item_id}`;
+    if (!payload.is_correct) {
+      const ctx = (payload.context ?? {}) as Record<string, unknown>;
+      // upsert(非 insert):同题再次做错时刷新复习时间并重新置为未解决,避免唯一键冲突静默失败
+      await supa.from("user_mistakes").upsert({
+        user_id: user.id,
+        module: payload.module,
+        source_key: mistakeKey,
+        source_label: payload.item_label ?? null,
+        question: (ctx.question as string) ?? "",
+        user_answer: payload.user_answer ?? null,
+        correct_answer: payload.correct_answer ?? null,
+        explanation: (ctx.explanation as string) ?? null,
+        is_resolved: false,
+        correct_streak: 0,        // 做错 → 连对清零
+        last_correct_date: null,
+        last_wrong_at: new Date().toISOString(),
+        next_review_at: dueAt,
+      }, { onConflict: "user_id,module,source_key" });
+    } else {
+      // 做对 → 跨3天连对累计(唯一移出途径)。supa 带用户 JWT → RPC 的 auth.uid() 有效。
+      await supa.rpc("bump_mistake_correct", {
+        _module: payload.module,
+        _source_key: mistakeKey,
+      });
+    }
   }
 
   // smart cache invalidation for ai_diagnostics

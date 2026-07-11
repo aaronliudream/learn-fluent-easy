@@ -16,10 +16,12 @@ import type { QuizItem } from "@/components/american/QuizRunner";
  *
  * ▶ source_key = american_questions.id(uuid 稳定)→ 去重/跨3天连对移出天然可靠。
  */
-/** 错题来源标签:`L{课号}·{中文/英文标题}`,供错题本/老师端显示是哪一课。 */
-export function americanLessonLabel(lesson: { lesson_no?: number | null; title_cn?: string | null; title_en?: string | null }): string {
+/** 错题来源标签:`第{单元}单元·L{课号}·{中文/英文标题}`,供错题本/老师端显示是哪单元哪课。
+ *  unit_no 取自 bundle.lesson.unit_no(现成);无 unit_no 则退回旧格式 `L{课号}·标题`。 */
+export function americanLessonLabel(lesson: { unit_no?: number | null; lesson_no?: number | null; title_cn?: string | null; title_en?: string | null }): string {
   const t = (lesson.title_cn || lesson.title_en || "").trim();
-  return lesson.lesson_no != null ? `L${lesson.lesson_no}${t ? "·" + t : ""}` : t;
+  const lessonPart = lesson.lesson_no != null ? `L${lesson.lesson_no}${t ? "·" + t : ""}` : t;
+  return lesson.unit_no != null ? `第${lesson.unit_no}单元·${lessonPart}` : lessonPart;
 }
 
 function moduleFor(item: QuizItem): string {

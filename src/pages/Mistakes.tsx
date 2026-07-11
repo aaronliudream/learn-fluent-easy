@@ -507,8 +507,8 @@ function MistakeCard({
           }
         </div>
 
-        {/* 来源:单元名 · 做错时间(北京时间 UTC+8) */}
-        <div className="mt-3 text-[11px] text-muted-foreground">
+        {/* 来源:单元名 · 做错时间(北京时间 UTC+8);字号大一档 + 颜色加深,一眼看清 */}
+        <div className="mt-3 text-[13px] text-foreground/70">
           {m.source_label ? <span>{m.source_label} · </span> : null}
           <span className="tabular-nums">{bjDateTime(m.last_wrong_at)}</span>
         </div>

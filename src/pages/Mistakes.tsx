@@ -110,7 +110,8 @@ const MistakesPage = () => {
         select("*").
         eq("is_resolved", false).
         // 隐藏 edge 写的薄记录(听力/高中完形):已被 hub_listening / senior_cloze 完整快照取代。
-        not("module", "in", "(listening,cloze)").
+        // vocab:词汇任何学段都不进错题本(全局铁律)→ DB 层先滤掉。
+        not("module", "in", "(listening,cloze,vocab)").
         order("next_review_at", { ascending: true }).
         limit(500);
         if (cancelled) return;
@@ -121,11 +122,15 @@ const MistakesPage = () => {
         // 薄行会让一篇冒出一堆题干/选项空白、只剩"正确答案/你选的"的重复卡片。此处按内容过滤,
         // 只保留有 snapshot.questions 的整篇行——与老师端 get_student_mistakes 源3A 同口径
         // (source_key like '%_reading_passage_%')。非阅读模块不受影响。
-        const rows = (data as Mistake[] || []).filter((m) =>
-        m.module === "reading" ?
-        Array.isArray(m.snapshot?.questions) && m.snapshot.questions.length > 0 :
-        true
-        );
+        const rows = (data as Mistake[] || []).filter((m) => {
+          // ④ 小学错题不进统一错题本:module 前缀 primary_(primary_lesson/chat_quiz/reading)全滤掉。
+          //   (vocab 已在 DB 层滤;小学听力走 module=listening 也已滤。)
+          if (m.module.startsWith("primary_")) return false;
+          // 阅读:只留有 snapshot.questions 的整篇行,edge 写的薄行滤掉(镜像老师端源3A)。
+          return m.module === "reading" ?
+          Array.isArray(m.snapshot?.questions) && m.snapshot.questions.length > 0 :
+          true;
+        });
         setItems(rows);
       } catch (e) {
         if (!cancelled) console.warn("[mistakes] load failed", e);

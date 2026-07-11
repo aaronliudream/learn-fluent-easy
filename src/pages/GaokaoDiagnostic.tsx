@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { recordAttempt } from "@/lib/gaokaoMastery";
+import { recordSeniorGrammarMistake } from "@/lib/seniorGrammarMistake";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { celebrateScore } from "@/lib/feedback";
 
@@ -74,6 +75,20 @@ export default function GaokaoDiagnostic() {
       questionId: q.id,
       userAnswer: letter,
       isCorrect: ok
+    });
+    // ③-B 高中诊断错题 → 统一错题本(module=senior_grammar,与语法专项同桶;做对跨3天连对移出)。
+    // 纯新增写入,不碰判分/掌握度;失败只 warn。诊断 Q 与 GrammarQuestion 同形,补齐可选字段。
+    void recordSeniorGrammarMistake({
+      question: {
+        id: q.id, stem: q.stem, question_type: "mcq",
+        option_a: q.option_a, option_b: q.option_b, option_c: q.option_c, option_d: q.option_d,
+        correct_answer: q.correct_answer, explanation: q.explanation,
+        accepted_answers: null, distractors: null, natural_note: null,
+        grammar_topic: null, use_ai_grading: false,
+      },
+      result: { kind: ok ? "correct" : "wrong", latencyMs: ms, picked: letter },
+      isCorrect: ok,
+      sourceLabel: q.point_title ? `水平诊断·${q.point_title}` : "水平诊断",
     });
     setTimeout(() => {
       if (idx + 1 >= questions.length) setDone(true);else

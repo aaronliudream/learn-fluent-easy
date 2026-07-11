@@ -62,15 +62,22 @@ select aum.item_id, aum.due_at, aum.next_review_at, aum.lapses,
 --     「还不会」= 不移出、留册。)
 
 
--- ── STEP 4【对账】复查同一 mistake_id:is_resolved=true、correct_streak 仍为 0 ──────────
+-- ── STEP 4【对账·零占位符】8888 所有开放题:is_resolved + correct_streak ────────────
+--    直接跑,不用手填 id。刚「我会了」那条 → is_resolved=true;全部 correct_streak 恒 0。
 select id            as mistake_id,
-       is_resolved,                                      -- ✅ 期望 true(1 次移出)
-       correct_streak,                                   -- ✅ 期望 仍 0(没搬 streak)
-       snapshot->>'question_type' as q_type
+       source_label,
+       is_resolved,                                      -- ✅ 刚「我会了」那条期望 true
+       correct_streak,                                   -- ✅ 全部期望 0(不走连对)
+       to_char((updated_at at time zone 'Asia/Shanghai'),'MM-DD HH24:MI') as upd_bj
   from public.user_mistakes
- where id = '<把 STEP 1 记下的 mistake_id 填这里>';
--- ✅ 通过 = is_resolved=true 且 correct_streak=0(开放题 1 次移出、不走连对)。
--- ❌ correct_streak 变了、或没移出 = 规则串了,别合,叫我查。
+ where user_id = (select user_id from public.profiles
+                   where username ilike '%8888%' or display_name ilike '%8888%' or email ilike '%8888%'
+                   limit 1)
+   and snapshot->>'question_type' = 'open'
+ order by updated_at desc
+ limit 10;
+-- ✅ 通过 = 「我会了」那条 is_resolved=true 且 correct_streak=0(开放题 1 次移出、不走连对)。
+-- ❌ 任一条 correct_streak 不是 0、或该移的没移 = 规则串了,叫我查。
 
 
 -- ── STEP 5【红线·SRS 复查】重做后再跑一次 STEP 2,仍应 0 行(移出没碰 SRS)───────────

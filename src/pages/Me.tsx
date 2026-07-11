@@ -49,7 +49,7 @@ export default function Me() {
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-5 py-8 pb-32 md:px-8 md:py-12">
-      <PageHeader title="👤 我的" subtitle="一个入口，统管你的学习" back />
+      <PageHeader title="👤 我的" subtitle="一个入口，统管你的学习" homeButton />
 
       {/* Identity card */}
       <section className="mt-5 flex items-center gap-4 rounded-3xl border border-border bg-gradient-to-br from-primary/10 via-card to-card p-5">

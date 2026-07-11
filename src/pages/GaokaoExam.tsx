@@ -1,15 +1,8 @@
 import { T } from "@/i18n/T";import { Link } from "react-router-dom";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, Sparkles, BookOpen, FileText, PenLine, Activity, AlertTriangle, Trophy } from "lucide-react";
+import { ArrowLeft, Sparkles, BookOpen, FileText, PenLine, AlertTriangle, Trophy } from "lucide-react";
 
 const COMBO = [
-{
-  to: "/gaokao/diagnostic?scope=full",
-  icon: Activity,
-  title: "高考综合诊断",
-  desc: "30 分钟全题型 mini 模考 · 输出薄弱点报告",
-  gradient: "from-emerald-500 to-teal-600"
-},
 {
   to: "/stage-tests/gaokao/3",
   icon: Trophy,

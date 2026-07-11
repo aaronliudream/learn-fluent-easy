@@ -22,11 +22,13 @@ type Props = {
   title: string;
   subtitle?: string;
   back?: string | true;
+  /** 左上角显示「首页」胶囊按钮(带房子图标、紫色主调),点了回首页 `/`。优先级高于 back。 */
+  homeButton?: boolean;
   /** @deprecated 复习横幅已下线(全站只保留「我的错题本」入口);保留此 prop 仅为兼容旧调用,已无效果。 */
   hideReviewBanner?: boolean;
 };
 
-export const PageHeader = ({ title, subtitle, back }: Props) => {
+export const PageHeader = ({ title, subtitle, back, homeButton }: Props) => {
   const nav = useNavigate();
   const [voiceOpen, setVoiceOpen] = useState(false);
   const { lang, setLang, markPicked } = useI18n();
@@ -55,12 +57,21 @@ export const PageHeader = ({ title, subtitle, back }: Props) => {
     <header className="mb-6">
       <div className="flex items-center justify-between gap-3">
         <div className="flex min-w-0 items-center gap-3">
-          {back ?
+          {homeButton ?
+          <Link
+            to="/"
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-primary/10 px-3.5 py-2 text-sm font-semibold text-primary shadow-sm ring-1 ring-primary/20 transition hover:-translate-y-0.5 hover:bg-primary/15 hover:ring-primary/30 active:translate-y-0"
+            aria-label="回首页">
+
+              <Home className="size-4" /> <T>首页</T>
+            </Link> :
+
+          back ?
           <button
             onClick={() => back === true ? nav(-1) : nav(back)}
             className="grid size-10 shrink-0 place-items-center rounded-full text-foreground/70 transition hover:bg-secondary hover:text-foreground"
             aria-label="Back">
-            
+
               <ArrowLeft className="size-5" />
             </button> :
 
@@ -68,7 +79,7 @@ export const PageHeader = ({ title, subtitle, back }: Props) => {
             to="/"
             className="grid size-10 shrink-0 place-items-center rounded-full text-foreground/70 transition hover:bg-secondary hover:text-foreground"
             aria-label="Home">
-            
+
               <Home className="size-5" />
             </Link>
           }

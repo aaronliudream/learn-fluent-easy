@@ -73,6 +73,15 @@
 - **闭环真机验证**待 Aaron 跑 SQL 后:`/reading`→进篇→故意答错→错题本可见。CC 侧因新表未落库无法本地跑通全链路,已用 tsc/build 兜底静态验证。
 - D5 的 `reading_attempts`/`reading_completions` 样板阶段**未建**(最小闭环只需 D3+D4),留 P1。
 
+## D12 · 图书馆(`/library`)与阅读练习(P0 `/reading`)分线,书目唯一权威表 — ✅ 已定(Aaron 拍板)
+**背景**:P0 `/reading`(答题式阅读理解,表 `reading_library`,未上线)与新 v1 图书馆规格(`/library`,逐句沉浸朗读器,表 `library_books`/`library_sentences`/`library_reading_progress`)是**两个不同产品**。走方案 A:严格按 v1 规格建 `/library`,P0 `/reading` **一行不碰**、原样搁置;新代码全放 `src/pages/library/` `src/lib/library/` `src/components/library/`,与 P0 `Reading.tsx`/`src/lib/reading/` 目录隔离。
+**书目统一约定**:
+1. **`library_books` = "书类内容"唯一权威书目**。未来"同一本书既沉浸阅读、又挂理解测验"时,理解题走**追加式** `library_questions(id, book_id → library_books.id, chapter_idx, q_seq, question, options, answer, explanation)`,锚点是 **`(book_id, chapter_idx)`**(题按"书的某一章"挂,不按整本书)。**禁止再建第二份书表**。因该表纯追加、引用已有主键,`library_books` 现在就是干净外键空间,v1 无需为此加任何列。
+2. **`exam_passage` 等纯考试短文不并入图书馆**——`age_band`/`cover`/`author`/`intro` 对真题短文无意义,它属于"按考试/年级组织的题库",留在 P0 `reading_library` 或将来另设"真题短文库"。
+3. **章号 `chapter_idx` 用真实章号**(样书 seed 按真实章编,断点续读 `state.chapter_idx` 据此记),**不塌成全 0**——为未来"题按 `(book_id, chapter_idx)` 挂"预留干净寻址空间。
+4. **不加 `kind`/`content_type` 判别列**。将来要区分"带题书/纯书",用"该书在 `library_questions` 里有没有题记录"判断,不加冗余状态列(避免两处状态不一致)。真需一等公民的章(章标题/章完成度)时,再追加式建 `library_chapters(book_id, chapter_idx, title)`,零回头成本。
+**放弃**:把 P0 `reading_library` 折进 `library_books`(粒度不同:P0"篇"为原子含内联题,新模型"书→句";且 P0 存 `body` 整段无法机械拆句迁移)。
+
 ---
 
 ### 后续 TODO(样板验收后再做,先记账不做)

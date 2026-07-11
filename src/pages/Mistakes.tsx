@@ -9,7 +9,7 @@ import { T } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
 import { speak as speakTTS, speakFromUrl, stopSpeaking } from "@/lib/speak";
 import { getAlexVoice } from "@/lib/alexVoice";
-import { bumpMistakeCorrect, bjToday, type StreakResult } from "@/lib/mistakeStreak";
+import { bumpMistakeCorrect, bjToday, bjDateTime, type StreakResult } from "@/lib/mistakeStreak";
 import { toast } from "sonner";
 import TutorChat from "@/components/tutor/TutorChat";
 
@@ -315,7 +315,7 @@ const MistakesPage = () => {
       <RedoQuestionModal
         mistake={redoFor}
         onResolved={() => handleRedoCorrect(redoFor)}
-        onClose={() => setRedoFor(null)} />
+        onClose={() => { stopSpeaking(); setRedoFor(null); }} />
       }
     </main>);
 
@@ -476,6 +476,12 @@ function MistakeCard({
           }
         </div>
 
+        {/* 来源:单元名 · 做错时间(北京时间 UTC+8) */}
+        <div className="mt-3 text-[11px] text-muted-foreground">
+          {m.source_label ? <span>{m.source_label} · </span> : null}
+          <span className="tabular-nums">{bjDateTime(m.last_wrong_at)}</span>
+        </div>
+
         {/* Footer actions */}
         <div className="mt-3 flex items-center justify-between gap-2 border-t border-border/60 pt-3 text-xs">
           <span className="flex items-center gap-2 text-muted-foreground">
@@ -533,6 +539,7 @@ function RedoQuestionModal({
 
   const pick = async (L: string) => {
     if (solved) return; // 已答对,锁定
+    stopSpeaking(); // 听力题:选完立即停止播放
     setPicked(L);
     if (L === correct && !resolved) {
       setResolved(true);

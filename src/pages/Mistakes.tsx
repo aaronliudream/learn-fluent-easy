@@ -311,7 +311,6 @@ const MistakesPage = () => {
             onPlay={() => playPhrase(m)}
             onStar={() => toggleStar(m)}
             onAskTutor={() => setTutorFor(m)}
-            onAskAI={() => setAiFor(m)}
             onRedo={(isRedoable(m) || isOpen(m)) ? () => setRedoFor(m) : undefined} />
 
           )}
@@ -337,6 +336,8 @@ const MistakesPage = () => {
         onClose={() => setTutorFor(null)} />
 
       }
+      {/* 「AI 出 5 题」入口按钮已下线(大陆出题慢、体验差,且已有跨3天连对复习机制);
+          SimilarQuestionsModal + generate-similar-questions edge 保留不删,以后加回按钮即可恢复。 */}
       {aiFor && <SimilarQuestionsModal mistake={aiFor} onClose={() => setAiFor(null)} />}
       {redoFor && (isOpen(redoFor) ?
       <RedoOpenModal
@@ -383,8 +384,8 @@ function EmptyState({ tab }: {tab: ModuleKey;}) {
 }
 
 function MistakeCard({
-  m, playing, onPlay, onStar, onAskTutor, onAskAI, onRedo
-}: {m: Mistake;playing: boolean;onPlay: () => void;onStar: () => void;onAskTutor: () => void;onAskAI: () => void;onRedo?: () => void;}) {
+  m, playing, onPlay, onStar, onAskTutor, onRedo
+}: {m: Mistake;playing: boolean;onPlay: () => void;onStar: () => void;onAskTutor: () => void;onRedo?: () => void;}) {
   const meta = moduleMeta(m.module);
   // 错题本永远藏答案:未掌握(还在册)只显示题干 + 纯选项,不含任何正确/你选标记/解析。
   // 答案仅在「重做答对」那一刻由 RedoQuestionModal 揭晓;卡片刷新/下次再看又藏回去。
@@ -482,7 +483,7 @@ function MistakeCard({
                     {qOpts.length > 0 &&
                 <ul className="mt-1 space-y-1">
                         {qOpts.map(([L, txt]) =>
-                  <li key={L} className="flex items-baseline gap-1.5 text-sm text-foreground/80">
+                  <li key={L} className="flex items-baseline gap-1.5 text-base text-foreground/80">
                             <span className="font-bold text-muted-foreground">{L}.</span>
                             <span>{String(txt)}</span>
                           </li>
@@ -498,7 +499,7 @@ function MistakeCard({
           {plainOptions.length > 0 &&
           <ul className="space-y-1 rounded-xl border border-border bg-background/60 p-3">
               {plainOptions.map(([L, txt]) =>
-            <li key={L} className="flex items-baseline gap-1.5 text-sm text-foreground/80">
+            <li key={L} className="flex items-baseline gap-1.5 text-base text-foreground/80">
                   <span className="font-bold text-muted-foreground">{L}.</span>
                   <span>{txt}</span>
                 </li>
@@ -532,14 +533,6 @@ function MistakeCard({
               className="inline-flex items-center gap-1 rounded-full bg-sky-100 px-3 py-1 font-semibold text-sky-700 hover:bg-sky-200 dark:bg-sky-500/20 dark:text-sky-300">
 
               <RotateCw className="size-3" /> <T>重做</T>
-            </button>
-            }
-            {m.module === "senior_grammar" &&
-            <button
-              onClick={onAskAI}
-              className="inline-flex items-center gap-1 rounded-full bg-violet-100 px-3 py-1 font-semibold text-violet-700 hover:bg-violet-200 dark:bg-violet-500/20 dark:text-violet-300">
-
-              <Wand2 className="size-3" /> <T>AI 出 5 题</T>
             </button>
             }
           </div>
@@ -622,13 +615,13 @@ function RedoQuestionModal({
                 <button
                   onClick={() => pick(L)}
                   disabled={solved}
-                  className={`flex w-full items-baseline gap-2.5 rounded-2xl border-2 px-4 py-3 text-left text-sm transition ${cls}`}>
+                  className={`flex w-full items-baseline gap-2.5 rounded-2xl border-2 px-4 py-3 text-left text-base transition ${cls}`}>
                   <span className={`grid size-6 flex-shrink-0 place-items-center rounded-lg text-xs font-extrabold ${
                   state === "correct" || state === "revealed" ? "bg-emerald-400 text-white" :
                   state === "wrong" ? "bg-rose-400 text-white" : "bg-secondary text-foreground"}`}>
                     {state === "correct" || state === "revealed" ? "✓" : state === "wrong" ? "✕" : L}
                   </span>
-                  <span className={state === "wrong" ? "line-through" : ""}>{txt}</span>
+                  <span className={`min-w-0 break-words ${state === "wrong" ? "line-through" : ""}`}>{txt}</span>
                 </button>
               </li>);
 

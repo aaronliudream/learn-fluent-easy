@@ -109,9 +109,10 @@ const MistakesPage = () => {
         from("user_mistakes").
         select("*").
         eq("is_resolved", false).
-        // 隐藏 edge 写的薄记录(听力/高中完形):已被 hub_listening / senior_cloze 完整快照取代。
-        // vocab:词汇任何学段都不进错题本(全局铁律)→ DB 层先滤掉。
-        not("module", "in", "(listening,cloze,vocab)").
+        // 隐藏 edge 写的薄记录裸模块(听力/完形/词汇/语法/写作/拼读):这些经 edge 只写薄行,
+        // 已被 hub_listening / senior_cloze / senior_grammar 等完整快照取代;精确排除、绝不误伤
+        // senior_grammar / gaokao_grammar 等正牌模块。小学 primary_ 在下方 JS 过滤。
+        not("module", "in", "(listening,cloze,vocab,grammar,writing,phonics)").
         order("next_review_at", { ascending: true }).
         limit(500);
         if (cancelled) return;

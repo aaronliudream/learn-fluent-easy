@@ -151,9 +151,12 @@ Deno.serve(async (req) => {
   }
 
   // mistakes book: 做错入册(再次做错则重新激活);做对自动移除。
-  // ④ 铁律:小学错题不进统一错题本(stage==='primary' 整段跳过)+ 词汇任何学段不进(module==='vocab')。
-  //   这两类只写薄行(无 snapshot)污染错题本、虚高老师端"薄弱"数;掌握度 unified_mastery 上面已照写、不受影响。
-  const skipMistake = payload.stage === "primary" || payload.module === "vocab";
+  // ④ 铁律:小学错题不进统一错题本(stage==='primary' 整段跳过)+ 下列"裸模块"不进
+  //   (vocab/grammar/writing/phonics —— 这些经 edge 只写薄行、无 snapshot,污染错题本、虚高老师端
+  //   "薄弱"数;正牌完整错题走 senior_grammar/gaokao_grammar/senior_cloze/hub_* 等,不受影响)。
+  //   掌握度 unified_mastery 上面已照写、不受此跳过影响。
+  const SKIP_BARE_MODULES = ["vocab", "grammar", "writing", "phonics"];
+  const skipMistake = payload.stage === "primary" || SKIP_BARE_MODULES.includes(payload.module);
   if (!skipMistake) {
     const mistakeKey = `${payload.stage}_${payload.module}_${payload.item_id}`;
     if (!payload.is_correct) {

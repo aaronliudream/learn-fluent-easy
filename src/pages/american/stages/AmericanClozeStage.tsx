@@ -98,9 +98,14 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
     if (ok) setCorrect((c) => c + 1);
     void recordMastery("am_question", q.id, ok);
     // 错题本(独立于 SRS):context→senior_cloze 自动路由。
+    // 重做弹窗要能看出"第几空"(对话原文含多个空,一组选项 → 不标空号没法做)→
+    // context 前缀「第 N 空」(仿高考完形 stem);blank_no 现成,新错题即生效。
+    const clozeContext = q.payload.blank_no != null
+      ? `【第 ${q.payload.blank_no} 空】\n${q.payload.context ?? ""}`.trim()
+      : q.payload.context;
     recordAmericanMistake(
       { kind: "choice", id: q.id, stem: q.payload.stem, options: q.payload.options ?? [],
-        answerIndex: q.payload.answer_index ?? 0, context: q.payload.context, explanation: q.payload.explanation_cn },
+        answerIndex: q.payload.answer_index ?? 0, context: clozeContext, explanation: q.payload.explanation_cn },
       i, ok, label,
     );
   }, [q, answered, idx, maxIdx, ans, label]);

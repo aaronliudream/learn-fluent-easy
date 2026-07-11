@@ -315,7 +315,7 @@ const MistakesPage = () => {
       <RedoQuestionModal
         mistake={redoFor}
         onResolved={() => handleRedoCorrect(redoFor)}
-        onClose={() => setRedoFor(null)} />
+        onClose={() => { stopSpeaking(); setRedoFor(null); }} />
       }
     </main>);
 
@@ -539,6 +539,7 @@ function RedoQuestionModal({
 
   const pick = async (L: string) => {
     if (solved) return; // 已答对,锁定
+    stopSpeaking(); // 听力题:选完立即停止播放
     setPicked(L);
     if (L === correct && !resolved) {
       setResolved(true);

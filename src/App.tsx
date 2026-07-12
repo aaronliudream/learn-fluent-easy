@@ -114,6 +114,7 @@ const ReadingPlay = lazy(() => import("./pages/ReadingPlay.tsx"));
 const LibraryHome = lazy(() => import("./pages/library/LibraryHome.tsx"));
 const LibraryBook = lazy(() => import("./pages/library/LibraryBook.tsx"));
 const LibraryReader = lazy(() => import("./pages/library/LibraryReader.tsx"));
+const LibraryVocab = lazy(() => import("./pages/library/LibraryVocab.tsx"));
 const JuniorClozePlay = lazy(() => import("./pages/JuniorClozePlay.tsx"));
 const JuniorListening = lazy(() => import("./pages/JuniorListening.tsx"));
 const JuniorListeningPlay = lazy(() => import("./pages/JuniorListeningPlay.tsx"));
@@ -483,6 +484,7 @@ const App = () => (
           <Route path="/reading/:id" element={<ChineseOnlyRoute><ReadingPlay /></ChineseOnlyRoute>} />
           {/* 图书馆(扁平挂载,照 /american 模式;暂不加 BrandHubNav 入口,软上线) */}
           <Route path="/library" element={<ChineseOnlyRoute><LibraryHome /></ChineseOnlyRoute>} />
+          <Route path="/library/vocab" element={<ChineseOnlyRoute><LibraryVocab /></ChineseOnlyRoute>} />
           <Route path="/library/:bookKey" element={<ChineseOnlyRoute><LibraryBook /></ChineseOnlyRoute>} />
           <Route path="/library/:bookKey/read" element={<ChineseOnlyRoute><LibraryReader /></ChineseOnlyRoute>} />
           <Route path="/junior/cloze/:id" element={<ChineseOnlyRoute><JuniorClozePlay /></ChineseOnlyRoute>} />

@@ -39,6 +39,13 @@ for (const ch of book.chapters) {
 }
 const sentenceCount = rows.length;
 
+// 章标题元数据(方案 A:library_books.chapters jsonb — 随 getBookByKey 一起取,零额外查询)。
+const chapterMeta = book.chapters.map((ch) => ({
+  idx: ch.idx,
+  title_en: ch.title_en ?? "",
+  title_zh: ch.title_zh ?? "",
+}));
+
 const valuesSql = rows
   .map((r) => `    (${r.chapter_idx}, ${r.para_idx}, ${r.seq}, ${q(r.en)}, ${q(r.cn)})`)
   .join(",\n");
@@ -53,6 +60,10 @@ let sql = `-- ==================================================================
 
 BEGIN;
 
+-- 0) 章标题列(方案 A:jsonb,幂等加列)。[{idx,title_en,title_zh}]
+ALTER TABLE public.library_books
+  ADD COLUMN IF NOT EXISTS chapters jsonb NOT NULL DEFAULT '[]'::jsonb;
+
 SELECT 'before' AS phase,
        (SELECT count(*) FROM public.library_books WHERE book_key = ${q(book.book_key)}) AS book_exists,
        (SELECT count(*) FROM public.library_sentences s
@@ -62,12 +73,12 @@ SELECT 'before' AS phase,
 -- 1) 书目(upsert)
 INSERT INTO public.library_books
   (book_key, title, zh_title, author, age_band, age_range, cover,
-   intro_en, intro_zh, sentence_count, copyright_note, is_published)
+   intro_en, intro_zh, sentence_count, copyright_note, chapters, is_published)
 VALUES
   (${q(book.book_key)}, ${q(book.title)}, ${q(book.zh_title)}, ${q(book.author)},
    ${q(book.age_band)}, ${q(book.age_range)}, ${jsonLit(book.cover ?? {})},
    ${q(book.intro_en)}, ${q(book.intro_zh)}, ${sentenceCount}, ${q(book.copyright_note)},
-   ${book.is_published === true})
+   ${jsonLit(chapterMeta)}, ${book.is_published === true})
 ON CONFLICT (book_key) DO UPDATE SET
   title          = EXCLUDED.title,
   zh_title       = EXCLUDED.zh_title,
@@ -78,7 +89,8 @@ ON CONFLICT (book_key) DO UPDATE SET
   intro_en       = EXCLUDED.intro_en,
   intro_zh       = EXCLUDED.intro_zh,
   sentence_count = EXCLUDED.sentence_count,
-  copyright_note = EXCLUDED.copyright_note;
+  copyright_note = EXCLUDED.copyright_note,
+  chapters       = EXCLUDED.chapters;
   -- 注:不覆盖 is_published —— 审后手动置 true,重灌 seed 不会把它打回 false。
 
 -- 2) 句子(删旧重灌,幂等)。audio_url 留 NULL:默认前端实时合成,预生成脚本审后另回填。

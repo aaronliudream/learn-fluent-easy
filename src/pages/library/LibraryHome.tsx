@@ -5,7 +5,7 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookOpen } from "lucide-react";
+import { ArrowLeft, BookOpen, BookMarked } from "lucide-react";
 import { T } from "@/i18n/T";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
@@ -87,6 +87,13 @@ export default function LibraryHome() {
       <p className="mt-1 text-sm text-slate-500">
         <T>分级读物 · 点词查中文 · 整章朗读 · 断点续读</T>
       </p>
+
+      <Link
+        to="/library/vocab"
+        className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1.5 text-sm font-semibold text-sky-700 transition hover:bg-sky-100"
+      >
+        <BookMarked className="size-4" /> <T>我的词库</T>
+      </Link>
 
       {/* 年龄段筛选 */}
       <div className="mt-4 flex flex-wrap gap-2">

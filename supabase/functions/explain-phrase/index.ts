@@ -43,7 +43,7 @@ Deno.serve(async (req) => {
       });
     }
 
-    // 1) Cache lookup
+    // 1) 重卡缓存(zh-v2)命中 → 原路返回。放最前 → 已生成过重卡的词(含美语课已点过的词)行为 100% 不变。
     const { data: cached } = await admin
       .from("phrase_explanations")
       .select("explanation")
@@ -53,6 +53,31 @@ Deno.serve(async (req) => {
 
     if (cached?.explanation) {
       return new Response(JSON.stringify({ explanation: cached.explanation, cached: true }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    // 1.5) 精读轻词义(read-v1)命中 → 返回轻卡(快,避开 9 秒重卡生成)。仅在重卡未命中时兜底,
+    //      故不会顶掉任何已存在的重卡。把轻 schema {word,pos,ipa,gloss_cn,example} 映射成前端 Explanation 兼容结构:
+    //      gloss_cn→one_line_cn(🧠 一句话)、pos+ipa→pos(卡头)、example→📝 例句。
+    //      重卡专属字段(literal/scene/replies/similar/tip)缺省 → LessonBody 各段有长度守卫,优雅降级。
+    //      ⚠️ 未预生成的词(含大多数美语课词)不在 read-v1 → 查不到走下方原路,行为不变。
+    const { data: light } = await admin
+      .from("phrase_explanations")
+      .select("explanation")
+      .eq("normalized", normalized)
+      .eq("target_lang", "read-v1")
+      .maybeSingle();
+    // deno-lint-ignore no-explicit-any
+    const lg = light?.explanation as any;
+    if (lg && lg.gloss_cn) {
+      const card = {
+        phrase: lg.word || phrase,
+        pos: [lg.pos, lg.ipa].filter(Boolean).join("  "),
+        one_line_cn: lg.gloss_cn,
+        example: lg.example && lg.example.en ? lg.example : undefined,
+      };
+      return new Response(JSON.stringify({ explanation: card, cached: true, light: true }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }

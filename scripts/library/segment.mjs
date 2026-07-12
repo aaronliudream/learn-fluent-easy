@@ -20,12 +20,45 @@ if (!rawPath || !key) {
 
 const ABBR = ["Mr", "Mrs", "Ms", "Dr", "St", "Prof", "Sr", "Jr", "vs", "etc", "e.g", "i.e", "U.S", "U.K", "a.m", "p.m", "No", "Fig"];
 
+/**
+ * 对话回接:引号内的 ?/! 会被误当句末,把对话标签(said/asked/cried…)切成小写开头的碎句。
+ * 规则:
+ *  1) 任何「小写字母开头」的段 = 被切开的对话标签/续句 → 接回上一句。
+ *     (干净英文里句子恒以大写或引号开头;小写开头必是误切。这一条覆盖 said X. / she asked. 等。)
+ *  2) 标签接回后,若紧跟一个「自己没有对话标签」的续引号("B."),一并并入 → "A?" said X. "B." 视为一句。
+ *     若续引号自己带标签("B!" said Y.),说明是另一说话人 → 不并,留作独立句。
+ */
+function rejoinDialogue(parts) {
+  // 纯引号句:以双引号包裹、后面只跟句末标点,自身不带对话标签(如 "Nobody knows.")。
+  // 用双引号判定(不含单引号),避免把 "Let's ..." 里的撇号误当引号。
+  const isBareQuote = (s) => /^["“][^"”]*["”][.!?]*$/.test(s);
+  const out = [];
+  for (let i = 0; i < parts.length; i++) {
+    const seg = parts[i];
+    if (out.length && /^[a-z]/.test(seg)) {
+      out[out.length - 1] += " " + seg; // 小写标签/续句接回上一句
+      // "A?" said X. "B." → 一句:仅当续引号是"纯引号"(自己不带标签→非另一说话人)才并入。
+      // "B!" said Y.(自带标签)不是纯引号 → 不并,留作独立句。
+      const nxt = parts[i + 1];
+      if (nxt && isBareQuote(nxt)) {
+        out[out.length - 1] += " " + nxt;
+        i++;
+      }
+      continue;
+    }
+    out.push(seg);
+  }
+  return out;
+}
+
 function splitSentences(paragraph) {
   let t = paragraph.replace(/\s+/g, " ").trim();
   for (const a of ABBR) t = t.replace(new RegExp(`\\b${a.replace(/\./g, "\\.")}\\.`, "g"), (m) => m.replace(/\./g, "§"));
   t = t.replace(/(\d)\.(\d)/g, "$1§$2"); // 小数点
-  const parts = t.match(/[^.!?]+[.!?]+["'”’)\]]?|\S[^.!?]*$/g) || [t];
-  return parts.map((s) => s.replace(/§/g, ".").trim()).filter(Boolean);
+  const parts = (t.match(/[^.!?]+[.!?]+["'”’)\]]?|\S[^.!?]*$/g) || [t])
+    .map((s) => s.replace(/§/g, ".").trim())
+    .filter(Boolean);
+  return rejoinDialogue(parts);
 }
 
 const raw = readFileSync(rawPath, "utf8");

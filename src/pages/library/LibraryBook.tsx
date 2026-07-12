@@ -2,17 +2,18 @@
  * 图书馆(/library/:bookKey)· 书籍详情页。
  * 封面 + 英文简介(默认)/显示中文切换 + 年龄徽章 + 完成度/时长 + 开始/继续阅读 + 章节目录。
  */
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, BookOpen, Play, Languages } from "lucide-react";
 import { T } from "@/i18n/T";
 import { cn } from "@/lib/utils";
 import {
   getBookByKey,
-  getSentences,
+  getChapterList,
+  chapterTitle,
   currentUserId,
   type LibraryBook as LibraryBookT,
-  type LibrarySentence,
+  type LibraryChapter,
 } from "@/lib/library/data";
 import { fetchProgressMap, type LibraryReadingState } from "@/lib/library/progress";
 
@@ -33,7 +34,7 @@ function fmtDuration(sec: number): string {
 export default function LibraryBook() {
   const { bookKey = "" } = useParams();
   const [book, setBook] = useState<LibraryBookT | null>(null);
-  const [sentences, setSentences] = useState<LibrarySentence[]>([]);
+  const [chapters, setChapters] = useState<LibraryChapter[]>([]);
   const [state, setState] = useState<LibraryReadingState | null>(null);
   const [showZh, setShowZh] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -49,9 +50,9 @@ export default function LibraryBook() {
         setLoading(false);
         return;
       }
-      const ss = await getSentences(b.id);
+      const chs = await getChapterList(b.id);
       if (!alive) return;
-      setSentences(ss);
+      setChapters(chs);
       setLoading(false);
       const uid = await currentUserId();
       if (!alive) return;
@@ -64,14 +65,7 @@ export default function LibraryBook() {
     };
   }, [bookKey]);
 
-  // 章节目录:distinct chapter_idx + 每章首句英文预览
-  const chapters = useMemo(() => {
-    const seen = new Map<number, string>();
-    for (const s of sentences) if (!seen.has(s.chapter_idx)) seen.set(s.chapter_idx, s.text_en);
-    return [...seen.entries()].map(([idx, first]) => ({ idx, first }));
-  }, [sentences]);
-
-  const total = sentences.length || book?.sentence_count || 0;
+  const total = book?.sentence_count || 0;
   const pct =
     state && state.furthest_seq >= 0 && total > 0
       ? Math.round(((state.furthest_seq + 1) / total) * 100)
@@ -187,18 +181,28 @@ export default function LibraryBook() {
             <T>目录</T>
           </h2>
           <ol className="divide-y divide-slate-100 overflow-hidden rounded-xl border border-slate-100">
-            {chapters.map((c) => (
-              <Link
-                key={c.idx}
-                to={`/library/${book.book_key}/read`}
-                className="flex items-center gap-3 px-3 py-2.5 transition hover:bg-slate-50"
-              >
-                <span className="grid size-7 shrink-0 place-items-center rounded-full bg-slate-100 text-xs font-bold text-slate-500">
-                  {c.idx}
-                </span>
-                <span className="truncate text-sm text-slate-600">{c.first}</span>
-              </Link>
-            ))}
+            {chapters.map((c) => {
+              const t = chapterTitle(book, c.idx);
+              return (
+                <Link
+                  key={c.idx}
+                  to={`/library/${book.book_key}/read?ch=${c.idx}`}
+                  className="flex items-center gap-3 px-3 py-2.5 transition hover:bg-slate-50"
+                >
+                  <span className="grid size-7 shrink-0 place-items-center rounded-full bg-slate-100 text-xs font-bold text-slate-500">
+                    {c.idx}
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate text-sm font-medium text-slate-700">
+                      {t?.title_en || c.first}
+                    </span>
+                    {t?.title_zh && (
+                      <span className="block truncate text-xs text-slate-400">{t.title_zh}</span>
+                    )}
+                  </span>
+                </Link>
+              );
+            })}
           </ol>
         </section>
       )}

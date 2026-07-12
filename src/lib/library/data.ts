@@ -29,10 +29,14 @@ export type LibraryBookListItem = {
 };
 
 /** 完整书目(详情页用,多简介字段)。 */
+/** 章标题(存 library_books.chapters jsonb;方案 A,随书一起取)。 */
+export type LibraryChapterTitle = { idx: number; title_en: string; title_zh: string };
+
 export type LibraryBook = LibraryBookListItem & {
   intro_en: string | null;
   intro_zh: string | null;
   copyright_note: string | null;
+  chapters: LibraryChapterTitle[];
 };
 
 /** 逐句原子(阅读器用)。 */
@@ -49,7 +53,7 @@ export type LibrarySentence = {
 
 const LIST_COLS =
   "id,book_key,title,zh_title,author,age_band,age_range,cover,sentence_count";
-const FULL_COLS = `${LIST_COLS},intro_en,intro_zh,copyright_note`;
+const FULL_COLS = `${LIST_COLS},intro_en,intro_zh,copyright_note,chapters`;
 
 function coerceCover(raw: unknown): LibraryCover {
   return raw && typeof raw === "object" ? (raw as LibraryCover) : {};
@@ -75,17 +79,123 @@ export async function getBookByKey(bookKey: string): Promise<LibraryBook | null>
     .eq("book_key", bookKey)
     .maybeSingle();
   if (!data) return null;
-  return { ...(data as LibraryBook), cover: coerceCover((data as LibraryBook).cover) };
+  const raw = data as LibraryBook;
+  const chapters = Array.isArray(raw.chapters)
+    ? [...raw.chapters].sort((a, b) => a.idx - b.idx)
+    : [];
+  return { ...raw, cover: coerceCover(raw.cover), chapters };
 }
 
-/** 一本书的全部句子(按 seq 升序;沉浸阅读器一次取全)。 */
-export async function getSentences(bookId: string): Promise<LibrarySentence[]> {
+/** 章号 → 标题(取不到返回 null)。目录/阅读器渲染用。 */
+export function chapterTitle(
+  book: Pick<LibraryBook, "chapters"> | null,
+  idx: number,
+): LibraryChapterTitle | null {
+  return book?.chapters?.find((c) => c.idx === idx) ?? null;
+}
+
+const SENTENCE_COLS = "id,book_id,chapter_idx,para_idx,seq,text_en,text_cn,audio_url";
+// Supabase/PostgREST 单次返回硬顶 1000 行(本项目实测)。长书必须按章加载 / 翻页,
+// 否则一次拉全书会被静默截断到前 1000 句(后面的章直接丢失)。
+const PAGE = 1000;
+
+/** 某一章的句子(按 seq 升序)。按章加载:单章恒 <1000 句,一次请求拿得全。 */
+export async function getChapterSentences(
+  bookId: string,
+  chapterIdx: number,
+): Promise<LibrarySentence[]> {
   const { data } = await db
     .from("library_sentences")
-    .select("id,book_id,chapter_idx,para_idx,seq,text_en,text_cn,audio_url")
+    .select(SENTENCE_COLS)
     .eq("book_id", bookId)
+    .eq("chapter_idx", chapterIdx)
     .order("seq", { ascending: true });
   return (data ?? []) as LibrarySentence[];
+}
+
+/** 目录项:章号 + 该章首句全书 seq(断点/跳章定位)+ 首句英文预览。 */
+export type LibraryChapter = { idx: number; firstSeq: number; first: string };
+
+/**
+ * 全书章节目录。两步走且都很轻,绕开 1000 行硬顶:
+ *  1) 翻页只取 (chapter_idx, seq) 两个 int 列 → 归约出每章首句 seq(有序去重);
+ *  2) 再按这些首句 seq 一次取英文预览(≈章数行)。
+ */
+export async function getChapterList(bookId: string): Promise<LibraryChapter[]> {
+  const firstSeqByChapter = new Map<number, number>();
+  for (let from = 0; ; from += PAGE) {
+    const { data } = await db
+      .from("library_sentences")
+      .select("chapter_idx,seq")
+      .eq("book_id", bookId)
+      .order("seq", { ascending: true })
+      .range(from, from + PAGE - 1);
+    const rows = (data ?? []) as { chapter_idx: number; seq: number }[];
+    for (const r of rows) {
+      if (!firstSeqByChapter.has(r.chapter_idx)) firstSeqByChapter.set(r.chapter_idx, r.seq);
+    }
+    if (rows.length < PAGE) break;
+  }
+  const firstSeqs = [...firstSeqByChapter.values()];
+  const preview = new Map<number, string>();
+  if (firstSeqs.length) {
+    const { data } = await db
+      .from("library_sentences")
+      .select("seq,text_en")
+      .eq("book_id", bookId)
+      .in("seq", firstSeqs);
+    for (const r of (data ?? []) as { seq: number; text_en: string }[]) {
+      preview.set(r.seq, r.text_en);
+    }
+  }
+  return [...firstSeqByChapter.entries()]
+    .map(([idx, firstSeq]) => ({ idx, firstSeq, first: preview.get(firstSeq) ?? "" }))
+    .sort((a, b) => a.firstSeq - b.firstSeq);
+}
+
+/** 每章插图(v1 章首,position=0)。RLS 已只返回 is_published=true。 */
+export type LibraryIllustration = {
+  chapter_idx: number;
+  position: number;
+  image_path: string;
+  caption: string | null;
+  alt_text: string | null;
+  credit: string | null;
+  width: number | null;
+  height: number | null;
+};
+
+const ILLUSTRATION_BUCKET = "library-illustrations";
+
+/** 桶内路径 → 公开 CDN URL。 */
+export function illustrationUrl(imagePath: string): string {
+  const base = import.meta.env.VITE_SUPABASE_URL as string;
+  return `${base}/storage/v1/object/public/${ILLUSTRATION_BUCKET}/${imagePath}`;
+}
+
+/** 取某章的插图(按 position 升序;每章就几张,和句子同批取)。 */
+export async function getChapterIllustrations(
+  bookId: string,
+  chapterIdx: number,
+): Promise<LibraryIllustration[]> {
+  const { data } = await db
+    .from("library_illustrations")
+    .select("chapter_idx,position,image_path,caption,alt_text,credit,width,height")
+    .eq("book_id", bookId)
+    .eq("chapter_idx", chapterIdx)
+    .order("position", { ascending: true });
+  return (data ?? []) as LibraryIllustration[];
+}
+
+/** 某章的语块表面形式列表(正文虚线用;RLS 已只返回 is_published=true)。去重。 */
+export async function getChapterChunkTerms(bookId: string, chapterIdx: number): Promise<string[]> {
+  const { data } = await db
+    .from("library_chunks")
+    .select("term")
+    .eq("book_id", bookId)
+    .eq("chapter_idx", chapterIdx);
+  const set = new Set(((data ?? []) as { term: string }[]).map((r) => r.term));
+  return [...set];
 }
 
 /** 当前登录用户 id(未登录 → null)。 */

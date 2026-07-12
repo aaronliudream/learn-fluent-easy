@@ -1,10 +1,40 @@
 import React, { useMemo, useState } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Loader2, Volume2, Sparkles } from "lucide-react";
+import { Loader2, Volume2, Sparkles, Bookmark, Check } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { stripTags } from "@/lib/richText";
 import { T } from "@/i18n/T";
+import {
+  addLibraryFavorite,
+  removeLibraryFavorite,
+  isLibraryFavorite,
+  recordRecall,
+  type LibraryFavoriteKind,
+} from "@/lib/library/favorites";
+
+/** 精读收藏上下文:由 LibraryReader 传入(整句 cn + book_id);美语课不传 → 不渲染收藏按钮/标记。 */
+export type FavoriteCtx = { bookId: string; srcZh: string };
+
+// 默认点读样式(美语课等):默认隐形虚线,悬停显下划线。图书馆精读走 libraryTriggerClass。
+const DEFAULT_TRIGGER_CLASS =
+  "cursor-pointer rounded-sm border-b border-dotted border-transparent transition hover:border-primary/60 hover:text-primary focus:border-primary focus:text-primary focus:outline-none";
+
+/**
+ * 图书馆精读点读样式:默认干净、无标记。
+ *  · 语块 → 珊瑚色细虚线下划线(固定搭配)
+ *  · 收藏 → 淡黄底色高亮(不改字重、不下划线),像荧光笔轻扫
+ *  · 悬停(桌面)/ reveal(移动端长按)→ 淡灰底,提示"这词可点"
+ * 三者可叠加(收藏的语块 = 底色 + 虚线),互不打架。
+ */
+function libraryTriggerClass(isChunk: boolean, isFav: boolean, reveal: boolean): string {
+  const c = ["cursor-pointer rounded-[3px] transition-colors focus:outline-none"];
+  if (isFav) c.push("bg-amber-100"); // 收藏高亮
+  else if (reveal) c.push("bg-slate-100"); // 长按揭示可点
+  else c.push("hover:bg-slate-100"); // 悬停揭示可点
+  if (isChunk) c.push("underline decoration-dashed decoration-1 underline-offset-[3px] decoration-[#fb7185]"); // 珊瑚色虚线=语块
+  return c.join(" ");
+}
 
 type EnCnPair = { en: string; cn: string };
 type LiteralWord = { word: string; meaning_cn: string; note_cn?: string };
@@ -104,7 +134,7 @@ type Token =
  * single word becomes a tap target; runs of words that match a known
  * phrase are merged into a single multi-word tap target.
  */
-function tokenize(sentence: string): Token[] {
+function tokenize(sentence: string, phrases: string[] = KNOWN_PHRASES): Token[] {
   const clean = stripTags(sentence);
   // Split into words & non-word delimiters but keep delimiters.
   const parts = clean.split(/(\s+|[.,!?;:"'()\-—…])/g).filter((p) => p !== "");
@@ -116,7 +146,9 @@ function tokenize(sentence: string): Token[] {
   // Mark phrase ranges (start..end inclusive in parts indices).
   const phraseRanges: Array<{ from: number; to: number; phrase: string }> = [];
   const lower = parts.map((p) => p.toLowerCase());
-  for (const phrase of KNOWN_PHRASES) {
+  // 长短语优先(词数多的先匹配),避免长语块被其子串抢先切开。
+  const ordered = [...phrases].sort((a, b) => b.split(" ").length - a.split(" ").length);
+  for (const phrase of ordered) {
     const words = phrase.split(" ");
     for (let wi = 0; wi <= wordIdx.length - words.length; wi++) {
       let ok = true;
@@ -171,16 +203,31 @@ function tokenize(sentence: string): Token[] {
 function ExplainPopover({
   phrase,
   contextText,
+  favorite,
+  isFavorited,
+  triggerClassName,
+  onFavoriteChange,
   children,
 }: {
   phrase: string;
   contextText: string;
+  favorite?: FavoriteCtx;
+  isFavorited?: boolean; // 该词已收藏 → 触发「微提取」(先回忆后揭晓)
+  triggerClassName?: string; // 图书馆传入带标记的点读样式;不传 → 用默认(美语课不变)
+  onFavoriteChange?: (term: string, kind: LibraryFavoriteKind, favorited: boolean) => void;
   children: React.ReactNode;
 }) {
   const [open, setOpen] = useState(false);
   const [data, setData] = useState<Explanation | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isLight, setIsLight] = useState(false); // 命中 read-v1 轻卡才为 true → 才显示收藏按钮
+  const [fav, setFav] = useState(false);
+  const [favBusy, setFavBusy] = useState(false);
+  const [revealed, setRevealed] = useState(false); // 微提取:是否已揭晓释义
+
+  const favKind: LibraryFavoriteKind = phrase.includes(" ") ? "chunk" : "word";
+  const microRetrieval = !!isFavorited; // 只对收藏词做「先回忆后揭晓」
 
   const fetchExplanation = async () => {
     if (data || loading) return;
@@ -194,6 +241,12 @@ function ExplainPopover({
       if (fnErr) throw fnErr;
       if (resp?.error) throw new Error(resp.error);
       setData(resp.explanation as Explanation);
+      const light = !!resp.light;
+      setIsLight(light);
+      // 轻卡 + 有收藏上下文(精读)→ 查一次当前收藏状态
+      if (light && favorite) {
+        isLibraryFavorite(phrase, favKind).then(setFav).catch(() => {});
+      }
     } catch (e: any) {
       console.warn("[explain-phrase] failed", e);
       setError(e?.message || "failed");
@@ -202,19 +255,69 @@ function ExplainPopover({
     }
   };
 
+  // 收藏 / 取消:出处英文原句(contextText)+ 出处中文(favorite.srcZh)一并存,作天然例句/复习语境。
+  const toggleFav = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (favBusy || !data || !favorite) return;
+    setFavBusy(true);
+    try {
+      if (fav) {
+        await removeLibraryFavorite(phrase, favKind);
+        setFav(false);
+        onFavoriteChange?.(phrase, favKind, false);
+      } else {
+        const posRaw = data.pos || "";
+        const ipaM = posRaw.match(/\/[^/]+\//); // 卡头 "pos  /ipa/" → 拆回 pos 与 ipa
+        const ipa = ipaM ? ipaM[0] : "";
+        const pos = posRaw.replace(ipa, "").trim();
+        await addLibraryFavorite({
+          term: phrase,
+          kind: favKind,
+          zh: data.one_line_cn || "",
+          ipa,
+          pos,
+          srcSentence: contextText,
+          srcZh: favorite.srcZh,
+          bookId: favorite.bookId,
+        });
+        setFav(true);
+        onFavoriteChange?.(phrase, favKind, true);
+      }
+    } catch (err) {
+      console.warn("[library favorite] toggle failed", err);
+    } finally {
+      setFavBusy(false);
+    }
+  };
+
+  // 微提取:用户点「想起来了/想不起来」→ 记结果 → 揭晓释义卡。
+  const onRecall = (remembered: boolean) => {
+    void recordRecall(phrase, favKind, remembered).catch(() => {});
+    setRevealed(true);
+    void fetchExplanation();
+  };
+
   return (
     <Popover
       open={open}
       onOpenChange={(v) => {
         setOpen(v);
-        if (v) fetchExplanation();
+        if (v) {
+          if (microRetrieval && !revealed) {
+            // 收藏词:先回忆(不 fetch),等用户点回忆按钮再揭晓。
+          } else {
+            // 其余:直接揭晓出卡。置 revealed → 阅读中途收藏该词不会把卡片切回回忆提示。
+            setRevealed(true);
+            void fetchExplanation();
+          }
+        } else {
+          setRevealed(false); // 关闭后下次再点重新回忆
+        }
       }}
     >
       <PopoverTrigger asChild>
-        <button
-          type="button"
-          className="cursor-pointer rounded-sm border-b border-dotted border-transparent transition hover:border-primary/60 hover:text-primary focus:border-primary focus:text-primary focus:outline-none"
-        >
+        <button type="button" className={triggerClassName ?? DEFAULT_TRIGGER_CLASS}>
           {children}
         </button>
       </PopoverTrigger>
@@ -237,6 +340,21 @@ function ExplainPopover({
               ) : null}
             </div>
             <div className="flex shrink-0 items-center gap-1.5">
+              {favorite && isLight && (
+                <button
+                  onClick={toggleFav}
+                  disabled={favBusy}
+                  className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-xs font-semibold transition disabled:opacity-60 ${
+                    fav
+                      ? "bg-emerald-100 text-emerald-700"
+                      : "bg-primary/10 text-primary hover:bg-primary/20"
+                  }`}
+                  aria-label={fav ? "取消收藏" : "收藏"}
+                >
+                  {fav ? <Check className="size-3.5" /> : <Bookmark className="size-3.5" />}
+                  {fav ? <T>已收藏</T> : <T>收藏</T>}
+                </button>
+              )}
               <button
                 onClick={(e) => {
                   e.preventDefault();
@@ -252,18 +370,45 @@ function ExplainPopover({
           </div>
         </div>
         <div className="max-h-[60vh] overflow-y-auto px-4 py-3">
-          {loading && (
-            <div className="flex items-center gap-2 py-4 text-sm text-muted-foreground">
-              <Loader2 className="size-4 animate-spin" />
-              <T>正在生成讲解…</T>
+          {microRetrieval && !revealed ? (
+            // 微提取:先回忆、后揭晓。半秒的主动回忆 > 被动看一眼。
+            <div className="py-3 text-center">
+              <div className="mb-3 text-sm font-medium text-foreground">
+                <T>还记得这个词的意思吗?</T>
+              </div>
+              <div className="flex justify-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => onRecall(true)}
+                  className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-200"
+                >
+                  <T>想起来了</T>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onRecall(false)}
+                  className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-200"
+                >
+                  <T>想不起来</T>
+                </button>
+              </div>
             </div>
+          ) : (
+            <>
+              {loading && (
+                <div className="flex items-center gap-2 py-4 text-sm text-muted-foreground">
+                  <Loader2 className="size-4 animate-spin" />
+                  <T>正在生成讲解…</T>
+                </div>
+              )}
+              {error && !loading && (
+                <div className="py-2 text-sm text-destructive">
+                  <T>暂时讲解不出来,请稍后再试。</T>
+                </div>
+              )}
+              {data && !loading && <LessonBody data={data} />}
+            </>
           )}
-          {error && !loading && (
-            <div className="py-2 text-sm text-destructive">
-              <T>暂时讲解不出来,请稍后再试。</T>
-            </div>
-          )}
-          {data && !loading && <LessonBody data={data} />}
         </div>
       </PopoverContent>
     </Popover>
@@ -412,15 +557,45 @@ function LessonBody({ data }: { data: Explanation }) {
  * shows a small explanation card (meaning, usage, English examples with
  * Chinese translation, and a TTS button).
  */
-export function TappableLine({ sentence }: { sentence: string }) {
-  const tokens = useMemo(() => tokenize(sentence), [sentence]);
+export function TappableLine({
+  sentence,
+  favorite,
+  favoritedTerms,
+  reveal,
+  chunkPhrases,
+  onFavoriteChange,
+}: {
+  sentence: string;
+  /** 传入 → 图书馆精读模式:轻卡收藏按钮 + 语块虚线 + 收藏高亮 + 悬停揭示 + 微提取。
+   *  不传 → 默认点读(美语课等),行为零变化。 */
+  favorite?: FavoriteCtx;
+  /** 已收藏词/语块的小写集合 → 高亮 + 微提取判定。仅图书馆传。 */
+  favoritedTerms?: Set<string>;
+  /** 移动端长按 → 揭示本页所有可点词(淡底)。仅图书馆传。 */
+  reveal?: boolean;
+  /** 本书本章语块(表面形式)→ 正文虚线标这些。仅图书馆传;不传 → 用通用 KNOWN_PHRASES(美语课不变)。 */
+  chunkPhrases?: string[];
+  onFavoriteChange?: (term: string, kind: LibraryFavoriteKind, favorited: boolean) => void;
+}) {
+  const tokens = useMemo(() => tokenize(sentence, chunkPhrases ?? KNOWN_PHRASES), [sentence, chunkPhrases]);
   const contextText = useMemo(() => stripTags(sentence), [sentence]);
+  const libraryMode = !!favorite;
   return (
     <span>
       {tokens.map((tok, i) => {
         if (tok.kind === "text") return <span key={i}>{tok.text}</span>;
+        const isChunk = tok.phrase.includes(" ");
+        const isFav = !!favoritedTerms?.has(tok.phrase);
         return (
-          <ExplainPopover key={i} phrase={tok.phrase} contextText={contextText}>
+          <ExplainPopover
+            key={i}
+            phrase={tok.phrase}
+            contextText={contextText}
+            favorite={favorite}
+            isFavorited={isFav}
+            triggerClassName={libraryMode ? libraryTriggerClass(isChunk, isFav, !!reveal) : undefined}
+            onFavoriteChange={onFavoriteChange}
+          >
             <span>{tok.text}</span>
           </ExplainPopover>
         );

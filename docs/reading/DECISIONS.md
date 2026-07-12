@@ -89,3 +89,11 @@
 - T2:补 `junior_reading` 的 `volume/unit` 正式 migration(R1),或在新 `reading_library` 上不重蹈暗桩。
 - T3:删僵尸副本 `src/pages/juniorHub/JuniorReading.tsx`;把两栏块抽成共享组件(消 junior/gaokao 重复)。
 - T4:绘本/整本书章节展示层(拼 `SentenceLessonStage` + `ReadWritePictureVisual`),可后置。
+
+---
+
+### D13 · 发布边界(硬红线 · Aaron 2026-07-12 明确,未经他点头绝不越)
+图书馆(`/library`)在彻底完美前**不对用户开放**,现阶段只能靠**直接敲 `/library` 网址**访问。据此:
+1. **只 commit / push 到 `feat-reading-center` 分支,绝不合并 `main`。** `main` 会被 Vercel 自动部署到 bigmoonenglish.com —— 合 main = 直接对全体用户上线。
+2. **绝不往 `BrandHubNav`(或任何首页/导航入口)加图书馆入口。** 挂导航 = 对全体用户可见,等同发布。
+3. 合并 main、挂 BrandHubNav 入口、开 PR、部署 —— **四样都必须 Aaron 明确说了才能做**(与 autonomy-boundaries 一致)。

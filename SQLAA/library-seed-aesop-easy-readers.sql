@@ -8,6 +8,10 @@
 
 BEGIN;
 
+-- 0) 章标题列(方案 A:jsonb,幂等加列)。[{idx,title_en,title_zh}]
+ALTER TABLE public.library_books
+  ADD COLUMN IF NOT EXISTS chapters jsonb NOT NULL DEFAULT '[]'::jsonb;
+
 SELECT 'before' AS phase,
        (SELECT count(*) FROM public.library_books WHERE book_key = 'aesop-easy-readers') AS book_exists,
        (SELECT count(*) FROM public.library_sentences s
@@ -17,12 +21,12 @@ SELECT 'before' AS phase,
 -- 1) 书目(upsert)
 INSERT INTO public.library_books
   (book_key, title, zh_title, author, age_band, age_range, cover,
-   intro_en, intro_zh, sentence_count, copyright_note, is_published)
+   intro_en, intro_zh, sentence_count, copyright_note, chapters, is_published)
 VALUES
   ('aesop-easy-readers', 'Aesop''s Fables — Easy Readers', '伊索寓言 · 分级阅读', 'Aesop (retold for learners)',
    '儿童', '6-9岁', '{"c1":"#2f7d6e","c2":"#14532d"}'::jsonb,
    'Aesop''s Fables are short, wise stories from long ago. In each tale, animals talk and act like people, and the story ends with a simple lesson. These easy versions use short sentences, so new readers can enjoy them and read aloud with confidence.', '《伊索寓言》是很久以前流传下来的短小而充满智慧的故事。故事里的动物像人一样说话、行动,每个故事的结尾都有一个简单的道理。本册用简短的句子改写,方便初学者阅读,也适合大声朗读。', 44, 'Public-domain fables of Aesop, retold in simple original English for young learners. 伊索寓言属公有领域;本册为面向初学者的简易改写(措辞原创),非任何现行教材节选。',
-   false)
+   '[{"idx":1,"title_en":"The Hare and the Tortoise","title_zh":"龟兔赛跑"},{"idx":2,"title_en":"The Lion and the Mouse","title_zh":"狮子和老鼠"},{"idx":3,"title_en":"The Fox and the Grapes","title_zh":"狐狸和葡萄"},{"idx":4,"title_en":"The Ant and the Grasshopper","title_zh":"蚂蚁和蚱蜢"}]'::jsonb, false)
 ON CONFLICT (book_key) DO UPDATE SET
   title          = EXCLUDED.title,
   zh_title       = EXCLUDED.zh_title,
@@ -33,7 +37,8 @@ ON CONFLICT (book_key) DO UPDATE SET
   intro_en       = EXCLUDED.intro_en,
   intro_zh       = EXCLUDED.intro_zh,
   sentence_count = EXCLUDED.sentence_count,
-  copyright_note = EXCLUDED.copyright_note;
+  copyright_note = EXCLUDED.copyright_note,
+  chapters       = EXCLUDED.chapters;
   -- 注:不覆盖 is_published —— 审后手动置 true,重灌 seed 不会把它打回 false。
 
 -- 2) 句子(删旧重灌,幂等)。audio_url 留 NULL:默认前端实时合成,预生成脚本审后另回填。

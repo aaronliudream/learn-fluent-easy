@@ -490,14 +490,15 @@ export default function LibraryReader() {
       </div>
     ) : null;
 
-  // 插图定位:position=P 的图渲染在 para_idx==P 段之前;position < 首段 para_idx(如 0)→ 章首;> 末段 → 章末。
-  // ⚠️ para_idx 是 1 起(库里首段=1),position=0 天然 < 1 → 归章首(修:旧规则 position===para_idx 让 0 号图无处可挂而消失)。
+  // 插图定位:position = 【章内段号】1-based(见 DECISIONS.md「插图 position 语义」)。
+  //   position=P → 渲染在本章第 P 段之前;position=0 → 章首;position > 本章段数 → 章末;负数(退休图)→ 不渲染。
+  //   ⚠️ 不用全书 para_idx(那是全书连续递增,ch2 起首段号≫章内序 → 会把正数 position 全误判成章首而堆顶)。
+  //   段落已按 chapter_idx 拉取(data.ts),故用段落在本章数组里的下标 +1 作章内段号,天然可靠。
   const chapterTitleNow = chapterTitle(book, chapterIdx);
-  const firstPara = paragraphs[0]?.paraIdx ?? 0;
-  const lastPara = paragraphs[paragraphs.length - 1]?.paraIdx ?? 0;
-  const topFigs = illus.filter((im) => im.position < firstPara);
-  const tailFigs = illus.filter((im) => im.position > lastPara);
-  const figsBeforePara = (paraIdx: number) => illus.filter((im) => im.position === paraIdx);
+  const paraCount = paragraphs.length;
+  const topFigs = illus.filter((im) => im.position === 0);
+  const tailFigs = illus.filter((im) => im.position > paraCount);
+  const figsBeforeLocal = (ordinal: number) => illus.filter((im) => im.position === ordinal);
 
   // 点句子(非单词/非喇叭)→ 就地切换该句中文;点在按钮(词卡/喇叭)上则不触发。
   const onSentenceTap = (i: number) => (e: React.MouseEvent) => {
@@ -642,14 +643,14 @@ export default function LibraryReader() {
             onTouchCancel={cancelLongPress}
           >
             {topFigs.map(renderFigure)}
-            {paragraphs.map((para) => {
+            {paragraphs.map((para, pi) => {
               const cnJoined = para.items.map((x) => x.s.text_cn ?? "").join("");
-              const isFirstPara = para.paraIdx === firstPara; // 章首段 → 省略段首喇叭
+              const isFirstPara = pi === 0; // 章首段 → 省略段首喇叭
               // 首字下沉:仅当章首句以字母开头(如 ch9 以引号 “ 开头则跳过,避免下沉成大引号)。
               const dcActive = isFirstPara && /^[A-Za-z]/.test(para.items[0]?.s.text_en ?? "");
               return (
                 <Fragment key={para.paraIdx}>
-                  {figsBeforePara(para.paraIdx).map(renderFigure)}
+                  {figsBeforeLocal(pi + 1).map(renderFigure)}
                   {/* 正文列限宽 ~660px(≤80 字符/行);插图在外层容器满宽,故比正文宽 ~15%。 */}
                   <div className="mx-auto mb-7 max-w-[660px]">
                   {/* 英文段(en / both 模式);段首一个喇叭(章首段除外,由顶部"朗读本章"覆盖),从本段起连读 */}

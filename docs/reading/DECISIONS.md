@@ -97,3 +97,18 @@
 1. **只 commit / push 到 `feat-reading-center` 分支,绝不合并 `main`。** `main` 会被 Vercel 自动部署到 bigmoonenglish.com —— 合 main = 直接对全体用户上线。
 2. **绝不往 `BrandHubNav`(或任何首页/导航入口)加图书馆入口。** 挂导航 = 对全体用户可见,等同发布。
 3. 合并 main、挂 BrandHubNav 入口、开 PR、部署 —— **四样都必须 Aaron 明确说了才能做**(与 autonomy-boundaries 一致)。
+
+---
+
+### D14 · 图书馆词库复习选表红线(硬 · Aaron 2026-07-12)
+图书馆复习(收藏词/语块练到掌握)**只准写这三处**:
+1. `mastery_progress`(掌握;module=`library_vocab_review`,item_id=`<kind>:<term>`)
+2. `library_vocab_favorites`(收藏表自己的字段:`correct_streak`/`last_correct_date` 跨天连对、`recall_*`)
+3. `user_mistakes`(错题;module=`library_vocab` —— **不用 `reading`/`cloze`**,那俩是老师端 RPC 保留名)
+
+**绝不写** `junior_word_mastery` / `gaokao_user_mastery` / `unified_mastery_manual`。那三张是初中词汇的碎片化坑(日常练写 A 表、Hub 读 B 表,读写不齐);一旦有人因为"图书馆这也是词汇"就把它接进去,就把坑拖进来了。**这是本功能唯一真正的选表风险。** 跨天掌握=`correct_streak>=3`(做对且非同天 UTC+8 才+1,做错清零),必须跨天——同天连点=刷次数,违背间隔重复。
+
+---
+
+### D15 · 图书馆可写第四处:连续学习天数表(硬 · Aaron 2026-07-13 批准)
+Batch 2「连续学习天数(🔥)」需要 per-user 落点,而 D14 三张允许表都无合适字段(mastery_progress 是 per-item、收藏表是 per-term)。Aaron 批准**新开第四张表** `library_review_streak(user_id PK, last_review_date, review_streak, longest_streak, updated_at)`,**仅本功能可写**、用户私有(RLS 仅本人读写)。语义:复习完成一次记「今天学过」,跨北京日(UTC+8)连续则 +1、断了重置 1,longest 记历史最长。**D14 红线不变**——仍绝不写 junior_word_mastery / gaokao_user_mastery / unified_mastery_manual;这第四张只是把「学习节奏」这类图书馆自有状态收在自己车道里,不进那三张坑。

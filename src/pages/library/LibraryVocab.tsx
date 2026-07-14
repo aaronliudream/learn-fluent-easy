@@ -10,7 +10,7 @@ import { ArrowLeft, Volume2, Trash2, BookMarked, GraduationCap, Sparkles } from 
 import { T } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
 import { speak, unlockAudioSync } from "@/lib/speak";
-import { currentUserId, listBooks } from "@/lib/library/data";
+import { currentUserId, listBooks, getBookCoreCounts, type BookCore } from "@/lib/library/data";
 import {
   listLibraryFavorites,
   removeLibraryFavorite,
@@ -28,6 +28,7 @@ import LibraryReview from "@/pages/library/LibraryReview";
 import type { ReviewMode } from "@/lib/library/reviewQuestions";
 import { isFunctionWord } from "@/lib/library/wordClass";
 import VocabGrowthChart from "@/components/library/VocabGrowthChart";
+import { getReviewStreak, effectiveStreak, type ReviewStreak } from "@/lib/library/reviewStreak";
 
 const REVIEW_MODE_KEY = "library.reviewMode";
 /** 默认模式:懂中文(zh/zh-TW)→ 中文学习者;其余一律英语母语者。localStorage 覆盖优先。 */
@@ -103,6 +104,8 @@ export default function LibraryVocab() {
   const [tab, setTab] = useState<LibraryFavoriteKind>("word");
   const [favs, setFavs] = useState<LibraryFavorite[]>([]);
   const [bookTitles, setBookTitles] = useState<Map<string, string>>(new Map());
+  const [streak, setStreak] = useState<ReviewStreak | null>(null);
+  const [bookCore, setBookCore] = useState<Map<string, BookCore>>(new Map());
   const [signedIn, setSignedIn] = useState(true);
   const [loading, setLoading] = useState(true);
   const [reviewing, setReviewing] = useState(false);
@@ -122,9 +125,16 @@ export default function LibraryVocab() {
     const uid = await currentUserId();
     setSignedIn(!!uid);
     if (!uid) { setLoading(false); return; }
-    const [rows, books] = await Promise.all([listLibraryFavorites(), listBooks()]);
+    const [rows, books, rs, core] = await Promise.all([
+      listLibraryFavorites(),
+      listBooks(),
+      getReviewStreak(),
+      getBookCoreCounts(),
+    ]);
     setFavs(rows);
     setBookTitles(new Map(books.map((b) => [b.id, b.zh_title || b.title || b.book_key])));
+    setStreak(rs);
+    setBookCore(core);
     setLoading(false);
   }, []);
 
@@ -287,6 +297,30 @@ export default function LibraryVocab() {
             {stat.due > 0 && <span className="text-sm font-semibold"><T>开始复习</T> ›</span>}
           </button>
 
+          {/* 连续学习天数 🔥(断了当前归 0,longest 仍保留)*/}
+          {(() => {
+            const cur = effectiveStreak(streak);
+            const longest = streak?.longest_streak ?? 0;
+            if (cur === 0 && longest === 0) return null;
+            return (
+              <div className="mt-3 flex items-center gap-2 rounded-2xl border border-orange-100 bg-orange-50/70 px-4 py-2.5 text-sm">
+                <span className="text-base">🔥</span>
+                {cur > 0 ? (
+                  <span className="text-orange-800">
+                    <T>连续学习</T> <span className="font-bold">{cur}</span> <T>天</T>
+                    {longest > cur && (
+                      <span className="text-orange-600/70"> · <T>最长</T> {longest} <T>天</T></span>
+                    )}
+                  </span>
+                ) : (
+                  <span className="text-orange-700/80">
+                    <T>最长连续</T> <span className="font-bold">{longest}</span> <T>天 · 今天复习就能接上</T>
+                  </span>
+                )}
+              </div>
+            );
+          })()}
+
           {/* 成就区:累计掌握(只增不减)+ 最近掌握(用词本身,不用会掉的数)*/}
           {stat.mastered > 0 && (
             <div className="mt-3 rounded-2xl border border-amber-100 bg-amber-50/60 px-4 py-3">
@@ -314,7 +348,7 @@ export default function LibraryVocab() {
           )}
 
           {/* 词汇成长图表:每月新掌握(绝对数·按书上色),不画增长率 */}
-          <VocabGrowthChart favs={reviewable} bookTitles={bookTitles} bjMonth={bjToday().slice(0, 7)} en={en} />
+          <VocabGrowthChart favs={reviewable} bookTitles={bookTitles} bookCore={bookCore} bjMonth={bjToday().slice(0, 7)} en={en} />
 
           {/* 状态筛选(默认今日待复习)*/}
           <div className="mt-5 flex flex-wrap gap-2">

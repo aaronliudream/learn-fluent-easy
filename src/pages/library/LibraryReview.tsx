@@ -11,6 +11,7 @@ import { buildReviewQuestions, type ReviewItemMeta, type ReviewMode } from "@/li
 import { recordLibraryVocabMastery } from "@/lib/library/mastery";
 import { recordVocabStreak, VOCAB_MASTER_STREAK, type LibraryFavorite } from "@/lib/library/favorites";
 import { recordLibraryVocabMistake, resolveLibraryVocabMistake } from "@/lib/library/mistakes";
+import { bumpReviewStreak } from "@/lib/library/reviewStreak";
 
 type Phase = "loading" | "empty" | "quiz" | "done";
 
@@ -119,6 +120,12 @@ export default function LibraryReview({
             explanation: agg.firstWrong.explanation,
           });
         }
+      }
+      // 完成一次复习 = 今天学过 → 记连续学习天数(幂等,一天一次)。
+      try {
+        await bumpReviewStreak();
+      } catch (e) {
+        console.warn("[library review] streak bump failed", e);
       }
       setResult({ pct, correct: correctTerms, total: aggs.length, mastered: masteredNow });
       setPhase("done");

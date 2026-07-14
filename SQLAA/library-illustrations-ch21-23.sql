@@ -1,8 +1,8 @@
 -- ============================================================================
--- 图书馆插图 · 绿野仙踪 第 21–24 章(收官 4 章 × 6 张 = 24 张独立高清水彩,Gemini)
+-- 图书馆插图 · 绿野仙踪 第 21–23 章(3 章 × 6 张 = 18 张独立高清水彩,Gemini)
 -- 单文件单事务:每章①退休旧 Denslow 章首图(精确路径·position 挪负数·幂等)②导入 6 张。
--- position = 章内段号 1-based(见 DECISIONS.md)。⚠️ 第24章「Home Again」仅 3 段/6 图:
---   用 0(章首)+ 1/2/3(逐段前)+ 4/5(尾部,position>段数→正文末渲染)容纳 6 张。
+-- position = 章内段号 1-based(见 DECISIONS.md)。
+-- ⚠️ 第 24 章「Home Again」(仅 3 段)另出:图数待 Aaron 定(保留 3–4 张),单独一个 SQL。
 -- 全图降采样(宽≤1000px, JPEG q82)已传桶 library-illustrations/wizard-of-oz/。ON CONFLICT 幂等。
 -- ============================================================================
 BEGIN;
@@ -10,7 +10,7 @@ BEGIN;
 SELECT 'before' AS phase, li.chapter_idx,
        count(*) AS rows, count(*) FILTER (WHERE li.is_published) AS published
   FROM public.library_illustrations li JOIN public.library_books b ON b.id=li.book_id
- WHERE b.book_key='wizard-of-oz' AND li.chapter_idx BETWEEN 21 AND 24
+ WHERE b.book_key='wizard-of-oz' AND li.chapter_idx BETWEEN 21 AND 23
  GROUP BY li.chapter_idx ORDER BY li.chapter_idx;
 
 -- ---------- 第 21 章 ----------
@@ -73,32 +73,12 @@ ON CONFLICT (book_id, chapter_idx, position) DO UPDATE SET
   image_path=EXCLUDED.image_path, caption=EXCLUDED.caption, alt_text=EXCLUDED.alt_text,
   credit=EXCLUDED.credit, width=EXCLUDED.width, height=EXCLUDED.height, is_published=EXCLUDED.is_published;
 
--- ---------- 第 24 章 ----------
-UPDATE public.library_illustrations li
-   SET is_published=false, position = li.position - 1000
-  FROM public.library_books b
- WHERE b.id=li.book_id AND b.book_key='wizard-of-oz' AND li.chapter_idx=24
-   AND li.image_path = 'wizard-of-oz/ch24-home-again.jpg' AND li.position >= 0;
-
-INSERT INTO public.library_illustrations
-  (book_id, chapter_idx, position, image_path, caption, alt_text, credit, width, height, is_published)
-VALUES
-  ((SELECT id FROM public.library_books WHERE book_key='wizard-of-oz'), 24, 0, 'wizard-of-oz/ch24-prairie-arrival.jpg', '', 'Dorothy sits in the wide gray prairie grass, holding little Toto in her lap and gazing up at the cloudy sky.', '', 1000, 558, true),
-  ((SELECT id FROM public.library_books WHERE book_key='wizard-of-oz'), 24, 1, 'wizard-of-oz/ch24-spotting-home.jpg', '', 'Dorothy shades her eyes with one hand as she spots the little Kansas farmhouse far across the golden prairie.', '', 1000, 558, true),
-  ((SELECT id FROM public.library_books WHERE book_key='wizard-of-oz'), 24, 2, 'wizard-of-oz/ch24-running-home.jpg', '', 'Laughing with joy, Dorothy runs barefoot through the prairie while Toto bounds along beside her toward the farmhouse.', '', 1000, 558, true),
-  ((SELECT id FROM public.library_books WHERE book_key='wizard-of-oz'), 24, 3, 'wizard-of-oz/ch24-aunt-em-cabbages.jpg', '', 'Aunt Em stands in the doorway with her watering can beside the cabbage patch, looking up in surprise across the fields.', '', 1000, 558, true),
-  ((SELECT id FROM public.library_books WHERE book_key='wizard-of-oz'), 24, 4, 'wizard-of-oz/ch24-warm-embrace.jpg', '', 'Aunt Em sweeps Dorothy up into her arms and kisses her cheek in a warm hug on the windy prairie.', '', 1000, 558, true),
-  ((SELECT id FROM public.library_books WHERE book_key='wizard-of-oz'), 24, 5, 'wizard-of-oz/ch24-family-together.jpg', '', 'Dorothy stands with Aunt Em, Uncle Henry, and Toto in front of their farmhouse, all together and happy at last.', '', 1000, 558, true)
-ON CONFLICT (book_id, chapter_idx, position) DO UPDATE SET
-  image_path=EXCLUDED.image_path, caption=EXCLUDED.caption, alt_text=EXCLUDED.alt_text,
-  credit=EXCLUDED.credit, width=EXCLUDED.width, height=EXCLUDED.height, is_published=EXCLUDED.is_published;
-
 SELECT 'after' AS phase, li.chapter_idx,
        count(*) AS rows,
        count(*) FILTER (WHERE li.is_published) AS published,
        count(*) FILTER (WHERE NOT li.is_published) AS retired
   FROM public.library_illustrations li JOIN public.library_books b ON b.id=li.book_id
- WHERE b.book_key='wizard-of-oz' AND li.chapter_idx BETWEEN 21 AND 24
+ WHERE b.book_key='wizard-of-oz' AND li.chapter_idx BETWEEN 21 AND 23
  GROUP BY li.chapter_idx ORDER BY li.chapter_idx;
 
 COMMIT;

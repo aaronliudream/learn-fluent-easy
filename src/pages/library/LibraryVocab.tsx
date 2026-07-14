@@ -27,6 +27,7 @@ import {
 import LibraryReview from "@/pages/library/LibraryReview";
 import type { ReviewMode } from "@/lib/library/reviewQuestions";
 import { isFunctionWord } from "@/lib/library/wordClass";
+import VocabGrowthChart from "@/components/library/VocabGrowthChart";
 
 const REVIEW_MODE_KEY = "library.reviewMode";
 /** 默认模式:懂中文(zh/zh-TW)→ 中文学习者;其余一律英语母语者。localStorage 覆盖优先。 */
@@ -311,6 +312,9 @@ export default function LibraryVocab() {
               )}
             </div>
           )}
+
+          {/* 词汇成长图表:每月新掌握(绝对数·按书上色),不画增长率 */}
+          <VocabGrowthChart favs={reviewable} bookTitles={bookTitles} bjMonth={bjToday().slice(0, 7)} en={en} />
 
           {/* 状态筛选(默认今日待复习)*/}
           <div className="mt-5 flex flex-wrap gap-2">

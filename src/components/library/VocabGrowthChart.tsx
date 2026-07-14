@@ -115,7 +115,19 @@ export default function VocabGrowthChart({
     return { months, byMonth, max };
   }, [mastered, range, bjMonth]);
 
-  if (mastered.length === 0) return null;
+  // 空状态:一个词都还没毕业时,不留空白——告诉用户「这里将来会有成长曲线」本身就是动力。
+  if (mastered.length === 0) {
+    return (
+      <div className="mt-3 rounded-2xl border border-dashed border-slate-200 bg-slate-50/60 px-4 py-3.5 text-center">
+        <div className="text-sm font-bold text-slate-600">📊 {en ? "Vocabulary growth" : "词汇成长"}</div>
+        <p className="mx-auto mt-1 max-w-sm text-xs leading-relaxed text-slate-500">
+          {en
+            ? "Get a word right 3 times — on 3 different days — to graduate your first one. Then your growth curve shows up here, month by month."
+            : "连对 3 次(且要跨 3 天)就能毕业第一个词。到时候这里会出现你的成长曲线,看得见每个月学会了多少。"}
+        </p>
+      </div>
+    );
+  }
 
   const RANGES: { key: RangeKey; label: string }[] = [
     { key: 1, label: en ? "1M" : "近1月" },

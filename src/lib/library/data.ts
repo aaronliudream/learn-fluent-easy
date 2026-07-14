@@ -180,6 +180,21 @@ export function coverImageUrl(cover: LibraryCover): string | null {
   return cover.image ? illustrationUrl(cover.image) : null;
 }
 
+/** 每书正文总词数(预计算落 library_books.word_count)。列未建/失败 → 空 Map(优雅降级)。 */
+export async function getBookWordCounts(): Promise<Map<string, number>> {
+  try {
+    const { data, error } = await db.from("library_books").select("id,word_count");
+    if (error || !data) return new Map();
+    const m = new Map<string, number>();
+    for (const b of data as { id: string; word_count: number | null }[]) {
+      if (b.word_count != null) m.set(b.id, b.word_count);
+    }
+    return m;
+  } catch {
+    return new Map();
+  }
+}
+
 /** 每书 read-v1 核心词/块数(按书掌握率的固定分母)。列未建/查询失败 → 空 Map(功能优雅降级,不崩)。 */
 export type BookCore = { word: number; chunk: number };
 export async function getBookCoreCounts(): Promise<Map<string, BookCore>> {

@@ -86,7 +86,7 @@ export default function LibraryHome() {
         <T>📚 图书馆</T>
       </h1>
       <p className="mt-1 text-sm text-slate-500">
-        <T>分级读物 · 点词查中文 · 整章朗读 · 断点续读</T>
+        <T>点词查解释 · 文章朗读</T>
       </p>
 
       <Link
@@ -157,7 +157,7 @@ export default function LibraryHome() {
               </div>
               <div className="flex flex-1 flex-col gap-1.5 p-2.5">
                 {b.zh_title && (
-                  <div className="truncate text-xs font-semibold text-slate-600">{b.zh_title}</div>
+                  <div className="truncate text-base font-bold text-slate-800">{b.zh_title}</div>
                 )}
                 <div className="flex items-center gap-1.5">
                   <span

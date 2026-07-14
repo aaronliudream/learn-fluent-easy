@@ -4,7 +4,7 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, BookOpen, Play, Languages, Volume2, Square } from "lucide-react";
+import { ArrowLeft, BookOpen, Play, Languages, Volume2, Square, ChevronDown, Compass } from "lucide-react";
 import { T } from "@/i18n/T";
 import { cn } from "@/lib/utils";
 import { speak, speakSequence, stopSpeaking, unlockAudioSync } from "@/lib/speak";
@@ -54,11 +54,19 @@ export default function LibraryBook() {
   const [loading, setLoading] = useState(true);
   const [introPlaying, setIntroPlaying] = useState(false);
   const [introIdx, setIntroIdx] = useState(-1); // 正在朗读的简介句(高亮用)
+  const [showGuideZh, setShowGuideZh] = useState(false);
+  const [guideOpen, setGuideOpen] = useState(false); // 导读较长,默认收起(读前可选看)
+  const [guidePlaying, setGuidePlaying] = useState(false);
+  const [guideIdx, setGuideIdx] = useState(-1);
 
   // 简介英文切句(高亮 + 逐句朗读共用同一份,索引对齐)。
   const introSentences = useMemo(
     () => (book?.intro_en ? splitIntoSentences(book.intro_en) : []),
     [book?.intro_en],
+  );
+  const guideSentences = useMemo(
+    () => (book?.guide_en ? splitIntoSentences(book.guide_en) : []),
+    [book?.guide_en],
   );
 
   // 离开详情页 / 切换书籍时停掉朗读,别让声音跟到别处。
@@ -74,6 +82,9 @@ export default function LibraryBook() {
     stopSpeaking();
     setIntroPlaying(false);
     setIntroIdx(-1);
+    setGuidePlaying(false);
+    setGuideIdx(-1);
+    setGuideOpen(false);
     (async () => {
       const b = await getBookByKey(bookKey);
       if (!alive) return;
@@ -127,23 +138,29 @@ export default function LibraryBook() {
   const intro = showZh ? book.intro_zh : book.intro_en;
   const hasZhIntro = !!book.intro_zh;
 
-  // 朗读书名(短句,单次 speak;先停掉正在播的简介)。同步进手势→iOS 解锁。
-  const speakTitle = () => {
+  // 任何朗读开始前:停掉全部朗读 + 清所有播放态(简介/导读共用同一条 TTS 管线)。
+  const stopAllReading = () => {
     stopSpeaking();
     setIntroPlaying(false);
     setIntroIdx(-1);
+    setGuidePlaying(false);
+    setGuideIdx(-1);
+  };
+
+  // 朗读书名(短句,单次 speak)。同步进手势→iOS 解锁。
+  const speakTitle = () => {
+    stopAllReading();
     void speak(book.title, { accent: READ_ACCENT });
   };
 
   // 朗读/停止 整段英文简介。逐句播 + 当前句高亮;再点一次即停。
   const toggleIntro = () => {
     if (introPlaying) {
-      stopSpeaking();
-      setIntroPlaying(false);
-      setIntroIdx(-1);
+      stopAllReading();
       return;
     }
     if (!introSentences.length) return;
+    stopAllReading();
     unlockAudioSync(); // 手势内同步解锁 iOS 音频
     setIntroPlaying(true);
     setIntroIdx(0);
@@ -156,18 +173,53 @@ export default function LibraryBook() {
     });
   };
 
-  // 切换到中文简介时,英文朗读没有可高亮的载体 → 顺手停掉。
-  const toggleZh = () => {
-    setShowZh((v) => {
+  // 朗读/停止 整段英文导读(复用简介那套:逐句播 + 高亮 + 停止切换)。
+  const toggleGuide = () => {
+    if (guidePlaying) {
+      stopAllReading();
+      return;
+    }
+    if (!guideSentences.length) return;
+    stopAllReading();
+    unlockAudioSync();
+    setGuidePlaying(true);
+    setGuideIdx(0);
+    void speakSequence(guideSentences, {
+      accent: READ_ACCENT,
+      onIndex: (i) => setGuideIdx(i),
+    }).finally(() => {
+      setGuidePlaying(false);
+      setGuideIdx(-1);
+    });
+  };
+
+  // 收起导读时若正在朗读 → 停掉(声音不该在看不见的区块里继续)。
+  const toggleGuideOpen = () => {
+    setGuideOpen((v) => {
       const next = !v;
-      if (next && introPlaying) {
-        stopSpeaking();
-        setIntroPlaying(false);
-        setIntroIdx(-1);
-      }
+      if (!next && guidePlaying) stopAllReading();
       return next;
     });
   };
+
+  // 切换到中文简介/导读时,英文朗读没有可高亮的载体 → 顺手停掉。
+  const toggleZh = () => {
+    setShowZh((v) => {
+      const next = !v;
+      if (next && introPlaying) stopAllReading();
+      return next;
+    });
+  };
+  const toggleGuideZh = () => {
+    setShowGuideZh((v) => {
+      const next = !v;
+      if (next && guidePlaying) stopAllReading();
+      return next;
+    });
+  };
+
+  const hasZhGuide = !!book.guide_zh;
+  const guideText = showGuideZh ? book.guide_zh : book.guide_en;
 
   return (
     <main className="mx-auto max-w-2xl px-5 py-8">
@@ -302,6 +354,82 @@ export default function LibraryBook() {
                 ))
               : intro}
           </p>
+        </section>
+      )}
+
+      {/* 导读(读前):书名含义/双关/作者背景。默认收起、可折叠;英文默认 + 显示中文 + 朗读 */}
+      {(book.guide_en || book.guide_zh) && (
+        <section className="mt-4">
+          <button
+            type="button"
+            onClick={toggleGuideOpen}
+            className="flex w-full items-center justify-between rounded-xl border border-amber-100 bg-amber-50/60 px-4 py-2.5 text-left transition hover:bg-amber-50"
+            aria-expanded={guideOpen}
+          >
+            <span className="flex items-center gap-2 text-sm font-bold text-amber-800">
+              <Compass className="size-4" /> <T>开读前 · 导读</T>
+            </span>
+            <ChevronDown
+              className={cn("size-4 text-amber-500 transition-transform", guideOpen && "rotate-180")}
+            />
+          </button>
+          {guideOpen && (
+            <div className="mt-2 rounded-xl border border-slate-100 bg-white px-4 py-3">
+              <div className="mb-2 flex items-center justify-end gap-2">
+                {!showGuideZh && book.guide_en && guideSentences.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={toggleGuide}
+                    aria-label={guidePlaying ? "停止朗读导读" : "朗读英文导读"}
+                    className={cn(
+                      "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-semibold transition",
+                      guidePlaying
+                        ? "bg-sky-100 text-sky-700"
+                        : "bg-slate-100 text-slate-500 hover:text-sky-600",
+                    )}
+                  >
+                    {guidePlaying ? (
+                      <>
+                        <Square className="size-3 fill-current" /> <T>停止</T>
+                      </>
+                    ) : (
+                      <>
+                        <Volume2 className="size-3.5" /> <T>朗读</T>
+                      </>
+                    )}
+                  </button>
+                )}
+                {hasZhGuide && (
+                  <button
+                    type="button"
+                    onClick={toggleGuideZh}
+                    className={cn(
+                      "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold transition",
+                      showGuideZh ? "bg-sky-100 text-sky-700" : "bg-slate-100 text-slate-500",
+                    )}
+                  >
+                    <Languages className="size-3.5" />{" "}
+                    {showGuideZh ? <T>显示英文</T> : <T>显示中文</T>}
+                  </button>
+                )}
+              </div>
+              <div className="whitespace-pre-line text-[15px] leading-relaxed text-slate-700">
+                {!showGuideZh && guideSentences.length > 0
+                  ? guideSentences.map((s, i) => (
+                      <span
+                        key={i}
+                        className={cn(
+                          "rounded transition-colors",
+                          i === guideIdx && "bg-amber-100 text-slate-900",
+                        )}
+                      >
+                        {s}
+                      </span>
+                    ))
+                  : guideText}
+              </div>
+            </div>
+          )}
         </section>
       )}
 

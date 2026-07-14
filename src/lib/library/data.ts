@@ -35,6 +35,8 @@ export type LibraryChapterTitle = { idx: number; title_en: string; title_zh: str
 export type LibraryBook = LibraryBookListItem & {
   intro_en: string | null;
   intro_zh: string | null;
+  guide_en: string | null; // 导读(读前):书名含义/双关/作者背景
+  guide_zh: string | null;
   copyright_note: string | null;
   chapters: LibraryChapterTitle[];
 };
@@ -53,7 +55,7 @@ export type LibrarySentence = {
 
 const LIST_COLS =
   "id,book_key,title,zh_title,author,age_band,age_range,cover,sentence_count";
-const FULL_COLS = `${LIST_COLS},intro_en,intro_zh,copyright_note,chapters`;
+const FULL_COLS = `${LIST_COLS},intro_en,intro_zh,guide_en,guide_zh,copyright_note,chapters`;
 
 function coerceCover(raw: unknown): LibraryCover {
   return raw && typeof raw === "object" ? (raw as LibraryCover) : {};

@@ -89,32 +89,32 @@ async function pageAll(path) {
   }
   candidates.sort((a, b) => b.f - a.f);
 
-  console.log(`本书 read-v1 词卡 ${wordPos.size} · 语块卡 ${chunkKeys.size}`);
-  console.log(`实词候选(有卡·非虚词·非专名)共 ${candidates.length} 个\n`);
-  console.log("频次门槛 F  →  核心词数(freq>=F)");
-  for (const F of [2, 3, 4, 5, 6, 8, 10, 12, 15]) {
-    const n = candidates.filter((c) => c.f >= F).length;
-    console.log(`  F>=${String(F).padStart(2)}  →  ${n}`);
-  }
-  // 也报「按频次取前 N」的门槛值
-  console.log("\n取前 N 高频 → 该档最低频次");
-  for (const N of [300, 400, 500]) {
-    const cut = candidates[Math.min(N, candidates.length) - 1];
-    console.log(`  top ${N}  →  最低频次 ${cut ? cut.f : "-"}`);
-  }
-  console.log("\n最高频前 25(示例):");
-  console.log("  " + candidates.slice(0, 25).map((c) => `${c.key}(${c.f})`).join(" "));
-  console.log("\n被判为专名而排除的高频词(示例,应为人名/地名):");
-  const propers = [...freq.entries()].filter(([k, f]) => !hasLower.has(k) && f >= 8 && wordPos.has(k)).sort((a, b) => b[1] - a[1]).slice(0, 20);
-  console.log("  " + propers.map(([k, f]) => `${k}(${f})`).join(" "));
-
-  // 语块频次分布
   const chunkFreq = [...chunkKeys].map((c) => ({ c, f: (fulltext.split(` ${c} `).length - 1) })).filter((x) => x.f > 0).sort((a, b) => b.f - a.f);
-  console.log(`\n语块:本书出现的 ${chunkFreq.length} 条`);
-  console.log("语块频次门槛 → 条数");
-  for (const F of [2, 3, 4, 5, 6, 8]) {
-    console.log(`  F>=${F}  →  ${chunkFreq.filter((x) => x.f >= F).length}`);
+  const sample = (arr, n) => {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a.slice(0, n);
+  };
+
+  console.log(`本书 read-v1 词卡 ${wordPos.size} · 语块卡 ${chunkKeys.size}`);
+  console.log(`实词候选(有卡·非虚词·非专名)共 ${candidates.length} · 语块本书出现 ${chunkFreq.length}\n`);
+
+  console.log("| 门槛 | 词数 | 语块数 |");
+  console.log("|---|---|---|");
+  for (const F of [5, 8, 10, 15]) {
+    const w = candidates.filter((c) => c.f >= F).length;
+    const ch = chunkFreq.filter((x) => x.f >= F).length;
+    console.log(`| 频次 ≥ ${F} | ${w} | ${ch} |`);
   }
-  console.log("最高频语块前 20:");
-  console.log("  " + chunkFreq.slice(0, 20).map((x) => `${x.c}(${x.f})`).join(" · "));
+
+  for (const F of [5, 8, 10, 15]) {
+    const pool = candidates.filter((c) => c.f >= F);
+    console.log(`\n--- 频次 ≥ ${F}(共 ${pool.length} 词)随机 10 个 ---`);
+    console.log("  " + sample(pool, 10).map((c) => `${c.key}(${c.f}, ${c.pos})`).join("  "));
+  }
+  console.log("\n--- 语块 频次 ≥ 4 随机 10 个 ---");
+  console.log("  " + sample(chunkFreq.filter((x) => x.f >= 4), 10).map((x) => `${x.c}(${x.f})`).join(" · "));
+  console.log("\n专名排除抽查(应为人名/地名,不进核心):");
+  const propers = [...freq.entries()].filter(([k, f]) => !hasLower.has(k) && f >= 8 && wordPos.has(k)).sort((a, b) => b[1] - a[1]).slice(0, 15);
+  console.log("  " + propers.map(([k, f]) => `${k}(${f})`).join(" "));
 })();

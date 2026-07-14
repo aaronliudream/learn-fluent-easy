@@ -180,6 +180,24 @@ export function coverImageUrl(cover: LibraryCover): string | null {
   return cover.image ? illustrationUrl(cover.image) : null;
 }
 
+/** 每书 read-v1 核心词/块数(按书掌握率的固定分母)。列未建/查询失败 → 空 Map(功能优雅降级,不崩)。 */
+export type BookCore = { word: number; chunk: number };
+export async function getBookCoreCounts(): Promise<Map<string, BookCore>> {
+  try {
+    const { data, error } = await db.from("library_books").select("id,core_word_count,core_chunk_count");
+    if (error || !data) return new Map();
+    const m = new Map<string, BookCore>();
+    for (const b of data as { id: string; core_word_count: number | null; core_chunk_count: number | null }[]) {
+      if (b.core_word_count != null || b.core_chunk_count != null) {
+        m.set(b.id, { word: b.core_word_count ?? 0, chunk: b.core_chunk_count ?? 0 });
+      }
+    }
+    return m;
+  } catch {
+    return new Map();
+  }
+}
+
 /** 取某章的插图(按 position 升序;每章就几张,和句子同批取)。 */
 export async function getChapterIllustrations(
   bookId: string,

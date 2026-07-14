@@ -7,6 +7,7 @@
  */
 import { useMemo, useState } from "react";
 import { vocabIsMastered, type LibraryFavorite } from "@/lib/library/favorites";
+import type { BookCore } from "@/lib/library/data";
 
 /** 按书上色(稳定调色板;null 书归灰"其他")。 */
 const BOOK_COLORS = ["#10b981", "#f59e0b", "#6366f1", "#ec4899", "#14b8a6", "#f97316", "#8b5cf6", "#0ea5e9"];
@@ -42,11 +43,13 @@ function monthLabel(key: string, en: boolean): string {
 export default function VocabGrowthChart({
   favs,
   bookTitles,
+  bookCore,
   bjMonth,
   en,
 }: {
   favs: LibraryFavorite[]; // 已剔除虚词的可复习集
   bookTitles: Map<string, string>;
+  bookCore?: Map<string, BookCore>; // 每书核心词/块数(掌握率固定分母);缺则不显示覆盖条
   bjMonth: string; // 当前北京月 'YYYY-MM'
   en: boolean;
 }) {
@@ -213,21 +216,40 @@ export default function VocabGrowthChart({
         </div>
       )}
 
-      {/* 按书小结:最有说服力的一句话 */}
-      <div className="mt-3 space-y-1 border-t border-slate-100 pt-3">
-        {perBook.map((b) => (
-          <div key={b.id} className="text-[13px] text-slate-600">
-            📖 {b.id === NULL_ID ? b.title : `《${b.title}》`}
-            {en ? " · you mastered " : " · 你掌握了 "}
-            <span className="font-bold text-slate-800">{b.word}</span> {en ? "words" : "个词"}
-            {b.chunk > 0 && (
-              <>
-                {" · "}
-                <span className="font-bold text-slate-800">{b.chunk}</span> {en ? "chunks" : "个语块"}
-              </>
-            )}
-          </div>
-        ))}
+      {/* 按书小结:最有说服力的一句话(绝对数为主)+ 全书核心词覆盖条(固定分母·只增不减)*/}
+      <div className="mt-3 space-y-2.5 border-t border-slate-100 pt-3">
+        {perBook.map((b) => {
+          const core = b.id === NULL_ID ? undefined : bookCore?.get(b.id);
+          const pct = core && core.word > 0 ? Math.min(100, (b.word / core.word) * 100) : 0;
+          return (
+            <div key={b.id}>
+              <div className="text-[13px] text-slate-600">
+                📖 {b.id === NULL_ID ? b.title : `《${b.title}》`}
+                {en ? " · you mastered " : " · 你掌握了 "}
+                <span className="font-bold text-slate-800">{b.word}</span> {en ? "words" : "个词"}
+                {b.chunk > 0 && (
+                  <>
+                    {" · "}
+                    <span className="font-bold text-slate-800">{b.chunk}</span> {en ? "chunks" : "个语块"}
+                  </>
+                )}
+              </div>
+              {core && core.word > 0 && (
+                <div className="mt-1 flex items-center gap-2">
+                  <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-slate-100">
+                    <div
+                      className="h-full rounded-full"
+                      style={{ width: `${Math.max(pct, b.word > 0 ? 2 : 0)}%`, backgroundColor: b.color }}
+                    />
+                  </div>
+                  <span className="shrink-0 text-[10px] tabular-nums text-slate-400">
+                    {b.word}/{core.word} {en ? "words" : "核心词"}
+                  </span>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

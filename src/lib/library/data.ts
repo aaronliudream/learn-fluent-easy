@@ -12,8 +12,8 @@ const db = supabase as any;
 
 export type LibraryAgeBand = "少儿" | "儿童" | "青少年" | "成人";
 
-/** 书籍卡渐变封面(两色);缺省 → 用中性兜底色。 */
-export type LibraryCover = { c1?: string; c2?: string };
+/** 书籍卡封面:优先用 image(桶内整幅封面图),否则退回 c1/c2 渐变兜底。 */
+export type LibraryCover = { c1?: string; c2?: string; image?: string };
 
 /** 列表行(轻量,书架页用)。 */
 export type LibraryBookListItem = {
@@ -171,6 +171,11 @@ const ILLUSTRATION_BUCKET = "library-illustrations";
 export function illustrationUrl(imagePath: string): string {
   const base = import.meta.env.VITE_SUPABASE_URL as string;
   return `${base}/storage/v1/object/public/${ILLUSTRATION_BUCKET}/${imagePath}`;
+}
+
+/** 封面整幅图(桶内路径,复用插图桶)→ 公开 URL;无图返回 null(回退渐变卡)。 */
+export function coverImageUrl(cover: LibraryCover): string | null {
+  return cover.image ? illustrationUrl(cover.image) : null;
 }
 
 /** 取某章的插图(按 position 升序;每章就几张,和句子同批取)。 */

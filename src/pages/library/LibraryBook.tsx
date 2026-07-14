@@ -12,6 +12,7 @@ import {
   getChapterList,
   chapterTitle,
   currentUserId,
+  coverImageUrl,
   type LibraryBook as LibraryBookT,
   type LibraryChapter,
 } from "@/lib/library/data";
@@ -107,10 +108,18 @@ export default function LibraryBook() {
       {/* 头部:封面 + 元信息 */}
       <div className="flex gap-4">
         <div
-          className="flex aspect-[3/4] w-28 shrink-0 items-end rounded-xl p-2.5 text-white shadow-md"
+          className="relative flex aspect-[3/4] w-28 shrink-0 items-end overflow-hidden rounded-xl p-2.5 text-white shadow-md"
           style={coverStyle(book.cover)}
         >
-          <BookOpen className="size-4 opacity-50" />
+          {coverImageUrl(book.cover) ? (
+            <img
+              src={coverImageUrl(book.cover)!}
+              alt={book.title}
+              className="absolute inset-0 size-full object-cover"
+            />
+          ) : (
+            <BookOpen className="size-4 opacity-50" />
+          )}
         </div>
         <div className="min-w-0 flex-1">
           <h1 className="text-xl font-bold leading-tight text-slate-900">{book.title}</h1>

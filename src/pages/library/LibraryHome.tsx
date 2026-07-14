@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import {
   listBooks,
   currentUserId,
+  coverImageUrl,
   type LibraryAgeBand,
   type LibraryBookListItem,
 } from "@/lib/library/data";
@@ -122,6 +123,7 @@ export default function LibraryHome() {
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
         {books.map((b) => {
           const pct = pctOf(progress.get(b.id), b.sentence_count);
+          const coverImg = coverImageUrl(b.cover);
           return (
             <Link
               key={b.id}
@@ -132,15 +134,26 @@ export default function LibraryHome() {
                 className="relative flex aspect-[3/4] items-end p-3 text-white"
                 style={coverStyle(b.cover)}
               >
-                <BookOpen className="absolute right-3 top-3 size-4 opacity-40" />
-                <div className="min-w-0">
-                  <div className="line-clamp-3 text-base font-bold leading-tight drop-shadow-sm">
-                    {b.title}
-                  </div>
-                  {b.author && (
-                    <div className="mt-1 truncate text-[11px] opacity-80">{b.author}</div>
-                  )}
-                </div>
+                {coverImg ? (
+                  <img
+                    src={coverImg}
+                    alt={b.title}
+                    loading="lazy"
+                    className="absolute inset-0 size-full object-cover"
+                  />
+                ) : (
+                  <>
+                    <BookOpen className="absolute right-3 top-3 size-4 opacity-40" />
+                    <div className="min-w-0">
+                      <div className="line-clamp-3 text-base font-bold leading-tight drop-shadow-sm">
+                        {b.title}
+                      </div>
+                      {b.author && (
+                        <div className="mt-1 truncate text-[11px] opacity-80">{b.author}</div>
+                      )}
+                    </div>
+                  </>
+                )}
               </div>
               <div className="flex flex-1 flex-col gap-1.5 p-2.5">
                 {b.zh_title && (

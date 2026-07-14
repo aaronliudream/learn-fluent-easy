@@ -37,6 +37,57 @@ function splitIntoSentences(text: string): string[] {
   return chunks.length ? chunks : (text.trim() ? [text] : []);
 }
 
+/**
+ * 把导读/简介按空行切成段落块;emoji 开头的单行块识别为小标题(加粗放大)。
+ * 每个块内再切句,句子带全局递增 idx —— 与逐句朗读的扁平句序对齐,高亮才准。
+ */
+type ProseSentence = { text: string; idx: number };
+type ProseBlock = { heading: boolean; sentences: ProseSentence[] };
+function parseProse(text: string): { blocks: ProseBlock[]; sentences: string[] } {
+  const sentences: string[] = [];
+  const blocks: ProseBlock[] = [];
+  const raw = text.split(/\n\s*\n/).map((b) => b.replace(/\s+$/, "")).filter((b) => b.trim().length > 0);
+  for (const rb of raw) {
+    const heading = /^\p{Extended_Pictographic}/u.test(rb) && !rb.includes("\n");
+    const parts = heading ? [rb.trim()] : splitIntoSentences(rb);
+    const withIdx = parts.map((p) => {
+      const idx = sentences.length;
+      sentences.push(p);
+      return { text: p, idx };
+    });
+    blocks.push({ heading, sentences: withIdx });
+  }
+  return { blocks, sentences };
+}
+
+/** 渲染导读正文:小标题加粗放大、段落留白;activeIdx 命中的句子高亮(朗读时)。 */
+function ProseBody({ blocks, activeIdx }: { blocks: ProseBlock[]; activeIdx: number }) {
+  return (
+    <div>
+      {blocks.map((b, bi) => (
+        <p
+          key={bi}
+          className={cn(
+            "first:mt-0",
+            b.heading
+              ? "mt-5 text-[17px] font-bold text-slate-900"
+              : "mt-3 whitespace-pre-line text-[15px] leading-relaxed text-slate-700",
+          )}
+        >
+          {b.sentences.map((s) => (
+            <span
+              key={s.idx}
+              className={cn("rounded transition-colors", s.idx === activeIdx && "bg-amber-100 text-slate-900")}
+            >
+              {s.text}
+            </span>
+          ))}
+        </p>
+      ))}
+    </div>
+  );
+}
+
 function fmtDuration(sec: number): string {
   const m = Math.floor(sec / 60);
   const h = Math.floor(m / 60);
@@ -65,7 +116,7 @@ export default function LibraryBook() {
     [book?.intro_en],
   );
   const guideSentences = useMemo(
-    () => (book?.guide_en ? splitIntoSentences(book.guide_en) : []),
+    () => (book?.guide_en ? parseProse(book.guide_en).sentences : []),
     [book?.guide_en],
   );
 
@@ -220,6 +271,7 @@ export default function LibraryBook() {
 
   const hasZhGuide = !!book.guide_zh;
   const guideText = showGuideZh ? book.guide_zh : book.guide_en;
+  const guideBlocks = parseProse(guideText || "").blocks;
 
   return (
     <main className="mx-auto max-w-2xl px-5 py-8">
@@ -413,21 +465,7 @@ export default function LibraryBook() {
                   </button>
                 )}
               </div>
-              <div className="whitespace-pre-line text-[15px] leading-relaxed text-slate-700">
-                {!showGuideZh && guideSentences.length > 0
-                  ? guideSentences.map((s, i) => (
-                      <span
-                        key={i}
-                        className={cn(
-                          "rounded transition-colors",
-                          i === guideIdx && "bg-amber-100 text-slate-900",
-                        )}
-                      >
-                        {s}
-                      </span>
-                    ))
-                  : guideText}
-              </div>
+              <ProseBody blocks={guideBlocks} activeIdx={showGuideZh ? -1 : guideIdx} />
             </div>
           )}
         </section>

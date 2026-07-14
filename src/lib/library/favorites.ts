@@ -25,7 +25,93 @@ export type LibraryFavorite = {
   recall_hit_count: number | null;
   recall_miss_count: number | null;
   last_recalled_at: string | null;
+  correct_streak: number | null;      // 跨天连对计数(复习用)
+  last_correct_date: string | null;   // 上次做对的北京日期 YYYY-MM-DD
 };
+
+/** 跨天掌握阈值:连对 N 个不同的北京日 → 已掌握。 */
+export const VOCAB_MASTER_STREAK = 3;
+
+/** 北京时间(UTC+8)今天 YYYY-MM-DD。同天重复做对不计,保证"跨天"语义。 */
+export function bjToday(): string {
+  return new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Shanghai" });
+}
+
+export type VocabStreakResult = { streak: number; mastered: boolean; alreadyToday: boolean };
+
+// ---- 状态口径(纯函数,前端算,零查询)。掌握=streak≥3;学习中=0<streak<3;今日待复习=未掌握且今天还没答对。----
+export type VocabStatus = "due" | "learning" | "mastered";
+export function vocabStreakOf(f: LibraryFavorite): number {
+  return f.correct_streak ?? 0;
+}
+export function vocabIsMastered(f: LibraryFavorite): boolean {
+  return vocabStreakOf(f) >= VOCAB_MASTER_STREAK;
+}
+/** 今日待复习:未掌握 且 上次做对不是今天(北京日)。已掌握的不再出题。 */
+export function vocabIsDueToday(f: LibraryFavorite): boolean {
+  return !vocabIsMastered(f) && f.last_correct_date !== bjToday();
+}
+/** 学习中:连对 1-2 次(未掌握、已起步)。与「今日待复习」是不同视角,可重叠。 */
+export function vocabIsLearning(f: LibraryFavorite): boolean {
+  const s = vocabStreakOf(f);
+  return s > 0 && s < VOCAB_MASTER_STREAK;
+}
+/** 列表分栏用的互斥主状态:已掌握 > 学习中 > 待复习(streak=0 也归 due)。 */
+export function vocabStatusOf(f: LibraryFavorite): VocabStatus {
+  if (vocabIsMastered(f)) return "mastered";
+  if (vocabIsLearning(f)) return "learning";
+  return "due";
+}
+
+/**
+ * 复习一题后更新跨天连对(方案 ②,规则照搬 main 给 user_mistakes 的 bump_mistake_correct):
+ *  · 做对 + 且非同一天(UTC+8)→ streak+1、last_correct_date=今天;
+ *  · 做对 + 同一天 → 不加(防刷,alreadyToday=true);
+ *  · 做错 → streak 清零、last_correct_date=NULL。
+ *  streak>=VOCAB_MASTER_STREAK → 已掌握。只写 library_vocab_favorites 自己的字段。
+ */
+export async function recordVocabStreak(
+  term: string,
+  kind: LibraryFavoriteKind,
+  correct: boolean,
+): Promise<VocabStreakResult | null> {
+  const { data: userData } = await supabase.auth.getUser();
+  const user = userData?.user;
+  if (!user) return null;
+  const { data: cur } = await db
+    .from("library_vocab_favorites")
+    .select("correct_streak,last_correct_date")
+    .eq("user_id", user.id)
+    .eq("term", term)
+    .eq("kind", kind)
+    .maybeSingle();
+  if (!cur) return null;
+
+  const streak = cur.correct_streak ?? 0;
+  const today = bjToday();
+
+  if (!correct) {
+    await db
+      .from("library_vocab_favorites")
+      .update({ correct_streak: 0, last_correct_date: null })
+      .eq("user_id", user.id)
+      .eq("term", term)
+      .eq("kind", kind);
+    return { streak: 0, mastered: false, alreadyToday: false };
+  }
+  if (cur.last_correct_date === today) {
+    // 同一天已计过,不重复加(防刷次数)。
+    return { streak, mastered: streak >= VOCAB_MASTER_STREAK, alreadyToday: true };
+  }
+  const next = streak + 1;
+  await db
+    .from("library_vocab_favorites")
+    .update({ correct_streak: next, last_correct_date: today })
+    .eq("user_id", user.id)
+    .eq("term", term)
+    .eq("kind", kind);
+  return { streak: next, mastered: next >= VOCAB_MASTER_STREAK, alreadyToday: false };
+}
 
 export type AddFavoriteArgs = {
   term: string;

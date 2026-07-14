@@ -27,7 +27,10 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { phrase, context } = await req.json();
+    const { phrase, context, prefer } = await req.json();
+    // prefer="light":图书馆精读点读用 → 先查 read-v1 轻卡、再查 zh-v2 重卡(修抢跑竞态:测试期先点生成的 zh-v2 会永久遮蔽后种的轻卡)。
+    // 不传(美语课等)→ 仍 zh-v2 优先,行为 100% 不变。
+    const preferLight = prefer === "light";
     if (!phrase || typeof phrase !== "string") {
       return new Response(JSON.stringify({ error: "phrase required" }), {
         status: 400,
@@ -43,43 +46,51 @@ Deno.serve(async (req) => {
       });
     }
 
-    // 1) 重卡缓存(zh-v2)命中 → 原路返回。放最前 → 已生成过重卡的词(含美语课已点过的词)行为 100% 不变。
-    const { data: cached } = await admin
-      .from("phrase_explanations")
-      .select("explanation")
-      .eq("normalized", normalized)
-      .eq("target_lang", SCHEMA_VERSION)
-      .maybeSingle();
+    // 重卡(zh-v2)查找器:命中 → 返回重卡结构。
+    const findZhV2 = async () => {
+      const { data: cached } = await admin
+        .from("phrase_explanations")
+        .select("explanation")
+        .eq("normalized", normalized)
+        .eq("target_lang", SCHEMA_VERSION)
+        .maybeSingle();
+      return cached?.explanation ? { explanation: cached.explanation, cached: true } : null;
+    };
 
-    if (cached?.explanation) {
-      return new Response(JSON.stringify({ explanation: cached.explanation, cached: true }), {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
+    // 轻卡(read-v1)查找器:把轻 schema {word,pos,ipa,gloss_cn,example} 映射成前端 Explanation 兼容结构:
+    //   gloss_cn→one_line_cn(🧠 一句话)、pos+ipa→pos(卡头)、example→📝 例句。
+    //   重卡专属字段(literal/scene/replies/similar/tip)缺省 → LessonBody 各段有长度守卫,优雅降级。
+    const findReadV1 = async () => {
+      const { data: light } = await admin
+        .from("phrase_explanations")
+        .select("explanation")
+        .eq("normalized", normalized)
+        .eq("target_lang", "read-v1")
+        .maybeSingle();
+      // deno-lint-ignore no-explicit-any
+      const lg = light?.explanation as any;
+      if (lg && lg.gloss_cn) {
+        const card = {
+          phrase: lg.word || phrase,
+          pos: [lg.pos, lg.ipa].filter(Boolean).join("  "),
+          one_line_cn: lg.gloss_cn,
+          example: lg.example && lg.example.en ? lg.example : undefined,
+        };
+        return { explanation: card, cached: true, light: true };
+      }
+      return null;
+    };
 
-    // 1.5) 精读轻词义(read-v1)命中 → 返回轻卡(快,避开 9 秒重卡生成)。仅在重卡未命中时兜底,
-    //      故不会顶掉任何已存在的重卡。把轻 schema {word,pos,ipa,gloss_cn,example} 映射成前端 Explanation 兼容结构:
-    //      gloss_cn→one_line_cn(🧠 一句话)、pos+ipa→pos(卡头)、example→📝 例句。
-    //      重卡专属字段(literal/scene/replies/similar/tip)缺省 → LessonBody 各段有长度守卫,优雅降级。
-    //      ⚠️ 未预生成的词(含大多数美语课词)不在 read-v1 → 查不到走下方原路,行为不变。
-    const { data: light } = await admin
-      .from("phrase_explanations")
-      .select("explanation")
-      .eq("normalized", normalized)
-      .eq("target_lang", "read-v1")
-      .maybeSingle();
-    // deno-lint-ignore no-explicit-any
-    const lg = light?.explanation as any;
-    if (lg && lg.gloss_cn) {
-      const card = {
-        phrase: lg.word || phrase,
-        pos: [lg.pos, lg.ipa].filter(Boolean).join("  "),
-        one_line_cn: lg.gloss_cn,
-        example: lg.example && lg.example.en ? lg.example : undefined,
-      };
-      return new Response(JSON.stringify({ explanation: card, cached: true, light: true }), {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+    // 命中顺序:preferLight(图书馆)→ 先轻后重;默认(美语课)→ 先重后轻(行为 100% 不变)。
+    // 两者都是「已缓存命中即返回,都未命中才走下方 AI 生成」。
+    const order = preferLight ? [findReadV1, findZhV2] : [findZhV2, findReadV1];
+    for (const find of order) {
+      const hit = await find();
+      if (hit) {
+        return new Response(JSON.stringify(hit), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
     }
 
     // 2) Ask Lovable AI Gateway

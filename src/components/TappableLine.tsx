@@ -12,6 +12,7 @@ import {
   recordRecall,
   type LibraryFavoriteKind,
 } from "@/lib/library/favorites";
+import { isFunctionWord } from "@/lib/library/wordClass";
 
 /** 精读收藏上下文:由 LibraryReader 传入(整句 cn + book_id);美语课不传 → 不渲染收藏按钮/标记。 */
 export type FavoriteCtx = { bookId: string; srcZh: string };
@@ -125,7 +126,7 @@ export const KNOWN_PHRASES: string[] = [
   "gotta",
 ];
 
-type Token =
+export type Token =
   | { kind: "text"; text: string }
   | { kind: "tap"; text: string; phrase: string };
 
@@ -134,7 +135,7 @@ type Token =
  * single word becomes a tap target; runs of words that match a known
  * phrase are merged into a single multi-word tap target.
  */
-function tokenize(sentence: string, phrases: string[] = KNOWN_PHRASES): Token[] {
+export function tokenize(sentence: string, phrases: string[] = KNOWN_PHRASES): Token[] {
   const clean = stripTags(sentence);
   // Split into words & non-word delimiters but keep delimiters.
   const parts = clean.split(/(\s+|[.,!?;:"'()\-—…])/g).filter((p) => p !== "");
@@ -236,7 +237,8 @@ function ExplainPopover({
     try {
       const { data: resp, error: fnErr } = await supabase.functions.invoke(
         "explain-phrase",
-        { body: { phrase, context: contextText } },
+        // 图书馆点读(有收藏上下文)→ prefer:"light" 让 read-v1 轻卡优先于 zh-v2 重卡;美语课不传 → 行为不变。
+        { body: { phrase, context: contextText, ...(favorite ? { prefer: "light" } : {}) } },
       );
       if (fnErr) throw fnErr;
       if (resp?.error) throw new Error(resp.error);
@@ -340,7 +342,8 @@ function ExplainPopover({
               ) : null}
             </div>
             <div className="flex shrink-0 items-center gap-1.5">
-              {favorite && isLight && (
+              {/* 虚词(the/of/because…)不给收藏按钮:词类是虚词大类 or 词形在语法表(pos 去掉尾部 /ipa/ 再判)。点开仍能看释义。 */}
+              {favorite && isLight && !isFunctionWord(phrase, (data?.pos || "").split("/")[0]) && (
                 <button
                   onClick={toggleFav}
                   disabled={favBusy}

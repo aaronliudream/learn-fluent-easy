@@ -213,6 +213,37 @@ export async function getBookCoreCounts(): Promise<Map<string, BookCore>> {
   }
 }
 
+/** 文化笔记(② 读中词卡 / ③ 章末合集)。term 归一化小写(点读命中键);内容须人工审。 */
+export type LibraryCultureNote = {
+  term: string;
+  chapter_idx: number;
+  title: string;
+  body_zh: string;
+  body_en: string | null;
+};
+
+/**
+ * 某书全部已发布文化笔记 → Map(归一化 term → 笔记)。稀疏(全书几十条),一次性预取传进 TappableLine。
+ * 表未建/查询失败 → 空 Map(优雅降级,详情/阅读页照常)。
+ */
+export async function getBookCultureNotes(bookId: string): Promise<Map<string, LibraryCultureNote>> {
+  try {
+    const { data, error } = await db
+      .from("library_culture_notes")
+      .select("term,chapter_idx,title,body_zh,body_en")
+      .eq("book_id", bookId);
+    if (error || !data) return new Map();
+    const m = new Map<string, LibraryCultureNote>();
+    for (const n of data as LibraryCultureNote[]) {
+      const key = String(n.term).toLowerCase().trim();
+      if (key) m.set(key, n);
+    }
+    return m;
+  } catch {
+    return new Map();
+  }
+}
+
 /** 取某章的插图(按 position 升序;每章就几张,和句子同批取)。 */
 export async function getChapterIllustrations(
   bookId: string,

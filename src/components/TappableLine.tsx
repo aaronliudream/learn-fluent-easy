@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Loader2, Volume2, Sparkles, Bookmark, Check } from "lucide-react";
+import { Loader2, Volume2, Sparkles, Bookmark, Check, Lightbulb, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { stripTags } from "@/lib/richText";
@@ -13,6 +13,7 @@ import {
   type LibraryFavoriteKind,
 } from "@/lib/library/favorites";
 import { isFunctionWord } from "@/lib/library/wordClass";
+import type { LibraryCultureNote } from "@/lib/library/data";
 
 /** 精读收藏上下文:由 LibraryReader 传入(整句 cn + book_id);美语课不传 → 不渲染收藏按钮/标记。 */
 export type FavoriteCtx = { bookId: string; srcZh: string };
@@ -208,6 +209,7 @@ function ExplainPopover({
   isFavorited,
   triggerClassName,
   onFavoriteChange,
+  note,
   children,
 }: {
   phrase: string;
@@ -216,6 +218,7 @@ function ExplainPopover({
   isFavorited?: boolean; // 该词已收藏 → 触发「微提取」(先回忆后揭晓)
   triggerClassName?: string; // 图书馆传入带标记的点读样式;不传 → 用默认(美语课不变)
   onFavoriteChange?: (term: string, kind: LibraryFavoriteKind, favorited: boolean) => void;
+  note?: LibraryCultureNote; // 图书馆文化笔记(稀疏):有则卡底显示「💡 标题 ›」;无则整行不出现
   children: React.ReactNode;
 }) {
   const [open, setOpen] = useState(false);
@@ -410,6 +413,7 @@ function ExplainPopover({
                 </div>
               )}
               {data && !loading && <LessonBody data={data} />}
+              {note && <CultureNoteLine note={note} />}
             </>
           )}
         </div>
@@ -556,6 +560,47 @@ function LessonBody({ data }: { data: Explanation }) {
 }
 
 /**
+ * 图书馆文化笔记 · 卡底一行「💡 标题 ›」,默认收起;点开展开 body_zh(有 body_en 则给 EN 切换)。
+ * 讲的是史实/地理/气象小知识(为什么是 cyclone 不是 tornado…),稀疏,只有挂了笔记的词才出现。
+ */
+function CultureNoteLine({ note }: { note: LibraryCultureNote }) {
+  const [open, setOpen] = useState(false);
+  const [en, setEn] = useState(false);
+  const body = en && note.body_en ? note.body_en : note.body_zh;
+  return (
+    <div className="mt-3 border-t border-amber-200/60 pt-2.5 dark:border-amber-500/25">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="flex w-full items-center gap-1.5 text-left text-[13px] font-semibold text-amber-700 transition hover:text-amber-800 dark:text-amber-300"
+      >
+        <Lightbulb className="size-3.5 shrink-0" />
+        <span className="min-w-0 flex-1 truncate">{note.title}</span>
+        <ChevronRight
+          className={`size-3.5 shrink-0 transition-transform ${open ? "rotate-90" : ""}`}
+        />
+      </button>
+      {open && (
+        <div className="mt-2 rounded-lg bg-amber-50/70 p-2.5 dark:bg-amber-500/10">
+          <div className="whitespace-pre-line text-[13px] leading-relaxed text-foreground/90">
+            {body}
+          </div>
+          {note.body_en && (
+            <button
+              type="button"
+              onClick={() => setEn((v) => !v)}
+              className="mt-2 text-[11px] font-semibold text-amber-600 transition hover:text-amber-700 dark:text-amber-400"
+            >
+              {en ? "看中文" : "EN"}
+            </button>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/**
  * Render a sentence where each word and known phrase is tappable. On tap it
  * shows a small explanation card (meaning, usage, English examples with
  * Chinese translation, and a TTS button).
@@ -566,6 +611,7 @@ export function TappableLine({
   favoritedTerms,
   reveal,
   chunkPhrases,
+  cultureNotes,
   onFavoriteChange,
 }: {
   sentence: string;
@@ -578,6 +624,8 @@ export function TappableLine({
   reveal?: boolean;
   /** 本书本章语块(表面形式)→ 正文虚线标这些。仅图书馆传;不传 → 用通用 KNOWN_PHRASES(美语课不变)。 */
   chunkPhrases?: string[];
+  /** 本书文化笔记(归一化 term → 笔记)。稀疏,仅命中的词卡底显示「💡 标题」。仅图书馆传。 */
+  cultureNotes?: Map<string, LibraryCultureNote>;
   onFavoriteChange?: (term: string, kind: LibraryFavoriteKind, favorited: boolean) => void;
 }) {
   const tokens = useMemo(() => tokenize(sentence, chunkPhrases ?? KNOWN_PHRASES), [sentence, chunkPhrases]);
@@ -589,6 +637,7 @@ export function TappableLine({
         if (tok.kind === "text") return <span key={i}>{tok.text}</span>;
         const isChunk = tok.phrase.includes(" ");
         const isFav = !!favoritedTerms?.has(tok.phrase);
+        const note = cultureNotes?.get(tok.phrase);
         return (
           <ExplainPopover
             key={i}
@@ -597,6 +646,7 @@ export function TappableLine({
             favorite={favorite}
             isFavorited={isFav}
             triggerClassName={libraryMode ? libraryTriggerClass(isChunk, isFav, !!reveal) : undefined}
+            note={note}
             onFavoriteChange={onFavoriteChange}
           >
             <span>{tok.text}</span>

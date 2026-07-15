@@ -19,6 +19,7 @@ import {
   getChapterSentences,
   getChapterIllustrations,
   getChapterChunkTerms,
+  getBookCultureNotes,
   chapterTitle,
   illustrationUrl,
   currentUserId,
@@ -26,6 +27,7 @@ import {
   type LibraryChapter,
   type LibrarySentence,
   type LibraryIllustration,
+  type LibraryCultureNote,
 } from "@/lib/library/data";
 import {
   defaultLibraryState,
@@ -101,6 +103,7 @@ export default function LibraryReader() {
   const [sentences, setSentences] = useState<LibrarySentence[]>([]); // 仅当前章
   const [illus, setIllus] = useState<LibraryIllustration[]>([]); // 当前章插图(v1 章首)
   const [chunkTerms, setChunkTerms] = useState<string[]>([]); // 当前章语块(正文虚线)
+  const [cultureNotes, setCultureNotes] = useState<Map<string, LibraryCultureNote>>(new Map()); // 全书文化笔记(稀疏·卡底💡)
   const [loading, setLoading] = useState(true); // 首屏:书 + 章表 + 进度
   const [chapterLoading, setChapterLoading] = useState(false); // 切章:仅当前章句子
 
@@ -154,6 +157,10 @@ export default function LibraryReader() {
       const terms = await listFavoritedTerms();
       if (!alive) return;
       setFavTerms(terms);
+
+      const notes = await getBookCultureNotes(b.id);
+      if (!alive) return;
+      setCultureNotes(notes);
 
       // 初始章:URL ?ch=N(目录跳章)优先 → 否则断点 last_seq 所在章 → 否则第一章。
       const urlCh = Number(searchParams.get("ch"));
@@ -702,6 +709,7 @@ export default function LibraryReader() {
                               favoritedTerms={favTerms}
                               reveal={reveal}
                               chunkPhrases={chunkTerms}
+                              cultureNotes={cultureNotes}
                               onFavoriteChange={handleFavChange}
                             />
                             {mode === "en" && revealedCn.has(i) && s.text_cn && (

@@ -12,6 +12,7 @@ import { ArrowLeft, Play, Square, Volume2, Gauge, ChevronLeft, ChevronRight, X }
 import { speak, speakFromUrl, stopSpeaking, unlockAudioSync, prefetchTTS } from "@/lib/speak";
 import { T } from "@/i18n/T";
 import { TappableLine } from "@/components/TappableLine";
+import ChapterNotesCollection from "@/components/library/ChapterNotesCollection";
 import { listFavoritedTerms, type LibraryFavoriteKind } from "@/lib/library/favorites";
 import {
   getBookByKey,
@@ -118,6 +119,12 @@ export default function LibraryReader() {
   const [reveal, setReveal] = useState(false); // 移动端长按 → 揭示可点词
   const [showOnboard, setShowOnboard] = useState(false); // 首次引导提示
   const [revealedCn, setRevealedCn] = useState<Set<number>>(new Set()); // 点句子 → 就地显该句中文(章内数组下标)
+
+  // 本章文化笔记(③ 章末合集):cultureNotes 已按本书取,再按锚定章过滤 = (book_id, chapter_idx),不跨书混。
+  const chapterNotes = useMemo(
+    () => [...cultureNotes.values()].filter((n) => n.chapter_idx === chapterIdx),
+    [cultureNotes, chapterIdx],
+  );
 
   const speed = slow ? 0.7 : 1.0;
   const playSeq = useRef(0); // 递增以中断进行中的连续朗读
@@ -738,6 +745,9 @@ export default function LibraryReader() {
             })}
             {tailFigs.map(renderFigure)}
           </div>
+
+          {/* 章末合集(③):本章文化笔记,默认折叠 */}
+          <ChapterNotesCollection notes={chapterNotes} />
 
           {/* 章末:下一章 / 上一章 */}
           {chapterNav(false)}

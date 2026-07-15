@@ -46,10 +46,10 @@ ON CONFLICT (book_id, term) DO UPDATE SET
   chapter_idx=EXCLUDED.chapter_idx, title=EXCLUDED.title,
   body_zh=EXCLUDED.body_zh, body_en=EXCLUDED.body_en, is_published=EXCLUDED.is_published;
 
-SELECT 'after' AS phase, term, chapter_idx, title
+SELECT 'after' AS phase, lcn.term, lcn.chapter_idx, lcn.title
   FROM public.library_culture_notes lcn
   JOIN public.library_books b ON b.id=lcn.book_id
  WHERE b.book_key='wizard-of-oz'
- ORDER BY term;
+ ORDER BY lcn.term;
 
 COMMIT;

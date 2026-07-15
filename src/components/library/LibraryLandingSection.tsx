@@ -39,8 +39,11 @@ const BAND_BADGE: Record<LibraryAgeBand, string> = {
 function coverStyle(cover: { c1?: string; c2?: string }) {
   return { backgroundImage: `linear-gradient(135deg, ${cover.c1 || "#334155"}, ${cover.c2 || "#0f172a"})` };
 }
+// 低于此不显示总词数:seeded 样本(伊索 44 句=289 词)远低、成书(绿野仙踪 3.9 万)远高,阈值天然分开。
+// 289 不是错的,是不代表成书体量——伊索补全后自动越过阈值恢复显示,零维护。数值不 load-bearing(1000–5000 皆可)。
+const WORDCOUNT_MIN_SHOWN = 2000;
 function fmtWords(n: number | undefined, zh: boolean): string | null {
-  if (!n || n <= 0) return null;
+  if (!n || n < WORDCOUNT_MIN_SHOWN) return null;
   if (n >= 10000) return zh ? `${(n / 10000).toFixed(1)} 万词` : `${(n / 1000).toFixed(1)}k words`;
   return zh ? `${n} 词` : `${n} words`;
 }
@@ -85,6 +88,13 @@ export default function LibraryLandingSection() {
     [books, band],
   );
 
+  // 年龄段 chip 只放已加载书目里真实存在的类目(+ 全部)。别硬编五个:两本都是「儿童」时,
+  // 露出灰着的「成人/青少年」= 开一张兑不了的支票,和"别画饼"冲突。空类目自动不显示,补书自动出现。
+  const presentBands = useMemo(() => {
+    const s = new Set(books.map((b) => b.age_band));
+    return BANDS.filter((b) => b.key === "all" || s.has(b.key as LibraryAgeBand));
+  }, [books]);
+
   if (!enabled) return null;
   if (ready && books.length === 0) return null; // 无书自动隐藏
 
@@ -111,7 +121,7 @@ export default function LibraryLandingSection() {
 
         {/* 年龄段筛选 */}
         <div className="mt-4 flex flex-wrap gap-2">
-          {BANDS.map((b) => (
+          {presentBands.map((b) => (
             <button
               key={b.key}
               type="button"
@@ -140,7 +150,16 @@ export default function LibraryLandingSection() {
               >
                 <Link to={`/library/${b.book_key}`} className="relative block aspect-[3/4]" style={coverStyle(b.cover)}>
                   {coverImg ? (
-                    <img src={coverImg} alt={b.title} loading="lazy" className="absolute inset-0 size-full object-cover" />
+                    // 图挂了 → 隐藏 img 露出底部渐变(coverStyle),不让 broken-img 图标铺满卡片(便宜保险)。
+                    <img
+                      src={coverImg}
+                      alt={b.title}
+                      loading="lazy"
+                      className="absolute inset-0 size-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                      }}
+                    />
                   ) : (
                     <BookOpen className="absolute right-3 top-3 size-4 text-white/50" />
                   )}

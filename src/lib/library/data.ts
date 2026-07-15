@@ -244,6 +244,24 @@ export async function getBookCultureNotes(bookId: string): Promise<Map<string, L
   }
 }
 
+/**
+ * 每书 visibility('public' / 'private')→ Map。仅用于卡片 🔒 私享角标(纯展示)。
+ * 访问控制由 DB RLS 强制,不靠这里;列未建/查询失败 → 空 Map(优雅降级,不崩)。
+ */
+export async function getBookVisibility(): Promise<Map<string, string>> {
+  try {
+    const { data, error } = await db.from("library_books").select("id,visibility");
+    if (error || !data) return new Map();
+    const m = new Map<string, string>();
+    for (const b of data as { id: string; visibility: string | null }[]) {
+      if (b.visibility) m.set(b.id, b.visibility);
+    }
+    return m;
+  } catch {
+    return new Map();
+  }
+}
+
 /** 取某章的插图(按 position 升序;每章就几张,和句子同批取)。 */
 export async function getChapterIllustrations(
   bookId: string,

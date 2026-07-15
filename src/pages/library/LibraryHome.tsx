@@ -5,7 +5,7 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookOpen, BookMarked } from "lucide-react";
+import { ArrowLeft, BookOpen, BookMarked, Lock } from "lucide-react";
 import { T } from "@/i18n/T";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
@@ -13,6 +13,7 @@ import {
   listBooks,
   currentUserId,
   coverImageUrl,
+  getBookVisibility,
   type LibraryAgeBand,
   type LibraryBookListItem,
 } from "@/lib/library/data";
@@ -48,15 +49,20 @@ export default function LibraryHome() {
   const [band, setBand] = useState<LibraryAgeBand | "all">("all");
   const [books, setBooks] = useState<LibraryBookListItem[]>([]);
   const [progress, setProgress] = useState<Map<string, LibraryReadingState>>(new Map());
+  const [visibility, setVisibility] = useState<Map<string, string>>(new Map());
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let alive = true;
     setLoading(true);
     (async () => {
-      const list = await listBooks(band === "all" ? undefined : band);
+      const [list, vis] = await Promise.all([
+        listBooks(band === "all" ? undefined : band),
+        getBookVisibility(),
+      ]);
       if (!alive) return;
       setBooks(list);
+      setVisibility(vis);
       setLoading(false);
       const uid = await currentUserId();
       if (!alive) return;
@@ -134,6 +140,14 @@ export default function LibraryHome() {
                 className="relative flex aspect-[3/4] items-end p-3 text-white"
                 style={coverStyle(b.cover)}
               >
+                {visibility.get(b.id) === "private" && (
+                  <span
+                    className="absolute left-2 top-2 z-10 inline-flex items-center gap-1 rounded-full bg-black/55 px-2 py-0.5 text-[10px] font-bold text-white backdrop-blur-sm"
+                    title="私享 · 仅授权账号可见"
+                  >
+                    <Lock className="size-3" /> 私享
+                  </span>
+                )}
                 {coverImg ? (
                   <img
                     src={coverImg}

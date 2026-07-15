@@ -33,7 +33,7 @@ In the original book, the magic shoes — worn by the Wicked Witch of the East a
 Munchkin(芒奇金人)是鲍姆为奥兹国东方的小矮人**造出来的名字**,原本并不是英语单词。后来——尤其 1939 年的电影火了之后——munchkin 慢慢进了日常英语,用来亲昵地指"个子小小的人",尤其是**小孩子**(大人逗小孩会叫一声 little munchkin)。所以你以后在生活里再碰到这个词,它就是从这本书里来的。
 
 **body_en:**
-"Munchkin" is a name Baum invented for the little people of the eastern land of Oz — it was not an English word before. But the book and the 1939 film were so popular that "munchkin" really did enter everyday English, used affectionately for a very small person, especially a child (a grown-up might call a little kid "my little munchkin"). So when you meet this word in real life, it came from this very book.
+"Munchkin" is a name Baum invented for the little people of the eastern land of Oz — it was not an English word before. But later — especially after the 1939 film became a hit — "munchkin" gradually entered everyday English, used affectionately for a very small person, especially a child (a grown-up might call a little kid "my little munchkin"). So when you meet this word in real life, it came from this very book.
 
 *核对点:munchkin 作普通名词=小不点/小孩,源自鲍姆造词、经电影普及——已收进词典的义项。*
 

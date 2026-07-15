@@ -143,7 +143,7 @@ export function tokenize(sentence: string, phrases: string[] = KNOWN_PHRASES): T
   // Build word-position list to match phrases.
   const wordIdx: number[] = [];
   parts.forEach((p, i) => {
-    if (/^[A-Za-z][A-Za-z'\-]*$/.test(p)) wordIdx.push(i);
+    if (/^[A-Za-z][A-Za-z'’\-]*$/.test(p)) wordIdx.push(i);
   });
   // Mark phrase ranges (start..end inclusive in parts indices).
   const phraseRanges: Array<{ from: number; to: number; phrase: string }> = [];
@@ -192,7 +192,7 @@ export function tokenize(sentence: string, phrases: string[] = KNOWN_PHRASES): T
       continue;
     }
     const p = parts[i];
-    if (/^[A-Za-z][A-Za-z'\-]*$/.test(p)) {
+    if (/^[A-Za-z][A-Za-z'’\-]*$/.test(p)) {
       out.push({ kind: "tap", text: p, phrase: p.toLowerCase() });
     } else {
       out.push({ kind: "text", text: p });

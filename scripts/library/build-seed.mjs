@@ -60,9 +60,11 @@ let sql = `-- ==================================================================
 
 BEGIN;
 
--- 0) 章标题列(方案 A:jsonb,幂等加列)。[{idx,title_en,title_zh}]
+-- 0) 章标题列(方案 A:jsonb,幂等加列)。[{idx,title_en,title_zh}] + visibility(私享层已建,防御性再保一次)。
 ALTER TABLE public.library_books
   ADD COLUMN IF NOT EXISTS chapters jsonb NOT NULL DEFAULT '[]'::jsonb;
+ALTER TABLE public.library_books
+  ADD COLUMN IF NOT EXISTS visibility text NOT NULL DEFAULT 'public';
 
 SELECT 'before' AS phase,
        (SELECT count(*) FROM public.library_books WHERE book_key = ${q(book.book_key)}) AS book_exists,
@@ -73,12 +75,12 @@ SELECT 'before' AS phase,
 -- 1) 书目(upsert)
 INSERT INTO public.library_books
   (book_key, title, zh_title, author, age_band, age_range, cover,
-   intro_en, intro_zh, sentence_count, copyright_note, chapters, is_published)
+   intro_en, intro_zh, sentence_count, copyright_note, chapters, is_published, visibility)
 VALUES
   (${q(book.book_key)}, ${q(book.title)}, ${q(book.zh_title)}, ${q(book.author)},
    ${q(book.age_band)}, ${q(book.age_range)}, ${jsonLit(book.cover ?? {})},
    ${q(book.intro_en)}, ${q(book.intro_zh)}, ${sentenceCount}, ${q(book.copyright_note)},
-   ${jsonLit(chapterMeta)}, ${book.is_published === true})
+   ${jsonLit(chapterMeta)}, ${book.is_published === true}, ${q(book.visibility ?? "public")})
 ON CONFLICT (book_key) DO UPDATE SET
   title          = EXCLUDED.title,
   zh_title       = EXCLUDED.zh_title,
@@ -91,7 +93,7 @@ ON CONFLICT (book_key) DO UPDATE SET
   sentence_count = EXCLUDED.sentence_count,
   copyright_note = EXCLUDED.copyright_note,
   chapters       = EXCLUDED.chapters;
-  -- 注:不覆盖 is_published —— 审后手动置 true,重灌 seed 不会把它打回 false。
+  -- 注:不覆盖 is_published / visibility —— 审后手动置 true / 由 private 翻 public,重灌 seed 不会把它们打回。
 
 -- 2) 句子(删旧重灌,幂等)。audio_url 留 NULL:默认前端实时合成,预生成脚本审后另回填。
 DELETE FROM public.library_sentences

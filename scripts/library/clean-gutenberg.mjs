@@ -14,9 +14,11 @@
  */
 import { readFileSync, writeFileSync } from "node:fs";
 
-const [, , inPath, outPath] = process.argv;
+const [, , inPath, outPath, ...flags] = process.argv;
+// --numbered:章头是「CHAPTER <罗马>」但无独立标题行(如 Tom Sawyer),标题记 "Chapter N"、正文首行不被吞。
+const NUMBERED = flags.includes("--numbered");
 if (!inPath || !outPath) {
-  console.error("用法: node scripts/library/clean-gutenberg.mjs <in.txt> <out.txt>");
+  console.error("用法: node scripts/library/clean-gutenberg.mjs <in.txt> <out.txt> [--numbered]");
   process.exit(1);
 }
 
@@ -34,6 +36,16 @@ lines = lines.slice(startIdx + 1, endIdx);
 
 // 2) 正文起点 = 第一处「单独成行的章头」(^Chapter <roman>$),之前全是前言/目录/题献
 const CH_HEAD = /^\s*Chapter\s+([IVXLCDM]+)\s*$/i;
+const ROMAN = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+function romanToArabic(r) {
+  const s = r.toUpperCase();
+  let n = 0;
+  for (let i = 0; i < s.length; i++) {
+    const cur = ROMAN[s[i]], nxt = ROMAN[s[i + 1]] || 0;
+    n += cur < nxt ? -cur : cur;
+  }
+  return n;
+}
 const bodyStart = lines.findIndex((l) => CH_HEAD.test(l));
 if (bodyStart === -1) {
   console.error("找不到正文章头(^Chapter <罗马数字>$)。这本书的章头格式可能不同,先停下报你。");
@@ -49,11 +61,16 @@ for (let i = 0; i < lines.length; i++) {
   if (/^\s*\[Illustration/i.test(line)) continue; // 去题图
   const m = line.match(CH_HEAD);
   if (m) {
-    // 下一非空行 = 章标题
+    chapters += 1;
+    if (NUMBERED) {
+      // 无独立标题:标题记 "Chapter N",正文首行不吞(下一行照常进正文)。
+      out.push("", `## Chapter ${romanToArabic(m[1])}`, "");
+      continue;
+    }
+    // 有独立标题:下一非空行 = 章标题,吞掉它。
     let j = i + 1;
     while (j < lines.length && lines[j].trim() === "") j++;
     const title = (lines[j] ?? "").trim();
-    chapters += 1;
     out.push("", `## ${title}`, "");
     i = j; // 跳过标题行
     continue;

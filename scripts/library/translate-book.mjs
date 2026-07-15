@@ -10,7 +10,7 @@
  * ⚠️ 儿童读物:targetLanguage 已要求简洁口语好朗读。
  * 用法:node scripts/library/translate-book.mjs <book_key>
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 
 const env = Object.fromEntries(
   readFileSync(".env", "utf8").split(/\r?\n/).filter((l) => l.includes("=")).map((l) => {
@@ -27,7 +27,7 @@ const THROTTLE_MS = 1500;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // 强制术语表(最长最具体优先)。s?/Gates? 等吸收复数;占位后剩余 's 由翻译处理成"的"。
-const GLOSSARY = [
+let GLOSSARY = [
   [/\bWicked Witch of the West\b/g, "西方坏女巫"],
   [/\bWicked Witch of the East\b/g, "东方坏女巫"],
   [/\bGood Witch of the North\b/g, "北方好女巫"],
@@ -108,6 +108,15 @@ const key = process.argv[2];
 if (!key) { console.error("用法: node scripts/library/translate-book.mjs <book_key>"); process.exit(1); }
 const path = `scripts/library/books/${key}.json`;
 const book = JSON.parse(readFileSync(path, "utf8"));
+
+// 每书术语表:若存在 books/<key>.glossary.json([[word, cn], …],长/具体优先)→ 覆盖内置(Oz)表。
+// 名字用词边界整词匹配,跨章一致;新作者只需给这个文件,不用改脚本。
+const glossPath = `scripts/library/books/${key}.glossary.json`;
+if (existsSync(glossPath)) {
+  const esc = (w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  GLOSSARY = JSON.parse(readFileSync(glossPath, "utf8")).map(([w, cn]) => [new RegExp(`\\b${esc(w)}\\b`, "g"), cn]);
+  console.log(`用书内术语表 ${glossPath}(${GLOSSARY.length} 条)。`);
+}
 
 const todo = [];
 book.chapters.forEach((ch, ci) => ch.paragraphs.forEach((p, pi) => p.forEach((s, si) => {

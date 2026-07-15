@@ -24,7 +24,13 @@ const TR_URL = `${SUP}/functions/v1/translate`;
 const TARGET = "Simplified Chinese for young children (ages 6-9): short, plain, spoken sentences that are easy to read aloud; avoid formal or literary long sentences";
 const BATCH = 30;
 const THROTTLE_MS = 1500;
+const MAX_RETRY = 4;            // 批次失败(HTTP错/降级/空)重试次数,退避 2s→4s→8s→16s
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const hasCJK = (s) => /[一-鿿]/.test(s || "");   // 有中日韩汉字
+// 英文残留信号:cn 里有 3+ 连续英文词。专抓"降级回传英文、但术语占位还原出中文人名"这类
+// 伪译文(如 "So 哈克 made pipes and filled them.")——它有汉字,骗过 hasCJK,却仍是英文。
+const ENG_RUN = /[A-Za-z]{2,}(?:[ ,.'’]+[A-Za-z]{2,}){2,}/;
+const looksTranslated = (cn) => hasCJK(cn) && !ENG_RUN.test(cn);   // 真译文 = 有汉字且无长英文串
 
 // 强制术语表(最长最具体优先)。s?/Gates? 等吸收复数;占位后剩余 's 由翻译处理成"的"。
 let GLOSSARY = [
@@ -92,16 +98,27 @@ function unmask(cn, map) {
   return { cn: out, missing };
 }
 
+// 返回 {ok, translations, reason}。ok=false 表示该批不可信(HTTP错/边缘函数降级)——
+// 关键:边缘函数降级时会把英文原文当 translations 回传(fallback:true),旧版直接写进 cn、
+// 造成"翻译完成"是假象(Tom Sawyer ch15-18 就是这样静默塞了 252 句英文)。现在降级一律判失败,
+// 交给上层重试;绝不拿英文原文冒充译文。
 async function translateBatch(items) {
-  const res = await fetch(TR_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", apikey: ANON, Authorization: `Bearer ${ANON}` },
-    body: JSON.stringify({ targetLanguage: TARGET, sourceLanguage: "English", items }),
-  });
-  if (!res.ok) { console.log(`  ❌ HTTP ${res.status}: ${(await res.text()).slice(0, 120)}`); return {}; }
+  let res;
+  try {
+    res = await fetch(TR_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", apikey: ANON, Authorization: `Bearer ${ANON}` },
+      body: JSON.stringify({ targetLanguage: TARGET, sourceLanguage: "English", items }),
+    });
+  } catch (e) {
+    return { ok: false, translations: {}, reason: `fetch_error:${e.message}` };
+  }
+  if (!res.ok) {
+    return { ok: false, translations: {}, reason: `http_${res.status}:${(await res.text()).slice(0, 100)}` };
+  }
   const data = await res.json();
-  if (data.fallback) console.log(`  ⚠️ 降级(${data.reason}),该批保留原文待重跑`);
-  return data.translations || {};
+  if (data.fallback) return { ok: false, translations: {}, reason: `fallback:${data.reason}` };
+  return { ok: true, translations: data.translations || {}, reason: null };
 }
 
 const key = process.argv[2];
@@ -118,21 +135,40 @@ if (existsSync(glossPath)) {
   console.log(`用书内术语表 ${glossPath}(${GLOSSARY.length} 条)。`);
 }
 
+// 待译判定:英文原文含真实单词、但 cn 还不是真译文(空 / 纯英文 / 含中文名却仍是英文串)。
+// 纯标点行(en 无 2+ 字母词)不误触。
+const needsTx = (s) => /[A-Za-z]{2,}/.test(s.en) && !looksTranslated(s.cn);
 const todo = [];
 book.chapters.forEach((ch, ci) => ch.paragraphs.forEach((p, pi) => p.forEach((s, si) => {
-  if (!s.cn) todo.push({ id: `${ci}.${pi}.${si}`, ref: s, ...mask(s.en) });
+  if (needsTx(s)) todo.push({ id: `${ci}.${pi}.${si}`, ref: s, ...mask(s.en) });
 })));
 if (!todo.length) { console.log("没有待翻译句子。"); process.exit(0); }
-console.log(`待翻译 ${todo.length} 句,分 ${Math.ceil(todo.length / BATCH)} 批;术语表 ${GLOSSARY.length} 条。`);
+const fallbackCount = todo.filter((t) => t.ref.cn).length;
+console.log(`待翻译 ${todo.length} 句(其中 ${fallbackCount} 句为旧版英文 fallback 需重译),分 ${Math.ceil(todo.length / BATCH)} 批;术语表 ${GLOSSARY.length} 条。`);
 
-let done = 0, totalMissing = 0;
+let done = 0, totalMissing = 0, failedItems = 0, failedBatches = 0;
 for (let i = 0; i < todo.length; i += BATCH) {
   const chunk = todo.slice(i, i + BATCH);
-  const tr = await translateBatch(chunk.map((t) => ({ key: t.id, text: t.masked })));
+  // 批次带重试:降级/HTTP错/空 都算失败,退避重试;耗尽仍失败则该批留待下次(不写英文)。
+  let tr = {}, ok = false, reason = "";
+  for (let attempt = 0; attempt <= MAX_RETRY; attempt++) {
+    if (attempt) { await sleep(THROTTLE_MS * Math.pow(2, attempt)); console.log(`  ↻ 重试 ${attempt}/${MAX_RETRY}(${reason})`); }
+    const r = await translateBatch(chunk.map((t) => ({ key: t.id, text: t.masked })));
+    if (r.ok) { tr = r.translations; ok = true; break; }
+    reason = r.reason;
+  }
+  if (!ok) {
+    failedBatches++; failedItems += chunk.length;
+    console.log(`  ❌ 批次 [${i}..${Math.min(i + BATCH, todo.length)}) 重试${MAX_RETRY}次仍失败(${reason})——保持未译(cn 不写英文),下次重跑`);
+    if (i + BATCH < todo.length) await sleep(THROTTLE_MS);
+    continue;
+  }
   for (const t of chunk) {
     const raw = tr[t.id];
-    if (!raw) continue;
+    if (!raw) { failedItems++; continue; }
     const { cn, missing } = unmask(raw, t.map);
+    // 防御:模型若回传的不是真译文(无汉字,或含中文名却仍是英文串),判失败——绝不冒充译文。
+    if (!looksTranslated(cn)) { failedItems++; continue; }
     t.ref.cn = cn;
     totalMissing += missing;
     done++;
@@ -141,4 +177,15 @@ for (let i = 0; i < todo.length; i += BATCH) {
   console.log(`  ✓ ${Math.min(i + BATCH, todo.length)}/${todo.length}${totalMissing ? ` (占位丢失累计 ${totalMissing})` : ""}`);
   if (i + BATCH < todo.length) await sleep(THROTTLE_MS);
 }
+
+// 收尾全书自检:凡英文有实词、cn 却不是真译文 = 仍未译,响亮报出。这是"翻译完成状态可信"的硬闸。
+let stillEnglish = 0;
+book.chapters.forEach((ch) => ch.paragraphs.forEach((p) => p.forEach((s) => {
+  if (/[A-Za-z]{2,}/.test(s.en) && !looksTranslated(s.cn)) stillEnglish++;
+})));
 console.log(`完成:${done}/${todo.length} 句已配中文${totalMissing ? `;⚠️ ${totalMissing} 个术语占位被模型丢失(需查)` : ";术语占位零丢失"} → ${path}`);
+if (failedItems || stillEnglish) {
+  console.log(`\n⚠️⚠️ 未全部完成:失败批 ${failedBatches}、失败句 ${failedItems};全书仍有 ${stillEnglish} 句 cn 是英文(未译)。请重跑本脚本续补。`);
+  process.exit(2);   // 非零退出:让"翻译完成"状态不可信时无法被误当成功
+}
+console.log(`✅ 全书自检通过:0 句 cn 残留英文。翻译状态可信。`);

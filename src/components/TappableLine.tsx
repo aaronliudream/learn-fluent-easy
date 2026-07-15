@@ -601,6 +601,19 @@ function CultureNoteLine({ note }: { note: LibraryCultureNote }) {
 }
 
 /**
+ * 图书馆阅读器专用:SF Pro 的弯撇号 U+2019(’)字形右侧留白偏大,18px 正文下画出
+ * 「what’ s」这种视觉假空格(不是真字符——拖选复制出来仍是 what’s)。把每个弯撇号包一层
+ * .tight-apos(负 letter-spacing 收掉那点留白),纯显示层修复:span 里装的是真的 U+2019,
+ * 复制/朗读/分词都不受影响。只在图书馆模式调用,美语课不变。
+ */
+function renderTight(text: string): React.ReactNode {
+  if (!text.includes("’")) return text;
+  return text
+    .split(/(’)/)
+    .map((p, i) => (p === "’" ? <span key={i} className="tight-apos">{p}</span> : p));
+}
+
+/**
  * Render a sentence where each word and known phrase is tappable. On tap it
  * shows a small explanation card (meaning, usage, English examples with
  * Chinese translation, and a TTS button).
@@ -634,7 +647,9 @@ export function TappableLine({
   return (
     <span>
       {tokens.map((tok, i) => {
-        if (tok.kind === "text") return <span key={i}>{tok.text}</span>;
+        // 图书馆模式:把弯撇号包进 .tight-apos 收掉 SF Pro 的字形假空格;美语课原样。
+        const rendered = libraryMode ? renderTight(tok.text) : tok.text;
+        if (tok.kind === "text") return <span key={i}>{rendered}</span>;
         const isChunk = tok.phrase.includes(" ");
         const isFav = !!favoritedTerms?.has(tok.phrase);
         const note = cultureNotes?.get(tok.phrase);
@@ -649,7 +664,7 @@ export function TappableLine({
             note={note}
             onFavoriteChange={onFavoriteChange}
           >
-            <span>{tok.text}</span>
+            <span>{rendered}</span>
           </ExplainPopover>
         );
       })}

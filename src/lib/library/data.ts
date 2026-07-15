@@ -97,9 +97,8 @@ export function chapterTitle(
 }
 
 const SENTENCE_COLS = "id,book_id,chapter_idx,para_idx,seq,text_en,text_cn,audio_url";
-// Supabase/PostgREST 单次返回硬顶 1000 行(本项目实测)。长书必须按章加载 / 翻页,
+// Supabase/PostgREST 单次返回硬顶 1000 行(本项目实测)。长书必须按章加载,
 // 否则一次拉全书会被静默截断到前 1000 句(后面的章直接丢失)。
-const PAGE = 1000;
 
 /** 某一章的句子(按 seq 升序)。按章加载:单章恒 <1000 句,一次请求拿得全。 */
 export async function getChapterSentences(
@@ -115,44 +114,35 @@ export async function getChapterSentences(
   return (data ?? []) as LibrarySentence[];
 }
 
-/** 目录项:章号 + 该章首句全书 seq(断点/跳章定位)+ 首句英文预览。 */
-export type LibraryChapter = { idx: number; firstSeq: number; first: string };
+/** 目录项(轻量):只需章号;标题由 chapterTitle(book, idx) 从 chapters jsonb 取。 */
+export type LibraryChapter = { idx: number };
 
 /**
- * 全书章节目录。两步走且都很轻,绕开 1000 行硬顶:
- *  1) 翻页只取 (chapter_idx, seq) 两个 int 列 → 归约出每章首句 seq(有序去重);
- *  2) 再按这些首句 seq 一次取英文预览(≈章数行)。
+ * 章目录 —— 直接取自 library_books.chapters jsonb(getBookByKey 已一次带回),**0 额外查询**,
+ * 打开成本与书长无关。按 idx 升序。
+ *
+ * 取代旧 getChapterList:后者为求每章首句 seq 而**翻页扫全书**(O(书长):Oz 3 趟/Tom 6 趟,
+ * 万句书更多),是大部头"打开慢"的主因。目录只需章号+标题,jsonb 里都有,不必碰句表。
  */
-export async function getChapterList(bookId: string): Promise<LibraryChapter[]> {
-  const firstSeqByChapter = new Map<number, number>();
-  for (let from = 0; ; from += PAGE) {
-    const { data } = await db
-      .from("library_sentences")
-      .select("chapter_idx,seq")
-      .eq("book_id", bookId)
-      .order("seq", { ascending: true })
-      .range(from, from + PAGE - 1);
-    const rows = (data ?? []) as { chapter_idx: number; seq: number }[];
-    for (const r of rows) {
-      if (!firstSeqByChapter.has(r.chapter_idx)) firstSeqByChapter.set(r.chapter_idx, r.seq);
-    }
-    if (rows.length < PAGE) break;
-  }
-  const firstSeqs = [...firstSeqByChapter.values()];
-  const preview = new Map<number, string>();
-  if (firstSeqs.length) {
-    const { data } = await db
-      .from("library_sentences")
-      .select("seq,text_en")
-      .eq("book_id", bookId)
-      .in("seq", firstSeqs);
-    for (const r of (data ?? []) as { seq: number; text_en: string }[]) {
-      preview.set(r.seq, r.text_en);
-    }
-  }
-  return [...firstSeqByChapter.entries()]
-    .map(([idx, firstSeq]) => ({ idx, firstSeq, first: preview.get(firstSeq) ?? "" }))
-    .sort((a, b) => a.firstSeq - b.firstSeq);
+export function chapterOutline(book: Pick<LibraryBook, "chapters"> | null): LibraryChapter[] {
+  return [...(book?.chapters ?? [])]
+    .map((c) => ({ idx: c.idx }))
+    .sort((a, b) => a.idx - b.idx);
+}
+
+/**
+ * 断点续读定位:某全书 seq 落在哪一章。单条索引查(取 seq≤给定值的最后一句所在章),
+ * **O(1) 与书长无关**,取代旧"先拉全书每章 firstSeq 再线性找"。仅续读(last_seq>0)时才调。
+ */
+export async function getChapterOfSeq(bookId: string, seq: number): Promise<number> {
+  const { data } = await db
+    .from("library_sentences")
+    .select("chapter_idx")
+    .eq("book_id", bookId)
+    .lte("seq", seq)
+    .order("seq", { ascending: false })
+    .limit(1);
+  return (data?.[0] as { chapter_idx: number } | undefined)?.chapter_idx ?? 1;
 }
 
 /** 每章插图(v1 章首,position=0)。RLS 已只返回 is_published=true。 */

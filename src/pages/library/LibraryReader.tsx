@@ -16,7 +16,8 @@ import ChapterNotesCollection from "@/components/library/ChapterNotesCollection"
 import { listFavoritedTerms, type LibraryFavoriteKind } from "@/lib/library/favorites";
 import {
   getBookByKey,
-  getChapterList,
+  chapterOutline,
+  getChapterOfSeq,
   getChapterSentences,
   getChapterIllustrations,
   getChapterChunkTerms,
@@ -57,16 +58,6 @@ function fmtDuration(sec: number): string {
   if (h > 0) return `${h}小时${m % 60}分`;
   if (m > 0) return `${m}分`;
   return `${sec}秒`;
-}
-
-/** 给定全书 seq,在有序章表里定位它属于哪一章(最大 firstSeq ≤ seq 的章)。 */
-function chapterOfSeq(chapters: LibraryChapter[], seq: number): number {
-  let pick = chapters[0]?.idx ?? 1;
-  for (const c of chapters) {
-    if (c.firstSeq <= seq) pick = c.idx;
-    else break;
-  }
-  return pick;
 }
 
 /** 单张插图渲染(懒加载 + 写死宽高防 CLS)。章首与文中穿插共用。
@@ -148,26 +139,24 @@ export default function LibraryReader() {
         setLoading(false);
         return;
       }
-      const chs = await getChapterList(b.id);
-      if (!alive) return;
+      // 目录取自 chapters jsonb(0 查询,与书长无关);其余独立查询并行,不再逐个串行。
+      const chs = chapterOutline(b);
       setChapters(chs);
-
-      const uid = await currentUserId();
+      const [uid, terms, notes] = await Promise.all([
+        currentUserId(),
+        listFavoritedTerms(),
+        getBookCultureNotes(b.id),
+      ]);
       if (!alive) return;
       uidRef.current = uid;
+      setFavTerms(terms);
+      setCultureNotes(notes);
+
       const st = uid ? await hydrateFromCloud(uid, b.id) : loadLocalState(b.id);
       if (!alive) return;
       stateRef.current = st;
       setFurthestSeq(st.furthest_seq);
       setSeconds(st.seconds);
-
-      const terms = await listFavoritedTerms();
-      if (!alive) return;
-      setFavTerms(terms);
-
-      const notes = await getBookCultureNotes(b.id);
-      if (!alive) return;
-      setCultureNotes(notes);
 
       // 初始章:URL ?ch=N(目录跳章)优先 → 否则断点 last_seq 所在章 → 否则第一章。
       const urlCh = Number(searchParams.get("ch"));
@@ -177,7 +166,8 @@ export default function LibraryReader() {
         initCh = urlCh;
         pendingResumeSeqRef.current = 0; // 跳章 → 滚到章首
       } else if (st.last_seq > 0) {
-        initCh = chapterOfSeq(chs, st.last_seq);
+        initCh = await getChapterOfSeq(b.id, st.last_seq); // 单查定位,与书长无关
+        if (!alive) return;
         pendingResumeSeqRef.current = st.last_seq; // 断点续读 → 定位到断点句
       } else {
         initCh = chs[0]?.idx ?? 1;

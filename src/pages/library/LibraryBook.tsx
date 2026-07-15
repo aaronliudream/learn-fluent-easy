@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { speak, speakSequence, stopSpeaking, unlockAudioSync } from "@/lib/speak";
 import {
   getBookByKey,
-  getChapterList,
+  chapterOutline,
   chapterTitle,
   currentUserId,
   coverImageUrl,
@@ -144,8 +144,7 @@ export default function LibraryBook() {
         setLoading(false);
         return;
       }
-      const chs = await getChapterList(b.id);
-      if (!alive) return;
+      const chs = chapterOutline(b); // 目录取自 chapters jsonb,0 查询(不再扫全书)
       setChapters(chs);
       setLoading(false);
       const uid = await currentUserId();
@@ -491,7 +490,7 @@ export default function LibraryBook() {
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block truncate text-sm font-medium text-slate-700">
-                      {t?.title_en || c.first}
+                      {t?.title_en || `Chapter ${c.idx}`}
                     </span>
                     {t?.title_zh && (
                       <span className="block truncate text-xs text-slate-400">{t.title_zh}</span>

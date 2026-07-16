@@ -86,7 +86,7 @@ async function getChapterChunks(ci) {
   for (const c of raw) {
     const t = String(c.term || "").toLowerCase().trim();
     if (!t) continue;
-    if (!byTerm.has(t)) byTerm.set(t, { term: t, zh: c.zh, note: c.note, seqs: [] });
+    if (!byTerm.has(t)) byTerm.set(t, { term: t, zh: c.zh, note: c.note, ex_en: c.example_en || "", ex_cn: c.example_cn || "", seqs: [] });
     if (!byTerm.get(t).seqs.includes(c.src_seq)) byTerm.get(t).seqs.push(c.src_seq);
   }
   const chunks = [...byTerm.values()];
@@ -113,10 +113,11 @@ function chapterReview(ci, kept, dropped) {
 - 我标记可疑:${flagged.length}(重点审)
 
 ## 二、完整清单
-| # | 语块 | 中文 | 用法(note) | 出处英文原句 | 全书次数 |
-|---|---|---|---|---|---|
+> 例句列=AI 另造的简单句(不是原文);审:是否简单易懂、真演示该语块、没抄原文。出处句仅供对照。
+| # | 语块 | 中文 | 例句(另造) | 例句中译 | 用法(note) | 出处英文原句 | 全书次数 |
+|---|---|---|---|---|---|---|---|
 `;
-  kept.forEach((c, i) => { const s = c.seqs[0]; md += `| ${i + 1} | **${esc(c.term)}** | ${esc(c.zh)} | ${esc(c.note)} | ${esc((enBySeq.get(s) || "").slice(0, 70))} | ${bookOccur(c.term)} |\n`; });
+  kept.forEach((c, i) => { const s = c.seqs[0]; md += `| ${i + 1} | **${esc(c.term)}** | ${esc(c.zh)} | ${esc(c.ex_en) || "⚠缺"} | ${esc(c.ex_cn)} | ${esc(c.note)} | ${esc((enBySeq.get(s) || "").slice(0, 70))} | ${bookOccur(c.term)} |\n`; });
   md += `\n## 三、我标记的可疑项(留/删)\n`;
   if (!flagged.length) md += "(无)\n";
   else { md += `| 语块 | 中文 | 可疑原因 |\n|---|---|---|\n`; flagged.forEach((c) => { md += `| ${esc(c.term)} | ${esc(c.zh)} | ${c.flags.join(" / ")} |\n`; }); }
@@ -132,7 +133,7 @@ function chapterReview(ci, kept, dropped) {
   // upsert 本就幂等,查 DB 反而会把已灌的卡从 SQL 里剥掉,产出残缺文件。
   const seen = new Set();
 
-  let aiCalls = 0, keptTotal = 0, flagTotal = 0;
+  let aiCalls = 0, keptTotal = 0, flagTotal = 0, noExample = 0;
   const readv1 = [];  // 去重后的卡
   const index = [];   // 所有出处
   for (const ci of chapters) {
@@ -145,8 +146,10 @@ function chapterReview(ci, kept, dropped) {
       const norm = normalize(c.term);
       if (!seen.has(norm)) {
         seen.add(norm);
-        const src = c.seqs[0];
-        readv1.push({ term: c.term, norm, expl: { word: c.term, pos: "词块", ipa: "", gloss_cn: c.zh, example: { en: enBySeq.get(src) || "", cn: cnBySeq.get(src) || "" }, note: c.note, kind: "chunk", src_seqs: c.seqs } });
+        // 例句:用 AI 另造的简单句(ex_en/ex_cn);绝不回退抄原文出处句。缺失则留空(LessonBody 无例句节即不渲染)。
+        const ex = { en: c.ex_en || "", cn: c.ex_cn || "" };
+        if (!ex.en) noExample++;
+        readv1.push({ term: c.term, norm, expl: { word: c.term, pos: "词块", ipa: "", gloss_cn: c.zh, example: ex, note: c.note, kind: "chunk", src_seqs: c.seqs } });
       }
       for (const sq of c.seqs) index.push({ ci, term: c.term, seq: sq });
     }
@@ -174,5 +177,5 @@ COMMIT;
   writeFileSync(`SQLAA/library-chunks-${key}-${suffix}.sql`, sql);
   console.log(`\n✓ SQLAA/library-chunks-${key}-${suffix}.sql — read-v1 ${readv1.length} 卡 / index ${index.length} 行`);
   console.log(`✓ ${chapters.length} 章 review → REVIEWAA/图书馆词表/`);
-  console.log(`保留语块合计 ${keptTotal};可疑合计 ${flagTotal};本次 AI 调用 ${aiCalls}(其余用缓存)`);
+  console.log(`保留语块合计 ${keptTotal};可疑合计 ${flagTotal};缺例句 ${noExample}(留空未抄原文);本次 AI 调用 ${aiCalls}(其余用缓存)`);
 })();

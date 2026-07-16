@@ -158,6 +158,38 @@ const chunks = [
     cardOnly: true, key: "tell on", exSeq: 183 },
 ];
 
+// 例句:另造的简单新句(严禁抄原文出处句),短/常见/易懂,演示该 chunk 典型用法。按 head 索引。
+const EX = {
+  "play hookey": ["The boys decided to play hookey and go fishing.", "男孩们决定逃学去钓鱼。"],
+  "play tricks (on sb)": ["My little brother loves to play tricks on me.", "我弟弟老爱捉弄我。"],
+  "have the heart to": ["The puppy looked so sad that I didn't have the heart to say no.", "小狗一脸可怜,我实在不忍心拒绝。"],
+  "miss a trick": ["Grandma sees everything—she never misses a trick.", "奶奶什么都看在眼里,精得很,什么都瞒不过。"],
+  "make sure": ["Make sure you lock the door before you leave.", "走之前务必锁好门。"],
+  "the knack of (sth)": ["After a few tries she got the knack of it.", "试了几次,她就摸到窍门了。"],
+  "make faces (at)": ["Stop making faces at your sister!", "别冲你妹妹做鬼脸!"],
+  "I dare you to": ["I dare you to jump into the cold water.", "有本事你就跳进冷水里。"],
+  "with one hand tied behind (one's back)": ["I could beat him at chess with one hand tied behind my back.", "下棋我闭着眼都能赢他。"],
+  "look out for": ["Look out for cars when you cross the street.", "过马路时当心车。"],
+  "put off": ["She tried to put me off with another excuse.", "她又找了个借口想把我搪塞过去。"],
+  "let (sth) alone": ["Let the dog alone while it's eating.", "狗吃东西时别去碰它。"],
+  "let (sb) off": ["The teacher let him off with just a warning.", "老师只是警告了一下就放过了他。"],
+  "get back": ["We got back home just before it started to rain.", "我们刚到家就下雨了。"],
+  "be through with": ["Are you through with your homework yet?", "你作业做完了没?"],
+  "pick up": ["Please pick up the toys off the floor.", "请把地上的玩具捡起来。"],
+  "stick to": ["Whatever happens, just stick to the plan.", "不管发生什么,照计划来就行。"],
+  "fool with": ["You'd better not fool with me today.", "今天你最好别惹我。"],
+  "look out": ["Look out! The floor is wet.", "小心!地板是湿的。"],
+  "look back": ["She looked back to see who was calling her.", "她回头看是谁在叫她。"],
+  "find out": ["I called the school to find out when the test is.", "我打电话给学校,问清楚考试是哪天。"],
+  "as far as": ["As far as I'm concerned, the plan is fine.", "就我而言,这个计划没问题。"],
+  "face to face": ["We finally got to talk face to face.", "我们终于能面对面聊了。"],
+  "shoulder to shoulder": ["The two friends stood shoulder to shoulder.", "两个朋友肩并肩站着。"],
+  "just in time": ["We got to the station just in time to catch the bus.", "我们正好赶到车站,搭上了那班车。"],
+  "take a walk": ["When I kept bothering him, he told me to take a walk.", "我老烦他,他就叫我一边儿去。"],
+  "take a dare": ["He took the dare and climbed to the top of the wall.", "他应下激将,爬到了墙头。"],
+  "tell on (sb)": ["If you break it, I'll tell on you.", "你要是弄坏了,我就去告你状。"],
+};
+
 // ---- 校验:每个 surface 必须在其 seq 句里(小写)逐字出现 ----
 const norm = (s) => s.toLowerCase().replace(/[^a-z0-9' ]+/g, " ").replace(/\s+/g, " ").trim();
 const normSent = (s) => (s || "").toLowerCase().replace(/[’]/g, "'").replace(/[^a-z0-9' ]+/g, " ").replace(/\s+/g, " ");
@@ -171,6 +203,19 @@ for (const c of chunks) { if (c.cardOnly) continue; for (const [sq, surf] of c.o
 } }
 if (errs) { console.error(`\n${errs} 处 surface 不在正文,先改数据再生成。`); process.exit(1); }
 
+// ---- 校验:每个 chunk 必须有另造例句,且例句不得等于任一出处原文句 ----
+let exErrs = 0;
+for (const c of chunks) {
+  const head = c.head || c.occ?.[0]?.[1];
+  const ex = EX[head];
+  if (!ex || !ex[0] || !ex[1]) { console.error(`✗ ${head}: 缺例句`); exErrs++; continue; }
+  const srcSeqs = c.cardOnly ? [c.exSeq] : c.occ.map(([sq]) => sq);
+  for (const sq of srcSeqs) {
+    if (normSent(ex[0]) === normSent(enBySeq.get(sq))) { console.error(`✗ ${head}: 例句=原文出处句 seq ${sq}(必须另造)`); exErrs++; }
+  }
+}
+if (exErrs) { console.error(`\n${exErrs} 处例句问题,修好再生成。`); process.exit(1); }
+
 // ---- 生成 read-v1 卡(按 surface 归一化去重)+ index 行 ----
 const sqlEsc = (s) => String(s).replace(/'/g, "''");
 const cardRows = [], idxRows = [];
@@ -182,7 +227,7 @@ for (const c of chunks) {
     if (!seenNorm.has(n)) {
       seenNorm.add(n);
       const expl = { word: head, pos: "词块", ipa: c.ipa || "", gloss_cn: c.gloss,
-        example: { en: enBySeq.get(c.exSeq) || "", cn: cnBySeq.get(c.exSeq) || "" },
+        example: { en: EX[head][0], cn: EX[head][1] },  // 另造简单例句,不抄原文
         note: c.note, kind: "chunk", src_seqs: [c.exSeq], literal: c.literal };
       cardRows.push(`  ('${sqlEsc(head)}', '${sqlEsc(n)}', 'en', 'read-v1', '${sqlEsc(JSON.stringify(expl))}'::jsonb)`);
     }
@@ -202,7 +247,7 @@ for (const c of chunks) {
     const expl = {
       word: head, pos: "词块", ipa: c.ipa || "",
       gloss_cn: c.gloss,
-      example: { en: enBySeq.get(src) || "", cn: cnBySeq.get(src) || "" },
+      example: { en: EX[head][0], cn: EX[head][1] },  // 另造简单例句,不抄原文
       note: c.note, kind: "chunk", src_seqs: seqs, literal: c.literal,
     };
     cardRows.push(`  ('${sqlEsc(head)}', '${sqlEsc(n)}', 'en', 'read-v1', '${sqlEsc(JSON.stringify(expl))}'::jsonb)`);

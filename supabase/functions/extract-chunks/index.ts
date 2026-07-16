@@ -46,12 +46,16 @@ Deno.serve(async (req) => {
       "· 一次性描述性组合:gray prairie / little dog / small house —— 没迁移价值\n" +
       "· 从句/长句片段 —— 语块是短语级,不是句子\n" +
       "· 单个常用词、太基础的(the/very/good morning)\n\n" +
-      "【宁缺毋滥】本章只挑 10–30 个最高价值的;凑数就是噪音。若本批不够好,少给几个没关系。";
+      "【宁缺毋滥】本章只挑 10–30 个最高价值的;凑数就是噪音。若本批不够好,少给几个没关系。\n\n" +
+      "【例句必须另造,严禁抄原文】example_en / example_cn = 你自己新造的一个简单例句演示该语块的典型用法。" +
+      "铁律:绝不能复制/改写正文里那句原文(读者正在读原文,再抄一遍等于没给例句;且原文往往是长难句)。" +
+      "例句要短、常见、易懂,像小学教科书造句那样,只突出这个语块怎么用。";
 
     const userPrompt =
       `下面是本章句子(每行前 [seq] 是句子编号):\n\n${list}\n\n` +
       "通过函数返回语块。要求:term 必须小写、逐字出现在对应 [seq] 那句里(允许大小写差异);" +
-      "src_seq = 该语块所在句的编号;zh = 这句语境下的简短中文释义;note = 一句用法说明。";
+      "src_seq = 该语块所在句的编号;zh = 这句语境下的简短中文释义;note = 一句用法说明;" +
+      "example_en = 你新造的简单英文例句(不准抄 [src_seq] 那句原文),example_cn = 其中文翻译。";
 
     const aiResp = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
       method: "POST",
@@ -80,8 +84,10 @@ Deno.serve(async (req) => {
                         src_seq: { type: "number" },
                         zh: { type: "string" },
                         note: { type: "string" },
+                        example_en: { type: "string" },
+                        example_cn: { type: "string" },
                       },
-                      required: ["term", "src_seq", "zh"],
+                      required: ["term", "src_seq", "zh", "example_en", "example_cn"],
                       additionalProperties: false,
                     },
                   },
@@ -124,11 +130,17 @@ Deno.serve(async (req) => {
         if (!line || !line.toLowerCase().includes(term)) return null; // 必须真实出现
         if (seen.has(term + "|" + seq)) return null;
         seen.add(term + "|" + seq);
+        const exEn = String((c as { example_en?: string }).example_en || "").trim();
+        const exCn = String((c as { example_cn?: string }).example_cn || "").trim();
+        // 防线:AI 若无视规则、例句仍=原文出处句,则清空(prewarm 端可据空判定/回退,绝不落抄来的例句)。
+        const copiedSrc = exEn && line && exEn.toLowerCase() === line.trim().toLowerCase();
         return {
           term,
           src_seq: seq,
           zh: String((c as { zh?: string }).zh || "").trim(),
           note: String((c as { note?: string }).note || "").trim(),
+          example_en: copiedSrc ? "" : exEn,
+          example_cn: copiedSrc ? "" : exCn,
         };
       })
       .filter(Boolean);

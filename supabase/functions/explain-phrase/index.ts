@@ -75,6 +75,8 @@ Deno.serve(async (req) => {
           phrase: lg.word || phrase,
           pos: [lg.pos, lg.ipa].filter(Boolean).join("  "),
           one_line_cn: lg.gloss_cn,
+          // 语块卡「🔍 逐词」节(方案甲):存了 literal[] 就透传,LessonBody 有守卫,单词卡无此字段自然不渲染。
+          literal: Array.isArray(lg.literal) && lg.literal.length ? lg.literal : undefined,
           example: lg.example && lg.example.en ? lg.example : undefined,
         };
         return { explanation: card, cached: true, light: true };

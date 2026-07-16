@@ -16,7 +16,8 @@ const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY")!;
 const admin = createClient(SUPABASE_URL, SERVICE_ROLE);
 
 function normalize(s: string): string {
-  return s.toLowerCase().replace(/[^a-z0-9' ]+/g, " ").replace(/\s+/g, " ").trim();
+  // 先把弯撇号 U+2019 折成 ASCII '(否则 ain't/warn't 会被下面的 strip 断成 "ain t",永远查不中缓存)。
+  return s.toLowerCase().replace(/’/g, "'").replace(/[^a-z0-9' ]+/g, " ").replace(/\s+/g, " ").trim();
 }
 
 // Bump this when you change the AI prompt/schema so we re-generate explanations

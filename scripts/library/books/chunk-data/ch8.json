@@ -1,0 +1,296 @@
+{
+  "chapter": 8,
+  "chunks": [
+    {
+      "head": "at best",
+      "gloss": "至多；充其量",
+      "ipa": "/æt ˈbest/",
+      "note": "表示往最好里说也不过如此",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "best", "meaning_cn": "最好", "note_cn": "此处 at best 合起来意为“充其量”"}
+      ],
+      "ex_en": "The old car is worth 500 dollars at best.",
+      "ex_cn": "这辆旧车最多值五百美元。",
+      "occ": [[1248, "at best"]]
+    },
+    {
+      "head": "be done with it",
+      "gloss": "了结此事；一了百了",
+      "ipa": "/biː ˈdʌn wɪð ɪt/",
+      "note": "把某事做完、彻底摆脱它",
+      "literal": [
+        {"word": "be", "meaning_cn": "处于（某状态）"},
+        {"word": "done", "meaning_cn": "完成的"},
+        {"word": "with", "meaning_cn": "与"},
+        {"word": "it", "meaning_cn": "它（那件事）"}
+      ],
+      "ex_en": "I want to finish the report today and be done with it.",
+      "ex_cn": "我想今天把报告写完，一了百了。",
+      "occ": [[1249, "be done with it"]]
+    },
+    {
+      "head": "treat like a dog",
+      "gloss": "像狗一样对待；虐待",
+      "ipa": "/triːt laɪk ə ˈdɒɡ/",
+      "note": "指粗暴、轻蔑地对待某人",
+      "literal": [
+        {"word": "treat", "meaning_cn": "对待"},
+        {"word": "like", "meaning_cn": "像"},
+        {"word": "a", "meaning_cn": "一（只）"},
+        {"word": "dog", "meaning_cn": "狗"}
+      ],
+      "ex_en": "Nobody should treat a worker like a dog.",
+      "ex_cn": "谁也不该把工人当狗一样使唤。",
+      "occ": [[1253, "treated like a dog"]]
+    },
+    {
+      "head": "turn one's back",
+      "gloss": "转身离去；背弃",
+      "ipa": "/tɜːn wʌnz ˈbæk/",
+      "note": "既可指字面转身，也比喻不理睬、抛弃",
+      "literal": [
+        {"word": "turn", "meaning_cn": "转"},
+        {"word": "one's", "meaning_cn": "某人的"},
+        {"word": "back", "meaning_cn": "背"}
+      ],
+      "ex_en": "Don't turn your back on a friend in trouble.",
+      "ex_cn": "朋友有难时别背弃他。",
+      "occ": [[1258, "turned his back"]]
+    },
+    {
+      "head": "run away from home",
+      "gloss": "离家出走",
+      "ipa": "/rʌn əˈweɪ frəm ˈhəʊm/",
+      "note": "",
+      "literal": [
+        {"word": "run", "meaning_cn": "跑"},
+        {"word": "away", "meaning_cn": "离开"},
+        {"word": "from", "meaning_cn": "从"},
+        {"word": "home", "meaning_cn": "家"}
+      ],
+      "ex_en": "The angry boy threatened to run away from home.",
+      "ex_cn": "那个生气的男孩扬言要离家出走。",
+      "occ": [[1274, "run away from home"]]
+    },
+    {
+      "head": "get ready",
+      "gloss": "做准备；准备好",
+      "ipa": "/ɡet ˈredi/",
+      "note": "",
+      "literal": [
+        {"word": "get", "meaning_cn": "变得"},
+        {"word": "ready", "meaning_cn": "准备好的"}
+      ],
+      "ex_en": "Get ready, the bus leaves in five minutes.",
+      "ex_cn": "准备好，公交五分钟后就走。",
+      "occ": [[1276, "get ready"]]
+    },
+    {
+      "head": "near at hand",
+      "gloss": "在近旁；就在手边",
+      "ipa": "/nɪər ət ˈhænd/",
+      "note": "固定短语，指空间上近或时间上将至",
+      "literal": [
+        {"word": "near", "meaning_cn": "近"},
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "hand", "meaning_cn": "手"}
+      ],
+      "ex_en": "Keep a pen near at hand while you read.",
+      "ex_cn": "看书时把笔放在手边。",
+      "occ": [[1278, "near at hand"]]
+    },
+    {
+      "head": "scratch one's head",
+      "gloss": "挠头（表示困惑）",
+      "ipa": "/skrætʃ wʌnz ˈhed/",
+      "note": "常表示想不明白、犯难",
+      "literal": [
+        {"word": "scratch", "meaning_cn": "挠"},
+        {"word": "one's", "meaning_cn": "某人的"},
+        {"word": "head", "meaning_cn": "头"}
+      ],
+      "ex_en": "The hard puzzle made everyone scratch their heads.",
+      "ex_cn": "这道难题让大家直挠头。",
+      "occ": [[1287, "scratched his head"]]
+    },
+    {
+      "head": "look upon as",
+      "gloss": "把……视为；看作",
+      "ipa": "/lʊk əˈpɒn əz/",
+      "note": "look upon … as … = 把……当作……",
+      "literal": [
+        {"word": "look", "meaning_cn": "看"},
+        {"word": "upon", "meaning_cn": "在……之上"},
+        {"word": "as", "meaning_cn": "作为"}
+      ],
+      "ex_en": "They look upon her as their leader.",
+      "ex_cn": "他们把她视为领袖。",
+      "occ": [[1290, "looked upon as"]]
+    },
+    {
+      "head": "many a time",
+      "gloss": "许多次；屡次",
+      "ipa": "/ˈmeni ə ˈtaɪm/",
+      "note": "固定说法，等于 many times，后接单数",
+      "literal": [
+        {"word": "many", "meaning_cn": "许多"},
+        {"word": "a", "meaning_cn": "一"},
+        {"word": "time", "meaning_cn": "次"}
+      ],
+      "ex_en": "I have told him many a time to be careful.",
+      "ex_cn": "我已经多次叫他小心了。",
+      "occ": [[1294, "many a time"]]
+    },
+    {
+      "head": "occur to sb",
+      "gloss": "（想法）浮现脑中；想到",
+      "ipa": "/əˈkɜː tə/",
+      "note": "念头突然出现在某人脑中",
+      "literal": [
+        {"word": "occur", "meaning_cn": "出现；发生"},
+        {"word": "to", "meaning_cn": "向"},
+        {"word": "sb", "meaning_cn": "某人"}
+      ],
+      "ex_en": "It never occurred to me that she was lying.",
+      "ex_cn": "我从没想到她在撒谎。",
+      "occ": [[1295, "occur to him"], [1306, "occurred to him"]]
+    },
+    {
+      "head": "puzzle over",
+      "gloss": "苦思；琢磨",
+      "ipa": "/ˈpʌzl ˌəʊvə/",
+      "note": "为弄懂某事而反复思索",
+      "literal": [
+        {"word": "puzzle", "meaning_cn": "使困惑"},
+        {"word": "over", "meaning_cn": "关于"}
+      ],
+      "ex_en": "She puzzled over the math problem for an hour.",
+      "ex_cn": "她对着那道数学题苦想了一个小时。",
+      "occ": [[1296, "puzzled over"]]
+    },
+    {
+      "head": "in a fright",
+      "gloss": "惊慌地；受惊",
+      "ipa": "/ɪn ə ˈfraɪt/",
+      "note": "",
+      "literal": [
+        {"word": "in", "meaning_cn": "处于"},
+        {"word": "a", "meaning_cn": "一（阵）"},
+        {"word": "fright", "meaning_cn": "惊恐"}
+      ],
+      "ex_en": "The cat ran off in a fright when the door slammed.",
+      "ex_cn": "门砰地关上，猫受惊跑开了。",
+      "occ": [[1301, "in a fright"]]
+    },
+    {
+      "head": "give up",
+      "gloss": "放弃",
+      "ipa": "/ɡɪv ˈʌp/",
+      "note": "",
+      "literal": [
+        {"word": "give", "meaning_cn": "给"},
+        {"word": "up", "meaning_cn": "向上", "note_cn": "give up 合起来意为“放弃”"}
+      ],
+      "ex_en": "Never give up when things get hard.",
+      "ex_cn": "事情变难时也绝不放弃。",
+      "occ": [[1305, "gave up"]]
+    },
+    {
+      "head": "might as well",
+      "gloss": "不妨；还是……为好",
+      "ipa": "/maɪt əz ˈwel/",
+      "note": "既然如此，不如做某事",
+      "literal": [
+        {"word": "might", "meaning_cn": "可以"},
+        {"word": "as", "meaning_cn": "一样"},
+        {"word": "well", "meaning_cn": "好"}
+      ],
+      "ex_en": "It's raining, so we might as well stay home.",
+      "ex_cn": "下雨了，我们不如待在家里。",
+      "occ": [[1306, "might as well"]]
+    },
+    {
+      "head": "fall short",
+      "gloss": "未达到；不足；落空",
+      "ipa": "/fɔːl ˈʃɔːt/",
+      "note": "常搭配 of，表示达不到某标准",
+      "literal": [
+        {"word": "fall", "meaning_cn": "落"},
+        {"word": "short", "meaning_cn": "不足的；短缺的"}
+      ],
+      "ex_en": "Our sales fell short of the target this month.",
+      "ex_cn": "这个月我们的销售没达到目标。",
+      "occ": [[1311, "fallen short"]]
+    },
+    {
+      "head": "by the book",
+      "gloss": "照章办事；按规矩来",
+      "ipa": "/baɪ ðə ˈbʊk/",
+      "note": "严格按规则或说明去做",
+      "literal": [
+        {"word": "by", "meaning_cn": "依照"},
+        {"word": "the", "meaning_cn": "那"},
+        {"word": "book", "meaning_cn": "书；规则手册"}
+      ],
+      "ex_en": "The new manager does everything by the book.",
+      "ex_cn": "新经理凡事都照章办事。",
+      "occ": [[1326, "by the book"]]
+    },
+    {
+      "head": "get the hang of",
+      "gloss": "掌握……的窍门",
+      "ipa": "/ɡet ðə ˈhæŋ əv/",
+      "note": "hang 在此指“诀窍、门道”",
+      "literal": [
+        {"word": "get", "meaning_cn": "获得"},
+        {"word": "the", "meaning_cn": "那"},
+        {"word": "hang", "meaning_cn": "诀窍", "note_cn": "此处特指做事的门道"},
+        {"word": "of", "meaning_cn": "……的"}
+      ],
+      "ex_en": "After a week, I got the hang of the new software.",
+      "ex_cn": "一周后，我掌握了新软件的用法。",
+      "occ": [[1335, "got the hang"]]
+    },
+    {
+      "head": "get the worst of it",
+      "gloss": "吃亏；占下风",
+      "ipa": "/ɡet ðə ˈwɜːst əv ɪt/",
+      "note": "在较量或争执中处于劣势",
+      "literal": [
+        {"word": "get", "meaning_cn": "得到"},
+        {"word": "the", "meaning_cn": "那"},
+        {"word": "worst", "meaning_cn": "最坏（的部分）"},
+        {"word": "of", "meaning_cn": "……的"},
+        {"word": "it", "meaning_cn": "它"}
+      ],
+      "ex_en": "In every argument with her, he gets the worst of it.",
+      "ex_cn": "每次跟她争论，他都落下风。",
+      "occ": [[1342, "getting the worst of it"]]
+    },
+    {
+      "head": "get around",
+      "gloss": "绕过；回避（规则、难题）",
+      "ipa": "/ɡet əˈraʊnd/",
+      "note": "此处指绕开、避开某种约束",
+      "literal": [
+        {"word": "get", "meaning_cn": "到达"},
+        {"word": "around", "meaning_cn": "绕过", "note_cn": "此处引申为“回避”"}
+      ],
+      "ex_en": "There is no getting around the rules.",
+      "ex_cn": "这些规矩绕不过去。",
+      "occ": [[1347, "getting around"]]
+    }
+  ],
+  "skipped": [
+    "in happy accord with（分隔+过于书面）",
+    "drift insensibly back into（被 insensibly 分隔，一次性）",
+    "go on the warpath（此处半字面写印第安人出征，易误导）",
+    "would rather ... than（语法结构，非词汇语块）",
+    "at a time（此处 long at a time 用法特殊）",
+    "come back（过于基础）",
+    "throw away / tossed away（基础，且多处被分隔）",
+    "went off（一词多义，此处仅“离去”）",
+    "spring up（此处字面“跳起来”，一次性）"
+  ]
+}

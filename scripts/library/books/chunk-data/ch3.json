@@ -1,0 +1,162 @@
+{
+  "chapter": 3,
+  "chunks": [
+    { "head": "pass by", "gloss": "经过、从旁走过", "ipa": "/pɑːs baɪ/",
+      "note": "pass by = 从…旁边经过;也可指(时间)流逝。",
+      "literal": [{"word":"pass","meaning_cn":"经过、走过"},{"word":"by","meaning_cn":"从旁边","note_cn":"非'被/由'义"}],
+      "ex_en": "I pass by the bakery on my way to school every day.", "ex_cn": "我每天上学都会经过那家面包店。",
+      "occ": [[399,"passing by"]] },
+
+    { "head": "make use of", "gloss": "利用、使用", "ipa": "/meɪk juːs əv/",
+      "note": "make use of sth = 加以利用。",
+      "literal": [{"word":"make","meaning_cn":"做出、加以"},{"word":"use","meaning_cn":"使用、利用"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "We should make use of our free time to read.", "ex_cn": "我们应该利用空闲时间读书。",
+      "occ": [[391,"make use of"]] },
+
+    { "head": "call attention to", "gloss": "使注意到、引起对…的注意", "ipa": "/kɔːl əˈtenʃən tuː/",
+      "note": "call attention to sth = 让人注意到某事。",
+      "literal": [{"word":"call","meaning_cn":"唤起、引起"},{"word":"attention","meaning_cn":"注意"},{"word":"to","meaning_cn":"对…"}],
+      "ex_en": "She raised her hand to call attention to the mistake.", "ex_cn": "她举手让大家注意到那个错误。",
+      "occ": [[392,"calling attention to"]] },
+
+    { "head": "show off", "gloss": "炫耀、卖弄", "ipa": "/ʃoʊ ɔːf/",
+      "note": "show off = 显摆、卖弄给别人看。",
+      "literal": [{"word":"show","meaning_cn":"展示"},{"word":"off","meaning_cn":"卖弄地","note_cn":"非'关掉/离开'义"}],
+      "ex_en": "He likes to show off his new bike.", "ex_cn": "他喜欢炫耀他的新自行车。",
+      "occ": [[404,"show off"],[413,"showing off"]] },
+
+    { "head": "in order to", "gloss": "为了(做某事)", "ipa": "/ɪn ˈɔːrdər tuː/",
+      "note": "in order to + 动词 = 表示目的。",
+      "literal": [{"word":"in order","meaning_cn":"为了(固定搭配)"},{"word":"to","meaning_cn":"去(做)"}],
+      "ex_en": "She got up early in order to catch the first bus.", "ex_cn": "她早起是为了赶上第一班车。",
+      "occ": [[404,"in order to"]] },
+
+    { "head": "keep up", "gloss": "保持、持续做", "ipa": "/kiːp ʌp/",
+      "note": "keep up = 持续、维持某种状态或行为。",
+      "literal": [{"word":"keep","meaning_cn":"保持"},{"word":"up","meaning_cn":"持续下去","note_cn":"非'向上'义"}],
+      "ex_en": "Please keep up the good work.", "ex_cn": "请继续保持,做得好。",
+      "occ": [[405,"kept up"]] },
+
+    { "head": "in the midst of", "gloss": "正当…之时、在…当中", "ipa": "/ɪn ðə mɪdst əv/",
+      "note": "in the midst of sth = 正处于某事进行中。",
+      "literal": [{"word":"in","meaning_cn":"在…中"},{"word":"the midst","meaning_cn":"中间、当中"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "The phone rang in the midst of dinner.", "ex_cn": "正吃饭时电话响了。",
+      "occ": [[405,"in the midst of"]] },
+
+    { "head": "light up", "gloss": "(脸)亮起来、放光", "ipa": "/laɪt ʌp/",
+      "note": "one's face lights up = 因高兴而容光焕发。",
+      "literal": [{"word":"light","meaning_cn":"点亮"},{"word":"up","meaning_cn":"(脸)亮起来","note_cn":"非'向上'义"}],
+      "ex_en": "Her face lit up when she saw the gift.", "ex_cn": "她看到礼物时脸上顿时容光焕发。",
+      "occ": [[409,"lit up"]] },
+
+    { "head": "right away", "gloss": "立刻、马上", "ipa": "/raɪt əˈweɪ/",
+      "note": "right away = 立即,同 at once。",
+      "literal": [{"word":"right","meaning_cn":"立刻(强调)","note_cn":"非'右/正确'义"},{"word":"away","meaning_cn":"马上"}],
+      "ex_en": "Come home right away.", "ex_cn": "马上回家。",
+      "occ": [[409,"right away"]] },
+
+    { "head": "pick up", "gloss": "捡起、拿起", "ipa": "/pɪk ʌp/",
+      "note": "pick up = 把东西从地上或桌上拿起。",
+      "literal": [{"word":"pick","meaning_cn":"拾、捡"},{"word":"up","meaning_cn":"起来"}],
+      "ex_en": "He bent down to pick up the pen.", "ex_cn": "他弯腰捡起那支笔。",
+      "occ": [[411,"picked up"]] },
+
+    { "head": "be aware of", "gloss": "意识到、察觉到", "ipa": "/biː əˈwer əv/",
+      "note": "be aware of sth = 知道、留意到某事。",
+      "literal": [{"word":"be","meaning_cn":"是"},{"word":"aware","meaning_cn":"察觉的、知道的"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "Be aware of the cars when you cross the road.", "ex_cn": "过马路时要留意来往的车。",
+      "occ": [[413,"aware of"]] },
+
+    { "head": "hang about", "gloss": "闲逛、徘徊", "ipa": "/hæŋ əˈbaʊt/",
+      "note": "hang about = 在某处逗留、无所事事地待着。",
+      "literal": [{"word":"hang","meaning_cn":"逗留","note_cn":"非'悬挂'义"},{"word":"about","meaning_cn":"四处、附近"}],
+      "ex_en": "Some boys were hanging about outside the shop.", "ex_cn": "几个男孩在店外闲逛。",
+      "occ": [[413,"hung about"]] },
+
+    { "head": "in the least", "gloss": "一点也(不)、丝毫(不)", "ipa": "/ɪn ðə liːst/",
+      "note": "not … in the least = 一点也不,用于否定加强。",
+      "literal": [{"word":"in","meaning_cn":"在…上"},{"word":"the least","meaning_cn":"最少、丝毫"}],
+      "ex_en": "I'm not tired in the least.", "ex_cn": "我一点也不累。",
+      "occ": [[416,"in the least"]] },
+
+    { "head": "say to oneself", "gloss": "自言自语、心里想", "ipa": "/seɪ tuː wʌnˈself/",
+      "note": "say to oneself = 在心里对自己说、暗想。",
+      "literal": [{"word":"say","meaning_cn":"说"},{"word":"to","meaning_cn":"对"},{"word":"oneself","meaning_cn":"自己"}],
+      "ex_en": "He said to himself that he could do it.", "ex_cn": "他心里对自己说他能做到。",
+      "occ": [[426,"said to himself"],[428,"said to himself"]] },
+
+    { "head": "hold on", "gloss": "等一下、稍等", "ipa": "/hoʊld ɑːn/",
+      "note": "hold on = 叫人稍等或停一下。",
+      "literal": [{"word":"hold","meaning_cn":"保持、停"},{"word":"on","meaning_cn":"稍等、别挂","note_cn":"非'在…上'义"}],
+      "ex_en": "Hold on, I'll be there in a minute.", "ex_cn": "等一下,我马上就到。",
+      "occ": [[431,"hold on"]] },
+
+    { "head": "in the wrong", "gloss": "理亏、错的一方", "ipa": "/ɪn ðə rɔːŋ/",
+      "note": "be in the wrong = 做错了、有过错。",
+      "literal": [{"word":"in","meaning_cn":"处于…"},{"word":"the wrong","meaning_cn":"错误、过错的一方"}],
+      "ex_en": "You should say sorry when you are in the wrong.", "ex_cn": "你理亏时就该道歉。",
+      "occ": [[438,"in the wrong"]] },
+
+    { "head": "now and then", "gloss": "偶尔、时不时", "ipa": "/naʊ ənd ðen/",
+      "note": "now and then = 不时地,同 from time to time。",
+      "literal": [{"word":"now","meaning_cn":"现在"},{"word":"and","meaning_cn":"和"},{"word":"then","meaning_cn":"那时"}],
+      "ex_en": "We visit our grandparents now and then.", "ex_cn": "我们时不时去看望祖父母。",
+      "occ": [[443,"now and then"]] },
+
+    { "head": "all at once", "gloss": "突然、一下子", "ipa": "/ɔːl ət wʌns/",
+      "note": "all at once = 冷不防地,同 suddenly。",
+      "literal": [{"word":"all","meaning_cn":"全部"},{"word":"at once","meaning_cn":"立刻、一下子"}],
+      "ex_en": "All at once, the lights went out.", "ex_cn": "突然,灯全灭了。",
+      "occ": [[452,"all at once"]] },
+
+    { "head": "over and over again", "gloss": "一遍又一遍、反复地", "ipa": "/ˈoʊvər ənd ˈoʊvər əˈɡen/",
+      "note": "over and over again = 反复多次。",
+      "literal": [{"word":"over and over","meaning_cn":"一遍又一遍"},{"word":"again","meaning_cn":"再次"}],
+      "ex_en": "She read the letter over and over again.", "ex_cn": "她把那封信读了一遍又一遍。",
+      "occ": [[458,"over and over again"]] },
+
+    { "head": "hold one's peace", "gloss": "保持沉默、不作声", "ipa": "/hoʊld wʌnz piːs/",
+      "note": "hold one's peace = 忍住不说、保持沉默(旧但仍用)。",
+      "literal": [{"word":"hold","meaning_cn":"保持"},{"word":"one's","meaning_cn":"某人的"},{"word":"peace","meaning_cn":"平静→(此处)沉默","note_cn":"非'和平'义,此处指不作声"}],
+      "ex_en": "He wanted to argue, but he held his peace.", "ex_cn": "他想争辩,但还是忍住没作声。",
+      "occ": [[468,"held his peace"]] },
+
+    { "head": "think better of it", "gloss": "三思后打消念头、改变主意", "ipa": "/θɪŋk ˈbetər əv ɪt/",
+      "note": "think better of it = 再想想后决定不做原打算的事。",
+      "literal": [{"word":"think","meaning_cn":"想、考虑"},{"word":"better","meaning_cn":"再三思而改主意","note_cn":"非单纯'更好'义"},{"word":"of","meaning_cn":"关于"},{"word":"it","meaning_cn":"那件事"}],
+      "ex_en": "I was going to call him, but I thought better of it.", "ex_cn": "我本想给他打电话,后来还是打消了念头。",
+      "occ": [[468,"thought better of it"]] },
+
+    { "head": "turn in", "gloss": "上床睡觉、就寝", "ipa": "/tɜːrn ɪn/",
+      "note": "turn in = 去睡觉(口语);另有'上交'义,此处指就寝。",
+      "literal": [{"word":"turn","meaning_cn":"转"},{"word":"in","meaning_cn":"上床睡觉","note_cn":"非'进入'义;turn in=就寝"}],
+      "ex_en": "It's late; let's turn in.", "ex_cn": "很晚了,咱们睡觉吧。",
+      "occ": [[469,"turned in"]] },
+
+    { "head": "make a mental note", "gloss": "暗自记下、心里记住", "ipa": "/meɪk ə ˈmentl noʊt/",
+      "note": "make a mental note (of/to) = 在心里记下以后要做或注意的事。",
+      "literal": [{"word":"make","meaning_cn":"做"},{"word":"a","meaning_cn":"一个"},{"word":"mental","meaning_cn":"心里的"},{"word":"note","meaning_cn":"记录"}],
+      "ex_en": "I made a mental note to buy milk on the way home.", "ex_cn": "我暗自记下回家路上要买牛奶。",
+      "occ": [[469,"made mental note"]] },
+
+    { "head": "get into trouble", "gloss": "惹上麻烦、闯祸", "ipa": "/ɡet ˈɪntuː ˈtrʌbl/",
+      "note": "get into trouble = 陷入麻烦;get sb into trouble = 使某人惹上麻烦。本章出处为分离式(getting him into trouble),故 card-only。",
+      "literal": [{"word":"get","meaning_cn":"进入、陷入"},{"word":"into","meaning_cn":"到…里"},{"word":"trouble","meaning_cn":"麻烦"}],
+      "ex_en": "Don't get into trouble at school.", "ex_cn": "别在学校惹麻烦。",
+      "cardOnly": true, "key": "get into trouble", "exSeq": 392 },
+
+    { "head": "under one's nose", "gloss": "在某人眼皮底下", "ipa": "/ˈʌndər wʌnz noʊz/",
+      "note": "(right) under one's nose = 就在眼前却没察觉,或当着某人的面。本章出处被'aunt's very'隔开,故 card-only。",
+      "literal": [{"word":"under","meaning_cn":"在…下"},{"word":"one's","meaning_cn":"某人的"},{"word":"nose","meaning_cn":"鼻子"}],
+      "ex_en": "The keys were right under my nose the whole time.", "ex_cn": "钥匙一直就在我眼皮底下。",
+      "cardOnly": true, "key": "under one's nose", "exSeq": 417 }
+  ],
+  "skipped": [
+    "方言表层低迁移词块 e.g. 'a body'(=人)、'like enough'、'warn't'、'a mind to'",
+    "拟声/一次性喊话 e.g. 'Well, I never!'、'Umf!'",
+    "一次性文学/古旧惯用语(读一次即可,不进语块层) e.g. 'sally to the rescue'、'wending her way'、'sick unto death'、'hove/discharging lightnings of wrath'",
+    "专有名词 e.g. Aunt Polly, Sid, Joe Harper, Jeff Thatcher, Amy Lawrence",
+    "过于基础/语法性 e.g. 'going to'、'full of'、'according to'、'of course'",
+    "一次性描写性搭配 e.g. 'cow-stable'、'log raft'、'tallow dip'"
+  ]
+}

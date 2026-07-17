@@ -1,0 +1,331 @@
+{
+  "chapter": 9,
+  "chunks": [
+    {
+      "head": "lie awake",
+      "gloss": "醒着躺着;躺着睡不着",
+      "ipa": "/laɪ əˈweɪk/",
+      "note": "lie(躺)+awake(醒着的),指躺在床上却睡不着。",
+      "literal": [
+        { "word": "lie", "meaning_cn": "躺" },
+        { "word": "awake", "meaning_cn": "醒着的" }
+      ],
+      "ex_en": "She lay awake for hours, worrying about the exam.",
+      "ex_cn": "她躺着睡不着,担心了好几个小时的考试。",
+      "occ": [[1361, "lay awake"]]
+    },
+    {
+      "head": "by and by",
+      "gloss": "不久;过一会儿",
+      "ipa": "/ˌbaɪ ən ˈbaɪ/",
+      "note": "旧式表达,相当于 soon / before long。",
+      "literal": [
+        { "word": "by", "meaning_cn": "(时间)流逝", "note_cn": "此处非“通过”,是旧用法,表时间推移" },
+        { "word": "and", "meaning_cn": "和" },
+        { "word": "by", "meaning_cn": "(时间)流逝" }
+      ],
+      "ex_en": "By and by the rain stopped and the sun came out.",
+      "ex_cn": "过了一会儿,雨停了,太阳出来了。",
+      "occ": [[1367, "by and by"]]
+    },
+    {
+      "head": "one's days are numbered",
+      "gloss": "来日无多;命不久矣",
+      "ipa": "/wʌnz deɪz ə ˈnʌmbəd/",
+      "note": "直译“日子被数尽了”,指所剩时日不多。",
+      "literal": [
+        { "word": "days", "meaning_cn": "日子;寿命" },
+        { "word": "are", "meaning_cn": "是(被)" },
+        { "word": "numbered", "meaning_cn": "被数尽的", "note_cn": "此处指数得清、所剩无几" }
+      ],
+      "ex_en": "The doctor said the old dog's days were numbered.",
+      "ex_cn": "医生说这条老狗已经时日无多了。",
+      "occ": [[1374, "days were numbered"]]
+    },
+    {
+      "head": "in spite of oneself",
+      "gloss": "不由自主地;情不自禁",
+      "ipa": "/ɪn ˈspaɪt əv wʌnˈself/",
+      "note": "在 in spite of(尽管)后加 oneself,表示违背本意、控制不住。",
+      "literal": [
+        { "word": "in", "meaning_cn": "在……中" },
+        { "word": "spite", "meaning_cn": "不顾", "note_cn": "in spite of 为固定搭配,意为“尽管”" },
+        { "word": "of", "meaning_cn": "……的" },
+        { "word": "oneself", "meaning_cn": "自己" }
+      ],
+      "ex_en": "The joke was silly, but she laughed in spite of herself.",
+      "ex_cn": "那笑话很傻,可她还是忍不住笑了。",
+      "occ": [[1377, "in spite of himself"]]
+    },
+    {
+      "head": "wide awake",
+      "gloss": "完全清醒;毫无睡意",
+      "ipa": "/ˌwaɪd əˈweɪk/",
+      "note": "wide 在此作副词,加强 awake,表示彻底醒着。",
+      "literal": [
+        { "word": "wide", "meaning_cn": "完全地", "note_cn": "此处不是“宽”,而是加强语气“彻底地”" },
+        { "word": "awake", "meaning_cn": "醒着的" }
+      ],
+      "ex_en": "After that cup of coffee I was wide awake all night.",
+      "ex_cn": "喝了那杯咖啡后,我一整夜都清醒得很。",
+      "occ": [[1380, "wide awake"]]
+    },
+    {
+      "head": "on all fours",
+      "gloss": "四肢着地;爬着",
+      "ipa": "/ɒn ɔːl ˈfɔːz/",
+      "note": "fours 指两手两脚共四肢。",
+      "literal": [
+        { "word": "on", "meaning_cn": "凭借;靠着" },
+        { "word": "all", "meaning_cn": "所有的" },
+        { "word": "fours", "meaning_cn": "四肢", "note_cn": "指两手两脚" }
+      ],
+      "ex_en": "The baby crawled across the floor on all fours.",
+      "ex_cn": "婴儿四肢着地爬过了地板。",
+      "occ": [[1380, "on all fours"]]
+    },
+    {
+      "head": "move off",
+      "gloss": "离开;走开;起步",
+      "ipa": "/ˌmuːv ˈɒf/",
+      "note": "指人或车辆开始离开原地。",
+      "literal": [
+        { "word": "move", "meaning_cn": "移动" },
+        { "word": "off", "meaning_cn": "离开" }
+      ],
+      "ex_en": "The bus moved off before he could get on.",
+      "ex_cn": "他还没上车,公交车就开走了。",
+      "occ": [[1383, "moved off"]]
+    },
+    {
+      "head": "under one's breath",
+      "gloss": "低声地;小声嘀咕",
+      "ipa": "/ˌʌndər wʌnz ˈbreθ/",
+      "note": "直译“在呼吸之下”,即压低嗓音、几乎听不见。",
+      "literal": [
+        { "word": "under", "meaning_cn": "在……之下" },
+        { "word": "one's", "meaning_cn": "某人的" },
+        { "word": "breath", "meaning_cn": "呼吸;气息" }
+      ],
+      "ex_en": "He muttered a complaint under his breath so no one would hear.",
+      "ex_cn": "他压低嗓子嘟囔着抱怨,免得被人听见。",
+      "occ": [[1392, "under their breath"]]
+    },
+    {
+      "head": "keep still",
+      "gloss": "保持不动;别动",
+      "ipa": "/ˌkiːp ˈstɪl/",
+      "note": "still 在此为形容词,指静止不动。",
+      "literal": [
+        { "word": "keep", "meaning_cn": "保持" },
+        { "word": "still", "meaning_cn": "静止不动的", "note_cn": "此处不是“仍然”,而是“不动的”" }
+      ],
+      "ex_en": "Keep still while I take the splinter out of your hand.",
+      "ex_cn": "我帮你挑手上的刺时,你别乱动。",
+      "occ": [[1463, "keep still"]]
+    },
+    {
+      "head": "get even with",
+      "gloss": "向……报复;跟……算账",
+      "ipa": "/ɡet ˈiːvn wɪð/",
+      "note": "even 意为“扯平”,把账算清、两不相欠。",
+      "literal": [
+        { "word": "get", "meaning_cn": "变得" },
+        { "word": "even", "meaning_cn": "扯平的", "note_cn": "此处指双方两不相欠" },
+        { "word": "with", "meaning_cn": "与" }
+      ],
+      "ex_en": "He swore he would get even with the boy who tricked him.",
+      "ex_cn": "他发誓要跟那个骗他的男孩算账。",
+      "occ": [[1495, "get even with"]]
+    },
+    {
+      "head": "drive away",
+      "gloss": "赶走;驱逐",
+      "ipa": "/ˌdraɪv əˈweɪ/",
+      "note": "drive 在此为“驱赶”,非“驾驶”。",
+      "literal": [
+        { "word": "drive", "meaning_cn": "驱赶", "note_cn": "此处不是“开车”" },
+        { "word": "away", "meaning_cn": "离开;走开" }
+      ],
+      "ex_en": "The farmer drove away the birds that were eating his seeds.",
+      "ex_cn": "农夫赶走了那些偷吃种子的鸟。",
+      "occ": [[1495, "drove me away"]]
+    },
+    {
+      "head": "strike out",
+      "gloss": "猛击;挥拳打出",
+      "ipa": "/ˌstraɪk ˈaʊt/",
+      "note": "指突然挥出拳头或手臂打击。",
+      "literal": [
+        { "word": "strike", "meaning_cn": "打;击" },
+        { "word": "out", "meaning_cn": "向外(打出)" }
+      ],
+      "ex_en": "The boxer struck out suddenly and knocked his rival down.",
+      "ex_cn": "拳击手突然挥拳出击,把对手打倒在地。",
+      "occ": [[1500, "struck out"]]
+    },
+    {
+      "head": "grapple with",
+      "gloss": "与……扭打;搏斗;(引申)努力应对",
+      "ipa": "/ˈɡræpl wɪð/",
+      "note": "字面指抱住扭打,也常引申为“艰难处理(难题)”。",
+      "literal": [
+        { "word": "grapple", "meaning_cn": "扭打;紧抓" },
+        { "word": "with", "meaning_cn": "与" }
+      ],
+      "ex_en": "The police grappled with the thief until help arrived.",
+      "ex_cn": "警察和小偷扭打在一起,直到支援赶到。",
+      "occ": [[1502, "grappled with"]]
+    },
+    {
+      "head": "with might and main",
+      "gloss": "竭尽全力;拼命地",
+      "ipa": "/wɪð ˌmaɪt ən ˈmeɪn/",
+      "note": "might 与 main(古义“力气”)同义连用,加强“全力”。",
+      "literal": [
+        { "word": "with", "meaning_cn": "带着;用" },
+        { "word": "might", "meaning_cn": "力量" },
+        { "word": "and", "meaning_cn": "和" },
+        { "word": "main", "meaning_cn": "全力", "note_cn": "古义“力气”,与 might 同义" }
+      ],
+      "ex_en": "The sailors pulled the rope with might and main.",
+      "ex_cn": "水手们使出浑身力气拉着绳子。",
+      "occ": [[1502, "with might and main"]]
+    },
+    {
+      "head": "spring to one's feet",
+      "gloss": "猛地站起;一跃而起",
+      "ipa": "/sprɪŋ tə wʌnz ˈfiːt/",
+      "note": "spring 在此指“猛地弹起”,形容动作迅疾。",
+      "literal": [
+        { "word": "spring", "meaning_cn": "跳起;猛地弹起" },
+        { "word": "to", "meaning_cn": "到" },
+        { "word": "one's", "meaning_cn": "某人的" },
+        { "word": "feet", "meaning_cn": "脚" }
+      ],
+      "ex_en": "He sprang to his feet the moment he heard the alarm.",
+      "ex_cn": "一听到警报,他猛地站了起来。",
+      "occ": [[1503, "sprang to his feet"]]
+    },
+    {
+      "head": "all at once",
+      "gloss": "突然;忽然",
+      "ipa": "/ˌɔːl ət ˈwʌns/",
+      "note": "固定短语,相当于 suddenly。",
+      "literal": [
+        { "word": "all", "meaning_cn": "全部" },
+        { "word": "at", "meaning_cn": "在" },
+        { "word": "once", "meaning_cn": "一下子" }
+      ],
+      "ex_en": "All at once the lights went out and the room fell dark.",
+      "ex_cn": "突然灯全灭了,房间陷入黑暗。",
+      "occ": [[1504, "all at once"]]
+    },
+    {
+      "head": "settle a score",
+      "gloss": "了结恩怨;报仇雪恨",
+      "ipa": "/ˌsetl ə ˈskɔː/",
+      "note": "score 在此指“旧账、宿怨”,settle 为“结清”。",
+      "literal": [
+        { "word": "settle", "meaning_cn": "了结;结清" },
+        { "word": "a", "meaning_cn": "一个" },
+        { "word": "score", "meaning_cn": "旧账;宿怨", "note_cn": "此处不是“分数”,指积怨" }
+      ],
+      "ex_en": "He came back to town to settle an old score with his rival.",
+      "ex_cn": "他回到镇上,是要跟对头了结一桩旧怨。",
+      "occ": [[1509, "score is settled"]]
+    },
+    {
+      "head": "that won't wash",
+      "gloss": "(借口/说法)行不通;站不住脚",
+      "ipa": "/ðæt ˌwəʊnt ˈwɒʃ/",
+      "note": "口语用 wash 表“经得起检验”,否定即“说不通”。",
+      "literal": [
+        { "word": "that", "meaning_cn": "那(说法)" },
+        { "word": "won't", "meaning_cn": "不会" },
+        { "word": "wash", "meaning_cn": "说得通;经得起推敲", "note_cn": "口语比喻,非“洗”" }
+      ],
+      "ex_en": "You forgot again? That excuse won't wash with me.",
+      "ex_cn": "你又忘了?这个借口在我这儿可行不通。",
+      "occ": [[1522, "won’t wash"]]
+    },
+    {
+      "head": "stand up for",
+      "gloss": "支持;维护;为……挺身而出",
+      "ipa": "/ˌstænd ˈʌp fɔː/",
+      "note": "指公开为某人或某事辩护、撑腰。",
+      "literal": [
+        { "word": "stand", "meaning_cn": "站" },
+        { "word": "up", "meaning_cn": "起来" },
+        { "word": "for", "meaning_cn": "为了" }
+      ],
+      "ex_en": "A true friend will stand up for you when others blame you.",
+      "ex_cn": "别人指责你时,真正的朋友会为你撑腰。",
+      "occ": [[1541, "stood up for"]]
+    },
+    {
+      "head": "go back on",
+      "gloss": "违背(诺言);食言;背弃",
+      "ipa": "/ˌɡəʊ ˈbæk ɒn/",
+      "note": "常接 one's word/promise,表示不守承诺。",
+      "literal": [
+        { "word": "go", "meaning_cn": "走;去" },
+        { "word": "back", "meaning_cn": "返回;反悔" },
+        { "word": "on", "meaning_cn": "对于" }
+      ],
+      "ex_en": "He is honest and never goes back on a promise.",
+      "ex_cn": "他很讲信用,从不食言。",
+      "occ": [[1545, "go back on"]]
+    },
+    {
+      "head": "fair and square",
+      "gloss": "光明正大;公平合理",
+      "ipa": "/ˌfeər ən ˈskweə/",
+      "note": "square 在此意为“正直、公道”,与 fair 叠用加强。",
+      "literal": [
+        { "word": "fair", "meaning_cn": "公平的" },
+        { "word": "and", "meaning_cn": "和" },
+        { "word": "square", "meaning_cn": "正直的;公道的", "note_cn": "此处不是“正方形”" }
+      ],
+      "ex_en": "She won the race fair and square, with no cheating at all.",
+      "ex_cn": "她赢得这场比赛光明正大,没有任何作弊。",
+      "occ": [[1545, "fair and square"]]
+    },
+    {
+      "head": "be off",
+      "gloss": "走开;离开;出发",
+      "ipa": "/ˌbiː ˈɒf/",
+      "note": "口语,常表“该走了、赶紧走”。",
+      "literal": [
+        { "word": "be", "meaning_cn": "(动词)" },
+        { "word": "off", "meaning_cn": "离开" }
+      ],
+      "ex_en": "It's getting late — I must be off now.",
+      "ex_cn": "天不早了,我得走了。",
+      "occ": [[1552, "be off"]]
+    },
+    {
+      "head": "pry off",
+      "gloss": "撬开;撬掉",
+      "ipa": "/ˌpraɪ ˈɒf/",
+      "note": "pry 指用工具撬动。",
+      "literal": [
+        { "word": "pry", "meaning_cn": "撬" },
+        { "word": "off", "meaning_cn": "掉;开(使脱离)" }
+      ],
+      "ex_en": "He pried off the lid of the paint can with a screwdriver.",
+      "ex_cn": "他用螺丝刀把油漆桶的盖子撬开了。",
+      "occ": [[1487, "pried off"]]
+    }
+  ],
+  "skipped": [
+    "go on digging(go on + -ing 属语法结构,过于基础)",
+    "come out(月亮/太阳“出来”,义太基础)",
+    "get ready(准备好,义太基础)",
+    "take out(拿出,义太基础)",
+    "cut off(切断,义太基础)",
+    "look after(此处为“目送、望着离去”,与常义“照顾”相反,易混,归入难句层)",
+    "sent to bed(偏描述性搭配,可迁移性弱)",
+    "Injun Joe / Muff Potter / Doctor Robinson(专有名词)"
+  ]
+}

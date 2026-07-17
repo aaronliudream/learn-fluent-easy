@@ -4,7 +4,7 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, BookOpen, Play, Languages, Volume2, Square, ChevronDown, Compass } from "lucide-react";
+import { ArrowLeft, BookOpen, Play, Languages, Volume2, Square, ChevronDown, ChevronRight, Compass, RotateCcw, List, Users, BarChart3 } from "lucide-react";
 import { T } from "@/i18n/T";
 import { cn } from "@/lib/utils";
 import { speak, speakSequence, stopSpeaking, unlockAudioSync } from "@/lib/speak";
@@ -94,6 +94,37 @@ function fmtDuration(sec: number): string {
   if (h > 0) return `${h}小时${m % 60}分`;
   if (m > 0) return `${m}分`;
   return `${sec}秒`;
+}
+
+// 页码:每 PAGE_SIZE 句算一"页"(阅读器是滚动式,页是展示用的估算单位)。
+const PAGE_SIZE = 8;
+const pageOfSeq = (seq: number) => Math.floor(Math.max(0, seq) / PAGE_SIZE) + 1;
+const pagesOfCount = (n?: number) => (n && n > 0 ? Math.max(1, Math.ceil(n / PAGE_SIZE)) : 0);
+
+/** 相对时间:上次阅读多久前(本地时间戳 ms)。 */
+function relTime(ms: number): string {
+  if (!ms) return "";
+  const diff = Date.now() - ms;
+  const min = Math.floor(diff / 60000);
+  if (min < 1) return "刚刚";
+  if (min < 60) return `${min} 分钟前`;
+  const h = Math.floor(min / 60);
+  if (h < 24) return `${h} 小时前`;
+  return `${Math.floor(h / 24)} 天前`;
+}
+
+/** 蓝卡里的白色进度环(显示完成度百分比)。 */
+function ProgressRing({ pct }: { pct: number }) {
+  const R = 26, C = 2 * Math.PI * R, len = (Math.min(100, Math.max(0, pct)) / 100) * C;
+  return (
+    <div className="relative shrink-0" style={{ width: 64, height: 64 }}>
+      <svg width="64" height="64" viewBox="0 0 64 64" className="-rotate-90">
+        <circle cx="32" cy="32" r={R} fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="6" />
+        <circle cx="32" cy="32" r={R} fill="none" stroke="white" strokeWidth="6" strokeLinecap="round" strokeDasharray={`${len} ${C - len}`} />
+      </svg>
+      <div className="absolute inset-0 grid place-items-center text-sm font-bold tabular-nums text-white">{pct}%</div>
+    </div>
+  );
 }
 
 export default function LibraryBook() {
@@ -281,69 +312,95 @@ export default function LibraryBook() {
         <ArrowLeft className="size-4" /> <T>返回书架</T>
       </Link>
 
-      {/* 头部:封面 + 元信息 */}
-      <div className="flex gap-4">
+      {/* 头部:大封面 + 标题/作者 + 信息 pill */}
+      <div className="mt-1 flex gap-4 sm:gap-5">
         <div
-          className="relative flex aspect-[3/4] w-28 shrink-0 items-end overflow-hidden rounded-xl p-2.5 text-white shadow-md"
+          className="relative aspect-[3/4] w-28 shrink-0 overflow-hidden rounded-xl shadow-md sm:w-32"
           style={coverStyle(book.cover)}
         >
           {coverImageUrl(book.cover) ? (
-            <img
-              src={coverImageUrl(book.cover)!}
-              alt={book.title}
-              className="absolute inset-0 size-full object-cover"
-            />
+            <img src={coverImageUrl(book.cover)!} alt={book.title} className="absolute inset-0 size-full object-cover" />
           ) : (
-            <BookOpen className="size-4 opacity-50" />
+            <div className="flex size-full items-end p-2.5 text-white"><BookOpen className="size-4 opacity-50" /></div>
           )}
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex items-start gap-1.5">
-            <h1 className="min-w-0 text-xl font-bold leading-tight text-slate-900">{book.title}</h1>
+            <h1 className="min-w-0 text-2xl font-extrabold leading-tight text-slate-900">{book.title}</h1>
             <button
               type="button"
               onClick={speakTitle}
               aria-label="朗读书名"
-              className="mt-0.5 shrink-0 rounded-full p-1 text-slate-400 transition hover:bg-slate-100 hover:text-sky-600 active:scale-95"
+              className="mt-1 shrink-0 rounded-full p-1 text-slate-300 transition hover:bg-slate-100 hover:text-sky-600 active:scale-95"
             >
               <Volume2 className="size-4" />
             </button>
           </div>
-          {book.zh_title && <p className="mt-0.5 text-sm text-slate-500">{book.zh_title}</p>}
-          {book.author && <p className="mt-1 text-xs text-slate-400">{book.author}</p>}
-          <div className="mt-2 flex flex-wrap items-center gap-1.5 text-[11px] text-slate-400">
-            <span className="rounded-full bg-slate-100 px-2 py-0.5 font-bold text-slate-600">
-              {book.age_band}
+          {book.zh_title && <p className="mt-0.5 text-sm font-medium text-slate-500">{book.zh_title}</p>}
+          {book.author && <p className="mt-1.5 text-sm text-slate-500">{book.author}</p>}
+          <div className="mt-3 flex flex-col items-start gap-1.5">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-[11px] font-medium text-slate-600">
+              <Users className="size-3.5 text-slate-400" />
+              {book.age_band}{book.age_range ? ` · ${book.age_range}` : ""}{total > 0 ? ` · ${total} 句` : ""}
             </span>
-            {book.age_range && <span>{book.age_range}</span>}
-            {total > 0 && (
-              <span>
-                · {total} <T>句</T>
-              </span>
-            )}
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-[11px] font-medium text-slate-600">
+              <BarChart3 className="size-3.5 text-slate-400" />
+              <T>完成度</T> {pct}%{state && state.seconds > 0 ? ` · 已读 ${fmtDuration(state.seconds)}` : ""}
+            </span>
           </div>
-          {started && (
-            <div className="mt-2 flex items-center gap-3 text-xs text-slate-400">
-              <span className="tabular-nums">
-                <T>完成度</T> {pct}%
-              </span>
-              {state && state.seconds > 0 && (
-                <span className="tabular-nums">
-                  <T>阅读</T> {fmtDuration(state.seconds)}
-                </span>
-              )}
-            </div>
-          )}
         </div>
       </div>
 
-      {/* 开始/继续阅读 */}
-      <Link
-        to={`/library/${book.book_key}/read`}
-        className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700"
-      >
-        <Play className="size-4" /> {started ? <T>继续阅读</T> : <T>开始阅读</T>}
-      </Link>
+      {/* 蓝色续读卡:进度环 + 章·页 + 继续阅读 + 进度条(已开始);未开始→蓝色开始按钮 */}
+      {started ? (
+        <div className="mt-5 rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-600 p-5 text-white shadow-lg">
+          <div className="flex items-center gap-4">
+            <ProgressRing pct={pct} />
+            <div className="min-w-0 flex-1">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-white/60"><T>接着上次读</T></div>
+              <div className="mt-0.5 text-lg font-bold leading-tight">
+                <T>第</T> {state?.chapter_idx || 1} <T>章</T> · <T>第</T> {pageOfSeq(state?.last_seq ?? 0)} <T>页</T>
+              </div>
+              {state && state.updated_at > 0 && (
+                <div className="mt-0.5 text-xs text-white/60">{relTime(state.updated_at)}</div>
+              )}
+            </div>
+          </div>
+          <Link
+            to={`/library/${book.book_key}/read`}
+            className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-white py-3 text-sm font-bold text-blue-700 shadow transition hover:bg-blue-50"
+          >
+            <T>继续阅读</T> <Play className="size-4 fill-current" />
+          </Link>
+          <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/25">
+            <div className="h-full rounded-full bg-white transition-all" style={{ width: `${Math.max(2, pct)}%` }} />
+          </div>
+        </div>
+      ) : (
+        <Link
+          to={`/library/${book.book_key}/read`}
+          className="mt-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 py-3.5 text-sm font-bold text-white shadow-md transition hover:brightness-105"
+        >
+          <Play className="size-4 fill-current" /> <T>开始阅读</T>
+        </Link>
+      )}
+
+      {/* 从头开始 + 章节目录 */}
+      <div className="mt-3 grid grid-cols-2 gap-3">
+        <Link
+          to={`/library/${book.book_key}/read?ch=1`}
+          className="flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white py-3 text-sm font-semibold text-slate-600 transition hover:border-slate-300 hover:bg-slate-50"
+        >
+          <RotateCcw className="size-4" /> <T>从头开始</T>
+        </Link>
+        <button
+          type="button"
+          onClick={() => document.getElementById("lib-chapters")?.scrollIntoView({ behavior: "smooth" })}
+          className="flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white py-3 text-sm font-semibold text-slate-600 transition hover:border-slate-300 hover:bg-slate-50"
+        >
+          <List className="size-4" /> <T>章节目录</T>
+        </button>
+      </div>
 
       {/* 简介:英文默认 + 显示中文切换 */}
       {(book.intro_en || book.intro_zh) && (
@@ -470,32 +527,39 @@ export default function LibraryBook() {
         </section>
       )}
 
-      {/* 章节目录 */}
+      {/* 章节:编号 + 标题 + 页数 + 在读徽标 + chevron(章节目录锚点) */}
       {chapters.length > 1 && (
-        <section className="mt-6">
-          <h2 className="mb-2 text-sm font-bold text-slate-700">
-            <T>目录</T>
+        <section id="lib-chapters" className="mt-7 scroll-mt-4">
+          <h2 className="mb-3 text-lg font-extrabold text-slate-900">
+            <T>章节</T>
           </h2>
-          <ol className="divide-y divide-slate-100 overflow-hidden rounded-xl border border-slate-100">
+          <ol className="divide-y divide-slate-100 overflow-hidden rounded-2xl border border-slate-100">
             {chapters.map((c) => {
               const t = chapterTitle(book, c.idx);
+              const cur = started && (state?.chapter_idx || 0) === c.idx;
+              const pages = pagesOfCount(t?.count);
               return (
                 <Link
                   key={c.idx}
                   to={`/library/${book.book_key}/read?ch=${c.idx}`}
-                  className="flex items-center gap-3 px-3 py-2.5 transition hover:bg-slate-50"
+                  className={cn("flex items-center gap-3 px-4 py-3 transition hover:bg-slate-50", cur && "bg-blue-50/60")}
                 >
-                  <span className="grid size-7 shrink-0 place-items-center rounded-full bg-slate-100 text-xs font-bold text-slate-500">
+                  <span className={cn("grid size-7 shrink-0 place-items-center rounded-full text-xs font-bold", cur ? "bg-blue-600 text-white" : "bg-slate-100 text-slate-500")}>
                     {c.idx}
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate text-sm font-medium text-slate-700">
-                      {t?.title_en || `Chapter ${c.idx}`}
+                    <span className="flex items-center gap-2">
+                      <span className={cn("truncate text-sm font-semibold", cur ? "text-blue-700" : "text-slate-700")}>
+                        {t?.title_en || `Chapter ${c.idx}`}
+                      </span>
+                      {cur && (
+                        <span className="shrink-0 rounded-full bg-blue-100 px-2 py-0.5 text-[10px] font-bold text-blue-700"><T>在读</T></span>
+                      )}
                     </span>
-                    {t?.title_zh && (
-                      <span className="block truncate text-xs text-slate-400">{t.title_zh}</span>
-                    )}
+                    {t?.title_zh && <span className="block truncate text-xs text-slate-400">{t.title_zh}</span>}
                   </span>
+                  {pages > 0 && <span className="shrink-0 text-xs tabular-nums text-slate-400">{pages} <T>页</T></span>}
+                  <ChevronRight className="size-4 shrink-0 text-slate-300" />
                 </Link>
               );
             })}

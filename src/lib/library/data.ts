@@ -30,7 +30,7 @@ export type LibraryBookListItem = {
 
 /** 完整书目(详情页用,多简介字段)。 */
 /** 章标题(存 library_books.chapters jsonb;方案 A,随书一起取)。 */
-export type LibraryChapterTitle = { idx: number; title_en: string; title_zh: string };
+export type LibraryChapterTitle = { idx: number; title_en: string; title_zh: string; count?: number };
 
 export type LibraryBook = LibraryBookListItem & {
   intro_en: string | null;
@@ -264,6 +264,35 @@ export async function getChapterIllustrations(
     .eq("chapter_idx", chapterIdx)
     .order("position", { ascending: true });
   return (data ?? []) as LibraryIllustration[];
+}
+
+/** 难句难点(句级挂载;marker 点开列难点清单)。points=[{term,gloss,kind}]。 */
+export type LibraryHardPoint = { term: string; gloss: string; kind: "word" | "phrase" };
+export type LibraryHardSentence = { seq: number; points: LibraryHardPoint[] };
+
+/**
+ * 某章的难句卡 → Map(seq → 难点清单)。稀疏(每章十几句),和句子同批按章取;
+ * 阅读器逐句 block 按 seq 命中显示 marker。表未建/查询失败 → 空 Map(优雅降级,阅读照常)。
+ */
+export async function getChapterHardSentences(
+  bookId: string,
+  chapterIdx: number,
+): Promise<Map<number, LibraryHardPoint[]>> {
+  try {
+    const { data, error } = await db
+      .from("library_hard_sentences")
+      .select("seq,points")
+      .eq("book_id", bookId)
+      .eq("chapter_idx", chapterIdx);
+    if (error || !data) return new Map();
+    const m = new Map<number, LibraryHardPoint[]>();
+    for (const r of data as LibraryHardSentence[]) {
+      if (Array.isArray(r.points) && r.points.length) m.set(r.seq, r.points);
+    }
+    return m;
+  } catch {
+    return new Map();
+  }
 }
 
 /** 某章的语块表面形式列表(正文虚线用;RLS 已只返回 is_published=true)。去重。 */

@@ -88,7 +88,7 @@ const chunks = [
     literal: [L("change", "改变(原文 alter 同义)"), L("mind", "主意、想法")], occ: [[338, "altered his mind"]] },
   { head: "draw near", gloss: "(渐渐)靠近、临近", ipa: "/drɔː nɪr/",
     note: "draw near = 走近、临近(略文雅)。",
-    literal: [L("draw", "移动、行进"), L("near", "靠近")], occ: [[270, "drew near"]] },
+    literal: [L("draw", "(此处)渐渐移动", "非常见的“画/拉”义"), L("near", "靠近")], occ: [[270, "drew near"]] },
 
   // 可分式:出处 [261] make a world of fun of him,连续匹配标不了 → card-only。
   { head: "make fun of", gloss: "取笑、拿……开玩笑", ipa: "/meɪk fʌn əv/",

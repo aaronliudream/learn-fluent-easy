@@ -1,0 +1,114 @@
+{
+  "chapter": 15,
+  "chunks": [
+    { "head": "strike out", "gloss": "出发、奋力前行", "ipa": "/straɪk aʊt/",
+      "note": "strike out = 动身、奋力朝某方向前进(此处指下水奋力游向对岸);另有 strike out on one's own = 独自去闯。",
+      "literal": [{"word":"strike","meaning_cn":"(此处)出发、奋力前行","note_cn":"非'打击'义"},{"word":"out","meaning_cn":"向外、出去"}],
+      "ex_en": "He struck out across the field toward the hills.", "ex_cn": "他朝着山丘穿过田野走去。",
+      "occ": [[2199,"struck out"]] },
+
+    { "head": "no end of", "gloss": "大量的、数不清的", "ipa": "/nəʊ end əv/",
+      "note": "no end of sth = 许许多多、无数(强调数量多)。",
+      "literal": [{"word":"no","meaning_cn":"没有"},{"word":"end","meaning_cn":"尽头"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "We had no end of trouble finding the house.", "ex_cn": "我们找那栋房子费了好大的劲。",
+      "occ": [[2220,"no end of"]] },
+
+    { "head": "just in time", "gloss": "正好赶上、及时", "ipa": "/dʒʌst ɪn taɪm/",
+      "note": "just in time = 刚好赶上、险些来不及。",
+      "literal": [{"word":"just","meaning_cn":"正好、恰好"},{"word":"in time","meaning_cn":"及时"}],
+      "ex_en": "We reached the station just in time to catch the train.", "ex_cn": "我们正好赶到车站坐上了火车。",
+      "occ": [[2222,"just in time"]] },
+
+    { "head": "take care of", "gloss": "照顾、照料", "ipa": "/teɪk keə əv/",
+      "note": "take care of sb/sth = 照顾、照料;也可指'处理、搞定某事'。",
+      "literal": [{"word":"take","meaning_cn":"(此处)承担、给予"},{"word":"care","meaning_cn":"照料"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "She takes care of her little brother after school.", "ex_cn": "放学后她照顾弟弟。",
+      "occ": [[2234,"take care of"]] },
+
+    { "head": "give up", "gloss": "放弃、舍弃", "ipa": "/ɡɪv ʌp/",
+      "note": "本章出处为分离式(give him up),故 card-only。give up sb/sth = 放弃、割舍。",
+      "literal": [{"word":"give","meaning_cn":"(此处)交出、舍弃"},{"word":"up","meaning_cn":"(表彻底放开)"}],
+      "ex_en": "Don't give up—keep trying!", "ex_cn": "别放弃,继续努力!",
+      "cardOnly": true, "key": "give up", "exSeq": 2235 },
+
+    { "head": "under one's nose", "gloss": "就在眼皮底下", "ipa": "/ˈʌndə wʌnz nəʊz/",
+      "note": "right under one's nose = 就在某人眼前(却没被注意到)。",
+      "literal": [{"word":"under","meaning_cn":"在…下方"},{"word":"one's","meaning_cn":"某人的"},{"word":"nose","meaning_cn":"鼻子"}],
+      "ex_en": "The keys were right under my nose the whole time.", "ex_cn": "钥匙一直就在我眼皮底下。",
+      "occ": [[2240,"under my nose"]] },
+
+    { "head": "from time to time", "gloss": "时不时、偶尔", "ipa": "/frəm taɪm tə taɪm/",
+      "note": "from time to time = 不时地、偶尔。",
+      "literal": [{"word":"from","meaning_cn":"从"},{"word":"time","meaning_cn":"时候"},{"word":"to","meaning_cn":"到"}],
+      "ex_en": "From time to time she visits her grandparents.", "ex_cn": "她时不时去看望祖父母。",
+      "occ": [[2249,"from time to time"]] },
+
+    { "head": "put in a word for", "gloss": "替…说好话、说情", "ipa": "/pʊt ɪn ə wɜːd fɔː/",
+      "note": "本章出处为分离式(put in a kindly word for),故 card-only。put in a (good) word for sb = 替某人美言、说情。",
+      "literal": [{"word":"put","meaning_cn":"(此处)说出、进言"},{"word":"in","meaning_cn":"进"},{"word":"a word","meaning_cn":"一句话"},{"word":"for","meaning_cn":"为了、替"}],
+      "ex_en": "Could you put in a good word for me with the boss?", "ex_cn": "你能在老板面前替我美言几句吗?",
+      "cardOnly": true, "key": "put in a word for", "exSeq": 2249 },
+
+    { "head": "break down", "gloss": "(情绪)崩溃、大哭", "ipa": "/breɪk daʊn/",
+      "note": "本章出处为分离式(broke entirely down),故 card-only。break down = 情绪崩溃痛哭;也指机器'出故障'。",
+      "literal": [{"word":"break","meaning_cn":"(此处)崩溃、垮掉","note_cn":"非'打破'义"},{"word":"down","meaning_cn":"(表垮下)"}],
+      "ex_en": "She broke down and cried when she heard the news.", "ex_cn": "听到消息她崩溃大哭。",
+      "cardOnly": true, "key": "break down", "exSeq": 2247 },
+
+    { "head": "turn up", "gloss": "出现、露面", "ipa": "/tɜːn ʌp/",
+      "note": "turn up = (人或失物)出现、露面;也指把音量'调大'。",
+      "literal": [{"word":"turn","meaning_cn":"转","note_cn":"此处非'转动'义"},{"word":"up","meaning_cn":"(表出现)"}],
+      "ex_en": "He finally turned up an hour late.", "ex_cn": "他终于露面了,迟到了一个小时。",
+      "occ": [[2252,"turn up"]] },
+
+    { "head": "occur to sb", "gloss": "(突然)想到、浮现于脑海", "ipa": "/əˈkɜː tə/",
+      "note": "it occurs to sb that… = 某人突然想到某事。",
+      "literal": [{"word":"occur","meaning_cn":"(此处)想到、浮现","note_cn":"非'发生'义"},{"word":"to","meaning_cn":"向、对"}],
+      "ex_en": "It suddenly occurred to me that I had left the door open.", "ex_cn": "我突然想到我没关门。",
+      "occ": [[2267,"occurred to him"]] },
+
+    { "head": "thread one's way", "gloss": "(在拥挤处)穿行、迂回前进", "ipa": "/θred wʌnz weɪ/",
+      "note": "thread one's way through/back = 小心地在人群或障碍间穿行。",
+      "literal": [{"word":"thread","meaning_cn":"(此处)穿行、迂回","note_cn":"非'线、穿针'义"},{"word":"one's","meaning_cn":"某人的"},{"word":"way","meaning_cn":"路"}],
+      "ex_en": "She threaded her way through the busy market.", "ex_cn": "她在拥挤的市场里穿行。",
+      "occ": [[2270,"threaded his way"]] },
+
+    { "head": "turn in", "gloss": "上床睡觉、就寝", "ipa": "/tɜːn ɪn/",
+      "note": "turn in = 上床睡觉(口语);另有'上交'义。",
+      "literal": [{"word":"turn","meaning_cn":"转"},{"word":"in","meaning_cn":"进"}],
+      "ex_en": "I'm tired, so I'll turn in early tonight.", "ex_cn": "我累了,今晚早点睡。",
+      "occ": [[2270,"turned in"]] },
+
+    { "head": "on board", "gloss": "在(船/车/飞机)上、上船", "ipa": "/ɒn bɔːd/",
+      "note": "on board = 在船(或车、飞机)上;also go on board = 上船。",
+      "literal": [{"word":"on","meaning_cn":"在…上"},{"word":"board","meaning_cn":"(此处)船、交通工具","note_cn":"非'木板'义"}],
+      "ex_en": "All the passengers are already on board the ship.", "ex_cn": "乘客都已上船。",
+      "occ": [[2270,"on board"]] },
+
+    { "head": "broad daylight", "gloss": "大白天、光天化日", "ipa": "/brɔːd ˈdeɪlaɪt/",
+      "note": "in broad daylight = 光天化日之下(常强调明目张胆)。",
+      "literal": [{"word":"broad","meaning_cn":"(此处)十足的、完全的","note_cn":"非'宽'义"},{"word":"daylight","meaning_cn":"日光、白昼"}],
+      "ex_en": "The thief broke in in broad daylight.", "ex_cn": "小偷光天化日之下闯了进来。",
+      "occ": [[2278,"broad daylight"]] },
+
+    { "head": "be up to something", "gloss": "在搞鬼、在打什么主意", "ipa": "/ʌp tə ˈsʌmθɪŋ/",
+      "note": "be up to something = 在偷偷做某事,常含'搞鬼、耍花招'之意。",
+      "literal": [{"word":"up to","meaning_cn":"(此处)在忙于、在搞"},{"word":"something","meaning_cn":"某件事"}],
+      "ex_en": "The children are very quiet—they must be up to something.", "ex_cn": "孩子们特别安静,肯定在搞什么鬼。",
+      "occ": [[2284,"up to something"]] },
+
+    { "head": "set to work", "gloss": "开始动手、着手干活", "ipa": "/set tə wɜːk/",
+      "note": "set to work = 开始干活、着手做事。",
+      "literal": [{"word":"set","meaning_cn":"(此处)开始","note_cn":"非'放置'义"},{"word":"to","meaning_cn":"去"},{"word":"work","meaning_cn":"工作、干活"}],
+      "ex_en": "After breakfast they set to work in the garden.", "ex_cn": "早饭后他们开始在花园里干活。",
+      "occ": [[2290,"set to work"]] }
+  ],
+  "skipped": [
+    "专名/人名:Aunt Polly / Sid / Mary / Joe Harper / Mrs. Harper / Huck / Pain-killer / Illinois / Missouri",
+    "方言拼写:warn't / mischeevous / harum-scarum / throwed / busted / cretur / 'most / God'll / ain't / giddy",
+    "古语惯用:The Lord giveth and the Lord hath taken away(一次性文学/圣经腔)",
+    "航海令/引号喊话:cast off / \"yawl\" duty / \"hear something\"(一次性)",
+    "一次性文学惯语:put this and that together / slept like a graven image / true-blue",
+    "一次性描述性组合:shoal water / streaming garments / broken-hearted ejaculations"
+  ]
+}

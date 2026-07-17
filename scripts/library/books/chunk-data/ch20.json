@@ -1,0 +1,306 @@
+{
+  "chapter": 20,
+  "chunks": [
+    {
+      "head": "toss one's head",
+      "gloss": "把头一甩(表不屑、生气或傲慢)",
+      "ipa": "/tɒs wʌnz hed/",
+      "note": "猛地把头一甩的动作，常表示轻蔑、生气或不理睬。本章 Becky 甩头走开，正是不屑一顾。",
+      "literal": [
+        {"word": "tossed", "meaning_cn": "甩", "note_cn": "此处指猛地一甩，非“抛掷”"},
+        {"word": "her", "meaning_cn": "她的"},
+        {"word": "head", "meaning_cn": "头"}
+      ],
+      "ex_en": "She tossed her head and walked off without a word.",
+      "ex_cn": "她把头一甩，一句话没说就走开了。",
+      "occ": [[2870, "tossed her head"]]
+    },
+    {
+      "head": "make up",
+      "gloss": "和好；重归于好",
+      "ipa": "/meɪk ʌp/",
+      "note": "本章指吵架后和解。make up 另有“编造、化妆、组成、补上”等多义。",
+      "literal": [
+        {"word": "make", "meaning_cn": "做"},
+        {"word": "up", "meaning_cn": "(与 make 连用表和好)", "note_cn": "此处非“向上”，与 make 合成“和解”"}
+      ],
+      "ex_en": "The two friends quarreled but soon made up.",
+      "ex_cn": "两个朋友吵了架，但很快就和好了。",
+      "occ": [[2866, "make up"]]
+    },
+    {
+      "head": "keep to oneself",
+      "gloss": "独来独往；别来打扰(管好自己)",
+      "ipa": "/kiːp tə wʌnˈself/",
+      "note": "keep (oneself) to oneself 指不与人来往、别多管闲事。本章 Becky 用命令语气叫 Tom 别来招惹她。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "保持"},
+        {"word": "yourself", "meaning_cn": "你自己"},
+        {"word": "to", "meaning_cn": "对着"},
+        {"word": "yourself", "meaning_cn": "你自己"}
+      ],
+      "ex_en": "He keeps to himself and rarely talks to the neighbors.",
+      "ex_cn": "他独来独往，很少跟邻居说话。",
+      "occ": [[2868, "keep yourself to yourself"]]
+    },
+    {
+      "head": "presence of mind",
+      "gloss": "沉着；镇定应变的能力",
+      "ipa": "/ˈprezns əv maɪnd/",
+      "note": "指在紧急、意外情况下仍保持冷静、迅速反应的能力。",
+      "literal": [
+        {"word": "presence", "meaning_cn": "存在", "note_cn": "此处指头脑“在场”，即清醒镇定"},
+        {"word": "of", "meaning_cn": "…的"},
+        {"word": "mind", "meaning_cn": "头脑"}
+      ],
+      "ex_en": "She had the presence of mind to call for help at once.",
+      "ex_cn": "她很镇定，立刻就呼救了。",
+      "occ": [[2871, "presence of mind"]]
+    },
+    {
+      "head": "under lock and key",
+      "gloss": "锁得严严实实；妥善锁藏",
+      "ipa": "/ˈʌndər lɒk ənd kiː/",
+      "note": "指把东西锁好保管，不让别人接触。本章 Dobbins 老师把那本书锁得死死的。",
+      "literal": [
+        {"word": "under", "meaning_cn": "在…之下"},
+        {"word": "lock", "meaning_cn": "锁"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "key", "meaning_cn": "钥匙"}
+      ],
+      "ex_en": "She keeps her diary under lock and key.",
+      "ex_cn": "她把日记锁得严严实实。",
+      "occ": [[2883, "under lock and key"]]
+    },
+    {
+      "head": "catch a glimpse of",
+      "gloss": "瞥见；匆匆看到一眼",
+      "ipa": "/kætʃ ə ɡlɪmps əv/",
+      "note": "glimpse 指匆匆一看；catch a glimpse of 表示无意中或短暂地看到。",
+      "literal": [
+        {"word": "caught", "meaning_cn": "瞥见", "note_cn": "此处非“抓住”，与 glimpse 连用"},
+        {"word": "a", "meaning_cn": "一"},
+        {"word": "glimpse", "meaning_cn": "一瞥"},
+        {"word": "of", "meaning_cn": "…的"}
+      ],
+      "ex_en": "I caught a glimpse of the singer as her car drove past.",
+      "ex_cn": "歌手的车开过时，我瞥见了她一眼。",
+      "occ": [[2891, "caught a glimpse of"]]
+    },
+    {
+      "head": "burst out crying",
+      "gloss": "突然大哭起来",
+      "ipa": "/bɜːrst aʊt ˈkraɪɪŋ/",
+      "note": "burst out + 动名词(crying/laughing 等)，表示某种情绪或动作突然爆发。",
+      "literal": [
+        {"word": "burst", "meaning_cn": "爆发"},
+        {"word": "out", "meaning_cn": "出来"},
+        {"word": "crying", "meaning_cn": "哭泣"}
+      ],
+      "ex_en": "The little boy burst out crying when he lost his balloon.",
+      "ex_cn": "小男孩弄丢了气球，突然大哭起来。",
+      "occ": [[2893, "burst out crying"]]
+    },
+    {
+      "head": "sneak up on",
+      "gloss": "偷偷靠近；悄悄接近(某人)",
+      "ipa": "/sniːk ʌp ɒn/",
+      "note": "指不被察觉地悄悄走近，常带惊吓或算计的意味。",
+      "literal": [
+        {"word": "sneak", "meaning_cn": "潜行、偷偷地走"},
+        {"word": "up", "meaning_cn": "靠近"},
+        {"word": "on", "meaning_cn": "(对着某人)"}
+      ],
+      "ex_en": "The cat sneaked up on the sleeping bird.",
+      "ex_cn": "猫悄悄靠近那只睡着的鸟。",
+      "occ": [[2894, "sneak up on"]]
+    },
+    {
+      "head": "tell on someone",
+      "gloss": "告发；打小报告(揭发某人过错)",
+      "ipa": "/tel ɒn ˈsʌmwʌn/",
+      "note": "向老师、家长等揭发别人的过错；也可指(神情等)出卖某人。本章 2915 处指脸色泄露心事。",
+      "literal": [
+        {"word": "tell", "meaning_cn": "告诉、说出"},
+        {"word": "on", "meaning_cn": "(不利于某人)", "note_cn": "此处 on 表“对某人不利”"},
+        {"word": "me", "meaning_cn": "我"}
+      ],
+      "ex_en": "Don't tell on me, or I'll get into trouble.",
+      "ex_cn": "别告发我，不然我要挨罚了。",
+      "occ": [[2896, "tell on me"], [2915, "tell on them"]]
+    },
+    {
+      "head": "get even",
+      "gloss": "报复；扯平；以牙还牙",
+      "ipa": "/ɡet ˈiːvn/",
+      "note": "get even (with sb) 指找某人算账、报复。本章为 getting even on her。",
+      "literal": [
+        {"word": "getting", "meaning_cn": "取得", "note_cn": "此处与 even 连用表“算账、扯平”"},
+        {"word": "even", "meaning_cn": "扯平的", "note_cn": "此处非“偶数/平坦”义"},
+        {"word": "on", "meaning_cn": "(对着)"},
+        {"word": "her", "meaning_cn": "她"}
+      ],
+      "ex_en": "He wanted to get even with the bully who teased him.",
+      "ex_cn": "他想找那个欺负他的人算账。",
+      "occ": [[2911, "getting even on her"]]
+    },
+    {
+      "head": "sweat it out",
+      "gloss": "苦熬；焦虑中煎熬着等结果",
+      "ipa": "/swet ɪt aʊt/",
+      "note": "指在焦虑、紧张中忍耐、苦苦等待某事结束或结果揭晓。",
+      "literal": [
+        {"word": "sweat", "meaning_cn": "煎熬", "note_cn": "此处非字面“出汗”，指焦虑苦熬"},
+        {"word": "it", "meaning_cn": "它"},
+        {"word": "out", "meaning_cn": "(熬)到底"}
+      ],
+      "ex_en": "There's nothing to do now but sweat it out and wait for the news.",
+      "ex_cn": "现在只能苦苦煎熬，等着消息了。",
+      "occ": [[2919, "sweat it out"]]
+    },
+    {
+      "head": "in a fix",
+      "gloss": "陷入困境；进退两难",
+      "ipa": "/ɪn ə fɪks/",
+      "note": "本章出处为分离式(in just such a fix)，故 card-only。",
+      "literal": [
+        {"word": "in", "meaning_cn": "处于"},
+        {"word": "a", "meaning_cn": "一个"},
+        {"word": "fix", "meaning_cn": "困境", "note_cn": "此处非“修理”义"}
+      ],
+      "ex_en": "I'm in a fix—I forgot my wallet at home.",
+      "ex_cn": "我遇上麻烦了——把钱包忘在家里了。",
+      "cardOnly": true,
+      "key": "in a fix",
+      "exSeq": 2919
+    },
+    {
+      "head": "steal a glance at",
+      "gloss": "偷看一眼；偷偷瞟一眼",
+      "ipa": "/stiːl ə ɡlɑːns ət/",
+      "note": "steal 此处指“偷偷地”做；steal a glance 表示迅速而不引人注意地看一眼。",
+      "literal": [
+        {"word": "stole", "meaning_cn": "偷偷地(看)", "note_cn": "此处非“偷窃”，指偷偷地做某动作"},
+        {"word": "a", "meaning_cn": "一"},
+        {"word": "glance", "meaning_cn": "一瞥"},
+        {"word": "at", "meaning_cn": "向"}
+      ],
+      "ex_en": "He stole a glance at the clock during the meeting.",
+      "ex_cn": "开会时他偷偷瞟了一眼钟。",
+      "occ": [[2923, "stole a glance at"]]
+    },
+    {
+      "head": "when the worst comes to the worst",
+      "gloss": "万一情况最糟；最坏的打算",
+      "ipa": "/wen ðə wɜːrst kʌmz tə ðə wɜːrst/",
+      "note": "假设最坏的情形发生时(该怎么办)。本章为过去式 came。",
+      "literal": [
+        {"word": "when", "meaning_cn": "当…时"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "worst", "meaning_cn": "最糟的情况"},
+        {"word": "came", "meaning_cn": "到来"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "worst", "meaning_cn": "最糟的地步"}
+      ],
+      "ex_en": "When the worst comes to the worst, we can always sell the car.",
+      "ex_cn": "万一到了最坏的地步，我们总还能把车卖了。",
+      "occ": [[2931, "when the worst came to the worst"]]
+    },
+    {
+      "head": "keep still",
+      "gloss": "保持不动；别出声",
+      "ipa": "/kiːp stɪl/",
+      "note": "still 此处意为“静止的、不作声的”；keep still 指身体不动或不吭声。本章指 Becky 强忍着不开口。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "保持"},
+        {"word": "still", "meaning_cn": "静止的/不作声的", "note_cn": "此处非“仍然”义"}
+      ],
+      "ex_en": "Please keep still while I take your photo.",
+      "ex_cn": "我给你拍照时请别动。",
+      "occ": [[2931, "keep still"]]
+    },
+    {
+      "head": "make an effort",
+      "gloss": "努力；尽力(去做)",
+      "ipa": "/meɪk ən ˈefərt/",
+      "note": "指下功夫、付出努力去做某事。",
+      "literal": [
+        {"word": "made", "meaning_cn": "做出"},
+        {"word": "an", "meaning_cn": "一份"},
+        {"word": "effort", "meaning_cn": "努力"}
+      ],
+      "ex_en": "You must make an effort to speak English every day.",
+      "ex_cn": "你必须努力每天说英语。",
+      "occ": [[2931, "made an effort"]]
+    },
+    {
+      "head": "stick to",
+      "gloss": "坚持；不改变(决定/说法)",
+      "ipa": "/stɪk tuː/",
+      "note": "本章指坚持原来的说法(否认)。stick to 也指遵守、坚持(计划、承诺)。",
+      "literal": [
+        {"word": "stuck", "meaning_cn": "坚持", "note_cn": "此处非“粘住”，指坚持不改"},
+        {"word": "to", "meaning_cn": "(介词)"}
+      ],
+      "ex_en": "Whatever they say, stick to your plan.",
+      "ex_cn": "不管他们怎么说，坚持你的计划。",
+      "occ": [[2933, "stuck to"]]
+    },
+    {
+      "head": "by and by",
+      "gloss": "不久；过一会儿",
+      "ipa": "/baɪ ənd baɪ/",
+      "note": "略显old-fashioned的说法，意为过一段时间之后。",
+      "literal": [
+        {"word": "by", "meaning_cn": "(习语用词)", "note_cn": "单独无实义，须整体记忆"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "by", "meaning_cn": "(习语用词)"}
+      ],
+      "ex_en": "By and by, the guests began to arrive.",
+      "ex_cn": "过了一会儿，客人们开始到了。",
+      "occ": [[2935, "by and by"]]
+    },
+    {
+      "head": "hear a pin drop",
+      "gloss": "(静得)能听见一根针掉地；鸦雀无声",
+      "ipa": "/hɪr ə pɪn drɒp/",
+      "note": "形容极度安静，常用 you could hear a pin drop。",
+      "literal": [
+        {"word": "heard", "meaning_cn": "听见"},
+        {"word": "a", "meaning_cn": "一根"},
+        {"word": "pin", "meaning_cn": "大头针"},
+        {"word": "drop", "meaning_cn": "落下"}
+      ],
+      "ex_en": "The room was so quiet you could hear a pin drop.",
+      "ex_cn": "房间安静得能听见一根针掉在地上。",
+      "occ": [[2956, "heard a pin drop"]]
+    },
+    {
+      "head": "from head to foot",
+      "gloss": "从头到脚；浑身上下",
+      "ipa": "/frəm hed tə fʊt/",
+      "note": "指全身上下。本章形容 Tom 紧张得浑身发抖。",
+      "literal": [
+        {"word": "from", "meaning_cn": "从"},
+        {"word": "head", "meaning_cn": "头"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "foot", "meaning_cn": "脚"}
+      ],
+      "ex_en": "He was covered in mud from head to foot.",
+      "ex_cn": "他从头到脚都是泥。",
+      "occ": [[2972, "from head to foot"]]
+    }
+  ],
+  "skipped": [
+    "专名 Becky Thatcher / Tom Sawyer / Mr. Dobbins / Alfred Temple / Meadow Lane (人名地名)",
+    "方言拼写 ain't / t'other / you was / Nobody'll (迁移弱)",
+    "thin-skinned / chicken-hearted (一次性描写性复合形容词)",
+    "took in (指学校“上课开始”的旧用法，语境专用)",
+    "broken-hearted (较基础/描写)",
+    "of course / for form's sake (偏基础或一次性)",
+    "shot a glance at (与 steal a glance 义近，控量合并保留后者)",
+    "get out of trouble (偏基础/语法化)",
+    "there ain't any way out of it (方言化一次性)"
+  ]
+}

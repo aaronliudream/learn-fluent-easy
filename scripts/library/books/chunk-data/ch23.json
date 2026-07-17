@@ -1,0 +1,333 @@
+{
+  "chapter": 23,
+  "chunks": [
+    {
+      "head": "get away from",
+      "gloss": "摆脱；逃避",
+      "ipa": "/ɡet əˈweɪ frəm/",
+      "note": "get away from sth = 摆脱、逃避某事物；也可指从某地脱身离开。",
+      "literal": [
+        {"word": "get", "meaning_cn": "逃开", "note_cn": "此处非“得到”，指脱身"},
+        {"word": "away", "meaning_cn": "离开"},
+        {"word": "from", "meaning_cn": "从"}
+      ],
+      "ex_en": "I just want to get away from all this noise.",
+      "ex_cn": "我只想摆脱这一切噪音。",
+      "occ": [[3133, "get away from"]]
+    },
+    {
+      "head": "feel sorry for",
+      "gloss": "为…感到难过；同情、可怜",
+      "ipa": "/fiːl ˈsɔːri fər/",
+      "note": "feel sorry for sb = 同情、可怜某人。注意此处 sorry 不是道歉的“对不起”。",
+      "literal": [
+        {"word": "feel", "meaning_cn": "感到"},
+        {"word": "sorry", "meaning_cn": "难过的、怜悯的", "note_cn": "此处非“抱歉”"},
+        {"word": "for", "meaning_cn": "为、对"}
+      ],
+      "ex_en": "I feel sorry for the lost dog.",
+      "ex_cn": "我很同情那只走失的狗。",
+      "occ": [[3168, "feel sorry for"]]
+    },
+    {
+      "head": "stand by",
+      "gloss": "支持；在困难时不离不弃",
+      "ipa": "/stænd baɪ/",
+      "note": "stand by sb = 在某人有难时支持、陪伴、不离弃。另有“待命、袖手旁观”等义。",
+      "literal": [
+        {"word": "stood", "meaning_cn": "支持", "note_cn": "stand 的过去式，此处非“站立”"},
+        {"word": "by", "meaning_cn": "在…身旁"},
+        {"word": "me", "meaning_cn": "我"}
+      ],
+      "ex_en": "A true friend will stand by you in hard times.",
+      "ex_cn": "真正的朋友会在你困难时支持你。",
+      "occ": [[3172, "stood by me"]]
+    },
+    {
+      "head": "out of luck",
+      "gloss": "倒霉；运气不好",
+      "ipa": "/aʊt əv lʌk/",
+      "note": "out of luck = 运气用尽、不走运。反义 in luck = 走运。",
+      "literal": [
+        {"word": "out", "meaning_cn": "用尽、没有了", "note_cn": "out of 表“缺少、耗尽”"},
+        {"word": "of", "meaning_cn": "（介词）"},
+        {"word": "luck", "meaning_cn": "运气"}
+      ],
+      "ex_en": "We were out of luck—the shop had just closed.",
+      "ex_cn": "我们运气不好，商店刚关门。",
+      "occ": [[3172, "out of luck"]]
+    },
+    {
+      "head": "loaf around",
+      "gloss": "游手好闲；无所事事地闲逛",
+      "ipa": "/loʊf əˈraʊnd/",
+      "note": "loaf around = 无所事事地混日子、四处闲荡。",
+      "literal": [
+        {"word": "loafs", "meaning_cn": "闲荡", "note_cn": "作动词，指无所事事，非“面包”"},
+        {"word": "around", "meaning_cn": "四处"}
+      ],
+      "ex_en": "He loafs around all day instead of looking for a job.",
+      "ex_cn": "他整天游手好闲，也不去找工作。",
+      "occ": [[3171, "loafs around"]]
+    },
+    {
+      "head": "hang about",
+      "gloss": "闲荡；徘徊逗留",
+      "ipa": "/hæŋ əˈbaʊt/",
+      "note": "hang about = 在某处闲荡、逗留（英式常说 hang about，美式多说 hang around），此处非“悬挂”。",
+      "literal": [
+        {"word": "hanging", "meaning_cn": "徘徊、逗留", "note_cn": "此处非“悬挂”"},
+        {"word": "about", "meaning_cn": "在附近、四处"}
+      ],
+      "ex_en": "The kids hang about the park after school.",
+      "ex_cn": "孩子们放学后在公园里闲逛。",
+      "occ": [[3185, "hanging about"], [3206, "hung about"]]
+    },
+    {
+      "head": "clear away",
+      "gloss": "清除；驱散、消除",
+      "ipa": "/klɪr əˈweɪ/",
+      "note": "clear away = 把障碍、疑难、雾气或餐具等清除、消除干净。",
+      "literal": [
+        {"word": "clear", "meaning_cn": "清除"},
+        {"word": "away", "meaning_cn": "掉、走开"}
+      ],
+      "ex_en": "The sun will soon clear away the fog.",
+      "ex_cn": "太阳很快会驱散雾气。",
+      "occ": [[3185, "clear away"]]
+    },
+    {
+      "head": "force oneself to do",
+      "gloss": "强迫自己（做某事）",
+      "ipa": "/fɔːrs wʌnˈself tə duː/",
+      "note": "force oneself to do sth = 强迫自己去做（不情愿的）事。",
+      "literal": [
+        {"word": "forcing", "meaning_cn": "强迫"},
+        {"word": "himself", "meaning_cn": "他自己"},
+        {"word": "to", "meaning_cn": "去（做）"}
+      ],
+      "ex_en": "She forced herself to get up early every day.",
+      "ex_cn": "她强迫自己每天早起。",
+      "occ": [[3206, "forcing himself to"]]
+    },
+    {
+      "head": "keep one's ears open",
+      "gloss": "留心听；注意打听",
+      "ipa": "/kiːp wʌnz ɪrz ˈoʊpən/",
+      "note": "keep one's ears open = 留神倾听、注意有没有消息。",
+      "literal": [
+        {"word": "kept", "meaning_cn": "保持"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "ears", "meaning_cn": "耳朵"},
+        {"word": "open", "meaning_cn": "张开的", "note_cn": "此处喻“留神接收消息”"}
+      ],
+      "ex_en": "Keep your ears open for any news about the job.",
+      "ex_cn": "留心打听有没有那份工作的消息。",
+      "occ": [[3210, "kept his ears open"]]
+    },
+    {
+      "head": "flock to",
+      "gloss": "蜂拥而至；成群前往",
+      "ipa": "/flɑːk tə/",
+      "note": "flock to = 大批人涌向某处。flock 原指鸟兽成群。",
+      "literal": [
+        {"word": "flocked", "meaning_cn": "成群涌向", "note_cn": "原指鸟羊成群，喻人群蜂拥"},
+        {"word": "to", "meaning_cn": "去往"}
+      ],
+      "ex_en": "Fans flocked to the stadium for the final match.",
+      "ex_cn": "球迷蜂拥赶到球场看决赛。",
+      "occ": [[3215, "flocked to"]]
+    },
+    {
+      "head": "file in",
+      "gloss": "鱼贯而入；列队进入",
+      "ipa": "/faɪl ɪn/",
+      "note": "file in = 一个接一个排成队进入（反义 file out = 鱼贯而出）。此处 file 非“文件、锉刀”。",
+      "literal": [
+        {"word": "filed", "meaning_cn": "排成一列走", "note_cn": "此处非“文件/锉”义"},
+        {"word": "in", "meaning_cn": "进入"}
+      ],
+      "ex_en": "The students filed in and sat down quietly.",
+      "ex_cn": "学生们鱼贯而入，安静坐下。",
+      "occ": [[3217, "filed in"]]
+    },
+    {
+      "head": "take one's place",
+      "gloss": "就位；入座",
+      "ipa": "/teɪk wʌnz pleɪs/",
+      "note": "take one's place = 到自己的位置上、就座、就位。",
+      "literal": [
+        {"word": "took", "meaning_cn": "就（位）", "note_cn": "take 的过去式"},
+        {"word": "their", "meaning_cn": "他们的"},
+        {"word": "places", "meaning_cn": "位置"}
+      ],
+      "ex_en": "The players took their places on the field.",
+      "ex_cn": "队员们在场上各就各位。",
+      "occ": [[3217, "took their places"], [3250, "took his place"]]
+    },
+    {
+      "head": "sneak away",
+      "gloss": "偷偷溜走",
+      "ipa": "/sniːk əˈweɪ/",
+      "note": "sneak away = 悄悄地溜走、不让人察觉地离开。",
+      "literal": [
+        {"word": "sneaked", "meaning_cn": "偷偷地走"},
+        {"word": "away", "meaning_cn": "离开"}
+      ],
+      "ex_en": "He tried to sneak away before the meeting ended.",
+      "ex_cn": "他想在会议结束前偷偷溜走。",
+      "occ": [[3221, "sneaked away"]]
+    },
+    {
+      "head": "change one's mind",
+      "gloss": "改变主意",
+      "ipa": "/tʃeɪndʒ wʌnz maɪnd/",
+      "note": "change one's mind = 改变原来的决定或想法。",
+      "literal": [
+        {"word": "changed", "meaning_cn": "改变"},
+        {"word": "our", "meaning_cn": "我们的"},
+        {"word": "mind", "meaning_cn": "主意、想法"}
+      ],
+      "ex_en": "I was going to buy it, but I changed my mind.",
+      "ex_cn": "我本来要买，可后来改变了主意。",
+      "occ": [[3246, "changed our mind"]]
+    },
+    {
+      "head": "under the influence of",
+      "gloss": "在…的影响下；受…作用",
+      "ipa": "/ˈʌndər ðə ˈɪnfluəns əv/",
+      "note": "under the influence of = 受…影响；单说 under the influence 常特指“醉酒/受药物作用”。本章即指酒力作用。",
+      "literal": [
+        {"word": "under", "meaning_cn": "在…之下"},
+        {"word": "the", "meaning_cn": "（定冠词）"},
+        {"word": "influence", "meaning_cn": "影响"},
+        {"word": "of", "meaning_cn": "…的"}
+      ],
+      "ex_en": "He made that choice under the influence of his friends.",
+      "ex_cn": "他是在朋友的影响下做出那个决定的。",
+      "occ": [[3245, "under the influence of"]]
+    },
+    {
+      "head": "above suspicion",
+      "gloss": "无可怀疑；清白可信",
+      "ipa": "/əˈbʌv səˈspɪʃən/",
+      "note": "above suspicion = 好到不容怀疑、清白可信。above 此处表“超出（怀疑）之上”。",
+      "literal": [
+        {"word": "above", "meaning_cn": "在…之上", "note_cn": "此处喻“不容、超出”"},
+        {"word": "suspicion", "meaning_cn": "怀疑"}
+      ],
+      "ex_en": "The judge must be honest and above suspicion.",
+      "ex_cn": "法官必须诚实、清白无可怀疑。",
+      "occ": [[3240, "above suspicion"]]
+    },
+    {
+      "head": "to and fro",
+      "gloss": "来回地；往复地",
+      "ipa": "/tə ənd froʊ/",
+      "note": "to and fro = 来来回回、往复移动。",
+      "literal": [
+        {"word": "to", "meaning_cn": "（往）去"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "fro", "meaning_cn": "（往）回", "note_cn": "古旧词，几乎只用于此搭配"}
+      ],
+      "ex_en": "The baby fell asleep as the cradle rocked to and fro.",
+      "ex_cn": "摇篮来回摆动，婴儿睡着了。",
+      "occ": [[3242, "to and fro"]]
+    },
+    {
+      "head": "never mind",
+      "gloss": "别在意；不用（管）",
+      "ipa": "/ˈnevər maɪnd/",
+      "note": "never mind = 别放在心上、不必费心（安慰别人或叫人别操心时用）。",
+      "literal": [
+        {"word": "never", "meaning_cn": "不要"},
+        {"word": "mind", "meaning_cn": "介意、操心", "note_cn": "此处作动词“在意”"}
+      ],
+      "ex_en": "Never mind the mess—I'll clean it later.",
+      "ex_cn": "别管这乱糟糟的，我待会儿收拾。",
+      "occ": [[3277, "never mind"]]
+    },
+    {
+      "head": "speak up",
+      "gloss": "大声点说；说响亮些",
+      "ipa": "/spiːk ʌp/",
+      "note": "speak up = 把声音提高一点；也可指“公开表态、仗义执言”。",
+      "literal": [
+        {"word": "speak", "meaning_cn": "说"},
+        {"word": "up", "meaning_cn": "（声音）提高", "note_cn": "此处指提高音量"}
+      ],
+      "ex_en": "Could you speak up? I can't hear you.",
+      "ex_cn": "你能大声点吗？我听不见。",
+      "occ": [[3265, "speak up"]]
+    },
+    {
+      "head": "speak out",
+      "gloss": "大胆说出；直言",
+      "ipa": "/spiːk aʊt/",
+      "note": "speak out = 把想法直率地说出来、公开表态。",
+      "literal": [
+        {"word": "speak", "meaning_cn": "说"},
+        {"word": "out", "meaning_cn": "（说）出来", "note_cn": "此处指坦率说出"}
+      ],
+      "ex_en": "Don't be shy—speak out and tell us what you think.",
+      "ex_cn": "别害羞，大胆说出你的想法。",
+      "occ": [[3281, "speak out"]]
+    },
+    {
+      "head": "with bated breath",
+      "gloss": "屏息地；紧张急切地（等待）",
+      "ipa": "/wɪð ˈbeɪtɪd breθ/",
+      "note": "with bated breath = 屏住呼吸地，形容紧张、急切地期待。",
+      "literal": [
+        {"word": "with", "meaning_cn": "带着"},
+        {"word": "bated", "meaning_cn": "屏住的", "note_cn": "古旧词，几乎只用于 bated breath"},
+        {"word": "breath", "meaning_cn": "呼吸"}
+      ],
+      "ex_en": "We waited with bated breath for the results.",
+      "ex_cn": "我们屏息等待结果。",
+      "occ": [[3288, "bated breath"]]
+    },
+    {
+      "head": "quick as lightning",
+      "gloss": "快如闪电；飞快地",
+      "ipa": "/kwɪk əz ˈlaɪtnɪŋ/",
+      "note": "quick as lightning = 快得像闪电，形容动作极快。",
+      "literal": [
+        {"word": "quick", "meaning_cn": "快的"},
+        {"word": "as", "meaning_cn": "像"},
+        {"word": "lightning", "meaning_cn": "闪电"}
+      ],
+      "ex_en": "Quick as lightning, the cat caught the mouse.",
+      "ex_cn": "猫飞快地抓住了老鼠。",
+      "occ": [[3292, "quick as lightning"]]
+    },
+    {
+      "head": "give a start",
+      "gloss": "吓一跳；惊得一动",
+      "ipa": "/ɡɪv ə stɑːrt/",
+      "note": "本章出处为分离式（“gave a barely perceptible start”，中间插入形容词），故 card-only。give a start = 因惊吓而猛地一动、吓一跳。",
+      "literal": [
+        {"word": "gave", "meaning_cn": "（give 过去式）（猛地）做出"},
+        {"word": "a", "meaning_cn": "一（下）"},
+        {"word": "start", "meaning_cn": "惊起、一颤", "note_cn": "此处为名词“吓一跳”，非“开始”"}
+      ],
+      "ex_en": "The loud knock gave me a start.",
+      "ex_cn": "那响亮的敲门声吓了我一跳。",
+      "cardOnly": true,
+      "key": "give a start",
+      "exSeq": 3272
+    }
+  ],
+  "skipped": [
+    "Muff Potter / Injun Joe / Horse Williams / Thomas Sawyer（专名）",
+    "take the witness / rest our case / cross-examine / counsel for the prosecution 等（一次性法律术语）",
+    "in a cold shiver / in a sweat（一次性焦虑描写）",
+    "like the dickens（方言强调，迁移弱）",
+    "no account / hain't / warn't / ketch / som'ers / furder / yourn（方言拼写）",
+    "to the last degree（较冷僻正式说法）",
+    "to the effect that（正式一次性）",
+    "his tongue failed him / the toils were closing（文学性一次性比喻）",
+    "worked up an atmosphere / hung upon his words / warmed to his subject（文学性，控量舍去）",
+    "keep mum / a goner / from time to time（已在前章 ch10 收录）"
+  ]
+}

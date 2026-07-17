@@ -1,0 +1,273 @@
+{
+  "chapter": 21,
+  "chunks": [
+    {
+      "head": "make a good showing",
+      "gloss": "表现出色；给人留下好印象",
+      "ipa": "/meɪk ə ɡʊd ˈʃoʊɪŋ/",
+      "note": "showing 此处指(公开场合下的)表现；make a good showing = 表现得体、有面子。",
+      "literal": [
+        {"word": "make", "meaning_cn": "做出"},
+        {"word": "a", "meaning_cn": "一次"},
+        {"word": "good", "meaning_cn": "好的"},
+        {"word": "showing", "meaning_cn": "表现", "note_cn": "此处指公开的表现，非“展示物”"}
+      ],
+      "ex_en": "Our team wanted to make a good showing at the science fair.",
+      "ex_cn": "我们队想在科学展上表现出色。",
+      "occ": [[2982, "make a good showing"]]
+    },
+    {
+      "head": "come to the surface",
+      "gloss": "浮现；显露出来",
+      "ipa": "/kʌm tə ðə ˈsɜːrfɪs/",
+      "note": "字面“浮到表面”，喻指原本隐藏的情绪、真相等暴露出来。",
+      "literal": [
+        {"word": "came", "meaning_cn": "来到"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "surface", "meaning_cn": "表面", "note_cn": "此处喻指“显露之处”"}
+      ],
+      "ex_en": "His jealousy slowly came to the surface.",
+      "ex_cn": "他的嫉妒渐渐显露了出来。",
+      "occ": [[2986, "came to the surface"]]
+    },
+    {
+      "head": "hit upon",
+      "gloss": "(突然)想到；偶然发现",
+      "ipa": "/hɪt əˈpɑːn/",
+      "note": "hit upon/on sth = 灵机一动想到(主意、办法)。",
+      "literal": [
+        {"word": "hit", "meaning_cn": "碰上", "note_cn": "此处非“打”，指偶然遇到、想到"},
+        {"word": "upon", "meaning_cn": "在…上", "note_cn": "习语固定介词"}
+      ],
+      "ex_en": "She hit upon a clever way to save money.",
+      "ex_cn": "她想到了一个省钱的妙招。",
+      "occ": [[2991, "hit upon"]]
+    },
+    {
+      "head": "interfere with",
+      "gloss": "妨碍；干扰",
+      "ipa": "/ˌɪntərˈfɪr wɪð/",
+      "note": "interfere with sth = 干扰、妨碍某事的正常进行。",
+      "literal": [
+        {"word": "interfere", "meaning_cn": "干涉"},
+        {"word": "with", "meaning_cn": "与"}
+      ],
+      "ex_en": "Loud music interferes with my studying.",
+      "ex_cn": "吵闹的音乐干扰我学习。",
+      "occ": [[2994, "interfere with"]]
+    },
+    {
+      "head": "take part in",
+      "gloss": "参加；参与",
+      "ipa": "/teɪk pɑːrt ɪn/",
+      "note": "take part in = 参加(活动、比赛等)，强调亲身参与。",
+      "literal": [
+        {"word": "take", "meaning_cn": "参与", "note_cn": "此处为固定搭配用法"},
+        {"word": "part", "meaning_cn": "一份、角色"},
+        {"word": "in", "meaning_cn": "在…中"}
+      ],
+      "ex_en": "Every student can take part in the singing contest.",
+      "ex_cn": "每个学生都可以参加歌唱比赛。",
+      "occ": [[3000, "take part in"]]
+    },
+    {
+      "head": "out of order",
+      "gloss": "出故障；失灵",
+      "ipa": "/aʊt əv ˈɔːrdər/",
+      "note": "指机器、设备坏了不能用。本章把男孩的动作比作“有点失灵的机器”。",
+      "literal": [
+        {"word": "out", "meaning_cn": "脱离"},
+        {"word": "of", "meaning_cn": "(习语固定介词)"},
+        {"word": "order", "meaning_cn": "正常状态", "note_cn": "此处指“正常运转”，非“命令/顺序”"}
+      ],
+      "ex_en": "The lift is out of order, so we took the stairs.",
+      "ex_cn": "电梯坏了，我们走了楼梯。",
+      "occ": [[3003, "out of order"]]
+    },
+    {
+      "head": "get through",
+      "gloss": "(顺利)完成；熬过；通过",
+      "ipa": "/ɡet θruː/",
+      "note": "本章指顺利做完(表演)。也可指通过考试、熬过难关等。",
+      "literal": [
+        {"word": "got", "meaning_cn": "(达成)"},
+        {"word": "through", "meaning_cn": "从头到尾", "note_cn": "此处指做完、走完全程"}
+      ],
+      "ex_en": "I was nervous, but I got through my speech.",
+      "ex_cn": "我很紧张，但还是把演讲讲完了。",
+      "occ": [[3004, "got through"]]
+    },
+    {
+      "head": "a round of applause",
+      "gloss": "一阵掌声",
+      "ipa": "/ə raʊnd əv əˈplɔːz/",
+      "note": "a round of applause = 一阵(集体的)掌声，常用于表演、发言之后。",
+      "literal": [
+        {"word": "round", "meaning_cn": "一阵", "note_cn": "此处指“一轮、一阵”"},
+        {"word": "of", "meaning_cn": "…的"},
+        {"word": "applause", "meaning_cn": "掌声"}
+      ],
+      "ex_en": "The audience gave her a big round of applause.",
+      "ex_cn": "观众给了她热烈的掌声。",
+      "occ": [[3004, "round of applause"]]
+    },
+    {
+      "head": "break down",
+      "gloss": "(说话/情绪)中断、垮掉；(机器)出故障",
+      "ipa": "/breɪk daʊn/",
+      "note": "本章指汤姆背演讲时中途卡壳、说不下去。也常指机器抛锚或人情绪崩溃。",
+      "literal": [
+        {"word": "broke", "meaning_cn": "中断"},
+        {"word": "down", "meaning_cn": "(向下)垮掉"}
+      ],
+      "ex_en": "He broke down and forgot all his lines on stage.",
+      "ex_cn": "他一下卡住，在台上忘了所有台词。",
+      "occ": [[3006, "broke down"]]
+    },
+    {
+      "head": "clear one's throat",
+      "gloss": "清清嗓子",
+      "ipa": "/klɪr wʌnz θroʊt/",
+      "note": "说话或朗读前轻咳一声清嗓；也用于示意或缓解紧张。",
+      "literal": [
+        {"word": "cleared", "meaning_cn": "清理"},
+        {"word": "her", "meaning_cn": "她的"},
+        {"word": "throat", "meaning_cn": "喉咙"}
+      ],
+      "ex_en": "He cleared his throat before he began to sing.",
+      "ex_cn": "他唱歌前先清了清嗓子。",
+      "occ": [[3016, "cleared her throat"]]
+    },
+    {
+      "head": "no matter what",
+      "gloss": "无论什么；不管怎样",
+      "ipa": "/noʊ ˈmætər wʌt/",
+      "note": "no matter what (+从句) = 无论…都，引导让步状语。",
+      "literal": [
+        {"word": "no", "meaning_cn": "不"},
+        {"word": "matter", "meaning_cn": "要紧", "note_cn": "“no matter”合起来意为“无论”"},
+        {"word": "what", "meaning_cn": "什么"}
+      ],
+      "ex_en": "No matter what happens, I will support you.",
+      "ex_cn": "无论发生什么，我都支持你。",
+      "occ": [[3020, "no matter what"]]
+    },
+    {
+      "head": "feel obliged to",
+      "gloss": "觉得有义务；不得不(做)",
+      "ipa": "/fiːl əˈblaɪdʒd tə/",
+      "note": "feel obliged to do = 感到有责任、义务去做，常出于礼节或压力。",
+      "literal": [
+        {"word": "feel", "meaning_cn": "感到"},
+        {"word": "obliged", "meaning_cn": "有义务的"},
+        {"word": "to", "meaning_cn": "去(做)"}
+      ],
+      "ex_en": "She felt obliged to thank everyone who helped.",
+      "ex_cn": "她觉得应该感谢每个帮过忙的人。",
+      "occ": [[3022, "feel obliged to"]]
+    },
+    {
+      "head": "from time to time",
+      "gloss": "时不时；偶尔",
+      "ipa": "/frəm taɪm tə taɪm/",
+      "note": "表示不定期地、偶尔发生。",
+      "literal": [
+        {"word": "from", "meaning_cn": "从"},
+        {"word": "time", "meaning_cn": "时间", "note_cn": "习语固定用法，无独立含义"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "time", "meaning_cn": "时间"}
+      ],
+      "ex_en": "We still meet up from time to time.",
+      "ex_cn": "我们还是会时不时聚一聚。",
+      "occ": [[3037, "from time to time"]]
+    },
+    {
+      "head": "by far",
+      "gloss": "…得多；(最高级前)远远地",
+      "ipa": "/baɪ fɑːr/",
+      "note": "用于比较级/最高级前加强语气，表示差距很大。",
+      "literal": [
+        {"word": "by", "meaning_cn": "(表程度差距)"},
+        {"word": "far", "meaning_cn": "远", "note_cn": "此处指程度差距大"}
+      ],
+      "ex_en": "This is by far the best cake I've ever eaten.",
+      "ex_cn": "这是我吃过的最好吃的蛋糕，好太多了。",
+      "occ": [[3063, "by far"]]
+    },
+    {
+      "head": "turn one's back to",
+      "gloss": "背对着；转身背向",
+      "ipa": "/tɜːrn wʌnz bæk tə/",
+      "note": "turn one's back to/on = 把背转向某人/某物；引申可指“不理睬、背弃”。本章为字面义。",
+      "literal": [
+        {"word": "turned", "meaning_cn": "转"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "back", "meaning_cn": "背"},
+        {"word": "to", "meaning_cn": "朝向"}
+      ],
+      "ex_en": "He turned his back to the wind to light the match.",
+      "ex_cn": "他背对着风点火柴。",
+      "occ": [[3065, "turned his back to"]]
+    },
+    {
+      "head": "keep someone from doing",
+      "gloss": "阻止；使…不(做)",
+      "ipa": "/kiːp frəm/",
+      "note": "keep sb/sth from doing = 防止、使…不做某事。from 后接动名词。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "使…保持"},
+        {"word": "her", "meaning_cn": "它(指母猫)"},
+        {"word": "from", "meaning_cn": "(阻止)", "note_cn": "“from + 动名词”表阻止"},
+        {"word": "mewing", "meaning_cn": "喵喵叫"}
+      ],
+      "ex_en": "A fence keeps the dog from running away.",
+      "ex_cn": "栅栏使狗跑不掉。",
+      "occ": [[3072, "keep her from mewing"]]
+    },
+    {
+      "head": "in an instant",
+      "gloss": "一瞬间；立刻",
+      "ipa": "/ɪn ən ˈɪnstənt/",
+      "note": "instant = 瞬间；in an instant = 转眼之间、马上。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在…内"},
+        {"word": "an", "meaning_cn": "一个"},
+        {"word": "instant", "meaning_cn": "瞬间"}
+      ],
+      "ex_en": "The magician vanished in an instant.",
+      "ex_cn": "魔术师转眼就不见了。",
+      "occ": [[3073, "in an instant"]]
+    },
+    {
+      "head": "break up",
+      "gloss": "(使)散会；解散；结束",
+      "ipa": "/breɪk ʌp/",
+      "note": "本章指(会场)散场。也指分手、(团体)解散、(关系)破裂。",
+      "literal": [
+        {"word": "broke", "meaning_cn": "(使)结束"},
+        {"word": "up", "meaning_cn": "(彻底)散开"}
+      ],
+      "ex_en": "The meeting broke up at noon.",
+      "ex_cn": "会议中午散场了。",
+      "occ": [[3075, "broke up"]]
+    }
+  ],
+  "skipped": [
+    "Mr. Dobbins / Tom Sawyer / Daniel Webster / Franklin (人名专名)",
+    "Examination day / Examination Evening / A Vision / A Missouri Maiden's Farewell to Alabama (标题专名)",
+    "Alabama / Missouri / Tallapoosa / Tallassee / Coosa / the Crusades / Elysian world (地名与典故专名)",
+    "整段引用的女生“作文/诗/散文”朗诵(seq 3028-3060,一次性华丽古语,归难句层)",
+    "in the fulness of time (古旧文学惯语,一次性)",
+    "lug in by the ears (生僻习语,一次性)",
+    "swore in the signpainter's boy (较冷僻,swear sb in)",
+    "do the master a mischief (古旧,do sb a mischief)",
+    "badly worsted / retired from the field (一次性描写)",
+    "sat throned upon a raised platform (一次性文学描写)",
+    "and so forth and so on (偏基础,控量舍去)",
+    "in her turn (偏基础/语法化,控量舍去)",
+    "hold up her manuscript (此处字面义,偏基础)",
+    "cling to / claw at (备选,为控量舍去)",
+    "on the verge of (较好但为控量舍去,to the verge of geniality)"
+  ]
+}

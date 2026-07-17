@@ -1,0 +1,376 @@
+{
+  "chapter": 29,
+  "chunks": [
+    {
+      "head": "send out",
+      "gloss": "发出、寄出（邀请、信件等）",
+      "ipa": "/send aʊt/",
+      "note": "send out invitations/letters = 分发、寄出。本章指请柬在日落前发出去了。",
+      "literal": [
+        {"word": "sent", "meaning_cn": "寄、发（send的过去分词）"},
+        {"word": "out", "meaning_cn": "出去", "note_cn": "此处表向外分发"}
+      ],
+      "ex_en": "They sent out the party invitations a week early.",
+      "ex_cn": "他们提前一周把派对请柬寄了出去。",
+      "occ": [[3965, "sent out"]]
+    },
+    {
+      "head": "behave oneself",
+      "gloss": "守规矩、表现得体",
+      "ipa": "/bɪˈheɪv wʌnˈself/",
+      "note": "多用于叮嘱孩子要乖、不要惹麻烦。本章妈妈嘱咐 Becky。",
+      "literal": [
+        {"word": "behave", "meaning_cn": "举止、表现"},
+        {"word": "yourself", "meaning_cn": "你自己"}
+      ],
+      "ex_en": "Behave yourself at your aunt's house today.",
+      "ex_cn": "今天在姨妈家要乖乖的。",
+      "occ": [[3978, "behave yourself"]]
+    },
+    {
+      "head": "carry the day",
+      "gloss": "获胜、占上风、说服众人",
+      "ipa": "/ˈkæri ðə deɪ/",
+      "note": "指在争论或较量中最终胜出。本章 Tom 的劝说占了上风。",
+      "literal": [
+        {"word": "carry", "meaning_cn": "赢得", "note_cn": "此处非“搬运”，指取胜"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "day", "meaning_cn": "（此处指）胜利", "note_cn": "习语固定用法"}
+      ],
+      "ex_en": "Her clever plan carried the day at the meeting.",
+      "ex_cn": "她的妙计在会上占了上风。",
+      "occ": [[3996, "carried the day"]]
+    },
+    {
+      "head": "occur to someone",
+      "gloss": "（某念头）出现在某人脑海、突然想到",
+      "ipa": "/əˈkɜːr tə ˈsʌmwʌn/",
+      "note": "it occurs to sb that... = 某人忽然想到某事。本章 Tom 忽然想到 Huck 可能今晚来。",
+      "literal": [
+        {"word": "occurred", "meaning_cn": "想到、浮现", "note_cn": "此处非“发生”，指念头浮上心头"},
+        {"word": "to", "meaning_cn": "对、向"}
+      ],
+      "ex_en": "It suddenly occurred to me that I had left the door open.",
+      "ex_cn": "我突然想到自己没关门。",
+      "occ": [[3998, "occurred to"]]
+    },
+    {
+      "head": "give up",
+      "gloss": "放弃",
+      "ipa": "/ɡɪv ʌp/",
+      "note": "指停止做、不再坚持。本章反复出现，Tom 舍不得放弃聚会的乐趣。",
+      "literal": [
+        {"word": "give", "meaning_cn": "给"},
+        {"word": "up", "meaning_cn": "（放）弃", "note_cn": "此处表彻底放开"}
+      ],
+      "ex_en": "Don't give up—you're almost there.",
+      "ex_cn": "别放弃，你就快成功了。",
+      "occ": [[4000, "give up"]]
+    },
+    {
+      "head": "yield to",
+      "gloss": "屈服于、顺从（诱惑、压力等）",
+      "ipa": "/jiːld tə/",
+      "note": "yield to a temptation/inclination = 抵不住而顺从。本章 Tom 顺从了更强的念头。",
+      "literal": [
+        {"word": "yield", "meaning_cn": "屈从、让步"},
+        {"word": "to", "meaning_cn": "向、于"}
+      ],
+      "ex_en": "He finally yielded to the urge to eat another cookie.",
+      "ex_cn": "他终于没忍住，又吃了一块饼干。",
+      "occ": [[4002, "yield to"]]
+    },
+    {
+      "head": "by and by",
+      "gloss": "不久、过一会儿",
+      "ipa": "/baɪ ənd baɪ/",
+      "note": "略带旧式的说法，意为过一段时间之后。本章多处用连字符形式。",
+      "literal": [
+        {"word": "by", "meaning_cn": "（习语用词）", "note_cn": "单独无实义，须整体记忆"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "by", "meaning_cn": "（习语用词）"}
+      ],
+      "ex_en": "By and by the crowd grew tired and went home.",
+      "ex_cn": "过了一会儿，人群玩累了就都回家了。",
+      "occ": [[4005, "by-and-by"], [4007, "by-and-by"], [4018, "by-and-by"], [4028, "by-and-by"]]
+    },
+    {
+      "head": "wear off",
+      "gloss": "逐渐消失、慢慢减退",
+      "ipa": "/wer ɔːf/",
+      "note": "指某种感觉、效果随时间淡去。本章那份庄严感很快消退了。",
+      "literal": [
+        {"word": "wore", "meaning_cn": "（wear的过去式）此处指渐渐消退"},
+        {"word": "off", "meaning_cn": "掉、去", "note_cn": "表逐渐减少至无"}
+      ],
+      "ex_en": "The pain slowly wore off after an hour.",
+      "ex_cn": "一个小时后疼痛渐渐消退了。",
+      "occ": [[4015, "wore off"]]
+    },
+    {
+      "head": "from head to foot",
+      "gloss": "从头到脚、浑身",
+      "ipa": "/frəm hed tə fʊt/",
+      "note": "夸张地表示全身上下。本章孩子们从头到脚沾满蜡油和泥。",
+      "literal": [
+        {"word": "from", "meaning_cn": "从"},
+        {"word": "head", "meaning_cn": "头"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "foot", "meaning_cn": "脚"}
+      ],
+      "ex_en": "He was covered in mud from head to foot.",
+      "ex_cn": "他从头到脚沾满了泥。",
+      "occ": [[4028, "from head to foot"]]
+    },
+    {
+      "head": "at hand",
+      "gloss": "临近、即将到来；在手边",
+      "ipa": "/æt hænd/",
+      "note": "本章指夜幕即将来临（时间上的临近）；也可指某物就在近旁。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "hand", "meaning_cn": "手", "note_cn": "此处引申为“近处、快到”"}
+      ],
+      "ex_en": "Winter is at hand, so bring out the warm coats.",
+      "ex_cn": "冬天快到了，把厚外套拿出来吧。",
+      "occ": [[4029, "at hand"]]
+    },
+    {
+      "head": "turn in",
+      "gloss": "上床睡觉",
+      "ipa": "/tɜːrn ɪn/",
+      "note": "口语，指去睡觉。本章 Huck 累了想不想干脆回去睡了。",
+      "literal": [
+        {"word": "turn", "meaning_cn": "转"},
+        {"word": "in", "meaning_cn": "进（被窝）", "note_cn": "此处指去睡觉"}
+      ],
+      "ex_en": "It's late—I think I'll turn in now.",
+      "ex_cn": "很晚了，我想我该去睡了。",
+      "occ": [[4043, "turn in"]]
+    },
+    {
+      "head": "brush by",
+      "gloss": "擦身而过、匆匆掠过",
+      "ipa": "/brʌʃ baɪ/",
+      "note": "指从身边紧挨着快速经过。本章两个人从 Huck 身边擦过。",
+      "literal": [
+        {"word": "brushed", "meaning_cn": "擦、掠过"},
+        {"word": "by", "meaning_cn": "从旁边"}
+      ],
+      "ex_en": "A stranger brushed by me on the crowded stairs.",
+      "ex_cn": "在拥挤的楼梯上，一个陌生人从我身边擦过。",
+      "occ": [[4048, "brushed by"]]
+    },
+    {
+      "head": "stick to",
+      "gloss": "紧跟不放；坚持",
+      "ipa": "/stɪk tə/",
+      "note": "本章指紧紧跟着那两人不放。也常表“坚持（计划、说法）”。",
+      "literal": [
+        {"word": "stick", "meaning_cn": "黏住、贴紧"},
+        {"word": "to", "meaning_cn": "于"}
+      ],
+      "ex_en": "Let's stick to the plan we made yesterday.",
+      "ex_cn": "咱们还是按昨天定的计划来吧。",
+      "occ": [[4053, "stick to"]]
+    },
+    {
+      "head": "pass by",
+      "gloss": "经过、路过",
+      "ipa": "/pæs baɪ/",
+      "note": "指从某地旁边走过而不停留。本章那两人路过老威尔士人的房子未停。",
+      "literal": [
+        {"word": "passed", "meaning_cn": "经过"},
+        {"word": "by", "meaning_cn": "旁边"}
+      ],
+      "ex_en": "We passed by the bakery on our way to school.",
+      "ex_cn": "上学路上我们经过了那家面包店。",
+      "occ": [[4057, "passed by"]]
+    },
+    {
+      "head": "clear one's throat",
+      "gloss": "清嗓子",
+      "ipa": "/klɪr wʌnz θroʊt/",
+      "note": "指发出轻咳以清嗓，常在开口说话前。本章有人在近旁清了清嗓子，吓坏了 Huck。",
+      "literal": [
+        {"word": "cleared", "meaning_cn": "清、弄干净"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "throat", "meaning_cn": "喉咙"}
+      ],
+      "ex_en": "He cleared his throat before starting his speech.",
+      "ex_cn": "他清了清嗓子，然后开始演讲。",
+      "occ": [[4067, "cleared his throat"]]
+    },
+    {
+      "head": "take charge of",
+      "gloss": "控制、掌管、接管",
+      "ipa": "/teɪk tʃɑːrdʒ əv/",
+      "note": "指对某事物负责或加以支配。本章夸张地说一群疟疾（寒战）“控制”了 Huck。",
+      "literal": [
+        {"word": "taken", "meaning_cn": "（take的过去分词）"},
+        {"word": "charge", "meaning_cn": "掌管、掌控"},
+        {"word": "of", "meaning_cn": "对、的"}
+      ],
+      "ex_en": "She took charge of the whole project last month.",
+      "ex_cn": "上个月她接管了整个项目。",
+      "occ": [[4068, "taken charge of"]]
+    },
+    {
+      "head": "care for",
+      "gloss": "在乎、喜欢；照料",
+      "ipa": "/ker fɔːr/",
+      "note": "本章意为“在乎、稀罕”——Injun Joe 说他不稀罕她的财物。也可表“照顾”。",
+      "literal": [
+        {"word": "care", "meaning_cn": "在意"},
+        {"word": "for", "meaning_cn": "对于"}
+      ],
+      "ex_en": "I don't really care for spicy food.",
+      "ex_cn": "我其实不太喜欢辣的东西。",
+      "occ": [[4088, "care for"]]
+    },
+    {
+      "head": "be rough on someone",
+      "gloss": "对某人严苛、不客气",
+      "ipa": "/biː rʌf ɑːn ˈsʌmwʌn/",
+      "note": "指对某人态度粗暴、待人苛刻。本章说她丈夫从前对他很凶。",
+      "literal": [
+        {"word": "rough", "meaning_cn": "粗暴的、严厉的", "note_cn": "此处非“粗糙”，指待人狠"},
+        {"word": "on", "meaning_cn": "对、加于"},
+        {"word": "me", "meaning_cn": "我"}
+      ],
+      "ex_en": "The coach was rough on the new players.",
+      "ex_cn": "教练对新队员很严厉。",
+      "occ": [[4089, "rough on me"], [4089, "rough on me"]]
+    },
+    {
+      "head": "take advantage of",
+      "gloss": "利用；占…的便宜、欺负",
+      "ipa": "/teɪk ədˈvæntɪdʒ əv/",
+      "note": "可指“善用（机会）”，也可指“趁人之危、占便宜”。本章为后者贬义。",
+      "literal": [
+        {"word": "took", "meaning_cn": "（take的过去式）"},
+        {"word": "advantage", "meaning_cn": "好处、便宜"},
+        {"word": "of", "meaning_cn": "对、的"}
+      ],
+      "ex_en": "Let's take advantage of the sunny weather and go hiking.",
+      "ex_cn": "趁着天晴，咱们去爬山吧。",
+      "occ": [[4097, "took advantage of"]]
+    },
+    {
+      "head": "take it out on someone",
+      "gloss": "拿某人出气、向某人报复发泄",
+      "ipa": "/teɪk ɪt aʊt ɑːn ˈsʌmwʌn/",
+      "note": "把怒气或不满发泄到别人身上。本章用介词 of（较旧），今多用 on。",
+      "literal": [
+        {"word": "take", "meaning_cn": "拿、发泄"},
+        {"word": "it", "meaning_cn": "（指怒气）"},
+        {"word": "out", "meaning_cn": "出来"},
+        {"word": "of", "meaning_cn": "（旧用法，今多作 on）冲着…"},
+        {"word": "her", "meaning_cn": "她"}
+      ],
+      "ex_en": "Don't take it out on me just because you had a bad day.",
+      "ex_cn": "别因为你今天不顺就拿我出气。",
+      "occ": [[4098, "take it out of her"]]
+    },
+    {
+      "head": "for one's sake",
+      "gloss": "为了某人（的缘故）",
+      "ipa": "/fɔːr wʌnz seɪk/",
+      "note": "表示为了某人的利益或看在某人份上。本章“看在我份上帮我”。",
+      "literal": [
+        {"word": "for", "meaning_cn": "为了"},
+        {"word": "my", "meaning_cn": "我的"},
+        {"word": "sake", "meaning_cn": "缘故、利益", "note_cn": "几乎只用于 for ... sake 结构"}
+      ],
+      "ex_en": "Please stay calm, for my sake.",
+      "ex_cn": "看在我的份上，请你冷静点。",
+      "occ": [[4112, "for my sake"]]
+    },
+    {
+      "head": "hold one's breath",
+      "gloss": "屏住呼吸",
+      "ipa": "/hoʊld wʌnz breθ/",
+      "note": "指憋住气，常因紧张或怕出声。本章 Huck 屏息后退。",
+      "literal": [
+        {"word": "held", "meaning_cn": "（hold的过去式）憋、屏住"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "breath", "meaning_cn": "呼吸、气息"}
+      ],
+      "ex_en": "She held her breath as the diver went under.",
+      "ex_cn": "潜水员下水时，她屏住了呼吸。",
+      "occ": [[4122, "held his breath"]]
+    },
+    {
+      "head": "on tiptoe",
+      "gloss": "踮着脚（尖）",
+      "ipa": "/ɑːn ˈtɪptoʊ/",
+      "note": "指用脚尖轻轻地走，多为不发出声响。本章老人父子踮脚上山。",
+      "literal": [
+        {"word": "on", "meaning_cn": "以…（方式）"},
+        {"word": "tiptoe", "meaning_cn": "脚尖"}
+      ],
+      "ex_en": "She crept in on tiptoe so no one would hear.",
+      "ex_cn": "她踮着脚溜进来，免得被人听见。",
+      "occ": [[4144, "on tiptoe"]]
+    },
+    {
+      "head": "fall to doing",
+      "gloss": "开始（专心）做某事",
+      "ipa": "/fɔːl tə ˈduːɪŋ/",
+      "note": "fall to + 动名词 = 着手、开始起劲地做。本章 Huck 躲好后开始细听。",
+      "literal": [
+        {"word": "fell", "meaning_cn": "（fall的过去式）此处指开始"},
+        {"word": "to", "meaning_cn": "去"},
+        {"word": "listening", "meaning_cn": "倾听"}
+      ],
+      "ex_en": "The hungry boys fell to eating without a word.",
+      "ex_cn": "饿坏了的男孩们二话不说就大吃起来。",
+      "occ": [[4146, "fell to listening"]]
+    },
+    {
+      "head": "all of a sudden",
+      "gloss": "突然、冷不防",
+      "ipa": "/ɔːl əv ə ˈsʌdn/",
+      "note": "表示事情猝然发生。本章突然响起一阵枪声和喊叫。",
+      "literal": [
+        {"word": "all", "meaning_cn": "（加强语气）"},
+        {"word": "of", "meaning_cn": "（习语用词）"},
+        {"word": "a", "meaning_cn": "一"},
+        {"word": "sudden", "meaning_cn": "突然", "note_cn": "此处作名词用，固定搭配"}
+      ],
+      "ex_en": "All of a sudden the lights went out.",
+      "ex_cn": "灯突然熄灭了。",
+      "occ": [[4147, "all of a sudden"]]
+    },
+    {
+      "head": "have a good time",
+      "gloss": "玩得开心、过得愉快",
+      "ipa": "/hæv ə ɡʊd taɪm/",
+      "note": "本章出处为分离式（had an exhausting good time），故 card-only。",
+      "literal": [
+        {"word": "have", "meaning_cn": "度过、享有"},
+        {"word": "a", "meaning_cn": "一段"},
+        {"word": "good", "meaning_cn": "好的"},
+        {"word": "time", "meaning_cn": "时光"}
+      ],
+      "ex_en": "We had a good time at the beach yesterday.",
+      "ex_cn": "昨天我们在海滩玩得很开心。",
+      "cardOnly": true,
+      "key": "have a good time",
+      "exSeq": 3962
+    }
+  ],
+  "skipped": [
+    "Injun Joe / Widow Douglas / Cardiff Hill / Becky / Judge Thatcher / McDougal's cave（专名，按要求跳过）",
+    "you slit her nostrils / notch her ears / horsewhipped / get revenge on（复仇威胁一次性描写）",
+    "hispy and gully-keeper（一次性游戏名）",
+    "dead loads of / awful glad / I reckon / shucks / what's the row（Huck/口语方言感叹）",
+    "thrown into a fever of preparation（一次性文学描写）",
+    "'Stead of / she'd 'a' said（方言缩略拼写）",
+    "betook itself to its slumbers（古旧一次性）",
+    "the quicker the better（比较级句式，偏语法）",
+    "as fast as his legs could carry him（备选，为控量舍去）",
+    "turn over in one's mind（备选分离式，控量舍去）",
+    "take note of / take by surprise（备选分离式，控量舍去）"
+  ]
+}

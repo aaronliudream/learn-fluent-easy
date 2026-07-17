@@ -5,7 +5,7 @@
  * onAnswer 多回一个 pickedIndex,供父组件写错题快照。
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Check, X, Volume2, ChevronRight, ChevronLeft } from "lucide-react";
+import { Check, X, Volume2, ChevronRight, ChevronLeft, Loader2 } from "lucide-react";
 import { T } from "@/i18n/T";
 import { speak, unlockAudioSync, prefetchTTSBatch } from "@/lib/speak";
 
@@ -13,16 +13,30 @@ export type QuizItem =
   | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number; explanation?: string; stemCn?: string; context?: string; audio?: string; passage?: string; term?: string; ipa?: string }
   | { kind: "reveal"; id: string; prompt: string; answer: string; explanation?: string };
 
-/** 复习词/语块的发音按钮(复用点词那套 speak TTS)。单词、短语都可读。 */
+/**
+ * 复习词/语块的发音按钮(复用点词那套 speak TTS)。单词、短语都可读。
+ * 修「点3次才响」:首次冷合成有 loading 反馈 + 合成中禁用,避免用户以为没响而重复点(重复点会撞 speak 的
+ * pendingColdKey 去抖被吞)。配合 Runner 在题目加载时预热 TTS,通常点一次即命中缓存、瞬间出声。
+ */
 function SpeakButton({ text, size = "sm" }: { text: string; size?: "sm" | "lg" }) {
+  const [loading, setLoading] = useState(false);
+  const onClick = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
+    unlockAudioSync();
+    setLoading(true);
+    void speak(text, { accent: "US" }).finally(() => setLoading(false));
+  }, [text]);
+  const box = size === "lg" ? "size-9" : "size-8";
+  const icon = size === "lg" ? "size-4" : "size-3.5";
   return (
     <button
       type="button"
       aria-label="朗读"
-      onClick={(e) => { e.stopPropagation(); unlockAudioSync(); void speak(text, { accent: "US" }); }}
-      className={`inline-flex shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-600 transition hover:bg-sky-200 ${size === "lg" ? "size-9" : "size-8"}`}
+      disabled={loading}
+      onClick={onClick}
+      className={`inline-flex shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-600 transition hover:bg-sky-200 disabled:opacity-70 ${box}`}
     >
-      <Volume2 className={size === "lg" ? "size-4" : "size-3.5"} />
+      {loading ? <Loader2 className={`${icon} animate-spin`} /> : <Volume2 className={icon} />}
     </button>
   );
 }
@@ -69,8 +83,14 @@ export function LibraryQuizRunner({
   const showAnswer = reviewing || revealed;
 
   useEffect(() => {
-    const auds = items.map((it) => (it.kind === "choice" ? it.audio : undefined)).filter(Boolean) as string[];
-    if (auds.length) prefetchTTSBatch(auds, { accent: "US" });
+    // 预热 TTS:听力音频 + 每题被复习的词/短语(term)+ reveal 答案。题目加载时后台合成,
+    // 用户点 🔊 时通常已在缓存 → 手势内瞬间出声,不再冷合成"点3次"。
+    const warm = new Set<string>();
+    for (const it of items) {
+      if (it.kind === "choice") { if (it.audio) warm.add(it.audio); if (it.term) warm.add(it.term); }
+      else if (it.kind === "reveal" && it.answer) warm.add(it.answer);
+    }
+    if (warm.size) prefetchTTSBatch([...warm], { accent: "US" });
   }, [items]);
   useEffect(() => {
     if (item?.kind === "choice" && item.audio) void speak(item.audio, { accent: "US" });

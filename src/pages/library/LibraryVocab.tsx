@@ -4,9 +4,9 @@
  * 三维筛选(状态/书/收藏日期,默认今日待复习)+ 单词/语块栏;每项带 ●●○ 掌握进度、收藏日期、「移除(误收藏)」。
  * 数据只写三处(DECISIONS.md D14):mastery_progress / library_vocab_favorites / user_mistakes。此页仅读 + 删收藏。
  */
-import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Volume2, Trash2, BookMarked, GraduationCap, Sparkles } from "lucide-react";
+import { ArrowLeft, Volume2, Trash2, BookMarked, Sparkles } from "lucide-react";
 import { T } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
 import { speak, unlockAudioSync } from "@/lib/speak";
@@ -161,15 +161,6 @@ export default function LibraryVocab() {
     masteredChunk: reviewable.filter((f) => f.kind === "chunk" && vocabIsMastered(f)).length,
   }), [reviewable, dueFavs]);
 
-  const recentMastered = useMemo(
-    () =>
-      reviewable
-        .filter(vocabIsMastered)
-        .sort((a, b) => (b.last_correct_date ?? "").localeCompare(a.last_correct_date ?? ""))
-        .slice(0, 6),
-    [favs],
-  );
-
   const bookOptions = useMemo(() => {
     const ids = [...new Set(favs.map((f) => f.book_id).filter(Boolean) as string[])];
     return ids.map((id) => ({ id, title: bookTitles.get(id) || id }));
@@ -233,7 +224,7 @@ export default function LibraryVocab() {
         to="/library"
         className="mb-4 inline-flex items-center gap-1 text-sm text-slate-400 transition hover:text-slate-600"
       >
-        <ArrowLeft className="size-4" /> <T>返回书架</T>
+        <ArrowLeft className="size-4" /> <T>返回词库</T>
       </Link>
 
       <h1 className="flex items-center gap-2 text-xl font-bold text-slate-900">
@@ -277,33 +268,14 @@ export default function LibraryVocab() {
         <p className="py-16 text-center text-sm text-slate-500"><T>登录后才能收藏和查看词库。</T></p>
       ) : (
         <>
-          {/* 顶部大圆环:总词数拆成 已掌握/待复习/学习中 三段(替代原来那行小字统计) */}
-          <VocabRing total={reviewable.length} mastered={stat.mastered} due={stat.due} en={en} />
-
-          {/* 今日行动条:待复习是「要做的事」,做完归零 */}
-          <button
-            type="button"
-            disabled={stat.due === 0}
-            onClick={() => setReviewing(true)}
-            className={`mt-4 flex w-full items-center justify-between rounded-2xl px-5 py-4 text-left transition ${
-              stat.due === 0
-                ? "cursor-default bg-emerald-50"
-                : "bg-sky-600 text-white shadow-sm hover:bg-sky-700"
-            }`}
-          >
-            <span className="flex items-center gap-2">
-              <GraduationCap className={`size-5 ${stat.due === 0 ? "text-emerald-500" : ""}`} />
-              {stat.due === 0 ? (
-                <span className="font-semibold text-emerald-700"><T>今日已清零,明天再来 🎉</T></span>
-              ) : (
-                <span>
-                  <span className="text-lg font-bold">{stat.due}</span>{" "}
-                  <span className="text-sm font-semibold opacity-90"><T>个词今日待复习</T></span>
-                </span>
-              )}
-            </span>
-            {stat.due > 0 && <span className="text-sm font-semibold"><T>开始复习</T> ›</span>}
-          </button>
+          {/* 顶部大卡:三同心环 + 三 chip + 卡内「开始复习 →」蓝按钮(照效果图,全在一张圆角卡里) */}
+          <VocabRing
+            total={reviewable.length}
+            mastered={stat.mastered}
+            due={stat.due}
+            en={en}
+            onStart={() => setReviewing(true)}
+          />
 
           {/* 连续学习天数 🔥(断了当前归 0,longest 仍保留)*/}
           {(() => {
@@ -329,33 +301,7 @@ export default function LibraryVocab() {
             );
           })()}
 
-          {/* 成就区:累计掌握(只增不减)+ 最近掌握(用词本身,不用会掉的数)*/}
-          {stat.mastered > 0 && (
-            <div className="mt-3 rounded-2xl border border-amber-100 bg-amber-50/60 px-4 py-3">
-              <div className="flex items-center gap-2 text-sm text-amber-800">
-                <span className="text-base">🌕</span>
-                <span>
-                  <T>已掌握</T> <span className="font-bold">{stat.masteredWord}</span> <T>个单词</T>
-                  {stat.masteredChunk > 0 && (
-                    <> · <span className="font-bold">{stat.masteredChunk}</span> <T>个语块</T></>
-                  )}
-                </span>
-              </div>
-              {recentMastered.length > 0 && (
-                <div className="mt-1.5 text-xs text-amber-700/80">
-                  <T>最近掌握:</T>{" "}
-                  {recentMastered.map((f, i) => (
-                    <Fragment key={f.id}>
-                      {i > 0 && " · "}
-                      <span className="font-medium">{f.term}</span>
-                    </Fragment>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* 词汇成长图表:每月新掌握(绝对数·按书上色),不画增长率 */}
+          {/* 词汇成长图表:三色分组柱(新增/复习/掌握)+ 1W/1M/3M/6M/All */}
           <VocabGrowthChart favs={reviewable} reviewedByDay={reviewedByDay} bjToday={bjToday()} en={en} />
 
           {/* 状态筛选(默认今日待复习)*/}

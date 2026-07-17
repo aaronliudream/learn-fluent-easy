@@ -59,11 +59,6 @@ export default function VocabGrowthChart({
   const [range, setRange] = useState<RangeKey>("1W");
   const g = GRAN[range];
 
-  const cum = useMemo(() => {
-    const m = favs.filter((f) => vocabIsMastered(f));
-    return { word: m.filter((f) => f.kind === "word").length, chunk: m.filter((f) => f.kind === "chunk").length };
-  }, [favs]);
-
   const { axis, data, max } = useMemo(() => {
     // 1) 生成横轴桶键
     let keys: string[] = [];
@@ -107,20 +102,13 @@ export default function VocabGrowthChart({
   const RANGES: RangeKey[] = ["1W", "1M", "3M", "6M", "All"];
   const TRACK = 92; // 柱区像素高
   const bar = (n: number, color: string) => (
-    <div className="w-1.5 rounded-t-sm sm:w-2" style={{ height: `${max > 0 && n > 0 ? Math.max(3, (n / max) * TRACK) : 0}px`, backgroundColor: color }} />
+    <div className="w-3 rounded-t-sm sm:w-3.5" style={{ height: `${max > 0 && n > 0 ? Math.max(3, (n / max) * TRACK) : 0}px`, backgroundColor: color }} />
   );
 
   return (
     <div className="mt-3 rounded-2xl border border-slate-100 bg-white px-4 py-3.5 shadow-sm">
-      <div className="flex items-start justify-between gap-2">
-        <div className="text-sm">
-          <div className="font-bold text-slate-700">{en ? "Vocabulary growth" : "词汇成长"}</div>
-          <div className="mt-0.5 text-xs text-slate-500">
-            {en ? "Mastered so far: " : "累计已掌握 "}
-            <span className="font-bold text-slate-700">{cum.word}</span> {en ? "words" : "词"}
-            {cum.chunk > 0 && <> · <span className="font-bold text-slate-700">{cum.chunk}</span> {en ? "chunks" : "块"}</>}
-          </div>
-        </div>
+      <div className="flex items-center justify-between gap-2">
+        <div className="text-lg font-extrabold text-slate-800">{en ? "Vocabulary Growth" : "词汇成长"}</div>
         <div className="flex shrink-0 rounded-full bg-slate-100 p-0.5">
           {RANGES.map((r) => (
             <button key={r} type="button" onClick={() => setRange(r)}
@@ -133,13 +121,13 @@ export default function VocabGrowthChart({
 
       {/* 三色分组柱 */}
       <div className="mt-3 overflow-x-auto pb-1">
-        <div className="flex items-end gap-2" style={{ minWidth: `${axis.length * 44}px` }}>
+        <div className="flex items-end gap-2" style={{ minWidth: `${axis.length * 52}px` }}>
           {axis.map((k) => {
             const b = data.get(k)!;
             const total = b.added + b.reviewed + b.mastered;
             return (
-              <div key={k} className="flex min-w-[36px] flex-1 flex-col items-center">
-                <div className="flex items-end gap-0.5" style={{ height: TRACK }}>
+              <div key={k} className="flex min-w-[44px] flex-1 flex-col items-center">
+                <div className="flex items-end gap-1" style={{ height: TRACK }}>
                   {bar(b.added, BLUE)}
                   {bar(b.reviewed, ORANGE)}
                   {bar(b.mastered, GREEN)}

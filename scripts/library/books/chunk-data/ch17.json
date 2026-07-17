@@ -1,0 +1,183 @@
+{
+  "chapter": 17,
+  "chunks": [
+    {
+      "head": "give up",
+      "gloss": "放弃；不再做",
+      "ipa": "/ɡɪv ʌp/",
+      "note": "本章出处为分离式（gave them up），故 card-only。give up sth = 放弃、停止做某事。",
+      "literal": [
+        {"word": "give", "meaning_cn": "放弃", "note_cn": "此处非“给予”，须与 up 合看"},
+        {"word": "up", "meaning_cn": "(习语固定词)", "note_cn": "单独无实义"}
+      ],
+      "ex_en": "Don't give up—you're almost there!",
+      "ex_cn": "别放弃，你就快成功了！",
+      "cardOnly": true,
+      "key": "give up",
+      "exSeq": 2531
+    },
+    {
+      "head": "choke back",
+      "gloss": "强忍住（眼泪、哭声）",
+      "ipa": "/tʃoʊk bæk/",
+      "note": "choke back = 拼命咽下、忍住即将涌出的哭声或眼泪。",
+      "literal": [
+        {"word": "choked", "meaning_cn": "硬咽下", "note_cn": "此处非“使窒息”，指忍住"},
+        {"word": "back", "meaning_cn": "回去", "note_cn": "此处指压回、忍住"}
+      ],
+      "ex_en": "He choked back his tears and kept smiling.",
+      "ex_cn": "他强忍住眼泪，继续微笑。",
+      "occ": [[2537, "choked back"]]
+    },
+    {
+      "head": "so-and-so",
+      "gloss": "某某；这样那样（的事）",
+      "ipa": "/ˈsoʊ ən soʊ/",
+      "note": "泛指不便或不必具体说明的人或事，相当于“某某、如此这般”。",
+      "literal": [
+        {"word": "so", "meaning_cn": "如此", "note_cn": "习语固定用词，单独无实义"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "so", "meaning_cn": "如此"}
+      ],
+      "ex_en": "She kept saying she did so-and-so, but gave no details.",
+      "ex_cn": "她一直说自己做了这样那样的事，却不说细节。",
+      "occ": [[2543, "so-and-so"]]
+    },
+    {
+      "head": "this and that",
+      "gloss": "这样那样；各种琐事",
+      "ipa": "/ðɪs ənd ðæt/",
+      "note": "泛指零零碎碎、不重要的各种事情。",
+      "literal": [
+        {"word": "this", "meaning_cn": "这个"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "that", "meaning_cn": "那个"}
+      ],
+      "ex_en": "We chatted about this and that for an hour.",
+      "ex_cn": "我们东拉西扯地聊了一个小时。",
+      "occ": [[2543, "this and that"]]
+    },
+    {
+      "head": "point out",
+      "gloss": "指出；点明",
+      "ipa": "/pɔɪnt aʊt/",
+      "note": "point out = 指出（事实、错误或某处位置）。",
+      "literal": [
+        {"word": "pointed", "meaning_cn": "指"},
+        {"word": "out", "meaning_cn": "出来", "note_cn": "此处指“明确地指出”"}
+      ],
+      "ex_en": "The teacher pointed out my spelling mistakes.",
+      "ex_cn": "老师指出了我的拼写错误。",
+      "occ": [[2544, "pointed out"]]
+    },
+    {
+      "head": "more or less",
+      "gloss": "或多或少；差不多",
+      "ipa": "/mɔːr ɔːr les/",
+      "note": "表示大致如此，或程度上多多少少有一些。",
+      "literal": [
+        {"word": "more", "meaning_cn": "多"},
+        {"word": "or", "meaning_cn": "或"},
+        {"word": "less", "meaning_cn": "少"}
+      ],
+      "ex_en": "The two bags weigh more or less the same.",
+      "ex_cn": "这两个包重量差不多。",
+      "occ": [[2545, "more or less"]]
+    },
+    {
+      "head": "in keeping with",
+      "gloss": "与…一致；符合、相称",
+      "ipa": "/ɪn ˈkiːpɪŋ wɪð/",
+      "note": "表示与某事物相协调、相称。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "keeping", "meaning_cn": "一致", "note_cn": "此处指协调、相符"},
+        {"word": "with", "meaning_cn": "与"}
+      ],
+      "ex_en": "His quiet manner was in keeping with the solemn day.",
+      "ex_cn": "他安静的举止与这肃穆的日子很相称。",
+      "occ": [[2552, "in keeping with"]]
+    },
+    {
+      "head": "at intervals",
+      "gloss": "每隔一段时间；断断续续地",
+      "ipa": "/ət ˈɪntərvəlz/",
+      "note": "指某动作按时间间隔反复发生。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "intervals", "meaning_cn": "间隔", "note_cn": "此处指时间上的间隔"}
+      ],
+      "ex_en": "The lighthouse flashed at intervals through the night.",
+      "ex_cn": "灯塔整夜里每隔一会儿闪一次光。",
+      "occ": [[2557, "at intervals"]]
+    },
+    {
+      "head": "give way to",
+      "gloss": "屈从于；(感情)抑制不住而失控",
+      "ipa": "/ɡɪv weɪ tə/",
+      "note": "give way to sth = 抵挡不住而屈服；本章指牧师压不住自己的情绪。",
+      "literal": [
+        {"word": "give", "meaning_cn": "给"},
+        {"word": "way", "meaning_cn": "路", "note_cn": "give way 意为让路、让步"},
+        {"word": "to", "meaning_cn": "对"}
+      ],
+      "ex_en": "She finally gave way to her anger and shouted.",
+      "ex_cn": "她终于压不住怒火，喊了出来。",
+      "occ": [[2561, "giving way to"]]
+    },
+    {
+      "head": "pour out",
+      "gloss": "倾吐；尽情倾诉/倾泻",
+      "ipa": "/pɔːr aʊt/",
+      "note": "pour out = 把（话语、感情）一股脑说出来；也指把液体倒出。本章为倾吐感激之情。",
+      "literal": [
+        {"word": "poured", "meaning_cn": "倾倒", "note_cn": "此处指尽情倾吐"},
+        {"word": "out", "meaning_cn": "出来"}
+      ],
+      "ex_en": "She poured out all her worries to her best friend.",
+      "ex_cn": "她把所有烦恼都向最好的朋友倾诉了。",
+      "occ": [[2565, "poured out"]]
+    },
+    {
+      "head": "at the top of one's voice",
+      "gloss": "用最大的嗓门；扯着嗓子",
+      "ipa": "/ət ðə tɑːp əv wʌnz vɔɪs/",
+      "note": "指尽可能大声地喊叫或说话。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "top", "meaning_cn": "顶点", "note_cn": "此处指最大音量"},
+        {"word": "of", "meaning_cn": "的"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "voice", "meaning_cn": "嗓音"}
+      ],
+      "ex_en": "The children sang at the top of their voices.",
+      "ex_cn": "孩子们扯着嗓子放声歌唱。",
+      "occ": [[2572, "at the top of his voice"]]
+    },
+    {
+      "head": "break down",
+      "gloss": "(情绪)崩溃；(机器)出故障；(体力)垮掉",
+      "ipa": "/breɪk daʊn/",
+      "note": "本章指众人情绪失控、放声大哭。也可指机器抛锚或身体垮掉。",
+      "literal": [
+        {"word": "broke", "meaning_cn": "坏"},
+        {"word": "down", "meaning_cn": "下去"}
+      ],
+      "ex_en": "She broke down and cried when she heard the news.",
+      "ex_cn": "听到那消息，她崩溃大哭。",
+      "occ": [[2561, "broke down"]]
+    }
+  ],
+  "skipped": [
+    "the Harpers / Aunt Polly / Becky / Tom / Joe / Huck / Old Hundred / Sabbath (专名/人名/圣咏名，不收)",
+    "andiron-knob / paling fence (一次性名物描写)",
+    "in all conscience (古旧口语，一次性)",
+    "took upon themselves (较文学化，控量舍去)",
+    "gaped at / loitered away / slink away (一次性/较冷僻)",
+    "blinded himself to / spread his hands abroad (文学性古旧，一次性→难句层)",
+    "threw themselves upon (一次性描写)",
+    "bid for glory / rank rascalities / awful prophecy (一次性描写组合)",
+    "more and more / according to / of course (偏基础/语法化)"
+  ]
+}

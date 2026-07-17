@@ -6,6 +6,8 @@ export default function GameResult({
   stars,
   onAgain,
   onHome,
+  againLabel = "🔄 再来一轮",
+  homeLabel = "返回游戏中心",
 }: {
   title: string;
   emoji?: string;
@@ -13,6 +15,8 @@ export default function GameResult({
   stars?: number; // 0..3,可选
   onAgain: () => void;
   onHome: () => void;
+  againLabel?: string; // 复用方可改按钮文案(默认小学游戏中心用语)
+  homeLabel?: string;
 }) {
   return (
     <div className="fixed inset-0 z-50 grid place-items-center bg-black/40 p-6">
@@ -36,14 +40,14 @@ export default function GameResult({
             onClick={onAgain}
             className="w-full rounded-full bg-gradient-to-r from-[#FF6B35] to-[#FFB627] py-3 font-bold text-white"
           >
-            🔄 再来一轮
+            {againLabel}
           </button>
           <button
             type="button"
             onClick={onHome}
             className="w-full rounded-full bg-[#F0EDE6] py-3 font-bold text-[#666]"
           >
-            返回游戏中心
+            {homeLabel}
           </button>
         </div>
       </div>

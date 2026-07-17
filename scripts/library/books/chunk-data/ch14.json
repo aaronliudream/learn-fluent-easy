@@ -1,0 +1,304 @@
+{
+  "chapter": 14,
+  "chunks": [
+    {
+      "head": "shake off",
+      "gloss": "摆脱；甩掉",
+      "ipa": "/ʃeɪk ɔːf/",
+      "note": "shake off sth = 甩开、摆脱(睡意/困扰/追赶者)。本章指大自然抖落睡意醒来。",
+      "literal": [
+        {"word": "shaking", "meaning_cn": "抖动", "note_cn": "此处引申为甩开、摆脱"},
+        {"word": "off", "meaning_cn": "离开、脱掉"}
+      ],
+      "ex_en": "I drank some coffee to shake off my sleepiness.",
+      "ex_cn": "我喝了点咖啡来赶走睡意。",
+      "occ": [[2109, "shaking off"]]
+    },
+    {
+      "head": "of one's own accord",
+      "gloss": "自愿地；主动地",
+      "ipa": "/əv wʌnz oʊn əˈkɔːrd/",
+      "note": "无人要求或强迫，出于自己的意愿去做。",
+      "literal": [
+        {"word": "of", "meaning_cn": "出于"},
+        {"word": "its", "meaning_cn": "它的"},
+        {"word": "own", "meaning_cn": "自己的"},
+        {"word": "accord", "meaning_cn": "意愿", "note_cn": "此处指自发的意志，非“协议”"}
+      ],
+      "ex_en": "The boy cleaned his room of his own accord.",
+      "ex_cn": "那男孩主动打扫了自己的房间。",
+      "occ": [[2110, "of its own accord"]]
+    },
+    {
+      "head": "by turns",
+      "gloss": "轮流地；交替地",
+      "ipa": "/baɪ tɜːrnz/",
+      "note": "表示交替出现或轮换进行。本章指希望时起时落。",
+      "literal": [
+        {"word": "by", "meaning_cn": "按照"},
+        {"word": "turns", "meaning_cn": "轮次、次序"}
+      ],
+      "ex_en": "The two nurses watched the patient by turns.",
+      "ex_cn": "两名护士轮流看护病人。",
+      "occ": [[2110, "by turns"]]
+    },
+    {
+      "head": "without a shadow of a doubt",
+      "gloss": "毫无疑问；确凿无疑",
+      "ipa": "/wɪˈðaʊt ə ˈʃædoʊ əv ə daʊt/",
+      "note": "shadow of a doubt = 一丝怀疑；整句强调完全确定、没有半点疑问。",
+      "literal": [
+        {"word": "without", "meaning_cn": "没有"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "shadow", "meaning_cn": "影子", "note_cn": "此处指“丝毫、一点点”"},
+        {"word": "of", "meaning_cn": "的"},
+        {"word": "a", "meaning_cn": "一个"},
+        {"word": "doubt", "meaning_cn": "怀疑"}
+      ],
+      "ex_en": "She is the best singer here, without a shadow of a doubt.",
+      "ex_cn": "毫无疑问，她是这里最棒的歌手。",
+      "occ": [[2110, "without the shadow of a doubt"]]
+    },
+    {
+      "head": "more than once",
+      "gloss": "不止一次；好几次",
+      "ipa": "/mɔːr ðən wʌns/",
+      "note": "强调某事发生过多次。",
+      "literal": [
+        {"word": "more", "meaning_cn": "多于"},
+        {"word": "than", "meaning_cn": "比"},
+        {"word": "once", "meaning_cn": "一次"}
+      ],
+      "ex_en": "I have told you more than once to be careful.",
+      "ex_cn": "我不止一次叫你小心。",
+      "occ": [[2112, "more than once"]]
+    },
+    {
+      "head": "wide awake",
+      "gloss": "完全清醒；毫无睡意",
+      "ipa": "/waɪd əˈweɪk/",
+      "note": "wide 在此加强 awake，指睡意全无、非常清醒。",
+      "literal": [
+        {"word": "wide", "meaning_cn": "完全地", "note_cn": "此处加强程度，非“宽的”"},
+        {"word": "awake", "meaning_cn": "醒着的"}
+      ],
+      "ex_en": "After the nap I felt wide awake.",
+      "ex_cn": "睡了一觉后我感觉完全清醒了。",
+      "occ": [[2116, "wide awake"]]
+    },
+    {
+      "head": "carry off",
+      "gloss": "带走；卷走",
+      "ipa": "/ˈkæri ɔːf/",
+      "note": "本章指水流把木筏冲走。",
+      "literal": [
+        {"word": "carried", "meaning_cn": "运送、带"},
+        {"word": "off", "meaning_cn": "离开、走开"}
+      ],
+      "ex_en": "The strong wind carried off my hat.",
+      "ex_cn": "大风把我的帽子刮走了。",
+      "occ": [[2119, "carried off"]]
+    },
+    {
+      "head": "now and then",
+      "gloss": "时不时；偶尔",
+      "ipa": "/naʊ ənd ðen/",
+      "note": "表示不经常、间或发生。",
+      "literal": [
+        {"word": "now", "meaning_cn": "现在"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "then", "meaning_cn": "那时", "note_cn": "此处为习语固定用法"}
+      ],
+      "ex_en": "We still meet for coffee now and then.",
+      "ex_cn": "我们仍会偶尔一起喝咖啡。",
+      "occ": [[2128, "Now and then"]]
+    },
+    {
+      "head": "fall to doing",
+      "gloss": "开始做(某事)",
+      "ipa": "/fɔːl tə ˈduːɪŋ/",
+      "note": "fall to + 动名词，表示着手、开始(尤指投入地)做某事。",
+      "literal": [
+        {"word": "fell", "meaning_cn": "开始", "note_cn": "此处非“跌落”，是习语用法"},
+        {"word": "to", "meaning_cn": "(习语介词)"},
+        {"word": "thinking", "meaning_cn": "思考"}
+      ],
+      "ex_en": "After dinner they fell to talking about old times.",
+      "ex_cn": "晚饭后他们聊起了往事。",
+      "occ": [[2135, "fell to thinking"], [2182, "fell to guessing"]]
+    },
+    {
+      "head": "under one's breath",
+      "gloss": "低声地；小声嘀咕",
+      "ipa": "/ˈʌndər wʌnz breθ/",
+      "note": "声音很轻、几乎听不见地说。",
+      "literal": [
+        {"word": "under", "meaning_cn": "在...之下"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "breath", "meaning_cn": "呼吸", "note_cn": "此处指气息般的低声"}
+      ],
+      "ex_en": "He muttered something under his breath.",
+      "ex_cn": "他低声嘀咕了几句。",
+      "occ": [[2144, "under his breath"]]
+    },
+    {
+      "head": "spring to one's feet",
+      "gloss": "一跃而起；猛地站起",
+      "ipa": "/sprɪŋ tə wʌnz fiːt/",
+      "note": "突然迅速地站起来。",
+      "literal": [
+        {"word": "sprang", "meaning_cn": "跳", "note_cn": "spring 的过去式"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "their", "meaning_cn": "他们的"},
+        {"word": "feet", "meaning_cn": "脚"}
+      ],
+      "ex_en": "She sprang to her feet when she heard the news.",
+      "ex_cn": "一听到消息，她猛地站了起来。",
+      "occ": [[2150, "sprang to their feet"]]
+    },
+    {
+      "head": "a great many",
+      "gloss": "许许多多；大量",
+      "ipa": "/ə ɡreɪt ˈmeni/",
+      "note": "修饰可数名词复数，比 many 更强调数量之多。",
+      "literal": [
+        {"word": "a", "meaning_cn": "(固定用法)"},
+        {"word": "great", "meaning_cn": "大量的"},
+        {"word": "many", "meaning_cn": "许多"}
+      ],
+      "ex_en": "A great many people came to the fair.",
+      "ex_cn": "许许多多的人来赶集。",
+      "occ": [[2154, "a great many"]]
+    },
+    {
+      "head": "on one's account",
+      "gloss": "为了某人；因某人的缘故",
+      "ipa": "/ɑːn wʌnz əˈkaʊnt/",
+      "note": "on sb's account = 出于对某人的考虑，或因某人而引起。",
+      "literal": [
+        {"word": "on", "meaning_cn": "(习语介词)"},
+        {"word": "their", "meaning_cn": "他们的"},
+        {"word": "account", "meaning_cn": "缘故", "note_cn": "此处非“账户”"}
+      ],
+      "ex_en": "Don't stay late on my account.",
+      "ex_cn": "别为了我而熬夜。",
+      "occ": [[2176, "on their account"], [2182, "on their account"]]
+    },
+    {
+      "head": "best of all",
+      "gloss": "最棒的是；最重要的是",
+      "ipa": "/best əv ɔːl/",
+      "note": "用于列举时引出最好的一点。",
+      "literal": [
+        {"word": "best", "meaning_cn": "最好"},
+        {"word": "of", "meaning_cn": "在...之中"},
+        {"word": "all", "meaning_cn": "全部"}
+      ],
+      "ex_en": "The trip was cheap, fun, and best of all, close to home.",
+      "ex_cn": "这次旅行便宜又好玩，最棒的是离家很近。",
+      "occ": [[2176, "best of all"]]
+    },
+    {
+      "head": "after all",
+      "gloss": "毕竟；终究",
+      "ipa": "/ˈæftər ɔːl/",
+      "note": "用来说明理由或强调事实终究如此。",
+      "literal": [
+        {"word": "after", "meaning_cn": "在...之后"},
+        {"word": "all", "meaning_cn": "一切"}
+      ],
+      "ex_en": "Don't be too hard on him—he's just a kid, after all.",
+      "ex_cn": "别对他太严厉，毕竟他只是个孩子。",
+      "occ": [[2178, "after all"]]
+    },
+    {
+      "head": "keep back",
+      "gloss": "抑制；忍住(情感/话语)",
+      "ipa": "/kiːp bæk/",
+      "note": "本章指忍住、压下(念头);也可指阻止、隐瞒。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "保持"},
+        {"word": "back", "meaning_cn": "向后", "note_cn": "此处指压住不放出来"}
+      ],
+      "ex_en": "She could not keep back her tears.",
+      "ex_cn": "她忍不住流下了眼泪。",
+      "occ": [[2184, "keep back"]]
+    },
+    {
+      "head": "get out of",
+      "gloss": "摆脱；从...中脱身",
+      "ipa": "/ɡet aʊt əv/",
+      "note": "本章指摆脱窘境(scrape = 困境)。",
+      "literal": [
+        {"word": "get", "meaning_cn": "变得、设法"},
+        {"word": "out", "meaning_cn": "出来"},
+        {"word": "of", "meaning_cn": "从"}
+      ],
+      "ex_en": "He always finds a way to get out of trouble.",
+      "ex_cn": "他总能想办法摆脱麻烦。",
+      "occ": [[2188, "get out of"]]
+    },
+    {
+      "head": "out of hearing",
+      "gloss": "在听力所及范围之外；听不到的地方",
+      "ipa": "/aʊt əv ˈhɪərɪŋ/",
+      "note": "距离太远而听不见；与 out of sight / out of reach 同族。",
+      "literal": [
+        {"word": "out", "meaning_cn": "在...之外"},
+        {"word": "of", "meaning_cn": "(介词)"},
+        {"word": "hearing", "meaning_cn": "听力所及范围"}
+      ],
+      "ex_en": "They waited until the guard was out of hearing.",
+      "ex_cn": "他们一直等到卫兵走到听不见的地方。",
+      "occ": [[2197, "out of hearing"]]
+    },
+    {
+      "head": "take note of",
+      "gloss": "注意到；留意",
+      "ipa": "/teɪk noʊt əv/",
+      "note": "本章出处为分离式(take no distinct note of),故 card-only。take note of = 留心、记下。",
+      "literal": [
+        {"word": "take", "meaning_cn": "做出"},
+        {"word": "note", "meaning_cn": "注意"},
+        {"word": "of", "meaning_cn": "对于"}
+      ],
+      "ex_en": "Please take note of the new rules.",
+      "ex_cn": "请留意新规定。",
+      "cardOnly": true,
+      "key": "take note of",
+      "exSeq": 2140
+    },
+    {
+      "head": "break into a run",
+      "gloss": "突然跑起来；撒腿奔跑",
+      "ipa": "/breɪk ˈɪntə ə rʌn/",
+      "note": "本章出处为分离式(broke into a keen run),故 card-only。break into + a run/laugh/song = 突然开始。",
+      "literal": [
+        {"word": "break", "meaning_cn": "突然进入", "note_cn": "此处非“打破”"},
+        {"word": "into", "meaning_cn": "进入"},
+        {"word": "a", "meaning_cn": "一阵"},
+        {"word": "run", "meaning_cn": "奔跑"}
+      ],
+      "ex_en": "As the bus arrived, he broke into a run.",
+      "ex_cn": "公交车一到，他撒腿就跑。",
+      "cardOnly": true,
+      "key": "break into a run",
+      "exSeq": 2197
+    }
+  ],
+  "skipped": [
+    "Finn the Red-Handed / Bill Turner (专名/人名)",
+    "becuz / 'Tain't / drownded / By jings / I reckon (方言拼写与口头禅，迁移弱)",
+    "dewdrops / catbird / tumblebug / lady-bug / sun-perch (自然名物一次性描写)",
+    "gray dawn / limpid water / majestic waste of water (一次性描述性组合)",
+    "took wing (一次性文学用法→难句层)",
+    "of old (古旧一次性)",
+    "twilight drew on (文学性一次性)",
+    "ventured upon a roundabout feeler (一次性文学表达)",
+    "laid to rest (本章为“平息”比喻义，偏文学，控量舍去)",
+    "came back / got up / picked up / rolled up (过于基础的常见短语)",
+    "hold on (过于常见的招呼语)",
+    "plenty of / worth while (偏基础，控量舍去)",
+    "as far as ... was concerned (分离式且本章仅一次，控量舍去)"
+  ]
+}

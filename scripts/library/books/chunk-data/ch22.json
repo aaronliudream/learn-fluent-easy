@@ -1,0 +1,179 @@
+{
+  "chapter": 22,
+  "chunks": [
+    {
+      "head": "abstain from",
+      "gloss": "戒除；避免（做某事）",
+      "ipa": "/əbˈsteɪn frəm/",
+      "note": "abstain from + 名词/动名词，指有意克制、不去做某事，常用于烟酒等。",
+      "literal": [
+        {"word": "abstain", "meaning_cn": "戒；克制不做", "note_cn": "较正式，强调主动忍住"},
+        {"word": "from", "meaning_cn": "对（某事）"}
+      ],
+      "ex_en": "The doctor told him to abstain from sugar for a month.",
+      "ex_cn": "医生叫他一个月内忌糖。",
+      "occ": [[3080, "abstain from"]]
+    },
+    {
+      "head": "find out",
+      "gloss": "发现；查明；弄清楚",
+      "ipa": "/faɪnd aʊt/",
+      "note": "指经过了解或探究后得知某事，强调“查出”结果。",
+      "literal": [
+        {"word": "found", "meaning_cn": "发现"},
+        {"word": "out", "meaning_cn": "出来", "note_cn": "此处表“查明、弄清”"}
+      ],
+      "ex_en": "I want to find out who broke the window.",
+      "ex_cn": "我想弄清楚是谁打碎了窗户。",
+      "occ": [[3081, "found out"]]
+    },
+    {
+      "head": "give up",
+      "gloss": "放弃；不再抱希望",
+      "ipa": "/ɡɪv ʌp/",
+      "note": "give sth up，把宾语放在中间也可（give it up）；指停止做某事或放弃某个念头。",
+      "literal": [
+        {"word": "gave", "meaning_cn": "（give过去式）放弃"},
+        {"word": "it", "meaning_cn": "它"},
+        {"word": "up", "meaning_cn": "掉；彻底地", "note_cn": "此处表“放弃、舍弃”"}
+      ],
+      "ex_en": "Don't give up—you're almost there!",
+      "ex_cn": "别放弃，你就快成功了！",
+      "occ": [[3083, "gave that up"], [3083, "gave it up"]]
+    },
+    {
+      "head": "be concerned about",
+      "gloss": "担心；挂念；关切",
+      "ipa": "/biː kənˈsɜːrnd əˈbaʊt/",
+      "note": "concerned about = 为…担忧、上心；about 后接所担心的事。",
+      "literal": [
+        {"word": "concerned", "meaning_cn": "担忧的；关切的"},
+        {"word": "about", "meaning_cn": "关于（所担心的事）"}
+      ],
+      "ex_en": "The teacher was concerned about the sick student.",
+      "ex_cn": "老师很担心那个生病的学生。",
+      "occ": [[3084, "concerned about"]]
+    },
+    {
+      "head": "hand in",
+      "gloss": "上交；提交（如作业、辞呈）",
+      "ipa": "/hænd ɪn/",
+      "note": "把文件、作业、辞呈等正式交出去。本章 Tom 递交辞呈（handed in his resignation）。",
+      "literal": [
+        {"word": "handed", "meaning_cn": "递交"},
+        {"word": "in", "meaning_cn": "进（上交给对方）", "note_cn": "此处表“交上去”"}
+      ],
+      "ex_en": "Please hand in your homework before Friday.",
+      "ex_cn": "请在周五前交作业。",
+      "occ": [[3089, "handed in"]]
+    },
+    {
+      "head": "at once",
+      "gloss": "立刻；马上",
+      "ipa": "/ət wʌns/",
+      "note": "表示毫不拖延、当即去做。另有“同时”一义，本章为“立刻”。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "once", "meaning_cn": "一次；此刻", "note_cn": "此处为习语，指“立即”"}
+      ],
+      "ex_en": "Come here at once—it's important!",
+      "ex_cn": "马上过来，有要紧事！",
+      "occ": [[3089, "at once"]]
+    },
+    {
+      "head": "to one's surprise",
+      "gloss": "令某人吃惊的是",
+      "ipa": "/tə wʌnz sərˈpraɪz/",
+      "note": "常作插入语，引出出乎意料的事；同类还有 to one's joy / to one's dismay。",
+      "literal": [
+        {"word": "to", "meaning_cn": "对于", "note_cn": "此处为习语固定用法"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "surprise", "meaning_cn": "惊讶"}
+      ],
+      "ex_en": "To my surprise, the old radio still worked.",
+      "ex_cn": "令我吃惊的是，那台旧收音机居然还能用。",
+      "occ": [[3094, "to his surprise"]]
+    },
+    {
+      "head": "make a sensation",
+      "gloss": "引起轰动；轰动一时",
+      "ipa": "/meɪk ə senˈseɪʃn/",
+      "note": "sensation 此处指“轰动、大受关注的事物”；make a sensation = 引发一阵轰动。",
+      "literal": [
+        {"word": "made", "meaning_cn": "造成"},
+        {"word": "a", "meaning_cn": "一（阵）"},
+        {"word": "sensation", "meaning_cn": "轰动", "note_cn": "此处非“感觉”，指“轰动效应”"}
+      ],
+      "ex_en": "The new singer made a sensation at the show.",
+      "ex_cn": "那位新歌手在演出上引起了轰动。",
+      "occ": [[3098, "made a sensation"]]
+    },
+    {
+      "head": "get up",
+      "gloss": "组织；筹办；搞起（活动等）",
+      "ipa": "/ɡet ʌp/",
+      "note": "本章非“起床”义，而是“张罗、办起来”，如组队表演、搞一场演出。",
+      "literal": [
+        {"word": "got", "meaning_cn": "搞；办", "note_cn": "此处指“组织、筹办”，非“起床”"},
+        {"word": "up", "meaning_cn": "起来（张罗起来）"}
+      ],
+      "ex_en": "The kids got up a little concert for their parents.",
+      "ex_cn": "孩子们为父母办了一场小型音乐会。",
+      "occ": [[3099, "got up"], [3121, "getting up"]]
+    },
+    {
+      "head": "hope against hope",
+      "gloss": "仍抱一线希望；不死心地指望",
+      "ipa": "/hoʊp əˈɡenst hoʊp/",
+      "note": "指明知希望渺茫却依然抱着希望。",
+      "literal": [
+        {"word": "hoping", "meaning_cn": "希望"},
+        {"word": "against", "meaning_cn": "逆着（不利形势）", "note_cn": "此处表“尽管无望仍…”"},
+        {"word": "hope", "meaning_cn": "希望"}
+      ],
+      "ex_en": "She kept hoping against hope that he would call.",
+      "ex_cn": "她仍不死心地盼着他会打来电话。",
+      "occ": [[3113, "hoping against hope"]]
+    },
+    {
+      "head": "call one's attention to",
+      "gloss": "使某人注意到；提醒某人留意",
+      "ipa": "/kɔːl wʌnz əˈtenʃn tə/",
+      "note": "把某人的注意力引向某事物，即“提请某人注意”。",
+      "literal": [
+        {"word": "called", "meaning_cn": "唤起；引向"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "attention", "meaning_cn": "注意力"},
+        {"word": "to", "meaning_cn": "到（某事物）"}
+      ],
+      "ex_en": "The guide called our attention to the old painting.",
+      "ex_cn": "导游提请我们注意那幅古画。",
+      "occ": [[3116, "called his attention to"]]
+    },
+    {
+      "head": "by and by",
+      "gloss": "不久；过一会儿",
+      "ipa": "/baɪ ənd baɪ/",
+      "note": "略显old-fashioned的说法，意为过一段时间之后。",
+      "literal": [
+        {"word": "by", "meaning_cn": "（习语用词）", "note_cn": "单独无实义，须整体记忆"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "by", "meaning_cn": "（习语用词）"}
+      ],
+      "ex_en": "By and by, the noise died down and everyone slept.",
+      "ex_cn": "过了一会儿，喧闹平息，大家都睡了。",
+      "occ": [[3122, "by and by"]]
+    }
+  ],
+  "skipped": [
+    "Cadets of Temperance / Judge Frazer / Mr. Benton / Becky Thatcher / Joe Harper / Ben Rogers / Jim Hollis / Huckleberry Finn（专名/人名）",
+    "regalia / red sash / shackles（一次性名物描写）",
+    "got religion / got upon his feet（口语/古旧一次性）",
+    "upon the mend / convalescent（生僻医学/古旧，归难句层）",
+    "hang a little heavily on his hands（分离式文学比喻，一次性）",
+    "spent itself（文学拟人一次性）",
+    "hoping against hope 之外的 heart broke（ch10 已收 break one's heart）",
+    "not the shadow of a doubt（备选，为控量舍去）",
+    "hunt up（较口语，控量舍去）"
+  ]
+}

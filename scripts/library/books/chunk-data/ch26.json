@@ -1,0 +1,397 @@
+{
+  "chapter": 26,
+  "chunks": [
+    {
+      "head": "all at once",
+      "gloss": "突然；一下子",
+      "ipa": "/ɔːl ət wʌns/",
+      "note": "表示某事毫无预兆地、突然发生，等于 suddenly。",
+      "literal": [
+        {"word": "all", "meaning_cn": "(习语用词)", "note_cn": "此处无独立含义，须整体记忆"},
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "once", "meaning_cn": "一下子", "note_cn": "此处指“突然、一瞬间”"}
+      ],
+      "ex_en": "All at once the room went dark.",
+      "ex_cn": "突然间，房间黑了下来。",
+      "occ": [[3545, "all at once"]]
+    },
+    {
+      "head": "can't be too careful",
+      "gloss": "再小心也不为过；越谨慎越好",
+      "ipa": "/kænt biː tuː ˈkerfl/",
+      "note": "“can't be too + 形容词”是固定句式，意为“再怎么…也不算过分”。",
+      "literal": [
+        {"word": "can't", "meaning_cn": "不能"},
+        {"word": "be", "meaning_cn": "(系动词)"},
+        {"word": "too", "meaning_cn": "太", "note_cn": "此处与 can't 连用表“再…也不为过”"},
+        {"word": "careful", "meaning_cn": "小心的"}
+      ],
+      "ex_en": "When you cross a busy road, you can't be too careful.",
+      "ex_cn": "过繁忙的马路时，再小心也不为过。",
+      "occ": [[3546, "can’t be too careful"]]
+    },
+    {
+      "head": "keep out of",
+      "gloss": "避开；不卷入(某事)",
+      "ipa": "/kiːp aʊt əv/",
+      "note": "keep out of sth 指置身事外、不去招惹某事或某地。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "保持", "note_cn": "此处指“使自己远离”"},
+        {"word": "out of", "meaning_cn": "在…之外"}
+      ],
+      "ex_en": "Please keep out of my room when I'm not home.",
+      "ex_cn": "我不在家时，请别进我的房间。",
+      "occ": [[3562, "keep out of it"]]
+    },
+    {
+      "head": "now and then",
+      "gloss": "时不时；偶尔",
+      "ipa": "/naʊ ənd ðen/",
+      "note": "表示不经常、间或发生，等于 occasionally。",
+      "literal": [
+        {"word": "now", "meaning_cn": "现在", "note_cn": "习语固定用词，不作字面解"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "then", "meaning_cn": "那时"}
+      ],
+      "ex_en": "Now and then we go fishing by the lake.",
+      "ex_cn": "我们时不时会去湖边钓鱼。",
+      "occ": [[3586, "now and then"]]
+    },
+    {
+      "head": "give up",
+      "gloss": "放弃；不再尝试",
+      "ipa": "/ɡɪv ʌp/",
+      "note": "指停止做某事或交出、舍弃某物。本章指放弃一处宝藏不再挖。",
+      "literal": [
+        {"word": "given", "meaning_cn": "交出", "note_cn": "give 的过去分词"},
+        {"word": "up", "meaning_cn": "(副词)", "note_cn": "此处表“彻底放开”"}
+      ],
+      "ex_en": "Don't give up so easily—try one more time.",
+      "ex_cn": "别这么轻易放弃，再试一次。",
+      "occ": [[3589, "given up"]]
+    },
+    {
+      "head": "in a little while",
+      "gloss": "过一会儿；不久之后",
+      "ipa": "/ɪn ə ˈlɪtl waɪl/",
+      "note": "while 此处为名词，指“一段时间”。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在…之后"},
+        {"word": "a", "meaning_cn": "一"},
+        {"word": "little", "meaning_cn": "短的"},
+        {"word": "while", "meaning_cn": "一段时间", "note_cn": "此处为名词"}
+      ],
+      "ex_en": "Wait here—Mom will be back in a little while.",
+      "ex_cn": "在这儿等着，妈妈过一会儿就回来。",
+      "occ": [[3595, "in a little while"]]
+    },
+    {
+      "head": "cut off",
+      "gloss": "切断；截断",
+      "ipa": "/kʌt ɔːf/",
+      "note": "指把某物切开分离，或阻断退路、联系等。本章指截断退路。",
+      "literal": [
+        {"word": "cutting", "meaning_cn": "切"},
+        {"word": "off", "meaning_cn": "断开", "note_cn": "此处表“隔断、阻断”"}
+      ],
+      "ex_en": "The flood cut off the village from the main road.",
+      "ex_cn": "洪水把村子和主路隔断了。",
+      "occ": [[3597, "cutting off"]]
+    },
+    {
+      "head": "in a low voice",
+      "gloss": "低声地；小声地",
+      "ipa": "/ɪn ə loʊ vɔɪs/",
+      "note": "描述说话音量很小；low 此处指“(声音)低的”。",
+      "literal": [
+        {"word": "in", "meaning_cn": "以"},
+        {"word": "a", "meaning_cn": "一种"},
+        {"word": "low", "meaning_cn": "低的"},
+        {"word": "voice", "meaning_cn": "嗓音"}
+      ],
+      "ex_en": "She spoke in a low voice so the baby wouldn't wake.",
+      "ex_cn": "她低声说话，免得吵醒宝宝。",
+      "occ": [[3623, "in a low voice"]]
+    },
+    {
+      "head": "in full view",
+      "gloss": "完全暴露在视线中；一览无余",
+      "ipa": "/ɪn fʊl vjuː/",
+      "note": "常作 in full view (of sb)，指在某人眼前、毫无遮挡地被看到。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "full", "meaning_cn": "完全的"},
+        {"word": "view", "meaning_cn": "视野", "note_cn": "此处指“看得见的范围”"}
+      ],
+      "ex_en": "The kids played in full view of their teacher.",
+      "ex_cn": "孩子们就在老师眼皮底下玩耍。",
+      "occ": [[3641, "in full view"]]
+    },
+    {
+      "head": "hear from",
+      "gloss": "收到(某人)的消息",
+      "ipa": "/hɪr frəm/",
+      "note": "hear from sb 指收到某人的来信、来电或音讯。",
+      "literal": [
+        {"word": "hear", "meaning_cn": "听到"},
+        {"word": "from", "meaning_cn": "从…那里"}
+      ],
+      "ex_en": "I hope to hear from you soon.",
+      "ex_cn": "希望很快收到你的消息。",
+      "occ": [[3647, "hear from me"], [3723, "hear from me"]]
+    },
+    {
+      "head": "drop into",
+      "gloss": "顺便去；顺道拜访",
+      "ipa": "/drɑːp ˈɪntə/",
+      "note": "drop into a place 指临时、随意地去某处。",
+      "literal": [
+        {"word": "dropping", "meaning_cn": "顺便去", "note_cn": "此处非“掉落”"},
+        {"word": "into", "meaning_cn": "进入"}
+      ],
+      "ex_en": "I'll drop into the shop on my way home.",
+      "ex_cn": "回家路上我会顺便去趟商店。",
+      "occ": [[3648, "dropping into"]]
+    },
+    {
+      "head": "take one's chances",
+      "gloss": "冒险一试；碰碰运气",
+      "ipa": "/teɪk wʌnz ˈtʃænsɪz/",
+      "note": "明知有风险仍决定一试，听天由命。",
+      "literal": [
+        {"word": "take", "meaning_cn": "冒(风险)", "note_cn": "此处指“甘冒”"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "chances", "meaning_cn": "机会", "note_cn": "此处指“碰运气、冒险”"}
+      ],
+      "ex_en": "There's no umbrella, so I'll just take my chances in the rain.",
+      "ex_cn": "没伞了，我就冒雨碰碰运气吧。",
+      "occ": [[3648, "take the chances"]]
+    },
+    {
+      "head": "in an instant",
+      "gloss": "一瞬间；转眼之间",
+      "ipa": "/ɪn ən ˈɪnstənt/",
+      "note": "强调事情发生得极快。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "an", "meaning_cn": "一"},
+        {"word": "instant", "meaning_cn": "瞬间"}
+      ],
+      "ex_en": "In an instant the cat vanished under the bed.",
+      "ex_cn": "转眼之间，猫就钻到床底下不见了。",
+      "occ": [[3686, "in an instant"]]
+    },
+    {
+      "head": "on one's knees",
+      "gloss": "跪着；跪下",
+      "ipa": "/ɑːn wʌnz niːz/",
+      "note": "表示双膝着地的姿势；也可引申为哀求。本章为字面义。",
+      "literal": [
+        {"word": "on", "meaning_cn": "在…上", "note_cn": "此处表“处于…姿势”"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "knees", "meaning_cn": "膝盖"}
+      ],
+      "ex_en": "He got on his knees to look under the sofa.",
+      "ex_cn": "他跪下来往沙发底下看。",
+      "occ": [[3685, "on his knees"]]
+    },
+    {
+      "head": "never mind",
+      "gloss": "没关系；别在意",
+      "ipa": "/ˈnevər maɪnd/",
+      "note": "用来叫对方不必担心、不用管某事。",
+      "literal": [
+        {"word": "never", "meaning_cn": "别", "note_cn": "此处为“不要”的加强语气"},
+        {"word": "mind", "meaning_cn": "介意", "note_cn": "此处指“在意、操心”"}
+      ],
+      "ex_en": "Never mind the mess—I'll clean it up later.",
+      "ex_cn": "别管那些乱七八糟的，我等会儿收拾。",
+      "occ": [[3698, "Never mind"]]
+    },
+    {
+      "head": "make quick work of",
+      "gloss": "迅速解决；三下五除二搞定",
+      "ipa": "/meɪk kwɪk wɜːrk əv/",
+      "note": "指很快、利落地把某事做完(也说 make short work of)。",
+      "literal": [
+        {"word": "make", "meaning_cn": "做出"},
+        {"word": "quick", "meaning_cn": "快的"},
+        {"word": "work", "meaning_cn": "活儿", "note_cn": "此处指“处理、了结”"},
+        {"word": "of", "meaning_cn": "(介词)"}
+      ],
+      "ex_en": "The hungry boys made quick work of the pizza.",
+      "ex_cn": "饿坏了的男孩们三两下就把披萨吃光了。",
+      "occ": [[3705, "make quick work of"]]
+    },
+    {
+      "head": "shake one's head",
+      "gloss": "摇头(表示否定或不赞成)",
+      "ipa": "/ʃeɪk wʌnz hed/",
+      "note": "左右摇头，常表示“不、不同意”或困惑。",
+      "literal": [
+        {"word": "shook", "meaning_cn": "摇", "note_cn": "shake 的过去式"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "head", "meaning_cn": "头"}
+      ],
+      "ex_en": "She shook her head and said no.",
+      "ex_cn": "她摇了摇头，说不行。",
+      "occ": [[3708, "shook his head"]]
+    },
+    {
+      "head": "stand by",
+      "gloss": "待命；在一旁准备着",
+      "ipa": "/stænd baɪ/",
+      "note": "指做好准备、随时听候差遣。也有“支持某人”之义。本章为“待命等候”。",
+      "literal": [
+        {"word": "stand", "meaning_cn": "站"},
+        {"word": "by", "meaning_cn": "在旁边", "note_cn": "此处指“待在一旁准备着”"}
+      ],
+      "ex_en": "Stand by—the doctor will call your name soon.",
+      "ex_cn": "请稍等，医生很快会叫到你的名字。",
+      "occ": [[3723, "stand by"]]
+    },
+    {
+      "head": "take someone for",
+      "gloss": "把某人误认为…；把某人当作…",
+      "ipa": "/teɪk ˈsʌmwʌn fɔːr/",
+      "note": "take sb for sb/sth 指错把某人看成别的人或东西。",
+      "literal": [
+        {"word": "took", "meaning_cn": "把…(当作)", "note_cn": "take 的过去式"},
+        {"word": "us", "meaning_cn": "我们"},
+        {"word": "for", "meaning_cn": "当作", "note_cn": "此处指“误认为”"}
+      ],
+      "ex_en": "In the dark she took me for my brother.",
+      "ex_cn": "黑暗中她把我错当成了我哥哥。",
+      "occ": [[3761, "took us for"]]
+    },
+    {
+      "head": "slip out",
+      "gloss": "溜出去；悄悄离开",
+      "ipa": "/slɪp aʊt/",
+      "note": "指不引人注意地离开某处。",
+      "literal": [
+        {"word": "slipped", "meaning_cn": "溜", "note_cn": "此处指“悄悄地行动”"},
+        {"word": "out", "meaning_cn": "出去"}
+      ],
+      "ex_en": "He slipped out of the meeting to make a call.",
+      "ex_cn": "他悄悄溜出会议室去打电话。",
+      "occ": [[3764, "slipped out"]]
+    },
+    {
+      "head": "be absorbed in",
+      "gloss": "专注于；沉浸在(某事)中",
+      "ipa": "/biː əbˈzɔːrbd ɪn/",
+      "note": "指全神贯注、入了迷。本章指两个男孩满心都是懊恨。",
+      "literal": [
+        {"word": "absorbed", "meaning_cn": "专注的", "note_cn": "此处指“全神贯注、入神的”"},
+        {"word": "in", "meaning_cn": "在…之中"}
+      ],
+      "ex_en": "He was so absorbed in his book that he missed the bus.",
+      "ex_cn": "他看书看得太入神，错过了公交车。",
+      "occ": [[3770, "absorbed in"]]
+    },
+    {
+      "head": "keep a lookout for",
+      "gloss": "留心提防；守望着(等某人/某物出现)",
+      "ipa": "/kiːp ə ˈlʊkaʊt fɔːr/",
+      "note": "指警觉地注意、防备某人或某事出现。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "保持"},
+        {"word": "a", "meaning_cn": "一份"},
+        {"word": "lookout", "meaning_cn": "警戒", "note_cn": "此处指“守望、留神观察”"},
+        {"word": "for", "meaning_cn": "留意着"}
+      ],
+      "ex_en": "Keep a lookout for the mailman while I finish this letter.",
+      "ex_cn": "我写完这封信，你帮我留意着送信的人。",
+      "occ": [[3774, "keep a lookout for"]]
+    },
+    {
+      "head": "occur to someone",
+      "gloss": "(念头)突然浮现在某人脑海",
+      "ipa": "/əˈkɜːr tə ˈsʌmwʌn/",
+      "note": "指想法、念头忽然出现在心里。occur 此处非一般“发生”义。",
+      "literal": [
+        {"word": "occurred", "meaning_cn": "浮现", "note_cn": "此处指“(念头)忽然出现”，非一般“发生”"},
+        {"word": "to", "meaning_cn": "向…"}
+      ],
+      "ex_en": "It suddenly occurred to me that I'd left the door open.",
+      "ex_cn": "我突然想起门还开着。",
+      "occ": [[3775, "occurred to Tom"]]
+    },
+    {
+      "head": "think over",
+      "gloss": "仔细考虑；反复思量",
+      "ipa": "/θɪŋk ˈoʊvər/",
+      "note": "本章出处为分离式(thought it all over),故 card-only。",
+      "literal": [
+        {"word": "think", "meaning_cn": "想"},
+        {"word": "over", "meaning_cn": "(反复)彻底地", "note_cn": "此处指“从头到尾、仔细地”"}
+      ],
+      "ex_en": "Take a day to think over my offer.",
+      "ex_cn": "花一天时间好好考虑我的提议吧。",
+      "cardOnly": true,
+      "key": "think over",
+      "exSeq": 3625
+    },
+    {
+      "head": "turn up",
+      "gloss": "翻出来；(从地里)挖出",
+      "ipa": "/tɜːrn ʌp/",
+      "note": "本章 turn up 指用铲子把埋着的东西翻出;出处为分离式(turned it up),故 card-only。",
+      "literal": [
+        {"word": "turn", "meaning_cn": "翻"},
+        {"word": "up", "meaning_cn": "出来", "note_cn": "此处指“翻到地面上”"}
+      ],
+      "ex_en": "The dog turned up an old bone in the garden.",
+      "ex_cn": "那只狗在花园里刨出了一根旧骨头。",
+      "cardOnly": true,
+      "key": "turn up",
+      "exSeq": 3589
+    },
+    {
+      "head": "get into a scrape",
+      "gloss": "惹上麻烦；陷入窘境",
+      "ipa": "/ɡet ˈɪntə ə skreɪp/",
+      "note": "scrape 此处指“困境、麻烦”;本章出处被 awful 隔开,故 card-only。",
+      "literal": [
+        {"word": "get into", "meaning_cn": "陷入"},
+        {"word": "a", "meaning_cn": "一场"},
+        {"word": "scrape", "meaning_cn": "困境", "note_cn": "此处指“窘境、麻烦”，非“刮擦”"}
+      ],
+      "ex_en": "The boys got into a scrape for breaking the window.",
+      "ex_cn": "男孩们打破了窗户，惹上了麻烦。",
+      "cardOnly": true,
+      "key": "get into a scrape",
+      "exSeq": 3547
+    },
+    {
+      "head": "look over",
+      "gloss": "打量；仔细查看",
+      "ipa": "/lʊk ˈoʊvər/",
+      "note": "指从头到尾地看、审视一遍;本章出处为分离式(looked it over),故 card-only。",
+      "literal": [
+        {"word": "look", "meaning_cn": "看"},
+        {"word": "over", "meaning_cn": "遍", "note_cn": "此处指“仔细地、整体地(查看)”"}
+      ],
+      "ex_en": "The teacher looked over my homework and smiled.",
+      "ex_cn": "老师把我的作业仔细看了一遍，笑了。",
+      "cardOnly": true,
+      "key": "look over",
+      "exSeq": 3708
+    }
+  ],
+  "skipped": [
+    "Injun Joe / Robin Hood / Cardiff Hill / Number Two / Texas (专名/人名)",
+    "warn't / ’twon't / ’tain't / t'other / a body (方言拼写)",
+    "milksop / brick / nobby / swag / pard (俚语/一次性)",
+    "deaf and dumb (dumb=哑,今属过时/冒犯说法)",
+    "leg it / dead for sleep (方言俚语)",
+    "bear a hand (过时习语,今用 lend a hand)",
+    "hove ... in / betook ... homeward (古旧文学用法,一次性)",
+    "under the happiest auspices (文学性一次性)",
+    "by the great Sachem (一次性感叹语)",
+    "I bet / I'll bet (口语常见但表面形不一,控量舍去)",
+    "come of it (较冷僻,控量舍去)",
+    "be about to (偏基础/语法化)"
+  ]
+}

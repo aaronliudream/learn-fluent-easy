@@ -273,6 +273,12 @@ All colors MUST be HSL.
     font-variant-numeric: tabular-nums;
     font-feature-settings: "tnum", "lnum";
   }
+  /* 图书馆阅读器:收掉 SF Pro 弯撇号 U+2019 的字形右侧留白(what’ s 假空格)。
+     只作用于 TappableLine 在图书馆模式包出的 .tight-apos span,不影响其他文本。
+     负 letter-spacing 把撇号后一个字母往左拉;-0.06em 在 18px 下约 -1px,收留白不至重叠。 */
+  .tight-apos {
+    letter-spacing: -0.06em;
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────────────

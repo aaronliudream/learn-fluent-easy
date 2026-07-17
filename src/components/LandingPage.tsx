@@ -5,6 +5,7 @@ import { LangToggleEnZh } from "@/i18n/LangToggleEnZh";
 import { T } from "@/i18n/T";
 import AiDashboardMock from "@/components/landing/AiDashboardMock";
 import DownloadsSection from "@/components/landing/DownloadsSection";
+import LibraryLandingSection from "@/components/library/LibraryLandingSection";
 import {
   ArrowRight,
   Award,
@@ -540,6 +541,9 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* ═══ 图书馆一级板块(四学段卡之下·跨学段·分隔线隔开·软上线 flag 关默认不渲染·?lib=1 预览) ═══ */}
+      <LibraryLandingSection />
 
       {/* ═══ 资料下载区(四学段卡之下·纯新增·DB 驱动,无数据自动隐藏) ═══ */}
       <DownloadsSection />

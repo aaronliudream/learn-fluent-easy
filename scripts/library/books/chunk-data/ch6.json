@@ -1,0 +1,422 @@
+{
+  "chapter": 6,
+  "chunks": [
+    {
+      "head": "about to",
+      "gloss": "即将，刚要（做某事）",
+      "ipa": "/əˈbaʊt tuː/",
+      "note": "be about to do，后接动词原形，表示马上就要发生的动作。",
+      "literal": [
+        {"word": "about", "meaning_cn": "将要", "note_cn": "和 to 连用才表'将要'，此处非'关于'"},
+        {"word": "to", "meaning_cn": "去（做）"}
+      ],
+      "ex_en": "I was about to leave when the phone rang.",
+      "ex_cn": "我正要出门，电话就响了。",
+      "occ": [[720, "about to"], [977, "about to"]]
+    },
+    {
+      "head": "in reserve",
+      "gloss": "备用；留着（暂不用）",
+      "ipa": "/ɪn rɪˈzɜːv/",
+      "note": "把某物留起来暂时不用、以备日后需要；常用 hold/keep ... in reserve。",
+      "literal": [
+        {"word": "in", "meaning_cn": "处于……状态"},
+        {"word": "reserve", "meaning_cn": "储备、备用", "note_cn": "作名词，指留存备用"}
+      ],
+      "ex_en": "Keep some money in reserve for emergencies.",
+      "ex_cn": "留点钱备用，以防急需。",
+      "occ": [[721, "in reserve"]]
+    },
+    {
+      "head": "worth while",
+      "gloss": "值得（做）的",
+      "ipa": "/wɜːθ ˈwaɪl/",
+      "note": "表示某事值得花时间或精力；现代英语多连写作 worthwhile。",
+      "literal": [
+        {"word": "worth", "meaning_cn": "值得"},
+        {"word": "while", "meaning_cn": "一段时间", "note_cn": "此处指所花的时间、功夫"}
+      ],
+      "ex_en": "The trip was long, but the view made it worth while.",
+      "ex_cn": "路很远，但风景让这趟值了。",
+      "occ": [[725, "worth while"]]
+    },
+    {
+      "head": "chance it",
+      "gloss": "冒险一试；碰碰运气",
+      "ipa": "/ˈtʃɑːns ɪt/",
+      "note": "明知有风险仍决定试试看；chance 在此作动词。",
+      "literal": [
+        {"word": "chance", "meaning_cn": "冒……的险", "note_cn": "作动词，此处非名词'机会'"},
+        {"word": "it", "meaning_cn": "它（泛指那件事）"}
+      ],
+      "ex_en": "It might rain, but let's chance it and go without umbrellas.",
+      "ex_cn": "也许会下雨，但咱们赌一把，不带伞就去。",
+      "occ": [[725, "chance it"]]
+    },
+    {
+      "head": "a succession of",
+      "gloss": "一连串的；接连不断的",
+      "ipa": "/ə səkˈseʃn əv/",
+      "note": "后接复数名词，强调同类事物一个接一个地出现。",
+      "literal": [
+        {"word": "succession", "meaning_cn": "连续、接连"},
+        {"word": "of", "meaning_cn": "……的"}
+      ],
+      "ex_en": "A succession of visitors kept her busy all day.",
+      "ex_cn": "客人一个接一个，害她忙了一整天。",
+      "occ": [[730, "a succession of"], [1067, "a succession of"]]
+    },
+    {
+      "head": "never mind",
+      "gloss": "没关系；别在意；算了",
+      "ipa": "/ˈnevə maɪnd/",
+      "note": "叫对方不必担心或不必费心；也可表'算了、当我没说'。",
+      "literal": [
+        {"word": "never", "meaning_cn": "不必", "note_cn": "此处非'从不'"},
+        {"word": "mind", "meaning_cn": "在意、介意"}
+      ],
+      "ex_en": "Never mind, it's not important.",
+      "ex_cn": "没关系，不重要。",
+      "occ": [[750, "never mind"]]
+    },
+    {
+      "head": "by and by",
+      "gloss": "不久；过一会儿",
+      "ipa": "/ˌbaɪ ən ˈbaɪ/",
+      "note": "略显旧式的说法，表示'过些时候、渐渐地'。",
+      "literal": [
+        {"word": "by", "meaning_cn": "（时间上）过去", "note_cn": "固定搭配，不单独理解"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "by", "meaning_cn": "（同上）"}
+      ],
+      "ex_en": "Wait here; he'll come back by and by.",
+      "ex_cn": "在这儿等着，他一会儿就回来。",
+      "occ": [[751, "by and by"], [998, "by and by"]]
+    },
+    {
+      "head": "make one's flesh crawl",
+      "gloss": "让人毛骨悚然；起鸡皮疙瘩",
+      "ipa": "/meɪk wʌnz fleʃ krɔːl/",
+      "note": "形容因恐惧或恶心而浑身发麻；也说 make one's skin crawl。",
+      "literal": [
+        {"word": "make", "meaning_cn": "使"},
+        {"word": "flesh", "meaning_cn": "皮肉"},
+        {"word": "crawl", "meaning_cn": "发麻", "note_cn": "字面'爬'，指皮肉像有虫爬般发麻"}
+      ],
+      "ex_en": "The horror movie made my flesh crawl.",
+      "ex_cn": "那部恐怖片看得我毛骨悚然。",
+      "occ": [[761, "makes my flesh crawl"]]
+    },
+    {
+      "head": "at one's heels",
+      "gloss": "紧跟在（某人）身后",
+      "ipa": "/ət wʌnz hiːlz/",
+      "note": "指紧随其后、寸步不离；常用 at sb's heels。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "heels", "meaning_cn": "脚后跟", "note_cn": "复数，字面'脚跟后'引申'紧跟'"}
+      ],
+      "ex_en": "The dog ran off with the children at his heels.",
+      "ex_cn": "狗跑开了，孩子们紧追在后。",
+      "occ": [[784, "at her heels"]]
+    },
+    {
+      "head": "stay home from school",
+      "gloss": "请假不去上学；待在家不上学",
+      "ipa": "/steɪ həʊm frəm skuːl/",
+      "note": "stay home from + 场所，表示因故不去某处（学校、上班）。",
+      "literal": [
+        {"word": "stay", "meaning_cn": "留、待"},
+        {"word": "home", "meaning_cn": "在家"},
+        {"word": "from", "meaning_cn": "不去（某处）"},
+        {"word": "school", "meaning_cn": "学校"}
+      ],
+      "ex_en": "He stayed home from school because he had a fever.",
+      "ex_cn": "他发烧了，就没去上学。",
+      "occ": [[711, "stay home from school"], [811, "stay home from school"]]
+    },
+    {
+      "head": "break one's heart",
+      "gloss": "使（某人）伤心欲绝",
+      "ipa": "/breɪk wʌnz hɑːt/",
+      "note": "指让人极度悲伤，尤指感情上的打击。",
+      "literal": [
+        {"word": "break", "meaning_cn": "弄碎"},
+        {"word": "heart", "meaning_cn": "心"}
+      ],
+      "ex_en": "It broke her heart to sell the old house.",
+      "ex_cn": "卖掉那栋老房子让她心都碎了。",
+      "occ": [[814, "break my old heart"]]
+    },
+    {
+      "head": "sour grapes",
+      "gloss": "酸葡萄心理；吃不到葡萄说葡萄酸",
+      "ipa": "/ˌsaʊə ˈɡreɪps/",
+      "note": "源自伊索寓言，指得不到某物便贬低它以自我安慰。",
+      "literal": [
+        {"word": "sour", "meaning_cn": "酸的"},
+        {"word": "grapes", "meaning_cn": "葡萄"}
+      ],
+      "ex_en": "He said he didn't want the prize anyway, but that's just sour grapes.",
+      "ex_cn": "他说反正也不稀罕那奖，纯属吃不到葡萄说葡萄酸。",
+      "occ": [[822, "sour grapes"]]
+    },
+    {
+      "head": "come upon",
+      "gloss": "偶然遇到；无意中发现",
+      "ipa": "/kʌm əˈpɒn/",
+      "note": "指没有预料地碰见某人或发现某物；较正式，近于 come across。",
+      "literal": [
+        {"word": "come", "meaning_cn": "来到"},
+        {"word": "upon", "meaning_cn": "碰上", "note_cn": "come upon 合起来表'偶遇'"}
+      ],
+      "ex_en": "I came upon an old photo while cleaning the attic.",
+      "ex_cn": "收拾阁楼时，我无意中翻到一张旧照片。",
+      "occ": [[823, "came upon"]]
+    },
+    {
+      "head": "under orders",
+      "gloss": "奉命；受命令约束（不得不……）",
+      "ipa": "/ˌʌndər ˈɔːdəz/",
+      "note": "表示被上级或规矩要求这么做，身不由己；文中作 under strict orders。",
+      "literal": [
+        {"word": "under", "meaning_cn": "在……支配之下"},
+        {"word": "orders", "meaning_cn": "命令", "note_cn": "复数才表'命令'"}
+      ],
+      "ex_en": "The soldiers were under orders not to leave the base.",
+      "ex_cn": "士兵们奉命不得离开基地。",
+      "occ": [[825, "under strict orders"]]
+    },
+    {
+      "head": "get a chance",
+      "gloss": "得到机会；有机会（做某事）",
+      "ipa": "/ɡet ə tʃɑːns/",
+      "note": "后常接 to do，或用于 if/when 从句；表示有机可乘。",
+      "literal": [
+        {"word": "get", "meaning_cn": "得到"},
+        {"word": "a", "meaning_cn": "一个"},
+        {"word": "chance", "meaning_cn": "机会"}
+      ],
+      "ex_en": "Call me when you get a chance.",
+      "ex_cn": "你有空的时候给我打个电话。",
+      "occ": [[826, "got a chance"], [936, "get a chance"]]
+    },
+    {
+      "head": "sit up",
+      "gloss": "熬夜不睡；（从躺着）坐起来",
+      "ipa": "/sɪt ˈʌp/",
+      "note": "此处指'熬夜、不上床'；也可指身体坐直起来。",
+      "literal": [
+        {"word": "sit", "meaning_cn": "坐"},
+        {"word": "up", "meaning_cn": "起来", "note_cn": "sit up 此处=不睡、熬着"}
+      ],
+      "ex_en": "She sat up late reading her new book.",
+      "ex_cn": "她读新书读到很晚都没睡。",
+      "occ": [[830, "sit up"]]
+    },
+    {
+      "head": "in a word",
+      "gloss": "总之；一句话（概括）",
+      "ipa": "/ɪn ə ˈwɜːd/",
+      "note": "用于句首，把前面的话作简短总结。",
+      "literal": [
+        {"word": "in", "meaning_cn": "用"},
+        {"word": "a", "meaning_cn": "一个"},
+        {"word": "word", "meaning_cn": "词、话"}
+      ],
+      "ex_en": "In a word, the plan failed.",
+      "ex_cn": "一句话，计划失败了。",
+      "occ": [[831, "in a word"]]
+    },
+    {
+      "head": "I bet",
+      "gloss": "我敢打赌；我肯定",
+      "ipa": "/aɪ ˈbet/",
+      "note": "口语，表示很有把握地推测；也可带讽刺语气表'才怪、我才不信'。",
+      "literal": [
+        {"word": "I", "meaning_cn": "我"},
+        {"word": "bet", "meaning_cn": "打赌"}
+      ],
+      "ex_en": "I bet she's going to be late again.",
+      "ex_cn": "我敢打赌她又要迟到。",
+      "occ": [[852, "I bet"]]
+    },
+    {
+      "head": "all by oneself",
+      "gloss": "独自一人；完全靠自己",
+      "ipa": "/ɔːl baɪ wʌnˈself/",
+      "note": "强调没有别人陪同或帮忙；all 起加强作用。",
+      "literal": [
+        {"word": "all", "meaning_cn": "完全", "note_cn": "加强语气"},
+        {"word": "by", "meaning_cn": "靠"},
+        {"word": "oneself", "meaning_cn": "自己"}
+      ],
+      "ex_en": "The little boy tied his shoes all by himself.",
+      "ex_cn": "小男孩自己一个人把鞋带系好了。",
+      "occ": [[883, "all by yourself"]]
+    },
+    {
+      "head": "take off",
+      "gloss": "取下；脱下；去除",
+      "ipa": "/teɪk ˈɒf/",
+      "note": "常见义为脱掉（衣物）、拿下；此处也用于'去除（疣等）'。另有'飞机起飞'义。",
+      "literal": [
+        {"word": "take", "meaning_cn": "拿"},
+        {"word": "off", "meaning_cn": "离开、去掉"}
+      ],
+      "ex_en": "Please take off your shoes before you come in.",
+      "ex_cn": "进来前请把鞋脱掉。",
+      "occ": [[889, "took off"], [990, "take off"]]
+    },
+    {
+      "head": "pretty soon",
+      "gloss": "很快；不久（就）",
+      "ipa": "/ˌprɪti ˈsuːn/",
+      "note": "口语，pretty 在此是'相当、很'，修饰 soon。",
+      "literal": [
+        {"word": "pretty", "meaning_cn": "相当、很", "note_cn": "作副词表程度，此处非'漂亮'"},
+        {"word": "soon", "meaning_cn": "很快、不久"}
+      ],
+      "ex_en": "Sit down, dinner will be ready pretty soon.",
+      "ex_cn": "坐吧，饭很快就好。",
+      "occ": [[897, "pretty soon"]]
+    },
+    {
+      "head": "come along",
+      "gloss": "走过来；（一起）来到",
+      "ipa": "/kʌm əˈlɒŋ/",
+      "note": "指朝这边走来或出现；也可表'一起来吧'。",
+      "literal": [
+        {"word": "come", "meaning_cn": "来"},
+        {"word": "along", "meaning_cn": "过来", "note_cn": "along 在此表'沿路过来、随之'"}
+      ],
+      "ex_en": "A taxi came along just as we reached the corner.",
+      "ex_cn": "我们刚到路口，正好来了一辆出租车。",
+      "occ": [[912, "come along"], [1021, "coming along"]]
+    },
+    {
+      "head": "satisfied with",
+      "gloss": "对……满意；满足于",
+      "ipa": "/ˈsætɪsfaɪd wɪð/",
+      "note": "be satisfied with sth，表示对某事物感到满意、不再挑剔。",
+      "literal": [
+        {"word": "satisfied", "meaning_cn": "满意的"},
+        {"word": "with", "meaning_cn": "对于"}
+      ],
+      "ex_en": "The teacher was satisfied with my answer.",
+      "ex_cn": "老师对我的回答很满意。",
+      "occ": [[950, "satisfied with"], [1020, "satisfied with"]]
+    },
+    {
+      "head": "take refuge in",
+      "gloss": "躲进；借助……来逃避",
+      "ipa": "/teɪk ˈrefjuːdʒ ɪn/",
+      "note": "字面'躲进某处避难'，引申为借某手段逃避现实，如 take refuge in a lie。",
+      "literal": [
+        {"word": "take", "meaning_cn": "取得"},
+        {"word": "refuge", "meaning_cn": "庇护、避难"},
+        {"word": "in", "meaning_cn": "在……中"}
+      ],
+      "ex_en": "When it started to pour, we took refuge in a small café.",
+      "ex_cn": "大雨倾盆时，我们躲进了一家小咖啡馆。",
+      "occ": [[977, "take refuge in"]]
+    },
+    {
+      "head": "give in",
+      "gloss": "让步；屈服；认输",
+      "ipa": "/ɡɪv ˈɪn/",
+      "note": "指经过抵抗后最终妥协、不再坚持；give in to sb/sth。",
+      "literal": [
+        {"word": "give", "meaning_cn": "给"},
+        {"word": "in", "meaning_cn": "服软", "note_cn": "give in 合起来表'屈服'"}
+      ],
+      "ex_en": "The kids begged so long that their mom finally gave in.",
+      "ex_cn": "孩子们求了半天，妈妈终于让步了。",
+      "occ": [[1013, "gave in"]]
+    },
+    {
+      "head": "by degrees",
+      "gloss": "逐渐地；一点一点地",
+      "ipa": "/baɪ dɪˈɡriːz/",
+      "note": "书面语，表示循序渐进、慢慢地。",
+      "literal": [
+        {"word": "by", "meaning_cn": "按"},
+        {"word": "degrees", "meaning_cn": "程度、阶段", "note_cn": "复数，'一级一级地'"}
+      ],
+      "ex_en": "By degrees, the room grew warmer.",
+      "ex_cn": "房间渐渐暖和起来。",
+      "occ": [[1059, "by degrees"]]
+    },
+    {
+      "head": "in earnest",
+      "gloss": "认真地；当真地",
+      "ipa": "/ɪn ˈɜːnɪst/",
+      "note": "表示'真心实意、并非开玩笑'；也可表某事正式开始（begin in earnest）。",
+      "literal": [
+        {"word": "in", "meaning_cn": "处于……状态"},
+        {"word": "earnest", "meaning_cn": "认真、诚恳"}
+      ],
+      "ex_en": "At first I thought he was joking, but he was in earnest.",
+      "ex_cn": "起初我以为他在开玩笑，其实他是认真的。",
+      "occ": [[1059, "in earnest"]]
+    },
+    {
+      "head": "make an effort",
+      "gloss": "努力；尽力（去做）",
+      "ipa": "/meɪk ən ˈefət/",
+      "note": "后接 to do；强调主动付出努力。",
+      "literal": [
+        {"word": "make", "meaning_cn": "作出"},
+        {"word": "an", "meaning_cn": "一份"},
+        {"word": "effort", "meaning_cn": "努力"}
+      ],
+      "ex_en": "You should make an effort to be on time.",
+      "ex_cn": "你该努力做到准时。",
+      "occ": [[1066, "made an honest effort"]]
+    },
+    {
+      "head": "steal a glance at",
+      "gloss": "偷偷瞥一眼；偷看",
+      "ipa": "/stiːl ə ɡlɑːns ət/",
+      "note": "steal 在此表'偷偷地做'；glance 是'匆匆一瞥'。文中作 steal glances at（复数、加形容词）。",
+      "literal": [
+        {"word": "steal", "meaning_cn": "偷偷地（做）", "note_cn": "此处非'偷东西'"},
+        {"word": "a", "meaning_cn": "一个"},
+        {"word": "glance", "meaning_cn": "一瞥"},
+        {"word": "at", "meaning_cn": "朝、看向"}
+      ],
+      "ex_en": "He stole a glance at his watch during the meeting.",
+      "ex_cn": "开会时他偷偷瞟了一眼手表。",
+      "occ": [[999, "steal furtive glances at"]]
+    },
+    {
+      "head": "die away",
+      "gloss": "（声音、感觉等）渐渐消失，慢慢平息",
+      "ipa": "/daɪ əˈweɪ/",
+      "note": "多用于声音、光线、情绪等逐渐减弱直至消失；文中被 wholly 隔开（died wholly away），故仅作卡片。",
+      "literal": [
+        {"word": "die", "meaning_cn": "消退", "note_cn": "此处非'死'，指逐渐减弱"},
+        {"word": "away", "meaning_cn": "渐渐离去、消失"}
+      ],
+      "ex_en": "The music slowly died away.",
+      "ex_cn": "音乐渐渐消失了。",
+      "cardOnly": true,
+      "key": "die away",
+      "exSeq": 716
+    }
+  ],
+  "skipped": [
+    "spunk-water（方言/迷信术语·不可迁移）",
+    "cure warts with（一次性迷信偏方）",
+    "'low / warn't / becuz / afeard（方言拼写）",
+    "I reckon（方言口头禅·全章反复）",
+    "made a mouth at（旧俗做鬼脸·一次性）",
+    "that's a whack（儿童俚·一次性）",
+    "the charm's busted（迷信一次性）",
+    "give sb a turn（旧式口语·吓一跳）",
+    "shut up（过于基础）",
+    "go a-fishing（方言拼写）",
+    "run a tick down（临时搭配）",
+    "turn ... into（过于基础/语法性）"
+  ]
+}

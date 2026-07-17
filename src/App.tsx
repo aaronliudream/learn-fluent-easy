@@ -108,6 +108,13 @@ const JuniorGrammarLab = lazy(() => import("./pages/JuniorGrammarLab.tsx"));
 const JuniorGrammarRevenge = lazy(() => import("./pages/JuniorGrammarRevenge.tsx"));
 const JuniorReading = lazy(() => import("./pages/JuniorReading.tsx"));
 const JuniorReadingPlay = lazy(() => import("./pages/JuniorReadingPlay.tsx"));
+const Reading = lazy(() => import("./pages/Reading.tsx"));
+const ReadingPlay = lazy(() => import("./pages/ReadingPlay.tsx"));
+// 图书馆(/library)· 独立顶层 section,与 /reading(P0)完全隔离。
+const LibraryHome = lazy(() => import("./pages/library/LibraryHome.tsx"));
+const LibraryBook = lazy(() => import("./pages/library/LibraryBook.tsx"));
+const LibraryReader = lazy(() => import("./pages/library/LibraryReader.tsx"));
+const LibraryVocab = lazy(() => import("./pages/library/LibraryVocab.tsx"));
 const JuniorClozePlay = lazy(() => import("./pages/JuniorClozePlay.tsx"));
 const JuniorListening = lazy(() => import("./pages/JuniorListening.tsx"));
 const JuniorListeningPlay = lazy(() => import("./pages/JuniorListeningPlay.tsx"));
@@ -471,6 +478,14 @@ const App = () => (
           <Route path="/junior/kp/:id/practice" element={<ChineseOnlyRoute><JuniorGrammarKpQuiz /></ChineseOnlyRoute>} />
           <Route path="/junior/reading" element={<ChineseOnlyRoute><JuniorReading /></ChineseOnlyRoute>} />
           <Route path="/junior/reading/:id" element={<ChineseOnlyRoute><JuniorReadingPlay /></ChineseOnlyRoute>} />
+          {/* 阅读中心(全站一级入口,跨学段) */}
+          <Route path="/reading" element={<ChineseOnlyRoute><Reading /></ChineseOnlyRoute>} />
+          <Route path="/reading/:id" element={<ChineseOnlyRoute><ReadingPlay /></ChineseOnlyRoute>} />
+          {/* 图书馆(扁平挂载,照 /american 模式;暂不加 BrandHubNav 入口,软上线) */}
+          <Route path="/library" element={<ChineseOnlyRoute><LibraryHome /></ChineseOnlyRoute>} />
+          <Route path="/library/vocab" element={<ChineseOnlyRoute><LibraryVocab /></ChineseOnlyRoute>} />
+          <Route path="/library/:bookKey" element={<ChineseOnlyRoute><LibraryBook /></ChineseOnlyRoute>} />
+          <Route path="/library/:bookKey/read" element={<ChineseOnlyRoute><LibraryReader /></ChineseOnlyRoute>} />
           <Route path="/junior/cloze/:id" element={<ChineseOnlyRoute><JuniorClozePlay /></ChineseOnlyRoute>} />
           <Route path="/junior/listening" element={<ChineseOnlyRoute><JuniorListening /></ChineseOnlyRoute>} />
           <Route path="/junior/listening/:id" element={<ChineseOnlyRoute><JuniorListeningPlay /></ChineseOnlyRoute>} />

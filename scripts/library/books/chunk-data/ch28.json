@@ -1,0 +1,248 @@
+{
+  "chapter": 28,
+  "chunks": [
+    {
+      "head": "hang about",
+      "gloss": "在…附近闲逛、逗留",
+      "ipa": "/hæŋ əˈbaʊt/",
+      "note": "指在某处附近漫无目的地待着、徘徊。本章两个男孩守在客栈附近就是 hang about。",
+      "literal": [
+        {"word": "hung", "meaning_cn": "逗留", "note_cn": "hang 此处非“悬挂”，指停留、徘徊"},
+        {"word": "about", "meaning_cn": "在…附近"}
+      ],
+      "ex_en": "The kids hung about the gate, waiting for the bus.",
+      "ex_cn": "孩子们在大门口闲待着，等公交车。",
+      "occ": [[3866, "hung about"]]
+    },
+    {
+      "head": "at a distance",
+      "gloss": "在远处；隔着一段距离",
+      "ipa": "/ət ə ˈdɪstəns/",
+      "note": "表示离得有一段距离地(观察、跟随等)。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "a", "meaning_cn": "一(段)"},
+        {"word": "distance", "meaning_cn": "距离"}
+      ],
+      "ex_en": "He followed them at a distance so they wouldn't notice.",
+      "ex_cn": "他隔着一段距离跟着他们，免得被发现。",
+      "occ": [[3866, "at a distance"]]
+    },
+    {
+      "head": "slip out",
+      "gloss": "溜出去；悄悄离开",
+      "ipa": "/slɪp aʊt/",
+      "note": "指不引人注意地悄悄出去。",
+      "literal": [
+        {"word": "slip", "meaning_cn": "悄悄溜", "note_cn": "此处非“滑倒”，指不声不响地移动"},
+        {"word": "out", "meaning_cn": "出去"}
+      ],
+      "ex_en": "She slipped out of the room while everyone was talking.",
+      "ex_cn": "趁大家说话时，她悄悄溜出了房间。",
+      "occ": [[3868, "slip out"], [3873, "slipped out"]]
+    },
+    {
+      "head": "feel one's way",
+      "gloss": "(在黑暗中)摸索着前进",
+      "ipa": "/fiːl wʌnz weɪ/",
+      "note": "指看不清时用手摸索着慢慢走；也可引申为“谨慎试探地行事”。本章为前者。",
+      "literal": [
+        {"word": "felt", "meaning_cn": "摸索", "note_cn": "此处指用手触摸探路，非“感觉”"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "way", "meaning_cn": "路"}
+      ],
+      "ex_en": "The lights went out, so I felt my way to the door.",
+      "ex_cn": "灯灭了，我只好摸索着走到门口。",
+      "occ": [[3881, "felt his way"]]
+    },
+    {
+      "head": "weigh upon",
+      "gloss": "压在心头；使(人)感到沉重",
+      "ipa": "/weɪ əˈpɑːn/",
+      "note": "指烦恼、焦虑等像重担一样压迫人的心情。",
+      "literal": [
+        {"word": "weighed", "meaning_cn": "压", "note_cn": "此处非“称重”，指心理上的压迫"},
+        {"word": "upon", "meaning_cn": "在…之上"}
+      ],
+      "ex_en": "The bad news weighed upon her all week.",
+      "ex_cn": "那个坏消息压在她心头整整一周。",
+      "occ": [[3882, "weighed upon"]]
+    },
+    {
+      "head": "take one's breath away",
+      "gloss": "使人喘不过气；(因惊吓/惊叹)使人透不过气",
+      "ipa": "/teɪk wʌnz breθ əˈweɪ/",
+      "note": "本章指因恐惧而喘不上气；也常指美景等令人惊叹。",
+      "literal": [
+        {"word": "take", "meaning_cn": "夺走"},
+        {"word": "away", "meaning_cn": "掉、走"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "breath", "meaning_cn": "呼吸"}
+      ],
+      "ex_en": "The sudden cold wind took away my breath.",
+      "ex_cn": "突然刮来的冷风让我喘不过气。",
+      "occ": [[3886, "take away his breath"]]
+    },
+    {
+      "head": "for one's life",
+      "gloss": "拼命地；不要命地",
+      "ipa": "/fɔːr wʌnz laɪf/",
+      "note": "常与 run 连用，表示像逃命一样拼尽全力。本章句中被逗号隔开，故只下划线 for your life。",
+      "literal": [
+        {"word": "for", "meaning_cn": "为了"},
+        {"word": "your", "meaning_cn": "你的"},
+        {"word": "life", "meaning_cn": "性命"}
+      ],
+      "ex_en": "When the dog chased us, we ran for our lives.",
+      "ex_cn": "那只狗追来时，我们拼命地跑。",
+      "occ": [[3888, "for your life"]]
+    },
+    {
+      "head": "pour down",
+      "gloss": "(雨)倾盆而下",
+      "ipa": "/pɔːr daʊn/",
+      "note": "形容大雨如注地落下。",
+      "literal": [
+        {"word": "poured", "meaning_cn": "倾泻"},
+        {"word": "down", "meaning_cn": "下来"}
+      ],
+      "ex_en": "We got soaked because the rain poured down all afternoon.",
+      "ex_cn": "整个下午大雨倾盆，我们都淋透了。",
+      "occ": [[3891, "poured down"]]
+    },
+    {
+      "head": "get one's breath",
+      "gloss": "缓过气来；喘口气",
+      "ipa": "/ɡet wʌnz breθ/",
+      "note": "指剧烈活动或惊吓后恢复正常呼吸。",
+      "literal": [
+        {"word": "got", "meaning_cn": "获得、恢复"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "breath", "meaning_cn": "呼吸"}
+      ],
+      "ex_en": "Give me a second to get my breath after those stairs.",
+      "ex_cn": "爬完那些楼梯，让我缓口气。",
+      "occ": [[3892, "got his breath"], [3894, "get my breath"]]
+    },
+    {
+      "head": "take hold of",
+      "gloss": "抓住；握住",
+      "ipa": "/teɪk hoʊld əv/",
+      "note": "指用手抓紧某物。",
+      "literal": [
+        {"word": "took", "meaning_cn": "抓"},
+        {"word": "hold", "meaning_cn": "握、抓"},
+        {"word": "of", "meaning_cn": "(固定介词)"}
+      ],
+      "ex_en": "Take hold of the rope and don't let go.",
+      "ex_cn": "抓住绳子，别松手。",
+      "occ": [[3896, "took hold of"]]
+    },
+    {
+      "head": "shake off",
+      "gloss": "抖掉；甩掉；摆脱",
+      "ipa": "/ʃeɪk ɔːf/",
+      "note": "本章指抖掉盖在灯上的毛巾；也可引申为摆脱跟踪者、疾病等。",
+      "literal": [
+        {"word": "shook", "meaning_cn": "抖"},
+        {"word": "off", "meaning_cn": "掉、离"}
+      ],
+      "ex_en": "The dog shook off the water after its bath.",
+      "ex_cn": "洗完澡，那只狗把身上的水抖掉了。",
+      "occ": [[3898, "shook off"]]
+    },
+    {
+      "head": "sound asleep",
+      "gloss": "熟睡；睡得很沉",
+      "ipa": "/saʊnd əˈsliːp/",
+      "note": "sound 此处意为“酣沉地”，形容睡得很死。",
+      "literal": [
+        {"word": "sound", "meaning_cn": "酣沉地", "note_cn": "此处非“声音”，指睡得深沉"},
+        {"word": "asleep", "meaning_cn": "睡着的"}
+      ],
+      "ex_en": "The baby was sound asleep before the story ended.",
+      "ex_cn": "故事还没讲完，宝宝就熟睡了。",
+      "occ": [[3905, "sound asleep"]]
+    },
+    {
+      "head": "spread out",
+      "gloss": "摊开；张开；铺展开",
+      "ipa": "/spred aʊt/",
+      "note": "本章指手臂摊开;也可指人群散开、地图铺开等。",
+      "literal": [
+        {"word": "spread", "meaning_cn": "摊、张"},
+        {"word": "out", "meaning_cn": "开"}
+      ],
+      "ex_en": "He spread out his arms to catch the falling ball.",
+      "ex_cn": "他张开双臂去接落下的球。",
+      "occ": [[3905, "spread out"]]
+    },
+    {
+      "head": "look around",
+      "gloss": "环顾四周；四处看看",
+      "ipa": "/lʊk əˈraʊnd/",
+      "note": "指转头打量周围的环境。",
+      "literal": [
+        {"word": "look", "meaning_cn": "看"},
+        {"word": "around", "meaning_cn": "四周"}
+      ],
+      "ex_en": "She stopped to look around the new classroom.",
+      "ex_cn": "她停下来打量了一下新教室。",
+      "occ": [[3915, "look around"]]
+    },
+    {
+      "head": "what's the matter with",
+      "gloss": "…怎么了；…出了什么问题",
+      "ipa": "/wʌts ðə ˈmætər wɪð/",
+      "note": "matter 此处意为“毛病、问题”；用于询问某人或某物出了什么状况。",
+      "literal": [
+        {"word": "what's", "meaning_cn": "是什么"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "matter", "meaning_cn": "问题、毛病", "note_cn": "此处非“事情/物质”"},
+        {"word": "with", "meaning_cn": "关于"}
+      ],
+      "ex_en": "What's the matter with your phone? It won't turn on.",
+      "ex_cn": "你手机怎么了？开不了机。",
+      "occ": [[3918, "what’s the matter with"]]
+    },
+    {
+      "head": "act as if",
+      "gloss": "表现得好像；装作",
+      "ipa": "/ækt əz ɪf/",
+      "note": "as if 后接从句，表示某人的举止仿佛某种情况成立。",
+      "literal": [
+        {"word": "act", "meaning_cn": "表现、举动"},
+        {"word": "as", "meaning_cn": "如同"},
+        {"word": "if", "meaning_cn": "好像"}
+      ],
+      "ex_en": "He acts as if he owns the whole place.",
+      "ex_cn": "他表现得好像这地方全是他的。",
+      "occ": [[3953, "act as if"]]
+    },
+    {
+      "head": "something is up",
+      "gloss": "出情况了；有事发生",
+      "ipa": "/ˈsʌmθɪŋ ɪz ʌp/",
+      "note": "be up 此处意为“出了不寻常的事”；常用于察觉到有异常。",
+      "literal": [
+        {"word": "something's", "meaning_cn": "有什么事"},
+        {"word": "up", "meaning_cn": "在发生、有情况", "note_cn": "此处非“向上”，指出了状况"}
+      ],
+      "ex_en": "The dog kept barking, so I knew something was up.",
+      "ex_cn": "那只狗一直叫，我就知道出情况了。",
+      "occ": [[3959, "something’s up"]]
+    }
+  ],
+  "skipped": [
+    "the Spaniard / Injun Joe / Hooper Street / Ben Rogers / Uncle Jake (专名)",
+    "Great Caesar's Ghost / Lordy / by hokey (一次性惊叹语)",
+    "in good season (古旧，可迁移性弱)",
+    "stood sentry (较文学化，控量舍去)",
+    "the blackness of darkness reigned (文学性一次性描写→难句层)",
+    "a power of racket / mighty sick / dead sure / quicker'n lightning (方言强调，迁移弱)",
+    "warn't / ha'nted / becuz / 'a' thought / less not / a body / tote (方言拼写表面形)",
+    "good as wheat (方言习语，一次性)",
+    "some time or other (备选，为控量舍去)",
+    "a couple of / all sorts of (偏基础/半语法化)"
+  ]
+}

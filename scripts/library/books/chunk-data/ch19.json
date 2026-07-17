@@ -1,0 +1,187 @@
+{
+  "chapter": 19,
+  "chunks": [
+    {
+      "head": "lo and behold",
+      "gloss": "瞧；你猜怎么着（引出意外之事）",
+      "ipa": "/loʊ ənd bɪˈhoʊld/",
+      "note": "旧式固定表达，用来引出出人意料的结果，带戏剧化口吻。",
+      "literal": [
+        {"word": "lo", "meaning_cn": "看哪", "note_cn": "古语感叹词，几乎只用于此搭配"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "behold", "meaning_cn": "看", "note_cn": "古语，意为“瞧、看”"}
+      ],
+      "ex_en": "I opened the old box and, lo and behold, it was full of gold coins.",
+      "ex_cn": "我打开那只旧箱子，你猜怎么着，里面装满了金币。",
+      "occ": [[2807, "lo and behold"]]
+    },
+    {
+      "head": "find out",
+      "gloss": "查明；弄清；发现（真相）",
+      "ipa": "/faɪnd aʊt/",
+      "note": "指经过打听、调查后得知某事，强调“弄清楚”。",
+      "literal": [
+        {"word": "found", "meaning_cn": "查明", "note_cn": "find的过去式，此处指弄清、得知"},
+        {"word": "out", "meaning_cn": "出来", "note_cn": "此处指把事情弄明白"}
+      ],
+      "ex_en": "I called the shop to find out if they were still open.",
+      "ex_cn": "我打电话到店里，想弄清楚他们是否还在营业。",
+      "occ": [[2807, "found out"]]
+    },
+    {
+      "head": "become of",
+      "gloss": "（某人/某事）会怎么样；落得什么下场",
+      "ipa": "/bɪˈkʌm əv/",
+      "note": "常用于 what will/is to become of...，表示对某人前途或结局的担忧。",
+      "literal": [
+        {"word": "become", "meaning_cn": "变成", "note_cn": "此处指“落得…下场、发生…情况”"},
+        {"word": "of", "meaning_cn": "（介词）"}
+      ],
+      "ex_en": "What will become of the puppy if no one takes it home?",
+      "ex_cn": "要是没人把这只小狗带回家，它会怎么样呢？",
+      "occ": [[2808, "become of"]]
+    },
+    {
+      "head": "make a fool of oneself",
+      "gloss": "出洋相；让自己出丑",
+      "ipa": "/meɪk ə fuːl əv wʌnˈself/",
+      "note": "本章出处为分离式（make such a fool of myself），故 card-only。",
+      "literal": [
+        {"word": "make", "meaning_cn": "使…成为"},
+        {"word": "a", "meaning_cn": "一个"},
+        {"word": "fool", "meaning_cn": "傻瓜", "note_cn": "此处指“出丑的人”"},
+        {"word": "of", "meaning_cn": "（介词）"},
+        {"word": "oneself", "meaning_cn": "自己"}
+      ],
+      "ex_en": "He made a fool of himself by singing loudly and off-key.",
+      "ex_cn": "他大声唱歌又跑调，出尽了洋相。",
+      "cardOnly": true,
+      "key": "make a fool of oneself",
+      "exSeq": 2809
+    },
+    {
+      "head": "hang one's head",
+      "gloss": "（羞愧或沮丧地）低下头",
+      "ipa": "/hæŋ wʌnz hed/",
+      "note": "表示因惭愧、难过而垂头。",
+      "literal": [
+        {"word": "hung", "meaning_cn": "垂下", "note_cn": "hang的过去式"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "head", "meaning_cn": "头"}
+      ],
+      "ex_en": "The boy hung his head when the teacher asked who broke the window.",
+      "ex_cn": "老师问是谁打碎了窗户时，男孩低下了头。",
+      "occ": [[2813, "hung his head"]]
+    },
+    {
+      "head": "laugh at",
+      "gloss": "嘲笑；取笑",
+      "ipa": "/læf æt/",
+      "note": "指拿某人或某事取乐，含贬义。",
+      "literal": [
+        {"word": "laugh", "meaning_cn": "笑"},
+        {"word": "at", "meaning_cn": "对着", "note_cn": "此处表示针对的对象"}
+      ],
+      "ex_en": "Don't laugh at people who make mistakes.",
+      "ex_cn": "别嘲笑犯错的人。",
+      "occ": [[2818, "laugh at"], [2821, "laugh at"]]
+    },
+    {
+      "head": "all the way",
+      "gloss": "大老远地；一路（强调全程或远距离）",
+      "ipa": "/ɔːl ðə weɪ/",
+      "note": "强调从头到尾或路途遥远。",
+      "literal": [
+        {"word": "all", "meaning_cn": "全部"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "way", "meaning_cn": "路程"}
+      ],
+      "ex_en": "She walked all the way home in the rain.",
+      "ex_cn": "她冒着雨一路走回了家。",
+      "occ": [[2818, "all the way"]]
+    },
+    {
+      "head": "mean to do sth",
+      "gloss": "有意；故意（做某事）",
+      "ipa": "/miːn tə duː/",
+      "note": "mean 此处意为“打算、故意”，常用 didn't mean to 表示“不是有意的”。",
+      "literal": [
+        {"word": "mean", "meaning_cn": "打算", "note_cn": "此处非“意思”，指有意去做"},
+        {"word": "to", "meaning_cn": "去（做）"},
+        {"word": "be", "meaning_cn": "是"}
+      ],
+      "ex_en": "I'm sorry—I didn't mean to hurt your feelings.",
+      "ex_cn": "对不起，我不是故意要伤你的心。",
+      "occ": [[2819, "mean to be"]]
+    },
+    {
+      "head": "can't bear to do sth",
+      "gloss": "不忍心做；受不了做（某事）",
+      "ipa": "/kænt ber tə duː/",
+      "note": "bear 此处意为“忍受”；本章 couldn't 与 bear 被 somehow 隔开，故 card-only。",
+      "literal": [
+        {"word": "can't", "meaning_cn": "不能"},
+        {"word": "bear", "meaning_cn": "忍受", "note_cn": "此处非“熊”，指承受、忍心"},
+        {"word": "to", "meaning_cn": "去（做）"}
+      ],
+      "ex_en": "She can't bear to throw away her grandmother's old letters.",
+      "ex_cn": "她不忍心扔掉祖母的那些旧信。",
+      "cardOnly": true,
+      "key": "can't bear to do sth",
+      "exSeq": 2833
+    },
+    {
+      "head": "run off",
+      "gloss": "跑掉；逃跑",
+      "ipa": "/rʌn ɔːf/",
+      "note": "指匆匆离开或逃走。",
+      "literal": [
+        {"word": "run", "meaning_cn": "跑"},
+        {"word": "off", "meaning_cn": "离开", "note_cn": "此处表示离去"}
+      ],
+      "ex_en": "The dog ran off the moment I opened the gate.",
+      "ex_cn": "我一打开门，狗就跑掉了。",
+      "occ": [[2831, "run off"]]
+    },
+    {
+      "head": "cover up",
+      "gloss": "掩盖；遮掩（过错或真相）",
+      "ipa": "/ˈkʌvər ʌp/",
+      "note": "本章指弥补、遮掩过错；也常指隐瞒真相。",
+      "literal": [
+        {"word": "cover", "meaning_cn": "盖住"},
+        {"word": "up", "meaning_cn": "彻底", "note_cn": "此处强调完全遮住"}
+      ],
+      "ex_en": "He told a lie to cover up his mistake.",
+      "ex_cn": "他撒了个谎来掩盖自己的错误。",
+      "occ": [[2830, "cover up"]]
+    },
+    {
+      "head": "keep mum",
+      "gloss": "保持沉默；守口如瓶",
+      "ipa": "/kiːp mʌm/",
+      "note": "mum 意为“不作声的”；keep mum 指对某事绝口不提。本章 Tom 把树皮塞回口袋、什么都没说。",
+      "literal": [
+        {"word": "kept", "meaning_cn": "保持", "note_cn": "keep的过去式"},
+        {"word": "mum", "meaning_cn": "沉默的", "note_cn": "口语词，指闭口不言"}
+      ],
+      "ex_en": "Promise me you'll keep mum about the surprise party.",
+      "ex_cn": "答应我，惊喜派对的事你要守口如瓶。",
+      "occ": [[2834, "kept mum"]]
+    }
+  ],
+  "skipped": [
+    "Sereny Harper / Joe / Jackson's Island（专名，跳过）",
+    "skin you alive（口语威胁，一次性）",
+    "brought his sorrows to an unpromising market（一次性文学比喻）",
+    "rubbage / drownded / 'deed / 'most / ain't（方言拼写，迁移弱）",
+    "reckon（方言口语，且为单词非语块）",
+    "keep you from grieving（可拆解语法结构 keep sb from doing，依 ch10 惯例舍）",
+    "gone pirating（一次性内容动词）",
+    "give the whole world to（一次性夸张说法）",
+    "be off with you（口语一次性告别语）",
+    "certain sure（方言强调，迁移弱）",
+    "put out her hand（偏字面/基础）",
+    "committed a million sins（commit a sin 备选，为控量舍去）"
+  ]
+}

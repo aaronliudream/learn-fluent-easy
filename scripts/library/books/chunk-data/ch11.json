@@ -1,0 +1,260 @@
+{
+  "chapter": 11,
+  "chunks": [
+    {
+      "head": "burst into tears",
+      "gloss": "突然大哭起来；放声痛哭",
+      "ipa": "/bɜːrst ˈɪntə tɪrz/",
+      "note": "burst into + 名词，表示突然爆发出某种情绪或声音，如 burst into tears / laughter / song。",
+      "literal": [
+        {"word": "burst", "meaning_cn": "突然发出", "note_cn": "此处指情绪骤然爆发"},
+        {"word": "into", "meaning_cn": "进入(某状态)"},
+        {"word": "tears", "meaning_cn": "眼泪"}
+      ],
+      "ex_en": "The little girl burst into tears when she lost her toy.",
+      "ex_cn": "小女孩弄丢玩具时突然大哭起来。",
+      "occ": [[1774, "burst into tears"]]
+    },
+    {
+      "head": "can't help it",
+      "gloss": "忍不住；控制不住自己",
+      "ipa": "/kænt help ɪt/",
+      "note": "can't help + it 或 + 动名词，表示情不自禁、无法克制。",
+      "literal": [
+        {"word": "couldn't", "meaning_cn": "不能"},
+        {"word": "help", "meaning_cn": "避免、克制", "note_cn": "此处不是“帮助”"},
+        {"word": "it", "meaning_cn": "(指那件事)"}
+      ],
+      "ex_en": "The joke was so funny that I couldn't help it and laughed out loud.",
+      "ex_cn": "那个笑话太好笑了，我忍不住笑出了声。",
+      "occ": [[1789, "couldn’t help it"]]
+    },
+    {
+      "head": "run away",
+      "gloss": "逃跑；(离家)出走",
+      "ipa": "/rʌn əˈweɪ/",
+      "note": "指逃离、跑开，也可指离家出走。",
+      "literal": [
+        {"word": "run", "meaning_cn": "跑"},
+        {"word": "away", "meaning_cn": "离开"}
+      ],
+      "ex_en": "The frightened cat ran away and hid under the bed.",
+      "ex_cn": "受惊的猫跑开了，躲到床底下。",
+      "occ": [[1790, "run away"]]
+    },
+    {
+      "head": "fall to doing",
+      "gloss": "(突然)开始做某事；着手做",
+      "ipa": "/fɔːl tə ˈduːɪŋ/",
+      "note": "fall to + 动名词，表示着手、开始(尤指突然)做某事。",
+      "literal": [
+        {"word": "fell", "meaning_cn": "着手、开始", "note_cn": "此处非“落下”义"},
+        {"word": "to", "meaning_cn": "(接动名词)"},
+        {"word": "sobbing", "meaning_cn": "啜泣"}
+      ],
+      "ex_en": "As soon as he sat down, he fell to eating hungrily.",
+      "ex_cn": "他一坐下就狼吞虎咽地吃起来。",
+      "occ": [[1791, "fell to sobbing"]]
+    },
+    {
+      "head": "from head to foot",
+      "gloss": "从头到脚；浑身上下",
+      "ipa": "/frəm hed tə fʊt/",
+      "note": "表示“整个身体、浑身”。本章作 from head to heel(heel=脚跟)，为同义变体。",
+      "literal": [
+        {"word": "from", "meaning_cn": "从"},
+        {"word": "head", "meaning_cn": "头"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "heel", "meaning_cn": "脚跟"}
+      ],
+      "ex_en": "He was covered in mud from head to foot.",
+      "ex_cn": "他从头到脚沾满了泥。",
+      "occ": [[1762, "from head to heel"]]
+    },
+    {
+      "head": "get away",
+      "gloss": "逃走；脱身",
+      "ipa": "/ɡet əˈweɪ/",
+      "note": "指逃脱、跑开，尤指从被抓或困境中脱身。",
+      "literal": [
+        {"word": "get", "meaning_cn": "(变得)脱离"},
+        {"word": "away", "meaning_cn": "离开"}
+      ],
+      "ex_en": "The thief tried to get away, but the police caught him.",
+      "ex_cn": "小偷想逃走，却被警察抓住了。",
+      "occ": [[1769, "get away"], [1770, "get away"]]
+    },
+    {
+      "head": "fall apart",
+      "gloss": "散开；散架；(计划/情绪)崩溃",
+      "ipa": "/fɔːl əˈpɑːrt/",
+      "note": "本章指人群向两边“散开、闪开”。也常喻指物体散架，或计划、情绪崩溃。",
+      "literal": [
+        {"word": "fell", "meaning_cn": "(此处)变得"},
+        {"word": "apart", "meaning_cn": "分开、散开"}
+      ],
+      "ex_en": "The old book fell apart as soon as I opened it.",
+      "ex_cn": "那本旧书我一打开就散架了。",
+      "occ": [[1772, "fell apart"]]
+    },
+    {
+      "head": "take the lead",
+      "gloss": "带头；领头；(比赛中)领先",
+      "ipa": "/teɪk ðə liːd/",
+      "note": "指率先行动、起带头作用；也指在竞争中处于领先。",
+      "literal": [
+        {"word": "take", "meaning_cn": "取得"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "lead", "meaning_cn": "带头、领先", "note_cn": "此处为名词"}
+      ],
+      "ex_en": "Nobody wanted to speak first, so she took the lead.",
+      "ex_cn": "没人愿意先开口，于是她带了头。",
+      "occ": [[1826, "take the lead"], [1832, "take the lead"]]
+    },
+    {
+      "head": "wear off",
+      "gloss": "(效果/感觉)逐渐消退；渐渐消失",
+      "ipa": "/wer ɔːf/",
+      "note": "指药效、疼痛、情绪等慢慢减弱直至消失。",
+      "literal": [
+        {"word": "wore", "meaning_cn": "(此处)消退", "note_cn": "非“穿”义，wear off = 渐渐消失"},
+        {"word": "off", "meaning_cn": "离开、消失"}
+      ],
+      "ex_en": "The pain in my leg slowly wore off after a few days.",
+      "ex_cn": "几天后，我腿上的疼痛渐渐消退了。",
+      "occ": [[1823, "wore off"]]
+    },
+    {
+      "head": "keep something to oneself",
+      "gloss": "把(某事)藏在心里；不告诉别人",
+      "ipa": "/kiːp ˈsʌmθɪŋ tə wʌnˈself/",
+      "note": "指对某消息或看法守口如瓶，不与人分享。",
+      "literal": [
+        {"word": "kept", "meaning_cn": "保留"},
+        {"word": "it", "meaning_cn": "(指那件事)"},
+        {"word": "to", "meaning_cn": "对(自己)"},
+        {"word": "himself", "meaning_cn": "他自己"}
+      ],
+      "ex_en": "She knew the secret but kept it to herself.",
+      "ex_cn": "她知道那个秘密，却藏在心里没说出去。",
+      "occ": [[1824, "kept it to himself"]]
+    },
+    {
+      "head": "get hold of",
+      "gloss": "弄到；找到；联系上",
+      "ipa": "/ɡet hoʊld əv/",
+      "note": "指设法拿到、获得某物，或联系上某人。",
+      "literal": [
+        {"word": "get", "meaning_cn": "得到"},
+        {"word": "hold", "meaning_cn": "抓握"},
+        {"word": "of", "meaning_cn": "(介词)"}
+      ],
+      "ex_en": "I finally got hold of the book I'd been looking for.",
+      "ex_cn": "我终于弄到了那本一直在找的书。",
+      "occ": [[1829, "get hold of"]]
+    },
+    {
+      "head": "catch a glimpse of",
+      "gloss": "瞥见；匆匆看到一眼",
+      "ipa": "/kætʃ ə ɡlɪmps əv/",
+      "note": "glimpse 指短暂的一瞥；本章作 get a glimpse of，同义。",
+      "literal": [
+        {"word": "getting", "meaning_cn": "(此处)得到"},
+        {"word": "a", "meaning_cn": "一"},
+        {"word": "glimpse", "meaning_cn": "一瞥、匆匆一看"},
+        {"word": "of", "meaning_cn": "(介词)"}
+      ],
+      "ex_en": "I caught a glimpse of the singer as her car drove past.",
+      "ex_cn": "歌手的车开过时，我瞥见了她一眼。",
+      "occ": [[1794, "getting a glimpse of"]]
+    },
+    {
+      "head": "go out of vogue",
+      "gloss": "过时；不再流行",
+      "ipa": "/ɡoʊ aʊt əv voʊɡ/",
+      "note": "vogue 意为“流行、时尚”；go/be out of vogue 指某事物不再时兴。反义为 in vogue。",
+      "literal": [
+        {"word": "went", "meaning_cn": "变得", "note_cn": "go 的过去式"},
+        {"word": "out of", "meaning_cn": "脱离"},
+        {"word": "vogue", "meaning_cn": "流行、时尚"}
+      ],
+      "ex_en": "Wide ties went out of vogue many years ago.",
+      "ex_cn": "宽领带很多年前就不流行了。",
+      "occ": [[1828, "went out of vogue"]]
+    },
+    {
+      "head": "reel off",
+      "gloss": "一口气说出；流利地背出/列举",
+      "ipa": "/riːl ɔːf/",
+      "note": "指毫不费力、连续不断地说出一串话、数字或名单。",
+      "literal": [
+        {"word": "reel", "meaning_cn": "滔滔不绝地说", "note_cn": "原义为“绕线、卷轴”"},
+        {"word": "off", "meaning_cn": "(接连)说出"}
+      ],
+      "ex_en": "She reeled off the names of all fifty states without stopping.",
+      "ex_cn": "她一口气说出了全部五十个州的名字。",
+      "occ": [[1785, "reel off"]]
+    },
+    {
+      "head": "at once",
+      "gloss": "立刻，马上；同时，一齐",
+      "ipa": "/ət wʌns/",
+      "note": "主要义为“立即、马上”(本章 1746);也可表“同时、一齐”(本章 1755)。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "once", "meaning_cn": "立即", "note_cn": "习语固定用法，非“一次”"}
+      ],
+      "ex_en": "Come here at once—dinner is getting cold!",
+      "ex_cn": "马上过来，饭都要凉了！",
+      "occ": [[1746, "at once"], [1755, "at once"]]
+    },
+    {
+      "head": "take one's eyes off",
+      "gloss": "把目光从…移开；不再盯着看",
+      "ipa": "/teɪk wʌnz aɪz ɔːf/",
+      "note": "本章出处为分离式(take their fascinated eyes from),故 card-only。常用 can't take one's eyes off = 目不转睛。",
+      "literal": [
+        {"word": "take", "meaning_cn": "移开"},
+        {"word": "their", "meaning_cn": "他们的"},
+        {"word": "eyes", "meaning_cn": "眼睛、目光"},
+        {"word": "off", "meaning_cn": "从…离开"}
+      ],
+      "ex_en": "The view was so beautiful I couldn't take my eyes off it.",
+      "ex_cn": "那景色太美了，我目不转睛。",
+      "cardOnly": true,
+      "key": "take one's eyes off",
+      "exSeq": 1793
+    },
+    {
+      "head": "make out",
+      "gloss": "弄懂；辨认出；看清",
+      "ipa": "/meɪk aʊt/",
+      "note": "本章出处为分离式(make anything out of),故 card-only。make out = 理解、辨认;make sth out of = 从…中弄明白。",
+      "literal": [
+        {"word": "make", "meaning_cn": "理解、辨认", "note_cn": "此处非“制造”义"},
+        {"word": "out", "meaning_cn": "出来"},
+        {"word": "of", "meaning_cn": "(介词)从…"}
+      ],
+      "ex_en": "It was so dark I could barely make out the road.",
+      "ex_cn": "天太黑，我几乎看不清路。",
+      "cardOnly": true,
+      "key": "make out",
+      "exSeq": 1824
+    }
+  ],
+  "skipped": [
+    "Muff Potter / Injun Joe / Aunt Polly / Sid / Huckleberry (专名)",
+    "tar-and-feather / ride him on a rail (一次性历史刑罚)",
+    "’pon my word and honor / it ain’t any use (方言/一次性)",
+    "I reckon (方言口头禅)",
+    "carry home (此处“击中要害”，文学性一次性)",
+    "from man to man, from group to group (一次性排比)",
+    "sold himself to Satan / the devil (一次性典故)",
+    "tied up his jaws / tie up one's jaws (一次性描写)",
+    "pitch around / talk in one's sleep (一次性/偏基础)",
+    "over and over (偏基础，ch10 已收 over and over again)",
+    "come to one's relief (较冷僻，控量舍去)",
+    "meddle with (较冷僻，控量舍去)",
+    "worm one's body through (一次性文学动词)"
+  ]
+}

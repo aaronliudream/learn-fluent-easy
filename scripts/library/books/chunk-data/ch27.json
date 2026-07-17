@@ -1,0 +1,241 @@
+{
+  "chapter": 27,
+  "chunks": [
+    {
+      "head": "get one's hands on",
+      "gloss": "弄到手；触到、摸到",
+      "ipa": "/ɡet wʌnz hændz ɒn/",
+      "note": "get/have one's hands on sth 指设法得到或触及某物。本章为“had his hands on that treasure”，指梦里摸到了那笔财宝。",
+      "literal": [
+        {"word": "had", "meaning_cn": "(此处)触到、摸到", "note_cn": "此处非“拥有”，指手已挨上"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "hands", "meaning_cn": "手"},
+        {"word": "on", "meaning_cn": "在…上"}
+      ],
+      "ex_en": "I finally got my hands on a ticket for the show.",
+      "ex_cn": "我终于弄到了一张演出票。",
+      "occ": [[3783, "had his hands on"]]
+    },
+    {
+      "head": "occur to somebody",
+      "gloss": "(想法)突然浮现在某人脑海；想到",
+      "ipa": "/əˈkɜːr tə ˈsʌmbədi/",
+      "note": "主语通常是某个念头，occur to sb 指它突然出现在某人心里；本章“it occurred to him”即他忽然想到。",
+      "literal": [
+        {"word": "it", "meaning_cn": "(形式主语)"},
+        {"word": "occurred", "meaning_cn": "(念头)浮现", "note_cn": "此处非“发生”，指想法冒出来"},
+        {"word": "to", "meaning_cn": "向、在…心里"},
+        {"word": "him", "meaning_cn": "他"}
+      ],
+      "ex_en": "A good idea suddenly occurred to me.",
+      "ex_cn": "我突然想到一个好主意。",
+      "occ": [[3785, "it occurred to him"]]
+    },
+    {
+      "head": "in favor of",
+      "gloss": "支持；赞成；有利于",
+      "ipa": "/ɪn ˈfeɪvər əv/",
+      "note": "表示赞同某观点或方案，反义为 against。本章指“支持这一想法的有力论据”。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "favor", "meaning_cn": "支持、赞同"},
+        {"word": "of", "meaning_cn": "…的"}
+      ],
+      "ex_en": "Most students were in favor of the new plan.",
+      "ex_cn": "大多数学生赞成这个新计划。",
+      "occ": [[3786, "in favor of"]]
+    },
+    {
+      "head": "consist of",
+      "gloss": "由…组成；包含",
+      "ipa": "/kənˈsɪst əv/",
+      "note": "后接组成部分；只用主动式，无进行、无被动。",
+      "literal": [
+        {"word": "consist", "meaning_cn": "组成、构成"},
+        {"word": "of", "meaning_cn": "由"}
+      ],
+      "ex_en": "The team consists of five players.",
+      "ex_cn": "这个队由五名队员组成。",
+      "occ": [[3789, "consist of"]]
+    },
+    {
+      "head": "a handful of",
+      "gloss": "一把；少数几个",
+      "ipa": "/ə ˈhændfʊl əv/",
+      "note": "字面“一把”，引申指数量很少。",
+      "literal": [
+        {"word": "a", "meaning_cn": "一"},
+        {"word": "handful", "meaning_cn": "一把、少量"},
+        {"word": "of", "meaning_cn": "…的"}
+      ],
+      "ex_en": "Only a handful of people came to the meeting.",
+      "ex_cn": "只有寥寥几个人来开会。",
+      "occ": [[3789, "a handful of"]]
+    },
+    {
+      "head": "think over",
+      "gloss": "仔细考虑；反复斟酌",
+      "ipa": "/θɪŋk ˈoʊvər/",
+      "note": "本章出处为分离式“thinking them over”，故 card-only。宾语常置于 think 与 over 之间。",
+      "literal": [
+        {"word": "think", "meaning_cn": "思考"},
+        {"word": "over", "meaning_cn": "反复地", "note_cn": "此处表把事情从头到尾想一遍"}
+      ],
+      "ex_en": "Take your time and think it over before deciding.",
+      "ex_cn": "别急，做决定前好好想一想。",
+      "cardOnly": true,
+      "key": "think over",
+      "exSeq": 3790
+    },
+    {
+      "head": "after all",
+      "gloss": "毕竟；终究",
+      "ipa": "/ˈæftər ɔːl/",
+      "note": "用于说明理由或表示“想来想去还是”；本章意为“这事说到底也许并非一场梦”。",
+      "literal": [
+        {"word": "after", "meaning_cn": "在…之后"},
+        {"word": "all", "meaning_cn": "一切", "note_cn": "习语固定搭配，须整体记忆"}
+      ],
+      "ex_en": "I thought I'd lost my keys, but they were in my bag after all.",
+      "ex_cn": "我以为钥匙丢了，结果它们终究还是在包里。",
+      "occ": [[3790, "after all"]]
+    },
+    {
+      "head": "go for somebody",
+      "gloss": "扑向；攻击(某人)",
+      "ipa": "/ɡoʊ fər ˈsʌmbədi/",
+      "note": "go for sb 指突然扑向或攻击某人；本章指梦里那恶魔一次次扑向他。",
+      "literal": [
+        {"word": "going", "meaning_cn": "(此处)扑向", "note_cn": "此处非“去”，指猛冲、攻击"},
+        {"word": "for", "meaning_cn": "朝向"},
+        {"word": "me", "meaning_cn": "我"}
+      ],
+      "ex_en": "The angry dog went for the stranger.",
+      "ex_cn": "那条恶狗扑向了陌生人。",
+      "occ": [[3809, "going for me"]]
+    },
+    {
+      "head": "find out",
+      "gloss": "查明；弄清；打听到",
+      "ipa": "/faɪnd aʊt/",
+      "note": "指经过打听或调查而得知某事。",
+      "literal": [
+        {"word": "find", "meaning_cn": "找到"},
+        {"word": "out", "meaning_cn": "出来", "note_cn": "此处表“弄明白、查出”"}
+      ],
+      "ex_en": "I want to find out who broke the window.",
+      "ex_cn": "我想查清是谁打破了窗户。",
+      "occ": [[3833, "find out"], [3841, "found out"], [3860, "found out"]]
+    },
+    {
+      "head": "at once",
+      "gloss": "立刻；马上",
+      "ipa": "/ət ˈwʌns/",
+      "note": "表示毫不拖延；另有“同时”义，本章为“立刻”。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "once", "meaning_cn": "一次", "note_cn": "此处习语义为“立即”"}
+      ],
+      "ex_en": "Come here at once!",
+      "ex_cn": "立刻过来！",
+      "occ": [[3835, "at once"]]
+    },
+    {
+      "head": "make the most of",
+      "gloss": "充分利用；尽量利用",
+      "ipa": "/meɪk ðə moʊst əv/",
+      "note": "指把有限的条件或机会用到最好；本章那男孩把这桩谜团“想象成闹鬼”来自娱。",
+      "literal": [
+        {"word": "made", "meaning_cn": "做"},
+        {"word": "the", "meaning_cn": "(定冠词)"},
+        {"word": "most", "meaning_cn": "最大限度"},
+        {"word": "of", "meaning_cn": "对于"}
+      ],
+      "ex_en": "Let's make the most of our short holiday.",
+      "ex_cn": "咱们要充分利用这个短假。",
+      "occ": [[3840, "made the most of"]]
+    },
+    {
+      "head": "get hold of",
+      "gloss": "弄到；找到；抓住",
+      "ipa": "/ɡet hoʊld əv/",
+      "note": "get hold of sth 指设法得到或抓住某物；本章指弄到所有能找到的钥匙。",
+      "literal": [
+        {"word": "get", "meaning_cn": "得到"},
+        {"word": "hold", "meaning_cn": "抓握"},
+        {"word": "of", "meaning_cn": "(介词)", "note_cn": "此处为习语固定介词"}
+      ],
+      "ex_en": "Where can I get hold of a good map?",
+      "ex_cn": "我在哪儿能弄到一张好地图？",
+      "occ": [[3850, "get hold of"]]
+    },
+    {
+      "head": "keep a lookout for",
+      "gloss": "留心提防；密切注意",
+      "ipa": "/kiːp ə ˈlʊkaʊt fɔːr/",
+      "note": "lookout 意为“警戒、望风”；keep a lookout for sb/sth 指留神提防某人某物。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "保持"},
+        {"word": "a", "meaning_cn": "一(份)"},
+        {"word": "lookout", "meaning_cn": "警戒、望风"},
+        {"word": "for", "meaning_cn": "对…(提防)"}
+      ],
+      "ex_en": "Keep a lookout for our bus while I buy tickets.",
+      "ex_cn": "我买票时你留意咱们的公交车。",
+      "occ": [[3851, "keep a lookout for"]]
+    },
+    {
+      "head": "get one's revenge",
+      "gloss": "报仇；复仇",
+      "ipa": "/ɡet wʌnz rɪˈvendʒ/",
+      "note": "revenge 意为“报复”；get/take one's revenge on sb 指向某人报仇。",
+      "literal": [
+        {"word": "get", "meaning_cn": "得到、实现"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "revenge", "meaning_cn": "报复、仇"}
+      ],
+      "ex_en": "He worked hard to get his revenge on his rival.",
+      "ex_cn": "他发愤图强，要向对手报仇。",
+      "occ": [[3851, "get his revenge"], [3860, "get his revenge"]]
+    },
+    {
+      "head": "lead up to",
+      "gloss": "(谈话)逐渐引到；一步步导向",
+      "ipa": "/liːd ʌp tə/",
+      "note": "lead up to sth 指话题或事件一步步引向某处；本章指让 Huck 主动把话头引到那件事上。",
+      "literal": [
+        {"word": "lead", "meaning_cn": "引导"},
+        {"word": "up", "meaning_cn": "(逐步)到"},
+        {"word": "to", "meaning_cn": "向"}
+      ],
+      "ex_en": "She slowly led up to the bad news.",
+      "ex_cn": "她慢慢地把话头引到那个坏消息上。",
+      "occ": [[3794, "lead up to"]]
+    },
+    {
+      "head": "sweep away",
+      "gloss": "消除；扫除；冲走",
+      "ipa": "/swiːp əˈweɪ/",
+      "note": "本章指“消除疑虑”；字面为把东西一扫而光。",
+      "literal": [
+        {"word": "swept", "meaning_cn": "扫除", "note_cn": "sweep 的过去分词，此处喻“清除掉”"},
+        {"word": "away", "meaning_cn": "掉、离开"}
+      ],
+      "ex_en": "The new evidence swept away all our doubts.",
+      "ex_cn": "新证据消除了我们所有的疑虑。",
+      "occ": [[3791, "swept away"]]
+    }
+  ],
+  "skipped": [
+    "Number Two / No. 2 / Injun Joe / Spanish devil (专名，按要求跳过)",
+    "wasted to nothingness / sleep forsook him / a time long gone by (一次性文学表达→难句层)",
+    "make out (出处“make nothing out of it”为分离式方言否定，控量舍去)",
+    "one-horse town (真习语但较俚俗，控量舍去)",
+    "be after (we're after / going right after，备选，控量舍去)",
+    "drop into town / spy around / track him out (备选短语，控量舍去)",
+    "you bet / Now you're talking (口语招呼语，一次性)",
+    "for a moment / for a minute (太基础)",
+    "a pile (指一大笔钱的俚语，一次性)",
+    "'tain't / dog'd / ain't / foller / by jingoes / Goody / Lordy (Huck 方言拼写与感叹，迁移弱)"
+  ]
+}

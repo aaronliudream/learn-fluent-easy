@@ -38,7 +38,7 @@ export default function LibraryLandingSection() {
 
   return (
     <section className="bg-[#f4f6f9] pb-10 md:pb-12">
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-[1200px] px-4 md:px-6">
         <Link
           to="/library"
           aria-label={zh ? "进入图书馆" : "Enter Library"}

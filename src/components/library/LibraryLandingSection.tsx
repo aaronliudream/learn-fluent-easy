@@ -19,8 +19,8 @@ import {
 } from "@/lib/library/data";
 import { fetchProgressMap, type LibraryReadingState } from "@/lib/library/progress";
 
-/** 首页板块开关:默认关(软上线)。Aaron 批准后改 true;或访问 ?lib=1 预览。 */
-const LIBRARY_HOME_ENABLED = false;
+/** 首页板块开关:Aaron 批准正式上线 → 开(2026-07-17)。无书时组件仍自动隐藏。 */
+const LIBRARY_HOME_ENABLED = true;
 
 const BANDS: { key: LibraryAgeBand | "all"; label: string; en: string }[] = [
   { key: "all", label: "全部", en: "All" },

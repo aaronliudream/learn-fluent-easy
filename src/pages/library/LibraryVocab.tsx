@@ -28,6 +28,7 @@ import LibraryReview from "@/pages/library/LibraryReview";
 import type { ReviewMode } from "@/lib/library/reviewQuestions";
 import { isFunctionWord } from "@/lib/library/wordClass";
 import VocabGrowthChart from "@/components/library/VocabGrowthChart";
+import VocabRing from "@/components/library/VocabRing";
 import { getReviewStreak, effectiveStreak, type ReviewStreak } from "@/lib/library/reviewStreak";
 
 const REVIEW_MODE_KEY = "library.reviewMode";
@@ -272,6 +273,9 @@ export default function LibraryVocab() {
         <p className="py-16 text-center text-sm text-slate-500"><T>登录后才能收藏和查看词库。</T></p>
       ) : (
         <>
+          {/* 顶部大圆环:总词数拆成 已掌握/待复习/学习中 三段(替代原来那行小字统计) */}
+          <VocabRing total={reviewable.length} mastered={stat.mastered} due={stat.due} en={en} />
+
           {/* 今日行动条:待复习是「要做的事」,做完归零 */}
           <button
             type="button"

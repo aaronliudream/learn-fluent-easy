@@ -44,17 +44,15 @@ function labelOf(key: string, g: Gran, en: boolean): string {
   if (g === "month") { const [y, m] = key.split("-"); return en ? `${Number(m)}/${y.slice(2)}` : `${Number(m)}月`; }
   const [, m, d] = key.split("-"); return `${Number(m)}/${Number(d)}`; // 日/周(周一)都用 M/D
 }
-// 自动"漂亮刻度":步长取 1/2/5×10ⁿ,让 Y 轴永远是整齐的整数(0/20/40/60/80、0/50/…/200、0/200/…/600…)。
+// Y 轴刻度(Aaron 定):起步固定 0/20/40/60/80/100(步长 20、封顶 100);超过 100 后按 100 间距增长
+// (0/100/200/300/400…);极大值再自动加档保持刻度数不爆(≤ ~11 条)。
 function niceAxis(rawMax: number): { niceMax: number; ticks: number[] } {
-  if (rawMax <= 0) return { niceMax: 4, ticks: [0, 1, 2, 3, 4] };
-  const rough = rawMax / 4; // 目标约 4 格
-  const pow = Math.pow(10, Math.floor(Math.log10(rough)));
-  const norm = rough / pow;
-  const niceNorm = norm <= 1 ? 1 : norm <= 2 ? 2 : norm <= 5 ? 5 : 10;
-  const step = niceNorm * pow;
+  if (rawMax <= 100) return { niceMax: 100, ticks: [0, 20, 40, 60, 80, 100] };
+  let step = 100;
+  while (rawMax / step > 10) step += 100; // 只有极大值才加档,常规区间恒 100 间距
   const niceMax = Math.ceil(rawMax / step) * step;
   const ticks: number[] = [];
-  for (let t = 0; t <= niceMax + 1e-9; t += step) ticks.push(Math.round(t));
+  for (let t = 0; t <= niceMax; t += step) ticks.push(t);
   return { niceMax, ticks };
 }
 

@@ -12,6 +12,7 @@ import { recordLibraryVocabMastery } from "@/lib/library/mastery";
 import { recordVocabStreak, VOCAB_MASTER_STREAK, listLibraryFavorites, vocabIsDueToday, type LibraryFavorite } from "@/lib/library/favorites";
 import { recordLibraryVocabMistake, resolveLibraryVocabMistake } from "@/lib/library/mistakes";
 import { bumpReviewStreak } from "@/lib/library/reviewStreak";
+import { bumpReviewDaily } from "@/lib/library/reviewDaily";
 import { isFunctionWord } from "@/lib/library/wordClass";
 
 type Phase = "loading" | "empty" | "quiz" | "done";
@@ -147,6 +148,8 @@ export default function LibraryReview({
       } catch (e) {
         console.warn("[library review] streak bump failed", e);
       }
+      // 今天复习了多少个词/块 → 累加(成长图橙柱)。本次涉及的不同词数 = aggs.length。
+      void bumpReviewDaily(aggs.length);
       setResult({ pct, correct: correctTerms, total: aggs.length, mastered: masteredNow });
       setPhase("done");
     },

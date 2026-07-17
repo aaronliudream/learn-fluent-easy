@@ -30,6 +30,7 @@ import { isFunctionWord } from "@/lib/library/wordClass";
 import VocabGrowthChart from "@/components/library/VocabGrowthChart";
 import VocabRing from "@/components/library/VocabRing";
 import { getReviewStreak, effectiveStreak, type ReviewStreak } from "@/lib/library/reviewStreak";
+import { getReviewDaily } from "@/lib/library/reviewDaily";
 
 const REVIEW_MODE_KEY = "library.reviewMode";
 /** 默认模式:懂中文(zh/zh-TW)→ 中文学习者;其余一律英语母语者。localStorage 覆盖优先。 */
@@ -106,6 +107,7 @@ export default function LibraryVocab() {
   const [favs, setFavs] = useState<LibraryFavorite[]>([]);
   const [bookTitles, setBookTitles] = useState<Map<string, string>>(new Map());
   const [streak, setStreak] = useState<ReviewStreak | null>(null);
+  const [reviewedByDay, setReviewedByDay] = useState<Map<string, number>>(new Map());
   const [bookCore, setBookCore] = useState<Map<string, BookCore>>(new Map());
   const [signedIn, setSignedIn] = useState(true);
   const [loading, setLoading] = useState(true);
@@ -126,16 +128,18 @@ export default function LibraryVocab() {
     const uid = await currentUserId();
     setSignedIn(!!uid);
     if (!uid) { setLoading(false); return; }
-    const [rows, books, rs, core] = await Promise.all([
+    const [rows, books, rs, core, rd] = await Promise.all([
       listLibraryFavorites(),
       listBooks(),
       getReviewStreak(),
       getBookCoreCounts(),
+      getReviewDaily(),
     ]);
     setFavs(rows);
     setBookTitles(new Map(books.map((b) => [b.id, b.zh_title || b.title || b.book_key])));
     setStreak(rs);
     setBookCore(core);
+    setReviewedByDay(rd);
     setLoading(false);
   }, []);
 
@@ -352,7 +356,7 @@ export default function LibraryVocab() {
           )}
 
           {/* 词汇成长图表:每月新掌握(绝对数·按书上色),不画增长率 */}
-          <VocabGrowthChart favs={reviewable} bookTitles={bookTitles} bookCore={bookCore} bjMonth={bjToday().slice(0, 7)} en={en} />
+          <VocabGrowthChart favs={reviewable} reviewedByDay={reviewedByDay} bjToday={bjToday()} en={en} />
 
           {/* 状态筛选(默认今日待复习)*/}
           <div className="mt-5 flex flex-wrap gap-2">

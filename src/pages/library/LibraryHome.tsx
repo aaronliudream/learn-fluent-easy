@@ -5,7 +5,7 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookOpen, BookMarked, Lock } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, BookMarked, Lock } from "lucide-react";
 import { T } from "@/i18n/T";
 import BackLink from "@/components/BackLink";
 import { cn } from "@/lib/utils";
@@ -88,19 +88,31 @@ export default function LibraryHome() {
       >
         <ArrowLeft className="size-4" /> <T>返回首页</T>
       </BackLink>
-      <h1 className="text-2xl font-extrabold text-slate-900">
-        <T>📚 图书馆</T>
-      </h1>
-      <p className="mt-1 text-sm text-slate-500">
-        <T>点词查解释 · 文章朗读</T>
-      </p>
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <h1 className="text-2xl font-extrabold text-slate-900">
+            <T>📚 图书馆</T>
+          </h1>
+          <p className="mt-1 text-sm text-slate-500">
+            <T>点词查解释 · 文章朗读</T>
+          </p>
+        </div>
 
-      <Link
-        to="/library/vocab"
-        className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1.5 text-sm font-semibold text-sky-700 transition hover:bg-sky-100"
-      >
-        <BookMarked className="size-4" /> <T>我的词库</T>
-      </Link>
+        {/* 我的词库入口:标题栏右侧醒目渐变卡按钮(替代原来那行小字) */}
+        <Link
+          to="/library/vocab"
+          className="group flex shrink-0 items-center gap-2.5 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 px-3.5 py-2.5 text-white shadow-md transition hover:shadow-lg hover:brightness-105 active:scale-[0.98]"
+        >
+          <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-white/20">
+            <BookMarked className="size-5" />
+          </span>
+          <span className="text-left leading-tight">
+            <span className="block text-[15px] font-bold"><T>我的词库</T></span>
+            <span className="hidden text-[11px] text-sky-100 sm:block"><T>收藏 · 复习 · 掌握</T></span>
+          </span>
+          <ArrowRight className="size-4 shrink-0 transition group-hover:translate-x-0.5" />
+        </Link>
+      </div>
 
       {/* 年龄段筛选 */}
       <div className="mt-4 flex flex-wrap gap-2">

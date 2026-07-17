@@ -139,10 +139,10 @@ export default function VocabGrowthChart({
             <span key={i} className="leading-none">{t}</span>
           ))}
         </div>
-        {/* 柱区(可横滚);网格线 + 柱在同一 relative 容器,日期标签单独一行对齐 */}
+        {/* 柱区:内容窄则居中(w-max+mx-auto),宽则横滚。柱按固定桶宽紧凑成组,不再被 flex-1 拉开 */}
         <div className="min-w-0 flex-1 overflow-x-auto pb-1">
-          <div style={{ minWidth: `${axis.length * 52}px` }}>
-            <div className="relative flex items-end gap-2" style={{ height: TRACK }}>
+          <div className="mx-auto w-max">
+            <div className="relative flex items-end gap-3" style={{ height: TRACK }}>
               {/* 横网格线:每个刻度一条 */}
               {ticks.map((t, i) => (
                 <div
@@ -151,11 +151,11 @@ export default function VocabGrowthChart({
                   style={{ bottom: `${(t / niceMax) * TRACK}px` }}
                 />
               ))}
-              {/* 每桶三色长方柱 */}
+              {/* 每桶三色长方柱(紧凑成组) */}
               {axis.map((k) => {
                 const b = data.get(k)!;
                 return (
-                  <div key={k} className="relative flex min-w-[44px] flex-1 items-end justify-center gap-1" style={{ height: TRACK }}>
+                  <div key={k} className="flex w-14 items-end justify-center gap-1" style={{ height: TRACK }}>
                     {bar(b.added, BLUE)}
                     {bar(b.reviewed, ORANGE)}
                     {bar(b.mastered, GREEN)}
@@ -163,10 +163,10 @@ export default function VocabGrowthChart({
                 );
               })}
             </div>
-            {/* X 轴日期(与柱同宽对齐) */}
-            <div className="mt-1 flex gap-2">
+            {/* X 轴日期(与桶同宽对齐) */}
+            <div className="mt-1 flex gap-3">
               {axis.map((k) => (
-                <span key={k} className="min-w-[44px] flex-1 whitespace-nowrap text-center text-[10px] text-slate-400">{labelOf(k, g, en)}</span>
+                <span key={k} className="w-14 whitespace-nowrap text-center text-[10px] text-slate-400">{labelOf(k, g, en)}</span>
               ))}
             </div>
           </div>

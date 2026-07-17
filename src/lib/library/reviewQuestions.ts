@@ -212,7 +212,8 @@ export async function buildReviewQuestions(
   let seq = 0;
   const push = (qtype: ReviewQType, f: LibraryFavorite, build: Omit<Extract<QuizItem, { kind: "choice" }>, "kind" | "id">) => {
     const id = `${qtype}:${f.kind}:${seq++}`;
-    items.push({ kind: "choice", id, ...build });
+    // 带上被复习的词/短语 + 音标 → 复习界面显示音标 + 发音按钮(单词才有 ipa;短语无 ipa 只发音)。
+    items.push({ kind: "choice", id, term: f.term, ipa: f.ipa ?? undefined, ...build });
     meta[id] = { kind: f.kind, term: f.term, qtype };
   };
 

@@ -10,8 +10,22 @@ import { T } from "@/i18n/T";
 import { speak, unlockAudioSync, prefetchTTSBatch } from "@/lib/speak";
 
 export type QuizItem =
-  | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number; explanation?: string; stemCn?: string; context?: string; audio?: string; passage?: string }
+  | { kind: "choice"; id: string; stem: string; options: string[]; answerIndex: number; explanation?: string; stemCn?: string; context?: string; audio?: string; passage?: string; term?: string; ipa?: string }
   | { kind: "reveal"; id: string; prompt: string; answer: string; explanation?: string };
+
+/** 复习词/语块的发音按钮(复用点词那套 speak TTS)。单词、短语都可读。 */
+function SpeakButton({ text, size = "sm" }: { text: string; size?: "sm" | "lg" }) {
+  return (
+    <button
+      type="button"
+      aria-label="朗读"
+      onClick={(e) => { e.stopPropagation(); unlockAudioSync(); void speak(text, { accent: "US" }); }}
+      className={`inline-flex shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-600 transition hover:bg-sky-200 ${size === "lg" ? "size-9" : "size-8"}`}
+    >
+      <Volume2 className={size === "lg" ? "size-4" : "size-3.5"} />
+    </button>
+  );
+}
 
 function ExplanationNote({ text }: { text?: string }) {
   if (!text) return null;
@@ -146,14 +160,19 @@ export function LibraryQuizRunner({
             </div>
           )}
           <div className="mb-4 flex items-start gap-2">
-            <p className="flex-1 text-lg font-semibold leading-relaxed text-slate-800">{item.stem}</p>
-            {speakStem && !item.context && !item.audio && (
-              <button type="button" aria-label="朗读题干"
-                onClick={() => { unlockAudioSync(); void speak(item.stem, { accent: "US" }); }}
-                className="mt-1 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-600">
-                <Volume2 className="size-4" />
-              </button>
-            )}
+            <div className="flex-1">
+              <div className="flex items-center gap-2">
+                <p className="text-lg font-semibold leading-relaxed text-slate-800">{item.stem}</p>
+                {/* 题干本身就是被复习的词/短语(英译中型)→ 直接给音标+发音,不泄题 */}
+                {item.term && item.stem.trim() === item.term.trim() && <SpeakButton text={item.term} />}
+                {speakStem && !item.context && !item.audio && item.stem.trim() !== (item.term ?? "").trim() && (
+                  <SpeakButton text={item.stem} />
+                )}
+              </div>
+              {item.ipa && item.term && item.stem.trim() === item.term.trim() && (
+                <p className="mt-0.5 text-sm text-slate-400">{item.ipa}</p>
+              )}
+            </div>
           </div>
           <div className="grid gap-2.5">
             {item.options.map((opt, i) => {
@@ -175,6 +194,14 @@ export function LibraryQuizRunner({
               );
             })}
           </div>
+          {/* 答完再露被复习的词/短语 + 音标 + 发音(题干不是该词时,如中译英/填空,防泄题) */}
+          {picked !== null && item.term && item.stem.trim() !== item.term.trim() && (
+            <div className="mt-4 flex items-center gap-2.5 rounded-xl border border-slate-100 bg-slate-50 px-4 py-2.5">
+              <span className="text-[15px] font-semibold text-slate-800">{item.term}</span>
+              {item.ipa && <span className="text-sm text-slate-400">{item.ipa}</span>}
+              <SpeakButton text={item.term} />
+            </div>
+          )}
           {picked !== null && item.stemCn && (
             <div className="mt-4 rounded-xl border border-sky-100 bg-sky-50/70 px-4 py-2.5">
               <p className="text-sm leading-relaxed text-slate-700">🇨🇳 {item.stemCn}</p>

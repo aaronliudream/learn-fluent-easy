@@ -9,9 +9,10 @@ import { LibraryQuizRunner, type QuizItem } from "@/components/library/LibraryQu
 import GameResult from "@/pages/primaryHub/vocabGames/GameResult";
 import { buildReviewQuestions, type ReviewItemMeta, type ReviewMode } from "@/lib/library/reviewQuestions";
 import { recordLibraryVocabMastery } from "@/lib/library/mastery";
-import { recordVocabStreak, VOCAB_MASTER_STREAK, type LibraryFavorite } from "@/lib/library/favorites";
+import { recordVocabStreak, VOCAB_MASTER_STREAK, listLibraryFavorites, vocabIsDueToday, type LibraryFavorite } from "@/lib/library/favorites";
 import { recordLibraryVocabMistake, resolveLibraryVocabMistake } from "@/lib/library/mistakes";
 import { bumpReviewStreak } from "@/lib/library/reviewStreak";
+import { isFunctionWord } from "@/lib/library/wordClass";
 
 type Phase = "loading" | "empty" | "quiz" | "done";
 
@@ -39,6 +40,10 @@ export default function LibraryReview({
   const [metaMap, setMetaMap] = useState<Record<string, ReviewItemMeta>>({});
   const [runKey, setRunKey] = useState(0); // 重开一轮 → 换 key 重挂 Runner
   const [result, setResult] = useState<{ pct: number; correct: number; total: number; mastered: number } | null>(null);
+  const [emptyKind, setEmptyKind] = useState<"toofew" | "done">("toofew"); // 空态原因:凑不齐题 / 今日已清零
+  // 本次会话已「整词全答对」的词(key=kind:term)。「再练一轮」重建时排除它们——它们已 last_correct_date=今天、不再 due,
+  // 不该当天重出(修复:再练一轮复用过期 due 快照把已答对词又端出来)。跨轮累积,退出复习(组件卸载)自然清零。
+  const sessionMasteredRef = useRef<Set<string>>(new Set());
 
   const itemById = useMemo(() => {
     const m = new Map<string, QuizItem>();
@@ -48,12 +53,24 @@ export default function LibraryReview({
 
   const aggRef = useRef<Map<string, TermAgg>>(new Map());
 
-  const build = useCallback(async () => {
+  const build = useCallback(async (refetch = false) => {
     setPhase("loading");
     setResult(null);
     aggRef.current = new Map();
-    const built = await buildReviewQuestions(favs, mode, poolFavs ?? favs);
+    // 出题集:初次用父传入的「今日待复习」快照;「再练一轮」时(refetch)从 DB 重取、按 vocabIsDueToday 重滤
+    // ——彻底防过期快照(刚答对的词 last_correct_date=今天 → 不再 due)。再叠一层:排除本次会话已全答对的词。
+    let dueSet = favs;
+    let pool = poolFavs ?? favs;
+    if (refetch) {
+      const all = await listLibraryFavorites();
+      const reviewable = all.filter((f) => !isFunctionWord(f.term, f.pos));
+      dueSet = reviewable.filter(vocabIsDueToday);
+      pool = reviewable;
+    }
+    dueSet = dueSet.filter((f) => !sessionMasteredRef.current.has(`${f.kind}:${f.term}`));
+    const built = await buildReviewQuestions(dueSet, mode, pool);
     if (built.items.length === 0) {
+      setEmptyKind(refetch ? "done" : "toofew"); // 再练一轮后空=今日清零;初次空=收藏太少
       setPhase("empty");
       return;
     }
@@ -98,7 +115,10 @@ export default function LibraryReview({
       const aggs = [...aggRef.current.values()];
       for (const agg of aggs) {
         const allCorrect = agg.total > 0 && agg.correct === agg.total;
-        if (allCorrect) correctTerms += 1;
+        if (allCorrect) {
+          correctTerms += 1;
+          sessionMasteredRef.current.add(`${agg.meta.kind}:${agg.meta.term}`); // 本次全对 → 再练一轮不再重出
+        }
         const termPct = agg.total > 0 ? Math.round((agg.correct / agg.total) * 100) : 0;
         try {
           await recordLibraryVocabMastery(agg.meta.kind, agg.meta.term, allCorrect ? 100 : termPct);
@@ -135,20 +155,25 @@ export default function LibraryReview({
 
   const again = useCallback(() => {
     setRunKey((k) => k + 1);
-    void build();
+    void build(true); // 从 DB 重取 due + 排除本次已全对 → 只重出答错的
   }, [build]);
 
   if (phase === "loading") {
     return <p className="py-16 text-center text-sm text-slate-400">{en ? "Building your quiz…" : "正在出题…"}</p>;
   }
   if (phase === "empty") {
+    const done = emptyKind === "done";
     return (
       <div className="py-16 text-center">
         <p className="text-sm text-slate-500">
-          {en ? "Not enough saved words to make a full question yet." : "收藏太少,还凑不齐一道题的选项。"}
+          {done
+            ? (en ? "All caught up for today! 🎉" : "今日待复习都清零啦!🎉")
+            : (en ? "Not enough saved words to make a full question yet." : "收藏太少,还凑不齐一道题的选项。")}
         </p>
         <p className="mt-1 text-xs text-slate-400">
-          {en ? "Save a few more words while reading, then come back." : "多收藏几个词/语块,或先去精读再来复习。"}
+          {done
+            ? (en ? "Come back tomorrow to keep your streak going." : "明天再来,保持连续学习。")
+            : (en ? "Save a few more words while reading, then come back." : "多收藏几个词/语块,或先去精读再来复习。")}
         </p>
         <button
           type="button"

@@ -8,7 +8,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { toast } from "sonner";
-import { Loader2, Clock, ChevronDown, ChevronRight, Pencil } from "lucide-react";
+import { Loader2, Clock, ChevronDown, ChevronRight, Pencil, Volume2 } from "lucide-react";
+import { speak as speakTTS, speakFromUrl } from "@/lib/speak";
+import { getAlexVoice } from "@/lib/alexVoice";
 
 /**
  * 教师端 · 学生详情只读页 /teacher/class/:id/student/:studentId
@@ -85,12 +87,22 @@ const MODULE_META: Record<string, { label: string; emoji: string; tone: string }
 const MODULE_ORDER = ["primary", "junior", "senior", "american"];
 // 错题分组标题:完形/阅读用中文,其余用板块名或原 module 值
 const MISTAKE_GROUP_LABEL: Record<string, string> = {
-  cloze: "完形填空", reading: "阅读理解", junior_cloze: "完形填空",
+  cloze: "完形填空", reading: "阅读理解", junior_cloze: "完形填空", senior_cloze: "完形填空",
   gaokao_grammar: "语法", card_quiz: "知识卡", listening: "听力",
   primary_lesson: "课程", primary_chat_quiz: "口语问答", ai_talk_target: "AI 对话",
-  hub_reading: "闯关阅读", hub_listening: "闯关听力",
+  hub_reading: "闯关阅读", hub_listening: "听力", american_scenario: "情景应答",
 };
 const mistakeGroupLabel = (m: string) => MISTAKE_GROUP_LABEL[m] ?? MODULE_META[m]?.label ?? m;
+
+// 做错时间:UTC → 固定北京时间(UTC+8),不随浏览器时区(湾区测试号与中国老师看到一致);格式 YYYY-MM-DD HH:mm。
+function fmtBeijing(iso: string | null | undefined): string {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+  const b = new Date(d.getTime() + 8 * 3600 * 1000);
+  const p = (n: number) => String(n).padStart(2, "0");
+  return `${b.getUTCFullYear()}-${p(b.getUTCMonth() + 1)}-${p(b.getUTCDate())} ${p(b.getUTCHours())}:${p(b.getUTCMinutes())}`;
+}
 
 const rpc = supabase.rpc.bind(supabase) as (
   fn: string, args?: Record<string, unknown>,
@@ -381,11 +393,59 @@ export default function TeacherStudent() {
                         <ul className="space-y-3">
                           {rows.map((mk) => (
                             <li key={`${mk.kind}-${mk.id}`} className="rounded-xl border border-border bg-background p-3">
+                              {fmtBeijing(mk.last_wrong_at) && (
+                                <div className="mb-1.5 text-[11px] text-muted-foreground">
+                                  🕒 <T>做错时间</T> {fmtBeijing(mk.last_wrong_at)}
+                                </div>
+                              )}
                               {mk.kind === "plain" ? (
                                 <>
-                                  <div className="text-sm font-semibold">
-                                    {mk.question || <span className="italic text-muted-foreground"><T>（无题目快照）</T></span>}
+                                  <div className="flex items-start gap-2 text-sm font-semibold">
+                                    <span className="min-w-0 flex-1">
+                                      {mk.question || <span className="italic text-muted-foreground"><T>（无题目快照）</T></span>}
+                                    </span>
+                                    {(() => {
+                                      const snap = mk.snapshot as { audio?: string; audio_url?: string } | null;
+                                      if (!snap?.audio && !snap?.audio_url) return null;
+                                      return (
+                                        <button
+                                          type="button"
+                                          onClick={() => void (snap.audio_url ? speakFromUrl(snap.audio_url) : speakTTS(String(snap.audio), { voiceId: getAlexVoice() }))}
+                                          className="grid size-7 flex-shrink-0 place-items-center rounded-full bg-sky-100 text-sky-700 hover:bg-sky-200 dark:bg-sky-500/20 dark:text-sky-300"
+                                          aria-label="重听录音">
+                                          <Volume2 className="size-3.5" />
+                                        </button>
+                                      );
+                                    })()}
                                   </div>
+                                  {/* 全部选项完整文字(mcq 快照);正确标绿✓、错选标红划掉。
+                                      老数据无 snapshot.options → 返回 null 降级,下方字母摘要照常显示,绝不崩。 */}
+                                  {(() => {
+                                    const opts = (mk.snapshot as { options?: Record<string, string> } | null)?.options;
+                                    if (!opts || typeof opts !== "object") return null;
+                                    const pairs = Object.entries(opts)
+                                      .filter(([, v]) => v != null && String(v).trim() !== "")
+                                      .sort(([a], [b]) => a.localeCompare(b));
+                                    if (pairs.length === 0) return null;
+                                    const correct = String(mk.correct_answer ?? "").trim();
+                                    const picked = String(mk.user_answer ?? "").trim();
+                                    return (
+                                      <ul className="mt-2 space-y-1">
+                                        {pairs.map(([L, txt]) => {
+                                          const isCorrect = L === correct;
+                                          const isWrongPick = L === picked && L !== correct;
+                                          return (
+                                            <li key={L} className="flex items-baseline gap-1.5 text-xs">
+                                              <span className={`font-bold ${isCorrect ? "text-emerald-600 dark:text-emerald-400" : isWrongPick ? "text-rose-600 dark:text-rose-400" : "text-muted-foreground"}`}>{L}.</span>
+                                              <span className={isCorrect ? "font-semibold text-emerald-700 dark:text-emerald-300" : isWrongPick ? "text-rose-600 line-through dark:text-rose-400" : "text-foreground/80"}>{String(txt)}</span>
+                                              {isCorrect && <span className="text-emerald-600 dark:text-emerald-400">✓</span>}
+                                              {isWrongPick && <span className="text-[11px] text-rose-500"><T>(你选的)</T></span>}
+                                            </li>
+                                          );
+                                        })}
+                                      </ul>
+                                    );
+                                  })()}
                                   <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
                                     <span className="text-rose-600 dark:text-rose-400"><T>你的答案</T>:{mk.user_answer ?? "—"}</span>
                                     <span className="text-emerald-600 dark:text-emerald-400"><T>正确</T>:{mk.correct_answer ?? "—"}</span>

@@ -9,6 +9,7 @@ import { Check, X, ChevronRight, ChevronLeft, Volume2 } from "lucide-react";
 import { T } from "@/i18n/T";
 import { speakUS, unlockAmericanAudio } from "@/lib/american/audio";
 import { markStageComplete, recordMastery, type AmericanQuestion, type LessonBundle } from "@/lib/american/data";
+import { recordAmericanMistake, americanLessonLabel } from "@/lib/american/americanMistake";
 
 const PER_ROUND = 6;
 const seenKey = (lessonId: string) => `am.cloze.seen.${lessonId}`;
@@ -89,13 +90,25 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
   const reviewing = idx < maxIdx;                                // 回看模式:只读、不计分、不改掌握
   const picked = rec ?? null;
 
+  const label = americanLessonLabel(bundle.lesson);
   const pick = useCallback((i: number) => {
     if (!q || answered || idx !== maxIdx) return;                // 已答或回看:禁止作答(防刷分/改答)
     setRecords((r) => ({ ...r, [idx]: i }));
     const ok = i === ans;
     if (ok) setCorrect((c) => c + 1);
     void recordMastery("am_question", q.id, ok);
-  }, [q, answered, idx, maxIdx, ans]);
+    // 错题本(独立于 SRS):context→senior_cloze 自动路由。
+    // 重做弹窗要能看出"第几空"(对话原文含多个空,一组选项 → 不标空号没法做)→
+    // context 前缀「第 N 空」(仿高考完形 stem);blank_no 现成,新错题即生效。
+    const clozeContext = q.payload.blank_no != null
+      ? `【第 ${q.payload.blank_no} 空】\n${q.payload.context ?? ""}`.trim()
+      : q.payload.context;
+    recordAmericanMistake(
+      { kind: "choice", id: q.id, stem: q.payload.stem, options: q.payload.options ?? [],
+        answerIndex: q.payload.answer_index ?? 0, context: clozeContext, explanation: q.payload.explanation_cn },
+      i, ok, label,
+    );
+  }, [q, answered, idx, maxIdx, ans, label]);
 
   const prev = useCallback(() => {
     if (idx === 0) return;
@@ -155,7 +168,7 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
           }
           return (
             <button key={i} type="button" disabled={picked !== null} onClick={() => pick(i)}
-              className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-[15px] transition ${cls}`}>
+              className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-base transition ${cls}`}>
               <span>{opt}</span>
               <span className="flex items-center gap-2">
                 {picked !== null && isAns && (

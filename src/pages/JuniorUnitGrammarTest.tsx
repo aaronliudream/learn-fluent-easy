@@ -20,6 +20,7 @@ import {
   type UnitQuestion,
 } from "@/lib/juniorUnitGrammar";
 import { findUnit } from "@/lib/juniorHub/courseData";
+import { recordSeniorGrammarMistake } from "@/lib/seniorGrammarMistake";
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
 import { recordGrammarQuestionMastery } from "@/lib/juniorGrammarQuestionMastery";
 import { awardForCorrect, notifyWrong } from "@/lib/coins";
@@ -87,6 +88,8 @@ export default function JuniorUnitGrammarTest() {
     setAnswers((prev) => ({ ...prev, [idx]: isOk }));
 
     void recordSkillAttemptsForQuestion(activeQ.id, isOk);
+    // 块②:补写统一错题本(此前只有专项页写,单元综合测漏了)。做对自动移出。
+    void recordSeniorGrammarMistake({ question: activeQ, result: res, isCorrect: isOk, sourceLabel: unit?.title });
     // 方案B:按题掌握度(累计答对2次=掌握),与语法页 L3 同表同步
     void recordGrammarQuestionMastery(activeQ.id, isOk);
     if (isOk) {

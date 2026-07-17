@@ -5,11 +5,13 @@ import { PageHeader } from "@/components/PageHeader";
 import { supabase } from "@/integrations/supabase/client";
 import { speak as speakTTS, stopSpeaking } from "@/lib/speak";
 import { getAlexVoice } from "@/lib/alexVoice";
+import { bumpMistakeCorrect } from "@/lib/mistakeStreak";
 import { toast } from "sonner";
 
 type Mistake = {
   id: string;
   module: string;
+  source_key: string;
   source_label: string | null;
   question: string;
   user_answer: string | null;
@@ -79,13 +81,14 @@ export default function ReviewToday() {
     if (!cur) return;
     if (isCorrect) {
       setCorrect((n) => n + 1);
+      // 只推后复习时间;是否移出由跨3天连对规则决定(唯一移出途径)。
       await supabase.
       from("user_mistakes").
       update({
-        is_resolved: cur.wrong_count <= 1, // first-try recovery → mastered
         next_review_at: nextReviewOnCorrect(cur.wrong_count)
       }).
       eq("id", cur.id);
+      await bumpMistakeCorrect(cur.module, cur.source_key);
       try {
         const c = await import("@/lib/coins");
         await c.awardCoins(2, "mistake_review_correct");
@@ -97,6 +100,8 @@ export default function ReviewToday() {
       update({
         wrong_count: (cur.wrong_count || 1) + 1,
         last_wrong_at: new Date().toISOString(),
+        correct_streak: 0,        // 做错 → 连对清零
+        last_correct_date: null,
         next_review_at: nextReviewOnWrong()
       }).
       eq("id", cur.id);

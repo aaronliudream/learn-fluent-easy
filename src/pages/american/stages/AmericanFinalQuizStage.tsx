@@ -7,6 +7,7 @@ import { useCallback, useMemo, useState } from "react";
 import { T } from "@/i18n/T";
 import { QuizRunner, questionsToItems, type QuizItem } from "@/components/american/QuizRunner";
 import { markStageComplete, recordMastery, type LessonBundle } from "@/lib/american/data";
+import { recordAmericanMistake, americanLessonLabel } from "@/lib/american/americanMistake";
 
 /** choice 选项重新打散并回算 answerIndex(reveal 无选项,原样返回)。 */
 function reshuffle(item: QuizItem): QuizItem {
@@ -46,6 +47,8 @@ export function AmericanFinalQuizStage({ bundle, onDone }: { bundle: LessonBundl
     }
   }, [roundItems, bundle.lesson.id, onDone]);
 
+  const label = americanLessonLabel(bundle.lesson);
+
   if (passed) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-16 text-center">
@@ -65,7 +68,8 @@ export function AmericanFinalQuizStage({ bundle, onDone }: { bundle: LessonBundl
           </div>
         </div>
       )}
-      <QuizRunner key={round} items={roundItems} onAnswer={onAnswer} onComplete={onComplete} suppressFinish />
+      <QuizRunner key={round} items={roundItems} onAnswer={onAnswer} onComplete={onComplete}
+        onRecordMistake={(it, picked, ok) => recordAmericanMistake(it, picked, ok, label)} suppressFinish />
     </div>
   );
 }

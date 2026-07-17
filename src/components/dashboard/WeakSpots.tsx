@@ -40,7 +40,7 @@ export function WeakSpots({ items }: { items: WeakSpot[] }) {
                 </div>
               </div>
               <Link
-                to="/review/today"
+                to="/mistakes"
                 className="rounded-full bg-foreground text-background text-xs font-bold px-2.5 py-1 hover:opacity-85">
                 <T>练</T> →
               </Link>

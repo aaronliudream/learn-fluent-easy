@@ -10,6 +10,7 @@ import NoCopyGuard from "@/components/NoCopyGuard";
 import StarRating from "@/components/StarRating";
 import { recordMastery, loadMastery, MasteryRow, PASS_PCT } from "@/lib/masteryProgress";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
+import { bumpMistakeCorrect } from "@/lib/mistakeStreak";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
@@ -209,13 +210,14 @@ export default function JuniorReadingPlay() {
           snapshot,
           wrong_count: wrongCount,
           is_resolved: false,
+          correct_streak: 0,
+          last_correct_date: null,
           last_wrong_at: new Date().toISOString(),
         }, { onConflict: "user_id,module,source_key" });
         if (snapErr) console.warn("[reading mistake snapshot] upsert failed", snapErr);
       } else {
-        // 本次全对 → 若之前有该篇错题快照,标记已解决(移出错题本)
-        await supabase.from("user_mistakes").update({ is_resolved: true, updated_at: new Date().toISOString() }).
-        eq("user_id", userId).eq("module", "reading").eq("source_key", `junior_reading_passage_${r.id}`).eq("is_resolved", false);
+        // 本次全对 → 跨3天连对累计(唯一移出途径),若之前有该篇错题快照
+        await bumpMistakeCorrect("reading", `junior_reading_passage_${r.id}`);
       }
     }
     if (pct === 100) {

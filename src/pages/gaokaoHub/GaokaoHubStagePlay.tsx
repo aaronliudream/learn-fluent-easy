@@ -5,6 +5,7 @@ import { getUnitState, savePersist } from "@/lib/gaokaoHub/storage";
 import { hubSpeak } from "@/lib/primaryHub/speech";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/gaokaoHub/types";
 import { recordHubMistake } from "@/lib/recordHubMistake";
+import { recordFinalQuizMistake } from "@/lib/finalQuizMistake";
 import { Link } from "react-router-dom";
 
 type Props = {
@@ -96,7 +97,7 @@ function QuizOpts({
     <div className="flex flex-col gap-2">
       {opts.map((opt, j) => {
         let cls =
-          "quiz-opt flex w-full items-center gap-3 rounded-xl border-2 border-[#EEEAE0] bg-white p-3 text-left text-sm font-medium transition disabled:cursor-not-allowed";
+          "quiz-opt flex w-full items-center gap-3 rounded-xl border-2 border-[#EEEAE0] bg-white p-3 text-left text-base font-medium transition disabled:cursor-not-allowed";
         if (answered) {
           if (j === answer) cls += " correct";
           else if (j === picked && picked !== answer) cls += " wrong";
@@ -950,7 +951,7 @@ export default function GaokaoHubStagePlay({ unitId, stageIdx, onComplete, onBac
               });
               void recordHubMistake({
                 grade, module: "hub_listening", unitId, unitTitle: unit.title,
-                stem: `听力：${q.audio}`, opts: q.opts, answerIdx: q.answer, pickedIdx: q.picked,
+                stem: q.audio, opts: q.opts, answerIdx: q.answer, pickedIdx: q.picked, audio: q.audio,
               });
             }}
           />
@@ -965,7 +966,7 @@ export default function GaokaoHubStagePlay({ unitId, stageIdx, onComplete, onBac
             unitTitle={unit.title}
             onFinish={handleFinish}
             onCorrect={addStar}
-            onWrong={(q) =>
+            onWrong={(q) => {
               addMistake({
                 q: q.q,
                 opts: q.opts,
@@ -973,8 +974,21 @@ export default function GaokaoHubStagePlay({ unitId, stageIdx, onComplete, onBac
                 point: q.point ?? "综合",
                 unitId,
                 unitTitle: unit.title,
-              })
-            }
+              });
+              // 块②:finalQuiz 做错额外写统一错题本(按 dim 分流;vocab 跳过)。
+              void recordFinalQuizMistake({
+                dim: q.dim,
+                unitId,
+                unitTitle: unit.title,
+                stem: q.q,
+                opts: q.opts,
+                answerIdx: q.answer,
+                pickedIdx: q.picked ?? null,
+                audio: q.audio ?? null,
+                explanation: q.explanation ?? null,
+                idSuffix: q.q,
+              });
+            }}
           />
         );
       default:

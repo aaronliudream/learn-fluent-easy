@@ -36,6 +36,8 @@ export async function recordHubMistake(p: {
   answerIdx: number;
   pickedIdx?: number | null;
   explanation?: string | null;
+  /** 听力题:朗读文本(= 现场 hubSpeak/TTS 合成的原句)。存进快照供错题本/老师端「🔊 重听」,无音频文件 URL、不会失效。 */
+  audio?: string | null;
 }): Promise<void> {
   try {
     if (!p.unitId || !Array.isArray(p.opts) || p.opts.length < 2) return;
@@ -71,8 +73,12 @@ export async function recordHubMistake(p: {
           stem: p.stem,
           options,
           correct_answer: correctLetter,
+          // 听力:存朗读原文,错题本/老师端渲染「🔊 重听」按钮 → hubSpeak 现场合成。
+          ...(p.audio ? { audio: p.audio } : {}),
         },
         is_resolved: false,
+        correct_streak: 0,
+        last_correct_date: null,
         last_wrong_at: new Date().toISOString(),
       },
       { onConflict: "user_id,module,source_key" },

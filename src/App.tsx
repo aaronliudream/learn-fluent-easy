@@ -140,7 +140,6 @@ const GaokaoGrammarBoard = lazy(() => import("./pages/gaokaoHub/GaokaoGrammarBoa
 const GaokaoVocabBoard = lazy(() => import("./pages/gaokaoHub/GaokaoVocabBoard.tsx"));
 const GaokaoExerciseBoard = lazy(() => import("./pages/gaokaoHub/GaokaoExerciseBoard.tsx"));
 const GaokaoWritingBoard = lazy(() => import("./pages/gaokaoHub/GaokaoWritingBoard.tsx"));
-const GaokaoDiagnostic = lazy(() => import("./pages/GaokaoDiagnostic.tsx"));
 const GaokaoCloze = lazy(() => import("./pages/GaokaoCloze.tsx"));
 const GaokaoClozePlay = lazy(() => import("./pages/GaokaoClozePlay.tsx"));
 const GaokaoWriting = lazy(() => import("./pages/GaokaoWriting.tsx"));
@@ -514,7 +513,6 @@ const App = () => (
           <Route path="/gaokao/books/:group" element={<ChineseOnlyRoute><GaokaoBooks /></ChineseOnlyRoute>} />
           <Route path="/gaokao/g/:grade" element={<ChineseOnlyRoute><GaokaoGrade /></ChineseOnlyRoute>} />
           <Route path="/gaokao/exam" element={<ChineseOnlyRoute><GaokaoExam /></ChineseOnlyRoute>} />
-          <Route path="/gaokao/diagnostic" element={<ChineseOnlyRoute><GaokaoDiagnostic /></ChineseOnlyRoute>} />
           <Route path="/gaokao/deep-diagnosis" element={<ChineseOnlyRoute><GaokaoDeepDiagnosis /></ChineseOnlyRoute>} />
           {/* 语法板块 = 7册分册(选册→必修一读 junior_grammar 真题,练习写 junior_user_mastery 互通)。旧3500/虚拟语气壳留 grammar-legacy 备查。 */}
           <Route path="/gaokao/grammar" element={<ChineseOnlyRoute><GaokaoGrammarBoard /></ChineseOnlyRoute>} />

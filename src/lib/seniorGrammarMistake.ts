@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import { bumpMistakeCorrect } from "@/lib/mistakeStreak";
 import type { GrammarQuestion, AnswerResult } from "@/components/grammar/GrammarQuestionCard";
 
 /**
@@ -32,15 +33,9 @@ export async function recordSeniorGrammarMistake(params: {
 
     const sourceKey = `grammar:${q.id}`;
 
-    // 做对 → 自动移出(若曾错过该题)。按 source_key 定位,和写入同一把钥匙。
+    // 做对 → 跨3天连对累计(若曾错过该题)。按 source_key 定位,和写入同一把钥匙。
     if (isCorrect) {
-      await supabase
-        .from("user_mistakes")
-        .update({ is_resolved: true, updated_at: new Date().toISOString() })
-        .eq("user_id", user.id)
-        .eq("module", "senior_grammar")
-        .eq("source_key", sourceKey)
-        .eq("is_resolved", false);
+      await bumpMistakeCorrect("senior_grammar", sourceKey);
       return;
     }
 
@@ -73,6 +68,8 @@ export async function recordSeniorGrammarMistake(params: {
         explanation: q.explanation ?? null,
         snapshot,
         is_resolved: false,
+        correct_streak: 0,
+        last_correct_date: null,
         last_wrong_at: new Date().toISOString(),
       },
       { onConflict: "user_id,module,source_key" },

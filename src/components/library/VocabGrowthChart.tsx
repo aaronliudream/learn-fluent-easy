@@ -44,6 +44,19 @@ function labelOf(key: string, g: Gran, en: boolean): string {
   if (g === "month") { const [y, m] = key.split("-"); return en ? `${Number(m)}/${y.slice(2)}` : `${Number(m)}月`; }
   const [, m, d] = key.split("-"); return `${Number(m)}/${Number(d)}`; // 日/周(周一)都用 M/D
 }
+// 自动"漂亮刻度":步长取 1/2/5×10ⁿ,让 Y 轴永远是整齐的整数(0/20/40/60/80、0/50/…/200、0/200/…/600…)。
+function niceAxis(rawMax: number): { niceMax: number; ticks: number[] } {
+  if (rawMax <= 0) return { niceMax: 4, ticks: [0, 1, 2, 3, 4] };
+  const rough = rawMax / 4; // 目标约 4 格
+  const pow = Math.pow(10, Math.floor(Math.log10(rough)));
+  const norm = rough / pow;
+  const niceNorm = norm <= 1 ? 1 : norm <= 2 ? 2 : norm <= 5 ? 5 : 10;
+  const step = niceNorm * pow;
+  const niceMax = Math.ceil(rawMax / step) * step;
+  const ticks: number[] = [];
+  for (let t = 0; t <= niceMax + 1e-9; t += step) ticks.push(Math.round(t));
+  return { niceMax, ticks };
+}
 
 export default function VocabGrowthChart({
   favs,
@@ -100,9 +113,10 @@ export default function VocabGrowthChart({
   }, [favs, reviewedByDay, bjToday, g, range]);
 
   const RANGES: RangeKey[] = ["1W", "1M", "3M", "6M", "All"];
-  const TRACK = 92; // 柱区像素高
+  const TRACK = 100; // 柱区像素高
+  const { niceMax, ticks } = niceAxis(max); // Y 轴自动漂亮刻度,柱高按 niceMax 归一(与刻度对齐)
   const bar = (n: number, color: string) => (
-    <div className="w-3 rounded-t-sm sm:w-3.5" style={{ height: `${max > 0 && n > 0 ? Math.max(3, (n / max) * TRACK) : 0}px`, backgroundColor: color }} />
+    <div className="w-3 sm:w-3.5" style={{ height: `${niceMax > 0 && n > 0 ? Math.max(3, (n / niceMax) * TRACK) : 0}px`, backgroundColor: color }} />
   );
 
   return (
@@ -119,24 +133,45 @@ export default function VocabGrowthChart({
         </div>
       </div>
 
-      {/* 三色分组柱 */}
-      <div className="mt-3 overflow-x-auto pb-1">
-        <div className="flex items-end gap-2" style={{ minWidth: `${axis.length * 52}px` }}>
-          {axis.map((k) => {
-            const b = data.get(k)!;
-            const total = b.added + b.reviewed + b.mastered;
-            return (
-              <div key={k} className="flex min-w-[44px] flex-1 flex-col items-center">
-                <div className="flex items-end gap-1" style={{ height: TRACK }}>
-                  {bar(b.added, BLUE)}
-                  {bar(b.reviewed, ORANGE)}
-                  {bar(b.mastered, GREEN)}
-                </div>
-                <span className="mt-1 whitespace-nowrap text-[10px] text-slate-400">{labelOf(k, g, en)}</span>
-                <span className="sr-only">{total}</span>
-              </div>
-            );
-          })}
+      {/* 三色分组柱 + Y轴刻度(自动调节) + 横网格线;柱为长方形(顶不圆角) */}
+      <div className="mt-3 flex">
+        {/* Y 轴刻度:0/20/40…,随数据自动变 0/100/200… */}
+        <div className="mr-2 flex shrink-0 flex-col justify-between py-0 text-right text-[10px] tabular-nums text-slate-400" style={{ height: TRACK }}>
+          {[...ticks].reverse().map((t, i) => (
+            <span key={i} className="leading-none">{t}</span>
+          ))}
+        </div>
+        {/* 柱区(可横滚);网格线 + 柱在同一 relative 容器,日期标签单独一行对齐 */}
+        <div className="min-w-0 flex-1 overflow-x-auto pb-1">
+          <div style={{ minWidth: `${axis.length * 52}px` }}>
+            <div className="relative flex items-end gap-2" style={{ height: TRACK }}>
+              {/* 横网格线:每个刻度一条 */}
+              {ticks.map((t, i) => (
+                <div
+                  key={`grid-${i}`}
+                  className="pointer-events-none absolute inset-x-0 border-t border-slate-100"
+                  style={{ bottom: `${(t / niceMax) * TRACK}px` }}
+                />
+              ))}
+              {/* 每桶三色长方柱 */}
+              {axis.map((k) => {
+                const b = data.get(k)!;
+                return (
+                  <div key={k} className="relative flex min-w-[44px] flex-1 items-end justify-center gap-1" style={{ height: TRACK }}>
+                    {bar(b.added, BLUE)}
+                    {bar(b.reviewed, ORANGE)}
+                    {bar(b.mastered, GREEN)}
+                  </div>
+                );
+              })}
+            </div>
+            {/* X 轴日期(与柱同宽对齐) */}
+            <div className="mt-1 flex gap-2">
+              {axis.map((k) => (
+                <span key={k} className="min-w-[44px] flex-1 whitespace-nowrap text-center text-[10px] text-slate-400">{labelOf(k, g, en)}</span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 

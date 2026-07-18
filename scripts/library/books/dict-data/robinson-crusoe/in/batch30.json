@@ -1,0 +1,705 @@
+{
+ "batch": 30,
+ "words": [
+  {
+   "w": "lime",
+   "f": 1,
+   "ctx": "First, he had brought me a case of bottles full of excellent cordial waters, six large bottles of Madeira wine (the bottles held two quarts "
+  },
+  {
+   "w": "gloves",
+   "f": 1,
+   "ctx": "But besides these, and what was a thousand times more useful to me, he brought me six new clean shirts, six very good neckcloths, two pair o"
+  },
+  {
+   "w": "refractory",
+   "f": 1,
+   "ctx": "After these ceremonies were past, and after all his good things were brought into my little apartment, we began to consult what was to be do"
+  },
+  {
+   "w": "malefactors",
+   "f": 1,
+   "ctx": "After these ceremonies were past, and after all his good things were brought into my little apartment, we began to consult what was to be do"
+  },
+  {
+   "w": "villainous",
+   "f": 1,
+   "ctx": "Being all met, and the captain with me, I caused the men to be brought before me, and I told them I had got a full account of their villaino"
+  },
+  {
+   "w": "ensnared",
+   "f": 1,
+   "ctx": "Being all met, and the captain with me, I caused the men to be brought before me, and I told them I had got a full account of their villaino"
+  },
+  {
+   "w": "commission",
+   "f": 1,
+   "ctx": "I let them know that by my direction the ship had been seized; that she lay now in the road; and they might see by-and-by that their new cap"
+  },
+  {
+   "w": "humbly",
+   "f": 1,
+   "ctx": "One of them answered in the name of the rest, that they had nothing to say but this, that when they were taken the captain promised them the"
+  },
+  {
+   "w": "implored",
+   "f": 1,
+   "ctx": "One of them answered in the name of the rest, that they had nothing to say but this, that when they were taken the captain promised them the"
+  },
+  {
+   "w": "willingness",
+   "f": 1,
+   "ctx": "When they had all declared their willingness to stay, I then told them I would let them into the story of my living there, and put them into"
+  },
+  {
+   "w": "fatten",
+   "f": 1,
+   "ctx": "I gave them a description of the way I managed the goats, and directions to milk and fatten them, and to make both butter and cheese."
+  },
+  {
+   "w": "complaint",
+   "f": 1,
+   "ctx": "The next morning early, two of the five men came swimming to the ship’s side, and making the most lamentable complaint of the other three, b"
+  },
+  {
+   "w": "amendment",
+   "f": 1,
+   "ctx": "Upon this the captain pretended to have no power without me; but after some difficulty, and after their solemn promises of amendment, they w"
+  },
+  {
+   "w": "pickled",
+   "f": 1,
+   "ctx": "Upon this the captain pretended to have no power without me; but after some difficulty, and after their solemn promises of amendment, they w"
+  },
+  {
+   "w": "intercession",
+   "f": 1,
+   "ctx": "Some time after this, the boat was ordered on shore, the tide being up, with the things promised to the men; to which the captain, at my int"
+  },
+  {
+   "w": "relics",
+   "f": 1,
+   "ctx": "When I took leave of this island, I carried on board, for relics, the great goat-skin cap I had made, my umbrella, and one of my parrots; al"
+  },
+  {
+   "w": "faithfulness",
+   "f": 1,
+   "ctx": "I made her very easy as to what she owed me, assuring her I would give her no trouble; but, on the contrary, in gratitude for her former car"
+  },
+  {
+   "w": "extinct",
+   "f": 1,
+   "ctx": "I went down afterwards into Yorkshire; but my father was dead, and my mother and all the family extinct, except that I found two sisters, an"
+  },
+  {
+   "w": "cognisance",
+   "f": 1,
+   "ctx": "The old man told me he had not been in the Brazils for about nine years; but that he could assure me that when he came away my partner was l"
+  },
+  {
+   "w": "procurator",
+   "f": 1,
+   "ctx": "The old man told me he had not been in the Brazils for about nine years; but that he could assure me that when he came away my partner was l"
+  },
+  {
+   "w": "fiscal",
+   "f": 1,
+   "ctx": "The old man told me he had not been in the Brazils for about nine years; but that he could assure me that when he came away my partner was l"
+  },
+  {
+   "w": "appropriated",
+   "f": 1,
+   "ctx": "The old man told me he had not been in the Brazils for about nine years; but that he could assure me that when he came away my partner was l"
+  },
+  {
+   "w": "expended",
+   "f": 1,
+   "ctx": "The old man told me he had not been in the Brazils for about nine years; but that he could assure me that when he came away my partner was l"
+  },
+  {
+   "w": "conversion",
+   "f": 1,
+   "ctx": "The old man told me he had not been in the Brazils for about nine years; but that he could assure me that when he came away my partner was l"
+  },
+  {
+   "w": "production",
+   "f": 1,
+   "ctx": "The old man told me he had not been in the Brazils for about nine years; but that he could assure me that when he came away my partner was l"
+  },
+  {
+   "w": "revenue",
+   "f": 1,
+   "ctx": "The old man told me he had not been in the Brazils for about nine years; but that he could assure me that when he came away my partner was l"
+  },
+  {
+   "w": "providore",
+   "f": 1,
+   "ctx": "The old man told me he had not been in the Brazils for about nine years; but that he could assure me that when he came away my partner was l"
+  },
+  {
+   "w": "incumbent",
+   "f": 1,
+   "ctx": "The old man told me he had not been in the Brazils for about nine years; but that he could assure me that when he came away my partner was l"
+  },
+  {
+   "w": "obstruction",
+   "f": 1,
+   "ctx": "I asked him if he knew to what height of improvement he had brought the plantation, and whether he thought it might be worth looking after; "
+  },
+  {
+   "w": "possessing",
+   "f": 1,
+   "ctx": "I asked him if he knew to what height of improvement he had brought the plantation, and whether he thought it might be worth looking after; "
+  },
+  {
+   "w": "enrolled",
+   "f": 1,
+   "ctx": "He told me he could not tell exactly to what degree the plantation was improved; but this he knew, that my partner was grown exceeding rich "
+  },
+  {
+   "w": "executor",
+   "f": 1,
+   "ctx": "He told me that was true; but that as there was no proof of my being dead, he could not act as executor until some certain account should co"
+  },
+  {
+   "w": "intermeddle",
+   "f": 1,
+   "ctx": "He told me that was true; but that as there was no proof of my being dead, he could not act as executor until some certain account should co"
+  },
+  {
+   "w": "acceptable",
+   "f": 1,
+   "ctx": "“But,” says the old man, “I have one piece of news to tell you, which perhaps may not be so acceptable to you as the rest; and that is, beli"
+  },
+  {
+   "w": "conference",
+   "f": 1,
+   "ctx": "After a few days’ further conference with this ancient friend, he brought me an account of the first six years’ income of my plantation, sig"
+  },
+  {
+   "w": "molasses",
+   "f": 1,
+   "ctx": "After a few days’ further conference with this ancient friend, he brought me an account of the first six years’ income of my plantation, sig"
+  },
+  {
+   "w": "receipt",
+   "f": 1,
+   "ctx": "Everything the good man said was full of affection, and I could hardly refrain from tears while he spoke; in short, I took one hundred of th"
+  },
+  {
+   "w": "penny",
+   "f": 1,
+   "ctx": "Everything the good man said was full of affection, and I could hardly refrain from tears while he spoke; in short, I took one hundred of th"
+  },
+  {
+   "w": "appropriate",
+   "f": 1,
+   "ctx": "He said I might do so if I pleased, but that if I did not, there were ways enough to secure my right, and immediately to appropriate the pro"
+  },
+  {
+   "w": "affidavit",
+   "f": 1,
+   "ctx": "He said I might do so if I pleased, but that if I did not, there were ways enough to secure my right, and immediately to appropriate the pro"
+  },
+  {
+   "w": "affirming",
+   "f": 1,
+   "ctx": "He said I might do so if I pleased, but that if I did not, there were ways enough to secure my right, and immediately to appropriate the pro"
+  },
+  {
+   "w": "affixed",
+   "f": 1,
+   "ctx": "This being regularly attested by a notary, and a procuration affixed, he directed me to send it, with a letter of his writing, to a merchant"
+  },
+  {
+   "w": "honourable",
+   "f": 1,
+   "ctx": "Never was anything more honourable than the proceedings upon this procuration; for in less than seven months I received a large packet from "
+  },
+  {
+   "w": "packet",
+   "f": 1,
+   "ctx": "Never was anything more honourable than the proceedings upon this procuration; for in less than seven months I received a large packet from "
+  },
+  {
+   "w": "administration",
+   "f": 1,
+   "ctx": "Secondly, there was the account of four years more, while they kept the effects in their hands, before the government claimed the administra"
+  },
+  {
+   "w": "crusadoes",
+   "f": 1,
+   "ctx": "Secondly, there was the account of four years more, while they kept the effects in their hands, before the government claimed the administra"
+  },
+  {
+   "w": "hospital",
+   "f": 1,
+   "ctx": "Thirdly, there was the Prior of St. Augustine’s account, who had received the profits for above fourteen years; but not being able to accoun"
+  },
+  {
+   "w": "refunded",
+   "f": 1,
+   "ctx": "Thirdly, there was the Prior of St. Augustine’s account, who had received the profits for above fourteen years; but not being able to accoun"
+  },
+  {
+   "w": "passionately",
+   "f": 1,
+   "ctx": "There was a letter of my partner’s, congratulating me very affectionately upon my being alive, giving me an account how the estate was impro"
+  },
+  {
+   "w": "uncoined",
+   "f": 1,
+   "ctx": "He sent me also five chests of excellent sweetmeats, and a hundred pieces of gold uncoined, not quite so large as moidores."
+  },
+  {
+   "w": "physician",
+   "f": 1,
+   "ctx": "In a word, I turned pale, and grew sick; and, had not the old man run and fetched me a cordial, I believe the sudden surprise of joy had ove"
+  },
+  {
+   "w": "illness",
+   "f": 1,
+   "ctx": "In a word, I turned pale, and grew sick; and, had not the old man run and fetched me a cordial, I believe the sudden surprise of joy had ove"
+  },
+  {
+   "w": "recompense",
+   "f": 1,
+   "ctx": "The first thing I did was to recompense my original benefactor, my good old captain, who had been first charitable to me in my distress, kin"
+  },
+  {
+   "w": "fold",
+   "f": 1,
+   "ctx": "I showed him all that was sent to me; I told him that, next to the providence of Heaven, which disposed all things, it was owing to him; and"
+  },
+  {
+   "w": "discharge",
+   "f": 1,
+   "ctx": "I showed him all that was sent to me; I told him that, next to the providence of Heaven, which disposed all things, it was owing to him; and"
+  },
+  {
+   "w": "firmest",
+   "f": 1,
+   "ctx": "I showed him all that was sent to me; I told him that, next to the providence of Heaven, which disposed all things, it was owing to him; and"
+  },
+  {
+   "w": "empowering",
+   "f": 1,
+   "ctx": "After which I caused a procuration to be drawn, empowering him to be the receiver of the annual profits of my plantation: and appointing my "
+  },
+  {
+   "w": "receiver",
+   "f": 1,
+   "ctx": "After which I caused a procuration to be drawn, empowering him to be the receiver of the annual profits of my plantation: and appointing my "
+  },
+  {
+   "w": "clause",
+   "f": 1,
+   "ctx": "After which I caused a procuration to be drawn, empowering him to be the receiver of the annual profits of my plantation: and appointing my "
+  },
+  {
+   "w": "requited",
+   "f": 1,
+   "ctx": "After which I caused a procuration to be drawn, empowering him to be the receiver of the annual profits of my plantation: and appointing my "
+  },
+  {
+   "w": "openly",
+   "f": 1,
+   "ctx": "However, it was not religion that kept me from going there for the present; and as I had made no scruple of being openly of the religion of "
+  },
+  {
+   "w": "professed",
+   "f": 1,
+   "ctx": "However, it was not religion that kept me from going there for the present; and as I had made no scruple of being openly of the religion of "
+  },
+  {
+   "w": "undisposed",
+   "f": 1,
+   "ctx": "In order to prepare things for my going home, I first (the Brazil fleet being just going away) resolved to give answers suitable to the just"
+  },
+  {
+   "w": "padre",
+   "f": 1,
+   "ctx": "In order to prepare things for my going home, I first (the Brazil fleet being just going away) resolved to give answers suitable to the just"
+  },
+  {
+   "w": "daughters",
+   "f": 1,
+   "ctx": "To this I added a very handsome present of some Italian silks for his wife and two daughters, for such the captain’s son informed me he had;"
+  },
+  {
+   "w": "broadcloth",
+   "f": 1,
+   "ctx": "To this I added a very handsome present of some Italian silks for his wife and two daughters, for such the captain’s son informed me he had;"
+  },
+  {
+   "w": "baggage",
+   "f": 1,
+   "ctx": "Having thus settled my affairs, sold my cargo, and turned all my effects into good bills of exchange, my next difficulty was which way to go"
+  },
+  {
+   "w": "communicated",
+   "f": 1,
+   "ctx": "Having been thus harassed in my thoughts, my old pilot, to whom I communicated everything, pressed me earnestly not to go by sea, but either"
+  },
+  {
+   "w": "prepossessed",
+   "f": 1,
+   "ctx": "In a word, I was so prepossessed against my going by sea at all, except from Calais to Dover, that I resolved to travel all the way by land;"
+  },
+  {
+   "w": "oldest",
+   "f": 1,
+   "ctx": "In this manner I set out from Lisbon; and our company being very well mounted and armed, we made a little troop, whereof they did me the hon"
+  },
+  {
+   "w": "insufferable",
+   "f": 1,
+   "ctx": "When we came to Pampeluna itself, we found it so indeed; and to me, that had been always used to a hot climate, and to countries where I cou"
+  },
+  {
+   "w": "benumbing",
+   "f": 1,
+   "ctx": "When we came to Pampeluna itself, we found it so indeed; and to me, that had been always used to a hot climate, and to countries where I cou"
+  },
+  {
+   "w": "likelihood",
+   "f": 1,
+   "ctx": "We stayed no less than twenty days at Pampeluna; when (seeing the winter coming on, and no likelihood of its being better, for it was the se"
+  },
+  {
+   "w": "severest",
+   "f": 1,
+   "ctx": "We stayed no less than twenty days at Pampeluna; when (seeing the winter coming on, and no likelihood of its being better, for it was the se"
+  },
+  {
+   "w": "incommoded",
+   "f": 1,
+   "ctx": "But, while I was considering this, there came in four French gentlemen, who, having been stopped on the French side of the passes, as we wer"
+  },
+  {
+   "w": "snows",
+   "f": 1,
+   "ctx": "We sent for this guide, who told us he would undertake to carry us the same way, with no hazard from the snow, provided we were armed suffic"
+  },
+  {
+   "w": "insure",
+   "f": 1,
+   "ctx": "We told him we were well enough prepared for such creatures as they were, if he would insure us from a kind of two-legged wolves, which we w"
+  },
+  {
+   "w": "precipices",
+   "f": 1,
+   "ctx": "Accordingly, we set out from Pampeluna with our guide on the 15th of November; and indeed I was surprised when, instead of going forward, he"
+  },
+  {
+   "w": "tours",
+   "f": 1,
+   "ctx": "Accordingly, we set out from Pampeluna with our guide on the 15th of November; and indeed I was surprised when, instead of going forward, he"
+  },
+  {
+   "w": "meanders",
+   "f": 1,
+   "ctx": "Accordingly, we set out from Pampeluna with our guide on the 15th of November; and indeed I was surprised when, instead of going forward, he"
+  },
+  {
+   "w": "encumbered",
+   "f": 1,
+   "ctx": "Accordingly, we set out from Pampeluna with our guide on the 15th of November; and indeed I was surprised when, instead of going forward, he"
+  },
+  {
+   "w": "provinces",
+   "f": 1,
+   "ctx": "Accordingly, we set out from Pampeluna with our guide on the 15th of November; and indeed I was surprised when, instead of going forward, he"
+  },
+  {
+   "w": "snowed",
+   "f": 1,
+   "ctx": "We were a little uneasy, however, when we found it snowed one whole day and a night so fast that we could not travel; but he bid us be easy;"
+  },
+  {
+   "w": "lustily",
+   "f": 1,
+   "ctx": "It was about two hours before night when, our guide being something before us, and not just in sight, out rushed three monstrous wolves, and"
+  },
+  {
+   "w": "redoubled",
+   "f": 1,
+   "ctx": "But it was enough to have terrified a bolder man than I; and, indeed, it alarmed all our company, when, with the noise of Friday’s pistol, w"
+  },
+  {
+   "w": "echo",
+   "f": 1,
+   "ctx": "But it was enough to have terrified a bolder man than I; and, indeed, it alarmed all our company, when, with the noise of Friday’s pistol, w"
+  },
+  {
+   "w": "bosses",
+   "f": 1,
+   "ctx": "But it was enough to have terrified a bolder man than I; and, indeed, it alarmed all our company, when, with the noise of Friday’s pistol, w"
+  },
+  {
+   "w": "clearly",
+   "f": 1,
+   "ctx": "As soon as we came clear of the trees, which blinded us before, we saw clearly what had been the case, and how Friday had disengaged the poo"
+  },
+  {
+   "w": "disengaged",
+   "f": 1,
+   "ctx": "As soon as we came clear of the trees, which blinded us before, we saw clearly what had been the case, and how Friday had disengaged the poo"
+  },
+  {
+   "w": "hardily",
+   "f": 1,
+   "ctx": "But never was a fight managed so hardily, and in such a surprising manner as that which followed between Friday and the bear, which gave us "
+  },
+  {
+   "w": "qualities",
+   "f": 1,
+   "ctx": "As the bear is a heavy, clumsy creature, and does not gallop as the wolf does, who is swift and light, so he has two particular qualities, w"
+  },
+  {
+   "w": "steadfastly",
+   "f": 1,
+   "ctx": "As the bear is a heavy, clumsy creature, and does not gallop as the wolf does, who is swift and light, so he has two particular qualities, w"
+  },
+  {
+   "w": "affront",
+   "f": 1,
+   "ctx": "As the bear is a heavy, clumsy creature, and does not gallop as the wolf does, who is swift and light, so he has two particular qualities, w"
+  },
+  {
+   "w": "quality",
+   "f": 1,
+   "ctx": "As the bear is a heavy, clumsy creature, and does not gallop as the wolf does, who is swift and light, so he has two particular qualities, w"
+  },
+  {
+   "w": "affronted",
+   "f": 1,
+   "ctx": "As the bear is a heavy, clumsy creature, and does not gallop as the wolf does, who is swift and light, so he has two particular qualities, w"
+  },
+  {
+   "w": "overtakes",
+   "f": 1,
+   "ctx": "As the bear is a heavy, clumsy creature, and does not gallop as the wolf does, who is swift and light, so he has two particular qualities, w"
+  },
+  {
+   "w": "speakee",
+   "f": 1,
+   "ctx": "“Hark ye, hark ye,” says Friday, “me speakee with you.”"
+  },
+  {
+   "w": "shuffling",
+   "f": 1,
+   "ctx": "As soon as the bear felt the blow, and saw him, he turns about and comes after him, taking very long strides, and shuffling on at a strange "
+  },
+  {
+   "w": "nimbly",
+   "f": 1,
+   "ctx": "He heard me, and cried out, “No shoot, no shoot; stand still, and you get much laugh:” and as the nimble creature ran two feet for the bear’"
+  },
+  {
+   "w": "totter",
+   "f": 1,
+   "ctx": "As soon as the bear got out to that part where the limb of the tree was weaker, “Ha!” says he to us, “now you see me teachee the bear dance:"
+  },
+  {
+   "w": "shorten",
+   "f": 1,
+   "ctx": "However, to shorten the story, Friday danced so much, and the bear stood so ticklish, that we had laughing enough, but still could not imagi"
+  },
+  {
+   "w": "ticklish",
+   "f": 1,
+   "ctx": "However, to shorten the story, Friday danced so much, and the bear stood so ticklish, that we had laughing enough, but still could not imagi"
+  },
+  {
+   "w": "jest",
+   "f": 1,
+   "ctx": "However, to shorten the story, Friday danced so much, and the bear stood so ticklish, that we had laughing enough, but still could not imagi"
+  },
+  {
+   "w": "cling",
+   "f": 1,
+   "ctx": "But Friday put us out of doubt quickly: for seeing the bear cling fast to the bough, and that he would not be persuaded to come any farther,"
+  },
+  {
+   "w": "defile",
+   "f": 1,
+   "ctx": "We had one dangerous place to pass, and our guide told us if there were more wolves in the country we should find them there; and this was a"
+  },
+  {
+   "w": "furlongs",
+   "f": 1,
+   "ctx": "It was within half-an-hour of sunset when we entered the wood, and a little after sunset when we came into the plain: we met with nothing in"
+  },
+  {
+   "w": "fainthearted",
+   "f": 1,
+   "ctx": "Upon this, our guide, who, by the way, was but a fainthearted fellow, bid us keep in a ready posture, for he believed there were more wolves"
+  },
+  {
+   "w": "fiercest",
+   "f": 1,
+   "ctx": "I found they stopped, but did not immediately retreat; whereupon, remembering that I had been told that the fiercest creatures were terrifie"
+  },
+  {
+   "w": "onward",
+   "f": 1,
+   "ctx": "This gave us leisure to charge our pieces again; and that we might lose no time, we kept going; but we had but little more than loaded our f"
+  },
+  {
+   "w": "dusky",
+   "f": 1,
+   "ctx": "The night was coming on, and the light began to be dusky, which made it worse on our side; but the noise increasing, we could easily perceiv"
+  },
+  {
+   "w": "saddle",
+   "f": 1,
+   "ctx": "On a sudden, at another opening of the wood, we heard the noise of a gun, and looking that way, out rushed a horse, with a saddle and a brid"
+  },
+  {
+   "w": "carcasses",
+   "f": 1,
+   "ctx": "But here we had a most horrible sight; for riding up to the entrance where the horse came out, we found the carcasses of another horse and o"
+  },
+  {
+   "w": "alight",
+   "f": 1,
+   "ctx": "I drew my little troop in among those trees, and placing ourselves in a line behind one long tree, I advised them all to alight, and keeping"
+  },
+  {
+   "w": "triangle",
+   "f": 1,
+   "ctx": "I drew my little troop in among those trees, and placing ourselves in a line behind one long tree, I advised them all to alight, and keeping"
+  },
+  {
+   "w": "snapping",
+   "f": 1,
+   "ctx": "He did so, and had but just time to get away, when the wolves came up to it, and some got upon it, when I, snapping an uncharged pistol clos"
+  },
+  {
+   "w": "uncharged",
+   "f": 1,
+   "ctx": "He did so, and had but just time to get away, when the wolves came up to it, and some got upon it, when I, snapping an uncharged pistol clos"
+  },
+  {
+   "w": "threescore",
+   "f": 1,
+   "ctx": "We had, first and last, killed about threescore of them, and had it been daylight we had killed many more."
+  },
+  {
+   "w": "yell",
+   "f": 1,
+   "ctx": "We heard the ravenous creatures howl and yell in the woods as we went several times, and sometimes we fancied we saw some of them; but the s"
+  },
+  {
+   "w": "rankling",
+   "f": 1,
+   "ctx": "The next morning our guide was so ill, and his limbs swelled so much with the rankling of his two wounds, that he could go no farther; so we"
+  },
+  {
+   "w": "horseback",
+   "f": 1,
+   "ctx": "When we told them how we placed ourselves and the horses in the middle, they blamed us exceedingly, and told us it was fifty to one but we h"
+  },
+  {
+   "w": "currently",
+   "f": 1,
+   "ctx": "I was now come to the centre of my travels, and had in a little time all my new-discovered estate safe about me, the bills of exchange which"
+  },
+  {
+   "w": "privy",
+   "f": 1,
+   "ctx": "My principal guide and privy-counsellor was my good ancient widow, who, in gratitude for the money I had sent her, thought no pains too much"
+  },
+  {
+   "w": "unspotted",
+   "f": 1,
+   "ctx": "My principal guide and privy-counsellor was my good ancient widow, who, in gratitude for the money I had sent her, thought no pains too much"
+  },
+  {
+   "w": "payment",
+   "f": 1,
+   "ctx": "In return, I signed the instrument of sale in the form which they sent from Lisbon, and sent it to my old man, who sent me the bills of exch"
+  },
+  {
+   "w": "rent",
+   "f": 1,
+   "ctx": "In return, I signed the instrument of sale in the form which they sent from Lisbon, and sent it to my old man, who sent me the bills of exch"
+  },
+  {
+   "w": "foolishly",
+   "f": 1,
+   "ctx": "And thus I have given the first part of a life of fortune and adventure—a life of Providence’s chequer-work, and of a variety which the worl"
+  },
+  {
+   "w": "complicated",
+   "f": 1,
+   "ctx": "Any one would think that in this state of complicated good fortune I was past running any more hazards—and so, indeed, I had been, if other "
+  },
+  {
+   "w": "dissuaded",
+   "f": 1,
+   "ctx": "My true friend, the widow, earnestly dissuaded me from it, and so far prevailed with me, that for almost seven years she prevented my runnin"
+  },
+  {
+   "w": "nephews",
+   "f": 1,
+   "ctx": "My true friend, the widow, earnestly dissuaded me from it, and so far prevailed with me, that for almost seven years she prevented my runnin"
+  },
+  {
+   "w": "eldest",
+   "f": 1,
+   "ctx": "My true friend, the widow, earnestly dissuaded me from it, and so far prevailed with me, that for almost seven years she prevented my runnin"
+  },
+  {
+   "w": "decease",
+   "f": 1,
+   "ctx": "My true friend, the widow, earnestly dissuaded me from it, and so far prevailed with me, that for almost seven years she prevented my runnin"
+  },
+  {
+   "w": "disadvantage",
+   "f": 1,
+   "ctx": "In the meantime, I in part settled myself here; for, first of all, I married, and that not either to my disadvantage or dissatisfaction, and"
+  },
+  {
+   "w": "daughter",
+   "f": 1,
+   "ctx": "In the meantime, I in part settled myself here; for, first of all, I married, and that not either to my disadvantage or dissatisfaction, and"
+  },
+  {
+   "w": "nephew",
+   "f": 1,
+   "ctx": "In the meantime, I in part settled myself here; for, first of all, I married, and that not either to my disadvantage or dissatisfaction, and"
+  },
+  {
+   "w": "successors",
+   "f": 1,
+   "ctx": "In this voyage I visited my new colony in the island, saw my successors the Spaniards, had the old story of their lives and of the villains "
+  },
+  {
+   "w": "insulted",
+   "f": 1,
+   "ctx": "In this voyage I visited my new colony in the island, saw my successors the Spaniards, had the old story of their lives and of the villains "
+  },
+  {
+   "w": "united",
+   "f": 1,
+   "ctx": "In this voyage I visited my new colony in the island, saw my successors the Spaniards, had the old story of their lives and of the villains "
+  },
+  {
+   "w": "workmen",
+   "f": 1,
+   "ctx": "Here I stayed about twenty days, left them supplies of all necessary things, and particularly of arms, powder, shot, clothes, tools, and two"
+  },
+  {
+   "w": "respectively",
+   "f": 1,
+   "ctx": "Besides this, I shared the lands into parts with them, reserved to myself the property of the whole, but gave them such parts respectively a"
+  },
+  {
+   "w": "wives",
+   "f": 1,
+   "ctx": "From thence I touched at the Brazils, from whence I sent a bark, which I bought there, with more people to the island; and in it, besides ot"
+  }
+ ]
+}

@@ -1,0 +1,462 @@
+{
+ "batch": 22,
+ "cards": [
+  {
+   "word": "conclude",
+   "ipa": "/kənˈkluːd/",
+   "pos": "v.",
+   "gloss_cn": "断定、得出结论",
+   "gloss_en": "to decide something after thinking about it",
+   "sense_key": "decide",
+   "ex_en": "After the tests, doctors concluded that he was healthy.",
+   "ex_cn": "检查之后,医生断定他很健康。"
+  },
+  {
+   "word": "frog",
+   "ipa": "/frɒɡ/",
+   "pos": "n.",
+   "gloss_cn": "剑挂环、佩挂环",
+   "gloss_en": "a loop on a belt for holding a sword or tool",
+   "sense_key": "fastening",
+   "ex_en": "The soldier slid his sword into the frog on his belt.",
+   "ex_cn": "士兵把剑插进腰带上的挂环里。"
+  },
+  {
+   "word": "superior",
+   "ipa": "/suːˈpɪəriə/",
+   "pos": "adj.",
+   "gloss_cn": "更好的、更胜一筹的",
+   "gloss_en": "better or higher in quality or rank",
+   "sense_key": "better",
+   "ex_en": "This cloth is superior to the cheaper kind.",
+   "ex_cn": "这种布料比便宜的那种更好。"
+  },
+  {
+   "word": "qualified",
+   "ipa": "/ˈkwɒlɪfaɪd/",
+   "pos": "adj.",
+   "gloss_cn": "能胜任的、合格的",
+   "gloss_en": "having the skills or training needed for something",
+   "sense_key": "competent",
+   "ex_en": "She is well qualified to teach young children.",
+   "ex_cn": "她很有资格教小孩子。"
+  },
+  {
+   "word": "contribute",
+   "ipa": "/kənˈtrɪbjuːt/",
+   "pos": "v.",
+   "gloss_cn": "出资、贡献",
+   "gloss_en": "to give money or help toward something",
+   "sense_key": "give",
+   "ex_en": "Everyone contributed some money for the gift.",
+   "ex_cn": "每个人都出了些钱买礼物。"
+  },
+  {
+   "word": "probability",
+   "ipa": "/ˌprɒbəˈbɪləti/",
+   "pos": "n.",
+   "gloss_cn": "可能性",
+   "gloss_en": "how likely something is to happen",
+   "sense_key": "likelihood",
+   "ex_en": "There is little probability of rain today.",
+   "ex_cn": "今天下雨的可能性很小。"
+  },
+  {
+   "word": "overnight",
+   "ipa": "/ˌəʊvəˈnaɪt/",
+   "pos": "adv.",
+   "gloss_cn": "前一天晚上",
+   "gloss_en": "during or on the night before",
+   "sense_key": "night-before",
+   "ex_en": "He had packed his bag overnight so he could leave early.",
+   "ex_cn": "他前一晚就收拾好包,好早点出发。"
+  },
+  {
+   "word": "purchase",
+   "ipa": "/ˈpɜːtʃəs/",
+   "pos": "n.",
+   "gloss_cn": "采购、购得的货物",
+   "gloss_en": "something that has been bought",
+   "sense_key": "buying",
+   "ex_en": "She showed me her new purchase from the market.",
+   "ex_cn": "她给我看她从市场买来的新东西。"
+  },
+  {
+   "word": "purchased",
+   "ipa": "/ˈpɜːtʃəst/",
+   "pos": "v.",
+   "gloss_cn": "购买(purchase 的过去式)",
+   "gloss_en": "bought; paid money to get",
+   "sense_key": "buying",
+   "ex_en": "They purchased a small house near the sea.",
+   "ex_cn": "他们在海边买了一栋小房子。"
+  },
+  {
+   "word": "project",
+   "ipa": "/ˈprɒdʒekt/",
+   "pos": "n.",
+   "gloss_cn": "计划、谋划",
+   "gloss_en": "a plan or scheme for doing something",
+   "sense_key": "plan",
+   "ex_en": "He had a bold project to build a boat.",
+   "ex_cn": "他有一个大胆的造船计划。"
+  },
+  {
+   "word": "formal",
+   "ipa": "/ˈfɔːml/",
+   "pos": "adj.",
+   "gloss_cn": "正式的",
+   "gloss_en": "done in a proper or official way",
+   "sense_key": "official",
+   "ex_en": "They signed a formal agreement in the office.",
+   "ex_cn": "他们在办公室签了一份正式协议。"
+  },
+  {
+   "word": "universal",
+   "ipa": "/ˌjuːnɪˈvɜːsl/",
+   "pos": "adj.",
+   "gloss_cn": "普遍的、全部的",
+   "gloss_en": "affecting or shared by everyone",
+   "sense_key": "general",
+   "ex_en": "The new rule brought universal joy to the town.",
+   "ex_cn": "这条新规定给全镇带来了普遍的喜悦。"
+  },
+  {
+   "word": "consult",
+   "ipa": "/kənˈsʌlt/",
+   "pos": "v.",
+   "gloss_cn": "商议、商讨",
+   "gloss_en": "to talk something over to get advice or a decision",
+   "sense_key": "discuss",
+   "ex_en": "The sailors consulted about which way to steer.",
+   "ex_cn": "水手们商议该往哪个方向行驶。"
+  },
+  {
+   "word": "debate",
+   "ipa": "/dɪˈbeɪt/",
+   "pos": "v.",
+   "gloss_cn": "争论、讨论",
+   "gloss_en": "to argue or discuss something before deciding",
+   "sense_key": "argue",
+   "ex_en": "They debated for hours about where to camp.",
+   "ex_cn": "他们为在哪里露营争论了好几个小时。"
+  },
+  {
+   "word": "strengthen",
+   "ipa": "/ˈstreŋθn/",
+   "pos": "v.",
+   "gloss_cn": "加固、加强",
+   "gloss_en": "to make something stronger",
+   "sense_key": "reinforce",
+   "ex_en": "They strengthened the fence with heavy posts.",
+   "ex_cn": "他们用粗桩把栅栏加固了。"
+  },
+  {
+   "word": "require",
+   "ipa": "/rɪˈkwaɪə/",
+   "pos": "v.",
+   "gloss_cn": "需要、要花费",
+   "gloss_en": "to need something",
+   "sense_key": "need",
+   "ex_en": "This job requires great patience.",
+   "ex_cn": "这份工作需要极大的耐心。"
+  },
+  {
+   "word": "series",
+   "ipa": "/ˈsɪəriːz/",
+   "pos": "n.",
+   "gloss_cn": "一连串、一系列",
+   "gloss_en": "a number of similar things coming one after another",
+   "sense_key": "sequence",
+   "ex_en": "A series of storms hit the coast that winter.",
+   "ex_cn": "那年冬天,一连串风暴袭击了海岸。"
+  },
+  {
+   "word": "comparison",
+   "ipa": "/kəmˈpærɪsn/",
+   "pos": "n.",
+   "gloss_cn": "比较、相比",
+   "gloss_en": "the act of looking at how things are alike or different",
+   "sense_key": "compare",
+   "ex_en": "In comparison with his brother, he is very tall.",
+   "ex_cn": "和他哥哥相比,他个子很高。"
+  },
+  {
+   "word": "recommend",
+   "ipa": "/ˌrekəˈmend/",
+   "pos": "v.",
+   "gloss_cn": "推荐、建议",
+   "gloss_en": "to say something is good and worth trying",
+   "sense_key": "advise",
+   "ex_en": "I recommend this book to every young reader.",
+   "ex_cn": "我向每个年轻读者推荐这本书。"
+  },
+  {
+   "word": "calculate",
+   "ipa": "/ˈkælkjʊleɪt/",
+   "pos": "v.",
+   "gloss_cn": "计算、估算",
+   "gloss_en": "to work out an amount using numbers",
+   "sense_key": "compute",
+   "ex_en": "He calculated how many days the food would last.",
+   "ex_cn": "他算了算这些食物能吃多少天。"
+  },
+  {
+   "word": "absolute",
+   "ipa": "/ˈæbsəluːt/",
+   "pos": "adj.",
+   "gloss_cn": "绝对的、完全的",
+   "gloss_en": "complete and total",
+   "sense_key": "total",
+   "ex_en": "There was absolute silence in the dark cave.",
+   "ex_cn": "黑暗的洞里一片绝对的寂静。"
+  },
+  {
+   "word": "copper",
+   "ipa": "/ˈkɒpə/",
+   "pos": "n.",
+   "gloss_cn": "铜制大锅、煮锅",
+   "gloss_en": "a large metal pot for boiling",
+   "sense_key": "pot",
+   "ex_en": "She boiled the clothes in a big copper.",
+   "ex_cn": "她在一口铜制大锅里煮衣服。"
+  },
+  {
+   "word": "policy",
+   "ipa": "/ˈpɒləsi/",
+   "pos": "n.",
+   "gloss_cn": "策略、明智之举",
+   "gloss_en": "a wise or planned way of acting",
+   "sense_key": "strategy",
+   "ex_en": "Honesty is the best policy in business.",
+   "ex_cn": "诚实是做生意最好的策略。"
+  },
+  {
+   "word": "disturb",
+   "ipa": "/dɪˈstɜːb/",
+   "pos": "v.",
+   "gloss_cn": "打扰、扰乱",
+   "gloss_en": "to interrupt or upset someone or something",
+   "sense_key": "interrupt",
+   "ex_en": "Please don't disturb the baby while she sleeps.",
+   "ex_cn": "宝宝睡觉时请不要打扰她。"
+  },
+  {
+   "word": "scholar",
+   "ipa": "/ˈskɒlə/",
+   "pos": "n.",
+   "gloss_cn": "学生、好学的人",
+   "gloss_en": "someone who is learning, especially a keen learner",
+   "sense_key": "pupil",
+   "ex_en": "Friday proved to be a quick scholar.",
+   "ex_cn": "星期五被证明是个学得很快的学生。"
+  },
+  {
+   "word": "governed",
+   "ipa": "/ˈɡʌvənd/",
+   "pos": "v.",
+   "gloss_cn": "统治、掌管(govern 的过去式)",
+   "gloss_en": "ruled or controlled a place or people",
+   "sense_key": "rule",
+   "ex_en": "A wise king governed the land for many years.",
+   "ex_cn": "一位贤明的国王统治了这片土地很多年。"
+  },
+  {
+   "word": "pardon",
+   "ipa": "/ˈpɑːdn/",
+   "pos": "v.",
+   "gloss_cn": "宽恕、原谅",
+   "gloss_en": "to forgive someone for a wrong",
+   "sense_key": "forgive",
+   "ex_en": "The king pardoned the man for his crime.",
+   "ex_cn": "国王宽恕了那个人的罪。"
+  },
+  {
+   "word": "intention",
+   "ipa": "/ɪnˈtenʃn/",
+   "pos": "n.",
+   "gloss_cn": "意图、打算",
+   "gloss_en": "what someone plans or means to do",
+   "sense_key": "aim",
+   "ex_en": "His intention was to reach the island by dark.",
+   "ex_cn": "他的打算是天黑前到达那座岛。"
+  },
+  {
+   "word": "debt",
+   "ipa": "/det/",
+   "pos": "n.",
+   "gloss_cn": "债务、欠债",
+   "gloss_en": "money or a favour that you owe to someone",
+   "sense_key": "owing",
+   "ex_en": "He worked hard to pay off his debt.",
+   "ex_cn": "他努力工作来还清债务。"
+  },
+  {
+   "word": "extreme",
+   "ipa": "/ɪkˈstriːm/",
+   "pos": "adj.",
+   "gloss_cn": "极度的、极端的",
+   "gloss_en": "very great in degree",
+   "sense_key": "intense",
+   "ex_en": "They suffered from extreme cold in the mountains.",
+   "ex_cn": "他们在山里忍受着极度的寒冷。"
+  },
+  {
+   "word": "income",
+   "ipa": "/ˈɪnkʌm/",
+   "pos": "n.",
+   "gloss_cn": "收入",
+   "gloss_en": "money that you regularly receive",
+   "sense_key": "earnings",
+   "ex_en": "The farm gave the family a small yearly income.",
+   "ex_cn": "这座农场给这家人带来一小笔年收入。"
+  },
+  {
+   "word": "merchandise",
+   "ipa": "/ˈmɜːtʃəndaɪz/",
+   "pos": "n.",
+   "gloss_cn": "买卖、经商",
+   "gloss_en": "the business of buying and selling goods",
+   "sense_key": "trade",
+   "ex_en": "He made his money by merchandise across the sea.",
+   "ex_cn": "他靠跨海经商赚钱。"
+  },
+  {
+   "word": "corruption",
+   "ipa": "/kəˈrʌpʃn/",
+   "pos": "n.",
+   "gloss_cn": "(词语的)讹变、讹用",
+   "gloss_en": "a changed or worn-down form of a word",
+   "sense_key": "word-change",
+   "ex_en": "The place-name is a corruption of an older Latin word.",
+   "ex_cn": "这个地名是一个更古老的拉丁词的讹变。"
+  },
+  {
+   "word": "regiment",
+   "ipa": "/ˈredʒɪmənt/",
+   "pos": "n.",
+   "gloss_cn": "团、军团",
+   "gloss_en": "a large group of soldiers led by a colonel",
+   "sense_key": "army-unit",
+   "ex_en": "His brother served in a regiment of foot soldiers.",
+   "ex_cn": "他哥哥在一个步兵团服役。"
+  },
+  {
+   "word": "gout",
+   "ipa": "/ɡaʊt/",
+   "pos": "n.",
+   "gloss_cn": "痛风",
+   "gloss_en": "a painful disease that swells the joints, often the toe",
+   "sense_key": "illness",
+   "ex_en": "His grandfather could not walk because of the gout.",
+   "ex_cn": "他祖父因为痛风走不了路。"
+  },
+  {
+   "word": "lamented",
+   "ipa": "/ləˈmentɪd/",
+   "pos": "v.",
+   "gloss_cn": "哀叹、悲叹(lament 的过去式)",
+   "gloss_en": "felt or expressed deep sorrow about something",
+   "sense_key": "mourn",
+   "ex_en": "The old sailor lamented the loss of his ship.",
+   "ex_cn": "老水手为失去他的船而悲叹。"
+  },
+  {
+   "word": "extremes",
+   "ipa": "/ɪkˈstriːmz/",
+   "pos": "n.",
+   "gloss_cn": "极端(常指两端)",
+   "gloss_en": "the two points or states that are furthest apart",
+   "sense_key": "opposite-ends",
+   "ex_en": "In the desert the weather swings between two extremes.",
+   "ex_cn": "在沙漠里,天气在两个极端之间摇摆。"
+  },
+  {
+   "word": "calamities",
+   "ipa": "/kəˈlæmətiz/",
+   "pos": "n.",
+   "gloss_cn": "灾难、灾祸(calamity 的复数)",
+   "gloss_en": "terrible events that cause great harm or misery",
+   "sense_key": "disaster",
+   "ex_en": "War and famine are among the worst calamities.",
+   "ex_cn": "战争和饥荒属于最严重的灾难。"
+  },
+  {
+   "word": "vicissitudes",
+   "ipa": "/vɪˈsɪsɪtjuːdz/",
+   "pos": "n.",
+   "gloss_cn": "变迁、盛衰无常",
+   "gloss_en": "sudden changes of fortune, good and bad",
+   "sense_key": "ups-and-downs",
+   "ex_en": "He faced the many vicissitudes of a sailor's life.",
+   "ex_cn": "他经历了水手生活中的种种变迁。"
+  },
+  {
+   "word": "insufficient",
+   "ipa": "/ˌɪnsəˈfɪʃnt/",
+   "pos": "adj.",
+   "gloss_cn": "不足的、不够的",
+   "gloss_en": "not enough for what is needed",
+   "sense_key": "lacking",
+   "ex_en": "The food they saved was insufficient for the long winter.",
+   "ex_cn": "他们存下的食物不够熬过漫长的冬天。"
+  },
+  {
+   "word": "handmaids",
+   "ipa": "/ˈhændmeɪdz/",
+   "pos": "n.",
+   "gloss_cn": "侍女、伴随者(handmaid 的复数)",
+   "gloss_en": "female servants, or things that always go with something",
+   "sense_key": "servant",
+   "ex_en": "In the story, patience and hope were her faithful handmaids.",
+   "ex_cn": "在故事里,耐心和希望是她忠实的侍女。"
+  },
+  {
+   "word": "temperance",
+   "ipa": "/ˈtempərəns/",
+   "pos": "n.",
+   "gloss_cn": "节制、有节",
+   "gloss_en": "self-control, especially in eating and drinking",
+   "sense_key": "self-control",
+   "ex_en": "The doctor praised his temperance at the table.",
+   "ex_cn": "医生称赞他饮食有节制。"
+  },
+  {
+   "word": "moderation",
+   "ipa": "/ˌmɒdəˈreɪʃn/",
+   "pos": "n.",
+   "gloss_cn": "适度、节制",
+   "gloss_en": "the habit of keeping to a sensible middle amount",
+   "sense_key": "self-restraint",
+   "ex_en": "He ate sweets only in moderation.",
+   "ex_cn": "他只适度地吃甜食。"
+  }
+ ],
+ "skipped": [
+  "thirst(太基础)", "directing(太基础)", "violently(基础派生)", "sixteenth(序数)",
+  "juice(太基础)", "eaters(基础派生)", "parrots(太基础)", "skill(太基础)",
+  "damage(太基础)", "oven(太基础)", "rub(太基础)", "peas(太基础)",
+  "comparing(派生)", "supplies(太基础)", "delay(太基础)", "swan(太基础)",
+  "unarmed(透明派生)", "twentieth(序数)", "explain(太基础)", "bullet(太基础)",
+  "teachee(方言残词)", "nineteen(数词)", "honestly(基础派生)", "eatee(方言残词)",
+  "train(太基础)", "elder(太基础)", "labours(基础派生)", "proposals(基础派生)",
+  "positively(基础派生)", "calmer(派生)", "calmness(派生)", "applying(派生)",
+  "sixth(序数)", "neighbours(太基础)", "mathematics(基础学科)", "trader(透明派生)",
+  "hammer(太基础)", "innocently(基础派生)", "wey(方言残词)", "workman(透明复合)",
+  "male(太基础)", "price(太基础)", "projects(project复数)", "twelfth(序数)",
+  "commonly(基础派生)", "ndly(残渣)", "rdly(残渣)", "level(太基础)",
+  "flour(太基础)", "securing(太基础)", "shy(太基础)", "seventh(序数)",
+  "calendar(太基础)", "horrible(太基础)", "shelves(太基础)", "pork(太基础)",
+  "headache(太基础)", "thirsty(太基础)", "lastly(基础派生)", "root(太基础)",
+  "travelling(派生)", "newly(基础派生)", "southern(基础派生)", "uncomfortably(透明派生)",
+  "thirdly(基础派生)", "sweetness(派生)", "teaching(派生)", "studied(派生)",
+  "firewood(透明复合)", "supplying(派生)", "climates(太基础)", "drawer(太基础)",
+  "stress(太基础)", "repeat(太基础)", "largest(派生)", "beer(太基础)",
+  "tour(太基础)", "unnatural(透明派生)", "depending(派生)", "examples(太基础)",
+  "communication(太基础)", "seaman(透明复合)", "repeating(派生)", "mad(太基础)",
+  "sisters(太基础)", "farm(太基础)", "honour(太基础)", "travellers(透明派生)",
+  "frozen(太基础)", "foreigner(透明派生)", "education(太基础)", "tending(语境不清)",
+  "native(太基础)", "standard(太基础)", "fewest(基础派生)", "quietness(派生)",
+  "instructor(透明派生)"
+ ]
+}

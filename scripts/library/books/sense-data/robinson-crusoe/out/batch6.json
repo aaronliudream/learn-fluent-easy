@@ -1,0 +1,50 @@
+{
+  "batch": 6,
+  "rows": [
+    {
+      "word": "nice",
+      "normalized": "nice",
+      "ipa": "/naɪs/",
+      "pos": "adj.",
+      "sense_key": "fastidious",
+      "gloss_cn": "讲究的、一丝不苟的;爱端架子的",
+      "gloss_en": "fastidious or punctilious; particular about ceremony and dignity",
+      "archaic": true,
+      "modern_cn": "好的、令人愉快的",
+      "modern_en": "pleasant, agreeable, or good",
+      "example_en": "He was so nice in matters of honour that he overlooked not the slightest affront.",
+      "example_cn": "他在名誉之事上极为讲究,一丁点冒犯也不肯放过"
+    },
+    {
+      "word": "entertain",
+      "normalized": "entertain",
+      "ipa": "/ˌentəˈteɪn/",
+      "pos": "v.",
+      "sense_key": "hold-in-mind",
+      "gloss_cn": "(心里)抱有、怀有(想法、看法)",
+      "gloss_en": "to hold or harbour a thought, opinion, or feeling in the mind",
+      "archaic": true,
+      "modern_cn": "款待、招待;娱乐",
+      "modern_en": "to receive guests or provide amusement",
+      "example_en": "She had long entertained grave doubts about the whole scheme.",
+      "example_cn": "对整桩计划,她心里早已抱着重重疑虑"
+    },
+    {
+      "word": "admit",
+      "normalized": "admit",
+      "ipa": "/ədˈmɪt/",
+      "pos": "v.",
+      "sense_key": "allow-of",
+      "gloss_cn": "容许、留有余地(做某事)",
+      "gloss_en": "to allow of or leave room for something",
+      "archaic": true,
+      "modern_cn": "承认;准许进入",
+      "modern_en": "to confess something, or to let someone enter",
+      "example_en": "The plain wording of the bond admits no other reading.",
+      "example_cn": "这契据平实的措辞,不容许有别的解读"
+    }
+  ],
+  "skipped": [
+    "brave(本书=勇猛的,同现代义)"
+  ]
+}

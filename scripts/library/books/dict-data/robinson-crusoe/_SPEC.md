@@ -27,6 +27,7 @@
   "ex_cn": "他们在河边盖了个小住所。" }
 ```
 - **gloss_cn 定义**:先看 `ctx` 判断书里用哪个义,只给那个义。别堆多义。**禁描述式**("一种…的动物/工具")——直接给对应中文词(perch→河鲈,不是"一种鱼");**末尾不带句号**;别机翻腔生硬。
+- ⚠️⚠️ **18世纪古今义不同(false-friend)—— 本书铁律**:Defoe 是 1719 年英语,**很多词今天还在用、但义变了**。**必须对着 `ctx` 判该给哪个义,绝不默认现代义**——给错义读者会理解错整句。常见雷(看到务必按 ctx 核):`want`=缺乏(非"想要)、`mean`=中等的/粗劣的(非"意思是)、`ancient`=(指人)年老的/(航海)船旗(非只"古老的)、`sensible`=能察觉的/意识到的、`prevent`=(有时)先于/预先、`artificial`=巧妙的、`conversation`=交往/为人、`suffer`=容许、`own`=(动词)承认、`presently`=不久/当即、`nice`=精细/挑剔、`several`=各自的、`generous`=高贵的、`mere`=纯粹的、`sad`=严肃的。**拿不准就贴 ctx 里的实际义,别猜现代义**。
 - **gloss_en 【新增·本轮重点】**:一句**地道**英语释义(给英英复习当题干)。要求:小写开头、**末尾不带句号**、≤12 词、别用生僻词解生僻词(用简单词讲)、贴书中义(和 gloss_cn 同一个义)。例:deliverance→"the act of being rescued or set free"。
 - **sense_key 【新增】**:一个**小写英文单词/短横短语**,概括核心语义,给复习出题时"排除近义干扰"用(同 sense_key 的词不会互为选项)。近义词给同一个 key:habitation/dwelling/abode→`dwelling`;rescue/deliverance→`rescue`;afraid/frightened→`fear`。拿不准就用该词最核心的英文近义词。
 - **ipa 必填**:英式音标,尽量准;拿不准也给最接近的,别空。

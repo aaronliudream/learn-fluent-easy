@@ -1,0 +1,52 @@
+{
+ "batch": 3,
+ "rows": [
+  {
+   "word": "discover",
+   "normalized": "discover",
+   "ipa": "/dɪˈskʌvə/",
+   "pos": "v.",
+   "sense_key": "reconnoitre-reveal",
+   "gloss_cn": "探查、勘察(某地);(向…)显明、告知",
+   "gloss_en": "to explore or reconnoitre a place; to reveal or make known",
+   "archaic": true,
+   "modern_cn": "发现、找到",
+   "modern_en": "to find or become aware of something for the first time",
+   "example_en": "At dawn we went inland to discover the country and seek fresh water.",
+   "example_cn": "天亮时我们往内陆去探查这片地方,寻找淡水。"
+  },
+  {
+   "word": "sensible",
+   "normalized": "sensible",
+   "ipa": "/ˈsensəbl/",
+   "pos": "adj.",
+   "sense_key": "aware",
+   "gloss_cn": "能感知的、意识到的",
+   "gloss_en": "keenly aware or conscious of something",
+   "archaic": true,
+   "modern_cn": "明智的、明事理的",
+   "modern_en": "showing good sense or sound judgement",
+   "example_en": "He was sensible of the danger long before the others took notice.",
+   "example_cn": "他远在旁人察觉之前就意识到了危险。"
+  },
+  {
+   "word": "ancient",
+   "normalized": "ancient",
+   "ipa": "/ˈeɪnʃənt/",
+   "pos": "adj./n.",
+   "sense_key": "aged-ensign",
+   "gloss_cn": "(指人)年老的;(航海)船旗、旗帜;古时的",
+   "gloss_en": "(of a person) very old and aged; (nautical) a ship's flag or ensign; of former times",
+   "archaic": true,
+   "modern_cn": "古老的、远古的",
+   "modern_en": "belonging to the very distant past",
+   "example_en": "The ancient boatswain hoisted the ship's ancient as a signal of distress.",
+   "example_cn": "那位年老的水手长升起船上的旗帜,发出遇险的信号。"
+  }
+ ],
+ "skipped": [
+  "prodigious(本书=大得惊人的/巨大的,同现代义)",
+  "success(本书均为good/great/better success=顺利的结果/成效,读作现代'成功'不误导)",
+  "concerned(本书=担忧的/挂心的,系现代常用义之一,非18世纪特有义)"
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "batch": 2,
+ "rows": [
+  {
+   "word": "obliged",
+   "normalized": "obliged",
+   "ipa": "/əˈblaɪdʒd/",
+   "pos": "adj./v.",
+   "sense_key": "compelled",
+   "gloss_cn": "被迫、只得、不得不",
+   "gloss_en": "forced or compelled to do something",
+   "archaic": true,
+   "modern_cn": "感激的、感谢的",
+   "modern_en": "grateful or thankful to someone",
+   "example_en": "With no wind in our favour, we were obliged to wait at anchor for days",
+   "example_cn": "由于没有顺风,我们只得抛锚等候了好几天"
+  },
+  {
+   "word": "mean",
+   "normalized": "mean",
+   "ipa": "/miːn/",
+   "pos": "adj.",
+   "sense_key": "lowly",
+   "gloss_cn": "(指身份、境况)低微的、卑贱的",
+   "gloss_en": "low in rank or station; humble and base",
+   "archaic": true,
+   "modern_cn": "意思是;吝啬刻薄的",
+   "modern_en": "to intend to convey; or unkind and stingy",
+   "example_en": "He was placed between the mean and the great, envying neither",
+   "example_cn": "他居于卑贱与显赫之间,对两头都不生羡慕"
+  },
+  {
+   "word": "temper",
+   "normalized": "temper",
+   "ipa": "/ˈtempə(r)/",
+   "pos": "n./v.",
+   "sense_key": "disposition",
+   "gloss_cn": "心境、性情、秉性;(动)调和、揉和(黏土)",
+   "gloss_en": "one's state of mind or natural disposition; to knead and work clay",
+   "archaic": true,
+   "modern_cn": "脾气(尤指易怒)",
+   "modern_en": "a tendency to become angry easily",
+   "example_en": "Even in the worst storm his calm temper never once forsook him",
+   "example_cn": "即便在最猛的风暴里,他那份沉静的心境也不曾离他而去"
+  },
+  {
+   "word": "offer",
+   "normalized": "offer",
+   "ipa": "/ˈɒfə(r)/",
+   "pos": "v.",
+   "sense_key": "attempt",
+   "gloss_cn": "(offer to do)企图、试图、意欲",
+   "gloss_en": "to attempt or venture to do something",
+   "archaic": true,
+   "modern_cn": "提供、给予",
+   "modern_en": "to present something for someone to accept",
+   "example_en": "The frightened beast did not offer to fall upon the men on shore",
+   "example_cn": "那受惊的野兽并没有试图去扑岸上的人"
+  }
+ ],
+ "skipped": [
+  "prevent(本书=免得/防止/妨碍,四处皆'阻止某事发生',同现代义)",
+  "sad(本书=悲伤/凄凉/忧愁,同现代义'难过的')"
+ ]
+}

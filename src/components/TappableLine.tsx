@@ -228,6 +228,7 @@ function ExplainPopover({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isLight, setIsLight] = useState(false); // 命中 read-v1 轻卡才为 true → 才显示收藏按钮
+  const [isProper, setIsProper] = useState(false); // 专名事实卡 → 不显收藏按钮(专名不进收藏/复习)
   const [fav, setFav] = useState(false);
   const [favBusy, setFavBusy] = useState(false);
   const [revealed, setRevealed] = useState(false); // 微提取:是否已揭晓释义
@@ -247,7 +248,8 @@ function ExplainPopover({
         example: sense.example_en ? { en: sense.example_en, cn: sense.example_cn ?? "" } : undefined,
       });
       setIsLight(true);
-      if (favorite) isLibraryFavorite(phrase, favKind).then(setFav).catch(() => {});
+      setIsProper(!!sense.proper); // 专名覆盖行 → 隐藏收藏(古今义覆盖行 proper=false,照常显收藏)
+      if (favorite && !sense.proper) isLibraryFavorite(phrase, favKind).then(setFav).catch(() => {});
       return;
     }
     setLoading(true);
@@ -269,6 +271,7 @@ function ExplainPopover({
       setData(resp.explanation as Explanation);
       const light = !!resp.light;
       setIsLight(light);
+      setIsProper(!!resp.proper);
       // 轻卡 + 有收藏上下文(精读)→ 查一次当前收藏状态
       if (light && favorite) {
         isLibraryFavorite(phrase, favKind).then(setFav).catch(() => {});
@@ -366,8 +369,8 @@ function ExplainPopover({
               ) : null}
             </div>
             <div className="flex shrink-0 items-center gap-1.5">
-              {/* 虚词(the/of/because…)不给收藏按钮:词类是虚词大类 or 词形在语法表(pos 去掉尾部 /ipa/ 再判)。点开仍能看释义。 */}
-              {favorite && isLight && !isFunctionWord(phrase, (data?.pos || "").split("/")[0]) && (
+              {/* 虚词(the/of/because…)不给收藏按钮;专名(isProper)同样不给。点开仍能看释义。 */}
+              {favorite && isLight && !isProper && !isFunctionWord(phrase, (data?.pos || "").split("/")[0]) && (
                 <button
                   onClick={toggleFav}
                   disabled={favBusy}
@@ -430,7 +433,7 @@ function ExplainPopover({
               )}
               {error && !loading && (
                 <div className="py-2 text-sm text-muted-foreground">
-                  {error === "timeout" ? <T>暂无解释,请稍后再试</T> : <T>暂时讲解不出来,请稍后再试。</T>}
+                  {error === "timeout" || error === "not_found" ? <T>暂无解释,请稍后再试</T> : <T>暂时讲解不出来,请稍后再试。</T>}
                 </div>
               )}
               {data && !loading && <LessonBody data={data} />}

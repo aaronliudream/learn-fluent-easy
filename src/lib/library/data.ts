@@ -269,6 +269,7 @@ export type LibraryWordSense = {
   modern_en: string | null;
   example_en: string | null;
   example_cn: string | null;
+  proper: boolean; // 专名事实卡按书覆盖(撞名专名如 Tom/America 按 book_key 隔离)→ 前端隐藏收藏
 };
 
 /** 归一化(= 覆盖表 normalized 落库同式):小写、弯撇号折 ASCII、去非 [a-z0-9' ]、压空白。 */
@@ -284,7 +285,7 @@ export async function getBookWordSenses(bookKey: string): Promise<Map<string, Li
   try {
     const { data, error } = await db
       .from("library_word_senses")
-      .select("normalized,word,ipa,pos,sense_key,gloss_cn,gloss_en,archaic,modern_cn,modern_en,example_en,example_cn")
+      .select("normalized,word,ipa,pos,sense_key,gloss_cn,gloss_en,archaic,modern_cn,modern_en,example_en,example_cn,proper")
       .eq("book_key", bookKey);
     if (error || !data) return new Map();
     const m = new Map<string, LibraryWordSense>();

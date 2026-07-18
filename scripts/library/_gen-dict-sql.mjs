@@ -31,21 +31,23 @@ for (const f of files) {
   for (const c of data.cards || []) {
     const w = (c.word || "").trim();
     if (!w) { errs.push(`${f}: 空 word`); continue; }
-    for (const k of ["ipa", "pos", "gloss_cn", "ex_en", "ex_cn"]) {
+    for (const k of ["ipa", "pos", "gloss_cn", "gloss_en", "sense_key", "ex_en", "ex_cn"]) {
       if (!c[k] || !String(c[k]).trim()) errs.push(`${f}/${w}: 缺 ${k}`);
     }
+    if (/[。.]$/.test(String(c.gloss_cn || "").trim())) errs.push(`${f}/${w}: gloss_cn 末尾带句号`);
+    if (/[.]$/.test(String(c.gloss_en || "").trim())) errs.push(`${f}/${w}: gloss_en 末尾带句号`);
     if (c.ex_en && c.gloss_cn && cardNorm(c.ex_en) === cardNorm(w)) errs.push(`${f}/${w}: 例句退化为孤词`);
     const n = cardNorm(w);
     if (!n) { errs.push(`${f}: word "${w}" 归一化后为空`); continue; }
     if (seen.has(n)) { dupN++; continue; }   // 跨批去重(首个胜)
     seen.add(n);
-    cards.push({ word: w, normalized: n, ipa: c.ipa, pos: c.pos, gloss_cn: c.gloss_cn, ex_en: c.ex_en, ex_cn: c.ex_cn });
+    cards.push({ word: w, normalized: n, ipa: c.ipa, pos: c.pos, gloss_cn: c.gloss_cn, gloss_en: c.gloss_en, sense_key: String(c.sense_key).toLowerCase().trim(), ex_en: c.ex_en, ex_cn: c.ex_cn });
   }
 }
 if (errs.length) { console.error(`✗ ${KEY} 词卡校验失败 ${errs.length} 处:`); errs.slice(0, 40).forEach((e) => console.error("  " + e)); process.exit(1); }
 
 // ---- 生成 SQL ----
-const mkExpl = (c) => ({ ipa: c.ipa, pos: c.pos, word: c.word, example: { en: c.ex_en, cn: c.ex_cn }, gloss_cn: c.gloss_cn });
+const mkExpl = (c) => ({ ipa: c.ipa, pos: c.pos, word: c.word, example: { en: c.ex_en, cn: c.ex_cn }, gloss_cn: c.gloss_cn, gloss_en: c.gloss_en, sense_key: c.sense_key });
 const rows = cards.map((c) => `  ('${sqlEsc(c.word)}', '${sqlEsc(c.normalized)}', 'en', 'read-v1', '${sqlEsc(JSON.stringify(mkExpl(c)))}'::jsonb)`);
 const sql = `-- ============================================================================
 -- 图书馆点词词典冷词补全 · ${BOOK_ZH}(CC子代理手写·不走AI边缘·待Aaron/Web审后跑)
@@ -68,7 +70,7 @@ COMMIT;
 writeFileSync(`SQLAA/library-dict-${KEY}.sql`, sql);
 
 // ---- 审稿 md ----
-const rowsMd = cards.map((c) => `| **${c.word}** | ${c.ipa} | ${c.pos} | ${c.gloss_cn} | ${c.ex_en} | ${c.ex_cn} |`);
+const rowsMd = cards.map((c) => `| **${c.word}** | ${c.ipa} | ${c.pos} | ${c.gloss_cn} | ${c.gloss_en} | ${c.sense_key} | ${c.ex_en} | ${c.ex_cn} |`);
 const md = `# ${BOOK_ZH} · 点词词典冷词卡 — 待审(${cards.length} 张)
 
 > **CC 子代理手写**(不走 AI 边缘,零配额)。只补全局 read-v1 词典里**还没有**的冷词(书中出现·频次≥2·已滤专名)。判据:太基础的初中词已跳过;每张卡英式音标+书中义+新造例句。
@@ -82,8 +84,8 @@ const md = `# ${BOOK_ZH} · 点词词典冷词卡 — 待审(${cards.length} 张
 | 子代理判为太基础/专名而跳过 | ${skippedTotal} 词 |
 
 ## 词卡清单(${cards.length} 张)
-| 词 | 音标 | 词性 | 释义(书中义) | 例句(新造) | 例句中译 |
-|---|---|---|---|---|---|
+| 词 | 音标 | 词性 | 释义(书中义) | 英语释义(gloss_en) | sense_key | 例句(新造) | 例句中译 |
+|---|---|---|---|---|---|---|---|
 ${rowsMd.join("\n")}
 
 ## 请你审 / 定

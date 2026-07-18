@@ -252,6 +252,49 @@ export async function getBookVisibility(): Promise<Map<string, string>> {
   }
 }
 
+/**
+ * 古今异义"按书义项覆盖"(false-friend)。18 世纪词书中义 ≠ 现代义时,该书这个词用书中义。
+ * gloss_cn/gloss_en = 书中义(测试取);modern_cn/modern_en = 现代义(卡片补充显示)。
+ */
+export type LibraryWordSense = {
+  normalized: string;
+  word: string;
+  ipa: string | null;
+  pos: string | null;
+  sense_key: string | null;
+  gloss_cn: string;
+  gloss_en: string;
+  archaic: boolean;
+  modern_cn: string | null;
+  modern_en: string | null;
+  example_en: string | null;
+  example_cn: string | null;
+};
+
+/** 归一化(= 覆盖表 normalized 落库同式):小写、弯撇号折 ASCII、去非 [a-z0-9' ]、压空白。 */
+export function senseNormalize(s: string): string {
+  return String(s).toLowerCase().replace(/[’‘]/g, "'").replace(/[^a-z0-9' ]+/g, " ").replace(/\s+/g, " ").trim();
+}
+
+/**
+ * 某书全部古今异义覆盖 → Map(normalized → 覆盖)。点词/复习先查这个,命中用书中义,否则回退全局卡。
+ * 稀疏(每书几十条),开书时一次性预取。表 RLS 公开读;表未建/查询失败 → 空 Map(优雅降级,回退全局卡)。
+ */
+export async function getBookWordSenses(bookKey: string): Promise<Map<string, LibraryWordSense>> {
+  try {
+    const { data, error } = await db
+      .from("library_word_senses")
+      .select("normalized,word,ipa,pos,sense_key,gloss_cn,gloss_en,archaic,modern_cn,modern_en,example_en,example_cn")
+      .eq("book_key", bookKey);
+    if (error || !data) return new Map();
+    const m = new Map<string, LibraryWordSense>();
+    for (const r of data as LibraryWordSense[]) m.set(r.normalized, r);
+    return m;
+  } catch {
+    return new Map();
+  }
+}
+
 /** 取某章的插图(按 position 升序;每章就几张,和句子同批取)。 */
 export async function getChapterIllustrations(
   bookId: string,

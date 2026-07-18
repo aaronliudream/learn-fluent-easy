@@ -1,0 +1,39 @@
+{
+ "batch": 1,
+ "rows": [
+  {
+   "word": "want",
+   "normalized": "want",
+   "ipa": "/wɒnt/",
+   "pos": "n./v.",
+   "sense_key": "lack",
+   "gloss_cn": "缺乏、缺少",
+   "gloss_en": "a lack or shortage of something",
+   "archaic": true,
+   "modern_cn": "想要",
+   "modern_en": "to wish for or desire something",
+   "example_en": "For want of fresh water, the crew grew weaker each day.",
+   "example_cn": "由于缺乏淡水,船员们一天天虚弱下去。"
+  },
+  {
+   "word": "presently",
+   "normalized": "presently",
+   "ipa": "/ˈprezntli/",
+   "pos": "adv.",
+   "sense_key": "at-once",
+   "gloss_cn": "随即、立刻",
+   "gloss_en": "at once, immediately",
+   "archaic": true,
+   "modern_cn": "目前、现在",
+   "modern_en": "at present, currently",
+   "example_en": "He heard a rustling in the bushes and presently rose to look.",
+   "example_cn": "他听见灌木丛里有响动,随即起身去查看。"
+  }
+ ],
+ "skipped": [
+  "still(本书=仍然/一动不动,均同现代义)",
+  "several(本书=好几次/几个,同现代义)",
+  "occasion(本书=场合/时候/机会,同现代义)",
+  "mere(本书=仅仅的/只不过的,同现代义)"
+ ]
+}

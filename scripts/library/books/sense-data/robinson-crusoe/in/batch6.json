@@ -1,0 +1,57 @@
+{
+ "batch": 6,
+ "candidates": [
+  {
+   "word": "nice",
+   "global_gloss_cn": "好的；可口的",
+   "global_gloss_en": "It means good and pleasing.",
+   "occurrences": [
+    {
+     "ch": 20,
+     "seq": 2317,
+     "en": "As the bear is a heavy, clumsy creature, and does not gallop as the wolf does, who is swift and light, so he has two particular qualities, which generally are the rule of his actio",
+     "cn": "熊是一种笨重迟钝的家伙,不像狼那样轻捷善跑,它有两个特别的脾性,行事大抵照此而来:头一样是对人——人本不是它的猎物(它一般不会主动招惹人,除非你先动手,或者它饿极了,如今地上盖着雪"
+    }
+   ]
+  },
+  {
+   "word": "entertain",
+   "global_gloss_cn": "款待；招待",
+   "global_gloss_en": "",
+   "occurrences": [
+    {
+     "ch": 11,
+     "seq": 1309,
+     "en": "All this seemed inconsistent with the thing itself and with all the notions we usually entertain of the subtlety of the devil.",
+     "cn": "这一切似乎都与这件事本身、与我们通常对魔鬼那份狡诈的看法格格不入。"
+    }
+   ]
+  },
+  {
+   "word": "admit",
+   "global_gloss_cn": "允许进入",
+   "global_gloss_en": "To let someone come in.",
+   "occurrences": [
+    {
+     "ch": 2,
+     "seq": 98,
+     "en": "This captain taking a fancy to my conversation, which was not at all disagreeable at that time, hearing me say I had a mind to see the world, told me if I would go the voyage with ",
+     "cn": "这位船长看中了我的谈吐——那时我说起话来倒也不讨人厌——听我说想去见见世面,便对我说,如果我愿意随他航行,一路上不用花一文钱;我可以和他同桌吃饭、做他的伙伴;若是我能带些货物,凡贸"
+    }
+   ]
+  },
+  {
+   "word": "brave",
+   "global_gloss_cn": "勇敢的，无畏的。",
+   "global_gloss_en": "Not afraid to do hard or scary things.",
+   "occurrences": [
+    {
+     "ch": 16,
+     "seq": 1910,
+     "en": "The Spaniard, who was as bold and brave as could be imagined, though weak, had fought the Indian a good while, and had cut two great wounds on his head; but the savage being a stou",
+     "cn": "那西班牙人虽说虚弱,却勇猛无比,与那印第安人搏斗了好一阵,在他头上砍出两道大伤口;可那野人是个粗壮结实的家伙,贴身扑上来,把已经力竭的西班牙人掀翻在地,正要从他手里夺过我那把剑;就"
+    }
+   ]
+  }
+ ]
+}

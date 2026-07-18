@@ -22,6 +22,8 @@ import {
   getChapterIllustrations,
   getChapterChunkTerms,
   getBookCultureNotes,
+  getBookWordSenses,
+  type LibraryWordSense,
   chapterTitle,
   illustrationUrl,
   currentUserId,
@@ -98,6 +100,7 @@ export default function LibraryReader() {
   const [illus, setIllus] = useState<LibraryIllustration[]>([]); // 当前章插图(v1 章首)
   const [chunkTerms, setChunkTerms] = useState<string[]>([]); // 当前章语块(正文虚线)
   const [cultureNotes, setCultureNotes] = useState<Map<string, LibraryCultureNote>>(new Map()); // 全书文化笔记(稀疏·卡底💡)
+  const [wordSenses, setWordSenses] = useState<Map<string, LibraryWordSense>>(new Map()); // 古今异义按书覆盖(点词优先用书中义)
   const [loading, setLoading] = useState(true); // 首屏:书 + 章表 + 进度
   const [chapterLoading, setChapterLoading] = useState(false); // 切章:仅当前章句子
 
@@ -150,11 +153,12 @@ export default function LibraryReader() {
       // 目录取自 chapters jsonb(0 查询,与书长无关);其余独立查询并行,不再逐个串行。
       const chs = chapterOutline(b);
       setChapters(chs);
-      const [uid, terms, notes, bms] = await Promise.all([
+      const [uid, terms, notes, bms, senses] = await Promise.all([
         currentUserId(),
         listFavoritedTerms(),
         getBookCultureNotes(b.id),
         listBookmarks(b.id), // 未登录返回 []
+        getBookWordSenses(b.book_key), // 古今异义覆盖(空表→空 Map,回退全局卡)
       ]);
       if (!alive) return;
       uidRef.current = uid;
@@ -163,6 +167,7 @@ export default function LibraryReader() {
       setCultureNotes(notes);
       setBookmarks(bms);
       setBookmarkedSeqs(new Set(bms.map((x) => x.seq)));
+      setWordSenses(senses);
 
       const st = uid ? await hydrateFromCloud(uid, b.id) : loadLocalState(b.id);
       if (!alive) return;
@@ -839,6 +844,7 @@ export default function LibraryReader() {
                               reveal={reveal}
                               chunkPhrases={chunkTerms}
                               cultureNotes={cultureNotes}
+                              wordSenses={wordSenses}
                               onFavoriteChange={handleFavChange}
                             />
                             {mode === "en" && revealedCn.has(i) && s.text_cn && (

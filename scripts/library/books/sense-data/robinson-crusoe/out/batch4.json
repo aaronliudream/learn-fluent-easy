@@ -1,0 +1,78 @@
+{
+ "batch": 4,
+ "rows": [
+  {
+   "word": "conversation",
+   "normalized": "conversation",
+   "ipa": "/ˌkɒnvəˈseɪʃn/",
+   "pos": "n.",
+   "sense_key": "society_company",
+   "gloss_cn": "交往、来往(与人相处);言谈、谈吐",
+   "gloss_en": "social intercourse or the company one keeps; also one's manner of talking",
+   "archaic": true,
+   "modern_cn": "交谈、谈话",
+   "modern_en": "an informal spoken exchange of news and ideas",
+   "example_en": "His constant conversation with rough sailors soon spoiled his manners",
+   "example_cn": "他终日与粗野的水手来往,不久便把性情带坏了"
+  },
+  {
+   "word": "sensibly",
+   "normalized": "sensibly",
+   "ipa": "/ˈsensəbli/",
+   "pos": "adv.",
+   "sense_key": "perceptibly",
+   "gloss_cn": "明显地、真切地(可觉察地)",
+   "gloss_en": "in a way that can be clearly perceived or keenly felt",
+   "archaic": true,
+   "modern_cn": "明智地、理智地",
+   "modern_en": "in a reasonable or practical way",
+   "example_en": "The cold crept in so sensibly that he drew his coat the tighter",
+   "example_cn": "寒气分明地侵来,他便把外衣裹得更紧"
+  },
+  {
+   "word": "pretend",
+   "normalized": "pretend",
+   "ipa": "/prɪˈtend/",
+   "pos": "v.",
+   "sense_key": "lay-claim-or-feign",
+   "gloss_cn": "(古·多为)企图、擅自要求(权利)、僭称;个别处才是“假装”",
+   "gloss_en": "to presume, aspire, or lay claim to (a right); occasionally to feign",
+   "archaic": true,
+   "modern_cn": "假装、佯装",
+   "modern_en": "to give a false appearance of something",
+   "example_en": "He would not pretend to any command over the other men on the island",
+   "example_cn": "他并不图谋对岛上其余人发号施令"
+  },
+  {
+   "word": "passion",
+   "normalized": "passion",
+   "ipa": "/ˈpæʃn/",
+   "pos": "n.",
+   "sense_key": "anger",
+   "gloss_cn": "怒气、发怒;激动的情绪",
+   "gloss_en": "a fit of anger or violent agitation of feeling",
+   "archaic": true,
+   "modern_cn": "热情、激情",
+   "modern_en": "a strong feeling of enthusiasm or love",
+   "example_en": "Her sharp words threw him into a great passion",
+   "example_cn": "她那尖刻的话把他惹得勃然大怒"
+  },
+  {
+   "word": "suffer",
+   "normalized": "suffer",
+   "ipa": "/ˈsʌfə/",
+   "pos": "v.",
+   "sense_key": "allow",
+   "gloss_cn": "允许、容许(让)",
+   "gloss_en": "to allow or permit something to happen",
+   "archaic": true,
+   "modern_cn": "遭受、忍受(痛苦)",
+   "modern_en": "to undergo pain, harm, or hardship",
+   "example_en": "He would not suffer them to touch his store of powder",
+   "example_cn": "他决不容许他们碰他的那批火药"
+  }
+ ],
+ "skipped": [
+  "resolve(本书=决心/下决心/拿定主意,同现代义)"
+ ]
+}

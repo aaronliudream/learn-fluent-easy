@@ -253,11 +253,17 @@ function ExplainPopover({
     setLoading(true);
     setError(null);
     try {
-      const { data: resp, error: fnErr } = await supabase.functions.invoke(
+      const invoke = supabase.functions.invoke(
         "explain-phrase",
         // 图书馆点读(有收藏上下文)→ prefer:"light" 让 read-v1 轻卡优先于 zh-v2 重卡;美语课不传 → 行为不变。
         { body: { phrase, context: contextText, ...(favorite ? { prefer: "light" } : {}) } },
       );
+      // 图书馆点读兜底:未预生成的词会走实时 AI 生成(大陆 5-15s / 限流失败)。
+      // 3 秒超时即显"暂无解释",绝不让用户干等。后台请求仍会完成并缓存,下次点即快。美语课不加超时。
+      const raced = favorite
+        ? Promise.race([invoke, new Promise<never>((_, rej) => setTimeout(() => rej(new Error("timeout")), 3000))])
+        : invoke;
+      const { data: resp, error: fnErr } = (await raced) as Awaited<typeof invoke>;
       if (fnErr) throw fnErr;
       if (resp?.error) throw new Error(resp.error);
       setData(resp.explanation as Explanation);
@@ -268,8 +274,8 @@ function ExplainPopover({
         isLibraryFavorite(phrase, favKind).then(setFav).catch(() => {});
       }
     } catch (e: any) {
-      console.warn("[explain-phrase] failed", e);
-      setError(e?.message || "failed");
+      if (e?.message !== "timeout") console.warn("[explain-phrase] failed", e);
+      setError(e?.message === "timeout" ? "timeout" : (e?.message || "failed"));
     } finally {
       setLoading(false);
     }
@@ -423,8 +429,8 @@ function ExplainPopover({
                 </div>
               )}
               {error && !loading && (
-                <div className="py-2 text-sm text-destructive">
-                  <T>暂时讲解不出来,请稍后再试。</T>
+                <div className="py-2 text-sm text-muted-foreground">
+                  {error === "timeout" ? <T>暂无解释,请稍后再试</T> : <T>暂时讲解不出来,请稍后再试。</T>}
                 </div>
               )}
               {data && !loading && <LessonBody data={data} />}

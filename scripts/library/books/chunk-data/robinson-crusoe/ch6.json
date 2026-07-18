@@ -1,0 +1,137 @@
+{
+  "chapter": 6,
+  "chunks": [
+    { "head": "by degrees", "gloss": "逐渐、一点一点地", "ipa": "/baɪ dɪˈɡriːz/",
+      "note": "by degrees = 慢慢地、逐步地（书面）。",
+      "literal": [{"word":"by","meaning_cn":"按照","note_cn":"此处非'被'义"},{"word":"degrees","meaning_cn":"程度","note_cn":"此处指'阶段、一级级'"}],
+      "ex_en": "By degrees the sky turned dark.", "ex_cn": "天渐渐黑了下来。",
+      "occ": [[705,"by degrees"]] },
+
+    { "head": "give over", "gloss": "停下、罢手", "ipa": "/ɡɪv ˈoʊvər/",
+      "note": "give over = 停止、放弃（不是'给'）。",
+      "literal": [{"word":"give","meaning_cn":"（此处）停止","note_cn":"非'给'义"},{"word":"over","meaning_cn":"结束、完了"}],
+      "ex_en": "Give over shouting and listen to me.", "ex_cn": "别嚷了，听我说。",
+      "occ": [[709,"give over"]] },
+
+    { "head": "leave off", "gloss": "停下、住手", "ipa": "/liːv ɔːf/",
+      "note": "leave off (doing) = 停止做某事。",
+      "literal": [{"word":"leave","meaning_cn":"（此处）停止","note_cn":"非'离开'义"},{"word":"off","meaning_cn":"停、断"}],
+      "ex_en": "She left off reading when the bell rang.", "ex_cn": "铃响时她停下了阅读。",
+      "occ": [[711,"leave off"]] },
+
+    { "head": "wear off", "gloss": "（感觉/效果）逐渐消退", "ipa": "/wer ɔːf/",
+      "note": "wear off = 药效、疼痛、情绪慢慢消失。",
+      "literal": [{"word":"wear","meaning_cn":"（此处）逐渐消退","note_cn":"非'穿'义"},{"word":"off","meaning_cn":"离去、消失"}],
+      "ex_en": "The pain slowly wore off after an hour.", "ex_cn": "一小时后疼痛慢慢消退了。",
+      "occ": [[793,"wore off"],[771,"wearing off"],[794,"wore off"]] },
+
+    { "head": "wear out", "gloss": "耗尽、磨损殆尽", "ipa": "/wer aʊt/",
+      "note": "wear out = 用旧、磨破；也指把人累垮。",
+      "literal": [{"word":"wear","meaning_cn":"磨损"},{"word":"out","meaning_cn":"尽、光"}],
+      "ex_en": "These old shoes are completely worn out.", "ex_cn": "这双旧鞋已经完全磨破了。",
+      "occ": [[783,"worn out"]] },
+
+    { "head": "occur to", "gloss": "（念头）突然浮现在（某人）脑中", "ipa": "/əˈkɜːr tuː/",
+      "note": "occur to sb = 某人（突然）想到。",
+      "literal": [{"word":"occur","meaning_cn":"发生→浮现","note_cn":"此处'想到'"},{"word":"to","meaning_cn":"对…、向…"}],
+      "ex_en": "It never occurred to me that he might lie.", "ex_cn": "我从没想到他会撒谎。",
+      "occ": [[817,"occurred to me"]] },
+
+    { "head": "become of", "gloss": "（某人/某物）会怎么样、下场如何", "ipa": "/bɪˈkʌm əv/",
+      "note": "what becomes of sb = 某人后来怎样了（问下落/结局）。",
+      "literal": [{"word":"become","meaning_cn":"变成→落得","note_cn":"此处'落得…下场'"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "What became of your old bike?", "ex_cn": "你那辆旧自行车后来怎么样了？",
+      "occ": [[801,"become of me"]] },
+
+    { "head": "cry out", "gloss": "大声呼喊、叫喊", "ipa": "/kraɪ aʊt/",
+      "note": "cry out = 突然喊出声（疼痛/惊恐/呼救）。",
+      "literal": [{"word":"cry","meaning_cn":"喊叫"},{"word":"out","meaning_cn":"出声"}],
+      "ex_en": "He cried out for help in the dark.", "ex_cn": "他在黑暗中大声呼救。",
+      "occ": [[808,"cried out"]] },
+
+    { "head": "burst out", "gloss": "（泪水/情绪）突然迸发、涌出", "ipa": "/bɜːrst aʊt/",
+      "note": "burst out + crying/laughing = 突然大哭/大笑；泪水 burst out = 夺眶而出。",
+      "literal": [{"word":"burst","meaning_cn":"爆发、迸发"},{"word":"out","meaning_cn":"出来"}],
+      "ex_en": "Tears burst out as she read the letter.", "ex_cn": "她读信时泪水夺眶而出。",
+      "occ": [[802,"burst out"]] },
+
+    { "head": "look back upon", "gloss": "回顾、回想（过去）", "ipa": "/lʊk bæk əˈpɒn/",
+      "note": "look back on/upon = 回首往事。",
+      "literal": [{"word":"look","meaning_cn":"看"},{"word":"back","meaning_cn":"向后、往回"},{"word":"upon","meaning_cn":"在…上","note_cn":"此处'对…'"}],
+      "ex_en": "We often look back upon our school days.", "ex_cn": "我们常常回想学生时代。",
+      "occ": [[873,"looked back upon"],[831,"look back upon"]] },
+
+    { "head": "struck dumb", "gloss": "惊得说不出话、哑口无言", "ipa": "/strʌk dʌm/",
+      "note": "be struck dumb = 因震惊一时语塞。",
+      "literal": [{"word":"struck","meaning_cn":"击中→使…","note_cn":"strike 的过去分词"},{"word":"dumb","meaning_cn":"说不出话的","note_cn":"此处'哑、无言'"}],
+      "ex_en": "The bad news struck her dumb for a moment.", "ex_cn": "那坏消息让她一时说不出话。",
+      "occ": [[835,"struck dumb"]] },
+
+    { "head": "at large", "gloss": "自由自在、可随意走动（不受拘束）", "ipa": "/æt lɑːrdʒ/",
+      "note": "at large = 自由、未受拘束（也常指逃犯在逃）。",
+      "literal": [{"word":"at","meaning_cn":"处于"},{"word":"large","meaning_cn":"（此处）自由的","note_cn":"非'大'义"}],
+      "ex_en": "The children were at large in the park all afternoon.", "ex_cn": "孩子们整个下午在公园里自由自在地玩。",
+      "occ": [[872,"at large"]] },
+
+    { "head": "on shore", "gloss": "在岸上、上岸", "ipa": "/ɒn ʃɔːr/",
+      "note": "on shore = 在陆地上（对 at sea 而言）；come on shore = 上岸。",
+      "literal": [{"word":"on","meaning_cn":"在…上"},{"word":"shore","meaning_cn":"岸、滩"}],
+      "ex_en": "The sailors rested on shore for two days.", "ex_cn": "水手们在岸上休息了两天。",
+      "occ": [[714,"on shore"],[705,"on shore"],[722,"on shore"]] },
+
+    { "head": "single out", "gloss": "挑出、单独选出", "ipa": "/ˈsɪŋɡl aʊt/",
+      "note": "single sb/sth out = 从众多中挑出某一个（常指特别对待）。",
+      "literal": [{"word":"single","meaning_cn":"（此处）单独挑出","note_cn":"非'单个的'形容词"},{"word":"out","meaning_cn":"出来"}],
+      "ex_en": "The teacher singled out Tom for praise.", "ex_cn": "老师单独点名表扬了汤姆。",
+      "occ": [[791,"singled me out"]] },
+
+    { "head": "one way or the other", "gloss": "不管怎样；总归（用某种方式）", "ipa": "/wʌn weɪ ɔːr ðə ˈʌðər/",
+      "note": "one way or the other = 以这样或那样的方式；无论如何。",
+      "literal": [{"word":"one","meaning_cn":"一"},{"word":"way","meaning_cn":"方式"},{"word":"or","meaning_cn":"或"},{"word":"the","meaning_cn":"那"},{"word":"other","meaning_cn":"另一个"}],
+      "ex_en": "We must decide one way or the other by Friday.", "ex_cn": "周五前我们必须做出决定，不管选哪样。",
+      "occ": [[850,"one way or the other"]] },
+
+    { "head": "as it were", "gloss": "可以说、仿佛；姑且这么说", "ipa": "/æz ɪt wɜːr/",
+      "note": "as it were = 插入语，'可以说、姑且这么讲'。",
+      "literal": [{"word":"as","meaning_cn":"如同"},{"word":"it","meaning_cn":"它"},{"word":"were","meaning_cn":"（虚拟）是","note_cn":"此处虚拟语气"}],
+      "ex_en": "He is, as it were, the brain of the team.", "ex_cn": "他可以说是这个团队的大脑。",
+      "occ": [[859,"as it were"],[704,"as it were"]] },
+
+    { "head": "a great deal of", "gloss": "大量的、许多（接不可数名词）", "ipa": "/ə ɡreɪt diːl əv/",
+      "note": "a great deal of + 不可数名词 = 很多。",
+      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"大"},{"word":"deal","meaning_cn":"量","note_cn":"此处'数量'"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "She spent a great deal of time on the project.", "ex_cn": "她在这个项目上花了大量时间。",
+      "occ": [[878,"a great deal of"]] },
+
+    { "head": "a great many", "gloss": "很多、大量（接可数复数）", "ipa": "/ə ɡreɪt ˈmeni/",
+      "note": "a great many + 可数复数 = 许多。",
+      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"大"},{"word":"many","meaning_cn":"许多"}],
+      "ex_en": "A great many people came to the fair.", "ex_cn": "很多人来赶集。",
+      "occ": [[728,"a great many"]] },
+
+    { "head": "in short", "gloss": "简言之、总之", "ipa": "/ɪn ʃɔːrt/",
+      "note": "in short = 概括前文，'简而言之'。",
+      "literal": [{"word":"in","meaning_cn":"在…中"},{"word":"short","meaning_cn":"简短"}],
+      "ex_en": "In short, we need more time and money.", "ex_cn": "简言之，我们需要更多时间和钱。",
+      "occ": [[850,"in short"]] },
+
+    { "head": "for the better", "gloss": "向好的方向（变化）", "ipa": "/fɔːr ðə ˈbetər/",
+      "note": "change/turn for the better = 好转；反义 for the worse。",
+      "literal": [{"word":"for","meaning_cn":"朝向"},{"word":"the","meaning_cn":"那"},{"word":"better","meaning_cn":"更好"}],
+      "ex_en": "Her health changed for the better after the trip.", "ex_cn": "旅行后她的健康好转了。",
+      "occ": [[850,"for the better"]] },
+
+    { "head": "take notice of", "gloss": "注意到、留意", "ipa": "/teɪk ˈnoʊtɪs əv/",
+      "note": "本章出处为倒装分离式（what notice had I taken of it），故 card-only。",
+      "literal": [{"word":"take","meaning_cn":"加以"},{"word":"notice","meaning_cn":"注意","note_cn":"名词'注意'"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "Nobody took notice of the new student.", "ex_cn": "没人留意那个新来的学生。",
+      "cardOnly": true, "key": "take notice of", "exSeq": 860 }
+  ],
+  "skipped": [
+    "专名/地名 e.g. Yarmouth/Sallee/the Brazils/the Portugal captain/Providence",
+    "18世纪古语/代词 e.g. thee/thou/thy/whither/hereafter/fain/durst/methought",
+    "一次性 nautical/物件硬词 e.g. forecastle/quarter-deck/hogshead/case-bottle/iron crow/rope-yarn",
+    "宗教/道德训诫套语 e.g. 'have mercy upon me'/'call on Me in the day of trouble'/'give repentance'/'the hand of God'",
+    "过时惯用语 e.g. come to pass/for good and all/a good while/went abroad〔=外出〕/carry off the fit"
+  ]
+}

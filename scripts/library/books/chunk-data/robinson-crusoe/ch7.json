@@ -1,0 +1,89 @@
+{
+  "chapter": 7,
+  "chunks": [
+    { "head": "a great deal of", "gloss": "大量的、许多的", "ipa": "/ə ɡreɪt diːl əv/",
+      "note": "a great deal of + 不可数名词 = 大量的。",
+      "literal": [{"word":"a","meaning_cn":"一(不单独译)"},{"word":"great","meaning_cn":"大量的"},{"word":"deal","meaning_cn":"量","note_cn":"此处指'数量',非'交易/处理'义"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "She spends a great deal of time reading.", "ex_cn": "她花大量时间读书。",
+      "occ": [[888,"a great deal of"]] },
+
+    { "head": "lay up", "gloss": "储备、贮存(留着日后用)", "ipa": "/leɪ ʌp/",
+      "note": "lay up = 把…储存起来备用。",
+      "literal": [{"word":"lay","meaning_cn":"放置、储存","note_cn":"此处非'躺'义"},{"word":"up","meaning_cn":"起来(表积存)"}],
+      "ex_en": "Squirrels lay up nuts for the winter.", "ex_cn": "松鼠储备坚果过冬。",
+      "occ": [[905,"lay up"]] },
+
+    { "head": "in order to", "gloss": "为了", "ipa": "/ɪn ˈɔːrdər tuː/",
+      "note": "in order to + 动词原形 = 为了做某事。",
+      "literal": [{"word":"in","meaning_cn":"处于"},{"word":"order","meaning_cn":"目的","note_cn":"此处指'目的',非'命令/次序'义"},{"word":"to","meaning_cn":"去(接动词)"}],
+      "ex_en": "He saves money in order to buy a bike.", "ex_cn": "他存钱是为了买自行车。",
+      "occ": [[906,"in order to"]] },
+
+    { "head": "on shore", "gloss": "在岸上、上岸", "ipa": "/ɒn ʃɔːr/",
+      "note": "on shore = 在陆地上(相对于在船上或海里)。",
+      "literal": [{"word":"on","meaning_cn":"在…上"},{"word":"shore","meaning_cn":"岸、岸边"}],
+      "ex_en": "The sailors went on shore to rest.", "ex_cn": "水手们上岸休息。",
+      "occ": [[886,"on shore"],[929,"on shore"]] },
+
+    { "head": "by far", "gloss": "…得多、明显地(与比较级/最高级连用)", "ipa": "/baɪ fɑːr/",
+      "note": "by far 强调差距很大,常修饰 the best/the worst 等。",
+      "literal": [{"word":"by","meaning_cn":"(表程度)","note_cn":"此处表'程度差距',非'被/靠'义"},{"word":"far","meaning_cn":"(程度)大、远","note_cn":"此处指程度之大"}],
+      "ex_en": "This is by far the best cake I've eaten.", "ex_cn": "这是我吃过最好吃的蛋糕。",
+      "occ": [[911,"by far"]] },
+
+    { "head": "by any means", "gloss": "(常与否定连用)决不、无论如何也(不)", "ipa": "/baɪ ˈeni miːnz/",
+      "note": "not … by any means = 决不、无论如何都不。",
+      "literal": [{"word":"by","meaning_cn":"凭借"},{"word":"any","meaning_cn":"任何"},{"word":"means","meaning_cn":"方法、手段","note_cn":"此处'手段',为名词"}],
+      "ex_en": "He would not agree by any means.", "ex_cn": "他无论如何都不会同意。",
+      "occ": [[913,"by any means"]] },
+
+    { "head": "more or less", "gloss": "差不多、大致;或多或少", "ipa": "/mɔːr ɔːr les/",
+      "note": "more or less = 差不多、几乎(表约略)。",
+      "literal": [{"word":"more","meaning_cn":"多"},{"word":"or","meaning_cn":"或"},{"word":"less","meaning_cn":"少"}],
+      "ex_en": "The work is more or less finished.", "ex_cn": "工作差不多完成了。",
+      "occ": [[918,"more or less"]] },
+
+    { "head": "by degrees", "gloss": "逐渐地、一点一点地", "ipa": "/baɪ dɪˈɡriːz/",
+      "note": "by degrees = 循序渐进地、慢慢地。",
+      "literal": [{"word":"by","meaning_cn":"按照","note_cn":"此处非'被'义"},{"word":"degrees","meaning_cn":"阶段","note_cn":"此处'阶段/步骤',非'度数'"}],
+      "ex_en": "By degrees she got better.", "ex_cn": "她一点一点好起来。",
+      "occ": [[924,"by degrees"]] },
+
+    { "head": "stick close to", "gloss": "紧挨着、紧靠;守着不离开", "ipa": "/stɪk kloʊs tuː/",
+      "note": "stick close to = 紧贴/紧跟着某人或某处不离开。",
+      "literal": [{"word":"stick","meaning_cn":"黏、紧贴","note_cn":"此处非'棍子/戳'义"},{"word":"close","meaning_cn":"靠近地"},{"word":"to","meaning_cn":"…(对象)"}],
+      "ex_en": "Stick close to me in the crowd.", "ex_cn": "在人群里紧跟着我。",
+      "occ": [[915,"stick close to"]] },
+
+    { "head": "take care to", "gloss": "注意去(做)、特意小心地(做)", "ipa": "/teɪk ker tuː/",
+      "note": "take care to do = 特意、小心地去做某事。",
+      "literal": [{"word":"take","meaning_cn":"加以"},{"word":"care","meaning_cn":"小心、注意","note_cn":"此处为名词'注意'"},{"word":"to","meaning_cn":"去(做)"}],
+      "ex_en": "She takes care to lock the door every night.", "ex_cn": "她每晚都注意锁门。",
+      "occ": [[950,"took care to"]] },
+
+    { "head": "to my advantage", "gloss": "对我有利", "ipa": "/tuː maɪ ədˈvæntɪdʒ/",
+      "note": "to one's advantage = 对某人有利、于某人有益。",
+      "literal": [{"word":"to","meaning_cn":"对…"},{"word":"my","meaning_cn":"我的"},{"word":"advantage","meaning_cn":"好处、优势"}],
+      "ex_en": "The new rule works to my advantage.", "ex_cn": "新规则对我有利。",
+      "occ": [[913,"to my advantage"]] },
+
+    { "head": "so much as", "gloss": "(用于否定)甚至、连…都(不)", "ipa": "/soʊ mʌtʃ æz/",
+      "note": "not so much as … = 连…都不、甚至没有。",
+      "literal": [{"word":"so","meaning_cn":"(强调)"},{"word":"much","meaning_cn":"多"},{"word":"as","meaning_cn":"如、像"}],
+      "ex_en": "He left without so much as a goodbye.", "ex_cn": "他连再见都没说就走了。",
+      "occ": [[957,"so much as"]] },
+
+    { "head": "content oneself with", "gloss": "满足于、将就", "ipa": "/kənˈtent maɪˈself wɪð/",
+      "note": "content oneself with = 满足于现有的,不再多求。",
+      "literal": [{"word":"content","meaning_cn":"使满足","note_cn":"此处为动词,非形容词'满意的'"},{"word":"myself","meaning_cn":"我自己"},{"word":"with","meaning_cn":"以、用"}],
+      "ex_en": "I contented myself with a cup of tea.", "ex_cn": "我就喝杯茶将就了。",
+      "occ": [[893,"contented myself with"]] }
+  ],
+  "skipped": [
+    "专名/地名 e.g. the Brazils / Barbary / Sabbath / Jesus Christ",
+    "18世纪古语/生僻词 e.g. thither / fain / durst / bestirred / straitened",
+    "一次性 nautical/物件硬词 e.g. runlets / boltsprit-类 / case bottles / wicker-ware",
+    "古旧惯用/计算套语 e.g. cast up (the notches) / come to pass / pitch upon",
+    "宗教/道德训诫套语 e.g. have mercy on / His righteous judgments / prostrating myself"
+  ]
+}

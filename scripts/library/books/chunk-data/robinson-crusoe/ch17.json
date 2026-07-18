@@ -1,0 +1,138 @@
+{
+  "chapter": 17,
+  "chunks": [
+    { "head": "wear off", "gloss": "逐渐消退、渐渐消失", "ipa": "/wer ɔːf/",
+      "note": "wear off 指感觉、疼痛、效果等慢慢减弱直至消失。",
+      "literal": [{"word":"wear","meaning_cn":"磨损","note_cn":"(此处)慢慢减弱，非'穿'义"},{"word":"off","meaning_cn":"离开、消失"}],
+      "ex_en": "After an hour the pain began to wear off.", "ex_cn": "一小时后疼痛开始渐渐消退。",
+      "occ": [[1953,"wore off"]] },
+
+    { "head": "make one's escape", "gloss": "逃走、逃脱", "ipa": "/meɪk wʌnz ɪˈskeɪp/",
+      "note": "make one's escape = 成功逃离(常从危险或囚禁中)。",
+      "literal": [{"word":"make","meaning_cn":"做出、完成"},{"word":"their","meaning_cn":"他们的"},{"word":"escape","meaning_cn":"逃跑","note_cn":"名词'逃跑'"}],
+      "ex_en": "The thief made his escape through the back window.", "ex_cn": "小偷从后窗逃走了。",
+      "occ": [[1954,"made their escape"]] },
+
+    { "head": "meet with", "gloss": "遇到、碰到(困难、情况、事物)", "ipa": "/miːt wɪð/",
+      "note": "meet with 常接抽象事物：meet with success/difficulty/an accident。",
+      "literal": [{"word":"meet","meaning_cn":"遇见"},{"word":"with","meaning_cn":"与、和"}],
+      "ex_en": "Her plan met with a lot of support.", "ex_cn": "她的计划得到了很多支持。",
+      "occ": [[1955,"meet with"]] },
+
+    { "head": "become of", "gloss": "(某人/某物)的结果如何、下场如何", "ipa": "/bɪˈkʌm əv/",
+      "note": "多用于疑问：what will become of …? = …会怎么样、落得什么下场。",
+      "literal": [{"word":"become","meaning_cn":"变成、成为"},{"word":"of","meaning_cn":"关于、对于"}],
+      "ex_en": "What will become of the dog if they move away?", "ex_cn": "他们搬走后那只狗会怎么样呢？",
+      "occ": [[1957,"become of"]] },
+
+    { "head": "a great deal of", "gloss": "大量的、很多的", "ipa": "/ə ɡreɪt diːl əv/",
+      "note": "a great deal of 修饰不可数名词，等于 much。",
+      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"大量的"},{"word":"deal","meaning_cn":"量、数量","note_cn":"(此处)名词'数量'，非'交易'义"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "He spent a great deal of time on this drawing.", "ex_cn": "他在这幅画上花了大量时间。",
+      "occ": [[1963,"a great deal of"]] },
+
+    { "head": "put off", "gloss": "推迟、延期", "ipa": "/pʊt ɔːf/",
+      "note": "put off = 把某事推到以后再做，可接名词或 doing。",
+      "literal": [{"word":"put","meaning_cn":"放"},{"word":"off","meaning_cn":"推开、往后","note_cn":"(此处)往后拖延"}],
+      "ex_en": "We had to put off the picnic because of the rain.", "ex_cn": "因为下雨我们只好把野餐推迟了。",
+      "occ": [[1967,"put off"]] },
+
+    { "head": "lay up", "gloss": "储存、储备", "ipa": "/leɪ ʌp/",
+      "note": "lay up 指把粮食、物资等积攒储存起来备用。",
+      "literal": [{"word":"lay","meaning_cn":"放置","note_cn":"(此处)储存、搁置"},{"word":"up","meaning_cn":"起来、积攒"}],
+      "ex_en": "The farmer laid up enough grain for the winter.", "ex_cn": "农夫储备了足够过冬的粮食。",
+      "occ": [[1968,"laid up"]] },
+
+    { "head": "take turns", "gloss": "轮流(做某事)", "ipa": "/teɪk tɜːrnz/",
+      "note": "take turns (doing sth / to do sth) = 大家轮换着做。",
+      "literal": [{"word":"take","meaning_cn":"进行、承担"},{"word":"our","meaning_cn":"我们的"},{"word":"turns","meaning_cn":"轮次","note_cn":"名词'轮到的机会'"}],
+      "ex_en": "The two boys take turns riding the bike.", "ex_cn": "两个男孩轮流骑那辆自行车。",
+      "occ": [[1974,"took our turns"]] },
+
+    { "head": "on shore", "gloss": "在岸上、上岸", "ipa": "/ɒn ʃɔːr/",
+      "note": "on shore = 在陆地上(相对于在船上或海里)。",
+      "literal": [{"word":"on","meaning_cn":"在…上"},{"word":"shore","meaning_cn":"岸、岸边"}],
+      "ex_en": "The sailors were happy to be on shore again.", "ex_cn": "水手们很高兴又回到了岸上。",
+      "occ": [[1976,"on shore"]] },
+
+    { "head": "leave behind", "gloss": "留下、丢下、遗留", "ipa": "/liːv bɪˈhaɪnd/",
+      "note": "leave behind = 把人或物留在原地不带走。",
+      "literal": [{"word":"leave","meaning_cn":"留下"},{"word":"behind","meaning_cn":"在后面"}],
+      "ex_en": "Don't leave your bag behind on the train.", "ex_cn": "别把你的包落在火车上。",
+      "occ": [[1978,"left behind"]] },
+
+    { "head": "stand by", "gloss": "支持、站在…一边", "ipa": "/stænd baɪ/",
+      "note": "stand by sb = 在困难时支持某人、不离不弃。",
+      "literal": [{"word":"stand","meaning_cn":"站"},{"word":"by","meaning_cn":"在…旁边","note_cn":"(此处)在旁支持"}],
+      "ex_en": "A true friend will stand by you in hard times.", "ex_cn": "真正的朋友会在困难时支持你。",
+      "occ": [[1979,"stand by"]] },
+
+    { "head": "occur to", "gloss": "(想法)突然出现在某人脑中、想到", "ipa": "/əˈkɜːr tuː/",
+      "note": "sth occurs to sb = 某人忽然想到某事(主语是那个念头)。",
+      "literal": [{"word":"occur","meaning_cn":"发生、出现"},{"word":"to","meaning_cn":"对、向"}],
+      "ex_en": "It suddenly occurred to me that I had left the door open.", "ex_cn": "我突然想到我没关门。",
+      "occ": [[1995,"occurred to me"]] },
+
+    { "head": "fall into the hands of", "gloss": "落入…之手", "ipa": "/fɔːl ˈɪntə ðə hændz əv/",
+      "note": "fall into the hands of sb = 被某人(常指坏人)控制或抓住。",
+      "literal": [{"word":"fall","meaning_cn":"落、掉"},{"word":"into","meaning_cn":"进入"},{"word":"the","meaning_cn":"这、那"},{"word":"hands","meaning_cn":"手","note_cn":"(此处)掌控之中"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "The letters must not fall into the hands of our enemies.", "ex_cn": "这些信绝不能落入我们敌人之手。",
+      "occ": [[1995,"fall into the hands of"]] },
+
+    { "head": "in the meantime", "gloss": "与此同时、在这期间", "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "note": "in the meantime 指在两件事之间的这段时间里。",
+      "literal": [{"word":"in","meaning_cn":"在…中"},{"word":"the","meaning_cn":"这"},{"word":"meantime","meaning_cn":"其间、这段时间"}],
+      "ex_en": "Dinner will be ready soon; in the meantime, sit down and relax.", "ex_cn": "晚饭很快就好；这期间你先坐下歇会儿。",
+      "occ": [[2018,"in the meantime"]] },
+
+    { "head": "in vain", "gloss": "徒劳、白费力气", "ipa": "/ɪn veɪn/",
+      "note": "in vain = 没有结果、白做了。",
+      "literal": [{"word":"in","meaning_cn":"处于…状态"},{"word":"vain","meaning_cn":"徒劳的、无用的"}],
+      "ex_en": "We searched all day, but in vain.", "ex_cn": "我们找了一整天，却是徒劳。",
+      "occ": [[2063,"in vain"]] },
+
+    { "head": "spare someone's life", "gloss": "饶某人一命、不杀某人", "ipa": "/sper ˈsʌmwʌnz laɪf/",
+      "note": "spare sb's life = 免于处死、放过某人。",
+      "literal": [{"word":"spare","meaning_cn":"饶恕、免除","note_cn":"(此处)放过，非'空余'义"},{"word":"their","meaning_cn":"他们的"},{"word":"lives","meaning_cn":"生命"}],
+      "ex_en": "The king decided to spare the prisoner's life.", "ex_cn": "国王决定饶那囚犯一命。",
+      "occ": [[2064,"spare their lives"]] },
+
+    { "head": "guilty of", "gloss": "犯有…罪、对…有罪责", "ipa": "/ˈɡɪlti əv/",
+      "note": "be guilty of sth = 做了某种错事或罪行。",
+      "literal": [{"word":"guilty","meaning_cn":"有罪的"},{"word":"of","meaning_cn":"关于、对于"}],
+      "ex_en": "He was found guilty of stealing the money.", "ex_cn": "他被判犯有偷钱罪。",
+      "occ": [[2064,"guilty of"]] },
+
+    { "head": "at a loss", "gloss": "不知所措、拿不定主意", "ipa": "/æt ə lɒs/",
+      "note": "at a loss (what to do / for words) = 一时想不出办法或话来。",
+      "literal": [{"word":"at","meaning_cn":"处于"},{"word":"a","meaning_cn":"一"},{"word":"loss","meaning_cn":"迷失、茫然","note_cn":"(此处)不知所措，非'损失'义"}],
+      "ex_en": "She was at a loss and didn't know what to say.", "ex_cn": "她不知所措，不知道该说什么。",
+      "occ": [[2073,"at a loss"]] },
+
+    { "head": "above all", "gloss": "最重要的是、尤其", "ipa": "/əˈbʌv ɔːl/",
+      "note": "above all 用来强调最重要的一点。",
+      "literal": [{"word":"above","meaning_cn":"在…之上"},{"word":"all","meaning_cn":"全部、一切"}],
+      "ex_en": "Above all, remember to stay calm.", "ex_cn": "最重要的是，记得保持冷静。",
+      "occ": [[2071,"above all"]] },
+
+    { "head": "at the mercy of", "gloss": "任由…摆布、受…支配", "ipa": "/æt ðə ˈmɜːrsi əv/",
+      "note": "本章出处为分离式(at the mercy and discretion of)，故 card-only。at the mercy of = 完全由某人/某物左右、无力反抗。",
+      "literal": [{"word":"at","meaning_cn":"处于"},{"word":"the","meaning_cn":"这"},{"word":"mercy","meaning_cn":"怜悯、处置","note_cn":"(此处)支配、任凭处置"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "The small boat was at the mercy of the waves.", "ex_cn": "那只小船任由海浪摆布。",
+      "cardOnly": true, "key": "at the mercy of", "exSeq": 1965 },
+
+    { "head": "take into consideration", "gloss": "把…考虑在内、考虑到", "ipa": "/teɪk ˈɪntə kənˌsɪdəˈreɪʃn/",
+      "note": "本章出处为分离式(take my former thoughts … into consideration)，故 card-only。take sth into consideration = 在做决定时把某因素考虑进去。",
+      "literal": [{"word":"take","meaning_cn":"拿、纳入"},{"word":"into","meaning_cn":"进入"},{"word":"consideration","meaning_cn":"考虑","note_cn":"名词'考虑'"}],
+      "ex_en": "The teacher takes each student's effort into consideration.", "ex_cn": "老师会把每个学生的努力考虑在内。",
+      "cardOnly": true, "key": "take into consideration", "exSeq": 1953 }
+  ],
+  "skipped": [
+    "专名/人名/地名 e.g. Friday / the Spaniard / the Brazils / New Spain / Alicant / the Leeward Islands / Jamaica",
+    "一次性 nautical/物件 e.g. larboard 意味的 shoulder-of-mutton sail / long-boat / firelock / cutlass / boltsprit 类硬词",
+    "18世纪古语/生僻词 e.g. thither / whither / whence / soever / durst 意味的 hallooed / betwixt",
+    "古语固定构造 e.g. could not but / fell to digging(fall to) / put me in mind of / fitted up / lie close / upon occasion / upon my guard",
+    "宗教/道德训诫套语 e.g. the children of Israel / Providence had ordered / secret hints and notices of danger / the great Maker of the world",
+    "过时/易混惯用语 e.g. by-and-by / gave it over / let her alone / started up / hang out(此处=展示，与今义相悖)"
+  ]
+}

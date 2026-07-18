@@ -1,0 +1,137 @@
+{
+  "chapter": 5,
+  "chunks": [
+    { "head": "on shore", "gloss": "上岸、在岸上", "ipa": "/ɒn ʃɔː/",
+      "note": "on shore = 在岸上/上岸(相对于在船上、在海上)。",
+      "literal": [{"word":"on","meaning_cn":"在…上","note_cn":"(此处)靠向、到达"},{"word":"shore","meaning_cn":"岸、岸边"}],
+      "ex_en": "The sailors were glad to step on shore after the long trip.", "ex_cn": "水手们在漫长航行后很高兴踏上岸。",
+      "occ": [[527,"on shore"]] },
+
+    { "head": "at length", "gloss": "终于、最后", "ipa": "/ət leŋθ/",
+      "note": "at length = 经过一段时间后终于(表时间的转折)。",
+      "literal": [{"word":"at","meaning_cn":"在…","note_cn":"(此处)表到达某一点"},{"word":"length","meaning_cn":"长度","note_cn":"(此处)at length=终于;非'长度'义"}],
+      "ex_en": "At length the bus arrived, and we all got on.", "ex_cn": "终于,公交车来了,我们都上了车。",
+      "occ": [[524,"at length"]] },
+
+    { "head": "in pieces", "gloss": "成碎片、支离破碎", "ipa": "/ɪn ˈpiːsɪz/",
+      "note": "break/fall in pieces = 破碎成小块。",
+      "literal": [{"word":"in","meaning_cn":"处于…状态","note_cn":"(此处)表结果状态"},{"word":"pieces","meaning_cn":"碎片、小块"}],
+      "ex_en": "The old cup fell and broke in pieces.", "ex_cn": "那只旧杯子掉下来摔成了碎片。",
+      "occ": [[534,"in pieces"]] },
+
+    { "head": "find out", "gloss": "找到、查明", "ipa": "/faɪnd aʊt/",
+      "note": "find out = 通过寻找/打听而发现、弄清楚。",
+      "literal": [{"word":"find","meaning_cn":"找到、发现"},{"word":"out","meaning_cn":"出来","note_cn":"(此处)表'查明、揭示'"}],
+      "ex_en": "Let's find out who left the door open.", "ex_cn": "我们来查清是谁把门开着的。",
+      "occ": [[538,"find out"]] },
+
+    { "head": "good for nothing", "gloss": "毫无用处、一无是处", "ipa": "/ɡʊd fə ˈnʌθɪŋ/",
+      "note": "good for nothing = 派不上任何用场。",
+      "literal": [{"word":"good","meaning_cn":"好的","note_cn":"(此处)'有用的、顶用的'"},{"word":"for","meaning_cn":"对于、用于"},{"word":"nothing","meaning_cn":"什么都没有"}],
+      "ex_en": "This broken pen is good for nothing now.", "ex_cn": "这支坏了的笔现在毫无用处。",
+      "occ": [[557,"good for nothing"]] },
+
+    { "head": "make use of", "gloss": "利用、使用", "ipa": "/meɪk juːs əv/",
+      "note": "make use of sth = 加以利用某物。",
+      "literal": [{"word":"make","meaning_cn":"作出、加以","note_cn":"(此处)make use=加以利用"},{"word":"use","meaning_cn":"使用","note_cn":"名词'使用、利用'"},{"word":"of","meaning_cn":"对…、…的"}],
+      "ex_en": "We should make use of the free time to study.", "ex_cn": "我们应该利用空闲时间学习。",
+      "occ": [[581,"made use of"]] },
+
+    { "head": "stand still", "gloss": "停顿、静止不动", "ipa": "/stænd stɪl/",
+      "note": "stand still = 停下不动;work stood still = 工作停滞。",
+      "literal": [{"word":"stand","meaning_cn":"站、保持","note_cn":"(此处)保持(某状态)"},{"word":"still","meaning_cn":"静止的、不动的","note_cn":"(此处)非'仍然'义"}],
+      "ex_en": "Please stand still while I take the photo.", "ex_cn": "我拍照时请站着别动。",
+      "occ": [[592,"stood still"]] },
+
+    { "head": "a great deal of", "gloss": "大量的、许多", "ipa": "/ə ɡreɪt diːl əv/",
+      "note": "a great deal of + 不可数名词 = 大量的。",
+      "literal": [{"word":"a","meaning_cn":"一(个)"},{"word":"great","meaning_cn":"大量的"},{"word":"deal","meaning_cn":"量","note_cn":"(此处)'数量'"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "She spent a great deal of money on books.", "ex_cn": "她花了大量的钱买书。",
+      "occ": [[598,"a great deal of"]] },
+
+    { "head": "go to work", "gloss": "着手干、动手做", "ipa": "/ɡəʊ tə wɜːk/",
+      "note": "go to work (on/with sth) = 开始动手做某事。",
+      "literal": [{"word":"go","meaning_cn":"去","note_cn":"(此处)着手、开始"},{"word":"to","meaning_cn":"去做…"},{"word":"work","meaning_cn":"工作、干活"}],
+      "ex_en": "After breakfast he went to work on the garden.", "ex_cn": "早饭后他动手打理花园。",
+      "occ": [[601,"went to work"]] },
+
+    { "head": "on board", "gloss": "在船上、上船", "ipa": "/ɒn bɔːd/",
+      "note": "on board = 在船（车、飞机）上；get on board = 登船。",
+      "literal": [{"word":"on","meaning_cn":"在…上"},{"word":"board","meaning_cn":"甲板","note_cn":"(此处)代指船上"}],
+      "ex_en": "Everyone was on board before the ship left.", "ex_cn": "船离开前每个人都上了船。",
+      "occ": [[523,"on board"]] },
+
+    { "head": "for fear of", "gloss": "生怕、唯恐", "ipa": "/fə fɪə əv/",
+      "note": "for fear of + 名词/动名词 = 因为担心…而(不)做。",
+      "literal": [{"word":"for","meaning_cn":"因为、出于"},{"word":"fear","meaning_cn":"害怕","note_cn":"名词'害怕'"},{"word":"of","meaning_cn":"对…的"}],
+      "ex_en": "He walked slowly for fear of falling.", "ex_cn": "他走得很慢,生怕摔倒。",
+      "occ": [[521,"for fear of"]] },
+
+    { "head": "take courage", "gloss": "鼓起勇气、振作起来", "ipa": "/teɪk ˈkʌrɪdʒ/",
+      "note": "take courage = 打起精神、鼓起勇气。",
+      "literal": [{"word":"take","meaning_cn":"拿、取","note_cn":"(此处)鼓起、振作"},{"word":"courage","meaning_cn":"勇气"}],
+      "ex_en": "Take courage; the test is not so hard.", "ex_cn": "鼓起勇气,考试没那么难。",
+      "occ": [[670,"take courage"]] },
+
+    { "head": "lay up", "gloss": "储存、储备", "ipa": "/leɪ ʌp/",
+      "note": "lay up = 把东西储存起来备用。",
+      "literal": [{"word":"lay","meaning_cn":"放置","note_cn":"(此处)储存、储备"},{"word":"up","meaning_cn":"起来","note_cn":"(此处)表'积攒起来'"}],
+      "ex_en": "The ants lay up food for the winter.", "ex_cn": "蚂蚁为冬天储存食物。",
+      "occ": [[656,"laying up"]] },
+
+    { "head": "put in order", "gloss": "整理好、使有条理", "ipa": "/pʊt ɪn ˈɔːdə/",
+      "note": "put sth in order = 把某物整理妥当。",
+      "literal": [{"word":"put","meaning_cn":"放","note_cn":"(此处)使…处于(某状态)"},{"word":"in","meaning_cn":"处于…"},{"word":"order","meaning_cn":"秩序、条理"}],
+      "ex_en": "She put her desk in order before class.", "ex_cn": "她在上课前把书桌整理好。",
+      "occ": [[683,"put in order"]] },
+
+    { "head": "in the meantime", "gloss": "与此同时、在此期间", "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "note": "in the meantime = 在这段时间里(表两事之间)。",
+      "literal": [{"word":"in","meaning_cn":"在…"},{"word":"the","meaning_cn":"这(个)"},{"word":"meantime","meaning_cn":"其间、这段时间"}],
+      "ex_en": "Dinner is at seven; in the meantime, let's play a game.", "ex_cn": "晚饭七点开;与此同时,我们玩个游戏吧。",
+      "occ": [[684,"in the meantime"]] },
+
+    { "head": "occur to", "gloss": "(想法)使…想到", "ipa": "/əˈkɜː tə/",
+      "note": "it occurs to sb that… = 某人突然想到…。",
+      "literal": [{"word":"occur","meaning_cn":"发生","note_cn":"(此处)(念头)浮现于脑海,非'发生'义"},{"word":"to","meaning_cn":"向、对(某人)"}],
+      "ex_en": "It did not occur to me to lock the door.", "ex_cn": "我没想到要锁门。",
+      "occ": [[684,"occurred to me"]] },
+
+    { "head": "give over", "gloss": "停止、放弃", "ipa": "/ɡɪv ˈəʊvə/",
+      "note": "本章出处为分离式(gave it over / gave that also over),故 card-only。give over = 停止做某事。",
+      "literal": [{"word":"give","meaning_cn":"给","note_cn":"(此处)停止、放弃,非'给'义"},{"word":"over","meaning_cn":"结束、完了"}],
+      "ex_en": "He finally gave over trying to fix the old radio.", "ex_cn": "他最终放弃了修那台旧收音机。",
+      "cardOnly": true, "key": "give over", "exSeq": 588 },
+
+    { "head": "take care of", "gloss": "照料、照顾", "ipa": "/teɪk keə əv/",
+      "note": "本章出处为分离式(took such care of it),故 card-only。take care of = 照看、料理。",
+      "literal": [{"word":"take","meaning_cn":"加以"},{"word":"care","meaning_cn":"照料","note_cn":"名词'照料、小心'"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "Please take care of my dog while I am away.", "ex_cn": "我不在时请照看我的狗。",
+      "cardOnly": true, "key": "take care of", "exSeq": 623 },
+
+    { "head": "hunt down", "gloss": "追捕、搜捕", "ipa": "/hʌnt daʊn/",
+      "note": "本章出处为分离式(hunt them down),故 card-only。hunt down = 一直追到抓住为止。",
+      "literal": [{"word":"hunt","meaning_cn":"追猎、搜寻"},{"word":"down","meaning_cn":"向下","note_cn":"(此处)表'追捕到手'"}],
+      "ex_en": "The police worked hard to hunt down the thief.", "ex_cn": "警方努力追捕那个小偷。",
+      "cardOnly": true, "key": "hunt down", "exSeq": 630 },
+
+    { "head": "at a loss", "gloss": "不知所措、困惑", "ipa": "/ət ə lɒs/",
+      "note": "本章出处为分离式(at a great loss),故 card-only。at a loss = 茫然、没了主意。",
+      "literal": [{"word":"at","meaning_cn":"处于…"},{"word":"a","meaning_cn":"一(种)"},{"word":"loss","meaning_cn":"损失","note_cn":"(此处)'不知所措'的状态,非'损失'义"}],
+      "ex_en": "When she asked me, I was at a loss for words.", "ex_cn": "她问我时,我一时语塞。",
+      "cardOnly": true, "key": "at a loss", "exSeq": 645 },
+
+    { "head": "take notice of", "gloss": "注意到、留意", "ipa": "/teɪk ˈnəʊtɪs əv/",
+      "note": "本章出处未连续出现(take notice how / taking no notice),故 card-only。take notice of = 加以注意。",
+      "literal": [{"word":"take","meaning_cn":"加以"},{"word":"notice","meaning_cn":"注意","note_cn":"名词'注意'"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "The teacher took notice of the quiet boy.", "ex_cn": "老师注意到了那个安静的男孩。",
+      "cardOnly": true, "key": "take notice of", "exSeq": 694 }
+  ],
+  "skipped": [
+    "专名/地名: Robinson Crusoe / the Brazils / Lisbon / England / Africa / the Island of Despair",
+    "18世纪古语·生僻词(迁移弱): viz. / hitherto / nay / whereas / loath / stir abroad / go abroad",
+    "过时惯用语(今天几乎不用,克制): on a sudden / all on a sudden(=all of a sudden) / by little and little(=little by little) / with much ado / come at(=接近) / cast down / in the next place / with all speed / set upon / faced about / take a survey of",
+    "一次性 nautical / 硬物件名: the offing / in the offing / iron crows / gudgeons / spindle / oakum / tallow / wick / runlet / staves / hod",
+    "宗教·道德训诫套语(读一次即可): what pleases God / Lord have mercy upon me / the work of Providence / a prodigy of nature / the end of Providence"
+  ]
+}

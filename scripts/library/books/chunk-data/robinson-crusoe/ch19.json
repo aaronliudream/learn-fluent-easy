@@ -1,0 +1,113 @@
+{
+  "chapter": 19,
+  "chunks": [
+    { "head": "take leave of", "gloss": "告别、辞别", "ipa": "/teɪk liːv əv/",
+      "note": "take leave of sb/sth = 向某人/某地道别；固定搭配，非字面'拿走'。",
+      "literal": [{"word":"take","meaning_cn":"行(告别之礼)","note_cn":"此处非'拿'义,take leave 为固定搭配"},{"word":"leave","meaning_cn":"告别、辞行","note_cn":"此处为名词'告别',非动词'离开'"},{"word":"of","meaning_cn":"对(某人/某地)"}],
+      "ex_en": "She took leave of her friends before moving abroad.", "ex_cn": "她出国前向朋友们道别。",
+      "occ": [[2226,"took leave of"]] },
+
+    { "head": "meet with", "gloss": "遭遇、遇到(尤指经历某事或某种对待)", "ipa": "/miːt wɪð/",
+      "note": "meet with sth = 经历/遭遇(困难、反对、事故等),比 meet 多一层'亲历'意味。",
+      "literal": [{"word":"met","meaning_cn":"遇到、碰上"},{"word":"with","meaning_cn":"与、伴随"}],
+      "ex_en": "The plan met with strong opposition.", "ex_cn": "这个计划遭到强烈反对。",
+      "occ": [[2233,"met with"]] },
+
+    { "head": "make a will", "gloss": "立遗嘱", "ipa": "/meɪk ə wɪl/",
+      "note": "make a/one's will = 订立遗嘱。",
+      "literal": [{"word":"made","meaning_cn":"订立、拟定"},{"word":"my","meaning_cn":"我的"},{"word":"will","meaning_cn":"遗嘱","note_cn":"此处名词'遗嘱',非'将要/意愿'"}],
+      "ex_en": "The old man made a will to divide his house among his children.", "ex_cn": "老人立了遗嘱,把房子分给孩子们。",
+      "occ": [[2244,"made my will"]] },
+
+    { "head": "take possession of", "gloss": "占有、取得…的所有权", "ipa": "/teɪk pəˈzeʃən əv/",
+      "note": "take possession of sth = 正式占有/接管某物。",
+      "literal": [{"word":"take","meaning_cn":"取得、获得"},{"word":"possession","meaning_cn":"占有、所有权","note_cn":"此处名词'占有/所有权'"},{"word":"of","meaning_cn":"对…的"}],
+      "ex_en": "They took possession of the new house last week.", "ex_cn": "他们上周搬进并拥有了新房子。",
+      "occ": [[2264,"take possession of"]] },
+
+    { "head": "make use of", "gloss": "利用、使用", "ipa": "/meɪk juːs əv/",
+      "note": "make use of sth = 加以利用某物。",
+      "literal": [{"word":"make","meaning_cn":"加以"},{"word":"use","meaning_cn":"使用、利用","note_cn":"此处为名词'使用'"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "You should make use of every chance to practice English.", "ex_cn": "你应该利用每个机会练习英语。",
+      "occ": [[2250,"make use of"]] },
+
+    { "head": "refrain from", "gloss": "忍住、克制(不做某事)", "ipa": "/rɪˈfreɪn frəm/",
+      "note": "refrain from doing sth = 克制自己不去做某事。",
+      "literal": [{"word":"refrain","meaning_cn":"克制、忍住"},{"word":"from","meaning_cn":"(免于)做…"}],
+      "ex_en": "Please refrain from talking during the movie.", "ex_cn": "看电影时请不要说话。",
+      "occ": [[2255,"refrain from"]] },
+
+    { "head": "in the meantime", "gloss": "与此同时、在此期间", "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "note": "承接前后两件事之间的一段时间。",
+      "literal": [{"word":"in","meaning_cn":"在…期间"},{"word":"the","meaning_cn":"(定冠词)"},{"word":"meantime","meaning_cn":"其间、这段时间","note_cn":"名词'期间'"}],
+      "ex_en": "Dinner is almost ready; in the meantime, please set the table.", "ex_cn": "晚饭快好了,这期间请摆好餐桌。",
+      "occ": [[2264,"in the meantime"]] },
+
+    { "head": "of late", "gloss": "近来、最近", "ipa": "/əv leɪt/",
+      "note": "of late = 近来(略正式,常与完成时连用)。",
+      "literal": [{"word":"of","meaning_cn":"(表时间)在…"},{"word":"late","meaning_cn":"近来","note_cn":"此处非'晚',of late 固定为'近来'"}],
+      "ex_en": "He has been very busy of late.", "ex_cn": "他近来一直很忙。",
+      "occ": [[2283,"of late"]] },
+
+    { "head": "now and then", "gloss": "偶尔、时而", "ipa": "/naʊ ənd ðen/",
+      "note": "now and then = 时不时地、偶尔。",
+      "literal": [{"word":"now","meaning_cn":"有时"},{"word":"and","meaning_cn":"和"},{"word":"then","meaning_cn":"有时","note_cn":"now and then 固定表示'偶尔'"}],
+      "ex_en": "We still meet for coffee now and then.", "ex_cn": "我们偶尔还会一起喝咖啡。",
+      "occ": [[2283,"now and then"]] },
+
+    { "head": "in order to", "gloss": "为了、以便", "ipa": "/ɪn ˈɔːdər tuː/",
+      "note": "in order to do sth = 为了做某事,引出目的。",
+      "literal": [{"word":"in","meaning_cn":"(固定搭配)"},{"word":"order","meaning_cn":"(此处为固定短语的一部分)","note_cn":"in order to 中不作'命令/顺序'解"},{"word":"to","meaning_cn":"(以便)去做"}],
+      "ex_en": "He got up early in order to catch the first bus.", "ex_cn": "他早起是为了赶上头班车。",
+      "occ": [[2285,"in order to"]] },
+
+    { "head": "single out", "gloss": "挑出、选出(单独对待)", "ipa": "/ˈsɪŋɡəl aʊt/",
+      "note": "single sb/sth out = 从一群中单独挑出。",
+      "literal": [{"word":"singled","meaning_cn":"单独挑出","note_cn":"此处作动词'单独选出',非形容词'单一的'"},{"word":"out","meaning_cn":"出来(从中选出)"}],
+      "ex_en": "The teacher singled out three students for praise.", "ex_cn": "老师单独表扬了三名学生。",
+      "occ": [[2290,"singled out"]] },
+
+    { "head": "set out", "gloss": "出发、动身", "ipa": "/set aʊt/",
+      "note": "set out (for …) = 启程前往。",
+      "literal": [{"word":"set","meaning_cn":"启程、出发","note_cn":"此处非'放置'义"},{"word":"out","meaning_cn":"出发在外"}],
+      "ex_en": "We set out for the mountains at dawn.", "ex_cn": "我们黎明时动身前往山里。",
+      "occ": [[2294,"set out"]] },
+
+    { "head": "presence of mind", "gloss": "沉着冷静、临危不乱", "ipa": "/ˈprezəns əv maɪnd/",
+      "note": "have the presence of mind to do sth = 危急时头脑清醒、镇定应对。",
+      "literal": [{"word":"presence","meaning_cn":"在场、存在","note_cn":"此处指头脑'在位',即神志清醒"},{"word":"of","meaning_cn":"…的"},{"word":"mind","meaning_cn":"头脑、神智"}],
+      "ex_en": "She had the presence of mind to call for help at once.", "ex_cn": "她很镇定,立刻呼救。",
+      "occ": [[2307,"presence of mind"]] },
+
+    { "head": "settle one's affairs", "gloss": "料理事务、安排好(个人)事情", "ipa": "/ˈsetl wʌnz əˈfeəz/",
+      "note": "settle one's affairs = 把(自己的)事务处理妥当。",
+      "literal": [{"word":"settled","meaning_cn":"处理妥当、安排好"},{"word":"my","meaning_cn":"我的"},{"word":"affairs","meaning_cn":"事务","note_cn":"此处指'(个人)事务',常用复数"}],
+      "ex_en": "Before the long trip, he settled his affairs at home.", "ex_cn": "长途旅行前,他把家里的事都安排好了。",
+      "occ": [[2289,"settled my affairs"]] },
+
+    { "head": "account for", "gloss": "解释、说明(原因或去向)", "ipa": "/əˈkaʊnt fɔːr/",
+      "note": "account for sth = 对某事作出解释/交代。",
+      "literal": [{"word":"account","meaning_cn":"说明、交代","note_cn":"此处作动词'说明/解释'"},{"word":"for","meaning_cn":"对于…"}],
+      "ex_en": "Can you account for the missing money?", "ex_cn": "你能解释这笔钱去哪了吗?",
+      "occ": [[2263,"account for"]] },
+
+    { "head": "look after", "gloss": "照料、照看", "ipa": "/lʊk ˈɑːftər/",
+      "note": "look after sb/sth = 照顾、看护。",
+      "literal": [{"word":"looking","meaning_cn":"照看","note_cn":"此处非'看一眼',look after 固定为'照料'"},{"word":"after","meaning_cn":"在后照应"}],
+      "ex_en": "She looks after her grandmother every weekend.", "ex_cn": "她每个周末照顾奶奶。",
+      "occ": [[2242,"looking after"]] },
+
+    { "head": "what's the matter", "gloss": "怎么了、出什么事了", "ipa": "/wɒts ðə ˈmætər/",
+      "note": "询问对方出了什么问题或麻烦;本章出处为过去式 what was the matter。",
+      "literal": [{"word":"what","meaning_cn":"什么"},{"word":"was","meaning_cn":"是(此处过去式)"},{"word":"the","meaning_cn":"(定冠词)"},{"word":"matter","meaning_cn":"事情、问题","note_cn":"此处名词'麻烦事/问题',非'物质'"}],
+      "ex_en": "You look pale—what's the matter?", "ex_cn": "你脸色发白,怎么了?",
+      "occ": [[2308,"what was the matter"]] }
+  ],
+  "skipped": [
+    "专名/人名/地名 e.g. Lisbon / the Brazils / Friday / Pampeluna / St. Augustine / Moors of Sallee",
+    "18世纪古语 e.g. thither / durst / for aught I knew / betwixt-style",
+    "过时惯用语 e.g. come to pass / all on a sudden / by and by",
+    "一次性 nautical/法律硬词 e.g. take shipping / weigh (起锚) / procurator-fiscal / bill of sale / take cognisance of / procuration",
+    "宗教/文学套语 e.g. 'the latter end of Job was better than the beginning' / Ave Marias / Papist"
+  ]
+}

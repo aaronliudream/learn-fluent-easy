@@ -1,0 +1,89 @@
+{
+  "chapter": 1,
+  "chunks": [
+    { "head": "leave off", "gloss": "停止、戒掉、不再继续", "ipa": "/liːv ɒf/",
+      "note": "leave off (doing sth) = 停止做某事、不再继续;也指戒掉某习惯。",
+      "literal": [{"word":"leave","meaning_cn":"停止","note_cn":"此处非'离开'义,与 off 合成'停止'"},{"word":"off","meaning_cn":"脱离、中断"}],
+      "ex_en": "She left off talking when the teacher came in.", "ex_cn": "老师进来时她停止了说话。",
+      "occ": [[2,"leaving off"]] },
+
+    { "head": "go abroad", "gloss": "出国、去国外", "ipa": "/ɡəʊ əˈbrɔːd/",
+      "note": "go abroad = 出国(留学、工作、旅行等)。",
+      "literal": [{"word":"go","meaning_cn":"去"},{"word":"abroad","meaning_cn":"到国外、在国外"}],
+      "ex_en": "Many students want to go abroad to study.", "ex_cn": "许多学生想出国留学。",
+      "occ": [[15,"going abroad"]] },
+
+    { "head": "in the meantime", "gloss": "与此同时、在此期间", "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "note": "in the meantime = 在两件事之间的这段时间里、与此同时。",
+      "literal": [{"word":"in","meaning_cn":"在…期间"},{"word":"the","meaning_cn":"这(那)"},{"word":"meantime","meaning_cn":"其间","note_cn":"两事之间的一段时间"}],
+      "ex_en": "Dinner is at seven; in the meantime, let's play a game.", "ex_cn": "晚饭七点吃,在这之前我们先玩个游戏吧。",
+      "occ": [[20,"in the meantime"]] },
+
+    { "head": "break loose", "gloss": "挣脱、脱身而出", "ipa": "/breɪk luːs/",
+      "note": "break loose = 挣脱束缚、逃脱;也指(骚乱、混乱)突然爆发。",
+      "literal": [{"word":"break","meaning_cn":"挣断、挣开","note_cn":"此处'挣脱',非'打碎'"},{"word":"loose","meaning_cn":"自由的、松开的","note_cn":"此处指'脱离束缚的状态'"}],
+      "ex_en": "The dog broke loose and ran into the park.", "ex_cn": "那只狗挣脱开,跑进了公园。",
+      "occ": [[20,"broke loose"]] },
+
+    { "head": "reflect upon", "gloss": "反思、认真思考", "ipa": "/rɪˈflekt əˈpɒn/",
+      "note": "reflect on/upon sth = 仔细思考、回想、反省某事。",
+      "literal": [{"word":"reflect","meaning_cn":"思考、反省","note_cn":"此处'思索',非'反射'"},{"word":"upon","meaning_cn":"对…、关于…","note_cn":"=on"}],
+      "ex_en": "At night she likes to reflect upon her day.", "ex_cn": "晚上她喜欢回想这一天。",
+      "occ": [[24,"reflect upon"]] },
+
+    { "head": "in a word", "gloss": "总之、一句话概括", "ipa": "/ɪn ə wɜːd/",
+      "note": "in a word = 概括地说、总而言之。",
+      "literal": [{"word":"in","meaning_cn":"用、以"},{"word":"a","meaning_cn":"一个"},{"word":"word","meaning_cn":"话、词"}],
+      "ex_en": "In a word, the trip was a great success.", "ex_cn": "总之,这次旅行非常成功。",
+      "occ": [[37,"in a word"]] },
+
+    { "head": "bound for", "gloss": "开往、驶向(某地)", "ipa": "/baʊnd fɔː/",
+      "note": "bound for + 地点 = (车、船、飞机)开往某地。",
+      "literal": [{"word":"bound","meaning_cn":"前往…的","note_cn":"此处形容词,非'跳跃/边界'义"},{"word":"for","meaning_cn":"朝向、去往"}],
+      "ex_en": "This train is bound for Beijing.", "ex_cn": "这趟列车开往北京。",
+      "occ": [[21,"bound for"]] },
+
+    { "head": "a great many", "gloss": "许多、大量", "ipa": "/ə ɡreɪt ˈmeni/",
+      "note": "a great many + 复数名词 = 很多、非常多。",
+      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"很大的"},{"word":"many","meaning_cn":"许多"}],
+      "ex_en": "A great many people came to the show.", "ex_cn": "很多人来看演出。",
+      "occ": [[71,"a great many"]] },
+
+    { "head": "on foot", "gloss": "步行、走路", "ipa": "/ɒn fʊt/",
+      "note": "on foot = 徒步、步行(去某地)。",
+      "literal": [{"word":"on","meaning_cn":"以…方式"},{"word":"foot","meaning_cn":"脚","note_cn":"此处'靠双脚',即步行"}],
+      "ex_en": "We went to school on foot every day.", "ex_cn": "我们每天步行上学。",
+      "occ": [[72,"on foot"]] },
+
+    { "head": "meet with", "gloss": "遭遇、遇到", "ipa": "/miːt wɪð/",
+      "note": "meet with sth = 遭遇(困难、事故、反对等);也表(正式)会面。本章为'遭遇'义。",
+      "literal": [{"word":"meet","meaning_cn":"遇到、碰上"},{"word":"with","meaning_cn":"带有、遭遇到"}],
+      "ex_en": "The plan met with a lot of problems.", "ex_cn": "这个计划遇到了很多问题。",
+      "occ": [[87,"meet with"]] },
+
+    { "head": "wear off", "gloss": "(感觉、效果)逐渐消退、减弱", "ipa": "/weər ɒf/",
+      "note": "wear off = (疼痛、新鲜感、药效等)逐渐减弱、消失。",
+      "literal": [{"word":"wear","meaning_cn":"逐渐减弱","note_cn":"此处'渐渐消退',非'穿戴/磨损'"},{"word":"off","meaning_cn":"掉、消失"}],
+      "ex_en": "After an hour the medicine began to wear off.", "ex_cn": "一小时后药效开始消退。",
+      "occ": [[92,"wore off"]] },
+
+    { "head": "look out for", "gloss": "留心寻找、物色", "ipa": "/lʊk aʊt fɔː/",
+      "note": "look out for = 留心寻找、物色某物;也表'当心、提防'。本章为'物色(一次航行)'义。",
+      "literal": [{"word":"look","meaning_cn":"看、寻找"},{"word":"out","meaning_cn":"向外、四处"},{"word":"for","meaning_cn":"为了、寻找"}],
+      "ex_en": "I'm looking out for a cheap flight to Tokyo.", "ex_cn": "我在物色一张去东京的便宜机票。",
+      "occ": [[92,"looked out for"]] },
+
+    { "head": "burst out", "gloss": "突然发作、爆发", "ipa": "/bɜːst aʊt/",
+      "note": "burst out = 突然(激烈地)发作;burst out laughing/crying = 突然大笑/大哭。",
+      "literal": [{"word":"burst","meaning_cn":"爆发、突然发出"},{"word":"out","meaning_cn":"出来"}],
+      "ex_en": "She burst out laughing at his joke.", "ex_cn": "听到他的笑话,她突然大笑起来。",
+      "occ": [[83,"burst out"]] }
+  ],
+  "skipped": [
+    "专名/人名/地名 e.g. Crusoe / Robinson Kreutznaer / York / Hull / Bremen / Yarmouth Roads / the Humber / Winterton Ness / Cromer / Jonah / Tarshish",
+    "一次性 nautical 硬词 e.g. topmasts / sheet-anchor / ground-tackle / forecastle / spritsail / boatswain / colliers / steerage / come to an anchor",
+    "18世纪古语/生僻词 e.g. whence / thither / durst / methought / viz. / nay / betwixt / 'twas / wer'n't",
+    "一次性宗教/道德训诫套语 e.g. 'Providence resolved to leave me without excuse' / 'a visible hand of Heaven against me' / 'the judgment of Heaven'",
+    "太基础/纯语法或已陈旧 e.g. a great while〔很久·陈旧〕/ come to myself〔苏醒·偏旧〕/ to no purpose〔徒劳·偏旧〕/ of course-类"
+  ]
+}

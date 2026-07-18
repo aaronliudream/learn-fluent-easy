@@ -1,0 +1,131 @@
+{
+  "chapter": 16,
+  "chunks": [
+    { "head": "in a word", "gloss": "总之,简言之", "ipa": "/ɪn ə ˈwɜːrd/",
+      "note": "in a word = 用一句话概括,引出总结。",
+      "literal": [{"word":"in","meaning_cn":"用…(引出总结)"},{"word":"a","meaning_cn":"一个"},{"word":"word","meaning_cn":"话、词"}],
+      "ex_en": "In a word, the trip was a great success.", "ex_cn": "总之,这次旅行非常成功。",
+      "occ": [[1805,"in a word"]] },
+
+    { "head": "go to work", "gloss": "着手,动手干", "ipa": "/ˌɡoʊ tə ˈwɜːrk/",
+      "note": "go to work (on sth) = 着手做某事;不只是'去上班'义。",
+      "literal": [{"word":"went","meaning_cn":"开始、着手","note_cn":"此处'着手做',非'去上班'"},{"word":"to","meaning_cn":"去(做)"},{"word":"work","meaning_cn":"活儿、工作"}],
+      "ex_en": "She went to work on the puzzle right away.", "ex_cn": "她立刻着手解那道谜题。",
+      "occ": [[1821,"went to work"]] },
+
+    { "head": "at last", "gloss": "终于,最终", "ipa": "/æt ˈlæst/",
+      "note": "at last = 经过等待后终于。",
+      "literal": [{"word":"at","meaning_cn":"在(某时点)"},{"word":"last","meaning_cn":"最后、末了","note_cn":"此处'最后一刻',非'持续'"}],
+      "ex_en": "At last the bus arrived.", "ex_cn": "公交车终于来了。",
+      "occ": [[1823,"at last"]] },
+
+    { "head": "inch by inch", "gloss": "一点一点地,缓慢地", "ipa": "/ˌɪntʃ baɪ ˈɪntʃ/",
+      "note": "X by X = 逐X地;inch by inch 极言缓慢。",
+      "literal": [{"word":"inch","meaning_cn":"英寸","note_cn":"此处喻'极小的距离'"},{"word":"by","meaning_cn":"逐、按"},{"word":"inch","meaning_cn":"英寸"}],
+      "ex_en": "The turtle crawled forward inch by inch.", "ex_cn": "乌龟一点一点向前爬。",
+      "occ": [[1825,"inch by inch"]] },
+
+    { "head": "a great deal of", "gloss": "大量的,许多", "ipa": "/ə ˌɡreɪt ˈdiːl əv/",
+      "note": "a great deal of + 不可数名词 = 很多。",
+      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"大量的","note_cn":"此处'大量',非'伟大'"},{"word":"deal","meaning_cn":"数量","note_cn":"此处'数量',非'交易'"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "He spent a great deal of money on books.", "ex_cn": "他在书上花了很多钱。",
+      "occ": [[1833,"a great deal of"]] },
+
+    { "head": "in the meantime", "gloss": "与此同时,在此期间", "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "note": "in the meantime = 在两件事之间的这段时间里。",
+      "literal": [{"word":"in","meaning_cn":"在"},{"word":"the","meaning_cn":"这"},{"word":"meantime","meaning_cn":"其间","note_cn":"中间的这段时间"}],
+      "ex_en": "Dinner is at seven; in the meantime, let's play a game.", "ex_cn": "晚饭七点开;在这之前我们先玩个游戏。",
+      "occ": [[1843,"in the meantime"]] },
+
+    { "head": "for the sake of", "gloss": "为了…的缘故", "ipa": "/fər ðə ˈseɪk əv/",
+      "note": "for the sake of sth/sb = 为了某事/某人。",
+      "literal": [{"word":"for","meaning_cn":"为了"},{"word":"the","meaning_cn":"这"},{"word":"sake","meaning_cn":"缘故、好处","note_cn":"几乎只用于此结构"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "She learned to cook for the sake of her family.", "ex_cn": "她为了家人学做饭。",
+      "occ": [[1847,"for the sake of"]] },
+
+    { "head": "what's the matter", "gloss": "怎么了,出什么事了", "ipa": "/wɒts ðə ˈmætər/",
+      "note": "what's the matter (with …)? = 关心地问出了什么问题。",
+      "literal": [{"word":"what's","meaning_cn":"什么是(what is)"},{"word":"the","meaning_cn":"这"},{"word":"matter","meaning_cn":"事情、毛病","note_cn":"此处'问题、毛病',非'物质'"}],
+      "ex_en": "You look pale—what's the matter?", "ex_cn": "你脸色发白——怎么了?",
+      "occ": [[1852,"what’s the matter"]] },
+
+    { "head": "stand by", "gloss": "支持,站在…一边", "ipa": "/ˈstænd baɪ/",
+      "note": "stand by sb = 在困难时支持、不离弃某人。",
+      "literal": [{"word":"stand","meaning_cn":"站","note_cn":"此处引申为'支持'"},{"word":"by","meaning_cn":"在…旁边","note_cn":"此处'在身边支持'"}],
+      "ex_en": "A true friend will stand by you in hard times.", "ex_cn": "真朋友会在困境中支持你。",
+      "occ": [[1863,"stand by me"]] },
+
+    { "head": "not a moment to lose", "gloss": "一刻也不能耽误,刻不容缓", "ipa": "/ˌnɒt ə ˈmoʊmənt tə ˈluːz/",
+      "note": "(have) not a moment to lose = 时间紧迫,一点也不能浪费。",
+      "literal": [{"word":"not","meaning_cn":"没有"},{"word":"a","meaning_cn":"一"},{"word":"moment","meaning_cn":"片刻"},{"word":"to","meaning_cn":"(不定式)"},{"word":"lose","meaning_cn":"失去、浪费","note_cn":"此处'浪费(时间)'"}],
+      "ex_en": "The train leaves soon—there's not a moment to lose!", "ex_cn": "火车快开了——一刻也不能耽误!",
+      "occ": [[1885,"not a moment to lose"]] },
+
+    { "head": "take up", "gloss": "拿起,捡起", "ipa": "/ˌteɪk ˈʌp/",
+      "note": "take up = 把某物拿到手里。",
+      "literal": [{"word":"took","meaning_cn":"拿"},{"word":"up","meaning_cn":"起、拿到手","note_cn":"此处表'拿起'的动作完成"}],
+      "ex_en": "He took up his pen and began to write.", "ex_cn": "他拿起笔开始写。",
+      "occ": [[1894,"took up"]] },
+
+    { "head": "fire at", "gloss": "向…开火,朝…射击", "ipa": "/ˈfaɪər æt/",
+      "note": "fire at sb/sth = 朝目标开枪、射击。",
+      "literal": [{"word":"fire","meaning_cn":"开火、射击","note_cn":"此处作动词'开枪',非'火'"},{"word":"at","meaning_cn":"朝向"}],
+      "ex_en": "The soldiers fired at the target.", "ex_cn": "士兵们朝靶子射击。",
+      "occ": [[1891,"fire at"]] },
+
+    { "head": "pull out", "gloss": "掏出,拔出", "ipa": "/ˌpʊl ˈaʊt/",
+      "note": "pull out = 把某物从里面拉出、掏出。",
+      "literal": [{"word":"pulled","meaning_cn":"拉、拔"},{"word":"out","meaning_cn":"出来"}],
+      "ex_en": "She pulled out a coin from her pocket.", "ex_cn": "她从口袋里掏出一枚硬币。",
+      "occ": [[1902,"pulled out"]] },
+
+    { "head": "in one's debt", "gloss": "欠某人人情,感激某人", "ipa": "/ɪn wʌnz ˈdet/",
+      "note": "be in sb's debt = 因受恩惠而欠人情。",
+      "literal": [{"word":"in","meaning_cn":"处于"},{"word":"my","meaning_cn":"我的"},{"word":"debt","meaning_cn":"亏欠、债","note_cn":"此处'人情之债',非金钱债"}],
+      "ex_en": "You saved my life—I'm in your debt.", "ex_cn": "你救了我的命——我欠你一个人情。",
+      "occ": [[1905,"in my debt"]] },
+
+    { "head": "no sooner … than", "gloss": "一…就…(刚一…就)", "ipa": "/noʊ ˈsuːnər ðæn/",
+      "note": "no sooner … than … = 一…就…;句首倒装(no sooner had he …)。原文用旧式 but,今用 than。",
+      "literal": [{"word":"no","meaning_cn":"不"},{"word":"sooner","meaning_cn":"更早","note_cn":"soon 的比较级"},{"word":"had","meaning_cn":"(助动词,倒装用)"}],
+      "ex_en": "No sooner had she sat down than the phone rang.", "ex_cn": "她刚坐下电话就响了。",
+      "occ": [[1907,"no sooner had"]] },
+
+    { "head": "with all one's might", "gloss": "竭尽全力,拼命地", "ipa": "/wɪð ɔːl wʌnz ˈmaɪt/",
+      "note": "with all one's might = 使出全部力气。",
+      "literal": [{"word":"with","meaning_cn":"以、用"},{"word":"all","meaning_cn":"全部"},{"word":"his","meaning_cn":"他的"},{"word":"might","meaning_cn":"力量、力气","note_cn":"此处作名词'力量',非'可能'"}],
+      "ex_en": "He pushed the door with all his might.", "ex_cn": "他使出全身力气推门。",
+      "occ": [[1911,"with all his might"]] },
+
+    { "head": "put an end to", "gloss": "结束,终止,制止", "ipa": "/ˌpʊt ən ˈend tə/",
+      "note": "put an end to sth = 使某事停止、了结。",
+      "literal": [{"word":"put","meaning_cn":"使…处于","note_cn":"此处'使…结束'"},{"word":"an","meaning_cn":"一个"},{"word":"end","meaning_cn":"终结"},{"word":"to","meaning_cn":"对…"}],
+      "ex_en": "The new rule put an end to the noise.", "ex_cn": "新规定制止了噪音。",
+      "occ": [[1920,"put an end to"]] },
+
+    { "head": "out of sight", "gloss": "看不见,在视线之外", "ipa": "/ˌaʊt əv ˈsaɪt/",
+      "note": "out of sight = 超出可见范围。",
+      "literal": [{"word":"out","meaning_cn":"在…之外"},{"word":"of","meaning_cn":"…的"},{"word":"sight","meaning_cn":"视线、视野","note_cn":"此处'看得见的范围'"}],
+      "ex_en": "The ship sailed away until it was out of sight.", "ex_cn": "船驶远,直到看不见。",
+      "occ": [[1920,"out of sight"]] },
+
+    { "head": "like the wind", "gloss": "飞快地,风一般地", "ipa": "/ˌlaɪk ðə ˈwɪnd/",
+      "note": "run/go like the wind = 跑得飞快。",
+      "literal": [{"word":"like","meaning_cn":"像"},{"word":"the","meaning_cn":"那"},{"word":"wind","meaning_cn":"风"}],
+      "ex_en": "The boy ran like the wind to catch the ball.", "ex_cn": "男孩飞快地跑去接球。",
+      "occ": [[1935,"like the wind"]] },
+
+    { "head": "lay down one's life", "gloss": "献出生命,牺牲", "ipa": "/ˌleɪ daʊn wʌnz ˈlaɪf/",
+      "note": "lay down one's life (for …) = 为…舍生、捐躯。",
+      "literal": [{"word":"lay","meaning_cn":"放下","note_cn":"此处'舍弃、献出'"},{"word":"down","meaning_cn":"下"},{"word":"their","meaning_cn":"他们的"},{"word":"lives","meaning_cn":"生命","note_cn":"life 的复数"}],
+      "ex_en": "The heroes laid down their lives for their country.", "ex_cn": "英雄们为国捐躯。",
+      "occ": [[1940,"lay down their lives"]] }
+  ],
+  "skipped": [
+    "专名/人名/地名 e.g. Friday / Barbary / Nicaragua wood / fustic / Espagniole / Papist / Protestant / Pagan",
+    "一次性 nautical 硬词 e.g. fowling-piece / swan-shot / sprit / boom / rudder / gunnel / periagua / perspective glass",
+    "18世纪古语/生僻 e.g. thou knowest / thou sayest / thee / betwixt / whither / fain / to and again / durst",
+    "过时惯用语 e.g. bring it to pass / come to himself / a good while / it was all one / fetch a compass",
+    "宗教/道德训诫套语 e.g. the care of Providence / liberty of conscience / national vengeance / executioner of His justice"
+  ]
+}

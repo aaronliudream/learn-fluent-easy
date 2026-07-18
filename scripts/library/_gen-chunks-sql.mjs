@@ -42,6 +42,8 @@ const cardNorm = (s) => String(s).toLowerCase().replace(/[’]/g, "'").replace(/
 const idxTerm = (s) => String(s).toLowerCase().replace(/[']/g, "’").replace(/[^a-z0-9’\- ]+/g, " ").replace(/\s+/g, " ").trim();
 const normSent = (s) => (s || "").toLowerCase().replace(/[’]/g, "'").replace(/[^a-z0-9' ]+/g, " ").replace(/\s+/g, " ");
 const sqlEsc = (s) => String(s).replace(/'/g, "''");
+// 全角括号→半角(与 ch1-5 显示统一;英文例句里的弯引号不动)。释义/note/逐词文本用。
+const halfP = (s) => String(s ?? "").replace(/（/g, "(").replace(/）/g, ")");
 
 // ---- 硬校验 ----
 const errs = [];
@@ -66,9 +68,14 @@ if (errs.length) { console.error(`✗ ch${CH} 校验失败 ${errs.length} 处:`)
 // ---- 生成 SQL ----
 const cardRows = [], idxRows = [], auditRows = [];
 const seenNorm = new Set();
+const idxSeen = new Map(); // "term|seq" → head:防同一 INSERT 内重复约束键(ON CONFLICT DO UPDATE 会报 21000)
+const keyErrs = [];
 let dedupCards = 0, cardOnlyN = 0;
 for (const c of chunks) {
   const head = c.head || c.occ[0][1];
+  // 全角括号→半角(统一显示;ch1-5 半角、ch6/8 混了全角)
+  c.gloss = halfP(c.gloss); c.note = halfP(c.note);
+  for (const l of c.literal || []) { l.meaning_cn = halfP(l.meaning_cn); if (l.note_cn) l.note_cn = halfP(l.note_cn); }
   const litArr = c.literal.map((l) => l.note_cn ? { word: l.word, meaning_cn: l.meaning_cn, note_cn: l.note_cn } : { word: l.word, meaning_cn: l.meaning_cn });
   const litStr = c.literal.map((l) => `${l.word}=${l.meaning_cn}${l.note_cn ? `(${l.note_cn})` : ""}`).join("; ");
   auditRows.push(`| **${head}**${c.cardOnly ? " ⚠card-only" : ""} | ${c.gloss} | ${c.ex_en} | ${c.ex_cn} | ${litStr} |`);
@@ -85,6 +92,13 @@ for (const c of chunks) {
     const cn = cardNorm(surf);
     if (!bySurf.has(cn)) bySurf.set(cn, []);
     bySurf.get(cn).push(sq);
+    // 索引去重 + 冲突检测:同 (term,seq) 只出一行;若被另一个 chunk head 占用 → 内容冲突,硬报错
+    const ik = `${idxTerm(surf)}|${sq}`;
+    if (idxSeen.has(ik)) {
+      if (idxSeen.get(ik) !== head) keyErrs.push(`索引冲突 (term="${idxTerm(surf)}", seq=${sq}):被 "${idxSeen.get(ik)}" 和 "${head}" 同时占用 → 两个 chunk 划同一段,删一个或合并`);
+      continue; // 同 chunk 重复 occ 或已记录 → 不重复 push(否则 ON CONFLICT DO UPDATE 报 21000)
+    }
+    idxSeen.set(ik, head);
     idxRows.push({ term: idxTerm(surf), seq: sq }); // 索引词保 U+2019/连字符
   }
   for (const [cn, seqs] of bySurf) {
@@ -93,6 +107,12 @@ for (const c of chunks) {
     if (priorNorm.has(cn)) { dedupCards++; continue; }
     cardRows.push(`  ('${sqlEsc(head)}', '${sqlEsc(cn)}', 'en', 'read-v1', '${sqlEsc(JSON.stringify(mkExpl(seqs)))}'::jsonb)`);
   }
+}
+// 硬校验:同 INSERT 内重复约束键会让 ON CONFLICT DO UPDATE 报 21000。生成期拦下,别等 Aaron 跑 SQL 才炸。
+if (keyErrs.length) {
+  console.error(`✗ ch${CH} 约束键冲突 ${keyErrs.length} 处(必修内容,否则 SQL 跑不过):`);
+  keyErrs.forEach((e) => console.error("  " + e));
+  process.exit(1);
 }
 const ix = idxRows.map((r) => `  ((SELECT id FROM public.library_books WHERE book_key='${KEY}'), ${CH}, '${sqlEsc(r.term)}', ${r.seq}, true)`).join(",\n");
 
@@ -111,10 +131,15 @@ VALUES
 ${cardRows.join(",\n")}
 ON CONFLICT (normalized, target_lang) DO UPDATE SET phrase=EXCLUDED.phrase, explanation=EXCLUDED.explanation, updated_at=now();
 
-INSERT INTO public.library_chunks (book_id, chapter_idx, term, src_seq, is_published)
+-- clean rebuild:先删本章旧索引(严格限本书本章·只碰 library_chunks 不删 phrase_explanations 卡·同事务),再插审定版。
+-- 这样 DB 的下划线索引 = 审定 JSON,一一对应可复现;根治 DO NOTHING 多版叠加的旧债。
+DELETE FROM public.library_chunks
+ WHERE book_id=(SELECT id FROM public.library_books WHERE book_key='${KEY}') AND chapter_idx=${CH};
+${ix ? `INSERT INTO public.library_chunks (book_id, chapter_idx, term, src_seq, is_published)
 VALUES
 ${ix}
-ON CONFLICT (book_id, chapter_idx, term, src_seq) DO NOTHING;
+-- DO UPDATE(非 DO NOTHING):即便有人漏跑 DELETE 单独重跑 INSERT,也是覆盖而非静默叠加——从机制根绝多版累积的旧债。与卡片 INSERT 的 DO UPDATE 一致。
+ON CONFLICT (book_id, chapter_idx, term, src_seq) DO UPDATE SET is_published=EXCLUDED.is_published;` : "-- (本章无可下划线索引行:全 card-only)"}
 
 SELECT 'after' AS phase,
   (SELECT count(*) FROM public.phrase_explanations WHERE target_lang='read-v1' AND explanation->>'kind'='chunk') AS chunk_cards,

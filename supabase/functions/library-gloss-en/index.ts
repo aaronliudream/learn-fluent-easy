@@ -1,12 +1,12 @@
-// Edge function: batch light-gloss generator for the reading center (精读轻词义).
-// Input:  { words: [{ word: string, context?: string }] }  (≤30 per call)
-// Output: { results: [{ index, word, pos, ipa, gloss_cn, example_en, example_cn }] }
+// Edge function: batch child-friendly ENGLISH gloss generator for the reading center.
+// Input:  { items: [{ word: string, context?: string }] }   (≤30 per call)
+// Output: { results: [{ index, word, gloss_en }] }
 //
-// Deliberately LIGHT (词性 + 音标 + 一句话中文释义 + 例句) — NOT the heavy 8-section
-// lesson card that `explain-phrase` produces. Used by the offline pre-generation
-// script (scripts/library/prewarm-definitions.mjs), which writes results into
-// `phrase_explanations` (target_lang='read-v1') via SQL. This function does NOT
-// touch the DB itself — it is a pure generator, mirroring vocab-meaning-en's batch shape.
+// 为「英语母语者复习模式」造英英释义(儿童向)。与 define-words 平行、互不影响:
+//   · define-words 产 gloss_cn(中文学习者);本函数只产 gloss_en(英语母语者)。
+//   · 纯生成器,不碰 DB;prewarm-glosses-en.mjs 把结果 jsonb-merge 进 read-v1 卡(只加 gloss_en)。
+// 儿童向铁律:用比目标词更简单/更常见的词来解释,不出现目标词本身,不词典腔,不举例,尽量短。
+// 带出处句消歧(和中文释义同一个铁律:这本书里的词就是这本书里的意思)。
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -25,26 +25,31 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { words } = (await req.json()) as { words: { word: string; context?: string }[] };
-    if (!Array.isArray(words) || words.length === 0) return json({ results: [] });
+    const { items } = (await req.json()) as { items: { word: string; context?: string }[] };
+    if (!Array.isArray(items) || items.length === 0) return json({ results: [] });
 
-    const limited = words.slice(0, 30);
+    const limited = items.slice(0, 30);
     const list = limited
       .map(
         (w, i) =>
-          `${i + 1}. "${w.word}"${w.context ? `  (出现在句子: "${String(w.context).slice(0, 200)}")` : ""}`,
+          `${i + 1}. "${w.word}"${w.context ? `  (as used in: "${String(w.context).slice(0, 200)}")` : ""}`,
       )
       .join("\n");
 
     const systemPrompt =
-      "你是面向中国英语学习者的简明词典。对每个英文单词,只给最精炼的信息:词性、IPA 音标、一句话中文释义、一个简单例句。" +
-      "释义要口语、准确、面向精读的中小学生,不要长篇讲解、不要多义罗列。若给了出处句,按该句里的意思消歧,只解释那个意思。";
+      "You write a picture-dictionary for young bilingual children (ages 7-11) who are native English speakers. " +
+      "For each word OR phrase, write ONE very simple English definition. Rules: " +
+      "(1) use only words that are easier and more common than the target word/phrase; " +
+      "(2) never use the target word/phrase (or its obvious forms) inside the definition; " +
+      "(3) be concrete and plain, no dictionary jargon, no part-of-speech labels, no examples; " +
+      "(4) keep it short, about 4-12 words; " +
+      "(5) if a sentence is given, define ONLY the meaning it has in that sentence; " +
+      "(6) FORMAT: every definition must be ONE complete sentence — start with a capital letter and end with a period — " +
+      "for phrases too. E.g. \"in the middle of\" -> \"In the center part of something.\"; " +
+      "\"at once\" -> \"Immediately, without waiting.\"; \"look after\" -> \"To take care of someone or something.\"";
 
     const userPrompt =
-      `请为下面每个英文单词生成轻词义,通过函数调用返回:\n\n${list}\n\n` +
-      "字段要求:pos 用简写(n. / v. / adj. / adv. / prep. / conj. / pron. / art. / num. 等);" +
-      "ipa 用带斜杠的国际音标(美音,如 /ˈkɪtʃən/);gloss_cn 一句话中文释义(尽量 ≤12 字);" +
-      "example_en 一个简单英文例句,example_cn 其中文翻译。";
+      `Write a child-friendly English definition for each item, returned via the function call:\n\n${list}`;
 
     const aiResp = await fetch(
       "https://api.openai.com/v1/chat/completions",
@@ -64,8 +69,8 @@ Deno.serve(async (req) => {
             {
               type: "function",
               function: {
-                name: "save_glosses",
-                description: "Return one light gloss per word.",
+                name: "save_en_glosses",
+                description: "Return one child-friendly English definition per item.",
                 parameters: {
                   type: "object",
                   properties: {
@@ -76,13 +81,9 @@ Deno.serve(async (req) => {
                         properties: {
                           index: { type: "number" },
                           word: { type: "string" },
-                          pos: { type: "string" },
-                          ipa: { type: "string" },
-                          gloss_cn: { type: "string" },
-                          example_en: { type: "string" },
-                          example_cn: { type: "string" },
+                          gloss_en: { type: "string" },
                         },
-                        required: ["index", "word", "gloss_cn"],
+                        required: ["index", "word", "gloss_en"],
                         additionalProperties: false,
                       },
                     },
@@ -93,14 +94,14 @@ Deno.serve(async (req) => {
               },
             },
           ],
-          tool_choice: { type: "function", function: { name: "save_glosses" } },
+          tool_choice: { type: "function", function: { name: "save_en_glosses" } },
         }),
       },
     );
 
     if (!aiResp.ok) {
       const t = await aiResp.text();
-      console.error("[define-words] AI error", aiResp.status, t);
+      console.error("[library-gloss-en] AI error", aiResp.status, t);
       if (aiResp.status === 429) return json({ error: "rate_limited" }, 429);
       if (aiResp.status === 402) return json({ error: "credits_exhausted" }, 402);
       return json({ error: "ai_failed" }, 500);
@@ -112,7 +113,7 @@ Deno.serve(async (req) => {
     try {
       parsed = typeof args === "string" ? JSON.parse(args) : args;
     } catch (e) {
-      console.error("[define-words] parse fail", e, args);
+      console.error("[library-gloss-en] parse fail", e, args);
     }
 
     const results = (parsed.glosses ?? []).map((g) => {
@@ -121,17 +122,13 @@ Deno.serve(async (req) => {
       return {
         index: idx,
         word: String((g as { word?: string }).word || src?.word || "").trim(),
-        pos: String((g as { pos?: string }).pos || "").trim(),
-        ipa: String((g as { ipa?: string }).ipa || "").trim(),
-        gloss_cn: String((g as { gloss_cn?: string }).gloss_cn || "").trim(),
-        example_en: String((g as { example_en?: string }).example_en || "").trim(),
-        example_cn: String((g as { example_cn?: string }).example_cn || "").trim(),
+        gloss_en: String((g as { gloss_en?: string }).gloss_en || "").trim(),
       };
     });
 
     return json({ results });
   } catch (e) {
-    console.error("[define-words] error", e);
+    console.error("[library-gloss-en] error", e);
     return json({ error: String(e) }, 500);
   }
 });

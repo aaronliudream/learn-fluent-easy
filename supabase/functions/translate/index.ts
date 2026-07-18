@@ -2,9 +2,9 @@
 // Input:  { targetLanguage: "Italian", items: [{ key, text }, ...] }
 // Output: { translations: { [key]: "..." } }
 //
-// Uses Lovable AI Gemini Flash (cheap, fast). Strings are short UI labels,
-// so this is well within free-tier credits and the client caches results in
-// localStorage.
+// Uses OpenAI gpt-4o-mini (cheap, fast) via the OpenAI-compatible chat API.
+// Strings are short UI labels, so cost is minimal and the client caches
+// results in localStorage.
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -30,8 +30,8 @@ Deno.serve(async (req) => {
       });
     }
 
-    const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY");
-    if (!GOOGLE_AI_API_KEY) throw new Error("GOOGLE_AI_API_KEY missing");
+    const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
+    if (!OPENAI_API_KEY) throw new Error("OPENAI_API_KEY missing");
 
     const fromClause = sourceLanguage
       ? `from ${sourceLanguage} into ${targetLanguage}`
@@ -56,14 +56,14 @@ Deno.serve(async (req) => {
       Object.fromEntries(items.map((i) => [i.key, i.text])),
     );
 
-    const resp = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
+    const resp = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${GOOGLE_AI_API_KEY}`,
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "gemini-2.5-flash",
+        model: "gpt-4o-mini",
         messages: [
           { role: "system", content: systemPrompt },
           { role: "user", content: userPayload },

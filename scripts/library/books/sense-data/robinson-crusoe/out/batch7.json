@@ -1,0 +1,34 @@
+{
+ "batch": 7,
+ "rows": [
+  {
+   "word": "relation",
+   "normalized": "relation",
+   "ipa": "/rɪˈleɪʃn/",
+   "pos": "n.",
+   "sense_key": "narrative-account",
+   "gloss_cn": "叙述、记述",
+   "gloss_en": "an account or narrative of events",
+   "archaic": true,
+   "modern_cn": "关系;亲属",
+   "modern_en": "a connection between things, or a family member",
+   "example_en": "He gave a long relation of his adventures at sea.",
+   "example_cn": "他详细叙述了自己在海上的种种经历。"
+  },
+  {
+   "word": "distracted",
+   "normalized": "distracted",
+   "ipa": "/dɪˈstræktɪd/",
+   "pos": "adj.",
+   "sense_key": "frantic-mad",
+   "gloss_cn": "心神狂乱的、痛苦得发狂的",
+   "gloss_en": "wildly troubled or driven mad in mind",
+   "archaic": true,
+   "modern_cn": "分心的、注意力被分散的",
+   "modern_en": "unable to concentrate on anything",
+   "example_en": "The distracted mother ran along the shore, crying for her lost child.",
+   "example_cn": "那位发狂的母亲沿岸奔跑,哭喊着寻找走失的孩子。"
+  }
+ ],
+ "skipped": []
+}

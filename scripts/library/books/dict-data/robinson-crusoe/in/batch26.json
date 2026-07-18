@@ -1,0 +1,705 @@
+{
+ "batch": 26,
+ "words": [
+  {
+   "w": "sieve",
+   "f": 1,
+   "ctx": "My next difficulty was to make a sieve or searce, to dress my meal, and to part it from the bran and the husk; without which I did not see i"
+  },
+  {
+   "w": "husk",
+   "f": 1,
+   "ctx": "My next difficulty was to make a sieve or searce, to dress my meal, and to part it from the bran and the husk; without which I did not see i"
+  },
+  {
+   "w": "weave",
+   "f": 1,
+   "ctx": "Linen I had none left but what was mere rags; I had goat’s hair, but neither knew how to weave it or spin it; and had I known how, here were"
+  },
+  {
+   "w": "spin",
+   "f": 1,
+   "ctx": "Linen I had none left but what was mere rags; I had goat’s hair, but neither knew how to weave it or spin it; and had I known how, here were"
+  },
+  {
+   "w": "calico",
+   "f": 1,
+   "ctx": "All the remedy that I found for this was, that at last I did remember I had, among the seamen’s clothes which were saved out of the ship, so"
+  },
+  {
+   "w": "whelming",
+   "f": 1,
+   "ctx": "Then sweeping away all the embers, I set down my loaf or loaves, and whelming down the earthen pot upon them, drew the embers all round the "
+  },
+  {
+   "w": "pastrycook",
+   "f": 1,
+   "ctx": "Then sweeping away all the embers, I set down my loaf or loaves, and whelming down the earthen pot upon them, drew the embers all round the "
+  },
+  {
+   "w": "puddings",
+   "f": 1,
+   "ctx": "Then sweeping away all the embers, I set down my loaf or loaves, and whelming down the earthen pot upon them, drew the embers all round the "
+  },
+  {
+   "w": "consume",
+   "f": 1,
+   "ctx": "Upon the whole, I found that the forty bushels of barley and rice were much more than I could consume in a year; so I resolved to sow just t"
+  },
+  {
+   "w": "beachy",
+   "f": 1,
+   "ctx": "She lay almost where she did at first, but not quite; and was turned, by the force of the waves and the winds, almost bottom upward, against"
+  },
+  {
+   "w": "refitted",
+   "f": 1,
+   "ctx": "If I had had hands to have refitted her, and to have launched her into the water, the boat would have done well enough, and I might have gon"
+  },
+  {
+   "w": "foreseen",
+   "f": 1,
+   "ctx": "If I had had hands to have refitted her, and to have launched her into the water, the boat would have done well enough, and I might have gon"
+  },
+  {
+   "w": "levers",
+   "f": 1,
+   "ctx": "If I had had hands to have refitted her, and to have launched her into the water, the boat would have done well enough, and I might have gon"
+  },
+  {
+   "w": "suggesting",
+   "f": 1,
+   "ctx": "If I had had hands to have refitted her, and to have launched her into the water, the boat would have done well enough, and I might have gon"
+  },
+  {
+   "w": "undermine",
+   "f": 1,
+   "ctx": "I spared no pains, indeed, in this piece of fruitless toil, and spent, I think, three or four weeks about it; at last finding it impossible "
+  },
+  {
+   "w": "decreased",
+   "f": 1,
+   "ctx": "But when I had done this, I was unable to stir it up again, or to get under it, much less to move it forward towards the water; so I was for"
+  },
+  {
+   "w": "surmount",
+   "f": 1,
+   "ctx": "This I not only thought possible, but easy, and pleased myself extremely with the thoughts of making it, and with my having much more conven"
+  },
+  {
+   "w": "lessened",
+   "f": 1,
+   "ctx": "I felled a cedar-tree, and I question much whether Solomon ever had such a one for the building of the Temple of Jerusalem; it was five feet"
+  },
+  {
+   "w": "hacked",
+   "f": 1,
+   "ctx": "It was not without infinite labour that I felled this tree; I was twenty days hacking and hewing at it at the bottom; I was fourteen more ge"
+  },
+  {
+   "w": "mallet",
+   "f": 1,
+   "ctx": "It cost me near three months more to clear the inside, and work it out so as to make an exact boat of it; this I did, indeed, without fire, "
+  },
+  {
+   "w": "chisel",
+   "f": 1,
+   "ctx": "It cost me near three months more to clear the inside, and work it out so as to make an exact boat of it; this I did, indeed, without fire, "
+  },
+  {
+   "w": "dint",
+   "f": 1,
+   "ctx": "It cost me near three months more to clear the inside, and work it out so as to make an exact boat of it; this I did, indeed, without fire, "
+  },
+  {
+   "w": "maddest",
+   "f": 1,
+   "ctx": "Many a weary stroke it had cost, you may be sure; and had I gotten it into the water, I make no question, but I should have begun the maddes"
+  },
+  {
+   "w": "unlikely",
+   "f": 1,
+   "ctx": "Many a weary stroke it had cost, you may be sure; and had I gotten it into the water, I make no question, but I should have begun the maddes"
+  },
+  {
+   "w": "declivity",
+   "f": 1,
+   "ctx": "Well, to take away this discouragement, I resolved to dig into the surface of the earth, and so make a declivity: this I began, and it cost "
+  },
+  {
+   "w": "grudge",
+   "f": 1,
+   "ctx": "Well, to take away this discouragement, I resolved to dig into the surface of the earth, and so make a declivity: this I began, and it cost "
+  },
+  {
+   "w": "reluctancy",
+   "f": 1,
+   "ctx": "Well, I began this work; and when I began to enter upon it, and calculate how deep it was to be dug, how broad, how the stuff was to be thro"
+  },
+  {
+   "w": "devotion",
+   "f": 1,
+   "ctx": "In the middle of this work I finished my fourth year in this place, and kept my anniversary with the same devotion, and with as much comfort"
+  },
+  {
+   "w": "expectations",
+   "f": 1,
+   "ctx": "I looked now upon the world as a thing remote, which I had nothing to do with, no expectations from, and, indeed, no desires about: in a wor"
+  },
+  {
+   "w": "rivals",
+   "f": 1,
+   "ctx": "I had nothing to covet, for I had all that I was now capable of enjoying; I was lord of the whole manor; or, if I pleased, I might call myse"
+  },
+  {
+   "w": "competitor",
+   "f": 1,
+   "ctx": "I had nothing to covet, for I had all that I was now capable of enjoying; I was lord of the whole manor; or, if I pleased, I might call myse"
+  },
+  {
+   "w": "loadings",
+   "f": 1,
+   "ctx": "I had nothing to covet, for I had all that I was now capable of enjoying; I was lord of the whole manor; or, if I pleased, I might call myse"
+  },
+  {
+   "w": "dictated",
+   "f": 1,
+   "ctx": "In a word, the nature and experience of things dictated to me, upon just reflection, that all the good things of this world are no farther g"
+  },
+  {
+   "w": "covetous",
+   "f": 1,
+   "ctx": "The most covetous, griping miser in the world would have been cured of the vice of covetousness if he had been in my case; for I possessed i"
+  },
+  {
+   "w": "miser",
+   "f": 1,
+   "ctx": "The most covetous, griping miser in the world would have been cured of the vice of covetousness if he had been in my case; for I possessed i"
+  },
+  {
+   "w": "covetousness",
+   "f": 1,
+   "ctx": "The most covetous, griping miser in the world would have been cured of the vice of covetousness if he had been in my case; for I possessed i"
+  },
+  {
+   "w": "sixpenny",
+   "f": 1,
+   "ctx": "Alas! there the sorry, useless stuff lay; I had no more manner of business for it; and often thought with myself that I would have given a h"
+  },
+  {
+   "w": "turnip",
+   "f": 1,
+   "ctx": "Alas! there the sorry, useless stuff lay; I had no more manner of business for it; and often thought with myself that I would have given a h"
+  },
+  {
+   "w": "carrot",
+   "f": 1,
+   "ctx": "Alas! there the sorry, useless stuff lay; I had no more manner of business for it; and often thought with myself that I would have given a h"
+  },
+  {
+   "w": "discontented",
+   "f": 1,
+   "ctx": "I learned to look more upon the bright side of my condition, and less upon the dark side, and to consider what I enjoyed rather than what I "
+  },
+  {
+   "w": "discontents",
+   "f": 1,
+   "ctx": "All our discontents about what we want appeared to me to spring from the want of thankfulness for what we have."
+  },
+  {
+   "w": "colours",
+   "f": 1,
+   "ctx": "I spent whole hours, I may say whole days, in representing to myself, in the most lively colours, how I must have acted if I had got nothing"
+  },
+  {
+   "w": "gnaw",
+   "f": 1,
+   "ctx": "How I could not have so much as got any food, except fish and turtles; and that, as it was long before I found any of them, I must have peri"
+  },
+  {
+   "w": "infuse",
+   "f": 1,
+   "ctx": "I had been well instructed by father and mother; neither had they been wanting to me in their early endeavours to infuse a religious awe of "
+  },
+  {
+   "w": "messmates",
+   "f": 1,
+   "ctx": "But, alas! falling early into the seafaring life, which of all lives is the most destitute of the fear of God, though His terrors are always"
+  },
+  {
+   "w": "despising",
+   "f": 1,
+   "ctx": "But, alas! falling early into the seafaring life, which of all lives is the most destitute of the fear of God, though His terrors are always"
+  },
+  {
+   "w": "habitual",
+   "f": 1,
+   "ctx": "But, alas! falling early into the seafaring life, which of all lives is the most destitute of the fear of God, though His terrors are always"
+  },
+  {
+   "w": "blaspheme",
+   "f": 1,
+   "ctx": "So void was I of everything that was good, or the least sense of what I was, or was to be, that, in the greatest deliverances I enjoyed—such"
+  },
+  {
+   "w": "bountifully",
+   "f": 1,
+   "ctx": "I had terrible reflections upon my mind for many months, as I have already observed, on account of my wicked and hardened life past; and whe"
+  },
+  {
+   "w": "repine",
+   "f": 1,
+   "ctx": "With these reflections I worked my mind up, not only to a resignation to the will of God in the present disposition of my circumstances, but"
+  },
+  {
+   "w": "rejoice",
+   "f": 1,
+   "ctx": "With these reflections I worked my mind up, not only to a resignation to the will of God in the present disposition of my circumstances, but"
+  },
+  {
+   "w": "ravens",
+   "f": 1,
+   "ctx": "With these reflections I worked my mind up, not only to a resignation to the will of God in the present disposition of my circumstances, but"
+  },
+  {
+   "w": "miracles",
+   "f": 1,
+   "ctx": "With these reflections I worked my mind up, not only to a resignation to the will of God in the present disposition of my circumstances, but"
+  },
+  {
+   "w": "uninhabitable",
+   "f": 1,
+   "ctx": "With these reflections I worked my mind up, not only to a resignation to the will of God in the present disposition of my circumstances, but"
+  },
+  {
+   "w": "threaten",
+   "f": 1,
+   "ctx": "With these reflections I worked my mind up, not only to a resignation to the will of God in the present disposition of my circumstances, but"
+  },
+  {
+   "w": "eked",
+   "f": 1,
+   "ctx": "My ink, as I observed, had been gone some time, all but a very little, which I eked out with water, a little and a little, till it was so pa"
+  },
+  {
+   "w": "concurrence",
+   "f": 1,
+   "ctx": "As long as it lasted I made use of it to minute down the days of the month on which any remarkable thing happened to me; and first, by casti"
+  },
+  {
+   "w": "befell",
+   "f": 1,
+   "ctx": "As long as it lasted I made use of it to minute down the days of the month on which any remarkable thing happened to me; and first, by casti"
+  },
+  {
+   "w": "superstitiously",
+   "f": 1,
+   "ctx": "As long as it lasted I made use of it to minute down the days of the month on which any remarkable thing happened to me; and first, by casti"
+  },
+  {
+   "w": "twofold",
+   "f": 1,
+   "ctx": "The reason why I could not go naked was, I could not bear the heat of the sun so well when quite naked as with some clothes on; nay, the ver"
+  },
+  {
+   "w": "piteous",
+   "f": 1,
+   "ctx": "Upon these views I began to consider about putting the few rags I had, which I called clothes, into some order; I had worn out all the waist"
+  },
+  {
+   "w": "wretchedly",
+   "f": 1,
+   "ctx": "I must not omit to acknowledge that they were wretchedly made; for if I was a bad carpenter, I was a worse tailor."
+  },
+  {
+   "w": "outermost",
+   "f": 1,
+   "ctx": "However, they were such as I made very good shift with, and when I was out, if it happened to rain, the hair of my waistcoat and cap being o"
+  },
+  {
+   "w": "jot",
+   "f": 1,
+   "ctx": "After this, I spent a great deal of time and pains to make an umbrella; I was, indeed, in great want of one, and had a great mind to make on"
+  },
+  {
+   "w": "indifferently",
+   "f": 1,
+   "ctx": "I took a world of pains with it, and was a great while before I could make anything likely to hold: nay, after I had thought I had hit the w"
+  },
+  {
+   "w": "hottest",
+   "f": 1,
+   "ctx": "However, at last, as I said, I made one to answer, and covered it with skins, the hair upwards, so that it cast off the rain like a pent-hou"
+  },
+  {
+   "w": "coolest",
+   "f": 1,
+   "ctx": "However, at last, as I said, I made one to answer, and covered it with skins, the hair upwards, so that it cast off the rain like a pent-hou"
+  },
+  {
+   "w": "disposal",
+   "f": 1,
+   "ctx": "Thus I lived mighty comfortably, my mind being entirely composed by resigning myself to the will of God, and throwing myself wholly upon the"
+  },
+  {
+   "w": "mutually",
+   "f": 1,
+   "ctx": "This made my life better than sociable, for when I began to regret the want of conversation I would ask myself, whether thus conversing mutu"
+  },
+  {
+   "w": "wiser",
+   "f": 1,
+   "ctx": "As for the first, which was so vastly big, for I made it without considering beforehand, as I ought to have done, how I should be able to la"
+  },
+  {
+   "w": "grudged",
+   "f": 1,
+   "ctx": "As for the first, which was so vastly big, for I made it without considering beforehand, as I ought to have done, how I should be able to la"
+  },
+  {
+   "w": "answerable",
+   "f": 1,
+   "ctx": "However, though my little periagua was finished, yet the size of it was not at all answerable to the design which I had in view when I made "
+  },
+  {
+   "w": "terra",
+   "f": 1,
+   "ctx": "However, though my little periagua was finished, yet the size of it was not at all answerable to the design which I had in view when I made "
+  },
+  {
+   "w": "firma",
+   "f": 1,
+   "ctx": "However, though my little periagua was finished, yet the size of it was not at all answerable to the design which I had in view when I made "
+  },
+  {
+   "w": "smallness",
+   "f": 1,
+   "ctx": "However, though my little periagua was finished, yet the size of it was not at all answerable to the design which I had in view when I made "
+  },
+  {
+   "w": "awning",
+   "f": 1,
+   "ctx": "I fixed my umbrella also in the step at the stern, like a mast, to stand over my head, and keep the heat of the sun off me, like an awning; "
+  },
+  {
+   "w": "circumference",
+   "f": 1,
+   "ctx": "At last, being eager to view the circumference of my little kingdom, I resolved upon my cruise; and accordingly I victualled my ship for the"
+  },
+  {
+   "w": "parched",
+   "f": 1,
+   "ctx": "At last, being eager to view the circumference of my little kingdom, I resolved upon my cruise; and accordingly I victualled my ship for the"
+  },
+  {
+   "w": "reign",
+   "f": 1,
+   "ctx": "It was the 6th of November, in the sixth year of my reign—or my captivity, which you please—that I set out on this voyage, and I found it mu"
+  },
+  {
+   "w": "ledge",
+   "f": 1,
+   "ctx": "It was the 6th of November, in the sixth year of my reign—or my captivity, which you please—that I set out on this voyage, and I found it mu"
+  },
+  {
+   "w": "grappling",
+   "f": 1,
+   "ctx": "When I first discovered them, I was going to give over my enterprise, and come back again, not knowing how far it might oblige me to go out "
+  },
+  {
+   "w": "sluice",
+   "f": 1,
+   "ctx": "The third day, in the morning, the wind having abated overnight, the sea was calm, and I ventured: but I am a warning to all rash and ignora"
+  },
+  {
+   "w": "irrecoverably",
+   "f": 1,
+   "ctx": "There was no wind stirring to help me, and all I could do with my paddles signified nothing: and now I began to give myself over for lost; f"
+  },
+  {
+   "w": "unthankful",
+   "f": 1,
+   "ctx": "Then I reproached myself with my unthankful temper, and that I had repined at my solitary condition; and now what would I give to be on shor"
+  },
+  {
+   "w": "repined",
+   "f": 1,
+   "ctx": "Then I reproached myself with my unthankful temper, and that I had repined at my solitary condition; and now what would I give to be on shor"
+  },
+  {
+   "w": "beloved",
+   "f": 1,
+   "ctx": "It is scarcely possible to imagine the consternation I was now in, being driven from my beloved island (for so it appeared to me now to be) "
+  },
+  {
+   "w": "meridian",
+   "f": 1,
+   "ctx": "However, I worked hard till, indeed, my strength was almost exhausted, and kept my boat as much to the northward, that is, towards the side "
+  },
+  {
+   "w": "clearness",
+   "f": 1,
+   "ctx": "Just as I had set my mast and sail, and the boat began to stretch away, I saw even by the clearness of the water some alteration of the curr"
+  },
+  {
+   "w": "repulse",
+   "f": 1,
+   "ctx": "Just as I had set my mast and sail, and the boat began to stretch away, I saw even by the clearness of the water some alteration of the curr"
+  },
+  {
+   "w": "freshening",
+   "f": 1,
+   "ctx": "They who know what it is to have a reprieve brought to them upon the ladder, or to be rescued from thieves just going to murder them, or who"
+  },
+  {
+   "w": "underfoot",
+   "f": 1,
+   "ctx": "They who know what it is to have a reprieve brought to them upon the ladder, or to be rescued from thieves just going to murder them, or who"
+  },
+  {
+   "w": "coasting",
+   "f": 1,
+   "ctx": "In about three miles or thereabouts, coasting the shore, I came to a very good inlet or bay, about a mile over, which narrowed till it came "
+  },
+  {
+   "w": "rivulet",
+   "f": 1,
+   "ctx": "In about three miles or thereabouts, coasting the shore, I came to a very good inlet or bay, about a mile over, which narrowed till it came "
+  },
+  {
+   "w": "bemoaning",
+   "f": 1,
+   "ctx": "I was so dead asleep at first, being fatigued with rowing, or paddling, as it is called, the first part of the day, and with walking the lat"
+  },
+  {
+   "w": "overjoyed",
+   "f": 1,
+   "ctx": "First, I was amazed how the creature got thither; and then, how he should just keep about the place, and nowhere else; but as I was well sat"
+  },
+  {
+   "w": "product",
+   "f": 1,
+   "ctx": "As to the east side of the island, which I had gone round, I knew well enough there was no venturing that way; my very heart would shrink, a"
+  },
+  {
+   "w": "unexpected",
+   "f": 1,
+   "ctx": "Besides this, I arrived at an unexpected perfection in my earthenware, and contrived well enough to make them with a wheel, which I found in"
+  },
+  {
+   "w": "filthy",
+   "f": 1,
+   "ctx": "Besides this, I arrived at an unexpected perfection in my earthenware, and contrived well enough to make them with a wheel, which I found in"
+  },
+  {
+   "w": "receivers",
+   "f": 1,
+   "ctx": "Also, large deep baskets were the receivers of my corn, which I always rubbed out as soon as it was dry and cured, and kept it in great bask"
+  },
+  {
+   "w": "eleventh",
+   "f": 1,
+   "ctx": "But being now in the eleventh year of my residence, and, as I have said, my ammunition growing low, I set myself to study some art to trap a"
+  },
+  {
+   "w": "hamper",
+   "f": 1,
+   "ctx": "For this purpose I made snares to hamper them; and I do believe they were more than once taken in them; but my tackle was not good, for I ha"
+  },
+  {
+   "w": "pitfall",
+   "f": 1,
+   "ctx": "At length I resolved to try a pitfall; so I dug several large pits in the earth, in places where I had observed the goats used to feed, and "
+  },
+  {
+   "w": "hurdles",
+   "f": 1,
+   "ctx": "At length I resolved to try a pitfall; so I dug several large pits in the earth, in places where I had observed the goats used to feed, and "
+  },
+  {
+   "w": "sagacious",
+   "f": 1,
+   "ctx": "If I had let him stay three or four days without food, and then have carried him some water to drink and then a little corn, he would have b"
+  },
+  {
+   "w": "tractable",
+   "f": 1,
+   "ctx": "If I had let him stay three or four days without food, and then have carried him some water to drink and then a little corn, he would have b"
+  },
+  {
+   "w": "herbage",
+   "f": 1,
+   "ctx": "This was a great undertaking for one pair of hands; yet, as I saw there was an absolute necessity for doing it, my first work was to find ou"
+  },
+  {
+   "w": "western",
+   "f": 1,
+   "ctx": "Those who understand such enclosures will think I had very little contrivance when I pitched upon a place very proper for all these (being a"
+  },
+  {
+   "w": "drills",
+   "f": 1,
+   "ctx": "Those who understand such enclosures will think I had very little contrivance when I pitched upon a place very proper for all these (being a"
+  },
+  {
+   "w": "forecast",
+   "f": 1,
+   "ctx": "Those who understand such enclosures will think I had very little contrivance when I pitched upon a place very proper for all these (being a"
+  },
+  {
+   "w": "madness",
+   "f": 1,
+   "ctx": "Nor was the madness of it so great as to the compass, for if it was ten miles about, I was like to have time enough to do it in; but I did n"
+  },
+  {
+   "w": "maintain",
+   "f": 1,
+   "ctx": "My hedge was begun and carried on, I believe, about fifty yards when this thought occurred to me; so I presently stopped short, and, for the"
+  },
+  {
+   "w": "tethered",
+   "f": 1,
+   "ctx": "I was about three months hedging in the first piece; and, till I had done it, I tethered the three kids in the best part of it, and used the"
+  },
+  {
+   "w": "bleating",
+   "f": 1,
+   "ctx": "I was about three months hedging in the first piece; and, till I had done it, I tethered the three kids in the best part of it, and used the"
+  },
+  {
+   "w": "dairy",
+   "f": 1,
+   "ctx": "But this was not all; for now I not only had goat’s flesh to feed on when I pleased, but milk too—a thing which, indeed, in the beginning, I"
+  },
+  {
+   "w": "gallon",
+   "f": 1,
+   "ctx": "But this was not all; for now I not only had goat’s flesh to feed on when I pleased, but milk too—a thing which, indeed, in the beginning, I"
+  },
+  {
+   "w": "essays",
+   "f": 1,
+   "ctx": "And as Nature, who gives supplies of food to every creature, dictates even naturally how to make use of it, so I, that had never milked a co"
+  },
+  {
+   "w": "sweeten",
+   "f": 1,
+   "ctx": "How can He sweeten the bitterest providences, and give us cause to praise Him for dungeons and prisons!"
+  },
+  {
+   "w": "praise",
+   "f": 1,
+   "ctx": "How can He sweeten the bitterest providences, and give us cause to praise Him for dungeons and prisons!"
+  },
+  {
+   "w": "dungeons",
+   "f": 1,
+   "ctx": "How can He sweeten the bitterest providences, and give us cause to praise Him for dungeons and prisons!"
+  },
+  {
+   "w": "majesty",
+   "f": 1,
+   "ctx": "There was my majesty the prince and lord of the whole island; I had the lives of all my subjects at my absolute command; I could hang, draw,"
+  },
+  {
+   "w": "favourite",
+   "f": 1,
+   "ctx": "Poll, as if he had been my favourite, was the only person permitted to talk to me."
+  },
+  {
+   "w": "multiply",
+   "f": 1,
+   "ctx": "My dog, who was now grown old and crazy, and had found no species to multiply his kind upon, sat always at my right hand; and two cats, one "
+  },
+  {
+   "w": "especial",
+   "f": 1,
+   "ctx": "My dog, who was now grown old and crazy, and had found no species to multiply his kind upon, sat always at my right hand; and two cats, one "
+  },
+  {
+   "w": "plunder",
+   "f": 1,
+   "ctx": "But these were not the two cats which I brought on shore at first, for they were both of them dead, and had been interred near my habitation"
+  },
+  {
+   "w": "attendance",
+   "f": 1,
+   "ctx": "With this attendance and in this plentiful manner I lived; neither could I be said to want anything but society; and of that, some time afte"
+  },
+  {
+   "w": "equipage",
+   "f": 1,
+   "ctx": "I did so; but had any one in England met such a man as I was, it must either have frightened him, or raised a great deal of laughter; and as"
+  },
+  {
+   "w": "sketch",
+   "f": 1,
+   "ctx": "Be pleased to take a sketch of my figure, as follows."
+  },
+  {
+   "w": "hurtful",
+   "f": 1,
+   "ctx": "I had a great high shapeless cap, made of a goat’s skin, with a flap hanging down behind, as well to keep the sun from me as to shoot the ra"
+  },
+  {
+   "w": "thighs",
+   "f": 1,
+   "ctx": "I had a short jacket of goat’s skin, the skirts coming down to about the middle of the thighs, and a pair of open-kneed breeches of the same"
+  },
+  {
+   "w": "buskins",
+   "f": 1,
+   "ctx": "I had a short jacket of goat’s skin, the skirts coming down to about the middle of the thighs, and a pair of open-kneed breeches of the same"
+  },
+  {
+   "w": "spatterdashes",
+   "f": 1,
+   "ctx": "I had a short jacket of goat’s skin, the skirts coming down to about the middle of the thighs, and a pair of open-kneed breeches of the same"
+  },
+  {
+   "w": "thongs",
+   "f": 1,
+   "ctx": "I had on a broad belt of goat’s skin dried, which I drew together with two thongs of the same instead of buckles, and in a kind of a frog on"
+  },
+  {
+   "w": "moustachios",
+   "f": 1,
+   "ctx": "My beard I had once suffered to grow till it was about a quarter of a yard long; but as I had both scissors and razors sufficient, I had cut"
+  },
+  {
+   "w": "driest",
+   "f": 1,
+   "ctx": "One of these, which was the driest and largest, and had a door out beyond my wall or fortification—that is to say, beyond where my wall join"
+  },
+  {
+   "w": "cultivated",
+   "f": 1,
+   "ctx": "Near this dwelling of mine, but a little farther within the land, and upon lower ground, lay my two pieces of corn land, which I kept duly c"
+  },
+  {
+   "w": "encircled",
+   "f": 1,
+   "ctx": "Besides this, I had my country seat, and I had now a tolerable plantation there also; for, first, I had my little bower, as I called it, whi"
+  },
+  {
+   "w": "squab",
+   "f": 1,
+   "ctx": "In the middle of this I had my tent always standing, being a piece of a sail spread over poles, set up for that purpose, and which never wan"
+  },
+  {
+   "w": "medicinal",
+   "f": 1,
+   "ctx": "In this place also I had my grapes growing, which I principally depended on for my winter store of raisins, and which I never failed to pres"
+  },
+  {
+   "w": "hazardous",
+   "f": 1,
+   "ctx": "Sometimes I went out in her to divert myself, but no more hazardous voyages would I go, scarcely ever above a stone’s cast or two from the s"
+  },
+  {
+   "w": "thunderstruck",
+   "f": 1,
+   "ctx": "I stood like one thunderstruck, or as if I had seen an apparition."
+  }
+ ]
+}

@@ -1,0 +1,146 @@
+{
+ "batch": "sample",
+ "cards": [
+  {
+   "word": "propensity",
+   "ipa": "/prəˈpensɪti/",
+   "pos": "n.",
+   "gloss_cn": "天生的倾向",
+   "gloss_en": "a natural tendency to do something",
+   "sense_key": "tendency",
+   "ex_en": "He has a propensity for asking too many questions.",
+   "ex_cn": "他天生爱刨根问底。"
+  },
+  {
+   "word": "expostulate",
+   "ipa": "/ɪkˈspɒstjʊleɪt/",
+   "pos": "v.",
+   "gloss_cn": "力劝、据理争辩",
+   "gloss_en": "to argue earnestly to warn or dissuade someone",
+   "sense_key": "protest",
+   "ex_en": "She expostulated with him about his careless spending.",
+   "ex_cn": "她苦口婆心劝他别乱花钱。"
+  },
+  {
+   "word": "importunity",
+   "ipa": "/ˌɪmpɔːˈtjuːnɪti/",
+   "pos": "n.",
+   "gloss_cn": "再三恳求",
+   "gloss_en": "the act of asking for something again and again",
+   "sense_key": "urging",
+   "ex_en": "At last he gave in to her importunity and stayed.",
+   "ex_cn": "最后他拗不过她的再三央求，留了下来。"
+  },
+  {
+   "word": "importunities",
+   "ipa": "/ˌɪmpɔːˈtjuːnɪtiz/",
+   "pos": "n.",
+   "gloss_cn": "再三的恳求(复数)",
+   "gloss_en": "repeated, pressing requests",
+   "sense_key": "urging",
+   "ex_en": "He grew tired of their endless importunities for money.",
+   "ex_cn": "他们没完没了地讨钱，他都烦了。"
+  },
+  {
+   "word": "apparition",
+   "ipa": "/ˌæpəˈrɪʃn/",
+   "pos": "n.",
+   "gloss_cn": "幽灵、鬼影",
+   "gloss_en": "a ghost or ghostly figure",
+   "sense_key": "ghost",
+   "ex_en": "The children thought they saw an apparition in the hall.",
+   "ex_cn": "孩子们以为在走廊里看到了鬼影。"
+  },
+  {
+   "word": "betwixt",
+   "ipa": "/bɪˈtwɪkst/",
+   "pos": "prep.",
+   "gloss_cn": "在…之间",
+   "gloss_en": "between (old-fashioned word)",
+   "sense_key": "between",
+   "ex_en": "A small stream ran betwixt the two hills.",
+   "ex_cn": "一条小溪从两座山之间流过。"
+  },
+  {
+   "word": "penitence",
+   "ipa": "/ˈpenɪtəns/",
+   "pos": "n.",
+   "gloss_cn": "悔罪、忏悔",
+   "gloss_en": "deep sorrow for having done wrong",
+   "sense_key": "repentance",
+   "ex_en": "He knelt in penitence and asked to be forgiven.",
+   "ex_cn": "他跪下忏悔，请求宽恕。"
+  },
+  {
+   "word": "indefatigable",
+   "ipa": "/ˌɪndɪˈfætɪɡəbl/",
+   "pos": "adj.",
+   "gloss_cn": "不知疲倦的",
+   "gloss_en": "never getting tired even after long effort",
+   "sense_key": "tireless",
+   "ex_en": "The indefatigable nurse worked all day without a break.",
+   "ex_cn": "这位不知疲倦的护士忙了一整天没歇过。"
+  },
+  {
+   "word": "fathoms",
+   "ipa": "/ˈfæðəmz/",
+   "pos": "n.",
+   "gloss_cn": "英寻(水深单位)",
+   "gloss_en": "units used to measure the depth of water",
+   "sense_key": "depth-unit",
+   "ex_en": "The anchor sank many fathoms to the seabed.",
+   "ex_cn": "锚沉了好几英寻才到海底。"
+  },
+  {
+   "word": "abatement",
+   "ipa": "/əˈbeɪtmənt/",
+   "pos": "n.",
+   "gloss_cn": "减弱、平息",
+   "gloss_en": "a reduction in the strength or amount of something",
+   "sense_key": "reduction",
+   "ex_en": "We waited for the abatement of the storm before sailing.",
+   "ex_cn": "我们等风暴平息后才启航。"
+  },
+  {
+   "word": "providential",
+   "ipa": "/ˌprɒvɪˈdenʃl/",
+   "pos": "adj.",
+   "gloss_cn": "天意眷顾的、恰巧幸运的",
+   "gloss_en": "happening by lucky, seemingly heaven-sent chance",
+   "sense_key": "lucky",
+   "ex_en": "Their rescue was a providential turn of events.",
+   "ex_cn": "他们获救真是天意的巧合。"
+  }
+ ],
+ "skipped": [
+  "coast(太基础)",
+  "impossible(太基础)",
+  "supply(太基础)",
+  "nation(太基础)",
+  "snow(太基础)",
+  "salt(太基础)",
+  "cabin(太基础)",
+  "rainy(太基础)",
+  "absolutely(太基础)",
+  "patience(太基础)",
+  "eager(太基础)",
+  "terrified(太基础)",
+  "sailor(太基础)",
+  "wave(太基础)",
+  "increasing(太基础)",
+  "merchants(太基础)",
+  "motion(太基础)",
+  "merchant(太基础)",
+  "biscuit(太基础)",
+  "increase(太基础)",
+  "employment(太基础)",
+  "crew(太基础)",
+  "hull(专名/太基础)",
+  "harbour(太基础)",
+  "climate(太基础)",
+  "proposal(太基础)",
+  "earthquake(太基础)",
+  "parrot(太基础)",
+  "smith(专名 Tom Smith)"
+ ]
+}

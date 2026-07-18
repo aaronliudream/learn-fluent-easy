@@ -1,0 +1,26 @@
+{
+ "batch": 31,
+ "cards": [
+  {
+   "word": "invaded",
+   "ipa": "/ɪnˈveɪdɪd/",
+   "pos": "v.",
+   "gloss_cn": "入侵、来犯",
+   "gloss_en": "entered a place by force to attack it",
+   "sense_key": "attack",
+   "ex_en": "Enemy soldiers invaded the town at dawn.",
+   "ex_cn": "敌军拂晓时入侵了这座城镇。"
+  },
+  {
+   "word": "famished",
+   "ipa": "/ˈfæmɪʃt/",
+   "pos": "adj.",
+   "gloss_cn": "饿坏了、饥肠辘辘",
+   "gloss_en": "extremely hungry",
+   "sense_key": "hunger",
+   "ex_en": "After the long hike we were all famished.",
+   "ex_cn": "长途徒步后我们都饿坏了。"
+  }
+ ],
+ "skipped": []
+}

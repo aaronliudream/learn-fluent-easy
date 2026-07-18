@@ -1,50 +1,446 @@
 {
  "batch": 12,
  "cards": [
-  { "word": "intelligence", "ipa": "/ɪnˈtelɪdʒəns/", "pos": "n.", "gloss_cn": "消息、情报", "ex_en": "We waited for intelligence about the missing ship.", "ex_cn": "我们等待着关于失踪船只的消息。" },
-  { "word": "charcoal", "ipa": "/ˈtʃɑːkəʊl/", "pos": "n.", "gloss_cn": "木炭", "ex_en": "He lit the fire with a little charcoal.", "ex_cn": "他用一点木炭把火点着了。" },
-  { "word": "creep", "ipa": "/kriːp/", "pos": "v.", "gloss_cn": "爬行、匍匐", "ex_en": "The cat began to creep toward the bird.", "ex_cn": "那只猫开始向小鸟悄悄爬去。" },
-  { "word": "girdle", "ipa": "/ˈɡɜːdl/", "pos": "n.", "gloss_cn": "腰带", "ex_en": "He stuck a knife into his girdle.", "ex_cn": "他把一把刀插进腰带里。" },
-  { "word": "inquire", "ipa": "/ɪnˈkwaɪə/", "pos": "v.", "gloss_cn": "询问、打听", "ex_en": "She stopped to inquire about the road.", "ex_cn": "她停下来打听路怎么走。" },
-  { "word": "issue", "ipa": "/ˈɪʃuː/", "pos": "n.", "gloss_cn": "结果、结局", "ex_en": "We could not guess the issue of the trial.", "ex_cn": "我们猜不出这场审判的结局。" },
-  { "word": "acknowledgment", "ipa": "/əkˈnɒlɪdʒmənt/", "pos": "n.", "gloss_cn": "感谢、致意", "ex_en": "He gave a small nod in acknowledgment.", "ex_cn": "他微微点头以示致意。" },
-  { "word": "fidelity", "ipa": "/fɪˈdeləti/", "pos": "n.", "gloss_cn": "忠诚", "ex_en": "The dog served its master with great fidelity.", "ex_cn": "这条狗对主人无比忠诚。" },
-  { "word": "reserved", "ipa": "/rɪˈzɜːvd/", "pos": "v.", "gloss_cn": "留待、注定", "ex_en": "This seat is reserved for the winner.", "ex_cn": "这个座位是留给获胜者的。" },
-  { "word": "dwell", "ipa": "/dwel/", "pos": "v.", "gloss_cn": "居住", "ex_en": "They dwell in a small hut by the sea.", "ex_cn": "他们住在海边一间小屋里。" },
-  { "word": "doctrine", "ipa": "/ˈdɒktrɪn/", "pos": "n.", "gloss_cn": "教义", "ex_en": "He explained the doctrine to his new friend.", "ex_cn": "他向新朋友讲解这教义。" },
-  { "word": "refrain", "ipa": "/rɪˈfreɪn/", "pos": "v.", "gloss_cn": "忍住、克制", "ex_en": "Please refrain from talking in the library.", "ex_cn": "请在图书馆里忍住别说话。" },
-  { "word": "charged", "ipa": "/tʃɑːdʒd/", "pos": "v.", "gloss_cn": "装弹（charge过去式）", "ex_en": "He charged the gun before the hunt.", "ex_cn": "打猎前他给枪装好了弹。" },
-  { "word": "undiscovered", "ipa": "/ˌʌndɪˈskʌvəd/", "pos": "adj.", "gloss_cn": "未被发现的", "ex_en": "The cave stayed undiscovered for years.", "ex_cn": "那个山洞多年来一直没被发现。" },
-  { "word": "ankles", "ipa": "/ˈæŋklz/", "pos": "n.", "gloss_cn": "脚踝（ankle复数）", "ex_en": "The water rose up to our ankles.", "ex_cn": "水涨到了我们的脚踝。" },
-  { "word": "owed", "ipa": "/əʊd/", "pos": "v.", "gloss_cn": "亏欠、归功于（owe过去式）", "ex_en": "They owed their lives to the brave man.", "ex_cn": "他们的命都是那个勇敢的人救的。" },
-  { "word": "continual", "ipa": "/kənˈtɪnjuəl/", "pos": "adj.", "gloss_cn": "不断的、持续的", "ex_en": "The continual rain kept us indoors.", "ex_cn": "接连不断的雨把我们困在屋里。" },
-  { "word": "civil", "ipa": "/ˈsɪvl/", "pos": "adj.", "gloss_cn": "彬彬有礼的", "ex_en": "He was civil to every guest at the door.", "ex_cn": "他对门口的每位客人都彬彬有礼。" },
-  { "word": "villainy", "ipa": "/ˈvɪləni/", "pos": "n.", "gloss_cn": "恶行、罪行", "ex_en": "The town was shocked by his villainy.", "ex_cn": "全镇都被他的恶行震惊了。" },
-  { "word": "gallows", "ipa": "/ˈɡæləʊz/", "pos": "n.", "gloss_cn": "绞刑架", "ex_en": "The thief was led to the gallows.", "ex_cn": "那个小偷被带上了绞刑架。" },
-  { "word": "seizing", "ipa": "/ˈsiːzɪŋ/", "pos": "v.", "gloss_cn": "抓住（seize现在分词）", "ex_en": "Seizing the rope, he climbed up fast.", "ex_cn": "他一把抓住绳子，飞快地爬了上去。" },
-  { "word": "stratagem", "ipa": "/ˈstrætədʒəm/", "pos": "n.", "gloss_cn": "计谋、策略", "ex_en": "They won the game by a clever stratagem.", "ex_cn": "他们靠一个巧妙的计谋赢了这局。" },
-  { "word": "parley", "ipa": "/ˈpɑːli/", "pos": "n.", "gloss_cn": "谈判、交涉", "ex_en": "The two sides met for a short parley.", "ex_cn": "双方进行了一次简短的谈判。" },
-  { "word": "irons", "ipa": "/ˈaɪənz/", "pos": "n.", "gloss_cn": "镣铐", "ex_en": "The prisoner was held in heavy irons.", "ex_cn": "那名囚犯被戴上沉重的镣铐。" },
-  { "word": "survivors", "ipa": "/səˈvaɪvəz/", "pos": "n.", "gloss_cn": "幸存者", "ex_en": "The survivors reached the shore at dawn.", "ex_cn": "幸存者们在黎明时分到达岸边。" },
-  { "word": "prior", "ipa": "/ˈpraɪə/", "pos": "n.", "gloss_cn": "修道院院长", "ex_en": "The prior welcomed us into the old church.", "ex_cn": "修道院院长把我们迎进古老的教堂。" },
-  { "word": "bills", "ipa": "/bɪlz/", "pos": "n.", "gloss_cn": "票据、汇票", "ex_en": "He paid the merchant with bills of exchange.", "ex_cn": "他用汇票付给了那个商人。" },
-  { "word": "gallop", "ipa": "/ˈɡæləp/", "pos": "v.", "gloss_cn": "飞奔、疾驰", "ex_en": "The horses gallop across the wide field.", "ex_cn": "马儿在宽阔的田野上飞奔。" },
-  { "word": "colonel", "ipa": "/ˈkɜːnl/", "pos": "n.", "gloss_cn": "上校", "ex_en": "The colonel led his men into the town.", "ex_cn": "上校带领手下进了城。" },
-  { "word": "competent", "ipa": "/ˈkɒmpɪtənt/", "pos": "adj.", "gloss_cn": "足够的、胜任的", "ex_en": "He had a competent knowledge of the sea.", "ex_cn": "他对大海有足够的了解。" },
-  { "word": "fortunes", "ipa": "/ˈfɔːtʃənz/", "pos": "n.", "gloss_cn": "境遇、财产", "ex_en": "Men of poor fortunes often go to sea.", "ex_cn": "境遇困窘的人常常去出海谋生。" },
-  { "word": "aspiring", "ipa": "/əˈspaɪərɪŋ/", "pos": "adj.", "gloss_cn": "有抱负的", "ex_en": "The aspiring boy dreamed of a great voyage.", "ex_cn": "这个有抱负的男孩梦想着一次伟大的航行。" },
-  { "word": "undertakings", "ipa": "/ˌʌndəˈteɪkɪŋz/", "pos": "n.", "gloss_cn": "事业、行动", "ex_en": "Such bold undertakings need much courage.", "ex_cn": "这样大胆的行动需要很大的勇气。" },
-  { "word": "riches", "ipa": "/ˈrɪtʃɪz/", "pos": "n.", "gloss_cn": "财富", "ex_en": "He gained great riches from his trade.", "ex_cn": "他从生意中获得了巨大的财富。" },
-  { "word": "distempers", "ipa": "/dɪsˈtempəz/", "pos": "n.", "gloss_cn": "疾病", "ex_en": "The rich often suffer from strange distempers.", "ex_cn": "富人常常患上奇怪的疾病。" },
-  { "word": "extravagances", "ipa": "/ɪkˈstrævəɡənsɪz/", "pos": "n.", "gloss_cn": "奢侈、挥霍", "ex_en": "His extravagances soon spent all his money.", "ex_cn": "他的挥霍很快就花光了所有的钱。" },
-  { "word": "diversions", "ipa": "/daɪˈvɜːʃnz/", "pos": "n.", "gloss_cn": "娱乐、消遣", "ex_en": "The town offered few diversions in winter.", "ex_cn": "这个小镇在冬天几乎没什么消遣。" },
-  { "word": "desirable", "ipa": "/dɪˈzaɪərəbl/", "pos": "adj.", "gloss_cn": "合意的、值得要的", "ex_en": "A quiet life seemed very desirable to him.", "ex_cn": "平静的生活在他看来非常值得追求。" },
-  { "word": "enraged", "ipa": "/ɪnˈreɪdʒd/", "pos": "adj.", "gloss_cn": "狂怒的", "ex_en": "The enraged bull rushed at the fence.", "ex_cn": "那头狂怒的公牛朝栅栏冲去。" },
-  { "word": "affectionate", "ipa": "/əˈfekʃənət/", "pos": "adj.", "gloss_cn": "充满爱意的", "ex_en": "She gave her son an affectionate hug.", "ex_cn": "她给了儿子一个充满爱意的拥抱。" },
-  { "word": "prevail", "ipa": "/prɪˈveɪl/", "pos": "v.", "gloss_cn": "说服、占上风", "ex_en": "His friends could not prevail on him to stay.", "ex_cn": "朋友们没能说服他留下来。" },
-  { "word": "prophetic", "ipa": "/prəˈfetɪk/", "pos": "adj.", "gloss_cn": "预言的", "ex_en": "His words turned out to be strangely prophetic.", "ex_cn": "他的话后来竟奇怪地应验了。" },
-  { "word": "inclinations", "ipa": "/ˌɪnklɪˈneɪʃnz/", "pos": "n.", "gloss_cn": "意愿、倾向", "ex_en": "He followed his own inclinations and left home.", "ex_cn": "他顺着自己的意愿离开了家。" },
-  { "word": "inexpressibly", "ipa": "/ˌɪnɪkˈspresəbli/", "pos": "adv.", "gloss_cn": "难以言表地", "ex_en": "She was inexpressibly happy to see them.", "ex_cn": "见到他们，她高兴得难以言表。" }
+  {
+   "word": "intelligence",
+   "ipa": "/ɪnˈtelɪdʒəns/",
+   "pos": "n.",
+   "gloss_cn": "智性存在、神灵;消息、情报",
+   "gloss_en": "an intelligent being or spirit; also news",
+   "sense_key": "information",
+   "ex_en": "We waited for intelligence about the missing ship.",
+   "ex_cn": "我们等待着关于失踪船只的消息。"
+  },
+  {
+   "word": "charcoal",
+   "ipa": "/ˈtʃɑːkəʊl/",
+   "pos": "n.",
+   "gloss_cn": "木炭",
+   "gloss_en": "black fuel made from burnt wood",
+   "sense_key": "charcoal",
+   "ex_en": "He lit the fire with a little charcoal.",
+   "ex_cn": "他用一点木炭把火点着了。"
+  },
+  {
+   "word": "creep",
+   "ipa": "/kriːp/",
+   "pos": "v.",
+   "gloss_cn": "爬行、匍匐",
+   "gloss_en": "move slowly with the body close to the ground",
+   "sense_key": "crawl",
+   "ex_en": "The cat began to creep toward the bird.",
+   "ex_cn": "那只猫开始向小鸟悄悄爬去。"
+  },
+  {
+   "word": "girdle",
+   "ipa": "/ˈɡɜːdl/",
+   "pos": "n.",
+   "gloss_cn": "腰带",
+   "gloss_en": "a belt or sash worn round the waist",
+   "sense_key": "belt",
+   "ex_en": "He stuck a knife into his girdle.",
+   "ex_cn": "他把一把刀插进腰带里。"
+  },
+  {
+   "word": "inquire",
+   "ipa": "/ɪnˈkwaɪə/",
+   "pos": "v.",
+   "gloss_cn": "询问、打听",
+   "gloss_en": "ask for information",
+   "sense_key": "ask",
+   "ex_en": "She stopped to inquire about the road.",
+   "ex_cn": "她停下来打听路怎么走。"
+  },
+  {
+   "word": "issue",
+   "ipa": "/ˈɪʃuː/",
+   "pos": "n.",
+   "gloss_cn": "结果、结局",
+   "gloss_en": "the final result of something",
+   "sense_key": "outcome",
+   "ex_en": "We could not guess the issue of the trial.",
+   "ex_cn": "我们猜不出这场审判的结局。"
+  },
+  {
+   "word": "acknowledgment",
+   "ipa": "/əkˈnɒlɪdʒmənt/",
+   "pos": "n.",
+   "gloss_cn": "感谢、致意",
+   "gloss_en": "a sign of thanks or recognition",
+   "sense_key": "gratitude",
+   "ex_en": "He gave a small nod in acknowledgment.",
+   "ex_cn": "他微微点头以示致意。"
+  },
+  {
+   "word": "fidelity",
+   "ipa": "/fɪˈdeləti/",
+   "pos": "n.",
+   "gloss_cn": "忠诚",
+   "gloss_en": "faithful loyalty to someone",
+   "sense_key": "loyalty",
+   "ex_en": "The dog served its master with great fidelity.",
+   "ex_cn": "这条狗对主人无比忠诚。"
+  },
+  {
+   "word": "reserved",
+   "ipa": "/rɪˈzɜːvd/",
+   "pos": "v.",
+   "gloss_cn": "留待、注定",
+   "gloss_en": "kept or set aside for a later time",
+   "sense_key": "reserve",
+   "ex_en": "This seat is reserved for the winner.",
+   "ex_cn": "这个座位是留给获胜者的。"
+  },
+  {
+   "word": "dwell",
+   "ipa": "/dwel/",
+   "pos": "v.",
+   "gloss_cn": "居住",
+   "gloss_en": "live in a place",
+   "sense_key": "live",
+   "ex_en": "They dwell in a small hut by the sea.",
+   "ex_cn": "他们住在海边一间小屋里。"
+  },
+  {
+   "word": "doctrine",
+   "ipa": "/ˈdɒktrɪn/",
+   "pos": "n.",
+   "gloss_cn": "教义",
+   "gloss_en": "a religious belief that is taught",
+   "sense_key": "doctrine",
+   "ex_en": "He explained the doctrine to his new friend.",
+   "ex_cn": "他向新朋友讲解这教义。"
+  },
+  {
+   "word": "refrain",
+   "ipa": "/rɪˈfreɪn/",
+   "pos": "v.",
+   "gloss_cn": "忍住、克制",
+   "gloss_en": "hold yourself back from doing something",
+   "sense_key": "abstain",
+   "ex_en": "Please refrain from talking in the library.",
+   "ex_cn": "请在图书馆里忍住别说话。"
+  },
+  {
+   "word": "charged",
+   "ipa": "/tʃɑːdʒd/",
+   "pos": "v.",
+   "gloss_cn": "装弹（charge过去式）",
+   "gloss_en": "loaded a gun with powder and shot",
+   "sense_key": "load",
+   "ex_en": "He charged the gun before the hunt.",
+   "ex_cn": "打猎前他给枪装好了弹。"
+  },
+  {
+   "word": "undiscovered",
+   "ipa": "/ˌʌndɪˈskʌvəd/",
+   "pos": "adj.",
+   "gloss_cn": "未被发现的",
+   "gloss_en": "not yet found or seen",
+   "sense_key": "undiscovered",
+   "ex_en": "The cave stayed undiscovered for years.",
+   "ex_cn": "那个山洞多年来一直没被发现。"
+  },
+  {
+   "word": "ankles",
+   "ipa": "/ˈæŋklz/",
+   "pos": "n.",
+   "gloss_cn": "脚踝（ankle复数）",
+   "gloss_en": "the joints between the feet and legs",
+   "sense_key": "ankle",
+   "ex_en": "The water rose up to our ankles.",
+   "ex_cn": "水涨到了我们的脚踝。"
+  },
+  {
+   "word": "owed",
+   "ipa": "/əʊd/",
+   "pos": "v.",
+   "gloss_cn": "亏欠、归功于（owe过去式）",
+   "gloss_en": "owed a debt or gratitude to someone",
+   "sense_key": "owe",
+   "ex_en": "They owed their lives to the brave man.",
+   "ex_cn": "他们的命都是那个勇敢的人救的。"
+  },
+  {
+   "word": "continual",
+   "ipa": "/kənˈtɪnjuəl/",
+   "pos": "adj.",
+   "gloss_cn": "不断的、持续的",
+   "gloss_en": "happening again and again without stopping",
+   "sense_key": "constant",
+   "ex_en": "The continual rain kept us indoors.",
+   "ex_cn": "接连不断的雨把我们困在屋里。"
+  },
+  {
+   "word": "civil",
+   "ipa": "/ˈsɪvl/",
+   "pos": "adj.",
+   "gloss_cn": "彬彬有礼的",
+   "gloss_en": "polite and well-mannered",
+   "sense_key": "polite",
+   "ex_en": "He was civil to every guest at the door.",
+   "ex_cn": "他对门口的每位客人都彬彬有礼。"
+  },
+  {
+   "word": "villainy",
+   "ipa": "/ˈvɪləni/",
+   "pos": "n.",
+   "gloss_cn": "恶行、罪行",
+   "gloss_en": "wicked or evil behaviour",
+   "sense_key": "wickedness",
+   "ex_en": "The town was shocked by his villainy.",
+   "ex_cn": "全镇都被他的恶行震惊了。"
+  },
+  {
+   "word": "gallows",
+   "ipa": "/ˈɡæləʊz/",
+   "pos": "n.",
+   "gloss_cn": "绞刑架",
+   "gloss_en": "a wooden frame for hanging criminals",
+   "sense_key": "gallows",
+   "ex_en": "The thief was led to the gallows.",
+   "ex_cn": "那个小偷被带上了绞刑架。"
+  },
+  {
+   "word": "seizing",
+   "ipa": "/ˈsiːzɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "抓住（seize现在分词）",
+   "gloss_en": "taking hold of something suddenly",
+   "sense_key": "grab",
+   "ex_en": "Seizing the rope, he climbed up fast.",
+   "ex_cn": "他一把抓住绳子，飞快地爬了上去。"
+  },
+  {
+   "word": "stratagem",
+   "ipa": "/ˈstrætədʒəm/",
+   "pos": "n.",
+   "gloss_cn": "计谋、策略",
+   "gloss_en": "a clever plan to trick an enemy",
+   "sense_key": "scheme",
+   "ex_en": "They won the game by a clever stratagem.",
+   "ex_cn": "他们靠一个巧妙的计谋赢了这局。"
+  },
+  {
+   "word": "parley",
+   "ipa": "/ˈpɑːli/",
+   "pos": "n.",
+   "gloss_cn": "谈判、交涉",
+   "gloss_en": "a talk between enemies to settle terms",
+   "sense_key": "negotiation",
+   "ex_en": "The two sides met for a short parley.",
+   "ex_cn": "双方进行了一次简短的谈判。"
+  },
+  {
+   "word": "irons",
+   "ipa": "/ˈaɪənz/",
+   "pos": "n.",
+   "gloss_cn": "镣铐",
+   "gloss_en": "chains used to hold a prisoner",
+   "sense_key": "shackles",
+   "ex_en": "The prisoner was held in heavy irons.",
+   "ex_cn": "那名囚犯被戴上沉重的镣铐。"
+  },
+  {
+   "word": "survivors",
+   "ipa": "/səˈvaɪvəz/",
+   "pos": "n.",
+   "gloss_cn": "幸存者",
+   "gloss_en": "people who stay alive after danger",
+   "sense_key": "survivor",
+   "ex_en": "The survivors reached the shore at dawn.",
+   "ex_cn": "幸存者们在黎明时分到达岸边。"
+  },
+  {
+   "word": "prior",
+   "ipa": "/ˈpraɪə/",
+   "pos": "n.",
+   "gloss_cn": "修道院院长",
+   "gloss_en": "the head of a monastery",
+   "sense_key": "prior",
+   "ex_en": "The prior welcomed us into the old church.",
+   "ex_cn": "修道院院长把我们迎进古老的教堂。"
+  },
+  {
+   "word": "bills",
+   "ipa": "/bɪlz/",
+   "pos": "n.",
+   "gloss_cn": "票据、汇票",
+   "gloss_en": "written orders to pay money",
+   "sense_key": "bill",
+   "ex_en": "He paid the merchant with bills of exchange.",
+   "ex_cn": "他用汇票付给了那个商人。"
+  },
+  {
+   "word": "gallop",
+   "ipa": "/ˈɡæləp/",
+   "pos": "v.",
+   "gloss_cn": "飞奔、疾驰",
+   "gloss_en": "run very fast like a horse",
+   "sense_key": "gallop",
+   "ex_en": "The horses gallop across the wide field.",
+   "ex_cn": "马儿在宽阔的田野上飞奔。"
+  },
+  {
+   "word": "colonel",
+   "ipa": "/ˈkɜːnl/",
+   "pos": "n.",
+   "gloss_cn": "上校",
+   "gloss_en": "a senior army officer",
+   "sense_key": "colonel",
+   "ex_en": "The colonel led his men into the town.",
+   "ex_cn": "上校带领手下进了城。"
+  },
+  {
+   "word": "competent",
+   "ipa": "/ˈkɒmpɪtənt/",
+   "pos": "adj.",
+   "gloss_cn": "足够的、胜任的",
+   "gloss_en": "enough or good enough for the need",
+   "sense_key": "adequate",
+   "ex_en": "He had a competent knowledge of the sea.",
+   "ex_cn": "他对大海有足够的了解。"
+  },
+  {
+   "word": "fortunes",
+   "ipa": "/ˈfɔːtʃənz/",
+   "pos": "n.",
+   "gloss_cn": "境遇、财产",
+   "gloss_en": "one's luck or wealth in life",
+   "sense_key": "circumstances",
+   "ex_en": "Men of poor fortunes often go to sea.",
+   "ex_cn": "境遇困窘的人常常去出海谋生。"
+  },
+  {
+   "word": "aspiring",
+   "ipa": "/əˈspaɪərɪŋ/",
+   "pos": "adj.",
+   "gloss_cn": "有抱负的",
+   "gloss_en": "wanting to achieve great things",
+   "sense_key": "ambitious",
+   "ex_en": "The aspiring boy dreamed of a great voyage.",
+   "ex_cn": "这个有抱负的男孩梦想着一次伟大的航行。"
+  },
+  {
+   "word": "undertakings",
+   "ipa": "/ˌʌndəˈteɪkɪŋz/",
+   "pos": "n.",
+   "gloss_cn": "事业、行动",
+   "gloss_en": "tasks or ventures one takes on",
+   "sense_key": "venture",
+   "ex_en": "Such bold undertakings need much courage.",
+   "ex_cn": "这样大胆的行动需要很大的勇气。"
+  },
+  {
+   "word": "riches",
+   "ipa": "/ˈrɪtʃɪz/",
+   "pos": "n.",
+   "gloss_cn": "财富",
+   "gloss_en": "great wealth",
+   "sense_key": "wealth",
+   "ex_en": "He gained great riches from his trade.",
+   "ex_cn": "他从生意中获得了巨大的财富。"
+  },
+  {
+   "word": "distempers",
+   "ipa": "/dɪsˈtempəz/",
+   "pos": "n.",
+   "gloss_cn": "疾病",
+   "gloss_en": "illnesses of the body",
+   "sense_key": "illness",
+   "ex_en": "The rich often suffer from strange distempers.",
+   "ex_cn": "富人常常患上奇怪的疾病。"
+  },
+  {
+   "word": "extravagances",
+   "ipa": "/ɪkˈstrævəɡənsɪz/",
+   "pos": "n.",
+   "gloss_cn": "奢侈、挥霍",
+   "gloss_en": "wasteful spending on luxury",
+   "sense_key": "excess",
+   "ex_en": "His extravagances soon spent all his money.",
+   "ex_cn": "他的挥霍很快就花光了所有的钱。"
+  },
+  {
+   "word": "diversions",
+   "ipa": "/daɪˈvɜːʃnz/",
+   "pos": "n.",
+   "gloss_cn": "娱乐、消遣",
+   "gloss_en": "things done for fun and pleasure",
+   "sense_key": "amusement",
+   "ex_en": "The town offered few diversions in winter.",
+   "ex_cn": "这个小镇在冬天几乎没什么消遣。"
+  },
+  {
+   "word": "desirable",
+   "ipa": "/dɪˈzaɪərəbl/",
+   "pos": "adj.",
+   "gloss_cn": "合意的、值得要的",
+   "gloss_en": "worth having or wanting",
+   "sense_key": "desirable",
+   "ex_en": "A quiet life seemed very desirable to him.",
+   "ex_cn": "平静的生活在他看来非常值得追求。"
+  },
+  {
+   "word": "enraged",
+   "ipa": "/ɪnˈreɪdʒd/",
+   "pos": "adj.",
+   "gloss_cn": "狂怒的",
+   "gloss_en": "made very angry",
+   "sense_key": "furious",
+   "ex_en": "The enraged bull rushed at the fence.",
+   "ex_cn": "那头狂怒的公牛朝栅栏冲去。"
+  },
+  {
+   "word": "affectionate",
+   "ipa": "/əˈfekʃənət/",
+   "pos": "adj.",
+   "gloss_cn": "充满爱意的",
+   "gloss_en": "showing warm love and fondness",
+   "sense_key": "loving",
+   "ex_en": "She gave her son an affectionate hug.",
+   "ex_cn": "她给了儿子一个充满爱意的拥抱。"
+  },
+  {
+   "word": "prevail",
+   "ipa": "/prɪˈveɪl/",
+   "pos": "v.",
+   "gloss_cn": "说服、占上风",
+   "gloss_en": "persuade someone or win out",
+   "sense_key": "persuade",
+   "ex_en": "His friends could not prevail on him to stay.",
+   "ex_cn": "朋友们没能说服他留下来。"
+  },
+  {
+   "word": "prophetic",
+   "ipa": "/prəˈfetɪk/",
+   "pos": "adj.",
+   "gloss_cn": "预言的",
+   "gloss_en": "foretelling what will happen",
+   "sense_key": "prophetic",
+   "ex_en": "His words turned out to be strangely prophetic.",
+   "ex_cn": "他的话后来竟奇怪地应验了。"
+  },
+  {
+   "word": "inclinations",
+   "ipa": "/ˌɪnklɪˈneɪʃnz/",
+   "pos": "n.",
+   "gloss_cn": "意愿、倾向",
+   "gloss_en": "natural wishes or tendencies",
+   "sense_key": "tendency",
+   "ex_en": "He followed his own inclinations and left home.",
+   "ex_cn": "他顺着自己的意愿离开了家。"
+  },
+  {
+   "word": "inexpressibly",
+   "ipa": "/ˌɪnɪkˈspresəbli/",
+   "pos": "adv.",
+   "gloss_cn": "难以言表地",
+   "gloss_en": "in a way too great for words",
+   "sense_key": "indescribably",
+   "ex_en": "She was inexpressibly happy to see them.",
+   "ex_cn": "见到他们，她高兴得难以言表。"
+  }
  ],
  "skipped": [
   "twentieth(太基础序数)",
@@ -68,5 +464,14 @@
   "proposals(太基础)",
   "positively(太基础)",
   "asking(太基础)"
+ ],
+ "suspect": [
+  {
+   "word": "intelligence",
+   "gloss_cn": "消息、情报",
+   "ctx": "not to slight such secret intimations of Providence, let them come from what invisible intelligence they will.",
+   "issue": "书中首现是 'invisible intelligence'，指无形的智性存在/神灵（an intelligent being），拿'消息、情报'回读讲不通",
+   "suggest": "增补义项'智性存在、神灵'（an unseen intelligent being/spirit），或该卡改用此义"
+  }
  ]
 }

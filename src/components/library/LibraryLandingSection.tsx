@@ -12,7 +12,7 @@ import { listBooks, coverImageUrl } from "@/lib/library/data";
 /** 板块开关:Aaron 批准正式上线 → 开(2026-07-17)。无书时自动隐藏。?lib=0 可临时关。 */
 const LIBRARY_HOME_ENABLED = true;
 
-export default function LibraryLandingSection() {
+export default function LibraryLandingSection({ embedded = false }: { embedded?: boolean } = {}) {
   const [params] = useSearchParams();
   const enabled = params.get("lib") === "0" ? false : LIBRARY_HOME_ENABLED || params.get("lib") === "1";
   const { lang } = useI18n();
@@ -36,9 +36,7 @@ export default function LibraryLandingSection() {
 
   if (!enabled) return null;
 
-  return (
-    <section className="bg-[#f4f6f9] pb-10 md:pb-12">
-      <div className="mx-auto max-w-[1200px] px-4 md:px-6">
+  const card = (
         <Link
           to="/library"
           aria-label={zh ? "进入图书馆" : "Enter Library"}
@@ -77,7 +75,12 @@ export default function LibraryLandingSection() {
             </span>
           </div>
         </Link>
-      </div>
+  );
+  // embedded:只出卡片本体(外层 section/居中容器由落地页的网格提供),用于响应式排序。
+  if (embedded) return card;
+  return (
+    <section className="bg-[#f4f6f9] pb-10 md:pb-12">
+      <div className="mx-auto max-w-[1200px] px-4 md:px-6">{card}</div>
     </section>
   );
 }

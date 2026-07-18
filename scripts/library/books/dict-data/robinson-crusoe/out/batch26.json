@@ -1,0 +1,1083 @@
+{
+ "batch": 26,
+ "cards": [
+  {
+   "word": "sieve",
+   "ipa": "/sɪv/",
+   "pos": "n.",
+   "gloss_cn": "筛子",
+   "gloss_en": "a tool with a mesh used to separate fine from coarse",
+   "sense_key": "sieve",
+   "ex_en": "She used a sieve to remove lumps from the flour.",
+   "ex_cn": "她用筛子筛去面粉里的结块。"
+  },
+  {
+   "word": "husk",
+   "ipa": "/hʌsk/",
+   "pos": "n.",
+   "gloss_cn": "(谷物的)外壳",
+   "gloss_en": "the dry outer covering of a seed or grain",
+   "sense_key": "husk",
+   "ex_en": "We peeled the husk off the corn.",
+   "ex_cn": "我们剥掉了玉米的外壳。"
+  },
+  {
+   "word": "weave",
+   "ipa": "/wiːv/",
+   "pos": "v.",
+   "gloss_cn": "织(布)",
+   "gloss_en": "to make cloth by crossing threads over and under",
+   "sense_key": "weave",
+   "ex_en": "Her grandmother can weave beautiful cloth.",
+   "ex_cn": "她奶奶会织漂亮的布。"
+  },
+  {
+   "word": "spin",
+   "ipa": "/spɪn/",
+   "pos": "v.",
+   "gloss_cn": "纺(线)",
+   "gloss_en": "to twist fibres into thread",
+   "sense_key": "spin-thread",
+   "ex_en": "The women spin wool into yarn by hand.",
+   "ex_cn": "妇女们用手把羊毛纺成线。"
+  },
+  {
+   "word": "calico",
+   "ipa": "/ˈkælɪkəʊ/",
+   "pos": "n.",
+   "gloss_cn": "印花棉布",
+   "gloss_en": "a plain cotton cloth, often printed",
+   "sense_key": "cloth",
+   "ex_en": "The dress was made of cheap calico.",
+   "ex_cn": "那条裙子是用廉价的印花棉布做的。"
+  },
+  {
+   "word": "whelming",
+   "ipa": "/ˈwelmɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "倒扣、盖上",
+   "gloss_en": "turning a container upside down over something",
+   "sense_key": "cover-over",
+   "ex_en": "He kept the fire in by whelming a pot over it.",
+   "ex_cn": "他把锅倒扣在上面来保住火。"
+  },
+  {
+   "word": "pastrycook",
+   "ipa": "/ˈpeɪstrɪkʊk/",
+   "pos": "n.",
+   "gloss_cn": "糕点师",
+   "gloss_en": "a person who bakes cakes and pastries",
+   "sense_key": "baker",
+   "ex_en": "The pastrycook filled the window with fresh cakes.",
+   "ex_cn": "糕点师把橱窗摆满了新鲜蛋糕。"
+  },
+  {
+   "word": "beachy",
+   "ipa": "/ˈbiːtʃi/",
+   "pos": "adj.",
+   "gloss_cn": "满是卵石的",
+   "gloss_en": "covered with loose stones or shingle",
+   "sense_key": "pebbly",
+   "ex_en": "We walked along the beachy shore.",
+   "ex_cn": "我们沿着满是卵石的岸边走。"
+  },
+  {
+   "word": "refitted",
+   "ipa": "/ˌriːˈfɪtɪd/",
+   "pos": "v.",
+   "gloss_cn": "重新修整(refit 的过去分词)",
+   "gloss_en": "repaired and made ready for use again",
+   "sense_key": "repair",
+   "ex_en": "The old boat was refitted for the long trip.",
+   "ex_cn": "那条旧船经过重新修整以备远航。"
+  },
+  {
+   "word": "foreseen",
+   "ipa": "/fɔːˈsiːn/",
+   "pos": "v.",
+   "gloss_cn": "预见到(foresee 的过去分词)",
+   "gloss_en": "known about before it happens",
+   "sense_key": "foresee",
+   "ex_en": "The storm could not have been foreseen.",
+   "ex_cn": "这场风暴无法预见。"
+  },
+  {
+   "word": "levers",
+   "ipa": "/ˈliːvəz/",
+   "pos": "n.",
+   "gloss_cn": "杠杆、撬棍(复数)",
+   "gloss_en": "bars used to lift or move heavy things",
+   "sense_key": "lever",
+   "ex_en": "They used iron levers to move the rock.",
+   "ex_cn": "他们用铁杠撬动石头。"
+  },
+  {
+   "word": "undermine",
+   "ipa": "/ˌʌndəˈmaɪn/",
+   "pos": "v.",
+   "gloss_cn": "挖…的底部",
+   "gloss_en": "to dig away the earth beneath something",
+   "sense_key": "dig-under",
+   "ex_en": "The workers tried to undermine the old wall.",
+   "ex_cn": "工人们试图挖空旧墙的墙脚。"
+  },
+  {
+   "word": "surmount",
+   "ipa": "/səˈmaʊnt/",
+   "pos": "v.",
+   "gloss_cn": "克服、越过",
+   "gloss_en": "to overcome a difficulty",
+   "sense_key": "overcome",
+   "ex_en": "She surmounted every problem on the way.",
+   "ex_cn": "她克服了途中的每一个困难。"
+  },
+  {
+   "word": "lessened",
+   "ipa": "/ˈlesnd/",
+   "pos": "v.",
+   "gloss_cn": "减小(lessen 的过去式)",
+   "gloss_en": "made smaller in size or amount",
+   "sense_key": "reduce",
+   "ex_en": "The rain lessened as evening came.",
+   "ex_cn": "傍晚时雨势减小了。"
+  },
+  {
+   "word": "hacked",
+   "ipa": "/hækt/",
+   "pos": "v.",
+   "gloss_cn": "砍、劈(hack 的过去式)",
+   "gloss_en": "cut roughly with heavy blows",
+   "sense_key": "chop",
+   "ex_en": "He hacked at the branch with an axe.",
+   "ex_cn": "他用斧头劈那根树枝。"
+  },
+  {
+   "word": "mallet",
+   "ipa": "/ˈmælɪt/",
+   "pos": "n.",
+   "gloss_cn": "木槌",
+   "gloss_en": "a hammer with a wooden head",
+   "sense_key": "mallet",
+   "ex_en": "He tapped the peg in with a mallet.",
+   "ex_cn": "他用木槌把木钉敲进去。"
+  },
+  {
+   "word": "chisel",
+   "ipa": "/ˈtʃɪzl/",
+   "pos": "n.",
+   "gloss_cn": "凿子",
+   "gloss_en": "a tool with a sharp edge for cutting wood or stone",
+   "sense_key": "chisel",
+   "ex_en": "The carver shaped the wood with a chisel.",
+   "ex_cn": "雕刻师用凿子给木头造型。"
+  },
+  {
+   "word": "dint",
+   "ipa": "/dɪnt/",
+   "pos": "n.",
+   "gloss_cn": "(凭借的)力量、手段",
+   "gloss_en": "force or effort used to achieve something",
+   "sense_key": "by-means-of",
+   "ex_en": "By dint of hard work he passed the exam.",
+   "ex_cn": "凭着刻苦努力他通过了考试。"
+  },
+  {
+   "word": "declivity",
+   "ipa": "/dɪˈklɪvəti/",
+   "pos": "n.",
+   "gloss_cn": "下斜坡",
+   "gloss_en": "a downward slope of the ground",
+   "sense_key": "slope-down",
+   "ex_en": "The path ran down a gentle declivity.",
+   "ex_cn": "小路沿着一道缓缓的下坡延伸。"
+  },
+  {
+   "word": "grudge",
+   "ipa": "/ɡrʌdʒ/",
+   "pos": "v.",
+   "gloss_cn": "吝惜、舍不得给",
+   "gloss_en": "to give or allow something unwillingly",
+   "sense_key": "begrudge",
+   "ex_en": "She did not grudge the time spent helping others.",
+   "ex_cn": "她不吝惜帮助别人所花的时间。"
+  },
+  {
+   "word": "reluctancy",
+   "ipa": "/rɪˈlʌktənsi/",
+   "pos": "n.",
+   "gloss_cn": "不情愿(reluctance 的旧式)",
+   "gloss_en": "unwillingness to do something",
+   "sense_key": "unwilling",
+   "ex_en": "He agreed at last, but with great reluctancy.",
+   "ex_cn": "他最终同意了,但很不情愿。"
+  },
+  {
+   "word": "devotion",
+   "ipa": "/dɪˈvəʊʃn/",
+   "pos": "n.",
+   "gloss_cn": "(对宗教的)虔诚",
+   "gloss_en": "deep religious feeling and worship",
+   "sense_key": "piety",
+   "ex_en": "She said her prayers with great devotion.",
+   "ex_cn": "她怀着极大的虔诚祷告。"
+  },
+  {
+   "word": "loadings",
+   "ipa": "/ˈləʊdɪŋz/",
+   "pos": "n.",
+   "gloss_cn": "装载的货物(复数)",
+   "gloss_en": "goods loaded onto a ship",
+   "sense_key": "cargo",
+   "ex_en": "The ship's loadings were stacked on the deck.",
+   "ex_cn": "船上的货物堆在甲板上。"
+  },
+  {
+   "word": "dictated",
+   "ipa": "/dɪkˈteɪtɪd/",
+   "pos": "v.",
+   "gloss_cn": "支配、决定(dictate 的过去式)",
+   "gloss_en": "determined or directed how things should be",
+   "sense_key": "dictate",
+   "ex_en": "Necessity dictated every choice he made.",
+   "ex_cn": "需要支配着他所做的每一个选择。"
+  },
+  {
+   "word": "covetous",
+   "ipa": "/ˈkʌvətəs/",
+   "pos": "adj.",
+   "gloss_cn": "贪求的、贪婪的",
+   "gloss_en": "eager to have what others have",
+   "sense_key": "greedy",
+   "ex_en": "His covetous eyes fixed on the gold.",
+   "ex_cn": "他贪婪的目光盯着那些金子。"
+  },
+  {
+   "word": "miser",
+   "ipa": "/ˈmaɪzə/",
+   "pos": "n.",
+   "gloss_cn": "守财奴",
+   "gloss_en": "a person who hoards money and hates spending",
+   "sense_key": "miser",
+   "ex_en": "The old miser never gave a penny away.",
+   "ex_cn": "那个老守财奴从不施舍一分钱。"
+  },
+  {
+   "word": "covetousness",
+   "ipa": "/ˈkʌvətəsnəs/",
+   "pos": "n.",
+   "gloss_cn": "贪婪",
+   "gloss_en": "a strong greedy desire for wealth",
+   "sense_key": "greed",
+   "ex_en": "His covetousness left him with no friends.",
+   "ex_cn": "他的贪婪使他没有朋友。"
+  },
+  {
+   "word": "sixpenny",
+   "ipa": "/ˈsɪkspəni/",
+   "pos": "adj.",
+   "gloss_cn": "六便士的、廉价的",
+   "gloss_en": "costing sixpence; of little value",
+   "sense_key": "cheap",
+   "ex_en": "He bought a sixpenny toy at the fair.",
+   "ex_cn": "他在集市上买了个六便士的小玩具。"
+  },
+  {
+   "word": "turnip",
+   "ipa": "/ˈtɜːnɪp/",
+   "pos": "n.",
+   "gloss_cn": "芜菁、萝卜",
+   "gloss_en": "a round root vegetable eaten as food",
+   "sense_key": "turnip",
+   "ex_en": "We pulled a large turnip from the garden.",
+   "ex_cn": "我们从菜园里拔出一个大萝卜。"
+  },
+  {
+   "word": "discontented",
+   "ipa": "/ˌdɪskənˈtentɪd/",
+   "pos": "adj.",
+   "gloss_cn": "不满的",
+   "gloss_en": "not satisfied with what one has",
+   "sense_key": "discontent",
+   "ex_en": "He felt discontented with his small wages.",
+   "ex_cn": "他对微薄的工资感到不满。"
+  },
+  {
+   "word": "discontents",
+   "ipa": "/ˌdɪskənˈtents/",
+   "pos": "n.",
+   "gloss_cn": "不满(复数)",
+   "gloss_en": "feelings of dissatisfaction",
+   "sense_key": "discontent",
+   "ex_en": "Their discontents grew louder every day.",
+   "ex_cn": "他们的不满一天比一天强烈。"
+  },
+  {
+   "word": "gnaw",
+   "ipa": "/nɔː/",
+   "pos": "v.",
+   "gloss_cn": "啃、咬",
+   "gloss_en": "to bite at something again and again",
+   "sense_key": "gnaw",
+   "ex_en": "The dog gnawed the old bone for hours.",
+   "ex_cn": "狗啃了那根旧骨头好几个小时。"
+  },
+  {
+   "word": "infuse",
+   "ipa": "/ɪnˈfjuːz/",
+   "pos": "v.",
+   "gloss_cn": "灌输、注入",
+   "gloss_en": "to fill someone with a feeling or idea",
+   "sense_key": "instill",
+   "ex_en": "The coach tried to infuse courage into the team.",
+   "ex_cn": "教练努力给全队注入勇气。"
+  },
+  {
+   "word": "messmates",
+   "ipa": "/ˈmesmeɪts/",
+   "pos": "n.",
+   "gloss_cn": "(同桌吃饭的)伙伴",
+   "gloss_en": "companions who eat together, as on a ship",
+   "sense_key": "companion",
+   "ex_en": "The sailors shared their food with their messmates.",
+   "ex_cn": "水手们和同伴一起分食物。"
+  },
+  {
+   "word": "despising",
+   "ipa": "/dɪˈspaɪzɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "蔑视(despise 的现在分词)",
+   "gloss_en": "feeling strong dislike and contempt for",
+   "sense_key": "scorn",
+   "ex_en": "He walked away, despising their empty promises.",
+   "ex_cn": "他走开了,蔑视他们空洞的承诺。"
+  },
+  {
+   "word": "habitual",
+   "ipa": "/həˈbɪtʃuəl/",
+   "pos": "adj.",
+   "gloss_cn": "习惯性的",
+   "gloss_en": "done regularly as a habit",
+   "sense_key": "habitual",
+   "ex_en": "Getting up early was habitual for him.",
+   "ex_cn": "早起对他来说是习惯。"
+  },
+  {
+   "word": "blaspheme",
+   "ipa": "/blæsˈfiːm/",
+   "pos": "v.",
+   "gloss_cn": "亵渎(神)",
+   "gloss_en": "to speak with disrespect about God or holy things",
+   "sense_key": "blaspheme",
+   "ex_en": "The crowd was shocked to hear him blaspheme.",
+   "ex_cn": "众人听到他亵渎神明大为震惊。"
+  },
+  {
+   "word": "bountifully",
+   "ipa": "/ˈbaʊntɪfəli/",
+   "pos": "adv.",
+   "gloss_cn": "慷慨地、丰盛地",
+   "gloss_en": "generously and in large amounts",
+   "sense_key": "generously",
+   "ex_en": "The land provided bountifully that year.",
+   "ex_cn": "那一年土地出产丰盛。"
+  },
+  {
+   "word": "repine",
+   "ipa": "/rɪˈpaɪn/",
+   "pos": "v.",
+   "gloss_cn": "抱怨、不满",
+   "gloss_en": "to complain or feel discontent",
+   "sense_key": "complain",
+   "ex_en": "He never repined at his hard luck.",
+   "ex_cn": "他从不为自己的厄运抱怨。"
+  },
+  {
+   "word": "rejoice",
+   "ipa": "/rɪˈdʒɔɪs/",
+   "pos": "v.",
+   "gloss_cn": "欢欣、高兴",
+   "gloss_en": "to feel or show great joy",
+   "sense_key": "rejoice",
+   "ex_en": "The whole village rejoiced at the good news.",
+   "ex_cn": "全村人为好消息欢欣鼓舞。"
+  },
+  {
+   "word": "ravens",
+   "ipa": "/ˈreɪvnz/",
+   "pos": "n.",
+   "gloss_cn": "渡鸦(复数)",
+   "gloss_en": "large black birds like big crows",
+   "sense_key": "raven",
+   "ex_en": "Two ravens circled above the cliff.",
+   "ex_cn": "两只渡鸦在悬崖上盘旋。"
+  },
+  {
+   "word": "uninhabitable",
+   "ipa": "/ˌʌnɪnˈhæbɪtəbl/",
+   "pos": "adj.",
+   "gloss_cn": "不适合居住的",
+   "gloss_en": "not fit for anyone to live in",
+   "sense_key": "uninhabitable",
+   "ex_en": "The ruined house was completely uninhabitable.",
+   "ex_cn": "那座破房子完全不能住人。"
+  },
+  {
+   "word": "eked",
+   "ipa": "/iːkt/",
+   "pos": "v.",
+   "gloss_cn": "省着用、勉强维持(eke out)",
+   "gloss_en": "made something last by using it sparingly",
+   "sense_key": "eke-out",
+   "ex_en": "They eked out the water until rain came.",
+   "ex_cn": "他们省着用水直到下雨。"
+  },
+  {
+   "word": "concurrence",
+   "ipa": "/kənˈkʌrəns/",
+   "pos": "n.",
+   "gloss_cn": "(事件的)同时发生、巧合",
+   "gloss_en": "the happening of things at the same time",
+   "sense_key": "coincidence",
+   "ex_en": "By a strange concurrence, both letters arrived together.",
+   "ex_cn": "由于奇怪的巧合,两封信同时到了。"
+  },
+  {
+   "word": "befell",
+   "ipa": "/bɪˈfel/",
+   "pos": "v.",
+   "gloss_cn": "发生、降临(befall 的过去式)",
+   "gloss_en": "happened to someone, usually something bad",
+   "sense_key": "befall",
+   "ex_en": "A great misfortune befell the family.",
+   "ex_cn": "一场大不幸降临到这个家庭。"
+  },
+  {
+   "word": "superstitiously",
+   "ipa": "/ˌsuːpəˈstɪʃəsli/",
+   "pos": "adv.",
+   "gloss_cn": "迷信地",
+   "gloss_en": "in a way that shows belief in magic or omens",
+   "sense_key": "superstitious",
+   "ex_en": "She superstitiously avoided walking under ladders.",
+   "ex_cn": "她迷信地避开从梯子下走过。"
+  },
+  {
+   "word": "twofold",
+   "ipa": "/ˈtuːfəʊld/",
+   "pos": "adj.",
+   "gloss_cn": "双重的",
+   "gloss_en": "having two parts; twice as much",
+   "sense_key": "double",
+   "ex_en": "The plan had a twofold purpose.",
+   "ex_cn": "这个计划有双重目的。"
+  },
+  {
+   "word": "piteous",
+   "ipa": "/ˈpɪtiəs/",
+   "pos": "adj.",
+   "gloss_cn": "可怜的、令人同情的",
+   "gloss_en": "causing a feeling of pity",
+   "sense_key": "pitiful",
+   "ex_en": "The lost child gave a piteous cry.",
+   "ex_cn": "迷路的孩子发出可怜的哭声。"
+  },
+  {
+   "word": "wretchedly",
+   "ipa": "/ˈretʃɪdli/",
+   "pos": "adv.",
+   "gloss_cn": "拙劣地、糟糕地;悲惨地、凄惨地",
+   "gloss_en": "very badly; or in a miserable, pitiful way",
+   "sense_key": "badly",
+   "ex_en": "The shed was wretchedly built and soon fell.",
+   "ex_cn": "那棚子盖得很糟,很快就塌了。"
+  },
+  {
+   "word": "outermost",
+   "ipa": "/ˈaʊtəməʊst/",
+   "pos": "adj.",
+   "gloss_cn": "最外面的",
+   "gloss_en": "farthest from the centre or inside",
+   "sense_key": "outermost",
+   "ex_en": "The outermost layer kept off the wind.",
+   "ex_cn": "最外层挡住了风。"
+  },
+  {
+   "word": "jot",
+   "ipa": "/dʒɒt/",
+   "pos": "n.",
+   "gloss_cn": "(常用于否定)一丁点",
+   "gloss_en": "a very small amount",
+   "sense_key": "bit",
+   "ex_en": "He did not care a jot about the prize.",
+   "ex_cn": "他对那奖一点也不在乎。"
+  },
+  {
+   "word": "indifferently",
+   "ipa": "/ɪnˈdɪfrəntli/",
+   "pos": "adv.",
+   "gloss_cn": "马马虎虎地、平平地",
+   "gloss_en": "not very well; in a mediocre way",
+   "sense_key": "mediocre",
+   "ex_en": "The job was done rather indifferently.",
+   "ex_cn": "这活儿干得相当马虎。"
+  },
+  {
+   "word": "disposal",
+   "ipa": "/dɪˈspəʊzl/",
+   "pos": "n.",
+   "gloss_cn": "(命运的)安排、支配",
+   "gloss_en": "the power to arrange or control something",
+   "sense_key": "control",
+   "ex_en": "He left everything to the disposal of fate.",
+   "ex_cn": "他把一切交给命运安排。"
+  },
+  {
+   "word": "mutually",
+   "ipa": "/ˈmjuːtʃuəli/",
+   "pos": "adv.",
+   "gloss_cn": "相互地",
+   "gloss_en": "in a way shared by two sides",
+   "sense_key": "mutual",
+   "ex_en": "The two friends mutually agreed to help.",
+   "ex_cn": "两个朋友相互约定互相帮助。"
+  },
+  {
+   "word": "answerable",
+   "ipa": "/ˈɑːnsərəbl/",
+   "pos": "adj.",
+   "gloss_cn": "与…相称的",
+   "gloss_en": "matching or suited to something",
+   "sense_key": "matching",
+   "ex_en": "His skill was not answerable to the great task.",
+   "ex_cn": "他的本领与这项艰巨任务不相称。"
+  },
+  {
+   "word": "awning",
+   "ipa": "/ˈɔːnɪŋ/",
+   "pos": "n.",
+   "gloss_cn": "遮篷",
+   "gloss_en": "a cloth cover that gives shade from sun or rain",
+   "sense_key": "canopy",
+   "ex_en": "We sat under the awning to escape the sun.",
+   "ex_cn": "我们坐在遮篷下躲太阳。"
+  },
+  {
+   "word": "circumference",
+   "ipa": "/səˈkʌmfərəns/",
+   "pos": "n.",
+   "gloss_cn": "周边、圆周",
+   "gloss_en": "the outer edge or boundary of a round area",
+   "sense_key": "perimeter",
+   "ex_en": "They walked around the circumference of the lake.",
+   "ex_cn": "他们绕湖的周边走了一圈。"
+  },
+  {
+   "word": "parched",
+   "ipa": "/pɑːtʃt/",
+   "pos": "adj.",
+   "gloss_cn": "焦干的、干渴的",
+   "gloss_en": "very dry from heat or thirst",
+   "sense_key": "dry",
+   "ex_en": "The parched fields needed rain badly.",
+   "ex_cn": "焦干的田地急需雨水。"
+  },
+  {
+   "word": "reign",
+   "ipa": "/reɪn/",
+   "pos": "n.",
+   "gloss_cn": "统治时期、在位期",
+   "gloss_en": "the period during which a ruler is in power",
+   "sense_key": "rule",
+   "ex_en": "The country was peaceful during her reign.",
+   "ex_cn": "在她统治期间国家很太平。"
+  },
+  {
+   "word": "ledge",
+   "ipa": "/ledʒ/",
+   "pos": "n.",
+   "gloss_cn": "(水下的)暗礁",
+   "gloss_en": "a ridge of rock, often under water",
+   "sense_key": "reef",
+   "ex_en": "The boat scraped against a hidden ledge.",
+   "ex_cn": "小船擦过一处暗礁。"
+  },
+  {
+   "word": "grappling",
+   "ipa": "/ˈɡræplɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "扭抓、奋力抓住(grapple)",
+   "gloss_en": "seizing and struggling with something",
+   "sense_key": "grip-struggle",
+   "ex_en": "The sailors were grappling with the heavy net.",
+   "ex_cn": "水手们奋力抓着沉重的网。"
+  },
+  {
+   "word": "sluice",
+   "ipa": "/sluːs/",
+   "pos": "n.",
+   "gloss_cn": "(奔涌的)急流",
+   "gloss_en": "a fast rush of water, as through a gate",
+   "sense_key": "torrent",
+   "ex_en": "The water burst out like a sluice.",
+   "ex_cn": "水像急流一样奔涌而出。"
+  },
+  {
+   "word": "irrecoverably",
+   "ipa": "/ˌɪrɪˈkʌvərəbli/",
+   "pos": "adv.",
+   "gloss_cn": "无可挽回地",
+   "gloss_en": "in a way that cannot be got back or undone",
+   "sense_key": "irreversibly",
+   "ex_en": "The letter was irrecoverably lost at sea.",
+   "ex_cn": "那封信在海上无可挽回地丢失了。"
+  },
+  {
+   "word": "unthankful",
+   "ipa": "/ʌnˈθæŋkfl/",
+   "pos": "adj.",
+   "gloss_cn": "不知感恩的",
+   "gloss_en": "not feeling or showing gratitude",
+   "sense_key": "ungrateful",
+   "ex_en": "It was unthankful of him to complain.",
+   "ex_cn": "他抱怨真是不知感恩。"
+  },
+  {
+   "word": "beloved",
+   "ipa": "/bɪˈlʌvɪd/",
+   "pos": "adj.",
+   "gloss_cn": "深爱的、心爱的",
+   "gloss_en": "much loved and dear to someone",
+   "sense_key": "dear",
+   "ex_en": "He returned at last to his beloved home.",
+   "ex_cn": "他终于回到了心爱的家。"
+  },
+  {
+   "word": "meridian",
+   "ipa": "/məˈrɪdiən/",
+   "pos": "n.",
+   "gloss_cn": "子午线",
+   "gloss_en": "an imaginary line running north to south on the earth",
+   "sense_key": "meridian",
+   "ex_en": "The ship crossed the meridian at noon.",
+   "ex_cn": "船在正午越过了子午线。"
+  },
+  {
+   "word": "repulse",
+   "ipa": "/rɪˈpʌls/",
+   "pos": "v.",
+   "gloss_cn": "推回、挡回",
+   "gloss_en": "to drive or push back",
+   "sense_key": "repel",
+   "ex_en": "The current repulsed the little boat again.",
+   "ex_cn": "水流又一次把小船推了回去。"
+  },
+  {
+   "word": "freshening",
+   "ipa": "/ˈfreʃnɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "(风力)变强、增强(freshen)",
+   "gloss_en": "of wind, becoming stronger",
+   "sense_key": "strengthen",
+   "ex_en": "The breeze was freshening as night fell.",
+   "ex_cn": "夜幕降临时风渐渐变强。"
+  },
+  {
+   "word": "underfoot",
+   "ipa": "/ˌʌndəˈfʊt/",
+   "pos": "adv.",
+   "gloss_cn": "在脚下",
+   "gloss_en": "on the ground beneath one's feet",
+   "sense_key": "underfoot",
+   "ex_en": "The wet grass was slippery underfoot.",
+   "ex_cn": "湿草在脚下很滑。"
+  },
+  {
+   "word": "coasting",
+   "ipa": "/ˈkəʊstɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "沿岸航行(coast)",
+   "gloss_en": "sailing along close to the shore",
+   "sense_key": "sail-along",
+   "ex_en": "We spent the day coasting the rocky shore.",
+   "ex_cn": "我们花了一整天沿着礁石海岸航行。"
+  },
+  {
+   "word": "rivulet",
+   "ipa": "/ˈrɪvjələt/",
+   "pos": "n.",
+   "gloss_cn": "小溪",
+   "gloss_en": "a very small stream",
+   "sense_key": "stream",
+   "ex_en": "A clear rivulet ran through the wood.",
+   "ex_cn": "一条清澈的小溪流过树林。"
+  },
+  {
+   "word": "bemoaning",
+   "ipa": "/bɪˈməʊnɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "哀叹(bemoan)",
+   "gloss_en": "expressing sorrow or complaint about",
+   "sense_key": "lament",
+   "ex_en": "She sat bemoaning her lost fortune.",
+   "ex_cn": "她坐着哀叹失去的财产。"
+  },
+  {
+   "word": "overjoyed",
+   "ipa": "/ˌəʊvəˈdʒɔɪd/",
+   "pos": "adj.",
+   "gloss_cn": "欣喜若狂的",
+   "gloss_en": "extremely happy and delighted",
+   "sense_key": "delighted",
+   "ex_en": "He was overjoyed to see his friend again.",
+   "ex_cn": "再见到朋友他欣喜若狂。"
+  },
+  {
+   "word": "filthy",
+   "ipa": "/ˈfɪlθi/",
+   "pos": "adj.",
+   "gloss_cn": "肮脏的",
+   "gloss_en": "extremely dirty",
+   "sense_key": "dirty",
+   "ex_en": "His hands were filthy after the work.",
+   "ex_cn": "干完活他的手脏得很。"
+  },
+  {
+   "word": "receivers",
+   "ipa": "/rɪˈsiːvəz/",
+   "pos": "n.",
+   "gloss_cn": "(盛物的)容器",
+   "gloss_en": "containers that hold or store things",
+   "sense_key": "container",
+   "ex_en": "The large baskets served as receivers for the grain.",
+   "ex_cn": "那些大篮子用作盛谷物的容器。"
+  },
+  {
+   "word": "hamper",
+   "ipa": "/ˈhæmpə/",
+   "pos": "v.",
+   "gloss_cn": "困住、束缚",
+   "gloss_en": "to hold back or trap so movement is hard",
+   "sense_key": "hinder",
+   "ex_en": "The tight net hampered the goat's legs.",
+   "ex_cn": "紧绷的网困住了山羊的腿。"
+  },
+  {
+   "word": "pitfall",
+   "ipa": "/ˈpɪtfɔːl/",
+   "pos": "n.",
+   "gloss_cn": "(捕猎的)陷坑",
+   "gloss_en": "a hidden pit dug to trap animals",
+   "sense_key": "trap",
+   "ex_en": "The hunter dug a pitfall to catch the deer.",
+   "ex_cn": "猎人挖了个陷坑捕鹿。"
+  },
+  {
+   "word": "hurdles",
+   "ipa": "/ˈhɜːdlz/",
+   "pos": "n.",
+   "gloss_cn": "(可移动的)栅栏(复数)",
+   "gloss_en": "movable frames used as fences or pens",
+   "sense_key": "fence",
+   "ex_en": "They penned the sheep behind wooden hurdles.",
+   "ex_cn": "他们用木栅栏把羊圈起来。"
+  },
+  {
+   "word": "sagacious",
+   "ipa": "/səˈɡeɪʃəs/",
+   "pos": "adj.",
+   "gloss_cn": "机敏的、有洞察力的",
+   "gloss_en": "clever and quick to understand",
+   "sense_key": "shrewd",
+   "ex_en": "The sagacious old dog sensed danger at once.",
+   "ex_cn": "那只机敏的老狗立刻察觉到危险。"
+  },
+  {
+   "word": "tractable",
+   "ipa": "/ˈtræktəbl/",
+   "pos": "adj.",
+   "gloss_cn": "温顺的、易驾驭的",
+   "gloss_en": "easy to control or train",
+   "sense_key": "docile",
+   "ex_en": "After weeks the wild goat grew tractable.",
+   "ex_cn": "几周后野山羊变得温顺了。"
+  },
+  {
+   "word": "herbage",
+   "ipa": "/ˈhɜːbɪdʒ/",
+   "pos": "n.",
+   "gloss_cn": "草料、青草",
+   "gloss_en": "grass and low green plants, used for grazing",
+   "sense_key": "grass",
+   "ex_en": "The goats fed on the rich herbage.",
+   "ex_cn": "山羊吃着丰美的青草。"
+  },
+  {
+   "word": "forecast",
+   "ipa": "/ˈfɔːkɑːst/",
+   "pos": "n.",
+   "gloss_cn": "深谋远虑、先见",
+   "gloss_en": "thought given beforehand to plan wisely",
+   "sense_key": "foresight",
+   "ex_en": "With little forecast he began the huge task.",
+   "ex_cn": "他没多少深谋远虑就开始了这项大工程。"
+  },
+  {
+   "word": "tethered",
+   "ipa": "/ˈteðəd/",
+   "pos": "v.",
+   "gloss_cn": "拴住(tether 的过去式)",
+   "gloss_en": "tied to a fixed spot with a rope",
+   "sense_key": "tie",
+   "ex_en": "He tethered the goat to a stake.",
+   "ex_cn": "他把山羊拴在木桩上。"
+  },
+  {
+   "word": "bleating",
+   "ipa": "/ˈbliːtɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "咩咩叫(bleat)",
+   "gloss_en": "making the soft cry of a sheep or goat",
+   "sense_key": "bleat",
+   "ex_en": "The lambs were bleating for their mother.",
+   "ex_cn": "小羊羔咩咩地叫着找妈妈。"
+  },
+  {
+   "word": "dairy",
+   "ipa": "/ˈdeəri/",
+   "pos": "n.",
+   "gloss_cn": "乳制品、奶品",
+   "gloss_en": "milk and foods made from milk",
+   "sense_key": "dairy",
+   "ex_en": "The farm supplied the village with fresh dairy.",
+   "ex_cn": "农场给村子供应新鲜乳品。"
+  },
+  {
+   "word": "essays",
+   "ipa": "/ˈeseɪz/",
+   "pos": "n.",
+   "gloss_cn": "(初次的)尝试(复数)",
+   "gloss_en": "attempts or tries at doing something",
+   "sense_key": "attempt",
+   "ex_en": "His first essays at cooking were a failure.",
+   "ex_cn": "他初次尝试做饭以失败告终。"
+  },
+  {
+   "word": "dungeons",
+   "ipa": "/ˈdʌndʒənz/",
+   "pos": "n.",
+   "gloss_cn": "地牢(复数)",
+   "gloss_en": "dark underground prison cells",
+   "sense_key": "dungeon",
+   "ex_en": "The prisoners were thrown into cold dungeons.",
+   "ex_cn": "囚犯们被扔进阴冷的地牢。"
+  },
+  {
+   "word": "majesty",
+   "ipa": "/ˈmædʒəsti/",
+   "pos": "n.",
+   "gloss_cn": "(君王的)陛下、威严",
+   "gloss_en": "royal power and dignity; a title for a monarch",
+   "sense_key": "majesty",
+   "ex_en": "The crowd bowed before his majesty.",
+   "ex_cn": "众人在陛下面前鞠躬。"
+  },
+  {
+   "word": "especial",
+   "ipa": "/ɪˈspeʃl/",
+   "pos": "adj.",
+   "gloss_cn": "特别的(special 的旧式)",
+   "gloss_en": "special; more than usual",
+   "sense_key": "special",
+   "ex_en": "He took especial care of the little cat.",
+   "ex_cn": "他特别照顾那只小猫。"
+  },
+  {
+   "word": "plunder",
+   "ipa": "/ˈplʌndə/",
+   "pos": "n.",
+   "gloss_cn": "掠夺物、赃物",
+   "gloss_en": "goods taken by force, especially in war",
+   "sense_key": "loot",
+   "ex_en": "The pirates hid their plunder in a cave.",
+   "ex_cn": "海盗把掠夺物藏在山洞里。"
+  },
+  {
+   "word": "attendance",
+   "ipa": "/əˈtendəns/",
+   "pos": "n.",
+   "gloss_cn": "侍奉、随侍",
+   "gloss_en": "the service of waiting on or serving someone",
+   "sense_key": "service",
+   "ex_en": "The old servant was always in attendance on him.",
+   "ex_cn": "老仆人总是随侍在他左右。"
+  },
+  {
+   "word": "equipage",
+   "ipa": "/ˈekwɪpɪdʒ/",
+   "pos": "n.",
+   "gloss_cn": "装备、行头",
+   "gloss_en": "a person's outfit and equipment",
+   "sense_key": "gear",
+   "ex_en": "His strange equipage made the children stare.",
+   "ex_cn": "他古怪的行头引得孩子们直盯着看。"
+  },
+  {
+   "word": "hurtful",
+   "ipa": "/ˈhɜːtfl/",
+   "pos": "adj.",
+   "gloss_cn": "有害的",
+   "gloss_en": "causing harm or damage",
+   "sense_key": "harmful",
+   "ex_en": "Too much sun can be hurtful to the skin.",
+   "ex_cn": "过多的日晒会伤害皮肤。"
+  },
+  {
+   "word": "thighs",
+   "ipa": "/θaɪz/",
+   "pos": "n.",
+   "gloss_cn": "大腿(复数)",
+   "gloss_en": "the upper parts of the legs above the knees",
+   "sense_key": "thigh",
+   "ex_en": "The long coat reached down to his thighs.",
+   "ex_cn": "长外套一直垂到他的大腿。"
+  },
+  {
+   "word": "buskins",
+   "ipa": "/ˈbʌskɪnz/",
+   "pos": "n.",
+   "gloss_cn": "半统靴、长筒靴(复数)",
+   "gloss_en": "boots reaching to the calf or knee",
+   "sense_key": "boots",
+   "ex_en": "The hunter wore rough leather buskins.",
+   "ex_cn": "猎人穿着粗糙的皮长靴。"
+  },
+  {
+   "word": "spatterdashes",
+   "ipa": "/ˈspætədæʃɪz/",
+   "pos": "n.",
+   "gloss_cn": "护腿、绑腿(复数)",
+   "gloss_en": "leggings worn to keep mud off the legs",
+   "sense_key": "leggings",
+   "ex_en": "He tied spatterdashes over his boots.",
+   "ex_cn": "他在靴子外绑上护腿。"
+  },
+  {
+   "word": "thongs",
+   "ipa": "/θɒŋz/",
+   "pos": "n.",
+   "gloss_cn": "皮带、细皮条(复数)",
+   "gloss_en": "narrow strips of leather used as ties",
+   "sense_key": "strap",
+   "ex_en": "The bundle was bound with leather thongs.",
+   "ex_cn": "包裹用皮条捆着。"
+  },
+  {
+   "word": "moustachios",
+   "ipa": "/məˈstɑːʃiəʊz/",
+   "pos": "n.",
+   "gloss_cn": "大八字胡(复数)",
+   "gloss_en": "large or long moustaches",
+   "sense_key": "moustache",
+   "ex_en": "The old sailor had thick grey moustachios.",
+   "ex_cn": "老水手留着浓密的灰色大胡子。"
+  },
+  {
+   "word": "cultivated",
+   "ipa": "/ˈkʌltɪveɪtɪd/",
+   "pos": "v.",
+   "gloss_cn": "耕种、种植(cultivate)",
+   "gloss_en": "prepared and used land for growing crops",
+   "sense_key": "cultivate",
+   "ex_en": "They cultivated the field every spring.",
+   "ex_cn": "他们每年春天耕种这片田。"
+  },
+  {
+   "word": "encircled",
+   "ipa": "/ɪnˈsɜːkld/",
+   "pos": "v.",
+   "gloss_cn": "环绕、围住(encircle)",
+   "gloss_en": "formed a ring around something",
+   "sense_key": "surround",
+   "ex_en": "A tall hedge encircled the garden.",
+   "ex_cn": "一道高高的树篱环绕着花园。"
+  },
+  {
+   "word": "squab",
+   "ipa": "/skwɒb/",
+   "pos": "n.",
+   "gloss_cn": "厚软垫、卧榻",
+   "gloss_en": "a thick soft cushion or couch",
+   "sense_key": "cushion",
+   "ex_en": "He rested on a squab made of soft skins.",
+   "ex_cn": "他躺在用软皮做的软垫上。"
+  },
+  {
+   "word": "medicinal",
+   "ipa": "/məˈdɪsɪnl/",
+   "pos": "adj.",
+   "gloss_cn": "药用的",
+   "gloss_en": "used as medicine or for healing",
+   "sense_key": "medicinal",
+   "ex_en": "These leaves have medicinal value.",
+   "ex_cn": "这些叶子有药用价值。"
+  },
+  {
+   "word": "hazardous",
+   "ipa": "/ˈhæzədəs/",
+   "pos": "adj.",
+   "gloss_cn": "危险的",
+   "gloss_en": "full of risk or danger",
+   "sense_key": "dangerous",
+   "ex_en": "Crossing the river was a hazardous task.",
+   "ex_cn": "过河是件危险的事。"
+  },
+  {
+   "word": "thunderstruck",
+   "ipa": "/ˈθʌndəstrʌk/",
+   "pos": "adj.",
+   "gloss_cn": "惊呆的、大惊失色的",
+   "gloss_en": "extremely shocked and amazed",
+   "sense_key": "astonished",
+   "ex_en": "She stood thunderstruck at the terrible news.",
+   "ex_cn": "听到噩耗她惊呆了。"
+  }
+ ],
+ "skipped": [
+  "puddings(太基础)",
+  "consume(太基础)",
+  "suggesting(太基础)",
+  "decreased(太基础)",
+  "maddest(太基础)",
+  "unlikely(太基础)",
+  "expectations(太基础)",
+  "rivals(太基础)",
+  "competitor(太基础)",
+  "carrot(太基础)",
+  "colours(太基础)",
+  "miracles(太基础)",
+  "threaten(太基础)",
+  "hottest(太基础)",
+  "coolest(太基础)",
+  "wiser(太基础)",
+  "grudged(与grudge重复)",
+  "terra(拉丁专名)",
+  "firma(拉丁专名)",
+  "smallness(派生·太基础)",
+  "clearness(派生·太基础)",
+  "repined(与repine重复)",
+  "product(太基础)",
+  "unexpected(太基础)",
+  "eleventh(序数·太基础)",
+  "western(太基础)",
+  "drills(太基础)",
+  "madness(派生·太基础)",
+  "maintain(太基础)",
+  "gallon(太基础)",
+  "sweeten(派生·太基础)",
+  "praise(太基础)",
+  "favourite(太基础)",
+  "multiply(太基础)",
+  "sketch(太基础)",
+  "driest(太基础)"
+ ]
+}

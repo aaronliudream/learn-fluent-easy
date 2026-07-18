@@ -5,10 +5,15 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from "node:fs";
 
 const KEY = process.argv[2];
-if (!KEY) { console.error("用法: node scripts/library/_gen-dict-sql.mjs <book_key>"); process.exit(1); }
+if (!KEY) { console.error("用法: node scripts/library/_gen-dict-sql.mjs <book_key> [minBatch]"); process.exit(1); }
+// minBatch:只处理 batchNN(NN>=minBatch)。缺口 SQL 单出用(老卡 batch01-19 未补 gloss_en,先只出 batch20+)。
+const minBatch = Number(process.argv[3]) || 0;
+const GAP = minBatch > 0;
 const outDir = `scripts/library/books/dict-data/${KEY}/out`;
 if (!existsSync(outDir)) { console.error(`✗ 缺目录 ${outDir}`); process.exit(1); }
-const files = readdirSync(outDir).filter((f) => /^batch\d+\.json$/.test(f)).sort();
+const files = readdirSync(outDir)
+  .filter((f) => /^batch\d+\.json$/.test(f) && Number(f.match(/\d+/)[0]) >= minBatch)
+  .sort();
 if (!files.length) { console.error(`✗ ${outDir} 无 batch*.json`); process.exit(1); }
 
 const book = JSON.parse(readFileSync(`scripts/library/books/${KEY}.json`, "utf8"));
@@ -67,7 +72,7 @@ SELECT 'after' AS phase,
   (SELECT count(*) FROM public.phrase_explanations WHERE target_lang='read-v1') AS readv1_cards;
 COMMIT;
 `;
-writeFileSync(`SQLAA/library-dict-${KEY}.sql`, sql);
+writeFileSync(`SQLAA/library-dict-${KEY}${GAP ? "-gap" : ""}.sql`, sql);
 
 // ---- 审稿 md ----
 const rowsMd = cards.map((c) => `| **${c.word}** | ${c.ipa} | ${c.pos} | ${c.gloss_cn} | ${c.gloss_en} | ${c.sense_key} | ${c.ex_en} | ${c.ex_cn} |`);
@@ -96,7 +101,7 @@ ${rowsMd.join("\n")}
 > 边界:只产文件+SQL(Aaron 跑);未落库、未动读路径/收藏。绝不写那三张词汇表。
 `;
 mkdirSync("REVIEWAA/图书馆词表", { recursive: true });
-writeFileSync(`REVIEWAA/图书馆词表/${KEY}-dict-review.md`, md);
+writeFileSync(`REVIEWAA/图书馆词表/${KEY}-dict${GAP ? "-gap" : ""}-review.md`, md);
 
 console.log(`✓ ${KEY} 词典:${cards.length} 张卡(跨批去重 ${dupN}·跳过 ${skippedTotal})← ${files.length} 批`);
-console.log(`  → SQLAA/library-dict-${KEY}.sql + REVIEWAA/图书馆词表/${KEY}-dict-review.md`);
+console.log(`  → SQLAA/library-dict-${KEY}${GAP ? "-gap" : ""}.sql + REVIEWAA/图书馆词表/${KEY}-dict${GAP ? "-gap" : ""}-review.md`);

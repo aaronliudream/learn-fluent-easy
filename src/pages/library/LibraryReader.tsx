@@ -8,8 +8,8 @@
  */
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Play, Square, Volume2, Gauge, ChevronLeft, ChevronRight, X, Bookmark } from "lucide-react";
-import { speak, speakFromUrl, stopSpeaking, unlockAudioSync, prefetchTTS } from "@/lib/speak";
+import { ArrowLeft, Play, Square, Volume2, Gauge, ChevronLeft, ChevronRight, X, Bookmark, Loader2 } from "lucide-react";
+import { speak, speakFromUrl, stopSpeaking, unlockAudioSync, prefetchTTS, isSpeaking } from "@/lib/speak";
 import { T } from "@/i18n/T";
 import { TappableLine } from "@/components/TappableLine";
 import ChapterNotesCollection from "@/components/library/ChapterNotesCollection";
@@ -115,6 +115,8 @@ export default function LibraryReader() {
   const [reveal, setReveal] = useState(false); // 移动端长按 → 揭示可点词
   const [showOnboard, setShowOnboard] = useState(false); // 首次引导提示
   const [revealedCn, setRevealedCn] = useState<Set<number>>(new Set()); // 点句子 → 就地显该句中文(章内数组下标)
+  const [revealedCnPara, setRevealedCnPara] = useState<Set<number>>(new Set()); // 段右"中"按钮 → 显该段整段中译(paraIdx;仅 en 模式)
+  const [preparing, setPreparing] = useState(false); // 朗读首句冷合成中 → 播放键 loading 态
 
   // 书签(登录用户):段落级手动标记多个精准点,与续读独立。bookmarkedSeqs=图标实心判定;bookmarks=面板列表。
   const [signedIn, setSignedIn] = useState(false);
@@ -219,14 +221,21 @@ export default function LibraryReader() {
       if (!alive) return;
       liRefs.current = [];
       setRevealedCn(new Set());
+      setRevealedCnPara(new Set());
       setSentences(ss);
       setIllus(ill);
       setChunkTerms(terms);
       setChapterLoading(false);
+      // 预热本章前两句(实时合成的)→ 首次点朗读不冷、不"点了没反应"。有 audio_url 的无需。
+      for (const s of ss.slice(0, 2)) {
+        if (s && !(s.audio_url && !slow)) prefetchTTS(s.text_en, { accent: READ_ACCENT, speed });
+      }
     })();
     return () => {
       alive = false;
     };
+    // slow/speed 仅用于预热音质,故意不入依赖(否则切语速会重载整章)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [book, chapterIdx]);
 
   // 章句就绪 → 定位:有断点 seq 则滚到该句,否则滚到章首
@@ -410,24 +419,43 @@ export default function LibraryReader() {
     playSeq.current++;
     stopSpeaking();
     setPlayingAll(false);
+    setPreparing(false);
     setCurrent(-1);
   }, []);
 
-  // 连续朗读:从章内 startIdx 起顺序播到本章末。不跨章自动续(sentences 只含当前章)。
+  // 连续朗读:从章内 startIdx 起顺序播到 stopIdx(不含);默认播到本章末。
+  // 段左喇叭传该段末句+1 → 只读该段、读完停(方便"这段没听懂重听")。
   const playChapterFrom = useCallback(
-    (startIdx: number) => {
+    (startIdx: number, stopIdx: number = sentences.length) => {
       if (startIdx < 0 || startIdx >= sentences.length) return;
+      const end = Math.min(stopIdx, sentences.length);
       unlockAudioSync();
       const my = ++playSeq.current;
       setPlayingAll(true);
       const run = async () => {
-        for (let i = startIdx; i < sentences.length; i++) {
+        // 首句可能冷合成 → loading 态:音频真正开播(isSpeaking)才关,兜底 6s。
+        const first = sentences[startIdx];
+        if (first && !(first.audio_url && !slow)) {
+          setPreparing(true);
+          prefetchTTS(first.text_en, { accent: READ_ACCENT, speed });
+          const poll = setInterval(() => {
+            if (my !== playSeq.current || isSpeaking()) {
+              setPreparing(false);
+              clearInterval(poll);
+            }
+          }, 100);
+          setTimeout(() => {
+            clearInterval(poll);
+            setPreparing(false);
+          }, 6000);
+        }
+        for (let i = startIdx; i < end; i++) {
           if (my !== playSeq.current) return;
           setCurrent(i);
           bump(i);
-          // 预取下一句(仅实时合成的句子;有 audio_url 的无需预热)
+          // 预取下一句(仅实时合成的、且不越过本次终点)
           const nxt = sentences[i + 1];
-          if (nxt && !(nxt.audio_url && !slow)) {
+          if (nxt && i + 1 < end && !(nxt.audio_url && !slow)) {
             prefetchTTS(nxt.text_en, { accent: READ_ACCENT, speed });
           }
           await playSentence(sentences[i]);
@@ -652,7 +680,15 @@ export default function LibraryReader() {
 
       {/* 工具条:朗读本章 / 语速 / 三态切换(sticky) */}
       <div className="sticky top-0 z-10 mb-3 flex flex-wrap items-center gap-2 bg-[#faf8f5]/90 py-2 backdrop-blur">
-        {playingAll ? (
+        {preparing ? (
+          <button
+            type="button"
+            onClick={stopAll}
+            className="inline-flex items-center gap-1.5 rounded-full bg-sky-600 px-4 py-2 text-sm font-semibold text-white shadow-sm"
+          >
+            <Loader2 className="size-4 animate-spin" /> <T>准备中…</T>
+          </button>
+        ) : playingAll ? (
           <button
             type="button"
             onClick={stopAll}
@@ -794,10 +830,28 @@ export default function LibraryReader() {
                       />
                     </button>
                   )}
-                  {/* 英文段(en / both 模式);段首一个喇叭(章首段除外,由顶部"朗读本章"覆盖),从本段起连读 */}
+                  {/* 段右"中"按钮:仅纯英文(en)模式出现 → 单独显该段整段中译;both/cn 模式整篇已有中文,自动隐藏,不打架。 */}
+                  {mode === "en" && cnJoined && (
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setRevealedCnPara((prev) => {
+                          const n = new Set(prev);
+                          if (n.has(para.paraIdx)) n.delete(para.paraIdx);
+                          else n.add(para.paraIdx);
+                          return n;
+                        })
+                      }
+                      aria-label={revealedCnPara.has(para.paraIdx) ? "隐藏本段中文" : "显示本段中文"}
+                      className={`absolute right-0 z-10 inline-flex size-7 items-center justify-center rounded-full text-[13px] font-bold transition md:-right-9 ${signedIn ? "top-9 md:top-8" : "top-0.5 md:top-0"} ${revealedCnPara.has(para.paraIdx) ? "bg-sky-100 text-sky-600" : "text-slate-300 hover:bg-sky-50 hover:text-sky-500"}`}
+                    >
+                      中
+                    </button>
+                  )}
+                  {/* 英文段(en / both 模式);段首一个喇叭(章首段除外),朗读本段 */}
                   {mode !== "cn" && (
                     <p
-                      className={`${signedIn ? "pr-8 md:pr-0 " : ""}text-[18px] leading-[1.9] text-slate-800${
+                      className={`${signedIn || mode === "en" ? "pr-8 md:pr-0 " : ""}text-[18px] leading-[1.9] text-slate-800${
                         dcActive
                           ? " first-letter:float-left first-letter:mr-2 first-letter:font-serif first-letter:text-[3.4em] first-letter:font-bold first-letter:leading-[1.1] first-letter:text-slate-700"
                           : ""
@@ -806,8 +860,9 @@ export default function LibraryReader() {
                       {!isFirstPara && (
                         <button
                           type="button"
-                          onClick={() => playChapterFrom(para.items[0].i)}
-                          aria-label="从本段朗读"
+                          onClick={() => playChapterFrom(para.items[0].i, para.items[para.items.length - 1].i + 1)}
+                          aria-label="朗读本段"
+                          title="朗读本段(读完停)"
                           className="mr-1 inline-flex size-5 -translate-y-px items-center justify-center rounded-full align-middle text-slate-300 transition hover:bg-slate-100 hover:text-sky-500"
                         >
                           <Volume2 className="size-3.5" />
@@ -854,6 +909,10 @@ export default function LibraryReader() {
                         );
                       })}
                     </p>
+                  )}
+                  {/* en 模式 + 点了段右"中" → 显该段整段中译(灰字附段后) */}
+                  {mode === "en" && revealedCnPara.has(para.paraIdx) && cnJoined && (
+                    <p className="mt-1.5 text-[15px] leading-relaxed text-slate-500">{cnJoined}</p>
                   )}
                   {/* 中文段(both / cn 模式):整段对应,不再每句一块 */}
                   {mode !== "en" && cnJoined && (

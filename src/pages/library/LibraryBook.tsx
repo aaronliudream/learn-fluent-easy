@@ -567,9 +567,6 @@ export default function LibraryBook() {
         </section>
       )}
 
-      {book.copyright_note && (
-        <p className="mt-8 text-[11px] leading-relaxed text-slate-300">{book.copyright_note}</p>
-      )}
     </main>
   );
 }

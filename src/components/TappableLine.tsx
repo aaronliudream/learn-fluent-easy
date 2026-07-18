@@ -13,7 +13,7 @@ import {
   type LibraryFavoriteKind,
 } from "@/lib/library/favorites";
 import { isFunctionWord } from "@/lib/library/wordClass";
-import type { LibraryCultureNote } from "@/lib/library/data";
+import { senseNormalize, type LibraryCultureNote, type LibraryWordSense } from "@/lib/library/data";
 
 /** 精读收藏上下文:由 LibraryReader 传入(整句 cn + book_id);美语课不传 → 不渲染收藏按钮/标记。 */
 export type FavoriteCtx = { bookId: string; srcZh: string };
@@ -210,6 +210,7 @@ function ExplainPopover({
   triggerClassName,
   onFavoriteChange,
   note,
+  sense,
   children,
 }: {
   phrase: string;
@@ -219,6 +220,7 @@ function ExplainPopover({
   triggerClassName?: string; // 图书馆传入带标记的点读样式;不传 → 用默认(美语课不变)
   onFavoriteChange?: (term: string, kind: LibraryFavoriteKind, favorited: boolean) => void;
   note?: LibraryCultureNote; // 图书馆文化笔记(稀疏):有则卡底显示「💡 标题 ›」;无则整行不出现
+  sense?: LibraryWordSense; // 古今异义按书覆盖:命中则用书中义(不走边缘),卡片显两义、书中义在前
   children: React.ReactNode;
 }) {
   const [open, setOpen] = useState(false);
@@ -235,6 +237,19 @@ function ExplainPopover({
 
   const fetchExplanation = async () => {
     if (data || loading) return;
+    if (sense) {
+      // 古今异义覆盖命中:不走边缘,直接用【书中义】构造 data。
+      // one_line_cn=书中义 → 收藏冻结 zh=书中义、复习也测书中义;isLight → 显收藏按钮。
+      setData({
+        phrase,
+        pos: `${sense.pos ?? ""}${sense.ipa ? `  ${sense.ipa}` : ""}`.trim(),
+        one_line_cn: sense.gloss_cn,
+        example: sense.example_en ? { en: sense.example_en, cn: sense.example_cn ?? "" } : undefined,
+      });
+      setIsLight(true);
+      if (favorite) isLibraryFavorite(phrase, favKind).then(setFav).catch(() => {});
+      return;
+    }
     setLoading(true);
     setError(null);
     try {
@@ -413,6 +428,7 @@ function ExplainPopover({
                 </div>
               )}
               {data && !loading && <LessonBody data={data} />}
+              {sense && data && !loading && <SenseOverrideExtra sense={sense} />}
               {note && <CultureNoteLine note={note} />}
             </>
           )}
@@ -560,6 +576,35 @@ function LessonBody({ data }: { data: Explanation }) {
 }
 
 /**
+ * 古今异义覆盖:书中义已作为主释义(👉 一句话解释)显示;这里补【英文书中义】+【今义】对照。
+ * 读者既懂本书(18 世纪)用法,又知道这词今天啥意思,不至于用现代义把整句读反。
+ */
+function SenseOverrideExtra({ sense }: { sense: LibraryWordSense }) {
+  return (
+    <div className="mt-3 space-y-2 border-t border-border pt-2.5">
+      {sense.gloss_en && (
+        <div className="text-sm leading-relaxed text-foreground/90">
+          <span className="mr-1 text-[11px] font-bold uppercase tracking-wide text-primary">EN</span>
+          {sense.gloss_en}
+        </div>
+      )}
+      {(sense.modern_cn || sense.modern_en) && (
+        <div className="rounded-lg border border-amber-300/40 bg-amber-50/60 p-2.5 dark:border-amber-500/30 dark:bg-amber-500/10">
+          <div className="text-[12px] font-bold text-amber-700 dark:text-amber-300">🕰 今义</div>
+          <div className="mt-0.5 text-sm leading-relaxed text-foreground/90">
+            {sense.modern_cn}
+            {sense.modern_en ? <span className="text-muted-foreground"> · {sense.modern_en}</span> : null}
+          </div>
+        </div>
+      )}
+      <div className="text-[11px] leading-relaxed text-muted-foreground">
+        📖 上方为本书(18 世纪)用义;收藏后复习测的是这个书中义。
+      </div>
+    </div>
+  );
+}
+
+/**
  * 图书馆文化笔记 · 卡底一行「💡 标题 ›」,默认收起;点开展开 body_zh(有 body_en 则给 EN 切换)。
  * 讲的是史实/地理/气象小知识(为什么是 cyclone 不是 tornado…),稀疏,只有挂了笔记的词才出现。
  */
@@ -625,6 +670,7 @@ export function TappableLine({
   reveal,
   chunkPhrases,
   cultureNotes,
+  wordSenses,
   onFavoriteChange,
 }: {
   sentence: string;
@@ -639,6 +685,8 @@ export function TappableLine({
   chunkPhrases?: string[];
   /** 本书文化笔记(归一化 term → 笔记)。稀疏,仅命中的词卡底显示「💡 标题」。仅图书馆传。 */
   cultureNotes?: Map<string, LibraryCultureNote>;
+  /** 本书古今异义覆盖(归一化 → 覆盖)。命中的词用书中义(不走边缘、卡片显两义)。仅图书馆传。 */
+  wordSenses?: Map<string, LibraryWordSense>;
   onFavoriteChange?: (term: string, kind: LibraryFavoriteKind, favorited: boolean) => void;
 }) {
   const tokens = useMemo(() => tokenize(sentence, chunkPhrases ?? KNOWN_PHRASES), [sentence, chunkPhrases]);
@@ -653,6 +701,7 @@ export function TappableLine({
         const isChunk = tok.phrase.includes(" ");
         const isFav = !!favoritedTerms?.has(tok.phrase);
         const note = cultureNotes?.get(tok.phrase);
+        const sense = wordSenses?.get(senseNormalize(tok.phrase));
         return (
           <ExplainPopover
             key={i}
@@ -662,6 +711,7 @@ export function TappableLine({
             isFavorited={isFav}
             triggerClassName={libraryMode ? libraryTriggerClass(isChunk, isFav, !!reveal) : undefined}
             note={note}
+            sense={sense}
             onFavoriteChange={onFavoriteChange}
           >
             <span>{rendered}</span>

@@ -178,12 +178,34 @@ export async function buildReviewQuestions(
   const poolZh = (k: LibraryFavoriteKind): PoolItem[] => [...favZh[k], ...fb[k].filter((x) => x.zh).map((x) => ({ value: x.zh as string, term: x.term }))];
 
   const cardMeta = await fetchCardMeta(poolFavs);
+  // 古今异义按书覆盖:en 模式题干(gloss_en)对覆盖词取【书中义】,否则回退全局卡。key=`${book_key}|${normalized}`。
+  const senseOv = new Map<string, string>(); // key → gloss_en
+  const bookKeyOf = new Map<string, string>(); // book_id → book_key
+  try {
+    const bookIds = [...new Set(poolFavs.map((f) => f.book_id).filter(Boolean))] as string[];
+    const ovNorms = [...new Set(poolFavs.map((f) => normalizeCard(f.term)).filter(Boolean))];
+    if (bookIds.length && ovNorms.length) {
+      const { data: books } = await db.from("library_books").select("id,book_key").in("id", bookIds);
+      for (const b of (books ?? []) as { id: string; book_key: string }[]) bookKeyOf.set(b.id, b.book_key);
+      const bookKeys = [...new Set([...bookKeyOf.values()])];
+      if (bookKeys.length) {
+        const { data } = await db.from("library_word_senses").select("book_key,normalized,gloss_en").in("book_key", bookKeys).in("normalized", ovNorms);
+        for (const r of (data ?? []) as { book_key: string; normalized: string; gloss_en: string }[]) senseOv.set(`${r.book_key}|${r.normalized}`, r.gloss_en);
+      }
+    }
+  } catch (e) {
+    console.warn("[library review] word-sense override query failed", e);
+  }
   // sense_key 查询表(收藏 + 兜底池),按 normalizeCard(term) 查。
   const senseByTerm = new Map<string, string>();
   for (const [n, m] of cardMeta) if (m.sense) senseByTerm.set(n, m.sense);
   for (const arr of [fb.word, fb.chunk]) for (const x of arr) if (x.sense) senseByTerm.set(normalizeCard(x.term), x.sense);
   const senseOf = (term: string): string | null => senseByTerm.get(normalizeCard(term)) ?? null;
-  const glossEnOf = (term: string): string | null => cardMeta.get(normalizeCard(term))?.gloss_en ?? null;
+  const glossEnOf = (term: string, bookId?: string | null): string | null => {
+    const bk = bookId ? bookKeyOf.get(bookId) : null;
+    const ov = bk ? senseOv.get(`${bk}|${normalizeCard(term)}`) : null; // 覆盖词取书中义 gloss_en
+    return ov ?? cardMeta.get(normalizeCard(term))?.gloss_en ?? null;
+  };
 
   // pos 查询表(收藏 + 兜底池)→ 词类过滤用。
   const posByTerm = new Map<string, string>();
@@ -249,7 +271,7 @@ export async function buildReviewQuestions(
         });
       }
     } else {
-      const gen = glossEnOf(f.term);
+      const gen = glossEnOf(f.term, f.book_id);
       if (gen) {
         builders.push(() => {
           const a = assemble(f.term, pickDistractors(poolTerms(f.kind), f.term, 3, exclude, cls));

@@ -88,31 +88,31 @@ export default function LibraryHome() {
       >
         <ArrowLeft className="size-4" /> <T>返回首页</T>
       </BackLink>
-      <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <h1 className="text-2xl font-extrabold text-slate-900">
-            <T>📚 图书馆</T>
-          </h1>
-          <p className="mt-1 text-sm text-slate-500">
-            <T>点词查解释 · 文章朗读</T>
-          </p>
-        </div>
-
-        {/* 我的词库入口:标题栏右侧醒目渐变卡按钮(替代原来那行小字) */}
-        <Link
-          to="/library/vocab"
-          className="group flex shrink-0 items-center gap-2.5 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 px-3.5 py-2.5 text-white shadow-md transition hover:shadow-lg hover:brightness-105 active:scale-[0.98]"
-        >
-          <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-white/20">
-            <BookMarked className="size-5" />
-          </span>
-          <span className="text-left leading-tight">
-            <span className="block text-[15px] font-bold"><T>我的词库</T></span>
-            <span className="hidden text-[11px] text-sky-100 sm:block"><T>收藏 · 复习 · 掌握</T></span>
-          </span>
-          <ArrowRight className="size-4 shrink-0 transition group-hover:translate-x-0.5" />
-        </Link>
+      <div className="min-w-0">
+        <h1 className="text-2xl font-extrabold text-slate-900">
+          <T>📚 图书馆</T>
+        </h1>
+        <p className="mt-1 text-sm text-slate-500">
+          <T>点词查解释 · 文章朗读</T>
+        </p>
       </div>
+
+      {/* 我的词库入口:整幅醒目卡,居中显眼(原来藏在标题右侧,用户看不到) */}
+      <Link
+        to="/library/vocab"
+        className="group mt-5 flex items-center justify-between gap-3 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 px-5 py-4 text-white shadow-md transition hover:shadow-lg hover:brightness-105 active:scale-[0.99]"
+      >
+        <span className="flex items-center gap-3">
+          <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-white/20">
+            <BookMarked className="size-6" />
+          </span>
+          <span className="leading-tight">
+            <span className="block text-lg font-bold"><T>我的词库</T></span>
+            <span className="block text-[12px] text-sky-100"><T>收藏 · 复习 · 掌握</T></span>
+          </span>
+        </span>
+        <ArrowRight className="size-5 shrink-0 transition group-hover:translate-x-0.5" />
+      </Link>
 
       {/* 年龄段筛选 */}
       <div className="mt-4 flex flex-wrap gap-2">

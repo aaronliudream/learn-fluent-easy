@@ -357,6 +357,41 @@ export default function LibraryReader() {
     [sentences, persist],
   );
 
+  // 滚动阅读也记进度(修根因):原先只有"朗读播放"逐句才 bump,**纯滚动阅读的位置从不保存**
+  // → 退出再进回不到读到的那段。这里按视口顶部锚点句节流记 last_seq,不放音频也能精准续读。
+  useEffect(() => {
+    if (loading || chapterLoading || !sentences.length) return;
+    let raf = 0;
+    let lastAt = 0;
+    const track = () => {
+      if (playingAll) return; // 播放时以播放句为准(playChapterFrom 已 bump),不抢
+      const now = Date.now();
+      if (now - lastAt < 700) return; // 节流
+      lastAt = now;
+      const line = window.innerHeight * 0.3; // 阅读锚线:视口上部 30%
+      let anchor = -1;
+      for (let i = 0; i < liRefs.current.length; i++) {
+        const el = liRefs.current[i];
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= line) anchor = i;
+        else break; // 句子按文档顺序:第一句还没越过锚线,后面都没越过
+      }
+      if (anchor >= 0) bump(anchor);
+    };
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        track();
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [loading, chapterLoading, sentences, playingAll, bump]);
+
   // 播一句:audio_url 有且非慢速则用预生成;否则实时 speak(慢速强制实时以尊重语速)
   const playSentence = useCallback(
     (s: LibrarySentence): Promise<void> => {

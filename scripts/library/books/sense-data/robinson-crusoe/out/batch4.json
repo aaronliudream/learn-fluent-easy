@@ -34,9 +34,9 @@
    "normalized": "pretend",
    "ipa": "/prɪˈtend/",
    "pos": "v.",
-   "sense_key": "lay_claim",
-   "gloss_cn": "企图、图谋;擅自要求(权利)",
-   "gloss_en": "to attempt or aspire to; to lay claim to something",
+   "sense_key": "lay-claim-or-feign",
+   "gloss_cn": "(古·多为)企图、擅自要求(权利)、僭称;个别处才是“假装”",
+   "gloss_en": "to presume, aspire, or lay claim to (a right); occasionally to feign",
    "archaic": true,
    "modern_cn": "假装、佯装",
    "modern_en": "to give a false appearance of something",
@@ -72,5 +72,7 @@
    "example_cn": "他决不容许他们碰他的那批火药"
   }
  ],
- "skipped": ["resolve(本书=决心/下决心/拿定主意,同现代义)"]
+ "skipped": [
+  "resolve(本书=决心/下决心/拿定主意,同现代义)"
+ ]
 }

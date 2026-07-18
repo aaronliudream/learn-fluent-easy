@@ -10,7 +10,8 @@
 - 短语动词:set sail / give over / take notice of / put to sea / carry on / lay up / break out / come ashore
 - 惯用固定表达:in order to / by degrees / make haste / take care of / at length / in the meantime / of late / take pains
 - 强搭配/连接语:take notice of / a great deal of / for the most part / on shore / put an end to
-判据:**可迁移且今天仍用得上**("学了别处还会遇到、还能自己用")。**宁缺毋滥**——按章长挑 ~10–22(短章少、长章多),质量优先。
+- **⚓ 航海固定搭配(本书特色·务必收)**:海事术语里成组出现、整体一个意思的固定说法 —— 如 `shoulder-of-mutton sail`(三角帆)/ `weigh anchor`(起锚)/ `come to an anchor`(抛锚停泊)/ `make sail`(扬帆)/ `lay to`(顶风停船)/ `bear away`(顺风转向)/ `run aground`(搁浅)。这类是**整体固定搭配**,逐词拆开读者猜不出(mutton≠羊肉),正是语块该收的。literal 逐词讲清、gloss 给整体义、note 点明是航海固定说法。
+判据:**可迁移或整体固定**("学了别处还会遇到、或整体是一个固定说法")。**宁缺毋滥**——按章长挑 ~10–22(短章少、长章多),质量优先。
 
 ## 不收(skip)—— 记进 skipped 数组
 - 专名/人名/地名(Crusoe / Friday / Xury / Sallee / the Brazils / Yarmouth / the Moors)

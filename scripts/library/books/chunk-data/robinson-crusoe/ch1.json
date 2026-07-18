@@ -1,89 +1,852 @@
 {
-  "chapter": 1,
-  "chunks": [
-    { "head": "leave off", "gloss": "停止、戒掉、不再继续", "ipa": "/liːv ɒf/",
-      "note": "leave off (doing sth) = 停止做某事、不再继续;也指戒掉某习惯。",
-      "literal": [{"word":"leave","meaning_cn":"停止","note_cn":"此处非'离开'义,与 off 合成'停止'"},{"word":"off","meaning_cn":"脱离、中断"}],
-      "ex_en": "She left off talking when the teacher came in.", "ex_cn": "老师进来时她停止了说话。",
-      "occ": [[2,"leaving off"]] },
-
-    { "head": "go abroad", "gloss": "出国、去国外", "ipa": "/ɡəʊ əˈbrɔːd/",
-      "note": "go abroad = 出国(留学、工作、旅行等)。",
-      "literal": [{"word":"go","meaning_cn":"去"},{"word":"abroad","meaning_cn":"到国外、在国外"}],
-      "ex_en": "Many students want to go abroad to study.", "ex_cn": "许多学生想出国留学。",
-      "occ": [[15,"going abroad"]] },
-
-    { "head": "in the meantime", "gloss": "与此同时、在此期间", "ipa": "/ɪn ðə ˈmiːntaɪm/",
-      "note": "in the meantime = 在两件事之间的这段时间里、与此同时。",
-      "literal": [{"word":"in","meaning_cn":"在…期间"},{"word":"the","meaning_cn":"这(那)"},{"word":"meantime","meaning_cn":"其间","note_cn":"两事之间的一段时间"}],
-      "ex_en": "Dinner is at seven; in the meantime, let's play a game.", "ex_cn": "晚饭七点吃,在这之前我们先玩个游戏吧。",
-      "occ": [[20,"in the meantime"]] },
-
-    { "head": "break loose", "gloss": "挣脱、脱身而出", "ipa": "/breɪk luːs/",
-      "note": "break loose = 挣脱束缚、逃脱;也指(骚乱、混乱)突然爆发。",
-      "literal": [{"word":"break","meaning_cn":"挣断、挣开","note_cn":"此处'挣脱',非'打碎'"},{"word":"loose","meaning_cn":"自由的、松开的","note_cn":"此处指'脱离束缚的状态'"}],
-      "ex_en": "The dog broke loose and ran into the park.", "ex_cn": "那只狗挣脱开,跑进了公园。",
-      "occ": [[20,"broke loose"]] },
-
-    { "head": "reflect upon", "gloss": "反思、认真思考", "ipa": "/rɪˈflekt əˈpɒn/",
-      "note": "reflect on/upon sth = 仔细思考、回想、反省某事。",
-      "literal": [{"word":"reflect","meaning_cn":"思考、反省","note_cn":"此处'思索',非'反射'"},{"word":"upon","meaning_cn":"对…、关于…","note_cn":"=on"}],
-      "ex_en": "At night she likes to reflect upon her day.", "ex_cn": "晚上她喜欢回想这一天。",
-      "occ": [[24,"reflect upon"]] },
-
-    { "head": "in a word", "gloss": "总之、一句话概括", "ipa": "/ɪn ə wɜːd/",
-      "note": "in a word = 概括地说、总而言之。",
-      "literal": [{"word":"in","meaning_cn":"用、以"},{"word":"a","meaning_cn":"一个"},{"word":"word","meaning_cn":"话、词"}],
-      "ex_en": "In a word, the trip was a great success.", "ex_cn": "总之,这次旅行非常成功。",
-      "occ": [[37,"in a word"]] },
-
-    { "head": "bound for", "gloss": "开往、驶向(某地)", "ipa": "/baʊnd fɔː/",
-      "note": "bound for + 地点 = (车、船、飞机)开往某地。",
-      "literal": [{"word":"bound","meaning_cn":"前往…的","note_cn":"此处形容词,非'跳跃/边界'义"},{"word":"for","meaning_cn":"朝向、去往"}],
-      "ex_en": "This train is bound for Beijing.", "ex_cn": "这趟列车开往北京。",
-      "occ": [[21,"bound for"]] },
-
-    { "head": "a great many", "gloss": "许多、大量", "ipa": "/ə ɡreɪt ˈmeni/",
-      "note": "a great many + 复数名词 = 很多、非常多。",
-      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"很大的"},{"word":"many","meaning_cn":"许多"}],
-      "ex_en": "A great many people came to the show.", "ex_cn": "很多人来看演出。",
-      "occ": [[71,"a great many"]] },
-
-    { "head": "on foot", "gloss": "步行、走路", "ipa": "/ɒn fʊt/",
-      "note": "on foot = 徒步、步行(去某地)。",
-      "literal": [{"word":"on","meaning_cn":"以…方式"},{"word":"foot","meaning_cn":"脚","note_cn":"此处'靠双脚',即步行"}],
-      "ex_en": "We went to school on foot every day.", "ex_cn": "我们每天步行上学。",
-      "occ": [[72,"on foot"]] },
-
-    { "head": "meet with", "gloss": "遭遇、遇到", "ipa": "/miːt wɪð/",
-      "note": "meet with sth = 遭遇(困难、事故、反对等);也表(正式)会面。本章为'遭遇'义。",
-      "literal": [{"word":"meet","meaning_cn":"遇到、碰上"},{"word":"with","meaning_cn":"带有、遭遇到"}],
-      "ex_en": "The plan met with a lot of problems.", "ex_cn": "这个计划遇到了很多问题。",
-      "occ": [[87,"meet with"]] },
-
-    { "head": "wear off", "gloss": "(感觉、效果)逐渐消退、减弱", "ipa": "/weər ɒf/",
-      "note": "wear off = (疼痛、新鲜感、药效等)逐渐减弱、消失。",
-      "literal": [{"word":"wear","meaning_cn":"逐渐减弱","note_cn":"此处'渐渐消退',非'穿戴/磨损'"},{"word":"off","meaning_cn":"掉、消失"}],
-      "ex_en": "After an hour the medicine began to wear off.", "ex_cn": "一小时后药效开始消退。",
-      "occ": [[92,"wore off"]] },
-
-    { "head": "look out for", "gloss": "留心寻找、物色", "ipa": "/lʊk aʊt fɔː/",
-      "note": "look out for = 留心寻找、物色某物;也表'当心、提防'。本章为'物色(一次航行)'义。",
-      "literal": [{"word":"look","meaning_cn":"看、寻找"},{"word":"out","meaning_cn":"向外、四处"},{"word":"for","meaning_cn":"为了、寻找"}],
-      "ex_en": "I'm looking out for a cheap flight to Tokyo.", "ex_cn": "我在物色一张去东京的便宜机票。",
-      "occ": [[92,"looked out for"]] },
-
-    { "head": "burst out", "gloss": "突然发作、爆发", "ipa": "/bɜːst aʊt/",
-      "note": "burst out = 突然(激烈地)发作;burst out laughing/crying = 突然大笑/大哭。",
-      "literal": [{"word":"burst","meaning_cn":"爆发、突然发出"},{"word":"out","meaning_cn":"出来"}],
-      "ex_en": "She burst out laughing at his joke.", "ex_cn": "听到他的笑话,她突然大笑起来。",
-      "occ": [[83,"burst out"]] }
-  ],
-  "skipped": [
-    "专名/人名/地名 e.g. Crusoe / Robinson Kreutznaer / York / Hull / Bremen / Yarmouth Roads / the Humber / Winterton Ness / Cromer / Jonah / Tarshish",
-    "一次性 nautical 硬词 e.g. topmasts / sheet-anchor / ground-tackle / forecastle / spritsail / boatswain / colliers / steerage / come to an anchor",
-    "18世纪古语/生僻词 e.g. whence / thither / durst / methought / viz. / nay / betwixt / 'twas / wer'n't",
-    "一次性宗教/道德训诫套语 e.g. 'Providence resolved to leave me without excuse' / 'a visible hand of Heaven against me' / 'the judgment of Heaven'",
-    "太基础/纯语法或已陈旧 e.g. a great while〔很久·陈旧〕/ come to myself〔苏醒·偏旧〕/ to no purpose〔徒劳·偏旧〕/ of course-类"
-  ]
+ "chapter": 1,
+ "chunks": [
+  {
+   "head": "leave off",
+   "gloss": "停止、不再继续;戒掉",
+   "ipa": "/liːv ɔːf/",
+   "note": "leave off (doing sth) = 停止、不再干某事;也指戒掉某习惯。此leave非'离开'义。",
+   "literal": [
+    {
+     "word": "leave",
+     "meaning_cn": "停止",
+     "note_cn": "此处与off合成'停止',非'离开'"
+    },
+    {
+     "word": "off",
+     "meaning_cn": "中断、脱离"
+    }
+   ],
+   "ex_en": "She left off talking when the teacher came in.",
+   "ex_cn": "老师进来时,她停下了话头。",
+   "occ": [
+    [
+     2,
+     "leaving off"
+    ]
+   ]
+  },
+  {
+   "head": "go to sea",
+   "gloss": "出海航行;当水手、以航海为业",
+   "ipa": "/ɡoʊ tə siː/",
+   "note": "go to sea 不是'去海边',而是'出海航行'或'当水手谋生'。",
+   "literal": [
+    {
+     "word": "go",
+     "meaning_cn": "去"
+    },
+    {
+     "word": "to",
+     "meaning_cn": "到…"
+    },
+    {
+     "word": "sea",
+     "meaning_cn": "海",
+     "note_cn": "此处指'航海生涯',非泛指大海"
+    }
+   ],
+   "ex_en": "His dream was to go to sea and sail around the world.",
+   "ex_cn": "他的梦想是出海航行、环游世界。",
+   "occ": [
+    [
+     6,
+     "going to sea"
+    ]
+   ]
+  },
+  {
+   "head": "in order to",
+   "gloss": "为了、以便",
+   "ipa": "/ɪn ˈɔːrdər tuː/",
+   "note": "in order to + 动词原形,表示目的。",
+   "literal": [
+    {
+     "word": "in",
+     "meaning_cn": "在…之中"
+    },
+    {
+     "word": "order",
+     "meaning_cn": "秩序、安排",
+     "note_cn": "此处与in、to组成固定式,不作'命令'解"
+    },
+    {
+     "word": "to",
+     "meaning_cn": "去做…"
+    }
+   ],
+   "ex_en": "She got up early in order to catch the first bus.",
+   "ex_cn": "她早起是为了赶上头班车。",
+   "occ": [
+    [
+     78,
+     "in order to"
+    ]
+   ]
+  },
+  {
+   "head": "in the meantime",
+   "gloss": "与此同时;在此期间",
+   "ipa": "/ɪn ðə ˈmiːntaɪm/",
+   "note": "指'在这段时间里、在等待另一件事发生的同时'。",
+   "literal": [
+    {
+     "word": "in",
+     "meaning_cn": "在…"
+    },
+    {
+     "word": "the",
+     "meaning_cn": "这(特指)"
+    },
+    {
+     "word": "meantime",
+     "meaning_cn": "其间、这段时间"
+    }
+   ],
+   "ex_en": "Dinner is not ready yet; in the meantime, have some tea.",
+   "ex_cn": "晚饭还没好;这段时间里先喝点茶吧。",
+   "occ": [
+    [
+     20,
+     "in the meantime"
+    ]
+   ]
+  },
+  {
+   "head": "every now and then",
+   "gloss": "时不时、偶尔、每隔一阵",
+   "ipa": "/ˈevri naʊ ənd ðen/",
+   "note": "表示'不经常但会反复出现'。",
+   "literal": [
+    {
+     "word": "every",
+     "meaning_cn": "每"
+    },
+    {
+     "word": "now",
+     "meaning_cn": "此刻",
+     "note_cn": "与then搭配指'时而'"
+    },
+    {
+     "word": "and",
+     "meaning_cn": "和"
+    },
+    {
+     "word": "then",
+     "meaning_cn": "那时",
+     "note_cn": "与now搭配指'又一阵'"
+    }
+   ],
+   "ex_en": "Every now and then she looks up from her book.",
+   "ex_cn": "她时不时地从书本上抬起头来。",
+   "occ": [
+    [
+     55,
+     "every now and then"
+    ]
+   ]
+  },
+  {
+   "head": "wear off",
+   "gloss": "逐渐消退、慢慢减弱消失",
+   "ipa": "/wer ɔːf/",
+   "note": "常用于痛感、新鲜感、药效、情绪等'渐渐淡去'。",
+   "literal": [
+    {
+     "word": "wear",
+     "meaning_cn": "磨损",
+     "note_cn": "此处引申为'渐渐减弱',非'穿戴'义"
+    },
+    {
+     "word": "off",
+     "meaning_cn": "离开、消失掉"
+    }
+   ],
+   "ex_en": "After an hour the pain began to wear off.",
+   "ex_cn": "一个小时后,疼痛开始渐渐消退。",
+   "occ": [
+    [
+     92,
+     "wore off"
+    ]
+   ]
+  },
+  {
+   "head": "clear up",
+   "gloss": "(天气)放晴、转晴",
+   "ipa": "/klɪr ʌp/",
+   "note": "clear up 指天气从阴雨转晴;也可指'澄清、解决'。本章为天气义。",
+   "literal": [
+    {
+     "word": "clear",
+     "meaning_cn": "晴朗、清澈"
+    },
+    {
+     "word": "up",
+     "meaning_cn": "(表变化完成)起来"
+    }
+   ],
+   "ex_en": "The sky finally cleared up after the rain.",
+   "ex_cn": "雨后天空终于放晴了。",
+   "occ": [
+    [
+     29,
+     "cleared up"
+    ]
+   ]
+  },
+  {
+   "head": "swallow up",
+   "gloss": "吞没、淹没、吞掉",
+   "ipa": "/ˈswɑːloʊ ʌp/",
+   "note": "常指被海浪、黑暗、人群等'整个吞没'。",
+   "literal": [
+    {
+     "word": "swallow",
+     "meaning_cn": "吞、咽"
+    },
+    {
+     "word": "up",
+     "meaning_cn": "(表完全)彻底地"
+    }
+   ],
+   "ex_en": "The huge waves seemed ready to swallow up the little boat.",
+   "ex_cn": "巨浪仿佛要把那只小船整个吞没。",
+   "occ": [
+    [
+     37,
+     "swallowed up"
+    ]
+   ]
+  },
+  {
+   "head": "in a word",
+   "gloss": "总之、一句话概括",
+   "ipa": "/ɪn ə wɜːrd/",
+   "note": "用于总结,'概括地说'。",
+   "literal": [
+    {
+     "word": "in",
+     "meaning_cn": "用、以"
+    },
+    {
+     "word": "a",
+     "meaning_cn": "一个"
+    },
+    {
+     "word": "word",
+     "meaning_cn": "话、词"
+    }
+   ],
+   "ex_en": "In a word, the whole trip was a great success.",
+   "ex_cn": "总之,这趟旅行非常成功。",
+   "occ": [
+    [
+     37,
+     "in a word"
+    ]
+   ]
+  },
+  {
+   "head": "on foot",
+   "gloss": "步行、徒步",
+   "ipa": "/ɑːn fʊt/",
+   "note": "on foot = 靠双脚走(去某地)。",
+   "literal": [
+    {
+     "word": "on",
+     "meaning_cn": "以…方式"
+    },
+    {
+     "word": "foot",
+     "meaning_cn": "脚",
+     "note_cn": "此处'靠双脚',即步行"
+    }
+   ],
+   "ex_en": "We went to school on foot every day.",
+   "ex_cn": "我们每天步行上学。",
+   "occ": [
+    [
+     72,
+     "on foot"
+    ]
+   ]
+  },
+  {
+   "head": "to the bitter end",
+   "gloss": "坚持到底、直到最后关头",
+   "ipa": "/tə ðə ˈbɪtər end/",
+   "note": "源于航海:锚缆放到'bitter end'(系桩的最末端)。今用作'咬牙撑到最后'的固定说法。",
+   "literal": [
+    {
+     "word": "to",
+     "meaning_cn": "直到…"
+    },
+    {
+     "word": "the",
+     "meaning_cn": "那"
+    },
+    {
+     "word": "bitter",
+     "meaning_cn": "痛苦的",
+     "note_cn": "航海原指缆绳系'bitt(缆桩)'的一端,后与'苦'谐义"
+    },
+    {
+     "word": "end",
+     "meaning_cn": "尽头"
+    }
+   ],
+   "ex_en": "No matter how hard it gets, we will fight to the bitter end.",
+   "ex_cn": "无论多难,我们都要坚持到底。",
+   "occ": [
+    [
+     44,
+     "to the bitter end"
+    ]
+   ]
+  },
+  {
+   "head": "ride out the storm",
+   "gloss": "安然渡过风暴(难关)",
+   "ipa": "/raɪd aʊt ðə stɔːrm/",
+   "note": "⚓航海说法:船'顶住风暴挺过去';也常喻'熬过困境'。",
+   "literal": [
+    {
+     "word": "ride",
+     "meaning_cn": "骑、乘",
+     "note_cn": "此处指船'随浪起伏地挺过'"
+    },
+    {
+     "word": "out",
+     "meaning_cn": "(撑)到结束"
+    },
+    {
+     "word": "the",
+     "meaning_cn": "那场"
+    },
+    {
+     "word": "storm",
+     "meaning_cn": "风暴"
+    }
+   ],
+   "ex_en": "The little ship managed to ride out the storm.",
+   "ex_cn": "那艘小船设法安然渡过了这场风暴。",
+   "occ": [
+    [
+     62,
+     "ride out the storm"
+    ]
+   ]
+  },
+  {
+   "head": "bound for",
+   "gloss": "(船、车等)开往、驶向",
+   "ipa": "/baʊnd fɔːr/",
+   "note": "⚓航海/交通固定搭配:a ship bound for London = 一艘开往伦敦的船。此bound非'捆绑'。",
+   "literal": [
+    {
+     "word": "bound",
+     "meaning_cn": "前往…的",
+     "note_cn": "此处为形容词'驶往…的',非'捆'或'跳'"
+    },
+    {
+     "word": "for",
+     "meaning_cn": "朝向…"
+    }
+   ],
+   "ex_en": "They boarded a train bound for the coast.",
+   "ex_cn": "他们登上了一列开往海岸的火车。",
+   "occ": [
+    [
+     21,
+     "bound for"
+    ]
+   ]
+  },
+  {
+   "head": "on board",
+   "gloss": "在船(车、飞机)上;上船",
+   "ipa": "/ɑːn bɔːrd/",
+   "note": "⚓ go/come on board = 上船;be on board = 在船上。",
+   "literal": [
+    {
+     "word": "on",
+     "meaning_cn": "在…上"
+    },
+    {
+     "word": "board",
+     "meaning_cn": "甲板、船",
+     "note_cn": "此处指'船上',非'木板'或'董事会'"
+    }
+   ],
+   "ex_en": "All the passengers were already on board.",
+   "ex_cn": "所有乘客都已经上船了。",
+   "occ": [
+    [
+     21,
+     "on board"
+    ]
+   ]
+  },
+  {
+   "head": "at sea",
+   "gloss": "在海上(航行中)",
+   "ipa": "/æt siː/",
+   "note": "⚓ at sea 指'身处海上、在航行途中',区别于in the sea(在海水里)。",
+   "literal": [
+    {
+     "word": "at",
+     "meaning_cn": "在…"
+    },
+    {
+     "word": "sea",
+     "meaning_cn": "海上",
+     "note_cn": "固定搭配不加the"
+    }
+   ],
+   "ex_en": "The sailors spent three weeks at sea.",
+   "ex_cn": "水手们在海上度过了三个星期。",
+   "occ": [
+    [
+     23,
+     "at sea"
+    ]
+   ]
+  },
+  {
+   "head": "on shore",
+   "gloss": "在岸上、上岸",
+   "ipa": "/ɑːn ʃɔːr/",
+   "note": "⚓ on shore 与 at sea 相对,指'在陆地/岸上'。",
+   "literal": [
+    {
+     "word": "on",
+     "meaning_cn": "在…上"
+    },
+    {
+     "word": "shore",
+     "meaning_cn": "岸、岸边"
+    }
+   ],
+   "ex_en": "After the long voyage they were glad to be on shore.",
+   "ex_cn": "漫长航行后,他们很高兴能上岸。",
+   "occ": [
+    [
+     28,
+     "on shore"
+    ]
+   ]
+  },
+  {
+   "head": "come to an anchor",
+   "gloss": "抛锚停泊",
+   "ipa": "/kʌm tə ən ˈæŋkər/",
+   "note": "⚓航海固定说法:船抛下锚停下来。同义 cast anchor。",
+   "literal": [
+    {
+     "word": "come",
+     "meaning_cn": "到达、进入(某状态)"
+    },
+    {
+     "word": "to",
+     "meaning_cn": "进入…"
+    },
+    {
+     "word": "an",
+     "meaning_cn": "一个"
+    },
+    {
+     "word": "anchor",
+     "meaning_cn": "锚"
+    }
+   ],
+   "ex_en": "At dusk the ship came to an anchor near the island.",
+   "ex_cn": "黄昏时,船在岛边抛锚停泊。",
+   "occ": [
+    [
+     41,
+     "come to an anchor"
+    ]
+   ]
+  },
+  {
+   "head": "all hands",
+   "gloss": "全体船员",
+   "ipa": "/ɔːl hændz/",
+   "note": "⚓航海固定说法:hands 指'船员'。all hands on deck = 全体船员上甲板。",
+   "literal": [
+    {
+     "word": "all",
+     "meaning_cn": "全部"
+    },
+    {
+     "word": "hands",
+     "meaning_cn": "船员、干活的人",
+     "note_cn": "此处hand=水手/人手,非'手'"
+    }
+   ],
+   "ex_en": "The captain called all hands to the deck.",
+   "ex_cn": "船长把全体船员叫到甲板上。",
+   "occ": [
+    [
+     59,
+     "all hands"
+    ]
+   ]
+  },
+  {
+   "head": "before the wind",
+   "gloss": "顺风(航行)",
+   "ipa": "/bɪˈfɔːr ðə wɪnd/",
+   "note": "⚓航海固定搭配:船朝风吹去的方向走,即'顺风行驶'。此before非'在…之前'。",
+   "literal": [
+    {
+     "word": "before",
+     "meaning_cn": "在…前方",
+     "note_cn": "此处指'被风推着往前',非时间'之前'"
+    },
+    {
+     "word": "the",
+     "meaning_cn": "那"
+    },
+    {
+     "word": "wind",
+     "meaning_cn": "风"
+    }
+   ],
+   "ex_en": "With sails full, the boat ran fast before the wind.",
+   "ex_cn": "帆张满时,小船顺风飞快地行驶。",
+   "occ": [
+    [
+     50,
+     "before the wind"
+    ]
+   ]
+  },
+  {
+   "head": "spring a leak",
+   "gloss": "(船、容器)出现漏洞、开始漏水",
+   "ipa": "/sprɪŋ ə liːk/",
+   "note": "⚓航海固定搭配:船身裂开进水;也可喻'(计划、秘密)出现漏洞'。此spring非'春天/弹跳'。",
+   "literal": [
+    {
+     "word": "spring",
+     "meaning_cn": "突然裂开、冒出",
+     "note_cn": "此处指'突然出现(裂口)',非'春天'"
+    },
+    {
+     "word": "a",
+     "meaning_cn": "一个"
+    },
+    {
+     "word": "leak",
+     "meaning_cn": "漏洞、漏水处"
+    }
+   ],
+   "ex_en": "Halfway across, the old boat sprang a leak.",
+   "ex_cn": "行到半途,那条旧船开始漏水了。",
+   "occ": [
+    [
+     58,
+     "sprung a leak"
+    ]
+   ]
+  },
+  {
+   "head": "cast away",
+   "gloss": "(船只)失事、遇难;(人)遭海难流落",
+   "ipa": "/kæst əˈweɪ/",
+   "note": "⚓航海用法:船被风浪毁掉、沉没;castaway(名词)即'海难流落者',正是本书主题。",
+   "literal": [
+    {
+     "word": "cast",
+     "meaning_cn": "抛、掷",
+     "note_cn": "此处指'(被风浪)抛毁'"
+    },
+    {
+     "word": "away",
+     "meaning_cn": "掉、毁掉"
+    }
+   ],
+   "ex_en": "The ship was cast away on a rocky coast.",
+   "ex_cn": "那艘船在礁石密布的海岸失事了。",
+   "occ": [
+    [
+     73,
+     "cast away"
+    ]
+   ]
+  },
+  {
+   "head": "go abroad",
+   "gloss": "出国、去外洋闯荡",
+   "ipa": "/ɡoʊ əˈbrɔːd/",
+   "note": "go abroad = 离开本国到外国(或出洋)。此处指鲁滨逊执意出海远行、离乡漂泊。",
+   "literal": [
+    {
+     "word": "go",
+     "meaning_cn": "去、前往"
+    },
+    {
+     "word": "abroad",
+     "meaning_cn": "在国外、到国外"
+    }
+   ],
+   "ex_en": "She saved money for years so she could go abroad and study.",
+   "ex_cn": "她攒了好几年钱,好能出国留学。",
+   "occ": [
+    [
+     10,
+     "went abroad"
+    ],
+    [
+     15,
+     "going abroad"
+    ],
+    [
+     19,
+     "goes abroad"
+    ]
+   ]
+  },
+  {
+   "head": "break loose",
+   "gloss": "挣脱、摆脱束缚(私自出走)",
+   "ipa": "/breɪk luːs/",
+   "note": "break loose = 挣开束缚、脱身逃走;此处指他终于不顾父母反对私自出走。",
+   "literal": [
+    {
+     "word": "break",
+     "meaning_cn": "挣开、脱开",
+     "note_cn": "非'打碎'义(此处=挣脱)"
+    },
+    {
+     "word": "loose",
+     "meaning_cn": "松开的、自由的"
+    }
+   ],
+   "ex_en": "The dog broke loose from its chain and ran into the street.",
+   "ex_cn": "那只狗挣脱铁链,跑到了街上。",
+   "occ": [
+    [
+     20,
+     "broke loose"
+    ]
+   ]
+  },
+  {
+   "head": "reflect upon",
+   "gloss": "反思、认真思量",
+   "ipa": "/rɪˈflekt əˈpɒn/",
+   "note": "reflect upon (sth) = 对某事反复思考、反省。",
+   "literal": [
+    {
+     "word": "reflect",
+     "meaning_cn": "深思、反省",
+     "note_cn": "非'反射'义(此处=反思)"
+    },
+    {
+     "word": "upon",
+     "meaning_cn": "对于、关于"
+    }
+   ],
+   "ex_en": "Before you decide, take time to reflect upon what really matters.",
+   "ex_cn": "做决定前,花点时间好好想想什么才最要紧。",
+   "occ": [
+    [
+     13,
+     "reflect upon"
+    ],
+    [
+     24,
+     "reflect upon"
+    ]
+   ]
+  },
+  {
+   "head": "a great many",
+   "gloss": "许多、很多",
+   "ipa": "/ə ɡreɪt ˈmeni/",
+   "note": "a great many + 可数名词复数 = 很多、大量;比 many 语气更强。",
+   "literal": [
+    {
+     "word": "a",
+     "meaning_cn": "(不定冠词)"
+    },
+    {
+     "word": "great",
+     "meaning_cn": "大量的",
+     "note_cn": "此处非'伟大'(与 many 连用表'许多')"
+    },
+    {
+     "word": "many",
+     "meaning_cn": "许多"
+    }
+   ],
+   "ex_en": "A great many students signed up for the summer camp.",
+   "ex_cn": "许许多多学生报名参加了夏令营。",
+   "occ": [
+    [
+     41,
+     "a great many"
+    ],
+    [
+     71,
+     "a great many"
+    ]
+   ]
+  },
+  {
+   "head": "meet with",
+   "gloss": "遭遇、碰上(不好的事)",
+   "ipa": "/miːt wɪð/",
+   "note": "meet with (disasters/difficulties) = 遭遇、碰到(多指麻烦、灾祸)。",
+   "literal": [
+    {
+     "word": "meet",
+     "meaning_cn": "遇到、碰到",
+     "note_cn": "非'会面'义(此处=遭遇、碰上)"
+    },
+    {
+     "word": "with",
+     "meaning_cn": "(与…)"
+    }
+   ],
+   "ex_en": "The travelers met with heavy rain on the mountain road.",
+   "ex_cn": "旅客们在山路上遇上了大雨。",
+   "occ": [
+    [
+     76,
+     "met with"
+    ],
+    [
+     87,
+     "meet with"
+    ]
+   ]
+  },
+  {
+   "head": "look out for",
+   "gloss": "留心物色、寻找",
+   "ipa": "/lʊk aʊt fɔːr/",
+   "note": "look out for (sth) = 留意寻找、物色;此处指他又开始物色出海的机会。",
+   "literal": [
+    {
+     "word": "look",
+     "meaning_cn": "看、找"
+    },
+    {
+     "word": "out",
+     "meaning_cn": "(向外)留意"
+    },
+    {
+     "word": "for",
+     "meaning_cn": "为了、寻求"
+    }
+   ],
+   "ex_en": "Look out for a cheap ticket when you plan your trip.",
+   "ex_cn": "计划出行时,留心找张便宜的票。",
+   "occ": [
+    [
+     92,
+     "looked out for"
+    ]
+   ]
+  },
+  {
+   "head": "burst out",
+   "gloss": "突然发作、爆发(情绪)",
+   "ipa": "/bɜːrst aʊt/",
+   "note": "burst out (into passion/laughing/crying) = 情绪突然爆发。此处指对方突然发起脾气。",
+   "literal": [
+    {
+     "word": "burst",
+     "meaning_cn": "爆发、迸发",
+     "note_cn": "此处非'胀破物体',指情绪突然迸出"
+    },
+    {
+     "word": "out",
+     "meaning_cn": "出来"
+    }
+   ],
+   "ex_en": "When she heard the news, she burst out crying.",
+   "ex_cn": "听到那消息,她突然大哭起来。",
+   "occ": [
+    [
+     83,
+     "burst out"
+    ]
+   ]
+  },
+  {
+   "head": "come to oneself",
+   "gloss": "苏醒、恢复神志",
+   "ipa": "/kʌm tə wʌnˈself/",
+   "note": "come to oneself (此处 come to myself) = 昏厥后苏醒、恢复知觉;正文为 came to myself。",
+   "literal": [
+    {
+     "word": "come",
+     "meaning_cn": "(此处)恢复",
+     "note_cn": "come to = 苏醒过来(非'来到'义)"
+    },
+    {
+     "word": "to",
+     "meaning_cn": "(构成 come to)"
+    },
+    {
+     "word": "myself",
+     "meaning_cn": "我自己(的神志)"
+    }
+   ],
+   "ex_en": "He fainted for a moment, then came to himself and sat up.",
+   "ex_cn": "他昏过去一会儿,随后苏醒过来坐了起来。",
+   "occ": [
+    [
+     65,
+     "came to myself"
+    ]
+   ]
+  },
+  {
+   "head": "to no purpose",
+   "gloss": "徒劳、白费力气",
+   "ipa": "/tə noʊ ˈpɜːrpəs/",
+   "note": "to no purpose = 毫无用处、白搭。此处指去劝父亲也是白费口舌。",
+   "literal": [
+    {
+     "word": "to",
+     "meaning_cn": "(构成短语)"
+    },
+    {
+     "word": "no",
+     "meaning_cn": "没有"
+    },
+    {
+     "word": "purpose",
+     "meaning_cn": "用处、效果",
+     "note_cn": "此处 to no purpose=徒劳(非'目的'义)"
+    }
+   ],
+   "ex_en": "We argued for hours, but it was all to no purpose.",
+   "ex_cn": "我们争了好几个钟头,却全是白费。",
+   "occ": [
+    [
+     18,
+     "to no purpose"
+    ],
+    [
+     68,
+     "to no purpose"
+    ]
+   ]
+  }
+ ],
+ "skipped": [
+  "专名/人名/地名 e.g. Crusoe / Robinson Kreutznaer / York / Hull / Bremen / Yarmouth Roads / the Humber / Winterton Ness / Cromer / Jonah / Tarshish",
+  "一次性 nautical 硬词 e.g. topmasts / sheet-anchor / ground-tackle / forecastle / spritsail / boltsprit / boatswain / colliers / steerage / larboard / the Roads(锚地) / founder(单词) / by the board",
+  "18世纪古语/生僻词 e.g. whence / thither / durst / methought / viz. / nay / betwixt / 'twas / wer'n't / d'ye",
+  "过时/陈旧惯用语 e.g. a great while〔很久〕/ come to pass / by and by",
+  "一次性宗教·道德训诫套语 e.g. killed the fatted calf / like Jonah in the ship of Tarshish / the judgment of Heaven / a visible hand of Heaven",
+  "太基础/纯描述性 e.g. go home / run away / look out / the wind began to blow"
+ ]
 }

@@ -857,17 +857,16 @@ export default function LibraryReader() {
                           : ""
                       }`}
                     >
-                      {!isFirstPara && (
-                        <button
-                          type="button"
-                          onClick={() => playChapterFrom(para.items[0].i, para.items[para.items.length - 1].i + 1)}
-                          aria-label="朗读本段"
-                          title="朗读本段(读完停)"
-                          className="mr-1 inline-flex size-5 -translate-y-px items-center justify-center rounded-full align-middle text-slate-300 transition hover:bg-slate-100 hover:text-sky-500"
-                        >
-                          <Volume2 className="size-3.5" />
-                        </button>
-                      )}
+                      {/* 段首喇叭:每段都给(含章首段),朗读本段读完停。颜色用 sky-500 让它明显可见。 */}
+                      <button
+                        type="button"
+                        onClick={() => playChapterFrom(para.items[0].i, para.items[para.items.length - 1].i + 1)}
+                        aria-label="朗读本段"
+                        title="朗读本段(读完停)"
+                        className="mr-1.5 inline-flex size-6 -translate-y-px items-center justify-center rounded-full align-middle bg-sky-50 text-sky-500 transition hover:bg-sky-100 hover:text-sky-600"
+                      >
+                        <Volume2 className="size-4" />
+                      </button>
                       {para.items.map(({ s, i }, si) => {
                         const active = current === i;
                         // 章首段首句 → 首字下沉(纯装饰):首词单独渲染(::first-letter 大写下沉),其余句照常可点。

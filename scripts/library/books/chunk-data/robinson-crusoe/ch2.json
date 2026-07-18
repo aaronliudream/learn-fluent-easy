@@ -1,95 +1,861 @@
 {
-  "chapter": 2,
-  "chunks": [
-    { "head": "get acquainted with", "gloss": "结识、与…相识", "ipa": "/ɡet əˈkweɪntɪd wɪð/",
-      "note": "get acquainted with sb = 认识、结识某人。",
-      "literal": [{"word":"get","meaning_cn":"变得","note_cn":"此处'变得',非'得到'义"},{"word":"acquainted","meaning_cn":"相识的"},{"word":"with","meaning_cn":"与…"}],
-      "ex_en": "I got acquainted with my new neighbours last week.", "ex_cn": "我上周结识了新邻居。",
-      "occ": [[97,"got acquainted with"]] },
-
-    { "head": "take a fancy to", "gloss": "喜欢上、看中", "ipa": "/teɪk ə ˈfænsi tuː/",
-      "note": "take a fancy to sb/sth = (一时)喜欢上、看中。",
-      "literal": [{"word":"take","meaning_cn":"产生","note_cn":"此处'产生',非'拿'义"},{"word":"a","meaning_cn":"一种"},{"word":"fancy","meaning_cn":"喜爱","note_cn":"此处名词'喜好',非'想象'义"},{"word":"to","meaning_cn":"对…"}],
-      "ex_en": "The little girl took a fancy to the red hat.", "ex_cn": "小女孩看上了那顶红帽子。",
-      "occ": [[98,"taking a fancy to"]] },
-
-    { "head": "give chase to", "gloss": "追赶、追击", "ipa": "/ɡɪv tʃeɪs tuː/",
-      "note": "give chase (to sb) = 展开追赶。",
-      "literal": [{"word":"give","meaning_cn":"发起","note_cn":"此处'发起',非'给'义"},{"word":"chase","meaning_cn":"追逐"},{"word":"to","meaning_cn":"向…"}],
-      "ex_en": "The police gave chase to the runaway car.", "ex_cn": "警察追赶那辆逃跑的车。",
-      "occ": [[105,"gave chase to"]] },
-
-    { "head": "look after", "gloss": "照看、照料", "ipa": "/lʊk ˈɑːftər/",
-      "note": "look after sb/sth = 照顾、看管。",
-      "literal": [{"word":"look","meaning_cn":"照料","note_cn":"此处非'看'义,与 after 构成'照料'"},{"word":"after","meaning_cn":"在…之后"}],
-      "ex_en": "Can you look after my dog this weekend?", "ex_cn": "这周末你能帮我照看狗吗?",
-      "occ": [[116,"look after"]] },
-
-    { "head": "lose sight of", "gloss": "看不见、失去…的踪影", "ipa": "/luːz saɪt əv/",
-      "note": "lose sight of sth = (视线中)看不见了。",
-      "literal": [{"word":"lose","meaning_cn":"失去"},{"word":"sight","meaning_cn":"视线","note_cn":"此处名词'看见/视野'"},{"word":"of","meaning_cn":"对…"}],
-      "ex_en": "We lost sight of the ship in the fog.", "ex_cn": "我们在雾中看不见那艘船了。",
-      "occ": [[120,"lost sight of"]] },
-
-    { "head": "a great deal of", "gloss": "大量的、许多", "ipa": "/ə ɡreɪt diːl əv/",
-      "note": "a great deal of + 不可数名词 = 大量的。",
-      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"很大的"},{"word":"deal","meaning_cn":"量","note_cn":"此处'数量',非'交易'义"},{"word":"of","meaning_cn":"…的"}],
-      "ex_en": "He spent a great deal of money on books.", "ex_cn": "他花了大量的钱买书。",
-      "occ": [[121,"a great deal of"]] },
-
-    { "head": "put off", "gloss": "推迟、拖延", "ipa": "/pʊt ɒf/",
-      "note": "put off (doing) sth = 把某事延后。",
-      "literal": [{"word":"put","meaning_cn":"放","note_cn":"此处与 off 构成'推迟'"},{"word":"off","meaning_cn":"延后","note_cn":"此处表延后"}],
-      "ex_en": "They put off the meeting until Monday.", "ex_cn": "他们把会议推迟到周一。",
-      "occ": [[126,"put off"]] },
-
-    { "head": "take by surprise", "gloss": "使措手不及、出其不意地袭击", "ipa": "/teɪk baɪ səˈpraɪz/",
-      "note": "本章出处为分离式(took him by surprise),故 card-only。",
-      "literal": [{"word":"take","meaning_cn":"抓住","note_cn":"此处'冷不防抓住'"},{"word":"by","meaning_cn":"以…方式"},{"word":"surprise","meaning_cn":"意外/突然"}],
-      "ex_en": "The sudden rain took us by surprise.", "ex_cn": "那场突如其来的雨让我们措手不及。",
-      "cardOnly": true, "key": "take by surprise", "exSeq": 142 },
-
-    { "head": "give over", "gloss": "(此处)停止、罢手", "ipa": "/ɡɪv ˈoʊvər/",
-      "note": "give over = 停下、放弃(继续做某事)。",
-      "literal": [{"word":"give","meaning_cn":"停止","note_cn":"此处'停止',非'给'义"},{"word":"over","meaning_cn":"完结"}],
-      "ex_en": "He would not give over until the work was done.", "ex_cn": "他不干完活不肯罢手。",
-      "occ": [[151,"give over"]] },
-
-    { "head": "be obliged to", "gloss": "不得不、被迫", "ipa": "/biː əˈblaɪdʒd tuː/",
-      "note": "be obliged to do sth = 迫于形势不得不做。",
-      "literal": [{"word":"be","meaning_cn":"是/处于"},{"word":"obliged","meaning_cn":"被迫的","note_cn":"此处'不得已',非'感激'义"},{"word":"to","meaning_cn":"去做…"}],
-      "ex_en": "We were obliged to wait an hour for the bus.", "ex_cn": "我们不得不等了一小时公交车。",
-      "occ": [[163,"obliged to"]] },
-
-    { "head": "take pains", "gloss": "下功夫、不辞辛劳", "ipa": "/teɪk peɪnz/",
-      "note": "本章出处为分离式(take such pains),故 card-only。take pains (to do) = 费心尽力。",
-      "literal": [{"word":"take","meaning_cn":"付出","note_cn":"此处'付出/花费'"},{"word":"pains","meaning_cn":"辛劳","note_cn":"此处复数'辛苦/努力',非'疼痛'义"}],
-      "ex_en": "She takes great pains to write neatly.", "ex_cn": "她下了很大功夫把字写工整。",
-      "cardOnly": true, "key": "take pains", "exSeq": 172 },
-
-    { "head": "take heart", "gloss": "鼓起勇气、振作起来", "ipa": "/teɪk hɑːrt/",
-      "note": "take heart = 打起精神、重拾信心。",
-      "literal": [{"word":"take","meaning_cn":"获得","note_cn":"此处'获得/提起'"},{"word":"heart","meaning_cn":"勇气","note_cn":"此处'勇气/信心',非'心脏'义"}],
-      "ex_en": "Take heart — things will get better soon.", "ex_cn": "振作些,情况很快会好起来。",
-      "occ": [[188,"took heart"]] },
-
-    { "head": "cheer up", "gloss": "(使)高兴起来、振作", "ipa": "/tʃɪr ʌp/",
-      "note": "本章出处为分离式(cheer him up),故 card-only。",
-      "literal": [{"word":"cheer","meaning_cn":"使高兴"},{"word":"up","meaning_cn":"起来","note_cn":"此处表'情绪振作起来'"}],
-      "ex_en": "A cup of hot tea will cheer you up.", "ex_cn": "一杯热茶会让你高兴起来。",
-      "cardOnly": true, "key": "cheer up", "exSeq": 157 },
-
-    { "head": "fit out", "gloss": "装备、配备(所需物品)", "ipa": "/fɪt aʊt/",
-      "note": "fit out sth = 为某物配齐装备/用品。",
-      "literal": [{"word":"fit","meaning_cn":"配置","note_cn":"此处'配备',非'合身'义"},{"word":"out","meaning_cn":"齐备"}],
-      "ex_en": "They fitted out the boat for a long trip.", "ex_cn": "他们为长途旅行把船装备齐全。",
-      "occ": [[119,"fitting out"]] }
-  ],
-  "skipped": [
-    "专名/人名/地名: Crusoe / Xury / Maresco / Ismael(Moely) / Sallee / Guinea / the Moors / Morocco / the Canary Islands / Teneriffe / Cadiz",
-    "18世纪古语: whither(不知去向)[120] / thither(到那里)[177] / by-and-by(不久)[126,170] / for aught I know(据我所知)[160] / bethought myself(想起)[195] / bade(命令,bid过去式)[184]",
-    "一次性 nautical 硬词: pinnace / longboat / shoulder-of-mutton sail / boom jibed / main-sheet / weigh the anchor / slip our cable / come to an anchor / athwart / broadside / half-pikes / fusees / ancient and pendants",
-    "宗教/道德训诫套语: 'the hand of Heaven had overtaken me' / 'brought to pass'(应验,过时) / 'that evil influence which carried me away'",
-    "过时/克制的惯用语: make the best of one's way(赶路)[145] / have a mind to(想要)[98] / for want of(因缺乏)[119] / fall to cutting(开始动手)[110]"
-  ]
+ "chapter": 2,
+ "chunks": [
+  {
+   "head": "get acquainted with",
+   "gloss": "结识、与…熟识起来",
+   "ipa": "/ɡet əˈkweɪntɪd wɪð/",
+   "note": "get acquainted with sb/sth = 开始认识、逐渐熟悉。",
+   "literal": [
+    {
+     "word": "get",
+     "meaning_cn": "变得、开始处于(某状态)",
+     "note_cn": "非'得到'义,此处系动词"
+    },
+    {
+     "word": "acquainted",
+     "meaning_cn": "相识的、熟悉的"
+    },
+    {
+     "word": "with",
+     "meaning_cn": "与…"
+    }
+   ],
+   "ex_en": "I got acquainted with my neighbours at the party.",
+   "ex_cn": "我在聚会上结识了邻居们。",
+   "occ": [
+    [
+     97,
+     "got acquainted with"
+    ]
+   ]
+  },
+  {
+   "head": "take a fancy to",
+   "gloss": "喜欢上、看中",
+   "ipa": "/teɪk ə ˈfænsi tuː/",
+   "note": "take a fancy to sb/sth = (一下子)喜欢上某人或某物。",
+   "literal": [
+    {
+     "word": "take",
+     "meaning_cn": "产生、生出",
+     "note_cn": "非'拿'义"
+    },
+    {
+     "word": "a",
+     "meaning_cn": "一个"
+    },
+    {
+     "word": "fancy",
+     "meaning_cn": "喜爱、好感",
+     "note_cn": "名词'喜好'"
+    },
+    {
+     "word": "to",
+     "meaning_cn": "对…"
+    }
+   ],
+   "ex_en": "The old man took a fancy to the little kitten.",
+   "ex_cn": "老人一下子喜欢上了那只小猫。",
+   "occ": [
+    [
+     98,
+     "taking a fancy to"
+    ]
+   ]
+  },
+  {
+   "head": "have a mind to",
+   "gloss": "想要、有意做",
+   "ipa": "/hæv ə maɪnd tuː/",
+   "note": "have a mind to do = 有意、打算做某事。",
+   "literal": [
+    {
+     "word": "have",
+     "meaning_cn": "有"
+    },
+    {
+     "word": "a",
+     "meaning_cn": "一个"
+    },
+    {
+     "word": "mind",
+     "meaning_cn": "心思、意向",
+     "note_cn": "此处指'念头',非'头脑'"
+    },
+    {
+     "word": "to",
+     "meaning_cn": "去(做)"
+    }
+   ],
+   "ex_en": "I have a mind to try that new noodle shop.",
+   "ex_cn": "我很想去试试那家新面馆。",
+   "occ": [
+    [
+     98,
+     "had a mind to"
+    ]
+   ]
+  },
+  {
+   "head": "take an observation",
+   "gloss": "(航海)观测天体以测定船位",
+   "ipa": "/teɪk ən ˌɒbzərˈveɪʃən/",
+   "note": "航海固定搭配:用仪器观测太阳或星辰,算出所在纬度/位置。",
+   "literal": [
+    {
+     "word": "take",
+     "meaning_cn": "进行、做",
+     "note_cn": "非'拿'义"
+    },
+    {
+     "word": "an",
+     "meaning_cn": "一次"
+    },
+    {
+     "word": "observation",
+     "meaning_cn": "观测",
+     "note_cn": "此处指天文测位,非泛指'观察'"
+    }
+   ],
+   "ex_en": "The captain took an observation at noon to find the ship's position.",
+   "ex_cn": "船长在正午观测测位,以确定船的方位。",
+   "occ": [
+    [
+     101,
+     "take an observation"
+    ],
+    [
+     174,
+     "take an observation"
+    ]
+   ]
+  },
+  {
+   "head": "come up with",
+   "gloss": "赶上、追上",
+   "ipa": "/kʌm ʌp wɪð/",
+   "note": "本章义为'追上、赶上'(船只);另有'想出(主意)'义,注意区分。",
+   "literal": [
+    {
+     "word": "come",
+     "meaning_cn": "来、靠近"
+    },
+    {
+     "word": "up",
+     "meaning_cn": "上来、并排",
+     "note_cn": "此处表'追平距离'"
+    },
+    {
+     "word": "with",
+     "meaning_cn": "与…"
+    }
+   ],
+   "ex_en": "The fast runner soon came up with the leaders.",
+   "ex_cn": "那名快跑的选手很快追上了领先者。",
+   "occ": [
+    [
+     106,
+     "come up with"
+    ],
+    [
+     107,
+     "came up with"
+    ]
+   ]
+  },
+  {
+   "head": "bring to",
+   "gloss": "(航海)使船停住、顶风停船",
+   "ipa": "/brɪŋ tuː/",
+   "note": "航海固定搭配:调整帆使船停下不前;也说 heave to。",
+   "literal": [
+    {
+     "word": "bring",
+     "meaning_cn": "使…处于(某状态)",
+     "note_cn": "此处'使停住',非'带来'"
+    },
+    {
+     "word": "to",
+     "meaning_cn": "停止状态",
+     "note_cn": "航海副词,表'停下'"
+    }
+   ],
+   "ex_en": "The sailors brought to and waited for the storm to pass.",
+   "ex_cn": "水手们顶风停船,等风暴过去。",
+   "occ": [
+    [
+     107,
+     "bringing to"
+    ]
+   ]
+  },
+  {
+   "head": "cut short",
+   "gloss": "缩短、中断、草草结束",
+   "ipa": "/kʌt ʃɔːrt/",
+   "note": "cut sth short = 提前结束、长话短说。",
+   "literal": [
+    {
+     "word": "cut",
+     "meaning_cn": "切、削"
+    },
+    {
+     "word": "short",
+     "meaning_cn": "短"
+    }
+   ],
+   "ex_en": "We had to cut short our trip because of the rain.",
+   "ex_cn": "因为下雨,我们不得不缩短了旅程。",
+   "occ": [
+    [
+     112,
+     "cut short"
+    ]
+   ]
+  },
+  {
+   "head": "be obliged to",
+   "gloss": "被迫、不得不",
+   "ipa": "/bi əˈblaɪdʒd tuː/",
+   "note": "be obliged to do = 迫于形势只得做;另有'感激'义(be obliged to sb),此处为'被迫'。",
+   "literal": [
+    {
+     "word": "be",
+     "meaning_cn": "是、处于"
+    },
+    {
+     "word": "obliged",
+     "meaning_cn": "被迫的、不得不的"
+    },
+    {
+     "word": "to",
+     "meaning_cn": "去(做)"
+    }
+   ],
+   "ex_en": "The heavy snow meant we were obliged to stay at home.",
+   "ex_cn": "大雪使我们不得不待在家里。",
+   "occ": [
+    [
+     112,
+     "were obliged to"
+    ],
+    [
+     163,
+     "were obliged to"
+    ],
+    [
+     178,
+     "obliged to"
+    ]
+   ]
+  },
+  {
+   "head": "set at liberty",
+   "gloss": "释放、使获自由",
+   "ipa": "/set ət ˈlɪbərti/",
+   "note": "set sb at liberty = 释放某人(使自由)。",
+   "literal": [
+    {
+     "word": "set",
+     "meaning_cn": "使处于(某状态)",
+     "note_cn": "此处'使…处于',非'放置'"
+    },
+    {
+     "word": "at",
+     "meaning_cn": "处于…状态"
+    },
+    {
+     "word": "liberty",
+     "meaning_cn": "自由"
+    }
+   ],
+   "ex_en": "The captured bird was set at liberty in the forest.",
+   "ex_cn": "那只被抓的鸟在森林里被放归自由。",
+   "occ": [
+    [
+     115,
+     "set at liberty"
+    ]
+   ]
+  },
+  {
+   "head": "man-of-war",
+   "gloss": "军舰、战船",
+   "ipa": "/ˌmæn əv ˈwɔːr/",
+   "note": "航海固定名词:旧时的武装战舰(整体一词,man 非'人')。",
+   "literal": [
+    {
+     "word": "man",
+     "meaning_cn": "(此处不作'人')",
+     "note_cn": "整体固定说法,非'人'"
+    },
+    {
+     "word": "of",
+     "meaning_cn": "…的"
+    },
+    {
+     "word": "war",
+     "meaning_cn": "战争"
+    }
+   ],
+   "ex_en": "A great man-of-war sailed into the harbour, its guns ready.",
+   "ex_cn": "一艘巨大的军舰驶入港口,炮口已经备好。",
+   "occ": [
+    [
+     115,
+     "man-of-war"
+    ]
+   ]
+  },
+  {
+   "head": "look after",
+   "gloss": "照看、照料",
+   "ipa": "/lʊk ˈæftər/",
+   "note": "look after sb/sth = 照顾、看管。",
+   "literal": [
+    {
+     "word": "look",
+     "meaning_cn": "看、照",
+     "note_cn": "此处'照看',非单纯'看'"
+    },
+    {
+     "word": "after",
+     "meaning_cn": "在…之后",
+     "note_cn": "此处表'跟着照料'"
+    }
+   ],
+   "ex_en": "Please look after my dog while I'm away.",
+   "ex_cn": "我不在时请帮我照看一下狗。",
+   "occ": [
+    [
+     116,
+     "look after"
+    ]
+   ]
+  },
+  {
+   "head": "fit out",
+   "gloss": "(航海)装备、配齐(船只)",
+   "ipa": "/fɪt aʊt/",
+   "note": "fit out a ship = 为船只备齐装备、给养,使可出海。",
+   "literal": [
+    {
+     "word": "fit",
+     "meaning_cn": "配备、装配",
+     "note_cn": "此处'装备',非'合身'"
+    },
+    {
+     "word": "out",
+     "meaning_cn": "齐全、完备",
+     "note_cn": "表'配齐'"
+    }
+   ],
+   "ex_en": "They spent a month fitting out the boat before the voyage.",
+   "ex_cn": "出航前,他们花了一个月给船配齐装备。",
+   "occ": [
+    [
+     119,
+     "fitting out"
+    ]
+   ]
+  },
+  {
+   "head": "shoulder-of-mutton sail",
+   "gloss": "三角帆(羊腿形帆)",
+   "ipa": "/ˈʃoʊldər əv ˈmʌtn seɪl/",
+   "note": "航海固定搭配:一种三角形的帆,形似羊腿(shoulder of mutton)得名,mutton 非指'羊肉'。",
+   "literal": [
+    {
+     "word": "shoulder",
+     "meaning_cn": "(羊)腿肩部",
+     "note_cn": "此处形容帆的形状"
+    },
+    {
+     "word": "of",
+     "meaning_cn": "…的"
+    },
+    {
+     "word": "mutton",
+     "meaning_cn": "羊肉",
+     "note_cn": "此处非食物,仅借'羊腿'形状"
+    },
+    {
+     "word": "sail",
+     "meaning_cn": "帆"
+    }
+   ],
+   "ex_en": "The small boat carried a shoulder-of-mutton sail shaped like a triangle.",
+   "ex_cn": "那条小船挂着一面三角形的羊腿帆。",
+   "occ": [
+    [
+     123,
+     "shoulder-of-mutton sail"
+    ]
+   ]
+  },
+  {
+   "head": "haul in",
+   "gloss": "(航海)收(帆、绳)、拉进来",
+   "ipa": "/hɔːl ɪn/",
+   "note": "haul in the sail = 把帆收拢;也可用于拉网、拉绳。",
+   "literal": [
+    {
+     "word": "haul",
+     "meaning_cn": "(用力)拉、拽"
+    },
+    {
+     "word": "in",
+     "meaning_cn": "向里、收进"
+    }
+   ],
+   "ex_en": "The fishermen hauled in the net full of fish.",
+   "ex_cn": "渔夫们把满是鱼的网拉了上来。",
+   "occ": [
+    [
+     136,
+     "hauled in"
+    ]
+   ]
+  },
+  {
+   "head": "take no notice of",
+   "gloss": "不理会、不加注意",
+   "ipa": "/teɪk noʊ ˈnoʊtɪs əv/",
+   "note": "take no notice of sb/sth = 对…置之不理(take notice of 的否定固定式)。",
+   "literal": [
+    {
+     "word": "take",
+     "meaning_cn": "加以",
+     "note_cn": "非'拿'义"
+    },
+    {
+     "word": "no",
+     "meaning_cn": "没有"
+    },
+    {
+     "word": "notice",
+     "meaning_cn": "注意",
+     "note_cn": "名词'注意'"
+    },
+    {
+     "word": "of",
+     "meaning_cn": "对…"
+    }
+   ],
+   "ex_en": "She took no notice of the rude remark and walked on.",
+   "ex_cn": "她没理会那句无礼的话,径直走了。",
+   "occ": [
+    [
+     136,
+     "took no notice of"
+    ]
+   ]
+  },
+  {
+   "head": "come to an anchor",
+   "gloss": "(航海)抛锚停泊",
+   "ipa": "/kʌm tu ən ˈæŋkər/",
+   "note": "航海固定搭配:抛下锚使船停住停泊。",
+   "literal": [
+    {
+     "word": "come",
+     "meaning_cn": "来到、进入(状态)"
+    },
+    {
+     "word": "to",
+     "meaning_cn": "至、进入"
+    },
+    {
+     "word": "an",
+     "meaning_cn": "一个"
+    },
+    {
+     "word": "anchor",
+     "meaning_cn": "锚"
+    }
+   ],
+   "ex_en": "At dusk the ship came to an anchor near the small island.",
+   "ex_cn": "黄昏时船在小岛附近抛锚停泊。",
+   "occ": [
+    [
+     151,
+     "come to an anchor"
+    ],
+    [
+     178,
+     "came to an anchor"
+    ]
+   ]
+  },
+  {
+   "head": "give over",
+   "gloss": "停止、放弃、罢手",
+   "ipa": "/ɡɪv ˈoʊvər/",
+   "note": "give over = 停下、不再做(此处指追赶'作罢')。",
+   "literal": [
+    {
+     "word": "give",
+     "meaning_cn": "(此处)停止、罢手",
+     "note_cn": "非'给'义"
+    },
+    {
+     "word": "over",
+     "meaning_cn": "结束、完结"
+    }
+   ],
+   "ex_en": "After hours of searching, they gave over and went home.",
+   "ex_cn": "找了几个小时后,他们作罢回家了。",
+   "occ": [
+    [
+     151,
+     "give over"
+    ]
+   ]
+  },
+  {
+   "head": "weigh anchor",
+   "gloss": "(航海)起锚、起航",
+   "ipa": "/weɪ ˈæŋkər/",
+   "note": "航海固定搭配:把锚拉起来准备开船,weigh 此处为'起(锚)'非'称重'。",
+   "literal": [
+    {
+     "word": "weigh",
+     "meaning_cn": "起(锚)、提起",
+     "note_cn": "此处非'称重'"
+    },
+    {
+     "word": "anchor",
+     "meaning_cn": "锚"
+    }
+   ],
+   "ex_en": "At dawn the crew weighed anchor and left the bay.",
+   "ex_cn": "拂晓时船员起锚,离开了海湾。",
+   "occ": [
+    [
+     160,
+     "weigh the anchor"
+    ]
+   ]
+  },
+  {
+   "head": "slip a cable",
+   "gloss": "(航海)放掉锚缆(弃锚急走)",
+   "ipa": "/slɪp ə ˈkeɪbl/",
+   "note": "航海固定搭配:来不及起锚时松开/放掉锚缆,以便迅速离开。",
+   "literal": [
+    {
+     "word": "slip",
+     "meaning_cn": "松开、放掉",
+     "note_cn": "此处'松脱',非'滑倒'"
+    },
+    {
+     "word": "a",
+     "meaning_cn": "一根"
+    },
+    {
+     "word": "cable",
+     "meaning_cn": "锚缆、粗绳",
+     "note_cn": "此处指系锚的缆"
+    }
+   ],
+   "ex_en": "In a hurry they slipped the cable and rowed off to sea.",
+   "ex_cn": "情急之下他们放掉锚缆,划船出海。",
+   "occ": [
+    [
+     160,
+     "slip our cable"
+    ]
+   ]
+  },
+  {
+   "head": "stand off to sea",
+   "gloss": "(航海)驶离海岸、向外海驶去",
+   "ipa": "/stænd ɒf tə siː/",
+   "note": "航海固定搭配:stand off = 朝远离陆地的方向航行。",
+   "literal": [
+    {
+     "word": "stand",
+     "meaning_cn": "(航海)朝某方向行驶",
+     "note_cn": "此处'航行',非'站立'"
+    },
+    {
+     "word": "off",
+     "meaning_cn": "离开、远离"
+    },
+    {
+     "word": "to",
+     "meaning_cn": "朝、向"
+    },
+    {
+     "word": "sea",
+     "meaning_cn": "海、外海"
+    }
+   ],
+   "ex_en": "As the wind rose, the captain chose to stand off to sea.",
+   "ex_cn": "风变大后,船长决定驶向外海。",
+   "occ": [
+    [
+     174,
+     "stand off to sea"
+    ]
+   ]
+  },
+  {
+   "head": "take heart",
+   "gloss": "鼓起勇气、振作起来",
+   "ipa": "/teɪk hɑːrt/",
+   "note": "take heart = 打起精神、重拾信心。",
+   "literal": [
+    {
+     "word": "take",
+     "meaning_cn": "获得、鼓起",
+     "note_cn": "非'拿'义"
+    },
+    {
+     "word": "heart",
+     "meaning_cn": "勇气、信心",
+     "note_cn": "此处指'胆气',非'心脏'"
+    }
+   ],
+   "ex_en": "Take heart—things will get better soon.",
+   "ex_cn": "振作点,情况很快就会好起来。",
+   "occ": [
+    [
+     188,
+     "took heart"
+    ]
+   ]
+  },
+  {
+   "head": "take care of",
+   "gloss": "照料、当心",
+   "ipa": "/teɪk ker əv/",
+   "note": "本章出处为分离式(take more care of himself),故 card-only。",
+   "literal": [
+    {
+     "word": "take",
+     "meaning_cn": "加以",
+     "note_cn": "非'拿'义"
+    },
+    {
+     "word": "care",
+     "meaning_cn": "照料、小心",
+     "note_cn": "名词'照顾'"
+    },
+    {
+     "word": "of",
+     "meaning_cn": "对…"
+    }
+   ],
+   "ex_en": "You should take care of your teeth by brushing twice a day.",
+   "ex_cn": "你该每天刷两次牙,照顾好牙齿。",
+   "cardOnly": true,
+   "key": "take care of",
+   "exSeq": 122
+  },
+  {
+   "head": "take pains",
+   "gloss": "费心、下功夫",
+   "ipa": "/teɪk peɪnz/",
+   "note": "本章出处为分离式(take such pains),故 card-only。take pains (to do) = 不辞辛苦地做。",
+   "literal": [
+    {
+     "word": "take",
+     "meaning_cn": "付出、花费",
+     "note_cn": "非'拿'义"
+    },
+    {
+     "word": "pains",
+     "meaning_cn": "辛劳、努力",
+     "note_cn": "复数'苦功',非'疼痛'"
+    }
+   ],
+   "ex_en": "She took pains to make the room look perfect.",
+   "ex_cn": "她费尽心思把房间布置得十全十美。",
+   "cardOnly": true,
+   "key": "take pains",
+   "exSeq": 172
+  },
+  {
+   "head": "give chase to",
+   "gloss": "追赶、追击",
+   "ipa": "/ɡɪv tʃeɪs tə/",
+   "note": "give chase to (sb/sth) = 追赶、追击某人/某物;此处指萨累的土耳其海盗船扬帆猛追他们的船。",
+   "literal": [
+    {
+     "word": "give",
+     "meaning_cn": "(此处)发起、展开",
+     "note_cn": "非'给'义(与 chase 连用=发起追逐)"
+    },
+    {
+     "word": "chase",
+     "meaning_cn": "追逐、追赶",
+     "note_cn": "此处为名词'追逐'"
+    },
+    {
+     "word": "to",
+     "meaning_cn": "朝、对(所追的对象)"
+    }
+   ],
+   "ex_en": "The police gave chase to the runaway car.",
+   "ex_cn": "警察追赶那辆逃跑的汽车。",
+   "occ": [
+    [
+     105,
+     "gave chase to"
+    ]
+   ]
+  },
+  {
+   "head": "lose sight of",
+   "gloss": "看不见、失去…的踪影",
+   "ipa": "/luːz saɪt əv/",
+   "note": "lose sight of (sth) = 再也看不见、看不到…的踪影;此处指浓雾中看不见海岸了。",
+   "literal": [
+    {
+     "word": "lose",
+     "meaning_cn": "失去、丢掉"
+    },
+    {
+     "word": "sight",
+     "meaning_cn": "看见、视野",
+     "note_cn": "此处为名词'视线/看见'"
+    },
+    {
+     "word": "of",
+     "meaning_cn": "对(所看之物)"
+    }
+   ],
+   "ex_en": "In the thick crowd I lost sight of my friend.",
+   "ex_cn": "在拥挤的人群里,我看不见我的朋友了。",
+   "occ": [
+    [
+     120,
+     "lost sight of"
+    ]
+   ]
+  },
+  {
+   "head": "a great deal of",
+   "gloss": "大量的、许多的",
+   "ipa": "/ə ɡreɪt diːl əv/",
+   "note": "a great deal of + 不可数名词 = 大量的、很多的;此处 a great deal of labour=费了很大力气。",
+   "literal": [
+    {
+     "word": "a",
+     "meaning_cn": "(不定冠词)"
+    },
+    {
+     "word": "great",
+     "meaning_cn": "大量的",
+     "note_cn": "与 deal 连用表'大量'(非'伟大'义)"
+    },
+    {
+     "word": "deal",
+     "meaning_cn": "量、数量",
+     "note_cn": "此处'数量'(非'交易'义)"
+    },
+    {
+     "word": "of",
+     "meaning_cn": "(修饰后面的名词)"
+    }
+   ],
+   "ex_en": "She spent a great deal of time on the project.",
+   "ex_cn": "她在这个项目上花了大量时间。",
+   "occ": [
+    [
+     121,
+     "a great deal of"
+    ]
+   ]
+  },
+  {
+   "head": "put off",
+   "gloss": "推迟、拖延",
+   "ipa": "/pʊt ɔːf/",
+   "note": "put off (doing sth) = 把…推迟、延后;此处指客人因故推掉了这趟出行。",
+   "literal": [
+    {
+     "word": "put",
+     "meaning_cn": "(此处)推、挪",
+     "note_cn": "与 off 连用=推迟(非'放置'义)"
+    },
+    {
+     "word": "off",
+     "meaning_cn": "往后、延后"
+    }
+   ],
+   "ex_en": "Don't put off your homework until the last minute.",
+   "ex_cn": "别把作业拖到最后一刻。",
+   "occ": [
+    [
+     126,
+     "put off"
+    ]
+   ]
+  },
+  {
+   "head": "take by surprise",
+   "gloss": "使措手不及、出其不意地袭击(抓住)",
+   "ipa": "/teɪk baɪ səˈpraɪz/",
+   "note": "take sb by surprise = 趁人不备、出其不意地下手/抓住某人;本章为可分式,宾语插在中间(took him by surprise)。",
+   "literal": [
+    {
+     "word": "take",
+     "meaning_cn": "(此处)抓住、擒住",
+     "note_cn": "与 by surprise 连用=趁不备下手(非'拿'义)"
+    },
+    {
+     "word": "by",
+     "meaning_cn": "凭、以…方式"
+    },
+    {
+     "word": "surprise",
+     "meaning_cn": "出其不意、突袭",
+     "note_cn": "此处名词'冷不防'(非'惊喜'义)"
+    }
+   ],
+   "ex_en": "The sudden question took the boy by surprise.",
+   "ex_cn": "那个突如其来的问题让男孩措手不及。",
+   "occ": [
+    [
+     142,
+     "took him by surprise"
+    ]
+   ]
+  },
+  {
+   "head": "cheer up",
+   "gloss": "(使)高兴、振作起来",
+   "ipa": "/tʃɪr ʌp/",
+   "note": "cheer sb up = 使某人高兴、打起精神;本章为可分式,宾语插在中间(cheer him up)。",
+   "literal": [
+    {
+     "word": "cheer",
+     "meaning_cn": "使高兴、鼓舞"
+    },
+    {
+     "word": "up",
+     "meaning_cn": "(情绪)振作起来"
+    }
+   ],
+   "ex_en": "I told a joke to cheer up my little sister.",
+   "ex_cn": "我讲了个笑话逗我妹妹开心。",
+   "occ": [
+    [
+     157,
+     "cheer him up"
+    ]
+   ]
+  }
+ ],
+ "skipped": [
+  "专名/人名/地名 e.g. Guinea / Sallee / the Moors / Xury / Maresco / Ismael(Moely) / Canary Islands / Cadiz / Teneriffe / Morocco",
+  "18世纪古语/生僻 e.g. whither / thither / betwixt / a-fishing / for aught I know / bethought myself / bade",
+  "一次性 nautical 硬词 e.g. fore-mast man / pinnace / longboat / main-sheet / boom jibed / athwart / broadside / half-pikes / powder-chests / fusees / ancient and pendants",
+  "过时惯用语(克制) e.g. by-and-by / come/brought to pass / a great while / make no doubt / fell out〔发生〕 / for want of / make the best of one's way",
+  "一次性描述/物件/宗教训诫套语 e.g. rusk / alcamies / calenture / 'the hand of Heaven had overtaken me' / 'that evil influence which carried me away'",
+  "give chase(与 give chase to 同段·删冗余,保留 give chase to)"
+ ]
 }

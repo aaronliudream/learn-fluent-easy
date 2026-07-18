@@ -1,47 +1,416 @@
 {
  "batch": 4,
  "cards": [
-  { "word": "wilderness", "ipa": "/ˈwɪldənəs/", "pos": "n.", "gloss_cn": "荒野;荒地", "gloss_en": "a wild uncultivated area of land", "sense_key": "wilderness", "ex_en": "We got lost in the wilderness for two days.", "ex_cn": "我们在荒野里迷路了两天。" },
-  { "word": "infinitely", "ipa": "/ˈɪnfɪnətli/", "pos": "adv.", "gloss_cn": "无限地;极其", "gloss_en": "to an extremely great degree", "sense_key": "extremely", "ex_en": "This lake is infinitely deeper than that one.", "ex_cn": "这个湖比那个深得多。" },
-  { "word": "particulars", "ipa": "/pəˈtɪkjələz/", "pos": "n.", "gloss_cn": "详情;细节", "gloss_en": "the small exact details of something", "sense_key": "details", "ex_en": "Please write down all the particulars of the accident.", "ex_cn": "请写下事故的所有细节。" },
-  { "word": "hatchets", "ipa": "/ˈhætʃɪts/", "pos": "n.", "gloss_cn": "短柄小斧(复数)", "gloss_en": "small short-handled axes", "sense_key": "hatchet", "ex_en": "The men carried two hatchets to cut wood.", "ex_cn": "那些人带了两把小斧去砍柴。" },
-  { "word": "verily", "ipa": "/ˈverɪli/", "pos": "adv.", "gloss_cn": "的确;真实地(古)", "gloss_en": "truly; certainly (old use)", "sense_key": "truly", "ex_en": "Verily, he spoke the truth.", "ex_cn": "他的确说的是实话。" },
-  { "word": "necessarily", "ipa": "/ˌnesəˈserəli/", "pos": "adv.", "gloss_cn": "必然地;一定", "gloss_en": "as an unavoidable result", "sense_key": "inevitably", "ex_en": "More money does not necessarily bring happiness.", "ex_cn": "钱多不一定带来快乐。" },
-  { "word": "dwelling", "ipa": "/ˈdwelɪŋ/", "pos": "n.", "gloss_cn": "住所;住处", "gloss_en": "a place where someone lives", "sense_key": "dwelling", "ex_en": "Their dwelling stood on a small hill.", "ex_cn": "他们的住所建在一座小山上。" },
-  { "word": "pitched", "ipa": "/pɪtʃt/", "pos": "v.", "gloss_cn": "立起;钉入(过去式)", "gloss_en": "set up firmly by driving into the ground", "sense_key": "pitch-set-up", "ex_en": "We pitched the tent beside the lake.", "ex_cn": "我们在湖边支起了帐篷。" },
-  { "word": "singled", "ipa": "/ˈsɪŋɡld/", "pos": "v.", "gloss_cn": "挑出;单独选出(过去式)", "gloss_en": "picked out one from a group", "sense_key": "single-out", "ex_en": "The teacher singled him out for praise.", "ex_cn": "老师单独表扬了他。" },
-  { "word": "reckoning", "ipa": "/ˈrekənɪŋ/", "pos": "n.", "gloss_cn": "计算;推算", "gloss_en": "a calculation or count", "sense_key": "reckoning", "ex_en": "By my reckoning, we still have ten miles to go.", "ex_cn": "照我估算,我们还有十英里要走。" },
-  { "word": "wicker", "ipa": "/ˈwɪkə/", "pos": "n.", "gloss_cn": "柳条编制品", "gloss_en": "twigs woven into baskets or furniture", "sense_key": "wicker", "ex_en": "She kept the bread in a wicker basket.", "ex_cn": "她把面包放在柳条篮里。" },
-  { "word": "broth", "ipa": "/brɒθ/", "pos": "n.", "gloss_cn": "肉汤", "gloss_en": "a thin soup made by boiling meat", "sense_key": "broth", "ex_en": "Mother made some hot broth for the sick child.", "ex_cn": "妈妈给生病的孩子做了些热肉汤。" },
-  { "word": "countenance", "ipa": "/ˈkaʊntənəns/", "pos": "n.", "gloss_cn": "面容;神色", "gloss_en": "a person's face or expression", "sense_key": "countenance", "ex_en": "His countenance grew pale with fear.", "ex_cn": "他吓得脸色发白。" },
-  { "word": "disposition", "ipa": "/ˌdɪspəˈzɪʃn/", "pos": "n.", "gloss_cn": "性情;性格", "gloss_en": "a person's natural temper or character", "sense_key": "temperament", "ex_en": "She has a cheerful disposition.", "ex_cn": "她性格开朗。" },
-  { "word": "extraordinary", "ipa": "/ɪkˈstrɔːdnri/", "pos": "adj.", "gloss_cn": "非凡的;不寻常的", "gloss_en": "very unusual or remarkable", "sense_key": "extraordinary", "ex_en": "He has an extraordinary memory.", "ex_cn": "他有惊人的记忆力。" },
-  { "word": "cannibals", "ipa": "/ˈkænɪblz/", "pos": "n.", "gloss_cn": "食人者(复数)", "gloss_en": "people who eat human flesh", "sense_key": "cannibal", "ex_en": "The sailors feared the island was full of cannibals.", "ex_cn": "水手们担心岛上都是食人者。" },
-  { "word": "perspective", "ipa": "/pəˈspektɪv/", "pos": "n.", "gloss_cn": "望远镜(perspective glass)", "gloss_en": "a telescope for viewing distant things", "sense_key": "telescope", "ex_en": "He watched the ship through a perspective glass.", "ex_cn": "他用望远镜看那艘船。" },
-  { "word": "bearded", "ipa": "/ˈbɪədɪd/", "pos": "adj.", "gloss_cn": "有胡须的", "gloss_en": "having a beard", "sense_key": "bearded", "ex_en": "A tall bearded man opened the door.", "ex_cn": "一个高个子大胡子男人开了门。" },
-  { "word": "countrymen", "ipa": "/ˈkʌntrimən/", "pos": "n.", "gloss_cn": "同胞(复数)", "gloss_en": "people from one's own country or people", "sense_key": "countrymen", "ex_en": "He longed to see his countrymen again.", "ex_cn": "他渴望再见到自己的同胞。" },
-  { "word": "foresaw", "ipa": "/fɔːˈsɔː/", "pos": "v.", "gloss_cn": "预见(foresee 的过去式)", "gloss_en": "saw or knew beforehand", "sense_key": "foresee", "ex_en": "No one foresaw the storm.", "ex_cn": "没人预见到这场风暴。" },
-  { "word": "discharged", "ipa": "/dɪsˈtʃɑːdʒd/", "pos": "v.", "gloss_cn": "卸下;释放(过去式)", "gloss_en": "unloaded or set free", "sense_key": "unload-release", "ex_en": "The workers discharged the goods from the ship.", "ex_cn": "工人们把货物从船上卸了下来。" },
-  { "word": "seafaring", "ipa": "/ˈsiːfeərɪŋ/", "pos": "adj.", "gloss_cn": "航海的", "gloss_en": "connected with travelling by sea", "sense_key": "seafaring", "ex_en": "He came from a seafaring family.", "ex_cn": "他出身于一个航海世家。" },
-  { "word": "hardened", "ipa": "/ˈhɑːdnd/", "pos": "v.", "gloss_cn": "变硬;硬化(过去式)", "gloss_en": "made or became hard", "sense_key": "harden", "ex_en": "The mud hardened in the sun.", "ex_cn": "泥巴在太阳下变硬了。" },
-  { "word": "forecastle", "ipa": "/ˈfəʊksl/", "pos": "n.", "gloss_cn": "船头楼", "gloss_en": "the raised front part of a ship", "sense_key": "forecastle", "ex_en": "The sailors slept in the forecastle.", "ex_cn": "水手们睡在船头楼里。" },
-  { "word": "undone", "ipa": "/ʌnˈdʌn/", "pos": "adj.", "gloss_cn": "毁掉的;完蛋的", "gloss_en": "ruined; brought to disaster", "sense_key": "ruined", "ex_en": "If we lose this ship, we are undone.", "ex_cn": "要是丢了这船,我们就完了。" },
-  { "word": "hauled", "ipa": "/hɔːld/", "pos": "v.", "gloss_cn": "拖;拉(过去式)", "gloss_en": "pulled with great effort", "sense_key": "haul", "ex_en": "They hauled the boat up onto the beach.", "ex_cn": "他们把船拖上了沙滩。" },
-  { "word": "northward", "ipa": "/ˈnɔːθwəd/", "pos": "adv.", "gloss_cn": "向北", "gloss_en": "toward the north", "sense_key": "northward", "ex_en": "The birds flew northward in spring.", "ex_cn": "鸟儿春天向北飞。" },
-  { "word": "acknowledge", "ipa": "/əkˈnɒlɪdʒ/", "pos": "v.", "gloss_cn": "承认", "gloss_en": "admit that something is true", "sense_key": "admit", "ex_en": "He would not acknowledge his mistake.", "ex_cn": "他不肯承认自己的错误。" },
-  { "word": "westward", "ipa": "/ˈwestwəd/", "pos": "adv.", "gloss_cn": "向西", "gloss_en": "toward the west", "sense_key": "westward", "ex_en": "They sailed westward for many days.", "ex_cn": "他们向西航行了许多天。" },
-  { "word": "acquainted", "ipa": "/əˈkweɪntɪd/", "pos": "v.", "gloss_cn": "熟悉;结识(过去分词)", "gloss_en": "having come to know someone or something", "sense_key": "acquainted", "ex_en": "I soon got acquainted with my new neighbours.", "ex_cn": "我很快就跟新邻居熟了。" },
-  { "word": "canvas", "ipa": "/ˈkænvəs/", "pos": "n.", "gloss_cn": "帆布", "gloss_en": "strong coarse cloth used for sails", "sense_key": "canvas", "ex_en": "The sails were made of strong canvas.", "ex_cn": "那些帆是用结实的帆布做的。" },
-  { "word": "redemption", "ipa": "/rɪˈdempʃn/", "pos": "n.", "gloss_cn": "赎回;解救", "gloss_en": "the act of being set free or bought back", "sense_key": "redemption", "ex_en": "He worked hard for the redemption of his debts.", "ex_cn": "他努力工作以还清债务。" },
-  { "word": "contrivance", "ipa": "/kənˈtraɪvəns/", "pos": "n.", "gloss_cn": "装置;计策", "gloss_en": "a clever device or scheme", "sense_key": "contrivance", "ex_en": "He built a clever contrivance to catch fish.", "ex_cn": "他造了个巧妙的装置来抓鱼。" },
-  { "word": "parcel", "ipa": "/ˈpɑːsl/", "pos": "n.", "gloss_cn": "一包;一批", "gloss_en": "a bundle or quantity of something", "sense_key": "bundle", "ex_en": "A parcel arrived for me this morning.", "ex_cn": "今早有个包裹寄给我。" },
-  { "word": "fowl", "ipa": "/faʊl/", "pos": "n.", "gloss_cn": "禽;鸟", "gloss_en": "a bird, especially one kept for food", "sense_key": "fowl", "ex_en": "They kept fowl for their eggs.", "ex_cn": "他们养家禽来下蛋。" },
-  { "word": "gunner", "ipa": "/ˈɡʌnə/", "pos": "n.", "gloss_cn": "炮手", "gloss_en": "a person who fires a large gun", "sense_key": "gunner", "ex_en": "The gunner fired at the enemy ship.", "ex_cn": "炮手向敌船开了炮。" },
-  { "word": "steered", "ipa": "/stɪəd/", "pos": "v.", "gloss_cn": "掌舵;驾驶(过去式)", "gloss_en": "guided the course of a boat or vehicle", "sense_key": "steer", "ex_en": "He steered the boat toward the shore.", "ex_cn": "他把船驶向岸边。" },
-  { "word": "gale", "ipa": "/ɡeɪl/", "pos": "n.", "gloss_cn": "大风;狂风", "gloss_en": "a very strong wind", "sense_key": "gale", "ex_en": "A strong gale blew all night.", "ex_cn": "大风刮了一整夜。" },
-  { "word": "resolving", "ipa": "/rɪˈzɒlvɪŋ/", "pos": "v.", "gloss_cn": "决意;下定决心(现在分词)", "gloss_en": "firmly deciding to do something", "sense_key": "resolve", "ex_en": "She kept resolving to study harder.", "ex_cn": "她一再下决心更用功。" },
-  { "word": "sparingly", "ipa": "/ˈspeərɪŋli/", "pos": "adv.", "gloss_cn": "节省地;有节制地", "gloss_en": "using only a little; frugally", "sense_key": "sparingly", "ex_en": "We used the water sparingly.", "ex_cn": "我们省着用水。" },
-  { "word": "pensive", "ipa": "/ˈpensɪv/", "pos": "adj.", "gloss_cn": "沉思的;忧郁的", "gloss_en": "deep in thought, often sadly", "sense_key": "pensive", "ex_en": "She sat by the window in a pensive mood.", "ex_cn": "她坐在窗边,若有所思。" }
+  {
+   "word": "wilderness",
+   "ipa": "/ˈwɪldənəs/",
+   "pos": "n.",
+   "gloss_cn": "荒野;荒地",
+   "gloss_en": "a wild uncultivated area of land",
+   "sense_key": "wilderness",
+   "ex_en": "We got lost in the wilderness for two days.",
+   "ex_cn": "我们在荒野里迷路了两天。"
+  },
+  {
+   "word": "infinitely",
+   "ipa": "/ˈɪnfɪnətli/",
+   "pos": "adv.",
+   "gloss_cn": "无限地;极其",
+   "gloss_en": "to an extremely great degree",
+   "sense_key": "extremely",
+   "ex_en": "This lake is infinitely deeper than that one.",
+   "ex_cn": "这个湖比那个深得多。"
+  },
+  {
+   "word": "particulars",
+   "ipa": "/pəˈtɪkjələz/",
+   "pos": "n.",
+   "gloss_cn": "详情;细节",
+   "gloss_en": "the small exact details of something",
+   "sense_key": "details",
+   "ex_en": "Please write down all the particulars of the accident.",
+   "ex_cn": "请写下事故的所有细节。"
+  },
+  {
+   "word": "hatchets",
+   "ipa": "/ˈhætʃɪts/",
+   "pos": "n.",
+   "gloss_cn": "短柄小斧(复数)",
+   "gloss_en": "small short-handled axes",
+   "sense_key": "hatchet",
+   "ex_en": "The men carried two hatchets to cut wood.",
+   "ex_cn": "那些人带了两把小斧去砍柴。"
+  },
+  {
+   "word": "verily",
+   "ipa": "/ˈverɪli/",
+   "pos": "adv.",
+   "gloss_cn": "的确;真实地(古)",
+   "gloss_en": "truly; certainly (old use)",
+   "sense_key": "truly",
+   "ex_en": "Verily, he spoke the truth.",
+   "ex_cn": "他的确说的是实话。"
+  },
+  {
+   "word": "necessarily",
+   "ipa": "/ˌnesəˈserəli/",
+   "pos": "adv.",
+   "gloss_cn": "必然地;一定",
+   "gloss_en": "as an unavoidable result",
+   "sense_key": "inevitably",
+   "ex_en": "More money does not necessarily bring happiness.",
+   "ex_cn": "钱多不一定带来快乐。"
+  },
+  {
+   "word": "dwelling",
+   "ipa": "/ˈdwelɪŋ/",
+   "pos": "n.",
+   "gloss_cn": "住所;住处",
+   "gloss_en": "a place where someone lives",
+   "sense_key": "dwelling",
+   "ex_en": "Their dwelling stood on a small hill.",
+   "ex_cn": "他们的住所建在一座小山上。"
+  },
+  {
+   "word": "pitched",
+   "ipa": "/pɪtʃt/",
+   "pos": "v.",
+   "gloss_cn": "立起;钉入(过去式)",
+   "gloss_en": "set up firmly by driving into the ground",
+   "sense_key": "pitch-set-up",
+   "ex_en": "We pitched the tent beside the lake.",
+   "ex_cn": "我们在湖边支起了帐篷。"
+  },
+  {
+   "word": "singled",
+   "ipa": "/ˈsɪŋɡld/",
+   "pos": "v.",
+   "gloss_cn": "挑出;单独选出(过去式)",
+   "gloss_en": "picked out one from a group",
+   "sense_key": "single-out",
+   "ex_en": "The teacher singled him out for praise.",
+   "ex_cn": "老师单独表扬了他。"
+  },
+  {
+   "word": "reckoning",
+   "ipa": "/ˈrekənɪŋ/",
+   "pos": "n.",
+   "gloss_cn": "计算;推算",
+   "gloss_en": "a calculation or count",
+   "sense_key": "reckoning",
+   "ex_en": "By my reckoning, we still have ten miles to go.",
+   "ex_cn": "照我估算,我们还有十英里要走。"
+  },
+  {
+   "word": "wicker",
+   "ipa": "/ˈwɪkə/",
+   "pos": "n.",
+   "gloss_cn": "柳条编制品",
+   "gloss_en": "twigs woven into baskets or furniture",
+   "sense_key": "wicker",
+   "ex_en": "She kept the bread in a wicker basket.",
+   "ex_cn": "她把面包放在柳条篮里。"
+  },
+  {
+   "word": "broth",
+   "ipa": "/brɒθ/",
+   "pos": "n.",
+   "gloss_cn": "肉汤",
+   "gloss_en": "a thin soup made by boiling meat",
+   "sense_key": "broth",
+   "ex_en": "Mother made some hot broth for the sick child.",
+   "ex_cn": "妈妈给生病的孩子做了些热肉汤。"
+  },
+  {
+   "word": "countenance",
+   "ipa": "/ˈkaʊntənəns/",
+   "pos": "n.",
+   "gloss_cn": "面容;神色",
+   "gloss_en": "a person's face or expression",
+   "sense_key": "countenance",
+   "ex_en": "His countenance grew pale with fear.",
+   "ex_cn": "他吓得脸色发白。"
+  },
+  {
+   "word": "disposition",
+   "ipa": "/ˌdɪspəˈzɪʃn/",
+   "pos": "n.",
+   "gloss_cn": "性情;性格",
+   "gloss_en": "a person's natural temper or character",
+   "sense_key": "temperament",
+   "ex_en": "She has a cheerful disposition.",
+   "ex_cn": "她性格开朗。"
+  },
+  {
+   "word": "extraordinary",
+   "ipa": "/ɪkˈstrɔːdnri/",
+   "pos": "adj.",
+   "gloss_cn": "非凡的;不寻常的",
+   "gloss_en": "very unusual or remarkable",
+   "sense_key": "extraordinary",
+   "ex_en": "He has an extraordinary memory.",
+   "ex_cn": "他有惊人的记忆力。"
+  },
+  {
+   "word": "cannibals",
+   "ipa": "/ˈkænɪblz/",
+   "pos": "n.",
+   "gloss_cn": "食人者(复数)",
+   "gloss_en": "people who eat human flesh",
+   "sense_key": "cannibal",
+   "ex_en": "The sailors feared the island was full of cannibals.",
+   "ex_cn": "水手们担心岛上都是食人者。"
+  },
+  {
+   "word": "perspective",
+   "ipa": "/pəˈspektɪv/",
+   "pos": "n.",
+   "gloss_cn": "望远镜(perspective glass)",
+   "gloss_en": "a telescope for viewing distant things",
+   "sense_key": "telescope",
+   "ex_en": "He watched the ship through a perspective glass.",
+   "ex_cn": "他用望远镜看那艘船。"
+  },
+  {
+   "word": "bearded",
+   "ipa": "/ˈbɪədɪd/",
+   "pos": "adj.",
+   "gloss_cn": "有胡须的",
+   "gloss_en": "having a beard",
+   "sense_key": "bearded",
+   "ex_en": "A tall bearded man opened the door.",
+   "ex_cn": "一个高个子大胡子男人开了门。"
+  },
+  {
+   "word": "countrymen",
+   "ipa": "/ˈkʌntrimən/",
+   "pos": "n.",
+   "gloss_cn": "同胞(复数)",
+   "gloss_en": "people from one's own country or people",
+   "sense_key": "countrymen",
+   "ex_en": "He longed to see his countrymen again.",
+   "ex_cn": "他渴望再见到自己的同胞。"
+  },
+  {
+   "word": "foresaw",
+   "ipa": "/fɔːˈsɔː/",
+   "pos": "v.",
+   "gloss_cn": "预见(foresee 的过去式)",
+   "gloss_en": "saw or knew beforehand",
+   "sense_key": "foresee",
+   "ex_en": "No one foresaw the storm.",
+   "ex_cn": "没人预见到这场风暴。"
+  },
+  {
+   "word": "discharged",
+   "ipa": "/dɪsˈtʃɑːdʒd/",
+   "pos": "v.",
+   "gloss_cn": "履行(职责);(过去式)卸下、解除",
+   "gloss_en": "carried out or fulfilled (a duty); also unloaded",
+   "sense_key": "unload-release",
+   "ex_en": "The workers discharged the goods from the ship.",
+   "ex_cn": "工人们把货物从船上卸了下来。"
+  },
+  {
+   "word": "seafaring",
+   "ipa": "/ˈsiːfeərɪŋ/",
+   "pos": "adj.",
+   "gloss_cn": "航海的",
+   "gloss_en": "connected with travelling by sea",
+   "sense_key": "seafaring",
+   "ex_en": "He came from a seafaring family.",
+   "ex_cn": "他出身于一个航海世家。"
+  },
+  {
+   "word": "hardened",
+   "ipa": "/ˈhɑːdnd/",
+   "pos": "adj./v.",
+   "gloss_cn": "铁石心肠的、冥顽的;(过去式)变硬",
+   "gloss_en": "callous and unfeeling; also made hard",
+   "sense_key": "harden",
+   "ex_en": "The mud hardened in the sun.",
+   "ex_cn": "泥巴在太阳下变硬了。"
+  },
+  {
+   "word": "forecastle",
+   "ipa": "/ˈfəʊksl/",
+   "pos": "n.",
+   "gloss_cn": "船头楼",
+   "gloss_en": "the raised front part of a ship",
+   "sense_key": "forecastle",
+   "ex_en": "The sailors slept in the forecastle.",
+   "ex_cn": "水手们睡在船头楼里。"
+  },
+  {
+   "word": "undone",
+   "ipa": "/ʌnˈdʌn/",
+   "pos": "adj.",
+   "gloss_cn": "毁掉的;完蛋的",
+   "gloss_en": "ruined; brought to disaster",
+   "sense_key": "ruined",
+   "ex_en": "If we lose this ship, we are undone.",
+   "ex_cn": "要是丢了这船,我们就完了。"
+  },
+  {
+   "word": "hauled",
+   "ipa": "/hɔːld/",
+   "pos": "v.",
+   "gloss_cn": "拖;拉(过去式)",
+   "gloss_en": "pulled with great effort",
+   "sense_key": "haul",
+   "ex_en": "They hauled the boat up onto the beach.",
+   "ex_cn": "他们把船拖上了沙滩。"
+  },
+  {
+   "word": "northward",
+   "ipa": "/ˈnɔːθwəd/",
+   "pos": "adv.",
+   "gloss_cn": "向北",
+   "gloss_en": "toward the north",
+   "sense_key": "northward",
+   "ex_en": "The birds flew northward in spring.",
+   "ex_cn": "鸟儿春天向北飞。"
+  },
+  {
+   "word": "acknowledge",
+   "ipa": "/əkˈnɒlɪdʒ/",
+   "pos": "v.",
+   "gloss_cn": "承认",
+   "gloss_en": "admit that something is true",
+   "sense_key": "admit",
+   "ex_en": "He would not acknowledge his mistake.",
+   "ex_cn": "他不肯承认自己的错误。"
+  },
+  {
+   "word": "westward",
+   "ipa": "/ˈwestwəd/",
+   "pos": "adv.",
+   "gloss_cn": "向西",
+   "gloss_en": "toward the west",
+   "sense_key": "westward",
+   "ex_en": "They sailed westward for many days.",
+   "ex_cn": "他们向西航行了许多天。"
+  },
+  {
+   "word": "acquainted",
+   "ipa": "/əˈkweɪntɪd/",
+   "pos": "v.",
+   "gloss_cn": "熟悉;结识(过去分词)",
+   "gloss_en": "having come to know someone or something",
+   "sense_key": "acquainted",
+   "ex_en": "I soon got acquainted with my new neighbours.",
+   "ex_cn": "我很快就跟新邻居熟了。"
+  },
+  {
+   "word": "canvas",
+   "ipa": "/ˈkænvəs/",
+   "pos": "n.",
+   "gloss_cn": "帆布",
+   "gloss_en": "strong coarse cloth used for sails",
+   "sense_key": "canvas",
+   "ex_en": "The sails were made of strong canvas.",
+   "ex_cn": "那些帆是用结实的帆布做的。"
+  },
+  {
+   "word": "redemption",
+   "ipa": "/rɪˈdempʃn/",
+   "pos": "n.",
+   "gloss_cn": "赎回;解救",
+   "gloss_en": "the act of being set free or bought back",
+   "sense_key": "redemption",
+   "ex_en": "He worked hard for the redemption of his debts.",
+   "ex_cn": "他努力工作以还清债务。"
+  },
+  {
+   "word": "contrivance",
+   "ipa": "/kənˈtraɪvəns/",
+   "pos": "n.",
+   "gloss_cn": "装置;计策",
+   "gloss_en": "a clever device or scheme",
+   "sense_key": "contrivance",
+   "ex_en": "He built a clever contrivance to catch fish.",
+   "ex_cn": "他造了个巧妙的装置来抓鱼。"
+  },
+  {
+   "word": "parcel",
+   "ipa": "/ˈpɑːsl/",
+   "pos": "n.",
+   "gloss_cn": "一包;一批",
+   "gloss_en": "a bundle or quantity of something",
+   "sense_key": "bundle",
+   "ex_en": "A parcel arrived for me this morning.",
+   "ex_cn": "今早有个包裹寄给我。"
+  },
+  {
+   "word": "fowl",
+   "ipa": "/faʊl/",
+   "pos": "n.",
+   "gloss_cn": "禽;鸟",
+   "gloss_en": "a bird, especially one kept for food",
+   "sense_key": "fowl",
+   "ex_en": "They kept fowl for their eggs.",
+   "ex_cn": "他们养家禽来下蛋。"
+  },
+  {
+   "word": "gunner",
+   "ipa": "/ˈɡʌnə/",
+   "pos": "n.",
+   "gloss_cn": "炮手",
+   "gloss_en": "a person who fires a large gun",
+   "sense_key": "gunner",
+   "ex_en": "The gunner fired at the enemy ship.",
+   "ex_cn": "炮手向敌船开了炮。"
+  },
+  {
+   "word": "steered",
+   "ipa": "/stɪəd/",
+   "pos": "v.",
+   "gloss_cn": "掌舵;驾驶(过去式)",
+   "gloss_en": "guided the course of a boat or vehicle",
+   "sense_key": "steer",
+   "ex_en": "He steered the boat toward the shore.",
+   "ex_cn": "他把船驶向岸边。"
+  },
+  {
+   "word": "gale",
+   "ipa": "/ɡeɪl/",
+   "pos": "n.",
+   "gloss_cn": "大风;狂风",
+   "gloss_en": "a very strong wind",
+   "sense_key": "gale",
+   "ex_en": "A strong gale blew all night.",
+   "ex_cn": "大风刮了一整夜。"
+  },
+  {
+   "word": "resolving",
+   "ipa": "/rɪˈzɒlvɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "决意;下定决心(现在分词)",
+   "gloss_en": "firmly deciding to do something",
+   "sense_key": "resolve",
+   "ex_en": "She kept resolving to study harder.",
+   "ex_cn": "她一再下决心更用功。"
+  },
+  {
+   "word": "sparingly",
+   "ipa": "/ˈspeərɪŋli/",
+   "pos": "adv.",
+   "gloss_cn": "节省地;有节制地",
+   "gloss_en": "using only a little; frugally",
+   "sense_key": "sparingly",
+   "ex_en": "We used the water sparingly.",
+   "ex_cn": "我们省着用水。"
+  },
+  {
+   "word": "pensive",
+   "ipa": "/ˈpensɪv/",
+   "pos": "adj.",
+   "gloss_cn": "沉思的;忧郁的",
+   "gloss_en": "deep in thought, often sadly",
+   "sense_key": "pensive",
+   "ex_en": "She sat by the window in a pensive mood.",
+   "ex_cn": "她坐在窗边,若有所思。"
+  }
  ],
  "skipped": [
   "signals(太基础)",
@@ -70,7 +439,19 @@
   "weapons(太基础)"
  ],
  "suspect": [
-  { "word": "discharged", "gloss_cn": "卸下;释放(过去式)", "ctx": "...having thus discharged his duty in warning me against measures which he knew would be to my hurt...", "issue": "书中是 discharged his duty=履行/尽(职责),回读\"卸下;释放\"通不通——父亲不是卸货或释放什么,而是尽到了劝告之责", "suggest": "此处义应为\"履行;尽(职责/义务)\",建议增补该义项或另立卡" },
-  { "word": "hardened", "gloss_cn": "变硬;硬化(过去式)", "ctx": "the worst and most hardened wretch among us would confess both the danger and the mercy", "issue": "书中 most hardened wretch 作形容词=铁石心肠的/怙恶不悛的(道德麻木),非物理\"变硬;硬化\",且 pos 标 v. 也不符", "suggest": "此处义应为\"冷酷无情的;顽固不化的(adj.)\",建议增补该义项或另立卡" }
+  {
+   "word": "discharged",
+   "gloss_cn": "卸下;释放(过去式)",
+   "ctx": "...having thus discharged his duty in warning me against measures which he knew would be to my hurt...",
+   "issue": "书中是 discharged his duty=履行/尽(职责),回读\"卸下;释放\"通不通——父亲不是卸货或释放什么,而是尽到了劝告之责",
+   "suggest": "此处义应为\"履行;尽(职责/义务)\",建议增补该义项或另立卡"
+  },
+  {
+   "word": "hardened",
+   "gloss_cn": "变硬;硬化(过去式)",
+   "ctx": "the worst and most hardened wretch among us would confess both the danger and the mercy",
+   "issue": "书中 most hardened wretch 作形容词=铁石心肠的/怙恶不悛的(道德麻木),非物理\"变硬;硬化\",且 pos 标 v. 也不符",
+   "suggest": "此处义应为\"冷酷无情的;顽固不化的(adj.)\",建议增补该义项或另立卡"
+  }
  ]
 }

@@ -1,0 +1,21 @@
+{ "chapter": 6,
+  "images": [
+    { "k":1, "slug":"walking-to-wreck-low-tide", "seq":704,
+      "scene":"Robinson walks across wet sand right up to the broken shipwreck at low tide, its forecastle heaved up high and its shattered stern cast on one side, sand piled where deep water used to be.",
+      "alt":"A man walks over exposed sand toward a broken shipwreck at low tide." },
+    { "k":2, "slug":"prying-deck-iron-crow", "seq":721,
+      "scene":"Robinson stands in shallow water at the wreck, driving a long iron crowbar under a deck plank to wrench it open, planks already floating loose beside him.",
+      "alt":"A man pries open a ship's deck plank with an iron crowbar at the wreck." },
+    { "k":3, "slug":"finding-sea-turtle-shore", "seq":739,
+      "scene":"Robinson crouches beside a large sea turtle he has found on the seashore, examining it, the calm sea and beach stretching behind him.",
+      "alt":"A man crouches beside a large turtle he found on the beach." },
+    { "k":4, "slug":"fiery-figure-dream-spear", "seq":777,
+      "scene":"In a fevered dream, Robinson sits on the ground outside his wall as a terrifying man blazing like flame descends from a black cloud onto the trembling earth and strides toward him raising a long spear.",
+      "alt":"A blazing figure descends from a dark cloud and advances on a seated man with a spear." },
+    { "k":5, "slug":"tobacco-bible-on-table", "seq":839,
+      "scene":"By lamplight at his cave table, Robinson lays out a roll of tobacco and an open Bible, a pan of coals and a bottle of rum beside them.",
+      "alt":"Tobacco, an open Bible, rum and a pan of coals on a table by lamplight." },
+    { "k":6, "slug":"kneeling-arms-raised-prayer", "seq":869,
+      "scene":"Robinson kneels inside his cave with the Bible thrown down before him and both hands lifted to heaven, crying out in a rush of joy.",
+      "alt":"A man kneels with hands raised to the sky beside a fallen open book." }
+  ] }

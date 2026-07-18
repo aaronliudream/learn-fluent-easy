@@ -1,0 +1,21 @@
+{ "chapter": 9,
+  "images": [
+    { "k":1, "slug":"teaching-parrot-poll", "seq":1051,
+      "scene":"Robinson sits inside his shelter on a rainy day, leaning close to a green parrot perched on his hand, coaxing it to speak while it says its name; tools and clay lie nearby.",
+      "alt":"A man indoors teaching a green parrot perched on his hand to speak." },
+    { "k":2, "slug":"firing-pots-in-fire", "seq":1063,
+      "scene":"Robinson kneels beside a pile of clay pots and pipkins stacked one upon another, feeding firewood into the blazing embers heaped all around them until the pots glow red-hot.",
+      "alt":"A man tends a large open fire heaped around a stack of glowing clay pots." },
+    { "k":3, "slug":"baking-bread-earthen-oven", "seq":1083,
+      "scene":"Robinson bakes barley loaves on his tiled hearth, having whelmed a broad earthen pot over the dough and drawn the glowing embers up all around its outside to keep in the heat.",
+      "alt":"A man bakes loaves under an upturned earthen pot surrounded by hot embers on a hearth." },
+    { "k":4, "slug":"digging-under-ships-boat", "seq":1093,
+      "scene":"On a rough sandy beach ridge, Robinson digs away the sand beneath the ship's boat, which lies turned almost bottom-upward, wedging levers and rollers under it to try to shift it toward the sea.",
+      "alt":"A man digs sand from under an overturned boat on a beach, using wooden levers." },
+    { "k":5, "slug":"giant-canoe-stranded-woods", "seq":1105,
+      "scene":"In a forest clearing Robinson stands beside the huge dugout periagua he carved from one great cedar tree, big enough for many men, stranded far from the distant creek it cannot reach.",
+      "alt":"A man stands next to an enormous dugout canoe carved from a single tree in the woods." },
+    { "k":6, "slug":"goatskin-suit-umbrella", "seq":1163,
+      "scene":"Robinson walks across the island in the blazing midday sun wearing a goatskin cap and rough goatskin clothes with the hair outward, holding up a large skin-covered umbrella that shades him like a pent-house.",
+      "alt":"A man in goatskin clothes and cap walks in bright sun holding a fur-covered umbrella." }
+  ] }

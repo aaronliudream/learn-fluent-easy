@@ -1,0 +1,21 @@
+{ "chapter": 13,
+  "images": [
+    { "k":1, "slug":"parrot-poll-companion", "seq":1433,
+      "scene":"Robinson sits inside his shelter with his tame parrot Poll perched on his hand, the bird talking to him while a dog and household goat kids rest nearby.",
+      "alt":"A bearded castaway with a parrot on his hand and animals around him inside his shelter." },
+    { "k":2, "slug":"spying-savages-with-glass", "seq":1448,
+      "scene":"Robinson lies flat on his belly at the top of a hill, peering through a perspective glass down at nine naked savages sitting round a small fire on the distant shore, two canoes hauled up on the sand.",
+      "alt":"A man lies on a hilltop looking through a spyglass at figures around a fire on a far beach." },
+    { "k":3, "slug":"signal-fire-on-hill", "seq":1472,
+      "scene":"At night in a storm with lightning overhead, Robinson piles dry wood and sets a large blazing bonfire on the hilltop as a signal toward the dark sea.",
+      "alt":"A man tends a large blazing bonfire on a hill at night during a lightning storm by the sea." },
+    { "k":4, "slug":"drowned-boy-on-shore", "seq":1494,
+      "scene":"Robinson stands over the washed-up corpse of a drowned boy lying on the sand at the edge of the island, the boy in a seaman's waistcoat and blue linen shirt, waves behind.",
+      "alt":"A man stands over a drowned boy's body washed up on the beach." },
+    { "k":5, "slug":"spanish-wreck-on-rocks", "seq":1509,
+      "scene":"A dismal Spanish ship lies jammed fast between two rocks at sea, its stern beaten to pieces and its mainmast and foremast broken short off, seen from Robinson's small canoe approaching.",
+      "alt":"A broken wrecked ship stuck between rocks at sea, viewed from a small boat." },
+    { "k":6, "slug":"dog-jumps-from-wreck", "seq":1511,
+      "scene":"A starving dog leaps from the deck of the wrecked ship into the sea toward Robinson, who reaches out from his small boat to pull the animal aboard.",
+      "alt":"A dog jumps off a shipwreck into the water toward a man reaching out from a small boat." }
+  ] }

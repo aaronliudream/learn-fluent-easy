@@ -1,0 +1,21 @@
+{ "chapter": 15,
+  "images": [
+    { "k":1, "slug":"shooting-kid-in-woods", "seq":1635,
+      "scene":"Robinson raises his long musket and fires at a young kid in a sunlit forest clearing while Friday stands frozen beside him, staring in astonishment; a she-goat and another kid rest in the shade nearby.",
+      "alt":"A man fires a musket at a goat kid in the woods while his companion watches, startled." },
+    { "k":2, "slug":"friday-kneeling-embracing-knees", "seq":1637,
+      "scene":"Friday kneels on the forest ground and clasps Robinson around the knees, looking up pleadingly and terrified, having ripped open his waistcoat to check for a wound; Robinson stands over him holding his gun.",
+      "alt":"A kneeling man clutches another man's knees in fear, looking up while the standing man holds a gun." },
+    { "k":3, "slug":"roasting-kid-before-fire", "seq":1645,
+      "scene":"A joint of kid meat hangs from a string on a crossbar between two upright poles, turning before an open campfire; Robinson tends the roast while Friday watches, delighted, in the shelter of the castle.",
+      "alt":"A piece of meat roasts on a string over a fire between two poles as two men watch." },
+    { "k":4, "slug":"friday-musing-over-wrecked-boat", "seq":1746,
+      "scene":"Friday stands still and thoughtful on the shore beside the rotted, broken ruins of Robinson's old boat half-buried in the sand, gazing at it in silence while Robinson looks on.",
+      "alt":"A man stands pensively beside the broken wreck of an old boat on a beach." },
+    { "k":5, "slug":"friday-dancing-on-hilltop", "seq":1763,
+      "scene":"On the grassy summit of a hill at the east of the island, Friday leaps and dances with joy, arm outstretched toward the distant blue mainland of America across a calm sea; Robinson stands a little apart watching.",
+      "alt":"A man jumps for joy on a hilltop, pointing across the sea toward a distant coastline." },
+    { "k":6, "slug":"testing-canoe-in-water", "seq":1788,
+      "scene":"Robinson and Friday sit together in a small dug-out canoe floating on the calm water beside the island shore, Friday gripping a paddle and steering it deftly, both looking out to sea.",
+      "alt":"Two men sit in a small canoe on calm water near the shore, one paddling." }
+  ] }

@@ -1,0 +1,101 @@
+{
+  "chapter": 20,
+  "chunks": [
+    { "head": "as soon as", "gloss": "一…就、刚一…", "ipa": "/əz suːn əz/",
+      "note": "as soon as … = 连词,表两件事紧接着发生。",
+      "literal": [{"word":"as","meaning_cn":"随着","note_cn":"此处与 soon 构成'一…就'"},{"word":"soon","meaning_cn":"很快、不久"},{"word":"as","meaning_cn":"当…时"}],
+      "ex_en": "As soon as the bell rang, the kids ran outside.", "ex_cn": "铃一响,孩子们就跑了出去。",
+      "occ": [[2331,"as soon as"]] },
+
+    { "head": "a great deal of", "gloss": "大量的、许多", "ipa": "/ə ɡreɪt diːl əv/",
+      "note": "a great deal of + 不可数名词 = 很多。",
+      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"大量的"},{"word":"deal","meaning_cn":"量、数额","note_cn":"此处'量、数额',非'交易'"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "She drinks a great deal of water every day.", "ex_cn": "她每天喝很多水。",
+      "occ": [[2353,"a great deal of"]] },
+
+    { "head": "one after another", "gloss": "一个接一个地", "ipa": "/wʌn ˈɑːftər əˈnʌðər/",
+      "note": "描述事物依次、接连发生。",
+      "literal": [{"word":"one","meaning_cn":"一个"},{"word":"after","meaning_cn":"在…之后"},{"word":"another","meaning_cn":"另一个"}],
+      "ex_en": "The guests arrived one after another.", "ex_cn": "客人一个接一个地到了。",
+      "occ": [[2355,"one after another"]] },
+
+    { "head": "out of sight", "gloss": "看不见、在视线之外", "ipa": "/aʊt əv saɪt/",
+      "note": "out of sight = 消失在视野里，看不到了。",
+      "literal": [{"word":"out","meaning_cn":"在…外"},{"word":"of","meaning_cn":"…的"},{"word":"sight","meaning_cn":"视野","note_cn":"此处'视野、视线'"}],
+      "ex_en": "The plane flew higher and higher until it was out of sight.", "ex_cn": "飞机越飞越高,直到看不见为止。",
+      "occ": [[2355,"out of sight"]] },
+
+    { "head": "by the way", "gloss": "顺便说一句、对了", "ipa": "/baɪ ðə weɪ/",
+      "note": "插入语,引出顺带一提的话题。",
+      "literal": [{"word":"by","meaning_cn":"在…旁"},{"word":"the","meaning_cn":"这"},{"word":"way","meaning_cn":"路","note_cn":"此处成语中已不指'路'"}],
+      "ex_en": "By the way, did you finish your homework?", "ex_cn": "对了,你作业写完了吗?",
+      "occ": [[2356,"by the way"]] },
+
+    { "head": "that is to say", "gloss": "也就是说、换句话说", "ipa": "/ðæt ɪz tə seɪ/",
+      "note": "用来对前面内容作解释或补充。",
+      "literal": [{"word":"that","meaning_cn":"那"},{"word":"is","meaning_cn":"是"},{"word":"to","meaning_cn":"要"},{"word":"say","meaning_cn":"说"}],
+      "ex_en": "He is a vegetarian, that is to say, he eats no meat.", "ex_cn": "他是素食者,也就是说,他不吃肉。",
+      "occ": [[2359,"that is to say"]] },
+
+    { "head": "eat up", "gloss": "吃光、吃完", "ipa": "/iːt ʌp/",
+      "note": "eat up = 把食物全部吃完;up 在此表'完、光'。",
+      "literal": [{"word":"eat","meaning_cn":"吃"},{"word":"up","meaning_cn":"光、完","note_cn":"此处表'彻底、干净',非'向上'"}],
+      "ex_en": "Eat up your vegetables before dessert.", "ex_cn": "吃完你的蔬菜再吃甜点。",
+      "occ": [[2359,"eaten up"]] },
+
+    { "head": "in the meantime", "gloss": "与此同时、在这期间", "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "note": "指在两件事之间的那段时间里。",
+      "literal": [{"word":"in","meaning_cn":"在"},{"word":"the","meaning_cn":"这"},{"word":"meantime","meaning_cn":"其间、这段时间"}],
+      "ex_en": "Dinner is almost ready; in the meantime, please set the table.", "ex_cn": "晚饭快好了,这期间请你摆好餐桌。",
+      "occ": [[2398,"in the meantime"]] },
+
+    { "head": "for my part", "gloss": "就我而言、至于我", "ipa": "/fɔːr maɪ pɑːrt/",
+      "note": "表明个人的看法或立场;part 在此为'一方、方面'。",
+      "literal": [{"word":"for","meaning_cn":"就…来说"},{"word":"my","meaning_cn":"我的"},{"word":"part","meaning_cn":"一方、立场","note_cn":"此处'一方、方面'"}],
+      "ex_en": "For my part, I'd rather stay home tonight.", "ex_cn": "就我而言,我今晚宁愿待在家里。",
+      "occ": [[2387,"for my part"]] },
+
+    { "head": "take notice of", "gloss": "注意到、留意", "ipa": "/teɪk ˈnoʊtɪs əv/",
+      "note": "take notice of = 对…加以注意。",
+      "literal": [{"word":"take","meaning_cn":"加以"},{"word":"notice","meaning_cn":"注意","note_cn":"名词'注意'"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "Nobody took notice of the new sign on the door.", "ex_cn": "没人注意到门上那块新牌子。",
+      "occ": [[2388,"take notice of"]] },
+
+    { "head": "break into", "gloss": "闯入、破门而入", "ipa": "/breɪk ˈɪntuː/",
+      "note": "break into = 强行进入(某处)。",
+      "literal": [{"word":"break","meaning_cn":"破、闯"},{"word":"into","meaning_cn":"进入"}],
+      "ex_en": "Thieves broke into the shop last night.", "ex_cn": "小偷昨晚闯进了那家店。",
+      "occ": [[2384,"broken into"]] },
+
+    { "head": "at the foot of", "gloss": "在…的脚下、底部", "ipa": "/æt ðə fʊt əv/",
+      "note": "常指山脚、楼梯或页面的底部。",
+      "literal": [{"word":"at","meaning_cn":"在"},{"word":"the","meaning_cn":"这"},{"word":"foot","meaning_cn":"底部","note_cn":"此处'底部、山脚',非'脚'"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "There is a small village at the foot of the hill.", "ex_cn": "山脚下有个小村庄。",
+      "occ": [[2385,"at the foot of"]] },
+
+    { "head": "turn tail", "gloss": "掉头逃跑、夹着尾巴逃走", "ipa": "/tɜːrn teɪl/",
+      "note": "turn tail = 转身逃走,常含胆怯之意。",
+      "literal": [{"word":"turn","meaning_cn":"转、掉转"},{"word":"tail","meaning_cn":"尾巴"}],
+      "ex_en": "When the big dog barked, the cat turned tail and ran.", "ex_cn": "大狗一叫,那只猫就掉头逃走了。",
+      "occ": [[2380,"turned tail"]] },
+
+    { "head": "set aside", "gloss": "把…搁在一边、放下", "ipa": "/set əˈsaɪd/",
+      "note": "本章出处为分离式(sets all other business aside),故 card-only。",
+      "literal": [{"word":"set","meaning_cn":"放置"},{"word":"aside","meaning_cn":"到一边"}],
+      "ex_en": "He set aside his book and answered the phone.", "ex_cn": "他放下书,去接电话。",
+      "cardOnly": true, "key": "set aside", "exSeq": 2317 },
+
+    { "head": "set on fire", "gloss": "点燃、放火烧", "ipa": "/set ɒn ˈfaɪər/",
+      "note": "本章出处为分离式(set it on fire),故 card-only。",
+      "literal": [{"word":"set","meaning_cn":"使处于(某状态)","note_cn":"此处'使…处于',非'放置'"},{"word":"on","meaning_cn":"处于…中"},{"word":"fire","meaning_cn":"火、燃烧"}],
+      "ex_en": "A single spark set the dry grass on fire.", "ex_cn": "一点火星就把干草点着了。",
+      "cardOnly": true, "key": "set on fire", "exSeq": 2380 }
+  ],
+  "skipped": [
+    "专名: Friday / Gascony / Toulouse / the Brazils / Caribbees / Lisbon / Dover",
+    "过时惯用语: on a sudden(=suddenly) / by and by / a great while / come off safe",
+    "一次性 nautical/军事硬词: fusee / volley / breastwork / bark〔小船〕 / bills of exchange / pieces of eight / moidores",
+    "古语/生僻: thither / thence / whither / durst / methought / hath — 迁移弱,归难句层",
+    "一次性文学/道德训诫套语: Providence's chequer-work / gave myself over for lost / upon the wing"
+  ]
+}

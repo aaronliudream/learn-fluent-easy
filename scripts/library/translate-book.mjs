@@ -21,7 +21,8 @@ const env = Object.fromEntries(
 const SUP = env.VITE_SUPABASE_URL;
 const ANON = env.VITE_SUPABASE_PUBLISHABLE_KEY;
 const TR_URL = `${SUP}/functions/v1/translate`;
-const TARGET = "Simplified Chinese for young children (ages 6-9): short, plain, spoken sentences that are easy to read aloud; avoid formal or literary long sentences";
+// 默认儿童向语气(Oz/Aesop);成书可在 books/<key>.json 里给 translate_target 覆盖(见下,读书后赋值)。
+const DEFAULT_TARGET = "Simplified Chinese for young children (ages 6-9): short, plain, spoken sentences that are easy to read aloud; avoid formal or literary long sentences";
 const BATCH = 30;
 const THROTTLE_MS = 1500;
 const MAX_RETRY = 4;            // 批次失败(HTTP错/降级/空)重试次数,退避 2s→4s→8s→16s
@@ -125,6 +126,8 @@ const key = process.argv[2];
 if (!key) { console.error("用法: node scripts/library/translate-book.mjs <book_key>"); process.exit(1); }
 const path = `scripts/library/books/${key}.json`;
 const book = JSON.parse(readFileSync(path, "utf8"));
+// 语气:成书(如鲁滨逊)在 JSON 里给 translate_target 覆盖默认儿童向;缺省则用默认。
+const TARGET = book.translate_target || DEFAULT_TARGET;
 
 // 每书术语表:若存在 books/<key>.glossary.json([[word, cn], …],长/具体优先)→ 覆盖内置(Oz)表。
 // 名字用词边界整词匹配,跨章一致;新作者只需给这个文件,不用改脚本。

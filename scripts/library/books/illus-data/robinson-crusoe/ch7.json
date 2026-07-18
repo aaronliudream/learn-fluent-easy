@@ -1,0 +1,21 @@
+{ "chapter": 7,
+  "images": [
+    { "k":1, "slug":"brook-savannah-tobacco", "seq":888,
+      "scene":"Robinson stands on the grassy bank of a small freshwater brook winding through smooth open savannahs, bending to examine tall green tobacco plants growing on the rising ground beside him.",
+      "alt":"A man examines tall tobacco plants on the grassy bank of a small brook." },
+    { "k":2, "slug":"sleeping-up-a-tree", "seq":900,
+      "scene":"Night scene: Robinson has climbed high into the fork of a large tree and lies wedged among the branches asleep, his gun beside him, the dark valley and ridges of hills stretching below.",
+      "alt":"A man sleeps high in the branches of a tree at night above a dark valley." },
+    { "k":3, "slug":"delicious-green-vale", "seq":901,
+      "scene":"Wide panorama of a lush green valley opening to the west, everything in fresh spring verdure like a planted garden, with a little spring of water issuing from the hillside; Robinson stands small on the slope surveying it.",
+      "alt":"A man on a hillside looks out over a lush green valley like a garden." },
+    { "k":4, "slug":"hanging-grapes-to-dry", "seq":910,
+      "scene":"Robinson reaches up to hang heavy clusters of grapes over the outer branches of the trees to cure and dry in the sun, a bundle of gathered limes and lemons on the ground at his feet.",
+      "alt":"A man hangs bunches of grapes on tree branches to dry in the sun." },
+    { "k":5, "slug":"cat-with-three-kittens", "seq":919,
+      "scene":"Inside the cave habitation, Robinson looks down in surprise at his cat that has returned home, now sitting with three small kittens gathered around her on the ground.",
+      "alt":"A man looks at a cat sitting with three kittens inside a cave." },
+    { "k":6, "slug":"anniversary-fast-prayer", "seq":930,
+      "scene":"Robinson kneels and prostrates himself humbly on the ground outside his cave at dusk beside his notched wooden post, hands clasped in solemn prayer on the anniversary of his landing.",
+      "alt":"A man kneels in prayer on the ground beside a notched wooden post at dusk." }
+  ] }

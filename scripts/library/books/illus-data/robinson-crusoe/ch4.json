@@ -1,0 +1,21 @@
+{ "chapter": 4,
+  "images": [
+    { "k":1, "slug":"climb-rope-to-wreck", "seq":340,
+      "scene":"Robinson, stripped to his linen breeches, hauls himself up a dangling rope by the fore-chains of the stranded ship, climbing out of the calm sea toward the tilted forecastle.",
+      "alt":"A man climbs a rope up the side of a wrecked ship rising out of a calm sea." },
+    { "k":2, "slug":"building-timber-raft", "seq":348,
+      "scene":"Beside the grounded ship's hull, Robinson lashes spare yards and spars together with ropes and lays short planks crossways to form a floating raft on the water.",
+      "alt":"A man ties wooden spars and planks together into a raft next to a wrecked ship." },
+    { "k":3, "slug":"hilltop-island-view", "seq":383,
+      "scene":"Robinson stands at the top of a steep hill, a fowling-piece over his shoulder, gazing out at the sea that surrounds the barren island on every side, with distant rocks and two small islands far to the west.",
+      "alt":"A man with a gun stands on a hilltop looking out at the sea encircling the island." },
+    { "k":4, "slug":"wildcat-on-chest", "seq":401,
+      "scene":"A wild-cat-like creature sits composed atop one of the wooden chests on the shore, looking straight at Robinson as he tosses it a small piece of biscuit near his piled cargo.",
+      "alt":"A wild cat sits on a chest looking at a man who offers it a piece of biscuit on the beach." },
+    { "k":5, "slug":"fortified-stake-fence", "seq":437,
+      "scene":"On a green plain below a steep rock face, Robinson drives tall sharpened stakes into the ground in a half-circle, building a double-row fence around his tent, coils of ship's cable stacked between the rows.",
+      "alt":"A man drives rows of sharpened stakes into the ground to build a fence around a tent below a rock." },
+    { "k":6, "slug":"carving-calendar-cross", "seq":474,
+      "scene":"Robinson kneels on the shore where he first landed, carving letters and daily notches with his knife into a large square wooden post shaped into a cross set upright in the sand.",
+      "alt":"A man carves notches and letters into a tall cross-shaped wooden post standing on the beach." }
+  ] }

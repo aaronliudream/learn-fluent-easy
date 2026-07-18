@@ -1,0 +1,95 @@
+{
+  "chapter": 2,
+  "chunks": [
+    { "head": "get acquainted with", "gloss": "结识、与…相识", "ipa": "/ɡet əˈkweɪntɪd wɪð/",
+      "note": "get acquainted with sb = 认识、结识某人。",
+      "literal": [{"word":"get","meaning_cn":"变得","note_cn":"此处'变得',非'得到'义"},{"word":"acquainted","meaning_cn":"相识的"},{"word":"with","meaning_cn":"与…"}],
+      "ex_en": "I got acquainted with my new neighbours last week.", "ex_cn": "我上周结识了新邻居。",
+      "occ": [[97,"got acquainted with"]] },
+
+    { "head": "take a fancy to", "gloss": "喜欢上、看中", "ipa": "/teɪk ə ˈfænsi tuː/",
+      "note": "take a fancy to sb/sth = (一时)喜欢上、看中。",
+      "literal": [{"word":"take","meaning_cn":"产生","note_cn":"此处'产生',非'拿'义"},{"word":"a","meaning_cn":"一种"},{"word":"fancy","meaning_cn":"喜爱","note_cn":"此处名词'喜好',非'想象'义"},{"word":"to","meaning_cn":"对…"}],
+      "ex_en": "The little girl took a fancy to the red hat.", "ex_cn": "小女孩看上了那顶红帽子。",
+      "occ": [[98,"taking a fancy to"]] },
+
+    { "head": "give chase to", "gloss": "追赶、追击", "ipa": "/ɡɪv tʃeɪs tuː/",
+      "note": "give chase (to sb) = 展开追赶。",
+      "literal": [{"word":"give","meaning_cn":"发起","note_cn":"此处'发起',非'给'义"},{"word":"chase","meaning_cn":"追逐"},{"word":"to","meaning_cn":"向…"}],
+      "ex_en": "The police gave chase to the runaway car.", "ex_cn": "警察追赶那辆逃跑的车。",
+      "occ": [[105,"gave chase to"]] },
+
+    { "head": "look after", "gloss": "照看、照料", "ipa": "/lʊk ˈɑːftər/",
+      "note": "look after sb/sth = 照顾、看管。",
+      "literal": [{"word":"look","meaning_cn":"照料","note_cn":"此处非'看'义,与 after 构成'照料'"},{"word":"after","meaning_cn":"在…之后"}],
+      "ex_en": "Can you look after my dog this weekend?", "ex_cn": "这周末你能帮我照看狗吗?",
+      "occ": [[116,"look after"]] },
+
+    { "head": "lose sight of", "gloss": "看不见、失去…的踪影", "ipa": "/luːz saɪt əv/",
+      "note": "lose sight of sth = (视线中)看不见了。",
+      "literal": [{"word":"lose","meaning_cn":"失去"},{"word":"sight","meaning_cn":"视线","note_cn":"此处名词'看见/视野'"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "We lost sight of the ship in the fog.", "ex_cn": "我们在雾中看不见那艘船了。",
+      "occ": [[120,"lost sight of"]] },
+
+    { "head": "a great deal of", "gloss": "大量的、许多", "ipa": "/ə ɡreɪt diːl əv/",
+      "note": "a great deal of + 不可数名词 = 大量的。",
+      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"很大的"},{"word":"deal","meaning_cn":"量","note_cn":"此处'数量',非'交易'义"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "He spent a great deal of money on books.", "ex_cn": "他花了大量的钱买书。",
+      "occ": [[121,"a great deal of"]] },
+
+    { "head": "put off", "gloss": "推迟、拖延", "ipa": "/pʊt ɒf/",
+      "note": "put off (doing) sth = 把某事延后。",
+      "literal": [{"word":"put","meaning_cn":"放","note_cn":"此处与 off 构成'推迟'"},{"word":"off","meaning_cn":"延后","note_cn":"此处表延后"}],
+      "ex_en": "They put off the meeting until Monday.", "ex_cn": "他们把会议推迟到周一。",
+      "occ": [[126,"put off"]] },
+
+    { "head": "take by surprise", "gloss": "使措手不及、出其不意地袭击", "ipa": "/teɪk baɪ səˈpraɪz/",
+      "note": "本章出处为分离式(took him by surprise),故 card-only。",
+      "literal": [{"word":"take","meaning_cn":"抓住","note_cn":"此处'冷不防抓住'"},{"word":"by","meaning_cn":"以…方式"},{"word":"surprise","meaning_cn":"意外/突然"}],
+      "ex_en": "The sudden rain took us by surprise.", "ex_cn": "那场突如其来的雨让我们措手不及。",
+      "cardOnly": true, "key": "take by surprise", "exSeq": 142 },
+
+    { "head": "give over", "gloss": "(此处)停止、罢手", "ipa": "/ɡɪv ˈoʊvər/",
+      "note": "give over = 停下、放弃(继续做某事)。",
+      "literal": [{"word":"give","meaning_cn":"停止","note_cn":"此处'停止',非'给'义"},{"word":"over","meaning_cn":"完结"}],
+      "ex_en": "He would not give over until the work was done.", "ex_cn": "他不干完活不肯罢手。",
+      "occ": [[151,"give over"]] },
+
+    { "head": "be obliged to", "gloss": "不得不、被迫", "ipa": "/biː əˈblaɪdʒd tuː/",
+      "note": "be obliged to do sth = 迫于形势不得不做。",
+      "literal": [{"word":"be","meaning_cn":"是/处于"},{"word":"obliged","meaning_cn":"被迫的","note_cn":"此处'不得已',非'感激'义"},{"word":"to","meaning_cn":"去做…"}],
+      "ex_en": "We were obliged to wait an hour for the bus.", "ex_cn": "我们不得不等了一小时公交车。",
+      "occ": [[163,"obliged to"]] },
+
+    { "head": "take pains", "gloss": "下功夫、不辞辛劳", "ipa": "/teɪk peɪnz/",
+      "note": "本章出处为分离式(take such pains),故 card-only。take pains (to do) = 费心尽力。",
+      "literal": [{"word":"take","meaning_cn":"付出","note_cn":"此处'付出/花费'"},{"word":"pains","meaning_cn":"辛劳","note_cn":"此处复数'辛苦/努力',非'疼痛'义"}],
+      "ex_en": "She takes great pains to write neatly.", "ex_cn": "她下了很大功夫把字写工整。",
+      "cardOnly": true, "key": "take pains", "exSeq": 172 },
+
+    { "head": "take heart", "gloss": "鼓起勇气、振作起来", "ipa": "/teɪk hɑːrt/",
+      "note": "take heart = 打起精神、重拾信心。",
+      "literal": [{"word":"take","meaning_cn":"获得","note_cn":"此处'获得/提起'"},{"word":"heart","meaning_cn":"勇气","note_cn":"此处'勇气/信心',非'心脏'义"}],
+      "ex_en": "Take heart — things will get better soon.", "ex_cn": "振作些,情况很快会好起来。",
+      "occ": [[188,"took heart"]] },
+
+    { "head": "cheer up", "gloss": "(使)高兴起来、振作", "ipa": "/tʃɪr ʌp/",
+      "note": "本章出处为分离式(cheer him up),故 card-only。",
+      "literal": [{"word":"cheer","meaning_cn":"使高兴"},{"word":"up","meaning_cn":"起来","note_cn":"此处表'情绪振作起来'"}],
+      "ex_en": "A cup of hot tea will cheer you up.", "ex_cn": "一杯热茶会让你高兴起来。",
+      "cardOnly": true, "key": "cheer up", "exSeq": 157 },
+
+    { "head": "fit out", "gloss": "装备、配备(所需物品)", "ipa": "/fɪt aʊt/",
+      "note": "fit out sth = 为某物配齐装备/用品。",
+      "literal": [{"word":"fit","meaning_cn":"配置","note_cn":"此处'配备',非'合身'义"},{"word":"out","meaning_cn":"齐备"}],
+      "ex_en": "They fitted out the boat for a long trip.", "ex_cn": "他们为长途旅行把船装备齐全。",
+      "occ": [[119,"fitting out"]] }
+  ],
+  "skipped": [
+    "专名/人名/地名: Crusoe / Xury / Maresco / Ismael(Moely) / Sallee / Guinea / the Moors / Morocco / the Canary Islands / Teneriffe / Cadiz",
+    "18世纪古语: whither(不知去向)[120] / thither(到那里)[177] / by-and-by(不久)[126,170] / for aught I know(据我所知)[160] / bethought myself(想起)[195] / bade(命令,bid过去式)[184]",
+    "一次性 nautical 硬词: pinnace / longboat / shoulder-of-mutton sail / boom jibed / main-sheet / weigh the anchor / slip our cable / come to an anchor / athwart / broadside / half-pikes / fusees / ancient and pendants",
+    "宗教/道德训诫套语: 'the hand of Heaven had overtaken me' / 'brought to pass'(应验,过时) / 'that evil influence which carried me away'",
+    "过时/克制的惯用语: make the best of one's way(赶路)[145] / have a mind to(想要)[98] / for want of(因缺乏)[119] / fall to cutting(开始动手)[110]"
+  ]
+}

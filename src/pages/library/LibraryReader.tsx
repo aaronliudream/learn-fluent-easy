@@ -8,7 +8,7 @@
  */
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Play, Square, Volume2, Gauge, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ArrowLeft, Play, Square, Volume2, Gauge, ChevronLeft, ChevronRight, X, Bookmark } from "lucide-react";
 import { speak, speakFromUrl, stopSpeaking, unlockAudioSync, prefetchTTS } from "@/lib/speak";
 import { T } from "@/i18n/T";
 import { TappableLine } from "@/components/TappableLine";
@@ -40,6 +40,8 @@ import {
   flushCloudPush,
   type LibraryReadingState,
 } from "@/lib/library/progress";
+import { listBookmarks, addBookmark, removeBookmark, type LibraryBookmark } from "@/lib/library/bookmarks";
+import BookmarkPanel from "@/components/library/BookmarkPanel";
 
 type Mode = "en" | "both" | "cn";
 const MODES: { key: Mode; label: string }[] = [
@@ -111,6 +113,12 @@ export default function LibraryReader() {
   const [showOnboard, setShowOnboard] = useState(false); // 首次引导提示
   const [revealedCn, setRevealedCn] = useState<Set<number>>(new Set()); // 点句子 → 就地显该句中文(章内数组下标)
 
+  // 书签(登录用户):段落级手动标记多个精准点,与续读独立。bookmarkedSeqs=图标实心判定;bookmarks=面板列表。
+  const [signedIn, setSignedIn] = useState(false);
+  const [bookmarks, setBookmarks] = useState<LibraryBookmark[]>([]);
+  const [bookmarkedSeqs, setBookmarkedSeqs] = useState<Set<number>>(new Set());
+  const [panelOpen, setPanelOpen] = useState(false);
+
   // 本章文化笔记(③ 章末合集):cultureNotes 已按本书取,再按锚定章过滤 = (book_id, chapter_idx),不跨书混。
   const chapterNotes = useMemo(
     () => [...cultureNotes.values()].filter((n) => n.chapter_idx === chapterIdx),
@@ -142,15 +150,19 @@ export default function LibraryReader() {
       // 目录取自 chapters jsonb(0 查询,与书长无关);其余独立查询并行,不再逐个串行。
       const chs = chapterOutline(b);
       setChapters(chs);
-      const [uid, terms, notes] = await Promise.all([
+      const [uid, terms, notes, bms] = await Promise.all([
         currentUserId(),
         listFavoritedTerms(),
         getBookCultureNotes(b.id),
+        listBookmarks(b.id), // 未登录返回 []
       ]);
       if (!alive) return;
       uidRef.current = uid;
+      setSignedIn(!!uid);
       setFavTerms(terms);
       setCultureNotes(notes);
+      setBookmarks(bms);
+      setBookmarkedSeqs(new Set(bms.map((x) => x.seq)));
 
       const st = uid ? await hydrateFromCloud(uid, b.id) : loadLocalState(b.id);
       if (!alive) return;
@@ -430,6 +442,60 @@ export default function LibraryReader() {
   }, [sentences, furthestSeq]);
 
   // 段落流:同 para_idx 的句子归为一段(保留各句章内下标 i,供高亮/滚动/进度用)。
+  // ---- 书签:加/删(段落级,存该段开头句 seq + preview 快照)/ 跳转(复用续读的 pendingResumeSeq 定位)----
+  async function toggleBookmark(seq: number, chIdx: number, previewEn: string, previewCn: string) {
+    if (!book || !uidRef.current) return;
+    try {
+      if (bookmarkedSeqs.has(seq)) {
+        await removeBookmark(book.id, seq);
+        setBookmarkedSeqs((prev) => {
+          const n = new Set(prev);
+          n.delete(seq);
+          return n;
+        });
+        setBookmarks((prev) => prev.filter((b) => b.seq !== seq));
+      } else {
+        const bm = await addBookmark({
+          bookId: book.id,
+          seq,
+          chapterIdx: chIdx,
+          preview: previewEn.slice(0, 140),
+          previewCn: previewCn.slice(0, 140),
+        });
+        setBookmarkedSeqs((prev) => new Set(prev).add(seq));
+        if (bm) setBookmarks((prev) => [...prev, bm].sort((a, b) => a.seq - b.seq));
+      }
+    } catch (e) {
+      console.warn("[bookmark] toggle failed", e);
+    }
+  }
+
+  function jumpToBookmark(bm: LibraryBookmark) {
+    setPanelOpen(false);
+    if (bm.chapter_idx === chapterIdx) {
+      const idx = sentences.findIndex((s) => s.seq === bm.seq);
+      if (idx >= 0) liRefs.current[idx]?.scrollIntoView({ behavior: "smooth", block: "center" });
+    } else {
+      pendingResumeSeqRef.current = bm.seq; // 换章后由章句就绪 effect 定位到该句(与续读同一机制)
+      setChapterIdx(bm.chapter_idx);
+    }
+  }
+
+  async function deleteBookmark(bm: LibraryBookmark) {
+    if (!book) return;
+    try {
+      await removeBookmark(book.id, bm.seq);
+      setBookmarks((prev) => prev.filter((b) => b.id !== bm.id));
+      setBookmarkedSeqs((prev) => {
+        const n = new Set(prev);
+        n.delete(bm.seq);
+        return n;
+      });
+    } catch (e) {
+      console.warn("[bookmark] delete failed", e);
+    }
+  }
+
   const paragraphs = useMemo(() => {
     const out: { paraIdx: number; items: { s: LibrarySentence; i: number }[] }[] = [];
     sentences.forEach((s, i) => {
@@ -570,6 +636,16 @@ export default function LibraryReader() {
         >
           <Gauge className="size-4" /> {slow ? <T>慢速</T> : <T>正常</T>}
         </button>
+        {signedIn && (
+          <button
+            type="button"
+            onClick={() => setPanelOpen(true)}
+            className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-200"
+          >
+            <Bookmark className="size-4" /> <T>书签</T>
+            {bookmarks.length > 0 && <span className="text-xs text-slate-400">{bookmarks.length}</span>}
+          </button>
+        )}
         <div className="ml-auto flex rounded-full bg-slate-100 p-0.5">
           {MODES.map((m) => (
             <button
@@ -656,11 +732,32 @@ export default function LibraryReader() {
                 <Fragment key={para.paraIdx}>
                   {figsBeforeLocal(pi + 1).map(renderFigure)}
                   {/* 正文列限宽 ~660px(≤80 字符/行);插图在外层容器满宽,故比正文宽 ~15%。 */}
-                  <div className="mx-auto mb-7 max-w-[660px]">
+                  <div className="relative mx-auto mb-7 max-w-[660px]">
+                  {/* 段落书签图标(登录用户):独立按钮,在段落文字外侧,不拦截段内点词/chunk 点击。
+                      桌面居右外侧空白;手机贴右内缘(正文已加右侧内边距避让,文字不被盖)。 */}
+                  {signedIn && (
+                    <button
+                      type="button"
+                      onClick={() =>
+                        toggleBookmark(
+                          para.items[0].s.seq,
+                          chapterIdx,
+                          para.items[0].s.text_en,
+                          para.items[0].s.text_cn ?? "",
+                        )
+                      }
+                      aria-label={bookmarkedSeqs.has(para.items[0].s.seq) ? "取消书签" : "添加书签"}
+                      className="absolute right-0 top-0.5 z-10 inline-flex size-7 items-center justify-center rounded-full text-slate-300 transition hover:bg-sky-50 hover:text-sky-500 md:-right-9 md:top-0"
+                    >
+                      <Bookmark
+                        className={`size-[18px] ${bookmarkedSeqs.has(para.items[0].s.seq) ? "fill-sky-500 text-sky-500" : ""}`}
+                      />
+                    </button>
+                  )}
                   {/* 英文段(en / both 模式);段首一个喇叭(章首段除外,由顶部"朗读本章"覆盖),从本段起连读 */}
                   {mode !== "cn" && (
                     <p
-                      className={`text-[18px] leading-[1.9] text-slate-800${
+                      className={`${signedIn ? "pr-8 md:pr-0 " : ""}text-[18px] leading-[1.9] text-slate-800${
                         dcActive
                           ? " first-letter:float-left first-letter:mr-2 first-letter:font-serif first-letter:text-[3.4em] first-letter:font-bold first-letter:leading-[1.1] first-letter:text-slate-700"
                           : ""
@@ -722,7 +819,7 @@ export default function LibraryReader() {
                     <p
                       className={
                         mode === "cn"
-                          ? "text-[18px] leading-[1.9] text-slate-800"
+                          ? `${signedIn ? "pr-8 md:pr-0 " : ""}text-[18px] leading-[1.9] text-slate-800`
                           : "mt-1.5 text-[15px] leading-relaxed text-slate-500"
                       }
                     >
@@ -744,6 +841,19 @@ export default function LibraryReader() {
         </>
       )}
     </div>
+
+      <BookmarkPanel
+        open={panelOpen}
+        onClose={() => setPanelOpen(false)}
+        bookmarks={bookmarks}
+        chapterLabel={(idx) => {
+          const c = chapters.find((ch) => ch.idx === idx);
+          const t = c?.title_zh || c?.title_en || "";
+          return t ? `第${idx}章 · ${t}` : `第${idx}章`;
+        }}
+        onJump={jumpToBookmark}
+        onDelete={deleteBookmark}
+      />
     </div>
   );
 }

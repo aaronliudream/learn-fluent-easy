@@ -1,0 +1,89 @@
+{
+  "chapter": 14,
+  "chunks": [
+    { "head": "take care of", "gloss": "照料、照顾", "ipa": "/teɪk ker əv/",
+      "note": "take care of sb/sth = 照顾、打理。",
+      "literal": [{"word":"take","meaning_cn":"加以","note_cn":"此处非'拿走'义"},{"word":"care","meaning_cn":"照料、照看"},{"word":"of","meaning_cn":"对…的"}],
+      "ex_en": "She takes care of her little brother after school.", "ex_cn": "放学后她照顾她的弟弟。",
+      "occ": [[1536,"take care of"]] },
+
+    { "head": "get away from", "gloss": "离开、逃离(某地/某人)", "ipa": "/ɡet əˈweɪ frəm/",
+      "note": "get away from = 从…脱身、逃开。",
+      "literal": [{"word":"get","meaning_cn":"使自己(到)","note_cn":"此处非'得到'义"},{"word":"away","meaning_cn":"离开、走开"},{"word":"from","meaning_cn":"从…"}],
+      "ex_en": "I just want to get away from the noisy city for a weekend.", "ex_cn": "我只想逃离喧闹的城市过个周末。",
+      "occ": [[1537,"get away from"]] },
+
+    { "head": "put an end to", "gloss": "结束、终止(某事)", "ipa": "/pʊt ən end tə/",
+      "note": "put an end to sth = 使某事停止、了结。",
+      "literal": [{"word":"put","meaning_cn":"使…处于","note_cn":"此处非'放置'义"},{"word":"an","meaning_cn":"一个"},{"word":"end","meaning_cn":"结束、终止"},{"word":"to","meaning_cn":"对…"}],
+      "ex_en": "The new rule put an end to the loud parties.", "ex_cn": "新规定终止了那些吵闹的聚会。",
+      "occ": [[1551,"put an end to"]] },
+
+    { "head": "run for one's life", "gloss": "拼命奔逃、逃命", "ipa": "/rʌn fər wʌnz laɪf/",
+      "note": "run for one's life = 为保命而狂奔。",
+      "literal": [{"word":"run","meaning_cn":"跑"},{"word":"for","meaning_cn":"为了"},{"word":"his","meaning_cn":"他的"},{"word":"life","meaning_cn":"性命","note_cn":"此处指'保命'"}],
+      "ex_en": "When the dog broke loose, the boy ran for his life.", "ex_cn": "狗挣脱后,那男孩拼命奔逃。",
+      "occ": [[1555,"ran for his life"]] },
+
+    { "head": "take shelter", "gloss": "躲避、避难", "ipa": "/teɪk ˈʃeltər/",
+      "note": "take shelter (in/under …) = 找地方躲避(风雨、危险)。",
+      "literal": [{"word":"take","meaning_cn":"寻求、找","note_cn":"此处非'拿'义"},{"word":"shelter","meaning_cn":"躲避处、庇护"}],
+      "ex_en": "We took shelter under a tree when it began to rain.", "ex_cn": "下起雨来时我们躲到了一棵树下。",
+      "occ": [[1575,"take shelter"]] },
+
+    { "head": "hold out", "gloss": "坚持、支撑住", "ipa": "/hoʊld aʊt/",
+      "note": "hold out = 撑住、坚持下去(不倒下、不放弃)。",
+      "literal": [{"word":"hold","meaning_cn":"保持、支撑","note_cn":"此处非'握住'义"},{"word":"out","meaning_cn":"(坚持)下去"}],
+      "ex_en": "Can you hold out for ten more minutes until help arrives?", "ex_cn": "你能再撑十分钟直到救援到吗?",
+      "occ": [[1576,"hold out"]] },
+
+    { "head": "in the meantime", "gloss": "在此期间、与此同时", "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "note": "in the meantime = 在两件事之间的这段时间里。",
+      "literal": [{"word":"in","meaning_cn":"在"},{"word":"the","meaning_cn":"这(段)"},{"word":"meantime","meaning_cn":"其间、期间"}],
+      "ex_en": "Dinner is almost ready; in the meantime, please set the table.", "ex_cn": "晚饭快好了;这期间请把桌子摆好。",
+      "occ": [[1581,"in the meantime"]] },
+
+    { "head": "knock down", "gloss": "打倒、击倒", "ipa": "/nɑːk daʊn/",
+      "note": "knock sb/sth down = 把某人/某物打倒在地。",
+      "literal": [{"word":"knock","meaning_cn":"击、打"},{"word":"down","meaning_cn":"倒下、向下","note_cn":"此处'打得倒下'"}],
+      "ex_en": "The strong wind knocked down the old fence.", "ex_cn": "大风把那道旧栅栏刮倒了。",
+      "occ": [[1589,"knocked down"]] },
+
+    { "head": "stock still", "gloss": "一动不动、纹丝不动", "ipa": "/stɑːk stɪl/",
+      "note": "stand/stay stock still = 完全静止不动。",
+      "literal": [{"word":"stock","meaning_cn":"完全地、彻底地","note_cn":"此处非'存货'义,作强调"},{"word":"still","meaning_cn":"静止的、不动的"}],
+      "ex_en": "The rabbit stood stock still when it heard the noise.", "ex_cn": "听到声响时,那只兔子一动不动地站着。",
+      "occ": [[1584,"stock still"]] },
+
+    { "head": "take prisoner", "gloss": "俘虏、抓为囚犯", "ipa": "/teɪk ˈprɪzənər/",
+      "note": "take sb prisoner = 把某人抓获、俘虏。",
+      "literal": [{"word":"take","meaning_cn":"抓获、拿下","note_cn":"此处非'拿'义"},{"word":"prisoner","meaning_cn":"俘虏、囚犯"}],
+      "ex_en": "The soldiers were taken prisoner after the battle.", "ex_cn": "那场战斗后士兵们被俘。",
+      "occ": [[1585,"taken prisoner"]] },
+
+    { "head": "stark naked", "gloss": "赤身裸体、一丝不挂", "ipa": "/stɑːrk ˈneɪkɪd/",
+      "note": "stark naked = 完全裸露(stark 强调'完全')。",
+      "literal": [{"word":"stark","meaning_cn":"完全地、十足地","note_cn":"此处作强调,非'僵硬'义"},{"word":"naked","meaning_cn":"赤裸的"}],
+      "ex_en": "The little boy ran out of the bath stark naked.", "ex_cn": "那小男孩光溜溜地跑出了浴室。",
+      "occ": [[1611,"stark naked"]] },
+
+    { "head": "first of all", "gloss": "首先、第一", "ipa": "/ˈfɜːrst əv ɔːl/",
+      "note": "first of all = 列举或叙述时的'首先'。",
+      "literal": [{"word":"first","meaning_cn":"首先、第一"},{"word":"of","meaning_cn":"(固定用法)"},{"word":"all","meaning_cn":"全部、所有"}],
+      "ex_en": "First of all, let me thank everyone for coming.", "ex_cn": "首先,让我感谢各位的到来。",
+      "occ": [[1621,"first of all"]] },
+
+    { "head": "make it one's business to", "gloss": "把…当作分内之事、专门去做", "ipa": "/meɪk ɪt wʌnz ˈbɪznəs tə/",
+      "note": "make it one's business to do sth = 主动担起、专心去做某事。",
+      "literal": [{"word":"make","meaning_cn":"使…成为"},{"word":"it","meaning_cn":"(形式宾语)"},{"word":"my","meaning_cn":"我的"},{"word":"business","meaning_cn":"分内之事、职责","note_cn":"此处非'生意'义"},{"word":"to","meaning_cn":"去(做)"}],
+      "ex_en": "She made it her business to help every new student settle in.", "ex_cn": "她把帮每个新生适应当作自己的分内事。",
+      "occ": [[1630,"made it my business to"]] }
+  ],
+  "skipped": [
+    "专名/人名/地名 e.g. Friday / Sallee / the Brazils / Providence(拟人上帝)",
+    "18世纪古语/生僻 e.g. whither / thither / hither / durst / hath / verily",
+    "过时惯用语 e.g. come to pass / a great while / on a sudden / in token of / cost what it would",
+    "一次性 nautical/描述性组合 e.g. laid her up / perspective glass / made the best of my way",
+    "宗教/道德训诫套语 e.g. Providence had so ordered / clay in the hand of the potter"
+  ]
+}

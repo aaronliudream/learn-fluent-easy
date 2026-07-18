@@ -1,0 +1,21 @@
+{ "chapter": 12,
+  "images": [
+    { "k":1, "slug":"fencing-goat-enclosure-woods", "seq":1351,
+      "scene":"Robinson drives a small herd of young goats into a freshly built fenced enclosure in a clearing surrounded by thick woods, hammering stakes and weaving branches into the fence.",
+      "alt":"A man pens goats inside a wooden fence in a woodland clearing." },
+    { "k":2, "slug":"scanning-sea-from-hilltop", "seq":1356,
+      "scene":"Robinson stands alone on a bare hill at the western point of the island, shading his eyes as he stares out at a tiny distant speck that might be a boat far out on the open sea.",
+      "alt":"A man on a hilltop peers out to sea at a distant speck on the horizon." },
+    { "k":3, "slug":"shore-of-skulls-and-bones", "seq":1358,
+      "scene":"A lonely beach at the island's southwest point strewn with scattered human skulls and bones, with the burnt-out ring of a fire pit dug in the sand where cannibals had feasted.",
+      "alt":"A deserted shore littered with human bones around a dug fire pit." },
+    { "k":4, "slug":"armed-with-pistols-and-cutlass", "seq":1367,
+      "scene":"Robinson stands ready for the road in his goat-skin clothes, two pistols and a slung cutlass without a scabbard hanging from his belt, his gun over his shoulder, looking a formidable figure.",
+      "alt":"A castaway armed with two pistols, a sword and a gun stands ready." },
+    { "k":5, "slug":"firebrand-reveals-dying-goat", "seq":1419,
+      "scene":"Inside a dark rock cave Robinson holds a blazing firebrand above his head, its light revealing a huge old he-goat lying gasping on the cave floor, its eyes shining in the gloom.",
+      "alt":"A man raises a burning torch in a cave, lighting an old goat lying on the ground." },
+    { "k":6, "slug":"glittering-candlelit-grotto", "seq":1424,
+      "scene":"Robinson crouches inside a lofty vaulted grotto deep in the rock, holding two candles whose flames make the crystalline walls and roof sparkle with countless reflected points of light.",
+      "alt":"A man holding candles in a cave whose walls glitter with reflected light." }
+  ] }

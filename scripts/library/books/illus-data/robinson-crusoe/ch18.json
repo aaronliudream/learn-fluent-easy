@@ -1,0 +1,21 @@
+{ "chapter": 18,
+  "images": [
+    { "k":1, "slug":"second-boat-rows-ashore", "seq":2081,
+      "scene":"Seen from a wooded shore, a longboat crowded with ten armed sailors rows across the open sea toward the beach, muskets visible above the gunwale, the anchored ship small in the distance behind them.",
+      "alt":"A boat full of armed sailors rows from a ship toward a wooded shore." },
+    { "k":2, "slug":"mutineers-find-boat-stripped", "seq":2097,
+      "scene":"A cluster of sailors stands on the sandy beach around their beached longboat, staring in dismay at the gaping hole smashed in its bottom, some raising their arms to shout toward the empty woods.",
+      "alt":"Sailors on a beach stare at their damaged boat and shout toward the woods." },
+    { "k":3, "slug":"captain-seizes-boat-at-creek", "seq":2120,
+      "scene":"At dusk beside a narrow tidal creek, the captain lunges forward and knocks down a startled sailor rising from the shore, while another sailor in a small moored boat throws up his hands to surrender, armed men closing in behind.",
+      "alt":"A man knocks down a sailor by a creek while another surrenders in a boat." },
+    { "k":4, "slug":"boatswain-shot-in-dark", "seq":2131,
+      "scene":"In the darkness of the woods the captain and Friday spring up from the ground and fire their muskets at the boatswain and two crewmen walking toward them, bright muzzle flashes lighting the trees as the ringleader falls.",
+      "alt":"Two men fire muskets at three sailors in the dark woods, one falling." },
+    { "k":5, "slug":"captain-embraces-robinson-hilltop", "seq":2177,
+      "scene":"On the brow of a grassy hill at dawn, the ship's captain throws his arms around Robinson and points out to the recaptured ship riding at anchor half a mile off the shore below.",
+      "alt":"A captain embraces a man on a hilltop, pointing to a ship anchored offshore." },
+    { "k":6, "slug":"captain-presents-fresh-clothes", "seq":2189,
+      "scene":"Inside Robinson's small cave apartment, the captain lays out gifts on a table before him—folded clean shirts, neckcloths, gloves, a hat, shoes, and bottles of wine—offering him a full new suit of clothes.",
+      "alt":"A captain presents folded clothes and provisions to a man in a cave dwelling." }
+  ] }

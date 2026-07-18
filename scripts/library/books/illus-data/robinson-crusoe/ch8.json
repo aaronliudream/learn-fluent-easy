@@ -1,0 +1,21 @@
+{ "chapter": 8,
+  "images": [
+    { "k":1, "slug":"distant-land-from-hilltop", "seq":962,
+      "scene":"Robinson stands on a high open ridge on the far side of the island, gun and hatchet at his side and his dog beside him, shading his eyes as he gazes across the sea toward a faint high strip of distant land on the horizon.",
+      "alt":"A man on a hilltop looks out across the sea at distant land far away." },
+    { "k":2, "slug":"catching-young-parrot", "seq":970,
+      "scene":"Robinson crouches in a flowery savannah among fine woods, a stick raised in one hand as he reaches to grab a young parrot he has just knocked down, with more parrots scattering from a nearby tree.",
+      "alt":"A man reaches to catch a young parrot with a stick in a grassy clearing." },
+    { "k":3, "slug":"saving-kid-from-dog", "seq":983,
+      "scene":"Robinson lunges forward and grasps a small young goat kid, pulling it free from the jaws of his eager dog on a grassy slope, saving the little animal alive.",
+      "alt":"A man pulls a young goat kid away from his dog to rescue it." },
+    { "k":4, "slug":"opening-the-bible", "seq":998,
+      "scene":"Inside his cave dwelling one morning, a sad Robinson sits by his hammock and opens the Bible on his knees, reading a passage by faint light, his face solemn.",
+      "alt":"A man sits alone in a cave and reads an open Bible in the morning light." },
+    { "k":5, "slug":"hewing-a-plank", "seq":1012,
+      "scene":"Robinson kneels over a felled tree trunk in a wood clearing, hatchet in hand, hacking and hewing one side of the log flat into a broad plank, wood chips scattered all around him.",
+      "alt":"A man chops a felled tree trunk into a flat plank with a hatchet." },
+    { "k":6, "slug":"birds-hung-as-scarecrows", "seq":1028,
+      "scene":"At the edge of his hedged cornfield, Robinson has hung three dead birds by strings from a pole as scarecrows, while his ripening corn stands behind and the sky is empty of fowls.",
+      "alt":"Three dead birds hang from a pole beside a fenced field of corn." }
+  ] }

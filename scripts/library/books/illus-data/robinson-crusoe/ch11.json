@@ -1,0 +1,21 @@
+{ "chapter": 11,
+  "images": [
+    { "k":1, "slug":"king-dining-with-animals", "seq":1260,
+      "scene":"Robinson sits alone at the head of a rough table inside his cave dwelling, dining like a solitary king; a parrot perches beside him, an old dog sits at his right hand, and two cats sit on either side of the table looking up for scraps.",
+      "alt":"A castaway dines alone at a table with a parrot, a dog, and two cats around him." },
+    { "k":2, "slug":"goatskin-outfit-portrait", "seq":1271,
+      "scene":"Full-length portrait of Robinson standing in his homemade goat-skin outfit: a tall shapeless fur cap with a flap behind, a short goat-skin jacket and open-kneed breeches, a broad belt holding a small saw and hatchet, a basket on his back, a gun on his shoulder, and a clumsy goat-skin umbrella held over his head.",
+      "alt":"A castaway stands dressed head to toe in goat skins, carrying a gun, basket, and fur umbrella." },
+    { "k":3, "slug":"footprint-in-the-sand", "seq":1294,
+      "scene":"Robinson stops in shock on the empty beach near his boat, staring down at a single clear print of a bare human foot pressed into the wet sand, one hand raised to his face in astonishment.",
+      "alt":"A man stares in shock at a single bare footprint in the sand on an empty shore." },
+    { "k":4, "slug":"fleeing-to-the-castle", "seq":1300,
+      "scene":"Terrified Robinson races back toward his rock-side fortification hidden behind grown-up stakes, glancing over his shoulder in fear as he scrambles to climb the ladder over his wall.",
+      "alt":"A frightened man runs back to his walled shelter, looking over his shoulder." },
+    { "k":5, "slug":"fearful-milking-goats", "seq":1329,
+      "scene":"Robinson crouches nervously milking a goat inside his fenced country enclosure, a basket set beside him, his head turned to glance behind him with a fearful expression as the flock stands nearby.",
+      "alt":"A man milks a goat in a fenced enclosure while nervously looking behind him." },
+    { "k":6, "slug":"building-double-wall-muskets", "seq":1342,
+      "scene":"Robinson works on his thickened semicircular outer wall reinforced with timber and old cables, fitting muskets into wooden frames through seven small loop-holes in the wall of his fortress.",
+      "alt":"A man reinforces a thick defensive wall and sets muskets into holes in it." }
+  ] }

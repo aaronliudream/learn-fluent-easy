@@ -1,0 +1,21 @@
+{ "chapter": 17,
+  "images": [
+    { "k":1, "slug":"four-men-sowing-field", "seq":1970,
+      "scene":"Robinson and his three companions dig and sow a freshly cleared patch of ground with clumsy wooden tools, one man scattering barley seed by hand, a dense tropical wood rising behind the tilled field.",
+      "alt":"Four men dig and sow seed in a cleared field beside tropical woods." },
+    { "k":2, "slug":"hewing-oak-into-planks", "seq":1973,
+      "scene":"A large oak tree felled on the ground is being hewn into long thick planks; a man swings an axe along its trunk while finished broad planks lie stacked beside heaps of wood chips.",
+      "alt":"A man hews a felled oak tree into long planks, with cut boards stacked nearby." },
+    { "k":3, "slug":"canoe-departs-full-moon", "seq":1981,
+      "scene":"The Spaniard and Friday's old father paddle a dugout canoe away from the island under a full moon, each holding a musket, while Robinson watches from the dark shore.",
+      "alt":"Two men paddle a canoe away from the island by moonlight as a figure watches from the beach." },
+    { "k":4, "slug":"spyglass-sights-english-ship", "seq":1991,
+      "scene":"Robinson stands at the top of a grassy hill holding a long brass perspective glass to his eye, gazing out to sea where a distant English ship lies at anchor beyond the surf.",
+      "alt":"A man on a hilltop looks through a spyglass at a distant ship anchored at sea." },
+    { "k":5, "slug":"cutlass-raised-over-prisoner", "seq":2006,
+      "scene":"On the beach an insolent seaman raises a great cutlass over a kneeling prisoner who lifts his hands in pleading despair, while two other bound captives sit nearby and the grounded boat rests on the sand.",
+      "alt":"A sailor raises a cutlass over a kneeling prisoner on a beach beside a grounded boat." },
+    { "k":6, "slug":"captain-strikes-mutineer", "seq":2062,
+      "scene":"The rescued ship's captain clubs a wounded mutineer to the ground with the stock of his musket on the beach as gun-smoke drifts, a dead man sprawled nearby and armed companions closing in.",
+      "alt":"A man strikes down a mutineer with a musket stock on a smoky beach after gunfire." }
+  ] }

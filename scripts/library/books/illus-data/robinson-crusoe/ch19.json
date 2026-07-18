@@ -1,0 +1,21 @@
+{ "chapter": 19,
+  "images": [
+    { "k":1, "slug":"leaving-the-island", "seq":2226,
+      "scene":"Robinson steps aboard the anchored ship off his island, carrying his relics: the great goat-skin cap on his head, his umbrella under one arm, and a parrot perched nearby, taking a last look back at the shore.",
+      "alt":"A bearded man in goatskin clothes boards a ship, carrying an umbrella and a parrot, looking back at an island." },
+    { "k":2, "slug":"mutineers-swim-to-ship", "seq":2222,
+      "scene":"Two desperate men swim through the sea to the side of the tall sailing ship at dawn, reaching up with pleading arms toward sailors who look down over the rail.",
+      "alt":"Two men swim to a ship's side at dawn, reaching up and begging the crew above." },
+    { "k":3, "slug":"reunion-lisbon-captain", "seq":2239,
+      "scene":"Inside a Lisbon room, Robinson clasps hands with the frail old Portuguese sea-captain who first rescued him years ago, both men recognising each other with emotion.",
+      "alt":"Two men clasp hands in an old room, recognising each other after many years." },
+    { "k":4, "slug":"old-captain-gives-gold", "seq":2252,
+      "scene":"The old captain draws a worn leather pouch and pours gold moidore coins into Robinson's open hands across a wooden table, alongside a folded ship's title deed.",
+      "alt":"An old man pours gold coins from a pouch into another man's hands over a table." },
+    { "k":5, "slug":"friday-fears-snowy-mountains", "seq":2298,
+      "scene":"Friday stands on a mountain road staring up in fear and wonder at the Pyrenees peaks blanketed in deep snow, shivering, having never seen snow before.",
+      "alt":"A man on a road looks up in fear at snow-covered mountains." },
+    { "k":6, "slug":"friday-shoots-wolf", "seq":2310,
+      "scene":"On a snowy mountain trail near a dark wood, Friday rides up close and fires his pistol point-blank into a wolf attacking the fallen guide, while other wolves and a bear lurk at the wood's edge.",
+      "alt":"A man on horseback shoots a wolf attacking a fallen guide on a snowy trail near woods." }
+  ] }

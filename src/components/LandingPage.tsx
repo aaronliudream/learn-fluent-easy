@@ -508,13 +508,18 @@ export default function LandingPage() {
       {/* ═══ 课程卡（左）+ 为什么选择（右） ═══ */}
       <section id="courses" className="scroll-mt-20 bg-[#f4f6f9] py-10 md:py-12">
         <div className="mx-auto grid max-w-[1200px] gap-8 px-4 md:grid-cols-[1.2fr_0.85fr] md:gap-7 md:px-6 lg:gap-9">
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div className="order-1 grid grid-cols-1 gap-3 sm:grid-cols-2 md:order-none md:col-start-1 md:row-start-1">
             {courseCards.map((c) => (
               <CourseCard key={c.to} c={c} admin={isAdmin} />
             ))}
           </div>
 
-          <div id="why" className="scroll-mt-20">
+          {/* 手机端:图书馆紧跟课程卡(order-2)、排在"为什么选择"之前;桌面端跨两列落第 2 行(现状不变) */}
+          <div className="order-2 md:order-none md:col-span-2 md:row-start-2">
+            <LibraryLandingSection embedded />
+          </div>
+
+          <div id="why" className="order-3 scroll-mt-20 md:order-none md:col-start-2 md:row-start-1">
             <h2 className="text-base font-bold text-slate-900 md:text-lg">
               <T>为什么选择 Big Moon English?</T>
             </h2>
@@ -542,8 +547,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ═══ 图书馆一级板块(四学段卡之下·跨学段·分隔线隔开·软上线 flag 关默认不渲染·?lib=1 预览) ═══ */}
-      <LibraryLandingSection />
+      {/* 图书馆板块已移入上方 courses 网格(桌面全宽落第 2 行/手机紧跟课程卡),见上。 */}
 
       {/* ═══ 资料下载区(四学段卡之下·纯新增·DB 驱动,无数据自动隐藏) ═══ */}
       <DownloadsSection />

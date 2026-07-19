@@ -18,6 +18,7 @@ export type LibraryFavorite = {
   zh: string | null;
   ipa: string | null;
   pos: string | null;
+  sense_key: string | null; // 多义词冻结的义(复习按此义测);单义为 null
   src_sentence: string | null;
   src_zh: string | null;
   book_id: string | null;
@@ -119,6 +120,7 @@ export type AddFavoriteArgs = {
   zh?: string;
   ipa?: string;
   pos?: string;
+  senseKey?: string; // 多义词:冻结点词时解析出的义(复习按此义测);单义/无则 null
   srcSentence?: string;
   srcZh?: string;
   bookId?: string;
@@ -136,6 +138,7 @@ export async function addLibraryFavorite(args: AddFavoriteArgs): Promise<void> {
       zh: args.zh ?? null,
       ipa: args.ipa ?? null,
       pos: args.pos ?? null,
+      sense_key: args.senseKey ?? null,
       src_sentence: args.srcSentence ?? null,
       src_zh: args.srcZh ?? null,
       book_id: args.bookId ?? null,

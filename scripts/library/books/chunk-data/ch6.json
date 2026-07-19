@@ -403,7 +403,8 @@
       "cardOnly": true,
       "key": "die away",
       "exSeq": 716
-    }
+    },
+    {"head":"take and","gloss":"(方言)就…、干脆去…做","ipa":"/teɪk ənd/","note":"take and + 动词 = 地方话强调式,'就这么去做/干脆去做',take 不表'拿'。此处「take and split the bean」=就把豆子劈开。同族:up and + 动词。","literal":[{"word":"take and","meaning_cn":"(方言)就…、径直…","note_cn":"take 非'拿',是强调式"}],"ex_en":"I'll just take and tell him myself.","ex_cn":"我干脆自己去告诉他。","occ":[[896,"take and split"]]}
   ],
   "skipped": [
     "spunk-water（方言/迷信术语·不可迁移）",

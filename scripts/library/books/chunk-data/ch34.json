@@ -58,15 +58,15 @@
     },
     {
       "head": "let on",
-      "gloss": "假装；透露(实情)",
-      "ipa": "/let ɑːn/",
-      "note": "本章指“假装（不知道）”；也可指“说漏嘴、泄露秘密”。常否定或与 that 从句连用。",
+      "gloss": "假装、佯装;(次义)走漏口风、说出去",
+      "ipa": "/lɛt ɑːn/",
+      "note": "本章「tries to let on she don't」=(她)假装不知道(原书中译亦作'假装');次义'走漏口风、说出去'。on 非'在…上'。",
       "literal": [
         {"word": "let", "meaning_cn": "让"},
         {"word": "on", "meaning_cn": "(习语介词)", "note_cn": "单独无实义，须整体记忆"}
       ],
-      "ex_en": "Don't let on that you know about the surprise.",
-      "ex_cn": "别露出你已经知道这个惊喜。",
+      "ex_en": "She let on that she didn't care, but she did.",
+      "ex_cn": "她装作不在乎,其实很在意。",
       "occ": [[4904, "let on"]]
     },
     {
@@ -210,7 +210,8 @@
       "cardOnly": true,
       "key": "make out",
       "exSeq": 4938
-    }
+    },
+    {"head":"allow","gloss":"(老式)承认、认定、断言","ipa":"/əˈlaʊ/","note":"老式/方言 allow = 承认、认定、断言(= admit / declare),非'允许'义。此处「I'm willing to allow」=我愿意承认。同族:allow as how = 认为。⚠️本书其余 allow 多为'允许'义(不收),索引按 seq 精确锁本处。","literal":[{"word":"allow","meaning_cn":"(此处)承认、认定","note_cn":"非'允许'"}],"ex_en":"He allowed that he might be wrong.","ex_cn":"他承认自己可能错了。","occ":[[4952,"allow"]]}
   ],
   "skipped": [
     "slope (方言俚语：溜走、逃跑)",

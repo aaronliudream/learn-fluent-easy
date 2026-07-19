@@ -316,7 +316,8 @@
       "cardOnly": true,
       "key": "give a start",
       "exSeq": 3272
-    }
+    },
+    {"head":"a power of","gloss":"大量的、许多(老式/方言)","ipa":"/ə ˈpaʊər əv/","note":"a power of sth = a lot of sth(老式/方言)。此处「heard a power of it」=听了好多。power 非'力量/权力'义。","literal":[{"word":"a power of","meaning_cn":"大量、许多","note_cn":"power 非'力量'"}],"ex_en":"That must have cost a power of money.","ex_cn":"那准花了一大笔钱。","occ":[[3162,"a power of"]]}
   ],
   "skipped": [
     "Muff Potter / Injun Joe / Horse Williams / Thomas Sawyer（专名）",

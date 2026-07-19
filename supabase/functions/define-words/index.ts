@@ -115,21 +115,29 @@ Deno.serve(async (req) => {
       console.error("[define-words] parse fail", e, args);
     }
 
+    // IPA 硬闸:真音标必含至少一个 IPA 专用符号(ɪ ː ə ɛ æ ʌ θ ð ʃ ʒ ŋ ɔ ɑ ɜ ʊ ɡ ɹ …)。
+    // 纯 ASCII 拼写(/bim/、/er/、/SKIN/)不含 → 判为伪音标,丢弃(留空好过显错音标),记 warnings 供上游人工补。
+    const IPA_GLYPH = /[ɪːəɛæʌθðʃʒŋɔɑɜʊɡɹˈˌɒʧʤɐ]/u; // 只认非ASCII真音标符;双元音 eɪ/aʊ 由其中的 ɪ/ʊ 覆盖
+    const ipaWarnings: string[] = [];
     const results = (parsed.glosses ?? []).map((g) => {
       const idx = Number((g as { index?: number }).index) || 0;
       const src = limited[idx - 1];
+      const word = String((g as { word?: string }).word || src?.word || "").trim();
+      let ipa = String((g as { ipa?: string }).ipa || "").trim();
+      if (ipa && !IPA_GLYPH.test(ipa)) { ipaWarnings.push(`${word}: ${ipa}`); ipa = ""; } // 伪音标 → 丢弃
       return {
         index: idx,
-        word: String((g as { word?: string }).word || src?.word || "").trim(),
+        word,
         pos: String((g as { pos?: string }).pos || "").trim(),
-        ipa: String((g as { ipa?: string }).ipa || "").trim(),
+        ipa,
         gloss_cn: String((g as { gloss_cn?: string }).gloss_cn || "").trim(),
         example_en: String((g as { example_en?: string }).example_en || "").trim(),
         example_cn: String((g as { example_cn?: string }).example_cn || "").trim(),
       };
     });
+    if (ipaWarnings.length) console.warn(`[define-words] 丢弃 ${ipaWarnings.length} 个伪音标:`, ipaWarnings.join(" · "));
 
-    return json({ results });
+    return json({ results, ipaWarnings });
   } catch (e) {
     console.error("[define-words] error", e);
     return json({ error: String(e) }, 500);

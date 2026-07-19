@@ -41,10 +41,21 @@ function libraryTriggerClass(isChunk: boolean, isFav: boolean, reveal: boolean):
 type EnCnPair = { en: string; cn: string };
 type LiteralWord = { word: string; meaning_cn: string; note_cn?: string };
 
+/** 多义词的一个义项(senses[] 数组元素)。有 senses[] 时卡片按此渲染:主义(senses[0])在上、其余折叠。 */
+export type Sense = {
+  pos?: string;
+  ipa?: string;
+  gloss_cn: string;
+  gloss_en?: string;
+  example?: EnCnPair;
+  sense_key?: string; // 收藏/复习按此义取值(读者点到哪个义就测哪个)
+};
+
 export type Explanation = {
   phrase: string;
   pos?: string;
   one_line_cn?: string;
+  senses?: Sense[]; // 多义卡:书中主义排 [0],其余折叠;无则按平铺 one_line_cn 渲染(=视作单义)
   literal?: LiteralWord[];
   scene_cn?: string;
   replies?: EnCnPair[];
@@ -480,9 +491,32 @@ function PlayableEnCn({ en, cn }: EnCnPair) {
   );
 }
 
+/** 单个义项行:词性·音标 + 中文释义 +(可选)可播例句。primary 时略突出。 */
+function SenseRow({ s, primary }: { s: Sense; primary?: boolean }) {
+  return (
+    <div className={primary ? "" : "border-t border-border/40 pt-1.5"}>
+      <div className="text-sm leading-relaxed">
+        {s.pos ? (
+          <span className="mr-1.5 text-xs font-semibold text-primary/90">
+            {s.pos}
+            {s.ipa ? ` ${s.ipa}` : ""}
+          </span>
+        ) : null}
+        <span className="font-medium text-foreground">{primary ? "👉 " : ""}{s.gloss_cn}</span>
+      </div>
+      {s.example?.en ? (
+        <div className="mt-1">
+          <PlayableEnCn en={s.example.en} cn={s.example.cn} />
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 function LessonBody({ data }: { data: Explanation }) {
   // Normalize v1 → v2 shape so old cached entries still render nicely.
   const oneLine = data.one_line_cn || data.meaning_cn || "";
+  const senses = data.senses || [];
   const literal = data.literal || [];
   const scene = data.scene_cn || data.usage_cn || "";
   const replies = data.replies || [];
@@ -496,7 +530,24 @@ function LessonBody({ data }: { data: Explanation }) {
 
   return (
     <div className="space-y-3.5">
-      {oneLine ? (
+      {senses.length > 0 ? (
+        <div className="space-y-2 rounded-lg bg-primary/8 p-2.5">
+          <SectionHeader emoji="📖" label={senses.length > 1 ? `词义 · ${senses.length} 项` : "词义"} />
+          <SenseRow s={senses[0]} primary />
+          {senses.length > 1 ? (
+            <details className="group">
+              <summary className="cursor-pointer select-none text-xs text-primary/80">
+                ▸ 其他 {senses.length - 1} 个义项
+              </summary>
+              <div className="mt-1.5 space-y-1.5">
+                {senses.slice(1).map((s, i) => (
+                  <SenseRow key={i} s={s} />
+                ))}
+              </div>
+            </details>
+          ) : null}
+        </div>
+      ) : oneLine ? (
         <div className="rounded-lg bg-primary/8 p-2.5">
           <SectionHeader emoji="🧠" label="一句话解释" />
           <div className="text-sm font-medium leading-relaxed text-foreground">

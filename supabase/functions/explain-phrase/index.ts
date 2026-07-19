@@ -94,6 +94,8 @@ Deno.serve(async (req) => {
           one_line_cn: lg.gloss_cn,
           // 语块卡「🔍 逐词」节(方案甲):存了 literal[] 就透传,LessonBody 有守卫,单词卡无此字段自然不渲染。
           literal: Array.isArray(lg.literal) && lg.literal.length ? lg.literal : undefined,
+          // 多义卡:存了 senses[] 就透传,前端主义在上、其余折叠;单义卡无此字段按平铺 one_line_cn 渲染。
+          senses: Array.isArray(lg.senses) && lg.senses.length ? lg.senses : undefined,
           example: lg.example && lg.example.en ? lg.example : undefined,
         };
         // proper:true(专名事实卡)→ 透传给前端隐藏收藏按钮(专名不该进收藏/复习)。
@@ -125,6 +127,7 @@ Deno.serve(async (req) => {
               pos: [lg.pos, lg.ipa].filter(Boolean).join("  "),
               one_line_cn: lg.gloss_cn,
               literal: Array.isArray(lg.literal) && lg.literal.length ? lg.literal : undefined,
+              senses: Array.isArray(lg.senses) && lg.senses.length ? lg.senses : undefined,
               example: lg.example && lg.example.en ? lg.example : undefined,
             },
             cached: true, light: true, stem: lemma,

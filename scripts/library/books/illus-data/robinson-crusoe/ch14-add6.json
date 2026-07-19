@@ -1,0 +1,21 @@
+{ "chapter": 14,
+  "images": [
+    { "k":7, "slug":"awake-in-hammock-night", "seq":1541,
+      "scene":"A dim cave chamber on a rainy March night: a man lies wide awake on his back in a slung canvas hammock, eyes open and staring at the low rock ceiling, one arm behind his head; a small oil lamp burns beside a few earthen pots, and rain streaks past the dark cave mouth.",
+      "alt":"A sleepless man lies awake in a slung hammock inside a lamplit cave on a rainy night." },
+    { "k":8, "slug":"shooting-the-bowman", "seq":1583,
+      "scene":"On the open beach a man levels and fires a long flintlock musket, a burst of smoke at the muzzle, aimed at a second attacker some distance off who is drawing back a bow with an arrow fitted to the string; on the sand between them lies the first fallen pursuer.",
+      "alt":"A man fires a musket at an attacker who is drawing a bow, with a fallen body on the sand between them." },
+    { "k":9, "slug":"friday-buries-bodies-in-sand", "seq":1597,
+      "scene":"Kneeling on the beach, the rescued man digs fast into the loose sand with his bare hands, scooping out a shallow pit to hide the two slain pursuers; nearby lie a bow and arrows, and a second man stands watching, musket in hand, glancing back toward the shore.",
+      "alt":"A kneeling man scoops a pit in beach sand with his hands to bury bodies while another stands guard." },
+    { "k":10, "slug":"feeding-friday-in-cave", "seq":1599,
+      "scene":"Inside a cool cave a man hands a loaf of bread and a bunch of raisins to the exhausted rescued man, who sits on a straw pallet with a blanket and drinks thirstily from an earthen jug; daylight falls through the cave entrance behind them.",
+      "alt":"A man gives bread and raisins to an exhausted companion who drinks from a jug on a straw bed in a cave." },
+    { "k":11, "slug":"milking-goats-friday-runs", "seq":1605,
+      "scene":"In a fenced enclosure a man crouches milking a goat into a wooden pail among a small herd, while the rescued man comes running toward him and throws himself flat on the ground at his feet with arms outstretched in a gesture of thanks.",
+      "alt":"A man milks a goat in a pen as his companion runs up and flings himself flat on the ground in gratitude." },
+    { "k":12, "slug":"building-fridays-tent", "seq":1623,
+      "scene":"In the narrow space between two encircling walls of the fortified home, a man raises a small pole-and-cloth tent for his companion, lashing a frame together, while the other man hands up a length of sailcloth; a plank door-frame stands set into the cave passage nearby.",
+      "alt":"A man builds a small pole tent between two enclosure walls while his companion passes him sailcloth." }
+  ] }

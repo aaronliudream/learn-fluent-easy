@@ -1,0 +1,21 @@
+{ "chapter": 13,
+  "images": [
+    { "k":7, "slug":"loading-muskets-in-castle", "seq":1445,
+      "scene":"Inside his fortified cave shelter, Robinson stands in a posture of defence, loading a row of muskets mounted along the earthen wall, with pistols laid out on a table beside him and the ladder pulled up behind him.",
+      "alt":"一个人在洞穴堡垒内给排成一列的火枪装弹准备防御。" },
+    { "k":8, "slug":"marching-out-armed-to-teeth", "seq":1454,
+      "scene":"Robinson strides across the island toward a distant hill, weighed down with two long guns slung over his shoulders, two pistols stuck in his belt, and a great sword without a scabbard hanging at his side.",
+      "alt":"一个人肩扛两支长枪、腰插两把手枪、挂着长剑,吃力地向远处山丘走去。" },
+    { "k":9, "slug":"marks-of-horror-on-shore", "seq":1455,
+      "scene":"Robinson stands on the beach staring down at the grisly remains of a cannibal feast scattered on the sand — bloodstains, scattered bones, and the burnt-out ashes of a small fire, with the empty sea beyond.",
+      "alt":"一个人站在海滩上,望着沙地上食人宴留下的骨头、血迹和熄灭的火堆残迹。" },
+    { "k":10, "slug":"loading-boat-for-voyage", "seq":1500,
+      "scene":"At the water's edge Robinson loads his small canoe with supplies for the voyage — a big bag of rice, large pots of water, a bottle and a cheese, and an open umbrella propped up over the boat for shade.",
+      "alt":"一个人在水边把大米袋、水罐、奶酪和撑开的遮阳伞装进小独木舟。" },
+    { "k":11, "slug":"two-drowned-men-in-forecastle", "seq":1514,
+      "scene":"Inside the flooded forecastle of the wrecked ship, Robinson looks upon two drowned sailors lying with their arms locked fast about one another, water and broken timbers around them.",
+      "alt":"一个人在失事船只进水的船首舱内,看到两名淹死的水手互相紧抱着躺在一起。" },
+    { "k":12, "slug":"bags-of-gold-in-chest", "seq":1529,
+      "scene":"Robinson kneels on the shore beside an opened seaman's chest, lifting out three heavy bags spilling silver coins, with gold doubloons and small wedges of gold laid out on a paper before him.",
+      "alt":"一个人跪在海边打开的水手箱旁,捧出装满银币的袋子,面前摊着金币和小金条。" }
+  ] }

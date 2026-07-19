@@ -1,0 +1,21 @@
+{ "chapter": 4,
+  "images": [
+    { "k":7, "slug":"lowering-chest-onto-raft", "seq":353,
+      "scene":"Standing on the sloping deck of the stranded ship, Robinson lowers a broken-open wooden seaman's chest by ropes down the hull onto his plank raft floating alongside, loaves of bread and rounds of cheese piled inside the chest.",
+      "alt":"一个人用绳子把装满面包和奶酪的木箱从倾斜的破船上放到旁边的木筏上。" },
+    { "k":8, "slug":"raft-aground-holding-chests", "seq":373,
+      "scene":"His raft tilted where one end has run aground on a shoal in the river mouth, Robinson braces his back hard against a row of sliding chests, straining to hold the cargo from slipping into the water, land rising on both banks.",
+      "alt":"木筏一端搁浅倾斜,一个人用后背死死顶住往下滑的货箱,河口两岸是陆地。" },
+    { "k":9, "slug":"gunshot-flock-rising", "seq":388,
+      "scene":"Robinson stands at the edge of a great wood, a fowling-piece raised to his shoulder with a puff of smoke at the muzzle, as a huge cloud of startled birds of many kinds bursts up from the treetops into the sky.",
+      "alt":"一个人在大树林边举枪射击,枪口冒烟,成群受惊的各种鸟从树梢腾空飞起。" },
+    { "k":10, "slug":"lightning-fear-for-powder", "seq":449,
+      "scene":"Inside his tent under a dark cloud split by a jagged bolt of lightning and driving rain, Robinson clutches his head in alarm, staring at the stacked barrels of gunpowder beside him.",
+      "alt":"暴雨中乌云被闪电劈开,帐篷里一个人惊恐地抱住头,盯着身旁堆放的火药桶。" },
+    { "k":11, "slug":"kid-follows-over-pale", "seq":456,
+      "scene":"Robinson lifts a small goat kid in his arms over the row of sharpened stakes of his enclosure, the body of the she-goat he shot laid on the ground just outside the fence.",
+      "alt":"一个人把一只小山羊抱过尖木桩围栏,栅栏外地上躺着被他打死的母山羊。" },
+    { "k":12, "slug":"dog-swims-ashore", "seq":477,
+      "scene":"A dog paddles through the shallow surf toward the beach where Robinson stands among his landed cargo of chests and casks, the stranded ship visible far out on the water behind it.",
+      "alt":"一只狗划水游向岸边,岸上一个人站在卸下的箱桶货物旁,远处水面上是搁浅的破船。" }
+  ] }

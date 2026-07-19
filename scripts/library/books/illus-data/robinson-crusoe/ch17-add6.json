@@ -1,0 +1,21 @@
+{ "chapter": 17,
+  "images": [
+    { "k":7, "slug":"carrying-kids-to-goat-flock", "seq":1974,
+      "scene":"Two men carry several small young goats in their arms toward a fenced pen where a flock of goats grazes, a shot mother goat lying on the grass behind them near the edge of a tropical wood.",
+      "alt":"两人抱着小山羊走向羊圈,身后草地上躺着一只被打死的母羊。" },
+    { "k":8, "slug":"grapes-drying-in-sun", "seq":1975,
+      "scene":"Great bunches of grapes hang in long rows from horizontal poles and lines to dry into raisins under a blazing sun, spread across an open sunny clearing beside a rough thatched shelter.",
+      "alt":"成串的葡萄挂在杆子上,在烈日下晒成葡萄干。" },
+    { "k":9, "slug":"crusoe-armed-fierce-figure", "seq":2021,
+      "scene":"A lone man stands ready for battle in a shaggy goat-skin coat and tall pointed goat-skin cap, a naked sword hanging at his side, two pistols thrust in his belt, and a long musket resting on each shoulder.",
+      "alt":"一个身穿羊皮衣、头戴羊皮尖帽的人全副武装,佩剑、腰插双枪、双肩各扛一支火枪。" },
+    { "k":10, "slug":"three-prisoners-despair-under-tree", "seq":2009,
+      "scene":"Three ragged men sit together on the ground beneath a great spreading tree, heads bowed in despair, hands hanging limp, gazing at the sand while the empty shore stretches behind them.",
+      "alt":"三个衣衫褴褛的人绝望地坐在大树下,低头垂手,望着沙地。" },
+    { "k":11, "slug":"drunken-sailors-asleep-grounded-boat", "seq":2014,
+      "scene":"A heavy long-boat lies tilted and aground on soft wet sand at low tide, two seamen slumped fast asleep inside it, an empty bottle rolling at their feet as the receding water leaves the hull stranded.",
+      "alt":"落潮时一艘长艇搁浅在湿软沙滩上,两名醉酒的水手在艇中沉睡,脚边滚着空酒瓶。" },
+    { "k":12, "slug":"staving-hole-in-boat-bottom", "seq":2078,
+      "scene":"Men swing an axe and a heavy iron bar to smash a great jagged hole in the bottom of the beached long-boat, splintered planks bursting inward, the stripped hull already emptied of oars, mast, and sail.",
+      "alt":"众人用斧头和铁棒在搁浅长艇的船底砸出一个大破洞,木板碎裂,艇上桨、桅、帆已被卸空。" }
+  ] }

@@ -1,0 +1,21 @@
+{ "chapter": 1,
+  "images": [
+    { "k":7, "slug":"boy-gazing-at-sea-from-window", "seq":6,
+      "scene":"A boy leans on the sill of an open upstairs window, gazing out over a harbour where tall sailing ships lie at anchor, one hand shading his eyes toward the open sea beyond the rooftops.",
+      "alt":"少年趴在楼上窗口，望着港湾里的帆船与远处大海出神。" },
+    { "k":8, "slug":"mother-pleads-father-refuses", "seq":19,
+      "scene":"A mother leans toward her seated husband in a panelled parlour, clasping her hands toward him in appeal, while the father turns his face away with a sigh and raises one hand in refusal.",
+      "alt":"母亲在客厅里向坐着的父亲俯身求情，父亲叹气别过脸、抬手拒绝。" },
+    { "k":9, "slug":"seasick-in-first-storm", "seq":23,
+      "scene":"A young man in the doorway of a heaving ship's cabin clutches a rope, doubled over and pale with seasickness, as grey waves rise past the steeply tilting deck behind him.",
+      "alt":"年轻人在颠簸的船舱口紧抓绳子，晕船脸色苍白弯下身，身后甲板倾斜、灰浪翻涌。" },
+    { "k":10, "slug":"punch-on-calm-deck", "seq":35,
+      "scene":"Sailors lounge on the deck of a becalmed ship under a clear evening sky, laughing around a steaming bowl of punch, one clapping a young companion on the shoulder as the sun sets over a smooth sea.",
+      "alt":"风平浪静的傍晚，水手们在甲板上围着一碗热潘趣酒说笑，一人拍着年轻同伴的肩，夕阳映着平静海面。" },
+    { "k":11, "slug":"survivors-landing-at-yarmouth", "seq":72,
+      "scene":"Bedraggled survivors wade from a small boat onto a windswept beach where townspeople hurry down to meet them, steadying the exhausted men and leading them up out of the surf.",
+      "alt":"精疲力竭的幸存者从小船涉水登上刮风的海滩，镇上居民奔下来搀扶引领他们上岸。" },
+    { "k":12, "slug":"walking-alone-to-london", "seq":89,
+      "scene":"A lone young man with a small bundle over his shoulder walks along an empty country road that winds toward a distant city on the horizon, open fields stretching away on either side.",
+      "alt":"一个背着小包袱的年轻人独自走在乡间小路上，路蜿蜒通向远处地平线上的城市，两旁田野延展。" }
+  ] }

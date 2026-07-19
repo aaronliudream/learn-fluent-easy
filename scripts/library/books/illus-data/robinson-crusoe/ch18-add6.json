@@ -1,0 +1,21 @@
+{ "chapter": 18,
+  "images": [
+    { "k":7, "slug":"volley-fired-into-empty-woods", "seq":2098,
+      "scene":"On the beach the party of sailors stands packed shoulder to shoulder in a tight ring, all raising their muskets and firing outward at once, a burst of gun-smoke drifting up toward the dark silent wall of trees before them.",
+      "alt":"Sailors stand in a ring on the beach and fire a volley of muskets into the woods." },
+    { "k":8, "slug":"sailors-rest-under-tree-on-hill", "seq":2108,
+      "scene":"On the grassy brow of a low hill a group of weary sailors sits together in the shade of a single tree, their muskets propped beside them, gazing out over the wide valleys and wooded lowlands stretching into the distance.",
+      "alt":"Weary sailors rest under a lone tree on a hilltop, looking over the valleys." },
+    { "k":9, "slug":"seamen-stranded-at-flooded-creek", "seq":2117,
+      "scene":"At the edge of a tidal creek swollen with water, a knot of sailors stands stopped on the near bank, waving their arms and shouting across toward a small boat, while the boat is rowed up the creek to ferry them over.",
+      "alt":"Sailors halt at a flooded creek and wave for a boat to carry them across." },
+    { "k":10, "slug":"despair-at-grounded-boat-night", "seq":2128,
+      "scene":"In the dim last light of dusk, sailors run frantically back and forth on the muddy creek bank beside their longboat tilted fast aground on the drained mud, some wringing their hands, one slumped down inside the empty boat.",
+      "alt":"At dusk sailors run in despair around their boat grounded on the mud of a creek." },
+    { "k":11, "slug":"boarding-the-ship-at-midnight", "seq":2172,
+      "scene":"By moonlight two boats have pulled alongside a large anchored ship, and armed men climb over her side onto the deck, one swinging the butt of his musket down at a startled crewman as others clamber up behind him.",
+      "alt":"Armed men board a ship at night and strike down a crewman on deck." },
+    { "k":12, "slug":"rebel-captain-hanged-yardarm", "seq":2210,
+      "scene":"The recaptured ship rides at anchor off the shore in morning light, the body of a man hanging from the end of the high yard-arm, while a small cluster of men stand on the beach looking silently out at it.",
+      "alt":"A body hangs from the yard-arm of an anchored ship as men watch from the shore." }
+  ] }

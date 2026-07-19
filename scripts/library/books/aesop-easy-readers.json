@@ -1,0 +1,111 @@
+{
+  "book_key": "aesop-easy-readers",
+  "title": "Aesop's Fables — Easy Readers",
+  "zh_title": "伊索寓言 · 分级阅读",
+  "author": "Aesop (retold for learners)",
+  "age_band": "儿童",
+  "age_range": "6-9岁",
+  "cover": { "c1": "#2f7d6e", "c2": "#14532d" },
+  "intro_en": "Aesop's Fables are short, wise stories from long ago. In each tale, animals talk and act like people, and the story ends with a simple lesson. These easy versions use short sentences, so new readers can enjoy them and read aloud with confidence.",
+  "intro_zh": "《伊索寓言》是很久以前流传下来的短小而充满智慧的故事。故事里的动物像人一样说话、行动,每个故事的结尾都有一个简单的道理。本册用简短的句子改写,方便初学者阅读,也适合大声朗读。",
+  "copyright_note": "Public-domain fables of Aesop, retold in simple original English for young learners. 伊索寓言属公有领域;本册为面向初学者的简易改写(措辞原创),非任何现行教材节选。",
+  "is_published": false,
+  "chapters": [
+    {
+      "idx": 1,
+      "title_en": "The Hare and the Tortoise",
+      "title_zh": "龟兔赛跑",
+      "paragraphs": [
+        [
+          { "en": "A hare laughed at a tortoise.", "cn": "一只兔子嘲笑一只乌龟。" },
+          { "en": "\"You are so slow!\" he said.", "cn": "“你太慢了!”他说。" },
+          { "en": "\"Let's have a race,\" said the tortoise.", "cn": "“我们来赛跑吧,”乌龟说。" },
+          { "en": "The hare thought this was very funny.", "cn": "兔子觉得这非常好笑。" }
+        ],
+        [
+          { "en": "The race began, and the hare ran fast.", "cn": "比赛开始了,兔子跑得飞快。" },
+          { "en": "Soon he was far ahead.", "cn": "很快他就遥遥领先。" },
+          { "en": "\"I have time to rest,\" he said, and fell asleep.", "cn": "“我有时间休息,”他说着就睡着了。" }
+        ],
+        [
+          { "en": "The tortoise walked on and on.", "cn": "乌龟一直不停地走。" },
+          { "en": "He passed the sleeping hare.", "cn": "他经过了正在睡觉的兔子。" },
+          { "en": "When the hare woke up, the tortoise had won.", "cn": "兔子醒来时,乌龟已经赢了。" },
+          { "en": "Slow and steady wins the race.", "cn": "稳扎稳打者胜。" }
+        ]
+      ]
+    },
+    {
+      "idx": 2,
+      "title_en": "The Lion and the Mouse",
+      "title_zh": "狮子和老鼠",
+      "paragraphs": [
+        [
+          { "en": "A lion was asleep in the sun.", "cn": "一只狮子在阳光下睡觉。" },
+          { "en": "A little mouse ran over his nose.", "cn": "一只小老鼠从他的鼻子上跑过。" },
+          { "en": "The lion woke up and caught the mouse.", "cn": "狮子醒了,抓住了老鼠。" },
+          { "en": "\"Please let me go,\" cried the mouse.", "cn": "“请放了我吧,”老鼠喊道。" },
+          { "en": "\"One day I may help you.\"", "cn": "“也许有一天我能帮到你。”" }
+        ],
+        [
+          { "en": "The lion laughed, but he let the mouse go.", "cn": "狮子笑了,但还是放走了老鼠。" },
+          { "en": "Later, the lion was caught in a net.", "cn": "后来,狮子被困在了网里。" },
+          { "en": "He roared, but he could not get free.", "cn": "他吼叫着,却挣脱不了。" }
+        ],
+        [
+          { "en": "The little mouse heard him.", "cn": "小老鼠听见了他。" },
+          { "en": "She ran over and bit the ropes.", "cn": "她跑过来,咬断了绳子。" },
+          { "en": "Soon the lion was free.", "cn": "很快狮子就自由了。" },
+          { "en": "Even a small friend can be a great help.", "cn": "再小的朋友也能帮上大忙。" }
+        ]
+      ]
+    },
+    {
+      "idx": 3,
+      "title_en": "The Fox and the Grapes",
+      "title_zh": "狐狸和葡萄",
+      "paragraphs": [
+        [
+          { "en": "A hungry fox saw some grapes.", "cn": "一只饥饿的狐狸看见了一些葡萄。" },
+          { "en": "They hung high on a vine.", "cn": "它们高高地挂在藤上。" },
+          { "en": "\"Those grapes look sweet,\" he said.", "cn": "“那些葡萄看起来很甜,”他说。" }
+        ],
+        [
+          { "en": "The fox jumped up, but he missed.", "cn": "狐狸跳起来,却没够着。" },
+          { "en": "He tried again and again.", "cn": "他一次又一次地尝试。" },
+          { "en": "Each time, he could not reach them.", "cn": "每一次都够不到。" }
+        ],
+        [
+          { "en": "At last, the fox walked away.", "cn": "最后,狐狸走开了。" },
+          { "en": "\"I don't want them,\" he said.", "cn": "“我才不要它们呢,”他说。" },
+          { "en": "\"They are sour anyway.\"", "cn": "“反正它们是酸的。”" },
+          { "en": "It is easy to hate what you cannot have.", "cn": "得不到的东西,就容易去讨厌它。" }
+        ]
+      ]
+    },
+    {
+      "idx": 4,
+      "title_en": "The Ant and the Grasshopper",
+      "title_zh": "蚂蚁和蚱蜢",
+      "paragraphs": [
+        [
+          { "en": "In summer, an ant worked hard.", "cn": "夏天,一只蚂蚁辛勤地劳作。" },
+          { "en": "She saved food for the winter.", "cn": "她为冬天储备食物。" },
+          { "en": "A grasshopper sang all day.", "cn": "一只蚱蜢整天唱歌。" },
+          { "en": "\"Why work so much?\" he asked.", "cn": "“干嘛干这么多活?”他问。" }
+        ],
+        [
+          { "en": "\"Come and play with me!\"", "cn": "“过来和我一起玩吧!”" },
+          { "en": "\"There is plenty of food now.\"", "cn": "“现在食物多得很。”" },
+          { "en": "But the ant did not stop.", "cn": "但蚂蚁没有停下。" }
+        ],
+        [
+          { "en": "Then winter came, and it was cold.", "cn": "后来冬天来了,天很冷。" },
+          { "en": "The grasshopper had no food.", "cn": "蚱蜢没有食物。" },
+          { "en": "The ant was warm and full.", "cn": "蚂蚁却温暖又饱足。" },
+          { "en": "It is wise to prepare for hard days.", "cn": "未雨绸缪才是明智之举。" }
+        ]
+      ]
+    }
+  ]
+}

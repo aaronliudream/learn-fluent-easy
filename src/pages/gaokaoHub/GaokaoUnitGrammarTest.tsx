@@ -22,6 +22,7 @@ import { readPublisherParam } from "@/lib/gaokaoHub/publisher";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
 import { recordGrammarQuestionMastery } from "@/lib/juniorGrammarQuestionMastery";
+import { recordSeniorGrammarMistake } from "@/lib/seniorGrammarMistake";
 import { awardForCorrect, notifyWrong } from "@/lib/coins";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { T } from "@/i18n/T";
@@ -93,6 +94,8 @@ export default function GaokaoUnitGrammarTest() {
     void recordSkillAttemptsForQuestion(activeQ.id, isOk);
     // 方案B:按题掌握度(累计答对2次=掌握),与课本同步路径/语法板块同表 junior_user_mastery
     void recordGrammarQuestionMastery(activeQ.id, isOk);
+    // 错题写入(错→存全选项快照;对→按 source_key 自动移出)。纯新增,失败只 warn,不阻断做题。
+    void recordSeniorGrammarMistake({ question: activeQ, result: res, isCorrect: isOk, sourceLabel: unit?.title });
     if (isOk) {
       awardForCorrect(0, "junior_grammar", activeQ.id, "junior_grammar", res.latencyMs);
     } else {

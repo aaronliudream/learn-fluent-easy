@@ -1,0 +1,114 @@
+{
+  "chapter": 9,
+  "chunks": [
+    { "head": "in a word", "gloss": "总之、一句话", "ipa": "/ɪn ə wɜːrd/",
+      "note": "in a word = 用一句话概括、总而言之,引出总结。",
+      "literal": [{"word":"in","meaning_cn":"用","note_cn":"此处引出概括,非'在…里'"},{"word":"a","meaning_cn":"一"},{"word":"word","meaning_cn":"话、词"}],
+      "ex_en": "In a word, the trip was a great success.", "ex_cn": "总之,这趟旅行非常成功。",
+      "occ": [[1055,"in a word"]] },
+
+    { "head": "on purpose", "gloss": "故意地、专门地", "ipa": "/ɒn ˈpɜːrpəs/",
+      "note": "on purpose = 有意为之(反义 by accident 无意)。",
+      "literal": [{"word":"on","meaning_cn":"带着","note_cn":"此处表'带着…意图',非'在…上'"},{"word":"purpose","meaning_cn":"目的、意图"}],
+      "ex_en": "He broke the cup on purpose, not by accident.", "ex_cn": "他是故意打碎杯子的,不是失手。",
+      "occ": [[1056,"on purpose"]] },
+
+    { "head": "a great deal of", "gloss": "大量的、许多", "ipa": "/ə ɡreɪt diːl əv/",
+      "note": "a great deal of + 不可数名词,表'大量'。",
+      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"大量的"},{"word":"deal","meaning_cn":"量、数量","note_cn":"此处'量',非'交易'"},{"word":"of","meaning_cn":"的"}],
+      "ex_en": "She spent a great deal of money on books.", "ex_cn": "她在书上花了很多钱。",
+      "occ": [[1070,"a great deal of"]] },
+
+    { "head": "look out for", "gloss": "物色、留意寻找", "ipa": "/lʊk aʊt fɔːr/",
+      "note": "look out for = 留心寻找、当心某物。",
+      "literal": [{"word":"look","meaning_cn":"看、留意"},{"word":"out","meaning_cn":"向外","note_cn":"此处配 look 表'四处找'"},{"word":"for","meaning_cn":"寻找、为了"}],
+      "ex_en": "Please look out for a cheap flight to Tokyo.", "ex_cn": "请帮忙留意一张去东京的便宜机票。",
+      "occ": [[1070,"look out for"]] },
+
+    { "head": "give over", "gloss": "放弃、停止", "ipa": "/ɡɪv ˈoʊvər/",
+      "note": "give over = 罢手、不再做(此处放弃找石头)。",
+      "literal": [{"word":"give","meaning_cn":"停止、放弃","note_cn":"此处非'给'义"},{"word":"over","meaning_cn":"结束、完了"}],
+      "ex_en": "After many tries, he gave over and went home.", "ex_cn": "试了很多次后,他放弃了,回了家。",
+      "occ": [[1094,"gave over"]] },
+
+    { "head": "in vain", "gloss": "徒劳、白费", "ipa": "/ɪn veɪn/",
+      "note": "in vain = 白费力气、没有结果。",
+      "literal": [{"word":"in","meaning_cn":"处于…状态"},{"word":"vain","meaning_cn":"徒劳的","note_cn":"此处'白费的',非'虚荣'"}],
+      "ex_en": "We searched all day, but in vain.", "ex_cn": "我们找了一整天,却徒劳无功。",
+      "occ": [[1090,"in vain"]] },
+
+    { "head": "fall into the hands of", "gloss": "落入…之手", "ipa": "/fɔːl ˈɪntə ðə hændz əv/",
+      "note": "fall into the hands of = 被某人(常指坏人)掌控。",
+      "literal": [{"word":"fall","meaning_cn":"落入"},{"word":"into","meaning_cn":"进入"},{"word":"the","meaning_cn":"这"},{"word":"hands","meaning_cn":"手、掌控","note_cn":"此处'掌控、控制'"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "The letter must not fall into the hands of the enemy.", "ex_cn": "这封信绝不能落入敌人之手。",
+      "occ": [[1088,"fall into the hands of"]] },
+
+    { "head": "put a stop to", "gloss": "制止、终止", "ipa": "/pʊt ə stɒp tuː/",
+      "note": "put a stop to = 使某事停下来。",
+      "literal": [{"word":"put","meaning_cn":"加以"},{"word":"a","meaning_cn":"一个"},{"word":"stop","meaning_cn":"停止、终止"},{"word":"to","meaning_cn":"对…"}],
+      "ex_en": "The teacher put a stop to the noise at once.", "ex_cn": "老师立刻制止了吵闹。",
+      "occ": [[1099,"put a stop to"]] },
+
+    { "head": "go through with", "gloss": "把…进行到底、坚持做完", "ipa": "/ɡoʊ θruː wɪð/",
+      "note": "go through with = 尽管困难仍把计划做完。",
+      "literal": [{"word":"go","meaning_cn":"进行"},{"word":"through","meaning_cn":"到底、完成","note_cn":"此处'贯彻到底'"},{"word":"with","meaning_cn":"(伴随)某事"}],
+      "ex_en": "She was nervous, but she went through with the plan.", "ex_cn": "她很紧张,但还是把计划坚持做到了底。",
+      "occ": [[1113,"go through with"]] },
+
+    { "head": "nothing to do with", "gloss": "与…无关", "ipa": "/ˈnʌθɪŋ tə duː wɪð/",
+      "note": "have nothing to do with = 和某人/某事毫无关联。",
+      "literal": [{"word":"nothing","meaning_cn":"没有什么"},{"word":"to","meaning_cn":"(不定式)"},{"word":"do","meaning_cn":"关联、牵涉"},{"word":"with","meaning_cn":"与…"}],
+      "ex_en": "This problem has nothing to do with me.", "ex_cn": "这个问题跟我没有任何关系。",
+      "occ": [[1116,"nothing to do with"]] },
+
+    { "head": "now and then", "gloss": "偶尔、时而", "ipa": "/naʊ ənd ðen/",
+      "note": "now and then = 不时地、偶尔(= now and again)。",
+      "literal": [{"word":"now","meaning_cn":"现在"},{"word":"and","meaning_cn":"和"},{"word":"then","meaning_cn":"那时","note_cn":"整体固定表示'偶尔'"}],
+      "ex_en": "We still meet now and then for coffee.", "ex_cn": "我们偶尔还会一起喝杯咖啡。",
+      "occ": [[1119,"now and then"]] },
+
+    { "head": "make use of", "gloss": "利用、使用", "ipa": "/meɪk juːs əv/",
+      "note": "make use of = 加以利用某物/机会。",
+      "literal": [{"word":"make","meaning_cn":"加以、做出"},{"word":"use","meaning_cn":"利用、使用","note_cn":"此处名词'使用'"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "You should make use of every chance to speak English.", "ex_cn": "你应该利用每一个说英语的机会。",
+      "occ": [[1120,"make use of"]] },
+
+    { "head": "take notice of", "gloss": "注意到、留意", "ipa": "/teɪk ˈnoʊtɪs əv/",
+      "note": "take notice of = 对某人/某事加以留意。",
+      "literal": [{"word":"take","meaning_cn":"加以"},{"word":"notice","meaning_cn":"注意","note_cn":"此处名词'注意'"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "Nobody took notice of the new student.", "ex_cn": "没人注意到那个新来的学生。",
+      "occ": [[1130,"take notice of"]] },
+
+    { "head": "the bright side", "gloss": "光明面、乐观的一面", "ipa": "/ðə braɪt saɪd/",
+      "note": "look on the bright side = 往好处想、看积极的一面。",
+      "literal": [{"word":"the","meaning_cn":"这"},{"word":"bright","meaning_cn":"明亮的、乐观的","note_cn":"此处'积极、乐观的'"},{"word":"side","meaning_cn":"一面、方面"}],
+      "ex_en": "Try to look on the bright side of things.", "ex_cn": "试着往好的一面去想。",
+      "occ": [[1130,"the bright side"]] },
+
+    { "head": "in order to", "gloss": "为了", "ipa": "/ɪn ˈɔːrdər tuː/",
+      "note": "in order to + 动词原形,表目的。",
+      "literal": [{"word":"in","meaning_cn":"(构成词组)"},{"word":"order","meaning_cn":"(此处不表'次序')","note_cn":"in order to 三词一体表'为了'"},{"word":"to","meaning_cn":"(引出目的)去做"}],
+      "ex_en": "He works hard in order to help his family.", "ex_cn": "他努力工作,为的是帮助家里。",
+      "occ": [[1148,"in order to"]] },
+
+    { "head": "at a loss", "gloss": "不知所措、茫然", "ipa": "/æt ə lɒs/",
+      "note": "本章出处为分离式(at a great loss),故 card-only。at a loss = 犯难、不知怎么办。",
+      "literal": [{"word":"at","meaning_cn":"处于"},{"word":"a","meaning_cn":"一种"},{"word":"loss","meaning_cn":"茫然、不知所措","note_cn":"此处'困惑、犯难',非'损失'"}],
+      "ex_en": "She was at a loss for words when she heard the news.", "ex_cn": "听到这个消息,她一时不知说什么好。",
+      "cardOnly": true, "key": "at a loss", "exSeq": 1068 },
+
+    { "head": "lay up", "gloss": "储存、贮藏", "ipa": "/leɪ ʌp/",
+      "note": "本章出处为分离式(laid it up),故 card-only。lay up = 把东西存起来备用。",
+      "literal": [{"word":"lay","meaning_cn":"存放、贮藏","note_cn":"此处'储存起来',非一般'放/躺'"},{"word":"up","meaning_cn":"积存起来"}],
+      "ex_en": "The squirrel lays up nuts for the winter.", "ex_cn": "松鼠贮藏坚果过冬。",
+      "cardOnly": true, "key": "lay up", "exSeq": 1084 }
+  ],
+  "skipped": [
+    "专名/地名/人名 e.g. Xury / Sallee / the Brazils / Yarmouth Roads / Solomon / Elijah / Dives",
+    "18世纪古语/生僻词 e.g. thither / betwixt / viz. / whelming / pipkin / periagua",
+    "一次性 nautical/工艺硬词 e.g. larboard 类 / kiln / pestle / mortar / searce / watch-coats",
+    "过时惯用语(spec 要克制) e.g. a great while / a good while / made shift / come at / cast up / to the last degree",
+    "一次性宗教/道德训诫套语 e.g. 'Between me and thee is a great gulf fixed' / 'the good providence of God had ordered' / 'lusts of the flesh'",
+    "太基础/纯语法 e.g. at first / go on / far from / well enough"
+  ]
+}

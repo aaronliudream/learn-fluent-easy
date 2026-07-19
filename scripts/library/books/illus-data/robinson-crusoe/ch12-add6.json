@@ -1,0 +1,21 @@
+{ "chapter": 12,
+  "images": [
+    { "k":7, "slug":"kneeling-tears-thanks-above-shore", "seq":1360,
+      "scene":"On a grassy rise a little way back from the beach, Robinson kneels with both hands lifted and tears on his face, the distant bone-strewn shore and sea visible below and behind him.",
+      "alt":"一个男人跪在海岸上方的草坡上,双手举起、满脸泪水感恩。" },
+    { "k":8, "slug":"loading-muskets-for-ambush", "seq":1381,
+      "scene":"Robinson sits at a rough table preparing for an attack, loading three long muskets and several pistols, with piles of lead slugs, small bullets and a horn of powder spread out before him.",
+      "alt":"一个男人在粗木桌前给三支火枪和几把手枪装弹,桌上摊着铅弹和火药。" },
+    { "k":9, "slug":"hiding-boat-in-rocky-cove", "seq":1396,
+      "scene":"Robinson pushes his small boat into a narrow cove tucked beneath towering rocks at the eastern end of the island, swirling currents visible around the boat's stern.",
+      "alt":"一个男人把小船推进东端高耸岩石下的狭窄水湾里藏起来。" },
+    { "k":10, "slug":"chopping-branches-finds-cave-mouth", "seq":1412,
+      "scene":"At the foot of a great rock Robinson swings an axe at thick low branches, and behind the cut brushwood a dark cave mouth in the rock is just coming into view.",
+      "alt":"一个男人在大岩石脚下砍去粗矮的树枝,被砍开的灌木后露出岩石里黑暗的洞口。" },
+    { "k":11, "slug":"two-shining-eyes-in-dark-cave", "seq":1415,
+      "scene":"Crouched at the low mouth of a cave, Robinson peers into the blackness and recoils as two broad shining eyes glimmer like twin stars in the dark, faint daylight from the opening catching their reflection.",
+      "alt":"一个男人蹲在低矮洞口向黑暗里张望,退缩着,黑暗中有两只发亮的眼睛像星星般闪光。" },
+    { "k":12, "slug":"crawling-with-candle-through-passage", "seq":1423,
+      "scene":"Robinson creeps on his hands and knees through a low, narrow rock passage, holding a lit candle out ahead of him, its small flame lighting only the cramped stone walls close around him.",
+      "alt":"一个男人手举点燃的蜡烛,四肢着地爬过低矮狭窄的岩石通道。" }
+  ] }

@@ -1,0 +1,188 @@
+{
+  "chapter": 32,
+  "chunks": [
+    {
+      "head": "give up",
+      "gloss": "放弃；不再继续",
+      "ipa": "/ɡɪv ʌp/",
+      "note": "本章指搜救者放弃了寻找。give up + 名词/动名词，表示停止努力、认输。",
+      "literal": [
+        {"word": "given", "meaning_cn": "(give的过去分词)"},
+        {"word": "up", "meaning_cn": "(习语固定小品词)", "note_cn": "此处表“彻底停止、放手”"}
+      ],
+      "ex_en": "Don't give up so easily—try one more time.",
+      "ex_cn": "别这么轻易放弃，再试一次。",
+      "occ": [[4577, "given up"]]
+    },
+    {
+      "head": "swarm with",
+      "gloss": "挤满；密密麻麻布满",
+      "ipa": "/swɔːrm wɪð/",
+      "note": "swarm 原指蜂群，swarm with 表示某处挤满了人或物。本章指街上挤满了人。",
+      "literal": [
+        {"word": "swarming", "meaning_cn": "挤满", "note_cn": "原指蜂群蜂拥，此处喻人多"},
+        {"word": "with", "meaning_cn": "有、带着"}
+      ],
+      "ex_en": "The market was swarming with shoppers on Sunday.",
+      "ex_cn": "周日的市场挤满了购物的人。",
+      "occ": [[4582, "swarming with"]]
+    },
+    {
+      "head": "all over the place",
+      "gloss": "到处；四面八方",
+      "ipa": "/ɔːl ˈoʊvər ðə pleɪs/",
+      "note": "口语，指散落或分布在各处、到处都是。",
+      "literal": [
+        {"word": "all", "meaning_cn": "全部"},
+        {"word": "over", "meaning_cn": "遍及"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "place", "meaning_cn": "地方"}
+      ],
+      "ex_en": "The kids left their toys all over the place.",
+      "ex_cn": "孩子们把玩具丢得到处都是。",
+      "occ": [[4585, "all over the place"]]
+    },
+    {
+      "head": "be about to",
+      "gloss": "正要；即将(做某事)",
+      "ipa": "/bi əˈbaʊt tə/",
+      "note": "be about to + 动词原形，表示马上就要做某事。本章指汤姆正要往回走时看见了亮光。",
+      "literal": [
+        {"word": "was", "meaning_cn": "(be动词过去式)"},
+        {"word": "about", "meaning_cn": "将要", "note_cn": "此处非“关于”，与to连用表即将"},
+        {"word": "to", "meaning_cn": "去(做)"}
+      ],
+      "ex_en": "I was about to call you when you knocked on the door.",
+      "ex_cn": "我正要给你打电话，你就敲门了。",
+      "occ": [[4588, "was about to"]]
+    },
+    {
+      "head": "break the news",
+      "gloss": "(委婉地)透露消息；把消息告诉某人",
+      "ipa": "/breɪk ðə njuːz/",
+      "note": "指把重要或意外的消息告知别人。本章出处为分离式(broke the good news)，故 card-only。",
+      "literal": [
+        {"word": "break", "meaning_cn": "透露", "note_cn": "此处非“打破”，指把消息说出"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "news", "meaning_cn": "消息"}
+      ],
+      "ex_en": "It's hard to break the news that the trip is cancelled.",
+      "ex_cn": "要把旅行取消的消息说出来真难。",
+      "cardOnly": true,
+      "key": "break the news",
+      "exSeq": 4590
+    },
+    {
+      "head": "shake off",
+      "gloss": "摆脱；甩掉",
+      "ipa": "/ʃeɪk ɔːf/",
+      "note": "本章指劳累饥饿不是一下就能消除的。shake off 指摆脱疾病、疲劳、麻烦或追赶者。",
+      "literal": [
+        {"word": "shaken", "meaning_cn": "(shake的过去分词)甩掉"},
+        {"word": "off", "meaning_cn": "掉、离开", "note_cn": "此处指“摆脱掉”"}
+      ],
+      "ex_en": "I can't seem to shake off this cold.",
+      "ex_cn": "我这感冒好像怎么也好不了。",
+      "occ": [[4593, "shaken off"]]
+    },
+    {
+      "head": "at once",
+      "gloss": "立刻；马上",
+      "ipa": "/æt wʌns/",
+      "note": "表示不拖延、立即。也可表“同时”，本章为“立刻”义。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "once", "meaning_cn": "一次", "note_cn": "此处为习语，整体表“立即”"}
+      ],
+      "ex_en": "Please come here at once—it's an emergency.",
+      "ex_cn": "请马上过来，出急事了。",
+      "occ": [[4593, "at once"]]
+    },
+    {
+      "head": "keep still",
+      "gloss": "保持安静；不作声、别乱动",
+      "ipa": "/kiːp stɪl/",
+      "note": "still 意为“静止的、不出声的”。本章指叮嘱汤姆对自己的历险别声张。keep still about sth = 对某事只字不提。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "保持"},
+        {"word": "still", "meaning_cn": "安静的", "note_cn": "此处非“仍然”，指不动/不出声"}
+      ],
+      "ex_en": "Keep still while the doctor checks your ears.",
+      "ex_cn": "医生检查你耳朵时别乱动。",
+      "occ": [[4597, "keep still"]]
+    },
+    {
+      "head": "on one's way",
+      "gloss": "在路上；顺路",
+      "ipa": "/ɑːn wʌnz weɪ/",
+      "note": "指某地正好在去某处的途中，或表示“在前往…的路上”。本章指法官家正在汤姆的必经之路上。",
+      "literal": [
+        {"word": "on", "meaning_cn": "在"},
+        {"word": "tom's", "meaning_cn": "汤姆的"},
+        {"word": "way", "meaning_cn": "路、去向"}
+      ],
+      "ex_en": "The bakery is on my way to school, so I stop there daily.",
+      "ex_cn": "面包店在我上学的路上，所以我每天都去。",
+      "occ": [[4601, "on tom’s way"]]
+    },
+    {
+      "head": "take care of",
+      "gloss": "处理妥当；照料、负责",
+      "ipa": "/teɪk ker əv/",
+      "note": "本章意为“把那件事处理好了”。take care of 既可指照顾人/物，也可指处理、解决问题。",
+      "literal": [
+        {"word": "taken", "meaning_cn": "(take的过去分词)"},
+        {"word": "care", "meaning_cn": "照料"},
+        {"word": "of", "meaning_cn": "(照料)…的"}
+      ],
+      "ex_en": "Don't worry about the tickets—I'll take care of that.",
+      "ex_cn": "票的事别担心，我来搞定。",
+      "occ": [[4606, "taken care of"]]
+    },
+    {
+      "head": "get lost",
+      "gloss": "迷路；走失",
+      "ipa": "/ɡet lɔːst/",
+      "note": "指找不到路、迷失方向。本章指以后没人会在洞里迷路了。",
+      "literal": [
+        {"word": "get", "meaning_cn": "变得、陷入"},
+        {"word": "lost", "meaning_cn": "迷失的"}
+      ],
+      "ex_en": "We got lost in the old town and had to ask for directions.",
+      "ex_cn": "我们在老城里迷了路，只好问人。",
+      "occ": [[4607, "get lost"]]
+    },
+    {
+      "head": "as white as a sheet",
+      "gloss": "面色惨白；吓得脸色发白",
+      "ipa": "/əz waɪt əz ə ʃiːt/",
+      "note": "sheet 指白床单。此明喻形容人因惊吓或生病而脸色苍白。",
+      "literal": [
+        {"word": "as", "meaning_cn": "像"},
+        {"word": "white", "meaning_cn": "白"},
+        {"word": "as", "meaning_cn": "一样"},
+        {"word": "a", "meaning_cn": "一张"},
+        {"word": "sheet", "meaning_cn": "床单", "note_cn": "此处借白床单喻脸色惨白"}
+      ],
+      "ex_en": "When he heard the bad news, he turned as white as a sheet.",
+      "ex_cn": "听到坏消息，他脸色刷地惨白。",
+      "occ": [[4610, "as white as a sheet"]]
+    }
+  ],
+  "skipped": [
+    "St. Petersburg / Mrs. Thatcher / Aunt Polly / Becky / Judge Thatcher / Injun Joe / Cardiff Hill / Widow Douglas / Huck (专名人名)",
+    "waned to the twilight (一次性文学描写)",
+    "offered up (prayers) (偏宗教用语，可迁移性弱)",
+    "Turn out! (此处喊“出来集合”，与常见turn out义不同，一次性喊话)",
+    "filed through (较冷僻，控量舍去)",
+    "raining tears (一次性文学比喻)",
+    "grope toward / groped (生词，归词汇层)",
+    "get about (病后走动，较niche，控量舍去)",
+    "more and more (偏基础/语法化)",
+    "at a time (偏语法化，控量舍去)",
+    "as far as (偏语法连接词)",
+    "wouldn't mind (备选，控量舍去)",
+    "as white as a sheet 已收；turn as white as a sheet 中 turn 归语法",
+    "bedridden / fortnight / delirious / melancholy (生词，归词汇层)"
+  ]
+}

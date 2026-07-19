@@ -9,13 +9,15 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
-import { GraduationCap, ArrowRight, Sparkles, Loader2, Check, X, Mail } from "lucide-react";
+import { GraduationCap, ArrowRight, Sparkles, Loader2, Check, X, Mail, KeyRound } from "lucide-react";
 import { Link } from "react-router-dom";
 import { T, useT } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
 
 // Internal placeholder domain for guest accounts (never receives email)
 const GUEST_DOMAIN = "guest.bigmoon.local";
+// 老师代建学生账号的合成邮箱域名（永不收信；与 edge function teacher-provision-student 保持一致）
+const STUDENT_EMAIL_DOMAIN = "students.bigmoonenglish.local";
 const slugify = (s: string) =>
   s.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "")
     .slice(0, 16) || `u${Math.random().toString(36).slice(2, 8)}`;
@@ -62,6 +64,9 @@ const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  // 学生登录（老师代建账号）：login_id + 6 位密码 → 合成邮箱
+  const [studentId, setStudentId] = useState("");
+  const [studentPw, setStudentPw] = useState("");
   const [agreed, setAgreed] = useState(false);
   // Age band — required for COPPA / GDPR-K compliance.
   // child = <13, teen = 13–17, adult = 18+. Persisted to profiles.age_band + is_minor.
@@ -309,6 +314,29 @@ const Auth = () => {
     navigate(redirect4 || "/", { replace: true });
   };
 
+  const handleStudentSignIn = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const id = studentId.trim().toLowerCase().replace(/\s+/g, "");
+    if (!id) { toast.error(t("请输入登录ID")); return; }
+    if (!studentPw.trim()) { toast.error(t("请输入密码")); return; }
+    setLoading(true);
+    // login_id 确定式拼成合成邮箱，直接走 signInWithPassword（密码即老师给的 6 位数字，非派生）
+    const email2 = `${id}@${STUDENT_EMAIL_DOMAIN}`;
+    const { error } = await supabase.auth.signInWithPassword({ email: email2, password: studentPw.trim() });
+    setLoading(false);
+    if (error) {
+      toast.error(
+        isSupabaseAuthRateLimited(error)
+          ? supabaseAuthToastMessage(error, t, t("登录失败"))
+          : t("登录ID或密码不正确"),
+      );
+      return;
+    }
+    toast.success(t("欢迎回来 👋"));
+    const rStudent = consumeRedirectPath();
+    navigate(rStudent || "/", { replace: true });
+  };
+
   const handleGoogle = async () => {
     setLoading(true);
     const { error } = await supabase.auth.signInWithOAuth({
@@ -346,10 +374,34 @@ const Auth = () => {
         </div>
 
         <Tabs defaultValue="nick">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-3">
             <TabsTrigger value="nick"><Sparkles className="mr-1 size-3.5" /><T>昵称</T></TabsTrigger>
+            <TabsTrigger value="student"><KeyRound className="mr-1 size-3.5" /><T>学生</T></TabsTrigger>
             <TabsTrigger value="email"><Mail className="mr-1 size-3.5" /><T>邮箱</T></TabsTrigger>
           </TabsList>
+
+          {/* ===== 学生登录（老师代建账号：登录ID + 密码）===== */}
+          <TabsContent value="student">
+            <form onSubmit={handleStudentSignIn} className="space-y-3 pt-3">
+              <p className="text-xs text-muted-foreground">
+                <T>用老师给你的「登录ID」和密码登录（例如 moon100237）。没有就找老师要。</T>
+              </p>
+              <div>
+                <Label htmlFor="stu-id"><T>登录ID</T></Label>
+                <Input id="stu-id" value={studentId} onChange={(e) => setStudentId(e.target.value)}
+                  placeholder="moon100237" autoComplete="username" autoCapitalize="none"
+                  className="font-mono lowercase" />
+              </div>
+              <div>
+                <Label htmlFor="stu-pw"><T>密码</T></Label>
+                <Input id="stu-pw" type="password" inputMode="numeric" value={studentPw}
+                  onChange={(e) => setStudentPw(e.target.value)} autoComplete="current-password" />
+              </div>
+              <Button type="submit" className="w-full" disabled={loading}>
+                {loading ? <Loader2 className="size-4 animate-spin" /> : <T>登录</T>}
+              </Button>
+            </form>
+          </TabsContent>
 
           {/* ===== 昵称 + PIN（推荐） ===== */}
           <TabsContent value="nick">

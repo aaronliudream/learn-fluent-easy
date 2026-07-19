@@ -18,11 +18,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Download, Trash2, Shield, FileText, LogIn, LogOut, UserCog, Trophy, Save, BookMarked, Sparkles, Mail, MessageSquare } from "lucide-react";
-import { Switch } from "@/components/ui/switch";
-import { loadProgress } from "@/lib/guestProgress";
+import { Trash2, Shield, FileText, LogIn, BookMarked, Sparkles, Mail, MessageSquare, GraduationCap, Loader2 } from "lucide-react";
 import { T, useT } from "@/i18n/T";
-import { SupportButton } from "@/components/SupportButton";
 import { MyClassesSection } from "@/components/student/MyClassesSection";
 
 const Account = () => {
@@ -31,11 +28,6 @@ const Account = () => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(false);
   const [confirmText, setConfirmText] = useState("");
-  // Leaderboard prefs
-  const [alias, setAlias] = useState("");
-  const [aliasSaved, setAliasSaved] = useState("");
-  const [optIn, setOptIn] = useState(true);
-  const [savingPrefs, setSavingPrefs] = useState(false);
   // Guest upgrade
   const [isGuest, setIsGuest] = useState(false);
   const [username, setUsername] = useState<string>("");
@@ -43,6 +35,8 @@ const Account = () => {
   const [upgradePw, setUpgradePw] = useState("");
   const [upgrading, setUpgrading] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isTeacher, setIsTeacher] = useState(false);
+  const [enablingTeacher, setEnablingTeacher] = useState(false);
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
@@ -54,7 +48,7 @@ const Account = () => {
     return () => subscription.unsubscribe();
   }, []);
 
-  // Load leaderboard prefs whenever the user changes.
+  // Load roles + guest status whenever the user changes.
   useEffect(() => {
     if (!user) return;
     let cancelled = false;
@@ -69,14 +63,12 @@ const Account = () => {
     })();
     (async () => {
       const { data } = await supabase
-        .from("profiles")
-        .select("leaderboard_alias, leaderboard_opt_in")
+        .from("user_roles")
+        .select("role")
         .eq("user_id", user.id)
+        .eq("role", "teacher" as never)
         .maybeSingle();
-      if (cancelled || !data) return;
-      setAlias(data.leaderboard_alias ?? "");
-      setAliasSaved(data.leaderboard_alias ?? "");
-      setOptIn(data.leaderboard_opt_in ?? true);
+      if (!cancelled) setIsTeacher(!!data);
     })();
     // Load guest status
     (async () => {
@@ -107,73 +99,20 @@ const Account = () => {
     }
   };
 
-  const saveLeaderboardPrefs = async () => {
+  const handleEnableTeacher = async () => {
     if (!user) return;
-    const trimmed = alias.trim().slice(0, 24);
-    if (trimmed && trimmed.length < 2) {
-      toast.error(t("昵称至少 2 个字符"));
-      return;
-    }
-    setSavingPrefs(true);
+    setEnablingTeacher(true);
     try {
-      const { error } = await supabase
-        .from("profiles")
-        .update({
-          leaderboard_alias: trimmed || null,
-          leaderboard_opt_in: optIn,
-        })
-        .eq("user_id", user.id);
-      if (error) throw error;
-      setAliasSaved(trimmed);
-      toast.success(t("已保存"));
+      // 新建 RPC，types.ts 未重生成，故 rpc 名做 string 转义。
+      const rpc = supabase.rpc.bind(supabase) as (fn: string) => Promise<{ error: unknown }>;
+      const { error } = await rpc("enable_teacher_role");
+      if (error) throw error as Error;
+      setIsTeacher(true);
+      toast.success(t("已开通教师功能 🎓"));
     } catch (e) {
       toast.error((e as Error).message);
     } finally {
-      setSavingPrefs(false);
-    }
-  };
-
-  const prefsDirty = user && (alias.trim() !== aliasSaved);
-
-  const handleExport = async () => {
-    setLoading(true);
-    try {
-      const localProgress = loadProgress();
-      let cloud: Record<string, unknown> = {};
-      if (user) {
-        const [profile, mastery, lessons] = await Promise.all([
-          supabase.from("profiles").select("*").eq("user_id", user.id),
-          supabase.from("slang_mastery").select("*").eq("user_id", user.id),
-          supabase.from("generated_lessons").select("*").eq("user_id", user.id),
-        ]);
-        cloud = {
-          profile: profile.data ?? [],
-          slang_mastery: mastery.data ?? [],
-          generated_lessons: lessons.data ?? [],
-        };
-      }
-      const payload = {
-        exported_at: new Date().toISOString(),
-        account: user
-          ? { id: user.id, email: user.email, metadata: user.user_metadata }
-          : null,
-        local_progress: localProgress,
-        cloud_data: cloud,
-      };
-      const blob = new Blob([JSON.stringify(payload, null, 2)], {
-        type: "application/json",
-      });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `my-data-${new Date().toISOString().slice(0, 10)}.json`;
-      a.click();
-      URL.revokeObjectURL(url);
-      toast.success(t("数据已导出"));
-    } catch (e) {
-      toast.error(t("导出失败：") + (e as Error).message);
-    } finally {
-      setLoading(false);
+      setEnablingTeacher(false);
     }
   };
 
@@ -203,7 +142,7 @@ const Account = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-10 md:px-8 md:py-14">
-      <PageHeader title={t("账户与隐私")} subtitle={t("管理你的账户、数据与隐私设置")} back="/" />
+      <PageHeader title={t("账户与隐私")} subtitle={t("管理你的账户、数据与隐私设置")} back />
 
       {/* Account info */}
       <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
@@ -284,67 +223,41 @@ const Account = () => {
         </section>
       )}
 
-      {/* My classes — join by code + list memberships (only for signed-in users) */}
-      {user && <MyClassesSection />}
-
-      {/* Export */}
-      <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
-        <h3 className="text-base font-bold"><T>导出我的数据</T></h3>
-        <p className="mt-1 text-sm text-muted-foreground">
-          <T>下载一份你的所有学习数据（JSON 格式），包括账户信息、学习进度和俚语掌握度。</T>
-        </p>
-        <Button onClick={handleExport} disabled={loading} className="mt-4">
-          <Download className="size-4" /> <T>导出 JSON</T>
-        </Button>
-      </section>
-
-      {/* Leaderboard preferences */}
+      {/* Teacher — self-service opt-in / enter teacher hub (signed-in users) */}
       {user && (
-        <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
-          <div className="flex items-center gap-2">
-            <Trophy className="size-5 text-accent" />
-            <h3 className="text-base font-bold"><T>排行榜显示</T></h3>
-          </div>
-          <p className="mt-1 text-sm text-muted-foreground">
-            <T>你的昵称会公开显示在每周全球榜上。任何时候都可以改名或退出。</T>
-          </p>
-
-          <div className="mt-4 space-y-3">
-            <div>
-              <Label htmlFor="alias" className="text-xs"><T>公开昵称</T></Label>
-              <Input
-                id="alias"
-                value={alias}
-                onChange={(e) => setAlias(e.target.value)}
-                placeholder="Learner #1234"
-                maxLength={24}
-                className="mt-1"
-              />
-              <p className="mt-1 text-[11px] text-muted-foreground">
-                <T>2–24 个字符。留空使用默认匿名 ID。</T>
+        <section className="mb-6 rounded-2xl border-2 border-fuchsia-300 bg-gradient-to-br from-fuchsia-50 to-orange-50 p-6 shadow-card dark:border-fuchsia-500/30 dark:from-fuchsia-500/10 dark:to-orange-500/10">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="min-w-0">
+              <div className="flex items-center gap-2">
+                <GraduationCap className="size-5 text-fuchsia-600" />
+                <h3 className="text-base font-extrabold"><T>教师功能</T></h3>
+              </div>
+              <p className="mt-1 text-sm text-fuchsia-900/70 dark:text-fuchsia-100/70">
+                {isTeacher
+                  ? <T>创建班级、发邀请码、关注学生学习进度。你的学习功能完全不变。</T>
+                  : <T>你是老师？开通后可创建班级、发邀请码给学生，在后台看他们的学习进度。开通不影响你自己的学习。</T>}
               </p>
             </div>
-
-            <div className="flex items-center justify-between rounded-xl border border-border bg-muted/30 p-3">
-              <div className="flex-1">
-                <div className="text-sm font-semibold"><T>参与全球排行</T></div>
-                <div className="text-[11px] text-muted-foreground">
-                  <T>关闭后你将不再出现在公开榜单，但仍可看到自己的排名。</T>
-                </div>
-              </div>
-              <Switch checked={optIn} onCheckedChange={setOptIn} />
-            </div>
-
-            <Button
-              onClick={saveLeaderboardPrefs}
-              disabled={savingPrefs}
-              size="sm"
-            >
-              <Save className="size-4" /> <T>保存设置</T>
-            </Button>
+            {isTeacher ? (
+              <Button asChild className="bg-gradient-to-r from-fuchsia-500 to-orange-500 text-white">
+                <Link to="/teacher"><GraduationCap className="size-4" /> <T>进入教师后台</T></Link>
+              </Button>
+            ) : (
+              <Button
+                onClick={handleEnableTeacher}
+                disabled={enablingTeacher}
+                className="bg-gradient-to-r from-fuchsia-500 to-orange-500 text-white">
+                {enablingTeacher
+                  ? <Loader2 className="size-4 animate-spin" />
+                  : <><GraduationCap className="size-4" /> <T>开通教师功能</T></>}
+              </Button>
+            )}
           </div>
         </section>
       )}
+
+      {/* My classes — join by code + list memberships (only for signed-in users) */}
+      {user && <MyClassesSection />}
 
       {/* My learning shortcuts */}
       {user && (
@@ -371,47 +284,6 @@ const Account = () => {
             <Link to="/terms"><FileText className="size-4" /> <T>服务条款</T></Link>
           </Button>
         </div>
-      </section>
-
-      {/* Session actions */}
-      {user && (
-        <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
-          <h3 className="text-base font-bold"><T>登录会话</T></h3>
-          <p className="mt-1 text-sm text-muted-foreground">
-            <T>退出当前账号，或登录另一个账号继续学习。</T>
-          </p>
-          <div className="mt-4 flex flex-wrap gap-2">
-            <Button
-              variant="outline"
-              onClick={async () => {
-                await supabase.auth.signOut();
-                toast.success(t("已退出，请用其他账号登录"));
-                navigate("/auth");
-              }}
-            >
-              <UserCog className="size-4" /> <T>切换到其他账号</T>
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={async () => {
-                await supabase.auth.signOut();
-                toast.success(t("已退出登录"));
-                navigate("/");
-              }}
-            >
-              <LogOut className="size-4" /> <T>退出登录</T>
-            </Button>
-          </div>
-        </section>
-      )}
-
-      {/* Support */}
-      <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
-        <h3 className="text-base font-bold"><T>支持作者</T></h3>
-        <p className="mt-1 text-sm text-muted-foreground">
-          <T>Big Moon English 是一个独立项目。如果它帮到了你，欢迎请我喝杯咖啡，让它持续更新。</T>
-        </p>
-        <SupportButton className="mt-4" />
       </section>
 
       {/* Danger zone */}

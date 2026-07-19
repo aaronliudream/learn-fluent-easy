@@ -1,0 +1,21 @@
+{ "chapter": 2,
+  "images": [
+    { "k":1, "slug":"turkish-pirate-broadside", "seq":107,
+      "scene":"On a sunlit open sea, a small English merchant ship exchanges cannon fire with a larger Turkish pirate galley alongside it; smoke and flashes burst from the guns as the two vessels close.",
+      "alt":"A small sailing ship trades cannon fire with a larger pirate ship at sea." },
+    { "k":2, "slug":"slave-tending-garden", "seq":116,
+      "scene":"Robinson, now a captive, kneels working in his master's small walled garden at Sallee, tending rows of plants under the hot Moorish sun, a low white house behind him.",
+      "alt":"A young captive man works in a small walled garden beside a white house." },
+    { "k":3, "slug":"moor-tossed-overboard", "seq":142,
+      "scene":"From the stern of a small fishing boat under sail, Robinson pitches the Moor over the side into the calm sea; the man splashes into the water beside the hull while a boy holds the helm.",
+      "alt":"A man is thrown overboard from a small sailing boat into calm water." },
+    { "k":4, "slug":"beasts-on-night-shore", "seq":158,
+      "scene":"By moonlight, the small boat lies at anchor off a dark African coast while huge wild creatures come down to the sea-shore, wading and wallowing in the surf; two figures crouch low in the boat, watching.",
+      "alt":"A small anchored boat watches large wild animals wading at a moonlit shore." },
+    { "k":5, "slug":"lion-asleep-on-shore", "seq":180,
+      "scene":"A great lion lies fast asleep on the sandy side of a low hillock at the water's edge, shaded by an overhanging piece of the hill; the little boat floats just offshore in the early morning light.",
+      "alt":"A large lion sleeps on a low hill by the shore near a small boat." },
+    { "k":6, "slug":"lion-hide-drying-cabin", "seq":197,
+      "scene":"Robinson and the boy Xury spread a large lion's hide over the low roof of their boat's cabin to dry in the sun, the coast visible behind them.",
+      "alt":"Two people spread a lion skin to dry on the roof of a small boat's cabin." }
+  ] }

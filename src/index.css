@@ -273,6 +273,12 @@ All colors MUST be HSL.
     font-variant-numeric: tabular-nums;
     font-feature-settings: "tnum", "lnum";
   }
+  /* 图书馆阅读器:收掉 SF Pro 弯撇号 U+2019 的字形右侧留白(what’ s 假空格)。
+     只作用于 TappableLine 在图书馆模式包出的 .tight-apos span,不影响其他文本。
+     负 letter-spacing 把撇号后一个字母往左拉;-0.06em 在 18px 下约 -1px,收留白不至重叠。 */
+  .tight-apos {
+    letter-spacing: -0.06em;
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────────────
@@ -795,6 +801,13 @@ All colors MUST be HSL.
   background: hsl(var(--exam-accent));
   color: #fff;
   border-color: hsl(var(--exam-accent));
+}
+
+/* 手机端把题干/选项字体大一档(桌面排版不变)—— 学生读题核心,窄屏原 15-16px 偏小 */
+@media (max-width: 640px) {
+  .exam-stem { font-size: 17.5px; }
+  .exam-option { font-size: 16.5px; }
+  .exam-option-letter { font-size: 17px; }
 }
 
 /* ───────── Buttons ───────── */

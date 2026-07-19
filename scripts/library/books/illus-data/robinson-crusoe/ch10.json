@@ -1,0 +1,21 @@
+{ "chapter": 10,
+  "images": [
+    { "k":1, "slug":"digging-canal-to-canoe", "seq":1166,
+      "scene":"Robinson digs a long narrow canal with a spade through the earth from his finished wooden canoe toward a distant creek, the heavy dugout boat resting on the sand behind him.",
+      "alt":"A man digs a canal in the ground to float his newly built canoe to the water." },
+    { "k":2, "slug":"boat-rigged-with-umbrella", "seq":1173,
+      "scene":"Robinson's small boat fitted out with a little mast, a patched sail, and his umbrella fixed at the stern like an awning to shade him, floating near a small tree-lined creek.",
+      "alt":"A small sailing boat rigged with a mast, sail, and an umbrella awning at the stern." },
+    { "k":3, "slug":"boat-swept-by-current", "seq":1181,
+      "scene":"Robinson clutches his paddle in his small boat as a fierce sea current, running like a mill sluice, drags him helplessly away from the rocky point of the island toward the open ocean.",
+      "alt":"A man in a small boat is swept out to sea by a strong ocean current away from the island." },
+    { "k":4, "slug":"kneeling-thanks-on-shore", "seq":1201,
+      "scene":"Robinson kneels on the sand of the island shore with hands clasped and head bowed in thanks, his boat drawn up in a small cove beneath overhanging trees behind him.",
+      "alt":"A man kneels on the beach giving thanks after landing, his boat beside him under trees." },
+    { "k":5, "slug":"parrot-poll-on-hedge", "seq":1212,
+      "scene":"Robinson starts awake in the shade of his bower fence as his tame parrot, Poll, perches on top of the hedge calling out to him, its bill open in speech.",
+      "alt":"A man wakes startled while his pet parrot perches on a hedge calling to him." },
+    { "k":6, "slug":"tame-goats-following-master", "seq":1248,
+      "scene":"Robinson walks across his fenced meadow enclosure holding out ears of barley while a small flock of tame goats and kids trots after him, bleating for the corn.",
+      "alt":"A man crosses a fenced pasture feeding a small flock of tame goats that follow him." }
+  ] }

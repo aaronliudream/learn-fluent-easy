@@ -1,0 +1,228 @@
+{
+  "chapter": 5,
+  "chunks": [
+    {
+      "head": "seen better days",
+      "gloss": "今非昔比;风光不再",
+      "ipa": "/siːn ˈbetər deɪz/",
+      "note": "字面“见过更好的日子”,指人或物曾经辉煌、如今落魄。常用完成式 have seen better days。",
+      "literal": [
+        { "word": "seen", "meaning_cn": "见过(see的过去分词)" },
+        { "word": "better", "meaning_cn": "更好的" },
+        { "word": "days", "meaning_cn": "日子;时光" }
+      ],
+      "ex_en": "This old coat has seen better days.",
+      "ex_cn": "这件旧外套早已不如从前了。",
+      "occ": [[648, "seen better days"]]
+    },
+    {
+      "head": "well-to-do",
+      "gloss": "富裕的;家境殷实的",
+      "ipa": "/ˌwel tə ˈduː/",
+      "note": "形容词,指经济宽裕、生活富足,常修饰人或家庭。",
+      "literal": [
+        { "word": "well", "meaning_cn": "好地" },
+        { "word": "to-do", "meaning_cn": "(此处构成固定复合词)", "note_cn": "整体已固化为形容词,不按字面理解" }
+      ],
+      "ex_en": "They come from a well-to-do family.",
+      "ex_cn": "他们出身于一个富裕的家庭。",
+      "occ": [[648, "well-to-do"]]
+    },
+    {
+      "head": "with a relish",
+      "gloss": "津津有味地;带着享受地",
+      "ipa": "/wɪð ə ˈrelɪʃ/",
+      "note": "relish 意为“享受、兴致”;with a relish 表示做某事时很投入、很过瘾。",
+      "literal": [
+        { "word": "with", "meaning_cn": "带着" },
+        { "word": "a", "meaning_cn": "一(不定冠词)" },
+        { "word": "relish", "meaning_cn": "兴致;享受", "note_cn": "此处作名词,非“调味品”义" }
+      ],
+      "ex_en": "He ate the noodles with a relish.",
+      "ex_cn": "他津津有味地吃着面条。",
+      "occ": [[658, "with a relish"]]
+    },
+    {
+      "head": "regarded as",
+      "gloss": "被视为;被认为是",
+      "ipa": "/rɪˈɡɑːrdɪd æz/",
+      "note": "regard sb/sth as … 把……看作……;常用被动 be regarded as。",
+      "literal": [
+        { "word": "regarded", "meaning_cn": "看待;认为(regard的过去分词)" },
+        { "word": "as", "meaning_cn": "作为;当作" }
+      ],
+      "ex_en": "She is regarded as the best singer in her class.",
+      "ex_cn": "她被认为是班里唱得最好的。",
+      "occ": [[662, "regarded as"]]
+    },
+    {
+      "head": "get rid of",
+      "gloss": "摆脱;去掉;丢掉",
+      "ipa": "/ˌɡet ˈrɪd əv/",
+      "note": "非常常用,后接想要除去的人、物或麻烦。",
+      "literal": [
+        { "word": "get", "meaning_cn": "使处于;变得" },
+        { "word": "rid", "meaning_cn": "摆脱的", "note_cn": "只用于 get/be rid of 这一固定搭配" },
+        { "word": "of", "meaning_cn": "(介词,接对象)" }
+      ],
+      "ex_en": "I want to get rid of these old shoes.",
+      "ex_cn": "我想把这些旧鞋子扔掉。",
+      "occ": [[666, "get rid of"]]
+    },
+    {
+      "head": "go into details",
+      "gloss": "详细说明;细说",
+      "ipa": "/ˌɡoʊ ˈɪntə ˈdiːteɪlz/",
+      "note": "go into 后接内容表示“深入谈及”;go into details 即“讲细节”。",
+      "literal": [
+        { "word": "go", "meaning_cn": "进入;谈及" },
+        { "word": "into", "meaning_cn": "到……里" },
+        { "word": "details", "meaning_cn": "细节" }
+      ],
+      "ex_en": "He didn't go into details about the accident.",
+      "ex_cn": "他没有细说那场事故的细节。",
+      "occ": [[668, "went into details"]]
+    },
+    {
+      "head": "keep up",
+      "gloss": "保持;维持;延续",
+      "ipa": "/ˌkiːp ˈʌp/",
+      "note": "表示让某事物持续不衰;也可指“跟上(进度)”。此处指风俗被沿袭保留。",
+      "literal": [
+        { "word": "keep", "meaning_cn": "保持" },
+        { "word": "up", "meaning_cn": "(表持续、不下降)" }
+      ],
+      "ex_en": "Let's keep up this good habit.",
+      "ex_cn": "咱们把这个好习惯保持下去吧。",
+      "occ": [[665, "kept up"]]
+    },
+    {
+      "head": "by and by",
+      "gloss": "不久;渐渐地",
+      "ipa": "/ˌbaɪ ənd ˈbaɪ/",
+      "note": "略显文气的时间副词短语,表示“过了一会儿、慢慢地”。",
+      "literal": [
+        { "word": "by", "meaning_cn": "(固定短语用词)", "note_cn": "整体为习语,不逐字直解" },
+        { "word": "and", "meaning_cn": "和" },
+        { "word": "by", "meaning_cn": "(固定短语用词)" }
+      ],
+      "ex_en": "By and by the rain stopped.",
+      "ex_cn": "不久,雨停了。",
+      "occ": [[677, "by and by"]]
+    },
+    {
+      "head": "said to himself",
+      "gloss": "自言自语;心里想",
+      "ipa": "/ˌsed tə hɪmˈself/",
+      "note": "say to oneself 表示“暗自想、在心里说”,不一定出声。",
+      "literal": [
+        { "word": "said", "meaning_cn": "说(say的过去式)" },
+        { "word": "to", "meaning_cn": "对" },
+        { "word": "himself", "meaning_cn": "他自己" }
+      ],
+      "ex_en": "He said to himself that he must not give up.",
+      "ex_cn": "他心里想,自己绝不能放弃。",
+      "occ": [[681, "said to himself"]]
+    },
+    {
+      "head": "be lost on",
+      "gloss": "对……不起作用;……没能领会",
+      "ipa": "/biː ˈlɔːst ɒn/",
+      "note": "sth be lost on sb:某事(道理、玩笑等)没能被某人理解或打动。",
+      "literal": [
+        { "word": "lost", "meaning_cn": "失去作用的(lose的过去分词)", "note_cn": "此处非“丢失”,指“白费、没起效”" },
+        { "word": "on", "meaning_cn": "在……身上" }
+      ],
+      "ex_en": "The joke was lost on the little kids.",
+      "ex_cn": "这个笑话小孩子们根本没听懂。",
+      "occ": [[681, "lost upon"]]
+    },
+    {
+      "head": "long for",
+      "gloss": "渴望;盼望",
+      "ipa": "/ˈlɔːŋ fər/",
+      "note": "long 作动词表示“强烈渴望”,后接名词或 to do。",
+      "literal": [
+        { "word": "long", "meaning_cn": "渴望", "note_cn": "此处作动词,非“长的”" },
+        { "word": "for", "meaning_cn": "(接渴望的对象)" }
+      ],
+      "ex_en": "She longed for a cup of hot tea.",
+      "ex_cn": "她好想来一杯热茶。",
+      "occ": [[689, "longed for"]]
+    },
+    {
+      "head": "turn over",
+      "gloss": "翻过来;翻身",
+      "ipa": "/ˌtɜːrn ˈoʊvər/",
+      "note": "指把物体或身体翻转到另一面。",
+      "literal": [
+        { "word": "turn", "meaning_cn": "转;翻" },
+        { "word": "over", "meaning_cn": "翻转;过来" }
+      ],
+      "ex_en": "Turn over the pancake so it cooks on both sides.",
+      "ex_cn": "把煎饼翻个面,好让两面都熟。",
+      "occ": [[688, "turn over"]]
+    },
+    {
+      "head": "little by little",
+      "gloss": "一点一点地;渐渐地",
+      "ipa": "/ˌlɪtl baɪ ˈlɪtl/",
+      "note": "强调缓慢而持续的变化过程。",
+      "literal": [
+        { "word": "little", "meaning_cn": "一点点" },
+        { "word": "by", "meaning_cn": "(表递进)" },
+        { "word": "little", "meaning_cn": "一点点" }
+      ],
+      "ex_en": "Little by little, he learned to swim.",
+      "ex_cn": "他一点一点地学会了游泳。",
+      "occ": [[694, "little by little"]]
+    },
+    {
+      "head": "let go",
+      "gloss": "放开;松手",
+      "ipa": "/ˌlet ˈɡoʊ/",
+      "note": "let (sth) go 松手放开;宾语常插在中间,如 let it go。",
+      "literal": [
+        { "word": "let", "meaning_cn": "让" },
+        { "word": "go", "meaning_cn": "走;离开" }
+      ],
+      "ex_en": "Hold the rope tight and don't let go.",
+      "ex_cn": "抓紧绳子,别松手。",
+      "cardOnly": true,
+      "key": "let go",
+      "exSeq": 676
+    },
+    {
+      "head": "look upon ... as",
+      "gloss": "把……看作;视……为",
+      "ipa": "/ˌlʊk əˈpɑːn ... æz/",
+      "note": "look upon (= look on) sb/sth as …:以某种眼光看待某人某物;宾语与 as 之间常隔开。",
+      "literal": [
+        { "word": "look", "meaning_cn": "看待" },
+        { "word": "upon", "meaning_cn": "(= on,较正式)" },
+        { "word": "as", "meaning_cn": "作为;当作" }
+      ],
+      "ex_en": "They look upon him as a hero.",
+      "ex_cn": "他们把他视为英雄。",
+      "cardOnly": true,
+      "key": "look upon ... as",
+      "exSeq": 653
+    },
+    {
+      "head": "carry off",
+      "gloss": "拿走;带走;夺走",
+      "ipa": "/ˌkæri ˈɔːf/",
+      "note": "把东西带走或抢走;宾语为代词时插在中间,如 carry it off。",
+      "literal": [
+        { "word": "carry", "meaning_cn": "拿;搬" },
+        { "word": "off", "meaning_cn": "离开;走开" }
+      ],
+      "ex_en": "The thief tried to carry off the painting.",
+      "ex_cn": "小偷企图把那幅画偷走。",
+      "cardOnly": true,
+      "key": "carry off",
+      "exSeq": 706
+    }
+  ],
+  "skipped": ["so as to", "in order that", "in a body", "called upon to", "part company with", "of old", "run the gantlet", "thrown up to", "come to a standstill", "at an end", "give out"]
+}

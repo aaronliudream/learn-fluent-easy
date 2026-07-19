@@ -1,0 +1,420 @@
+{
+  "chapter": 33,
+  "chunks": [
+    {
+      "head": "on one's way to",
+      "gloss": "在前往…的路上",
+      "ipa": "/ɒn wʌnz weɪ tuː/",
+      "note": "表示正朝某地进发的途中。",
+      "literal": [
+        {"word": "on", "meaning_cn": "在(…途中)"},
+        {"word": "their", "meaning_cn": "他们的"},
+        {"word": "way", "meaning_cn": "路、途"},
+        {"word": "to", "meaning_cn": "去往"}
+      ],
+      "ex_en": "The children were on their way to school when it started to rain.",
+      "ex_cn": "孩子们正在上学的路上，天就下起雨来。",
+      "occ": [[4618, "on their way to"]]
+    },
+    {
+      "head": "starve to death",
+      "gloss": "饿死",
+      "ipa": "/stɑːrv tə deθ/",
+      "note": "to death 是夸张收尾，表“到死的程度”；这里是字面的饿死。",
+      "literal": [
+        {"word": "starved", "meaning_cn": "挨饿", "note_cn": "starve 的过去分词"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "death", "meaning_cn": "死亡"}
+      ],
+      "ex_en": "Without food or water, the lost dog nearly starved to death.",
+      "ex_cn": "没有食物和水，那只走失的狗差点饿死。",
+      "occ": [[4631, "starved to death"]]
+    },
+    {
+      "head": "by this time",
+      "gloss": "到这时候；此时",
+      "ipa": "/baɪ ðɪs taɪm/",
+      "note": "指到叙述所说的这个时间点为止。",
+      "literal": [
+        {"word": "by", "meaning_cn": "到…为止"},
+        {"word": "this", "meaning_cn": "这"},
+        {"word": "time", "meaning_cn": "时候"}
+      ],
+      "ex_en": "By this time, most of the guests had already gone home.",
+      "ex_cn": "到这时候，大多数客人都已经回家了。",
+      "occ": [[4647, "by this time"]]
+    },
+    {
+      "head": "in confidence",
+      "gloss": "私下地；秘密地(告诉)",
+      "ipa": "/ɪn ˈkɒnfɪdəns/",
+      "note": "tell sth in confidence = 把某事作为秘密告诉,望对方保密。confidence 此处指“信任、私密”,非“信心”。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在(…之中)"},
+        {"word": "confidence", "meaning_cn": "私密、信任", "note_cn": "此处非“信心”义"}
+      ],
+      "ex_en": "She told me in confidence that she was leaving her job.",
+      "ex_cn": "她私下告诉我，她要辞职了。",
+      "occ": [[4664, "in confidence"]]
+    },
+    {
+      "head": "get on the track of",
+      "gloss": "找到…的线索；追查到",
+      "ipa": "/ɡet ɒn ðə træk əv/",
+      "note": "track 意为“踪迹”;on the track of sth 指发现并循着线索追下去。",
+      "literal": [
+        {"word": "got", "meaning_cn": "得到、找到"},
+        {"word": "on", "meaning_cn": "在…上"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "track", "meaning_cn": "踪迹、线索", "note_cn": "此处非“轨道”义"},
+        {"word": "of", "meaning_cn": "…的"}
+      ],
+      "ex_en": "The police finally got on the track of the missing car.",
+      "ex_cn": "警方终于查到了那辆失踪汽车的线索。",
+      "occ": [[4669, "got on the track of"]]
+    },
+    {
+      "head": "get under way",
+      "gloss": "启程；开始进行",
+      "ipa": "/ɡet ˈʌndər weɪ/",
+      "note": "原为航海用语(船开动),引申为“(事情)开始、动身”。",
+      "literal": [
+        {"word": "got", "meaning_cn": "开始(进入某状态)"},
+        {"word": "under", "meaning_cn": "在…中", "note_cn": "此处为习语固定用词"},
+        {"word": "way", "meaning_cn": "行进", "note_cn": "此处指“航行、前进”"}
+      ],
+      "ex_en": "The meeting finally got under way after a short delay.",
+      "ex_cn": "稍稍推迟之后，会议终于开始了。",
+      "occ": [[4699, "got under way"], [4833, "got under way"]]
+    },
+    {
+      "head": "at once",
+      "gloss": "立刻、马上",
+      "ipa": "/ət wʌns/",
+      "note": "表示不拖延、立即。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "once", "meaning_cn": "此刻", "note_cn": "此处指“立即”,非“一次”"}
+      ],
+      "ex_en": "The teacher told us to sit down at once.",
+      "ex_cn": "老师叫我们立刻坐下。",
+      "occ": [[4699, "at once"], [4795, "at once"]]
+    },
+    {
+      "head": "short cut",
+      "gloss": "捷径；近路",
+      "ipa": "/ʃɔːrt kʌt/",
+      "note": "指比常规路线更近、更省事的走法,也可喻省力的办法。",
+      "literal": [
+        {"word": "short", "meaning_cn": "短的"},
+        {"word": "cut", "meaning_cn": "(抄近的)通道", "note_cn": "此处非“切”义"}
+      ],
+      "ex_en": "We took a short cut through the park to save time.",
+      "ex_cn": "我们抄近路穿过公园，好省点时间。",
+      "occ": [[4691, "short cut"]]
+    },
+    {
+      "head": "run across",
+      "gloss": "偶然遇到；无意中发现",
+      "ipa": "/rʌn əˈkrɒs/",
+      "note": "指不是刻意去找而碰巧碰到某人或某物。",
+      "literal": [
+        {"word": "run", "meaning_cn": "碰上", "note_cn": "此处非“跑”义"},
+        {"word": "across", "meaning_cn": "遇到、撞见"}
+      ],
+      "ex_en": "I ran across an old friend at the train station yesterday.",
+      "ex_cn": "昨天我在火车站偶然碰到一位老朋友。",
+      "occ": [[4713, "run across"]]
+    },
+    {
+      "head": "keep something quiet",
+      "gloss": "对某事保密；不声张",
+      "ipa": "/kiːp ˈsʌmθɪŋ ˈkwaɪət/",
+      "note": "keep sth quiet = 不让别人知道某事。quiet 此处指“不外传”。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "保持"},
+        {"word": "it", "meaning_cn": "它(此事)"},
+        {"word": "quiet", "meaning_cn": "秘而不宣", "note_cn": "此处指“不声张”,非“安静”"}
+      ],
+      "ex_en": "Let's keep it quiet until the plan is ready.",
+      "ex_cn": "计划定下来之前，咱们先别声张。",
+      "occ": [[4714, "keep it quiet"]]
+    },
+    {
+      "head": "in the lead",
+      "gloss": "领先；带头(在最前面)",
+      "ipa": "/ɪn ðə liːd/",
+      "note": "指处在最前面的位置,竞赛或行进中居首。",
+      "literal": [
+        {"word": "in", "meaning_cn": "处于"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "lead", "meaning_cn": "领先位置", "note_cn": "读 /liːd/,指“首位”"}
+      ],
+      "ex_en": "With one lap to go, our runner was still in the lead.",
+      "ex_cn": "还剩一圈时，我们的选手仍然领先。",
+      "occ": [[4738, "in the lead"]]
+    },
+    {
+      "head": "quiet down",
+      "gloss": "安静下来；平静下来",
+      "ipa": "/ˈkwaɪət daʊn/",
+      "note": "指由喧闹或激动转为安静、平和。",
+      "literal": [
+        {"word": "quiet", "meaning_cn": "安静"},
+        {"word": "down", "meaning_cn": "下来", "note_cn": "此处表“趋于平静”"}
+      ],
+      "ex_en": "The class quieted down as soon as the teacher walked in.",
+      "ex_cn": "老师一进来，全班就安静了下来。",
+      "occ": [[4742, "quiet down"]]
+    },
+    {
+      "head": "go on",
+      "gloss": "继续前行；继续下去",
+      "ipa": "/ɡoʊ ɒn/",
+      "note": "本章指“继续往前走”;也常表“继续做某事、发生”。",
+      "literal": [
+        {"word": "went", "meaning_cn": "走(go 的过去式)"},
+        {"word": "on", "meaning_cn": "继续", "note_cn": "此处表“不停、往前”"}
+      ],
+      "ex_en": "After a short rest, they went on down the trail.",
+      "ex_cn": "短暂休息后，他们继续沿小路往下走。",
+      "occ": [[4743, "went on"]]
+    },
+    {
+      "head": "hang around",
+      "gloss": "在附近逗留、徘徊",
+      "ipa": "/hæŋ əˈraʊnd/",
+      "note": "指在某处闲待、盘桓不去。本章 Huck 认为鬼魂会在钱旁徘徊。",
+      "literal": [
+        {"word": "hang", "meaning_cn": "逗留", "note_cn": "此处非“悬挂”义"},
+        {"word": "round", "meaning_cn": "在周围", "note_cn": "= around"}
+      ],
+      "ex_en": "Some kids like to hang around the shop after school.",
+      "ex_cn": "有些孩子放学后喜欢在店门口逗留。",
+      "occ": [[4763, "hang round"]]
+    },
+    {
+      "head": "occur to someone",
+      "gloss": "(念头)突然出现在某人脑中；想到",
+      "ipa": "/əˈkɜːr tə ˈsʌmwʌn/",
+      "note": "主语通常是 idea/thought,表示某想法忽然冒出来。",
+      "literal": [
+        {"word": "occurred", "meaning_cn": "浮现", "note_cn": "此处指念头“出现”,非“发生事故”"},
+        {"word": "to", "meaning_cn": "对、给"},
+        {"word": "him", "meaning_cn": "他"}
+      ],
+      "ex_en": "It never occurred to me that he might be lying.",
+      "ex_cn": "我从没想到他可能在撒谎。",
+      "occ": [[4767, "occurred to him"]]
+    },
+    {
+      "head": "make a fool of oneself",
+      "gloss": "出洋相；使自己出丑",
+      "ipa": "/meɪk ə fuːl əv wʌnˈself/",
+      "note": "本章出处为分离式(“what fools we're making of ourselves”),故 card-only,本章不画虚线。",
+      "literal": [
+        {"word": "making", "meaning_cn": "使成为"},
+        {"word": "a fool", "meaning_cn": "傻瓜、笑柄"},
+        {"word": "of", "meaning_cn": "把…(变成)"},
+        {"word": "ourselves", "meaning_cn": "我们自己"}
+      ],
+      "ex_en": "He made a fool of himself by singing off-key at the party.",
+      "ex_cn": "他在聚会上跑调唱歌，出尽了洋相。",
+      "cardOnly": true,
+      "key": "make a fool of oneself",
+      "exSeq": 4768
+    },
+    {
+      "head": "in vain",
+      "gloss": "徒劳；白费力气",
+      "ipa": "/ɪn veɪn/",
+      "note": "表示努力没有结果、白搭。",
+      "literal": [
+        {"word": "in", "meaning_cn": "处于…(状态)"},
+        {"word": "vain", "meaning_cn": "徒劳的、无益的"}
+      ],
+      "ex_en": "They searched the whole house for the key, but in vain.",
+      "ex_cn": "他们把整栋房子都找遍了，却是徒劳。",
+      "occ": [[4782, "in vain"]]
+    },
+    {
+      "head": "by and by",
+      "gloss": "不久；过一会儿",
+      "ipa": "/baɪ ənd baɪ/",
+      "note": "略带旧式的说法,意为过一段时间之后。本章写作连字符形式 by-and-by。",
+      "literal": [
+        {"word": "by", "meaning_cn": "(习语用词)", "note_cn": "单独无实义,须整体记忆"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "by", "meaning_cn": "(习语用词)"}
+      ],
+      "ex_en": "By and by the crowd grew tired and drifted away.",
+      "ex_cn": "过了一会儿，人群累了，渐渐散去。",
+      "occ": [[4789, "by-and-by"], [4805, "by-and-by"]]
+    },
+    {
+      "head": "I bet",
+      "gloss": "我敢说；我肯定",
+      "ipa": "/aɪ bet/",
+      "note": "口语,表示对某事很有把握;I bet you… 加强语气。",
+      "literal": [
+        {"word": "I", "meaning_cn": "我"},
+        {"word": "bet", "meaning_cn": "敢断定", "note_cn": "此处非真的“打赌”,表“肯定”"}
+      ],
+      "ex_en": "I bet you can't guess who I saw today.",
+      "ex_cn": "我敢说你猜不到我今天见到了谁。",
+      "occ": [[4677, "I bet"], [4792, "I bet you"]]
+    },
+    {
+      "head": "at one's heels",
+      "gloss": "紧跟在某人身后",
+      "ipa": "/ət wʌnz hiːlz/",
+      "note": "heels 指脚后跟;at sb's heels 表示紧随其后。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "heels", "meaning_cn": "脚后跟", "note_cn": "借指“身后紧邻处”"}
+      ],
+      "ex_en": "The puppy followed the boy everywhere, always at his heels.",
+      "ex_cn": "小狗到哪都跟着那男孩，总是紧随其后。",
+      "occ": [[4804, "at his heels"]]
+    },
+    {
+      "head": "sure enough",
+      "gloss": "果然；果不其然",
+      "ipa": "/ʃʊər ɪˈnʌf/",
+      "note": "用来说明事情正如所料地发生了。",
+      "literal": [
+        {"word": "sure", "meaning_cn": "确实"},
+        {"word": "enough", "meaning_cn": "(加强语气)", "note_cn": "此处与 sure 连用表“果然”"}
+      ],
+      "ex_en": "I said it would rain, and sure enough, it poured all afternoon.",
+      "ex_cn": "我说过会下雨，果然，整个下午都在倾盆大雨。",
+      "occ": [[4807, "sure enough"]]
+    },
+    {
+      "head": "at last",
+      "gloss": "终于；最终",
+      "ipa": "/ət lɑːst/",
+      "note": "指经过等待或努力之后终于实现。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "last", "meaning_cn": "最后", "note_cn": "此处指“最终、终于”"}
+      ],
+      "ex_en": "After hours of walking, we reached the top at last.",
+      "ex_cn": "走了好几个小时，我们终于到了山顶。",
+      "occ": [[4808, "at last"]]
+    },
+    {
+      "head": "fool around",
+      "gloss": "瞎混；胡闹、不干正事",
+      "ipa": "/fuːl əˈraʊnd/",
+      "note": "指闲混、消磨时间或胡闹。fool 此处作动词“胡闹”。",
+      "literal": [
+        {"word": "fool", "meaning_cn": "胡闹、瞎弄", "note_cn": "此处作动词,非“傻瓜”"},
+        {"word": "around", "meaning_cn": "到处、四下"}
+      ],
+      "ex_en": "Stop fooling around and finish your homework.",
+      "ex_cn": "别瞎混了，把作业写完。",
+      "occ": [[4811, "fool around"]]
+    },
+    {
+      "head": "the coast is clear",
+      "gloss": "没有危险了；周围没人(可以行动了)",
+      "ipa": "/ðə koʊst ɪz klɪr/",
+      "note": "习语,指没有人监视或阻拦,可以放手去做。",
+      "literal": [
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "coast", "meaning_cn": "海岸", "note_cn": "此处习语中借指“周围”"},
+        {"word": "clear", "meaning_cn": "无障碍的、没人的"}
+      ],
+      "ex_en": "He waited by the door until the coast was clear, then slipped out.",
+      "ex_cn": "他在门边等到没人，才溜了出去。",
+      "occ": [[4832, "the coast clear"]]
+    },
+    {
+      "head": "keep someone waiting",
+      "gloss": "让某人等候；使某人久等",
+      "ipa": "/kiːp ˈsʌmwʌn ˈweɪtɪŋ/",
+      "note": "指因迟到或拖延而让别人干等。",
+      "literal": [
+        {"word": "keeping", "meaning_cn": "使…处于(某状态)"},
+        {"word": "everybody", "meaning_cn": "每个人、大家"},
+        {"word": "waiting", "meaning_cn": "等待"}
+      ],
+      "ex_en": "Hurry up—you're keeping everyone waiting.",
+      "ex_cn": "快点，大家都在等你呢。",
+      "occ": [[4843, "keeping everybody waiting"]]
+    },
+    {
+      "head": "be used to doing",
+      "gloss": "习惯于(做某事)",
+      "ipa": "/biː juːst tə ˈduːɪŋ/",
+      "note": "be/get used to + 名词或动名词,表示对某事已经习惯。注意 to 后接 -ing,非动词原形。",
+      "literal": [
+        {"word": "used", "meaning_cn": "习惯的", "note_cn": "此处非“使用/曾经”义"},
+        {"word": "to", "meaning_cn": "于", "note_cn": "此处 to 后接动名词"},
+        {"word": "being", "meaning_cn": "被(处于)"}
+      ],
+      "ex_en": "She is used to getting up early every morning.",
+      "ex_cn": "她习惯了每天早起。",
+      "occ": [[4853, "used to being"]]
+    },
+    {
+      "head": "give someone up",
+      "gloss": "对某人不再抱指望；放弃(等某人)",
+      "ipa": "/ɡɪv ˈsʌmwʌn ʌp/",
+      "note": "本章指“不再指望他来了”。give up 另有“放弃、投降、交出”等义。",
+      "literal": [
+        {"word": "gave", "meaning_cn": "give 的过去式"},
+        {"word": "him", "meaning_cn": "他"},
+        {"word": "up", "meaning_cn": "放弃", "note_cn": "此处指“不再指望”"}
+      ],
+      "ex_en": "When he didn't show up by nine, we gave him up and left.",
+      "ex_cn": "到九点他还没来，我们就不等他了，走了。",
+      "occ": [[4872, "gave him up"]]
+    },
+    {
+      "head": "stumble on",
+      "gloss": "偶然发现；不期而遇",
+      "ipa": "/ˈstʌmbl ɒn/",
+      "note": "指无意中碰见某人或找到某物。也作 stumble upon。",
+      "literal": [
+        {"word": "stumbled", "meaning_cn": "偶然碰上", "note_cn": "此处非“绊倒”义"},
+        {"word": "on", "meaning_cn": "遇到、发现"}
+      ],
+      "ex_en": "While cleaning the attic, I stumbled on some old photos.",
+      "ex_cn": "打扫阁楼时，我偶然翻到了一些旧照片。",
+      "occ": [[4872, "stumbled on"]]
+    },
+    {
+      "head": "hunt up",
+      "gloss": "搜寻找出；四处物色到",
+      "ipa": "/hʌnt ʌp/",
+      "note": "指费力地寻找并找到某人或某物。",
+      "literal": [
+        {"word": "hunt", "meaning_cn": "搜寻", "note_cn": "此处非“打猎”义"},
+        {"word": "up", "meaning_cn": "(找)出来", "note_cn": "此处表“搜出、找到”"}
+      ],
+      "ex_en": "I'll hunt up a good spot for us to have the picnic.",
+      "ex_cn": "我去物色一个适合野餐的好地方。",
+      "occ": [[4835, "hunt up"], [4849, "hunting up"]]
+    }
+  ],
+  "skipped": [
+    "Injun Joe / McDougal's cave / Aladdin's Palace / Widow Douglas / Aunt Polly / Joe Harper / Ben Rogers / Benny Taylor / Mr. Jones(专名,skip)",
+    "in order to(×3, 4627 偏语法定式)",
+    "get holt of / follered / becuz / less start / lemme / dono / more'n / off'n / ben(方言拼写表面形)",
+    "honest injun / good as wheat / by jings / it's a whiz / on my pins / real bully(Huck 方言感叹/俚语,一次性)",
+    "blaze our way / made kite-strings fast(一次性/航海文学用法)",
+    "turn one's hand over(冷僻习语,4694 控量舍去)",
+    "the point was well taken(4770 书面套语,控量舍去)",
+    "too good to believe(4810 too...to 语法化)",
+    "after an awkward fashion(4815 文学性,一次性)",
+    "snake it out / hook(a wagon)(slang 偷/拖,一次性)",
+    "fool away time(4849 与 fool around 义近,控量舍去)",
+    "take one's hat off(4730 分离式且偏字面,舍去)",
+    "get to loving(4732 get to+doing,偏语法,控量舍去)",
+    "never mind / hurry up / find oneself + pp(偏基础/语法化)",
+    "trample his duty under foot / bring gray hairs to the grave(文学夸张/圣经味,一次性→难句层)"
+  ]
+}

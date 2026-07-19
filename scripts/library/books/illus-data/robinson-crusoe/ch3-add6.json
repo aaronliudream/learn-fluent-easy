@@ -1,0 +1,21 @@
+{ "chapter": 3,
+  "images": [
+    { "k":7, "slug":"natives-leave-food-on-shore", "seq":205,
+      "scene":"On a wild African beach two villagers set down pieces of dried meat and a handful of corn on the sand and step back a good distance, while Robinson's small sailing boat waits just off the shore to fetch it.",
+      "alt":"村民把干肉和玉米放在沙滩上后退开,小船在岸边等着来取。" },
+    { "k":8, "slug":"women-bring-water-jar", "seq":216,
+      "scene":"Two women carry a large round earthenware vessel to the water's edge and set it down, while a boy wades from the small boat with three empty jars to fill them.",
+      "alt":"两名妇女抬来一只大陶罐放在水边,男孩从小船蹚水过来灌满三只空罐。" },
+    { "k":9, "slug":"launching-boat-in-storm", "seq":301,
+      "scene":"In a high raging sea a crowded ship's boat is slung over the side of a grounded, half-wrecked vessel, eleven men clambering down into it as towering waves rise around them.",
+      "alt":"在惊涛骇浪中,一艘小艇从搁浅破船的舷侧放下,十一个人爬进艇里。" },
+    { "k":10, "slug":"giant-wave-oversets-boat", "seq":309,
+      "scene":"A towering mountain-like wave rolls in from behind and flips a small open boat upside down, scattering the men into the churning white foam of the sea.",
+      "alt":"一道山一样高的巨浪从船尾涌来,把小艇掀翻,人被抛进翻腾的白浪里。" },
+    { "k":11, "slug":"clambering-up-the-cliffs", "seq":318,
+      "scene":"A drenched, exhausted man drags himself up the rocky cliffs at the edge of the shore and sinks down onto the grass at the top, the surf breaking on the rocks below him.",
+      "alt":"一个浑身湿透、精疲力尽的人爬上岸边的岩崖,瘫坐在崖顶的草地上,浪花在下面的礁石上碎开。" },
+    { "k":12, "slug":"relics-of-drowned-comrades", "seq":322,
+      "scene":"A lone man walks along a wet beach with his hands lifted, while scattered on the sand near the surf lie three hats, a single cap and two odd shoes washed up from the sea.",
+      "alt":"一个人独自在湿漉漉的沙滩上举着双手走着,近浪处的沙上散落着三顶帽子、一顶便帽和两只不成对的鞋。" }
+  ] }

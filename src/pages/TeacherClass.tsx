@@ -7,8 +7,10 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, Copy, Check, AlertTriangle, RefreshCw, Archive } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Loader2, Copy, Check, AlertTriangle, RefreshCw, Archive, ArchiveRestore, Trash2, Pencil } from "lucide-react";
 import { toast } from "sonner";
+import { ProvisionedStudents } from "@/components/teacher/ProvisionedStudents";
 
 /**
  * Single-class detail page.
@@ -37,6 +39,8 @@ type ClassRow = {
 type Student = {
   member_id: string;
   display_name: string | null;
+  note_name: string | null;      // 本老师对该生的备注名(优先级最高)
+  real_name: string | null;      // 本老师代建该生时填的真名
   role: "student" | "parent";
   joined_at: string;
   weekly_minutes: number;
@@ -73,16 +77,47 @@ export default function TeacherClass() {
   const [weakness, setWeakness] = useState<WeaknessRow[]>([]);
   const [sort, setSort] = useState<"recent" | "mastery" | "weak">("recent");
   const [query, setQuery] = useState("");
+  const [restoring, setRestoring] = useState(false);
+
+  async function restoreClass() {
+    if (!id) return;
+    setRestoring(true);
+    // restore_class 后端硬校验归属 + 班级上限；满则返回中文异常，直接透传给用户。
+    const { error } = await supabase.rpc("restore_class", { _class_id: id });
+    setRestoring(false);
+    if (error) toast.error(error.message);
+    else { toast.success(t("已恢复为活跃班")); loadAll(); }
+  }
 
   async function loadAll() {
     if (!id) return;
     setLoading(true);
-    const [clsR, stuR, wkR] = await Promise.all([
-      supabase.from("classes").select("*").eq("id", id).maybeSingle(),
+
+    // 取班级走列表页同款 RPC get_my_teacher_classes（SECURITY DEFINER + auth.uid()），
+    // 从中挑出当前班级 → 与列表页口径完全一致，绕开直查 classes 的会话/RLS 问题。
+    const { data: myClasses } = await supabase.rpc("get_my_teacher_classes");
+    const rpcRow = (Array.isArray(myClasses) ? myClasses : []).find(
+      (c: { id: string }) => c.id === id,
+    ) as (ClassRow & Record<string, unknown>) | undefined;
+
+    const [stuR, wkR] = await Promise.all([
       supabase.rpc("get_class_students", { _class_id: id }),
       supabase.rpc("get_class_weakness", { _class_id: id, _limit: 10 }),
     ]);
-    if (clsR.data) setCls(clsR.data as ClassRow);
+
+    // 映射成 ClassRow（RPC 不返回 description，置 null，渲染未用到）。
+    const resolved: ClassRow | null = rpcRow
+      ? {
+          id: rpcRow.id,
+          name: rpcRow.name,
+          stage: rpcRow.stage,
+          join_code: rpcRow.join_code,
+          description: null,
+          archived_at: rpcRow.archived_at,
+          created_at: rpcRow.created_at,
+        }
+      : null;
+    setCls(resolved);
     if (!stuR.error) setStudents((stuR.data ?? []) as Student[]);
     if (!wkR.error) setWeakness((wkR.data ?? []) as WeaknessRow[]);
     setLoading(false);
@@ -138,6 +173,7 @@ export default function TeacherClass() {
   }
 
   const meta = STAGE_META[cls.stage];
+  const isArchived = !!cls.archived_at;
 
   return (
     <main className="mx-auto min-h-screen max-w-6xl px-4 py-6 md:px-6 md:py-10">
@@ -148,7 +184,26 @@ export default function TeacherClass() {
         className={`relative mt-5 overflow-hidden rounded-3xl p-6 md:p-8 text-white shadow-tile bg-gradient-to-br ${meta.gradient}`}>
         <div className="relative flex flex-wrap items-start justify-between gap-4">
           <div className="min-w-0">
-            <div className="text-[10px] font-bold uppercase tracking-[0.25em] opacity-85"><T>班级详情</T></div>
+            <div className="text-[10px] font-bold uppercase tracking-[0.25em] opacity-85 flex flex-wrap items-center gap-2">
+              <T>班级详情</T>
+              {isArchived && (
+                <>
+                  <span className="rounded-full bg-white/25 px-2 py-0.5 text-[10px] font-bold tracking-normal normal-case">
+                    🗄 <T>已归档 · 只读</T>
+                  </span>
+                  <button
+                    type="button"
+                    onClick={restoreClass}
+                    disabled={restoring}
+                    className="inline-flex items-center gap-1 rounded-full bg-white/90 px-2.5 py-0.5 text-[11px] font-bold tracking-normal normal-case text-fuchsia-700 transition hover:bg-white disabled:opacity-60">
+                    {restoring
+                      ? <Loader2 className="size-3 animate-spin" />
+                      : <ArchiveRestore className="size-3" />}
+                    <T>恢复为活跃班</T>
+                  </button>
+                </>
+              )}
+            </div>
             <div className="mt-1 text-2xl md:text-3xl font-extrabold leading-tight">🏫 <T>{cls.name}</T></div>
             <div className="mt-2 text-sm opacity-90 flex flex-wrap items-center gap-3">
               <span><b className="tabular-nums">{activeStudents.length}</b> <T>名学生</T></span>
@@ -169,7 +224,7 @@ export default function TeacherClass() {
         <Kpi label="本周活跃" value={`${activeWeek} / ${activeStudents.length}`}
              sub={activeStudents.length > 0 ? `${Math.round(activeWeek / activeStudents.length * 100)}% 活跃率` : "—"}
              tone="emerald" />
-        <Kpi label="本周总学习" value={fmtHM(weekMinutes)} sub="累计 study_minutes" tone="emerald" />
+        <Kpi label="本周总学习" value={fmtHM(weekMinutes)} sub="累计学习时长" tone="emerald" />
         <Kpi label="平均周时长" value={`${avgWeekMins} 分钟`} sub="每位学生" />
         <Kpi label="需关注学生" value={weakStudents}
              sub={weakStudents > 0 ? "≥ 3 未解决错题" : "暂无"}
@@ -187,6 +242,8 @@ export default function TeacherClass() {
 
         {/* ───────── ROSTER ───────── */}
         <TabsContent value="roster" className="mt-5">
+          {/* 代建学生账号（没有邮箱的学生，老师代建登录 ID + 密码）*/}
+          <ProvisionedStudents classId={cls.id} readOnly={isArchived} onChanged={loadAll} />
           <div className="rounded-3xl border-2 border-border bg-card shadow-tile overflow-hidden">
             <div className="px-5 py-3 border-b border-border flex flex-wrap items-center justify-between gap-2 bg-muted/40">
               <div className="text-sm font-extrabold"><T>👥 学生名单</T></div>
@@ -224,7 +281,7 @@ export default function TeacherClass() {
                   </tr>
                 </thead>
                 <tbody>
-                  {filteredSorted.map((s) => <StudentRow key={s.member_id} s={s} />)}
+                  {filteredSorted.map((s) => <StudentRow key={s.member_id} s={s} classId={cls.id} onChanged={loadAll} />)}
                 </tbody>
               </table>
             )}
@@ -298,7 +355,7 @@ export default function TeacherClass() {
 
         {/* ───────── SETTINGS ───────── */}
         <TabsContent value="settings" className="mt-5">
-          <ClassSettings cls={cls} onChange={loadAll} />
+          <ClassSettings cls={cls} onChange={loadAll} readOnly={isArchived} />
         </TabsContent>
       </Tabs>
     </main>
@@ -352,8 +409,20 @@ function Mini({ label, v }: { label: string; v: string }) {
   );
 }
 
-function StudentRow({ s }: { s: Student }) {
-  const initial = (s.display_name ?? "").charAt(0) || "?";
+// 有效名 = 备注 > 代建真名 > 账号名;origin = 账号 display_name(用于灰括号原名)
+function effName(s: { note_name: string | null; real_name: string | null; display_name: string | null }) {
+  const origin = s.display_name || "";
+  const effective = s.note_name || s.real_name || s.display_name || "未命名";
+  return { effective, origin, hasAlias: !!origin && effective !== origin };
+}
+
+function StudentRow({ s, classId, onChanged }: { s: Student; classId: string; onChanged: () => void }) {
+  const t = useT();
+  const { effective, origin, hasAlias } = effName(s);
+  const [noteOpen, setNoteOpen] = useState(false);
+  const [noteVal, setNoteVal] = useState(s.note_name ?? "");
+  const [saving, setSaving] = useState(false);
+  const initial = effective.charAt(0) || "?";
   const statusEmoji =
     s.weekly_minutes === 0 && s.unresolved_weak_count >= 5 ? "🔴" :
     s.unresolved_weak_count >= 5                            ? "⚠️" :
@@ -362,6 +431,18 @@ function StudentRow({ s }: { s: Student }) {
     s.unresolved_weak_count >= 8 ? "text-rose-600 dark:text-rose-400" :
     s.unresolved_weak_count >= 3 ? "text-amber-600 dark:text-amber-400" :
                                    "text-emerald-600 dark:text-emerald-400";
+
+  async function saveNote() {
+    setSaving(true);
+    // 归属校验在 set_student_note 里(该生须在本人某班);留空则删备注回退原名
+    const { error } = await supabase.rpc("set_student_note", { _student_id: s.member_id, _note_name: noteVal.trim() || null });
+    setSaving(false);
+    if (error) { toast.error(error.message); return; }
+    toast.success(noteVal.trim() ? t("备注已保存") : t("已清除备注"));
+    setNoteOpen(false);
+    onChanged();
+  }
+
   return (
     <tr className="border-t border-border hover:bg-muted/30 transition">
       <td className="py-3 px-4">
@@ -369,9 +450,47 @@ function StudentRow({ s }: { s: Student }) {
           <span className="grid size-8 place-items-center rounded-full bg-primary/10 text-primary font-bold text-sm">
             {initial}
           </span>
-          <span className="font-semibold">{s.display_name || "未命名"}</span>
+          <Link
+            to={`/teacher/class/${classId}/student/${s.member_id}`}
+            state={{ name: effective, displayName: origin, realName: s.real_name ?? "", noteName: s.note_name ?? "" }}
+            className="font-semibold text-primary hover:underline">
+            {effective}
+          </Link>
+          {hasAlias && <span className="text-[11px] text-muted-foreground">({origin})</span>}
           <span>{statusEmoji}</span>
+          <button
+            type="button"
+            onClick={() => { setNoteVal(s.note_name ?? ""); setNoteOpen(true); }}
+            className="text-muted-foreground hover:text-primary transition"
+            aria-label={t("备注名")} title={t("备注名")}>
+            <Pencil className="size-3.5" />
+          </button>
         </div>
+
+        {/* 备注名弹窗(portal 渲染,放在名字单元格内不影响表格列) */}
+        <Dialog open={noteOpen} onOpenChange={setNoteOpen}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>✏️ <T>备注名</T></DialogTitle>
+            </DialogHeader>
+            <div className="space-y-2">
+              <Label htmlFor={`note-${s.member_id}`} className="text-xs"><T>只有你看得到，不改学生账号</T></Label>
+              <Input id={`note-${s.member_id}`} value={noteVal} maxLength={40}
+                onChange={(e) => setNoteVal(e.target.value)} placeholder={origin || t("如：李明")} autoFocus
+                onKeyDown={(e) => { if (e.key === "Enter" && !saving) saveNote(); }} />
+              <p className="text-[11px] text-muted-foreground">
+                <T>账号原名</T> <span className="font-mono">{origin || "—"}</span>
+                <T>。留空则清除备注，回退原名。</T>
+              </p>
+            </div>
+            <DialogFooter>
+              <Button variant="ghost" onClick={() => setNoteOpen(false)} disabled={saving}><T>取消</T></Button>
+              <Button onClick={saveNote} disabled={saving}>
+                {saving ? <Loader2 className="size-4 animate-spin" /> : <T>保存</T>}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </td>
       <td className="text-right tabular-nums">{fmtHM(s.weekly_minutes)}</td>
       <td className="text-right tabular-nums">{s.active_days_last_7} / 7</td>
@@ -383,12 +502,13 @@ function StudentRow({ s }: { s: Student }) {
   );
 }
 
-function ClassSettings({ cls, onChange }: { cls: ClassRow; onChange: () => void }) {
+function ClassSettings({ cls, onChange, readOnly = false }: { cls: ClassRow; onChange: () => void; readOnly?: boolean }) {
   const t = useT();
   const [name, setName] = useState(cls.name);
   const [savingName, setSavingName] = useState(false);
   const [regenBusy, setRegenBusy] = useState(false);
   const [archiving, setArchiving] = useState(false);
+  const [trashing, setTrashing] = useState(false);
 
   async function saveName() {
     if (name.trim() === cls.name || !name.trim()) return;
@@ -421,6 +541,19 @@ function ClassSettings({ cls, onChange }: { cls: ClassRow; onChange: () => void 
     }
   }
 
+  async function trash() {
+    if (!confirm(t("确认把此班级移入回收站？可在老师中心「回收站」里恢复，或输入班名彻底删除。"))) return;
+    setTrashing(true);
+    // trash_class 归属校验 teacher_id=auth.uid();仅软删(置 deleted_at),可恢复
+    const { error } = await supabase.rpc("trash_class", { _class_id: cls.id });
+    setTrashing(false);
+    if (error) toast.error(error.message);
+    else {
+      toast.success(t("已移入回收站"));
+      window.location.href = "/teacher";
+    }
+  }
+
   return (
     <div className="space-y-4">
       <div className="rounded-3xl border-2 border-border bg-card p-5 shadow-tile">
@@ -429,10 +562,12 @@ function ClassSettings({ cls, onChange }: { cls: ClassRow; onChange: () => void 
           <div>
             <Label><T>班级名称</T></Label>
             <div className="mt-1 flex gap-2">
-              <Input value={name} onChange={(e) => setName(e.target.value)} maxLength={80} />
-              <Button onClick={saveName} disabled={savingName || name.trim() === cls.name}>
-                {savingName ? <Loader2 className="size-4 animate-spin" /> : <T>保存</T>}
-              </Button>
+              <Input value={name} onChange={(e) => setName(e.target.value)} maxLength={80} disabled={readOnly} />
+              {!readOnly && (
+                <Button onClick={saveName} disabled={savingName || name.trim() === cls.name}>
+                  {savingName ? <Loader2 className="size-4 animate-spin" /> : <T>保存</T>}
+                </Button>
+              )}
             </div>
           </div>
           <div>
@@ -448,20 +583,41 @@ function ClassSettings({ cls, onChange }: { cls: ClassRow; onChange: () => void 
         <h3 className="text-base font-extrabold mb-2"><T>🔑 邀请码</T></h3>
         <div className="flex flex-wrap items-center gap-3">
           <code className="rounded-lg bg-muted px-3 py-2 font-mono text-lg tracking-widest">{cls.join_code}</code>
-          <Button variant="outline" onClick={regenerateCode} disabled={regenBusy}>
-            {regenBusy ? <Loader2 className="mr-1 size-4 animate-spin" /> : <RefreshCw className="mr-1 size-4" />}
-            <T>重新生成</T>
-          </Button>
+          {!readOnly && (
+            <Button variant="outline" onClick={regenerateCode} disabled={regenBusy}>
+              {regenBusy ? <Loader2 className="mr-1 size-4 animate-spin" /> : <RefreshCw className="mr-1 size-4" />}
+              <T>重新生成</T>
+            </Button>
+          )}
         </div>
         <p className="mt-2 text-xs text-muted-foreground"><T>重新生成后，旧邀请码立即失效，已加入的学生不受影响。</T></p>
       </div>
 
-      <div className="rounded-3xl border-2 border-rose-200 bg-rose-50/40 p-5 dark:border-rose-500/30 dark:bg-rose-500/10">
-        <h3 className="text-base font-extrabold mb-2 text-rose-700 dark:text-rose-300"><T>🗑 归档班级</T></h3>
-        <p className="text-sm text-muted-foreground"><T>归档后学生仍能继续学习，但你不会在老师中心看到此班级。可以稍后从数据库手动恢复。</T></p>
-        <Button variant="destructive" onClick={archive} disabled={archiving} className="mt-3">
-          {archiving ? <Loader2 className="mr-1 size-4 animate-spin" /> : <Archive className="mr-1 size-4" />}
-          <T>归档此班级</T>
+      {readOnly ? (
+        <div className="rounded-3xl border-2 border-border bg-muted/30 p-5">
+          <h3 className="text-base font-extrabold mb-2 text-muted-foreground"><T>🗄 已归档班级</T></h3>
+          <p className="text-sm text-muted-foreground"><T>此班级已归档，仅供只读查看。学生仍能继续学习，其学习数据实时可查；如需恢复或修改，请从数据库操作。</T></p>
+        </div>
+      ) : (
+        <div className="rounded-3xl border-2 border-rose-200 bg-rose-50/40 p-5 dark:border-rose-500/30 dark:bg-rose-500/10">
+          <h3 className="text-base font-extrabold mb-2 text-rose-700 dark:text-rose-300"><T>🗑 归档班级</T></h3>
+          <p className="text-sm text-muted-foreground"><T>归档后学生仍能继续学习，但你不会在老师中心看到此班级。可以稍后从数据库手动恢复。</T></p>
+          <Button variant="destructive" onClick={archive} disabled={archiving} className="mt-3">
+            {archiving ? <Loader2 className="mr-1 size-4 animate-spin" /> : <Archive className="mr-1 size-4" />}
+            <T>归档此班级</T>
+          </Button>
+        </div>
+      )}
+
+      {/* 删除到回收站(与归档是两条独立的线;活跃/归档班都可删)*/}
+      <div className="rounded-3xl border-2 border-rose-300 bg-rose-50/40 p-5 dark:border-rose-500/40 dark:bg-rose-500/10">
+        <h3 className="text-base font-extrabold mb-2 text-rose-700 dark:text-rose-300"><T>🗑 删除班级</T></h3>
+        <p className="text-sm text-muted-foreground">
+          <T>移入回收站（可恢复）。在老师中心「回收站」里可恢复，或手打班名彻底删除。彻底删除只清除班级与入班关系，学生账号本身不受影响、仍可登录并再加入别的班。</T>
+        </p>
+        <Button variant="destructive" onClick={trash} disabled={trashing} className="mt-3">
+          {trashing ? <Loader2 className="mr-1 size-4 animate-spin" /> : <Trash2 className="mr-1 size-4" />}
+          <T>移入回收站</T>
         </Button>
       </div>
     </div>

@@ -1,0 +1,349 @@
+{
+  "chapter": 4,
+  "chunks": [
+    {
+      "head": "show off",
+      "gloss": "炫耀;卖弄",
+      "ipa": "/ˈʃoʊ ɔːf/",
+      "note": "常含贬义,指故意表现以博取注意;本章反复出现,是全章的关键词",
+      "literal": [
+        {"word": "show", "meaning_cn": "展示", "note_cn": "此处引申为\"卖弄、显摆\""},
+        {"word": "off", "meaning_cn": "(构成短语)", "note_cn": "无独立实义"}
+      ],
+      "ex_en": "He likes to show off his new bike to his friends.",
+      "ex_cn": "他喜欢向朋友炫耀他的新自行车。",
+      "occ": [[575, "showing off"], [588, "showing off"], [589, "showed off"], [590, "showed off"], [591, "showed off"], [592, "showed off"], [593, "showing off"]]
+    },
+    {
+      "head": "turn out to be",
+      "gloss": "结果是;原来是",
+      "ipa": "/ˌtɜːrn aʊt tə ˈbiː/",
+      "note": "表示事情最终显露出的真实情况",
+      "literal": [
+        {"word": "turn", "meaning_cn": "转变", "note_cn": "此处非\"转动\",构成\"结果变成\"义"},
+        {"word": "out", "meaning_cn": "(构成短语)"},
+        {"word": "to", "meaning_cn": "(不定式标记)"},
+        {"word": "be", "meaning_cn": "是"}
+      ],
+      "ex_en": "The new student turned out to be very friendly.",
+      "ex_cn": "那个新来的同学原来非常友好。",
+      "occ": [[578, "turned out to be"]]
+    },
+    {
+      "head": "set out for",
+      "gloss": "动身前往",
+      "ipa": "/ˌset aʊt fɔːr/",
+      "note": "set out = 出发、启程,后接 for + 目的地",
+      "literal": [
+        {"word": "set", "meaning_cn": "(此处\"启程\"义)", "note_cn": "非\"放置\""},
+        {"word": "out", "meaning_cn": "向外;出发"},
+        {"word": "for", "meaning_cn": "前往(某地)"}
+      ],
+      "ex_en": "We set out for the beach early in the morning.",
+      "ex_cn": "我们一大早就动身去海滩。",
+      "occ": [[529, "set out for"]]
+    },
+    {
+      "head": "go on doing sth",
+      "gloss": "继续(做某事)",
+      "ipa": "/ˌɡoʊ ˈɒn/",
+      "note": "go on + 动词ing 表示接着做同一件事",
+      "literal": [
+        {"word": "go", "meaning_cn": "(此处\"继续\"义)", "note_cn": "非\"去\""},
+        {"word": "on", "meaning_cn": "继续下去"}
+      ],
+      "ex_en": "She went on reading after dinner.",
+      "ex_cn": "晚饭后她继续看书。",
+      "occ": [[543, "went on buying"]]
+    },
+    {
+      "head": "stick to",
+      "gloss": "坚持;固守",
+      "ipa": "/ˈstɪk tuː/",
+      "note": "指不放弃、坚持某计划/工作/观点",
+      "literal": [
+        {"word": "stick", "meaning_cn": "(此处\"坚持\"义)", "note_cn": "非\"粘贴\""},
+        {"word": "to", "meaning_cn": "(对;于)"}
+      ],
+      "ex_en": "You should stick to your plan.",
+      "ex_cn": "你应该坚持你的计划。",
+      "occ": [[553, "stick to"]]
+    },
+    {
+      "head": "bring up",
+      "gloss": "抚养;教养",
+      "ipa": "/ˌbrɪŋ ˈʌp/",
+      "note": "指养育孩子长大;另也可指\"提出(话题)\"",
+      "literal": [
+        {"word": "bring", "meaning_cn": "(此处\"养育\"义)", "note_cn": "非\"带来\""},
+        {"word": "up", "meaning_cn": "(构成短语,含\"长大\")"}
+      ],
+      "ex_en": "Her grandparents brought her up in the countryside.",
+      "ex_cn": "她的祖父母在乡下把她抚养长大。",
+      "occ": [[628, "bringing up"]]
+    },
+    {
+      "head": "get around",
+      "gloss": "回避;绕开",
+      "ipa": "/ˌɡet əˈraʊnd/",
+      "note": "本章义为\"避开、绕过(难题/事实)\";常用 there's no getting around it",
+      "literal": [
+        {"word": "get", "meaning_cn": "(此处\"设法应对\"义)"},
+        {"word": "around", "meaning_cn": "绕过"}
+      ],
+      "ex_en": "There is no way to get around this rule.",
+      "ex_cn": "没有办法回避这条规定。",
+      "occ": [[600, "getting around it"]]
+    },
+    {
+      "head": "lose one's temper",
+      "gloss": "发脾气;发火",
+      "ipa": "/ˌluːz wʌnz ˈtempər/",
+      "note": "指一时失去情绪控制",
+      "literal": [
+        {"word": "lose", "meaning_cn": "失去"},
+        {"word": "temper", "meaning_cn": "脾气;情绪"}
+      ],
+      "ex_en": "Try not to lose your temper with the kids.",
+      "ex_cn": "尽量不要对孩子们发脾气。",
+      "occ": [[525, "lost his temper"]]
+    },
+    {
+      "head": "change hands",
+      "gloss": "易主;转手",
+      "ipa": "/ˌtʃeɪndʒ ˈhændz/",
+      "note": "指所有权从一个人转到另一个人",
+      "literal": [
+        {"word": "change", "meaning_cn": "改变"},
+        {"word": "hands", "meaning_cn": "(此处指\"所有者、手中\")", "note_cn": "非字面\"手\""}
+      ],
+      "ex_en": "The old shop has changed hands twice this year.",
+      "ex_cn": "这家老店今年已经转手两次了。",
+      "occ": [[541, "changed hands"]]
+    },
+    {
+      "head": "on the spot",
+      "gloss": "当场;立刻",
+      "ipa": "/ɒn ðə ˈspɒt/",
+      "note": "指就在事情发生的现场或那一刻",
+      "literal": [
+        {"word": "on", "meaning_cn": "在"},
+        {"word": "the", "meaning_cn": "(定冠词)"},
+        {"word": "spot", "meaning_cn": "地点;现场"}
+      ],
+      "ex_en": "The police arrived and arrested him on the spot.",
+      "ex_cn": "警察赶到,当场把他逮捕了。",
+      "occ": [[553, "on the spot"]]
+    },
+    {
+      "head": "in due course",
+      "gloss": "到时候;在适当的时候",
+      "ipa": "/ɪn ˌdjuː ˈkɔːrs/",
+      "note": "指经过应有的过程后、时机成熟时",
+      "literal": [
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "due", "meaning_cn": "适当的;到期的"},
+        {"word": "course", "meaning_cn": "过程;进程"}
+      ],
+      "ex_en": "You will receive your results in due course.",
+      "ex_cn": "你会在适当的时候收到成绩。",
+      "occ": [[555, "in due course"]]
+    },
+    {
+      "head": "more or less",
+      "gloss": "或多或少;差不多",
+      "ipa": "/ˌmɔːr ɔːr ˈles/",
+      "note": "表示大致如此、几乎",
+      "literal": [
+        {"word": "more", "meaning_cn": "多"},
+        {"word": "or", "meaning_cn": "或"},
+        {"word": "less", "meaning_cn": "少"}
+      ],
+      "ex_en": "The work is more or less finished.",
+      "ex_cn": "工作差不多完成了。",
+      "occ": [[571, "more or less"]]
+    },
+    {
+      "head": "far and wide",
+      "gloss": "四处;到处",
+      "ipa": "/ˌfɑːr ənd ˈwaɪd/",
+      "note": "指范围广、四面八方",
+      "literal": [
+        {"word": "far", "meaning_cn": "远"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "wide", "meaning_cn": "广"}
+      ],
+      "ex_en": "People came from far and wide to see the festival.",
+      "ex_cn": "人们从四面八方赶来看这个节日。",
+      "occ": [[569, "far and wide"]]
+    },
+    {
+      "head": "at heart",
+      "gloss": "内心里;本质上",
+      "ipa": "/ət ˈhɑːrt/",
+      "note": "指抛开外表看真实的性情",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "heart", "meaning_cn": "内心"}
+      ],
+      "ex_en": "He seems tough, but he is kind at heart.",
+      "ex_cn": "他看起来很强硬,但内心很善良。",
+      "occ": [[558, "at heart"]]
+    },
+    {
+      "head": "a snake in the grass",
+      "gloss": "阴险小人;暗藏的祸害",
+      "ipa": "/ə ˌsneɪk ɪn ðə ˈɡrɑːs/",
+      "note": "比喻表面友好、暗中害人的伪君子",
+      "literal": [
+        {"word": "snake", "meaning_cn": "蛇"},
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "the", "meaning_cn": "(定冠词)"},
+        {"word": "grass", "meaning_cn": "草丛"}
+      ],
+      "ex_en": "Be careful of him—he's a snake in the grass.",
+      "ex_cn": "小心他——他是个笑里藏刀的阴险小人。",
+      "occ": [[604, "snake in the grass"]]
+    },
+    {
+      "head": "all along",
+      "gloss": "自始至终;一直",
+      "ipa": "/ˌɔːl əˈlɒŋ/",
+      "note": "指从头到尾、一贯如此",
+      "literal": [
+        {"word": "all", "meaning_cn": "全部"},
+        {"word": "along", "meaning_cn": "(此处\"一直\"义)", "note_cn": "非\"沿着\""}
+      ],
+      "ex_en": "I knew the truth all along.",
+      "ex_cn": "我自始至终都知道真相。",
+      "occ": [[547, "all along"]]
+    },
+    {
+      "head": "in a word",
+      "gloss": "总之;一句话",
+      "ipa": "/ɪn ə ˈwɜːrd/",
+      "note": "用于概括、下结论",
+      "literal": [
+        {"word": "in", "meaning_cn": "用"},
+        {"word": "a", "meaning_cn": "一"},
+        {"word": "word", "meaning_cn": "词;话"}
+      ],
+      "ex_en": "In a word, the trip was a great success.",
+      "ex_cn": "总之,这次旅行非常成功。",
+      "occ": [[575, "in a word"]]
+    },
+    {
+      "head": "make faces",
+      "gloss": "做鬼脸",
+      "ipa": "/ˌmeɪk ˈfeɪsɪz/",
+      "note": "指扭曲脸部做怪相",
+      "literal": [
+        {"word": "make", "meaning_cn": "做"},
+        {"word": "faces", "meaning_cn": "(此处\"鬼脸、怪相\"义)", "note_cn": "非普通\"脸\""}
+      ],
+      "ex_en": "The children made faces at each other and laughed.",
+      "ex_cn": "孩子们互相做鬼脸,笑个不停。",
+      "occ": [[575, "making faces"]]
+    },
+    {
+      "head": "with all one's might",
+      "gloss": "竭尽全力;用尽全力",
+      "ipa": "/wɪð ɔːl wʌnz ˈmaɪt/",
+      "note": "强调使出全身力气",
+      "literal": [
+        {"word": "with", "meaning_cn": "用"},
+        {"word": "all", "meaning_cn": "全部"},
+        {"word": "might", "meaning_cn": "力气;力量", "note_cn": "此处为名词,非\"可能\""}
+      ],
+      "ex_en": "He pulled the rope with all his might.",
+      "ex_cn": "他用尽全力拉绳子。",
+      "occ": [[575, "with all his might"]]
+    },
+    {
+      "head": "in order to",
+      "gloss": "为了;以便",
+      "ipa": "/ɪn ˈɔːrdər tuː/",
+      "note": "引出目的,后接动词原形",
+      "literal": [
+        {"word": "in", "meaning_cn": "(构成短语)"},
+        {"word": "order", "meaning_cn": "(此处\"目的\"义)", "note_cn": "非\"命令、顺序\""},
+        {"word": "to", "meaning_cn": "(不定式标记)"}
+      ],
+      "ex_en": "She studies hard in order to pass the exam.",
+      "ex_cn": "她努力学习以便通过考试。",
+      "occ": [[545, "in order to"]]
+    },
+    {
+      "head": "be fond of",
+      "gloss": "喜爱;喜欢",
+      "ipa": "/bi ˈfɒnd əv/",
+      "note": "表示对某人/某物有喜爱之情",
+      "literal": [
+        {"word": "be", "meaning_cn": "是;处于"},
+        {"word": "fond", "meaning_cn": "喜爱的"},
+        {"word": "of", "meaning_cn": "(介词)"}
+      ],
+      "ex_en": "My sister is fond of animals.",
+      "ex_cn": "我妹妹很喜欢动物。",
+      "occ": [[529, "fond of"]]
+    },
+    {
+      "head": "be absorbed in",
+      "gloss": "全神贯注于;专心于",
+      "ipa": "/bi əbˈzɔːrbd ɪn/",
+      "note": "指注意力完全投入某事",
+      "literal": [
+        {"word": "be", "meaning_cn": "处于"},
+        {"word": "absorbed", "meaning_cn": "(此处\"专注的\"义)", "note_cn": "非\"吸收\""},
+        {"word": "in", "meaning_cn": "在……之中"}
+      ],
+      "ex_en": "He was absorbed in his work and forgot the time.",
+      "ex_cn": "他专心工作,忘了时间。",
+      "occ": [[545, "absorbed in"]]
+    },
+    {
+      "head": "take sth in hand",
+      "gloss": "接手管教;着手处理",
+      "ipa": "/ˌteɪk ɪn ˈhænd/",
+      "note": "指开始负责、管束某人或某事",
+      "literal": [
+        {"word": "take", "meaning_cn": "(此处\"接手\"义)"},
+        {"word": "in", "meaning_cn": "(介词)"},
+        {"word": "hand", "meaning_cn": "(此处\"掌管\"义)", "note_cn": "非字面\"手\""}
+      ],
+      "ex_en": "The new coach took the team in hand and turned it around.",
+      "ex_cn": "新教练接手了这支队伍,让它转败为胜。",
+      "cardOnly": true,
+      "key": "take in hand",
+      "exSeq": 518
+    },
+    {
+      "head": "put sth to rights",
+      "gloss": "整理妥当;收拾好",
+      "ipa": "/ˌpʊt tə ˈraɪts/",
+      "note": "指把凌乱的东西弄整齐、恢复正常",
+      "literal": [
+        {"word": "put", "meaning_cn": "使……处于"},
+        {"word": "to", "meaning_cn": "(介词)"},
+        {"word": "rights", "meaning_cn": "(此处\"整齐/正常状态\"义)", "note_cn": "非\"权利\""}
+      ],
+      "ex_en": "It took her all morning to put the messy room to rights.",
+      "ex_cn": "她花了一上午才把凌乱的房间收拾整齐。",
+      "cardOnly": true,
+      "key": "put to rights",
+      "exSeq": 521
+    }
+  ],
+  "skipped": [
+    "girded up his loins（一次性文语习语→硬句层）",
+    "from that day forth（古语 forth）",
+    "hither and thither（古语）",
+    "hung fire（生僻习语）",
+    "spread himself（旧俚语）",
+    "a thunderbolt out of a clear sky（一次性比喻）",
+    "draw the curtain over（一次性文语）",
+    "yaller ticket / By jings / Less see 'em（方言口音)",
+    "Sermon on the Mount / David and Goliah / Barlow（专有名词）",
+    "and so on / look upon / long for / heart sank（真短语但容量所限从简）"
+  ]
+}

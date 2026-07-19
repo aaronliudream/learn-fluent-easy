@@ -1,0 +1,450 @@
+{
+ "batch": 19,
+ "cards": [
+  {
+   "word": "dexterity",
+   "ipa": "/dekˈsterəti/",
+   "pos": "n.",
+   "gloss_cn": "灵巧、熟练",
+   "gloss_en": "skill and quickness in using the hands or body",
+   "sense_key": "dexterity",
+   "ex_en": "She tied the knot with great dexterity.",
+   "ex_cn": "她非常灵巧地打好了那个结。"
+  },
+  {
+   "word": "speedily",
+   "ipa": "/ˈspiːdɪli/",
+   "pos": "adv.",
+   "gloss_cn": "迅速地",
+   "gloss_en": "quickly, without delay",
+   "sense_key": "quickly",
+   "ex_en": "Please answer my letter speedily.",
+   "ex_cn": "请迅速回我的信。"
+  },
+  {
+   "word": "hauling",
+   "ipa": "/ˈhɔːlɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "拖、拉(haul 现在分词)",
+   "gloss_en": "pulling something heavy with force",
+   "sense_key": "haul",
+   "ex_en": "The men were hauling the boat up the beach.",
+   "ex_cn": "那些人正把船拖上沙滩。"
+  },
+  {
+   "word": "thicket",
+   "ipa": "/ˈθɪkɪt/",
+   "pos": "n.",
+   "gloss_cn": "灌木丛",
+   "gloss_en": "a dense growth of bushes or small trees",
+   "sense_key": "thicket",
+   "ex_en": "A rabbit hid in the thicket.",
+   "ex_cn": "一只兔子躲在灌木丛里。"
+  },
+  {
+   "word": "engagement",
+   "ipa": "/ɪnˈɡeɪdʒmənt/",
+   "pos": "n.",
+   "gloss_cn": "交战、战斗",
+   "gloss_en": "a fight or battle between opposing forces",
+   "sense_key": "battle",
+   "ex_en": "The two armies had a short engagement.",
+   "ex_cn": "两支军队进行了一场短暂的交战。"
+  },
+  {
+   "word": "lusty",
+   "ipa": "/ˈlʌsti/",
+   "pos": "adj.",
+   "gloss_cn": "强壮的、精力充沛的",
+   "gloss_en": "strong and full of energy",
+   "sense_key": "vigorous",
+   "ex_en": "The baby gave a lusty cry.",
+   "ex_cn": "婴儿有力地大哭起来。"
+  },
+  {
+   "word": "dealings",
+   "ipa": "/ˈdiːlɪŋz/",
+   "pos": "n.",
+   "gloss_cn": "交往、往来",
+   "gloss_en": "business or social contact with others",
+   "sense_key": "dealings",
+   "ex_en": "He had no dealings with those men.",
+   "ex_cn": "他和那些人没有往来。"
+  },
+  {
+   "word": "readiness",
+   "ipa": "/ˈredinəs/",
+   "pos": "n.",
+   "gloss_cn": "准备就绪",
+   "gloss_en": "the state of being fully prepared",
+   "sense_key": "readiness",
+   "ex_en": "The team was in readiness for the game.",
+   "ex_cn": "队伍已为比赛做好了准备。"
+  },
+  {
+   "word": "regardless",
+   "ipa": "/rɪˈɡɑːdləs/",
+   "pos": "adv.",
+   "gloss_cn": "不顾一切地",
+   "gloss_en": "without paying attention to danger or difficulty",
+   "sense_key": "regardless",
+   "ex_en": "He went on regardless of the rain.",
+   "ex_cn": "他不顾大雨继续前行。"
+  },
+  {
+   "word": "notices",
+   "ipa": "/ˈnəʊtɪsɪz/",
+   "pos": "n.",
+   "gloss_cn": "警示、提示",
+   "gloss_en": "warnings or hints of something coming",
+   "sense_key": "warning",
+   "ex_en": "We ignored the secret notices of danger.",
+   "ex_cn": "我们忽略了那些危险的隐秘提示。"
+  },
+  {
+   "word": "passionate",
+   "ipa": "/ˈpæʃənət/",
+   "pos": "adj.",
+   "gloss_cn": "易怒的、激动的",
+   "gloss_en": "easily moved to anger",
+   "sense_key": "hot-tempered",
+   "ex_en": "He is a passionate man who shouts easily.",
+   "ex_cn": "他是个容易激动、动辄叫喊的人。"
+  },
+  {
+   "word": "mutinied",
+   "ipa": "/ˈmjuːtɪnid/",
+   "pos": "v.",
+   "gloss_cn": "发动叛变、哗变",
+   "gloss_en": "rose up in revolt against those in command",
+   "sense_key": "mutiny",
+   "ex_en": "The sailors mutinied against their captain.",
+   "ex_cn": "水手们对船长发动了叛变。"
+  },
+  {
+   "word": "incorrigible",
+   "ipa": "/ɪnˈkɒrɪdʒəbl/",
+   "pos": "adj.",
+   "gloss_cn": "无可救药的",
+   "gloss_en": "too bad to ever be reformed or corrected",
+   "sense_key": "incorrigible",
+   "ex_en": "The boy is an incorrigible liar.",
+   "ex_cn": "这男孩是个无可救药的骗子。"
+  },
+  {
+   "word": "reserving",
+   "ipa": "/rɪˈzɜːvɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "保留(reserve 现在分词)",
+   "gloss_en": "keeping something back for later use",
+   "sense_key": "reserve",
+   "ex_en": "He fired once, reserving the rest of his shots.",
+   "ex_cn": "他只开了一枪,把其余的子弹留着。"
+  },
+  {
+   "word": "winding",
+   "ipa": "/ˈwaɪndɪŋ/",
+   "pos": "adj.",
+   "gloss_cn": "蜿蜒的、曲折的",
+   "gloss_en": "having many bends and turns",
+   "sense_key": "winding",
+   "ex_en": "We walked along a winding path.",
+   "ex_cn": "我们沿着一条蜿蜒的小路走。"
+  },
+  {
+   "word": "conspiracy",
+   "ipa": "/kənˈspɪrəsi/",
+   "pos": "n.",
+   "gloss_cn": "阴谋",
+   "gloss_en": "a secret plan to do something harmful",
+   "sense_key": "conspiracy",
+   "ex_en": "They planned a conspiracy against the king.",
+   "ex_cn": "他们策划了一场反对国王的阴谋。"
+  },
+  {
+   "word": "hallooing",
+   "ipa": "/həˈluːɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "大声呼喊",
+   "gloss_en": "shouting loudly to get attention",
+   "sense_key": "halloo",
+   "ex_en": "The men were hallooing across the valley.",
+   "ex_cn": "那些人正隔着山谷大声呼喊。"
+  },
+  {
+   "word": "consultation",
+   "ipa": "/ˌkɒnslˈteɪʃn/",
+   "pos": "n.",
+   "gloss_cn": "商议、磋商",
+   "gloss_en": "a discussion held to decide what to do",
+   "sense_key": "consultation",
+   "ex_en": "After a short consultation, they agreed.",
+   "ex_cn": "经过短暂商议,他们达成一致。"
+  },
+  {
+   "word": "halloo",
+   "ipa": "/həˈluː/",
+   "pos": "v.",
+   "gloss_cn": "呼喊、吆喝",
+   "gloss_en": "to shout loudly to call someone",
+   "sense_key": "halloo",
+   "ex_en": "He began to halloo for help.",
+   "ex_cn": "他开始大声呼喊求救。"
+  },
+  {
+   "word": "lamentable",
+   "ipa": "/ˈlæməntəbl/",
+   "pos": "adj.",
+   "gloss_cn": "可悲的、令人痛惜的;悲切的、哀号的",
+   "gloss_en": "deplorable; also mournful or wailing",
+   "sense_key": "lamentable",
+   "ex_en": "They cried in a lamentable voice.",
+   "ex_cn": "他们用悲哀的声音哭喊。"
+  },
+  {
+   "word": "execute",
+   "ipa": "/ˈeksɪkjuːt/",
+   "pos": "v.",
+   "gloss_cn": "执行、实施",
+   "gloss_en": "to carry out a plan or order",
+   "sense_key": "execute",
+   "ex_en": "We must execute the plan at once.",
+   "ex_cn": "我们必须立刻执行这个计划。"
+  },
+  {
+   "word": "deliverer",
+   "ipa": "/dɪˈlɪvərə/",
+   "pos": "n.",
+   "gloss_cn": "拯救者",
+   "gloss_en": "a person who rescues or saves others",
+   "sense_key": "rescuer",
+   "ex_en": "They thanked him as their deliverer.",
+   "ex_cn": "他们把他当作救命恩人来感谢。"
+  },
+  {
+   "word": "colony",
+   "ipa": "/ˈkɒləni/",
+   "pos": "n.",
+   "gloss_cn": "殖民地",
+   "gloss_en": "a settlement ruled by a distant country",
+   "sense_key": "colony",
+   "ex_en": "The island became a small colony.",
+   "ex_cn": "这座岛变成了一个小殖民地。"
+  },
+  {
+   "word": "retire",
+   "ipa": "/rɪˈtaɪə/",
+   "pos": "v.",
+   "gloss_cn": "退避、撤退",
+   "gloss_en": "to withdraw or fall back to a place",
+   "sense_key": "withdraw",
+   "ex_en": "He told them to retire into the woods.",
+   "ex_cn": "他叫他们退到树林里去。"
+  },
+  {
+   "word": "tarnished",
+   "ipa": "/ˈtɑːnɪʃt/",
+   "pos": "adj.",
+   "gloss_cn": "失去光泽的",
+   "gloss_en": "having lost its shine; dull and discolored",
+   "sense_key": "tarnished",
+   "ex_en": "The old spoon was dark and tarnished.",
+   "ex_cn": "那把旧勺子发黑、失去了光泽。"
+  },
+  {
+   "word": "assuring",
+   "ipa": "/əˈʃʊərɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "向…保证(assure 现在分词)",
+   "gloss_en": "telling someone firmly to remove doubt",
+   "sense_key": "assure",
+   "ex_en": "He smiled, assuring her all was well.",
+   "ex_cn": "他微笑着,向她保证一切都好。"
+  },
+  {
+   "word": "shipping",
+   "ipa": "/ˈʃɪpɪŋ/",
+   "pos": "n.",
+   "gloss_cn": "乘船、搭船",
+   "gloss_en": "the act of travelling by ship",
+   "sense_key": "shipping",
+   "ex_en": "He took shipping for London that spring.",
+   "ex_cn": "那年春天他乘船前往伦敦。"
+  },
+  {
+   "word": "annual",
+   "ipa": "/ˈænjuəl/",
+   "pos": "adj.",
+   "gloss_cn": "每年的、年度的",
+   "gloss_en": "happening once every year",
+   "sense_key": "annual",
+   "ex_en": "The school holds an annual sports day.",
+   "ex_cn": "学校每年举办一次运动会。"
+  },
+  {
+   "word": "moiety",
+   "ipa": "/ˈmɔɪəti/",
+   "pos": "n.",
+   "gloss_cn": "一半、部分",
+   "gloss_en": "one half or a portion of something",
+   "sense_key": "half",
+   "ex_en": "He gave the poor a moiety of his gold.",
+   "ex_cn": "他把一半的金子给了穷人。"
+  },
+  {
+   "word": "title",
+   "ipa": "/ˈtaɪtl/",
+   "pos": "n.",
+   "gloss_cn": "产权、地契",
+   "gloss_en": "the legal right of ownership to property",
+   "sense_key": "title",
+   "ex_en": "He handed me the title to the farm.",
+   "ex_cn": "他把农场的地契交给了我。"
+  },
+  {
+   "word": "register",
+   "ipa": "/ˈredʒɪstə/",
+   "pos": "n.",
+   "gloss_cn": "登记册、名册",
+   "gloss_en": "an official book of records or names",
+   "sense_key": "register",
+   "ex_en": "Her name was written in the register.",
+   "ex_cn": "她的名字被记在登记册上。"
+  },
+  {
+   "word": "disbursements",
+   "ipa": "/dɪsˈbɜːsmənts/",
+   "pos": "n.",
+   "gloss_cn": "支出、开销",
+   "gloss_en": "sums of money paid out",
+   "sense_key": "expenditure",
+   "ex_en": "The disbursements this year were very large.",
+   "ex_cn": "今年的支出非常大。"
+  },
+  {
+   "word": "straiten",
+   "ipa": "/ˈstreɪtn/",
+   "pos": "v.",
+   "gloss_cn": "使拮据、使困窘",
+   "gloss_en": "to make short of money or in hardship",
+   "sense_key": "straiten",
+   "ex_en": "The debt began to straiten the poor man.",
+   "ex_cn": "债务开始让这个穷人手头拮据。"
+  },
+  {
+   "word": "notary",
+   "ipa": "/ˈnəʊtəri/",
+   "pos": "n.",
+   "gloss_cn": "公证人",
+   "gloss_en": "an official who witnesses legal documents",
+   "sense_key": "notary",
+   "ex_en": "The papers were signed before a notary.",
+   "ex_cn": "这些文件是在公证人面前签署的。"
+  },
+  {
+   "word": "fleets",
+   "ipa": "/fliːts/",
+   "pos": "n.",
+   "gloss_cn": "船队、舰队",
+   "gloss_en": "large groups of ships sailing together",
+   "sense_key": "fleet",
+   "ex_en": "The ships came home in great fleets.",
+   "ex_cn": "船只成大批船队地返航。"
+  },
+  {
+   "word": "correspondent",
+   "ipa": "/ˌkɒrɪˈspɒndənt/",
+   "pos": "n.",
+   "gloss_cn": "(业务)代理人、通信商",
+   "gloss_en": "a business agent one deals with by letter",
+   "sense_key": "correspondent",
+   "ex_en": "He wrote to his correspondent in London.",
+   "ex_cn": "他给伦敦的代理人写了信。"
+  },
+  {
+   "word": "scruple",
+   "ipa": "/ˈskruːpl/",
+   "pos": "n.",
+   "gloss_cn": "顾虑、迟疑",
+   "gloss_en": "a doubt of conscience that holds one back",
+   "sense_key": "scruple",
+   "ex_en": "She had some scruple about taking the money.",
+   "ex_cn": "她对拿这笔钱有些顾虑。"
+  },
+  {
+   "word": "bridle",
+   "ipa": "/ˈbraɪdl/",
+   "pos": "n.",
+   "gloss_cn": "马笼头、缰绳",
+   "gloss_en": "the straps on a horse's head used to control it",
+   "sense_key": "bridle",
+   "ex_en": "He held the horse by the bridle.",
+   "ex_cn": "他抓着缰绳牵住马。"
+  },
+  {
+   "word": "hark",
+   "ipa": "/hɑːk/",
+   "pos": "v.",
+   "gloss_cn": "听、留神听",
+   "gloss_en": "to listen carefully",
+   "sense_key": "listen",
+   "ex_en": "Hark, I hear someone at the door.",
+   "ex_cn": "听,我听见有人在门口。"
+  },
+  {
+   "word": "fusee",
+   "ipa": "/fjuːˈziː/",
+   "pos": "n.",
+   "gloss_cn": "轻型火枪",
+   "gloss_en": "a light musket or firearm",
+   "sense_key": "musket",
+   "ex_en": "He carried a small fusee on his back.",
+   "ex_cn": "他背上背着一支轻型火枪。"
+  },
+  {
+   "word": "volleys",
+   "ipa": "/ˈvɒliz/",
+   "pos": "n.",
+   "gloss_cn": "齐射、排枪",
+   "gloss_en": "rounds of shots fired all at once",
+   "sense_key": "volley",
+   "ex_en": "The soldiers fired two volleys at once.",
+   "ex_cn": "士兵们一连打了两轮齐射。"
+  },
+  {
+   "word": "breastwork",
+   "ipa": "/ˈbrestwɜːk/",
+   "pos": "n.",
+   "gloss_cn": "胸墙、防御矮墙",
+   "gloss_en": "a low wall built quickly for defense",
+   "sense_key": "breastwork",
+   "ex_en": "They hid behind a low breastwork.",
+   "ex_cn": "他们躲在一道低矮的胸墙后面。"
+  }
+ ],
+ "skipped": [
+  "actions(太基础)",
+  "rushes(太基础)",
+  "debt(太基础)",
+  "extreme(太基础)",
+  "masters(太基础)",
+  "sisters(太基础)",
+  "farm(太基础)",
+  "fathers(太基础)",
+  "income(太基础)",
+  "puts(太基础)",
+  "travellers(太基础)",
+  "frozen(太基础)",
+  "honour(太基础)",
+  "makee(Friday洋泾浜残渣)"
+ ],
+ "suspect": [
+  {
+   "word": "lamentable",
+   "gloss_cn": "可悲的、令人痛心的",
+   "ctx": "We could hear them call one to another in a most lamentable manner, telling one another they were got into an enchanted island",
+   "issue": "此处 lamentable manner 指他们呼喊的\"悲切、哀号的\"声调(full of lament),现释义\"可悲的/令人痛心的\"偏向\"值得同情/糟糕透顶\"的旁观评价,回读描述的是发声方式而非事态可悲。",
+   "suggest": "补\"悲切的、哀号的、悲叹的\"这一层(形容语气/声音),与\"可悲的\"并列。"
+  }
+ ]
+}

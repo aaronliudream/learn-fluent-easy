@@ -1,0 +1,143 @@
+{
+  "chapter": 4,
+  "chunks": [
+    { "head": "on shore", "gloss": "上岸；在岸上", "ipa": "/ɒn ʃɔːr/",
+      "note": "on shore = 在岸上、上岸(与 on board 在船上相对)。",
+      "literal": [{"word":"on","meaning_cn":"在…上"},{"word":"shore","meaning_cn":"岸、海岸"}],
+      "ex_en": "The sailors were happy to be on shore again.", "ex_cn": "水手们很高兴又回到了岸上。",
+      "occ": [[337,"on shore"]] },
+
+    { "head": "a great deal of", "gloss": "大量的、许多", "ipa": "/ə ɡreɪt diːl əv/",
+      "note": "a great deal of + 不可数名词 = 大量的。",
+      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"大量的","note_cn":"此处修饰数量,非'伟大'"},{"word":"deal","meaning_cn":"数量","note_cn":"此处非'交易'"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "She spends a great deal of time reading.", "ex_cn": "她花大量时间读书。",
+      "occ": [[341,"a great deal of"]] },
+
+    { "head": "no time to lose", "gloss": "刻不容缓、没时间可耽误", "ipa": "/nəʊ taɪm tə luːz/",
+      "note": "(have) no time to lose = 一刻也不能耽搁。",
+      "literal": [{"word":"no","meaning_cn":"没有"},{"word":"time","meaning_cn":"时间"},{"word":"to","meaning_cn":"(不定式)"},{"word":"lose","meaning_cn":"浪费、耽误","note_cn":"此处非'丢失'"}],
+      "ex_en": "Hurry, we have no time to lose!", "ex_cn": "快点，我们一刻也不能耽搁！",
+      "occ": [[343,"no time to lose"]] },
+
+    { "head": "in vain", "gloss": "徒劳、白费力气", "ipa": "/ɪn veɪn/",
+      "note": "in vain = 白白地、没有结果地。",
+      "literal": [{"word":"in","meaning_cn":"处于…状态"},{"word":"vain","meaning_cn":"徒劳的、无用的"}],
+      "ex_en": "He tried in vain to open the locked door.", "ex_cn": "他想打开那扇锁着的门，却是徒劳。",
+      "occ": [[346,"in vain"]] },
+
+    { "head": "go to work", "gloss": "着手做、动手干起来", "ipa": "/ɡəʊ tə wɜːk/",
+      "note": "go to work (on sth) = 开始动手做某事。",
+      "literal": [{"word":"go","meaning_cn":"去、开始"},{"word":"to","meaning_cn":"去做"},{"word":"work","meaning_cn":"干活"}],
+      "ex_en": "After breakfast he went to work on the broken bike.", "ex_cn": "早饭后他动手修那辆坏了的自行车。",
+      "occ": [[349,"went to work"]] },
+
+    { "head": "put to sea", "gloss": "出海、启航", "ipa": "/pʊt tə siː/",
+      "note": "put to sea = 船只驶离港口、出海。",
+      "literal": [{"word":"put","meaning_cn":"驶、使前往","note_cn":"此处非'放置'"},{"word":"to","meaning_cn":"向"},{"word":"sea","meaning_cn":"海"}],
+      "ex_en": "The fishing boats put to sea before sunrise.", "ex_cn": "渔船在日出前出海了。",
+      "occ": [[369,"put to sea"]] },
+
+    { "head": "make use of", "gloss": "利用、使用", "ipa": "/meɪk juːs əv/",
+      "note": "make use of sth = 加以利用。",
+      "literal": [{"word":"make","meaning_cn":"做出"},{"word":"use","meaning_cn":"用途、利用"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "We should make use of every chance to practise English.", "ex_cn": "我们应该利用每个机会练英语。",
+      "occ": [[370,"make use of"]] },
+
+    { "head": "do one's utmost", "gloss": "竭尽全力", "ipa": "/duː wʌnz ˈʌtməʊst/",
+      "note": "do one's utmost = 尽最大努力。",
+      "literal": [{"word":"did","meaning_cn":"做、尽"},{"word":"my","meaning_cn":"我的"},{"word":"utmost","meaning_cn":"极限、最大限度"}],
+      "ex_en": "I will do my utmost to finish the work on time.", "ex_cn": "我会竭尽全力按时完成工作。",
+      "occ": [[374,"did my utmost"]] },
+
+    { "head": "at last", "gloss": "最终、终于", "ipa": "/ət lɑːst/",
+      "note": "at last = 经过等待或努力后终于。",
+      "literal": [{"word":"at","meaning_cn":"在"},{"word":"last","meaning_cn":"最后"}],
+      "ex_en": "After hours of walking, we reached the top at last.", "ex_cn": "走了几个小时后，我们终于到了山顶。",
+      "occ": [[376,"at last"]] },
+
+    { "head": "abundance of", "gloss": "大量的、丰富的", "ipa": "/əˈbʌndəns əv/",
+      "note": "an abundance of sth = 大量、丰富。",
+      "literal": [{"word":"abundance","meaning_cn":"大量、丰富"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "The garden had an abundance of fresh fruit.", "ex_cn": "花园里有大量新鲜水果。",
+      "occ": [[385,"abundance of"]] },
+
+    { "head": "that is to say", "gloss": "也就是说、换句话说", "ipa": "/ðæt ɪz tə seɪ/",
+      "note": "that is to say = 用来解释或补充说明。",
+      "literal": [{"word":"that","meaning_cn":"那"},{"word":"is","meaning_cn":"是"},{"word":"to","meaning_cn":"(不定式)"},{"word":"say","meaning_cn":"说"}],
+      "ex_en": "He is a vegetarian, that is to say, he eats no meat.", "ex_cn": "他是素食者，也就是说，他不吃肉。",
+      "occ": [[397,"that is to say"]] },
+
+    { "head": "give over", "gloss": "停止、放弃", "ipa": "/ɡɪv ˈəʊvər/",
+      "note": "give over (doing sth) = 停止、放弃某事;此处 give 非'给'义。",
+      "literal": [{"word":"give","meaning_cn":"停止、放弃","note_cn":"此处非'给'义"},{"word":"over","meaning_cn":"结束、完了"}],
+      "ex_en": "She finally gave over trying to change his mind.", "ex_cn": "她最终放弃了想改变他主意的念头。",
+      "occ": [[408,"given over"]] },
+
+    { "head": "in a word", "gloss": "总之、一句话", "ipa": "/ɪn ə wɜːd/",
+      "note": "in a word = 概括起来说。",
+      "literal": [{"word":"in","meaning_cn":"用"},{"word":"a","meaning_cn":"一"},{"word":"word","meaning_cn":"话、词"}],
+      "ex_en": "In a word, the trip was a great success.", "ex_cn": "总之，这次旅行非常成功。",
+      "occ": [[407,"in a word"]] },
+
+    { "head": "piece by piece", "gloss": "一块一块地、逐件地", "ipa": "/piːs baɪ piːs/",
+      "note": "piece by piece = 一点一点、逐件地(完成)。",
+      "literal": [{"word":"piece","meaning_cn":"块、件"},{"word":"by","meaning_cn":"一个接一个","note_cn":"此处表逐个"},{"word":"piece","meaning_cn":"块、件"}],
+      "ex_en": "He took the engine apart piece by piece.", "ex_cn": "他把发动机一块一块地拆开。",
+      "occ": [[415,"piece by piece"]] },
+
+    { "head": "upon second thoughts", "gloss": "转念一想、再一想", "ipa": "/əˌpɒn ˈsekənd θɔːts/",
+      "note": "on/upon second thoughts = 重新考虑之后(往往改变主意)。",
+      "literal": [{"word":"upon","meaning_cn":"在…之际","note_cn":"此处非'在…上'"},{"word":"second","meaning_cn":"第二、再次"},{"word":"thoughts","meaning_cn":"想法"}],
+      "ex_en": "I wanted to buy it, but upon second thoughts I saved the money.", "ex_cn": "我本想买它，但转念一想还是把钱省下了。",
+      "occ": [[419,"upon second thoughts"]] },
+
+    { "head": "occur to sb", "gloss": "(突然)想到、想起", "ipa": "/əˈkɜːr tə/",
+      "note": "it occurs to sb that … = 某人突然想到;此处 occur 非'发生'义。",
+      "literal": [{"word":"occurred","meaning_cn":"浮现于脑海","note_cn":"此处非'发生'"},{"word":"to","meaning_cn":"对…"},{"word":"me","meaning_cn":"我"}],
+      "ex_en": "It suddenly occurred to me that I had left the keys at home.", "ex_cn": "我突然想到把钥匙落在家里了。",
+      "occ": [[420,"occurred to me"]] },
+
+    { "head": "in short", "gloss": "简言之、总之", "ipa": "/ɪn ʃɔːt/",
+      "note": "in short = 简要地说。",
+      "literal": [{"word":"in","meaning_cn":"以"},{"word":"short","meaning_cn":"简短"}],
+      "ex_en": "In short, we need to start again.", "ex_cn": "简言之，我们得重新开始。",
+      "occ": [[426,"in short"]] },
+
+    { "head": "lay aside", "gloss": "搁置、放到一边", "ipa": "/leɪ əˈsaɪd/",
+      "note": "lay aside = 把…放在一边、暂时不做;此处 lay 非'躺'义。",
+      "literal": [{"word":"laid","meaning_cn":"放","note_cn":"此处非'躺'义"},{"word":"aside","meaning_cn":"在一边"}],
+      "ex_en": "He laid aside his book and answered the phone.", "ex_cn": "他把书放到一边，去接电话。",
+      "occ": [[451,"laid aside"]] },
+
+    { "head": "now and then", "gloss": "偶尔、时不时", "ipa": "/naʊ ənd ðen/",
+      "note": "(every) now and then = 时而、间或。",
+      "literal": [{"word":"now","meaning_cn":"现在"},{"word":"and","meaning_cn":"和"},{"word":"then","meaning_cn":"那时"}],
+      "ex_en": "We still meet for coffee now and then.", "ex_cn": "我们偶尔还会一起喝咖啡。",
+      "occ": [[455,"now and then"]] },
+
+    { "head": "apply oneself to", "gloss": "专心致志于、致力于", "ipa": "/əˈplaɪ wʌnˈself tə/",
+      "note": "apply oneself to sth = 专心努力做某事。",
+      "literal": [{"word":"apply","meaning_cn":"使专注","note_cn":"此处非'申请/涂抹'"},{"word":"myself","meaning_cn":"我自己"},{"word":"to","meaning_cn":"于"}],
+      "ex_en": "If you apply yourself to your studies, you will pass.", "ex_cn": "如果你专心学习，就会通过考试。",
+      "occ": [[499,"apply myself to"]] },
+
+    { "head": "take up", "gloss": "占用(时间/空间)", "ipa": "/teɪk ʌp/",
+      "note": "take up = 占据(时间或空间);此处非'拿起'义。",
+      "literal": [{"word":"took","meaning_cn":"占据","note_cn":"此处非'拿'义"},{"word":"up","meaning_cn":"(填满)"}],
+      "ex_en": "The big sofa takes up half the room.", "ex_cn": "那张大沙发占了半个房间。",
+      "occ": [[446,"took up"]] },
+
+    { "head": "take notice of", "gloss": "注意、理会", "ipa": "/teɪk ˈnəʊtɪs əv/",
+      "note": "本章出处为分离式(took no notice of),故 card-only。",
+      "literal": [{"word":"take","meaning_cn":"加以"},{"word":"notice","meaning_cn":"注意","note_cn":"名词'注意'"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "The cat took no notice of the barking dog.", "ex_cn": "那只猫对狂吠的狗毫不理会。",
+      "cardOnly": true, "key": "take notice of", "exSeq": 455 }
+  ],
+  "skipped": [
+    "专名/地名 e.g. the Brazils / Sallee / Yarmouth",
+    "一次性 nautical 硬词 e.g. forecastle / fore-chains / hawser / mizzen-yard / spritsail-yard / topmast / hogshead / runlets / grindstone / fowling-pieces",
+    "18世纪古语/生僻 e.g. durst / verily / viz. / thou/thee/art / e'en",
+    "过时惯用语 e.g. a great while〔很久〕/ come at〔够到〕/ for the present〔目前〕",
+    "宗教/道德训诫套语 e.g. 'a determination of Heaven' / 'why Providence should thus ruin His creatures' / 债主-欠债 good-evil 对账体"
+  ]
+}

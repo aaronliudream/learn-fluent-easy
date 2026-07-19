@@ -1,0 +1,313 @@
+{
+  "chapter": 12,
+  "chunks": [
+    {
+      "head": "drift away from",
+      "gloss": "(思绪/注意力)渐渐从…上移开;漂离",
+      "ipa": "/drɪft əˈweɪ frəm/",
+      "note": "字面指漂流离开;本章指心思从烦恼上转移开去。",
+      "literal": [
+        {"word": "drifted", "meaning_cn": "飘移", "note_cn": "此处指思绪游移,非水上漂流"},
+        {"word": "away", "meaning_cn": "离开"},
+        {"word": "from", "meaning_cn": "从"}
+      ],
+      "ex_en": "My thoughts drifted away from the boring lecture.",
+      "ex_cn": "我的思绪从无聊的讲座上飘走了。",
+      "occ": [[1834, "drifted away from"]]
+    },
+    {
+      "head": "hang around",
+      "gloss": "闲逛;徘徊逗留",
+      "ipa": "/hæŋ əˈraʊnd/",
+      "note": "指无所事事地待在某处或其附近。",
+      "literal": [
+        {"word": "hanging", "meaning_cn": "逗留", "note_cn": "此处非“悬挂”义"},
+        {"word": "around", "meaning_cn": "在附近"}
+      ],
+      "ex_en": "The boys like to hang around the park after school.",
+      "ex_cn": "男孩们放学后喜欢在公园里闲逛。",
+      "occ": [[1837, "hanging around"]]
+    },
+    {
+      "head": "all manner of",
+      "gloss": "各种各样的",
+      "ipa": "/ɔːl ˈmænər əv/",
+      "note": "manner 此处意为“种类”;等于 all kinds of。",
+      "literal": [
+        {"word": "all", "meaning_cn": "所有"},
+        {"word": "manner", "meaning_cn": "种类", "note_cn": "此处非“方式/礼貌”"},
+        {"word": "of", "meaning_cn": "的"}
+      ],
+      "ex_en": "The little shop sells all manner of old toys.",
+      "ex_cn": "这家小店卖各种各样的旧玩具。",
+      "occ": [[1845, "all manner of"]]
+    },
+    {
+      "head": "at once",
+      "gloss": "立刻,马上",
+      "ipa": "/ət ˈwʌns/",
+      "note": "本章为“立即”义;另有“同时”义(如 all at once)。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "once", "meaning_cn": "立刻", "note_cn": "此处指“立即”,非“一次”"}
+      ],
+      "ex_en": "Stop that and come here at once!",
+      "ex_cn": "别闹了,马上给我过来！",
+      "occ": [[1865, "at once"]]
+    },
+    {
+      "head": "break up",
+      "gloss": "打破;结束;驱散",
+      "ipa": "/breɪk ʌp/",
+      "note": "本章指打破(冷漠的)僵局;也可指散会、分手、驱散人群。",
+      "literal": [
+        {"word": "broken", "meaning_cn": "打破"},
+        {"word": "up", "meaning_cn": "彻底地", "note_cn": "此处加强“完全打破”"}
+      ],
+      "ex_en": "The teacher came over to break up the fight.",
+      "ex_cn": "老师走过来制止了这场打斗。",
+      "occ": [[1863, "broken up"], [1870, "broken up"]]
+    },
+    {
+      "head": "at any cost",
+      "gloss": "不惜一切代价;无论如何",
+      "ipa": "/ət ˈeni kɒst/",
+      "note": "cost 此处指“代价”,不专指金钱花费。",
+      "literal": [
+        {"word": "at", "meaning_cn": "以"},
+        {"word": "any", "meaning_cn": "任何"},
+        {"word": "cost", "meaning_cn": "代价", "note_cn": "此处泛指代价,非“花钱”"}
+      ],
+      "ex_en": "We must win this game at any cost.",
+      "ex_cn": "这场比赛我们必须不惜一切代价拿下。",
+      "occ": [[1863, "at any cost"]]
+    },
+    {
+      "head": "think over",
+      "gloss": "仔细考虑;认真思量",
+      "ipa": "/θɪŋk ˈoʊvər/",
+      "note": "over 表来回琢磨、反复权衡。",
+      "literal": [
+        {"word": "thought", "meaning_cn": "思考"},
+        {"word": "over", "meaning_cn": "反复", "note_cn": "此处表来回琢磨"}
+      ],
+      "ex_en": "Please think over my offer before you say no.",
+      "ex_cn": "在拒绝之前,请你仔细考虑一下我的提议。",
+      "occ": [[1873, "thought over"]]
+    },
+    {
+      "head": "hit upon",
+      "gloss": "(突然)想到;偶然发现",
+      "ipa": "/hɪt əˈpɒn/",
+      "note": "也作 hit on;指灵光一现想出主意或办法。",
+      "literal": [
+        {"word": "hit", "meaning_cn": "碰上", "note_cn": "此处非“打”,指“想到/撞见”"},
+        {"word": "upon", "meaning_cn": "在…上"}
+      ],
+      "ex_en": "She hit upon a clever way to save money.",
+      "ex_cn": "她突然想到一个省钱的妙招。",
+      "occ": [[1873, "hit upon"]]
+    },
+    {
+      "head": "be fond of",
+      "gloss": "喜欢;喜爱",
+      "ipa": "/biː fɒnd əv/",
+      "note": "后接名词或动名词;语气比 like 略深、略正式。",
+      "literal": [
+        {"word": "fond", "meaning_cn": "喜爱的"},
+        {"word": "of", "meaning_cn": "对于"}
+      ],
+      "ex_en": "My little sister is fond of cats.",
+      "ex_cn": "我妹妹很喜欢猫。",
+      "occ": [[1873, "fond of"]]
+    },
+    {
+      "head": "help oneself",
+      "gloss": "自取;自便(随意取用)",
+      "ipa": "/help wʌnˈself/",
+      "note": "help oneself to sth = 自己随便拿/吃;待客常用语。",
+      "literal": [
+        {"word": "help", "meaning_cn": "取用", "note_cn": "此处指“自行取用”,非“帮助别人”"},
+        {"word": "himself", "meaning_cn": "他自己"}
+      ],
+      "ex_en": "Help yourself to some cake, please.",
+      "ex_cn": "请随便吃点蛋糕。",
+      "occ": [[1874, "help himself"]]
+    },
+    {
+      "head": "occur to somebody",
+      "gloss": "(念头)浮现在某人脑中;某人想到",
+      "ipa": "/əˈkɜːr tə/",
+      "note": "常用 it occurs to sb that... = 某人突然想到…。",
+      "literal": [
+        {"word": "occur", "meaning_cn": "发生", "note_cn": "此处指“念头浮现”"},
+        {"word": "to", "meaning_cn": "向"},
+        {"word": "her", "meaning_cn": "她"}
+      ],
+      "ex_en": "It never occurred to me that he might be lying.",
+      "ex_cn": "我从没想到他可能在撒谎。",
+      "occ": [[1876, "occur to her"]]
+    },
+    {
+      "head": "in the act of",
+      "gloss": "正在做…时(常指干坏事被撞见)",
+      "ipa": "/ɪn ði ækt əv/",
+      "note": "常见搭配 catch sb in the act = 当场抓住某人。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "act", "meaning_cn": "行为、举动"},
+        {"word": "of", "meaning_cn": "(做)…的"}
+      ],
+      "ex_en": "The thief was caught in the act of stealing.",
+      "ex_cn": "小偷正偷东西时被当场抓住。",
+      "occ": [[1877, "in the act of"]]
+    },
+    {
+      "head": "set off",
+      "gloss": "出发,动身;(此处)猛地冲出去",
+      "ipa": "/set ɒf/",
+      "note": "常指启程赶路;也可指引发、引爆。本章指猫一下子冲出去狂奔。",
+      "literal": [
+        {"word": "set", "meaning_cn": "开始", "note_cn": "此处非“放置”"},
+        {"word": "off", "meaning_cn": "离开、出发"}
+      ],
+      "ex_en": "We set off for the mountains early in the morning.",
+      "ex_cn": "我们一大早就出发去山里了。",
+      "occ": [[1886, "set off"]]
+    },
+    {
+      "head": "what on earth",
+      "gloss": "究竟…;到底…(表惊讶或不解的加强语气)",
+      "ipa": "/wɒt ɒn ɜːrθ/",
+      "note": "on earth 加在疑问词后加强语气,可换 how/why/where on earth。",
+      "literal": [
+        {"word": "what", "meaning_cn": "什么"},
+        {"word": "on", "meaning_cn": "在"},
+        {"word": "earth", "meaning_cn": "地球", "note_cn": "此处不表实义,纯加强语气"}
+      ],
+      "ex_en": "What on earth are you doing up there?",
+      "ex_cn": "你在上面到底在干什么？",
+      "occ": [[1891, "what on earth"]]
+    },
+    {
+      "head": "have a good time",
+      "gloss": "玩得开心;过得愉快",
+      "ipa": "/hæv ə ɡʊd taɪm/",
+      "note": "聚会、旅行、活动之后的高频口语。",
+      "literal": [
+        {"word": "having", "meaning_cn": "度过"},
+        {"word": "a", "meaning_cn": "一段"},
+        {"word": "good", "meaning_cn": "愉快的"},
+        {"word": "time", "meaning_cn": "时光"}
+      ],
+      "ex_en": "We had a good time at the party last night.",
+      "ex_cn": "昨晚在派对上我们玩得很开心。",
+      "occ": [[1895, "having a good time"]]
+    },
+    {
+      "head": "have to do with",
+      "gloss": "与…有关",
+      "ipa": "/hæv tə duː wɪð/",
+      "note": "常说 have something/nothing to do with = 与…有/无关系。",
+      "literal": [
+        {"word": "got", "meaning_cn": "有", "note_cn": "have got 的口语形式"},
+        {"word": "to", "meaning_cn": "(与…)"},
+        {"word": "do", "meaning_cn": "关系", "note_cn": "此处固定搭配,非“做”"},
+        {"word": "with", "meaning_cn": "与"}
+      ],
+      "ex_en": "This problem has nothing to do with me.",
+      "ex_cn": "这个问题跟我一点关系都没有。",
+      "occ": [[1912, "got to do with"]]
+    },
+    {
+      "head": "do somebody good",
+      "gloss": "对某人有好处;使某人受益",
+      "ipa": "/duː ˌsʌmˈbɒdi ɡʊd/",
+      "note": "do sb good = 有益于某人;good 此处作名词“好处”。",
+      "literal": [
+        {"word": "do", "meaning_cn": "带来"},
+        {"word": "you", "meaning_cn": "你"},
+        {"word": "good", "meaning_cn": "好处", "note_cn": "此处作名词"}
+      ],
+      "ex_en": "A walk in the fresh air will do you good.",
+      "ex_cn": "到新鲜空气里散散步对你有好处。",
+      "occ": [[1921, "do you good"], [1924, "done him good"]]
+    },
+    {
+      "head": "ahead of time",
+      "gloss": "提前;事先",
+      "ipa": "/əˈhed əv taɪm/",
+      "note": "= in advance;比预定时间早。",
+      "literal": [
+        {"word": "ahead", "meaning_cn": "在前"},
+        {"word": "of", "meaning_cn": "于"},
+        {"word": "time", "meaning_cn": "时间"}
+      ],
+      "ex_en": "Let me know ahead of time if you can't come.",
+      "ex_cn": "如果你来不了,请提前告诉我。",
+      "occ": [[1928, "ahead of time"]]
+    },
+    {
+      "head": "show off",
+      "gloss": "炫耀;卖弄;显摆",
+      "ipa": "/ʃoʊ ɒf/",
+      "note": "故意展示以博取关注;可及物 show off sth。",
+      "literal": [
+        {"word": "showing", "meaning_cn": "展示"},
+        {"word": "off", "meaning_cn": "尽情显露", "note_cn": "此处表“卖弄”"}
+      ],
+      "ex_en": "He likes to show off his new phone to everyone.",
+      "ex_cn": "他喜欢向每个人炫耀他的新手机。",
+      "occ": [[1941, "showing off"]]
+    },
+    {
+      "head": "sneak off",
+      "gloss": "溜走;偷偷离开",
+      "ipa": "/sniːk ɒf/",
+      "note": "悄悄地、不引人注意地离开。",
+      "literal": [
+        {"word": "sneaked", "meaning_cn": "偷偷地行动"},
+        {"word": "off", "meaning_cn": "离开"}
+      ],
+      "ex_en": "He tried to sneak off before the meeting ended.",
+      "ex_cn": "他想在会议结束前偷偷溜走。",
+      "occ": [[1943, "sneaked off"]]
+    },
+    {
+      "head": "keep an eye out",
+      "gloss": "留心;留意;提防",
+      "ipa": "/kiːp ən aɪ aʊt/",
+      "note": "keep an eye out for sth = 留意寻找、注意提防。本章出处被 furtive 隔开,故 card-only。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "保持"},
+        {"word": "an", "meaning_cn": "一只"},
+        {"word": "eye", "meaning_cn": "眼睛"},
+        {"word": "out", "meaning_cn": "向外", "note_cn": "此处指“警觉留意”"}
+      ],
+      "ex_en": "Keep an eye out for a red car—that's my dad.",
+      "ex_cn": "留意一辆红色的车,那是我爸。",
+      "cardOnly": true,
+      "key": "keep an eye out",
+      "exSeq": 1938
+    }
+  ],
+  "skipped": [
+    "专名: Pain-killer / Peter / Aunt Polly / Jeff Thatcher / Becky Thatcher / Sid",
+    "whistle her down the wind (一次性文学惯语→难句层)",
+    "hove in sight (规范指定归难句层)",
+    "led up to (本章为分离式 led up ... to,偏文学,舍去)",
+    "come in sight / came in sight (与 hove in sight 同类,舍去)",
+    "pin one's faith to (较文学,控量舍去)",
+    "in the dumps (备选,控量舍去)",
+    "right away (与 at once 同义,控量舍去)",
+    "for the first time (偏基础,控量舍去)",
+    "take an interest in / struggle with / come out / came along / break through / came handy (偏基础或控量舍去)",
+    "for once / in a new light / feel sorry (备选,控量舍去)",
+    "life and limb (一次性习语)",
+    "balm of Gilead / pale horse / hell following after (圣经与文学典故,一次性)",
+    "breath to her nostrils / gospel to her (文学性一次性比喻)",
+    "方言拼写: warn't / ain't / 'thout / Deed / Yes'm / go 'long / 'low / a body",
+    "war-whoop / double summersets / handsprings (一次性名物描写)"
+  ]
+}

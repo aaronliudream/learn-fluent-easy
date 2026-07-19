@@ -42,6 +42,7 @@ export function QuizRunner({
   items,
   onAnswer,
   onComplete,
+  onRecordMistake,
   speakStem = false,
   header,
   suppressFinish = false,
@@ -49,6 +50,8 @@ export function QuizRunner({
   items: QuizItem[];
   onAnswer: (id: string, isCorrect: boolean) => void;
   onComplete: (scorePct: number, wrongIds: string[]) => void;
+  /** 错题本记录(独立于 onAnswer/SRS):做错入册、做对走连对移出。纯新增,不传则不记。 */
+  onRecordMistake?: (item: QuizItem, picked: number | null, isCorrect: boolean) => void;
   /** choice 题干朗读(听力关用);reveal 参考答案总是可朗读。 */
   speakStem?: boolean;
   header?: React.ReactNode;
@@ -111,7 +114,8 @@ export function QuizRunner({
     if (ok) setCorrectCount((c) => c + 1);
     else wrongIdsRef.current.push(item.id);
     onAnswer(item.id, ok);
-  }, [item, answered, idx, maxIdx, onAnswer]);
+    onRecordMistake?.(item, i, ok); // 错题本(独立于 SRS;⑤-B 再补 reveal 自评钩子)
+  }, [item, answered, idx, maxIdx, onAnswer, onRecordMistake]);
 
   const selfGrade = useCallback((ok: boolean) => {
     if (item.kind !== "reveal") return;
@@ -119,8 +123,9 @@ export function QuizRunner({
     setRecords((r) => ({ ...r, [idx]: { selfOk: ok } }));
     if (ok) setCorrectCount((c) => c + 1);
     else wrongIdsRef.current.push(item.id);
+    onRecordMistake?.(item, null, ok); // 错题本:开放题自评错→入册、自评对→1次移出(独立于SRS)
     next();
-  }, [item, answered, idx, maxIdx, next]);
+  }, [item, answered, idx, maxIdx, next, onRecordMistake]);
 
   const pct = useMemo(() => (total ? Math.round((correctCount / total) * 100) : 0), [correctCount, total]);
 
@@ -200,7 +205,7 @@ export function QuizRunner({
               }
               return (
                 <button key={i} type="button" disabled={picked !== null} onClick={() => answerChoice(i)}
-                  className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-[15px] transition ${cls}`}>
+                  className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-base transition ${cls}`}>
                   <span>{opt}</span>
                   {picked !== null && isAns && <Check className="size-4 shrink-0 text-emerald-600" />}
                   {picked !== null && isPicked && !isAns && <X className="size-4 shrink-0 text-rose-500" />}
@@ -227,7 +232,7 @@ export function QuizRunner({
           ) : (
             <>
               <div className="flex items-center justify-between rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3">
-                <span className="text-[15px] font-semibold text-emerald-800">{item.answer}</span>
+                <span className="text-base font-semibold text-emerald-800">{item.answer}</span>
                 <button type="button" aria-label="朗读答案"
                   onClick={() => { unlockAmericanAudio(); void speakUS(item.answer); }}
                   className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">

@@ -1,0 +1,21 @@
+{ "chapter": 5,
+  "images": [
+    { "k":1, "slug":"sleeping-in-tree-rain", "seq":521,
+      "scene":"Robinson wedged in the fork of a large tree at night, clinging to a branch as rain pours down, keeping himself off the ground for fear of wild creatures on the dark island.",
+      "alt":"A man sleeps up in the branches of a tree at night while it rains." },
+    { "k":2, "slug":"raft-of-goods-to-shore", "seq":527,
+      "scene":"Robinson poling a makeshift wooden raft loaded with chests, boards and salvaged supplies across the shallow water from the stranded ship toward the island beach.",
+      "alt":"A man steers a loaded raft of salvaged goods from a wreck toward the shore." },
+    { "k":3, "slug":"tent-under-the-rock", "seq":543,
+      "scene":"Robinson pitching his canvas tent in a semicircular clearing at the foot of a tall rock face, with chests and timber forming a rough fence around the new encampment.",
+      "alt":"A man sets up a tent and fence at the base of a large rock." },
+    { "k":4, "slug":"splinting-the-goat-leg", "seq":620,
+      "scene":"Robinson kneeling beside a young goat, binding and splinting its broken leg with sticks and string outside his shelter, the tamed animal calm beside him.",
+      "alt":"A man kneels to splint the broken leg of a young goat." },
+    { "k":5, "slug":"barley-sprouting-astonishment", "seq":649,
+      "scene":"Robinson crouching in astonishment beside the rock wall of his enclosure, staring at a small clump of green barley stalks with ripening ears sprouting unexpectedly from the bare ground.",
+      "alt":"A man crouches in surprise before green barley growing out of the ground by a rock." },
+    { "k":6, "slug":"earthquake-flees-over-wall", "seq":667,
+      "scene":"Robinson scrambling over his wooden pile wall onto open ground as the earthquake shakes the hillside, loose earth crumbling from the cave roof and a great rock crashing down in the distance by the sea.",
+      "alt":"A man climbs over a wall to flee as an earthquake shakes the hillside and a rock falls." }
+  ] }

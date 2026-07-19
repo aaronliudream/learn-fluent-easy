@@ -1,0 +1,381 @@
+{
+  "chapter": 31,
+  "chunks": [
+    {
+      "head": "at once",
+      "gloss": "立刻；马上",
+      "ipa": "/ət wʌns/",
+      "note": "表示动作立即发生，等同 immediately。也可作“同时”解，本章为“立刻”。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "once", "meaning_cn": "一次", "note_cn": "此处为习语用法，指“立刻”"}
+      ],
+      "ex_en": "When the bell rang, the students stood up at once.",
+      "ex_cn": "铃一响，学生们立刻站了起来。",
+      "occ": [[4372, "at once"], [4419, "at once"]]
+    },
+    {
+      "head": "get rid of",
+      "gloss": "摆脱；除掉",
+      "ipa": "/ɡet rɪd əv/",
+      "note": "指去除、甩掉令人不快或不需要的人或物。",
+      "literal": [
+        {"word": "got", "meaning_cn": "变得"},
+        {"word": "rid", "meaning_cn": "摆脱的", "note_cn": "几乎只用于 get rid of 这个搭配"},
+        {"word": "of", "meaning_cn": "(去掉)…"}
+      ],
+      "ex_en": "I finally got rid of my old broken phone.",
+      "ex_cn": "我终于把那部坏旧手机处理掉了。",
+      "occ": [[4380, "got rid of"]]
+    },
+    {
+      "head": "get lost",
+      "gloss": "迷路；走失",
+      "ipa": "/ɡet lɔːst/",
+      "note": "指在陌生的地方找不到方向。本章两个孩子正是在山洞里迷了路。",
+      "literal": [
+        {"word": "get", "meaning_cn": "变得"},
+        {"word": "lost", "meaning_cn": "迷失的"}
+      ],
+      "ex_en": "Take a map so you don't get lost in the forest.",
+      "ex_cn": "带张地图，免得在森林里迷路。",
+      "occ": [[4399, "get lost"]]
+    },
+    {
+      "head": "burst into",
+      "gloss": "突然…起来(大哭/大笑等)",
+      "ipa": "/bɜːrst ˈɪntə/",
+      "note": "burst into tears/laughter/crying = 突然大哭/大笑；表示情绪骤然爆发。本章为 burst into crying。",
+      "literal": [
+        {"word": "burst", "meaning_cn": "爆发", "note_cn": "突然迸发"},
+        {"word": "into", "meaning_cn": "进入(某状态)"}
+      ],
+      "ex_en": "She burst into tears when she heard the sad news.",
+      "ex_cn": "听到那个噩耗，她突然放声大哭。",
+      "occ": [[4430, "burst into"]]
+    },
+    {
+      "head": "cling to",
+      "gloss": "紧紧抓住；依附于",
+      "ipa": "/klɪŋ tə/",
+      "note": "指因害怕或依赖而紧紧抱住某人/某物；也可引申为坚持某种想法。",
+      "literal": [
+        {"word": "clung", "meaning_cn": "紧抓", "note_cn": "cling 的过去式"},
+        {"word": "to", "meaning_cn": "住/于"}
+      ],
+      "ex_en": "The frightened child clung to his mother's arm.",
+      "ex_cn": "受惊的孩子紧紧抓住妈妈的胳膊。",
+      "occ": [[4407, "clung to"], [4431, "clung to"]]
+    },
+    {
+      "head": "keep back",
+      "gloss": "忍住(眼泪等)；抑制",
+      "ipa": "/kiːp bæk/",
+      "note": "本章 keep back the tears 指强忍眼泪。也可指“阻拦、不让前进”。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "保持"},
+        {"word": "back", "meaning_cn": "往回", "note_cn": "此处指把眼泪憋回去"}
+      ],
+      "ex_en": "He tried to keep back his anger and stay calm.",
+      "ex_cn": "他努力压住怒气，保持冷静。",
+      "occ": [[4407, "keep back"]]
+    },
+    {
+      "head": "never mind",
+      "gloss": "别管；不要紧",
+      "ipa": "/ˈnevər maɪnd/",
+      "note": "口语，用来叫对方不必在意某事，或表示“算了”。",
+      "literal": [
+        {"word": "never", "meaning_cn": "永不"},
+        {"word": "mind", "meaning_cn": "介意"}
+      ],
+      "ex_en": "Never mind the mess—we'll clean it up later.",
+      "ex_cn": "别管这乱摊子了，我们回头再收拾。",
+      "occ": [[4409, "never mind"]]
+    },
+    {
+      "head": "by and by",
+      "gloss": "不久；过一会儿",
+      "ipa": "/baɪ ənd baɪ/",
+      "note": "略显old-fashioned的说法，指过一段时间之后。本章多处以连字符形式 by-and-by 出现。",
+      "literal": [
+        {"word": "by", "meaning_cn": "(习语用词)", "note_cn": "单独无实义，须整体记忆"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "by", "meaning_cn": "(习语用词)"}
+      ],
+      "ex_en": "By and by the storm passed and the sky cleared.",
+      "ex_cn": "过了一会儿，暴风雨过去了，天也放晴了。",
+      "occ": [[4438, "by-and-by"], [4443, "by-and-by"], [4450, "by-and-by"], [4484, "by-and-by"], [4523, "by-and-by"]]
+    },
+    {
+      "head": "bear fruit",
+      "gloss": "见成效；开花结果",
+      "ipa": "/ber fruːt/",
+      "note": "字面为“结果实”，引申为努力取得成果。本章指走动或许能带来出路。",
+      "literal": [
+        {"word": "bear", "meaning_cn": "结(果)", "note_cn": "此处非“忍受/承受”义"},
+        {"word": "fruit", "meaning_cn": "果实", "note_cn": "喻指成果"}
+      ],
+      "ex_en": "Years of hard training finally began to bear fruit.",
+      "ex_cn": "多年的刻苦训练终于开始见成效。",
+      "occ": [[4443, "bear fruit"]]
+    },
+    {
+      "head": "make a show of",
+      "gloss": "装出…的样子；假装",
+      "ipa": "/meɪk ə ʃoʊ əv/",
+      "note": "指表面上做出某种姿态而未必当真。本章 make a show of being confident 即“强装镇定”。",
+      "literal": [
+        {"word": "make", "meaning_cn": "做出"},
+        {"word": "a", "meaning_cn": "一"},
+        {"word": "show", "meaning_cn": "样子", "note_cn": "此处指装出的姿态"},
+        {"word": "of", "meaning_cn": "…的"}
+      ],
+      "ex_en": "He made a show of reading, but he was really asleep.",
+      "ex_cn": "他装作在看书，其实早睡着了。",
+      "occ": [[4437, "made a show of"], [4572, "made a show of"]]
+    },
+    {
+      "head": "blow out",
+      "gloss": "吹灭",
+      "ipa": "/bloʊ aʊt/",
+      "note": "指把火焰吹熄。本章宾语插在中间(blew it out),仍连续。",
+      "literal": [
+        {"word": "blew", "meaning_cn": "吹", "note_cn": "blow 的过去式"},
+        {"word": "it", "meaning_cn": "它(指蜡烛)"},
+        {"word": "out", "meaning_cn": "熄灭"}
+      ],
+      "ex_en": "She blew out all the candles on the birthday cake.",
+      "ex_cn": "她把生日蛋糕上的蜡烛全吹灭了。",
+      "occ": [[4438, "blew it out"]]
+    },
+    {
+      "head": "cheer up",
+      "gloss": "(使)振作；高兴起来",
+      "ipa": "/tʃɪr ʌp/",
+      "note": "既可劝人打起精神(Cheer up!),也可指让某人开心起来。",
+      "literal": [
+        {"word": "cheer", "meaning_cn": "使高兴"},
+        {"word": "up", "meaning_cn": "起来"}
+      ],
+      "ex_en": "Cheer up! Tomorrow will be a better day.",
+      "ex_cn": "打起精神来!明天会更好。",
+      "occ": [[4463, "cheer up"]]
+    },
+    {
+      "head": "hand in hand",
+      "gloss": "手拉手；相伴而行",
+      "ipa": "/hænd ɪn hænd/",
+      "note": "字面为手牵手，也常引申为“紧密相关、并进”。本章为字面义。",
+      "literal": [
+        {"word": "hand", "meaning_cn": "手"},
+        {"word": "in", "meaning_cn": "在…里"},
+        {"word": "hand", "meaning_cn": "手"}
+      ],
+      "ex_en": "The two little girls walked hand in hand to school.",
+      "ex_cn": "两个小女孩手拉手去上学。",
+      "occ": [[4464, "hand in hand"]]
+    },
+    {
+      "head": "break the silence",
+      "gloss": "打破沉默",
+      "ipa": "/breɪk ðə ˈsaɪləns/",
+      "note": "指在一段安静之后开口说话或发出声音。",
+      "literal": [
+        {"word": "broke", "meaning_cn": "打破", "note_cn": "break 的过去式"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "silence", "meaning_cn": "沉默"}
+      ],
+      "ex_en": "At last Anna broke the silence and asked a question.",
+      "ex_cn": "终于,安娜打破沉默,问了个问题。",
+      "occ": [[4473, "broke the silence"]]
+    },
+    {
+      "head": "hold one's breath",
+      "gloss": "屏住呼吸",
+      "ipa": "/hoʊld wʌnz breθ/",
+      "note": "指因紧张、专注或期待而暂停呼吸、仔细倾听。",
+      "literal": [
+        {"word": "held", "meaning_cn": "屏住", "note_cn": "hold 的过去式"},
+        {"word": "their", "meaning_cn": "他们的"},
+        {"word": "breath", "meaning_cn": "呼吸"}
+      ],
+      "ex_en": "We held our breath as the tightrope walker crossed.",
+      "ex_cn": "走钢丝的人穿过时,我们都屏住了呼吸。",
+      "occ": [[4526, "held their breath"]]
+    },
+    {
+      "head": "bring someone to one's senses",
+      "gloss": "使某人清醒过来；让某人恢复理智",
+      "ipa": "/brɪŋ ˈsʌmwʌn tə wʌnz ˈsensɪz/",
+      "note": "senses 此处指理智、清醒的判断力；整句意为使人猛然醒悟、意识到现实。",
+      "literal": [
+        {"word": "brought", "meaning_cn": "使…(处于)", "note_cn": "bring 的过去式"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "senses", "meaning_cn": "理智", "note_cn": "此处非“感觉/感官”,指清醒的判断"}
+      ],
+      "ex_en": "A splash of cold water brought him to his senses.",
+      "ex_cn": "一捧冷水让他猛地清醒过来。",
+      "occ": [[4507, "brought tom to his senses"]]
+    },
+    {
+      "head": "at any rate",
+      "gloss": "无论如何；至少",
+      "ipa": "/ət ˈeni reɪt/",
+      "note": "用于强调某个事实不会改变,或转而说更确定的话。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "any", "meaning_cn": "任何"},
+        {"word": "rate", "meaning_cn": "情况", "note_cn": "此处非“速率/费率”,为习语固定用词"}
+      ],
+      "ex_en": "It may rain, but at any rate we should try to go.",
+      "ex_cn": "可能会下雨,但无论如何我们都该试着去。",
+      "occ": [[4535, "at any rate"]]
+    },
+    {
+      "head": "drag on",
+      "gloss": "(时间/事情)拖沓地过去；拖延",
+      "ipa": "/dræɡ ɑːn/",
+      "note": "指时间或过程令人厌烦地缓慢持续。本章 the weary time dragged on 即“难熬的时间慢慢挨过”。",
+      "literal": [
+        {"word": "dragged", "meaning_cn": "拖", "note_cn": "此处喻时间缓慢难熬"},
+        {"word": "on", "meaning_cn": "继续下去"}
+      ],
+      "ex_en": "The boring meeting seemed to drag on for hours.",
+      "ex_cn": "那场无聊的会议似乎拖了好几个钟头。",
+      "occ": [[4544, "dragged on"]]
+    },
+    {
+      "head": "out of sight",
+      "gloss": "看不见；在视线之外",
+      "ipa": "/aʊt əv saɪt/",
+      "note": "指从视野中消失。get out of sight 即“躲开、不见踪影”。",
+      "literal": [
+        {"word": "out", "meaning_cn": "在…之外"},
+        {"word": "of", "meaning_cn": "…的"},
+        {"word": "sight", "meaning_cn": "视线", "note_cn": "此处指看得见的范围"}
+      ],
+      "ex_en": "The train sped up and was soon out of sight.",
+      "ex_cn": "火车加速,很快就消失在视线里了。",
+      "occ": [[4554, "out of sight"]]
+    },
+    {
+      "head": "in the long run",
+      "gloss": "从长远看；最终",
+      "ipa": "/ɪn ðə lɔːŋ rʌn/",
+      "note": "指经过足够长的时间之后的结果,与眼前的短暂情况相对。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "long", "meaning_cn": "长的"},
+        {"word": "run", "meaning_cn": "时段", "note_cn": "此处非“跑”,指一段时间"}
+      ],
+      "ex_en": "Saving a little each month pays off in the long run.",
+      "ex_cn": "每月存一点,从长远看是划算的。",
+      "occ": [[4562, "in the long run"]]
+    },
+    {
+      "head": "be to blame",
+      "gloss": "该受责备；负有责任",
+      "ipa": "/biː tə bleɪm/",
+      "note": "表示对坏事负有过错。注意 blame 此处是主动形式却表被动义(该被责怪)。",
+      "literal": [
+        {"word": "to", "meaning_cn": "该"},
+        {"word": "blame", "meaning_cn": "责备", "note_cn": "此处为固定用法,表“该受责备”"}
+      ],
+      "ex_en": "No one is to blame for the accident—it was bad luck.",
+      "ex_cn": "这场事故谁都不怪,只是运气不好。",
+      "occ": [[4435, "to blame"]]
+    },
+    {
+      "head": "at length",
+      "gloss": "终于；最后",
+      "ipa": "/ət leŋθ/",
+      "note": "书面语,表示经过一段时间后终于发生。另有“详尽地”一义,本章为“终于”。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "length", "meaning_cn": "长度", "note_cn": "此处为习语,指“终于”"}
+      ],
+      "ex_en": "At length, after a long wait, the doctor called my name.",
+      "ex_cn": "终于,等了好久之后,医生叫到了我的名字。",
+      "occ": [[4493, "at length"]]
+    },
+    {
+      "head": "take to one's heels",
+      "gloss": "撒腿就跑；逃之夭夭",
+      "ipa": "/teɪk tə wʌnz hiːlz/",
+      "note": "heels 指脚后跟,借指奔跑;整句意为拔腿逃跑。",
+      "literal": [
+        {"word": "take", "meaning_cn": "投向", "note_cn": "此处为习语用法,指开始(奔跑)"},
+        {"word": "to", "meaning_cn": "向"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "heels", "meaning_cn": "脚后跟", "note_cn": "借指奔跑"}
+      ],
+      "ex_en": "The moment the dog barked, the cat took to its heels.",
+      "ex_cn": "狗一叫,那只猫撒腿就跑。",
+      "occ": [[4554, "take to his heels"]]
+    },
+    {
+      "head": "stand still",
+      "gloss": "站着不动；静止不动",
+      "ipa": "/stænd stɪl/",
+      "note": "still 此处意为“不动的”;整句指停下不移动。",
+      "literal": [
+        {"word": "stood", "meaning_cn": "站", "note_cn": "stand 的过去式"},
+        {"word": "still", "meaning_cn": "不动的", "note_cn": "此处非“仍然”"}
+      ],
+      "ex_en": "Please stand still while I take your photo.",
+      "ex_cn": "我给你拍照的时候,请站着别动。",
+      "occ": [[4418, "stood still"]]
+    },
+    {
+      "head": "die out",
+      "gloss": "逐渐消失；渐渐平息",
+      "ipa": "/daɪ aʊt/",
+      "note": "本章指回声在远处渐渐消失。也可指物种灭绝、习俗消亡。",
+      "literal": [
+        {"word": "died", "meaning_cn": "消失", "note_cn": "此处非“死亡”,指渐渐止息"},
+        {"word": "out", "meaning_cn": "(消)尽"}
+      ],
+      "ex_en": "The music slowly died out as the parade moved away.",
+      "ex_cn": "队伍走远,音乐渐渐消失了。",
+      "occ": [[4414, "died out"]]
+    },
+    {
+      "head": "on one's hands and knees",
+      "gloss": "手脚并用地(爬)；趴跪着",
+      "ipa": "/ɑːn wʌnz hændz ənd niːz/",
+      "note": "指双手双膝着地的爬行姿势。本章汤姆摸黑爬进通道。",
+      "literal": [
+        {"word": "on", "meaning_cn": "(以…姿势)"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "hands", "meaning_cn": "手"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "knees", "meaning_cn": "膝盖"}
+      ],
+      "ex_en": "He got down on his hands and knees to look under the bed.",
+      "ex_cn": "他手脚并用趴下去,往床底下看。",
+      "occ": [[4572, "on his hands and knees"]]
+    }
+  ],
+  "skipped": [
+    "The Drawing-Room / The Cathedral / Aladdin's Palace / Niagara (洞中景点专名,一次性)",
+    "Injun Joe / Mrs. Thatcher / Mrs. Harper (人名,专名)",
+    "hide-and-seek (游戏名,一次性复合词)",
+    "in order to (太基础/语法化)",
+    "come to think (口语一次性,控量舍去)",
+    "at random / at sheer random (备选,控量舍去)",
+    "pluck up hope (pluck up courage 变体,控量舍去)",
+    "give loose to tears (古旧一次性)",
+    "wedding-cake (名物一次性)",
+    "guard against (备选,控量舍去)",
+    "make a blunder (备选,控量舍去)",
+    "an idea struck him (偏语法化,控量舍去)",
+    "given over (英式冷僻,控量舍去)",
+    "every little while (一次性)",
+    "of no use (与 ch10 no use 重叠且偏基础)",
+    "come along (招呼语,过于基础)",
+    "rise superior to (古旧文学性,一次性→难句层)"
+  ]
+}

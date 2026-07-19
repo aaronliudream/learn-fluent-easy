@@ -1,0 +1,21 @@
+{ "chapter": 3,
+  "images": [
+    { "k":1, "slug":"natives-watch-from-shore", "seq":201,
+      "scene":"A small open sailing boat glides past a wild African coastline while a group of black, naked people stand on the sandy shore watching it pass, one of them holding a long slender lance.",
+      "alt":"People stand on a shore watching a small boat sail past." },
+    { "k":2, "slug":"shooting-the-leopard", "seq":208,
+      "scene":"From his small boat Robinson raises his long musket and fires at a spotted leopard swimming in the sea close to the boat, a burst of smoke at the muzzle and the water splashing around the animal.",
+      "alt":"A man in a small boat fires a gun at a leopard swimming in the sea." },
+    { "k":3, "slug":"skinning-the-leopard", "seq":213,
+      "scene":"On the beach several villagers crouch around the dead spotted leopard, peeling off its skin with a sharpened piece of wood, while Robinson looks on from the shallows beside his boat.",
+      "alt":"Villagers skin a dead leopard on a beach with a sharpened stick." },
+    { "k":4, "slug":"rescued-by-portuguese-ship", "seq":226,
+      "scene":"Robinson's small boat draws alongside a large three-masted Portuguese sailing ship on the open sea, sailors leaning over the high side to help him and his boy come aboard.",
+      "alt":"A small boat comes up alongside a large sailing ship at sea." },
+    { "k":5, "slug":"ship-struck-on-sandbar", "seq":291,
+      "scene":"In a raging storm a battered sailing ship lies grounded on a sandbar, a huge wave breaking clean over her deck in white foam and spray as the crew huddle in shelter.",
+      "alt":"A sailing ship grounded on a sandbar as a huge wave breaks over it in a storm." },
+    { "k":6, "slug":"night-in-the-thorny-tree", "seq":328,
+      "scene":"At nightfall Robinson climbs into a thick, bushy, thorny fir-like tree near the shore, a short stick clutched in his hand, settling himself among the branches to sleep out of reach of wild beasts.",
+      "alt":"A shipwrecked man climbs into a thorny tree at night holding a stick." }
+  ] }

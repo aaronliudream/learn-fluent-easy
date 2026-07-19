@@ -4,6 +4,7 @@
 import { useCallback, useMemo } from "react";
 import { QuizRunner, questionsToItems } from "@/components/american/QuizRunner";
 import { markStageComplete, recordMastery, type LessonBundle } from "@/lib/american/data";
+import { recordAmericanMistake, americanLessonLabel } from "@/lib/american/americanMistake";
 
 export function AmericanScenarioStage({ bundle, onDone }: { bundle: LessonBundle; onDone?: () => void }) {
   const qs = useMemo(() => bundle.questions.filter((q) => q.stage === 9), [bundle]);
@@ -15,5 +16,7 @@ export function AmericanScenarioStage({ bundle, onDone }: { bundle: LessonBundle
     if (onDone) setTimeout(onDone, 1400);
   }, [bundle.lesson.id, onDone]);
 
-  return <QuizRunner items={items} onAnswer={onAnswer} onComplete={onComplete} />;
+  const label = americanLessonLabel(bundle.lesson);
+  return <QuizRunner items={items} onAnswer={onAnswer} onComplete={onComplete}
+    onRecordMistake={(it, picked, ok) => recordAmericanMistake(it, picked, ok, label)} />;
 }

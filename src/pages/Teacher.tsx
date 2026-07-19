@@ -8,7 +8,14 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, Plus, Users, AlertTriangle, TrendingUp, GraduationCap, Sparkles } from "lucide-react";
+import { Loader2, Plus, Users, AlertTriangle, TrendingUp, GraduationCap, Sparkles, ArchiveRestore, GripVertical, Trash2, RotateCcw } from "lucide-react";
+import { toast } from "sonner";
+import {
+  DndContext, closestCenter, MouseSensor, TouchSensor, useSensor, useSensors,
+  type DragEndEvent,
+} from "@dnd-kit/core";
+import { SortableContext, rectSortingStrategy, useSortable, arrayMove } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 import TeacherCards from "@/pages/TeacherCards";
 
 /**
@@ -36,6 +43,22 @@ type ClassRow = {
   last_activity_at: string | null;
 };
 
+// 回收站行(get_my_trashed_classes 返回,列比 ClassRow 少)
+type TrashedRow = {
+  id: string;
+  name: string;
+  stage: "primary" | "junior" | "senior" | "mixed";
+  join_code: string;
+  archived_at: string | null;
+  deleted_at: string | null;
+  created_at: string;
+  student_count: number;
+};
+
+// 每位老师活跃班上限（后端 enforce_class_limit 触发器 + create_class/restore_class RPC 同步为此值）。
+// 前端只做友好提示，硬保证在后端。以后改上限：这里 + 两个 RPC 一起改。
+const MAX_CLASSES = 10;
+
 const STAGE_META: Record<ClassRow["stage"], { label: string; gradient: string }> = {
   primary: { label: "小学 / Primary",  gradient: "from-sky-500 to-cyan-500" },
   junior:  { label: "初中 / Junior",   gradient: "from-violet-500 to-indigo-500" },
@@ -49,12 +72,17 @@ export default function Teacher() {
   const [loading, setLoading] = useState(true);
   const [authed, setAuthed] = useState<boolean | null>(null);
   const [classes, setClasses] = useState<ClassRow[]>([]);
+  const [trashed, setTrashed] = useState<TrashedRow[]>([]);
   const [creating, setCreating] = useState(false);
 
   async function reload() {
     setLoading(true);
-    const { data, error } = await supabase.rpc("get_my_teacher_classes");
+    const [{ data, error }, { data: td }] = await Promise.all([
+      supabase.rpc("get_my_teacher_classes"),
+      supabase.rpc("get_my_trashed_classes"),
+    ]);
     if (!error && data) setClasses(data as ClassRow[]);
+    setTrashed((td ?? []) as TrashedRow[]);
     setLoading(false);
   }
 
@@ -67,11 +95,18 @@ export default function Teacher() {
     })();
   }, []);
 
+  // 拖拽排序传感器：桌面鼠标(移 6px 才拖，轻点仍进班)；手机触摸(长按 200ms 才拖，
+  // 之前滑动照常滚页面)。手柄本身 touch-none，与页面滚动不打架。
+  const sensors = useSensors(
+    useSensor(MouseSensor, { activationConstraint: { distance: 6 } }),
+    useSensor(TouchSensor, { activationConstraint: { delay: 200, tolerance: 8 } }),
+  );
+
   /* ── Auth gate ───────────────────────────────────────── */
   if (authed === false) {
     return (
       <main className="mx-auto min-h-screen max-w-5xl px-4 py-10 text-center">
-        <PageHeader title="👨‍🏫 老师中心" subtitle="管理班级与学生" back="/" />
+        <PageHeader title="👨‍🏫 老师中心" subtitle="管理班级与学生" back="/me" />
         <p className="mt-6 text-sm text-muted-foreground"><T>登录后查看你的班级</T></p>
         <Button className="mt-4" onClick={() => navigate("/auth?redirect=/teacher")}><T>登录</T></Button>
       </main>
@@ -80,6 +115,7 @@ export default function Teacher() {
 
   /* ── Derived stats for hero ─────────────────────────── */
   const activeClasses = classes.filter((c) => !c.archived_at);
+  const archivedClasses = classes.filter((c) => c.archived_at);
   const totalStudents = activeClasses.reduce((s, c) => s + c.student_count, 0);
   const totalActive   = activeClasses.reduce((s, c) => s + c.active_this_week, 0);
   const totalWeak     = activeClasses.reduce((s, c) => s + c.weak_student_count, 0);
@@ -87,9 +123,22 @@ export default function Teacher() {
     ? Math.round((totalActive / totalStudents) * 100)
     : 0;
 
+  // 拖完：本地乐观重排 → 调 reorder_classes 落库 → 失败则 reload 回滚。
+  async function handleReorder(e: DragEndEvent) {
+    const { active, over } = e;
+    if (!over || active.id === over.id) return;
+    const oldIndex = activeClasses.findIndex((c) => c.id === active.id);
+    const newIndex = activeClasses.findIndex((c) => c.id === over.id);
+    if (oldIndex < 0 || newIndex < 0) return;
+    const newActive = arrayMove(activeClasses, oldIndex, newIndex);
+    setClasses([...newActive, ...archivedClasses]);           // 乐观：活跃区重排，归档区不动
+    const { error } = await supabase.rpc("reorder_classes", { _ids: newActive.map((c) => c.id) });
+    if (error) { toast.error(error.message); reload(); }      // 回滚到服务端真相
+  }
+
   return (
     <main className="mx-auto min-h-screen max-w-6xl px-4 py-6 md:px-6 md:py-10">
-      <PageHeader title="👨‍🏫 老师中心" subtitle="管理班级、关注学生、推送讲解" back="/" />
+      <PageHeader title="👨‍🏫 老师中心" subtitle="管理班级、关注学生、推送讲解" back="/me" />
 
       {/* ── HERO — class-portfolio overview ─────────────── */}
       <section
@@ -110,7 +159,7 @@ export default function Teacher() {
                 : <T>还没有班级，点击「新建班级」开始</T>}
             </div>
           </div>
-          <CreateClassButton onCreated={(c) => { setCreating(false); reload(); navigate(`/teacher/class/${c.id}`); }} open={creating} onOpenChange={setCreating} />
+          <CreateClassButton count={activeClasses.length} onCreated={(c) => { setCreating(false); reload(); navigate(`/teacher/class/${c.id}`); }} open={creating} onOpenChange={setCreating} />
         </div>
 
         <div className="relative mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -139,22 +188,32 @@ export default function Teacher() {
           ) : activeClasses.length === 0 ? (
             <EmptyClasses onCreate={() => setCreating(true)} />
           ) : (
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {activeClasses.map((c) => <ClassCard key={c.id} c={c} />)}
-              <button
-                type="button"
-                onClick={() => setCreating(true)}
-                className="grid place-items-center gap-2 rounded-3xl border-2 border-dashed border-border bg-card p-6 text-center transition hover:border-primary hover:bg-muted/40">
-                <div className="grid size-12 place-items-center rounded-2xl bg-primary/10">
-                  <Plus className="size-6 text-primary" />
+            <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleReorder}>
+              <SortableContext items={activeClasses.map((c) => c.id)} strategy={rectSortingStrategy}>
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                  {activeClasses.map((c) => <ClassCard key={c.id} c={c} />)}
+                  <button
+                    type="button"
+                    onClick={() => setCreating(true)}
+                    className="grid place-items-center gap-2 rounded-3xl border-2 border-dashed border-border bg-card p-6 text-center transition hover:border-primary hover:bg-muted/40">
+                    <div className="grid size-12 place-items-center rounded-2xl bg-primary/10">
+                      <Plus className="size-6 text-primary" />
+                    </div>
+                    <div className="text-sm font-extrabold"><T>新建班级</T></div>
+                    <div className="text-xs text-muted-foreground">
+                      <T>生成 8 位邀请码，学生输入即可加入</T>
+                    </div>
+                  </button>
                 </div>
-                <div className="text-sm font-extrabold"><T>新建班级</T></div>
-                <div className="text-xs text-muted-foreground">
-                  <T>生成 8 位邀请码，学生输入即可加入</T>
-                </div>
-              </button>
-            </div>
+              </SortableContext>
+            </DndContext>
           )}
+
+          {archivedClasses.length > 0 && (
+            <ArchivedClasses list={archivedClasses} activeCount={activeClasses.length} onChange={reload} />
+          )}
+
+          {trashed.length > 0 && <TrashedClasses list={trashed} onChange={reload} />}
         </TabsContent>
 
         {/* ───────── CARDS — re-uses the existing TeacherCards page ───────── */}
@@ -210,32 +269,208 @@ function HeroStat({ emoji, value, label, tone = "ok" }:
 }
 
 function ClassCard({ c }: { c: ClassRow }) {
+  const t = useT();
   const meta = STAGE_META[c.stage];
   const lastActive = c.last_activity_at ? relTime(c.last_activity_at) : "—";
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: c.id });
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    zIndex: isDragging ? 20 : undefined,
+    opacity: isDragging ? 0.85 : 1,
+  };
   return (
-    <Link
-      to={`/teacher/class/${c.id}`}
-      className="group rounded-3xl border-2 border-border bg-card shadow-tile hover:-translate-y-0.5 transition overflow-hidden">
-      <div className={`h-2 bg-gradient-to-r ${meta.gradient}`} />
-      <div className="p-5">
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="font-extrabold text-base leading-tight"><T>{c.name}</T></h3>
-          <span className="font-mono text-[10px] tabular-nums rounded bg-muted px-1.5 py-0.5 shrink-0">{c.join_code}</span>
-        </div>
-        <div className="mt-1 text-[11px] text-muted-foreground"><T>{meta.label}</T></div>
+    <div ref={setNodeRef} style={style} className={`relative ${isDragging ? "shadow-2xl" : ""}`}>
+      {/* 拖动手柄：只有它带 dnd listeners + touch-none；轻点卡片其余部分仍进班 */}
+      <button
+        type="button"
+        aria-label={t("拖动排序")}
+        {...attributes}
+        {...listeners}
+        onClick={(e) => e.preventDefault()}
+        className="absolute right-2 top-2 z-10 grid size-7 place-items-center rounded-lg bg-muted/80 text-muted-foreground touch-none cursor-grab active:cursor-grabbing hover:bg-muted">
+        <GripVertical className="size-4" />
+      </button>
+      <Link
+        to={`/teacher/class/${c.id}`}
+        className="group block rounded-3xl border-2 border-border bg-card shadow-tile hover:-translate-y-0.5 transition overflow-hidden">
+        <div className={`h-2 bg-gradient-to-r ${meta.gradient}`} />
+        <div className="p-5">
+          <div className="flex items-start justify-between gap-2 pr-8">
+            <h3 className="font-extrabold text-base leading-tight"><T>{c.name}</T></h3>
+            <span className="font-mono text-[10px] tabular-nums rounded bg-muted px-1.5 py-0.5 shrink-0">{c.join_code}</span>
+          </div>
+          <div className="mt-1 text-[11px] text-muted-foreground"><T>{meta.label}</T></div>
 
-        <div className="mt-3 grid grid-cols-3 gap-2 text-center">
-          <Stat n={c.student_count}      label="学生" />
-          <Stat n={c.active_this_week}   label="本周活跃" tone="text-emerald-600 dark:text-emerald-400" />
-          <Stat n={c.weak_student_count} label="需关注"  tone={c.weak_student_count > 0 ? "text-rose-600 dark:text-rose-400" : ""} />
-        </div>
+          <div className="mt-3 grid grid-cols-3 gap-2 text-center">
+            <Stat n={c.student_count}      label="学生" />
+            <Stat n={c.active_this_week}   label="本周活跃" tone="text-emerald-600 dark:text-emerald-400" />
+            <Stat n={c.weak_student_count} label="需关注"  tone={c.weak_student_count > 0 ? "text-rose-600 dark:text-rose-400" : ""} />
+          </div>
 
-        <div className="mt-3 flex items-center justify-between text-[11px]">
-          <span className="text-muted-foreground">⏱ <T>最近活跃</T>: {lastActive}</span>
-          <span className="text-primary font-bold group-hover:translate-x-0.5 transition"><T>进入</T> →</span>
+          <div className="mt-3 flex items-center justify-between text-[11px]">
+            <span className="text-muted-foreground">⏱ <T>最近活跃</T>: {lastActive}</span>
+            <span className="text-primary font-bold group-hover:translate-x-0.5 transition"><T>进入</T> →</span>
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
+  );
+}
+
+function ArchivedClasses({ list, activeCount, onChange }: { list: ClassRow[]; activeCount: number; onChange: () => void }) {
+  const t = useT();
+  const [restoringId, setRestoringId] = useState<string | null>(null);
+  const atLimit = activeCount >= MAX_CLASSES;
+  const limitMsg = t(`活跃班已满 ${MAX_CLASSES} 个，请先归档一个再恢复此班`);
+
+  async function restore(c: ClassRow) {
+    if (atLimit) { toast.error(limitMsg); return; }
+    setRestoringId(c.id);
+    // 后端 restore_class 会硬校验归属 + 班级上限，前端拦截只是提前给友好提示
+    const { error } = await supabase.rpc("restore_class", { _class_id: c.id });
+    setRestoringId(null);
+    if (error) toast.error(error.message);
+    else { toast.success(t("已恢复为活跃班")); onChange(); }
+  }
+
+  return (
+    <details className="mt-6 rounded-2xl border border-border bg-muted/30">
+      <summary className="cursor-pointer select-none list-none px-4 py-3 text-sm font-bold text-muted-foreground flex items-center gap-2">
+        <span>🗄</span>
+        <span><T>已归档班级</T> · {list.length}</span>
+        <span className="ml-auto text-[11px] font-normal"><T>只读存档 · 可恢复</T> ▾</span>
+      </summary>
+      <ul className="px-3 pb-3 space-y-2">
+        {list.map((c) => {
+          const meta = STAGE_META[c.stage];
+          return (
+            <li key={c.id} className="flex items-center gap-2 rounded-xl border border-border bg-card px-3 py-2.5">
+              <Link to={`/teacher/class/${c.id}`} className="flex items-center gap-3 min-w-0 flex-1 transition hover:opacity-80">
+                <span className="text-lg shrink-0">🗄</span>
+                <div className="min-w-0 flex-1">
+                  <div className="font-bold text-sm truncate"><T>{c.name}</T></div>
+                  <div className="text-[11px] text-muted-foreground">
+                    <T>{meta.label}</T> · <T>归档于</T> {c.archived_at ? relTime(c.archived_at) : "—"} · {c.student_count} <T>名学生</T>
+                  </div>
+                </div>
+              </Link>
+              <Button
+                variant="outline" size="sm" className="shrink-0"
+                onClick={() => restore(c)}
+                disabled={restoringId === c.id || atLimit}
+                title={atLimit ? limitMsg : undefined}>
+                {restoringId === c.id
+                  ? <Loader2 className="size-3.5 animate-spin" />
+                  : <><ArchiveRestore className="mr-1 size-3.5" /> <T>恢复</T></>}
+              </Button>
+            </li>
+          );
+        })}
+      </ul>
+      {atLimit && (
+        <p className="px-4 pb-3 text-[11px] text-amber-600 dark:text-amber-400">
+          ⚠️ {t(`活跃班已满 ${MAX_CLASSES} 个，需先归档一个才能恢复这里的班级。`)}
+        </p>
+      )}
+    </details>
+  );
+}
+
+function TrashedClasses({ list, onChange }: { list: TrashedRow[]; onChange: () => void }) {
+  const t = useT();
+  const [busyId, setBusyId] = useState<string | null>(null);
+  const [purgeTarget, setPurgeTarget] = useState<TrashedRow | null>(null);
+  const [confirmName, setConfirmName] = useState("");
+  const [purging, setPurging] = useState(false);
+
+  const nameMatches = !!purgeTarget && confirmName.trim() === purgeTarget.name;
+
+  async function restore(c: TrashedRow) {
+    setBusyId(c.id);
+    // 归属 + 10 班上限硬校验在 restore_class_from_trash 里;满则返回中文异常
+    const { error } = await supabase.rpc("restore_class_from_trash", { _class_id: c.id });
+    setBusyId(null);
+    if (error) toast.error(error.message);
+    else { toast.success(t("已从回收站恢复")); onChange(); }
+  }
+
+  async function confirmPurge() {
+    if (!purgeTarget || !nameMatches) return;
+    setPurging(true);
+    const { error } = await supabase.rpc("purge_class", { _class_id: purgeTarget.id });
+    setPurging(false);
+    if (error) { toast.error(error.message); return; }
+    toast.success(t("已彻底删除"));
+    setPurgeTarget(null);
+    setConfirmName("");
+    onChange();
+  }
+
+  function closeDialog() { setPurgeTarget(null); setConfirmName(""); }
+
+  return (
+    <details className="mt-4 rounded-2xl border border-rose-200 bg-rose-50/30 dark:border-rose-500/30 dark:bg-rose-500/10">
+      <summary className="cursor-pointer select-none list-none px-4 py-3 text-sm font-bold text-rose-700 dark:text-rose-300 flex items-center gap-2">
+        <span>🗑</span>
+        <span><T>回收站</T> · {list.length}</span>
+        <span className="ml-auto text-[11px] font-normal"><T>可恢复 · 或彻底删除</T> ▾</span>
+      </summary>
+      <ul className="px-3 pb-3 space-y-2">
+        {list.map((c) => {
+          const meta = STAGE_META[c.stage];
+          return (
+            <li key={c.id} className="flex items-center gap-2 rounded-xl border border-border bg-card px-3 py-2.5">
+              <span className="text-lg shrink-0">🗑</span>
+              <div className="min-w-0 flex-1">
+                <div className="font-bold text-sm truncate"><T>{c.name}</T></div>
+                <div className="text-[11px] text-muted-foreground">
+                  <T>{meta.label}</T> · <T>删除于</T> {c.deleted_at ? relTime(c.deleted_at) : "—"} · {c.student_count} <T>名学生</T>
+                </div>
+              </div>
+              <Button variant="outline" size="sm" className="shrink-0"
+                onClick={() => restore(c)} disabled={busyId === c.id}>
+                {busyId === c.id
+                  ? <Loader2 className="size-3.5 animate-spin" />
+                  : <><RotateCcw className="mr-1 size-3.5" /> <T>恢复</T></>}
+              </Button>
+              <Button variant="ghost" size="sm"
+                className="shrink-0 text-rose-600 hover:text-rose-700 hover:bg-rose-100 dark:hover:bg-rose-500/20"
+                onClick={() => { setPurgeTarget(c); setConfirmName(""); }}>
+                <Trash2 className="mr-1 size-3.5" /> <T>彻底删除</T>
+              </Button>
+            </li>
+          );
+        })}
+      </ul>
+
+      {/* 彻底删除：必须手打班名才能删,最防误删 */}
+      <Dialog open={!!purgeTarget} onOpenChange={(v) => { if (!v) closeDialog(); }}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>🗑 <T>彻底删除班级</T></DialogTitle>
+          </DialogHeader>
+          <div className="space-y-3">
+            <p className="text-sm text-muted-foreground">
+              <T>此操作不可逆：将永久删除该班级及所有学生的入班关系。学生账号本身不受影响，仍可登录、可再加入别的班。</T>
+            </p>
+            <div className="rounded-lg border border-rose-200 bg-rose-50 p-3 text-sm dark:border-rose-500/30 dark:bg-rose-500/10">
+              <T>请输入班级名称</T> <b>{purgeTarget?.name}</b> <T>以确认：</T>
+            </div>
+            <Input value={confirmName} onChange={(e) => setConfirmName(e.target.value)}
+              placeholder={purgeTarget?.name} autoFocus
+              onKeyDown={(e) => { if (e.key === "Enter" && nameMatches && !purging) confirmPurge(); }} />
+          </div>
+          <DialogFooter>
+            <Button variant="ghost" onClick={closeDialog} disabled={purging}><T>取消</T></Button>
+            <Button variant="destructive" onClick={confirmPurge} disabled={purging || !nameMatches}>
+              {purging && <Loader2 className="mr-1 size-4 animate-spin" />}
+              <T>彻底删除</T>
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </details>
   );
 }
 
@@ -265,12 +500,15 @@ function EmptyClasses({ onCreate }: { onCreate: () => void }) {
 
 /* ── Create-class modal ───────────────────────────────── */
 function CreateClassButton({
-  open, onOpenChange, onCreated,
+  open, onOpenChange, onCreated, count,
 }: {
   open: boolean;
   onOpenChange: (v: boolean) => void;
   onCreated: (cls: { id: string }) => void;
+  count: number;
 }) {
+  const t = useT();
+  const atLimit = count >= MAX_CLASSES;
   const [name, setName] = useState("");
   const [stage, setStage] = useState<"primary" | "junior" | "senior" | "mixed">("mixed");
   const [busy, setBusy] = useState(false);
@@ -294,8 +532,12 @@ function CreateClassButton({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>
-        <button className="rounded-full bg-white/95 text-foreground text-sm font-bold px-4 py-2 hover:bg-white inline-flex items-center gap-1.5">
+        <button
+          disabled={atLimit}
+          title={atLimit ? t(`班级数已达上限 ${MAX_CLASSES} 个，请先归档一个再新建`) : undefined}
+          className="rounded-full bg-white/95 text-foreground text-sm font-bold px-4 py-2 hover:bg-white inline-flex items-center gap-1.5 disabled:opacity-60 disabled:hover:bg-white/95">
           <Plus className="size-4" /> <T>新建班级</T>
+          <span className="text-[11px] font-normal opacity-70 tabular-nums">{count} / {MAX_CLASSES}</span>
         </button>
       </DialogTrigger>
       <DialogContent>

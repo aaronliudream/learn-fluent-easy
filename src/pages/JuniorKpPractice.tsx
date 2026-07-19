@@ -13,6 +13,7 @@ import {
   KP_LEARNED_STREAK,
   type JuniorGrammarErrorReason,
 } from "@/lib/juniorGrammarFsrs";
+import { recordSeniorGrammarMistake } from "@/lib/seniorGrammarMistake";
 import {
   loadKp,
   loadKpMcqPool,
@@ -94,6 +95,8 @@ export default function JuniorKpPractice() {
     const isOk = result.kind === "correct" || result.kind === "acceptable";
 
     void recordSkillAttemptsForQuestion(activeQ.id, isOk);
+    // 错题写入(错→存全选项快照;对→按 source_key 自动移出)。纯新增,失败只 warn,不阻断做题。
+    void recordSeniorGrammarMistake({ question: activeQ, result, isCorrect: isOk, sourceLabel: kp.title });
     if (isOk) {
       awardForCorrect(0, "junior_grammar", activeQ.id, "junior_grammar", result.latencyMs);
     } else {

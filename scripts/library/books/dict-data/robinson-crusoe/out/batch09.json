@@ -1,0 +1,538 @@
+{
+ "batch": 9,
+ "cards": [
+  {
+   "word": "virtue",
+   "ipa": "/ˈvɜːtʃuː/",
+   "pos": "n.",
+   "gloss_cn": "美德、德行",
+   "gloss_en": "a good moral quality in a person",
+   "sense_key": "virtue",
+   "ex_en": "Honesty is an important virtue.",
+   "ex_cn": "诚实是一种重要的美德。"
+  },
+  {
+   "word": "hinder",
+   "ipa": "/ˈhɪndə/",
+   "pos": "v.",
+   "gloss_cn": "阻碍、妨碍",
+   "gloss_en": "to make something harder or slower to happen",
+   "sense_key": "hinder",
+   "ex_en": "The heavy rain hindered our trip.",
+   "ex_cn": "大雨妨碍了我们的行程。"
+  },
+  {
+   "word": "cease",
+   "ipa": "/siːs/",
+   "pos": "v.",
+   "gloss_cn": "停止、终止",
+   "gloss_en": "to stop happening or doing something",
+   "sense_key": "stop",
+   "ex_en": "The noise did not cease all night.",
+   "ex_cn": "那噪音整晚都没停。"
+  },
+  {
+   "word": "settling",
+   "ipa": "/ˈsetlɪŋ/",
+   "pos": "n.",
+   "gloss_cn": "安定下来、定居",
+   "gloss_en": "settling down to a steady life or trade",
+   "sense_key": "settle",
+   "ex_en": "He thought about settling in the town.",
+   "ex_cn": "他考虑在这个镇上定居。"
+  },
+  {
+   "word": "casually",
+   "ipa": "/ˈkæʒuəli/",
+   "pos": "adv.",
+   "gloss_cn": "偶然地、随意地",
+   "gloss_en": "by chance and without any plan",
+   "sense_key": "by-chance",
+   "ex_en": "I casually met an old friend today.",
+   "ex_cn": "我今天偶然遇到一位老友。"
+  },
+  {
+   "word": "consulted",
+   "ipa": "/kənˈsʌltɪd/",
+   "pos": "v.",
+   "gloss_cn": "商量、请教(consult过去式)",
+   "gloss_en": "asked someone for advice or information",
+   "sense_key": "consult",
+   "ex_en": "She consulted the teacher about her plan.",
+   "ex_cn": "她就自己的计划请教了老师。"
+  },
+  {
+   "word": "justly",
+   "ipa": "/ˈdʒʌstli/",
+   "pos": "adv.",
+   "gloss_cn": "公正地、理所应当地",
+   "gloss_en": "in a way that is deserved or fair",
+   "sense_key": "deservedly",
+   "ex_en": "The judge treated everyone justly.",
+   "ex_cn": "法官公正地对待每个人。"
+  },
+  {
+   "word": "overtaken",
+   "ipa": "/ˌəʊvəˈteɪkən/",
+   "pos": "v.",
+   "gloss_cn": "(灾祸)降临、赶上(overtake分词)",
+   "gloss_en": "suddenly caught and struck by something bad",
+   "sense_key": "befall",
+   "ex_en": "They were overtaken by a sudden storm.",
+   "ex_cn": "一场突来的暴风雨降临到他们头上。"
+  },
+  {
+   "word": "capful",
+   "ipa": "/ˈkæpfʊl/",
+   "pos": "n.",
+   "gloss_cn": "一帽子的量(一小阵风)",
+   "gloss_en": "a small puff, as of wind",
+   "sense_key": "capful",
+   "ex_en": "It was only a capful of wind.",
+   "ex_cn": "那只是一小阵风。"
+  },
+  {
+   "word": "punch",
+   "ipa": "/pʌntʃ/",
+   "pos": "n.",
+   "gloss_cn": "潘趣酒(果酒饮料)",
+   "gloss_en": "a warm mixed drink of fruit and spirits",
+   "sense_key": "punch-drink",
+   "ex_en": "They drank a bowl of warm punch.",
+   "ex_cn": "他们喝了一碗温热的潘趣酒。"
+  },
+  {
+   "word": "unconcerned",
+   "ipa": "/ˌʌnkənˈsɜːnd/",
+   "pos": "adj.",
+   "gloss_cn": "不担心的、漠不关心的",
+   "gloss_en": "not worried or troubled",
+   "sense_key": "unworried",
+   "ex_en": "He looked calm and unconcerned.",
+   "ex_cn": "他看上去镇定又毫不担心。"
+  },
+  {
+   "word": "hurries",
+   "ipa": "/ˈhʌriz/",
+   "pos": "n.",
+   "gloss_cn": "慌乱、忙乱",
+   "gloss_en": "a state of rushed confusion",
+   "sense_key": "commotion",
+   "ex_en": "In the first hurries no one knew what to do.",
+   "ex_cn": "在最初的慌乱中没人知道该怎么办。"
+  },
+  {
+   "word": "masts",
+   "ipa": "/mɑːsts/",
+   "pos": "n.",
+   "gloss_cn": "桅杆(mast复数)",
+   "gloss_en": "tall poles that hold a ship's sails",
+   "sense_key": "mast",
+   "ex_en": "The storm broke two of the ship's masts.",
+   "ex_cn": "暴风雨折断了船上两根桅杆。"
+  },
+  {
+   "word": "apparent",
+   "ipa": "/əˈpærənt/",
+   "pos": "adj.",
+   "gloss_cn": "明显的、显而易见的",
+   "gloss_en": "easy to see or understand",
+   "sense_key": "evident",
+   "ex_en": "It was apparent that he was tired.",
+   "ex_cn": "很明显他累了。"
+  },
+  {
+   "word": "staved",
+   "ipa": "/steɪvd/",
+   "pos": "v.",
+   "gloss_cn": "撞破、戳破(stave过去式)",
+   "gloss_en": "broke a hole in something",
+   "sense_key": "stave-in",
+   "ex_en": "The rock staved a hole in the boat.",
+   "ex_cn": "礁石在船上撞破了一个洞。"
+  },
+  {
+   "word": "assurances",
+   "ipa": "/əˈʃʊərənsɪz/",
+   "pos": "n.",
+   "gloss_cn": "保证、担保",
+   "gloss_en": "firm promises meant to make one feel sure",
+   "sense_key": "assurance",
+   "ex_en": "He gave me many assurances of help.",
+   "ex_cn": "他向我做出许多帮助的保证。"
+  },
+  {
+   "word": "agitated",
+   "ipa": "/ˈædʒɪteɪtɪd/",
+   "pos": "adj.",
+   "gloss_cn": "激动不安的",
+   "gloss_en": "upset and unable to stay calm",
+   "sense_key": "agitated",
+   "ex_en": "She grew agitated while waiting for news.",
+   "ex_cn": "等消息时她变得焦躁不安。"
+  },
+  {
+   "word": "owe",
+   "ipa": "/əʊ/",
+   "pos": "v.",
+   "gloss_cn": "把…归功于;欠",
+   "gloss_en": "to credit something to someone, or be in debt",
+   "sense_key": "owe",
+   "ex_en": "I owe my success to my teacher.",
+   "ex_cn": "我把成功归功于我的老师。"
+  },
+  {
+   "word": "integrity",
+   "ipa": "/ɪnˈteɡrəti/",
+   "pos": "n.",
+   "gloss_cn": "正直、诚实",
+   "gloss_en": "the quality of being honest and upright",
+   "sense_key": "integrity",
+   "ex_en": "People trust him for his integrity.",
+   "ex_cn": "人们因他的正直而信任他。"
+  },
+  {
+   "word": "pouring",
+   "ipa": "/ˈpɔːrɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "倾泻、灌入(pour进行式)",
+   "gloss_en": "flowing or sending out in large amounts",
+   "sense_key": "pour",
+   "ex_en": "Water was pouring into the boat.",
+   "ex_cn": "水正涌进船里。"
+  },
+  {
+   "word": "decks",
+   "ipa": "/deks/",
+   "pos": "n.",
+   "gloss_cn": "甲板(deck复数)",
+   "gloss_en": "the flat floors on a ship",
+   "sense_key": "deck",
+   "ex_en": "The sailors ran across the wet decks.",
+   "ex_cn": "水手们跑过湿滑的甲板。"
+  },
+  {
+   "word": "hacking",
+   "ipa": "/ˈhækɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "乱砍、劈(hack进行式)",
+   "gloss_en": "cutting roughly with heavy blows",
+   "sense_key": "hack",
+   "ex_en": "He was hacking at the thick branch.",
+   "ex_cn": "他正猛砍那根粗树枝。"
+  },
+  {
+   "word": "plied",
+   "ipa": "/plaɪd/",
+   "pos": "v.",
+   "gloss_cn": "猛攻、连续使用(ply过去式)",
+   "gloss_en": "kept attacking or supplying with something",
+   "sense_key": "ply",
+   "ex_en": "They plied the enemy with arrows.",
+   "ex_cn": "他们向敌人连连放箭。"
+  },
+  {
+   "word": "nimble",
+   "ipa": "/ˈnɪmbl/",
+   "pos": "adj.",
+   "gloss_cn": "敏捷的、灵活的",
+   "gloss_en": "able to move quickly and lightly",
+   "sense_key": "nimble",
+   "ex_en": "The cat is quick and nimble.",
+   "ex_cn": "这只猫又快又灵活。"
+  },
+  {
+   "word": "cruise",
+   "ipa": "/kruːz/",
+   "pos": "n.",
+   "gloss_cn": "巡航、海上巡游",
+   "gloss_en": "a voyage sailing about at sea",
+   "sense_key": "cruise",
+   "ex_en": "The ship went out on a long cruise.",
+   "ex_cn": "那艘船出海进行长途巡航。"
+  },
+  {
+   "word": "fitting",
+   "ipa": "/ˈfɪtɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "装备、配置(fit out)",
+   "gloss_en": "getting a ship ready with what it needs",
+   "sense_key": "fit-out",
+   "ex_en": "They were fitting out the ship for a voyage.",
+   "ex_cn": "他们正为航行装备这艘船。"
+  },
+  {
+   "word": "oftener",
+   "ipa": "/ˈɒf(t)ənə/",
+   "pos": "adv.",
+   "gloss_cn": "更常、更频繁(often比较级)",
+   "gloss_en": "more often",
+   "sense_key": "more-often",
+   "ex_en": "He visits us oftener than before.",
+   "ex_cn": "他比以前更常来看我们。"
+  },
+  {
+   "word": "insomuch",
+   "ipa": "/ˌɪnsəˈmʌtʃ/",
+   "pos": "adv.",
+   "gloss_cn": "到这种程度、以致",
+   "gloss_en": "to such a degree that",
+   "sense_key": "insomuch",
+   "ex_en": "It rained hard, insomuch that we stayed home.",
+   "ex_cn": "雨下得很大,以致我们待在家里。"
+  },
+  {
+   "word": "laboured",
+   "ipa": "/ˈleɪbəd/",
+   "pos": "v.",
+   "gloss_cn": "费力干、吃力地做(labour过去式)",
+   "gloss_en": "worked hard with effort",
+   "sense_key": "labour",
+   "ex_en": "They laboured all day in the field.",
+   "ex_cn": "他们在田里辛苦干了一整天。"
+  },
+  {
+   "word": "conveyed",
+   "ipa": "/kənˈveɪd/",
+   "pos": "v.",
+   "gloss_cn": "搬运、运送(convey过去式)",
+   "gloss_en": "carried something from one place to another",
+   "sense_key": "convey",
+   "ex_en": "He conveyed the boxes to the boat.",
+   "ex_cn": "他把箱子搬到船上。"
+  },
+  {
+   "word": "beeswax",
+   "ipa": "/ˈbiːzwæks/",
+   "pos": "n.",
+   "gloss_cn": "蜂蜡",
+   "gloss_en": "the wax made by bees",
+   "sense_key": "beeswax",
+   "ex_en": "She made a candle out of beeswax.",
+   "ex_cn": "她用蜂蜡做了一支蜡烛。"
+  },
+  {
+   "word": "southerly",
+   "ipa": "/ˈsʌðəli/",
+   "pos": "adj.",
+   "gloss_cn": "南来的、朝南的",
+   "gloss_en": "coming from the south",
+   "sense_key": "southerly",
+   "ex_en": "A southerly wind pushed the ship north.",
+   "ex_cn": "一阵南风把船推向北方。"
+  },
+  {
+   "word": "helm",
+   "ipa": "/helm/",
+   "pos": "n.",
+   "gloss_cn": "舵、船舵",
+   "gloss_en": "the wheel or handle that steers a ship",
+   "sense_key": "helm",
+   "ex_en": "The captain stood at the helm.",
+   "ex_cn": "船长站在舵旁掌舵。"
+  },
+  {
+   "word": "wits",
+   "ipa": "/wɪts/",
+   "pos": "n.",
+   "gloss_cn": "头脑、机智",
+   "gloss_en": "one's clear mind or quick thinking",
+   "sense_key": "wits",
+   "ex_en": "He used his wits to escape.",
+   "ex_cn": "他用机智逃脱了。"
+  },
+  {
+   "word": "howlings",
+   "ipa": "/ˈhaʊlɪŋz/",
+   "pos": "n.",
+   "gloss_cn": "嚎叫声",
+   "gloss_en": "long loud cries of animals",
+   "sense_key": "howl",
+   "ex_en": "The howlings of wild beasts filled the night.",
+   "ex_cn": "野兽的嚎叫声充满了夜晚。"
+  },
+  {
+   "word": "despatched",
+   "ipa": "/dɪˈspætʃt/",
+   "pos": "v.",
+   "gloss_cn": "派遣;结果掉、杀死(dispatch过去式)",
+   "gloss_en": "sent off, or killed quickly",
+   "sense_key": "dispatch",
+   "ex_en": "He despatched the wounded beast with one shot.",
+   "ex_cn": "他一枪结果了那头受伤的野兽。"
+  },
+  {
+   "word": "oblige",
+   "ipa": "/əˈblaɪdʒ/",
+   "pos": "v.",
+   "gloss_cn": "施惠于、帮…的忙",
+   "gloss_en": "to do a kind favour for someone",
+   "sense_key": "oblige-favour",
+   "ex_en": "He was glad to oblige his new friends.",
+   "ex_cn": "他很乐意帮新朋友的忙。"
+  },
+  {
+   "word": "charitable",
+   "ipa": "/ˈtʃærɪtəbl/",
+   "pos": "adj.",
+   "gloss_cn": "仁慈的、慷慨的",
+   "gloss_en": "kind and generous to others",
+   "sense_key": "charitable",
+   "ex_en": "She is charitable to the poor.",
+   "ex_cn": "她对穷人很慷慨仁慈。"
+  },
+  {
+   "word": "loth",
+   "ipa": "/ləʊθ/",
+   "pos": "adj.",
+   "gloss_cn": "不情愿的、不愿意的",
+   "gloss_en": "unwilling to do something",
+   "sense_key": "loath",
+   "ex_en": "I was loth to leave my home.",
+   "ex_cn": "我不情愿离开自己的家。"
+  },
+  {
+   "word": "faithfully",
+   "ipa": "/ˈfeɪθfəli/",
+   "pos": "adv.",
+   "gloss_cn": "忠实地、如约地",
+   "gloss_en": "in a loyal and reliable way",
+   "sense_key": "faithfully",
+   "ex_en": "He faithfully kept his promise.",
+   "ex_cn": "他忠实地信守了诺言。"
+  },
+  {
+   "word": "obligation",
+   "ipa": "/ˌɒblɪˈɡeɪʃn/",
+   "pos": "n.",
+   "gloss_cn": "契约、义务",
+   "gloss_en": "a binding written promise or duty",
+   "sense_key": "obligation",
+   "ex_en": "He signed an obligation to pay the money.",
+   "ex_cn": "他签了一份付款的契约。"
+  },
+  {
+   "word": "punctually",
+   "ipa": "/ˈpʌŋktʃuəli/",
+   "pos": "adv.",
+   "gloss_cn": "准时地",
+   "gloss_en": "at the exact arranged time",
+   "sense_key": "punctually",
+   "ex_en": "The train arrived punctually at nine.",
+   "ex_cn": "火车九点准时到达。"
+  },
+  {
+   "word": "hundredweight",
+   "ipa": "/ˈhʌndrədweɪt/",
+   "pos": "n.",
+   "gloss_cn": "英担(重量单位)",
+   "gloss_en": "an old unit of weight",
+   "sense_key": "hundredweight",
+   "ex_en": "The sack weighed nearly a hundredweight.",
+   "ex_cn": "那袋子重近一英担。"
+  },
+  {
+   "word": "agent",
+   "ipa": "/ˈeɪdʒənt/",
+   "pos": "n.",
+   "gloss_cn": "(一手促成的)行为者、肇因者;代理人",
+   "gloss_en": "the one who brings something about; also a representative",
+   "sense_key": "agent-representative",
+   "ex_en": "He left his money with a trusted agent.",
+   "ex_cn": "他把钱交给一位可信的代理人。"
+  },
+  {
+   "word": "impetuosity",
+   "ipa": "/ɪmˌpetʃuˈɒsəti/",
+   "pos": "n.",
+   "gloss_cn": "鲁莽、猛烈",
+   "gloss_en": "sudden violent force or rashness",
+   "sense_key": "impetuosity",
+   "ex_en": "His impetuosity often led to trouble.",
+   "ex_cn": "他的鲁莽常常惹来麻烦。"
+  },
+  {
+   "word": "rowed",
+   "ipa": "/rəʊd/",
+   "pos": "v.",
+   "gloss_cn": "划(船)(row过去式)",
+   "gloss_en": "moved a boat with oars",
+   "sense_key": "row",
+   "ex_en": "They rowed the boat toward the shore.",
+   "ex_cn": "他们把船划向岸边。"
+  },
+  {
+   "word": "pilot",
+   "ipa": "/ˈpaɪlət/",
+   "pos": "n./v.",
+   "gloss_cn": "领航员、舵手;(动)引导、驾驭",
+   "gloss_en": "a ship's guide; also to steer or guide",
+   "sense_key": "pilot",
+   "ex_en": "A pilot guided the ship into port.",
+   "ex_cn": "一名领航员把船引入港口。"
+  },
+  {
+   "word": "wherein",
+   "ipa": "/weərˈɪn/",
+   "pos": "adv.",
+   "gloss_cn": "在其中、在那时",
+   "gloss_en": "in which",
+   "sense_key": "wherein",
+   "ex_en": "This is the room wherein he was born.",
+   "ex_cn": "这就是他出生的那间屋子。"
+  },
+  {
+   "word": "reflecting",
+   "ipa": "/rɪˈflektɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "沉思、反省(reflect进行式)",
+   "gloss_en": "thinking deeply about something",
+   "sense_key": "reflect",
+   "ex_en": "He sat by the fire, reflecting on his day.",
+   "ex_cn": "他坐在火边,回想着这一天。"
+  },
+  {
+   "word": "sustenance",
+   "ipa": "/ˈsʌstɪnəns/",
+   "pos": "n.",
+   "gloss_cn": "食物、营养",
+   "gloss_en": "food that keeps one alive",
+   "sense_key": "sustenance",
+   "ex_en": "They found little sustenance on the island.",
+   "ex_cn": "他们在岛上几乎找不到食物。"
+  }
+ ],
+ "skipped": [
+  "embarrassed(太基础)",
+  "disasters(太基础)",
+  "affect(太基础)",
+  "instructions(太基础)",
+  "disappointments(太基础)",
+  "expense(太基础)",
+  "friendship(太基础)",
+  "surround(太基础)",
+  "footsteps(太基础)",
+  "eighty(数字)",
+  "ingenio(外来专名词)",
+  "compare(太基础)",
+  "valuable(太基础)",
+  "perform(太基础)",
+  "miracle(太基础)"
+ ],
+ "suspect": [
+  {
+   "word": "agent",
+   "gloss_cn": "代理人、代办",
+   "ctx": "still to be the wilful agent of all my own miseries",
+   "issue": "书中首次出处是\"the wilful agent of all my own miseries\",此处 agent 指\"一手造成者/施动者\",与现释义\"代理人、代办\"(商务代理)对不上,回读不通",
+   "suggest": "增补\"(某事的)行为者、一手造成者\"义项,如\"我一手造成了自己所有的苦难\""
+  },
+  {
+   "word": "pilot",
+   "gloss_cn": "领航员、舵手",
+   "ctx": "swimming, to preserve my breathing, and pilot myself towards the shore",
+   "issue": "书中首次出处 pilot 作动词\"引导/驾驭(自己游向岸边)\",而现卡 pos=n.、释义\"领航员、舵手\"是名词义,词性与用法均不符",
+   "suggest": "增补动词义\"引导、驾驭(使朝某方向前进)\",pos 补 v."
+  }
+ ]
+}

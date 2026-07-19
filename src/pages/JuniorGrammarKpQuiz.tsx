@@ -4,6 +4,7 @@ import BackLink from "@/components/BackLink";
 import { ArrowLeft, Check, X, Loader2, Sparkles, Trophy, RotateCw } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
+import { recordZoneMistake } from "@/lib/recordZoneMistake";
 
 /**
  * 初中「按考点抽题」练习页 —— 仿 GaokaoGrammarQuiz,但用初中考点。
@@ -111,6 +112,18 @@ export default function JuniorGrammarKpQuiz() {
     setPicked(letter);
     const isCorrect = (cur.correct_answer || "").trim().toUpperCase() === letter;
     setScore((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
+    // 块②:补写统一错题本(此前只写 ai_question_attempts)。按字母对齐 A/B/C/D;做对自动移出。
+    void recordZoneMistake({
+      module: "senior_grammar",
+      sourceKeyBase: cur.id,
+      isCorrect,
+      stem: cur.stem,
+      options: [cur.option_a, cur.option_b, cur.option_c, cur.option_d].map((o) => o ?? ""),
+      correctIdx: LETTERS.indexOf((cur.correct_answer || "").trim().toUpperCase() as (typeof LETTERS)[number]),
+      pickedIdx: LETTERS.indexOf(letter as (typeof LETTERS)[number]),
+      explanation: cur.explanation,
+      sourceLabel: point.title,
+    });
     try {
       // ai_question_attempts 未在 types.ts(新表),做 any 转义;user_id 走列默认 auth.uid()。
       await (supabase as unknown as { from: (t: string) => { insert: (v: unknown) => Promise<{ error: unknown }> } })

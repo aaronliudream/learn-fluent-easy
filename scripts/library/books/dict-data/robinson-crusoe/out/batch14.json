@@ -1,0 +1,513 @@
+{
+ "batch": 14,
+ "cards": [
+  {
+   "word": "dart",
+   "ipa": "/dɑːt/",
+   "pos": "n.",
+   "gloss_cn": "标枪;投枪",
+   "gloss_en": "a light spear thrown by hand",
+   "sense_key": "spear",
+   "ex_en": "The hunter threw a sharp dart at the fish.",
+   "ex_cn": "猎人朝鱼投出一支锋利的标枪。"
+  },
+  {
+   "word": "slung",
+   "ipa": "/slʌŋ/",
+   "pos": "v.",
+   "gloss_cn": "用绳套住;挂(sling过去式)",
+   "gloss_en": "looped a rope around to lift or carry",
+   "sense_key": "sling",
+   "ex_en": "He slung a rope around the heavy box.",
+   "ex_cn": "他用绳子把那口沉重的箱子套住。"
+  },
+  {
+   "word": "leopard",
+   "ipa": "/ˈlepəd/",
+   "pos": "n.",
+   "gloss_cn": "豹",
+   "gloss_en": "a large wild spotted cat",
+   "sense_key": "leopard",
+   "ex_en": "A leopard can run very fast.",
+   "ex_cn": "豹能跑得很快。"
+  },
+  {
+   "word": "offing",
+   "ipa": "/ˈɒfɪŋ/",
+   "pos": "n.",
+   "gloss_cn": "远处海面",
+   "gloss_en": "the distant part of the sea in view",
+   "sense_key": "offing",
+   "ex_en": "A ship appeared in the offing at dawn.",
+   "ex_cn": "黎明时远处海面上出现了一艘船。"
+  },
+  {
+   "word": "doubling",
+   "ipa": "/ˈdʌblɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "绕过(海角)",
+   "gloss_en": "sailing around a cape or point",
+   "sense_key": "round_a_point",
+   "ex_en": "The boat was doubling the rocky point slowly.",
+   "ex_cn": "小船正缓缓绕过那处礁石海角。"
+  },
+  {
+   "word": "waft",
+   "ipa": "/wɒft/",
+   "pos": "n.",
+   "gloss_cn": "挥旗示意;信号",
+   "gloss_en": "a wave of a flag as a signal",
+   "sense_key": "signal_wave",
+   "ex_en": "The sailor made a waft with his flag for help.",
+   "ex_cn": "水手挥动旗子发出求救信号。"
+  },
+  {
+   "word": "tittle",
+   "ipa": "/ˈtɪtl/",
+   "pos": "n.",
+   "gloss_cn": "一丝一毫",
+   "gloss_en": "a tiny amount; the smallest detail",
+   "sense_key": "tiny_amount",
+   "ex_en": "He did not change a tittle of the plan.",
+   "ex_cn": "他对计划一丝一毫也没改动。"
+  },
+  {
+   "word": "planter",
+   "ipa": "/ˈplɑːntə/",
+   "pos": "n.",
+   "gloss_cn": "种植园主",
+   "gloss_en": "an owner of a large farm estate",
+   "sense_key": "plantation_owner",
+   "ex_en": "The planter grew sugar on a large farm.",
+   "ex_cn": "那个种植园主在一大片农田上种甘蔗。"
+  },
+  {
+   "word": "remitted",
+   "ipa": "/rɪˈmɪtɪd/",
+   "pos": "v.",
+   "gloss_cn": "汇(款)(remit过去式)",
+   "gloss_en": "sent money to someone",
+   "sense_key": "remit_money",
+   "ex_en": "He remitted the money to his family last week.",
+   "ex_cn": "他上周把钱汇给了家人。"
+  },
+  {
+   "word": "canes",
+   "ipa": "/keɪnz/",
+   "pos": "n.",
+   "gloss_cn": "甘蔗(cane复数)",
+   "gloss_en": "tall stems of the sugar plant",
+   "sense_key": "sugar_cane",
+   "ex_en": "They cut the tall canes to make sugar.",
+   "ex_cn": "他们砍下高高的甘蔗来制糖。"
+  },
+  {
+   "word": "unjustly",
+   "ipa": "/ʌnˈdʒʌstli/",
+   "pos": "adv.",
+   "gloss_cn": "不公正地",
+   "gloss_en": "in an unfair way",
+   "sense_key": "unfairly",
+   "ex_en": "The boy was unjustly blamed for the mess.",
+   "ex_cn": "那个男孩因这团乱被不公正地责怪。"
+  },
+  {
+   "word": "miscarry",
+   "ipa": "/mɪsˈkæri/",
+   "pos": "v.",
+   "gloss_cn": "失败;落空",
+   "gloss_en": "fail; go wrong",
+   "sense_key": "fail",
+   "ex_en": "Their plan might miscarry without more money.",
+   "ex_cn": "没有更多钱，他们的计划可能落空。"
+  },
+  {
+   "word": "recourse",
+   "ipa": "/rɪˈkɔːs/",
+   "pos": "n.",
+   "gloss_cn": "求助;依靠",
+   "gloss_en": "turning to someone for help",
+   "sense_key": "resort_to_help",
+   "ex_en": "She had no recourse but to ask for help.",
+   "ex_cn": "她别无办法，只能求助。"
+  },
+  {
+   "word": "gentlewoman",
+   "ipa": "/ˈdʒentlwʊmən/",
+   "pos": "n.",
+   "gloss_cn": "有教养的女子;贵妇",
+   "gloss_en": "a woman of good birth and manners",
+   "sense_key": "lady",
+   "ex_en": "The gentlewoman spoke kindly to every guest.",
+   "ex_cn": "那位有教养的女子对每位客人都很和气。"
+  },
+  {
+   "word": "utensils",
+   "ipa": "/juːˈtenslz/",
+   "pos": "n.",
+   "gloss_cn": "器皿;用具(utensil复数)",
+   "gloss_en": "tools and containers for daily use",
+   "sense_key": "implements",
+   "ex_en": "She washed the kitchen utensils after dinner.",
+   "ex_cn": "晚饭后她把厨房用具都洗了。"
+  },
+  {
+   "word": "baize",
+   "ipa": "/beɪz/",
+   "pos": "n.",
+   "gloss_cn": "台面粗呢",
+   "gloss_en": "coarse woolen cloth",
+   "sense_key": "baize",
+   "ex_en": "The table was covered with green baize.",
+   "ex_cn": "那张桌子铺着绿色的台面呢。"
+  },
+  {
+   "word": "oftentimes",
+   "ipa": "/ˈɒfntaɪmz/",
+   "pos": "adv.",
+   "gloss_cn": "常常",
+   "gloss_en": "often; frequently",
+   "sense_key": "often",
+   "ex_en": "Oftentimes he walks to school in the rain.",
+   "ex_cn": "他常常冒雨走路去上学。"
+  },
+  {
+   "word": "wilful",
+   "ipa": "/ˈwɪlfl/",
+   "pos": "adj.",
+   "gloss_cn": "任性的;固执的",
+   "gloss_en": "stubbornly set on having one's own way",
+   "sense_key": "stubborn",
+   "ex_en": "The wilful child refused to listen to anyone.",
+   "ex_cn": "那个任性的孩子谁的话都不听。"
+  },
+  {
+   "word": "miscarriages",
+   "ipa": "/mɪsˈkærɪdʒɪz/",
+   "pos": "n.",
+   "gloss_cn": "失误;差错(复数)",
+   "gloss_en": "mistakes; things that went wrong",
+   "sense_key": "mistake",
+   "ex_en": "Many small miscarriages ruined the whole trip.",
+   "ex_cn": "许多小差错毁掉了整趟旅程。"
+  },
+  {
+   "word": "concurred",
+   "ipa": "/kənˈkɜːd/",
+   "pos": "v.",
+   "gloss_cn": "一致;同时发生(concur过去式)",
+   "gloss_en": "agreed or happened at the same time",
+   "sense_key": "concur",
+   "ex_en": "Everyone concurred with the teacher's idea.",
+   "ex_cn": "大家都同意老师的想法。"
+  },
+  {
+   "word": "thriving",
+   "ipa": "/ˈθraɪvɪŋ/",
+   "pos": "adj.",
+   "gloss_cn": "兴旺的",
+   "gloss_en": "growing well; prosperous",
+   "sense_key": "prosperous",
+   "ex_en": "They run a thriving little shop in town.",
+   "ex_cn": "他们在镇上经营着一家兴旺的小店。"
+  },
+  {
+   "word": "rash",
+   "ipa": "/ræʃ/",
+   "pos": "adj.",
+   "gloss_cn": "轻率的",
+   "gloss_en": "acting too quickly without thought",
+   "sense_key": "reckless",
+   "ex_en": "Do not make a rash decision when angry.",
+   "ex_cn": "生气时别做轻率的决定。"
+  },
+  {
+   "word": "contracted",
+   "ipa": "/kənˈtræktɪd/",
+   "pos": "v.",
+   "gloss_cn": "结识;缔结(contract过去式)",
+   "gloss_en": "formed or entered into a bond",
+   "sense_key": "form_bond",
+   "ex_en": "He contracted a friendship with the new boy.",
+   "ex_cn": "他与那个新来的男孩结下了友谊。"
+  },
+  {
+   "word": "discourses",
+   "ipa": "/ˈdɪskɔːsɪz/",
+   "pos": "n.",
+   "gloss_cn": "交谈;谈话(复数)",
+   "gloss_en": "talks; conversations",
+   "sense_key": "conversation",
+   "ex_en": "Their long discourses lasted late into the night.",
+   "ex_cn": "他们的长谈一直持续到深夜。"
+  },
+  {
+   "word": "beads",
+   "ipa": "/biːdz/",
+   "pos": "n.",
+   "gloss_cn": "珠子(bead复数)",
+   "gloss_en": "small pierced balls for stringing",
+   "sense_key": "bead",
+   "ex_en": "She wore a string of blue beads.",
+   "ex_cn": "她戴着一串蓝色的珠子。"
+  },
+  {
+   "word": "discoursed",
+   "ipa": "/dɪsˈkɔːst/",
+   "pos": "v.",
+   "gloss_cn": "谈论",
+   "gloss_en": "talked about at length",
+   "sense_key": "talk_about",
+   "ex_en": "They discoursed about the long voyage ahead.",
+   "ex_cn": "他们谈论着前方漫长的航程。"
+  },
+  {
+   "word": "supercargo",
+   "ipa": "/ˈsuːpəkɑːɡəʊ/",
+   "pos": "n.",
+   "gloss_cn": "押运员",
+   "gloss_en": "an officer who manages a ship's cargo",
+   "sense_key": "supercargo",
+   "ex_en": "The supercargo watched over the goods on board.",
+   "ex_cn": "押运员在船上看管着货物。"
+  },
+  {
+   "word": "writings",
+   "ipa": "/ˈraɪtɪŋz/",
+   "pos": "n.",
+   "gloss_cn": "字据;文书(复数)",
+   "gloss_en": "written agreements; documents",
+   "sense_key": "legal_document",
+   "ex_en": "They signed the writings before the journey.",
+   "ex_cn": "出发前他们签下了那些字据。"
+  },
+  {
+   "word": "heir",
+   "ipa": "/eə/",
+   "pos": "n.",
+   "gloss_cn": "继承人",
+   "gloss_en": "one who inherits property",
+   "sense_key": "heir",
+   "ex_en": "The old man named his son as his heir.",
+   "ex_cn": "老人指定儿子做他的继承人。"
+  },
+  {
+   "word": "obliging",
+   "ipa": "/əˈblaɪdʒɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "(oblige 的)使负有义务、迫使;施惠于",
+   "gloss_en": "putting under an obligation; doing a favour for",
+   "sense_key": "helpful",
+   "ex_en": "The obliging waiter brought us more water.",
+   "ex_cn": "那位乐于助人的服务员给我们又添了水。"
+  },
+  {
+   "word": "rebel",
+   "ipa": "/ˈrebl/",
+   "pos": "n.",
+   "gloss_cn": "反叛者;造反者",
+   "gloss_en": "one who fights against authority",
+   "sense_key": "rebel",
+   "ex_en": "The young rebel refused to obey the rules.",
+   "ex_cn": "那个年轻的反叛者拒绝服从规矩。"
+  },
+  {
+   "word": "charts",
+   "ipa": "/tʃɑːts/",
+   "pos": "n.",
+   "gloss_cn": "海图(复数)",
+   "gloss_en": "maps of the sea for navigation",
+   "sense_key": "sea_chart",
+   "ex_en": "The captain studied the sea charts carefully.",
+   "ex_cn": "船长仔细研究着海图。"
+  },
+  {
+   "word": "indraft",
+   "ipa": "/ˈɪndrɑːft/",
+   "pos": "n.",
+   "gloss_cn": "向岸流;内流",
+   "gloss_en": "a current flowing inward toward shore",
+   "sense_key": "inflow_current",
+   "ex_en": "The strong indraft pulled the boat toward shore.",
+   "ex_cn": "强劲的向岸流把小船拉向岸边。"
+  },
+  {
+   "word": "dashing",
+   "ipa": "/ˈdæʃɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "猛撞",
+   "gloss_en": "striking violently against something",
+   "sense_key": "smash_against",
+   "ex_en": "The waves kept dashing against the rocks.",
+   "ex_cn": "海浪不断猛撞在礁石上。"
+  },
+  {
+   "word": "senseless",
+   "ipa": "/ˈsensləs/",
+   "pos": "adj.",
+   "gloss_cn": "失去知觉的",
+   "gloss_en": "unconscious",
+   "sense_key": "unconscious",
+   "ex_en": "The fall left him senseless on the ground.",
+   "ex_cn": "那一摔让他失去知觉倒在地上。"
+  },
+  {
+   "word": "strangled",
+   "ipa": "/ˈstræŋɡld/",
+   "pos": "v.",
+   "gloss_cn": "使窒息;勒(strangle过去式)",
+   "gloss_en": "choked so as to stop breathing",
+   "sense_key": "choke",
+   "ex_en": "The tight collar nearly strangled the dog.",
+   "ex_cn": "那紧紧的项圈差点勒得狗喘不过气。"
+  },
+  {
+   "word": "clambered",
+   "ipa": "/ˈklæmbəd/",
+   "pos": "v.",
+   "gloss_cn": "攀爬(clamber过去式)",
+   "gloss_en": "climbed awkwardly using hands and feet",
+   "sense_key": "scramble_up",
+   "ex_en": "The boys clambered up the steep hill.",
+   "ex_cn": "男孩们攀爬上陡峭的山坡。"
+  },
+  {
+   "word": "transports",
+   "ipa": "/ˈtrænspɔːts/",
+   "pos": "n.",
+   "gloss_cn": "强烈情感;狂喜(复数)",
+   "gloss_en": "strong bursts of overwhelming feeling",
+   "sense_key": "ecstasy",
+   "ex_en": "She was in transports of joy at the news.",
+   "ex_cn": "听到消息她欣喜若狂。"
+  },
+  {
+   "word": "reprieve",
+   "ipa": "/rɪˈpriːv/",
+   "pos": "n.",
+   "gloss_cn": "缓刑;暂缓",
+   "gloss_en": "a delay of a punishment",
+   "sense_key": "reprieve",
+   "ex_en": "The rain gave the dry fields a short reprieve.",
+   "ex_cn": "这场雨给干旱的田地带来短暂的喘息。"
+  },
+  {
+   "word": "contemplation",
+   "ipa": "/ˌkɒntəmˈpleɪʃn/",
+   "pos": "n.",
+   "gloss_cn": "沉思;凝视",
+   "gloss_en": "deep thought; quiet reflection",
+   "sense_key": "contemplation",
+   "ex_en": "He sat by the lake in quiet contemplation.",
+   "ex_cn": "他坐在湖边静静沉思。"
+  },
+  {
+   "word": "froth",
+   "ipa": "/frɒθ/",
+   "pos": "n.",
+   "gloss_cn": "泡沫",
+   "gloss_en": "a mass of small bubbles; foam",
+   "sense_key": "foam",
+   "ex_en": "White froth covered the top of the wave.",
+   "ex_cn": "白色的泡沫覆在浪尖上。"
+  },
+  {
+   "word": "fir",
+   "ipa": "/fɜː/",
+   "pos": "n.",
+   "gloss_cn": "冷杉",
+   "gloss_en": "a tall evergreen cone-bearing tree",
+   "sense_key": "fir",
+   "ex_en": "A tall fir grew beside the old house.",
+   "ex_cn": "一棵高高的冷杉长在老屋旁。"
+  },
+  {
+   "word": "renewing",
+   "ipa": "/rɪˈnjuːɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "重新引起;更新",
+   "gloss_en": "bringing back or starting again",
+   "sense_key": "renew",
+   "ex_en": "The sad song kept renewing her old grief.",
+   "ex_cn": "那首悲伤的歌不断重新勾起她旧日的伤痛。"
+  },
+  {
+   "word": "topmast",
+   "ipa": "/ˈtɒpmɑːst/",
+   "pos": "n.",
+   "gloss_cn": "中桅",
+   "gloss_en": "the second section of a ship's mast",
+   "sense_key": "topmast",
+   "ex_en": "The sailor climbed up to the topmast.",
+   "ex_cn": "水手爬上了中桅。"
+  },
+  {
+   "word": "gallons",
+   "ipa": "/ˈɡælənz/",
+   "pos": "n.",
+   "gloss_cn": "加仑(容量单位,复数)",
+   "gloss_en": "units of liquid measure",
+   "sense_key": "gallon",
+   "ex_en": "We filled the barrel with ten gallons of water.",
+   "ex_cn": "我们往桶里灌了十加仑水。"
+  },
+  {
+   "word": "endanger",
+   "ipa": "/ɪnˈdeɪndʒə/",
+   "pos": "v.",
+   "gloss_cn": "危及",
+   "gloss_en": "put in danger",
+   "sense_key": "endanger",
+   "ex_en": "Driving too fast can endanger everyone.",
+   "ex_cn": "开车太快会危及所有人。"
+  },
+  {
+   "word": "impracticable",
+   "ipa": "/ɪmˈpræktɪkəbl/",
+   "pos": "adj.",
+   "gloss_cn": "行不通的",
+   "gloss_en": "not able to be done",
+   "sense_key": "unworkable",
+   "ex_en": "The plan was too costly and quite impracticable.",
+   "ex_cn": "这个计划花费太高，根本行不通。"
+  },
+  {
+   "word": "chequered",
+   "ipa": "/ˈtʃekəd/",
+   "pos": "adj.",
+   "gloss_cn": "充满变故的",
+   "gloss_en": "marked by many ups and downs",
+   "sense_key": "varied_fortunes",
+   "ex_en": "He had a chequered life full of ups and downs.",
+   "ex_cn": "他一生充满变故，起起落落。"
+  }
+ ],
+ "skipped": [
+  "male(太基础)",
+  "price(太基础)",
+  "purchased(太基础)",
+  "advised(太基础)",
+  "purchase(太基础)",
+  "projects(太基础)",
+  "grains(太基础)",
+  "formal(太基础)",
+  "universal(太基础)",
+  "twelfth(太基础)",
+  "commonly(太基础)",
+  "consult(太基础)",
+  "debate(太基础)",
+  "separating(太基础)",
+  "level(太基础)",
+  "ndly(缩写残渣)",
+  "rdly(缩写残渣)"
+ ],
+ "suspect": [
+  {
+   "word": "obliging",
+   "gloss_cn": "乐于助人的",
+   "ctx": "...making the captain who had saved my life...my universal heir, but obliging him to dispose of my effects as I had directed in my will.",
+   "issue": "书中是动词 oblige「使负有义务、强制要求(他照遗嘱处置财产)」,现释义「乐于助人的」是形容词最常见义,回读 obliging him to dispose 完全不通",
+   "suggest": "补动词义「使负有义务;强制要求」,或按 ctx 出义单列一卡(oblige v. 强制;责成)"
+  }
+ ]
+}

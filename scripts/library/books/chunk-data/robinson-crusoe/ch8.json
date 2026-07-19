@@ -1,0 +1,95 @@
+{
+  "chapter": 8,
+  "chunks": [
+    { "head": "for the best", "gloss": "(结果)是好事、往好处想", "ipa": "/fɔːr ðə best/",
+      "note": "常说 it's all for the best = 表面不好、其实是好事一桩。",
+      "literal": [{"word":"for","meaning_cn":"朝、往","note_cn":"非'为了'的目的义,此处表'朝好的方向'"},{"word":"the","meaning_cn":"(定冠词)"},{"word":"best","meaning_cn":"最好的结果"}],
+      "ex_en": "Don't be sad—maybe it's all for the best.", "ex_cn": "别难过——也许这一切都是好事。",
+      "occ": [[965,"for the best"]] },
+
+    { "head": "meet with", "gloss": "遇到、碰到、遭遇", "ipa": "/miːt wɪð/",
+      "note": "meet with sth = 偶然遇到某事物(也可指遭遇困难)。",
+      "literal": [{"word":"met","meaning_cn":"遇见(meet 的过去式)"},{"word":"with","meaning_cn":"与…"}],
+      "ex_en": "On the trip we met with many kind people.", "ex_cn": "旅途中我们遇到了很多好心人。",
+      "occ": [[973,"met with"]] },
+
+    { "head": "at last", "gloss": "终于、最后", "ipa": "/æt lɑːst/",
+      "note": "at last = 经过漫长等待后终于。",
+      "literal": [{"word":"at","meaning_cn":"在…时候"},{"word":"last","meaning_cn":"最后"}],
+      "ex_en": "After hours of waiting, the bus came at last.", "ex_cn": "等了几个小时,公交车终于来了。",
+      "occ": [[982,"at last"],[970,"at last"]] },
+
+    { "head": "be obliged to", "gloss": "不得不、被迫、有义务", "ipa": "/əˈblaɪdʒd tuː/",
+      "note": "be obliged to do sth = 出于必要或责任而不得不做。",
+      "literal": [{"word":"obliged","meaning_cn":"被迫的、有义务的","note_cn":"非'感激'义,此处'被迫、有责任'"},{"word":"to","meaning_cn":"去(做)"}],
+      "ex_en": "We were obliged to leave early because of the rain.", "ex_cn": "因为下雨,我们不得不提早离开。",
+      "occ": [[982,"obliged to"]] },
+
+    { "head": "take hold of", "gloss": "抓住、握住", "ipa": "/teɪk həʊld əv/",
+      "note": "take hold of sth = 用手抓紧某物。",
+      "literal": [{"word":"take","meaning_cn":"抓、加以"},{"word":"hold","meaning_cn":"抓握","note_cn":"此处为名词'抓、握'"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "She took hold of the rope and climbed up.", "ex_cn": "她抓住绳子往上爬。",
+      "occ": [[983,"take hold of"]] },
+
+    { "head": "be acquainted with", "gloss": "熟悉、认识", "ipa": "/əˈkweɪntɪd wɪð/",
+      "note": "be acquainted with sb/sth = 对某人或某物已经熟悉。",
+      "literal": [{"word":"acquainted","meaning_cn":"熟悉的"},{"word":"with","meaning_cn":"与…"}],
+      "ex_en": "I am not well acquainted with this city yet.", "ex_cn": "我对这座城市还不太熟悉。",
+      "occ": [[988,"acquainted with"]] },
+
+    { "head": "a great deal of", "gloss": "大量的、很多的", "ipa": "/ə ɡreɪt diːl əv/",
+      "note": "a great deal of + 不可数名词 = 很多。",
+      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"很大的"},{"word":"deal","meaning_cn":"量","note_cn":"此处为名词'数量'"},{"word":"of","meaning_cn":"的"}],
+      "ex_en": "He spent a great deal of money on books.", "ex_cn": "他在书上花了很多钱。",
+      "occ": [[1019,"a great deal of"]] },
+
+    { "head": "get through", "gloss": "完成、度过(难关)", "ipa": "/ɡet θruː/",
+      "note": "get through sth = 挺过或做完一件难事。",
+      "literal": [{"word":"got","meaning_cn":"(此处'挺过、完成')"},{"word":"through","meaning_cn":"从头到尾、度过","note_cn":"此处'从头到尾完成'"}],
+      "ex_en": "With his help I got through all the homework.", "ex_cn": "在他帮助下我做完了所有作业。",
+      "occ": [[1015,"got through"]] },
+
+    { "head": "in the first place", "gloss": "首先;本来、原本", "ipa": "/ɪn ðə fɜːst pleɪs/",
+      "note": "开头列举时'首先';也可指'本来、一开始'。本章为'首先'义。",
+      "literal": [{"word":"in","meaning_cn":"在"},{"word":"the","meaning_cn":"(定冠词)"},{"word":"first","meaning_cn":"第一"},{"word":"place","meaning_cn":"位、次序","note_cn":"此处'次序、位置'"}],
+      "ex_en": "In the first place, we need to check the map.", "ex_cn": "首先,我们得看看地图。",
+      "occ": [[1025,"in the first place"]] },
+
+    { "head": "in short", "gloss": "简而言之、总之", "ipa": "/ɪn ʃɔːt/",
+      "note": "in short = 用一句话概括前面的内容。",
+      "literal": [{"word":"in","meaning_cn":"以…方式"},{"word":"short","meaning_cn":"简短"}],
+      "ex_en": "In short, the plan did not work.", "ex_cn": "总之,这个计划没成功。",
+      "occ": [[1029,"in short"],[1032,"in short"]] },
+
+    { "head": "in the meantime", "gloss": "与此同时、在此期间", "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "note": "in the meantime = 在等待某事发生的期间。",
+      "literal": [{"word":"in","meaning_cn":"在"},{"word":"the","meaning_cn":"(定冠词)"},{"word":"meantime","meaning_cn":"其间、期间"}],
+      "ex_en": "Dinner is cooking; in the meantime, let's set the table.", "ex_cn": "饭正在做;这期间我们摆好桌子吧。",
+      "occ": [[1035,"in the meantime"]] },
+
+    { "head": "do without", "gloss": "没有…也行、将就", "ipa": "/duː wɪˈðaʊt/",
+      "note": "do without (sth) = 缺了某物也照样过。",
+      "literal": [{"word":"did","meaning_cn":"(此处'应付、过活')"},{"word":"without","meaning_cn":"没有"}],
+      "ex_en": "There was no sugar, so we did without.", "ex_cn": "没有糖,我们就将就着没放。",
+      "occ": [[1044,"did without"]] },
+
+    { "head": "bear with", "gloss": "容忍、耐心对待", "ipa": "/beə wɪð/",
+      "note": "bear with sb/sth = 有耐心地忍受;常说 bear with me。",
+      "literal": [{"word":"bore","meaning_cn":"忍受(bear 的过去式)","note_cn":"非'熊/生育'义,此处'忍耐'"},{"word":"with","meaning_cn":"对…"}],
+      "ex_en": "Please bear with me while I fix this.", "ex_cn": "我修一下,请你耐心等一会儿。",
+      "occ": [[1041,"bore with"],[1041,"bear with"]] },
+
+    { "head": "wear out", "gloss": "磨损、用坏;耗尽", "ipa": "/weə aʊt/",
+      "note": "wear out = 因反复使用而损坏或耗尽。",
+      "literal": [{"word":"wore","meaning_cn":"磨损(wear 的过去式)","note_cn":"此处'磨损、用坏'"},{"word":"out","meaning_cn":"耗尽、彻底"}],
+      "ex_en": "These cheap shoes wear out very fast.", "ex_cn": "这种便宜鞋很快就穿坏了。",
+      "occ": [[1040,"wore out"]] }
+  ],
+  "skipped": [
+    "专名/地名: Providence / Bible / England / America / the Spanish coast / the Brazils / Leadenhall market / Poll",
+    "18世纪古语: durst / thee / thou / mayest / wouldst / canst / thence（迁移弱,归难句层）",
+    "过时惯用语: on a sudden（今作 all of a sudden）/ one time or other / for want of / put to it for / come at（=够到）",
+    "宗教训诫套语: the dispositions of Providence / I will never leave thee nor forsake thee / the communications of His grace",
+    "一次性物件/农具: hatchet / saw-pit / harrow / scythe / sickle / rope-yarn / peck-loaf"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "chapter": 3,
+  "chunks": [
+    { "head": "on shore", "gloss": "上岸;在岸上", "ipa": "/ɒn ʃɔː/",
+      "note": "on shore = 在岸上/上岸(go / come / be on shore),与在船上 on board 相对。",
+      "literal": [{"word":"on","meaning_cn":"在…上"},{"word":"shore","meaning_cn":"岸,滩"}],
+      "ex_en": "The sailors were glad to be on shore again.", "ex_cn": "水手们很高兴又回到了岸上。",
+      "occ": [[202,"on shore"]] },
+
+    { "head": "take heart", "gloss": "鼓起勇气;振作起来", "ipa": "/teɪk hɑːt/",
+      "note": "take heart = 在困难/害怕之后重拾信心、打起精神。",
+      "literal": [{"word":"take","meaning_cn":"获得,提起","note_cn":"非'拿'义,此处'鼓起'"},{"word":"heart","meaning_cn":"勇气,信心","note_cn":"非'心脏',此处指勇气"}],
+      "ex_en": "Take heart—things will get better soon.", "ex_cn": "振作起来——情况很快会好转。",
+      "occ": [[209,"took heart"]] },
+
+    { "head": "a great deal", "gloss": "大量;许多;…得多", "ipa": "/ə ɡreɪt diːl/",
+      "note": "a great deal (of …) = 很多(修饰不可数名词,或作副词'…得多')。",
+      "literal": [{"word":"a","meaning_cn":"一"},{"word":"great","meaning_cn":"大量的"},{"word":"deal","meaning_cn":"量,数量","note_cn":"非'交易',此处'数量'"}],
+      "ex_en": "She knows a great deal about birds.", "ex_cn": "她对鸟类了解很多。",
+      "occ": [[214,"a great deal"]] },
+
+    { "head": "in the first place", "gloss": "首先;第一点;本来", "ipa": "/ɪn ðə fɜːst pleɪs/",
+      "note": "in the first place = 列举理由时的'首先';也可指'一开始、本来'。",
+      "literal": [{"word":"in","meaning_cn":"在"},{"word":"the","meaning_cn":"这"},{"word":"first","meaning_cn":"第一"},{"word":"place","meaning_cn":"点,项","note_cn":"此处'要点、方面'"}],
+      "ex_en": "In the first place, we don't have enough time.", "ex_cn": "首先,我们时间不够。",
+      "occ": [[206,"in the first place"]] },
+
+    { "head": "out of one's wits", "gloss": "吓得魂不附体;惊慌失措", "ipa": "/aʊt əv wɪts/",
+      "note": "(scared / frightened) out of one's wits = 吓得不知所措。",
+      "literal": [{"word":"out","meaning_cn":"出,脱离"},{"word":"of","meaning_cn":"…的"},{"word":"wits","meaning_cn":"神智,理智","note_cn":"常复数,指清醒的头脑"}],
+      "ex_en": "The loud bang scared me out of my wits.", "ex_cn": "那声巨响把我吓得魂飞魄散。",
+      "occ": [[221,"out of his wits"]] },
+
+    { "head": "make one's escape", "gloss": "逃脱;逃走", "ipa": "/meɪk ɪˈskeɪp/",
+      "note": "make one's escape = 成功逃走、脱身。",
+      "literal": [{"word":"make","meaning_cn":"完成,做成","note_cn":"此处'实现',非'制作'"},{"word":"escape","meaning_cn":"逃跑,逃脱"}],
+      "ex_en": "The thief made his escape through the window.", "ex_cn": "小偷从窗户逃走了。",
+      "occ": [[227,"made my escape"]] },
+
+    { "head": "in the meantime", "gloss": "与此同时;在此期间", "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "note": "in the meantime = 在等待另一件事发生的这段时间里。",
+      "literal": [{"word":"in","meaning_cn":"在"},{"word":"the","meaning_cn":"这"},{"word":"meantime","meaning_cn":"其间,期间"}],
+      "ex_en": "Dinner is almost ready; in the meantime, please sit down.", "ex_cn": "晚饭快好了;在此期间,请先坐。",
+      "occ": [[241,"in the meantime"]] },
+
+    { "head": "part with", "gloss": "舍弃;割舍(卖掉、交出)", "ipa": "/pɑːt wɪð/",
+      "note": "part with = 不舍地放弃、交出(某物)。",
+      "literal": [{"word":"part","meaning_cn":"分开,舍弃","note_cn":"非'部分',此处动词'分离'"},{"word":"with","meaning_cn":"与…"}],
+      "ex_en": "He hated to part with his old bike.", "ex_cn": "他舍不得卖掉他的旧自行车。",
+      "occ": [[247,"parting with"]] },
+
+    { "head": "now and then", "gloss": "偶尔;时不时", "ipa": "/naʊ ənd ðen/",
+      "note": "now and then (= now and again) = 不经常地、间或。",
+      "literal": [{"word":"now","meaning_cn":"现在"},{"word":"and","meaning_cn":"和"},{"word":"then","meaning_cn":"那时"}],
+      "ex_en": "We still meet for coffee now and then.", "ex_cn": "我们偶尔还会一起喝咖啡。",
+      "occ": [[252,"now and then"]] },
+
+    { "head": "carry on", "gloss": "继续;经营(进行)", "ipa": "/ˈkæri ɒn/",
+      "note": "carry on = 继续(做某事);carry on a business = 经营。",
+      "literal": [{"word":"carry","meaning_cn":"进行,持续","note_cn":"非'搬运',此处'进行'"},{"word":"on","meaning_cn":"继续下去"}],
+      "ex_en": "Please carry on with your work.", "ex_cn": "请继续你的工作。",
+      "occ": [[254,"carrying on"]] },
+
+    { "head": "look after", "gloss": "照顾;照料", "ipa": "/lʊk ˈɑːftə/",
+      "note": "look after = 照看、负责照料某人某物。",
+      "literal": [{"word":"look","meaning_cn":"照看","note_cn":"非'看',此处'照料'"},{"word":"after","meaning_cn":"在…之后"}],
+      "ex_en": "Can you look after my dog this weekend?", "ex_cn": "这个周末你能帮我照看狗吗?",
+      "occ": [[271,"look after"]] },
+
+    { "head": "with all one's heart", "gloss": "全心全意;非常乐意", "ipa": "/wɪð ɔːl hɑːt/",
+      "note": "with all one's heart = 真心地、十分愿意地。",
+      "literal": [{"word":"with","meaning_cn":"带着"},{"word":"all","meaning_cn":"全部"},{"word":"heart","meaning_cn":"心意,诚意","note_cn":"此处'心意',非器官"}],
+      "ex_en": "I thank you with all my heart.", "ex_cn": "我衷心地感谢你。",
+      "occ": [[271,"with all my heart"]] },
+
+    { "head": "in order to", "gloss": "为了;以便", "ipa": "/ɪn ˈɔːdə tuː/",
+      "note": "in order to + 动词原形 = 表示目的。",
+      "literal": [{"word":"in","meaning_cn":"在"},{"word":"order","meaning_cn":"(此处成固定短语)","note_cn":"整体表目的,非'命令/次序'"},{"word":"to","meaning_cn":"去做"}],
+      "ex_en": "She left early in order to catch the bus.", "ex_cn": "她提早出发,以便赶上公交车。",
+      "occ": [[275,"in order to"]] },
+
+    { "head": "set sail", "gloss": "起航;扬帆出发", "ipa": "/set seɪl/",
+      "note": "set sail (for …) = 启航前往某地。",
+      "literal": [{"word":"set","meaning_cn":"张起,开始"},{"word":"sail","meaning_cn":"帆"}],
+      "ex_en": "They set sail early in the morning.", "ex_cn": "他们一大早就起航了。",
+      "occ": [[278,"set sail"]] },
+
+    { "head": "presence of mind", "gloss": "沉着;临危不乱的镇定", "ipa": "/ˈprezəns əv maɪnd/",
+      "note": "presence of mind = 危急时保持冷静、迅速应对的能力。",
+      "literal": [{"word":"presence","meaning_cn":"在场,存在"},{"word":"of","meaning_cn":"…的"},{"word":"mind","meaning_cn":"头脑,心智"}],
+      "ex_en": "She had the presence of mind to call for help.", "ex_cn": "她很镇定,想到了呼救。",
+      "occ": [[311,"presence of mind"]] },
+
+    { "head": "hold one's breath", "gloss": "屏住呼吸;(喻)焦急等待", "ipa": "/həʊld breθ/",
+      "note": "hold one's breath = 憋住气;也比喻紧张地等结果。",
+      "literal": [{"word":"hold","meaning_cn":"保持,憋住","note_cn":"此处'憋住'"},{"word":"breath","meaning_cn":"呼吸,气"}],
+      "ex_en": "Hold your breath when you dive under water.", "ex_cn": "潜到水下时要屏住呼吸。",
+      "occ": [[312,"held my breath"]] },
+
+    { "head": "take to one's heels", "gloss": "拔腿就跑;逃之夭夭", "ipa": "/teɪk tuː hiːlz/",
+      "note": "take to one's heels = 撒腿逃跑。",
+      "literal": [{"word":"take","meaning_cn":"开始,转向","note_cn":"take to = 开始做…"},{"word":"to","meaning_cn":"向"},{"word":"heels","meaning_cn":"脚后跟","note_cn":"以脚后跟示人=转身逃"}],
+      "ex_en": "When the dog barked, the boys took to their heels.", "ex_cn": "狗一叫,男孩们撒腿就跑。",
+      "occ": [[315,"took to my heels"]] },
+
+    { "head": "with a heavy heart", "gloss": "心情沉重地", "ipa": "/wɪð ə ˈhevi hɑːt/",
+      "note": "with a heavy heart = 怀着沉重、悲伤的心情。",
+      "literal": [{"word":"with","meaning_cn":"带着"},{"word":"a","meaning_cn":"一颗"},{"word":"heavy","meaning_cn":"沉重的","note_cn":"此处指心情沉重"},{"word":"heart","meaning_cn":"心,心情"}],
+      "ex_en": "With a heavy heart, she said goodbye.", "ex_cn": "她心情沉重地道了别。",
+      "occ": [[327,"with a heavy heart"]] },
+
+    { "head": "fast asleep", "gloss": "熟睡;睡得很沉", "ipa": "/fɑːst əˈsliːp/",
+      "note": "fall / be fast asleep = 熟睡(fast 此处'牢牢地、酣')。",
+      "literal": [{"word":"fast","meaning_cn":"牢牢地,酣","note_cn":"非'快',此处'沉、酣'"},{"word":"asleep","meaning_cn":"睡着的"}],
+      "ex_en": "The baby was fast asleep by eight o'clock.", "ex_cn": "宝宝八点就熟睡了。",
+      "occ": [[330,"fast asleep"]] },
+
+    { "head": "make amends", "gloss": "补偿;赔罪;弥补过错", "ipa": "/meɪk əˈmendz/",
+      "note": "本章出处为分离式(make them amends),故 card-only。make amends (to sb) (for sth) = 弥补过错。",
+      "literal": [{"word":"make","meaning_cn":"做出"},{"word":"amends","meaning_cn":"补偿,赔偿","note_cn":"总用复数形式"}],
+      "ex_en": "He sent flowers to make amends for being late.", "ex_cn": "他送花来弥补迟到的过错。",
+      "cardOnly": true, "key": "make amends", "exSeq": 206 },
+
+    { "head": "set free", "gloss": "释放;使自由", "ipa": "/set friː/",
+      "note": "本章出处为分离式(set him free),故 card-only。set sb free = 放某人自由。",
+      "literal": [{"word":"set","meaning_cn":"使处于某状态","note_cn":"此处'使…成为'"},{"word":"free","meaning_cn":"自由的"}],
+      "ex_en": "They opened the cage and set the bird free.", "ex_cn": "他们打开笼子,把鸟放走了。",
+      "cardOnly": true, "key": "set free", "exSeq": 236 }
+  ],
+  "skipped": [
+    "专名/地名: Xury / Cape de Verde / the Brazils / Guinea / Sallee / the Moors / St. Salvador / Barbadoes",
+    "一次性 nautical 硬词: a large offing / doubling the point / brought to / lay by〔停船〕 / under the lee / staved / scudding away",
+    "18世纪古语/生僻: thither / whither / from whence / on a sudden / loth / well-nigh / betwixt义近 / made forward",
+    "过时惯用语(克制): come at it〔取得〕 / to a tittle〔一丝不差〕 / a good way〔颇远〕 / found means to",
+    "宗教/道德训诫套语: committed ourselves to God's mercy / Providence concurred / how just has it been",
+    "太基础/纯语法: find out / go on shore(并入 on shore) / next to / went back",
+    "外来短语: den wild zee / coup de grâce / ingenio / assientos"
+  ]
+}

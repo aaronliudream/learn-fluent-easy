@@ -1,0 +1,360 @@
+{
+  "chapter": 10,
+  "chunks": [
+    {
+      "head": "keep mum",
+      "gloss": "保持沉默；守口如瓶",
+      "ipa": "/kiːp mʌm/",
+      "note": "mum 意为“不作声的”；keep mum 指对某事绝口不提、保守秘密。本章两个男孩歃血为盟就是发誓 keep mum。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "保持"},
+        {"word": "mum", "meaning_cn": "沉默的", "note_cn": "口语词，指闭口不言"}
+      ],
+      "ex_en": "Promise me you'll keep mum about the surprise party.",
+      "ex_cn": "答应我，惊喜派对的事你要守口如瓶。",
+      "occ": [[1597, "keep mum"], [1598, "keep mum"], [1601, "keep mum"], [1629, "keep mum"]]
+    },
+    {
+      "head": "from time to time",
+      "gloss": "时不时；偶尔",
+      "ipa": "/frəm taɪm tə taɪm/",
+      "note": "表示不经常、不规律地发生。",
+      "literal": [
+        {"word": "from", "meaning_cn": "从"},
+        {"word": "time", "meaning_cn": "时间", "note_cn": "此处为习语固定用法，无独立含义"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "time", "meaning_cn": "时间"}
+      ],
+      "ex_en": "I still visit my old school from time to time.",
+      "ex_cn": "我还是会时不时回老学校看看。",
+      "occ": [[1561, "from time to time"]]
+    },
+    {
+      "head": "catch one's breath",
+      "gloss": "喘口气；缓过气来",
+      "ipa": "/kætʃ wʌnz breθ/",
+      "note": "指剧烈运动后停下来恢复呼吸；也可指因惊讶而屏住呼吸。本章为前者。",
+      "literal": [
+        {"word": "catch", "meaning_cn": "抓住"},
+        {"word": "their", "meaning_cn": "他们的"},
+        {"word": "breath", "meaning_cn": "呼吸"}
+      ],
+      "ex_en": "Let me sit down and catch my breath after that run.",
+      "ex_cn": "跑完那一段，让我坐下喘口气。",
+      "occ": [[1562, "catch their breath"]]
+    },
+    {
+      "head": "scared to death",
+      "gloss": "吓得要死；极度害怕",
+      "ipa": "/skerd tə deθ/",
+      "note": "to death 在这里是夸张用法，表示程度极深。",
+      "literal": [
+        {"word": "scared", "meaning_cn": "害怕的"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "death", "meaning_cn": "死亡", "note_cn": "夸张用法，表程度之深"}
+      ],
+      "ex_en": "She was scared to death when the lights went out.",
+      "ex_cn": "灯一灭，她吓得要死。",
+      "occ": [[1648, "scared to death"]]
+    },
+    {
+      "head": "prick up one's ears",
+      "gloss": "竖起耳朵；(听到动静后)留神细听",
+      "ipa": "/prɪk ʌp wʌnz ɪrz/",
+      "note": "原指动物竖起耳朵，引申为人突然专注地听。",
+      "literal": [
+        {"word": "pricked", "meaning_cn": "竖起"},
+        {"word": "up", "meaning_cn": "起来"},
+        {"word": "his", "meaning_cn": "他的"},
+        {"word": "ears", "meaning_cn": "耳朵"}
+      ],
+      "ex_en": "The dog pricked up its ears at the sound of footsteps.",
+      "ex_cn": "听到脚步声，那只狗竖起了耳朵。",
+      "occ": [[1680, "pricked up his ears"]]
+    },
+    {
+      "head": "take to one's heels",
+      "gloss": "撒腿就跑；逃之夭夭",
+      "ipa": "/teɪk tə wʌnz hiːlz/",
+      "note": "heels 指脚后跟，借指奔跑；整句意为拔腿逃跑。",
+      "literal": [
+        {"word": "take", "meaning_cn": "投向", "note_cn": "此处为习语用法，指开始（奔跑）"},
+        {"word": "to", "meaning_cn": "向"},
+        {"word": "their", "meaning_cn": "他们的"},
+        {"word": "heels", "meaning_cn": "脚后跟", "note_cn": "借指奔跑"}
+      ],
+      "ex_en": "When the thief saw the police, he took to his heels.",
+      "ex_cn": "小偷一看见警察，撒腿就跑。",
+      "occ": [[1696, "take to their heels"]]
+    },
+    {
+      "head": "break the camel's back",
+      "gloss": "(最后一击)使人再也承受不住；压垮骆驼的最后一根稻草",
+      "ipa": "/breɪk ðə ˈkæmlz bæk/",
+      "note": "出自谚语“最后一根稻草压垮骆驼”，指微不足道的额外负担导致彻底崩溃。",
+      "literal": [
+        {"word": "broke", "meaning_cn": "压断"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "camel's", "meaning_cn": "骆驼的"},
+        {"word": "back", "meaning_cn": "背"}
+      ],
+      "ex_en": "Losing his keys was the last thing that broke the camel's back.",
+      "ex_cn": "弄丢钥匙成了压垮他的最后一根稻草。",
+      "occ": [[1741, "broke the camel’s back"]]
+    },
+    {
+      "head": "break one's heart",
+      "gloss": "使某人心碎；让某人极度伤心",
+      "ipa": "/breɪk wʌnz hɑːrt/",
+      "note": "指因失望、失去或悲伤而深受打击。",
+      "literal": [
+        {"word": "heart", "meaning_cn": "心"},
+        {"word": "broke", "meaning_cn": "破碎"}
+      ],
+      "ex_en": "It broke her heart to see the puppy left alone.",
+      "ex_cn": "看到小狗被独自丢下，她的心都碎了。",
+      "occ": [[1739, "heart broke"]]
+    },
+    {
+      "head": "play hookey",
+      "gloss": "逃学；旷课",
+      "ipa": "/pleɪ ˈhʊki/",
+      "note": "美式口语，指未经允许不去上学。",
+      "literal": [
+        {"word": "playing", "meaning_cn": "(此处为固定搭配)"},
+        {"word": "hookey", "meaning_cn": "逃学", "note_cn": "俚语，仅用于此搭配"}
+      ],
+      "ex_en": "The boys decided to play hookey and go swimming.",
+      "ex_cn": "男孩们决定逃学去游泳。",
+      "occ": [[1662, "playing hookey"], [1733, "playing hookey"]]
+    },
+    {
+      "head": "over and over again",
+      "gloss": "一遍又一遍；反反复复",
+      "ipa": "/ˈoʊvər ənd ˈoʊvər əˈɡen/",
+      "note": "强调动作多次重复。",
+      "literal": [
+        {"word": "over", "meaning_cn": "(反复)一次", "note_cn": "此处表重复"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "over", "meaning_cn": "一次"},
+        {"word": "again", "meaning_cn": "再次"}
+      ],
+      "ex_en": "He read the letter over and over again.",
+      "ex_cn": "他把那封信读了一遍又一遍。",
+      "occ": [[1731, "over and over again"]]
+    },
+    {
+      "head": "by and by",
+      "gloss": "不久；过一会儿",
+      "ipa": "/baɪ ənd baɪ/",
+      "note": "略显old-fashioned的说法，意为过一段时间之后。",
+      "literal": [
+        {"word": "by", "meaning_cn": "(习语用词)", "note_cn": "单独无实义，须整体记忆"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "by", "meaning_cn": "(习语用词)"}
+      ],
+      "ex_en": "By and by, the rain stopped and the sun came out.",
+      "ex_cn": "过了一会儿，雨停了，太阳出来了。",
+      "occ": [[1566, "by and by"]]
+    },
+    {
+      "head": "take someone aside",
+      "gloss": "把某人拉到一边(单独谈话)",
+      "ipa": "/teɪk ˈsʌmwʌn əˈsaɪd/",
+      "note": "指把某人单独带开以便私下说话。",
+      "literal": [
+        {"word": "took", "meaning_cn": "带"},
+        {"word": "him", "meaning_cn": "他"},
+        {"word": "aside", "meaning_cn": "到一边"}
+      ],
+      "ex_en": "The coach took me aside to explain my mistake.",
+      "ex_cn": "教练把我拉到一边，解释我的错误。",
+      "occ": [[1728, "took him aside"]]
+    },
+    {
+      "head": "go on doing",
+      "gloss": "继续做(某事)",
+      "ipa": "/ɡoʊ ɑːn ˈduːɪŋ/",
+      "note": "go on + 动名词，表示不停地、继续地做某事。",
+      "literal": [
+        {"word": "went", "meaning_cn": "(go的过去式)继续"},
+        {"word": "on", "meaning_cn": "继续下去"},
+        {"word": "thinking", "meaning_cn": "思考"}
+      ],
+      "ex_en": "She went on talking as if nothing had happened.",
+      "ex_cn": "她继续说着，仿佛什么都没发生。",
+      "occ": [[1580, "went on thinking"]]
+    },
+    {
+      "head": "go back on",
+      "gloss": "违背(诺言)；背弃",
+      "ipa": "/ɡoʊ bæk ɑːn/",
+      "note": "指不遵守承诺或出卖、背叛某人。",
+      "literal": [
+        {"word": "go", "meaning_cn": "走"},
+        {"word": "back", "meaning_cn": "回"},
+        {"word": "on", "meaning_cn": "(介词)", "note_cn": "此处为习语固定介词"},
+        {"word": "you", "meaning_cn": "你"}
+      ],
+      "ex_en": "A good friend never goes back on a promise.",
+      "ex_cn": "真正的朋友绝不会违背承诺。",
+      "occ": [[1606, "go back on you"]]
+    },
+    {
+      "head": "in keeping with",
+      "gloss": "与...一致；符合",
+      "ipa": "/ɪn ˈkiːpɪŋ wɪð/",
+      "note": "表示与某事物相协调、相符合。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "keeping", "meaning_cn": "一致", "note_cn": "此处指协调、相符"},
+        {"word": "with", "meaning_cn": "与"}
+      ],
+      "ex_en": "The new building is in keeping with the old town's style.",
+      "ex_cn": "这座新楼与老城的风格很协调。",
+      "occ": [[1609, "in keeping with"]]
+    },
+    {
+      "head": "one's heart sinks",
+      "gloss": "心一沉；感到沮丧失望",
+      "ipa": "/wʌnz hɑːrt sɪŋks/",
+      "note": "指突然感到失望、害怕或气馁。",
+      "literal": [
+        {"word": "hearts", "meaning_cn": "心"},
+        {"word": "sank", "meaning_cn": "下沉", "note_cn": "sink的过去式，此处喻心情低落"}
+      ],
+      "ex_en": "My heart sank when I saw the test results.",
+      "ex_cn": "看到考试成绩，我的心一沉。",
+      "occ": [[1650, "hearts sank"], [1727, "heart sink"]]
+    },
+    {
+      "head": "a goner",
+      "gloss": "没救了的人；完蛋的家伙",
+      "ipa": "/ə ˈɡɔːnər/",
+      "note": "口语，指注定要死、失败或无可挽回的人或物。",
+      "literal": [
+        {"word": "a", "meaning_cn": "一个"},
+        {"word": "goner", "meaning_cn": "完蛋的人", "note_cn": "俚语，指没救了的人"}
+      ],
+      "ex_en": "If the boss finds out, I'm a goner.",
+      "ex_cn": "要是被老板发现，我就完蛋了。",
+      "occ": [[1658, "goners"], [1713, "a goner"]]
+    },
+    {
+      "head": "can't stand",
+      "gloss": "受不了；无法忍受",
+      "ipa": "/kænt stænd/",
+      "note": "stand 此处意为“忍受”；常用于讨厌或难以承受的事物。",
+      "literal": [
+        {"word": "can't", "meaning_cn": "不能"},
+        {"word": "stand", "meaning_cn": "忍受", "note_cn": "此处不是“站立”"}
+      ],
+      "ex_en": "I can't stand the noise of the traffic at night.",
+      "ex_cn": "我受不了夜里的车流噪音。",
+      "occ": [[1563, "can’t stand"]]
+    },
+    {
+      "head": "on and on",
+      "gloss": "不停地；持续不断地",
+      "ipa": "/ɑːn ənd ɑːn/",
+      "note": "表示动作或状态长时间持续。",
+      "literal": [
+        {"word": "on", "meaning_cn": "继续"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "on", "meaning_cn": "继续"}
+      ],
+      "ex_en": "The teacher talked on and on until the bell rang.",
+      "ex_cn": "老师不停地讲，直到铃响。",
+      "occ": [[1560, "on and on"]]
+    },
+    {
+      "head": "over one's shoulder",
+      "gloss": "从肩上回头(看)",
+      "ipa": "/ˈoʊvər wʌnz ˈʃoʊldər/",
+      "note": "常与 look/glance 连用，表示回头张望。",
+      "literal": [
+        {"word": "over", "meaning_cn": "越过"},
+        {"word": "their", "meaning_cn": "他们的"},
+        {"word": "shoulders", "meaning_cn": "肩膀"}
+      ],
+      "ex_en": "She glanced over her shoulder to see who was following.",
+      "ex_cn": "她回头看了一眼，想知道谁在跟着。",
+      "occ": [[1561, "over their shoulders"]]
+    },
+    {
+      "head": "break down",
+      "gloss": "(体力/精神)垮掉；(机器)出故障",
+      "ipa": "/breɪk daʊn/",
+      "note": "本章指人体力不支、支撑不住。也可指机器坏了或情绪崩溃。",
+      "literal": [
+        {"word": "break", "meaning_cn": "坏"},
+        {"word": "down", "meaning_cn": "下去"}
+      ],
+      "ex_en": "Our car broke down on the way to the beach.",
+      "ex_cn": "去海边的路上，我们的车抛锚了。",
+      "occ": [[1563, "break down"]]
+    },
+    {
+      "head": "get off",
+      "gloss": "脱身；逃过惩罚",
+      "ipa": "/ɡet ɔːf/",
+      "note": "本章意为逃脱麻烦、不受惩罚。另有“下车”等常见义。",
+      "literal": [
+        {"word": "get", "meaning_cn": "变得"},
+        {"word": "off", "meaning_cn": "脱离", "note_cn": "此处指摆脱麻烦"}
+      ],
+      "ex_en": "He was lucky to get off with just a warning.",
+      "ex_cn": "他很走运，只受了个警告就脱身了。",
+      "occ": [[1664, "get off"]]
+    },
+    {
+      "head": "in time",
+      "gloss": "最终；渐渐地(经过一段时间后)",
+      "ipa": "/ɪn taɪm/",
+      "note": "本章意为“经过一段时间后、终于”；另一常见义是“来得及、及时”。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "time", "meaning_cn": "时间", "note_cn": "此处指“一段时间之后”"}
+      ],
+      "ex_en": "Don't worry—in time, you'll understand why.",
+      "ex_cn": "别担心，慢慢地你就会明白为什么。",
+      "occ": [[1623, "in time"]]
+    },
+    {
+      "head": "it's no use doing",
+      "gloss": "(做...)没有用；徒劳无益",
+      "ipa": "/ɪts noʊ juːs/",
+      "note": "常接动名词或 for sb to do，表示某事白费力气。",
+      "literal": [
+        {"word": "no", "meaning_cn": "没有"},
+        {"word": "use", "meaning_cn": "用处"},
+        {"word": "for", "meaning_cn": "对于"},
+        {"word": "her", "meaning_cn": "她"},
+        {"word": "to", "meaning_cn": "去"},
+        {"word": "try", "meaning_cn": "尝试"}
+      ],
+      "ex_en": "It's no use crying over spilt milk.",
+      "ex_cn": "覆水难收，哭也没用。",
+      "occ": [[1729, "no use for her to try"]]
+    },
+    {"head":"take and","gloss":"(方言)就…、干脆去…做","ipa":"/teɪk ənd/","note":"take and + 动词 = 地方话强调式,重点在'就这么去做',take 不表'拿'。此处「take and belt him」=干脆抽他一下、「take and swear」=(郑重)立誓(血誓保密的正式场面)。同族:up and + 动词。","literal":[{"word":"take and","meaning_cn":"(方言)就…、径直…","note_cn":"take 非'拿',是强调式"}],"ex_en":"I'll just take and tell him myself.","ex_cn":"我干脆自己去告诉他。","occ":[[1592,"take and belt"],[1601,"take and swear"]]}
+  ],
+  "skipped": [
+    "breast to breast (一次性描写)",
+    "in an agony of fright (一次性描写)",
+    "keep us from ever telling (可拆解语法结构，非固定习语)",
+    "red keel / verdigrease (生僻名物)",
+    "dead sure / dead sober (方言强调，可迁移性弱)",
+    "some time or other (备选，为控量舍去)",
+    "in a huff (较冷僻，控量舍去)",
+    "make any difference (偏基础/语法化)",
+    "hold on (过于常见的招呼语)",
+    "set up a howl (一次性用法)",
+    "in a breath (一次性)",
+    "old pie / dad fetch it / by hokey / consound it / geeminy (Huck方言感叹，一次性)",
+    "waller in Sunday-schools (方言拼写)",
+    "bring her gray hairs with sorrow to the grave (圣经典故，一次性→难句层)",
+    "betook himself to (古旧/一次性)",
+    "the fetters that bound their tongues (文学性一次性比喻)"
+  ]
+}

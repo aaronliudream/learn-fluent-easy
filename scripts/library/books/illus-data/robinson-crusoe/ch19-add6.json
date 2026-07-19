@@ -1,0 +1,21 @@
+{ "chapter": 19,
+  "images": [
+    { "k":7, "slug":"boat-delivers-chests-to-shore", "seq":2224,
+      "scene":"A ship's rowing boat is beached on the island sand at high tide, its crew handing wooden sea-chests and bundles of clothes ashore to three ragged men standing on the beach, the tall sailing ship anchored offshore behind them.",
+      "alt":"水手把木箱和衣物从小船搬上海岛沙滩,交给岸上三个衣衫褴褛的人,远处大帆船停泊。" },
+    { "k":8, "slug":"arrival-in-england", "seq":2228,
+      "scene":"A weathered traveller and his companion step down a gangplank onto a busy English harbour quay, carrying bundles, amid stacked crates and barrels, with moored sailing ships and rows of townhouses behind them.",
+      "alt":"一个饱经风霜的旅人和同伴走下跳板,踏上熙攘的英格兰码头,四周堆着货箱酒桶,背后是停泊的帆船和成排楼房。" },
+    { "k":9, "slug":"yorkshire-family-graves", "seq":2232,
+      "scene":"In a quiet Yorkshire churchyard, a returned traveller stands bareheaded before several weathered gravestones, two women and two young children close beside him, bare autumn trees and a stone church behind.",
+      "alt":"约克郡安静的墓园里,归来的旅人脱帽站在几块旧墓碑前,身旁紧挨着两个妇人和两个小孩,背后是落叶的树木和石头教堂。" },
+    { "k":10, "slug":"overcome-with-joy", "seq":2269,
+      "scene":"In a Lisbon room a man slumps pale and faint back into a chair beside a table piled with opened letters and stacked gold coins, while an old man hurries to him holding out a small cup of cordial.",
+      "alt":"里斯本的房间里,一个人脸色苍白瘫倒在椅中,身旁桌上堆满拆开的信件和成摞金币,一位老人急忙端来一小杯药酒。" },
+    { "k":11, "slug":"leopard-skins-gift", "seq":2264,
+      "scene":"Seven spotted leopard skins are spread open across a table and the floor of a Lisbon room, beside opened letters, an open chest of sweetmeats, and loose gold pieces catching the light.",
+      "alt":"里斯本房间里,七张带斑点的豹皮铺展在桌上和地板上,旁边是拆开的信、敞开的蜜饯箱和散落发亮的金币。" },
+    { "k":12, "slug":"troop-sets-out-lisbon", "seq":2294,
+      "scene":"A small troop of six well-mounted armed riders with a few pack servants sets out from the edge of Lisbon along a country road, the walled city and river behind them and green rolling hills ahead.",
+      "alt":"一支六人组成的小队,骑着好马、带着武器和几名随从仆役,从里斯本城边沿乡间大道出发,身后是带城墙的城市和河流,前方是起伏的青翠山丘。" }
+  ] }

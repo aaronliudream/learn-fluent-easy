@@ -1,0 +1,26 @@
+{
+ "batch": 5,
+ "rows": [
+  {
+   "word": "curious",
+   "normalized": "curious",
+   "ipa": "/ˈkjʊəriəs/",
+   "pos": "adj.",
+   "sense_key": "exquisite-remarkable",
+   "gloss_cn": "稀奇的、精美的;耐人寻味的",
+   "gloss_en": "exquisite, remarkable, or arousing keen interest",
+   "archaic": true,
+   "modern_cn": "好奇的",
+   "modern_en": "eager to know or learn something",
+   "example_en": "The chest was fitted with a lock of most curious workmanship",
+   "example_cn": "那只箱子配着一把做工极为精巧的锁"
+  }
+ ],
+ "skipped": [
+  "generous(本书=慷慨大方,同现代义)",
+  "doubtless(本书=无疑、确实,同现代义)",
+  "painful(本书=疼痛的/难以忍受的,同现代义)",
+  "fond(本书=喜爱的/着迷的,同现代义)",
+  "employ(本书=使用/投入心思办事,同现代义)"
+ ]
+}

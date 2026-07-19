@@ -5,11 +5,10 @@ import type { User } from "@supabase/supabase-js";
 import { PageHeader } from "@/components/PageHeader";
 import {
   BarChart3, Heart, Settings,
-  LogIn, LogOut, Sparkles, ClipboardList, Target } from
+  LogIn, LogOut, Sparkles, ClipboardList, GraduationCap } from
 "lucide-react";
 import { Button } from "@/components/ui/button";
-import { fetchWeakKnowledgePoints } from "@/lib/knowledgePointMastery";
-import { AlertCircle } from "lucide-react";
+import { useIsTeacher } from "@/hooks/useIsTeacher";
 
 type Tile = {to: string;label: string;sub: string;icon: React.ComponentType<{className?: string;}>;tone: string;};
 
@@ -17,8 +16,7 @@ type Tile = {to: string;label: string;sub: string;icon: React.ComponentType<{cla
 // 升级会员(/pricing)四个入口按需求隐藏(页面/路由保留,以后可能再启用)。
 const TILES: Tile[] = [
 { to: "/dashboard", label: "学习中心", sub: "总进度 · 各模块掌握度", icon: BarChart3, tone: "from-emerald-500 to-teal-500" },
-{ to: "/review", label: "复习与错题", sub: "FSRS 智能安排今日复习", icon: Target, tone: "from-orange-500 to-rose-500" },
-{ to: "/mistakes", label: "我的错题本", sub: "回看做错的题", icon: ClipboardList, tone: "from-amber-500 to-orange-500" },
+{ to: "/mistakes", label: "我的错题本", sub: "回看做错的题 · 重做掌握", icon: ClipboardList, tone: "from-amber-500 to-orange-500" },
 { to: "/account", label: "账号设置", sub: "邮箱、隐私、数据导出", icon: Settings, tone: "from-slate-600 to-slate-800" }];
 
 
@@ -26,7 +24,7 @@ export default function Me() {
   const navigate = useNavigate();
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<{display_name?: string | null;} | null>(null);
-  const [weakKps, setWeakKps] = useState<any[]>([]);
+  const { isTeacher } = useIsTeacher(); // 仅老师显示"教师中心"卡片(调 is_teacher() RPC)
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_e, s) => setUser(s?.user ?? null));
@@ -46,17 +44,12 @@ export default function Me() {
     })();
   }, [user]);
 
-  useEffect(() => {
-    if (!user) { setWeakKps([]); return; }
-    fetchWeakKnowledgePoints(user.id, 6).then(setWeakKps).catch(() => setWeakKps([]));
-  }, [user]);
-
   const name = profile?.display_name || user?.email?.split("@")[0] || "学习者";
   const initial = (name[0] || "?").toUpperCase();
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-5 py-8 pb-32 md:px-8 md:py-12">
-      <PageHeader title="👤 我的" subtitle="一个入口，统管你的学习" back="/" />
+      <PageHeader title="👤 我的" subtitle="一个入口，统管你的学习" homeButton />
 
       {/* Identity card */}
       <section className="mt-5 flex items-center gap-4 rounded-3xl border border-border bg-gradient-to-br from-primary/10 via-card to-card p-5">
@@ -94,45 +87,23 @@ export default function Me() {
         </div>
       </section>
 
-      {/* 待巩固考点 */}
-      {user && weakKps.length > 0 && (
-        <section className="mt-4 rounded-2xl border border-rose-500/30 bg-gradient-to-br from-rose-500/10 to-amber-500/5 p-5">
-          <div className="mb-3 flex items-center gap-2">
-            <AlertCircle className="size-5 text-rose-600" />
-            <h2 className="text-base font-extrabold"><T>待巩固考点</T></h2>
-            <span className="ml-auto text-[11px] text-muted-foreground">
-              <T>按掉档次数排序</T> · {weakKps.length}
-            </span>
-          </div>
-          <div className="space-y-2">
-            {weakKps.map((row) => {
-              const due = row.due_at ? new Date(row.due_at).getTime() <= Date.now() : false;
-              const kp = row.knowledge_point;
-              const label = kp ? `${kp.category_name} · ${kp.level3}` : "未命名考点";
-              return (
-                <div key={row.id} className="flex items-center justify-between rounded-xl border bg-card p-3">
-                  <div className="min-w-0 flex-1">
-                    <div className="truncate text-sm font-bold">{label}</div>
-                    <div className="mt-0.5 text-[11px] text-muted-foreground">
-                      错过 {row.lapses ?? 0} 次 · 掌握度 {row.mastery_level ?? 0}/5
-                      {due ? " · 今日待复习" : row.due_at ? ` · ${new Date(row.due_at).toLocaleDateString()} 复习` : ""}
-                    </div>
-                  </div>
-                  <Link
-                    to="/mistakes"
-                    className="ml-3 shrink-0 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary"
-                  >
-                    <T>去练习</T>
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-      )}
-
       {/* Tiles */}
       <section className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {/* 教师中心 —— 仅当 is_teacher() 为真时显示;普通用户主页保持干净 */}
+        {isTeacher && (
+          <Link
+            to="/teacher"
+            className="group flex items-center gap-3 rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md">
+
+            <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-fuchsia-500 to-orange-500 text-white shadow-sm">
+              <GraduationCap className="size-5" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="truncate text-sm font-bold"><T>教师中心</T></div>
+              <div className="truncate text-[11px] text-muted-foreground"><T>管理班级 · 关注学生进度</T></div>
+            </div>
+          </Link>
+        )}
         {TILES.map((t) => {
           const Icon = t.icon;
           return (

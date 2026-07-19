@@ -1,0 +1,388 @@
+{
+  "chapter": 18,
+  "chunks": [
+    {
+      "head": "in the course of",
+      "gloss": "在…过程中；在…期间",
+      "ipa": "/ɪn ðə kɔːrs əv/",
+      "note": "表示某事在另一件事进行的过程中发生。course 此处意为“进程、过程”，非“课程”。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "course", "meaning_cn": "过程", "note_cn": "此处指“进程”，非“课程”"},
+        {"word": "of", "meaning_cn": "的"}
+      ],
+      "ex_en": "In the course of the meeting, several new ideas came up.",
+      "ex_cn": "在会议过程中，冒出了好几个新点子。",
+      "occ": [[2582, "in the course of"]]
+    },
+    {
+      "head": "run off",
+      "gloss": "逃走；跑掉",
+      "ipa": "/rʌn ɔːf/",
+      "note": "指(偷偷地)离开、逃跑。本章指汤姆离家出走当海盗。",
+      "literal": [
+        {"word": "run", "meaning_cn": "跑"},
+        {"word": "off", "meaning_cn": "离开"}
+      ],
+      "ex_en": "The puppy ran off before I could catch it.",
+      "ex_cn": "我还没抓住，小狗就跑掉了。",
+      "occ": [[2584, "run off"]]
+    },
+    {
+      "head": "care for",
+      "gloss": "关心；在乎；喜欢",
+      "ipa": "/ker fɔːr/",
+      "note": "本章意为“关心、在乎某人”；另有“照顾”和“喜欢”义。",
+      "literal": [
+        {"word": "care", "meaning_cn": "在乎"},
+        {"word": "for", "meaning_cn": "对于"}
+      ],
+      "ex_en": "I know you care for your little sister very much.",
+      "ex_cn": "我知道你很关心你的小妹妹。",
+      "occ": [[2596, "care for"]]
+    },
+    {
+      "head": "look back",
+      "gloss": "回顾；回想(往事)",
+      "ipa": "/lʊk bæk/",
+      "note": "常接 on/at，表示回想过去的经历。",
+      "literal": [
+        {"word": "look", "meaning_cn": "看"},
+        {"word": "back", "meaning_cn": "向后", "note_cn": "此处指“回想过去”"}
+      ],
+      "ex_en": "When you grow up, you'll look back on these days and smile.",
+      "ex_cn": "长大后，你会回想起这些日子而会心一笑。",
+      "occ": [[2595, "look back"]]
+    },
+    {
+      "head": "better than nothing",
+      "gloss": "聊胜于无；有总比没有强",
+      "ipa": "/ˈbetər ðən ˈnʌθɪŋ/",
+      "note": "用于说某事虽不理想，但仍胜过完全没有。",
+      "literal": [
+        {"word": "better", "meaning_cn": "更好"},
+        {"word": "than", "meaning_cn": "比"},
+        {"word": "nothing", "meaning_cn": "没有"}
+      ],
+      "ex_en": "It's just a small gift, but it's better than nothing.",
+      "ex_cn": "只是个小礼物，但聊胜于无。",
+      "occ": [[2600, "better than nothing"]]
+    },
+    {
+      "head": "go on",
+      "gloss": "继续；(催促对方)接着说、往下讲",
+      "ipa": "/ɡoʊ ɑːn/",
+      "note": "本章反复用作催促“接着说”；也泛指“继续(做某事)”。",
+      "literal": [
+        {"word": "go", "meaning_cn": "走", "note_cn": "此处指“进行下去”"},
+        {"word": "on", "meaning_cn": "继续"}
+      ],
+      "ex_en": "Please go on—I want to hear the rest of the story.",
+      "ex_cn": "请接着说，我想听故事的其余部分。",
+      "occ": [[2621, "go on"], [2623, "go on"], [2640, "go on"], [2645, "go on"]]
+    },
+    {
+      "head": "better off",
+      "gloss": "处境更好；日子更好过",
+      "ipa": "/ˈbetər ɔːf/",
+      "note": "指钱财、健康或整体处境更好。反义为 worse off。",
+      "literal": [
+        {"word": "better", "meaning_cn": "更好"},
+        {"word": "off", "meaning_cn": "(处于某种境况)", "note_cn": "off 此处表“处境”"}
+      ],
+      "ex_en": "He felt he would be better off living in a smaller town.",
+      "ex_cn": "他觉得住在小一点的镇子上日子会更好过。",
+      "occ": [[2661, "better off"]]
+    },
+    {
+      "head": "shut someone up",
+      "gloss": "让某人闭嘴；使某人住口",
+      "ipa": "/ʃʌt ˈsʌmwʌn ʌp/",
+      "note": "shut up 作不及物是“住口”；及物 shut sb up 即“让某人闭嘴”。",
+      "literal": [
+        {"word": "shut", "meaning_cn": "关上"},
+        {"word": "him", "meaning_cn": "他"},
+        {"word": "up", "meaning_cn": "(彻底地)", "note_cn": "此处使…完全停口"}
+      ],
+      "ex_en": "Nothing could shut him up once he started talking.",
+      "ex_cn": "他一旦开口，什么都没法让他闭嘴。",
+      "occ": [[2664, "shut him up"], [2682, "shut up"]]
+    },
+    {
+      "head": "call on",
+      "gloss": "拜访；探望",
+      "ipa": "/kɔːl ɑːn/",
+      "note": "call on sb = 短暂地拜访某人；另有“号召、请某人发言”义。",
+      "literal": [
+        {"word": "call", "meaning_cn": "拜访", "note_cn": "此处非“打电话/呼喊”"},
+        {"word": "on", "meaning_cn": "(介词)"}
+      ],
+      "ex_en": "We plan to call on our grandparents this weekend.",
+      "ex_cn": "这个周末我们打算去看望祖父母。",
+      "occ": [[2687, "call on"]]
+    },
+    {
+      "head": "would give anything",
+      "gloss": "愿付出一切；非常想要",
+      "ipa": "/wʊd ɡɪv ˈeniθɪŋ/",
+      "note": "常接 to do 或 for sth，表示极度渴望某事。",
+      "literal": [
+        {"word": "would", "meaning_cn": "愿意"},
+        {"word": "give", "meaning_cn": "给出"},
+        {"word": "anything", "meaning_cn": "任何东西"}
+      ],
+      "ex_en": "I would give anything to see that concert.",
+      "ex_cn": "我愿付出一切去看那场演唱会。",
+      "occ": [[2695, "would have given anything"]]
+    },
+    {
+      "head": "part with",
+      "gloss": "舍弃；割舍；放弃(所有物)",
+      "ipa": "/pɑːrt wɪð/",
+      "note": "part with sth = 不舍地交出或放弃某物。",
+      "literal": [
+        {"word": "part", "meaning_cn": "分开", "note_cn": "此处指“放手、交出”"},
+        {"word": "with", "meaning_cn": "与"}
+      ],
+      "ex_en": "She could not bear to part with her old teddy bear.",
+      "ex_cn": "她舍不得丢掉她那只旧泰迪熊。",
+      "occ": [[2695, "parted with"]]
+    },
+    {
+      "head": "make up",
+      "gloss": "和好；言归于好",
+      "ipa": "/meɪk ʌp/",
+      "note": "本章意为“和解”；make up 另有“编造、化妆、组成”等义。",
+      "literal": [
+        {"word": "make", "meaning_cn": "做"},
+        {"word": "up", "meaning_cn": "(和好)", "note_cn": "此处为固定搭配"}
+      ],
+      "ex_en": "The two friends quarreled but soon made up.",
+      "ex_cn": "两个朋友吵了架，但很快就和好了。",
+      "occ": [[2702, "make up"]]
+    },
+    {
+      "head": "back and forth",
+      "gloss": "来回地；往复地",
+      "ipa": "/bæk ənd fɔːrθ/",
+      "note": "表示在两处之间反复移动。",
+      "literal": [
+        {"word": "back", "meaning_cn": "向后"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "forth", "meaning_cn": "向前"}
+      ],
+      "ex_en": "The children ran back and forth across the yard.",
+      "ex_cn": "孩子们在院子里来回奔跑。",
+      "occ": [[2707, "back and forth"]]
+    },
+    {
+      "head": "at once",
+      "gloss": "立刻；马上",
+      "ipa": "/æt wʌns/",
+      "note": "本章意为“立刻”；at once 另有“同时”一义。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "once", "meaning_cn": "一次", "note_cn": "此处指“立即”"}
+      ],
+      "ex_en": "Come here at once—we're leaving now!",
+      "ex_cn": "马上过来，我们现在就走！",
+      "occ": [[2711, "at once"]]
+    },
+    {
+      "head": "and so on",
+      "gloss": "等等；诸如此类",
+      "ipa": "/ənd soʊ ɑːn/",
+      "note": "用于列举之后，表示同类事物还有很多。",
+      "literal": [
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "so", "meaning_cn": "如此"},
+        {"word": "on", "meaning_cn": "继续(下去)"}
+      ],
+      "ex_en": "She packed clothes, books, toys, and so on.",
+      "ex_cn": "她收拾了衣服、书、玩具等等。",
+      "occ": [[2744, "and so on"]]
+    },
+    {
+      "head": "throw away",
+      "gloss": "白白错过；扔掉；浪费(机会)",
+      "ipa": "/θroʊ əˈweɪ/",
+      "note": "本章指“白白放弃(机会)”；也指把东西扔掉。",
+      "literal": [
+        {"word": "throw", "meaning_cn": "扔"},
+        {"word": "away", "meaning_cn": "走开", "note_cn": "此处指“丢弃、浪费”"}
+      ],
+      "ex_en": "Don't throw away this chance to study abroad.",
+      "ex_cn": "别白白放弃这次出国留学的机会。",
+      "occ": [[2754, "throwing away"]]
+    },
+    {
+      "head": "can't help it",
+      "gloss": "忍不住；控制不住；没办法",
+      "ipa": "/kænt help ɪt/",
+      "note": "can't help + it / doing = 情不自禁、无法克制。help 此处意为“抑制、避免”。",
+      "literal": [
+        {"word": "could", "meaning_cn": "能", "note_cn": "此处为 can 的过去式"},
+        {"word": "not", "meaning_cn": "不"},
+        {"word": "help", "meaning_cn": "克制", "note_cn": "此处意为“抑制、避免”，非“帮助”"},
+        {"word": "it", "meaning_cn": "它", "note_cn": "指“这件事”"}
+      ],
+      "ex_en": "I know I shouldn't laugh, but I can't help it.",
+      "ex_cn": "我知道不该笑，可我忍不住。",
+      "occ": [[2760, "could not help it"]]
+    },
+    {
+      "head": "attend to",
+      "gloss": "处理；照料；专心于",
+      "ipa": "/əˈtend tə/",
+      "note": "attend to sth/sb = 处理某事或照料某人。注意与 attend(出席)区分。",
+      "literal": [
+        {"word": "attend", "meaning_cn": "处理", "note_cn": "此处非“出席”"},
+        {"word": "to", "meaning_cn": "(介词)"}
+      ],
+      "ex_en": "The nurse has many patients to attend to.",
+      "ex_cn": "护士有许多病人要照料。",
+      "occ": [[2764, "attend to"], [2767, "attending to"]]
+    },
+    {
+      "head": "in vain",
+      "gloss": "徒劳；白费力气",
+      "ipa": "/ɪn veɪn/",
+      "note": "vain 此处意为“徒劳的”，非“虚荣”。in vain 常置于句首或句尾。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "vain", "meaning_cn": "徒劳的", "note_cn": "此处非“虚荣”义"}
+      ],
+      "ex_en": "They searched all night, but in vain.",
+      "ex_cn": "他们找了一整夜，却是徒劳。",
+      "occ": [[2765, "in vain"]]
+    },
+    {
+      "head": "get rid of",
+      "gloss": "摆脱；除掉；处理掉",
+      "ipa": "/ɡet rɪd əv/",
+      "note": "get rid of sb/sth = 甩掉、清除掉某人或某物。",
+      "literal": [
+        {"word": "get", "meaning_cn": "使得"},
+        {"word": "rid", "meaning_cn": "摆脱(的)"},
+        {"word": "of", "meaning_cn": "(介词)"}
+      ],
+      "ex_en": "It's hard to get rid of a bad habit.",
+      "ex_cn": "坏习惯很难改掉。",
+      "occ": [[2766, "get rid of"]]
+    },
+    {
+      "head": "go through the motions",
+      "gloss": "走过场；例行公事；敷衍了事",
+      "ipa": "/ɡoʊ θruː ðə ˈmoʊʃənz/",
+      "note": "指只做表面动作而无真心投入。motions 指“动作”。本章指汤姆对着空气做出打人的动作。",
+      "literal": [
+        {"word": "went", "meaning_cn": "做(一系列动作)", "note_cn": "go 的过去式"},
+        {"word": "through", "meaning_cn": "经过"},
+        {"word": "the", "meaning_cn": "这些"},
+        {"word": "motions", "meaning_cn": "动作", "note_cn": "此处指“例行动作、样子”"}
+      ],
+      "ex_en": "He wasn't really trying—just going through the motions.",
+      "ex_cn": "他并没真下功夫，只是走走过场。",
+      "occ": [[2775, "went through the motions"]]
+    },
+    {
+      "head": "burst into tears",
+      "gloss": "突然大哭；放声大哭",
+      "ipa": "/bɜːrst ˈɪntə tɪrz/",
+      "note": "burst into + tears / laughter / song = 突然爆发出(某种情绪或声音)。",
+      "literal": [
+        {"word": "burst", "meaning_cn": "突然发作"},
+        {"word": "into", "meaning_cn": "进入(某状态)"},
+        {"word": "tears", "meaning_cn": "眼泪"}
+      ],
+      "ex_en": "The little boy burst into tears when he lost his balloon.",
+      "ex_cn": "小男孩弄丢气球时突然大哭起来。",
+      "occ": [[2785, "burst into tears"]]
+    },
+    {
+      "head": "leave someone alone",
+      "gloss": "别打扰某人；让某人独自待着",
+      "ipa": "/liːv ˈsʌmwʌn əˈloʊn/",
+      "note": "leave sb alone = 不去打扰、别烦某人。",
+      "literal": [
+        {"word": "leave", "meaning_cn": "让…保持"},
+        {"word": "me", "meaning_cn": "我"},
+        {"word": "alone", "meaning_cn": "独自"}
+      ],
+      "ex_en": "I'm tired—please leave me alone for a while.",
+      "ex_cn": "我累了，请让我一个人待一会儿。",
+      "occ": [[2787, "leave me alone"]]
+    },
+    {
+      "head": "change one's mind",
+      "gloss": "改变主意；改变想法",
+      "ipa": "/tʃeɪndʒ wʌnz maɪnd/",
+      "note": "指做出与原先不同的决定。",
+      "literal": [
+        {"word": "changed", "meaning_cn": "改变"},
+        {"word": "her", "meaning_cn": "她的"},
+        {"word": "mind", "meaning_cn": "想法", "note_cn": "此处指“主意、决定”"}
+      ],
+      "ex_en": "She wanted to go, but then changed her mind.",
+      "ex_cn": "她本想去，后来又改了主意。",
+      "occ": [[2800, "changed her mind"]]
+    },
+    {
+      "head": "lose patience",
+      "gloss": "失去耐心；不耐烦",
+      "ipa": "/luːz ˈpeɪʃəns/",
+      "note": "常接 with sb，表示对某人失去耐心。",
+      "literal": [
+        {"word": "lost", "meaning_cn": "失去", "note_cn": "lose 的过去式"},
+        {"word": "patience", "meaning_cn": "耐心"}
+      ],
+      "ex_en": "The teacher lost patience with the noisy class.",
+      "ex_cn": "老师对吵闹的班级失去了耐心。",
+      "occ": [[2784, "lost patience"]]
+    },
+    {
+      "head": "into the bargain",
+      "gloss": "而且；外加；此外还",
+      "ipa": "/ˈɪntə ðə ˈbɑːrɡɪn/",
+      "note": "多置于句末，表示“除此之外还…”。与买卖 bargain 无关，是固定习语。",
+      "literal": [
+        {"word": "into", "meaning_cn": "进入"},
+        {"word": "the", "meaning_cn": "这"},
+        {"word": "bargain", "meaning_cn": "交易", "note_cn": "此处为固定习语，非“便宜货”"}
+      ],
+      "ex_en": "The hotel was cheap, and had a great view into the bargain.",
+      "ex_cn": "这家旅馆便宜，而且还带着极好的景致。",
+      "occ": [[2802, "into the bargain"]]
+    },
+    {
+      "head": "make much of",
+      "gloss": "重视；对…大加宠爱/赞赏",
+      "ipa": "/meɪk mʌtʃ əv/",
+      "note": "本章出处为分离式“made so much of him”，故 card-only。make much of sb = 对某人格外看重、宠爱。",
+      "literal": [
+        {"word": "make", "meaning_cn": "做出"},
+        {"word": "much", "meaning_cn": "许多", "note_cn": "此处指“看重、大加关注”"},
+        {"word": "of", "meaning_cn": "对于"}
+      ],
+      "ex_en": "The whole family made much of the new baby.",
+      "ex_cn": "全家人都对新生儿宠爱有加。",
+      "cardOnly": true,
+      "key": "make much of",
+      "exSeq": 2696
+    }
+  ],
+  "skipped": [
+    "专名/人名 Becky / Amy Lawrence / Alfred Temple / Sereny(Mrs.) Harper / Milum apple",
+    "感叹套语 Mercy on us / for the land's sake / Land alive / goodness gracious / for the land's sake(一次性)",
+    "方言拼写与表面形 warn't / 'twould 'a' / harum-scarum / go 'long / hendered / holler 'nough / let that learn you / 'bout(迁移弱)",
+    "in the land of the living(文学惯语，一次性→难句层)",
+    "food and drink to him(文学性一次性比喻)",
+    "a good cry(口语一次性，控量舍去)",
+    "made a convenience of him / vent her spite(一次性文学表达)",
+    "prick up one's ear(2782，与 ch10 重复，避免重收)",
+    "in a rush(2591 出处为 'in such a rush' 被 such 隔开，无法连续下划线)",
+    "give someone a hint / get someone into trouble / a whole lot of(偏组合或口语基础，为控量舍去)",
+    "again and again(与 ch10 over and over 同型，控量舍去)"
+  ]
+}

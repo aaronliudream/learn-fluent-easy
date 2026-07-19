@@ -1,0 +1,21 @@
+{ "chapter": 1,
+  "images": [
+    { "k":1, "slug":"father-warns-in-chamber", "seq":8,
+      "scene":"An elderly father sits in an armchair in his bedchamber, one gouty leg propped on a stool, leaning forward and gesturing earnestly as he counsels his young son who stands listening by the bed.",
+      "alt":"An old man with a bandaged leg sits in a chair advising a young man standing in a bedroom." },
+    { "k":2, "slug":"boarding-ship-at-hull", "seq":21,
+      "scene":"A young man walks up a wooden gangplank onto a sailing ship at the busy quay of Hull harbour, a bag over his shoulder, other ships and dock crowds behind him.",
+      "alt":"A young man carrying a bag boards a sailing ship at a crowded harbour dock." },
+    { "k":3, "slug":"mountainous-seas-in-storm", "seq":48,
+      "scene":"A small sailing ship pitches amid towering grey waves in a violent storm, spray breaking over its deck, while in the distance another ship lies dismasted and half-sunk.",
+      "alt":"A ship tossed among enormous waves in a storm with a wrecked ship in the distance." },
+    { "k":4, "slug":"cutting-away-the-mast", "seq":51,
+      "scene":"Sailors on a storm-lashed deck swing axes to chop through the base of the foremast, ropes and rigging whipping loose as the tall mast begins to topple over the side.",
+      "alt":"Sailors on a stormy deck chop down a falling ship's mast with axes." },
+    { "k":5, "slug":"rescue-boat-under-stern", "seq":67,
+      "scene":"A crowded open rowing boat pitches close beneath the stern of a foundering ship in heavy seas, men gripping a thrown rope as sailors climb down one by one into the boat.",
+      "alt":"Men climb from a sinking ship down a rope into a small crowded rowboat in rough seas." },
+    { "k":6, "slug":"ship-founders-at-sea", "seq":69,
+      "scene":"From a small boat of huddled survivors rowing toward a distant shore, they watch their abandoned ship sink stern-first into the grey heaving sea behind them.",
+      "alt":"Survivors in a small boat watch their ship sink into the sea in the distance." }
+  ] }

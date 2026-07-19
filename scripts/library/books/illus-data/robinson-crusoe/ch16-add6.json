@@ -1,0 +1,21 @@
+{ "chapter": 16,
+  "images": [
+    { "k":7, "slug":"hauling-boat-on-rollers", "seq":1825,
+      "scene":"Robinson and Friday heave the huge finished canoe inch by inch across the sand toward the water, the heavy hull riding on a line of round log rollers laid on the ground, both men leaning hard against the stern with ropes taut.",
+      "alt":"两人用滚木一寸寸把大独木舟推向海里。" },
+    { "k":8, "slug":"friday-astonished-at-sail", "seq":1836,
+      "scene":"The boat glides across the sea under a small three-cornered patched sail bellied by the wind, Robinson at the stern working a wooden rudder while Friday stands frozen in the bow, mouth open and arms stiff, staring astonished at the swinging sail.",
+      "alt":"小舟扬起三角帆行驶,星期五呆立船头惊讶地望着摆动的帆。" },
+    { "k":9, "slug":"boat-hidden-in-thatched-dock", "seq":1844,
+      "scene":"The large canoe rests in a shallow dug dock at the edge of the creek behind a mud dam, roofed over with a thick layer of leafy tree boughs piled so densely it looks like the thatch of a house, hiding the vessel from view.",
+      "alt":"大独木舟停在挖好的小船坞里,上面盖满厚厚的树枝像屋顶一样把它藏住。" },
+    { "k":10, "slug":"loading-the-arsenal", "seq":1867,
+      "scene":"On a wooden bench inside the fortification, Robinson pours powder and rams shot into a row of muskets, fowling-pieces and two pistols laid out side by side, a great naked sword hung at his side and a hatchet set out ready for Friday.",
+      "alt":"罗滨逊在寨子里逐一给一排火枪和手枪装填火药弹丸,佩剑在腰,一把手斧备给星期五。" },
+    { "k":11, "slug":"cutting-the-spaniard-free", "seq":1902,
+      "scene":"On the open beach Robinson kneels over a bearded European man lying bound with rushes on the sand, slicing the twisted bindings from his wrists with a knife, while nearby Friday stands firing a musket toward canoes at the water's edge.",
+      "alt":"罗滨逊在沙滩上跪着用刀割断被捆西班牙人手上的草绳,星期五在旁向水边的独木舟开枪。" },
+    { "k":12, "slug":"spaniard-shoots-from-the-ground", "seq":1910,
+      "scene":"Locked in a wrestling struggle on the sand, a stout savage pins the weakened bearded Spaniard beneath him and wrenches at a sword, while the Spaniard, flat on his back, draws a pistol from his belt and fires it point-blank into the attacker's body in a puff of smoke.",
+      "alt":"沙地上壮实的野人把虚弱的西班牙人压在身下夺剑,西班牙人仰面抽出手枪贴身开火。" }
+  ] }

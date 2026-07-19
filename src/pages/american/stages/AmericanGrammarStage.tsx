@@ -6,6 +6,7 @@ import { useCallback, useMemo } from "react";
 import { QuizRunner, questionsToItems } from "@/components/american/QuizRunner";
 import { GrammarTipsView, type TipContent } from "@/components/grammar/GrammarTipsCard";
 import { markStageComplete, recordMastery, type LessonBundle } from "@/lib/american/data";
+import { recordAmericanMistake, americanLessonLabel } from "@/lib/american/americanMistake";
 
 export function AmericanGrammarStage({ bundle, onDone }: { bundle: LessonBundle; onDone?: () => void }) {
   const qs = useMemo(() => bundle.questions.filter((q) => q.stage === 5), [bundle]);
@@ -31,5 +32,7 @@ export function AmericanGrammarStage({ bundle, onDone }: { bundle: LessonBundle;
     </div>
   ) : undefined;
 
-  return <QuizRunner items={items} onAnswer={onAnswer} onComplete={onComplete} header={header} />;
+  const label = americanLessonLabel(bundle.lesson);
+  return <QuizRunner items={items} onAnswer={onAnswer} onComplete={onComplete}
+    onRecordMistake={(it, picked, ok) => recordAmericanMistake(it, picked, ok, label)} header={header} />;
 }

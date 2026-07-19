@@ -1,0 +1,352 @@
+{
+  "chapter": 13,
+  "chunks": [
+    {
+      "head": "make up one's mind",
+      "gloss": "下定决心；拿定主意",
+      "ipa": "/meɪk ʌp wʌnz maɪnd/",
+      "note": "本章为被动式 one's mind was made up = 主意已定、决心已下。make up 在此指“下定、拿定”，非“化妆/编造”。",
+      "literal": [
+        {"word": "mind", "meaning_cn": "主意、决心"},
+        {"word": "was made up", "meaning_cn": "被拿定", "note_cn": "make up one's mind 的被动形式"}
+      ],
+      "ex_en": "She made up her mind to become a doctor.",
+      "ex_cn": "她下定决心要当医生。",
+      "occ": [[1944, "mind was made up"]]
+    },
+    {
+      "head": "get along",
+      "gloss": "过活；过得下去",
+      "ipa": "/ɡet əˈlɔːŋ/",
+      "note": "本章指“(在生活里)过得去、勉强度日”；另一常见义是 get along with sb = 与某人相处融洽。",
+      "literal": [
+        {"word": "get", "meaning_cn": "(逐渐)变得、维持"},
+        {"word": "along", "meaning_cn": "向前", "note_cn": "此处引申为“继续过下去”"}
+      ],
+      "ex_en": "It's not easy to get along on so little money.",
+      "ex_cn": "靠这么点钱过日子不容易。",
+      "occ": [[1946, "get along"]]
+    },
+    {
+      "head": "be rid of",
+      "gloss": "摆脱；除掉",
+      "ipa": "/biː rɪd əv/",
+      "note": "be/get rid of sb/sth = 摆脱、甩掉某人或某物。",
+      "literal": [
+        {"word": "rid", "meaning_cn": "摆脱的、除去的"},
+        {"word": "of", "meaning_cn": "(介词)", "note_cn": "此处为固定搭配用词"}
+      ],
+      "ex_en": "I'm glad to be rid of that old car.",
+      "ex_cn": "能摆脱那辆破车我很高兴。",
+      "occ": [[1946, "rid of him"]]
+    },
+    {
+      "head": "by this time",
+      "gloss": "到这时候；此时",
+      "ipa": "/baɪ ðɪs taɪm/",
+      "note": "by this time = 到此刻为止，常用于叙述某个时间点已经发生的事。",
+      "literal": [
+        {"word": "by", "meaning_cn": "到...为止"},
+        {"word": "this", "meaning_cn": "这"},
+        {"word": "time", "meaning_cn": "时候"}
+      ],
+      "ex_en": "By this time everyone had gone home.",
+      "ex_cn": "到这时候，大家都已经回家了。",
+      "occ": [[1950, "By this time"]]
+    },
+    {
+      "head": "be tired of",
+      "gloss": "厌倦；对...感到厌烦",
+      "ipa": "/biː ˈtaɪərd əv/",
+      "note": "be tired of sb/sth = 对某人某事感到厌烦；注意与 be tired(疲倦)区别。",
+      "literal": [
+        {"word": "tired", "meaning_cn": "厌烦的", "note_cn": "此处非“疲倦”，而是“厌倦”"},
+        {"word": "of", "meaning_cn": "对于"}
+      ],
+      "ex_en": "I'm tired of eating the same food every day.",
+      "ex_cn": "我厌倦了每天吃一样的饭。",
+      "occ": [[1957, "tired of him"]]
+    },
+    {
+      "head": "a life of crime",
+      "gloss": "犯罪生涯；以犯罪为生",
+      "ipa": "/ə laɪf əv kraɪm/",
+      "note": "a life of + 名词 = 过着…的生活(a life of luxury 奢华生活；a life of crime 犯罪生涯)。",
+      "literal": [
+        {"word": "a", "meaning_cn": "一种"},
+        {"word": "life", "meaning_cn": "生活"},
+        {"word": "of", "meaning_cn": "…的"},
+        {"word": "crime", "meaning_cn": "犯罪"}
+      ],
+      "ex_en": "He was afraid his son would turn to a life of crime.",
+      "ex_cn": "他担心儿子会走上犯罪的道路。",
+      "occ": [[1948, "a life of crime"], [1960, "a life of crime"]]
+    },
+    {
+      "head": "stand by",
+      "gloss": "支持；忠于(某人)",
+      "ipa": "/stænd baɪ/",
+      "note": "stand by sb = 在困难时支持、不离不弃。另有“待命、准备”义(本章后文航海口令即此义,不同)。",
+      "literal": [
+        {"word": "stand", "meaning_cn": "站"},
+        {"word": "by", "meaning_cn": "在...旁边", "note_cn": "引申为“守在身旁、支持”"}
+      ],
+      "ex_en": "A true friend will stand by you in hard times.",
+      "ex_cn": "真正的朋友会在困难时支持你。",
+      "occ": [[1958, "stand by"]]
+    },
+    {
+      "head": "wear oneself out",
+      "gloss": "使自己精疲力竭；累坏",
+      "ipa": "/wer wʌnˈself aʊt/",
+      "note": "wear sb out = 使某人筋疲力尽；反身形式指把自己累垮。",
+      "literal": [
+        {"word": "worn", "meaning_cn": "累垮", "note_cn": "wear 的过去分词，此处非“穿戴”"},
+        {"word": "himself", "meaning_cn": "他自己"},
+        {"word": "out", "meaning_cn": "(耗尽)地"}
+      ],
+      "ex_en": "She wore herself out cleaning the whole house.",
+      "ex_cn": "她打扫了整栋房子，把自己累坏了。",
+      "occ": [[1990, "worn himself out"]]
+    },
+    {
+      "head": "it will never do",
+      "gloss": "(那样)绝对不行",
+      "ipa": "/ɪt wɪl ˈnevər duː/",
+      "note": "it will/would never do (to do sth) = 那可不行、行不通。此处 do 意为“行、合适”,非“做”。",
+      "literal": [
+        {"word": "it", "meaning_cn": "(形式主语)"},
+        {"word": "would", "meaning_cn": "会"},
+        {"word": "never", "meaning_cn": "绝不"},
+        {"word": "do", "meaning_cn": "行、合适", "note_cn": "此处非“做”,指“可以、行得通”"}
+      ],
+      "ex_en": "It will never do to be late for the interview.",
+      "ex_cn": "面试迟到可不行。",
+      "occ": [[1993, "would never do"]]
+    },
+    {
+      "head": "help oneself to",
+      "gloss": "自取；随便拿(吃)",
+      "ipa": "/help wʌnˈself tuː/",
+      "note": "help oneself to sth = 自己动手取用(食物等);也可含“擅自拿走”之意。本章为后者(男孩们自取一块火种)。",
+      "literal": [
+        {"word": "helped", "meaning_cn": "帮(自己)取"},
+        {"word": "themselves", "meaning_cn": "他们自己"},
+        {"word": "to", "meaning_cn": "取用(某物)"}
+      ],
+      "ex_en": "Please help yourself to some cake.",
+      "ex_cn": "请随便吃点蛋糕。",
+      "occ": [[1995, "helped themselves to"]]
+    },
+    {
+      "head": "every now and then",
+      "gloss": "时不时；偶尔",
+      "ipa": "/ˈevri naʊ ənd ðen/",
+      "note": "= occasionally,表示不时地、间或地。也说 every now and again。",
+      "literal": [
+        {"word": "every", "meaning_cn": "每"},
+        {"word": "now", "meaning_cn": "现在"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "then", "meaning_cn": "那时", "note_cn": "整体为习语,表“时不时”"}
+      ],
+      "ex_en": "Every now and then she looks out the window.",
+      "ex_cn": "她时不时往窗外看一眼。",
+      "occ": [[1996, "every now and then"]]
+    },
+    {
+      "head": "lay in",
+      "gloss": "储备；囤积",
+      "ipa": "/leɪ ɪn/",
+      "note": "lay in sth = 购入并储存(粮食、物资等)以备日后之需。",
+      "literal": [
+        {"word": "laying", "meaning_cn": "放置", "note_cn": "此处引申为“储备起来”"},
+        {"word": "in", "meaning_cn": "进来、入库"}
+      ],
+      "ex_en": "They laid in plenty of food before the storm.",
+      "ex_cn": "暴风雨来临前，他们储备了大量食物。",
+      "occ": [[1997, "laying in stores"]]
+    },
+    {
+      "head": "come near doing",
+      "gloss": "几乎；差点(做某事)",
+      "ipa": "/kʌm nɪr ˈduːɪŋ/",
+      "note": "come near doing sth = 差一点就…(near 后接动名词)。",
+      "literal": [
+        {"word": "came", "meaning_cn": "来到"},
+        {"word": "near", "meaning_cn": "接近", "note_cn": "come near doing = 险些、几乎"},
+        {"word": "letting", "meaning_cn": "让"}
+      ],
+      "ex_en": "I came near forgetting his birthday.",
+      "ex_cn": "我差点忘了他的生日。",
+      "occ": [[2031, "came near letting"]]
+    },
+    {
+      "head": "back and forth",
+      "gloss": "来回地；往返地",
+      "ipa": "/bæk ənd fɔːrθ/",
+      "note": "表示前后或来回反复移动。",
+      "literal": [
+        {"word": "back", "meaning_cn": "向后"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "forth", "meaning_cn": "向前"}
+      ],
+      "ex_en": "The dog ran back and forth along the fence.",
+      "ex_cn": "那只狗沿着篱笆来回跑。",
+      "occ": [[2033, "back and forth"]]
+    },
+    {
+      "head": "deny oneself",
+      "gloss": "克制；舍不得(不让自己享有)",
+      "ipa": "/dɪˈnaɪ wʌnˈself/",
+      "note": "deny oneself sth = 不让自己享受某物、加以节制。",
+      "literal": [
+        {"word": "deny", "meaning_cn": "拒绝给予"},
+        {"word": "themselves", "meaning_cn": "他们自己"}
+      ],
+      "ex_en": "He denied himself sweets to stay healthy.",
+      "ex_cn": "为了健康，他忍着不吃糖。",
+      "occ": [[2039, "deny themselves"]]
+    },
+    {
+      "head": "all by oneself",
+      "gloss": "独自；全靠自己",
+      "ipa": "/ɔːl baɪ wʌnˈself/",
+      "note": "all by oneself = 完全独自一人(强调孤单)或全凭自己(强调独立完成)。",
+      "literal": [
+        {"word": "all", "meaning_cn": "完全"},
+        {"word": "by", "meaning_cn": "靠"},
+        {"word": "himself", "meaning_cn": "他自己"}
+      ],
+      "ex_en": "The little boy built it all by himself.",
+      "ex_cn": "这个小男孩全靠自己把它搭好的。",
+      "occ": [[2049, "all by himself"]]
+    },
+    {
+      "head": "get around",
+      "gloss": "回避；绕开(问题/规定)",
+      "ipa": "/ɡet əˈraʊnd/",
+      "note": "get around sth = 规避、避开(难题或规则)。本章两处均此义。",
+      "literal": [
+        {"word": "get", "meaning_cn": "设法"},
+        {"word": "around", "meaning_cn": "绕过", "note_cn": "引申为“回避、避开”"}
+      ],
+      "ex_en": "There's no way to get around the rules.",
+      "ex_cn": "这些规定没办法回避。",
+      "occ": [[2064, "get around it"], [2096, "getting around"]]
+    },
+    {
+      "head": "run away",
+      "gloss": "逃跑；离家出走",
+      "ipa": "/rʌn əˈweɪ/",
+      "note": "run away (from home) = 逃走、出走。本章两个男孩正是离家出走去当海盗。",
+      "literal": [
+        {"word": "run", "meaning_cn": "跑"},
+        {"word": "away", "meaning_cn": "离开"}
+      ],
+      "ex_en": "The frightened cat ran away.",
+      "ex_cn": "受惊的猫跑掉了。",
+      "occ": [[2066, "run away"], [2095, "run away"]]
+    },
+    {
+      "head": "at once",
+      "gloss": "立刻；马上",
+      "ipa": "/ət wʌns/",
+      "note": "= immediately。另有“同时”义(all at once)。本章为“立刻”义。",
+      "literal": [
+        {"word": "at", "meaning_cn": "在"},
+        {"word": "once", "meaning_cn": "一...就、立即", "note_cn": "此处非“一次”"}
+      ],
+      "ex_en": "Come here at once!",
+      "ex_cn": "马上过来！",
+      "occ": [[2093, "at once"]]
+    },
+    {
+      "head": "scores of",
+      "gloss": "许多；大量的",
+      "ipa": "/skɔːrz əv/",
+      "note": "a score = 二十;scores of = 许许多多、成群成批的。",
+      "literal": [
+        {"word": "scores", "meaning_cn": "许多", "note_cn": "score 本义“二十”,复数虚指“大量”"},
+        {"word": "of", "meaning_cn": "…的"}
+      ],
+      "ex_en": "Scores of people came to the concert.",
+      "ex_cn": "许许多多的人来看演唱会。",
+      "occ": [[2096, "scores of times"]]
+    },
+    {
+      "head": "to begin with",
+      "gloss": "首先；起初",
+      "ipa": "/tə bɪˈɡɪn wɪð/",
+      "note": "两义:(1)起初、一开始;(2)首先(列举理由时)。本章为“起初”义。",
+      "literal": [
+        {"word": "to", "meaning_cn": "(不定式)"},
+        {"word": "begin", "meaning_cn": "开始"},
+        {"word": "with", "meaning_cn": "(介词)", "note_cn": "整体为习语,表“起初/首先”"}
+      ],
+      "ex_en": "To begin with, we didn't have much money.",
+      "ex_cn": "起初，我们没多少钱。",
+      "occ": [[2088, "to begin with"]]
+    },
+    {
+      "head": "dead men tell no tales",
+      "gloss": "死人不会泄密(谚语)",
+      "ipa": "/ded men tel noʊ teɪlz/",
+      "note": "谚语,意为把知情者除掉就不会走漏消息。tale 此处指“闲话、秘闻”。",
+      "literal": [
+        {"word": "dead", "meaning_cn": "死的"},
+        {"word": "men", "meaning_cn": "人们"},
+        {"word": "tell", "meaning_cn": "讲述"},
+        {"word": "no", "meaning_cn": "没有"},
+        {"word": "tales", "meaning_cn": "秘闻、闲话", "note_cn": "此处非“童话”,指“泄露的话”"}
+      ],
+      "ex_en": "He silenced the witness, for dead men tell no tales.",
+      "ex_cn": "他杀人灭口，因为死人不会泄密。",
+      "occ": [[1996, "dead men tell no tales"]]
+    },
+    {
+      "head": "let someone have it",
+      "gloss": "狠狠教训；痛击(某人)",
+      "ipa": "/let ˈsʌmwʌn hæv ɪt/",
+      "note": "口语,let sb have it = 给某人狠狠一击、痛揍或痛骂一顿。",
+      "literal": [
+        {"word": "let", "meaning_cn": "让"},
+        {"word": "him", "meaning_cn": "他"},
+        {"word": "have", "meaning_cn": "承受"},
+        {"word": "it", "meaning_cn": "那一下", "note_cn": "此处 it 虚指“痛击”,非具体物"}
+      ],
+      "ex_en": "If he says that again, I'll let him have it.",
+      "ex_cn": "他要是再那么说，我就狠狠教训他。",
+      "occ": [[1996, "let him have it"]]
+    },
+    {
+      "head": "be all one to someone",
+      "gloss": "(对某人)都一样；无所谓",
+      "ipa": "/biː ɔːl wʌn tə ˈsʌmwʌn/",
+      "note": "本章出处为分离式(“all careers were one to him”),故 card-only。it's all one to sb = 对某人来说都一样、毫不在意。",
+      "literal": [
+        {"word": "all", "meaning_cn": "全都"},
+        {"word": "one", "meaning_cn": "一样的", "note_cn": "此处指“没差别、都一回事”"},
+        {"word": "to", "meaning_cn": "对于"}
+      ],
+      "ex_en": "Tea or coffee, it's all one to me.",
+      "ex_cn": "茶还是咖啡，对我都一样。",
+      "cardOnly": true,
+      "key": "be all one to",
+      "exSeq": 1965
+    }
+  ],
+  "skipped": [
+    "专名:Jackson's Island / the Black Avenger of the Spanish Main / the Terror of the Seas / the Red-Handed / St. Petersburg / Meadow Lane / Joe Harper / Huckleberry Finn(人名与自封绰号,跳过)",
+    "航海口令一次性:Luff / bring her to the wind / Aye-aye sir / tops'ls / flying-jib / Hellum-a-lee / hard a port(仿海盗腔,一次性)",
+    "'looking his last' / 'looked his last'(文学性一次性,引号内比喻→难句层)",
+    "'two souls with but a single thought'(引文,一次性)",
+    "make shift to avert it(古旧,一次性)",
+    "steal upon the eyelids(文学化拟人,一次性)",
+    "be for being a hermit(be for = 赞成,备选,为控量舍去)",
+    "walk a plank / make 'em walk a plank(海盗文化梗,一次性→难句层)",
+    "having a spree(a spree=狂欢,较口语一次性,控量舍去)",
+    "take up(此处指学校“开课”的特殊旧用法,引号内)",
+    "'hooking'(引号内俚语,偷小东西,一次性)",
+    "方言拼写:warn't / gen'ally / fitten / dern'd / di'monds / 'low / better'n(迁移弱)"
+  ]
+}

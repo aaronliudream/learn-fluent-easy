@@ -45,9 +45,9 @@ export type GrammarQuestion = {
 };
 
 export type AnswerResult =
-  | { kind: "correct"; latencyMs: number }
-  | { kind: "acceptable"; latencyMs: number; betterPhrasing?: string }
-  | { kind: "wrong"; latencyMs: number; errorReason?: string };
+  | { kind: "correct"; latencyMs: number; picked?: string }
+  | { kind: "acceptable"; latencyMs: number; betterPhrasing?: string; picked?: string }
+  | { kind: "wrong"; latencyMs: number; errorReason?: string; picked?: string };
 
 interface Props {
   question: GrammarQuestion;
@@ -168,6 +168,7 @@ export function GrammarQuestionCard({
       kind: ok ? "correct" : "wrong",
       latencyMs: Date.now() - shownAt,
       errorReason: ok ? undefined : "rule_unknown",
+      picked: letter,
     });
   };
 
@@ -176,12 +177,13 @@ export function GrammarQuestionCard({
     if (picks.some((p) => p.correct)) return;
     setPicks((p) => [...p, choice]);
     if (choice.correct) {
-      onAnswered({ kind: "correct", latencyMs: Date.now() - shownAt });
+      onAnswered({ kind: "correct", latencyMs: Date.now() - shownAt, picked: choice.text });
     } else if (picks.length === 0) {
       onAnswered({
         kind: "wrong",
         latencyMs: Date.now() - shownAt,
         errorReason: "rule_unknown",
+        picked: choice.text,
       });
     }
   };
@@ -194,6 +196,7 @@ export function GrammarQuestionCard({
       kind: ok ? "correct" : "wrong",
       latencyMs: Date.now() - shownAt,
       errorReason: ok ? undefined : "rule_unknown",
+      picked: input,
     });
   };
 
@@ -219,6 +222,7 @@ export function GrammarQuestionCard({
           kind: ok ? "correct" : "wrong",
           latencyMs: Date.now() - shownAt,
           errorReason: ok ? undefined : "rule_unknown",
+          picked: input,
         });
         return;
       }
@@ -240,6 +244,7 @@ export function GrammarQuestionCard({
         latencyMs: Date.now() - shownAt,
         errorReason: kind === "wrong" ? data.errorReason || "rule_unknown" : undefined,
         ...(kind === "acceptable" ? { betterPhrasing: data.betterPhrasing } : {}),
+        picked: input,
       });
     } catch {
       setRevealed(true);
@@ -289,7 +294,7 @@ export function GrammarQuestionCard({
         )}
       </div>
 
-      <div className={cn("relative font-bold whitespace-pre-wrap leading-relaxed mb-4 text-foreground", large ? "text-lg sm:text-xl" : "text-sm")}>
+      <div className={cn("relative font-bold whitespace-pre-wrap leading-relaxed mb-4 text-foreground", large ? "text-lg sm:text-xl" : "text-base")}>
         {q.stem?.replace(/\\n/g, "\n")}
       </div>
 
@@ -328,7 +333,7 @@ export function GrammarQuestionCard({
                 >
                   {showCorrect || showRevealed ? "✓" : showWrong ? "✗" : CHOICE_LETTERS[i]}
                 </span>
-                <span className={cn("leading-snug", large ? "text-lg" : "text-sm")}>{c.text}</span>
+                <span className={cn("leading-snug", large ? "text-lg" : "text-base")}>{c.text}</span>
               </button>
             );
           })}

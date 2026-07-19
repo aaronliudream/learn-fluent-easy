@@ -1,0 +1,83 @@
+{
+  "chapter": 12,
+  "chunks": [
+    { "head": "on account of", "gloss": "因为、由于", "ipa": "/ɒn əˈkaʊnt əv/",
+      "note": "on account of + 名词 = 由于、因为(比 because of 稍正式)。",
+      "literal": [{"word":"on","meaning_cn":"因为","note_cn":"(此处)非'在…上'义"},{"word":"account","meaning_cn":"缘由","note_cn":"(此处)非'账户'义"},{"word":"of","meaning_cn":"的、对于"}],
+      "ex_en": "The match was cancelled on account of the rain.", "ex_cn": "因为下雨,比赛取消了。",
+      "occ": [[1352,"on account of"]] },
+
+    { "head": "in search of", "gloss": "寻找、为找…而", "ipa": "/ɪn sɜːtʃ əv/",
+      "note": "in search of + 目标 = 为寻找某物/某人。",
+      "literal": [{"word":"in","meaning_cn":"处于…之中"},{"word":"search","meaning_cn":"搜寻","note_cn":"此处为名词'搜寻'"},{"word":"of","meaning_cn":"的"}],
+      "ex_en": "They went out in search of food.", "ex_cn": "他们出门去找食物。",
+      "occ": [[1361,"in search of"]] },
+
+    { "head": "look after", "gloss": "照料、照看", "ipa": "/lʊk ˈɑːftər/",
+      "note": "look after = 照顾、看管。",
+      "literal": [{"word":"look","meaning_cn":"照看、留意"},{"word":"after","meaning_cn":"照应","note_cn":"(此处)非'在…之后'义"}],
+      "ex_en": "Can you look after my dog this weekend?", "ex_cn": "这个周末你能帮我照看狗吗?",
+      "occ": [[1364,"look after"]] },
+
+    { "head": "wear off", "gloss": "(感觉/效果)逐渐消退", "ipa": "/weər ɒf/",
+      "note": "wear off = (疼痛、新鲜感、药效等)慢慢消失。",
+      "literal": [{"word":"wear","meaning_cn":"逐渐消耗","note_cn":"(此处)非'穿'义"},{"word":"off","meaning_cn":"离去、消失"}],
+      "ex_en": "The pain will wear off in an hour.", "ex_cn": "一小时后疼痛就会消退。",
+      "occ": [[1365,"wear off"]] },
+
+    { "head": "blow up", "gloss": "炸毁、爆炸", "ipa": "/bloʊ ʌp/",
+      "note": "blow up = 使爆炸、炸掉;另可指(人)发火,本章为'炸毁'。",
+      "literal": [{"word":"blow","meaning_cn":"使爆炸","note_cn":"(此处)非'吹'义"},{"word":"up","meaning_cn":"彻底、完全"}],
+      "ex_en": "The soldiers blew up the bridge.", "ex_cn": "士兵们炸毁了那座桥。",
+      "occ": [[1376,"blow up"]] },
+
+    { "head": "at length", "gloss": "终于、最后", "ipa": "/ət leŋθ/",
+      "note": "at length (此处)= 经过很久之后终于;另义'详尽地'。",
+      "literal": [{"word":"at","meaning_cn":"在…"},{"word":"length","meaning_cn":"长时间之后","note_cn":"(此处)非'长度'字面义"}],
+      "ex_en": "At length, the bus finally arrived.", "ex_cn": "终于,公交车来了。",
+      "occ": [[1379,"at length"]] },
+
+    { "head": "put to death", "gloss": "处死", "ipa": "/pʊt tə deθ/",
+      "note": "put someone to death = 将某人处死。",
+      "literal": [{"word":"put","meaning_cn":"使处于"},{"word":"to","meaning_cn":"至、到"},{"word":"death","meaning_cn":"死亡"}],
+      "ex_en": "The traitor was put to death.", "ex_cn": "那个叛徒被处死了。",
+      "occ": [[1388,"put to death"]] },
+
+    { "head": "on the other hand", "gloss": "(另)一方面、可是", "ipa": "/ɒn ði ˈʌðər hænd/",
+      "note": "on the other hand = 引出相反或对照的一面。",
+      "literal": [{"word":"on","meaning_cn":"在…"},{"word":"the","meaning_cn":"这"},{"word":"other","meaning_cn":"另一个"},{"word":"hand","meaning_cn":"方面","note_cn":"(此处)非'手'义"}],
+      "ex_en": "It's cheap; on the other hand, it isn't very good.", "ex_cn": "它便宜;可另一方面,质量不太好。",
+      "occ": [[1391,"on the other hand"]] },
+
+    { "head": "take notice of", "gloss": "注意到、留意", "ipa": "/teɪk ˈnoʊtɪs əv/",
+      "note": "take notice of = 留意、把…放在心上。",
+      "literal": [{"word":"take","meaning_cn":"加以"},{"word":"notice","meaning_cn":"注意","note_cn":"此处为名词'注意'"},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "Nobody took notice of the new sign.", "ex_cn": "没人留意到那块新牌子。",
+      "occ": [[1404,"taken notice of"]] },
+
+    { "head": "put an end to", "gloss": "结束、终止", "ipa": "/pʊt ən end tə/",
+      "note": "put an end to something = 使某事终止、制止。",
+      "literal": [{"word":"put","meaning_cn":"使…发生"},{"word":"an","meaning_cn":"一个"},{"word":"end","meaning_cn":"终结"},{"word":"to","meaning_cn":"对于"}],
+      "ex_en": "The new rule put an end to the noise.", "ex_cn": "新规定制止了噪音。",
+      "occ": [[1407,"put an end to"]] },
+
+    { "head": "for fear", "gloss": "唯恐、生怕", "ipa": "/fɔːr fɪər/",
+      "note": "for fear (that…/of…) = 生怕、以免。",
+      "literal": [{"word":"for","meaning_cn":"因为、以免"},{"word":"fear","meaning_cn":"害怕、担心"}],
+      "ex_en": "She spoke softly for fear of waking the baby.", "ex_cn": "她轻声说话,生怕吵醒宝宝。",
+      "occ": [[1409,"for fear"]] },
+
+    { "head": "give over", "gloss": "(此处)停止、放弃", "ipa": "/ɡɪv ˈoʊvər/",
+      "note": "本章出处为分离式(gave it over),故 card-only。give over = 罢手、不再做。",
+      "literal": [{"word":"give","meaning_cn":"停止、放弃","note_cn":"(此处)非'给'义"},{"word":"over","meaning_cn":"结束、了结"}],
+      "ex_en": "He gave over trying to fix the old clock.", "ex_cn": "他放弃了修那只旧钟。",
+      "cardOnly": true, "key": "give over", "exSeq": 1356 }
+  ],
+  "skipped": [
+    "专名/地名 e.g. the Brazils / the Spaniards / America",
+    "18世纪古语/生僻词 e.g. thither / hither / whither / durst / methought / hath",
+    "一次性 nautical/物件硬词 e.g. perspective glass / fowling-piece / grapnel / cutlass / swan-shot",
+    "过时惯用语 e.g. by little and little / a great while / by-the-bye / bring to pass",
+    "一次性宗教/道德训诫套语 e.g. Providence had ordered / a special providence / blood-guiltiness"
+  ]
+}

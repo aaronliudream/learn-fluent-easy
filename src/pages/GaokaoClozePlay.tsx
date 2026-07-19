@@ -11,6 +11,7 @@ import { awardCoins, awardForBlock, petReact } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { recordMastery } from "@/lib/masteryProgress";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
+import { recordZoneMistake, answerToIdx } from "@/lib/recordZoneMistake";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
@@ -194,6 +195,19 @@ export default function GaokaoClozePlay() {
         correct_answer: b.correct_answer,
         context: { passage_id: id, blank_no: b.blank_no, skill: b.skill_tag, explanation: b.general_explanation }
       }).catch(() => {});
+      // 额外:完整快照写统一错题本(题干+全选项+作答),做对自动移出。纯新增,失败只 warn。
+      const clozeOpts = [b.option_a, b.option_b, b.option_c, b.option_d];
+      void recordZoneMistake({
+        module: "senior_cloze",
+        sourceKeyBase: `${id}:${b.blank_no}`,
+        isCorrect: ok,
+        stem: `${passage?.title ?? "完形填空"} · 第 ${b.blank_no} 空`,
+        options: clozeOpts,
+        correctIdx: answerToIdx(b.correct_answer, clozeOpts),
+        pickedIdx: answerToIdx(userAns, clozeOpts),
+        explanation: b.general_explanation,
+        sourceLabel: passage?.title ?? null,
+      });
     }
     // 宠物挂钩：每对一空 1 星币 + 满分 +20 + 5题块 +5
     if (r?.correct_count > 0) {

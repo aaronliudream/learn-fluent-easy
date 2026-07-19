@@ -1,0 +1,21 @@
+{ "chapter": 20,
+  "images": [
+    { "k":1, "slug":"monstrous-bear-emerges", "seq":2318,
+      "scene":"A huge bear steps out of a snowy pine wood in the mountains toward a small group of travellers on horseback; in the foreground the frightened guide is being helped down off his horse, clutching his injured arm.",
+      "alt":"A large bear emerges from a snowy wood as travellers on horseback watch." },
+    { "k":2, "slug":"friday-makes-bear-dance", "seq":2337,
+      "scene":"Friday sits out on the thin far end of a large oak branch, jumping and shaking the bough, while the heavy bear clings half-way along the same limb, tottering and looking back over its shoulder. Mounted onlookers watch from below.",
+      "alt":"A man bounces on an oak branch making a bear cling and totter on the same limb." },
+    { "k":3, "slug":"friday-shoots-bear-ear", "seq":2346,
+      "scene":"As the bear climbs backward down the trunk of the oak with its hind foot near the snowy ground, Friday steps close and presses the muzzle of his gun into the bear's ear, firing point-blank.",
+      "alt":"A man presses his gun to a bear's ear at the foot of a tree and fires." },
+    { "k":4, "slug":"wolves-picking-horse-bones", "seq":2359,
+      "scene":"On a snow-covered plain ringed by dark woods lies a dead horse, with about a dozen wolves crowded over it picking the bones clean. Travellers on horseback pause warily at a distance.",
+      "alt":"A pack of wolves feeds on a dead horse on a snowy plain while riders watch." },
+    { "k":5, "slug":"wolf-army-advancing", "seq":2362,
+      "scene":"About a hundred wolves advance across the snowy plain in a long ordered line like an army, heads low and open-mouthed, moving directly toward the travellers who form a tight rank on horseback with guns raised.",
+      "alt":"A long line of about a hundred wolves advances across snow toward armed riders." },
+    { "k":6, "slug":"powder-train-explosion", "seq":2380,
+      "scene":"At night by a wood's edge, a long felled timber log serves as a breastwork; a train of gunpowder laid along it bursts into flame, scorching and flinging back several wolves, while the men stand in a triangle behind the log firing pistols with their horses penned in the centre.",
+      "alt":"A powder train explodes along a log at night, scattering wolves as men fire from behind it." }
+  ] }

@@ -11,6 +11,7 @@ import { celebrateScore } from "@/lib/feedback";
 import { ShareButton } from "@/components/share/ShareButton";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
+import { recordZoneMistake, answerToIdx } from "@/lib/recordZoneMistake";
 import { recordMastery } from "@/lib/masteryProgress";
 
 type Q = {type?: "choice" | "fill" | "judge";q: string;options: string[];answer: string;explanation?: string;};
@@ -133,6 +134,23 @@ export default function JuniorListeningPlay() {
       correct_answer: String(e!.questions[idx].answer),
       context: { exercise_id: id, question_idx: idx, explanation: e!.questions[idx].explanation }
     }).catch(() => {});
+    // 额外:完整快照写统一错题本(题干+全选项+音频+作答),做对自动移出。纯新增,失败只 warn。
+    if (e) {
+      const q = e.questions[idx];
+      void recordZoneMistake({
+        module: "hub_listening",
+        sourceKeyBase: `${id}:${idx}`,
+        isCorrect: ok,
+        stem: q.q,
+        options: q.options,
+        correctIdx: answerToIdx(q.answer, q.options),
+        pickedIdx: answerToIdx(letter, q.options),
+        audio: e.transcript,
+        audioUrl: e.audio_url,
+        explanation: q.explanation,
+        sourceLabel: e.title,
+      });
+    }
     // If this was the last question answered, celebrate
     if (e && Object.keys(picks).length + 1 >= e.questions.length) {
       const updated = { ...picks, [idx]: letter };

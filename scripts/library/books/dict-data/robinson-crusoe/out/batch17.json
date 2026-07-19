@@ -1,0 +1,556 @@
+{
+ "batch": 17,
+ "cards": [
+  {
+   "word": "paste",
+   "ipa": "/peɪst/",
+   "pos": "n.",
+   "gloss_cn": "糊状物、陶土泥",
+   "gloss_en": "a soft, thick, moist mixture like wet clay",
+   "sense_key": "paste",
+   "ex_en": "She mixed flour and water into a soft paste.",
+   "ex_cn": "她把面粉和水和成软糊。"
+  },
+  {
+   "word": "glazed",
+   "ipa": "/ɡleɪzd/",
+   "pos": "v.",
+   "gloss_cn": "上釉的(glaze过去式)",
+   "gloss_en": "coated with a shiny glass-like surface",
+   "sense_key": "glaze",
+   "ex_en": "The potter glazed the bowl to make it shiny.",
+   "ex_cn": "陶工给碗上釉,让它发亮。"
+  },
+  {
+   "word": "pestle",
+   "ipa": "/ˈpesl/",
+   "pos": "n.",
+   "gloss_cn": "研杵、捣棒",
+   "gloss_en": "a heavy tool for crushing things in a bowl",
+   "sense_key": "pestle",
+   "ex_en": "He crushed the seeds with a pestle.",
+   "ex_cn": "他用研杵把种子捣碎。"
+  },
+  {
+   "word": "searce",
+   "ipa": "/sɜːs/",
+   "pos": "n.",
+   "gloss_cn": "细筛(旧词)",
+   "gloss_en": "an old word for a fine sieve",
+   "sense_key": "sieve",
+   "ex_en": "She sifted the flour through a searce.",
+   "ex_cn": "她用细筛把面粉筛过。"
+  },
+  {
+   "word": "fancying",
+   "ipa": "/ˈfænsiɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "幻想、设想(fancy现在分词)",
+   "gloss_en": "imagining or picturing something in the mind",
+   "sense_key": "imagine",
+   "ex_en": "He kept fancying he would soon be rich.",
+   "ex_cn": "他老是幻想自己很快会发财。"
+  },
+  {
+   "word": "rollers",
+   "ipa": "/ˈrəʊləz/",
+   "pos": "n.",
+   "gloss_cn": "滚木、滚轴",
+   "gloss_en": "logs or rods used to roll a heavy load along",
+   "sense_key": "roller",
+   "ex_en": "They moved the heavy boat on wooden rollers.",
+   "ex_cn": "他们用木滚轴移动那条重船。"
+  },
+  {
+   "word": "natives",
+   "ipa": "/ˈneɪtɪvz/",
+   "pos": "n.",
+   "gloss_cn": "当地人、土著",
+   "gloss_en": "people born in a certain land",
+   "sense_key": "native",
+   "ex_en": "The natives showed us the way to the river.",
+   "ex_cn": "当地人给我们指了去河边的路。"
+  },
+  {
+   "word": "cedar",
+   "ipa": "/ˈsiːdə/",
+   "pos": "n.",
+   "gloss_cn": "雪松",
+   "gloss_en": "a tall evergreen tree with fragrant wood",
+   "sense_key": "cedar",
+   "ex_en": "The chest was made of sweet-smelling cedar.",
+   "ex_cn": "这只箱子是用香雪松做的。"
+  },
+  {
+   "word": "undertaken",
+   "ipa": "/ˌʌndəˈteɪkən/",
+   "pos": "v.",
+   "gloss_cn": "着手、承担(undertake过去分词)",
+   "gloss_en": "started or taken on a task or duty",
+   "sense_key": "undertake",
+   "ex_en": "She has undertaken a very hard task.",
+   "ex_cn": "她着手做了一件很难的任务。"
+  },
+  {
+   "word": "inconvenience",
+   "ipa": "/ˌɪnkənˈviːniəns/",
+   "pos": "n.",
+   "gloss_cn": "不便、麻烦",
+   "gloss_en": "trouble or difficulty that causes discomfort",
+   "sense_key": "inconvenience",
+   "ex_en": "The broken lift caused us great inconvenience.",
+   "ex_cn": "电梯坏了给我们带来很大不便。"
+  },
+  {
+   "word": "canal",
+   "ipa": "/kəˈnæl/",
+   "pos": "n.",
+   "gloss_cn": "运河、水道",
+   "gloss_en": "a man-made channel for carrying water",
+   "sense_key": "canal",
+   "ex_en": "Boats float slowly along the old canal.",
+   "ex_cn": "小船沿着旧运河缓缓漂行。"
+  },
+  {
+   "word": "lusts",
+   "ipa": "/lʌsts/",
+   "pos": "n.",
+   "gloss_cn": "欲望、贪欲",
+   "gloss_en": "strong bodily or greedy desires",
+   "sense_key": "lust",
+   "ex_en": "He gave up the lusts of a greedy life.",
+   "ex_cn": "他放弃了贪婪生活的种种欲望。"
+  },
+  {
+   "word": "gross",
+   "ipa": "/ɡrəʊs/",
+   "pos": "n./adj.",
+   "gloss_cn": "一罗(=144 个);(也)粗劣的",
+   "gloss_en": "a gross, i.e. 144 items; also coarse",
+   "sense_key": "gross",
+   "ex_en": "The dirty room smelled quite gross.",
+   "ex_cn": "那间脏屋子闻起来很恶心。"
+  },
+  {
+   "word": "mouldy",
+   "ipa": "/ˈməʊldi/",
+   "pos": "adj.",
+   "gloss_cn": "发霉的",
+   "gloss_en": "covered with mould from damp",
+   "sense_key": "mouldy",
+   "ex_en": "The old bread had gone mouldy.",
+   "ex_cn": "那块旧面包发霉了。"
+  },
+  {
+   "word": "flay",
+   "ipa": "/fleɪ/",
+   "pos": "v.",
+   "gloss_cn": "剥皮",
+   "gloss_en": "to strip the skin off an animal",
+   "sense_key": "flay",
+   "ex_en": "The hunter began to flay the dead deer.",
+   "ex_cn": "猎人开始给死鹿剥皮。"
+  },
+  {
+   "word": "deserved",
+   "ipa": "/dɪˈzɜːvd/",
+   "pos": "v.",
+   "gloss_cn": "应得(deserve过去式)",
+   "gloss_en": "earned or was worthy of by one's actions",
+   "sense_key": "deserve",
+   "ex_en": "He worked hard and deserved the prize.",
+   "ex_cn": "他很努力,理应得到这个奖。"
+  },
+  {
+   "word": "instructed",
+   "ipa": "/ɪnˈstrʌktɪd/",
+   "pos": "v.",
+   "gloss_cn": "教导、指示(instruct过去式)",
+   "gloss_en": "taught or told what to do",
+   "sense_key": "instruct",
+   "ex_en": "The teacher instructed us to stay quiet.",
+   "ex_cn": "老师叮嘱我们保持安静。"
+  },
+  {
+   "word": "terrors",
+   "ipa": "/ˈterəz/",
+   "pos": "n.",
+   "gloss_cn": "恐怖、威严",
+   "gloss_en": "things that cause great fear or dread",
+   "sense_key": "terror",
+   "ex_en": "The dark forest was full of hidden terrors.",
+   "ex_cn": "黑暗的森林里满是隐藏的恐怖。"
+  },
+  {
+   "word": "deliverances",
+   "ipa": "/dɪˈlɪvərənsɪz/",
+   "pos": "n.",
+   "gloss_cn": "拯救、脱险(deliverance复数)",
+   "gloss_en": "rescues from danger or trouble",
+   "sense_key": "deliverance",
+   "ex_en": "He thanked God for so many deliverances.",
+   "ex_cn": "他为这么多次脱险而感谢上帝。"
+  },
+  {
+   "word": "iniquity",
+   "ipa": "/ɪˈnɪkwɪti/",
+   "pos": "n.",
+   "gloss_cn": "罪恶、不义",
+   "gloss_en": "great wickedness or unfairness",
+   "sense_key": "wickedness",
+   "ex_en": "He was ashamed of his past iniquity.",
+   "ex_cn": "他为过去的罪恶感到羞愧。"
+  },
+  {
+   "word": "venomous",
+   "ipa": "/ˈvenəməs/",
+   "pos": "adj.",
+   "gloss_cn": "有毒的",
+   "gloss_en": "full of poison, able to give a poisonous bite",
+   "sense_key": "venomous",
+   "ex_en": "A venomous snake hid under the rock.",
+   "ex_cn": "一条毒蛇藏在石头下面。"
+  },
+  {
+   "word": "consolation",
+   "ipa": "/ˌkɒnsəˈleɪʃn/",
+   "pos": "n.",
+   "gloss_cn": "安慰、慰藉",
+   "gloss_en": "comfort given in sadness or loss",
+   "sense_key": "comfort",
+   "ex_en": "Her kind words were a real consolation to me.",
+   "ex_cn": "她温柔的话对我是真正的安慰。"
+  },
+  {
+   "word": "waistcoats",
+   "ipa": "/ˈweɪskəʊts/",
+   "pos": "n.",
+   "gloss_cn": "背心、马甲(waistcoat复数)",
+   "gloss_en": "sleeveless garments worn over a shirt",
+   "sense_key": "waistcoat",
+   "ex_en": "He wore two warm waistcoats in winter.",
+   "ex_cn": "冬天他穿了两件暖和的马甲。"
+  },
+  {
+   "word": "tailor",
+   "ipa": "/ˈteɪlə/",
+   "pos": "n.",
+   "gloss_cn": "裁缝",
+   "gloss_en": "someone who makes or mends clothes",
+   "sense_key": "tailor",
+   "ex_en": "The tailor made me a new coat.",
+   "ex_cn": "裁缝给我做了一件新外套。"
+  },
+  {
+   "word": "resigning",
+   "ipa": "/rɪˈzaɪnɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "顺从、听任(resign现在分词)",
+   "gloss_en": "accepting something calmly without resisting",
+   "sense_key": "submit",
+   "ex_en": "He found peace by resigning himself to the loss.",
+   "ex_cn": "他顺从地接受损失,心里平静了。"
+  },
+  {
+   "word": "sociable",
+   "ipa": "/ˈsəʊʃəbl/",
+   "pos": "adj.",
+   "gloss_cn": "好交际的、合群的",
+   "gloss_en": "friendly and enjoying the company of others",
+   "sense_key": "sociable",
+   "ex_en": "She is friendly and very sociable.",
+   "ex_cn": "她友善,又很好交际。"
+  },
+  {
+   "word": "practicable",
+   "ipa": "/ˈpræktɪkəbl/",
+   "pos": "adj.",
+   "gloss_cn": "可行的、行得通的",
+   "gloss_en": "able to be done or carried out",
+   "sense_key": "practicable",
+   "ex_en": "The plan was simple and quite practicable.",
+   "ex_cn": "这个计划简单而且完全可行。"
+  },
+  {
+   "word": "victualled",
+   "ipa": "/ˈvɪtld/",
+   "pos": "v.",
+   "gloss_cn": "备粮、供给食物(旧词)",
+   "gloss_en": "supplied with food for a journey",
+   "sense_key": "victual",
+   "ex_en": "They victualled the ship before the long voyage.",
+   "ex_cn": "他们在远航前给船备足了粮食。"
+  },
+  {
+   "word": "foul",
+   "ipa": "/faʊl/",
+   "pos": "adj.",
+   "gloss_cn": "污浊的、恶劣的",
+   "gloss_en": "dirty, muddy, or unpleasant",
+   "sense_key": "foul",
+   "ex_en": "The air in the cave was thick and foul.",
+   "ex_cn": "洞里的空气又浓又污浊。"
+  },
+  {
+   "word": "paddling",
+   "ipa": "/ˈpædlɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "划桨(paddle现在分词)",
+   "gloss_en": "moving a boat with a paddle",
+   "sense_key": "paddle",
+   "ex_en": "The boy was paddling the canoe across the lake.",
+   "ex_cn": "男孩正划着独木舟横渡湖面。"
+  },
+  {
+   "word": "pits",
+   "ipa": "/pɪts/",
+   "pos": "n.",
+   "gloss_cn": "坑、陷坑(pit复数)",
+   "gloss_en": "deep holes dug in the ground",
+   "sense_key": "pit",
+   "ex_en": "He dug deep pits to catch the wild goats.",
+   "ex_cn": "他挖了几个深坑来捕野山羊。"
+  },
+  {
+   "word": "enclosing",
+   "ipa": "/ɪnˈkləʊzɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "围起、圈住(enclose现在分词)",
+   "gloss_en": "surrounding with a fence or wall",
+   "sense_key": "enclose",
+   "ex_en": "He built a fence, enclosing the small field.",
+   "ex_cn": "他建了道篱笆,把小田圈了起来。"
+  },
+  {
+   "word": "milked",
+   "ipa": "/mɪlkt/",
+   "pos": "v.",
+   "gloss_cn": "挤奶(milk过去式)",
+   "gloss_en": "drew milk from an animal",
+   "sense_key": "milk",
+   "ex_en": "She milked the goat every morning.",
+   "ex_cn": "她每天早上给山羊挤奶。"
+  },
+  {
+   "word": "dined",
+   "ipa": "/daɪnd/",
+   "pos": "v.",
+   "gloss_cn": "用餐、进餐(dine过去式)",
+   "gloss_en": "ate a main meal",
+   "sense_key": "dine",
+   "ex_en": "We dined together by the warm fire.",
+   "ex_cn": "我们在暖火旁一起用餐。"
+  },
+  {
+   "word": "species",
+   "ipa": "/ˈspiːʃiːz/",
+   "pos": "n.",
+   "gloss_cn": "物种、种类",
+   "gloss_en": "a kind or group of similar living things",
+   "sense_key": "species",
+   "ex_en": "This island has many rare species of birds.",
+   "ex_cn": "这座岛上有许多稀有的鸟类物种。"
+  },
+  {
+   "word": "interred",
+   "ipa": "/ɪnˈtɜːd/",
+   "pos": "v.",
+   "gloss_cn": "埋葬(inter过去式)",
+   "gloss_en": "buried in the ground",
+   "sense_key": "bury",
+   "ex_en": "The old cat was interred beneath the tree.",
+   "ex_cn": "那只老猫被埋在树下。"
+  },
+  {
+   "word": "plentiful",
+   "ipa": "/ˈplentɪfl/",
+   "pos": "adj.",
+   "gloss_cn": "丰富的、大量的",
+   "gloss_en": "existing in large amounts",
+   "sense_key": "plentiful",
+   "ex_en": "Fish were plentiful in the clear river.",
+   "ex_cn": "清澈的河里鱼很丰富。"
+  },
+  {
+   "word": "ramble",
+   "ipa": "/ˈræmbl/",
+   "pos": "n.",
+   "gloss_cn": "漫步、闲逛",
+   "gloss_en": "a long, wandering walk for pleasure",
+   "sense_key": "ramble",
+   "ex_en": "We went for a long ramble in the hills.",
+   "ex_cn": "我们去山里长长地漫步了一回。"
+  },
+  {
+   "word": "lace",
+   "ipa": "/leɪs/",
+   "pos": "n.",
+   "gloss_cn": "系带、花边",
+   "gloss_en": "a cord or string used to tie something",
+   "sense_key": "lace",
+   "ex_en": "He tied his boots with a leather lace.",
+   "ex_cn": "他用皮带子系好靴子。"
+  },
+  {
+   "word": "testify",
+   "ipa": "/ˈtestɪfaɪ/",
+   "pos": "v.",
+   "gloss_cn": "证明、作证",
+   "gloss_en": "to give proof or evidence of something",
+   "sense_key": "testify",
+   "ex_en": "These marks testify that he worked hard.",
+   "ex_cn": "这些痕迹证明他很努力。"
+  },
+  {
+   "word": "principally",
+   "ipa": "/ˈprɪnsəpli/",
+   "pos": "adv.",
+   "gloss_cn": "主要地",
+   "gloss_en": "mainly, for the most part",
+   "sense_key": "mainly",
+   "ex_en": "He lived principally on fish and fruit.",
+   "ex_cn": "他主要靠鱼和水果为生。"
+  },
+  {
+   "word": "nourishing",
+   "ipa": "/ˈnʌrɪʃɪŋ/",
+   "pos": "adj.",
+   "gloss_cn": "有营养的、滋补的",
+   "gloss_en": "giving good nutrition to the body",
+   "sense_key": "nourishing",
+   "ex_en": "Warm soup is very nourishing in winter.",
+   "ex_cn": "热汤在冬天很滋补。"
+  },
+  {
+   "word": "chequer",
+   "ipa": "/ˈtʃekə/",
+   "pos": "n.",
+   "gloss_cn": "交错、棋盘格纹",
+   "gloss_en": "a pattern of alternating light and dark parts",
+   "sense_key": "checker",
+   "ex_en": "Life is a strange chequer of good and bad.",
+   "ex_cn": "人生是好坏交错的奇怪格局。"
+  },
+  {
+   "word": "speculations",
+   "ipa": "/ˌspekjuˈleɪʃnz/",
+   "pos": "n.",
+   "gloss_cn": "思索、推测(speculation复数)",
+   "gloss_en": "thoughts that guess about uncertain things",
+   "sense_key": "speculation",
+   "ex_en": "His mind was full of curious speculations.",
+   "ex_cn": "他脑中满是种种好奇的推测。"
+  },
+  {
+   "word": "omnipotent",
+   "ipa": "/ɒmˈnɪpətənt/",
+   "pos": "adj.",
+   "gloss_cn": "全能的、无所不能的",
+   "gloss_en": "having unlimited power",
+   "sense_key": "omnipotent",
+   "ex_en": "They believed in an omnipotent God.",
+   "ex_cn": "他们相信一位全能的上帝。"
+  },
+  {
+   "word": "thickened",
+   "ipa": "/ˈθɪkənd/",
+   "pos": "v.",
+   "gloss_cn": "加厚、变厚(thicken过去式)",
+   "gloss_en": "made or became thicker",
+   "sense_key": "thicken",
+   "ex_en": "He thickened the wall with more stones.",
+   "ex_cn": "他又加石头把墙加厚了。"
+  },
+  {
+   "word": "carriage",
+   "ipa": "/ˈkærɪdʒ/",
+   "pos": "n.",
+   "gloss_cn": "搬运、运送",
+   "gloss_en": "the act of carrying or moving something",
+   "sense_key": "carriage",
+   "ex_en": "The carriage of the earth took many days.",
+   "ex_cn": "搬运泥土花了好多天。"
+  },
+  {
+   "word": "acres",
+   "ipa": "/ˈeɪkəz/",
+   "pos": "n.",
+   "gloss_cn": "英亩(acre复数)",
+   "gloss_en": "units of land area",
+   "sense_key": "acre",
+   "ex_en": "He planted corn on three acres of land.",
+   "ex_cn": "他在三英亩地上种了玉米。"
+  },
+  {
+   "word": "brutality",
+   "ipa": "/bruːˈtæləti/",
+   "pos": "n.",
+   "gloss_cn": "残暴、野蛮",
+   "gloss_en": "cruel, savage behaviour",
+   "sense_key": "brutality",
+   "ex_en": "The war was fought with great brutality.",
+   "ex_cn": "这场战争打得极其残暴。"
+  },
+  {
+   "word": "degeneracy",
+   "ipa": "/dɪˈdʒenərəsi/",
+   "pos": "n.",
+   "gloss_cn": "堕落、退化",
+   "gloss_en": "a fall into low or corrupt behaviour",
+   "sense_key": "degeneracy",
+   "ex_en": "He was shocked by their degeneracy.",
+   "ex_cn": "他们的堕落令他震惊。"
+  },
+  {
+   "word": "disorder",
+   "ipa": "/dɪsˈɔːdə/",
+   "pos": "n.",
+   "gloss_cn": "混乱、无序",
+   "gloss_en": "a state of confusion and lack of order",
+   "sense_key": "disorder",
+   "ex_en": "The room was left in complete disorder.",
+   "ex_cn": "房间被弄得一片混乱。"
+  },
+  {
+   "word": "wretched",
+   "ipa": "/ˈretʃɪd/",
+   "pos": "adj.",
+   "gloss_cn": "可鄙的、卑劣的;(也)可怜的、悲惨的",
+   "gloss_en": "contemptible or vile; also miserable",
+   "sense_key": "wretched",
+   "ex_en": "The wretched dog was cold and hungry.",
+   "ex_cn": "那只可怜的狗又冷又饿。"
+  }
+ ],
+ "skipped": [
+  "firewood(太基础·合成词)",
+  "supplying(太基础·supply)",
+  "climates(太基础·climate)",
+  "calculate(太基础)",
+  "drawer(太基础)",
+  "receiving(太基础·receive)",
+  "stress(太基础)",
+  "repeat(太基础)",
+  "absolute(太基础)",
+  "caves(太基础·cave)",
+  "largest(太基础·large)",
+  "staying(太基础·stay)",
+  "attempts(太基础·attempt)"
+ ],
+ "suspect": [
+  {
+   "word": "gross",
+   "gloss_cn": "粗劣的、令人厌恶的",
+   "ctx": "I would have given a h[andful of it for a gross of tobacco-pipes]",
+   "issue": "书中\"a gross of tobacco-pipes\"是数量单位\"一罗(12打=144个)\",此处gross作名词,现释义\"粗劣的/令人厌恶的\"(形容词)回读不通",
+   "suggest": "补名词义项\"罗(计数单位,一罗=144个)\""
+  },
+  {
+   "word": "wretched",
+   "gloss_cn": "可怜的、悲惨的",
+   "ctx": "an abhorrence of the savage wretches...and of the wretched, inhuman custom of their devouring",
+   "issue": "此处\"the wretched, inhuman custom\"修饰吃人习俗,意为\"可鄙的、恶劣的\",非\"可怜的/悲惨的\";回读语气相反(厌恶而非同情)",
+   "suggest": "补义项\"(行为/习俗)可鄙的、卑劣的、恶劣的\""
+  }
+ ]
+}

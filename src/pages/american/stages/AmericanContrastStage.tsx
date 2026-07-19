@@ -9,6 +9,7 @@ import { T } from "@/i18n/T";
 import { QuizRunner, questionsToItems } from "@/components/american/QuizRunner";
 import { speakUS, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
 import { markStageComplete, recordMastery, type LessonBundle } from "@/lib/american/data";
+import { recordAmericanMistake, americanLessonLabel } from "@/lib/american/americanMistake";
 
 export function AmericanContrastStage({ bundle, onDone }: { bundle: LessonBundle; onDone?: () => void }) {
   const [phase, setPhase] = useState<"learn" | "quiz">("learn");
@@ -26,7 +27,9 @@ export function AmericanContrastStage({ bundle, onDone }: { bundle: LessonBundle
     if (onDone) setTimeout(onDone, 1400);
   }, [bundle.lesson.id, onDone]);
 
-  if (phase === "quiz") return <QuizRunner items={items} onAnswer={onAnswer} onComplete={onComplete} />;
+  const label = americanLessonLabel(bundle.lesson);
+  if (phase === "quiz") return <QuizRunner items={items} onAnswer={onAnswer} onComplete={onComplete}
+    onRecordMistake={(it, picked, ok) => recordAmericanMistake(it, picked, ok, label)} />;
 
   return (
     <div className="mx-auto max-w-2xl px-4 pb-28 pt-4">

@@ -292,6 +292,18 @@ export const stopSpeaking = () => {
   stopCurrent();
 };
 
+/**
+ * 当前是否正在播放音频（供学习时长心跳把"被动听音/读课文"算作活跃）。
+ * 直接读 currentAudio 的实时状态：播放中 = 有元素且未暂停未结束。
+ * 自纠正——自然结束(.ended)、出错(.paused)、stopCurrent(置 null) 都会立刻转 false，
+ * 即使没有显式 stop 广播也不会"卡住一直计时"。
+ * 注：仅覆盖 HTMLAudioElement 播放（美语/新概念 TTS 走此路）；SpeechSynthesis 回退不计。
+ */
+export const isSpeaking = (): boolean => {
+  const a = currentAudio;
+  return !!a && !a.paused && !a.ended;
+};
+
 const getSharedAudio = () => {
   if (typeof window === "undefined") return null;
   if (!sharedAudio) {
@@ -632,19 +644,30 @@ export const isSynthInFlight = (text: string, voiceId: string, speed: number, ac
 // fast and without breath pauses).
 export const speakSequence = async (
   sentences: string[],
-  opts: { gapMs?: number; onIndex?: (i: number) => void } = {},
+  opts: {
+    gapMs?: number;
+    onIndex?: (i: number) => void;
+    accent?: "UK" | "US" | "BOTH";
+    voiceId?: string;
+    speed?: number;
+  } = {},
 ): Promise<void> => {
   const gapMs = opts.gapMs ?? 80;
   const list = sentences.map((s) => (s || "").trim()).filter(Boolean);
   if (list.length === 0) return;
   const mySeq = ++sequenceId;
   // Prefetch the first item's audio so playback starts with no dead air.
-  const { voiceId, speed } = loadSettings();
+  const settings = loadSettings();
+  const voiceId = opts.voiceId ?? settings.voiceId;
+  const speed = opts.speed ?? settings.speed;
+  const accent = opts.accent;
   const prefetch = (text: string) => {
-    const key = `${voiceId}|${speed}|${text}`;
+    // Cache key MUST mirror fetchTTS/speak exactly (`${voiceId}|${speed}|${accent||''}|${text}`),
+    // else accented calls miss the cache the prefetch just warmed.
+    const key = `${voiceId}|${speed}|${accent || ''}|${text}`;
     if (!audioCache.has(key)) {
       // fire-and-forget; result is stored in cache by fetchTTS
-      void fetchTTS(text, voiceId, speed);
+      void fetchTTS(text, voiceId, speed, accent);
     }
   };
   prefetch(list[0]);
@@ -654,7 +677,7 @@ export const speakSequence = async (
     // Kick off prefetch of the NEXT sentence while we play the current one,
     // so the gap between sentences is just the configured gapMs (not network).
     if (i + 1 < list.length) prefetch(list[i + 1]);
-    await speak(list[i]);
+    await speak(list[i], { voiceId, speed, accent });
     if (mySeq !== sequenceId) return;
     if (i < list.length - 1) {
       await new Promise((r) => setTimeout(r, gapMs));

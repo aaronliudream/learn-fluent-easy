@@ -1,0 +1,1925 @@
+{
+ "cover": "robinson-crusoe-cover.jpg",
+ "images": [
+  {
+   "file": "ch1-1-father-warns-in-chamber.jpg",
+   "chapter": 1,
+   "k": 1,
+   "seq": 8,
+   "slug": "father-warns-in-chamber",
+   "alt": "An old man with a bandaged leg sits in a chair advising a young man standing in a bedroom."
+  },
+  {
+   "file": "ch1-2-boarding-ship-at-hull.jpg",
+   "chapter": 1,
+   "k": 2,
+   "seq": 21,
+   "slug": "boarding-ship-at-hull",
+   "alt": "A young man carrying a bag boards a sailing ship at a crowded harbour dock."
+  },
+  {
+   "file": "ch1-3-mountainous-seas-in-storm.jpg",
+   "chapter": 1,
+   "k": 3,
+   "seq": 48,
+   "slug": "mountainous-seas-in-storm",
+   "alt": "A ship tossed among enormous waves in a storm with a wrecked ship in the distance."
+  },
+  {
+   "file": "ch1-4-cutting-away-the-mast.jpg",
+   "chapter": 1,
+   "k": 4,
+   "seq": 51,
+   "slug": "cutting-away-the-mast",
+   "alt": "Sailors on a stormy deck chop down a falling ship's mast with axes."
+  },
+  {
+   "file": "ch1-5-rescue-boat-under-stern.jpg",
+   "chapter": 1,
+   "k": 5,
+   "seq": 67,
+   "slug": "rescue-boat-under-stern",
+   "alt": "Men climb from a sinking ship down a rope into a small crowded rowboat in rough seas."
+  },
+  {
+   "file": "ch1-6-ship-founders-at-sea.jpg",
+   "chapter": 1,
+   "k": 6,
+   "seq": 69,
+   "slug": "ship-founders-at-sea",
+   "alt": "Survivors in a small boat watch their ship sink into the sea in the distance."
+  },
+  {
+   "file": "ch1-7-boy-gazing-at-sea-from-window.jpg",
+   "chapter": 1,
+   "k": 7,
+   "seq": 6,
+   "slug": "boy-gazing-at-sea-from-window",
+   "alt": "少年趴在楼上窗口，望着港湾里的帆船与远处大海出神。"
+  },
+  {
+   "file": "ch1-8-mother-pleads-father-refuses.jpg",
+   "chapter": 1,
+   "k": 8,
+   "seq": 19,
+   "slug": "mother-pleads-father-refuses",
+   "alt": "母亲在客厅里向坐着的父亲俯身求情，父亲叹气别过脸、抬手拒绝。"
+  },
+  {
+   "file": "ch1-9-seasick-in-first-storm.jpg",
+   "chapter": 1,
+   "k": 9,
+   "seq": 23,
+   "slug": "seasick-in-first-storm",
+   "alt": "年轻人在颠簸的船舱口紧抓绳子，晕船脸色苍白弯下身，身后甲板倾斜、灰浪翻涌。"
+  },
+  {
+   "file": "ch1-10-punch-on-calm-deck.jpg",
+   "chapter": 1,
+   "k": 10,
+   "seq": 35,
+   "slug": "punch-on-calm-deck",
+   "alt": "风平浪静的傍晚，水手们在甲板上围着一碗热潘趣酒说笑，一人拍着年轻同伴的肩，夕阳映着平静海面。"
+  },
+  {
+   "file": "ch1-11-survivors-landing-at-yarmouth.jpg",
+   "chapter": 1,
+   "k": 11,
+   "seq": 72,
+   "slug": "survivors-landing-at-yarmouth",
+   "alt": "精疲力竭的幸存者从小船涉水登上刮风的海滩，镇上居民奔下来搀扶引领他们上岸。"
+  },
+  {
+   "file": "ch1-12-walking-alone-to-london.jpg",
+   "chapter": 1,
+   "k": 12,
+   "seq": 89,
+   "slug": "walking-alone-to-london",
+   "alt": "一个背着小包袱的年轻人独自走在乡间小路上，路蜿蜒通向远处地平线上的城市，两旁田野延展。"
+  },
+  {
+   "file": "ch2-1-turkish-pirate-broadside.jpg",
+   "chapter": 2,
+   "k": 1,
+   "seq": 107,
+   "slug": "turkish-pirate-broadside",
+   "alt": "A small sailing ship trades cannon fire with a larger pirate ship at sea."
+  },
+  {
+   "file": "ch2-2-slave-tending-garden.jpg",
+   "chapter": 2,
+   "k": 2,
+   "seq": 116,
+   "slug": "slave-tending-garden",
+   "alt": "A young captive man works in a small walled garden beside a white house."
+  },
+  {
+   "file": "ch2-3-moor-tossed-overboard.jpg",
+   "chapter": 2,
+   "k": 3,
+   "seq": 142,
+   "slug": "moor-tossed-overboard",
+   "alt": "A man is thrown overboard from a small sailing boat into calm water."
+  },
+  {
+   "file": "ch2-4-beasts-on-night-shore.jpg",
+   "chapter": 2,
+   "k": 4,
+   "seq": 158,
+   "slug": "beasts-on-night-shore",
+   "alt": "A small anchored boat watches large wild animals wading at a moonlit shore."
+  },
+  {
+   "file": "ch2-5-lion-asleep-on-shore.jpg",
+   "chapter": 2,
+   "k": 5,
+   "seq": 180,
+   "slug": "lion-asleep-on-shore",
+   "alt": "A large lion sleeps on a low hill by the shore near a small boat."
+  },
+  {
+   "file": "ch2-6-lion-hide-drying-cabin.jpg",
+   "chapter": 2,
+   "k": 6,
+   "seq": 197,
+   "slug": "lion-hide-drying-cabin",
+   "alt": "Two people spread a lion skin to dry on the roof of a small boat's cabin."
+  },
+  {
+   "file": "ch2-7-pirates-boarding-deck.jpg",
+   "chapter": 2,
+   "k": 7,
+   "seq": 110,
+   "slug": "pirates-boarding-deck",
+   "alt": "海盗跳上小船甲板砍杀船帆缆绳，船员奋力抵抗。"
+  },
+  {
+   "file": "ch2-8-prisoners-into-sallee.jpg",
+   "chapter": 2,
+   "k": 8,
+   "seq": 112,
+   "slug": "prisoners-into-sallee",
+   "alt": "被俘的船员双手被缚，押上萨累港的石码头。"
+  },
+  {
+   "file": "ch2-9-fishing-in-pinnace.jpg",
+   "chapter": 2,
+   "k": 9,
+   "seq": 119,
+   "slug": "fishing-in-pinnace",
+   "alt": "平静海湾里主人坐船尾，鲁滨逊和男孩划桨钓鱼。"
+  },
+  {
+   "file": "ch2-10-gun-aimed-at-swimmer.jpg",
+   "chapter": 2,
+   "k": 10,
+   "seq": 144,
+   "slug": "gun-aimed-at-swimmer",
+   "alt": "鲁滨逊在船舱门口举长枪，指向水中游泳求救的摩尔人。"
+  },
+  {
+   "file": "ch2-11-xury-returns-with-game.jpg",
+   "chapter": 2,
+   "k": 11,
+   "seq": 171,
+   "slug": "xury-returns-with-game",
+   "alt": "荒岸上小男孩苏里肩扛猎物、手持小枪奔回船边。"
+  },
+  {
+   "file": "ch2-12-xury-shoots-lion.jpg",
+   "chapter": 2,
+   "k": 12,
+   "seq": 189,
+   "slug": "xury-shoots-lion",
+   "alt": "苏里涉水上岸，把枪口抵在受伤大狮子耳边补上一枪。"
+  },
+  {
+   "file": "ch3-1-natives-watch-from-shore.jpg",
+   "chapter": 3,
+   "k": 1,
+   "seq": 201,
+   "slug": "natives-watch-from-shore",
+   "alt": "People stand on a shore watching a small boat sail past."
+  },
+  {
+   "file": "ch3-2-shooting-the-leopard.jpg",
+   "chapter": 3,
+   "k": 2,
+   "seq": 208,
+   "slug": "shooting-the-leopard",
+   "alt": "A man in a small boat fires a gun at a leopard swimming in the sea."
+  },
+  {
+   "file": "ch3-3-skinning-the-leopard.jpg",
+   "chapter": 3,
+   "k": 3,
+   "seq": 213,
+   "slug": "skinning-the-leopard",
+   "alt": "Villagers skin a dead leopard on a beach with a sharpened stick."
+  },
+  {
+   "file": "ch3-4-rescued-by-portuguese-ship.jpg",
+   "chapter": 3,
+   "k": 4,
+   "seq": 226,
+   "slug": "rescued-by-portuguese-ship",
+   "alt": "A small boat comes up alongside a large sailing ship at sea."
+  },
+  {
+   "file": "ch3-5-ship-struck-on-sandbar.jpg",
+   "chapter": 3,
+   "k": 5,
+   "seq": 291,
+   "slug": "ship-struck-on-sandbar",
+   "alt": "A sailing ship grounded on a sandbar as a huge wave breaks over it in a storm."
+  },
+  {
+   "file": "ch3-6-night-in-the-thorny-tree.jpg",
+   "chapter": 3,
+   "k": 6,
+   "seq": 328,
+   "slug": "night-in-the-thorny-tree",
+   "alt": "A shipwrecked man climbs into a thorny tree at night holding a stick."
+  },
+  {
+   "file": "ch3-7-natives-leave-food-on-shore.jpg",
+   "chapter": 3,
+   "k": 7,
+   "seq": 205,
+   "slug": "natives-leave-food-on-shore",
+   "alt": "村民把干肉和玉米放在沙滩上后退开,小船在岸边等着来取。"
+  },
+  {
+   "file": "ch3-8-women-bring-water-jar.jpg",
+   "chapter": 3,
+   "k": 8,
+   "seq": 216,
+   "slug": "women-bring-water-jar",
+   "alt": "两名妇女抬来一只大陶罐放在水边,男孩从小船蹚水过来灌满三只空罐。"
+  },
+  {
+   "file": "ch3-9-launching-boat-in-storm.jpg",
+   "chapter": 3,
+   "k": 9,
+   "seq": 301,
+   "slug": "launching-boat-in-storm",
+   "alt": "在惊涛骇浪中,一艘小艇从搁浅破船的舷侧放下,十一个人爬进艇里。"
+  },
+  {
+   "file": "ch3-10-giant-wave-oversets-boat.jpg",
+   "chapter": 3,
+   "k": 10,
+   "seq": 309,
+   "slug": "giant-wave-oversets-boat",
+   "alt": "一道山一样高的巨浪从船尾涌来,把小艇掀翻,人被抛进翻腾的白浪里。"
+  },
+  {
+   "file": "ch3-11-clambering-up-the-cliffs.jpg",
+   "chapter": 3,
+   "k": 11,
+   "seq": 318,
+   "slug": "clambering-up-the-cliffs",
+   "alt": "一个浑身湿透、精疲力尽的人爬上岸边的岩崖,瘫坐在崖顶的草地上,浪花在下面的礁石上碎开。"
+  },
+  {
+   "file": "ch3-12-relics-of-drowned-comrades.jpg",
+   "chapter": 3,
+   "k": 12,
+   "seq": 322,
+   "slug": "relics-of-drowned-comrades",
+   "alt": "一个人独自在湿漉漉的沙滩上举着双手走着,近浪处的沙上散落着三顶帽子、一顶便帽和两只不成对的鞋。"
+  },
+  {
+   "file": "ch4-1-climb-rope-to-wreck.jpg",
+   "chapter": 4,
+   "k": 1,
+   "seq": 340,
+   "slug": "climb-rope-to-wreck",
+   "alt": "A man climbs a rope up the side of a wrecked ship rising out of a calm sea."
+  },
+  {
+   "file": "ch4-2-building-timber-raft.jpg",
+   "chapter": 4,
+   "k": 2,
+   "seq": 348,
+   "slug": "building-timber-raft",
+   "alt": "A man ties wooden spars and planks together into a raft next to a wrecked ship."
+  },
+  {
+   "file": "ch4-3-hilltop-island-view.jpg",
+   "chapter": 4,
+   "k": 3,
+   "seq": 383,
+   "slug": "hilltop-island-view",
+   "alt": "A man with a gun stands on a hilltop looking out at the sea encircling the island."
+  },
+  {
+   "file": "ch4-4-wildcat-on-chest.jpg",
+   "chapter": 4,
+   "k": 4,
+   "seq": 401,
+   "slug": "wildcat-on-chest",
+   "alt": "A wild cat sits on a chest looking at a man who offers it a piece of biscuit on the beach."
+  },
+  {
+   "file": "ch4-5-fortified-stake-fence.jpg",
+   "chapter": 4,
+   "k": 5,
+   "seq": 437,
+   "slug": "fortified-stake-fence",
+   "alt": "A man drives rows of sharpened stakes into the ground to build a fence around a tent below a rock."
+  },
+  {
+   "file": "ch4-6-carving-calendar-cross.jpg",
+   "chapter": 4,
+   "k": 6,
+   "seq": 474,
+   "slug": "carving-calendar-cross",
+   "alt": "A man carves notches and letters into a tall cross-shaped wooden post standing on the beach."
+  },
+  {
+   "file": "ch4-7-lowering-chest-onto-raft.jpg",
+   "chapter": 4,
+   "k": 7,
+   "seq": 353,
+   "slug": "lowering-chest-onto-raft",
+   "alt": "一个人用绳子把装满面包和奶酪的木箱从倾斜的破船上放到旁边的木筏上。"
+  },
+  {
+   "file": "ch4-8-raft-aground-holding-chests.jpg",
+   "chapter": 4,
+   "k": 8,
+   "seq": 373,
+   "slug": "raft-aground-holding-chests",
+   "alt": "木筏一端搁浅倾斜,一个人用后背死死顶住往下滑的货箱,河口两岸是陆地。"
+  },
+  {
+   "file": "ch4-9-gunshot-flock-rising.jpg",
+   "chapter": 4,
+   "k": 9,
+   "seq": 388,
+   "slug": "gunshot-flock-rising",
+   "alt": "一个人在大树林边举枪射击,枪口冒烟,成群受惊的各种鸟从树梢腾空飞起。"
+  },
+  {
+   "file": "ch4-10-lightning-fear-for-powder.jpg",
+   "chapter": 4,
+   "k": 10,
+   "seq": 449,
+   "slug": "lightning-fear-for-powder",
+   "alt": "暴雨中乌云被闪电劈开,帐篷里一个人惊恐地抱住头,盯着身旁堆放的火药桶。"
+  },
+  {
+   "file": "ch4-11-kid-follows-over-pale.jpg",
+   "chapter": 4,
+   "k": 11,
+   "seq": 456,
+   "slug": "kid-follows-over-pale",
+   "alt": "一个人把一只小山羊抱过尖木桩围栏,栅栏外地上躺着被他打死的母山羊。"
+  },
+  {
+   "file": "ch4-12-dog-swims-ashore.jpg",
+   "chapter": 4,
+   "k": 12,
+   "seq": 477,
+   "slug": "dog-swims-ashore",
+   "alt": "一只狗划水游向岸边,岸上一个人站在卸下的箱桶货物旁,远处水面上是搁浅的破船。"
+  },
+  {
+   "file": "ch5-1-sleeping-in-tree-rain.jpg",
+   "chapter": 5,
+   "k": 1,
+   "seq": 521,
+   "slug": "sleeping-in-tree-rain",
+   "alt": "A man sleeps up in the branches of a tree at night while it rains."
+  },
+  {
+   "file": "ch5-2-raft-of-goods-to-shore.jpg",
+   "chapter": 5,
+   "k": 2,
+   "seq": 527,
+   "slug": "raft-of-goods-to-shore",
+   "alt": "A man steers a loaded raft of salvaged goods from a wreck toward the shore."
+  },
+  {
+   "file": "ch5-3-tent-under-the-rock.jpg",
+   "chapter": 5,
+   "k": 3,
+   "seq": 543,
+   "slug": "tent-under-the-rock",
+   "alt": "A man sets up a tent and fence at the base of a large rock."
+  },
+  {
+   "file": "ch5-4-splinting-the-goat-leg.jpg",
+   "chapter": 5,
+   "k": 4,
+   "seq": 620,
+   "slug": "splinting-the-goat-leg",
+   "alt": "A man kneels to splint the broken leg of a young goat."
+  },
+  {
+   "file": "ch5-5-barley-sprouting-astonishment.jpg",
+   "chapter": 5,
+   "k": 5,
+   "seq": 649,
+   "slug": "barley-sprouting-astonishment",
+   "alt": "A man crouches in surprise before green barley growing out of the ground by a rock."
+  },
+  {
+   "file": "ch5-6-earthquake-flees-over-wall.jpg",
+   "chapter": 5,
+   "k": 6,
+   "seq": 667,
+   "slug": "earthquake-flees-over-wall",
+   "alt": "A man climbs over a wall to flee as an earthquake shakes the hillside and a rock falls."
+  },
+  {
+   "file": "ch5-7-shooting-wildcat-with-dog.jpg",
+   "chapter": 5,
+   "k": 7,
+   "seq": 557,
+   "slug": "shooting-wildcat-with-dog",
+   "alt": "一个人举枪瞄准林间倒木上的野猫,身旁站着他的狗。"
+  },
+  {
+   "file": "ch5-8-carving-ironwood-shovel.jpg",
+   "chapter": 5,
+   "k": 8,
+   "seq": 586,
+   "slug": "carving-ironwood-shovel",
+   "alt": "一个人坐在棚屋外,用斧头把一块沉重的硬木一点点削成铁锹的形状,地上散落着木屑。"
+  },
+  {
+   "file": "ch5-9-propping-cave-roof.jpg",
+   "chapter": 5,
+   "k": 9,
+   "seq": 601,
+   "slug": "propping-cave-roof",
+   "alt": "一个人在昏暗的岩洞里竖起两根木柱、横搭木板顶住洞顶,身旁堆着塌落的泥土。"
+  },
+  {
+   "file": "ch5-10-making-clay-tallow-lamp.jpg",
+   "chapter": 5,
+   "k": 10,
+   "seq": 646,
+   "slug": "making-clay-tallow-lamp",
+   "alt": "一个人在黑暗的棚屋里端着一只盛着羊脂的黏土小碟,麻绳灯芯燃着微弱的火苗,照亮他的双手。"
+  },
+  {
+   "file": "ch5-11-ladder-over-the-wall.jpg",
+   "chapter": 5,
+   "k": 11,
+   "seq": 662,
+   "slug": "ladder-over-the-wall",
+   "alt": "一个人站在高高的木桩墙顶,把梯子拉上来收进围栏内,身下是半圆形的栅栏墙和岩壁营地。"
+  },
+  {
+   "file": "ch5-12-hurricane-uproots-trees.jpg",
+   "chapter": 5,
+   "k": 12,
+   "seq": 673,
+   "slug": "hurricane-uproots-trees",
+   "alt": "狂风暴雨席卷海岸,树木连根拔起,海面掀起泡沫浪花拍打沙滩,一个人蜷缩在空地上。"
+  },
+  {
+   "file": "ch6-1-walking-to-wreck-low-tide.jpg",
+   "chapter": 6,
+   "k": 1,
+   "seq": 704,
+   "slug": "walking-to-wreck-low-tide",
+   "alt": "A man walks over exposed sand toward a broken shipwreck at low tide."
+  },
+  {
+   "file": "ch6-2-prying-deck-iron-crow.jpg",
+   "chapter": 6,
+   "k": 2,
+   "seq": 721,
+   "slug": "prying-deck-iron-crow",
+   "alt": "A man pries open a ship's deck plank with an iron crowbar at the wreck."
+  },
+  {
+   "file": "ch6-3-finding-sea-turtle-shore.jpg",
+   "chapter": 6,
+   "k": 3,
+   "seq": 739,
+   "slug": "finding-sea-turtle-shore",
+   "alt": "A man crouches beside a large turtle he found on the beach."
+  },
+  {
+   "file": "ch6-4-fiery-figure-dream-spear.jpg",
+   "chapter": 6,
+   "k": 4,
+   "seq": 777,
+   "slug": "fiery-figure-dream-spear",
+   "alt": "A blazing figure descends from a dark cloud and advances on a seated man with a spear."
+  },
+  {
+   "file": "ch6-5-tobacco-bible-on-table.jpg",
+   "chapter": 6,
+   "k": 5,
+   "seq": 839,
+   "slug": "tobacco-bible-on-table",
+   "alt": "Tobacco, an open Bible, rum and a pan of coals on a table by lamplight."
+  },
+  {
+   "file": "ch6-6-kneeling-arms-raised-prayer.jpg",
+   "chapter": 6,
+   "k": 6,
+   "seq": 869,
+   "slug": "kneeling-arms-raised-prayer",
+   "alt": "A man kneels with hands raised to the sky beside a fallen open book."
+  },
+  {
+   "file": "ch6-7-fishing-caught-young-dolphin.jpg",
+   "chapter": 6,
+   "k": 7,
+   "seq": 711,
+   "slug": "fishing-caught-young-dolphin",
+   "alt": "渔夫用一根麻绳手钓线从浅水中提起一条挣扎的小海豚。"
+  },
+  {
+   "file": "ch6-8-floating-fir-planks-flood-tide.jpg",
+   "chapter": 6,
+   "k": 8,
+   "seq": 714,
+   "slug": "floating-fir-planks-flood-tide",
+   "alt": "他趟着水,推着三块捆成木筏的大冷杉木板,顺着涨潮漂向海滩。"
+  },
+  {
+   "file": "ch6-9-two-hatchets-on-lead-roll.jpg",
+   "chapter": 6,
+   "k": 9,
+   "seq": 730,
+   "slug": "two-hatchets-on-lead-roll",
+   "alt": "他跪在残骸旁半没水中的一卷厚铅皮上,用一把斧子的刃抵住它、再用另一把斧子去砸。"
+  },
+  {
+   "file": "ch6-10-casks-chests-floating-out-wreck.jpg",
+   "chapter": 6,
+   "k": 10,
+   "seq": 736,
+   "slug": "casks-chests-floating-out-wreck",
+   "alt": "涨潮时几只松脱的木桶和两口水手木箱从残骸破口漂出海面,他握着铁棍在岸边望着。"
+  },
+  {
+   "file": "ch6-11-broiling-goat-flesh-weak.jpg",
+   "chapter": 6,
+   "k": 11,
+   "seq": 764,
+   "slug": "broiling-goat-flesh-weak",
+   "alt": "他虚弱消瘦地蹲在住处外的小火堆旁,在炭火上烤一块山羊肉,枪和死母羊躺在身边地上。"
+  },
+  {
+   "file": "ch6-12-sitting-gazing-calm-sea.jpg",
+   "chapter": 6,
+   "k": 12,
+   "seq": 816,
+   "slug": "sitting-gazing-calm-sea",
+   "alt": "他独自坐在一处矮坡的裸地上,枪横在膝头,望着眼前一直伸向天际、平静如镜的大海。"
+  },
+  {
+   "file": "ch7-1-brook-savannah-tobacco.jpg",
+   "chapter": 7,
+   "k": 1,
+   "seq": 888,
+   "slug": "brook-savannah-tobacco",
+   "alt": "A man examines tall tobacco plants on the grassy bank of a small brook."
+  },
+  {
+   "file": "ch7-2-sleeping-up-a-tree.jpg",
+   "chapter": 7,
+   "k": 2,
+   "seq": 900,
+   "slug": "sleeping-up-a-tree",
+   "alt": "A man sleeps high in the branches of a tree at night above a dark valley."
+  },
+  {
+   "file": "ch7-3-delicious-green-vale.jpg",
+   "chapter": 7,
+   "k": 3,
+   "seq": 901,
+   "slug": "delicious-green-vale",
+   "alt": "A man on a hillside looks out over a lush green valley like a garden."
+  },
+  {
+   "file": "ch7-4-hanging-grapes-to-dry.jpg",
+   "chapter": 7,
+   "k": 4,
+   "seq": 910,
+   "slug": "hanging-grapes-to-dry",
+   "alt": "A man hangs bunches of grapes on tree branches to dry in the sun."
+  },
+  {
+   "file": "ch7-5-cat-with-three-kittens.jpg",
+   "chapter": 7,
+   "k": 5,
+   "seq": 919,
+   "slug": "cat-with-three-kittens",
+   "alt": "A man looks at a cat sitting with three kittens inside a cave."
+  },
+  {
+   "file": "ch7-6-anniversary-fast-prayer.jpg",
+   "chapter": 7,
+   "k": 6,
+   "seq": 930,
+   "slug": "anniversary-fast-prayer",
+   "alt": "A man kneels in prayer on the ground beside a notched wooden post at dusk."
+  },
+  {
+   "file": "ch7-7-melons-and-grape-vines.jpg",
+   "chapter": 7,
+   "k": 7,
+   "seq": 896,
+   "slug": "melons-and-grape-vines",
+   "alt": "A man reaches for ripe grapes hanging from vines over trees, with melons lying on the ground."
+  },
+  {
+   "file": "ch7-8-grape-heap-destroyed.jpg",
+   "chapter": 7,
+   "k": 8,
+   "seq": 908,
+   "slug": "grape-heap-destroyed",
+   "alt": "A man stares in dismay at his heap of grapes trampled and scattered on the ground."
+  },
+  {
+   "file": "ch7-9-large-tortoise-found.jpg",
+   "chapter": 7,
+   "k": 9,
+   "seq": 923,
+   "slug": "large-tortoise-found",
+   "alt": "A man crouches beside a very large tortoise he has found near a rocky shore."
+  },
+  {
+   "file": "ch7-10-digging-cave-door-out.jpg",
+   "chapter": 7,
+   "k": 10,
+   "seq": 924,
+   "slug": "digging-cave-door-out",
+   "alt": "A man digs an opening through his cave wall to the outside, with daylight coming through."
+  },
+  {
+   "file": "ch7-11-sowing-grain-wooden-spade.jpg",
+   "chapter": 7,
+   "k": 11,
+   "seq": 935,
+   "slug": "sowing-grain-wooden-spade",
+   "alt": "A man turns the soil with a wooden spade and sows grain seed by hand in a field."
+  },
+  {
+   "file": "ch7-12-making-wicker-baskets.jpg",
+   "chapter": 7,
+   "k": 12,
+   "seq": 954,
+   "slug": "making-wicker-baskets",
+   "alt": "A man sits weaving twigs into a wicker basket, with finished baskets around him."
+  },
+  {
+   "file": "ch8-1-distant-land-from-hilltop.jpg",
+   "chapter": 8,
+   "k": 1,
+   "seq": 962,
+   "slug": "distant-land-from-hilltop",
+   "alt": "A man on a hilltop looks out across the sea at distant land far away."
+  },
+  {
+   "file": "ch8-2-catching-young-parrot.jpg",
+   "chapter": 8,
+   "k": 2,
+   "seq": 970,
+   "slug": "catching-young-parrot",
+   "alt": "A man reaches to catch a young parrot with a stick in a grassy clearing."
+  },
+  {
+   "file": "ch8-3-saving-kid-from-dog.jpg",
+   "chapter": 8,
+   "k": 3,
+   "seq": 983,
+   "slug": "saving-kid-from-dog",
+   "alt": "A man pulls a young goat kid away from his dog to rescue it."
+  },
+  {
+   "file": "ch8-4-opening-the-bible.jpg",
+   "chapter": 8,
+   "k": 4,
+   "seq": 998,
+   "slug": "opening-the-bible",
+   "alt": "A man sits alone in a cave and reads an open Bible in the morning light."
+  },
+  {
+   "file": "ch8-5-hewing-a-plank.jpg",
+   "chapter": 8,
+   "k": 5,
+   "seq": 1012,
+   "slug": "hewing-a-plank",
+   "alt": "A man chops a felled tree trunk into a flat plank with a hatchet."
+  },
+  {
+   "file": "ch8-6-birds-hung-as-scarecrows.jpg",
+   "chapter": 8,
+   "k": 6,
+   "seq": 1028,
+   "slug": "birds-hung-as-scarecrows",
+   "alt": "Three dead birds hang from a pole beside a fenced field of corn."
+  },
+  {
+   "file": "ch8-7-shore-covered-with-turtles.jpg",
+   "chapter": 8,
+   "k": 7,
+   "seq": 976,
+   "slug": "shore-covered-with-turtles",
+   "alt": "一个人惊讶地站在海边,沙滩上爬满了无数海龟。"
+  },
+  {
+   "file": "ch8-8-setting-up-the-marker-pole.jpg",
+   "chapter": 8,
+   "k": 8,
+   "seq": 980,
+   "slug": "setting-up-the-marker-pole",
+   "alt": "一个人在海滩上竖起一根高高的木杆作为记号。"
+  },
+  {
+   "file": "ch8-9-leading-kid-by-rope.jpg",
+   "chapter": 8,
+   "k": 9,
+   "seq": 985,
+   "slug": "leading-kid-by-rope",
+   "alt": "一个人用绳子牵着一只小山羊沿着林间小路走。"
+  },
+  {
+   "file": "ch8-10-dog-guarding-cornfield-night.jpg",
+   "chapter": 8,
+   "k": 10,
+   "seq": 1020,
+   "slug": "dog-guarding-cornfield-night",
+   "alt": "夜里一条狗被拴在庄稼地门口的木桩上守夜吠叫。"
+  },
+  {
+   "file": "ch8-11-reaping-corn-with-cutlass.jpg",
+   "chapter": 8,
+   "k": 11,
+   "seq": 1032,
+   "slug": "reaping-corn-with-cutlass",
+   "alt": "一个人用旧刀改制的镰刀在麦田里割下谷穗,放进大篮子。"
+  },
+  {
+   "file": "ch8-12-dragging-bough-as-harrow.jpg",
+   "chapter": 8,
+   "k": 12,
+   "seq": 1042,
+   "slug": "dragging-bough-as-harrow",
+   "alt": "一个人拖着一根带叶的大树枝在刚播种的地里当耙用。"
+  },
+  {
+   "file": "ch9-1-teaching-parrot-poll.jpg",
+   "chapter": 9,
+   "k": 1,
+   "seq": 1051,
+   "slug": "teaching-parrot-poll",
+   "alt": "A man indoors teaching a green parrot perched on his hand to speak."
+  },
+  {
+   "file": "ch9-2-firing-pots-in-fire.jpg",
+   "chapter": 9,
+   "k": 2,
+   "seq": 1063,
+   "slug": "firing-pots-in-fire",
+   "alt": "A man tends a large open fire heaped around a stack of glowing clay pots."
+  },
+  {
+   "file": "ch9-3-baking-bread-earthen-oven.jpg",
+   "chapter": 9,
+   "k": 3,
+   "seq": 1083,
+   "slug": "baking-bread-earthen-oven",
+   "alt": "A man bakes loaves under an upturned earthen pot surrounded by hot embers on a hearth."
+  },
+  {
+   "file": "ch9-4-digging-under-ships-boat.jpg",
+   "chapter": 9,
+   "k": 4,
+   "seq": 1093,
+   "slug": "digging-under-ships-boat",
+   "alt": "A man digs sand from under an overturned boat on a beach, using wooden levers."
+  },
+  {
+   "file": "ch9-5-giant-canoe-stranded-woods.jpg",
+   "chapter": 9,
+   "k": 5,
+   "seq": 1105,
+   "slug": "giant-canoe-stranded-woods",
+   "alt": "A man stands next to an enormous dugout canoe carved from a single tree in the woods."
+  },
+  {
+   "file": "ch9-6-goatskin-suit-umbrella.jpg",
+   "chapter": 9,
+   "k": 6,
+   "seq": 1163,
+   "slug": "goatskin-suit-umbrella",
+   "alt": "A man in goatskin clothes and cap walks in bright sun holding a fur-covered umbrella."
+  },
+  {
+   "file": "ch9-7-sowing-seed-fencing-field.jpg",
+   "chapter": 9,
+   "k": 7,
+   "seq": 1049,
+   "slug": "sowing-seed-fencing-field",
+   "alt": "一个人在田里撒种,四周围着新插的木桩篱笆。"
+  },
+  {
+   "file": "ch9-8-pots-in-wicker-baskets-straw.jpg",
+   "chapter": 9,
+   "k": 8,
+   "seq": 1056,
+   "slug": "pots-in-wicker-baskets-straw",
+   "alt": "两只粗陶大罐分别套在柳条筐里,缝隙塞满干稻草。"
+  },
+  {
+   "file": "ch9-9-discovering-baked-shard-fire.jpg",
+   "chapter": 9,
+   "k": 9,
+   "seq": 1059,
+   "slug": "discovering-baked-shard-fire",
+   "alt": "一个人从余烬里捡起一块烧得通红坚硬的陶片,惊讶地端详。"
+  },
+  {
+   "file": "ch9-10-hollowing-wooden-mortar-fire.jpg",
+   "chapter": 9,
+   "k": 10,
+   "seq": 1070,
+   "slug": "hollowing-wooden-mortar-fire",
+   "alt": "一个人用炭火烧灼并用斧头掏空一块圆木做臼,旁边放着木杵。"
+  },
+  {
+   "file": "ch9-11-felling-giant-cedar-tree.jpg",
+   "chapter": 9,
+   "k": 11,
+   "seq": 1102,
+   "slug": "felling-giant-cedar-tree",
+   "alt": "一个人挥斧砍伐一棵比人还粗数倍的巨大雪松,树脚满是木屑。"
+  },
+  {
+   "file": "ch9-12-digging-canal-to-canoe.jpg",
+   "chapter": 9,
+   "k": 12,
+   "seq": 1111,
+   "slug": "digging-canal-to-canoe",
+   "alt": "一个人在坡地上挖一条长壕沟,想把水引到那只搁浅的大独木舟旁,两侧堆着挖出的泥土。"
+  },
+  {
+   "file": "ch10-1-digging-canal-to-canoe.jpg",
+   "chapter": 10,
+   "k": 1,
+   "seq": 1166,
+   "slug": "digging-canal-to-canoe",
+   "alt": "A man digs a canal in the ground to float his newly built canoe to the water."
+  },
+  {
+   "file": "ch10-2-boat-rigged-with-umbrella.jpg",
+   "chapter": 10,
+   "k": 2,
+   "seq": 1173,
+   "slug": "boat-rigged-with-umbrella",
+   "alt": "A small sailing boat rigged with a mast, sail, and an umbrella awning at the stern."
+  },
+  {
+   "file": "ch10-3-boat-swept-by-current.jpg",
+   "chapter": 10,
+   "k": 3,
+   "seq": 1181,
+   "slug": "boat-swept-by-current",
+   "alt": "A man in a small boat is swept out to sea by a strong ocean current away from the island."
+  },
+  {
+   "file": "ch10-4-kneeling-thanks-on-shore.jpg",
+   "chapter": 10,
+   "k": 4,
+   "seq": 1201,
+   "slug": "kneeling-thanks-on-shore",
+   "alt": "A man kneels on the beach giving thanks after landing, his boat beside him under trees."
+  },
+  {
+   "file": "ch10-5-parrot-poll-on-hedge.jpg",
+   "chapter": 10,
+   "k": 5,
+   "seq": 1212,
+   "slug": "parrot-poll-on-hedge",
+   "alt": "A man wakes startled while his pet parrot perches on a hedge calling to him."
+  },
+  {
+   "file": "ch10-6-tame-goats-following-master.jpg",
+   "chapter": 10,
+   "k": 6,
+   "seq": 1248,
+   "slug": "tame-goats-following-master",
+   "alt": "A man crosses a fenced pasture feeding a small flock of tame goats that follow him."
+  },
+  {
+   "file": "ch10-7-victualling-boat-for-voyage.jpg",
+   "chapter": 10,
+   "k": 7,
+   "seq": 1174,
+   "slug": "victualling-boat-for-voyage",
+   "alt": "A man loads bread, a pot, and supplies into his small boat before setting out to sea."
+  },
+  {
+   "file": "ch10-8-surveying-current-from-hilltop.jpg",
+   "chapter": 10,
+   "k": 8,
+   "seq": 1178,
+   "slug": "surveying-current-from-hilltop",
+   "alt": "A man stands on a hill with his gun, looking down at a strong current running past rocks."
+  },
+  {
+   "file": "ch10-9-heaving-tortoise-into-boat.jpg",
+   "chapter": 10,
+   "k": 9,
+   "seq": 1183,
+   "slug": "heaving-tortoise-into-boat",
+   "alt": "A man lifts a large tortoise into his boat beside a big water jar."
+  },
+  {
+   "file": "ch10-10-stretching-hands-to-island.jpg",
+   "chapter": 10,
+   "k": 10,
+   "seq": 1186,
+   "slug": "stretching-hands-to-island",
+   "alt": "A man in a boat far out at sea reaches his arms toward the distant shrinking island."
+  },
+  {
+   "file": "ch10-11-he-goat-caught-in-pitfall.jpg",
+   "chapter": 10,
+   "k": 11,
+   "seq": 1234,
+   "slug": "he-goat-caught-in-pitfall",
+   "alt": "A man looks down into a pit trap holding a big he-goat, with kids in other pits nearby."
+  },
+  {
+   "file": "ch10-12-milking-tame-goat-dairy.jpg",
+   "chapter": 10,
+   "k": 12,
+   "seq": 1251,
+   "slug": "milking-tame-goat-dairy",
+   "alt": "A man sits milking a tame goat into a pail while others graze in the pen."
+  },
+  {
+   "file": "ch11-1-king-dining-with-animals.jpg",
+   "chapter": 11,
+   "k": 1,
+   "seq": 1260,
+   "slug": "king-dining-with-animals",
+   "alt": "A castaway dines alone at a table with a parrot, a dog, and two cats around him."
+  },
+  {
+   "file": "ch11-2-goatskin-outfit-portrait.jpg",
+   "chapter": 11,
+   "k": 2,
+   "seq": 1271,
+   "slug": "goatskin-outfit-portrait",
+   "alt": "A castaway stands dressed head to toe in goat skins, carrying a gun, basket, and fur umbrella."
+  },
+  {
+   "file": "ch11-3-footprint-in-the-sand.jpg",
+   "chapter": 11,
+   "k": 3,
+   "seq": 1294,
+   "slug": "footprint-in-the-sand",
+   "alt": "A man stares in shock at a single bare footprint in the sand on an empty shore."
+  },
+  {
+   "file": "ch11-4-fleeing-to-the-castle.jpg",
+   "chapter": 11,
+   "k": 4,
+   "seq": 1300,
+   "slug": "fleeing-to-the-castle",
+   "alt": "A frightened man runs back to his walled shelter, looking over his shoulder."
+  },
+  {
+   "file": "ch11-5-fearful-milking-goats.jpg",
+   "chapter": 11,
+   "k": 5,
+   "seq": 1329,
+   "slug": "fearful-milking-goats",
+   "alt": "A man milks a goat in a fenced enclosure while nervously looking behind him."
+  },
+  {
+   "file": "ch11-6-building-double-wall-muskets.jpg",
+   "chapter": 11,
+   "k": 6,
+   "seq": 1342,
+   "slug": "building-double-wall-muskets",
+   "alt": "A man reinforces a thick defensive wall and sets muskets into holes in it."
+  },
+  {
+   "file": "ch11-7-watching-calm-sea-from-rock.jpg",
+   "chapter": 11,
+   "k": 7,
+   "seq": 1276,
+   "slug": "watching-calm-sea-from-rock",
+   "alt": "一个人站在岛尖的高岩上,望着异常平静无波的海面。"
+  },
+  {
+   "file": "ch11-8-cave-storeroom-pots-baskets.jpg",
+   "chapter": 11,
+   "k": 8,
+   "seq": 1280,
+   "slug": "cave-storeroom-pots-baskets",
+   "alt": "岩壁后的干燥洞室里,排列着大陶罐和装满玉米穗的高大草筐。"
+  },
+  {
+   "file": "ch11-9-country-bower-tent-couch.jpg",
+   "chapter": 11,
+   "k": 9,
+   "seq": 1285,
+   "slug": "country-bower-tent-couch",
+   "alt": "茂密树篱围出的林间空地上,搭着帆布帐篷,篷下是铺兽皮的卧榻。"
+  },
+  {
+   "file": "ch11-10-measuring-footprint-with-foot.jpg",
+   "chapter": 11,
+   "k": 10,
+   "seq": 1330,
+   "slug": "measuring-footprint-with-foot",
+   "alt": "一个人跪在沙滩上,把自己的赤脚比在那个人类脚印旁边量大小。"
+  },
+  {
+   "file": "ch11-11-planting-stake-grove.jpg",
+   "chapter": 11,
+   "k": 11,
+   "seq": 1343,
+   "slug": "planting-stake-grove",
+   "alt": "一个人在城墙外的大片土地上密密插下无数细木桩,栽出茂密的幼林。"
+  },
+  {
+   "file": "ch11-12-reading-bible-for-comfort.jpg",
+   "chapter": 11,
+   "k": 12,
+   "seq": 1323,
+   "slug": "reading-bible-for-comfort",
+   "alt": "清晨,一个人坐在洞中兽皮床边,双手捧着摊开的圣经,神情安宁。"
+  },
+  {
+   "file": "ch12-1-fencing-goat-enclosure-woods.jpg",
+   "chapter": 12,
+   "k": 1,
+   "seq": 1351,
+   "slug": "fencing-goat-enclosure-woods",
+   "alt": "A man pens goats inside a wooden fence in a woodland clearing."
+  },
+  {
+   "file": "ch12-2-scanning-sea-from-hilltop.jpg",
+   "chapter": 12,
+   "k": 2,
+   "seq": 1356,
+   "slug": "scanning-sea-from-hilltop",
+   "alt": "A man on a hilltop peers out to sea at a distant speck on the horizon."
+  },
+  {
+   "file": "ch12-3-shore-of-skulls-and-bones.jpg",
+   "chapter": 12,
+   "k": 3,
+   "seq": 1358,
+   "slug": "shore-of-skulls-and-bones",
+   "alt": "A deserted shore littered with human bones around a dug fire pit."
+  },
+  {
+   "file": "ch12-4-armed-with-pistols-and-cutlass.jpg",
+   "chapter": 12,
+   "k": 4,
+   "seq": 1367,
+   "slug": "armed-with-pistols-and-cutlass",
+   "alt": "A castaway armed with two pistols, a sword and a gun stands ready."
+  },
+  {
+   "file": "ch12-5-firebrand-reveals-dying-goat.jpg",
+   "chapter": 12,
+   "k": 5,
+   "seq": 1419,
+   "slug": "firebrand-reveals-dying-goat",
+   "alt": "A man raises a burning torch in a cave, lighting an old goat lying on the ground."
+  },
+  {
+   "file": "ch12-6-glittering-candlelit-grotto.jpg",
+   "chapter": 12,
+   "k": 6,
+   "seq": 1424,
+   "slug": "glittering-candlelit-grotto",
+   "alt": "A man holding candles in a cave whose walls glitter with reflected light."
+  },
+  {
+   "file": "ch12-7-kneeling-tears-thanks-above-shore.jpg",
+   "chapter": 12,
+   "k": 7,
+   "seq": 1360,
+   "slug": "kneeling-tears-thanks-above-shore",
+   "alt": "一个男人跪在海岸上方的草坡上,双手举起、满脸泪水感恩。"
+  },
+  {
+   "file": "ch12-8-loading-muskets-for-ambush.jpg",
+   "chapter": 12,
+   "k": 8,
+   "seq": 1381,
+   "slug": "loading-muskets-for-ambush",
+   "alt": "一个男人在粗木桌前给三支火枪和几把手枪装弹,桌上摊着铅弹和火药。"
+  },
+  {
+   "file": "ch12-9-hiding-boat-in-rocky-cove.jpg",
+   "chapter": 12,
+   "k": 9,
+   "seq": 1396,
+   "slug": "hiding-boat-in-rocky-cove",
+   "alt": "一个男人把小船推进东端高耸岩石下的狭窄水湾里藏起来。"
+  },
+  {
+   "file": "ch12-10-chopping-branches-finds-cave-mouth.jpg",
+   "chapter": 12,
+   "k": 10,
+   "seq": 1412,
+   "slug": "chopping-branches-finds-cave-mouth",
+   "alt": "一个男人在大岩石脚下砍去粗矮的树枝,被砍开的灌木后露出岩石里黑暗的洞口。"
+  },
+  {
+   "file": "ch12-11-two-shining-eyes-in-dark-cave.jpg",
+   "chapter": 12,
+   "k": 11,
+   "seq": 1415,
+   "slug": "two-shining-eyes-in-dark-cave",
+   "alt": "一个男人蹲在低矮洞口向黑暗里张望,退缩着,黑暗中有两只发亮的眼睛像星星般闪光。"
+  },
+  {
+   "file": "ch12-12-crawling-with-candle-through-passage.jpg",
+   "chapter": 12,
+   "k": 12,
+   "seq": 1423,
+   "slug": "crawling-with-candle-through-passage",
+   "alt": "一个男人手举点燃的蜡烛,四肢着地爬过低矮狭窄的岩石通道。"
+  },
+  {
+   "file": "ch13-1-parrot-poll-companion.jpg",
+   "chapter": 13,
+   "k": 1,
+   "seq": 1433,
+   "slug": "parrot-poll-companion",
+   "alt": "A bearded castaway with a parrot on his hand and animals around him inside his shelter."
+  },
+  {
+   "file": "ch13-2-spying-savages-with-glass.jpg",
+   "chapter": 13,
+   "k": 2,
+   "seq": 1448,
+   "slug": "spying-savages-with-glass",
+   "alt": "A man lies on a hilltop looking through a spyglass at figures around a fire on a far beach."
+  },
+  {
+   "file": "ch13-3-signal-fire-on-hill.jpg",
+   "chapter": 13,
+   "k": 3,
+   "seq": 1472,
+   "slug": "signal-fire-on-hill",
+   "alt": "A man tends a large blazing bonfire on a hill at night during a lightning storm by the sea."
+  },
+  {
+   "file": "ch13-4-drowned-boy-on-shore.jpg",
+   "chapter": 13,
+   "k": 4,
+   "seq": 1494,
+   "slug": "drowned-boy-on-shore",
+   "alt": "A man stands over a drowned boy's body washed up on the beach."
+  },
+  {
+   "file": "ch13-5-spanish-wreck-on-rocks.jpg",
+   "chapter": 13,
+   "k": 5,
+   "seq": 1509,
+   "slug": "spanish-wreck-on-rocks",
+   "alt": "A broken wrecked ship stuck between rocks at sea, viewed from a small boat."
+  },
+  {
+   "file": "ch13-6-dog-jumps-from-wreck.jpg",
+   "chapter": 13,
+   "k": 6,
+   "seq": 1511,
+   "slug": "dog-jumps-from-wreck",
+   "alt": "A dog jumps off a shipwreck into the water toward a man reaching out from a small boat."
+  },
+  {
+   "file": "ch13-7-loading-muskets-in-castle.jpg",
+   "chapter": 13,
+   "k": 7,
+   "seq": 1445,
+   "slug": "loading-muskets-in-castle",
+   "alt": "一个人在洞穴堡垒内给排成一列的火枪装弹准备防御。"
+  },
+  {
+   "file": "ch13-8-marching-out-armed-to-teeth.jpg",
+   "chapter": 13,
+   "k": 8,
+   "seq": 1454,
+   "slug": "marching-out-armed-to-teeth",
+   "alt": "一个人肩扛两支长枪、腰插两把手枪、挂着长剑,吃力地向远处山丘走去。"
+  },
+  {
+   "file": "ch13-9-marks-of-horror-on-shore.jpg",
+   "chapter": 13,
+   "k": 9,
+   "seq": 1455,
+   "slug": "marks-of-horror-on-shore",
+   "alt": "一个人站在海滩上,望着沙地上食人宴留下的骨头、血迹和熄灭的火堆残迹。"
+  },
+  {
+   "file": "ch13-10-loading-boat-for-voyage.jpg",
+   "chapter": 13,
+   "k": 10,
+   "seq": 1500,
+   "slug": "loading-boat-for-voyage",
+   "alt": "一个人在水边把大米袋、水罐、奶酪和撑开的遮阳伞装进小独木舟。"
+  },
+  {
+   "file": "ch13-11-two-drowned-men-in-forecastle.jpg",
+   "chapter": 13,
+   "k": 11,
+   "seq": 1514,
+   "slug": "two-drowned-men-in-forecastle",
+   "alt": "一个人在失事船只进水的船首舱内,看到两名淹死的水手互相紧抱着躺在一起。"
+  },
+  {
+   "file": "ch13-12-bags-of-gold-in-chest.jpg",
+   "chapter": 13,
+   "k": 12,
+   "seq": 1529,
+   "slug": "bags-of-gold-in-chest",
+   "alt": "一个人跪在海边打开的水手箱旁,捧出装满银币的袋子,面前摊着金币和小金条。"
+  },
+  {
+   "file": "ch14-1-five-canoes-on-shore.jpg",
+   "chapter": 14,
+   "k": 1,
+   "seq": 1566,
+   "slug": "five-canoes-on-shore",
+   "alt": "Five empty dugout canoes drawn up together on a wide sandy beach at dawn."
+  },
+  {
+   "file": "ch14-2-savages-dancing-round-fire.jpg",
+   "chapter": 14,
+   "k": 2,
+   "seq": 1571,
+   "slug": "savages-dancing-round-fire",
+   "alt": "A crowd of islanders dance around a fire on the beach while a man watches from a hill through a spyglass."
+  },
+  {
+   "file": "ch14-3-fugitive-swims-creek.jpg",
+   "chapter": 14,
+   "k": 3,
+   "seq": 1577,
+   "slug": "fugitive-swims-creek",
+   "alt": "A fleeing man swims across a tidal creek while two pursuers stop on the opposite bank."
+  },
+  {
+   "file": "ch14-4-crusoe-strikes-pursuer.jpg",
+   "chapter": 14,
+   "k": 4,
+   "seq": 1581,
+   "slug": "crusoe-strikes-pursuer",
+   "alt": "A man clubs down a pursuer with the stock of his musket on a beach as another attacker stands beyond."
+  },
+  {
+   "file": "ch14-5-friday-sets-foot-on-head.jpg",
+   "chapter": 14,
+   "k": 5,
+   "seq": 1587,
+   "slug": "friday-sets-foot-on-head",
+   "alt": "A kneeling man places another man's foot upon his own bowed head on the beach as a token of submission."
+  },
+  {
+   "file": "ch14-6-clothing-friday.jpg",
+   "chapter": 14,
+   "k": 6,
+   "seq": 1621,
+   "slug": "clothing-friday",
+   "alt": "A man dresses his companion in homemade linen and animal-skin clothing inside a shelter."
+  },
+  {
+   "file": "ch14-7-awake-in-hammock-night.jpg",
+   "chapter": 14,
+   "k": 7,
+   "seq": 1541,
+   "slug": "awake-in-hammock-night",
+   "alt": "A sleepless man lies awake in a slung hammock inside a lamplit cave on a rainy night."
+  },
+  {
+   "file": "ch14-8-shooting-the-bowman.jpg",
+   "chapter": 14,
+   "k": 8,
+   "seq": 1583,
+   "slug": "shooting-the-bowman",
+   "alt": "A man fires a musket at an attacker who is drawing a bow, with a fallen body on the sand between them."
+  },
+  {
+   "file": "ch14-9-friday-buries-bodies-in-sand.jpg",
+   "chapter": 14,
+   "k": 9,
+   "seq": 1597,
+   "slug": "friday-buries-bodies-in-sand",
+   "alt": "A kneeling man scoops a pit in beach sand with his hands to bury bodies while another stands guard."
+  },
+  {
+   "file": "ch14-10-feeding-friday-in-cave.jpg",
+   "chapter": 14,
+   "k": 10,
+   "seq": 1599,
+   "slug": "feeding-friday-in-cave",
+   "alt": "A man gives bread and raisins to an exhausted companion who drinks from a jug on a straw bed in a cave."
+  },
+  {
+   "file": "ch14-11-milking-goats-friday-runs.jpg",
+   "chapter": 14,
+   "k": 11,
+   "seq": 1605,
+   "slug": "milking-goats-friday-runs",
+   "alt": "A man milks a goat in a pen as his companion runs up and flings himself flat on the ground in gratitude."
+  },
+  {
+   "file": "ch14-12-building-fridays-tent.jpg",
+   "chapter": 14,
+   "k": 12,
+   "seq": 1623,
+   "slug": "building-fridays-tent",
+   "alt": "A man builds a small pole tent between two enclosure walls while his companion passes him sailcloth."
+  },
+  {
+   "file": "ch15-1-shooting-kid-in-woods.jpg",
+   "chapter": 15,
+   "k": 1,
+   "seq": 1635,
+   "slug": "shooting-kid-in-woods",
+   "alt": "A man fires a musket at a goat kid in the woods while his companion watches, startled."
+  },
+  {
+   "file": "ch15-2-friday-kneeling-embracing-knees.jpg",
+   "chapter": 15,
+   "k": 2,
+   "seq": 1637,
+   "slug": "friday-kneeling-embracing-knees",
+   "alt": "A kneeling man clutches another man's knees in fear, looking up while the standing man holds a gun."
+  },
+  {
+   "file": "ch15-3-roasting-kid-before-fire.jpg",
+   "chapter": 15,
+   "k": 3,
+   "seq": 1645,
+   "slug": "roasting-kid-before-fire",
+   "alt": "A piece of meat roasts on a string over a fire between two poles as two men watch."
+  },
+  {
+   "file": "ch15-4-friday-musing-over-wrecked-boat.jpg",
+   "chapter": 15,
+   "k": 4,
+   "seq": 1746,
+   "slug": "friday-musing-over-wrecked-boat",
+   "alt": "A man stands pensively beside the broken wreck of an old boat on a beach."
+  },
+  {
+   "file": "ch15-5-friday-dancing-on-hilltop.jpg",
+   "chapter": 15,
+   "k": 5,
+   "seq": 1763,
+   "slug": "friday-dancing-on-hilltop",
+   "alt": "A man jumps for joy on a hilltop, pointing across the sea toward a distant coastline."
+  },
+  {
+   "file": "ch15-6-testing-canoe-in-water.jpg",
+   "chapter": 15,
+   "k": 6,
+   "seq": 1788,
+   "slug": "testing-canoe-in-water",
+   "alt": "Two men sit in a small canoe on calm water near the shore, one paddling."
+  },
+  {
+   "file": "ch15-7-friday-fetching-fallen-parrot.jpg",
+   "chapter": 15,
+   "k": 7,
+   "seq": 1642,
+   "slug": "friday-fetching-fallen-parrot",
+   "alt": "星期五在树下捧起被打落的鹦鹉，鲁滨逊在远处装填枪支。"
+  },
+  {
+   "file": "ch15-8-friday-talking-to-the-gun.jpg",
+   "chapter": 15,
+   "k": 8,
+   "seq": 1641,
+   "slug": "friday-talking-to-the-gun",
+   "alt": "星期五独自坐在靠墙的火枪前，凑近对它说话，不敢触碰。"
+  },
+  {
+   "file": "ch15-9-friday-spitting-out-salt.jpg",
+   "chapter": 15,
+   "k": 9,
+   "seq": 1644,
+   "slug": "friday-spitting-out-salt",
+   "alt": "星期五尝了盐后皱脸吐掉、用清水漱口，鲁滨逊在对面平静地吃肉。"
+  },
+  {
+   "file": "ch15-10-friday-beating-and-sifting-corn.jpg",
+   "chapter": 15,
+   "k": 10,
+   "seq": 1647,
+   "slug": "friday-beating-and-sifting-corn",
+   "alt": "星期五跪在垫上用棍子打谷、再用筛子筛去谷壳，四周放着盛谷的篮子。"
+  },
+  {
+   "file": "ch15-11-friday-counting-with-stones.jpg",
+   "chapter": 15,
+   "k": 11,
+   "seq": 1685,
+   "slug": "friday-counting-with-stones",
+   "alt": "星期五在西北岸边跪着摆出一长排石子逐一指数，鲁滨逊在旁观看，远处沙滩有残破独木舟。"
+  },
+  {
+   "file": "ch15-12-giving-friday-belt-and-hatchet.jpg",
+   "chapter": 15,
+   "k": 12,
+   "seq": 1742,
+   "slug": "giving-friday-belt-and-hatchet",
+   "alt": "鲁滨逊为星期五系上挂着斧头的腰带并递给他一把刀，星期五低头欣喜地握着刀。"
+  },
+  {
+   "file": "ch16-1-friday-offers-the-hatchet.jpg",
+   "chapter": 16,
+   "k": 1,
+   "seq": 1812,
+   "slug": "friday-offers-the-hatchet",
+   "alt": "A kneeling man offers a hatchet to another man, tears in his eyes, begging not to be sent away."
+  },
+  {
+   "file": "ch16-2-building-the-large-canoe.jpg",
+   "chapter": 16,
+   "k": 2,
+   "seq": 1824,
+   "slug": "building-the-large-canoe",
+   "alt": "Two men shape a large canoe from a felled tree trunk with axes near the shore."
+  },
+  {
+   "file": "ch16-3-friday-leaps-over-the-fence.jpg",
+   "chapter": 16,
+   "k": 3,
+   "seq": 1848,
+   "slug": "friday-leaps-over-the-fence",
+   "alt": "A frightened man leaps over a wooden fence, running to raise the alarm."
+  },
+  {
+   "file": "ch16-4-spyglass-on-the-hill.jpg",
+   "chapter": 16,
+   "k": 4,
+   "seq": 1869,
+   "slug": "spyglass-on-the-hill",
+   "alt": "A man on a hilltop looks through a spyglass toward a distant beach gathering."
+  },
+  {
+   "file": "ch16-5-ambush-fire-from-the-wood.jpg",
+   "chapter": 16,
+   "k": 5,
+   "seq": 1892,
+   "slug": "ambush-fire-from-the-wood",
+   "alt": "Two men fire muskets from the edge of a wood at figures scattering on a beach."
+  },
+  {
+   "file": "ch16-6-friday-reunited-with-father.jpg",
+   "chapter": 16,
+   "k": 6,
+   "seq": 1917,
+   "slug": "friday-reunited-with-father",
+   "alt": "A young man joyfully embraces a frail old man he has just freed in a beached canoe."
+  },
+  {
+   "file": "ch16-7-hauling-boat-on-rollers.jpg",
+   "chapter": 16,
+   "k": 7,
+   "seq": 1825,
+   "slug": "hauling-boat-on-rollers",
+   "alt": "两人用滚木一寸寸把大独木舟推向海里。"
+  },
+  {
+   "file": "ch16-8-friday-astonished-at-sail.jpg",
+   "chapter": 16,
+   "k": 8,
+   "seq": 1836,
+   "slug": "friday-astonished-at-sail",
+   "alt": "小舟扬起三角帆行驶,星期五呆立船头惊讶地望着摆动的帆。"
+  },
+  {
+   "file": "ch16-9-boat-hidden-in-thatched-dock.jpg",
+   "chapter": 16,
+   "k": 9,
+   "seq": 1844,
+   "slug": "boat-hidden-in-thatched-dock",
+   "alt": "大独木舟停在挖好的小船坞里,上面盖满厚厚的树枝像屋顶一样把它藏住。"
+  },
+  {
+   "file": "ch16-10-loading-the-arsenal.jpg",
+   "chapter": 16,
+   "k": 10,
+   "seq": 1867,
+   "slug": "loading-the-arsenal",
+   "alt": "罗滨逊在寨子里逐一给一排火枪和手枪装填火药弹丸,佩剑在腰,一把手斧备给星期五。"
+  },
+  {
+   "file": "ch16-11-cutting-the-spaniard-free.jpg",
+   "chapter": 16,
+   "k": 11,
+   "seq": 1902,
+   "slug": "cutting-the-spaniard-free",
+   "alt": "罗滨逊在沙滩上跪着用刀割断被捆西班牙人手上的草绳,星期五在旁向水边的独木舟开枪。"
+  },
+  {
+   "file": "ch16-12-spaniard-shoots-from-the-ground.jpg",
+   "chapter": 16,
+   "k": 12,
+   "seq": 1910,
+   "slug": "spaniard-shoots-from-the-ground",
+   "alt": "沙地上壮实的野人把虚弱的西班牙人压在身下夺剑,西班牙人仰面抽出手枪贴身开火。"
+  },
+  {
+   "file": "ch17-1-four-men-sowing-field.jpg",
+   "chapter": 17,
+   "k": 1,
+   "seq": 1970,
+   "slug": "four-men-sowing-field",
+   "alt": "Four men dig and sow seed in a cleared field beside tropical woods."
+  },
+  {
+   "file": "ch17-2-hewing-oak-into-planks.jpg",
+   "chapter": 17,
+   "k": 2,
+   "seq": 1973,
+   "slug": "hewing-oak-into-planks",
+   "alt": "A man hews a felled oak tree into long planks, with cut boards stacked nearby."
+  },
+  {
+   "file": "ch17-3-canoe-departs-full-moon.jpg",
+   "chapter": 17,
+   "k": 3,
+   "seq": 1981,
+   "slug": "canoe-departs-full-moon",
+   "alt": "Two men paddle a canoe away from the island by moonlight as a figure watches from the beach."
+  },
+  {
+   "file": "ch17-4-spyglass-sights-english-ship.jpg",
+   "chapter": 17,
+   "k": 4,
+   "seq": 1991,
+   "slug": "spyglass-sights-english-ship",
+   "alt": "A man on a hilltop looks through a spyglass at a distant ship anchored at sea."
+  },
+  {
+   "file": "ch17-5-cutlass-raised-over-prisoner.jpg",
+   "chapter": 17,
+   "k": 5,
+   "seq": 2006,
+   "slug": "cutlass-raised-over-prisoner",
+   "alt": "A sailor raises a cutlass over a kneeling prisoner on a beach beside a grounded boat."
+  },
+  {
+   "file": "ch17-6-captain-strikes-mutineer.jpg",
+   "chapter": 17,
+   "k": 6,
+   "seq": 2062,
+   "slug": "captain-strikes-mutineer",
+   "alt": "A man strikes down a mutineer with a musket stock on a smoky beach after gunfire."
+  },
+  {
+   "file": "ch17-7-carrying-kids-to-goat-flock.jpg",
+   "chapter": 17,
+   "k": 7,
+   "seq": 1974,
+   "slug": "carrying-kids-to-goat-flock",
+   "alt": "两人抱着小山羊走向羊圈,身后草地上躺着一只被打死的母羊。"
+  },
+  {
+   "file": "ch17-8-grapes-drying-in-sun.jpg",
+   "chapter": 17,
+   "k": 8,
+   "seq": 1975,
+   "slug": "grapes-drying-in-sun",
+   "alt": "成串的葡萄挂在杆子上,在烈日下晒成葡萄干。"
+  },
+  {
+   "file": "ch17-9-crusoe-armed-fierce-figure.jpg",
+   "chapter": 17,
+   "k": 9,
+   "seq": 2021,
+   "slug": "crusoe-armed-fierce-figure",
+   "alt": "一个身穿羊皮衣、头戴羊皮尖帽的人全副武装,佩剑、腰插双枪、双肩各扛一支火枪。"
+  },
+  {
+   "file": "ch17-10-three-prisoners-despair-under-tree.jpg",
+   "chapter": 17,
+   "k": 10,
+   "seq": 2009,
+   "slug": "three-prisoners-despair-under-tree",
+   "alt": "三个衣衫褴褛的人绝望地坐在大树下,低头垂手,望着沙地。"
+  },
+  {
+   "file": "ch17-11-drunken-sailors-asleep-grounded-boat.jpg",
+   "chapter": 17,
+   "k": 11,
+   "seq": 2014,
+   "slug": "drunken-sailors-asleep-grounded-boat",
+   "alt": "落潮时一艘长艇搁浅在湿软沙滩上,两名醉酒的水手在艇中沉睡,脚边滚着空酒瓶。"
+  },
+  {
+   "file": "ch17-12-staving-hole-in-boat-bottom.jpg",
+   "chapter": 17,
+   "k": 12,
+   "seq": 2078,
+   "slug": "staving-hole-in-boat-bottom",
+   "alt": "众人用斧头和铁棒在搁浅长艇的船底砸出一个大破洞,木板碎裂,艇上桨、桅、帆已被卸空。"
+  },
+  {
+   "file": "ch18-1-second-boat-rows-ashore.jpg",
+   "chapter": 18,
+   "k": 1,
+   "seq": 2081,
+   "slug": "second-boat-rows-ashore",
+   "alt": "A boat full of armed sailors rows from a ship toward a wooded shore."
+  },
+  {
+   "file": "ch18-2-mutineers-find-boat-stripped.jpg",
+   "chapter": 18,
+   "k": 2,
+   "seq": 2097,
+   "slug": "mutineers-find-boat-stripped",
+   "alt": "Sailors on a beach stare at their damaged boat and shout toward the woods."
+  },
+  {
+   "file": "ch18-3-captain-seizes-boat-at-creek.jpg",
+   "chapter": 18,
+   "k": 3,
+   "seq": 2120,
+   "slug": "captain-seizes-boat-at-creek",
+   "alt": "A man knocks down a sailor by a creek while another surrenders in a boat."
+  },
+  {
+   "file": "ch18-4-boatswain-shot-in-dark.jpg",
+   "chapter": 18,
+   "k": 4,
+   "seq": 2131,
+   "slug": "boatswain-shot-in-dark",
+   "alt": "Two men fire muskets at three sailors in the dark woods, one falling."
+  },
+  {
+   "file": "ch18-5-captain-embraces-robinson-hilltop.jpg",
+   "chapter": 18,
+   "k": 5,
+   "seq": 2177,
+   "slug": "captain-embraces-robinson-hilltop",
+   "alt": "A captain embraces a man on a hilltop, pointing to a ship anchored offshore."
+  },
+  {
+   "file": "ch18-6-captain-presents-fresh-clothes.jpg",
+   "chapter": 18,
+   "k": 6,
+   "seq": 2189,
+   "slug": "captain-presents-fresh-clothes",
+   "alt": "A captain presents folded clothes and provisions to a man in a cave dwelling."
+  },
+  {
+   "file": "ch18-7-volley-fired-into-empty-woods.jpg",
+   "chapter": 18,
+   "k": 7,
+   "seq": 2098,
+   "slug": "volley-fired-into-empty-woods",
+   "alt": "Sailors stand in a ring on the beach and fire a volley of muskets into the woods."
+  },
+  {
+   "file": "ch18-8-sailors-rest-under-tree-on-hill.jpg",
+   "chapter": 18,
+   "k": 8,
+   "seq": 2108,
+   "slug": "sailors-rest-under-tree-on-hill",
+   "alt": "Weary sailors rest under a lone tree on a hilltop, looking over the valleys."
+  },
+  {
+   "file": "ch18-9-seamen-stranded-at-flooded-creek.jpg",
+   "chapter": 18,
+   "k": 9,
+   "seq": 2117,
+   "slug": "seamen-stranded-at-flooded-creek",
+   "alt": "Sailors halt at a flooded creek and wave for a boat to carry them across."
+  },
+  {
+   "file": "ch18-10-despair-at-grounded-boat-night.jpg",
+   "chapter": 18,
+   "k": 10,
+   "seq": 2128,
+   "slug": "despair-at-grounded-boat-night",
+   "alt": "At dusk sailors run in despair around their boat grounded on the mud of a creek."
+  },
+  {
+   "file": "ch18-11-boarding-the-ship-at-midnight.jpg",
+   "chapter": 18,
+   "k": 11,
+   "seq": 2172,
+   "slug": "boarding-the-ship-at-midnight",
+   "alt": "Armed men board a ship at night and strike down a crewman on deck."
+  },
+  {
+   "file": "ch18-12-rebel-captain-hanged-yardarm.jpg",
+   "chapter": 18,
+   "k": 12,
+   "seq": 2210,
+   "slug": "rebel-captain-hanged-yardarm",
+   "alt": "A body hangs from the yard-arm of an anchored ship as men watch from the shore."
+  },
+  {
+   "file": "ch19-1-leaving-the-island.jpg",
+   "chapter": 19,
+   "k": 1,
+   "seq": 2226,
+   "slug": "leaving-the-island",
+   "alt": "A bearded man in goatskin clothes boards a ship, carrying an umbrella and a parrot, looking back at an island."
+  },
+  {
+   "file": "ch19-2-mutineers-swim-to-ship.jpg",
+   "chapter": 19,
+   "k": 2,
+   "seq": 2222,
+   "slug": "mutineers-swim-to-ship",
+   "alt": "Two men swim to a ship's side at dawn, reaching up and begging the crew above."
+  },
+  {
+   "file": "ch19-3-reunion-lisbon-captain.jpg",
+   "chapter": 19,
+   "k": 3,
+   "seq": 2239,
+   "slug": "reunion-lisbon-captain",
+   "alt": "Two men clasp hands in an old room, recognising each other after many years."
+  },
+  {
+   "file": "ch19-4-old-captain-gives-gold.jpg",
+   "chapter": 19,
+   "k": 4,
+   "seq": 2252,
+   "slug": "old-captain-gives-gold",
+   "alt": "An old man pours gold coins from a pouch into another man's hands over a table."
+  },
+  {
+   "file": "ch19-5-friday-fears-snowy-mountains.jpg",
+   "chapter": 19,
+   "k": 5,
+   "seq": 2298,
+   "slug": "friday-fears-snowy-mountains",
+   "alt": "A man on a road looks up in fear at snow-covered mountains."
+  },
+  {
+   "file": "ch19-6-friday-shoots-wolf.jpg",
+   "chapter": 19,
+   "k": 6,
+   "seq": 2310,
+   "slug": "friday-shoots-wolf",
+   "alt": "A man on horseback shoots a wolf attacking a fallen guide on a snowy trail near woods."
+  },
+  {
+   "file": "ch19-7-boat-delivers-chests-to-shore.jpg",
+   "chapter": 19,
+   "k": 7,
+   "seq": 2224,
+   "slug": "boat-delivers-chests-to-shore",
+   "alt": "水手把木箱和衣物从小船搬上海岛沙滩,交给岸上三个衣衫褴褛的人,远处大帆船停泊。"
+  },
+  {
+   "file": "ch19-8-arrival-in-england.jpg",
+   "chapter": 19,
+   "k": 8,
+   "seq": 2228,
+   "slug": "arrival-in-england",
+   "alt": "一个饱经风霜的旅人和同伴走下跳板,踏上熙攘的英格兰码头,四周堆着货箱酒桶,背后是停泊的帆船和成排楼房。"
+  },
+  {
+   "file": "ch19-9-yorkshire-family-graves.jpg",
+   "chapter": 19,
+   "k": 9,
+   "seq": 2232,
+   "slug": "yorkshire-family-graves",
+   "alt": "约克郡安静的墓园里,归来的旅人脱帽站在几块旧墓碑前,身旁紧挨着两个妇人和两个小孩,背后是落叶的树木和石头教堂。"
+  },
+  {
+   "file": "ch19-10-overcome-with-joy.jpg",
+   "chapter": 19,
+   "k": 10,
+   "seq": 2269,
+   "slug": "overcome-with-joy",
+   "alt": "里斯本的房间里,一个人脸色苍白瘫倒在椅中,身旁桌上堆满拆开的信件和成摞金币,一位老人急忙端来一小杯药酒。"
+  },
+  {
+   "file": "ch19-11-leopard-skins-gift.jpg",
+   "chapter": 19,
+   "k": 11,
+   "seq": 2264,
+   "slug": "leopard-skins-gift",
+   "alt": "里斯本房间里,七张带斑点的豹皮铺展在桌上和地板上,旁边是拆开的信、敞开的蜜饯箱和散落发亮的金币。"
+  },
+  {
+   "file": "ch19-12-troop-sets-out-lisbon.jpg",
+   "chapter": 19,
+   "k": 12,
+   "seq": 2294,
+   "slug": "troop-sets-out-lisbon",
+   "alt": "一支六人组成的小队,骑着好马、带着武器和几名随从仆役,从里斯本城边沿乡间大道出发,身后是带城墙的城市和河流,前方是起伏的青翠山丘。"
+  },
+  {
+   "file": "ch20-1-monstrous-bear-emerges.jpg",
+   "chapter": 20,
+   "k": 1,
+   "seq": 2318,
+   "slug": "monstrous-bear-emerges",
+   "alt": "A large bear emerges from a snowy wood as travellers on horseback watch."
+  },
+  {
+   "file": "ch20-2-friday-makes-bear-dance.jpg",
+   "chapter": 20,
+   "k": 2,
+   "seq": 2337,
+   "slug": "friday-makes-bear-dance",
+   "alt": "A man bounces on an oak branch making a bear cling and totter on the same limb."
+  },
+  {
+   "file": "ch20-3-friday-shoots-bear-ear.jpg",
+   "chapter": 20,
+   "k": 3,
+   "seq": 2346,
+   "slug": "friday-shoots-bear-ear",
+   "alt": "A man presses his gun to a bear's ear at the foot of a tree and fires."
+  },
+  {
+   "file": "ch20-4-wolves-picking-horse-bones.jpg",
+   "chapter": 20,
+   "k": 4,
+   "seq": 2359,
+   "slug": "wolves-picking-horse-bones",
+   "alt": "A pack of wolves feeds on a dead horse on a snowy plain while riders watch."
+  },
+  {
+   "file": "ch20-5-wolf-army-advancing.jpg",
+   "chapter": 20,
+   "k": 5,
+   "seq": 2362,
+   "slug": "wolf-army-advancing",
+   "alt": "A long line of about a hundred wolves advances across snow toward armed riders."
+  },
+  {
+   "file": "ch20-6-powder-train-explosion.jpg",
+   "chapter": 20,
+   "k": 6,
+   "seq": 2380,
+   "slug": "powder-train-explosion",
+   "alt": "A powder train explodes along a log at night, scattering wolves as men fire from behind it."
+  },
+  {
+   "file": "ch20-7-friday-swaps-shoes-and-bolts.jpg",
+   "chapter": 20,
+   "k": 7,
+   "seq": 2326,
+   "slug": "friday-swaps-shoes-and-bolts",
+   "alt": "一个人在雪地上换上平底鞋、把马缰交给同伴,准备提枪冲向远处的大熊。"
+  },
+  {
+   "file": "ch20-8-friday-hits-bear-with-stone.jpg",
+   "chapter": 20,
+   "k": 8,
+   "seq": 2330,
+   "slug": "friday-hits-bear-with-stone",
+   "alt": "一个人边跑边回身把大石头砸中熊的脑袋,熊开始转身追来。"
+  },
+  {
+   "file": "ch20-9-bear-climbs-tree-like-cat.jpg",
+   "chapter": 20,
+   "k": 9,
+   "seq": 2334,
+   "slug": "bear-climbs-tree-like-cat",
+   "alt": "一头笨重的大熊像猫一样攀上橡树,树下雪地上丢着一支枪,远处骑马者观望。"
+  },
+  {
+   "file": "ch20-10-friday-slides-down-bough.jpg",
+   "chapter": 20,
+   "k": 10,
+   "seq": 2342,
+   "slug": "friday-slides-down-bough",
+   "alt": "一个人顺着弯垂的细树枝滑下、即将落地,粗枝那端大熊仍死死抓住不放。"
+  },
+  {
+   "file": "ch20-11-saddled-horse-chased-by-wolves.jpg",
+   "chapter": 20,
+   "k": 11,
+   "seq": 2370,
+   "slug": "saddled-horse-chased-by-wolves",
+   "alt": "黄昏雪原上,一匹带鞍辔的空马疾奔冲出树林,十六七只狼紧追不放,远处狼群守在林间隘口。"
+  },
+  {
+   "file": "ch20-12-fortified-village-night-watch.jpg",
+   "chapter": 20,
+   "k": 12,
+   "seq": 2384,
+   "slug": "fortified-village-night-watch",
+   "alt": "雪夜里的村庄,村民持枪举火把守着牲畜圈,栅栏外林边游荡着狼影。"
+  }
+ ]
+}

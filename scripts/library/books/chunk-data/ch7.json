@@ -1,0 +1,650 @@
+{
+  "chapter": 7,
+  "chunks": [
+    {
+      "head": "give up",
+      "gloss": "放弃；作罢",
+      "ipa": "/ɡɪv ʌp/",
+      "note": "停止努力、不再尝试。give it up 中 it 指代所做的事。",
+      "literal": [
+        {
+          "word": "give",
+          "meaning_cn": "给"
+        },
+        {
+          "word": "up",
+          "meaning_cn": "（构成“放弃”义）",
+          "note_cn": "与 give 连用表示彻底罢手"
+        }
+      ],
+      "ex_en": "The homework was hard, but I didn't give up.",
+      "ex_cn": "作业很难，但我没有放弃。",
+      "occ": [
+        [
+          1069,
+          "gave it up"
+        ],
+        [
+          1192,
+          "gave up"
+        ]
+      ]
+    },
+    {
+      "head": "light up",
+      "gloss": "（脸/眼睛）放光，亮起来",
+      "ipa": "/laɪt ʌp/",
+      "note": "多指因高兴而神采焕发。",
+      "literal": [
+        {
+          "word": "lit",
+          "meaning_cn": "light 的过去式：点亮；发光"
+        },
+        {
+          "word": "up",
+          "meaning_cn": "（加强）起来"
+        }
+      ],
+      "ex_en": "Her face lit up when she saw the gift.",
+      "ex_cn": "看到礼物时，她的脸上放起光来。",
+      "occ": [
+        [
+          1077,
+          "lit up"
+        ]
+      ]
+    },
+    {
+      "head": "let alone",
+      "gloss": "别管，让…独自待着",
+      "ipa": "/let əˈləʊn/",
+      "note": "let sb alone = 不去打扰某人。常拆成 let him/her alone。",
+      "literal": [
+        {
+          "word": "let",
+          "meaning_cn": "让"
+        },
+        {
+          "word": "him",
+          "meaning_cn": "他"
+        },
+        {
+          "word": "alone",
+          "meaning_cn": "独自；单独",
+          "note_cn": "此处＝不受打扰"
+        }
+      ],
+      "ex_en": "Let him alone and he will calm down.",
+      "ex_cn": "别管他，他自己会平静下来。",
+      "occ": [
+        [
+          1088,
+          "let him alone"
+        ],
+        [
+          1101,
+          "let him alone"
+        ],
+        [
+          1105,
+          "let him alone"
+        ]
+      ]
+    },
+    {
+      "head": "go ahead",
+      "gloss": "继续吧；开始吧；去做吧",
+      "ipa": "/ɡəʊ əˈhed/",
+      "note": "用来允许或鼓励对方去做某事。",
+      "literal": [
+        {
+          "word": "go",
+          "meaning_cn": "去"
+        },
+        {
+          "word": "ahead",
+          "meaning_cn": "向前；提前"
+        }
+      ],
+      "ex_en": "If you want to try, go ahead.",
+      "ex_cn": "你想试就试吧。",
+      "occ": [
+        [
+          1089,
+          "go ahead"
+        ]
+      ]
+    },
+    {
+      "head": "look on",
+      "gloss": "旁观，在一旁看着",
+      "ipa": "/lʊk ɒn/",
+      "note": "只看不参与。",
+      "literal": [
+        {
+          "word": "look",
+          "meaning_cn": "看"
+        },
+        {
+          "word": "on",
+          "meaning_cn": "（副词，构成“旁观”义）"
+        }
+      ],
+      "ex_en": "The others played while I looked on.",
+      "ex_cn": "别人玩的时候，我在一旁看着。",
+      "occ": [
+        [
+          1093,
+          "look on"
+        ]
+      ]
+    },
+    {
+      "head": "reach out",
+      "gloss": "伸出手（去够）",
+      "ipa": "/riːtʃ aʊt/",
+      "note": "把手臂伸向某物。",
+      "literal": [
+        {
+          "word": "reached",
+          "meaning_cn": "reach 的过去式：伸；够到"
+        },
+        {
+          "word": "out",
+          "meaning_cn": "向外"
+        }
+      ],
+      "ex_en": "He reached out to take the cup.",
+      "ex_cn": "他伸手去拿杯子。",
+      "occ": [
+        [
+          1098,
+          "reached out"
+        ]
+      ]
+    },
+    {
+      "head": "lend a hand",
+      "gloss": "帮忙，搭把手",
+      "ipa": "/lend ə ˈhænd/",
+      "note": "习语，字面“借出一只手”＝帮忙。",
+      "literal": [
+        {
+          "word": "lent",
+          "meaning_cn": "lend 的过去式：借出"
+        },
+        {
+          "word": "a",
+          "meaning_cn": "一（个）"
+        },
+        {
+          "word": "hand",
+          "meaning_cn": "手",
+          "note_cn": "此处借指帮助"
+        }
+      ],
+      "ex_en": "Can you lend a hand with these boxes?",
+      "ex_cn": "你能帮忙搬这些箱子吗？",
+      "occ": [
+        [
+          1098,
+          "lent a hand"
+        ]
+      ]
+    },
+    {
+      "head": "care for",
+      "gloss": "喜欢；在乎",
+      "ipa": "/keə fɔː/",
+      "note": "常用于否定句，表示不太喜欢或不在意。",
+      "literal": [
+        {
+          "word": "care",
+          "meaning_cn": "在意；关心"
+        },
+        {
+          "word": "for",
+          "meaning_cn": "对于"
+        }
+      ],
+      "ex_en": "I don't care for coffee.",
+      "ex_cn": "我不太喜欢咖啡。",
+      "occ": [
+        [
+          1129,
+          "care for"
+        ],
+        [
+          1211,
+          "care for"
+        ],
+        [
+          1224,
+          "care for"
+        ]
+      ]
+    },
+    {
+      "head": "in love with",
+      "gloss": "爱上，与…相爱",
+      "ipa": "/ɪn ˈlʌv wɪð/",
+      "note": "be in love with sb = 爱着某人。",
+      "literal": [
+        {
+          "word": "in",
+          "meaning_cn": "处于…之中"
+        },
+        {
+          "word": "love",
+          "meaning_cn": "爱"
+        },
+        {
+          "word": "with",
+          "meaning_cn": "和；与"
+        }
+      ],
+      "ex_en": "He is in love with his best friend.",
+      "ex_cn": "他爱上了他最好的朋友。",
+      "occ": [
+        [
+          1164,
+          "in love with"
+        ]
+      ]
+    },
+    {
+      "head": "take refuge",
+      "gloss": "躲避，避难",
+      "ipa": "/teɪk ˈrefjuːdʒ/",
+      "note": "到某处躲起来求安全。",
+      "literal": [
+        {
+          "word": "took",
+          "meaning_cn": "take 的过去式：采取"
+        },
+        {
+          "word": "refuge",
+          "meaning_cn": "避难所；庇护",
+          "note_cn": "take refuge＝去躲避"
+        }
+      ],
+      "ex_en": "We took refuge from the rain under a tree.",
+      "ex_cn": "我们躲到树下避雨。",
+      "occ": [
+        [
+          1186,
+          "took refuge"
+        ]
+      ]
+    },
+    {
+      "head": "be afraid of",
+      "gloss": "害怕（某物/某事）",
+      "ipa": "/biː əˈfreɪd əv/",
+      "note": "afraid of + 名词/动名词。",
+      "literal": [
+        {
+          "word": "afraid",
+          "meaning_cn": "害怕的"
+        },
+        {
+          "word": "of",
+          "meaning_cn": "对于"
+        }
+      ],
+      "ex_en": "Many children are afraid of the dark.",
+      "ex_cn": "很多孩子怕黑。",
+      "occ": [
+        [
+          1189,
+          "afraid of"
+        ]
+      ]
+    },
+    {
+      "head": "tug at",
+      "gloss": "用力拉，拽",
+      "ipa": "/tʌɡ ət/",
+      "note": "反复用力拉扯某物。",
+      "literal": [
+        {
+          "word": "tugged",
+          "meaning_cn": "tug 的过去式：用力拉"
+        },
+        {
+          "word": "at",
+          "meaning_cn": "朝（拉的对象）"
+        }
+      ],
+      "ex_en": "The little boy tugged at his mother's sleeve.",
+      "ex_cn": "小男孩用力拉着妈妈的袖子。",
+      "occ": [
+        [
+          1191,
+          "tugged at"
+        ]
+      ]
+    },
+    {
+      "head": "by and by",
+      "gloss": "不久，过一会儿",
+      "ipa": "/ˌbaɪ ənd ˈbaɪ/",
+      "note": "固定习语，表示稍后、随后。",
+      "literal": [
+        {
+          "word": "by",
+          "meaning_cn": "（介词）",
+          "note_cn": "整体为固定短语，不可拆解"
+        },
+        {
+          "word": "and",
+          "meaning_cn": "和"
+        },
+        {
+          "word": "by",
+          "meaning_cn": "（介词）"
+        }
+      ],
+      "ex_en": "Wait here; he will come by and by.",
+      "ex_cn": "在这儿等着，他一会儿就来。",
+      "occ": [
+        [
+          1192,
+          "by and by"
+        ]
+      ]
+    },
+    {
+      "head": "glance at",
+      "gloss": "瞥一眼，扫一眼",
+      "ipa": "/ɡlɑːns ət/",
+      "note": "很快地看一下。",
+      "literal": [
+        {
+          "word": "glancing",
+          "meaning_cn": "glance 的现在分词：一瞥"
+        },
+        {
+          "word": "at",
+          "meaning_cn": "朝；向"
+        }
+      ],
+      "ex_en": "She glanced at her watch and hurried off.",
+      "ex_cn": "她瞥了一眼手表，匆匆走了。",
+      "occ": [
+        [
+          1216,
+          "glancing at"
+        ]
+      ]
+    },
+    {
+      "head": "every now and then",
+      "gloss": "时不时，偶尔",
+      "ipa": "/ˌevri naʊ ənd ˈðen/",
+      "note": "固定习语，表示不时地、间或。",
+      "literal": [
+        {
+          "word": "every",
+          "meaning_cn": "每"
+        },
+        {
+          "word": "now",
+          "meaning_cn": "现在"
+        },
+        {
+          "word": "and",
+          "meaning_cn": "和"
+        },
+        {
+          "word": "then",
+          "meaning_cn": "那时",
+          "note_cn": "整体为固定短语＝时不时"
+        }
+      ],
+      "ex_en": "Every now and then we go to the seaside.",
+      "ex_cn": "我们时不时会去海边。",
+      "occ": [
+        [
+          1216,
+          "every now and then"
+        ]
+      ]
+    },
+    {
+      "head": "in the wrong",
+      "gloss": "理亏，错的一方",
+      "ipa": "/ɪn ðə ˈrɒŋ/",
+      "note": "指做错事、该负责任的一方。",
+      "literal": [
+        {
+          "word": "in",
+          "meaning_cn": "处于…"
+        },
+        {
+          "word": "the",
+          "meaning_cn": "（定冠词）"
+        },
+        {
+          "word": "wrong",
+          "meaning_cn": "错误",
+          "note_cn": "in the wrong＝处于错误的一方"
+        }
+      ],
+      "ex_en": "He knew he was in the wrong and said sorry.",
+      "ex_cn": "他知道自己错了，就道了歉。",
+      "occ": [
+        [
+          1218,
+          "in the wrong"
+        ]
+      ]
+    },
+    {
+      "head": "break up",
+      "gloss": "放学；散会；解散",
+      "ipa": "/breɪk ʌp/",
+      "note": "学校 break up＝放学或放假解散。",
+      "literal": [
+        {
+          "word": "broke",
+          "meaning_cn": "break 的过去式：打破；中断"
+        },
+        {
+          "word": "up",
+          "meaning_cn": "（构成“散开”义）"
+        }
+      ],
+      "ex_en": "School breaks up early on Fridays.",
+      "ex_cn": "周五学校放学早。",
+      "occ": [
+        [
+          1115,
+          "broke up"
+        ]
+      ]
+    },
+    {
+      "head": "let on",
+      "gloss": "假装、佯装;(次义)走漏口风、说出去",
+      "ipa": "/lɛt ɑːn/",
+      "note": "本章「let on you're going home」=假装你要回家;次义'走漏口风、说出去'。on 非'在…上'。",
+      "literal": [
+        {
+          "word": "let",
+          "meaning_cn": "让"
+        },
+        {
+          "word": "on",
+          "meaning_cn": "（副词）",
+          "note_cn": "固定短语，义为假装/透露"
+        }
+      ],
+      "ex_en": "He let on that he was sick to skip school.",
+      "ex_cn": "他假装生病好逃学。",
+      "occ": [
+        [
+          1116,
+          "let on"
+        ]
+      ]
+    },
+    {
+      "head": "look here",
+      "gloss": "喂，听着（引起注意）",
+      "ipa": "/lʊk ˈhɪə/",
+      "note": "口语中用来引起对方注意，常带不满语气。",
+      "literal": [
+        {
+          "word": "look",
+          "meaning_cn": "看"
+        },
+        {
+          "word": "here",
+          "meaning_cn": "这里",
+          "note_cn": "合起来为口语提示语＝喂/听着"
+        }
+      ],
+      "ex_en": "Look here, you can't talk to me like that!",
+      "ex_cn": "喂，你不能这样跟我说话！",
+      "occ": [
+        [
+          1108,
+          "look here"
+        ]
+      ]
+    },
+    {
+      "head": "stand it",
+      "gloss": "忍受，受得了",
+      "ipa": "/stænd ɪt/",
+      "note": "stand 此处＝忍受，常用于 can't stand it。",
+      "literal": [
+        {
+          "word": "stand",
+          "meaning_cn": "忍受",
+          "note_cn": "此处非“站立”"
+        },
+        {
+          "word": "it",
+          "meaning_cn": "它（所忍受的事）"
+        }
+      ],
+      "ex_en": "The noise was so loud I couldn't stand it.",
+      "ex_cn": "噪音太大了，我受不了。",
+      "occ": [
+        [
+          1096,
+          "stand it"
+        ]
+      ]
+    },
+    {
+      "head": "go on",
+      "gloss": "继续（做某事）",
+      "ipa": "/ɡəʊ ɒn/",
+      "note": "go on doing sth＝接着做某事。",
+      "literal": [
+        {
+          "word": "went",
+          "meaning_cn": "go 的过去式：走"
+        },
+        {
+          "word": "on",
+          "meaning_cn": "继续"
+        },
+        {
+          "word": "crying",
+          "meaning_cn": "哭"
+        }
+      ],
+      "ex_en": "He went on reading and ignored me.",
+      "ex_cn": "他继续看书，没理我。",
+      "occ": [
+        [
+          1213,
+          "went on crying"
+        ]
+      ]
+    },
+    {
+      "head": "stir up",
+      "gloss": "挑逗；搅动；招惹",
+      "ipa": "/stɜː ʌp/",
+      "note": "本章指用别针拨弄小虫使其乱动；引申为“煽动、挑起”。",
+      "literal": [
+        {
+          "word": "stir",
+          "meaning_cn": "搅动；拨弄"
+        },
+        {
+          "word": "up",
+          "meaning_cn": "（加强）起来"
+        }
+      ],
+      "cardOnly": true,
+      "key": "stir up",
+      "exSeq": 1088,
+      "ex_en": "Try not to stir up trouble at school.",
+      "ex_cn": "别在学校里招惹是非。"
+    },
+    {
+      "head": "head off",
+      "gloss": "拦截，阻止（去路）",
+      "ipa": "/hed ɒf/",
+      "note": "抢在前面把人或物拦下、改道。",
+      "literal": [
+        {
+          "word": "head",
+          "meaning_cn": "（动词）迎头拦"
+        },
+        {
+          "word": "off",
+          "meaning_cn": "离开；岔开"
+        }
+      ],
+      "cardOnly": true,
+      "key": "head off",
+      "exSeq": 1095,
+      "ex_en": "The police headed off the runaway car.",
+      "ex_cn": "警察拦住了那辆失控的车。"
+    },
+    {
+      "head": "give the slip",
+      "gloss": "甩掉，摆脱（跟踪者）",
+      "ipa": "/ɡɪv ðə ˈslɪp/",
+      "note": "习语，give sb the slip＝悄悄溜掉、把某人甩开。",
+      "literal": [
+        {
+          "word": "give",
+          "meaning_cn": "给"
+        },
+        {
+          "word": "the",
+          "meaning_cn": "（定冠词）"
+        },
+        {
+          "word": "slip",
+          "meaning_cn": "溜走",
+          "note_cn": "give the slip＝把某人甩掉"
+        }
+      ],
+      "cardOnly": true,
+      "key": "give the slip",
+      "exSeq": 1116,
+      "ex_en": "The thief gave the police the slip.",
+      "ex_cn": "小偷甩掉了警察。"
+    }
+  ],
+  "skipped": [
+    "come it over 'em（方言·蒙骗、耍花招）",
+    "change of base（一次性棒球隐喻·易主）",
+    "crossed the equator（一次性隐喻·越过中线）",
+    "turn about（古旧·轮流）",
+    "fell to talking（古旧·开始做）",
+    "all over but the kiss（方言习语）",
+    "take up the cross（文学/圣经·背负重担）",
+    "nerved himself to（文学·鼓起勇气）",
+    "put on / grow up / come back（过于基础）"
+  ]
+}

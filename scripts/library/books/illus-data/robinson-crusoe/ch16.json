@@ -1,0 +1,21 @@
+{ "chapter": 16,
+  "images": [
+    { "k":1, "slug":"friday-offers-the-hatchet", "seq":1812,
+      "scene":"Inside the cave dwelling, Friday kneels and presses a small hatchet into Robinson's hands, offering himself to be killed rather than be sent away, tears standing in his eyes while Robinson recoils in surprise.",
+      "alt":"A kneeling man offers a hatchet to another man, tears in his eyes, begging not to be sent away." },
+    { "k":2, "slug":"building-the-large-canoe", "seq":1824,
+      "scene":"Robinson and Friday stand over a huge felled tree trunk near the shore, hewing and chopping its outside into the shape of a boat with axes, wood chips scattered on the ground around the half-finished hull.",
+      "alt":"Two men shape a large canoe from a felled tree trunk with axes near the shore." },
+    { "k":3, "slug":"friday-leaps-over-the-fence", "seq":1848,
+      "scene":"Friday vaults over the wooden outer fence of the fortification in mid-air, arms flung out and face full of terror, running back to warn Robinson that canoes have landed on the shore.",
+      "alt":"A frightened man leaps over a wooden fence, running to raise the alarm." },
+    { "k":4, "slug":"spyglass-on-the-hill", "seq":1869,
+      "scene":"Robinson crouches at the top of a grassy hill holding a long brass perspective glass to his eye, looking down at a distant beach where a crowd of savages gather around canoes and a smoking fire for their feast.",
+      "alt":"A man on a hilltop looks through a spyglass toward a distant beach gathering." },
+    { "k":5, "slug":"ambush-fire-from-the-wood", "seq":1892,
+      "scene":"From behind trees at the edge of the wood, Robinson and Friday kneel shoulder to shoulder firing muskets in a burst of smoke toward the startled savages scattering across the sand near their fire.",
+      "alt":"Two men fire muskets from the edge of a wood at figures scattering on a beach." },
+    { "k":6, "slug":"friday-reunited-with-father", "seq":1917,
+      "scene":"Inside a beached canoe, Friday throws his arms around a frail old bound man he has just freed, hugging and kissing him with wild joy while Robinson stands beside the boat watching the reunion.",
+      "alt":"A young man joyfully embraces a frail old man he has just freed in a beached canoe." }
+  ] }

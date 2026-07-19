@@ -6,6 +6,7 @@ import { ArrowLeft, RotateCcw, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { recordMastery, loadMastery, MasteryRow, PASS_PCT } from "@/lib/masteryProgress";
+import { bumpMistakeCorrect } from "@/lib/mistakeStreak";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
@@ -73,6 +74,47 @@ export default function JuniorClozePlay() {
     if (userId) {
       const updated = await recordMastery({ module: "junior_cloze", itemId: c.id, pct });
       if (updated) setMastery((m) => ({ ...m, [c.id]: updated }));
+
+      // 错题完整快照(自包含,不依赖题库表):整篇挖空正文 + 所有空(题干/选项) + 每空正确答案
+      // + 学生每空作答 + 对错。提交这刻 c+picks 全在手边。一篇一条(onConflict 覆盖),
+      // wrong_count=错空数(按空不按次)。不动判分/recordMastery,失败仅告警、绝不阻断做题。
+      const wrongCount = c.questions.filter((q, i) => picks[i] !== q.answer).length;
+      if (wrongCount > 0) {
+        const LETTERS = ["A", "B", "C", "D", "E", "F"];
+        const snapshot = {
+          source: "cloze",
+          title: c.title,
+          body: c.body,
+          grade: c.grade,
+          questions: c.questions.map((q, i) => ({
+            no: i + 1,
+            stem: q.q,
+            options: Object.fromEntries(q.options.map((opt, oi) => [LETTERS[oi] ?? String(oi), opt])),
+            correct_answer: q.answer,
+            user_answer: picks[i] ?? null,
+            is_correct: picks[i] === q.answer,
+            explanation: q.explanation ?? null,
+          })),
+          wrong_count: wrongCount,
+        };
+        const { error: snapErr } = await supabase.from("user_mistakes").upsert({
+          user_id: userId,
+          module: "junior_cloze",
+          source_key: `junior_cloze_passage_${c.id}`,
+          source_label: c.title,
+          question: c.title ?? "",
+          snapshot,
+          wrong_count: wrongCount,
+          is_resolved: false,
+          correct_streak: 0,
+          last_correct_date: null,
+          last_wrong_at: new Date().toISOString(),
+        }, { onConflict: "user_id,module,source_key" });
+        if (snapErr) console.warn("[junior cloze mistake snapshot] upsert failed", snapErr);
+      } else {
+        // 本次全对 → 跨3天连对累计(唯一移出途径)
+        await bumpMistakeCorrect("junior_cloze", `junior_cloze_passage_${c.id}`);
+      }
     }
     celebrateScore(pct);
   };

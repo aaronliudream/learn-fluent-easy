@@ -10,6 +10,7 @@ import NoCopyGuard from "@/components/NoCopyGuard";
 import StarRating from "@/components/StarRating";
 import { recordMastery, loadMastery, MasteryRow, PASS_PCT } from "@/lib/masteryProgress";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
+import { bumpMistakeCorrect } from "@/lib/mistakeStreak";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
@@ -176,6 +177,48 @@ export default function JuniorReadingPlay() {
       upsert({ user_id: userId, reading_id: r.id, perfect: pct === 100, time_spent_sec: elapsed }, { onConflict: "user_id,reading_id" });
       const updated = await recordMastery({ module: "junior_reading", itemId: r.id, pct });
       if (updated) setMastery((m) => ({ ...m, [r.id]: updated }));
+
+      // 错题完整快照(自包含,不依赖题库表):整篇原文 + 所有题(题干/选项) + 每题正确答案
+      // + 学生每题实际作答 + 对错。提交这一刻 r+picks 全在手边(与 AI 复盘 snapshot 同源)。
+      // 一篇一条(onConflict 覆盖),wrong_count=错题数(按题不按次)。题库重灌换 id 不影响此快照。
+      // 不动判分/掌握度/junior_reading_attempts/recordUnifiedAttempt,失败仅告警不阻断做题。
+      const wrongCount = r.questions.filter((q, i) => picks[i] !== q.answer).length;
+      if (wrongCount > 0) {
+        const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
+        const snapshot = {
+          source: "reading",
+          title: r.title,
+          body: r.body,
+          grade: r.grade,
+          questions: r.questions.map((q, i) => ({
+            no: i + 1,
+            stem: q.q,
+            options: Object.fromEntries(q.options.map((opt, oi) => [LETTERS[oi] ?? String(oi), opt])),
+            correct_answer: q.answer,
+            user_answer: picks[i] ?? null,
+            is_correct: picks[i] === q.answer,
+            explanation: q.explanation ?? null,
+          })),
+          wrong_count: wrongCount,
+        };
+        const { error: snapErr } = await supabase.from("user_mistakes").upsert({
+          user_id: userId,
+          module: "reading",
+          source_key: `junior_reading_passage_${r.id}`,
+          source_label: r.title,
+          question: r.title ?? "",
+          snapshot,
+          wrong_count: wrongCount,
+          is_resolved: false,
+          correct_streak: 0,
+          last_correct_date: null,
+          last_wrong_at: new Date().toISOString(),
+        }, { onConflict: "user_id,module,source_key" });
+        if (snapErr) console.warn("[reading mistake snapshot] upsert failed", snapErr);
+      } else {
+        // 本次全对 → 跨3天连对累计(唯一移出途径),若之前有该篇错题快照
+        await bumpMistakeCorrect("reading", `junior_reading_passage_${r.id}`);
+      }
     }
     if (pct === 100) {
       await awardForBlock("junior_reading");

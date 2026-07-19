@@ -1,0 +1,268 @@
+{
+  "chapter": 35,
+  "chunks": [
+    {
+      "head": "next to",
+      "gloss": "几乎；差不多(接形容词/名词)",
+      "ipa": "/nekst tuː/",
+      "note": "next to + 形容词/名词,表示“几乎、差不多”,常用于极端或否定义,如 next to nothing / next to impossible。",
+      "literal": [
+        {"word": "next", "meaning_cn": "紧挨着", "note_cn": "此处引申为“几乎”,非“下一个”"},
+        {"word": "to", "meaning_cn": "(介词)"}
+      ],
+      "ex_en": "The old bike is worth next to nothing now.",
+      "ex_cn": "那辆旧自行车现在几乎一文不值。",
+      "occ": [[4957, "next to"]]
+    },
+    {
+      "head": "rake up",
+      "gloss": "翻出(旧事);重提",
+      "ipa": "/reɪk ʌp/",
+      "note": "rake up 原指用耙子把东西聚拢,引申为重新提起(往往是不愉快的)旧事。",
+      "literal": [
+        {"word": "rake", "meaning_cn": "耙拢", "note_cn": "此处引申为“翻出”"},
+        {"word": "up", "meaning_cn": "起来"}
+      ],
+      "ex_en": "Why rake up old quarrels that everyone has forgotten?",
+      "ex_cn": "何必重提大家早已忘记的旧争吵?",
+      "occ": [[4961, "raked up"]]
+    },
+    {
+      "head": "in strict confidence",
+      "gloss": "极为秘密地;私下里(告知)",
+      "ipa": "/ɪn strɪkt ˈkɑːnfɪdəns/",
+      "note": "confidence 此处指“秘密”;in (strict) confidence 表示告诉某事时要求对方严格保密。",
+      "literal": [
+        {"word": "in", "meaning_cn": "在"},
+        {"word": "strict", "meaning_cn": "严格的"},
+        {"word": "confidence", "meaning_cn": "秘密", "note_cn": "此处非“信心”,指“保密”"}
+      ],
+      "ex_en": "She told me in strict confidence that she was leaving.",
+      "ex_cn": "她私下悄悄告诉我她要离职了。",
+      "occ": [[4970, "in strict confidence"]]
+    },
+    {
+      "head": "straight off",
+      "gloss": "立刻;毫不迟疑地",
+      "ipa": "/streɪt ɔːf/",
+      "note": "口语,意为“马上、立即”,强调没有耽搁、不假思索。",
+      "literal": [
+        {"word": "straight", "meaning_cn": "径直地"},
+        {"word": "off", "meaning_cn": "(离开)出发", "note_cn": "此处与 straight 构成习语“立刻”"}
+      ],
+      "ex_en": "He knew the answer straight off.",
+      "ex_cn": "他一下子就知道了答案。",
+      "occ": [[4972, "straight off"]]
+    },
+    {
+      "head": "look to it that",
+      "gloss": "务必确保;留意做到",
+      "ipa": "/lʊk tuː ɪt ðæt/",
+      "note": "see/look to it that + 从句 = 务必保证某事做到。",
+      "literal": [
+        {"word": "look", "meaning_cn": "注意", "note_cn": "此处指“负责确保”"},
+        {"word": "to", "meaning_cn": "(介词)"},
+        {"word": "it", "meaning_cn": "(形式宾语)"},
+        {"word": "that", "meaning_cn": "(引导从句)"}
+      ],
+      "ex_en": "Look to it that the door is locked before you leave.",
+      "ex_cn": "走之前务必确保门锁好。",
+      "occ": [[4974, "look to it that"]]
+    },
+    {
+      "head": "hand and foot",
+      "gloss": "(捆绑)手脚一起;完全受束缚",
+      "ipa": "/hænd ənd fʊt/",
+      "note": "bound hand and foot = 手脚都被捆住,喻完全受束缚、动弹不得;另有 wait on sb hand and foot(无微不至伺候)。本章为前者。",
+      "literal": [
+        {"word": "hand", "meaning_cn": "手"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "foot", "meaning_cn": "脚"}
+      ],
+      "ex_en": "The robbers tied him hand and foot and left.",
+      "ex_cn": "强盗把他手脚捆住就走了。",
+      "occ": [[4977, "hand and foot"]]
+    },
+    {
+      "head": "turn up",
+      "gloss": "出现;露面",
+      "ipa": "/tɜːrn ʌp/",
+      "note": "turn up = (人或物)出现、露面,常含意外或未事先安排之意。本章 “turned up missing” 是美式口语,字面“现身却是缺席”,即“(某人)忽然不见了”。",
+      "literal": [
+        {"word": "turn", "meaning_cn": "转"},
+        {"word": "up", "meaning_cn": "起来", "note_cn": "此处构成习语“出现”"}
+      ],
+      "ex_en": "He finally turned up an hour late.",
+      "ex_cn": "他终于露面了,迟到了一个小时。",
+      "occ": [[4978, "turned up"]]
+    },
+    {
+      "head": "high and low",
+      "gloss": "到处;四处(寻找)",
+      "ipa": "/haɪ ənd loʊ/",
+      "note": "常与 search/hunt/look 连用,表示彻底地、到处地寻找。",
+      "literal": [
+        {"word": "high", "meaning_cn": "高处"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "low", "meaning_cn": "低处"}
+      ],
+      "ex_en": "I searched high and low for my keys.",
+      "ex_cn": "我到处找我的钥匙。",
+      "occ": [[4980, "high and low"]]
+    },
+    {
+      "head": "odds and ends",
+      "gloss": "零碎东西;杂物",
+      "ipa": "/ɑːdz ənd endz/",
+      "note": "固定搭配,指各种零散的小物件或剩余的东西。",
+      "literal": [
+        {"word": "odds", "meaning_cn": "零散之物"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "ends", "meaning_cn": "零头,残余"}
+      ],
+      "ex_en": "The drawer was full of odds and ends.",
+      "ex_cn": "抽屉里装满了各种零碎杂物。",
+      "occ": [[4982, "odds and ends"]]
+    },
+    {
+      "head": "be used to",
+      "gloss": "习惯于(某事物)",
+      "ipa": "/biː juːst tuː/",
+      "note": "be used to + 名词/动名词 = 习惯于某事;注意与 used to do(过去常做)区分。",
+      "literal": [
+        {"word": "used", "meaning_cn": "习惯的", "note_cn": "此处非“使用”"},
+        {"word": "to", "meaning_cn": "对于"},
+        {"word": "it", "meaning_cn": "它(此处指那种生活)"}
+      ],
+      "ex_en": "I'm used to getting up early.",
+      "ex_cn": "我习惯早起。",
+      "occ": [[4989, "used to it"]]
+    },
+    {
+      "head": "can't stand",
+      "gloss": "受不了;无法忍受",
+      "ipa": "/kænt stænd/",
+      "note": "stand 此处意为“忍受”,非“站立”;常用于讨厌或难以承受的人或事。本章 Huck 反复抱怨富家生活 can't stand it。",
+      "literal": [
+        {"word": "can't", "meaning_cn": "不能"},
+        {"word": "stand", "meaning_cn": "忍受", "note_cn": "此处非“站立”"}
+      ],
+      "ex_en": "I can't stand the smell of cigarettes.",
+      "ex_cn": "我受不了香烟味。",
+      "occ": [[4990, "can’t stand"], [4994, "can’t stand"], [4997, "can’t stand"]]
+    },
+    {
+      "head": "take an interest in",
+      "gloss": "对...产生兴趣;关注",
+      "ipa": "/teɪk ən ˈɪntrəst ɪn/",
+      "note": "take an interest in sth = 对某事感兴趣、上心。本章 Huck 用否定式(对吃食提不起兴趣)。",
+      "literal": [
+        {"word": "take", "meaning_cn": "(此处指“产生”)"},
+        {"word": "no", "meaning_cn": "没有(此处为否定式)", "note_cn": "肯定式为 an"},
+        {"word": "interest", "meaning_cn": "兴趣"},
+        {"word": "in", "meaning_cn": "在...方面"}
+      ],
+      "ex_en": "She takes a great interest in painting.",
+      "ex_cn": "她对绘画很感兴趣。",
+      "occ": [[4999, "take no interest in"]]
+    },
+    {
+      "head": "what it's cracked up to be",
+      "gloss": "(不)像人们所说的那么好;名(不)副实",
+      "ipa": "/wʌt ɪts krækt ʌp tuː biː/",
+      "note": "be cracked up to be = 被吹捧成;常用否定 not what it's cracked up to be,表示“并不像传说的那么好”。本章 Huck 说“有钱并不像人们吹的那么好”。",
+      "literal": [
+        {"word": "what", "meaning_cn": "(引导从句)"},
+        {"word": "it's", "meaning_cn": "它是"},
+        {"word": "cracked up", "meaning_cn": "吹捧,鼓吹", "note_cn": "此处非“裂开”"},
+        {"word": "to", "meaning_cn": "(不定式标记)"},
+        {"word": "be", "meaning_cn": "是"}
+      ],
+      "ex_en": "The famous restaurant was not what it's cracked up to be.",
+      "ex_cn": "那家名餐厅并不像人们说的那么好。",
+      "occ": [[5006, "what it’s cracked up to be"]]
+    },
+    {
+      "head": "come to do sth",
+      "gloss": "渐渐(变得);逐渐开始",
+      "ipa": "/kʌm tuː duː/",
+      "note": "come to + 动词原形 = 逐渐变得...、开始...,强调一个渐进的过程。",
+      "literal": [
+        {"word": "come", "meaning_cn": "(此处指“逐渐变得”)"},
+        {"word": "to", "meaning_cn": "(不定式标记)"},
+        {"word": "like/stand", "meaning_cn": "喜欢/忍受(具体动词)"}
+      ],
+      "ex_en": "In time you'll come to enjoy your new job.",
+      "ex_cn": "过段时间你会渐渐喜欢上新工作。",
+      "occ": [[5011, "come to like it"], [5039, "come to stand it"]]
+    },
+    {
+      "head": "stick to",
+      "gloss": "坚持;紧守(不放弃)",
+      "ipa": "/stɪk tuː/",
+      "note": "stick to sth = 坚持某事、不改变;也指遵守、紧跟不放。",
+      "literal": [
+        {"word": "stick", "meaning_cn": "粘住", "note_cn": "此处引申为“坚持”"},
+        {"word": "to", "meaning_cn": "(介词)"}
+      ],
+      "ex_en": "Whatever happens, stick to your plan.",
+      "ex_cn": "不管发生什么,都要坚持你的计划。",
+      "occ": [[5015, "stick to"], [5060, "stick to"]]
+    },
+    {
+      "head": "let up on",
+      "gloss": "对...放松;饶过;手下留情",
+      "ipa": "/let ʌp ɑːn/",
+      "note": "let up = 减弱、放松;let up on sb = 对某人不再那么严厉。本章 Tom 答应求寡妇对 Huck 松一松。",
+      "literal": [
+        {"word": "let", "meaning_cn": "让"},
+        {"word": "up", "meaning_cn": "(构成习语“放松”)"},
+        {"word": "on", "meaning_cn": "对"}
+      ],
+      "ex_en": "Let up on the poor kid—he's doing his best.",
+      "ex_cn": "别再为难那可怜的孩子了,他已经尽力了。",
+      "occ": [[5041, "let up on"], [5044, "let up on"]]
+    },
+    {
+      "head": "stand by",
+      "gloss": "支持;忠于;站在...一边",
+      "ipa": "/stænd baɪ/",
+      "note": "stand by sb = 在困难时支持、不离弃某人;另有“待命”之义。本章指盗匪帮众互相支持。",
+      "literal": [
+        {"word": "stand", "meaning_cn": "站"},
+        {"word": "by", "meaning_cn": "在...旁边"}
+      ],
+      "ex_en": "A true friend will stand by you in hard times.",
+      "ex_cn": "真正的朋友会在困境中支持你。",
+      "occ": [[5051, "stand by"]]
+    },
+    {
+      "head": "turn out to be",
+      "gloss": "结果是;原来是",
+      "ipa": "/tɜːrn aʊt tuː biː/",
+      "note": "turn out (to be) = 事情或人最终被证明是...、结果如何。",
+      "literal": [
+        {"word": "turn", "meaning_cn": "转"},
+        {"word": "out", "meaning_cn": "出来", "note_cn": "此处构成习语“结果是”"},
+        {"word": "to", "meaning_cn": "(不定式标记)"},
+        {"word": "be", "meaning_cn": "是"}
+      ],
+      "ex_en": "The stranger turned out to be my father's old friend.",
+      "ex_cn": "那个陌生人原来是我父亲的老朋友。",
+      "occ": [[5066, "turned out to be"]]
+    }
+  ],
+  "skipped": [
+    "专名: St. Petersburg / Widow Douglas / Judge Thatcher / Aunt Polly / Becky / George Washington",
+    "Huck 方言拼写: widder / ketch / chaw / reg'lar / vittles / gimme / becuz / 'tain't / spile / shet (迁移弱)",
+    "Huck 方言感叹: dad fetch it / good-licks / blame it all (一次性)",
+    "made a mighty stir (被 mighty 隔断且偏一次性描写)",
+    "plank by plank (一次性描写)",
+    "board, lodge, and school (一次性动词罗列)",
+    "high-toned / dead-wood earnest (俚语,一次性)",
+    "so endeth this chronicle (古语,一次性→难句层)",
+    "snaked me in out of the wet (一次性比喻)",
+    "swear on a coffin / chopped all to flinders (情节专有,一次性)",
+    "in order to / of course (太基础/纯语法)"
+  ]
+}

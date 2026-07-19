@@ -1,0 +1,119 @@
+{
+  "chapter": 18,
+  "chunks": [
+    { "head": "set sail", "gloss": "起航、扬帆出发", "ipa": "/set seɪl/",
+      "note": "set sail (for …) = 启航前往某地。",
+      "literal": [{"word":"set","meaning_cn":"张起、开始"},{"word":"sail","meaning_cn":"帆"}],
+      "ex_en": "Our boat set sail as the sun rose.", "ex_cn": "太阳升起时我们的船起航了。",
+      "occ": [[2101,"set sail"]] },
+
+    { "head": "give over", "gloss": "停止、放弃", "ipa": "/ɡɪv ˈoʊvər/",
+      "note": "give over (doing sth) = 停下、不再做某事。",
+      "literal": [{"word":"give","meaning_cn":"给","note_cn":"(此处)停止、放弃,非'给'义"},{"word":"over","meaning_cn":"完","note_cn":"(此处)结束、了结"}],
+      "ex_en": "She gave over trying to fix the old phone.", "ex_cn": "她放弃了修那部旧手机。",
+      "occ": [[2115,"given over"]] },
+
+    { "head": "come ashore", "gloss": "上岸、登岸", "ipa": "/kʌm əˈʃɔːr/",
+      "note": "come ashore = 从水上到岸上。",
+      "literal": [{"word":"come","meaning_cn":"来"},{"word":"ashore","meaning_cn":"上岸、到岸上"}],
+      "ex_en": "The sailors came ashore to find fresh water.", "ex_cn": "水手们上岸去找淡水。",
+      "occ": [[2088,"comes ashore"]] },
+
+    { "head": "on shore", "gloss": "在岸上、上岸", "ipa": "/ɒn ʃɔːr/",
+      "note": "on shore = 在陆地上(与在船上/海上相对)。",
+      "literal": [{"word":"on","meaning_cn":"在…上"},{"word":"shore","meaning_cn":"岸、海岸"}],
+      "ex_en": "We stayed on shore while the storm passed.", "ex_cn": "暴风雨过去时我们一直待在岸上。",
+      "occ": [[2096,"on shore"]] },
+
+    { "head": "at a loss", "gloss": "不知所措、困惑", "ipa": "/æt ə lɒs/",
+      "note": "at a loss (what to do / for words) = 一时想不出办法或话。",
+      "literal": [{"word":"at","meaning_cn":"处于"},{"word":"a","meaning_cn":"一(个)"},{"word":"loss","meaning_cn":"损失","note_cn":"(此处)困惑、茫然,非'损失'义"}],
+      "ex_en": "I was at a loss for what to say.", "ex_cn": "我一时不知道该说什么。",
+      "occ": [[2103,"at a loss"]] },
+
+    { "head": "at length", "gloss": "最后、终于", "ipa": "/æt leŋθ/",
+      "note": "at length(句首)= 经过一段时间后终于。",
+      "literal": [{"word":"at","meaning_cn":"在"},{"word":"length","meaning_cn":"长度","note_cn":"(此处)最终、终于,非'长度'义"}],
+      "ex_en": "At length, the rain finally stopped.", "ex_cn": "最后,雨终于停了。",
+      "occ": [[2113,"at length"]] },
+
+    { "head": "in the meantime", "gloss": "与此同时、在此期间", "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "note": "in the meantime = 在两件事之间的这段时间里。",
+      "literal": [{"word":"in","meaning_cn":"在"},{"word":"the","meaning_cn":"这"},{"word":"meantime","meaning_cn":"其间、这段时间"}],
+      "ex_en": "Dinner is cooking; in the meantime, let's set the table.", "ex_cn": "饭在做着;这期间我们先摆好桌子吧。",
+      "occ": [[2122,"in the meantime"]] },
+
+    { "head": "in a word", "gloss": "总之、一句话", "ipa": "/ɪn ə wɜːrd/",
+      "note": "in a word(句首)= 简言之、概括起来说。",
+      "literal": [{"word":"in","meaning_cn":"用"},{"word":"a","meaning_cn":"一"},{"word":"word","meaning_cn":"话","note_cn":"(此处)一句话、简而言之"}],
+      "ex_en": "In a word, the trip was perfect.", "ex_cn": "总之,这趟旅行棒极了。",
+      "occ": [[2147,"in a word"]] },
+
+    { "head": "lay down one's arms", "gloss": "放下武器、投降", "ipa": "/leɪ daʊn wʌnz ɑːrmz/",
+      "note": "lay down (one's) arms = 缴械投降。",
+      "literal": [{"word":"laid","meaning_cn":"放(lay 的过去式)"},{"word":"down","meaning_cn":"下"},{"word":"their","meaning_cn":"他们的"},{"word":"arms","meaning_cn":"武器","note_cn":"(此处)武器,非'手臂'义"}],
+      "ex_en": "The soldiers laid down their guns and surrendered.", "ex_cn": "士兵们放下枪投降了。",
+      "occ": [[2147,"laid down their arms"]] },
+
+    { "head": "look after", "gloss": "照料、照顾", "ipa": "/lʊk ˈæftər/",
+      "note": "look after = 照看、负责照顾。",
+      "literal": [{"word":"look","meaning_cn":"看","note_cn":"(此处)照料,非'看'义"},{"word":"after","meaning_cn":"在…之后","note_cn":"(此处)与 look 连用表'照看'"}],
+      "ex_en": "Can you look after my dog this weekend?", "ex_cn": "这个周末你能帮我照看一下我的狗吗?",
+      "occ": [[2169,"look after them"]] },
+
+    { "head": "knock down", "gloss": "打倒、撞倒", "ipa": "/nɒk daʊn/",
+      "note": "knock down = 击打或撞使倒下。",
+      "literal": [{"word":"knocked","meaning_cn":"敲、撞(knock 的过去式)"},{"word":"him","meaning_cn":"他"},{"word":"down","meaning_cn":"倒下"}],
+      "ex_en": "The strong wind knocked down the old fence.", "ex_cn": "大风把那道旧栅栏刮倒了。",
+      "occ": [[2120,"knocked him down"]] },
+
+    { "head": "leave behind", "gloss": "留下、丢下", "ipa": "/liːv bɪˈhaɪnd/",
+      "note": "leave behind = 把人或物留在原处、没带走。",
+      "literal": [{"word":"left","meaning_cn":"留(leave 的过去分词)"},{"word":"behind","meaning_cn":"在后面、留在原处"}],
+      "ex_en": "Don't leave your umbrella behind at school.", "ex_cn": "别把你的伞落在学校了。",
+      "occ": [[2167,"left behind"]] },
+
+    { "head": "from head to foot", "gloss": "从头到脚、浑身", "ipa": "/frɒm hed tə fʊt/",
+      "note": "from head to foot = 全身上下、彻头彻尾。",
+      "literal": [{"word":"from","meaning_cn":"从"},{"word":"head","meaning_cn":"头"},{"word":"to","meaning_cn":"到"},{"word":"foot","meaning_cn":"脚"}],
+      "ex_en": "The child was covered in mud from head to foot.", "ex_cn": "那孩子从头到脚沾满了泥。",
+      "occ": [[2189,"from head to foot"]] },
+
+    { "head": "as good as one's word", "gloss": "信守诺言、说到做到", "ipa": "/æz ɡʊd æz wʌnz wɜːrd/",
+      "note": "be as good as one's word = 兑现承诺。",
+      "literal": [{"word":"as","meaning_cn":"像…一样"},{"word":"good","meaning_cn":"可靠、守信"},{"word":"as","meaning_cn":"如同"},{"word":"my","meaning_cn":"我的"},{"word":"word","meaning_cn":"诺言","note_cn":"(此处)承诺、说过的话"}],
+      "ex_en": "I promised to help, and I was as good as my word.", "ex_cn": "我答应帮忙,而且我说到做到。",
+      "occ": [[2205,"as good as my word"]] },
+
+    { "head": "run away with", "gloss": "把…卷走、擅自带走", "ipa": "/rʌn əˈweɪ wɪð/",
+      "note": "run away with sth = 私自带走、卷走某物。",
+      "literal": [{"word":"run","meaning_cn":"跑"},{"word":"away","meaning_cn":"离开"},{"word":"with","meaning_cn":"带着"}],
+      "ex_en": "The thief tried to run away with her bag.", "ex_cn": "小偷想抢走她的包逃跑。",
+      "occ": [[2197,"run away with the ship"]] },
+
+    { "head": "join in", "gloss": "参加、加入(一起做)", "ipa": "/dʒɔɪn ɪn/",
+      "note": "join in = 加入正在进行的活动。",
+      "literal": [{"word":"join","meaning_cn":"加入"},{"word":"in","meaning_cn":"进来、一起"}],
+      "ex_en": "Everyone sang, so I joined in too.", "ex_cn": "大家都在唱,于是我也跟着唱了起来。",
+      "occ": [[2160,"join in"]] },
+
+    { "head": "come along", "gloss": "一起来、跟上", "ipa": "/kʌm əˈlɒŋ/",
+      "note": "come along = 一同前来、跟上队伍。",
+      "literal": [{"word":"come","meaning_cn":"来"},{"word":"along","meaning_cn":"一起、随同"}],
+      "ex_en": "Hurry up and come along with us!", "ex_cn": "快点,跟我们一起走!",
+      "occ": [[2124,"come along"]] },
+
+    { "head": "put to death", "gloss": "处死", "ipa": "/pʊt tə deθ/",
+      "note": "put sb to death = 将某人处决。",
+      "literal": [{"word":"put","meaning_cn":"使处于"},{"word":"to","meaning_cn":"到…(状态)"},{"word":"death","meaning_cn":"死亡"}],
+      "ex_en": "In old times, traitors were put to death.", "ex_cn": "在古代,叛徒会被处死。",
+      "occ": [[2092,"put to death"]] }
+  ],
+  "skipped": [
+    "专名/人名:Crusoe / Friday / Tom Smith / Will Atkins / Will Fry / Robinson",
+    "一次性 nautical:long-boat staved / weigh anchor / came to an anchor / fast aground / boltsprit / round-house / forechains / yard-arm",
+    "古语/生僻词:durst / fain / thither / whither / betwixt / viz.",
+    "过时惯用语:by-and-by / to the last degree / give (them) quarter / make no doubt / set at liberty(今多用 set free)",
+    "宗教/道德训诫套语:secret hand of Providence / the eye of an infinite Power / fallen into the pit which they had dug"
+  ]
+}

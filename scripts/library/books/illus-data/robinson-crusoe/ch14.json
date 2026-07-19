@@ -1,0 +1,21 @@
+{ "chapter": 14,
+  "images": [
+    { "k":1, "slug":"five-canoes-on-shore", "seq":1566,
+      "scene":"Early morning on the island beach: five long dugout canoes are drawn up together on the sand, empty, their owners already gone inland out of sight; the wide bay and low green shore stretch beyond.",
+      "alt":"Five empty dugout canoes drawn up together on a wide sandy beach at dawn." },
+    { "k":2, "slug":"savages-dancing-round-fire", "seq":1571,
+      "scene":"Seen from a hilltop lookout, about thirty islanders dance in wild gestures around a blazing fire on the beach where meat is being cooked; Robinson crouches on the brow of the hill watching through a small brass perspective glass.",
+      "alt":"A crowd of islanders dance around a fire on the beach while a man watches from a hill through a spyglass." },
+    { "k":3, "slug":"fugitive-swims-creek", "seq":1577,
+      "scene":"A lone barefoot captive plunges into a tidal creek and swims hard across the water with powerful strokes, escaping toward the near shore, while two pursuers hesitate at the far bank.",
+      "alt":"A fleeing man swims across a tidal creek while two pursuers stop on the opposite bank." },
+    { "k":4, "slug":"crusoe-strikes-pursuer", "seq":1581,
+      "scene":"Robinson, having run downhill between the pursued and pursuers, swings the wooden stock of his musket and knocks the foremost pursuer to the ground on the open sands, a second pursuer with a bow standing farther off.",
+      "alt":"A man clubs down a pursuer with the stock of his musket on a beach as another attacker stands beyond." },
+    { "k":5, "slug":"friday-sets-foot-on-head", "seq":1587,
+      "scene":"The rescued man kneels on the sand before Robinson, kisses the ground, lays his head down and lifts Robinson's foot to place it upon his own head in a gesture of submission; Robinson stands over him with an open, encouraging hand.",
+      "alt":"A kneeling man places another man's foot upon his own bowed head on the beach as a token of submission." },
+    { "k":6, "slug":"clothing-friday", "seq":1621,
+      "scene":"Inside the fortified home enclosure, Robinson fits his new companion Friday with linen drawers, a goat-skin jerkin and a hare-skin cap, needle and cloth in hand, while Friday looks pleased at his new clothes.",
+      "alt":"A man dresses his companion in homemade linen and animal-skin clothing inside a shelter." }
+  ] }

@@ -5,7 +5,7 @@ const Disclaimer = () => {
   const t = useT();
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
-      <PageHeader title={`${t("免责声明")} / Disclaimer`} subtitle="Last updated: 2026-05-04" back="/" />
+      <PageHeader title={`${t("免责声明")} / Disclaimer`} subtitle="Last updated: 2026-05-04" back />
 
       <article className="prose prose-sm max-w-none rounded-2xl bg-card p-6 shadow-card md:p-8 dark:prose-invert">
         <h2><T>中文版</T></h2>

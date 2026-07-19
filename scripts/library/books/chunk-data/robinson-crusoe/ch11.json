@@ -1,0 +1,115 @@
+{
+  "chapter": 11,
+  "chunks": [
+    { "head": "at length", "gloss": "最终、终于", "ipa": "/ət leŋθ/",
+      "note": "at length = (经过一段时间后)最终、终于;另义\"详尽地\"。",
+      "literal": [{"word":"at","meaning_cn":"在","note_cn":"此处表时间上的到达"},{"word":"length","meaning_cn":"长度","note_cn":"此处引申\"经过长时间之后\""}],
+      "ex_en": "At length the rain stopped and we went outside.", "ex_cn": "终于雨停了,我们走到了外面。",
+      "occ": [[1264,"at length"]] },
+
+    { "head": "a great deal of", "gloss": "大量的、许多", "ipa": "/ə ɡreɪt diːl əv/",
+      "note": "修饰不可数名词,= a lot of。",
+      "literal": [{"word":"a great","meaning_cn":"很大的"},{"word":"deal","meaning_cn":"量","note_cn":"此处名词\"数量\",非\"交易/发牌\"义"},{"word":"of","meaning_cn":"的"}],
+      "ex_en": "She spent a great deal of money on books.", "ex_cn": "她花了大量的钱买书。",
+      "occ": [[1265,"a great deal of"]] },
+
+    { "head": "take care of", "gloss": "照料、照顾", "ipa": "/teɪk ker əv/",
+      "literal": [{"word":"take","meaning_cn":"加以"},{"word":"care","meaning_cn":"照料","note_cn":"名词\"照料\""},{"word":"of","meaning_cn":"对…"}],
+      "ex_en": "She takes care of her little brother after school.", "ex_cn": "放学后她照顾她的弟弟。",
+      "occ": [[1276,"take care of"]] },
+
+    { "head": "on the contrary", "gloss": "相反、恰恰相反", "ipa": "/ɒn ðə ˈkɒntrəri/",
+      "note": "用来否定前句、引出相反的事实。",
+      "literal": [{"word":"on","meaning_cn":"在","note_cn":"固定介词"},{"word":"the","meaning_cn":"(冠词)"},{"word":"contrary","meaning_cn":"相反","note_cn":"此处名词\"相反面\""}],
+      "ex_en": "I'm not tired; on the contrary, I feel great.", "ex_cn": "我不累;相反,我感觉很好。",
+      "occ": [[1278,"on the contrary"]] },
+
+    { "head": "lay up", "gloss": "储存、贮藏", "ipa": "/leɪ ʌp/",
+      "note": "lay up = 把(东西)存起来、囤积起来。",
+      "literal": [{"word":"lay","meaning_cn":"放置","note_cn":"此处及物\"放、搁\",非\"躺\"义"},{"word":"up","meaning_cn":"起来","note_cn":"此处表\"储存起来\""}],
+      "ex_en": "They laid up food for the long winter.", "ex_cn": "他们为漫长的冬天储存食物。",
+      "occ": [[1280,"laid up"]] },
+
+    { "head": "that is to say", "gloss": "也就是说、换句话说", "ipa": "/ðæt ɪz tə seɪ/",
+      "note": "用于对前面内容作进一步解释。",
+      "literal": [{"word":"that","meaning_cn":"那","note_cn":"指前文"},{"word":"is","meaning_cn":"是"},{"word":"to","meaning_cn":"(不定式标记)"},{"word":"say","meaning_cn":"说"}],
+      "ex_en": "He left last Friday, that is to say, three days ago.", "ex_cn": "他上周五走的,也就是三天前。",
+      "occ": [[1283,"that is to say"]] },
+
+    { "head": "leave off", "gloss": "停止、中断", "ipa": "/liːv ɒf/",
+      "note": "leave off (doing) = 停下来、不再做。",
+      "literal": [{"word":"leave","meaning_cn":"停下","note_cn":"此处非\"离开\"义"},{"word":"off","meaning_cn":"停、断","note_cn":"表\"中止\""}],
+      "ex_en": "We left off our game when it got dark.", "ex_cn": "天黑了,我们就停下了游戏。",
+      "occ": [[1288,"left off"]] },
+
+    { "head": "spare no pains", "gloss": "不遗余力、下足功夫", "ipa": "/sper noʊ peɪnz/",
+      "note": "spare no pains = 不惜辛劳、竭尽全力。",
+      "literal": [{"word":"spare","meaning_cn":"吝惜、舍不得","note_cn":"此处\"不省、不惜\""},{"word":"no","meaning_cn":"没有"},{"word":"pains","meaning_cn":"辛劳","note_cn":"复数表\"努力、功夫\",非\"疼痛\""}],
+      "ex_en": "The teacher spared no pains to help us pass.", "ex_cn": "老师不遗余力地帮我们通过。",
+      "occ": [[1289,"spared no pains"]] },
+
+    { "head": "on shore", "gloss": "在岸上、上岸", "ipa": "/ɒn ʃɔːr/",
+      "note": "on shore = 在陆地上/上岸(与在船上、海上相对)。",
+      "literal": [{"word":"on","meaning_cn":"在…上"},{"word":"shore","meaning_cn":"岸、岸边"}],
+      "ex_en": "After weeks at sea, the sailors were glad to be on shore.", "ex_cn": "在海上漂了几周后,水手们很高兴上了岸。",
+      "occ": [[1310,"on shore"]] },
+
+    { "head": "carry away", "gloss": "带走、拿走", "ipa": "/ˈkæri əˈweɪ/",
+      "literal": [{"word":"carry","meaning_cn":"搬、带"},{"word":"away","meaning_cn":"离开","note_cn":"表\"走开、拿走\""}],
+      "ex_en": "The thieves carried away everything of value.", "ex_cn": "小偷把值钱的东西都拿走了。",
+      "occ": [[1312,"carry away"]] },
+
+    { "head": "cut off from", "gloss": "与…隔绝、切断", "ipa": "/kʌt ɒf frəm/",
+      "note": "be cut off from = 与…隔绝、断了联系。",
+      "literal": [{"word":"cut","meaning_cn":"切、断"},{"word":"off","meaning_cn":"断开"},{"word":"from","meaning_cn":"与…、离…"}],
+      "ex_en": "The island was completely cut off from the mainland.", "ex_cn": "那座岛与大陆完全隔绝了。",
+      "occ": [[1317,"cut off from"]] },
+
+    { "head": "on the other hand", "gloss": "另一方面", "ipa": "/ɒn ðə ˈʌðər hænd/",
+      "note": "引出对比或另一面的观点。",
+      "literal": [{"word":"on","meaning_cn":"在","note_cn":"固定介词"},{"word":"the other","meaning_cn":"另一"},{"word":"hand","meaning_cn":"手","note_cn":"此处引申\"方面\",非\"手\""}],
+      "ex_en": "It's cheaper to cook at home; on the other hand, it takes more time.", "ex_cn": "在家做饭更便宜;另一方面,更费时间。",
+      "occ": [[1320,"on the other hand"]] },
+
+    { "head": "by no means", "gloss": "决不、绝不", "ipa": "/baɪ noʊ miːnz/",
+      "note": "强调否定,= not at all。",
+      "literal": [{"word":"by","meaning_cn":"凭借"},{"word":"no","meaning_cn":"没有"},{"word":"means","meaning_cn":"方式、手段","note_cn":"固定短语中表\"绝非\""}],
+      "ex_en": "The job is by no means easy.", "ex_cn": "这份工作绝不轻松。",
+      "occ": [[1327,"by no means"]] },
+
+    { "head": "take courage", "gloss": "鼓起勇气、振作起来", "ipa": "/teɪk ˈkʌrɪdʒ/",
+      "literal": [{"word":"take","meaning_cn":"鼓起","note_cn":"此处\"获取、聚起\""},{"word":"courage","meaning_cn":"勇气"}],
+      "ex_en": "Take courage and tell her the truth.", "ex_cn": "鼓起勇气,把真相告诉她。",
+      "occ": [[1328,"take courage"]] },
+
+    { "head": "now and then", "gloss": "时不时、偶尔", "ipa": "/naʊ ənd ðen/",
+      "note": "(every) now and then = 偶尔、不时。",
+      "literal": [{"word":"now","meaning_cn":"现在"},{"word":"and","meaning_cn":"和"},{"word":"then","meaning_cn":"那时","note_cn":"此处\"当时、时而\""}],
+      "ex_en": "We still meet now and then for coffee.", "ex_cn": "我们仍时不时聚在一起喝咖啡。",
+      "occ": [[1329,"now and then"]] },
+
+    { "head": "in order to", "gloss": "为了、以便", "ipa": "/ɪn ˈɔːrdər tuː/",
+      "literal": [{"word":"in","meaning_cn":"为了","note_cn":"固定短语,非\"在…里\""},{"word":"order","meaning_cn":"(固定短语的一部分)","note_cn":"非\"命令/顺序\"义"},{"word":"to","meaning_cn":"(不定式标记)"}],
+      "ex_en": "He got up early in order to catch the train.", "ex_cn": "他早起是为了赶火车。",
+      "occ": [[1334,"in order to"]] },
+
+    { "head": "meet with", "gloss": "遭遇、遇到", "ipa": "/miːt wɪð/",
+      "note": "meet with = 遇到、经历(常指困难、事件、反应)。",
+      "literal": [{"word":"meet","meaning_cn":"遇到"},{"word":"with","meaning_cn":"(固定搭配)"}],
+      "ex_en": "The plan met with strong opposition.", "ex_cn": "这个计划遭到了强烈反对。",
+      "occ": [[1339,"met with"]] },
+
+    { "head": "at a loss", "gloss": "不知所措、茫然", "ipa": "/ət ə lɒs/",
+      "note": "本章出处为分离式(at a strange loss),故 card-only;at a loss = 茫然、不知怎么办。",
+      "literal": [{"word":"at","meaning_cn":"处于"},{"word":"a","meaning_cn":"(冠词)"},{"word":"loss","meaning_cn":"困惑","note_cn":"此处\"茫然、不知所措\",非\"损失、失去\""}],
+      "ex_en": "She was at a loss for words.", "ex_cn": "她一时语塞,不知说什么好。",
+      "cardOnly": true, "key": "at a loss", "exSeq": 1277 }
+  ],
+  "skipped": [
+    "专名/地名 e.g. Yorkshire / Sallee / the Moors / Satan / Saul / Philistines",
+    "古语/生僻 e.g. thither / whither / by-the-bye / whereas / betwixt-style",
+    "一次性 nautical 硬词 e.g. periagua / tide of ebb / a stone's cast / larboard",
+    "宗教/道德训诫套语 e.g. 'Call upon Me in the day of trouble' / 'Wait on the Lord' / chequer-work of Providence",
+    "过时惯用语 e.g. bring to pass / for the future / think fit / ten thousand to one"
+  ]
+}

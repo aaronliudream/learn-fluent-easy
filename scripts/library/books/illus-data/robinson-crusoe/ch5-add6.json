@@ -1,0 +1,21 @@
+{ "chapter": 5,
+  "images": [
+    { "k":7, "slug":"shooting-wildcat-with-dog", "seq":557,
+      "scene":"Robinson raising his long gun in a wooded clearing, his dog beside him, aiming at a wild cat crouched on a fallen log among the trees.",
+      "alt":"一个人举枪瞄准林间倒木上的野猫,身旁站着他的狗。" },
+    { "k":8, "slug":"carving-ironwood-shovel", "seq":586,
+      "scene":"Robinson seated on a low block outside his shelter, gripping a heavy piece of dark hardwood between his knees and working it into the shape of a spade with an axe, wood chips scattered on the ground around him.",
+      "alt":"一个人坐在棚屋外,用斧头把一块沉重的硬木一点点削成铁锹的形状,地上散落着木屑。" },
+    { "k":9, "slug":"propping-cave-roof", "seq":601,
+      "scene":"Robinson inside his dim rock cave setting two upright wooden posts against the ceiling with cross-boards laid over their tops to shore up the roof, loose earth heaped on the cave floor beside him.",
+      "alt":"一个人在昏暗的岩洞里竖起两根木柱、横搭木板顶住洞顶,身旁堆着塌落的泥土。" },
+    { "k":10, "slug":"making-clay-tallow-lamp", "seq":646,
+      "scene":"Robinson in his dark shelter holding a small shallow clay dish filled with goat tallow, a twisted oakum wick burning with a small flame that casts a faint glow across his hands.",
+      "alt":"一个人在黑暗的棚屋里端着一只盛着羊脂的黏土小碟,麻绳灯芯燃着微弱的火苗,照亮他的双手。" },
+    { "k":11, "slug":"ladder-over-the-wall", "seq":662,
+      "scene":"Robinson standing at the top of his tall pile wall, hauling a wooden ladder up behind him to draw it inside the enclosure, the curved fortification wall and rock face enclosing his camp below.",
+      "alt":"一个人站在高高的木桩墙顶,把梯子拉上来收进围栏内,身下是半圆形的栅栏墙和岩壁营地。" },
+    { "k":12, "slug":"hurricane-uproots-trees", "seq":673,
+      "scene":"A violent storm battering the island shore, trees bent and torn up by the roots, the sea whipped into foam and froth crashing over the beach while Robinson crouches low on the open ground.",
+      "alt":"狂风暴雨席卷海岸,树木连根拔起,海面掀起泡沫浪花拍打沙滩,一个人蜷缩在空地上。" }
+  ] }

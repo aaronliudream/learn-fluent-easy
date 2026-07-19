@@ -1,0 +1,407 @@
+{
+  "chapter": 16,
+  "chunks": [
+    {
+      "head": "go about doing",
+      "gloss": "着手做；开始忙于做",
+      "ipa": "/ɡoʊ əˈbaʊt ˈduːɪŋ/",
+      "note": "go about + 动名词，表示开始动手做、忙着做某事。",
+      "literal": [
+        {"word": "went", "meaning_cn": "着手", "note_cn": "此处非“去”，指开始动手"},
+        {"word": "about", "meaning_cn": "(习语介词)", "note_cn": "此处无独立含义"},
+        {"word": "poking", "meaning_cn": "戳、捅"}
+      ],
+      "ex_en": "She went about cleaning the house right after breakfast.",
+      "ex_cn": "早饭一吃完，她就开始动手打扫房子。",
+      "occ": [[2294, "went about poking"]]
+    },
+    {
+      "head": "from time to time",
+      "gloss": "时不时；偶尔",
+      "ipa": "/frəm taɪm tə taɪm/",
+      "note": "表示不经常、不规律地发生。",
+      "literal": [
+        {"word": "from", "meaning_cn": "从"},
+        {"word": "time", "meaning_cn": "时间", "note_cn": "此处为习语固定用法，无独立含义"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "time", "meaning_cn": "时间"}
+      ],
+      "ex_en": "We meet for coffee from time to time.",
+      "ex_cn": "我们时不时会一起喝杯咖啡。",
+      "occ": [[2298, "from time to time"]]
+    },
+    {
+      "head": "now and then",
+      "gloss": "偶尔；时不时",
+      "ipa": "/naʊ ənd ðen/",
+      "note": "与 from time to time 同义，表示间或发生。",
+      "literal": [
+        {"word": "now", "meaning_cn": "现在", "note_cn": "此处为习语用词，无独立含义"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "then", "meaning_cn": "那时"}
+      ],
+      "ex_en": "Now and then I hear from an old friend.",
+      "ex_cn": "我偶尔会收到一位老朋友的消息。",
+      "occ": [[2299, "now and then"]]
+    },
+    {
+      "head": "gasp for breath",
+      "gloss": "大口喘气；上气不接下气",
+      "ipa": "/ɡæsp fɔːr breθ/",
+      "note": "指剧烈运动或缺氧后急促地吸气。",
+      "literal": [
+        {"word": "gasping", "meaning_cn": "喘气", "note_cn": "急促地大口吸气"},
+        {"word": "for", "meaning_cn": "为了(得到)"},
+        {"word": "breath", "meaning_cn": "呼吸、气"}
+      ],
+      "ex_en": "He ran so fast that he stopped to gasp for breath.",
+      "ex_cn": "他跑得太快，只好停下来大口喘气。",
+      "occ": [[2299, "gasping for breath"]]
+    },
+    {
+      "head": "by and by",
+      "gloss": "不久；过一会儿",
+      "ipa": "/baɪ ənd baɪ/",
+      "note": "略显old-fashioned的说法，意为过一段时间之后。全章反复出现。",
+      "literal": [
+        {"word": "by", "meaning_cn": "(习语用词)", "note_cn": "单独无实义，须整体记忆"},
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "by", "meaning_cn": "(习语用词)"}
+      ],
+      "ex_en": "By and by the sky cleared up.",
+      "ex_cn": "过了一会儿，天就放晴了。",
+      "occ": [[2300, "by and by"], [2328, "by and by"], [2472, "By and by"], [2506, "by and by"], [2514, "By and by"]]
+    },
+    {
+      "head": "fall to doing",
+      "gloss": "开始(起劲地)做某事",
+      "ipa": "/fɔːl tə ˈduːɪŋ/",
+      "note": "fall to + 动名词，表示投入地开始做某事(常指吃、干活等)。",
+      "literal": [
+        {"word": "fell", "meaning_cn": "开始", "note_cn": "此处非“跌落”，指着手投入"},
+        {"word": "to", "meaning_cn": "(习语介词)"},
+        {"word": "gazing", "meaning_cn": "凝视"}
+      ],
+      "ex_en": "The hungry kids fell to eating the moment food arrived.",
+      "ex_cn": "饭一端上来，饿坏的孩子们就大吃起来。",
+      "occ": [[2305, "fell to gazing"], [2508, "fell to cheering"]]
+    },
+    {
+      "head": "can't help it",
+      "gloss": "忍不住；没办法",
+      "ipa": "/kænt help ɪt/",
+      "note": "help 此处意为“避免、克制”；can't help it 指控制不住、不由自主。",
+      "literal": [
+        {"word": "could", "meaning_cn": "能"},
+        {"word": "not", "meaning_cn": "不"},
+        {"word": "help", "meaning_cn": "避免、克制", "note_cn": "此处不是“帮助”"},
+        {"word": "it", "meaning_cn": "它(指那件事)"}
+      ],
+      "ex_en": "I laughed out loud—I just couldn't help it.",
+      "ex_cn": "我大声笑了出来，实在忍不住。",
+      "occ": [[2307, "could not help it"]]
+    },
+    {
+      "head": "give up",
+      "gloss": "放弃",
+      "ipa": "/ɡɪv ʌp/",
+      "note": "本章出处为分离式 give it up，故 card-only。",
+      "literal": [
+        {"word": "give", "meaning_cn": "给"},
+        {"word": "up", "meaning_cn": "(习语小品词)", "note_cn": "此处表彻底放弃"}
+      ],
+      "ex_en": "Don't give up so easily—try one more time.",
+      "ex_cn": "别这么轻易放弃，再试一次。",
+      "cardOnly": true,
+      "key": "give up",
+      "exSeq": 2325
+    },
+    {
+      "head": "care for",
+      "gloss": "喜欢；在意",
+      "ipa": "/ker fɔːr/",
+      "note": "本章意为“喜欢、对…感兴趣”，多用于否定句。另有“照顾”义。",
+      "literal": [
+        {"word": "care", "meaning_cn": "在乎、喜欢"},
+        {"word": "for", "meaning_cn": "对于"}
+      ],
+      "ex_en": "I don't really care for spicy food.",
+      "ex_cn": "我不太喜欢吃辣。",
+      "occ": [[2330, "care for fishing"], [2334, "care for it"]]
+    },
+    {
+      "head": "get along",
+      "gloss": "过得去；对付着过",
+      "ipa": "/ɡet əˈlɔːŋ/",
+      "note": "本章意为“(没有某物也)勉强应付、过得去”。另有“(与人)相处”义。",
+      "literal": [
+        {"word": "get", "meaning_cn": "变得、进展"},
+        {"word": "along", "meaning_cn": "(习语小品词)", "note_cn": "此处指日子往前过"}
+      ],
+      "ex_en": "We can get along fine without a car.",
+      "ex_cn": "没有车我们也能过得挺好。",
+      "occ": [[2358, "get along without"]]
+    },
+    {
+      "head": "can't bear",
+      "gloss": "受不了；无法忍受",
+      "ipa": "/kænt ber/",
+      "note": "bear 此处意为“忍受”；常接 to do 或名词。",
+      "literal": [
+        {"word": "could", "meaning_cn": "能"},
+        {"word": "not", "meaning_cn": "不"},
+        {"word": "bear", "meaning_cn": "忍受", "note_cn": "此处不是“熊”或“承载”"}
+      ],
+      "ex_en": "She can't bear to watch sad movies.",
+      "ex_cn": "她受不了看悲伤的电影。",
+      "occ": [[2364, "could not bear"]]
+    },
+    {
+      "head": "dawn on someone",
+      "gloss": "(某事)使某人恍然明白",
+      "ipa": "/dɔːn ɑːn ˈsʌmwʌn/",
+      "note": "常用 it dawns on sb that... 表示某人突然想通、明白过来。",
+      "literal": [
+        {"word": "dawned", "meaning_cn": "使明白", "note_cn": "此处非“破晓”，喻恍然领悟"},
+        {"word": "on", "meaning_cn": "(习语介词)"}
+      ],
+      "ex_en": "It slowly dawned on me that I had taken the wrong bus.",
+      "ex_cn": "我慢慢反应过来，自己上错了公交车。",
+      "occ": [[2382, "dawned on"]]
+    },
+    {
+      "head": "think over",
+      "gloss": "仔细考虑；再三斟酌",
+      "ipa": "/θɪŋk ˈoʊvər/",
+      "note": "本章出处为分离式 think it over，故 card-only。",
+      "literal": [
+        {"word": "think", "meaning_cn": "想、思考"},
+        {"word": "over", "meaning_cn": "(习语小品词)", "note_cn": "此处指从头到尾反复想"}
+      ],
+      "ex_en": "Take your time and think over the offer.",
+      "ex_cn": "别急，好好考虑一下这个提议。",
+      "cardOnly": true,
+      "key": "think over",
+      "exSeq": 2377
+    },
+    {
+      "head": "drive at",
+      "gloss": "意指；想表达(什么意思)",
+      "ipa": "/draɪv æt/",
+      "note": "常用 what are you driving at? 表示“你到底想说什么”。",
+      "literal": [
+        {"word": "driving", "meaning_cn": "意指", "note_cn": "此处非“驾驶”，指话里暗指的意思"},
+        {"word": "at", "meaning_cn": "(习语介词)"}
+      ],
+      "ex_en": "I couldn't tell what she was driving at.",
+      "ex_cn": "我听不出她到底想说什么。",
+      "occ": [[2388, "driving at"]]
+    },
+    {
+      "head": "catch at",
+      "gloss": "急切地抓住(想法、机会)",
+      "ipa": "/kætʃ æt/",
+      "note": "指一有机会或念头就赶紧抓住;比 catch 多一分急切。",
+      "literal": [
+        {"word": "caught", "meaning_cn": "抓住"},
+        {"word": "at", "meaning_cn": "(习语介词)", "note_cn": "此处指伸手去抓"}
+      ],
+      "ex_en": "He caught at the chance to study abroad.",
+      "ex_cn": "他一把抓住了出国留学的机会。",
+      "occ": [[2392, "caught at"]]
+    },
+    {
+      "head": "keel over",
+      "gloss": "晕倒；栽倒",
+      "ipa": "/kiːl ˈoʊvər/",
+      "note": "原指船翻转,引申为人突然倒下、昏倒。",
+      "literal": [
+        {"word": "keel", "meaning_cn": "翻倒", "note_cn": "此处指整个人倒下,非“龙骨”"},
+        {"word": "over", "meaning_cn": "(翻)过去"}
+      ],
+      "ex_en": "In the heat, one runner keeled over near the finish line.",
+      "ex_cn": "天太热,一名选手在终点附近晕倒了。",
+      "occ": [[2422, "keel over"]]
+    },
+    {
+      "head": "light up",
+      "gloss": "点燃(烟等)；照亮",
+      "ipa": "/laɪt ʌp/",
+      "note": "本章意为点烟斗;也常指灯光把某处照亮。",
+      "literal": [
+        {"word": "light", "meaning_cn": "点燃、照亮"},
+        {"word": "up", "meaning_cn": "(习语小品词)"}
+      ],
+      "ex_en": "They lit up the candles on the birthday cake.",
+      "ex_cn": "他们点亮了生日蛋糕上的蜡烛。",
+      "occ": [[2437, "light up"], [2480, "lit up"]]
+    },
+    {
+      "head": "get rid of",
+      "gloss": "摆脱；除掉",
+      "ipa": "/ɡet rɪd əv/",
+      "note": "指去掉不想要的东西、麻烦或感觉。",
+      "literal": [
+        {"word": "got", "meaning_cn": "使、弄"},
+        {"word": "rid", "meaning_cn": "去除", "note_cn": "几乎只用在 get rid of 搭配中"},
+        {"word": "of", "meaning_cn": "(习语介词)"}
+      ],
+      "ex_en": "I finally got rid of my old, broken phone.",
+      "ex_cn": "我终于把那部又旧又坏的手机处理掉了。",
+      "occ": [[2462, "got rid of"]]
+    },
+    {
+      "head": "disagree with someone",
+      "gloss": "(食物、气候)使某人不适",
+      "ipa": "/ˌdɪsəˈɡriː wɪð/",
+      "note": "本章意为食物令人肠胃不适、吃坏肚子;另有“不同意”常见义。",
+      "literal": [
+        {"word": "disagreed", "meaning_cn": "使不适", "note_cn": "此处非“不同意”,指令身体不舒服"},
+        {"word": "with", "meaning_cn": "与"}
+      ],
+      "ex_en": "Fried food always disagrees with me.",
+      "ex_cn": "油炸食物总是让我肠胃不舒服。",
+      "occ": [[2464, "disagreed with"]]
+    },
+    {
+      "head": "take shelter",
+      "gloss": "躲避；避难",
+      "ipa": "/teɪk ˈʃeltər/",
+      "note": "指为躲雨、躲危险而找地方躲起来。",
+      "literal": [
+        {"word": "took", "meaning_cn": "取得、进入"},
+        {"word": "shelter", "meaning_cn": "庇护、躲避处"}
+      ],
+      "ex_en": "We took shelter under a tree during the rain.",
+      "ex_cn": "下雨时我们躲到了一棵树下。",
+      "occ": [[2489, "took shelter"]]
+    },
+    {
+      "head": "one by one",
+      "gloss": "一个接一个地",
+      "ipa": "/wʌn baɪ wʌn/",
+      "note": "表示逐个、依次地发生。",
+      "literal": [
+        {"word": "one", "meaning_cn": "一个"},
+        {"word": "by", "meaning_cn": "(习语介词)", "note_cn": "此处表接续"},
+        {"word": "one", "meaning_cn": "一个"}
+      ],
+      "ex_en": "The students left the room one by one.",
+      "ex_cn": "学生们一个接一个地离开了房间。",
+      "occ": [[2489, "one by one"]]
+    },
+    {
+      "head": "stand out",
+      "gloss": "突出；显眼",
+      "ipa": "/stænd aʊt/",
+      "note": "指从背景中凸显出来、格外醒目。",
+      "literal": [
+        {"word": "stood", "meaning_cn": "站、处于"},
+        {"word": "out", "meaning_cn": "突出地", "note_cn": "此处指凸显出来"}
+      ],
+      "ex_en": "Her red coat made her stand out in the crowd.",
+      "ex_cn": "她那件红外套让她在人群中格外显眼。",
+      "occ": [[2494, "stood out"]]
+    },
+    {
+      "head": "cheer up",
+      "gloss": "(使)高兴起来；振作",
+      "ipa": "/tʃɪr ʌp/",
+      "note": "可及物(使某人开心)或不及物(自己开心起来)。",
+      "literal": [
+        {"word": "cheering", "meaning_cn": "使高兴"},
+        {"word": "up", "meaning_cn": "(习语小品词)", "note_cn": "此处表情绪转好"}
+      ],
+      "ex_en": "I brought flowers to cheer up my sick friend.",
+      "ex_cn": "我买了花去逗生病的朋友开心。",
+      "occ": [[2508, "cheering up"]]
+    },
+    {
+      "head": "knock off",
+      "gloss": "停止(做某事)；收工",
+      "ipa": "/nɑːk ɔːf/",
+      "note": "口语,指停下手头的事、暂时不做。",
+      "literal": [
+        {"word": "knock", "meaning_cn": "敲", "note_cn": "此处为习语用词,不表“敲”"},
+        {"word": "off", "meaning_cn": "停止", "note_cn": "此处表停下"}
+      ],
+      "ex_en": "Let's knock off work and go home.",
+      "ex_cn": "咱们收工回家吧。",
+      "occ": [[2512, "knock off"]]
+    },
+    {
+      "head": "from head to heel",
+      "gloss": "从头到脚；浑身",
+      "ipa": "/frəm hed tə hiːl/",
+      "note": "更常见的说法是 from head to toe,意思相同,表全身上下。",
+      "literal": [
+        {"word": "from", "meaning_cn": "从"},
+        {"word": "head", "meaning_cn": "头"},
+        {"word": "to", "meaning_cn": "到"},
+        {"word": "heel", "meaning_cn": "脚跟"}
+      ],
+      "ex_en": "He was covered in mud from head to heel.",
+      "ex_cn": "他从头到脚都是泥。",
+      "occ": [[2513, "from head to heel"]]
+    },
+    {
+      "head": "fool away",
+      "gloss": "白白浪费(时间、机会)",
+      "ipa": "/fuːl əˈweɪ/",
+      "note": "指糊里糊涂地虚度、挥霍掉。",
+      "literal": [
+        {"word": "fool", "meaning_cn": "虚度、浪费", "note_cn": "此处非“傻瓜”,指糊涂地耗费"},
+        {"word": "away", "meaning_cn": "掉、消耗掉"}
+      ],
+      "ex_en": "Don't fool away your summer doing nothing.",
+      "ex_cn": "别无所事事地把整个暑假白白浪费掉。",
+      "occ": [[2522, "fool away"]]
+    },
+    {
+      "head": "tear to pieces",
+      "gloss": "撕碎；扯烂",
+      "ipa": "/ter tə ˈpiːsɪz/",
+      "note": "本章出处为分离式 tear the island to pieces,故 card-only。",
+      "literal": [
+        {"word": "tear", "meaning_cn": "撕", "note_cn": "读 /ter/,非“眼泪”"},
+        {"word": "to", "meaning_cn": "成为"},
+        {"word": "pieces", "meaning_cn": "碎片"}
+      ],
+      "ex_en": "The puppy tore the newspaper to pieces.",
+      "ex_cn": "小狗把报纸撕得粉碎。",
+      "cardOnly": true,
+      "key": "tear to pieces",
+      "exSeq": 2496
+    },
+    {
+      "head": "break bread",
+      "gloss": "一起吃饭；共餐",
+      "ipa": "/breɪk bred/",
+      "note": "源自宗教用语,指同桌进餐、结为一伙。本章出处为分离式 break the bread of hospitality,故 card-only。",
+      "literal": [
+        {"word": "break", "meaning_cn": "掰开", "note_cn": "此处指分食面包、共餐"},
+        {"word": "bread", "meaning_cn": "面包"}
+      ],
+      "ex_en": "The two families broke bread together on the holiday.",
+      "ex_cn": "节日里两家人围坐在一起吃饭。",
+      "cardOnly": true,
+      "key": "break bread",
+      "exSeq": 2517
+    }
+  ],
+  "skipped": [
+    "专名/人名 (Becky / Joe / Huck / Tom / Jeff Thatcher / Johnny Miller / Bob Tanner / Illinois / Six Nations)",
+    "方言拼写 (warn't / sha'n't / hain't / per'aps / 'deed / tobacker / ca'm / hendering / wisht / bleeve / a knowed / a learnt)",
+    "方言感叹 (by jings / oh shucks / dad / by hokey — 一次性,迁移弱)",
+    "knucks / ringtaw / keeps (弹珠游戏名,一次性名物)",
+    "rattlesnake rattles / spunk-water 类迷信名物 (生僻)",
+    "pipe of peace / peace pipe (印第安套语,情节性一次描写)",
+    "with might and main (古旧文学惯语 → 难句层)",
+    "peal on peal / peal of thunder (一次性风暴描写)",
+    "took himself out of temptation / betook (古旧,一次性)",
+    "went down on their knees (半描述性,控量舍去)",
+    "go on with (go on 过于基础,ch10已收 go on doing)",
+    "fade out (较基础,控量舍去)",
+    "turn out (本章为“出动/出来”义,含糊,控量舍去)"
+  ]
+}

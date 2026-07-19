@@ -1,0 +1,457 @@
+{
+ "batch": 3,
+ "cards": [
+  {
+   "word": "abated",
+   "ipa": "/əˈbeɪtɪd/",
+   "pos": "v.",
+   "gloss_cn": "abate的过去式,减弱",
+   "gloss_en": "became less strong; died down",
+   "sense_key": "subside",
+   "ex_en": "By morning the rain had abated.",
+   "ex_cn": "到早晨雨已经减弱了。"
+  },
+  {
+   "word": "composed",
+   "ipa": "/kəmˈpəʊzd/",
+   "pos": "adj.",
+   "gloss_cn": "镇定的、冷静的",
+   "gloss_en": "calm and in control of oneself",
+   "sense_key": "calm",
+   "ex_en": "She stayed calm and composed during the test.",
+   "ex_cn": "考试时她保持镇定冷静。"
+  },
+  {
+   "word": "continually",
+   "ipa": "/kənˈtɪnjuəli/",
+   "pos": "adv.",
+   "gloss_cn": "不断地、频频地",
+   "gloss_en": "again and again; without stopping",
+   "sense_key": "repeatedly",
+   "ex_en": "The baby cried continually all night.",
+   "ex_cn": "婴儿整夜不停地哭。"
+  },
+  {
+   "word": "pursued",
+   "ipa": "/pəˈsjuːd/",
+   "pos": "v.",
+   "gloss_cn": "pursue的过去式,追赶",
+   "gloss_en": "chased in order to catch",
+   "sense_key": "chase",
+   "ex_en": "The dog pursued the cat down the street.",
+   "ex_cn": "那只狗沿街追赶那只猫。"
+  },
+  {
+   "word": "musket",
+   "ipa": "/ˈmʌskɪt/",
+   "pos": "n.",
+   "gloss_cn": "滑膛枪、老式步枪",
+   "gloss_en": "an old long-barrelled gun fired from the shoulder",
+   "sense_key": "musket",
+   "ex_en": "The soldier loaded his musket slowly.",
+   "ex_cn": "士兵慢慢给他的滑膛枪装弹。"
+  },
+  {
+   "word": "perish",
+   "ipa": "/ˈperɪʃ/",
+   "pos": "v.",
+   "gloss_cn": "丧生、死去",
+   "gloss_en": "die, especially in a sudden or violent way",
+   "sense_key": "die",
+   "ex_en": "Many plants perish in the cold winter.",
+   "ex_cn": "许多植物在寒冬中死去。"
+  },
+  {
+   "word": "beckoned",
+   "ipa": "/ˈbekənd/",
+   "pos": "v.",
+   "gloss_cn": "beckon的过去式,招手示意",
+   "gloss_en": "signalled to someone with a hand gesture",
+   "sense_key": "beckon",
+   "ex_en": "The teacher beckoned me to come closer.",
+   "ex_cn": "老师招手示意我走近些。"
+  },
+  {
+   "word": "probable",
+   "ipa": "/ˈprɒbəbl/",
+   "pos": "adj.",
+   "gloss_cn": "很可能的",
+   "gloss_en": "likely to happen or be true",
+   "sense_key": "likely",
+   "ex_en": "Rain is probable this afternoon.",
+   "ex_cn": "今天下午很可能下雨。"
+  },
+  {
+   "word": "linen",
+   "ipa": "/ˈlɪnɪn/",
+   "pos": "n.",
+   "gloss_cn": "亚麻布",
+   "gloss_en": "cloth made from the flax plant",
+   "sense_key": "linen",
+   "ex_en": "The shirt was made of soft linen.",
+   "ex_cn": "这件衬衫是用柔软的亚麻布做的。"
+  },
+  {
+   "word": "currents",
+   "ipa": "/ˈkʌrənts/",
+   "pos": "n.",
+   "gloss_cn": "current的复数,水流",
+   "gloss_en": "streams of water moving in one direction",
+   "sense_key": "current",
+   "ex_en": "Strong currents pulled the boat away.",
+   "ex_cn": "湍急的水流把船冲走了。"
+  },
+  {
+   "word": "grove",
+   "ipa": "/ɡrəʊv/",
+   "pos": "n.",
+   "gloss_cn": "小树林",
+   "gloss_en": "a small group of trees",
+   "sense_key": "grove",
+   "ex_en": "We had a picnic in the orange grove.",
+   "ex_cn": "我们在橘子林里野餐。"
+  },
+  {
+   "word": "volley",
+   "ipa": "/ˈvɒli/",
+   "pos": "n.",
+   "gloss_cn": "(枪炮的)齐射",
+   "gloss_en": "a number of shots fired at the same time",
+   "sense_key": "volley",
+   "ex_en": "The soldiers fired a volley into the air.",
+   "ex_cn": "士兵们朝天齐射了一轮。"
+  },
+  {
+   "word": "distemper",
+   "ipa": "/dɪsˈtempə/",
+   "pos": "n.",
+   "gloss_cn": "疾病、身体失调",
+   "gloss_en": "an illness or disorder of the body",
+   "sense_key": "illness",
+   "ex_en": "The old dog suffered from a strange distemper.",
+   "ex_cn": "那只老狗患了一种奇怪的疾病。"
+  },
+  {
+   "word": "leisure",
+   "ipa": "/ˈleʒə/",
+   "pos": "n.",
+   "gloss_cn": "闲暇、空闲",
+   "gloss_en": "free time away from work",
+   "sense_key": "leisure",
+   "ex_en": "He reads books in his leisure time.",
+   "ex_cn": "他在闲暇时间读书。"
+  },
+  {
+   "word": "wretch",
+   "ipa": "/retʃ/",
+   "pos": "n.",
+   "gloss_cn": "可怜人、不幸的人",
+   "gloss_en": "an unfortunate or pitiable person",
+   "sense_key": "wretch",
+   "ex_en": "The poor wretch had no food or home.",
+   "ex_cn": "那个可怜人无食无家。"
+  },
+  {
+   "word": "consideration",
+   "ipa": "/kənˌsɪdəˈreɪʃn/",
+   "pos": "n.",
+   "gloss_cn": "考虑、思量",
+   "gloss_en": "careful thought about something",
+   "sense_key": "consideration",
+   "ex_en": "After much consideration, she said yes.",
+   "ex_cn": "经过再三考虑,她答应了。"
+  },
+  {
+   "word": "sensible",
+   "ipa": "/ˈsensəbl/",
+   "pos": "adj.",
+   "gloss_cn": "明智的、明事理的",
+   "gloss_en": "wise and showing good judgment",
+   "sense_key": "wise",
+   "ex_en": "It is sensible to wear a coat in winter.",
+   "ex_cn": "冬天穿外套是明智的。"
+  },
+  {
+   "word": "carpenter",
+   "ipa": "/ˈkɑːpəntə/",
+   "pos": "n.",
+   "gloss_cn": "木匠",
+   "gloss_en": "a person who makes things from wood",
+   "sense_key": "carpenter",
+   "ex_en": "The carpenter made a wooden table.",
+   "ex_cn": "木匠做了一张木桌。"
+  },
+  {
+   "word": "horrid",
+   "ipa": "/ˈhɒrɪd/",
+   "pos": "adj.",
+   "gloss_cn": "可怕的、令人厌恶的",
+   "gloss_en": "very unpleasant or nasty",
+   "sense_key": "horrid",
+   "ex_en": "The medicine had a horrid taste.",
+   "ex_cn": "这药有股可怕的味道。"
+  },
+  {
+   "word": "vessels",
+   "ipa": "/ˈveslz/",
+   "pos": "n.",
+   "gloss_cn": "vessel的复数,船只",
+   "gloss_en": "ships or large boats",
+   "sense_key": "ship",
+   "ex_en": "Many vessels sailed into the busy port.",
+   "ex_cn": "许多船只驶入繁忙的港口。"
+  },
+  {
+   "word": "dram",
+   "ipa": "/dræm/",
+   "pos": "n.",
+   "gloss_cn": "少量烈酒",
+   "gloss_en": "a small drink of strong alcohol",
+   "sense_key": "dram",
+   "ex_en": "The old man drank a dram of whisky.",
+   "ex_cn": "老人喝了一小杯威士忌。"
+  },
+  {
+   "word": "remedy",
+   "ipa": "/ˈremədi/",
+   "pos": "n.",
+   "gloss_cn": "补救办法、疗法;(no remedy but to)别无办法只能",
+   "gloss_en": "a cure or fix; (no remedy but to) no choice but to",
+   "sense_key": "remedy",
+   "ex_en": "Honey is a good remedy for a sore throat.",
+   "ex_cn": "蜂蜜是治嗓子痛的好方法。"
+  },
+  {
+   "word": "affairs",
+   "ipa": "/əˈfeəz/",
+   "pos": "n.",
+   "gloss_cn": "affair的复数,事务",
+   "gloss_en": "matters or business to be dealt with",
+   "sense_key": "affair",
+   "ex_en": "He manages the company's affairs carefully.",
+   "ex_cn": "他谨慎地打理公司的事务。"
+  },
+  {
+   "word": "fain",
+   "ipa": "/feɪn/",
+   "pos": "adv.",
+   "gloss_cn": "(旧)只得;乐意地",
+   "gloss_en": "gladly, or having no choice but to",
+   "sense_key": "fain",
+   "ex_en": "The tired travellers would fain rest a while.",
+   "ex_cn": "疲惫的旅人只得歇息一会儿。"
+  },
+  {
+   "word": "posts",
+   "ipa": "/pəʊsts/",
+   "pos": "n.",
+   "gloss_cn": "post的复数,柱子、桩",
+   "gloss_en": "upright stakes fixed in the ground",
+   "sense_key": "post",
+   "ex_en": "They set wooden posts along the fence.",
+   "ex_cn": "他们沿着篱笆立起木柱。"
+  },
+  {
+   "word": "journal",
+   "ipa": "/ˈdʒɜːnl/",
+   "pos": "n.",
+   "gloss_cn": "日记、日志",
+   "gloss_en": "a daily record of events",
+   "sense_key": "journal",
+   "ex_en": "She writes in her journal every night.",
+   "ex_cn": "她每晚都在日记里写点东西。"
+  },
+  {
+   "word": "hanged",
+   "ipa": "/hæŋd/",
+   "pos": "v.",
+   "gloss_cn": "hang的过去式,绞死",
+   "gloss_en": "killed by hanging from a rope",
+   "sense_key": "hang",
+   "ex_en": "In the past, thieves were sometimes hanged.",
+   "ex_cn": "从前,小偷有时会被处以绞刑。"
+  },
+  {
+   "word": "bushels",
+   "ipa": "/ˈbʊʃlz/",
+   "pos": "n.",
+   "gloss_cn": "bushel的复数,蒲式耳(量)",
+   "gloss_en": "units for measuring grain",
+   "sense_key": "bushel",
+   "ex_en": "The farmer sold ten bushels of corn.",
+   "ex_cn": "农夫卖了十蒲式耳玉米。"
+  },
+  {
+   "word": "imaginable",
+   "ipa": "/ɪˈmædʒɪnəbl/",
+   "pos": "adj.",
+   "gloss_cn": "可想象的",
+   "gloss_en": "able to be thought of or imagined",
+   "sense_key": "imaginable",
+   "ex_en": "They tried every method imaginable.",
+   "ex_cn": "他们试遍了所有能想到的办法。"
+  },
+  {
+   "word": "bloody",
+   "ipa": "/ˈblʌdi/",
+   "pos": "adj.",
+   "gloss_cn": "血腥的、流血的",
+   "gloss_en": "covered in blood; violent",
+   "sense_key": "bloody",
+   "ex_en": "The two armies fought a bloody battle.",
+   "ex_cn": "两军打了一场血腥的战斗。"
+  },
+  {
+   "word": "firearms",
+   "ipa": "/ˈfaɪərɑːmz/",
+   "pos": "n.",
+   "gloss_cn": "firearm的复数,火器、枪械",
+   "gloss_en": "guns that shoot bullets",
+   "sense_key": "firearm",
+   "ex_en": "The police keep firearms locked away.",
+   "ex_cn": "警察把枪械锁起来保管。"
+  },
+  {
+   "word": "resolutions",
+   "ipa": "/ˌrezəˈluːʃnz/",
+   "pos": "n.",
+   "gloss_cn": "resolution的复数,决心",
+   "gloss_en": "firm decisions to do something",
+   "sense_key": "resolve",
+   "ex_en": "He made several resolutions for the new year.",
+   "ex_cn": "他为新年立下了几个决心。"
+  },
+  {
+   "word": "wickedness",
+   "ipa": "/ˈwɪkɪdnəs/",
+   "pos": "n.",
+   "gloss_cn": "邪恶、恶行",
+   "gloss_en": "evil or morally bad behaviour",
+   "sense_key": "wickedness",
+   "ex_en": "The story warns us against wickedness.",
+   "ex_cn": "这个故事告诫我们远离邪恶。"
+  },
+  {
+   "word": "confess",
+   "ipa": "/kənˈfes/",
+   "pos": "v.",
+   "gloss_cn": "坦白、承认",
+   "gloss_en": "admit something you did wrong",
+   "sense_key": "confess",
+   "ex_en": "He decided to confess his mistake.",
+   "ex_cn": "他决定坦白自己的错误。"
+  },
+  {
+   "word": "cables",
+   "ipa": "/ˈkeɪblz/",
+   "pos": "n.",
+   "gloss_cn": "cable的复数,缆绳",
+   "gloss_en": "thick strong ropes or chains",
+   "sense_key": "cable",
+   "ex_en": "Thick cables held the ship to the dock.",
+   "ex_cn": "粗缆绳把船系在码头上。"
+  },
+  {
+   "word": "boatswain",
+   "ipa": "/ˈbəʊsn/",
+   "pos": "n.",
+   "gloss_cn": "水手长",
+   "gloss_en": "the officer in charge of a ship's crew and gear",
+   "sense_key": "boatswain",
+   "ex_en": "The boatswain called the sailors on deck.",
+   "ex_cn": "水手长把水手们叫到甲板上。"
+  },
+  {
+   "word": "venturing",
+   "ipa": "/ˈventʃərɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "venture的现在分词,冒险(前往)",
+   "gloss_en": "daring to go somewhere risky",
+   "sense_key": "venture",
+   "ex_en": "They kept venturing deeper into the cave.",
+   "ex_cn": "他们不断冒险深入洞穴。"
+  },
+  {
+   "word": "rational",
+   "ipa": "/ˈræʃnəl/",
+   "pos": "adj.",
+   "gloss_cn": "理性的、讲道理的",
+   "gloss_en": "based on clear thinking and reason",
+   "sense_key": "rational",
+   "ex_en": "Try to make a rational decision.",
+   "ex_cn": "试着做出理性的决定。"
+  },
+  {
+   "word": "bay",
+   "ipa": "/beɪ/",
+   "pos": "n.",
+   "gloss_cn": "海湾",
+   "gloss_en": "a curved part of a coastline",
+   "sense_key": "bay",
+   "ex_en": "The little boat sailed into the quiet bay.",
+   "ex_cn": "小船驶进了平静的海湾。"
+  },
+  {
+   "word": "cape",
+   "ipa": "/keɪp/",
+   "pos": "n.",
+   "gloss_cn": "海角、岬",
+   "gloss_en": "a piece of land jutting into the sea",
+   "sense_key": "cape",
+   "ex_en": "The lighthouse stands on a rocky cape.",
+   "ex_cn": "灯塔矗立在多岩石的海角上。"
+  },
+  {
+   "word": "pursue",
+   "ipa": "/pəˈsjuː/",
+   "pos": "v.",
+   "gloss_cn": "追赶、追求",
+   "gloss_en": "chase, or try hard to achieve",
+   "sense_key": "chase",
+   "ex_en": "The police will pursue the runaway car.",
+   "ex_cn": "警察会追赶那辆逃跑的车。"
+  }
+ ],
+ "skipped": [
+  "sailor(太基础)",
+  "wave(太基础)",
+  "increasing(increase变形·太基础)",
+  "merchants(太基础)",
+  "motion(太基础)",
+  "merchant(太基础)",
+  "biscuit(太基础)",
+  "increase(太基础)",
+  "employment(太基础)",
+  "preparing(prepare变形·太基础)",
+  "works(太基础)",
+  "crew(太基础)",
+  "hull(专名·城市Hull)",
+  "harbour(太基础)",
+  "climate(太基础)",
+  "sailed(sail变形·太基础)",
+  "proposal(太基础)",
+  "attacked(attack变形·太基础)",
+  "earthquake(太基础)",
+  "parrot(太基础)",
+  "boats(太基础)",
+  "smith(专名·Tom Smith)",
+  "depend(太基础)",
+  "colour(太基础)"
+ ],
+ "suspect": [
+  {
+   "word": "remedy",
+   "gloss_cn": "补救办法、疗法",
+   "ctx": "I had no remedy but to go on: I had got into an employment quite remote to my genius",
+   "issue": "书中是固定说法 no remedy but to = 别无办法/别无选择,只能继续;现释义\"补救办法、疗法\"里\"疗法\"这一义完全不搭,\"补救办法\"也偏窄,回读为\"我别无补救办法只能继续\"略生硬",
+   "suggest": "增补\"(常用于 no remedy but)办法、出路;别无选择\"一义"
+  },
+  {
+   "word": "sensible",
+   "gloss_cn": "明智的、明事理的",
+   "ctx": "the storm was so violent that I saw, what is not often seen, the master, the boatswain, and some others more sensible than the rest",
+   "issue": "此处 Defoe 旧义偏向\"更清醒察觉到危险的/意识到处境的\"(见船将沉而祈祷),不单是\"明智\";\"more sensible than the rest\"回读为\"比其余人更有察觉\"更贴,现释义只给引申的\"明智\"",
+   "suggest": "增补\"(旧)察觉到的、意识到(危险/处境)的\"一义"
+  }
+ ]
+}

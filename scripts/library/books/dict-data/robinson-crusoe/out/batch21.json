@@ -1,0 +1,94 @@
+{
+ "batch": 21,
+ "cards": [
+  {
+   "word": "kid",
+   "ipa": "/kɪd/",
+   "pos": "n.",
+   "gloss_cn": "小山羊、幼山羊",
+   "gloss_en": "a young goat",
+   "sense_key": "young-goat",
+   "ex_en": "The little kid stayed close to its mother in the field.",
+   "ex_cn": "小山羊在田里紧紧跟着母亲。"
+  },
+  {
+   "word": "cattle",
+   "ipa": "/ˈkætl/",
+   "pos": "n.",
+   "gloss_cn": "家畜、牲畜(泛指家养牲口)",
+   "gloss_en": "domestic animals kept as livestock",
+   "sense_key": "livestock",
+   "ex_en": "The farmer drove his cattle into the pen at night.",
+   "ex_cn": "农夫夜里把牲畜赶进圈里。"
+  },
+  {
+   "word": "soever",
+   "ipa": "/səʊˈevə/",
+   "pos": "adv.",
+   "gloss_cn": "(古)无论;不管什么",
+   "gloss_en": "of any kind or to any degree at all",
+   "sense_key": "whatsoever",
+   "ex_en": "Choose what path soever you think is best.",
+   "ex_cn": "无论你觉得哪条路最好,就选哪条。"
+  },
+  {
+   "word": "whereof",
+   "ipa": "/weərˈɒv/",
+   "pos": "adv.",
+   "gloss_cn": "(古)关于那事;其中",
+   "gloss_en": "of which or of whom",
+   "sense_key": "of-which",
+   "ex_en": "He kept a diary, whereof he was very proud.",
+   "ex_cn": "他记着一本日记,并为此十分自豪。"
+  },
+  {
+   "word": "embarrassed",
+   "ipa": "/ɪmˈbærəst/",
+   "pos": "adj.",
+   "gloss_cn": "(古)陷入困境的;负债累累的",
+   "gloss_en": "burdened with debt or in serious difficulty",
+   "sense_key": "encumbered",
+   "ex_en": "The merchant grew embarrassed after his ships were lost.",
+   "ex_cn": "商人的船只失踪后,他陷入了债务困境。"
+  },
+  {
+   "word": "ingenio",
+   "ipa": "/ɪnˈdʒiːniəʊ/",
+   "pos": "n.",
+   "gloss_cn": "(葡/西)制糖厂;糖坊",
+   "gloss_en": "a sugar-mill or sugar plantation works",
+   "sense_key": "sugar-mill",
+   "ex_en": "He worked for a year at a large ingenio in Brazil.",
+   "ex_cn": "他在巴西一家大制糖厂干了一年。"
+  }
+ ],
+ "skipped": [
+  "labour(太基础)", "design(太基础)", "pounds(太基础)", "rice(太基础)", "observe(太基础)",
+  "governor(太基础)", "secure(太基础)", "directed(太基础)", "violence(太基础)", "observation(太基础)",
+  "recovered(太基础)", "violent(太基础)", "ink(太基础)", "mankind(太基础)", "direct(太基础)",
+  "useful(太基础)", "amazed(太基础)", "evil(太基础)", "bullets(太基础)", "planted(太基础)",
+  "servant(太基础)", "faithful(太基础)", "recover(太基础)", "sick(太基础)", "convinced(太基础)",
+  "infinite(太基础)", "feed(太基础)", "appearance(太基础)", "partner(太基础)", "excellent(太基础)",
+  "method(太基础)", "depend(太基础)", "colour(太基础)", "planting(太基础)", "proposed(太基础)",
+  "expectation(太基础)", "convenient(太基础)", "security(太基础)", "provide(太基础)", "frequent(太基础)",
+  "march(太基础)", "winter(太基础)", "government(太基础)", "sixteen(数字)", "comfortably(太基础)",
+  "example(太基础)", "defend(太基础)", "aim(太基础)", "letter(太基础)", "letters(太基础)",
+  "description(太基础)", "seaside(太基础)", "reduced(太基础)", "recovering(太基础)", "secondly(太基础)",
+  "teach(太基础)", "bones(太基础)", "seventeen(数字)", "beach(太基础)", "seventy(数字)",
+  "encouragement(太基础)", "sincerely(太基础)", "unfortunate(太基础)", "honesty(太基础)", "practice(太基础)",
+  "blown(太基础)", "favour(太基础)", "providing(太基础)", "servants(太基础)", "designs(太基础)",
+  "absence(太基础)", "tying(太基础)", "horn(太基础)", "feeding(太基础)", "apply(太基础)",
+  "renewed(太基础)", "pigeons(太基础)", "foundation(太基础)", "observing(太基础)", "instruction(太基础)",
+  "cheese(太基础)", "national(太基础)", "mounted(太基础)", "commander(太基础)", "write(太基础)",
+  "unwilling(太基础)", "emperor(太基础)", "pound(太基础)", "accept(太基础)", "accepted(太基础)",
+  "suitable(太基础)", "neighbour(太基础)", "behaviour(太基础)", "knives(太基础)", "scissors(太基础)",
+  "equal(太基础)", "fourteen(数字)", "northern(太基础)", "depended(太基础)", "origin(太基础)",
+  "lamp(太基础)", "prince(太基础)", "experiment(太基础)", "lemons(太基础)", "boil(太基础)",
+  "maker(太基础)", "thieves(太基础)", "bake(太基础)", "instrument(太基础)", "bold(太基础)",
+  "profits(太基础)", "designed(太基础)", "affect(太基础)", "instructions(太基础)", "expense(太基础)",
+  "friendship(太基础)", "surround(太基础)", "footsteps(太基础)", "eighty(数字)", "compare(太基础)",
+  "valuable(太基础)", "perform(太基础)", "miracle(太基础)", "nails(太基础)", "fuel(太基础)",
+  "yearly(太基础)", "enable(太基础)", "plant(太基础)", "governing(太基础)", "suggest(太基础)",
+  "purely(太基础)", "cook(太基础)", "concluding(太基础)", "loosened(太基础)"
+ ]
+}

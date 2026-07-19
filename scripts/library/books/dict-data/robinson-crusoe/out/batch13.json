@@ -1,0 +1,491 @@
+{
+ "batch": 13,
+ "cards": [
+  {
+   "word": "vows",
+   "ipa": "/vaʊz/",
+   "pos": "n.",
+   "gloss_cn": "誓言(vow复数)",
+   "gloss_en": "solemn promises made to god or oneself",
+   "sense_key": "vow",
+   "ex_en": "He made two vows before the trip.",
+   "ex_cn": "他在旅行前立下两个誓言。"
+  },
+  {
+   "word": "observations",
+   "ipa": "/ˌɒbzəˈveɪʃnz/",
+   "pos": "n.",
+   "gloss_cn": "见解,看法",
+   "gloss_en": "remarks that express an opinion or judgement",
+   "sense_key": "remark",
+   "ex_en": "Her observations about life were wise.",
+   "ex_cn": "她对人生的见解很有智慧。"
+  },
+  {
+   "word": "inured",
+   "ipa": "/ɪˈnjʊəd/",
+   "pos": "v.",
+   "gloss_cn": "使习惯(艰苦)",
+   "gloss_en": "made used to something hard or unpleasant",
+   "sense_key": "harden",
+   "ex_en": "The sailors were inured to cold nights.",
+   "ex_cn": "水手们已习惯了寒冷的夜晚。"
+  },
+  {
+   "word": "warrant",
+   "ipa": "/ˈwɒrənt/",
+   "pos": "v.",
+   "gloss_cn": "担保,准保",
+   "gloss_en": "assure or promise something confidently",
+   "sense_key": "assure",
+   "ex_en": "I warrant you will pass the test.",
+   "ex_cn": "我敢保证你会通过考试。"
+  },
+  {
+   "word": "anchors",
+   "ipa": "/ˈæŋkəz/",
+   "pos": "n.",
+   "gloss_cn": "锚(anchor复数)",
+   "gloss_en": "heavy metal devices that hold a ship in place",
+   "sense_key": "anchor",
+   "ex_en": "The ship dropped two anchors in the bay.",
+   "ex_cn": "船在海湾里抛下两只锚。"
+  },
+  {
+   "word": "veered",
+   "ipa": "/vɪəd/",
+   "pos": "v.",
+   "gloss_cn": "(veer 过去式)松出、放长(缆绳);(风向)转变",
+   "gloss_en": "paid out or let out (a rope); also shifted direction",
+   "sense_key": "turn",
+   "ex_en": "The wind veered to the north.",
+   "ex_cn": "风向转到了北方。"
+  },
+  {
+   "word": "vigilant",
+   "ipa": "/ˈvɪdʒɪlənt/",
+   "pos": "adj.",
+   "gloss_cn": "警觉的",
+   "gloss_en": "watchful and alert to danger",
+   "sense_key": "watchful",
+   "ex_en": "The guard stayed vigilant all night.",
+   "ex_cn": "卫兵整夜保持警觉。"
+  },
+  {
+   "word": "steerage",
+   "ipa": "/ˈstɪərɪdʒ/",
+   "pos": "n.",
+   "gloss_cn": "(船的)统舱",
+   "gloss_en": "the cheap lower deck area of a ship",
+   "sense_key": "steerage",
+   "ex_en": "The poor passengers slept in the steerage.",
+   "ex_cn": "穷苦的乘客睡在统舱里。"
+  },
+  {
+   "word": "labouring",
+   "ipa": "/ˈleɪbərɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "费力颠簸",
+   "gloss_en": "moving heavily and with great difficulty",
+   "sense_key": "struggle",
+   "ex_en": "The boat was labouring in the rough sea.",
+   "ex_cn": "小船在怒海中费力地颠簸。"
+  },
+  {
+   "word": "spritsail",
+   "ipa": "/ˈsprɪtsl/",
+   "pos": "n.",
+   "gloss_cn": "斜杠帆",
+   "gloss_en": "a sail set on a spar across the mast",
+   "sense_key": "sail",
+   "ex_en": "They raised the spritsail to catch the wind.",
+   "ex_cn": "他们升起斜杠帆去兜风。"
+  },
+  {
+   "word": "convictions",
+   "ipa": "/kənˈvɪkʃnz/",
+   "pos": "n.",
+   "gloss_cn": "深切的确信",
+   "gloss_en": "firm, deeply held beliefs",
+   "sense_key": "belief",
+   "ex_en": "His convictions of guilt kept him awake.",
+   "ex_cn": "内心确信的罪责让他无法入睡。"
+  },
+  {
+   "word": "sprung",
+   "ipa": "/sprʌŋ/",
+   "pos": "v.",
+   "gloss_cn": "裂开漏水(spring过分)",
+   "gloss_en": "developed a crack that lets water through",
+   "sense_key": "leak",
+   "ex_en": "The old barrel had sprung a leak.",
+   "ex_cn": "那只旧桶裂开漏了水。"
+  },
+  {
+   "word": "buoy",
+   "ipa": "/bɔɪ/",
+   "pos": "n.",
+   "gloss_cn": "浮标",
+   "gloss_en": "a floating marker on the water",
+   "sense_key": "buoy",
+   "ex_en": "A red buoy marked the safe channel.",
+   "ex_cn": "一个红色浮标标出了安全航道。"
+  },
+  {
+   "word": "sloping",
+   "ipa": "/ˈsləʊpɪŋ/",
+   "pos": "adj.",
+   "gloss_cn": "倾斜的",
+   "gloss_en": "slanting up or down at an angle",
+   "sense_key": "slanting",
+   "ex_en": "We walked up the sloping path.",
+   "ex_cn": "我们沿着倾斜的小路往上走。"
+  },
+  {
+   "word": "mounting",
+   "ipa": "/ˈmaʊntɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "升上,爬上",
+   "gloss_en": "rising up or climbing higher",
+   "sense_key": "rise",
+   "ex_en": "The boat was mounting a huge wave.",
+   "ex_cn": "小船正涌上一道巨浪。"
+  },
+  {
+   "word": "calf",
+   "ipa": "/kɑːf/",
+   "pos": "n.",
+   "gloss_cn": "小牛",
+   "gloss_en": "a young cow",
+   "sense_key": "calf",
+   "ex_en": "The calf followed its mother across the field.",
+   "ex_cn": "小牛跟着母牛穿过田野。"
+  },
+  {
+   "word": "overruling",
+   "ipa": "/ˌəʊvəˈruːlɪŋ/",
+   "pos": "adj.",
+   "gloss_cn": "支配一切的",
+   "gloss_en": "dominating and controlling everything",
+   "sense_key": "dominant",
+   "ex_en": "An overruling fate seemed to guide him.",
+   "ex_cn": "一种支配一切的命运似乎在引导他。"
+  },
+  {
+   "word": "excursion",
+   "ipa": "/ɪkˈskɜːʃn/",
+   "pos": "n.",
+   "gloss_cn": "(一时的)冲动发作",
+   "gloss_en": "a brief outburst or wandering of feeling",
+   "sense_key": "outburst",
+   "ex_en": "That angry speech was just an excursion of his temper.",
+   "ex_cn": "那番怒言只是他一时的情绪发作。"
+  },
+  {
+   "word": "forcibly",
+   "ipa": "/ˈfɔːsəbli/",
+   "pos": "adv.",
+   "gloss_cn": "强烈地、有力地;强行地",
+   "gloss_en": "strongly or powerfully; also by force",
+   "sense_key": "forcefully",
+   "ex_en": "They forcibly pushed the door open.",
+   "ex_cn": "他们强行把门推开。"
+  },
+  {
+   "word": "omitting",
+   "ipa": "/əˈmɪtɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "(omit to do)疏于去做、漏掉;省略",
+   "gloss_en": "failing to do; also leaving out",
+   "sense_key": "omit",
+   "ex_en": "He told the story, omitting the sad part.",
+   "ex_cn": "他讲了这个故事,略去了伤心的部分。"
+  },
+  {
+   "word": "needful",
+   "ipa": "/ˈniːdfl/",
+   "pos": "adj.",
+   "gloss_cn": "必要的",
+   "gloss_en": "necessary",
+   "sense_key": "necessary",
+   "ex_en": "She packed everything needful for the journey.",
+   "ex_cn": "她把旅途必要的东西都装好了。"
+  },
+  {
+   "word": "calenture",
+   "ipa": "/ˈkæləntʃə/",
+   "pos": "n.",
+   "gloss_cn": "热带热病",
+   "gloss_en": "a tropical fever caused by great heat",
+   "sense_key": "fever",
+   "ex_en": "The heat gave the sailor a calenture.",
+   "ex_cn": "酷热让那水手染上了热带热病。"
+  },
+  {
+   "word": "rover",
+   "ipa": "/ˈrəʊvə/",
+   "pos": "n.",
+   "gloss_cn": "海盗船",
+   "gloss_en": "a pirate ship",
+   "sense_key": "pirate-ship",
+   "ex_en": "A rover chased the merchant ship at dawn.",
+   "ex_cn": "一艘海盗船在黎明追赶那商船。"
+  },
+  {
+   "word": "disabled",
+   "ipa": "/dɪsˈeɪbld/",
+   "pos": "v.",
+   "gloss_cn": "使失灵受损",
+   "gloss_en": "damaged so it can no longer work",
+   "sense_key": "disable",
+   "ex_en": "The storm disabled the ship's rudder.",
+   "ex_cn": "风暴使船的舵失灵了。"
+  },
+  {
+   "word": "apprehended",
+   "ipa": "/ˌæprɪˈhendɪd/",
+   "pos": "v.",
+   "gloss_cn": "担心,忧虑",
+   "gloss_en": "feared or expected with worry",
+   "sense_key": "fear",
+   "ex_en": "He apprehended danger on the dark road.",
+   "ex_cn": "他担心黑暗的路上有危险。"
+  },
+  {
+   "word": "pinnace",
+   "ipa": "/ˈpɪnɪs/",
+   "pos": "n.",
+   "gloss_cn": "小艇",
+   "gloss_en": "a small light boat",
+   "sense_key": "small-boat",
+   "ex_en": "They rowed the pinnace back to the ship.",
+   "ex_cn": "他们划着小艇回到大船。"
+  },
+  {
+   "word": "haul",
+   "ipa": "/hɔːl/",
+   "pos": "v.",
+   "gloss_cn": "拖,拉",
+   "gloss_en": "pull something heavy with effort",
+   "sense_key": "pull",
+   "ex_en": "The men hauled the net onto the deck.",
+   "ex_cn": "船员们把渔网拖上甲板。"
+  },
+  {
+   "word": "jibed",
+   "ipa": "/dʒaɪbd/",
+   "pos": "v.",
+   "gloss_cn": "(帆桁)转向",
+   "gloss_en": "swung the sail across to the other side",
+   "sense_key": "swing-sail",
+   "ex_en": "The sail jibed as the wind shifted.",
+   "ex_cn": "风向一变,帆桁便转了向。"
+  },
+  {
+   "word": "lockers",
+   "ipa": "/ˈlɒkəz/",
+   "pos": "n.",
+   "gloss_cn": "储物箱(locker复数)",
+   "gloss_en": "small storage chests or compartments",
+   "sense_key": "chest",
+   "ex_en": "He kept his tools in two small lockers.",
+   "ex_cn": "他把工具放在两个小储物箱里。"
+  },
+  {
+   "word": "accommodate",
+   "ipa": "/əˈkɒmədeɪt/",
+   "pos": "v.",
+   "gloss_cn": "容纳,供应",
+   "gloss_en": "provide room or supplies for someone",
+   "sense_key": "provide-for",
+   "ex_en": "The boat could accommodate six men.",
+   "ex_cn": "这条船能容纳六个人。"
+  },
+  {
+   "word": "sup",
+   "ipa": "/sʌp/",
+   "pos": "v.",
+   "gloss_cn": "吃晚饭",
+   "gloss_en": "eat the evening meal",
+   "sense_key": "dine",
+   "ex_en": "They would sup together after the work.",
+   "ex_cn": "干完活后他们会一起吃晚饭。"
+  },
+  {
+   "word": "pretence",
+   "ipa": "/prɪˈtens/",
+   "pos": "n.",
+   "gloss_cn": "借口,托词",
+   "gloss_en": "a false reason given to hide the truth",
+   "sense_key": "excuse",
+   "ex_en": "He left on the pretence of being ill.",
+   "ex_cn": "他借口生病而离开。"
+  },
+  {
+   "word": "rusk",
+   "ipa": "/rʌsk/",
+   "pos": "n.",
+   "gloss_cn": "硬面包干",
+   "gloss_en": "a hard dry piece of baked bread",
+   "sense_key": "biscuit",
+   "ex_en": "The sailors ate rusk and dried fish.",
+   "ex_cn": "水手们吃着硬面包干和鱼干。"
+  },
+  {
+   "word": "evident",
+   "ipa": "/ˈevɪdənt/",
+   "pos": "adj.",
+   "gloss_cn": "明显的",
+   "gloss_en": "clearly seen or easily understood",
+   "sense_key": "obvious",
+   "ex_en": "It was evident that he was tired.",
+   "ex_cn": "很明显他累了。"
+  },
+  {
+   "word": "twine",
+   "ipa": "/twaɪn/",
+   "pos": "n.",
+   "gloss_cn": "细绳,麻线",
+   "gloss_en": "strong thin string or cord",
+   "sense_key": "string",
+   "ex_en": "She tied the parcel with strong twine.",
+   "ex_cn": "她用结实的细绳捆好包裹。"
+  },
+  {
+   "word": "windward",
+   "ipa": "/ˈwɪndwəd/",
+   "pos": "adv.",
+   "gloss_cn": "向上风处",
+   "gloss_en": "toward the direction the wind blows from",
+   "sense_key": "windward",
+   "ex_en": "The boat sailed windward to escape.",
+   "ex_cn": "小船朝上风处驶去以求脱身。"
+  },
+  {
+   "word": "conversing",
+   "ipa": "/kənˈvɜːsɪŋ/",
+   "pos": "v.",
+   "gloss_cn": "交谈",
+   "gloss_en": "talking with others",
+   "sense_key": "talk",
+   "ex_en": "They spent the evening conversing quietly.",
+   "ex_cn": "他们整晚静静地交谈。"
+  },
+  {
+   "word": "pint",
+   "ipa": "/paɪnt/",
+   "pos": "n.",
+   "gloss_cn": "品脱",
+   "gloss_en": "a unit of liquid measure",
+   "sense_key": "pint",
+   "ex_en": "There was not a pint of water left.",
+   "ex_cn": "连一品脱水都不剩了。"
+  },
+  {
+   "word": "rambled",
+   "ipa": "/ˈræmbld/",
+   "pos": "v.",
+   "gloss_cn": "漫步,闲逛",
+   "gloss_en": "walked about with no fixed aim",
+   "sense_key": "wander",
+   "ex_en": "The boy rambled along the riverbank.",
+   "ex_cn": "男孩沿着河岸漫步。"
+  },
+  {
+   "word": "leopards",
+   "ipa": "/ˈlepədz/",
+   "pos": "n.",
+   "gloss_cn": "豹(leopard复数)",
+   "gloss_en": "large spotted wild cats",
+   "sense_key": "leopard",
+   "ex_en": "Two leopards hid in the tall grass.",
+   "ex_cn": "两只豹藏在高草丛里。"
+  },
+  {
+   "word": "muzzle",
+   "ipa": "/ˈmʌzl/",
+   "pos": "n.",
+   "gloss_cn": "枪口",
+   "gloss_en": "the open front end of a gun barrel",
+   "sense_key": "gun-muzzle",
+   "ex_en": "He pointed the muzzle at the sky.",
+   "ex_cn": "他把枪口对着天空。"
+  },
+  {
+   "word": "game",
+   "ipa": "/ɡeɪm/",
+   "pos": "n.",
+   "gloss_cn": "猎物",
+   "gloss_en": "wild animals hunted for food or sport",
+   "sense_key": "quarry",
+   "ex_en": "The hunters brought home plenty of game.",
+   "ex_cn": "猎人们带回了许多猎物。"
+  },
+  {
+   "word": "charges",
+   "ipa": "/ˈtʃɑːdʒɪz/",
+   "pos": "n.",
+   "gloss_cn": "(弹药的)装填量",
+   "gloss_en": "measured loads of powder and shot",
+   "sense_key": "charge",
+   "ex_en": "He wasted three charges of powder.",
+   "ex_cn": "他白白浪费了三份火药。"
+  },
+  {
+   "word": "lance",
+   "ipa": "/lɑːns/",
+   "pos": "n.",
+   "gloss_cn": "长矛",
+   "gloss_en": "a long spear used as a weapon",
+   "sense_key": "spear",
+   "ex_en": "The rider carried a long lance.",
+   "ex_cn": "骑手拿着一支长长的矛。"
+  }
+ ],
+ "skipped": [
+  "calmer(太基础)",
+  "calmness(太基础·calm派生)",
+  "applying(太基础·apply派生)",
+  "sixth(序数词太基础)",
+  "preserving(太基础)",
+  "owners(太基础)",
+  "neighbours(太基础)",
+  "qualified(太基础)",
+  "contribute(太基础)",
+  "mathematics(学科名太基础)",
+  "trader(太基础·trade派生)",
+  "probability(太基础)",
+  "warned(太基础)",
+  "overnight(太基础)",
+  "hammer(太基础)",
+  "innocently(太基础·innocent派生)",
+  "fetching(太基础·fetch派生)",
+  "stretching(太基础·stretch派生)",
+  "wey(方言残渣=way)",
+  "cries(太基础·cry派生)",
+  "workman(太基础)"
+ ],
+ "suspect": [
+  {
+   "word": "veered",
+   "gloss_cn": "转向,改变方向",
+   "ctx": "...we thought once or twice our anchor had come home; ... so that we rode with two anchors ahead, and the cables veered out to the bitter end.",
+   "issue": "此处是航海术语,宾语是锚缆(cables veered out),意为把缆绳松放到底,而非船/风改变方向;回读'转向,改变方向'放不进'把缆放尽'的语境",
+   "suggest": "增/改为'松出、放长(缆绳)'义"
+  },
+  {
+   "word": "forcibly",
+   "gloss_cn": "强行地",
+   "ctx": "...that impressed those conceits so forcibly upon me as to make me deaf to all good advice...",
+   "issue": "此处 forcibly 修饰念头被'强烈/有力地'烙印在心上,不是'以武力强制去做';'强行地'含违背意愿用武力之意,回读不贴",
+   "suggest": "增/改为'强烈地、有力地(打动/铭刻)'义"
+  },
+  {
+   "word": "omitting",
+   "gloss_cn": "省略,遗漏",
+   "ctx": "...the devil generally not omitting to lay some snare for them very early...",
+   "issue": "omit to do 意为'疏于、忘记去做某事';'not omitting to lay a snare'=总不忘设下陷阱。'省略'指有意略去内容,与'疏于做某事'的用法不完全对应",
+   "suggest": "补'疏于、忘记(去做)'一义(omit to do)"
+  }
+ ]
+}

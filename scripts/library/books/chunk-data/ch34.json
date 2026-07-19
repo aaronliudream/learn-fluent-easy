@@ -1,0 +1,231 @@
+{
+  "chapter": 34,
+  "chunks": [
+    {
+      "head": "be used to",
+      "gloss": "习惯于",
+      "ipa": "/biː juːst tə/",
+      "note": "be used to sth / doing sth = 习惯于某事；注意区别于 used to do（过去常常做）。本章 Huck 说自己不习惯那种人多的场合。",
+      "literal": [
+        {"word": "used", "meaning_cn": "习惯的", "note_cn": "此处非“用过”，指“对…习以为常”"},
+        {"word": "to", "meaning_cn": "对于", "note_cn": "后接名词或动名词"}
+      ],
+      "ex_en": "I'm not used to getting up so early.",
+      "ex_cn": "我还不习惯这么早起床。",
+      "occ": [[4886, "used to"]]
+    },
+    {
+      "head": "take care of",
+      "gloss": "照顾；负责处理",
+      "ipa": "/teɪk ker əv/",
+      "note": "take care of sb = 照顾某人；take care of sth = 处理、料理某事。本章 Tom 说他会照顾 Huck。",
+      "literal": [
+        {"word": "take", "meaning_cn": "承担"},
+        {"word": "care", "meaning_cn": "照料"},
+        {"word": "of", "meaning_cn": "对…（负责）"}
+      ],
+      "ex_en": "Please take care of my dog while I'm away.",
+      "ex_cn": "我不在的时候请帮我照顾狗。",
+      "occ": [[4892, "take care of"]]
+    },
+    {
+      "head": "on account of",
+      "gloss": "因为；由于",
+      "ipa": "/ɑːn əˈkaʊnt əv/",
+      "note": "后接名词或动名词，表示原因，比 because of 略正式。",
+      "literal": [
+        {"word": "on", "meaning_cn": "基于"},
+        {"word": "account", "meaning_cn": "缘由", "note_cn": "此处非“账户”，指“原因”"},
+        {"word": "of", "meaning_cn": "…的"}
+      ],
+      "ex_en": "The game was cancelled on account of the rain.",
+      "ex_cn": "比赛因为下雨取消了。",
+      "occ": [[4900, "on account of"]]
+    },
+    {
+      "head": "get along with",
+      "gloss": "应付、把事办成；(与人)相处",
+      "ipa": "/ɡet əˈlɔːŋ wɪð/",
+      "note": "本章指“应付、把（秘密）弄成”；日常最常见义是“与某人相处融洽”。",
+      "literal": [
+        {"word": "get", "meaning_cn": "进展"},
+        {"word": "along", "meaning_cn": "向前", "note_cn": "此处指“进行、进展下去”"},
+        {"word": "with", "meaning_cn": "凭借、和"}
+      ],
+      "ex_en": "How are you getting along with your new job?",
+      "ex_cn": "你的新工作进展得怎么样？",
+      "occ": [[4905, "get along with"]]
+    },
+    {
+      "head": "let on",
+      "gloss": "假装、佯装;(次义)走漏口风、说出去",
+      "ipa": "/lɛt ɑːn/",
+      "note": "本章「tries to let on she don't」=(她)假装不知道(原书中译亦作'假装');次义'走漏口风、说出去'。on 非'在…上'。",
+      "literal": [
+        {"word": "let", "meaning_cn": "让"},
+        {"word": "on", "meaning_cn": "(习语介词)", "note_cn": "单独无实义，须整体记忆"}
+      ],
+      "ex_en": "She let on that she didn't care, but she did.",
+      "ex_cn": "她装作不在乎,其实很在意。",
+      "occ": [[4904, "let on"]]
+    },
+    {
+      "head": "spring something on someone",
+      "gloss": "冷不防向某人抛出(消息/要求)",
+      "ipa": "/sprɪŋ ˈsʌmθɪŋ ɑːn/",
+      "note": "spring 此处指“突然拿出、猛然抛出”，让人措手不及。本章指 Jones 想当众突然公布秘密。",
+      "literal": [
+        {"word": "spring", "meaning_cn": "突然抛出", "note_cn": "此处非“春天/弹跳”"},
+        {"word": "something", "meaning_cn": "某事物"},
+        {"word": "on", "meaning_cn": "冲着(某人)"}
+      ],
+      "ex_en": "He sprang the news on us right at dinner.",
+      "ex_cn": "他就在晚饭时冷不防向我们抛出这消息。",
+      "occ": [[4903, "spring something on"]]
+    },
+    {
+      "head": "never mind",
+      "gloss": "别管；没关系",
+      "ipa": "/ˈnevər maɪnd/",
+      "note": "叫对方不必在意某事，或不必去管某个问题。",
+      "literal": [
+        {"word": "never", "meaning_cn": "不必"},
+        {"word": "mind", "meaning_cn": "在意、介意"}
+      ],
+      "ex_en": "Never mind the mess—we'll clean it up later.",
+      "ex_cn": "别管这一团乱，我们待会儿再收拾。",
+      "occ": [[4911, "never mind"]]
+    },
+    {
+      "head": "catch it",
+      "gloss": "挨骂；受罚",
+      "ipa": "/kætʃ ɪt/",
+      "note": "口语，指将招来责骂或惩罚。本章 Tom 警告 Sid 明天要挨收拾。",
+      "literal": [
+        {"word": "catch", "meaning_cn": "招来", "note_cn": "此处非“抓住”，指“惹来(责罚)”"},
+        {"word": "it", "meaning_cn": "(指责骂/惩罚)"}
+      ],
+      "ex_en": "If you break that vase, you'll really catch it.",
+      "ex_cn": "你要是打碎那花瓶，可有得挨骂了。",
+      "occ": [[4917, "catch it"]]
+    },
+    {
+      "head": "and so forth",
+      "gloss": "等等；诸如此类",
+      "ipa": "/ənd soʊ fɔːrθ/",
+      "note": "列举一部分后表示后面还有同类，与 and so on 同义。",
+      "literal": [
+        {"word": "and", "meaning_cn": "和"},
+        {"word": "so", "meaning_cn": "如此"},
+        {"word": "forth", "meaning_cn": "向前", "note_cn": "此处为习语固定用词"}
+      ],
+      "ex_en": "Bring pens, paper, rulers, and so forth.",
+      "ex_cn": "把笔、纸、尺子等等都带上。",
+      "occ": [[4920, "and so forth"]]
+    },
+    {
+      "head": "out of doors",
+      "gloss": "在户外；到室外",
+      "ipa": "/aʊt əv dɔːrz/",
+      "note": "等于 outdoors，指在露天、屋外。本章 Tom 跑到屋外去取金币。",
+      "literal": [
+        {"word": "out", "meaning_cn": "在外"},
+        {"word": "of", "meaning_cn": "…的"},
+        {"word": "doors", "meaning_cn": "门(户)", "note_cn": "此处借指“室内”，out of doors 即“屋外”"}
+      ],
+      "ex_en": "The children love playing out of doors all day.",
+      "ex_cn": "孩子们喜欢一整天都在户外玩。",
+      "occ": [[4935, "out of doors"]]
+    },
+    {
+      "head": "amount to",
+      "gloss": "总计达；相当于；等于",
+      "ipa": "/əˈmaʊnt tə/",
+      "note": "既可指数目累计达到某数，也可指“相当于、意味着”。本章两处：Jones 的惊喜“算不上什么”，以及金币“总共达到”一万二千多。",
+      "literal": [
+        {"word": "amount", "meaning_cn": "达到(某数量)"},
+        {"word": "to", "meaning_cn": "至、到"}
+      ],
+      "ex_en": "His savings amount to a thousand dollars.",
+      "ex_cn": "他的积蓄总共有一千美元。",
+      "occ": [[4951, "amount to"], [4954, "amounted to"]]
+    },
+    {
+      "head": "keep back",
+      "gloss": "忍住；抑制；阻止",
+      "ipa": "/kiːp bæk/",
+      "note": "本章指“忍住（不笑出来）”；也可指扣下、隐瞒某事物。",
+      "literal": [
+        {"word": "keep", "meaning_cn": "使保持"},
+        {"word": "back", "meaning_cn": "往回", "note_cn": "此处指“压住不放出”"}
+      ],
+      "ex_en": "She could hardly keep back her tears.",
+      "ex_cn": "她几乎忍不住眼泪。",
+      "occ": [[4928, "kept back"]]
+    },
+    {
+      "head": "take one's breath away",
+      "gloss": "令人惊叹；使大吃一惊",
+      "ipa": "/teɪk wʌnz breθ əˈweɪ/",
+      "note": "本章出处为分离式（took the general breath away），故 card-only。指景象或消息美得/惊人得让人一时喘不过气。",
+      "literal": [
+        {"word": "take", "meaning_cn": "夺走"},
+        {"word": "the", "meaning_cn": "(众人的)"},
+        {"word": "breath", "meaning_cn": "呼吸、气息"},
+        {"word": "away", "meaning_cn": "离开"}
+      ],
+      "ex_en": "The view from the mountain top took my breath away.",
+      "ex_cn": "山顶的景色让我惊叹得说不出话。",
+      "cardOnly": true,
+      "key": "take one's breath away",
+      "exSeq": 4944
+    },
+    {
+      "head": "tell on someone",
+      "gloss": "告发；打小报告",
+      "ipa": "/tel ɑːn/",
+      "note": "本章出处为分离式（told anybody on the robbers），故 card-only。tell on sb = 揭发、检举某人。",
+      "literal": [
+        {"word": "tell", "meaning_cn": "告发"},
+        {"word": "on", "meaning_cn": "针对(某人)", "note_cn": "此处为“告发某人”的固定介词"},
+        {"word": "someone", "meaning_cn": "某人"}
+      ],
+      "ex_en": "My little brother told on me for eating the cake.",
+      "ex_cn": "我弟弟去告状说我偷吃了蛋糕。",
+      "cardOnly": true,
+      "key": "tell on",
+      "exSeq": 4914
+    },
+    {
+      "head": "make out",
+      "gloss": "看清；辨认出；弄懂",
+      "ipa": "/meɪk aʊt/",
+      "note": "本章出处为分离式（making of that boy out），故 card-only。指费力地看清、听清或搞懂某人某事。",
+      "literal": [
+        {"word": "make", "meaning_cn": "弄"},
+        {"word": "out", "meaning_cn": "出来", "note_cn": "此处指“辨认/弄明白”"}
+      ],
+      "ex_en": "I can't make out what this note says.",
+      "ex_cn": "我看不清这张便条写的是什么。",
+      "cardOnly": true,
+      "key": "make out",
+      "exSeq": 4938
+    },
+    {"head":"allow","gloss":"(老式)承认、认定、断言","ipa":"/əˈlaʊ/","note":"老式/方言 allow = 承认、认定、断言(= admit / declare),非'允许'义。此处「I'm willing to allow」=我愿意承认。同族:allow as how = 认为。⚠️本书其余 allow 多为'允许'义(不收),索引按 seq 精确锁本处。","literal":[{"word":"allow","meaning_cn":"(此处)承认、认定","note_cn":"非'允许'"}],"ex_en":"He allowed that he might be wrong.","ex_cn":"他承认自己可能错了。","occ":[[4952,"allow"]]}
+  ],
+  "skipped": [
+    "slope (方言俚语：溜走、逃跑)",
+    "ain't / jist / 'tend / don't / you'd 'a' (方言拼写，迁移弱)",
+    "blowout (俚语：盛大聚会，一次性)",
+    "was bound (that) (旧式：决意、非要，一次性)",
+    "drop pretty flat / fall flat (变体，一次性)",
+    "make a grand time over (一次性)",
+    "after the fashion of (文雅一次性)",
+    "make a show of (备选，控量舍去)",
+    "help sb out of (备选，控量舍去)",
+    "prop up / fix up (备选，控量舍去)",
+    "tongue-tied (一次性形容语)",
+    "at one time (偏基础)",
+    "专名 Huck / Tom / Sid / Aunt Polly / Mr. Jones / the Welshman / the widow"
+  ]
+}

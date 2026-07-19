@@ -135,6 +135,7 @@ export default function LibraryReader() {
   const liRefs = useRef<(HTMLElement | null)[]>([]);
   const lastUserScrollRef = useRef(0);
   const lastActiveRef = useRef(Date.now()); // 任一活跃信号(滚/触/鼠标/键/选中/点词)刷新 → 无操作判定用
+  const anchorSeqRef = useRef(-1); // 当前视口锚点句的全书 seq;由 bump 记录,活跃心跳才把它提升为 furthest(完成度=读过非扫过)
   const longPressRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const stateRef = useRef<LibraryReadingState>(defaultLibraryState());
@@ -344,12 +345,12 @@ export default function LibraryReader() {
     let focused = typeof document === "undefined" ? true : document.hasFocus();
     const onFocus = () => { focused = true; lastActiveRef.current = Date.now(); };
     const onBlur = () => { focused = false; };
-    const bump = () => { lastActiveRef.current = Date.now(); };
+    const markActive = () => { lastActiveRef.current = Date.now(); };
     window.addEventListener("focus", onFocus);
     window.addEventListener("blur", onBlur);
     const winActs = ["scroll", "wheel", "touchmove", "mousemove", "keydown", "pointerdown"] as const;
-    for (const e of winActs) window.addEventListener(e, bump, { passive: true });
-    document.addEventListener("selectionchange", bump); // 台式机文本选中
+    for (const e of winActs) window.addEventListener(e, markActive, { passive: true });
+    document.addEventListener("selectionchange", markActive); // 台式机文本选中
 
     // 无操作阈值(ms):按当前视口可见词数动态算
     const idleThresholdMs = () => {
@@ -371,6 +372,12 @@ export default function LibraryReader() {
       if (Date.now() - lastActiveRef.current > idleThresholdMs()) return; // ③ 无操作超阈值
       const s = stateRef.current;
       s.seconds += Math.round(HEARTBEAT_MS / 1000);
+      // 完成度=读过非扫过:只有活跃心跳(可见+聚焦+非idle)时,才把当前视口锚点句提升为 furthest。
+      // 目录跳章/续读定位/朗读挂机(失焦或无操作)都不会推进 furthest,根治"扫过就算读过"的 41% 虚高。
+      if (anchorSeqRef.current > s.furthest_seq) {
+        s.furthest_seq = anchorSeqRef.current;
+        setFurthestSeq(s.furthest_seq);
+      }
       s.updated_at = Date.now();
       setSeconds(s.seconds);
       persist();
@@ -379,8 +386,8 @@ export default function LibraryReader() {
       clearInterval(timer);
       window.removeEventListener("focus", onFocus);
       window.removeEventListener("blur", onBlur);
-      for (const e of winActs) window.removeEventListener(e, bump);
-      document.removeEventListener("selectionchange", bump);
+      for (const e of winActs) window.removeEventListener(e, markActive);
+      document.removeEventListener("selectionchange", markActive);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, book]);
@@ -392,7 +399,8 @@ export default function LibraryReader() {
     if (uidRef.current) scheduleCloudPush(uidRef.current, b.id, stateRef.current);
   }, [book]);
 
-  // 到达某句 → 记进度(furthest 不回退;断点 = 该句 + 其章号,均记全书 seq)
+  // 到达某句 → 记断点(last_seq 可回退,续读用)+ 记锚点句(furthest 不在此推进,交给活跃心跳判定"读过")。
+  // ⚠️ 不再在滚动/朗读时直接推 furthest:那会把"扫过/跳章/挂机"当成读过(41% 虚高根因)。
   const bump = useCallback(
     (i: number) => {
       const s = sentences[i];
@@ -400,9 +408,8 @@ export default function LibraryReader() {
       const st = stateRef.current;
       st.last_seq = s.seq;
       st.chapter_idx = s.chapter_idx;
-      st.furthest_seq = Math.max(st.furthest_seq, s.seq);
+      anchorSeqRef.current = s.seq; // 当前视口锚点 → 活跃心跳才提升为 furthest
       st.updated_at = Date.now();
-      setFurthestSeq(st.furthest_seq);
       persist();
     },
     [sentences, persist],

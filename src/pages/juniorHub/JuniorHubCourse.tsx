@@ -1,14 +1,17 @@
-﻿import { useNavigate } from "react-router-dom";
+﻿import { useNavigate, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
 import { getGradeCourse, semesterIdsForGrade } from "@/lib/juniorHub/courseData";
+import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 import { getSemesterProgress } from "@/lib/juniorHub/progress";
 
 export default function JuniorHubCourse() {
   const { grade, state } = useJuniorHub();
   const nav = useNavigate();
-  const course = getGradeCourse(grade);
+  const [sp] = useSearchParams();
+  const pub = readJuniorPublisherParam(sp);
+  const course = getGradeCourse(grade, pub);
   const base = `/junior/hub/${grade}`;
-  const semIds = semesterIdsForGrade(grade);
+  const semIds = semesterIdsForGrade(grade, pub);
 
   return (
     <>
@@ -28,7 +31,7 @@ export default function JuniorHubCourse() {
               key={semId}
               type="button"
               disabled={locked}
-              onClick={() => !locked && nav(`${base}/semester/${semId}`)}
+              onClick={() => !locked && nav(withJuniorPublisher(`${base}/semester/${semId}`, pub))}
               className={`mb-3 w-full rounded-2xl bg-white p-4 text-left shadow-sm ${locked ? "opacity-70" : ""}`}
             >
               <div className="flex items-center gap-3">

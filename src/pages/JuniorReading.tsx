@@ -8,6 +8,7 @@ import StarRating from "@/components/StarRating";
 import { loadMastery, MasteryRow, statusOf, PASS_PCT } from "@/lib/masteryProgress";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import { JuniorGradeFilter, juniorGradeParams, type JuniorGradeKey } from "@/components/junior/JuniorGradeFilter";
+import { dbPublisherFor, readJuniorPublisherParam } from "@/lib/juniorHub/publisher";
 
 /** 从 ?grade= 参数(可能是 1/2/3 或 7/8/9)推出筛选条 chip 的当前值。 */
 function gradeKeyFromParam(grade: string | null): JuniorGradeKey {
@@ -21,6 +22,7 @@ type R = {id: string;title: string;topic: string | null;word_count: number | nul
 export default function JuniorReading() {
   const [params, setParams] = useSearchParams();
   const grade = params.get("grade");
+  const dbPub = dbPublisherFor(readJuniorPublisherParam(params)); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
   const backTo = "/junior";
   const onGrade = (key: JuniorGradeKey) => {
     const { dbGrade } = juniorGradeParams(key);
@@ -36,7 +38,7 @@ export default function JuniorReading() {
   useEffect(() => {
     const gradeMap: Record<string, number> = { "1": 7, "2": 8, "3": 9 };
     const dbGrade = grade ? gradeMap[grade] ?? Number(grade) : null;
-    let q = supabase.from("junior_reading").select("id,title,topic,word_count,difficulty,grade").order("grade").order("difficulty", { ascending: true }).order("created_at", { ascending: true });
+    let q = supabase.from("junior_reading").select("id,title,topic,word_count,difficulty,grade").eq("publisher", dbPub).order("grade").order("difficulty", { ascending: true }).order("created_at", { ascending: true });
     if (dbGrade) q = q.eq("grade", dbGrade);
     q.then(({ data }) => {
       // 排序：年级 → 册别(上册先, 下册后) → 难度 → 词数。
@@ -51,7 +53,7 @@ export default function JuniorReading() {
       setItems(rows);
     });
     loadMastery("junior_reading").then(setMastery);
-  }, [grade]);
+  }, [grade, dbPub]);
 
   // 分组(决定上下顺序):待办(未做+没全对) 置顶 / 待复习 / 已掌握(一次全对100%) 沉底。
   // ⚠️ 阅读掌握标准 = best_pct>=100(一次全对即掌握),不用 star 阈值(语法/听力另有判定,别套用)。

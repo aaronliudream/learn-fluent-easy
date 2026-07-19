@@ -48,6 +48,11 @@ function gaokaoPublisher(unitId: string): Publisher {
   return "pep";
 }
 
+/** 初中出版社:外研社单元 id 前缀 wy*(全局唯一),其余 = 人教。 */
+function juniorPublisher(unitId: string): "pep" | "fltrp" {
+  return unitId.startsWith("wy") ? "fltrp" : "pep";
+}
+
 interface Persistish {
   currentUnit?: string;
   currentSemester?: string;
@@ -194,9 +199,11 @@ function candidatesFor(stage: ContinueStage): ContinueTarget[] {
       for (const g of [7, 8, 9]) {
         const p = loadJunior(g as never) as Persistish;
         const base = `/junior/hub/${g}`;
+        // 人教单元不加参(零回归);外研社单元(wy* 前缀)补 ?publisher=fltrp。
+        const qFor = (uid: string) => (juniorPublisher(uid) === "pep" ? "" : `?publisher=${juniorPublisher(uid)}`);
         const t =
-          resolveForward("junior", base, p, orderedUnitsJunior(g), () => "") ??
-          resolveLegacy("junior", base, p, findJuniorUnit(p.currentUnit ?? "") as UnitLike | null, "");
+          resolveForward("junior", base, p, orderedUnitsJunior(g), qFor) ??
+          resolveLegacy("junior", base, p, findJuniorUnit(p.currentUnit ?? "") as UnitLike | null, qFor(p.currentUnit ?? ""));
         if (t) out.push(t);
       }
     } else {

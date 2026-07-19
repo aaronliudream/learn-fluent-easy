@@ -8,6 +8,7 @@ import { MasteryBadge, type MasteryStatus } from "@/components/mastery/MasteryBa
 import { MasteryRing } from "@/components/mastery/MasteryRing";
 import { cn } from "@/lib/utils";
 import { JuniorGradeFilter, juniorGradeParams, type JuniorGradeKey } from "@/components/junior/JuniorGradeFilter";
+import { dbPublisherFor, readJuniorPublisherParam } from "@/lib/juniorHub/publisher";
 
 /** 从 ?grade= 参数(可能是 1/2/3 或 7/8/9)推出筛选条 chip 的当前值。 */
 function gradeKeyFromParam(grade: string | null): JuniorGradeKey {
@@ -58,6 +59,7 @@ function pctOf(agg: AttemptAgg | undefined) {
 export default function JuniorListening() {
   const [params, setParams] = useSearchParams();
   const grade = params.get("grade");
+  const dbPub = dbPublisherFor(readJuniorPublisherParam(params)); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
   const backTo = "/junior";
   const onGrade = (key: JuniorGradeKey) => {
     const { dbGrade } = juniorGradeParams(key);
@@ -78,6 +80,7 @@ export default function JuniorListening() {
   useEffect(() => {
     let q: any = (supabase as any).from("junior_listening_exercises").
     select("id,title,topic,grade,difficulty,kind,duration_sec").
+    eq("publisher", dbPub).
     order("title");
     if (grade) {
       const g = Number(grade);
@@ -85,7 +88,7 @@ export default function JuniorListening() {
       q = q.eq("grade", dbGrade);
     }
     q.then(({ data }: any) => setItems((data ?? []) as E[]));
-  }, [grade]);
+  }, [grade, dbPub]);
 
   // load attempts
   useEffect(() => {

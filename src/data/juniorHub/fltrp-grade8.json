@@ -1,0 +1,17 @@
+{
+  "grade8": {
+    "name": "八年级(外研社)",
+    "semesters": {
+      "wy_grade8_volume1": {
+        "name": "上册",
+        "available": false,
+        "units": []
+      },
+      "wy_grade8_volume2": {
+        "name": "下册",
+        "available": false,
+        "units": []
+      }
+    }
+  }
+}

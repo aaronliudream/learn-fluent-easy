@@ -4,21 +4,24 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, PenLine } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
+import { dbPublisherFor, readJuniorPublisherParam } from "@/lib/juniorHub/publisher";
 
 type P = {id: string;topic: string;prompt_cn: string;grade: number;min_words: number;max_words: number;difficulty: number;};
 
 export default function JuniorWriting() {
   const [params] = useSearchParams();
   const grade = params.get("grade");
+  const dbPub = dbPublisherFor(readJuniorPublisherParam(params)); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
   const backTo = "/junior";
   const [items, setItems] = useState<P[]>([]);
   useEffect(() => {
     let q: any = (supabase as any).from("junior_writing_prompts").
     select("id,topic,prompt_cn,grade,min_words,max_words,difficulty").
+    eq("publisher", dbPub).
     order("grade");
     if (grade) q = q.eq("grade", Number(grade));
     q.then(({ data }: any) => setItems((data ?? []) as P[]));
-  }, [grade]);
+  }, [grade, dbPub]);
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
       <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回初中专区</BackLink>

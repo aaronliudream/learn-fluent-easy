@@ -1,6 +1,7 @@
-﻿import { useNavigate, useParams } from "react-router-dom";
+﻿import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
 import { findSemester, getGradeCourse } from "@/lib/juniorHub/courseData";
+import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 import { unitLabel } from "./JuniorHubUnit";
 import { getSemesterProgress, getUnitProgress } from "@/lib/juniorHub/progress";
 import { savePersist } from "@/lib/juniorHub/storage";
@@ -10,8 +11,11 @@ export default function JuniorHubSemester() {
   const { semId } = useParams<{ semId: string }>();
   const { grade, state, setState } = useJuniorHub();
   const nav = useNavigate();
+  const [qp] = useSearchParams();
+  const pub = readJuniorPublisherParam(qp);
+  const wp = (p: string) => withJuniorPublisher(p, pub);
   const sem = semId ? findSemester(semId) : null;
-  const course = getGradeCourse(grade);
+  const course = getGradeCourse(grade, pub);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/junior/hub/${grade}`;
 
@@ -22,7 +26,7 @@ export default function JuniorHubSemester() {
   return (
     <>
       <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
-        <button type="button" onClick={() => nav(`${base}/course`)} className="text-xl">
+        <button type="button" onClick={() => nav(wp(`${base}/course`))} className="text-xl">
           ←
         </button>
         <div className="text-lg font-bold">
@@ -66,7 +70,7 @@ export default function JuniorHubSemester() {
                   savePersist(grade, next);
                   return next;
                 });
-                nav(`${base}/semester/${semId}/unit/${unit.id}`);
+                nav(wp(`${base}/semester/${semId}/unit/${unit.id}`));
               }}
               className={`w-full rounded-2xl border-2 bg-white p-4 text-left shadow-sm ${
                 isCurrent ? "border-[#FF6B35]" : "border-transparent"
@@ -96,8 +100,8 @@ export default function JuniorHubSemester() {
           );
         })}
 
-        {/* 综合挑战入口:仅七年级有题库;上册=期中(v1)、下册=期末(v2),按本学期册别展示对应一张。 */}
-        {grade === 7 && (
+        {/* 综合挑战入口:仅人教七年级有题库;上册=期中(v1)、下册=期末(v2)。外研社暂无 → 不展示。 */}
+        {grade === 7 && pub === "pep" && (
           <JuniorFinalChallengeEntryCard
             volume={semId.endsWith("volume2") ? "v2" : "v1"}
           />

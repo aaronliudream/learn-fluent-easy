@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
+import { dbPublisherFor, readJuniorPublisherParam } from "@/lib/juniorHub/publisher";
 import { ArrowLeft, ChevronRight, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { loadUnitGrammar, type GUnit } from "@/lib/juniorGrammarUnits";
@@ -25,6 +26,8 @@ const volLabel = (v: string) => VOLUME_LABELS[v] ?? v;
 
 /** 语法页 L1:学期 Tab + 紧凑网格单元卡(配色编号),每卡显示完成度/掌握度。点进 → 单元语法点。 */
 export default function JuniorGrammarUnits() {
+  const [params] = useSearchParams();
+  const dbPub = dbPublisherFor(readJuniorPublisherParam(params)); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
   const [units, setUnits] = useState<GUnit[] | null>(null);
   const [mastery, setMastery] = useState<Map<string, QMasteryRow>>(new Map());
   const [vol, setVol] = useState<string>("7A");
@@ -32,7 +35,7 @@ export default function JuniorGrammarUnits() {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const us = await loadUnitGrammar();
+      const us = await loadUnitGrammar(dbPub);
       if (cancelled) return;
       setUnits(us);
       const m = await loadGrammarQuestionMastery(us.flatMap((u) => u.questionIds));
@@ -41,7 +44,7 @@ export default function JuniorGrammarUnits() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [dbPub]);
 
   const volumes = useMemo(() => [...new Set((units ?? []).map((u) => u.volume))], [units]);
   useEffect(() => {

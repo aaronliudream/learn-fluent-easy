@@ -1,13 +1,17 @@
-﻿import { Link } from "react-router-dom";
+﻿import { Link, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
 import { getGradeProgress, getTotalStars } from "@/lib/juniorHub/progress";
 import { getGradeCourse } from "@/lib/juniorHub/courseData";
+import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 
 export default function JuniorHubProfile() {
   const { grade, state } = useJuniorHub();
+  const [sp] = useSearchParams();
+  const pub = readJuniorPublisherParam(sp);
+  const wp = (p: string) => withJuniorPublisher(p, pub);
   const base = `/junior/hub/${grade}`;
-  const course = getGradeCourse(grade);
-  const gp = getGradeProgress(state, grade);
+  const course = getGradeCourse(grade, pub);
+  const gp = getGradeProgress(state, grade, pub);
   const last = state.aiTestHistory[state.aiTestHistory.length - 1];
 
   return (
@@ -24,7 +28,7 @@ export default function JuniorHubProfile() {
           <div className="text-xs">⭐ {getTotalStars(state)} 星星</div>
         </div>
         <Link
-          to={`${base}/mistakes`}
+          to={wp(`${base}/mistakes`)}
           className="flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm"
         >
           <span className="text-2xl">📝</span>
@@ -35,7 +39,7 @@ export default function JuniorHubProfile() {
           <span>›</span>
         </Link>
         <Link
-          to={`${base}/aihistory`}
+          to={wp(`${base}/aihistory`)}
           className="flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm"
         >
           <span className="text-2xl">📊</span>

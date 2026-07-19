@@ -1,0 +1,613 @@
+{
+  "grade7": {
+    "name": "七年级(外研社)",
+    "semesters": {
+      "wy_grade7_volume1": {
+        "name": "上册",
+        "available": true,
+        "units": [
+          {
+            "id": "wy7v1_starter",
+            "num": 1,
+            "unitKey": "Starter",
+            "book": "wy7A",
+            "title": "Starter Welcome to junior high!",
+            "cn": "整理中",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": null,
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy7v1_u1",
+            "num": 2,
+            "unitKey": "U1",
+            "book": "wy7A",
+            "title": "Unit 1 A new start",
+            "cn": "整理中",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": null,
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy7v1_u2",
+            "num": 3,
+            "unitKey": "U2",
+            "book": "wy7A",
+            "title": "Unit 2 More than fun",
+            "cn": "整理中",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": null,
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy7v1_u3",
+            "num": 4,
+            "unitKey": "U3",
+            "book": "wy7A",
+            "title": "Unit 3 （待 PDF 确认）",
+            "cn": "整理中",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": null,
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy7v1_u4",
+            "num": 5,
+            "unitKey": "U4",
+            "book": "wy7A",
+            "title": "Unit 4 Time to celebrate",
+            "cn": "整理中",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": null,
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy7v1_u5",
+            "num": 6,
+            "unitKey": "U5",
+            "book": "wy7A",
+            "title": "Unit 5 （待 PDF 确认）",
+            "cn": "整理中",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": null,
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy7v1_u6",
+            "num": 7,
+            "unitKey": "U6",
+            "book": "wy7A",
+            "title": "Unit 6 （待 PDF 确认）",
+            "cn": "整理中",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": null,
+            "quizQuestions": [],
+            "listeningQuestions": []
+          }
+        ]
+      },
+      "wy_grade7_volume2": {
+        "name": "下册",
+        "available": false,
+        "units": []
+      }
+    }
+  }
+}

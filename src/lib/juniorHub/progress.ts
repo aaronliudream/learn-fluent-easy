@@ -1,5 +1,6 @@
 import { findSemester, findUnit, getGradeCourse } from "./courseData";
 import { getUnitState } from "./storage";
+import type { JuniorPublisher } from "./publisher";
 import { AI_TEST_PROGRESS_STEP, type JuniorHubGrade, type JuniorHubPersist } from "./types";
 
 export function getUnitProgress(state: JuniorHubPersist, unitId: string) {
@@ -35,8 +36,8 @@ export function getSemesterProgress(state: JuniorHubPersist, semesterId: string)
   };
 }
 
-export function getGradeProgress(state: JuniorHubPersist, grade: JuniorHubGrade) {
-  const course = getGradeCourse(grade);
+export function getGradeProgress(state: JuniorHubPersist, grade: JuniorHubGrade, publisher: JuniorPublisher = "pep") {
+  const course = getGradeCourse(grade, publisher);
   let totalStages = 0;
   let completedStages = 0;
   Object.values(course.semesters).forEach((sem) => {

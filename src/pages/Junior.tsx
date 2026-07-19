@@ -1,6 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, BookOpen } from "lucide-react";
+import {
+  JUNIOR_PUBLISHER_META,
+  JUNIOR_PUBLISHER_ORDER,
+  readJuniorPublisherParam,
+  withJuniorPublisher,
+  type JuniorPublisher,
+} from "@/lib/juniorHub/publisher";
 import { supabase } from "@/integrations/supabase/client";
 import { useMasteryOverview } from "@/hooks/useMasteryOverview";
 import { useJuniorClassroomSync } from "@/hooks/useJuniorClassroomSync";
@@ -74,7 +81,80 @@ function examProgress(): { done: number; total: number; percent: number } {
   return { done, total, percent: total ? Math.round((done / total) * 100) : 0 };
 }
 
+/* ============ 出版社选择页(裸进 /junior,无 publisher 参数时) ============ */
+function JuniorPublisherChooser() {
+  return (
+    <div
+      className={`min-h-screen ${SANS}`}
+      style={{
+        color: C.ink,
+        background: `radial-gradient(1200px 500px at 80% -10%, #eadfca 0%, transparent 60%), ${C.cream}`,
+      }}
+    >
+      <header
+        className="sticky top-0 z-20 backdrop-blur-md"
+        style={{ background: "rgba(251,248,242,.86)", borderBottom: `1px solid ${C.line}` }}
+      >
+        <div className="mx-auto flex h-[66px] max-w-[1080px] items-center gap-3 px-[22px]">
+          <Link
+            to="/#courses"
+            className="inline-flex flex-none items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[13px] font-medium shadow-sm transition-transform hover:-translate-y-px"
+            style={{ background: C.ink, color: C.goldSoft, border: `1px solid ${C.gold}` }}
+          >
+            <ArrowLeft className="size-4" />
+            返回首页
+          </Link>
+          <Link to="/#courses" className="flex items-center gap-2.5 font-bold">
+            <span
+              className="grid size-[30px] flex-none place-items-center rounded-lg"
+              style={{ background: `linear-gradient(135deg, ${C.ink}, #2f3b56)`, color: C.goldSoft }}
+            >
+              <BookOpen className="size-[17px]" />
+            </span>
+            <span className={`hidden text-[20px] tracking-wide lg:inline ${DISPLAY}`}>Middle&nbsp;School&nbsp;English</span>
+          </Link>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-[860px] px-[22px] py-10">
+        <div className="mb-1">
+          <h1 className={`text-3xl ${SERIF}`} style={{ color: C.ink }}>选择教材版本</h1>
+          <p className="mt-2 text-sm" style={{ color: C.inkSoft }}>
+            不同出版社的分册与单元不同。选定后进入该版本的课本同步与专项练习。
+          </p>
+        </div>
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {JUNIOR_PUBLISHER_ORDER.map((code) => {
+            const meta = JUNIOR_PUBLISHER_META[code];
+            return (
+              <Link
+                key={code}
+                to={`/junior?publisher=${code}`}
+                className="flex flex-col rounded-2xl border-2 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                style={{ borderColor: C.line }}
+              >
+                <span className="text-5xl">{meta.emoji}</span>
+                <span className="mt-3 text-xl font-extrabold" style={{ color: C.ink }}>{meta.name}</span>
+                <span className="mt-1 text-xs" style={{ color: C.inkSoft }}>{meta.sub}</span>
+                <span className="mt-3 text-[13px] leading-snug" style={{ color: C.inkSoft }}>{meta.tagline}</span>
+              </Link>
+            );
+          })}
+        </div>
+      </main>
+    </div>
+  );
+}
+
+/* ============ 两层入口:裸进 → 选择页;带 ?publisher= → 该社内容 ============ */
 export default function Junior() {
+  const [sp] = useSearchParams();
+  // ★判定用 has() 而非解析结果★:否则人教默认解析成 pep,选择页永远进不去(自引用死循环)。
+  if (!sp.has("publisher")) return <JuniorPublisherChooser />;
+  return <JuniorContent pub={readJuniorPublisherParam(sp)} />;
+}
+
+function JuniorContent({ pub }: { pub: JuniorPublisher }) {
   const [grade, setGrade] = useState<JuniorGradeKey>(() => readSavedGrade());
   const [userId, setUserId] = useState<string | null>(null);
   const [displayName, setDisplayName] = useState<string | null>(null); // profiles.display_name → username
@@ -182,10 +262,11 @@ export default function Junior() {
   const classroomSub =
     grade === "all" ? "教材配套学习 · 初一至初三综合" : `教材配套学习 · ${GRADE_LABELS[grade]}`;
 
+  const pubName = JUNIOR_PUBLISHER_META[pub].name;
   const classroomDesc =
     grade === "all"
-      ? `人教版同步 · 词汇/语法/阅读/听力/写作 · 已掌握 ${classroom.mastered}/${classroom.total} 项`
-      : `${GRADE_LABELS[grade]}人教版同步 · 每单元 8 关 · 10% 进度 AI 小测 · ${classroom.mastered}/${classroom.total} 项已掌握`;
+      ? `${pubName}同步 · 词汇/语法/阅读/听力/写作 · 已掌握 ${classroom.mastered}/${classroom.total} 项`
+      : `${GRADE_LABELS[grade]}${pubName}同步 · 每单元 8 关 · 10% 进度 AI 小测 · ${classroom.mastered}/${classroom.total} 项已掌握`;
 
   const ringPct = classroom.percent; // 掌握度 %（classroom.mastered ÷ classroom.total，五模块+阶段测试）
 
@@ -266,6 +347,19 @@ export default function Junior() {
       </header>
 
       <main className="mx-auto max-w-[1080px] px-[22px]">
+        {/* ===== 当前出版社 + 换版本 ===== */}
+        <div
+          className="mt-[18px] flex items-center justify-between rounded-xl bg-white px-4 py-2 shadow-sm"
+          style={{ border: `1px solid ${C.line}` }}
+        >
+          <span className="text-sm font-bold" style={{ color: C.ink }}>
+            {JUNIOR_PUBLISHER_META[pub].emoji} 当前：{pubName}
+          </span>
+          <Link to="/junior" className="text-xs font-semibold text-indigo-600 hover:underline">
+            换教材版本 →
+          </Link>
+        </div>
+
         {/* ===== Hero ===== */}
         <section
           className="relative mt-[22px] flex min-h-[260px] items-center overflow-hidden rounded-2xl text-white sm:min-h-[300px]"
@@ -347,13 +441,13 @@ export default function Junior() {
           <div className="relative flex flex-wrap items-center gap-6 p-8 sm:px-9">
             <div className="min-w-[240px] flex-1">
               <span className="inline-block rounded-full px-2.5 py-1 text-[11.5px]" style={{ background: "rgba(255,255,255,.16)" }}>
-                教材同步 · 人教版
+                教材同步 · {pubName}
               </span>
               <h2 className={`mt-3 text-3xl ${SERIF}`}>课堂同步</h2>
               <div className="mt-1.5 text-[13px] text-[#cdd9ea]">{classroomSub}</div>
               <div className="my-3 max-w-[460px] text-[13px] text-[#cdd9ea]">{classroomDesc}</div>
               <Link
-                to={classroomTo}
+                to={withJuniorPublisher(classroomTo, pub)}
                 className="inline-flex items-center gap-2 rounded-[10px] px-[18px] py-2.5 text-[13.5px] font-medium"
                 style={{ background: C.goldSoft, color: "#2a2410" }}
               >
@@ -385,7 +479,7 @@ export default function Junior() {
             return (
               <Link
                 key={card.key}
-                to={card.to(query)}
+                to={withJuniorPublisher(card.to(query), pub)}
                 className="group relative flex min-h-[230px] flex-col justify-end overflow-hidden rounded-2xl text-white transition-transform duration-300 hover:-translate-y-1"
                 style={{ boxShadow: SHADOW, isolation: "isolate" }}
               >

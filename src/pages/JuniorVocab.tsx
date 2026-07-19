@@ -24,6 +24,7 @@ import { useJuniorVocabMastery, MASTER_STREAK } from "@/hooks/useJuniorVocabMast
 import { canonSpelling } from "@/lib/spellingVariants";
 import { unlockAudioSync } from "@/lib/speak";
 import { Rocket } from "lucide-react";
+import { dbPublisherFor, readJuniorPublisherParam } from "@/lib/juniorHub/publisher";
 
 export type Vocab = {
   id: string;
@@ -54,6 +55,7 @@ export default function JuniorVocab() {
   const grade = params.get("grade") ?? "1";
   const mode = params.get("mode") as Mode ?? null;
   const groupParam = Number(params.get("group") ?? "0");
+  const dbPub = dbPublisherFor(readJuniorPublisherParam(params)); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
 
   const [words, setWords] = useState<Vocab[]>([]);
   const [loading, setLoading] = useState(true);
@@ -73,6 +75,7 @@ export default function JuniorVocab() {
         from("junior_vocab").
         select(COLS).
         eq("grade", gradeNum).
+        eq("publisher", dbPub).
         order("freq_rank", { ascending: true, nullsFirst: false }).
         range(from, from + PAGE - 1);
         if (error || !data || data.length === 0) break;
@@ -82,7 +85,7 @@ export default function JuniorVocab() {
       setWords(all);
       setLoading(false);
     })();
-  }, [grade]);
+  }, [grade, dbPub]);
 
   const rawGrade = Number(grade);
   const absGrade = rawGrade <= 3 ? rawGrade + 6 : rawGrade;

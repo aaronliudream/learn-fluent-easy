@@ -1,4 +1,4 @@
-﻿import { Link, useNavigate } from "react-router-dom";
+﻿import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
 import {
   getGradeProgress,
@@ -8,6 +8,7 @@ import {
   getUnitProgress,
 } from "@/lib/juniorHub/progress";
 import { findUnit, getGradeCourse, semesterIdsForGrade } from "@/lib/juniorHub/courseData";
+import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 import { unitLabel } from "./JuniorHubUnit";
 import { getUnitState } from "@/lib/juniorHub/storage";
 import { AITestCard } from "@/components/juniorHub/AITestCard";
@@ -15,18 +16,25 @@ import { AITestCard } from "@/components/juniorHub/AITestCard";
 export default function JuniorHubHome() {
   const { grade, state } = useJuniorHub();
   const nav = useNavigate();
-  const course = getGradeCourse(grade);
-  const gradeP = getGradeProgress(state, grade);
-  const semIds = semesterIdsForGrade(grade);
+  const [sp] = useSearchParams();
+  const pub = readJuniorPublisherParam(sp);
+  const wp = (p: string) => withJuniorPublisher(p, pub);
+  const course = getGradeCourse(grade, pub);
+  const gradeP = getGradeProgress(state, grade, pub);
+  const semIds = semesterIdsForGrade(grade, pub);
   const v1Id = semIds[0];
   const v2Id = semIds[1];
   const semV1 = v1Id ? getSemesterProgress(state, v1Id) : { percent: 0 };
   const semV2 = v2Id ? getSemesterProgress(state, v2Id) : { percent: 0 };
 
   const currentUnit = findUnit(state.currentUnit);
+  // 进度 state 按 grade 共享(pep/fltrp 同一 juniorHub:N),但 unitId 前缀区分出版社(wy*=外研社)。
+  // 「继续学习」卡只在 currentUnit 属于当前出版社时显示,避免跨社串味(如默认 currentUnit 是人教单元)。
+  const currentUnitMatchesPub =
+    !!currentUnit && (currentUnit.id.startsWith("wy") ? pub === "fltrp" : pub === "pep");
   const us = currentUnit ? getUnitState(state, currentUnit.id) : null;
   const nextStageIdx = us?.completedStages.length ?? 0;
-  const nextStage = currentUnit?.stages[nextStageIdx];
+  const nextStage = currentUnitMatchesPub ? currentUnit?.stages[nextStageIdx] : undefined;
   const unitP = currentUnit ? getUnitProgress(state, currentUnit.id) : { percent: 0 };
 
   const base = `/junior/hub/${grade}`;
@@ -42,7 +50,7 @@ export default function JuniorHubHome() {
               <div className="text-base font-semibold">{state.user.name}</div>
             </div>
           </div>
-          <Link to={`${base}/mistakes`} className="relative grid size-9 place-items-center rounded-full bg-white/20 text-base">
+          <Link to={wp(`${base}/mistakes`)} className="relative grid size-9 place-items-center rounded-full bg-white/20 text-base">
             📝
             {state.mistakes.length > 0 && (
               <span className="absolute right-1 top-1 size-2.5 rounded-full border-2 border-[#FF6B35] bg-[#FFE062]" />
@@ -76,7 +84,7 @@ export default function JuniorHubHome() {
             <button
               type="button"
               onClick={() =>
-                nav(`${base}/semester/${state.currentSemester}/unit/${currentUnit.id}/stage/${nextStageIdx}`)
+                nav(wp(`${base}/semester/${state.currentSemester}/unit/${currentUnit.id}/stage/${nextStageIdx}`))
               }
               className="w-full rounded-2xl bg-gradient-to-br from-[#378ADD] to-[#5DAEEE] p-4 text-left text-white shadow-sm transition hover:-translate-y-0.5"
             >
@@ -102,7 +110,7 @@ export default function JuniorHubHome() {
         <section className="mb-4">
           <div className="mb-2 flex items-center justify-between px-1">
             <div className="text-base font-semibold">📚 我的课程</div>
-            <Link to={`${base}/course`} className="text-sm font-medium text-[#FF6B35]">
+            <Link to={wp(`${base}/course`)} className="text-sm font-medium text-[#FF6B35]">
               查看全部 →
             </Link>
           </div>
@@ -115,7 +123,7 @@ export default function JuniorHubHome() {
                 key={semId}
                 type="button"
                 disabled={locked}
-                onClick={() => !locked && nav(`${base}/semester/${semId}`)}
+                onClick={() => !locked && nav(wp(`${base}/semester/${semId}`))}
                 className={`mb-3 w-full rounded-2xl bg-white p-4 text-left shadow-sm ${locked ? "opacity-70" : "transition hover:-translate-y-0.5"}`}
               >
                 <div className="flex items-center gap-3">

@@ -68,9 +68,12 @@
 - 和 5 个列表页同一类缺口,只是藏在详情页。**灌外研社阅读数据前必补**。
 - ✅ CC 已核实:`JuniorListeningPlay.tsx` **无**兄弟篇导航(只 `.eq("id",id)` by-id 取),故 A **仅阅读 Play**,听力 Play 无此问题。
 
-### B. `JuniorWritingPlay.tsx:99` 写 `module:"writing"` 裸值 → 老师端看不到写作错题
-- 裸 `writing` 正落 PHASE7 排除集(`not in (…,'writing',…)`)→ 老师端隐形(D 系列活体样本)。
-- 是**写作板块的坑**,非外研社独有;外研社写作原样继承。**修一次 pep+fltrp 两家受益**(改成带前缀+全 snapshot 的 module,如 `junior_writing`)。
+### B. `JuniorWritingPlay.tsx:99` 写 `module:"writing"` 裸值 → 老师端看不到写作错题(★全站写作板块从上线起半瘫★)
+- 已坐实:`main` 源码 PHASE7 排除集含 `writing`(`not in (…,'writing',…)`),而 WritingPlay:99 写的正是裸 `writing` → **全站写作错题老师端一条都看不到,从来如此**(D 系列活体样本)。
+- ★修法(Aaron 定,别踩坑)★:
+  - **正确=改写入侧**:写作提交时 `module` 用带前缀值 `junior_writing` + 带完整 snapshot → 天然落保留名单(和 `senior_grammar`/`hub_listening` 一个路子)。RPC **一行不用动**,老薄行也不会被翻出来。
+  - **禁止=去 RPC 排除集里删 `writing`**:那个排除集是挡 edge 写的无 snapshot 薄行的;放行 = 把"(无题目快照)"残卡重新放出来。
+- 写作板块坑,非外研社独有;修一次 pep+fltrp 两家受益。
 
 ---
 

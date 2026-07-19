@@ -54,6 +54,14 @@ export default function JuniorHubSemester() {
         </div>
       </div>
       <div className="space-y-3 px-4 py-4">
+        {sem.units.length === 0 && (
+          <div className="rounded-2xl border-2 border-dashed border-[#EEEAE0] bg-white p-6 text-center text-sm text-[#888780]">
+            📚 教材内容整理中，敬请期待
+            {grade === 9 && pub === "fltrp" && (
+              <div className="mt-1 text-xs">外研社 2024 新版九年级教材陆续出版中</div>
+            )}
+          </div>
+        )}
         {sem.units.map((unit) => {
           const p = getUnitProgress(state, unit.id);
           const isCurrent = unit.id === state.currentUnit && unit.available;

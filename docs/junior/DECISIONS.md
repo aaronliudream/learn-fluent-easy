@@ -61,6 +61,19 @@
 
 ---
 
+## Phase 2 前必补(2026-07-19 眼验时 Aaron 捞到 · 详情页里的过滤缺口)
+
+### A. `JuniorReadingPlay.tsx:97-99` "上一篇/下一篇"按 grade 取兄弟篇,无 publisher 过滤
+- `select("id,title").eq("grade", grade)` 无 `.eq("publisher",…)` → 外研社阅读一灌进去,学生点"下一篇"会跳进人教文章("翻着翻着换教材了")。
+- 和 5 个列表页同一类缺口,只是藏在详情页。**灌外研社阅读数据前必补**。
+- ✅ CC 已核实:`JuniorListeningPlay.tsx` **无**兄弟篇导航(只 `.eq("id",id)` by-id 取),故 A **仅阅读 Play**,听力 Play 无此问题。
+
+### B. `JuniorWritingPlay.tsx:99` 写 `module:"writing"` 裸值 → 老师端看不到写作错题
+- 裸 `writing` 正落 PHASE7 排除集(`not in (…,'writing',…)`)→ 老师端隐形(D 系列活体样本)。
+- 是**写作板块的坑**,非外研社独有;外研社写作原样继承。**修一次 pep+fltrp 两家受益**(改成带前缀+全 snapshot 的 module,如 `junior_writing`)。
+
+---
+
 ## 九年级策略
 - 新版九上(2024版)2026 秋刚启用出电子版;新版九下要 **2027 春**。→ 九年级"整理中"空壳会挂**至少半年**。
 - 建议:**先把七上下、八上下四册做扎实**,九年级等新版九上拿到手再单独排一期(若想外研社入口早点完整,别等九年级)。

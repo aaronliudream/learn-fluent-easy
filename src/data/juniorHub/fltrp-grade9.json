@@ -1,0 +1,17 @@
+{
+  "grade9": {
+    "name": "九年级(外研社)",
+    "semesters": {
+      "wy_grade9_volume1": {
+        "name": "上册",
+        "available": true,
+        "units": []
+      },
+      "wy_grade9_volume2": {
+        "name": "下册",
+        "available": true,
+        "units": []
+      }
+    }
+  }
+}

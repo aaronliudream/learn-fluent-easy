@@ -76,6 +76,11 @@ export default function JuniorHubHome() {
       </div>
 
       <div className="px-4 pt-4">
+        {grade === 9 && pub === "fltrp" && (
+          <div className="mb-4 rounded-xl border border-[#EEEAE0] bg-[#FBF8F2] px-4 py-2.5 text-xs text-[#888780]">
+            📖 外研社 2024 新版九年级教材陆续出版中
+          </div>
+        )}
         <AITestCard />
 
         {nextStage && currentUnit?.available && (

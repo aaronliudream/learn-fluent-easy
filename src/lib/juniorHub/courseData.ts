@@ -17,14 +17,17 @@ import fltrpCourses from "@/data/gaokaoHub/fltrp-courses.json";
 // 人教/高中路径先在 COURSES/其它 fork 命中,这里只作兜底。九年级本轮无 JSON → 返回空壳。
 import fltrpGrade7 from "@/data/juniorHub/fltrp-grade7.json";
 import fltrpGrade8 from "@/data/juniorHub/fltrp-grade8.json";
+import fltrpGrade9 from "@/data/juniorHub/fltrp-grade9.json";
 
 const ALL_GRADES: JuniorHubGrade[] = [7, 8, 9, 10, 11, 12];
 
-// 初中外研社课本(按年级)。九年级无结构 → getGradeCourse 返回 FLTRP_EMPTY 空壳。
+// 初中外研社课本(按年级)。七/八/九全建壳(2024 新版陆续出版,单元占位 available:false)。
 const FLTRP_COURSES: Partial<Record<JuniorHubGrade, GradeCourseDef>> = {
   7: (fltrpGrade7 as { grade7: GradeCourseDef }).grade7,
   8: (fltrpGrade8 as { grade8: GradeCourseDef }).grade8,
+  9: (fltrpGrade9 as { grade9: GradeCourseDef }).grade9,
 };
+// 兜底(理论上不再命中,7/8/9 全有壳):某 grade 无结构时返回空壳,页面显示「整理中」不抛异常。
 const FLTRP_EMPTY: GradeCourseDef = { name: "整理中", semesters: {} };
 const JUNIOR_FLTRP_COURSES: GradeCourseDef[] = Object.values(FLTRP_COURSES) as GradeCourseDef[];
 

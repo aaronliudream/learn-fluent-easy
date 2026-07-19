@@ -1,0 +1,21 @@
+{ "chapter": 8,
+  "images": [
+    { "k":7, "slug":"shore-covered-with-turtles", "seq":976,
+      "scene":"Robinson stands at the edge of a flat sandy sea-shore that is crowded with countless turtles crawling over the sand and shallows, his gun on his shoulder and his dog beside him, staring in surprise at the swarming shells stretching along the beach.",
+      "alt":"一个人惊讶地站在海边,沙滩上爬满了无数海龟。" },
+    { "k":8, "slug":"setting-up-the-marker-pole", "seq":980,
+      "scene":"On an open stretch of sea-shore, Robinson drives a tall wooden pole upright into the sand as a marker, pressing it firm with both hands, the wide sea and empty beach stretching away behind him and his dog waiting nearby.",
+      "alt":"一个人在海滩上竖起一根高高的木杆作为记号。" },
+    { "k":9, "slug":"leading-kid-by-rope", "seq":985,
+      "scene":"Robinson walks along a wooded path leading a small young goat by a cord tied to a rope collar, the little kid trotting reluctantly at the end of the string while he carries his gun and hatchet.",
+      "alt":"一个人用绳子牵着一只小山羊沿着林间小路走。" },
+    { "k":10, "slug":"dog-guarding-cornfield-night", "seq":1020,
+      "scene":"At night beside a hedged field of ripening corn, a dog is tied by a rope to a stake at the gate, standing alert and barking with its mouth open under a moonlit sky, guarding the crop.",
+      "alt":"夜里一条狗被拴在庄稼地门口的木桩上守夜吠叫。" },
+    { "k":11, "slug":"reaping-corn-with-cutlass", "seq":1032,
+      "scene":"Robinson stoops among tall ripe grain, cutting off the ears of corn with a curved blade fashioned from an old broadsword and dropping the heads into a large woven basket beside him.",
+      "alt":"一个人用旧刀改制的镰刀在麦田里割下谷穗,放进大篮子。" },
+    { "k":12, "slug":"dragging-bough-as-harrow", "seq":1042,
+      "scene":"Robinson trudges across his freshly sown patch of earth, hauling a great heavy leafy tree bough behind him by a rope over his shoulder to scratch and cover the seed in the soil.",
+      "alt":"一个人拖着一根带叶的大树枝在刚播种的地里当耙用。" }
+  ] }

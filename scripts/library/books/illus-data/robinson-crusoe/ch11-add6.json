@@ -1,0 +1,21 @@
+{ "chapter": 11,
+  "images": [
+    { "k":7, "slug":"watching-calm-sea-from-rock", "seq":1276,
+      "scene":"Robinson stands on the high rocky point at the tip of the island, gazing out at a strangely smooth and glassy sea with no ripples or current, the shoreline and jutting rocks stretching below him under a clear sky.",
+      "alt":"一个人站在岛尖的高岩上,望着异常平静无波的海面。" },
+    { "k":8, "slug":"cave-storeroom-pots-baskets", "seq":1280,
+      "scene":"Inside a dry cave chamber behind the rock wall, rows of large earthen pots and fourteen tall woven baskets brimming with harvested ears of corn are stacked against the stone, a small doorway of light at the far end.",
+      "alt":"岩壁后的干燥洞室里,排列着大陶罐和装满玉米穗的高大草筐。" },
+    { "k":9, "slug":"country-bower-tent-couch", "seq":1285,
+      "scene":"Robinson's country retreat in a leafy clearing enclosed by a tall thick hedge, where a sailcloth tent is spread over poles and a couch of animal skins with a blanket lies beneath it in the shade of dense grown trees, a ladder leaning inside the hedge.",
+      "alt":"茂密树篱围出的林间空地上,搭着帆布帐篷,篷下是铺兽皮的卧榻。" },
+    { "k":10, "slug":"measuring-footprint-with-foot", "seq":1330,
+      "scene":"Robinson kneels on the sandy shore beside the bare human footprint, placing his own bare foot next to it to compare their sizes and finding his own foot clearly smaller, his face tense with dread.",
+      "alt":"一个人跪在沙滩上,把自己的赤脚比在那个人类脚印旁边量大小。" },
+    { "k":11, "slug":"planting-stake-grove", "seq":1343,
+      "scene":"Robinson pushes rows of slender osier stakes deep into the ground across a wide stretch of earth outside his fortress wall, planting a dense thicket of young shoots that spread out in every direction toward the trees.",
+      "alt":"一个人在城墙外的大片土地上密密插下无数细木桩,栽出茂密的幼林。" },
+    { "k":12, "slug":"reading-bible-for-comfort", "seq":1323,
+      "scene":"Robinson sits up on the edge of his skin-covered bed inside the cave at early morning, an open Bible held in both hands, his face calm and comforted as soft light falls across the pages.",
+      "alt":"清晨,一个人坐在洞中兽皮床边,双手捧着摊开的圣经,神情安宁。" }
+  ] }

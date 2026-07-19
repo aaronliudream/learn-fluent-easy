@@ -1,0 +1,21 @@
+{ "chapter": 2,
+  "images": [
+    { "k":7, "slug":"pirates-boarding-deck", "seq":110,
+      "scene":"A swarm of Turkish pirates leaps from their galley onto the deck of the small English ship, slashing at the sails and rigging with cutlasses while the outnumbered crew scrambles to fight back amid smoke and tangled ropes.",
+      "alt":"海盗跳上小船甲板砍杀船帆缆绳，船员奋力抵抗。" },
+    { "k":8, "slug":"prisoners-into-sallee", "seq":112,
+      "scene":"The captured English crew, hands bound, are marched off a boat onto the stone quay of the Moorish port of Sallee, guarded by armed Moors as the walled town rises behind the harbour.",
+      "alt":"被俘的船员双手被缚，押上萨累港的石码头。" },
+    { "k":9, "slug":"fishing-in-pinnace", "seq":119,
+      "scene":"On a calm bay, the Moorish patron sits at the stern of a small ship's pinnace while young Robinson and another boy pull at the oars, a line trailing in the water and fresh-caught fish glinting in the boat.",
+      "alt":"平静海湾里主人坐船尾，鲁滨逊和男孩划桨钓鱼。" },
+    { "k":10, "slug":"gun-aimed-at-swimmer", "seq":144,
+      "scene":"Standing at the cabin door of the small sailing boat, Robinson levels a long fowling-piece toward the Moor swimming in the calm sea beside the hull, who reaches out a hand toward the boat.",
+      "alt":"鲁滨逊在船舱门口举长枪，指向水中游泳求救的摩尔人。" },
+    { "k":11, "slug":"xury-returns-with-game", "seq":171,
+      "scene":"On a wild sandy shore, the boy Xury runs back toward the boat carrying a slain hare-like creature slung over his shoulder, a small gun in his hand, with scrubby uninhabited country stretching behind him.",
+      "alt":"荒岸上小男孩苏里肩扛猎物、手持小枪奔回船边。" },
+    { "k":12, "slug":"xury-shoots-lion", "seq":189,
+      "scene":"Xury wades out of the shallows onto the beach and presses the muzzle of a small gun to the ear of the great wounded lion lying at the water's edge, firing the final shot, while Robinson watches from the boat offshore.",
+      "alt":"苏里涉水上岸，把枪口抵在受伤大狮子耳边补上一枪。" }
+  ] }

@@ -1,0 +1,21 @@
+{ "chapter": 10,
+  "images": [
+    { "k":7, "slug":"victualling-boat-for-voyage", "seq":1174,
+      "scene":"Robinson stows provisions into the lockers of his small boat drawn up on the beach: stacked round barley loaves, an earthen pot of rice, a small bottle, half a goat carcass, and two rolled watch-coats packed at the ends of the hull.",
+      "alt":"A man loads bread, a pot, and supplies into his small boat before setting out to sea." },
+    { "k":8, "slug":"surveying-current-from-hilltop", "seq":1178,
+      "scene":"Robinson stands on a rocky hilltop with his gun in hand, gazing down at a fierce sea current sweeping past a long ledge of rocks that juts far out from the point into the ocean below.",
+      "alt":"A man stands on a hill with his gun, looking down at a strong current running past rocks." },
+    { "k":9, "slug":"heaving-tortoise-into-boat", "seq":1183,
+      "scene":"Robinson heaves a huge tortoise, almost as big as he can lift, over the side into his small boat on the shore, a large earthen water jar already stowed inside.",
+      "alt":"A man lifts a large tortoise into his boat beside a big water jar." },
+    { "k":10, "slug":"stretching-hands-to-island", "seq":1186,
+      "scene":"Robinson stands in his small boat far out on the open sea, arms stretched longingly toward the small distant island shrinking on the horizon behind him.",
+      "alt":"A man in a boat far out at sea reaches his arms toward the distant shrinking island." },
+    { "k":11, "slug":"he-goat-caught-in-pitfall", "seq":1234,
+      "scene":"Robinson peers down into an earthen pit where a large fierce old he-goat is trapped, the broken hurdle cover pushed aside, with three young kids caught in nearby pits.",
+      "alt":"A man looks down into a pit trap holding a big he-goat, with kids in other pits nearby." },
+    { "k":12, "slug":"milking-tame-goat-dairy", "seq":1251,
+      "scene":"Robinson sits on a low stool milking a tame goat into a wooden pail inside his fenced enclosure, other goats and kids grazing around him.",
+      "alt":"A man sits milking a tame goat into a pail while others graze in the pen." }
+  ] }

@@ -1,0 +1,21 @@
+{ "chapter": 9,
+  "images": [
+    { "k":7, "slug":"sowing-seed-fencing-field", "seq":1049,
+      "scene":"Robinson stoops in a cleared flat field near his hut, scattering handfuls of grain from a basket onto freshly turned earth, while a line of driven wooden stakes forms a new hedge fence around the plot.",
+      "alt":"一个人在田里撒种,四周围着新插的木桩篱笆。" },
+    { "k":8, "slug":"pots-in-wicker-baskets-straw", "seq":1056,
+      "scene":"Two large lumpy sun-dried clay jars stand each nestled inside a big woven wicker basket, the gap between pot and basket packed tight with dry rice and barley straw.",
+      "alt":"两只粗陶大罐分别套在柳条筐里,缝隙塞满干稻草。" },
+    { "k":9, "slug":"discovering-baked-shard-fire", "seq":1059,
+      "scene":"Robinson crouches by a dying cooking fire and lifts from the ashes a broken piece of pottery burnt hard and glowing red like a tile, staring at it with sudden surprise.",
+      "alt":"一个人从余烬里捡起一块烧得通红坚硬的陶片,惊讶地端详。" },
+    { "k":10, "slug":"hollowing-wooden-mortar-fire", "seq":1070,
+      "scene":"Robinson works a large rounded block of hard wood set on the ground, burning a hollow into its top with glowing coals and scraping it out with an axe, a heavy wooden pestle lying beside it.",
+      "alt":"一个人用炭火烧灼并用斧头掏空一块圆木做臼,旁边放着木杵。" },
+    { "k":11, "slug":"felling-giant-cedar-tree", "seq":1102,
+      "scene":"Robinson swings an axe at the base of an enormous cedar trunk far thicker than a man, deep chips and cut wood scattered around its foot in the forest.",
+      "alt":"一个人挥斧砍伐一棵比人还粗数倍的巨大雪松,树脚满是木屑。" },
+    { "k":12, "slug":"digging-canal-to-canoe", "seq":1111,
+      "scene":"Robinson digs a long deep trench through the sloping earth from a wooded creek toward the huge stranded dugout canoe, heaps of dug-out soil piled along both sides.",
+      "alt":"一个人在坡地上挖一条长壕沟,想把水引到那只搁浅的大独木舟旁,两侧堆着挖出的泥土。" }
+  ] }

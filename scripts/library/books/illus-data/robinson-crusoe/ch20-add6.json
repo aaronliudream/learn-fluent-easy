@@ -1,0 +1,21 @@
+{ "chapter": 20,
+  "images": [
+    { "k":7, "slug":"friday-swaps-shoes-and-bolts", "seq":2326,
+      "scene":"On the snowy edge of a forest a man sits on the ground pulling off his boots and slipping on flat shoes, one gun already in hand, while he hands the reins of his horse to a mounted companion; a huge bear ambles across the open ground behind them.",
+      "alt":"一个人在雪地上换上平底鞋、把马缰交给同伴,准备提枪冲向远处的大熊。" },
+    { "k":8, "slug":"friday-hits-bear-with-stone", "seq":2330,
+      "scene":"In an open forest patched with snow, a running man twists back to hurl a large stone that strikes a big bear squarely on the head; the bear is just beginning to turn about with long strides to give chase.",
+      "alt":"一个人边跑边回身把大石头砸中熊的脑袋,熊开始转身追来。" },
+    { "k":9, "slug":"bear-climbs-tree-like-cat", "seq":2334,
+      "scene":"At the foot of a great oak a heavy bear scrambles up the trunk, gripping the bark with its broad claws like a climbing cat; a gun lies abandoned on the snowy ground a few yards from the base of the tree, and mounted travellers watch from a distance.",
+      "alt":"一头笨重的大熊像猫一样攀上橡树,树下雪地上丢着一支枪,远处骑马者观望。" },
+    { "k":10, "slug":"friday-slides-down-bough", "seq":2342,
+      "scene":"A man lets himself down from the thin bending end of a high oak branch, sliding along the bough with his weight bowing it low, about to drop to his feet; higher up the same branch the big bear clings fast to the thicker part with its claws.",
+      "alt":"一个人顺着弯垂的细树枝滑下、即将落地,粗枝那端大熊仍死死抓住不放。" },
+    { "k":11, "slug":"saddled-horse-chased-by-wolves", "seq":2370,
+      "scene":"At dusk on a snowy plain a riderless horse with saddle and bridle still on bursts out of the trees at full gallop, sixteen or seventeen wolves streaming after it at top speed; farther off a knot of wolves waits at the mouth of a narrow wooded lane.",
+      "alt":"黄昏雪原上,一匹带鞍辔的空马疾奔冲出树林,十六七只狼紧追不放,远处狼群守在林间隘口。" },
+    { "k":12, "slug":"fortified-village-night-watch", "seq":2384,
+      "scene":"A snow-bound village at night, its people gathered in arms with torches and lanterns, standing guard around a huddled pen of cattle; beyond the fences the dark shapes of wolves prowl at the treeline.",
+      "alt":"雪夜里的村庄,村民持枪举火把守着牲畜圈,栅栏外林边游荡着狼影。" }
+  ] }

@@ -1,0 +1,21 @@
+{ "chapter": 7,
+  "images": [
+    { "k":7, "slug":"melons-and-grape-vines", "seq":896,
+      "scene":"Robinson stands in a woody part of the island where ripe melons lie scattered on the ground in abundance and vines heavy with clusters of ripe grapes spread across the tree branches above him; he reaches up toward a rich hanging bunch.",
+      "alt":"A man reaches for ripe grapes hanging from vines over trees, with melons lying on the ground." },
+    { "k":8, "slug":"grape-heap-destroyed", "seq":908,
+      "scene":"Robinson stands with a small empty sack in hand looking down in dismay at his gathered heap of grapes, now spread about, trodden to pieces and dragged in every direction across the ground, much of it eaten away.",
+      "alt":"A man stares in dismay at his heap of grapes trampled and scattered on the ground." },
+    { "k":9, "slug":"large-tortoise-found", "seq":923,
+      "scene":"Robinson crouches beside a very large tortoise he has found on the ground near a rocky shore, his gun laid down nearby, examining the great shelled creature with keen interest.",
+      "alt":"A man crouches beside a very large tortoise he has found near a rocky shore." },
+    { "k":10, "slug":"digging-cave-door-out", "seq":924,
+      "scene":"Inside his cave, Robinson works with a tool at the far wall where he has dug an opening through to the outside of the hill, daylight streaming in through the newly made doorway beyond his enclosure.",
+      "alt":"A man digs an opening through his cave wall to the outside, with daylight coming through." },
+    { "k":11, "slug":"sowing-grain-wooden-spade", "seq":935,
+      "scene":"Robinson digs a patch of open ground with a rough wooden spade and scatters handfuls of grain seed across the freshly turned earth, a small pouch of saved seed at his side.",
+      "alt":"A man turns the soil with a wooden spade and sows grain seed by hand in a field." },
+    { "k":12, "slug":"making-wicker-baskets", "seq":954,
+      "scene":"Robinson sits inside his cave weaving pliant twigs into a deep wicker basket, several finished baskets and a bundle of dried twigs on the ground around him.",
+      "alt":"A man sits weaving twigs into a wicker basket, with finished baskets around him." }
+  ] }

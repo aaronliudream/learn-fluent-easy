@@ -1,0 +1,21 @@
+{ "chapter": 6,
+  "images": [
+    { "k":7, "slug":"fishing-caught-young-dolphin", "seq":711,
+      "scene":"Robinson stands at the water's edge hauling in a long hand-line of twisted rope-yarn, a wriggling young dolphin lifted just clear of the shallows on the end of it, the wreck small on the horizon behind.",
+      "alt":"渔夫用一根麻绳手钓线从浅水中提起一条挣扎的小海豚。" },
+    { "k":8, "slug":"floating-fir-planks-flood-tide", "seq":714,
+      "scene":"Robinson wades beside three great fir planks he has lashed together into a raft, guiding them across the incoming flood tide toward the beach, the broken hull looming behind him.",
+      "alt":"他趟着水,推着三块捆成木筏的大冷杉木板,顺着涨潮漂向海滩。" },
+    { "k":9, "slug":"two-hatchets-on-lead-roll", "seq":730,
+      "scene":"Robinson kneels over a heavy rolled sheet of lead lying half-submerged in shallow water at the wreck, pressing the edge of one hatchet against it and striking that hatchet with a second one held in his other hand.",
+      "alt":"他跪在残骸旁半没水中的一卷厚铅皮上,用一把斧子的刃抵住它、再用另一把斧子去砸。" },
+    { "k":10, "slug":"casks-chests-floating-out-wreck", "seq":736,
+      "scene":"At high water several loosened barrels and two wooden seamen's chests drift out from the shattered side of the wreck onto the sea, while Robinson watches from the shore with an iron bar in hand.",
+      "alt":"涨潮时几只松脱的木桶和两口水手木箱从残骸破口漂出海面,他握着铁棍在岸边望着。" },
+    { "k":11, "slug":"broiling-goat-flesh-weak", "seq":764,
+      "scene":"Weak and gaunt, Robinson crouches by a small fire outside his shelter, broiling a piece of goat's flesh on the glowing coals, his gun and the dead she-goat lying on the ground beside him.",
+      "alt":"他虚弱消瘦地蹲在住处外的小火堆旁,在炭火上烤一块山羊肉,枪和死母羊躺在身边地上。" },
+    { "k":12, "slug":"sitting-gazing-calm-sea", "seq":816,
+      "scene":"Robinson sits alone on the bare ground on a low rise, his gun laid across his lap, gazing out over a wide, calm, glass-smooth sea stretching to the horizon before him.",
+      "alt":"他独自坐在一处矮坡的裸地上,枪横在膝头,望着眼前一直伸向天际、平静如镜的大海。" }
+  ] }

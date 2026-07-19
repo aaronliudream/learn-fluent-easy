@@ -1,0 +1,21 @@
+{ "chapter": 15,
+  "images": [
+    { "k":7, "slug":"friday-fetching-fallen-parrot", "seq":1642,
+      "scene":"Friday crouches in the undergrowth at the foot of a tall tree and lifts up a brightly coloured parrot from the ground, holding it in both hands and turning to bring it back; Robinson stands at a distance quietly reloading his musket.",
+      "alt":"星期五在树下捧起被打落的鹦鹉，鲁滨逊在远处装填枪支。" },
+    { "k":8, "slug":"friday-talking-to-the-gun", "seq":1641,
+      "scene":"Alone in a corner of the castle enclosure, Friday sits cross-legged before the musket that leans upright against the wall, leaning close and speaking to it earnestly with his hands raised, not daring to touch it.",
+      "alt":"星期五独自坐在靠墙的火枪前，凑近对它说话，不敢触碰。" },
+    { "k":9, "slug":"friday-spitting-out-salt", "seq":1644,
+      "scene":"At a rough wooden table Friday screws up his face and spits, washing his mouth from a bowl of fresh water after tasting salt, while Robinson sits opposite calmly eating a piece of meat from a small dish of salt.",
+      "alt":"星期五尝了盐后皱脸吐掉、用清水漱口，鲁滨逊在对面平静地吃肉。" },
+    { "k":10, "slug":"friday-beating-and-sifting-corn", "seq":1647,
+      "scene":"Friday kneels on a mat threshing ears of corn with a stick to knock out the grain, then shakes the loose kernels through a woven sieve so the chaff drifts away in the breeze; baskets of grain stand around him.",
+      "alt":"星期五跪在垫上用棍子打谷、再用筛子筛去谷壳，四周放着盛谷的篮子。" },
+    { "k":11, "slug":"friday-counting-with-stones", "seq":1685,
+      "scene":"On the sandy northwest shore Friday kneels and lays out a long row of small stones on the ground, pointing along them one by one toward Robinson, who watches; broken canoes and scattered bones lie further along the beach.",
+      "alt":"星期五在西北岸边跪着摆出一长排石子逐一指数，鲁滨逊在旁观看，远处沙滩有残破独木舟。" },
+    { "k":12, "slug":"giving-friday-belt-and-hatchet", "seq":1742,
+      "scene":"Robinson fastens a leather belt around Friday's waist, from which a frog holds a hatchet, and hands him a knife; Friday looks down at the gifts with delight, gripping the knife in one hand.",
+      "alt":"鲁滨逊为星期五系上挂着斧头的腰带并递给他一把刀，星期五低头欣喜地握着刀。" }
+  ] }

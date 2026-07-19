@@ -134,6 +134,7 @@ export default function LibraryReader() {
   const playSeq = useRef(0); // 递增以中断进行中的连续朗读
   const liRefs = useRef<(HTMLElement | null)[]>([]);
   const lastUserScrollRef = useRef(0);
+  const lastActiveRef = useRef(Date.now()); // 任一活跃信号(滚/触/鼠标/键/选中/点词)刷新 → 无操作判定用
   const longPressRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const stateRef = useRef<LibraryReadingState>(defaultLibraryState());
@@ -333,18 +334,54 @@ export default function LibraryReader() {
     liRefs.current[current]?.scrollIntoView({ behavior: "smooth", block: "center" });
   }, [current, playingAll]);
 
-  // 阅读时长心跳:页面可见时每 5s 计一次(被动听/读均算活跃)
+  // 阅读时长心跳(止血版):每 5s 一跳,**三闸全开才计时**——挂机/失焦/切后台立即停,不再"只要标签页可见就加"。
+  //  ① 可见:document.visibilityState(切标签页/最小化/手机锁屏)
+  //  ② 聚焦:window blur/focus —— 台式机切到别的 App(Excel/微信/IDE)标签页仍 visible,靠 blur 才抓得到(20h 头号来源)
+  //  ③ 非无操作:动态阈值 = 视口可见词数 / 阅读速度 × 2,clamp[60s,300s] —— 手机窄屏(~1min)/台式宽屏(~3min 不滚也正常)自适配,不写死 90s
+  // 活跃信号两端通吃:滚动/触摸(手机)+ mousemove/wheel/keydown/选中(台式);点词经由这些一并刷新。
   useEffect(() => {
     if (loading || !book) return;
+    let focused = typeof document === "undefined" ? true : document.hasFocus();
+    const onFocus = () => { focused = true; lastActiveRef.current = Date.now(); };
+    const onBlur = () => { focused = false; };
+    const bump = () => { lastActiveRef.current = Date.now(); };
+    window.addEventListener("focus", onFocus);
+    window.addEventListener("blur", onBlur);
+    const winActs = ["scroll", "wheel", "touchmove", "mousemove", "keydown", "pointerdown"] as const;
+    for (const e of winActs) window.addEventListener(e, bump, { passive: true });
+    document.addEventListener("selectionchange", bump); // 台式机文本选中
+
+    // 无操作阈值(ms):按当前视口可见词数动态算
+    const idleThresholdMs = () => {
+      const vh = window.innerHeight || 800;
+      let words = 0;
+      for (const el of liRefs.current) {
+        if (!el) continue;
+        const r = el.getBoundingClientRect();
+        if (r.bottom > 0 && r.top < vh) words += (el.textContent || "").trim().split(/\s+/).filter(Boolean).length;
+      }
+      const WPM = 100; // 非母语基准阅读速度
+      const sec = words > 0 ? (words / WPM) * 60 * 2 : 120;
+      return Math.min(300, Math.max(60, sec)) * 1000;
+    };
+
     const timer = setInterval(() => {
-      if (typeof document !== "undefined" && document.visibilityState !== "visible") return;
+      if (typeof document !== "undefined" && document.visibilityState !== "visible") return; // ① 不可见
+      if (!focused) return; // ② 窗口失焦
+      if (Date.now() - lastActiveRef.current > idleThresholdMs()) return; // ③ 无操作超阈值
       const s = stateRef.current;
       s.seconds += Math.round(HEARTBEAT_MS / 1000);
       s.updated_at = Date.now();
       setSeconds(s.seconds);
       persist();
     }, HEARTBEAT_MS);
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("focus", onFocus);
+      window.removeEventListener("blur", onBlur);
+      for (const e of winActs) window.removeEventListener(e, bump);
+      document.removeEventListener("selectionchange", bump);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, book]);
 

@@ -336,7 +336,8 @@
       "ex_en": "It's no use crying over spilt milk.",
       "ex_cn": "覆水难收，哭也没用。",
       "occ": [[1729, "no use for her to try"]]
-    }
+    },
+    {"head":"take and","gloss":"(方言)就…、干脆去…做","ipa":"/teɪk ənd/","note":"take and + 动词 = 地方话强调式,重点在'就这么去做',take 不表'拿'。此处「take and belt him」=干脆抽他一下、「take and swear」=(郑重)立誓(血誓保密的正式场面)。同族:up and + 动词。","literal":[{"word":"take and","meaning_cn":"(方言)就…、径直…","note_cn":"take 非'拿',是强调式"}],"ex_en":"I'll just take and tell him myself.","ex_cn":"我干脆自己去告诉他。","occ":[[1592,"take and belt"],[1601,"take and swear"]]}
   ],
   "skipped": [
     "breast to breast (一次性描写)",

@@ -33,12 +33,17 @@ const seqToOrdinal = (chapterNo, s) => {
   return hit ? hit.ord : (s < c.paras[0].start ? 1 : c.count);
 };
 const mByKey = new Map(manifest.images.map((im) => [`${im.chapter}-${im.k}`, im]));
+const mByFile = new Map(manifest.images.filter((im) => im.file).map((im) => [im.file, im]));
 
-const files = readdirSync(IN).filter((f) => /\.jpe?g$/i.test(f) && !/cover/i.test(f));
+// 封面文件识别:必须是词边界的 "cover"(cover.jpg / book-cover),不误伤 under-covers/discover/recover
+const COVER_RE = /(^|[-_/])cover([-_.]|$)/i;
+const files = readdirSync(IN).filter((f) => /\.jpe?g$/i.test(f) && !COVER_RE.test(f));
 const rows = [];
 for (const f of files) {
   const m = f.match(/^ch(\d+)-(\d+)-/);
   if (!m) { console.log("跳过(名字不符):", f); continue; }
+  // manifest 有 file 字段时,只处理 manifest 里精确列出的文件(排除杂图/旧图/撞k号)
+  if (mByFile.size && !mByFile.has(f)) { console.log("跳过(不在manifest):", f); continue; }
   const ch = +m[1], k = +m[2];
   const meta = mByKey.get(`${ch}-${k}`);
   const info = await sharp(`${IN}/${f}`).resize({ width: 1000, withoutEnlargement: true }).jpeg({ quality: 82, mozjpeg: true }).toFile(`${OUT}/${f}`);
@@ -50,7 +55,7 @@ for (const r of rows) (byCh[r.ch] ??= []).push(r);
 for (const ch of Object.keys(byCh)) { let prev = 0; for (const r of byCh[ch].sort((a, b) => a.anchorSeq - b.anchorSeq)) { if (r.position <= prev) r.position = prev + 1; prev = r.position; } }
 
 // 封面
-const coverIn = readdirSync(IN).find((f) => /cover/i.test(f));
+const coverIn = readdirSync(IN).find((f) => /\.jpe?g$/i.test(f) && COVER_RE.test(f));
 let coverLine = "";
 if (coverIn) {
   const ci = await sharp(`${IN}/${coverIn}`).resize({ width: 800, withoutEnlargement: true }).jpeg({ quality: 82, mozjpeg: true }).toFile(`${OUT}/${KEY}-cover.jpg`);

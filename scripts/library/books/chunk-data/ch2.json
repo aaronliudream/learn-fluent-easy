@@ -1,0 +1,150 @@
+{
+  "chapter": 2,
+  "chunks": [
+    { "head": "go after", "gloss": "去追、追赶", "ipa": "/ɡoʊ ˈæftər/",
+      "note": "go after sb/sth = 去追、追赶;也指'追求(目标)'。",
+      "literal": [{"word":"go","meaning_cn":"去"},{"word":"after","meaning_cn":"在…后面(追)"}],
+      "ex_en": "The dog went after the cat.", "ex_cn": "狗去追那只猫。",
+      "occ": [[230,"go after"]] },
+
+    { "head": "make fun of", "gloss": "取笑、拿…开玩笑", "ipa": "/meɪk fʌn əv/",
+      "note": "本章出处为分离式(make a world of fun of him),故 card-only。make fun of sb = 取笑某人。",
+      "literal": [{"word":"make","meaning_cn":"做出"},{"word":"fun","meaning_cn":"取乐"},{"word":"of","meaning_cn":"拿…(取乐)"}],
+      "ex_en": "The kids made fun of his big hat.", "ex_cn": "孩子们取笑他那顶大帽子。",
+      "cardOnly": true, "key": "make fun of", "exSeq": 261 },
+
+    { "head": "give up", "gloss": "放弃", "ipa": "/ɡɪv ʌp/",
+      "note": "give up (doing) sth = 放弃;此处'放弃了买通那帮孩子的念头'。",
+      "literal": [{"word":"give","meaning_cn":"交出"},{"word":"up","meaning_cn":"(此处)彻底放开","note_cn":"非'向上'义,与 give 合成'放弃'"}],
+      "ex_en": "Don't give up—you can do it!", "ex_cn": "别放弃——你能行!",
+      "occ": [[263,"gave up"]] },
+
+    { "head": "pay attention to", "gloss": "注意、留意、理会", "ipa": "/peɪ əˈtɛnʃən tu/",
+      "note": "本章出处为 paid no attention to(否定分离式),故 card-only。pay attention to sth = 注意某事。",
+      "literal": [{"word":"pay","meaning_cn":"给予"},{"word":"attention","meaning_cn":"注意力"},{"word":"to","meaning_cn":"对…"}],
+      "ex_en": "Pay attention to the teacher.", "ex_cn": "注意听老师讲。",
+      "cardOnly": true, "key": "pay attention to", "exSeq": 306 },
+
+    { "head": "stick to", "gloss": "坚持、专心干(不放手)", "ipa": "/stɪk tu/",
+      "note": "stick to sth = 坚持不放;此处'专心干自己的活'。",
+      "literal": [{"word":"stick","meaning_cn":"(此处)坚持、不放","note_cn":"非'粘贴'义,引申为'守着不放'"},{"word":"to","meaning_cn":"对…、守着…"}],
+      "ex_en": "Stick to your plan and finish it.", "ex_cn": "坚持你的计划,把它做完。",
+      "occ": [[312,"stuck to"]] },
+
+    { "head": "one's mouth waters", "gloss": "眼馋、垂涎、直流口水", "ipa": "/wʌnz maʊθ ˈwɔːtərz/",
+      "note": "one's mouth waters = 看到想要的东西而馋得流口水。",
+      "literal": [{"word":"mouth","meaning_cn":"嘴"},{"word":"waters","meaning_cn":"(此处)分泌口水","note_cn":"非'浇水'义,此处作动词'流口水'"}],
+      "ex_en": "My mouth waters when I smell fresh bread.", "ex_cn": "闻到新鲜面包我就直流口水。",
+      "occ": [[312,"mouth watered"]] },
+
+    { "head": "let on", "gloss": "假装、佯装;(次义)走漏口风、说出去", "ipa": "/lɛt ɑːn/",
+      "note": "let on = 假装(佯装喜欢/不知道/不在乎);次义'走漏口风、说出去'。此处「let on that you like it」=装作你喜欢(汤姆假装享受刷墙)。on 非'在…上'。",
+      "literal": [{"word":"let on","meaning_cn":"假装、佯装","note_cn":"整体记忆;on 非'在…上'义"}],
+      "ex_en": "He let on that he liked the boring job.", "ex_cn": "他装作喜欢这份无聊的活儿。",
+      "occ": [[328,"let on"]] },
+
+    { "head": "in a new light", "gloss": "以新的眼光(看)、呈现新面貌", "ipa": "/ɪn ə njuː laɪt/",
+      "note": "see/put sth in a new light = 从新的角度去看。",
+      "literal": [{"word":"in","meaning_cn":"在…中"},{"word":"new","meaning_cn":"新的"},{"word":"light","meaning_cn":"(此处)看待的角度","note_cn":"非'光线'义,喻'看法'"}],
+      "ex_en": "Her words made me see the problem in a new light.", "ex_cn": "她的话让我用新的眼光看这个问题。",
+      "occ": [[333,"in a new light"]] },
+
+    { "head": "back and forth", "gloss": "来回地、前后地", "ipa": "/bæk ənd fɔːrθ/",
+      "note": "move back and forth = 来来回回。",
+      "literal": [{"word":"back","meaning_cn":"向后"},{"word":"and","meaning_cn":"和"},{"word":"forth","meaning_cn":"向前"}],
+      "ex_en": "The swing moved back and forth.", "ex_cn": "秋千来回摆动。",
+      "occ": [[335,"back and forth"]] },
+
+    { "head": "here and there", "gloss": "到处、这儿那儿", "ipa": "/hɪr ənd ðɛr/",
+      "note": "here and there = 零零散散到处都是。",
+      "literal": [{"word":"here","meaning_cn":"这里"},{"word":"and","meaning_cn":"和"},{"word":"there","meaning_cn":"那里"}],
+      "ex_en": "Toys were scattered here and there.", "ex_cn": "玩具到处乱扔。",
+      "occ": [[335,"here and there"]] },
+
+    { "head": "be particular about", "gloss": "对…讲究、挑剔", "ipa": "/biː pərˈtɪkjələr əˈbaʊt/",
+      "note": "be particular about sth = 对某事很讲究、很挑剔。",
+      "literal": [{"word":"particular","meaning_cn":"(此处)讲究的、挑剔的","note_cn":"非'特定的'义,此处指'苛求'"},{"word":"about","meaning_cn":"关于…"}],
+      "ex_en": "She is very particular about her food.", "ex_cn": "她对吃的很挑剔。",
+      "occ": [[340,"particular about"]] },
+
+    { "head": "no lack of", "gloss": "不缺、有的是", "ipa": "/noʊ læk əv/",
+      "note": "there is no lack of sth = 一点也不缺某物。",
+      "literal": [{"word":"no","meaning_cn":"没有"},{"word":"lack","meaning_cn":"缺乏"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "We had no lack of volunteers.", "ex_cn": "我们不缺志愿者。",
+      "occ": [[356,"no lack of"]] },
+
+    { "head": "and so on", "gloss": "等等、诸如此类", "ipa": "/ənd soʊ ɑːn/",
+      "note": "列举之后收尾 = 等等。",
+      "literal": [{"word":"and","meaning_cn":"和"},{"word":"so","meaning_cn":"这样"},{"word":"on","meaning_cn":"继续下去"}],
+      "ex_en": "I bought apples, bananas, and so on.", "ex_cn": "我买了苹果、香蕉等等。",
+      "occ": [[357,"and so on"]] },
+
+    { "head": "all the while", "gloss": "一直、始终", "ipa": "/ɔːl ðə waɪl/",
+      "note": "all the while = 自始至终、一直。",
+      "literal": [{"word":"all","meaning_cn":"整个"},{"word":"the","meaning_cn":"那"},{"word":"while","meaning_cn":"一段时间"}],
+      "ex_en": "She smiled all the while.", "ex_cn": "她始终在微笑。",
+      "occ": [[360,"all the while"]] },
+
+    { "head": "run out of", "gloss": "用完、耗尽", "ipa": "/rʌn aʊt əv/",
+      "note": "run out of sth = 把某物用光。",
+      "literal": [{"word":"run","meaning_cn":"(此处)用到…","note_cn":"非'跑'义,与 out 合成'耗尽'"},{"word":"out","meaning_cn":"尽、光"},{"word":"of","meaning_cn":"…的"}],
+      "ex_en": "We ran out of milk this morning.", "ex_cn": "今早我们的牛奶用完了。",
+      "occ": [[361,"run out of"]] },
+
+    { "head": "after all", "gloss": "毕竟、终究", "ipa": "/ˈæftər ɔːl/",
+      "note": "after all = 毕竟(补充理由或与预期相反)。",
+      "literal": [{"word":"after","meaning_cn":"在…之后"},{"word":"all","meaning_cn":"一切"}],
+      "ex_en": "It worked out fine after all.", "ex_cn": "结果终究还是顺利了。",
+      "occ": [[362,"after all"]] },
+
+    { "head": "in order to", "gloss": "为了(做…)", "ipa": "/ɪn ˈɔːrdər tu/",
+      "note": "in order to do sth = 为了做某事(表目的)。",
+      "literal": [{"word":"in order","meaning_cn":"为了"},{"word":"to","meaning_cn":"去(做)"}],
+      "ex_en": "She got up early in order to catch the train.", "ex_cn": "她早起为了赶火车。",
+      "occ": [[363,"in order to"]] },
+
+    { "head": "be obliged to", "gloss": "不得不、必须(做)", "ipa": "/biː əˈblaɪdʒd tu/",
+      "note": "be obliged to do = 被迫/有义务去做。",
+      "literal": [{"word":"obliged","meaning_cn":"(此处)被迫的、有义务的"},{"word":"to","meaning_cn":"去(做)"}],
+      "ex_en": "We are obliged to follow the rules.", "ex_cn": "我们不得不遵守规则。",
+      "occ": [[364,"obliged to do"]] },
+
+    { "head": "consist of", "gloss": "由…组成、包括", "ipa": "/kənˈsɪst əv/",
+      "note": "consist of = 由…构成(不用被动)。",
+      "literal": [{"word":"consist","meaning_cn":"(此处)构成、组成"},{"word":"of","meaning_cn":"由…"}],
+      "ex_en": "The team consists of five players.", "ex_cn": "这个队由五名队员组成。",
+      "occ": [[364,"consists of"]] },
+
+    { "head": "turn into", "gloss": "(使)变成", "ipa": "/tɜːrn ˈɪntu/",
+      "note": "本章出处为 turn it into(分离式),故 card-only。turn (sth) into = 变成。",
+      "literal": [{"word":"turn","meaning_cn":"转变"},{"word":"into","meaning_cn":"成为…"}],
+      "ex_en": "The rain turned into snow.", "ex_cn": "雨变成了雪。",
+      "cardOnly": true, "key": "turn into", "exSeq": 366 },
+
+    { "head": "take place", "gloss": "发生、举行", "ipa": "/teɪk pleɪs/",
+      "note": "take place = (事件)发生、举办(多指有安排的)。",
+      "literal": [{"word":"take","meaning_cn":"(此处)发生","note_cn":"非'拿'义,固定搭配"},{"word":"place","meaning_cn":"(此处)发生、举行"}],
+      "ex_en": "The meeting will take place on Monday.", "ex_cn": "会议将在周一举行。",
+      "occ": [[367,"taken place"]] },
+
+    { "head": "too much for sb", "gloss": "让某人招架不住、受不了", "ipa": "/tuː mʌtʃ fɔːr/",
+      "note": "be too much for sb = 让某人吃不消、抵挡不住。",
+      "literal": [{"word":"too","meaning_cn":"太"},{"word":"much","meaning_cn":"厉害、过分"},{"word":"for","meaning_cn":"对…来说"}],
+      "ex_en": "The hot weather was too much for the old dog.", "ex_cn": "炎热的天气让那只老狗受不了。",
+      "occ": [[256,"too much for him"]] },
+
+    { "head": "alter one's mind", "gloss": "改变主意", "ipa": "/ˈɔːltər wʌnz maɪnd/",
+      "note": "alter/change one's mind = 改变主意;change one's mind 更常用。",
+      "literal": [{"word":"alter","meaning_cn":"改变"},{"word":"mind","meaning_cn":"主意、想法"}],
+      "ex_en": "He changed his mind at the last minute.", "ex_cn": "他在最后一刻改变了主意。",
+      "occ": [[338,"altered his mind"]] }
+  ],
+  "skipped": [
+    "专名:Cardiff Hill / Big Missouri / Buffalo Gals / Aunt Polly / Ben Rogers / Billy Fisher / Johnny Miller / Tom Sawyer",
+    "黑人英语/方言拼写(迁移弱):Mars Tom、ole missis、gwine to、ax(=ask)、'tend、'lowed、dasn't、warn't、ain't、druther、afeard、lemme、gimme、'Deed、a body",
+    "一次性描述性组合:board fence、white alley、bully taw、long-handled brush、tree-box、town pump",
+    "拟声/航海口令(一次性喊话):Ting-a-ling-ling、Chow-ch-chow-chow、ding-dong-dong、SH'T、Hi-Yi",
+    "一次性文学/俚语惯语,见一次难复用:hove in sight(浮现在视野)、up a stump(陷入困境)、rolling in wealth(家财万贯)、fagged out / played out(累垮)",
+    "太基础/纯语法:going to、of course、a bit、never mind"
+  ]
+}

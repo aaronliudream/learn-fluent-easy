@@ -127,6 +127,9 @@ ORDER BY p.proname, p.oid;
 **F. 落库审核门槛**
 11. 教学内容(chunk/句型/情景题/阅读听力语法)造完**先贴 Aaron 审 + 核课本**才落库;SQL 只 Aaron 跑;每单元真机抽验 8 关 + 6 大专项(确认人教侧条数没变);同步 SQL→`SQLAA/`、待审 JSON→`REVIEWAA/`。
 
+**G. 错题写入 module / source_key(RPC 实证后锁死 → 见 `docs/junior/DECISIONS.md` 命名表)**
+12. ★阅读=**裸 `reading`** + source_key **`junior_reading_passage_<uuid>`(绝不加 wy 前缀)** + snapshot 带完整 `questions`(源3A 双条件匹配,前缀化即整篇消失)。写作=`junior_writing`、听力=`hub_listening`、词汇/语法=带前缀,**一律照抄基线最新人教单元实际在用值,不发明新值**。★
+
 ---
 
 ## 6. ★待修缺陷(本轮不修 · 发现即上报)★

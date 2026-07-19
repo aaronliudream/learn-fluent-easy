@@ -77,6 +77,27 @@
 
 ---
 
+## ★Phase 2 错题写入 module / source_key 命名表(2026-07-19 Aaron service-role RPC 实证后锁死)★
+
+> RPC 实证:两函数都在,排除集**精确=7 裸值 `('cloze','reading','listening','vocab','grammar','writing','phonics')` + `primary_%`**,两函数条件完全一致,与 main PHASE7 文件对得上(PHASE6/7 已真部署,最后那版)。
+> ⚠️ **纠正我(CC)之前"module 一律带前缀"的过度概括——对阅读是错的**。阅读走双条件捞回,前缀化即崩。
+
+| 板块 | module 值 | source_key | 依据 |
+|---|---|---|---|
+| **阅读** | **裸 `reading`** | **必须 `junior_reading_passage_<uuid>`**(uuid=`junior_reading.id`,**绝不加 wy 前缀**) | 源3A 双条件匹配:`module='reading' AND source_key LIKE 'junior_reading_passage_%'`。module 前缀化→散行不聚篇、与人教形态不一致;source_key 前缀化→整篇消失、掉进源3B 无快照残卡 |
+| **写作** | 带前缀 `junior_writing` | 沿用基线 | 裸 `writing` 被排除且**全 union 无补回源**(B 实锤) |
+| **听力** | 带前缀(`hub_listening` 或基线实际值) | 沿用基线 | 裸 `listening` 被排除;替身走 hub_listening(保留) |
+| **词汇 / 语法** | 带前缀 | 沿用基线 | 裸 `vocab`/`grammar` 被排除 |
+| 完形 | —— | —— | 初中 8 关无完形,不涉及 |
+
+**两条铁律**:
+1. 具体前缀值**一律照抄基线报告 §2 表里最新人教单元实际在用的那个**,**不要发明新值**(新前缀虽能过排除集,但会在老师端多出孤立模块分类,学生端/老师端可能对不上)。
+2. **阅读 snapshot 必须带完整 `questions` 数组**——源3A 直接读 `um.snapshot->'questions'`,缺了就是空壳整篇。
+
+> 阅读的"新快照篇 + 无快照旧篇去重 + 源3B 曾有整篇行则永久压住不复活"这套双源合并 Aaron 确认写得很细,外研社**直接继承,不重做**。
+
+---
+
 ## 九年级策略
 - 新版九上(2024版)2026 秋刚启用出电子版;新版九下要 **2027 春**。→ 九年级"整理中"空壳会挂**至少半年**。
 - 建议:**先把七上下、八上下四册做扎实**,九年级等新版九上拿到手再单独排一期(若想外研社入口早点完整,别等九年级)。

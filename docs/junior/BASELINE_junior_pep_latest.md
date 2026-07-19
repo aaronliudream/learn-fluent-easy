@@ -116,7 +116,7 @@ ORDER BY p.proname, p.oid;
 **C. 字段与结构(§12 锁死)**
 6. reading:`genre`(非 topic)、`stem`(非 q)、**`vocab_notes` 每篇 3 生词必填**;listening:**`translation_cn` 必填**、`type∈{dialogue,passage}`/`kind∈{long,short}`/`speaker∈{us_male,us_female}`;writing:`scoring`=dict。
 7. 关数 = **8 关**(核心词汇→听辨→配对→语法→阅读→听力→写作→通关),**无完形关**(完形是 g9 专属)。
-8. 音标:初中基线用**英音 IPA**(与人教初中一致);听力音色若沿用 g9 则 `us_*`,**外研社是否改英音由 Aaron 定**(见 §6 待定)。
+8. 音标:初中基线用**英音 IPA**(与人教初中一致)。听力音色**沿用 `us_*` 保持全站统一,但做成分册可配 `voice` 字段**(灌库时存参数,不在代码硬编码)——Aaron 决策③,见 `docs/junior/DECISIONS.md`。
 
 **D. 质检硬闸(入库前必跑)**
 9. `node scripts/qc-unit.mjs --dir … --vol wyXX --unit UN`:选项数=4 / 无重复选项 / 答案在选项内 / 无空选项 / 答案分布不偏斜(≥8题:无某位为0且单位≤40%)/ 无≥4连同位 / 语法应用型(禁术语题·禁中文选项)/ 阅读答案不照抄正文(≥5词连续子串)。0 FAIL 才生成灌库 SQL。
@@ -202,13 +202,15 @@ SELECT 'pep_row_polluted', count(*) FROM public.junior_vocab
 
 ---
 
-## 8. 待 Aaron 决策 / 核实
+## 8. 决策(2026-07-19 Aaron 已拍板 → 详见 `docs/junior/DECISIONS.md`)
 
-1. **D1 `useMasteryOverview` 修法**:本轮修还是 Phase 2 前单开分支修?选 (a) 分子 join 还是 (a)+(b) 分母也去硬编码?(共用组件,单独验收)
-2. **老师端 RPC 现况**:跑 §3 的 `pg_get_functiondef` SQL,确认 PHASE6/PHASE7 是否已在 DB 生效(SQLAA 文件 ≠ DB 真身)。
-3. **外研社音标/听力音色**:初中英音 IPA 确认;听力 `speaker` 沿用 g9 `us_*` 还是改英音?
-4. **旧版无标注八下**:Phase 2 生产前从素材目录(`OneDrive/英语教材/初中英语教材/外研社`)挪走,防 Module 制混进 Unit 制。
-5. **D8 部署纪律**:edge function 只从 `main` 部署,勿从 `feat-junior-fltrp` 部署(本分支 edge 缺 SKIP_BARE_MODULES 护栏)。
+1. **D1 `useMasteryOverview`** → **Phase 2 之前单开分支修**(不进本轮);选 a+b 分两步:先 a(分子 JOIN junior_vocab 挡错),同分支再 b(分母去硬编码,做成单 RPC 返回全模块计数)。
+2. **老师端 RPC 真身 SQL** → **现在跑**(§3 已备,只读)。
+3. **听力音色** → 沿用 `us_*`,做成分册可配 `voice` 字段(不硬编码)。
+4. **旧版无标注八下** → Aaron 已删除;素材现只剩七上/七下/八上/八下四册(2024 新版)。
+5. **D8 部署纪律** → 固化:edge 只从 `main` 部署;**本分支 `supabase/functions/` 只读**。
+- ★额外排期(优先于外研社)★:P0-A 学生错题本只读 localStorage(比 D1 更严重·影响付费转化);P0-B 7A/Starter 内联内容回填 DB(新用户漏斗最上层)。
+- 九年级:新版素材至少半年后才有,"整理中"空壳长期挂;建议先做七/八四册,九年级后续单排。
 
 ---
-*报告完 · 零代码改动 · 提交 `feat-junior-fltrp` 待审*
+*报告完 · 零代码改动 · 决策见 DECISIONS.md · 提交 `feat-junior-fltrp`*

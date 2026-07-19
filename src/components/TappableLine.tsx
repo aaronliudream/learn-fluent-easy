@@ -51,11 +51,50 @@ export type Sense = {
   sense_key?: string; // 收藏/复习按此义取值(读者点到哪个义就测哪个)
 };
 
+/**
+ * 多义词按 occ 语境解析主义(方案A + 三条):
+ *  ① 屈折形最强:表面形 -ing/-ed → 动词(接近确定);② 光杆/歧义形看前置词(the/a/of→名词,to/情态/主语→动词);
+ *  ③ 低置信不瞎猜:回退书中主义(library_word_senses 的 sense_key)→ 再没有 → senses[0](= 当前行为,不会更差)。
+ * 返回重排后的 senses(解析义排[0])+ 选中义,供显示(主义在上)与收藏(冻结此义)共用。
+ */
+function resolveSense(
+  senses: Sense[],
+  surface: string,
+  context: string,
+  bookSenseKey?: string | null,
+): { primary: Sense; ordered: Sense[] } {
+  const s = (surface || "").toLowerCase().replace(/’/g, "'").trim();
+  const startsPos = (sense: Sense, want: "v" | "n" | "adj") =>
+    (sense.pos || "").trim().toLowerCase().startsWith(want === "adj" ? "adj" : want + ".");
+  const pick = (want: "v" | "n" | "adj") => senses.find((x) => startsPos(x, want));
+
+  let chosen: Sense | undefined;
+  // ① 屈折形(最强):-ing / -ed → 动词
+  if (/(?:ing|ed)$/.test(s) && s.length > 4) chosen = pick("v");
+  // ② 前置词线索(光杆/歧义形)
+  if (!chosen) {
+    const words = context.toLowerCase().replace(/[^a-z' ]/g, " ").split(/\s+/).filter(Boolean);
+    const first = s.split(/\s+/)[0];
+    const idx = words.indexOf(first);
+    const prev = idx > 0 ? words[idx - 1] : "";
+    const DET = new Set(["the", "a", "an", "this", "that", "these", "those", "my", "your", "his", "her", "its", "our", "their", "some", "any", "no", "of"]);
+    const VERBCUE = new Set(["to", "would", "could", "should", "can", "will", "must", "might", "shall", "do", "does", "did", "let", "i", "we", "you", "they", "he", "she", "don't", "didn't"]);
+    if (DET.has(prev)) chosen = pick("n");
+    else if (VERBCUE.has(prev)) chosen = pick("v");
+  }
+  // ③ 低置信回退:书中主义 sense_key → senses[0]
+  if (!chosen && bookSenseKey) chosen = senses.find((x) => x.sense_key === bookSenseKey);
+  if (!chosen) chosen = senses[0];
+
+  return { primary: chosen, ordered: [chosen, ...senses.filter((x) => x !== chosen)] };
+}
+
 export type Explanation = {
   phrase: string;
   pos?: string;
   one_line_cn?: string;
   senses?: Sense[]; // 多义卡:书中主义排 [0],其余折叠;无则按平铺 one_line_cn 渲染(=视作单义)
+  sense_key?: string; // 本次点词按 occ 解析出的义(收藏冻结此义,复习测此义)
   literal?: LiteralWord[];
   scene_cn?: string;
   replies?: EnCnPair[];
@@ -279,7 +318,19 @@ function ExplainPopover({
       const { data: resp, error: fnErr } = (await raced) as Awaited<typeof invoke>;
       if (fnErr) throw fnErr;
       if (resp?.error) throw new Error(resp.error);
-      setData(resp.explanation as Explanation);
+      const expl = resp.explanation as Explanation;
+      // 多义卡:按本次点词 occ(表面形+句子)解析主义 → 重排 senses(解析义在上)+ flat字段跟着走 + 冻结 sense_key 供收藏/复习。
+      if (expl.senses && expl.senses.length > 1) {
+        const { primary, ordered } = resolveSense(expl.senses, phrase, contextText, null);
+        expl.senses = ordered;
+        expl.one_line_cn = primary.gloss_cn;
+        expl.pos = `${primary.pos ?? ""}${primary.ipa ? `  ${primary.ipa}` : ""}`.trim();
+        expl.example = primary.example ?? expl.example;
+        expl.sense_key = primary.sense_key;
+      } else if (expl.senses && expl.senses.length === 1) {
+        expl.sense_key = expl.senses[0].sense_key;
+      }
+      setData(expl);
       const light = !!resp.light;
       setIsLight(light);
       setIsProper(!!resp.proper);
@@ -317,6 +368,7 @@ function ExplainPopover({
           zh: data.one_line_cn || "",
           ipa,
           pos,
+          senseKey: data.sense_key, // 多义词:冻结本次点词解析出的义,复习按此义测
           srcSentence: contextText,
           srcZh: favorite.srcZh,
           bookId: favorite.bookId,

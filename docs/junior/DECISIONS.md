@@ -98,6 +98,32 @@
 
 ---
 
+## Phase 2 · 七上(wy7A)结构锁定 + grammarCode 命名 + 抽取发现(2026-07-19 · Aaron 从真文本层 PDF 锁定)
+
+> 七上 PDF = 真文本层(InDesign 直出,非扫描),Scope and sequence 完整抽出。CC 报的六个标题**全对,JSON 不改**。
+
+**grammarCode 命名(锁死):**
+```
+wy7-starter-basics          （Starter 综合,7 个点合一条）
+wy7-u1-pronouns
+wy7-u2-simple-present
+wy7-u3-possessive-nouns
+wy7-u4-adverbs-of-frequency
+wy7-u5-simple-future
+wy7-u6-present-continuous
+```
+- **Starter 合一条**(不拆 7 条):Starter 是小初衔接复习性质、7 点都浅,拆开会让语法板块出现 7 个"练两三题就满级"的条目。
+
+**抽取发现(影响 Phase 2 数据生产):**
+- ① **IPA 现成,可机器抽**:`Words and expressions` 附录(p150 起)每词自带 `word /ipa/ pos 释义 首现页码`(如 `explore /ɪkˈsplɔː/ v. 探索…… 9`)。**不像 G9 要手工补 IPA**,词汇关数据近乎直接机抽。
+- ② **"课标三级词汇"标记抽不出**:附录用**加粗**表示三级词汇,加粗是视觉属性、文本层丢失 → 要标此字段需逐页视觉识别 150+ 页。**本轮不做此字段**,backlog,有需求再单独一轮。
+- ③ ⚠️ **外研社 5 板块 vs 8 关模板对不上(Aaron 定)**:
+  - 能对上:Reading→s5 · Grammar→s4 · Listening and speaking→s6 · Reading for writing→s7 · 词汇→s1/s2/s3 · finalQuiz→s8。
+  - **Phonetics 音标**(外研社每单元必有,8 关无):**本轮不做**——塞进 s2 listenWord 会稀释定位;单开第 9 关要动 8 关模板(人教共用,一动就把验收面扩到人教全单元)。**backlog**,等外研社跑通再评估要不要单加第 9 关。
+  - **Presenting ideas 产出任务**(做海报/做计划):**直接不做**,课堂产出活动、非可判分题。
+
+---
+
 ## 九年级策略
 - 新版九上(2024版)2026 秋刚启用出电子版;新版九下要 **2027 春**。→ 九年级"整理中"空壳会挂**至少半年**。
 - 建议:**先把七上下、八上下四册做扎实**,九年级等新版九上拿到手再单独排一期(若想外研社入口早点完整,别等九年级)。

@@ -1,6 +1,7 @@
 import { T } from "@/i18n/T";import { useEffect, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams, useSearchParams } from "react-router-dom";
+import { withJuniorPublisher, type JuniorPublisher } from "@/lib/juniorHub/publisher";
 import { ArrowLeft, Volume2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -15,7 +16,7 @@ import { recordZoneMistake, answerToIdx } from "@/lib/recordZoneMistake";
 import { recordMastery } from "@/lib/masteryProgress";
 
 type Q = {type?: "choice" | "fill" | "judge";q: string;options: string[];answer: string;explanation?: string;};
-type E = {id: string;title: string;transcript: string;translation_cn: string | null;questions: Q[];key_vocab: {word: string;cn: string;}[];audio_url: string | null;kind?: string | null;grade?: number | null;};
+type E = {id: string;title: string;transcript: string;translation_cn: string | null;questions: Q[];key_vocab: {word: string;cn: string;}[];audio_url: string | null;kind?: string | null;grade?: number | null;publisher?: string;};
 
 export default function JuniorListeningPlay() {
   const { id } = useParams<{id: string;}>();
@@ -23,6 +24,8 @@ export default function JuniorListeningPlay() {
   const [searchParams] = useSearchParams();
   const returnTo = searchParams.get("returnTo");
   const [e, setE] = useState<E | null>(null);
+  // 当前听力所属出版社 → 所有 /junior 跳转带上,防外研社听力翻到人教(returnTo 来自 Hub 原样)。
+  const pub: JuniorPublisher = e?.publisher === "junior_fltrp" ? "fltrp" : "pep";
   const [picks, setPicks] = useState<Record<number, string>>({});
   const [fills, setFills] = useState<Record<number, string>>({});
   const [showScript, setShowScript] = useState(false);
@@ -84,7 +87,7 @@ export default function JuniorListeningPlay() {
   useEffect(() => {
     if (!id) return;
     (supabase as any).from("junior_listening_exercises").
-    select("id,title,transcript,translation_cn,questions,key_vocab,audio_url,kind,grade").
+    select("id,title,transcript,translation_cn,questions,key_vocab,audio_url,kind,grade,publisher").
     eq("id", id).maybeSingle().then(({ data }: any) => setE(data as any));
   }, [id]);
 
@@ -193,7 +196,7 @@ export default function JuniorListeningPlay() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
-      <BackLink to={returnTo ?? (e?.grade ? `/junior/listening?grade=${e.grade}` : "/junior/listening")} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回"}</T></BackLink>
+      <BackLink to={returnTo ?? withJuniorPublisher(e?.grade ? `/junior/listening?grade=${e.grade}` : "/junior/listening", pub)} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回"}</T></BackLink>
       <div className="flex items-start justify-between gap-3">
         <h1 className="text-grad-title text-2xl font-extrabold">{e.title}</h1>
         <ShareButton
@@ -305,8 +308,8 @@ export default function JuniorListeningPlay() {
         })}
       </div>
       <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
-        <BackLink to={returnTo ?? (e?.grade ? `/junior/listening?grade=${e.grade}` : "/junior/listening")} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回听力列表"}</T></BackLink>
-        <Link to="/junior" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🏫 初中首页</T></Link>
+        <BackLink to={returnTo ?? withJuniorPublisher(e?.grade ? `/junior/listening?grade=${e.grade}` : "/junior/listening", pub)} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回听力列表"}</T></BackLink>
+        <Link to={withJuniorPublisher("/junior", pub)} className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🏫 初中首页</T></Link>
       </div>
     </main>);
 

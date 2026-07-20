@@ -1,6 +1,7 @@
 import { T } from "@/i18n/T";import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
+import { withJuniorPublisher, type JuniorPublisher } from "@/lib/juniorHub/publisher";
 import { ArrowLeft, Loader2, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { awardCoins } from "@/lib/coins";
@@ -26,6 +27,7 @@ type P = {
   high_sentences: string[] | null;
   error_pairs: ErrorPair[] | null;
   paragraph_template: string | null;
+  publisher?: string;
 };
 type Drill = {id: string;difficulty_label: string | null;prompt: string;hint: string | null;sort_order: number | null;};
 type Result = {score: number;overall: string;mistakes: {original: string;corrected: string;explanation: string;}[];suggestions: string[];improved: string;};
@@ -33,6 +35,8 @@ type Result = {score: number;overall: string;mistakes: {original: string;correct
 export default function JuniorWritingPlay() {
   const { id } = useParams<{id: string;}>();
   const [p, setP] = useState<P | null>(null);
+  // 当前写作题所属出版社 → /junior 跳转带上,防外研社写作翻到人教。
+  const pub: JuniorPublisher = p?.publisher === "junior_fltrp" ? "fltrp" : "pep";
   const [drills, setDrills] = useState<Drill[]>([]);
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(false);
@@ -56,7 +60,7 @@ export default function JuniorWritingPlay() {
   useEffect(() => {
     if (!id) return;
     (supabase as any).from("junior_writing_prompts").
-    select("id,topic,grade,prompt_cn,prompt_en,requirements,min_words,max_words,sample_answer,scoring_rubric,title_en,high_sentences,error_pairs,paragraph_template").
+    select("id,topic,grade,prompt_cn,prompt_en,requirements,min_words,max_words,sample_answer,scoring_rubric,title_en,high_sentences,error_pairs,paragraph_template,publisher").
     eq("id", id).maybeSingle().then(({ data }: any) => setP(data as any));
     (supabase as any).from("junior_writing_drills").
     select("id,difficulty_label,prompt,hint,sort_order").
@@ -112,7 +116,7 @@ export default function JuniorWritingPlay() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
-      <BackLink to={p?.grade ? `/junior/writing?grade=${p.grade}` : "/junior/writing"} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>返回</T></BackLink>
+      <BackLink to={withJuniorPublisher(p?.grade ? `/junior/writing?grade=${p.grade}` : "/junior/writing", pub)} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>返回</T></BackLink>
       <h1 className="text-grad-title text-2xl font-extrabold">{p.topic}</h1>
       <div className="mt-3 rounded-2xl border bg-card p-4 text-sm">
         <div className="font-bold"><T>📌 题目</T></div>
@@ -253,8 +257,8 @@ export default function JuniorWritingPlay() {
         </section>
       }
       <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
-        <BackLink to={p?.grade ? `/junior/writing?grade=${p.grade}` : "/junior/writing"} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> <T>返回写作题库</T></BackLink>
-        <Link to="/junior" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🏫 初中首页</T></Link>
+        <BackLink to={withJuniorPublisher(p?.grade ? `/junior/writing?grade=${p.grade}` : "/junior/writing", pub)} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> <T>返回写作题库</T></BackLink>
+        <Link to={withJuniorPublisher("/junior", pub)} className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🏫 初中首页</T></Link>
       </div>
     </main>);
 

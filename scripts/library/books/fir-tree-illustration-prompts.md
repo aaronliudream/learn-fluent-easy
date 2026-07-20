@@ -110,11 +110,13 @@ SCENE: A dark, dim attic loft: the fir, pushed aside and forgotten in a shadowy 
 
 ## 第 5 章 · 一切都过去了
 
-**保存为 `ch5-1-withered-star.jpg`** (锚 seq 148)
+**保存为 `ch5-1-star-and-hand.jpg`** (锚 seq 148)
 
 ```
-Watercolor children's storybook illustration, 16:9 landscape, at least 1280x720, soft hand-painted washes with visible paper texture, warm inviting light, gentle and painterly (not photographic). Cohesive storybook series style. No text, no words, no letters, no signature anywhere in the image.
-The fir tree is a slender Northern-European spruce with rich blue-green needles, given gentle expressive character but NO cartoon face (keep it a real, poignant little tree). Period setting: 19th-century Denmark.
-At this point the SAME fir is dried brown and yellow, its needles falling.
-SCENE: A spring courtyard beside a blossoming garden: the fir now lies withered brown and yellow on its side in a corner among weeds and nettles, the gold tinsel star still glinting on top. A small child in 19th-century clothes has just run up and torn off the golden star, holding it high. Fresh roses and linden blossom bright behind — a bittersweet contrast between the blooming garden and the dried-out tree.
+Watercolor children's storybook illustration, 16:9 landscape, at least 1280x720, soft hand-painted washes with visible paper texture, bright and gentle, fairy-tale mood (not photographic). No text, no words, no signature.
+COMPOSITION: a close-up. In the upper part of the frame a five-pointed GOLD tinsel star (the ONLY gold thing in the picture) glints in soft daylight, and a small child's hand reaches up from below toward it, fingers about to touch the star. Along the lower edge, only a few dried fir branch TIPS poke into frame among some weeds and nettles — the tree itself is OUT OF FRAME (do NOT show the trunk or the whole tree).
+MATERIALS: the branches are a dried fir tree — brown pine needles, woody bark texture, thin straight woody twigs. Only the star is gold; the branches stay brown and woody, never golden.
+STRICTLY NOT: no bulbous shapes, no segmented body, no smooth fleshy forms; the branches must read as dry wood and needles, never as a creature.
+Negative prompt: no creature, no insect, no larva, no worm, no limbs, no legs, not an animal, no snake, no glossy body.
+COLOR: bright spring daylight, fresh greens and warm light, a single warm gold accent from the star only.
 ```

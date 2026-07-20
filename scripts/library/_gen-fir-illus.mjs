@@ -41,9 +41,16 @@ const scenes = [
   { ch: 4, k: 1, seq: 108, slug: "loft-mice", stage: "grown",
     scene: "A dark, dim attic loft: the fir, pushed aside and forgotten in a shadowy corner beside big wooden trunks, catches a single faint shaft of light. Two little grey mice peep from a hole and snuff among its lower branches. Muted browns and greys with one warm highlight, a lonely quiet mood.",
     alt: "昏暗阁楼角落里被遗忘的枞树,两只小老鼠在枝间嗅探" },
-  { ch: 5, k: 1, seq: 148, slug: "withered-star", stage: "withered",
-    scene: "A spring courtyard beside a blossoming garden: the fir now lies withered brown and yellow on its side in a corner among weeds and nettles, the gold tinsel star still glinting on top. A small child in 19th-century clothes has just run up and torn off the golden star, holding it high. Fresh roses and linden blossom bright behind — a bittersweet contrast between the blooming garden and the dried-out tree.",
-    alt: "春天院子角落里,枯黄的枞树躺在杂草中,一个小孩扯下顶上的金星" },
+  { ch: 5, k: 1, seq: 148, slug: "star-and-hand", stage: "withered",
+    alt: "特写:金箔星与孩子伸来的手,下方只露几根带松针的枯枝和杂草",
+    // ⚠️ 高危构图改造:原"整棵倒下的树占主体"被 AI 渲染成金色巨虫(倒树模型弱+金色泛化全树+侧枝触地读作腿)。
+    // 改为特写星+手、树出画,风险最低。此张不走通用 FIR/STAGE 拼装,用自带完整提示词(含材质硬约束+负面词)。
+    override: `Watercolor children's storybook illustration, 16:9 landscape, at least 1280x720, soft hand-painted washes with visible paper texture, bright and gentle, fairy-tale mood (not photographic). No text, no words, no signature.
+COMPOSITION: a close-up. In the upper part of the frame a five-pointed GOLD tinsel star (the ONLY gold thing in the picture) glints in soft daylight, and a small child's hand reaches up from below toward it, fingers about to touch the star. Along the lower edge, only a few dried fir branch TIPS poke into frame among some weeds and nettles — the tree itself is OUT OF FRAME (do NOT show the trunk or the whole tree).
+MATERIALS: the branches are a dried fir tree — brown pine needles, woody bark texture, thin straight woody twigs. Only the star is gold; the branches stay brown and woody, never golden.
+STRICTLY NOT: no bulbous shapes, no segmented body, no smooth fleshy forms; the branches must read as dry wood and needles, never as a creature.
+Negative prompt: no creature, no insect, no larva, no worm, no limbs, no legs, not an animal, no snake, no glossy body.
+COLOR: bright spring daylight, fresh greens and warm light, a single warm gold accent from the star only.` },
 ];
 
 const COVER_FILE = "fir-tree-cover.jpg";
@@ -77,7 +84,7 @@ let lastCh = 0;
 for (const s of scenes) {
   if (s.ch !== lastCh) { out += `\n## 第 ${s.ch} 章 · ${CHZH[s.ch]}\n`; lastCh = s.ch; }
   const file = `ch${s.ch}-${s.k}-${s.slug}.jpg`;
-  const prompt = [STYLE, FIR, STAGE[s.stage], `SCENE: ${s.scene}`].join("\n");
+  const prompt = s.override ? s.override : [STYLE, FIR, STAGE[s.stage], `SCENE: ${s.scene}`].join("\n");
   out += `\n**保存为 \`${file}\`** (锚 seq ${s.seq})\n\n\`\`\`\n${prompt}\n\`\`\`\n`;
   manifest.push({ file, chapter: s.ch, k: s.k, seq: s.seq, slug: s.slug, alt: s.alt });
 }

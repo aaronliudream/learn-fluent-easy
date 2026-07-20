@@ -168,7 +168,16 @@ advice/journey/something/through/towards），可作回归用例。
   ipa 与 pos 存 **null**，不存空串、不存 "—"（防前端渲染出破折号）。
 - 释义清理全角括号后的多余空格：「n.（ 学校的）」→「（学校的）」。
 - 课标三级词汇加粗标记：文本层不可恢复，本期**不做该字段**。
-- 落库字段：publisher='junior_fltrp' / volume='wy7A' / unit='U1' / grade=7。
+- 落库字段：publisher='junior_fltrp' / volume='wy7A' / unit='U1' / grade=7；DB 列 word_id='wy7A-<unit>-<seq>' / stage='junior' / source_type='wordlist' / confidence='high' / freq_rank=课本顺序 / source_page='p.<页>'。
+
+### 多词性词条存储（2026-07-19 Aaron 定）
+同一 headword 有多个词性 → **存一行**，不拆多行（拆开会生成两张中文释义相同/相近的卡，用户体感=重复题）。
+- **pos**：按教材顺序用 `/` 连接。`smile → n./v.`  `race → v./n.`
+- **meaning_cn**：按教材顺序合并，义项间 `；` 分隔，**相同义项去重**。
+  `smile → 笑容；微笑`   `race → 比赛`（两词性同义，合并只留一个，不写"比赛；比赛"）
+- **first_page**：取最小者（最早出现）。`race → 56`
+- **IPA**：两词性共用同一音标，存一份。
+- **QC 追加**：合并后 meaning_cn 若出现重复义项（如"比赛；比赛"）判不合格。
 
 ---
 

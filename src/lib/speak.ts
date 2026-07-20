@@ -5,8 +5,10 @@ import { cleanForTTS } from "@/lib/ttsClean";
 
 let lastSpoken = "";
 let speakToken = 0;
-// 去抖:正在"冷合成"中的 cacheKey;同 key 重复请求不打断(让冷合成跑完自然出声)。
-let pendingColdKey: string | null = null;
+// 冷合成去重表:cacheKey -> 正在进行的 fetchTTS Promise(解析为可播 URL 或 null)。
+// 同词并发只向 edge 合成一次;后到的调用【复用同一 Promise】,拿到 URL 后用【自己的手势上下文】播放
+// ——而不是像旧版那样被去抖直接 return 丢弃(那会在 1-3s 冷窗口内吞掉用户点击 → 哑火)。
+const inflightCold = new Map<string, Promise<string | null>>();
 let sequenceId = 0;
 let currentAudio: HTMLAudioElement | null = null;
 let sharedAudio: HTMLAudioElement | null = null;
@@ -472,6 +474,44 @@ const fetchTTS = async (text: string, voiceId: string, speed: number, accent?: s
   }
 };
 
+// 取或启动某 key 的冷合成,并对同 key 的并发调用【去重】(edge 只被打一次)。
+// 返回解析为可播 URL / null 的共享 Promise;每个调用方各自决定拿到 URL 后怎么播。
+// 这把旧的"去抖 return 丢弃点击"替换为"复用同一合成、各自在自己的手势上下文里播放"。
+const coldFetchShared = (
+  cacheKey: string,
+  text: string,
+  voiceId: string,
+  speed: number,
+  accent?: string,
+): Promise<string | null> => {
+  const existing = inflightCold.get(cacheKey);
+  if (existing) return existing;
+  const p = (async () => {
+    try {
+      return await fetchTTS(text, voiceId, speed, accent);
+    } finally {
+      // 仅当仍是本次合成时才清除,避免误删后来者。
+      if (inflightCold.get(cacheKey) === p) inflightCold.delete(cacheKey);
+    }
+  })();
+  inflightCold.set(cacheKey, p);
+  return p;
+};
+
+// 是否处于真实用户手势(瞬时激活 transient activation)中。
+// onClick 里同步调用 → true;useEffect / 定时器里的 mount 自动播 → false。
+// 用途(修复2):非手势 + 冷缓存 的调用注定被 iOS autoplay 策略拦截,让它只走【纯网络预热】
+// (灌缓存、不碰 <audio>、不改播放状态),把真正出声留给真实手势那一次点击,
+// 从根源上避免"被拦截的自动播污染全局状态、进而害得下一次点击哑火"。
+// 说明:iOS 上被拦截的 play() 常"resolve 但无声"而非 reject,故不能靠 play() 失败回调判断,
+// 只能在调用前判活跃度。API 不可用(旧 Safari)时回退为 true → 维持既有行为,绝不比现状更差。
+const hasUserGesture = (): boolean => {
+  if (typeof navigator === "undefined") return true;
+  const ua = (navigator as Navigator & { userActivation?: { isActive?: boolean } }).userActivation;
+  if (!ua || typeof ua.isActive !== "boolean") return true;
+  return ua.isActive;
+};
+
 const playUrlOn = (
   audio: HTMLAudioElement,
   url: string,
@@ -559,8 +599,17 @@ export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH"; voic
   const speed = opts?.speed ?? settings.speed;
   const accent = opts?.accent;
   const cacheKey = `${voiceId}|${speed}|${accent || ''}|${trimmed}`;
-  // 去抖:同一冷合成进行中 → 不打断,直接返回(让进行中的合成跑完播放)。
-  if (pendingColdKey === cacheKey) return Promise.resolve();
+
+  // 【修复2】非手势(useEffect / 定时器里的 mount 自动播)且缓存为冷 → 只做纯网络预热:
+  //   复用/启动共享冷合成把音频灌进缓存,但不碰 <audio>、不 stopCurrent、不改任何播放状态。
+  //   这样"注定被 iOS autoplay 拦截"的自动播不再污染全局状态,真正出声留给真实手势那次点击。
+  //   缓存已热(warmUrl)的自动播照常走下面的播放路径 → 桌面/已解锁可自动出声,行为不变。
+  const warmUrl = audioCache.get(cacheKey) ?? loadPersist().get(cacheKey);
+  if (!warmUrl && !hasUserGesture()) {
+    void coldFetchShared(cacheKey, trimmed, voiceId, speed, accent);
+    return Promise.resolve();
+  }
+
   lastSpoken = trimmed;
   stopCurrent();
 
@@ -621,22 +670,22 @@ export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH"; voic
     loadPersist().delete(cacheKey);
   }
 
-  // 3) Cache miss(冷)→ fetch then play。标记 pendingColdKey,合成期间重复点同词不打断。
+  // 3) Cache miss(冷)→【修复1】复用共享冷合成 Promise(同词并发只合成一次),
+  //    拿到 URL 后用【本次调用的手势上下文】播放。去抖的正确语义是"等它合成好再播",
+  //    不是"丢弃点击":用户点击本身即有效手势,await 后在同一个已被 unlockAudioSync 消费
+  //    过手势的 <audio> 上换 src,iOS 会放行。若期间来了更新的播放/停止(speakToken 变了),
+  //    本次结果由 finishPlayback / speakBrowserFallback 内的 token 校验丢弃 → 最新一次点击胜出。
   return (async () => {
-    pendingColdKey = cacheKey;
-    try {
-      const url = await fetchTTS(trimmed, voiceId, speed, accent);
-      if (url) await finishPlayback(url);
-      else await speakBrowserFallback(trimmed, voiceId, speed, myToken);
-    } finally {
-      if (pendingColdKey === cacheKey) pendingColdKey = null;
-    }
+    const url = await coldFetchShared(cacheKey, trimmed, voiceId, speed, accent);
+    if (myToken !== speakToken) return;
+    if (url) await finishPlayback(url);
+    else await speakBrowserFallback(trimmed, voiceId, speed, myToken);
   })();
 };
 
-/** 去抖辅助:某文本在该 voice/speed 下是否正处于冷合成中(供 hubSpeak 避免重复打断)。 */
+/** 某文本在该 voice/speed/accent 下是否正处于冷合成中(现基于去重表 inflightCold)。 */
 export const isSynthInFlight = (text: string, voiceId: string, speed: number, accent?: string): boolean =>
-  pendingColdKey === `${voiceId}|${speed}|${accent || ''}|${(text || '').trim()}`;
+  inflightCold.has(`${voiceId}|${speed}|${accent || ''}|${(text || '').trim()}`);
 
 // Speak a list of sentences one-by-one with a small pause between them.
 // This sounds far more natural than concatenating an entire paragraph and

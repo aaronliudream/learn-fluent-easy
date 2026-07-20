@@ -200,6 +200,21 @@ CC 自查、自验、自合到 main,不再逐步等 Aaron 确认。遇规则覆�
 
 ---
 
+## 外研社七上 · D1-c + 四关规约(2026-07-19 Aaron 定)
+
+**D1-c(已做·SQLAA/D1c-...publisher-param.sql 待Aaron跑)**:`junior_mastery_overview(_publisher text default 'junior')` — publisher 是**内容维度**做成参数安全;`auth.uid()` 铁律不变**绝不接 _user_id**。前端 `Junior.tsx` 传 `dbPublisherFor(pub)`(pep→junior/fltrp→junior_fltrp)。缺省兜住 pep 零回归;fltrp 词汇分母=288(词表灌完)。原 D1 把 publisher='junior' 写死→外研社环永远 0/2434,D1-c 修另一侧。
+
+**题目来源(Aaron 定·不再问)**:教材原题优先;题量不足允许自拟补足,但——每题 `source_type='textbook'|'authored'`;自拟不改教材语法点/词汇范围只做同范围扩充;[[vocab-quiz-semantic-match-rule]] 语义对应铁律照旧(题干中文释义↔标答英文一一对应·三干扰项真错·逐题自审)。
+
+**四关执行顺序:s4 语法(当模板) → s5 阅读 → s7 写作 → s6 听力**。每关:内容 JSON 进 `REVIEWAA/` 等 Aaron 审(内容必人审不自动合);代码/SQL/文档按自动模式直接合 main。
+
+- **s4 语法**:素材=附录 Guide to the language use(印刷 p145-154)+ 单元 Grammar 板块;grammarCode 已定(wy7-starter-basics/…/wy7-u6-present-continuous·Starter合一条);publisher='junior_fltrp'·code 必 wy 前缀。
+- **s5 阅读**:素材=每单元 2 篇(Understanding ideas 主课文 + Reading for writing)。★落库铁律(重申)★ module=**裸 `reading`**;source_key=**`junior_reading_passage_<junior_reading.id>`(绝不加 wy)**;snapshot 必带完整 questions(老师端源3A 双条件·缺一则整篇消失)。
+- **s7 写作**:素材=每单元 Writing 任务;module=**`junior_writing`**(带前缀·裸 writing 被 RPC 排除集挡·老师端看不见);判分链路照基线报告 §2 人教写作关实际做法,不自创。
+- **s6 听力**:★核实结果=学生书**无完整 tapescript**(Listening and speaking 只印挖空对话+题·答案在教师书;grep 无原文·U1「Listen and choose」实证)→**本期不做**,课本 JSON 保 available:false,**不编造听力原文(硬停③)**。有音频源再说。★
+
+---
+
 ## 九年级策略
 - 新版九上(2024版)2026 秋刚启用出电子版;新版九下要 **2027 春**。→ 九年级"整理中"空壳会挂**至少半年**。
 - 建议:**先把七上下、八上下四册做扎实**,九年级等新版九上拿到手再单独排一期(若想外研社入口早点完整,别等九年级)。

@@ -114,7 +114,9 @@ function padFullOrder(stage: Stage, computed: ModuleStat[]): ModuleStat[] {
   });
 }
 
-export function useMasteryOverview(stage: Stage): StageOverview {
+// juniorPublisher:初中环按内容出版社过滤(DB 值 'junior'=人教 / 'junior_fltrp'=外研社);
+// 缺省 → RPC 用默认 'junior'(pep 零回归)。仅 junior stage 生效,gaokao/primary 不受影响。
+export function useMasteryOverview(stage: Stage, juniorPublisher?: string): StageOverview {
   const [state, setState] = useState<StageOverview>(() => {
     const modules = padFullOrder(stage, []);
     const total = modules.reduce((a, m) => a + m.total, 0);
@@ -187,7 +189,9 @@ export function useMasteryOverview(stage: Stage): StageOverview {
       // === JUNIOR: 单 RPC 返回 publisher='junior' 过滤的 分子+分母(D1;根治环 >100%)。===
       // RPC 未部署/出错 → 落到下方旧内联逻辑(部署安全:Aaron 跑 SQL 前行为不变)。
       if (stage === "junior") {
-        const { data: rpcRows, error: rpcErr } = await (supabase.rpc as any)("junior_mastery_overview");
+        // pep(='junior')不传参:兼容旧 0 参 RPC(D1c SQL 跑之前也不回归);仅外研社传 _publisher。
+        const rpcArgs = juniorPublisher && juniorPublisher !== "junior" ? { _publisher: juniorPublisher } : {};
+        const { data: rpcRows, error: rpcErr } = await (supabase.rpc as any)("junior_mastery_overview", rpcArgs);
         const rows = (rpcRows ?? []) as { module: string; mastered: number; learned: number; due: number; total: number }[];
         if (!rpcErr && rows.length) {
           const byMod = Object.fromEntries(rows.map((r) => [r.module, r]));
@@ -378,7 +382,7 @@ export function useMasteryOverview(stage: Stage): StageOverview {
       if (!cancelled) setState({ stage, loading: false, signedIn: true, modules, total, mastered, learned, untouched, due, percent });
     })();
     return () => { cancelled = true; };
-  }, [stage]);
+  }, [stage, juniorPublisher]);
 
   return state;
 }

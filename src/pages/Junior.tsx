@@ -4,6 +4,7 @@ import { ArrowLeft, BookOpen } from "lucide-react";
 import {
   JUNIOR_PUBLISHER_META,
   JUNIOR_PUBLISHER_ORDER,
+  dbPublisherFor,
   readJuniorPublisherParam,
   withJuniorPublisher,
   type JuniorPublisher,
@@ -162,7 +163,7 @@ function JuniorContent({ pub }: { pub: JuniorPublisher }) {
   const [totalMinutes, setTotalMinutes] = useState<number | null>(null); // get_user_total_minutes() 累计分钟
 
   const examOk = useExamWhitelisted();                   // 中考真题仅 email 白名单可见(纯前端藏入口,对齐高考真题)
-  const overview = useMasteryOverview("junior");        // 学科卡进度 + 已掌握单词 + 完成课程%
+  const overview = useMasteryOverview("junior", dbPublisherFor(pub)); // 环按当前出版社(D1-c);pep=junior/外研社=junior_fltrp
   const classroom = useJuniorClassroomSync(grade);       // 课堂同步掌握度(项已掌握 + 百分比)
   const { stats: streak } = useStreakStats(userId);      // 连续学习天数
 

@@ -85,7 +85,7 @@ export default function JuniorReadingPlay() {
     setStreak(0);
     setAttempt(1);
     (async () => {
-      const { data } = await supabase.from("junior_reading").select("id,title,body,word_count,grade,questions,vocab_notes").eq("id", id).maybeSingle();
+      const { data } = await supabase.from("junior_reading").select("id,title,body,word_count,grade,questions,vocab_notes,publisher").eq("id", id).maybeSingle();
       setR(data as any);
       const { data: u } = await supabase.auth.getUser();
       if (u?.user) {
@@ -94,9 +94,12 @@ export default function JuniorReadingPlay() {
         setMastery(await loadMastery("junior_reading"));
       }
       const grade = (data as any)?.grade;
+      const publisher = (data as any)?.publisher;
       if (grade) {
-        const { data: items } = await supabase.from("junior_reading").
-        select("id,title").eq("grade", grade).order("created_at", { ascending: true });
+        // 上一篇/下一篇兄弟篇:按当前文章自身的出版社过滤,防跨社串篇(外研社文章翻到人教文章)。
+        let q = supabase.from("junior_reading").select("id,title").eq("grade", grade);
+        if (publisher) q = q.eq("publisher", publisher);
+        const { data: items } = await q.order("created_at", { ascending: true });
         setList((items ?? []) as ListItem[]);
       }
       startRef.current = Date.now();

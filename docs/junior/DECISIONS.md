@@ -166,6 +166,25 @@ advice/journey/something/through/towards），可作回归用例。
 
 ---
 
+## ★外研社初中 = 自动生产模式(2026-07-19 起,同美语课程)★
+
+CC 自查、自验、自合到 main,不再逐步等 Aaron 确认。遇规则覆盖不到的才停。
+
+**自动执行(不问,做完一行汇总+commit号)**:
+1. D1 完整版:单 RPC 返回按 publisher 过滤的分子+分母,前端删 TOTALS 硬编码。RPC 必 `SECURITY DEFINER`+`SET search_path TO 'public'`+**不接 _user_id 参数(只用 auth.uid())**;三学段进度环自查,pep(纯初中账号)no-op。
+2. JuniorListeningPlay/JuniorWritingPlay 跨社导航(同 ReadingPlay 7 处)。
+3. 七上 Starter+U1–U6 内容抽取+灌库,按本文件词表抽取规约。
+
+**合并规则**:tsc 0 + 测试无新增失败 + Vercel 预览绿 → 直接合 main,不等眼验。main 前进非快进 → 自己重 merge,零冲突继续,不汇报。
+
+**硬停(只这几种停下问)**:①改 DB **表结构** 或 改 **共享组件签名**(注:建 RPC/函数=写 SQL 给 Aaron 跑,非硬停);②碰禁区文件(PrimaryHubUnit/unitRoutingConfig/PrimaryHubUnitDispatch/PrimaryHubUnitGamified);③源 PDF 缺失/内容存疑——**绝不编造教材内容**;④发现会影响 pep 线上行为的**意外**改动(D1 修 senior 泄漏是任务本身、非意外,不停);⑤需部署 edge function(只从 main)。
+
+**汇报**:每件一行结论+commit;决策写本文件,不贴 Aaron。**内容审核仍需 Aaron 看**(教材错=教错学生,不自动过);代码自跑。
+
+**Backlog(别现在做)**:D1 分母是全学段合计——七年级学生的阅读分母含八九年级内容。按年级切分母才真准,但另开题目。
+
+---
+
 ## 九年级策略
 - 新版九上(2024版)2026 秋刚启用出电子版;新版九下要 **2027 春**。→ 九年级"整理中"空壳会挂**至少半年**。
 - 建议:**先把七上下、八上下四册做扎实**,九年级等新版九上拿到手再单独排一期(若想外研社入口早点完整,别等九年级)。

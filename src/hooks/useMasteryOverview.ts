@@ -184,6 +184,33 @@ export function useMasteryOverview(stage: Stage): StageOverview {
         return;
       }
 
+      // === JUNIOR: 单 RPC 返回 publisher='junior' 过滤的 分子+分母(D1;根治环 >100%)。===
+      // RPC 未部署/出错 → 落到下方旧内联逻辑(部署安全:Aaron 跑 SQL 前行为不变)。
+      if (stage === "junior") {
+        const { data: rpcRows, error: rpcErr } = await (supabase.rpc as any)("junior_mastery_overview");
+        const rows = (rpcRows ?? []) as { module: string; mastered: number; learned: number; due: number; total: number }[];
+        if (!rpcErr && rows.length) {
+          const byMod = Object.fromEntries(rows.map((r) => [r.module, r]));
+          const mk = (key: ModuleKey): ModuleStat => {
+            const r = byMod[key];
+            const total = r?.total ?? TOTALS.junior[key]; // RPC 真实分母;缺则回退硬编码
+            const mastered = r?.mastered ?? 0, learned = r?.learned ?? 0, due = r?.due ?? 0;
+            return { key, ...MODULE_META[key], to: routeFor("junior", key), total, mastered, learned, due, percent: total ? Math.round((mastered / total) * 100) : 0 };
+          };
+          const computed = (["vocab", "reading", "listening", "writing", "grammar"] as ModuleKey[]).map(mk);
+          const modules = padFullOrder("junior", computed);
+          const total = computed.reduce((a, m) => a + m.total, 0);
+          const mastered = computed.reduce((a, m) => a + m.mastered, 0);
+          const learned = computed.reduce((a, m) => a + m.learned, 0);
+          const due = computed.reduce((a, m) => a + m.due, 0);
+          const untouched = Math.max(0, total - mastered - learned);
+          const percent = total ? Math.round((mastered / total) * 100) : 0;
+          if (!cancelled) setState({ stage, loading: false, signedIn: true, modules, total, mastered, learned, untouched, due, percent });
+          return;
+        }
+        // else: 落到下方旧逻辑(fallback)
+      }
+
       // === Vocab ===
       const vocabKeys = stage === "junior" ? ["junior_word_mastery"] : ["gaokao_user_mastery"];
       const vocab = emptyStat(stage, "vocab");

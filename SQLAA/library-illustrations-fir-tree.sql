@@ -1,5 +1,5 @@
 -- ============================================================================
--- 图书馆插图 · 枞树(封面 + 第 1-4 章·CC 压缩+已传桶·待 Aaron 跑)
+-- 图书馆插图 · 枞树(封面 + 第 1-5 章·CC 压缩+已传桶·待 Aaron 跑)
 -- 幂等:先删本书旧插图行再插;封面写进 library_books.cover.image。position=章内段号(1-based)。
 -- ============================================================================
 BEGIN;
@@ -21,7 +21,8 @@ VALUES
   ((SELECT id FROM public.library_books WHERE book_key='fir-tree'), 2, 8, 'fir-tree/ch2-2-into-parlour.jpg', '', '两个穿号衣的仆人把枞树抬进豪华客厅,白瓷炉和中国花瓶', 'AI illustration (watercolor)', 1000, 1000, true),
   ((SELECT id FROM public.library_books WHERE book_key='fir-tree'), 2, 9, 'fir-tree/ch2-3-decorating.jpg', '', '小姐们给客厅里的枞树挂镀金苹果、糖果网兜和蜡烛,顶上安金星', 'AI illustration (watercolor)', 1000, 1000, true),
   ((SELECT id FROM public.library_books WHERE book_key='fir-tree'), 3, 4, 'fir-tree/ch3-1-christmas-eve.jpg', '', '圣诞夜,点满蜡烛的枞树旁孩子们又跳又闹地抢礼物', 'AI illustration (watercolor)', 1000, 1000, true),
-  ((SELECT id FROM public.library_books WHERE book_key='fir-tree'), 4, 5, 'fir-tree/ch4-1-loft-mice.jpg', '', '昏暗阁楼角落里被遗忘的枞树,两只小老鼠在枝间嗅探', 'AI illustration (watercolor)', 1000, 1000, true);
+  ((SELECT id FROM public.library_books WHERE book_key='fir-tree'), 4, 5, 'fir-tree/ch4-1-loft-mice.jpg', '', '昏暗阁楼角落里被遗忘的枞树,两只小老鼠在枝间嗅探', 'AI illustration (watercolor)', 1000, 1000, true),
+  ((SELECT id FROM public.library_books WHERE book_key='fir-tree'), 5, 11, 'fir-tree/ch5-1-star-and-hand.jpg', '', '特写:金箔星与孩子伸来的手,下方只露几根带松针的枯枝和杂草', 'AI illustration (watercolor)', 1000, 563, true);
 
 SELECT 'after' AS phase, chapter_idx, count(*)
   FROM public.library_illustrations

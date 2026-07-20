@@ -15,9 +15,10 @@ import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
+import { withJuniorPublisher, type JuniorPublisher } from "@/lib/juniorHub/publisher";
 
 type Q = {q: string;options: string[];answer: string;explanation?: string;};
-type R = {id: string;title: string;body: string;word_count: number | null;grade: number;questions: Q[];vocab_notes: {word: string;cn: string;}[];};
+type R = {id: string;title: string;body: string;word_count: number | null;grade: number;questions: Q[];vocab_notes: {word: string;cn: string;}[];publisher: string;};
 type ListItem = {id: string;title: string;};
 
 export default function JuniorReadingPlay() {
@@ -41,6 +42,9 @@ export default function JuniorReadingPlay() {
   const [attempt, setAttempt] = useState(1);
   // Hub 第5关入口(returnTo):做完显示极简"✅完成"中转卡,看到反馈后再回单元关;板块入口不用。
   const [done, setDone] = useState(false);
+  // 当前文章所属出版社(外研社=junior_fltrp)。所有 /junior/* 跳转过 withJuniorPublisher,
+  // 防"从外研社文章出发跑到人教去"(串篇/返回错列表)。returnTo(来自 Hub)已带上下文,原样用。
+  const pub: JuniorPublisher = r?.publisher === "junior_fltrp" ? "fltrp" : "pep";
 
   // Full-test lock: AI may only discuss the reading after submission.
   useRegisterAssistant(
@@ -116,10 +120,10 @@ export default function JuniorReadingPlay() {
   useEffect(() => {
     if (!done || returnTo) return;
     const t = setTimeout(() => {
-      nav(r?.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading");
+      nav(withJuniorPublisher(r?.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading", pub));
     }, 10000);
     return () => clearTimeout(t);
-  }, [done, returnTo, r, nav]);
+  }, [done, returnTo, r, pub, nav]);
 
   const elapsed = Math.floor((now - startRef.current) / 1000);
   const timeOk = elapsed >= minSec;
@@ -253,7 +257,7 @@ export default function JuniorReadingPlay() {
     setStreak(0);
     setAttempt(1);
     startRef.current = Date.now();
-    nav(`/junior/reading/${nextItem.id}`);
+    nav(withJuniorPublisher(`/junior/reading/${nextItem.id}`, pub));
   };
 
   // 阅读板块 = 本年级总览,任意篇自由进入,不再套用"上一篇 80% 才解锁"。
@@ -304,7 +308,7 @@ export default function JuniorReadingPlay() {
               </button>
             )}
             <Link
-              to={r.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading"}
+              to={withJuniorPublisher(r.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading", pub)}
               className="inline-flex w-full items-center justify-center rounded-xl border border-border py-3 text-sm font-semibold text-foreground"
             >
               <T>返回阅读列表</T>
@@ -322,7 +326,7 @@ export default function JuniorReadingPlay() {
   const goNext = () => {
     if (returnTo) {nav(returnTo);return;} // 从 Hub 来:做完回单元关,不跨篇
     if (!nextItem) return;
-    nav(`/junior/reading/${nextItem.id}`); // 自由进入,不再要求本篇 ≥80%
+    nav(withJuniorPublisher(`/junior/reading/${nextItem.id}`, pub)); // 自由进入,不再要求本篇 ≥80%
   };
 
   const passage = (
@@ -407,7 +411,7 @@ export default function JuniorReadingPlay() {
       <ExamContainer max="7xl">
         {/* Top bar */}
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3 pb-4 border-b exam-divider">
-          <BackLink to={returnTo ?? (r?.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading")} className="inline-flex items-center gap-1.5 text-[13px] exam-soft hover:exam-ink transition">
+          <BackLink to={returnTo ?? withJuniorPublisher(r?.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading", pub)} className="inline-flex items-center gap-1.5 text-[13px] exam-soft hover:exam-ink transition">
             <ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回"}</T>
           </BackLink>
           <div className="flex items-center gap-3">
@@ -488,8 +492,8 @@ export default function JuniorReadingPlay() {
         </div>
 
         <div className="mt-10 pt-6 border-t exam-divider flex flex-wrap items-center justify-center gap-2">
-          <Link to={returnTo ?? (r?.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading")} className="exam-btn exam-btn-primary"><ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回阅读列表"}</T></Link>
-          <Link to="/junior" className="exam-btn exam-btn-ghost"><T>初中首页</T></Link>
+          <Link to={returnTo ?? withJuniorPublisher(r?.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading", pub)} className="exam-btn exam-btn-primary"><ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回阅读列表"}</T></Link>
+          <Link to={withJuniorPublisher("/junior", pub)} className="exam-btn exam-btn-ghost"><T>初中首页</T></Link>
         </div>
       </ExamContainer>
     </ExamPaper>);

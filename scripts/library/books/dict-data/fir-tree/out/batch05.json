@@ -1,0 +1,82 @@
+{
+  "cards": [
+    {
+      "word": "christmas",
+      "pos": "专名",
+      "ipa": "/ˈkrɪsməs/",
+      "gloss_cn": "圣诞节(12月25日的西方节日)",
+      "gloss_en": "the Christian holiday on December 25",
+      "sense_key": "christmas",
+      "ex_en": "We put up a tree every Christmas.",
+      "ex_cn": "每年圣诞节我们都会摆一棵圣诞树。",
+      "proper": true
+    },
+    {
+      "word": "chinese",
+      "pos": "adj.",
+      "ipa": "/ˌtʃaɪˈniz/",
+      "gloss_cn": "中国的;中国瓷的(这里指中国瓷花瓶)",
+      "gloss_en": "of or from China",
+      "sense_key": "chinese",
+      "ex_en": "She bought a beautiful Chinese vase at the shop.",
+      "ex_cn": "她在店里买了一只漂亮的中国瓷花瓶。",
+      "proper": true
+    },
+    {
+      "word": "sunday",
+      "pos": "专名",
+      "ipa": "/ˈsʌndeɪ/",
+      "gloss_cn": "星期日;礼拜天",
+      "gloss_en": "the first day of the week, after Saturday",
+      "sense_key": "sunday",
+      "ex_en": "On Sunday we like to sleep late.",
+      "ex_cn": "星期天我们喜欢睡懒觉。",
+      "proper": true
+    },
+    {
+      "word": "humpy",
+      "pos": "专名",
+      "ipa": "/ˈhʌmpi/",
+      "gloss_cn": "洪普迪-邓普迪(故事里虚构的人物,滚下楼梯却当上国王娶了公主)",
+      "gloss_en": "invented fairy-tale figure who fell downstairs yet became king",
+      "sense_key": "humpy-dumpy",
+      "ex_en": "The children begged for the tale of Humpy-Dumpy again.",
+      "ex_cn": "孩子们又央求讲洪普迪-邓普迪的故事。",
+      "proper": true
+    },
+    {
+      "word": "dumpy",
+      "pos": "专名",
+      "ipa": "/ˈdʌmpi/",
+      "gloss_cn": "洪普迪-邓普迪(故事里虚构的人物,滚下楼梯却当上国王娶了公主)",
+      "gloss_en": "invented fairy-tale figure who fell downstairs yet became king",
+      "sense_key": "humpy-dumpy",
+      "ex_en": "In the story, Humpy-Dumpy married the princess at last.",
+      "ex_cn": "在故事里,洪普迪-邓普迪最后娶了公主。",
+      "proper": true
+    },
+    {
+      "word": "ivedy",
+      "pos": "专名",
+      "ipa": "/ˈaɪvədi/",
+      "gloss_cn": "伊威迪-阿威迪(故事里虚构的名字,孩子们想听的另一个故事)",
+      "gloss_en": "invented nonsense name of another tale the children wanted",
+      "sense_key": "ivedy-avedy",
+      "ex_en": "Some kids shouted for the story of Ivedy-Avedy instead.",
+      "ex_cn": "有些孩子却嚷着要听伊威迪-阿威迪的故事。",
+      "proper": true
+    },
+    {
+      "word": "avedy",
+      "pos": "专名",
+      "ipa": "/ˈeɪvədi/",
+      "gloss_cn": "伊威迪-阿威迪(故事里虚构的名字,孩子们想听的另一个故事)",
+      "gloss_en": "invented nonsense name of another tale the children wanted",
+      "sense_key": "ivedy-avedy",
+      "ex_en": "Nobody knew how the tale of Ivedy-Avedy ended.",
+      "ex_cn": "谁也不知道伊威迪-阿威迪的故事结局如何。",
+      "proper": true
+    }
+  ],
+  "skipped": []
+}

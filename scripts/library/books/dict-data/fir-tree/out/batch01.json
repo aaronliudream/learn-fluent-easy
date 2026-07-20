@@ -1,0 +1,125 @@
+{
+  "cards": [
+    {
+      "word": "beheld",
+      "pos": "v.",
+      "ipa": "/bɪˈhɛld/",
+      "gloss_cn": "看见、注视(behold 的过去式,古旧书面语)",
+      "gloss_en": "saw; gazed at (archaic past of behold)",
+      "sense_key": "behold",
+      "ex_en": "From the hill she beheld the whole city below.",
+      "ex_cn": "从山上,她望见了下面整座城市。"
+    },
+    {
+      "word": "tinsel",
+      "pos": "n.",
+      "ipa": "/ˈtɪnsəl/",
+      "gloss_cn": "(装饰用的)闪亮金属箔片、亮丝",
+      "gloss_en": "thin shiny strips used for decoration",
+      "sense_key": "tinsel",
+      "ex_en": "Silver tinsel sparkled all over the shop window.",
+      "ex_cn": "银色的亮丝在橱窗上到处闪光。"
+    },
+    {
+      "word": "larder",
+      "pos": "n.",
+      "ipa": "/ˈlɑːrdər/",
+      "gloss_cn": "食品储藏室",
+      "gloss_en": "a cool room or cupboard for storing food",
+      "sense_key": "larder",
+      "ex_en": "She kept cheese and cold meat in the larder.",
+      "ex_cn": "她把奶酪和冷肉放在食品储藏室里。"
+    },
+    {
+      "word": "magnificence",
+      "pos": "n.",
+      "ipa": "/mæɡˈnɪfəsəns/",
+      "gloss_cn": "壮丽、宏伟、豪华",
+      "gloss_en": "great splendor or grandeur",
+      "sense_key": "magnificence",
+      "ex_en": "The visitors gasped at the magnificence of the hall.",
+      "ex_cn": "客人们为大厅的豪华惊叹不已。"
+    },
+    {
+      "word": "balustrade",
+      "pos": "n.",
+      "ipa": "/ˈbæləstreɪd/",
+      "gloss_cn": "(阳台或楼梯边的)栏杆",
+      "gloss_en": "a railing along a balcony or staircase",
+      "sense_key": "balustrade",
+      "ex_en": "He leaned on the marble balustrade and looked down.",
+      "ex_cn": "他靠在大理石栏杆上往下看。"
+    },
+    {
+      "word": "moveth",
+      "pos": "v.",
+      "ipa": "/ˈmuːvəθ/",
+      "gloss_cn": "动、涌动(move 的古旧第三人称形式)",
+      "gloss_en": "moves (archaic third-person form of move)",
+      "sense_key": "move",
+      "ex_en": "The wind moveth over the still water.",
+      "ex_cn": "风在静静的水面上吹动。"
+    },
+    {
+      "word": "wherefore",
+      "pos": "adv.",
+      "ipa": "/ˈwɛrfɔːr/",
+      "gloss_cn": "为什么、为何(古旧)",
+      "gloss_en": "why; for what reason (archaic)",
+      "sense_key": "wherefore",
+      "ex_en": "Wherefore do you weep on such a happy day?",
+      "ex_cn": "这样喜庆的日子,你为什么哭呢?"
+    },
+    {
+      "word": "tis",
+      "pos": "cont.",
+      "ipa": "/tɪz/",
+      "gloss_cn": "'tis:它是、现在是('it is' 的古旧缩略)",
+      "gloss_en": "it is (archaic contraction of \"it is\")",
+      "sense_key": "it-is",
+      "ex_en": "'Tis a cold and lonely night out here.",
+      "ex_cn": "外面是个又冷又孤单的夜晚。"
+    },
+    {
+      "word": "sugarplums",
+      "pos": "n.",
+      "ipa": "/ˈʃʊɡərplʌmz/",
+      "gloss_cn": "(旧时的)圆形水果糖、蜜饯糖果",
+      "gloss_en": "small round sweets or candied treats",
+      "sense_key": "sugarplum",
+      "ex_en": "The children were given sugarplums after supper.",
+      "ex_cn": "晚饭后,孩子们分到了一些水果糖。"
+    },
+    {
+      "word": "pith",
+      "pos": "n.",
+      "ipa": "/pɪθ/",
+      "gloss_cn": "(树干、茎的)木髓、中心软心",
+      "gloss_en": "the soft spongy core at the center of a stem",
+      "sense_key": "pith",
+      "ex_en": "A soft pith runs down the middle of the twig.",
+      "ex_cn": "一条柔软的木髓穿过细枝的正中。"
+    },
+    {
+      "word": "pines",
+      "pos": "n.",
+      "ipa": "/paɪnz/",
+      "gloss_cn": "松树(pine 的复数)",
+      "gloss_en": "pine trees",
+      "sense_key": "pine",
+      "ex_en": "Tall pines lined both banks of the river.",
+      "ex_cn": "高大的松树排列在河的两岸。"
+    },
+    {
+      "word": "pitcher",
+      "pos": "n.",
+      "ipa": "/ˈpɪtʃər/",
+      "gloss_cn": "(有柄有倾口的)大水罐、大壶",
+      "gloss_en": "a large jug with a handle and a lip",
+      "sense_key": "pitcher",
+      "ex_en": "She poured milk from a heavy clay pitcher.",
+      "ex_cn": "她从一只沉甸甸的陶罐里倒出牛奶。"
+    }
+  ],
+  "skipped": []
+}

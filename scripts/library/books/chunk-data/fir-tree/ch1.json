@@ -1,0 +1,32 @@
+{
+  "chapter": 1,
+  "chunks": [
+    {
+      "head": "become of",
+      "gloss": "(某人/某物)后来怎么样了、落得什么下场",
+      "ipa": "/bɪˈkʌm ʌv/",
+      "note": "what became of sb/sth = 某人/某物后来如何、下场怎样。此 become 不是'变成',而是'遭遇、落得'。多用于疑问。",
+      "literal": [
+        { "word": "become", "meaning_cn": "遭遇、落得", "note_cn": "此处非'变成'" },
+        { "word": "of", "meaning_cn": "…的(承接对象)" }
+      ],
+      "ex_en": "Nobody knew what became of the old sailor after the war.",
+      "ex_cn": "谁也不知道那个老水手战后怎么样了。",
+      "occ": [[19, "became of"]]
+    },
+    {
+      "head": "be off",
+      "gloss": "离开、走开;动身走",
+      "ipa": "/biː ɔːf/",
+      "note": "be off = 离开、走掉(off 表'离去')。如 'I must be off' = 我得走了。文中枞树 'wanted to be off' = 老想着离开。",
+      "literal": [
+        { "word": "be", "meaning_cn": "处于(某状态)" },
+        { "word": "off", "meaning_cn": "离开、走开", "note_cn": "此 off 表'离去',非'关闭'" }
+      ],
+      "ex_en": "It's getting late — I must be off now.",
+      "ex_cn": "不早了——我得走了。",
+      "occ": [[27, "be off"]]
+    }
+  ],
+  "skipped": []
+}

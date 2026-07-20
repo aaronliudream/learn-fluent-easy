@@ -1,0 +1,32 @@
+{
+  "chapter": 2,
+  "chunks": [
+    {
+      "head": "come to oneself",
+      "gloss": "苏醒过来、回过神来、恢复知觉",
+      "ipa": "/kʌm tə wʌnˈsɛlf/",
+      "note": "come to oneself = 苏醒、回过神。此 come to 不是'来到某处',而是'恢复知觉/清醒'。文中作 'came to himself'。",
+      "literal": [
+        { "word": "come to", "meaning_cn": "苏醒、恢复知觉", "note_cn": "固定搭配,非'来到'" },
+        { "word": "oneself", "meaning_cn": "自己(文中作 himself)" }
+      ],
+      "ex_en": "He fainted for a moment, but soon came to himself again.",
+      "ex_cn": "他昏了一会儿,但很快又醒了过来。",
+      "occ": [[49, "came to himself"]]
+    },
+    {
+      "head": "take root",
+      "gloss": "生根、扎根;(念头等)扎下根来",
+      "ipa": "/teɪk ruːt/",
+      "note": "take root = (植物)扎根,也比喻(念头、习惯)扎下根。此 take 不是'拿取'。",
+      "literal": [
+        { "word": "take", "meaning_cn": "扎下、生出", "note_cn": "与 root 合成,非'拿'" },
+        { "word": "root", "meaning_cn": "根" }
+      ],
+      "ex_en": "The young apple tree soon took root in the warm soil.",
+      "ex_cn": "那棵小苹果树很快在温暖的泥土里生了根。",
+      "occ": [[61, "take root"]]
+    }
+  ],
+  "skipped": []
+}

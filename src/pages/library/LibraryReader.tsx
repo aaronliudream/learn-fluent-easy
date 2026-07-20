@@ -44,6 +44,7 @@ import {
 } from "@/lib/library/progress";
 import { listBookmarks, addBookmark, removeBookmark, type LibraryBookmark } from "@/lib/library/bookmarks";
 import BookmarkPanel from "@/components/library/BookmarkPanel";
+import { countWords, computeSections, sectionOfPara } from "@/lib/library/sections";
 
 type Mode = "en" | "both" | "cn";
 const MODES: { key: Mode; label: string }[] = [
@@ -54,7 +55,9 @@ const MODES: { key: Mode; label: string }[] = [
 
 const READ_ACCENT = "US" as const; // v1 样书统一美音;将来可按书配置
 const HEARTBEAT_MS = 5000;
-const READING_WPM = 150; // 少儿英文分级读物估读速度(用于"本章约还剩 X 分钟")
+const READING_WPM = 100; // 非母语估读速度(唯一常量·idle阈值 + 剩余时间兜底共用;个人wpm够数据时覆盖剩余时间)。clamp 见 PERSONAL_WPM_MIN/MAX。
+const PERSONAL_WPM_MIN = 60;
+const PERSONAL_WPM_MAX = 250;
 
 function fmtDuration(sec: number): string {
   const m = Math.floor(sec / 60);
@@ -361,8 +364,7 @@ export default function LibraryReader() {
         const r = el.getBoundingClientRect();
         if (r.bottom > 0 && r.top < vh) words += (el.textContent || "").trim().split(/\s+/).filter(Boolean).length;
       }
-      const WPM = 100; // 非母语基准阅读速度
-      const sec = words > 0 ? (words / WPM) * 60 * 2 : 120;
+      const sec = words > 0 ? (words / READING_WPM) * 60 * 2 : 120; // 统一用 READING_WPM(见文件顶常量)
       return Math.min(300, Math.max(60, sec)) * 1000;
     };
 
@@ -545,13 +547,21 @@ export default function LibraryReader() {
     [furthestSeq, total],
   );
 
-  // 本章预计还剩阅读时长(剩余句数 → 词数 ÷ 平均阅读速度;不做"已读 X 词"计数,避免刷进度感)。
+  // 个人阅读速度:数据够(活跃≥120s 且读过≥50句)→ 实测 wpm(clamp);否则兜底 READING_WPM。
+  const personalWpm = useMemo(() => {
+    if (seconds > 120 && furthestSeq > 50 && book?.word_count && book?.sentence_count) {
+      const avgWps = book.word_count / book.sentence_count;
+      const wpm = ((furthestSeq + 1) * avgWps) / (seconds / 60);
+      return Math.min(PERSONAL_WPM_MAX, Math.max(PERSONAL_WPM_MIN, wpm));
+    }
+    return READING_WPM;
+  }, [seconds, furthestSeq, book]);
+
+  // 本章预计还剩(剩余句数 → 词数 ÷ 个人wpm)。不做"已读 X 词"计数,避免刷进度感。返回原始分钟(可 <1,显示层处理"不到1分钟")。
   const remainMin = useMemo(() => {
-    const words = sentences
-      .filter((s) => s.seq > furthestSeq)
-      .reduce((n, s) => n + (s.text_en.trim().split(/\s+/).filter(Boolean).length || 0), 0);
-    return words > 0 ? Math.max(1, Math.round(words / READING_WPM)) : 0;
-  }, [sentences, furthestSeq]);
+    const words = sentences.filter((s) => s.seq > furthestSeq).reduce((n, s) => n + countWords(s.text_en), 0);
+    return words > 0 ? words / personalWpm : 0;
+  }, [sentences, furthestSeq, personalWpm]);
 
   // 段落流:同 para_idx 的句子归为一段(保留各句章内下标 i,供高亮/滚动/进度用)。
   // ---- 书签:加/删(段落级,存该段开头句 seq + preview 快照)/ 跳转(复用续读的 pendingResumeSeq 定位)----
@@ -617,6 +627,13 @@ export default function LibraryReader() {
     });
     return out;
   }, [sentences]);
+
+  // 章内分节(纯显示):按段词数在段边界切 3-10 节;章<600词不分。boundaries=起新节的段下标(0-based)。
+  // ⚠️ 只算显示用节号;分节线是段落兄弟节点、不进 liRefs → 不碰锚点/停留判定/furthest。
+  const sectionInfo = useMemo(() => {
+    const paraWords = paragraphs.map((p) => p.items.reduce((n, x) => n + countWords(x.s.text_en), 0));
+    return computeSections(paraWords);
+  }, [paragraphs]);
 
   if (loading) {
     return (
@@ -811,7 +828,11 @@ export default function LibraryReader() {
           <span className="text-xs font-bold tracking-wide text-slate-400">{chapterLabel}</span>
           {remainMin > 0 && (
             <span className="text-xs text-slate-400">
-              · <T>约还剩</T> {remainMin} <T>分钟</T>
+              {remainMin < 1 ? (
+                <>· <T>约还剩不到 1 分钟</T></>
+              ) : (
+                <>· <T>约还剩</T> {Math.round(remainMin)} <T>分钟</T></>
+              )}
             </span>
           )}
         </div>
@@ -850,6 +871,16 @@ export default function LibraryReader() {
               const dcActive = isFirstPara && /^[A-Za-z]/.test(para.items[0]?.s.text_en ?? "");
               return (
                 <Fragment key={para.paraIdx}>
+                  {/* 章内分节·发丝线里程碑(显示层·段落兄弟节点·不进 liRefs·不碰 furthest/停留判定)。克制:一条淡线 + N/M,无动画/弹窗/音效。 */}
+                  {sectionInfo.boundaries.has(pi) && (
+                    <div className="mx-auto my-8 flex max-w-[660px] items-center gap-3 text-slate-300 select-none" aria-hidden>
+                      <span className="h-px flex-1 bg-slate-200" />
+                      <span className="text-[11px] font-medium tabular-nums tracking-wide">
+                        {sectionOfPara(pi, sectionInfo.boundaries)} / {sectionInfo.total}
+                      </span>
+                      <span className="h-px flex-1 bg-slate-200" />
+                    </div>
+                  )}
                   {figsBeforeLocal(pi + 1).map(renderFigure)}
                   {/* 正文列限宽 ~660px(≤80 字符/行);插图在外层容器满宽,故比正文宽 ~15%。 */}
                   <div className="relative mx-auto mb-7 max-w-[660px]">

@@ -1,0 +1,19 @@
+{
+  "chapter": 5,
+  "chunks": [
+    {
+      "head": "look to oneself",
+      "gloss": "照看自己、顾自己、留意自身",
+      "ipa": "/lʊk tə wʌnˈsɛlf/",
+      "note": "look to oneself = 照看/顾好自己。此 look to 不是'看向',而是'留心、照料'。文中 'forgot to look to himself' = 顾不上打量、照看自己。",
+      "literal": [
+        { "word": "look to", "meaning_cn": "照料、留意", "note_cn": "固定搭配,非'看向'" },
+        { "word": "oneself", "meaning_cn": "自己(文中作 himself)" }
+      ],
+      "ex_en": "With so many guests to serve, she had no time to look to herself.",
+      "ex_cn": "要招呼这么多客人,她根本没工夫顾自己。",
+      "occ": [[142, "look to himself"]]
+    }
+  ],
+  "skipped": []
+}

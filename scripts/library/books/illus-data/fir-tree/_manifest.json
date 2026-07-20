@@ -1,0 +1,85 @@
+{
+ "cover": "fir-tree-cover.jpg",
+ "images": [
+  {
+   "file": "ch1-1-summer-children.jpg",
+   "chapter": 1,
+   "k": 1,
+   "seq": 4,
+   "slug": "summer-children",
+   "alt": "小枞树在夏日林间空地上,附近孩子在草地上用麦秆串野草莓"
+  },
+  {
+   "file": "ch1-2-winter-hare.jpg",
+   "chapter": 1,
+   "k": 2,
+   "seq": 12,
+   "slug": "winter-hare",
+   "alt": "冬天雪地里,一只野兔从小枞树头顶跳过去"
+  },
+  {
+   "file": "ch1-3-woodcutters.jpg",
+   "chapter": 1,
+   "k": 3,
+   "seq": 17,
+   "slug": "woodcutters",
+   "alt": "秋天伐木人砍倒大树装上马车,小枞树在一旁发抖地看着"
+  },
+  {
+   "file": "ch1-4-stork-ships.jpg",
+   "chapter": 1,
+   "k": 4,
+   "seq": 22,
+   "slug": "stork-ships",
+   "alt": "春天清晨,一只鹳鸟对着小枞树说话,远处海上帆船的桅杆"
+  },
+  {
+   "file": "ch2-1-sparrows-window.jpg",
+   "chapter": 2,
+   "k": 1,
+   "seq": 31,
+   "slug": "sparrows-window",
+   "alt": "麻雀停在枞树枝上说话,背景小镇窗内透出点着蜡烛的圣诞树"
+  },
+  {
+   "file": "ch2-2-into-parlour.jpg",
+   "chapter": 2,
+   "k": 2,
+   "seq": 49,
+   "slug": "into-parlour",
+   "alt": "两个穿号衣的仆人把枞树抬进豪华客厅,白瓷炉和中国花瓶"
+  },
+  {
+   "file": "ch2-3-decorating.jpg",
+   "chapter": 2,
+   "k": 3,
+   "seq": 57,
+   "slug": "decorating",
+   "alt": "小姐们给客厅里的枞树挂镀金苹果、糖果网兜和蜡烛,顶上安金星"
+  },
+  {
+   "file": "ch3-1-christmas-eve.jpg",
+   "chapter": 3,
+   "k": 1,
+   "seq": 74,
+   "slug": "christmas-eve",
+   "alt": "圣诞夜,点满蜡烛的枞树旁孩子们又跳又闹地抢礼物"
+  },
+  {
+   "file": "ch4-1-loft-mice.jpg",
+   "chapter": 4,
+   "k": 1,
+   "seq": 108,
+   "slug": "loft-mice",
+   "alt": "昏暗阁楼角落里被遗忘的枞树,两只小老鼠在枝间嗅探"
+  },
+  {
+   "file": "ch5-1-withered-star.jpg",
+   "chapter": 5,
+   "k": 1,
+   "seq": 148,
+   "slug": "withered-star",
+   "alt": "春天院子角落里,枯黄的枞树躺在杂草中,一个小孩扯下顶上的金星"
+  }
+ ]
+}

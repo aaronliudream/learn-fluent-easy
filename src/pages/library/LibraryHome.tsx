@@ -18,6 +18,7 @@ import {
   type LibraryBookListItem,
 } from "@/lib/library/data";
 import { fetchProgressMap, type LibraryReadingState } from "@/lib/library/progress";
+import { listFavoritedTerms } from "@/lib/library/favorites";
 
 const BANDS: { key: LibraryAgeBand | "all"; label: string }[] = [
   { key: "all", label: "全部" },
@@ -51,6 +52,19 @@ export default function LibraryHome() {
   const [progress, setProgress] = useState<Map<string, LibraryReadingState>>(new Map());
   const [visibility, setVisibility] = useState<Map<string, string>>(new Map());
   const [loading, setLoading] = useState(true);
+  // 收藏词数(null=未加载,先按默认句显示,确认为 0 才切引导句,避免闪现)
+  const [favCount, setFavCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    let alive = true;
+    (async () => {
+      const terms = await listFavoritedTerms();
+      if (alive) setFavCount(terms.size);
+    })();
+    return () => {
+      alive = false;
+    };
+  }, []);
 
   useEffect(() => {
     let alive = true;
@@ -108,7 +122,11 @@ export default function LibraryHome() {
           </span>
           <span className="leading-tight">
             <span className="block text-lg font-bold"><T>我的词库</T></span>
-            <span className="block text-[12px] text-sky-100"><T>收藏 · 复习 · 掌握</T></span>
+            {favCount === 0 ? (
+              <span className="block text-[12px] text-sky-100"><T>还没有收藏的词 · 读书时点一下生词就能加进来</T></span>
+            ) : (
+              <span className="block whitespace-nowrap text-[12px] text-sky-100"><T>读书点词 → 收藏 → 复习测试</T></span>
+            )}
           </span>
         </span>
         <ArrowRight className="size-5 shrink-0 transition group-hover:translate-x-0.5" />

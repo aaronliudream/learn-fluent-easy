@@ -221,7 +221,9 @@ CC 自查、自验、自合到 main,不再逐步等 Aaron 确认。遇规则覆�
 - **禁元语言题**:题干不得问"英语的规则是什么"(如"pronouns are used together, English says ___")——那是考规则不是**用**语言,且题干阅读难度常超纲。应用型=在真实语境里用。并列顺序这类点用连词成句/改错,不做 MCQ。QC 关键词拦截 `usually says|the rule|pronouns are used|规则|顺序是`。
 - **不超时态/超词汇**:七上时态只有一般现在(Starter/U2)、一般将来(Starter/U5)、现在进行(U6)——**整册无过去时**(broke/was/did 要七下)。词汇基准 = **小学词表 `primary_vocab` ∪ 本册词表 ∪ 常用基础词兜底 + 词形还原(-s/-ing/-ed/-ies)**;题干+选项实词须在基准内(专名/数字/缩略除外)。真超纲(wagging/proud)必换。
 - **source 标注口径**:`source_type='textbook'` 的题**必注明印刷页码**(便于回 PDF 核对);只有严格教材原题/原句才算 textbook,把 Guide 里规则说明改写成的题算 authored。外研社单元 Grammar 板块 MCQ-able 原题极少→多为 authored,如实标。
-- **答案铁律不变**:标答唯一、干扰项全部真错、答案分布不偏斜(无某位为0·单位≤40%)、[[vocab-quiz-semantic-match-rule]]。
+- **答案铁律不变**:标答唯一、干扰项全部真错、[[vocab-quiz-semantic-match-rule]]。
+- **★干扰项真错自检(批量必做)★**:逐题回读"这个干扰项在什么情况下能成立?"——能想出成立场景的就不是真错,必换。典型漏点:代词题里 `His name is Lucky`(宠物用 he/she 是常规,不是错)——先行词是动物/人时,gendered 物主代词(his/her)往往也成立。启发式:题干含动物先行词(dog/cat/pet…)且 His/Her 作干扰 → 标红复核。
+- **★答案位置一律过 `assignAnswerPositions`(每位≤⌊N/2⌋ + 禁相邻重复),不手工排★**:总体分布均衡会掩盖局部聚集(如 12-17 连续 5 个 A),手工调下次还漏。生成器接站内同款算法(贪心:每步选剩余最多且≠前一位)。
 
 ---
 

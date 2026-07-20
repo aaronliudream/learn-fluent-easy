@@ -1,0 +1,1918 @@
+{
+ "volume": "wy7A",
+ "publisher": "junior_fltrp",
+ "grade": 7,
+ "units": {
+  "Starter": [
+   {
+    "word": "ready",
+    "ipa": "/ˈredi/",
+    "pos": "adj.",
+    "meaning_cn": "准备好（做某事）的",
+    "first_page": 3
+   },
+   {
+    "word": "textbook",
+    "ipa": "/ˈtekstbʊk/",
+    "pos": "n.",
+    "meaning_cn": "教科书，教材，课本",
+    "first_page": 3
+   },
+   {
+    "word": "eraser",
+    "ipa": "/ɪˈreɪzə/",
+    "pos": "n.",
+    "meaning_cn": "橡皮",
+    "first_page": 3
+   },
+   {
+    "word": "junior high",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "初级中学",
+    "first_page": 3
+   },
+   {
+    "word": "geography",
+    "ipa": "/dʒiˈɒɡrəfi/",
+    "pos": "n.",
+    "meaning_cn": "地理",
+    "first_page": 4
+   },
+   {
+    "word": "biology",
+    "ipa": "/baɪˈɒlədʒi/",
+    "pos": "n.",
+    "meaning_cn": "生物",
+    "first_page": 4
+   },
+   {
+    "word": "history",
+    "ipa": "/ˈhɪstəri/",
+    "pos": "n.",
+    "meaning_cn": "历史",
+    "first_page": 4
+   },
+   {
+    "word": "grey",
+    "ipa": "/ɡreɪ/",
+    "pos": "adj.",
+    "meaning_cn": "灰色的",
+    "first_page": 5
+   },
+   {
+    "word": "jacket",
+    "ipa": "/ˈdʒækɪt/",
+    "pos": "n.",
+    "meaning_cn": "夹克，短上衣",
+    "first_page": 5
+   },
+   {
+    "word": "red scarf",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "红领巾",
+    "first_page": 5
+   },
+   {
+    "word": "T-shirt",
+    "ipa": "/ˈtiː ʃɜːt/",
+    "pos": "n.",
+    "meaning_cn": "T恤衫，短袖运动衫",
+    "first_page": 5
+   },
+   {
+    "word": "uniform",
+    "ipa": "/ˈjuːnəfɔːm/",
+    "pos": "n.",
+    "meaning_cn": "制服",
+    "first_page": 5
+   },
+   {
+    "word": "school uniform",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "校服",
+    "first_page": 5
+   },
+   {
+    "word": "of course",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "当然",
+    "first_page": 5
+   },
+   {
+    "word": "forget",
+    "ipa": "/fəˈɡet/",
+    "pos": "v.",
+    "meaning_cn": "忘记，遗忘",
+    "first_page": 5
+   },
+   {
+    "word": "teaching building",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "教学楼",
+    "first_page": 6
+   },
+   {
+    "word": "dining hall",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "食堂",
+    "first_page": 6
+   },
+   {
+    "word": "together",
+    "ipa": "/təˈɡeðə/",
+    "pos": "adv.",
+    "meaning_cn": "一起，共同，一齐，一块儿",
+    "first_page": 6
+   },
+   {
+    "word": "lab",
+    "ipa": "/læb/",
+    "pos": "n.",
+    "meaning_cn": "实验室",
+    "first_page": 6
+   },
+   {
+    "word": "start",
+    "ipa": "/stɑːt/",
+    "pos": "v.",
+    "meaning_cn": "开始",
+    "first_page": 8
+   },
+   {
+    "word": "each other",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "互相，彼此",
+    "first_page": 9
+   },
+   {
+    "word": "everyone",
+    "ipa": "/ˈevriwʌn/",
+    "pos": "pron.",
+    "meaning_cn": "每个人，人人",
+    "first_page": 9
+   },
+   {
+    "word": "explore",
+    "ipa": "/ɪkˈsplɔː/",
+    "pos": "v.",
+    "meaning_cn": "探索；探讨，探究",
+    "first_page": 9
+   },
+   {
+    "word": "fun",
+    "ipa": "/fʌn/",
+    "pos": "n.",
+    "meaning_cn": "乐趣",
+    "first_page": 9
+   },
+   {
+    "word": "introduce",
+    "ipa": "/ˌɪntrəˈdjuːs/",
+    "pos": "v.",
+    "meaning_cn": "介绍",
+    "first_page": 9
+   },
+   {
+    "word": "yourself",
+    "ipa": "/jɔːˈself/",
+    "pos": "pron.",
+    "meaning_cn": "你自己（pl. yourselves）",
+    "first_page": 9
+   },
+   {
+    "word": "hobby",
+    "ipa": "/ˈhɒbi/",
+    "pos": "n.",
+    "meaning_cn": "业余爱好，嗜好",
+    "first_page": 9
+   },
+   {
+    "word": "a bit",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "有点儿，稍微",
+    "first_page": 10
+   },
+   {
+    "word": "nervous",
+    "ipa": "/ˈnɜːvəs/",
+    "pos": "adj.",
+    "meaning_cn": "神经紧张的；焦虑不安的",
+    "first_page": 10
+   },
+   {
+    "word": "join",
+    "ipa": "/dʒɔɪn/",
+    "pos": "v.",
+    "meaning_cn": "成为……的一员，加入",
+    "first_page": 13
+   },
+   {
+    "word": "team",
+    "ipa": "/tiːm/",
+    "pos": "n.",
+    "meaning_cn": "（游戏或体育比赛的）队",
+    "first_page": 13
+   },
+   {
+    "word": "take part in",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "参加，参与",
+    "first_page": 13
+   }
+  ],
+  "U1": [
+   {
+    "word": "without",
+    "ipa": "/wɪðˈaʊt/",
+    "pos": "prep.",
+    "meaning_cn": "缺乏，没有",
+    "first_page": 16
+   },
+   {
+    "word": "sentence",
+    "ipa": "/ˈsentəns/",
+    "pos": "n.",
+    "meaning_cn": "句子",
+    "first_page": 17
+   },
+   {
+    "word": "point out",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "指出，指明",
+    "first_page": 17
+   },
+   {
+    "word": "mistake",
+    "ipa": "/məˈsteɪk/",
+    "pos": "n.",
+    "meaning_cn": "错误",
+    "first_page": 17
+   },
+   {
+    "word": "polite",
+    "ipa": "/pəˈlaɪt/",
+    "pos": "adj.",
+    "meaning_cn": "有礼貌的，客气的",
+    "first_page": 17
+   },
+   {
+    "word": "mind",
+    "ipa": "/maɪnd/",
+    "pos": "n.",
+    "meaning_cn": "头脑；思想，思维",
+    "first_page": 17
+   },
+   {
+    "word": "hers",
+    "ipa": "/hɜːz/",
+    "pos": "pron.",
+    "meaning_cn": "她的",
+    "first_page": 17
+   },
+   {
+    "word": "dry",
+    "ipa": "/draɪ/",
+    "pos": "adj.",
+    "meaning_cn": "干的，干燥的",
+    "first_page": 17
+   },
+   {
+    "word": "meaning",
+    "ipa": "/ˈmiːnɪŋ/",
+    "pos": "n.",
+    "meaning_cn": "意义，意思，含义",
+    "first_page": 17
+   },
+   {
+    "word": "fact",
+    "ipa": "/fækt/",
+    "pos": "n.",
+    "meaning_cn": "事实；真相",
+    "first_page": 17
+   },
+   {
+    "word": "in fact",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "事实上",
+    "first_page": 17
+   },
+   {
+    "word": "need",
+    "ipa": "/niːd/",
+    "pos": "v.",
+    "meaning_cn": "需要",
+    "first_page": 17
+   },
+   {
+    "word": "remember",
+    "ipa": "/rɪˈmembə/",
+    "pos": "v.",
+    "meaning_cn": "记住，记得",
+    "first_page": 17
+   },
+   {
+    "word": "really",
+    "ipa": "/ˈrɪəli/",
+    "pos": "adv.",
+    "meaning_cn": "确实地，的确",
+    "first_page": 17
+   },
+   {
+    "word": "important",
+    "ipa": "/ɪmˈpɔːtənt/",
+    "pos": "adj.",
+    "meaning_cn": "重要的，重大的",
+    "first_page": 17
+   },
+   {
+    "word": "plan",
+    "ipa": "/plæn/",
+    "pos": "v.",
+    "meaning_cn": "计划",
+    "first_page": 21
+   },
+   {
+    "word": "problem",
+    "ipa": "/ˈprɒbləm/",
+    "pos": "n.",
+    "meaning_cn": "问题，难题；困难",
+    "first_page": 22
+   },
+   {
+    "word": "homework",
+    "ipa": "/ˈhəʊmwɜːk/",
+    "pos": "n.",
+    "meaning_cn": "家庭作业，功课",
+    "first_page": 22
+   },
+   {
+    "word": "task",
+    "ipa": "/tɑːsk/",
+    "pos": "n.",
+    "meaning_cn": "工作，任务",
+    "first_page": 23
+   },
+   {
+    "word": "project",
+    "ipa": "/ˈprɒdʒekt/",
+    "pos": "n.",
+    "meaning_cn": "（学校的）课题，研究项目",
+    "first_page": 23
+   },
+   {
+    "word": "advice",
+    "ipa": "/ədˈvaɪs/",
+    "pos": "n.",
+    "meaning_cn": "意见，建议；忠告，劝告",
+    "first_page": 23
+   },
+   {
+    "word": "journey",
+    "ipa": "/ˈdʒɜːni/",
+    "pos": "n.",
+    "meaning_cn": "旅行，旅程；历程，过程",
+    "first_page": 24
+   },
+   {
+    "word": "something",
+    "ipa": "/ˈsʌmθɪŋ/",
+    "pos": "pron.",
+    "meaning_cn": "某物；某事；某些东西",
+    "first_page": 24
+   },
+   {
+    "word": "thought",
+    "ipa": "/θɔːt/",
+    "pos": "n.",
+    "meaning_cn": "意见，主意，观点",
+    "first_page": 24
+   },
+   {
+    "word": "life",
+    "ipa": "/laɪf/",
+    "pos": "n.",
+    "meaning_cn": "生活",
+    "first_page": 25
+   },
+   {
+    "word": "primary school",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "小学",
+    "first_page": 25
+   },
+   {
+    "word": "pool",
+    "ipa": "/puːl/",
+    "pos": "n.",
+    "meaning_cn": "水塘，水洼",
+    "first_page": 25
+   },
+   {
+    "word": "protect",
+    "ipa": "/prəˈtekt/",
+    "pos": "v.",
+    "meaning_cn": "保护；防护",
+    "first_page": 25
+   },
+   {
+    "word": "wind",
+    "ipa": "/wɪnd/",
+    "pos": "n.",
+    "meaning_cn": "风",
+    "first_page": 25
+   },
+   {
+    "word": "wide",
+    "ipa": "/waɪd/",
+    "pos": "adj.",
+    "meaning_cn": "宽的，宽阔的",
+    "first_page": 25
+   },
+   {
+    "word": "sail",
+    "ipa": "/seɪl/",
+    "pos": "v.",
+    "meaning_cn": "驾驶（船只）",
+    "first_page": 25
+   },
+   {
+    "word": "through",
+    "ipa": "/θruː/",
+    "pos": "prep.",
+    "meaning_cn": "从一端至另一端，穿过，通过",
+    "first_page": 25
+   },
+   {
+    "word": "storm",
+    "ipa": "/stɔːm/",
+    "pos": "n.",
+    "meaning_cn": "暴风雨（雪）",
+    "first_page": 25
+   },
+   {
+    "word": "towards",
+    "ipa": "/təˈwɔːdz/",
+    "pos": "prep.",
+    "meaning_cn": "向着，朝着（某个方向）",
+    "first_page": 25
+   },
+   {
+    "word": "hope",
+    "ipa": "/həʊp/",
+    "pos": "v.",
+    "meaning_cn": "希望，期望，指望",
+    "first_page": 25
+   }
+  ],
+  "U2": [
+   {
+    "word": "rock music",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "摇滚乐",
+    "first_page": 32
+   },
+   {
+    "word": "electric",
+    "ipa": "/ɪˈlektrɪk/",
+    "pos": "adj.",
+    "meaning_cn": "用电的；电动的",
+    "first_page": 32
+   },
+   {
+    "word": "guitar",
+    "ipa": "/ɡɪˈtɑː/",
+    "pos": "n.",
+    "meaning_cn": "吉他",
+    "first_page": 32
+   },
+   {
+    "word": "band",
+    "ipa": "/bænd/",
+    "pos": "n.",
+    "meaning_cn": "乐队，乐团",
+    "first_page": 32
+   },
+   {
+    "word": "sound",
+    "ipa": "/saʊnd/",
+    "pos": "n.",
+    "meaning_cn": "声音",
+    "first_page": 32
+   },
+   {
+    "word": "different",
+    "ipa": "/ˈdɪfərənt/",
+    "pos": "adj.",
+    "meaning_cn": "不同的，不一样的",
+    "first_page": 32
+   },
+   {
+    "word": "suddenly",
+    "ipa": "/ˈsʌdnli/",
+    "pos": "adv.",
+    "meaning_cn": "突然，突如其来地",
+    "first_page": 33
+   },
+   {
+    "word": "hit",
+    "ipa": "/hɪt/",
+    "pos": "v.",
+    "meaning_cn": "使（某人）突然意识到",
+    "first_page": 33
+   },
+   {
+    "word": "rush",
+    "ipa": "/rʌʃ/",
+    "pos": "v.",
+    "meaning_cn": "冲，奔",
+    "first_page": 33
+   },
+   {
+    "word": "festival",
+    "ipa": "/ˈfestəvəl/",
+    "pos": "n.",
+    "meaning_cn": "（电影、戏剧、音乐等的）节，节庆，汇演",
+    "first_page": 33
+   },
+   {
+    "word": "decide",
+    "ipa": "/dɪˈsaɪd/",
+    "pos": "v.",
+    "meaning_cn": "决定",
+    "first_page": 33
+   },
+   {
+    "word": "practice",
+    "ipa": "/ˈpræktɪs/",
+    "pos": "n.",
+    "meaning_cn": "练习",
+    "first_page": 33
+   },
+   {
+    "word": "stage",
+    "ipa": "/steɪdʒ/",
+    "pos": "n.",
+    "meaning_cn": "舞台",
+    "first_page": 33
+   },
+   {
+    "word": "nod",
+    "ipa": "/nɒd/",
+    "pos": "v.",
+    "meaning_cn": "点头",
+    "first_page": 33
+   },
+   {
+    "word": "instrument",
+    "ipa": "/ˈɪnstrəmənt/",
+    "pos": "n.",
+    "meaning_cn": "乐器",
+    "first_page": 33
+   },
+   {
+    "word": "everybody",
+    "ipa": "/ˈevribɒdi/",
+    "pos": "pron.",
+    "meaning_cn": "每个人，人人",
+    "first_page": 33
+   },
+   {
+    "word": "smile",
+    "ipa": "/smaɪl/",
+    "pos": "n./v.",
+    "meaning_cn": "笑容；微笑",
+    "first_page": 33
+   },
+   {
+    "word": "enjoy",
+    "ipa": "/ɪnˈdʒɔɪ/",
+    "pos": "v.",
+    "meaning_cn": "喜欢；享受……的乐趣",
+    "first_page": 33
+   },
+   {
+    "word": "skate",
+    "ipa": "/skeɪt/",
+    "pos": "v.",
+    "meaning_cn": "滑冰，溜冰",
+    "first_page": 35
+   },
+   {
+    "word": "club",
+    "ipa": "/klʌb/",
+    "pos": "n.",
+    "meaning_cn": "俱乐部",
+    "first_page": 35
+   },
+   {
+    "word": "volleyball",
+    "ipa": "/ˈvɒlibɔːl/",
+    "pos": "n.",
+    "meaning_cn": "排球（运动）",
+    "first_page": 35
+   },
+   {
+    "word": "traditional",
+    "ipa": "/trəˈdɪʃənəl/",
+    "pos": "adj.",
+    "meaning_cn": "传统的；习俗的；惯例的",
+    "first_page": 35
+   },
+   {
+    "word": "paper-cutting",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "剪纸",
+    "first_page": 35
+   },
+   {
+    "word": "hold",
+    "ipa": "/həʊld/",
+    "pos": "v.",
+    "meaning_cn": "握住，抓住；抱住",
+    "first_page": 38
+   },
+   {
+    "word": "ground",
+    "ipa": "/ɡraʊnd/",
+    "pos": "n.",
+    "meaning_cn": "地，地面",
+    "first_page": 39
+   },
+   {
+    "word": "weak",
+    "ipa": "/wiːk/",
+    "pos": "adj.",
+    "meaning_cn": "虚弱的，不强壮的",
+    "first_page": 39
+   },
+   {
+    "word": "high",
+    "ipa": "/haɪ/",
+    "pos": "adj.",
+    "meaning_cn": "高的",
+    "first_page": 39
+   },
+   {
+    "word": "nature",
+    "ipa": "/ˈneɪtʃə/",
+    "pos": "n.",
+    "meaning_cn": "大自然，自然界",
+    "first_page": 39
+   },
+   {
+    "word": "adventure",
+    "ipa": "/ədˈventʃə/",
+    "pos": "n.",
+    "meaning_cn": "历险；奇遇",
+    "first_page": 41
+   },
+   {
+    "word": "awake",
+    "ipa": "/əˈweɪk/",
+    "pos": "adj.",
+    "meaning_cn": "醒着的",
+    "first_page": 40
+   },
+   {
+    "word": "midnight",
+    "ipa": "/ˈmɪdnaɪt/",
+    "pos": "n.",
+    "meaning_cn": "午夜",
+    "first_page": 40
+   },
+   {
+    "word": "appear",
+    "ipa": "/əˈpɪə/",
+    "pos": "v.",
+    "meaning_cn": "（尤指突然）出现，呈现",
+    "first_page": 40
+   },
+   {
+    "word": "heart",
+    "ipa": "/hɑːt/",
+    "pos": "n.",
+    "meaning_cn": "心（脏）",
+    "first_page": 40
+   },
+   {
+    "word": "almost",
+    "ipa": "/ˈɔːlməʊst/",
+    "pos": "adv.",
+    "meaning_cn": "几乎，差不多",
+    "first_page": 40
+   },
+   {
+    "word": "tap",
+    "ipa": "/tæp/",
+    "pos": "v.",
+    "meaning_cn": "（用手指）轻拍，轻叩，轻敲",
+    "first_page": 40
+   },
+   {
+    "word": "shake",
+    "ipa": "/ʃeɪk/",
+    "pos": "v.",
+    "meaning_cn": "摇动",
+    "first_page": 40
+   },
+   {
+    "word": "classmate",
+    "ipa": "/ˈklɑːsmeɪt/",
+    "pos": "n.",
+    "meaning_cn": "同班同学",
+    "first_page": 40
+   },
+   {
+    "word": "lonely",
+    "ipa": "/ˈləʊnli/",
+    "pos": "adj.",
+    "meaning_cn": "孤单的，寂寞的",
+    "first_page": 40
+   },
+   {
+    "word": "magic",
+    "ipa": "/ˈmædʒɪk/",
+    "pos": "adj.",
+    "meaning_cn": "有魔力的，神奇的",
+    "first_page": 40
+   },
+   {
+    "word": "joy",
+    "ipa": "/dʒɔɪ/",
+    "pos": "n.",
+    "meaning_cn": "欢欣，愉快，喜悦",
+    "first_page": 40
+   },
+   {
+    "word": "notebook",
+    "ipa": "/ˈnəʊtbʊk/",
+    "pos": "n.",
+    "meaning_cn": "笔记本",
+    "first_page": 41
+   },
+   {
+    "word": "shelf",
+    "ipa": "/ʃelf/",
+    "pos": "n.",
+    "meaning_cn": "搁板，架子",
+    "first_page": 41
+   },
+   {
+    "word": "leave",
+    "ipa": "/liːv/",
+    "pos": "v.",
+    "meaning_cn": "离开",
+    "first_page": 41
+   },
+   {
+    "word": "page",
+    "ipa": "/peɪdʒ/",
+    "pos": "n.",
+    "meaning_cn": "（书、报纸、文件等的）页，面",
+    "first_page": 41
+   },
+   {
+    "word": "ending",
+    "ipa": "/ˈendɪŋ/",
+    "pos": "n.",
+    "meaning_cn": "（故事、电影、活动等的）结局，结尾",
+    "first_page": 41
+   }
+  ],
+  "U3": [
+   {
+    "word": "silent",
+    "ipa": "/ˈsaɪlənt/",
+    "pos": "adj.",
+    "meaning_cn": "不作声的",
+    "first_page": 48
+   },
+   {
+    "word": "along",
+    "ipa": "/əˈlɒŋ/",
+    "pos": "prep.",
+    "meaning_cn": "顺着，沿着",
+    "first_page": 48
+   },
+   {
+    "word": "mountain",
+    "ipa": "/ˈmaʊntɪn/",
+    "pos": "n.",
+    "meaning_cn": "高山，山岳",
+    "first_page": 48
+   },
+   {
+    "word": "road",
+    "ipa": "/rəʊd/",
+    "pos": "n.",
+    "meaning_cn": "路，道路，公路",
+    "first_page": 48
+   },
+   {
+    "word": "handsome",
+    "ipa": "/ˈhænsəm/",
+    "pos": "adj.",
+    "meaning_cn": "（男子）英俊的，漂亮的",
+    "first_page": 48
+   },
+   {
+    "word": "strict",
+    "ipa": "/strɪkt/",
+    "pos": "adj.",
+    "meaning_cn": "严格的，严厉的",
+    "first_page": 48
+   },
+   {
+    "word": "follow",
+    "ipa": "/ˈfɒləʊ/",
+    "pos": "v.",
+    "meaning_cn": "跟着，跟随",
+    "first_page": 48
+   },
+   {
+    "word": "postman",
+    "ipa": "/ˈpəʊstmən/",
+    "pos": "n.",
+    "meaning_cn": "邮递员，邮差",
+    "first_page": 48
+   },
+   {
+    "word": "touching",
+    "ipa": "/ˈtʌtʃɪŋ/",
+    "pos": "adj.",
+    "meaning_cn": "感人的，动人的",
+    "first_page": 48
+   },
+   {
+    "word": "son",
+    "ipa": "/sʌn/",
+    "pos": "n.",
+    "meaning_cn": "儿子",
+    "first_page": 48
+   },
+   {
+    "word": "serve",
+    "ipa": "/sɜːv/",
+    "pos": "v.",
+    "meaning_cn": "为……工作；供职",
+    "first_page": 48
+   },
+   {
+    "word": "area",
+    "ipa": "/ˈeəriə/",
+    "pos": "n.",
+    "meaning_cn": "（国家，市镇等的）地区，区域",
+    "first_page": 48
+   },
+   {
+    "word": "absent",
+    "ipa": "/ˈæbsənt/",
+    "pos": "adj.",
+    "meaning_cn": "不在的，缺席的",
+    "first_page": 48
+   },
+   {
+    "word": "seldom",
+    "ipa": "/ˈseldəm/",
+    "pos": "adv.",
+    "meaning_cn": "很少，罕见，不常",
+    "first_page": 48
+   },
+   {
+    "word": "position",
+    "ipa": "/pəˈzɪʃən/",
+    "pos": "n.",
+    "meaning_cn": "职位，职务",
+    "first_page": 48
+   },
+   {
+    "word": "carry",
+    "ipa": "/ˈkæri/",
+    "pos": "v.",
+    "meaning_cn": "把（某物或某人）带至（新的地点或位置）",
+    "first_page": 49
+   },
+   {
+    "word": "across",
+    "ipa": "/əˈkrɒs/",
+    "pos": "prep.",
+    "meaning_cn": "从一边到另一边；穿过",
+    "first_page": 49
+   },
+   {
+    "word": "memory",
+    "ipa": "/ˈmeməri/",
+    "pos": "n.",
+    "meaning_cn": "记忆，回忆",
+    "first_page": 49
+   },
+   {
+    "word": "tear",
+    "ipa": "/tɪə/",
+    "pos": "n.",
+    "meaning_cn": "眼泪，泪水",
+    "first_page": 49
+   },
+   {
+    "word": "growth",
+    "ipa": "/ɡrəʊθ/",
+    "pos": "n.",
+    "meaning_cn": "（性格、智力或情感的）发展，成长",
+    "first_page": 49
+   },
+   {
+    "word": "hide",
+    "ipa": "/haɪd/",
+    "pos": "v.",
+    "meaning_cn": "把……藏起来，隐藏",
+    "first_page": 49
+   },
+   {
+    "word": "care",
+    "ipa": "/keə/",
+    "pos": "n.",
+    "meaning_cn": "关心",
+    "first_page": 49
+   },
+   {
+    "word": "hug",
+    "ipa": "/hʌɡ/",
+    "pos": "n.",
+    "meaning_cn": "拥抱",
+    "first_page": 49
+   },
+   {
+    "word": "kiss",
+    "ipa": "/kɪs/",
+    "pos": "n.",
+    "meaning_cn": "吻",
+    "first_page": 49
+   },
+   {
+    "word": "marry",
+    "ipa": "/ˈmæri/",
+    "pos": "v.",
+    "meaning_cn": "结婚；娶；嫁",
+    "first_page": 51
+   },
+   {
+    "word": "queen",
+    "ipa": "/kwiːn/",
+    "pos": "n.",
+    "meaning_cn": "女王",
+    "first_page": 53
+   },
+   {
+    "word": "pick up",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "搭载，接载",
+    "first_page": 53
+   },
+   {
+    "word": "actress",
+    "ipa": "/ˈæktrɪs/",
+    "pos": "n.",
+    "meaning_cn": "女演员",
+    "first_page": 54
+   },
+   {
+    "word": "change",
+    "ipa": "/tʃeɪndʒ/",
+    "pos": "v.",
+    "meaning_cn": "换（衣服）",
+    "first_page": 55
+   },
+   {
+    "word": "race",
+    "ipa": "/reɪs/",
+    "pos": "v./n.",
+    "meaning_cn": "比赛",
+    "first_page": 56
+   },
+   {
+    "word": "serious",
+    "ipa": "/ˈsɪəriəs/",
+    "pos": "adj.",
+    "meaning_cn": "严重的",
+    "first_page": 56
+   },
+   {
+    "word": "disease",
+    "ipa": "/dɪˈziːz/",
+    "pos": "n.",
+    "meaning_cn": "疾病，病",
+    "first_page": 56
+   },
+   {
+    "word": "stay",
+    "ipa": "/steɪ/",
+    "pos": "v.",
+    "meaning_cn": "停留，逗留，留下",
+    "first_page": 56
+   },
+   {
+    "word": "trailer",
+    "ipa": "/ˈtreɪlə/",
+    "pos": "n.",
+    "meaning_cn": "拖车，挂车",
+    "first_page": 56
+   },
+   {
+    "word": "pull",
+    "ipa": "/pʊl/",
+    "pos": "v.",
+    "meaning_cn": "拉；扯；拖",
+    "first_page": 56
+   },
+   {
+    "word": "bright",
+    "ipa": "/braɪt/",
+    "pos": "adj.",
+    "meaning_cn": "欢快的；充满生气的",
+    "first_page": 56
+   },
+   {
+    "word": "refuse",
+    "ipa": "/rɪˈfjuːz/",
+    "pos": "v.",
+    "meaning_cn": "拒绝，回绝",
+    "first_page": 57
+   },
+   {
+    "word": "result",
+    "ipa": "/rɪˈzʌlt/",
+    "pos": "n.",
+    "meaning_cn": "结果，后果",
+    "first_page": 57
+   },
+   {
+    "word": "matter",
+    "ipa": "/ˈmætə/",
+    "pos": "v.",
+    "meaning_cn": "（尤指对某人自己或对发生之事）重要，要紧，有关系",
+    "first_page": 57
+   },
+   {
+    "word": "power",
+    "ipa": "/ˈpaʊə/",
+    "pos": "v.",
+    "meaning_cn": "给（车辆或机器）提供动力",
+    "first_page": 57
+   }
+  ],
+  "U4": [
+   {
+    "word": "unusual",
+    "ipa": "/ʌnˈjuːʒuəl/",
+    "pos": "adj.",
+    "meaning_cn": "不平常的",
+    "first_page": 64
+   },
+   {
+    "word": "university",
+    "ipa": "/ˌjuːnəˈvɜːsəti/",
+    "pos": "n.",
+    "meaning_cn": "大学",
+    "first_page": 64
+   },
+   {
+    "word": "treat",
+    "ipa": "/triːt/",
+    "pos": "v.",
+    "meaning_cn": "请客，款待，招待",
+    "first_page": 64
+   },
+   {
+    "word": "realise",
+    "ipa": "/ˈrɪəlaɪz/",
+    "pos": "v.",
+    "meaning_cn": "知道；明白；认识到",
+    "first_page": 64
+   },
+   {
+    "word": "dumpling",
+    "ipa": "/ˈdʌmplɪŋ/",
+    "pos": "n.",
+    "meaning_cn": "水饺",
+    "first_page": 64
+   },
+   {
+    "word": "whole",
+    "ipa": "/həʊl/",
+    "pos": "adj.",
+    "meaning_cn": "整个的，全部的",
+    "first_page": 64
+   },
+   {
+    "word": "cucumber",
+    "ipa": "/ˈkjuːkʌmbə/",
+    "pos": "n.",
+    "meaning_cn": "黄瓜",
+    "first_page": 64
+   },
+   {
+    "word": "hang",
+    "ipa": "/hæŋ/",
+    "pos": "v.",
+    "meaning_cn": "悬挂",
+    "first_page": 65
+   },
+   {
+    "word": "balloon",
+    "ipa": "/bəˈluːn/",
+    "pos": "n.",
+    "meaning_cn": "气球",
+    "first_page": 65
+   },
+   {
+    "word": "lantern",
+    "ipa": "/ˈlæntən/",
+    "pos": "n.",
+    "meaning_cn": "灯笼；提灯",
+    "first_page": 65
+   },
+   {
+    "word": "dish",
+    "ipa": "/dɪʃ/",
+    "pos": "n.",
+    "meaning_cn": "（烹制好的）菜肴，一道菜",
+    "first_page": 65
+   },
+   {
+    "word": "joke",
+    "ipa": "/dʒəʊk/",
+    "pos": "v.",
+    "meaning_cn": "说笑话；开玩笑",
+    "first_page": 65
+   },
+   {
+    "word": "against the law",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "违法",
+    "first_page": 65
+   },
+   {
+    "word": "shocked",
+    "ipa": "/ʃɒkt/",
+    "pos": "adj.",
+    "meaning_cn": "吃惊的，震惊的",
+    "first_page": 65
+   },
+   {
+    "word": "laugh",
+    "ipa": "/lɑːf/",
+    "pos": "v.",
+    "meaning_cn": "发出笑声，（大）笑",
+    "first_page": 65
+   },
+   {
+    "word": "pork",
+    "ipa": "/pɔːk/",
+    "pos": "n.",
+    "meaning_cn": "猪肉",
+    "first_page": 65
+   },
+   {
+    "word": "round",
+    "ipa": "/raʊnd/",
+    "pos": "adj.",
+    "meaning_cn": "圆形的，环形的",
+    "first_page": 65
+   },
+   {
+    "word": "shape",
+    "ipa": "/ʃeɪp/",
+    "pos": "n.",
+    "meaning_cn": "形，形状，外形",
+    "first_page": 65
+   },
+   {
+    "word": "reunion",
+    "ipa": "/riːˈjuːnjən/",
+    "pos": "n.",
+    "meaning_cn": "团圆，团聚",
+    "first_page": 65
+   },
+   {
+    "word": "piece",
+    "ipa": "/piːs/",
+    "pos": "n.",
+    "meaning_cn": "块；片；段；截",
+    "first_page": 65
+   },
+   {
+    "word": "knife",
+    "ipa": "/naɪf/",
+    "pos": "n.",
+    "meaning_cn": "刀",
+    "first_page": 65
+   },
+   {
+    "word": "smell",
+    "ipa": "/smel/",
+    "pos": "n.",
+    "meaning_cn": "气味",
+    "first_page": 65
+   },
+   {
+    "word": "fill",
+    "ipa": "/fɪl/",
+    "pos": "v.",
+    "meaning_cn": "弥漫，充满",
+    "first_page": 65
+   },
+   {
+    "word": "Christmas",
+    "ipa": "/ˈkrɪsməs/",
+    "pos": "n.",
+    "meaning_cn": "圣诞节（期间）",
+    "first_page": 70
+   },
+   {
+    "word": "waste",
+    "ipa": "/weɪst/",
+    "pos": "n.",
+    "meaning_cn": "废料，废弃物",
+    "first_page": 70
+   },
+   {
+    "word": "throw away",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "扔掉，丢弃",
+    "first_page": 70
+   },
+   {
+    "word": "pollution",
+    "ipa": "/pəˈluːʃən/",
+    "pos": "n.",
+    "meaning_cn": "污染",
+    "first_page": 70
+   },
+   {
+    "word": "plastic",
+    "ipa": "/ˈplæstɪk/",
+    "pos": "adj.",
+    "meaning_cn": "塑料制的",
+    "first_page": 70
+   },
+   {
+    "word": "celebrate",
+    "ipa": "/ˈseləbreɪt/",
+    "pos": "v.",
+    "meaning_cn": "庆祝",
+    "first_page": 70
+   },
+   {
+    "word": "meal",
+    "ipa": "/miːl/",
+    "pos": "n.",
+    "meaning_cn": "一餐；饭",
+    "first_page": 71
+   },
+   {
+    "word": "duty",
+    "ipa": "/ˈdjuːti/",
+    "pos": "n.",
+    "meaning_cn": "职责，义务",
+    "first_page": 72
+   },
+   {
+    "word": "shine",
+    "ipa": "/ʃaɪn/",
+    "pos": "v.",
+    "meaning_cn": "发光，发亮",
+    "first_page": 73
+   },
+   {
+    "word": "usually",
+    "ipa": "/ˈjuːʒuəli/",
+    "pos": "adv.",
+    "meaning_cn": "通常地；惯常地",
+    "first_page": 72
+   },
+   {
+    "word": "break",
+    "ipa": "/breɪk/",
+    "pos": "n.",
+    "meaning_cn": "中断，暂停",
+    "first_page": 72
+   },
+   {
+    "word": "emergency",
+    "ipa": "/ɪˈmɜːdʒənsi/",
+    "pos": "n.",
+    "meaning_cn": "紧急情况，不测事件",
+    "first_page": 72
+   },
+   {
+    "word": "miss",
+    "ipa": "/mɪs/",
+    "pos": "v.",
+    "meaning_cn": "错过",
+    "first_page": 72
+   },
+   {
+    "word": "thirsty",
+    "ipa": "/ˈθɜːsti/",
+    "pos": "adj.",
+    "meaning_cn": "渴的，口渴的",
+    "first_page": 72
+   },
+   {
+    "word": "challenge",
+    "ipa": "/ˈtʃælɪndʒ/",
+    "pos": "n.",
+    "meaning_cn": "挑战，具有挑战性的事物",
+    "first_page": 72
+   },
+   {
+    "word": "patient",
+    "ipa": "/ˈpeɪʃənt/",
+    "pos": "n.",
+    "meaning_cn": "病人，患者",
+    "first_page": 72
+   },
+   {
+    "word": "situation",
+    "ipa": "/ˌsɪtʃuˈeɪʃən/",
+    "pos": "n.",
+    "meaning_cn": "形势，情况，状况，局面",
+    "first_page": 72
+   },
+   {
+    "word": "regret",
+    "ipa": "/rɪˈɡret/",
+    "pos": "v.",
+    "meaning_cn": "后悔（做了某事）；对……感到遗憾",
+    "first_page": 73
+   },
+   {
+    "word": "decision",
+    "ipa": "/dɪˈsɪʒən/",
+    "pos": "n.",
+    "meaning_cn": "决定，抉择",
+    "first_page": 73
+   },
+   {
+    "word": "support",
+    "ipa": "/səˈpɔːt/",
+    "pos": "n.",
+    "meaning_cn": "支持",
+    "first_page": 73
+   },
+   {
+    "word": "medical",
+    "ipa": "/ˈmedɪkəl/",
+    "pos": "adj.",
+    "meaning_cn": "医学的；医疗的",
+    "first_page": 73
+   },
+   {
+    "word": "firework",
+    "ipa": "/ˈfaɪəwɜːk/",
+    "pos": "n.",
+    "meaning_cn": "烟火，烟花",
+    "first_page": 73
+   }
+  ],
+  "U5": [
+   {
+    "word": "within",
+    "ipa": "/wɪˈðɪn/",
+    "pos": "prep.",
+    "meaning_cn": "在（建筑或地区）里",
+    "first_page": 80
+   },
+   {
+    "word": "quarter",
+    "ipa": "/ˈkwɔːtə/",
+    "pos": "n.",
+    "meaning_cn": "一刻钟，十五分钟",
+    "first_page": 81
+   },
+   {
+    "word": "workshop",
+    "ipa": "/ˈwɜːkʃɒp/",
+    "pos": "n.",
+    "meaning_cn": "车间，工场",
+    "first_page": 81
+   },
+   {
+    "word": "leaf",
+    "ipa": "/liːf/",
+    "pos": "n.",
+    "meaning_cn": "叶，叶子",
+    "first_page": 81
+   },
+   {
+    "word": "each",
+    "ipa": "/iːtʃ/",
+    "pos": "det.",
+    "meaning_cn": "（两个或两个以上物或人中的）每个，各",
+    "first_page": 81
+   },
+   {
+    "word": "collect",
+    "ipa": "/kəˈlekt/",
+    "pos": "v.",
+    "meaning_cn": "收集，采集；使集中",
+    "first_page": 81
+   },
+   {
+    "word": "root",
+    "ipa": "/ruːt/",
+    "pos": "n.",
+    "meaning_cn": "根",
+    "first_page": 81
+   },
+   {
+    "word": "send",
+    "ipa": "/send/",
+    "pos": "v.",
+    "meaning_cn": "送出，发出",
+    "first_page": 81
+   },
+   {
+    "word": "rise",
+    "ipa": "/raɪz/",
+    "pos": "v.",
+    "meaning_cn": "升高，上升",
+    "first_page": 81
+   },
+   {
+    "word": "stem",
+    "ipa": "/stem/",
+    "pos": "n.",
+    "meaning_cn": "（植物的）茎，梗，柄",
+    "first_page": 81
+   },
+   {
+    "word": "mix",
+    "ipa": "/mɪks/",
+    "pos": "v.",
+    "meaning_cn": "（使）混合",
+    "first_page": 81
+   },
+   {
+    "word": "produce",
+    "ipa": "/prəˈdjuːs/",
+    "pos": "v.",
+    "meaning_cn": "（自然地）生产，产生，出产",
+    "first_page": 81
+   },
+   {
+    "word": "sugar",
+    "ipa": "/ˈʃʊɡə/",
+    "pos": "n.",
+    "meaning_cn": "糖",
+    "first_page": 81
+   },
+   {
+    "word": "product",
+    "ipa": "/ˈprɒdʌkt/",
+    "pos": "n.",
+    "meaning_cn": "（自然过程或化学反应的）生成物",
+    "first_page": 81
+   },
+   {
+    "word": "oxygen",
+    "ipa": "/ˈɒksɪdʒən/",
+    "pos": "n.",
+    "meaning_cn": "氧",
+    "first_page": 81
+   },
+   {
+    "word": "human",
+    "ipa": "/ˈhjuːmən/",
+    "pos": "n.",
+    "meaning_cn": "人类；人",
+    "first_page": 81
+   },
+   {
+    "word": "though",
+    "ipa": "/ðəʊ/",
+    "pos": "adv.",
+    "meaning_cn": "可是，不过，然而",
+    "first_page": 81
+   },
+   {
+    "word": "breathe",
+    "ipa": "/briːð/",
+    "pos": "v.",
+    "meaning_cn": "呼吸",
+    "first_page": 81
+   },
+   {
+    "word": "soon",
+    "ipa": "/suːn/",
+    "pos": "adv.",
+    "meaning_cn": "不久，即刻，很快",
+    "first_page": 81
+   },
+   {
+    "word": "dark",
+    "ipa": "/dɑːk/",
+    "pos": "adj.",
+    "meaning_cn": "昏暗的；黑暗的",
+    "first_page": 81
+   },
+   {
+    "word": "rest",
+    "ipa": "/rest/",
+    "pos": "n.",
+    "meaning_cn": "休息（时间）",
+    "first_page": 81
+   },
+   {
+    "word": "natural",
+    "ipa": "/ˈnætʃərəl/",
+    "pos": "adj.",
+    "meaning_cn": "自然的，天然的",
+    "first_page": 81
+   },
+   {
+    "word": "seed",
+    "ipa": "/siːd/",
+    "pos": "n.",
+    "meaning_cn": "种子，籽",
+    "first_page": 83
+   },
+   {
+    "word": "grow",
+    "ipa": "/ɡrəʊ/",
+    "pos": "v.",
+    "meaning_cn": "生长",
+    "first_page": 83
+   },
+   {
+    "word": "part",
+    "ipa": "/pɑːt/",
+    "pos": "n.",
+    "meaning_cn": "部分",
+    "first_page": 83
+   },
+   {
+    "word": "rainforest",
+    "ipa": "/ˈreɪnfɒrɪst/",
+    "pos": "n.",
+    "meaning_cn": "（热带）雨林",
+    "first_page": 83
+   },
+   {
+    "word": "culture",
+    "ipa": "/ˈkʌltʃə/",
+    "pos": "n.",
+    "meaning_cn": "文化",
+    "first_page": 85
+   },
+   {
+    "word": "corn silk",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "玉米须",
+    "first_page": 87
+   },
+   {
+    "word": "health",
+    "ipa": "/helθ/",
+    "pos": "n.",
+    "meaning_cn": "健康（状况）",
+    "first_page": 87
+   },
+   {
+    "word": "rose",
+    "ipa": "/rəʊz/",
+    "pos": "n.",
+    "meaning_cn": "玫瑰；蔷薇",
+    "first_page": 87
+   },
+   {
+    "word": "cotton",
+    "ipa": "/ˈkɒtn/",
+    "pos": "n.",
+    "meaning_cn": "棉花",
+    "first_page": 87
+   },
+   {
+    "word": "bamboo",
+    "ipa": "/ˌbæmˈbuː/",
+    "pos": "n.",
+    "meaning_cn": "竹，竹子",
+    "first_page": 87
+   },
+   {
+    "word": "popular",
+    "ipa": "/ˈpɒpjələ/",
+    "pos": "adj.",
+    "meaning_cn": "受大众喜爱的，受欢迎的",
+    "first_page": 88
+   },
+   {
+    "word": "key",
+    "ipa": "/kiː/",
+    "pos": "adj.",
+    "meaning_cn": "至关重要的；必不可少的",
+    "first_page": 88
+   },
+   {
+    "word": "news",
+    "ipa": "/njuːz/",
+    "pos": "n.",
+    "meaning_cn": "消息",
+    "first_page": 89
+   },
+   {
+    "word": "prefer",
+    "ipa": "/prɪˈfɜː/",
+    "pos": "v.",
+    "meaning_cn": "更喜欢",
+    "first_page": 89
+   },
+   {
+    "word": "coffee",
+    "ipa": "/ˈkɒfi/",
+    "pos": "n.",
+    "meaning_cn": "咖啡",
+    "first_page": 89
+   },
+   {
+    "word": "secret",
+    "ipa": "/ˈsiːkrɪt/",
+    "pos": "n.",
+    "meaning_cn": "秘密",
+    "first_page": 89
+   },
+   {
+    "word": "husband",
+    "ipa": "/ˈhʌzbənd/",
+    "pos": "n.",
+    "meaning_cn": "丈夫",
+    "first_page": 89
+   },
+   {
+    "word": "adult",
+    "ipa": "/ˈædʌlt/",
+    "pos": "n.",
+    "meaning_cn": "成人，成年人",
+    "first_page": 89
+   },
+   {
+    "word": "weekend",
+    "ipa": "/ˌwiːkˈend/",
+    "pos": "n.",
+    "meaning_cn": "周末",
+    "first_page": 89
+   },
+   {
+    "word": "chat",
+    "ipa": "/tʃæt/",
+    "pos": "v.",
+    "meaning_cn": "闲聊，闲谈，聊天",
+    "first_page": 89
+   },
+   {
+    "word": "relax",
+    "ipa": "/rɪˈlæks/",
+    "pos": "v.",
+    "meaning_cn": "放松，休息",
+    "first_page": 89
+   },
+   {
+    "word": "yard",
+    "ipa": "/jɑːd/",
+    "pos": "n.",
+    "meaning_cn": "庭院",
+    "first_page": 89
+   },
+   {
+    "word": "biscuit",
+    "ipa": "/ˈbɪskɪt/",
+    "pos": "n.",
+    "meaning_cn": "饼干",
+    "first_page": 89
+   },
+   {
+    "word": "connect",
+    "ipa": "/kəˈnekt/",
+    "pos": "v.",
+    "meaning_cn": "沟通；连接",
+    "first_page": 89
+   }
+  ],
+  "U6": [
+   {
+    "word": "pigeon",
+    "ipa": "/ˈpɪdʒɪn/",
+    "pos": "n.",
+    "meaning_cn": "鸽子",
+    "first_page": 96
+   },
+   {
+    "word": "surprise",
+    "ipa": "/səˈpraɪz/",
+    "pos": "n.",
+    "meaning_cn": "意想不到的事",
+    "first_page": 96
+   },
+   {
+    "word": "knock around",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "（在某处）悠闲地度过",
+    "first_page": 96
+   },
+   {
+    "word": "droppings",
+    "ipa": "/ˈdrɒpɪŋz/",
+    "pos": "n.",
+    "meaning_cn": "（兽或鸟的）粪",
+    "first_page": 96
+   },
+   {
+    "word": "boring",
+    "ipa": "/ˈbɔːrɪŋ/",
+    "pos": "adj.",
+    "meaning_cn": "无趣的，无聊的，乏味的",
+    "first_page": 96
+   },
+   {
+    "word": "feed",
+    "ipa": "/fiːd/",
+    "pos": "v.",
+    "meaning_cn": "喂养，饲养，给……食物",
+    "first_page": 96
+   },
+   {
+    "word": "madly",
+    "ipa": "/ˈmædli/",
+    "pos": "adv.",
+    "meaning_cn": "发狂地；无法控制地",
+    "first_page": 96
+   },
+   {
+    "word": "scary",
+    "ipa": "/ˈskeəri/",
+    "pos": "adj.",
+    "meaning_cn": "可怕的，骇人的，恐怖的",
+    "first_page": 96
+   },
+   {
+    "word": "research",
+    "ipa": "/rɪˈsɜːtʃ/",
+    "pos": "n.",
+    "meaning_cn": "研究，调查",
+    "first_page": 97
+   },
+   {
+    "word": "recognise",
+    "ipa": "/ˈrekəɡnaɪz/",
+    "pos": "v.",
+    "meaning_cn": "认出；认识；辨认出",
+    "first_page": 97
+   },
+   {
+    "word": "themselves",
+    "ipa": "/ðəmˈselvz/",
+    "pos": "pron.",
+    "meaning_cn": "它们自己；他们自己；她们自己",
+    "first_page": 97
+   },
+   {
+    "word": "mirror",
+    "ipa": "/ˈmɪrə/",
+    "pos": "n.",
+    "meaning_cn": "镜子",
+    "first_page": 97
+   },
+   {
+    "word": "itself",
+    "ipa": "/ɪtˈself/",
+    "pos": "pron.",
+    "meaning_cn": "自己，自身",
+    "first_page": 97
+   },
+   {
+    "word": "maybe",
+    "ipa": "/ˈmeɪbi/",
+    "pos": "adv.",
+    "meaning_cn": "也许，大概，可能",
+    "first_page": 97
+   },
+   {
+    "word": "several",
+    "ipa": "/ˈsevərəl/",
+    "pos": "det.",
+    "meaning_cn": "几个，数个，一些",
+    "first_page": 97
+   },
+   {
+    "word": "kilometre",
+    "ipa": "/ˈkɪləˌmiːtə/",
+    "pos": "n.",
+    "meaning_cn": "千米，公里",
+    "first_page": 97
+   },
+   {
+    "word": "get lost",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "迷路",
+    "first_page": 97
+   },
+   {
+    "word": "speed",
+    "ipa": "/spiːd/",
+    "pos": "n.",
+    "meaning_cn": "速度，速率",
+    "first_page": 97
+   },
+   {
+    "word": "amazing",
+    "ipa": "/əˈmeɪzɪŋ/",
+    "pos": "adj.",
+    "meaning_cn": "惊人的；了不起的",
+    "first_page": 97
+   },
+   {
+    "word": "enough",
+    "ipa": "/ɪˈnʌf/",
+    "pos": "pron.",
+    "meaning_cn": "足够",
+    "first_page": 97
+   },
+   {
+    "word": "beaver",
+    "ipa": "/ˈbiːvə/",
+    "pos": "n.",
+    "meaning_cn": "河狸，海狸",
+    "first_page": 99
+   },
+   {
+    "word": "wolf",
+    "ipa": "/wʊlf/",
+    "pos": "n.",
+    "meaning_cn": "狼",
+    "first_page": 99
+   },
+   {
+    "word": "engineer",
+    "ipa": "/ˌendʒəˈnɪə/",
+    "pos": "n.",
+    "meaning_cn": "工程师；设计师",
+    "first_page": 99
+   },
+   {
+    "word": "hero",
+    "ipa": "/ˈhɪərəʊ/",
+    "pos": "n.",
+    "meaning_cn": "英雄",
+    "first_page": 101
+   },
+   {
+    "word": "rescue",
+    "ipa": "/ˈreskjuː/",
+    "pos": "n.",
+    "meaning_cn": "营救，救援",
+    "first_page": 102
+   },
+   {
+    "word": "earthquake",
+    "ipa": "/ˈɜːθkweɪk/",
+    "pos": "n.",
+    "meaning_cn": "地震",
+    "first_page": 102
+   },
+   {
+    "word": "missing",
+    "ipa": "/ˈmɪsɪŋ/",
+    "pos": "adj.",
+    "meaning_cn": "找不到的",
+    "first_page": 102
+   },
+   {
+    "word": "save",
+    "ipa": "/seɪv/",
+    "pos": "v.",
+    "meaning_cn": "救，拯救，挽救",
+    "first_page": 102
+   }
+  ]
+ }
+}

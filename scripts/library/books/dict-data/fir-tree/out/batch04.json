@@ -1,0 +1,205 @@
+{
+  "cards": [
+    {
+      "word": "recognised",
+      "pos": "v. (past participle)",
+      "ipa": "/ˈrɛkəɡnaɪzd/",
+      "gloss_cn": "认出、辨认出",
+      "gloss_en": "identified as something known before",
+      "sense_key": "recognize",
+      "ex_en": "I had not seen her in years, and I barely recognised her at the door.",
+      "ex_cn": "我好多年没见她了,在门口几乎没认出她来。"
+    },
+    {
+      "word": "retain",
+      "pos": "v.",
+      "ipa": "/rɪˈteɪn/",
+      "gloss_cn": "保留、留住",
+      "gloss_en": "to keep and not lose or give up",
+      "sense_key": "retain",
+      "ex_en": "These plants retain their green leaves all through the winter.",
+      "ex_cn": "这些植物整个冬天都保留着绿叶。"
+    },
+    {
+      "word": "retained",
+      "pos": "v. (past)",
+      "ipa": "/rɪˈteɪnd/",
+      "gloss_cn": "保留了、留住了",
+      "gloss_en": "kept and did not lose",
+      "sense_key": "retain",
+      "ex_en": "The old house retained its original wooden doors.",
+      "ex_cn": "那座老房子保留了它原来的木门。"
+    },
+    {
+      "word": "reverie",
+      "pos": "n.",
+      "ipa": "/ˈrɛvəri/",
+      "gloss_cn": "遐想、出神的白日梦",
+      "gloss_en": "a state of pleasant dreamy thought",
+      "sense_key": "reverie",
+      "ex_en": "She sat by the window, lost in reverie about summer days.",
+      "ex_cn": "她坐在窗边,沉浸在对夏日的遐想中。"
+    },
+    {
+      "word": "shelves",
+      "pos": "n. (plural)",
+      "ipa": "/ʃɛlvz/",
+      "gloss_cn": "架子、搁板",
+      "gloss_en": "flat boards for holding or storing things",
+      "sense_key": "shelf",
+      "ex_en": "The kitchen shelves were full of jars and bottles.",
+      "ex_cn": "厨房的架子上摆满了罐子和瓶子。"
+    },
+    {
+      "word": "shine",
+      "pos": "v.",
+      "ipa": "/ʃaɪn/",
+      "gloss_cn": "发光、闪耀",
+      "gloss_en": "to give off bright light",
+      "sense_key": "shine",
+      "ex_en": "The new lamp will shine brightly in the dark room.",
+      "ex_cn": "这盏新灯会在昏暗的房间里明亮地闪耀。"
+    },
+    {
+      "word": "shines",
+      "pos": "v. (3rd person singular)",
+      "ipa": "/ʃaɪnz/",
+      "gloss_cn": "发光、照耀(第三人称单数)",
+      "gloss_en": "gives off bright light",
+      "sense_key": "shine",
+      "ex_en": "The sun shines over the hills every morning.",
+      "ex_cn": "每天早晨太阳都照耀着群山。"
+    },
+    {
+      "word": "sleek",
+      "pos": "adj.",
+      "ipa": "/sliːk/",
+      "gloss_cn": "光滑柔亮的",
+      "gloss_en": "smooth, glossy and neat",
+      "sense_key": "sleek",
+      "ex_en": "The cat had a sleek black coat that shone in the light.",
+      "ex_cn": "那只猫有一身光滑发亮的黑毛,在灯光下闪闪发光。"
+    },
+    {
+      "word": "snuffed",
+      "pos": "v. (past)",
+      "ipa": "/snʌft/",
+      "gloss_cn": "嗅、用鼻子探闻",
+      "gloss_en": "sniffed and nosed about at something",
+      "sense_key": "snuff",
+      "ex_en": "The dog snuffed around the bushes looking for a scent.",
+      "ex_cn": "那只狗在灌木丛周围嗅来嗅去,寻找气味。"
+    },
+    {
+      "word": "splendidly",
+      "pos": "adv.",
+      "ipa": "/ˈsplɛndɪdli/",
+      "gloss_cn": "壮丽地、极好地",
+      "gloss_en": "in a magnificent or grand way",
+      "sense_key": "splendidly",
+      "ex_en": "The fireworks lit up the sky splendidly on New Year's Eve.",
+      "ex_cn": "除夕夜的烟花壮丽地照亮了天空。"
+    },
+    {
+      "word": "stateliness",
+      "pos": "n.",
+      "ipa": "/ˈsteɪtlinəs/",
+      "gloss_cn": "庄严、威严高贵",
+      "gloss_en": "dignified and impressive grandeur",
+      "sense_key": "stateliness",
+      "ex_en": "The old oak stood with great stateliness at the garden's edge.",
+      "ex_cn": "那棵老橡树庄严高贵地矗立在花园边缘。"
+    },
+    {
+      "word": "storks",
+      "pos": "n. (plural)",
+      "ipa": "/stɔːrks/",
+      "gloss_cn": "鹳(大型涉禽)",
+      "gloss_en": "large long-legged wading birds",
+      "sense_key": "stork",
+      "ex_en": "Two storks built their nest on top of the tall chimney.",
+      "ex_cn": "两只鹳在高高的烟囱顶上筑了巢。"
+    },
+    {
+      "word": "strawberries",
+      "pos": "n. (plural)",
+      "ipa": "/ˈstrɔːbɛriz/",
+      "gloss_cn": "草莓",
+      "gloss_en": "small sweet red fruits",
+      "sense_key": "strawberry",
+      "ex_en": "We picked fresh strawberries in the field all afternoon.",
+      "ex_cn": "我们整个下午都在田里采摘新鲜的草莓。"
+    },
+    {
+      "word": "sunbeam",
+      "pos": "n.",
+      "ipa": "/ˈsʌnbiːm/",
+      "gloss_cn": "一束阳光",
+      "gloss_en": "a ray of sunlight",
+      "sense_key": "sunbeam",
+      "ex_en": "A warm sunbeam came through the window onto the floor.",
+      "ex_cn": "一束温暖的阳光透过窗户照在地板上。"
+    },
+    {
+      "word": "that's",
+      "pos": "cont.",
+      "ipa": "/ðæts/",
+      "gloss_cn": "那是、就是('that is' 的缩略)",
+      "gloss_en": "short form of 'that is'",
+      "sense_key": "that-is",
+      "ex_en": "That's my favorite book on the whole shelf.",
+      "ex_cn": "那就是整个书架上我最喜欢的书。"
+    },
+    {
+      "word": "there's",
+      "pos": "cont.",
+      "ipa": "/ðɛrz/",
+      "gloss_cn": "有、那里有('there is' 的缩略)",
+      "gloss_en": "short form of 'there is'",
+      "sense_key": "there-is",
+      "ex_en": "There's a little bird singing in the garden.",
+      "ex_cn": "花园里有一只小鸟在歌唱。"
+    },
+    {
+      "word": "unloaded",
+      "pos": "v. (past participle)",
+      "ipa": "/ʌnˈloʊdɪd/",
+      "gloss_cn": "卸下(从车上)",
+      "gloss_en": "taken off a cart or vehicle",
+      "sense_key": "unload",
+      "ex_en": "The boxes were unloaded from the truck into the yard.",
+      "ex_cn": "箱子从卡车上被卸到院子里。"
+    },
+    {
+      "word": "vases",
+      "pos": "n. (plural)",
+      "ipa": "/ˈveɪsɪz/",
+      "gloss_cn": "花瓶、装饰瓶",
+      "gloss_en": "decorative jars for flowers or display",
+      "sense_key": "vase",
+      "ex_en": "Two tall vases stood on either side of the fireplace.",
+      "ex_cn": "两只高高的花瓶立在壁炉两侧。"
+    },
+    {
+      "word": "what's",
+      "pos": "cont.",
+      "ipa": "/wʌts/",
+      "gloss_cn": "是什么('what is' 的缩略)",
+      "gloss_en": "short form of 'what is'",
+      "sense_key": "what-is",
+      "ex_en": "What's inside that big wooden box?",
+      "ex_cn": "那个大木箱里面是什么?"
+    },
+    {
+      "word": "windowpanes",
+      "pos": "n. (plural)",
+      "ipa": "/ˈwɪndoʊpeɪnz/",
+      "gloss_cn": "窗玻璃",
+      "gloss_en": "the glass panes set in a window",
+      "sense_key": "windowpane",
+      "ex_en": "Rain tapped softly against the windowpanes all night.",
+      "ex_cn": "整夜细雨轻轻地敲打着窗玻璃。"
+    }
+  ],
+  "skipped": []
+}

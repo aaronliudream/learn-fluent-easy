@@ -1,0 +1,215 @@
+{
+  "cards": [
+    {
+      "word": "tapers",
+      "pos": "n.",
+      "ipa": "/ˈteɪpərz/",
+      "gloss_cn": "细蜡烛",
+      "gloss_en": "thin candles",
+      "sense_key": "taper",
+      "ex_en": "She lit two small tapers on the birthday cake.",
+      "ex_cn": "她点燃了生日蛋糕上的两根细蜡烛。"
+    },
+    {
+      "word": "eve",
+      "pos": "n.",
+      "ipa": "/iːv/",
+      "gloss_cn": "前夜",
+      "gloss_en": "the evening or day before an event",
+      "sense_key": "eve",
+      "ex_en": "We wrapped the gifts on Christmas eve.",
+      "ex_cn": "我们在圣诞前夜包好了礼物。"
+    },
+    {
+      "word": "sparrows",
+      "pos": "n.",
+      "ipa": "/ˈspɛroʊz/",
+      "gloss_cn": "麻雀",
+      "gloss_en": "small brown birds",
+      "sense_key": "sparrow",
+      "ex_en": "Two sparrows hopped along the garden fence.",
+      "ex_cn": "两只麻雀沿着花园的篱笆蹦跳。"
+    },
+    {
+      "word": "stork",
+      "pos": "n.",
+      "ipa": "/stɔːrk/",
+      "gloss_cn": "鹳",
+      "gloss_en": "a tall long-legged wading bird",
+      "sense_key": "stork",
+      "ex_en": "A stork built its nest on top of the old chimney.",
+      "ex_cn": "一只鹳在旧烟囱顶上筑了巢。"
+    },
+    {
+      "word": "sunbeams",
+      "pos": "n.",
+      "ipa": "/ˈsʌnbiːmz/",
+      "gloss_cn": "阳光光束",
+      "gloss_en": "rays of sunlight",
+      "sense_key": "sunbeam",
+      "ex_en": "Bright sunbeams shone through the kitchen window.",
+      "ex_cn": "明亮的阳光透过厨房的窗户照进来。"
+    },
+    {
+      "word": "adjoined",
+      "pos": "v.",
+      "ipa": "/əˈdʒɔɪnd/",
+      "gloss_cn": "毗邻;紧挨着",
+      "gloss_en": "was next to or bordered on",
+      "sense_key": "adjoin",
+      "ex_en": "The kitchen adjoined a small dining room.",
+      "ex_cn": "厨房紧挨着一间小餐厅。"
+    },
+    {
+      "word": "amidst",
+      "pos": "prep.",
+      "ipa": "/əˈmɪdst/",
+      "gloss_cn": "在……之中(书面)",
+      "gloss_en": "in the middle of",
+      "sense_key": "amidst",
+      "ex_en": "The cottage stood amidst tall green trees.",
+      "ex_cn": "那座小屋坐落在高大的绿树之中。"
+    },
+    {
+      "word": "anymore",
+      "pos": "adv.",
+      "ipa": "/ˌɛniˈmɔːr/",
+      "gloss_cn": "不再;再也",
+      "gloss_en": "any longer",
+      "sense_key": "anymore",
+      "ex_en": "He does not live in this town anymore.",
+      "ex_cn": "他不再住在这个镇上了。"
+    },
+    {
+      "word": "autumn",
+      "pos": "n.",
+      "ipa": "/ˈɔːtəm/",
+      "gloss_cn": "秋天",
+      "gloss_en": "the season between summer and winter",
+      "sense_key": "autumn",
+      "ex_en": "The leaves turn red and gold in autumn.",
+      "ex_cn": "秋天树叶变红变金黄。"
+    },
+    {
+      "word": "await",
+      "pos": "v.",
+      "ipa": "/əˈweɪt/",
+      "gloss_cn": "等待(正式)",
+      "gloss_en": "to wait for",
+      "sense_key": "await",
+      "ex_en": "The children await their teacher by the door.",
+      "ex_cn": "孩子们在门边等待老师。"
+    },
+    {
+      "word": "bawl",
+      "pos": "v.",
+      "ipa": "/bɔːl/",
+      "gloss_cn": "大喊;大声哭叫",
+      "gloss_en": "to shout or cry loudly",
+      "sense_key": "bawl",
+      "ex_en": "The baby began to bawl when the music stopped.",
+      "ex_cn": "音乐一停,婴儿就开始大声哭叫。"
+    },
+    {
+      "word": "bawling",
+      "pos": "n.",
+      "ipa": "/ˈbɔːlɪŋ/",
+      "gloss_cn": "大喊大叫;号哭",
+      "gloss_en": "loud shouting or crying",
+      "sense_key": "bawl",
+      "ex_en": "The bawling of the crowd filled the whole street.",
+      "ex_cn": "人群的大喊大叫响彻整条街。"
+    },
+    {
+      "word": "berries",
+      "pos": "n.",
+      "ipa": "/ˈbɛriz/",
+      "gloss_cn": "浆果",
+      "gloss_en": "small round fruits",
+      "sense_key": "berry",
+      "ex_en": "We picked a basket of ripe berries in the woods.",
+      "ex_cn": "我们在树林里摘了一篮成熟的浆果。"
+    },
+    {
+      "word": "bewildered",
+      "pos": "adj.",
+      "ipa": "/bɪˈwɪldərd/",
+      "gloss_cn": "困惑的;不知所措的",
+      "gloss_en": "confused and puzzled",
+      "sense_key": "bewilder",
+      "ex_en": "The lost tourist looked bewildered by the busy streets.",
+      "ex_cn": "迷路的游客被繁忙的街道弄得不知所措。"
+    },
+    {
+      "word": "birch",
+      "pos": "n.",
+      "ipa": "/bɜːrtʃ/",
+      "gloss_cn": "桦树",
+      "gloss_en": "a tree with smooth white bark",
+      "sense_key": "birch",
+      "ex_en": "A slender birch grew beside the quiet pond.",
+      "ex_cn": "一棵纤细的桦树长在静静的池塘边。"
+    },
+    {
+      "word": "blossom",
+      "pos": "n.",
+      "ipa": "/ˈblɑːsəm/",
+      "gloss_cn": "花;花朵",
+      "gloss_en": "flowers on a tree or plant",
+      "sense_key": "blossom",
+      "ex_en": "The apple tree was covered in white blossom.",
+      "ex_cn": "苹果树上开满了白色的花。"
+    },
+    {
+      "word": "cart",
+      "pos": "n.",
+      "ipa": "/kɑːrt/",
+      "gloss_cn": "(马拉的)车",
+      "gloss_en": "a horse-drawn wagon",
+      "sense_key": "cart",
+      "ex_en": "The farmer loaded hay onto the wooden cart.",
+      "ex_cn": "农夫把干草装上了木车。"
+    },
+    {
+      "word": "congratulate",
+      "pos": "v.",
+      "ipa": "/kənˈɡrætʃəleɪt/",
+      "gloss_cn": "祝贺;道贺",
+      "gloss_en": "to offer good wishes for success",
+      "sense_key": "congratulate",
+      "ex_en": "I want to congratulate you on your new job.",
+      "ex_cn": "我想祝贺你找到新工作。"
+    },
+    {
+      "word": "decorated",
+      "pos": "v.",
+      "ipa": "/ˈdɛkəreɪtɪd/",
+      "gloss_cn": "装饰;点缀",
+      "gloss_en": "adorned with pretty things",
+      "sense_key": "decorate",
+      "ex_en": "They decorated the hall with balloons and lights.",
+      "ex_cn": "他们用气球和彩灯装饰了大厅。"
+    },
+    {
+      "word": "departure",
+      "pos": "n.",
+      "ipa": "/dɪˈpɑːrtʃər/",
+      "gloss_cn": "离开;出发",
+      "gloss_en": "the act of leaving",
+      "sense_key": "departure",
+      "ex_en": "His sudden departure surprised all of us.",
+      "ex_cn": "他突然的离开让我们都很吃惊。"
+    },
+    {
+      "word": "destined",
+      "pos": "adj.",
+      "ipa": "/ˈdɛstɪnd/",
+      "gloss_cn": "注定的;命中注定要……的",
+      "gloss_en": "fated or meant for something",
+      "sense_key": "destine",
+      "ex_en": "She felt she was destined to become a singer.",
+      "ex_cn": "她觉得自己注定要成为一名歌手。"
+    }
+  ],
+  "skipped": []
+}

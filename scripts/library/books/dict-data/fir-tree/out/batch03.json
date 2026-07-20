@@ -1,0 +1,215 @@
+{
+  "cards": [
+    {
+      "word": "dolls",
+      "pos": "n.",
+      "ipa": "/dɑːlz/",
+      "gloss_cn": "玩偶；娃娃",
+      "gloss_en": "small toy figures shaped like people",
+      "sense_key": "doll",
+      "ex_en": "The little girl lined up her dolls on the bed.",
+      "ex_cn": "小女孩把她的娃娃排在床上。"
+    },
+    {
+      "word": "exultingly",
+      "pos": "adv.",
+      "ipa": "/ɪɡˈzʌltɪŋli/",
+      "gloss_cn": "欢欣鼓舞地；得意洋洋地",
+      "gloss_en": "in a joyful and triumphant way",
+      "sense_key": "exultingly",
+      "ex_en": "He raised his arms exultingly when his team scored.",
+      "ex_cn": "他的队伍得分时，他欢欣鼓舞地举起了双臂。"
+    },
+    {
+      "word": "famously",
+      "pos": "adv.",
+      "ipa": "/ˈfeɪməsli/",
+      "gloss_cn": "极好地；出色地(古旧)",
+      "gloss_en": "very well; splendidly",
+      "sense_key": "famously",
+      "ex_en": "The old stove burned famously all through the cold night.",
+      "ex_cn": "那台旧火炉在整个寒夜里烧得旺极了。"
+    },
+    {
+      "word": "fig",
+      "pos": "n.",
+      "ipa": "/fɪɡ/",
+      "gloss_cn": "无花果",
+      "gloss_en": "a soft sweet fruit with many small seeds",
+      "sense_key": "fig",
+      "ex_en": "She picked a ripe fig from the tree and ate it.",
+      "ex_cn": "她从树上摘了一个熟透的无花果吃了。"
+    },
+    {
+      "word": "firs",
+      "pos": "n.",
+      "ipa": "/fɜːrz/",
+      "gloss_cn": "枞树；冷杉树",
+      "gloss_en": "evergreen cone-bearing trees",
+      "sense_key": "fir",
+      "ex_en": "Tall firs covered the slopes of the mountain.",
+      "ex_cn": "高大的枞树覆盖着山坡。"
+    },
+    {
+      "word": "freshness",
+      "pos": "n.",
+      "ipa": "/ˈfrɛʃnəs/",
+      "gloss_cn": "新鲜；清新",
+      "gloss_en": "the quality of being fresh and new",
+      "sense_key": "freshness",
+      "ex_en": "I love the freshness of the air after the rain.",
+      "ex_cn": "我喜欢雨后空气的清新。"
+    },
+    {
+      "word": "gardener's",
+      "pos": "n.",
+      "ipa": "/ˈɡɑːrdnərz/",
+      "gloss_cn": "园丁的",
+      "gloss_en": "belonging to the gardener",
+      "sense_key": "gardener",
+      "ex_en": "The gardener's tools were kept in a small wooden shed.",
+      "ex_cn": "园丁的工具放在一间小木棚里。"
+    },
+    {
+      "word": "gingerbread",
+      "pos": "n.",
+      "ipa": "/ˈdʒɪndʒərbrɛd/",
+      "gloss_cn": "姜饼",
+      "gloss_en": "a sweet cake or cookie flavored with ginger",
+      "sense_key": "gingerbread",
+      "ex_en": "We baked gingerbread shaped like little stars for the party.",
+      "ex_cn": "我们为聚会烤了小星星形状的姜饼。"
+    },
+    {
+      "word": "housemaid",
+      "pos": "n.",
+      "ipa": "/ˈhaʊsmeɪd/",
+      "gloss_cn": "女仆；女佣",
+      "gloss_en": "a female servant who cleans a house",
+      "sense_key": "housemaid",
+      "ex_en": "The housemaid swept the floors early every morning.",
+      "ex_cn": "女仆每天清晨都打扫地板。"
+    },
+    {
+      "word": "incomparably",
+      "pos": "adv.",
+      "ipa": "/ɪnˈkɑːmpərəbli/",
+      "gloss_cn": "无与伦比地",
+      "gloss_en": "in a way beyond comparison",
+      "sense_key": "incomparably",
+      "ex_en": "The view from the peak was incomparably beautiful.",
+      "ex_cn": "山顶的景色美得无与伦比。"
+    },
+    {
+      "word": "lean",
+      "pos": "adj.",
+      "ipa": "/liːn/",
+      "gloss_cn": "瘦的；不肥的",
+      "gloss_en": "thin and having little fat",
+      "sense_key": "lean",
+      "ex_en": "The lean cat squeezed through the narrow gap in the fence.",
+      "ex_cn": "那只瘦猫从篱笆的窄缝里挤了过去。"
+    },
+    {
+      "word": "lindens",
+      "pos": "n.",
+      "ipa": "/ˈlɪndənz/",
+      "gloss_cn": "椴树；菩提树",
+      "gloss_en": "shade trees with heart-shaped leaves and fragrant flowers",
+      "sense_key": "linden",
+      "ex_en": "The lindens along the street smelled sweet in summer.",
+      "ex_cn": "夏天街道两旁的椴树散发着甜香。"
+    },
+    {
+      "word": "livery",
+      "pos": "n.",
+      "ipa": "/ˈlɪvəri/",
+      "gloss_cn": "号衣；仆役制服",
+      "gloss_en": "a special uniform worn by servants",
+      "sense_key": "livery",
+      "ex_en": "The footmen wore green livery with shiny gold buttons.",
+      "ex_cn": "仆役们穿着带亮金纽扣的绿色号衣。"
+    },
+    {
+      "word": "majestically",
+      "pos": "adv.",
+      "ipa": "/məˈdʒɛstɪkli/",
+      "gloss_cn": "威严地；庄严地",
+      "gloss_en": "in a grand and dignified way",
+      "sense_key": "majestically",
+      "ex_en": "The eagle rose majestically above the tall cliffs.",
+      "ex_cn": "雄鹰威严地飞升到高高的悬崖之上。"
+    },
+    {
+      "word": "nets",
+      "pos": "n.",
+      "ipa": "/nɛts/",
+      "gloss_cn": "小网兜；网袋",
+      "gloss_en": "small bags made of loosely woven material",
+      "sense_key": "net",
+      "ex_en": "They hung little nets of candy on the branches.",
+      "ex_cn": "他们在树枝上挂了装糖果的小网兜。"
+    },
+    {
+      "word": "odorous",
+      "pos": "adj.",
+      "ipa": "/ˈoʊdərəs/",
+      "gloss_cn": "芳香的；散发香气的",
+      "gloss_en": "having a sweet and pleasant smell",
+      "sense_key": "odorous",
+      "ex_en": "Odorous blossoms filled the whole garden with perfume.",
+      "ex_cn": "芳香的花朵让整个花园弥漫着香气。"
+    },
+    {
+      "word": "ornament",
+      "pos": "v.",
+      "ipa": "/ˈɔːrnəmɛnt/",
+      "gloss_cn": "装饰；点缀",
+      "gloss_en": "to decorate something to make it prettier",
+      "sense_key": "ornament",
+      "ex_en": "They ornament the hall with ribbons before every wedding.",
+      "ex_cn": "每次婚礼前他们都用彩带装饰大厅。"
+    },
+    {
+      "word": "ornamented",
+      "pos": "v.",
+      "ipa": "/ˈɔːrnəmɛntɪd/",
+      "gloss_cn": "装饰了的；点缀了的",
+      "gloss_en": "decorated to look more beautiful",
+      "sense_key": "ornament",
+      "ex_en": "The cake was ornamented with tiny sugar flowers.",
+      "ex_cn": "蛋糕上点缀着小小的糖花。"
+    },
+    {
+      "word": "ornaments",
+      "pos": "n.",
+      "ipa": "/ˈɔːrnəmənts/",
+      "gloss_cn": "装饰品；饰物",
+      "gloss_en": "pretty objects used to decorate something",
+      "sense_key": "ornament",
+      "ex_en": "We hung shiny ornaments all over the Christmas tree.",
+      "ex_cn": "我们在圣诞树上挂满了闪亮的装饰品。"
+    },
+    {
+      "word": "porcelain",
+      "pos": "n.",
+      "ipa": "/ˈpɔːrsəlɪn/",
+      "gloss_cn": "瓷；瓷器",
+      "gloss_en": "fine white china used for cups and dishes",
+      "sense_key": "porcelain",
+      "ex_en": "Grandmother kept her best porcelain in a glass cabinet.",
+      "ex_cn": "祖母把她最好的瓷器收在玻璃柜里。"
+    },
+    {
+      "word": "portraits",
+      "pos": "n.",
+      "ipa": "/ˈpɔːrtrəts/",
+      "gloss_cn": "肖像画；画像",
+      "gloss_en": "painted pictures of people",
+      "sense_key": "portrait",
+      "ex_en": "Old family portraits hung along the staircase wall.",
+      "ex_cn": "楼梯墙上挂着古老的家族肖像画。"
+    }
+  ],
+  "skipped": []
+}

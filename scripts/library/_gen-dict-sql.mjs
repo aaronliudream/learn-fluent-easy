@@ -46,13 +46,13 @@ for (const f of files) {
     if (!n) { errs.push(`${f}: word "${w}" 归一化后为空`); continue; }
     if (seen.has(n)) { dupN++; continue; }   // 跨批去重(首个胜)
     seen.add(n);
-    cards.push({ word: w, normalized: n, ipa: c.ipa, pos: c.pos, gloss_cn: c.gloss_cn, gloss_en: c.gloss_en, sense_key: String(c.sense_key).toLowerCase().trim(), ex_en: c.ex_en, ex_cn: c.ex_cn });
+    cards.push({ word: w, normalized: n, ipa: c.ipa, pos: c.pos, gloss_cn: c.gloss_cn, gloss_en: c.gloss_en, sense_key: String(c.sense_key).toLowerCase().trim(), ex_en: c.ex_en, ex_cn: c.ex_cn, proper: c.proper === true });
   }
 }
 if (errs.length) { console.error(`✗ ${KEY} 词卡校验失败 ${errs.length} 处:`); errs.slice(0, 40).forEach((e) => console.error("  " + e)); process.exit(1); }
 
 // ---- 生成 SQL ----
-const mkExpl = (c) => ({ ipa: c.ipa, pos: c.pos, word: c.word, example: { en: c.ex_en, cn: c.ex_cn }, gloss_cn: c.gloss_cn, gloss_en: c.gloss_en, sense_key: c.sense_key });
+const mkExpl = (c) => ({ ipa: c.ipa, pos: c.pos, word: c.word, example: { en: c.ex_en, cn: c.ex_cn }, gloss_cn: c.gloss_cn, gloss_en: c.gloss_en, sense_key: c.sense_key, ...(c.proper ? { proper: true } : {}) });
 const rows = cards.map((c) => `  ('${sqlEsc(c.word)}', '${sqlEsc(c.normalized)}', 'en', 'read-v1', '${sqlEsc(JSON.stringify(mkExpl(c)))}'::jsonb)`);
 const sql = `-- ============================================================================
 -- 图书馆点词词典冷词补全 · ${BOOK_ZH}(CC子代理手写·不走AI边缘·待Aaron/Web审后跑)

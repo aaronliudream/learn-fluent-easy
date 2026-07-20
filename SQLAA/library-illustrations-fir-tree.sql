@@ -3,6 +3,10 @@
 -- 幂等:先删本书旧插图行再插;封面写进 library_books.cover.image。position=章内段号(1-based)。
 -- ============================================================================
 BEGIN;
+UPDATE public.library_books
+   SET cover = jsonb_build_object('c1','#166534','c2','#022c22','image','fir-tree/fir-tree-cover.jpg')
+ WHERE book_key='fir-tree';
+
 DELETE FROM public.library_illustrations
  WHERE book_id=(SELECT id FROM public.library_books WHERE book_key='fir-tree');
 

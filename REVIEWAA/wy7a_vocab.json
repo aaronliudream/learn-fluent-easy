@@ -1912,6 +1912,125 @@
     "pos": "v.",
     "meaning_cn": "救，拯救，挽救",
     "first_page": 102
+   },
+   {
+    "word": "dead",
+    "ipa": "/ded/",
+    "pos": "adj.",
+    "meaning_cn": "死的，去世的",
+    "first_page": 104
+   },
+   {
+    "word": "dodo",
+    "ipa": "/ˈdəʊdəʊ/",
+    "pos": "n.",
+    "meaning_cn": "渡渡鸟",
+    "first_page": 105
+   },
+   {
+    "word": "as dead as a dodo",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "彻底死亡",
+    "first_page": 104
+   },
+   {
+    "word": "character",
+    "ipa": "/ˈkærəktə/",
+    "pos": "n.",
+    "meaning_cn": "（书、剧本、电影中的）人物，角色",
+    "first_page": 104
+   },
+   {
+    "word": "museum",
+    "ipa": "/mjuːˈziəm/",
+    "pos": "n.",
+    "meaning_cn": "博物馆，博物院",
+    "first_page": 104
+   },
+   {
+    "word": "island",
+    "ipa": "/ˈaɪlənd/",
+    "pos": "n.",
+    "meaning_cn": "岛，岛屿",
+    "first_page": 104
+   },
+   {
+    "word": "ocean",
+    "ipa": "/ˈəʊʃən/",
+    "pos": "n.",
+    "meaning_cn": "海洋，大海",
+    "first_page": 104
+   },
+   {
+    "word": "plenty",
+    "ipa": "/ˈplenti/",
+    "pos": "pron.",
+    "meaning_cn": "丰富，充足，众多，大量",
+    "first_page": 104
+   },
+   {
+    "word": "friendly",
+    "ipa": "/ˈfrendli/",
+    "pos": "adj.",
+    "meaning_cn": "友好的，友善的",
+    "first_page": 104
+   },
+   {
+    "word": "peaceful",
+    "ipa": "/ˈpiːsfəl/",
+    "pos": "adj.",
+    "meaning_cn": "和平的，非暴力的",
+    "first_page": 104
+   },
+   {
+    "word": "arrive",
+    "ipa": "/əˈraɪv/",
+    "pos": "v.",
+    "meaning_cn": "到达，抵达",
+    "first_page": 105
+   },
+   {
+    "word": "forest",
+    "ipa": "/ˈfɒrɪst/",
+    "pos": "n.",
+    "meaning_cn": "森林，林区",
+    "first_page": 105
+   },
+   {
+    "word": "hunt",
+    "ipa": "/hʌnt/",
+    "pos": "v.",
+    "meaning_cn": "打猎；猎杀",
+    "first_page": 105
+   },
+   {
+    "word": "die out",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "消失；绝迹，灭绝",
+    "first_page": 105
+   },
+   {
+    "word": "full",
+    "ipa": "/fʊl/",
+    "pos": "adj.",
+    "meaning_cn": "满的；满是……的",
+    "first_page": 105
+   },
+   {
+    "word": "fantastic",
+    "ipa": "/fænˈtæstɪk/",
+    "pos": "adj.",
+    "meaning_cn": "极好的，吸引人的，有趣的",
+    "first_page": 105
+   },
+   {
+    "word": "as happy as a clam",
+    "ipa": null,
+    "pos": null,
+    "meaning_cn": "非常高兴的，相当满足的",
+    "first_page": 105
    }
   ]
  }

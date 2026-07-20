@@ -269,7 +269,7 @@
 | biscuit | /ˈbɪskɪt/ | n. | 饼干 | 89 |
 | connect | /kəˈnekt/ | v. | 沟通；连接 | 89 |
 
-## U6 (28 词)
+## U6 (45 词)
 | word | ipa | pos | 释义 | 页 |
 |---|---|---|---|---|
 | pigeon | /ˈpɪdʒɪn/ | n. | 鸽子 | 96 |
@@ -300,3 +300,20 @@
 | earthquake | /ˈɜːθkweɪk/ | n. | 地震 | 102 |
 | missing | /ˈmɪsɪŋ/ | adj. | 找不到的 | 102 |
 | save | /seɪv/ | v. | 救，拯救，挽救 | 102 |
+| dead | /ded/ | adj. | 死的，去世的 | 104 |
+| dodo | /ˈdəʊdəʊ/ | n. | 渡渡鸟 | 105 |
+| as dead as a dodo | — | — | 彻底死亡 | 104 |
+| character | /ˈkærəktə/ | n. | （书、剧本、电影中的）人物，角色 | 104 |
+| museum | /mjuːˈziəm/ | n. | 博物馆，博物院 | 104 |
+| island | /ˈaɪlənd/ | n. | 岛，岛屿 | 104 |
+| ocean | /ˈəʊʃən/ | n. | 海洋，大海 | 104 |
+| plenty | /ˈplenti/ | pron. | 丰富，充足，众多，大量 | 104 |
+| friendly | /ˈfrendli/ | adj. | 友好的，友善的 | 104 |
+| peaceful | /ˈpiːsfəl/ | adj. | 和平的，非暴力的 | 104 |
+| arrive | /əˈraɪv/ | v. | 到达，抵达 | 105 |
+| forest | /ˈfɒrɪst/ | n. | 森林，林区 | 105 |
+| hunt | /hʌnt/ | v. | 打猎；猎杀 | 105 |
+| die out | — | — | 消失；绝迹，灭绝 | 105 |
+| full | /fʊl/ | adj. | 满的；满是……的 | 105 |
+| fantastic | /fænˈtæstɪk/ | adj. | 极好的，吸引人的，有趣的 | 105 |
+| as happy as a clam | — | — | 非常高兴的，相当满足的 | 105 |

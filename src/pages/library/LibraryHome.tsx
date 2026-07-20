@@ -52,6 +52,8 @@ export default function LibraryHome() {
   const [progress, setProgress] = useState<Map<string, LibraryReadingState>>(new Map());
   const [visibility, setVisibility] = useState<Map<string, string>>(new Map());
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false); // 书目加载失败(弱网/抖动)→ 显重试,不再卡死在加载态
+  const [reloadKey, setReloadKey] = useState(0); // 重试:bump 触发 load effect 重跑
   // 收藏词数(null=未加载,先按默认句显示,确认为 0 才切引导句,避免闪现)
   const [favCount, setFavCount] = useState<number | null>(null);
 
@@ -69,28 +71,40 @@ export default function LibraryHome() {
   useEffect(() => {
     let alive = true;
     setLoading(true);
+    setError(false);
     (async () => {
-      const [list, vis] = await Promise.all([
-        listBooks(band === "all" ? undefined : band),
-        getBookVisibility(),
-      ]);
-      if (!alive) return;
-      setBooks(list);
-      setVisibility(vis);
-      setLoading(false);
-      const uid = await currentUserId();
-      if (!alive) return;
-      const map = await fetchProgressMap(
-        uid,
-        list.map((b) => b.id),
-      );
-      if (!alive) return;
-      setProgress(map);
+      try {
+        const [list, vis] = await Promise.all([
+          listBooks(band === "all" ? undefined : band),
+          getBookVisibility(),
+        ]);
+        if (!alive) return;
+        setBooks(list);
+        setVisibility(vis);
+        setLoading(false);
+        // 进度是次要数据:失败不该让整页报错(书目已可读),单独兜住。
+        try {
+          const uid = await currentUserId();
+          if (!alive) return;
+          const map = await fetchProgressMap(
+            uid,
+            list.map((b) => b.id),
+          );
+          if (alive) setProgress(map);
+        } catch {
+          /* 进度加载失败:忽略,书照读 */
+        }
+      } catch {
+        // 书目加载失败(弱网/网络抖动):停在重试态,不再无限转圈。
+        if (!alive) return;
+        setError(true);
+        setLoading(false);
+      }
     })();
     return () => {
       alive = false;
     };
-  }, [band]);
+  }, [band, reloadKey]);
 
   const empty = useMemo(() => !loading && books.length === 0, [loading, books]);
 
@@ -151,7 +165,20 @@ export default function LibraryHome() {
       </div>
 
       {/* 书目网格 */}
-      {empty && (
+      {error && !loading && (
+        <div className="mt-10 flex flex-col items-center gap-3 text-center">
+          <p className="text-sm text-slate-500">
+            <T>书目没加载出来,可能是网络不太稳</T>
+          </p>
+          <button
+            onClick={() => setReloadKey((k) => k + 1)}
+            className="rounded-full bg-sky-500 px-5 py-2 text-sm font-bold text-white transition active:scale-95"
+          >
+            <T>重试</T>
+          </button>
+        </div>
+      )}
+      {empty && !error && (
         <p className="mt-10 text-center text-sm text-slate-400">
           <T>这个年龄段暂时还没有书,敬请期待</T>
         </p>

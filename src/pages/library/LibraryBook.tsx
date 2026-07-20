@@ -4,7 +4,7 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, BookOpen, Play, Languages, Volume2, Square, ChevronDown, ChevronRight, Compass, RotateCcw, List, Users, BarChart3 } from "lucide-react";
+import { ArrowLeft, BookOpen, Play, Languages, Volume2, Square, ChevronDown, ChevronRight, Compass, RotateCcw, List, Users, BarChart3, Share2, Check } from "lucide-react";
 import { T } from "@/i18n/T";
 import { cn } from "@/lib/utils";
 import { speak, speakSequence, stopSpeaking, unlockAudioSync } from "@/lib/speak";
@@ -140,6 +140,7 @@ export default function LibraryBook() {
   const [guideOpen, setGuideOpen] = useState(false); // 导读较长,默认收起(读前可选看)
   const [guidePlaying, setGuidePlaying] = useState(false);
   const [guideIdx, setGuideIdx] = useState(-1);
+  const [copied, setCopied] = useState(false); // 分享:剪贴板兜底后的"已复制"短提示
 
   // 简介英文切句(高亮 + 逐句朗读共用同一份,索引对齐)。
   const introSentences = useMemo(
@@ -299,18 +300,58 @@ export default function LibraryBook() {
     });
   };
 
+  // 分享本书:手机走原生分享菜单,否则复制链接到剪贴板 +「已复制」提示。
+  // 链接不绕权限(能不能读由 RLS 管);私享书发给名单外的人仍打不开。
+  const shareBook = async () => {
+    const url = `${window.location.origin}/library/${book.book_key}`;
+    const title = book.zh_title ? `${book.zh_title} · ${book.title}` : book.title;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, url });
+      } catch {
+        /* 用户取消或失败:静默 */
+      }
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      /* 剪贴板不可用:忽略 */
+    }
+  };
+
   const hasZhGuide = !!book.guide_zh;
   const guideText = showGuideZh ? book.guide_zh : book.guide_en;
   const guideBlocks = parseProse(guideText || "").blocks;
 
   return (
     <main className="mx-auto max-w-2xl px-5 py-8">
-      <Link
-        to="/library"
-        className="mb-4 inline-flex items-center gap-1 text-sm text-slate-400 transition hover:text-slate-600"
-      >
-        <ArrowLeft className="size-4" /> <T>返回书架</T>
-      </Link>
+      <div className="mb-4 flex items-center justify-between gap-2">
+        <Link
+          to="/library"
+          className="inline-flex items-center gap-1 text-sm text-slate-400 transition hover:text-slate-600"
+        >
+          <ArrowLeft className="size-4" /> <T>返回书架</T>
+        </Link>
+        <button
+          type="button"
+          onClick={shareBook}
+          aria-label="分享这本书"
+          className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-500 transition hover:bg-slate-200 active:scale-95"
+        >
+          {copied ? (
+            <>
+              <Check className="size-3.5 text-emerald-600" /> <T>已复制链接</T>
+            </>
+          ) : (
+            <>
+              <Share2 className="size-3.5" /> <T>分享</T>
+            </>
+          )}
+        </button>
+      </div>
 
       {/* 头部:大封面 + 标题/作者 + 信息 pill */}
       <div className="mt-1 flex gap-4 sm:gap-5">

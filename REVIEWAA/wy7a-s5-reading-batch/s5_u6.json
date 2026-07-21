@@ -1,0 +1,86 @@
+{
+ "grade": 7,
+ "publisher": "junior_fltrp",
+ "volume": "wy7A",
+ "unit": "U6",
+ "title": "The ants' secret",
+ "topic": "奇妙的动物朋友",
+ "body": "I am doing a project about ants this week. At first, I think ants are boring. But now I am changing my mind. I am sitting by the garden with my notebook. A line of ants is moving across the path. They are carrying tiny pieces of food. The food is much bigger than their bodies, but they are not giving up. Look! One ant is falling into a small hole. Two other ants are helping it. They are working together like good friends. Now it is starting to rain. The ants are running back to their home under the old tree. They are not pushing each other. They are moving in a neat line. Near the wall, some ants are building a new road with tiny stones. One big ant is cleaning its legs in the sun. They are never fighting, and they are never resting. I am reading a book about ants tonight. It says ants are talking to each other with smells. Some ants are even growing their own food! I am learning so much. Ants are small, but they are amazing. I am really glad I am doing this project.",
+ "word_count": 194,
+ "difficulty": 1,
+ "questions": [
+  {
+   "q": "What are the ants carrying?",
+   "answer": "A",
+   "options": [
+    "Tiny pieces of food.",
+    "Small stones.",
+    "Green leaves.",
+    "Drops of water."
+   ],
+   "explanation": "原文 \"They are carrying tiny pieces of food.\""
+  },
+  {
+   "q": "What do two ants do when one falls into a hole?",
+   "answer": "B",
+   "options": [
+    "They run away.",
+    "They help it.",
+    "They push it.",
+    "They eat the food."
+   ],
+   "explanation": "原文 \"Two other ants are helping it.\""
+  },
+  {
+   "q": "What is the best main idea of the passage?",
+   "answer": "C",
+   "options": [
+    "Ants like rainy days.",
+    "Gardens are full of insects.",
+    "Ants are small but amazing.",
+    "The writer enjoys reading books."
+   ],
+   "explanation": "全文由\"boring\"到\"amazing\",说明蚂蚁虽小却了不起。"
+  },
+  {
+   "q": "How does the writer's opinion of ants change?",
+   "answer": "D",
+   "options": [
+    "From amazing to boring.",
+    "It does not change.",
+    "From scary to boring.",
+    "From boring to amazing."
+   ],
+   "explanation": "\"At first... boring. But now I am changing my mind... they are amazing.\" 可推断。"
+  },
+  {
+   "q": "\"They are moving in a neat line\" — \"neat\" means ____.",
+   "answer": "A",
+   "options": [
+    "tidy and well-ordered",
+    "broken and messy",
+    "fast and wild",
+    "slow and tired"
+   ],
+   "explanation": "neat = 整齐的。"
+  }
+ ],
+ "vocab_notes": [
+  {
+   "word": "project",
+   "cn": "项目,课题"
+  },
+  {
+   "word": "neat",
+   "cn": "整齐的"
+  },
+  {
+   "word": "smell",
+   "cn": "气味"
+  },
+  {
+   "word": "amazing",
+   "cn": "了不起的"
+  }
+ ]
+}

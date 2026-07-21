@@ -1,0 +1,86 @@
+{
+ "grade": 7,
+ "publisher": "junior_fltrp",
+ "volume": "wy7A",
+ "unit": "U2",
+ "title": "Music together",
+ "topic": "音乐·新旧结合",
+ "body": "My name is Kevin. I love music. I play the drums in my school band. Every weekend, we practise in the music room. My friends and I like modern pop songs. My aunt loves music, too, but she likes old Chinese music. She plays the guzheng at home. Her music sounds soft and beautiful. Sometimes she teaches me a few notes. One day, our town has a small concert. I have an idea. \"Aunt, let's play together!\" I say. She smiles and agrees. We practise every evening for two weeks. My drums are fast and strong. Her guzheng is slow and sweet. At first, the two sounds do not match. But we try again and again, and slowly they become one. On the concert day, everyone claps for us. Old music and new music make people happy together.",
+ "word_count": 139,
+ "difficulty": 1,
+ "questions": [
+  {
+   "q": "What instrument does Kevin play?",
+   "answer": "A",
+   "options": [
+    "The drums.",
+    "The guzheng.",
+    "The guitar.",
+    "The erhu."
+   ],
+   "explanation": "原文 \"I play the drums in my school band.\""
+  },
+  {
+   "q": "When do Kevin and his aunt practise for the concert?",
+   "answer": "C",
+   "options": [
+    "Every morning.",
+    "Only at weekends.",
+    "Every evening for two weeks.",
+    "Once a month."
+   ],
+   "explanation": "原文 \"We practise every evening for two weeks.\""
+  },
+  {
+   "q": "What is the best main idea of the passage?",
+   "answer": "B",
+   "options": [
+    "Kevin's aunt is a famous player.",
+    "Old music and new music can come together and bring joy.",
+    "Drums are better than the guzheng.",
+    "A concert is held in the town every year."
+   ],
+   "explanation": "末句点题:新旧音乐结合让人快乐。"
+  },
+  {
+   "q": "Why don't the two sounds match at first?",
+   "answer": "D",
+   "options": [
+    "Because Kevin plays too quietly.",
+    "Because his aunt is angry.",
+    "Because the music room is too small.",
+    "Because the drums and the guzheng have very different styles."
+   ],
+   "explanation": "drums 快而强、guzheng 慢而柔,风格不同,故起初不合;文中未直说,靠推断。"
+  },
+  {
+   "q": "\"Everyone claps for us\" means the people ____.",
+   "answer": "A",
+   "options": [
+    "hit their hands together to show they like it",
+    "walk away quietly",
+    "fall asleep",
+    "sing a new song"
+   ],
+   "explanation": "clap = 鼓掌。"
+  }
+ ],
+ "vocab_notes": [
+  {
+   "word": "band",
+   "cn": "乐队"
+  },
+  {
+   "word": "note",
+   "cn": "音符"
+  },
+  {
+   "word": "match",
+   "cn": "相配,匹配"
+  },
+  {
+   "word": "clap",
+   "cn": "鼓掌"
+  }
+ ]
+}

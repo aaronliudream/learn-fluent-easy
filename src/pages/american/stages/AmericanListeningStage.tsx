@@ -1,11 +1,11 @@
 /**
  * 关8 · 听对话答题。可反复重听本课对话(美音),再答 stage8 选择题。
  */
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Play, Square } from "lucide-react";
 import { T } from "@/i18n/T";
 import { QuizRunner, questionsToItems } from "@/components/american/QuizRunner";
-import { speakUS, stopSpeaking, unlockAmericanAudio } from "@/lib/american/audio";
+import { speakUS, stopSpeaking, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
 import { markStageComplete, recordMastery, type LessonBundle } from "@/lib/american/data";
 import { recordAmericanMistake, americanLessonLabel } from "@/lib/american/americanMistake";
 
@@ -14,6 +14,10 @@ export function AmericanListeningStage({ bundle, onDone }: { bundle: LessonBundl
   const items = useMemo(() => questionsToItems(qs), [qs]);
   const [playing, setPlaying] = useState(false);
   const seq = useRef(0);
+
+  // P2 预热:进关即按网络预热本课对话各句美音音频,键与 speakUS(s.text_en) 一致 →
+  // 点"重听"首句秒响,消除冷合成 1-3s;prewarmUS 纯网络,不碰 <audio>。
+  useEffect(() => { prewarmUS(bundle.sentences.map((s) => s.text_en)); }, [bundle.sentences]);
 
   const playAll = useCallback(() => {
     unlockAmericanAudio();

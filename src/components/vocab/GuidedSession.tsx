@@ -9,7 +9,7 @@ import { T } from "@/i18n/T"; /**
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, Check, Loader2, Trophy, Volume2, X, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { speak, speakKid, stopSpeaking } from "@/lib/speak";
+import { speak, speakKid, stopSpeaking, prefetchTTSBatch, prefetchTTSBatchKid } from "@/lib/speak";
 import { recordCohortAttempt, pickPracticeSource } from "@/lib/cohortProgress";
 import { useCohortAttemptContext } from "@/hooks/useActiveCohort";
 import { awardCoins } from "@/lib/coins";
@@ -124,7 +124,14 @@ export default function GuidedSession({
       });
       // Push step-5 (already-mastered) words to the back so they don't take up space.
       enriched.sort((a, b) => a.step - b.step);
-      setCards(enriched.slice(0, sessionSize));
+      const chosen = enriched.slice(0, sessionSize);
+      setCards(chosen);
+      // P2 预热:进关即按网络预热本关词音频,首点喇叭秒响(消除冷合成 1-3s)。
+      // 键须与播放一致:默认音色 speak(word)(Flashcard/Spell/非junior En2Cn);
+      // junior 的 En2Cn 走 speakKid(el:lily/0.85) → 另预热一份童声键。纯网络,不碰 <audio>。
+      const chosenWords = chosen.map((c) => c.v.word.split("/")[0]);
+      prefetchTTSBatch(chosenWords);
+      if (trackJuniorMastery) prefetchTTSBatchKid(chosenWords, { grade, speed: 0.85 });
       setActiveIdx(0);
       setLoading(false);
       questionShownAt.current = Date.now();

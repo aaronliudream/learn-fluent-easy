@@ -1,6 +1,6 @@
 import { T } from "@/i18n/T";import { useEffect, useRef, useState, useCallback } from "react";
 import { Play, Pause, RotateCw, SkipForward } from "lucide-react";
-import { speak, stopSpeaking } from "@/lib/speak";
+import { speak, stopSpeaking, prefetchTTS } from "@/lib/speak";
 import { cn } from "@/lib/utils";
 
 /**
@@ -52,6 +52,13 @@ export function TeacherLessonPlayer({ segments, pointTitle, onContinue, onSkip }
   const stopTTS = useCallback(() => {
     try {stopSpeaking();} catch {/* noop */}
   }, []);
+
+  // P2 预热:进课即按网络预热全部段落旁白音频,键与 speak(seg.text,{shimmer,0.95}) 一致 →
+  // 每段落 mount 自动播首播秒响,消除冷合成 1-3s(旁白为中文,voiceId=shimmer/speed=0.95)。
+  // prefetchTTS 纯网络,不碰 <audio>、不置播放状态。
+  useEffect(() => {
+    for (const s of segments) prefetchTTS(s.text, { voiceId: "shimmer", speed: 0.95 });
+  }, [segments]);
 
   // Speak current segment text whenever it changes (and not paused).
   useEffect(() => {

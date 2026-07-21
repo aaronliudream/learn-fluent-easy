@@ -1,0 +1,82 @@
+{
+ "grade": 7,
+ "publisher": "junior_fltrp",
+ "volume": "wy7A",
+ "unit": "Starter",
+ "title": "My new school",
+ "topic": "新学期·我的新学校",
+ "body": "Today is my first week at Green Hill Junior High School. Everything here is new and exciting. There is a big library next to our classroom. It has thousands of books, and it is always quiet. There are two playgrounds, too. One is for basketball, and the other is for football. The playgrounds are large and green. My classroom is on the second floor. There are forty desks in it. My desk is near the window, so I can see the tall trees outside. My new classmates are friendly, and my teacher, Ms Wu, is kind and patient. \"Welcome to your new school,\" she says. \"There are many clubs here. You can join any of them.\" There is a music club, an art club and a science club. I am going to join the art club. I really like my new school!",
+ "word_count": 142,
+ "difficulty": 1,
+ "questions": [
+  {
+   "q": "Where is the library?",
+   "answer": "B",
+   "options": [
+    "On the second floor.",
+    "Next to the writer's classroom.",
+    "Near the two playgrounds.",
+    "Outside the school gate."
+   ],
+   "explanation": "原文 \"There is a big library next to our classroom.\""
+  },
+  {
+   "q": "Which club will the writer join?",
+   "answer": "C",
+   "options": [
+    "The music club.",
+    "The science club.",
+    "The art club.",
+    "The football club."
+   ],
+   "explanation": "原文 \"I am going to join the art club.\""
+  },
+  {
+   "q": "What is the passage mainly about?",
+   "answer": "A",
+   "options": [
+    "The writer's new school and first week.",
+    "How to play basketball.",
+    "The writer's favourite book.",
+    "A trip to the library."
+   ],
+   "explanation": "全文围绕作者初到新学校、介绍校园与感受。"
+  },
+  {
+   "q": "How does the writer probably feel about the new school?",
+   "answer": "B",
+   "options": [
+    "Bored and tired.",
+    "Happy and excited.",
+    "Angry and sad.",
+    "Afraid and lonely."
+   ],
+   "explanation": "\"new and exciting\"、\"I really like my new school\" 等语气可推断愉快兴奋。"
+  },
+  {
+   "q": "\"My new classmates are friendly\" means they are ____.",
+   "answer": "A",
+   "options": [
+    "kind and easy to talk to",
+    "tall and strong",
+    "busy and tired",
+    "quiet and shy"
+   ],
+   "explanation": "friendly = 友好的,易相处。"
+  }
+ ],
+ "vocab_notes": [
+  {
+   "word": "patient",
+   "cn": "有耐心的"
+  },
+  {
+   "word": "club",
+   "cn": "社团,俱乐部"
+  },
+  {
+   "word": "floor",
+   "cn": "楼层"
+  }
+ ]
+}

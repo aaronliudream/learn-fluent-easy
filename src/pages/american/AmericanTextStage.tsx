@@ -11,6 +11,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Play, Square, Volume2, Check, Gauge, ArrowLeft } from "lucide-react";
 import { speak, stopSpeaking, unlockAudioSync } from "@/lib/speak";
+import { prewarmUS } from "@/lib/american/audio";
 import { T } from "@/i18n/T";
 import { AmericanTappableLine } from "@/components/american/AmericanTappableLine";
 import { bookOf, markSentenceRead, markStageComplete, recordMastery, type LessonBundle } from "@/lib/american/data";
@@ -47,6 +48,10 @@ export function AmericanTextStage({ bundle, onDone }: { bundle: LessonBundle; on
   const lastUserScrollRef = useRef(0);                    // ② 手势优先:记最近一次用户手动滚动时刻
 
   useEffect(() => () => { playSeq.current++; stopSpeaking(); }, []);
+
+  // P2 预热:进关即按网络预热全文各句美音音频,键与 speak(text,{accent:US,speed:1.0}) 一致
+  //(= speakUS 正常速)→ 逐句点读/整篇播放首句秒响,消除冷合成 1-3s。慢速 0.7 首播仍冷(次要)。
+  useEffect(() => { prewarmUS(sentences.map((s) => s.text_en)); }, [sentences]);
 
   // ② 用户手动滚动 → 记时刻(手势优先,1.2s 内不抢滚动,下一句恢复)
   useEffect(() => {

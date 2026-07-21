@@ -521,6 +521,9 @@ export function ClassicQuiz({ pool, onExit, gradeNum, suppressGaokao = false }: 
     setQueue(buildBatch(localQuiz));
   }, [seeded, valid.length, buildBatch, localQuiz, masteredCount]);
 
+  // P2 预热:本批(≤20)词音频,键与 speak(cur.word) 一致(默认音色)。点喇叭/答后自动读秒响。
+  useEffect(() => { if (queue.length) prefetchTTSBatch(queue.map((w) => w.word)); }, [queue]);
+
   const cur = queue[idx];
 
   const options = useMemo(() => {
@@ -833,6 +836,8 @@ export function ContextQuiz({ pool, onExit, gradeNum, volume, publisher }: {pool
   }, [seeded, universeWids.length, buildBatch, localCtx, masteredCount]);
 
   const cur = queue[idx];
+  // P2 预热:本批答案词音频,键与 speak(cur.answer) 一致(默认音色)。答后自动读秒响。
+  useEffect(() => { if (queue.length) prefetchTTSBatch(queue.map((q) => q.answer)); }, [queue]);
   const shownOptions = useMemo(() => (cur ? shuffle(cur.options) : []), [cur]);
 
   const nextRound = () => {
@@ -1052,6 +1057,8 @@ export function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];on
   const [moves, setMoves] = useState(0);
   const lock = useRef(false);
   const startedRef = useRef(false);
+  // P2 预热:本批(≤8对)词音频,键与 speak(卡面英文=word)一致(默认音色)。翻牌配对读音秒响。
+  useEffect(() => { if (sample.length) prefetchTTSBatch(sample.map((v) => v.word)); }, [sample]);
 
   // 首批:掌握度就绪后只构建一次(优先未掌握词)
   useEffect(() => {

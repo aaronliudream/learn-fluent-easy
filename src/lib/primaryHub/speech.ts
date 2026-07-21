@@ -5,7 +5,7 @@
  * Exception: lone vocab token `o'clock` → Web Speech API (browser handles apostrophe).
  * Apostrophe normalization only (U+2019 → U+0027); never strip apostrophes.
  */
-import { prefetchTTSBatchKid, speakKid, stopSpeaking, KID_VOICE_ID, isSynthInFlight } from "@/lib/speak";
+import { prefetchTTSBatchKid, speakKid, stopSpeaking } from "@/lib/speak";
 import { isWebSpeechSupported, speakWebSpeech } from "@/lib/webSpeech";
 
 /** Curly/smart apostrophes → ASCII U+0027 (display + TTS stay one word). */
@@ -41,8 +41,8 @@ function hubSpeakCloud(text: string, rate: number, grade?: number) {
 export function hubSpeak(text: string, rate = 0.85, grade?: number) {
   if (typeof window === "undefined") return;
   const spoken = toHubTtsText(text);
-  // 去抖:同词正在冷合成中 → 重复点击直接忽略,不 stopSpeaking 打断,等它合成完自然出声。
-  if (!isOClockVocabToken(text) && isSynthInFlight(spoken, KID_VOICE_ID, rate)) return;
+  // 去重已下沉到 speak.ts 的 inflightCold(同词并发只合成一次;冷窗口内的点击不再被丢弃,
+  // 而是复用同一合成、在本次手势上下文里播放 → 最新一次点击胜出)。此处直接停旧再播即可。
   stopSpeaking();
 
   if (isOClockVocabToken(text)) {

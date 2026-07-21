@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, RotateCw, BookOpen, Brain, Keyboard, Music, Headphones, Sparkles, Volume2, Clock, ChevronRight } from "lucide-react";
 import { T } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
-import { speak } from "@/lib/speak";
+import { speak, prefetchTTSBatch } from "@/lib/speak";
 import GaokaoBookPicker, { GAOKAO_BOOKS } from "@/components/gaokaoHub/GaokaoBookPicker";
 import { readPublisherParam } from "@/lib/gaokaoHub/publisher";
 import { availableVolumes } from "@/lib/gaokaoHub/availability";
@@ -201,6 +201,9 @@ export default function GaokaoVocabBoard() {
 
 /** 某组词浏览(senior 版,显示真实单元词 + 🔊)。 */
 function GroupView({ book, bookCn, group, groupNumber, onBack }: { book: string; bookCn: string; group: Vocab[]; groupNumber: number; onBack: () => void }) {
+  // P2 预热:进组即按网络预热本组(≤20)词音频,键与 speak(w.word) 一致(默认音色)。
+  // 首点喇叭秒响,消除冷合成 1-3s;prefetchTTSBatch 纯网络,不碰 <audio>。
+  useEffect(() => { prefetchTTSBatch(group.map((w) => w.word)); }, [group]);
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6 space-y-4">
       <button onClick={onBack} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">

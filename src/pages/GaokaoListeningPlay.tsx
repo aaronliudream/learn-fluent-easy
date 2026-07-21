@@ -4,7 +4,7 @@ import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Volume2 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { speak } from "@/lib/speak";
+import { speak, prefetchTTS } from "@/lib/speak";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { celebrateScore } from "@/lib/feedback";
@@ -59,6 +59,10 @@ export default function GaokaoListeningPlay() {
     if (!id) return;
     setE(getListeningExerciseById(id));
   }, [id]);
+
+  // P2 预热:载入即按网络预热本题听力原文音频,键与 speak(e.transcript) 一致(默认音色)。
+  // 首点"播放"秒响,消除整段冷合成 1-3s;prefetchTTS 纯网络,不碰 <audio>。
+  useEffect(() => { if (e?.transcript) prefetchTTS(e.transcript); }, [e]);
 
   const playAudio = () => {
     if (!e) return;

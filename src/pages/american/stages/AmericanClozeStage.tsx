@@ -7,7 +7,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Check, X, ChevronRight, ChevronLeft, Volume2 } from "lucide-react";
 import { T } from "@/i18n/T";
-import { speakUS, unlockAmericanAudio } from "@/lib/american/audio";
+import { speakUS, unlockAmericanAudio, prewarmUS } from "@/lib/american/audio";
 import { markStageComplete, recordMastery, type AmericanQuestion, type LessonBundle } from "@/lib/american/data";
 import { recordAmericanMistake, americanLessonLabel } from "@/lib/american/americanMistake";
 
@@ -75,6 +75,8 @@ export function AmericanClozeStage({ bundle, onDone }: { bundle: LessonBundle; o
   }, [bundle.lesson.id, round]);
 
   const items = round.items;
+  // P2 预热:本轮各空正确答案词音频(仅答对后 🔊 才读的那个词),键与 speakUS(opt) 一致。
+  useEffect(() => { prewarmUS(items.map((q) => q.payload.options?.[q.payload.answer_index ?? 0])); }, [items]);
   const [idx, setIdx] = useState(0);
   const [maxIdx, setMaxIdx] = useState(0);                       // 已到达前沿;idx<maxIdx=回看只读
   const [records, setRecords] = useState<Record<number, number>>({}); // idx → 所选项

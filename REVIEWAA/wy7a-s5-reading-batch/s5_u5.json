@@ -1,0 +1,86 @@
+{
+ "grade": 7,
+ "publisher": "junior_fltrp",
+ "volume": "wy7A",
+ "unit": "U5",
+ "title": "My little seed",
+ "topic": "植物的力量",
+ "body": "Today I put a small seed into the ground. It looks weak now, but I know it will become something great. First, it will need water and sunlight. In a few days, a tiny green leaf is going to appear. The leaf will drink the sunlight and make food for the plant. Slowly, the stem will grow taller and stronger. Next spring, my little seed is going to be a young tree. Birds will come and build their nests in it. In summer, it will give us cool shade. Children will play under it on hot days. In autumn, its leaves will turn gold and fall softly to the ground. People will rest under it and tell old stories. The tree will also help the air. It is going to take in bad gas and give out fresh oxygen. Small animals will find food and a home in its branches. Years later, I will be an old man, but my tree will still be here. It will drop new seeds, and more trees are going to grow. One small seed will change a whole hill. Plants are quiet, but they are truly powerful.",
+ "word_count": 193,
+ "difficulty": 1,
+ "questions": [
+  {
+   "q": "What does the seed need first?",
+   "answer": "A",
+   "options": [
+    "Water and sunlight.",
+    "Birds and animals.",
+    "Cool shade.",
+    "Fresh oxygen."
+   ],
+   "explanation": "原文 \"First, it will need water and sunlight.\""
+  },
+  {
+   "q": "What will the tree give people in summer?",
+   "answer": "B",
+   "options": [
+    "New seeds.",
+    "Cool shade.",
+    "Fresh fruit.",
+    "A bird's nest."
+   ],
+   "explanation": "原文 \"In summer, it will give us cool shade.\""
+  },
+  {
+   "q": "What is the main idea of the passage?",
+   "answer": "C",
+   "options": [
+    "How to water a plant.",
+    "Birds like to live in trees.",
+    "A small seed/plant has great power over time.",
+    "Summer is the best season."
+   ],
+   "explanation": "全文用一粒种子的未来说明植物的力量。"
+  },
+  {
+   "q": "Why does the writer say \"one small seed will change a whole hill\"?",
+   "answer": "D",
+   "options": [
+    "Because the seed is very big.",
+    "Because people will cut the tree down.",
+    "Because the hill is small.",
+    "Because the tree will drop seeds and more trees will grow."
+   ],
+   "explanation": "由树落籽、更多树生长推断;文中给出线索。"
+  },
+  {
+   "q": "In the passage, \"powerful\" means ____.",
+   "answer": "A",
+   "options": [
+    "having great strength and effect",
+    "very small and weak",
+    "green and tall",
+    "quiet and slow"
+   ],
+   "explanation": "powerful = 强大的、有力量的。"
+  }
+ ],
+ "vocab_notes": [
+  {
+   "word": "seed",
+   "cn": "种子"
+  },
+  {
+   "word": "shade",
+   "cn": "树荫,阴凉处"
+  },
+  {
+   "word": "oxygen",
+   "cn": "氧气"
+  },
+  {
+   "word": "branch",
+   "cn": "树枝"
+  }
+ ]
+}

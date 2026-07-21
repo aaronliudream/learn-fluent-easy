@@ -283,7 +283,7 @@
                   "Hello, everyone! Let me introduce myself. My name is {myName}.",
                   "I am a new student in this class, and my hobby is {myHobby}.",
                   "I want to introduce my good friend, too. His name is {friendName}.",
-                  "He is a {friendTrait} person, and we always study and play together. We hope to make more friends here!"
+                  "He is very {friendTrait}, and we always study and play together. We hope to make more friends here!"
                 ]
               },
               "connectors": [
@@ -387,7 +387,7 @@
                 "play",
                 "weekend",
                 "fun",
-                "practise"
+                "practice"
               ],
               "cards": [
                 {
@@ -415,7 +415,7 @@
                 "l1": [
                   "My hobby is {hobby}.",
                   "I do it {when}.",
-                  "I play {where}.",
+                  "I do it {where}.",
                   "It makes me {feel}."
                 ],
                 "l2": [
@@ -427,7 +427,7 @@
                 "l3": [
                   "I have a hobby that I really love. It is {hobby}.",
                   "I usually do it {when}, {where}.",
-                  "My friends and I often practise together, and we help each other.",
+                  "My friends and I often practice together, and we help each other.",
                   "This hobby makes me {feel}. It also teaches me to keep trying. I hope you like it, too!"
                 ]
               },
@@ -559,7 +559,7 @@
               "templates": {
                 "l1": [
                   "I love my family.",
-                  "My {member1}'s food is nice.",
+                  "My {member1} {act1}.",
                   "My {member2} {act2}.",
                   "My family's love is warm."
                 ],
@@ -570,10 +570,10 @@
                   "In my family's home, I always feel safe and warm."
                 ],
                 "l3": [
-                  "My family's love is around me every single day.",
+                  "My family's love is around me every day.",
                   "My {member1} {act1}. That is my {member1}'s quiet way of saying 'I love you'.",
-                  "My {member2} {act2}, and my brother's jokes always make me laugh.",
-                  "I am thankful for my parents' care and my family's warm support. Their love makes me strong."
+                  "My {member2} {act2}, and my {member2}'s smile always makes me laugh.",
+                  "I love my parents' care and my family's warm support. Their love makes me strong."
                 ]
               },
               "connectors": [
@@ -712,13 +712,13 @@
                   "My family always celebrates {festival} together.",
                   "We usually eat {food}, and we always visit {who}.",
                   "In the evening, we often {activity}.",
-                  "We are never bored, and everyone is happy."
+                  "We are never sad, and everyone is happy."
                 ],
                 "l3": [
                   "My family always celebrates {festival} together. It is my favourite time of the year.",
                   "Before the day, we usually clean the house. We always eat {food}, and we often visit {who}.",
                   "In the evening, we sometimes {activity}, and we never forget to take photos.",
-                  "We are never bored on this day. Our home is always full of love and laughter."
+                  "We are never sad on this day. Our home is always full of love and fun."
                 ]
               },
               "connectors": [
@@ -820,7 +820,7 @@
                 "protect",
                 "plant",
                 "tree",
-                "future",
+                "water",
                 "green"
               ],
               "cards": [
@@ -856,12 +856,12 @@
                   "Nature gives us so much, so I will protect it.",
                   "This spring, I am going to {action1} in {place}.",
                   "I will also {action2} every day.",
-                  "I believe our world will become greener."
+                  "I think our world will become green and clean."
                 ],
                 "l3": [
-                  "Nature gives us clean air and cool shade, so I am going to protect it.",
+                  "Nature gives us clean air and green trees, so I am going to protect it.",
                   "This spring, I will {action1} in {place}, and I am going to take good care of it.",
-                  "At home, I will {action2}, and I will never waste paper again.",
+                  "At home, I will {action2}, and I will not waste paper.",
                   "If everyone helps, the trees will grow tall and the air will stay fresh. We will have {hope}."
                 ]
               },
@@ -1005,9 +1005,9 @@
                 ],
                 "l3": [
                   "Look! I am watching a lovely {animal} in {place} right now.",
-                  "It is {action1}, and its eyes are shining.",
-                  "Now it is {action2}, and it is not stopping for a rest.",
-                  "The {animal} is having so much fun, and I am learning a lot about animals. I am really enjoying this moment!"
+                  "It is {action1}, and its little eyes are bright.",
+                  "Now it is {action2}, and it looks very happy and lovely.",
+                  "The {animal} is having so much fun, and I am learning a lot about animals. I am really enjoying this happy day!"
                 ]
               },
               "connectors": [

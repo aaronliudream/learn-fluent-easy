@@ -236,6 +236,8 @@ const realWriting = REAL_WRITING_BOOKS.has(unit.book);   // 原: unit.book === "
 
 **minWords 梯度**(同意,同阅读思路):Starter–U2 = 30 / U3–U4 = 40 / U5–U6 = 50。
 
+**⑤ 写作模板必过 OOV 门(2026-07-20 Aaron 审六篇后加)**:模板是给学生**照抄背诵**的,超纲比阅读更糟(阅读可猜、模板要记)。基准=七上∪小学**并集**(baseline ∪ 语法门 COMMON ∪ 无争议基础补丁 air/again/safe/think/myself),核 l1/l2/l3+opener+sampleWords。真超纲一律**改题**(已换:shade/laughter/thankful/practise→practice/moment/greener/bored/single/future);基础词只在能逐字辩护时补(白名单纪律,见 s4)。**另两条模板铁律**(Aaron 定):(a)模板不得出现**不受占位符控制的人/物**(U3 曾硬编"my brother"→改 `{member2}'s smile`);(b)l1 最弱学生最可能一字照抄,不得预设特定动作(U2 `I play {where}`→`I do it {where}`;U3 `{member1}'s food`→`{member1} {act1}`)。生成器 `s7_batch.py` 内置 OOV+梯度+占位符+LP 密度四检,7 篇全绿。
+
 **7 单元写作任务(各绑该单元语言点):**
 | 单元 | 任务 | 语言点 |
 |---|---|---|

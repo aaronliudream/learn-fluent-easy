@@ -1,8 +1,8 @@
-﻿import { useCallback, useMemo, useState } from "react";
+﻿import { useCallback, useEffect, useMemo, useState } from "react";
 import { findUnit } from "@/lib/gaokaoHub/courseData";
 import { shuffleArray, useGaokaoHub } from "@/lib/gaokaoHub/context";
 import { getUnitState, savePersist } from "@/lib/gaokaoHub/storage";
-import { hubSpeak } from "@/lib/primaryHub/speech";
+import { hubSpeak, prefetchHubVocabulary } from "@/lib/primaryHub/speech";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/gaokaoHub/types";
 import { recordHubMistake } from "@/lib/recordHubMistake";
 import { recordFinalQuizMistake } from "@/lib/finalQuizMistake";
@@ -825,6 +825,13 @@ export default function GaokaoHubStagePlay({ unitId, stageIdx, onComplete, onBac
   const { grade, state, setState, addMistake, completeStage } = useGaokaoHub();
   const unit = findUnit(unitId);
   const stage = unit?.stages[stageIdx];
+
+  // P2 预热:进关即按网络预热本单元核心词音频,键与 hubSpeak(v.en) 一致(el:lily / 0.85,
+  // 经 toHubTtsText 归一)。VocabStage 自动播 + 各处点喇叭首播秒响,消除冷合成 1-3s。
+  // grade 传参对键无影响(speed 已显式 0.85);prefetchHubVocabulary 纯网络,不碰 <audio>。
+  useEffect(() => {
+    if (unit?.vocabulary?.length) prefetchHubVocabulary(unit.vocabulary.map((v) => v.en), grade, 0.85);
+  }, [unit, grade]);
 
   const us = getUnitState(state, unitId);
   const stars = state.units[unitId]?.stars ?? us.stars;

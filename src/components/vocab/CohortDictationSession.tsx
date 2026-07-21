@@ -16,7 +16,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, Volume2, Check, X, RotateCw, Sparkles } from "lucide-react";
 import { T } from "@/i18n/T";
-import { speak } from "@/lib/speak";
+import { speak, prefetchTTS } from "@/lib/speak";
 import { recordCohortAttempt } from "@/lib/cohortProgress";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -94,6 +94,15 @@ export default function CohortDictationSession({
 
   const current = items[idx];
   const total = items.length;
+
+  // P2 预热:进关即按网络预热本批全部词音频,键与 speakWord 一致(默认音色 + 逐词 accent)。
+  // 纯网络(prefetchTTS 不碰 <audio>、不置播放状态);首点喇叭/自动播秒响,消除冷合成 1-3s。
+  useEffect(() => {
+    for (const v of items) {
+      const acc = v.accent === "UK" || v.accent === "US" ? v.accent : undefined;
+      prefetchTTS(v.word.split("/")[0], acc ? { accent: acc } : undefined);
+    }
+  }, [items]);
 
   // Auto play & focus on each new item.
   useEffect(() => {

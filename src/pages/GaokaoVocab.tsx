@@ -7,7 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { fetchGaokaoVocabPool } from "@/lib/gaokaoVocabPool";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
-import { speak, unlockAudioSync } from "@/lib/speak";
+import { speak, unlockAudioSync, prefetchTTS } from "@/lib/speak";
 import { bumpMastery, recordAttempt } from "@/lib/gaokaoMastery";
 import { recordCohortAttempt, pickPracticeSource } from "@/lib/cohortProgress";
 import { useCohortAttemptContext } from "@/hooks/useActiveCohort";
@@ -76,6 +76,17 @@ function speakExample(v: Vocab) {
   if (!v.example_en) return Promise.resolve();
   const acc = v.accent === "UK" || v.accent === "US" ? v.accent : undefined;
   return speak(v.example_en, acc ? { accent: acc } : undefined);
+}
+
+// P2 预热:按网络预热一组词的单词(+可选例句)音频,键与 speakWord/speakExample 完全一致
+// (默认音色 + 逐词 accent)。纯网络(prefetchTTS 不碰 <audio>、不置播放状态),首播命中缓存秒响。
+function prewarmVocab(list: Vocab[], opts?: { examples?: boolean }) {
+  for (const v of list) {
+    const acc = v.accent === "UK" || v.accent === "US" ? v.accent : undefined;
+    const o = acc ? { accent: acc } : undefined;
+    prefetchTTS(v.word.split("/")[0], o);
+    if (opts?.examples && v.example_en) prefetchTTS(v.example_en, o);
+  }
 }
 
 function AccentBadge({ accent }: {accent: Vocab["accent"];}) {
@@ -1349,6 +1360,10 @@ function GroupSession({
   const [coinsAwarded, setCoinsAwarded] = useState(0);
   const [groupLevelUps, setGroupLevelUps] = useState<{word: string;level: MasteryLevel;}[]>([]);
   const [wrongWords, setWrongWords] = useState<Vocab[]>([]);
+
+  // P2 预热:进组即按网络预热本组(≤20)词 + 例句音频 → Flashcard 抽卡自动播/点喇叭、
+  // Quiz(speakExample/speakWord)、Spell(speakWord)首播秒响,消除冷合成 1-3s。
+  useEffect(() => { prewarmVocab(group, { examples: true }); }, [group]);
 
   return (
     <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
@@ -3645,6 +3660,10 @@ function DictationSession({ pool, onExit }: {pool: Vocab[];onExit: () => void;})
   const [coinRefresh, setCoinRefresh] = useState(0);
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  // P2 预热:本轮听写题目定下后即按网络预热其例句音频,键与 speakExample 一致 →
+  // start()/nextItem() 的自动播(:3664/:3725)首播秒响,消除整句冷合成 1-3s。
+  useEffect(() => { if (items.length) prewarmVocab(items, { examples: true }); }, [items]);
 
   function start() {
     if (playable.length < DICT_QUESTION_COUNT) return;

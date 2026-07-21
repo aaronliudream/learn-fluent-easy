@@ -3,7 +3,7 @@ import { ArrowLeft, Volume2, Sparkles, Loader2, Check, X, Lightbulb, Share2, Tro
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
-import { speak } from "@/lib/speak";
+import { speak, prefetchTTS } from "@/lib/speak";
 import { awardCoins, unlockBadge, type BadgeDef } from "@/lib/coinsBadges";
 import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 
@@ -163,6 +163,15 @@ export default function WordQuest({
   const wordIdx = Math.floor(stage / STAGES_PER_WORD);
   const subStage = stage % STAGES_PER_WORD;
   const target = targets[wordIdx] ?? null;
+
+  // P2 预热:选定今日词即按网络预热其音频,键与 speakWord 一致(默认音色 + 逐词 accent)。
+  // stage 0 自动播(:585)与点喇叭秒响,消除冷合成 1-3s;prefetchTTS 纯网络,不碰 <audio>。
+  useEffect(() => {
+    for (const v of targets) {
+      const acc = v.accent === "UK" || v.accent === "US" ? v.accent : undefined;
+      prefetchTTS(v.word.split("/")[0], acc ? { accent: acc } : undefined);
+    }
+  }, [targets]);
 
   // --- Bootstrap: pick daily, check today's status ---
   useEffect(() => {

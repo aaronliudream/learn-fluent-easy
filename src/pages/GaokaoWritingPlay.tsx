@@ -74,7 +74,7 @@ export default function GaokaoWritingPlay() {
       recordUnifiedAttempt({
         stage: "senior",
         grade: 10 + (p.year_band - 1),
-        module: "writing",
+        module: "senior_writing", // 带前缀→落老师端保留名单(裸 'writing' 被 PHASE7 排除)
         item_type: "essay",
         item_id: p.id,
         item_label: p.topic,

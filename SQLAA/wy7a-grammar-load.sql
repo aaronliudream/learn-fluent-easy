@@ -6,10 +6,8 @@
 -- ============================================================
 BEGIN;
 
--- 列兜底(publisher/volume/unit 已在 Phase1 迁移加过;IF NOT EXISTS 防呆)
-ALTER TABLE public.junior_grammar_points ADD COLUMN IF NOT EXISTS publisher text;
-ALTER TABLE public.junior_grammar_points ADD COLUMN IF NOT EXISTS volume text;
-ALTER TABLE public.junior_grammar_points ADD COLUMN IF NOT EXISTS unit text;
+-- 依赖(Phase1 迁移已建):junior_grammar_points 的 publisher/volume/unit 列 + code 类别行。
+-- 本脚本是数据脚本,不改 schema;若列/类别缺失,断言会拦下、停下来查,不自动补。
 
 -- 1) 幂等删除:先删本册题(经 point 关联),再删本册点
 DELETE FROM public.junior_grammar_questions q
@@ -170,7 +168,7 @@ INSERT INTO public.junior_grammar_questions (point_id, stem, option_a, option_b,
 
 -- 4) 双键断言(计数 + 四类污染/孤儿)
 DO $$
-DECLARE ptn int; qn int; v_orphan int; p_orphan int; prefix_bad int; polluted int;
+DECLARE ptn int; qn int; v_orphan int; p_orphan int; prefix_bad int; polluted int; no_cat int; uneven int;
 BEGIN
   SELECT count(*) INTO ptn FROM public.junior_grammar_points
     WHERE publisher='junior_fltrp' AND volume='wy7A';
@@ -190,13 +188,24 @@ BEGIN
   -- pep_row_polluted: 非 fltrp 行被误标 volume='wy7A'
   SELECT count(*) INTO polluted FROM public.junior_grammar_points
     WHERE volume='wy7A' AND publisher<>'junior_fltrp';
+  -- category_id_null: 类别行缺失导致子查询返回 NULL(否则语法板块按分类过滤会整批隐形)
+  SELECT count(*) INTO no_cat FROM public.junior_grammar_points
+    WHERE publisher='junior_fltrp' AND volume='wy7A' AND category_id IS NULL;
+  -- points_uneven: 存在挂题数≠20 的点(总数140也可能内部分配不均,如某点拼错致40/0)
+  SELECT count(*) INTO uneven FROM (
+    SELECT p.code FROM public.junior_grammar_points p
+      LEFT JOIN public.junior_grammar_questions q ON q.point_id=p.id
+      WHERE p.publisher='junior_fltrp' AND p.volume='wy7A'
+      GROUP BY p.code HAVING count(q.id)<>20) t;
   IF ptn<>7        THEN RAISE EXCEPTION 'point 数=% 期望 7', ptn; END IF;
   IF qn<>140       THEN RAISE EXCEPTION 'question 数=% 期望 140', qn; END IF;
   IF v_orphan<>0   THEN RAISE EXCEPTION 'gp_volume_orphan=% (应0)', v_orphan; END IF;
   IF p_orphan<>0   THEN RAISE EXCEPTION 'gp_publisher_orphan=% (应0)', p_orphan; END IF;
   IF prefix_bad<>0 THEN RAISE EXCEPTION 'gp_code_prefix_bad=% (应0)', prefix_bad; END IF;
   IF polluted<>0   THEN RAISE EXCEPTION 'pep_row_polluted=% (应0)', polluted; END IF;
-  RAISE NOTICE 'OK: % 点 / % 题,四断言全过', ptn, qn;
+  IF no_cat<>0     THEN RAISE EXCEPTION 'category_id_null=% (应0·类别行缺失)', no_cat; END IF;
+  IF uneven<>0     THEN RAISE EXCEPTION 'points_uneven=% (存在题数≠20 的点)', uneven; END IF;
+  RAISE NOTICE 'OK: % 点 / % 题,六断言全过(每点 20)', ptn, qn;
 END $$;
 
 COMMIT;

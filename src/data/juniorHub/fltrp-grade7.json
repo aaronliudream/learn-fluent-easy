@@ -1023,7 +1023,896 @@
       "wy_grade7_volume2": {
         "name": "下册",
         "available": true,
-        "units": []
+        "units": [
+          {
+            "id": "wy7v2_u1",
+            "num": 1,
+            "unitKey": "U1",
+            "book": "wy7B",
+            "title": "Unit 1 The secrets of happiness",
+            "cn": "幸福的秘密",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarCodes": [
+              "wy7b-u1-simple-past"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "topic": "A happy day of helping",
+              "prompt": "Write a short story (about 40 words) about a time you felt happy because you helped someone. Use the simple past tense.",
+              "promptCn": "写一个约40词的小故事,讲一次你因为帮助别人而感到快乐的经历。用一般过去时。",
+              "opener": "Last week, something made me really happy.",
+              "sampleWords": [
+                "helped",
+                "happy",
+                "thanked",
+                "smiled",
+                "kind"
+              ],
+              "cards": [
+                {
+                  "key": "who",
+                  "labelCn": "你帮了谁",
+                  "hint": "如 an old man"
+                },
+                {
+                  "key": "act",
+                  "labelCn": "你做了什么",
+                  "hint": "如 carried his bag"
+                },
+                {
+                  "key": "place",
+                  "labelCn": "在哪里",
+                  "hint": "如 at the bus stop"
+                },
+                {
+                  "key": "feel",
+                  "labelCn": "你当时的感受",
+                  "hint": "如 warm and happy"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "One day I helped {who}.",
+                  "I {act} {place}.",
+                  "{who} said thank you.",
+                  "I felt {feel}."
+                ],
+                "l2": [
+                  "Last week, I met {who} {place}.",
+                  "So I {act} to help.",
+                  "{who} smiled and thanked me.",
+                  "At that moment, I felt {feel}."
+                ],
+                "l3": [
+                  "Last week, I saw {who} {place}, and they really needed some help.",
+                  "Without thinking, I {act} at once.",
+                  "{who} smiled warmly at me and said thank you many times.",
+                  "Helping others made me feel {feel}. A small kind act can bring big happiness to both of us."
+                ]
+              },
+              "connectors": [
+                "and",
+                "so",
+                "because"
+              ],
+              "minWords": 40
+            },
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy7v2_u2",
+            "num": 2,
+            "unitKey": "U2",
+            "book": "wy7B",
+            "title": "Unit 2 Go for it!",
+            "cn": "勇往直前",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarCodes": [
+              "wy7b-u2-indefinite-pronouns"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "topic": "I didn't give up",
+              "prompt": "Write about a time (about 40 words) when you did not give up. Use indefinite pronouns (something, everyone, nobody...).",
+              "promptCn": "写一段约40词,讲一次你没有放弃的经历。用不定代词(something, everyone, nobody…)。",
+              "opener": "Everyone can do more than they think.",
+              "sampleWords": [
+                "everyone",
+                "nobody",
+                "something",
+                "hard",
+                "proud"
+              ],
+              "cards": [
+                {
+                  "key": "task",
+                  "labelCn": "一件难做的事",
+                  "hint": "如 learning to swim"
+                },
+                {
+                  "key": "feel",
+                  "labelCn": "当时的感受",
+                  "hint": "如 tired"
+                },
+                {
+                  "key": "push",
+                  "labelCn": "什么让你坚持",
+                  "hint": "如 my dream"
+                },
+                {
+                  "key": "result",
+                  "labelCn": "结果",
+                  "hint": "如 I made it"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "{task} was hard for me.",
+                  "I felt {feel}.",
+                  "But nobody could stop me.",
+                  "In the end, {result}."
+                ],
+                "l2": [
+                  "At first, {task} was very hard, and I felt {feel}.",
+                  "Everyone thought I would give up.",
+                  "But something inside me said, \"Keep going.\"",
+                  "Because of {push}, {result}."
+                ],
+                "l3": [
+                  "When I started {task}, it was so hard that I felt {feel}, and nobody believed in me.",
+                  "Many times I wanted to stop, but something inside me said, \"Never give up.\"",
+                  "I remembered {push}, and I tried again and again.",
+                  "At last, {result}. Now I know everyone can do great things if they keep trying."
+                ]
+              },
+              "connectors": [
+                "and",
+                "but",
+                "because"
+              ],
+              "minWords": 40
+            },
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy7v2_u3",
+            "num": 3,
+            "unitKey": "U3",
+            "book": "wy7B",
+            "title": "Unit 3 Food matters",
+            "cn": "食物的意义",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarCodes": [
+              "wy7b-u3-linking-verbs"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "topic": "My favourite food",
+              "prompt": "Write about your favourite food (about 50 words). Use linking verbs (looks, tastes, smells + adjective).",
+              "promptCn": "写一段约50词,介绍你最喜欢的食物。用系动词(looks, tastes, smells + 形容词)。",
+              "opener": "Everyone has a favourite food, and mine is special.",
+              "sampleWords": [
+                "tastes",
+                "smells",
+                "looks",
+                "delicious",
+                "favourite"
+              ],
+              "cards": [
+                {
+                  "key": "food",
+                  "labelCn": "你最爱的食物",
+                  "hint": "如 dumplings"
+                },
+                {
+                  "key": "who",
+                  "labelCn": "谁做的",
+                  "hint": "如 my mother"
+                },
+                {
+                  "key": "smellAdj",
+                  "labelCn": "闻起来怎样",
+                  "hint": "如 wonderful"
+                },
+                {
+                  "key": "tasteAdj",
+                  "labelCn": "尝起来怎样",
+                  "hint": "如 sweet"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "My favourite food is {food}.",
+                  "It looks nice.",
+                  "It smells {smellAdj}.",
+                  "It tastes {tasteAdj}."
+                ],
+                "l2": [
+                  "My favourite food is {food}, and {who} makes it for me.",
+                  "It looks simple but smells {smellAdj}.",
+                  "When I eat it, it tastes {tasteAdj}.",
+                  "It always makes me happy."
+                ],
+                "l3": [
+                  "My favourite food is {food}. Every time {who} cooks it, the whole room smells {smellAdj}.",
+                  "On the plate, it looks warm and lovely.",
+                  "The first bite tastes {tasteAdj}, much better than any food in a restaurant.",
+                  "To me, {food} is not just food; it tastes like home and love, and it always makes me smile."
+                ]
+              },
+              "connectors": [
+                "and",
+                "but",
+                "because"
+              ],
+              "minWords": 50
+            },
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy7v2_u4",
+            "num": 4,
+            "unitKey": "U4",
+            "book": "wy7B",
+            "title": "Unit 4 The art of having fun",
+            "cn": "享乐的艺术",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarCodes": [
+              "wy7b-u4-imperatives"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "topic": "How to have fun and stay healthy",
+              "prompt": "Give some advice (about 50 words) on how to relax and have fun. Use imperative sentences (Don't..., Take a break, Play...).",
+              "promptCn": "写一段约50词的建议,讲如何放松和享受生活。用祈使句(Don't…, Take a break, Play…)。",
+              "opener": "Life is not only about study and work.",
+              "sampleWords": [
+                "relax",
+                "break",
+                "play",
+                "fun",
+                "healthy"
+              ],
+              "cards": [
+                {
+                  "key": "activity",
+                  "labelCn": "一项有趣的活动",
+                  "hint": "如 playing basketball"
+                },
+                {
+                  "key": "when",
+                  "labelCn": "什么时候做",
+                  "hint": "如 at the weekend"
+                },
+                {
+                  "key": "place",
+                  "labelCn": "在哪里",
+                  "hint": "如 in the park"
+                },
+                {
+                  "key": "friend",
+                  "labelCn": "和谁一起",
+                  "hint": "如 your friends"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "Don't study all day.",
+                  "Take a break {when}.",
+                  "Try {activity} {place}.",
+                  "Have fun and stay healthy."
+                ],
+                "l2": [
+                  "Don't just sit and study all the time.",
+                  "Take a short break {when}, and go outside.",
+                  "Try {activity} {place} with {friend}.",
+                  "Remember: rest well, and you will learn better."
+                ],
+                "l3": [
+                  "Don't spend every hour on your books, or you will feel tired and unhappy.",
+                  "When you are tired, take a break {when} and get some fresh air.",
+                  "Try {activity} {place} with {friend}; laughing together makes you feel great.",
+                  "Remember: work hard, but play hard, too. A happy mind is a strong mind."
+                ]
+              },
+              "connectors": [
+                "and",
+                "or",
+                "but"
+              ],
+              "minWords": 50
+            },
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy7v2_u5",
+            "num": 5,
+            "unitKey": "U5",
+            "book": "wy7B",
+            "title": "Unit 5 Amazing nature",
+            "cn": "神奇的大自然",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarCodes": [
+              "wy7b-u5-comparatives-superlatives"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "topic": "My hometown",
+              "prompt": "Describe your hometown (about 60 words). Use comparatives and superlatives (bigger, the most beautiful...).",
+              "promptCn": "写一段约60词,描述你的家乡。用比较级和最高级(bigger, the most beautiful…)。",
+              "opener": "My hometown is a place I love the most.",
+              "sampleWords": [
+                "beautiful",
+                "greener",
+                "cleaner",
+                "best",
+                "hometown"
+              ],
+              "cards": [
+                {
+                  "key": "place",
+                  "labelCn": "家乡的名字/类型",
+                  "hint": "如 a small town"
+                },
+                {
+                  "key": "feature",
+                  "labelCn": "一个特点",
+                  "hint": "如 the green hills"
+                },
+                {
+                  "key": "season",
+                  "labelCn": "最美的季节",
+                  "hint": "如 autumn"
+                },
+                {
+                  "key": "why",
+                  "labelCn": "你为什么爱它",
+                  "hint": "如 it feels like home"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "My hometown is {place}.",
+                  "{feature} is very beautiful.",
+                  "It is greener than a city.",
+                  "{season} is the best season."
+                ],
+                "l2": [
+                  "My hometown is {place}, and {feature} makes it special.",
+                  "The air here is cleaner and fresher than in a big city.",
+                  "{season} is the most beautiful season of the year.",
+                  "I love it because {why}."
+                ],
+                "l3": [
+                  "My hometown is {place}. Of all the places I know, {feature} is the most beautiful.",
+                  "The air is cleaner, the water is clearer, and life is quieter and slower than in a busy city.",
+                  "{season} is the loveliest time of the year, when everything looks its best.",
+                  "No city in the world is as dear to me as my hometown, because {why}. I hope to live there again one day."
+                ]
+              },
+              "connectors": [
+                "and",
+                "than",
+                "because"
+              ],
+              "minWords": 60
+            },
+            "quizQuestions": [],
+            "listeningQuestions": []
+          },
+          {
+            "id": "wy7v2_u6",
+            "num": 6,
+            "unitKey": "U6",
+            "book": "wy7B",
+            "title": "Unit 6 Hitting the road",
+            "cn": "上路吧",
+            "emoji": "📗",
+            "available": false,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "本单元词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "本单元语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "",
+            "grammarCode": null,
+            "grammarCodes": [
+              "wy7b-u6-as-as"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "topic": "A place worth visiting",
+              "prompt": "Recommend a place you visited (about 60 words). Use 'as ... as' (as beautiful as, as cool as...).",
+              "promptCn": "写一段约60词,推荐一个你去过的地方。用 as … as(as beautiful as, as cool as…)。",
+              "opener": "Last holiday, I went on a wonderful trip.",
+              "sampleWords": [
+                "as",
+                "beautiful",
+                "cool",
+                "fun",
+                "trip"
+              ],
+              "cards": [
+                {
+                  "key": "place",
+                  "labelCn": "你去的地方",
+                  "hint": "如 the mountains"
+                },
+                {
+                  "key": "adj1",
+                  "labelCn": "一个形容词",
+                  "hint": "如 beautiful"
+                },
+                {
+                  "key": "activity",
+                  "labelCn": "你在那做的事",
+                  "hint": "如 climbing"
+                },
+                {
+                  "key": "adj2",
+                  "labelCn": "另一个形容词",
+                  "hint": "如 cool"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "Last holiday, I went to {place}.",
+                  "It was as {adj1} as a painting.",
+                  "I tried {activity} there.",
+                  "The air was as {adj2} as autumn."
+                ],
+                "l2": [
+                  "Last holiday, I visited {place} with my family.",
+                  "The view was as {adj1} as a dream.",
+                  "We spent the day {activity}, and it was great fun.",
+                  "Even in summer, the air felt as {adj2} as autumn."
+                ],
+                "l3": [
+                  "Last holiday, my family and I went to {place}, and I will never forget it.",
+                  "The whole place was as {adj1} as a painting, and I could not stop taking photos.",
+                  "We spent hours {activity}; it was not as tiring as I thought, and I enjoyed every minute.",
+                  "If you want a trip as {adj2} and happy as mine, go and see {place} yourself!"
+                ]
+              },
+              "connectors": [
+                "and",
+                "as",
+                "but"
+              ],
+              "minWords": 60
+            },
+            "quizQuestions": [],
+            "listeningQuestions": []
+          }
+        ]
       }
     }
   }

@@ -100,7 +100,7 @@ export default function JuniorWritingPlay() {
       await awardCoins(reward, "junior_writing");
       await bumpPetSkill("writer_pen", 1);
       recordUnifiedAttempt({
-        stage: "junior", grade: 7, module: "writing",
+        stage: "junior", grade: 7, module: "junior_writing", // 带前缀→落老师端保留名单(裸 'writing' 被 PHASE7 排除)
         item_type: "essay", item_id: p.id, item_label: p.topic,
         is_correct: r.score >= 60,
         context: { score: Math.round(r.score), word_count: wordCount }

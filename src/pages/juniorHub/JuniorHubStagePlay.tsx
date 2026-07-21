@@ -1924,7 +1924,7 @@ function WritingStage({ unit, grade, onFinish }: { unit: UnitDef; grade: number;
       recordUnifiedAttempt({
         stage: "junior",
         grade,
-        module: "writing",
+        module: "junior_writing", // 带前缀→落老师端保留名单(裸 'writing' 被 PHASE7 排除集挡掉)
         item_type: "essay",
         item_id: writingPromptId(unit),
         item_label: w?.topic ?? unit.title,

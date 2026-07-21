@@ -1,0 +1,1 @@
+careless | 现义: [adj.] 粗心的，不小心的 | 出处读不通: "But we were careless and happy and full of fun, and enjoyed every minute of the day." — 铁皮人回忆无忧无虑的往昔，此处 careless = 无牵挂的/无忧无虑的，"粗心而快乐"读不通 | 拟改: [adj.] 无忧无虑的；不操心的

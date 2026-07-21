@@ -1,5 +1,6 @@
-﻿import { Link } from "react-router-dom";
+﻿import { Link, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
+import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 import { AI_DIMENSIONS } from "@/lib/juniorHub/types";
 import { DimensionBars } from "@/components/juniorHub/DimensionBars";
 import type { DimResults } from "@/lib/juniorHub/types";
@@ -7,6 +8,8 @@ import type { DimResults } from "@/lib/juniorHub/types";
 export default function JuniorHubAIHistory() {
   const { grade, state } = useJuniorHub();
   const base = `/junior/hub/${grade}`;
+  const [sp] = useSearchParams();
+  const pub = readJuniorPublisherParam(sp);
   const history = state.aiTestHistory || [];
 
   if (history.length === 0) {
@@ -15,7 +18,7 @@ export default function JuniorHubAIHistory() {
         <div className="mb-3 text-6xl">📭</div>
         <div className="font-semibold">还没有测试记录</div>
         <p className="mt-1 text-sm text-[#888780]">学完几关后，AI 会自动出题考考你</p>
-        <Link to={`${base}/profile`} className="mt-4 inline-block text-[#FF6B35]">
+        <Link to={withJuniorPublisher(`${base}/profile`, pub)} className="mt-4 inline-block text-[#FF6B35]">
           ← 返回
         </Link>
       </div>
@@ -48,7 +51,7 @@ export default function JuniorHubAIHistory() {
   return (
     <>
       <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
-        <Link to={`${base}/profile`} className="text-xl">
+        <Link to={withJuniorPublisher(`${base}/profile`, pub)} className="text-xl">
           ←
         </Link>
         <div className="text-lg font-bold">📊 AI 测试历史</div>

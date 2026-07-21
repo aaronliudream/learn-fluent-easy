@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
-import { dbPublisherFor, readJuniorPublisherParam } from "@/lib/juniorHub/publisher";
+import { dbPublisherFor, readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 import { ArrowLeft, ChevronRight, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { loadUnitGrammar, type GUnit } from "@/lib/juniorGrammarUnits";
@@ -27,7 +27,8 @@ const volLabel = (v: string) => VOLUME_LABELS[v] ?? v;
 /** 语法页 L1:学期 Tab + 紧凑网格单元卡(配色编号),每卡显示完成度/掌握度。点进 → 单元语法点。 */
 export default function JuniorGrammarUnits() {
   const [params] = useSearchParams();
-  const dbPub = dbPublisherFor(readJuniorPublisherParam(params)); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
+  const pub = readJuniorPublisherParam(params);
+  const dbPub = dbPublisherFor(pub); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
   const [units, setUnits] = useState<GUnit[] | null>(null);
   const [mastery, setMastery] = useState<Map<string, QMasteryRow>>(new Map());
   const [vol, setVol] = useState<string>("7A");
@@ -70,7 +71,7 @@ export default function JuniorGrammarUnits() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <BackLink to="/junior" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to={withJuniorPublisher("/junior", pub)} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> <T>返回初中专区</T>
       </BackLink>
 
@@ -118,7 +119,7 @@ export default function JuniorGrammarUnits() {
             return (
               <Link
                 key={`${u.volume}-${u.unit}`}
-                to={`/junior/grammar/unit/${u.volume}/${u.unit}`}
+                to={withJuniorPublisher(`/junior/grammar/unit/${u.volume}/${u.unit}`, pub)}
                 className={cn("flex flex-col rounded-2xl border p-3 transition hover:-translate-y-0.5 hover:shadow-md", c.border, c.bg)}
               >
                 <div className="flex items-center gap-2">

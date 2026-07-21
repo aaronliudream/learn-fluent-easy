@@ -1,8 +1,9 @@
-﻿import { useNavigate, useParams } from "react-router-dom";
+﻿import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { getUnitState } from "@/lib/juniorHub/storage";
 import JuniorHubStagePlay from "./JuniorHubStagePlay";
+import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 
 export default function JuniorHubStage() {
   const { semId, unitId, stageIdx: stageIdxStr } = useParams<{
@@ -12,6 +13,8 @@ export default function JuniorHubStage() {
   }>();
   const { grade, state } = useJuniorHub();
   const nav = useNavigate();
+  const [sp] = useSearchParams();
+  const pub = readJuniorPublisherParam(sp);
   const stageIdx = Number(stageIdxStr);
   const unit = unitId ? findUnit(unitId) : null;
   const base = `/junior/hub/${grade}`;
@@ -24,10 +27,10 @@ export default function JuniorHubStage() {
     <JuniorHubStagePlay
       unitId={unitId}
       stageIdx={stageIdx}
-      onBack={() => nav(`${base}/semester/${semId}/unit/${unitId}`)}
+      onBack={() => nav(withJuniorPublisher(`${base}/semester/${semId}/unit/${unitId}`, pub))}
       onComplete={(needAiTest) => {
         const stage = unit.stages[stageIdx];
-        nav(`${base}/semester/${semId}/unit/${unitId}`, {
+        nav(withJuniorPublisher(`${base}/semester/${semId}/unit/${unitId}`, pub), {
           state: { justCompleted: stageIdx, needAiTest, stageTitle: stage?.title },
         });
       }}

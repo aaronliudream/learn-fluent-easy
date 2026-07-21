@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { getUnitProgress } from "@/lib/juniorHub/progress";
@@ -11,6 +11,7 @@ import { loadUnitVocabProgress, pctOf, type UnitOverall } from "@/lib/juniorHub/
 import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
 import type { GrammarProgress } from "@/lib/juniorGrammarQuestionMastery";
 import type { UnitDef, UnitState } from "@/lib/juniorHub/types";
+import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 
 const GROUP = 12; // 每组词数(与三关一致)
 
@@ -47,6 +48,8 @@ function StageList({
   unitId: string;
 }) {
   const nav = useNavigate();
+  const [sp] = useSearchParams();
+  const pub = readJuniorPublisherParam(sp);
   const words = useUnitVocab(unit, grade);
   const [mastered, setMastered] = useState<{ listen: number; match: number } | null>(null);
 
@@ -142,7 +145,7 @@ function StageList({
           <button
             key={stage.id}
             type="button"
-            onClick={() => nav(`${base}/semester/${semId}/unit/${unitId}/stage/${i}`)}
+            onClick={() => nav(withJuniorPublisher(`${base}/semester/${semId}/unit/${unitId}/stage/${i}`, pub))}
             className={`flex w-full items-center gap-3 rounded-2xl border bg-white p-4 text-left shadow-sm ${
               done ? "border-[#C9E0A8]" : "border-[#FF6B35]/40"
             }`}
@@ -197,6 +200,8 @@ export default function JuniorHubUnit() {
   const { semId, unitId } = useParams<{ semId: string; unitId: string }>();
   const { grade, state } = useJuniorHub();
   const nav = useNavigate();
+  const [sp] = useSearchParams();
+  const pub = readJuniorPublisherParam(sp);
   const unit = unitId ? findUnit(unitId) : null;
   const us = unitId ? getUnitState(state, unitId) : null;
   const p = unitId ? getUnitProgress(state, unitId) : { percent: 0, completed: 0, total: 0 };
@@ -209,7 +214,7 @@ export default function JuniorHubUnit() {
   return (
     <>
       <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
-        <button type="button" onClick={() => nav(`${base}/semester/${semId}`)} className="text-xl">
+        <button type="button" onClick={() => nav(withJuniorPublisher(`${base}/semester/${semId}`, pub))} className="text-xl">
           ←
         </button>
         <div className="text-lg font-bold">

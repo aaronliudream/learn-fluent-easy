@@ -1,5 +1,6 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
+import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { getUnitProgress, nextAiTestMilestone } from "@/lib/juniorHub/progress";
 import { getUnitState } from "@/lib/juniorHub/storage";
@@ -9,6 +10,8 @@ export function AITestCard() {
   const { grade, state } = useJuniorHub();
   const nav = useNavigate();
   const base = `/junior/hub/${grade}`;
+  const [sp] = useSearchParams();
+  const pub = readJuniorPublisherParam(sp);
 
   const unit = findUnit(state.currentUnit);
   const unitP = unit ? getUnitProgress(state, unit.id) : { percent: 0, ratio: 0 };
@@ -24,7 +27,7 @@ export function AITestCard() {
     return (
       <button
         type="button"
-        onClick={() => nav(`${base}/aitest${unit ? `?unit=${unit.id}` : ""}`)}
+        onClick={() => nav(withJuniorPublisher(`${base}/aitest${unit ? `?unit=${unit.id}` : ""}`, pub))}
         className="mb-3 w-full rounded-2xl border-2 border-indigo-200 bg-gradient-to-br from-indigo-500 to-violet-600 p-3.5 text-left text-white shadow-sm"
       >
         <div className="mb-2 flex items-center justify-between">
@@ -54,7 +57,7 @@ export function AITestCard() {
       <div className="mb-3 rounded-2xl border border-indigo-100 bg-indigo-50 p-3.5 text-indigo-950">
         <div className="mb-2 flex items-center justify-between">
           <div className="text-sm font-bold">🤖 AI 单元小测</div>
-          <Link to={`${base}/aihistory`} className="text-[11px] font-semibold text-indigo-600">
+          <Link to={withJuniorPublisher(`${base}/aihistory`, pub)} className="text-[11px] font-semibold text-indigo-600">
             📊 历史
           </Link>
         </div>

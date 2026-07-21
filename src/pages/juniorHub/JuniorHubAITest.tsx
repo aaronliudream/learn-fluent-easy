@@ -1,6 +1,7 @@
 ﻿import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { shuffleArray, useJuniorHub } from "@/lib/juniorHub/context";
+import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { getTotalCompletedStages } from "@/lib/juniorHub/progress";
 import { AI_DIMENSIONS, type DimResults, type QuizQuestion } from "@/lib/juniorHub/types";
@@ -11,6 +12,8 @@ export default function JuniorHubAITest() {
   const { grade, state, setState, addMistake } = useJuniorHub();
   const nav = useNavigate();
   const base = `/junior/hub/${grade}`;
+  const [sp] = useSearchParams();
+  const pub = readJuniorPublisherParam(sp);
 
   const [questions] = useState(() => {
     const errorQs = state.mistakes.filter((m) => m.opts && m.opts.length > 1).slice(0, 6);
@@ -105,7 +108,7 @@ export default function JuniorHubAITest() {
     return (
       <div className="p-8 text-center">
         <p className="mb-4">还没有足够的学习内容来出题，先完成几关吧！</p>
-        <Link to={base} className="text-[#FF6B35] font-semibold">
+        <Link to={withJuniorPublisher(base, pub)} className="text-[#FF6B35] font-semibold">
           返回首页
         </Link>
       </div>
@@ -147,14 +150,14 @@ export default function JuniorHubAITest() {
         </div>
         <button
           type="button"
-          onClick={() => nav(base)}
+          onClick={() => nav(withJuniorPublisher(base, pub))}
           className="mt-4 w-full rounded-xl bg-[#FF6B35] py-3 font-bold text-white"
         >
           🏠 回到首页
         </button>
         <button
           type="button"
-          onClick={() => nav(`${base}/aihistory`)}
+          onClick={() => nav(withJuniorPublisher(`${base}/aihistory`, pub))}
           className="mt-2 w-full rounded-xl border border-[#EEEAE0] bg-white py-3 font-semibold"
         >
           📊 查看测试历史
@@ -166,7 +169,7 @@ export default function JuniorHubAITest() {
   return (
     <div className="px-4 py-4">
       <div className="mb-3 flex items-center gap-2">
-        <button type="button" onClick={() => nav(base)} className="text-xl">
+        <button type="button" onClick={() => nav(withJuniorPublisher(base, pub))} className="text-xl">
           ←
         </button>
         <div className="font-bold">🤖 AI 智能小测试</div>

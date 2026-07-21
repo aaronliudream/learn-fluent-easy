@@ -1,9 +1,12 @@
-﻿import { Link } from "react-router-dom";
+﻿import { Link, useSearchParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
+import { readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 
 export default function JuniorHubMistakes() {
   const { grade, state, removeMistake, clearMistakes } = useJuniorHub();
   const base = `/junior/hub/${grade}`;
+  const [sp] = useSearchParams();
+  const pub = readJuniorPublisherParam(sp);
 
   const onClearAll = () => {
     if (window.confirm(`确定清空全部 ${state.mistakes.length} 道错题吗？此操作不可撤销。`)) {
@@ -59,7 +62,7 @@ export default function JuniorHubMistakes() {
             ))}
           </>
         )}
-        <Link to={base} className="mt-4 block text-center text-sm text-[#FF6B35]">
+        <Link to={withJuniorPublisher(base, pub)} className="mt-4 block text-center text-sm text-[#FF6B35]">
           返回首页
         </Link>
       </div>

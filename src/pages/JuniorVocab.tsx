@@ -24,7 +24,7 @@ import { useJuniorVocabMastery, MASTER_STREAK } from "@/hooks/useJuniorVocabMast
 import { canonSpelling } from "@/lib/spellingVariants";
 import { unlockAudioSync } from "@/lib/speak";
 import { Rocket } from "lucide-react";
-import { dbPublisherFor, readJuniorPublisherParam } from "@/lib/juniorHub/publisher";
+import { dbPublisherFor, readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 
 export type Vocab = {
   id: string;
@@ -55,7 +55,8 @@ export default function JuniorVocab() {
   const grade = params.get("grade") ?? "1";
   const mode = params.get("mode") as Mode ?? null;
   const groupParam = Number(params.get("group") ?? "0");
-  const dbPub = dbPublisherFor(readJuniorPublisherParam(params)); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
+  const pub = readJuniorPublisherParam(params);
+  const dbPub = dbPublisherFor(pub); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
 
   const [words, setWords] = useState<Vocab[]>([]);
   const [loading, setLoading] = useState(true);
@@ -219,7 +220,7 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <BackLink to="/junior" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to={withJuniorPublisher("/junior", pub)} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> {zh ? "返回初中专区" : "Back to Junior"}
       </BackLink>
 

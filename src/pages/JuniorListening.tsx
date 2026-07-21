@@ -8,7 +8,7 @@ import { MasteryBadge, type MasteryStatus } from "@/components/mastery/MasteryBa
 import { MasteryRing } from "@/components/mastery/MasteryRing";
 import { cn } from "@/lib/utils";
 import { JuniorGradeFilter, juniorGradeParams, type JuniorGradeKey } from "@/components/junior/JuniorGradeFilter";
-import { dbPublisherFor, readJuniorPublisherParam } from "@/lib/juniorHub/publisher";
+import { dbPublisherFor, readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 
 /** 从 ?grade= 参数(可能是 1/2/3 或 7/8/9)推出筛选条 chip 的当前值。 */
 function gradeKeyFromParam(grade: string | null): JuniorGradeKey {
@@ -59,8 +59,9 @@ function pctOf(agg: AttemptAgg | undefined) {
 export default function JuniorListening() {
   const [params, setParams] = useSearchParams();
   const grade = params.get("grade");
-  const dbPub = dbPublisherFor(readJuniorPublisherParam(params)); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
-  const backTo = "/junior";
+  const pub = readJuniorPublisherParam(params);
+  const dbPub = dbPublisherFor(pub); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
+  const backTo = withJuniorPublisher("/junior", pub); // 返回专区保留出版社
   const onGrade = (key: JuniorGradeKey) => {
     const { dbGrade } = juniorGradeParams(key);
     const next = new URLSearchParams(params);
@@ -188,7 +189,7 @@ export default function JuniorListening() {
           {/* 智能续学 + 错题本 */}
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {resume &&
-          <Link to={`/junior/listening/${resume.item.id}`} className="group flex items-center gap-3 rounded-2xl bg-white p-3 shadow-sm transition hover:-translate-y-0.5 dark:bg-card">
+          <Link to={withJuniorPublisher(`/junior/listening/${resume.item.id}`, pub)} className="group flex items-center gap-3 rounded-2xl bg-white p-3 shadow-sm transition hover:-translate-y-0.5 dark:bg-card">
                 <div className={cn("grid size-11 shrink-0 place-items-center rounded-xl text-white",
             resume.kind === "due" ? "bg-gradient-to-br from-orange-500 to-rose-500" :
             resume.kind === "resume" ? "bg-gradient-to-br from-indigo-500 to-violet-500" :
@@ -355,7 +356,7 @@ function ExerciseCard({ e, agg }: {e: E;agg: AttemptAgg | undefined;}) {
   status === "learned" ? "from-blue-400 to-indigo-600" :
   "from-sky-400 to-blue-600";
   return (
-    <Link to={`/junior/listening/${e.id}`}
+    <Link to={withJuniorPublisher(`/junior/listening/${e.id}`, pub)}
     className={cn("flex items-center gap-3 rounded-2xl border-2 bg-card p-3 transition hover:-translate-y-0.5", borderCls)}>
       <div className={cn("grid size-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br text-white", iconBg)}>
         {status === "expert" ? <Trophy className="size-5" /> :

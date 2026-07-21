@@ -4,15 +4,16 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, PenLine } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
-import { dbPublisherFor, readJuniorPublisherParam } from "@/lib/juniorHub/publisher";
+import { dbPublisherFor, readJuniorPublisherParam, withJuniorPublisher } from "@/lib/juniorHub/publisher";
 
 type P = {id: string;topic: string;prompt_cn: string;grade: number;min_words: number;max_words: number;difficulty: number;};
 
 export default function JuniorWriting() {
   const [params] = useSearchParams();
   const grade = params.get("grade");
-  const dbPub = dbPublisherFor(readJuniorPublisherParam(params)); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
-  const backTo = "/junior";
+  const pub = readJuniorPublisherParam(params);
+  const dbPub = dbPublisherFor(pub); // 出版社过滤:人教='junior'(结果等价),外研社='junior_fltrp'
+  const backTo = withJuniorPublisher("/junior", pub); // 返回专区保留出版社
   const [items, setItems] = useState<P[]>([]);
   useEffect(() => {
     let q: any = (supabase as any).from("junior_writing_prompts").
@@ -38,7 +39,7 @@ export default function JuniorWriting() {
       <div className="mt-5 grid gap-2">
         {items.length === 0 && <p className="text-sm text-muted-foreground"><T>暂无题目，敬请期待</T></p>}
         {items.map((p) =>
-        <Link key={p.id} to={`/junior/writing/${p.id}`} className="flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-3 transition hover:-translate-y-0.5 hover:border-pink-400">
+        <Link key={p.id} to={withJuniorPublisher(`/junior/writing/${p.id}`, pub)} className="flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-3 transition hover:-translate-y-0.5 hover:border-pink-400">
             <div className="grid size-11 place-items-center rounded-xl bg-gradient-to-br from-fuchsia-500 to-pink-600 text-white"><PenLine className="size-5" /></div>
             <div className="flex-1 min-w-0">
               <div className="truncate text-sm font-extrabold">{p.topic}</div>

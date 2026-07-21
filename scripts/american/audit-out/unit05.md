@@ -1,6 +1,6 @@
 # 单元5 题库全量导出（语义复审用）
 
-> 共 284 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+> 共 294 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
 
 
 ## am1_l25
@@ -42,7 +42,7 @@
 - **s6** `choice`  thin crust 指披萨的：
     - 选项: 厚芝士 / 大尺寸 / ★薄底 / 辣酱
 - **s6** `choice`  "That's the way to go!" 的意思是：
-    - 选项: 一路顺风 / 就该这样 / 快点走 / 这才对嘛 / 该走那条路 / ★这才对嘛/就该这样
+    - 选项: 一路顺风 / 快点走 / 该走那条路 / ★这才对嘛/就该这样
 - **s6** `choice`  表示嫌弃的拟声词：
     - 选项: Yum / ★Ugh / Yay / Wow
 - **s7** `cloze`  〔JOSH: What do you ___1___? EMILY: I ___2___ pepperoni. EMILY〕 第 1 空
@@ -79,24 +79,30 @@
     - 答案: That's the way to go!
 - **s10** `choice`  I ___ pepperoni pizza.
     - 选项: am love / ★love / loves / loving
-- **s10** `choice`  ___ order tacos tonight!
-    - 选项: Doing / Lets be / ★Let's / Let is
+- **s10** `choice`  ___ make some lemonade!
+    - 选项: Doing / ★Let's / Lets / Let is
 - **s10** `choice`  I don't like olives ___ all.
     - 选项: ★at / for / on / in
 - **s10** `choice`  What ___ you like?
     - 选项: are / ★do / can / is
-- **s10** `transform`  You like mushrooms.（变否定句）
-    - 答案: You don't like mushrooms.
-- **s10** `transform`  We order pizza.（变 Let's 提议）
-    - 答案: Let's order pizza.
-- **s10** `transform`  I like olives.（程度加强为"超爱"）
-    - 答案: I love olives.
-- **s10** `choice`  We ___ olives on our pizza.（超爱）
-    - 选项: loving / are love / loves / ★love
-- **s10** `choice`  ___ watch the game tonight!
-    - 选项: Let is / Do / ★Let's / Lets
-- **s10** `transform`  You like thin crust.（变一般疑问句）
-    - 答案: Do you like thin crust?
+- **s10** `choice`  选出 mushroom 的意思
+    - 选项: 菠萝 / ★蘑菇 / 橄榄 / 意式辣香肠
+- **s10** `choice`  选出 pepperoni 的意思
+    - 选项: 橄榄 / ★意式辣香肠 / 蘑菇 / 菠萝
+- **s10** `choice`  朋友问你「Do you like pepperoni?」你很喜欢,你回答:
+    - 选项: Let's go. / At all. / No, I don't. / ★Yes, I do.
+- **s10** `choice`  你想提议「咱们一起点披萨吧」,你说:
+    - 选项: I love mushrooms. / No pineapple! / Do you like pizza? / ★Let's order pizza!
+- **s10** `choice`  (读课文) Josh 最爱的披萨配料是什么?
+    - 选项: 菠萝 / 橄榄 / ★蘑菇 / 薄底
+- **s10** `choice`  (读课文) Emily 对蘑菇是什么态度?
+    - 选项: ★一点都不喜欢 / 还可以 / 想加倍 / 最爱
+- **s10** `choice`  (读课文) 最后 Josh 让转告披萨店什么?
+    - 选项: ★不要菠萝 / 要薄底 / 要橄榄 / 要加倍芝士
+- **s10** `choice`  🔊 听录音回答:Josh 喜欢意式辣香肠吗?
+    - 选项: ★喜欢 / 只吃一点 / 不喜欢 / 没提到
+- **s10** `choice`  🔊 听录音回答:Emily 对蘑菇怎么看?
+    - 选项: 觉得还行 / 超爱 / ★一点都不喜欢 / 想多加
 
 ## am1_l26
 
@@ -106,8 +112,6 @@
     - 选项: most / ★always / all / every
 - **s5** `choice` [gp1] I ___ drink soda.（从不）
     - 选项: very / no / not / ★never
-- **s5** `choice` [gp1] 频度副词位置：be 动词___、实义动词___。
-    - 选项: 前·后 / ★后·前 / 后·后 / 前·前
 - **s5** `transform` [gp1] He eats breakfast.（加"总是"）
     - 答案: He always eats breakfast.
 - **s5** `transform` [gp1] You are early.（加"通常"）
@@ -130,8 +134,6 @@
     - 选项: most / ★every / all / very
 - **s5** `choice` [gp2] I make coffee every ___.
     - 选项: mornings on / time on / ★morning / day at
-- **s5** `choice` [gp2] every 后面的时间用___形式。
-    - 选项: -ing / ★单数 / 复数 / 所有格
 - **s6** `choice`  "随手买杯咖啡"美语常说：
     - 选项: ★grab a coffee / hold a coffee / take up coffee / catch a coffee
 - **s6** `choice`  美式早餐常见的 toast 是：
@@ -178,22 +180,28 @@
     - 选项: never / very / most / ★always
 - **s10** `choice`  She's ___ late.（从不）
     - 选项: ★never / no / not ever be / don't
-- **s10** `choice`  I run ___ morning.
-    - 选项: all / ★every / most / very
-- **s10** `choice`  频度副词在实义动词的：
-    - 选项: ★前面 / 句尾 / 句首必须 / 后面
-- **s10** `transform`  I get up at six.（加"通常"）
-    - 答案: I usually get up at six.
-- **s10** `transform`  You are early.（加"总是"）
-    - 答案: You are always early.
-- **s10** `transform`  I drink soda.（改为"从不"）
-    - 答案: I never drink soda.
+- **s10** `choice`  She makes toast ___ morning.
+    - 选项: all / most / very / ★every
 - **s10** `choice`  She ___ gets up early.（通常）
     - 选项: never / all / ★usually / very
-- **s10** `choice`  They watch a movie every ___.
-    - 选项: week on / ★Saturday / day at / Saturdays on
-- **s10** `transform`  He is late.（加"总是"）
-    - 答案: He is always late.
+- **s10** `choice`  选出 secret 的意思
+    - 选项: 早的 / 早餐 / 烤面包片 / ★秘诀
+- **s10** `choice`  选出 usually 的意思
+    - 选项: ★通常 / 从不 / 总是 / 有时
+- **s10** `choice`  朋友夸「你总是来这么早!」并问你秘诀,你说:
+    - 选项: I never get up. / You always say that. / Fair. / ★I usually get up at six.
+- **s10** `choice`  有人问「Do you eat breakfast?」你只是偶尔吃,你回答:
+    - 选项: Never mind. / ★Sometimes. / Always. / Every morning.
+- **s10** `choice`  (读课文) Ken 通常几点起床?
+    - 选项: 八点 / 九点 / ★六点 / 七点
+- **s10** `choice`  (读课文) Lauren 早上通常做什么?
+    - 选项: 吃鸡蛋和烤面包 / ★躺床上刷手机 / 煮咖啡 / 出门跑步
+- **s10** `choice`  (读课文) Ken 早饭吃什么?
+    - 选项: ★鸡蛋和烤面包片 / 一杯咖啡 / 披萨 / 什么都不吃
+- **s10** `choice`  🔊 听录音回答:Ken 通常几点起床?
+    - 选项: 七点 / 九点 / ★六点 / 五点
+- **s10** `choice`  🔊 听录音回答:Lauren 会六点起床吗?
+    - 选项: 总是 / 通常 / 有时 / ★从不
 
 ## am1_l27
 
@@ -273,22 +281,28 @@
     - 选项: is work / working / ★works / work
 - **s10** `choice`  He ___ two dogs.
     - 选项: ★has / haves / is have / have
-- **s10** `choice`  ___ he like animals? — Yes, he does.
-    - 选项: Is / Do / ★Does / Can
-- **s10** `choice`  She ___ play music at night.
-    - 选项: isn't / ★doesn't / not / don't
-- **s10** `transform`  I work at a hospital.（主语改 He）
-    - 答案: He works at a hospital.
-- **s10** `transform`  He cooks pasta.（变一般疑问句）
-    - 答案: Does he cook pasta?
-- **s10** `transform`  She washes the dishes.（变否定句）
-    - 答案: She doesn't wash the dishes.
-- **s10** `choice`  My roommate ___ dinner every night.
-    - 选项: is cook / cook / cooking / ★cooks
-- **s10** `choice`  ___ she work at a hospital? — Yes, she does.
-    - 选项: Do / Can / ★Does / Is
-- **s10** `transform`  He goes to bed at ten.（变否定句）
-    - 答案: He doesn't go to bed at ten.
+- **s10** `choice`  ___ he wash the dishes? — No, he doesn't.
+    - 选项: Do / Is / ★Does / Can
+- **s10** `choice`  He ___ cook on weekends.
+    - 选项: ★doesn't / don't / isn't / not
+- **s10** `choice`  选出 roommate 的意思
+    - 选项: 意面 / ★室友 / 猫 / 星期五
+- **s10** `choice`  选出 wash the dishes 的意思
+    - 选项: 做饭 / ★洗碗 / 听起来 / 上床睡觉
+- **s10** `choice`  朋友问「Does he like animals?」他爱得不行(还养两只猫),你替他回答:
+    - 选项: Lucky you! / No, he doesn't. / ★He loves them! / Nobody's perfect.
+- **s10** `choice`  听说室友每周五都做超好吃的意面,你羡慕地说:
+    - 选项: Nobody's perfect. / No problem. / Does he cook? / ★Lucky you!
+- **s10** `choice`  (读课文) Marco 在哪里工作?
+    - 选项: ★动物医院 / 咖啡店 / 中学 / 披萨店
+- **s10** `choice`  (读课文) Marco 有什么小毛病?
+    - 选项: 晚上放音乐 / 睡得很晚 / ★从不洗碗 / 不会做饭
+- **s10** `choice`  (读课文) Marco 几点睡觉?
+    - 选项: 八点 / ★十点 / 九点 / 十二点
+- **s10** `choice`  🔊 听录音回答:Marco 养了什么宠物?
+    - 选项: 一只狗 / 两只狗 / 一只猫 / ★两只猫
+- **s10** `choice`  🔊 听录音回答:Marco 什么时候做意面?
+    - 选项: ★每周五 / 只有周末 / 每天 / 从不做
 
 ## am1_l28
 
@@ -372,24 +386,28 @@
     - 答案: We eat dinner together at six.
 - **s10** `choice`  She ___ math at school.
     - 选项: teaching / ★teaches / teachs / teach
-- **s10** `choice`  The kids ___ the school bus.
-    - 选项: taking / is take / takes / ★take
-- **s10** `choice`  Jack ___ homework after school.
-    - 选项: dos / ★does / doing / do
+- **s10** `choice`  Mr. Carter ___ TV at night.
+    - 选项: watch / watching / is watch / ★watches
+- **s10** `choice`  The students ___ homework after dinner.
+    - 选项: does / ★do / doing / dos
 - **s10** `choice`  ___ Fridays, they order pizza.
     - 选项: In / At / Under / ★On
-- **s10** `transform`  He plays soccer.（主语改 They）
-    - 答案: They play soccer.
-- **s10** `transform`  She gets up at six.（变一般疑问句）
-    - 答案: Does she get up at six?
-- **s10** `transform`  We eat dinner at six.（主语改 The family）
-    - 答案: The family eats dinner at six.
-- **s10** `choice`  They ___ pizza on Fridays.
-    - 选项: ordered / ★order / ordering / orders
-- **s10** `choice`  She makes breakfast ___ the kids.
-    - 选项: on / to / at / ★for
-- **s10** `transform`  He watches TV.（主语改 The kids）
-    - 答案: The kids watch TV.
+- **s10** `choice`  选出 firefighter 的意思
+    - 选项: 足球 / 数学 / ★消防员 / 校车
+- **s10** `choice`  选出 tradition 的意思
+    - 选项: ★传统 / 生活 / 一起 / 桌游
+- **s10** `choice`  放学后有人问 Emma 要不要一起踢球,Emma 放学后本来就踢足球,她说:
+    - 选项: ★Sure! I play soccer after school. / Paper, please. / I work at night. / I teach math.
+- **s10** `choice`  (读课文) Mr. Carter 的职业是什么?
+    - 选项: 老师 / 收银员 / ★消防员 / 司机
+- **s10** `choice`  (读课文) 卡特一家周五的传统是什么?
+    - 选项: ★点披萨 / 踢足球 / 看电影 / 去跑步
+- **s10** `choice`  (读课文) 谁在中学教数学?
+    - 选项: 杰克 / 艾玛 / ★卡特太太 / 卡特先生
+- **s10** `choice`  🔊 听录音,选出这个词的意思
+    - 选项: ★消防员 / 数学 / 足球 / 校车
+- **s10** `choice`  🔊 听录音,选出这个词的意思
+    - 选项: ★一起 / 桌游 / 传统 / 生活
 
 ## am1_l29
 
@@ -403,10 +421,6 @@
     - 答案: He is drinking coffee.
 - **s5** `transform` [gp1] She is running.（改为习惯：每天傍晚跑）
     - 答案: She runs every evening.
-- **s5** `choice` [gp2] "every day" 是___的信号词。
-    - 选项: 现在进行时 / 祈使句 / 将来打算 / ★一般现在时
-- **s5** `choice` [gp2] "right now" 是___的信号词。
-    - 选项: 一般现在时 / 否定祈使 / ★现在进行时 / 量词
 - **s5** `choice` [gp2] This week, I ___ for a race.
     - 选项: ★am training / trains / trained / train
 - **s5** `choice` [gp1] She usually ___ coffee, but today she is drinking tea.
@@ -419,10 +433,6 @@
     - 答案: They are playing soccer.
 - **s5** `transform` [gp1] He is eating chips.（改为习惯：每天吃）
     - 答案: He eats chips every day.
-- **s5** `choice` [gp2] "usually" 是___的信号词。
-    - 选项: ★一般现在时 / 量词 / 现在进行时 / 祈使句
-- **s5** `choice` [gp2] "Look!" 后面常接___。
-    - 选项: 量词 / 一般现在时 / ★现在进行时 / 否定祈使
 - **s5** `choice` [gp2] Right now, they ___ in the park.
     - 选项: ran / ★are running / runs / run
 - **s6** `choice`  5K 路跑的距离是：
@@ -469,26 +479,32 @@
     - 答案: What's going on?
 - **s9** `scenario`  鼓励别人改变要慢慢来
     - 答案: Baby steps!
-- **s10** `choice`  I usually ___ coffee.
-    - 选项: am drink / ★drink / drinking / drinks
-- **s10** `choice`  Right now, she ___ tea.
-    - 选项: drinks / drink / ★is drinking / drinking is
-- **s10** `choice`  "every day" 提示用：
-    - 选项: 现在进行时 / ★一般现在时 / 祈使句 / be going to
-- **s10** `choice`  "right now" 提示用：
-    - 选项: 否定祈使 / 一般现在时 / 名词复数 / ★现在进行时
-- **s10** `transform`  He drinks coffee.（改为"此刻正在喝"）
-    - 答案: He is drinking coffee.
-- **s10** `transform`  She is running.（改为习惯：每天傍晚跑）
-    - 答案: She runs every evening.
-- **s10** `transform`  I usually walk to work.（接"但今天在跑步"续完整句）
-    - 答案: I usually walk to work, but today I'm running.
+- **s10** `choice`  I always ___ breakfast at seven.
+    - 选项: eating / am eat / ★eat / eats
+- **s10** `choice`  Look! The dog ___ in the garden.
+    - 选项: runs / run / is run / ★is running
 - **s10** `choice`  I usually walk, but today I ___ running.
     - 选项: ★am / are / is / be
 - **s10** `choice`  He usually ___ at his desk all day.
     - 选项: sit / ★sits / is sitting / sat
-- **s10** `transform`  She drinks green tea.（改为此刻正在喝）
-    - 答案: She is drinking green tea.
+- **s10** `choice`  选出 race 的意思
+    - 选项: ★比赛（赛跑） / 健康的 / 薯片 / 茶
+- **s10** `choice`  选出 healthy 的意思
+    - 选项: 此刻 / 不同的 / 明天 / ★健康的
+- **s10** `choice`  同事惊讶你今天喝茶(你平常喝咖啡),你解释道:
+    - 选项: I always drink coffee. / What's going on? / ★Today I'm drinking green tea. / I never drink tea.
+- **s10** `choice`  朋友说 ta 正在备战五公里跑,你鼓励地说:
+    - 选项: Baby steps. / Is that all? / ★That's awesome! / Nobody's perfect.
+- **s10** `choice`  (读课文) Molly 这周在忙什么?
+    - 选项: ★备战五公里跑 / 学做饭 / 加班 / 准备考试
+- **s10** `choice`  (读课文) Molly 现在喝的是什么?
+    - 选项: 水 / 橙汁 / ★绿茶 / 咖啡
+- **s10** `choice`  (读课文) Raj 此刻正在做什么?
+    - 选项: 喝茶 / 走路上班 / 跑步 / ★吃薯片
+- **s10** `choice`  🔊 听录音回答:Molly 平常一整天在做什么?
+    - 选项: 喝茶 / ★坐在工位上 / 开会 / 出去跑步
+- **s10** `choice`  🔊 听录音回答:Molly 这周在做什么?
+    - 选项: 学做饭 / ★备战五公里跑 / 加班 / 休假
 
 ## am1_l30
 
@@ -517,7 +533,7 @@
 - **s5** `transform` [gp1] a bottle + orange juice 组量词短语
     - 答案: a bottle of orange juice
 - **s5** `choice` [gp2] 收银员报价"一共十二块五"：
-    - 选项: Twelve dollar fifty is. / It's twelve and fifty. / Money twelve fifty. / ★That's twelve fifty.
+    - 选项: Twelve and fifty cents. / ★That's twelve fifty. / Money twelve fifty. / Fifty twelve dollars.
 - **s5** `choice` [gp2] Anything else? — ___（就这些了）
     - 选项: ★That's it, thanks. / Paper, please. / I'm in! / Here you go!
 - **s5** `choice` [gp2] Paper or plastic? — ___（要纸袋）
@@ -525,7 +541,7 @@
 - **s5** `choice` [gp2] "Is that all?" 的意思是：
     - 选项: 全都是吗？ / ★就这些吗？ / 都结束了吗？ / 那是全部的钱吗？
 - **s6** `choice`  美国超市结账时店员的经典一问：
-    - 选项: Hot or iced? / ★Paper or plastic? / Cash or card only? / Big or small?
+    - 选项: Big or small? / ★Paper or plastic? / Hot or iced? / Cash or card?
 - **s6** `choice`  店员问 "Are you finding everything okay?" 是在：
     - 选项: ★询问是否找到所需商品 / 催你快点结账 / 问你身体好不好 / 质问你拿了什么
 - **s6** `choice`  cereal 是美国人早餐常吃的：
@@ -560,8 +576,8 @@
     - 选项: ★A cashier / A librarian / A barista / A firefighter
 - **s8** `choice`  What does Grace add at the end?
     - 选项: Juice / Apples / Cereal / ★Bananas
-- **s8** `choice`  Paper or plastic
-    - 选项: ★Paper / Both / which does Grace want? — / Neither / Plastic
+- **s8** `choice`  Paper or plastic—which does Grace want?
+    - 选项: ★Paper / Both / Neither / Plastic
 - **s9** `scenario`  收银员问"就这些吗？"，你确认
     - 答案: That's it, thanks. / Yes, that's all.
 - **s9** `scenario`  说你要一瓶橙汁
@@ -570,21 +586,25 @@
     - 答案: Paper, please.
 - **s10** `choice`  a ___ of water
     - 选项: slice / loaf / pair / ★bottle
-- **s10** `choice`  two ___ of juice
-    - 选项: bottled / ★bottles / a bottle / bottle
-- **s10** `choice`  收银员问"还要别的吗"：
-    - 选项: What's up? / Which one? / How are you? / ★Anything else?
-- **s10** `choice`  收银员说 "That's twelve fifty."，意思是：
-    - 选项: 现在 12 点 50 分 / ★一共 12.50 美元 / 找零 12.5 元 / 会员号 1250
-- **s10** `transform`  I want a bottle of juice.（改为两瓶）
-    - 答案: I want two bottles of juice.
-- **s10** `transform`  Is that all?（用"就这些了"回答）
-    - 答案: That's it.
-- **s10** `transform`  a bag + apples 组量词短语
-    - 答案: a bag of apples
+- **s10** `choice`  two ___ of cereal
+    - 选项: ★boxes / box / boxed / a box
 - **s10** `choice`  a ___ of juice
     - 选项: ★bottle / pair / slice / bag one
-- **s10** `choice`  收银员问"纸袋还是塑料袋"：
-    - 选项: Hot or iced? / Big or small? / ★Paper or plastic? / Cash or card?
-- **s10** `transform`  I want a box of cereal.（改为两盒）
-    - 答案: I want two boxes of cereal.
+- **s10** `choice`  选出 cashier 的意思
+    - 选项: 麦片 / 香蕉 / 苹果 / ★收银员
+- **s10** `choice`  选出 cereal 的意思
+    - 选项: 塑料袋 / 纸袋 / ★谷物麦片 / 一切
+- **s10** `choice`  收银员问「Anything else?」你不再需要别的了,你回答:
+    - 选项: ★That's it, thanks. / Paper, please. / Is that all? / Here you go.
+- **s10** `choice`  收银员问「Paper or plastic?」你想要纸袋,你说:
+    - 选项: ★Paper, please. / Anything else? / That's it. / No problem.
+- **s10** `choice`  (读课文) Grace 结账时临时又加了什么?
+    - 选项: 麦片 / 苹果 / ★香蕉 / 橙汁
+- **s10** `choice`  (读课文) Grace 一共要付多少钱?
+    - 选项: ★十二块五 / 十五块 / 十块五 / 二十块
+- **s10** `choice`  (读课文) Grace 最后选了哪种袋子?
+    - 选项: 不要袋子 / 布袋 / 塑料袋 / ★纸袋
+- **s10** `choice`  🔊 听录音回答:顾客临时又加买了什么?
+    - 选项: 橙汁 / 麦片 / 苹果 / ★香蕉
+- **s10** `choice`  🔊 听录音回答:顾客买了几瓶橙汁?
+    - 选项: 一瓶 / 一盒 / ★两瓶 / 三瓶

@@ -1,6 +1,6 @@
 # 单元12 题库全量导出（语义复审用）
 
-> 共 289 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+> 共 298 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
 
 
 ## am1_l67
@@ -15,16 +15,12 @@
     - 答案: Tom said that he was happy.
 - **s5** `choice` [gp2] 原话 "I want pizza." 转述为：He said ___ wanted pizza.
     - 选项: ★he / we / you / I
-- **s5** `choice` [gp2] 转述过去说的话，时态常：
-    - 选项: 必须不变 / ★后移（is→was） / 前移 / 一律变将来
 - **s5** `transform` [gp2] "Twenty years is enough."（他说的，转述）
     - 答案: He said that twenty years was enough.
 - **s5** `transform` [gp2] She says she wants coffee.（改为过去转述）
     - 答案: She said she wanted coffee.
 - **s5** `choice` [gp1] She ___ that the game was great.
     - 选项: ★said / telling / spoke / says yesterday
-- **s5** `choice` [gp1] said 后接从句时，that 可以___。
-    - 选项: 变成 who / 放句尾 / 大写 / ★省略
 - **s5** `choice` [gp1] The coach ___ Marcus was the hardest worker.
     - 选项: ★said / spoke / talked / told at
 - **s5** `transform` [gp1] "Twenty years is enough."（He 转述，said 开头，注意 is→was）
@@ -42,7 +38,7 @@
 - **s6** `choice`  "End of an era." 用于感叹：
     - 选项: ★一个时代结束了 / 新年到了 / 时代广场关门 / 新纪元开始
 - **s6** `choice`  field trip 是：
-    - 选项: 实地参观 / 野外求生 / ★集体出游/实地参观 / 集体出游 / 球场跑圈 / 田间劳动
+    - 选项: ★集体出游/实地参观 / 野外求生 / 球场跑圈 / 田间劳动
 - **s6** `choice`  听到暖心的事说：
     - 选项: How candy! / ★That's sweet. / That's sugar! / Sweet me!
 - **s7** `cloze`  〔KEN: Marcus Cole is ___1___! KEN: He ___2___ that twenty yea〕 第 1 空
@@ -81,26 +77,32 @@
     - 答案: End of an era.
 - **s9** `scenario`  听到暖心的事，说"真贴心"
     - 答案: That's sweet.
-- **s10** `choice`  He ___ that he was tired.
-    - 选项: saying / telled / ★said / say
-- **s10** `choice`  She said ___ she might come.
-    - 选项: ★that / who / what / if it
-- **s10** `choice`  say 的过去式：
+- **s10** `choice`  Marco ___ that the pizza was cold.
     - 选项: saying / ★said / says / sayed
-- **s10** `choice`  原话 "I want pizza." 转述为：He said ___ wanted pizza.
-    - 选项: I / you / we / ★he
-- **s10** `transform`  "I am happy."（Tom 说的，转述）
-    - 答案: Tom said that he was happy.
-- **s10** `transform`  "Twenty years is enough."（他说的，转述）
-    - 答案: He said that twenty years was enough.
-- **s10** `transform`  She says she wants coffee.（改为过去转述）
-    - 答案: She said she wanted coffee.
-- **s10** `choice`  The coach ___ that Marcus never quits.
-    - 选项: talked at / told / spoke / ★said
+- **s10** `choice`  He said ___ he wanted more time.
+    - 选项: what / who / which / ★that
+- **s10** `choice`  原话 "The soup is hot." 转述：She said the soup ___ hot.
+    - 选项: is / are / ★was / be
 - **s10** `choice`  She said she ___ open a bakery.（可能）
     - 选项: ★might / must yes / can't / will not
-- **s10** `transform`  "The team is great."（He 转述，注意 is→was）
-    - 答案: He said that the team was great.
+- **s10** `choice`  选出 retire 的意思
+    - 选项: ★退役；退休 / 队伍 / 教练 / 放弃
+- **s10** `choice`  选出 quarterback 的意思
+    - 选项: 努力干活的人 / 教练 / 队伍 / ★四分卫
+- **s10** `choice`  朋友告诉你一条大新闻，你很惊讶想追问细节，你说：
+    - 选项: Here you go. / ★No way! What did he say? / Yes, I am fine, thanks. / Nice to meet you.
+- **s10** `choice`  球星宣布退役，你感慨一个时代结束了，你说：
+    - 选项: What else? / That's sweet. / Book it. / ★End of an era.
+- **s10** `choice`  （读课文）Marcus Cole 是做什么的？
+    - 选项: 教练 / 披萨店老板 / ★四分卫（橄榄球运动员） / 记者
+- **s10** `choice`  （读课文）Marcus 为什么要退役？
+    - 选项: ★他想多陪陪孩子 / 他要出国 / 他受伤了 / 他被球队开除了
+- **s10** `choice`  （读课文）Marcus 退役后可能想做什么？
+    - 选项: 当教练 / ★开一家披萨店 / 搬去别的城市 / 回学校读书
+- **s10** `choice`  🔊 听录音。谁要退役了？
+    - 选项: ★Marcus Cole / Ken / Lauren / 教练
+- **s10** `choice`  🔊 听录音。Marcus 给出的退役理由是什么？
+    - 选项: 他生病了 / 他缺钱 / ★二十年够了 / 他不喜欢队友
 
 ## am1_l68
 
@@ -114,22 +116,16 @@
     - 答案: Carlos told me that the party is at the trail.
 - **s5** `choice` [gp2] He ___ that he was tired.（不接人）
     - 选项: told / spoke me / ★said / talked me
-- **s5** `choice` [gp2] tell 后面必须接：
-    - 选项: that 直接 / ★人 / 形容词 / 动词原形
 - **s5** `transform` [gp2] He said me that he was busy.（改正错误）
     - 答案: He told me that he was busy.
 - **s5** `transform` [gp2] She told that she was happy.（改正错误：补上人）
     - 答案: She told me that she was happy.
 - **s5** `choice` [gp1] Carlos ___ me that the party is moving.
     - 选项: talked / said / spoke / ★told
-- **s5** `choice` [gp1] tell 后面必须接___。
-    - 选项: 形容词 / that 直接 / ★人（宾语） / 介词 to
 - **s5** `choice` [gp1] Who ___ him the news?
     - 选项: talked / spoke / said / ★told
 - **s5** `transform` [gp1] The party is moving.（Carlos 告诉了我，用 told me that 转述）
     - 答案: Carlos told me that the party is moving.
-- **s5** `choice` [gp2] "She said me the news." 错在哪：
-    - 选项: 拼写错 / 没有错 / ★say 不直接接人 / 时态错
 - **s5** `choice` [gp2] He ___ everybody that he will bring pizza.
     - 选项: ★told / spoke / talked to that / said
 - **s5** `choice` [gp2] 下列哪句正确：
@@ -141,7 +137,7 @@
 - **s6** `choice`  "Take my money!" 表达的是：
     - 选项: 我被抢劫了 / 借钱给对方 / ★太想买了，快收下我的钱 / 交罚款
 - **s6** `choice`  "That's huge." 的意思是：
-    - 选项: 这是大事 / 太胖了 / ★这是大事/太重大了 / 太重大了 / 房子很大 / 那东西真大
+    - 选项: ★这是大事/太重大了 / 太胖了 / 房子很大 / 那东西真大
 - **s6** `choice`  书店里的 coffee corner 是：
     - 选项: 角落禁区 / 咖啡味书签区 / 员工休息室 / ★店内咖啡角
 - **s7** `cloze`  〔PRIYA: Ruth ___1___ me that the bookstore is moving! MEGAN: 〕 第 1 空
@@ -180,26 +176,32 @@
     - 答案: Who told you?
 - **s9** `scenario`  听到"书店+咖啡"，表示"收下我的钱"
     - 答案: Take my money!
-- **s10** `choice`  She ___ me that the party is Saturday.
-    - 选项: spoke / talked / ★told / said
-- **s10** `choice`  He ___ that he was tired.（不接人）
-    - 选项: told / talked me / spoke me / ★said
-- **s10** `choice`  tell 后面必须接：
-    - 选项: ★人 / that 直接 / 动词原形 / 形容词
-- **s10** `choice`  tell 的过去式：
-    - 选项: telled / telling / tells / ★told
-- **s10** `transform`  "The party is at the trail."（Carlos 对我说的，用 told 转述）
-    - 答案: Carlos told me that the party is at the trail.
-- **s10** `transform`  He said me that he was busy.（改正错误）
-    - 答案: He told me that he was busy.
-- **s10** `transform`  She told that she was happy.（改正错误：补上人）
-    - 答案: She told me that she was happy.
-- **s10** `choice`  She ___ me the big news.
-    - 选项: said / spoke / ★told / talked
-- **s10** `choice`  Who ___ you about the party?
-    - 选项: ★told / spoke at / talked / said
-- **s10** `transform`  "The bookstore is moving."（Ruth 告诉了我，用 told me that 转述）
-    - 答案: Ruth told me that the bookstore is moving.
+- **s10** `choice`  Jonas ___ me that the store was closed.
+    - 选项: said / ★told / spoke / talked
+- **s10** `choice`  Zoe ___ that the tacos were amazing.（不接人）
+    - 选项: talked / told / ★said / spoke
+- **s10** `choice`  Please ___ him that I called.（后面接人 him）
+    - 选项: ★tell / say / said / say to
+- **s10** `choice`  Nate ___ everybody the big news.
+    - 选项: telled / said / talked / ★told
+- **s10** `choice`  选出 coffee corner 的意思
+    - 选项: 小镇 / 河 / ★咖啡角 / 一切
+- **s10** `choice`  选出 town 的意思
+    - 选项: 河 / 咖啡角 / ★小镇 / 关于
+- **s10** `choice`  朋友说有大新闻，你想听全部细节，你说：
+    - 选项: See you at the trail. / That's huge. / ★Tell me everything. / Take my money.
+- **s10** `choice`  你想知道这个消息是谁传出来的，你问：
+    - 选项: Tell me everything. / Take my money. / ★Who told you? / Did you hear?
+- **s10** `choice`  （读课文）书店要搬到哪里？
+    - 选项: 河对岸 / ★主街（Main Street） / 咖啡角 / 新步道
+- **s10** `choice`  （读课文）是谁把书店搬迁的消息告诉了 Priya？
+    - 选项: 卡洛斯 / 梅根 / 乔纳斯 / ★露丝（Ruth）
+- **s10** `choice`  （读课文）乔纳斯说他会带什么去派对？
+    - 选项: 柠檬水 / ★从托尼家带披萨 / 书 / 咖啡
+- **s10** `choice`  🔊 听录音。搬到主街后的书店会新增什么？
+    - 选项: 电影院 / 游乐场 / 停车场 / ★咖啡角
+- **s10** `choice`  🔊 听录音。这个消息是谁告诉 Priya 的？
+    - 选项: 卡洛斯 / ★露丝本人 / 乔纳斯 / 梅根
 
 ## am1_l69
 
@@ -213,16 +215,12 @@
     - 答案: If it rains, we will move the picnic.
 - **s5** `choice` [gp2] If I ___ the game, I'll buy pizza.
     - 选项: wins I / will win / won will / ★win
-- **s5** `choice` [gp2] if 从句中用：
-    - 选项: be going to 必须 / will / ★一般现在时 / 过去完成
 - **s5** `choice` [gp2] If she ___ time, she'll come.
     - 选项: will have / have / had will / ★has
 - **s5** `transform` [gp2] If I will win, I'll quit my job.（改正错误）
     - 答案: If I win, I'll quit my job.
 - **s5** `choice` [gp2] If she ___ late, we'll wait.
     - 选项: ★is / was / be / will be
-- **s5** `choice` [gp2] if 从句用___时。
-    - 选项: 进行必须 / ★一般现在 / 将来 will / 过去
 - **s5** `choice` [gp2] If my sister ___, I'll buy her one too.
     - 选项: will ask / asked / ask / ★asks
 - **s5** `transform` [gp2] It rains. We stay home.（用 if 合并："要是下雨我们就待在家"）
@@ -238,7 +236,7 @@
 - **s6** `choice`  彩票的 jackpot 指：
     - 选项: 幸运号码 / 彩票机 / 投注站 / ★头奖奖池
 - **s6** `choice`  fifty-fifty 的意思是：
-    - 选项: 半价促销 / 对半 / ★五五分成/对半 / 五十美元 / 五十岁 / 五五分成
+    - 选项: ★五五分成/对半 / 半价促销 / 五十美元 / 五十岁
 - **s6** `choice`  以 "Real talk:" 开头表示：
     - 选项: ★说正经的 / 电话实录 / 真人对话 / 大声说话
 - **s6** `choice`  "Win or lose" 的意思是：
@@ -279,26 +277,32 @@
     - 答案: We'll split it fifty-fifty.
 - **s9** `scenario`  开启正经话题"说真的"
     - 答案: Real talk: ...
-- **s10** `choice`  If it rains, we ___ stay home.
-    - 选项: ★will / do will / did / were
+- **s10** `choice`  If we win, we ___ buy a house.
+    - 选项: did / were / ★will / do will
 - **s10** `choice`  If I ___ the game, I'll buy pizza for everybody.
     - 选项: will win / ★win / won will / wins I
-- **s10** `choice`  if 从句中用：
-    - 选项: 进行将来 / 过去完成 / will / ★一般现在时
-- **s10** `choice`  ___ will you do if you win?
-    - 选项: ★What / Will / Do / If
-- **s10** `transform`  I win. I buy a beach house.（用 if + will 合成）
-    - 答案: If I win, I will buy a beach house.
-- **s10** `transform`  It rains. We move the picnic.（用 if + will 合成）
-    - 答案: If it rains, we will move the picnic.
-- **s10** `transform`  If I will win, I'll quit my job.（改正错误）
-    - 答案: If I win, I'll quit my job.
+- **s10** `choice`  If he ___ the race, he'll call us.
+    - 选项: will win / ★wins / won / winning
 - **s10** `choice`  If it ___ tomorrow, we'll stay home.
     - 选项: rained / will rain / rain / ★rains
-- **s10** `choice`  If I win, I ___ buy a beach house.
-    - 选项: ★will / was / am / did
-- **s10** `transform`  She asks. I buy her one.（用 if + will 合并成一句）
-    - 答案: If she asks, I will buy her one.
+- **s10** `choice`  选出 split 的意思
+    - 选项: 大方的 / 旅行 / ★平分 / 礼貌地
+- **s10** `choice`  选出 generous 的意思
+    - 选项: 平分 / 彩票 / ★大方的 / 头奖
+- **s10** `choice`  朋友提议买彩票、中奖就五五分，你同意，你说：
+    - 选项: ★Deal. / No way. / Obviously not. / Real talk.
+- **s10** `choice`  朋友问你中奖后打算做什么，你想说“要是我中了，就去旅行一整年”，你说：
+    - 选项: If I will win, I travel for a year. / ★If I win, I'll travel for a whole year. / I win, I'll travel a year. / If I win, I traveled for a year.
+- **s10** `choice`  （读课文）如果 Zoe 中奖，她说自己首先要做什么？
+    - 选项: 请大家吃塔可 / 买海景房 / 去日本 / ★（礼貌地）辞职
+- **s10** `choice`  （读课文）如果 Ryan 中奖，他想做什么？
+    - 选项: ★旅行一整年 / 买海景房 / 辞职 / 给妹妹买房
+- **s10** `choice`  （读课文）如果两人都没中奖，他们今晚还会怎样？
+    - 选项: ★照样去吃塔可 / 去旅行 / 待在家里 / 再买彩票
+- **s10** `choice`  🔊 听录音。如果中奖，两人打算怎么分奖金？
+    - 选项: ★五五平分 / Zoe 全拿 / 捐出去 / Ryan 全拿
+- **s10** `choice`  🔊 听录音。Zoe 说中奖后第一件事要做什么？
+    - 选项: 买披萨 / 买车 / 去旅行 / ★辞职
 
 ## am1_l70
 
@@ -378,26 +382,32 @@
     - 答案: I'd like a large pizza, please.
 - **s9** `scenario`  决定就这么订了
     - 答案: Book it!
-- **s10** `choice`  Sorry, you have the ___ number.
-    - 选项: lost / bad / ★wrong / left
-- **s10** `choice`  ___ like a large pizza, please.
-    - 选项: ★I'd / I was / I'm / I'll be
-- **s10** `choice`  I'll tell him ___ you're coming.
-    - 选项: who / ★that / if / what
-- **s10** `choice`  two years ___（两年前）
-    - 选项: since / last / before at / ★ago
-- **s10** `transform`  I want a large pizza.（改为更礼貌的 I'd like）
-    - 答案: I'd like a large pizza.
-- **s10** `transform`  Tell Dr. Kim: "She is coming."（用 tell...that 合成转述）
-    - 答案: Tell Dr. Kim that she is coming.
-- **s10** `transform`  You called the wrong number.（道歉场景改第一人称：我打错了）
-    - 答案: I called the wrong number.
-- **s10** `choice`  I'd ___ a small lemonade, please.
-    - 选项: ★like / liking / likes / want
+- **s10** `choice`  ___ like a small coffee, please.
+    - 选项: I'm / I was / ★I'd / I'll be
+- **s10** `choice`  Please tell her ___ I called.
+    - 选项: who / if / what / ★that
+- **s10** `choice`  five minutes ___（五分钟前）
+    - 选项: ★ago / since / before at / last
 - **s10** `choice`  ___ I ask a quick question?
     - 选项: Was / ★May / Must / Did
-- **s10** `transform`  I want a large pizza.（改为礼貌的 I'd like）
-    - 答案: I'd like a large pizza.
+- **s10** `choice`  选出 hilarious 的意思
+    - 选项: ★爆笑的 / 打错电话 / 洗牙 / 空档
+- **s10** `choice`  选出 wrong number 的意思
+    - 选项: 空档 / ★打错电话 / 洗牙 / 牙齿
+- **s10** `choice`  你在店里点餐，想礼貌地要一份大披萨，你说：
+    - 选项: Give me pizza now. / ★I'd like a large pizza. / I like pizza large me. / I'm a large pizza.
+- **s10** `choice`  你意识到自己拨错了号码，想道歉，你说：
+    - 选项: May I ask a question? / Best wrong number ever. / ★Oh no. I'm so sorry! Wrong number! / Book it.
+- **s10** `choice`  （读课文）Bella 本想打电话点披萨，却拨到了哪里？
+    - 选项: ★一家牙科诊所 / 银行 / 托尼披萨店 / 学校
+- **s10** `choice`  （读课文）Bella 上一次洗牙是什么时候？
+    - 选项: 上周 / ★两年前 / 从没洗过 / 昨天
+- **s10** `choice`  （读课文）通话最后 Gloria 为 Bella 安排了什么？
+    - 选项: ★周二看牙的预约 / 送一份披萨 / 退款 / 换一个电话号码
+- **s10** `choice`  🔊 听录音。打电话的人本来想做什么？
+    - 选项: ★点一份披萨 / 投诉 / 找金医生 / 预约洗牙
+- **s10** `choice`  🔊 听录音。她实际上拨通了哪里？
+    - 选项: 披萨店 / ★一家牙科诊所 / 银行 / 学校
 
 ## am1_l71
 
@@ -405,8 +415,6 @@
     - 选项: was / have / ★had / did
 - **s5** `choice` [gp1] fly 的过去分词：
     - 选项: flew / flying / flies / ★flown
-- **s5** `choice` [gp1] 过去完成时表示：
-    - 选项: 现在完成 / ★过去的过去 / 将来打算 / 正在进行
 - **s5** `transform` [gp1] I never flew before that day.（用 had 改写）
     - 答案: I had never flown before that day.
 - **s5** `transform` [gp1] She visited five countries before she was thirty.（把 visited 改为过去完成）
@@ -419,8 +427,6 @@
     - 答案: By the time I came home, the party had already started.
 - **s5** `choice` [gp1] Before 2020, she had never ___ to Texas.
     - 选项: being / was / be / ★been
-- **s5** `choice` [gp1] 过去完成时构成：
-    - 选项: was + -ing / ★had + 过去分词 / did + 原形 / have + 过去式
 - **s5** `choice` [gp1] He ___ never flown before that day.
     - 选项: did / was / have / ★had
 - **s5** `transform` [gp1] She never flies. + before her fortieth birthday（改为过去完成句）
@@ -477,26 +483,32 @@
     - 答案: Here we go!
 - **s9** `scenario`  形容对方说走就走
     - 答案: Just like that.
-- **s10** `choice`  Before 2020, I ___ never been to Texas.
+- **s10** `choice`  Before last summer, he ___ never been to Miami.
     - 选项: was / ★had / did / have
-- **s10** `choice`  By the time I arrived, the movie ___ started.
-    - 选项: will / has / is / ★had
-- **s10** `choice`  fly 的过去分词：
-    - 选项: flying / flew / ★flown / flies
-- **s10** `choice`  过去完成时表示：
-    - 选项: 正在进行 / ★过去的过去 / 现在完成 / 将来打算
-- **s10** `transform`  I never flew before that day.（用 had 改写）
-    - 答案: I had never flown before that day.
-- **s10** `transform`  She visited five countries before she was thirty.（把 visited 改为过去完成）
-    - 答案: She had visited five countries before she was thirty.
-- **s10** `transform`  When I came home, the party already started.（用 By the time + had 合成）
-    - 答案: By the time I came home, the party had already started.
+- **s10** `choice`  By the time I got there, the show ___ started.
+    - 选项: ★had / will / has / is
+- **s10** `choice`  see 的过去分词：
+    - 选项: saw / seeing / ★seen / seed
 - **s10** `choice`  Before that day, he had never ___ a plane ticket.
     - 选项: buys / buying / buy / ★bought
-- **s10** `choice`  She ___ never been to Paris before 2019.
-    - 选项: was / ★had / has yesterday / did
-- **s10** `transform`  He never flies. + before his trip（改为过去完成句）
-    - 答案: He had never flown before his trip.
+- **s10** `choice`  选出 obvious 的意思
+    - 选项: ★明显的 / 第四十 / 令人害怕的 / 前往……的
+- **s10** `choice`  选出 scary 的意思
+    - 选项: 第四十 / 梦想生活 / 明显的 / ★令人害怕的
+- **s10** `choice`  有人问你要去哪儿，你要去上大学、明天报到，你说：
+    - 选项: ★Westfield College! Move-in day is tomorrow. / Wrong number! / Two years ago. / I'd like a large pizza.
+- **s10** `choice`  同行的旅客第一次坐飞机很紧张，你想鼓励她，你说：
+    - 选项: That's hilarious. / Take my money. / Book it. / ★Don't be nervous. Here we go!
+- **s10** `choice`  （读课文）Hailey 这趟飞行是要去哪里？
+    - 选项: 机场旁的小镇 / 巴黎 / ★韦斯特菲尔德学院 / 日本
+- **s10** `choice`  （读课文）Dorothy 第一次坐飞机大约是在什么时候？
+    - 选项: 二十岁时 / 她从没坐过飞机 / 上大学时 / ★四十岁生日之后
+- **s10** `choice`  （读课文）等 Dorothy 回到家时，她已经去过多少个国家？
+    - 选项: 三个 / ★九个 / 一个 / 四十个
+- **s10** `choice`  🔊 听录音。Dorothy 四十岁生日之前从没做过什么？
+    - 选项: ★坐飞机 / 上大学 / 开车 / 搬家
+- **s10** `choice`  🔊 听录音。Dorothy 后来买了一张去哪里的机票？
+    - 选项: ★巴黎 / 纽约 / 日本 / 意大利
 
 ## am1_l72
 
@@ -561,7 +573,7 @@
 - **s7** `cloze`  〔Victor arrived ___, of course. "My car didn't start," he tol〕 第 9 空
     - 选项: last / ★late / later / lately
 - **s7** `cloze`  〔Kyle and Andre told the raccoon story again, and it got ___ 〕 第 10 空
-    - 选项: more fun much / funny / funniest / ★funnier
+    - 选项: ★funnier / funniest / funny / most fun
 - **s7** `cloze`  〔Hailey, home from college, took ___ of everything.〕 第 11 空
     - 选项: pianos / potions / ★photos / photo
 - **s8** `choice`  What did Maplewood open?
@@ -578,23 +590,29 @@
     - 答案: If the weather stays nice, we'll do this every month.
 - **s9** `scenario`  感叹小镇从没这么美过
     - 答案: Maplewood had never looked better.
-- **s10** `choice`  Everybody ___ lived in town came.
-    - 选项: what / which / ★who / it
-- **s10** `choice`  They ___ planned the day for months before the party.
-    - 选项: will / are / have now / ★had
+- **s10** `choice`  The man ___ sold the house is Mr. Carter.
+    - 选项: which / ★who / what / it
+- **s10** `choice`  By midnight, they ___ finished the whole cake.
+    - 选项: will / are / ★had / have now
 - **s10** `choice`  That runner ___ be training. She's so fast!
     - 选项: ★must / mustn't / may not / can't
 - **s10** `choice`  If the weather ___ nice, we'll come back.
     - 选项: will stay / ★stays / stayed will / staying
-- **s10** `transform`  He said to everybody: "My car didn't start."（用 told 转述）
-    - 答案: He told everybody that his car didn't start.
-- **s10** `transform`  The town never looked better before that day.（用 had 改写）
-    - 答案: The town had never looked better before that day.
-- **s10** `transform`  She is a runner. She has run three 5Ks.（用 who 合成）
-    - 答案: She is a runner who has run three 5Ks.
-- **s10** `choice`  The man ___ brought pizza is Jonas.
-    - 选项: which / it / ★who / what
-- **s10** `choice`  If the weather ___ nice, we'll have a picnic.
-    - 选项: staying / ★stays / will stay / stay
-- **s10** `transform`  She never sees the whole town in one place.（改为过去完成句）
-    - 答案: She had never seen the whole town in one place.
+- **s10** `choice`  选出 runner 的意思
+    - 选项: 一如既往 / 河滨步道 / ★跑步的人 / 感到意外的
+- **s10** `choice`  选出 surprised 的意思
+    - 选项: 保持 / 河滨步道 / ★感到意外的 / 跑步的人
+- **s10** `choice`  你看到一个人跑得飞快，推断他一定在为比赛训练，你说：
+    - 选项: Must that runner training? / ★That runner must be training for a race. / That runner trained a race. / That runner is a race.
+- **s10** `choice`  你提议“如果天气一直好，就每个月都办一次”，你说：
+    - 选项: If weather nice, we do month. / The weather stays nice, we did this. / ★If the weather stays nice, we'll do this every month. / If the weather will stay nice, we do this.
+- **s10** `choice`  （读课文）六月的第一个周六，枫木镇发生了什么？
+    - 选项: 牙科诊所搬迁 / 学校开学 / 书店开业 / ★新的河滨步道正式启用
+- **s10** `choice`  （读课文）是谁从托尼家带来了披萨？
+    - 选项: 卡洛斯 / 凯尔 / ★乔纳斯（Jonas） / 维克多
+- **s10** `choice`  （读课文）Victor 说自己为什么迟到？
+    - 选项: 他睡过头了 / 他忘了时间 / ★他的车没打着火 / 路上堵车
+- **s10** `choice`  🔊 听录音。Rosa 推测那个跑步的人在做什么？
+    - 选项: 在遛狗 / ★在为比赛训练 / 在送披萨 / 在拍照
+- **s10** `choice`  🔊 听录音。那个跑步的人其实是谁？
+    - 选项: ★莫莉（Molly） / 妮娜 / 海莉 / 罗莎

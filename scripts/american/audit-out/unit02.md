@@ -1,6 +1,6 @@
 # 单元2 题库全量导出（语义复审用）
 
-> 共 289 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+> 共 306 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
 
 
 ## am1_l07
@@ -33,14 +33,12 @@
     - 选项: ★green / greens / color green / green color
 - **s5** `choice` [gp2] I want the ___ one.（橙色那件）
     - 选项: orange color one / color it / oranges / ★orange
-- **s5** `choice` [gp2] 颜色词修饰名词时放在名词的：
-    - 选项: ★前面 / 句尾 / 句首 / 后面
 - **s5** `transform` [gp2] The cup is pink.（改说"这是一只粉色杯子"）
     - 答案: This is a pink cup.
 - **s6** `choice`  "颜色"的美式拼写是：
-    - 选项: culor / collor / colour / ★color
+    - 选项: culler / coler / colour / ★color
 - **s6** `choice`  "最喜欢的"的美式拼写是：
-    - 选项: favrite / favorit / ★favorite / favourite
+    - 选项: ★favorite / favrit / favorate / favourite
 - **s6** `choice`  商品打折促销，美国店里标：
     - 选项: of sale / ★on sale / at sale / in the sale
 - **s6** `choice`  美语口语里 a buck 指：
@@ -77,8 +75,8 @@
     - 选项: Orange / Blue / ★Green / Pink
 - **s8** `choice`  What size does Lily want?
     - 选项: An extra large / A large / A small / ★A medium
-- **s8** `choice`  How much is the orange T
-    - 选项: Five dollars / shirt? — / ★Ten dollars / Two dollars / Twenty dollars
+- **s8** `choice`  How much is the orange T-shirt? —
+    - 选项: Five dollars / ★Ten dollars / Two dollars / Twenty dollars
 - **s9** `scenario`  想问朋友新书包的颜色
     - 答案: What color is your new backpack?
 - **s9** `scenario`  店员问 "Can I help you?"，你想买顶帽子（hat）
@@ -91,20 +89,28 @@
     - 选项: be / am / ★is / are
 - **s10** `choice`  It's ___ green T-shirt.
     - 选项: an / two / 不填 / ★a
-- **s10** `choice`  What size is it? — ___
-    - 选项: It's Tyler's. / ★It's a medium. / It's green. / Yes, it is.
-- **s10** `transform`  This T-shirt is green.（变 what color 问句）
-    - 答案: What color is this T-shirt?
-- **s10** `transform`  a shirt + red 组名词短语
-    - 答案: a red shirt
-- **s10** `transform`  It is orange.（变一般疑问句）
-    - 答案: Is it orange?
 - **s10** `choice`  What color ___ your car?
     - 选项: am / do / are / ★is
-- **s10** `choice`  I want a small, not a ___.（中码）
-    - 选项: size one / ★medium / media / middles
-- **s10** `transform`  The bag is pink.（变问颜色的特殊疑问句）
-    - 答案: What color is the bag?
+- **s10** `choice`  选出 cute 的意思
+    - 选项: 受欢迎的 / 打折促销 / ★可爱的、好看的 / 尺码
+- **s10** `choice`  选出"打折促销"对应的英文
+    - 选项: favorite / medium / color / ★on sale
+- **s10** `choice`  你走进服装店买 T 恤，店员问 "Can I help you?" 你说：
+    - 选项: No problem. / What size is it? / ★Yes, please. I'm here for a T-shirt. / It's on sale.
+- **s10** `choice`  店员问 "What color is your favorite?"（你最喜欢绿色），你回答：
+    - 选项: It's a medium. / ★My favorite color is green. / Here you go. / Yes, please.
+- **s10** `choice`  （读课文）那件绿色 T 恤是什么尺码？
+    - 选项: 课文没提到 / 大码 / ★小码（small） / 中码（medium）
+- **s10** `choice`  （读课文）那件橙色 T 恤有什么特别？
+    - 选项: 是小码 / 是绿色的 / ★正在打折，只要十美元 / 不受欢迎
+- **s10** `choice`  （读课文）Lily 最后买了几件 T 恤？
+    - 选项: 只买一件橙色 / ★两件（绿色和橙色） / 只买一件绿色 / 一件都没买
+- **s10** `choice`  🔊 听录音，那件 T 恤是什么颜色？
+    - 选项: 蓝色 / 红色 / 绿色 / ★橙色
+- **s10** `choice`  🔊 听录音,橙色那件为什么划算？
+    - 选项: 买一送一 / ★在打折,只要十美元 / 是新款 / 是小码
+- **s10** `choice`  🔊 听录音,Lily 最后决定要什么？
+    - 选项: 什么都不买 / ★绿色和橙色两件 T 恤 / 只要橙色那件 / 只要绿色那件
 
 ## am1_l08
 
@@ -126,8 +132,6 @@
     - 答案: Are those your gifts?
 - **s5** `choice` [gp1] one chair, two ___
     - 选项: chair / chairses / chaires / ★chairs
-- **s5** `choice` [gp1] box 的复数形式是：
-    - 选项: boxies / boxs / ★boxes / box's
 - **s5** `choice` [gp1] They are ___.（书）
     - 选项: a books / ★books / book / bookes
 - **s5** `transform` [gp1] This is a lamp.（改为复数：这些是台灯）
@@ -136,8 +140,6 @@
     - 选项: Am / Is / Do / ★Are
 - **s5** `choice` [gp3] Are those Emma's chairs? — Yes, ___ are.
     - 选项: those / ★they / them / she
-- **s5** `choice` [gp2] 离说话人远的多个东西用：
-    - 选项: this / that one / these / ★those
 - **s5** `transform` [gp2] That is my chair.（改为复数：那些是我的椅子）
     - 答案: Those are my chairs.
 - **s6** `choice`  "卡车"美语叫：
@@ -147,7 +149,7 @@
 - **s6** `choice`  美国朋友互助搬家后，惯例请大家吃：
     - 选项: cake / soup / turkey / ★pizza
 - **s6** `choice`  特别爱读书的人被称为：
-    - 选项: bookfish / booksnake / ★bookworm / bookbird
+    - 选项: bookstore / bookcase / ★bookworm / bookshelf
 - **s7** `cloze`  〔JAKE: Are ___1___ your boxes? SARA: Yes, ___2___ are. They'r〕 第 1 空
     - 选项: ★these / this / that / it
 - **s7** `cloze`  〔JAKE: Are ___1___ your boxes? SARA: Yes, ___2___ are. They'r〕 第 2 空
@@ -190,18 +192,26 @@
     - 选项: these / it / ★they / those
 - **s10** `choice`  ___ are Emma's chairs.（那些）
     - 选项: This / These / It / ★Those
-- **s10** `transform`  This is a box.（变复数）
-    - 答案: These are boxes.
-- **s10** `transform`  Those are your books.（变一般疑问句）
-    - 答案: Are those your books?
-- **s10** `transform`  That is my lamp.（变复数：那些是我的台灯）
-    - 答案: Those are my lamps.
-- **s10** `choice`  one dollar, ten ___
-    - 选项: dollar / ★dollars / dollar's / dollares
-- **s10** `choice`  These are my books. ___ are heavy.
-    - 选项: Them / These one / It / ★They
-- **s10** `transform`  This lamp is new.（改为复数：这些台灯是新的）
-    - 答案: These lamps are new.
+- **s10** `choice`  选出 heavy 的意思
+    - 选项: ★重的 / 卡车 / 满的 / 小心的
+- **s10** `choice`  选出"书虫；爱读书的人"对应的英文
+    - 选项: lamp / ★bookworm / truck / box
+- **s10** `choice`  Jake 帮你搬家,问 "Are these your boxes?"（都是你的），你回答：
+    - 选项: ★Yes, they are. / No problem. / It's on me. / Those are Emma's.
+- **s10** `choice`  朋友帮你搬完家,你想请他吃披萨表示感谢,你说：
+    - 选项: ★Thanks, Jake. Pizza is on me! / Are those your chairs? / Wow, they're heavy! / Careful—it's new!
+- **s10** `choice`  （读课文）那些箱子里装的是什么？
+    - 选项: 台灯 / ★书 / 衣服 / 餐具
+- **s10** `choice`  （读课文）那些椅子是谁的？
+    - 选项: ★艾玛（Emma）的 / 没人的 / 萨拉（Sara）的 / 杰克（Jake）的
+- **s10** `choice`  （读课文）关于那盏台灯,下面哪项正确？
+    - 选项: 是杰克的,很旧了 / 是艾玛的,很重 / 是店里买的 / ★是萨拉的,而且是新的
+- **s10** `choice`  🔊 听录音,那些椅子是谁的？
+    - 选项: ★艾玛的 / 没说 / 萨拉的 / 杰克的
+- **s10** `choice`  🔊 听录音,那盏台灯是谁的？
+    - 选项: ★萨拉的 / 杰克的 / 没人的 / 艾玛的
+- **s10** `choice`  🔊 听录音,萨拉提醒杰克注意什么？
+    - 选项: 椅子会坏 / 箱子很重 / 卡车满了 / ★台灯是新的,要小心
 
 ## am1_l09
 
@@ -289,22 +299,30 @@
     - 选项: They're / ★She's / It's / He's
 - **s10** `choice`  ___ are my cousins, Ben and Amy.
     - 选项: This / That / It / ★These
-- **s10** `choice`  Are you students? — Yes, ___ are.
-    - 选项: ★we / they / I / you
-- **s10** `choice`  They are ___.（教师们）
-    - 选项: an teacher / ★teachers / a teacher / teacher
-- **s10** `transform`  This is my cousin.（复数：两位表亲）
-    - 答案: These are my cousins.
-- **s10** `transform`  We are students.（变一般疑问句问对方）
-    - 答案: Are you students?
-- **s10** `transform`  She is a doctor.（变复数 They）
-    - 答案: They are doctors.
+- **s10** `choice`  Noah and Mia are my cousins. ___ are in college.
+    - 选项: We / ★They / He / She
 - **s10** `choice`  My aunt is a doctor. My cousins ___ students.
     - 选项: be / ★are / is / am
-- **s10** `choice`  Ethan and I are students. ___ are in college.
-    - 选项: They / He / ★We / Us
-- **s10** `transform`  They are cooks.（变一般疑问句，they→you：你们是厨师吗？）
-    - 答案: Are you cooks?
+- **s10** `choice`  选出 amazing 的意思
+    - 选项: ★极好的 / 大学 / 火鸡 / 医生
+- **s10** `choice`  选出"表亲；堂亲"对应的英文
+    - 选项: doctor / ★cousin / aunt / grandpa
+- **s10** `choice`  米娅第一次把姑姑 Carol 介绍给你认识,你礼貌地说：
+    - 选项: Happy Thanksgiving! / Yes, we are. / Thank you. / ★Nice to meet you, Carol.
+- **s10** `choice`  感恩节这天你到朋友家做客,进门时向大家问候：
+    - 选项: Me too. / ★Happy Thanksgiving! / Here you go. / Nice one.
+- **s10** `choice`  （读课文）米娅的姑姑 Carol 是做什么的？
+    - 选项: 老师 / ★医生 / 学生 / 厨师
+- **s10** `choice`  （读课文）Ethan 和 Ava 是米娅的什么人？
+    - 选项: 姑姑 / 邻居 / ★表亲 / 爷爷
+- **s10** `choice`  （读课文）爷爷 Joe 擅长什么？
+    - 选项: 看病 / 上大学 / 课文没提到 / ★做饭
+- **s10** `choice`  🔊 听录音,Ethan 和 Ava 是米娅的什么人？
+    - 选项: ★表亲 / 老师 / 邻居 / 姑姑
+- **s10** `choice`  🔊 听录音,他们是学生吗？
+    - 选项: 没有回答 / 不是学生 / ★是的,在上大学 / 是中学生
+- **s10** `choice`  🔊 听录音,Noah 用哪个词向他们打招呼？
+    - 选项: sir / ★guys / doctor / cook
 
 ## am1_l10
 
@@ -326,8 +344,8 @@
     - 答案: We are so tired.
 - **s5** `choice` [gp1] ___ the matter?
     - 选项: ★What's / Where's / Who's / How's
-- **s5** `choice` [gp1] What's the matter? — ___
-    - 选项: Here they are. / Take care. / Yes, it is. / ★I'm so tired.
+- **s5** `choice` [gp1] 朋友看起来不舒服，你关心地问：
+    - 选项: ★What's the matter? / What's the money? / Where's the matter? / What matter is?
 - **s5** `choice` [gp1] 朋友看起来不舒服，你关心地问：
     - 选项: Who are you? / How much? / ★What's the matter? / What color?
 - **s5** `transform` [gp1] You are thirsty.（变一般疑问句）
@@ -382,26 +400,32 @@
     - 答案: Me too.
 - **s9** `scenario`  在便利店买两瓶水
     - 答案: Two bottles of water, please.
-- **s10** `choice`  What's the ___? — I'm tired.
-    - 选项: job / color / name / ★matter
 - **s10** `choice`  I'm ___.（口渴）
     - 选项: the thirsty / ★thirsty / a thirsty / thirsties
 - **s10** `choice`  We're ___!（饿了）
     - 选项: a hungry / hungrys / ★hungry / hungries
-- **s10** `choice`  I'm so tired. — ___
-    - 选项: ★Me too. / What color? / Yes, it is. / Here you go.
-- **s10** `transform`  You are tired.（变问句关心对方）
-    - 答案: Are you tired?
-- **s10** `transform`  I am thirsty.（加程度词 so）
-    - 答案: I am so thirsty.
-- **s10** `transform`  He is hungry.（变复数 They）
-    - 答案: They are hungry.
 - **s10** `choice`  I'm tired ___ thirsty.（而且）
     - 选项: or / but / so much / ★and
-- **s10** `choice`  ___, a gas station!
-    - 选项: Eye / See you / ★Look / Watch it
-- **s10** `transform`  We are hungry.（变一般疑问句，we→you）
-    - 答案: Are you hungry?
+- **s10** `choice`  选出 thirsty 的意思
+    - 选项: 疲惫的 / ★口渴的 / 热的 / 饥饿的
+- **s10** `choice`  选出"零食"对应的英文
+    - 选项: ★snack / water / bottle / trail
+- **s10** `choice`  同伴说 "I'm so tired." 你也一样累,附和他：
+    - 选项: No problem. / Here you go. / ★Me too. / What color?
+- **s10** `choice`  你在加油站便利店想买两瓶水,对店员说：
+    - 选项: Look, a gas station! / ★Two bottles of water, please. / Me too. / What's the matter?
+- **s10** `choice`  （读课文）Zoe 一开始感觉怎么样？
+    - 选项: 很开心 / ★又累又渴 / 很热 / 很饿
+- **s10** `choice`  （读课文）他们在哪里买到水？
+    - 选项: ★加油站 / 图书馆 / 服装店 / 家里
+- **s10** `choice`  （读课文）除了水,Ryan 还买了什么？
+    - 选项: ★两份零食 / 什么都没买 / 两件 T 恤 / 两本书
+- **s10** `choice`  🔊 听录音,Ryan 先向店员买了什么？
+    - 选项: 两件 T 恤 / 一本书 / 两份零食 / ★两瓶水
+- **s10** `choice`  🔊 听录音,除了水他们还要什么？
+    - 选项: 披萨 / 三瓶水 / ★两份零食 / 没有别的了
+- **s10** `choice`  🔊 听录音,他们为什么还要买零食？
+    - 选项: 在打折 / ★他们饿了 / 他们累了 / 他们渴了
 
 ## am1_l11
 
@@ -425,8 +449,6 @@
     - 选项: Whose one / ★Which / What size / Who
 - **s5** `choice` [gp1] Which mug is Chris's? — The black ___.
     - 选项: mug it / that / it / ★one
-- **s5** `choice` [gp1] Which 用于：
-    - 选项: ★在多个里挑一个 / 问颜色 / 问尺寸 / 问归属
 - **s5** `transform` [gp1] The big box is Jake's.（变 which 疑问句：哪个箱子是 Jake 的？）
     - 答案: Which box is Jake's?
 - **s5** `choice` [gp2] This ___ or that ___?（同一个词填两空）
@@ -483,20 +505,28 @@
     - 选项: ★one / it / this / that
 - **s10** `choice`  Is it this one? — No, not ___ one. The big one.
     - 选项: an / ★that / which / it
-- **s10** `choice`  Which one is your mug? — ___
-    - 选项: ★The pink one. / Here you go. / It's a mug. / Yes, it is.
-- **s10** `transform`  Which book is it?（用"红色那本"回答）
-    - 答案: The red one.
-- **s10** `transform`  That pen is Amy's.（变 which 问句：哪支笔是 Amy 的）
-    - 答案: Which pen is Amy's?
-- **s10** `transform`  The small bag is my bag.（用 one 避免重复 bag）
-    - 答案: The small one is my bag.
-- **s10** `choice`  The book is next ___ the lamp.
-    - 选项: at / of / ★to / on
 - **s10** `choice`  ___ welcome. Enjoy!
     - 选项: You / Yours / Your / ★You're
-- **s10** `transform`  Which book is Emma's?（用 The big one 回答）
-    - 答案: The big one.
+- **s10** `choice`  选出 shelf 的意思
+    - 选项: 图书管理员 / 图书馆 / ★书架；搁板 / 书
+- **s10** `choice`  选出"在……旁边"对应的英文
+    - 选项: one / ★next to / which / big
+- **s10** `choice`  你在图书馆想找一本书,先向管理员开口：
+    - 选项: ★Excuse me. Is "The Lost Trail" here? / You're welcome. / Enjoy! / Got it.
+- **s10** `choice`  管理员帮你找到了书,你说 "Thank you so much!" 他会回应：
+    - 选项: This one? / ★You're welcome. Enjoy! / No, not that one. / Which book is it?
+- **s10** `choice`  （读课文）Emma 想找的书叫什么名字？
+    - 选项: ★《The Lost Trail》 / 课文没提到 / 《The Big Book》 / 《Blue Trail》
+- **s10** `choice`  （读课文）Emma 要找的到底是哪一本？
+    - 选项: 大的绿色那本 / ★大的蓝色那本 / 小的红色那本 / 台灯旁的小本
+- **s10** `choice`  （读课文）管理员对这本书是什么评价？
+    - 选项: ★是他最爱的好书 / 太难了 / 没看过 / 觉得很无聊
+- **s10** `choice`  🔊 听录音,Emma 在问什么？
+    - 选项: 书在几楼 / 书好不好看 / ★是哪一本书 / 书多少钱
+- **s10** `choice`  🔊 听录音,那本书在什么位置？
+    - 选项: 桌子下面 / 门口 / ★台灯旁边 / 抽屉里
+- **s10** `choice`  🔊 听录音,到底是哪一本？
+    - 选项: 红色那本 / ★大的蓝色那本 / 小的蓝色那本 / 绿色那本
 
 ## am1_l12
 
@@ -528,8 +558,6 @@
     - 选项: in / to / ★on / under
 - **s5** `choice` [gp2] The keys are ___ my bag.（包里）
     - 选项: ★in / on / at / for
-- **s5** `choice` [gp2] "在架子上"用 on，"在抽屉里"用：
-    - 选项: at / on / to / ★in
 - **s5** `transform` [gp2] The mugs are in the sink.（变一般疑问句）
     - 答案: Are the mugs in the sink?
 - **s6** `choice`  爽快答应对方请求，美语常说：
@@ -582,19 +610,25 @@
     - 选项: it / one / this / ★ones
 - **s10** `choice`  The keys are ___ the drawer.
     - 选项: ★in / on / an / at
-- **s10** `choice`  The books are ___ the shelf.
-    - 选项: am / a / ★on / in
-- **s10** `choice`  Which sunglasses are new? — ___
-    - 选项: ★The black ones. / It's a medium. / Yes, they are. / On the shelf.
-- **s10** `transform`  Which one is your bag?（改问复数：哪些是你的包）
-    - 答案: Which ones are your bags?
-- **s10** `transform`  The red gloves are my gloves.（用 ones 避免重复）
-    - 答案: The red ones are my gloves.
-- **s10** `transform`  The snacks are in the drawer.（变一般疑问句）
-    - 答案: Are the snacks in the drawer?
 - **s10** `choice`  Here—try them ___!
     - 选项: ★on / up you / at / in
-- **s10** `choice`  The brown ones are on ___.
-    - 选项: shop / sales one / sell / ★sale
-- **s10** `transform`  The black ones are new.（变一般疑问句）
-    - 答案: Are the black ones new?
+- **s10** `choice`  选出 sunglasses 的意思
+    - 选项: ★太阳镜 / 抽屉 / 完美的 / 顶端
+- **s10** `choice`  选出"完美的"对应的英文
+    - 选项: actually / brown / top / ★perfect
+- **s10** `choice`  你走进眼镜店,店员问 "Are you here for glasses?" 你确切说是要太阳镜：
+    - 选项: ★Yes. Sunglasses, actually. / Try them on! / On the top shelf. / Sure thing!
+- **s10** `choice`  你试戴后决定买棕色那几副,告诉店员：
+    - 选项: Which ones are popular? / Are they new? / ★The brown ones, please! / Here—try them on!
+- **s10** `choice`  （读课文）Dan 想买的是什么？
+    - 选项: 抽屉 / 书 / ★太阳镜 / 普通眼镜
+- **s10** `choice`  （读课文）黑色那几副太阳镜有什么特点？
+    - 选项: ★是新款,卖得好 / 在打折 / 是旧款 / 是小号
+- **s10** `choice`  （读课文）棕色那几副是什么情况？
+    - 选项: 很贵 / 是最新款 / ★不是新款,但在打折 / 已经卖光了
+- **s10** `choice`  🔊 听录音,哪几副太阳镜卖得好？
+    - 选项: 没说 / 棕色那几副 / ★黑色那几副 / 小号的
+- **s10** `choice`  🔊 听录音,黑色那几副是新款吗？
+    - 选项: 是旧款 / 不是新款 / 只是打折款 / ★是,是新款
+- **s10** `choice`  🔊 听录音,棕色那几副是什么情况？
+    - 选项: ★不是新款,但在打折 / 是新款 / 卖光了 / 很贵

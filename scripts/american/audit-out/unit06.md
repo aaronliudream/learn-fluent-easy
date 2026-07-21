@@ -1,6 +1,6 @@
 # 单元6 题库全量导出（语义复审用）
 
-> 共 284 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+> 共 300 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
 
 
 ## am1_l31
@@ -42,7 +42,7 @@
 - **s6** `choice`  "打电话请病假"美语叫：
     - 选项: sick call out / phone ill day / ★call in sick / say sick home
 - **s6** `choice`  "That sounds rough." 里 rough 的意思是：
-    - 选项: 声音很大 / 路面粗糙 / ★难受/不好过 / 特别搞笑 / 难受 / 不好过
+    - 选项: 声音很大 / 路面粗糙 / ★难受/不好过 / 特别搞笑
 - **s6** `choice`  别人道歉，你说"没事别放心上"：
     - 选项: Worry about it! / ★Don't worry about it. / No about worry. / Don't it worry.
 - **s7** `cloze`  〔KAYLA: I don't ___1___ well today. KAYLA: I ___2___ a bad co〕 第 1 空
@@ -81,24 +81,30 @@
     - 答案: Feel better soon!
 - **s10** `choice`  I ___ a sore throat.
     - 选项: ★have / having / has / am
-- **s10** `choice`  She ___ a fever.
-    - 选项: is / ★has / haves / have
+- **s10** `choice`  Kayla ___ a sore throat today.
+    - 选项: have / is / haves / ★has
 - **s10** `choice`  I don't ___ well.
     - 选项: feels / felt / ★feel / feeling
-- **s10** `choice`  朋友生病，你说：
-    - 选项: You got it! / Have a good one! / Lucky you! / ★Feel better soon!
-- **s10** `transform`  You have a cold.（变一般疑问句）
-    - 答案: Do you have a cold?
-- **s10** `transform`  I have a headache.（变否定句）
-    - 答案: I don't have a headache.
-- **s10** `transform`  He has a fever.（变一般疑问句，用 Does）
-    - 答案: Does he have a fever?
 - **s10** `choice`  He ___ a bad cold.
     - 选项: have / ★has / haves / is
-- **s10** `choice`  打电话请病假，开头说自己不舒服：
-    - 选项: I'm well good. / I feel very well! / ★I don't feel well today. / Well I don't.
-- **s10** `transform`  She has a sore throat.（变否定句）
-    - 答案: She doesn't have a sore throat.
+- **s10** `choice`  选出 fever 的意思
+    - 选项: 感冒 / 休息 / 嗓子疼 / ★发烧
+- **s10** `choice`  选出 rough(That sounds rough 里)的意思
+    - 选项: ★难受的；不好过的 / 生病的 / 健康的；舒服的 / 感觉
+- **s10** `choice`  同事说 I have a bad cold. 你想表示关心、让对方好好养病，你说：
+    - 选项: What's up? / Thank you. / I will. / ★Feel better soon!
+- **s10** `choice`  打电话跟老板请病假，开头说明自己今天不舒服，你说：
+    - 选项: Feel better soon! / Drink a lot of water! / What's up? / ★I don't feel well today.
+- **s10** `choice`  (读课文)Kayla 为什么给 Mr. Reed 打电话？
+    - 选项: 因为她想去商场 / ★因为她生病了，得了重感冒 / 因为她要开一个重要会议 / 因为天气很好
+- **s10** `choice`  (读课文)Mr. Reed 让 Kayla 怎么做？
+    - 选项: 去参加聚会 / 马上来上班 / 去看医生 / ★待在家休息，多喝水
+- **s10** `choice`  (读课文)除了重感冒，Kayla 还有什么症状？
+    - 选项: 肚子疼 / 咳嗽 / 头疼 / ★嗓子疼，还有点发烧
+- **s10** `choice`  🔊 听录音,Kayla 怎么了？
+    - 选项: 她在开会 / 她在海滩 / 她很健康 / ★她得了重感冒
+- **s10** `choice`  🔊 听录音,Kayla 有没有发烧？
+    - 选项: 完全没有 / 没提到 / 烧得很高 / ★有一点
 
 ## am1_l32
 
@@ -110,8 +116,6 @@
     - 答案: You must sleep well.
 - **s5** `choice` [gp2] You ___ go to work. You're sick!（禁止）
     - 选项: do / need / ★mustn't / must
-- **s5** `choice` [gp2] mustn't 表示：
-    - 选项: ★禁止 / 不必 / 必须 / 可以
 - **s5** `choice` [gp2] You mustn't ___ coffee for now.
     - 选项: drinks / to drink / ★drink / drinking
 - **s5** `transform` [gp2] You drink soda.（用 mustn't 表禁止）
@@ -139,7 +143,7 @@
 - **s6** `choice`  医生检查喉咙时让你说：
     - 选项: "Hello." / ★"Ahh." / "Cheese!" / "Yes."
 - **s6** `choice`  "健康第一"英语说：
-    - 选项: ★Health comes first. / Healthy number one be. / First health go. / Health is one.
+    - 选项: Health is one. / Health number one. / ★Health comes first. / First health go.
 - **s6** `choice`  "没有例外/没得商量"说：
     - 选项: No outside rule! / Not accept me! / ★No exceptions! / No questions ask!
 - **s7** `cloze`  〔DR. PATEL: What ___1___ you in today? KAYLA: My throat ___2_〕 第 1 空
@@ -180,22 +184,28 @@
     - 选项: don't / ★must / mustn't / can't
 - **s10** `choice`  You ___ drink coffee now.（禁止）
     - 选项: aren't / must / ★mustn't / needn't
-- **s10** `choice`  must 后面接：
-    - 选项: 动词三单 / to+动词 / 动词-ing / ★动词原形
-- **s10** `choice`  mustn't 表示：
-    - 选项: ★禁止 / 不必 / 可以 / 建议
-- **s10** `transform`  You go to work.（用 mustn't 表禁止）
-    - 答案: You mustn't go to work.
-- **s10** `transform`  You rest for three days.（用 must 表必须）
-    - 答案: You must rest for three days.
-- **s10** `transform`  You must drink coffee.（改为禁止）
-    - 答案: You mustn't drink coffee.
 - **s10** `choice`  She ___ rest at home.（必须）
     - 选项: ★must / mustn't / don't / isn't
 - **s10** `choice`  Kids ___ play with fire.（禁止）
     - 选项: don't be / ★mustn't / needn't / must
-- **s10** `transform`  You watch TV all night.（用 mustn't 表禁止）
-    - 答案: You mustn't watch TV all night.
+- **s10** `choice`  选出 serious 的意思
+    - 选项: 例外 / 汤 / ★严重的 / 健康
+- **s10** `choice`  选出 hurt(my throat hurts 里)的意思
+    - 选项: 暂时 / ★疼 / 看一看 / 会议
+- **s10** `choice`  医生开始问诊，想问你今天哪里不舒服，会说：
+    - 选项: Health comes first. / That's the hard part. / Say "ahh." / ★What brings you in today?
+- **s10** `choice`  医生要检查你的喉咙，让你张嘴发音，会说：
+    - 选项: Take a look. / ★Say "ahh." / No exceptions! / For now.
+- **s10** `choice`  (读课文)医生说 Kayla 的病严重吗？
+    - 选项: 根本没病 / 需要做手术 / ★不严重，但必须休息三天 / 很严重，要住院
+- **s10** `choice`  (读课文)这段时间医生禁止 Kayla 做什么？
+    - 选项: ★不能去上班，也不能喝咖啡 / 不能看电视 / 不能睡觉 / 不能走路
+- **s10** `choice`  (读课文)对 Kayla 来说，最难接受的是什么？
+    - 选项: 要休息三天 / 要喝汤 / ★不能喝咖啡 / 要多喝水
+- **s10** `choice`  🔊 听录音,医生让 Kayla 休息几天？
+    - 选项: 一周 / 一个月 / 一天 / ★三天
+- **s10** `choice`  🔊 听录音,关于上班，医生怎么说？
+    - 选项: 可以在家上班 / ★绝对不能去上班 / 可以正常去上班 / 下午去上班
 
 ## am1_l33
 
@@ -271,26 +281,32 @@
     - 答案: Do I need to clean it right now?
 - **s9** `scenario`  谈判后给出最终条件
     - 答案: Final offer.
-- **s10** `choice`  You ___ need to bring anything.（不必）
-    - 选项: mustn't / can't / ★don't / aren't
+- **s10** `choice`  You ___ need to wash the dishes.（不必）
+    - 选项: aren't / can't / mustn't / ★don't
 - **s10** `choice`  Do I ___ to finish it today?
     - 选项: must / ★need / needs / needing
-- **s10** `choice`  "不必做"用：
-    - 选项: can't / must / ★don't need to / mustn't
-- **s10** `choice`  "你必须完成作业"用：
-    - 选项: ★must / needn't / don't need to / mustn't
-- **s10** `transform`  You need to clean your room.（变否定：不必）
-    - 答案: You don't need to clean your room.
-- **s10** `transform`  I need to clean the room.（变一般疑问句）
-    - 答案: Do I need to clean the room?
-- **s10** `transform`  You must wash the dishes.（改为"不必"）
-    - 答案: You don't need to wash the dishes.
-- **s10** `choice`  You ___ need to bring food.（不必）
-    - 选项: aren't / mustn't / can't be / ★don't
+- **s10** `choice`  You're not sick. You ___ stay home today.（不必）
+    - 选项: must / mustn't / ★don't need to / need to
 - **s10** `choice`  Do I need to clean the garage? — No, you ___.
     - 选项: mustn't / ★don't / aren't / need
-- **s10** `transform`  You need to finish homework by Sunday.（变否定：不必）
-    - 答案: You don't need to finish homework by Sunday.
+- **s10** `choice`  选出 mall 的意思
+    - 选项: 发短信 / ★购物中心 / 完成 / 小时
+- **s10** `choice`  选出 almost 的意思
+    - 选项: 还有一件事 / ★差不多；几乎 / 干净的；打扫 / 每小时
+- **s10** `choice`  爸爸讲完一串要求后，还想再补一条，会先说：
+    - 选项: So much. / Final offer. / ★One more thing: / Almost.
+- **s10** `choice`  讨价还价到最后，爸爸给出不再让步的条件，会说：
+    - 选项: ★Final offer. / One more thing. / Almost. / So much.
+- **s10** `choice`  (读课文)Hailey 想去哪里？
+    - 选项: 去学校 / 去看医生 / ★和朋友去商场 / 去海滩
+- **s10** `choice`  (读课文)爸爸说 Hailey 现在必须做什么？
+    - 选项: 现在就洗碗 / 现在就写作业 / ★现在就打扫房间 / 现在就做饭
+- **s10** `choice`  (读课文)关于洗碗，爸爸怎么说？
+    - 选项: 洗一半就行 / 周日前洗完 / 她必须洗 / ★她不用洗，爸爸来洗
+- **s10** `choice`  🔊 听录音,Hailey 现在需要打扫房间吗？
+    - 选项: ★需要，现在就打扫 / 明天再打扫 / 不需要打扫 / 爸爸帮她打扫
+- **s10** `choice`  🔊 听录音,关于洗碗爸爸怎么说？
+    - 选项: 没有提到 / 她必须洗 / 她洗一半 / ★她不用洗
 
 ## am1_l34
 
@@ -368,26 +384,32 @@
     - 答案: I was at the beach on Saturday.
 - **s9** `scenario`  别人问 "Were you at the party?"，你在
     - 答案: Yes, I was.
-- **s10** `choice`  I ___ at home yesterday.
-    - 选项: were / am / is / ★was
-- **s10** `choice`  They ___ at the wedding.
-    - 选项: ★were / are be / is / was
+- **s10** `choice`  We ___ at the party on Saturday.
+    - 选项: was / ★were / are / is
 - **s10** `choice`  ___ the food good? — Yes, it was.
     - 选项: Were / Is / ★Was / Are
 - **s10** `choice`  Where ___ you last night?
     - 选项: is / are / was / ★were
-- **s10** `transform`  I am at the beach.（改为昨天）
-    - 答案: I was at the beach yesterday.
-- **s10** `transform`  They are at the party.（改为过去式）
-    - 答案: They were at the party.
-- **s10** `transform`  The music was loud.（变一般疑问句）
-    - 答案: Was the music loud?
 - **s10** `choice`  The weather ___ great all day.
     - 选项: is / ★was / be / were
-- **s10** `choice`  ___ your parents at the wedding? — Yes, they were.
-    - 选项: Are / Was / Is / ★Were
-- **s10** `transform`  The music is loud.（改为昨晚）
-    - 答案: The music was loud last night.
+- **s10** `choice`  选出 wedding 的意思
+    - 选项: 父母 / 海滩 / 舞池 / ★婚礼
+- **s10** `choice`  选出 loud 的意思
+    - 选项: ★大声的；吵的 / 在那里 / 最棒的 / 一整天
+- **s10** `choice`  周一见到同事，想问对方周末过得怎么样，你说：
+    - 选项: Were your parents there? / Was the food good? / Where were you? / ★How was your weekend?
+- **s10** `choice`  朋友问你周末去哪了，你回答自己周六在海滩，你说：
+    - 选项: Where were you? / ★I was at the beach on Saturday. / Were you there? / How was your weekend?
+- **s10** `choice`  (读课文)Nicole 周六去了哪里？
+    - 选项: 婚礼 / ★海滩 / 医院 / 商场
+- **s10** `choice`  (读课文)Omar 周末做了什么？
+    - 选项: 在家休息 / 去上班 / 去了海滩 / ★参加表哥的婚礼
+- **s10** `choice`  (读课文)Omar 觉得婚礼上有什么美中不足？
+    - 选项: ★音乐太吵 / 食物难吃 / 没有人跳舞 / 天气不好
+- **s10** `choice`  🔊 听录音,Nicole 周六在哪里？
+    - 选项: 在婚礼上 / 在家里 / ★在海滩 / 在公司
+- **s10** `choice`  🔊 听录音,那天天气怎么样？
+    - 选项: 下雨 / 刮大风 / ★晴朗暖和 / 很冷
 
 ## am1_l35
 
@@ -473,22 +495,28 @@
     - 选项: were / is / ★was / are
 - **s10** `choice`  There ___ two bands at the fair.
     - 选项: be / ★were / was / is
-- **s10** `choice`  ___ there a contest? — Yes, there was.
-    - 选项: Are / Is / ★Was / Were
-- **s10** `choice`  We were there ___ summer.
-    - 选项: ★last / next / tomorrow / every now
-- **s10** `transform`  There is a Ferris wheel.（改为去年）
-    - 答案: There was a Ferris wheel last year.
-- **s10** `transform`  There are pony rides.（改为过去式）
-    - 答案: There were pony rides.
-- **s10** `transform`  There was a pie contest.（变一般疑问句）
-    - 答案: Was there a pie contest?
+- **s10** `choice`  ___ there a band at the fair? — Yes, there was.
+    - 选项: Were / Are / ★Was / Is
 - **s10** `choice`  There ___ funnel cakes everywhere.
     - 选项: are / is / was / ★were
-- **s10** `choice`  Was there a contest? — No, there ___.
-    - 选项: ★wasn't / weren't / isn't / not
-- **s10** `transform`  There are two contests.（改为过去式）
-    - 答案: There were two contests.
+- **s10** `choice`  选出 Ferris wheel 的意思
+    - 选项: 评委 / 炸热狗棒 / ★摩天轮 / 照片
+- **s10** `choice`  选出 huge 的意思
+    - 选项: 去年夏天 / ★巨大的 / 错的 / 第二名
+- **s10** `choice`  看到一张老照片，你想问这是在哪儿拍的，你说：
+    - 选项: Let's go again! / Was there a pie contest? / There was a Ferris wheel. / ★Where was this?
+- **s10** `choice`  你想打听集市上当时有没有派比赛，你说：
+    - 选项: The judges were wrong. / Where was this? / Let's go again. / ★Was there a pie contest?
+- **s10** `choice`  (读课文)照片是在哪里拍的？
+    - 选项: 海滩 / 婚礼上 / 商场 / ★去年夏天的县集市
+- **s10** `choice`  (读课文)集市上有哪些东西？
+    - 选项: 只有一个摩天轮 / 什么都没有 / 只有一场比赛 / ★摩天轮、小马和很多吃的
+- **s10** `choice`  (读课文)奶奶的苹果派得了第几名？
+    - 选项: 第三名 / 没有得奖 / 第一名 / ★第二名
+- **s10** `choice`  🔊 听录音,集市上有什么大型游乐设施？
+    - 选项: 过山车 / 旋转木马 / ★一个巨大的摩天轮 / 碰碰车
+- **s10** `choice`  🔊 听录音,给孩子们准备了什么活动？
+    - 选项: 玩沙子 / 游泳 / 开卡丁车 / ★骑小马
 
 ## am1_l36
 
@@ -498,14 +526,12 @@
     - 选项: stopping / stoped / ★stopped / stops
 - **s5** `choice` [gp1] She ___ her grandma last night.
     - 选项: ★called / calling / calls / call
-- **s5** `choice` [gp1] 过去式动词随人称：
-    - 选项: 变 ing / ★不变化 / 变原形 / 加 s
 - **s5** `transform` [gp1] I miss the bus.（改为昨天）
     - 答案: I missed the bus yesterday.
 - **s5** `transform` [gp1] They close at six.（改为过去式）
     - 答案: They closed at six.
 - **s5** `choice` [gp2] walked 的 -ed 读音：
-    - 选项: d / w / t / ɪd / ★/t/
+    - 选项: ★/t/ / /d/ / /ɪd/ / /w/
 - **s5** `choice` [gp2] 讲故事开头"首先"用：
     - 选项: Start of / Begin at / ★First / One
 - **s5** `choice` [gp1] He ___ the bus yesterday.
@@ -519,7 +545,7 @@
 - **s5** `transform` [gp1] She calls her grandma.（改为昨晚）
     - 答案: She called her grandma last night.
 - **s5** `choice` [gp2] called 的 -ed 读音：
-    - 选项: ɪd / t / k / ★/d/ / d
+    - 选项: ★/d/ / /t/ / /ɪd/ / /k/
 - **s5** `choice` [gp2] 叙事"然后"用：
     - 选项: End / ★Then / Two / So far
 - **s5** `choice` [gp2] 叙事"所以"用：
@@ -568,23 +594,29 @@
     - 答案: I missed the bus yesterday.
 - **s9** `scenario`  听到离谱的事，惊呼
     - 答案: No way!
-- **s10** `choice`  I ___ to school yesterday.
-    - 选项: walk / walking / walks / ★walked
-- **s10** `choice`  stop 的过去式：
-    - 选项: stops / ★stopped / stopping / stoped
+- **s10** `choice`  I ___ coffee on my laptop yesterday.
+    - 选项: ★spilled / spills / spilling / spill
+- **s10** `choice`  survive 的过去式：
+    - 选项: surviveed / surviving / ★survived / survives
 - **s10** `choice`  She ___ her mom last night.
     - 选项: ★called / call / calling / calls
-- **s10** `choice`  missed 的 -ed 读音是：
-    - 选项: /s/ / ★/t/ / /d/ / /ɪd/
-- **s10** `transform`  I walk to work.（改为昨天）
-    - 答案: I walked to work yesterday.
-- **s10** `transform`  He calls IT.（改为过去式：两次）
-    - 答案: He called IT twice.
-- **s10** `transform`  They close the taco place.（改为过去式）
-    - 答案: They closed the taco place.
 - **s10** `choice`  They ___ the store at six.（过去式）
     - 选项: closing / close / closes / ★closed
-- **s10** `choice`  spilled 的 -ed 读音：
-    - 选项: d / t / ɪd / ★/d/ / s
-- **s10** `transform`  He walks to work.（改为昨天）
-    - 答案: He walked to work yesterday.
+- **s10** `choice`  选出 spill(spilled coffee 里)的意思
+    - 选项: 关闭 / ★洒；泼 / 错过 / 走路
+- **s10** `choice`  选出 survive 的意思
+    - 选项: ★挺过来；幸存 / 洒；泼 / 停止 / 两次
+- **s10** `choice`  朋友告诉你一件很惊人的倒霉事，你表示难以置信，你说：
+    - 选项: What happened? / ★No way! / You look tired. / Today is a new day.
+- **s10** `choice`  看到朋友一脸疲惫，你想问发生了什么事，你说：
+    - 选项: Today is a new day. / ★What happened? / No way! / You survived!
+- **s10** `choice`  (读课文)Max 昨天遇到的第一件倒霉事是什么？
+    - 选项: 洒了咖啡 / ★错过了公交车 / 丢了钱包 / 上班迟到
+- **s10** `choice`  (读课文)Max 的笔记本电脑怎么了？
+    - 选项: 被偷了 / 没电关机 / 丢了 / ★被咖啡洒到，死机了一小时
+- **s10** `choice`  (读课文)午饭时又发生了什么？
+    - 选项: 他请同事吃饭 / 他吃到了塔可 / 他忘了带钱 / ★他最爱的塔可店关门了
+- **s10** `choice`  🔊 听录音,Max 早上遇到的第一件事是什么？
+    - 选项: ★错过了公交车 / 电脑丢了 / 路上堵车 / 洒了咖啡
+- **s10** `choice`  🔊 听录音,Max 是怎么去上班的？
+    - 选项: ★冒雨走路去 / 坐公交去 / 开车去 / 骑车去

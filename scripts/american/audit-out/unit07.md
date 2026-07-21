@@ -1,6 +1,6 @@
 # 单元7 题库全量导出（语义复审用）
 
-> 共 287 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+> 共 294 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
 
 
 ## am1_l37
@@ -44,7 +44,7 @@
 - **s6** `choice`  diner 是：
     - 选项: 吃晚餐的人 / 食堂窗口 / ★美式路边餐馆 / 一套餐具
 - **s6** `choice`  口语 unreal 表示：
-    - 选项: 是假货 / 难以置信地棒 / ★绝了/难以置信地棒 / 绝了 / 不真诚 / 很无聊
+    - 选项: 是假货 / ★绝了/难以置信地棒 / 不真诚 / 很无聊
 - **s7** `cloze`  〔DEREK: We ___1___ to the Grand Canyon! DEREK: We ___2___ Rou〕 第 1 空
     - 选项: ★drove / drive / drived / drives
 - **s7** `cloze`  〔DEREK: We ___1___ to the Grand Canyon! DEREK: We ___2___ Rou〕 第 2 空
@@ -81,26 +81,32 @@
     - 答案: I saw wild horses on the way.
 - **s9** `scenario`  表示羡慕"我酸了"
     - 答案: I'm jealous!
-- **s10** `choice`  go 的过去式：
-    - 选项: gone / goed / ★went / goes
-- **s10** `choice`  We ___ a huge burger there.
-    - 选项: has / ★had / have / haved
+- **s10** `choice`  Last night we ___ back to the hotel.（开车）
+    - 选项: ★drove / drive / driving / drives
+- **s10** `choice`  We ___ lunch at a diner.（吃）
+    - 选项: eat / eats / ★ate / eaten
 - **s10** `choice`  I ___ my friend at the mall yesterday.
     - 选项: seed / sees / ★saw / see
-- **s10** `choice`  She ___ to work this morning.（开车）
-    - 选项: drive / ★drove / drives / drived
-- **s10** `transform`  I eat at a diner.（改为昨天）
-    - 答案: I ate at a diner yesterday.
-- **s10** `transform`  We take Route 66.（改为过去式）
-    - 答案: We took Route 66.
-- **s10** `transform`  They go at sunrise.（改为过去式）
-    - 答案: They went at sunrise.
-- **s10** `choice`  We ___ to the Grand Canyon last summer.（开车去）
-    - 选项: drived / drives / ★drove / drive
 - **s10** `choice`  have 的过去式：
     - 选项: has / having / haved / ★had
-- **s10** `transform`  She takes photos at sunrise.（改为过去式）
-    - 答案: She took photos at sunrise.
+- **s10** `choice`  选出 diner 的意思
+    - 选项: 日出 / ★美式路边餐馆 / 羡慕的 / 公路旅行
+- **s10** `choice`  选出 jealous 的意思
+    - 选项: 野生的 / 难以置信的 / ★羡慕的 / 日出
+- **s10** `choice`  朋友刚公路旅行回来，你想问旅途怎么样，你说：
+    - 选项: I had a huge burger. / ★How was the road trip? / We went at sunrise. / Twelve hours.
+- **s10** `choice`  朋友说他开车去了大峡谷，你很惊讶又想多听，你说：
+    - 选项: Twelve hours. / ★No way! Tell me everything. / We took Route 66. / I'm jealous.
+- **s10** `choice`  （读课文）Derek 开车去了哪里？
+    - 选项: 博物馆 / ★大峡谷 / 迈阿密 / 南海滩
+- **s10** `choice`  （读课文）他们一共开了多久？
+    - 选项: 两个小时 / ★十二个小时 / 一个星期 / 一整天
+- **s10** `choice`  （读课文）他们在亚利桑那的小餐馆里，Derek 吃了什么？
+    - 选项: 一份沙拉 / ★一个巨大的汉堡 / 一碗面 / 一块披萨
+- **s10** `choice`  🔊 听录音，他们这趟一共开了多久？
+    - 选项: 二十个小时 / ★十二个小时 / 两个小时 / 六个小时
+- **s10** `choice`  🔊 听录音，他们走的是哪条著名公路？
+    - 选项: 95号公路 / ★66号公路 / 1号公路 / 5号公路
 
 ## am1_l38
 
@@ -116,12 +122,10 @@
     - 答案: She bought a jacket.
 - **s5** `choice` [gp2] The soup is ___ hot! I can't eat it.
     - 选项: to much / ★too / two / so a
-- **s5** `choice` [gp2] too small 表示：
-    - 选项: 两次变小 / 有点小但没事 / ★小得有问题 / 非常可爱地小
 - **s5** `transform` [gp2] The shoes are big.（加 too 表"过大"）
     - 答案: The shoes are too big.
-- **s5** `choice` [gp1] pay 的过去式：
-    - 选项: payed / pays / paying / ★paid
+- **s5** `choice` [gp1] He ___ ten dollars for the ticket.（付了）
+    - 选项: ★paid / payed / pays / paying
 - **s5** `choice` [gp1] get 的过去式：
     - 选项: ★got / gets / getted / getting
 - **s5** `choice` [gp1] She ___ a new jacket online.
@@ -132,14 +136,12 @@
     - 答案: I got a ten yesterday.
 - **s5** `choice` [gp2] The soup is ___ hot. I can't eat it.
     - 选项: two / so many / to / ★too
-- **s5** `choice` [gp2] "too small" 的意思是：
-    - 选项: 很小很可爱 / ★小得有问题 / 有点小但没事 / 两双小的
 - **s5** `transform` [gp2] The jacket is big.（加 too 表"过大"）
     - 答案: The jacket is too big.
 - **s6** `choice`  "运动鞋"美语叫：
     - 选项: ★sneakers / trainers / run feet / sneak shoes
 - **s6** `choice`  receipt 是：
-    - 选项: 小票 / 收银机 / 回执信封 / ★收据/小票 / 菜谱 / 收据
+    - 选项: 收银机 / 回执信封 / ★收据/小票 / 菜谱
 - **s6** `choice`  疼的时候喊：
     - 选项: Shh! / Oops! / Yay! / ★Ouch!
 - **s6** `choice`  关于美国零售退换货，通常：
@@ -178,26 +180,32 @@
     - 答案: They're too small.
 - **s9** `scenario`  试完新码正合适
     - 答案: Not too big, not too small. / These are perfect.
-- **s10** `choice`  buy 的过去式：
-    - 选项: buying / buys / buyed / ★bought
+- **s10** `choice`  I ___ these sneakers online.（买）
+    - 选项: buy / buys / ★bought / buying
 - **s10** `choice`  I ___ this jacket yesterday.（穿了）
     - 选项: wear / wears / ★wore / weared
 - **s10** `choice`  The coffee is ___ hot! I can't drink it.
     - 选项: two / ★too / very much a / so many
 - **s10** `choice`  She ___ with her card.
     - 选项: payed / pay / ★paid / pays
-- **s10** `transform`  I buy a ticket.（改为昨天）
-    - 答案: I bought a ticket yesterday.
-- **s10** `transform`  He wears a black jacket.（改为过去式）
-    - 答案: He wore a black jacket.
-- **s10** `transform`  The shoes are small.（加 too 表"过小"）
-    - 答案: The shoes are too small.
-- **s10** `choice`  wear 的过去式：
-    - 选项: weared / wearing / wears / ★wore
-- **s10** `choice`  These shoes are ___ small. I need a bigger size.
-    - 选项: ★too / two / to / so a
-- **s10** `transform`  She pays with her card.（改为过去式）
-    - 答案: She paid with her card.
+- **s10** `choice`  选出 receipt 的意思
+    - 选项: 运动鞋 / 脚 / ★收据；小票 / 银行卡
+- **s10** `choice`  选出 sneakers 的意思
+    - 选项: ★运动鞋 / 一次 / 在网上 / 收据
+- **s10** `choice`  你买的鞋太小，想换大一码，你对店员说：
+    - 选项: Have a good one! / ★They're too small. I need a ten. / How can I help you? / Try them on!
+- **s10** `choice`  店员要给你退换，需要购物凭证，他会问：
+    - 选项: ★Do you have the receipt? / Have a good one! / What size do you need? / Is there a problem?
+- **s10** `choice`  （读课文）Tessa 的运动鞋出了什么问题？
+    - 选项: 颜色不对 / 太大了 / ★太小了，穿着脚疼 / 坏了
+- **s10** `choice`  （读课文）Tessa 需要几码的鞋？
+    - 选项: ★十码 / 九码 / 十一码 / 八码
+- **s10** `choice`  （读课文）Tessa 当初是怎么付款的？
+    - 选项: ★刷卡 / 支票 / 手机支付 / 现金
+- **s10** `choice`  🔊 听录音，Tessa 当初买的是几码？
+    - 选项: 八码 / 七码 / 十码 / ★九码
+- **s10** `choice`  🔊 听录音，Tessa 现在需要的是几码？
+    - 选项: 十一码 / 八码 / ★十码 / 九码
 
 ## am1_l39
 
@@ -213,8 +221,6 @@
     - 答案: No, I didn't.
 - **s5** `choice` [gp2] I ___ finish my homework yesterday.（没）
     - 选项: wasn't / am not / don't / ★didn't
-- **s5** `choice` [gp2] didn't 后面接：
-    - 选项: ★动词原形 / 三单 / 过去式 / 动词-ing
 - **s5** `transform` [gp2] He came at noon.（变否定句）
     - 答案: He didn't come at noon.
 - **s5** `choice` [gp1] ___ you call the office? — Yes, I did.
@@ -229,8 +235,6 @@
     - 选项: wasn't / isn't / ★didn't / doesn't
 - **s5** `choice` [gp2] He didn't ___ until noon.
     - 选项: came / comes / coming / ★come
-- **s5** `choice` [gp2] didn't 后面接：
-    - 选项: ★动词原形 / 动词-ing / 动词过去式 / 动词三单
 - **s5** `transform` [gp2] She saw the doctor.（变否定句）
     - 答案: She didn't see the doctor.
 - **s6** `choice`  安慰出状况的人"这种事难免"：
@@ -238,7 +242,7 @@
 - **s6** `choice`  reschedule 的意思是：
     - 选项: ★改约时间 / 重新付款 / 取消一切 / 换一位医生
 - **s6** `choice`  "Thursday works." 里 works 表示：
-    - 选项: 周四很忙 / 行得通 / ★周四可以/行得通 / 周四可以 / 周四要上班 / 周四加班
+    - 选项: 周四很忙 / ★周四可以/行得通 / 周四要上班 / 周四加班
 - **s6** `choice`  dental office 是：
     - 选项: 儿科诊所 / ★牙医诊所 / 眼科诊所 / 理发店
 - **s7** `cloze`  〔GLORIA: ___1___ you have the nine o'clock? VICTOR: Yes, I di〕 第 1 空
@@ -277,26 +281,32 @@
     - 答案: My car didn't start this morning.
 - **s9** `scenario`  安慰因迟到而道歉的人
     - 答案: Don't worry—these things happen.
-- **s10** `choice`  ___ you watch the game last night?
-    - 选项: ★Did / Are / Were / Do
-- **s10** `choice`  Did she call you? — Yes, she ___.
-    - 选项: was / is / does / ★did
-- **s10** `choice`  I ___ finish my homework yesterday.（没）
-    - 选项: ★didn't / don't / am not / wasn't
-- **s10** `choice`  Did you ___ the doctor?
-    - 选项: seen / sees / ★see / saw
-- **s10** `transform`  You bought a ticket.（变一般疑问句）
-    - 答案: Did you buy a ticket?
-- **s10** `transform`  He came at noon.（变否定句）
-    - 答案: He didn't come at noon.
-- **s10** `transform`  Did you eat breakfast?（否定简答）
-    - 答案: No, I didn't.
-- **s10** `choice`  ___ he call you? — No, he didn't.
-    - 选项: Is / ★Did / Was / Does
-- **s10** `choice`  I didn't ___ my homework.
-    - 选项: finished / finishing / ★finish / finishes
-- **s10** `transform`  You saw Dr. Kim.（变一般疑问句）
-    - 答案: Did you see Dr. Kim?
+- **s10** `choice`  ___ you call the mechanic yesterday?
+    - 选项: ★Did / Do / Are / Were
+- **s10** `choice`  Did he see the doctor? — Yes, he ___.
+    - 选项: was / does / ★did / is
+- **s10** `choice`  He ___ come to the meeting.（没）
+    - 选项: doesn't / ★didn't / wasn't / don't
+- **s10** `choice`  Did you ___ a mechanic?
+    - 选项: calls / calling / called / ★call
+- **s10** `choice`  选出 reschedule 的意思
+    - 选项: 修车师傅 / ★改约 / 中午 / 预约
+- **s10** `choice`  选出 mechanic 的意思
+    - 选项: 星期四 / 改约 / 牙科的 / ★修车师傅
+- **s10** `choice`  你错过了预约，想重新约个时间，你说：
+    - 选项: ★Can I reschedule? / That's rough. / How can I help you? / Did you have the nine o'clock?
+- **s10** `choice`  对方为错过预约连连道歉，你想宽慰他，你说：
+    - 选项: ★Don't worry—these things happen. / Did you have the nine o'clock? / Thank you so much! / My car didn't start.
+- **s10** `choice`  （读课文）Victor 为什么错过了早上的预约？
+    - 选项: 他堵在路上 / ★他的车打不着火 / 他忘了时间 / 他睡过头了
+- **s10** `choice`  （读课文）Victor 上次是哪位医生给他看的？
+    - 选项: ★金医生（Dr. Kim） / 洛佩兹医生（Dr. Lopez） / 格洛丽亚 / 克鲁兹医生
+- **s10** `choice`  （读课文）他们最后把预约改到了什么时候？
+    - 选项: 周三九点 / ★周四十点 / 周四九点 / 周五十一点
+- **s10** `choice`  🔊 听录音，Victor 叫修车师傅了吗？
+    - 选项: 忘了叫 / ★叫了 / 没叫 / 不需要叫
+- **s10** `choice`  🔊 听录音，修车师傅什么时候才来？
+    - 选项: ★中午 / 周四 / 晚上 / 早上九点
 
 ## am1_l40
 
@@ -310,8 +320,6 @@
     - 选项: What / Who / Which / ★How
 - **s5** `choice` [gp2] How ___ water do we need?
     - 选项: ★much / many / more / lot
-- **s5** `choice` [gp2] How many 后接：
-    - 选项: 不可数名词 / 形容词 / 动词原形 / ★可数名词复数
 - **s5** `choice` [gp2] How much ___ this ketchup?
     - 选项: ★is / does / do / are
 - **s5** `transform` [gp2] How many soda do we need?（改正错误）
@@ -328,8 +336,6 @@
     - 选项: much / more / lot / ★many
 - **s5** `choice` [gp2] How ___ ketchup do we need?
     - 选项: more / many / ★much / lot
-- **s5** `choice` [gp2] How much 后接：
-    - 选项: ★不可数名词 / 可数名词复数 / 动词原形 / 形容词
 - **s5** `transform` [gp2] How much cups do we need?（改正错误）
     - 答案: How many cups do we need?
 - **s6** `choice`  大包装仓储式超市叫：
@@ -374,26 +380,32 @@
     - 答案: How many cups do we need?
 - **s9** `scenario`  问这个多少钱
     - 答案: How much is this?
-- **s10** `choice`  ___ many cups do we need?
-    - 选项: What / Which / Who / ★How
-- **s10** `choice`  How ___ water do we need?
-    - 选项: lot / many / ★much / more
-- **s10** `choice`  We ___ to buy napkins.
-    - 选项: ★have / having / has be / must to
-- **s10** `choice`  How much ___ this ketchup?
-    - 选项: are / does / do / ★is
-- **s10** `transform`  We get paper plates.（用 have to 表必须）
-    - 答案: We have to get paper plates.
-- **s10** `transform`  We have to buy buns.（变一般疑问句）
-    - 答案: Do we have to buy buns?
-- **s10** `transform`  How many soda do we need?（改正错误）
-    - 答案: How much soda do we need?
+- **s10** `choice`  How ___ soda do we need?
+    - 选项: many / ★much / lot / more
+- **s10** `choice`  We ___ to buy buns for forty people.
+    - 选项: ★have / has / having / must to
+- **s10** `choice`  How much ___ the giant ketchup?
+    - 选项: do / does / ★is / are
 - **s10** `choice`  How ___ napkins do we need?
     - 选项: much / ★many / lot / more
-- **s10** `choice`  We ___ to get water for forty people.
-    - 选项: ★have / are have / has / must to
-- **s10** `transform`  We have to buy soda.（变一般疑问句）
-    - 答案: Do we have to buy soda?
+- **s10** `choice`  选出 napkin 的意思
+    - 选项: 购物车 / 番茄酱 / 纸盘 / ★餐巾纸
+- **s10** `choice`  选出 warehouse store 的意思
+    - 选项: ★仓储超市 / 一提；一箱 / 购物车 / 汉堡面包坯
+- **s10** `choice`  同事让你去拿点东西，你要回应"收到"，你说：
+    - 选项: This cart is full! / Put it in the cart. / Eight bucks. / ★Copy that.
+- **s10** `choice`  你想问需要多少个汉堡（可数），正确说法是：
+    - 选项: How much burgers do we need? / How much soda do we need? / ★How many burgers do we need? / How many soda do we need?
+- **s10** `choice`  （读课文）这场派对大约有多少人？
+    - 选项: 四十人 / 六人 / ★二十人 / 八人
+- **s10** `choice`  （读课文）他们要买多少个汉堡？
+    - 选项: 八个 / ★四十个 / 二十个 / 六个
+- **s10** `choice`  （读课文）为什么这里什么都是巨型装？
+    - 选项: 因为快过期了 / 因为在打折 / 因为只剩大包装 / ★因为这是仓储超市
+- **s10** `choice`  🔊 听录音，Wes 在问什么？
+    - 选项: 番茄酱多少钱 / ★需要多少汽水 / 要不要纸盘 / 需要多少汉堡
+- **s10** `choice`  🔊 听录音，Carla 让他拿几瓶汽水？
+    - 选项: ★六大瓶 / 二十瓶 / 四瓶 / 十瓶
 
 ## am1_l41
 
@@ -475,26 +487,32 @@
     - 答案: We played board games until midnight.
 - **s9** `scenario`  说你吃太多了
     - 答案: I ate too much!
-- **s10** `choice`  make 的过去式：
-    - 选项: maked / making / ★made / makes
-- **s10** `choice`  win 的过去式：
-    - 选项: ★won / winning / wins / winned
+- **s10** `choice`  Mom ___ mashed potatoes for dinner.（做）
+    - 选项: make / ★made / makes / making
+- **s10** `choice`  Grandpa ___ every game last night.（赢）
+    - 选项: win / winning / ★won / wins
 - **s10** `choice`  We ___ games last night.（玩了）
     - 选项: plays / play / ★played / playing
 - **s10** `choice`  I ate ___ much at dinner.
     - 选项: so many / very a / two / ★too
-- **s10** `transform`  He cooks all day.（改为昨天）
-    - 答案: He cooked all day yesterday.
-- **s10** `transform`  She makes the salad.（改为过去式）
-    - 答案: She made the salad.
-- **s10** `transform`  What do you make?（改为过去式提问）
-    - 答案: What did you make?
-- **s10** `choice`  Grandma ___ the game again.
-    - 选项: winned / wins / ★won / win
-- **s10** `choice`  We ate ___ much at Thanksgiving.
-    - 选项: ★too / to / two / so many
-- **s10** `transform`  They watch the game.（改为过去式）
-    - 答案: They watched the game.
+- **s10** `choice`  选出 casserole 的意思
+    - 选项: 芝士通心粉 / ★焗菜 / 午夜 / 土豆泥
+- **s10** `choice`  选出 midnight 的意思
+    - 选项: 胜利绕场 / 明年 / 橄榄球 / ★午夜
+- **s10** `choice`  朋友说家里感恩节大餐很丰盛，你想问都做了些什么菜，你说：
+    - 选项: Come next year! / I love your family. / ★What did he make? / Who won?
+- **s10** `choice`  你想问桌游最后谁赢了，你说：
+    - 选项: What did he make? / How was Thanksgiving? / Did you make anything? / ★Who won?
+- **s10** `choice`  （读课文）感恩节大餐主要是谁做的？
+    - 选项: 诺亚 / ★乔爷爷 / 奶奶 / 米娅
+- **s10** `choice`  （读课文）米娅自己做了哪道菜？
+    - 选项: 青豆焗菜 / 土豆泥 / 火鸡 / ★芝士通心粉
+- **s10** `choice`  （读课文）桌游最后是谁赢了？
+    - 选项: 米娅 / ★奶奶 / 诺亚 / 乔爷爷
+- **s10** `choice`  🔊 听录音，米娅做了什么菜？
+    - 选项: 火鸡 / 青豆焗菜 / ★芝士通心粉 / 土豆泥
+- **s10** `choice`  🔊 听录音，Mia 说 It went fast 是什么意思？
+    - 选项: 上菜很快 / ★很快就被吃光了 / 做得很快 / 吃得很急
 
 ## am1_l42
 
@@ -510,10 +528,6 @@
     - 答案: We ate seafood last year.
 - **s5** `transform` [gp1] I visit South Beach.（改为明天的打算）
     - 答案: I am going to visit South Beach tomorrow.
-- **s5** `choice` [gp2] "last year" 对应：
-    - 选项: be going to / 现在进行时 / 祈使句 / ★一般过去时
-- **s5** `choice` [gp2] "tomorrow" 对应：
-    - 选项: 一般过去时 / There was / ★be going to / 一般现在时
 - **s5** `choice` [gp1] Last year, we ___ to Miami.
     - 选项: ★went / go / are going / going
 - **s5** `choice` [gp1] Look! She ___ photos.
@@ -524,12 +538,6 @@
     - 选项: forgetted / ★forgot / forgets / forgetting
 - **s5** `transform` [gp1] He swims every day.（改为昨天）
     - 答案: He swam yesterday.
-- **s5** `choice` [gp2] "yesterday" 对应：
-    - 选项: ★一般过去时 / 祈使句 / be going to / 现在进行时
-- **s5** `choice` [gp2] "right now" 对应：
-    - 选项: be going to / 一般过去时 / There was / ★现在进行时
-- **s5** `choice` [gp2] "next year" 对应：
-    - 选项: 情态动词 / ★be going to / 一般过去时 / 一般现在时
 - **s6** `choice`  "度假"美语叫：
     - 选项: holiday / ★vacation / free day go / rest trip
 - **s6** `choice`  key lime pie 是哪个州的招牌甜点：
@@ -537,7 +545,7 @@
 - **s6** `choice`  口语感叹 "Goals!" 表示：
     - 选项: 目标定错了 / ★羡慕，这就是理想生活 / 到加油站了 / 进球了
 - **s6** `choice`  朋友出发度假，你说：
-    - 选项: Take my picture home! / Send moneys! / ★Send photos! / Photo me go!
+    - 选项: Send moneys! / ★Send photos! / Take my photos! / Picture me!
 - **s7** `cloze`  〔IVY: We're going to ___1___ to Miami. MAX: I ___2___ to Miam〕 第 1 空
     - 选项: ★fly / flying / flew / flies
 - **s7** `cloze`  〔IVY: We're going to ___1___ to Miami. MAX: I ___2___ to Miam〕 第 2 空
@@ -574,23 +582,29 @@
     - 答案: I went there last year.
 - **s9** `scenario`  朋友晒度假计划，你说"羡慕，这就是目标"
     - 答案: Goals!
-- **s10** `choice`  I ___ to Miami last year.
-    - 选项: goes / go / ★went / going
+- **s10** `choice`  Last summer we ___ seafood every night.（吃）
+    - 选项: eat / ★ate / eating / eats
 - **s10** `choice`  Right now, she ___ a packing list.
     - 选项: making be / ★is making / made / makes
-- **s10** `choice`  Tomorrow we ___ going to fly.
-    - 选项: ★are / did / was / were
-- **s10** `choice`  swim 的过去式：
-    - 选项: swims / ★swam / swimming / swimmed
-- **s10** `transform`  I visit South Beach.（改为明天的打算）
-    - 答案: I am going to visit South Beach tomorrow.
-- **s10** `transform`  We eat seafood.（改为去年）
-    - 答案: We ate seafood last year.
-- **s10** `transform`  He forgets his camera.（改为过去式）
-    - 答案: He forgot his camera.
-- **s10** `choice`  Yesterday, I ___ my camera at home.
-    - 选项: ★forgot / am forgetting / forgetted / forget
-- **s10** `choice`  "last night" 对应：
-    - 选项: 一般现在时 / be going to / ★一般过去时 / 现在进行时
-- **s10** `transform`  They visit the beach.（改为明天的打算）
-    - 答案: They are going to visit the beach tomorrow.
+- **s10** `choice`  Tomorrow I ___ going to send photos.（be 动词）
+    - 选项: ★am / is / was / did
+- **s10** `choice`  Last year we ___ every morning.（游泳）
+    - 选项: swim / swims / ★swam / swimming
+- **s10** `choice`  选出 seafood 的意思
+    - 选项: 相机 / 青柠派 / 行李清单 / ★海鲜
+- **s10** `choice`  选出 packing list 的意思
+    - 选项: ★行李清单 / 海鲜 / 度假 / 一块；一片
+- **s10** `choice`  朋友明天要去度假，你想问她打算在那儿做什么，你说：
+    - 选项: ★What are you going to do there? / See you in a week! / Send photos! / What did you do there?
+- **s10** `choice`  朋友要去迈阿密，你去过，想推荐她一定要尝青柠派，你说：
+    - 选项: I forgot my camera. / That's the dream. / ★You must try it. / See you in a week!
+- **s10** `choice`  （读课文）Ivy 明天要去哪里度假？
+    - 选项: 纽约 / ★迈阿密 / 大峡谷 / 洛杉矶
+- **s10** `choice`  （读课文）Max 去年在迈阿密都做了什么？
+    - 选项: ★每天早上游泳，每晚吃海鲜 / 去了博物馆 / 开车环岛 / 每天冲浪
+- **s10** `choice`  （读课文）Max 去年在迈阿密忘了带什么？
+    - 选项: 手机 / 护照 / 行李清单 / ★相机
+- **s10** `choice`  🔊 听录音，Max 去年早上在迈阿密做什么？
+    - 选项: 吃海鲜 / 冲浪 / ★游泳 / 看日出
+- **s10** `choice`  🔊 听录音，Max 晚上吃的是什么？
+    - 选项: 青柠派 / 披萨 / ★海鲜 / 汉堡

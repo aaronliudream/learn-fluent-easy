@@ -1,6 +1,6 @@
 # 单元1 题库全量导出（语义复审用）
 
-> 共 273 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+> 共 288 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
 
 
 ## am1_l01
@@ -87,20 +87,26 @@
     - 选项: yours / ★your / I / you
 - **s10** `choice`  Is this your phone? — Yes, ___ is.
     - 选项: ★it / he / this / that
-- **s10** `choice`  ___, is this seat taken?
-    - 选项: I'm sorry / No problem / ★Excuse me / Thank you
-- **s10** `transform`  This is your umbrella.（变一般疑问句）
-    - 答案: Is this your umbrella?
-- **s10** `transform`  This is my wallet.（变一般疑问句；注意 my → your）
-    - 答案: Is this your wallet?
-- **s10** `transform`  This is your car.（变一般疑问句）
-    - 答案: Is this your car?
 - **s10** `choice`  Is this your key? — Yes, ___.
     - 选项: he is / this is / ★it is / I am
-- **s10** `choice`  ___ me, is this your bag?
-    - 选项: Sorry I / ★Excuse / Please you / Thank
-- **s10** `transform`  This is my chair.（变一般疑问句，my→your）
-    - 答案: Is this your chair?
+- **s10** `choice`  选出 lifesaver 的意思
+    - 选项: ★救星、帮大忙的人 / 椅子 / 手机 / 女士
+- **s10** `choice`  “打扰一下”用英语怎么说？
+    - 选项: ★Excuse me / Here you go / No problem / Have a good one
+- **s10** `choice`  你捡到别人的手机,要递还给对方,你说：
+    - 选项: ★Here you go. / Thank you. / Excuse me? / No problem.
+- **s10** `choice`  别人帮了你一个大忙,你想表达感激,可以说：
+    - 选项: ★You're a lifesaver! / Here you go. / Is this your phone? / Excuse me.
+- **s10** `choice`  (读课文)Tyler 是怎么开口跟 Emma 搭话的？
+    - 选项: ★Excuse me, ma'am. / Here you go. / Thank you so much! / No problem.
+- **s10** `choice`  (读课文)Emma 为什么说 Tyler 是 “a lifesaver”？
+    - 选项: ★因为 Tyler 把她的手机还给了她 / 因为 Tyler 请她喝咖啡 / 因为 Tyler 是她的朋友 / 因为 Tyler 修好了她的手机
+- **s10** `choice`  (读课文)结尾 Tyler 说的 “Have a good one!” 是什么意思？
+    - 选项: ★祝你愉快(美式告别语) / 给你 / 你说什么？ / 对不起
+- **s10** `choice`  🔊 听录音,选出这个词的意思
+    - 选项: ★椅子 / 手机 / 女士 / 救星
+- **s10** `choice`  🔊 听录音,选出它的意思
+    - 选项: ★打扰一下 / 谢谢 / 给你 / 不客气
 
 ## am1_l02
 
@@ -120,8 +126,8 @@
     - 选项: ★One moment, please. / Yes, it is. / Here you go. / I'm sorry.
 - **s5** `choice` [gp3] 服务结束向客人道别：
     - 选项: Yes? / Excuse me! / ★Have a great night! / One moment!
-- **s5** `choice` [gp1] ___ your coffee, ma'am.
-    - 选项: ★Here's / This are / Here are / There am
+- **s5** `choice` [gp1] ___ your tea, sir.
+    - 选项: ★Here's / Here / This / There's a
 - **s5** `choice` [gp1] ___ your bags, sir.
     - 选项: Here am / This is / ★Here are / Here's
 - **s5** `choice` [gp1] Here ___ your ticket.
@@ -137,7 +143,7 @@
 - **s5** `transform` [gp2] I am sorry, sir.（缩写 I am）
     - 答案: I'm sorry, sir.
 - **s6** `choice`  "灰色"的美式拼写是：
-    - 选项: grei / ★gray / grey / graey
+    - 选项: graye / ★gray / grae / grey
 - **s6** `choice`  酒店门口帮客人停车取车的服务叫：
     - 选项: park service / bus parking / ★valet parking / self parking
 - **s6** `choice`  美国服务业的小费通常给：
@@ -180,20 +186,26 @@
     - 选项: Give / Here are / ★Here's / You are
 - **s10** `choice`  Is this your car? — No, ___.
     - 选项: I'm not / ★it isn't / it is / this isn't
-- **s10** `choice`  你认错了人，应该说：
-    - 选项: ★I'm sorry. / Here you go. / Excuse me? / No problem.
-- **s10** `transform`  This is your tip.（变一般疑问句）
-    - 答案: Is this your tip?
-- **s10** `transform`  Here's your key.（key 改为 keys）
-    - 答案: Here are your keys.
-- **s10** `transform`  My car is the blue one.（变一般疑问句，my
-    - 答案: your）→ Is your car the blue one?
 - **s10** `choice`  Here ___ your keys and your phone.（并列复数）
     - 选项: be / am / ★are / is
-- **s10** `choice`  One ___, please.（请稍等）
-    - 选项: ★moment / wait / time now / minute clock
-- **s10** `transform`  Here are your keys.（keys 改为 key）
-    - 答案: Here's your key.
+- **s10** `choice`  选出 tip 的意思
+    - 选项: ★小费 / 取车票 / 片刻 / 钥匙
+- **s10** `choice`  选出 gray 的意思
+    - 选项: 汽车 / ★灰色的 / 酒店 / 蓝色的
+- **s10** `choice`  你是酒店门童，晚上迎接到店的客人，你说：
+    - 选项: This is your tip. / Here's my ticket. / ★Good evening, sir. Welcome to the Grandview Hotel. / No, it isn't.
+- **s10** `choice`  你把小费递给门童，你说：
+    - 选项: Here's my ticket. / ★And this is your tip. / One moment, please. / Is this your car?
+- **s10** `choice`  （读课文）那辆灰色 SUV 是大卫的车吗？
+    - 选项: 那是酒店的车 / 是的，就是他的 / ★不是，他的车是蓝色那辆 / 那是马库斯的车
+- **s10** `choice`  （读课文）大卫最后给了马库斯什么？
+    - 选项: 取车票 / ★小费 / 钥匙 / 一辆车
+- **s10** `choice`  （读课文）这段对话发生在哪里？
+    - 选项: ★格兰景酒店 / 医院 / 学校 / 派对上
+- **s10** `choice`  🔊 听录音，那辆灰色 SUV 是大卫的车吗？
+    - 选项: 那是他妻子的 / 是的 / ★不是 / 那是新车
+- **s10** `choice`  🔊 听录音，大卫的车是什么颜色的？
+    - 选项: 红色 / ★蓝色 / 灰色 / 黑色
 
 ## am1_l03
 
@@ -219,14 +231,12 @@
     - 选项: two an / a / the / ★an
 - **s5** `choice` [gp1] Ben is ___ teacher.
     - 选项: 不填 / an / ★a / the
-- **s5** `choice` [gp1] a / an 的选择看单词的：
-    - 选项: 词性 / 长度 / 字母 / ★发音
 - **s5** `transform` [gp1] He is a engineer.（改正错误）
     - 答案: He is an engineer.
 - **s5** `choice` [gp2] ___ is my friend Diego.（介绍）
     - 选项: ★This / My / He him / It one
-- **s5** `choice` [gp2] I'm from Mexico. I'm ___.
-    - 选项: Mexico man / Mexicos / ★Mexican / America
+- **s5** `choice` [gp2] He's from Mexico. He's ___.
+    - 选项: Mexico / ★Mexican / Mexicans / Mexican's
 - **s5** `transform` [gp2] She is from America.（改为"她是美国人"）
     - 答案: She is American.
 - **s6** `choice`  美国社区的邻里聚会叫：
@@ -236,7 +246,7 @@
 - **s6** `choice`  初次见面，美语最自然的问候是：
     - 选项: Take care! / How do you do? / ★Nice to meet you. / One moment.
 - **s6** `choice`  "社区"的美式拼写是：
-    - 选项: nabourhood / neighbourhood / neighborhod / ★neighborhood
+    - 选项: ★neighborhood / neighbourhood / nieghborhood / neighborhud
 - **s7** `cloze`  〔RACHEL: Hi, Ben! ___1___ is my friend Diego. BEN: Nice to __〕 第 1 空
     - 选项: He / ★This / You / My
 - **s7** `cloze`  〔RACHEL: Hi, Ben! ___1___ is my friend Diego. BEN: Nice to __〕 第 2 空
@@ -273,20 +283,26 @@
     - 选项: at / to / ★from / on
 - **s10** `choice`  ___ is my friend Kate.
     - 选项: She / ★This / You / He
-- **s10** `choice`  She's ___ teacher.
-    - 选项: an / 不填 / two / ★a
-- **s10** `transform`  He is a teacher.（主语换成 engineer 职业句）
-    - 答案: He is an engineer.
-- **s10** `transform`  This is my friend.（变一般疑问句，my
-    - 答案: your）→ Is this your friend?
-- **s10** `transform`  I'm from Mexico.（改为"我是墨西哥人"）
-    - 答案: I'm Mexican.
-- **s10** `choice`  She has ___ American friend.
-    - 选项: a / one a / ★an / the
-- **s10** `choice`  Nice to ___ you too.
-    - 选项: look / ★meet / nice / see it
-- **s10** `transform`  He is Mexican.（改为"他来自墨西哥"）
-    - 答案: He is from Mexico.
+- **s10** `choice`  He's ___ American teacher.
+    - 选项: ★an / a / two / the
+- **s10** `choice`  选出 engineer 的意思
+    - 选项: 教师 / ★工程师 / 朋友 / 派对
+- **s10** `choice`  选出 neighborhood 的意思
+    - 选项: 派对 / 中学 / ★社区；街坊 / 朋友
+- **s10** `choice`  有人对你说 “Nice to meet you.”，你回应：
+    - 选项: Welcome to the block. / I'm from Mexico. / ★Nice to meet you too. / Yes, I am.
+- **s10** `choice`  你要把朋友迭戈介绍给别人认识，你说：
+    - 选项: ★This is my friend Diego. / Are you new here? / Nice to meet you too. / Welcome to the block!
+- **s10** `choice`  （读课文）迭戈来自哪里？
+    - 选项: ★墨西哥 / 街区 / 中学 / 美国
+- **s10** `choice`  （读课文）本是做什么工作的？
+    - 选项: ★中学老师 / 司机 / 学生 / 工程师
+- **s10** `choice`  （读课文）迭戈的职业是什么？
+    - 选项: 学生 / ★工程师 / 教师 / 朋友
+- **s10** `choice`  🔊 听录音，迭戈来自哪个国家？
+    - 选项: 美国 / 英国 / 法国 / ★墨西哥
+- **s10** `choice`  🔊 听录音，迭戈是刚搬来这个社区的吗？
+    - 选项: 他不确定 / 不是 / ★是的 / 他要搬走了
 
 ## am1_l04
 
@@ -343,7 +359,7 @@
 - **s7** `cloze`  〔SOFIA: My ___'s Sofia.〕 第 6 空
     - 选项: car / ★name / friend / job
 - **s7** `cloze`  〔SOFIA: Are you a ___ here too?〕 第 7 空
-    - 选项: nurse / teacher / ★student / driver
+    - 选项: ★nurse / teacher / student / driver
 - **s7** `cloze`  〔KEVIN: I'm ___ electrician.〕 第 8 空
     - 选项: ★an / the / a / one
 - **s7** `cloze`  〔SOFIA: ___! Nice to meet you, Kevin.〕 第 9 空
@@ -362,24 +378,30 @@
     - 答案: Cool! / Awesome!
 - **s10** `choice`  ___ you a student? — Yes, I am.
     - 选项: ★Are / Am / Do / Is
-- **s10** `choice`  What's your job? — ___
-    - 选项: I'm fine. / Nice to meet you. / ★I'm a cashier. / Yes, I am.
+- **s10** `choice`  Kevin is ___ cashier.
+    - 选项: an / ★a / the / two
 - **s10** `choice`  Are you Brazilian? — No, ___.
     - 选项: ★I'm not / I amn't / you aren't / I not
 - **s10** `choice`  He's ___ Uber driver.
     - 选项: the / 不填 / ★an / a
-- **s10** `transform`  You are a nurse.（变一般疑问句）
-    - 答案: Are you a nurse?
-- **s10** `transform`  I'm a plumber.（变否定句）
-    - 答案: I'm not a plumber.
-- **s10** `transform`  Are you new here?（作肯定简答）
-    - 答案: Yes, I am.
-- **s10** `choice`  What's your job? — I'm ___ plumber.
-    - 选项: the / one / an / ★a
-- **s10** `choice`  ___ about you?
-    - 选项: Who / ★What / How much / When it
-- **s10** `transform`  He is an electrician.（变一般疑问句，he→you）
-    - 答案: Are you an electrician?
+- **s10** `choice`  选出 nurse 的意思
+    - 选项: 水管工 / 电工 / 司机 / ★护士
+- **s10** `choice`  选出 electrician 的意思
+    - 选项: ★电工 / 护士 / 收银员 / 司机
+- **s10** `choice`  别人问你 “Are you American?”，你不是美国人，你回答：
+    - 选项: Nice to meet you. / ★No, I'm not. I'm Brazilian. / What about you? / Yes, I am.
+- **s10** `choice`  对方介绍完自己，你想反问 “你呢？”，你说：
+    - 选项: Cool! / What's your job? / Are you new here? / ★What about you?
+- **s10** `choice`  （读课文）索菲亚是哪国人？
+    - 选项: 美国人 / 学生 / 护士 / ★巴西人
+- **s10** `choice`  （读课文）凯文的工作是什么？
+    - 选项: 收银员 / 司机 / 护士 / ★电工
+- **s10** `choice`  （读课文）索菲亚和凯文都是这里的学生吗？
+    - 选项: ★是的，都是 / 都不是 / 只有索菲亚是 / 只有凯文是
+- **s10** `choice`  🔊 听录音，索菲亚是做什么工作的？
+    - 选项: ★护士 / 司机 / 电工 / 收银员
+- **s10** `choice`  🔊 听录音，凯文是做什么工作的？
+    - 选项: 护士 / 水管工 / ★电工 / 学生
 
 ## am1_l05
 
@@ -399,8 +421,8 @@
     - 选项: a tired / the tired / ★tired / tireds
 - **s5** `choice` [gp2] They are ___ today.（很棒）
     - 选项: greats / ★great / the great / a great
-- **s5** `choice` [gp1] How ___ you today?
-    - 选项: am / ★are / is / be
+- **s5** `choice` [gp1] How ___ your kids? — They're great.
+    - 选项: is / am / ★are / be
 - **s5** `choice` [gp1] How ___ your puppy? — He's happy.
     - 选项: ★is / am / do / are
 - **s5** `choice` [gp1] How are you? — I'm ___, thanks.
@@ -411,8 +433,6 @@
     - 答案: I'm pretty good.
 - **s5** `choice` [gp2] My wife is ___.（累了）
     - 选项: tires / ★tired / a tired / tiredly
-- **s5** `choice` [gp2] 形容词作表语时前面：
-    - 选项: 必须加 an / 必须加 the / 必须加 a / ★不加 a·an
 - **s5** `transform` [gp2] We are happy.（主语换成 They）
     - 答案: They are happy.
 - **s6** `choice`  pretty good 里的 pretty 意思是：
@@ -453,26 +473,32 @@
     - 答案: How's your son? / How's your daughter?
 - **s9** `scenario`  和朋友道别，叮嘱他保重
     - 答案: Take care! / See you later!
-- **s10** `choice`  How ___ your husband? — He's fine.
-    - 选项: are / ★is / be / am
-- **s10** `choice`  How are you? — ___
-    - 选项: I'm a teacher. / Yes, I am. / ★I'm pretty good. / Here you go.
-- **s10** `choice`  The puppy is ___.
-    - 选项: an happy / a happy / happies / ★happy
-- **s10** `choice`  道别时说：
-    - 选项: Here you go. / Nice to meet you. / ★Take care! / Excuse me!
-- **s10** `transform`  She is fine.（变疑问句问状态：她怎么样？）
-    - 答案: How is she?
-- **s10** `transform`  I'm tired.（主语换成 He）
-    - 答案: He's tired.
-- **s10** `transform`  How are you?（用 great 回答）
-    - 答案: I'm great, thanks.
+- **s10** `choice`  How ___ your wife? — She's fine.
+    - 选项: are / be / ★is / am
+- **s10** `choice`  How's your puppy? — ___
+    - 选项: I'm fine. / Yes, he is. / Nice to meet you. / ★He's happy.
+- **s10** `choice`  Carlos is ___.
+    - 选项: ★happy / a happy / an happy / happies
 - **s10** `choice`  I'm pretty ___.（挺好的）
     - 选项: fine very / well much / nice too / ★good
-- **s10** `choice`  和朋友道别说"回头见"：
-    - 选项: See late you. / You see after. / ★See you later. / Look you late.
-- **s10** `transform`  They are fine.（变疑问：他们怎么样？）
-    - 答案: How are they?
+- **s10** `choice`  选出 puppy 的意思
+    - 选项: 早晨 / 今天 / ★小狗 / 妻子
+- **s10** `choice`  选出 wife 的意思
+    - 选项: 难对付的家伙 / ★妻子 / 小狗 / 早晨
+- **s10** `choice`  早上遇到朋友，你打招呼说：
+    - 选项: Take care! / ★Good morning! How are you today? / She's fine. / See you later!
+- **s10** `choice`  朋友要走了，你想说 “保重”，你说：
+    - 选项: How's your wife? / How are you? / I'm great, thanks. / ★Take care!
+- **s10** `choice`  （读课文）卡洛斯的妻子怎么样？
+    - 选项: ★她很好 / 她生病了 / 她很累 / 不知道
+- **s10** `choice`  （读课文）卡洛斯家的新小狗怎么样？
+    - 选项: 不见了 / ★很难带，但很开心 / 生病了 / 很安静
+- **s10** `choice`  （读课文）梅根今天感觉怎么样？
+    - 选项: 生病了 / 很累 / 很糟糕 / ★挺好的
+- **s10** `choice`  🔊 听录音，卡洛斯的新小狗怎么样？
+    - 选项: 刚睡着 / 很安静 / ★很难带，但很开心 / 病了
+- **s10** `choice`  🔊 听录音，梅根在问卡洛斯的什么？
+    - 选项: ★新来的小狗 / 今天天气 / 妻子 / 工作
 
 ## am1_l06
 
@@ -496,14 +522,12 @@
     - 选项: Which one / Who / What / ★Whose
 - **s5** `choice` [gp1] This is ___ mug.（Tina 的）
     - 选项: Tinas / ★Tina's / the Tina / Tina
-- **s5** `choice` [gp1] 以 s 结尾的人名（Chris）所有格写法：
-    - 选项: ★Chris's / Chris / Chrises' / Chris of
 - **s5** `transform` [gp1] This is Amanda's desk.（变 whose 疑问句）
     - 答案: Whose desk is this?
 - **s5** `choice` [gp1] That is ___ car.（我姐姐的）
     - 选项: sister my / ★my sister's / my sisters the / my sister
-- **s5** `choice` [gp2] She is my sister. ___ mug is pink.
-    - 选项: Hers the / She / ★Her / His
+- **s5** `choice` [gp2] He is my brother. ___ mug is blue.
+    - 选项: He / Him / He's / ★His
 - **s5** `choice` [gp2] He is my friend. ___ car is new.
     - 选项: ★His / Him / He / Her
 - **s5** `transform` [gp2] This is his jacket.（his 换成"克里斯的"）
@@ -519,7 +543,7 @@
 - **s7** `cloze`  〔TINA: ___1___ coffee mug is this? TINA: No, ___2___ mug is p〕 第 1 空
     - 选项: Who / ★Whose / What / Which
 - **s7** `cloze`  〔TINA: ___1___ coffee mug is this? TINA: No, ___2___ mug is p〕 第 2 空
-    - 选项: his / my / your / ★her
+    - 选项: his / ★my / your / her
 - **s7** `cloze`  〔TINA: ___1___ coffee mug is this? TINA: No, ___2___ mug is p〕 第 3 空
     - 选项: ★Chris's / Chris / Chrises / the Chris
 - **s7** `cloze`  〔TINA: ___1___ coffee mug is this? TINA: No, ___2___ mug is p〕 第 4 空
@@ -554,15 +578,21 @@
     - 选项: ★Her / Your / His / My
 - **s10** `choice`  Is this your phone? — Yes, ___ my phone.
     - 选项: this're / it are / ★that's / whose
-- **s10** `transform`  This is Chris's mug.（变 whose 疑问句）
-    - 答案: Whose mug is this?
-- **s10** `transform`  This is her bag.（her 换成"杰克的"）
-    - 答案: This is Jake's bag.
-- **s10** `transform`  That is his jacket.（变一般疑问句）
-    - 答案: Is that his jacket?
-- **s10** `choice`  ___ phone is this? — It's Maria's.
-    - 选项: What / ★Whose / Where / Who
-- **s10** `choice`  This is my brother. ___ name is Sam.
-    - 选项: ★His / Her / My / Your
-- **s10** `transform`  That is her mug.（变一般疑问句）
-    - 答案: Is that her mug?
+- **s10** `choice`  选出 whose 的意思
+    - 选项: 他的 / 她的 / 那个 / ★谁的
+- **s10** `choice`  选出 mug 的意思
+    - 选项: 水槽 / 粉色的 / 黑色的 / ★马克杯
+- **s10** `choice`  你不小心做错了事，想认错说 “我的错”，你说：
+    - 选项: Please wash it. / Thanks, Tina! / ★My bad. Sorry! / No problem.
+- **s10** `choice`  别人向你道谢，你回应 “不客气”，你说：
+    - 选项: Whose mug is this? / My bad. / Please wash it. / ★No problem.
+- **s10** `choice`  （读课文）水槽里那只黑色杯子是谁的？
+    - 选项: 杰克的 / 阿曼达的 / ★克里斯的 / 蒂娜的
+- **s10** `choice`  （读课文）阿曼达的杯子是什么颜色？
+    - 选项: 黑色 / 白色 / 灰色 / ★粉色
+- **s10** `choice`  （读课文）蒂娜请克里斯做什么？
+    - 选项: 马上离开 / 买个新杯子 / 向阿曼达道歉 / ★把杯子洗了
+- **s10** `choice`  🔊 听录音，选出这个词的意思
+    - 选项: 黑色的 / 洗 / ★谁的 / 粉色的
+- **s10** `choice`  🔊 听录音，克里斯要认领这个杯子，他怎么回应？
+    - 选项: No problem. / Whose mug is this? / Please wash it. / ★Oh, yes! That's my mug.

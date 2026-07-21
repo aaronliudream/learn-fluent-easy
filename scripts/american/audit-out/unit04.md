@@ -1,6 +1,6 @@
 # 单元4 题库全量导出（语义复审用）
 
-> 共 288 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+> 共 299 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
 
 
 ## am1_l19
@@ -25,8 +25,6 @@
     - 选项: are / am / be / ★is
 - **s5** `choice` [gp1] I'm going to ___ lemonade and soda.
     - 选项: getting / gets / ★get / got
-- **s5** `choice` [gp1] be going to 后面接：
-    - 选项: ★动词原形 / 动词-ing / to+动词-ing / 动词-s
 - **s5** `transform` [gp1] She makes potato salad.（变 be going to 计划）
     - 答案: She is going to make potato salad.
 - **s5** `choice` [gp2] ___ she going to come to the BBQ? — Yes, she is.
@@ -44,7 +42,7 @@
 - **s6** `choice`  hot dog 是：
     - 选项: 辣味热汤 / 一种宠物 / ★热狗（面包夹香肠） / 烤红薯
 - **s6** `choice`  美国聚会"各自带一道菜"的形式叫：
-    - 选项: foodshare / ★potluck / luckpot / potdish
+    - 选项: buffet / dinner party / food fair / ★potluck
 - **s7** `cloze`  〔MARK: We're ___1___ to have a BBQ! MARK: I'm going to ___2__〕 第 1 空
     - 选项: ★going / go / goes / gone
 - **s7** `cloze`  〔MARK: We're ___1___ to have a BBQ! MARK: I'm going to ___2__〕 第 2 空
@@ -83,24 +81,30 @@
     - 答案: I'm going to bring brownies.
 - **s10** `choice`  I'm ___ to make dinner.
     - 选项: go / goes / went / ★going
-- **s10** `choice`  She is going to ___ a cake.
-    - 选项: made / makes / ★make / making
 - **s10** `choice`  ___ you going to come? — Yes, I am.
     - 选项: ★Are / Do / Can / Is
 - **s10** `choice`  It's going to ___ a great day!
     - 选项: being / are / ★be / is
-- **s10** `transform`  I grill burgers.（变 be going to 计划）
-    - 答案: I am going to grill burgers.
-- **s10** `transform`  They are going to bring soda.（变一般疑问句）
-    - 答案: Are they going to bring soda?
-- **s10** `transform`  We are going to have a party.（变否定句）
-    - 答案: We aren't going to have a party.
 - **s10** `choice`  We ___ going to get soda.
     - 选项: is / ★are / be / am
-- **s10** `choice`  He's going to ___ hot dogs.
-    - 选项: grilling / grills / ★grill / grilled
-- **s10** `transform`  They are going to have a BBQ.（变否定句）
-    - 答案: They aren't going to have a BBQ.
+- **s10** `choice`  选出 grill 的意思
+    - 选项: 带来 / 计划 / 后院 / ★烤（肉）
+- **s10** `choice`  选出 backyard 的意思
+    - 选项: ★后院 / 有空的 / 汽水 / 有名的
+- **s10** `choice`  朋友问你 “Are you free this Saturday?”，你这天有空、想答应，你说：
+    - 选项: No, I'm not. / ★Yes, I am. / Yum! / See you Saturday!
+- **s10** `choice`  在烧烤派对上你想主动带点吃的，你说：
+    - 选项: Are you free this Saturday? / ★I'm going to bring brownies! / See you Saturday! / What's the plan?
+- **s10** `choice`  （读课文）Mark 打算烤什么？
+    - 选项: 柠檬水 / 布朗尼 / 土豆沙拉 / ★汉堡和热狗
+- **s10** `choice`  （读课文）谁要做招牌土豆沙拉？
+    - 选项: 没有人 / Tina / Mark / ★Lisa
+- **s10** `choice`  （读课文）Tina 打算带什么来？
+    - 选项: 汉堡 / 汽水 / 土豆沙拉 / ★布朗尼
+- **s10** `choice`  🔊 听录音：马克邀请蒂娜做什么？
+    - 选项: 一起做作业 / 去买东西 / ★参加后院烧烤 / 去看电影
+- **s10** `choice`  🔊 听录音：蒂娜这周六有空吗？
+    - 选项: 还不确定 / 要上班 / ★有空 / 没空
 
 ## am1_l20
 
@@ -188,27 +192,29 @@
     - 选项: ★make / made / makes / making
 - **s10** `choice`  ___ off the TV, please.
     - 选项: To turn / Turning / ★Turn / Turns
-- **s10** `choice`  朋友端着热汤，你提醒小心：
-    - 选项: Surprise! / Hurry! / Shh! / ★Careful!
-- **s10** `transform`  You drop the cake.（变否定祈使句）
-    - 答案: Don't drop the cake.
-- **s10** `transform`  Touch the balloons.（变否定祈使句）
-    - 答案: Don't touch the balloons.
-- **s10** `transform`  You worry.（变否定祈使句安慰对方）
-    - 答案: Don't worry.
 - **s10** `choice`  ___ worry! It's okay.
     - 选项: Doesn't / Not / ★Don't / No
-- **s10** `choice`  Please ___ off your phone.
-    - 选项: ★turn / turned / turning / turns
-- **s10** `transform`  You drop the balloons.（变否定祈使句）
-    - 答案: Don't drop the balloons.
+- **s10** `choice`  选出 balloon 的意思
+    - 选项: ★气球 / 声音 / 横幅 / 惊喜
+- **s10** `choice`  选出 banner 的意思
+    - 选项: 准备好的 / ★横幅 / 关掉 / 气球
+- **s10** `choice`  朋友端着很沉的蛋糕，你提醒他小心别摔，你说：
+    - 选项: Happy birthday! / What are you doing? / ★Careful! Don't drop it! / Turn off the lights!
+- **s10** `choice`  寿星快到门口了，你要大家安静别出声，你说：
+    - 选项: ★Shh! Don't make a sound! / Hurry! / Move it up a little. / How is it?
+- **s10** `choice`  （读课文）Alex 和 Ruby 在准备什么？
+    - 选项: 一次考试 / 一场户外烧烤 / ★给妈妈的生日惊喜派对 / 一次旅行
+- **s10** `choice`  （读课文）Alex 正在搬什么？
+    - 选项: ★蛋糕 / 灯 / 横幅 / 气球
+- **s10** `choice`  （读课文）妈妈几点到？
+    - 选项: 三点 / 五点 / ★六点 / 十点
+- **s10** `choice`  🔊 听录音：Alex 正在做什么？
+    - 选项: 挂横幅 / ★端蛋糕 / 关灯 / 吹气球
+- **s10** `choice`  🔊 听录音：Ruby 提醒 Alex 什么？
+    - 选项: ★小心别摔了蛋糕 / 别出声 / 快点挂横幅 / 去开灯
 
 ## am1_l21
 
-- **s5** `choice` [gp1] 下列哪个是不可数名词：
-    - 选项: box / cookie / ★milk / egg
-- **s5** `choice` [gp1] 下列哪个是可数名词：
-    - 选项: ★egg / water / bread / cheese
 - **s5** `choice` [gp1] There is some ___.
     - 选项: a juice / juices / ★juice / egg
 - **s5** `choice` [gp2] There's ___ milk in the fridge.（一些）
@@ -221,10 +227,6 @@
     - 选项: lots one / much / many / ★lot
 - **s5** `transform` [gp2] There is some juice.（变否定句，some→any）
     - 答案: There isn't any juice.
-- **s5** `choice` [gp1] 下列哪个是不可数名词：
-    - 选项: burger / ★bread / cookie / banner
-- **s5** `choice` [gp1] 下列哪个是可数名词：
-    - 选项: ★cookie / sugar / juice / milk
 - **s5** `choice` [gp1] There is some ___ in the fridge.
     - 选项: eggs / cheeses / ★cheese / a cheese
 - **s5** `transform` [gp1] There is an egg.（变复数：两个）
@@ -242,7 +244,7 @@
 - **s6** `choice`  领到任务马上去办，说：
     - 选项: In it! / ★On it! / At it! / Off it!
 - **s6** `choice`  "We're good." 在对话里的意思是：
-    - 选项: 我们很擅长 / 没问题 / 我们不缺了 / ★我们不缺了/没问题 / 我们赢了 / 我们是好人
+    - 选项: 我们很擅长 / ★我们不缺了/没问题 / 我们赢了 / 我们是好人
 - **s6** `choice`  追问"那……呢？"用：
     - 选项: ★What about...? / What color...? / Which one...? / Who is...?
 - **s7** `cloze`  〔AMY: I'm making a shopping ___1___. NATE: There's ___2___ mi〕 第 1 空
@@ -285,27 +287,31 @@
     - 选项: ★any / an / a / some
 - **s10** `choice`  There are some ___.
     - 选项: egg / a egg / ★eggs / milks
-- **s10** `choice`  milk 是______名词。
-    - 选项: 专有 / ★不可数 / 可数 / 复数
-- **s10** `transform`  There is some juice.（变一般疑问句，some
-    - 答案: any）→ Is there any juice?
-- **s10** `transform`  There is some bread.（变否定句，some
-    - 答案: any）→ There isn't any bread.
-- **s10** `transform`  There is an egg in the fridge.（变复数：一些鸡蛋）
-    - 答案: There are some eggs in the fridge.
 - **s10** `choice`  There isn't ___ juice.
     - 选项: some / a / an / ★any
-- **s10** `choice`  bread 是______名词。
-    - 选项: ★不可数 / 复数 / 专有 / 可数
-- **s10** `transform`  There is some milk.（变一般疑问句，some→any）
-    - 答案: Is there any milk?
+- **s10** `choice`  选出 fridge 的意思
+    - 选项: 果汁 / ★冰箱 / 面包 / 购物清单
+- **s10** `choice`  选出 cheese 的意思
+    - 选项: ★奶酪 / 牛奶 / 检查 / 鸡蛋
+- **s10** `choice`  你想问冰箱里还有没有果汁，你问：
+    - 选项: There's a lot of water. / On it! / ★Is there any juice? / We're good!
+- **s10** `choice`  妈妈让你查冰箱，你要表示“这就去办”，你说：
+    - 选项: No, there isn't. / ★On it! / It's old. / Six.
+- **s10** `choice`  （读课文）冰箱里有牛奶吗？
+    - 选项: ★有一些 / 只有一点且过期 / 不知道 / 完全没有
+- **s10** `choice`  （读课文）下面哪样东西冰箱里没有了？
+    - 选项: 鸡蛋 / 水 / ★奶酪 / 牛奶
+- **s10** `choice`  （读课文）冰箱里有几个鸡蛋？
+    - 选项: 一个 / 很多数不清 / 一个也没有 / ★六个
+- **s10** `choice`  🔊 听录音：冰箱里有果汁吗？
+    - 选项: 有很多果汁 / 不知道 / 只有一点 / ★没有果汁
+- **s10** `choice`  🔊 听录音：根据对话，下面哪样也没有了？
+    - 选项: 牛奶 / 面包 / ★奶酪 / 鸡蛋
 
 ## am1_l22
 
 - **s5** `choice` [gp1] I ___ play the drums.
     - 选项: can to / cans / am can / ★can
-- **s5** `choice` [gp1] can 后面接：
-    - 选项: 动词-ing / ★动词原形 / 动词-s / to+动词
 - **s5** `choice` [gp1] He can't ___.
     - 选项: ★sing / sings / sang / singing
 - **s5** `transform` [gp1] She plays bass.（用 can 表能力）
@@ -384,18 +390,24 @@
     - 选项: plays / ★play / played / playing
 - **s10** `choice`  Can you sing? — No, I ___.
     - 选项: not / am not / ★can't / don't
-- **s10** `transform`  She plays the guitar.（用 can 表能力）
-    - 答案: She can play the guitar.
-- **s10** `transform`  You can play the drums.（变一般疑问句）
-    - 答案: Can you play the drums?
-- **s10** `transform`  I can sing.（变否定句）
-    - 答案: I can't sing.
-- **s10** `choice`  She ___ sing a little.
-    - 选项: ★can / cans / is can / can to
-- **s10** `choice`  Can you play bass? — No, I ___.
-    - 选项: no / don't / ★can't / am not
-- **s10** `transform`  They practice in the garage.（用 can 表能力）
-    - 答案: They can practice in the garage.
+- **s10** `choice`  选出 guitar 的意思
+    - 选项: 周末 / ★吉他 / 鼓 / 贝斯
+- **s10** `choice`  选出 practice 的意思
+    - 选项: 真的 / ★排练；练习 / 当然 / 算我一个
+- **s10** `choice`  有人问 “Can you play the guitar?”，你不会弹，如实回答：
+    - 选项: ★No, I can't. / Yes, I can. / I'm in! / Sure thing.
+- **s10** `choice`  朋友邀你加入乐队，你很想参加，你说：
+    - 选项: ★Then I'm in! / No, I can't. / Show us! / Really?
+- **s10** `choice`  （读课文）Chloe 会演奏什么乐器？
+    - 选项: 吉他 / ★鼓 / 钢琴 / 贝斯
+- **s10** `choice`  （读课文）下面关于 Chloe 哪一项正确？
+    - 选项: 她只会弹贝斯 / 她什么都不会 / 她会弹吉他 / ★她还会唱一点歌
+- **s10** `choice`  （读课文）他们打算在哪里排练？
+    - 选项: Chloe 家 / 学校 / ★Jordan 家的车库 / 公园
+- **s10** `choice`  🔊 听录音：Chloe 会弹吉他吗？
+    - 选项: 会弹贝斯 / 什么都不会 / 会弹吉他 / ★不会，但她会打鼓
+- **s10** `choice`  🔊 听录音：Chloe 会演奏哪种乐器？
+    - 选项: 钢琴 / ★鼓 / 贝斯 / 吉他
 
 ## am1_l23
 
@@ -425,8 +437,6 @@
     - 选项: ★him / his / her / he
 - **s5** `choice` [gp2] The report is ready. Check ___, please.
     - 选项: they / ★it / them / its
-- **s5** `choice` [gp2] 宾语代词：they → ___
-    - 选项: ★them / they's / their / theirs
 - **s5** `choice` [gp2] Dana and I are lost. Can you help ___?
     - 选项: our / ours / we / ★us
 - **s5** `transform` [gp2] Give the charts to Kim and Sam.（用 them 替代 Kim and Sam）
@@ -479,20 +489,26 @@
     - 选项: she / he / hers / ★her
 - **s10** `choice`  These are my charts. Can you print ___?
     - 选项: they / ★them / it / their
-- **s10** `choice`  We're lost. Can you help ___?
-    - 选项: we / our / ★us / they
-- **s10** `transform`  Can you check the report?（用 it 替代 the report）
-    - 答案: Can you check it?
-- **s10** `transform`  Give the box to Kim.（用 her 替代 Kim）
-    - 答案: Give the box to her.
-- **s10** `transform`  You can help me.（变礼貌请求疑问句）
-    - 答案: Can you help me?
-- **s10** `choice`  Give the box to ___.（他）
-    - 选项: ★him / he / his / they
-- **s10** `choice`  The cookies are ready. Can you get ___?
-    - 选项: it / ★them / theirs / they
-- **s10** `transform`  Can you print the charts?（用 them 替代 the charts）
-    - 答案: Can you print them?
+- **s10** `choice`  Chris is busy. Can you help ___?
+    - 选项: he / ★him / his / her
+- **s10** `choice`  选出 print 的意思
+    - 选项: 帮助 / 图表 / 给 / ★打印
+- **s10** `choice`  选出 busy 的意思
+    - 选项: ★忙的 / 成交 / 到期的 / 报告
+- **s10** `choice`  同事帮了你大忙，你想夸他并请他喝咖啡，你说：
+    - 选项: What's up? / Anything else? / ★You're the best! Coffee is on me! / Give it to me.
+- **s10** `choice`  别人问 “Anything else?”，你没有别的事了，你回答：
+    - 选项: ★No, that's it. / Deal. / Sure! What's up? / Give it to her.
+- **s10** `choice`  （读课文）Dana 请 Sam 帮的第一件事是什么？
+    - 选项: 帮她打印图表 / 请她喝咖啡 / 把箱子给 Kim / ★帮她核对报告
+- **s10** `choice`  （读课文）那个箱子要交给谁？
+    - 选项: ★Kim / Sam / Dana / 老板
+- **s10** `choice`  （读课文）最后 Dana 打算怎么谢 Sam？
+    - 选项: 给他钱 / ★请他喝咖啡 / 送他礼物 / 帮他打印
+- **s10** `choice`  🔊 听录音：Dana 请 Sam 帮忙打印什么？
+    - 选项: 报告 / ★图表 / 箱子 / 清单
+- **s10** `choice`  🔊 听录音：那个箱子是给谁的？
+    - 选项: Dana / ★Kim / Sam / 老板
 
 ## am1_l24
 
@@ -564,8 +580,8 @@
     - 选项: get / gave / go / ★got
 - **s8** `choice`  Where is Rosa?
     - 选项: ★At a coffee shop / At a library / At the office / At a BBQ
-- **s8** `choice`  Rosa's latte
-    - 选项: We don't know / Hot / ★Iced / hot or iced? — / Warm
+- **s8** `choice`  Rosa's latte—hot or iced?
+    - 选项: We don't know / Hot / ★Iced / Warm
 - **s8** `choice`  Rosa says "I don't like ___ in my coffee."
     - 选项: Ice / ★Sugar / Oat milk / Milk
 - **s8** `choice`  Rosa also wants a ___.
@@ -584,15 +600,21 @@
     - 选项: liking / likes / ★like / liked
 - **s10** `choice`  Do you want milk? — No, I ___.
     - 选项: am not / ★don't / no / can't
-- **s10** `transform`  You like iced coffee.（变一般疑问句）
-    - 答案: Do you like iced coffee?
-- **s10** `transform`  I like sweet drinks.（变否定句）
-    - 答案: I don't like sweet drinks.
-- **s10** `transform`  I want a latte.（加 please 变礼貌点单）
-    - 答案: I want a latte, please.
-- **s10** `choice`  ___ you want milk or oat milk?
-    - 选项: ★Do / Is / Are / Can
-- **s10** `choice`  I don't ___ a cookie.
-    - 选项: wanted / wanting / wants / ★want
-- **s10** `transform`  You like lattes.（变否定句）
-    - 答案: You don't like lattes.
+- **s10** `choice`  选出 sweet 的意思
+    - 选项: 选择 / ★甜的 / 糖 / 加冰的
+- **s10** `choice`  选出 iced 的意思
+    - 选项: 想要 / 燕麦奶 / ★加冰的 / 甜的
+- **s10** `choice`  咖啡店员问你 “Hot or iced?”，你今天想喝冰的，你说：
+    - 选项: No sugar. / Hot or iced? / Not really. / ★Iced, please.
+- **s10** `choice`  店员问你喜不喜欢甜口的，你不太喜欢，想委婉地说，你说：
+    - 选项: I want a cookie. / Nice choice. / ★Not really. / You got it!
+- **s10** `choice`  （读课文）Rosa 点的是热的还是冰的？
+    - 选项: 热的 / ★冰的 / 常温的 / 没点
+- **s10** `choice`  （读课文）Rosa 想要哪种奶？
+    - 选项: 牛奶 / ★燕麦奶 / 豆奶 / 不要奶
+- **s10** `choice`  （读课文）Rosa 的咖啡加糖吗？
+    - 选项: 加一点糖 / ★不加糖 / 加很多糖 / 加燕麦
+- **s10** `choice`  🔊 听录音：Rosa 想要哪种奶？
+    - 选项: 豆奶 / ★燕麦奶 / 牛奶 / 不要奶
+- **s10** `choice`  🔊 听录音：Rosa 对燕麦奶是什么态度？
+    - 选项: 第一次喝 / 不喜欢 / ★非常喜欢 / 无所谓

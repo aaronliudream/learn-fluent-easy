@@ -9,8 +9,6 @@
     - 选项: which / ★who / what / where
 - **s5** `choice` [gp1] I know a guy ___ fixes cars.
     - 选项: which / it / ★who / whose he
-- **s5** `choice` [gp1] who 用来修饰：
-    - 选项: ★人 / 物 / 时间 / 地点
 - **s5** `transform` [gp1] He is a chef. He has a diner in Texas.（用 who 合成一句）
     - 答案: He is a chef who has a diner in Texas.
 - **s5** `transform` [gp1] I have a friend. He never drinks coffee.（用 who 合成）
@@ -25,8 +23,6 @@
     - 选项: what / where / ★who / which
 - **s5** `choice` [gp1] I have a friend ___ cooks a lot.
     - 选项: it / which / what / ★who
-- **s5** `choice` [gp1] 定语从句先行词是"人"时用：
-    - 选项: where / what / ★who / which
 - **s5** `transform` [gp1] He is a detective. He never asks questions.（用 who 合并成一句）
     - 答案: He is a detective who never asks questions.
 - **s5** `choice` [gp2] She loves writers who ___ slow, smart stories.
@@ -81,26 +77,32 @@
     - 答案: I love writers who build smart stories.
 - **s9** `scenario`  夸店员真懂书
     - 答案: You're a bookseller who really knows books!
-- **s10** `choice`  She's a teacher ___ loves her students.
-    - 选项: ★who / where / what / which
-- **s10** `choice`  I know a guy ___ fixes cars.
-    - 选项: which / it / ★who / whose he
-- **s10** `choice`  who 用来修饰：
-    - 选项: 地点 / ★人 / 物 / 时间
-- **s10** `choice`  People who ___ early feel great.
-    - 选项: gets up / got ups / ★get up / getting up
-- **s10** `transform`  He is a chef. He has a diner in Texas.（用 who 合成一句）
-    - 答案: He is a chef who has a diner in Texas.
-- **s10** `transform`  She is a writer. She builds smart stories.（用 who 合成）
-    - 答案: She is a writer who builds smart stories.
-- **s10** `transform`  I have a friend. He never drinks coffee.（用 who 合成）
-    - 答案: I have a friend who never drinks coffee.
+- **s10** `choice`  He's a firefighter ___ works in our town.
+    - 选项: which / what / where / ★who
+- **s10** `choice`  I have a cousin ___ teaches at a middle school.
+    - 选项: ★who / which / what / whose
 - **s10** `choice`  He's a chef ___ has a diner.
     - 选项: what / ★who / which / where
 - **s10** `choice`  I love writers who ___ smart stories.
     - 选项: writes / writing / wrote / ★write
-- **s10** `transform`  She is a bookseller. She really knows books.（用 who 合并成一句）
-    - 答案: She is a bookseller who really knows books.
+- **s10** `choice`  选出 customer 的意思
+    - 选项: 作家 / 书店店员 / 侦探 / ★顾客
+- **s10** `choice`  选出 chef 的意思
+    - 选项: 顾客 / 侦探 / ★大厨 / 作家
+- **s10** `choice`  你在书店当店员,一位顾客进来,你想问他要找什么特别的书,你说：
+    - 选项: Sold! / ★Looking for anything special? / That's the mystery! / What does he like?
+- **s10** `choice`  店员帮你挑到完美的书,你很满意想成交,你说：
+    - 选项: Looking for anything special? / What does he like? / How does that work? / ★Sold!
+- **s10** `choice`  (读课文) Emma 想给哥哥买什么类型的书?
+    - 选项: 诗集 / 漫画 / ★悬疑小说 / 菜谱
+- **s10** `choice`  (读课文) 写那本菜谱的大厨在哪里开了餐馆?
+    - 选项: 加州 / ★得州(Texas) / 纽约 / 东京
+- **s10** `choice`  (读课文) 关于那本侦探小说,以下哪项正确?
+    - 选项: 那其实是一本菜谱 / ★书里的侦探从不提问 / 是 Emma 的妈妈爱读的书 / 侦探问很多问题
+- **s10** `choice`  🔊 听录音,Emma 还想给谁买书?
+    - 选项: 她哥哥 / 露丝 / 她自己 / ★她妈妈
+- **s10** `choice`  🔊 听录音,露丝给她推荐了什么书?
+    - 选项: 一本悬疑小说 / 一本诗集 / ★一本菜谱 / 一本字典
 
 ## am1_l62
 
@@ -112,8 +114,6 @@
     - 答案: This is a lamp that matches my desk.
 - **s5** `transform` [gp1] I found a box. It is full of books.（用 which 合成）
     - 答案: I found a box which is full of books.
-- **s5** `choice` [gp2] which / that 用来修饰：
-    - 选项: 只修饰地点 / 人 / 只修饰时间 / ★物
 - **s5** `choice` [gp2] She's the writer ___ wrote this book.（人！）
     - 选项: which / it / ★who / that thing
 - **s5** `choice` [gp2] He bought a jacket ___ looks cool.
@@ -124,8 +124,6 @@
     - 选项: what / ★that / who / where
 - **s5** `choice` [gp1] There's a box ___ is full of old books.
     - 选项: ★which / what / who / whom
-- **s5** `choice` [gp1] 先行词是"物"时用：
-    - 选项: where / who / whom / ★which 或 that
 - **s5** `transform` [gp1] This is a lamp. It matches my desk.（用 that 合并成一句）
     - 答案: This is a lamp that matches my desk.
 - **s5** `choice` [gp1] That stand has records ___ are only a dollar.
@@ -143,7 +141,7 @@
 - **s6** `choice`  朋友淘到好东西，夸一句：
     - 选项: Good look it! / ★Nice find! / Find nice! / Well search you!
 - **s6** `choice`  "Some things never change." 的意思是：
-    - 选项: 有些人 / 别改变任何东西 / 事永远是老样子 / 有些商店从不找零 / 一切都变了 / ★有些人/事永远是老样子
+    - 选项: 别改变任何东西 / 有些商店从不找零 / 一切都变了 / ★有些人/事永远是老样子
 - **s7** `cloze`  〔JAKE: A market ___1___ sells everything! SARA: I want a lamp〕 第 1 空
     - 选项: ★that / who / what / where
 - **s7** `cloze`  〔JAKE: A market ___1___ sells everything! SARA: I want a lamp〕 第 2 空
@@ -180,26 +178,32 @@
     - 答案: Nice find!
 - **s9** `scenario`  朋友还是老样子，感叹
     - 答案: Some things never change!
-- **s10** `choice`  I want a car ___ is cheap and safe.
-    - 选项: ★that / what / who / whose
-- **s10** `choice`  This is the book ___ was famous in the 1960s.
-    - 选项: who / ★which / whom / what
-- **s10** `choice`  which / that 用来修饰：
-    - 选项: ★物 / 人 / 只修饰时间 / 只修饰地点
-- **s10** `choice`  She's the writer ___ wrote this book.（人！）
-    - 选项: it / ★who / that thing / which
-- **s10** `transform`  This is a lamp. It matches my desk.（用 that 合成）
-    - 答案: This is a lamp that matches my desk.
-- **s10** `transform`  I found a box. It is full of books.（用 which 合成）
-    - 答案: I found a box which is full of books.
-- **s10** `transform`  He bought a jacket. It looks cool.（用 that 合成）
-    - 答案: He bought a jacket that looks cool.
+- **s10** `choice`  I need a phone ___ takes good photos.
+    - 选项: who / what / ★that / whose
+- **s10** `choice`  This is the store ___ sells cheap sneakers.
+    - 选项: who / whose / what / ★which
+- **s10** `choice`  He's the driver ___ found my keys.（先行词是人！）
+    - 选项: ★who / which / that / what
 - **s10** `choice`  This is a lamp ___ matches the desk.
     - 选项: whom / what / who / ★that
-- **s10** `choice`  I found a book ___ costs two bucks.
-    - 选项: what / whom / ★which / who
-- **s10** `transform`  That is a market. It sells everything.（用 that 合并成一句）
-    - 答案: That is a market that sells everything.
+- **s10** `choice`  选出 jacket 的意思
+    - 选项: 金色的 / 黑胶唱片 / ★夹克 / 相配
+- **s10** `choice`  选出 record 的意思
+    - 选项: 花费 / ★黑胶唱片 / 跳蚤市场 / 夹克
+- **s10** `choice`  你在跳蚤市场看到别人淘到很划算的好东西,想夸他"好眼力",你说：
+    - 选项: ★Nice find! / It's heavy, isn't it? / Good luck. / Some things never change.
+- **s10** `choice`  你刚买了一盏很沉的台灯,想请朋友帮忙搬,你说：
+    - 选项: Classic Sara. / Look at this place! / ★Help me carry this lamp. / Of course you found the books.
+- **s10** `choice`  (读课文) Sara 想找一盏什么样的台灯?
+    - 选项: ★配得上她新书桌的 / 最便宜的 / 最亮的 / 金色的
+- **s10** `choice`  (读课文) 那个摊上的黑胶唱片多少钱一张?
+    - 选项: ★一美元 / 十美元 / 两美元 / 免费
+- **s10** `choice`  (读课文) Jake 想找一件怎样的夹克?
+    - 选项: ★看着酷但不要钱的 / 冬天穿的 / 丝绸的 / 红色的
+- **s10** `choice`  🔊 听录音,他们在一个什么样的地方?
+    - 选项: 一个警局 / 一家书店 / ★一个什么都卖的市集 / 一个咖啡店
+- **s10** `choice`  🔊 听录音,Sara 想买什么?
+    - 选项: 一张唱片 / 一件夹克 / 一箱书 / ★一盏台灯
 
 ## am1_l63
 
@@ -213,8 +217,6 @@
     - 答案: I have to mow the lawn every week.
 - **s5** `choice` [gp2] You ___ have to come. It's your choice.（不必）
     - 选项: ★don't / mustn't / aren't / can't
-- **s5** `choice` [gp2] don't have to 表示：
-    - 选项: 不可能 / 必须 / ★不必 / 禁止
 - **s5** `choice` [gp2] You ___ paint your door purple. It's against the rules.（不可以）
     - 选项: ★can't / have to / may / don't have to
 - **s5** `transform` [gp2] You must put the trash cans away.（改为 have to）
@@ -229,8 +231,6 @@
     - 答案: You have to mow your lawn.
 - **s5** `choice` [gp2] You ___ have to go. But there are free cookies.（不必）
     - 选项: aren't / ★don't / can't / mustn't
-- **s5** `choice` [gp2] don't have to 表示：
-    - 选项: ★不必 / 不可能 / 必须 / 禁止
 - **s5** `choice` [gp2] "门不能刷成紫色"（禁止）用：
     - 选项: may / ★can't / don't have to / have to
 - **s5** `transform` [gp2] Do I have to hire somebody?（用"不必"回答）
@@ -279,26 +279,32 @@
     - 答案: Anything else I have to do?
 - **s9** `scenario`  说不必去，但可以去
     - 答案: You don't have to, but you can.
-- **s10** `choice`  You ___ to mow the lawn. It's the rule.
-    - 选项: having / must to / ★have / has be
-- **s10** `choice`  He ___ to hire somebody.
-    - 选项: have / is have / haves / ★has
-- **s10** `choice`  You ___ have to come. It's your choice.（不必）
-    - 选项: aren't / ★don't / mustn't / can't
-- **s10** `choice`  don't have to 表示：
-    - 选项: ★不必 / 必须 / 不可能 / 禁止
-- **s10** `transform`  I mow the lawn every week.（用 have to 表规定）
-    - 答案: I have to mow the lawn every week.
-- **s10** `transform`  Do I need to go?（用 have to 改写）
-    - 答案: Do I have to go?
-- **s10** `transform`  You must put the trash cans away.（改为 have to）
-    - 答案: You have to put the trash cans away.
-- **s10** `choice`  We ___ to follow the HOA rules.
-    - 选项: ★have / has / are have / must to
-- **s10** `choice`  Do I have to go? — No, you ___ have to.
-    - 选项: can't / aren't / mustn't / ★don't
-- **s10** `transform`  You hire somebody.（用 have to 表"必须"）
-    - 答案: You have to hire somebody.
+- **s10** `choice`  I ___ to finish my homework by Friday.
+    - 选项: having / must to / has / ★have
+- **s10** `choice`  She ___ to work on Saturday.
+    - 选项: have / haves / ★has / is have
+- **s10** `choice`  You ___ have to buy it. It's free today.（不必）
+    - 选项: can't / ★don't / aren't / mustn't
+- **s10** `choice`  表示"禁止、不可以"（规定不许做）用哪个？
+    - 选项: ★can't / don't have to / have to / has to
+- **s10** `choice`  选出 mow 的意思
+    - 选项: 雇佣 / ★修剪(草坪) / 垃圾桶 / 收起来
+- **s10** `choice`  选出 neighborhood 的意思
+    - 选项: ★社区;街区 / 规定 / 垃圾桶 / 草坪
+- **s10** `choice`  你想在正式提问前先客气地说"问个小问题",你说：
+    - 选项: There was a meeting. / Welcome to the neighborhood. / ★Quick question. / There are free cookies.
+- **s10** `choice`  有新邻居刚搬到你们社区,你想欢迎他,你说：
+    - 选项: Who paints a door purple? / ★Welcome to the neighborhood. / Do I have to go? / Anything else I have to do?
+- **s10** `choice`  (读课文) 按 HOA 规定,草坪多久必须修剪一次?
+    - 选项: 每周日 / 每月 / 每天 / ★每两周
+- **s10** `choice`  (读课文) 关于 HOA 的会议,以下哪项正确?
+    - 选项: 禁止参加 / ★不是必须参加,但有免费饼干 / 必须参加 / 只能周五参加
+- **s10** `choice`  (读课文) 根据规定,门不可以刷成什么颜色?
+    - 选项: ★紫色 / 红色 / 金色 / 绿色
+- **s10** `choice`  🔊 听录音,垃圾桶必须在什么时候之前收起来?
+    - 选项: 随时都行 / ★周五晚上前 / 周一早上前 / 周日中午前
+- **s10** `choice`  🔊 听录音,根据 Carlos 说的,以下哪件事是不允许的?
+    - 选项: 雇人干活 / ★把门刷成紫色 / 把垃圾桶收起来 / 修剪草坪
 
 ## am1_l64
 
@@ -312,24 +318,16 @@
     - 答案: He must be a student.
 - **s5** `transform` [gp1] They are waiting for the bus. I'm sure.（用 must be 改写）
     - 答案: They must be waiting for the bus.
-- **s5** `choice` [gp2] "He must be a spy" 里 must 表示：
-    - 选项: 禁止 / ★肯定推测 / 不必 / 必须做
-- **s5** `choice` [gp2] "You must rest"（医嘱）里 must 表示：
-    - 选项: ★必须做 / 可能 / 肯定推测 / 不必
 - **s5** `transform` [gp2] She is probably very nervous.（用 must be 改写）
     - 答案: She must be very nervous.
 - **s5** `choice` [gp1] Three laptops? He ___ be a programmer.
     - 选项: can't / is / ★must / may not sure
-- **s5** `choice` [gp1] must be 表示：
-    - 选项: ★很有把握的推测（一定是） / 必须做 / 可能不 / 禁止
 - **s5** `choice` [gp1] He must ___ very busy.
     - 选项: being / been / is / ★be
 - **s5** `transform` [gp1] She is tired.（改为推测："她一定累了"）
     - 答案: She must be tired.
 - **s5** `choice` [gp1] She must be ___ for the finals.
     - 选项: ★studying / study / studies / studied
-- **s5** `choice` [gp1] must be 表"一定正在做"时，后接动词用___形式。
-    - 选项: 三单 / 过去式 / 原形 / ★-ing
 - **s5** `choice` [gp1] We must be the ___ people in this coffee shop.
     - 选项: noses / ★nosiest / nosier / nosy
 - **s5** `transform` [gp1] He is waiting for someone.（改为推测："他一定在等人"）
@@ -378,33 +376,37 @@
     - 答案: You must be so tired.
 - **s9** `scenario`  别人说起你经历过的苦，表示"我懂"
     - 答案: Been there.
-- **s10** `choice`  Three laptops? He ___ be a programmer!
-    - 选项: ★must / is must / mustn't / have
-- **s10** `choice`  She ___ be tired. That's her third coffee.
-    - 选项: must to / musts / ★must / is must
-- **s10** `choice`  He must be ___ for someone.
-    - 选项: waits / wait / waited / ★waiting
-- **s10** `choice`  "He must be a spy" 里 must 表示：
-    - 选项: 禁止 / ★肯定推测 / 必须做 / 不必
-- **s10** `transform`  I think he is a student. I'm 90% sure.（用 must be 改写）
-    - 答案: He must be a student.
-- **s10** `transform`  She is probably very nervous.（用 must be 改写）
-    - 答案: She must be very nervous.
-- **s10** `transform`  They are waiting for the bus. I'm sure.（用 must be 改写）
-    - 答案: They must be waiting for the bus.
+- **s10** `choice`  He has three trucks. He ___ be a driver.
+    - 选项: mustn't / ★must / is must / have
+- **s10** `choice`  The kids are so loud. They must be ___ a game.
+    - 选项: plays / play / played / ★playing
 - **s10** `choice`  Three coffees? She ___ be tired.
     - 选项: ★must / can't / is / may no
 - **s10** `choice`  He must be ___ for a big meeting.
     - 选项: wait / waited / waits / ★waiting
-- **s10** `transform`  He is nervous.（改为推测："他一定很紧张"）
-    - 答案: He must be nervous.
+- **s10** `choice`  选出 programmer 的意思
+    - 选项: 间谍 / 西装 / 手表 / ★程序员
+- **s10** `choice`  选出 nervous 的意思
+    - 选项: ★紧张的 / 西装 / 爱打听的 / 手表
+- **s10** `choice`  朋友说他也熬过同样累人的期末周,你想表示"我懂,我也经历过",你说：
+    - 选项: No way! / Or a spy. / He must be nervous. / ★Been there.
+- **s10** `choice`  你俩在咖啡店猜陌生人的故事,你想提议玩个新游戏"猜每个人的故事",你说：
+    - 选项: He keeps checking his watch. / Finals week. / ★New game: guess everybody's story. / Three laptops!
+- **s10** `choice`  (读课文) 为什么 Rosa 觉得窗边那个人一定是程序员?
+    - 选项: 因为他带了花 / 因为他穿西装 / ★因为他有三台笔记本电脑 / 因为他在看表
+- **s10** `choice`  (读课文) 那个穿西装、一直看表的男士,她们最后猜他在等什么?
+    - 选项: 等公交车 / 等外卖 / 等考试开始 / ★等约会对象(初次约会)
+- **s10** `choice`  (读课文) 那个抱着一摞书的女士,她们猜她是谁?
+    - 选项: 间谍 / 老师 / 程序员 / ★学生(正赶上期末周)
+- **s10** `choice`  🔊 听录音,那个穿西装的男士在做什么动作?
+    - 选项: 在打电话 / 在看书 / ★一直在看手表 / 在喝咖啡
+- **s10** `choice`  🔊 听录音,Nina 在桌子底下发现了什么?
+    - 选项: 书 / 咖啡 / ★花 / 笔记本电脑
 
 ## am1_l65
 
 - **s5** `choice` [gp1] Seventy-five? That ___ be right! I was going fifty!
     - 选项: ★can't / can / must / mustn't do
-- **s5** `choice` [gp1] can't be 表示：
-    - 选项: 一定是 / 禁止做 / 不必做 / ★不可能是
 - **s5** `transform` [gp1] That is not right. I'm sure.（用 can't be 改写）
     - 答案: That can't be right.
 - **s5** `transform` [gp1] She isn't home. I'm sure of it.（用 can't be 改写）
@@ -419,14 +421,10 @@
     - 答案: He must be the driver.
 - **s5** `choice` [gp1] This ___ be my bill—it's too high!
     - 选项: isn't / ★can't / must yes / may sure
-- **s5** `choice` [gp1] can't be 表示：
-    - 选项: ★很有把握的否定推测（不可能是） / 禁止 / 没有能力 / 不必
 - **s5** `choice` [gp1] This car ___ even go that fast!
     - 选项: mustn't / don't / ★can't / may not
 - **s5** `transform` [gp1] He is the driver.（改为否定推测："他不可能是司机"）
     - 答案: He can't be the driver.
-- **s5** `choice` [gp2] 很有把握"一定是"用___，"不可能是"用___。
-    - 选项: can't be·must be / ★must be·can't be / may be·might be / have to·don't
 - **s5** `choice` [gp2] It ___ be that guy! My partner just stopped him.（一定是）
     - 选项: ★must / won't / can't / may not
 - **s5** `choice` [gp2] Officer, there ___ be a mistake.
@@ -477,26 +475,30 @@
     - 答案: There must be a mistake.
 - **s9** `scenario`  道别时嘱咐开车注意安全
     - 答案: Drive safe!
-- **s10** `choice`  Seventy-five? That ___ be right! I was going fifty!
-    - 选项: mustn't do / can / ★can't / must
-- **s10** `choice`  There ___ be a mistake.
-    - 选项: ★must / can't to / mustn't be / musts
-- **s10** `choice`  can't be 表示：
-    - 选项: 不必做 / ★不可能是 / 一定是 / 禁止做
-- **s10** `choice`  catch 的过去式：
-    - 选项: catchs / catching / ★caught / catched
-- **s10** `transform`  That is not right. I'm sure.（用 can't be 改写）
-    - 答案: That can't be right.
-- **s10** `transform`  He is the driver. I'm 100% sure.（用 must be 改写）
-    - 答案: He must be the driver.
-- **s10** `transform`  She isn't home. I'm sure of it.（用 can't be 改写）
-    - 答案: She can't be home.
+- **s10** `choice`  Forty dollars for a coffee? That ___ be right!
+    - 选项: can / must / ★can't / mustn't do
+- **s10** `choice`  This bill is wrong. There ___ be a mistake.
+    - 选项: ★must / musts / can't to / mustn't be
 - **s10** `choice`  That ___ be his car—his car is blue!
     - 选项: is / ★can't / must yes / may
-- **s10** `choice`  很有把握地说"不可能是"用：
-    - 选项: ★can't be / may be / must be / might be
-- **s10** `transform`  This is my bill.（改为否定推测："这不可能是我的账单"）
-    - 答案: This can't be my bill.
+- **s10** `choice`  选出 license 的意思
+    - 选项: ★驾照 / 测速雷达 / 搭档 / 跑车
+- **s10** `choice`  选出 fix 的意思
+    - 选项: 超(车) / 错误 / 捕捉到 / ★修理
+- **s10** `choice`  你是交警,拦下一辆车要司机出示驾照,你说：
+    - 选项: There must be a mistake. / ★License, please. / You're free to go. / Drive safe.
+- **s10** `choice`  检查完没问题,你(交警)想让司机可以走了,你说：
+    - 选项: There must be a mistake. / It passed me like I was standing still! / ★You're free to go. / That can't be right!
+- **s10** `choice`  (读课文) 警官说 Victor 刚才开了多快?
+    - 选项: ★时速七十五 / 时速六十 / 时速五十五 / 时速一百
+- **s10** `choice`  (读课文) Victor 说测速雷达可能测到的是谁?
+    - 选项: 一辆摩托车 / ★一辆红色跑车 / 一辆蓝色卡车 / 他自己的车
+- **s10** `choice`  (读课文) 最后警官让 Victor 这周必须做什么?
+    - 选项: 换新轮胎 / 去交罚款 / ★修好左边坏掉的车灯 / 重新考驾照
+- **s10** `choice`  🔊 听录音,警官说 Victor 开了多快?
+    - 选项: 时速三十 / ★时速七十五 / 时速一百 / 时速五十
+- **s10** `choice`  🔊 听录音,Victor 对警官的说法是什么反应?
+    - 选项: ★不相信,觉得肯定搞错了 / 说自己没听清 / 当场道歉认罚 / 完全承认超速
 
 ## am1_l66
 
@@ -504,8 +506,6 @@
     - 选项: won't sure / ★might / can't / must not
 - **s5** `choice` [gp1] She may ___ to the picnic.
     - 选项: comes / coming / came / ★come
-- **s5** `choice` [gp1] may / might 表示：
-    - 选项: 禁止 / ★可能（不确定） / 一定 / 不可能
 - **s5** `transform` [gp1] Maybe it will rain.（用 might 改写）
     - 答案: It might rain.
 - **s5** `transform` [gp1] It might rain.（变否定：可能不下）
@@ -518,18 +518,12 @@
     - 答案: She may come.
 - **s5** `choice` [gp1] It ___ rain on Sunday.（可能）
     - 选项: can't / ★might / must sure / won't yes
-- **s5** `choice` [gp1] may/might 表示：
-    - 选项: ★不太确定的推测（可能） / 一定 / 必须 / 禁止
 - **s5** `choice` [gp1] She ___ bring her lemon bars.（可能）
     - 选项: must sure / ★might / can't / is
 - **s5** `transform` [gp1] It will rain.（改为"可能下雨"，用 might）
     - 答案: It might rain.
 - **s5** `choice` [gp2] He may come, or he may ___.
     - 选项: never do / no / ★not / none
-- **s5** `choice` [gp2] may/might 后接动词___。
-    - 选项: -ing / 三单 / 过去式 / ★原形
-- **s5** `choice` [gp2] "一定是 / 可能 / 不可能是"依次对应：
-    - 选项: can't · may · must / may · must · can't / ★must be · may(might) · can't be / might · can't · must
 - **s5** `transform` [gp2] We move it to Sunday.（改为"也许挪到周日"，用 might）
     - 答案: We might move it to Sunday.
 - **s6** `choice`  出门前查天气，美国人常看：
@@ -578,23 +572,29 @@
     - 答案: Of course! The more, the merrier.
 - **s9** `scenario`  约定风雨无阻
     - 答案: Rain or shine!
-- **s10** `choice`  It ___ rain tomorrow. Take an umbrella.
-    - 选项: must not / won't sure / ★might / can't
-- **s10** `choice`  She may ___ to the picnic.
-    - 选项: comes / came / coming / ★come
-- **s10** `choice`  may / might 表示：
-    - 选项: 禁止 / ★可能不确定 / 一定 / 不可能
-- **s10** `choice`  "一定是"用：
-    - 选项: might be / may be / can't be / ★must be
-- **s10** `transform`  Maybe it will rain.（用 might 改写）
-    - 答案: It might rain.
-- **s10** `transform`  Maybe she will come.（用 may 改写）
-    - 答案: She may come.
-- **s10** `transform`  It might rain.（变否定：可能不下）
-    - 答案: It might not rain.
+- **s10** `choice`  The clouds are gray. It ___ rain later.
+    - 选项: can't / must not / ★might / won't sure
+- **s10** `choice`  He might ___ us tomorrow.
+    - 选项: calls / called / calling / ★call
 - **s10** `choice`  It ___ rain tomorrow.（可能）
     - 选项: ★might / won't yes / must sure / can't
 - **s10** `choice`  She ___ come too.（可能，用 may）
     - 选项: can't / must sure / will yes / ★may
-- **s10** `transform`  They will move the picnic.（改为"可能会挪"，用 might）
-    - 答案: They might move the picnic.
+- **s10** `choice`  选出 picnic 的意思
+    - 选项: 天气应用 / 毯子 / 柠檬方块 / ★野餐
+- **s10** `choice`  选出 blanket 的意思
+    - 选项: 野餐 / 百分之…… / 姐妹 / ★毯子
+- **s10** `choice`  朋友问周末野餐还照旧吗,天气不确定,你想说"可能下也可能不下",你说：
+    - 选项: It's a plan. / ★It may rain, or it may not. / The more, the merrier. / Rain or shine!
+- **s10** `choice`  朋友问能不能再多带一个人来野餐,你很欢迎人多,你说：
+    - 选项: Sixty percent. / ★The more, the merrier. / Might? Or will? / Plan B.
+- **s10** `choice`  (读课文) 天气 App 说周六下雨的概率是多少?
+    - 选项: ★百分之六十 / 百分之百 / 百分之三十 / 百分之十
+- **s10** `choice`  (读课文) 如果周六下雨,她们的 B 计划是什么?
+    - 选项: 改成室内看电影 / ★把野餐挪到周日 / 照常在户外进行 / 直接取消野餐
+- **s10** `choice`  (读课文) Dana 说如果周日也下雨,她们会怎么办?
+    - 选项: 彻底取消 / 改到下一周 / ★就在她家客厅里野餐 / 去餐厅吃
+- **s10** `choice`  🔊 听录音,Dana 在问 Wendy 什么?
+    - 选项: 带什么食物 / 要不要一起取消 / 去哪里野餐 / ★周六的野餐还照旧吗
+- **s10** `choice`  🔊 听录音,天气应用怎么说?
+    - 选项: ★可能会下雨 / 一定会下雨 / 会下雪 / 一定是晴天

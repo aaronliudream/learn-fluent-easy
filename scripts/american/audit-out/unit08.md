@@ -1,6 +1,6 @@
 # 单元8 题库全量导出（语义复审用）
 
-> 共 289 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
+> 共 300 题。每题:stage · qtype · gp · 题干 · 选项(★=标答) · 答案。
 
 
 ## am1_l43
@@ -42,7 +42,7 @@
 - **s6** `choice`  "It's on my list." 的意思是：
     - 选项: 被我拉黑了 / 记在我账上 / 在我的购物小票上 / ★在我的心愿清单上
 - **s6** `choice`  达成约定说"就这么定了"：
-    - 选项: ★It's a plan! / It's a map! / A plan it is now! / Plan it goes!
+    - 选项: ★It's a plan! / It plans! / A plan is it! / It's a map!
 - **s6** `choice`  美国国家公园总数约有：
     - 选项: 1000 座 / 200 多座 / 5 座 / ★60 多座
 - **s7** `cloze`  〔COLIN: ___1___ you been to Yellowstone? FAITH: Yes, I ___2__〕 第 1 空
@@ -81,26 +81,32 @@
     - 答案: I've never been there.
 - **s9** `scenario`  达成约定"就这么定了"
     - 答案: It's a plan!
-- **s10** `choice`  I ___ been to five national parks.
-    - 选项: has / ★have / did / am
-- **s10** `choice`  She ___ been to Miami twice.
-    - 选项: ★has / have / is / was
-- **s10** `choice`  Have you ever ___ to Texas?
-    - 选项: being / was / ★been / be
-- **s10** `choice`  Have you been there? — No, I ___.
-    - 选项: ★haven't / didn't / don't / am not
-- **s10** `transform`  I go to Yellowstone.（改为"去过两次"的经历）
-    - 答案: I have been to Yellowstone twice.
-- **s10** `transform`  She has been to the beach.（变一般疑问句）
-    - 答案: Has she been to the beach?
-- **s10** `transform`  I have been there.（改为"从未"）
-    - 答案: I have never been there.
+- **s10** `choice`  We ___ been to the Grand Canyon once.
+    - 选项: has / was / ★have / did
+- **s10** `choice`  My teacher ___ been to Mexico twice.
+    - 选项: ★has / have / is / does
+- **s10** `choice`  Has she ever ___ to Yosemite?
+    - 选项: go / be / was / ★been
 - **s10** `choice`  They ___ been to Texas twice.
     - 选项: are / did / has / ★have
-- **s10** `choice`  be 的过去分词：
-    - 选项: being / ★been / was / be'd
-- **s10** `transform`  He has been to Denver.（变一般疑问句）
-    - 答案: Has he been to Denver?
+- **s10** `choice`  选出 geyser 的意思
+    - 选项: ★间歇泉 / 海报 / 瀑布 / 地图
+- **s10** `choice`  选出 waterfall 的意思
+    - 选项: 地图 / ★瀑布 / 海报 / 国家公园
+- **s10** `choice`  朋友问 “Have you ever been to Yosemite?” 你还没去过,礼貌回应:
+    - 选项: I've been there three times. / ★No, I haven't. Not yet. / It's a plan! / Yes, I have. Twice.
+- **s10** `choice`  你和朋友商定各自去不同的公园,谈妥后你说:
+    - 选项: Nice poster! / Not yet. / I'm jealous. / ★It's a plan!
+- **s10** `choice`  (读课文)Faith 去过 Yellowstone 几次?
+    - 选项: 从没去过 / 三次 / ★两次 / 一次
+- **s10** `choice`  (读课文)Colin 去过 Grand Canyon 吗?
+    - 选项: 去过三次 / ★从没去过 / 去过两次 / 去过一次
+- **s10** `choice`  (读课文)关于 Yosemite,下列哪项正确?
+    - 选项: 两人都没去过 / 两人都去过三次 / Faith 去过两次 / ★Colin 去过三次,Faith 还没去过
+- **s10** `choice`  🔊 听录音,Faith 去过 Yellowstone 吗?
+    - 选项: ★去过,两次 / 没去过 / 去过一次 / 还没决定
+- **s10** `choice`  🔊 听录音,Faith 去过 Yosemite 吗?
+    - 选项: 去过三次 / 不想去 / 去过两次 / ★还没有,但在她的清单上
 
 ## am1_l44
 
@@ -180,26 +186,32 @@
     - 答案: Not yet.
 - **s9** `scenario`  说你刚拍好照片
     - 答案: I've just taken photos.
-- **s10** `choice`  She has ___ arrived.（刚刚）
-    - 选项: ago / ★just / yet / never ever
-- **s10** `choice`  Have you eaten ___? — Not yet.
-    - 选项: ★yet / ever now / ago / just
-- **s10** `choice`  I haven't finished ___.
-    - 选项: ago / just / ever / ★yet
-- **s10** `choice`  take 的过去分词：
-    - 选项: ★taken / takes / took / taking
-- **s10** `transform`  He hits my car.（改为"刚刚剐了"的现在完成时）
-    - 答案: He has just hit my car.
-- **s10** `transform`  Have you taken photos?（用"还没"简答）
-    - 答案: Not yet.
-- **s10** `transform`  She leaves a note.（改为现在完成时：已留下）
-    - 答案: She has left a note.
+- **s10** `choice`  The bus has ___ left.（刚刚）
+    - 选项: ago / ★just / yet / ever
+- **s10** `choice`  Has she found her keys ___? — Not yet.
+    - 选项: ★yet / ago / just / ever
+- **s10** `choice`  She has ___ her keys in the car.
+    - 选项: leave / leaving / ★left / leaves
 - **s10** `choice`  Someone has just ___ my bike!
     - 选项: hits / hitting / ★hit / hitted
-- **s10** `choice`  find 的过去分词：
-    - 选项: finded / ★found / finds / finding
-- **s10** `transform`  She takes a photo.（改为"刚拍好"）
-    - 答案: She has just taken a photo.
+- **s10** `choice`  选出 insurance 的意思
+    - 选项: 事故 / 停车场 / 字条 / ★保险
+- **s10** `choice`  选出 accident 的意思
+    - 选项: 保险 / 警察 / 字条 / ★事故
+- **s10** `choice`  客服问 “Have you called the police yet?” 你还没报警,回答:
+    - 选项: ★Not yet. / Yes, I have. / I'm fine. / Right here.
+- **s10** `choice`  你的车刚被人剐了,打电话报保险,开场说:
+    - 选项: Right here. / ★Someone has just hit my car! / I'm fine. / Not yet.
+- **s10** `choice`  (读课文)事故发生在哪里?
+    - 选项: 商店里 / 警察局 / ★停车场 / 医院
+- **s10** `choice`  (读课文)Victor 拍了几张照片?
+    - 选项: ★十张 / 一张 / 两张 / 还没拍
+- **s10** `choice`  (读课文)对方司机做了什么?
+    - 选项: ★留了一张字条 / 开车逃走了 / 报了警 / 拍了照片
+- **s10** `choice`  🔊 听录音,Victor 报警了吗?
+    - 选项: 不需要报警 / 报了 / 警察已到 / ★还没有
+- **s10** `choice`  🔊 听录音,Victor 拍照了吗?
+    - 选项: ★拍了,刚拍了十张 / 只拍了两张 / 让客服拍 / 还没拍
 
 ## am1_l45
 
@@ -207,10 +219,6 @@
     - 选项: ★for / since / in / at
 - **s5** `choice` [gp1] She has worked there ___ 2020.
     - 选项: for / ★since / from / ago
-- **s5** `choice` [gp1] for 后面接：
-    - 选项: ★时间段 / 人名 / 地点 / 时间点
-- **s5** `choice` [gp1] since 后面接：
-    - 选项: 形容词 / 时间段 / 动词原形 / ★时间点
 - **s5** `transform` [gp1] I live in Denver.（改为"住了五年了"）
     - 答案: I have lived in Denver for five years.
 - **s5** `transform` [gp1] He works at the hospital.（改为"自 2021 年起一直"）
@@ -223,8 +231,6 @@
     - 选项: from / since / ★for / at
 - **s5** `choice` [gp1] She's worked there ___ 2020.
     - 选项: on / for / at / ★since
-- **s5** `choice` [gp1] for 后接___，since 后接___。
-    - 选项: 人·物 / ★时间段·时间点 / 地点·时间 / 时间点·时间段
 - **s5** `transform` [gp1] We haven't seen each other. + high school（用 since 合并成一句）
     - 答案: We haven't seen each other since high school.
 - **s5** `choice` [gp2] ___ long have you lived here?
@@ -236,7 +242,7 @@
 - **s5** `transform` [gp2] He lives in Austin.（改为"住了三年到现在"）
     - 答案: He has lived in Austin for three years.
 - **s6** `choice`  "好久不见"的夸张说法：
-    - 选项: It's been never! / Forever it goes! / Been for it long! / ★It's been forever!
+    - 选项: It's been never! / Forever it goes! / Been long it! / ★It's been forever!
 - **s6** `choice`  Oh my gosh! 是哪句的委婉版：
     - 选项: Oh my guess! / ★Oh my God! / Oh my go! / Oh my ghost!
 - **s6** `choice`  catch up 在叙旧语境指：
@@ -279,26 +285,32 @@
     - 答案: I've lived here for five years.
 - **s9** `scenario`  提议坐下来好好叙旧
     - 答案: Let's catch up!
-- **s10** `choice`  I've lived here ___ ten years.
-    - 选项: ★for / in / at / since
-- **s10** `choice`  She has worked there ___ 2020.
-    - 选项: from / ★since / for / ago
-- **s10** `choice`  for 后面接：
-    - 选项: 地点 / 时间点 / 人名 / ★时间段
+- **s10** `choice`  She has worked here ___ five years.
+    - 选项: since / in / at / ★for
+- **s10** `choice`  He has worked at the hospital ___ 2018.
+    - 选项: ★since / for / from / at
 - **s10** `choice`  We haven't met ___ high school.
     - 选项: until / ★since / for / at
-- **s10** `transform`  I live in Denver.（改为"住了五年了"）
-    - 答案: I have lived in Denver for five years.
-- **s10** `transform`  He works at the hospital.（改为"自 2021 年起一直"）
-    - 答案: He has worked at the hospital since 2021.
-- **s10** `transform`  We haven't seen each other for ten years.（改用 since：自高中起）
-    - 答案: We haven't seen each other since high school.
-- **s10** `choice`  I've been a nurse ___ 2015.
-    - 选项: ★since / from / at / for
 - **s10** `choice`  How ___ have they been friends?
     - 选项: many / much / far / ★long
-- **s10** `transform`  She has lived here.（加"住了五年"）
-    - 答案: She has lived here for five years.
+- **s10** `choice`  选出 since 的意思
+    - 选项: 彼此 / 永远 / 仍然 / ★自……以来
+- **s10** `choice`  选出 catch up 的意思
+    - 选项: ★叙旧;互通近况 / 同一个 / 高中 / 改变
+- **s10** `choice`  多年没见的老同学突然出现在你面前,你惊喜地说:
+    - 选项: Do you have time for coffee? / ★Oh my gosh! It's been forever! / Are you still a nurse? / Where do you live now?
+- **s10** `choice`  老朋友问你有没有空喝杯咖啡叙叙旧,你欣然答应:
+    - 选项: ★For you? Always. Let's catch up! / We haven't seen each other since high school. / How long has it been? / It's been forever!
+- **s10** `choice`  (读课文)Wendy 在丹佛住了多久?
+    - 选项: 两年 / 十年 / 十二年 / ★五年
+- **s10** `choice`  (读课文)Wendy 和 Dana 多久没见了?
+    - 选项: 十年 / 五年 / ★十二年 / 二十年
+- **s10** `choice`  (读课文)Wendy 现在做什么工作?
+    - 选项: 老师 / 医生 / ★护士 / 飞行员
+- **s10** `choice`  🔊 听录音,她们多久没见了?
+    - 选项: ★十二年 / 五年 / 二十年 / 十年
+- **s10** `choice`  🔊 听录音,Wendy 现在住在哪儿?
+    - 选项: ★丹佛 / 高中 / 迈阿密 / 医院
 
 ## am1_l46
 
@@ -312,8 +324,6 @@
     - 答案: I met the new owners yesterday.
 - **s5** `transform` [gp1] They sold the house.（去掉具体时间，改为完成时报新闻）
     - 答案: They have sold the house.
-- **s5** `choice` [gp2] 句中出现 last week 时用：
-    - 选项: 一般现在时 / ★一般过去时 / 现在完成时 / 进行时
 - **s5** `choice` [gp2] When ___ they sell it?
     - 选项: do / were / have / ★did
 - **s5** `choice` [gp2] sell 的过去分词：
@@ -324,8 +334,6 @@
     - 选项: moving / move / have moved / ★moved
 - **s5** `choice` [gp1] She has ___ here for ten years.
     - 选项: ★lived / living / lives / live
-- **s5** `choice` [gp2] 句中出现 yesterday / last Tuesday 时必须用：
-    - 选项: 现在进行时 / be going to / ★一般过去时 / 现在完成时
 - **s5** `choice` [gp2] 下列哪句正确：
     - 选项: I have meet her yesterday. / ★I met her yesterday. / I have met her yesterday. / I meets her yesterday.
 - **s5** `choice` [gp1] We ___ each other since high school.（一直没见过）
@@ -339,9 +347,9 @@
 - **s6** `choice`  美国住宅门前的 mailbox 是：
     - 选项: 邮局网点 / 快递柜 / 报刊亭 / ★家庭信箱
 - **s6** `choice`  美国人欢迎新邻居的经典方式是：
-    - 选项: ★烤饼干/带食物上门 / 送现金红包 / 带食物上门 / 贴欢迎告示 / 烤饼干 / 放鞭炮庆祝
+    - 选项: ★烤饼干/带食物上门 / 送现金红包 / 贴欢迎告示 / 放鞭炮庆祝
 - **s6** `choice`  分享劲爆消息前说：
-    - 选项: You guess it now! / What guess? / ★Guess what? / Guess who me?
+    - 选项: Guess who me? / ★Guess what? / What guess? / Guess it you!
 - **s7** `cloze`  〔MEGAN: The Johnsons have ___1___ their house! CARLOS: When _〕 第 1 空
     - 选项: ★sold / sell / sells / selling
 - **s7** `cloze`  〔MEGAN: The Johnsons have ___1___ their house! CARLOS: When _〕 第 2 空
@@ -378,33 +386,37 @@
     - 答案: When did they sell it?
 - **s9** `scenario`  分享劲爆消息前说"你猜怎么着"
     - 答案: Guess what?
-- **s10** `choice`  They ___ their house! Big news!
-    - 选项: sells / selling / sell / ★have sold
-- **s10** `choice`  They ___ it last Tuesday.
-    - 选项: sell / has sold / ★sold / have sold
-- **s10** `choice`  I ___ them yesterday.
-    - 选项: meet / ★met / have met / has met
-- **s10** `choice`  句中出现 yesterday 时用：
-    - 选项: 进行时 / 现在完成时 / 一般现在时 / ★一般过去时
-- **s10** `transform`  I have met the new owners.（加"昨天"改写）
-    - 答案: I met the new owners yesterday.
-- **s10** `transform`  They sold the house.（去掉具体时间，改为完成时报新闻）
-    - 答案: They have sold the house.
-- **s10** `transform`  Did they move in?（改为完成时问"搬进来了吗"）
-    - 答案: Have they moved in yet?
+- **s10** `choice`  The neighbors ___ their car! Big news!
+    - 选项: ★have sold / sells / sold / selling
+- **s10** `choice`  They ___ the house last week.
+    - 选项: have sold / ★sold / sell / has sold
+- **s10** `choice`  We ___ the new owners yesterday.
+    - 选项: have met / has met / ★met / meet
 - **s10** `choice`  The house ___ in two days!（卖掉了）
     - 选项: sells / selling / ★sold / has sold
-- **s10** `choice`  I ___ them last week.
-    - 选项: ★met / meets / meet / have met
-- **s10** `transform`  I have moved here in 2020.（改正错误）
-    - 答案: I moved here in 2020.
+- **s10** `choice`  选出 unpack 的意思
+    - 选项: 烘焙 / 搬进来 / 到达 / ★拆箱
+- **s10** `choice`  选出 mailbox 的意思
+    - 选项: 市场 / 房主 / ★信箱 / 消息
+- **s10** `choice`  你有个大新闻想马上告诉朋友,兴奋地开口:
+    - 选项: Let's say hi this weekend. / Have they moved in yet? / ★Guess what—the Johnsons have sold their house! / What are they like?
+- **s10** `choice`  新邻居搬来了,你想去表示欢迎,向朋友提议:
+    - 选项: ★Let's say hi this weekend. / What are they like? / When did they sell it? / Have they moved in yet?
+- **s10** `choice`  (读课文)Johnson 家的房子多久就卖出去了?
+    - 选项: 一周 / ★两天 / 两个月 / 还没卖出
+- **s10** `choice`  (读课文)Megan 在哪里见到新房主的?
+    - 选项: ★在信箱那儿 / 在派对上 / 在医院 / 在商店
+- **s10** `choice`  (读课文)新房主搬进来了吗?
+    - 选项: ★还没有,东西还没拆箱 / 不打算搬 / 已经搬好了 / 搬了一半
+- **s10** `choice`  🔊 听录音,Johnson 家做了什么?
+    - 选项: ★把房子卖了 / 开了派对 / 买了新车 / 搬走了
+- **s10** `choice`  🔊 听录音,房子多久卖出去的?
+    - 选项: ★两天 / 两周 / 还没卖出 / 上个月
 
 ## am1_l47
 
 - **s5** `choice` [gp1] He ___ fly to Tokyo next week.
     - 选项: is will / ★will / going / wills
-- **s5** `choice` [gp1] will 后面接：
-    - 选项: 过去式 / 三单 / ★动词原形 / 动词-ing
 - **s5** `choice` [gp1] They'll =
     - 选项: They all / They well / They still / ★They will
 - **s5** `transform` [gp1] She starts a new job in June.（用 will 改为将来）
@@ -419,8 +431,6 @@
     - 答案: I won't invite them.
 - **s5** `choice` [gp1] He ___ fly to Chicago tomorrow.
     - 选项: wills / won't be to / is will / ★will
-- **s5** `choice` [gp1] will 后面接：
-    - 选项: 动词三单 / ★动词原形 / 动词-ing / to+动词
 - **s5** `choice` [gp1] I ___ be home tonight.（不会）
     - 选项: ★won't / don't will / will not be to / am not
 - **s5** `transform` [gp1] She visits us in the fall.（用 will 表将来）
@@ -428,7 +438,7 @@
 - **s5** `choice` [gp2] ___ you come to the block party? — Sure!
     - 选项: Were / Did / Do yesterday / ★Will
 - **s5** `choice` [gp2] Will he be there? — ___
-    - 选项: ★Yes, he will. / Yes, he was. / Yes, he does. / Yes, he is will.
+    - 选项: Yes, he was. / Yes, he wills. / Yes, he does. / ★Yes, he will.
 - **s5** `choice` [gp2] won't = ___
     - 选项: we not / was not / want not / ★will not
 - **s5** `transform` [gp2] They will move downtown.（变一般疑问句）
@@ -440,7 +450,7 @@
 - **s6** `choice`  附和好提议说：
     - 选项: ★Good call. / Call good! / Good phone. / Nice ring.
 - **s6** `choice`  感叹别人的生活"这日子真棒"：
-    - 选项: What life is? / Life what! / A life what goes! / ★What a life!
+    - 选项: ★What a life! / What life goes! / What life is? / Life what!
 - **s7** `cloze`  〔CARLOS: He'll ___1___ to Tokyo next week. CARLOS: "I'll ___2〕 第 1 空
     - 选项: ★fly / flying / flies / flew
 - **s7** `cloze`  〔CARLOS: He'll ___1___ to Tokyo next week. CARLOS: "I'll ___2〕 第 2 空
@@ -477,26 +487,32 @@
     - 答案: Will your family move here too?
 - **s9** `scenario`  附和对方的提议"好主意"
     - 答案: Good call.
-- **s10** `choice`  He ___ fly to Tokyo next week.
-    - 选项: going / wills / is will / ★will
+- **s10** `choice`  His family ___ visit us next week.
+    - 选项: ★will / wills / going / be will
 - **s10** `choice`  Will they come? — Yes, they ___.
     - 选项: do / ★will / are / won't
-- **s10** `choice`  won't =
-    - 选项: do not / want not / was not / ★will not
-- **s10** `choice`  will 后面接：
-    - 选项: ★动词原形 / 动词-ing / 三单 / 过去式
-- **s10** `transform`  She starts a new job in June.（用 will 改为将来）
-    - 答案: She will start a new job in June.
-- **s10** `transform`  They will move here.（变一般疑问句）
-    - 答案: Will they move here?
-- **s10** `transform`  I will invite them.（变否定句）
-    - 答案: I won't invite them.
-- **s10** `choice`  She ___ visit us next month.
-    - 选项: ★will / wills / is will / won't to
+- **s10** `choice`  I'll =
+    - 选项: I want / I was / ★I will / I am
 - **s10** `choice`  He ___ be home tonight.（不会）
     - 选项: don't / not will / isn't will / ★won't
-- **s10** `transform`  I fly to Chicago.（用 will 表明天）
-    - 答案: I will fly to Chicago tomorrow.
+- **s10** `choice`  选出 pilot 的意思
+    - 选项: 邀请 / ★飞行员 / 小学 / 国家
+- **s10** `choice`  选出 invite 的意思
+    - 选项: 六月 / 整个的 / 在市中心 / ★邀请
+- **s10** `choice`  朋友告诉你新邻居竟是飞行员,你惊叹地回应:
+    - 选项: Good call. I'll invite them tomorrow. / Two boys. / ★A pilot? That's so cool! / Yes, they will.
+- **s10** `choice`  朋友提议邀请新邻居来参加街区派对,你赞同并主动去邀请:
+    - 选项: They'll go to Maplewood Elementary. / ★Good call. I'll invite them tomorrow. / A pilot? That's so cool! / What a life!
+- **s10** `choice`  (读课文)新邻居 Jonas 是做什么的?
+    - 选项: 老师 / 护士 / ★飞行员 / 房主
+- **s10** `choice`  (读课文)Jonas 下周要飞去哪里?
+    - 选项: ★东京 / 市中心 / 迈阿密 / 丹佛
+- **s10** `choice`  (读课文)Jonas 的两个孩子秋天会做什么?
+    - 选项: 飞去东京 / 开始新工作 / 搬去别的城市 / ★去枫木小学上学
+- **s10** `choice`  🔊 听录音,新邻居 Jonas 的职业是什么?
+    - 选项: 司机 / 老师 / ★飞行员 / 护士
+- **s10** `choice`  🔊 听录音,Jonas 下周要做什么?
+    - 选项: 开始新工作 / 参加派对 / ★飞去东京 / 搬家
 
 ## am1_l48
 
@@ -578,23 +594,29 @@
     - 答案: Which way is the food court?
 - **s9** `scenario`  祝要登机的朋友旅途平安
     - 答案: Have a safe flight!
-- **s10** `choice`  When ___ the train leave?
-    - 选项: does yesterday / is being / ★will / was
-- **s10** `choice`  It will ___ at 3:45.
-    - 选项: ★leave / leaving / leaves / left
-- **s10** `choice`  The flight is ___. It won't leave on time.
-    - 选项: local / boarding fast / ★delayed / early
-- **s10** `choice`  Boarding ___ start at 3:15.
-    - 选项: is will / ★will / won't be to / wills
-- **s10** `transform`  The flight leaves at 7:30.（用 will 改写）
-    - 答案: The flight will leave at 7:30.
-- **s10** `transform`  When does it arrive?（用 will 问将来到达）
-    - 答案: When will it arrive?
-- **s10** `transform`  It will leave on time.（变否定：不会准点）
-    - 答案: It won't leave on time.
+- **s10** `choice`  When ___ the bus arrive?
+    - 选项: was / ★will / does / is being
+- **s10** `choice`  The bus will ___ at 9:00.
+    - 选项: arrives / arriving / ★arrive / arrived
+- **s10** `choice`  The flight ___ leave at noon.
+    - 选项: ★will / is will / wills / won't be to
 - **s10** `choice`  The bus will ___ at 8:20.
     - 选项: arrived / arriving / arrives / ★arrive
-- **s10** `choice`  航班延误了，说：
-    - 选项: The flight is local. / The flight is on time. / ★The flight is delayed. / The flight is early go.
-- **s10** `transform`  Boarding starts at 3:15.（用 will 改写）
-    - 答案: Boarding will start at 3:15.
+- **s10** `choice`  选出 delayed 的意思
+    - 选项: 当地时间 / ★延误的 / 登机 / 准点
+- **s10** `choice`  选出 boarding 的意思
+    - 选项: 航班 / 美食广场 / 登机口 / ★登机
+- **s10** `choice`  你想问 214 航班是否准点,礼貌地开口:
+    - 选项: ★Excuse me. Flight 214—is it on time? / You're welcome. / Have a safe flight! / Go straight, past Gate 8.
+- **s10** `choice`  乘客要去登机了,值机员送别时祝福说:
+    - 选项: ★Have a safe flight! / When will it leave? / Which way is the food court? / Is it on time?
+- **s10** `choice`  (读课文)214 航班怎么了?
+    - 选项: 准点 / 提前了 / ★延误了 / 取消了
+- **s10** `choice`  (读课文)航班几点起飞?
+    - 选项: ★3点45分 / 7点半 / 3点15分 / 12点
+- **s10** `choice`  (读课文)美食广场怎么走?
+    - 选项: 在楼上 / 过 12 号登机口 / 右转就到 / ★直走,过 8 号登机口,在左手边
+- **s10** `choice`  🔊 听录音,214 航班的情况怎么样?
+    - 选项: 准点 / 取消了 / ★延误了 / 已经起飞
+- **s10** `choice`  🔊 听录音,航班几点起飞?
+    - 选项: 2点 / ★3点45分 / 3点15分 / 7点半

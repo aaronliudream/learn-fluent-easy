@@ -1,0 +1,60 @@
+{
+ "topic": "My hobby",
+ "prompt": "Write a short passage about your hobby. Use the simple present tense (I like..., I play..., It makes me...).",
+ "promptCn": "写一段话介绍你的爱好。用一般现在时(I like…, I play…, It makes me…)。",
+ "opener": "I have a hobby that I really love.",
+ "sampleWords": [
+  "hobby",
+  "play",
+  "weekend",
+  "fun",
+  "practise"
+ ],
+ "cards": [
+  {
+   "key": "hobby",
+   "labelCn": "你的爱好",
+   "hint": "如 playing basketball"
+  },
+  {
+   "key": "when",
+   "labelCn": "你什么时候做",
+   "hint": "如 every weekend"
+  },
+  {
+   "key": "where",
+   "labelCn": "在哪里做",
+   "hint": "如 in the park"
+  },
+  {
+   "key": "feel",
+   "labelCn": "它让你觉得怎样",
+   "hint": "如 happy"
+  }
+ ],
+ "templates": {
+  "l1": [
+   "My hobby is {hobby}.",
+   "I do it {when}.",
+   "I play {where}.",
+   "It makes me {feel}."
+  ],
+  "l2": [
+   "My favourite hobby is {hobby}.",
+   "I usually do it {when}, {where}.",
+   "My friends and I enjoy it together.",
+   "It makes me {feel}, and it keeps me healthy."
+  ],
+  "l3": [
+   "I have a hobby that I really love. It is {hobby}.",
+   "I usually do it {when}, {where}.",
+   "My friends and I often practise together, and we help each other.",
+   "This hobby makes me {feel}. It also teaches me to keep trying. I hope you like it, too!"
+  ]
+ },
+ "connectors": [
+  "and",
+  "because"
+ ],
+ "minWords": 30
+}

@@ -1849,10 +1849,13 @@ function writingPromptId(unit: UnitDef): string {
   return `a7717b00-0000-4000-8000-0000${hex}`;
 }
 
+// 真写作(AI批改)白名单:内联 writing prompt 就绪的册。加册改数组即可,不动逻辑,防 `||` 越加越漏。
+const REAL_WRITING_BOOKS = new Set(["7B", "wy7A"]);
+
 function WritingStage({ unit, grade, onFinish }: { unit: UnitDef; grade: number; onFinish: () => void }) {
   const w = unit.writing;
-  // 真写作(AI批改):7B 全 8 单元(内联 writing prompt 均就绪);其余年级(7A/Starter/8/9)走原"水关"逻辑不变。
-  const realWriting = unit.book === "7B";
+  // 白名单册走真写作;其余(8/9/pep-7A/Starter 等)走原"水关"逻辑不变。
+  const realWriting = REAL_WRITING_BOOKS.has(unit.book);
   // hooks 必须无条件先执行(放在任何 early-return 之前)。
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(false);

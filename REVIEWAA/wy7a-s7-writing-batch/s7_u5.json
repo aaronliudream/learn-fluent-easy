@@ -1,0 +1,60 @@
+{
+ "topic": "I will protect nature",
+ "prompt": "Write a short passage about what you will do to protect plants and nature. Use the simple future (I will..., I am going to...).",
+ "promptCn": "写一段话讲你将怎样保护植物和大自然。用一般将来时(I will…, I am going to…)。",
+ "opener": "Nature gives us so much, so I am going to protect it.",
+ "sampleWords": [
+  "protect",
+  "plant",
+  "tree",
+  "future",
+  "green"
+ ],
+ "cards": [
+  {
+   "key": "action1",
+   "labelCn": "一件你会做的事",
+   "hint": "如 plant a tree"
+  },
+  {
+   "key": "action2",
+   "labelCn": "另一件事",
+   "hint": "如 save water"
+  },
+  {
+   "key": "place",
+   "labelCn": "一个地方",
+   "hint": "如 our school"
+  },
+  {
+   "key": "hope",
+   "labelCn": "你的愿望",
+   "hint": "如 a greener world"
+  }
+ ],
+ "templates": {
+  "l1": [
+   "I will protect nature.",
+   "I am going to {action1}.",
+   "I will also {action2}.",
+   "The world will be green."
+  ],
+  "l2": [
+   "Nature gives us so much, so I will protect it.",
+   "This spring, I am going to {action1} in {place}.",
+   "I will also {action2} every day.",
+   "I believe our world will become greener."
+  ],
+  "l3": [
+   "Nature gives us clean air and cool shade, so I am going to protect it.",
+   "This spring, I will {action1} in {place}, and I am going to take good care of it.",
+   "At home, I will {action2}, and I will never waste paper again.",
+   "If everyone helps, the trees will grow tall and the air will stay fresh. We will have {hope}."
+  ]
+ },
+ "connectors": [
+  "and",
+  "because"
+ ],
+ "minWords": 50
+}

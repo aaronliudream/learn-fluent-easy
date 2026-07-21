@@ -88,7 +88,65 @@
             "grammarCodes": ["wy7-starter-basics"],
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "My new school",
+              "prompt": "It is your first week in junior high. Write a short passage to introduce your new school. Use 'There is / There are' and adjectives (big, new, kind...).",
+              "promptCn": "开学第一周,写一段话介绍你的新学校。用 There is / There are 和形容词(big, new, kind…)。",
+              "opener": "Welcome to my new school!",
+              "sampleWords": [
+                "library",
+                "playground",
+                "classroom",
+                "kind",
+                "big"
+              ],
+              "cards": [
+                {
+                  "key": "schoolName",
+                  "labelCn": "学校的名字",
+                  "hint": "如 Green Hill"
+                },
+                {
+                  "key": "place",
+                  "labelCn": "校园里的一个地方",
+                  "hint": "如 library"
+                },
+                {
+                  "key": "adj",
+                  "labelCn": "一个形容词",
+                  "hint": "如 big / new"
+                },
+                {
+                  "key": "teacher",
+                  "labelCn": "老师的名字",
+                  "hint": "如 Ms Wu"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "This is my school, {schoolName}.",
+                  "There is a {adj} {place}.",
+                  "There are many trees.",
+                  "My teacher {teacher} is kind."
+                ],
+                "l2": [
+                  "Welcome to my new school, {schoolName}!",
+                  "There is a {adj} {place}, and there are two playgrounds.",
+                  "The classrooms are clean and bright.",
+                  "My teacher {teacher} is kind and friendly."
+                ],
+                "l3": [
+                  "Welcome to my new school! Its name is {schoolName}.",
+                  "There is a {adj} {place} near our classroom, and there are two big playgrounds outside.",
+                  "The classrooms are clean and bright, and there are tall green trees around us.",
+                  "My teacher {teacher} is kind and patient, and my new classmates are friendly. I really like it here!"
+                ]
+              },
+              "connectors": [
+                "and"
+              ],
+              "minWords": 30
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -174,7 +232,66 @@
             "grammarCodes": ["wy7-u1-pronouns"],
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "Introduce yourself",
+              "prompt": "It is your first week in junior high. Write a short passage to introduce yourself and a good friend to your new classmates. Use pronouns (I, my, he/she, his/her, we).",
+              "promptCn": "开学第一周,写一段话向新同学介绍你自己和一位好朋友。注意使用代词(I, my, he/she, his/her, we)。",
+              "opener": "Hello, everyone! Let me introduce myself.",
+              "sampleWords": [
+                "myself",
+                "friend",
+                "hobby",
+                "kind",
+                "together"
+              ],
+              "cards": [
+                {
+                  "key": "myName",
+                  "labelCn": "你的名字",
+                  "hint": "如 Lily"
+                },
+                {
+                  "key": "myHobby",
+                  "labelCn": "你的爱好",
+                  "hint": "如 reading"
+                },
+                {
+                  "key": "friendName",
+                  "labelCn": "好朋友的名字",
+                  "hint": "如 Ben"
+                },
+                {
+                  "key": "friendTrait",
+                  "labelCn": "朋友的特点",
+                  "hint": "如 kind / funny"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "Hello! I am {myName}.",
+                  "I like {myHobby}.",
+                  "This is my friend, {friendName}.",
+                  "He is {friendTrait}. We are happy together."
+                ],
+                "l2": [
+                  "Hello, everyone! My name is {myName}.",
+                  "I am a new student here, and I like {myHobby}.",
+                  "This is my good friend, {friendName}.",
+                  "He is very {friendTrait}, and we often help each other."
+                ],
+                "l3": [
+                  "Hello, everyone! Let me introduce myself. My name is {myName}.",
+                  "I am a new student in this class, and my hobby is {myHobby}.",
+                  "I want to introduce my good friend, too. His name is {friendName}.",
+                  "He is a {friendTrait} person, and we always study and play together. We hope to make more friends here!"
+                ]
+              },
+              "connectors": [
+                "and",
+                "because"
+              ],
+              "minWords": 30
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -260,7 +377,66 @@
             "grammarCodes": ["wy7-u2-simple-present"],
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "My hobby",
+              "prompt": "Write a short passage about your hobby. Use the simple present tense (I like..., I play..., It makes me...).",
+              "promptCn": "写一段话介绍你的爱好。用一般现在时(I like…, I play…, It makes me…)。",
+              "opener": "I have a hobby that I really love.",
+              "sampleWords": [
+                "hobby",
+                "play",
+                "weekend",
+                "fun",
+                "practise"
+              ],
+              "cards": [
+                {
+                  "key": "hobby",
+                  "labelCn": "你的爱好",
+                  "hint": "如 playing basketball"
+                },
+                {
+                  "key": "when",
+                  "labelCn": "你什么时候做",
+                  "hint": "如 every weekend"
+                },
+                {
+                  "key": "where",
+                  "labelCn": "在哪里做",
+                  "hint": "如 in the park"
+                },
+                {
+                  "key": "feel",
+                  "labelCn": "它让你觉得怎样",
+                  "hint": "如 happy"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "My hobby is {hobby}.",
+                  "I do it {when}.",
+                  "I play {where}.",
+                  "It makes me {feel}."
+                ],
+                "l2": [
+                  "My favourite hobby is {hobby}.",
+                  "I usually do it {when}, {where}.",
+                  "My friends and I enjoy it together.",
+                  "It makes me {feel}, and it keeps me healthy."
+                ],
+                "l3": [
+                  "I have a hobby that I really love. It is {hobby}.",
+                  "I usually do it {when}, {where}.",
+                  "My friends and I often practise together, and we help each other.",
+                  "This hobby makes me {feel}. It also teaches me to keep trying. I hope you like it, too!"
+                ]
+              },
+              "connectors": [
+                "and",
+                "because"
+              ],
+              "minWords": 30
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -346,7 +522,66 @@
             "grammarCodes": ["wy7-u3-possessive-nouns"],
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "My family's love",
+              "prompt": "Write a short passage about how your family members support you. Use possessive nouns (my mother's..., my parents'..., my brother's...).",
+              "promptCn": "写一段话讲家人对你的爱和支持。用名词所有格(my mother's…, my parents'…, my brother's…)。",
+              "opener": "My family's love is around me every day.",
+              "sampleWords": [
+                "support",
+                "care",
+                "help",
+                "warm",
+                "together"
+              ],
+              "cards": [
+                {
+                  "key": "member1",
+                  "labelCn": "一位家人",
+                  "hint": "如 mother"
+                },
+                {
+                  "key": "act1",
+                  "labelCn": "TA 为你做的事",
+                  "hint": "如 cooks nice food"
+                },
+                {
+                  "key": "member2",
+                  "labelCn": "另一位家人",
+                  "hint": "如 father"
+                },
+                {
+                  "key": "act2",
+                  "labelCn": "TA 为你做的事",
+                  "hint": "如 helps me with maths"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I love my family.",
+                  "My {member1}'s food is nice.",
+                  "My {member2} {act2}.",
+                  "My family's love is warm."
+                ],
+                "l2": [
+                  "My family's love is around me every day.",
+                  "My {member1} {act1}, and it shows my {member1}'s care.",
+                  "My {member2} {act2}.",
+                  "In my family's home, I always feel safe and warm."
+                ],
+                "l3": [
+                  "My family's love is around me every single day.",
+                  "My {member1} {act1}. That is my {member1}'s quiet way of saying 'I love you'.",
+                  "My {member2} {act2}, and my brother's jokes always make me laugh.",
+                  "I am thankful for my parents' care and my family's warm support. Their love makes me strong."
+                ]
+              },
+              "connectors": [
+                "and",
+                "because"
+              ],
+              "minWords": 40
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -432,7 +667,65 @@
             "grammarCodes": ["wy7-u4-adverbs-of-frequency"],
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "How my family celebrates",
+              "prompt": "Write a short passage about how your family celebrates a festival. Use adverbs of frequency (always, usually, often, sometimes, never).",
+              "promptCn": "写一段话讲你家怎么过一个节日。用频度副词(always, usually, often, sometimes, never)。",
+              "opener": "My family always celebrates the festival together.",
+              "sampleWords": [
+                "festival",
+                "always",
+                "usually",
+                "together",
+                "happy"
+              ],
+              "cards": [
+                {
+                  "key": "festival",
+                  "labelCn": "一个节日",
+                  "hint": "如 the Spring Festival"
+                },
+                {
+                  "key": "food",
+                  "labelCn": "节日吃的食物",
+                  "hint": "如 dumplings"
+                },
+                {
+                  "key": "activity",
+                  "labelCn": "一项活动",
+                  "hint": "如 watch fireworks"
+                },
+                {
+                  "key": "who",
+                  "labelCn": "和谁一起",
+                  "hint": "如 my grandparents"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "My family always celebrates {festival}.",
+                  "We usually eat {food}.",
+                  "We often {activity}.",
+                  "I am never sad on that day."
+                ],
+                "l2": [
+                  "My family always celebrates {festival} together.",
+                  "We usually eat {food}, and we always visit {who}.",
+                  "In the evening, we often {activity}.",
+                  "We are never bored, and everyone is happy."
+                ],
+                "l3": [
+                  "My family always celebrates {festival} together. It is my favourite time of the year.",
+                  "Before the day, we usually clean the house. We always eat {food}, and we often visit {who}.",
+                  "In the evening, we sometimes {activity}, and we never forget to take photos.",
+                  "We are never bored on this day. Our home is always full of love and laughter."
+                ]
+              },
+              "connectors": [
+                "and"
+              ],
+              "minWords": 40
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -518,7 +811,66 @@
             "grammarCodes": ["wy7-u5-simple-future"],
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "I will protect nature",
+              "prompt": "Write a short passage about what you will do to protect plants and nature. Use the simple future (I will..., I am going to...).",
+              "promptCn": "写一段话讲你将怎样保护植物和大自然。用一般将来时(I will…, I am going to…)。",
+              "opener": "Nature gives us so much, so I am going to protect it.",
+              "sampleWords": [
+                "protect",
+                "plant",
+                "tree",
+                "future",
+                "green"
+              ],
+              "cards": [
+                {
+                  "key": "action1",
+                  "labelCn": "一件你会做的事",
+                  "hint": "如 plant a tree"
+                },
+                {
+                  "key": "action2",
+                  "labelCn": "另一件事",
+                  "hint": "如 save water"
+                },
+                {
+                  "key": "place",
+                  "labelCn": "一个地方",
+                  "hint": "如 our school"
+                },
+                {
+                  "key": "hope",
+                  "labelCn": "你的愿望",
+                  "hint": "如 a greener world"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I will protect nature.",
+                  "I am going to {action1}.",
+                  "I will also {action2}.",
+                  "The world will be green."
+                ],
+                "l2": [
+                  "Nature gives us so much, so I will protect it.",
+                  "This spring, I am going to {action1} in {place}.",
+                  "I will also {action2} every day.",
+                  "I believe our world will become greener."
+                ],
+                "l3": [
+                  "Nature gives us clean air and cool shade, so I am going to protect it.",
+                  "This spring, I will {action1} in {place}, and I am going to take good care of it.",
+                  "At home, I will {action2}, and I will never waste paper again.",
+                  "If everyone helps, the trees will grow tall and the air will stay fresh. We will have {hope}."
+                ]
+              },
+              "connectors": [
+                "and",
+                "because"
+              ],
+              "minWords": 50
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -604,7 +956,65 @@
             "grammarCodes": ["wy7-u6-present-continuous"],
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "Watching an animal",
+              "prompt": "Write a short passage to describe what an animal is doing right now. Use the present continuous (It is running..., They are eating...).",
+              "promptCn": "写一段话描述一只小动物此刻正在做什么。用现在进行时(It is running…, They are eating…)。",
+              "opener": "Look! I am watching a lovely animal right now.",
+              "sampleWords": [
+                "watching",
+                "running",
+                "eating",
+                "playing",
+                "cute"
+              ],
+              "cards": [
+                {
+                  "key": "animal",
+                  "labelCn": "一只动物",
+                  "hint": "如 cat"
+                },
+                {
+                  "key": "place",
+                  "labelCn": "它在哪里",
+                  "hint": "如 the garden"
+                },
+                {
+                  "key": "action1",
+                  "labelCn": "它正在做的事",
+                  "hint": "如 eating"
+                },
+                {
+                  "key": "action2",
+                  "labelCn": "另一件事",
+                  "hint": "如 playing with a ball"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "Look! I am watching a {animal}.",
+                  "It is in {place}.",
+                  "It is {action1} now.",
+                  "It is {action2}."
+                ],
+                "l2": [
+                  "Look! I am watching a lovely {animal} right now.",
+                  "It is in {place}, and it is {action1}.",
+                  "Now it is {action2}.",
+                  "It is having a good time, and I am smiling."
+                ],
+                "l3": [
+                  "Look! I am watching a lovely {animal} in {place} right now.",
+                  "It is {action1}, and its eyes are shining.",
+                  "Now it is {action2}, and it is not stopping for a rest.",
+                  "The {animal} is having so much fun, and I am learning a lot about animals. I am really enjoying this moment!"
+                ]
+              },
+              "connectors": [
+                "and"
+              ],
+              "minWords": 50
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           }

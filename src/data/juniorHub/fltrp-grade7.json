@@ -14,7 +14,7 @@
             "title": "Starter Welcome to junior high!",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -158,7 +158,7 @@
             "title": "Unit 1 A new start",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -303,7 +303,7 @@
             "title": "Unit 2 More than fun",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -448,7 +448,7 @@
             "title": "Unit 3 Family ties",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -593,7 +593,7 @@
             "title": "Unit 4 Time to celebrate",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -737,7 +737,7 @@
             "title": "Unit 5 The power of plants",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -882,7 +882,7 @@
             "title": "Unit 6 Fantastic friends",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [

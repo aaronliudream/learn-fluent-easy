@@ -1,0 +1,46 @@
+# 已修/已审定的全局卡(回读扫描排除,避免跨书重复标)。每行一词。
+# 28张(fir-tree批·Aaron已跑):
+withered
+hang
+squeak
+star
+sheer
+trunks
+sprung
+spring
+nurse
+plant
+plunder
+troop
+state
+matter
+rest
+court
+over
+bend
+fixed
+beat
+sing
+word
+assert
+care
+after
+upright
+peeping
+kissed
+# 15张(伊索批·已审定待Aaron跑):
+race
+fast
+want
+bit
+passed
+sweet
+steady
+saved
+tried
+hard
+full
+look
+missed
+reach
+get

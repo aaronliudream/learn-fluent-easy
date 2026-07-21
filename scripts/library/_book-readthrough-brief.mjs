@@ -33,8 +33,11 @@ const cards = await fetchCards(types);
 // 已有按书覆盖(排除,已按书处理)
 const ov = new Set((await (await fetch(`${SUP}/rest/v1/library_word_senses?book_key=eq.${BOOKKEY}&select=normalized`, { headers: H })).json()).map((x) => x.normalized));
 
-// 只审【有全局卡 且 未被本书覆盖】的词
-const targets = types.filter((w) => cards[w] && !ov.has(w)).sort((a, b) => (freq.get(b) - freq.get(a)) || a.localeCompare(b));
+// 已修/已审定的全局词(跨书排除,避免重复标)
+let fixed = new Set();
+try { fixed = new Set(readFileSync("scripts/library/books/readthrough/_global-fixed.txt", "utf8").split(/\r?\n/).map((l) => l.trim()).filter((l) => l && !l.startsWith("#"))); } catch { /* 无则不排 */ }
+// 只审【有全局卡 且 未被本书覆盖 且 未在全局已处理清单】的词
+const targets = types.filter((w) => cards[w] && !ov.has(w) && !fixed.has(w)).sort((a, b) => (freq.get(b) - freq.get(a)) || a.localeCompare(b));
 mkdirSync(`scripts/library/books/readthrough/${BOOKKEY}`, { recursive: true });
 const per = Math.ceil(targets.length / BATCHES);
 for (let bi = 0; bi < BATCHES; bi++) {

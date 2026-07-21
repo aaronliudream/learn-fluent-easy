@@ -1,0 +1,86 @@
+{
+ "grade": 7,
+ "publisher": "junior_fltrp",
+ "volume": "wy7A",
+ "unit": "U4",
+ "title": "An unusual Spring Festival",
+ "topic": "节日·不寻常的春节",
+ "body": "This year, our Spring Festival is unusual. We have a guest — Tom, a new classmate from Canada. It is his first Chinese New Year. My family always clean the house before the festival. We usually put red couplets on the door. This year, Tom helps us. He often makes mistakes, but he never stops smiling. On New Year's Eve, my grandma cooks a big meal. We always eat dumplings at this time. \"Why dumplings?\" Tom asks. \"Their shape is like old Chinese gold,\" my dad says. \"They stand for good luck.\" Before the meal, we usually give red packets to the children. Tom often forgets the lucky words, but my grandma always helps him. Tom has never made dumplings before. His first one looks very funny, but he is proud of it. We sometimes drop the dumplings into the water too fast, and everyone laughs. At midnight, we watch the fireworks together. Tom says, \"I never knew a festival could be so warm.\" This is the best Spring Festival for all of us.",
+ "word_count": 174,
+ "difficulty": 1,
+ "questions": [
+  {
+   "q": "Where is Tom from?",
+   "answer": "B",
+   "options": [
+    "China.",
+    "Canada.",
+    "Australia.",
+    "America."
+   ],
+   "explanation": "原文 \"Tom, a new classmate from Canada.\""
+  },
+  {
+   "q": "What does the family eat on New Year's Eve?",
+   "answer": "A",
+   "options": [
+    "Dumplings.",
+    "A lion's head meatball.",
+    "Mooncakes.",
+    "Fish and rice."
+   ],
+   "explanation": "原文 \"We always eat dumplings at this time.\""
+  },
+  {
+   "q": "What is the best main idea of the passage?",
+   "answer": "C",
+   "options": [
+    "How to make dumplings.",
+    "Tom is good at Chinese.",
+    "Sharing the Spring Festival with a foreign friend makes it warm and special.",
+    "The writer's family is very rich."
+   ],
+   "explanation": "全文围绕与外国朋友共度春节、氛围温暖。"
+  },
+  {
+   "q": "Why does the writer think this Spring Festival is unusual?",
+   "answer": "D",
+   "options": [
+    "Because the family moves to a new house.",
+    "Because they eat new food.",
+    "Because it is very cold.",
+    "Because a foreign friend joins the family for the first time."
+   ],
+   "explanation": "不寻常在于第一次有外国朋友加入;靠推断。"
+  },
+  {
+   "q": "\"He is proud of it\" means Tom ____.",
+   "answer": "A",
+   "options": [
+    "feels happy and pleased about it",
+    "is afraid of it",
+    "does not like it",
+    "forgets about it"
+   ],
+   "explanation": "proud = 自豪的、得意的。"
+  }
+ ],
+ "vocab_notes": [
+  {
+   "word": "couplets",
+   "cn": "对联"
+  },
+  {
+   "word": "dumpling",
+   "cn": "饺子"
+  },
+  {
+   "word": "stand for",
+   "cn": "象征,代表"
+  },
+  {
+   "word": "proud",
+   "cn": "自豪的"
+  }
+ ]
+}

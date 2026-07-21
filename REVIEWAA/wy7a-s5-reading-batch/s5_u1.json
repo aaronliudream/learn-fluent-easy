@@ -1,0 +1,86 @@
+{
+ "title": "My first day",
+ "body": "It is my first day at junior high school. I sit near the window with my new classmate, Ben. Our maths teacher, Mr Lee, comes in and smiles at us. \"Good morning, everyone. Here is an easy question,\" he says. He writes some numbers on the board. \"Who knows the answer?\" Nobody puts up a hand. The room is very quiet. My heart beats fast. I think I know it, but I am not sure. Is my answer right? What if it is wrong? Ben looks at me. \"You can try. It is OK to be wrong,\" he says. So I raise my hand. \"Twelve,\" I say. My voice is small. \"That is right! Well done,\" Mr Lee says. \"This is your first lesson here: do not be afraid to try. In junior high, we learn from our mistakes.\" I smile at Ben. It really is a good first lesson.",
+ "topic": "新学期·初中第一课",
+ "word_count": 150,
+ "questions": [
+  {
+   "q": "Who helps the writer feel brave enough to answer?",
+   "answer": "C",
+   "options": [
+    "Mr Lee, the maths teacher.",
+    "A student near the door.",
+    "Ben, the writer's classmate.",
+    "The writer's mother."
+   ],
+   "explanation": "Ben 说 \"You can try. It is OK to be wrong\",鼓励作者举手。"
+  },
+  {
+   "q": "What does Mr Lee write on the board?",
+   "answer": "A",
+   "options": [
+    "Some numbers.",
+    "A long sentence.",
+    "The writer's name.",
+    "A famous saying."
+   ],
+   "explanation": "原文 \"He writes some numbers on the board.\""
+  },
+  {
+   "q": "What is the best main idea of the passage?",
+   "answer": "B",
+   "options": [
+    "Maths is the hardest subject.",
+    "Don't be afraid to try, even if you may be wrong.",
+    "The first day of school is boring.",
+    "Teachers always ask easy questions."
+   ],
+   "explanation": "Mr Lee 的话点题:\"do not be afraid to try... we learn from our mistakes.\""
+  },
+  {
+   "q": "Why does the writer's heart beat fast before answering?",
+   "answer": "D",
+   "options": [
+    "Because the room is too hot.",
+    "Because he is late for class.",
+    "Because he does not know the answer at all.",
+    "Because he is nervous about answering in front of everyone."
+   ],
+   "explanation": "作者知道答案却不确定、怕答错(\"I am not sure... What if it is wrong?\"),紧张。文中未直说,靠推断。"
+  },
+  {
+   "q": "In the passage, \"My voice is small\" means the writer speaks ____.",
+   "answer": "A",
+   "options": [
+    "quietly and shyly",
+    "loudly and clearly",
+    "quickly and angrily",
+    "slowly and proudly"
+   ],
+   "explanation": "紧张、不自信的语境下 \"voice is small\" = 声音小、怯生生地说。"
+  }
+ ],
+ "vocab_notes": [
+  {
+   "word": "classmate",
+   "cn": "同班同学"
+  },
+  {
+   "word": "beat",
+   "cn": "(心)跳动"
+  },
+  {
+   "word": "afraid",
+   "cn": "害怕的"
+  },
+  {
+   "word": "raise",
+   "cn": "举起"
+  }
+ ],
+ "difficulty": 1,
+ "volume": "wy7A",
+ "unit": "U1",
+ "grade": 7,
+ "publisher": "junior_fltrp"
+}

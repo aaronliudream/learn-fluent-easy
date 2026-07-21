@@ -63,9 +63,8 @@
 
 ## Phase 2 前必补(2026-07-19 眼验时 Aaron 捞到 · 详情页里的过滤缺口)
 
-### A. `JuniorReadingPlay.tsx:97-99` "上一篇/下一篇"按 grade 取兄弟篇,无 publisher 过滤
-- `select("id,title").eq("grade", grade)` 无 `.eq("publisher",…)` → 外研社阅读一灌进去,学生点"下一篇"会跳进人教文章("翻着翻着换教材了")。
-- 和 5 个列表页同一类缺口,只是藏在详情页。**灌外研社阅读数据前必补**。
+### A. ✅【已完成 · commit 4ce86610 已上 main】`JuniorReadingPlay.tsx` 兄弟篇 + 全部 /junior 跳转过 publisher
+- 修法已落地(2026-07-20 核实 origin/main):兄弟篇查询 `select("id,title").eq("grade", grade)` 后加 `if (publisher) q = q.eq("publisher", publisher)`(L103-105);全部 7 处 `/junior` 跳转(返回列表/下一篇/自动返回/初中首页)过 `withJuniorPublisher`,returnTo(Hub)原样。**灌外研社阅读数据的前置坑已清,不用重修。**
 - ✅ CC 已核实:`JuniorListeningPlay.tsx` **无**兄弟篇导航(只 `.eq("id",id)` by-id 取),故 A **仅阅读 Play**,听力 Play 无此问题。
 
 ### B. `JuniorWritingPlay.tsx:99` 写 `module:"writing"` 裸值 → 老师端看不到写作错题(★全站写作板块从上线起半瘫★)
@@ -187,6 +186,22 @@ advice/journey/something/through/towards），可作回归用例。
 **生成器**:`scratchpad/gen_wy7a_batch.py`(6 单元合一 + 全 QC 套件);U1 单出 `gen_wy7a_u1_grammar.py`。产物 md+json 落 `REVIEWAA/wy7a-grammar-batch/`(批量)、`REVIEWAA/wy7a-u1-grammar/`(U1)。
 
 **七上语法进度**:U1+Starter+U2-U6 全 7 单元 Aaron 复审通过(2026-07-19,全 8 道 QC 绿)。灌库 SQL = `SQLAA/wy7a-grammar-load.sql`(140 题·publisher/volume 锁·四断言),**待 Aaron 跑**。⏭️ 跑后需前端把 `fltrp-grade7.json` 的 7 处 `grammarCode` 从 null 接上 wy7-* 码,per-unit 语法才点亮。下一关 s5 阅读(版权:课文不全文入库,只存题+片段/改写;source_key 先拿 junior_reading.id 再回填)。
+
+## ★s5 阅读方向(2026-07-20 Aaron 拍板)★
+
+**决策点 1 = 承载方式:改写同主题短文(非教材原文、非片段)。**
+- 三理由:①法律干净——教材课文是完整版权作品,存库+展示即复制;改写作品只要非逐句对译即独立作品,商业化站点不能含糊。②教学完整——片段承载=读三句答一题=找答案训练,非阅读训练。③与美语课 IP 铁律同路,CC 已跑通、规约现成。
+- ★改写界限(守死)★:**同话题、同语言点、内容全新**——人物/情节/细节全换,只保留单元主题(如 U1=新学期)+ 目标语言点(如 U1=代词)。改成能与原文逐句对上 = 洗稿,法律上一样有问题。
+- ★自检硬闸★:**改写文 vs 教材原文,不得存在连续 ≥8 词的重合**。有重合即改得不够,须重写。(做成 QC 工具:滑窗比对 8-gram。)
+- 落库锚点(沿用 §「错题命名表」):module=裸 `reading`;`source_key='junior_reading_passage_<uuid>'`,uuid=`junior_reading.id`,**先插行拿 id 再回填 source_key**,不预生成;snapshot 必带完整 `questions` 数组。publisher='junior_fltrp'/volume='wy7A'/grade=7。
+
+**决策点 2(2026-07-20 Aaron 看样例后拍板):**
+- **每篇 5 题**,配比 **2 细节 + 1 主旨 + 1 推断 + 1 词义猜测**(覆盖阅读主要维度、对齐中考结构)。人教旧数据 3 题是历史遗留、非标准,不采用。
+- **篇幅梯度**(一学期内可感知爬升,difficulty=1 全册统一,梯度由篇幅承担区分度):Starter–U2 = **130–160 词**;U3–U4 = **160–180**;U5–U6 = **180–200**。硬上限 200。
+- **字段**:`junior_reading(grade=7, publisher='junior_fltrp', volume='wy7A', unit, title, body, topic, word_count, difficulty=1, questions jsonb, vocab_notes jsonb)`。questions=`[{q,answer:"A",options:[4],explanation}]`;vocab_notes=`[{word,cn}]`。
+- **落库顺序/source_key**:脚本**不写 id、不写 source_key**;INSERT 后 DB 自动生成 `id`,前端 `JuniorReadingPlay` 运行时拼 `junior_reading_passage_${id}`(module 裸 `reading`)。零预生成。
+- **前置坑已清**:见上「Phase 2 前必补 §A」(commit 4ce86610 已上 main)。
+- **样例模板**:U1 `My first day`(150 词·8-gram 重合 3 词)已 Aaron 过目,后续 6 篇照此。生成器 `scratchpad/s5_u1_sample.py`,审定件 `REVIEWAA/wy7a-s5-reading-sample/`。
 
 ## 九年级策略
 - 新版九上(2024版)2026 秋刚启用出电子版;新版九下要 **2027 春**。→ 九年级"整理中"空壳会挂**至少半年**。

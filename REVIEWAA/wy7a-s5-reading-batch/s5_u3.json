@@ -1,0 +1,82 @@
+{
+ "grade": 7,
+ "publisher": "junior_fltrp",
+ "volume": "wy7A",
+ "unit": "U3",
+ "title": "Grandpa's silent love",
+ "topic": "家庭·沉默的爱",
+ "body": "My grandpa is a quiet man. He never says \"I love you.\" But I can feel my grandpa's love in many small things. Every morning, he cooks my breakfast. My favourite egg is always on my plate. On cold days, he puts my sister's gloves and my coat by the door. He checks the air in my bike's tyres before I go to school. Last winter, my mother's hands were busy with work. So Grandpa quietly took care of the whole family's dinner every night. He never asked for a \"thank you\". On my birthday, there is never a big party, but a bowl of long noodles is always ready — that is Grandpa's quiet gift. One evening, I saw Grandpa mending my old schoolbag. His hands were slow, but his face was calm and happy. My eyes felt wet. My grandpa's words are few. He gives no hugs and no kisses. But his love is real, and I feel it every single day, warm and strong.",
+ "word_count": 173,
+ "difficulty": 1,
+ "questions": [
+  {
+   "q": "What does Grandpa do every morning?",
+   "answer": "A",
+   "options": [
+    "He cooks the writer's breakfast.",
+    "He mends the schoolbag.",
+    "He drives the writer to school.",
+    "He buys new gloves."
+   ],
+   "explanation": "原文 \"Every morning, he cooks my breakfast.\""
+  },
+  {
+   "q": "Who took care of the family's dinner last winter?",
+   "answer": "C",
+   "options": [
+    "The writer's mother.",
+    "The writer's sister.",
+    "Grandpa.",
+    "The writer."
+   ],
+   "explanation": "原文 \"So Grandpa quietly took care of the whole family's dinner every night.\""
+  },
+  {
+   "q": "What is the main idea of the passage?",
+   "answer": "B",
+   "options": [
+    "Grandpa is a good cook.",
+    "Grandpa shows his love through actions, not words.",
+    "The writer's family is very busy.",
+    "Winter is a hard season."
+   ],
+   "explanation": "全文用小事说明爷爷用行动而非言语表达爱。"
+  },
+  {
+   "q": "Why did the writer's eyes feel wet?",
+   "answer": "D",
+   "options": [
+    "Because the room was cold.",
+    "Because the schoolbag was broken.",
+    "Because Grandpa was ill.",
+    "Because the writer was moved by Grandpa's quiet care."
+   ],
+   "explanation": "看到爷爷默默补书包而感动;文中未直说,靠推断。"
+  },
+  {
+   "q": "\"Grandpa mending my old schoolbag\" — \"mending\" means ____.",
+   "answer": "A",
+   "options": [
+    "repairing",
+    "washing",
+    "buying",
+    "throwing away"
+   ],
+   "explanation": "mend = 修补。"
+  }
+ ],
+ "vocab_notes": [
+  {
+   "word": "mend",
+   "cn": "修补"
+  },
+  {
+   "word": "calm",
+   "cn": "平静的"
+  },
+  {
+   "word": "gloves",
+   "cn": "手套"
+  }
+ ]
+}

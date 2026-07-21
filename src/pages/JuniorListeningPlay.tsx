@@ -4,7 +4,7 @@ import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
-import { speak, speakFromUrl, stopSpeaking } from "@/lib/speak";
+import { speak, speakFromUrl, stopSpeaking, prefetchTTS } from "@/lib/speak";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { celebrateScore } from "@/lib/feedback";
@@ -87,6 +87,10 @@ export default function JuniorListeningPlay() {
     select("id,title,transcript,translation_cn,questions,key_vocab,audio_url,kind,grade").
     eq("id", id).maybeSingle().then(({ data }: any) => setE(data as any));
   }, [id]);
+
+  // P2 预热:仅当无预生成 audio_url 时,按网络预热原文音频(键与 speak(e.transcript) 一致,
+  // 默认音色)→ 点"播放"首播秒响,消除整段冷合成 1-3s。有 audio_url 者走 speakFromUrl 直取 CDN,不需预热。
+  useEffect(() => { if (e && !e.audio_url && e.transcript) prefetchTTS(e.transcript); }, [e]);
 
   const playAudio = () => {
     if (!e) return;

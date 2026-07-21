@@ -144,6 +144,9 @@ export default function LibraryReader() {
   const stateRef = useRef<LibraryReadingState>(defaultLibraryState());
   const uidRef = useRef<string | null>(null);
   const pendingResumeSeqRef = useRef(0); // 章句加载后要定位到的全书 seq(0=滚到章首)
+  // C 方案·滚动驱动 TTS 预热:跨章持久(不清)防重复;session 计数控成本上限
+  const prewarmedSeqsRef = useRef<Set<number>>(new Set());
+  const prewarmSessionRef = useRef(0);
 
   // ---------- 首屏:载入书 + 章表 + 进度,决定初始章 ----------
   useEffect(() => {
@@ -242,6 +245,39 @@ export default function LibraryReader() {
     // slow/speed 仅用于预热音质,故意不入依赖(否则切语速会重载整章)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [book, chapterIdx]);
+
+  // C 方案:滚动驱动 TTS 预热。视口下方 300px 内的实时合成句提前合成 → 朗读/连播不冷、不"点了没反应"。
+  // 三闸:①跨章持久 Set(不清)防重复合成 ②session 上限 250 控成本 ③单次回调最多 40 防峰值抖动。
+  // 有 audio_url 的(预生成文件)标记跳过,不占预热额度。
+  useEffect(() => {
+    if (chapterLoading || !sentences.length) return;
+    const SESSION_CAP = 250, BATCH = 40;
+    const seen = prewarmedSeqsRef.current;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (prewarmSessionRef.current >= SESSION_CAP) { io.disconnect(); return; }
+        let fired = 0;
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          if (fired >= BATCH || prewarmSessionRef.current >= SESSION_CAP) break;
+          const idx = Number((e.target as HTMLElement).dataset.sidx);
+          const s = sentences[idx];
+          io.unobserve(e.target); // 处理过就不再观察(预热或跳过都是一次性)
+          if (!s || seen.has(s.seq)) continue;
+          seen.add(s.seq);
+          if (s.audio_url && !slow) continue; // 预生成文件无需实时预热
+          prewarmSessionRef.current += 1;
+          fired += 1;
+          prefetchTTS(s.text_en, { accent: READ_ACCENT, speed });
+        }
+      },
+      { rootMargin: "0px 0px 300px 0px" },
+    );
+    for (const el of liRefs.current) if (el) io.observe(el);
+    return () => io.disconnect();
+    // slow/speed 仅决定预热音质,同章切语速不重设观察器(与上方章预热同约定)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sentences, chapterLoading]);
 
   // 章句就绪 → 定位:有断点 seq 则滚到该句,否则滚到章首
   useEffect(() => {
@@ -959,6 +995,7 @@ export default function LibraryReader() {
                         return (
                           <span
                             key={s.id}
+                            data-sidx={i}
                             ref={(el) => {
                               liRefs.current[i] = el;
                             }}

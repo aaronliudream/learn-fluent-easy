@@ -19,14 +19,14 @@ const EMPTY: ClassroomSyncProgress = {
   },
 };
 
-export function useJuniorClassroomSync(gradeKey: JuniorGradeKey) {
+export function useJuniorClassroomSync(gradeKey: JuniorGradeKey, dbPublisher?: string) {
   const [progress, setProgress] = useState<ClassroomSyncProgress>(EMPTY);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
-    fetchJuniorClassroomSyncProgress(gradeKey)
+    fetchJuniorClassroomSyncProgress(gradeKey, dbPublisher)
       .then((p) => {
         if (!cancelled) setProgress(p);
       })
@@ -36,7 +36,7 @@ export function useJuniorClassroomSync(gradeKey: JuniorGradeKey) {
     return () => {
       cancelled = true;
     };
-  }, [gradeKey]);
+  }, [gradeKey, dbPublisher]);
 
   return { ...progress, loading };
 }

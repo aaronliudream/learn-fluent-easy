@@ -164,7 +164,7 @@ function JuniorContent({ pub }: { pub: JuniorPublisher }) {
 
   const examOk = useExamWhitelisted();                   // 中考真题仅 email 白名单可见(纯前端藏入口,对齐高考真题)
   const overview = useMasteryOverview("junior", dbPublisherFor(pub)); // 环按当前出版社(D1-c);pep=junior/外研社=junior_fltrp
-  const classroom = useJuniorClassroomSync(grade);       // 课堂同步掌握度(项已掌握 + 百分比)
+  const classroom = useJuniorClassroomSync(grade, dbPublisherFor(pub));       // 课堂同步掌握度(项已掌握 + 百分比)
   const { stats: streak } = useStreakStats(userId);      // 连续学习天数
 
   useEffect(() => {

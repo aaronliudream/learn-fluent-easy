@@ -35,7 +35,7 @@
  "templates": {
   "l1": [
    "I love my family.",
-   "My {member1}'s food is nice.",
+   "My {member1} {act1}.",
    "My {member2} {act2}.",
    "My family's love is warm."
   ],
@@ -46,10 +46,10 @@
    "In my family's home, I always feel safe and warm."
   ],
   "l3": [
-   "My family's love is around me every single day.",
+   "My family's love is around me every day.",
    "My {member1} {act1}. That is my {member1}'s quiet way of saying 'I love you'.",
-   "My {member2} {act2}, and my brother's jokes always make me laugh.",
-   "I am thankful for my parents' care and my family's warm support. Their love makes me strong."
+   "My {member2} {act2}, and my {member2}'s smile always makes me laugh.",
+   "I love my parents' care and my family's warm support. Their love makes me strong."
   ]
  },
  "connectors": [

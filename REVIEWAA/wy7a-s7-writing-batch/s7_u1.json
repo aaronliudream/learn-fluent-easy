@@ -49,7 +49,7 @@
    "Hello, everyone! Let me introduce myself. My name is {myName}.",
    "I am a new student in this class, and my hobby is {myHobby}.",
    "I want to introduce my good friend, too. His name is {friendName}.",
-   "He is a {friendTrait} person, and we always study and play together. We hope to make more friends here!"
+   "He is very {friendTrait}, and we always study and play together. We hope to make more friends here!"
   ]
  },
  "connectors": [

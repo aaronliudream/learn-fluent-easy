@@ -8,7 +8,7 @@
   "play",
   "weekend",
   "fun",
-  "practise"
+  "practice"
  ],
  "cards": [
   {
@@ -36,7 +36,7 @@
   "l1": [
    "My hobby is {hobby}.",
    "I do it {when}.",
-   "I play {where}.",
+   "I do it {where}.",
    "It makes me {feel}."
   ],
   "l2": [
@@ -48,7 +48,7 @@
   "l3": [
    "I have a hobby that I really love. It is {hobby}.",
    "I usually do it {when}, {where}.",
-   "My friends and I often practise together, and we help each other.",
+   "My friends and I often practice together, and we help each other.",
    "This hobby makes me {feel}. It also teaches me to keep trying. I hope you like it, too!"
   ]
  },

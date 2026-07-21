@@ -203,6 +203,40 @@ advice/journey/something/through/towards），可作回归用例。
 - **前置坑已清**:见上「Phase 2 前必补 §A」(commit 4ce86610 已上 main)。
 - **样例模板**:U1 `My first day`(150 词·8-gram 重合 3 词)已 Aaron 过目,后续 6 篇照此。生成器 `scratchpad/s5_u1_sample.py`,审定件 `REVIEWAA/wy7a-s5-reading-sample/`。
 
+## ★s7 写作方向(2026-07-20 Aaron 四条一并拍板)★
+
+> 顺序铁律:s4 → s5 → s7,别开半截丢半截。s5 阅读 7 篇已完成+已跑库(commit 11e3416d),§A 已核实完成(4ce86610),方可开 s7。
+
+**① 走 7B 内联模式**(同意):写作内容内联进 `fltrp-grade7.json` 的 `unit.writing` 对象(**不出 SQL、不进 junior_writing_prompts 表**),前端 `WritingStage` 直接读。schema 照 7B:`{topic, prompt, promptCn, opener, sampleWords[], cards[{key,labelCn,hint}], templates{l1,l2,l3}, connectors[], minWords}`;templates 三档必须真梯度(非同句加长),占位符 `{key}` 必须都有对应 card。
+
+**② 脚手架给满**(同意):cards + l1/l2/l3 三档 + connectors + sampleWords,与 7B 同规格。
+
+**③ 放开真 AI 批改到 wy7A —— 用白名单常量,不用 `||` 链**(Aaron 定):
+```ts
+const REAL_WRITING_BOOKS = new Set(["7B", "wy7A"]);
+const realWriting = REAL_WRITING_BOOKS.has(unit.book);   // 原: unit.book === "7B"
+```
+以后加册改数组不动逻辑,防 `||` 越加越漏。7B/8/9 行为不变。改 `JuniorHubStagePlay.tsx` WritingStage。
+
+**④ §B 修复 —— 单独 commit,不混进外研社改动**(Aaron 定):
+- 全站 bug(pep 7B 也中招),两处 `module:"writing"` → `"junior_writing"`(`JuniorWritingPlay.tsx:99` + `JuniorHubStagePlay.tsx:1924`),让写作错题/记录老师端可见(改写入侧,不动 RPC 排除集)。
+- **commit 独立**,信息:`fix: 写作错题 module 改用 junior_writing，修复老师端不可见`。理由:将来查"写作何时对老师可见"不该翻进标着"外研社写作"的 commit。
+
+**minWords 梯度**(同意,同阅读思路):Starter–U2 = 30 / U3–U4 = 40 / U5–U6 = 50。
+
+**7 单元写作任务(各绑该单元语言点):**
+| 单元 | 任务 | 语言点 |
+|---|---|---|
+| Starter | 介绍你的新学校 | there be / 形容词 |
+| U1 | 介绍自己和好朋友(**样例已过审·作模板**) | 代词 |
+| U2 | 写你的爱好 | 一般现在时 |
+| U3 | 写家人对你的爱/支持 | 名词所有格 |
+| U4 | 写你家怎么过节 | 频度副词 |
+| U5 | 写你将怎样保护植物/自然 | 一般将来时 |
+| U6 | 描述小动物正在做什么 | 现在进行时 |
+
+样例 `REVIEWAA/wy7a-s7-writing-sample/s7_u1_sample.json`(U1·代词·l3=54词≥minWords30·占位符全校验)Aaron 已认可质量。**待:s5 确认无误后,照模板出 Starter+U2-U6 六个 unit.writing → Aaron 审 → 接线 + ③④ 两处代码(§B 单独 commit)。**
+
 ## 九年级策略
 - 新版九上(2024版)2026 秋刚启用出电子版;新版九下要 **2027 春**。→ 九年级"整理中"空壳会挂**至少半年**。
 - 建议:**先把七上下、八上下四册做扎实**,九年级等新版九上拿到手再单独排一期(若想外研社入口早点完整,别等九年级)。

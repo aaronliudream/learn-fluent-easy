@@ -1,0 +1,59 @@
+{
+ "topic": "Watching an animal",
+ "prompt": "Write a short passage to describe what an animal is doing right now. Use the present continuous (It is running..., They are eating...).",
+ "promptCn": "写一段话描述一只小动物此刻正在做什么。用现在进行时(It is running…, They are eating…)。",
+ "opener": "Look! I am watching a lovely animal right now.",
+ "sampleWords": [
+  "watching",
+  "running",
+  "eating",
+  "playing",
+  "cute"
+ ],
+ "cards": [
+  {
+   "key": "animal",
+   "labelCn": "一只动物",
+   "hint": "如 cat"
+  },
+  {
+   "key": "place",
+   "labelCn": "它在哪里",
+   "hint": "如 the garden"
+  },
+  {
+   "key": "action1",
+   "labelCn": "它正在做的事",
+   "hint": "如 eating"
+  },
+  {
+   "key": "action2",
+   "labelCn": "另一件事",
+   "hint": "如 playing with a ball"
+  }
+ ],
+ "templates": {
+  "l1": [
+   "Look! I am watching a {animal}.",
+   "It is in {place}.",
+   "It is {action1} now.",
+   "It is {action2}."
+  ],
+  "l2": [
+   "Look! I am watching a lovely {animal} right now.",
+   "It is in {place}, and it is {action1}.",
+   "Now it is {action2}.",
+   "It is having a good time, and I am smiling."
+  ],
+  "l3": [
+   "Look! I am watching a lovely {animal} in {place} right now.",
+   "It is {action1}, and its eyes are shining.",
+   "Now it is {action2}, and it is not stopping for a rest.",
+   "The {animal} is having so much fun, and I am learning a lot about animals. I am really enjoying this moment!"
+  ]
+ },
+ "connectors": [
+  "and"
+ ],
+ "minWords": 50
+}

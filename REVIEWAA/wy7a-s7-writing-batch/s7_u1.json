@@ -1,0 +1,60 @@
+{
+ "topic": "Introduce yourself",
+ "prompt": "It is your first week in junior high. Write a short passage to introduce yourself and a good friend to your new classmates. Use pronouns (I, my, he/she, his/her, we).",
+ "promptCn": "开学第一周,写一段话向新同学介绍你自己和一位好朋友。注意使用代词(I, my, he/she, his/her, we)。",
+ "opener": "Hello, everyone! Let me introduce myself.",
+ "sampleWords": [
+  "myself",
+  "friend",
+  "hobby",
+  "kind",
+  "together"
+ ],
+ "cards": [
+  {
+   "key": "myName",
+   "labelCn": "你的名字",
+   "hint": "如 Lily"
+  },
+  {
+   "key": "myHobby",
+   "labelCn": "你的爱好",
+   "hint": "如 reading"
+  },
+  {
+   "key": "friendName",
+   "labelCn": "好朋友的名字",
+   "hint": "如 Ben"
+  },
+  {
+   "key": "friendTrait",
+   "labelCn": "朋友的特点",
+   "hint": "如 kind / funny"
+  }
+ ],
+ "templates": {
+  "l1": [
+   "Hello! I am {myName}.",
+   "I like {myHobby}.",
+   "This is my friend, {friendName}.",
+   "He is {friendTrait}. We are happy together."
+  ],
+  "l2": [
+   "Hello, everyone! My name is {myName}.",
+   "I am a new student here, and I like {myHobby}.",
+   "This is my good friend, {friendName}.",
+   "He is very {friendTrait}, and we often help each other."
+  ],
+  "l3": [
+   "Hello, everyone! Let me introduce myself. My name is {myName}.",
+   "I am a new student in this class, and my hobby is {myHobby}.",
+   "I want to introduce my good friend, too. His name is {friendName}.",
+   "He is a {friendTrait} person, and we always study and play together. We hope to make more friends here!"
+  ]
+ },
+ "connectors": [
+  "and",
+  "because"
+ ],
+ "minWords": 30
+}

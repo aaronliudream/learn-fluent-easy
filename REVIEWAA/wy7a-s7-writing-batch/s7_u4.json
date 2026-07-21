@@ -1,0 +1,59 @@
+{
+ "topic": "How my family celebrates",
+ "prompt": "Write a short passage about how your family celebrates a festival. Use adverbs of frequency (always, usually, often, sometimes, never).",
+ "promptCn": "写一段话讲你家怎么过一个节日。用频度副词(always, usually, often, sometimes, never)。",
+ "opener": "My family always celebrates the festival together.",
+ "sampleWords": [
+  "festival",
+  "always",
+  "usually",
+  "together",
+  "happy"
+ ],
+ "cards": [
+  {
+   "key": "festival",
+   "labelCn": "一个节日",
+   "hint": "如 the Spring Festival"
+  },
+  {
+   "key": "food",
+   "labelCn": "节日吃的食物",
+   "hint": "如 dumplings"
+  },
+  {
+   "key": "activity",
+   "labelCn": "一项活动",
+   "hint": "如 watch fireworks"
+  },
+  {
+   "key": "who",
+   "labelCn": "和谁一起",
+   "hint": "如 my grandparents"
+  }
+ ],
+ "templates": {
+  "l1": [
+   "My family always celebrates {festival}.",
+   "We usually eat {food}.",
+   "We often {activity}.",
+   "I am never sad on that day."
+  ],
+  "l2": [
+   "My family always celebrates {festival} together.",
+   "We usually eat {food}, and we always visit {who}.",
+   "In the evening, we often {activity}.",
+   "We are never bored, and everyone is happy."
+  ],
+  "l3": [
+   "My family always celebrates {festival} together. It is my favourite time of the year.",
+   "Before the day, we usually clean the house. We always eat {food}, and we often visit {who}.",
+   "In the evening, we sometimes {activity}, and we never forget to take photos.",
+   "We are never bored on this day. Our home is always full of love and laughter."
+  ]
+ },
+ "connectors": [
+  "and"
+ ],
+ "minWords": 40
+}

@@ -1,0 +1,59 @@
+{
+ "topic": "My new school",
+ "prompt": "It is your first week in junior high. Write a short passage to introduce your new school. Use 'There is / There are' and adjectives (big, new, kind...).",
+ "promptCn": "开学第一周,写一段话介绍你的新学校。用 There is / There are 和形容词(big, new, kind…)。",
+ "opener": "Welcome to my new school!",
+ "sampleWords": [
+  "library",
+  "playground",
+  "classroom",
+  "kind",
+  "big"
+ ],
+ "cards": [
+  {
+   "key": "schoolName",
+   "labelCn": "学校的名字",
+   "hint": "如 Green Hill"
+  },
+  {
+   "key": "place",
+   "labelCn": "校园里的一个地方",
+   "hint": "如 library"
+  },
+  {
+   "key": "adj",
+   "labelCn": "一个形容词",
+   "hint": "如 big / new"
+  },
+  {
+   "key": "teacher",
+   "labelCn": "老师的名字",
+   "hint": "如 Ms Wu"
+  }
+ ],
+ "templates": {
+  "l1": [
+   "This is my school, {schoolName}.",
+   "There is a {adj} {place}.",
+   "There are many trees.",
+   "My teacher {teacher} is kind."
+  ],
+  "l2": [
+   "Welcome to my new school, {schoolName}!",
+   "There is a {adj} {place}, and there are two playgrounds.",
+   "The classrooms are clean and bright.",
+   "My teacher {teacher} is kind and friendly."
+  ],
+  "l3": [
+   "Welcome to my new school! Its name is {schoolName}.",
+   "There is a {adj} {place} near our classroom, and there are two big playgrounds outside.",
+   "The classrooms are clean and bright, and there are tall green trees around us.",
+   "My teacher {teacher} is kind and patient, and my new classmates are friendly. I really like it here!"
+  ]
+ },
+ "connectors": [
+  "and"
+ ],
+ "minWords": 30
+}

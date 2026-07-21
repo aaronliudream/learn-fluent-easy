@@ -1,79 +1,431 @@
 {
   "volume": "required1",
   "unit": "U1",
-  "topic": "Teenage Life",
-  "source": "人教版2019必修一 Unit1。rd1=Reading and Thinking 课文 The Freshman Challenge(据原文整理);rd2=Reading for Writing 建议信(据 Susan Luo 复信整理);rd3-rd6=同主题(青少年生活)衍生,用词限 U1/常见词。",
   "passages": [
     {
-      "code": "r1u1.rd1",
-      "title": "The Freshman Challenge",
-      "genre": "记叙文（个人随笔）",
-      "body": "Hi! My name is Adam and I'm a freshman at senior high school. Going from junior high school to senior high school is a really big challenge, and my first week was a little confusing. First, I had to think carefully about which courses I wanted to take. The school adviser helped me choose the suitable ones: maths, English, chemistry, world history, and Chinese. I know that Chinese is a very difficult language, but I hope to be fluent when I graduate. My adviser also recommended that I should sign up for advanced literature, because I like English and I'm good at it. I had to choose extra-curricular activities, too. I tried to join the school football team, but the coach told me that I didn't play well enough. Obviously, I was unhappy, but I won't quit. I'll find a way to improve on my own so that I can make the team next year. Instead, I joined a volunteer club. Every Wednesday, we hand out food to homeless people in the community. I know I'll have to study harder and get used to being responsible for a lot more. Still, I'm happy to be here, and I'll be well prepared for whatever comes in the future.",
-      "questions": [
-        { "qid": "r1u1.rd1.q1", "volume": "required1", "unit": "U1", "code": "r1u1.rd1", "stem": "Why was Adam's first week of senior high school \"a little confusing\"?", "options": ["He had to make many new choices, such as courses and activities.", "He could not find his classroom.", "He did not know any of the teachers.", "He was new to the city."], "answer_index": 0, "answer_text": "He had to make many new choices, such as courses and activities.", "explanation": "首段说他要仔细选课、选课外活动,新选择多,所以感到 confusing。" },
-        { "qid": "r1u1.rd1.q2", "volume": "required1", "unit": "U1", "code": "r1u1.rd1", "stem": "Why did the adviser recommend advanced literature to Adam?", "options": ["Because Adam likes English and is good at it.", "Because it is an easy course.", "Because Chinese is too difficult.", "Because the football team needed him."], "answer_index": 0, "answer_text": "Because Adam likes English and is good at it.", "explanation": "原文:because I like English and I'm good at it。" },
-        { "qid": "r1u1.rd1.q3", "volume": "required1", "unit": "U1", "code": "r1u1.rd1", "stem": "What does \"make the team\" in the passage mean?", "options": ["To be chosen as a member of the team.", "To set up a new team.", "To beat the other team.", "To train the team."], "answer_index": 0, "answer_text": "To be chosen as a member of the team.", "explanation": "make the team 指被选进球队;他说明年要 improve 才能进队。" },
-        { "qid": "r1u1.rd1.q4", "volume": "required1", "unit": "U1", "code": "r1u1.rd1", "stem": "What can we learn about Adam from the passage?", "options": ["He stays positive and does not give up easily.", "He regrets coming to senior high school.", "He dislikes all his courses.", "He has given up sports for ever."], "answer_index": 0, "answer_text": "He stays positive and does not give up easily.", "explanation": "他没进球队但说 I won't quit、I'll find a way to improve,且 happy to be here,可见积极不放弃。" }
-      ]
-    },
-    {
-      "code": "r1u1.rd2",
+      "code": "rd1",
       "title": "A Letter of Advice",
-      "genre": "应用文（建议信）",
+      "topic": "应用·建议信",
       "body": "Dear Worried Friend, You wrote that you are very worried about your friend, Chen Lei. I understand quite well that you feel anxious. You think that your friend plays computer games too often and spends too much time online. I recommend that you talk to your friend about his behaviour. It is not unusual for teenagers of your generation to be attracted to computer games and the online world. But spending too much time online is unhealthy, and it makes it very difficult to focus on other things in life. Some students even become addicted to the Internet and cannot concentrate on school and family life. I think you should encourage your friend to try new hobbies. Why not discuss the problem together? I am sure he will listen to you, since you are his good friend. All the best, Susan Luo",
+      "word_count": 142,
+      "vocab_notes": [
+        {
+          "cn": "行为；举止",
+          "word": "behaviour"
+        },
+        {
+          "cn": "上瘾的",
+          "word": "addicted"
+        },
+        {
+          "cn": "集中(注意力)",
+          "word": "focus"
+        }
+      ],
       "questions": [
-        { "qid": "r1u1.rd2.q1", "volume": "required1", "unit": "U1", "code": "r1u1.rd2", "stem": "According to the letter, what is Chen Lei's problem?", "options": ["He spends too much time playing computer games online.", "He never does his homework.", "He has no friends at school.", "He is often late for class."], "answer_index": 0, "answer_text": "He spends too much time playing computer games online.", "explanation": "信中说 your friend plays computer games too often and spends too much time online。" },
-        { "qid": "r1u1.rd2.q2", "volume": "required1", "unit": "U1", "code": "r1u1.rd2", "stem": "What is Susan Luo's main piece of advice?", "options": ["Talk to the friend and encourage him to try new hobbies.", "Report the friend to the teacher.", "Stop being his friend.", "Take away his computer."], "answer_index": 0, "answer_text": "Talk to the friend and encourage him to try new hobbies.", "explanation": "她建议 talk to your friend about his behaviour 并 encourage him to try new hobbies。" },
-        { "qid": "r1u1.rd2.q3", "volume": "required1", "unit": "U1", "code": "r1u1.rd2", "stem": "According to the letter, why is spending too much time online a problem?", "options": ["It is unhealthy and makes it hard to focus on other things.", "It costs too much money.", "It is against school rules.", "It makes people fluent in English."], "answer_index": 0, "answer_text": "It is unhealthy and makes it hard to focus on other things.", "explanation": "原文:unhealthy, and it makes it very difficult to focus on other things in life。" },
-        { "qid": "r1u1.rd2.q4", "volume": "required1", "unit": "U1", "code": "r1u1.rd2", "stem": "Why does Susan Luo think the friend will listen?", "options": ["Because they are good friends.", "Because she is a teacher.", "Because his parents asked him to.", "Because he is afraid of her."], "answer_index": 0, "answer_text": "Because they are good friends.", "explanation": "原文:I am sure he will listen to you, since you are his good friend。" }
+        {
+          "stem": "According to the letter, what is Chen Lei's problem?",
+          "options": [
+            "He never does his homework.",
+            "He has no friends at school.",
+            "He is often late for class.",
+            "He spends too much time playing computer games online."
+          ],
+          "answer_index": 3,
+          "answer_text": "He spends too much time playing computer games online.",
+          "explanation": "信中说 your friend plays computer games too often and spends too much time online。"
+        },
+        {
+          "stem": "What is Susan Luo's main piece of advice?",
+          "options": [
+            "Talk to the friend and encourage him to try new hobbies.",
+            "Report the friend to the teacher.",
+            "Stop being his friend.",
+            "Take away his computer."
+          ],
+          "answer_index": 0,
+          "answer_text": "Talk to the friend and encourage him to try new hobbies.",
+          "explanation": "她建议 talk to your friend about his behaviour 并 encourage him to try new hobbies。"
+        },
+        {
+          "stem": "According to the letter, why is spending too much time online a problem?",
+          "options": [
+            "It costs too much money.",
+            "It is against school rules.",
+            "It can harm your health and hurt your concentration.",
+            "It makes people fluent in English."
+          ],
+          "answer_index": 2,
+          "answer_text": "It can harm your health and hurt your concentration.",
+          "explanation": "原文:unhealthy, and it makes it very difficult to focus on other things in life。"
+        },
+        {
+          "stem": "Why does Susan Luo think the friend will listen?",
+          "options": [
+            "Because she is a teacher.",
+            "Because his parents asked him to.",
+            "Because he is afraid of her.",
+            "Because they are good friends."
+          ],
+          "answer_index": 3,
+          "answer_text": "Because they are good friends.",
+          "explanation": "原文:I am sure he will listen to you, since you are his good friend。"
+        }
       ]
     },
     {
-      "code": "r1u1.rd3",
-      "title": "Choosing the Right Club",
-      "genre": "说明文",
-      "body": "At senior high school, there are many clubs for students to join. Each club has its own activities. In the Ballet Club, students learn new movements and dance together. In the Nature Club, they grow plants and work in a greenhouse. Members of the Debate Club enjoy discussing different topics, and they think and speak quite quickly. The Volunteer Club is also popular: its members help old people and clean up parks at the weekend. So how can you choose a suitable club? First, think about what you are interested in. If you love animals and plants, the Nature Club may be a good choice. Second, think about what you are good at. A student who speaks well may do well in the Debate Club. Finally, remember that a club should be fun, not just useful. The right club can help you make new friends and learn something new outside class.",
+      "code": "rd2",
+      "title": "The Freshman Challenge",
+      "topic": "记叙·新生挑战",
+      "body": "Hi! My name is Adam and I'm a freshman at senior high school. Going from junior high school to senior high school is a really big challenge, and my first week was a little confusing. First, I had to think carefully about which courses I wanted to take. The school adviser helped me choose the suitable ones: maths, English, chemistry, world history, and Chinese. I know that Chinese is a very difficult language, but I hope to be fluent when I graduate. My adviser also recommended that I should sign up for advanced literature, because I like English and I'm good at it. I had to choose extra-curricular activities, too. I tried to join the school football team, but the coach told me that I didn't play well enough. Obviously, I was unhappy, but I won't quit. I'll find a way to improve on my own so that I can make the team next year. Instead, I joined a volunteer club. Every Wednesday, we hand out food to homeless people in the community. I know I'll have to study harder and get used to being responsible for a lot more. Still, I'm happy to be here, and I'll be well prepared for whatever comes in the future.",
+      "word_count": 207,
+      "vocab_notes": [
+        {
+          "cn": "(高中)一年级新生",
+          "word": "freshman"
+        },
+        {
+          "cn": "挑战",
+          "word": "challenge"
+        },
+        {
+          "cn": "流利的",
+          "word": "fluent"
+        }
+      ],
       "questions": [
-        { "qid": "r1u1.rd3.q1", "volume": "required1", "unit": "U1", "code": "r1u1.rd3", "stem": "What do members of the Nature Club do?", "options": ["Grow plants and work in a greenhouse.", "Learn new dance movements.", "Help old people.", "Debate different topics."], "answer_index": 0, "answer_text": "Grow plants and work in a greenhouse.", "explanation": "原文:In the Nature Club, they grow plants and work in a greenhouse。" },
-        { "qid": "r1u1.rd3.q2", "volume": "required1", "unit": "U1", "code": "r1u1.rd3", "stem": "According to the passage, who may do well in the Debate Club?", "options": ["A student who speaks well.", "A student who loves plants.", "A student who can dance.", "A student who likes cleaning parks."], "answer_index": 0, "answer_text": "A student who speaks well.", "explanation": "原文:A student who speaks well may do well in the Debate Club。" },
-        { "qid": "r1u1.rd3.q3", "volume": "required1", "unit": "U1", "code": "r1u1.rd3", "stem": "What is the FIRST thing you should think about when choosing a club?", "options": ["What you are interested in.", "How much it costs.", "Which club your friends joined.", "How far the club is."], "answer_index": 0, "answer_text": "What you are interested in.", "explanation": "原文:First, think about what you are interested in。" },
-        { "qid": "r1u1.rd3.q4", "volume": "required1", "unit": "U1", "code": "r1u1.rd3", "stem": "What is the main idea of the passage?", "options": ["How to choose a suitable school club.", "Why ballet is difficult to learn.", "How to grow plants in a greenhouse.", "Why debate is the best club."], "answer_index": 0, "answer_text": "How to choose a suitable school club.", "explanation": "全文介绍各社团并给出选社团的方法,主旨是如何选合适的社团。" }
+        {
+          "stem": "Why was Adam's first week of senior high school \"a little confusing\"?",
+          "options": [
+            "He could not find his classroom.",
+            "He had to make many new choices, such as courses and activities.",
+            "He did not know any of the teachers.",
+            "He was new to the city."
+          ],
+          "answer_index": 1,
+          "answer_text": "He had to make many new choices, such as courses and activities.",
+          "explanation": "首段说他要仔细选课、选课外活动,新选择多,所以感到 confusing。"
+        },
+        {
+          "stem": "Why did the adviser recommend advanced literature to Adam?",
+          "options": [
+            "Because Adam likes English and is good at it.",
+            "Because it is an easy course.",
+            "Because Chinese is too difficult.",
+            "Because the football team needed him."
+          ],
+          "answer_index": 0,
+          "answer_text": "Because Adam likes English and is good at it.",
+          "explanation": "原文:because I like English and I'm good at it。"
+        },
+        {
+          "stem": "What does \"make the team\" in the passage mean?",
+          "options": [
+            "To set up a new team.",
+            "To beat the other team.",
+            "To train the team.",
+            "To be chosen as a member of the team."
+          ],
+          "answer_index": 3,
+          "answer_text": "To be chosen as a member of the team.",
+          "explanation": "make the team 指被选进球队;他说明年要 improve 才能进队。"
+        },
+        {
+          "stem": "What can we learn about Adam from the passage?",
+          "options": [
+            "He stays positive and does not give up easily.",
+            "He regrets coming to senior high school.",
+            "He dislikes all his courses.",
+            "He has given up sports for ever."
+          ],
+          "answer_index": 0,
+          "answer_text": "He stays positive and does not give up easily.",
+          "explanation": "他没进球队但说 I won't quit、I'll find a way to improve,且 happy to be here,可见积极不放弃。"
+        }
       ]
     },
     {
-      "code": "r1u1.rd4",
+      "code": "rd3",
       "title": "Managing Your Time at Senior High",
-      "genre": "说明文",
+      "topic": "说明·时间管理",
       "body": "Senior high school students often feel that there is never enough time. They have more homework, more subjects, and more extra-curricular activities than before. Being responsible for so much can be a real challenge. So how can teenagers manage their time well? The answer is to make a schedule. A schedule is a plan that shows what you will do and when. First, write down the most important tasks, such as homework and review. Then decide how much time each task needs. It is also wise to leave some free time for sports or hobbies, because all work and no play is not healthy. When you follow your schedule, you will feel less anxious and get more done. Good time management will not happen in one day, but if you keep trying, it will soon become a useful habit.",
+      "word_count": 139,
+      "vocab_notes": [
+        {
+          "cn": "日程安排",
+          "word": "schedule"
+        },
+        {
+          "cn": "负责的",
+          "word": "responsible"
+        },
+        {
+          "cn": "焦虑的",
+          "word": "anxious"
+        }
+      ],
       "questions": [
-        { "qid": "r1u1.rd4.q1", "volume": "required1", "unit": "U1", "code": "r1u1.rd4", "stem": "Why do senior high students often feel there is not enough time?", "options": ["They have more homework, subjects and activities.", "They sleep too much.", "They have no hobbies.", "Their classes are too short."], "answer_index": 0, "answer_text": "They have more homework, subjects and activities.", "explanation": "原文:more homework, more subjects, and more extra-curricular activities than before。" },
-        { "qid": "r1u1.rd4.q2", "volume": "required1", "unit": "U1", "code": "r1u1.rd4", "stem": "According to the passage, what is a schedule?", "options": ["A plan that shows what you will do and when.", "A list of your friends.", "A kind of homework.", "A school club."], "answer_index": 0, "answer_text": "A plan that shows what you will do and when.", "explanation": "原文:A schedule is a plan that shows what you will do and when。" },
-        { "qid": "r1u1.rd4.q3", "volume": "required1", "unit": "U1", "code": "r1u1.rd4", "stem": "Why should you leave some free time in your schedule?", "options": ["Because all work and no play is not healthy.", "Because homework is not important.", "Because teachers ask you to.", "Because you have nothing to do."], "answer_index": 0, "answer_text": "Because all work and no play is not healthy.", "explanation": "原文:leave some free time ... because all work and no play is not healthy。" },
-        { "qid": "r1u1.rd4.q4", "volume": "required1", "unit": "U1", "code": "r1u1.rd4", "stem": "What does the writer think about good time management?", "options": ["It takes time but can become a useful habit.", "It is impossible for teenagers.", "It happens in only one day.", "It is a waste of time."], "answer_index": 0, "answer_text": "It takes time but can become a useful habit.", "explanation": "原文:will not happen in one day, but if you keep trying, it will soon become a useful habit。" }
+        {
+          "stem": "Why do senior high students often feel there is not enough time?",
+          "options": [
+            "They sleep too much.",
+            "They have more homework, subjects and activities.",
+            "They have no hobbies.",
+            "Their classes are too short."
+          ],
+          "answer_index": 1,
+          "answer_text": "They have more homework, subjects and activities.",
+          "explanation": "原文:more homework, more subjects, and more extra-curricular activities than before。"
+        },
+        {
+          "stem": "According to the passage, what is a schedule?",
+          "options": [
+            "A timetable of your tasks and when to do them.",
+            "A list of your friends.",
+            "A kind of homework.",
+            "A school club."
+          ],
+          "answer_index": 0,
+          "answer_text": "A timetable of your tasks and when to do them.",
+          "explanation": "原文:A schedule is a plan that shows what you will do and when。"
+        },
+        {
+          "stem": "Why should you leave some free time in your schedule?",
+          "options": [
+            "Because homework is not important.",
+            "Because teachers ask you to.",
+            "Because you have nothing to do.",
+            "Because resting and having fun keep you healthy."
+          ],
+          "answer_index": 3,
+          "answer_text": "Because resting and having fun keep you healthy.",
+          "explanation": "原文:leave some free time ... because all work and no play is not healthy。"
+        },
+        {
+          "stem": "What does the writer think about good time management?",
+          "options": [
+            "It is impossible for teenagers.",
+            "It happens in only one day.",
+            "It is a waste of time.",
+            "It takes time but can become a useful habit."
+          ],
+          "answer_index": 3,
+          "answer_text": "It takes time but can become a useful habit.",
+          "explanation": "原文:will not happen in one day, but if you keep trying, it will soon become a useful habit。"
+        }
       ]
     },
     {
-      "code": "r1u1.rd5",
-      "title": "First Impressions",
-      "genre": "记叙文（日记体）",
-      "body": "So this is it — senior high school at last! I'm not very outgoing, so I felt a little anxious on my first morning. I wanted to make a good first impression, but I kept thinking: Will I make any friends? What if no one talks to me? My first maths class was difficult, but the teacher was kind and friendly. He even told us a funny story, and everyone laughed so much! I found most of my classmates and teachers friendly and helpful. In the afternoon, we had a chemistry class in the science lab. The lab was new, but the guy next to me talked the whole time, and I couldn't concentrate on the experiment. By the evening, I felt much better. This morning I was worried that no one would talk to me, but I was wrong. I didn't feel awkward or frightened at all. I miss my old friends, but I believe I'll make new ones here. I feel much more confident than I did this morning. I think tomorrow will be a great day!",
-      "questions": [
-        { "qid": "r1u1.rd5.q1", "volume": "required1", "unit": "U1", "code": "r1u1.rd5", "stem": "Why did the writer feel anxious on the first morning?", "options": ["She is not very outgoing and worried about making friends.", "She forgot her textbooks.", "She was late for class.", "She did not like the school."], "answer_index": 0, "answer_text": "She is not very outgoing and worried about making friends.", "explanation": "原文:I'm not very outgoing ... Will I make any friends? What if no one talks to me?" },
-        { "qid": "r1u1.rd5.q2", "volume": "required1", "unit": "U1", "code": "r1u1.rd5", "stem": "How was the writer's first maths class?", "options": ["Difficult, but the teacher was kind and friendly.", "Easy and boring.", "Cancelled because of the lab.", "Too noisy to hear anything."], "answer_index": 0, "answer_text": "Difficult, but the teacher was kind and friendly.", "explanation": "原文:My first maths class was difficult, but the teacher was kind and friendly。" },
-        { "qid": "r1u1.rd5.q3", "volume": "required1", "unit": "U1", "code": "r1u1.rd5", "stem": "Why couldn't the writer concentrate in the chemistry class?", "options": ["The guy next to her talked the whole time.", "The lab was too old.", "She felt sick.", "The teacher spoke too fast."], "answer_index": 0, "answer_text": "The guy next to her talked the whole time.", "explanation": "原文:the guy next to me talked the whole time, and I couldn't concentrate on the experiment。" },
-        { "qid": "r1u1.rd5.q4", "volume": "required1", "unit": "U1", "code": "r1u1.rd5", "stem": "How did the writer feel by the evening?", "options": ["More confident than in the morning.", "More anxious than before.", "Angry with her classmates.", "Sorry that she came to the school."], "answer_index": 0, "answer_text": "More confident than in the morning.", "explanation": "原文:I feel much more confident than I did this morning。" }
-      ]
-    },
-    {
-      "code": "r1u1.rd6",
+      "code": "rd4",
       "title": "Growing Up and Taking Responsibility",
-      "genre": "议论文",
+      "topic": "议论·成长与责任",
       "body": "Being a teenager is not always easy. As we grow up, we have to be responsible for more and more things. At home, we should help our parents and take care of ourselves. At school, we are responsible for our own studies and behaviour. Some teenagers think that being responsible means losing their freedom, but this is not true. In fact, responsibility and freedom go together. When you show that you can be responsible, adults trust you more and give you more freedom. For example, if you always finish your homework on time, your parents will not worry about your studies. If you keep your promises, your friends will believe in you. Of course, no one becomes responsible in a single day. We all make mistakes, but mistakes are a normal part of growing up. What matters is that we learn from them and keep trying to do better.",
+      "word_count": 149,
+      "vocab_notes": [
+        {
+          "cn": "责任",
+          "word": "responsibility"
+        },
+        {
+          "cn": "一代人",
+          "word": "generation"
+        },
+        {
+          "cn": "错误",
+          "word": "mistake"
+        }
+      ],
       "questions": [
-        { "qid": "r1u1.rd6.q1", "volume": "required1", "unit": "U1", "code": "r1u1.rd6", "stem": "What does the writer say teenagers are responsible for at school?", "options": ["Their own studies and behaviour.", "Cleaning the whole school.", "Teaching younger students.", "Cooking for their classmates."], "answer_index": 0, "answer_text": "Their own studies and behaviour.", "explanation": "原文:At school, we are responsible for our own studies and behaviour。" },
-        { "qid": "r1u1.rd6.q2", "volume": "required1", "unit": "U1", "code": "r1u1.rd6", "stem": "What is the writer's opinion about responsibility and freedom?", "options": ["They go together.", "They have nothing to do with each other.", "Freedom is more important than responsibility.", "Responsibility means losing all freedom."], "answer_index": 0, "answer_text": "They go together.", "explanation": "原文:responsibility and freedom go together。" },
-        { "qid": "r1u1.rd6.q3", "volume": "required1", "unit": "U1", "code": "r1u1.rd6", "stem": "According to the passage, what happens when you show you are responsible?", "options": ["Adults trust you more and give you more freedom.", "You get less free time.", "You have to do more homework.", "Your friends stop believing you."], "answer_index": 0, "answer_text": "Adults trust you more and give you more freedom.", "explanation": "原文:adults trust you more and give you more freedom。" },
-        { "qid": "r1u1.rd6.q4", "volume": "required1", "unit": "U1", "code": "r1u1.rd6", "stem": "What does the writer think about making mistakes?", "options": ["They are a normal part of growing up.", "They should never happen.", "They mean you are not responsible.", "They are always the parents' fault."], "answer_index": 0, "answer_text": "They are a normal part of growing up.", "explanation": "原文:mistakes are a normal part of growing up。" }
+        {
+          "stem": "What does the writer say teenagers are responsible for at school?",
+          "options": [
+            "Cleaning the whole school.",
+            "Their own studies and behaviour.",
+            "Teaching younger students.",
+            "Cooking for their classmates."
+          ],
+          "answer_index": 1,
+          "answer_text": "Their own studies and behaviour.",
+          "explanation": "原文:At school, we are responsible for our own studies and behaviour。"
+        },
+        {
+          "stem": "What is the writer's opinion about responsibility and freedom?",
+          "options": [
+            "They have nothing to do with each other.",
+            "Freedom is more important than responsibility.",
+            "They go together.",
+            "Responsibility means losing all freedom."
+          ],
+          "answer_index": 2,
+          "answer_text": "They go together.",
+          "explanation": "原文:responsibility and freedom go together。"
+        },
+        {
+          "stem": "According to the passage, what happens when you show you are responsible?",
+          "options": [
+            "You get less free time.",
+            "You have to do more homework.",
+            "Grown-ups believe in you and let you do more on your own.",
+            "Your friends stop believing you."
+          ],
+          "answer_index": 2,
+          "answer_text": "Grown-ups believe in you and let you do more on your own.",
+          "explanation": "原文:adults trust you more and give you more freedom。"
+        },
+        {
+          "stem": "What does the writer think about making mistakes?",
+          "options": [
+            "They should never happen.",
+            "They mean you are not responsible.",
+            "Everyone makes them while growing up.",
+            "They are always the parents' fault."
+          ],
+          "answer_index": 2,
+          "answer_text": "Everyone makes them while growing up.",
+          "explanation": "原文:mistakes are a normal part of growing up。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Choosing the Right Club",
+      "topic": "说明·选社团",
+      "body": "At senior high school, there are many clubs for students to join. Each club has its own activities. In the Ballet Club, students learn new movements and dance together. In the Nature Club, they grow plants and work in a greenhouse. Members of the Debate Club enjoy discussing different topics, and they think and speak quite quickly. The Volunteer Club is also popular: its members help old people and clean up parks at the weekend. So how can you choose a suitable club? First, think about what you are interested in. If you love animals and plants, the Nature Club may be a good choice. Second, think about what you are good at. A student who speaks well may do well in the Debate Club. Finally, remember that a club should be fun, not just useful. The right club can help you make new friends and learn something new outside class.",
+      "word_count": 151,
+      "vocab_notes": [
+        {
+          "cn": "合适的",
+          "word": "suitable"
+        },
+        {
+          "cn": "温室",
+          "word": "greenhouse"
+        },
+        {
+          "cn": "辩论",
+          "word": "debate"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do members of the Nature Club do?",
+          "options": [
+            "They look after plants in the school greenhouse.",
+            "Learn new dance movements.",
+            "Help old people.",
+            "Debate different topics."
+          ],
+          "answer_index": 0,
+          "answer_text": "They look after plants in the school greenhouse.",
+          "explanation": "原文:In the Nature Club, they grow plants and work in a greenhouse。"
+        },
+        {
+          "stem": "According to the passage, who may do well in the Debate Club?",
+          "options": [
+            "A student who loves plants.",
+            "Someone good at speaking and arguing.",
+            "A student who can dance.",
+            "A student who likes cleaning parks."
+          ],
+          "answer_index": 1,
+          "answer_text": "Someone good at speaking and arguing.",
+          "explanation": "原文:A student who speaks well may do well in the Debate Club。"
+        },
+        {
+          "stem": "What is the FIRST thing you should think about when choosing a club?",
+          "options": [
+            "Your own interests and hobbies.",
+            "How much it costs.",
+            "Which club your friends joined.",
+            "How far the club is."
+          ],
+          "answer_index": 0,
+          "answer_text": "Your own interests and hobbies.",
+          "explanation": "原文:First, think about what you are interested in。"
+        },
+        {
+          "stem": "What is the main idea of the passage?",
+          "options": [
+            "Why ballet is difficult to learn.",
+            "How to grow plants in a greenhouse.",
+            "How to choose a suitable school club.",
+            "Why debate is the best club."
+          ],
+          "answer_index": 2,
+          "answer_text": "How to choose a suitable school club.",
+          "explanation": "全文介绍各社团并给出选社团的方法,主旨是如何选合适的社团。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "First Impressions",
+      "topic": "记叙·开学第一天",
+      "body": "So this is it — senior high school at last! I'm not very outgoing, so I felt a little anxious on my first morning. I wanted to make a good first impression, but I kept thinking: Will I make any friends? What if no one talks to me? My first maths class was difficult, but the teacher was kind and friendly. He even told us a funny story, and everyone laughed so much! I found most of my classmates and teachers friendly and helpful. In the afternoon, we had a chemistry class in the science lab. The lab was new, but the guy next to me talked the whole time, and I couldn't concentrate on the experiment. By the evening, I felt much better. This morning I was worried that no one would talk to me, but I was wrong. I didn't feel awkward or frightened at all. I miss my old friends, but I believe I'll make new ones here. I feel much more confident than I did this morning. I think tomorrow will be a great day!",
+      "word_count": 179,
+      "vocab_notes": [
+        {
+          "cn": "印象",
+          "word": "impression"
+        },
+        {
+          "cn": "集中精力",
+          "word": "concentrate"
+        },
+        {
+          "cn": "自信的",
+          "word": "confident"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the writer feel anxious on the first morning?",
+          "options": [
+            "She forgot her textbooks.",
+            "She is not very outgoing and worried about making friends.",
+            "She was late for class.",
+            "She did not like the school."
+          ],
+          "answer_index": 1,
+          "answer_text": "She is not very outgoing and worried about making friends.",
+          "explanation": "原文:I'm not very outgoing ... Will I make any friends? What if no one talks to me?"
+        },
+        {
+          "stem": "How was the writer's first maths class?",
+          "options": [
+            "Easy and boring.",
+            "Hard at first, though the teacher was nice.",
+            "Cancelled because of the lab.",
+            "Too noisy to hear anything."
+          ],
+          "answer_index": 1,
+          "answer_text": "Hard at first, though the teacher was nice.",
+          "explanation": "原文:My first maths class was difficult, but the teacher was kind and friendly。"
+        },
+        {
+          "stem": "Why couldn't the writer concentrate in the chemistry class?",
+          "options": [
+            "The lab was too old.",
+            "She felt sick.",
+            "The guy next to her talked the whole time.",
+            "The teacher spoke too fast."
+          ],
+          "answer_index": 2,
+          "answer_text": "The guy next to her talked the whole time.",
+          "explanation": "原文:the guy next to me talked the whole time, and I couldn't concentrate on the experiment。"
+        },
+        {
+          "stem": "How did the writer feel by the evening?",
+          "options": [
+            "More anxious than before.",
+            "Angry with her classmates.",
+            "Sorry that she came to the school.",
+            "More confident than in the morning."
+          ],
+          "answer_index": 3,
+          "answer_text": "More confident than in the morning.",
+          "explanation": "原文:I feel much more confident than I did this morning。"
+        }
       ]
     }
   ]

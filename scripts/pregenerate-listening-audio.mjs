@@ -50,9 +50,13 @@ const ALL = process.argv.includes('--all');
 // 册:--volume=7A / 7B / 8A …(默认 7B)。grade 从册首位数字推断。
 const VOLUME = (process.argv.find(a => a.startsWith('--volume='))?.split('=')[1]) || '7B';
 // 'g9'/'G9' 等以字母 g 开头的"全一册"卷:grade 取 g 后的数字;否则取首字符数字。
-const GRADE = (VOLUME[0] === 'g' || VOLUME[0] === 'G')
-  ? (Number(VOLUME.slice(1).replace(/[^0-9]/g, '')) || 9)
-  : (Number(VOLUME[0]) || 7);
+// --grade= 显式覆盖(高中册 required1/elective1 等首字符非数字,无法从册名推 grade,须显式传)
+const GRADE_ARG = process.argv.find(a => a.startsWith('--grade='))?.split('=')[1];
+const GRADE = GRADE_ARG
+  ? Number(GRADE_ARG)
+  : (VOLUME[0] === 'g' || VOLUME[0] === 'G')
+    ? (Number(VOLUME.slice(1).replace(/[^0-9]/g, '')) || 9)
+    : (Number(VOLUME[0]) || 7);
 
 // 拉目标册且 audio_url IS NULL(增量)
 const { data: rows, error } = await sb

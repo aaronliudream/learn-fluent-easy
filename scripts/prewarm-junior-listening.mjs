@@ -46,18 +46,28 @@ function collectInline() {
   return uniq(units.flatMap((u) => (u.listeningQuestions || []).map((q) => q.audio)));
 }
 
-// 听音辨词(第2关)🔊 读的是 vocabulary 的 en;暖全部单词,首点即响、不再冷。
-function collectVocab() {
+// 听音辨词(第2关)🔊 读的是 ListenWordStage 的同源 = junior_vocab DB 的 word
+// (grade+volume+unit 拉整单元词,g7=608 / g8=957)。⚠️ 必须读 DB,不能读 grade8.json
+// (后者每单元仅 12 词、共 192,与运行时严重对不上 → 765 词冷、点了不响)。
+// 暖全部单词,首点即在手势内 CDN 命中、不再冷。
+async function fetchAllRest(path) {
+  // PostgREST 默认单页有上限,按 Range 分页拉全(1000/页)。
   const out = [];
-  for (const file of ["grade7", "grade8"]) {
-    try {
-      const root = JSON.parse(fs.readFileSync(`src/data/juniorHub/${file}.json`, "utf8"));
-      const top = root[Object.keys(root)[0]];
-      const units = Object.values(top.semesters).flatMap((s) => s.units);
-      out.push(...units.flatMap((u) => (u.vocabulary || []).map((v) => v.en)));
-    } catch { /* 文件缺失则跳过 */ }
+  const PAGE = 1000;
+  for (let from = 0; ; from += PAGE) {
+    const to = from + PAGE - 1;
+    const r = await fetch(`${URL}/rest/v1/${path}`, { headers: { ...H, Range: `${from}-${to}`, "Range-Unit": "items" } });
+    if (!r.ok) { console.warn("DB 读取失败:", r.status, await r.text().catch(() => "")); break; }
+    const rows = await r.json();
+    out.push(...rows);
+    if (rows.length < PAGE) break;
   }
-  return uniq(out);
+  return out;
+}
+
+async function collectVocab() {
+  const rows = await fetchAllRest("junior_vocab?select=word&grade=in.(7,8)");
+  return uniq(rows.map((x) => x.word));
 }
 
 async function warmOne(text) {
@@ -96,7 +106,7 @@ async function main() {
   let texts = [];
   if (want === "all" || want === "db") texts.push(...(await collectDb()));
   if (want === "all" || want === "inline") texts.push(...collectInline());
-  if (want === "all" || want === "vocab") texts.push(...collectVocab());
+  if (want === "all" || want === "vocab") texts.push(...(await collectVocab()));
   texts = uniq(texts);
   console.log(`初中 TTS 预热: ${texts.length} 条 × voiceId=${VOICE_ID} speed=${SPEED} (含听力句+听音辨词单词)`);
   if (!texts.length) { console.log("无素材,退出"); return; }

@@ -1,493 +1,447 @@
 {
   "volume": "required1",
   "unit": "U1",
-  "book_cn": "必修第一册",
-  "unit_cn": "Unit 1 Teenage Life 青少年生活",
-  "source": "人教版2019必修一 Unit1 词汇节 + 各单元生词表(p119-120,Unit 1 课标词);IPA 按标准词典回填(PDF 音标字体不可抽),词性/释义/语块取真课本",
+  "count": 44,
   "words": [
     {
       "word": "teenage",
       "ipa": "/ˈtiːneɪdʒ/",
       "pos": "adj.",
       "meaning_cn": "十几岁的（指13至19岁）；青少年的",
-      "phrase_en": "teenage life",
-      "freq_rank": 1,
       "example_en": "Teenage life is full of new challenges.",
-      "example_cn": "青少年生活充满新挑战。"
+      "example_cn": "青少年生活充满新挑战。",
+      "phrase_en": "teenage life",
+      "freq_rank": 1
     },
     {
       "word": "teenager",
       "ipa": "/ˈtiːneɪdʒə(r)/",
       "pos": "n.",
       "meaning_cn": "（13至19岁之间的）青少年",
-      "phrase_en": "a typical teenager",
-      "freq_rank": 2,
       "example_en": "Most teenagers enjoy joining school clubs.",
-      "example_cn": "大多数青少年喜欢参加学校社团。"
+      "example_cn": "大多数青少年喜欢参加学校社团。",
+      "phrase_en": "a typical teenager",
+      "freq_rank": 2
     },
     {
       "word": "ballet",
       "ipa": "/ˈbæleɪ/",
       "pos": "n.",
       "meaning_cn": "芭蕾舞",
-      "phrase_en": "join the ballet club",
-      "freq_rank": 3,
       "example_en": "She has a ballet class every Friday.",
-      "example_cn": "她每周五有一节芭蕾课。"
+      "example_cn": "她每周五有一节芭蕾课。",
+      "phrase_en": "join the ballet club",
+      "freq_rank": 3
     },
     {
       "word": "volunteer",
       "ipa": "/ˌvɒlənˈtɪə(r)/",
       "pos": "n.",
       "meaning_cn": "志愿者",
-      "phrase_en": "work as a volunteer",
-      "freq_rank": 4,
       "example_en": "I work as a volunteer at the weekend.",
-      "example_cn": "我周末做志愿者。"
+      "example_cn": "我周末做志愿者。",
+      "phrase_en": "work as a volunteer",
+      "freq_rank": 4
     },
     {
       "word": "debate",
       "ipa": "/dɪˈbeɪt/",
       "pos": "n./v.",
       "meaning_cn": "辩论；争论",
-      "phrase_en": "have a debate",
-      "freq_rank": 5,
       "example_en": "We had a debate about computer games.",
-      "example_cn": "我们就电脑游戏进行了一场辩论。"
+      "example_cn": "我们就电脑游戏进行了一场辩论。",
+      "phrase_en": "have a debate",
+      "freq_rank": 5
     },
     {
       "word": "prefer",
       "ipa": "/prɪˈfɜː(r)/",
       "pos": "vt.",
       "meaning_cn": "较喜欢",
-      "phrase_en": "prefer tea to coffee",
-      "freq_rank": 6,
       "example_en": "I prefer reading to watching TV.",
-      "example_cn": "比起看电视，我更喜欢读书。"
+      "example_cn": "比起看电视，我更喜欢读书。",
+      "phrase_en": "prefer tea to coffee",
+      "freq_rank": 6
     },
     {
       "word": "content",
       "ipa": "/ˈkɒntent/",
       "pos": "n.",
       "meaning_cn": "内容；目录；主题",
-      "phrase_en": "the content of the text",
-      "freq_rank": 7,
       "example_en": "The content of this book is very interesting.",
-      "example_cn": "这本书的内容很有趣。"
+      "example_cn": "这本书的内容很有趣。",
+      "phrase_en": "the content of the text",
+      "freq_rank": 7
     },
     {
       "word": "movement",
       "ipa": "/ˈmuːvmənt/",
       "pos": "n.",
       "meaning_cn": "动作；运动；活动",
-      "phrase_en": "learn new movements",
-      "freq_rank": 8,
       "example_en": "The dancers practise new movements every day.",
-      "example_cn": "舞者们每天练习新动作。"
+      "example_cn": "舞者们每天练习新动作。",
+      "phrase_en": "learn new movements",
+      "freq_rank": 8
     },
     {
       "word": "greenhouse",
       "ipa": "/ˈɡriːnhaʊs/",
       "pos": "n.",
       "meaning_cn": "温室；暖房",
-      "phrase_en": "work in a greenhouse",
-      "freq_rank": 9,
       "example_en": "We grow vegetables in the greenhouse.",
-      "example_cn": "我们在温室里种蔬菜。"
+      "example_cn": "我们在温室里种蔬菜。",
+      "phrase_en": "work in a greenhouse",
+      "freq_rank": 9
     },
     {
       "word": "suitable",
       "ipa": "/ˈsuːtəbl/",
       "pos": "adj.",
       "meaning_cn": "合适的；适用的",
-      "phrase_en": "a suitable club for you",
-      "freq_rank": 10,
       "example_en": "This club is suitable for me.",
-      "example_cn": "这个社团适合我。"
+      "example_cn": "这个社团适合我。",
+      "phrase_en": "a suitable club for you",
+      "freq_rank": 10
     },
     {
       "word": "actually",
       "ipa": "/ˈæktʃuəli/",
       "pos": "adv.",
       "meaning_cn": "事实上；的确",
-      "phrase_en": "actually, I agree",
-      "freq_rank": 11,
       "example_en": "Actually, I agree with you.",
-      "example_cn": "事实上，我同意你。"
+      "example_cn": "事实上，我同意你。",
+      "phrase_en": "actually, I agree",
+      "freq_rank": 11
     },
     {
       "word": "challenge",
       "ipa": "/ˈtʃælɪndʒ/",
       "pos": "n./vt.",
       "meaning_cn": "挑战；艰巨任务",
-      "phrase_en": "face a big challenge",
-      "freq_rank": 12,
       "example_en": "Senior high school is a big challenge.",
-      "example_cn": "高中是一个巨大的挑战。"
+      "example_cn": "高中是一个巨大的挑战。",
+      "phrase_en": "face a big challenge",
+      "freq_rank": 12
     },
     {
       "word": "title",
       "ipa": "/ˈtaɪtl/",
       "pos": "n.",
       "meaning_cn": "名称；标题；头衔",
-      "phrase_en": "the title of the book",
-      "freq_rank": 13,
       "example_en": "What is the title of the text?",
-      "example_cn": "这篇课文的标题是什么？"
+      "example_cn": "这篇课文的标题是什么？",
+      "phrase_en": "the title of the book",
+      "freq_rank": 13
     },
     {
       "word": "topic",
       "ipa": "/ˈtɒpɪk/",
       "pos": "n.",
       "meaning_cn": "话题；标题",
-      "phrase_en": "discuss a topic",
-      "freq_rank": 14,
       "example_en": "We talked about an interesting topic in class.",
-      "example_cn": "我们在课上谈论了一个有趣的话题。"
+      "example_cn": "我们在课上谈论了一个有趣的话题。",
+      "phrase_en": "discuss a topic",
+      "freq_rank": 14
     },
     {
       "word": "freshman",
       "ipa": "/ˈfreʃmən/",
       "pos": "n.",
       "meaning_cn": "（大学或高中）一年级新生",
-      "phrase_en": "a freshman at senior high",
-      "freq_rank": 15,
       "example_en": "He is a freshman at senior high school.",
-      "example_cn": "他是高中一年级新生。"
+      "example_cn": "他是高中一年级新生。",
+      "phrase_en": "a freshman at senior high",
+      "freq_rank": 15
     },
     {
       "word": "confusing",
       "ipa": "/kənˈfjuːzɪŋ/",
       "pos": "adj.",
       "meaning_cn": "难以理解的；不清楚的",
-      "phrase_en": "a confusing question",
-      "freq_rank": 16,
       "example_en": "The first week was a little confusing.",
-      "example_cn": "第一周有点令人困惑。"
+      "example_cn": "第一周有点令人困惑。",
+      "phrase_en": "a confusing question",
+      "freq_rank": 16
     },
     {
       "word": "confuse",
       "ipa": "/kənˈfjuːz/",
       "pos": "vt.",
       "meaning_cn": "使糊涂；使迷惑",
-      "phrase_en": "confuse the two words",
-      "freq_rank": 17,
       "example_en": "Don't confuse these two words.",
-      "example_cn": "不要把这两个词弄混。"
+      "example_cn": "不要把这两个词弄混。",
+      "phrase_en": "confuse the two words",
+      "freq_rank": 17
     },
     {
       "word": "confused",
       "ipa": "/kənˈfjuːzd/",
       "pos": "adj.",
       "meaning_cn": "糊涂的；迷惑的",
-      "phrase_en": "feel confused",
-      "freq_rank": 18,
       "example_en": "I felt confused on my first day.",
-      "example_cn": "第一天我感到困惑。"
+      "example_cn": "第一天我感到困惑。",
+      "phrase_en": "feel confused",
+      "freq_rank": 18
     },
     {
       "word": "fluent",
       "ipa": "/ˈfluːənt/",
       "pos": "adj.",
       "meaning_cn": "（尤指外语）流利的；熟练的",
-      "phrase_en": "be fluent in English",
-      "freq_rank": 19,
       "example_en": "I hope to be fluent in English.",
-      "example_cn": "我希望英语说得流利。"
+      "example_cn": "我希望英语说得流利。",
+      "phrase_en": "be fluent in English",
+      "freq_rank": 19
     },
     {
       "word": "graduate",
       "ipa": "/ˈɡrædʒueɪt/",
       "pos": "vi.",
       "meaning_cn": "毕业；获得学位",
-      "phrase_en": "graduate from high school",
-      "freq_rank": 20,
       "example_en": "I will study hard until I graduate.",
-      "example_cn": "我会努力学习直到毕业。"
+      "example_cn": "我会努力学习直到毕业。",
+      "phrase_en": "graduate from high school",
+      "freq_rank": 20
     },
     {
       "word": "recommend",
       "ipa": "/ˌrekəˈmend/",
       "pos": "vt.",
       "meaning_cn": "建议；推荐；介绍",
-      "phrase_en": "recommend a good book",
-      "freq_rank": 21,
       "example_en": "My teacher recommended a good book to me.",
-      "example_cn": "老师给我推荐了一本好书。"
+      "example_cn": "老师给我推荐了一本好书。",
+      "phrase_en": "recommend a good book",
+      "freq_rank": 21
     },
     {
       "word": "advanced",
       "ipa": "/ədˈvɑːnst/",
-      "ipa_us": "/ədˈvænst/",
-      "note": "英音 /ɑː/，美音 /æ/",
       "pos": "adj.",
       "meaning_cn": "高级的；高等的；先进的",
-      "phrase_en": "an advanced course",
-      "freq_rank": 22,
       "example_en": "She signed up for an advanced English course.",
-      "example_cn": "她报名了一门高级英语课程。"
+      "example_cn": "她报名了一门高级英语课程。",
+      "phrase_en": "an advanced course",
+      "freq_rank": 22
     },
     {
       "word": "advance",
       "ipa": "/ədˈvɑːns/",
-      "ipa_us": "/ədˈvæns/",
-      "note": "英音 /ɑː/，美音 /æ/",
       "pos": "n./v.",
       "meaning_cn": "前进；发展",
-      "phrase_en": "advances in science",
-      "freq_rank": 23,
       "example_en": "Science makes new advances every year.",
-      "example_cn": "科学每年都有新的发展。"
+      "example_cn": "科学每年都有新的发展。",
+      "phrase_en": "advances in science",
+      "freq_rank": 23
     },
     {
       "word": "literature",
       "ipa": "/ˈlɪtrətʃə(r)/",
-      "ipa_us": "/ˈlɪtərətʃʊr/",
-      "note": "英音 /-tʃə/，美音 /-tʃʊr/ 卷舌且常多一个音节",
       "pos": "n.",
       "meaning_cn": "文学；文学作品",
-      "phrase_en": "English literature",
-      "freq_rank": 24,
       "example_en": "I really enjoy English literature.",
-      "example_cn": "我很喜欢英语文学。"
+      "example_cn": "我很喜欢英语文学。",
+      "phrase_en": "English literature",
+      "freq_rank": 24
     },
     {
       "word": "extra-curricular",
       "ipa": "/ˌekstrəkəˈrɪkjələ(r)/",
-      "ipa_us": "/ˌekstrəkəˈrɪkjələr/",
-      "note": "美音词尾 /-lər/ 卷舌 r",
       "pos": "adj.",
       "meaning_cn": "课外的；课程以外的",
-      "phrase_en": "extra-curricular activities",
-      "freq_rank": 25,
       "example_en": "He takes part in many extra-curricular activities.",
-      "example_cn": "他参加许多课外活动。"
+      "example_cn": "他参加许多课外活动。",
+      "phrase_en": "extra-curricular activities",
+      "freq_rank": 25
     },
     {
       "word": "extra",
       "ipa": "/ˈekstrə/",
       "pos": "adj.",
       "meaning_cn": "额外的；附加的",
-      "phrase_en": "extra homework",
-      "freq_rank": 26,
       "example_en": "The teacher gave us some extra homework.",
-      "example_cn": "老师给我们布置了一些额外的作业。"
+      "example_cn": "老师给我们布置了一些额外的作业。",
+      "phrase_en": "extra homework",
+      "freq_rank": 26
     },
     {
       "word": "obviously",
       "ipa": "/ˈɒbviəsli/",
       "pos": "adv.",
       "meaning_cn": "显然；明显地",
-      "phrase_en": "obviously important",
-      "freq_rank": 27,
       "example_en": "He was obviously very happy about the news.",
-      "example_cn": "他显然对这个消息很高兴。"
+      "example_cn": "他显然对这个消息很高兴。",
+      "phrase_en": "obviously important",
+      "freq_rank": 27
     },
     {
       "word": "quit",
       "ipa": "/kwɪt/",
       "pos": "v.",
       "meaning_cn": "停止；戒掉；离开",
-      "phrase_en": "never quit trying",
-      "freq_rank": 28,
       "example_en": "Don't quit when things get difficult.",
-      "example_cn": "困难的时候不要放弃。"
+      "example_cn": "困难的时候不要放弃。",
+      "phrase_en": "never quit trying",
+      "freq_rank": 28
     },
     {
       "word": "responsible",
       "ipa": "/rɪˈspɒnsəbl/",
       "pos": "adj.",
       "meaning_cn": "负责的；有责任的",
-      "phrase_en": "be responsible for it",
-      "freq_rank": 29,
       "example_en": "You should be responsible for your own studies.",
-      "example_cn": "你应该对自己的学业负责。"
+      "example_cn": "你应该对自己的学业负责。",
+      "phrase_en": "be responsible for it",
+      "freq_rank": 29
     },
     {
       "word": "responsibility",
       "ipa": "/rɪˌspɒnsəˈbɪləti/",
       "pos": "n.",
       "meaning_cn": "责任；义务",
-      "phrase_en": "take responsibility",
-      "freq_rank": 30,
       "example_en": "Looking after a pet is a big responsibility.",
-      "example_cn": "照顾宠物是一项重大的责任。"
+      "example_cn": "照顾宠物是一项重大的责任。",
+      "phrase_en": "take responsibility",
+      "freq_rank": 30
     },
     {
       "word": "solution",
       "ipa": "/səˈluːʃn/",
       "pos": "n.",
       "meaning_cn": "解决办法；答案",
-      "phrase_en": "find a solution",
-      "freq_rank": 31,
       "example_en": "We finally found a good solution to the problem.",
-      "example_cn": "我们最终找到了解决问题的好办法。"
+      "example_cn": "我们最终找到了解决问题的好办法。",
+      "phrase_en": "find a solution",
+      "freq_rank": 31
     },
     {
       "word": "schedule",
       "ipa": "/ˈʃedjuːl/",
-      "ipa_us": "/ˈskedʒuːl/",
-      "note": "英音 /ʃ-/（sh-），美音 /sk-/（sk-）",
       "pos": "n.",
       "meaning_cn": "工作计划；日程安排",
-      "phrase_en": "a busy schedule",
-      "freq_rank": 32,
       "example_en": "I made a study schedule for this week.",
-      "example_cn": "我为这周制定了一份学习计划。"
+      "example_cn": "我为这周制定了一份学习计划。",
+      "phrase_en": "a busy schedule",
+      "freq_rank": 32
     },
     {
       "word": "editor",
       "ipa": "/ˈedɪtə(r)/",
       "pos": "n.",
       "meaning_cn": "主编；编辑；编者",
-      "phrase_en": "a magazine editor",
-      "freq_rank": 33,
       "example_en": "She wants to be a magazine editor one day.",
-      "example_cn": "她希望有一天成为杂志编辑。"
+      "example_cn": "她希望有一天成为杂志编辑。",
+      "phrase_en": "a magazine editor",
+      "freq_rank": 33
     },
     {
       "word": "adventure",
       "ipa": "/ədˈventʃə(r)/",
       "pos": "n.",
       "meaning_cn": "冒险；奇遇",
-      "phrase_en": "a great adventure",
-      "freq_rank": 34,
       "example_en": "The summer trip was a great adventure.",
-      "example_cn": "那次暑期旅行是一场了不起的冒险。"
+      "example_cn": "那次暑期旅行是一场了不起的冒险。",
+      "phrase_en": "a great adventure",
+      "freq_rank": 34
     },
     {
       "word": "youth",
       "ipa": "/juːθ/",
       "pos": "n.",
       "meaning_cn": "青年时期；青春",
-      "phrase_en": "in his youth",
-      "freq_rank": 35,
       "example_en": "Music was very important to him in his youth.",
-      "example_cn": "音乐在他青年时期对他很重要。"
+      "example_cn": "音乐在他青年时期对他很重要。",
+      "phrase_en": "in his youth",
+      "freq_rank": 35
     },
     {
       "word": "survival",
       "ipa": "/səˈvaɪvl/",
       "pos": "n.",
       "meaning_cn": "生存；幸存",
-      "phrase_en": "survival skills",
-      "freq_rank": 36,
       "example_en": "They learned survival skills at the camp.",
-      "example_cn": "他们在营地学习生存技能。"
+      "example_cn": "他们在营地学习生存技能。",
+      "phrase_en": "survival skills",
+      "freq_rank": 36
     },
     {
       "word": "expert",
       "ipa": "/ˈekspɜːt/",
       "pos": "n.",
       "meaning_cn": "专家；行家",
-      "phrase_en": "a computer expert",
-      "freq_rank": 37,
       "example_en": "My uncle is a computer expert.",
-      "example_cn": "我叔叔是电脑专家。"
+      "example_cn": "我叔叔是电脑专家。",
+      "phrase_en": "a computer expert",
+      "freq_rank": 37
     },
     {
       "word": "behaviour",
       "ipa": "/bɪˈheɪvjə(r)/",
       "pos": "n.",
       "meaning_cn": "行为；举止",
-      "phrase_en": "good behaviour",
-      "freq_rank": 38,
       "example_en": "Good behaviour is important at school.",
-      "example_cn": "良好的行为在学校很重要。"
+      "example_cn": "良好的行为在学校很重要。",
+      "phrase_en": "good behaviour",
+      "freq_rank": 38
     },
     {
       "word": "generation",
       "ipa": "/ˌdʒenəˈreɪʃn/",
       "pos": "n.",
       "meaning_cn": "一代（人）",
-      "phrase_en": "the younger generation",
-      "freq_rank": 39,
       "example_en": "The younger generation loves the Internet.",
-      "example_cn": "年轻一代喜欢互联网。"
+      "example_cn": "年轻一代喜欢互联网。",
+      "phrase_en": "the younger generation",
+      "freq_rank": 39
     },
     {
       "word": "attract",
       "ipa": "/əˈtrækt/",
       "pos": "vt.",
       "meaning_cn": "吸引；引起注意",
-      "phrase_en": "attract attention",
-      "freq_rank": 40,
       "example_en": "The new club attracted many students.",
-      "example_cn": "新社团吸引了许多学生。"
+      "example_cn": "新社团吸引了许多学生。",
+      "phrase_en": "attract attention",
+      "freq_rank": 40
     },
     {
       "word": "focus",
       "ipa": "/ˈfəʊkəs/",
       "pos": "v./n.",
       "meaning_cn": "集中（注意力）；焦点",
-      "phrase_en": "focus on your studies",
-      "freq_rank": 41,
       "example_en": "You should focus on your studies.",
-      "example_cn": "你应该专注于学业。"
+      "example_cn": "你应该专注于学业。",
+      "phrase_en": "focus on your studies",
+      "freq_rank": 41
     },
     {
       "word": "addicted",
       "ipa": "/əˈdɪktɪd/",
       "pos": "adj.",
       "meaning_cn": "有瘾的；上瘾的；入迷的",
-      "phrase_en": "addicted to games",
-      "freq_rank": 42,
       "example_en": "Some teenagers are addicted to computer games.",
-      "example_cn": "一些青少年沉迷于电脑游戏。"
+      "example_cn": "一些青少年沉迷于电脑游戏。",
+      "phrase_en": "addicted to games",
+      "freq_rank": 42
     },
     {
       "word": "addict",
       "ipa": "/ˈædɪkt/",
       "pos": "n.",
       "meaning_cn": "对…入迷的人；瘾君子",
-      "phrase_en": "a game addict",
-      "freq_rank": 43,
       "example_en": "He used to be a computer game addict.",
-      "example_cn": "他曾经是个电脑游戏迷。"
+      "example_cn": "他曾经是个电脑游戏迷。",
+      "phrase_en": "a game addict",
+      "freq_rank": 43
     },
     {
       "word": "adult",
       "ipa": "/ˈædʌlt/",
       "pos": "n.",
       "meaning_cn": "成年人",
-      "phrase_en": "a responsible adult",
-      "freq_rank": 44,
       "example_en": "Every adult was once a child.",
-      "example_cn": "每个成年人都曾是孩子。"
-    }
-  ],
-  "phrases": [
-    {
-      "phrase": "prefer ... to ...",
-      "meaning_cn": "喜欢……多于……"
-    },
-    {
-      "phrase": "clean up",
-      "meaning_cn": "打扫（或清除）干净"
-    },
-    {
-      "phrase": "suitable for",
-      "meaning_cn": "对……适合的"
-    },
-    {
-      "phrase": "sign up (for sth)",
-      "meaning_cn": "报名（参加课程）"
-    },
-    {
-      "phrase": "be responsible for",
-      "meaning_cn": "对……负责"
-    },
-    {
-      "phrase": "be attracted to",
-      "meaning_cn": "喜爱；被……吸引"
-    },
-    {
-      "phrase": "focus on",
-      "meaning_cn": "集中；特别关注"
-    },
-    {
-      "phrase": "addicted to",
-      "meaning_cn": "对……很入迷"
+      "example_cn": "每个成年人都曾是孩子。",
+      "phrase_en": "a responsible adult",
+      "freq_rank": 44
     }
   ]
 }

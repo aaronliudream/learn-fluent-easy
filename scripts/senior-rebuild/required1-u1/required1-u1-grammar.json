@@ -1,78 +1,68 @@
 {
   "volume": "required1",
   "unit": "U1",
-  "grammar_title": "名词短语 / 形容词短语 / 副词短语（NP · AdjP · AdvP）及其功能",
-  "source": "人教版2019必修一 Unit1 Discovering Useful Structures(p22):识别名词/形容词/副词短语并说明其功能。题型以应用型(语境选短语/填空)为主、术语型(判断短语类型/句子成分)为辅,约6:4。",
   "points": [
     {
       "code": "r1u1.01",
-      "point": "名词短语 Noun Phrase (NP)",
-      "overview": "以名词为中心词的词组（如 a difficult language / the school adviser / most of my classmates）。在句中作主语、宾语或表语。判断看中心词是不是名词。"
+      "title": "①名词短语 Noun Phrase (NP)",
+      "summary": "必修一 U1 — 以名词为中心词的词组（如 a difficult language / the school adviser / most of my classmates）。在句中作主语、宾语或表语。判断看中心词是不是名词。"
     },
     {
       "code": "r1u1.02",
-      "point": "形容词短语 Adjective Phrase (AdjP)",
-      "overview": "以形容词为中心词的词组（如 a little confusing / good at English / addicted to games / very nice and patient）。常作表语、定语或宾语补足语,许多需固定介词搭配。判断看中心词是不是形容词。"
+      "title": "②形容词短语 Adjective Phrase (AdjP)",
+      "summary": "必修一 U1 — 以形容词为中心词的词组（如 a little confusing / good at English / addicted to games / very nice and patient）。常作表语、定语或宾语补足语,许多需固定介词搭配。判断看中心词是不是形容词。"
     },
     {
       "code": "r1u1.03",
-      "point": "副词短语 Adverb Phrase (AdvP)",
-      "overview": "以副词为中心词的词组（如 quite quickly / pretty soon / well enough / too fast）。作状语,修饰动词、形容词或其他副词。判断看中心词是不是副词。"
+      "title": "③副词短语 Adverb Phrase (AdvP)",
+      "summary": "必修一 U1 — 以副词为中心词的词组（如 quite quickly / pretty soon / well enough / too fast）。作状语,修饰动词、形容词或其他副词。判断看中心词是不是副词。"
     }
   ],
   "questions": [
     {
       "qid": "r1u1.01.q1",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"We should respect ____.\"",
       "options": [
+        "other people",
         "very polite",
         "quite often",
-        "afraid of failure",
-        "other people"
+        "afraid of failure"
       ],
-      "answer_index": 3,
+      "answer_index": 0,
       "answer_text": "other people",
       "explanation": "respect 后接宾语需名词短语 other people;其余是形容词短语/副词短语,不能作宾语。"
     },
     {
       "qid": "r1u1.01.q2",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"My adviser recommended ____.\"",
       "options": [
-        "advanced literature",
         "very advanced",
+        "advanced literature",
         "quite carefully",
         "read widely"
       ],
-      "answer_index": 0,
+      "answer_index": 1,
       "answer_text": "advanced literature",
       "explanation": "recommended 后接宾语用名词短语 advanced literature;very advanced 是形容词短语,quite carefully 是副词短语,read widely 是动词短语。"
     },
     {
       "qid": "r1u1.01.q3",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"Every Wednesday we hand out food to ____.\"",
       "options": [
-        "homeless people",
         "very poor",
         "quite hungry",
+        "homeless people",
         "live nearby"
       ],
-      "answer_index": 0,
+      "answer_index": 2,
       "answer_text": "homeless people",
       "explanation": "介词 to 后接名词短语 homeless people;其余是形容词短语/动词短语。"
     },
     {
       "qid": "r1u1.01.q4",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"On the first day I made ____.\"",
       "options": [
@@ -87,136 +77,118 @@
     },
     {
       "qid": "r1u1.01.q5",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"The school adviser helped me choose ____.\"",
       "options": [
+        "some suitable courses",
         "very suitable",
         "quite easily",
-        "some suitable courses",
         "easy to learn"
       ],
-      "answer_index": 2,
+      "answer_index": 0,
       "answer_text": "some suitable courses",
       "explanation": "choose 后接宾语用名词短语 some suitable courses;其余是形容词短语/副词短语。"
     },
     {
       "qid": "r1u1.01.q6",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"He told us ____ in class.\"",
       "options": [
         "very funny",
+        "a funny story",
         "fun to hear",
-        "tell jokes",
-        "a funny story"
+        "tell jokes"
       ],
-      "answer_index": 3,
+      "answer_index": 1,
       "answer_text": "a funny story",
       "explanation": "told us 后接直接宾语用名词短语 a funny story;其余是形容词短语/动词短语。"
     },
     {
       "qid": "r1u1.01.q7",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"I finally joined ____.\"",
       "options": [
         "very active",
-        "a volunteer club",
         "quite often",
+        "a volunteer club",
         "keen on sports"
       ],
-      "answer_index": 1,
+      "answer_index": 2,
       "answer_text": "a volunteer club",
       "explanation": "joined 后接宾语用名词短语 a volunteer club;其余是形容词短语/副词短语。"
     },
     {
       "qid": "r1u1.01.q8",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"I'm a bit worried about ____.\"",
       "options": [
         "very busy",
-        "all the homework",
         "quite hard",
-        "hard to finish"
+        "hard to finish",
+        "all the homework"
       ],
-      "answer_index": 1,
+      "answer_index": 3,
       "answer_text": "all the homework",
       "explanation": "介词 about 后接名词短语 all the homework;其余是形容词短语,不能作介词宾语。"
     },
     {
       "qid": "r1u1.01.q9",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"The coach gave me ____.\"",
       "options": [
+        "some good advice",
         "very useful",
         "quite kindly",
-        "some good advice",
         "help a lot"
       ],
-      "answer_index": 2,
+      "answer_index": 0,
       "answer_text": "some good advice",
       "explanation": "gave me 后接直接宾语用名词短语 some good advice;其余是形容词短语/副词短语/动词短语。"
     },
     {
       "qid": "r1u1.01.q10",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"I hope to be fluent in ____ one day.\"",
       "options": [
         "very fluent",
+        "a foreign language",
         "quite well",
-        "hard to learn",
-        "a foreign language"
+        "hard to learn"
       ],
-      "answer_index": 3,
+      "answer_index": 1,
       "answer_text": "a foreign language",
       "explanation": "be fluent in 后接名词短语 a foreign language;其余是形容词短语/副词短语。"
     },
     {
       "qid": "r1u1.01.q11",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"____ is a big challenge for freshmen.\"",
       "options": [
         "Quite hard",
-        "The first week",
         "Very busy",
+        "The first week",
         "Hard to manage"
       ],
-      "answer_index": 1,
+      "answer_index": 2,
       "answer_text": "The first week",
       "explanation": "句首作主语用名词短语 The first week;其余是副词短语/形容词短语,不能作主语。"
     },
     {
       "qid": "r1u1.01.q12",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"Teenagers should take ____ for their own studies.\"",
       "options": [
-        "responsibility",
         "responsible",
         "responsibly",
-        "very seriously"
+        "very seriously",
+        "responsibility"
       ],
-      "answer_index": 0,
+      "answer_index": 3,
       "answer_text": "responsibility",
       "explanation": "take 后接宾语用名词 responsibility(名词短语);responsible 是形容词,responsibly/very seriously 是副词(短语)。"
     },
     {
       "qid": "r1u1.01.q13",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"Most teenagers enjoy ____ after school.\"",
       "options": [
@@ -231,88 +203,76 @@
     },
     {
       "qid": "r1u1.01.q14",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"____ gave us a lot of help this term.\"",
       "options": [
         "Very helpful",
-        "Quite quickly",
         "The kind volunteers",
+        "Quite quickly",
         "Ready to help"
       ],
-      "answer_index": 2,
+      "answer_index": 1,
       "answer_text": "The kind volunteers",
       "explanation": "句子缺主语,需名词短语 The kind volunteers;其余是形容词/副词短语,不能作主语。"
     },
     {
       "qid": "r1u1.01.q15",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"Our school is building ____ this year.\"",
       "options": [
         "very modern",
-        "a new library",
         "quite fast",
+        "a new library",
         "open to all"
       ],
-      "answer_index": 1,
+      "answer_index": 2,
       "answer_text": "a new library",
       "explanation": "building 后接宾语需名词短语 a new library;very modern/open to all 形容词短语、quite fast 副词短语,不能作宾语。"
     },
     {
       "qid": "r1u1.01.q16",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"____ took part in the charity show.\"",
       "options": [
         "Very willingly",
         "Quite generous",
-        "Many young volunteers",
-        "Glad to help"
+        "Glad to help",
+        "Many young volunteers"
       ],
-      "answer_index": 2,
+      "answer_index": 3,
       "answer_text": "Many young volunteers",
       "explanation": "句子缺主语,需名词短语 Many young volunteers;其余是副词/形容词短语,不能作主语。"
     },
     {
       "qid": "r1u1.01.q17",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"Good habits bring us ____.\"",
       "options": [
+        "a healthy life",
         "very slowly",
         "quite useful",
-        "easy to keep",
-        "a healthy life"
+        "easy to keep"
       ],
-      "answer_index": 3,
+      "answer_index": 0,
       "answer_text": "a healthy life",
       "explanation": "bring us 后接直接宾语需名词短语 a healthy life;其余是副词/形容词短语。"
     },
     {
       "qid": "r1u1.01.q18",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"At school we can learn ____ from books.\"",
       "options": [
-        "useful knowledge",
         "very widely",
+        "useful knowledge",
         "quite hard",
         "good for us"
       ],
-      "answer_index": 0,
+      "answer_index": 1,
       "answer_text": "useful knowledge",
       "explanation": "learn 后接宾语需名词短语 useful knowledge;very widely 副词短语、quite hard 副词短语、good for us 形容词短语,均不能作宾语。"
     },
     {
       "qid": "r1u1.01.q19",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"The students raised ____ for the poor children.\"",
       "options": [
@@ -327,56 +287,48 @@
     },
     {
       "qid": "r1u1.01.q20",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.01",
       "stem": "\"I will never forget ____ in junior high.\"",
       "options": [
         "very happily",
-        "my best friends",
         "quite close",
-        "hard to leave"
+        "hard to leave",
+        "my best friends"
       ],
-      "answer_index": 1,
+      "answer_index": 3,
       "answer_text": "my best friends",
       "explanation": "forget 后接宾语需名词短语 my best friends;其余是副词/形容词短语。"
     },
     {
       "qid": "r1u1.02.q1",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"Many teenagers are ____ computer games.\"",
       "options": [
+        "addicted to",
         "addicted in",
         "addicted with",
-        "addicted to",
         "addicted at"
       ],
-      "answer_index": 2,
+      "answer_index": 0,
       "answer_text": "addicted to",
       "explanation": "be addicted to sth 是固定搭配,意为“对……上瘾”,介词只能用 to。"
     },
     {
       "qid": "r1u1.02.q2",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"The teacher is always ____ his students.\"",
       "options": [
         "patient to",
-        "patient for",
         "patient with",
+        "patient for",
         "patient at"
       ],
-      "answer_index": 2,
+      "answer_index": 1,
       "answer_text": "patient with",
       "explanation": "be patient with sb 表示“对某人有耐心”,介词用 with。"
     },
     {
       "qid": "r1u1.02.q3",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"I'm really ____ English literature.\"",
       "options": [
@@ -391,104 +343,90 @@
     },
     {
       "qid": "r1u1.02.q4",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"After years of practice, she is ____ Chinese.\"",
       "options": [
-        "fluent in",
         "fluent at",
         "fluent on",
-        "fluent with"
+        "fluent with",
+        "fluent in"
       ],
-      "answer_index": 0,
+      "answer_index": 3,
       "answer_text": "fluent in",
       "explanation": "be fluent in a language 表示“某语言流利”,介词用 in。"
     },
     {
       "qid": "r1u1.02.q5",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"As the captain, you are ____ keeping the team together.\"",
       "options": [
+        "responsible for",
         "responsible of",
         "responsible with",
-        "responsible at",
-        "responsible for"
+        "responsible at"
       ],
-      "answer_index": 3,
+      "answer_index": 0,
       "answer_text": "responsible for",
       "explanation": "be responsible for sth 表示“对……负责”,介词用 for。"
     },
     {
       "qid": "r1u1.02.q6",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"Don't be ____ making mistakes — everyone does.\"",
       "options": [
-        "afraid of",
         "afraid to",
+        "afraid of",
         "afraid for",
         "afraid at"
       ],
-      "answer_index": 0,
+      "answer_index": 1,
       "answer_text": "afraid of",
       "explanation": "be afraid of doing sth 表示“害怕做某事”;此处接动名词 making,用 of(afraid to 后须接动词原形)。"
     },
     {
       "qid": "r1u1.02.q7",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"Adam is quite ____ maths and science.\"",
       "options": [
         "good in",
         "good on",
-        "good for",
-        "good at"
+        "good at",
+        "good for"
       ],
-      "answer_index": 3,
+      "answer_index": 2,
       "answer_text": "good at",
       "explanation": "be good at sth 表示“擅长……”,介词用 at。"
     },
     {
       "qid": "r1u1.02.q8",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"Are you ____ joining the music club?\"",
       "options": [
         "keen at",
-        "keen on",
         "keen in",
-        "keen for"
+        "keen for",
+        "keen on"
       ],
-      "answer_index": 1,
+      "answer_index": 3,
       "answer_text": "keen on",
       "explanation": "be keen on (doing) sth 表示“热衷于……”,介词用 on。"
     },
     {
       "qid": "r1u1.02.q9",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"The coach is ____ his strong team.\"",
       "options": [
-        "proud for",
         "proud of",
+        "proud for",
         "proud at",
         "proud in"
       ],
-      "answer_index": 1,
+      "answer_index": 0,
       "answer_text": "proud of",
       "explanation": "be proud of sb/sth 表示“为……自豪”,介词用 of。"
     },
     {
       "qid": "r1u1.02.q10",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"Many freshmen are ____ the new courses.\"",
       "options": [
@@ -503,88 +441,76 @@
     },
     {
       "qid": "r1u1.02.q11",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"Our monitor is always ____ help others.\"",
       "options": [
-        "ready to",
         "ready for",
         "ready of",
+        "ready to",
         "ready at"
       ],
-      "answer_index": 0,
+      "answer_index": 2,
       "answer_text": "ready to",
       "explanation": "be ready to do sth 表示“乐意/准备做某事”,后接动词原形 help,用 to。"
     },
     {
       "qid": "r1u1.02.q12",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"It is ____ to make a workable schedule.\"",
       "options": [
-        "important",
         "importantly",
         "importance",
-        "to import"
+        "to import",
+        "important"
       ],
-      "answer_index": 0,
+      "answer_index": 3,
       "answer_text": "important",
       "explanation": "\"It is + 形容词 + to do\" 结构,空处作表语用形容词 important;importantly 是副词,importance 是名词,to import 是动词不定式。"
     },
     {
       "qid": "r1u1.02.q13",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"Many freshmen feel ____ on the first day.\"",
       "options": [
+        "a little nervous",
         "a new school",
         "quite quickly",
-        "a little nervous",
         "make friends"
       ],
-      "answer_index": 2,
+      "answer_index": 0,
       "answer_text": "a little nervous",
       "explanation": "feel 是系动词,后接形容词短语作表语 a little nervous;a new school 名词短语、quite quickly 副词短语、make friends 动词短语,均不能作表语。"
     },
     {
       "qid": "r1u1.02.q14",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"Some teenagers are ____ computer games.\"",
       "options": [
         "a waste of time",
-        "playing all day",
         "addicted to",
+        "playing all day",
         "late at night"
       ],
-      "answer_index": 2,
+      "answer_index": 1,
       "answer_text": "addicted to",
       "explanation": "be addicted to 沉迷于,形容词短语作表语:be addicted to computer games;其余不能跟在 are 后再接 games。"
     },
     {
       "qid": "r1u1.02.q15",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"Young children are often ____ the world around them.\"",
       "options": [
         "a big question",
         "ask a lot",
-        "very often",
-        "curious about"
+        "curious about",
+        "very often"
       ],
-      "answer_index": 3,
+      "answer_index": 2,
       "answer_text": "curious about",
       "explanation": "be curious about 对…好奇,形容词短语作表语;a big question 名词短语、ask a lot 动词短语、very often 副词短语,均不合适。"
     },
     {
       "qid": "r1u1.02.q16",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"After the long trip, we were all ____ walking.\"",
       "options": [
@@ -599,24 +525,20 @@
     },
     {
       "qid": "r1u1.02.q17",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"As the monitor, you should be ____ the whole class.\"",
       "options": [
+        "responsible for",
         "a good leader",
         "very carefully",
-        "help everyone",
-        "responsible for"
+        "help everyone"
       ],
-      "answer_index": 3,
+      "answer_index": 0,
       "answer_text": "responsible for",
       "explanation": "be responsible for 对…负责,形容词短语作表语;a good leader 名词短语、very carefully 副词短语、help everyone 动词短语,不能接 the whole class 构成表语。"
     },
     {
       "qid": "r1u1.02.q18",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"This song is very ____ young people.\"",
       "options": [
@@ -631,120 +553,104 @@
     },
     {
       "qid": "r1u1.02.q19",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"She is ____ English literature.\"",
       "options": [
-        "very interested in",
         "a big fan",
         "reads a lot",
+        "very interested in",
         "quite often"
       ],
-      "answer_index": 0,
+      "answer_index": 2,
       "answer_text": "very interested in",
       "explanation": "be interested in 对…感兴趣,形容词短语作表语:be interested in English literature;a big fan 名词短语、reads a lot 动词短语、quite often 副词短语,均不合适。"
     },
     {
       "qid": "r1u1.02.q20",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.02",
       "stem": "\"Some students feel ____ their exam results.\"",
       "options": [
         "a hard test",
-        "worried about",
         "study harder",
-        "very carefully"
+        "very carefully",
+        "worried about"
       ],
-      "answer_index": 1,
+      "answer_index": 3,
       "answer_text": "worried about",
       "explanation": "feel 是系动词,后接形容词短语 worried about 作表语:worried about their results;其余是名词/动词/副词短语。"
     },
     {
       "qid": "r1u1.03.q1",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"You'll finish the homework ____.\"",
       "options": [
+        "pretty soon",
         "very busy",
         "a long time",
-        "pretty soon",
         "hard work"
       ],
-      "answer_index": 2,
+      "answer_index": 0,
       "answer_text": "pretty soon",
       "explanation": "修饰动词 finish 作状语用副词短语 pretty soon;very busy 是形容词短语,a long time / hard work 是名词短语。"
     },
     {
       "qid": "r1u1.03.q2",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"He answered the question ____.\"",
       "options": [
         "very polite",
+        "very politely",
         "a polite way",
-        "be polite",
-        "very politely"
+        "be polite"
       ],
-      "answer_index": 3,
+      "answer_index": 1,
       "answer_text": "very politely",
       "explanation": "修饰动词 answered 用副词短语 very politely;very polite 是形容词短语,a polite way 是名词短语,be polite 是动词短语。"
     },
     {
       "qid": "r1u1.03.q3",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"Please read the new words ____.\"",
       "options": [
-        "aloud and clearly",
         "loud and clear",
         "a clear voice",
+        "aloud and clearly",
         "very clear"
       ],
-      "answer_index": 0,
+      "answer_index": 2,
       "answer_text": "aloud and clearly",
       "explanation": "修饰动词 read 用副词短语 aloud and clearly;loud and clear / very clear 是形容词短语,a clear voice 是名词短语。"
     },
     {
       "qid": "r1u1.03.q4",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"The teacher spoke ____, so I couldn't follow.\"",
       "options": [
         "too quick",
         "a fast speaker",
-        "too fast",
-        "very fast speech"
+        "very fast speech",
+        "too fast"
       ],
-      "answer_index": 2,
+      "answer_index": 3,
       "answer_text": "too fast",
       "explanation": "修饰动词 spoke 用副词短语 too fast(fast 此处为副词);too quick 是形容词短语,后两项是名词短语。"
     },
     {
       "qid": "r1u1.03.q5",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"Rita plays the violin ____.\"",
       "options": [
-        "quite good",
         "quite well",
+        "quite good",
         "a good player",
         "very nice"
       ],
-      "answer_index": 1,
+      "answer_index": 0,
       "answer_text": "quite well",
       "explanation": "修饰动词 plays 用副词短语 quite well;quite good / very nice 是形容词短语,a good player 是名词短语。"
     },
     {
       "qid": "r1u1.03.q6",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"My French class went ____.\"",
       "options": [
@@ -759,152 +665,132 @@
     },
     {
       "qid": "r1u1.03.q7",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"He runs ____ now than before.\"",
       "options": [
         "very fast speed",
-        "much faster",
         "a fast runner",
+        "much faster",
         "quite quick"
       ],
-      "answer_index": 1,
+      "answer_index": 2,
       "answer_text": "much faster",
       "explanation": "修饰动词 runs 且用于比较用副词短语 much faster;quite quick 是形容词短语,其余是名词短语。"
     },
     {
       "qid": "r1u1.03.q8",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"If you practise every day, you'll improve ____.\"",
       "options": [
         "quite quick",
-        "quite quickly",
         "a quick way",
-        "very quick"
+        "very quick",
+        "quite quickly"
       ],
-      "answer_index": 1,
+      "answer_index": 3,
       "answer_text": "quite quickly",
       "explanation": "修饰动词 improve 用副词短语 quite quickly;quite quick / very quick 是形容词短语,a quick way 是名词短语。"
     },
     {
       "qid": "r1u1.03.q9",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"She speaks English ____.\"",
       "options": [
+        "very fast",
         "very quick",
         "a fast mind",
-        "very fast",
         "quite clever"
       ],
-      "answer_index": 2,
+      "answer_index": 0,
       "answer_text": "very fast",
       "explanation": "修饰动词 speaks 用副词短语 very fast(fast 作副词);very quick / quite clever 是形容词短语,a fast mind 是名词短语。"
     },
     {
       "qid": "r1u1.03.q10",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"I'll improve ____ so I can make the team.\"",
       "options": [
         "my own effort",
-        "very independent",
         "on my own",
+        "very independent",
         "work alone"
       ],
-      "answer_index": 2,
+      "answer_index": 1,
       "answer_text": "on my own",
       "explanation": "on my own 等于副词 independently,修饰 improve 作方式状语;my own effort 是名词短语,very independent 是形容词短语,work alone 是动词短语。"
     },
     {
       "qid": "r1u1.03.q11",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"She finished the test ____ than me.\"",
       "options": [
         "more quick",
         "a quick test",
-        "very fast",
-        "more quickly"
+        "more quickly",
+        "very fast"
       ],
-      "answer_index": 3,
+      "answer_index": 2,
       "answer_text": "more quickly",
       "explanation": "比较级状语修饰 finished 用副词短语 more quickly;more quick 形式错误,a quick test 是名词短语,very fast 无比较含义不搭 than。"
     },
     {
       "qid": "r1u1.03.q12",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"The team members work ____.\"",
       "options": [
-        "very well together",
         "very good",
         "a good team",
-        "get along"
+        "get along",
+        "very well together"
       ],
-      "answer_index": 0,
+      "answer_index": 3,
       "answer_text": "very well together",
       "explanation": "修饰动词 work 用副词短语 very well together;very good 是形容词短语,a good team 是名词短语,get along 是动词短语。"
     },
     {
       "qid": "r1u1.03.q13",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"He finished the project ____.\"",
       "options": [
-        "a quick job",
         "very quickly",
+        "a quick job",
         "very quick",
         "quick to finish"
       ],
-      "answer_index": 1,
+      "answer_index": 0,
       "answer_text": "very quickly",
       "explanation": "修饰动词 finished 需副词短语 very quickly;a quick job 名词短语、very quick / quick to finish 形容词短语,都不能修饰动词。"
     },
     {
       "qid": "r1u1.03.q14",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"Please listen ____ in class.\"",
       "options": [
-        "very carefully",
         "a careful student",
+        "very carefully",
         "careful enough",
         "take notes"
       ],
-      "answer_index": 0,
+      "answer_index": 1,
       "answer_text": "very carefully",
       "explanation": "修饰动词 listen 需副词短语 very carefully;其余是名词/形容词/动词短语。"
     },
     {
       "qid": "r1u1.03.q15",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"Our spoken English is getting better ____.\"",
       "options": [
-        "day by day",
         "a big step",
         "very good",
+        "day by day",
         "speak more"
       ],
-      "answer_index": 0,
+      "answer_index": 2,
       "answer_text": "day by day",
       "explanation": "修饰 is getting better 表方式/程度需副词短语 day by day;a big step 名词短语、very good 形容词短语、speak more 动词短语。"
     },
     {
       "qid": "r1u1.03.q16",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"The crowd cheered ____ when the team won.\"",
       "options": [
@@ -919,65 +805,57 @@
     },
     {
       "qid": "r1u1.03.q17",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"We should manage our time ____.\"",
       "options": [
+        "more wisely",
         "a good plan",
         "very busy",
-        "make a schedule",
-        "more wisely"
+        "make a schedule"
       ],
-      "answer_index": 3,
+      "answer_index": 0,
       "answer_text": "more wisely",
       "explanation": "修饰动词 manage 需副词短语 more wisely;a good plan/make a schedule 名词或动词短语、very busy 形容词短语,均不合适。"
     },
     {
       "qid": "r1u1.03.q18",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"She explained the new rules ____.\"",
       "options": [
         "a clear example",
+        "very clearly",
         "very clear",
-        "explain again",
-        "very clearly"
+        "explain again"
       ],
-      "answer_index": 3,
+      "answer_index": 1,
       "answer_text": "very clearly",
       "explanation": "修饰动词 explained 需副词短语 very clearly;a clear example 名词短语、very clear 形容词短语、explain again 动词短语。"
     },
     {
       "qid": "r1u1.03.q19",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"The meeting started ____.\"",
       "options": [
-        "right on time",
         "a great idea",
         "very important",
+        "right on time",
         "start early"
       ],
-      "answer_index": 0,
+      "answer_index": 2,
       "answer_text": "right on time",
       "explanation": "修饰动词 started 表时间需副词短语 right on time;a great idea 名词短语、very important 形容词短语、start early 动词短语,均不能修饰 started。"
     },
     {
       "qid": "r1u1.03.q20",
-      "volume": "required1",
-      "unit": "U1",
       "code": "r1u1.03",
       "stem": "\"After years of practice, she speaks ____.\"",
       "options": [
         "a fluent speaker",
         "very fluent",
-        "quite fluently",
-        "learn fast"
+        "learn fast",
+        "quite fluently"
       ],
-      "answer_index": 2,
+      "answer_index": 3,
       "answer_text": "quite fluently",
       "explanation": "修饰动词 speaks 需副词短语 quite fluently;a fluent speaker 名词短语、very fluent 形容词短语、learn fast 动词短语,均不合适。"
     }

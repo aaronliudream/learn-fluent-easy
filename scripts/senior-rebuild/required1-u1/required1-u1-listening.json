@@ -1,151 +1,401 @@
 {
   "volume": "required1",
   "unit": "U1",
-  "topic": "Teenage Life",
-  "tts_voice": "el:lily",
-  "tts_note": "口音与 G9 统一:ElevenLabs el:lily(British female),speed 0.8;speaker 字段仅为角色标注,实际音频统一由 el:lily 朗读。",
-  "source": "人教版2019必修一 Unit1 同主题听力(社团/开学第一天/学习方法/上网建议/露营/责任)。用词限 U1/初中/常见词,答案唯一,A-D 打散。",
   "exercises": [
     {
-      "code": "r1u1.ls1",
+      "code": "ls1",
       "title": "必修一 U1 听力·对话 Choosing a Club",
-      "type": "dialogue",
       "kind": "long",
       "speaker": "uk_female",
-      "transcript": [
-        "Adam: Hi Sam, have you chosen a club yet?",
-        "Sam: Not yet. I'm thinking about the Ballet Club or the Debate Club.",
-        "Adam: Do you like dancing or speaking more?",
-        "Sam: Actually, I enjoy discussing different topics.",
-        "Adam: Then the Debate Club is suitable for you.",
-        "Sam: Good idea! What about you?",
-        "Adam: I joined the Volunteer Club. Every week we help homeless people.",
-        "Sam: That sounds great. I'll sign up for the Debate Club today."
-      ],
+      "transcript": "Adam: Hi Sam, have you chosen a club yet?\r\nSam: Not yet. I'm thinking about the Ballet Club or the Debate Club.\r\nAdam: Do you like dancing or speaking more?\r\nSam: Actually, I enjoy discussing different topics.\r\nAdam: Then the Debate Club is suitable for you.\r\nSam: Good idea! What about you?\r\nAdam: I joined the Volunteer Club. Every week we help homeless people.\r\nSam: That sounds great. I'll sign up for the Debate Club today.",
       "translation_cn": "Adam 问 Sam 选社团了吗;Sam 在芭蕾社和辩论社之间犹豫,说自己喜欢讨论不同话题;Adam 建议他选辩论社,并说自己加入了志愿者社、每周帮助无家可归的人;Sam 决定今天就报名辩论社。",
+      "audio_url": "https://audio.bigmooneducation.com/f0/f0009e4753e0b83e39aa0b0e85295bf6636e7a466448799d411f853be910a667.mp3",
       "questions": [
-        { "qid": "r1u1.ls1.q1", "volume": "required1", "unit": "U1", "code": "r1u1.ls1", "stem": "Which two clubs is Sam choosing between?", "options": ["The Ballet Club and the Debate Club.", "The Nature Club and the Music Club.", "The Volunteer Club and the Art Club.", "The Football Club and the Chess Club."], "answer_index": 0, "answer_text": "The Ballet Club and the Debate Club." },
-        { "qid": "r1u1.ls1.q2", "volume": "required1", "unit": "U1", "code": "r1u1.ls1", "stem": "What does Sam enjoy doing?", "options": ["Dancing.", "Discussing different topics.", "Growing plants.", "Playing football."], "answer_index": 1, "answer_text": "Discussing different topics." },
-        { "qid": "r1u1.ls1.q3", "volume": "required1", "unit": "U1", "code": "r1u1.ls1", "stem": "Which club does Adam suggest for Sam?", "options": ["The Ballet Club.", "The Volunteer Club.", "The Debate Club.", "The Nature Club."], "answer_index": 2, "answer_text": "The Debate Club." },
-        { "qid": "r1u1.ls1.q4", "volume": "required1", "unit": "U1", "code": "r1u1.ls1", "stem": "Which club did Adam join?", "options": ["The Volunteer Club.", "The Debate Club.", "The Ballet Club.", "The Music Club."], "answer_index": 0, "answer_text": "The Volunteer Club." },
-        { "qid": "r1u1.ls1.q5", "volume": "required1", "unit": "U1", "code": "r1u1.ls1", "stem": "What will Sam do today?", "options": ["Join the Ballet Club.", "Quit the club.", "Help homeless people.", "Sign up for the Debate Club."], "answer_index": 3, "answer_text": "Sign up for the Debate Club." }
+        {
+          "stem": "Which two clubs is Sam choosing between?",
+          "options": [
+            "The Nature Club and the Music Club.",
+            "The Volunteer Club and the Art Club.",
+            "The Ballet Club and the Debate Club.",
+            "The Football Club and the Chess Club."
+          ],
+          "answer_index": 2,
+          "answer_text": "The Ballet Club and the Debate Club."
+        },
+        {
+          "stem": "What does Sam enjoy doing?",
+          "options": [
+            "Dancing.",
+            "Growing plants.",
+            "Playing football.",
+            "Discussing different topics."
+          ],
+          "answer_index": 3,
+          "answer_text": "Discussing different topics."
+        },
+        {
+          "stem": "Which club does Adam suggest for Sam?",
+          "options": [
+            "The Debate Club.",
+            "The Ballet Club.",
+            "The Volunteer Club.",
+            "The Nature Club."
+          ],
+          "answer_index": 0,
+          "answer_text": "The Debate Club."
+        },
+        {
+          "stem": "Which club did Adam join?",
+          "options": [
+            "The Debate Club.",
+            "The Ballet Club.",
+            "The Music Club.",
+            "The Volunteer Club."
+          ],
+          "answer_index": 3,
+          "answer_text": "The Volunteer Club."
+        },
+        {
+          "stem": "What will Sam do today?",
+          "options": [
+            "Sign up for the Debate Club.",
+            "Join the Ballet Club.",
+            "Quit the club.",
+            "Help homeless people."
+          ],
+          "answer_index": 0,
+          "answer_text": "Sign up for the Debate Club."
+        }
       ]
     },
     {
-      "code": "r1u1.ls2",
-      "title": "必修一 U1 听力·短文 My First Day",
-      "type": "passage",
-      "kind": "short",
-      "speaker": "uk_female",
-      "transcript": [
-        "Today was my first day at senior high school.",
-        "In the morning I felt a little anxious because I am not very outgoing.",
-        "My first maths class was difficult, but the teacher was kind and friendly.",
-        "He told us a funny story, and everyone laughed.",
-        "In the afternoon, the boy next to me talked too much, so I couldn't concentrate.",
-        "By the evening, I felt much more confident, and I made two new friends."
-      ],
-      "translation_cn": "今天是我高中第一天。早上因为不太外向有点紧张;第一节数学课很难,但老师很和善,还讲了个有趣的故事,大家都笑了;下午旁边的男生话太多,我无法集中注意力;到傍晚我自信多了,还交了两个新朋友。",
-      "questions": [
-        { "qid": "r1u1.ls2.q1", "volume": "required1", "unit": "U1", "code": "r1u1.ls2", "stem": "How did the speaker feel in the morning?", "options": ["A little anxious.", "Very angry.", "Quite bored.", "Very proud."], "answer_index": 0, "answer_text": "A little anxious." },
-        { "qid": "r1u1.ls2.q2", "volume": "required1", "unit": "U1", "code": "r1u1.ls2", "stem": "Why did the speaker feel anxious?", "options": ["He was late.", "He is not very outgoing.", "He forgot his books.", "He was ill."], "answer_index": 1, "answer_text": "He is not very outgoing." },
-        { "qid": "r1u1.ls2.q3", "volume": "required1", "unit": "U1", "code": "r1u1.ls2", "stem": "What was the first maths class like?", "options": ["Easy but boring.", "Short and noisy.", "Difficult, but the teacher was kind.", "Cancelled."], "answer_index": 2, "answer_text": "Difficult, but the teacher was kind." },
-        { "qid": "r1u1.ls2.q4", "volume": "required1", "unit": "U1", "code": "r1u1.ls2", "stem": "Why couldn't the speaker concentrate in the afternoon?", "options": ["The boy next to him talked too much.", "The class was too long.", "He felt sick.", "The room was cold."], "answer_index": 0, "answer_text": "The boy next to him talked too much." },
-        { "qid": "r1u1.ls2.q5", "volume": "required1", "unit": "U1", "code": "r1u1.ls2", "stem": "How did the speaker feel by the evening?", "options": ["Tired and sad.", "Still anxious.", "Angry with friends.", "Much more confident."], "answer_index": 3, "answer_text": "Much more confident." }
-      ]
-    },
-    {
-      "code": "r1u1.ls3",
-      "title": "必修一 U1 听力·对话 Learning Strategies",
-      "type": "dialogue",
-      "kind": "long",
-      "speaker": "uk_female",
-      "transcript": [
-        "Amy: Li Ming, how do you study English so well?",
-        "Li Ming: I take notes in class and review them every evening.",
-        "Amy: Do you also watch English videos?",
-        "Li Ming: Yes, I watch short videos and try to copy the pronunciation.",
-        "Amy: That's helpful. I like to make mind maps to organise my ideas.",
-        "Li Ming: Good idea. We can share our methods with each other.",
-        "Amy: Great! Working together makes learning more fun."
-      ],
-      "translation_cn": "Amy 问李明英语为什么学得好;李明:上课记笔记、每晚复习,还看短视频模仿发音;Amy 喜欢用思维导图整理想法;两人决定互相分享方法,一起学习更有趣。",
-      "questions": [
-        { "qid": "r1u1.ls3.q1", "volume": "required1", "unit": "U1", "code": "r1u1.ls3", "stem": "What does Li Ming do every evening?", "options": ["Reviews his notes.", "Plays games.", "Watches TV shows.", "Goes to a club."], "answer_index": 0, "answer_text": "Reviews his notes." },
-        { "qid": "r1u1.ls3.q2", "volume": "required1", "unit": "U1", "code": "r1u1.ls3", "stem": "How does Li Ming improve his pronunciation?", "options": ["By singing songs.", "By copying short videos.", "By reading novels.", "By making mind maps."], "answer_index": 1, "answer_text": "By copying short videos." },
-        { "qid": "r1u1.ls3.q3", "volume": "required1", "unit": "U1", "code": "r1u1.ls3", "stem": "What does Amy like to make?", "options": ["Word cards.", "Posters.", "Mind maps.", "Schedules."], "answer_index": 2, "answer_text": "Mind maps." },
-        { "qid": "r1u1.ls3.q4", "volume": "required1", "unit": "U1", "code": "r1u1.ls3", "stem": "What do they decide to do?", "options": ["Share their learning methods.", "Join the same club.", "Stop studying English.", "Watch a film together."], "answer_index": 0, "answer_text": "Share their learning methods." },
-        { "qid": "r1u1.ls3.q5", "volume": "required1", "unit": "U1", "code": "r1u1.ls3", "stem": "What does Amy think about working together?", "options": ["It is a waste of time.", "It is too difficult.", "It is boring.", "It makes learning more fun."], "answer_index": 3, "answer_text": "It makes learning more fun." }
-      ]
-    },
-    {
-      "code": "r1u1.ls4",
+      "code": "ls2",
       "title": "必修一 U1 听力·短文 Advice About Games",
-      "type": "passage",
       "kind": "short",
       "speaker": "uk_female",
-      "transcript": [
-        "My friend Chen Lei plays computer games too often.",
-        "He spends too much time online and cannot focus on his studies.",
-        "I am worried about him.",
-        "Our teacher says it is normal for teenagers to be attracted to games.",
-        "But she also says spending too much time online is unhealthy.",
-        "She recommends that we try new hobbies, such as sports or reading."
-      ],
+      "transcript": "My friend Chen Lei plays computer games too often.\r\nHe spends too much time online and cannot focus on his studies.\r\nI am worried about him.\r\nOur teacher says it is normal for teenagers to be attracted to games.\r\nBut she also says spending too much time online is unhealthy.\r\nShe recommends that we try new hobbies, such as sports or reading.",
       "translation_cn": "我的朋友陈磊玩电脑游戏太频繁,上网太久,无法专心学习,我很担心他;老师说青少年被游戏吸引很正常,但上网太久不健康,建议大家尝试运动、阅读等新爱好。",
+      "audio_url": "https://audio.bigmooneducation.com/99/99b41bd85de39f7d1cdb7e78d3e3ce9485706d3221a2bddb297709d5157f6154.mp3",
       "questions": [
-        { "qid": "r1u1.ls4.q1", "volume": "required1", "unit": "U1", "code": "r1u1.ls4", "stem": "What is Chen Lei's problem?", "options": ["He plays computer games too often.", "He never does sports.", "He has no friends.", "He reads too much."], "answer_index": 0, "answer_text": "He plays computer games too often." },
-        { "qid": "r1u1.ls4.q2", "volume": "required1", "unit": "U1", "code": "r1u1.ls4", "stem": "How does the speaker feel about Chen Lei?", "options": ["Proud.", "Worried.", "Angry.", "Bored."], "answer_index": 1, "answer_text": "Worried." },
-        { "qid": "r1u1.ls4.q3", "volume": "required1", "unit": "U1", "code": "r1u1.ls4", "stem": "What does the teacher say about teenagers and games?", "options": ["They should never play.", "It is normal to be attracted to games.", "Games are good for study.", "Only adults like games."], "answer_index": 1, "answer_text": "It is normal to be attracted to games." },
-        { "qid": "r1u1.ls4.q4", "volume": "required1", "unit": "U1", "code": "r1u1.ls4", "stem": "Why is spending too much time online a problem?", "options": ["It is unhealthy.", "It costs no money.", "It is against the law.", "It is too easy."], "answer_index": 0, "answer_text": "It is unhealthy." },
-        { "qid": "r1u1.ls4.q5", "volume": "required1", "unit": "U1", "code": "r1u1.ls4", "stem": "What does the teacher recommend?", "options": ["Playing more games.", "Staying online longer.", "Stopping school.", "Trying new hobbies."], "answer_index": 3, "answer_text": "Trying new hobbies." }
+        {
+          "stem": "What is Chen Lei's problem?",
+          "options": [
+            "He never does sports.",
+            "He plays computer games too often.",
+            "He has no friends.",
+            "He reads too much."
+          ],
+          "answer_index": 1,
+          "answer_text": "He plays computer games too often."
+        },
+        {
+          "stem": "How does the speaker feel about Chen Lei?",
+          "options": [
+            "Proud.",
+            "Angry.",
+            "Worried.",
+            "Bored."
+          ],
+          "answer_index": 2,
+          "answer_text": "Worried."
+        },
+        {
+          "stem": "What does the teacher say about teenagers and games?",
+          "options": [
+            "They should never play.",
+            "Games are good for study.",
+            "Only adults like games.",
+            "It is normal to be attracted to games."
+          ],
+          "answer_index": 3,
+          "answer_text": "It is normal to be attracted to games."
+        },
+        {
+          "stem": "Why is spending too much time online a problem?",
+          "options": [
+            "It costs no money.",
+            "It is unhealthy.",
+            "It is against the law.",
+            "It is too easy."
+          ],
+          "answer_index": 1,
+          "answer_text": "It is unhealthy."
+        },
+        {
+          "stem": "What does the teacher recommend?",
+          "options": [
+            "Playing more games.",
+            "Trying new hobbies.",
+            "Staying online longer.",
+            "Stopping school."
+          ],
+          "answer_index": 1,
+          "answer_text": "Trying new hobbies."
+        }
       ]
     },
     {
-      "code": "r1u1.ls5",
-      "title": "必修一 U1 听力·对话 Planning a Camp",
-      "type": "dialogue",
+      "code": "ls3",
+      "title": "必修一 U1 听力·对话 Learning Strategies",
       "kind": "long",
       "speaker": "uk_female",
-      "transcript": [
-        "Max: Cao Jing, would you like to join a summer camp?",
-        "Cao Jing: Sure! What kind of camp is it?",
-        "Max: There are two. One is an adventure camp where we learn survival skills.",
-        "Cao Jing: That sounds exciting! What about the other one?",
-        "Max: It's an international youth camp. We can practise spoken English there.",
-        "Cao Jing: I'd like to improve my English, so I prefer the youth camp.",
-        "Max: Good choice. We'll also meet students from different countries."
-      ],
-      "translation_cn": "Max 问曹静要不要参加夏令营;有两个:一个是学野外生存技能的探险营,一个是能练口语的国际青年营;曹静想提高英语,更喜欢青年营;Max 说在那儿还能认识来自不同国家的学生。",
+      "transcript": "Amy: Li Ming, how do you study English so well?\r\nLi Ming: I take notes in class and review them every evening.\r\nAmy: Do you also watch English videos?\r\nLi Ming: Yes, I watch short videos and try to copy the pronunciation.\r\nAmy: That's helpful. I like to make mind maps to organise my ideas.\r\nLi Ming: Good idea. We can share our methods with each other.\r\nAmy: Great! Working together makes learning more fun.",
+      "translation_cn": "Amy 问李明英语为什么学得好;李明:上课记笔记、每晚复习,还看短视频模仿发音;Amy 喜欢用思维导图整理想法;两人决定互相分享方法,一起学习更有趣。",
+      "audio_url": "https://audio.bigmooneducation.com/1c/1c0c386ba5ef235afeb1db73f22cda057c75f9dfca5fb35604fcdf9a252d2b3f.mp3",
       "questions": [
-        { "qid": "r1u1.ls5.q1", "volume": "required1", "unit": "U1", "code": "r1u1.ls5", "stem": "How many camps does Max mention?", "options": ["Two.", "Three.", "One.", "Four."], "answer_index": 0, "answer_text": "Two." },
-        { "qid": "r1u1.ls5.q2", "volume": "required1", "unit": "U1", "code": "r1u1.ls5", "stem": "What can students learn at the adventure camp?", "options": ["Cooking.", "Survival skills.", "Dancing.", "Painting."], "answer_index": 1, "answer_text": "Survival skills." },
-        { "qid": "r1u1.ls5.q3", "volume": "required1", "unit": "U1", "code": "r1u1.ls5", "stem": "Why does Cao Jing prefer the youth camp?", "options": ["It is cheaper.", "It is nearer.", "She wants to improve her English.", "It is shorter."], "answer_index": 2, "answer_text": "She wants to improve her English." },
-        { "qid": "r1u1.ls5.q4", "volume": "required1", "unit": "U1", "code": "r1u1.ls5", "stem": "What can they do at the international youth camp?", "options": ["Practise spoken English.", "Learn to make a fire.", "Live in the wild.", "Grow plants."], "answer_index": 0, "answer_text": "Practise spoken English." },
-        { "qid": "r1u1.ls5.q5", "volume": "required1", "unit": "U1", "code": "r1u1.ls5", "stem": "Who will they meet at the youth camp?", "options": ["Only their classmates.", "Famous actors.", "Their teachers.", "Students from different countries."], "answer_index": 3, "answer_text": "Students from different countries." }
+        {
+          "stem": "What does Li Ming do every evening?",
+          "options": [
+            "Plays games.",
+            "Reviews his notes.",
+            "Watches TV shows.",
+            "Goes to a club."
+          ],
+          "answer_index": 1,
+          "answer_text": "Reviews his notes."
+        },
+        {
+          "stem": "How does Li Ming improve his pronunciation?",
+          "options": [
+            "By copying short videos.",
+            "By singing songs.",
+            "By reading novels.",
+            "By making mind maps."
+          ],
+          "answer_index": 0,
+          "answer_text": "By copying short videos."
+        },
+        {
+          "stem": "What does Amy like to make?",
+          "options": [
+            "Word cards.",
+            "Mind maps.",
+            "Posters.",
+            "Schedules."
+          ],
+          "answer_index": 1,
+          "answer_text": "Mind maps."
+        },
+        {
+          "stem": "What do they decide to do?",
+          "options": [
+            "Join the same club.",
+            "Stop studying English.",
+            "Watch a film together.",
+            "Share their learning methods."
+          ],
+          "answer_index": 3,
+          "answer_text": "Share their learning methods."
+        },
+        {
+          "stem": "What does Amy think about working together?",
+          "options": [
+            "It is a waste of time.",
+            "It is too difficult.",
+            "It makes learning more fun.",
+            "It is boring."
+          ],
+          "answer_index": 2,
+          "answer_text": "It makes learning more fun."
+        }
       ]
     },
     {
-      "code": "r1u1.ls6",
+      "code": "ls4",
+      "title": "必修一 U1 听力·对话 Planning a Camp",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": "Max: Cao Jing, would you like to join a summer camp?\r\nCao Jing: Sure! What kind of camp is it?\r\nMax: There are two. One is an adventure camp where we learn survival skills.\r\nCao Jing: That sounds exciting! What about the other one?\r\nMax: It's an international youth camp. We can practise spoken English there.\r\nCao Jing: I'd like to improve my English, so I prefer the youth camp.\r\nMax: Good choice. We'll also meet students from different countries.",
+      "translation_cn": "Max 问曹静要不要参加夏令营;有两个:一个是学野外生存技能的探险营,一个是能练口语的国际青年营;曹静想提高英语,更喜欢青年营;Max 说在那儿还能认识来自不同国家的学生。",
+      "audio_url": "https://audio.bigmooneducation.com/49/491c2238a7dbfdd717007ffbced20f9c3f68beced1515386104bab2ca201d834.mp3",
+      "questions": [
+        {
+          "stem": "How many camps does Max mention?",
+          "options": [
+            "Two.",
+            "Three.",
+            "One.",
+            "Four."
+          ],
+          "answer_index": 0,
+          "answer_text": "Two."
+        },
+        {
+          "stem": "What can students learn at the adventure camp?",
+          "options": [
+            "Survival skills.",
+            "Cooking.",
+            "Dancing.",
+            "Painting."
+          ],
+          "answer_index": 0,
+          "answer_text": "Survival skills."
+        },
+        {
+          "stem": "Why does Cao Jing prefer the youth camp?",
+          "options": [
+            "It is cheaper.",
+            "It is nearer.",
+            "It is shorter.",
+            "She wants to improve her English."
+          ],
+          "answer_index": 3,
+          "answer_text": "She wants to improve her English."
+        },
+        {
+          "stem": "What can they do at the international youth camp?",
+          "options": [
+            "Learn to make a fire.",
+            "Practise spoken English.",
+            "Live in the wild.",
+            "Grow plants."
+          ],
+          "answer_index": 1,
+          "answer_text": "Practise spoken English."
+        },
+        {
+          "stem": "Who will they meet at the youth camp?",
+          "options": [
+            "Students from different countries.",
+            "Only their classmates.",
+            "Famous actors.",
+            "Their teachers."
+          ],
+          "answer_index": 0,
+          "answer_text": "Students from different countries."
+        }
+      ]
+    },
+    {
+      "code": "ls5",
       "title": "必修一 U1 听力·短文 Being Responsible",
-      "type": "passage",
       "kind": "short",
       "speaker": "uk_female",
-      "transcript": [
-        "As teenagers grow up, they become responsible for more things.",
-        "At home, they help their parents and take care of themselves.",
-        "At school, they are responsible for their own studies and behaviour.",
-        "When you show that you can be responsible, adults trust you more.",
-        "For example, if you finish your homework on time, your parents will not worry.",
-        "No one becomes responsible in a single day, but we can learn from our mistakes."
-      ],
+      "transcript": "As teenagers grow up, they become responsible for more things.\r\nAt home, they help their parents and take care of themselves.\r\nAt school, they are responsible for their own studies and behaviour.\r\nWhen you show that you can be responsible, adults trust you more.\r\nFor example, if you finish your homework on time, your parents will not worry.\r\nNo one becomes responsible in a single day, but we can learn from our mistakes.",
       "translation_cn": "随着青少年长大,他们要对更多事情负责:在家帮父母、照顾自己;在校对自己的学业和行为负责;当你表现得有责任心,大人会更信任你;比如按时完成作业,父母就不担心;没人能一天就变得有责任心,但我们能从错误中学习。",
+      "audio_url": "https://audio.bigmooneducation.com/a8/a80563931f4fddb7ca1763cbdb7e17bde51f120ddfbfc4a266c3d8ca137aeb37.mp3",
       "questions": [
-        { "qid": "r1u1.ls6.q1", "volume": "required1", "unit": "U1", "code": "r1u1.ls6", "stem": "What happens as teenagers grow up?", "options": ["They become responsible for more things.", "They have fewer duties.", "They stop studying.", "They leave home."], "answer_index": 0, "answer_text": "They become responsible for more things." },
-        { "qid": "r1u1.ls6.q2", "volume": "required1", "unit": "U1", "code": "r1u1.ls6", "stem": "What are teenagers responsible for at school?", "options": ["Cleaning the school.", "Their own studies and behaviour.", "Teaching classes.", "Cooking lunch."], "answer_index": 1, "answer_text": "Their own studies and behaviour." },
-        { "qid": "r1u1.ls6.q3", "volume": "required1", "unit": "U1", "code": "r1u1.ls6", "stem": "What happens when you show you are responsible?", "options": ["You get more homework.", "You lose free time.", "Adults trust you more.", "Friends stop liking you."], "answer_index": 2, "answer_text": "Adults trust you more." },
-        { "qid": "r1u1.ls6.q4", "volume": "required1", "unit": "U1", "code": "r1u1.ls6", "stem": "What example does the speaker give?", "options": ["Finishing homework on time.", "Playing sports every day.", "Going to bed early.", "Joining a club."], "answer_index": 0, "answer_text": "Finishing homework on time." },
-        { "qid": "r1u1.ls6.q5", "volume": "required1", "unit": "U1", "code": "r1u1.ls6", "stem": "What does the speaker say about becoming responsible?", "options": ["It happens in one day.", "It is impossible.", "It needs no effort.", "We can learn from our mistakes."], "answer_index": 3, "answer_text": "We can learn from our mistakes." }
+        {
+          "stem": "What happens as teenagers grow up?",
+          "options": [
+            "They have fewer duties.",
+            "They stop studying.",
+            "They leave home.",
+            "They become responsible for more things."
+          ],
+          "answer_index": 3,
+          "answer_text": "They become responsible for more things."
+        },
+        {
+          "stem": "What are teenagers responsible for at school?",
+          "options": [
+            "Cleaning the school.",
+            "Teaching classes.",
+            "Cooking lunch.",
+            "Their own studies and behaviour."
+          ],
+          "answer_index": 3,
+          "answer_text": "Their own studies and behaviour."
+        },
+        {
+          "stem": "What happens when you show you are responsible?",
+          "options": [
+            "You get more homework.",
+            "You lose free time.",
+            "Adults trust you more.",
+            "Friends stop liking you."
+          ],
+          "answer_index": 2,
+          "answer_text": "Adults trust you more."
+        },
+        {
+          "stem": "What example does the speaker give?",
+          "options": [
+            "Playing sports every day.",
+            "Finishing homework on time.",
+            "Going to bed early.",
+            "Joining a club."
+          ],
+          "answer_index": 1,
+          "answer_text": "Finishing homework on time."
+        },
+        {
+          "stem": "What does the speaker say about becoming responsible?",
+          "options": [
+            "We can learn from our mistakes.",
+            "It happens in one day.",
+            "It is impossible.",
+            "It needs no effort."
+          ],
+          "answer_index": 0,
+          "answer_text": "We can learn from our mistakes."
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "必修一 U1 听力·短文 My First Day",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Today was my first day at senior high school.\r\nIn the morning I felt a little anxious because I am not very outgoing.\r\nMy first maths class was difficult, but the teacher was kind and friendly.\r\nHe told us a funny story, and everyone laughed.\r\nIn the afternoon, the boy next to me talked too much, so I couldn't concentrate.\r\nBy the evening, I felt much more confident, and I made two new friends.",
+      "translation_cn": "今天是我高中第一天。早上因为不太外向有点紧张;第一节数学课很难,但老师很和善,还讲了个有趣的故事,大家都笑了;下午旁边的男生话太多,我无法集中注意力;到傍晚我自信多了,还交了两个新朋友。",
+      "audio_url": "https://audio.bigmooneducation.com/30/30a9bee4792247cce9f9b61638b0f7d010563fdcc9a7bc96093afca05608b80f.mp3",
+      "questions": [
+        {
+          "stem": "How did the speaker feel in the morning?",
+          "options": [
+            "Very angry.",
+            "Quite bored.",
+            "A little anxious.",
+            "Very proud."
+          ],
+          "answer_index": 2,
+          "answer_text": "A little anxious."
+        },
+        {
+          "stem": "Why did the speaker feel anxious?",
+          "options": [
+            "He is not very outgoing.",
+            "He was late.",
+            "He forgot his books.",
+            "He was ill."
+          ],
+          "answer_index": 0,
+          "answer_text": "He is not very outgoing."
+        },
+        {
+          "stem": "What was the first maths class like?",
+          "options": [
+            "Easy but boring.",
+            "Short and noisy.",
+            "Difficult, but the teacher was kind.",
+            "Cancelled."
+          ],
+          "answer_index": 2,
+          "answer_text": "Difficult, but the teacher was kind."
+        },
+        {
+          "stem": "Why couldn't the speaker concentrate in the afternoon?",
+          "options": [
+            "The class was too long.",
+            "He felt sick.",
+            "The boy next to him talked too much.",
+            "The room was cold."
+          ],
+          "answer_index": 2,
+          "answer_text": "The boy next to him talked too much."
+        },
+        {
+          "stem": "How did the speaker feel by the evening?",
+          "options": [
+            "Tired and sad.",
+            "Much more confident.",
+            "Still anxious.",
+            "Angry with friends."
+          ],
+          "answer_index": 1,
+          "answer_text": "Much more confident."
+        }
       ]
     }
   ]

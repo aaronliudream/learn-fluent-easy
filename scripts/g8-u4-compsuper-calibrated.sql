@@ -75,13 +75,13 @@ VALUES
 ON CONFLICT (id) DO NOTHING;
 
 -- ============================================================
--- 校验(应 14 行:g8.09=8 / g8.05=3 / g8.04=3)
-SELECT CASE point_id
-         WHEN '4daeed76-f5a1-40b1-90a9-91663258952c' THEN 'g8.09最高级'
-         WHEN '9994bed6-1988-4e5a-afaa-a441c9cef7a6' THEN 'g8.05副词'
-         WHEN '37f28b3b-fb2a-4d14-beb9-18952861bb53' THEN 'g8.04比较级'
+-- 校验(应 14 行:g8.09=8 / g8.05=3 / g8.04=3;id 是 uuid 列须 ::text)
+SELECT CASE
+         WHEN id::text LIKE '8b09%' THEN 'g8.09最高级'
+         WHEN id::text LIKE '8b05%' THEN 'g8.05副词'
+         WHEN id::text LIKE '8b04%' THEN 'g8.04比较级'
        END AS point, count(*) AS cnt
 FROM public.junior_grammar_questions
-WHERE id LIKE '8b0%-0000-4000-8000-%' AND id NOT LIKE '8b15%'
-GROUP BY point_id ORDER BY point;
+WHERE id::text LIKE '8b0%-0000-4000-8000-%'
+GROUP BY 1 ORDER BY 1;
 -- ============================================================

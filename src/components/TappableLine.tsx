@@ -1,8 +1,8 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Loader2, Volume2, Sparkles, Bookmark, Check, Lightbulb, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { speak } from "@/lib/speak";
+import { speak, prefetchTTS } from "@/lib/speak";
 import { stripTags } from "@/lib/richText";
 import { T } from "@/i18n/T";
 import {
@@ -775,6 +775,53 @@ function renderTight(text: string): React.ReactNode {
  * shows a small explanation card (meaning, usage, English examples with
  * Chinese translation, and a TTS button).
  */
+/* ─────────────── 图书馆点词发音预热(视口驱动,方案 C)───────────────
+ * 读到哪热到哪:句子进入视口(+300px 提前量)时,按网络预热该句「可点词」的发音音频,
+ * 键与点词播放 speak(phrase) 完全一致(默认音色、无 accent)→ 点生词秒响,消除冷合成 1-3s。
+ * - 只在图书馆精读模式(favorite 存在)启用;美语课等其它 TappableLine 用途行为零变化。
+ * - 单次上限 40:防超长句一次灌爆网络。
+ * - session 总上限 250 唯一词:挡「狂滚十章」失控;超限后点词照常走实时,不再 warm(不影响功能,仅首点稍慢)。
+ * - 去重集跨章不清空:读者常在章间来回,保留可省重复 warm;总量由 250 兜住。
+ * - 共享一个 IntersectionObserver(非每句一个);老浏览器/SSR 无 IO → 直接跳过(点词仍实时)。
+ * prefetchTTS 纯网络:不碰 <audio>、不置播放状态,故与顺序朗读/点读互不干扰。
+ */
+const PW_ROOT_MARGIN = "300px 0px";
+const PW_PER_FIRE = 40;
+const PW_SESSION_CAP = 250;
+const pwWarmed = new Set<string>();
+const pwCallbacks = new WeakMap<Element, () => void>();
+let pwObserver: IntersectionObserver | null = null;
+function pwGetObserver(): IntersectionObserver | null {
+  if (typeof IntersectionObserver === "undefined") return null;
+  if (!pwObserver) {
+    pwObserver = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          const cb = pwCallbacks.get(e.target);
+          pwObserver!.unobserve(e.target);
+          pwCallbacks.delete(e.target);
+          cb?.();
+        }
+      },
+      { rootMargin: PW_ROOT_MARGIN },
+    );
+  }
+  return pwObserver;
+}
+function pwWarm(phrases: string[]) {
+  if (pwWarmed.size >= PW_SESSION_CAP) return;
+  let fired = 0;
+  for (const p of phrases) {
+    if (pwWarmed.size >= PW_SESSION_CAP || fired >= PW_PER_FIRE) break;
+    const t = (p || "").trim();
+    if (!t || pwWarmed.has(t)) continue;
+    pwWarmed.add(t);
+    prefetchTTS(t); // 键 = ${voiceId}|${speed}||${t},与 speak(phrase) 默认音色逐字节一致
+    fired++;
+  }
+}
+
 export function TappableLine({
   sentence,
   favorite,
@@ -804,8 +851,26 @@ export function TappableLine({
   const tokens = useMemo(() => tokenize(sentence, chunkPhrases ?? KNOWN_PHRASES), [sentence, chunkPhrases]);
   const contextText = useMemo(() => stripTags(sentence), [sentence]);
   const libraryMode = !!favorite;
+  const rootRef = useRef<HTMLSpanElement>(null);
+
+  // 视口驱动的点词发音预热(仅图书馆精读模式)。本句进入视口(+300px)时预热其可点词发音。
+  useEffect(() => {
+    if (!libraryMode) return;
+    const el = rootRef.current;
+    const obs = pwGetObserver();
+    if (!el || !obs) return;
+    const phrases = tokens.filter((t) => t.kind === "tap").map((t) => t.phrase);
+    if (!phrases.length) return;
+    pwCallbacks.set(el, () => pwWarm(phrases));
+    obs.observe(el);
+    return () => {
+      obs.unobserve(el);
+      pwCallbacks.delete(el);
+    };
+  }, [libraryMode, tokens]);
+
   return (
-    <span>
+    <span ref={rootRef}>
       {tokens.map((tok, i) => {
         // 图书馆模式:把弯撇号包进 .tight-apos 收掉 SF Pro 的字形假空格;美语课原样。
         const rendered = libraryMode ? renderTight(tok.text) : tok.text;

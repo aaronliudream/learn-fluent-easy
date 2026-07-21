@@ -244,6 +244,7 @@ function JuniorBlock() {
   const [readingMastered, setReadingMastered] = useState(0);
   const [listenAcc, setListenAcc] = useState<{ok: number;tot: number;}>({ ok: 0, tot: 0 });
   const [grammarMastered, setGrammarMastered] = useState(0);
+  const [grammarTotal, setGrammarTotal] = useState(0);
   const [writingCount, setWritingCount] = useState(0);
   const [writingAvg, setWritingAvg] = useState(0);
 
@@ -251,12 +252,14 @@ function JuniorBlock() {
     (async () => {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) {setLoading(false);return;}
-      const [vm, mp, la, jum, wa] = await Promise.all([
+      const [vm, mp, la, jm, wa, gpts] = await Promise.all([
       supabase.from("junior_word_mastery").select("mastery_level").eq("user_id", user.id),
       supabase.from("mastery_progress").select("module,stars,best_pct").eq("user_id", user.id).eq("module", "junior_reading"),
       supabase.from("junior_listening_attempts").select("is_correct").eq("user_id", user.id),
-      supabase.from("junior_user_mastery").select("mastery_level,item_type").eq("user_id", user.id).eq("item_type", "grammar_point"),
-      supabase.from("junior_writing_attempts").select("overall_score").eq("user_id", user.id)]
+      // 语法板块口径 = 按题(grammar_question 累计答对2次=掌握),与 useMasteryOverview / 单元页小圆圈同源
+      supabase.from("junior_user_mastery").select("correct_count").eq("user_id", user.id).eq("item_type", "grammar_question"),
+      supabase.from("junior_writing_attempts").select("overall_score").eq("user_id", user.id),
+      supabase.from("junior_grammar_points").select("id").not("unit", "is", null)]
       );
       let mast = 0,learn = 0;
       for (const r of vm.data ?? []) {
@@ -273,10 +276,22 @@ function JuniorBlock() {
       for (const r of la.data ?? []) {tot += 1;if ((r as any).is_correct) ok += 1;}
       setListenAcc({ ok, tot });
       let gm = 0;
-      for (const r of jum.data ?? []) {
-        if (((r as any).mastery_level ?? 0) >= 3) gm += 1;
+      for (const r of jm.data ?? []) {
+        if (((r as any).correct_count ?? 0) >= 2) gm += 1;
       }
       setGrammarMastered(gm);
+      // 动态总题数 = 新体系语法题(挂在 unit 非空语法点上的题),与板块总览一致
+      const pids = ((gpts.data ?? []) as {id: string;}[]).map((p) => p.id);
+      let gtotal = 0;
+      for (let i = 0; i < pids.length; i += 100) {
+        const slice = pids.slice(i, i + 100);
+        const { count } = await supabase.
+        from("junior_grammar_questions").
+        select("*", { count: "exact", head: true }).
+        in("point_id", slice);
+        gtotal += count ?? 0;
+      }
+      setGrammarTotal(gtotal);
       const warr = (wa.data ?? []) as any[];
       setWritingCount(warr.length);
       setWritingAvg(warr.length ? Math.round(warr.reduce((s, x) => s + (x.overall_score ?? 0), 0) / warr.length) : 0);
@@ -289,7 +304,7 @@ function JuniorBlock() {
   const vocabPct = Math.round(vocabMastered / JUNIOR_TOTALS.vocab * 100);
   const readingPct = Math.round(readingMastered / JUNIOR_TOTALS.reading * 100);
   const listenPct = listenAcc.tot ? Math.round(listenAcc.ok / listenAcc.tot * 100) : 0;
-  const grammarPct = Math.round(grammarMastered / JUNIOR_TOTALS.grammar * 100);
+  const grammarPct = grammarTotal ? Math.round(grammarMastered / grammarTotal * 100) : 0;
   const writingPct = Math.min(100, Math.round(writingCount / JUNIOR_TOTALS.writing * 100));
   const overall = Math.round(vocabPct * 0.35 + readingPct * 0.20 + listenPct * 0.15 + grammarPct * 0.20 + writingPct * 0.10);
 
@@ -310,10 +325,10 @@ function JuniorBlock() {
         <BigMetric icon={Headphones} tone="from-orange-500 to-amber-500" label="🎧 听力正确率"
         numerator={listenPct} denominator={100} delta={null} remaining={null}
         subtext={`累计答题 ${listenAcc.tot} 题`} isPercent />
-        <BigMetric icon={Target} tone="from-indigo-500 to-violet-500" label="🧩 语法考点"
-        numerator={grammarMastered} denominator={JUNIOR_TOTALS.grammar} delta={null}
-        remaining={Math.max(0, JUNIOR_TOTALS.grammar - grammarMastered)}
-        subtext={`中考核心语法点 ${JUNIOR_TOTALS.grammar} 个`} />
+        <BigMetric icon={Target} tone="from-indigo-500 to-violet-500" label="🧩 语法掌握"
+        numerator={grammarMastered} denominator={Math.max(1, grammarTotal)} delta={null}
+        remaining={Math.max(0, grammarTotal - grammarMastered)}
+        subtext={`按题计 · 全 ${grammarTotal} 题(累计答对2次=掌握)`} />
         <BigMetric icon={PenLine} tone="from-rose-500 to-pink-500" label="✍️ 写作练习"
         numerator={writingCount} denominator={JUNIOR_TOTALS.writing} delta={null} remaining={null}
         subtext={writingCount ? `平均 ${writingAvg} 分` : "还没开始练写作"} />

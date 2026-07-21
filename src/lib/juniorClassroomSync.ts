@@ -7,7 +7,7 @@
  * | 模块 | 数据源 | 掌握条件 |
  * |------|--------|----------|
  * | 词汇 | junior_vocab + junior_word_mastery | mastery_level ≥ 3（熟练，FSRS 稳定回忆） |
- * | 语法 | junior_grammar_points + junior_user_mastery | grammar_point 且 mastery_level ≥ 3 |
+ * | 语法 | junior_grammar_questions + junior_user_mastery | grammar_question 且 correct_count ≥ 2（按题,累计答对2次=掌握） |
  * | 阅读 | junior_reading + mastery_progress | stars ≥ 5，或 best_pct ≥ 80 |
  * | 听力 | junior_listening_exercises + attempts | 该题正确率 ≥ 80% |
  * | 写作 | junior_writing_prompts + attempts | 该题最高 overall_score ≥ 80 |

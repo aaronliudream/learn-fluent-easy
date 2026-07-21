@@ -8,17 +8,16 @@ import {
 } from "@/components/grammar/GrammarQuestionCard";
 import {
   recordJuniorGrammarAttempt,
-  loadJuniorGrammarMasteryAll,
   type JuniorGrammarErrorReason,
 } from "@/lib/juniorGrammarFsrs";
 import {
   resolveUnitPoints,
   loadUnitPool,
   pickQuestions,
-  computeUnitMastery,
   type UnitPoint,
   type UnitQuestion,
 } from "@/lib/juniorUnitGrammar";
+import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { recordSeniorGrammarMistake } from "@/lib/seniorGrammarMistake";
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
@@ -30,17 +29,17 @@ import UnitGrammarGroupWalk from "@/components/grammar/UnitGrammarGroupWalk";
 
 /* ──────────────────────────────────────────────────────────────────────────
    单元语法综合测试 —— 多语法点合并抽题(每点保底1道)+ 随机抽 8 道。
-   - 每答一题 recordJuniorGrammarAttempt({pointId: 该题真实归属点}) → 和专区/错题复习同步。
-   - 结果页(阈值方案丙):① 本次各点对错(即时) ② 长期掌握 X/4(读 mastery_level≥3)。
+   - 每答一题 recordGrammarQuestionMastery(题级,累计答对2次=掌握) → 与单元页小圆圈/
+     板块总览/语法专项页同表同口径(item_type='grammar_question')。
+   - 结果页:① 本次各点对错(即时) ② 长期掌握 X/Y 题(题级,与单元页小圆圈完全一致)。
+   - 注:新单元(g7su/g7u/g8u 等新 code)走 UnitGrammarGroupWalk;此处结算只用于旧 legacy 单元。
    ────────────────────────────────────────────────────────────────────────── */
-
-const MASTERY_THRESHOLD = 3; // mastery_level ≥ 3(熟练)记为「已掌握」
 
 type Result = {
   perPoint: { id: string; title: string; correct: number; total: number }[];
-  mastered: number;
-  total: number;
-  unmasteredTitles: string[];
+  mastered: number; // 已掌握题数(correct_count≥2)
+  total: number; // 本单元语法总题数
+  done: number; // 做过的题数(correct+wrong≥1)
 };
 
 export default function JuniorUnitGrammarTest() {
@@ -90,7 +89,7 @@ export default function JuniorUnitGrammarTest() {
     void recordSkillAttemptsForQuestion(activeQ.id, isOk);
     // 块②:补写统一错题本(此前只有专项页写,单元综合测漏了)。做对自动移出。
     void recordSeniorGrammarMistake({ question: activeQ, result: res, isCorrect: isOk, sourceLabel: unit?.title });
-    // 方案B:按题掌握度(累计答对2次=掌握),与语法页 L3 同表同步
+    // 方案B:按题掌握度(累计答对2次=掌握),与语法页 L3 / 单元页小圆圈同表同步
     void recordGrammarQuestionMastery(activeQ.id, isOk);
     if (isOk) {
       awardForCorrect(0, "junior_grammar", activeQ.id, "junior_grammar", res.latencyMs);
@@ -99,6 +98,7 @@ export default function JuniorUnitGrammarTest() {
     }
     // 每题归到它真正的 point 写库 → 自动和专区掌握度/错题复习同步
     // 题带 kp_id 时一并回写知识点层(grammar_kp 行),与专区 kp 练习同源;无 kp_id 则只写 point 层(向后兼容)。
+    // 注:grammar_point / grammar_kp 是错题复习/FSRS 的独立维度,不参与板块掌握度统计(那个统一走题级)。
     recordJuniorGrammarAttempt({
       pointId: activeQ.pointId,
       kpId: activeQ.kp_id ?? undefined,
@@ -133,16 +133,15 @@ export default function JuniorUnitGrammarTest() {
         if (ok) e.correct++;
       }
     });
-    // ② 长期掌握 X/4(读 DB)
-    const rows = await loadJuniorGrammarMasteryAll();
-    const um = computeUnitMastery(points, rows, MASTERY_THRESHOLD);
+    // ② 长期掌握 X/Y 题(题级,口径与单元页小圆圈/板块总览完全一致)
+    const prog = await loadProgressForCodes(unit?.grammarCodes ?? []);
     setResult({
       perPoint: [...tally.values()],
-      mastered: um.mastered,
-      total: um.total,
-      unmasteredTitles: um.unmasteredTitles,
+      mastered: prog.mastered,
+      total: prog.total,
+      done: prog.done,
     });
-    if (um.mastered === um.total && um.total > 0) {
+    if (prog.total > 0 && prog.mastered === prog.total) {
       fireEmojiConfetti({ vibrate: true, count: 60 });
     }
   };
@@ -278,7 +277,7 @@ export default function JuniorUnitGrammarTest() {
   );
 }
 
-/* ─────────────── 结算页:本次表现 + 长期掌握 X/4 ─────────────── */
+/* ─────────────── 结算页:本次表现 + 长期掌握 X/Y 题 ─────────────── */
 function CompletionScreen({
   result,
   backTo,
@@ -291,6 +290,7 @@ function CompletionScreen({
   const allMastered = result.total > 0 && result.mastered === result.total;
   const sessionCorrect = result.perPoint.reduce((s, p) => s + p.correct, 0);
   const sessionTotal = result.perPoint.reduce((s, p) => s + p.total, 0);
+  const remaining = Math.max(0, result.total - result.mastered);
 
   return (
     <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-10 space-y-6">
@@ -303,7 +303,7 @@ function CompletionScreen({
         </h1>
         <div className="relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500/15 to-cyan-500/15 px-4 py-1.5 text-sm font-bold text-pink-700 dark:text-pink-300">
           <Trophy className="size-4" />
-          本次答对 {sessionCorrect}/{sessionTotal} · 长期掌握 {result.mastered}/{result.total} 个点
+          本次答对 {sessionCorrect}/{sessionTotal} · 已掌握 {result.mastered}/{result.total} 题
         </div>
       </section>
 
@@ -322,19 +322,20 @@ function CompletionScreen({
         </div>
       </section>
 
-      {/* ② 长期掌握 */}
+      {/* ② 长期掌握(题级,与单元页小圆圈一致) */}
       <section className="playful-card p-5 space-y-2">
         <h2 className="text-base font-extrabold text-[#2C2C2A] dark:text-foreground">
-          长期掌握 {result.mastered}/{result.total} 个语法点
+          长期掌握 {result.mastered}/{result.total} 题
         </h2>
-        {result.unmasteredTitles.length > 0 ? (
-          <p className="text-sm text-[#5C5751] dark:text-muted-foreground">
-            还需掌握:{result.unmasteredTitles.join("、")}
-          </p>
+        <p className="text-sm text-[#5C5751] dark:text-muted-foreground">
+          已完成 {result.done}/{result.total} 题
+          {remaining > 0 ? ` · 还有 ${remaining} 题未掌握` : ""}
+        </p>
+        {remaining > 0 ? (
+          <p className="text-xs text-muted-foreground">（每道题累计答对 2 次记为「掌握」,多刷几遍掌握数就会涨。）</p>
         ) : (
-          <p className="text-sm text-emerald-600 dark:text-emerald-400">这 4 个语法点都达到熟练以上,继续保持!</p>
+          <p className="text-sm text-emerald-600 dark:text-emerald-400">本单元语法题全部掌握,继续保持!</p>
         )}
-        <p className="text-xs text-muted-foreground">（达到「熟练」需多次练习稳定正确,单次测试通常不足以点亮，多练几次就会涨。）</p>
       </section>
 
       <div className="flex flex-wrap items-center justify-center gap-3">

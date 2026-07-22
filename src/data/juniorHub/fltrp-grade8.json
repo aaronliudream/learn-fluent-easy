@@ -12,9 +12,9 @@
             "unitKey": "U1",
             "book": "wy8A",
             "title": "Unit 1 This is me",
-            "cn": "整理中",
+            "cn": "自我与成长",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -87,9 +87,68 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "改变了我的一件事(现在完成时)",
+              "prompt": "Write about something (a hobby, a book, or an activity) that has changed you. Use the present perfect tense (have/has + past participle).",
+              "promptCn": "写一段,讲一件改变了你的事物(一个爱好、一本书或一项活动)。用现在完成时(have/has+过去分词)。",
+              "opener": "Over the past few years, one thing has really changed me.",
+              "sampleWords": [
+                "has changed",
+                "have learnt",
+                "have become",
+                "never",
+                "really"
+              ],
+              "cards": [
+                {
+                  "key": "activity",
+                  "labelCn": "改变你的事物",
+                  "hint": "如 reading / running"
+                },
+                {
+                  "key": "change",
+                  "labelCn": "带来的变化",
+                  "hint": "如 braver and kinder"
+                },
+                {
+                  "key": "feel",
+                  "labelCn": "你的感受",
+                  "hint": "如 thankful / lucky"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "{activity} has changed me a lot.",
+                  "I have learnt many things from it.",
+                  "It has made me {change}.",
+                  "I feel {feel} now."
+                ],
+                "l2": [
+                  "A few years ago, {activity} came into my life, and it has changed me a lot.",
+                  "Since then, I have learnt so many things from it.",
+                  "It has slowly made me {change}.",
+                  "Now I feel {feel}, and I cannot imagine my life without it."
+                ],
+                "l3": [
+                  "A few years ago, {activity} quietly came into my life, and since then it has changed me in many ways.",
+                  "I have learnt more from it than from anything else, and it has opened a whole new world for me.",
+                  "Step by step, it has made me {change}, and it has become a real part of who I am.",
+                  "I have never felt so {feel}. This small thing has truly changed my life for the better."
+                ]
+              },
+              "connectors": [
+                "and",
+                "so",
+                "since",
+                "because"
+              ],
+              "minWords": 55
+            },
             "quizQuestions": [],
-            "listeningQuestions": []
+            "listeningQuestions": [],
+            "grammarCodes": [
+              "wy8-u1-present-perfect-1"
+            ]
           },
           {
             "id": "wy8v1_u2",
@@ -97,9 +156,9 @@
             "unitKey": "U2",
             "book": "wy8A",
             "title": "Unit 2 Getting along",
-            "cn": "整理中",
+            "cn": "与人相处",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -172,9 +231,68 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "我坚持很久的爱好或友情(现在完成时 since/for)",
+              "prompt": "Write about a hobby or a friend you have had for a long time. Use the present perfect with since and for.",
+              "promptCn": "写一段,讲一个你拥有了很久的爱好或朋友。用现在完成时 + since/for。",
+              "opener": "There is something I have loved for a very long time.",
+              "sampleWords": [
+                "since",
+                "for",
+                "have had",
+                "have known",
+                "years"
+              ],
+              "cards": [
+                {
+                  "key": "hobby",
+                  "labelCn": "爱好或朋友",
+                  "hint": "如 playing the guitar / my old friend"
+                },
+                {
+                  "key": "start",
+                  "labelCn": "开始的时间",
+                  "hint": "如 I was seven / 2018"
+                },
+                {
+                  "key": "feel",
+                  "labelCn": "你的感受",
+                  "hint": "如 happy and free"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I have loved {hobby} for many years.",
+                  "I started it {start}.",
+                  "I have never given it up.",
+                  "It makes me feel {feel}."
+                ],
+                "l2": [
+                  "I have loved {hobby} since {start}, and I still enjoy it today.",
+                  "I have kept it up for many years now.",
+                  "It has never grown boring to me.",
+                  "Every time I do it, I feel {feel} and free."
+                ],
+                "l3": [
+                  "I have loved {hobby} since {start}, and I have never grown tired of it, even for a single day.",
+                  "For all these years, it has stayed by my side like an old friend.",
+                  "I have spent countless happy hours on it, and it has given me more joy than words can say.",
+                  "Some things come and go, but this one has stayed with me for a long, long time, and I feel so {feel}."
+                ]
+              },
+              "connectors": [
+                "and",
+                "but",
+                "since",
+                "for"
+              ],
+              "minWords": 60
+            },
             "quizQuestions": [],
-            "listeningQuestions": []
+            "listeningQuestions": [],
+            "grammarCodes": [
+              "wy8-u2-present-perfect-2"
+            ]
           },
           {
             "id": "wy8v1_u3",
@@ -182,9 +300,9 @@
             "unitKey": "U3",
             "book": "wy8A",
             "title": "Unit 3 Make it happen!",
-            "cn": "整理中",
+            "cn": "让梦想成真",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -257,9 +375,63 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "我喜欢做的事和我想做的事(不定式/动名词作宾语)",
+              "prompt": "Write about a hobby you enjoy doing and something you want to learn or do. Use infinitives (to do) and gerunds (doing).",
+              "promptCn": "写一段,讲一个你喜欢做的爱好,以及你想学或想做的一件事。用不定式(to do)和动名词(doing)。",
+              "opener": "In my free time, I enjoy doing something I really love.",
+              "sampleWords": [
+                "enjoy doing",
+                "want to learn",
+                "hope to",
+                "keep practising",
+                "every day"
+              ],
+              "cards": [
+                {
+                  "key": "hobby",
+                  "labelCn": "你的爱好(doing)",
+                  "hint": "如 drawing / playing chess"
+                },
+                {
+                  "key": "goal",
+                  "labelCn": "你想学做的事(to do)",
+                  "hint": "如 to join a club"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I really enjoy {hobby}.",
+                  "I have decided to practise it every day.",
+                  "I also hope to learn {goal}.",
+                  "I never want to give up."
+                ],
+                "l2": [
+                  "In my free time, I enjoy {hobby} more than anything.",
+                  "Last year, I decided to work harder, and now I keep practising every day.",
+                  "I also hope to learn {goal} one day.",
+                  "I have promised myself to keep trying and never to give up."
+                ],
+                "l3": [
+                  "Of all the things I do, I enjoy {hobby} the most, and I can spend hours on it without feeling tired.",
+                  "A while ago, I decided to work much harder, so now I keep practising it almost every single day.",
+                  "I also really hope to learn {goal}, because I love trying new and difficult things.",
+                  "I have promised myself to keep going and never to give up, no matter how hard it becomes."
+                ]
+              },
+              "connectors": [
+                "and",
+                "so",
+                "because",
+                "but"
+              ],
+              "minWords": 60
+            },
             "quizQuestions": [],
-            "listeningQuestions": []
+            "listeningQuestions": [],
+            "grammarCodes": [
+              "wy8-u3-infinitive-gerund-object"
+            ]
           },
           {
             "id": "wy8v1_u4",
@@ -267,9 +439,9 @@
             "unitKey": "U4",
             "book": "wy8A",
             "title": "Unit 4 Digital life",
-            "cn": "整理中",
+            "cn": "数字生活",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -342,9 +514,63 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "帮助我成长的人(不定式作宾补)",
+              "prompt": "Write about someone who helps you (a coach, a friend, an elder) and what they ask or teach you to do. Use verb + object + to do.",
+              "promptCn": "写一段,讲一个帮助你的人(教练、朋友或长辈),以及他/她要求或教你做的事。用'动词+宾语+不定式'。",
+              "opener": "There is someone who often helps me become a better person.",
+              "sampleWords": [
+                "asks me to",
+                "teaches me to",
+                "tells me to",
+                "makes me",
+                "every day"
+              ],
+              "cards": [
+                {
+                  "key": "person",
+                  "labelCn": "帮助你的人",
+                  "hint": "如 my coach / my best friend"
+                },
+                {
+                  "key": "quality",
+                  "labelCn": "你学到的品质",
+                  "hint": "如 patient / brave"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "{person} helps me every day.",
+                  "This person tells me to work hard.",
+                  "This person asks me to keep calm.",
+                  "And this person makes me feel strong."
+                ],
+                "l2": [
+                  "{person} has helped me grow in many ways.",
+                  "When I feel lazy, this person tells me to try my best.",
+                  "This person also asks me to be honest and kind.",
+                  "Little by little, this person is teaching me to become {quality}."
+                ],
+                "l3": [
+                  "For as long as I remember, {person} has helped me grow into a better person.",
+                  "Whenever I want to give up, this person gently tells me to keep going and never to fear a mistake.",
+                  "This person often asks me to be honest, to work hard, and to care about other people.",
+                  "Day by day, {person} is teaching me to become {quality}, and I really want to make this person proud of me."
+                ]
+              },
+              "connectors": [
+                "and",
+                "when",
+                "so",
+                "because"
+              ],
+              "minWords": 65
+            },
             "quizQuestions": [],
-            "listeningQuestions": []
+            "listeningQuestions": [],
+            "grammarCodes": [
+              "wy8-u4-infinitive-object-complement"
+            ]
           },
           {
             "id": "wy8v1_u5",
@@ -352,9 +578,9 @@
             "unitKey": "U5",
             "book": "wy8A",
             "title": "Unit 5 Play by the rules?",
-            "cn": "整理中",
+            "cn": "规则与文明",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -427,9 +653,58 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "我的好习惯和它的理由(不定式表目的)",
+              "prompt": "Write about a good habit you have and explain why you do it. Use the infinitive of purpose (to do) to give reasons.",
+              "promptCn": "写一段,讲一个你的好习惯,并说明你为什么这样做。用不定式表目的(to do)说明原因。",
+              "opener": "I have a small habit, and I keep it for a good reason.",
+              "sampleWords": [
+                "to stay",
+                "to keep",
+                "to save",
+                "in order to",
+                "healthy"
+              ],
+              "cards": [
+                {
+                  "key": "habit",
+                  "labelCn": "你的好习惯",
+                  "hint": "如 get up early / read every night"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "Every day I {habit}.",
+                  "I do this to stay healthy.",
+                  "I also do it to save time.",
+                  "It helps me to feel good."
+                ],
+                "l2": [
+                  "Every morning I {habit}, and I never miss it.",
+                  "I do this mainly to stay healthy and to keep my mind clear.",
+                  "I also do it in order to save time for the things I love.",
+                  "In the end, this small habit helps me to feel happy and ready."
+                ],
+                "l3": [
+                  "Every single morning, without fail, I {habit}, because I have learnt its real value.",
+                  "I do this first of all to stay healthy and strong, and to keep my mind fresh and clear for school.",
+                  "I also keep this habit in order to save time, and to make room for the people I love.",
+                  "It is only a small thing, but I do it every day to build a better life, one step at a time."
+                ]
+              },
+              "connectors": [
+                "and",
+                "so",
+                "because",
+                "to"
+              ],
+              "minWords": 70
+            },
             "quizQuestions": [],
-            "listeningQuestions": []
+            "listeningQuestions": [],
+            "grammarCodes": [
+              "wy8-u5-infinitive-purpose"
+            ]
           },
           {
             "id": "wy8v1_u6",
@@ -437,9 +712,9 @@
             "unitKey": "U6",
             "book": "wy8A",
             "title": "Unit 6 When disaster strikes",
-            "cn": "整理中",
+            "cn": "灾难与勇气",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -512,9 +787,63 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "我难忘的一刻(过去进行时)",
+              "prompt": "Write about a moment you will never forget — what you were doing when something happened. Use the past continuous tense (was/were doing).",
+              "promptCn": "写一段,讲一个你难忘的时刻——当某事发生时你正在做什么。用过去进行时(was/were doing)。",
+              "opener": "I will never forget what happened that day.",
+              "sampleWords": [
+                "was walking",
+                "were playing",
+                "suddenly",
+                "when",
+                "happened"
+              ],
+              "cards": [
+                {
+                  "key": "activity",
+                  "labelCn": "当时你在做的事",
+                  "hint": "如 walking home"
+                },
+                {
+                  "key": "event",
+                  "labelCn": "突然发生的事",
+                  "hint": "如 it began to rain hard"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "That afternoon, I was {activity}.",
+                  "Near me, some children were laughing and playing.",
+                  "Suddenly, {event}.",
+                  "My heart was beating fast."
+                ],
+                "l2": [
+                  "It was a quiet afternoon, and I was {activity} without a care.",
+                  "Not far away, some children were laughing and running.",
+                  "All at once, {event}, and everyone was looking around in shock.",
+                  "My heart was beating fast, and I could not move at all."
+                ],
+                "l3": [
+                  "It was an ordinary afternoon, and I was {activity}, thinking about nothing at all.",
+                  "Around me, some children were laughing, running, and enjoying the warm afternoon sun without a care in the world.",
+                  "Then, all of a sudden, {event}. Everyone stopped, and people were shouting and running towards the noise.",
+                  "My heart was beating so fast that I could hardly breathe. I stood there without moving, and I have never forgotten that moment from that day to this."
+                ]
+              },
+              "connectors": [
+                "and",
+                "when",
+                "suddenly",
+                "so"
+              ],
+              "minWords": 70
+            },
             "quizQuestions": [],
-            "listeningQuestions": []
+            "listeningQuestions": [],
+            "grammarCodes": [
+              "wy8-u6-past-continuous"
+            ]
           }
         ]
       },

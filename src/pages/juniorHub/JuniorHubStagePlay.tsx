@@ -1850,7 +1850,7 @@ function writingPromptId(unit: UnitDef): string {
 }
 
 // 真写作(AI批改)白名单:内联 writing prompt 就绪的册。加册改数组即可,不动逻辑,防 `||` 越加越漏。
-const REAL_WRITING_BOOKS = new Set(["7B", "wy7A"]);
+const REAL_WRITING_BOOKS = new Set(["7B", "wy7A", "wy7B", "wy8A", "wy8B"]);
 
 function WritingStage({ unit, grade, onFinish }: { unit: UnitDef; grade: number; onFinish: () => void }) {
   const w = unit.writing;

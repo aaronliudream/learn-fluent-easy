@@ -1032,7 +1032,7 @@
             "title": "Unit 1 The secrets of happiness",
             "cn": "幸福的秘密",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -1180,7 +1180,7 @@
             "title": "Unit 2 Go for it!",
             "cn": "勇往直前",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -1328,7 +1328,7 @@
             "title": "Unit 3 Food matters",
             "cn": "食物的意义",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -1476,7 +1476,7 @@
             "title": "Unit 4 The art of having fun",
             "cn": "享乐的艺术",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -1624,7 +1624,7 @@
             "title": "Unit 5 Amazing nature",
             "cn": "神奇的大自然",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -1772,7 +1772,7 @@
             "title": "Unit 6 Hitting the road",
             "cn": "上路吧",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [

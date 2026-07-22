@@ -34,7 +34,8 @@ type CourseCardData = {
   badge?: string;
 };
 
-const COURSE_CARDS: CourseCardData[] = [
+/** 4 张学段卡 — 桌面 2×2 网格(按此顺序自然排 2 列:左列 小学/高中,右列 初中/美语)。 */
+const STAGE_CARDS: CourseCardData[] = [
   {
     to: "/kids",
     icon: Backpack,
@@ -73,23 +74,32 @@ const COURSE_CARDS: CourseCardData[] = [
     gradient: "linear-gradient(135deg, #0a1628 0%, #16375f 52%, #c9922e 150%)",
     badge: "美式课程",
   },
-  {
-    // 图书馆入口(原独立板块精简为并列入口卡)。整卡 → /library,复用真实大厅图。
-    to: "/library",
-    icon: Library,
-    title: "英文图书馆",
-    desc: "读英文原著 · 点词即懂",
-    tag: "全学段",
-    image: "/library-hall.jpg",
-    badge: "图书馆",
-  },
 ];
 
-function CourseCard({ c, admin }: { c: (typeof COURSE_CARDS)[number]; admin?: boolean }) {
+/** 图书馆卡 — 单独一行全宽横条,排在 2×2 网格之下。原独立富板块精简为并列入口卡,整卡 → /library,复用真实大厅图。 */
+const LIBRARY_CARD: CourseCardData = {
+  to: "/library",
+  icon: Library,
+  title: "英文图书馆",
+  desc: "读英文原著 · 点词即懂",
+  tag: "全学段",
+  image: "/library-hall.jpg",
+  badge: "图书馆",
+};
+
+function CourseCard({
+  c,
+  admin,
+  heightClass = "min-h-[200px]",
+}: {
+  c: CourseCardData;
+  admin?: boolean;
+  heightClass?: string;
+}) {
   const Icon = c.icon;
   const soon = SOON_HREFS.has(c.to) && !admin;
   const cls =
-    "group relative flex min-h-[168px] flex-col overflow-hidden rounded-xl shadow-[0_2px_14px_rgba(15,23,42,0.08)] transition" +
+    `group relative flex ${heightClass} flex-col overflow-hidden rounded-xl shadow-[0_2px_14px_rgba(15,23,42,0.08)] transition` +
     (soon
       ? " cursor-not-allowed"
       : " hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(15,23,42,0.14)]");
@@ -165,7 +175,6 @@ function CourseCard({ c, admin }: { c: (typeof COURSE_CARDS)[number]; admin?: bo
 export default function LandingPage() {
   // 高中(/gaokao、/senior)整理中对普通用户的锁由 SOON_HREFS 控制;管理员(aaron)可点进。
   const { isAdmin } = useIsAdmin();
-  const courseCards = COURSE_CARDS;
 
   return (
     <main className="landing-page min-h-dvh bg-[#f4f6f9] font-sans text-slate-900 antialiased">
@@ -184,13 +193,18 @@ export default function LandingPage() {
         </nav>
       </header>
 
-      {/* ═══ 5 个入口卡（全宽单列）·id="courses" 供 /#courses 深链跳转 ═══ */}
+      {/* ═══ 入口卡 · id="courses" 供 /#courses 深链跳转 ═══ */}
       <section id="courses" className="scroll-mt-20 bg-[#f4f6f9] py-10 md:py-12">
         <div className="mx-auto max-w-[1200px] px-4 md:px-6">
-          <div className="grid grid-cols-1 gap-3">
-            {courseCards.map((c) => (
+          {/* 4 张学段卡:手机竖排单列 / 桌面 2×2(左列 小学·高中,右列 初中·美语) */}
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {STAGE_CARDS.map((c) => (
               <CourseCard key={c.to} c={c} admin={isAdmin} />
             ))}
+          </div>
+          {/* 图书馆:单独一行,全宽横条,与上方 2×2 网格总宽对齐 */}
+          <div className="mt-4">
+            <CourseCard c={LIBRARY_CARD} admin={isAdmin} heightClass="min-h-[160px]" />
           </div>
         </div>
       </section>

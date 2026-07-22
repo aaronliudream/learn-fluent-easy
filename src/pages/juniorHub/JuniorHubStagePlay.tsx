@@ -8,6 +8,7 @@ import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/juniorHub/types";
 import { useUnitVocab, useRankedUnitVocab } from "@/lib/juniorHub/useUnitVocab";
+import { REAL_WRITING_BOOKS } from "@/lib/juniorHub/realWritingBooks";
 import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
 import { publisherForBasePath } from "@/lib/gaokaoHub/publisher";
 import { gpct, type GrammarProgress } from "@/lib/juniorGrammarQuestionMastery";
@@ -1850,7 +1851,6 @@ function writingPromptId(unit: UnitDef): string {
 }
 
 // 真写作(AI批改)白名单:内联 writing prompt 就绪的册。加册改数组即可,不动逻辑,防 `||` 越加越漏。
-const REAL_WRITING_BOOKS = new Set(["7B", "wy7A", "wy7B", "wy8A", "wy8B"]);
 
 function WritingStage({ unit, grade, onFinish }: { unit: UnitDef; grade: number; onFinish: () => void }) {
   const w = unit.writing;

@@ -14,7 +14,7 @@
             "title": "Unit 1 This is me",
             "cn": "自我与成长",
             "emoji": "📗",
-            "available": true,
+            "available": false,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -158,7 +158,7 @@
             "title": "Unit 2 Getting along",
             "cn": "与人相处",
             "emoji": "📗",
-            "available": true,
+            "available": false,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -302,7 +302,7 @@
             "title": "Unit 3 Make it happen!",
             "cn": "让梦想成真",
             "emoji": "📗",
-            "available": true,
+            "available": false,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -441,7 +441,7 @@
             "title": "Unit 4 Digital life",
             "cn": "数字生活",
             "emoji": "📗",
-            "available": true,
+            "available": false,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -580,7 +580,7 @@
             "title": "Unit 5 Play by the rules?",
             "cn": "规则与文明",
             "emoji": "📗",
-            "available": true,
+            "available": false,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -714,7 +714,7 @@
             "title": "Unit 6 When disaster strikes",
             "cn": "灾难与勇气",
             "emoji": "📗",
-            "available": true,
+            "available": false,
             "vocabulary": [],
             "dialogues": [],
             "stages": [

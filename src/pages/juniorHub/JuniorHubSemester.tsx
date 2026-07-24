@@ -89,7 +89,7 @@ export default function JuniorHubSemester() {
                 <div className="min-w-0 flex-1 text-left">
                   <div className="text-[11px] font-bold uppercase text-[#888780]">{unitLabel(unit)}</div>
                   <div className="font-bold">
-                    {unit.title} · {unit.cn}
+                    {unit.title}{unit.cn && unit.cn !== "整理中" ? ` · ${unit.cn}` : ""}
                   </div>
                 </div>
                 <span>{!unit.available ? "🔒" : isDone ? "✅" : isCurrent ? "▶️" : ""}</span>

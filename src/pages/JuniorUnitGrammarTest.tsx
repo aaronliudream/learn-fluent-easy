@@ -233,7 +233,7 @@ export default function JuniorUnitGrammarTest() {
           {unit.title} · 语法综合测试
         </h1>
         <p className="relative mt-1.5 text-sm text-[#5C5751] dark:text-muted-foreground">
-          <T>本单元 {points.length} 个语法点混合抽题,成绩计入你的掌握度。</T>
+          <T>本单元</T> {points.length} <T>个语法点混合抽题,成绩计入你的掌握度。</T>
         </p>
       </header>
 

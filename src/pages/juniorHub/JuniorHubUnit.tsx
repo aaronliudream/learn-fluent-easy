@@ -223,7 +223,7 @@ export default function JuniorHubUnit() {
       </div>
       <div className="bg-gradient-to-br from-[#FF6B35] to-[#FFB627] px-5 py-5 text-white">
         <div className="text-xs opacity-90">
-          {unitLabel(unit)} · {unit.cn}
+          {unitLabel(unit)}{unit.cn && unit.cn !== "整理中" ? ` · ${unit.cn}` : ""}
         </div>
         <div className="text-2xl font-bold">
           {unit.emoji} {unit.title}

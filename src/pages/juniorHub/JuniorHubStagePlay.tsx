@@ -1451,16 +1451,16 @@ function ReadingStage({
           ))}
         </div>
 
-        {/* 建议下一篇 */}
-        {rec ? (
+        {/* 建议下一篇:仅在≥2篇时提示(单篇无"下一篇"可推,隐藏) */}
+        {rec && cards.length > 1 ? (
           <div className="mt-3 rounded-xl bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700 dark:bg-amber-950/30 dark:text-amber-300">
             👉 建议下一篇：{rec.display}
           </div>
-        ) : (
+        ) : !rec ? (
           <div className="mt-3 rounded-xl bg-emerald-50 px-3 py-2 text-xs font-bold text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300">
             🎉 本关全部完成，可随时复习
           </div>
-        )}
+        ) : null}
       </div>
     );
   }
@@ -1611,11 +1611,11 @@ function ClozeStage({
         ))}
       </div>
 
-      {rec ? (
+      {rec && cards.length > 1 ? (
         <div className="mt-3 rounded-xl bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700 dark:bg-amber-950/30 dark:text-amber-300">👉 建议下一篇：{rec.display}</div>
-      ) : (
+      ) : !rec ? (
         <div className="mt-3 rounded-xl bg-emerald-50 px-3 py-2 text-xs font-bold text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300">🎉 本关全部完成，可随时复习</div>
-      )}
+      ) : null}
     </div>
   );
 }
@@ -1803,16 +1803,16 @@ function ListeningStage({
           ))}
         </div>
 
-        {/* 建议下一条 */}
-        {rec ? (
+        {/* 建议下一条:仅在≥2条时提示(单条无"下一条"可推,隐藏) */}
+        {rec && cards.length > 1 ? (
           <div className="mt-3 rounded-xl bg-sky-50 px-3 py-2 text-xs font-bold text-sky-700 dark:bg-sky-950/30 dark:text-sky-300">
             👉 建议下一条：{rec.display}
           </div>
-        ) : (
+        ) : !rec ? (
           <div className="mt-3 rounded-xl bg-emerald-50 px-3 py-2 text-xs font-bold text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300">
             🎉 本关全部完成，可随时复习
           </div>
-        )}
+        ) : null}
       </div>
     );
   }

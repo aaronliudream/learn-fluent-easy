@@ -1,5 +1,5 @@
 -- 外研社八下 wy8B 词表灌库(junior_vocab)· publisher=junior_fltrp · volume=wy8B · grade=8 · 176词/6单元
--- 图片型PDF视觉抽取(已过拼写校验0错字)+ 差集(剔 wy7A∪wy7B∪wy8A∪小学词表·词形归并)· 短语pos/phonetic=NULL · IPA照抄
+-- 图片型PDF视觉抽取(拼写校验0错字)+ 差集(剔 wy7A∪wy7B∪wy8A∪小学词表·词形归并)· 短语pos/phonetic=NULL · IPA照抄
 -- ★DELETE 带 publisher=junior_fltrp AND volume=wy8B,绝不动其他册★
 BEGIN;
 DELETE FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B';
@@ -186,20 +186,20 @@ DO $$
 DECLARE tot int; c int; poll int; nulls int; dup int;
 BEGIN
   SELECT count(*) INTO tot FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B';
-  IF tot<>176 THEN RAISE EXCEPTION 'total=%% 期望176', tot; END IF;
-  SELECT count(*) INTO c FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U1'; IF c<>28 THEN RAISE EXCEPTION 'U1=%% 期望28', c; END IF;
-  SELECT count(*) INTO c FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U2'; IF c<>21 THEN RAISE EXCEPTION 'U2=%% 期望21', c; END IF;
-  SELECT count(*) INTO c FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U3'; IF c<>32 THEN RAISE EXCEPTION 'U3=%% 期望32', c; END IF;
-  SELECT count(*) INTO c FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U4'; IF c<>29 THEN RAISE EXCEPTION 'U4=%% 期望29', c; END IF;
-  SELECT count(*) INTO c FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U5'; IF c<>37 THEN RAISE EXCEPTION 'U5=%% 期望37', c; END IF;
-  SELECT count(*) INTO c FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U6'; IF c<>29 THEN RAISE EXCEPTION 'U6=%% 期望29', c; END IF;
+  IF tot<>176 THEN RAISE EXCEPTION 'total=% 期望176', tot; END IF;
+  SELECT count(*) INTO c FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U1'; IF c<>28 THEN RAISE EXCEPTION 'U1=% 期望28', c; END IF;
+  SELECT count(*) INTO c FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U2'; IF c<>21 THEN RAISE EXCEPTION 'U2=% 期望21', c; END IF;
+  SELECT count(*) INTO c FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U3'; IF c<>32 THEN RAISE EXCEPTION 'U3=% 期望32', c; END IF;
+  SELECT count(*) INTO c FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U4'; IF c<>29 THEN RAISE EXCEPTION 'U4=% 期望29', c; END IF;
+  SELECT count(*) INTO c FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U5'; IF c<>37 THEN RAISE EXCEPTION 'U5=% 期望37', c; END IF;
+  SELECT count(*) INTO c FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U6'; IF c<>29 THEN RAISE EXCEPTION 'U6=% 期望29', c; END IF;
   SELECT count(*) INTO poll FROM public.junior_vocab WHERE volume='wy8B' AND publisher<>'junior_fltrp';
-  IF poll<>0 THEN RAISE EXCEPTION 'polluted=%%', poll; END IF;
+  IF poll<>0 THEN RAISE EXCEPTION 'polluted=%', poll; END IF;
   SELECT count(*) INTO nulls FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' AND (word IS NULL OR meaning_cn IS NULL);
-  IF nulls<>0 THEN RAISE EXCEPTION 'word/meaning空=%%', nulls; END IF;
+  IF nulls<>0 THEN RAISE EXCEPTION 'word/meaning空=%', nulls; END IF;
   SELECT count(*) INTO dup FROM (SELECT word_id FROM public.junior_vocab WHERE publisher='junior_fltrp' AND volume='wy8B' GROUP BY word_id HAVING count(*)>1) t;
-  IF dup<>0 THEN RAISE EXCEPTION 'word_id重复=%%', dup; END IF;
-  RAISE NOTICE 'OK: wy8B 词表 %% 条 · 六单元计数达标', tot;
+  IF dup<>0 THEN RAISE EXCEPTION 'word_id重复=%', dup; END IF;
+  RAISE NOTICE 'OK: wy8B 词表 % 条 · 六单元计数达标', tot;
 END $$;
 
 COMMIT;

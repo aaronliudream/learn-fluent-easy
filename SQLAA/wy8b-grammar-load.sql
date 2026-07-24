@@ -155,4 +155,4 @@ BEGIN
 END $$;
 
 COMMIT;
-SELECT p.unit, p.code, count(q.id) FROM public.junior_grammar_points p LEFT JOIN public.junior_grammar_questions q ON q.point_id=p.id WHERE p.publisher='junior_fltrp' AND p.volume='wy8B' GROUP BY p.unit,p.code ORDER BY p.sort_order;
+SELECT p.unit, p.code, count(q.id) FROM public.junior_grammar_points p LEFT JOIN public.junior_grammar_questions q ON q.point_id=p.id WHERE p.publisher='junior_fltrp' AND p.volume='wy8B' GROUP BY p.unit,p.code,p.sort_order ORDER BY p.sort_order;

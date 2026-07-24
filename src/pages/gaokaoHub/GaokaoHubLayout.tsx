@@ -30,7 +30,8 @@ function BottomNav({ grade, publisher }: { grade: GaokaoHubGrade; publisher: Pub
           <span className="text-xl">📚</span>
           <span>学习</span>
         </Link>
-        <Link to={wp(`${base}/mistakes`)} className={tab(isMistakes)}>
+        {/* 错题本已统一到全站 DB 版 /mistakes(不再读 localStorage);离开 hub 外壳,靠页面自带返回。 */}
+        <Link to="/mistakes" className={tab(isMistakes)}>
           <span className="text-xl">📝</span>
           <span>错题本</span>
         </Link>

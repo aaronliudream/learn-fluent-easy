@@ -28,13 +28,13 @@ export default function JuniorHubProfile() {
           <div className="text-xs">⭐ {getTotalStars(state)} 星星</div>
         </div>
         <Link
-          to={wp(`${base}/mistakes`)}
+          to="/mistakes"
           className="flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm"
         >
           <span className="text-2xl">📝</span>
           <div className="flex-1">
             <div className="font-semibold">错题本</div>
-            <div className="text-xs text-[#888780]">{state.mistakes.length} 道错题</div>
+            <div className="text-xs text-[#888780]">跨设备同步 · 点开按记忆曲线复习</div>
           </div>
           <span>›</span>
         </Link>

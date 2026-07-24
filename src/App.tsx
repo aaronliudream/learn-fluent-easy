@@ -54,7 +54,6 @@ const JuniorHubCourse = lazy(() => import("./pages/juniorHub/JuniorHubCourse.tsx
 const JuniorHubSemester = lazy(() => import("./pages/juniorHub/JuniorHubSemester.tsx"));
 const JuniorHubUnit = lazy(() => import("./pages/juniorHub/JuniorHubUnit.tsx"));
 const JuniorHubStage = lazy(() => import("./pages/juniorHub/JuniorHubStage.tsx"));
-const JuniorHubMistakes = lazy(() => import("./pages/juniorHub/JuniorHubMistakes.tsx"));
 const JuniorHubProfile = lazy(() => import("./pages/juniorHub/JuniorHubProfile.tsx"));
 const JuniorHubAITest = lazy(() => import("./pages/juniorHub/JuniorHubAITest.tsx"));
 const JuniorHubAIHistory = lazy(() => import("./pages/juniorHub/JuniorHubAIHistory.tsx"));
@@ -66,7 +65,6 @@ const GaokaoHubCourse = lazy(() => import("./pages/gaokaoHub/GaokaoHubCourse.tsx
 const GaokaoHubSemester = lazy(() => import("./pages/gaokaoHub/GaokaoHubSemester.tsx"));
 const GaokaoHubUnit = lazy(() => import("./pages/gaokaoHub/GaokaoHubUnit.tsx"));
 const GaokaoHubStage = lazy(() => import("./pages/gaokaoHub/GaokaoHubStage.tsx"));
-const GaokaoHubMistakes = lazy(() => import("./pages/gaokaoHub/GaokaoHubMistakes.tsx"));
 const GaokaoHubProfile = lazy(() => import("./pages/gaokaoHub/GaokaoHubProfile.tsx"));
 const GaokaoHubAITest = lazy(() => import("./pages/gaokaoHub/GaokaoHubAITest.tsx"));
 const GaokaoHubAIHistory = lazy(() => import("./pages/gaokaoHub/GaokaoHubAIHistory.tsx"));
@@ -441,7 +439,8 @@ const App = () => (
             <Route path="semester/:semId" element={<JuniorHubSemester />} />
             <Route path="semester/:semId/unit/:unitId" element={<JuniorHubUnit />} />
             <Route path="semester/:semId/unit/:unitId/stage/:stageIdx" element={<JuniorHubStage />} />
-            <Route path="mistakes" element={<JuniorHubMistakes />} />
+            {/* 错题本统一到全站 DB 版;旧 hub 内 LS 页面已退役,深链重定向。 */}
+            <Route path="mistakes" element={<Navigate to="/mistakes" replace />} />
             <Route path="profile" element={<JuniorHubProfile />} />
             <Route path="aitest" element={<JuniorHubAITest />} />
             <Route path="aihistory" element={<JuniorHubAIHistory />} />
@@ -504,7 +503,8 @@ const App = () => (
             <Route path="semester/:semId" element={<GaokaoHubSemester />} />
             <Route path="semester/:semId/unit/:unitId" element={<GaokaoHubUnit />} />
             <Route path="semester/:semId/unit/:unitId/stage/:stageIdx" element={<GaokaoHubStage />} />
-            <Route path="mistakes" element={<GaokaoHubMistakes />} />
+            {/* 错题本统一到全站 DB 版;旧 hub 内 LS 页面已退役,深链重定向。 */}
+            <Route path="mistakes" element={<Navigate to="/mistakes" replace />} />
             <Route path="profile" element={<GaokaoHubProfile />} />
             <Route path="aitest" element={<GaokaoHubAITest />} />
             <Route path="aihistory" element={<GaokaoHubAIHistory />} />

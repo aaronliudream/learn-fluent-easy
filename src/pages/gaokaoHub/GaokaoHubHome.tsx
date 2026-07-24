@@ -43,11 +43,9 @@ export default function GaokaoHubHome() {
               <div className="text-base font-semibold">{state.user.name}</div>
             </div>
           </div>
-          <Link to={wp(`${base}/mistakes`)} className="relative grid size-9 place-items-center rounded-full bg-white/20 text-base">
+          {/* 全站统一 DB 错题本;LS 计数不再作准,去掉小红点避免与真数据不符。 */}
+          <Link to="/mistakes" className="relative grid size-9 place-items-center rounded-full bg-white/20 text-base">
             📝
-            {state.mistakes.length > 0 && (
-              <span className="absolute right-1 top-1 size-2.5 rounded-full border-2 border-[#FF6B35] bg-[#FFE062]" />
-            )}
           </Link>
         </div>
         <div className="rounded-xl bg-white/15 p-3 backdrop-blur">

@@ -21,7 +21,13 @@ const ANON = env.VITE_SUPABASE_PUBLISHABLE_KEY;
 const sb = createClient(SUP, ANON);
 
 const TTS_URL = `${SUP}/functions/v1/tts`;
-const VOICE = 'nova', SPEED = 0.85;       // 对齐关7现状
+// 参数化(默认对齐关7人教现状,不传则行为不变):
+//   --voice=fable(默认 nova) --accent=UK(默认无·美音) --speed=0.9(默认 0.85) --publisher=junior_fltrp(默认无过滤)
+// 外研社册用: --voice=fable --accent=UK --publisher=junior_fltrp(wy7=0.85·wy8=0.9)
+const VOICE = (process.argv.find(a => a.startsWith('--voice='))?.split('=')[1]) || 'nova';
+const SPEED = Number(process.argv.find(a => a.startsWith('--speed='))?.split('=')[1]) || 0.85;
+const ACCENT = (process.argv.find(a => a.startsWith('--accent='))?.split('=')[1]) || '';
+const PUBLISHER = (process.argv.find(a => a.startsWith('--publisher='))?.split('=')[1]) || '';
 const THROTTLE_MS = 1500;                 // 每条间隔,避免 429
 
 const e = s => String(s).replace(/'/g, "''");
@@ -39,7 +45,7 @@ async function synth(text) {
   const res = await fetch(TTS_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', apikey: ANON, Authorization: `Bearer ${ANON}` },
-    body: JSON.stringify({ text: cleanForTTS(text), voiceId: VOICE, speed: SPEED, format: 'url' }),
+    body: JSON.stringify({ text: cleanForTTS(text), voiceId: VOICE, speed: SPEED, format: 'url', ...(ACCENT ? { accent: ACCENT } : {}) }),
   });
   if (!res.ok) { console.log(`  ❌ edge HTTP ${res.status}: ${(await res.text()).slice(0, 120)}`); return null; }
   const data = await res.json();
@@ -59,13 +65,14 @@ const GRADE = GRADE_ARG
     : (Number(VOLUME[0]) || 7);
 
 // 拉目标册且 audio_url IS NULL(增量)
-const { data: rows, error } = await sb
+let query = sb
   .from('junior_listening_exercises')
   .select('id,unit,title,difficulty,transcript,audio_url')
-  .eq('grade', GRADE).eq('volume', VOLUME).is('audio_url', null)
-  .order('unit').order('difficulty');
+  .eq('grade', GRADE).eq('volume', VOLUME).is('audio_url', null);
+if (PUBLISHER) query = query.eq('publisher', PUBLISHER);   // 外研社册须带,防跨社
+const { data: rows, error } = await query.order('unit').order('difficulty');
 if (error) { console.log('拉取失败:', error.message); process.exit(1); }
-console.log(`${VOLUME} 待预生成(audio_url IS NULL): ${rows.length} 条`);
+console.log(`${VOLUME}${PUBLISHER ? ' ('+PUBLISHER+')' : ''} voice=${VOICE} accent=${ACCENT || '(default)'} speed=${SPEED} 待预生成(audio_url IS NULL): ${rows.length} 条`);
 
 if (!ALL) {
   // ── 验证模式:只跑 U8 The Fox 1 条 ──

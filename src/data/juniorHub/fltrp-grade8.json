@@ -859,7 +859,7 @@
             "title": "Unit 1 Career talks",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -932,9 +932,68 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "一样东西如何被制造和使用(被动·现在/将来)",
+              "prompt": "Write about how a food or a product is made and used. Use the passive voice (is/are + past participle, will be + past participle).",
+              "promptCn": "写一段,讲一种食物或物品如何被制造和使用。用被动语态(is/are+过去分词、will be+过去分词)。",
+              "opener": "Have you ever thought about how the things around us are made?",
+              "sampleWords": [
+                "is made",
+                "is used",
+                "will be made",
+                "from",
+                "every day"
+              ],
+              "cards": [
+                {
+                  "key": "product",
+                  "labelCn": "一种食物/物品",
+                  "hint": "如 bread / paper"
+                },
+                {
+                  "key": "material",
+                  "labelCn": "由什么制成",
+                  "hint": "如 flour / wood"
+                },
+                {
+                  "key": "use",
+                  "labelCn": "用来做什么",
+                  "hint": "如 to eat / to write on"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "{product} is made from {material}.",
+                  "It is used {use}.",
+                  "It is sold in many shops.",
+                  "More will be made in the future."
+                ],
+                "l2": [
+                  "{product} is made from {material} in a factory.",
+                  "First it is cleaned, and then it is packed with care.",
+                  "It is sold in shops and is used {use} by many people.",
+                  "In the future, even more will be made by machines."
+                ],
+                "l3": [
+                  "Every day, {product} is made from {material} in large factories.",
+                  "First the material is cleaned, and then it is turned into the final product with care.",
+                  "When it is ready, it is packed, sent to markets, and sold in shops all over the town.",
+                  "It is used {use} by many people, and in the years to come, even more of it will be made and will be delivered by machines."
+                ]
+              },
+              "connectors": [
+                "and",
+                "then",
+                "so",
+                "because"
+              ],
+              "minWords": 60
+            },
             "quizQuestions": [],
-            "listeningQuestions": []
+            "listeningQuestions": [],
+            "grammarCodes": [
+              "wy8b-u1-passive-present-future"
+            ]
           },
           {
             "id": "wy8v2_u2",
@@ -944,7 +1003,7 @@
             "title": "Unit 2 Growing pains and gains",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -1017,9 +1076,68 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "一处老建筑/老物件的故事(被动·过去)",
+              "prompt": "Write about an old building or object in your town and what happened to it. Use the past passive (was/were + past participle).",
+              "promptCn": "写一段,讲你家乡一处老建筑或老物件及其经历。用一般过去时被动(was/were+过去分词)。",
+              "opener": "Not far from my home, there is an old place, and everyone in the town loves it.",
+              "sampleWords": [
+                "was built",
+                "was made",
+                "was saved",
+                "long ago",
+                "by"
+              ],
+              "cards": [
+                {
+                  "key": "thing",
+                  "labelCn": "老建筑/老物件",
+                  "hint": "如 an old bridge / a stone house"
+                },
+                {
+                  "key": "material",
+                  "labelCn": "由什么制成",
+                  "hint": "如 grey stone"
+                },
+                {
+                  "key": "fate",
+                  "labelCn": "后来怎么了",
+                  "hint": "如 was saved / was repaired"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "{thing} was built long ago.",
+                  "It was made of {material}.",
+                  "It was loved by everyone.",
+                  "Later it {fate}."
+                ],
+                "l2": [
+                  "{thing} was built long ago by the people of my town.",
+                  "It was made of {material}, and it was used by everyone.",
+                  "For many years it was kept safe and was cared for.",
+                  "But then things changed, and at last it {fate}."
+                ],
+                "l3": [
+                  "Long ago, {thing} was built by the people of my hometown, and it soon became a part of their lives.",
+                  "It was made of {material}, and for many years it was used and was loved by everyone in the town.",
+                  "Later, sad news was heard: the old place was almost lost, and its story was nearly forgotten.",
+                  "But the people were not ready to give it up. Letters were written, a meeting was held, and in the end it {fate}."
+                ]
+              },
+              "connectors": [
+                "and",
+                "but",
+                "so",
+                "later"
+              ],
+              "minWords": 65
+            },
             "quizQuestions": [],
-            "listeningQuestions": []
+            "listeningQuestions": [],
+            "grammarCodes": [
+              "wy8b-u2-passive-past"
+            ]
           },
           {
             "id": "wy8v2_u3",
@@ -1029,7 +1147,7 @@
             "title": "Unit 3 What makes a great team?",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -1102,9 +1220,68 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "一个社团/运动及其规则(情态动词)",
+              "prompt": "Write about a club, team or sport you like and its rules. Use modal verbs (can, must, have to, should).",
+              "promptCn": "写一段,讲一个你喜欢的社团、团队或运动及其规则。用情态动词(can, must, have to, should)。",
+              "opener": "Every good team needs a few simple rules for everyone to keep.",
+              "sampleWords": [
+                "must",
+                "can",
+                "have to",
+                "should",
+                "together"
+              ],
+              "cards": [
+                {
+                  "key": "club",
+                  "labelCn": "社团/运动",
+                  "hint": "如 our football team / the art club"
+                },
+                {
+                  "key": "rule",
+                  "labelCn": "一条规则",
+                  "hint": "如 come on time"
+                },
+                {
+                  "key": "skill",
+                  "labelCn": "能学到的本领",
+                  "hint": "如 work together"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "In {club}, you must {rule}.",
+                  "You can learn to {skill}.",
+                  "You have to follow the rules.",
+                  "Everyone should help each other."
+                ],
+                "l2": [
+                  "If you join {club}, you must {rule} and you have to come on time.",
+                  "There you can learn to {skill}, and you can make many good friends.",
+                  "Members must never give up, and they should always try their best.",
+                  "Together we can do much more than one person could."
+                ],
+                "l3": [
+                  "If you want to join {club}, there are a few rules you must keep: you must {rule}, and you have to be there on time.",
+                  "In return, you can learn to {skill}, and you can slowly build real confidence and strength.",
+                  "Every member should respect the others, and no one should ever leave a teammate behind.",
+                  "It is not always easy, but together we can go much further than one person could ever go alone."
+                ]
+              },
+              "connectors": [
+                "and",
+                "so",
+                "because",
+                "but"
+              ],
+              "minWords": 65
+            },
             "quizQuestions": [],
-            "listeningQuestions": []
+            "listeningQuestions": [],
+            "grammarCodes": [
+              "wy8b-u3-modals-1"
+            ]
           },
           {
             "id": "wy8v2_u4",
@@ -1114,7 +1291,7 @@
             "title": "Unit 4 Helping out",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -1187,9 +1364,68 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "一件神秘的事·做推测(情态动词·推测)",
+              "prompt": "Write about a mysterious thing and make guesses about it. Use modal verbs of guessing (must be, may be, might be, can't be).",
+              "promptCn": "写一段,讲一件神秘的事并作出推测。用表推测的情态动词(must be, may be, might be, can't be)。",
+              "opener": "One evening, something strange happened, and at first no one could explain it.",
+              "sampleWords": [
+                "must be",
+                "may be",
+                "might be",
+                "can't be",
+                "strange"
+              ],
+              "cards": [
+                {
+                  "key": "mystery",
+                  "labelCn": "神秘的事",
+                  "hint": "如 a light in an empty house"
+                },
+                {
+                  "key": "guess",
+                  "labelCn": "一个猜测",
+                  "hint": "如 a lost traveller"
+                },
+                {
+                  "key": "feeling",
+                  "labelCn": "你的感受",
+                  "hint": "如 curious / a little afraid"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I saw {mystery}.",
+                  "It must be something strange.",
+                  "It may be {guess}.",
+                  "It can't be dangerous."
+                ],
+                "l2": [
+                  "One night I noticed {mystery}, and I felt {feeling}.",
+                  "'It must be something unusual,' I thought.",
+                  "'It may be {guess}, or it might be only the wind.'",
+                  "But such a thing can't be anything truly dangerous."
+                ],
+                "l3": [
+                  "Late one evening, I noticed {mystery}, and at once I felt {feeling}.",
+                  "'Someone must be there,' I said to myself, 'because such a thing can't happen on its own.'",
+                  "'It may be {guess},' I thought, 'or it might be something far more ordinary.'",
+                  "In the end, the truth can't be as frightening as it seems. Most mysteries, I have found, must be far simpler and kinder than we ever feared."
+                ]
+              },
+              "connectors": [
+                "and",
+                "but",
+                "so",
+                "because"
+              ],
+              "minWords": 70
+            },
             "quizQuestions": [],
-            "listeningQuestions": []
+            "listeningQuestions": [],
+            "grammarCodes": [
+              "wy8b-u4-modals-2"
+            ]
           },
           {
             "id": "wy8v2_u5",
@@ -1199,7 +1435,7 @@
             "title": "Unit 5 Looking into nature",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -1272,9 +1508,63 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "我相信/学到的一个道理(宾语从句·that)",
+              "prompt": "Write about a fact or lesson you have learnt and believe. Use object clauses with that (I think that..., I have learnt that...).",
+              "promptCn": "写一段,讲一个你学到并相信的道理或事实。用 that 引导的宾语从句(I think that…, I have learnt that…)。",
+              "opener": "Over the years, I have learnt an important lesson, and I will never forget it.",
+              "sampleWords": [
+                "I think that",
+                "I have learnt that",
+                "I believe that",
+                "because",
+                "true"
+              ],
+              "cards": [
+                {
+                  "key": "lesson",
+                  "labelCn": "你相信的道理",
+                  "hint": "如 hard work matters"
+                },
+                {
+                  "key": "reason",
+                  "labelCn": "原因/例子",
+                  "hint": "如 nothing comes easily"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I think that {lesson}.",
+                  "I have learnt that {reason}.",
+                  "I believe that this is true.",
+                  "Everyone knows that it matters."
+                ],
+                "l2": [
+                  "I strongly think that {lesson}, and my own life has shown me why.",
+                  "Long ago I found that {reason}, and I have never forgotten it.",
+                  "I believe that we can all do better if we keep trying.",
+                  "Now I am sure that this simple idea is really true."
+                ],
+                "l3": [
+                  "After many years, I have learnt that {lesson}, and I am now sure that it is one of the most important ideas in my life.",
+                  "At first I did not understand it, but slowly I found that {reason}, and everything began to make sense.",
+                  "I believe that hard days make us stronger, and I know that no real success ever comes easily.",
+                  "Whenever I feel like giving up, I remember that small steps still move us forward, and that patience always brings its reward."
+                ]
+              },
+              "connectors": [
+                "and",
+                "so",
+                "because",
+                "but"
+              ],
+              "minWords": 75
+            },
             "quizQuestions": [],
-            "listeningQuestions": []
+            "listeningQuestions": [],
+            "grammarCodes": [
+              "wy8b-u5-object-clauses-1"
+            ]
           },
           {
             "id": "wy8v2_u6",
@@ -1284,7 +1574,7 @@
             "title": "Unit 6 Living with nature",
             "cn": "整理中",
             "emoji": "📗",
-            "available": false,
+            "available": true,
             "vocabulary": [],
             "dialogues": [],
             "stages": [
@@ -1357,9 +1647,63 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "我好奇想知道的事(宾语从句·if/whether/wh)",
+              "prompt": "Write about things you are curious about. Use object clauses with if/whether and question words (I wonder why..., I want to know whether...).",
+              "promptCn": "写一段,讲你好奇想弄明白的事。用 if/whether 和疑问词引导的宾语从句(I wonder why…, I want to know whether…)。",
+              "opener": "There are so many things in the world, and I am curious about them.",
+              "sampleWords": [
+                "I wonder why",
+                "I want to know how",
+                "whether",
+                "because",
+                "curious"
+              ],
+              "cards": [
+                {
+                  "key": "topic",
+                  "labelCn": "你好奇的话题",
+                  "hint": "如 the stars / old traditions"
+                },
+                {
+                  "key": "question",
+                  "labelCn": "一个具体问题",
+                  "hint": "如 how they began"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I often wonder why {topic} is so amazing.",
+                  "I want to know how {question}.",
+                  "I am not sure whether anyone can answer this.",
+                  "Nobody really knows when it began."
+                ],
+                "l2": [
+                  "Ever since I was young, I have wondered why {topic} is the way it is.",
+                  "I really want to know how {question}, and I often ask whether others feel the same.",
+                  "Sometimes I am not sure whether such questions have any answer at all.",
+                  "But I understand why we keep asking: curious minds never stop."
+                ],
+                "l3": [
+                  "For as long as I can remember, I have wondered why {topic} is so full of wonder, and the question stays with me every day.",
+                  "I truly want to know how {question}, and I often ask myself whether people long ago wondered about the very same things.",
+                  "I am not always sure whether every question has an answer, or when the answers might finally appear.",
+                  "Still, I understand why we never stop asking. To wonder why the world works this way is, I believe, one of the finest parts of being human."
+                ]
+              },
+              "connectors": [
+                "and",
+                "because",
+                "but",
+                "so"
+              ],
+              "minWords": 80
+            },
             "quizQuestions": [],
-            "listeningQuestions": []
+            "listeningQuestions": [],
+            "grammarCodes": [
+              "wy8b-u6-object-clauses-2"
+            ]
           }
         ]
       }

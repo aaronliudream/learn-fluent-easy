@@ -14,7 +14,19 @@
 
 ★为什么不能只报总数★
 8-gram 重合里有大量是无害的高频串("I have never seen it before" 这类)。所以输出
-按重合长度分档,并把重合片段原文打出来,由人判是"模板雷同"还是"常用表达"。
+把重合片段原文打出来,由人判是"模板雷同"还是"常用表达"。
+
+★判定口径(2026-07-25 Aaron 定)★
+  改:同一篇对 **≥3 处**连续重合,或明显是同单元照着另一篇句式写的模板雷同。
+      例:wy8B U1 精读《So much is done for you》与泛读《Homes of the future》
+      同写"未来能源",3 处重合 `energy will be made from the sun and the wind`
+      —— 泛读是照精读句式写的,已改泛读那处。
+  放:**1 处**且属话题固有表达或语法点本身的句式。
+      例:春节两篇的 `on New Year's Eve the whole family sits`(除夕全家围坐,
+      写春节几乎没法不这么说);山海两篇的 `but the view from the top was as`
+      (U6 就是 as…as 单元,`was as` 是语法点本身)。
+这和"词汇化习语 vs 语法结构"、"宾从 backshift vs 独立过去完成时"是同一个思路:
+**形式命中 ≠ 真问题**,机器给证据,判定留给人。
 
 用法:
     python scripts/junior-fltrp/ngram_similarity.py                # 全库互比,N=8

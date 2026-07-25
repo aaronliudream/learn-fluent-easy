@@ -97,7 +97,7 @@ export default function JuniorReading() {
             {row && <StarRating stars={row.stars} />}
           </div>
           <div className="text-[11px] text-muted-foreground">
-            G{r.grade} · {r.topic ?? "general"} · {r.word_count ?? "?"} <T>词 · 难度</T> {r.difficulty}
+            G{r.grade} · {r.topic ?? "general"} · {r.word_count ?? "?"} <T>词 ·</T> {r.difficulty === 0 ? <T>精读</T> : <T>泛读</T>}
             {row && <span className="ml-1 font-bold"><T>· 最佳</T> {row.best_pct}%</span>}
             {!row && <span className="ml-1"><T>· 未做</T></span>}
             {!mastered && st === "review_due" && <span className="ml-1 text-amber-600 font-bold"><T>· 该复习了</T></span>}

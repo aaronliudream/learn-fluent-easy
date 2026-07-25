@@ -1,40 +1,14 @@
 import { T } from "@/i18n/T";import { Component, ReactNode } from "react";
-
-type Props = {children: ReactNode;};
-type State = {error: Error | null;isChunkError: boolean;};
-
 // Detect Vite/webpack lazy-chunk load failures. After a deploy the old
 // index.html cached in the user's browser still points at hashed chunks
 // (e.g. IeltsSpeakingSession-a3f9b2.js) that the CDN no longer serves —
 // the import() rejects with one of these messages. We auto-reload to
 // pick up the new index.html instead of leaving the user on a white screen.
-const isChunkLoadError = (err: unknown): boolean => {
-  if (!err) return false;
-  const e = err as {name?: string;message?: string;};
-  const msg = `${e.name || ""} ${e.message || ""}`.toLowerCase();
-  return (
-    msg.includes("chunkloaderror") ||
-    msg.includes("loading chunk") ||
-    msg.includes("loading css chunk") ||
-    msg.includes("failed to fetch dynamically imported module") ||
-    msg.includes("importing a module script failed") ||
-    msg.includes("dynamically imported module"));
+// 判定与刷新闸挪到 lib/chunkError.ts:main.tsx 的全局兜底要复用,且那边可单测(不拖 React/supabase)。
+import { isChunkLoadError, tryAutoReloadOnce } from "@/lib/chunkError";
 
-};
-
-// Avoid an infinite reload loop if the chunk is genuinely broken.
-const RELOAD_KEY = "__chunk_reload_at__";
-const tryAutoReloadOnce = () => {
-  try {
-    const last = Number(sessionStorage.getItem(RELOAD_KEY) || "0");
-    if (Date.now() - last < 10_000) return false; // already tried recently
-    sessionStorage.setItem(RELOAD_KEY, String(Date.now()));
-    location.reload();
-    return true;
-  } catch {
-    return false;
-  }
-};
+type Props = {children: ReactNode;};
+type State = {error: Error | null;isChunkError: boolean;};
 
 /**
  * Catches render-time errors anywhere inside the route tree so a single

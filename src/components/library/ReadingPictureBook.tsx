@@ -6,9 +6,12 @@
  * LibraryReader 的 playChapterFrom/stopAll(复用现有 audio_url / 实时合成 / iOS unlockAudioSync)。
  *
  * 交互约定(与规格一一对应):
- *  · 点画面**不翻页** —— 点击留给单词收藏(TappableLine),避免误收藏;翻页只走左右箭头 + 左右滑。
- *  · 文字卡浮在图片底部内侧,卡片最高 = 图高 50%,超出卡内滚动 → 图片高度恒定不被顶开。
- *  · 图片固定 4:3,宽度撑满;加载中显示骨架,不跳版。
+ *  · 点击**不翻页** —— 点击留给单词收藏(TappableLine),避免误收藏;翻页只走左右箭头 + 圆点 + 左右滑。
+ *  · 版式 A+(拆栈):图在上、文字卡在下,**全视口正常流**,不叠加、不设高度上限、不内部滚动。
+ *    文字多少就多高 → 正文永不被截,图也永不被盖(旧版 absolute + max-h-50% + overflow-y-auto 已废弃:
+ *    375px 窄屏下文字只剩 ~116px 可视高,画面还被盖掉下半截)。
+ *  · 滑动翻页挂在图 + 文字的共同父级 → 文字区也能滑。
+ *  · 图片固定 4:3 + object-cover,宽度撑满;加载中显示骨架,不跳版。
  */
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
@@ -148,15 +151,19 @@ export default function ReadingPictureBook(props: ReadingPictureBookProps) {
   const cnJoined = cur.items.map((x) => x.s.text_cn ?? "").join("");
 
   return (
-    <div className="mx-auto max-w-[660px]">
+    // 滑动翻页挂在**图 + 文字卡的共同父级**:拆栈后文字区不再有内部滚动,手势不打架,
+    // 手指落在文字上也能翻页(孩子在手机上的自然握姿)。
+    <div
+      className="mx-auto max-w-[660px]"
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+      onTouchMove={onTouchMove}
+      onTouchCancel={onTouchMove}
+    >
       {/* 画面:固定 4:3,高度只由宽度决定,不随文字长短变化 */}
       <div
         className="relative w-full overflow-hidden rounded-2xl bg-slate-100 shadow-md shadow-slate-900/5 dark:bg-slate-800"
         style={{ aspectRatio: "4 / 3" }}
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
-        onTouchMove={onTouchMove}
-        onTouchCancel={onTouchMove}
       >
         {/* 骨架:图未到/加载失败时占位,布局不跳动 */}
         {(!imgReady || imgFailed || !src) && (
@@ -189,9 +196,12 @@ export default function ReadingPictureBook(props: ReadingPictureBookProps) {
         >
           {playingThisPage ? <Pause className="size-5" /> : <Play className="size-5 translate-x-px" />}
         </button>
+      </div>
 
-        {/* 文字卡:浮在图片底部内侧(左右各 10px、底 10px);最高 = 图高 50%,超出卡内滚动 */}
-        <div className="absolute inset-x-[10px] bottom-[10px] z-10 max-h-[50%] overflow-y-auto overscroll-contain rounded-xl bg-[rgba(255,255,255,0.92)] px-3.5 py-3 shadow-lg shadow-slate-900/10 backdrop-blur-sm dark:bg-[rgba(15,23,42,0.92)]">
+      {/* 文字卡:图片下方的**兄弟节点**,全视口正常流(不叠图、不设高度上限、不内部滚动)。
+          文字多少就多高,页面随之变长 —— 正文永不被截。实心白底 + 细边框与米色页背景(#faf8f5)分离,
+          不用半透明/毛玻璃(那是叠加时代的产物)。 */}
+      <div className="mt-3 rounded-xl border border-slate-200 bg-white px-4 py-3.5 shadow-sm dark:border-slate-700 dark:bg-slate-900">
           {mode !== "cn" && (
             <p className="text-[17px] leading-[1.85] text-slate-800 dark:text-slate-100">
               {cur.items.map(({ s, i }) => (
@@ -226,10 +236,9 @@ export default function ReadingPictureBook(props: ReadingPictureBookProps) {
               {cnJoined}
             </p>
           )}
-        </div>
       </div>
 
-      {/* 翻页:左右箭头 + 页码圆点(点画面不翻页,避免和单词收藏抢点击) */}
+      {/* 翻页:左右箭头 + 页码圆点(点击不翻页,避免和单词收藏抢点击;翻页靠箭头/圆点/左右滑) */}
       <div className="mt-3 flex items-center justify-between gap-3">
         <button
           type="button"

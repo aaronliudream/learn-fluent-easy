@@ -856,7 +856,7 @@
                   "Nature gives us so much, so I will protect it.",
                   "This spring, I am going to {action1} in {place}.",
                   "I will also {action2} every day.",
-                  "I think our world will become green and clean."
+                  "Our world will become green and clean."
                 ],
                 "l3": [
                   "Nature gives us clean air and green trees, so I am going to protect it.",
@@ -1299,7 +1299,7 @@
                 ],
                 "l2": [
                   "At first, {task} was very hard, and I felt {feel}.",
-                  "Everyone thought I would give up.",
+                  "Everyone expected me to give up.",
                   "But something inside me said, \"Keep going.\"",
                   "Because of {push}, {result}."
                 ],
@@ -1307,7 +1307,7 @@
                   "When I started {task}, it was so hard that I felt {feel}, and nobody believed in me.",
                   "Many times I wanted to stop, but something inside me said, \"Never give up.\"",
                   "I remembered {push}, and I tried again and again.",
-                  "At last, {result}. Now I know everyone can do great things if they keep trying."
+                  "At last, {result}. Now everyone can do great things if they keep trying."
                 ]
               },
               "connectors": [

@@ -4,6 +4,36 @@
 
 ---
 
+## 绘本模式:chunk 表 = library_sentences(reading_book_chunks 不存在)· ⚠️ 触红线 5,待 Aaron 拍板
+**日期**:2026-07-24
+
+绘本模式样张指令书 §2 要求 `alter table reading_book_chunks add image_url, page_index`。**这张表在本库不存在**:
+
+```
+GET /rest/v1/reading_book_chunks → 404 PGRST205
+"Could not find the table 'public.reading_book_chunks' in the schema cache"
+hint: "Perhaps you meant the table 'public.library_chunks'"
+```
+
+`/library/:bookKey/read` 这条链路上真实存在的表只有:
+- `library_sentences` —— 正文内容原子,**一行 = 一句**(伊索 ch1 = 11 句 / 3 段),阅读器 `getChapterSentences` 就读它;
+- `library_chunks` —— 是**语块(固定搭配)**表(正文虚线那套),不是"绘本页";
+- `library_illustrations` —— 章内插图(position = 章内段号,见下一条)。
+
+这触发了指令书红线 5(「需要改 schema 以外的表结构 → 停」)。**本轮按下面的口径先做,请 Aaron 确认或改判**:
+
+**决定**:两列加在 `library_sentences` 上,`page_index` 允许**同页多句共号**(一页 = 一组连续句),
+`image_url` 存**桶内相对路径**(沿用 `library-illustrations` 公开桶,不建新桶)。伊索 ch1 恰好 3 段 = 3 页,
+与指令书「查出 3 条 chunk」对得上 —— 指令书说的"chunk"实为**段落**。
+
+**为什么不新建 reading_book_chunks 表**:红线 3 明文"不新建表";且正文只有一份事实来源,
+另起一张页表会和 `library_sentences` 的 seq/para_idx/audio_url 分叉,点词/朗读/进度全要各写一套。
+
+**兜底**:前端 `buildPages()` 在 `page_index` 全空时**按 para_idx 回退分页**,`getChapterSentences`
+在两列不存在时(42703)自动退回基础列。=> SQL 没跑之前绘本模式也能正常显示,不报错、不白屏。
+
+---
+
 ## 插图 position 语义 = 章内段号(1-based),不是全书 para_idx
 **日期**:2026-07-12
 

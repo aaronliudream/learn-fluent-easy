@@ -48,8 +48,12 @@ def main():
         fails.append('单引号不平衡(整文件计数为奇数)——很可能有未转义的撇号')
 
     # 2) 语句切分 + UPDATE 条数
+    #    ★按"出现次数"数,不按"含该串的语句数"★(2026-07-25)
+    #    UPDATE 包进 DO $$…$$ 块后,整块是一条语句,原写法把 36 条数成 1 条。
     stmts = split_stmts(t)
-    n_up = sum(1 for s in stmts if ('UPDATE ' + args.table) in s)
+    code_nc = '\n'.join(re.sub(r'--.*$', '', l) for l in t.split('\n'))
+    tbl = args.table.split('.')[-1]
+    n_up = len(re.findall(r'\bUPDATE\s+(?:public\.)?' + re.escape(tbl) + r'\b', code_nc, re.I))
     if args.expect_updates is not None and n_up != args.expect_updates:
         fails.append('UPDATE 条数 %d,期望 %d' % (n_up, args.expect_updates))
 
@@ -96,9 +100,11 @@ def main():
     #    2026-07-25 连续三版翻车:用 word_count 给同名两篇消歧,而 word_count 正是
     #    这条 UPDATE 要改的列 —— 跑过一次后 DB 值已变,WHERE 再也匹配不到,静默无效。
     #    规则:WHERE 里出现的列名,不允许同时出现在 SET 里。
-    for s in stmts:
-        if 'UPDATE ' not in s:
-            continue
+    #    ★逐条 UPDATE 取 UPDATE…; 的跨度★:整块 DO 里几十条 UPDATE 若按"整条语句"取,
+    #    前一句的 WHERE 会一路吃到后一句的 SET,必然假报重叠。
+    #    ★`WHERE col IS NULL` 不算消歧★:那是"只写一次"的幂等护栏(写完就不再命中,
+    #    正是想要的);翻车的 word_count 是 `WHERE col = 值` 形态的消歧字段。只拦后者。
+    for s in re.findall(r'\bUPDATE\s+.*?;', code_nc, re.S | re.I):
         mset = re.search(r'\bSET\b(.*?)\bWHERE\b', s, re.S | re.I)
         mwhere = re.search(r'\bWHERE\b(.*)$', s, re.S | re.I)
         if not (mset and mwhere):

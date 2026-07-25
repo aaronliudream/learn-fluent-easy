@@ -111,9 +111,22 @@ def scan_text(text, volume, unit, whole=False):
 
 # ── SQL 解析(与灌库脚本同一套)────────────────────────────────────────
 def split_stmts(txt):
+    """按 ; 切分 SQL 语句。
+
+    ★-- 注释必须整段跳过★(2026-07-25 修)
+    注释文本里的撇号会把状态机带进"字符串态",此后的 `;` 全被当成字符串内容吞掉,
+    语句被粘连成一条。踩到的现场:听力音频回填 SQL 的注释 `-- U1 d1 "I've grown taller"`
+    —— 36 条 UPDATE 被数成 33 条,且粘连语句里同时含前句 WHERE 与后句 SET,
+    触发"WHERE∩SET 共用列"假警报。注释原文仍保留在语句文本里(下游有读注释的),
+    只是不参与引号状态。
+    """
     out, cur, i, n, inq, indoll = [], [], 0, len(txt), False, False
     while i < n:
         c = txt[i]
+        if not inq and not indoll and txt.startswith('--', i):
+            j = txt.find('\n', i)
+            j = n if j < 0 else j
+            cur.append(txt[i:j]); i = j; continue
         if indoll:
             if txt.startswith('$$', i):
                 indoll = False; cur.append('$$'); i += 2; continue
@@ -264,7 +277,8 @@ def rows_from_sql(path):
 def main():
     argv = sys.argv[1:]
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'SQLAA')
-    files = sorted(glob.glob(os.path.join(root, 'wy*-*-load.sql')))
+    # recursive:load 跑完会被归档进 SQLAA/done/,非递归 glob 会静默扫 0 篇
+    files = sorted(glob.glob(os.path.join(root, '**', 'wy*-*-load.sql'), recursive=True))
     if argv:
         files = [f for f in files if any(a.lower() in os.path.basename(f).lower() for a in argv)]
 

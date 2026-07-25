@@ -92,6 +92,35 @@ def main():
         if ph in t:
             fails.append('残留占位符 %s' % ph)
 
+    # 7) ★消歧字段不得是被 UPDATE 修改的字段★
+    #    2026-07-25 连续三版翻车:用 word_count 给同名两篇消歧,而 word_count 正是
+    #    这条 UPDATE 要改的列 —— 跑过一次后 DB 值已变,WHERE 再也匹配不到,静默无效。
+    #    规则:WHERE 里出现的列名,不允许同时出现在 SET 里。
+    for s in stmts:
+        if 'UPDATE ' not in s:
+            continue
+        mset = re.search(r'\bSET\b(.*?)\bWHERE\b', s, re.S | re.I)
+        mwhere = re.search(r'\bWHERE\b(.*)$', s, re.S | re.I)
+        if not (mset and mwhere):
+            continue
+        set_cols = set(re.findall(r'(\w+)\s*=', mset.group(1)))
+        where_cols = set(re.findall(r'\b(\w+)\s*=', mwhere.group(1)))
+        overlap = set_cols & where_cols
+        if overlap:
+            fails.append('WHERE 与 SET 共用列 %s —— 消歧字段被本语句修改,非幂等'
+                         % ', '.join(sorted(overlap)))
+
+    # 8) ★每条 UPDATE 必须有影响行数断言★
+    #    2026-07-25:空匹配的 UPDATE 照样返回 Success,"跑成功了但什么都没改"连续发生三次。
+    #    要求 UPDATE 包在 DO 块里并跟 GET DIAGNOSTICS 行数校验。
+    # 计数前先剥 -- 注释:Python 的 \w 匹配中文,注释里的「只 UPDATE 不删不插」会被误计
+    code = '\n'.join(re.sub(r'--.*$', '', l) for l in t.split('\n'))
+    n_update = len(re.findall(r'\bUPDATE\s+(?:public\.)?[A-Za-z_]\w*', code, re.I))
+    n_diag = len(re.findall(r'GET\s+DIAGNOSTICS\s+\w+\s*=\s*ROW_COUNT', code, re.I))
+    if n_update and n_diag < n_update:
+        fails.append('UPDATE %d 条,但 GET DIAGNOSTICS 行数断言只有 %d 处 —— '
+                     '空匹配会静默成功' % (n_update, n_diag))
+
     print('校验 %s' % args.path)
     print('  语句 %d,UPDATE %d' % (len(stmts), n_up))
     if fails:

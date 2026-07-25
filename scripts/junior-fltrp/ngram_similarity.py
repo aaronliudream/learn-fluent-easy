@@ -69,7 +69,8 @@ def load_passages():
     """从四册 reading SQL 抽 (册, 单元, 精/泛, 标题, 正文)"""
     out = []
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'SQLAA')
-    for path in sorted(glob.glob(os.path.join(root, 'wy*-reading-load.sql'))):
+    # recursive:load 跑完会被归档进 SQLAA/done/,非递归 glob 会静默载入 0 篇
+    for path in sorted(glob.glob(os.path.join(root, '**', 'wy*-reading-load.sql'), recursive=True)):
         txt = open(path, encoding='utf-8').read()
         for s in split_stmts(txt):
             if 'INSERT INTO public.junior_reading' not in s:

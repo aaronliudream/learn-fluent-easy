@@ -105,7 +105,9 @@ P = {
 ('wy7B', 'U3'): ('系动词', [
     ('系动词 + 形容词', r"\b(?:look|looks|looked|sound|sounds|sounded|taste|tastes|tasted|smell|smells|smelled|feel|feels|felt|seem|seems|become|becomes|turn|turns|grow|grows|get|gets)\s+(?:very\s+|so\s+|really\s+)?[a-z]+\b"),
 ], [
-    ('系动词 vs 实义动词对照', r"\b(?:taste|smell|feel|look)\s+(?:the|a|my|his|her|some)\b"),
+    # 只收原形会漏掉过去式(`He **tasted** the soup twice`),补全时态形态
+    ('系动词 vs 实义动词对照',
+     r"\b(?:tastes?|tasted|smells?|smelled|smelt|feels?|felt|looks?|looked)\s+(?:the|a|an|my|his|her|our|their|some)\b"),
     ('系动词 + like', r"\b(?:looks?|sounds?|feels?|tastes?|smells?)\s+like\b"),
 ]),
 ('wy7B', 'U4'): ('祈使句', [
@@ -168,7 +170,12 @@ P = {
     ('was/were + -ing', r"\b(?:was|were)\s+(?:not\s+)?\w+ing\b"),
 ], [
     ('while + 进行(背景)', r"\bwhile\s+\w+\s+(?:was|were)\s+\w+ing\b"),
-    ('when + 一般过去(打断)', r"\bwhen\s+\w+\s+(?:\w+ed|went|came|got|saw|began|stopped|rang|fell)\b"),
+    # ★2026-07-25 修误报★ 原式要求 when + 主语 + 动词紧邻,漏掉了中间插副词的写法
+    # (`when the lights **suddenly** went out`),把 wy8A U6 误报成缺口。允许主语为
+    # 多词名词短语、动词前插 0-2 个副词。
+    ('when + 一般过去(打断)',
+     r"\bwhen\s+(?:the\s+|a\s+|his\s+|her\s+|my\s+|our\s+|their\s+)?\w+(?:\s+\w+)?\s+"
+     r"(?:\w+ly\s+){0,2}(?:\w+ed|went|came|got|saw|began|stopped|rang|fell|lost|left|hit|broke|arrived)\b"),
     ('否定 was/were not doing', r"\b(?:was|were)\s+not\s+\w+ing\b"),
 ]),
 ('wy8B', 'U1'): ('被动语态(现在/将来)', [
@@ -198,7 +205,10 @@ P = {
 ('wy8B', 'U5'): ('宾语从句(一)·that', [
     ('报告动词 + that', r"\b(?:said|says|told|tells|thinks|thought|knows|knew|believes|hopes|found)\s+(?:me\s+|us\s+|him\s+|her\s+)?that\b"),
 ], [
-    ('省略 that', r"\b(?:said|says|told|thinks|thought|knows|knew)\s+(?:me\s+|us\s+)?(?:I|you|he|she|it|we|they|the)\b"),
+    # 省略 that 后的从句主语不只是代词,也可能是动名词/名词(`said **reading** is food…`)
+    ('省略 that',
+     r"\b(?:said|says|told|thinks|thought|knows|knew|believes?|believed)\s+(?:me\s+|us\s+|him\s+|her\s+)?"
+     r"(?:I|you|he|she|it|we|they|the|this|that|\w+ing|\w+s)\s+(?:is|are|was|were|can|will|has|have|do|does|\w+s)\b"),
     ('时态呼应(主过去→从过去)', r"\b(?:said|told|thought|knew)\s+(?:me\s+|us\s+)?that\s+\w+\s+(?:was|were|had|would|could)\b"),
 ]),
 ('wy8B', 'U6'): ('宾语从句(二)·if/whether/wh-', [
@@ -270,8 +280,14 @@ def main():
         print('── %s %-8s %s' % (vol, unit, name))
         for label, pat in [('CORE', core), ('HARD', hard)]:
             for feat, pattern in pat:
-                nj = sum(hits(r['body'], pattern) for r in jing)
-                nf = sum(hits(r['body'], pattern) for r in fan)
+                if pattern == '__ALL_FIVE__':
+                    # ★单元级判定★ "五个频度副词齐"是**整个单元**要教到,不是每篇都得有五个。
+                    # 逐篇判会把"分散到四篇、合起来齐"误报成缺口(2026-07-25 踩过)。
+                    nj = hits(' '.join(r['body'] for r in jing), pattern)
+                    nf = hits(' '.join(r['body'] for r in fan), pattern)
+                else:
+                    nj = sum(hits(r['body'], pattern) for r in jing)
+                    nf = sum(hits(r['body'], pattern) for r in fan)
                 cov = sum(1 for r in fan if hits(r['body'], pattern) > 0)
                 flag = ''
                 if nf == 0:

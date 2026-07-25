@@ -18,6 +18,7 @@ export const PICTURE_BOOK_CHAPTERS = new Set<string>([
   "aesop-easy-readers#1",
   "aesop-easy-readers#2",
   "aesop-easy-readers#3",
+  "aesop-easy-readers#4",
 ]);
 
 export function isPictureBookChapter(bookKey: string, chapterIdx: number): boolean {

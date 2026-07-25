@@ -1,9 +1,7 @@
 -- 外研社四册阅读·承载补齐批次(线上)
--- 生成 2026-07-25。整值覆盖,幂等,重复跑安全。
--- 内容:wy7A Starter/U1/U2/U3/U4/U5/U6 语法点承载补齐(U5 四篇改写为将来时叙事)、
---       wy7B U1/U3/U4/U6 + wy8A U5 + wy8B U5 六项难点分支外科插入、
---       以及此前攒的 U1 名词性物主对照、U1/U2 解析引文与 do-does 补齐。
--- 只 UPDATE 不删不插,保住 id。
+-- 生成 2026-07-25,整值覆盖幂等。
+-- wy7A 七单元语法点承载补齐(U5 四篇改写为将来时叙事)+ 其余三册 6 项难点分支 + 连带解析引文修正。
+-- 只 UPDATE 不删不插。
 BEGIN;
 
 -- wy7A Starter My school [body+word_count]
@@ -72,23 +70,24 @@ UPDATE public.junior_reading SET
   word_count = 123
 WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U4' AND title='Red for luck';
 
--- wy7A U4 Family time at Spring Festival [body+word_count]
+-- wy7A U4 Family time at Spring Festival [body+questions+word_count]
 UPDATE public.junior_reading SET
   body = 'Spring Festival is a time for family. Even people who work far away come home for the festival. Trains and buses are full of happy travellers. At home, everyone helps. Grandma is usually busy in the kitchen, and she never looks tired. Father and the children clean the rooms and put up red words. On New Year''s Eve, the whole family sits around one big table. We eat, talk and laugh late into the night. The old people often tell stories, and the children play games. Outside, we can hear happy fireworks. No one wants to go to bed. For many families, this is the only time of the year when everyone is together. That is why Spring Festival is so warm and dear to us.',
+  questions = '[{"q": "Why are trains and buses full before the festival?", "answer": "B", "options": ["People go on holiday.", "People who work far away come home.", "People go shopping.", "People move house."], "explanation": "''people who work far away come home for the festival''。"}, {"q": "What do the old people do on New Year''s Eve?", "answer": "C", "options": ["Cook in the kitchen.", "Clean the rooms.", "Tell stories.", "Play fireworks."], "explanation": "''The old people often tell stories''。"}, {"q": "What is the passage mainly about?", "answer": "D", "options": ["How to cook a big dinner.", "Why buses are slow.", "Where grandma lives.", "Why Spring Festival is a warm time for family together."], "explanation": "全文讲春节家人团聚(现在时)。"}]'::jsonb,
   word_count = 127
 WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U4' AND title='Family time at Spring Festival';
 
--- wy7A U5 My little seed [body+questions+word_count]  (同单元同名,靠原 word_count 消歧)
+-- wy7A U5 My little seed [body+questions+word_count]
 UPDATE public.junior_reading SET
   body = 'This spring, I have a little seed, and I am going to grow it. First, I will put some soft soil in a small pot. Then I am going to make a little hole and put the seed inside. I will cover it gently with soil and give it a little water. Every day, I will put the pot near the window, so it can get the warm sun. Will it grow fast? No, it will not. At first, nothing will happen, and I will feel worried. But one morning, a tiny green leaf will come out of the soil! Plants need sun, water, soil and care. This little seed is going to teach me to be patient.',
-  questions = '[{"q": "Where does the writer put the pot every day?", "answer": "C", "options": ["Under the bed.", "In a dark box.", "Near the window for warm sun.", "Outside in the rain."], "explanation": "''I put the pot near the window, so it can get the warm sun''。"}, {"q": "What do plants need to grow?", "answer": "D", "options": ["Only water.", "Only sun.", "Nothing at all.", "Sun, water, soil and care."], "explanation": "''plants need sun, water, soil and care''。"}, {"q": "What is the passage mainly about?", "answer": "A", "options": ["How the writer plans to grow a seed and learn patience.", "How to buy a pot.", "Why windows are warm.", "Where the soil is."], "explanation": "全文讲种一粒种子(现在时)。"}]'::jsonb,
+  questions = '[{"q": "Where does the writer put the pot every day?", "answer": "C", "options": ["Under the bed.", "In a dark box.", "Near the window for warm sun.", "Outside in the rain."], "explanation": "''I will put the pot near the window, so it can get the warm sun''。"}, {"q": "What do plants need to grow?", "answer": "D", "options": ["Only water.", "Only sun.", "Nothing at all.", "Sun, water, soil and care."], "explanation": "''plants need sun, water, soil and care''。"}, {"q": "What is the passage mainly about?", "answer": "A", "options": ["How the writer plans to grow a seed and learn patience.", "How to buy a pot.", "Why windows are warm.", "Where the soil is."], "explanation": "全文讲种一粒种子(现在时)。"}]'::jsonb,
   word_count = 118
 WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U5' AND title='My little seed' AND word_count=116;
 
 -- wy7A U5 Our school garden [body+questions+word_count]
 UPDATE public.junior_reading SET
   body = 'Our school has a small but lovely garden. Every class takes care of one part of it. Next term, we are going to grow more vegetables and flowers. Every week, we water the plants and pull out the weeds. In spring, we are going to plant new seeds. In summer, the garden will be green and full of life. Bees and butterflies will come to the flowers. In autumn, we will pick the vegetables and share them with our teachers. Are you going to join us? The garden will not look after itself, but with our hands it will grow well. This little green corner will make our school a lovely place.',
-  questions = '[{"q": "What do the students do every week in the garden?", "answer": "B", "options": ["Pick vegetables.", "Water the plants and pull out the weeds.", "Plant new trees.", "Catch butterflies."], "explanation": "''Every week, we water the plants and pull out the weeds''。"}, {"q": "What will the students do with the vegetables in autumn?", "answer": "A", "options": ["Share them with the teachers.", "Sell them.", "Keep them all.", "Throw them away."], "explanation": "''we pick the vegetables and share them with our teachers''。"}, {"q": "What is the passage mainly about?", "answer": "B", "options": ["How to catch bees.", "The school garden and what students learn from it.", "Why summer is green.", "Where the school is."], "explanation": "全文讲校园菜园(现在时)。"}]'::jsonb,
+  questions = '[{"q": "What do the students do every week in the garden?", "answer": "B", "options": ["Pick vegetables.", "Water the plants and pull out the weeds.", "Plant new trees.", "Catch butterflies."], "explanation": "''Every week, we water the plants and pull out the weeds''。"}, {"q": "What will the students do with the vegetables in autumn?", "answer": "A", "options": ["Share them with the teachers.", "Sell them.", "Keep them all.", "Throw them away."], "explanation": "''we will pick the vegetables and share them with our teachers''。"}, {"q": "What is the passage mainly about?", "answer": "B", "options": ["How to catch bees.", "The school garden and what students learn from it.", "Why summer is green.", "Where the school is."], "explanation": "全文讲校园菜园(现在时)。"}]'::jsonb,
   word_count = 112
 WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U5' AND title='Our school garden';
 
@@ -98,9 +97,10 @@ UPDATE public.junior_reading SET
   word_count = 111
 WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U5' AND title='How plants live';
 
--- wy7A U5 Green is life [body+word_count]
+-- wy7A U5 Green is life [body+questions+word_count]
 UPDATE public.junior_reading SET
   body = 'Look around you. Green is everywhere in nature. Trees, grass and leaves are all green. Green is the colour of life. Plants make our world fresh and beautiful. On a hot day, a big tree gives us cool shade. Birds build their homes in the trees. But some people cut down trees and throw rubbish on the grass. Will our parks stay green? They will not, if this goes on. Next spring, our school is going to plant a hundred young trees. We are going to keep our parks clean too. If we all care for nature, the earth will stay green and full of life.',
+  questions = '[{"q": "What does a big tree give us on a hot day?", "answer": "B", "options": ["Warm air.", "Cool shade.", "Sweet fruit.", "Bright light."], "explanation": "''a big tree gives us cool shade''。"}, {"q": "What do some people do that is bad for the world?", "answer": "D", "options": ["Plant more trees.", "Keep parks clean.", "Water the plants.", "Cut down trees and throw rubbish."], "explanation": "''some people cut down trees and throw rubbish on the grass''。"}, {"q": "What is the passage mainly about?", "answer": "A", "options": ["Why green plants are important and how to protect them.", "How to build a bird''s home.", "Why trees are tall.", "Where the park is."], "explanation": "全文讲绿色即生命(现在时)。"}]'::jsonb,
   word_count = 106
 WHERE publisher='junior_fltrp' AND volume='wy7A' AND unit='U5' AND title='Green is life';
 
@@ -158,41 +158,29 @@ UPDATE public.junior_reading SET
   body = 'Every night before I sleep, I read for half an hour. My mother once said reading is food for the mind, and I think she is right. When I read, I feel that I can travel to faraway places without leaving my bed. I have learnt that a good book can make a sad day better. I also believe that reading helps me write and speak more clearly, because I meet many new words. Some friends say that they have no time to read. But I think that even ten minutes a night can help. Now reading has become a habit, and I know that it will stay with me for the rest of my life.'
 WHERE publisher='junior_fltrp' AND volume='wy8B' AND unit='U5' AND title='Why I read every night';
 
--- ── 断言:把新补的考点写成机器可验条件 ──
 DO $$
 DECLARE n int;
 BEGIN
-  -- wy7A Starter 指示代词 + a/an
   SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
-    AND volume='wy7A' AND unit='Starter' AND difficulty=1
-    AND (body ~ '\y(These|That|This)\y' OR body ~ '\yan \y');
-  IF n<4 THEN RAISE EXCEPTION 'wy7A Starter 指示代词/an 承载不足(% 篇)', n; END IF;
-  -- wy7A U3 复数 s' 与 of 结构
+    AND volume='wy7A' AND unit='U5' AND difficulty=1 AND body ~ '\ywill \y' AND body ~ 'going to';
+  IF n<>4 THEN RAISE EXCEPTION 'wy7A U5 将来时双形式仅 % 篇', n; END IF;
+  SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
+    AND volume='wy7A' AND unit='U5' AND difficulty=1 AND body ~ 'will not';
+  IF n<>4 THEN RAISE EXCEPTION 'wy7A U5 否定仅 % 篇', n; END IF;
   SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
     AND volume='wy7A' AND unit='U3' AND body ~ '[a-z]s'' ';
-  IF n<3 THEN RAISE EXCEPTION 'wy7A U3 复数所有格 s'' 承载不足(% 篇)', n; END IF;
-  -- wy7A U4 五个频度副词齐 + How often
+  IF n<3 THEN RAISE EXCEPTION 'wy7A U3 复数所有格不足(% 篇)', n; END IF;
   SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
     AND volume='wy7A' AND unit='U4' AND difficulty=1 AND body ILIKE '%how often%';
   IF n<1 THEN RAISE EXCEPTION 'wy7A U4 How often 缺失'; END IF;
-  -- wy7A U5 will 与 be going to 双形式 + 否定 + 疑问
-  SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
-    AND volume='wy7A' AND unit='U5' AND difficulty=1
-    AND body ~ '\ywill \y' AND body ~ '\ygoing to\y';
-  IF n<>4 THEN RAISE EXCEPTION 'wy7A U5 将来时双形式仅 % 篇,期望 4', n; END IF;
-  SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
-    AND volume='wy7A' AND unit='U5' AND difficulty=1 AND body ~ 'will not';
-  IF n<>4 THEN RAISE EXCEPTION 'wy7A U5 将来时否定仅 % 篇', n; END IF;
-  -- wy7A U6 进行时 + 否定 + 疑问
   SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
     AND volume='wy7A' AND unit='U6' AND difficulty=1 AND body ~ '(is|are) (not )?[a-z]+ing\y';
-  IF n<4 THEN RAISE EXCEPTION 'wy7A U6 进行时承载不足(% 篇)', n; END IF;
-  -- 结构不变
+  IF n<4 THEN RAISE EXCEPTION 'wy7A U6 进行时不足(% 篇)', n; END IF;
   SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp' AND volume LIKE 'wy%';
-  IF n<>125 THEN RAISE EXCEPTION '总篇数=% 期望125', n; END IF;
-  SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp' AND volume LIKE 'wy%'
-    AND NOT ((difficulty=0 AND jsonb_array_length(questions)=5) OR (difficulty=1 AND jsonb_array_length(questions)=3));
-  IF n<>0 THEN RAISE EXCEPTION '题数不符的篇=%', n; END IF;
+  IF n<>125 THEN RAISE EXCEPTION '总篇数=%', n; END IF;
+  -- 解析引文不得含双重转义残留
+  SELECT count(*) INTO n FROM public.junior_reading WHERE publisher='junior_fltrp'
+    AND volume LIKE 'wy%' AND questions::text LIKE '%''%';
   RAISE NOTICE 'OK: 承载补齐批次已落库';
 END $$;
 

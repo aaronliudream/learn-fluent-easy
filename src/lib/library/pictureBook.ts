@@ -14,7 +14,10 @@
 import type { LibrarySentence, LibraryIllustration } from "./data";
 
 /** 绘本模式白名单:`${book_key}#${chapter_idx}`。 */
-export const PICTURE_BOOK_CHAPTERS = new Set<string>(["aesop-easy-readers#1"]);
+export const PICTURE_BOOK_CHAPTERS = new Set<string>([
+  "aesop-easy-readers#1",
+  "aesop-easy-readers#2",
+]);
 
 export function isPictureBookChapter(bookKey: string, chapterIdx: number): boolean {
   return PICTURE_BOOK_CHAPTERS.has(`${bookKey}#${chapterIdx}`);

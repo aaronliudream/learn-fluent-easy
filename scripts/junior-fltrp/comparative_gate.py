@@ -77,10 +77,20 @@ SUPERLATIVE = re.compile(r"\b(?:the\s+most\s+\w+|the\s+\w{3,}est|\w{3,}est|best|
 # 4) 同级比较 as … as(排除 as long/far/soon as 等连词/习语,见 IDIOMS)
 AS_AS = re.compile(r"\bas\s+\w+\s+as\b", re.I)
 
-# 固定搭配类 best —— 形态是最高级,但更像词汇。单独归档交人定口径。
-BEST_COLLOCATION = re.compile(
-    r"\b(?:my|your|his|her|their|our|the)\s+best\s+(?:friend|friends)\b|"
-    r"\bone\s+of\s+the\s+best\b", re.I)
+# ── 裸 best 的口径(2026-07-25 Aaron 定)────────────────────────────────
+# 词汇化的固定表达 ≠ 最高级语法结构。同 try your best 白名单、宾从 backshift 一个道理。
+#   放:like/love/enjoy … best(最喜欢,整块记)
+#   放:the/my/our best + 名词(最好的X,泛指)
+#   拦:the best X **in/of 范围**(明确三者以上比较 = 真最高级语法)
+# 注意:本口径**只管裸 best**。happiest / sweetest / the most precious / the fastest
+# 这类仍按普通最高级拦 —— 它们不是词汇化表达。
+BEST_LEXICAL = re.compile(
+    r"(?:\b(?:like|likes|liked|love|loves|loved|enjoy|enjoys|enjoyed|prefer|prefers)\b"
+    r"[^.!?]{0,45}\bbest\b)"
+    r"|(?:\b(?:the|my|your|his|her|their|our|its)\s+best\b(?!\s+\w+\s+(?:in|of)\b))"
+    r"|(?:\bbe\s+the\s+best\b)", re.I)
+BEST_REAL_SUPERLATIVE = re.compile(
+    r"\bthe\s+best\s+\w+\s+(?:in|of)\s+", re.I)
 
 
 def _spans(text, regex):
@@ -120,8 +130,15 @@ def scan_text(text, volume, unit):
         ctx = text[max(0, a - 55):min(len(text), b + 55)].replace('\n', ' ')
         if allowed:
             kind = 'allowed'
-        elif structure == 'superlative' and BEST_COLLOCATION.search(ctx):
-            kind = 'collocation'
+        elif re.fullmatch(r'(?:the\s+)?best', low):
+            # 裸 best 走专用口径:真最高级(the best X in/of Y)才拦,其余词汇化放行
+            win = text[max(0, a - 60):min(len(text), b + 60)]
+            if BEST_REAL_SUPERLATIVE.search(win):
+                kind = 'violation'
+            elif BEST_LEXICAL.search(win):
+                return
+            else:
+                kind = 'collocation'
         else:
             kind = 'violation'
         out.append({'kind': kind, 'structure': structure, 'hit': hit, 'context': ctx})

@@ -233,13 +233,23 @@ def rows_from_sql(path):
             title = (d.get('title') or d.get('stem') or '')[:44]
 
             if table == 'junior_grammar_questions':
-                # 合并判定:题干 + 四选项 + 解析,报告动词与 had done 才在同一段里
-                merged = ' '.join(_norm(d[f]) for f in
-                                  ('stem', 'option_a', 'option_b', 'option_c',
-                                   'option_d', 'explanation') if d.get(f))
+                # 合并判定:题干 + 选项 + 解析,报告动词与 had done 才在同一段里
+                #
+                # ★只收正确选项,丢掉干扰项★
+                # 选择题的错误选项是**故意写错的**,不是要学生学的内容。
+                # 例:系动词单元 `The soup tastes ____.` 选项 goodly/good/well/best,
+                # 答案是 good,`best` 只是干扰项 —— 按"教学内容"判它超前是误报。
+                ans = (d.get('correct_answer') or '').strip().upper()
+                keep = ['stem']
+                if ans in ('A', 'B', 'C', 'D'):
+                    keep.append('option_' + ans.lower())
+                else:
+                    keep += ['option_a', 'option_b', 'option_c', 'option_d']
+                keep.append('explanation')
+                merged = ' '.join(_norm(d[f]) for f in keep if d.get(f))
                 if merged:
                     # whole=True:整题是一个判定单位,不按句号截窗口
-                    yield vol, unit, '%s | %s | 整题' % (table, title), merged, True
+                    yield vol, unit, '%s | %s | 题干+正解' % (table, title), merged, True
                 continue
 
             for field in ('body', 'text', 'transcript', 'content', 'stem',

@@ -9,7 +9,17 @@
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Play, Square, Volume2, Gauge, ChevronLeft, ChevronRight, X, Bookmark, Loader2 } from "lucide-react";
-import { speak, speakFromUrl, stopSpeaking, unlockAudioSync, prefetchTTS, isSpeaking } from "@/lib/speak";
+import { stopSpeaking, prefetchTTS, isSpeaking } from "@/lib/speak";
+// 朗读走纯 Web Audio(不碰 <audio>)→ iOS 不再注册 Now Playing,灵动岛/锁屏不弹卡片。
+// 页面上其它发音(点词查义)仍走 speak() 的 <audio> 路径,未改。
+import {
+  readAloudText,
+  readAloudUrl,
+  stopReadAloud,
+  unlockReadAloud,
+  warmReadAloudText,
+  warmReadAloudUrl,
+} from "@/lib/audio/readAloud";
 import { T } from "@/i18n/T";
 import { TappableLine } from "@/components/TappableLine";
 import ChapterNotesCollection from "@/components/library/ChapterNotesCollection";
@@ -217,6 +227,7 @@ export default function LibraryReader() {
     if (!book || chapterIdx < 0) return;
     let alive = true;
     playSeq.current++; // 打断上一章可能在播的朗读
+    stopReadAloud();
     stopSpeaking();
     setPlayingAll(false);
     setCurrent(-1);
@@ -305,6 +316,7 @@ export default function LibraryReader() {
   useEffect(
     () => () => {
       playSeq.current++;
+      stopReadAloud(); // 退出页面不留残音
       stopSpeaking();
       void flushCloudPush();
     },
@@ -493,18 +505,20 @@ export default function LibraryReader() {
     };
   }, [loading, chapterLoading, sentences, playingAll, bump]);
 
-  // 播一句:audio_url 有且非慢速则用预生成;否则实时 speak(慢速强制实时以尊重语速)
+  // 播一句:audio_url 有且非慢速则用预生成;否则实时合成(慢速强制实时以尊重语速)。
+  // 慢速 = speed 0.7 交给 TTS 服务端合成,前端不动 playbackRate —— 变速不变调。
   const playSentence = useCallback(
-    (s: LibrarySentence): Promise<void> => {
-      if (s.audio_url && !slow) return speakFromUrl(s.audio_url);
-      return speak(s.text_en, { accent: READ_ACCENT, speed });
+    (s: LibrarySentence): Promise<boolean> => {
+      if (s.audio_url && !slow) return readAloudUrl(s.audio_url);
+      return readAloudText(s.text_en, { accent: READ_ACCENT, speed });
     },
     [slow, speed],
   );
 
   const stopAll = useCallback(() => {
     playSeq.current++;
-    stopSpeaking();
+    stopReadAloud();
+    stopSpeaking(); // 顺带掐掉点词发音(<audio> 那条路)
     setPlayingAll(false);
     setPreparing(false);
     setCurrent(-1);
@@ -516,7 +530,7 @@ export default function LibraryReader() {
     (startIdx: number, stopIdx: number = sentences.length) => {
       if (startIdx < 0 || startIdx >= sentences.length) return;
       const end = Math.min(stopIdx, sentences.length);
-      unlockAudioSync();
+      unlockReadAloud(); // 手势内 resume AudioContext(旧版是在 <audio> 上播静音 WAV,那一下就会招来灵动岛)
       const my = ++playSeq.current;
       setPlayingAll(true);
       const run = async () => {
@@ -524,7 +538,7 @@ export default function LibraryReader() {
         const first = sentences[startIdx];
         if (first && !(first.audio_url && !slow)) {
           setPreparing(true);
-          prefetchTTS(first.text_en, { accent: READ_ACCENT, speed });
+          warmReadAloudText(first.text_en, { accent: READ_ACCENT, speed });
           const poll = setInterval(() => {
             if (my !== playSeq.current || isSpeaking()) {
               setPreparing(false);
@@ -540,10 +554,12 @@ export default function LibraryReader() {
           if (my !== playSeq.current) return;
           setCurrent(i);
           bump(i);
-          // 预取下一句(仅实时合成的、且不越过本次终点)
+          // 预取下一句(不越过本次终点)。Web Audio 播放前要先"下载 + 解码",
+          // 故这里做深度预热(warm*),而不是只解析 URL —— 否则句间会多出解码停顿。
           const nxt = sentences[i + 1];
-          if (nxt && i + 1 < end && !(nxt.audio_url && !slow)) {
-            prefetchTTS(nxt.text_en, { accent: READ_ACCENT, speed });
+          if (nxt && i + 1 < end) {
+            if (nxt.audio_url && !slow) warmReadAloudUrl(nxt.audio_url);
+            else warmReadAloudText(nxt.text_en, { accent: READ_ACCENT, speed });
           }
           await playSentence(sentences[i]);
           if (my !== playSeq.current) return;

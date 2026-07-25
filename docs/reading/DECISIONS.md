@@ -112,3 +112,33 @@
 
 ### D15 · 图书馆可写第四处:连续学习天数表(硬 · Aaron 2026-07-13 批准)
 Batch 2「连续学习天数(🔥)」需要 per-user 落点,而 D14 三张允许表都无合适字段(mastery_progress 是 per-item、收藏表是 per-term)。Aaron 批准**新开第四张表** `library_review_streak(user_id PK, last_review_date, review_streak, longest_streak, updated_at)`,**仅本功能可写**、用户私有(RLS 仅本人读写)。语义:复习完成一次记「今天学过」,跨北京日(UTC+8)连续则 +1、断了重置 1,longest 记历史最长。**D14 红线不变**——仍绝不写 junior_word_mastery / gaokao_user_mastery / unified_mastery_manual;这第四张只是把「学习节奏」这类图书馆自有状态收在自己车道里,不进那三张坑。
+
+---
+
+### D16 · 朗读改走 Web Audio 消灭 iOS 灵动岛 Now Playing(Aaron 2026-07-25 指令)
+
+**问题**:朗读一播,iPhone 灵动岛/锁屏就弹「正在播放」卡片。
+
+**根因**:只要用 `HTMLAudioElement`(`<audio>` / `new Audio()`)出声,iOS 就**强制**注册 MediaSession。
+`navigator.mediaSession` 只能改卡片内容,**没有任何 API 能取消注册** —— 全库 `mediaSession` 零命中,
+说明这卡片不是我们主动挂的,是系统兜底行为。唯一根治办法是换播放路径。
+
+**做法**:新建 `src/lib/audio/webAudioPlayer.ts`(AudioContext + AudioBufferSourceNode,
+fetch → decodeAudioData → BufferSource → GainNode → destination),该路径不注册 Now Playing 会话。
+`LibraryReader` 的朗读改走它;URL 解析复用 `speak.ts` 新导出的 `resolveTtsUrl()`(缓存/CDN/edge 那套一行没重写)。
+`unlockAudioSync()`(在 `<audio>` 上播静音 WAV 消费手势)换成 `unlockReadAloud()`(手势内 `AudioContext.resume()`)
+—— 旧那一下静音播放本身就足以招来灵动岛。
+
+**边界**:只改朗读。全站其它发音(点词查义、单词卡、闯关题,~36 个文件)仍走 `speak()` 的 `<audio>` 路径,行为一行未改。
+
+**变速**:朗读慢速档走的是 **TTS 服务端合成**(`speed=0.7` 传给 tts edge function),
+前端从不碰 `playbackRate`(全库零命中)。所以不存在「慢速变低沉怪音」的问题 —— 无需插停顿方案。
+
+**已知副作用(有意接受,不修)**:
+1. 熄屏 / 切后台会暂停(iOS 挂起 AudioContext)。
+2. 受手机硬件静音开关影响。
+3. 锁屏控制与耳机线控失效。
+4. 无 `<audio>` 兜底:Web Audio 失败(解码错/离线)则该句静音跳过,不回退 —— 回退就等于把灵动岛请回来。
+
+**连带改动**:`isSpeaking()` 加入 Web Audio 播放态。它是学习时长心跳(`useActiveHeartbeat`)判定
+「被动听朗读也算活跃」的依据;朗读不再有 `<audio>` 可读,不加这一笔听朗读会被误判为发呆而停止计时。

@@ -1,10 +1,8 @@
 # 外研社七上 wy7A 泛读补审件(28篇)
 
-- 状态:已在线上(待补审)
+- 状态:已在线上(待补审·改法已过目待重灌)
 - 每单元 4 篇泛读(精读不在本件内)。全部原创改写，无版权原文入库。
-- difficulty=1(泛读)；同单元精读为 difficulty=0，排在泛读之前。
-- 2026-07-25 已过 past_perfect 门(独立过去完成时 0 处;宾从 backshift 放行)。
-- 审的点:①有无超纲语法/词汇 ②题目答案唯一且原文可证 ③选项无歧义 ④中文话题/释义准确 ⑤内容价值观无问题
+- 2026-07-25 已过两道时序门:独立过去完成时 0 处、比较级/最高级/as…as 超前 0 处。
 
 ---
 
@@ -178,9 +176,9 @@ Today there is a new student in our class. His name is Sam. He comes from anothe
 
 ### My friends and I
 
-- 话题:我和我的朋友们(一般现在时) · 词数:110
+- 话题:我和我的朋友们(一般现在时) · 词数:107
 
-I have three good friends: Ben, Kate and Tom. We are all different, and that is why we are such a happy group. Ben is funny. He always tells jokes and makes us laugh. Kate is quiet but very clever. She reads a lot of books and knows many things. Tom is strong and good at sport. He runs faster than anyone in our class. I am not the cleverest or the fastest, but I am a good listener. When one of us has a problem, we all help. We study together, play together and share everything. True friends are hard to find, and I am lucky to have mine.
+I have three good friends: Ben, Kate and Tom. We are all different, and that is why we are such a happy group. Ben is funny. He always tells jokes and makes us laugh. Kate is quiet but very clever. She reads a lot of books and knows many things. Tom is strong and good at sport. He runs very fast in our class. I am not clever or quick, but I am a good listener. When one of us has a problem, we all help. We study together, play together and share everything. True friends are hard to find, and I am lucky to have mine.
 
 1. What is Ben like?
    - A. Quiet.
@@ -207,7 +205,7 @@ I have three good friends: Ben, Kate and Tom. We are all different, and that is 
 
 - 话题:怎样交朋友(一般现在时) · 词数:110
 
-Do you want to make more friends? It is not hard if you have a kind heart. First, always wear a smile. A smile is like a door; it opens easily. Second, be a good listener. When others talk, listen with care. Third, help people when they are in need. A small act of kindness means a lot. Also, share your things and your time. Do not laugh at other people's mistakes. Everyone likes a friend who is honest and warm. Making friends takes a little time, but it is worth it. Good friends make life brighter and happier. So be kind today, and friends will come to you.
+Do you want to make more friends? It is not hard if you have a kind heart. First, always wear a smile. A smile is like a door; it opens easily. Second, be a good listener. When others talk, listen with care. Third, help people when they are in need. A small act of kindness means a lot. Also, share your things and your time. Do not laugh at other people's mistakes. Everyone likes a friend who is honest and warm. Making friends takes a little time, but it is worth it. Good friends make life bright and happy. So be kind today, and friends will come to you.
 
 1. What is a smile like, according to the passage?
    - A. A door that opens easily. [答案]
@@ -238,7 +236,7 @@ Do you want to make more friends? It is not hard if you have a kind heart. First
 
 - 话题:我爱音乐(一般现在时) · 词数:112
 
-Music is a big part of my life. Every day, I listen to music at home. In the morning, happy songs help me wake up. In the evening, soft music helps me relax. I also play the guitar. I am not very good yet, but I practise a little every day. My favourite songs are about nature and friends. When I feel sad, music makes me feel better. When I feel happy, music makes me want to dance. At school, I am in the music club. We sing and play together every week. Music is a language that everyone can understand. It brings people close, and it fills my heart with joy.
+Music is a big part of my life. Every day, I listen to music at home. In the morning, happy songs help me wake up. In the evening, soft music helps me relax. I also play the guitar. I am not very good yet, but I practise a little every day. My favourite songs are about nature and friends. When I feel sad, music makes me feel calm. When I feel happy, music makes me want to dance. At school, I am in the music club. We sing and play together every week. Music is a language that everyone can understand. It brings people close, and it fills my heart with joy.
 
 1. What helps the writer wake up in the morning?
    - A. Soft music.
@@ -348,9 +346,9 @@ Music is all around us, every single day. In the early morning, birds sing sweet
 
 ### My grandpa
 
-- 话题:我的爷爷(一般现在时·描写人) · 词数:109
+- 话题:我的爷爷(一般现在时·描写人) · 词数:108
 
-My grandpa is seventy years old, but he is still strong and happy. He has short white hair and a kind face. Every morning, he gets up early and does exercise in the park. He walks slowly with a cup of tea in his hand. Grandpa loves stories. In the evening, he tells me about his young days. His stories are always warm and funny. He also plays chess very well, and he often teaches me. Grandpa is patient and wise. He says that a kind heart is more important than money. I learn so much from him. I hope my grandpa stays healthy and happy for many years.
+My grandpa is seventy years old, but he is still strong and happy. He has short white hair and a kind face. Every morning, he gets up early and does exercise in the park. He walks slowly with a cup of tea in his hand. Grandpa loves stories. In the evening, he tells me about his young days. His stories are always warm and funny. He also plays chess very well, and he often teaches me. Grandpa is patient and wise. He often tells me: a kind heart matters, not money. I learn so much from him. I hope my grandpa stays healthy and happy for many years.
 
 1. What does grandpa do every morning?
    - A. He tells stories.
@@ -358,12 +356,12 @@ My grandpa is seventy years old, but he is still strong and happy. He has short 
    - C. He does exercise in the park. [答案]
    - D. He drinks tea in bed.
    - 解析:'Every morning, he gets up early and does exercise in the park'。
-2. What does grandpa say is more important than money?
+2. What matters to grandpa?
    - A. A good story.
    - B. A kind heart. [答案]
    - C. A game of chess.
    - D. A cup of tea.
-   - 解析:'a kind heart is more important than money'。
+   - 解析:'a kind heart matters, not money'。
 3. What is the passage mainly about?
    - A. How to play chess.
    - B. Why tea is warm.
@@ -431,7 +429,7 @@ There are four people in my family: my father, my mother, my little brother and 
 
 - 话题:和家人过周日(一般现在时·日常) · 词数:117
 
-Sunday is my favourite day, because I spend it with my family. In the morning, we get up late and have a big breakfast together. My mother makes eggs and bread, and the kitchen smells wonderful. After breakfast, my father and I wash the car. My little brother helps, but he plays with the water more than he works! In the afternoon, we often visit my grandparents. Grandma always has sweet fruit for us. In the evening, we watch a film at home. We sit close on the sofa and laugh together. Sunday is not about big things. It is about being close to the people we love. I always want Sunday to be a little longer.
+Sunday is my favourite day, because I spend it with my family. In the morning, we get up late and have a big breakfast together. My mother makes eggs and bread, and the kitchen smells wonderful. After breakfast, my father and I wash the car. My little brother helps, but he plays with the water more than he works! In the afternoon, we often visit my grandparents. Grandma always has sweet fruit for us. In the evening, we watch a film at home. We sit close on the sofa and laugh together. Sunday is not about big things. It is about being close to the people we love. I always want Sunday to go on and on.
 
 1. What does the writer do with his father in the morning?
    - A. Cook eggs.
@@ -460,9 +458,9 @@ Sunday is my favourite day, because I spend it with my family. In the morning, w
 
 ### Spring Festival
 
-- 话题:春节(一般现在时·习俗) · 词数:114
+- 话题:春节(一般现在时·习俗) · 词数:113
 
-Spring Festival is the most important festival in China. It comes in winter, at the start of the new year. Before the festival, every family cleans the house from top to bottom. People put up red words and bright lanterns on the doors. Red is the colour of luck and joy. On New Year's Eve, the whole family sits together for a big dinner. There are many nice dishes, and fish is a must, because it means good luck. Children love this time best. They wear new clothes and get red packets with money inside. Everywhere, people smile and say kind words. Spring Festival is a warm time of family, food and hope.
+Spring Festival is a big festival in China. It comes in winter, at the start of the new year. Before the festival, every family cleans the house from top to bottom. People put up red words and bright lanterns on the doors. Red is the colour of luck and joy. On New Year's Eve, the whole family sits together for a big dinner. There are many nice dishes, and fish is a must, because it means good luck. Children love this time best. They wear new clothes and get red packets with money inside. Everywhere, people smile and say kind words. Spring Festival is a warm time of family, food and hope.
 
 1. What colour is the colour of luck and joy?
    - A. Blue.
@@ -489,7 +487,7 @@ Spring Festival is the most important festival in China. It comes in winter, at 
 
 - 话题:春节的食物(一般现在时) · 词数:113
 
-At Spring Festival, food is very important. Every family cooks many special dishes. In the north of China, people love dumplings. The whole family makes them together. They put the dumplings into hot water, and soon they are ready to eat. In the south, people eat sweet rice cakes and fish. Every dish has a lucky meaning. Fish means 'more every year', and dumplings look like old gold money. Sweet food means a sweet life. Grandma always cooks the best meal of the year. The kitchen is warm and full of good smells. When we eat together, we feel happy and thankful. Festival food is not just tasty; it carries our best wishes.
+At Spring Festival, food is very important. Every family cooks many special dishes. In the north of China, people love dumplings. The whole family makes them together. They put the dumplings into hot water, and soon they are ready to eat. In the south, people eat sweet rice cakes and fish. Every dish has a lucky meaning. Fish means 'more every year', and dumplings look like old gold money. Sweet food means a sweet life. Grandma always cooks a big meal for the new year. The kitchen is warm and full of good smells. When we eat together, we feel happy and thankful. Festival food is not just tasty; it carries our best wishes.
 
 1. What do people in the north of China love to eat?
    - A. Rice cakes.
@@ -684,9 +682,9 @@ Look around you. Green is everywhere in nature. Trees, grass and leaves are all 
 
 ### The busy ants
 
-- 话题:忙碌的蚂蚁(一般现在时·科普) · 词数:112
+- 话题:忙碌的蚂蚁(一般现在时·科普) · 词数:113
 
-Ants are very small, but they are amazing animals. They live together in big groups called colonies. Every ant has a job to do. Some ants look for food. When they find it, they carry it back home. An ant is very strong. It can carry food much bigger than itself. Other ants take care of the babies or clean the home. They all work together, and no ant is lazy. Ants talk to each other in a special way, with smells. When one ant finds food, it leaves a smell on the ground, so the others can follow. From ants, we learn an important lesson: team work makes hard things easy.
+Ants are very small, but they are amazing animals. They live together in big groups called colonies. Every ant has a job to do. Some ants look for food. When they find it, they carry it back home. An ant is very strong. It can carry a very heavy piece of food. Other ants take care of the babies or clean the home. They all work together, and no ant is lazy. Ants talk to each other in a special way, with smells. When one ant finds food, it leaves a smell on the ground, so the others can follow. From ants, we learn an important lesson: team work makes hard things easy.
 
 1. How do ants talk to each other?
    - A. With sounds.
@@ -738,9 +736,9 @@ Animals share our world, and they are our good friends. Some animals help people
 
 ### Birds in my garden
 
-- 话题:我花园里的鸟(一般现在时) · 词数:113
+- 话题:我花园里的鸟(一般现在时) · 词数:111
 
-Every morning, birds come to my garden, and I love to watch them. There is a big tree near my window. Many small birds live in it. Early in the day, they sing sweet songs. Their music wakes me up better than any clock. I often put some bread and water on the ground for them. The birds are not afraid of me now. Some of them are brown, and some are grey with bright eyes. They fly fast and jump from branch to branch. In spring, they build small homes in the tree. Watching the birds makes me feel calm and happy. They remind me that nature is full of little wonders.
+Every morning, birds come to my garden, and I love to watch them. There is a big tree near my window. Many small birds live in it. Early in the day, they sing sweet songs. Their music wakes me up every morning. I often put some bread and water on the ground for them. The birds are not afraid of me now. Some of them are brown, and some are grey with bright eyes. They fly fast and jump from branch to branch. In spring, they build small homes in the tree. Watching the birds makes me feel calm and happy. They remind me that nature is full of little wonders.
 
 1. What does the writer put on the ground for the birds?
    - A. Rice and milk.

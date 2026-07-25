@@ -1,10 +1,8 @@
 # 外研社七下 wy7B 泛读补审件(24篇)
 
-- 状态:未入库(修复后随重跑入库·请先审)
+- 状态:未入库(审后灌)
 - 每单元 4 篇泛读(精读不在本件内)。全部原创改写，无版权原文入库。
-- difficulty=1(泛读)；同单元精读为 difficulty=0，排在泛读之前。
-- 2026-07-25 已过 past_perfect 门(独立过去完成时 0 处;宾从 backshift 放行)。
-- 审的点:①有无超纲语法/词汇 ②题目答案唯一且原文可证 ③选项无歧义 ④中文话题/释义准确 ⑤内容价值观无问题
+- 2026-07-25 已过两道时序门:独立过去完成时 0 处、比较级/最高级/as…as 超前 0 处。
 
 ---
 
@@ -12,9 +10,9 @@
 
 ### A day at the zoo
 
-- 话题:动物园的一天(一般过去时) · 词数:114
+- 话题:动物园的一天(一般过去时) · 词数:111
 
-Last Sunday, my family went to the zoo. It was a warm and sunny day. First, we saw the pandas. They sat quietly and ate bamboo all morning. Then we watched the monkeys. They jumped from tree to tree and made us laugh. At noon, we had lunch near the lake. My little brother fed the ducks with some bread. In the afternoon, we saw the lions and the big elephants. I took many photos of them. Before we left, I bought a small toy tiger. I was tired but very happy. On the way home, my brother fell asleep in the car. It was one of the best days of my whole holiday.
+Last Sunday, my family went to the zoo. It was a warm and sunny day. First, we saw the pandas. They sat quietly and ate bamboo all morning. Then we watched the monkeys. They jumped from tree to tree and made us laugh. At noon, we had lunch near the lake. My little brother fed the ducks with some bread. In the afternoon, we saw the lions and the big elephants. I took many photos of them. Before we left, I bought a small toy tiger. I was tired but very happy. On the way home, my brother fell asleep in the car. It was a wonderful day in my holiday.
 
 1. What did the pandas do all morning?
    - A. Jumped from tree to tree.
@@ -39,9 +37,9 @@ Last Sunday, my family went to the zoo. It was a warm and sunny day. First, we s
 
 ### My best birthday
 
-- 话题:最棒的生日(一般过去时) · 词数:113
+- 话题:最棒的生日(一般过去时) · 词数:116
 
-Last week was my twelfth birthday, and it was wonderful. In the morning, my mother made a big chocolate cake. My friends came to my house in the afternoon. They brought me many nice presents and colourful cards. We played games in the garden and sang songs together. At six o'clock, we sat around the table. I made a wish and blew out the candles. Everyone laughed and cheered. After dinner, we watched a funny film. My best friend gave me a book about faraway places. We ate cake and told jokes until it was dark. I did not want the day to end. It was the happiest birthday I ever had.
+Last week was my twelfth birthday, and it was wonderful. In the morning, my mother made a big chocolate cake. My friends came to my house in the afternoon. They brought me many nice presents and colourful cards. We played games in the garden and sang songs together. At six o'clock, we sat around the table. I made a wish and blew out the candles. Everyone laughed and cheered. After dinner, we watched a funny film. My best friend gave me a book about faraway places. We ate cake and told jokes until it was dark. I did not want the day to end. It was a wonderful birthday, and I will always remember it.
 
 1. What did the writer's mother make in the morning?
    - A. A card.
@@ -59,16 +57,16 @@ Last week was my twelfth birthday, and it was wonderful. In the morning, my moth
    - A. How to make a cake.
    - B. Why friends are late.
    - C. Where the garden is.
-   - D. The writer's happiest birthday. [答案]
+   - D. The writer's wonderful birthday. [答案]
    - 解析:全文讲最快乐的生日(过去时)。
 
 - 生词:presents 礼物 / cards 贺卡 / wish 愿望 / blew 吹(blow的过去式)
 
 ### The lost key
 
-- 话题:丢失的钥匙(一般过去时) · 词数:107
+- 话题:丢失的钥匙(一般过去时) · 词数:108
 
-Yesterday, something worried me a lot. When I got home from school, I could not find my key. I looked in my school bag, but it was not there. I looked in every pocket of my coat. I even looked under the desk and behind the door. My heart beat fast. Then I remembered the morning. I ran back to the classroom. On the floor, near my seat, the key was still there! I picked it up and felt happy again. On my way home, I told myself to be more careful. That day, I learnt an important lesson: a small thing can bring a big worry.
+Yesterday, something worried me a lot. When I got home from school, I could not find my key. I looked in my school bag, but it was not there. I looked in every pocket of my coat. I even looked under the desk and behind the door. My heart beat fast. Then I remembered the morning. I ran back to the classroom. On the floor, near my seat, the key was still there! I picked it up and felt happy again. On my way home, I told myself to be careful next time. That day, I learnt an important lesson: a small thing can bring a big worry.
 
 1. Where did the writer finally find the key?
    - A. In the school bag.
@@ -93,9 +91,9 @@ Yesterday, something worried me a lot. When I got home from school, I could not 
 
 ### A rainy Sunday
 
-- 话题:下雨的星期天(一般过去时) · 词数:107
+- 话题:下雨的星期天(一般过去时) · 词数:104
 
-Last Sunday, it rained all day, so we stayed at home. At first, I felt a little bored. I looked out of the window and watched the rain. Then my mother had a good idea. We made hot soup together in the kitchen. After lunch, I read a long story about a brave girl. My little brother drew pictures of animals. In the evening, the whole family played cards and laughed a lot. Outside, the rain was still falling, but inside it was warm and happy. I learnt that a rainy day can be a good day too, if you spend it with the people you love.
+Last Sunday, it rained all day, so we stayed at home. At first, I felt a little bored. I looked out of the window and watched the rain. Then my mother had a good idea. We made hot soup together in the kitchen. After lunch, I read a long story about a brave girl. My little brother drew pictures of animals. In the evening, the whole family played cards and laughed a lot. Outside, the rain was still falling, but inside it was warm and happy. A rainy day can be a good day too, if you spend it with the people you love.
 
 1. What did the writer and mother make together?
    - A. A card.
@@ -151,9 +149,9 @@ One evening, I was alone at home. Everyone in my family was out. Suddenly, I hea
 
 ### Something in my bag
 
-- 话题:书包里的东西(不定代词) · 词数:107
+- 话题:书包里的东西(不定代词) · 词数:112
 
-This morning, something in my school bag felt heavy. I opened it, but at first I could not find anything strange. Everything looked the same: my books, my pens and my lunch. Then I felt something hard at the bottom. It was a small box. Nobody told me about it. I opened the box carefully. Inside, there was a beautiful watch and a little note. The note said, 'Happy birthday from someone who loves you.' It was from my mother! I forgot my own birthday, but my mother did not. Everyone in my family knew the secret except me. It was the sweetest surprise anyone could give.
+This morning, something in my school bag felt heavy. I opened it, but at first I could not find anything strange. Everything looked the same: my books, my pens and my lunch. Then I felt something hard at the bottom. It was a small box. Nobody told me about it. I opened the box carefully. Inside, there was a beautiful watch and a little note. The note said, 'Happy birthday from someone who loves you.' It was from my mother! I forgot my own birthday, but my mother did not. Everyone in my family knew the secret except me. It was a lovely surprise, and I will keep the note for ever.
 
 1. What did the writer find at the bottom of the bag?
    - A. A book.
@@ -226,7 +224,7 @@ On the first day of the holiday, I had nothing to do. I walked around the house,
    - B. Why holidays are short.
    - C. Where the paint box was.
    - D. How the writer found something fun to do on a boring day. [答案]
-   - 解析:全文讲无聊天找到爱做的事(不定代词)。
+   - 解析:全文讲无聊时找到爱做的事(不定代词)。
 
 - 生词:boring 无聊的 / paint 颜料;画 / paper 纸 / boredom 无聊
 
@@ -238,14 +236,14 @@ On the first day of the holiday, I had nothing to do. I walked around the house,
 
 - 话题:奶奶的厨房(系动词) · 词数:110
 
-I love my grandma's kitchen more than any other place. In the morning, it smells wonderful. The fresh bread smells sweet, and the hot soup smells rich. Everything looks warm and golden in the soft light. When I taste grandma's noodles, they taste better than any food in a restaurant. The tea tastes sweet, and the cakes taste soft. Even the air feels gentle and kind. When grandma sings an old song, her voice sounds happy and calm. In her kitchen, I never feel sad or tired. Everything there feels like home. A good kitchen is not just about food; it makes a family feel close and warm.
+I love my grandma's kitchen very much. In the morning, it smells wonderful. The fresh bread smells sweet, and the hot soup smells rich. Everything looks warm and golden in the soft light. When I taste grandma's noodles, they taste rich and fresh. The tea tastes sweet, and the cakes taste soft. Even the air feels gentle and kind. When grandma sings an old song, her voice sounds happy and calm. In her kitchen, I never feel sad or tired. Everything there feels like home. A good kitchen is not just about food; it makes a family feel close and warm.
 
 1. How do grandma's noodles taste?
    - A. Bad.
    - B. Cold.
-   - C. Better than any restaurant food. [答案]
+   - C. Rich and fresh. [答案]
    - D. Salty.
-   - 解析:'they taste better than any food in a restaurant'。
+   - 解析:'they taste rich and fresh'。
 2. How does grandma's voice sound when she sings?
    - A. Loud and hard.
    - B. Happy and calm. [答案]
@@ -263,9 +261,9 @@ I love my grandma's kitchen more than any other place. In the morning, it smells
 
 ### The music sounds nice
 
-- 话题:音乐听起来真美(系动词) · 词数:106
+- 话题:音乐听起来真美(系动词) · 词数:104
 
-Last night, I went to a school concert, and the music sounded wonderful. When the first song began, the room grew quiet. The soft piano sounded gentle, like rain on a window. Then the guitars grew loud and strong, and everyone felt excited. One singer had a voice that sounded as sweet as a bird. The music made me feel happy and calm at the same time. During a sad song, some people looked touched, and the hall felt very still. At the end, everybody clapped, and the players looked proud. Good music does something special: it makes a room full of strangers feel like friends.
+Last night, I went to a school concert, and the music sounded wonderful. When the first song began, the room grew quiet. The soft piano sounded gentle, like rain on a window. Then the guitars grew loud and strong, and everyone felt excited. One singer had a voice that sounded sweet and clear. The music made me feel happy and calm at the same time. During a sad song, some people looked touched, and the hall felt very still. At the end, everybody clapped, and the players looked proud. Good music does something special: it makes a room full of strangers feel like friends.
 
 1. What did the soft piano sound like?
    - A. Loud thunder.
@@ -290,9 +288,9 @@ Last night, I went to a school concert, and the music sounded wonderful. When th
 
 ### Autumn feels cool
 
-- 话题:秋天的感觉(系动词) · 词数:113
+- 话题:秋天的感觉(系动词) · 词数:114
 
-Autumn is my favourite season, because everything feels fresh and cool. In the morning, the air feels crisp, and the wind smells clean. The leaves on the trees turn yellow, red and gold. They look like little fires in the sun. When I walk to school, the ground feels soft with fallen leaves. The fruit in the market tastes sweet, and hot tea tastes better than ever. The sky looks high and blue, and the clouds seem far away. In autumn, even a simple walk feels like a small holiday. The evenings grow longer, and the birds fly south. I never feel bored, because the world around me looks new every single day.
+Autumn is my favourite season, because everything feels fresh and cool. In the morning, the air feels crisp, and the wind smells clean. The leaves on the trees turn yellow, red and gold. They look like little fires in the sun. When I walk to school, the ground feels soft with fallen leaves. The fruit in the market tastes sweet, and hot tea tastes warm and good. The sky looks high and blue, and the clouds seem far away. In autumn, even a simple walk feels like a small holiday. The evenings grow dark early, and the birds fly south. I never feel bored, because the world around me looks new every single day.
 
 1. What colour do the leaves turn in autumn?
    - A. Green and blue.
@@ -317,9 +315,9 @@ Autumn is my favourite season, because everything feels fresh and cool. In the m
 
 ### The soup tastes great
 
-- 话题:这汤味道好极了(系动词) · 词数:110
+- 话题:这汤味道好极了(系动词) · 词数:102
 
-Today my father cooked dinner, and the soup tasted great. First, he cut some vegetables and an onion. Soon the kitchen smelled wonderful. 'This soup smells so good!' I said. When it was ready, the soup looked golden and warm. I had a spoon, and it tasted even better than it smelled. It was not too salty and not too sweet. My little sister said the soup tasted just like grandma's. My father looked very happy. The whole family felt warm and full after dinner. A simple meal, made with love, can taste better than the food in any restaurant. That evening, everything at our table felt just right.
+Today my father cooked dinner, and the soup tasted great. First, he cut some vegetables and an onion. Soon the kitchen smelled wonderful. 'This soup smells so good!' I said. When it was ready, the soup looked golden and warm. I had a spoonful, and it tasted rich and warm. It was not too salty and not too sweet. 'It tastes just like grandma's soup!' my little sister said. My father looked very happy. The whole family felt warm and full after dinner. A simple meal, made with love, can taste wonderful. That evening, everything at our table felt just right.
 
 1. What did the father cut for the soup?
    - A. Some vegetables and an onion. [答案]
@@ -388,7 +386,7 @@ A good friend is a treasure, so learn to be one. Be kind, and always speak in a 
 2. What should you do first if you quarrel?
    - A. Say sorry first. [答案]
    - B. Walk away.
-   - C. Shout louder.
+   - C. Shout at him.
    - D. Tell a secret.
    - 解析:'If you quarrel, say sorry first'。
 3. What is the passage mainly about?
@@ -404,7 +402,7 @@ A good friend is a treasure, so learn to be one. Be kind, and always speak in a 
 
 - 话题:怎样种一朵花(祈使句) · 词数:115
 
-Would you like to grow a beautiful flower? It is easy if you follow these steps. First, find a clean pot and fill it with soft soil. Next, make a small hole in the middle with your finger. Put one seed in the hole, and cover it gently with soil. Then give it a little water, but don't give it too much. Put the pot near a window, so it can get plenty of sun. Water the seed every day, and wait with patience. Don't pull the plant to make it grow faster. In a few weeks, a green leaf will come out. Care for it well, and soon your flower will bloom.
+Would you like to grow a beautiful flower? It is easy if you follow these steps. First, find a clean pot and fill it with soft soil. Next, make a small hole in the middle with your finger. Put one seed in the hole, and cover it gently with soil. Then give it a little water, but don't give it too much. Put the pot near a window, so it can get plenty of sun. Water the seed every day, and wait with patience. Don't pull the plant to make it grow quickly. In a few weeks, a green leaf will come out. Care for it well, and soon your flower will bloom.
 
 1. What should you fill the pot with first?
    - A. Water.

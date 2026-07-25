@@ -2,9 +2,7 @@
 
 - 状态:已在线上(待补审)
 - 每单元 4 篇泛读(精读不在本件内)。全部原创改写，无版权原文入库。
-- difficulty=1(泛读)；同单元精读为 difficulty=0，排在泛读之前。
-- 2026-07-25 已过 past_perfect 门(独立过去完成时 0 处;宾从 backshift 放行)。
-- 审的点:①有无超纲语法/词汇 ②题目答案唯一且原文可证 ③选项无歧义 ④中文话题/释义准确 ⑤内容价值观无问题
+- 2026-07-25 已过两道时序门:独立过去完成时 0 处、比较级/最高级/as…as 超前 0 处。
 
 ---
 
@@ -48,7 +46,7 @@ I have travelled by bus and by car many times, but I have never taken a long tra
    - B. A big city.
    - C. A farm.
    - D. The mountains. [答案]
-   - 解析:'we have just come back from a trip to the mountains'。
+   - 解析:'My family and I have just come back from a trip to the mountains'。
 2. What did the writer do with the new friend during the ride?
    - A. Slept all the way.
    - B. Read books alone.
@@ -357,7 +355,7 @@ My mother wants me to grow into a kind and useful person, and she helps me every
    - B. To play games.
    - C. Because the morning is the best time to learn. [答案]
    - D. To clean the street.
-   - 解析:'she believes that the morning is the best time to learn'。
+   - 解析:'she calls the morning the best time to learn'。
 2. What does the mother do when the writer feels lazy?
    - A. She shouts at him.
    - B. She does his homework.

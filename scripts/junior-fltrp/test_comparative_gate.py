@@ -38,9 +38,19 @@ CASES = [
     ('the most beautiful = 最高级', 'It was the most beautiful place.', 'wy7B', 'U3', 'violation'),
     # 真比较级不能被习语规则误放
     ('earlier 作比较级仍拦', 'You should go to bed earlier.', 'wy7A', 'U1', 'violation'),
-    # 固定搭配单独归档,不由门拍板
-    ('my best friend', 'My best friend gave me a book.', 'wy7B', 'U1', 'collocation'),
-    ('one of the best', 'It was one of the best days.', 'wy7B', 'U1', 'collocation'),
+    # ── 裸 best 口径(2026-07-25 Aaron 定):词汇化放、the best X in/of 范围拦 ──
+    ('like English best', 'I like English best. It is fun.', 'wy7A', 'U1', None),
+    ('the best gift(无范围)', 'the best gift is always my family', 'wy7A', 'U4', None),
+    ('be the best', 'we do not need to be the best', 'wy7A', 'U2', None),
+    ('their best work', 'Students bring their best work.', 'wy7A', 'U2', None),
+    ('my best friend', 'My best friend gave me a book.', 'wy7B', 'U1', None),
+    ('★the best X in 范围 → 拦', 'He is the best player in our class.', 'wy7B', 'U1', 'violation'),
+    ('★the best X of 范围 → 拦', 'dinner time is the best time of the day', 'wy7A', 'U3', 'violation'),
+    ('one of the best(无范围)', 'It was one of the best days.', 'wy7B', 'U1', None),
+    ('★one of the best X of 范围 → 拦', 'one of the best days of my whole holiday', 'wy7B', 'U1', 'violation'),
+    # 口径只管裸 best:其余最高级照常拦
+    ('happiest 仍拦', 'It was the happiest birthday.', 'wy7B', 'U1', 'violation'),
+    ('the most precious 仍拦', 'Simple food is the most precious.', 'wy7B', 'U3', 'violation'),
 ]
 
 

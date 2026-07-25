@@ -53,9 +53,12 @@ summary AS (
     avg(sentences)::numeric                                           AS avg_sentences,
     max(sentences)::numeric                                           AS max_sentences,
     avg(en_chars)::numeric                                            AS avg_en,
-    percentile_cont(0.5)  WITHIN GROUP (ORDER BY en_chars::numeric)   AS p50_en,
-    percentile_cont(0.9)  WITHIN GROUP (ORDER BY en_chars::numeric)   AS p90_en,
-    percentile_cont(0.99) WITHIN GROUP (ORDER BY en_chars::numeric)   AS p99_en,
+    -- ⚠️ percentile_cont 只有 double precision / interval 两个变体(没有 numeric 版):
+    --    cast 必须加在**结果**上,加在 ORDER BY 上会被隐式转回 double precision,
+    --    导致后面 round(double precision, int) 找不到函数(42883)。
+    (percentile_cont(0.5)  WITHIN GROUP (ORDER BY en_chars))::numeric AS p50_en,
+    (percentile_cont(0.9)  WITHIN GROUP (ORDER BY en_chars))::numeric AS p90_en,
+    (percentile_cont(0.99) WITHIN GROUP (ORDER BY en_chars))::numeric AS p99_en,
     max(en_chars)::numeric                                            AS max_en
   FROM pages
 ),
@@ -63,10 +66,10 @@ thresholds AS (
   SELECT
     c.v::numeric                                                   AS ch1_max_en,
     count(*)::numeric                                              AS total_pages,
-    count(*) FILTER (WHERE p.en_chars > c.v)::numeric               AS over_1x,
-    count(*) FILTER (WHERE p.en_chars > c.v * 1.5)::numeric         AS over_1_5x,
-    count(*) FILTER (WHERE p.en_chars > c.v * 2)::numeric           AS over_2x,
-    count(*) FILTER (WHERE p.en_chars > c.v * 3)::numeric           AS over_3x
+    (count(*) FILTER (WHERE p.en_chars > c.v))::numeric            AS over_1x,
+    (count(*) FILTER (WHERE p.en_chars > c.v * 1.5))::numeric      AS over_1_5x,
+    (count(*) FILTER (WHERE p.en_chars > c.v * 2))::numeric        AS over_2x,
+    (count(*) FILTER (WHERE p.en_chars > c.v * 3))::numeric        AS over_3x
   FROM pages p CROSS JOIN ch1_max c
   GROUP BY c.v
 ),

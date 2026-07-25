@@ -173,6 +173,7 @@ import FeedbackWidget from "@/components/FeedbackWidget";
 import InstallPrompt from "@/components/InstallPrompt";
 import QuizKeyboardShortcuts from "@/components/QuizKeyboardShortcuts";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
+import { MistakeReviewGate } from "@/components/MistakeReviewGate";
 import useActiveHeartbeat from "@/hooks/useActiveHeartbeat";
 import { AIAssistantProvider } from "@/contexts/AIAssistantContext";
 import RouteContextRegistrar from "@/components/assistant/RouteContextRegistrar";
@@ -339,6 +340,7 @@ const App = () => (
         {/* LanguagePickerModal removed — first visit defaults to 简体中文;
             switchable via LangToggleEnZh / LanguageSwitcher in the header. */}
         <GaokaoBreakReminder />
+        <MistakeReviewGate />
         <div className="pb-tabbar md:pb-0">
         <RouteErrorBoundary>
         <Suspense fallback={<RouteFallback />}>
